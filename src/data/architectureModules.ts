@@ -1,0 +1,352 @@
+import { ArchitectureModule } from '../types';
+
+export const ARCHITECTURE_MODULES: ArchitectureModule[] = [
+  {
+    id: 'MOD0',
+    moduleNumber: 0,
+    filePath: 'kulli_gpu/hakimiyet_tesisi.py',
+    className: 'VeriyoluSorgulayicisi',
+    title: 'Hakiki Donanım Teşhisi ve PCIe Veriyolu Sorgulayıcısı',
+    subsystemRole: 'PCIe Binary Header & Register Scanner (PCI-SIG)',
+    badgeColor: 'border-indigo-500/40 text-indigo-400 bg-indigo-950/20',
+    functions: [
+      {
+        name: 'VeriyoluBitisikleriniTara',
+        signature: 'VeriyoluBitisikleriniTara() -> List[Dict]',
+        input: 'Yok (Doğrudan PCIe veriyolu)',
+        output: 'Ham Cihaz Listesi [List[Dict]]',
+        feature: 'Metin kütüklerine bağımsız, PCIe veriyolundaki tüm yuvalara ikili sorgu atar.',
+      },
+      {
+        name: 'IkiliBasligiCozumle',
+        signature: 'IkiliBasligiCozumle(ham_bayt: bytes) -> Dict',
+        input: '256-baytlık Ikili Başlık [bytes]',
+        output: 'Kimlik Bilgileri [Dict]',
+        feature: 'PCI-SIG standartlarına göre Vendor ID (0x10de), Device ID ve Class Code (0x0300 VGA / 0x0302 3D) ayrıştırır.',
+      },
+      {
+        name: 'BellekKapilariniOku',
+        signature: 'BellekKapilariniOku(cihaz_bilgisi: Dict) -> Dict',
+        input: 'Cihaz Bilgisi [Dict]',
+        output: 'BAR Haritası & VRAM [Dict]',
+        feature: 'BAR0-BAR5 kayıtçılarını okuyup MMIO/IO adres alanlarını ve fiziki VRAM boyutunu çıkarır.',
+      },
+      {
+        name: 'HakimiyetDurumunuOku',
+        signature: 'HakimiyetDurumunuOku(cihaz_bilgisi: Dict) -> str',
+        input: 'Cihaz Bilgisi [Dict]',
+        output: 'Sürücü Durumu [str]',
+        feature: 'Command Register (Offset 0x04) bitlerini (Bit 1 MMIO, Bit 2 DMA) okuyarak donanım kilit durumunu belirler.',
+      },
+      {
+        name: 'HedefKartiSec',
+        signature: 'HedefKartiSec(kart_listesi: List, sira_no: int = 0) -> Dict',
+        input: 'Kart Listesi [List], Sıra No [int]',
+        output: 'Nihai Kart Bilgi Paketi [Dict]',
+        feature: 'İstenen GPU kartını seçip SurucuAyirici katmanına hazır nihai bilgi paketini teslim eder.',
+      }
+    ],
+    relationships: ['MOD0_5', 'MOD1', 'MOD2', 'MOD4', 'MOD8'],
+  },
+  {
+    id: 'MOD0_5',
+    moduleNumber: 0.5,
+    filePath: 'kulli_gpu/surucu_ayirici.py',
+    className: 'SurucuAyirici',
+    title: 'Sürücü Ayırıcı ve VFIO Güvenli Devir Birimi',
+    subsystemRole: 'OS Driver Detachment & Kernel Override Isolation',
+    badgeColor: 'border-amber-500/40 text-amber-400 bg-amber-950/20',
+    functions: [
+      {
+        name: 'MevcutBaglantiyiSorgula',
+        signature: 'MevcutBaglantiyiSorgula(pci_adresi: str) -> str',
+        input: 'PCI Adresi [str]',
+        output: 'Sürücü Adı [str]',
+        feature: 'Donanımı yöneten aktif sürücüyü (nvidia, nouveau vb.) sysfs symlink okuyarak tespit eder.',
+      },
+      {
+        name: 'MevcutSurucudenAyir',
+        signature: 'MevcutSurucudenAyir(pci_adresi: str) -> str',
+        input: 'PCI Adresi [str]',
+        output: 'Ayırma Durumu [str]',
+        feature: 'sysfs unbind düğümüne yazıp 0.2s hikmet beklemesi ile elektriksel kararlılık sağlar.',
+      },
+      {
+        name: 'HedefSurucuyuTanit',
+        signature: 'HedefSurucuyuTanit(pci_adresi: str, hedef: str = "vfio-pci") -> str',
+        input: 'PCI Adresi & Sürücü Adı',
+        output: 'Tahsis İşaretlendi [str]',
+        feature: 'driver_override kütüğüne hedef sürücüyü yazarak varsayılan sürücü müdahalesini kilitler.',
+      },
+      {
+        name: 'YeniSurucuyeBagla',
+        signature: 'YeniSurucuyeBagla(pci_adresi: str, hedef: str = "vfio-pci") -> str',
+        input: 'PCI Adresi & Sürücü Adı',
+        output: 'Bağlama Durumu [str]',
+        feature: 'Serbest kalan donanımı bind düğümünden hedef sürücüye bağlayıp 0.1s bekleme sağlar.',
+      },
+      {
+        name: 'DevirDurumunuDogrula',
+        signature: 'DevirDurumunuDogrula(pci_adresi: str, hedef: str = "vfio-pci") -> bool',
+        input: 'PCI Adresi & Sürücü Adı',
+        output: 'Doğrulama Sonucu [bool]',
+        feature: 'Devir teslimin fiziken gerçekleştiğini teyit eder.',
+      }
+    ],
+    relationships: ['MOD0', 'MOD0_75', 'MOD1', 'MOD2'],
+  },
+  {
+    id: 'MOD0_75',
+    moduleNumber: 0.75,
+    filePath: 'kulli_gpu/bellek_haritacisi.py',
+    className: 'BellekHaritacisi',
+    title: 'Bellek Haritacısı ve Fiziki VRAM/MMIO C-İşaretçisi Erişim Birimi',
+    subsystemRole: 'Raw Hardware mmap & C-Pointer Memory Access Bridge',
+    badgeColor: 'border-emerald-500/40 text-emerald-400 bg-emerald-950/20',
+    functions: [
+      {
+        name: 'DonanimKapisiniAc',
+        signature: 'DonanimKapisiniAc(pci_adresi: str, bolge_no: str = "1") -> int',
+        input: 'PCI Adresi & Bölge No',
+        output: 'Dosya Tanımlayıcı [int]',
+        feature: 'sysfs resourceX kütüğünü O_RDWR | O_SYNC modunda açarak önbelleksiz ham donanım kapısını elde eder.',
+      },
+      {
+        name: 'HafizaSinirlariniOgren',
+        signature: 'HafizaSinirlariniOgren(fd: int) -> int',
+        input: 'Dosya Tanımlayıcı [int]',
+        output: 'Toplam Boyut [Bytes]',
+        feature: 'os.lseek ile BAR bölgesinin fiziksel VRAM/MMIO boyutunu bayt cinsinden ölçer.',
+      },
+      {
+        name: 'CanliHafizayiHaritala',
+        signature: 'CanliHafizayiHaritala(fd: int, toplam_boyut: int) -> mmap.mmap',
+        input: 'Dosya Tanımlayıcı & Toplam Boyut',
+        output: 'mmap Nesnesi [mmap.mmap]',
+        feature: 'MAP_SHARED ile VRAM adres alanını doğrudan Python sürecinin sanal belleğine bağlar.',
+      },
+      {
+        name: 'DogrudanErisimIsaretcisiUret',
+        signature: 'DogrudanErisimIsaretcisiUret(mmap_obj) -> POINTER(c_uint32)',
+        input: 'mmap Nesnesi',
+        output: 'C32-bit Tamsayı İşaretçisi [ctypes.POINTER]',
+        feature: 'ctypes.cast ile mmap adresini canlı C-İşaretçisine dönüştürür.',
+      },
+      {
+        name: 'HafizayiKapatVeSerbestBirak',
+        signature: 'HafizayiKapatVeSerbestBirak(mmap_obj, fd) -> str',
+        input: 'mmap Nesnesi & Dosya Tanımlayıcı',
+        output: 'Serbest Bırakıldı Mesajı [str]',
+        feature: 'mmap ve fd kaynaklarını kapatıp bellek sızıntısını ve kilitlenmeyi önler.',
+      }
+    ],
+    relationships: ['MOD0_5', 'MOD1', 'MOD2'],
+  },
+  {
+    id: 'MOD1',
+    moduleNumber: 1,
+    filePath: 'kulli_gpu/__init__.py',
+    title: 'Giriş Noktası Enjeksiyonu',
+    subsystemRole: 'Tek Satırlık Kütüphane Yükleyici',
+    badgeColor: 'border-emerald-500/40 text-emerald-400 bg-emerald-950/20',
+    functions: [
+      {
+        name: 'baslat',
+        signature: 'baslat(config: Dict = None) -> SanalGPUSurucu',
+        input: 'config [Dict] (Opsiyonel konfigürasyon parametreleri)',
+        output: 'SanalGPUSurucu [Nesne]',
+        feature: 'Tek satırlık enjeksiyon; sistem kancalarını ve tahmin motorlarını ilklendirir.',
+      }
+    ],
+    relationships: ['MOD2', 'MOD3', 'MOD4', 'MOD5', 'MOD6', 'MOD7'],
+  },
+  {
+    id: 'MOD2',
+    moduleNumber: 2,
+    filePath: 'kulli_gpu/interception/hook_manager.py',
+    className: 'CUDAHookManager',
+    title: 'Kanca ve Maskeleme Motoru',
+    subsystemRole: 'Dynamic Linking & Cuda Symbol Interception',
+    badgeColor: 'border-cyan-500/40 text-cyan-400 bg-cyan-950/20',
+    functions: [
+      {
+        name: 'install_hooks',
+        signature: 'install_hooks() -> bool',
+        input: 'Yok',
+        output: 'Basari [bool]',
+        feature: 'libcuda.so ve libcudart.so sembollerini dynamic linking seviyesinde devre dışı bırakır.',
+      },
+      {
+        name: 'get_virtual_device_properties',
+        signature: 'get_virtual_device_properties() -> Dict',
+        input: 'Yok',
+        output: 'CihazOzellikleri [Dict]',
+        feature: 'PyTorch/Unreal Engine/VASP frameworklerine 1 adet birleşik 88 GB VRAM ve 4x SM çekirdek gücü raporlar.',
+      }
+    ],
+    relationships: ['MOD3', 'MOD4'],
+  },
+  {
+    id: 'MOD3',
+    moduleNumber: 3,
+    filePath: 'kulli_gpu/scheduler/predictive_engine.py',
+    className: 'ErkenDevletEngine',
+    title: 'Erken Devlet Sevk Motoru',
+    subsystemRole: 'Matris Operasyon Tahmini & Asenkron Sevk',
+    badgeColor: 'border-amber-500/40 text-amber-400 bg-amber-950/20',
+    functions: [
+      {
+        name: 'on_hesapla',
+        signature: 'on_hesapla(operasyon_grafik: Graph) -> List[Step]',
+        input: 'operasyon_grafik [Graph]',
+        output: 'Plan [List[Step]]',
+        feature: 'İş yükünün 5-10 adım önceden matris operasyonlarını tahmin eder.',
+      },
+      {
+        name: 'tertip_et',
+        signature: 'tertip_et(step: Step) -> PageMap',
+        input: 'step [Step]',
+        output: 'PageMap [Dict]',
+        feature: 'Hangi tensörün hangi fiziksel GPU sayfalarında duracağını önceden belirler.',
+      },
+      {
+        name: 'sevk_et',
+        signature: 'sevk_et(step: Step, bus: NVSHMEMVeriyolu) -> None',
+        input: 'step [Step], bus [NVSHMEMVeriyolu]',
+        output: 'Void',
+        feature: 'NVSHMEM hattı üzerinden asenkron sayfa ön yüklemelerini ilklendirir.',
+      }
+    ],
+    relationships: ['MOD4', 'MOD6'],
+  },
+  {
+    id: 'MOD4',
+    moduleNumber: 4,
+    filePath: 'kulli_gpu/memory/vmm_allocator.py',
+    className: 'SanalBellekYoneticisi',
+    title: 'Sanal Bellek Tahsisçisi (VMM)',
+    subsystemRole: 'Bitişik 88GB Adres Uzayı Eşleyici',
+    badgeColor: 'border-purple-500/40 text-purple-400 bg-purple-950/20',
+    functions: [
+      {
+        name: 'cuMemAddressReserve',
+        signature: 'cuMemAddressReserve(size: 88GB) -> VirtAddr',
+        input: 'size: 88GB',
+        output: 'VirtAddr [uint64]',
+        feature: 'İşletim sistemine kesintisiz, bitişik 88 GB sanal adres uzayı ayırır.',
+      },
+      {
+        name: 'cuMemMap',
+        signature: 'cuMemMap(virt_addr: VirtAddr, phys_handle: Handle) -> status',
+        input: 'virt_addr [VirtAddr], phys_handle [Handle]',
+        output: 'status [int]',
+        feature: 'Fiziksel GPU VRAM parçalarını dinamik sanal sayfalara eşler (Virtual Page Mapping).',
+      },
+      {
+        name: 'allocate_pages',
+        signature: 'allocate_pages(num_pages: int) -> List[Page]',
+        input: 'num_pages [int]',
+        output: 'List[Page]',
+        feature: '512MB sayfa seviyesinde (Page-level) dinamik VRAM tahsisi yapar.',
+      }
+    ],
+    relationships: ['MOD8'],
+  },
+  {
+    id: 'MOD5',
+    moduleNumber: 5,
+    filePath: 'kulli_gpu/compute/vcompute_pool.py',
+    className: 'SanalIslemciHavuzu',
+    title: 'Sanal İşlemci & Compute Havuzu',
+    subsystemRole: 'Çoklu GPU SM Çekirdek Birleştirici',
+    badgeColor: 'border-rose-500/40 text-rose-400 bg-rose-950/20',
+    functions: [
+      {
+        name: 'aggregate_sm_cores',
+        signature: 'aggregate_sm_cores() -> int',
+        input: 'Yok',
+        output: 'ToplamSM [int]',
+        feature: '4 fiziksel GPU’daki SM (Streaming Multiprocessor) birimlerini tek devasa havuzda birleştirir.',
+      },
+      {
+        name: 'dispatch_kernel',
+        signature: 'dispatch_kernel(kernel_code: Binary, stream: CUDAStream) -> ExecutionHandle',
+        input: 'kernel_code [Binary], stream [CUDAStream]',
+        output: 'ExecutionHandle',
+        feature: 'Gelen CUDA kernel komutlarını mikro parçalara bölüp fiziksel GPU’lara dağıtır.',
+      }
+    ],
+    relationships: ['MOD8'],
+  },
+  {
+    id: 'MOD6',
+    moduleNumber: 6,
+    filePath: 'kulli_gpu/comm/nvshmem_bus.py',
+    className: 'NVSHMEMVeriyolu',
+    title: 'NVSHMEM Yüksek Hızlı Veri Yolu',
+    subsystemRole: 'PGAS & P2P GPU Interconnect',
+    badgeColor: 'border-sky-500/40 text-sky-400 bg-sky-950/20',
+    functions: [
+      {
+        name: 'init_pgas_space',
+        signature: 'init_pgas_space() -> bool',
+        input: 'Yok',
+        output: 'Basari [bool]',
+        feature: 'Partitioned Global Address Space (PGAS) ile 4 GPU VRAM’ini doğrudan tek ağ gibi bağlar.',
+      },
+      {
+        name: 'p2p_transfer_async',
+        signature: 'p2p_transfer_async(src_page: Page, dst_page: Page) -> Event',
+        input: 'src_page [Page], dst_page [Page]',
+        output: 'Event [CUDAEvent]',
+        feature: 'CPU ve Sistem RAM bypass edilerek GPU’lar arası 1.8 TB/s PCIe/NVLink P2P aktarımı sağlar.',
+      }
+    ],
+    relationships: ['MOD4', 'MOD7'],
+  },
+  {
+    id: 'MOD7',
+    moduleNumber: 7,
+    filePath: 'kulli_gpu/engine/zero3_sharder.py',
+    className: 'ZeRO3PureVRAMSharder',
+    title: 'Saf VRAM Parçalayıcı (ZeRO-3 Pure)',
+    subsystemRole: 'Sıfır RAM/Disk Offload Tensör Bölücü',
+    badgeColor: 'border-teal-500/40 text-teal-400 bg-teal-950/20',
+    functions: [
+      {
+        name: 'shard_tensor',
+        signature: 'shard_tensor(tensor: Tensor) -> List[TensorShard]',
+        input: 'tensor [Tensor]',
+        output: 'List[TensorShard]',
+        feature: 'Ram/Disk offload OLMADAN, tensör ağırlıklarını ve gradyanları 4 GPU VRAM’ine kayıpsız böler.',
+      },
+      {
+        name: 'verify_pure_vram',
+        signature: 'verify_pure_vram() -> bool',
+        input: 'Yok',
+        output: 'SafVRAM [bool]',
+        feature: 'Sistem RAM’ine taşma ihtimalini engeller, %100 Saf GPU VRAM garantisi sağlar.',
+      }
+    ],
+    relationships: ['MOD4', 'MOD6'],
+  },
+  {
+    id: 'MOD8',
+    moduleNumber: 8,
+    filePath: 'Fiziki Donanım Katmanı',
+    className: 'FizikselGPUGrid',
+    title: 'Fiziksel Donanım Havuzu',
+    subsystemRole: '4x 22GB RTX 3090 Physical VRAM & Cores',
+    badgeColor: 'border-neutral-500/40 text-neutral-300 bg-neutral-900/60',
+    functions: [
+      {
+        name: 'hardware_status',
+        signature: 'hardware_status() -> GPUState[]',
+        input: 'Yok',
+        output: '4x 22GB RTX 3090 [GPUState]',
+        feature: 'Toplu 88GB Fiziksel Bellek + 42,240 CUDA Çekirdeğidonanım katmanı.',
+      }
+    ],
+    relationships: [],
+  }
+];
