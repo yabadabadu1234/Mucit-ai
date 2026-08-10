@@ -253,8 +253,18 @@ class AutogradNvmeOffloadHook:
 
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
 
-            # VRAM verisini temizle
-            tensor.data = torch.empty(0, device="cpu")
+            # NOT: Burada `tensor.data`yı SIFIRLAMIYORUZ. `tensor`, autograd'ın
+            # backward için SAKLADIĞI aynı Python nesnesi olabilir ama AYNI ZAMANDA
+            # çağıranın (örn. Riyazi_LifLaplasyeniBlokInsaEdici.insa_et içindeki D0)
+            # hâlâ aktif olarak inşa ettiği/kullandığı CANLI bir nesne de olabilir
+            # (in-place dilim ataması autograd'a `D0`'ı save_for_backward ile
+            # kaydettirebilir). `tensor.data`yı yerinde (in-place) boşaltmak o canlı
+            # nesneyi de bozar (ör. [E*d_e, V*d_v] -> [0] şekline düşürür), bu da
+            # sonraki `torch.matmul(D0.T, D0)` çağrısında "self must be a matrix"
+            # hatasına yol açar. pack_hook zaten dosyaya yazılmış veriyi geri
+            # döndürüyor; autograd bu dönüş değerini backward'da kullanacağından
+            # orijinal tensörün belleğini ayrıca yerinde temizlemeye GEREK YOK —
+            # referanslar bırakıldığında GC/CUDA allocator zaten geri kazanır.
             return (dosya_yolu, tuple(kayit.shape), kayit.dtype, original_device)
         except Exception as exc:
             logger.error(f"[AutogradNvmeOffloadHook] Diske tahliye hatasi: {exc}")
