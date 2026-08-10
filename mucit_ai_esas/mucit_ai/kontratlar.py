@@ -3986,9 +3986,18 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
         mesaj = str(exc).lower()
         gercek_oom = bool(gercek_oom_tipleri) and isinstance(exc, gercek_oom_tipleri)
         oom_mesaji = "out of memory" in mesaj
+        # NOT: Bu liste zaman içinde tek tek karşılaşılan hata mesajı VARYANTLARIYLA
+        # büyütülüyordu (whack-a-mole) — ör. "CUDAGuardImpl initialized with non-CUDA
+        # DeviceType: cpu" (torch.log/.mean gibi sıradan bir işlemde CPU'ya düşmüş bir
+        # tensörle karşılaşıldığında fırlar) hiçbirine uymadığı için çıplak çöküyordu.
+        # "cuda" ve "device"/"cihaz" kelimelerinin BİRLİKTE geçtiği her RuntimeError'ı
+        # da bu aynı köke (tutarsız cihaz dağılımı) bağlıyoruz — ileride benzer yeni
+        # varyantlar tek tek eklenmeden yakalanır.
         cihaz_uyumsuzlugu = (
             "expected all tensors to be on the same device" in mesaj
             or "found at least two devices" in mesaj
+            or "cudaguardimpl" in mesaj
+            or ("cuda" in mesaj and "device" in mesaj)
         )
         if not (gercek_oom or oom_mesaji or cihaz_uyumsuzlugu):
             # Bu fonksiyonun sorumluluğu dışında bir hata — olduğu gibi yeniden fırlat.

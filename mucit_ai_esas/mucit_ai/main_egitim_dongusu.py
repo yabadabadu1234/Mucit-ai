@@ -917,8 +917,20 @@ def _tekil_egitim_adimi_icra(
         AnlasmaliVramGuvencesiAl(n10_sozluk, e11_cevapsiz.X_output, takas_mgr=takas_mgr)
         e12_olasilik_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward, e11_cevapsiz, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
 
+    # e12_olasilik.P ve e12_olasilik_cevapsiz.P, n10_sozluk'ün (birbirinden BAĞIMSIZ)
+    # iki ayrı çağrısından geliyor — her biri kendi VRAM kontratına göre CPU'ya
+    # düşmüş olabilir. Reaktif yakalayıcı yalnızca belirli hata mesajı kalıplarını
+    # tanıyor ("Expected all tensors..."); "CUDAGuardImpl initialized with non-CUDA
+    # DeviceType" gibi bir varyant o kalıba uymuyor ve çıplak çöküyordu. Burada
+    # tahmine/reaktif yakalamaya güvenmek yerine cihazı AÇIKÇA, tek kaynaktan
+    # (x_start_grouped'ın GPU/CPU durumu) hizalıyoruz.
+    _hesap_cihazi = x_start_grouped.device
     p_target_cevapli = e12_olasilik.P
+    if p_target_cevapli.device != _hesap_cihazi:
+        p_target_cevapli = p_target_cevapli.to(_hesap_cihazi)
     p_target_cevapsiz = e12_olasilik_cevapsiz.P
+    if p_target_cevapsiz.device != _hesap_cihazi:
+        p_target_cevapsiz = p_target_cevapsiz.to(_hesap_cihazi)
     kayip_cevapsiz = -torch.log(p_target_cevapsiz + 1e-9).mean(dim=-1)
     kayip_cevapli = -torch.log(p_target_cevapli + 1e-9).mean(dim=-1)
 
