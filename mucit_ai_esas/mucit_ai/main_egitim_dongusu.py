@@ -607,8 +607,21 @@ def _tekil_egitim_adimi_icra(
         v_probe  = scale * (1.0 / std_val) * (temiz_hata / norm_val)
 
         # ADIM 3: PARAMETRE TAMPONLARINI TEMİZLE (Kanonik Gradyan Hijyeni)
-        # Önceki fazdan kalan artık gradyan birikimini sıfırla
-        for p in trainable_in_group:
+        # KAPSAMLI DENETİM DÜZELTMESİ: ÖNCEDEN yalnızca `trainable_in_group` (bu ÇAĞRININ
+        # hedeflediği parametreler) temizleniyordu. Ama _grad_anlik_kopyala() HER çağrıdan
+        # sonra TÜM trainable_params üzerinden anlık görüntü alıyor (bkz. o fonksiyonun
+        # docstring'i) ve hedeflenmeyen bir parametrenin .grad'ı None DEĞİLSE (yani ÖNCEKİ
+        # bir adlandırılmış-nesne VJP çağrısı onu ayarlamışsa) o ESKİ/İLGİSİZ değeri
+        # kopyalıyordu — "Her faz kendi .grad'ını sıfırdan yazar, önceki fazın artık
+        # gradyanı birikmez" aksiyomu (bkz. yukarıdaki docstring) yalnızca HEDEFLENEN
+        # parametreler için doğruydu, hedeflenmeyenler için SESSİZCE İHLAL EDİLİYORDU.
+        # Sonuç: bir nesnenin (ör. g_spektral) o parametreye GERÇEKTE hiç katkısı yokken,
+        # o pozisyonda başka bir nesnenin (ör. g_grpo) gradyanı sızıp Pareto-PCGrad'ın
+        # "her nesne kendi ayrı satırı" granülerlik varsayımını kirletiyordu. Artık TÜM
+        # trainable_params temizleniyor — hedeflenmeyen parametreler bu çağrı için
+        # doğru şekilde gerçek sıfır (_grad_anlik_kopyala'nın torch.zeros_like düşüşü)
+        # olarak raporlanıyor.
+        for p in trainable_params:
             p.grad = None
 
         # ADIM 4: TEK-SÜRÜM VJP TÜREV ÇAĞRISI (retain_graph=False)
@@ -980,17 +993,37 @@ def _tekil_egitim_adimi_icra(
         vicreg_kriteri, x=e9_guncel_detached.x_next, z=e11_gomulu.X_output, modul_nesnesi=vicreg_kriteri, takas_mgr=takas_mgr
     )
     
-    # GRPO kaybı ve VICReg'in varyans/kovaryans/rekonstrüksiyon terimleri DÖRT ayrı
-    # fiziksel büyüklüktür (bkz. Faz 2/3 gerekçesi) — tek torch.cat + tek VJP yerine
-    # her biri kendi VJP'sini alır.
+    # HATA #1/#2 DÜZELTMESİ (kapsamlı denetimde bulundu — 30 hatalık listenin 1. ve 2.
+    # maddesi): Bu 5 çağrı (kayip_grpo_vec, l_var_vec, l_cov_vec, l_rec_vec,
+    # kayip_spektral_vec) HEPSİ e10_kulli (n8_chebyshev'in çıktısı) üzerinden AYNI
+    # paylaşılan üst-grafı paylaşan TEK bir KARDEŞ-VJP grubudur:
+    #   kayip_grpo_vec        <- e12_olasilik.P <- n10_sozluk <- e11_gomulu <- n9_vandermonde <- e10_kulli
+    #   l_var/l_cov/l_rec_vec <- z=e11_gomulu.X_output        <- n9_vandermonde <- e10_kulli
+    #   kayip_spektral_vec    <- L_arc/N_ste/delta_n           <- n8_b_uzunluk  <- e10_kulli
+    # ÖNCEDEN hepsi retain_graph=False (varsayılan) kullanıyordu: İLK çağrı (kayip_grpo_vec)
+    # paylaşılan e10_kulli grafını ANINDA siliyor, sonraki 4 çağrının hepsi "Trying to
+    # backward through the graph a second time" hatası alıp vjp_cerrahi_enjekte_et'in
+    # çıplak `except`ine sessizce yutuluyordu — yani VICReg (var/cov/rec) ve spektral
+    # kayıp GERÇEKTE HİÇ EĞİTMİYORDU, hiçbir hata/uyarı görünür olmadan.
+    # DÜZELTME: grup içindeki İLK 4 çağrı retain_graph=True, yalnızca SON çağrı
+    # (kayip_spektral_vec) varsayılan retain_graph=False ile grafı gerçekten serbest bırakır.
+    #
+    # AYRICA (aynı kökten 2. hata): l_var/l_cov/l_rec_vec, n10_sozluk'ün DEĞİL —
+    # n9_vandermonde'un (ve onun atası n8_chebyshev'in) çıktısı olan z=e11_gomulu.X_output
+    # üzerinden hesaplanıyor; n10_sozluk bu tensörlerin atası bile değil. Eskiden
+    # `_n10_hedef_params` (n10_sozluk.parameters()) hedef olarak kullanılıyordu —
+    # allow_unused=True bu durumda sessizce None döndürüyordu. Artık doğru atalar
+    # (n9_vandermonde + n8_chebyshev; vicreg_kriteri parametresiz bir sınıf, dahil
+    # edilmedi) hedefleniyor.
     _n10_hedef_params = list(n10_sozluk.parameters())
-    vjp_cerrahi_enjekte_et(kayip_grpo_vec, _n10_hedef_params)
+    _vicreg_hedef_params = list(n9_vandermonde.parameters()) + list(n8_chebyshev.parameters())
+    vjp_cerrahi_enjekte_et(kayip_grpo_vec, _n10_hedef_params, retain_graph=True)
     g_grpo = _grad_anlik_kopyala()
-    vjp_cerrahi_enjekte_et(l_var_vec, _n10_hedef_params)
+    vjp_cerrahi_enjekte_et(l_var_vec, _vicreg_hedef_params, retain_graph=True)
     g_vicreg_var = _grad_anlik_kopyala()
-    vjp_cerrahi_enjekte_et(l_cov_vec, _n10_hedef_params)
+    vjp_cerrahi_enjekte_et(l_cov_vec, _vicreg_hedef_params, retain_graph=True)
     g_vicreg_cov = _grad_anlik_kopyala()
-    vjp_cerrahi_enjekte_et(l_rec_vec, _n10_hedef_params)
+    vjp_cerrahi_enjekte_et(l_rec_vec, _vicreg_hedef_params, retain_graph=True)
     g_vicreg_rec = _grad_anlik_kopyala()
 
     vjp_cerrahi_enjekte_et(kayip_spektral_vec, list(n8_chebyshev.parameters()) + list(n8_b_uzunluk.parameters()))
