@@ -426,14 +426,25 @@ class N6_KohomolojikAktor_AltAg(nn.Module):
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
-        N6 VRAM Tahmin Formülü: VRAM_bayt = B * E * d_v * 4 * P_krylov_terim_sayisi Bayt
+        N6_AltAg VRAM Tahmin Formülü.
+
+        KAPSAMLI DENETİM (madde 13): Bu formül önceden `B*E*d_v*4*P_krylov` idi — E
+        (kenar sayısı) ve P_krylov (Chebyshev terim sayısı) bu sınıfın forward()'unda
+        (basit bir 2 katmanlı MLP: in_features=4*d_v+d_q+d_a -> d_h*2 -> d_h) HİÇ
+        KULLANILMAZ; formül, ebeveyn N6_KohomolojikAktor'un Krylov çözücüsünden
+        (bambaşka bir yöntem) kopyalanmış görünüyordu ve gerçek (çok daha küçük)
+        tahsisi yansıtmıyordu. (Not: main_egitim_dongusu.py'de yalnızca ebeveyn
+        n6_aktor AnlasmaliVramGuvencesiAl ile korunuyor, bu AltAg'ın kendi tahmini
+        şu an canlı bir CPU-fallback kararını etkilemiyor — yine de yanlış/yanıltıcı
+        olduğu için düzeltildi.)
         """
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
-        V = getattr(self.config, 'V_nodes', 8)
-        E = max(V - 1, 1)
         d_v = getattr(self.config, 'd_v', 32)
-        P_krylov = getattr(self.config, 'M_plus_1', 32)
-        return int(B * E * d_v * 4 * P_krylov)
+        d_q = getattr(self.config, 'd_q', 64)
+        d_a = getattr(self.config, 'd_a', 64)
+        d_h = getattr(self.config, 'd_h', 64)
+        in_features = 4 * d_v + d_q + d_a
+        return vram_bayt_tahmin_et(B, in_features) + vram_bayt_tahmin_et(B, d_h * 2) + vram_bayt_tahmin_et(B, d_h)
 
     def forward(self, bilesik_girdi: torch.Tensor) -> torch.Tensor:
         return self.net(bilesik_girdi)
