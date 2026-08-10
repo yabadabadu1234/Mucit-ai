@@ -1127,12 +1127,36 @@ def _tekil_egitim_adimi_icra(
     ]
     _P_toplam = sum(p.numel() for p in trainable_params)
     AnlasmaliVramGuvencesiAl(pareto_pcgrad_operator, (len(shard_gradyanlari), _P_toplam), takas_mgr=takas_mgr)
-    alpha_pareto = pareto_pcgrad_operator.birlestir_ve_uygula_dagitik_gradyanlar(
-        shard_gradyanlari=shard_gradyanlari,
-        trainable_params=trainable_params,
-        optimizer=optimizer,
-        max_norm=1.0
-    )
+    # KAPSAMLI DENETİM (madde 6): Bu çağrı BİLEREK AcilDurumOomYakalayiciVeKurtarici'ye
+    # sarmalanmadı — o sarmalayıcının CPU-retry deseni trainable_params/optimizer gibi
+    # CANLI, optimizer durumuna bağlı nesneleri CPU'ya taşımaya çalışır, bu da optimizer
+    # momentum/varyans durumunu bozma riski taşır. Ama adımın en büyük, en son (VRAM zaten
+    # en dolu olduğu anda) tahsisini yapan bu çağrı hiçbir korumadan geçmeden çıplak
+    # bırakılıyordu. Burada CİHAZ DEĞİŞTİRMEYEN, güvenli bir tek-seferlik GPU-içi retry
+    # ekleniyor: gerçek bir OOM'da gc.collect()/empty_cache() ile bir kez temizlenip AYNI
+    # GPU'da tekrar denenir; yine başarısız olursa olduğu gibi yeniden fırlatılır (optimizer
+    # durumu asla yarım/tutarsız bir cihaza bölünmez).
+    try:
+        alpha_pareto = pareto_pcgrad_operator.birlestir_ve_uygula_dagitik_gradyanlar(
+            shard_gradyanlari=shard_gradyanlari,
+            trainable_params=trainable_params,
+            optimizer=optimizer,
+            max_norm=1.0
+        )
+    except (torch.cuda.OutOfMemoryError if hasattr(torch.cuda, "OutOfMemoryError") else RuntimeError) as _pareto_oom:
+        logger.warning(f"  [Pareto-PCGrad OOM Kurtarıcı] Gerçek VRAM taşması yakalandı, GPU-içi temizlik sonrası tekrar deneniyor: {_pareto_oom}")
+        import gc as _gc2
+        _gc2.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
+            takas_mgr.temizle(agresif=True)
+        alpha_pareto = pareto_pcgrad_operator.birlestir_ve_uygula_dagitik_gradyanlar(
+            shard_gradyanlari=shard_gradyanlari,
+            trainable_params=trainable_params,
+            optimizer=optimizer,
+            max_norm=1.0
+        )
 
     grad_norm_pareto = math.sqrt(sum((p.grad.norm().item() ** 2 for p in trainable_params if p.grad is not None)))
     adapted_lr = config.lr / (1.0 + 0.01 * grad_norm_pareto)
