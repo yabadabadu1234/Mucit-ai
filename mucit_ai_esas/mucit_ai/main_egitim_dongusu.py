@@ -822,7 +822,10 @@ def _tekil_egitim_adimi_icra(
     # "Nihai Dinamik Uzunluk"), ama dönen N_star_int değeri `_` ile atılıyor, yerine
     # SABİT config.N kullanılıyordu — bu, N8_B'nin bütün mimari amacını (arc-length
     # geometrisine göre cümle uzunluğunu dinamik seçmek) tamamen devre dışı bırakıyordu.
-    N_star_int, L_arc_tensor, N_ste_tensor, delta_n_tensor = n8_b_uzunluk.forward(e10_kulli, cheby_calc)
+    N_star_int, L_arc_tensor, N_ste_tensor, delta_n_tensor = AcilDurumOomYakalayiciVeKurtarici(
+        n8_b_uzunluk.forward, e10_kulli, cheby_calc,
+        modul_nesnesi=n8_b_uzunluk, takas_mgr=takas_mgr
+    )
     N_star = N_star_int
     L_arc_val = L_arc_tensor.item()
     T_matrix = cheby_calc.hesapla(N=N_star)
@@ -863,9 +866,28 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=odul_motoru, takas_mgr=takas_mgr
     )
 
-    oduller_base = odul_motoru.hesapla(e12_olasilik.P, hedef_grouped[:, :N_star])
+    # Aynı gerekçe: e12_olasilik.P, n10_sozluk'ün VRAM kontratı CPU'ya yönlendirdiğinde
+    # CPU'da gelebilir; hedef_grouped ise hâlâ GPU'da olabilir — çıplak çağrı "Expected
+    # all tensors to be on the same device" ile çökerdi (bkz. toplam_oduller = oduller_base
+    # + R_q çökmesi: oduller_base CPU'da, R_q GPU'daydı).
+    oduller_base = AcilDurumOomYakalayiciVeKurtarici(
+        odul_motoru.hesapla, e12_olasilik.P, hedef_grouped[:, :N_star],
+        modul_nesnesi=odul_motoru, takas_mgr=takas_mgr
+    )
+    # odul_motoru (N14_OdulTopolojikDevresmezlikMotoru) parametresiz düz bir sınıf —
+    # AcilDurumOomYakalayiciVeKurtarici'nin "geri_donus_cihazi" tahmini bu durumda
+    # ilk tensör argümanının (e12_olasilik.P) cihazına dayanır, ki bu da başka bir
+    # düğümün VRAM kontratına göre CPU olabilir. R_q ile toplanmadan ÖNCE tahmine
+    # güvenmeyip cihazı burada AÇIKÇA hizalıyoruz — tek kaynaktan doğruluk.
+    if oduller_base.device != R_q.device:
+        oduller_base = oduller_base.to(R_q.device)
     toplam_oduller = oduller_base + R_q
-    kayip_grpo_vec = grpo_kriteri.hesapla_vektor(e12_olasilik.P, hedef_grouped[:, :N_star], toplam_oduller)
+    # e12_olasilik.P (n10_sozluk'ün CPU-fallback'inden kalmış olabilir) ve
+    # hedef_grouped/toplam_oduller (GPU) aynı çağrıda karışabiliyordu.
+    kayip_grpo_vec = AcilDurumOomYakalayiciVeKurtarici(
+        grpo_kriteri.hesapla_vektor, e12_olasilik.P, hedef_grouped[:, :N_star], toplam_oduller,
+        modul_nesnesi=grpo_kriteri, takas_mgr=takas_mgr
+    )
     n_target = float(hedef_grouped.shape[1])
     kayip_length = (L_arc_tensor - 0.5 * N_ste_tensor)**2 + 0.05 * (N_ste_tensor - n_target)**2
     kayip_spektral_vec = (kayip_length + 0.01 * torch.abs(delta_n_tensor).mean()).unsqueeze(0)
@@ -897,11 +919,15 @@ def _tekil_egitim_adimi_icra(
     _x_canli = mevcut_durum.x_r.detach()
     e5_a_canli_2 = E5_A_MevcutGizilDurum(x_r=_x_canli)
     e5_b_canli = E5_B_BellekGonderimi(M=M_current.detach())
-    e6_sorgu_canli = n4_sorgu.forward(
-        e5_a_canli_2,
-        D0_operator=D0_op_sabit,
-        A_adjacency=e3_sinir_sabit.D1,
-        bellek=e5_b_canli
+    # n4_sorgu.forward'ın Faz3 döngüsündeki ilk çağrısı (yukarıda, e6_sorgu =
+    # AcilDurumOomYakalayiciVeKurtarici(...)) zaten sarmalıyken bu TAZE çağrı
+    # çıplaktı — D0_operator=D0_op_sabit VRAM kontratına göre CPU'da gelebilirken
+    # n4_sorgu'nun kendi ağırlıkları GPU'da olabilir (ya da tam tersi, n4_sorgu'nun
+    # kendisi de AnlasmaliVramGuvencesiAl ile CPU'ya yönlendirilmiş olabilir).
+    e6_sorgu_canli = AcilDurumOomYakalayiciVeKurtarici(
+        n4_sorgu.forward, e5_a_canli_2,
+        D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b_canli,
+        modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
     )
     son_a_detached = cevap_a_list[-1].detach()
     E_sorgu_canli = (e6_sorgu_canli.q_r.unsqueeze(1) - son_a_detached.unsqueeze(2)).pow(2).mean(dim=-1)
@@ -922,11 +948,10 @@ def _tekil_egitim_adimi_icra(
     # n4_sorgu.forward() çağrısı ile bağımsız bir graf üretilir (e5_a_canli_2 ve
     # e5_b_canli zaten detached/leaf girdiler olduğu için bu ikinci çağrı hiçbir
     # paylaşılan graf düğümüne dokunmaz, tamamen bağımsızdır).
-    e6_sorgu_canli_cumle = n4_sorgu.forward(
-        e5_a_canli_2,
-        D0_operator=D0_op_sabit,
-        A_adjacency=e3_sinir_sabit.D1,
-        bellek=e5_b_canli
+    e6_sorgu_canli_cumle = AcilDurumOomYakalayiciVeKurtarici(
+        n4_sorgu.forward, e5_a_canli_2,
+        D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b_canli,
+        modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
     )
     # NOT 2: L_arc_tensor/N_ste_tensor DE TEKRAR KULLANILAMAZ — kayip_spektral_vec'in
     # VJP'si (n8_chebyshev + n8_b_uzunluk parametrelerini hedefleyerek) bu tensörlerin
@@ -937,8 +962,15 @@ def _tekil_egitim_adimi_icra(
     # hedefi yalnızca n8_b_uzunluk.parameters() ile sınırlı tutulur — n8_chebyshev.
     # parameters() İSTENMEZ (aksi halde e10_kulli'nin ölü atasına geri backward
     # denemesi gerekirdi ve aynı "graph a second time" hatası tekrar oluşurdu).
-    _, L_arc_cumle, N_ste_cumle, _ = n8_b_uzunluk.forward(e10_kulli, cheby_calc)
-    kayip_cumle_keyfiyet_vec = cumle_keyfiyet_motoru.hesapla_vektor(
+    _, L_arc_cumle, N_ste_cumle, _ = AcilDurumOomYakalayiciVeKurtarici(
+        n8_b_uzunluk.forward, e10_kulli, cheby_calc,
+        modul_nesnesi=n8_b_uzunluk, takas_mgr=takas_mgr
+    )
+    # D0_op=D0_op_sabit burada da (bkz. yukarıdaki hesapla_aktif_sorgu_odulu /
+    # n4_sorgu.forward düzeltmeleri) VRAM kontratına göre CPU'da gelebilirken diğer
+    # argümanlar (e6_sorgu_canli_cumle.q_r, hedef_grouped vb.) GPU'da olabilir.
+    kayip_cumle_keyfiyet_vec = AcilDurumOomYakalayiciVeKurtarici(
+        cumle_keyfiyet_motoru.hesapla_vektor,
         q_son=e6_sorgu_canli_cumle.q_r,
         a_son=son_a_detached,
         x_son=_x_canli,
@@ -946,6 +978,7 @@ def _tekil_egitim_adimi_icra(
         hedef_tokens=hedef_grouped,
         L_arc=L_arc_cumle,
         N_ste=N_ste_cumle,
+        modul_nesnesi=cumle_keyfiyet_motoru, takas_mgr=takas_mgr
     )
     _cumle_hedef_params = list(n4_sorgu.parameters()) + list(n8_b_uzunluk.parameters())
     vjp_cerrahi_enjekte_et(kayip_cumle_keyfiyet_vec, _cumle_hedef_params)
