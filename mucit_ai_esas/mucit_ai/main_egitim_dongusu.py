@@ -797,8 +797,13 @@ def _tekil_egitim_adimi_icra(
     AnlasmaliVramGuvencesiAl(n8_chebyshev, e9_guncel_detached.x_next, takas_mgr=takas_mgr)
     e10_kulli = AcilDurumOomYakalayiciVeKurtarici(n8_chebyshev.forward, e9_guncel_detached, modul_nesnesi=n8_chebyshev, takas_mgr=takas_mgr)
 
-    _, L_arc_tensor, N_ste_tensor, delta_n_tensor = n8_b_uzunluk.forward(e10_kulli, cheby_calc)
-    N_star = getattr(config, 'N', 1024)
+    # DÜZELTME: n8_b_uzunluk.forward() "Dinamik Uzunluk Seçici" görevini yaparak
+    # N* = Clamp(N_teorik + Delta_N, N_min, N_max) hesaplıyordu (sınıf docstring'i:
+    # "Nihai Dinamik Uzunluk"), ama dönen N_star_int değeri `_` ile atılıyor, yerine
+    # SABİT config.N kullanılıyordu — bu, N8_B'nin bütün mimari amacını (arc-length
+    # geometrisine göre cümle uzunluğunu dinamik seçmek) tamamen devre dışı bırakıyordu.
+    N_star_int, L_arc_tensor, N_ste_tensor, delta_n_tensor = n8_b_uzunluk.forward(e10_kulli, cheby_calc)
+    N_star = N_star_int
     L_arc_val = L_arc_tensor.item()
     T_matrix = cheby_calc.hesapla(N=N_star)
     hedef_clamped = torch.clamp(hedef_grouped[:, :N_star], min=0, max=getattr(config, 'V_size', 32000) - 1)

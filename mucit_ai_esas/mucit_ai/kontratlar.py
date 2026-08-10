@@ -2336,6 +2336,18 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 # [B, V_size] gelebilir; HER ZAMAN tam 3D [B, chunk_len, V_size]'e normalize
                 # et (eski kod yalnızca dim==1/dim==2'yi ele alıyordu, dim==0 durumunda
                 # P_chunk.shape[1] IndexError fırlatıyordu).
+                if logits_chunk.dim() < 3:
+                    # TEŞHİS KAYDI: Bu dal normalde HİÇ tetiklenmemeli (X_t kanıtlanmış
+                    # şekilde 3D'dir, X_chunk/vocab_head çıktısı rank korur). Tetiklenirse
+                    # gerçek kök sebebi yakalamak için tüm ilgili şekiller loglanır.
+                    logging.getLogger("mucit_ai.kontratlar").error(
+                        f"[N10 Boyut Anomalisi] logits_chunk.dim()={logits_chunk.dim()} (beklenen: 3). "
+                        f"X_input.shape={tuple(X_input.shape)}, X_refined.shape={tuple(X_refined.shape)}, "
+                        f"X_t.shape={tuple(X_t.shape)}, X_chunk.shape={tuple(X_chunk.shape)}, "
+                        f"i={i}, micro_chunk_size={micro_chunk_size}, cur_N={cur_N}, B={B}, N={N}, d={d}, "
+                        f"vocab_head.weight.shape={tuple(self.vocab_head.weight.shape)}, "
+                        f"logits_chunk.shape={tuple(logits_chunk.shape)}"
+                    )
                 while logits_chunk.dim() < 3:
                     logits_chunk = logits_chunk.unsqueeze(0)
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
@@ -2365,6 +2377,18 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 # [B, V_size] gelebilir; HER ZAMAN tam 3D [B, chunk_len, V_size]'e normalize
                 # et (eski kod yalnızca dim==1/dim==2'yi ele alıyordu, dim==0 durumunda
                 # P_chunk.shape[1] IndexError fırlatıyordu).
+                if logits_chunk.dim() < 3:
+                    # TEŞHİS KAYDI: Bu dal normalde HİÇ tetiklenmemeli (X_t kanıtlanmış
+                    # şekilde 3D'dir, X_chunk/vocab_head çıktısı rank korur). Tetiklenirse
+                    # gerçek kök sebebi yakalamak için tüm ilgili şekiller loglanır.
+                    logging.getLogger("mucit_ai.kontratlar").error(
+                        f"[N10 Boyut Anomalisi] logits_chunk.dim()={logits_chunk.dim()} (beklenen: 3). "
+                        f"X_input.shape={tuple(X_input.shape)}, X_refined.shape={tuple(X_refined.shape)}, "
+                        f"X_t.shape={tuple(X_t.shape)}, X_chunk.shape={tuple(X_chunk.shape)}, "
+                        f"i={i}, micro_chunk_size={micro_chunk_size}, B={B}, N={N}, d={d}, "
+                        f"vocab_head.weight.shape={tuple(self.vocab_head.weight.shape)}, "
+                        f"logits_chunk.shape={tuple(logits_chunk.shape)}"
+                    )
                 while logits_chunk.dim() < 3:
                     logits_chunk = logits_chunk.unsqueeze(0)
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
