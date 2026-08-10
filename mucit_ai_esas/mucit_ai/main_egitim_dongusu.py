@@ -670,8 +670,17 @@ def _tekil_egitim_adimi_icra(
     D0_op, _ = laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
     vram_denetci.yokla_ve_raporla("N11_LifLaplasyeniInsa", adim_no=current_step)
 
-    d_vec2 = n7_cozucu.hesapla_uyumsuzluk_vektoru(x_initial, D0_op)
-    e_vec2 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(x_initial, D0_op)
+    # D0_op, AnlasmaliVramGuvencesiAl'ın laplasyen_insa için verdiği CPU kararına göre
+    # CPU'da gelebilirken x_initial hâlâ GPU'da olabilir — çıplak çağrı "Expected all
+    # tensors to be on the same device" ile çökerdi (bkz. n9/n10 vb. aynı desen).
+    d_vec2 = AcilDurumOomYakalayiciVeKurtarici(
+        n7_cozucu.hesapla_uyumsuzluk_vektoru, x_initial, D0_op,
+        modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+    )
+    e_vec2 = AcilDurumOomYakalayiciVeKurtarici(
+        n7_cozucu.hesapla_dirichlet_enerjisi_vektoru, x_initial, D0_op,
+        modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+    )
 
     # Kohomolojik uyumsuzluk (d_vec2) ve Dirichlet enerjisi (e_vec2) FİZİKSEL OLARAK
     # farklı büyüklüklerdir — tek bir torch.cat + tek VJP'de eritilmezler, her biri
@@ -803,8 +812,14 @@ def _tekil_egitim_adimi_icra(
         M_current = e5_b_yeni.M
         mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
 
-    d_vec3 = n7_cozucu.hesapla_uyumsuzluk_vektoru(mevcut_durum.x_r, D0_op_sabit)
-    e_vec3 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(mevcut_durum.x_r, D0_op_sabit)
+    d_vec3 = AcilDurumOomYakalayiciVeKurtarici(
+        n7_cozucu.hesapla_uyumsuzluk_vektoru, mevcut_durum.x_r, D0_op_sabit,
+        modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+    )
+    e_vec3 = AcilDurumOomYakalayiciVeKurtarici(
+        n7_cozucu.hesapla_dirichlet_enerjisi_vektoru, mevcut_durum.x_r, D0_op_sabit,
+        modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+    )
 
     # Aynı gerekçeyle (bkz. Faz 2) d_vec3 ve e_vec3 ayrı VJP'lerdir. KARDEŞ-VJP: ikisi de
     # mevcut_durum.x_r/D0_op_sabit/Delta_0_op_sabit üzerinden AYNI üst-grafı (R-döngüsü,
