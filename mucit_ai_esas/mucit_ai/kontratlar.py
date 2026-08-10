@@ -2604,7 +2604,9 @@ class BiliselKanvasModeli(nn.Module):
         e3_sinir = self.n2_topox(e2_byte, x_initial=x_initial, mode=mode)
         e4_lif = self.n3_lif(e3_sinir, x_initial)
 
-        D0_op, Delta_0_op = self.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
+        # NOT: D0_op/Delta_0_op burada önceden hesaplanmaz — döngünün r=1 adımı (aşağıda)
+        # her durumda kendi D0_op/Delta_0_op'unu tazeden hesaplar, config.R >= 1 olduğu sürece
+        # (varsayılan R=4) bu ön-hesaplama hiç okunmadan üzerine yazılırdı.
 
         if b_size != x_initial.shape[0]:
             # Tavan bölme + kırpma: b_size, x_initial.shape[0]'ın tam katı olmasa bile
