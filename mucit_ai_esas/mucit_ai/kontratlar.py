@@ -640,10 +640,10 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
 
         # [D, D] kare Laplasyen matrisi — D = V_num * d_v; V_num token uzunluğuna göre
         # dinamik büyüdüğünden (bkz. N1'de V_nodes = l_tokens) bu çıktı taşabilir.
-        # Taşma yoksa (yaygın durum) tek cihazda normal hesaplanır; taşarsa sütunlar
-        # taşma-bazlı (oranlama YOK, sığdığı kadarı + taşanı bir sonraki cihaza devret)
-        # olarak görünür GPU'lara dağıtılır — bkz. tasma_bazli_capraz_gpu_matmul_sardla.
-        Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T, D0)    # [D, D]
+        # Elle sarmalamaya GEREK YOK: TasmaFarkindaHesaplamaIdaresi.baslat() eğitim
+        # başında bir kez kurulduysa, aşağıdaki düz torch.matmul zaten otomatik olarak
+        # taşma-farkındadır (idare kurulu değilse normal torch.matmul çalışır).
+        Delta_0 = torch.matmul(D0.T, D0)    # [D, D]
         return D0, Delta_0
 
     def tasintilar_cihaza(self, D0: torch.Tensor, Delta_0: torch.Tensor, target_device: torch.device) -> Tuple[torch.Tensor, torch.Tensor]:
@@ -1399,7 +1399,7 @@ class N6_KohomolojikAktor(nn.Module):
         if Delta0_operator is not None:
             self.register_buffer("Delta0", Delta0_operator, persistent=False)
         elif D0_operator is not None:
-            self.register_buffer("Delta0", tasma_bazli_capraz_gpu_matmul_sardla(D0_operator.T, D0_operator), persistent=False)
+            self.register_buffer("Delta0", torch.matmul(D0_operator.T, D0_operator), persistent=False)
         else:
             self.Delta0 = None
 
@@ -1432,7 +1432,7 @@ class N6_KohomolojikAktor(nn.Module):
         if Delta0_op is not None:
             self.register_buffer("Delta0", Delta0_op, persistent=False)
         else:
-            self.register_buffer("Delta0", tasma_bazli_capraz_gpu_matmul_sardla(D0_op.T, D0_op), persistent=False)
+            self.register_buffer("Delta0", torch.matmul(D0_op.T, D0_op), persistent=False)
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
@@ -3387,34 +3387,38 @@ def girdi_cihaza_tasi(x: Any, device: torch.device) -> Any:
     return x
 
 
-def tasma_bazli_capraz_gpu_matmul_sardla(
+def _rekursif_tasma_bazli_matmul(
     A: torch.Tensor,
     B: torch.Tensor,
-    emniyet_marji_mb: float = 256.0,
+    orijinal_matmul_fn: Callable,
+    emniyet_marji_mb: float,
+    derinlik: int = 0,
+    maks_derinlik: int = 8,
 ) -> torch.Tensor:
     """
-    [Taşma-Bazlı Çapraz-GPU Matris Çarpımı / Overflow-Triggered Cross-GPU MatMul]
+    [Rekürsif Taşma-Bazlı Matris Çarpımı — Dalga Yayılımı ve Toplanması]
 
-    A @ B çarpımını hesaplar. Kapasite ORANI hesaplanmaz (20/10 gibi bir oranlama
-    YOKTUR) — yalnızca TEK bir soru sorulur: "Tam çıktı ([m,n]) A'nın bulunduğu (home)
-    cihaza sığıyor mu?"
+    A @ B çarpımını hesaplar. Kapasite ORANI hesaplanmaz — yalnızca TEK soru sorulur:
+    "Tam çıktı ([m,n]) A'nın bulunduğu (home) cihaza sığıyor mu?"
 
-      - Sığıyorsa (taşma YOK): hiçbir dağıtım yapılmaz, normal tek-cihaz torch.matmul
-        çalışır. Bu, çok GPU'lu bir ortamda dahi varsayılan/yaygın durumdur.
-      - Sığmıyorsa (taşma VAR): B'nin sütunları (n boyutu) home cihazdan başlayarak
-        sırayla gezilir; her cihaza "o cihaza sığdığı kadarı" yazılır, TAŞAN kısım
-        bir sonraki cihaza devredilir. Bu devir, tüm sütunlar yerleşene veya tüm
-        görünür cihazlar tükenene kadar sürer.
+      - Sığıyorsa (taşma YOK): hiçbir dağıtım yapılmaz, orijinal torch.matmul çalışır.
+        Çok GPU'lu bir ortamda dahi bu VARSAYILAN/yaygın durumdur.
+      - Sığmıyorsa (taşma VAR): B'nin sütunları home cihazdan başlayarak sırayla
+        gezilir; her cihaza sığdığı kadarı yazılır, TAŞAN kısım bir sonraki cihaza
+        devredilir. Bir dilim kendi hedef cihazında DA sığmazsa (ör. o cihazda da
+        başka iş yükü varsa), AYNI mantıkla REKÜRSİF olarak kendi içinde tekrar
+        bölünür — "veri piramit gibi dağılır, dalga gibi bir dağılır bir söner".
+        Hiçbir GPU'ya sığmayan artık kısım son çare olarak CPU'da hesaplanır
+        (asla sessizce veri kaybı veya cihaz uyumsuzluğu oluşmaz).
+      - İşlem HER ZAMAN "hangi veri hangi cihazdaysa işlem onun işlemcisinde
+        yapılır" prensibiyle yürür: her dilim SADECE kendi hedef cihazında
+        matmul'a girer, sonuçlar en son home cihazda birleştirilip (dalga geri
+        söner) döndürülür — çağıran taraf sıradan tek-cihaz bir tensör görür.
 
-    Tek Python sürecinde çalışır — ayrı worker süreci, IPC kuyruğu veya NCCL GEREKMEZ;
-    PyTorch autograd, aynı süreç içinde farklı cuda:N cihazları arasındaki .to() kopyalarını
-    zaten türevlenebilir şekilde destekler.
-
-    Kullanım örneği (Riyazi_LifLaplasyeniBlokInsaEdici.insa_et):
-        Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T, D0)  # [D, D], D taşarsa böl
+    Tek Python sürecinde çalışır — worker süreci, IPC kuyruğu veya NCCL GEREKMEZ.
     """
     if not torch.cuda.is_available() or not A.is_cuda:
-        return torch.matmul(A, B)
+        return orijinal_matmul_fn(A, B)
 
     home_device = A.device
     device_count = torch.cuda.device_count()
@@ -3424,24 +3428,24 @@ def tasma_bazli_capraz_gpu_matmul_sardla(
     n = B.shape[1]
     logger = logging.getLogger("mucit_ai.kontratlar")
 
-    # 1. TAŞMA TESTİ: Tam çıktı home cihaza sığıyor mu?
     tam_cikti_bayt = m * n * dtype_bayt
     try:
         free_bayt, _ = torch.cuda.mem_get_info(home_device.index)
     except Exception:
-        return torch.matmul(A, B)
+        return orijinal_matmul_fn(A, B)
 
-    if tam_cikti_bayt + emniyet_bayt <= free_bayt:
-        # Taşma YOK — dağıtım yapılmaz.
-        return torch.matmul(A, B)
+    if tam_cikti_bayt + emniyet_bayt <= free_bayt or derinlik >= maks_derinlik or device_count <= 1:
+        # Taşma YOK (veya azami rekürsiyon derinliğine ulaşıldı, veya tek GPU var):
+        # dağıtım yapılmaz.
+        return orijinal_matmul_fn(A, B)
 
-    logger.warning(
-        f"[TaşmaBazlıÇaprazGpuMatmul] [{m}x{n}] çıktı ({tam_cikti_bayt/(1024**2):.1f} MB) "
-        f"home cihaza ({home_device}) sığmıyor (boş: {free_bayt/(1024**2):.1f} MB). "
-        f"Sütunlar çoklu-GPU'ya taşma-bazlı dağıtılıyor..."
-    )
+    if derinlik == 0:
+        logger.warning(
+            f"[TaşmaFarkındaHesaplamaİdaresi] [{m}x{n}] çıktı ({tam_cikti_bayt/(1024**2):.1f} MB) "
+            f"home cihaza ({home_device}) sığmıyor (boş: {free_bayt/(1024**2):.1f} MB). "
+            f"Sütunlar çoklu-GPU'ya taşma-bazlı dağıtılıyor..."
+        )
 
-    # 2. TAŞMA VAR — sütunları (n) home cihazdan başlayarak taşma-bazlı dağıt
     A_bayt = A.numel() * dtype_bayt
     parcalar: List[Tuple[int, torch.Tensor]] = []
     kalan_n = n
@@ -3474,22 +3478,153 @@ def tasma_bazli_capraz_gpu_matmul_sardla(
         B_dilim = B[:, imlec:imlec + sigacak_n]
         B_dilim_burada = B_dilim if B_dilim.device == hedef_cihaz else B_dilim.to(hedef_cihaz)
 
-        cikti_dilim = torch.matmul(A_burada, B_dilim_burada)
+        # REKÜRSİF ÇAĞRI: bu dilim SADECE kendi cihazında (A_burada/B_dilim_burada
+        # zaten hedef_cihaz'a taşınmış durumda) işlenir; o cihazda da taşarsa aynı
+        # mantıkla kendi içinde tekrar bölünür (daha da dağıtmak gerekiyorsa dağıt).
+        cikti_dilim = _rekursif_tasma_bazli_matmul(
+            A_burada, B_dilim_burada, orijinal_matmul_fn, emniyet_marji_mb, derinlik + 1, maks_derinlik
+        )
         parcalar.append((imlec, cikti_dilim))
 
         imlec += sigacak_n
         kalan_n -= sigacak_n
 
     if kalan_n > 0:
-        raise RuntimeError(
-            f"[TaşmaBazlıÇaprazGpuMatmul] {kalan_n}/{n} sütun hiçbir GPU'ya sığmadı "
-            f"(tüm görünür {device_count} cihaz taştı)."
+        # Hiçbir GPU kalan kısmı almadı — son çare CPU (asla veri kaybı/cihaz
+        # uyumsuzluğu değil, açık ve güvenli bir düşüş).
+        logger.warning(
+            f"[TaşmaFarkındaHesaplamaİdaresi] {kalan_n}/{n} sütun hiçbir GPU'ya sığmadı "
+            f"(tüm görünür {device_count} cihaz taştı) — CPU'da tamamlanıyor."
         )
+        cpu_A = A.cpu()
+        cpu_B_kalan = B[:, imlec:imlec + kalan_n].cpu()
+        cikti_cpu = orijinal_matmul_fn(cpu_A, cpu_B_kalan)
+        parcalar.append((imlec, cikti_cpu))
+        kalan_n = 0
 
-    # 3. TOPLA: Tüm parçaları home cihaza geri taşıyıp sıraya göre birleştir
+    # TOPLA: dalga geri söner — tüm parçalar home cihaza taşınıp sıraya göre birleştirilir.
     parcalar.sort(key=lambda p: p[0])
     cikti_parcalari = [p[1].to(home_device) if p[1].device != home_device else p[1] for p in parcalar]
     return torch.cat(cikti_parcalari, dim=1)
+
+
+def tasma_bazli_capraz_gpu_matmul_sardla(
+    A: torch.Tensor,
+    B: torch.Tensor,
+    emniyet_marji_mb: float = 256.0,
+) -> torch.Tensor:
+    """
+    [Taşma-Bazlı Çapraz-GPU Matris Çarpımı — Elle Çağrılabilir Sarmalayıcı]
+
+    _rekursif_tasma_bazli_matmul'ün genel torch.matmul üzerinden elle çağrılabilen
+    biçimidir. TaşmaFarkındaHesaplamaİdaresi.baslat() çağrılmışsa (bkz. aşağı) bu
+    fonksiyonun İÇİNDEKİ torch.matmul çağrısı zaten otomatik taşma-farkındadır —
+    yani idare kurulduktan sonra bu sarmalayıcıya hiç ihtiyaç kalmaz, düz
+    torch.matmul(A, B) yazmak yeterlidir. Bu fonksiyon yalnızca idare henüz
+    kurulmamışken veya elle/açıkça çağrılmak istendiğinde kullanılır.
+    """
+    return _rekursif_tasma_bazli_matmul(A, B, torch.matmul, emniyet_marji_mb)
+
+
+class TasmaFarkindaHesaplamaIdaresi:
+    """
+    [Taşma-Farkında Hesaplama İdaresi / Overflow-Aware Compute Governance]
+
+    "Devlet nizamı" mantığı: baslat() BİR KEZ çağrılır; ondan sonra kod tabanındaki
+    HİÇBİR çağrı noktası elle sarmalanmaz. torch.matmul ve torch.nn.functional.linear
+    (nn.Linear'ın forward'ının altında yatan gerçek ilkel işlem — vocab_head, W_q,
+    W_k, W_v, tüm nn.Linear katmanları dahil) SÜREÇ GENELİNDE, checkpoint-sarmalı
+    N6/N7 dahil, üçüncü parti kod dahil, otomatik olarak taşma-farkında hale gelir.
+
+    Prensip: "Hangi veri hangi cihazdaysa, işlem onun işlemcisinde yapılır." Bir
+    işlemin sonucu taşarsa bir sonraki cihaza devredilir; o cihazdaki dilim de
+    taşarsa kendi içinde REKÜRSİF olarak tekrar bölünür — veri piramit gibi/dalga
+    gibi cihazlar arasında yayılır, iş bitince sonuçlar toplanıp (dalga söner)
+    tek tensöre geri birleştirilir. Kapasite ORANI hiçbir aşamada hesaplanmaz —
+    yalnızca "sığıyor mu (taşma var mı)" sorusu sorulur.
+
+    Kullanım:
+        TasmaFarkindaHesaplamaIdaresi.baslat()   # eğitim döngüsü başında BİR KEZ
+        ...                                       # sonrasında hiçbir değişiklik gerekmez
+        TasmaFarkindaHesaplamaIdaresi.durdur()   # (opsiyonel) süreç sonunda geri al
+    """
+    _kurulu: bool = False
+    _orijinal_matmul: Optional[Callable] = None
+    _orijinal_linear: Optional[Callable] = None
+    _emniyet_marji_mb: float = 256.0
+
+    @classmethod
+    def baslat(cls, emniyet_marji_mb: float = 256.0) -> None:
+        logger = logging.getLogger("mucit_ai.kontratlar")
+        if cls._kurulu:
+            logger.info("[TaşmaFarkındaHesaplamaİdaresi] Zaten kurulu, tekrar kurulmuyor.")
+            return
+
+        cls._emniyet_marji_mb = emniyet_marji_mb
+        cls._orijinal_matmul = torch.matmul
+        cls._orijinal_linear = F.linear
+
+        orijinal_matmul = cls._orijinal_matmul
+        orijinal_linear = cls._orijinal_linear
+
+        def _idareli_matmul(input: torch.Tensor, other: torch.Tensor, *, out=None):
+            # Yalnızca 2D x 2D durumu taşma-bazlı dağıtıma girer (Delta_0 = D0^T @ D0
+            # gibi büyük kare/dikdörtgen matrisler tam olarak bu şekildedir). Diğer
+            # boyut kombinasyonları (batched 3D+, out= verilmiş, vb.) davranış
+            # değişikliği riski taşımamak için doğrudan orijinal işleve düşer.
+            if (
+                out is None
+                and isinstance(input, torch.Tensor) and isinstance(other, torch.Tensor)
+                and input.dim() == 2 and other.dim() == 2
+                and input.is_cuda
+            ):
+                return _rekursif_tasma_bazli_matmul(input, other, orijinal_matmul, cls._emniyet_marji_mb)
+            return orijinal_matmul(input, other) if out is None else orijinal_matmul(input, other, out=out)
+
+        def _idareli_linear(input: torch.Tensor, weight: torch.Tensor, bias: Optional[torch.Tensor] = None):
+            # F.linear(x, W, b) = x @ W.T + b. Yalnızca 2D girdi + taşma durumunda
+            # devreye girer; diğer tüm durumlar (3D+ batched girdi, bias var/yok
+            # farketmeksizin normal boyut) orijinal, optimize edilmiş ATen yoluna düşer.
+            if (
+                isinstance(input, torch.Tensor) and isinstance(weight, torch.Tensor)
+                and input.dim() == 2 and input.is_cuda
+            ):
+                m_, k_ = input.shape
+                n_, k2_ = weight.shape
+                if k_ == k2_:
+                    dtype_bayt = input.element_size()
+                    tam_cikti_bayt = m_ * n_ * dtype_bayt
+                    try:
+                        free_bayt, _ = torch.cuda.mem_get_info(input.device.index)
+                    except Exception:
+                        free_bayt = None
+                    if free_bayt is not None and tam_cikti_bayt + int(cls._emniyet_marji_mb * 1024 * 1024) > free_bayt:
+                        cikti = _rekursif_tasma_bazli_matmul(input, weight.T, orijinal_matmul, cls._emniyet_marji_mb)
+                        if bias is not None:
+                            cikti = cikti + bias.to(cikti.device)
+                        return cikti
+            return orijinal_linear(input, weight, bias)
+
+        torch.matmul = _idareli_matmul
+        F.linear = _idareli_linear
+        torch.nn.functional.linear = _idareli_linear
+        cls._kurulu = True
+        logger.info(
+            "[TaşmaFarkındaHesaplamaİdaresi] Küresel taşma-farkında torch.matmul + "
+            "F.linear devrede. Bu andan itibaren HİÇBİR çağrı noktası elle "
+            "sarmalanmadan otomatik taşma koruması altındadır."
+        )
+
+    @classmethod
+    def durdur(cls) -> None:
+        logger = logging.getLogger("mucit_ai.kontratlar")
+        if not cls._kurulu:
+            return
+        torch.matmul = cls._orijinal_matmul
+        F.linear = cls._orijinal_linear
+        torch.nn.functional.linear = cls._orijinal_linear
+        cls._kurulu = False
+        logger.info("[TaşmaFarkındaHesaplamaİdaresi] Küresel yamalar geri alındı.")
 
 
 def anlasmali_vram_guvencesi_al(

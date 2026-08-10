@@ -59,6 +59,7 @@ from torch.utils.checkpoint import checkpoint
 from kontratlar import (
     AnlasmaliVramGuvencesiAl,
     AcilDurumOomYakalayiciVeKurtarici,
+    TasmaFarkindaHesaplamaIdaresi,
     Model_TopolojikKonfigurasyon,
     SistemYapilandirmasi,
     E1_HamMetinAkisi,
@@ -654,9 +655,17 @@ def _tekil_egitim_adimi_icra(
             e6_sorgu_st = E6_GizilSorgu(q_r=q_c)
             e7_lokal_st = E7_LokalBilgi(a_r=a_c)
             AnlasmaliVramGuvencesiAl(n6_aktor, x_c, takas_mgr=takas_mgr)
-            e8_sentetik_st = n6_aktor.forward(e5_a_st, e6_sorgu_st, e7_lokal_st)
+            # NOT: checkpoint(use_reentrant=False) bu fonksiyonu backward'da AYNEN
+            # tekrar çalıştırır (recompute) — reaktif kurtarıcı try/except tabanlı,
+            # saf ve yan etkisiz olduğu için hem forward hem recompute çağrısında
+            # güvenle devreye girer.
+            e8_sentetik_st = AcilDurumOomYakalayiciVeKurtarici(
+                n6_aktor.forward, e5_a_st, e6_sorgu_st, e7_lokal_st, modul_nesnesi=n6_aktor, takas_mgr=takas_mgr
+            )
             AnlasmaliVramGuvencesiAl(n7_cozucu, e8_sentetik_st.synthetic_state, takas_mgr=takas_mgr)
-            e9_guncel_st = n7_cozucu.forward(e8_sentetik_st, Delta_0_op_sabit, e5_a_st)
+            e9_guncel_st = AcilDurumOomYakalayiciVeKurtarici(
+                n7_cozucu.forward, e8_sentetik_st, Delta_0_op_sabit, e5_a_st, modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+            )
             return e9_guncel_st.x_next, e8_sentetik_st.synthetic_state
 
         x_next_val, h_syn_val = checkpoint(
@@ -846,7 +855,13 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     logger.info("================================================================================")
     logger.info("BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ EĞİTİM YÜRÜTÜCÜSÜ (ÇOKLU GPU PARALEL DÖNGÜ)")
     logger.info("================================================================================")
-    
+
+    # TAŞMA-FARKINDA HESAPLAMA İDARESİ: BİR KEZ kurulur, ondan sonra torch.matmul ve
+    # F.linear SÜREÇ GENELİNDE (checkpoint-sarmalı N6/N7 dahil, N1-N16'nın her
+    # köşesi dahil) otomatik olarak taşma-farkındadır — hiçbir çağrı noktası elle
+    # sarmalanmaz. "Devlet nizamı" mantığı: kurulum burada, uygulanma her yerde.
+    TasmaFarkindaHesaplamaIdaresi.baslat()
+
     # NVMe Takas Yöneticisini İlkle (Sıfır OOM Garantisi)
     takas_mgr = NvmeTakasYoneticisi() if NvmeTakasYoneticisi is not None else None
     
