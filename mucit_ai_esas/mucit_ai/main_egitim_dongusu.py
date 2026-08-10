@@ -1053,7 +1053,13 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
     )
     son_a_detached = cevap_a_list[-1].detach()
-    E_sorgu_canli = (e6_sorgu_canli.q_r.unsqueeze(1) - son_a_detached.unsqueeze(2)).pow(2).mean(dim=-1)
+    # KAPSAMLI DENETİM (madde 7): e6_sorgu_canli.q_r (reaktif kurtarıcının CPU-fallback'inden
+    # kalmış olabilir) ve son_a_detached (hâlâ GPU'da olabilir) arasında açık cihaz hizalaması
+    # yoktu — çıplak çıkarma "Expected all tensors to be on the same device" ile çökerdi.
+    _q_r_canli = e6_sorgu_canli.q_r
+    if _q_r_canli.device != son_a_detached.device:
+        _q_r_canli = _q_r_canli.to(son_a_detached.device)
+    E_sorgu_canli = (_q_r_canli.unsqueeze(1) - son_a_detached.unsqueeze(2)).pow(2).mean(dim=-1)
     vjp_cerrahi_enjekte_et(E_sorgu_canli, list(n4_sorgu.parameters()))
     g_sorgu = _grad_anlik_kopyala()
     # -----------------------------------------------------------------------
