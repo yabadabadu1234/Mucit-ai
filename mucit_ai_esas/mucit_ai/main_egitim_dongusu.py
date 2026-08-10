@@ -945,7 +945,26 @@ def _tekil_egitim_adimi_icra(
         if hasattr(meclis_bellek, 'R') and meclis_bellek.R is not None:
             meclis_bellek.R = meclis_bellek.R.detach()
 
-    kayip_val = (d_vec2.mean() + e_vec2.mean() + d_vec3.mean() + e_vec3.mean() + kayip_grpo_vec.mean() + metrikler_vicreg['vicreg_total']).detach().item()
+    # HAKİKİ BİLEŞKE KAYIP: rastgele/eksik bir ham toplam (eskiden yalnızca 6/11 nesneyi
+    # kapsıyordu ve Pareto'nun uyguladığı gerçek ağırlıklandırmayla hiçbir illiyet bağı
+    # yoktu) yerine, shard_gradyanlari ile AYNI SIRADAKİ 11 nesnenin skaler ortalaması,
+    # optimizer.step()'e fiilen giren GERÇEK Pareto-optimal ağırlıklarla (alpha_pareto)
+    # tartılarak birleştirilir. NOT: grad_norm_pareto burada KULLANILMAZ — o,
+    # clip_grad_norm_(max_norm=1.0) SONRASI ölçüldüğü için neredeyse sabit (~1.0) bir
+    # değerdir ve best_loss ayrımı için bilgi taşımaz; gradyan şiddeti zaten kayıp
+    # kalitesiyle aynı şey değildir (yakınsama yaklaştıkça gradyan küçülür, bu "daha iyi
+    # model" anlamına gelmez). Aşağıdaki ağırlıklı toplam ise gerçekten "o adımda hangi
+    # bileşenin ne kadar önemsendiği" ile orantılı, kayıp-anlamlı bir skalerdir.
+    _kayip_bileseni_listesi = [
+        d_vec2.mean(), F.relu(e_vec2).mean(),
+        (d_vec3 / _R_norm).mean(), (F.relu(e_vec3) / _R_norm).mean(),
+        kayip_grpo_vec.mean(), l_var_vec.mean(), l_cov_vec.mean(), l_rec_vec.mean(),
+        kayip_spektral_vec.mean(), E_sorgu_canli.mean(), kayip_cumle_keyfiyet_vec.mean(),
+    ]
+    kayip_val = float(sum(
+        float(alpha_pareto[i].detach().item()) * float(_kayip_bileseni_listesi[i].detach().item())
+        for i in range(len(_kayip_bileseni_listesi))
+    ))
     
     raw_n3_lif = gpu_dagitici.kok_modul_al(n3_lif) if gpu_dagitici is not None else (n3_lif.module if hasattr(n3_lif, 'module') else n3_lif)
     stiefel_izdusurucu.izdüsür(raw_n3_lif.phi_base)
