@@ -551,6 +551,19 @@ def _tekil_egitim_adimi_icra(
         except Exception as exc:
             logger.warning(f"  [VJP Cerrahi Uyarısı] Gradyan enjeksiyonu uyarısı: {exc}")
 
+    def _grad_anlik_kopyala() -> List[torch.Tensor]:
+        """
+        [Nesne-Seviyesi PCGrad/MGDA Granülaritesi]
+        vjp_cerrahi_enjekte_et'ten hemen sonra çağrılır; o TEK adlandırılmış hata
+        nesnesinin (d_vec2, relu(e_vec2), kayip_grpo_vec, l_var_vec, ... gibi farklı
+        fiziksel büyüklüklerin ASLA aynı VJP'de birleştirilmeden) ürettiği anlık gradyan
+        anlık görüntüsünü döndürür. Bu şekilde her nesne, dış Pareto-PCGrad-MGDA
+        birleştiricisine (birlestir_ve_uygula_dagitik_gradyanlar) kendi ayrı satırı
+        olarak girer — M~binlerce elemanlı tam Jacobiyen'in hesaplanamaz maliyetiyle,
+        3 kaba fazda her şeyi tek VJP'de eritmenin çatışma-körlüğü arasındaki orta yol.
+        """
+        return [p.grad.detach().clone() if p.grad is not None else torch.zeros_like(p) for p in trainable_params]
+
     # ------------------------------------------------------------------------------
     # FAZ 2: TOPOLOJİK İSKELET VE LİF LAPLASYENİ HESABI (N1 -> N2 -> N3 -> N11)
     # ------------------------------------------------------------------------------
@@ -569,10 +582,15 @@ def _tekil_egitim_adimi_icra(
     
     d_vec2 = n7_cozucu.hesapla_uyumsuzluk_vektoru(x_initial, D0_op)
     e_vec2 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(x_initial, Delta_0_op)
-    
-    l_loco2_vec = torch.cat([d_vec2.view(-1), F.relu(e_vec2).view(-1)])
-    vjp_cerrahi_enjekte_et(l_loco2_vec, list(n3_lif.parameters()) + list(n2_topox.parameters()))
-    g_faz2 = [p.grad.detach().clone() if p.grad is not None else torch.zeros_like(p) for p in trainable_params]
+
+    # Kohomolojik uyumsuzluk (d_vec2) ve Dirichlet enerjisi (e_vec2) FİZİKSEL OLARAK
+    # farklı büyüklüklerdir — tek bir torch.cat + tek VJP'de eritilmezler, her biri
+    # kendi VJP'sini alır ve dış Pareto-PCGrad-MGDA birleştiricisine ayrı satır olarak girer.
+    _faz2_hedef_params = list(n3_lif.parameters()) + list(n2_topox.parameters())
+    vjp_cerrahi_enjekte_et(d_vec2, _faz2_hedef_params)
+    g_faz2_uyumsuzluk = _grad_anlik_kopyala()
+    vjp_cerrahi_enjekte_et(F.relu(e_vec2), _faz2_hedef_params)
+    g_faz2_dirichlet = _grad_anlik_kopyala()
     vram_denetci.yokla_ve_raporla("LOCO_Faz2_GrafSilindi", adim_no=current_step)
 
     # ------------------------------------------------------------------------------
@@ -663,10 +681,14 @@ def _tekil_egitim_adimi_icra(
 
     d_vec3 = n7_cozucu.hesapla_uyumsuzluk_vektoru(mevcut_durum.x_r, D0_op_sabit)
     e_vec3 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(mevcut_durum.x_r, Delta_0_op_sabit)
-    
-    l_loco3_vec = torch.cat([d_vec3.view(-1), F.relu(e_vec3).view(-1)]) / float(max(1, config.R))
-    vjp_cerrahi_enjekte_et(l_loco3_vec, list(n6_aktor.parameters()) + list(n4_sorgu.parameters()) + list(n5_cevap.parameters()))
-    g_faz3 = [p.grad.detach().clone() if p.grad is not None else torch.zeros_like(p) for p in trainable_params]
+
+    # Aynı gerekçeyle (bkz. Faz 2) d_vec3 ve e_vec3 ayrı VJP'lerdir.
+    _R_norm = float(max(1, config.R))
+    _faz3_hedef_params = list(n6_aktor.parameters()) + list(n4_sorgu.parameters()) + list(n5_cevap.parameters())
+    vjp_cerrahi_enjekte_et(d_vec3 / _R_norm, _faz3_hedef_params)
+    g_faz3_uyumsuzluk = _grad_anlik_kopyala()
+    vjp_cerrahi_enjekte_et(F.relu(e_vec3) / _R_norm, _faz3_hedef_params)
+    g_faz3_dirichlet = _grad_anlik_kopyala()
     vram_denetci.yokla_ve_raporla("LOCO_Faz3_GrafSilindi", adim_no=current_step)
 
     # ------------------------------------------------------------------------------
@@ -716,9 +738,21 @@ def _tekil_egitim_adimi_icra(
     AnlasmaliVramGuvencesiAl(vicreg_kriteri, e11_gomulu.X_output, takas_mgr=takas_mgr)
     (l_var_vec, l_cov_vec, l_rec_vec), metrikler_vicreg = vicreg_kriteri(x=e9_guncel_detached.x_next, z=e11_gomulu.X_output)
     
-    l_n10_vec = torch.cat([kayip_grpo_vec.view(-1), l_var_vec.view(-1), l_cov_vec.view(-1), l_rec_vec.view(-1)])
-    vjp_cerrahi_enjekte_et(l_n10_vec, list(n10_sozluk.parameters()))
+    # GRPO kaybı ve VICReg'in varyans/kovaryans/rekonstrüksiyon terimleri DÖRT ayrı
+    # fiziksel büyüklüktür (bkz. Faz 2/3 gerekçesi) — tek torch.cat + tek VJP yerine
+    # her biri kendi VJP'sini alır.
+    _n10_hedef_params = list(n10_sozluk.parameters())
+    vjp_cerrahi_enjekte_et(kayip_grpo_vec, _n10_hedef_params)
+    g_grpo = _grad_anlik_kopyala()
+    vjp_cerrahi_enjekte_et(l_var_vec, _n10_hedef_params)
+    g_vicreg_var = _grad_anlik_kopyala()
+    vjp_cerrahi_enjekte_et(l_cov_vec, _n10_hedef_params)
+    g_vicreg_cov = _grad_anlik_kopyala()
+    vjp_cerrahi_enjekte_et(l_rec_vec, _n10_hedef_params)
+    g_vicreg_rec = _grad_anlik_kopyala()
+
     vjp_cerrahi_enjekte_et(kayip_spektral_vec, list(n8_chebyshev.parameters()) + list(n8_b_uzunluk.parameters()))
+    g_spektral = _grad_anlik_kopyala()
 
     # --- HATA 1 DÜZELTMESİ: Canlı Graf Üzerinden N4 VJP Enjeksiyonu ---
     # sorgu_q_list[-1] kopuk graftan geliyor; N4 gradyanı için canlı forward gerekli
@@ -735,16 +769,28 @@ def _tekil_egitim_adimi_icra(
     son_a_detached = cevap_a_list[-1].detach()
     E_sorgu_canli = (e6_sorgu_canli.q_r.unsqueeze(1) - son_a_detached.unsqueeze(2)).pow(2).mean(dim=-1)
     vjp_cerrahi_enjekte_et(E_sorgu_canli, list(n4_sorgu.parameters()))
+    g_sorgu = _grad_anlik_kopyala()
     # -----------------------------------------------------------------------
 
-    g_faz4_5 = [p.grad.detach().clone() if p.grad is not None else torch.zeros_like(p) for p in trainable_params]
     vram_denetci.yokla_ve_raporla("LOCO_Faz4_5_GrafSilindi", adim_no=current_step)
 
     # ------------------------------------------------------------------------------
     # PARETO-PCGRAD DİKGEN PROJEKSİYONU VE NİHAİ KÜRESEL GÜNCELLEME
     # ------------------------------------------------------------------------------
+    # [4. HATA DÜZELTMESİ] Nesne-Seviyesi Granülerlik: 3 kaba faz yerine, her adlandırılmış
+    # hata büyüklüğü (10 nesne) kendi ayrı satırı olarak Gram matrisine/PCGrad'a girer.
+    # Gerçek MGDA'nın istediği "her bileşen için ayrı gradyan" idealinin, M~binlerce
+    # elemanlı tam Jacobiyen yerine VRAM'e sığan bir yaklaşımı (bkz. _grad_anlik_kopyala).
+    shard_gradyanlari = [
+        g_faz2_uyumsuzluk, g_faz2_dirichlet,
+        g_faz3_uyumsuzluk, g_faz3_dirichlet,
+        g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec,
+        g_spektral, g_sorgu,
+    ]
+    _P_toplam = sum(p.numel() for p in trainable_params)
+    AnlasmaliVramGuvencesiAl(pareto_pcgrad_operator, (len(shard_gradyanlari), _P_toplam), takas_mgr=takas_mgr)
     alpha_pareto = pareto_pcgrad_operator.birlestir_ve_uygula_dagitik_gradyanlar(
-        shard_gradyanlari=[g_faz2, g_faz3, g_faz4_5],
+        shard_gradyanlari=shard_gradyanlari,
         trainable_params=trainable_params,
         optimizer=optimizer,
         max_norm=1.0
