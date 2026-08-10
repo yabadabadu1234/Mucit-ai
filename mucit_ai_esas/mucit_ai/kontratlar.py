@@ -2332,11 +2332,12 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 h_chunk = h_tensor[:, i:i+micro_chunk_size]
                 
                 logits_chunk = self.vocab_head(X_chunk)
-                # Tensör Boyut Zırhı: vocab_head çıktısı 1D [V_size] veya 2D [B, V_size] gelebilir; 3D'ye normalize et
-                if logits_chunk.dim() == 1:
-                    logits_chunk = logits_chunk.unsqueeze(0).unsqueeze(0)  # [1, 1, V_size]
-                elif logits_chunk.dim() == 2:
-                    logits_chunk = logits_chunk.unsqueeze(1)  # [B, 1, V_size]
+                # Tensör Boyut Zırhı: vocab_head çıktısı 0D (skaler), 1D [V_size] veya 2D
+                # [B, V_size] gelebilir; HER ZAMAN tam 3D [B, chunk_len, V_size]'e normalize
+                # et (eski kod yalnızca dim==1/dim==2'yi ele alıyordu, dim==0 durumunda
+                # P_chunk.shape[1] IndexError fırlatıyordu).
+                while logits_chunk.dim() < 3:
+                    logits_chunk = logits_chunk.unsqueeze(0)
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
                 logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
                 logits_norm = (logits_chunk - logits_mean.to(device=logits_chunk.device)) / (logits_std.to(device=logits_chunk.device) + 1e-6)
@@ -2360,11 +2361,12 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
             for i in range(0, N, micro_chunk_size):
                 X_chunk = X_t[:, i:i+micro_chunk_size, :]
                 logits_chunk = self.vocab_head(X_chunk)
-                # Tensör Boyut Zırhı: vocab_head çıktısı 1D [V_size] veya 2D [B, V_size] gelebilir; 3D'ye normalize et
-                if logits_chunk.dim() == 1:
-                    logits_chunk = logits_chunk.unsqueeze(0).unsqueeze(0)  # [1, 1, V_size]
-                elif logits_chunk.dim() == 2:
-                    logits_chunk = logits_chunk.unsqueeze(1)  # [B, 1, V_size]
+                # Tensör Boyut Zırhı: vocab_head çıktısı 0D (skaler), 1D [V_size] veya 2D
+                # [B, V_size] gelebilir; HER ZAMAN tam 3D [B, chunk_len, V_size]'e normalize
+                # et (eski kod yalnızca dim==1/dim==2'yi ele alıyordu, dim==0 durumunda
+                # P_chunk.shape[1] IndexError fırlatıyordu).
+                while logits_chunk.dim() < 3:
+                    logits_chunk = logits_chunk.unsqueeze(0)
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
                 logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
                 logits_norm = (logits_chunk - logits_mean.to(device=logits_chunk.device)) / (logits_std.to(device=logits_chunk.device) + 1e-6)

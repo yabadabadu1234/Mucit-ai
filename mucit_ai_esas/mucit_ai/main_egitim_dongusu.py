@@ -554,7 +554,7 @@ def _tekil_egitim_adimi_icra(
     e1_girdi_metni_chunk = e1_girdi_metni[:max_chunk_len] if len(e1_girdi_metni) > max_chunk_len else e1_girdi_metni
     e1_girdi = E1_HamMetinAkisi(X_text=e1_girdi_metni_chunk)
 
-    def vjp_cerrahi_enjekte_et(vector_loss: torch.Tensor, target_params: List[nn.Parameter], scale: float = 1.0) -> None:
+    def vjp_cerrahi_enjekte_et(vector_loss: torch.Tensor, target_params: List[nn.Parameter], scale: float = 1.0, retain_graph: bool = False) -> None:
         """
         [Faz-İzoleli VJP Cerrahi Gradyan İzolasyonu]
 
@@ -565,7 +565,20 @@ def _tekil_egitim_adimi_icra(
         RuntimeError Güvencesi:
           Adım 1'de hata_vektoru.detach() ile faz sınırı açıkça koparılır.
           Böylece Faz 4-5 kayıpları Faz 2-3'ün silinmiş grafini aramamaya çalışmaz.
-          retain_graph=False ile graf anında serbest bırakılarak VRAM birikmesi engellenir.
+          retain_graph=False (varsayılan) ile graf anında serbest bırakılarak VRAM
+          birikmesi engellenir.
+
+        KARDEŞ-VJP UYARISI (retain_graph parametresi): d_vec2/e_vec2 (Faz 2) ve
+        d_vec3/e_vec3 (Faz 3) gibi İKİZ nesne çiftleri AYNI üst-grafı (ör. x_initial
+        veya mevcut_durum.x_r, D0_op/Delta_0_op) paylaşır. Çiftin İLK çağrısı
+        retain_graph=False (varsayılan) ile backward yaparsa, o paylaşılan üst-grafı
+        ANINDA siler — çiftin İKİNCİ çağrısı aynı paylaşılan düğümlere tekrar
+        erişmeye çalışınca "Trying to backward through the graph a second time"
+        hatası fırlatır (bu fonksiyon bunu yutup sessizce logluyor — yani gradyan
+        SESSİZCE kaybolur, çökme olmaz ama öğrenme de olmaz). Çözüm: bir kardeş
+        grubundaki İLK çağrı retain_graph=True ile yapılır (paylaşılan üst-grafı
+        canlı tutar), grubun SON çağrısı varsayılan retain_graph=False ile yapılır
+        (artık kimse ihtiyaç duymadığı için gerçekten serbest bırakır).
 
         Gradyan İzolasyon Aksiyomu:
           Her faz kendi .grad'ını sıfırdan yazar (p.grad = g_clean).
@@ -601,7 +614,7 @@ def _tekil_egitim_adimi_icra(
                 outputs=vector_loss,        # orijinal tensör (canlı grad_fn üzerinden VJP)
                 inputs=trainable_in_group,
                 grad_outputs=v_probe,       # v_probe zaten detach edilmiş
-                retain_graph=False,
+                retain_graph=retain_graph,
                 allow_unused=True
             )
             # Gradyanları parametrelere mühürle (faz izolasyonu: sıfırdan yaz, biriktirme)
@@ -652,7 +665,11 @@ def _tekil_egitim_adimi_icra(
     # farklı büyüklüklerdir — tek bir torch.cat + tek VJP'de eritilmezler, her biri
     # kendi VJP'sini alır ve dış Pareto-PCGrad-MGDA birleştiricisine ayrı satır olarak girer.
     _faz2_hedef_params = list(n3_lif.parameters()) + list(n2_topox.parameters())
-    vjp_cerrahi_enjekte_et(d_vec2, _faz2_hedef_params)
+    # KARDEŞ-VJP: d_vec2 ve e_vec2 AYNI üst-grafı (x_initial, D0_op/Delta_0_op → N1/N2/N3)
+    # paylaşır. İlk çağrı retain_graph=True ile bu paylaşılan grafı canlı tutar; son çağrı
+    # varsayılan retain_graph=False ile gerçekten serbest bırakır (bkz. vjp_cerrahi_enjekte_et
+    # docstring'indeki "KARDEŞ-VJP UYARISI").
+    vjp_cerrahi_enjekte_et(d_vec2, _faz2_hedef_params, retain_graph=True)
     g_faz2_uyumsuzluk = _grad_anlik_kopyala()
     vjp_cerrahi_enjekte_et(F.relu(e_vec2), _faz2_hedef_params)
     g_faz2_dirichlet = _grad_anlik_kopyala()
@@ -762,10 +779,12 @@ def _tekil_egitim_adimi_icra(
     d_vec3 = n7_cozucu.hesapla_uyumsuzluk_vektoru(mevcut_durum.x_r, D0_op_sabit)
     e_vec3 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(mevcut_durum.x_r, Delta_0_op_sabit)
 
-    # Aynı gerekçeyle (bkz. Faz 2) d_vec3 ve e_vec3 ayrı VJP'lerdir.
+    # Aynı gerekçeyle (bkz. Faz 2) d_vec3 ve e_vec3 ayrı VJP'lerdir. KARDEŞ-VJP: ikisi de
+    # mevcut_durum.x_r/D0_op_sabit/Delta_0_op_sabit üzerinden AYNI üst-grafı (R-döngüsü,
+    # checkpoint(N6/N7) zinciri) paylaşır — ilk çağrı retain_graph=True gerektirir.
     _R_norm = float(max(1, config.R))
     _faz3_hedef_params = list(n6_aktor.parameters()) + list(n4_sorgu.parameters()) + list(n5_cevap.parameters())
-    vjp_cerrahi_enjekte_et(d_vec3 / _R_norm, _faz3_hedef_params)
+    vjp_cerrahi_enjekte_et(d_vec3 / _R_norm, _faz3_hedef_params, retain_graph=True)
     g_faz3_uyumsuzluk = _grad_anlik_kopyala()
     vjp_cerrahi_enjekte_et(F.relu(e_vec3) / _R_norm, _faz3_hedef_params)
     g_faz3_dirichlet = _grad_anlik_kopyala()
