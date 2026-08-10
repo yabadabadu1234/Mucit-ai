@@ -850,9 +850,17 @@ def _tekil_egitim_adimi_icra(
 
     son_q = sorgu_q_list[-1]
     son_a = cevap_a_list[-1]
-    R_q, metrikler_q = odul_motoru.hesapla_aktif_sorgu_odulu(
+    # n9/n10 gibi bu çağrı da AcilDurumOomYakalayiciVeKurtarici İLE sarmalanmalı:
+    # Delta_0=D0_op_sabit artık (bkz. Riyazi_LifLaplasyeniBlokInsaEdici.insa_et
+    # düzeltmesi) VRAM kontratı CPU'ya yönlendirdiğinde GERÇEKTEN CPU'da gelebiliyor,
+    # oysa q_r/a_r/x_context/kayip_* burada hâlâ GPU'da — çıplak çağrı "Expected all
+    # tensors to be on the same device" ile çöküyordu. Sarmalayıcı hem bunu hem de
+    # olası OOM'u yakalayıp tüm argümanları ortak bir cihaza (CPU) çekip tekrar dener.
+    R_q, metrikler_q = AcilDurumOomYakalayiciVeKurtarici(
+        odul_motoru.hesapla_aktif_sorgu_odulu,
         q_r=son_q, a_r=son_a, x_context=x_start_grouped,
-        kayip_cevapsiz=kayip_cevapsiz, kayip_cevapli=kayip_cevapli, Delta_0=D0_op_sabit
+        kayip_cevapsiz=kayip_cevapsiz, kayip_cevapli=kayip_cevapli, Delta_0=D0_op_sabit,
+        modul_nesnesi=odul_motoru, takas_mgr=takas_mgr
     )
 
     oduller_base = odul_motoru.hesapla(e12_olasilik.P, hedef_grouped[:, :N_star])
