@@ -308,6 +308,7 @@ class E12_ParalelTokenOlasilikMatrisi:
     """E12 Kenarı: Sözlük Üzerindeki Olasılık Dağılım Matrisi"""
     P: torch.Tensor  # [B, V_size, N] veya p_target [B, N]
     P_chunks: Optional[List[torch.Tensor]] = None
+    preds_full: Optional[torch.Tensor] = None  # [B, N] - tüm dilimlerin argmax'ı, dev P tensörü materyalize etmeden
 
 
 @dataclass
@@ -2066,6 +2067,7 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
         else:
             # Genel Akış: 6.10 GB'lık torch.cat YERİNE mikro-dilim listesi döndürülür
             P_chunks = []
+            preds_chunks = []
             for i in range(0, N, micro_chunk_size):
                 X_chunk = X_t[:, i:i+micro_chunk_size, :]
                 logits_chunk = self.vocab_head(X_chunk)
@@ -2078,10 +2080,14 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
                 logits_norm = (logits_chunk - logits_mean.to(device=logits_chunk.device)) / (logits_std.to(device=logits_chunk.device) + 1e-6)
                 P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1).transpose(1, 2)
+                # Tüm dilimlerin argmax tahminini biriktir: dev [B, V_size, N] tensörü hiç kurmadan
+                # tam uzunlukta ([B, N], int64, ihmal edilebilir VRAM) tahmin dizisi elde edilir.
+                preds_chunks.append(torch.argmax(P_chunk, dim=1))
                 P_chunks.append(P_chunk.detach() if not self.training else P_chunk)
 
-            # DEV TENSÖR BİRLEŞTİRMESİ YAPILMAZ! Parçalı liste teslim edilir.
-            return E12_ParalelTokenOlasilikMatrisi(P=P_chunks[0], P_chunks=P_chunks)
+            preds_full = torch.cat(preds_chunks, dim=-1)  # [B, N]
+            # DEV TENSÖR BİRLEŞTİRMESİ YAPILMAZ! Parçalı liste teslim edilir; tam uzunluk tahmini preds_full'da.
+            return E12_ParalelTokenOlasilikMatrisi(P=P_chunks[0], P_chunks=P_chunks, preds_full=preds_full)
 
 
 # =============================================================================
@@ -2223,7 +2229,8 @@ class Kayip_GRPO_Kriteri:
         d_a = a_r.shape[-1]
         d_v = getattr(self.config, 'd_v', 32) if self.config else 32
         D_total = x_context.shape[-1]
-        V_nodes = D_total // d_v if D_total % d_v == 0 else max(1, D_total // d_v)
+        # Tam bölünmüyorsa tavan bölme kullanılır: V_nodes * d_v hiçbir zaman D_total'ı eksik kapsamaz
+        V_nodes = D_total // d_v if D_total % d_v == 0 else max(1, -(-D_total // d_v))
         
         if D_total == V_nodes * d_v:
             x_nodes_all = x_context.view(B_grouped, V_nodes, d_v)
@@ -2488,6 +2495,38 @@ class N15_EgitimKontrolNoktasiYoneticisi:
         }
         torch.save(state_dict, dosya_yolu)
 
+    def yukle(self, epoch: Optional[int], model: Any, optimizer: Optional[torch.optim.Optimizer] = None,
+              cihaz: Union[str, torch.device] = "cpu") -> Dict[str, Any]:
+        """
+        `kaydet` ile yazılmış birleşik checkpoint'i geri yükler.
+        epoch=None ise kaydetme_dizini içindeki en yeni 'topolojik_model_epoch_*.pt' dosyası seçilir.
+        """
+        import os
+        import glob
+
+        if epoch is not None:
+            dosya_yolu = os.path.join(self.kaydetme_dizini, f"topolojik_model_epoch_{epoch}.pt")
+        else:
+            adaylar = glob.glob(os.path.join(self.kaydetme_dizini, "topolojik_model_epoch_*.pt"))
+            if not adaylar:
+                raise FileNotFoundError(f"'{self.kaydetme_dizini}' içinde yüklenecek checkpoint bulunamadı.")
+            dosya_yolu = max(adaylar, key=os.path.getmtime)
+
+        state_dict = torch.load(dosya_yolu, map_location=cihaz)
+
+        if isinstance(model, dict):
+            model_state = state_dict.get('modeller', state_dict.get('model', {}))
+            for k, v in model.items():
+                if k in model_state:
+                    (v.module if hasattr(v, 'module') else v).load_state_dict(model_state[k])
+        else:
+            model_state = state_dict.get('model', {})
+            (model.module if hasattr(model, 'module') else model).load_state_dict(model_state)
+
+        if optimizer is not None and 'optimizer' in state_dict:
+            optimizer.load_state_dict(state_dict['optimizer'])
+
+        return state_dict
 
 
 class N16_ArcIzgaraDonusturucu:
@@ -2496,8 +2535,12 @@ class N16_ArcIzgaraDonusturucu:
         return json.dumps(gorev_verisi.get("train", []))
 
     def insa_et(self, olasilik_matrisi: E12_ParalelTokenOlasilikMatrisi, hedef_boyut: Tuple[int, int] = (3, 3)) -> Dict[str, List[List[int]]]:
-        P = olasilik_matrisi.P
-        preds = torch.argmax(P, dim=1)[0].cpu().numpy()
+        # preds_full: tüm mikro-dilimlerin tam uzunluktaki argmax dizisi (P sadece ilk 64'lük dilim olabilir!)
+        if olasilik_matrisi.preds_full is not None:
+            preds = olasilik_matrisi.preds_full[0].cpu().numpy()
+        else:
+            P = olasilik_matrisi.P
+            preds = torch.argmax(P, dim=1)[0].cpu().numpy()
         rows, cols = hedef_boyut
         izgara = []
         idx = 0
@@ -2564,8 +2607,12 @@ class BiliselKanvasModeli(nn.Module):
         D0_op, Delta_0_op = self.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
 
         if b_size != x_initial.shape[0]:
-            repeat_factor = b_size // x_initial.shape[0]
-            x_start = x_initial.repeat(repeat_factor, 1)
+            # Tavan bölme + kırpma: b_size, x_initial.shape[0]'ın tam katı olmasa bile
+            # x_start.shape[0] her zaman tam olarak b_size olur (taban bölme eskiden eksik satır üretiyordu)
+            repeat_factor = -(-b_size // x_initial.shape[0])
+            repeat_dims = [1] * x_initial.dim()
+            repeat_dims[0] = repeat_factor
+            x_start = x_initial.repeat(*repeat_dims)[:b_size]
         else:
             x_start = x_initial
 
@@ -2621,8 +2668,12 @@ class BiliselKanvasModeli(nn.Module):
             izgara_str = json.dumps(test_girdisi)
             olasilik_matrisi = self.forward(izgara_str, active_batch_size=1)
 
-            P = olasilik_matrisi.P  # [1, V_size, N]
-            preds = torch.argmax(P, dim=1)[0].cpu().numpy()
+            # preds_full: tüm mikro-dilimlerin tam uzunluktaki argmax dizisi (P sadece ilk 64'lük dilim olabilir!)
+            if olasilik_matrisi.preds_full is not None:
+                preds = olasilik_matrisi.preds_full[0].cpu().numpy()
+            else:
+                P = olasilik_matrisi.P  # [1, V_size, N]
+                preds = torch.argmax(P, dim=1)[0].cpu().numpy()
 
             rows = len(test_girdisi)
             cols = len(test_girdisi[0]) if rows > 0 else 1
@@ -2666,7 +2717,7 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
             return torch.tensor([1.0], device=G.device, dtype=G.dtype)
 
         # Adaptif SVD İzdüşümlü Gram Matrisi Filtreleme
-        with torch.cuda.amp.autocast(enabled=False):
+        with torch.amp.autocast(device_type='cuda', enabled=False):
             G_fp32 = G.float()
             U, S, Vh = torch.linalg.svd(G_fp32)
             S_filtered = torch.where(S > 1e-5, S, torch.zeros_like(S))
@@ -2922,11 +2973,12 @@ class Hafiza_Izleyici_ve_VRAM_Denetci:
             f"Boş VRAM: {bos_mb:.2f} MB"
         )
 
-        esik = toplam_mb * self.kritik_esik_yuzde
-        if tahsis_mb > esik:
+        # self.esik_mb, __init__'teki sabit 88 GB varsayımı yerine canlı toplam_mb ile güncel tutulur
+        self.esik_mb = toplam_mb * self.kritik_esik_yuzde
+        if tahsis_mb > self.esik_mb:
             logger.warning(
                 f"CRITICAL VRAM UYARISI! [{dugum_adi}] adımında VRAM %{self.kritik_esik_yuzde*100:.1f} eşiğini aştı "
-                f"({tahsis_mb:.2f} MB > {esik:.2f} MB). Acil VRAM Temizliği..."
+                f"({tahsis_mb:.2f} MB > {self.esik_mb:.2f} MB). Acil VRAM Temizliği..."
             )
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
@@ -2941,28 +2993,10 @@ class Hafiza_Izleyici_ve_VRAM_Denetci:
 # =============================================================================
 # HAKİKİ DONANIM TEŞHİSİ VE VERİYOLU SORGULAYICISI (VeriyoluSorgulayicisi & DonanimArayici)
 # =============================================================================
-class VeriyoluSorgulayicisi:
-    """Fallback VeriyoluSorgulayicisi"""
-    def VeriyoluBitisikleriniTara(self) -> List[Dict[str, Any]]:
-        return [{
-            "pci_address": "0000:01:00.0",
-            "raw_header": b"\xde\x10\x04\x22\x06\x00\x00\x00\x00\x00\x00\x03" + b"\x00"*244
-        }]
-
-    def IkiliBasligiCozumle(self, ham_bayt_dizisi: bytes) -> Dict[str, Any]:
-        return {"is_gpu": True, "vendor_name": "NVIDIA Corporation", "vendor_id": "0x10de", "device_id": "0x2204", "class_code": "0x0300"}
-
-    def BellekKapilariniOku(self, cihaz_bilgisi: Dict[str, Any]) -> Dict[str, Any]:
-        return {"vram_gb": 24.0, "vram_bytes": 25769803776}
-
-    def HakimiyetDurumunuOku(self, cihaz_bilgisi: Dict[str, Any]) -> str:
-        return "nvidia (Donanım Sürücü Tarafından Kilitli)"
-
-    def HedefKartiSec(self, temiz_kart_listesi: List[Dict[str, Any]], sira_no: int = 0) -> Dict[str, Any]:
-        return {"pci_address": "0000:01:00.0", "vendor_name": "NVIDIA Corporation", "current_driver": "nvidia", "vram_gb": 24.0}
-
-class DonanimArayici(VeriyoluSorgulayicisi):
-    pass
+# Sahte/mock PCI verisi (sabit 24GB NVIDIA, uydurma vendor/device ID) döndüren yerel taklit
+# sınıflar tamamen kaldırıldı. Gerçek PCIe donanım taraması yalnızca kulli_gpu.gpu_tespitci'de
+# yaşıyor; burada sahte bir ikamesi yoktur — import başarısızsa gürültülü şekilde patlar.
+from kulli_gpu.gpu_tespitci import VeriyoluSorgulayicisi, DonanimArayici
 
 
 # Architectural Class Aliases (6 Ana Maksat / Rükün Mimarisi)
@@ -3003,12 +3037,18 @@ def vram_on_kontrol_ve_nvme_tahliye(gerekli_bayt: int, takas_mgr: Any = None) ->
 def anlasmali_vram_guvencesi_al(
     modul_nesnesi: Any,
     girdi_tensoru_veya_sekli: Any,
-    emniyet_marji_mb: float = 256.0
+    emniyet_marji_mb: float = 256.0,
+    takas_mgr: Any = None
 ) -> bool:
     """
     [Düğüm Bazlı Açık VRAM Anlaşma Mimarisi / Explicit VRAM Memory Contract]
     Sürücüye tahmin yaptırılmaz. Düğüm kendi harcayacağı VRAM'i ilan eder.
     Resmi tahmine göre canlı VRAM denetlenir; yetersizse otomatik erken diske tahliye tetiklenir.
+
+    takas_mgr (NvmeTakasYoneticisi) verilirse, gc.collect()/empty_cache() yetersiz kaldığında
+    vram_on_kontrol_ve_nvme_tahliye üzerinden takas_mgr.temizle() da çağrılır — aksi halde bu
+    fonksiyon yalnızca PyTorch'un zaten-boşta duran cache'ini temizler, canlı tensörleri diske
+    tahliye etmez.
     """
     if not torch.cuda.is_available():
         return True
@@ -3050,6 +3090,12 @@ def anlasmali_vram_guvencesi_al(
         import gc
         gc.collect()
         torch.cuda.empty_cache()
+
+        # Cache temizliği tek başına yetmiyorsa (canlı, hâlâ referanslı tensörler serbest kalmaz):
+        # gerçek NVMe tahliyesini tetikle.
+        free_bytes_after, _ = torch.cuda.mem_get_info()
+        if toplam_ihtiyac > free_bytes_after:
+            vram_on_kontrol_ve_nvme_tahliye(toplam_ihtiyac, takas_mgr)
 
     return True
 

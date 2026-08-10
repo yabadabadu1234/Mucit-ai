@@ -130,9 +130,13 @@ class Arc_IzgaraDonusturucu:
 class Arc_CiktiIzgaraInsaEdici:
     """Olasılık Matrisinden ARC 2D Izgara Matrisi İnşa Edici"""
     def insa_et(self, olasilik_matrisi: E12_ParalelTokenOlasilikMatrisi, hedef_boyut: Tuple[int, int] = (3, 3)) -> Dict[str, List[List[int]]]:
-        P = olasilik_matrisi.P
-        preds = torch.argmax(P, dim=1)[0].cpu().numpy()  # [N]
-        
+        # preds_full: tüm mikro-dilimlerin tam uzunluktaki argmax dizisi (P sadece ilk 64'lük dilim olabilir!)
+        if getattr(olasilik_matrisi, 'preds_full', None) is not None:
+            preds = olasilik_matrisi.preds_full[0].cpu().numpy()  # [N]
+        else:
+            P = olasilik_matrisi.P
+            preds = torch.argmax(P, dim=1)[0].cpu().numpy()  # [N]
+
         rows, cols = hedef_boyut
         izgara = []
         idx = 0
@@ -352,9 +356,13 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
             sonuc_dict = arc_insa_edici.insa_et(olasilik_matrisi, hedef_boyut=(3, 3))
             nihai_cikti = json.dumps(sonuc_dict, ensure_ascii=False)
         else:
-            P_mat = olasilik_matrisi.P[0]  # [V_size, N]
-            token_preds = torch.argmax(P_mat, dim=0).cpu().tolist()  # [N]
-            
+            # preds_full: tüm mikro-dilimlerin tam uzunluktaki argmax dizisi (P sadece ilk 64'lük dilim olabilir!)
+            if getattr(olasilik_matrisi, 'preds_full', None) is not None:
+                token_preds = olasilik_matrisi.preds_full[0].cpu().tolist()  # [N]
+            else:
+                P_mat = olasilik_matrisi.P[0]  # [V_size, N]
+                token_preds = torch.argmax(P_mat, dim=0).cpu().tolist()  # [N]
+
             # SOTA BPE / Aksiyomatik Çevrimdışı Token İndekslerini İnsani Metne Deşifre Etme
             tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
             valid_token_ids = [t % tokenizer.n_vocab for t in token_preds]

@@ -38,6 +38,7 @@ import logging
 import math
 import subprocess
 import gc
+import contextlib
 from typing import Dict, Any, List, Tuple, Optional, Union
 
 try:
@@ -453,13 +454,22 @@ def _tekil_egitim_adimi_icra(
     pareto_pcgrad_operator: Any,
     stiefel_izdusurucu: Any,
     gpu_dagitici: Optional[Any] = None,
-    gpu_cesitlendirici: Optional[Any] = None
+    gpu_cesitlendirici: Optional[Any] = None,
+    takas_mgr: Optional[Any] = None
 ) -> Tuple[float, float, float, float]:
     """
     Tüm eğitim adımı bu müstakil iç fonksiyonun içinde icra edilir. Fonksiyon bittiği an (return)
     CPython tüm geçici tensörleri Stack Frame'den fiziken yok eder ve VRAM 178 MB seviyesine düşer!
     """
     optimizer.zero_grad(set_to_none=True)
+
+    # NVMe Takas Yöneticisi: sağlanmışsa, bu adımın tüm forward/backward'ı boyunca
+    # autograd'ın kaydedilen aktivasyon tensörlerini otomatik NVMe-tahliye kancalarıyla sarmalar.
+    # AnlasmaliVramGuvencesiAl'daki gc.collect()/empty_cache() zaten-boşta-duran belleği temizler;
+    # asıl "sıfır OOM" güvencesi canlı tensörleri diske süren bu kapsam muhafızından gelir.
+    _takas_cm = takas_mgr.kapsam_muhafizi_aktifles() if takas_mgr is not None else None
+    if _takas_cm is not None:
+        _takas_cm.__enter__()
 
     n1_byte = tum_moduller['n1_byte']
     n2_topox = tum_moduller['n2_topox']
@@ -544,12 +554,12 @@ def _tekil_egitim_adimi_icra(
     # ------------------------------------------------------------------------------
     # FAZ 2: TOPOLOJİK İSKELET VE LİF LAPLASYENİ HESABI (N1 -> N2 -> N3 -> N11)
     # ------------------------------------------------------------------------------
-    AnlasmaliVramGuvencesiAl(n1_byte, e1_girdi)
+    AnlasmaliVramGuvencesiAl(n1_byte, e1_girdi, takas_mgr=takas_mgr)
     e2_byte, x_initial = n1_byte.forward(e1_girdi)
     raw_n2_topox = gpu_dagitici.kok_modul_al(n2_topox) if gpu_dagitici is not None else (n2_topox.module if hasattr(n2_topox, 'module') else n2_topox)
-    AnlasmaliVramGuvencesiAl(raw_n2_topox, e2_byte)
+    AnlasmaliVramGuvencesiAl(raw_n2_topox, e2_byte, takas_mgr=takas_mgr)
     e3_sinir = raw_n2_topox.forward(e2_byte, x_initial=x_initial, mode='train')
-    AnlasmaliVramGuvencesiAl(n3_lif, e3_sinir)
+    AnlasmaliVramGuvencesiAl(n3_lif, e3_sinir, takas_mgr=takas_mgr)
     e4_lif = n3_lif.forward(e3_sinir, x_initial)
     vram_denetci.yokla_ve_raporla("N1_N3_TopolojiIskelesi", adim_no=current_step)
     
@@ -655,7 +665,7 @@ def _tekil_egitim_adimi_icra(
     # FAZ 4-5: CHEBYSHEV SPEKTRAL PROJEKSİYON VE GRPO ÖDÜL KANVASI (N8 -> N10)
     # ------------------------------------------------------------------------------
     e9_guncel_detached = E9_GuncellenmisGizilDurum(x_next=e9_guncel.x_next.detach())
-    AnlasmaliVramGuvencesiAl(n8_chebyshev, e9_guncel_detached.x_next)
+    AnlasmaliVramGuvencesiAl(n8_chebyshev, e9_guncel_detached.x_next, takas_mgr=takas_mgr)
     e10_kulli = n8_chebyshev.forward(e9_guncel_detached)
     
     _, L_arc_tensor, N_ste_tensor, delta_n_tensor = n8_b_uzunluk.forward(e10_kulli, cheby_calc)
@@ -665,7 +675,7 @@ def _tekil_egitim_adimi_icra(
     hedef_clamped = torch.clamp(hedef_grouped[:, :N_star], min=0, max=getattr(config, 'V_size', 32000) - 1)
     
     e11_gomulu = n9_vandermonde.forward(e10_kulli, T_matrix)
-    AnlasmaliVramGuvencesiAl(n10_sozluk, e11_gomulu.X_output)
+    AnlasmaliVramGuvencesiAl(n10_sozluk, e11_gomulu.X_output, takas_mgr=takas_mgr)
     e12_olasilik = n10_sozluk.forward(e11_gomulu, hedefler=hedef_clamped)
     
     with torch.no_grad():
@@ -751,6 +761,9 @@ def _tekil_egitim_adimi_icra(
 
     d_discrepancy = float(d_vec3.mean().detach().item())
     dirichlet_energy = float(e_vec3.mean().detach().item())
+
+    if _takas_cm is not None:
+        _takas_cm.__exit__(None, None, None)
 
     # CPYTHON STACK FRAME SONU: Fonksiyon return ettiği an tüm yerel bellek değişkenleri yok edilir!
     return kayip_val, L_arc_val, dirichlet_energy, d_discrepancy
@@ -927,7 +940,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         pareto_pcgrad_operator=pareto_pcgrad_operator,
                         stiefel_izdusurucu=stiefel_izdusurucu,
                         gpu_dagitici=None,
-                        gpu_cesitlendirici=None
+                        gpu_cesitlendirici=None,
+                        takas_mgr=takas_mgr
                     )
 
                     current_step += 1
