@@ -667,7 +667,16 @@ def _tekil_egitim_adimi_icra(
     # başlıca kaynağıydı. Delta_0'a ihtiyaç duyan tüm tüketiciler (n7_cozucu) artık D0
     # üzerinden laplasyen_ile_carp ile matematiksel olarak BİREBİR eşdeğer, matrissiz
     # çalışıyor.
-    D0_op, _ = laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
+    # KAPSAMLI DENETİM DÜZELTMESİ: AnlasmaliVramGuvencesiAl yalnızca PROAKTİF bir tahmindir
+    # (tahmin_et_vram_bayt formülüne dayanır) — bu tahmin tutmazsa (ör. F.pad/torch.cat'in
+    # transient tepe belleği, VRAM parçalanması) GERÇEK bir OOM hâlâ patlayabilir. Bu tek
+    # çağrı (D0'ı bizzat inşa eden, en büyük tekil tensörü üreten düğüm) diğer TÜM N1-N10
+    # çağrılarının aksine hiçbir REAKTİF (AcilDurumOomYakalayiciVeKurtarici) yakalayıcısından
+    # geçmiyordu — tam da bu yüzden bir önceki turda çıplak OOM ile çöktü.
+    D0_op, _ = AcilDurumOomYakalayiciVeKurtarici(
+        laplasyen_insa.insa_et, e3_sinir, e4_lif.phi_matrisleri,
+        modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr
+    )
     vram_denetci.yokla_ve_raporla("N11_LifLaplasyeniInsa", adim_no=current_step)
 
     # D0_op, AnlasmaliVramGuvencesiAl'ın laplasyen_insa için verdiği CPU kararına göre
@@ -756,11 +765,23 @@ def _tekil_egitim_adimi_icra(
     M_current = meclis_bellek.get_memory(active_b).M
     # Güvenlik: config.R < 1 olursa döngü hiç çalışmaz; mevcut_durum başlangıç durumuna sabitlenir
     mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
-    e3_sinir_sabit = raw_n2_topox.forward(e2_byte_grouped, x_initial=x_start_grouped, mode='train')
+    # KAPSAMLI DENETİM DÜZELTMESİ: raw_n2_topox.forward'ın Faz2'deki İLK çağrısı (yukarıda,
+    # satır ~658-659) AnlasmaliVramGuvencesiAl + AcilDurumOomYakalayiciVeKurtarici ile tam
+    # korumalıyken, bu Faz3 "sabit" çağrısı HİÇ KORUMASIZDI (ne proaktif kontrat ne reaktif
+    # yakalayıcı) — aynı düğümün aynı adımdaki İKİNCİ çağrısı unutulmuştu.
+    AnlasmaliVramGuvencesiAl(raw_n2_topox, e2_byte_grouped, takas_mgr=takas_mgr)
+    e3_sinir_sabit = AcilDurumOomYakalayiciVeKurtarici(
+        raw_n2_topox.forward, e2_byte_grouped, x_initial=x_start_grouped, mode='train',
+        modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
+    )
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir_sabit.D1, takas_mgr=takas_mgr)
     # NOT (matrissiz Laplasyen): bkz. yukarıdaki D0_op açıklaması — dense Delta_0 artık
     # hiç kurulmuyor, n6_aktor/n7_cozucu doğrudan D0_op_sabit ile matrissiz çalışıyor.
-    D0_op_sabit, _ = laplasyen_insa.insa_et(e3_sinir_sabit, e4_lif.phi_matrisleri)
+    # KAPSAMLI DENETİM: bkz. yukarıdaki D0_op için eklenen aynı reaktif sarmalayıcı gerekçesi.
+    D0_op_sabit, _ = AcilDurumOomYakalayiciVeKurtarici(
+        laplasyen_insa.insa_et, e3_sinir_sabit, e4_lif.phi_matrisleri,
+        modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr
+    )
     if hasattr(n6_aktor, 'update_operators'):
         n6_aktor.update_operators(D0_op_sabit)
 
@@ -860,13 +881,19 @@ def _tekil_egitim_adimi_icra(
     # "Nihai Dinamik Uzunluk"), ama dönen N_star_int değeri `_` ile atılıyor, yerine
     # SABİT config.N kullanılıyordu — bu, N8_B'nin bütün mimari amacını (arc-length
     # geometrisine göre cümle uzunluğunu dinamik seçmek) tamamen devre dışı bırakıyordu.
+    # KAPSAMLI DENETİM: n8_b_uzunluk hiçbir yerde proaktif AnlasmaliVramGuvencesiAl
+    # kontratına girmiyordu (yalnızca reaktif sarmalayıcısı vardı) — diğer tüm N1-N10
+    # düğümleriyle aynı desene tamamlandı.
+    AnlasmaliVramGuvencesiAl(n8_b_uzunluk, e10_kulli.C, takas_mgr=takas_mgr)
     N_star_int, L_arc_tensor, N_ste_tensor, delta_n_tensor = AcilDurumOomYakalayiciVeKurtarici(
         n8_b_uzunluk.forward, e10_kulli, cheby_calc,
         modul_nesnesi=n8_b_uzunluk, takas_mgr=takas_mgr
     )
     N_star = N_star_int
     L_arc_val = L_arc_tensor.item()
-    T_matrix = cheby_calc.hesapla(N=N_star)
+    # KAPSAMLI DENETİM: cheby_calc.hesapla hiçbir korumadan (ne proaktif ne reaktif)
+    # geçmiyordu — T_matrix boyutu N_star'a bağlı olduğundan (dinamik) OOM riski taşır.
+    T_matrix = AcilDurumOomYakalayiciVeKurtarici(cheby_calc.hesapla, N=N_star, takas_mgr=takas_mgr)
     hedef_clamped = torch.clamp(hedef_grouped[:, :N_star], min=0, max=getattr(config, 'V_size', 32000) - 1)
 
     # NOT: N9 (Vandermonde) ve N10 (Softmax Sözlük İzdüşümü) [B, N, V_size] gibi devasa
@@ -879,9 +906,16 @@ def _tekil_egitim_adimi_icra(
 
     with torch.no_grad():
         x_start_detached = E9_GuncellenmisGizilDurum(x_next=x_start_grouped.detach())
+        # KAPSAMLI DENETİM: n8_chebyshev'in bu (cevapsız) çağrısı reaktif sarmalıydı ama
+        # kendi proaktif kontratı burada yoktu (yalnızca üstteki "cevaplı" çağrı guard'lıydı).
+        AnlasmaliVramGuvencesiAl(n8_chebyshev, x_start_detached.x_next, takas_mgr=takas_mgr)
         e10_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n8_chebyshev.forward, x_start_detached, modul_nesnesi=n8_chebyshev, takas_mgr=takas_mgr)
         AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_cevapsiz.C.shape[0], N_star), takas_mgr=takas_mgr)
         e11_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n9_vandermonde.forward, e10_cevapsiz, T_matrix, modul_nesnesi=n9_vandermonde, takas_mgr=takas_mgr)
+        # KAPSAMLI DENETİM: n9'un guard'ı yalnızca n9'u kapsar — n10_sozluk'ün bu (cevapsız)
+        # çağrısının kendi proaktif kontratı hiç yoktu (yalnızca üstteki "cevaplı" çağrı
+        # guard'lıydı).
+        AnlasmaliVramGuvencesiAl(n10_sozluk, e11_cevapsiz.X_output, takas_mgr=takas_mgr)
         e12_olasilik_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward, e11_cevapsiz, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
 
     p_target_cevapli = e12_olasilik.P
@@ -1000,6 +1034,7 @@ def _tekil_egitim_adimi_icra(
     # hedefi yalnızca n8_b_uzunluk.parameters() ile sınırlı tutulur — n8_chebyshev.
     # parameters() İSTENMEZ (aksi halde e10_kulli'nin ölü atasına geri backward
     # denemesi gerekirdi ve aynı "graph a second time" hatası tekrar oluşurdu).
+    AnlasmaliVramGuvencesiAl(n8_b_uzunluk, e10_kulli.C, takas_mgr=takas_mgr)
     _, L_arc_cumle, N_ste_cumle, _ = AcilDurumOomYakalayiciVeKurtarici(
         n8_b_uzunluk.forward, e10_kulli, cheby_calc,
         modul_nesnesi=n8_b_uzunluk, takas_mgr=takas_mgr
