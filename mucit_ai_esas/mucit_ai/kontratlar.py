@@ -3990,10 +3990,26 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
         # büyütülüyordu (whack-a-mole) — ör. "CUDAGuardImpl initialized with non-CUDA
         # DeviceType: cpu" (torch.log/.mean gibi sıradan bir işlemde CPU'ya düşmüş bir
         # tensörle karşılaşıldığında fırlar) hiçbirine uymadığı için çıplak çöküyordu.
-        # "cuda" ve "device"/"cihaz" kelimelerinin BİRLİKTE geçtiği her RuntimeError'ı
-        # da bu aynı köke (tutarsız cihaz dağılımı) bağlıyoruz — ileride benzer yeni
-        # varyantlar tek tek eklenmeden yakalanır.
-        cihaz_uyumsuzlugu = (
+        #
+        # KAPSAMLI DENETİM DÜZELTMESİ (madde 4): "cuda" VE "device" kelimelerinin
+        # BİRLİKTE geçtiği HER RuntimeError'ı yakalamak AŞIRI GENİŞTİ — ör. gerçek bir
+        # "CUDA error: device-side assert triggered" (kötü bir index/embedding sınır
+        # dışı erişimi gibi GERÇEK bir mantık hatası, cihaz yerleşimiyle hiç ilgisi yok)
+        # da bu kalıba uyup sessizce "cihaz uyumsuzluğu" sanılıyor, CPU'da yeniden
+        # deneniyor ve CUDA bağlamı zaten zehirlenmişken "başarılı" görünen ama tanımsız/
+        # yanlış sonuçlar üretebiliyordu — asıl kök sebep (indexleme hatası) hiç
+        # raporlanmadan maskeleniyordu. Önce BİLİNEN gerçek-CUDA-hatası imzalarını
+        # AÇIKÇA dışlıyoruz; yalnızca bunlardan biri değilse genel "cuda"+"device"
+        # sezgiselliğine düşüyoruz.
+        gercek_cuda_calisma_zamani_hatasi = (
+            "device-side assert" in mesaj
+            or "an illegal memory access was encountered" in mesaj
+            or "cuda error:" in mesaj
+            or "cublas" in mesaj
+            or "cudnn error" in mesaj
+            or "misaligned address" in mesaj
+        )
+        cihaz_uyumsuzlugu = (not gercek_cuda_calisma_zamani_hatasi) and (
             "expected all tensors to be on the same device" in mesaj
             or "found at least two devices" in mesaj
             or "cudaguardimpl" in mesaj
