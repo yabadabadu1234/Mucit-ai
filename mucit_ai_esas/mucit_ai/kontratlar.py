@@ -2047,7 +2047,7 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                     logits_chunk = logits_chunk.unsqueeze(1)  # [B, 1, V_size]
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
                 logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
-                logits_norm = (logits_chunk - logits_mean) / (logits_std.to(device=logits_chunk.device) + 1e-6)
+                logits_norm = (logits_chunk - logits_mean.to(device=logits_chunk.device)) / (logits_std.to(device=logits_chunk.device) + 1e-6)
                 P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1) # [B, chunk_len, V_size]
                 
                 # Hedef olasılıkları mikro-dilim içinde gather et (Sadece 1 MB VRAM Harcar!)
@@ -2069,7 +2069,7 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 logits_chunk = self.vocab_head(X_chunk)
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
                 logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
-                logits_norm = (logits_chunk - logits_mean) / (logits_std.to(device=logits_chunk.device) + 1e-6)
+                logits_norm = (logits_chunk - logits_mean.to(device=logits_chunk.device)) / (logits_std.to(device=logits_chunk.device) + 1e-6)
                 P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1).transpose(1, 2)
                 P_chunks.append(P_chunk.detach() if not self.training else P_chunk)
 
