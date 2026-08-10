@@ -22,6 +22,17 @@ import torch.distributed as dist
 logger = logging.getLogger("kulli_gpu.coklu_surec_isci")
 
 
+def kimlik_islemi(x: torch.Tensor) -> torch.Tensor:
+    """
+    Varsayılan LOKAL_ICRA işlem fonksiyonu (kimlik dönüşümü / no-op).
+    'spawn' bağlamlı multiprocessing.Queue'dan geçirilen her nesne pickle edilebilir
+    olmak ZORUNDADIR; bir lambda (örn. `lambda x: x`) pickle edilemez ve worker
+    sürecinde PicklingError ile çöker. Bu modül-seviyesi fonksiyon her iki uçtan da
+    (CpuAnaIdareci ve GpuIsciSureci) aynı import yolu ile çözülebildiği için güvenlidir.
+    """
+    return x
+
+
 class NcclIletisimHatti:
     """
     GPU süreçleri arasında NVIDIA NCCL halkası (Ring) üzerinden milisaniyenin altında
@@ -131,7 +142,10 @@ class NcclIletisimHatti:
         Lif Laplasyeni ve TopoX Hücre işlemleri için komşu GPU'larla P2P (Point-to-Point)
         sınır veri takasını asenkron fırlatır ve senkronize eder.
         """
-        if not dist.is_initialized():
+        # world_size <= 1 durumunda sol/sağ komşu her zaman kendi rankına eşitlenir
+        # (örn. (0-1)%1=0). isend/irecv ile kendi kendine mesaj göndermek NCCL'de
+        # desteklenmez ve sonsuz beklemeye (deadlock) yol açar — bu yüzden erken çıkış şart.
+        if not dist.is_initialized() or dist.get_world_size() <= 1:
             return lokal_halo_tensor.clone(), lokal_halo_tensor.clone()
 
         rank = dist.get_rank()
@@ -140,19 +154,35 @@ class NcclIletisimHatti:
         sol_gelen = torch.empty_like(lokal_halo_tensor)
         sag_gelen = torch.empty_like(lokal_halo_tensor)
 
-        reqs = []
-        # Sol komşuya giden, sağ komşudan gelen
-        if sol_komsu_rank >= 0 and sol_komsu_rank < world_size:
-            reqs.append(dist.isend(lokal_halo_tensor, dst=sol_komsu_rank))
-            reqs.append(dist.irecv(sol_gelen, src=sol_komsu_rank))
+        sol_gecerli = sol_komsu_rank >= 0 and sol_komsu_rank < world_size
+        sag_gecerli = sag_komsu_rank >= 0 and sag_komsu_rank < world_size
 
-        # Sağ komşuya giden, sol komşudan gelen
-        if sag_komsu_rank >= 0 and sag_komsu_rank < world_size:
-            reqs.append(dist.isend(lokal_halo_tensor, dst=sag_komsu_rank))
-            reqs.append(dist.irecv(sag_gelen, src=sag_komsu_rank))
+        if sol_gecerli and sag_gecerli and sol_komsu_rank == sag_komsu_rank:
+            # world_size == 2 durumunda halkanın tek komşusu her iki yönde de aynı rank'tır.
+            # Aynı tensörü aynı hedefe iki kez isend/irecv ile göndermek (eski davranış)
+            # gereksiz bant genişliği israfı ve backend'e bağlı mesaj sırası belirsizliği
+            # doğurur; tek bir karşılıklı takas yeterli ve doğrudur.
+            reqs = [
+                dist.isend(lokal_halo_tensor, dst=sol_komsu_rank),
+                dist.irecv(sol_gelen, src=sol_komsu_rank),
+            ]
+            for req in reqs:
+                req.wait()
+            sag_gelen = sol_gelen.clone()
+        else:
+            reqs = []
+            # Sol komşuya giden, sağ komşudan gelen
+            if sol_gecerli:
+                reqs.append(dist.isend(lokal_halo_tensor, dst=sol_komsu_rank))
+                reqs.append(dist.irecv(sol_gelen, src=sol_komsu_rank))
 
-        for req in reqs:
-            req.wait()
+            # Sağ komşuya giden, sol komşudan gelen
+            if sag_gecerli:
+                reqs.append(dist.isend(lokal_halo_tensor, dst=sag_komsu_rank))
+                reqs.append(dist.irecv(sag_gelen, src=sag_komsu_rank))
+
+            for req in reqs:
+                req.wait()
 
         if torch.cuda.is_available():
             torch.cuda.current_stream().synchronize()

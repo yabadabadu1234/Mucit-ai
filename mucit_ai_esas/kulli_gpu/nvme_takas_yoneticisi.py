@@ -227,8 +227,6 @@ class AutogradNvmeOffloadHook:
         dosya_yolu = os.path.join(self.karar_motoru.swap_dir, dosya_id)
 
         try:
-            bytes_size = tensor.element_size() * tensor.numel()
-            v_ptr = int(tensor.data_ptr()) if hasattr(tensor, "data_ptr") else 0
             original_device = str(tensor.device)
 
             torch.save(tensor.detach().cpu(), dosya_yolu)
@@ -244,17 +242,13 @@ class AutogradNvmeOffloadHook:
                 numel=tensor.numel()
             )
 
-            # ÇİFT YÖNLÜ ADRES KAYIT DEFTERİNE MÜHÜRLE (AttributeError Çözüldü!)
+            # ÇİFT YÖNLÜ ADRES KAYIT DEFTERİNE MÜHÜRLE
+            # NOT: Önceden burada nesne_id=dosya_id ile İKİNCİ bir placeholder kayıt da
+            # açılıyordu; bu kayıt sanal_id kaydından farklı bir anahtarda yaşadığı için
+            # unpack sırasında hiç silinmiyor ve her offload'da registry'de kalıcı olarak
+            # sızan (yetim) bir girdi biriktiriyordu. Tek doğru kayıt (kayit, sanal_id
+            # anahtarlı) yeterlidir.
             if hasattr(self, "kayit_defteri") and self.kayit_defteri is not None:
-                if hasattr(self.kayit_defteri, "kayit_ekle_ve_guncelle"):
-                    self.kayit_defteri.kayit_ekle_ve_guncelle(
-                        nesne_id=dosya_id,
-                        virtual_ptr=v_ptr,
-                        file_path=dosya_yolu,
-                        size_bytes=bytes_size,
-                        ref_count=1,
-                        state="MEM_STATE_SWAPPED_NVME"
-                    )
                 self.kayit_defteri.kayit_ekle_ve_guncelle(kayit)
 
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
@@ -367,10 +361,13 @@ class NvmeTakasYoneticisi:
         logger.info(f"[NvmeTakasYoneticisi] Disk takas dizini aktif: {self.swap_dir}")
 
     def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Any:
+        # NOT: tensor.device res[3]'ten SONRA okunmamalı — offload_hook.pack_hook_diske_tahliye
+        # tensörün .data'sını CPU'ya boşalttıktan sonra tensor.device zaten "cpu" olur.
+        # Orijinal cihaz bilgisi yalnızca res[3]'te (mutasyon ÖNCESİ kaydedilmiş) doğrudur.
         res = self.offload_hook.pack_hook_diske_tahliye(tensor)
         if isinstance(res, tuple) and res[0] != "":
             self.tahliye_sayaci += 1
-            return (res[0], res[1], res[2], str(tensor.device))
+            return (res[0], res[1], res[2], res[3])
         return tensor
 
     def unpack_hook_diskten_geri_cagır(self, pack_bundle: Any) -> torch.Tensor:
@@ -379,7 +376,8 @@ class NvmeTakasYoneticisi:
 
         if len(pack_bundle) == 4:
             bundle_3 = (pack_bundle[0], pack_bundle[1], pack_bundle[2])
-            res = self.offload_hook.unpack_hook_diskten_geri_yukle(bundle_3)
+            target_device = pack_bundle[3]
+            res = self.offload_hook.unpack_hook_diskten_geri_yukle(bundle_3, target_device=target_device)
             self.geri_cagirma_sayaci += 1
             return res
         return self.offload_hook.unpack_hook_diskten_geri_yukle(pack_bundle)

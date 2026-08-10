@@ -15,17 +15,19 @@ import os
 import sys
 import logging
 import math
+import queue
 import time
 from dataclasses import dataclass, field
 from typing import Dict, List, Tuple, Any, Optional
 import torch
 import torch.multiprocessing as mp
 
-from kulli_gpu.coklu_surec_isci import GpuIsciSureci
+from kulli_gpu.coklu_surec_isci import GpuIsciSureci, kimlik_islemi
 
 logger = logging.getLogger("kulli_gpu.cpu_ana_idareci")
 
 KULLI_PAGE_SIZE_2MB = 2 * 1024 * 1024  # 2 MB Sayfa Hizalama Sınırı
+IPC_YANIT_TIMEOUT_SN = 60.0  # Bir GPU işçisi çökerse/asılırsa CPU idarecisinin sonsuza dek beklememesi için
 
 
 MEM_STATE_ACTIVE_VRAM = "MEM_STATE_ACTIVE_VRAM"
@@ -229,8 +231,19 @@ class CpuAnaIdareci:
             })
 
         # Yanıtları bekle
+        # NOT: Önceden timeout'suz .get() kullanılıyordu — bir GPU işçisi (OOM veya
+        # başka bir sebeple) çökerse veya yanıt vermeden takılırsa CPU idarecisi
+        # sonsuza dek bloke olurdu. Sınırlı timeout ile açık, teşhis edilebilir hata
+        # üretimi sağlanır.
         for rank in range(P):
-            self.cevap_kuyruklari[rank].get()
+            try:
+                self.cevap_kuyruklari[rank].get(timeout=IPC_YANIT_TIMEOUT_SN)
+            except queue.Empty:
+                raise RuntimeError(
+                    f"[CpuAnaIdareci] shardli_nesne_olustur: Rank {rank} işçisinden "
+                    f"{IPC_YANIT_TIMEOUT_SN}s içinde yanıt gelmedi (nesne_id={nesne_id}). "
+                    f"İşçi çökmüş veya asılı kalmış olabilir."
+                )
 
         bilgi = NesneShardBilgisi(
             nesne_id=nesne_id,
@@ -258,12 +271,18 @@ class CpuAnaIdareci:
         P = self.world_size
 
         if islem_kategorisi == "LOKAL":
+            # NOT: 'islem_fn' varsayılanı ASLA bir lambda olmamalı — 'spawn' bağlamlı
+            # multiprocessing.Queue pickle kullanır ve lambda'lar pickle edilemez;
+            # eskiden burada `lambda x: x` varsayılanı vardı ve bu, açık islem_fn
+            # geçirilmeyen her LOKAL sevkiyatta worker sürecinde PicklingError ile
+            # çökerdi. kimlik_islemi modül-seviyesi (picklable) fonksiyonu kullanılır.
+            islem_fn = params.get("islem_fn", None) or kimlik_islemi
             for nesne_id in nesne_idleri:
                 for rank in range(P):
                     self.emir_kuyruklari[rank].put({
                         "komut": "LOKAL_ICRA",
                         "nesne_id": nesne_id,
-                        "islem_fn": params.get("islem_fn", lambda x: x)
+                        "islem_fn": islem_fn
                     })
 
         elif islem_kategorisi == "ALL_REDUCE":
@@ -288,9 +307,17 @@ class CpuAnaIdareci:
             return False
 
         # Senkronizasyon yanıtlarını topla
+        # NOT: Önceki timeout'suz .get() burada da aynı sonsuz-bekleme riskini taşıyordu.
         for rank in range(P):
             for _ in nesne_idleri:
-                self.cevap_kuyruklari[rank].get()
+                try:
+                    self.cevap_kuyruklari[rank].get(timeout=IPC_YANIT_TIMEOUT_SN)
+                except queue.Empty:
+                    raise RuntimeError(
+                        f"[CpuAnaIdareci] islem_sevk_et: Rank {rank} işçisinden "
+                        f"{IPC_YANIT_TIMEOUT_SN}s içinde yanıt gelmedi "
+                        f"(islem_kategorisi={islem_kategorisi}). İşçi çökmüş veya asılı kalmış olabilir."
+                    )
 
         return True
 
