@@ -3334,15 +3334,6 @@ class Hafiza_Izleyici_ve_VRAM_Denetci:
         }
 
 
-# =============================================================================
-# HAKİKİ DONANIM TEŞHİSİ VE VERİYOLU SORGULAYICISI (VeriyoluSorgulayicisi & DonanimArayici)
-# =============================================================================
-# Sahte/mock PCI verisi (sabit 24GB NVIDIA, uydurma vendor/device ID) döndüren yerel taklit
-# sınıflar tamamen kaldırıldı. Gerçek PCIe donanım taraması yalnızca kulli_gpu.gpu_tespitci'de
-# yaşıyor; burada sahte bir ikamesi yoktur — import başarısızsa gürültülü şekilde patlar.
-from kulli_gpu.gpu_tespitci import VeriyoluSorgulayicisi, DonanimArayici
-
-
 # Architectural Class Aliases (6 Ana Maksat / Rükün Mimarisi)
 StatikIzometrikByteAyristirici = N1_HibritByteTokenAyristirici
 RiyaziCebirselHomolojiInsaEdici = N2_TopoXHucreOlusumu
