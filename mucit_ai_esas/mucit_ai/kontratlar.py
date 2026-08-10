@@ -2243,6 +2243,19 @@ class N9_ChebyshevVandermondeCarpim(nn.Module):
         return vram_bayt_tahmin_et(B, self.config.d, N_star)
 
     def forward(self, kulli_mana: E10_KulliManaMatrisi, T_matrix: torch.Tensor) -> E11_ParalelGomuluVektorlerMatrisi:
+        # CUDAGuard Cihaz Hizalaması: N9'un kendi parametresi yoktur (yalnızca self.config),
+        # bu yüzden VRAM/TMP idarecisinin .to(device) çağrısı hiçbir şeyi taşımaz ve
+        # _vram_idare_zorunlu_cihaz bayrağı başka hiçbir yerde okunmazdı. Daha da önemlisi:
+        # T_matrix, Yardimci_ChebyshevMatrisHesaplayici.hesapla()'nın STATİK config.device
+        # önbelleğinden gelir — dinamik VRAM idaresine HİÇ katılmaz. kulli_mana.C ise N8
+        # üzerinden dinamik olarak CPU'ya taşınmış olabilir. Bu ayrışma tam olarak
+        # "Expected all tensors to be on the same device, cuda:0 and cpu" hatasının kök
+        # sebebidir — burada açıkça hizalanır (kulli_mana.C'nin gerçek cihazı esas alınır).
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        hedef_cihaz = zorunlu_cihaz if zorunlu_cihaz is not None else kulli_mana.C.device
+        kulli_mana = girdi_cihaza_tasi(kulli_mana, hedef_cihaz)
+        if T_matrix.device != hedef_cihaz:
+            T_matrix = T_matrix.to(hedef_cihaz)
         X_output = torch.matmul(kulli_mana.C, T_matrix)
         return E11_ParalelGomuluVektorlerMatrisi(X_output=X_output)
 
@@ -3780,22 +3793,38 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
       bloğu (bkz. N1-N10 forward()'ları) bu bayrağı okuyup KENDİ girdisini de otomatik
       CPU'ya hizalar. modul_nesnesi verilmemişse (generic callable), args/kwargs
       girdi_cihaza_tasi ile elle CPU'ya taşınır — ne modül ne girdi geride GPU'da
-      unutulmaz, "iki cihaz" hatası bu yolla oluşamaz.
+      unutulmaz.
+
+      ÖNEMLİ (dar except kapsamı düzeltmesi): Yalnızca torch.cuda.OutOfMemoryError
+      yakalamak yetmez — "RuntimeError: Expected all tensors to be on the same
+      device, but found at least two devices, cuda:0 and cpu!" de PyTorch'ta ayrı
+      bir RuntimeError alt sınıfıdır ve modern PyTorch'ta (torch.cuda.OutOfMemoryError
+      mevcutken) eski dar except bloğu bunu YAKALAMAZDI — tam da bu oturumun
+      raporlanan hatası buradan kaçabiliyordu. Aşağıda hem gerçek OOM hem de
+      cihaz-uyumsuzluğu RuntimeError'ı AYNI kurtarma yoluna (her şeyi tek bir ortak
+      cihaza — CPU'ya — çekip tekrar dene) yönlendirilir; ikisi de "tutarsız cihaz
+      dağılımı" kökünden gelir ve aynı çare ile giderilir.
     """
     logger = logging.getLogger("mucit_ai.kontratlar")
-    oom_exc_types = (torch.cuda.OutOfMemoryError,) if hasattr(torch.cuda, "OutOfMemoryError") else (RuntimeError,)
+    gercek_oom_tipleri = (torch.cuda.OutOfMemoryError,) if hasattr(torch.cuda, "OutOfMemoryError") else ()
 
     try:
         return hesaplama_fonksiyonu(*args, **kwargs)
-    except oom_exc_types as exc:
-        # RuntimeError yakalandıysa (eski PyTorch sürümleri torch.cuda.OutOfMemoryError'a
-        # sahip değildir) gerçekten VRAM taşması mı diye mesaj içeriğini denetle;
-        # değilse bu fonksiyonun sorumluluğu dışındadır, olduğu gibi yeniden fırlat.
-        if oom_exc_types == (RuntimeError,) and "out of memory" not in str(exc).lower():
+    except (gercek_oom_tipleri + (RuntimeError,)) as exc:
+        mesaj = str(exc).lower()
+        gercek_oom = bool(gercek_oom_tipleri) and isinstance(exc, gercek_oom_tipleri)
+        oom_mesaji = "out of memory" in mesaj
+        cihaz_uyumsuzlugu = (
+            "expected all tensors to be on the same device" in mesaj
+            or "found at least two devices" in mesaj
+        )
+        if not (gercek_oom or oom_mesaji or cihaz_uyumsuzlugu):
+            # Bu fonksiyonun sorumluluğu dışında bir hata — olduğu gibi yeniden fırlat.
             raise
 
+        neden = "VRAM taşması" if (gercek_oom or oom_mesaji) else "cihaz uyumsuzluğu"
         logger.warning(
-            f"[Acil Durum OOM Kurtarıcı] Gerçek VRAM taşması yakalandı: {exc}. "
+            f"[Acil Durum OOM Kurtarıcı] Gerçek {neden} yakalandı: {exc}. "
             f"Temizlik ve CPU/TMP üzerinden kurtarma başlatılıyor..."
         )
 
