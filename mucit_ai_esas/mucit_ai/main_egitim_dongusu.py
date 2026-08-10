@@ -58,6 +58,7 @@ from torch.utils.checkpoint import checkpoint
 
 from kontratlar import (
     AnlasmaliVramGuvencesiAl,
+    AcilDurumOomYakalayiciVeKurtarici,
     Model_TopolojikKonfigurasyon,
     SistemYapilandirmasi,
     E1_HamMetinAkisi,
@@ -568,12 +569,12 @@ def _tekil_egitim_adimi_icra(
     # FAZ 2: TOPOLOJİK İSKELET VE LİF LAPLASYENİ HESABI (N1 -> N2 -> N3 -> N11)
     # ------------------------------------------------------------------------------
     AnlasmaliVramGuvencesiAl(n1_byte, e1_girdi, takas_mgr=takas_mgr)
-    e2_byte, x_initial = n1_byte.forward(e1_girdi)
+    e2_byte, x_initial = AcilDurumOomYakalayiciVeKurtarici(n1_byte.forward, e1_girdi, modul_nesnesi=n1_byte, takas_mgr=takas_mgr)
     raw_n2_topox = gpu_dagitici.kok_modul_al(n2_topox) if gpu_dagitici is not None else (n2_topox.module if hasattr(n2_topox, 'module') else n2_topox)
     AnlasmaliVramGuvencesiAl(raw_n2_topox, e2_byte, takas_mgr=takas_mgr)
-    e3_sinir = raw_n2_topox.forward(e2_byte, x_initial=x_initial, mode='train')
+    e3_sinir = AcilDurumOomYakalayiciVeKurtarici(raw_n2_topox.forward, e2_byte, x_initial=x_initial, mode='train', modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr)
     AnlasmaliVramGuvencesiAl(n3_lif, e3_sinir, takas_mgr=takas_mgr)
-    e4_lif = n3_lif.forward(e3_sinir, x_initial)
+    e4_lif = AcilDurumOomYakalayiciVeKurtarici(n3_lif.forward, e3_sinir, x_initial, modul_nesnesi=n3_lif, takas_mgr=takas_mgr)
     vram_denetci.yokla_ve_raporla("N1_N3_TopolojiIskelesi", adim_no=current_step)
     
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir.D1, takas_mgr=takas_mgr)
@@ -638,9 +639,12 @@ def _tekil_egitim_adimi_icra(
         e5_b = E5_B_BellekGonderimi(M=M_current)
         
         AnlasmaliVramGuvencesiAl(n4_sorgu, e5_a.x_r, takas_mgr=takas_mgr)
-        e6_sorgu = n4_sorgu.forward(e5_a, D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b)
+        e6_sorgu = AcilDurumOomYakalayiciVeKurtarici(
+            n4_sorgu.forward, e5_a, D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b,
+            modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
+        )
         AnlasmaliVramGuvencesiAl(n5_cevap, e6_sorgu.q_r, takas_mgr=takas_mgr)
-        e7_lokal = n5_cevap.forward(e6_sorgu, e5_b)
+        e7_lokal = AcilDurumOomYakalayiciVeKurtarici(n5_cevap.forward, e6_sorgu, e5_b, modul_nesnesi=n5_cevap, takas_mgr=takas_mgr)
         
         sorgu_q_list.append(e6_sorgu.q_r)
         cevap_a_list.append(e7_lokal.a_r)
@@ -670,10 +674,14 @@ def _tekil_egitim_adimi_icra(
             k_r_key = e6_sorgu.q_r[:, :getattr(config, 'K', 16)] if e6_sorgu.q_r.shape[1] >= getattr(config, 'K', 16) else F.pad(e6_sorgu.q_r, (0, getattr(config, 'K', 16) - e6_sorgu.q_r.shape[1]))
             v_r_val = e7_lokal.a_r
             AnlasmaliVramGuvencesiAl(meclis_bellek, k_r_key, takas_mgr=takas_mgr)
-            e5_b_yeni = meclis_bellek.write(k_r=k_r_key, v_r=v_r_val)
+            e5_b_yeni = AcilDurumOomYakalayiciVeKurtarici(
+                meclis_bellek.write, k_r=k_r_key, v_r=v_r_val, modul_nesnesi=meclis_bellek, takas_mgr=takas_mgr
+            )
         else:
             AnlasmaliVramGuvencesiAl(bellek_yazici, e9_guncel.x_next, takas_mgr=takas_mgr)
-            e5_b_yeni = bellek_yazici.yaz(e9_guncel.x_next, e6_sorgu, e5_b, e7_lokal)
+            e5_b_yeni = AcilDurumOomYakalayiciVeKurtarici(
+                bellek_yazici.yaz, e9_guncel.x_next, e6_sorgu, e5_b, e7_lokal, modul_nesnesi=bellek_yazici, takas_mgr=takas_mgr
+            )
         
         x_current = e9_guncel.x_next
         M_current = e5_b_yeni.M
@@ -696,25 +704,28 @@ def _tekil_egitim_adimi_icra(
     # ------------------------------------------------------------------------------
     e9_guncel_detached = E9_GuncellenmisGizilDurum(x_next=e9_guncel.x_next.detach())
     AnlasmaliVramGuvencesiAl(n8_chebyshev, e9_guncel_detached.x_next, takas_mgr=takas_mgr)
-    e10_kulli = n8_chebyshev.forward(e9_guncel_detached)
-    
+    e10_kulli = AcilDurumOomYakalayiciVeKurtarici(n8_chebyshev.forward, e9_guncel_detached, modul_nesnesi=n8_chebyshev, takas_mgr=takas_mgr)
+
     _, L_arc_tensor, N_ste_tensor, delta_n_tensor = n8_b_uzunluk.forward(e10_kulli, cheby_calc)
     N_star = getattr(config, 'N', 1024)
     L_arc_val = L_arc_tensor.item()
     T_matrix = cheby_calc.hesapla(N=N_star)
     hedef_clamped = torch.clamp(hedef_grouped[:, :N_star], min=0, max=getattr(config, 'V_size', 32000) - 1)
-    
+
+    # NOT: N9 (Vandermonde) ve N10 (Softmax Sözlük İzdüşümü) [B, N, V_size] gibi devasa
+    # boyutlu tensörler ürettiği için OOM riski en yüksek düğümlerdir — reaktif kurtarıcı
+    # burada özellikle kritiktir.
     AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_kulli.C.shape[0], N_star), takas_mgr=takas_mgr)
-    e11_gomulu = n9_vandermonde.forward(e10_kulli, T_matrix)
+    e11_gomulu = AcilDurumOomYakalayiciVeKurtarici(n9_vandermonde.forward, e10_kulli, T_matrix, modul_nesnesi=n9_vandermonde, takas_mgr=takas_mgr)
     AnlasmaliVramGuvencesiAl(n10_sozluk, e11_gomulu.X_output, takas_mgr=takas_mgr)
-    e12_olasilik = n10_sozluk.forward(e11_gomulu, hedefler=hedef_clamped)
+    e12_olasilik = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward, e11_gomulu, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
 
     with torch.no_grad():
         x_start_detached = E9_GuncellenmisGizilDurum(x_next=x_start_grouped.detach())
-        e10_cevapsiz = n8_chebyshev.forward(x_start_detached)
+        e10_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n8_chebyshev.forward, x_start_detached, modul_nesnesi=n8_chebyshev, takas_mgr=takas_mgr)
         AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_cevapsiz.C.shape[0], N_star), takas_mgr=takas_mgr)
-        e11_cevapsiz = n9_vandermonde.forward(e10_cevapsiz, T_matrix)
-        e12_olasilik_cevapsiz = n10_sozluk.forward(e11_cevapsiz, hedefler=hedef_clamped)
+        e11_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n9_vandermonde.forward, e10_cevapsiz, T_matrix, modul_nesnesi=n9_vandermonde, takas_mgr=takas_mgr)
+        e12_olasilik_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward, e11_cevapsiz, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
 
     p_target_cevapli = e12_olasilik.P
     p_target_cevapsiz = e12_olasilik_cevapsiz.P
@@ -736,7 +747,9 @@ def _tekil_egitim_adimi_icra(
     kayip_spektral_vec = (kayip_length + 0.01 * torch.abs(delta_n_tensor).mean()).unsqueeze(0)
     
     AnlasmaliVramGuvencesiAl(vicreg_kriteri, e11_gomulu.X_output, takas_mgr=takas_mgr)
-    (l_var_vec, l_cov_vec, l_rec_vec), metrikler_vicreg = vicreg_kriteri(x=e9_guncel_detached.x_next, z=e11_gomulu.X_output)
+    (l_var_vec, l_cov_vec, l_rec_vec), metrikler_vicreg = AcilDurumOomYakalayiciVeKurtarici(
+        vicreg_kriteri, x=e9_guncel_detached.x_next, z=e11_gomulu.X_output, modul_nesnesi=vicreg_kriteri, takas_mgr=takas_mgr
+    )
     
     # GRPO kaybı ve VICReg'in varyans/kovaryans/rekonstrüksiyon terimleri DÖRT ayrı
     # fiziksel büyüklüktür (bkz. Faz 2/3 gerekçesi) — tek torch.cat + tek VJP yerine

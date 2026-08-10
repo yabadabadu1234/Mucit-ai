@@ -17,7 +17,7 @@ import sys
 import logging
 import dataclasses
 from dataclasses import dataclass, is_dataclass, fields
-from typing import Dict, List, Tuple, Any, Optional, Union
+from typing import Dict, List, Tuple, Any, Optional, Union, Callable
 import math
 import json
 import types
@@ -3506,6 +3506,100 @@ def anlasmali_vram_guvencesi_al(
     return gpu_device
 
 AnlasmaliVramGuvencesiAl = anlasmali_vram_guvencesi_al
+
+
+def acil_durum_oom_yakalayici_ve_kurtarici(
+    hesaplama_fonksiyonu: Callable,
+    *args: Any,
+    modul_nesnesi: Any = None,
+    takas_mgr: Any = None,
+    **kwargs: Any
+) -> Any:
+    """
+    [Reaktif OOM Yakalama ve Kurtarma / Emergency OOM Catch-and-Recover]
+
+    anlasmali_vram_guvencesi_al() PROAKTİF çalışır: işlem başlamadan önce
+    tahmin_et_vram_bayt() formülüyle VRAM ihtiyacını tahmin edip GPU/CPU kararını
+    önceden verir. Ama hiçbir tahmin formülü %100 isabetli olamaz — PyTorch'un dahili
+    ara-tampon tahsisleri, cuDNN algoritma seçimi, VRAM parçalanması (fragmentation)
+    gibi sebeplerle tahmin tutsa dahi gerçek bir torch.cuda.OutOfMemoryError fırlayabilir.
+
+    Bu fonksiyon İKİNCİ (REAKTİF) savunma hattıdır: hesaplama_fonksiyonu'nu dener,
+    gerçekten OOM patlarsa süreci ÖLDÜRMEDEN yakalar, VRAM'i temizler/NVMe'ye tahliye
+    eder, hem modülü (varsa) hem TÜM argümanları CPU'ya taşıyıp işlemi CPU üzerinde
+    tekrar dener ve sonucu orijinal cihaza geri taşır.
+
+    Cihaz Uyumsuzluğu Güvencesi (bu oturumun asıl kök sorunu):
+      modul_nesnesi verilmişse hem .to(cpu) ile parametreleri hem de
+      _vram_idare_zorunlu_cihaz bayrağı CPU'ya set edilir — modülün kendi CUDAGuard
+      bloğu (bkz. N1-N10 forward()'ları) bu bayrağı okuyup KENDİ girdisini de otomatik
+      CPU'ya hizalar. modul_nesnesi verilmemişse (generic callable), args/kwargs
+      girdi_cihaza_tasi ile elle CPU'ya taşınır — ne modül ne girdi geride GPU'da
+      unutulmaz, "iki cihaz" hatası bu yolla oluşamaz.
+    """
+    logger = logging.getLogger("mucit_ai.kontratlar")
+    oom_exc_types = (torch.cuda.OutOfMemoryError,) if hasattr(torch.cuda, "OutOfMemoryError") else (RuntimeError,)
+
+    try:
+        return hesaplama_fonksiyonu(*args, **kwargs)
+    except oom_exc_types as exc:
+        # RuntimeError yakalandıysa (eski PyTorch sürümleri torch.cuda.OutOfMemoryError'a
+        # sahip değildir) gerçekten VRAM taşması mı diye mesaj içeriğini denetle;
+        # değilse bu fonksiyonun sorumluluğu dışındadır, olduğu gibi yeniden fırlat.
+        if oom_exc_types == (RuntimeError,) and "out of memory" not in str(exc).lower():
+            raise
+
+        logger.warning(
+            f"[Acil Durum OOM Kurtarıcı] Gerçek VRAM taşması yakalandı: {exc}. "
+            f"Temizlik ve CPU/TMP üzerinden kurtarma başlatılıyor..."
+        )
+
+        import gc
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
+            takas_mgr.temizle()
+
+        cpu_device = torch.device('cpu')
+
+        # Geri taşıma hedefi: argümanlar arasındaki ilk tensörün orijinal cihazı
+        # (modul_nesnesi'nin parametre cihazı önceliklidir, o daha güvenilir bir referanstır)
+        geri_donus_cihazi = cpu_device
+        if modul_nesnesi is not None and hasattr(modul_nesnesi, 'parameters'):
+            ilk_param = next(modul_nesnesi.parameters(), None)
+            if ilk_param is not None:
+                geri_donus_cihazi = ilk_param.device
+        if geri_donus_cihazi == cpu_device:
+            for aday in list(args) + list(kwargs.values()):
+                if isinstance(aday, torch.Tensor):
+                    geri_donus_cihazi = aday.device
+                    break
+
+        if modul_nesnesi is not None:
+            if hasattr(modul_nesnesi, 'to'):
+                try:
+                    modul_nesnesi.to(cpu_device)
+                except Exception:
+                    pass
+            try:
+                modul_nesnesi._vram_idare_zorunlu_cihaz = cpu_device
+            except Exception:
+                pass
+
+        cpu_args = tuple(girdi_cihaza_tasi(a, cpu_device) for a in args)
+        cpu_kwargs = {k: girdi_cihaza_tasi(v, cpu_device) for k, v in kwargs.items()}
+
+        try:
+            cpu_sonuc = hesaplama_fonksiyonu(*cpu_args, **cpu_kwargs)
+        except Exception as cpu_exc:
+            logger.error(f"[Acil Durum OOM Kurtarıcı] CPU üzerinde tekrar deneme de başarısız oldu: {cpu_exc}")
+            raise
+
+        return girdi_cihaza_tasi(cpu_sonuc, geri_donus_cihazi)
+
+
+AcilDurumOomYakalayiciVeKurtarici = acil_durum_oom_yakalayici_ve_kurtarici
 
 
 if __name__ == "__main__":
