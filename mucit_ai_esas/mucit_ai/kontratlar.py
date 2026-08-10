@@ -625,7 +625,19 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         D1 = sinir_operatorleri.D1  # [E, V]
         E_num, V_num = D1.shape
         d_e, d_v = self.config.d_e, self.config.d_v
-        device = D1.device
+
+        # AnlasmaliVramGuvencesiAl(laplasyen_insa, ...) VRAM yetersizse bu düğümü
+        # CPU'ya yönlendirip `self._vram_idare_zorunlu_cihaz`'ı cpu olarak kaydeder
+        # (bkz. kontratlar.py:anlasmali_vram_guvencesi_al, adım 5). ÖNCEDEN bu metod
+        # bu kararı hiç okumuyor, doğrudan `D1.device`'i (hâlâ GPU) kullanıyordu — yani
+        # kontrat "bu adım CPU'da yürütülecek" dese bile D0 yine de GPU'da tahsis
+        # edilmeye çalışılıyor ve tam da kontratın önlemesi gereken OOM'a çarpıyordu.
+        # Artık kontratın kararına uyuluyor: D1 ve kullanılan phi parçaları (differentiable
+        # .to() ile, gradyan orijinal GPU parametresine geri akar) kararlaştırılan cihaza
+        # taşınıyor.
+        device = getattr(self, '_vram_idare_zorunlu_cihaz', None) or D1.device
+        if D1.device != device:
+            D1 = D1.to(device)
         dtype = D1.dtype
 
         # Vektörize GPU blok yerleşimi (Sıfır .item() / Sıfır CUDA stream stall)
@@ -634,9 +646,13 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
             key_start = f"phi_{e}_{e}"
             key_end = f"phi_{e+1}_{e}"
             if key_start in phi_dict:
-                D0[e * d_e : (e + 1) * d_e, e * d_v : (e + 1) * d_v] = -1.0 * phi_dict[key_start]
+                phi_s = phi_dict[key_start]
+                phi_s = phi_s.to(device) if phi_s.device != device else phi_s
+                D0[e * d_e : (e + 1) * d_e, e * d_v : (e + 1) * d_v] = -1.0 * phi_s
             if key_end in phi_dict:
-                D0[e * d_e : (e + 1) * d_e, (e + 1) * d_v : (e + 2) * d_v] = 1.0 * phi_dict[key_end]
+                phi_e = phi_dict[key_end]
+                phi_e = phi_e.to(device) if phi_e.device != device else phi_e
+                D0[e * d_e : (e + 1) * d_e, (e + 1) * d_v : (e + 2) * d_v] = 1.0 * phi_e
 
         # [D, D] kare Laplasyen matrisi — D = V_num * d_v; V_num token uzunluğuna göre
         # dinamik büyüdüğünden (bkz. N1'de V_nodes = l_tokens) bu çıktı taşabilir.
