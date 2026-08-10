@@ -41,13 +41,8 @@ import gc
 import contextlib
 from typing import Dict, Any, List, Tuple, Optional, Union
 
-try:
-    from kulli_gpu import CpuAnaIdareci, NvmeTakasYoneticisi
-    from mucit_ai.topolojik_islem_sevk import TopolojikIslemSevk
-except ImportError:
-    CpuAnaIdareci = None
-    NvmeTakasYoneticisi = None
-    TopolojikIslemSevk = None
+from kulli_gpu import CpuAnaIdareci, NvmeTakasYoneticisi
+from mucit_ai.topolojik_islem_sevk import TopolojikIslemSevk
 
 import kontratlar
 import torch
@@ -994,7 +989,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     TasmaFarkindaHesaplamaIdaresi.baslat()
 
     # NVMe Takas Yöneticisini İlkle (Sıfır OOM Garantisi)
-    takas_mgr = NvmeTakasYoneticisi() if NvmeTakasYoneticisi is not None else None
+    takas_mgr = NvmeTakasYoneticisi()
     
     # 1. Konfigürasyon Yükleme
     param_dict = {}
