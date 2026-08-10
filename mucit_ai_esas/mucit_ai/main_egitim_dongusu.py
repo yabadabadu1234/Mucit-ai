@@ -1002,6 +1002,13 @@ def _tekil_egitim_adimi_icra(
 # III. HAKİKİ VE DETAYLI EĞİTİM YÜRÜTÜCÜ SÜRECİ (MAIN EXECUTION)
 # ==============================================================================
 def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json", idareci: Optional[Any] = None) -> None:
+    # NOT: 'idareci' parametresi KULLANILMAZ (geriye dönük çağrı uyumluluğu için
+    # kabul edilir, silinmez). Eski CpuAnaIdareci/GPU-işçi-süreci/NCCL çoklu-süreç
+    # mimarisi bu fonksiyonun içinde HİÇ referans edilmez — VRAM/OOM idaresi tek
+    # süreçte, TasmaFarkindaHesaplamaIdaresi + AnlasmaliVramGuvencesiAl üzerinden
+    # yürür. Çağıran notebook hücresinde CpuAnaIdareci().surecleri_baslat_ve_ilkle()
+    # (4 GPU işçi süreci + NCCL halkası) çağrılıyorsa TAMAMEN GEREKSİZDİR, sadece
+    # başlangıçta zaman kaybettirir — kaldırılmalıdır.
     logger.info("================================================================================")
     logger.info("BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ EĞİTİM YÜRÜTÜCÜSÜ (ÇOKLU GPU PARALEL DÖNGÜ)")
     logger.info("================================================================================")

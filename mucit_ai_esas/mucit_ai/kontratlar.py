@@ -2483,7 +2483,7 @@ class N14_OdulTopolojikDevresmezlikMotoru:
             "R_info": float(R_info.mean().detach().item()) if hasattr(R_info, 'detach') else 0.0,
             "R_ortho": float(R_ortho.mean().detach().item()) if hasattr(R_ortho, 'detach') else 0.0,
             "E_sorgu_node_matrix": E_sorgu_node_matrix,
-            "L_sorgu_field": E_sorgu_node_matrix.view(-1)
+            "L_sorgu_field": E_sorgu_node_matrix.reshape(-1)
         }
         return R_q, metrikler
 
@@ -2607,7 +2607,7 @@ class Kayip_GRPO_Kriteri:
         ], dim=-1)  # [V, 6]
 
         # 6 KISTASIN HAKİKİ BİRLEŞİK BLOK VEKTÖR SAHASI L_sorgu_field in R^(6V)
-        L_sorgu_field = E_sorgu_node_matrix.view(-1)  # [6V]
+        L_sorgu_field = E_sorgu_node_matrix.reshape(-1)  # [6V]
 
         # R_tekamul(q) Ham Ödül Bileşimi
         R_q_raw = info_gain - (beta1 * dist_penalty) - (beta2 * complexity_penalty) - (beta3 * entropy_penalty) - (beta4 * contra_penalty) - (beta5 * geodesic_penalty)
@@ -3121,9 +3121,9 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         """
         optimizer.zero_grad(set_to_none=True)
         if isinstance(losses, torch.Tensor):
-            L_vec = losses.view(-1)
+            L_vec = losses.reshape(-1)
         else:
-            L_vec = torch.cat([l.view(-1) for l in losses], dim=0)
+            L_vec = torch.cat([l.reshape(-1) for l in losses], dim=0)
 
         K = L_vec.shape[0]
         if K == 0:
@@ -3219,8 +3219,14 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
             for k, p in enumerate(trainable_params):
                 g = g_list[k] if k < len(g_list) else None
                 if g is not None:
-                    # Mevcut gradyan parçası: 1D'ye düzleştir, cihazı hizala
-                    vektor_parcalari.append(g.view(-1).to(device=ref_device, dtype=ref_dtype))
+                    # Mevcut gradyan parçası: 1D'ye düzleştir, cihazı hizala.
+                    # NOT: .view(-1) DEĞİL .reshape(-1) kullanılır — g (bir düğümün
+                    # gradyanı) transpose/.T zincirinden (ör. D0.T, Delta_0_hat.T gibi
+                    # matmul'lardan geri yayılan gradyanlar) non-contiguous stride ile
+                    # gelebilir; .view() bu durumda "view size is not compatible..."
+                    # RuntimeError'ı fırlatır. .reshape() aynı sonucu üretir, gerekirse
+                    # sessizce kopyalayarak contiguous hale getirir — asla çökmez.
+                    vektor_parcalari.append(g.reshape(-1).to(device=ref_device, dtype=ref_dtype))
                 else:
                     # Kullanılmayan parametre → aynı cihazda sıfır dolgu (NCCL güvencesi)
                     vektor_parcalari.append(
@@ -3275,7 +3281,7 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
             if p.requires_grad:
                 dilim = nihai_1d[imlec: imlec + p_numel]
                 # Unflatten: 1D dilimi → orijinal parametre şekline geri dönüştür
-                p.grad = dilim.view(p.shape).to(device=p.device, dtype=p.dtype)
+                p.grad = dilim.reshape(p.shape).to(device=p.device, dtype=p.dtype)
             # requires_grad=False parametreler için imlec yine de ilerletilir
             # (1D vektörde onların sıfır dilimi zaten var — cursor drift önlenir)
             imlec += p_numel
