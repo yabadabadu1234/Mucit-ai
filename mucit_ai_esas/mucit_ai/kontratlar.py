@@ -640,19 +640,47 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
             D1 = D1.to(device)
         dtype = D1.dtype
 
-        # Vektörize GPU blok yerleşimi (Sıfır .item() / Sıfır CUDA stream stall)
-        D0 = torch.zeros((E_num * d_e, V_num * d_v), dtype=dtype, device=device)
+        # FONKSİYONEL BLOK YERLEŞİMİ (in-place index-assignment YOK):
+        # ÖNCEDEN D0 tek bir torch.zeros(...) olarak tahsis edilip döngü içinde
+        # D0[...] = ... ile YERİNDE dilim ataması yapılıyordu. Autograd, requires_grad
+        # taşıyan bir kaynaktan (phi_dict parametreleri) beslenen bu YERİNDE atamayı
+        # kaydedebilmek için "D0" nesnesinin KENDİSİNİ (inşaatı henüz TAMAMLANMAMIŞ
+        # hâliyle) save_for_backward'a alabiliyordu. Küresel NVMe autograd
+        # saved_tensors_hooks (bkz. nvme_takas_yoneticisi.py) VRAM baskısı altında
+        # tam bu inşaat ortasında tetiklenirse, D0 hâlâ inşa halindeki CANLI Python
+        # nesnesiydi ve tahliye edilirken bozuluyordu — "self must be a matrix" hatası
+        # (bkz. commit be5723c'den önceki analiz) buradan geliyordu.
+        #
+        # Şimdi her satır bloğu SIFIRDAN, tek bir F.pad + toplama ile (tamamen
+        # fonksiyonel, hiçbir tensöre yerinde yazma yapılmadan) inşa edilip en sonda
+        # TEK bir torch.cat ile birleştiriliyor. Bu sayede autograd'ın save_for_backward
+        # ile saklayabileceği "yarım inşa edilmiş, hâlâ mutasyona uğrayan" bir D0 nesnesi
+        # HİÇBİR ZAMAN var olmuyor — swap hook'unun VRAM'i gerçekten geri kazanmak için
+        # tensor.data'yı serbestçe (güvenle) sıfırlayabilmesinin önkoşulu budur.
+        toplam_kolon = V_num * d_v
+        satir_bloklari: List[torch.Tensor] = []
         for e in range(E_num):
             key_start = f"phi_{e}_{e}"
             key_end = f"phi_{e+1}_{e}"
+            parcalar = []
             if key_start in phi_dict:
                 phi_s = phi_dict[key_start]
                 phi_s = phi_s.to(device) if phi_s.device != device else phi_s
-                D0[e * d_e : (e + 1) * d_e, e * d_v : (e + 1) * d_v] = -1.0 * phi_s
+                parcalar.append(F.pad(-1.0 * phi_s, (e * d_v, toplam_kolon - (e + 1) * d_v)))
             if key_end in phi_dict:
                 phi_e = phi_dict[key_end]
                 phi_e = phi_e.to(device) if phi_e.device != device else phi_e
-                D0[e * d_e : (e + 1) * d_e, (e + 1) * d_v : (e + 2) * d_v] = 1.0 * phi_e
+                parcalar.append(F.pad(1.0 * phi_e, ((e + 1) * d_v, toplam_kolon - (e + 2) * d_v)))
+            if parcalar:
+                satir_bloku = parcalar[0] if len(parcalar) == 1 else sum(parcalar[1:], parcalar[0])
+            else:
+                satir_bloku = torch.zeros((d_e, toplam_kolon), dtype=dtype, device=device)
+            satir_bloklari.append(satir_bloku)
+
+        D0 = (
+            torch.cat(satir_bloklari, dim=0) if satir_bloklari
+            else torch.zeros((0, toplam_kolon), dtype=dtype, device=device)
+        )
 
         # [D, D] kare Laplasyen matrisi — D = V_num * d_v; V_num token uzunluğuna göre
         # dinamik büyüdüğünden (bkz. N1'de V_nodes = l_tokens) bu çıktı taşabilir.
@@ -3229,6 +3257,19 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         # None gradyanlar aynı cihazda sıfır vektörle doldurulur
         # (NCCL all_reduce shape/device uyuşmazlığını köklüce engeller)
         # ==============================================================
+        # Bu noktada adımın N1-N11/Faz2-5 ara aktivasyonlarının BÜYÜK ÇOĞUNLUĞU artık
+        # ölü referans durumundadır (VJP enjeksiyonları retain_graph=False ile grafları
+        # zaten serbest bıraktı). AnlasmaliVramGuvencesiAl bu düğüm için resmi VRAM
+        # talebini (10505 MB) zaten yukarıda kontrol etti, ama asıl büyük tahsis BURADA,
+        # aşağıdaki döngüde (P_toplam boyutlu 11 ayrı 1D vektörün EŞ ZAMANLI belleğe
+        # sığması gerekiyor) gerçekleşir. Döngü başlamadan hemen önce gerçek bir
+        # gc.collect()/empty_cache() son bir güvenlik payı sağlar — trainable_params/
+        # optimizer üzerinde hiçbir mutasyon yapmadığından tamamen güvenlidir.
+        import gc as _gc
+        _gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
         duzles_faz_vektorleri: List[torch.Tensor] = []
         for g_list in shard_gradyanlari:
             vektor_parcalari: List[torch.Tensor] = []

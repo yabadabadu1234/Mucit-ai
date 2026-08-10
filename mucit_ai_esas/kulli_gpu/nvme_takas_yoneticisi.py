@@ -229,7 +229,8 @@ class AutogradNvmeOffloadHook:
         try:
             original_device = str(tensor.device)
 
-            torch.save(tensor.detach().cpu(), dosya_yolu)
+            cpu_kopyasi = tensor.detach().cpu()
+            torch.save(cpu_kopyasi, dosya_yolu)
             sanal_id = f"addr_{uuid.uuid4().hex[:8]}"
             kayit = NesneAdresKaydi(
                 sanal_adres=sanal_id,
@@ -253,18 +254,27 @@ class AutogradNvmeOffloadHook:
 
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
 
-            # NOT: Burada `tensor.data`yı SIFIRLAMIYORUZ. `tensor`, autograd'ın
-            # backward için SAKLADIĞI aynı Python nesnesi olabilir ama AYNI ZAMANDA
-            # çağıranın (örn. Riyazi_LifLaplasyeniBlokInsaEdici.insa_et içindeki D0)
-            # hâlâ aktif olarak inşa ettiği/kullandığı CANLI bir nesne de olabilir
-            # (in-place dilim ataması autograd'a `D0`'ı save_for_backward ile
-            # kaydettirebilir). `tensor.data`yı yerinde (in-place) boşaltmak o canlı
-            # nesneyi de bozar (ör. [E*d_e, V*d_v] -> [0] şekline düşürür), bu da
-            # sonraki `torch.matmul(D0.T, D0)` çağrısında "self must be a matrix"
-            # hatasına yol açar. pack_hook zaten dosyaya yazılmış veriyi geri
-            # döndürüyor; autograd bu dönüş değerini backward'da kullanacağından
-            # orijinal tensörün belleğini ayrıca yerinde temizlemeye GEREK YOK —
-            # referanslar bırakıldığında GC/CUDA allocator zaten geri kazanır.
+            # `tensor.data`yı BOŞ (torch.empty(0)) bir tensöre çevirmek yerine AYNI
+            # ŞEKİL VE DEĞERLERE sahip CPU-destekli `cpu_kopyasi`ya çeviriyoruz.
+            # Önceki iki yaklaşımın ikisi de kusurluydu:
+            #   1) torch.empty(0)'a sıfırlamak (eski davranış): `tensor`, çağıranın
+            #      hâlâ aktif inşa ettiği CANLI bir nesne olduğunda (ör.
+            #      Riyazi_LifLaplasyeniBlokInsaEdici.insa_et içinde D0'ın YERİNDE dilim
+            #      atamasıyla inşası — artık F.pad/torch.cat ile fonksiyonel hale
+            #      getirildi) şeklini [0]'a düşürüp "self must be a matrix" hatasına
+            #      yol açıyordu.
+            #   2) HİÇ dokunmamak (bir önceki düzeltme): (1)'i çözdü ama offload'un
+            #      TEK AMACINI (VRAM'i gerçekten boşaltmak) da iptal etti — GPU
+            #      depolamasına hâlâ referans tutulduğundan bellek asla geri
+            #      kazanılmıyor, "Toplam Tahliye: 8236" gibi sayılar hiçbir VRAM
+            #      rahatlaması sağlamadan kronik OOM'a yol açıyordu.
+            # Aynı şekil+değerle CPU'ya geçiş HER İKİ sorunu da çözer: CUDA storage
+            # referansı burada düşer (VRAM gerçekten serbest kalır), ama tensör hâlâ
+            # doğru şekilde/doğru değerlerle okunabilir-yazılabilir durumda kalır —
+            # inşa hâlâ sürüyorsa devamı CPU'da (yavaş ama DOĞRU) ilerler; sonrasında
+            # GPU'daki bir tensörle karışırsa da bunu artık AcilDurumOomYakalayiciVeKurtarici
+            # (main_egitim_dongusu.py'deki düğüm çağrılarına uygulandı) yakalayıp kurtarır.
+            tensor.data = cpu_kopyasi
             return (dosya_yolu, tuple(kayit.shape), kayit.dtype, original_device)
         except Exception as exc:
             logger.error(f"[AutogradNvmeOffloadHook] Diske tahliye hatasi: {exc}")
