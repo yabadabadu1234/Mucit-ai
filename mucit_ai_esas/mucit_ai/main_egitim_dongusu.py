@@ -304,6 +304,73 @@ class Kayip_GRPO_Kriteri:
         return self.hesapla_vektor(P, hedefler, oduller).mean()
 
 
+class Odul_ButunculCumleKeyfiyetMotoru:
+    """
+    [Bütüncül Cümle Keyfiyet Motoru]
+
+    Kelime-bazlı (token-level) kemmiyet kontrolünün (N14_OdulTopolojikDevresmezlikMotoru'nun
+    P > 0.1 sezgiselinin) yanına, cümlenin bütününde organlar-arası mutabakatı ölçen
+    ÇARPIMSAL (AND mantıklı — tek organ ahenksizse skor çöker) bir keyfiyet sinyali ekler.
+    GRPO'ya 11. adlandırılmış Pareto-PCGrad-MGDA nesnesi olarak girer; mevcut GRPO/VICReg
+    sinyallerinin YERİNE geçmez, onlarla çakışma-farkında birleştirilir.
+
+    3 Organik Rükün:
+      1. Sorgu-Cevap Ahengi (N4-N5): q_son ile a_son arasındaki kosinüs benzerliği.
+      2. Eşsınır Kararlılığı (N4-N6/N7 üzerinden D0): c_defect = x @ D0^T normunun sönümü.
+      3. Spektral Eğri / Cümle Kapasitesi Uyumu (N8-N9): L_arc/N_ste'nin hedef cümle
+         uzunluğuyla örtüşmesi.
+
+    Graf-Canlılık Notu: q_son ve L_arc/N_ste, çağıran tarafta HER SEFERİNDE TAZE
+    (ayrı, bağımsız) forward çağrılarıyla üretilmelidir — mevcut R-döngüsü/Faz 4-5
+    tensörlerinin (sorgu_q_list[-1], L_arc_tensor, N_ste_tensor) grafı önceki
+    VJP'ler tarafından retain_graph=False ile zaten tüketilmiştir; onları ikinci
+    kez canlı kullanmaya çalışmak "Trying to backward through the graph a second
+    time" hatası doğurur (bkz. main döngüsündeki "HATA 1 DÜZELTMESİ" bloğu ve onun
+    hemen ardındaki taze n4_sorgu/n8_b_uzunluk çağrıları). x_son ve a_son ise
+    ÇAĞIRAN TARAF tarafından bilerek .detach() edilmiş olmalıdır. Bu motor kendi
+    içinde HİÇBİR .detach() çağırmaz — sorumluluk çağırana aittir.
+    """
+    def __init__(self, config: Model_TopolojikKonfigurasyon):
+        self.config = config
+
+    def hesapla_vektor(
+        self,
+        q_son: torch.Tensor,        # [B, d_q] — CANLI (N4 parametrelerine gradyan taşır)
+        a_son: torch.Tensor,        # [B, d_a] — detached (çağıran tarafça)
+        x_son: torch.Tensor,        # [B, D]   — detached (çağıran tarafça)
+        D0_op: torch.Tensor,        # [E*d_e, D]
+        hedef_tokens: torch.Tensor, # [B, N*] (yalnızca hedef uzunluk için)
+        L_arc: torch.Tensor,        # skaler veya [B] — CANLI (N8_B parametrelerine gradyan taşır)
+        N_ste: torch.Tensor,        # skaler veya [B] — CANLI (N8_B parametrelerine gradyan taşır)
+    ) -> torch.Tensor:
+        # 1. SORGU-CEVAP AHENGİ: farklı boyutlu olabilirler (d_q != d_a), ortak boyuta kırp
+        d_min = min(q_son.shape[-1], a_son.shape[-1])
+        qa_ahenk = F.cosine_similarity(q_son[..., :d_min], a_son[..., :d_min], dim=-1)  # [B]
+
+        # 2. EŞSINIR KARARLILIĞI: N4'ün ZATEN kullandığı AYNI formül (c_defect = x @ D0^T),
+        # boyutsal olarak tutarlı ve anlamlı — q_son yerine x_son (D0 ile aynı D uzayında).
+        c_defect_cumle = torch.matmul(x_son, D0_op.T)  # [B, E*d_e]
+        c_kusur_norm = torch.norm(c_defect_cumle, p=2, dim=-1)  # [B]
+        # Boyut-bağımsız sönüm: normu E*d_e'nin karekökü ile ölçekle (büyük D0'larda
+        # norm doğal olarak büyür, ham norm sabit eşikle karşılaştırılamaz).
+        olcek = max(1.0, float(D0_op.shape[0]) ** 0.5)
+        topolojik_keyfiyet = torch.exp(-c_kusur_norm / olcek)  # [B], kusursuzsa -> 1.0
+
+        # 3. SPEKTRAL EĞRİ / CÜMLE KAPASİTESİ UYUMU
+        N_hedef = float(hedef_tokens.shape[1])
+        kapasite_uyumu = torch.exp(-0.05 * torch.abs(N_ste - N_hedef))
+        if kapasite_uyumu.dim() == 0:
+            kapasite_uyumu = kapasite_uyumu.expand_as(qa_ahenk)
+
+        # 4. ÇARPIMSAL (AND) MÜHÜRLEME: kemmiyetin toplama mantığı değil, keyfiyetin
+        # çarpım mantığı — tek bir organ ahenksizse bütün skor çöker.
+        cumle_keyfiyet_skoru = qa_ahenk * topolojik_keyfiyet * kapasite_uyumu  # [B]
+
+        # GRPO tarzı grup-içi normalize edilmiş kayıp vektörü: keyfiyet yüksekse kayıp düşük.
+        kayip_vec = 1.0 - cumle_keyfiyet_skoru
+        return kayip_vec
+
+
 # ==============================================================================
 # II. EĞİTİM DESTEK VE KONTROL NOKTASI YÖNETİCİLERİ
 # ==============================================================================
@@ -452,6 +519,7 @@ def _tekil_egitim_adimi_icra(
     cheby_calc: Any,
     odul_motoru: Any,
     grpo_kriteri: Any,
+    cumle_keyfiyet_motoru: Any,
     vicreg_kriteri: Any,
     pareto_pcgrad_operator: Any,
     stiefel_izdusurucu: Any,
@@ -794,20 +862,64 @@ def _tekil_egitim_adimi_icra(
     g_sorgu = _grad_anlik_kopyala()
     # -----------------------------------------------------------------------
 
+    # --- BÜTÜNCÜL CÜMLE KEYFİYETİ: 11. Adlandırılmış PCGrad Nesnesi ---
+    # Kelime-bazlı P > 0.1 sezgiselinin yanına, Sorgu-Cevap ahengi (N4), Eşsınır
+    # kararlılığı (D0 üzerinden) ve Spektral/Kapasite uyumunun (N8-N9) ÇARPIMSAL
+    # mutabakatını ölçen ayrı bir sinyal ekler.
+    #
+    # NOT: e6_sorgu_canli.q_r TEKRAR KULLANILAMAZ — g_sorgu'nun VJP'si
+    # (vjp_cerrahi_enjekte_et(E_sorgu_canli, ...)) retain_graph=False ile onun
+    # grafını zaten tüketti; aynı tensörü ikinci bir VJP'de kullanmaya çalışmak
+    # "Trying to backward through the graph a second time" hatası doğurur — tam
+    # olarak HATA 1'in kendisinin çözdüğü sorunun aynısı. Bu yüzden AYRI, TAZE bir
+    # n4_sorgu.forward() çağrısı ile bağımsız bir graf üretilir (e5_a_canli_2 ve
+    # e5_b_canli zaten detached/leaf girdiler olduğu için bu ikinci çağrı hiçbir
+    # paylaşılan graf düğümüne dokunmaz, tamamen bağımsızdır).
+    e6_sorgu_canli_cumle = n4_sorgu.forward(
+        e5_a_canli_2,
+        D0_operator=D0_op_sabit,
+        A_adjacency=e3_sinir_sabit.D1,
+        bellek=e5_b_canli
+    )
+    # NOT 2: L_arc_tensor/N_ste_tensor DE TEKRAR KULLANILAMAZ — kayip_spektral_vec'in
+    # VJP'si (n8_chebyshev + n8_b_uzunluk parametrelerini hedefleyerek) bu tensörlerin
+    # TÜM grafını retain_graph=False ile zaten tüketti. n8_b_uzunluk.forward() TAZE
+    # çağrılır (e10_kulli'nin KENDİ DEĞERİ hâlâ geçerlidir, yalnızca onun ESKİ backward
+    # grafı ölüdür — yeni bir forward çağrısı yeni, bağımsız bir graf üretir). Ancak
+    # e10_kulli'nin kendi atası (n8_chebyshev'e kadar) hâlâ ölü olduğu için bu VJP'nin
+    # hedefi yalnızca n8_b_uzunluk.parameters() ile sınırlı tutulur — n8_chebyshev.
+    # parameters() İSTENMEZ (aksi halde e10_kulli'nin ölü atasına geri backward
+    # denemesi gerekirdi ve aynı "graph a second time" hatası tekrar oluşurdu).
+    _, L_arc_cumle, N_ste_cumle, _ = n8_b_uzunluk.forward(e10_kulli, cheby_calc)
+    kayip_cumle_keyfiyet_vec = cumle_keyfiyet_motoru.hesapla_vektor(
+        q_son=e6_sorgu_canli_cumle.q_r,
+        a_son=son_a_detached,
+        x_son=_x_canli,
+        D0_op=D0_op_sabit,
+        hedef_tokens=hedef_grouped,
+        L_arc=L_arc_cumle,
+        N_ste=N_ste_cumle,
+    )
+    _cumle_hedef_params = list(n4_sorgu.parameters()) + list(n8_b_uzunluk.parameters())
+    vjp_cerrahi_enjekte_et(kayip_cumle_keyfiyet_vec, _cumle_hedef_params)
+    g_cumle_keyfiyet = _grad_anlik_kopyala()
+    # -----------------------------------------------------------------------
+
     vram_denetci.yokla_ve_raporla("LOCO_Faz4_5_GrafSilindi", adim_no=current_step)
 
     # ------------------------------------------------------------------------------
     # PARETO-PCGRAD DİKGEN PROJEKSİYONU VE NİHAİ KÜRESEL GÜNCELLEME
     # ------------------------------------------------------------------------------
     # [4. HATA DÜZELTMESİ] Nesne-Seviyesi Granülerlik: 3 kaba faz yerine, her adlandırılmış
-    # hata büyüklüğü (10 nesne) kendi ayrı satırı olarak Gram matrisine/PCGrad'a girer.
-    # Gerçek MGDA'nın istediği "her bileşen için ayrı gradyan" idealinin, M~binlerce
-    # elemanlı tam Jacobiyen yerine VRAM'e sığan bir yaklaşımı (bkz. _grad_anlik_kopyala).
+    # hata büyüklüğü (11 nesne — Bütüncül Cümle Keyfiyeti dahil) kendi ayrı satırı olarak
+    # Gram matrisine/PCGrad'a girer. Gerçek MGDA'nın istediği "her bileşen için ayrı gradyan"
+    # idealinin, M~binlerce elemanlı tam Jacobiyen yerine VRAM'e sığan bir yaklaşımı
+    # (bkz. _grad_anlik_kopyala).
     shard_gradyanlari = [
         g_faz2_uyumsuzluk, g_faz2_dirichlet,
         g_faz3_uyumsuzluk, g_faz3_dirichlet,
         g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec,
-        g_spektral, g_sorgu,
+        g_spektral, g_sorgu, g_cumle_keyfiyet,
     ]
     _P_toplam = sum(p.numel() for p in trainable_params)
     AnlasmaliVramGuvencesiAl(pareto_pcgrad_operator, (len(shard_gradyanlari), _P_toplam), takas_mgr=takas_mgr)
@@ -912,6 +1024,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     bellek_yazici = Bellek_TopolojikDikkatYazici(config).to(config.device)
     odul_motoru = N14_OdulTopolojikDevresmezlikMotoru(config)
     grpo_kriteri = Kayip_GRPO_Kriteri(config)
+    cumle_keyfiyet_motoru = Odul_ButunculCumleKeyfiyetMotoru(config)
     stiefel_izdusurucu = N13_StiefelManifolduIzdusumu()
     pareto_pcgrad_operator = Riyazi_Pareto_PCGrad_MGDA_Operator()
     vicreg_kriteri = Kayip_VICReg_UcluBilgiKorunumu().to(config.device)
@@ -1021,6 +1134,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         cheby_calc=cheby_calc,
                         odul_motoru=odul_motoru,
                         grpo_kriteri=grpo_kriteri,
+                        cumle_keyfiyet_motoru=cumle_keyfiyet_motoru,
                         vicreg_kriteri=vicreg_kriteri,
                         pareto_pcgrad_operator=pareto_pcgrad_operator,
                         stiefel_izdusurucu=stiefel_izdusurucu,
