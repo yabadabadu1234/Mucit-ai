@@ -254,27 +254,36 @@ class AutogradNvmeOffloadHook:
 
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
 
-            # `tensor.data`yı BOŞ (torch.empty(0)) bir tensöre çevirmek yerine AYNI
-            # ŞEKİL VE DEĞERLERE sahip CPU-destekli `cpu_kopyasi`ya çeviriyoruz.
-            # Önceki iki yaklaşımın ikisi de kusurluydu:
-            #   1) torch.empty(0)'a sıfırlamak (eski davranış): `tensor`, çağıranın
-            #      hâlâ aktif inşa ettiği CANLI bir nesne olduğunda (ör.
-            #      Riyazi_LifLaplasyeniBlokInsaEdici.insa_et içinde D0'ın YERİNDE dilim
-            #      atamasıyla inşası — artık F.pad/torch.cat ile fonksiyonel hale
-            #      getirildi) şeklini [0]'a düşürüp "self must be a matrix" hatasına
-            #      yol açıyordu.
-            #   2) HİÇ dokunmamak (bir önceki düzeltme): (1)'i çözdü ama offload'un
-            #      TEK AMACINI (VRAM'i gerçekten boşaltmak) da iptal etti — GPU
-            #      depolamasına hâlâ referans tutulduğundan bellek asla geri
-            #      kazanılmıyor, "Toplam Tahliye: 8236" gibi sayılar hiçbir VRAM
-            #      rahatlaması sağlamadan kronik OOM'a yol açıyordu.
-            # Aynı şekil+değerle CPU'ya geçiş HER İKİ sorunu da çözer: CUDA storage
-            # referansı burada düşer (VRAM gerçekten serbest kalır), ama tensör hâlâ
-            # doğru şekilde/doğru değerlerle okunabilir-yazılabilir durumda kalır —
-            # inşa hâlâ sürüyorsa devamı CPU'da (yavaş ama DOĞRU) ilerler; sonrasında
-            # GPU'daki bir tensörle karışırsa da bunu artık AcilDurumOomYakalayiciVeKurtarici
-            # (main_egitim_dongusu.py'deki düğüm çağrılarına uygulandı) yakalayıp kurtarır.
-            tensor.data = cpu_kopyasi
+            # `tensor.data`yı yerinde (in-place) CPU'ya çevirme kararı ÜÇÜNCÜ kez
+            # değişiyor — üç yaklaşımın da kendi başarısızlık modu vardı, sırasıyla
+            # keşfedildi:
+            #   1) torch.empty(0)'a sıfırlamak (en eski davranış): `tensor` çağıranın
+            #      hâlâ aktif İNŞA ETTİĞİ canlı bir nesne olduğunda (ör. eski D0'ın
+            #      YERİNDE dilim atamasıyla inşası) şeklini [0]'a düşürüp
+            #      "self must be a matrix" hatasına yol açıyordu.
+            #   2) HİÇ dokunmamak: (1)'i çözdü ama offload'un TEK AMACINI (VRAM'i
+            #      gerçekten boşaltmak) da iptal etti — bellek asla geri kazanılmıyor,
+            #      kronik OOM'a yol açıyordu.
+            #   3) HER tensörde .data'yı CPU kopyasına çevirmek (bir önceki düzeltme):
+            #      (2)'yi çözdü ama requires_grad=True olan, hâlâ CUDA-köklü bir
+            #      grad_fn'e bağlı tensörlerde (ör. n10_sozluk'ün softmax çıktısı
+            #      e12_olasilik.P) autograd'ın dahili cihaz tutarlılık denetimini
+            #      bozup "RuntimeError: CUDAGuardImpl initialized with non-CUDA
+            #      DeviceType: cpu" hatasına yol açtı — sıradan bir torch.log/.mean
+            #      çağrısında, bambaşka bir satırda ortaya çıktığı için izi sürmesi
+            #      en zor hataydı.
+            #
+            # Artık yalnızca requires_grad=False olan (yani hiçbir backward Node'un
+            # "bu tensörün grad_fn'i CUDA'da kuruldu" varsayımına bağlı OLMAYAN, saf
+            # aktivasyon/tampon niteliğindeki) tensörlerde .data yerinde CPU'ya
+            # çevriliyor — bu durumda hem VRAM gerçekten geri kazanılıyor hem de
+            # autograd'ın hiçbir iç tutarlılık varsayımı bozulmuyor (leaf/detached
+            # tensörler için .data mutasyonu zaten güvenlidir). requires_grad=True
+            # tensörler için HİÇ dokunulmuyor — bunlar normal Python/CUDA-allocator
+            # referans sayımıyla (fonksiyon dönünce/yerel değişken serbest kalınca)
+            # kendiliğinden geri kazanılır; bu daha az agresif ama KESİN DOĞRUDUR.
+            if not tensor.requires_grad:
+                tensor.data = cpu_kopyasi
             return (dosya_yolu, tuple(kayit.shape), kayit.dtype, original_device)
         except Exception as exc:
             logger.error(f"[AutogradNvmeOffloadHook] Diske tahliye hatasi: {exc}")
