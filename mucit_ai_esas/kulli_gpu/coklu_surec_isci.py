@@ -210,9 +210,18 @@ class GpuIsciSureci:
                     nesne_id = emir["nesne_id"]
                     shard_shape = emir["shard_shape"]
                     dtype = emir.get("dtype", torch.float32)
-                    device_str = f"cuda:{rank}" if torch.cuda.is_available() else "cpu"
-                    instance.lokal_vram_deposu[nesne_id] = torch.zeros(shard_shape, dtype=dtype, device=device_str)
-                    cevap_kuyrugu.put({"durum": "OK", "rank": rank, "nesne_id": nesne_id})
+                    target_device = emir.get("target_device", None)
+
+                    if target_device is None:
+                        if torch.cuda.is_available():
+                            gpu_count = torch.cuda.device_count()
+                            device_id = rank % max(1, gpu_count)
+                            target_device = f"cuda:{device_id}"
+                        else:
+                            target_device = "cpu"
+
+                    instance.lokal_vram_deposu[nesne_id] = torch.zeros(shard_shape, dtype=dtype, device=target_device)
+                    cevap_kuyrugu.put({"durum": "OK", "rank": rank, "nesne_id": nesne_id, "device": target_device})
 
                 elif komut == "LOKAL_ICRA":
                     nesne_id = emir["nesne_id"]

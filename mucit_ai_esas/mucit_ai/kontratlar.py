@@ -601,7 +601,7 @@ class Yardimci_ChebyshevMatrisHesaplayici:
 
 class Riyazi_LifLaplasyeniBlokInsaEdici:
     """
-    Sınırlama matrisleri (phi) ve D1 sınır operatöründen türevlenebilir 
+    Sınırlama matrisleri (phi) ve D1 sınır operatöründen türevlenebilir
     D0 coboundary ve 0-Lif Laplasyeni (Delta_0) matrislerini kuran vektörize blok inşaatçı.
     """
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -640,6 +640,10 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
 
         Delta_0 = torch.matmul(D0.T, D0)    # [D, D]
         return D0, Delta_0
+
+    def tasintilar_cihaza(self, D0: torch.Tensor, Delta_0: torch.Tensor, target_device: torch.device) -> Tuple[torch.Tensor, torch.Tensor]:
+        """Elle taşınma desteği: Riyazi_LifLaplasyeniBlokInsaEdici tensörlerini hedef cihaza taşır (non-nn.Module)."""
+        return D0.to(target_device), Delta_0.to(target_device)
 
 
 class Bellek_TopolojikDikkatYazici(nn.Module):
@@ -3239,6 +3243,21 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         optimizer.step()
 
         return alpha_star
+
+    def shard_gradyanlari_cihaza_tasi(self, shard_gradyanlari: List[List[torch.Tensor]], target_device: torch.device) -> List[List[torch.Tensor]]:
+        """Elle taşınma desteği: Pareto-PCGrad şard gradyanlarını hedef cihaza taşır (non-nn.Module)."""
+        if target_device is None:
+            return shard_gradyanlari
+        tasili_shardlar = []
+        for g_list in shard_gradyanlari:
+            tasili_list = []
+            for g in g_list:
+                if g is not None:
+                    tasili_list.append(g.to(target_device))
+                else:
+                    tasili_list.append(None)
+            tasili_shardlar.append(tasili_list)
+        return tasili_shardlar
 
 
 class Hafiza_Izleyici_ve_VRAM_Denetci:

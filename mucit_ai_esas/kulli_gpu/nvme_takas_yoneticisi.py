@@ -209,18 +209,19 @@ class AutogradNvmeOffloadHook:
         self.karar_motoru = karar_motoru or NvmeTahliyeKararMotoru()
         self.kayit_defteri = kayit_defteri or kuresel_adres_kayit_defteri
 
-    def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Tuple[str, Tuple[int, ...], torch.dtype]:
+    def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Tuple[str, Tuple[int, ...], torch.dtype, str]:
         """
         Autograd ileri beslemede (forward) saklanması gereken tensörleri,
         VRAM kritik seviyeye indiğinde otomatik diske sürer.
+        Orijinal cihaz bilgisini de kaydeder (geri çekilişte doğru cihaza geri yükleme için).
         """
         is_cuda_or_npu = getattr(tensor, "is_cuda", False) or getattr(tensor, "is_npu", False)
         if not is_cuda_or_npu or not torch.cuda.is_available():
-            return ("", tuple(tensor.shape), tensor.dtype)
+            return ("", tuple(tensor.shape), tensor.dtype, "cpu")
 
         bayt_boyut = tensor.element_size() * tensor.numel()
         if not self.karar_motoru.vram_sınırı_asildi_mi_tahkik_et(bayt_boyut):
-            return ("", tuple(tensor.shape), tensor.dtype)
+            return ("", tuple(tensor.shape), tensor.dtype, str(tensor.device))
 
         dosya_id = f"autograd_swap_{uuid.uuid4().hex[:12]}.bin"
         dosya_yolu = os.path.join(self.karar_motoru.swap_dir, dosya_id)
@@ -228,6 +229,7 @@ class AutogradNvmeOffloadHook:
         try:
             bytes_size = tensor.element_size() * tensor.numel()
             v_ptr = int(tensor.data_ptr()) if hasattr(tensor, "data_ptr") else 0
+            original_device = str(tensor.device)
 
             torch.save(tensor.detach().cpu(), dosya_yolu)
             sanal_id = f"addr_{uuid.uuid4().hex[:8]}"
@@ -259,28 +261,33 @@ class AutogradNvmeOffloadHook:
 
             # VRAM verisini temizle
             tensor.data = torch.empty(0, device="cpu")
-            return (dosya_yolu, tuple(kayit.shape), kayit.dtype)
+            return (dosya_yolu, tuple(kayit.shape), kayit.dtype, original_device)
         except Exception as exc:
             logger.error(f"[AutogradNvmeOffloadHook] Diske tahliye hatasi: {exc}")
-            return ("", tuple(tensor.shape), tensor.dtype)
+            return ("", tuple(tensor.shape), tensor.dtype, "cpu")
 
-    def unpack_hook_diskten_geri_yukle(self, bundle: Tuple[str, Tuple[int, ...], torch.dtype]) -> torch.Tensor:
+    def unpack_hook_diskten_geri_yukle(self, bundle: Tuple[str, Tuple[int, ...], torch.dtype], target_device: Optional[str] = None) -> torch.Tensor:
         """
         Backward türev adımında diske sürülmüş veriyi VRAM'e geri çeker ve dosyayı siler.
+        target_device parametresi ile hedef cihaz belirtilebilir (VRAM manager koordinasyonu).
         """
         dosya_yolu, shape, dtype = bundle
+
+        if target_device is None:
+            target_device = "cuda:0" if torch.cuda.is_available() else "cpu"
+
         if not dosya_yolu or not os.path.exists(dosya_yolu):
-            return torch.zeros(shape, dtype=dtype, device="cuda:0" if torch.cuda.is_available() else "cpu")
+            return torch.zeros(shape, dtype=dtype, device=target_device)
 
         try:
-            device = "cuda:0" if torch.cuda.is_available() else "cpu"
-            restored_tensor = torch.load(dosya_yolu, map_location=device)
+            # Dosya CPU'den yüklenir, sonra hedef cihaza taşınır
+            restored_tensor = torch.load(dosya_yolu, map_location="cpu")
             if restored_tensor.shape != shape:
                 restored_tensor = restored_tensor.reshape(shape)
-            return restored_tensor
+            return restored_tensor.to(device=target_device)
         except Exception as exc:
             logger.error(f"[AutogradNvmeOffloadHook] Diskten geri yukleme hatasi: {exc}")
-            return torch.zeros(shape, dtype=dtype)
+            return torch.zeros(shape, dtype=dtype, device=target_device)
         finally:
             if dosya_yolu and os.path.exists(dosya_yolu):
                 try:
