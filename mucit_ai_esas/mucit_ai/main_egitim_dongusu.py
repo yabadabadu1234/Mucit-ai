@@ -774,7 +774,14 @@ def _tekil_egitim_adimi_icra(
     e2_byte_grouped = E2_ByteTensoru(byte_tensor=e2_byte.byte_tensor.repeat_interleave(GRPO_G, dim=0))
     hedef_grouped = hedef_tensor.repeat_interleave(GRPO_G, dim=0)
     active_b = x_current.shape[0]
-    M_current = meclis_bellek.get_memory(active_b).M
+    # KAPSAMLI DENETİM (madde 5): meclis_bellek dosyanın geri kalanında (ör. write/yaz
+    # çağrılarında) her zaman AnlasmaliVramGuvencesiAl + AcilDurumOomYakalayiciVeKurtarici
+    # ile korunurken bu ilk get_memory çağrısı hiç korumasızdı — VRAM baskısı altında
+    # çıplak OOM ile tüm adımı çökertebilirdi.
+    AnlasmaliVramGuvencesiAl(meclis_bellek, active_b, takas_mgr=takas_mgr)
+    M_current = AcilDurumOomYakalayiciVeKurtarici(
+        meclis_bellek.get_memory, active_b, modul_nesnesi=meclis_bellek, takas_mgr=takas_mgr
+    ).M
     # Güvenlik: config.R < 1 olursa döngü hiç çalışmaz; mevcut_durum başlangıç durumuna sabitlenir
     mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
     # KAPSAMLI DENETİM DÜZELTMESİ: raw_n2_topox.forward'ın Faz2'deki İLK çağrısı (yukarıda,
