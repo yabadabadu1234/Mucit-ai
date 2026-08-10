@@ -2042,8 +2042,10 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 h_chunk = h_tensor[:, i:i+micro_chunk_size]
                 
                 logits_chunk = self.vocab_head(X_chunk)
-                # X_chunk 2D gelirse logits_chunk [B, V_size] olur; 3D'ye normalize et
-                if logits_chunk.dim() == 2:
+                # Tensör Boyut Zırhı: vocab_head çıktısı 1D [V_size] veya 2D [B, V_size] gelebilir; 3D'ye normalize et
+                if logits_chunk.dim() == 1:
+                    logits_chunk = logits_chunk.unsqueeze(0).unsqueeze(0)  # [1, 1, V_size]
+                elif logits_chunk.dim() == 2:
                     logits_chunk = logits_chunk.unsqueeze(1)  # [B, 1, V_size]
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
                 logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
@@ -2067,6 +2069,11 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
             for i in range(0, N, micro_chunk_size):
                 X_chunk = X_t[:, i:i+micro_chunk_size, :]
                 logits_chunk = self.vocab_head(X_chunk)
+                # Tensör Boyut Zırhı: vocab_head çıktısı 1D [V_size] veya 2D [B, V_size] gelebilir; 3D'ye normalize et
+                if logits_chunk.dim() == 1:
+                    logits_chunk = logits_chunk.unsqueeze(0).unsqueeze(0)  # [1, 1, V_size]
+                elif logits_chunk.dim() == 2:
+                    logits_chunk = logits_chunk.unsqueeze(1)  # [B, 1, V_size]
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
                 logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
                 logits_norm = (logits_chunk - logits_mean.to(device=logits_chunk.device)) / (logits_std.to(device=logits_chunk.device) + 1e-6)
