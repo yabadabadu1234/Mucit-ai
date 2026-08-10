@@ -15,7 +15,8 @@ spektral projeksiyonu ve kapılı bellek yönetim mekanizmalarının tamamını 
 import os
 import sys
 import logging
-from dataclasses import dataclass
+import dataclasses
+from dataclasses import dataclass, is_dataclass, fields
 from typing import Dict, List, Tuple, Any, Optional, Union
 import math
 import json
@@ -201,6 +202,27 @@ class Model_TopolojikKonfigurasyon:
         self.lr: float = params.get("lr", 1e-3)
         self.batch_size: int = params.get("batch_size", 2)
         self.device: str = "cuda" if torch.cuda.is_available() else "cpu"
+
+
+# =============================================================================
+# I-B. ORTAK VRAM TAHSİS TAHMİN FORMÜLÜ ÇEKİRDEĞİ
+# =============================================================================
+def vram_bayt_tahmin_et(*boyutlar: int, eleman_bayt: int = 4, guvenlik_katsayisi: float = 3.0) -> int:
+    """
+    [Parametrik VRAM Tahsis Tahmin Formülü]
+    tahmin_bayt = (prod(boyutlar) * eleman_bayt) * guvenlik_katsayisi
+
+    Her sınıfın kendi tahmin_et_vram_bayt() metodu, kendi işleminin ürettiği en büyük
+    ara/çıktı tensörlerinin *gerçek* şekillerini (B, V, E, d, V_size, N, K, ...) bu
+    fonksiyona besler. guvenlik_katsayisi (varsayılan 3.0), autograd'ın backward için
+    sakladığı ara tensörleri, matmul/softmax/attention'ın geçici tampon belleğini ve
+    CUDA caching allocator parçalanmasını (fragmentation) kapsayan ampirik bir çarpandır
+    — "mantıksal" (yalnızca çıktı) boyuttan gerçek tepe VRAM tüketimine geçiş payıdır.
+    """
+    eleman_sayisi = 1
+    for b in boyutlar:
+        eleman_sayisi *= max(1, int(b))
+    return int(eleman_sayisi * eleman_bayt * guvenlik_katsayisi)
 
 
 @dataclass
@@ -438,15 +460,20 @@ class Maarif_NedenselSuzgec(nn.Module):
         nn.init.zeros_(self.out_proj.bias)
 
     def forward(self, X_output: torch.Tensor) -> torch.Tensor:
-        # X_output: [B, d, N] -> transpose -> [B, N, d]
-        X_t = X_output.transpose(1, 2)
-        B, N, d = X_t.shape
-        device = X_output.device
-
-        # CUDAGuard Cihaz Hizalaması: Nedensel süzgeç parametrelerini girdi tensörünün cihazına kitle
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # (bkz. anlasmali_vram_guvencesi_al) modül VE girdisi o cihaza hizalanır; aksi halde
+        # eski davranış korunur: modül girdinin cihazını takip eder.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        device = zorunlu_cihaz if zorunlu_cihaz is not None else X_output.device
         if next(self.parameters(), None) is not None:
             if next(self.parameters()).device != device:
                 self.to(device)
+        if X_output.device != device:
+            X_output = X_output.to(device)
+
+        # X_output: [B, d, N] -> transpose -> [B, N, d]
+        X_t = X_output.transpose(1, 2)
+        B, N, d = X_t.shape
 
         if N <= 1:
             return X_output
@@ -580,6 +607,20 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        N11 VRAM Tahmin Formülü: D0 = [E*d_e, V*d_v] blok matrisi ve
+        Delta_0 = D0^T @ D0 = [V*d_v, V*d_v] kare Laplasyen matrisi baskındır.
+        """
+        V = getattr(self.config, 'V_nodes', 8)
+        E_num = max(V - 1, 1)
+        d_e, d_v = self.config.d_e, self.config.d_v
+        D = V * d_v
+        return (
+            vram_bayt_tahmin_et(E_num * d_e, D) +  # D0 [E*d_e, V*d_v]
+            vram_bayt_tahmin_et(D, D)               # Delta_0 = D0^T @ D0 [D, D]
+        )
+
     def insa_et(self, sinir_operatorleri: E3_SinirOperatorleri, phi_dict: nn.ParameterDict) -> Tuple[torch.Tensor, torch.Tensor]:
         D1 = sinir_operatorleri.D1  # [E, V]
         E_num, V_num = D1.shape
@@ -620,7 +661,24 @@ class Bellek_TopolojikDikkatYazici(nn.Module):
             nn.Sigmoid()
         )
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """N_Yazici VRAM Tahmin Formülü: V = W_v(qa).view(B, d_m, K) çıktısı baskındır."""
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
+        return vram_bayt_tahmin_et(B, self.config.d_m, self.config.K)
+
     def yaz(self, x_next: torch.Tensor, sorgu: E6_GizilSorgu, mevcut_bellek: E5_B_BellekGonderimi, yeni_bilgi: E7_LokalBilgi) -> E5_B_BellekGonderimi:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # modül VE tüm girdiler bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            if x_next.device != zorunlu_cihaz:
+                x_next = x_next.to(zorunlu_cihaz)
+            sorgu = girdi_cihaza_tasi(sorgu, zorunlu_cihaz)
+            mevcut_bellek = girdi_cihaza_tasi(mevcut_bellek, zorunlu_cihaz)
+            yeni_bilgi = girdi_cihaza_tasi(yeni_bilgi, zorunlu_cihaz)
+
         M_current = mevcut_bellek.M  # [B, d_m, K]
         B = M_current.shape[0]
         d_v = getattr(self.config, 'd_v', 32)
@@ -755,14 +813,23 @@ class N1_HibritByteTokenAyristirici(nn.Module):
                 param.copy_(stiefel_qr_projection(param.data))
 
     def forward(self, girdi: E1_HamMetinAkisi) -> Tuple[E2_ByteTensoru, torch.Tensor]:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # (bkz. anlasmali_vram_guvencesi_al) N1 kendi tensörlerini config.device yerine bu
+        # cihazda kurar; aksi halde eski davranış (config.device) korunur.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        device = zorunlu_cihaz if zorunlu_cihaz is not None else torch.device(self.config.device)
+        if next(self.parameters(), None) is not None:
+            if next(self.parameters()).device != device:
+                self.to(device)
+
         girdi_metni = girdi.X_text if girdi.X_text else " "
-        
+
         # 1. BPE Tokenization
         token_ids = self.tokenizer.encode(girdi_metni)
         if len(token_ids) == 0:
             token_ids = [0]
         l_tokens = len(token_ids)
-            
+
         # 2. Fiziksel UTF-8 Byte Parsing
         raw_bytes = list(girdi_metni.encode('utf-8'))
         if len(raw_bytes) == 0:
@@ -770,8 +837,8 @@ class N1_HibritByteTokenAyristirici(nn.Module):
         l_bytes = len(raw_bytes)
 
         # Tensörleştirme
-        t_tokens = torch.tensor([token_ids], dtype=torch.int64, device=self.config.device).repeat(self.config.batch_size, 1)
-        t_bytes = torch.tensor([raw_bytes], dtype=torch.int64, device=self.config.device).repeat(self.config.batch_size, 1)
+        t_tokens = torch.tensor([token_ids], dtype=torch.int64, device=device).repeat(self.config.batch_size, 1)
+        t_bytes = torch.tensor([raw_bytes], dtype=torch.int64, device=device).repeat(self.config.batch_size, 1)
 
         # Token Gömüsü: [B, L_tokens, d_v]
         emb_token = self.token_embeddings(t_tokens % self.config.V_size)
@@ -792,7 +859,7 @@ class N1_HibritByteTokenAyristirici(nn.Module):
             Q_m = self.Q_dict[key_m] # [d_v, d_v] Stiefel Matrisi
             
             # b_blok_i: o tokena ait m_i adet baytın dikgenleştirilmiş blok vektörü
-            tok_b_tensor = torch.tensor(tok_bytes, dtype=torch.int64, device=self.config.device)
+            tok_b_tensor = torch.tensor(tok_bytes, dtype=torch.int64, device=device)
             tok_b_tensor_shifted = torch.clamp(tok_b_tensor + 1, min=1, max=256)
             b_embs = self.byte_embeddings(tok_b_tensor_shifted) # [m_i, d_v]
             
@@ -873,21 +940,41 @@ class N2_TopoXHucreOlusumu(nn.Module):
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
-        N2 VRAM Tahmin Formülü: VRAM_bayt = (B * E * 4) + (B * F * 4) Bayt
+        N2 VRAM Tahmin Formülü: baskın maliyet Q*K^T Sparsemax skor matrisi S = [B, V, V]'dir
+        (scores + A_raw + A_mean ara tensörleri), D1/D2 [E, V]/[F, E] kenar-üçgen matrisleri
+        yanında ihmal edilebilir kalır:
+        VRAM_bayt ~= guvenlik * 4 Bayt * (B*V*V (skor/sparsemax) + B*V*d_v*2 (Q,K) + E*V (D1) + F*E (D2))
         """
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
-        V = getattr(self.config, 'V_nodes', 8)
+        V = girdi_sekli[1] if len(girdi_sekli) > 1 else getattr(self.config, 'V_nodes', 8)
+        d_v = getattr(self.config, 'd_v', 32)
         E = max(V - 1, 1)
         F_num = max(V - 2, 1)
-        return int((B * E * 4) + (B * F_num * 4))
+        return (
+            vram_bayt_tahmin_et(B, V, V) +          # scores + A_raw + A_mean [B, V, V]
+            vram_bayt_tahmin_et(B, V, d_v * 2) +    # Q, K [B, V, d_v]
+            vram_bayt_tahmin_et(E, V) +              # D1 [E, V]
+            vram_bayt_tahmin_et(F_num, E)            # D2 [F, E]
+        )
 
     def forward(self, girdi: E2_ByteTensoru, x_initial: Optional[torch.Tensor] = None, mode: str = 'train', D0_base: Optional[torch.Tensor] = None) -> E3_SinirOperatorleri:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # modül VE girdisi (x_initial, D0_base) bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            if x_initial is not None and x_initial.device != zorunlu_cihaz:
+                x_initial = x_initial.to(zorunlu_cihaz)
+            if D0_base is not None and D0_base.device != zorunlu_cihaz:
+                D0_base = D0_base.to(zorunlu_cihaz)
+
         if x_initial is not None and x_initial.dim() == 2:
             V = x_initial.shape[1] // self.d_v
             X = x_initial.view(-1, V, self.d_v)
         else:
             V = self.config.V_nodes
-            device = self.config.device
+            device = zorunlu_cihaz if zorunlu_cihaz is not None else self.config.device
             X = torch.randn((self.config.batch_size, V, self.d_v), device=device)
 
         device = X.device
@@ -996,7 +1083,27 @@ class N3_LifSinirlamaAtama(nn.Module):
         self.W_u = nn.Linear(config.d_v, config.d_e, device=config.device)
         self.W_v = nn.Linear(config.d_v, config.d_e, device=config.device)
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        N3 VRAM Tahmin Formülü: baskın maliyet Phi_batch_raw/Phi_batch [E, d_e, d_v]
+        toplu QR ayrıştırmasıdır (QR kendi içinde girdiyle orantılı ara bellek ister).
+        """
+        V = getattr(self.config, 'V_nodes', 8)
+        E_num = max(V - 1, 1)
+        d_e, d_v = self.config.d_e, self.config.d_v
+        return vram_bayt_tahmin_et(E_num, d_e, d_v)
+
     def forward(self, sinir_operatorleri: E3_SinirOperatorleri, x_initial: torch.Tensor) -> E4_LifDemeti:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # modül VE girdisi bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            if x_initial.device != zorunlu_cihaz:
+                x_initial = x_initial.to(zorunlu_cihaz)
+            sinir_operatorleri = girdi_cihaza_tasi(sinir_operatorleri, zorunlu_cihaz)
+
         D1 = sinir_operatorleri.D1
         E_num, V_num = D1.shape
         phi_dict = {}
@@ -1068,7 +1175,34 @@ class N4_SorguSecici(nn.Module):
         with torch.no_grad():
             self.W_Q.copy_(stiefel_qr_projection(self.W_Q.data))
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        N4 VRAM Tahmin Formülü: baskın maliyet c_defect = x_r @ D0^T = [B, E*d_e]
+        (D0_operator ile matris çarpımı) ve Q_cand = [B, V, d_q] projeksiyonudur.
+        """
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else (self.config.batch_size if self.config else 1)
+        V = getattr(self.config, 'V_nodes', 8) if self.config else 8
+        E_num = max(V - 1, 1)
+        d_e = getattr(self.config, 'd_e', 32) if self.config else 32
+        return (
+            vram_bayt_tahmin_et(B, E_num * d_e) +   # c_defect [B, E*d_e]
+            vram_bayt_tahmin_et(B, V, self.d_q)     # Q_cand [B, V, d_q]
+        )
+
     def forward(self, mevcut_durum: E5_A_MevcutGizilDurum, D0_operator: Optional[torch.Tensor] = None, A_adjacency: Optional[torch.Tensor] = None, bellek: Optional[E5_B_BellekGonderimi] = None) -> E6_GizilSorgu:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # modül VE tüm girdiler bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            mevcut_durum = girdi_cihaza_tasi(mevcut_durum, zorunlu_cihaz)
+            if D0_operator is not None:
+                D0_operator = D0_operator.to(zorunlu_cihaz)
+            if A_adjacency is not None:
+                A_adjacency = A_adjacency.to(zorunlu_cihaz)
+            bellek = girdi_cihaza_tasi(bellek, zorunlu_cihaz)
+
         x_r = mevcut_durum.x_r  # [B, D]
         B = x_r.shape[0]
         V_num = x_r.shape[1] // self.d_v if x_r.shape[1] % self.d_v == 0 else (self.config.V_nodes if self.config else 1)
@@ -1181,7 +1315,24 @@ class N5_CevapSuzucu(nn.Module):
             self.W_K.copy_(stiefel_qr_projection(self.W_K.data))
             self.W_V.copy_(stiefel_qr_projection(self.W_V.data))
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        N5 VRAM Tahmin Formülü: baskın maliyet M_slots/M_norm = [B, d_m, K] bellek okuma tensörüdür.
+        """
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else 1
+        K_slots = getattr(self.config, 'K', 16) if self.config else 16
+        return vram_bayt_tahmin_et(B, self.d_m, K_slots)
+
     def forward(self, sorgu: E6_GizilSorgu, bellek: E5_B_BellekGonderimi) -> E7_LokalBilgi:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # modül VE girdiler bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            sorgu = girdi_cihaza_tasi(sorgu, zorunlu_cihaz)
+            bellek = girdi_cihaza_tasi(bellek, zorunlu_cihaz)
+
         q_r = sorgu.q_r  # [B, d_q]
         M = bellek.M  # [B, d_m, K] veya [B, K, d_m]
         B = q_r.shape[0]
@@ -1274,6 +1425,25 @@ class N6_KohomolojikAktor(nn.Module):
         else:
             self.register_buffer("Delta0", torch.matmul(D0_op.T, D0_op), persistent=False)
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        N6 VRAM Tahmin Formülü: matrissiz Krylov çözücü [E,E] matrisi hiç kurmaz;
+        baskın maliyet c_defect/K_adjoint [B, E*d_e] ve [B, V*d_v] vektör serisi ile
+        abduction_proj girdisidir [B, 4*d_v + d_q + d_a].
+        """
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else (self.config.batch_size if self.config else 1)
+        V = getattr(self.config, 'V_nodes', 8) if self.config else 8
+        E_num = max(V - 1, 1)
+        d_v = getattr(self.config, 'd_v', 32) if self.config else 32
+        d_e = getattr(self.config, 'd_e', 32) if self.config else 32
+        d_q = getattr(self.config, 'd_q', 64) if self.config else 64
+        d_a = getattr(self.config, 'd_a', 64) if self.config else 64
+        return (
+            vram_bayt_tahmin_et(B, E_num * d_e) +          # c_defect / Krylov vektör serisi [B, E*d_e]
+            vram_bayt_tahmin_et(B, V * d_v) +               # K_adjoint [B, V*d_v]
+            vram_bayt_tahmin_et(B, 4 * d_v + d_q + d_a)     # abduction_proj girdisi
+        )
+
     def hesapla_moore_penrose_psodoters_vektor_etkisi(self, c_defect: torch.Tensor, D0: torch.Tensor, P: int = 5) -> torch.Tensor:
         r"""
         [MATRİSSİZ CHEBYSHEV KRYLOV EŞSINIR ÇÖZÜCÜSÜ - 0 MB MATRİS SHIFT VRAM]
@@ -1329,8 +1499,24 @@ class N6_KohomolojikAktor(nn.Module):
         """[Rükn 3] Matrissiz Vektörel Chebyshev Krylov Eşsınır Çözümü"""
         return self.hesapla_moore_penrose_psodoters_vektor_etkisi(c_defect, D0, P=P)
 
-    def forward(self, mevcut_durum: E5_A_MevcutGizilDurum, sorgu: E6_GizilSorgu, lokal_bilgi: E7_LokalBilgi, 
+    def forward(self, mevcut_durum: E5_A_MevcutGizilDurum, sorgu: E6_GizilSorgu, lokal_bilgi: E7_LokalBilgi,
                 d_discrepancy: Optional[torch.Tensor] = None, E_dirichlet: Optional[torch.Tensor] = None) -> E8_SentetikAraDurum:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # modül (D0/Delta0 buffer'ları ve alt_ag dahil) VE tüm girdiler bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            elif self.D0 is not None and self.D0.device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            mevcut_durum = girdi_cihaza_tasi(mevcut_durum, zorunlu_cihaz)
+            sorgu = girdi_cihaza_tasi(sorgu, zorunlu_cihaz)
+            lokal_bilgi = girdi_cihaza_tasi(lokal_bilgi, zorunlu_cihaz)
+            if d_discrepancy is not None:
+                d_discrepancy = d_discrepancy.to(zorunlu_cihaz)
+            if E_dirichlet is not None:
+                E_dirichlet = E_dirichlet.to(zorunlu_cihaz)
+
         x_r = mevcut_durum.x_r  # [B, D]
         q_r = sorgu.q_r  # [B, d_q]
         a_r = lokal_bilgi.a_r  # [B, d_a]
@@ -1421,6 +1607,21 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         self.config = config
         self.syn_proj_layer = nn.Linear(config.d_h, config.d_v)
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        N7 VRAM Tahmin Formülü: spektral_normalize_delta_0, Delta_0 [D, D]'nin YENİ bir
+        kopyasını (Delta_0_hat) üretir; bunun yanında birkaç [B, D] ara tensörü (laplacian_grad,
+        g_var/g_metric/g_ricci, dx, x_next) vardır.
+        """
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else (self.config.batch_size if self.config else 1)
+        V = getattr(self.config, 'V_nodes', 8) if self.config else 8
+        d_v = getattr(self.config, 'd_v', 32) if self.config else 32
+        D = V * d_v
+        return (
+            vram_bayt_tahmin_et(D, D) +      # Delta_0_hat [D, D]
+            vram_bayt_tahmin_et(B, D) * 6    # laplacian_grad, dx, x_next, g_var, g_metric, g_ricci [B, D]
+        )
+
     def spektral_normalize_delta_0(self, Delta_0: torch.Tensor) -> torch.Tensor:
         """Delta_0 matrisini azami özdeğeri (lambda_max <= 1.0) olacak şekilde spektral olarak normalize eder."""
         if Delta_0 is None or Delta_0.numel() == 0:
@@ -1457,6 +1658,17 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         return g_var + g_metric + g_ricci
 
     def forward(self, sentetik_durum: E8_SentetikAraDurum, Delta_0: torch.Tensor, mevcut_durum: E5_A_MevcutGizilDurum) -> E9_GuncellenmisGizilDurum:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # modül VE tüm girdiler bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            sentetik_durum = girdi_cihaza_tasi(sentetik_durum, zorunlu_cihaz)
+            mevcut_durum = girdi_cihaza_tasi(mevcut_durum, zorunlu_cihaz)
+            if Delta_0.device != zorunlu_cihaz:
+                Delta_0 = Delta_0.to(zorunlu_cihaz)
+
         x_r = mevcut_durum.x_r
         B, D_dyn = x_r.shape
         d_v = getattr(self.config, 'd_v', 32)
@@ -1774,6 +1986,14 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
         R_init = torch.eye(self.K, device=device).unsqueeze(0).repeat(config.batch_size, 1, 1)
         self.register_buffer("R", R_init)
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        SMW (N12) VRAM Tahmin Formülü: R [B, K, K] korelasyon matrisi ve M [B, d_m, K]
+        bellek matrisi, her adımda yeniden yazılır.
+        """
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
+        return vram_bayt_tahmin_et(B, self.K, self.K) + vram_bayt_tahmin_et(B, self.d_m, self.K)
+
     def reset_memory(self, batch_size: Optional[int] = None):
         """Hafızayı sıfırlama (Yeni dizi başında)"""
         b_size = batch_size or self.config.batch_size
@@ -1800,6 +2020,19 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
         v_r: [B, d_m] (Giren Değer)
         alpha_pareto: [M] (Pareto Gradyan Ağırlıkları Geribesleme Organı)
         """
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # M/R buffer'ları VE girdiler bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if self.M.device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            if k_r.device != zorunlu_cihaz:
+                k_r = k_r.to(zorunlu_cihaz)
+            if v_r.device != zorunlu_cihaz:
+                v_r = v_r.to(zorunlu_cihaz)
+            if alpha_pareto is not None and alpha_pareto.device != zorunlu_cihaz:
+                alpha_pareto = alpha_pareto.to(zorunlu_cihaz)
+
         B = k_r.shape[0]
         if self.M.shape[0] != B:
             if self.M.shape[0] < B:
@@ -1897,7 +2130,20 @@ class N8_ChebyshevKatsayiProjeksiyon(nn.Module):
         self.in_dim = getattr(config, 'D', 256)
         self.proj = nn.Linear(self.in_dim, config.d * config.M_plus_1)
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """N8 VRAM Tahmin Formülü: flat_C/C = [B, d, M_plus_1] projeksiyon çıktısı baskındır."""
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
+        return vram_bayt_tahmin_et(B, self.config.d, self.config.M_plus_1)
+
     def forward(self, final_durumu: E9_GuncellenmisGizilDurum) -> E10_KulliManaMatrisi:
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # modül VE girdisi bu cihaza hizalanır.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
+                self.to(zorunlu_cihaz)
+            final_durumu = girdi_cihaza_tasi(final_durumu, zorunlu_cihaz)
+
         x_next = final_durumu.x_next
         B = x_next.shape[0]
         if x_next.dim() == 1:
@@ -1938,6 +2184,12 @@ class N8_B_DinamikUzunlukSecici(nn.Module):
             nn.Linear(flat_dim // 2, 1)
         )
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """N8_B VRAM Tahmin Formülü: mlp_len'in ilk katman çıktısı [B, flat_dim//2] baskındır."""
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
+        flat_dim = self.config.d * self.config.M_plus_1
+        return vram_bayt_tahmin_et(B, flat_dim // 2) + vram_bayt_tahmin_et(B, flat_dim)
+
     def forward(self, kulli_mana: E10_KulliManaMatrisi, cheby_calc: Yardimci_ChebyshevMatrisHesaplayici) -> Tuple[int, torch.Tensor, torch.Tensor, torch.Tensor]:
         C = kulli_mana.C
         B, d, M_p_1 = C.shape
@@ -1971,6 +2223,15 @@ class N9_ChebyshevVandermondeCarpim(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
         self.config = config
+
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        N9 VRAM Tahmin Formülü: X_output = C @ T_matrix = [B, d, N_star]. N_star, N_max'a
+        kadar büyüyebildiğinden (dinamik uzunluk seçici) bu düğüm N_star büyüdükçe hızla pahalılaşır.
+        """
+        B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
+        N_star = girdi_sekli[1] if len(girdi_sekli) > 1 else getattr(self.config, 'N', 1024)
+        return vram_bayt_tahmin_et(B, self.config.d, N_star)
 
     def forward(self, kulli_mana: E10_KulliManaMatrisi, T_matrix: torch.Tensor) -> E11_ParalelGomuluVektorlerMatrisi:
         X_output = torch.matmul(kulli_mana.C, T_matrix)
@@ -2008,12 +2269,18 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
         elif X_input.dim() == 1:
             X_input = X_input.unsqueeze(0).unsqueeze(-1)
 
-        device = X_input.device
-
-        # CUDAGuard Cihaz Hizalaması: Tüm N10 modül parametrelerini (nedensel_suzgec, vocab_head) girdi tensörünün cihazına kilitle!
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # (bkz. anlasmali_vram_guvencesi_al) tüm N10 modül parametreleri (nedensel_suzgec,
+        # vocab_head) VE girdi bu cihaza hizalanır; aksi halde eski davranış korunur.
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        device = zorunlu_cihaz if zorunlu_cihaz is not None else X_input.device
         if next(self.parameters(), None) is not None:
             if next(self.parameters()).device != device:
                 self.to(device)
+        if X_input.device != device:
+            X_input = X_input.to(device)
+        if hasattr(self, 'nedensel_suzgec'):
+            self.nedensel_suzgec._vram_idare_zorunlu_cihaz = device
 
         X_refined = self.nedensel_suzgec(X_input) if hasattr(self, 'nedensel_suzgec') else X_input
         X_t = X_refined.transpose(1, 2)   # [B, N, d]
@@ -2335,6 +2602,22 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
         self.cov_weight = cov_weight
         self.rec_weight = rec_weight
 
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        VICReg VRAM Tahmin Formülü: z = [B, D] veya [B, d_mid, D] olabilir (3D gelirse
+        varyans/kovaryans yolları z.view(-1, D) ile B_eff = B*d_mid'e katlar). Kovaryans
+        yolu B_eff×B_eff Gram hilesiyle D×D kovaryansdan kaçınır; baskın maliyet
+        z_centered [B_eff, D] ve K_gram [B_eff, B_eff]'dir.
+        """
+        if len(girdi_sekli) >= 3:
+            B_eff = girdi_sekli[0] * girdi_sekli[1]
+            D = girdi_sekli[2]
+        elif len(girdi_sekli) == 2:
+            B_eff, D = girdi_sekli[0], girdi_sekli[1]
+        else:
+            B_eff, D = (girdi_sekli[0] if girdi_sekli else 1), 128
+        return vram_bayt_tahmin_et(B_eff, D) + vram_bayt_tahmin_et(B_eff, B_eff)
+
     def varyans_kaybi_vektor(self, z: torch.Tensor) -> torch.Tensor:
         """
         L_vic_var in R^D: Her bir j in {1 ... D} özellik boyutunun hinge varyans hata vektörü.
@@ -2416,6 +2699,17 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
         """
         Toplu Üçlü Bilgi Korunum Vektör Hata Sahalarını ve Günlük Metriklerini Döndürür.
         """
+        # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
+        # tüm girdiler bu cihaza hizalanır (VICReg'in kendi öğrenilebilir parametresi yoktur).
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None:
+            if x.device != zorunlu_cihaz:
+                x = x.to(zorunlu_cihaz)
+            if z.device != zorunlu_cihaz:
+                z = z.to(zorunlu_cihaz)
+            if W is not None and W.device != zorunlu_cihaz:
+                W = W.to(zorunlu_cihaz)
+
         l_var_vec = self.varyans_kaybi_vektor(z)        # [D]
         l_cov_vec = self.kovaryans_kaybi_vektor(z)      # [B]
         l_rec_vec = self.rekonstruksiyon_kaybi_vektor(x, z, W)  # [D]
@@ -2708,6 +3002,17 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
     """
     def __init__(self):
         pass
+
+    def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
+        """
+        Pareto-PCGrad-MGDA VRAM Tahmin Formülü: girdi_sekli = (n_shard, P_toplam).
+        Baskın maliyet düzles_faz_vektorleri + pc_vektorleri: her biri P_toplam (toplam
+        eğitilebilir parametre sayısı) uzunluğunda n_shard adet 1D vektördür — [n_shard, 1]
+        boyutlu G Gram matrisinin kendisi ihmal edilebilir kalır.
+        """
+        n_shard = girdi_sekli[0] if len(girdi_sekli) > 0 else 3
+        P_toplam = girdi_sekli[1] if len(girdi_sekli) > 1 else 0
+        return vram_bayt_tahmin_et(n_shard, P_toplam) * 2  # duzles_faz_vektorleri + pc_vektorleri (clone)
 
     def coz_mgda_pareto_weights(self, G: torch.Tensor, max_iter: int = 30) -> torch.Tensor:
         """
@@ -3036,24 +3341,71 @@ def vram_on_kontrol_ve_nvme_tahliye(gerekli_bayt: int, takas_mgr: Any = None) ->
         if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
             takas_mgr.temizle()
 
+def girdi_cihaza_tasi(x: Any, device: torch.device) -> Any:
+    """
+    [Girdi Cihaz Hizalama Yardımcısı]
+    Bir tensörü, bir E1-E18 veri kontratı dataclass'ını (tensör alanları taşınır) veya
+    bunların liste/tuple'ını, verilen cihaza taşır. Tanınmayan tipler değiştirilmeden döner.
+    """
+    if isinstance(x, torch.Tensor):
+        return x.to(device) if x.device != device else x
+    if is_dataclass(x) and not isinstance(x, type):
+        degisiklikler = {}
+        for alan in fields(x):
+            deger = getattr(x, alan.name)
+            yeni_deger = girdi_cihaza_tasi(deger, device)
+            if yeni_deger is not deger:
+                degisiklikler[alan.name] = yeni_deger
+        return dataclasses.replace(x, **degisiklikler) if degisiklikler else x
+    if isinstance(x, (list, tuple)):
+        tasinmis = [girdi_cihaza_tasi(e, device) for e in x]
+        return type(x)(tasinmis)
+    return x
+
+
 def anlasmali_vram_guvencesi_al(
     modul_nesnesi: Any,
     girdi_tensoru_veya_sekli: Any,
     emniyet_marji_mb: float = 256.0,
     takas_mgr: Any = None
-) -> bool:
+) -> torch.device:
     """
-    [Düğüm Bazlı Açık VRAM Anlaşma Mimarisi / Explicit VRAM Memory Contract]
-    Sürücüye tahmin yaptırılmaz. Düğüm kendi harcayacağı VRAM'i ilan eder.
-    Resmi tahmine göre canlı VRAM denetlenir; yetersizse otomatik erken diske tahliye tetiklenir.
+    [Düğüm Bazlı Açık VRAM Anlaşma Mimarisi / Ön-İcra VRAM/TMP İdarecisi]
 
-    takas_mgr (NvmeTakasYoneticisi) verilirse, gc.collect()/empty_cache() yetersiz kaldığında
-    vram_on_kontrol_ve_nvme_tahliye üzerinden takas_mgr.temizle() da çağrılır — aksi halde bu
-    fonksiyon yalnızca PyTorch'un zaten-boşta duran cache'ini temizler, canlı tensörleri diske
-    tahliye etmez.
+    Sürücüye tahmin yaptırılmaz. Her düğüm, kendi tahmin_et_vram_bayt() formülüyle
+    (parametrik: B, V, E, d, V_size, N, K ... şekillerinden türetilmiş) bu işlemin
+    ne kadar VRAM harcayacağını AÇIKÇA beyan eder. Bu fonksiyon işlem başlamadan HEMEN
+    ÖNCE çağrılır ve kesin/net bir cihaz kararı verir:
+
+      1. Tahmini talep + emniyet payı canlı boş VRAM'e sığıyorsa: düğüm GPU'da tutulur
+         (gerekirse GPU'ya taşınır), torch.device('cuda') döner.
+      2. Sığmıyorsa: önce gc.collect()/empty_cache() (zaten-boşta duran cache), sonra
+         (takas_mgr verilmişse) vram_on_kontrol_ve_nvme_tahliye ile GERÇEK NVMe tahliyesi
+         (diğer düğümlerin halihazırda VRAM'de duran ama şu an kullanılmayan tensörleri
+         diske sürülür) denenir; her adımdan sonra boş VRAM yeniden ölçülür.
+      3. Bütün bu tedbirlere rağmen taşma KESİNSE: düğümün kendisi CPU'ya taşınır
+         (parametreleri varsa .to('cpu')) ve torch.device('cpu') döner — bu adım için
+         işlem VRAM'e hiç girmeden CPU/RAM (ve OS swap'ı üzerinden fiilen /tmp'e sarkan)
+         üzerinden yürütülür. Sonraki her çağrıda VRAM yeniden ölçülür; diğer düğümler
+         belleklerini boşalttıkça (VRAM'e sığar hale geldikçe) düğüm otomatik olarak
+         tekrar GPU'ya taşınır — kalıcı bir CPU sürgünü değil, adım-adım yeniden
+         değerlendirilen dinamik bir karardır.
+
+    Dönüş değeri her zaman bir torch.device'tır. Çağıran taraf, düğümün girdisini de
+    (girdi_cihaza_tasi ile) bu cihaza taşımalıdır; modern düğümlerin forward() metodu
+    zaten kendi _vram_idare_zorunlu_cihaz özniteliğini okuyup kendi girdisini buna göre
+    hizalar (bkz. N1/N10/Maarif_NedenselSuzgec CUDAGuard blokları).
     """
+    cpu_device = torch.device('cpu')
     if not torch.cuda.is_available():
-        return True
+        if hasattr(modul_nesnesi, 'to'):
+            try:
+                modul_nesnesi._vram_idare_zorunlu_cihaz = cpu_device
+            except Exception:
+                pass
+        return cpu_device
+
+    gpu_device = torch.device('cuda')
 
     # 1. Girdi şekli tespiti
     if hasattr(girdi_tensoru_veya_sekli, 'shape'):
@@ -3063,7 +3415,7 @@ def anlasmali_vram_guvencesi_al(
     else:
         girdi_sekli = (1, 1024)
 
-    # 2. Düğümün resmi VRAM tahmin beyanı
+    # 2. Düğümün resmi VRAM tahmin beyanı (parametrik formül)
     if hasattr(modul_nesnesi, 'tahmin_et_vram_bayt'):
         try:
             resmi_gerekli_bayt = int(modul_nesnesi.tahmin_et_vram_bayt(girdi_sekli))
@@ -3076,16 +3428,16 @@ def anlasmali_vram_guvencesi_al(
     try:
         free_bytes, total_bytes = torch.cuda.mem_get_info()
     except Exception:
-        return True
+        return gpu_device
 
     emniyet_bayt = int(emniyet_marji_mb * 1024 * 1024)
     toplam_ihtiyac = resmi_gerekli_bayt + emniyet_bayt
+    modul_adi = modul_nesnesi.__class__.__name__ if hasattr(modul_nesnesi, '__class__') else str(modul_nesnesi)
+    logger = logging.getLogger("mucit_ai.kontratlar")
 
-    # 4. Kesin Güvence Kontrolü & Tahliye
+    # 4. Kesin Güvence Kontrolü & Kademeli Tahliye
     if toplam_ihtiyac > free_bytes:
-        fark_bayt = toplam_ihtiyac - free_bytes
-        modul_adi = modul_nesnesi.__class__.__name__ if hasattr(modul_nesnesi, '__class__') else str(modul_nesnesi)
-        logging.getLogger("mucit_ai.kontratlar").info(
+        logger.info(
             f"[Açık VRAM Anlaşması] Düğüm '{modul_adi}' {resmi_gerekli_bayt / (1024**2):.2f} MB VRAM talep etti. "
             f"Tahliye başlatılıyor (Boş: {free_bytes / (1024**2):.2f} MB, İhtiyaç: {toplam_ihtiyac / (1024**2):.2f} MB)..."
         )
@@ -3093,13 +3445,46 @@ def anlasmali_vram_guvencesi_al(
         gc.collect()
         torch.cuda.empty_cache()
 
-        # Cache temizliği tek başına yetmiyorsa (canlı, hâlâ referanslı tensörler serbest kalmaz):
-        # gerçek NVMe tahliyesini tetikle.
-        free_bytes_after, _ = torch.cuda.mem_get_info()
-        if toplam_ihtiyac > free_bytes_after:
+        free_bytes, _ = torch.cuda.mem_get_info()
+        if toplam_ihtiyac > free_bytes:
+            # Cache temizliği tek başına yetmiyorsa (canlı, hâlâ referanslı tensörler serbest
+            # kalmaz): gerçek NVMe tahliyesini tetikle ve boş VRAM'i yeniden ölç.
             vram_on_kontrol_ve_nvme_tahliye(toplam_ihtiyac, takas_mgr)
+            try:
+                free_bytes, _ = torch.cuda.mem_get_info()
+            except Exception:
+                free_bytes = 0
 
-    return True
+    # 5. Kesin Karar: taşma hâlâ aşikarsa bu adım için düğümü CPU/TMP'e yönlendir
+    if toplam_ihtiyac > free_bytes:
+        logger.warning(
+            f"[VRAM/TMP İdarecisi] '{modul_adi}' için {resmi_gerekli_bayt / (1024**2):.2f} MB talebi "
+            f"tüm tahliye tedbirlerine rağmen karşılanamıyor (Boş: {free_bytes / (1024**2):.2f} MB). "
+            f"Bu adım CPU/TMP üzerinden yürütülecek."
+        )
+        if hasattr(modul_nesnesi, 'to'):
+            try:
+                modul_nesnesi.to(cpu_device)
+            except Exception:
+                pass
+        if hasattr(modul_nesnesi, '__dict__') or hasattr(modul_nesnesi, 'to'):
+            try:
+                modul_nesnesi._vram_idare_zorunlu_cihaz = cpu_device
+            except Exception:
+                pass
+        return cpu_device
+
+    if hasattr(modul_nesnesi, 'to'):
+        try:
+            modul_nesnesi.to(gpu_device)
+        except Exception:
+            pass
+    if hasattr(modul_nesnesi, 'to'):
+        try:
+            modul_nesnesi._vram_idare_zorunlu_cihaz = gpu_device
+        except Exception:
+            pass
+    return gpu_device
 
 AnlasmaliVramGuvencesiAl = anlasmali_vram_guvencesi_al
 

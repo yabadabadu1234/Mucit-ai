@@ -563,6 +563,7 @@ def _tekil_egitim_adimi_icra(
     e4_lif = n3_lif.forward(e3_sinir, x_initial)
     vram_denetci.yokla_ve_raporla("N1_N3_TopolojiIskelesi", adim_no=current_step)
     
+    AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir.D1, takas_mgr=takas_mgr)
     D0_op, Delta_0_op = laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
     vram_denetci.yokla_ve_raporla("N11_LifLaplasyeniInsa", adim_no=current_step)
     
@@ -606,6 +607,7 @@ def _tekil_egitim_adimi_icra(
     # Güvenlik: config.R < 1 olursa döngü hiç çalışmaz; mevcut_durum başlangıç durumuna sabitlenir
     mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
     e3_sinir_sabit = raw_n2_topox.forward(e2_byte_grouped, x_initial=x_start_grouped, mode='train')
+    AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir_sabit.D1, takas_mgr=takas_mgr)
     D0_op_sabit, Delta_0_op_sabit = laplasyen_insa.insa_et(e3_sinir_sabit, e4_lif.phi_matrisleri)
     if hasattr(n6_aktor, 'update_operators'):
         n6_aktor.update_operators(D0_op_sabit, Delta_0_op_sabit)
@@ -617,7 +619,9 @@ def _tekil_egitim_adimi_icra(
         e5_a = E5_A_MevcutGizilDurum(x_r=x_current)
         e5_b = E5_B_BellekGonderimi(M=M_current)
         
+        AnlasmaliVramGuvencesiAl(n4_sorgu, e5_a.x_r, takas_mgr=takas_mgr)
         e6_sorgu = n4_sorgu.forward(e5_a, D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b)
+        AnlasmaliVramGuvencesiAl(n5_cevap, e6_sorgu.q_r, takas_mgr=takas_mgr)
         e7_lokal = n5_cevap.forward(e6_sorgu, e5_b)
         
         sorgu_q_list.append(e6_sorgu.q_r)
@@ -627,7 +631,9 @@ def _tekil_egitim_adimi_icra(
             e5_a_st = E5_A_MevcutGizilDurum(x_r=x_c)
             e6_sorgu_st = E6_GizilSorgu(q_r=q_c)
             e7_lokal_st = E7_LokalBilgi(a_r=a_c)
+            AnlasmaliVramGuvencesiAl(n6_aktor, x_c, takas_mgr=takas_mgr)
             e8_sentetik_st = n6_aktor.forward(e5_a_st, e6_sorgu_st, e7_lokal_st)
+            AnlasmaliVramGuvencesiAl(n7_cozucu, e8_sentetik_st.synthetic_state, takas_mgr=takas_mgr)
             e9_guncel_st = n7_cozucu.forward(e8_sentetik_st, Delta_0_op_sabit, e5_a_st)
             return e9_guncel_st.x_next, e8_sentetik_st.synthetic_state
 
@@ -645,8 +651,10 @@ def _tekil_egitim_adimi_icra(
         if isinstance(meclis_bellek, SMW_SifirParazit_BellekYoneticisi):
             k_r_key = e6_sorgu.q_r[:, :getattr(config, 'K', 16)] if e6_sorgu.q_r.shape[1] >= getattr(config, 'K', 16) else F.pad(e6_sorgu.q_r, (0, getattr(config, 'K', 16) - e6_sorgu.q_r.shape[1]))
             v_r_val = e7_lokal.a_r
+            AnlasmaliVramGuvencesiAl(meclis_bellek, k_r_key, takas_mgr=takas_mgr)
             e5_b_yeni = meclis_bellek.write(k_r=k_r_key, v_r=v_r_val)
         else:
+            AnlasmaliVramGuvencesiAl(bellek_yazici, e9_guncel.x_next, takas_mgr=takas_mgr)
             e5_b_yeni = bellek_yazici.yaz(e9_guncel.x_next, e6_sorgu, e5_b, e7_lokal)
         
         x_current = e9_guncel.x_next
@@ -674,13 +682,15 @@ def _tekil_egitim_adimi_icra(
     T_matrix = cheby_calc.hesapla(N=N_star)
     hedef_clamped = torch.clamp(hedef_grouped[:, :N_star], min=0, max=getattr(config, 'V_size', 32000) - 1)
     
+    AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_kulli.C.shape[0], N_star), takas_mgr=takas_mgr)
     e11_gomulu = n9_vandermonde.forward(e10_kulli, T_matrix)
     AnlasmaliVramGuvencesiAl(n10_sozluk, e11_gomulu.X_output, takas_mgr=takas_mgr)
     e12_olasilik = n10_sozluk.forward(e11_gomulu, hedefler=hedef_clamped)
-    
+
     with torch.no_grad():
         x_start_detached = E9_GuncellenmisGizilDurum(x_next=x_start_grouped.detach())
         e10_cevapsiz = n8_chebyshev.forward(x_start_detached)
+        AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_cevapsiz.C.shape[0], N_star), takas_mgr=takas_mgr)
         e11_cevapsiz = n9_vandermonde.forward(e10_cevapsiz, T_matrix)
         e12_olasilik_cevapsiz = n10_sozluk.forward(e11_cevapsiz, hedefler=hedef_clamped)
 
@@ -703,6 +713,7 @@ def _tekil_egitim_adimi_icra(
     kayip_length = (L_arc_tensor - 0.5 * N_ste_tensor)**2 + 0.05 * (N_ste_tensor - n_target)**2
     kayip_spektral_vec = (kayip_length + 0.01 * torch.abs(delta_n_tensor).mean()).unsqueeze(0)
     
+    AnlasmaliVramGuvencesiAl(vicreg_kriteri, e11_gomulu.X_output, takas_mgr=takas_mgr)
     (l_var_vec, l_cov_vec, l_rec_vec), metrikler_vicreg = vicreg_kriteri(x=e9_guncel_detached.x_next, z=e11_gomulu.X_output)
     
     l_n10_vec = torch.cat([kayip_grpo_vec.view(-1), l_var_vec.view(-1), l_cov_vec.view(-1), l_rec_vec.view(-1)])
