@@ -638,7 +638,12 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
             if key_end in phi_dict:
                 D0[e * d_e : (e + 1) * d_e, (e + 1) * d_v : (e + 2) * d_v] = 1.0 * phi_dict[key_end]
 
-        Delta_0 = torch.matmul(D0.T, D0)    # [D, D]
+        # [D, D] kare Laplasyen matrisi — D = V_num * d_v; V_num token uzunluğuna göre
+        # dinamik büyüdüğünden (bkz. N1'de V_nodes = l_tokens) bu çıktı taşabilir.
+        # Taşma yoksa (yaygın durum) tek cihazda normal hesaplanır; taşarsa sütunlar
+        # taşma-bazlı (oranlama YOK, sığdığı kadarı + taşanı bir sonraki cihaza devret)
+        # olarak görünür GPU'lara dağıtılır — bkz. tasma_bazli_capraz_gpu_matmul_sardla.
+        Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T, D0)    # [D, D]
         return D0, Delta_0
 
     def tasintilar_cihaza(self, D0: torch.Tensor, Delta_0: torch.Tensor, target_device: torch.device) -> Tuple[torch.Tensor, torch.Tensor]:
@@ -1394,7 +1399,7 @@ class N6_KohomolojikAktor(nn.Module):
         if Delta0_operator is not None:
             self.register_buffer("Delta0", Delta0_operator, persistent=False)
         elif D0_operator is not None:
-            self.register_buffer("Delta0", torch.matmul(D0_operator.T, D0_operator), persistent=False)
+            self.register_buffer("Delta0", tasma_bazli_capraz_gpu_matmul_sardla(D0_operator.T, D0_operator), persistent=False)
         else:
             self.Delta0 = None
 
@@ -1427,7 +1432,7 @@ class N6_KohomolojikAktor(nn.Module):
         if Delta0_op is not None:
             self.register_buffer("Delta0", Delta0_op, persistent=False)
         else:
-            self.register_buffer("Delta0", torch.matmul(D0_op.T, D0_op), persistent=False)
+            self.register_buffer("Delta0", tasma_bazli_capraz_gpu_matmul_sardla(D0_op.T, D0_op), persistent=False)
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
@@ -3380,6 +3385,111 @@ def girdi_cihaza_tasi(x: Any, device: torch.device) -> Any:
         tasinmis = [girdi_cihaza_tasi(e, device) for e in x]
         return type(x)(tasinmis)
     return x
+
+
+def tasma_bazli_capraz_gpu_matmul_sardla(
+    A: torch.Tensor,
+    B: torch.Tensor,
+    emniyet_marji_mb: float = 256.0,
+) -> torch.Tensor:
+    """
+    [Taşma-Bazlı Çapraz-GPU Matris Çarpımı / Overflow-Triggered Cross-GPU MatMul]
+
+    A @ B çarpımını hesaplar. Kapasite ORANI hesaplanmaz (20/10 gibi bir oranlama
+    YOKTUR) — yalnızca TEK bir soru sorulur: "Tam çıktı ([m,n]) A'nın bulunduğu (home)
+    cihaza sığıyor mu?"
+
+      - Sığıyorsa (taşma YOK): hiçbir dağıtım yapılmaz, normal tek-cihaz torch.matmul
+        çalışır. Bu, çok GPU'lu bir ortamda dahi varsayılan/yaygın durumdur.
+      - Sığmıyorsa (taşma VAR): B'nin sütunları (n boyutu) home cihazdan başlayarak
+        sırayla gezilir; her cihaza "o cihaza sığdığı kadarı" yazılır, TAŞAN kısım
+        bir sonraki cihaza devredilir. Bu devir, tüm sütunlar yerleşene veya tüm
+        görünür cihazlar tükenene kadar sürer.
+
+    Tek Python sürecinde çalışır — ayrı worker süreci, IPC kuyruğu veya NCCL GEREKMEZ;
+    PyTorch autograd, aynı süreç içinde farklı cuda:N cihazları arasındaki .to() kopyalarını
+    zaten türevlenebilir şekilde destekler.
+
+    Kullanım örneği (Riyazi_LifLaplasyeniBlokInsaEdici.insa_et):
+        Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T, D0)  # [D, D], D taşarsa böl
+    """
+    if not torch.cuda.is_available() or not A.is_cuda:
+        return torch.matmul(A, B)
+
+    home_device = A.device
+    device_count = torch.cuda.device_count()
+    emniyet_bayt = int(emniyet_marji_mb * 1024 * 1024)
+    dtype_bayt = A.element_size()
+    m = A.shape[0]
+    n = B.shape[1]
+    logger = logging.getLogger("mucit_ai.kontratlar")
+
+    # 1. TAŞMA TESTİ: Tam çıktı home cihaza sığıyor mu?
+    tam_cikti_bayt = m * n * dtype_bayt
+    try:
+        free_bayt, _ = torch.cuda.mem_get_info(home_device.index)
+    except Exception:
+        return torch.matmul(A, B)
+
+    if tam_cikti_bayt + emniyet_bayt <= free_bayt:
+        # Taşma YOK — dağıtım yapılmaz.
+        return torch.matmul(A, B)
+
+    logger.warning(
+        f"[TaşmaBazlıÇaprazGpuMatmul] [{m}x{n}] çıktı ({tam_cikti_bayt/(1024**2):.1f} MB) "
+        f"home cihaza ({home_device}) sığmıyor (boş: {free_bayt/(1024**2):.1f} MB). "
+        f"Sütunlar çoklu-GPU'ya taşma-bazlı dağıtılıyor..."
+    )
+
+    # 2. TAŞMA VAR — sütunları (n) home cihazdan başlayarak taşma-bazlı dağıt
+    A_bayt = A.numel() * dtype_bayt
+    parcalar: List[Tuple[int, torch.Tensor]] = []
+    kalan_n = n
+    imlec = 0
+    baslangic = home_device.index
+
+    for ofset in range(device_count):
+        if kalan_n <= 0:
+            break
+        gpu_id = (baslangic + ofset) % device_count
+        try:
+            free_bayt_i, _ = torch.cuda.mem_get_info(gpu_id)
+        except Exception:
+            continue
+
+        kullanilabilir = free_bayt_i - emniyet_bayt
+        if gpu_id != home_device.index:
+            kullanilabilir -= A_bayt  # A'nın (sabit operand) bu cihaza kopyalanma maliyeti
+
+        if kullanilabilir <= 0:
+            continue  # bu cihazda hiç yer yok — sıradaki cihaza taş
+
+        birim_bayt = m * dtype_bayt  # bir çıktı sütununun bayt maliyeti
+        sigacak_n = min(kalan_n, int(kullanilabilir // birim_bayt)) if birim_bayt > 0 else kalan_n
+        if sigacak_n <= 0:
+            continue
+
+        hedef_cihaz = torch.device(f'cuda:{gpu_id}')
+        A_burada = A if gpu_id == home_device.index else A.to(hedef_cihaz)
+        B_dilim = B[:, imlec:imlec + sigacak_n]
+        B_dilim_burada = B_dilim if B_dilim.device == hedef_cihaz else B_dilim.to(hedef_cihaz)
+
+        cikti_dilim = torch.matmul(A_burada, B_dilim_burada)
+        parcalar.append((imlec, cikti_dilim))
+
+        imlec += sigacak_n
+        kalan_n -= sigacak_n
+
+    if kalan_n > 0:
+        raise RuntimeError(
+            f"[TaşmaBazlıÇaprazGpuMatmul] {kalan_n}/{n} sütun hiçbir GPU'ya sığmadı "
+            f"(tüm görünür {device_count} cihaz taştı)."
+        )
+
+    # 3. TOPLA: Tüm parçaları home cihaza geri taşıyıp sıraya göre birleştir
+    parcalar.sort(key=lambda p: p[0])
+    cikti_parcalari = [p[1].to(home_device) if p[1].device != home_device else p[1] for p in parcalar]
+    return torch.cat(cikti_parcalari, dim=1)
 
 
 def anlasmali_vram_guvencesi_al(
