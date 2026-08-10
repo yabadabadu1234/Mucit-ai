@@ -2440,7 +2440,20 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 h_tensor = hedefler
 
             if h_tensor.shape[0] != B:
-                h_tensor = h_tensor.expand(B, -1)
+                # KAPSAMLI DENETİM (madde 9): .expand() yalnızca kaynak boyutu 1 olduğunda
+                # çalışır. h_tensor'ün batch boyutu 1 DEĞİL ve B'ye de eşit değilse
+                # (ör. çağıran orijinal, tekrarlanmamış hedefler tensörünü B*GRPO_G'ye
+                # tekrarlanmış bir X_input ile birlikte geçirirse — main_egitim_dongusu.py
+                # ve BiliselKanvasModeli'nin GRPO_G/ceil-division tekrarlama deseniyle
+                # tutarlı bir senaryo) .expand(B, -1) "must match the existing size" ile
+                # çöker. Kodun kendi başka yerlerinde (BiliselKanvasModeli.forward) zaten
+                # kullanılan tavan-bölmeli repeat desenine geçirildi — 1 kaynaklı durumda
+                # da doğru ve ucuz (view, kopyasız) çalışır.
+                if h_tensor.shape[0] == 1:
+                    h_tensor = h_tensor.expand(B, -1)
+                else:
+                    tekrar = -(-B // h_tensor.shape[0])  # tavan bölme
+                    h_tensor = h_tensor.repeat(tekrar, 1)[:B]
 
             cur_N = min(N, h_tensor.shape[1])
             h_tensor = torch.clamp(h_tensor[:, :cur_N], min=0, max=self.V_size - 1).long()
