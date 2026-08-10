@@ -662,11 +662,16 @@ def _tekil_egitim_adimi_icra(
     vram_denetci.yokla_ve_raporla("N1_N3_TopolojiIskelesi", adim_no=current_step)
     
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir.D1, takas_mgr=takas_mgr)
-    D0_op, Delta_0_op = laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
+    # NOT (matrissiz Laplasyen): insa_et artık VARSAYILAN OLARAK [D,D] boyutunda yoğun
+    # Delta_0'ı KURMUYOR (hesapla_yogun_delta0=False) — bu tek matris VRAM baskısının
+    # başlıca kaynağıydı. Delta_0'a ihtiyaç duyan tüm tüketiciler (n7_cozucu) artık D0
+    # üzerinden laplasyen_ile_carp ile matematiksel olarak BİREBİR eşdeğer, matrissiz
+    # çalışıyor.
+    D0_op, _ = laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
     vram_denetci.yokla_ve_raporla("N11_LifLaplasyeniInsa", adim_no=current_step)
-    
+
     d_vec2 = n7_cozucu.hesapla_uyumsuzluk_vektoru(x_initial, D0_op)
-    e_vec2 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(x_initial, Delta_0_op)
+    e_vec2 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(x_initial, D0_op)
 
     # Kohomolojik uyumsuzluk (d_vec2) ve Dirichlet enerjisi (e_vec2) FİZİKSEL OLARAK
     # farklı büyüklüklerdir — tek bir torch.cat + tek VJP'de eritilmezler, her biri
@@ -728,9 +733,11 @@ def _tekil_egitim_adimi_icra(
     mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
     e3_sinir_sabit = raw_n2_topox.forward(e2_byte_grouped, x_initial=x_start_grouped, mode='train')
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir_sabit.D1, takas_mgr=takas_mgr)
-    D0_op_sabit, Delta_0_op_sabit = laplasyen_insa.insa_et(e3_sinir_sabit, e4_lif.phi_matrisleri)
+    # NOT (matrissiz Laplasyen): bkz. yukarıdaki D0_op açıklaması — dense Delta_0 artık
+    # hiç kurulmuyor, n6_aktor/n7_cozucu doğrudan D0_op_sabit ile matrissiz çalışıyor.
+    D0_op_sabit, _ = laplasyen_insa.insa_et(e3_sinir_sabit, e4_lif.phi_matrisleri)
     if hasattr(n6_aktor, 'update_operators'):
-        n6_aktor.update_operators(D0_op_sabit, Delta_0_op_sabit)
+        n6_aktor.update_operators(D0_op_sabit)
 
     sorgu_q_list = []
     cevap_a_list = []
@@ -764,7 +771,7 @@ def _tekil_egitim_adimi_icra(
             )
             AnlasmaliVramGuvencesiAl(n7_cozucu, e8_sentetik_st.synthetic_state, takas_mgr=takas_mgr)
             e9_guncel_st = AcilDurumOomYakalayiciVeKurtarici(
-                n7_cozucu.forward, e8_sentetik_st, Delta_0_op_sabit, e5_a_st, modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+                n7_cozucu.forward, e8_sentetik_st, D0_op_sabit, e5_a_st, modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
             )
             return e9_guncel_st.x_next, e8_sentetik_st.synthetic_state
 
@@ -797,7 +804,7 @@ def _tekil_egitim_adimi_icra(
         mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
 
     d_vec3 = n7_cozucu.hesapla_uyumsuzluk_vektoru(mevcut_durum.x_r, D0_op_sabit)
-    e_vec3 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(mevcut_durum.x_r, Delta_0_op_sabit)
+    e_vec3 = n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(mevcut_durum.x_r, D0_op_sabit)
 
     # Aynı gerekçeyle (bkz. Faz 2) d_vec3 ve e_vec3 ayrı VJP'lerdir. KARDEŞ-VJP: ikisi de
     # mevcut_durum.x_r/D0_op_sabit/Delta_0_op_sabit üzerinden AYNI üst-grafı (R-döngüsü,
@@ -1054,6 +1061,16 @@ def _tekil_egitim_adimi_icra(
 
     if _takas_cm is not None:
         _takas_cm.__exit__(None, None, None)
+        # ADIMLAR ARASI SIZINTI DÜZELTMESİ: saved_tensors_hooks kapsamı (_takas_cm) tam
+        # burada kapanıyor — yani bu adımda offload edilmiş ama backward'ı hiç çalışmamış
+        # (retain_graph=False ile grafı erken serbest bırakılmış) her tensör artık KESİN
+        # OLARAK yetimdir; bir daha asla geri çağrılmayacaktır. GuvenliVramVeTmpSupurgesi
+        # bu tür kayıtları 120 sn'lik zaman aşımına kadar bekletiyordu (bkz. o sınıfın
+        # docstring'i — ref_count hiç düşmediği için önceden HİÇ süpürülmüyordu); burada
+        # adım sonunda AÇIKÇA temizleyerek /tmp/kulli_scratchpad'in ve kayıt defterinin
+        # adım adım büyümesini (sızıntıyı) önlüyoruz.
+        if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
+            takas_mgr.temizle(agresif=True)
 
     # CPYTHON STACK FRAME SONU: Fonksiyon return ettiği an tüm yerel bellek değişkenleri yok edilir!
     return kayip_val, L_arc_val, dirichlet_energy, d_discrepancy

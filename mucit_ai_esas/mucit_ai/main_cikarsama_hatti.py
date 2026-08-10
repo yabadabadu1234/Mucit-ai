@@ -274,20 +274,24 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
         e4_lif = eval_model.n3_lif(e3_sinir, x_initial)
         logger.debug(f"[N3 Sınırlama Matrisi Atama] E4 Lif Matrisleri Sayısı: {len(e4_lif.phi_matrisleri)}")
 
-        # [N_LA] Lif Laplasyeni İnşası -> E4_B (D0, Delta0)
-        D0_op, Delta_0_op = eval_model.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
-        logger.debug(f"[N_LA Lif Laplasyeni İnşası] E4_B D0 Coboundary: {D0_op.shape} | Delta_0 Lif Laplasyeni: {Delta_0_op.shape}")
+        # [N_LA] Lif Laplasyeni İnşası -> E4_B (D0)
+        # NOT (matrissiz Laplasyen): insa_et artık VARSAYILAN OLARAK [D,D] boyutunda yoğun
+        # Delta_0'ı kurmuyor (VRAM baskısının başlıca kaynağıydı) — n6_aktor/n7_cozucu
+        # doğrudan D0 üzerinden laplasyen_ile_carp ile matematiksel olarak BİREBİR eşdeğer,
+        # matrissiz çalışıyor.
+        D0_op, _ = eval_model.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
+        logger.debug(f"[N_LA Lif Laplasyeni İnşası] E4_B D0 Coboundary: {D0_op.shape}")
 
         # Döngüsel Gizil Akıl Yürütme Çemberi (r = 1 ... R)
         x_current = x_initial.clone()
         M_current = eval_model.bellek_yonetici.get_memory(active_batch_size=1).M
-        eval_model.n6_aktor.update_operators(D0_op, Delta_0_op)
+        eval_model.n6_aktor.update_operators(D0_op)
 
         for r in range(1, config.R + 1):
             # Çıkarım Safhası: Tam Eşsınır (Exact Coboundary) Keyfiyet Projeksiyonlu Dinamik Topoloji
             e3_sinir = eval_model.n2_topox(e2_byte, x_initial=x_current, mode='eval', D0_base=D0_op)
-            D0_op, Delta_0_op = eval_model.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
-            eval_model.n6_aktor.update_operators(D0_op, Delta_0_op)
+            D0_op, _ = eval_model.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
+            eval_model.n6_aktor.update_operators(D0_op)
             # [E5_A] Mevcut Gizil Durum & [E5_B] Mevcut Bellek Gönderimi
             e5_a = E5_A_MevcutGizilDurum(x_r=x_current)
             e5_b = E5_B_BellekGonderimi(M=M_current)
@@ -305,7 +309,7 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
             logger.debug(f"  ├─ [N6 Kohomolojik Aktüatör & Sheaf-KAN] (r={r}) Sentetik Hüküm h* Şekli: {e8_sentetik.synthetic_state.shape}")
             
             # [N7] Lif Laplasyeni Çözücü (Topolojik Lif Taşınım-Difüzyon PDE & Sheaf Matrix Green's Kernel) -> E9_A (x^(r+1))
-            e9_guncel = eval_model.n7_cozucu(e8_sentetik, Delta_0_op, e5_a)
+            e9_guncel = eval_model.n7_cozucu(e8_sentetik, D0_op, e5_a)
             logger.debug(f"  ├─ [N7 Lif Laplasyeni Çözücü & Green's Kernel] (r={r}) Güncellenmiş Durum x^({r}) Şekli: {e9_guncel.x_next.shape}")
             
             # [N12 / N_Yazici] SMW Biyortogonal Sıfır Parazitli Bellek Mühürleme -> E5_B_YENI
@@ -322,7 +326,7 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
             M_current = e5_b_yeni.M.detach()
 
             d_disc_r = eval_model.n7_cozucu.hesapla_uyumsuzluk(x_current, D0_op)
-            dirichlet_r = eval_model.n7_cozucu.hesapla_dirichlet_enerjisi(x_current, Delta_0_op)
+            dirichlet_r = eval_model.n7_cozucu.hesapla_dirichlet_enerjisi(x_current, D0_op)
             logger.debug(f"  └─ (Döngü r={r}/{config.R}) Uyumsuzluk: {d_disc_r:.6f} | Dirichlet Enerjisi E(x): {dirichlet_r:.6f}")
 
         logger.debug(f"[DÖNGÜ SONU (r={config.R})] Nihai Gizil Durum x^(R) Şekli: {x_current.shape}")
@@ -346,7 +350,7 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
 
         # Topolojik Doğrulama Metrikleri (R^V ve R^E Vektörel Metrik Alanlarından Türetilmiştir)
         d_vec = eval_model.n7_cozucu.hesapla_uyumsuzluk_vektoru(x_current, D0_op)
-        e_vec = eval_model.n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(x_current, Delta_0_op)
+        e_vec = eval_model.n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(x_current, D0_op)
         d_discrepancy = float(d_vec.mean().detach().item())
         dirichlet_energy = float(e_vec.mean().detach().item())
         logger.info(f"[Topolojik Metrikler] Vektörel Dirichlet Enerjisi E(x) in R^{len(e_vec)}: {dirichlet_energy:.6f} | Kohomolojik Uyumsuzluk in R^{len(d_vec)}: {d_discrepancy:.6f}")

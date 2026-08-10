@@ -345,25 +345,58 @@ class GuvenliVramVeTmpSupurgesi:
     Canlı referanslı (ref_count > 0) hiçbir VRAM veya /tmp takas kütüğüne DOKUNMAZ.
     Sadece yetim (ref_count == 0 veya haritada kaydı bulunmayan) kütükleri ve
     ve sahipsiz bellek alanlarını süpürerek dangling pointer felaketini imha eder.
+
+    NOT (ADIMLAR ARASI SIZINTI DÜZELTMESİ): `ref_count`, kayıt ilk oluşturulduğunda
+    1'e ayarlanır (bkz. AutogradNvmeOffloadHook.pack_hook_diske_tahliye) ve YALNIZCA
+    `unpack_hook_diskten_geri_yukle` gerçekten çağrılırsa (yani o tensörün backward'ı
+    fiilen çalışırsa) dosyasıyla birlikte silinir. Ama `KureselAdresKayitDefteri.ref_azalt`
+    /`ref_arttir` HİÇBİR YERDE ÇAĞRILMIYOR — yani `ref_count` hiçbir zaman 1'in altına
+    inmiyor. Bunun sonucu: retain_graph=False ile grafı erken serbest bırakılan (backward'ı
+    hiç çalışmayan) HER offload edilmiş tensör için `ref_count > 0` sonsuza dek doğru kalır,
+    aşağıdaki süpürme HİÇBİR ZAMAN çalışmaz — "Temizlik tamamlandi" logu atılır ama
+    /tmp/kulli_scratchpad'deki dosyalar ve kayıt defteri girdileri adım adım BİRİKİR (bkz.
+    "Toplam Tahliye: 18461, Geri Cagirma: 275" gibi loglar — binlerce kayıt hiç silinmiyor).
+    Gerçek bir referans-sayımı (autograd graph düğümü serbest bırakıldığında tetiklenen)
+    olmadan bunu düzeltmenin güvenli yolu ZAMAN AŞIMI bazlı süpürmedir: `son_erisim_zamani`
+    üzerinden yeterince eski (varsayılan 120 sn — bir eğitim adımının makul üst sınırının
+    kat kat üzerinde) MEM_STATE_SWAPPED_NVME kayıtları, ref_count'a BAKILMAKSIZIN ölü
+    kabul edilip silinir (o adımın ileri/geri beslemesi çoktan bitmiş, backward'ı hiç
+    çalışmamışsa artık asla çalışmayacaktır).
     """
+    ESKIME_ESIGI_SN: float = 120.0
+
     @staticmethod
-    def supur(swap_dir: str = "/tmp/kulli_scratchpad") -> None:
+    def supur(swap_dir: str = "/tmp/kulli_scratchpad", eskime_esigi_sn: Optional[float] = None) -> None:
+        """
+        eskime_esigi_sn=0.0 verilirse (ör. bir eğitim adımının saved_tensors_hooks kapsamı
+        tam olarak kapandığı an çağrılırsa) yaş kontrolü atlanır — o kapsamda kaydedilmiş
+        ve backward'ı hiç çalışmamış her tensör artık KESİN yetimdir (bu adımın grafı
+        tamamen tüketildi, bir sonraki adım sıfırdan yeni bir graf kurar), anında güvenle
+        süpürülür. Varsayılan (None) sınıf düzeyindeki muhafazakâr eşiği kullanır.
+        """
+        esik = GuvenliVramVeTmpSupurgesi.ESKIME_ESIGI_SN if eskime_esigi_sn is None else eskime_esigi_sn
+        simdi = time.time()
         with kuresel_adres_kayit_defteri.lock:
             silinecek_adresler = []
             for sanal_addr, kayit in kuresel_adres_kayit_defteri.kayitlar.items():
-                # AĞIR SÖZLEŞME ŞARTI: Canlı veri koruma altındadır!
-                if kayit.ref_count > 0 or kayit.durum == MEM_STATE_ACTIVE_VRAM:
+                if kayit.durum == MEM_STATE_ACTIVE_VRAM:
                     continue
 
-                if kayit.durum == MEM_STATE_SWAPPED_NVME and kayit.ref_count == 0:
+                yasi_sn = simdi - kayit.son_erisim_zamani
+                zaman_asimina_ugramis = (
+                    kayit.durum == MEM_STATE_SWAPPED_NVME
+                    and yasi_sn >= esik
+                )
+
+                if not (kayit.ref_count <= 0 or kayit.durum == MEM_STATE_ORPHANED or zaman_asimina_ugramis):
+                    continue
+
+                if kayit.durum in (MEM_STATE_SWAPPED_NVME, MEM_STATE_ORPHANED):
                     if kayit.dosya_yolu and os.path.exists(kayit.dosya_yolu):
                         try:
                             os.remove(kayit.dosya_yolu)
                         except Exception:
                             pass
-                    silinecek_adresler.append(sanal_addr)
-
-                elif kayit.durum == MEM_STATE_ORPHANED:
                     silinecek_adresler.append(sanal_addr)
 
             for addr in silinecek_adresler:
@@ -433,7 +466,13 @@ class NvmeTakasYoneticisi:
             self.unpack_hook_diskten_geri_cagır
         )
 
-    def temizle(self) -> None:
-        GuvenliVramVeTmpSupurgesi.supur(swap_dir=self.swap_dir)
+    def temizle(self, agresif: bool = False) -> None:
+        """
+        agresif=True: yaş eşiğini 0'a indirir. Yalnızca bir eğitim adımının
+        saved_tensors_hooks kapsamı KESİN OLARAK kapandığı noktadan (bkz.
+        main_egitim_dongusu.py: _takas_cm.__exit__ sonrası) çağrılmalıdır — o
+        andan itibaren o adıma ait her kayıt zaten kesin yetimdir.
+        """
+        GuvenliVramVeTmpSupurgesi.supur(swap_dir=self.swap_dir, eskime_esigi_sn=(0.0 if agresif else None))
         logger.info(f"[NvmeTakasYoneticisi] Temizlik tamamlandi. Toplam Tahliye: {self.tahliye_sayaci}, Geri Cagirma: {self.geri_cagirma_sayaci}")
 

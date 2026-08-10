@@ -599,6 +599,40 @@ class Yardimci_ChebyshevMatrisHesaplayici:
         return L_arc, N_teorik
 
 
+def laplasyen_ile_carp(x: torch.Tensor, D0: torch.Tensor) -> torch.Tensor:
+    """
+    [Matrissiz Laplasyen Matris-Vektör Çarpımı]
+
+    x @ Delta_0^T'yi, Delta_0 = D0^T @ D0'ı HİÇ yoğun ([D,D]) kurmadan hesaplar.
+    Delta_0 simetrik olduğundan Delta_0^T = D0^T @ D0, dolayısıyla:
+
+        x @ Delta_0^T = (x @ D0^T) @ D0
+
+    Bu YAKLAŞIKLIK DEĞİL, BİREBİR matematiksel eşdeğerliktir — sadece O(D^2) yerine
+    O(D) ara bellek kullanır (D0 zaten seyrek/blok-köşegen yapıda [E*d_e, D]).
+    """
+    return torch.matmul(torch.matmul(x, D0.transpose(-2, -1)), D0)
+
+
+def laplasyen_lambda_max_guc_yontemi(D0: torch.Tensor, iterasyon: int = 8) -> torch.Tensor:
+    """
+    Delta_0 = D0^T @ D0'ın en büyük özdeğerini (spektral normalizasyon için), Delta_0'ı
+    hiç kurmadan güç yöntemi (power iteration) ile tahmin eder. Bu YAKLAŞIK bir tahmindir
+    (tam satır-mutlak-toplamı yerine), ama aynı dosyada zaten başka bir yerde
+    (_chebyshev_bessel_matrix_exp_vector) kullanılan yönteme birebir eştir ve az sayıda
+    yinelemeyle (varsayılan 8) hızla yakınsar.
+    """
+    D = D0.shape[-1]
+    v = torch.randn(1, D, device=D0.device, dtype=D0.dtype)
+    v = v / (torch.norm(v) + 1e-8)
+    with torch.no_grad():
+        for _ in range(iterasyon):
+            v = laplasyen_ile_carp(v, D0)
+            v = v / (torch.norm(v) + 1e-8)
+        lambda_max = torch.norm(laplasyen_ile_carp(v, D0))
+    return lambda_max
+
+
 class Riyazi_LifLaplasyeniBlokInsaEdici:
     """
     Sınırlama matrisleri (phi) ve D1 sınır operatöründen türevlenebilir
@@ -609,19 +643,24 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
-        N11 VRAM Tahmin Formülü: D0 = [E*d_e, V*d_v] blok matrisi ve
-        Delta_0 = D0^T @ D0 = [V*d_v, V*d_v] kare Laplasyen matrisi baskındır.
+        N11 VRAM Tahmin Formülü: artık yalnızca D0 = [E*d_e, V*d_v] blok matrisi baskındır.
+        Delta_0 = D0^T @ D0 = [V*d_v, V*d_v] kare Laplasyen matrisi VARSAYILAN OLARAK
+        kurulmuyor (bkz. insa_et: hesapla_yogun_delta0=False) — tüketiciler artık
+        laplasyen_ile_carp(x, D0) ile matrissiz çalışıyor, bu yüzden O(D^2) terimi
+        tahminden düşürüldü.
         """
         V = getattr(self.config, 'V_nodes', 8)
         E_num = max(V - 1, 1)
         d_e, d_v = self.config.d_e, self.config.d_v
         D = V * d_v
-        return (
-            vram_bayt_tahmin_et(E_num * d_e, D) +  # D0 [E*d_e, V*d_v]
-            vram_bayt_tahmin_et(D, D)               # Delta_0 = D0^T @ D0 [D, D]
-        )
+        return vram_bayt_tahmin_et(E_num * d_e, D)  # D0 [E*d_e, V*d_v]
 
-    def insa_et(self, sinir_operatorleri: E3_SinirOperatorleri, phi_dict: nn.ParameterDict) -> Tuple[torch.Tensor, torch.Tensor]:
+    def insa_et(
+        self,
+        sinir_operatorleri: E3_SinirOperatorleri,
+        phi_dict: nn.ParameterDict,
+        hesapla_yogun_delta0: bool = False,
+    ) -> Tuple[torch.Tensor, Optional[torch.Tensor]]:
         D1 = sinir_operatorleri.D1  # [E, V]
         E_num, V_num = D1.shape
         d_e, d_v = self.config.d_e, self.config.d_v
@@ -682,11 +721,17 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
             else torch.zeros((0, toplam_kolon), dtype=dtype, device=device)
         )
 
-        # [D, D] kare Laplasyen matrisi — D = V_num * d_v; V_num token uzunluğuna göre
-        # dinamik büyüdüğünden (bkz. N1'de V_nodes = l_tokens) bu çıktı taşabilir.
-        # Elle sarmalamaya GEREK YOK: TasmaFarkindaHesaplamaIdaresi.baslat() eğitim
-        # başında bir kez kurulduysa, aşağıdaki düz torch.matmul zaten otomatik olarak
-        # taşma-farkındadır (idare kurulu değilse normal torch.matmul çalışır).
+        # [D, D] kare Laplasyen matrisi ARTIK VARSAYILAN OLARAK KURULMUYOR. D = V_num * d_v
+        # token uzunluğuna göre dinamik büyüdüğünden (bkz. N1'de V_nodes = l_tokens) bu
+        # yoğun (dense) matris O(D^2) bellek ister ve VRAM baskısının BAŞLICA KAYNAĞIYDI
+        # (bkz. Adım başına N7/N11 düğümlerinin gigabaytlarca istek loğu). Delta_0'a
+        # ihtiyaç duyan TÜM canlı tüketiciler (N6_KohomolojikAktor, N7_LifLaplasyeniCozucu)
+        # artık D0'ı doğrudan alıp `laplasyen_ile_carp(x, D0)` ile MATRİSSİZ (O(D) bellek,
+        # matematiksel olarak BİREBİR eşdeğer) çalışıyor. `hesapla_yogun_delta0=True`
+        # yalnızca eski/yardımcı çağıranlar (ör. BiliselKanvasModeli demo yolu) için
+        # geriye dönük uyumluluk amacıyla saklandı.
+        if not hesapla_yogun_delta0:
+            return D0, None
         Delta_0 = torch.matmul(D0.T, D0)    # [D, D]
         return D0, Delta_0
 
@@ -1440,12 +1485,12 @@ class N6_KohomolojikAktor(nn.Module):
             self.register_buffer("D0", D0_operator, persistent=False)
         else:
             self.D0 = None
-        if Delta0_operator is not None:
-            self.register_buffer("Delta0", Delta0_operator, persistent=False)
-        elif D0_operator is not None:
-            self.register_buffer("Delta0", torch.matmul(D0_operator.T, D0_operator), persistent=False)
-        else:
-            self.Delta0 = None
+        # NOT: Delta0 = D0^T @ D0 ([D,D], VRAM baskısının başlıca kaynağıydı) ARTIK
+        # AYRI BİR BUFFER OLARAK TUTULMUYOR — forward() artık D0 üzerinden
+        # laplasyen_ile_carp(x, D0) ile matrissiz çalışıyor (bkz. o metodun docstring'i:
+        # x @ Delta_0^T = (x @ D0^T) @ D0, birebir eşdeğer). Delta0_operator parametresi
+        # yalnızca eski çağıranlarla geriye dönük imza uyumluluğu için tutuldu, artık
+        # KULLANILMIYOR (sessizce yok sayılır).
 
         d_v = getattr(config, 'd_v', 32) if config else 32
         d_q = getattr(config, 'd_q', 64) if config else 64
@@ -1461,22 +1506,18 @@ class N6_KohomolojikAktor(nn.Module):
         self.abduction_proj = nn.Linear(4 * d_v + d_q + d_a, d_h)
 
     def update_operators(self, D0_op: torch.Tensor, Delta0_op: Optional[torch.Tensor] = None) -> None:
-        """Persistent non-trainable buffer registration for D0 and Delta0 to maintain PyTorch device graph."""
+        """
+        Persistent non-trainable buffer registration for D0 to maintain PyTorch device graph.
+        Delta0_op parametresi geriye dönük imza uyumluluğu için tutuldu ama ARTIK
+        KULLANILMIYOR — forward() D0 üzerinden laplasyen_ile_carp ile matrissiz çalışıyor
+        (Delta0 = D0^T @ D0'ı [D,D] olarak ayrıca kurup saklamak VRAM baskısının başlıca
+        kaynağıydı).
+        """
         if "D0" in self._buffers:
             del self._buffers["D0"]
         elif hasattr(self, "D0"):
             delattr(self, "D0")
         self.register_buffer("D0", D0_op, persistent=False)
-
-        if "Delta0" in self._buffers:
-            del self._buffers["Delta0"]
-        elif hasattr(self, "Delta0"):
-            delattr(self, "Delta0")
-
-        if Delta0_op is not None:
-            self.register_buffer("Delta0", Delta0_op, persistent=False)
-        else:
-            self.register_buffer("Delta0", torch.matmul(D0_op.T, D0_op), persistent=False)
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
@@ -1579,7 +1620,9 @@ class N6_KohomolojikAktor(nn.Module):
         # 1. Eşsınır Kusuru c^(r) ve Laplasyen Gradyanı grad^(r)
         if self.D0 is not None:
             c_defect = torch.matmul(x_r, self.D0.T)  # [B, E_dim]
-            laplacian_grad = torch.matmul(x_r, self.Delta0.T)  # [B, V_dim]
+            # laplacian_grad = x_r @ Delta_0.T; Delta_0 = D0^T@D0'ı [D,D] hiç kurmadan
+            # (bkz. laplasyen_ile_carp docstring'i: birebir matematiksel eşdeğerlik)
+            laplacian_grad = laplasyen_ile_carp(x_r, self.D0)  # [B, V_dim]
             K_adjoint = self.hesapla_moore_penrose_psodoters_vektor_etkisi(c_defect, self.D0)  # [B, V_dim]
         else:
             c_defect = torch.zeros((B, x_r.shape[1]), device=x_r.device, dtype=x_r.dtype)
@@ -1662,27 +1705,32 @@ class N7_LifLaplasyeniCozucu(nn.Module):
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
-        N7 VRAM Tahmin Formülü: spektral_normalize_delta_0, Delta_0 [D, D]'nin YENİ bir
-        kopyasını (Delta_0_hat) üretir; bunun yanında birkaç [B, D] ara tensörü (laplacian_grad,
-        g_var/g_metric/g_ricci, dx, x_next) vardır.
+        N7 VRAM Tahmin Formülü: Delta_0 artık [D,D] olarak hiç kurulmuyor
+        (laplasyen_ile_carp ile matrissiz) — baskın maliyet birkaç [B, D] ara
+        tensörüdür (laplacian_grad, g_var/g_metric/g_ricci, dx, x_next).
         """
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else (self.config.batch_size if self.config else 1)
         V = getattr(self.config, 'V_nodes', 8) if self.config else 8
         d_v = getattr(self.config, 'd_v', 32) if self.config else 32
         D = V * d_v
-        return (
-            vram_bayt_tahmin_et(D, D) +      # Delta_0_hat [D, D]
-            vram_bayt_tahmin_et(B, D) * 6    # laplacian_grad, dx, x_next, g_var, g_metric, g_ricci [B, D]
-        )
+        return vram_bayt_tahmin_et(B, D) * 6  # laplacian_grad, dx, x_next, g_var, g_metric, g_ricci [B, D]
 
-    def spektral_normalize_delta_0(self, Delta_0: torch.Tensor) -> torch.Tensor:
-        """Delta_0 matrisini azami özdeğeri (lambda_max <= 1.0) olacak şekilde spektral olarak normalize eder."""
-        if Delta_0 is None or Delta_0.numel() == 0:
-            return Delta_0
-        lambda_max = torch.max(torch.sum(torch.abs(Delta_0), dim=-1))
-        return Delta_0 / (lambda_max + 1e-6)
+    def laplasyen_lambda_max(self, D0: torch.Tensor) -> torch.Tensor:
+        """Delta_0 = D0^T@D0'ın en büyük özdeğerini D0'ı hiç yoğun kurmadan güç yöntemiyle tahmin eder."""
+        if D0 is None or D0.numel() == 0:
+            return torch.tensor(1.0, device=D0.device if D0 is not None else 'cpu')
+        return laplasyen_lambda_max_guc_yontemi(D0)
 
-    def hesapla_korunum_potansiyelleri_gradyani(self, x_r: torch.Tensor, Delta_0: torch.Tensor, gamma: float = 0.1, c: float = 1.0, delta_min: float = 0.01) -> torch.Tensor:
+    def laplasyen_akisi_normalize(self, x: torch.Tensor, D0: torch.Tensor, lambda_max: torch.Tensor) -> torch.Tensor:
+        """
+        x @ Delta_0_hat^T'yi (Delta_0_hat = spektral normalize edilmiş Delta_0) Delta_0'ı hiç
+        [D,D] olarak kurmadan hesaplar: x @ Delta_0_hat^T = laplasyen_ile_carp(x, D0) / lambda_max.
+        """
+        if D0 is None or D0.numel() == 0:
+            return torch.zeros_like(x)
+        return laplasyen_ile_carp(x, D0) / (lambda_max + 1e-6)
+
+    def hesapla_korunum_potansiyelleri_gradyani(self, x_r: torch.Tensor, D0: torch.Tensor, lambda_max: torch.Tensor, gamma: float = 0.1, c: float = 1.0, delta_min: float = 0.01) -> torch.Tensor:
         """
         [4 KUTSAL KORUNUM POTANSİYELİ GRADYANI]
         Harmonik Isıl Düzleşmeyi (Oversmoothing / Harmonic Flattening Paradox) engelleyen
@@ -1692,7 +1740,6 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         3. Dikgenlik ve Biyortogonallik Korunumu
         4. Topolojik Eğrilik ve Dirichlet Enerjisi Korunumu (Tr(X^T Delta_0 X) >= delta_min)
         """
-        Delta_0_hat = self.spektral_normalize_delta_0(Delta_0)
         D = x_r.shape[-1]
         x_mean = x_r.mean(dim=-1, keepdim=True)
         x_var = ((x_r - x_mean) ** 2).mean(dim=-1, keepdim=True)
@@ -1703,14 +1750,14 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         x_norm_sq = (x_r ** 2).sum(dim=-1, keepdim=True)
         g_metric = 4.0 * (x_norm_sq - c**2) * x_r / D
 
-        lap_x = torch.matmul(x_r, Delta_0_hat.T)
+        lap_x = self.laplasyen_akisi_normalize(x_r, D0, lambda_max)
         dirichlet_energy = (x_r * lap_x).sum(dim=-1, keepdim=True)
         dir_diff = torch.clamp(delta_min - dirichlet_energy, min=0.0)
         g_ricci = -4.0 * dir_diff * lap_x / D
 
         return g_var + g_metric + g_ricci
 
-    def forward(self, sentetik_durum: E8_SentetikAraDurum, Delta_0: torch.Tensor, mevcut_durum: E5_A_MevcutGizilDurum) -> E9_GuncellenmisGizilDurum:
+    def forward(self, sentetik_durum: E8_SentetikAraDurum, D0: torch.Tensor, mevcut_durum: E5_A_MevcutGizilDurum) -> E9_GuncellenmisGizilDurum:
         # CUDAGuard Cihaz Hizalaması: VRAM/TMP İdarecisi zorunlu bir cihaz kararı vermişse
         # modül VE tüm girdiler bu cihaza hizalanır.
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
@@ -1719,26 +1766,36 @@ class N7_LifLaplasyeniCozucu(nn.Module):
                 self.to(zorunlu_cihaz)
             sentetik_durum = girdi_cihaza_tasi(sentetik_durum, zorunlu_cihaz)
             mevcut_durum = girdi_cihaza_tasi(mevcut_durum, zorunlu_cihaz)
-            if Delta_0.device != zorunlu_cihaz:
-                Delta_0 = Delta_0.to(zorunlu_cihaz)
+            if D0.device != zorunlu_cihaz:
+                D0 = D0.to(zorunlu_cihaz)
 
         x_r = mevcut_durum.x_r
         B, D_dyn = x_r.shape
         d_v = getattr(self.config, 'd_v', 32)
         V_num = D_dyn // d_v if D_dyn % d_v == 0 else 1
 
-        Delta_0_hat = self.spektral_normalize_delta_0(Delta_0)
+        # Delta_0 = D0^T @ D0 ARTIK [D,D] OLARAK HİÇ KURULMUYOR — bkz. laplasyen_ile_carp
+        # (x @ Delta_0^T = (x @ D0^T) @ D0, birebir eşdeğer, O(D^2) yerine O(D) bellek).
+        # lambda_max güç yöntemiyle (birkaç ucuz D0-matvec yinelemesi) tahmin ediliyor.
+        lambda_max = self.laplasyen_lambda_max(D0)
         syn_v = self.syn_proj_layer(sentetik_durum.synthetic_state) # [B, d_v]
         syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(B, D_dyn) # [B, D_dyn]
 
-        laplacian_flow = torch.matmul(x_r, Delta_0_hat.T)
-        g_cons = self.hesapla_korunum_potansiyelleri_gradyani(x_r, Delta_0_hat)
-        
+        laplacian_flow = self.laplasyen_akisi_normalize(x_r, D0, lambda_max)
+        g_cons = self.hesapla_korunum_potansiyelleri_gradyani(x_r, D0, lambda_max)
+
         # [4 KORUNUM KANUNLU ISI DİFÜZYONU]: dx = -\Delta_0 * x + Proj(h_syn) - 0.1 * \nabla_x H
         dx = -laplacian_flow + syn_proj - 0.1 * g_cons
         x_next = x_r + self.config.dt * dx
         return E9_GuncellenmisGizilDurum(x_next=x_next)
 
+    # NOT (matrissiz Laplasyen refaktörü): coz_r_adimlari_blelloch, blelloch_parallel_heat_scan,
+    # _chebyshev_bessel_matrix_exp_vector, YesilCekirdegiBesselChebyshevEksponansiyel ve
+    # analitik_matris_eksponansiyel_yesil_cozum main_egitim_dongusu.py'nin canlı eğitim
+    # yolundan HİÇ ÇAĞRILMIYOR (yalnızca birbirlerini çağırıyorlar — ölü kod). Bu yüzden
+    # kasıtlı olarak dönüştürülmediler ve hâlâ yoğun [D,D] bir Delta_0 bekliyorlar — canlıya
+    # alınacaklarsa önce forward/hesapla_dirichlet_enerjisi_vektoru'nda kullanılan
+    # laplasyen_ile_carp(x, D0) desenine geçirilmeleri gerekir.
     def coz_r_adimlari_blelloch(self, synthetic_states_seq: torch.Tensor, Delta_0: torch.Tensor, x_init: torch.Tensor) -> torch.Tensor:
         """
         R-Adımlı Rekürens İsıl Difüzyonunu Blelloch Parallel Scan ile O(log2 R) Sürede Çözer.
@@ -1940,8 +1997,10 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         d_vec = torch.norm(c_reshaped, p=2, dim=-1).mean(dim=0)  # [E]
         return d_vec
 
-    def hesapla_dirichlet_enerjisi_vektoru(self, x_r: torch.Tensor, Delta_0: torch.Tensor) -> torch.Tensor:
-        laplacian_flow = torch.matmul(x_r, Delta_0.T)  # [B, V * d_v]
+    def hesapla_dirichlet_enerjisi_vektoru(self, x_r: torch.Tensor, D0: torch.Tensor) -> torch.Tensor:
+        # laplacian_flow = x_r @ Delta_0.T; Delta_0 = D0^T@D0'ı [D,D] hiç kurmadan
+        # (bkz. laplasyen_ile_carp docstring'i: birebir matematiksel eşdeğerlik)
+        laplacian_flow = laplasyen_ile_carp(x_r, D0)  # [B, V * d_v]
         B = x_r.shape[0]
         d_v = getattr(self.config, 'd_v', 32)
         V_num = x_r.shape[1] // d_v if x_r.shape[1] % d_v == 0 else 1
@@ -1954,8 +2013,8 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         d_vec = self.hesapla_uyumsuzluk_vektoru(x_r, D0)
         return float(d_vec.mean().detach().item())
 
-    def hesapla_dirichlet_enerjisi(self, x_r: torch.Tensor, Delta_0: torch.Tensor) -> float:
-        e_vec = self.hesapla_dirichlet_enerjisi_vektoru(x_r, Delta_0)
+    def hesapla_dirichlet_enerjisi(self, x_r: torch.Tensor, D0: torch.Tensor) -> float:
+        e_vec = self.hesapla_dirichlet_enerjisi_vektoru(x_r, D0)
         return float(e_vec.mean().detach().item())
 
 
@@ -3010,13 +3069,15 @@ class BiliselKanvasModeli(nn.Module):
         for r in range(1, self.config.R + 1):
             # Rekürens içi Dinamik Topoloji ve Lif Laplasyeni Güncellemesi (Adım-bazlı Dinamik Graf Evolution)
             e3_sinir = self.n2_topox(e2_byte, x_initial=mevcut_durum.x_r, mode=mode, D0_base=D0_op)
-            D0_op, Delta_0_op = self.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
-            n6_aktor = N6_KohomolojikAktor(self.alt_n6, D0_op, Delta_0_op, config=self.config)
+            # NOT (matrissiz Laplasyen): insa_et artık VARSAYILAN OLARAK yoğun Delta_0 kurmaz;
+            # n6_aktor/n7_cozucu D0_op üzerinden laplasyen_ile_carp ile matrissiz çalışır.
+            D0_op, _ = self.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
+            n6_aktor = N6_KohomolojikAktor(self.alt_n6, D0_op, config=self.config)
 
             e6_sorgu = self.n4_sorgu(mevcut_durum, D0_operator=D0_op, A_adjacency=e3_sinir.D1, bellek=mevcut_bellek_obj)
             e7_lokal = self.n5_cevap(e6_sorgu, mevcut_bellek_obj)
             e8_sentetik = n6_aktor(mevcut_durum, e6_sorgu, e7_lokal)
-            e9_guncel = self.n7_cozucu(e8_sentetik, Delta_0_op, mevcut_durum)
+            e9_guncel = self.n7_cozucu(e8_sentetik, D0_op, mevcut_durum)
 
             # N_Yazici: Hakiki Topolojik Dikkat Bellek Yazıcısı ile M Güncellemesi
             mevcut_bellek_obj = self.n_yazici.yaz(e9_guncel.x_next, e6_sorgu, mevcut_bellek_obj, e7_lokal)
@@ -3030,13 +3091,12 @@ class BiliselKanvasModeli(nn.Module):
 
         if return_details:
             d_discrepancy = self.n7_cozucu.hesapla_uyumsuzluk(mevcut_durum.x_r, D0_op)
-            dirichlet_energy = self.n7_cozucu.hesapla_dirichlet_enerjisi(mevcut_durum.x_r, Delta_0_op)
+            dirichlet_energy = self.n7_cozucu.hesapla_dirichlet_enerjisi(mevcut_durum.x_r, D0_op)
             return {
                 'olasilik': e12_olasilik,
                 'e3_sinir': e3_sinir,
                 'e4_lif': e4_lif,
                 'D0': D0_op,
-                'Delta_0': Delta_0_op,
                 'L_arc': L_arc_val,
                 'N_teorik': N_teorik_val,
                 'N_star': N_star,
@@ -3238,6 +3298,15 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         # Cihaz referansı: ilk requires_grad parametresinden alınır
         ref_device = next((p.device for p in trainable_params if p.requires_grad), torch.device('cpu'))
         ref_dtype  = next((p.dtype  for p in trainable_params if p.requires_grad), torch.float32)
+        # PCGrad/MGDA book-keeping (duzles_faz_vektorleri + pc_vektorleri) yapısı gereği
+        # n=11 fazın TAMAMINI [P_toplam] boyutunda EŞ ZAMANLI bellekte tutar (her i için
+        # ORİJİNAL diğer fazlara karşı dikgenleştirme yapılır — bu yüzden akışa/tek-geçişe
+        # indirgenemez, gerçek bir all-pairs algoritmasıdır). Ama bu 2×n kopyanın PARAMETRE
+        # GÜNCELLEMESİNDE KULLANILAN gerçek gradyan hassasiyetiyle aynı olması GEREKMEZ —
+        # nihai sonuç Adım 4'te zaten p.dtype'a geri dönüştürülüyor (satır ~3401). bfloat16
+        # (fp16 aksine fp32 ile aynı üstel aralığa sahip, büyük-normlu gradyan vektörlerinde
+        # taşma riski yok) ile bu 2×n kopyanın belleği YARIYA iner.
+        pcgrad_bellek_dtype = torch.bfloat16 if ref_device.type == 'cuda' else ref_dtype
 
         if n == 1:
             # Tek faz: doğrudan unflatten edip adım at
@@ -3283,11 +3352,11 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
                     # gelebilir; .view() bu durumda "view size is not compatible..."
                     # RuntimeError'ı fırlatır. .reshape() aynı sonucu üretir, gerekirse
                     # sessizce kopyalayarak contiguous hale getirir — asla çökmez.
-                    vektor_parcalari.append(g.reshape(-1).to(device=ref_device, dtype=ref_dtype))
+                    vektor_parcalari.append(g.reshape(-1).to(device=ref_device, dtype=pcgrad_bellek_dtype))
                 else:
                     # Kullanılmayan parametre → aynı cihazda sıfır dolgu (NCCL güvencesi)
                     vektor_parcalari.append(
-                        torch.zeros(p.numel(), device=ref_device, dtype=ref_dtype)
+                        torch.zeros(p.numel(), device=ref_device, dtype=pcgrad_bellek_dtype)
                     )
             # Tüm parçaları tek 1D dev vektörde birleştir [P_toplam]
             faz_1d = torch.cat(vektor_parcalari, dim=0)
@@ -3329,7 +3398,9 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         # nihai_1d = Σ alpha*[i] · pc_v[i]
         # Her parametre için p.numel() dilim kesilir → p.shape'e unflatten
         # ==============================================================
-        nihai_1d = sum(alpha_star[i].to(dtype=ref_dtype) * pc_vektorleri[i] for i in range(n))
+        # pc_vektorleri bfloat16'dır (bellek tasarrufu); nihai birleştirme fp32'de yapılır,
+        # Adım 4'ün sonunda zaten p.dtype'a geri dönüştürülüyor.
+        nihai_1d = sum(alpha_star[i].float() * pc_vektorleri[i].float() for i in range(n))
 
         optimizer.zero_grad()
         imlec = 0
