@@ -55,7 +55,6 @@ from kontratlar import (
     AnlasmaliVramGuvencesiAl,
     vram_on_kontrol_ve_nvme_tahliye,
     AcilDurumOomYakalayiciVeKurtarici,
-    TasmaFarkindaHesaplamaIdaresi,
     Model_TopolojikKonfigurasyon,
     SistemYapilandirmasi,
     E1_HamMetinAkisi,
@@ -1114,7 +1113,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     # NOT: 'idareci' parametresi KULLANILMAZ (geriye dönük çağrı uyumluluğu için
     # kabul edilir, silinmez). Eski CpuAnaIdareci/GPU-işçi-süreci/NCCL çoklu-süreç
     # mimarisi bu fonksiyonun içinde HİÇ referans edilmez — VRAM/OOM idaresi tek
-    # süreçte, TasmaFarkindaHesaplamaIdaresi + AnlasmaliVramGuvencesiAl üzerinden
+    # süreçte, AnlasmaliVramGuvencesiAl + AcilDurumOomYakalayiciVeKurtarici üzerinden
     # yürür. Çağıran notebook hücresinde CpuAnaIdareci().surecleri_baslat_ve_ilkle()
     # (4 GPU işçi süreci + NCCL halkası) çağrılıyorsa TAMAMEN GEREKSİZDİR, sadece
     # başlangıçta zaman kaybettirir — kaldırılmalıdır.
@@ -1126,7 +1125,11 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     # F.linear SÜREÇ GENELİNDE (checkpoint-sarmalı N6/N7 dahil, N1-N16'nın her
     # köşesi dahil) otomatik olarak taşma-farkındadır — hiçbir çağrı noktası elle
     # sarmalanmaz. "Devlet nizamı" mantığı: kurulum burada, uygulanma her yerde.
-    TasmaFarkindaHesaplamaIdaresi.baslat()
+    # TasmaFarkindaHesaplamaIdaresi.baslat() KASITLI OLARAK ÇAĞRILMIYOR — küresel
+    # torch.matmul/F.linear monkey-patch'i PyTorch'un iç çağrı yollarını bozup
+    # "RuntimeError: self must be a matrix" üretiyordu (bkz. o sınıfın docstring'i).
+    # Taşma-bazlı çoklu-GPU dağıtımı artık yalnızca gerçekten büyük olduğu bilinen
+    # noktalarda AÇIKÇA (tasma_bazli_capraz_gpu_matmul_sardla) kullanılıyor.
 
     # NVMe Takas Yöneticisini İlkle (Sıfır OOM Garantisi)
     takas_mgr = NvmeTakasYoneticisi()

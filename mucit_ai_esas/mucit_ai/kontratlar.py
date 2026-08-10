@@ -732,7 +732,10 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         # geriye dönük uyumluluk amacıyla saklandı.
         if not hesapla_yogun_delta0:
             return D0, None
-        Delta_0 = torch.matmul(D0.T, D0)    # [D, D]
+        # AÇIK çağrı (küresel torch.matmul monkey-patch'i kaldırıldı): taşma yoksa
+        # düz torch.matmul, taşarsa sütun-bazlı çoklu-GPU dağıtımı. .T.contiguous():
+        # transpose view'ı, dilimleme ve cihazlar arası kopya yolunda güvenli olsun.
+        Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T.contiguous(), D0)    # [D, D]
         return D0, Delta_0
 
     def tasintilar_cihaza(self, D0: torch.Tensor, Delta_0: torch.Tensor, target_device: torch.device) -> Tuple[torch.Tensor, torch.Tensor]:
@@ -3719,6 +3722,21 @@ class TasmaFarkindaHesaplamaIdaresi:
 
     @classmethod
     def baslat(cls, emniyet_marji_mb: float = 256.0) -> None:
+        # !!! DEVRE DIŞI — KIRIK. Küresel torch.matmul/F.linear monkey-patch'i yalnızca
+        # bizim çağrılarımızı değil PyTorch'un KENDİ İÇ yollarını da (autograd backward
+        # ilkelleri, batched/broadcast matmul, .T transpose view'ları) yakalıyor. 2D-2D
+        # ön kontrolü yetmedi: gerçek Kaggle koşusunda 2. eğitim adımında
+        # "RuntimeError: self must be a matrix" ile çöktü (insa_et -> _idareli_matmul
+        # -> _rekursif_tasma_bazli_matmul -> orijinal_matmul_fn).
+        # Yerine: gerçekten büyük olduğu BİLİNEN noktalarda AÇIK çağrı ->
+        # tasma_bazli_capraz_gpu_matmul_sardla(A, B). Sessiz no-op yerine açıkça
+        # patlatılır; sessiz no-op "koruma aktif" yanılsaması yaratırdı.
+        raise RuntimeError(
+            "[TasmaFarkindaHesaplamaIdaresi] Bu kuresel monkey-patch DEVRE DISIDIR "
+            "(PyTorch ic cagri yollarini bozup 'RuntimeError: self must be a matrix' "
+            "uretiyordu). Tasma-bazli coklu-GPU dagitimi icin dogrudan "
+            "tasma_bazli_capraz_gpu_matmul_sardla(A, B) kullanin."
+        )
         logger = logging.getLogger("mucit_ai.kontratlar")
         if cls._kurulu:
             logger.info("[TaşmaFarkındaHesaplamaİdaresi] Zaten kurulu, tekrar kurulmuyor.")
