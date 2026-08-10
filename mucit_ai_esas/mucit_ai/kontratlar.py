@@ -1575,6 +1575,13 @@ class N6_KohomolojikAktor(nn.Module):
         # FASİL 4 DÜZELTMESİ: Deterministik düzgün birim vektör başlangıcı.
         # v_pow^(0) = 1/sqrt(E) · [1,1,...,1] → tüm öz-uzay bileşenlerini eşit içerir,
         # Power Iteration her koşuda aynı adımda λ_max'a deterministik yakınsar.
+        # NOT (madde 12 — kapsamlı denetimde şüpheli görülüp burada DOĞRULANDI): v_pow
+        # her zaman [1, E_dim] kalır — apply_M_vec yalnızca D0'a bağlıdır, c_defect'e
+        # (batch verisine) HİÇ dokunmaz. Yani bu, batch'ten bağımsız, operatörün (D0 D0^T)
+        # kendisine ait paylaşılan bir güç-yinelemesi tahminidir — batch boyutuna göre
+        # anahtarlamak hem gereksiz hem de lambda_max'ın (v_pow*M_v_pow toplamı) ölçeğini
+        # B kat büyütüp GERÇEK bir regresyon yaratırdı. Orijinal davranış (yalnızca E_dim/
+        # cihaz kontrolü) doğru ve kasıtlıdır — değiştirilmedi.
         if self.v_pow_persistent is None or self.v_pow_persistent.shape[-1] != E_dim or self.v_pow_persistent.device != device:
             v_pow = torch.ones((1, E_dim), device=device, dtype=dtype) / math.sqrt(E_dim)
         else:
