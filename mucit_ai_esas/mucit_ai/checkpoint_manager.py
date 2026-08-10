@@ -343,24 +343,35 @@ class NPZCheckpointManager:
             logger.debug(f"[Checkpoint VRAM Guard Warning] {vram_exc}")
 
         # 6. Dosyaya Atomik Yazma (tmp -> replace)
+        # KAPSAMLI DENETİM (madde 10): ÖNCEDEN sabit bir geçici dosya adı (`_tmp.npz`)
+        # kullanılıyordu ve hiçbir kilitle korunmuyordu — save_pytorch_model'in .pt
+        # yazımı (bkz. _bg_save_worker) hem benzersiz bir UUID'li ad hem de
+        # self._save_lock kullanırken bu NPZ yazımı ikisinden de yoksundu. Eşzamanlı/
+        # üst üste binen çağrılarda (ör. yavaş NVMe I/O altında bir önceki yazım
+        # bitmeden yenisi tetiklenirse) iki yazıcı aynı geçici dosyayı hedefleyip
+        # birbirinin verisini bozabilir veya os.replace() yarım yazılmış bir dosyayı
+        # "atomik" diye tanıtabilirdi. Artık benzersiz UUID'li ad + aynı kilit
+        # (self._save_lock) kullanılıyor.
+        import uuid as _uuid
         out_path = self._npz_path(step, is_best=is_best)
-        tmp_path = out_path.replace(".npz", "_tmp.npz")
-        np.savez_compressed(tmp_path, **payload)
-
-        # 7. 300.6 MB Boyut Garantisi
-        size_mb = os.path.getsize(tmp_path) / (1024 * 1024)
-        if size_mb > self.max_mb:
-            logger.warning(
-                f"  [Ckpt] Boyut {size_mb:.1f} MB > {self.max_mb} MB — "
-                f"Float32 matrisler FP16'ya dönüştürülüyor..."
-            )
-            for k, v in payload.items():
-                if isinstance(v, np.ndarray) and v.dtype == np.float32:
-                    payload[k] = v.astype(np.float16)
+        tmp_path = out_path.replace(".npz", f"_tmp_{_uuid.uuid4().hex}.npz")
+        with self._save_lock:
             np.savez_compressed(tmp_path, **payload)
-            size_mb = os.path.getsize(tmp_path) / (1024 * 1024)
 
-        os.replace(tmp_path, out_path)
+            # 7. 300.6 MB Boyut Garantisi
+            size_mb = os.path.getsize(tmp_path) / (1024 * 1024)
+            if size_mb > self.max_mb:
+                logger.warning(
+                    f"  [Ckpt] Boyut {size_mb:.1f} MB > {self.max_mb} MB — "
+                    f"Float32 matrisler FP16'ya dönüştürülüyor..."
+                )
+                for k, v in payload.items():
+                    if isinstance(v, np.ndarray) and v.dtype == np.float32:
+                        payload[k] = v.astype(np.float16)
+                np.savez_compressed(tmp_path, **payload)
+                size_mb = os.path.getsize(tmp_path) / (1024 * 1024)
+
+            os.replace(tmp_path, out_path)
 
         # 8. JSON Sidecar Metadata (Algoritma 3)
         self._write_meta(out_path, step, token_offset, size_mb, loss_history)
