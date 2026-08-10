@@ -339,7 +339,14 @@ class AutogradNvmeOffloadHook:
         finally:
             if dosya_yolu and os.path.exists(dosya_yolu):
                 try:
-                    sanal_addr = kuresel_adres_kayit_defteri.aktif_dosya_yollari.get(dosya_yolu)
+                    # KAPSAMLI DENETİM (madde 11): KureselAdresKayitDefteri'nin TÜM diğer
+                    # okuma/yazmaları (kayit_ekle_ve_guncelle, ref_arttir/azalt, kayit_sil,
+                    # supur) self.lock ile korunuyorken bu tek `.get()` erişimi kilitsizdi
+                    # — sınıfın kendi thread-safety sözleşmesini çiğniyordu. Eşzamanlı bir
+                    # pack_hook/supur() çağrısıyla yarışırsa aktif_dosya_yollari üzerinde
+                    # yırtık/tutarsız bir okuma görülebilirdi.
+                    with kuresel_adres_kayit_defteri.lock:
+                        sanal_addr = kuresel_adres_kayit_defteri.aktif_dosya_yollari.get(dosya_yolu)
                     if sanal_addr:
                         kuresel_adres_kayit_defteri.kayit_sil(sanal_addr)
                     os.remove(dosya_yolu)
