@@ -1186,6 +1186,15 @@ class N3_LifSinirlamaAtama(nn.Module):
         self.phi_base = nn.Parameter(_Q_haar_phi)
         self.W_u = nn.Linear(config.d_v, config.d_e, device=config.device)
         self.W_v = nn.Linear(config.d_v, config.d_e, device=config.device)
+        # KAPSAMLI DENETİM (madde 8): delta_phi = bmm(shift_u[E,d_e,1], shift_v_dv[E,1,d_v])
+        # için shift_v'nin ([E,d_e]) d_v genişliğine indirgenmesi gerekiyor. ÖNCEDEN
+        # `shift_v[:, :self.config.d_v]` ile NAİF DİLİMLEME yapılıyordu — bu yalnızca
+        # d_e >= d_v olduğunda (varsayılan config'te tesadüfen d_e==d_v==32) çalışır;
+        # d_e < d_v (bağımsız, desteklenen bir config kombinasyonu) olduğunda dilim
+        # istenenden az sütun döndürür ve sonraki broadcast toplaması
+        # (phi_base [d_e,d_v] + delta_phi [d_e,d_e]) şekil hatasıyla çöker. Öğrenilebilir
+        # bir projeksiyonla (herhangi bir d_e/d_v oranında doğru) değiştirildi.
+        self.shift_v_to_dv = nn.Linear(config.d_e, config.d_v, device=config.device)
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
@@ -1230,7 +1239,8 @@ class N3_LifSinirlamaAtama(nn.Module):
         shift_u = F.silu(self.W_u(x_u)).mean(dim=0)  # [E, d_e]
         shift_v = F.silu(self.W_v(x_v)).mean(dim=0)  # [E, d_e]
 
-        delta_phi = torch.bmm(shift_u.unsqueeze(2), shift_v[:, :self.config.d_v].unsqueeze(1))  # [E, d_e, d_v]
+        shift_v_dv = self.shift_v_to_dv(shift_v)  # [E, d_e] -> [E, d_v] (d_e/d_v oranından bağımsız)
+        delta_phi = torch.bmm(shift_u.unsqueeze(2), shift_v_dv.unsqueeze(1))  # [E, d_e, d_v]
         Phi_batch_raw = self.phi_base.unsqueeze(0) + 0.1 * delta_phi  # [E, d_e, d_v]
 
         with torch.amp.autocast('cuda', enabled=False):
