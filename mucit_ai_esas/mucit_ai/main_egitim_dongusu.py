@@ -694,6 +694,22 @@ def _tekil_egitim_adimi_icra(
     g_faz2_uyumsuzluk = _grad_anlik_kopyala()
     vjp_cerrahi_enjekte_et(F.relu(e_vec2), _faz2_hedef_params)
     g_faz2_dirichlet = _grad_anlik_kopyala()
+
+    # BELLEK TUTMA (RETENTION) DÜZELTMESİ: D0_op (Faz2'nin Laplasyen'i, ~birkaç GB) bu
+    # noktadan sonra BİR DAHA HİÇ KULLANILMIYOR (Faz3 kendi D0_op_sabit'ini kurar), ama
+    # Python yerel değişken olarak fonksiyon sonuna kadar (Faz3/4/5, Pareto-PCGrad dahil)
+    # canlı tutuyordu — tam da VRAM baskısının en yüksek olduğu anda gereksiz yer
+    # kaplıyordu. NOT: d_vec2/e_vec2 SİLİNMEDİ — fonksiyonun sonunda
+    # (_kayip_bileseni_listesi, satır ~1074) hâlâ okunuyorlar; VJP'leri tüketilmiş
+    # olsa da .mean() ile tekrar erişilen SKALER değerler için tensörlerin kendisi
+    # (küçük, [V] boyutunda) hâlâ gerekli — yalnızca D0_op ([E*d_e, D], gerçek
+    # büyük tüketici) siliniyor.
+    del D0_op
+    import gc as _gc
+    _gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
     vram_denetci.yokla_ve_raporla("LOCO_Faz2_GrafSilindi", adim_no=current_step)
 
     # ------------------------------------------------------------------------------
