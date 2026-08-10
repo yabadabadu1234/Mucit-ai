@@ -597,7 +597,13 @@ def _tekil_egitim_adimi_icra(
         temiz_hata = torch.clamp(temiz_hata, min=-100.0, max=100.0)
 
         # ADIM 2: EMNİYETLİ VEKTÖR NORMALİZASYONU (Sayısal Kararlılık)
-        std_val  = torch.std(temiz_hata)  + 1e-6
+        # torch.std() VARSAYILAN OLARAK unbiased=True'dur (n-1'e böler). temiz_hata
+        # tek elemanlıysa (numel=1, ör. tek-objektifli bir faz) n-1=0 olur ve std_val
+        # NaN döner (+ 1e-6 bunu DÜZELTMEZ, NaN kalır) — bu NaN sessizce v_probe'a ve
+        # oradan enjekte edilen gradyana bulaşır. unbiased=False (n'e bölen popülasyon
+        # std'si) numel>=1 için her zaman tanımlıdır ve bu dejenere durumu ortadan
+        # kaldırır.
+        std_val  = torch.std(temiz_hata, unbiased=False) + 1e-6
         norm_val = torch.norm(temiz_hata) + 1e-6
         v_probe  = scale * (1.0 / std_val) * (temiz_hata / norm_val)
 
