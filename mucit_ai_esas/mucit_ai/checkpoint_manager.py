@@ -281,9 +281,19 @@ class NPZCheckpointManager:
                             payload[f"param_{mod_name}.{param_adi}"] = tensor.detach().cpu().numpy()
 
         # 2. SMW Biyortogonal Bellek Matrislerini Topla (Rükn 5)
-        meclis_bellek = getattr(model, "meclis_bellek", None)
-        if meclis_bellek is None and hasattr(model, "SMW_SifirParazit_BellekYoneticisi"):
-            meclis_bellek = getattr(model, "SMW_SifirParazit_BellekYoneticisi", None)
+        # DÜZELTME (30 hatalık kapsamlı denetim, madde 3): `model`, canlı eğitim yolunda
+        # (main_egitim_dongusu.py:save_pytorch_model çağrısı) her zaman bir DICT'tir
+        # (tum_moduller, hafıza anahtarı 'bellek') — bir dict'te `.meclis_bellek` niteliği
+        # YOKTUR, `getattr(model, "meclis_bellek", None)` bu durumda HER ZAMAN None döner.
+        # Sonuç: smw_M_matrix/smw_R_matrix hiçbir zaman NPZ'ye yazılmıyordu (yükleme tarafı
+        # zaten ayrıca bozuktu — bkz. load_pytorch_model düzeltmesi). Artık hem dict hem
+        # nitelik-tabanlı model temsili destekleniyor.
+        if isinstance(model, dict):
+            meclis_bellek = model.get("bellek") or model.get("meclis_bellek")
+        else:
+            meclis_bellek = getattr(model, "meclis_bellek", None)
+            if meclis_bellek is None and hasattr(model, "SMW_SifirParazit_BellekYoneticisi"):
+                meclis_bellek = getattr(model, "SMW_SifirParazit_BellekYoneticisi", None)
 
         if meclis_bellek is not None:
             if hasattr(meclis_bellek, "M") and meclis_bellek.M is not None:
@@ -477,7 +487,40 @@ class NPZCheckpointManager:
         self.load_hafiza_state()
 
         resolved = self._resolve_path(path, step)
-        
+
+        # DÜZELTME (30 hatalık kapsamlı denetim, madde 3): SMW Biyortogonal Bellek
+        # matrisleri (M/R) NPZ'ye yazılıyordu (bkz. save() düzeltmesi) ama bu fonksiyon
+        # onları HİÇBİR ZAMAN GERİ OKUMUYORDU — ne .pt başarı yolunda (satırın altında,
+        # step/loss alıp erken return ediyordu) ne NPZ-fallback yolunda. Her resume'da
+        # saatlerce eğitilmiş hafıza sessizce taze/sıfır durumuna dönüyordu, hiçbir hata
+        # veya uyarı olmadan. Artık ağırlık kaynağı (.pt/.npz) ne olursa olsun, M/R
+        # NPZ'den okunup modelin meclis_bellek'ine (varsa) AÇIKÇA geri yazılıyor.
+        if resolved is not None:
+            try:
+                _hafiza_data = self.load(path=resolved)
+                _smw_M = _hafiza_data.get("smw_M_matrix")
+                _smw_R = _hafiza_data.get("smw_R_matrix")
+                if _smw_M is not None or _smw_R is not None:
+                    _meclis_bellek = model.get("bellek") if isinstance(model, dict) else getattr(model, "meclis_bellek", None)
+                    if _meclis_bellek is not None:
+                        if _smw_M is not None and hasattr(_meclis_bellek, "M"):
+                            _hedef_M = _meclis_bellek.M
+                            if torch is not None and hasattr(_hedef_M, "device"):
+                                _meclis_bellek.M = torch.as_tensor(_smw_M, dtype=_hedef_M.dtype, device=_hedef_M.device)
+                            else:
+                                _meclis_bellek.M = _smw_M
+                        if _smw_R is not None and hasattr(_meclis_bellek, "R"):
+                            _hedef_R = _meclis_bellek.R
+                            if torch is not None and hasattr(_hedef_R, "device"):
+                                _meclis_bellek.R = torch.as_tensor(_smw_R, dtype=_hedef_R.dtype, device=_hedef_R.device)
+                            else:
+                                _meclis_bellek.R = _smw_R
+                        logger.info("  [Ckpt Mgr] SMW Biyortogonal Bellek (M/R) matrisleri geri yüklendi.")
+                    else:
+                        logger.warning("  [Ckpt Mgr] Checkpoint'te SMW M/R verisi var ama model'de meclis_bellek bulunamadı, atlandı.")
+            except Exception as exc:
+                logger.warning(f"  [Ckpt Mgr] SMW Bellek (M/R) geri yükleme uyarısı: {exc}")
+
         pt_candidates = []
         if path and path.endswith(".pt") and os.path.isfile(path):
             pt_candidates.append(path)
