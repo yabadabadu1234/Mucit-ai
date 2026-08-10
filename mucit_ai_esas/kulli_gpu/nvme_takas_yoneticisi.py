@@ -283,6 +283,7 @@ class AutogradNvmeOffloadHook:
         if not dosya_yolu or not os.path.exists(dosya_yolu):
             return torch.zeros(shape, dtype=dtype, device=target_device)
 
+        restored_tensor = None
         try:
             # Dosya CPU'den yüklenir, sonra hedef cihaza taşınır
             restored_tensor = torch.load(dosya_yolu, map_location="cpu")
@@ -290,8 +291,32 @@ class AutogradNvmeOffloadHook:
                 restored_tensor = restored_tensor.reshape(shape)
             return restored_tensor.to(device=target_device)
         except Exception as exc:
+            # DİKKAT: `.to(device=target_device)` adımı TAM DA VRAM zaten kritik
+            # doluyken tetiklenir (aksi halde bu tensör hiç diske sürülmezdi), yani
+            # burada OOM görmek İSTİSNA değil BEKLENEN bir durumdur. Önceden bu
+            # except bloğu geri yüklenen GERÇEK backward verisini SESSİZCE sıfır
+            # tensörle değiştiriyordu — bu, çökmeyi önlese de gradyanı fark
+            # ettirmeden bozan, kodun geri kalanının benimsediği (bkz.
+            # acil_durum_oom_yakalayici_ve_kurtarici: "her şeyi CPU'ya çekip tekrar
+            # dene") reaktif-kurtarma felsefesiyle TUTARSIZ bir kısayoldu. Burada da
+            # aynı ilkeyi uyguluyoruz: veri CPU'da başarıyla yüklenmişse (yalnızca
+            # GPU'ya taşıma adımı patlamışsa) veriyi CPU'da bırakıp CPU tensörü
+            # döndürüyoruz — çağıran taraf (autograd) bunu backward'da kullanır;
+            # tamamen sıfırlanmış/uydurma bir gradyanla sessizce devam etmekten
+            # çok daha güvenlidir. Yalnızca dosya hiç okunamadıysa (restored_tensor
+            # hâlâ None) son çare olarak sıfır tensöre düşülür.
             logger.error(f"[AutogradNvmeOffloadHook] Diskten geri yukleme hatasi: {exc}")
-            return torch.zeros(shape, dtype=dtype, device=target_device)
+            if restored_tensor is not None:
+                try:
+                    torch.cuda.empty_cache()
+                    return restored_tensor.to(device=target_device)
+                except Exception:
+                    logger.error(
+                        "[AutogradNvmeOffloadHook] GPU'ya taşıma empty_cache sonrası da "
+                        "başarısız — veri CPU'da bırakılıyor (sıfırlanmıyor)."
+                    )
+                    return restored_tensor
+            return torch.zeros(shape, dtype=dtype, device="cpu")
         finally:
             if dosya_yolu and os.path.exists(dosya_yolu):
                 try:

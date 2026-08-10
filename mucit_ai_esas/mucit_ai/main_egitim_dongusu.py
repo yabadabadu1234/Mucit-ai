@@ -53,6 +53,7 @@ from torch.utils.checkpoint import checkpoint
 
 from kontratlar import (
     AnlasmaliVramGuvencesiAl,
+    vram_on_kontrol_ve_nvme_tahliye,
     AcilDurumOomYakalayiciVeKurtarici,
     TasmaFarkindaHesaplamaIdaresi,
     Model_TopolojikKonfigurasyon,
@@ -688,15 +689,28 @@ def _tekil_egitim_adimi_icra(
         # x_g = x_0 · Cayley(ε·A_g), A_g ∈ so(D) antisimetrik → x_g^T x_g = I garantili.
         _noise_std = 0.01
         _D = x_start_grouped.shape[-1]
-        _M_g = torch.randn(_D, _D, device=x_start_grouped.device, dtype=x_start_grouped.dtype)
-        _A_g = 0.5 * (_M_g - _M_g.T)  # Antisimetrik Lie cebiri üreteci ∈ so(D)
-        _I_D = torch.eye(_D, device=x_start_grouped.device, dtype=x_start_grouped.dtype)
-        _left  = _I_D - (_noise_std / 2.0) * _A_g
-        _right = _I_D + (_noise_std / 2.0) * _A_g
+        # DİĞER TÜM N1-N11 DÜĞÜMLERİNDEN FARKLI OLARAK bu blok herhangi bir
+        # tahmin_et_vram_bayt() beyan eden modüle bağlı değildi ve hiç
+        # AnlasmaliVramGuvencesiAl/NVMe-tahliye kontratı yapmadan doğrudan BEŞ ayrı
+        # [D, D] tensör (_M_g, _A_g, _I_D, _left, _right) tahsis ediyordu — bu da
+        # tam olarak Laplasyen'in D×D boyutu kadar VRAM ister ama VRAM zaten
+        # kritik doluyken hiç kontrol edilmeden çöküyordu (OOM). Diğer düğümlerle
+        # aynı ön-icra kontratını burada da açıkça uyguluyoruz.
+        _cayley_gerekli_bayt = 5 * _D * _D * x_start_grouped.element_size()
+        vram_on_kontrol_ve_nvme_tahliye(_cayley_gerekli_bayt, takas_mgr=takas_mgr)
         try:
+            _M_g = torch.randn(_D, _D, device=x_start_grouped.device, dtype=x_start_grouped.dtype)
+            _A_g = 0.5 * (_M_g - _M_g.T)  # Antisimetrik Lie cebiri üreteci ∈ so(D)
+            _I_D = torch.eye(_D, device=x_start_grouped.device, dtype=x_start_grouped.dtype)
+            _left  = _I_D - (_noise_std / 2.0) * _A_g
+            _right = _I_D + (_noise_std / 2.0) * _A_g
             _cayley = torch.linalg.solve(_left, _right)  # Cayley(ε A_g) ∈ O(D)
-        except Exception:
-            _cayley = _I_D  # çözüm başarısız olursa kimlik matrisi (güvenli fallback)
+        except Exception as _cayley_exc:
+            # Tahsislerin KENDİSİ de (torch.linalg.solve değil, _M_g/_I_D/_left/_right
+            # tahsisleri de) OOM atabilir — güvenli kimlik-matris fallback'i tüm
+            # bloğu kapsayacak şekilde genişletildi (önceden sadece solve() sarılıydı).
+            logger.warning(f"[Faz3_CayleyCesitlendirme] Tahsis/çözüm başarısız, kimlik fallback: {_cayley_exc}")
+            _cayley = torch.eye(_D, device=x_start_grouped.device, dtype=x_start_grouped.dtype)
         x_start_grouped = torch.matmul(x_start_grouped, _cayley)
 
     x_current = x_start_grouped.clone().detach()
