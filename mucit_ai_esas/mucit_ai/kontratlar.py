@@ -797,10 +797,11 @@ class N1_HibritByteTokenAyristirici(nn.Module):
             
             tok_b_tensor = torch.tensor(tok_bytes, dtype=torch.int64, device=device)
             tok_b_tensor_shifted = torch.clamp(tok_b_tensor + 1, min=1, max=256)
-            b_embs = self.byte_embeddings(tok_b_tensor_shifted) 
-            
-            
-            b_blok_i = b_embs.sum(dim=0) / math.sqrt(m_i) 
+            b_embs = self.byte_embeddings(tok_b_tensor_shifted)
+
+
+            b_norm_kare_toplami = b_embs.pow(2).sum()
+            b_blok_i = b_embs.sum(dim=0) / torch.sqrt(b_norm_kare_toplami + 1e-6)
             
             
             q_proj_i = F.linear(b_blok_i.unsqueeze(0), Q_m) 
