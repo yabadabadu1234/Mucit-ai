@@ -636,27 +636,19 @@ def _tekil_egitim_adimi_icra(
     _n7_syn_states_seq_list: List[torch.Tensor] = []
 
     for r in range(1, config.R + 1):
-        e5_a = E5_A_MevcutGizilDurum(x_r=x_current)
-        e5_b = E5_B_BellekGonderimi(M=M_current)
-        
-        AnlasmaliVramGuvencesiAl(n4_sorgu, e5_a.x_r, takas_mgr=takas_mgr)
-        e6_sorgu = AcilDurumOomYakalayiciVeKurtarici(
-            n4_sorgu.forward, e5_a, D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b,
-            modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
-        )
-        AnlasmaliVramGuvencesiAl(n5_cevap, e6_sorgu.q_r, takas_mgr=takas_mgr)
-        e7_lokal = AcilDurumOomYakalayiciVeKurtarici(n5_cevap.forward, e6_sorgu, e5_b, modul_nesnesi=n5_cevap, takas_mgr=takas_mgr)
-        
-        sorgu_q_son = e6_sorgu.q_r
-        cevap_a_son = e7_lokal.a_r
-        
-        def _tekil_n6_n7_step(x_c, q_c, a_c):
+        def _tekil_r_adimi(x_c, m_c):
             e5_a_st = E5_A_MevcutGizilDurum(x_r=x_c)
-            e6_sorgu_st = E6_GizilSorgu(q_r=q_c)
-            e7_lokal_st = E7_LokalBilgi(a_r=a_c)
+            e5_b_st = E5_B_BellekGonderimi(M=m_c)
+
+            AnlasmaliVramGuvencesiAl(n4_sorgu, x_c, takas_mgr=takas_mgr)
+            e6_sorgu_st = AcilDurumOomYakalayiciVeKurtarici(
+                n4_sorgu.forward, e5_a_st, D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b_st,
+                modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
+            )
+            AnlasmaliVramGuvencesiAl(n5_cevap, e6_sorgu_st.q_r, takas_mgr=takas_mgr)
+            e7_lokal_st = AcilDurumOomYakalayiciVeKurtarici(n5_cevap.forward, e6_sorgu_st, e5_b_st, modul_nesnesi=n5_cevap, takas_mgr=takas_mgr)
+
             AnlasmaliVramGuvencesiAl(n6_aktor, x_c, takas_mgr=takas_mgr)
-            
-            
             e8_sentetik_st = AcilDurumOomYakalayiciVeKurtarici(
                 n6_aktor.forward, e5_a_st, e6_sorgu_st, e7_lokal_st, modul_nesnesi=n6_aktor, takas_mgr=takas_mgr
             )
@@ -664,20 +656,24 @@ def _tekil_egitim_adimi_icra(
             e9_guncel_st = AcilDurumOomYakalayiciVeKurtarici(
                 n7_cozucu.forward, e8_sentetik_st, D0_op_sabit, e5_a_st, modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
             )
-            return e9_guncel_st.x_next, e8_sentetik_st.synthetic_state
+            return e9_guncel_st.x_next, e8_sentetik_st.synthetic_state, e6_sorgu_st.q_r, e7_lokal_st.a_r
 
-        x_next_val, h_syn_val = checkpoint(
-            _tekil_n6_n7_step,
+        x_next_val, h_syn_val, q_r_val, a_r_val = checkpoint(
+            _tekil_r_adimi,
             x_current,
-            e6_sorgu.q_r,
-            e7_lokal.a_r,
+            M_current,
             use_reentrant=False
         )
-        
+
+        e6_sorgu = E6_GizilSorgu(q_r=q_r_val)
+        e7_lokal = E7_LokalBilgi(a_r=a_r_val)
         e8_sentetik = E8_SentetikAraDurum(synthetic_state=h_syn_val)
         e9_guncel = E9_GuncellenmisGizilDurum(x_next=x_next_val)
+        e5_b = E5_B_BellekGonderimi(M=M_current)
+        sorgu_q_son = e6_sorgu.q_r
+        cevap_a_son = e7_lokal.a_r
         _n7_syn_states_seq_list.append(h_syn_val)
-        
+
         if isinstance(meclis_bellek, SMW_SifirParazit_BellekYoneticisi):
             k_r_key = e6_sorgu.q_r[:, :getattr(config, 'K', 16)] if e6_sorgu.q_r.shape[1] >= getattr(config, 'K', 16) else F.pad(e6_sorgu.q_r, (0, getattr(config, 'K', 16) - e6_sorgu.q_r.shape[1]))
             v_r_val = e7_lokal.a_r
@@ -690,7 +686,7 @@ def _tekil_egitim_adimi_icra(
             e5_b_yeni = AcilDurumOomYakalayiciVeKurtarici(
                 bellek_yazici.yaz, e9_guncel.x_next, e6_sorgu, e5_b, e7_lokal, modul_nesnesi=bellek_yazici, takas_mgr=takas_mgr
             )
-        
+
         x_current = e9_guncel.x_next
         M_current = e5_b_yeni.M
         mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
