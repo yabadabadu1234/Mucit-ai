@@ -349,8 +349,10 @@ class NPZCheckpointManager:
                            loss_history: Optional[List[float]] = None,
                            is_best: bool = False,
                            bekle: bool = False) -> str:
-        
-        
+
+        if torch is not None and not torch.cuda.is_available():
+            bekle = True
+
         npz_path = self.save(
             step=step,
             token_offset=token_offset,
