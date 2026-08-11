@@ -3448,174 +3448,173 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
             optimizer.step()
             return torch.tensor([1.0], device=ref_device, dtype=ref_dtype)
 
-        # ==============================================================
-        # ADIM 1: BÜTÜNSEL 1D DÜZLEŞTİRME VE SIFIR MÜHÜRLEME
-        # Her faz gradyan listesi → tek bir 1D [P_toplam] vektörü
-        # None gradyanlar aynı cihazda sıfır vektörle doldurulur
-        # (NCCL all_reduce shape/device uyuşmazlığını köklüce engeller)
-        # ==============================================================
-        # Bu noktada adımın N1-N11/Faz2-5 ara aktivasyonlarının BÜYÜK ÇOĞUNLUĞU artık
-        # ölü referans durumundadır (VJP enjeksiyonları retain_graph=False ile grafları
-        # zaten serbest bıraktı). AnlasmaliVramGuvencesiAl bu düğüm için resmi VRAM
-        # talebini (10505 MB) zaten yukarıda kontrol etti, ama asıl büyük tahsis BURADA,
-        # aşağıdaki döngüde (P_toplam boyutlu 11 ayrı 1D vektörün EŞ ZAMANLI belleğe
-        # sığması gerekiyor) gerçekleşir. Döngü başlamadan hemen önce gerçek bir
-        # gc.collect()/empty_cache() son bir güvenlik payı sağlar — trainable_params/
-        # optimizer üzerinde hiçbir mutasyon yapmadığından tamamen güvenlidir.
         import gc as _gc
         _gc.collect()
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
-        # DÜZELTME (Kaggle çöküşü — "Tried to allocate 80.00 MiB ... 7.12 MiB is free"
-        # unhandled OutOfMemoryError): torch.cat(vektor_parcalari, dim=0) ve ona giden
-        # per-parametre .reshape().to(...) zinciri HİÇBİR try/except zırhı içinde değildi
-        # — VRAM'in adımın en dolu olduğu tam anında bu döngü OOM verirse fonksiyon
-        # doğrudan çöküyor, çağıranın GPU-içi tek-seferlik retry'ı da AYNI sebeple
-        # (VRAM zaten dolu) başarısız oluyordu. Artık her fazın inşası ayrı ayrı
-        # korunuyor: OOM/cihaz hatası yakalanırsa o fazın parçaları CPU'da (float32)
-        # yeniden inşa edilir VE zaten inşa edilmiş önceki fazlar da CPU'ya taşınır —
-        # tüm duzles_faz_vektorleri girdilerinin AYNI cihazda kalması zorunludur, aksi
-        # halde sonraki torch.dot/G[i,j] adımlarında "Expected all tensors to be on
-        # the same device" hatası patlar. Adım 4'teki nihai unflatten zaten her
-        # parametre dilimini kendi p.device'ına ayrı ayrı geri taşıdığından
-        # (`.to(device=p.device, ...)`), bu fonksiyonun TAMAMININ CPU'da tamamlanması
-        # güvenlidir — yalnızca daha yavaştır, çökmekten iyidir.
-        def _gercek_oom_veya_cihaz_hatasi(exc: Exception) -> bool:
-            mesaj = str(exc).lower()
-            return "out of memory" in mesaj or "device" in mesaj or "cuda" in mesaj
+        # ==============================================================================
+        # PARÇALI (BLOK-BAZLI) GRAM MATRİSİ REFORMU
+        # ==============================================================================
+        # KÖK NEDEN TEŞHİSİ (kullanıcı raporu "Madde I" doğrulandı): Önceki tasarım her
+        # fazı torch.cat ile TEK bir bitişik [P_toplam] vektöre birleştiriyordu. Sorun
+        # yalnızca TOPLAM bellek hacmi değildi (o veri hacmi zaten değişmiyor — n adet
+        # faz × P_toplam eleman her hâlükârda bir yerlerde var olmalı) — asıl sorun
+        # TEK BİR BÜYÜK BİTİŞİK BLOK gerektirme zorunluluğuydu. "Tried to allocate
+        # 80.00 MiB ... 7.12 MiB is free" hatası, TOPLAM boş VRAM aslında yeterliyken
+        # bile VRAM PARÇALANMASI (fragmentation) yüzünden tek bir 80 MiB'lık bitişik
+        # blok bulunamamasından kaynaklanıyordu. Bu reform, torch.cat'i TAMAMEN ortadan
+        # kaldırır: her fazın gradyanı, trainable_params'ın doğal blokları (K adet
+        # parametre tensörü, kendi orijinal şekliyle) üzerinden akışlı işlenir — hiçbir
+        # zaman P_toplam boyutunda tek bir vektör materialize edilmez. Matematiksel
+        # sonuç, önceki 1D-düzleştirilmiş sürümle BİREBİR AYNIDIR (aynı GradNorm
+        # normalizasyonu, aynı sıralı PCGrad dikgenleştirme, aynı Gram matrisi / Frank-
+        # Wolfe çözümü) — yalnızca bellek erişim deseni değişir.
+        trainable_idx = [k for k, p in enumerate(trainable_params) if p.requires_grad]
 
-        _bellek_cihazi = ref_device
-        _bellek_dtype = pcgrad_bellek_dtype
+        def _blok(i: int, k: int) -> Optional[torch.Tensor]:
+            g_list = shard_gradyanlari[i]
+            return g_list[k] if k < len(g_list) else None
 
-        def _faz_vektoru_insa_et(g_list: List[Optional[torch.Tensor]], cihaz: torch.device, dtype: torch.dtype) -> torch.Tensor:
-            vektor_parcalari: List[torch.Tensor] = []
-            for k, p in enumerate(trainable_params):
-                g = g_list[k] if k < len(g_list) else None
+        # ADIM 1: Akışlı GradNorm normu — ‖g_i‖ hiçbir P_toplam vektörü kurmadan,
+        # her fazın kendi bloklarının kareleri toplamının (fp32'de, sayısal doğruluk
+        # için — madde 19'daki fp32-karar-noktası ilkesinin normlara genişletilmesi)
+        # akışlı biriktirilmesiyle hesaplanır.
+        norm_sq_vals: List[float] = [0.0] * n
+        for i in range(n):
+            acc = 0.0
+            for k in trainable_idx:
+                g = _blok(i, k)
                 if g is not None:
-                    # NOT: .view(-1) DEĞİL .reshape(-1) kullanılır — g non-contiguous
-                    # stride ile gelebilir; .reshape() gerekirse sessizce kopyalar.
-                    vektor_parcalari.append(g.reshape(-1).to(device=cihaz, dtype=dtype))
-                else:
-                    vektor_parcalari.append(torch.zeros(p.numel(), device=cihaz, dtype=dtype))
-            faz_1d = torch.cat(vektor_parcalari, dim=0)
-            del vektor_parcalari
-            return faz_1d
+                    acc += float(torch.sum(g.detach().float() ** 2).item())
+            norm_sq_vals[i] = acc
+        norm_val: List[float] = [(v ** 0.5) + 1e-8 for v in norm_sq_vals]
 
-        duzles_faz_vektorleri: List[torch.Tensor] = []
-        for g_list in shard_gradyanlari:
-            try:
-                faz_1d = _faz_vektoru_insa_et(g_list, _bellek_cihazi, _bellek_dtype)
-            except (torch.cuda.OutOfMemoryError if hasattr(torch.cuda, "OutOfMemoryError") else RuntimeError, RuntimeError) as _flatten_exc:
-                if not _gercek_oom_veya_cihaz_hatasi(_flatten_exc):
-                    raise
-                logging.getLogger("mucit_ai.kontratlar").warning(
-                    f"  [Pareto-PCGrad Flatten OOM] Faz düzleştirme sırasında gerçek VRAM/cihaz "
-                    f"hatası yakalandı, kalan tüm fazlar CPU'ya taşınıyor: {_flatten_exc}"
-                )
-                import gc as _gc_flatten
-                _gc_flatten.collect()
-                if torch.cuda.is_available():
-                    torch.cuda.empty_cache()
-                # Zaten GPU'da inşa edilmiş önceki fazları da CPU'ya taşı — cihaz tutarlılığı zorunlu
-                _bellek_cihazi = torch.device("cpu")
-                _bellek_dtype = torch.float32
-                duzles_faz_vektorleri = [v.to(device=_bellek_cihazi, dtype=_bellek_dtype) for v in duzles_faz_vektorleri]
-                faz_1d = _faz_vektoru_insa_et(g_list, _bellek_cihazi, _bellek_dtype)
-            # GradNorm Normalizasyonu: faz kayıp ölçek farklarını (84.0 ↔ 0.0003) eşitle
-            norm_val = torch.norm(faz_1d) + 1e-8
-            duzles_faz_vektorleri.append(faz_1d / norm_val)
+        # pc_durumu[i]: faz i'nin GÜNCEL (olası dikgenleştirilmiş) normalize gradyanı,
+        # parametre bloğu bazında, "yazarken kopyala" ilkesiyle. None => henüz hiç
+        # dikgenleştirilmedi (yani duzles_i ile özdeş) — orijinal koddaki
+        # _pc_klonlandi[i] bayrağının blok-seviyesindeki karşılığı: bir faz İLK KEZ
+        # gerçek bir çakışma ile karşılaşana kadar (dot_ij < 0) hiç somutlaştırılmaz.
+        pc_durumu: List[Optional[Dict[int, torch.Tensor]]] = [None] * n
 
-        # Fonksiyonun geri kalanı (PCGrad dikgenleştirme, Gram matrisi, Frank-Wolfe) hangi
-        # cihazda çalıştığını duzles_faz_vektorleri'nin gerçek .device'ından türetir —
-        # ref_device SABİT KABUL EDİLEMEZ artık (CPU'ya düşülmüş olabilir).
-        ref_device = duzles_faz_vektorleri[0].device
+        def _duzles_blok(j: int, k: int) -> Optional[torch.Tensor]:
+            """Fazın j'nin normalize edilmiş (hiç dikgenleştirilmemiş) orijinal bloğu.
+            Depolama pcgrad_bellek_dtype'tadır (bf16 GPU'da) — orijinal koddaki bellek
+            tasarrufu (madde: n×P kopyasının belleği YARIYA iner) burada da korunur;
+            yalnızca dot_ij KARAR NOKTASI (aşağıda) fp32'ye yükseltilir (madde 19)."""
+            g = _blok(j, k)
+            if g is None:
+                return None
+            return (g.detach().float() / norm_val[j]).to(pcgrad_bellek_dtype)
+
+        def _pc_blok(i: int, k: int) -> Optional[torch.Tensor]:
+            """Faz i'nin MEVCUT (dikgenleştirilmiş olabilecek) durumundaki bloğu."""
+            if pc_durumu[i] is not None:
+                return pc_durumu[i].get(k)
+            return _duzles_blok(i, k)
+
+        def _pc_tum_bloklari_somutlastir(i: int) -> None:
+            """Faz i İLK dikgenleştirmesini alırken TÜM bloklarını (None olanlar dahil,
+            sıfırla mühürlenmiş olarak — orijinal koddaki NCCL-güvenli sıfır-doldurma
+            ilkesiyle birebir) somutlaştırır; zira projeksiyon k-indeksinden bağımsız
+            HER pozisyonu etkileyebilir (bir fazın kendi gradyanı sıfır olan bir
+            konumu, başka bir fazın projeksiyonuyla sıfırdan farklı hâle gelebilir)."""
+            if pc_durumu[i] is not None:
+                return
+            pc_durumu[i] = {}
+            for k in trainable_idx:
+                b = _duzles_blok(i, k)
+                if b is None:
+                    p_ref = trainable_params[k]
+                    b = torch.zeros(p_ref.shape, device=p_ref.device, dtype=pcgrad_bellek_dtype)
+                pc_durumu[i][k] = b
 
         # ==============================================================
-        # ADIM 2: PCGRAD ZIT YÖNLÜ GRADİYAN DİKGENLEŞTİRMESİ
-        # 1D iç çarpım (torch.dot) ile zıt açılı çiftler tespit edilir.
+        # ADIM 2: PCGRAD ZIT YÖNLÜ GRADYAN DİKGENLEŞTİRMESİ (akışlı, blok bazlı)
         # g_i = g_i − (g_i · g_j / ‖g_j‖²) · g_j  [dot_ij < 0 ise]
         # ==============================================================
-        # DÜZELTME (Kaggle çöküşü — Pareto-PCGrad tam anda "Tried to allocate 80.00 MiB"
-        # ile OOM): Önceden TÜM n=11 fazın kopyası `[v.clone() for v in ...]` ile PEŞİNEN
-        # (döngü başlamadan) alınıyordu — bu, VRAM'in en dolu olduğu tam bu anda
-        # duzles_faz_vektorleri + pc_vektorleri'nin AYNI ANDA belleğe sığmasını (2×n×P_toplam
-        # bf16) zorunlu kılıyordu. Ama i,j çiftlerinin ÇOĞU dot_ij >= 0 (çakışmıyor) çıkar —
-        # yani o fazın pc_vektorleri[i] kopyası HİÇ değiştirilmez, gereksiz yere önceden
-        # klonlanmıştı. Artık "yazarken kopyala" (copy-on-write) uygulanıyor: pc_vektorleri
-        # başlangıçta duzles_faz_vektorleri ile AYNI tensör referanslarını tutar (klon yok,
-        # sıfır ek bellek); bir faz İLK KEZ gerçekten dikgenleştirilmesi gerektiğinde
-        # (dot_ij < 0 bulunduğunda) o TEK fazın klonu o anda alınır. Sonuç matematiksel
-        # olarak birebir aynı, ama tipik durumda (çoğu faz çifti çakışmıyorsa) tepe VRAM
-        # kullanımı ~2×n×P yerine ~(n + çakışan_faz_sayısı)×P'ye düşer.
-        pc_vektorleri: List[torch.Tensor] = list(duzles_faz_vektorleri)
-        _pc_klonlandi = [False] * n
         for i in range(n):
             for j in range(n):
                 if i == j:
                     continue
-                # KAPSAMLI DENETİM (madde 19): pc_vektorleri/duzles_faz_vektorleri bellek
-                # tasarrufu için bfloat16'dır (bkz. pcgrad_bellek_dtype). Ama bu ÇATIŞMA
-                # TESPİT TESTİ (dot_ij < 0) GradNorm ile birim-normalize edilmiş, YAKIN-
-                # ORTOGONAL (dot_ij ~ 0) gradyan çiftlerinde en kritik sınırdadır — bf16'nın
-                # ~3 anlamlı basamağı burada dot_ij'nin İŞARETİNİ çevirebilir, PCGrad'ın
-                # gerçek bir çakışmayı atlamasına veya çakışmayan bir çifti gereksizce
-                # dikgenleştirmesine yol açabilir (sessiz sayısal bozulma). Yalnızca bu
-                # karar-kritik nokta fp32'de hesaplanıyor; pc_vektorleri'nin kendisi
-                # (ve büyük O(n·P) belleği) bf16 kalıyor.
-                dot_ij = torch.dot(pc_vektorleri[i].float(), duzles_faz_vektorleri[j].float())
-                if dot_ij < 0:
-                    if not _pc_klonlandi[i]:
-                        pc_vektorleri[i] = pc_vektorleri[i].clone()
-                        _pc_klonlandi[i] = True
-                    norm_sq_j = torch.sum(duzles_faz_vektorleri[j].float() ** 2) + 1e-8
-                    proj_coeff = (dot_ij / norm_sq_j).to(pc_vektorleri[i].dtype)
-                    # Dikgenleştirme: çakışan bileşeni çıkar
-                    pc_vektorleri[i] = pc_vektorleri[i] - proj_coeff * duzles_faz_vektorleri[j]
+                # Akışlı iç çarpım: dot(pc_i_mevcut, duzles_j) — tek bir P_toplam vektörü
+                # ASLA kurulmadan, blok blok fp32 skaler biriktirme (madde 19 ilkesi:
+                # çatışma tespiti her zaman fp32'de, saklama katmanı bf16/fp32 kalabilir).
+                dot_ij_t = torch.zeros((), device=ref_device, dtype=torch.float32)
+                for k in trainable_idx:
+                    a = _pc_blok(i, k)
+                    b = _duzles_blok(j, k)
+                    if a is None or b is None:
+                        continue
+                    # madde 19: karar-kritik nokta fp32'de (a/b depoda bf16 kalsa da).
+                    dot_ij_t = dot_ij_t + torch.sum(a.to(device=ref_device, dtype=torch.float32) * b.to(device=ref_device, dtype=torch.float32))
+                dot_ij = float(dot_ij_t.item())
+                if dot_ij < 0.0:
+                    _pc_tum_bloklari_somutlastir(i)
+                    # norm_sq_j = ‖duzles_j‖² = norm_sq_vals[j] / norm_val[j]² (duzles_j
+                    # zaten normalize edildiğinden — orijinal kodun
+                    # `torch.sum(duzles_faz_vektorleri[j]**2) + 1e-8` ifadesiyle birebir).
+                    norm_sq_j = (norm_sq_vals[j] / (norm_val[j] ** 2)) + 1e-8
+                    proj_coeff = dot_ij / norm_sq_j
+                    for k in trainable_idx:
+                        b = _duzles_blok(j, k)
+                        if b is None:
+                            continue
+                        pc_durumu[i][k] = pc_durumu[i][k] - proj_coeff * b
 
         # ==============================================================
-        # ADIM 3: 1D GRAM MATRİSİ VE FRANK-WOLFE PARETO-OPTİMAL ÇÖZÜM
-        # G[i,j] = dot(pc_v[i], pc_v[j])  →  (n × n) float32 matris
-        # coz_mgda_pareto_weights(G) → alpha* [n]
+        # ADIM 3: (n × n) GRAM MATRİSİ VE FRANK-WOLFE PARETO-OPTİMAL ÇÖZÜM
+        # G[i,j] = dot(pc_i, pc_j) — akışlı blok bazlı, n küçük olduğundan (~10-11)
+        # bu n² adet akışlı geçiş toplamda tek bir büyük tahsisten çok daha ucuzdur.
         # ==============================================================
         G = torch.zeros((n, n), device=ref_device, dtype=torch.float32)
         for i in range(n):
-            for j in range(n):
-                G[i, j] = torch.dot(pc_vektorleri[i].float(), pc_vektorleri[j].float())
+            for j in range(i, n):
+                acc_t = torch.zeros((), device=ref_device, dtype=torch.float32)
+                for k in trainable_idx:
+                    a = _pc_blok(i, k)
+                    b = _pc_blok(j, k)
+                    if a is None or b is None:
+                        continue
+                    acc_t = acc_t + torch.sum(a.to(device=ref_device, dtype=torch.float32) * b.to(device=ref_device, dtype=torch.float32))
+                G[i, j] = acc_t
+                if j != i:
+                    G[j, i] = acc_t
 
         alpha_star = self.coz_mgda_pareto_weights(G)
+        del G
 
         # ==============================================================
-        # ADIM 4: BİRLEŞİK 1D GRADİYANIN PARAMETRELERE UNFLATTEN GERİ DAĞITIMI
-        # nihai_1d = Σ alpha*[i] · pc_v[i]
-        # Her parametre için p.numel() dilim kesilir → p.shape'e unflatten
+        # ADIM 4: BİRLEŞİK GRADYANIN DOĞRUDAN PARAMETRELERE YAZILMASI
+        # p.grad = Σ_i alpha*[i] · pc_i[k]  — HİÇBİR unflatten/imlec gerekmez, çünkü
+        # bloklar zaten p.shape ile aynı şekilde tutuluyor (hiç düzleştirilmedi).
         # ==============================================================
-        # pc_vektorleri bfloat16'dır (bellek tasarrufu); nihai birleştirme fp32'de yapılır,
-        # Adım 4'ün sonunda zaten p.dtype'a geri dönüştürülüyor.
-        nihai_1d = sum(alpha_star[i].float() * pc_vektorleri[i].float() for i in range(n))
-
-        # DÜZELTME: nihai_1d hesaplandıktan sonra pc_vektorleri/duzles_faz_vektorleri/G
-        # (n×P_toplam boyutlu, VRAM'in en kritik olduğu bu fonksiyondaki en büyük
-        # canlı referanslar) artık hiç kullanılmıyor ama önceden fonksiyon dönene kadar
-        # (optimizer.step()'in kendi tahsisleriyle AYNI ANDA) bellekte tutuluyorlardı.
-        # optimizer.step() (AdamW momentum/variance state tahsisi) tam da tepe VRAM
-        # anında ek n×P belleği bulmak zorunda kalıyordu. Açıkça serbest bırakılır.
-        del pc_vektorleri, duzles_faz_vektorleri, G
-
         optimizer.zero_grad(set_to_none=True)
-        imlec = 0
-        for p in trainable_params:
-            p_numel = p.numel()
-            if p.requires_grad:
-                dilim = nihai_1d[imlec: imlec + p_numel]
-                # Unflatten: 1D dilimi → orijinal parametre şekline geri dönüştür
-                p.grad = dilim.reshape(p.shape).to(device=p.device, dtype=p.dtype)
-            # requires_grad=False parametreler için imlec yine de ilerletilir
-            # (1D vektörde onların sıfır dilimi zaten var — cursor drift önlenir)
-            imlec += p_numel
+        for k, p in enumerate(trainable_params):
+            if not p.requires_grad:
+                continue
+            toplam = None
+            for i in range(n):
+                a = _pc_blok(i, k)
+                if a is None:
+                    continue
+                # Orijinal koddaki gibi nihai birleştirme fp32'de (a depoda bf16 olsa da).
+                katki = float(alpha_star[i].item()) * a.float()
+                toplam = katki if toplam is None else (toplam + katki)
+            if toplam is None:
+                # Hiçbir faz bu parametreye katkı yapmadı — orijinal kodun sıfır-
+                # doldurma davranışıyla birebir: None DEĞİL, sıfır gradyan (AdamW'nin
+                # exp_avg/exp_avg_sq durumu bu adımda da tutarlı şekilde işlensin diye).
+                p.grad = torch.zeros_like(p)
+            else:
+                p.grad = toplam.reshape(p.shape).to(device=p.device, dtype=p.dtype)
+
+        # pc_durumu artık kullanılmıyor — bellek serbest bırakılır (fonksiyon dönmeden
+        # önce optimizer.step()'in kendi tahsisleriyle üst üste binmesin diye).
+        del pc_durumu
 
         # ==============================================================
-        # ADIM 5: GRADİYAN KIRPMA VE OPTİMİZER ADIMI
+        # ADIM 5: GRADYAN KIRPMA VE OPTİMİZER ADIMI
         # ==============================================================
         torch.nn.utils.clip_grad_norm_(trainable_params, max_norm=max_norm)
         optimizer.step()
