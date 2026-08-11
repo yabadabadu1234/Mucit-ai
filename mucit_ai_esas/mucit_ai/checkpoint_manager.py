@@ -729,12 +729,23 @@ class NPZCheckpointManager:
                 "token_offset":      int(data["token_offset"][0]) if "token_offset" in data else 0,
                 "step":              int(data["step"][0])          if "step"         in data else 0,
                 "loss_history":      list(data["loss_history"])    if "loss_history" in data else [],
-                "smw_M_matrix":      data["smw_M_matrix"]          if "smw_M_matrix" in data else None,
-                "smw_R_matrix":      data["smw_R_matrix"]          if "smw_R_matrix" in data else None,
+                # DÜZELTME (madde 27): save() VRAM/boyut baskısı altında payload'daki
+                # TÜM float32 dizileri (smw_M_matrix/smw_R_matrix/param_* dahil) FP16'ya
+                # sıkıştırabiliyordu (bkz. satır ~348, ~377), ama load() yalnızca
+                # adam_m/adam_v'yi geri float32'ye yükseltiyordu. Sonuç: SMW Biyortogonal
+                # Bellek matrisleri ve model ağırlıkları FP16 hassasiyetiyle sessizce
+                # geri yükleniyor, ardından FP32 tensörlerle karıştırıldığında dtype
+                # uyuşmazlığı hatalarına veya sessiz hassasiyet kaybına yol açıyordu.
+                # Artık hepsi tutarlı biçimde float32'ye yükseltiliyor.
+                "smw_M_matrix":      data["smw_M_matrix"].astype(np.float32) if "smw_M_matrix" in data else None,
+                "smw_R_matrix":      data["smw_R_matrix"].astype(np.float32) if "smw_R_matrix" in data else None,
                 "adam_m":            data["adam_m"].astype(np.float32) if "adam_m" in data else None,
                 "adam_v":            data["adam_v"].astype(np.float32) if "adam_v" in data else None,
                 "hiyerarsik_hafiza": self.hafiza.to_dict(),
-                "model_params":      {k[6:]: data[k] for k in data.files if k.startswith("param_")}
+                "model_params":      {
+                    k[6:]: (data[k].astype(np.float32) if np.issubdtype(data[k].dtype, np.floating) else data[k])
+                    for k in data.files if k.startswith("param_")
+                }
             }
 
         logger.info(
