@@ -114,6 +114,26 @@ class NcclIletisimHatti:
             logger.warning("[NcclIletisimHatti] Distributed modül ilklendirilmemiş, lokal tensör döndürülüyor.")
             return tensor
 
+        # KUSUR-31 düzeltmesi: NCCL backend'i bir CPU tensörü ile çağırmak (örn. VRAM'den
+        # tahliye edilip CPU'ya taşınmış bir düğüm çıktısı) SIGSEGV ile süreci öldürebilir.
+        # NCCL yalnızca CUDA tensörlerini destekler; bu durumda güvenli şekilde uyarıp
+        # tensörü değiştirmeden döndürüyoruz.
+        if cls._backend == "nccl" and not tensor.is_cuda:
+            logger.warning(
+                "[NcclIletisimHatti] CPU tensörü ile NCCL all_reduce cagirilamaz "
+                "(SIGSEGV riski). Islem atlaniyor, lokal tensor donduruluyor."
+            )
+            return tensor
+
+        # KUSUR-34 düzeltmesi: non-contiguous (slicing/transpose kaynaklı) tensörler
+        # NCCL çağrılarında tanımsız davranışa yol açabilir. all_reduce yerinde
+        # (in-place) çalıştığından, geçici contiguous kopya üzerinde indirgeyip
+        # sonucu orijinal tensöre geri kopyalıyoruz ki çağıranın referansı bozulmasın.
+        _orijinal_tensor = tensor
+        _kopya_gerekti = not tensor.is_contiguous()
+        if _kopya_gerekti:
+            tensor = tensor.contiguous()
+
         op_map = {
             "SUM": dist.ReduceOp.SUM,
             "MEAN": dist.ReduceOp.SUM,  # SUM + divide by world_size
@@ -128,6 +148,10 @@ class NcclIletisimHatti:
         if op_type.upper() == "MEAN":
             world_size = dist.get_world_size()
             tensor.div_(world_size)
+
+        if _kopya_gerekti:
+            _orijinal_tensor.copy_(tensor)
+            return _orijinal_tensor
 
         return tensor
 
@@ -228,6 +252,29 @@ class GpuIsciSureci:
 
         logger.info(f"[GpuIsciSureci] Rank {rank} ana dongusu baslatildi.")
 
+        # KUSUR-48 düzeltmesi: döngü içindeki bir komut hatası yakalanıp devam
+        # edilebiliyor olsa da, döngüyü tamamen kıran beklenmeyen bir istisna
+        # (örn. kuyruk borusu kopması) önceden process_group'u kapatmadan
+        # süreci sonlandırıyor ve diğer rank'ları NCCL veri yolunda sonsuza dek
+        # bekletiyordu. finally bloğu ile her çıkış yolunda temizlik garanti edilir.
+        try:
+            cls._isci_ana_dongusu_govde(rank, world_size, emir_kuyrugu, cevap_kuyrugu, instance)
+        finally:
+            if dist.is_initialized():
+                try:
+                    dist.destroy_process_group()
+                except Exception as e:
+                    logger.error(f"[GpuIsciSureci] Rank {rank} process_group kapatma hatasi: {e}")
+
+    @classmethod
+    def _isci_ana_dongusu_govde(
+        cls,
+        rank: int,
+        world_size: int,
+        emir_kuyrugu: Any,
+        cevap_kuyrugu: Any,
+        instance: "GpuIsciSureci",
+    ) -> None:
         while True:
             try:
                 emir = emir_kuyrugu.get()
