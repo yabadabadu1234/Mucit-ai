@@ -95,13 +95,19 @@ class KureselAdresKayitDefteri:
         self.kayit_ekle_ve_guncelle(*args, **kwargs)
 
     def referans_durusdur_veya_sil(self, nesne_id: str) -> bool:
+        dosya_yolu_silinecek = None
         with self.lock:
             if nesne_id in self.kayitlar:
                 self.kayitlar[nesne_id].ref_count -= 1
                 if self.kayitlar[nesne_id].ref_count <= 0:
-                    self.kayitlar[nesne_id].durum = MEM_STATE_ORPHANED
-                    return True
-        return False
+                    dosya_yolu_silinecek = self.kayitlar[nesne_id].dosya_yolu
+                    self.kayit_sil(nesne_id)
+        if dosya_yolu_silinecek and os.path.exists(dosya_yolu_silinecek):
+            try:
+                os.remove(dosya_yolu_silinecek)
+            except OSError as exc:
+                logger.debug(f"[KureselAdresKayitDefteri] Anlık imha başarısız: {exc}")
+        return dosya_yolu_silinecek is not None
 
     def kayit_getir(self, sanal_adres: str) -> Optional[NesneAdresKaydi]:
         with self.lock:
@@ -294,6 +300,7 @@ class AutogradNvmeOffloadHook:
         )
         self._bekleyen_yazmalar: Dict[str, concurrent.futures.Future] = {}
         self._bekleyen_yazmalar_lock = threading.Lock()
+        self._bekleyen_yazma_semaforu = threading.BoundedSemaphore(4)
 
     def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Tuple[str, Tuple[int, ...], torch.dtype, str]:
         is_cuda_or_npu = getattr(tensor, "is_cuda", False) or getattr(tensor, "is_npu", False)
@@ -312,6 +319,8 @@ class AutogradNvmeOffloadHook:
         dosya_id = f"autograd_swap_{uuid.uuid4().hex[:12]}.bin"
         dosya_yolu = os.path.join(self.karar_motoru.swap_dir, dosya_id)
 
+        self._bekleyen_yazma_semaforu.acquire()
+        _semafor_devredildi = False
         try:
             original_device = str(tensor.device)
 
@@ -333,6 +342,8 @@ class AutogradNvmeOffloadHook:
 
             
             yazma_future = self._yazma_havuzu.submit(torch.save, cpu_kopyasi, dosya_yolu)
+            yazma_future.add_done_callback(lambda _f: self._bekleyen_yazma_semaforu.release())
+            _semafor_devredildi = True
             with self._bekleyen_yazmalar_lock:
                 self._bekleyen_yazmalar[dosya_yolu] = yazma_future
             sanal_id = f"addr_{uuid.uuid4().hex[:8]}"
@@ -365,6 +376,8 @@ class AutogradNvmeOffloadHook:
                 )
             return (izlenebilir_dosya_yolu, tuple(kayit.shape), kayit.dtype, original_device)
         except Exception as exc:
+            if not _semafor_devredildi:
+                self._bekleyen_yazma_semaforu.release()
             logger.error(f"[AutogradNvmeOffloadHook] Diske tahliye hatasi: {exc}")
             return ("", tuple(tensor.shape), tensor.dtype, "cpu")
 
