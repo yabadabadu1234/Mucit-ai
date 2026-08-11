@@ -8,12 +8,27 @@ import shutil
 import tempfile
 import logging
 import threading
+import weakref
 import concurrent.futures
 from dataclasses import dataclass, field
 from typing import Tuple, Dict, List, Any, Optional
 import torch
 
 logger = logging.getLogger("kulli_gpu.nvme_takas_yoneticisi")
+
+
+class _IzlenebilirDosyaYolu(str):
+    pass
+
+
+def _paket_gc_edildi_geri_cagirma(sanal_id: str, kayit_defteri_ref) -> None:
+    kayit_defteri = kayit_defteri_ref()
+    if kayit_defteri is None:
+        return
+    try:
+        kayit_defteri.referans_durusdur_veya_sil(sanal_id)
+    except Exception as exc:
+        logger.debug(f"[NvmeTakasYoneticisi] GC-tetiklemeli referans düşürme uyarısı: {exc}")
 
 
 MEM_STATE_ACTIVE_VRAM = "MEM_STATE_ACTIVE_VRAM"
@@ -296,16 +311,26 @@ class AutogradNvmeOffloadHook:
                 numel=tensor.numel()
             )
 
-            
+
             if hasattr(self, "kayit_defteri") and self.kayit_defteri is not None:
                 self.kayit_defteri.kayit_ekle_ve_guncelle(kayit)
 
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
 
-            
+
             if not tensor.requires_grad:
                 tensor.data = cpu_kopyasi
-            return (dosya_yolu, tuple(kayit.shape), kayit.dtype, original_device)
+
+            izlenebilir_dosya_yolu = _IzlenebilirDosyaYolu(dosya_yolu)
+            kayit_defteri_hedefi = self.kayit_defteri if hasattr(self, "kayit_defteri") else None
+            if kayit_defteri_hedefi is not None:
+                weakref.finalize(
+                    izlenebilir_dosya_yolu,
+                    _paket_gc_edildi_geri_cagirma,
+                    sanal_id,
+                    weakref.ref(kayit_defteri_hedefi)
+                )
+            return (izlenebilir_dosya_yolu, tuple(kayit.shape), kayit.dtype, original_device)
         except Exception as exc:
             logger.error(f"[AutogradNvmeOffloadHook] Diske tahliye hatasi: {exc}")
             return ("", tuple(tensor.shape), tensor.dtype, "cpu")
