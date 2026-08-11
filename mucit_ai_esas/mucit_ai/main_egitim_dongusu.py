@@ -951,7 +951,11 @@ def _tekil_egitim_adimi_icra(
         if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
             takas_mgr.temizle(agresif=True)
 
-    
+    import gc as _gc_adim_sonu
+    _gc_adim_sonu.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
     return kayip_val, L_arc_val, dirichlet_energy, d_discrepancy
 
 
