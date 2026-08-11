@@ -467,6 +467,13 @@ class NvmeTakasYoneticisi:
         self.offload_hook = AutogradNvmeOffloadHook(karar_motoru=self.karar_motoru, kayit_defteri=self.kayit_defteri)
         self.tahliye_sayaci = 0
         self.geri_cagirma_sayaci = 0
+        # DÜZELTME (madde 30): pack/unpack hook'ları autograd tarafından farklı
+        # thread'lerden (ör. çoklu backward çağrıları, checkpoint/recompute akışları)
+        # tetiklenebilir. `self.sayac += 1` bir okuma-değiştirme-yazma işlemidir ve
+        # GIL, bytecode sınırında bölünmeye karşı garanti vermez — iki thread aynı
+        # anda artırırsa bir artış kaybolabilir. Sayaçlar yalnızca teşhis/loglama
+        # amaçlı olsa da yanlış rapor etmesinler diye kilitle korunuyor.
+        self._sayac_lock = threading.Lock()
         logger.info(f"[NvmeTakasYoneticisi] Disk takas dizini aktif: {self.swap_dir}")
 
     def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Any:
@@ -475,7 +482,8 @@ class NvmeTakasYoneticisi:
         # Orijinal cihaz bilgisi yalnızca res[3]'te (mutasyon ÖNCESİ kaydedilmiş) doğrudur.
         res = self.offload_hook.pack_hook_diske_tahliye(tensor)
         if isinstance(res, tuple) and res[0] != "":
-            self.tahliye_sayaci += 1
+            with self._sayac_lock:
+                self.tahliye_sayaci += 1
             return (res[0], res[1], res[2], res[3])
         return tensor
 
@@ -487,7 +495,8 @@ class NvmeTakasYoneticisi:
             bundle_3 = (pack_bundle[0], pack_bundle[1], pack_bundle[2])
             target_device = pack_bundle[3]
             res = self.offload_hook.unpack_hook_diskten_geri_yukle(bundle_3, target_device=target_device)
-            self.geri_cagirma_sayaci += 1
+            with self._sayac_lock:
+                self.geri_cagirma_sayaci += 1
             return res
         return self.offload_hook.unpack_hook_diskten_geri_yukle(pack_bundle)
 

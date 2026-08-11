@@ -464,8 +464,28 @@ class NPZCheckpointManager:
                 elif hasattr(obj, 'detach') and hasattr(obj, 'to'):
                     try:
                         return obj.detach().clone().to('cpu', non_blocking=False)
-                    except Exception:
-                        return obj
+                    except Exception as exc:
+                        # DÜZELTME (madde 30): Önceden `.detach().clone().to('cpu')`
+                        # başarısız olursa orijinal CANLI tensör (hâlâ GPU'da, hâlâ
+                        # autograd grafiğine bağlı, hâlâ ana eğitim döngüsü tarafından
+                        # yerinde mutasyona uğrayabilir) olduğu gibi döndürülüyordu.
+                        # Bu nesne arka plan _bg_save_worker thread'ine geçiyordu — ana
+                        # eğitim thread'i bir sonraki adımda aynı tensörü in-place
+                        # güncellerken (ör. optimizer.step()) arka plan thread'i onu
+                        # torch.save ile diske yazabilir, bu da checkpoint'e yarı
+                        # güncellenmiş/tutarsız veri yazılmasına (torn write) yol
+                        # açabilirdi. Artık canlı referans asla arka plana sızdırılmıyor:
+                        # en azından senkron .cpu() denenir; o da başarısız olursa bu
+                        # tensör None ile değiştirilip uyarı loglanır (checkpoint'te o
+                        # alan eksik kalır ama bozuk/yarışan veri yazılmaz).
+                        try:
+                            return obj.detach().cpu().clone()
+                        except Exception:
+                            logger.warning(
+                                f"  [Ckpt Mgr] Tensör CPU'ya kopyalanamadı ({exc}), "
+                                "canlı GPU referansı arka plan kaydına SIZDIRILMIYOR — alan atlanıyor."
+                            )
+                            return None
                 return obj
 
             state_dict_cpu = _to_cpu_async(state_dict_to_save)
