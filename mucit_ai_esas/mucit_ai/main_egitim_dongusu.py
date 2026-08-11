@@ -778,12 +778,12 @@ def _tekil_egitim_adimi_icra(
 
     
     AnlasmaliVramGuvencesiAl(n8_b_uzunluk, e10_kulli.C, takas_mgr=takas_mgr)
-    N_star_int, L_arc_tensor, N_ste_tensor, delta_n_tensor = AcilDurumOomYakalayiciVeKurtarici(
+    N_star_int, H_spec_tensor, N_ste_tensor, delta_n_tensor = AcilDurumOomYakalayiciVeKurtarici(
         n8_b_uzunluk.forward, e10_kulli, cheby_calc,
         modul_nesnesi=n8_b_uzunluk, takas_mgr=takas_mgr
     )
     N_star = N_star_int
-    L_arc_val = L_arc_tensor.item()
+    H_spec_val = H_spec_tensor.item()
     
     
     T_matrix = AcilDurumOomYakalayiciVeKurtarici(cheby_calc.hesapla, N=N_star, takas_mgr=takas_mgr)
@@ -878,7 +878,7 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=grpo_kriteri, takas_mgr=takas_mgr
     )
     n_target = float(hedef_grouped.shape[1])
-    kayip_length = (L_arc_tensor - 0.5 * N_ste_tensor)**2 + 0.05 * (N_ste_tensor - n_target)**2
+    kayip_length = 0.05 * (N_ste_tensor - n_target)**2
     kayip_spektral_vec = (kayip_length + 0.01 * torch.abs(delta_n_tensor).mean()).unsqueeze(0)
     
     AnlasmaliVramGuvencesiAl(vicreg_kriteri, e11_gomulu.X_output, takas_mgr=takas_mgr)
@@ -936,12 +936,12 @@ def _tekil_egitim_adimi_icra(
     
     
     AnlasmaliVramGuvencesiAl(n8_b_uzunluk, e10_kulli.C, takas_mgr=takas_mgr)
-    _, L_arc_cumle, N_ste_cumle, _ = AcilDurumOomYakalayiciVeKurtarici(
+    _, H_spec_cumle, N_ste_cumle, _ = AcilDurumOomYakalayiciVeKurtarici(
         n8_b_uzunluk.forward, e10_kulli, cheby_calc,
         modul_nesnesi=n8_b_uzunluk, takas_mgr=takas_mgr
     )
-    
-    
+
+
     kayip_cumle_keyfiyet_vec = AcilDurumOomYakalayiciVeKurtarici(
         cumle_keyfiyet_motoru.hesapla_vektor,
         q_son=e6_sorgu_canli_cumle.q_r,
@@ -949,7 +949,7 @@ def _tekil_egitim_adimi_icra(
         x_son=_x_canli,
         D0_op=D0_op_sabit,
         hedef_tokens=hedef_grouped,
-        L_arc=L_arc_cumle,
+        L_arc=H_spec_cumle,
         N_ste=N_ste_cumle,
         modul_nesnesi=cumle_keyfiyet_motoru, takas_mgr=takas_mgr
     )
@@ -1090,7 +1090,7 @@ def _tekil_egitim_adimi_icra(
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
-    return kayip_val, L_arc_val, dirichlet_energy, d_discrepancy
+    return kayip_val, H_spec_val, dirichlet_energy, d_discrepancy
 
 
 def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json") -> None:
@@ -1256,7 +1256,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
 
                     
                     try:
-                        curr_loss_val, L_arc_val, dirichlet_energy, d_discrepancy = _tekil_egitim_adimi_icra(
+                        curr_loss_val, H_spec_val, dirichlet_energy, d_discrepancy = _tekil_egitim_adimi_icra(
                             e1_girdi_metni=e1_girdi_metni,
                             hedef_tensor=hedef_tensor,
                             tum_moduller=tum_moduller,
@@ -1319,7 +1319,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
 
                     if should_log or (curr_loss_val < best_loss):
                         mb_processed = global_bytes_processed / (1024 * 1024)
-                        logger.info(f"Adım [{current_step}] | Toplam İşlenen Veri: {mb_processed:.1f} MB | Dosya: {os.path.basename(dosya_yolu)} | GRPO Kayıp: {curr_loss_val:.6f} | L_arc: {L_arc_val:.4f} | E(x): {dirichlet_energy:.6f} | Uyumsuzluk: {d_discrepancy:.6f} | Süre: {gecen_sure:.3f} sn")
+                        logger.info(f"Adım [{current_step}] | Toplam İşlenen Veri: {mb_processed:.1f} MB | Dosya: {os.path.basename(dosya_yolu)} | GRPO Kayıp: {curr_loss_val:.6f} | H_spec: {H_spec_val:.4f} | E(x): {dirichlet_energy:.6f} | Uyumsuzluk: {d_discrepancy:.6f} | Süre: {gecen_sure:.3f} sn")
                         if mb_500_crossed:
                             last_logged_500mb_chunk = curr_500mb_chunk
                     else:

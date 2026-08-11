@@ -1936,28 +1936,31 @@ class N8_B_DinamikUzunlukSecici(nn.Module):
     def forward(self, kulli_mana: E10_KulliManaMatrisi, cheby_calc: Yardimci_ChebyshevMatrisHesaplayici) -> Tuple[int, torch.Tensor, torch.Tensor, torch.Tensor]:
         C = kulli_mana.C
         B, d, M_p_1 = C.shape
-        
-        
-        L_arc, _ = cheby_calc.hesapla_yay_uzunlugu(C, delta_token=0.5)  
-        delta_token = 0.5
-        N_teorik_cont = L_arc / delta_token  
-        
-        
-        C_flat = C.view(B, -1)
-        delta_n_tensor = self.mlp_len(C_flat).squeeze(-1)  
-        
-        N_cont = N_teorik_cont + delta_n_tensor  
+
+        enerji_n = C.pow(2).sum(dim=1)
+        toplam_enerji = enerji_n.sum(dim=-1, keepdim=True) + 1e-8
+        p_n = enerji_n / toplam_enerji
+        H_spec = -(p_n * torch.log2(p_n + 1e-8)).sum(dim=-1)
+
+        n_min_cap = 8.0
         n_max_cap = float(getattr(self.config, 'N_max', 2048))
-        N_cont_clamped = torch.clamp(N_cont, min=8.0, max=n_max_cap)
-        
-        
+        H_max = math.log2(max(M_p_1, 2))
+        H_spec_norm = H_spec / (H_max + 1e-8)
+        N_teorik_cont = n_min_cap + (n_max_cap - n_min_cap) * H_spec_norm
+
+        C_flat = C.view(B, -1)
+        delta_n_tensor = self.mlp_len(C_flat).squeeze(-1)
+
+        N_cont = N_teorik_cont + delta_n_tensor
+        N_cont_clamped = torch.clamp(N_cont, min=n_min_cap, max=n_max_cap)
+
         N_round = torch.round(N_cont_clamped)
-        N_ste = N_cont_clamped + (N_round - N_cont_clamped).detach()  
-        
+        N_ste = N_cont_clamped + (N_round - N_cont_clamped).detach()
+
         N_star_int = int(N_round.mean().detach().item())
         N_star_int = max(8, min(int(n_max_cap), N_star_int))
-        
-        return N_star_int, L_arc.mean(), N_ste.mean(), delta_n_tensor
+
+        return N_star_int, H_spec.mean(), N_ste.mean(), delta_n_tensor
 
 
 class N9_ChebyshevVandermondeCarpim(nn.Module):
