@@ -337,13 +337,22 @@ class N5_CevapSuzucu_AltAg(nn.Module):
 class N6_KohomolojikAktor_AltAg(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon, e_coboundary_dim: int):
         super().__init__()
-        in_features = 4 * config.d_v + config.d_q + config.d_a
-        self.net = nn.Sequential(
-            nn.Linear(in_features, config.d_h * 2),
-            nn.LayerNorm(config.d_h * 2),
-            nn.GELU(),
-            nn.Linear(config.d_h * 2, config.d_h)
-        )
+        d_v, d_q, d_a, d_h = config.d_v, config.d_q, config.d_a, config.d_h
+        self.superpoz_w_k_adj = nn.Linear(d_v, d_h * 2, bias=False)
+        self.superpoz_w_lap_grad = nn.Linear(d_v, d_h * 2, bias=False)
+        self.superpoz_w_d_disc = nn.Linear(d_v, d_h * 2, bias=False)
+        self.superpoz_w_e_dir = nn.Linear(d_v, d_h * 2, bias=False)
+        self.superpoz_w_q = nn.Linear(d_q, d_h * 2, bias=False)
+        self.superpoz_w_a = nn.Linear(d_a, d_h * 2, bias=False)
+        self.superpoz_bias = nn.Parameter(torch.zeros(d_h * 2))
+        for _lin in (
+            self.superpoz_w_k_adj, self.superpoz_w_lap_grad, self.superpoz_w_d_disc,
+            self.superpoz_w_e_dir, self.superpoz_w_q, self.superpoz_w_a
+        ):
+            nn.init.orthogonal_(_lin.weight)
+        self.norm = nn.LayerNorm(d_h * 2)
+        self.act = nn.GELU()
+        self.out_proj = nn.Linear(d_h * 2, d_h)
         self.config = config
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
@@ -352,11 +361,29 @@ class N6_KohomolojikAktor_AltAg(nn.Module):
         d_q = getattr(self.config, 'd_q', 64)
         d_a = getattr(self.config, 'd_a', 64)
         d_h = getattr(self.config, 'd_h', 64)
-        in_features = 4 * d_v + d_q + d_a
-        return vram_bayt_tahmin_et(B, in_features) + vram_bayt_tahmin_et(B, d_h * 2) + vram_bayt_tahmin_et(B, d_h)
+        return vram_bayt_tahmin_et(B, d_h * 2) + vram_bayt_tahmin_et(B, d_h * 2) + vram_bayt_tahmin_et(B, d_h)
 
-    def forward(self, bilesik_girdi: torch.Tensor) -> torch.Tensor:
-        return self.net(bilesik_girdi)
+    def forward(
+        self,
+        k_adj_field: torch.Tensor,
+        lap_grad_field: torch.Tensor,
+        d_disc_field: torch.Tensor,
+        e_dir_field: torch.Tensor,
+        q_r: torch.Tensor,
+        a_r: torch.Tensor
+    ) -> torch.Tensor:
+        y_sup = (
+            self.superpoz_w_k_adj(k_adj_field)
+            + self.superpoz_w_lap_grad(lap_grad_field)
+            + self.superpoz_w_d_disc(d_disc_field)
+            + self.superpoz_w_e_dir(e_dir_field)
+            + self.superpoz_w_q(q_r)
+            + self.superpoz_w_a(a_r)
+            + self.superpoz_bias
+        )
+        y = self.norm(y_sup)
+        y = self.act(y)
+        return self.out_proj(y)
 
 
 class Maarif_NedenselSuzgec(nn.Module):
@@ -1233,7 +1260,19 @@ class N6_KohomolojikAktor(nn.Module):
         self.lap_proj_layer = nn.Linear(V_dim, d_v)
         self.disc_proj_layer = nn.Linear(1, d_v)
         self.dir_proj_layer = nn.Linear(1, d_v)
-        self.abduction_proj = nn.Linear(4 * d_v + d_q + d_a, d_h)
+
+        self.superpoz_w_k_adj = nn.Linear(d_v, d_h, bias=False)
+        self.superpoz_w_lap_grad = nn.Linear(d_v, d_h, bias=False)
+        self.superpoz_w_d_disc = nn.Linear(d_v, d_h, bias=False)
+        self.superpoz_w_e_dir = nn.Linear(d_v, d_h, bias=False)
+        self.superpoz_w_q = nn.Linear(d_q, d_h, bias=False)
+        self.superpoz_w_a = nn.Linear(d_a, d_h, bias=False)
+        self.superpoz_bias = nn.Parameter(torch.zeros(d_h))
+        for _lin in (
+            self.superpoz_w_k_adj, self.superpoz_w_lap_grad, self.superpoz_w_d_disc,
+            self.superpoz_w_e_dir, self.superpoz_w_q, self.superpoz_w_a
+        ):
+            nn.init.orthogonal_(_lin.weight)
 
     def update_operators(self, D0_op: torch.Tensor, Delta0_op: Optional[torch.Tensor] = None) -> None:
         if "D0" in self._buffers:
@@ -1390,13 +1429,19 @@ class N6_KohomolojikAktor(nn.Module):
         else:
             e_dir_field = torch.zeros((B, d_v), device=x_r.device, dtype=x_r.dtype)
 
-        
-        bilesik_girdi = torch.cat([K_adj_field, lap_grad_field, d_disc_field, e_dir_field, q_r, a_r], dim=-1)
-
         if self.alt_ag is not None:
-            synthetic_state = self.alt_ag(bilesik_girdi)
+            synthetic_state = self.alt_ag(K_adj_field, lap_grad_field, d_disc_field, e_dir_field, q_r, a_r)
         else:
-            synthetic_state = self.abduction_proj(bilesik_girdi)
+            y_sup = (
+                self.superpoz_w_k_adj(K_adj_field)
+                + self.superpoz_w_lap_grad(lap_grad_field)
+                + self.superpoz_w_d_disc(d_disc_field)
+                + self.superpoz_w_e_dir(e_dir_field)
+                + self.superpoz_w_q(q_r)
+                + self.superpoz_w_a(a_r)
+                + self.superpoz_bias
+            )
+            synthetic_state = F.gelu(y_sup)
 
         return E8_SentetikAraDurum(synthetic_state=synthetic_state)
 
