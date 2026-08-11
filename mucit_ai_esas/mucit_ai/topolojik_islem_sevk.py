@@ -58,11 +58,20 @@ class TopolojikIslemSevk:
         """
         e3_sinir = n2_module.forward(e2_byte, x_initial=x_initial, mode='train')
 
-        if hasattr(e3_sinir, 'D1') and e3_sinir.D1 is not None and torch.cuda.is_available() and self.idareci.world_size > 1:
+        if (
+            hasattr(e3_sinir, 'D1') and e3_sinir.D1 is not None and torch.cuda.is_available()
+            # KUSUR-35 düzeltmesi: tek-GPU modunda self.idareci None olabilir;
+            # None üzerinde .world_size erişimi AttributeError fırlatırdı.
+            and self.idareci is not None and self.idareci.world_size > 1
+        ):
             rank = torch.cuda.current_device()
             sol_rank = (rank - 1) % self.idareci.world_size
             sag_rank = (rank + 1) % self.idareci.world_size
-            _, _ = NcclIletisimHatti.sinir_veri_takasi_halo_swap(e3_sinir.D1, sol_rank, sag_rank)
+            # KUSUR-34 düzeltmesi: D1 sınır operatörü bir dilimleme/transpose sonucu
+            # non-contiguous olabilir; isend/irecv non-contiguous tensörlerle tanımsız
+            # davranışa yol açabileceğinden önce contiguous hale getirilir.
+            halo_girdi = e3_sinir.D1 if e3_sinir.D1.is_contiguous() else e3_sinir.D1.contiguous()
+            _, _ = NcclIletisimHatti.sinir_veri_takasi_halo_swap(halo_girdi, sol_rank, sag_rank)
 
         D0_op, Delta_0_op = laplasyen_insa_module.insa_et(e3_sinir, n2_module.config if hasattr(n2_module, 'config') else {})
         return e2_byte, e3_sinir, D0_op, Delta_0_op
@@ -96,7 +105,7 @@ class TopolojikIslemSevk:
         """
         e11_gomulu = n9_vandermonde.forward(e10_kulli, T_matrix)
 
-        if torch.cuda.is_available() and self.idareci.world_size > 1:
+        if torch.cuda.is_available() and self.idareci is not None and self.idareci.world_size > 1:
             NcclIletisimHatti.kuresel_indirgeme_allreduce(e11_gomulu.X_output, op_type="MEAN")
 
         e12_olasilik = n10_sozluk.forward(e11_gomulu)
@@ -114,8 +123,14 @@ class TopolojikIslemSevk:
         All-Reduce(SUM) ile toplanır. Bellek matrisi güncellemesi M^{(r)} lokal şardlar üzerinde
         O(1) bellek ile mühürlenir.
         """
+        # KUSUR-32 düzeltmesi: sorgu_q ve cevap_a farklı cihazlarda olabilir
+        # (örn. biri CPU'ya tahliye edilmişse); bmm öncesi cevap_a, sorgu_q'nun
+        # cihazına hizalanır.
+        if cevap_a.device != sorgu_q.device:
+            cevap_a = cevap_a.to(sorgu_q.device)
+
         part_product = torch.bmm(sorgu_q.unsqueeze(1), cevap_a.unsqueeze(2)).squeeze()
-        if torch.cuda.is_available() and self.idareci.world_size > 1:
+        if torch.cuda.is_available() and self.idareci is not None and self.idareci.world_size > 1:
             NcclIletisimHatti.kuresel_indirgeme_allreduce(part_product, op_type="SUM")
         return part_product
 
