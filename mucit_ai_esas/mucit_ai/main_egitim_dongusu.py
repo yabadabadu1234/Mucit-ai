@@ -620,6 +620,8 @@ def _tekil_egitim_adimi_icra(
         laplasyen_insa.insa_et, e3_sinir_sabit, e4_lif.phi_matrisleri,
         modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr, hesapla_yogun_delta0=True
     )
+    if hasattr(laplasyen_insa, 'tasintilar_cihaza') and D0_op_sabit.device != x_start_grouped.device:
+        D0_op_sabit, Delta_0_sabit = laplasyen_insa.tasintilar_cihaza(D0_op_sabit, Delta_0_sabit, x_start_grouped.device)
     if hasattr(n6_aktor, 'update_operators'):
 
 
@@ -702,6 +704,16 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
     )
 
+    _c_defect_ham_faz3 = torch.matmul(mevcut_durum.x_r, D0_op_sabit.T)
+    _krylov_adjoint_faz3 = AcilDurumOomYakalayiciVeKurtarici(
+        n6_aktor.VektorelChebyshevKrylovCozumu, _c_defect_ham_faz3, D0_op_sabit,
+        modul_nesnesi=n6_aktor, takas_mgr=takas_mgr, P=5
+    )
+    _kayip_krylov_tutarlilik_vec = F.mse_loss(
+        _krylov_adjoint_faz3, mevcut_durum.x_r.detach(), reduction='none'
+    ).mean(dim=-1)
+    del _c_defect_ham_faz3
+
     e15_bellek = E15_GuncellenmisBellekMatrisi(updated_memory=M_current)
     logger.debug(f"  [E15_GuncellenmisBellekMatrisi] Adım {current_step} güncel bellek matrisi normu: {float(e15_bellek.updated_memory.detach().norm().item()):.6f}")
 
@@ -743,6 +755,13 @@ def _tekil_egitim_adimi_icra(
             + 0.1 * F.mse_loss(_x_yesil_free, _hedef_x_detached, reduction='none').mean(dim=-1)
         )
 
+        del _syn_seq_stack, _x_blelloch_traj, _x_blelloch_traj_bnd, _x_blelloch_smoothed_bnd
+        del _x_blelloch_final, _x_analitik_final, _x_yesil_free, _hedef_x_detached
+        del _n7_syn_states_seq_list
+        import gc as _gc_blelloch
+        _gc_blelloch.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
 
     _R_norm = float(max(1, config.R))
     _faz3_hedef_params = list(n6_aktor.parameters()) + list(n4_sorgu.parameters()) + list(n5_cevap.parameters())
@@ -750,6 +769,8 @@ def _tekil_egitim_adimi_icra(
     g_faz3_uyumsuzluk = _grad_anlik_kopyala()
     vjp_cerrahi_enjekte_et(F.relu(e_vec3) / _R_norm, _faz3_hedef_params, retain_graph=True)
     g_faz3_dirichlet = _grad_anlik_kopyala()
+    vjp_cerrahi_enjekte_et(_kayip_krylov_tutarlilik_vec, list(n6_aktor.parameters()) + _faz3_hedef_params, retain_graph=True)
+    g_faz3_krylov = _grad_anlik_kopyala()
     vjp_cerrahi_enjekte_et(_n7_blelloch_kayip_vec, list(n7_cozucu.parameters()) + _faz3_hedef_params)
     g_faz3_blelloch = _grad_anlik_kopyala()
     vram_denetci.yokla_ve_raporla("LOCO_Faz3_GrafSilindi", adim_no=current_step)
@@ -827,6 +848,12 @@ def _tekil_egitim_adimi_icra(
     kayip_cevapsiz = -torch.log(p_target_cevapsiz + 1e-9).mean(dim=-1)
     kayip_cevapli = -torch.log(p_target_cevapli + 1e-9).mean(dim=-1)
 
+    del e10_cevapsiz, e11_cevapsiz, e12_olasilik_cevapsiz, p_target_cevapsiz, p_target_cevapli
+    import gc as _gc_cevapsiz
+    _gc_cevapsiz.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
     son_q = sorgu_q_son
     son_a = cevap_a_son
     
@@ -862,8 +889,13 @@ def _tekil_egitim_adimi_icra(
     (l_var_vec, l_cov_vec, l_rec_vec), metrikler_vicreg = AcilDurumOomYakalayiciVeKurtarici(
         vicreg_kriteri, x=e9_guncel_detached.x_next, z=e11_gomulu.X_output, modul_nesnesi=vicreg_kriteri, takas_mgr=takas_mgr
     )
-    
-    
+
+    del e12_olasilik, e11_gomulu
+    import gc as _gc_olasilik
+    _gc_olasilik.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
     _n10_hedef_params = list(n10_sozluk.parameters())
     _vicreg_hedef_params = list(n9_vandermonde.parameters()) + list(n8_chebyshev.parameters())
     vjp_cerrahi_enjekte_et(kayip_grpo_vec, _n10_hedef_params, retain_graph=True)
@@ -935,7 +967,7 @@ def _tekil_egitim_adimi_icra(
     
     shard_gradyanlari = [
         g_faz2_uyumsuzluk, g_faz2_dirichlet,
-        g_faz3_uyumsuzluk, g_faz3_dirichlet, g_faz3_blelloch,
+        g_faz3_uyumsuzluk, g_faz3_dirichlet, g_faz3_krylov, g_faz3_blelloch,
         g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec,
         g_spektral, g_sorgu, g_cumle_keyfiyet,
     ]
@@ -977,7 +1009,7 @@ def _tekil_egitim_adimi_icra(
 
     
     del shard_gradyanlari
-    del g_faz2_uyumsuzluk, g_faz2_dirichlet, g_faz3_uyumsuzluk, g_faz3_dirichlet, g_faz3_blelloch
+    del g_faz2_uyumsuzluk, g_faz2_dirichlet, g_faz3_uyumsuzluk, g_faz3_dirichlet, g_faz3_krylov, g_faz3_blelloch
     del g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec, g_spektral, g_sorgu, g_cumle_keyfiyet
     import gc as _gc4
     _gc4.collect()
@@ -1005,7 +1037,8 @@ def _tekil_egitim_adimi_icra(
     
     _kayip_bileseni_listesi = [
         d_vec2.mean(), F.relu(e_vec2).mean(),
-        (d_vec3 / _R_norm).mean(), (F.relu(e_vec3) / _R_norm).mean(), _n7_blelloch_kayip_vec.mean(),
+        (d_vec3 / _R_norm).mean(), (F.relu(e_vec3) / _R_norm).mean(),
+        _kayip_krylov_tutarlilik_vec.mean(), _n7_blelloch_kayip_vec.mean(),
         kayip_grpo_vec.mean(), l_var_vec.mean(), l_cov_vec.mean(), l_rec_vec.mean(),
         kayip_spektral_vec.mean(), E_sorgu_canli.mean(), kayip_cumle_keyfiyet_vec.mean(),
     ]
