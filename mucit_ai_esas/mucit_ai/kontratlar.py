@@ -3208,11 +3208,6 @@ def anlasmali_vram_guvencesi_al(
 ) -> torch.device:
     cpu_device = torch.device('cpu')
     if not torch.cuda.is_available():
-        if hasattr(modul_nesnesi, 'to'):
-            try:
-                modul_nesnesi._vram_idare_zorunlu_cihaz = cpu_device
-            except Exception:
-                pass
         return cpu_device
 
     gpu_device = torch.device('cuda')
