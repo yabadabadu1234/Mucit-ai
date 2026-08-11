@@ -1155,9 +1155,19 @@ class N2_TopoXHucreOlusumu(nn.Module):
                 e_jk = edge_map[(j, k)]
                 e_ik = edge_map[(i, k)]
                 # D1[e, node]: üçgen köşe düğüm indeksleri i, j, k kullanılır (v değil)
-                w_ij = torch.abs(D1[e_ij, j]) if D1[e_ij, j] != 0 else torch.tensor(1.0, device=device)
-                w_jk = torch.abs(D1[e_jk, k]) if D1[e_jk, k] != 0 else torch.tensor(1.0, device=device)
-                w_ik = torch.abs(D1[e_ik, k]) if D1[e_ik, k] != 0 else torch.tensor(1.0, device=device)
+                # KAPSAMLI DENETİM (madde 15): `D1[...] != 0` bir 0-boyutlu (skaler) CUDA
+                # tensörünü Python `if`e sokuyordu — bu, __bool__ çağrısı üzerinden HER
+                # üçgen için bir host<->device senkronizasyon durması (CUDA stream stall)
+                # zorluyordu, tam da bu dosyanın başka yerlerinde açıkça kaçınılan bir
+                # örüntü ("Sıfır CUDA stream stall" tasarım hedefi). torch.where hem bu
+                # senkronizasyonu ortadan kaldırır hem de matematiksel olarak birebir
+                # aynı ileri-besleme/geri-yayılım davranışını korur (D1==0 durumunda sabit
+                # 1.0'a göre yerel gradyan zaten sıfırdır — bu, sparsemax'ın kasıtlı ürettiği
+                # sert sıfırları "tam ağırlık" varsay diye yorumlayan kasıtlı bir tasarım
+                # tercihidir, hata değil).
+                w_ij = torch.where(D1[e_ij, j] != 0, torch.abs(D1[e_ij, j]), torch.ones((), device=device, dtype=D1.dtype))
+                w_jk = torch.where(D1[e_jk, k] != 0, torch.abs(D1[e_jk, k]), torch.ones((), device=device, dtype=D1.dtype))
+                w_ik = torch.where(D1[e_ik, k] != 0, torch.abs(D1[e_ik, k]), torch.ones((), device=device, dtype=D1.dtype))
                 D2[f_idx, e_ij] = w_jk * w_ik
                 D2[f_idx, e_jk] = w_ij * w_ik
                 D2[f_idx, e_ik] = -1.0 * w_ij * w_jk
@@ -1179,9 +1189,19 @@ class N2_TopoXHucreOlusumu(nn.Module):
                 e_ij = edge_map[(i, j)]
                 e_jk = edge_map[(j, k)]
                 e_ik = edge_map[(i, k)]
-                w_ij = torch.abs(D1[e_ij, j]) if D1[e_ij, j] != 0 else torch.tensor(1.0, device=device)
-                w_jk = torch.abs(D1[e_jk, k]) if D1[e_jk, k] != 0 else torch.tensor(1.0, device=device)
-                w_ik = torch.abs(D1[e_ik, k]) if D1[e_ik, k] != 0 else torch.tensor(1.0, device=device)
+                # KAPSAMLI DENETİM (madde 15): `D1[...] != 0` bir 0-boyutlu (skaler) CUDA
+                # tensörünü Python `if`e sokuyordu — bu, __bool__ çağrısı üzerinden HER
+                # üçgen için bir host<->device senkronizasyon durması (CUDA stream stall)
+                # zorluyordu, tam da bu dosyanın başka yerlerinde açıkça kaçınılan bir
+                # örüntü ("Sıfır CUDA stream stall" tasarım hedefi). torch.where hem bu
+                # senkronizasyonu ortadan kaldırır hem de matematiksel olarak birebir
+                # aynı ileri-besleme/geri-yayılım davranışını korur (D1==0 durumunda sabit
+                # 1.0'a göre yerel gradyan zaten sıfırdır — bu, sparsemax'ın kasıtlı ürettiği
+                # sert sıfırları "tam ağırlık" varsay diye yorumlayan kasıtlı bir tasarım
+                # tercihidir, hata değil).
+                w_ij = torch.where(D1[e_ij, j] != 0, torch.abs(D1[e_ij, j]), torch.ones((), device=device, dtype=D1.dtype))
+                w_jk = torch.where(D1[e_jk, k] != 0, torch.abs(D1[e_jk, k]), torch.ones((), device=device, dtype=D1.dtype))
+                w_ik = torch.where(D1[e_ik, k] != 0, torch.abs(D1[e_ik, k]), torch.ones((), device=device, dtype=D1.dtype))
                 D2[f_idx, e_ij] = w_jk * w_ik
                 D2[f_idx, e_jk] = w_ij * w_ik
                 D2[f_idx, e_ik] = -1.0 * w_ij * w_jk
