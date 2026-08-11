@@ -2069,8 +2069,7 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 while logits_chunk.dim() < 3:
                     logits_chunk = logits_chunk.unsqueeze(0)
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
-                logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
-                logits_norm = (logits_chunk - logits_mean.to(device=logits_chunk.device)) / (logits_std.to(device=logits_chunk.device) + 1e-6)
+                logits_norm = logits_chunk - logits_mean.to(device=logits_chunk.device)
                 P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1) 
                 
                 
@@ -2106,8 +2105,7 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 while logits_chunk.dim() < 3:
                     logits_chunk = logits_chunk.unsqueeze(0)
                 logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
-                logits_std = torch.std(logits_chunk, dim=-1, keepdim=True, correction=0)
-                logits_norm = (logits_chunk - logits_mean.to(device=logits_chunk.device)) / (logits_std.to(device=logits_chunk.device) + 1e-6)
+                logits_norm = logits_chunk - logits_mean.to(device=logits_chunk.device)
                 P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1).transpose(1, 2)
                 
                 
