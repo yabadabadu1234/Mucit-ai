@@ -660,31 +660,38 @@ class NPZCheckpointManager:
                 f"path={path} step={step}"
             )
 
-        data = np.load(resolved, allow_pickle=False)
+        # KAPSAMLI DENETİM (madde 22): np.load() bir NpzFile döndürür — bu, açık bir zip
+        # dosya tanıtıcısını (fd) sarmalar; önceden ne `with` ne `.close()` çağrılıyordu.
+        # load() her checkpoint resume'da ve verify()/list_checkpoints() gibi periyodik
+        # izleme çağrılarında tekrar tekrar çağrıldığından, fd'ler işletim sistemi
+        # limitine kadar birikip sonraki dosya açmalarının (bir sonraki checkpoint
+        # kaydı dahil) "Too many open files" ile başarısız olmasına yol açabilirdi.
+        # `with` bloğu içinde indekslenen diziler (data["..."]) zaten tam bellek içi
+        # kopyalardır, bloktan çıkıldıktan sonra da güvenle kullanılabilir.
+        with np.load(resolved, allow_pickle=False) as data:
+            meta_path = self._meta_path(resolved)
+            meta_dict = {}
+            if os.path.isfile(meta_path):
+                try:
+                    with open(meta_path, "r", encoding="utf-8") as f:
+                        meta_dict = json.load(f)
+                        if "hiyerarsik_hafiza" in meta_dict:
+                            self.hafiza.from_dict(meta_dict["hiyerarsik_hafiza"])
+                except Exception as exc:
+                    logger.warning(f"  [Ckpt] Meta okunurken hata: {exc}")
 
-        meta_path = self._meta_path(resolved)
-        meta_dict = {}
-        if os.path.isfile(meta_path):
-            try:
-                with open(meta_path, "r", encoding="utf-8") as f:
-                    meta_dict = json.load(f)
-                    if "hiyerarsik_hafiza" in meta_dict:
-                        self.hafiza.from_dict(meta_dict["hiyerarsik_hafiza"])
-            except Exception as exc:
-                logger.warning(f"  [Ckpt] Meta okunurken hata: {exc}")
-
-        result: Dict[str, Any] = {
-            "path":              resolved,
-            "token_offset":      int(data["token_offset"][0]) if "token_offset" in data else 0,
-            "step":              int(data["step"][0])          if "step"         in data else 0,
-            "loss_history":      list(data["loss_history"])    if "loss_history" in data else [],
-            "smw_M_matrix":      data["smw_M_matrix"]          if "smw_M_matrix" in data else None,
-            "smw_R_matrix":      data["smw_R_matrix"]          if "smw_R_matrix" in data else None,
-            "adam_m":            data["adam_m"].astype(np.float32) if "adam_m" in data else None,
-            "adam_v":            data["adam_v"].astype(np.float32) if "adam_v" in data else None,
-            "hiyerarsik_hafiza": self.hafiza.to_dict(),
-            "model_params":      {k[6:]: data[k] for k in data.files if k.startswith("param_")}
-        }
+            result: Dict[str, Any] = {
+                "path":              resolved,
+                "token_offset":      int(data["token_offset"][0]) if "token_offset" in data else 0,
+                "step":              int(data["step"][0])          if "step"         in data else 0,
+                "loss_history":      list(data["loss_history"])    if "loss_history" in data else [],
+                "smw_M_matrix":      data["smw_M_matrix"]          if "smw_M_matrix" in data else None,
+                "smw_R_matrix":      data["smw_R_matrix"]          if "smw_R_matrix" in data else None,
+                "adam_m":            data["adam_m"].astype(np.float32) if "adam_m" in data else None,
+                "adam_v":            data["adam_v"].astype(np.float32) if "adam_v" in data else None,
+                "hiyerarsik_hafiza": self.hafiza.to_dict(),
+                "model_params":      {k[6:]: data[k] for k in data.files if k.startswith("param_")}
+            }
 
         logger.info(
             f"  [Ckpt] Yüklendi: {resolved} | "
@@ -758,17 +765,19 @@ class NPZCheckpointManager:
             return result
         result["size_mb"] = round(os.path.getsize(path) / (1024 * 1024), 2)
         try:
-            data = np.load(path, allow_pickle=False)
-            required = ["token_offset", "step"]
-            for key in required:
-                if key not in data:
-                    result["errors"].append(f"Eksik alan: {key}")
-            if result["size_mb"] > self.max_mb:
-                result["errors"].append(
-                    f"Boyut sınırı aşıldı: {result['size_mb']:.1f} MB > {self.max_mb} MB"
-                )
-            result["valid"] = len(result["errors"]) == 0
-            result["keys"]  = list(data.keys())
+            # KAPSAMLI DENETİM (madde 22): bkz. load()'daki aynı düzeltme — fd sızıntısını
+            # önlemek için `with` kullanılıyor.
+            with np.load(path, allow_pickle=False) as data:
+                required = ["token_offset", "step"]
+                for key in required:
+                    if key not in data:
+                        result["errors"].append(f"Eksik alan: {key}")
+                if result["size_mb"] > self.max_mb:
+                    result["errors"].append(
+                        f"Boyut sınırı aşıldı: {result['size_mb']:.1f} MB > {self.max_mb} MB"
+                    )
+                result["valid"] = len(result["errors"]) == 0
+                result["keys"]  = list(data.keys())
         except Exception as exc:
             result["errors"].append(str(exc))
         return result
