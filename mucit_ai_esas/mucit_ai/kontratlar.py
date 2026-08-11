@@ -3372,6 +3372,10 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         # 5. Etkin Deterministik Vektörel Katsayılar
         alpha_effective = torch.abs(v_det) / (torch.abs(v_det).sum() + 1e-8)
 
+        # DÜZELTME: gc.collect() empty_cache() ÖNCESİ çalışmalı (ölü tensör referansları
+        # çöp toplayıcı tarafından düşürülmeden allocator o belleği tanımaz).
+        import gc as _gc_alpha
+        _gc_alpha.collect()
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
@@ -3427,7 +3431,7 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
 
         if n == 1:
             # Tek faz: doğrudan unflatten edip adım at
-            optimizer.zero_grad()
+            optimizer.zero_grad(set_to_none=True)
             imlec = 0
             for k, p in enumerate(trainable_params):
                 if p.requires_grad:
@@ -3591,7 +3595,7 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         # anında ek n×P belleği bulmak zorunda kalıyordu. Açıkça serbest bırakılır.
         del pc_vektorleri, duzles_faz_vektorleri, G
 
-        optimizer.zero_grad()
+        optimizer.zero_grad(set_to_none=True)
         imlec = 0
         for p in trainable_params:
             p_numel = p.numel()
@@ -3673,6 +3677,11 @@ class Hafiza_Izleyici_ve_VRAM_Denetci:
                 f"CRITICAL VRAM UYARISI! [{dugum_adi}] adımında VRAM %{self.kritik_esik_yuzde*100:.1f} eşiğini aştı "
                 f"({tahsis_mb:.2f} MB > {self.esik_mb:.2f} MB). Acil VRAM Temizliği..."
             )
+            # DÜZELTME: gc.collect() empty_cache() ÖNCESİ çalışmalı — Python çöp toplayıcısı
+            # ölü tensör referanslarını düşürmeden PyTorch'un allocator'ı o belleği "boşta"
+            # sayamaz; empty_cache() tek başına çoğunlukla hiçbir şey serbest bırakmaz.
+            import gc as _gc_denetci
+            _gc_denetci.collect()
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
 
