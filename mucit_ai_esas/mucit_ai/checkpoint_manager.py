@@ -760,9 +760,31 @@ class NPZCheckpointManager:
         if path is not None and os.path.isfile(path):
             return path
         if step is not None:
+            # DÜZELTME (madde 28): _npz_path(step) parametresini SESSİZCE görmezden
+            # gelip her zaman "checkpoint_latest.npz" döndürüyordu (bu depolama şeması
+            # yalnızca latest/best adında iki dönen dosya tutuyor, step-bazlı ayrı
+            # dosyalar hiç yazılmıyor). os.path.isfile(p) çoğu zaman True dönerdi
+            # (çünkü checkpoint_latest.npz genelde vardır) — böylece çağıran taraf
+            # BELİRLİ bir step'i istediğinde, o step'e ait olmayan (örn. daha sonraki)
+            # bir checkpoint'i sessizce, hatasız biçimde geri alırdı. Artık adayın
+            # meta dosyasındaki gerçek step değeri istenenle karşılaştırılıyor;
+            # eşleşmezse bu yol kullanılmıyor ve normal fallback'e devam ediliyor.
             p = self._npz_path(step)
             if os.path.isfile(p):
-                return p
+                meta_path = self._meta_path(p)
+                kayitli_step = None
+                if os.path.isfile(meta_path):
+                    try:
+                        with open(meta_path, "r", encoding="utf-8") as f:
+                            kayitli_step = json.load(f).get("step")
+                    except Exception:
+                        kayitli_step = None
+                if kayitli_step == step:
+                    return p
+                logger.debug(
+                    f"  [Ckpt] step={step} istendi ama {p} dosyasının kayıtlı "
+                    f"step'i {kayitli_step} — eşleşmiyor, normal aramaya devam ediliyor."
+                )
         if self._history:
             return self._history[-1]
         return self.get_latest()
