@@ -4266,6 +4266,22 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
             logger.error(f"[Acil Durum OOM Kurtarıcı] CPU üzerinde tekrar deneme de başarısız oldu: {cpu_exc}")
             raise
 
+        # DÜZELTME (madde 20): modul_nesnesi CPU'da BIRAKILMAMALI — bu bir nn.Module ise
+        # parametreleri optimizer.state[p] (AdamW exp_avg/exp_avg_sq) tarafından GPU'da
+        # takip ediliyor olabilir; modül kalıcı olarak CPU'da unutulursa bir sonraki
+        # optimizer.step() çağrısında "exp_avg is on cuda, param is on cpu" ile çöker.
+        # Sonuç orijinal cihaza taşındıktan sonra modülün kendisi de aynı cihaza geri alınır.
+        if modul_nesnesi is not None and geri_donus_cihazi != cpu_device:
+            if hasattr(modul_nesnesi, 'to'):
+                try:
+                    modul_nesnesi.to(geri_donus_cihazi)
+                except Exception:
+                    pass
+            try:
+                modul_nesnesi._vram_idare_zorunlu_cihaz = geri_donus_cihazi
+            except Exception:
+                pass
+
         return girdi_cihaza_tasi(cpu_sonuc, geri_donus_cihazi)
 
 
