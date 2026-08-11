@@ -69,8 +69,6 @@ if __name__ == "__main__":
     manifest_olustur()
     from main_egitim_dongusu import Main_EgitimYurutucu
     Main_EgitimYurutucu(manifest_yolu=MANIFEST_PATH)
-    from kulli_gpu.nvme_takas_yoneticisi import NvmeTakasYoneticisi
-    NvmeTakasYoneticisi().temizle()
     logger.info("MUCIT AI EGITIMI TAMAMLANDI")
 PYEOF
 

@@ -29,7 +29,7 @@ import gc
 import contextlib
 from typing import Dict, Any, List, Tuple, Optional, Union
 
-from kulli_gpu import CpuAnaIdareci, NvmeTakasYoneticisi
+from kulli_gpu import NvmeTakasYoneticisi
 from mucit_ai.topolojik_islem_sevk import TopolojikIslemSevk
 
 import kontratlar
@@ -955,7 +955,7 @@ def _tekil_egitim_adimi_icra(
     return kayip_val, L_arc_val, dirichlet_energy, d_discrepancy
 
 
-def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json", idareci: Optional[Any] = None) -> None:
+def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json") -> None:
     
     
     logger.info("================================================================================")
@@ -1100,6 +1100,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             bekle=True
                         )
                         npz_mgr.save_hafiza_state()
+                        if takas_mgr is not None and hasattr(takas_mgr, "kapat"):
+                            takas_mgr.kapat()
                         logger.info("  [EMNİYET ZAMAN LİMİTİ] Tüm model ve hafıza durumu başarıyla kaydedildi. Oturum emniyetle kapatılıyor.")
                         logger.info("================================================================================")
                         return
@@ -1219,6 +1221,9 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
         is_best=False,
         bekle=True
     )
+
+    if takas_mgr is not None and hasattr(takas_mgr, "kapat"):
+        takas_mgr.kapat()
 
     logger.info("================================================================================")
     logger.info("EĞİTİM DÖNGÜSÜ VE TÜM VERİ KÜMELERİ BAŞARIYLA TAMAMLANDI")

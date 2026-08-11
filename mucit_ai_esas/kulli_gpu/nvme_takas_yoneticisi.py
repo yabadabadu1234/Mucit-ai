@@ -507,3 +507,18 @@ class NvmeTakasYoneticisi:
     def temizle(self, agresif: bool = False) -> None:
         GuvenliVramVeTmpSupurgesi.supur(swap_dir=self.swap_dir, eskime_esigi_sn=(0.0 if agresif else None))
         logger.info(f"[NvmeTakasYoneticisi] Temizlik tamamlandi. Toplam Tahliye: {self.tahliye_sayaci}, Geri Cagirma: {self.geri_cagirma_sayaci}")
+
+    def kapat(self, timeout: float = 30.0) -> None:
+        havuz = getattr(self.offload_hook, "_yazma_havuzu", None)
+        if havuz is not None:
+            try:
+                havuz.shutdown(wait=True, cancel_futures=False)
+                logger.info("[NvmeTakasYoneticisi] Yazma iş parçacığı havuzu kapatıldı.")
+            except Exception as exc:
+                logger.warning(f"[NvmeTakasYoneticisi] İş parçacığı havuzu kapatılırken uyarı: {exc}")
+
+    def __del__(self) -> None:
+        try:
+            self.kapat(timeout=5.0)
+        except Exception:
+            pass
