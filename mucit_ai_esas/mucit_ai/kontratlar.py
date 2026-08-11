@@ -690,19 +690,6 @@ class Bellek_BaglamYoneticisi(nn.Module):
         return M_next
 
 
-class Riyazi_StiefelManifolduIzdusumu:
-    def __init__(self):
-        pass
-
-    def izdüsür(self, phi_dict: Union[nn.ParameterDict, torch.Tensor, nn.Parameter, dict]):
-        with torch.no_grad():
-            if isinstance(phi_dict, (nn.ParameterDict, dict)):
-                for key in phi_dict:
-                    phi_dict[key].copy_(stiefel_qr_projection(phi_dict[key].data))
-            elif isinstance(phi_dict, (torch.Tensor, nn.Parameter)):
-                phi_dict.copy_(stiefel_qr_projection(phi_dict.data))
-
-
 class N1_HibritByteTokenAyristirici(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
