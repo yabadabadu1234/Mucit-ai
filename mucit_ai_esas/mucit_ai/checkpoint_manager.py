@@ -50,6 +50,22 @@ def _flatten_nested_state_dict(st: Dict[str, Any], prefix: str = "") -> Dict[str
     return flat
 
 
+def _tensor_to_numpy_safe(tensor: Any) -> np.ndarray:
+    """
+    DÜZELTME (KUSUR 1): `tensor.detach().cpu().numpy()` çağrısı bfloat16 dtype'lı
+    tensörlerde NumPy'nin bfloat16'yı doğrudan desteklememesi nedeniyle
+    `TypeError: Got unsupported ScalarType BFloat16` ile patlar. Bu, N1-N16
+    modüllerinin state_dict()'i (save/save_pytorch_model) her çağrıldığında —
+    gradyan projeksiyonu (kontratlar.py) bellek tasarrufu için bfloat16
+    kullandığından bazı parametre/tampon tensörleri bu dtype'ta olabilir —
+    checkpoint kaydını tamamen çökertebilirdi. Artık bfloat16 tensörler NumPy'ye
+    aktarılmadan önce float32'ye yükseltiliyor; diğer dtype'lar etkilenmiyor.
+    """
+    if torch is not None and hasattr(tensor, "dtype") and tensor.dtype == torch.bfloat16:
+        tensor = tensor.to(torch.float32)
+    return tensor.detach().cpu().numpy()
+
+
 # ===========================================================================
 # SABİTLER
 # ===========================================================================
@@ -277,7 +293,7 @@ class NPZCheckpointManager:
                 sd = model.state_dict()
                 for param_adi, tensor in sd.items():
                     if hasattr(tensor, "detach"):
-                        payload[f"param_{param_adi}"] = tensor.detach().cpu().numpy()
+                        payload[f"param_{param_adi}"] = _tensor_to_numpy_safe(tensor)
             except Exception as e:
                 logger.debug(f"state_dict okuma uyarısı: {e}")
         elif isinstance(model, dict):
@@ -285,7 +301,7 @@ class NPZCheckpointManager:
                 if torch is not None and hasattr(mod, "state_dict"):
                     for param_adi, tensor in mod.state_dict().items():
                         if hasattr(tensor, "detach"):
-                            payload[f"param_{mod_name}.{param_adi}"] = tensor.detach().cpu().numpy()
+                            payload[f"param_{mod_name}.{param_adi}"] = _tensor_to_numpy_safe(tensor)
 
         # 2. SMW Biyortogonal Bellek Matrislerini Topla (Rükn 5)
         # DÜZELTME (30 hatalık kapsamlı denetim, madde 3): `model`, canlı eğitim yolunda
@@ -434,12 +450,12 @@ class NPZCheckpointManager:
         if torch is not None:
             if hasattr(model, 'state_dict'):
                 for k, v in model.state_dict().items():
-                    extra_weights[f"param_{k}"] = v.detach().cpu().numpy()
+                    extra_weights[f"param_{k}"] = _tensor_to_numpy_safe(v)
             elif isinstance(model, dict):
                 for mod_name, mod in model.items():
                     if hasattr(mod, 'state_dict'):
                         for k, v in mod.state_dict().items():
-                            extra_weights[f"param_{mod_name}.{k}"] = v.detach().cpu().numpy()
+                            extra_weights[f"param_{mod_name}.{k}"] = _tensor_to_numpy_safe(v)
 
         npz_path = self.save(
             step=step,
