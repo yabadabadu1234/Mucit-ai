@@ -420,10 +420,14 @@ class NPZCheckpointManager:
 
             if bekle:
                 _bg_save_worker(state_dict_cpu, pt_tmp, pt_path, self._save_lock)
+                del state_dict_cpu, state_dict_to_save
+                import gc as _gc_ckpt
+                _gc_ckpt.collect()
             else:
                 t = threading.Thread(target=_bg_save_worker, args=(state_dict_cpu, pt_tmp, pt_path, self._save_lock), daemon=True)
                 self._son_bg_thread = t
                 t.start()
+                del state_dict_to_save
 
         return npz_path
 
