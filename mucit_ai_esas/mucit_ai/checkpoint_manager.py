@@ -226,7 +226,14 @@ class NPZCheckpointManager:
             if os.path.isdir(fpath):
                 continue
 
-            is_tmp_file = fname.endswith(".tmp") or "_tmp." in fname
+            # KAPSAMLI DENETİM (madde 24): Gerçek geçici dosya adları
+            # `topolojik_model_{tag}_tmp_{uuid_hex}.pt` / `checkpoint_{tag}_tmp_{uuid_hex}.npz`
+            # biçimindedir (alt çizgi + hex, NOKTA değil) — önceki `"_tmp." in fname` deseni
+            # bunların HİÇBİRİYLE eşleşmiyordu. Arka plan kaydı çöken bir süreç (Kaggle
+            # oturum zaman aşımı, OOM-kill) tarafından yarıda kesilirse bu yüzlerce MB'lık
+            # yetim dosyalar hiç temizlenmeden birikip disk kotasını (bu fonksiyonun kendi
+            # amacı) sessizce tüketiyordu.
+            is_tmp_file = fname.endswith(".tmp") or "_tmp." in fname or "_tmp_" in fname
             is_dynamic_pt = (fname.startswith("topolojik_model_step_") or fname.startswith("topolojik_model_epoch_")) and fname.endswith(".pt")
             is_dynamic_npz = fname.startswith("checkpoint_") and fname.endswith(".npz") and not (fname.startswith("checkpoint_latest") or fname.startswith("checkpoint_best"))
             is_dynamic_meta = fname.startswith("checkpoint_") and fname.endswith("_meta.json") and not (fname.startswith("checkpoint_latest") or fname.startswith("checkpoint_best"))
