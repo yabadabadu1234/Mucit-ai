@@ -152,6 +152,64 @@ class KureselAdresKayitDefteri:
 kuresel_adres_kayit_defteri = KureselAdresKayitDefteri()
 
 
+def al_dinamik_toplam_ram_bayt() -> int:
+    try:
+        import psutil
+        return int(psutil.virtual_memory().total)
+    except ImportError:
+        pass
+    try:
+        return os.sysconf('SC_PAGE_SIZE') * os.sysconf('SC_PHYS_PAGES')
+    except (ValueError, AttributeError, OSError):
+        pass
+    try:
+        if os.path.exists('/proc/meminfo'):
+            with open('/proc/meminfo', 'r') as f:
+                for line in f:
+                    if line.startswith('MemTotal:'):
+                        return int(line.split()[1]) * 1024
+    except OSError:
+        pass
+    return 8 * 1024 * 1024 * 1024
+
+
+class DinamikSistemRamDenetci:
+    def __init__(self, oran: float = 0.90):
+        self.oran = oran
+        self.toplam_ram_bayt = al_dinamik_toplam_ram_bayt()
+        self.esik_ram_bayt = int(self.toplam_ram_bayt * self.oran)
+        logger.info(
+            f"[Dinamik RAM Denetçi] Cihaz Toplam RAM: {self.toplam_ram_bayt / (1024**3):.2f} GB | "
+            f"Eşik (%{int(self.oran * 100)}): {self.esik_ram_bayt / (1024**3):.2f} GB"
+        )
+
+    def aktif_ram_bayt(self) -> int:
+        try:
+            import psutil
+            return int(psutil.virtual_memory().used)
+        except ImportError:
+            pass
+        try:
+            if os.path.exists('/proc/meminfo'):
+                mem_available = None
+                with open('/proc/meminfo', 'r') as f:
+                    for line in f:
+                        if line.startswith('MemAvailable:'):
+                            mem_available = int(line.split()[1]) * 1024
+                            break
+                if mem_available is not None:
+                    return self.toplam_ram_bayt - mem_available
+        except OSError:
+            pass
+        return 0
+
+    def esik_asildi_mi(self) -> bool:
+        return self.aktif_ram_bayt() >= self.esik_ram_bayt
+
+
+kuresel_ram_denetci = DinamikSistemRamDenetci()
+
+
 class NvmeTahliyeKararMotoru:
     def __init__(self, emniyet_marji_mb: int = 1024, swap_dir: str = "/tmp/kulli_scratchpad", azami_disk_kullanimi_mb: float = 20480.0):
         self.emniyet_marji = emniyet_marji_mb * 1024 * 1024
@@ -174,6 +232,13 @@ class NvmeTahliyeKararMotoru:
         return toplam
 
     def disk_tavanini_zorla(self, esik_bayt_ekstra: float = 0.0) -> None:
+        if kuresel_ram_denetci.esik_asildi_mi():
+            logger.warning(
+                f"[NvmeTahliyeKararMotoru] Dinamik RAM eşiği (%{int(kuresel_ram_denetci.oran*100)}, "
+                f"{kuresel_ram_denetci.esik_ram_bayt / (1024**3):.2f} GB) aşıldı — agresif süpürme tetikleniyor."
+            )
+            GuvenliVramVeTmpSupurgesi.supur(swap_dir=self.swap_dir, eskime_esigi_sn=0.0)
+
         kullanim = self.disk_kullanimini_olc()
         if kullanim + esik_bayt_ekstra <= self.azami_disk_kullanimi_bayt:
             return

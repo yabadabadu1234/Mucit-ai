@@ -29,7 +29,7 @@ import gc
 import contextlib
 from typing import Dict, Any, List, Tuple, Optional, Union
 
-from kulli_gpu import NvmeTakasYoneticisi
+from kulli_gpu import NvmeTakasYoneticisi, kuresel_ram_denetci
 from mucit_ai.topolojik_islem_sevk import TopolojikIslemSevk
 
 import kontratlar
@@ -1393,10 +1393,20 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         )
                         npz_mgr.save_hafiza_state()
 
-                    
+
                     gc.collect()
                     if torch.cuda.is_available():
                         torch.cuda.empty_cache()
+
+                    if kuresel_ram_denetci.esik_asildi_mi():
+                        logger.warning(
+                            f"  [Dinamik RAM Denetçi] Sistem RAM eşiği aşıldı "
+                            f"(%{int(kuresel_ram_denetci.oran*100)}, {kuresel_ram_denetci.esik_ram_bayt / (1024**3):.2f} GB) — "
+                            f"agresif temizlik tetikleniyor."
+                        )
+                        if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
+                            takas_mgr.temizle(agresif=True)
+                        gc.collect()
 
     
     npz_mgr.save_pytorch_model(

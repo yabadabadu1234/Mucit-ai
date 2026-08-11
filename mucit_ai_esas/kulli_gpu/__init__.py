@@ -1,5 +1,5 @@
 
-from kulli_gpu.nvme_takas_yoneticisi import NvmeTakasYoneticisi
+from kulli_gpu.nvme_takas_yoneticisi import NvmeTakasYoneticisi, kuresel_ram_denetci
 
 
 def baslat(toplam_sanal_gb=None, simulation_mode: bool = False) -> bool:
