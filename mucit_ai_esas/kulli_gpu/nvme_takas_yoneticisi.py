@@ -474,6 +474,7 @@ class NvmeTakasYoneticisi:
         # anda artırırsa bir artış kaybolabilir. Sayaçlar yalnızca teşhis/loglama
         # amaçlı olsa da yanlış rapor etmesinler diye kilitle korunuyor.
         self._sayac_lock = threading.Lock()
+        self._aktif_kapsam_muhafizi = None
         logger.info(f"[NvmeTakasYoneticisi] Disk takas dizini aktif: {self.swap_dir}")
 
     def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Any:
@@ -501,10 +502,35 @@ class NvmeTakasYoneticisi:
         return self.offload_hook.unpack_hook_diskten_geri_yukle(pack_bundle)
 
     def kapsam_muhafizi_aktifles(self):
-        return torch.autograd.graph.saved_tensors_hooks(
+        # DÜZELTME (16 hatalık ikinci denetim, madde "kapsam muhafızı istisna anında
+        # askıda kalıyor"): dönen context manager'ı self._aktif_kapsam_muhafizi'de
+        # izliyoruz — çağıran taraf (_tekil_egitim_adimi_icra) normal __exit__'e
+        # ulaşamadan bir istisna fırlatırsa, guvenli_kapat_varsa() bu kapsamı dışarıdan
+        # zorla kapatabilsin diye.
+        self._aktif_kapsam_muhafizi = torch.autograd.graph.saved_tensors_hooks(
             self.pack_hook_diske_tahliye,
             self.unpack_hook_diskten_geri_cagır
         )
+        return self._aktif_kapsam_muhafizi
+
+    def guvenli_kapat_varsa(self) -> None:
+        """
+        Bir eğitim adımı __exit__'e ulaşamadan (OOM/cihaz hatası/başka bir istisna ile)
+        çökerse, kapsam_muhafizi_aktifles()'in açtığı saved_tensors_hooks kapsamı asla
+        kapanmaz — PyTorch'un dahili kanca yığınında (hook stack) açık kalır ve bir
+        sonraki adımın kendi kapsamıyla ÜST ÜSTE BİNER (iç içe pack/unpack kancaları,
+        çapraz-adım veri karışması riski). Bu metot, çağıranın except bloğunda çağrılıp
+        varsa açık kalan kapsamı zorla __exit__ eder. İdempotenttir (zaten kapalıysa
+        veya hiç açılmamışsa no-op) ve çağrılması her zaman güvenlidir.
+        """
+        cm = getattr(self, "_aktif_kapsam_muhafizi", None)
+        if cm is not None:
+            try:
+                cm.__exit__(None, None, None)
+            except Exception as _kapat_exc:
+                logger.warning(f"[NvmeTakasYoneticisi] Kapsam muhafızı zorla kapatılırken uyarı: {_kapat_exc}")
+            finally:
+                self._aktif_kapsam_muhafizi = None
 
     def temizle(self, agresif: bool = False) -> None:
         """

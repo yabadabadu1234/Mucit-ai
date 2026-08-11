@@ -1252,6 +1252,12 @@ def _tekil_egitim_adimi_icra(
 
     if _takas_cm is not None:
         _takas_cm.__exit__(None, None, None)
+        # Normal (istisnasız) çıkışta izlenen referans temizlenir — aksi halde
+        # ilerideki bir adımda guvenli_kapat_varsa() bu ZATEN KAPANMIŞ context
+        # manager'ı tekrar __exit__ edip kanca yığınını (hook stack) fazladan
+        # pop ederek bozabilirdi (bkz. guvenli_kapat_varsa tanımı).
+        if takas_mgr is not None and hasattr(takas_mgr, "_aktif_kapsam_muhafizi"):
+            takas_mgr._aktif_kapsam_muhafizi = None
         # ADIMLAR ARASI SIZINTI DÜZELTMESİ: saved_tensors_hooks kapsamı (_takas_cm) tam
         # burada kapanıyor — yani bu adımda offload edilmiş ama backward'ı hiç çalışmamış
         # (retain_graph=False ile grafı erken serbest bırakılmış) her tensör artık KESİN
@@ -1437,28 +1443,55 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
 
                     epoch_baslangic = time.time()
 
-                    # CPYTHON STACK FRAME İZOLASYONU: Adım icrası müstakil fonksiyona devredilir
-                    curr_loss_val, L_arc_val, dirichlet_energy, d_discrepancy = _tekil_egitim_adimi_icra(
-                        e1_girdi_metni=e1_girdi_metni,
-                        hedef_tensor=hedef_tensor,
-                        tum_moduller=tum_moduller,
-                        config=config,
-                        optimizer=optimizer,
-                        trainable_params=trainable_params,
-                        current_step=current_step,
-                        vram_denetci=vram_denetci,
-                        laplasyen_insa=laplasyen_insa,
-                        cheby_calc=cheby_calc,
-                        odul_motoru=odul_motoru,
-                        grpo_kriteri=grpo_kriteri,
-                        cumle_keyfiyet_motoru=cumle_keyfiyet_motoru,
-                        vicreg_kriteri=vicreg_kriteri,
-                        pareto_pcgrad_operator=pareto_pcgrad_operator,
-                        stiefel_izdusurucu=stiefel_izdusurucu,
-                        gpu_dagitici=None,
-                        gpu_cesitlendirici=None,
-                        takas_mgr=takas_mgr
-                    )
+                    # DÜZELTME (16 hatalık ikinci denetim, "kapsam muhafızı istisna anında
+                    # askıda kalıyor" bulgusu): _tekil_egitim_adimi_icra içinde
+                    # takas_mgr.kapsam_muhafizi_aktifles() ile açılan saved_tensors_hooks
+                    # kapsamı yalnızca fonksiyonun NORMAL sonunda (satır ~1254) __exit__
+                    # ediliyordu. Fonksiyon gövdesinde HERHANGİ bir yerde (Pareto-PCGrad
+                    # OOM'u, cihaz uyumsuzluğu, herhangi bir düğüm hatası) bir istisna
+                    # fırlarsa bu __exit__ HİÇ çağrılmıyor, kanca yığını (hook stack) açık
+                    # kalıyor ve bir sonraki adımda üst üste binerek bozuk/çapraz veriye
+                    # yol açabiliyordu. Ayrıca bu çağrı hiçbir try/except'e sarılmadığından
+                    # TEK bir adımın kurtarılamaz OOM'u TÜM 12 saatlik eğitim koşusunu
+                    # (papermill sürecini) çökertiyordu. Artık adım, kurtarılamaz bir
+                    # istisna fırlatırsa bu CHUNK atlanır, kapsam muhafızı zorla kapatılır,
+                    # VRAM temizlenir ve eğitim BİR SONRAKİ chunk ile DEVAM eder — tek bir
+                    # adımın çöküşü artık tüm koşuyu bitirmiyor.
+                    try:
+                        curr_loss_val, L_arc_val, dirichlet_energy, d_discrepancy = _tekil_egitim_adimi_icra(
+                            e1_girdi_metni=e1_girdi_metni,
+                            hedef_tensor=hedef_tensor,
+                            tum_moduller=tum_moduller,
+                            config=config,
+                            optimizer=optimizer,
+                            trainable_params=trainable_params,
+                            current_step=current_step,
+                            vram_denetci=vram_denetci,
+                            laplasyen_insa=laplasyen_insa,
+                            cheby_calc=cheby_calc,
+                            odul_motoru=odul_motoru,
+                            grpo_kriteri=grpo_kriteri,
+                            cumle_keyfiyet_motoru=cumle_keyfiyet_motoru,
+                            vicreg_kriteri=vicreg_kriteri,
+                            pareto_pcgrad_operator=pareto_pcgrad_operator,
+                            stiefel_izdusurucu=stiefel_izdusurucu,
+                            gpu_dagitici=None,
+                            gpu_cesitlendirici=None,
+                            takas_mgr=takas_mgr
+                        )
+                    except Exception as _adim_exc:
+                        logger.error(
+                            f"  [Adım Kurtarıcı] Adım {current_step} kurtarılamaz bir hatayla "
+                            f"başarısız oldu, bu chunk ATLANIYOR (eğitim devam ediyor): {_adim_exc}"
+                        )
+                        if takas_mgr is not None and hasattr(takas_mgr, "guvenli_kapat_varsa"):
+                            takas_mgr.guvenli_kapat_varsa()
+                        optimizer.zero_grad(set_to_none=True)
+                        import gc as _gc_step
+                        _gc_step.collect()
+                        if torch.cuda.is_available():
+                            torch.cuda.empty_cache()
+                        continue
 
                     current_step += 1
                     loss_history.append(curr_loss_val)
