@@ -114,10 +114,77 @@ kuresel_adres_kayit_defteri = KureselAdresKayitDefteri()
 
 
 class NvmeTahliyeKararMotoru:
-    def __init__(self, emniyet_marji_mb: int = 1024, swap_dir: str = "/tmp/kulli_scratchpad"):
-        self.emniyet_marji = emniyet_marji_mb * 1024 * 1024  
+    def __init__(self, emniyet_marji_mb: int = 1024, swap_dir: str = "/tmp/kulli_scratchpad", azami_disk_kullanimi_mb: float = 20480.0):
+        self.emniyet_marji = emniyet_marji_mb * 1024 * 1024
         self.swap_dir = swap_dir
+        self.azami_disk_kullanimi_bayt = azami_disk_kullanimi_mb * 1024 * 1024
         os.makedirs(self.swap_dir, exist_ok=True)
+
+    def disk_kullanimini_olc(self) -> int:
+        toplam = 0
+        try:
+            with os.scandir(self.swap_dir) as it:
+                for entry in it:
+                    try:
+                        if entry.is_file(follow_symlinks=False):
+                            toplam += entry.stat().st_size
+                    except OSError:
+                        continue
+        except OSError:
+            return 0
+        return toplam
+
+    def disk_tavanini_zorla(self, esik_bayt_ekstra: float = 0.0) -> None:
+        kullanim = self.disk_kullanimini_olc()
+        if kullanim + esik_bayt_ekstra <= self.azami_disk_kullanimi_bayt:
+            return
+
+        logger.warning(
+            f"[NvmeTahliyeKararMotoru] Disk tavanı aşıldı: {kullanim / (1024**2):.1f} MB "
+            f"kullanılan / {self.azami_disk_kullanimi_bayt / (1024**2):.1f} MB tavan — agresif süpürme tetikleniyor."
+        )
+        GuvenliVramVeTmpSupurgesi.supur(swap_dir=self.swap_dir, eskime_esigi_sn=0.0)
+
+        kullanim = self.disk_kullanimini_olc()
+        if kullanim + esik_bayt_ekstra <= self.azami_disk_kullanimi_bayt:
+            return
+
+        logger.warning(
+            f"[NvmeTahliyeKararMotoru] Süpürme sonrası hâlâ tavan üzerinde "
+            f"({kullanim / (1024**2):.1f} MB) — en eski dosyalar zorla siliniyor."
+        )
+        try:
+            dosyalar = []
+            with os.scandir(self.swap_dir) as it:
+                for entry in it:
+                    try:
+                        if entry.is_file(follow_symlinks=False):
+                            st = entry.stat()
+                            if (time.time() - st.st_mtime) < 5.0:
+                                continue
+                            dosyalar.append((st.st_mtime, entry.path, st.st_size))
+                    except OSError:
+                        continue
+            dosyalar.sort(key=lambda x: x[0])
+            silinen_bayt = 0
+            for _mtime, fpath, fsize in dosyalar:
+                if kullanim + esik_bayt_ekstra <= self.azami_disk_kullanimi_bayt:
+                    break
+                try:
+                    os.remove(fpath)
+                    kullanim -= fsize
+                    silinen_bayt += fsize
+                    with kuresel_adres_kayit_defteri.lock:
+                        sanal_addr = kuresel_adres_kayit_defteri.aktif_dosya_yollari.get(fpath)
+                        if sanal_addr:
+                            kuresel_adres_kayit_defteri.kayit_sil(sanal_addr)
+                except OSError:
+                    continue
+            logger.warning(
+                f"[NvmeTahliyeKararMotoru] Zorla silme ile {silinen_bayt / (1024**2):.1f} MB serbest bırakıldı."
+            )
+        except OSError as exc:
+            logger.error(f"[NvmeTahliyeKararMotoru] Zorla silme sırasında hata: {exc}")
 
     def vram_sınırı_asildi_mi_tahkik_et(self, gerekli_bayt: int, device_id: int = 0) -> bool:
         if not torch.cuda.is_available():
@@ -185,6 +252,11 @@ class AutogradNvmeOffloadHook:
         bayt_boyut = tensor.element_size() * tensor.numel()
         if not self.karar_motoru.vram_sınırı_asildi_mi_tahkik_et(bayt_boyut):
             return ("", tuple(tensor.shape), tensor.dtype, str(tensor.device))
+
+        try:
+            self.karar_motoru.disk_tavanini_zorla(esik_bayt_ekstra=bayt_boyut)
+        except Exception as _tavan_exc:
+            logger.warning(f"[AutogradNvmeOffloadHook] Disk tavanı kontrolü başarısız: {_tavan_exc}")
 
         dosya_id = f"autograd_swap_{uuid.uuid4().hex[:12]}.bin"
         dosya_yolu = os.path.join(self.karar_motoru.swap_dir, dosya_id)
