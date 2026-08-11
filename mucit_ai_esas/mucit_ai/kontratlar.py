@@ -3466,6 +3466,11 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
                     )
             # Tüm parçaları tek 1D dev vektörde birleştir [P_toplam]
             faz_1d = torch.cat(vektor_parcalari, dim=0)
+            # DÜZELTME: torch.cat kendi kopyasını ürettikten sonra vektor_parcalari
+            # (P_toplam boyutunda ayrı parça referansları) artık kullanılmıyor ama bir
+            # sonraki döngü turuna kadar canlı kalıp geçici olarak 2×P belleği işgal
+            # ediyordu — tam VRAM'in en kritik olduğu bu döngüde. Açıkça serbest bırakılır.
+            del vektor_parcalari
             # GradNorm Normalizasyonu: faz kayıp ölçek farklarını (84.0 ↔ 0.0003) eşitle
             norm_val = torch.norm(faz_1d) + 1e-8
             duzles_faz_vektorleri.append(faz_1d / norm_val)
@@ -3475,7 +3480,20 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         # 1D iç çarpım (torch.dot) ile zıt açılı çiftler tespit edilir.
         # g_i = g_i − (g_i · g_j / ‖g_j‖²) · g_j  [dot_ij < 0 ise]
         # ==============================================================
-        pc_vektorleri: List[torch.Tensor] = [v.clone() for v in duzles_faz_vektorleri]
+        # DÜZELTME (Kaggle çöküşü — Pareto-PCGrad tam anda "Tried to allocate 80.00 MiB"
+        # ile OOM): Önceden TÜM n=11 fazın kopyası `[v.clone() for v in ...]` ile PEŞİNEN
+        # (döngü başlamadan) alınıyordu — bu, VRAM'in en dolu olduğu tam bu anda
+        # duzles_faz_vektorleri + pc_vektorleri'nin AYNI ANDA belleğe sığmasını (2×n×P_toplam
+        # bf16) zorunlu kılıyordu. Ama i,j çiftlerinin ÇOĞU dot_ij >= 0 (çakışmıyor) çıkar —
+        # yani o fazın pc_vektorleri[i] kopyası HİÇ değiştirilmez, gereksiz yere önceden
+        # klonlanmıştı. Artık "yazarken kopyala" (copy-on-write) uygulanıyor: pc_vektorleri
+        # başlangıçta duzles_faz_vektorleri ile AYNI tensör referanslarını tutar (klon yok,
+        # sıfır ek bellek); bir faz İLK KEZ gerçekten dikgenleştirilmesi gerektiğinde
+        # (dot_ij < 0 bulunduğunda) o TEK fazın klonu o anda alınır. Sonuç matematiksel
+        # olarak birebir aynı, ama tipik durumda (çoğu faz çifti çakışmıyorsa) tepe VRAM
+        # kullanımı ~2×n×P yerine ~(n + çakışan_faz_sayısı)×P'ye düşer.
+        pc_vektorleri: List[torch.Tensor] = list(duzles_faz_vektorleri)
+        _pc_klonlandi = [False] * n
         for i in range(n):
             for j in range(n):
                 if i == j:
@@ -3491,6 +3509,9 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
                 # (ve büyük O(n·P) belleği) bf16 kalıyor.
                 dot_ij = torch.dot(pc_vektorleri[i].float(), duzles_faz_vektorleri[j].float())
                 if dot_ij < 0:
+                    if not _pc_klonlandi[i]:
+                        pc_vektorleri[i] = pc_vektorleri[i].clone()
+                        _pc_klonlandi[i] = True
                     norm_sq_j = torch.sum(duzles_faz_vektorleri[j].float() ** 2) + 1e-8
                     proj_coeff = (dot_ij / norm_sq_j).to(pc_vektorleri[i].dtype)
                     # Dikgenleştirme: çakışan bileşeni çıkar
