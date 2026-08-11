@@ -135,6 +135,7 @@ class NPZCheckpointManager:
         self._history: List[str] = []
         import threading
         self._save_lock     = threading.Lock()
+        self._son_bg_thread = None
         os.makedirs(self.checkpoint_dir, exist_ok=True)
 
     def _hafiza_state_path(self) -> str:
@@ -346,7 +347,8 @@ class NPZCheckpointManager:
                            model: Any,
                            optimizer: Optional[Any] = None,
                            loss_history: Optional[List[float]] = None,
-                           is_best: bool = False) -> str:
+                           is_best: bool = False,
+                           bekle: bool = False) -> str:
         
         
         npz_path = self.save(
@@ -414,9 +416,19 @@ class NPZCheckpointManager:
                     except Exception as ex:
                         logger.warning(f"  [Ckpt Mgr] Arka plan checkpoint kaydı hatası: {ex}")
 
-            threading.Thread(target=_bg_save_worker, args=(state_dict_cpu, pt_tmp, pt_path, self._save_lock), daemon=True).start()
-            
+            if bekle:
+                _bg_save_worker(state_dict_cpu, pt_tmp, pt_path, self._save_lock)
+            else:
+                t = threading.Thread(target=_bg_save_worker, args=(state_dict_cpu, pt_tmp, pt_path, self._save_lock), daemon=True)
+                self._son_bg_thread = t
+                t.start()
+
         return npz_path
+
+    def tum_bekleyen_kayitlari_bekle(self, timeout: float = 60.0) -> None:
+        t = getattr(self, "_son_bg_thread", None)
+        if t is not None and t.is_alive():
+            t.join(timeout=timeout)
 
     def final_model_kopyala_kaggle_working(self, is_best: bool = True) -> bool:
         if not os.path.exists("/kaggle/working"):

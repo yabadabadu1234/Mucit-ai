@@ -1096,7 +1096,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             model=tum_moduller,
                             optimizer=optimizer,
                             loss_history=loss_history,
-                            is_best=False
+                            is_best=False,
+                            bekle=True
                         )
                         npz_mgr.save_hafiza_state()
                         logger.info("  [EMNİYET ZAMAN LİMİTİ] Tüm model ve hafıza durumu başarıyla kaydedildi. Oturum emniyetle kapatılıyor.")
@@ -1215,7 +1216,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
         model=tum_moduller,
         optimizer=optimizer,
         loss_history=loss_history,
-        is_best=False
+        is_best=False,
+        bekle=True
     )
 
     logger.info("================================================================================")
