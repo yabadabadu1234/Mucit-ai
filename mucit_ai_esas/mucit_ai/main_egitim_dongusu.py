@@ -1310,7 +1310,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             model=tum_moduller,
                             optimizer=optimizer,
                             loss_history=loss_history,
-                            is_best=is_best
+                            is_best=is_best,
+                            bekle=True
                         )
                         try:
                             _dogrulama = npz_mgr.verify(_kaydedilen_npz_yolu)
@@ -1321,6 +1322,24 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                                 )
                         except Exception as _dogrulama_exc:
                             logger.debug(f"  [Ckpt Doğrulama] Doğrulama denemesi başarısız: {_dogrulama_exc}")
+
+                        optimizer.zero_grad(set_to_none=True)
+                        if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
+                            takas_mgr.temizle(agresif=True)
+                        gc.collect()
+                        if torch.cuda.is_available():
+                            torch.cuda.synchronize()
+                            torch.cuda.empty_cache()
+                            torch.cuda.ipc_collect()
+
+                        _yeniden_baslangic_step, _yeniden_loss_history = npz_mgr.load_pytorch_model(tum_moduller, optimizer)
+                        if _yeniden_baslangic_step is not None and _yeniden_baslangic_step > 0:
+                            current_step = _yeniden_baslangic_step
+                        if _yeniden_loss_history:
+                            loss_history = _yeniden_loss_history
+                        logger.info(
+                            f"  [Ckpt Yeniden Yükleme] Adım [{current_step}] kaydedilmiş ağırlıklardan temiz durumla yeniden ilklendirildi."
+                        )
 
                     if is_best:
                         try:
