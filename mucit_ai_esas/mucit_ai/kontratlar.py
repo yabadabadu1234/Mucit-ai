@@ -2641,16 +2641,21 @@ class N14_OdulTopolojikDevresmezlikMotoru:
 
     def hesapla(self, P: torch.Tensor, hedefler: torch.Tensor) -> torch.Tensor:
         # P: [B, N] (2D p_target) VEYA [B, V_size, N] (3D Olasılık)
+        # KAPSAMLI DENETİM (madde 18): torch.std() VARSAYILAN OLARAK unbiased=True'dur.
+        # N (veya 3D dalda V_size*N) 1'e indiğinde (dinamik uzunluk seçici N8_B kısa/
+        # dejenere dizilerde N=1 üretebilir) n-1=0 olup std NaN döner, bu da GRPO
+        # ödülünü (oduller) ve dolayısıyla avantaj normalizasyonunu sessizce NaN'a
+        # bulaştırır. unbiased=False numel>=1 için her zaman tanımlıdır.
         if P.dim() == 2:
             B, N = P.shape
             is_correct = (P > 0.1).float().mean(dim=-1)
-            topolojik_invaryant = 1.0 - torch.std(P, dim=-1)
+            topolojik_invaryant = 1.0 - torch.std(P, dim=-1, unbiased=False)
         else:
             B, V_size, N = P.shape
             preds = torch.argmax(P, dim=1)
             min_len = min(N, hedefler.shape[1])
             is_correct = (preds[:, :min_len] == hedefler[:, :min_len]).float().mean(dim=-1)
-            topolojik_invaryant = 1.0 - torch.std(P, dim=(1, 2))
+            topolojik_invaryant = 1.0 - torch.std(P, dim=(1, 2), unbiased=False)
 
         oduller = is_correct * 2.0 + topolojik_invaryant * 0.5
         return oduller
