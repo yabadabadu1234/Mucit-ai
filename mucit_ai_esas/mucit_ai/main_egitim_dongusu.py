@@ -1178,6 +1178,21 @@ def _tekil_egitim_adimi_icra(
             max_norm=1.0
         )
 
+    # BELLEK TUTMA (RETENTION) DÜZELTMESİ: shard_gradyanlari (ve onu oluşturan 11 adet
+    # g_faz2_uyumsuzluk/g_faz2_dirichlet/.../g_cumle_keyfiyet parametre-uzayı boyutlu
+    # gradyan kopyası) birlestir_ve_uygula_dagitik_gradyanlar TAMAMLANDIKTAN sonra bir
+    # daha HİÇ okunmuyor — nihai gradyanlar zaten p.grad'a yazıldı (grad_norm_pareto
+    # p.grad üzerinden okur, shard_gradyanlari'ndan değil). Ama fonksiyon-seviyesi yerel
+    # değişkenler oldukları için adımın SONUNA kadar (Stiefel izdüşümü dahil) canlı
+    # kalıyorlardı — D0_op'un daha önce düzeltilen aynı sınıf gereksiz tutulma hatası.
+    del shard_gradyanlari
+    del g_faz2_uyumsuzluk, g_faz2_dirichlet, g_faz3_uyumsuzluk, g_faz3_dirichlet
+    del g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec, g_spektral, g_sorgu, g_cumle_keyfiyet
+    import gc as _gc4
+    _gc4.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
     grad_norm_pareto = math.sqrt(sum((p.grad.norm().item() ** 2 for p in trainable_params if p.grad is not None)))
     adapted_lr = config.lr / (1.0 + 0.01 * grad_norm_pareto)
     for param_group in optimizer.param_groups:
