@@ -434,7 +434,23 @@ class NPZCheckpointManager:
             state_dict_to_save['loss_history'] = loss_history or []
             
             import threading
-            
+
+            # KAPSAMLI DENETİM (madde 23): ÖNCEDEN save_pytorch_model() her çağrıldığında
+            # KOŞULSUZ yeni bir arka plan thread'i başlatılıyordu. Bu fonksiyon önceki
+            # yazım (self._save_lock ile korunan torch.save+os.replace) bitmeden daha sık
+            # çağrılırsa (ör. yavaş NVMe I/O altında), thread'ler kilit arkasında sınırsızca
+            # kuyruğa giriyordu — hiçbir üst sınır, hiçbir join yoktu. Artık bir önceki
+            # arka plan kaydı hâlâ sürüyorsa (kilit meşgulse) yeni bir thread BAŞLATILMIYOR;
+            # bu adımın en güncel durumu bir SONRAKİ periyodik save_pytorch_model
+            # çağrısında zaten kaydedilecektir (checkpoint'ler periyodik/en-iyi-kayıp
+            # tetiklemeli olduğundan bir turun atlanması veri kaybı değildir).
+            if self._save_lock.locked():
+                logger.warning(
+                    "  [Ckpt Mgr] Önceki arka plan .pt kaydı hâlâ sürüyor — bu turun "
+                    "kaydı atlanıyor (bir sonraki çağrıda güncel durum kaydedilecek)."
+                )
+                return npz_path
+
             def _to_cpu_async(obj: Any) -> Any:
                 if isinstance(obj, dict):
                     return {k: _to_cpu_async(v) for k, v in obj.items()}
