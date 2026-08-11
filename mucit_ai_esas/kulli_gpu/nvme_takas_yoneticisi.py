@@ -47,6 +47,7 @@ class NesneAdresKaydi:
     son_erisim_zamani: float = field(default_factory=time.time)
     element_size: int = 4
     numel: int = 0
+    canli_tensor_ref: Optional[Any] = None
 
     @property
     def bayt_boyutu(self) -> int:
@@ -117,6 +118,23 @@ class KureselAdresKayitDefteri:
                 self.kayitlar[sanal_adres].ref_count -= 1
                 if self.kayitlar[sanal_adres].ref_count <= 0:
                     self.kayitlar[sanal_adres].durum = MEM_STATE_ORPHANED
+
+    def aktif_vram_tensor_kaydet(self, tensor: "torch.Tensor", sanal_id: Optional[str] = None) -> str:
+        with self.lock:
+            n_id = sanal_id or f"addr_{uuid.uuid4().hex[:8]}"
+            kayit = NesneAdresKaydi(
+                sanal_adres=n_id,
+                dosya_yolu=None,
+                shape=tuple(tensor.shape),
+                dtype=tensor.dtype,
+                durum=MEM_STATE_ACTIVE_VRAM,
+                ref_count=1,
+                element_size=tensor.element_size(),
+                numel=tensor.numel(),
+                canli_tensor_ref=weakref.ref(tensor)
+            )
+            self.kayitlar[n_id] = kayit
+            return n_id
 
     def kayit_sil(self, sanal_adres: str) -> None:
         with self.lock:
@@ -226,11 +244,27 @@ class NvmeTahliyeKararMotoru:
             for pasif in pasif_adaylar:
                 if kurtarilan_bayt >= fark_bayt:
                     break
+
+                canli_tensor = pasif.canli_tensor_ref() if pasif.canli_tensor_ref is not None else None
+                if canli_tensor is None:
+                    logger.debug(
+                        f"[NvmeTahliyeKararMotoru] '{pasif.sanal_adres}' için canlı tensör referansı yok "
+                        "(zaten toplanmış olabilir), gerçek veri yazılamadan atlanıyor."
+                    )
+                    continue
+
                 dosya_id = f"offload_{uuid.uuid4().hex[:12]}.bin"
                 dosya_yolu = os.path.join(self.swap_dir, dosya_id)
 
+                try:
+                    torch.save(canli_tensor.detach().cpu(), dosya_yolu)
+                except Exception as exc:
+                    logger.warning(f"[NvmeTahliyeKararMotoru] '{pasif.sanal_adres}' diske yazılamadı: {exc}")
+                    continue
+
                 pasif.dosya_yolu = dosya_yolu
                 pasif.durum = MEM_STATE_SWAPPED_NVME
+                pasif.canli_tensor_ref = None
                 kuresel_adres_kayit_defteri.aktif_dosya_yollari[dosya_yolu] = pasif.sanal_adres
 
                 kurtarilan_bayt += pasif.bayt_boyutu

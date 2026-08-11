@@ -718,7 +718,10 @@ class N1_HibritByteTokenAyristirici(nn.Module):
     def izdusur_stiefel(self):
         with torch.no_grad():
             for k, param in self.Q_dict.items():
-                param.copy_(stiefel_qr_projection(param.data))
+                if param.grad is not None:
+                    param.copy_(self.StiefelCayleyIzometrikIzduşum(param.data, G=param.grad))
+                else:
+                    param.copy_(stiefel_qr_projection(param.data))
 
     def forward(self, girdi: E1_HamMetinAkisi) -> Tuple[E2_ByteTensoru, torch.Tensor]:
         
@@ -796,6 +799,9 @@ class N1_HibritByteTokenAyristirici(nn.Module):
         return E2_ByteTensoru(byte_tensor=t_bytes, l_bytes=l_bytes), x_initial
 
     def StiefelCayleyIzometrikIzduşum(self, W: torch.Tensor, G: Optional[torch.Tensor] = None, eta: float = 1e-3) -> torch.Tensor:
+        logging.getLogger("mucit_ai.kontratlar").debug(
+            f"[N1_HibritByteTokenAyristirici.StiefelCayleyIzometrikIzduşum] Cayley izometrik izdüşüm çağrıldı, gradyan_var={G is not None}"
+        )
         return stiefel_manifold_projection(W, grad=G, lr=eta)
 
 
@@ -907,28 +913,15 @@ class N2_TopoXHucreOlusumu(nn.Module):
                         if (j, k) in edge_map and (i, k) in edge_map:
                             triangles.append((i, j, k))
 
-        F_num = len(triangles)
-        if F_num > 0:
-            D2 = torch.zeros((F_num, E), dtype=torch.float32, device=device)
-            for f_idx, (i, j, k) in enumerate(triangles):
-                e_ij = edge_map[(i, j)]
-                e_jk = edge_map[(j, k)]
-                e_ik = edge_map[(i, k)]
-                
-                
-                w_ij = torch.where(D1[e_ij, j] != 0, torch.abs(D1[e_ij, j]), torch.ones((), device=device, dtype=D1.dtype))
-                w_jk = torch.where(D1[e_jk, k] != 0, torch.abs(D1[e_jk, k]), torch.ones((), device=device, dtype=D1.dtype))
-                w_ik = torch.where(D1[e_ik, k] != 0, torch.abs(D1[e_ik, k]), torch.ones((), device=device, dtype=D1.dtype))
-                D2[f_idx, e_ij] = w_jk * w_ik
-                D2[f_idx, e_jk] = w_ij * w_ik
-                D2[f_idx, e_ik] = -1.0 * w_ij * w_jk
-        else:
-            D2 = torch.zeros((1, E), dtype=torch.float32, device=device)
+        D2 = self.CekirdekBaziylaD2Kur(D1, triangles, edge_map, device)
 
-        
+
         return E3_SinirOperatorleri(D1=D1, D2=D2)
 
     def CekirdekBaziylaD2Kur(self, D1: torch.Tensor, triangles: List[Tuple[int, int, int]], edge_map: Dict[Tuple[int, int], int], device: torch.device) -> torch.Tensor:
+        logging.getLogger("mucit_ai.kontratlar").debug(
+            f"[N2_TopoXHucreOlusumu.CekirdekBaziylaD2Kur] {len(triangles)} üçgenden D2 sınır operatörü kuruluyor"
+        )
         F_num = len(triangles)
         E = D1.shape[0]
         if F_num > 0 and E > 0:
@@ -1308,6 +1301,9 @@ class N6_KohomolojikAktor(nn.Module):
         return K_adjoint
 
     def VektorelChebyshevKrylovCozumu(self, c_defect: torch.Tensor, D0: torch.Tensor, P: int = 5) -> torch.Tensor:
+        logging.getLogger("mucit_ai.kontratlar").debug(
+            f"[N6_KohomolojikAktor.VektorelChebyshevKrylovCozumu] P={P} adımlı Krylov çözümü çağrıldı"
+        )
         return self.hesapla_moore_penrose_psodoters_vektor_etkisi(c_defect, D0, P=P)
 
     def forward(self, mevcut_durum: E5_A_MevcutGizilDurum, sorgu: E6_GizilSorgu, lokal_bilgi: E7_LokalBilgi,
@@ -1800,6 +1796,9 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
         return E5_B_BellekGonderimi(M=self.M)
 
     def BiyortogonalKorelasyonYaz(self, k_r: torch.Tensor, v_r: torch.Tensor, alpha_pareto: Optional[torch.Tensor] = None) -> E5_B_BellekGonderimi:
+        logging.getLogger("mucit_ai.kontratlar").debug(
+            "[SMW_SifirParazit_BellekYoneticisi.BiyortogonalKorelasyonYaz] biyortogonal SMW bellek yazımı çağrıldı"
+        )
         return self.write(k_r, v_r, alpha_pareto=alpha_pareto)
 
     def read(self, k_r: torch.Tensor) -> torch.Tensor:
@@ -1952,6 +1951,9 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
         return vram_bayt_tahmin_et(B, micro_chunk_size, self.V_size)
 
     def forward_sifir_oom_chunking(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None) -> E12_ParalelTokenOlasilikMatrisi:
+        logging.getLogger("mucit_ai.kontratlar").debug(
+            "[N10_SozlukSoftmaxIzdusem.forward_sifir_oom_chunking] sıfır-OOM zincirleme sözlük softmax izdüşümü çağrıldı"
+        )
         return self.forward(e11_gomulu, hedefler=hedefler)
 
     def forward(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None) -> E12_ParalelTokenOlasilikMatrisi:
@@ -2487,7 +2489,11 @@ class N16_ArcIzgaraDonusturucu:
             preds = olasilik_matrisi.preds_full[0].cpu().numpy()
         else:
             P = olasilik_matrisi.P
-            preds = torch.argmax(P, dim=1)[0].cpu().numpy()
+            if P.dim() >= 3:
+                preds = torch.argmax(P, dim=1)[0].cpu().numpy()
+            else:
+                preds = P[0].detach().cpu().numpy() if P.dim() == 2 else P.detach().cpu().numpy()
+                preds = (preds * 10).astype(int)
         rows, cols = hedef_boyut
         izgara = []
         idx = 0
@@ -2733,11 +2739,12 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         if n == 0:
             return torch.zeros(0)
 
-        
+
         ref_device = next((p.device for p in trainable_params if p.requires_grad), torch.device('cpu'))
         ref_dtype  = next((p.dtype  for p in trainable_params if p.requires_grad), torch.float32)
-        
-        
+
+        shard_gradyanlari = self.shard_gradyanlari_cihaza_tasi(shard_gradyanlari, ref_device)
+
         pcgrad_bellek_dtype = torch.bfloat16 if ref_device.type == 'cuda' else ref_dtype
 
         if n == 1:
@@ -2876,6 +2883,9 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         return alpha_star
 
     def shard_gradyanlari_cihaza_tasi(self, shard_gradyanlari: List[List[torch.Tensor]], target_device: torch.device) -> List[List[torch.Tensor]]:
+        logging.getLogger("mucit_ai.kontratlar").debug(
+            f"[Riyazi_Pareto_PCGrad_MGDA_Operator.shard_gradyanlari_cihaza_tasi] {len(shard_gradyanlari)} shard hedef cihaza taşındı: {target_device}"
+        )
         if target_device is None:
             return shard_gradyanlari
         tasili_shardlar = []
@@ -2970,9 +2980,18 @@ def vram_on_kontrol_ve_nvme_tahliye(gerekli_bayt: int, takas_mgr: Any = None) ->
         
         gc.collect()
         torch.cuda.empty_cache()
-        
+
         if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
             takas_mgr.temizle()
+
+        karar_motoru = getattr(takas_mgr, "karar_motoru", None) if takas_mgr is not None else None
+        if karar_motoru is not None and hasattr(karar_motoru, "vramden_nvme_diske_tahliye_et"):
+            try:
+                karar_motoru.vramden_nvme_diske_tahliye_et(gerekli_bayt)
+            except Exception as _tahliye_exc:
+                logging.getLogger("mucit_ai.kontratlar").warning(
+                    f"[Ön-Hesaplamalı NVMe Tahliye] Aktif VRAM tahliyesi başarısız: {_tahliye_exc}"
+                )
 
 def girdi_cihaza_tasi(x: Any, device: torch.device) -> Any:
     if isinstance(x, torch.Tensor):

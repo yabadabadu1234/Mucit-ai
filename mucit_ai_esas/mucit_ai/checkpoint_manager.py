@@ -132,6 +132,7 @@ class NPZCheckpointManager:
         self.keep_last      = keep_last
         self.max_mb         = max_mb
         self.hafiza         = HiyerarşikHafizaYoneticisi()
+        self.serializer      = CheckpointSerializer(precision="float32")
         self._history: List[str] = []
         import threading
         self._save_lock     = threading.Lock()
@@ -281,8 +282,7 @@ class NPZCheckpointManager:
                         f"Ağırlıklar FP16'ya sıkıştırılıyor..."
                     )
                     for k, v in payload.items():
-                        if isinstance(v, np.ndarray) and v.dtype == np.float32:
-                            payload[k] = v.astype(np.float16)
+                        payload[k] = self.serializer.sikistirma_icin_donustur(v)
         except Exception as vram_exc:
             logger.debug(f"[Checkpoint VRAM Guard Warning] {vram_exc}")
 
@@ -322,8 +322,7 @@ class NPZCheckpointManager:
                     f"Float32 matrisler FP16'ya dönüştürülüyor..."
                 )
                 for k, v in payload.items():
-                    if isinstance(v, np.ndarray) and v.dtype == np.float32:
-                        payload[k] = v.astype(np.float16)
+                    payload[k] = self.serializer.sikistirma_icin_donustur(v)
                 np.savez_compressed(tmp_path, **payload)
                 size_mb = os.path.getsize(tmp_path) / (1024 * 1024)
 
@@ -660,13 +659,13 @@ class NPZCheckpointManager:
                 "loss_history":      list(data["loss_history"])    if "loss_history" in data else [],
                 
                 
-                "smw_M_matrix":      data["smw_M_matrix"].astype(np.float32) if "smw_M_matrix" in data else None,
-                "smw_R_matrix":      data["smw_R_matrix"].astype(np.float32) if "smw_R_matrix" in data else None,
-                "adam_m":            data["adam_m"].astype(np.float32) if "adam_m" in data else None,
-                "adam_v":            data["adam_v"].astype(np.float32) if "adam_v" in data else None,
+                "smw_M_matrix":      self.serializer.yuklerken_normallestir(data["smw_M_matrix"]) if "smw_M_matrix" in data else None,
+                "smw_R_matrix":      self.serializer.yuklerken_normallestir(data["smw_R_matrix"]) if "smw_R_matrix" in data else None,
+                "adam_m":            self.serializer.yuklerken_normallestir(data["adam_m"]) if "adam_m" in data else None,
+                "adam_v":            self.serializer.yuklerken_normallestir(data["adam_v"]) if "adam_v" in data else None,
                 "hiyerarsik_hafiza": self.hafiza.to_dict(),
                 "model_params":      {
-                    k[6:]: (data[k].astype(np.float32) if np.issubdtype(data[k].dtype, np.floating) else data[k])
+                    k[6:]: self.serializer.yuklerken_normallestir(data[k])
                     for k in data.files if k.startswith("param_")
                 }
             }
@@ -793,6 +792,16 @@ class CheckpointSerializer:
 
     def deserialize_array(self, data: bytes, shape: Tuple[int, ...]) -> np.ndarray:
         return np.frombuffer(data, dtype=np.float32).reshape(shape)
+
+    def sikistirma_icin_donustur(self, arr: np.ndarray) -> np.ndarray:
+        if isinstance(arr, np.ndarray) and arr.dtype == np.float32:
+            return arr.astype(np.float16)
+        return arr
+
+    def yuklerken_normallestir(self, arr: np.ndarray) -> np.ndarray:
+        if isinstance(arr, np.ndarray) and np.issubdtype(arr.dtype, np.floating):
+            return arr.astype(np.float32)
+        return arr
 
 
 class CheckpointManager:

@@ -432,7 +432,8 @@ def _tekil_egitim_adimi_icra(
     stiefel_izdusurucu: Any,
     gpu_dagitici: Optional[Any] = None,
     gpu_cesitlendirici: Optional[Any] = None,
-    takas_mgr: Optional[Any] = None
+    takas_mgr: Optional[Any] = None,
+    arc_donusturucu: Optional[Any] = None
 ) -> Tuple[float, float, float, float]:
     optimizer.zero_grad(set_to_none=True)
 
@@ -454,6 +455,22 @@ def _tekil_egitim_adimi_icra(
     n10_sozluk = tum_moduller['n10']
     meclis_bellek = tum_moduller['bellek']
     bellek_yazici = tum_moduller['bellek_yazici']
+
+    sistem_yapilandirmasi = SistemYapilandirmasi(
+        batch_boyutu=getattr(config, 'batch_size', 1),
+        gizil_boyut=getattr(config, 'd_v', 32),
+        sorgu_boyutu=getattr(config, 'd_q', 64),
+        cevap_boyutu=getattr(config, 'd_a', 64),
+        sentetik_durum_boyutu=getattr(config, 'd_h', 64),
+        bellek_koleksiyon_boyutu=getattr(config, 'K', 16),
+        bellek_vektor_boyutu=getattr(config, 'd_m', 64),
+        gomulu_boyut=getattr(config, 'd', 128),
+        spektral_cozunurluk=getattr(config, 'M_plus_1', 7),
+        hedef_cumle_uzunlugu=getattr(config, 'N', 32),
+        sozluk_boyutu=getattr(config, 'V_size', 256),
+        rekurens_dongu_sayisi=getattr(config, 'R', 4),
+    )
+    logger.debug(f"  [SistemYapilandirmasi] Adım {current_step} yapılandırma anlık görüntüsü: {sistem_yapilandirmasi}")
 
     max_chunk_len = getattr(config, 'N', 1024)
     e1_girdi_metni_chunk = e1_girdi_metni[:max_chunk_len] if len(e1_girdi_metni) > max_chunk_len else e1_girdi_metni
@@ -599,21 +616,22 @@ def _tekil_egitim_adimi_icra(
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir_sabit.D1, takas_mgr=takas_mgr)
     
     
-    D0_op_sabit, _ = AcilDurumOomYakalayiciVeKurtarici(
+    D0_op_sabit, Delta_0_sabit = AcilDurumOomYakalayiciVeKurtarici(
         laplasyen_insa.insa_et, e3_sinir_sabit, e4_lif.phi_matrisleri,
-        modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr
+        modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr, hesapla_yogun_delta0=True
     )
     if hasattr(n6_aktor, 'update_operators'):
-        
-        
+
+
         try:
             n6_aktor.update_operators(D0_op_sabit)
         except Exception as _update_ops_exc:
             logger.warning(f"  [N6 update_operators Uyarısı] {_update_ops_exc}")
 
-    
+
     sorgu_q_son: Optional[torch.Tensor] = None
     cevap_a_son: Optional[torch.Tensor] = None
+    _n7_syn_states_seq_list: List[torch.Tensor] = []
 
     for r in range(1, config.R + 1):
         e5_a = E5_A_MevcutGizilDurum(x_r=x_current)
@@ -656,13 +674,14 @@ def _tekil_egitim_adimi_icra(
         
         e8_sentetik = E8_SentetikAraDurum(synthetic_state=h_syn_val)
         e9_guncel = E9_GuncellenmisGizilDurum(x_next=x_next_val)
+        _n7_syn_states_seq_list.append(h_syn_val)
         
         if isinstance(meclis_bellek, SMW_SifirParazit_BellekYoneticisi):
             k_r_key = e6_sorgu.q_r[:, :getattr(config, 'K', 16)] if e6_sorgu.q_r.shape[1] >= getattr(config, 'K', 16) else F.pad(e6_sorgu.q_r, (0, getattr(config, 'K', 16) - e6_sorgu.q_r.shape[1]))
             v_r_val = e7_lokal.a_r
             AnlasmaliVramGuvencesiAl(meclis_bellek, k_r_key, takas_mgr=takas_mgr)
             e5_b_yeni = AcilDurumOomYakalayiciVeKurtarici(
-                meclis_bellek.write, k_r=k_r_key, v_r=v_r_val, modul_nesnesi=meclis_bellek, takas_mgr=takas_mgr
+                meclis_bellek.BiyortogonalKorelasyonYaz, k_r=k_r_key, v_r=v_r_val, modul_nesnesi=meclis_bellek, takas_mgr=takas_mgr
             )
         else:
             AnlasmaliVramGuvencesiAl(bellek_yazici, e9_guncel.x_next, takas_mgr=takas_mgr)
@@ -683,13 +702,56 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
     )
 
-    
+    e15_bellek = E15_GuncellenmisBellekMatrisi(updated_memory=M_current)
+    logger.debug(f"  [E15_GuncellenmisBellekMatrisi] Adım {current_step} güncel bellek matrisi normu: {float(e15_bellek.updated_memory.detach().norm().item()):.6f}")
+
+    n7_lambda_max = AcilDurumOomYakalayiciVeKurtarici(
+        n7_cozucu.laplasyen_lambda_max, D0_op_sabit,
+        modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+    )
+    e18_topoloji = E18_TopolojiDenetimRaporu(
+        is_stable=bool(float(n7_lambda_max.detach().item()) < 1e4),
+        max_eigenvalue=float(n7_lambda_max.detach().item()),
+        spectral_gap=float(e_vec3.mean().detach().item()),
+    )
+    logger.debug(f"  [E18_TopolojiDenetimRaporu] Adım {current_step}: kararlı={e18_topoloji.is_stable}, lambda_max={e18_topoloji.max_eigenvalue:.6f}, spektral_boşluk={e18_topoloji.spectral_gap:.6f}")
+
+    _n7_blelloch_kayip_vec = torch.zeros(mevcut_durum.x_r.shape[0], device=mevcut_durum.x_r.device)
+    if Delta_0_sabit is not None and Delta_0_sabit.numel() > 0 and len(_n7_syn_states_seq_list) > 0:
+        _syn_seq_stack = torch.stack(_n7_syn_states_seq_list, dim=0)
+        _x_blelloch_traj = AcilDurumOomYakalayiciVeKurtarici(
+            n7_cozucu.coz_r_adimlari_blelloch, _syn_seq_stack, Delta_0_sabit, x_start_grouped,
+            modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+        )
+        _x_blelloch_traj_bnd = _x_blelloch_traj.transpose(0, 1)
+        _x_blelloch_smoothed_bnd = n7_cozucu.BlellochParalelScanVolterra(_x_blelloch_traj_bnd)
+        _x_blelloch_final = _x_blelloch_smoothed_bnd[:, -1, :]
+
+        _x_analitik_final = AcilDurumOomYakalayiciVeKurtarici(
+            n7_cozucu.analitik_matris_eksponansiyel_yesil_cozum,
+            Delta_0_sabit, _n7_syn_states_seq_list[-1], x_start_grouped, config.R,
+            modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+        )
+        _x_yesil_free = n7_cozucu.YesilCekirdegiBesselChebyshevEksponansiyel(
+            Delta_0_sabit, x_start_grouped, tau=float(config.dt) * float(config.R)
+        )
+
+        _hedef_x_detached = mevcut_durum.x_r.detach()
+        _n7_blelloch_kayip_vec = (
+            F.mse_loss(_x_blelloch_final, _hedef_x_detached, reduction='none').mean(dim=-1)
+            + F.mse_loss(_x_analitik_final, _hedef_x_detached, reduction='none').mean(dim=-1)
+            + 0.1 * F.mse_loss(_x_yesil_free, _hedef_x_detached, reduction='none').mean(dim=-1)
+        )
+
+
     _R_norm = float(max(1, config.R))
     _faz3_hedef_params = list(n6_aktor.parameters()) + list(n4_sorgu.parameters()) + list(n5_cevap.parameters())
     vjp_cerrahi_enjekte_et(d_vec3 / _R_norm, _faz3_hedef_params, retain_graph=True)
     g_faz3_uyumsuzluk = _grad_anlik_kopyala()
-    vjp_cerrahi_enjekte_et(F.relu(e_vec3) / _R_norm, _faz3_hedef_params)
+    vjp_cerrahi_enjekte_et(F.relu(e_vec3) / _R_norm, _faz3_hedef_params, retain_graph=True)
     g_faz3_dirichlet = _grad_anlik_kopyala()
+    vjp_cerrahi_enjekte_et(_n7_blelloch_kayip_vec, list(n7_cozucu.parameters()) + _faz3_hedef_params)
+    g_faz3_blelloch = _grad_anlik_kopyala()
     vram_denetci.yokla_ve_raporla("LOCO_Faz3_GrafSilindi", adim_no=current_step)
 
     
@@ -709,12 +771,37 @@ def _tekil_egitim_adimi_icra(
     
     T_matrix = AcilDurumOomYakalayiciVeKurtarici(cheby_calc.hesapla, N=N_star, takas_mgr=takas_mgr)
     hedef_clamped = torch.clamp(hedef_grouped[:, :N_star], min=0, max=getattr(config, 'V_size', 32000) - 1)
+    e13_hedef = E13_HedefTokenDizisi(target_tokens=hedef_clamped)
+    logger.debug(f"  [E13_HedefTokenDizisi] Adım {current_step} hedef token dizisi şekli: {tuple(e13_hedef.target_tokens.shape)}")
 
     
     AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_kulli.C.shape[0], N_star), takas_mgr=takas_mgr)
     e11_gomulu = AcilDurumOomYakalayiciVeKurtarici(n9_vandermonde.forward, e10_kulli, T_matrix, modul_nesnesi=n9_vandermonde, takas_mgr=takas_mgr)
     AnlasmaliVramGuvencesiAl(n10_sozluk, e11_gomulu.X_output, takas_mgr=takas_mgr)
-    e12_olasilik = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward, e11_gomulu, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
+    e12_olasilik = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward_sifir_oom_chunking, e11_gomulu, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
+
+    try:
+        with torch.no_grad():
+            _p_uret = e12_olasilik.P
+            _pred_ids = torch.argmax(_p_uret, dim=1)[0].detach().cpu().tolist() if _p_uret.dim() == 3 else []
+            _uret_tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
+            _uret_metin = _uret_tokenizer.decode([int(t) % getattr(config, 'V_size', 200000) for t in _pred_ids[:16]]) if _pred_ids else ""
+            e16_uretim = E16_UretilenMetinCiktisi(generated_text=_uret_metin, token_ids=_pred_ids)
+            logger.debug(f"  [E16_UretilenMetinCiktisi] Adım {current_step} model tahmini üretim (ilk 16 token): {e16_uretim.generated_text!r}")
+    except Exception as _e16_exc:
+        logger.debug(f"  [E16_UretilenMetinCiktisi] Adım {current_step} üretim özeti çıkarılamadı: {_e16_exc}")
+
+    if arc_donusturucu is not None and current_step % 50 == 0:
+        try:
+            with torch.no_grad():
+                izgara_ciktisi = arc_donusturucu.insa_et(e12_olasilik, hedef_boyut=(3, 3))
+            logging.getLogger("mucit_ai.main_egitim_dongusu").debug(
+                f"[N16_ArcIzgaraDonusturucu] Adım {current_step} tahmini ızgara: {izgara_ciktisi['attempt_1']}"
+            )
+        except Exception as _n16_exc:
+            logging.getLogger("mucit_ai.main_egitim_dongusu").debug(
+                f"[N16_ArcIzgaraDonusturucu] Izgara insa hatasi (yoksayildi): {_n16_exc}"
+            )
 
     with torch.no_grad():
         x_start_detached = E9_GuncellenmisGizilDurum(x_next=x_start_grouped.detach())
@@ -727,7 +814,7 @@ def _tekil_egitim_adimi_icra(
         
         
         AnlasmaliVramGuvencesiAl(n10_sozluk, e11_cevapsiz.X_output, takas_mgr=takas_mgr)
-        e12_olasilik_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward, e11_cevapsiz, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
+        e12_olasilik_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward_sifir_oom_chunking, e11_cevapsiz, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
 
     
     _hesap_cihazi = x_start_grouped.device
@@ -848,7 +935,7 @@ def _tekil_egitim_adimi_icra(
     
     shard_gradyanlari = [
         g_faz2_uyumsuzluk, g_faz2_dirichlet,
-        g_faz3_uyumsuzluk, g_faz3_dirichlet,
+        g_faz3_uyumsuzluk, g_faz3_dirichlet, g_faz3_blelloch,
         g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec,
         g_spektral, g_sorgu, g_cumle_keyfiyet,
     ]
@@ -890,7 +977,7 @@ def _tekil_egitim_adimi_icra(
 
     
     del shard_gradyanlari
-    del g_faz2_uyumsuzluk, g_faz2_dirichlet, g_faz3_uyumsuzluk, g_faz3_dirichlet
+    del g_faz2_uyumsuzluk, g_faz2_dirichlet, g_faz3_uyumsuzluk, g_faz3_dirichlet, g_faz3_blelloch
     del g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec, g_spektral, g_sorgu, g_cumle_keyfiyet
     import gc as _gc4
     _gc4.collect()
@@ -901,6 +988,9 @@ def _tekil_egitim_adimi_icra(
     adapted_lr = config.lr / (1.0 + 0.01 * grad_norm_pareto)
     for param_group in optimizer.param_groups:
         param_group['lr'] = adapted_lr
+
+    e17_gradyan_paketi = E17_EgitimGradiyantPaketi(step_num=current_step, current_lr=adapted_lr, grad_norm=grad_norm_pareto)
+    logger.debug(f"  [E17_EgitimGradiyantPaketi] Adım {e17_gradyan_paketi.step_num}: lr={e17_gradyan_paketi.current_lr:.8f}, grad_norm={e17_gradyan_paketi.grad_norm:.6f}")
 
     vram_denetci.yokla_ve_raporla("LOCO_Pareto_PCGrad_StepCompleted", adim_no=current_step)
 
@@ -915,7 +1005,7 @@ def _tekil_egitim_adimi_icra(
     
     _kayip_bileseni_listesi = [
         d_vec2.mean(), F.relu(e_vec2).mean(),
-        (d_vec3 / _R_norm).mean(), (F.relu(e_vec3) / _R_norm).mean(),
+        (d_vec3 / _R_norm).mean(), (F.relu(e_vec3) / _R_norm).mean(), _n7_blelloch_kayip_vec.mean(),
         kayip_grpo_vec.mean(), l_var_vec.mean(), l_cov_vec.mean(), l_rec_vec.mean(),
         kayip_spektral_vec.mean(), E_sorgu_canli.mean(), kayip_cumle_keyfiyet_vec.mean(),
     ]
@@ -923,7 +1013,19 @@ def _tekil_egitim_adimi_icra(
         float(alpha_pareto[i].detach().item()) * float(_kayip_bileseni_listesi[i].detach().item())
         for i in range(len(_kayip_bileseni_listesi))
     ))
-    
+
+    e14_kayip_metrikleri = E14_SistemKayipMetrikleri(
+        total_loss=torch.tensor(kayip_val),
+        ce_loss=kayip_grpo_vec.mean().detach(),
+        laplacian_loss=(F.relu(e_vec3) / _R_norm).mean().detach(),
+        cohomology_loss=(d_vec3 / _R_norm).mean().detach(),
+    )
+    logger.debug(
+        f"  [E14_SistemKayipMetrikleri] Adım {current_step}: toplam={float(e14_kayip_metrikleri.total_loss):.6f}, "
+        f"ce={float(e14_kayip_metrikleri.ce_loss):.6f}, laplacian={float(e14_kayip_metrikleri.laplacian_loss):.6f}, "
+        f"kohomoloji={float(e14_kayip_metrikleri.cohomology_loss):.6f}"
+    )
+
     raw_n3_lif = gpu_dagitici.kok_modul_al(n3_lif) if gpu_dagitici is not None else (n3_lif.module if hasattr(n3_lif, 'module') else n3_lif)
     
     
@@ -936,6 +1038,9 @@ def _tekil_egitim_adimi_icra(
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         stiefel_izdusurucu.izdüsür(raw_n3_lif.phi_base)
+
+    raw_n1_byte = gpu_dagitici.kok_modul_al(n1_byte) if gpu_dagitici is not None else (n1_byte.module if hasattr(n1_byte, 'module') else n1_byte)
+    raw_n1_byte.izdusur_stiefel()
 
     d_discrepancy = float(d_vec3.mean().detach().item())
     dirichlet_energy = float(e_vec3.mean().detach().item())
@@ -985,8 +1090,10 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     
     ckpt_dizini = "/kaggle/working" if os.path.exists("/kaggle/working") else "./checkpoints"
     npz_mgr = NPZCheckpointManager(checkpoint_dir=ckpt_dizini)
+    n15_yedek_yoneticisi = N15_EgitimKontrolNoktasiYoneticisi(kaydetme_dizini=os.path.join(ckpt_dizini, "n15_tasinabilir_yedek"))
+    n16_arc_donusturucu = N16_ArcIzgaraDonusturucu()
 
-    
+
     npz_mgr.purge_orphan_checkpoints()
     npz_mgr.load_hafiza_state()
 
@@ -1079,6 +1186,12 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
         tum_veriseti_klasorleri = list(klasorler.keys())
         for klasor_yolu, dosyalar in klasorler.items():
             tum_klasor_dosyalari = dosyalar
+            try:
+                dosya_boyutlari = [(d, os.path.getsize(d) if os.path.exists(d) else 0) for d in dosyalar]
+                dengeli_dagitim = LPT_DosyaDengeliDagitici.dagit(dosya_boyutlari, num_gpus=1)
+                dosyalar = dengeli_dagitim[0] if dengeli_dagitim else dosyalar
+            except Exception as _lpt_exc:
+                logger.debug(f"[LPT_DosyaDengeliDagitici] Dosya dengeleme atlandı (yoksayıldı): {_lpt_exc}")
             for dosya_yolu in dosyalar:
                 
                 if npz_mgr.hafiza.is_dosya_islenmis(dosya_yolu, klasor_yolu, veriseti_adi):
@@ -1133,7 +1246,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             stiefel_izdusurucu=stiefel_izdusurucu,
                             gpu_dagitici=None,
                             gpu_cesitlendirici=None,
-                            takas_mgr=takas_mgr
+                            takas_mgr=takas_mgr,
+                            arc_donusturucu=n16_arc_donusturucu
                         )
                     except Exception as _adim_exc:
                         logger.error(
@@ -1190,7 +1304,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         is_best = True
 
                     if is_periodic or is_best:
-                        npz_mgr.save_pytorch_model(
+                        _kaydedilen_npz_yolu = npz_mgr.save_pytorch_model(
                             step=current_step,
                             token_offset=current_step * config.N,
                             model=tum_moduller,
@@ -1198,8 +1312,29 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             loss_history=loss_history,
                             is_best=is_best
                         )
+                        try:
+                            _dogrulama = npz_mgr.verify(_kaydedilen_npz_yolu)
+                            if not _dogrulama.get("valid", False):
+                                logger.warning(
+                                    f"  [Ckpt Doğrulama] Adım [{current_step}] kaydı doğrulanamadı: "
+                                    f"{_dogrulama.get('errors')}"
+                                )
+                        except Exception as _dogrulama_exc:
+                            logger.debug(f"  [Ckpt Doğrulama] Doğrulama denemesi başarısız: {_dogrulama_exc}")
 
-                    
+                    if is_best:
+                        try:
+                            n15_yedek_yoneticisi.kaydet(
+                                epoch=current_step,
+                                model=tum_moduller,
+                                optimizer=optimizer,
+                                kayip=curr_loss_val,
+                                is_master=True
+                            )
+                        except Exception as _n15_exc:
+                            logger.debug(f"[N15_EgitimKontrolNoktasiYoneticisi] Taşınabilir yedek kaydı başarısız (yoksayıldı): {_n15_exc}")
+
+
                     if is_last_chunk:
                         npz_mgr.hafiza.dosya_tamamlandi(
                             dosya_yolu=dosya_yolu,
@@ -1225,6 +1360,32 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
         is_best=False,
         bekle=True
     )
+
+    try:
+        npz_mgr.tum_bekleyen_kayitlari_bekle(timeout=60.0)
+    except Exception as _bekle_exc:
+        logger.warning(f"  [Ckpt Mgr] Bekleyen kayıtlar beklenirken uyarı: {_bekle_exc}")
+
+    try:
+        _mevcut_kontrol_noktalari = npz_mgr.list_checkpoints()
+        logger.info(f"  [Ckpt Mgr] Diskteki toplam kontrol noktası sayısı: {len(_mevcut_kontrol_noktalari)}")
+        for _cn in _mevcut_kontrol_noktalari:
+            logger.info(f"    - {_cn['filename']} | {_cn['size_mb']} MB | limit içinde: {_cn['within_limit']}")
+    except Exception as _list_exc:
+        logger.debug(f"  [Ckpt Mgr] Kontrol noktası listeleme uyarısı: {_list_exc}")
+
+    try:
+        npz_mgr.final_model_kopyala_kaggle_working(is_best=True)
+    except Exception as _final_kopyala_exc:
+        logger.debug(f"  [Ckpt Mgr] Kaggle working kopyalama denemesi atlandı: {_final_kopyala_exc}")
+
+    try:
+        _kaggle_uploader = KaggleDatasetUploader(working_dir=ckpt_dizini)
+        _kaggle_upload_basarili = _kaggle_uploader.upload(step=current_step, message=f"Final checkpoint step {current_step}")
+        if not _kaggle_upload_basarili:
+            logger.info("  [Upload] Kaggle veri seti güncellemesi yapılmadı (kimlik bilgisi yok veya CLI hatası) — eğitim normal şekilde sonlandırılıyor.")
+    except Exception as _kaggle_exc:
+        logger.warning(f"  [Upload] Kaggle uploader beklenmedik hata ile atlandı: {_kaggle_exc}")
 
     if takas_mgr is not None and hasattr(takas_mgr, "kapat"):
         takas_mgr.kapat()

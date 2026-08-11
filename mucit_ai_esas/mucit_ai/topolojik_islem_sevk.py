@@ -7,14 +7,11 @@ import math
 from typing import Dict, List, Tuple, Any, Optional
 import torch
 
-from kulli_gpu.cpu_ana_idareci import CpuAnaIdareci
-from kulli_gpu.coklu_surec_isci import NcclIletisimHatti
-
 logger = logging.getLogger("mucit_ai.topolojik_islem_sevk")
 
 
 class TopolojikIslemSevk:
-    def __init__(self, idareci: CpuAnaIdareci, model: Optional[Any] = None):
+    def __init__(self, idareci: Optional[Any] = None, model: Optional[Any] = None):
         self.idareci = idareci
         self.model = model
         logger.info("[TopolojikIslemSevk] Sevk koprusu ilklendi.")
@@ -31,20 +28,6 @@ class TopolojikIslemSevk:
         laplasyen_insa_module: Any
     ) -> Tuple[Any, Any, torch.Tensor, torch.Tensor]:
         e3_sinir = n2_module.forward(e2_byte, x_initial=x_initial, mode='train')
-
-        if (
-            hasattr(e3_sinir, 'D1') and e3_sinir.D1 is not None and torch.cuda.is_available()
-            
-            
-            and self.idareci is not None and self.idareci.world_size > 1
-        ):
-            rank = torch.cuda.current_device()
-            sol_rank = (rank - 1) % self.idareci.world_size
-            sag_rank = (rank + 1) % self.idareci.world_size
-            
-            
-            halo_girdi = e3_sinir.D1 if e3_sinir.D1.is_contiguous() else e3_sinir.D1.contiguous()
-            _, _ = NcclIletisimHatti.sinir_veri_takasi_halo_swap(halo_girdi, sol_rank, sag_rank)
 
         D0_op, Delta_0_op = laplasyen_insa_module.insa_et(e3_sinir, n2_module.config if hasattr(n2_module, 'config') else {})
         return e2_byte, e3_sinir, D0_op, Delta_0_op
@@ -67,9 +50,6 @@ class TopolojikIslemSevk:
     ) -> Tuple[Any, Any]:
         e11_gomulu = n9_vandermonde.forward(e10_kulli, T_matrix)
 
-        if torch.cuda.is_available() and self.idareci is not None and self.idareci.world_size > 1:
-            NcclIletisimHatti.kuresel_indirgeme_allreduce(e11_gomulu.X_output, op_type="MEAN")
-
         e12_olasilik = n10_sozluk.forward(e11_gomulu)
         return e11_gomulu, e12_olasilik
 
@@ -85,8 +65,6 @@ class TopolojikIslemSevk:
             cevap_a = cevap_a.to(sorgu_q.device)
 
         part_product = torch.bmm(sorgu_q.unsqueeze(1), cevap_a.unsqueeze(2)).squeeze()
-        if torch.cuda.is_available() and self.idareci is not None and self.idareci.world_size > 1:
-            NcclIletisimHatti.kuresel_indirgeme_allreduce(part_product, op_type="SUM")
         return part_product
 
     def adim_icra_et(self, metin: str, hedef_tensor: torch.Tensor) -> Any:
