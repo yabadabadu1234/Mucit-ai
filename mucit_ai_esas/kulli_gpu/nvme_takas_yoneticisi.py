@@ -14,9 +14,11 @@ import os
 import sys
 import uuid
 import time
+import shutil
 import tempfile
 import logging
 import threading
+import concurrent.futures
 from dataclasses import dataclass, field
 from typing import Tuple, Dict, List, Any, Optional
 import torch
@@ -223,6 +225,21 @@ class AutogradNvmeOffloadHook:
     ):
         self.karar_motoru = karar_motoru or NvmeTahliyeKararMotoru()
         self.kayit_defteri = kayit_defteri or kuresel_adres_kayit_defteri
+        # DÜZELTME (madde 54): torch.save senkron/bloklayıcı şekilde çağrıldığında
+        # backward akışını (autograd engine'in kendi thread'ini) diskin fiziksel
+        # yazma hızına kadar durdurur. cpu_kopyasi zaten `tensor.detach().cpu()`
+        # ile alınmış BAĞIMSIZ bir kopya olduğundan (orijinal `tensor` ile bellek
+        # paylaşmaz, autograd grafiğinden kopuktur) arka planda güvenle diske
+        # yazılabilir — yazma sırasında kimse bu kopyayı mutasyona uğratmaz.
+        # Tek gerçek risk, unpack_hook'un yazma tamamlanmadan aynı dosyayı
+        # okumaya kalkışmasıdır; bu, aşağıdaki `_bekleyen_yazmalar` sözlüğünde
+        # dosya_yolu -> Future eşlemesi tutulup unpack_hook içinde okumadan önce
+        # `future.result()` ile beklenerek KESİN olarak önlenir.
+        self._yazma_havuzu = concurrent.futures.ThreadPoolExecutor(
+            max_workers=2, thread_name_prefix="nvme_takas_yazici"
+        )
+        self._bekleyen_yazmalar: Dict[str, concurrent.futures.Future] = {}
+        self._bekleyen_yazmalar_lock = threading.Lock()
 
     def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Tuple[str, Tuple[int, ...], torch.dtype, str]:
         """
@@ -245,7 +262,33 @@ class AutogradNvmeOffloadHook:
             original_device = str(tensor.device)
 
             cpu_kopyasi = tensor.detach().cpu()
-            torch.save(cpu_kopyasi, dosya_yolu)
+
+            # DÜZELTME (madde 57): NVMe/tmp diski dolu olduğunda torch.save ortasında
+            # OSError (ENOSPC) fırlatıp backward'ı çökertmeden ÖNCE, en azından
+            # tensörün yaklaşık boyutu kadar boş alan olup olmadığı kontrol edilir.
+            # Kesin bir garanti değildir (başka süreçler diski aynı anda doldurabilir)
+            # ama yaygın "disk zaten doluydu" senaryosunu erkenden, temiz bir
+            # exception ile (aşağıdaki genel except bloğunda) yakalar.
+            gereken_bayt = cpu_kopyasi.element_size() * cpu_kopyasi.numel()
+            try:
+                disk_durumu = shutil.disk_usage(self.karar_motoru.swap_dir)
+                if disk_durumu.free < (gereken_bayt + 64 * 1024 * 1024):  # 64 MB emniyet payı
+                    raise OSError(
+                        f"NVMe takas dizininde yetersiz disk alanı: gereken~{gereken_bayt} bayt, "
+                        f"boş={disk_durumu.free} bayt ({self.karar_motoru.swap_dir})"
+                    )
+            except OSError:
+                raise
+            except Exception as _disk_exc:
+                logger.warning(f"[AutogradNvmeOffloadHook] Disk alanı sorgulanamadı, yazma denemesi yine de yapılacak: {_disk_exc}")
+
+            # DÜZELTME (madde 54): torch.save ana (autograd) thread'ini bloklamasın
+            # diye arka plan havuzuna devredilir. Dönen Future, unpack_hook aynı
+            # dosyayı okumadan ÖNCE yazmanın gerçekten bittiğinden emin olmak için
+            # `dosya_yolu` anahtarıyla saklanır (bkz. __init__ notu ve unpack_hook).
+            yazma_future = self._yazma_havuzu.submit(torch.save, cpu_kopyasi, dosya_yolu)
+            with self._bekleyen_yazmalar_lock:
+                self._bekleyen_yazmalar[dosya_yolu] = yazma_future
             sanal_id = f"addr_{uuid.uuid4().hex[:8]}"
             kayit = NesneAdresKaydi(
                 sanal_adres=sanal_id,
@@ -313,6 +356,24 @@ class AutogradNvmeOffloadHook:
 
         if target_device is None:
             target_device = "cuda:0" if torch.cuda.is_available() else "cpu"
+
+        # DÜZELTME (madde 54): pack_hook_diske_tahliye artık torch.save'i arka plan
+        # thread havuzuna devrediyor (bkz. AutogradNvmeOffloadHook.__init__ notu).
+        # Backward bu unpack_hook'u yazma bitmeden çağırabileceği için, dosyayı
+        # okumadan ÖNCE ilgili Future varsa `result()` ile beklenip yazmanın kesin
+        # olarak tamamlandığından emin olunur (aksi halde os.path.exists() True
+        # dönse bile dosya hâlâ yarım/boş olabilir).
+        bekleyen_future = None
+        yazici = getattr(self, "_bekleyen_yazmalar", None)
+        if yazici is not None and dosya_yolu:
+            with self._bekleyen_yazmalar_lock:
+                bekleyen_future = self._bekleyen_yazmalar.pop(dosya_yolu, None)
+        if bekleyen_future is not None:
+            try:
+                bekleyen_future.result()
+            except Exception as _yazma_exc:
+                logger.error(f"[AutogradNvmeOffloadHook] Arka plan diske yazma hatasi: {_yazma_exc}")
+                return torch.zeros(shape, dtype=dtype, device=target_device)
 
         if not dosya_yolu or not os.path.exists(dosya_yolu):
             return torch.zeros(shape, dtype=dtype, device=target_device)
