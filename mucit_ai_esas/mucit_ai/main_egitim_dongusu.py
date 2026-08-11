@@ -804,8 +804,15 @@ def _tekil_egitim_adimi_icra(
     if hasattr(n6_aktor, 'update_operators'):
         n6_aktor.update_operators(D0_op_sabit)
 
-    sorgu_q_list = []
-    cevap_a_list = []
+    # KAPSAMLI DENETİM (madde 20): ÖNCEDEN sorgu_q_list/cevap_a_list, R döngüsünün HER
+    # adımında büyüyen listelerdi, ama yalnızca SON eleman (son_q/son_a, satır ~957-958
+    # ve son_a_detached, satır ~1055) hiç okunuyordu. R-1 önceki adımın tensörleri
+    # (her biri [B*GRPO_G, d_q]/[d_a]) Faz4/5 ve Pareto-PCGrad birleştirmesi boyunca
+    # hiçbir işlevsel sebep olmadan liste referanslarıyla canlı tutuluyordu — D0_op'un
+    # daha önce düzeltilen gereksiz tutulma hatasıyla aynı sınıf. Artık yalnızca SON
+    # değer bir değişkende tutuluyor.
+    sorgu_q_son: Optional[torch.Tensor] = None
+    cevap_a_son: Optional[torch.Tensor] = None
 
     for r in range(1, config.R + 1):
         e5_a = E5_A_MevcutGizilDurum(x_r=x_current)
@@ -819,8 +826,8 @@ def _tekil_egitim_adimi_icra(
         AnlasmaliVramGuvencesiAl(n5_cevap, e6_sorgu.q_r, takas_mgr=takas_mgr)
         e7_lokal = AcilDurumOomYakalayiciVeKurtarici(n5_cevap.forward, e6_sorgu, e5_b, modul_nesnesi=n5_cevap, takas_mgr=takas_mgr)
         
-        sorgu_q_list.append(e6_sorgu.q_r)
-        cevap_a_list.append(e7_lokal.a_r)
+        sorgu_q_son = e6_sorgu.q_r
+        cevap_a_son = e7_lokal.a_r
         
         def _tekil_n6_n7_step(x_c, q_c, a_c):
             e5_a_st = E5_A_MevcutGizilDurum(x_r=x_c)
@@ -954,8 +961,8 @@ def _tekil_egitim_adimi_icra(
     kayip_cevapsiz = -torch.log(p_target_cevapsiz + 1e-9).mean(dim=-1)
     kayip_cevapli = -torch.log(p_target_cevapli + 1e-9).mean(dim=-1)
 
-    son_q = sorgu_q_list[-1]
-    son_a = cevap_a_list[-1]
+    son_q = sorgu_q_son
+    son_a = cevap_a_son
     # n9/n10 gibi bu çağrı da AcilDurumOomYakalayiciVeKurtarici İLE sarmalanmalı:
     # Delta_0=D0_op_sabit artık (bkz. Riyazi_LifLaplasyeniBlokInsaEdici.insa_et
     # düzeltmesi) VRAM kontratı CPU'ya yönlendirdiğinde GERÇEKTEN CPU'da gelebiliyor,
@@ -1052,7 +1059,7 @@ def _tekil_egitim_adimi_icra(
         D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b_canli,
         modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
     )
-    son_a_detached = cevap_a_list[-1].detach()
+    son_a_detached = cevap_a_son.detach()
     # KAPSAMLI DENETİM (madde 7): e6_sorgu_canli.q_r (reaktif kurtarıcının CPU-fallback'inden
     # kalmış olabilir) ve son_a_detached (hâlâ GPU'da olabilir) arasında açık cihaz hizalaması
     # yoktu — çıplak çıkarma "Expected all tensors to be on the same device" ile çökerdi.
