@@ -613,8 +613,8 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T.contiguous(), D0)    
         return D0, Delta_0
 
-    def tasintilar_cihaza(self, D0: torch.Tensor, Delta_0: torch.Tensor, target_device: torch.device) -> Tuple[torch.Tensor, torch.Tensor]:
-        return D0.to(target_device), Delta_0.to(target_device)
+    def tasintilar_cihaza(self, D0: torch.Tensor, Delta_0: Optional[torch.Tensor], target_device: torch.device) -> Tuple[torch.Tensor, Optional[torch.Tensor]]:
+        return D0.to(target_device), (Delta_0.to(target_device) if Delta_0 is not None else None)
 
 
 class Bellek_TopolojikDikkatYazici(nn.Module):
