@@ -493,10 +493,8 @@ class Yardimci_ChebyshevMatrisHesaplayici:
             self._vandermonde_cache.move_to_end(cache_key)
             return self._vandermonde_cache[cache_key]
 
-        k_indices = torch.arange(N, dtype=torch.float32, device=device)
-        t_cgl = -torch.cos(k_indices * math.pi / max(1, N - 1))
-        t_linear = torch.linspace(-0.999, 0.999, N, device=device)
-        t_sample = 0.5 * t_cgl + 0.5 * t_linear  
+        k_indices_koku = torch.arange(1, N + 1, dtype=torch.float32, device=device)
+        t_sample = torch.cos((2.0 * k_indices_koku - 1.0) / (2.0 * max(N, 1)) * math.pi)
 
         T = torch.zeros((M_p_1, N), device=device)
         M_val = float(M_p_1 - 1)
@@ -1025,16 +1023,14 @@ class N3_LifSinirlamaAtama(nn.Module):
         x_u = X[:, src_indices, :]  
         x_v = X[:, dst_indices, :]  
 
-        shift_u = F.silu(self.W_u(x_u)).mean(dim=0)  
-        shift_v = F.silu(self.W_v(x_v)).mean(dim=0)  
+        u_e = F.silu(self.W_u(x_u)).mean(dim=0)
+        v_e = F.silu(self.W_v(x_v)).mean(dim=0)
 
-        shift_v_dv = self.shift_v_to_dv(shift_v)  
-        delta_phi = torch.bmm(shift_u.unsqueeze(2), shift_v_dv.unsqueeze(1))  
-        Phi_batch_raw = self.phi_base.unsqueeze(0) + 0.1 * delta_phi  
+        A_e = torch.bmm(u_e.unsqueeze(2), v_e.unsqueeze(1)) - torch.bmm(v_e.unsqueeze(2), u_e.unsqueeze(1))
 
         with torch.amp.autocast('cuda', enabled=False):
-            Q, _ = torch.linalg.qr(Phi_batch_raw.float())
-            Phi_batch = Q  
+            R_e = torch.linalg.matrix_exp(A_e.float())
+            Phi_batch = torch.matmul(R_e, self.phi_base.unsqueeze(0).float())
 
         for e in range(E_num):
             v_src = int(src_indices[e].item())
@@ -2169,20 +2165,24 @@ class N14_OdulTopolojikDevresmezlikMotoru:
         self.config = config
 
     def hesapla(self, P: torch.Tensor, hedefler: torch.Tensor) -> torch.Tensor:
-        
-        
+        eps = 1e-9
         if P.dim() == 2:
-            B, N = P.shape
-            is_correct = (P > 0.1).float().mean(dim=-1)
-            topolojik_invaryant = 1.0 - torch.std(P, dim=-1, unbiased=False)
+            kl_terimi = -torch.log2(P + eps)
+            h_bernoulli = -P * torch.log2(P + eps) - (1.0 - P) * torch.log2(1.0 - P + eps)
+            odul_pozisyon = -kl_terimi + h_bernoulli
+            oduller = odul_pozisyon.mean(dim=-1)
         else:
             B, V_size, N = P.shape
-            preds = torch.argmax(P, dim=1)
             min_len = min(N, hedefler.shape[1])
-            is_correct = (preds[:, :min_len] == hedefler[:, :min_len]).float().mean(dim=-1)
-            topolojik_invaryant = 1.0 - torch.std(P, dim=(1, 2), unbiased=False)
+            Y = torch.clamp(hedefler[:, :min_len], min=0, max=V_size - 1).long()
+            P_trim = P[:, :, :min_len]
+            P_hedef = P_trim.gather(1, Y.unsqueeze(1)).squeeze(1)
+            kl_terimi = -torch.log2(P_hedef + eps)
+            H_tam = -(P_trim * torch.log2(P_trim + eps)).sum(dim=1)
+            H_norm = H_tam / math.log2(max(V_size, 2))
+            odul_pozisyon = -kl_terimi + H_norm
+            oduller = odul_pozisyon.mean(dim=-1)
 
-        oduller = is_correct * 2.0 + topolojik_invaryant * 0.5
         return oduller
 
     def hesapla_aktif_sorgu_odulu(
