@@ -3456,35 +3456,69 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
-        duzles_faz_vektorleri: List[torch.Tensor] = []
-        for g_list in shard_gradyanlari:
+        # DÜZELTME (Kaggle çöküşü — "Tried to allocate 80.00 MiB ... 7.12 MiB is free"
+        # unhandled OutOfMemoryError): torch.cat(vektor_parcalari, dim=0) ve ona giden
+        # per-parametre .reshape().to(...) zinciri HİÇBİR try/except zırhı içinde değildi
+        # — VRAM'in adımın en dolu olduğu tam anında bu döngü OOM verirse fonksiyon
+        # doğrudan çöküyor, çağıranın GPU-içi tek-seferlik retry'ı da AYNI sebeple
+        # (VRAM zaten dolu) başarısız oluyordu. Artık her fazın inşası ayrı ayrı
+        # korunuyor: OOM/cihaz hatası yakalanırsa o fazın parçaları CPU'da (float32)
+        # yeniden inşa edilir VE zaten inşa edilmiş önceki fazlar da CPU'ya taşınır —
+        # tüm duzles_faz_vektorleri girdilerinin AYNI cihazda kalması zorunludur, aksi
+        # halde sonraki torch.dot/G[i,j] adımlarında "Expected all tensors to be on
+        # the same device" hatası patlar. Adım 4'teki nihai unflatten zaten her
+        # parametre dilimini kendi p.device'ına ayrı ayrı geri taşıdığından
+        # (`.to(device=p.device, ...)`), bu fonksiyonun TAMAMININ CPU'da tamamlanması
+        # güvenlidir — yalnızca daha yavaştır, çökmekten iyidir.
+        def _gercek_oom_veya_cihaz_hatasi(exc: Exception) -> bool:
+            mesaj = str(exc).lower()
+            return "out of memory" in mesaj or "device" in mesaj or "cuda" in mesaj
+
+        _bellek_cihazi = ref_device
+        _bellek_dtype = pcgrad_bellek_dtype
+
+        def _faz_vektoru_insa_et(g_list: List[Optional[torch.Tensor]], cihaz: torch.device, dtype: torch.dtype) -> torch.Tensor:
             vektor_parcalari: List[torch.Tensor] = []
             for k, p in enumerate(trainable_params):
                 g = g_list[k] if k < len(g_list) else None
                 if g is not None:
-                    # Mevcut gradyan parçası: 1D'ye düzleştir, cihazı hizala.
-                    # NOT: .view(-1) DEĞİL .reshape(-1) kullanılır — g (bir düğümün
-                    # gradyanı) transpose/.T zincirinden (ör. D0.T, Delta_0_hat.T gibi
-                    # matmul'lardan geri yayılan gradyanlar) non-contiguous stride ile
-                    # gelebilir; .view() bu durumda "view size is not compatible..."
-                    # RuntimeError'ı fırlatır. .reshape() aynı sonucu üretir, gerekirse
-                    # sessizce kopyalayarak contiguous hale getirir — asla çökmez.
-                    vektor_parcalari.append(g.reshape(-1).to(device=ref_device, dtype=pcgrad_bellek_dtype))
+                    # NOT: .view(-1) DEĞİL .reshape(-1) kullanılır — g non-contiguous
+                    # stride ile gelebilir; .reshape() gerekirse sessizce kopyalar.
+                    vektor_parcalari.append(g.reshape(-1).to(device=cihaz, dtype=dtype))
                 else:
-                    # Kullanılmayan parametre → aynı cihazda sıfır dolgu (NCCL güvencesi)
-                    vektor_parcalari.append(
-                        torch.zeros(p.numel(), device=ref_device, dtype=pcgrad_bellek_dtype)
-                    )
-            # Tüm parçaları tek 1D dev vektörde birleştir [P_toplam]
+                    vektor_parcalari.append(torch.zeros(p.numel(), device=cihaz, dtype=dtype))
             faz_1d = torch.cat(vektor_parcalari, dim=0)
-            # DÜZELTME: torch.cat kendi kopyasını ürettikten sonra vektor_parcalari
-            # (P_toplam boyutunda ayrı parça referansları) artık kullanılmıyor ama bir
-            # sonraki döngü turuna kadar canlı kalıp geçici olarak 2×P belleği işgal
-            # ediyordu — tam VRAM'in en kritik olduğu bu döngüde. Açıkça serbest bırakılır.
             del vektor_parcalari
+            return faz_1d
+
+        duzles_faz_vektorleri: List[torch.Tensor] = []
+        for g_list in shard_gradyanlari:
+            try:
+                faz_1d = _faz_vektoru_insa_et(g_list, _bellek_cihazi, _bellek_dtype)
+            except (torch.cuda.OutOfMemoryError if hasattr(torch.cuda, "OutOfMemoryError") else RuntimeError, RuntimeError) as _flatten_exc:
+                if not _gercek_oom_veya_cihaz_hatasi(_flatten_exc):
+                    raise
+                logging.getLogger("mucit_ai.kontratlar").warning(
+                    f"  [Pareto-PCGrad Flatten OOM] Faz düzleştirme sırasında gerçek VRAM/cihaz "
+                    f"hatası yakalandı, kalan tüm fazlar CPU'ya taşınıyor: {_flatten_exc}"
+                )
+                import gc as _gc_flatten
+                _gc_flatten.collect()
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+                # Zaten GPU'da inşa edilmiş önceki fazları da CPU'ya taşı — cihaz tutarlılığı zorunlu
+                _bellek_cihazi = torch.device("cpu")
+                _bellek_dtype = torch.float32
+                duzles_faz_vektorleri = [v.to(device=_bellek_cihazi, dtype=_bellek_dtype) for v in duzles_faz_vektorleri]
+                faz_1d = _faz_vektoru_insa_et(g_list, _bellek_cihazi, _bellek_dtype)
             # GradNorm Normalizasyonu: faz kayıp ölçek farklarını (84.0 ↔ 0.0003) eşitle
             norm_val = torch.norm(faz_1d) + 1e-8
             duzles_faz_vektorleri.append(faz_1d / norm_val)
+
+        # Fonksiyonun geri kalanı (PCGrad dikgenleştirme, Gram matrisi, Frank-Wolfe) hangi
+        # cihazda çalıştığını duzles_faz_vektorleri'nin gerçek .device'ından türetir —
+        # ref_device SABİT KABUL EDİLEMEZ artık (CPU'ya düşülmüş olabilir).
+        ref_device = duzles_faz_vektorleri[0].device
 
         # ==============================================================
         # ADIM 2: PCGRAD ZIT YÖNLÜ GRADİYAN DİKGENLEŞTİRMESİ
