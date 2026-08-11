@@ -906,7 +906,10 @@ class N2_TopoXHucreOlusumu(nn.Module):
         A_raw = sparsemax(scores, dim=-1)  
 
         if mode == 'eval' and D0_base is not None:
-            A_mat = A_raw + 0.01 * torch.matmul(A_raw, A_raw.transpose(1, 2))
+            V_guncel = A_raw.shape[-1]
+            beta_isi_cekirdegi = 0.5
+            I_V = torch.eye(V_guncel, device=A_raw.device, dtype=A_raw.dtype).unsqueeze(0)
+            A_mat = torch.linalg.solve(I_V - beta_isi_cekirdegi * A_raw, A_raw)
         else:
             A_mat = A_raw
 
@@ -1457,6 +1460,7 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         self.config = config
         self.syn_proj_layer = nn.Linear(config.d_h, config.d_v)
         self.log_lambda_ricci = nn.Parameter(torch.tensor(math.log(0.1)))
+        self.eta_ham = nn.Parameter(torch.tensor(math.log(0.05 / 0.95)))
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else (self.config.batch_size if self.config else 1)
@@ -1516,13 +1520,13 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(B, D_dyn) 
 
         lap1 = laplasyen_ile_carp(x_r, D0)
-        laplacian_flow = lap1 / (lambda_max + 1e-6)
         lap2 = laplasyen_ile_carp(lap1, D0)
         lambda_ricci = F.softplus(self.log_lambda_ricci)
-        ricci_sonumleme = lap2 / (lambda_max.pow(2) + 1e-6)
+        eta = torch.sigmoid(self.eta_ham)
+        dt_yildiz = eta / (lambda_max + 1e-6)
+        dt_yildiz_ricci = eta / (lambda_max.pow(2) + 1e-6)
 
-        dx = -laplacian_flow + syn_proj - lambda_ricci * ricci_sonumleme
-        x_next = x_r + self.config.dt * dx
+        x_next = x_r + dt_yildiz * (-lap1 + syn_proj) - dt_yildiz_ricci * lambda_ricci * lap2
         return E9_GuncellenmisGizilDurum(x_next=x_next)
 
     
