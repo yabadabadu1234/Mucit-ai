@@ -3538,6 +3538,14 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         # Adım 4'ün sonunda zaten p.dtype'a geri dönüştürülüyor.
         nihai_1d = sum(alpha_star[i].float() * pc_vektorleri[i].float() for i in range(n))
 
+        # DÜZELTME: nihai_1d hesaplandıktan sonra pc_vektorleri/duzles_faz_vektorleri/G
+        # (n×P_toplam boyutlu, VRAM'in en kritik olduğu bu fonksiyondaki en büyük
+        # canlı referanslar) artık hiç kullanılmıyor ama önceden fonksiyon dönene kadar
+        # (optimizer.step()'in kendi tahsisleriyle AYNI ANDA) bellekte tutuluyorlardı.
+        # optimizer.step() (AdamW momentum/variance state tahsisi) tam da tepe VRAM
+        # anında ek n×P belleği bulmak zorunda kalıyordu. Açıkça serbest bırakılır.
+        del pc_vektorleri, duzles_faz_vektorleri, G
+
         optimizer.zero_grad()
         imlec = 0
         for p in trainable_params:
