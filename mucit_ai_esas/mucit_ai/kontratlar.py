@@ -846,9 +846,17 @@ class Bellek_BaglamYoneticisi(nn.Module):
         )
 
     def get_memory(self, active_batch_size: int) -> E5_B_BellekGonderimi:
+        # KAPSAMLI DENETİM (madde 14): Tam sayı taban bölme (//) active_batch_size,
+        # self.M_state.shape[0]'ın tam katı DEĞİLSE sessizce yanlış boyutlu bellek
+        # döndürüyordu — ör. M_state batch=2 iken active_batch_size=3 istenirse
+        # repeat_factor=1 olup batch=2'lik bellek batch=3 bekleyen çağırana veriliyordu
+        # (kısmi son batch, GRPO_G tekrarı vb. senaryolarda gerçekleşebilir). Hiçbir
+        # hata vermeden aşağı akışta bellek-örnek hizalamasını bozuyordu. Tavan
+        # bölme + kesme ile herhangi bir active_batch_size/M_state.shape[0] oranında
+        # doğru boyut garanti ediliyor.
         if active_batch_size != self.M_state.shape[0]:
-            repeat_factor = active_batch_size // self.M_state.shape[0]
-            M_active = self.M_state.repeat(repeat_factor, 1, 1)
+            repeat_factor = -(-active_batch_size // self.M_state.shape[0])  # tavan bölme
+            M_active = self.M_state.repeat(repeat_factor, 1, 1)[:active_batch_size]
         else:
             M_active = self.M_state
         return E5_B_BellekGonderimi(M=M_active)
