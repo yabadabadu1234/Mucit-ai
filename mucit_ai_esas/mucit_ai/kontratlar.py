@@ -1989,6 +1989,8 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
         self.d = getattr(config, 'd', 128)
         self.V_size = getattr(config, 'V_size', 200000)
         self.vocab_head = nn.Linear(self.d, self.V_size, bias=False)
+        self.rms_g = nn.Parameter(torch.ones(self.d))
+        self.log_sicaklik = nn.Parameter(torch.tensor(0.0))
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
@@ -2020,8 +2022,12 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
             self.nedensel_suzgec._vram_idare_zorunlu_cihaz = device
 
         X_refined = self.nedensel_suzgec(X_input) if hasattr(self, 'nedensel_suzgec') else X_input
-        X_t = X_refined.transpose(1, 2)   
+        X_t = X_refined.transpose(1, 2)
         B, N, d = X_t.shape
+
+        _rms = torch.sqrt(X_t.pow(2).mean(dim=-1, keepdim=True) + 1e-6)
+        X_t = (X_t / _rms) * self.rms_g.to(device=X_t.device, dtype=X_t.dtype)
+        tau = F.softplus(self.log_sicaklik.to(device=X_t.device)) + 1e-4
 
         micro_chunk_size = 64
         
@@ -2068,8 +2074,8 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                     )
                 while logits_chunk.dim() < 3:
                     logits_chunk = logits_chunk.unsqueeze(0)
-                logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
-                logits_norm = logits_chunk - logits_mean.to(device=logits_chunk.device)
+                logits_max = logits_chunk.max(dim=-1, keepdim=True).values.detach()
+                logits_norm = (logits_chunk - logits_max.to(device=logits_chunk.device)) / tau.to(device=logits_chunk.device)
                 P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1) 
                 
                 
@@ -2104,8 +2110,8 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                     )
                 while logits_chunk.dim() < 3:
                     logits_chunk = logits_chunk.unsqueeze(0)
-                logits_mean = logits_chunk.mean(dim=-1, keepdim=True)
-                logits_norm = logits_chunk - logits_mean.to(device=logits_chunk.device)
+                logits_max = logits_chunk.max(dim=-1, keepdim=True).values.detach()
+                logits_norm = (logits_chunk - logits_max.to(device=logits_chunk.device)) / tau.to(device=logits_chunk.device)
                 P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1).transpose(1, 2)
                 
                 
