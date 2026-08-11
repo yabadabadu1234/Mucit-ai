@@ -1156,14 +1156,21 @@ class N4_SorguSecici(nn.Module):
         else:
             A_path = torch.ones((B, V_num, 1), device=x_r.device)
 
-        
-        gamma = (H_entropy + 1e-4) * (c_node + 1e-4) * (E_easiness + 1e-4) * A_path  
 
-        
-        Q_field = gamma * Q_cand  
+        gamma = (H_entropy + 1e-4) * (c_node + 1e-4) * (E_easiness + 1e-4) * A_path
 
-        
-        q_r = torch.mean(Q_field, dim=1)  
+        Q_gamma = gamma * Q_cand
+
+        S_b = torch.matmul(Q_gamma.transpose(1, 2), Q_gamma) / max(V_num, 1)
+        S_b = S_b + 1e-4 * torch.eye(self.d_q, device=Q_gamma.device, dtype=Q_gamma.dtype).unsqueeze(0)
+        S_ozdeger, S_ozvektor = torch.linalg.eigh(S_b)
+        S_ozdeger_inv_sqrt = torch.clamp(S_ozdeger, min=1e-6).rsqrt()
+        S_tilde = torch.matmul(S_ozvektor * S_ozdeger_inv_sqrt.unsqueeze(1), S_ozvektor.transpose(1, 2))
+
+        Q_field = torch.matmul(Q_gamma, S_tilde)
+
+
+        q_r = torch.mean(Q_field, dim=1)
         return E6_GizilSorgu(q_r=q_r)
 
 
@@ -1181,7 +1188,9 @@ class N5_CevapSuzucu(nn.Module):
         device = getattr(config, 'device', 'cpu')
         self.W_K = nn.Parameter(torch.randn((d_q, d_m), device=device))
         self.W_V = nn.Parameter(torch.randn((d_m, d_a), device=device))
-        self.tau_log = nn.Parameter(torch.tensor(0.0, device=device))
+        self.tau_gamma = nn.Parameter(torch.tensor(0.0, device=device))
+        self.tau_min = 0.2
+        self.tau_max = 10.0
         with torch.no_grad():
             self.W_K.copy_(stiefel_qr_projection(self.W_K.data))
             self.W_V.copy_(stiefel_qr_projection(self.W_V.data))
@@ -1221,9 +1230,8 @@ class N5_CevapSuzucu(nn.Module):
         
         q_W = torch.matmul(q_r, self.W_K)  
 
-        
-        tau_min = 0.2
-        tau = torch.clamp(torch.exp(self.tau_log), min=tau_min, max=10.0)
+
+        tau = self.tau_min + (self.tau_max - self.tau_min) * torch.sigmoid(self.tau_gamma)
         q_norm = F.normalize(q_W, p=2, dim=-1)
         M_norm = F.normalize(M_slots, p=2, dim=1)
         scale_factor = tau * math.sqrt(float(self.d_m))
@@ -1452,6 +1460,7 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         super().__init__()
         self.config = config
         self.syn_proj_layer = nn.Linear(config.d_h, config.d_v)
+        self.log_lambda_ricci = nn.Parameter(torch.tensor(math.log(0.1)))
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else (self.config.batch_size if self.config else 1)
@@ -1510,11 +1519,13 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         syn_v = self.syn_proj_layer(sentetik_durum.synthetic_state) 
         syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(B, D_dyn) 
 
-        laplacian_flow = self.laplasyen_akisi_normalize(x_r, D0, lambda_max)
-        g_cons = self.hesapla_korunum_potansiyelleri_gradyani(x_r, D0, lambda_max)
+        lap1 = laplasyen_ile_carp(x_r, D0)
+        laplacian_flow = lap1 / (lambda_max + 1e-6)
+        lap2 = laplasyen_ile_carp(lap1, D0)
+        lambda_ricci = F.softplus(self.log_lambda_ricci)
+        ricci_sonumleme = lap2 / (lambda_max.pow(2) + 1e-6)
 
-        
-        dx = -laplacian_flow + syn_proj - 0.1 * g_cons
+        dx = -laplacian_flow + syn_proj - lambda_ricci * ricci_sonumleme
         x_next = x_r + self.config.dt * dx
         return E9_GuncellenmisGizilDurum(x_next=x_next)
 
