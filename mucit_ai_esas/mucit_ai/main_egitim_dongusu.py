@@ -1156,6 +1156,26 @@ def _tekil_egitim_adimi_icra(
     # ekleniyor: gerçek bir OOM'da gc.collect()/empty_cache() ile bir kez temizlenip AYNI
     # GPU'da tekrar denenir; yine başarısız olursa olduğu gibi yeniden fırlatılır (optimizer
     # durumu asla yarım/tutarsız bir cihaza bölünmez).
+    # DÜZELTME (mat2 cuda:0 / cpu cihaz uyumsuzluğu — kök neden giderme): acil_durum_
+    # oom_yakalayici_ve_kurtarici artık kurtardığı modülleri ANINDA GPU'ya geri taşımıyor
+    # (bu, hâlâ canlı bir VJP grafiği varken parametrenin .data'sını değiştirip grafiği
+    # bozuyordu) — bunun yerine takas_mgr._bekleyen_cihaz_geri_yuklemeleri listesine
+    # kaydediyor. Bu noktada (Pareto-PCGrad'ın optimizer.step()'inden HEMEN ÖNCE) bu
+    # adımın TÜM VJP/backward çağrıları (Faz2-5, GRPO, VICReg, spektral, sorgu, cümle
+    # keyfiyet — hepsi yukarıda, retain_graph=False ile grafları serbest bırakarak tamamlandı)
+    # zaten bitmiş durumda — artık hiçbir canlı graf bu parametrelere referans tutmuyor,
+    # bu yüzden modülleri şimdi GPU'ya geri taşımak güvenlidir VE optimizer.step()'in
+    # "exp_avg cuda, param cpu" ile çökmesini önlemek için ZORUNLUDUR.
+    _bekleyen_restore = getattr(takas_mgr, "_bekleyen_cihaz_geri_yuklemeleri", None) if takas_mgr is not None else None
+    if _bekleyen_restore:
+        for _modul, _hedef_cihaz in _bekleyen_restore:
+            try:
+                _modul.to(_hedef_cihaz)
+                _modul._vram_idare_zorunlu_cihaz = _hedef_cihaz
+            except Exception as _restore_exc:
+                logger.warning(f"  [Cihaz Geri Yükleme] Modül '{_modul}' GPU'ya geri taşınamadı: {_restore_exc}")
+        _bekleyen_restore.clear()
+
     try:
         alpha_pareto = pareto_pcgrad_operator.birlestir_ve_uygula_dagitik_gradyanlar(
             shard_gradyanlari=shard_gradyanlari,
@@ -1486,6 +1506,27 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         )
                         if takas_mgr is not None and hasattr(takas_mgr, "guvenli_kapat_varsa"):
                             takas_mgr.guvenli_kapat_varsa()
+                        # DÜZELTME (/tmp disk sızıntısı — kök neden): kapsam muhafızı zorla
+                        # kapatılıyordu ama takas_mgr.temizle(agresif=True) HİÇ çağrılmıyordu.
+                        # Normal (başarılı) bir adımın sonunda bu her zaman çağrılır (bkz. bu
+                        # fonksiyonun _takas_cm.__exit__ sonrası bloğu) — ama cihaz uyumsuzluğu
+                        # gibi bir hata ART ARDA tekrarlayıp her adım BU except bloğuna
+                        # düşerse, o adımların diske tahliye ettiği dosyalar hiçbir zaman
+                        # başarılı-adım temizliğine ulaşamaz; yalnızca 120 sn'lik zaman aşımı
+                        # süpürmesine kalır, ki sürekli art arda başarısızlıkta bu da devreye
+                        # giremeden /tmp/kulli_scratchpad birkaç yüz adımda dolabilir. Artık bu
+                        # adımın da tahliye ettiği her dosya agresif modda anında süpürülüyor.
+                        if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
+                            takas_mgr.temizle(agresif=True)
+                        # Bu adım optimizer.step()'e hiç ulaşamadan başarısız olduysa,
+                        # acil_durum_oom_yakalayici_ve_kurtarici'nin biriktirdiği ertelenmiş
+                        # cihaz-geri-yükleme kayıtları da işlenmeden kalmış olabilir — liste
+                        # sınırsız birikmesin diye temizlenir (o modüller zaten bir sonraki
+                        # kullanımlarında AnlasmaliVramGuvencesiAl tarafından yeniden
+                        # değerlendirilip gerekirse GPU'ya taşınacaktır).
+                        _bekleyen_restore_temizle = getattr(takas_mgr, "_bekleyen_cihaz_geri_yuklemeleri", None) if takas_mgr is not None else None
+                        if _bekleyen_restore_temizle:
+                            _bekleyen_restore_temizle.clear()
                         optimizer.zero_grad(set_to_none=True)
                         import gc as _gc_step
                         _gc_step.collect()

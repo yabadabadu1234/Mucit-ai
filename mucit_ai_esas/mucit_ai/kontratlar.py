@@ -4266,21 +4266,49 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
             logger.error(f"[Acil Durum OOM Kurtarıcı] CPU üzerinde tekrar deneme de başarısız oldu: {cpu_exc}")
             raise
 
-        # DÜZELTME (madde 20): modul_nesnesi CPU'da BIRAKILMAMALI — bu bir nn.Module ise
-        # parametreleri optimizer.state[p] (AdamW exp_avg/exp_avg_sq) tarafından GPU'da
-        # takip ediliyor olabilir; modül kalıcı olarak CPU'da unutulursa bir sonraki
-        # optimizer.step() çağrısında "exp_avg is on cuda, param is on cpu" ile çöker.
-        # Sonuç orijinal cihaza taşındıktan sonra modülün kendisi de aynı cihaza geri alınır.
+        # DÜZELTME (mat2 cuda:0 / cpu cihaz uyumsuzluğu — kök neden): ÖNCEDEN modul_nesnesi
+        # burada, CPU hesaplaması biter bitmez, SENKRON ve YERİNDE (`modul.to(gpu)` ->
+        # `param.data = param.data.to(gpu)`) GPU'ya geri taşınıyordu. Sorun: bu, o modülün
+        # CPU'da üretilmiş çıktısını kullanan VEKTÖR KAYBININ (vector_loss) autograd grafiği
+        # HÂLÂ CANLIYKEN (henüz backward/VJP çağrılmadan) parametrenin depolamasını değiştiriyordu.
+        # `.data` ataması autograd'ın versiyon takibini atlar — bu YÜZDEN backward, aynı
+        # grafın bir kısmı hâlâ CPU'daki saklı ara-tensörleri beklerken, o leaf parametrenin
+        # ARTIK GPU'da olan canlı deposunu bulup "mat2 is on cuda:0, different from other
+        # tensors on cpu" ile patlıyordu — tam da kullanıcının bildirdiği hata.
+        # Çözüm: modülü HEMEN geri taşımak yerine, restore işlemini ERTELE. Modül CPU'da
+        # kalır (_vram_idare_zorunlu_cihaz=CPU, kendi forward()'ı bunu okuyup girdisini
+        # hizalamaya devam eder), ama takas_mgr üzerinde bir "ertelenmiş restore" listesine
+        # kaydedilir. main_egitim_dongusu.py, o adımın TÜM VJP/backward çağrıları bittikten
+        # (tüm grafiklerin retain_graph=False ile serbest bırakıldığı andan) SONRA, optimizer.
+        # step()'ten HEMEN ÖNCE bu listeyi işleyip modülleri güvenle GPU'ya geri taşır — o
+        # noktada artık hiçbir canlı graf bu parametrelere referans tutmadığından `.data`
+        # değişimi güvenlidir (madde 20'nin "exp_avg cuda, param cpu" endişesi de bu sayede
+        # optimizer.step()'ten önce giderilmiş olur).
         if modul_nesnesi is not None and geri_donus_cihazi != cpu_device:
-            if hasattr(modul_nesnesi, 'to'):
-                try:
-                    modul_nesnesi.to(geri_donus_cihazi)
-                except Exception:
-                    pass
             try:
-                modul_nesnesi._vram_idare_zorunlu_cihaz = geri_donus_cihazi
+                modul_nesnesi._vram_idare_zorunlu_cihaz = cpu_device
             except Exception:
                 pass
+            if takas_mgr is not None:
+                try:
+                    if not hasattr(takas_mgr, "_bekleyen_cihaz_geri_yuklemeleri"):
+                        takas_mgr._bekleyen_cihaz_geri_yuklemeleri = []
+                    takas_mgr._bekleyen_cihaz_geri_yuklemeleri.append((modul_nesnesi, geri_donus_cihazi))
+                except Exception:
+                    # takas_mgr ertelenmiş listeyi tutamıyorsa (ör. None), eski davranışa
+                    # (anında geri taşıma) düş — hiç geri taşınmamaktan daha güvenlidir.
+                    if hasattr(modul_nesnesi, 'to'):
+                        try:
+                            modul_nesnesi.to(geri_donus_cihazi)
+                            modul_nesnesi._vram_idare_zorunlu_cihaz = geri_donus_cihazi
+                        except Exception:
+                            pass
+            elif hasattr(modul_nesnesi, 'to'):
+                try:
+                    modul_nesnesi.to(geri_donus_cihazi)
+                    modul_nesnesi._vram_idare_zorunlu_cihaz = geri_donus_cihazi
+                except Exception:
+                    pass
 
         return girdi_cihaza_tasi(cpu_sonuc, geri_donus_cihazi)
 
