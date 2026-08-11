@@ -1,16 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ SANAL GPU SÜRÜCÜSÜ - SANAL İŞLEMCİ VE ZAMANLAYICI (PHASE III)
-Modül: kulli_gpu/sanal_islemci_zamanlayici.py (SanalIslemciZamanlayici)
-================================================================================
-NVIDIA CUDA / libcuda bağımlılığı olmaksızın, kullanıcının gönderdiği hesaplama
-iş yüklerini (Grid / Block / Shader / Kernel) yakalayan, GPU'ların çekirdek
-sayılarına ve TFLOPS performanslarına göre oranlayarak parçalayan (Grid Tiling)
-ve asenkron donanım kanalları (GPU Worker Channels) üzerinden paralelleştiren
-özgün sanal işlemci ve zamanlayıcı katmanıdır.
-"""
+
 
 import os
 import sys
@@ -42,20 +30,10 @@ logger.setLevel(logging.INFO)
 
 
 class IsYukuHataIstisnasi(Exception):
-    """
-    Sanal İşlemci Zamanlayıcısı üzerinde iş yükü parçalama, donanımsal çit (Fence)
-    veya zaman aşımı hatalarında fırlatılan özel istisna sınıfı.
-    """
     pass
 
 
 class IsYukuPaketi:
-    """
-    [İş Yükü Paketi / Compute Kernel Task Descriptor]
-    Kullanıcıdan veya üst katmandan gelen tekil hesaplama görevini (Kernel İşaretçisi,
-    Grid/Block Boyutları, Sanal Bellek Girdi/Çıktı Adresleri, Senkronizasyon Çiti)
-    temsil eden veri yapısıdır.
-    """
 
     def __init__(
         self,
@@ -76,7 +54,7 @@ class IsYukuPaketi:
         self.ek_parametreler = ek_parametreler or {}
 
         self.tamamlandi_citi = threading.Event()
-        self.durum = "KUYRUKTA"  # "KUYRUKTA", "ÇALIŞIYOR", "TAMAMLANDI", "HATA"
+        self.durum = "KUYRUKTA"  
         self.hata_mesaji: Optional[str] = None
         self.islem_baslangic_zamanı: float = 0.0
         self.islem_bitis_zamanı: float = 0.0
@@ -95,13 +73,6 @@ class IsYukuPaketi:
 
 
 class GpuIslemciKanali:
-    """
-    [GPU İşlemci Kanalı / Dedicated Worker Hardware Channel]
-    Tek bir fiziksel veya sanal GPUDonanımına özel çalışan asenkron iş kanalıdır.
-    Kendi iplik emniyetli kuyruğuna (Queue) gelen alt iş yüklerini (sub-grids) alır,
-    GPU'nun ring-buffer / MMIO komut kayıtçılarına simüle veya canlı olarak yazar
-    ve donanımsal çit (Fence) tamamlanana kadar polling yürütür.
-    """
 
     def __init__(
         self,
@@ -127,13 +98,6 @@ class GpuIslemciKanali:
         self.KanalBaslat()
 
     def GelecegeBakisliAsenkronOnYukle(self, bakis_derinligi: int = 8):
-        """
-        [Rükün / Algoritma 1: Geleceğe Bakışlı Asenkron P2P Ön Yükleme Motoru]
-        Vazifesi: Kanaldaki iş kuyruğunu kuyruktan çıkarmadan (Peek) inceleyerek
-        sonraki 'bakis_derinligi' kadar görevin ihtiyaç duyduğu girdi sanal adreslerini
-        sorgular. Eğer veri başka bir GPU'nun VRAM'inde duruyorta, hesaplama sırası
-        o göreve gelmeden önce P2P DMA kanalı üzerinden hedef GPU'ya önceden kopyalar (Prefetch).
-        """
         try:
             with self.is_kuyrugu.mutex:
                 gelecek_isler = list(self.is_kuyrugu.queue)[:bakis_derinligi]
@@ -175,9 +139,6 @@ class GpuIslemciKanali:
             logger.debug(f"[GelecegeBakisliAsenkronOnYukle] Ön yükleme uyarısı: {err}")
 
     def KanalBaslat(self):
-        """
-        Vazifesi: Asenkron işçi ipliğini (Worker Thread) başlatır ve kuyruğu dinlemeye alır.
-        """
         with self.lock:
             if not self.aktif_mi:
                 self.aktif_mi = True
@@ -190,10 +151,6 @@ class GpuIslemciKanali:
                 logger.info(f"[GpuIslemciKanali] GPU #{self.gpu_id} İşçi Kanalı Başlatıldı (Çekirdek: {self.cekirdek_sayisi}).")
 
     def _KanalIsDongusu(self):
-        """
-        Vazifesi: İş kuyruğunu dinleyen ana asenkron döngüdür.
-        Kuyruktan gelen iş paketlerini GPU ring-buffer'ına yazar ve çit (Fence) tamamlanana kadar bekler.
-        """
         while self.aktif_mi:
             try:
                 paket = self.is_kuyrugu.get(timeout=0.1)
@@ -209,25 +166,24 @@ class GpuIslemciKanali:
                 continue
 
             try:
-                # Arka planda gelecekteki 8 adımlık görevler için P2P DMA ön yükleme
+                
                 self.GelecegeBakisliAsenkronOnYukle(bakis_derinligi=8)
 
                 paket.durum = "ÇALIŞIYOR"
                 paket.islem_baslangic_zamanı = time.perf_counter()
 
-                # DONANIM SEVİYESİNDE RING-BUFFER/MMIO YAZMA VE HESAPLAMA SİMÜLASYONU
-                # Sanal veya canlı C-işaretçisine komut paketini bağla
+                
                 if self.haritaci is not None and hasattr(self.haritaci, "VolatilHafizaCiti"):
                     try:
                         self.haritaci.VolatilHafizaCiti(paket.girdi_sanal_adres)
                     except Exception as mm_err:
                         logger.debug(f"[GPU #{self.gpu_id}] Memory barrier uyarısı: {mm_err}")
 
-                # Mikro-saniyelik hesaplama gecikmesi (Thread sayısına orantılı ultra hızlı execution)
+                
                 exec_time = max(0.0001, (paket.grid_boyutu_x / (self.cekirdek_sayisi * 1e6)))
                 time.sleep(min(0.01, exec_time))
 
-                # DONANIMSAL ÇİT (FENCE) OKUMASI VE BİTİŞ İŞARETİ
+                
                 paket.islem_bitis_zamanı = time.perf_counter()
                 paket.durum = "TAMAMLANDI"
 
@@ -246,9 +202,6 @@ class GpuIslemciKanali:
         logger.info(f"[GpuIslemciKanali] GPU #{self.gpu_id} İşçi Kanalı Sonlandı.")
 
     def KanalDurdur(self):
-        """
-        Vazifesi: Asenkron kanalı güvenle sonlandırır ve ipliği kapatır.
-        """
         with self.lock:
             if self.aktif_mi:
                 self.aktif_mi = False
@@ -259,13 +212,6 @@ class GpuIslemciKanali:
 
 
 class SanalIslemciZamanlayici:
-    """
-    [Sanal İşlemci Zamanlayıcısı ve Çoklu GPU Güç Dağıtıcısı]
-    Kullanıcının gönderdiği tekil devasa hesaplama görevini (Grid/Block) yakalar.
-    Sistemdeki GPU'ların fiziki çekirdek sayılarına ve TFLOPS kapasitelerine göre
-    oranlayarak parçalar (Weighted Grid Splitting), asenkron kanallara fırlatır ve
-    donanımsal çit (Fence) senkronizasyonunu yürütür.
-    """
 
     def __init__(
         self,
@@ -283,10 +229,6 @@ class SanalIslemciZamanlayici:
         self.IlklendirVeKanallariKur(sanal_bellek_havuzu_nesnesi)
 
     def IlklendirVeKanallariKur(self, sanal_bellek_havuzu_nesnesi: Optional[Any] = None):
-        """
-        Vazifesi: Sistemdeki GPU'ların çekirdek sayılarını sorgular, güç ağırlıklarını (Weights)
-        hesaplar ve her GPU için `GpuIslemciKanali` başlatır.
-        """
         with self.lock:
             if sanal_bellek_havuzu_nesnesi is not None:
                 self.havuz = sanal_bellek_havuzu_nesnesi
@@ -294,7 +236,7 @@ class SanalIslemciZamanlayici:
             gpu_haritacilari = getattr(self.havuz, "gpu_haritacilari", []) if self.havuz else []
             toplam_gpu = max(1, len(gpu_haritacilari))
 
-            # Varsayılan RTX 4090 / A100 denginde çekirdek dağılımı
+            
             varsayilan_cekirdekler = [16384, 10752, 8960, 5888]
 
             self.gpu_cekirdek_sayilari = {}
@@ -311,12 +253,12 @@ class SanalIslemciZamanlayici:
 
             toplam_sistem_cekirdegi = sum(self.gpu_cekirdek_sayilari.values())
 
-            # Ağırlıkların Hesaplanması
+            
             self.gpu_agirliklari = {}
             for g_idx, c_cnt in self.gpu_cekirdek_sayilari.items():
                 self.gpu_agirliklari[g_idx] = c_cnt / max(1, toplam_sistem_cekirdegi)
 
-            # Kanalların Kurulumu
+            
             for g_idx in range(toplam_gpu):
                 haritaci = gpu_haritacilari[g_idx] if g_idx < len(gpu_haritacilari) else None
                 if g_idx not in self.kanallar or not self.kanallar[g_idx].aktif_mi:
@@ -335,12 +277,6 @@ class SanalIslemciZamanlayici:
             )
 
     def IsYukuAyristirVeDagit(self, ana_is_paketi: IsYukuPaketi) -> List[IsYukuPaketi]:
-        """
-        Vazifesi (Weighted Grid Splitting):
-        Kullanıcının gönderdiği tekil devasa Grid boyutunu (örneğin 1.000.000 Thread),
-        GPU'ların güç ağırlıklarına göre kesintisiz oranlayarak parçalar, blok boyutuna
-        hizalar ve asenkron GPU kanallarına fırlatır.
-        """
         with self.lock:
             toplam_grid = ana_is_paketi.grid_boyutu_x
             blok_boyutu = ana_is_paketi.blok_boyutu_x
@@ -356,10 +292,10 @@ class SanalIslemciZamanlayici:
             for g_id in gpu_id_listesi:
                 agirlik = self.gpu_agirliklari.get(g_id, 1.0 / toplam_gpu_sayisi)
                 
-                # Güce oranla düşen raw grid boyutu
+                
                 ham_parca_grid = int(toplam_grid * agirlik)
 
-                # Blok boyutuna hizala (Grid, Block boyutunun tam katı olmalıdır)
+                
                 hizali_parca_grid = (ham_parca_grid // blok_boyutu) * blok_boyutu
 
                 if hizali_parca_grid > 0:
@@ -377,14 +313,14 @@ class SanalIslemciZamanlayici:
                     alt_paketler.append(alt_paket)
                     baslangic_offset += hizali_parca_grid
 
-            # KÜSÜRAT KONTROLÜ VE ATOMİK GRID TAMAMLAMA
+            
             kalan_grid = toplam_grid - baslangic_offset
             if kalan_grid > 0:
-                # En yüksek güce sahip GPU'yu bul
+                
                 en_guclu_gpu = max(self.gpu_agirliklari.items(), key=lambda x: x[1])[0]
 
                 if alt_paketler:
-                    # En güçlü GPU'ya ait alt pakete ekle
+                    
                     bulundu = False
                     for p in alt_paketler:
                         if p.ek_parametreler.get("parent_gpu_id") == en_guclu_gpu:
@@ -417,11 +353,6 @@ class SanalIslemciZamanlayici:
         alt_paketler_listesi: List[IsYukuPaketi],
         timeout_sec: float = 30.0
     ) -> bool:
-        """
-        Vazifesi (Hardware Barrier & Fence Synchronization):
-        Dağıtılan tüm alt görevlerin GPU donanımları üzerinde tamamlanmasını
-        `tamamlandi_citi.wait()` ile bekler ve senkronizasyonu doğrular.
-        """
         baslangic = time.perf_counter()
 
         for alt_paket in alt_paketler_listesi:
@@ -438,7 +369,7 @@ class SanalIslemciZamanlayici:
             if alt_paket.durum == "HATA":
                 raise IsYukuHataIstisnasi(f"DONANIM HATASI: {alt_paket.hata_mesaji}")
 
-        # Bellek Havuzu Senkronizasyonu
+        
         if self.havuz is not None and hasattr(self.havuz, "AraliklariBirlestir"):
             try:
                 self.havuz.AraliklariBirlestir()
@@ -457,10 +388,6 @@ class SanalIslemciZamanlayici:
         cikti_sanal_adres: int = 0,
         timeout_sec: float = 30.0
     ) -> Dict[str, Any]:
-        """
-        Vazifesi: Kullanıcının tek satırda iş yükü fırlatıp paralel çalıştırarak
-        sonuçları beklemesini sağlayan kolaylaştırıcı sarmalayıcı (Wrapper) fonksiyondur.
-        """
         ana_paket = IsYukuPaketi(
             kernel_isaretci=kernel_isaretci,
             grid_boyutu_x=grid_boyutu_x,
@@ -484,9 +411,6 @@ class SanalIslemciZamanlayici:
         }
 
     def ZamanlayiciDurumuOzetle(self) -> Dict[str, Any]:
-        """
-        Vazifesi: Zamanlayıcının ve aktif GPU kanallarının durum raporunu sunar.
-        """
         with self.lock:
             kanallar_ozet = {}
             toplam_islenen = 0
@@ -506,9 +430,6 @@ class SanalIslemciZamanlayici:
             }
 
     def ZamanlayiciyiKapat(self):
-        """
-        Vazifesi: Zamanlayıcıyı ve bağlı tüm GPU işçi kanallarını kapatır.
-        """
         with self.lock:
             for g_id, kanal in self.kanallar.items():
                 kanal.KanalDurdur()

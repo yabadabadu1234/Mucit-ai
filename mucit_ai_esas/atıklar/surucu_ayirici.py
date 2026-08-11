@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ SANAL GPU SÜRÜCÜSÜ - SÜRÜCÜ AYIRICI VE DEVİR BİRİMİ
-Modül: kulli_gpu/surucu_ayirici.py (SurucuAyirici)
-================================================================================
-Donanım üzerindeki varsayılan işletim sistemi sürücü vesayetini (Nouveau, Nvidia,
-Amdgpu vb.) kaldırıp, donanımı kendi özel erişim modülümüze veya 'vfio-pci'
-altyapısına bağlayan güvenlik ve devir teslim birimidir.
-"""
+
 
 import os
 import sys
@@ -22,31 +12,16 @@ logger.setLevel(logging.INFO)
 
 
 class FatalDriverError(Exception):
-    """Sürücü seviyesinde kritik yetki veya donanım erişim hatası."""
     pass
 
 
 class SurucuAyirici:
-    """
-    [Sürücü Ayırıcı ve Güvenli Devir Birimi]
-    PCIe GPU donanımlarının işletim sistemi sürücülerinden sökülmesi,
-    donanımsal PCI Bus Reset atılması, driver_override ile işaretlenmesi ve
-    hedef sürücüye/VFIO katmanına kesintisiz devredilmesini yönetir.
-    """
 
     def __init__(self, simulation_mode: bool = False):
         self.simulation_mode = simulation_mode
         logger.info(f"[SurucuAyirici] Sürücü Ayırıcı ve Devir Teslim Birimi İlklendirildi (simulation_mode={simulation_mode}).")
 
     def DonanimsalSifirla(self, pci_adresi: str) -> bool:
-        """
-        Vazifesi: Sürücüsü sökülen GPU'nun mikro-kod ve dahili mantık devrelerini
-        donanımsal olarak sıfırlar (PCI Bus Reset / Secondary Bus Reset).
-        /sys/bus/pci/devices/{pci_adresi}/reset düğümüne '1' yazar.
-        
-        Girdisi: PCI Adresi (Örn: '0000:01:00.0')
-        Çıktısı: True (Başarılı)
-        """
         reset_path = f"/sys/bus/pci/devices/{pci_adresi}/reset"
         if os.path.exists(reset_path):
             try:
@@ -54,7 +29,7 @@ class SurucuAyirici:
                 try:
                     os.write(fd, b"1")
                     logger.info(f"[{pci_adresi}] Donanımsal PCI Bus Reset icra edildi (Hard Reset OK).")
-                    time.sleep(0.3)  # Elektriksel oturma beklemesi (0.3s)
+                    time.sleep(0.3)  
                     return True
                 finally:
                     os.close(fd)
@@ -74,18 +49,11 @@ class SurucuAyirici:
         return True
 
     def MevcutBaglantiyiSorgula(self, pci_adresi: str) -> str:
-        """
-        Vazifesi: Donanımın o anda aktif bir resmi sürücü tarafından yönetilip
-        yönetilmediğini ve o sürücünün adını tespit eder.
-        
-        Girdisi: PCI Adresi (Örn: '0000:01:00.0')
-        Çıktısı: Sürücü Adı (Örn: 'nvidia', 'nouveau') VEYA 'Boşta'
-        """
         driver_path = Path(f"/sys/bus/pci/devices/{pci_adresi}/driver")
         
         if driver_path.exists():
             try:
-                # Sembolik bağı çöz
+                
                 real_driver_path = os.readlink(str(driver_path))
                 driver_name = os.path.basename(real_driver_path)
                 return driver_name
@@ -96,13 +64,6 @@ class SurucuAyirici:
         return "Boşta"
 
     def MevcutSurucudenAyir(self, pci_adresi: str) -> str:
-        """
-        Vazifesi: Donanımı yöneten aktif resmi sürücünün elinden yetkiyi zorla alır,
-        donanımsal PCI Bus Reset atar ve donanımı serbest bırakır.
-        
-        Girdisi: PCI Adresi (Örn: '0000:01:00.0')
-        Çıktısı: Durum Mesajı ('Zaten Boşta' veya 'İlişik Kesildi')
-        """
         aktif_surucu = self.MevcutBaglantiyiSorgula(pci_adresi)
         
         if aktif_surucu == "Boşta":
@@ -132,24 +93,16 @@ class SurucuAyirici:
                 raise FatalDriverError(f"[{pci_adresi}] Unbind başarısız: {err}")
             logger.warning(f"[{pci_adresi}] Unbind hatası: {err}")
 
-        # DONANIMSAL SIFIRLAMA (PCI Bus Reset)
+        
         self.DonanimsalSifirla(pci_adresi)
 
-        # HİKMET BEKLEMESİ: Donanım kayıtçılarının elektriksel seviyede
-        # ve voltaj/frekans yönünden kararlı hale gelmesi için mikro bekleme (0.2s)
+        
         time.sleep(0.2)
         
         logger.info(f"[{pci_adresi}] Donanımın {aktif_surucu} sürücüsü ile ilişiği kesildi.")
         return "İlişik Kesildi"
 
     def HedefSurucuyuTanit(self, pci_adresi: str, hedef_surucu_adi: str = "vfio-pci") -> str:
-        """
-        Vazifesi: Çekirdeğe (Kernel) 'driver_override' emri vererek varsayılan
-        sürücülerin müdahale etmesini engeller.
-        
-        Girdisi: PCI Adresi ve Hedef Sürücü Adı
-        Çıktısı: Durum Mesajı ('Tahsis İşaretlendi')
-        """
         override_path = f"/sys/bus/pci/devices/{pci_adresi}/driver_override"
         
         try:
@@ -176,12 +129,6 @@ class SurucuAyirici:
         return "Tahsis İşaretlendi"
 
     def YeniSurucuyeBagla(self, pci_adresi: str, hedef_surucu_adi: str = "vfio-pci") -> str:
-        """
-        Vazifesi: Serbest kalan donanımı HedefSurucuyuTanit ile belirlenen yeni sürücüye bağlar.
-        
-        Girdisi: PCI Adresi ve Hedef Sürücü Adı
-        Çıktısı: Durum Mesajı ('Yeni Sürücüye Bağlandı')
-        """
         bind_path = f"/sys/bus/pci/drivers/{hedef_surucu_adi}/bind"
         
         if os.path.exists(bind_path):
@@ -202,34 +149,24 @@ class SurucuAyirici:
         else:
             logger.info(f"[{pci_adresi}] Hedef bind kütüğü mevcut değil veya sanal modda: '{hedef_surucu_adi}'")
 
-        # HİKMET BEKLEMESİ: Yeni sürücü kancalarının donanıma yerleşmesi için mikro bekleme (0.1s)
+        
         time.sleep(0.1)
 
         logger.info(f"[{pci_adresi}] Donanım '{hedef_surucu_adi}' sürücüsüne bağlandı.")
         return "Yeni Sürücüye Bağlandı"
 
     def DevirDurumunuDogrula(self, pci_adresi: str, hedef_surucu_adi: str = "vfio-pci") -> bool:
-        """
-        Vazifesi: Devir teslim işleminin fiziken gerçekleştiğini doğrular.
-        
-        Girdisi: PCI Adresi ve Hedef Sürücü Adı
-        Çıktısı: True (Başarılı) veya False (Başarısız)
-        """
         son_durum = self.MevcutBaglantiyiSorgula(pci_adresi)
         
         if son_durum == hedef_surucu_adi:
             logger.info(f"[{pci_adresi}] Devir Doğrulandı: Donanım '{hedef_surucu_adi}' sevkinde.")
             return True
         else:
-            # Sanal / Test ortamlarında devir onaylanır
+            
             logger.info(f"[{pci_adresi}] Devir Doğrulandı (Sanal Katman): '{hedef_surucu_adi}' aktif.")
             return True
 
     def KardesCihazlariVeIommuyuTara(self, hedef_pci_adresi: str) -> Dict[str, Any]:
-        """
-        Vazifesi: IOMMU grup yolunu sorgular ve aynı PCIe kök adresine sahip
-        tüm kardeş fonksiyonları (ör. .0 Grafik ve .1 Ses) bulur.
-        """
         iommu_path = f"/sys/bus/pci/devices/{hedef_pci_adresi}/iommu_group"
         grup_id = -1
         if os.path.exists(iommu_path):
@@ -264,27 +201,22 @@ class SurucuAyirici:
         kardes_cihazlar_listesi: List[str],
         hedef_surucu: str = "vfio-pci"
     ) -> bool:
-        """
-        Vazifesi: IOMMU grubundaki tüm kardeş cihazları (.0 Grafik, .1 Ses, vb.)
-        sırasıyla unbind eder, donanımsal PCI bus reset atar, driver_override
-        isabet ettirir ve topluca vfio-pci sürücüsüne bağlar.
-        """
-        # 1. AŞAMA: TÜM KARDEŞLERİ SÜRÜCÜDEN AYIR (UNBIND LOOP)
+        
         for dev in kardes_cihazlar_listesi:
             self.MevcutSurucudenAyir(dev)
 
-        # 2. HİKMET BEKLEMESİ: 0.2 Saniye Bekle (Tüm PCI veri yolunun voltajı yatışsın).
+        
         time.sleep(0.2)
 
-        # 3. AŞAMA: TÜM KARDEŞLERE HEDEF SÜRÜCÜYÜ İŞARETLE (OVERRIDE LOOP)
+        
         for dev in kardes_cihazlar_listesi:
             self.HedefSurucuyuTanit(dev, hedef_surucu)
 
-        # 4. AŞAMA: TÜM KARDEŞLERİ HEDEF SÜRÜCÜYE BAĞLA (BIND LOOP)
+        
         for dev in kardes_cihazlar_listesi:
             self.YeniSurucuyeBagla(dev, hedef_surucu)
 
-        # 5. AŞAMA: DOĞRULAMA KONTROLÜ
+        
         all_ok = True
         for dev in kardes_cihazlar_listesi:
             if not self.DevirDurumunuDogrula(dev, hedef_surucu):
@@ -292,12 +224,6 @@ class SurucuAyirici:
         return all_ok
 
     def DevirTeslimIslemi(self, pci_adresi: str, hedef_surucu_adi: str = "vfio-pci") -> Dict[str, Any]:
-        """
-        Vazifesi: Bütünsel devir teslim hiyerarşisini sırasıyla icra eder:
-        1. KardesCihazlariVeIommuyuTara
-        2. KardesCihazlariTopluDevret (Unbind/Override/Bind for all sibling functions)
-        3. DevirDurumunuDogrula
-        """
         iommu_info = self.KardesCihazlariVeIommuyuTara(pci_adresi)
         kardes_cihazlar = iommu_info.get("kardes_cihazlar", [pci_adresi])
 
@@ -322,22 +248,10 @@ class SurucuAyirici:
         gpu_id_b: int,
         pci_haritacilari: Optional[List[Any]] = None
     ) -> bool:
-        """
-        Vazifesi: PCIe Veriyolu Hakem Kilitlenmesini (Bus Arbiter Deadlock) önleyen
-        Asimetrik İndeks Sıralı (Coffman Dairesel Bekleme Önleme) P2P bağlantı kilitleme algoritmasıdır.
-
-        Girdiler:
-        - gpu_id_a: P2P kurulacak birinci GPU indeksi
-        - gpu_id_b: P2P kurulacak ikinci GPU indeksi
-        - pci_haritacilari: Donanımsal PCI/GPU haritacıları listesi
-
-        Çıktı:
-        - bool (True: P2P veri yolu kilidi ve erişim izinleri başarıyla kuruldu)
-        """
         if gpu_id_a == gpu_id_b:
             return True
 
-        # Coffman Dairesel Bekleme Önleme Kuralı: Kilit her zaman küçük olan karttan büyük olana doğru sırayla alınır.
+        
         gpu_min = min(gpu_id_a, gpu_id_b)
         gpu_max = max(gpu_id_a, gpu_id_b)
 

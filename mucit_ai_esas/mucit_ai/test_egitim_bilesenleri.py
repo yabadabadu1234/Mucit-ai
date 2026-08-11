@@ -9,7 +9,7 @@ print("[TEST SETUP] Modules imported successfully.", flush=True)
 logging.basicConfig(level=logging.INFO, format="[TEST %(levelname)s] %(message)s", stream=sys.stdout)
 logger = logging.getLogger("test_bilesenler")
 
-# Import Mucit AI modules
+
 current_dir = os.path.dirname(os.path.abspath(__file__))
 if current_dir not in sys.path:
     sys.path.insert(0, current_dir)
@@ -50,33 +50,33 @@ def test_n10_ve_grpo_2d_3d():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     logger.info(f"Cihaz: {device}")
 
-    # Mock inputs
+    
     B = 2
     N = 128
     X_input = torch.randn(B, config.d, N, device=device, requires_grad=True)
     e11_mock = E11_ParalelGomuluVektorlerMatrisi(X_output=X_input)
     hedef_grouped = torch.randint(0, config.V_size, (B, N), device=device)
 
-    # 1. N10 Forward test (Target gathering - 2D output)
+    
     n10 = N10_SozlukSoftmaxIzdusem(config).to(device)
     e12_res_2d = n10.forward(e11_mock, hedefler=hedef_grouped)
     assert e12_res_2d.P.dim() == 2, f"Beklenen 2D, Alınan: {e12_res_2d.P.shape}"
     logger.info(f"[PASS] N10 2D Output Şekli: {e12_res_2d.P.shape} (VRAM Tasarruflu)")
 
-    # 2. Ödül Motoru 2D Test
+    
     odul_motoru = Odul_TopolojikDevresmezlikMotoru(config)
     oduller_2d = odul_motoru.hesapla(e12_res_2d.P, hedef_grouped)
     assert oduller_2d.shape == (B,), f"Beklenen ({B},), Alınan: {oduller_2d.shape}"
     logger.info(f"[PASS] Ödül Motoru 2D Çıktı Şekli: {oduller_2d.shape}")
 
-    # 3. GRPO Kriteri 2D Test
+    
     grpo = Kayip_GRPO_Kriteri(config)
     kayip_grpo_2d = grpo.hesapla_vektor(e12_res_2d.P, hedef_grouped, oduller_2d)
     assert kayip_grpo_2d.shape == (B,), f"Beklenen ({B},), Alınan: {kayip_grpo_2d.shape}"
     assert not torch.isnan(kayip_grpo_2d).any(), "GRPO 2D kaybında NaN tespit edildi!"
     logger.info(f"[PASS] GRPO Kriteri 2D Çıktı Şekli: {kayip_grpo_2d.shape} | Kayıp: {kayip_grpo_2d.mean().item():.4f}")
 
-    # 4. Aktif Sorgu Ödülü Testi
+    
     q_r = torch.randn(B, 32, device=device)
     a_r = torch.randn(B, 32, device=device)
     x_ctx = torch.randn(B, 128, device=device)
@@ -98,7 +98,7 @@ def test_vicreg_3d_alignment():
 
     vicreg = Kayip_VICReg_UcluBilgiKorunumu()
     x_2d = torch.randn(2, 64, device=device)
-    z_3d = torch.randn(2, 64, 128, device=device) # 3D spectral tensor
+    z_3d = torch.randn(2, 64, 128, device=device) 
 
     (l_var, l_cov, l_rec), metrikler = vicreg(x=x_2d, z=z_3d)
     assert not torch.isnan(l_rec).any(), "VICReg rekonstrüksiyon kaybında NaN var!"
@@ -120,12 +120,12 @@ def test_vjp_cerrahi_ve_autograd():
     e10 = n8_cheby.forward(e9)
     cheby_calc = Yardimci_ChebyshevMatrisHesaplayici(config)
     
-    # Forward check with direct pass (no detach on e10)
+    
     _, L_arc, N_ste, delta_n = n8_b.forward(e10, cheby_calc)
     
     kayip_spektral = (L_arc - 10.0)**2
     
-    # Inject gradients into n8 parameters
+    
     vjp_cerrahi_enjekte_et(kayip_spektral.unsqueeze(0), list(n8_cheby.parameters()) + list(n8_b.parameters()))
     
     for name, param in n8_cheby.named_parameters():

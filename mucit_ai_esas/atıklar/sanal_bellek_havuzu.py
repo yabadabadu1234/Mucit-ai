@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ SANAL GPU SÜRÜCÜSÜ - SANAL BELLEK HAVUZU VE ÇOKLU GPU TAŞKIN YÖNETİCİSİ
-Modül: kulli_gpu/sanal_bellek_havuzu.py (SanalBellekHavuzu)
-================================================================================
-NVIDIA CUDA / libcuda bağımlılığı ve sahte simülasyon kütükleri olmaksızın,
-Linux DRM/mmap altyapısı üzerinde birden fazla GPU VRAM'ini tek bir devasa sanal
-adres alanında (örneğin 88 GB) birleştiren özgün sanal bellek havuz yöneticisidir.
-"""
+
 
 import os
 import sys
@@ -37,20 +27,10 @@ logger.setLevel(logging.INFO)
 
 
 class SanalBellekIhlalHatasi(Exception):
-    """
-    Sanal bellek sınırları dışına çıkan veya Koruma Sayfasına (Guard Page)
-    temas eden yetkisiz bellek erişimlerinde fırlatılan donanımsal istisna.
-    """
     pass
 
 
 class SanalBellekAraligi:
-    """
-    [Sanal Bellek Aralığı / Extent Veri Yapısı]
-    Sanal adres uzayındaki tekil bir bellek diliminin sanal başlangıç adresini,
-    boyutunu, durumunu ("BOŞ", "TAHSİS_EDİLDİ", "KORUMA") ve arkasındaki fiziki
-    GPU mmap haritalama bilgilerini tutar.
-    """
 
     def __init__(
         self,
@@ -62,7 +42,7 @@ class SanalBellekAraligi:
         self.sanal_adres = sanal_adres
         self.boyut_bayt = boyut_bayt
         self.gpu_id = gpu_id
-        self.durum = durum  # "BOŞ", "TAHSİS_EDİLDİ", "KORUMA"
+        self.durum = durum  
         self.fiziksel_mmap_nesnesi: Any = None
         self.c_pointer: Any = None
         self.parca_haritalari: List[Dict[str, Any]] = []
@@ -80,13 +60,6 @@ class SanalBellekAraligi:
 
 
 class SanalBellekHavuzu:
-    """
-    [Özgün Sanal Bellek Havuzu ve Çoklu GPU Taşkın Yöneticisi]
-    Sistemdeki N adet GPU'nun fiziki VRAM'ini tek bir kesintisiz sanal adreste toplar.
-    Bellek parçalanmasını önler (De-fragmentation / Coalescing), Two-Pass Compaction
-    ile bellekleri sıkıştırır ve yerel GPU dolduğunda ikincil GPU'lara eşit taşkın
-    (Multi-GPU Spillover) dağıtımını yönetir.
-    """
 
     def __init__(
         self,
@@ -96,12 +69,12 @@ class SanalBellekHavuzu:
     ):
         self.lock = threading.RLock()
         self.simulation_mode = simulation_mode
-        self.sanal_taban_adresi = 0x7FFF00000000  # 64-Bit Sanal Taban Adresi
+        self.sanal_taban_adresi = 0x7FFF00000000  
         self.toplam_sanal_bayt = int(toplam_sanal_gb * (1024**3))
         self.gpu_haritacilari = gpu_haritacilari_listesi or []
         self.araliklar_listesi: List[SanalBellekAraligi] = []
         self.koruma_sayfasi_baslangic = 0
-        self.koruma_sayfasi_boyutu = 2 * 1024 * 1024  # 2 MB Guard Page
+        self.koruma_sayfasi_boyutu = 2 * 1024 * 1024  
 
         logger.info(
             f"[SanalBellekHavuzu] Sanal Bellek Havuzu İlklendirildi "
@@ -112,12 +85,8 @@ class SanalBellekHavuzu:
         self.IlklendirVeKorumaSayfasiKur()
 
     def IlklendirVeKorumaSayfasiKur(self):
-        """
-        Vazifesi: Havuzu başlatır, toplam sanal alanı tahsis eder ve en sona
-        donanımsal Koruma Sayfasını (Guard Page) yerleştirir.
-        """
         with self.lock:
-            # 1. Ana Serbest Alan
+            
             ana_aralik = SanalBellekAraligi(
                 sanal_adres=self.sanal_taban_adresi,
                 boyut_bayt=self.toplam_sanal_bayt,
@@ -125,7 +94,7 @@ class SanalBellekHavuzu:
                 durum="BOŞ"
             )
 
-            # 2. Guard Page (Koruma Sayfası)
+            
             self.koruma_sayfasi_baslangic = self.sanal_taban_adresi + self.toplam_sanal_bayt
             koruma_araligi = SanalBellekAraligi(
                 sanal_adres=self.koruma_sayfasi_baslangic,
@@ -141,11 +110,6 @@ class SanalBellekHavuzu:
             )
 
     def AraliklariBirlestir(self):
-        """
-        Vazifesi (De-fragmentation / Coalescing):
-        Serbest bırakılan bellekler sonucu oluşan komşu "BOŞ" alanları
-        matematiksel olarak birleştirerek bellek parçalanmasını önler.
-        """
         with self.lock:
             if not self.araliklar_listesi:
                 return
@@ -170,11 +134,6 @@ class SanalBellekHavuzu:
             logger.debug(f"[AraliklariBirlestir] Bitişik BOŞ alanlar birleştirildi. Toplam Dilim: {len(self.araliklar_listesi)}")
 
     def AdrestenAralikBul(self, hedef_sanal_adres: int) -> Optional[SanalBellekAraligi]:
-        """
-        Vazifesi ($O(\\log N)$ Binary Search):
-        Kullanıcının erişmek istediği sanal adresin hangi bellek aralığına denk
-        geldiğini O(log N) hızında bisect ile tespit eder.
-        """
         with self.lock:
             if not self.araliklar_listesi:
                 return None
@@ -190,10 +149,6 @@ class SanalBellekHavuzu:
             return None
 
     def AralikDogrula(self, baslangic_adres: int, boyut_bayt: int) -> bool:
-        """
-        Vazifesi: Bir okuma/yazma isteğinin toplam sanal sınırlar içinde olup olmadığını
-        ve Koruma Sayfasına (Guard Page) temas edip etmediğini tahkik eder.
-        """
         bitis_adres = baslangic_adres + boyut_bayt
 
         if baslangic_adres < self.sanal_taban_adresi:
@@ -210,10 +165,6 @@ class SanalBellekHavuzu:
         return True
 
     def _get_gpu_free_vram(self, gpu_idx: int) -> int:
-        """
-        Vazifesi: Belirtilen GPU indeksindeki donanımın o anki boş VRAM miktarını
-        dinamik olarak sorgular. Sabit oran varsayımlarını engeller.
-        """
         if 0 <= gpu_idx < len(self.gpu_haritacilari):
             gh = self.gpu_haritacilari[gpu_idx]
             if hasattr(gh, "get_free_vram") and callable(gh.get_free_vram):
@@ -227,10 +178,6 @@ class SanalBellekHavuzu:
         return 24 * (1024**3)
 
     def _map_gpu_vram(self, gpu_idx: int, bytes_to_map: int, pci_address: str = "") -> Dict[str, Any]:
-        """
-        Vazifesi: BellekHaritacisi üzerinden ilgili GPU'da fiziki VRAM mmap erişim hattı kurar
-        ve canlı C-İşaretçisini elde eder.
-        """
         pci_addr = pci_address or f"0000:0{gpu_idx+1}:00.0"
         if 0 <= gpu_idx < len(self.gpu_haritacilari):
             gh = self.gpu_haritacilari[gpu_idx]
@@ -247,7 +194,7 @@ class SanalBellekHavuzu:
             bh = BellekHaritacisi(simulation_mode=self.simulation_mode)
             return bh.VRAMErisimHattiKur(pci_adresi=pci_addr, bolge_no="1", vram_bytes=bytes_to_map)
 
-        # Fallback dummy C pointer for edge tests
+        
         dummy_c_ptr = ctypes.cast(ctypes.c_uint64(self.sanal_taban_adresi + gpu_idx * 0x100000000), ctypes.POINTER(ctypes.c_uint32))
         return {
             "status": "Simülasyon C-İşaretçi Atandı",
@@ -259,10 +206,6 @@ class SanalBellekHavuzu:
         }
 
     def _unmap_gpu_vram(self, parca_map: Dict[str, Any]):
-        """
-        Vazifesi: BellekHaritacisi üzerinden açılmış fiziki mmap bölgesini ve
-        dosya tanımlayıcısını kapatıp VRAM sızıntısını önler.
-        """
         mmap_obj = parca_map.get("mmap_object")
         fd = parca_map.get("file_descriptor", -1)
         gpu_idx = parca_map.get("gpu_id", 0)
@@ -286,13 +229,6 @@ class SanalBellekHavuzu:
                     logger.warning(f"Unmap fallback hatası: {err}")
 
     def SikistirVeGeriAl(self) -> bool:
-        """
-        Vazifesi (Two-Pass Compaction & Rollback):
-        Parçalanmış bellekleri sola kaydırarak sağ tarafta devasa tek bir boş alan açar.
-        Pass 1: Adresi değişecek tüm aralıkların mmap fiziki bağlantılarını söker (Unmap).
-        Pass 2: Yeni adresler için mmap bağlantılarını canlı C-işaretçileriyle tekrar kurar.
-        Herhangi bir donanımsal hata durumunda bellek haritasını eski haline iade eder (Rollback).
-        """
         with self.lock:
             logger.info("[SikistirVeGeriAl] Two-Pass Compaction Pass 1 (Unmap) Başlatılıyor...")
             eski_durum = [
@@ -303,7 +239,7 @@ class SanalBellekHavuzu:
             try:
                 tahsissiz = [a for a in self.araliklar_listesi if a.durum == "TAHSİS_EDİLDİ"]
 
-                # PASS 1: Fiziki Unmap
+                
                 for item in tahsissiz:
                     for p_map in item.parca_haritalari:
                         self._unmap_gpu_vram(p_map)
@@ -311,7 +247,7 @@ class SanalBellekHavuzu:
                 cur_addr = self.sanal_taban_adresi
                 yeni_araliklar: List[SanalBellekAraligi] = []
 
-                # PASS 2: Sola kaydırıp fiziki mmap bağlantılarını yeniden kur
+                
                 for item in tahsissiz:
                     item.sanal_adres = cur_addr
                     cur_addr += item.boyut_bayt
@@ -347,7 +283,7 @@ class SanalBellekHavuzu:
                     yeni_bos = SanalBellekAraligi(cur_addr, kalan_bos_bayt, gpu_id=-1, durum="BOŞ")
                     yeni_araliklar.append(yeni_bos)
 
-                # Guard Page
+                
                 koruma_araligi = SanalBellekAraligi(
                     self.koruma_sayfasi_baslangic,
                     self.koruma_sayfasi_boyutu,
@@ -362,7 +298,7 @@ class SanalBellekHavuzu:
 
             except Exception as err:
                 logger.critical(f"[SikistirVeGeriAl] Compaction Hatası: {err}. Rollback icra ediliyor...")
-                # ROLLBACK: Eski kararlı bellek haritasına ve mmap bağlantılarına dön
+                
                 self.araliklar_listesi = []
                 for s_addr, b_bytes, g_id, st, p_maps in eski_durum:
                     rec = SanalBellekAraligi(s_addr, b_bytes, g_id, st)
@@ -391,21 +327,14 @@ class SanalBellekHavuzu:
                 raise SanalBellekIhlalHatasi(f"Bellek sıkıştırma başarısız. Eski kararlı duruma geri dönüldü: {err}")
 
     def CachingAllocatorKilitliCompaction(self) -> bool:
-        """
-        Vazifesi (PyTorch C++ Caching Allocator İle Kilitli Compaction):
-        PyTorch'un C++ seviyesinde kilitlediği (PageState.LOCKED / kilitli) canlı bellek
-        sayfalarını KORUR. Kilitli sayfalara dokunmadan sadece serbest (unlocked)
-        COMMITTED sayfaların mmap haritasını söküp boşluklara sola kaydırır.
-        """
         with self.lock:
             logger.info("[CachingAllocatorKilitliCompaction] Kilitli Compaction Başlatılıyor...")
-            # 1. PyTorch C++ İşaretçi Kilitlerini İşle
+            
             for aralik in self.araliklar_listesi:
                 if aralik.durum == "TAHSİS_EDİLDİ" and getattr(aralik, "kilitli", False):
                     aralik.durum = "KİLİTLİ"
 
-            # 2. İki Aşamalı Güvenli Sıkıştırma (Two-Pass Compaction)
-            # PASS 1 (Unmap): Sadece kilitlenmemiş (COMMITTED / TAHSİS_EDİLDİ) sayfaların mmap haritasını sök.
+            
             serbest_tahsisliler = [a for a in self.araliklar_listesi if a.durum == "TAHSİS_EDİLDİ"]
             kilitli_tahsisliler = [a for a in self.araliklar_listesi if a.durum in ("KİLİTLİ", "KORUMA")]
 
@@ -413,7 +342,7 @@ class SanalBellekHavuzu:
                 for p_map in item.parca_haritalari:
                     self._unmap_gpu_vram(p_map)
 
-            # Sola kaydırıp serbest alanları düzenle
+            
             cur_addr = self.sanal_taban_adresi
             yeni_araliklar: List[SanalBellekAraligi] = []
 
@@ -451,7 +380,7 @@ class SanalBellekHavuzu:
 
                     yeni_araliklar.append(item)
 
-            # 3. Kilitli durumdaki sayfaları tekrar TAHSİS_EDİLDİ durumuna getir
+            
             for aralik in yeni_araliklar:
                 if aralik.durum == "KİLİTLİ":
                     aralik.durum = "TAHSİS_EDİLDİ"
@@ -467,28 +396,20 @@ class SanalBellekHavuzu:
         gpu_id_listesi: List[int],
         sayfa_esigi: int = 2 * 1024 * 1024
     ) -> Dict[int, int]:
-        """
-        Vazifesi: Kademeli Küsürat Eritme ve En Müsait GPU Sevk Algoritması
-        (Progressive Fractional Remainder Dissolution & Best-Fit Dispatch).
-        
-        Taşkın belleğin ikincil GPU'lara bölünmesi esnasında kalan küsüratı 2 MB donanımsal
-        sayfa hizalama katsayılarına göre kademeli eritir ve kalan atomik küsüratı anlık
-        VRAM'i en müsait olan GPU'ya sevk eder.
-        """
         gpu_sayisi = len(gpu_id_listesi)
         if gpu_sayisi == 0 or toplam_taskin_bayt <= 0:
             return {}
 
         tam_tur_blok_bayt = gpu_sayisi * sayfa_esigi
 
-        # 1. İLK TAM BÖLÜNEN ANA KÜTLEYİ DAĞIT
+        
         tam_bolunen_kitle = (toplam_taskin_bayt // tam_tur_blok_bayt) * tam_tur_blok_bayt if tam_tur_blok_bayt > 0 else 0
         gpu_basi_ana_pay = tam_bolunen_kitle // gpu_sayisi if gpu_sayisi > 0 else 0
 
         gpu_tahsisleri = {g_id: gpu_basi_ana_pay for g_id in gpu_id_listesi}
         kusurat_bayt = toplam_taskin_bayt - tam_bolunen_kitle
 
-        # 2. DÖNGÜSEL KÜSÜRAT ERİTME DÖNGÜSÜ
+        
         while kusurat_bayt >= tam_tur_blok_bayt and tam_tur_blok_bayt > 0:
             bolunebilir_alt_dilim = (kusurat_bayt // tam_tur_blok_bayt) * tam_tur_blok_bayt
             gpu_basi_ek_pay = bolunebilir_alt_dilim // gpu_sayisi
@@ -496,7 +417,7 @@ class SanalBellekHavuzu:
                 gpu_tahsisleri[g_id] += gpu_basi_ek_pay
             kusurat_bayt -= bolunebilir_alt_dilim
 
-        # 3. ATOMİK KÜSÜRATIN EN MÜSAİT GPU'YA SEVKİ
+        
         if kusurat_bayt > 0:
             en_musait_gpu = None
             max_kullanilabilir_vram = -1
@@ -521,18 +442,11 @@ class SanalBellekHavuzu:
         istenen_bayt: int,
         hedef_gpu_id: int = 0
     ) -> Dict[str, Any]:
-        """
-        Vazifesi (Multi-GPU Spillover & Live mmap Hook):
-        Dinamik boş VRAM kapasitesini sorgular. İstenen miktar yerel GPU'ya sığıyorsa %100 yerel
-        mmap haritalaması yapar. Yetmediğinde yerel boş VRAM'i tüketip kalan miktarı
-        Kademeli Küsürat Eritme Algoritması (Progressive Fractional Remainder Dissolution)
-        ile ikincil GPU'lara dengeli böler ve canlı VRAMErisimHattiKur çağrılarını icra eder.
-        """
         with self.lock:
-            # 1. Bitişik BOŞ alanları birleştir
+            
             self.AraliklariBirlestir()
 
-            # 2. Yeterli boyutta BOŞ sanal alan bul
+            
             hedef_aralik: Optional[SanalBellekAraligi] = None
             for aralik in self.araliklar_listesi:
                 if aralik.durum == "BOŞ" and aralik.boyut_bayt >= istenen_bayt:
@@ -540,7 +454,7 @@ class SanalBellekHavuzu:
                     break
 
             if hedef_aralik is None:
-                # Sıkıştırmayı dene (PyTorch C++ Caching Allocator kilitli kilitli compaction)
+                
                 self.CachingAllocatorKilitliCompaction()
                 for aralik in self.araliklar_listesi:
                     if aralik.durum == "BOŞ" and aralik.boyut_bayt >= istenen_bayt:
@@ -552,17 +466,17 @@ class SanalBellekHavuzu:
                     f"YETERSİZ BELLEK: {round(istenen_bayt/(1024**2), 2)} MB miktarında boş sanal VRAM bulunamadı!"
                 )
 
-            # Sınır tahkiki
+            
             self.AralikDogrula(hedef_aralik.sanal_adres, istenen_bayt)
 
-            # 3. DİNAMİK KAPASİTE SORGUSU VE KADEMELİ TAŞKIN MATEMATİĞİ
+            
             toplam_gpu = max(1, len(self.gpu_haritacilari))
             yerel_bos_vram = self._get_gpu_free_vram(hedef_gpu_id)
 
             haritalama_parcalari: List[Dict[str, Any]] = []
 
             if yerel_bos_vram >= istenen_bayt or toplam_gpu <= 1:
-                # %100 Yerel Tahsis
+                
                 mmap_res = self._map_gpu_vram(hedef_gpu_id, istenen_bayt)
                 haritalama_parcalari.append({
                     "gpu_id": hedef_gpu_id,
@@ -575,7 +489,7 @@ class SanalBellekHavuzu:
                     "c_pointer": mmap_res.get("c_pointer")
                 })
             else:
-                # Dinamik Eşit ve Kademeli Küsürat Eritmeli Taşkın (Spillover)
+                
                 yerel_tahsis_bayt = max(0, yerel_bos_vram)
                 kalan_bayt = istenen_bayt - yerel_tahsis_bayt
 
@@ -612,7 +526,7 @@ class SanalBellekHavuzu:
                         })
                         cur_off += parca_bayt
 
-            # Artan boş alanı yeni aralık olarak böl
+            
             artik_bayt = hedef_aralik.boyut_bayt - istenen_bayt
             sanal_baslangic = hedef_aralik.sanal_adres
 
@@ -621,7 +535,7 @@ class SanalBellekHavuzu:
             hedef_aralik.durum = "TAHSİS_EDİLDİ"
             hedef_aralik.parca_haritalari = haritalama_parcalari
 
-            # Birincil C-İşaretçisi ve mmap nesnesini kaydet
+            
             if haritalama_parcalari:
                 hedef_aralik.c_pointer = haritalama_parcalari[0].get("c_pointer")
                 hedef_aralik.fiziksel_mmap_nesnesi = haritalama_parcalari[0].get("mmap_object")
@@ -655,11 +569,6 @@ class SanalBellekHavuzu:
             }
 
     def BellekSerbestBirak(self, sanal_adres: int) -> bool:
-        """
-        Vazifesi: Tahsis edilmiş bir sanal adresi ve arkasındaki fiziki mmap kapılarını
-        HafizayiKapatVeSerbestBirak çağrısıyla kapatır, ardından "BOŞ" duruma getirerek
-        AraliklariBirlestir ile bellek parçalanmasını önler.
-        """
         with self.lock:
             aralik = self.AdrestenAralikBul(sanal_adres)
             if aralik is None:
@@ -669,11 +578,11 @@ class SanalBellekHavuzu:
             if aralik.durum == "KORUMA":
                 raise SanalBellekIhlalHatasi("GÜVENLİK İHLALİ: Koruma Sayfası (Guard Page) serbest bırakılamaz!")
 
-            # 1. FİZİKİ UNMAP ÇAĞRILARI (VRAM SIZINTISINI ÖNLER)
+            
             for p_map in aralik.parca_haritalari:
                 self._unmap_gpu_vram(p_map)
 
-            # 2. Metadayı Temizle ve Serbest Bırak
+            
             aralik.durum = "BOŞ"
             aralik.gpu_id = -1
             aralik.c_pointer = None
@@ -686,12 +595,6 @@ class SanalBellekHavuzu:
 
     @contextmanager
     def GeciciBellekMuhafizi(self, gecici_boyut_bayt: int, hedef_gpu_id: int = 0):
-        """
-        [Rükün / Algoritma 2: RAII Geçici Bellek Muhafızı (Scratchpad Scope Guard)]
-        Vazifesi: GPU üzerinde ara hesaplamalar veya matris çarpımları için geçici VRAM (Scratchpad)
-        tahsis eder. Python 'with' context manager yapısı ile hesaplama ne kadar kritik çökerse çöksün,
-        C-ABI seviyesinde istisna oluşsa dahi geçici VRAM'in otomatik olarak serbest bırakılmasını %100 garanti eder.
-        """
         tahsis_res = None
         sanal_adres = 0
         c_ptr = None
@@ -709,16 +612,12 @@ class SanalBellekHavuzu:
                     logger.warning(f"[RAII Scope Guard] Temizlik uyarısı: {err}")
 
     def GPU_P2P_Erisim_Aktif_Mi(self, gpu_id1: int, gpu_id2: int) -> bool:
-        """
-        Vazifesi: İki GPU arasında doğrudan PCIe/NVLink Peer-to-Peer (P2P) erişiminin
-        mümkün olup olmadığını sorgular.
-        """
         if gpu_id1 == gpu_id2:
             return True
         if gpu_id1 < 0 or gpu_id2 < 0:
             return False
         if self.simulation_mode:
-            return True  # Simülasyonda P2P DMA aktif varsayılır
+            return True  
         if 0 <= gpu_id1 < len(self.gpu_haritacilari) and 0 <= gpu_id2 < len(self.gpu_haritacilari):
             gh1 = self.gpu_haritacilari[gpu_id1]
             if hasattr(gh1, "p2p_supported") and callable(getattr(gh1, "p2p_supported")):
@@ -730,21 +629,10 @@ class SanalBellekHavuzu:
         gpu_id_a: int,
         gpu_id_b: int
     ) -> bool:
-        """
-        Vazifesi: PCIe Veriyolu Hakem Kilitlenmesini (Bus Arbiter Deadlock) önleyen
-        Asimetrik İndeks Sıralı (Coffman Dairesel Bekleme Önleme) P2P bağlantı kilitleme algoritmasıdır.
-
-        Girdiler:
-        - gpu_id_a: P2P kurulacak birinci GPU indeksi
-        - gpu_id_b: P2P kurulacak ikinci GPU indeksi
-
-        Çıktı:
-        - bool (True: P2P veri yolu kilidi ve erişim izinleri başarıyla kuruldu)
-        """
         if gpu_id_a == gpu_id_b:
             return True
 
-        # Coffman Dairesel Bekleme Önleme Kuralı: Kilit her zaman küçük olan karttan büyük olana doğru sırayla alınır.
+        
         gpu_min = min(gpu_id_a, gpu_id_b)
         gpu_max = max(gpu_id_a, gpu_id_b)
 
@@ -800,25 +688,12 @@ class SanalBellekHavuzu:
         hedef_sanal_adres: int,
         kopyalanacak_bayt: int
     ) -> bool:
-        """
-        Vazifesi: İki sanal VRAM adresi arasında (Virtual-to-Virtual VRAM) doğrudan bellek kopyalar.
-        Kaynak ve hedef sanal adreslerin hangi fiziksel GPU'larda olduğunu O(log N) Binary Search ile bulur
-        ve 3 farklı fiziki aktarım senaryosunu (Aynı GPU VRAM-to-VRAM, P2P DMA, Host-Staged Relay) icra eder.
-
-        Girdileri:
-        - kaynak_sanal_adres: Okunacak sanal VRAM adresi (0x7FFF...)
-        - hedef_sanal_adres: Yazılacak sanal VRAM adresi (0x7FFF...)
-        - kopyalanacak_bayt: Aktarılacak toplam veri boyutu
-
-        Çıktı:
-        - bool (True: Başarılı)
-        """
         with self.lock:
-            # 1. SANAL ADRES KAPSAM VE SINIR TAHKİKİ
+            
             self.AralikDogrula(kaynak_sanal_adres, kopyalanacak_bayt)
             self.AralikDogrula(hedef_sanal_adres, kopyalanacak_bayt)
 
-            # 2. ADRESTEN BELLEK DİLİMLERİNİ VE GPU KİMLİKLERİNİ BUL (O(log N) Binary Search)
+            
             kaynak_aralik = self.AdrestenAralikBul(kaynak_sanal_adres)
             hedef_aralik = self.AdrestenAralikBul(hedef_sanal_adres)
 
@@ -828,7 +703,7 @@ class SanalBellekHavuzu:
             if kopyalanacak_bayt <= 0:
                 return True
 
-            # 3. FİZİKSEL C-İŞARETÇİSİ VE OFSET HESABI
+            
             kaynak_ofset = kaynak_sanal_adres - kaynak_aralik.sanal_adres
             hedef_ofset = hedef_sanal_adres - hedef_aralik.sanal_adres
 
@@ -849,10 +724,10 @@ class SanalBellekHavuzu:
             kaynak_fiziksel_ptr = kaynak_base_ptr + kaynak_ofset
             hedef_fiziksel_ptr = hedef_base_ptr + hedef_ofset
 
-            # 4. ÜÇ FARKLI FİZİKİ TRANSFER SENARYOSU (Path Routing)
+            
             senaryo = "A"
             try:
-                # SENARYO A: Aynı GPU İçinde Doğrudan VRAM-to-VRAM Aktarımı
+                
                 if kaynak_aralik.gpu_id == hedef_aralik.gpu_id:
                     senaryo = "A (Aynı GPU VRAM-to-VRAM)"
                     try:
@@ -860,7 +735,7 @@ class SanalBellekHavuzu:
                     except (OSError, ValueError, TypeError) as mem_err:
                         logger.debug(f"[SanalAdreslerArasiKopyala] Senaryo A simülasyon aktarımı: {mem_err}")
 
-                # SENARYO B: Farklı GPU'lar Arası Doğrudan PCIe/NVLink P2P DMA Aktarımı
+                
                 elif self.GPU_P2P_Erisim_Aktif_Mi(kaynak_aralik.gpu_id, hedef_aralik.gpu_id):
                     senaryo = "B (P2P PCIe/NVLink DMA)"
                     self.AsimetrikSiraliP2PVeriyoluKilitleme(kaynak_aralik.gpu_id, hedef_aralik.gpu_id)
@@ -869,14 +744,14 @@ class SanalBellekHavuzu:
                     except (OSError, ValueError, TypeError) as mem_err:
                         logger.debug(f"[SanalAdreslerArasiKopyala] Senaryo B simülasyon aktarımı: {mem_err}")
 
-                # SENARYO C: P2P Desteklemeyen GPU'lar Arası Ara Tamponlu (Host-Staged Relay) Aktarım
+                
                 else:
                     senaryo = "C (Host-Staged Relay)"
                     gecici_tampon = ctypes.create_string_buffer(kopyalanacak_bayt)
                     try:
-                        # 1. Adım: Kaynak GPU'dan CPU Ara Tamponuna Oku
+                        
                         ctypes.memmove(gecici_tampon, kaynak_fiziksel_ptr, kopyalanacak_bayt)
-                        # 2. Adım: CPU Ara Tamponundan Hedef GPU'ya Yaz
+                        
                         ctypes.memmove(hedef_fiziksel_ptr, gecici_tampon, kopyalanacak_bayt)
                     except (OSError, ValueError, TypeError) as mem_err:
                         logger.debug(f"[SanalAdreslerArasiKopyala] Senaryo C simülasyon aktarımı: {mem_err}")
@@ -884,7 +759,7 @@ class SanalBellekHavuzu:
             except Exception as err:
                 logger.warning(f"[SanalAdreslerArasiKopyala] Aktarım simüle edildi ({err})")
 
-            # 5. DONANIMSAL ÇİT VE ÖNBELLEK TEMİZLİĞİ (Memory Barrier)
+            
             if BellekHaritacisi is not None:
                 try:
                     bh = BellekHaritacisi(simulation_mode=self.simulation_mode)
@@ -899,13 +774,10 @@ class SanalBellekHavuzu:
                 f"Boyut: {kopyalanacak_bayt} Bayt"
             )
 
-            # 6. True DÖNDÜR
+            
             return True
 
     def HavuzDurumuOzetle(self) -> Dict[str, Any]:
-        """
-        Vazifesi: Sanal bellek havuzunun genel doluluk ve parçalanma istatistiklerini özetler.
-        """
         with self.lock:
             toplam_tahsis = sum(a.boyut_bayt for a in self.araliklar_listesi if a.durum == "TAHSİS_EDİLDİ")
             toplam_bos = sum(a.boyut_bayt for a in self.araliklar_listesi if a.durum == "BOŞ")

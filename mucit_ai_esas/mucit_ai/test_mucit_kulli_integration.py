@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-MUCİT_AI & KÜLLÎ_GPU HAKİKİ BÜTÜNLEŞTİRME VE AKIŞ AYNASI
-(test_mucit_kulli_integration.py)
-================================================================================
-Bu test dosyası SADECE BİR AYNADIR (True Mirror Test). 
-Test dosyasının içinde HİÇBİR mock sınıf, yama, sahte kanca veya geçici mantık YER ALMAZ.
-Sadece gerçek 'kulli_gpu' sürücüsü ile 'mucit_ai' modüllerini (kontratlar.py,
-checkpoint_manager.py) import edip 30 kelimelik Türkçe metni modele sevk eder.
-"""
+
 
 import os
 import sys
@@ -19,7 +8,7 @@ if not logging.getLogger().hasHandlers():
     logging.basicConfig(level=logging.INFO, format='[%(asctime)s][%(name)s][%(levelname)s] %(message)s', stream=sys.stdout)
 logger = logging.getLogger("MucitKulliIntegrationTest")
 
-# Modül Yollarını sys.path'e Ekle
+
 try:
     import kulli_gpu
 except (ImportError, ModuleNotFoundError):
@@ -48,11 +37,11 @@ from mucit_ai.checkpoint_manager import NPZCheckpointManager
 def main():
     logger.info("=== MUCİT_AI & KÜLLÎ_GPU HAKİKİ ENTEGRASYON TESTİ (AYNA SINAĞI) BAŞLATILIYOR ===")
 
-    # 1. KÜLLÎ_GPU SANAL SÜRÜCÜSÜNÜ TEK SATIRLA BAŞLATMA
+    
     driver = kulli_gpu.baslat()
     logger.info("[Küllî_GPU Driver] Sanal Sürücü ve C-API Huni Kancaları Başarıyla Aktif Edildi.")
 
-    # 2. MUCİT_AI MODEL YAPILANDIRMASI
+    
     config = Model_TopolojikKonfigurasyon({
         "batch_size": 1,
         "d_v": 32,
@@ -68,7 +57,7 @@ def main():
         "K": 16,
     })
 
-    # 3. 30 KELİMELİK TÜRKÇE SENTETİK CÜMLE GİRDİSİ
+    
     turkce_cumle = (
         "Türk bilişsel yapay zeka mimarimiz topolojik rekürens ve lif laplasyeni kuramları "
         "üzerine inşa edilmiş olup külli gpu sanal sürücüsü vasıtasıyla sekiz gigabaytlık "
@@ -78,25 +67,25 @@ def main():
     logger.info(f"Sentetik Türkçe Girdi Cümlesi ({kelime_sayisi} Kelime): '{turkce_cumle}'")
     assert kelime_sayisi == 30, f"Cümle tam 30 kelime olmalıdır! Mevcut: {kelime_sayisi}"
 
-    # 4. AKIŞ STEP 1: E1 (Ham Metin) -> N1 (Hibrit Byte/Token Ayrıştırıcı) -> E2
+    
     e1_input = E1_HamMetinAkisi(X_text=turkce_cumle)
     n1_ayristirici = N1_HibritByteTokenAyristirici(config)
     e2_bytes, x_initial = n1_ayristirici(e1_input)
     logger.info(f"N1 Çıktısı Doğrulandı: Byte/Token Uzunluğu={e2_bytes.l_bytes}, Initial Latent={type(x_initial)}")
 
-    # 5. AKIŞ STEP 2: N2 (TopoX Hücre Oluşumu) -> E3 (Sınır Operatörleri)
+    
     n2_hucre = N2_TopoXHucreOlusumu(config)
     e3_sinir_op = n2_hucre(e2_bytes, x_initial=x_initial)
     logger.info("N2 Çıktısı Doğrulandı: Sınır Operatörleri D1 ve D2 üretildi.")
 
-    # 6. AKIŞ STEP 3: N3 & Riyazi Lif Laplasyeni Blok İnşa Edici -> D0 & Delta_0
+    
     n3_lif = N3_LifSinirlamaAtama(config)
     e4_lif_demeti = n3_lif(e3_sinir_op, x_initial)
     laplasyen_insaci = Riyazi_LifLaplasyeniBlokInsaEdici(config)
     D0_op, Delta_0 = laplasyen_insaci.insa_et(e3_sinir_op, e4_lif_demeti.phi_matrisleri)
     logger.info("Laplasyen İnşası Doğrulandı: Coboundary D0 ve Lif Laplasyeni Delta_0 üretildi.")
 
-    # 7. AKIŞ STEP 4: REKÜRENS DÖNGÜSÜ (N4 Sorgu Seçici -> N5 Cevap Süzücü -> Bellek Güncelleme)
+    
     n4_sorgu = N4_SorguSecici(config)
     n5_cevap = N5_CevapSuzucu(config=config)
     bellek_yonetici = Bellek_BaglamYoneticisi(config)
@@ -110,7 +99,7 @@ def main():
         m_bellek.M = bellek_yonetici.guncelle(m_bellek.M, e6_q, e7_a)
         logger.info(f"Rekürens Adımı r={r+1}/{config.R} Başarıyla Tamamlandı.")
 
-    # 8. AKIŞ STEP 5: CHECKPOINT VE BELLEK SÜRÜCÜSÜ ETKİLEŞİMİ
+    
     ckpt_mgr = NPZCheckpointManager(checkpoint_dir="/tmp/test_mucit_kulli_ckpt")
     saved_path = ckpt_mgr.save_pytorch_model(
         step=1,

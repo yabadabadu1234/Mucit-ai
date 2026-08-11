@@ -1,14 +1,9 @@
-"""
-KÜLLÎ GPU VMM ALGORİTMA VE PARADİGMA SANDBOX BİRİM TESTİ
-İzole Mod: Ev sahibi donanıma/sürücüye temas etmeden, Donanımsal MMU Eşleştirmesi ve 
-Kernel Tile-Decomposition mantıksal doğrulamasını yürütür.
-"""
 import sys
 import os
 import logging
 import threading
 from typing import List, Dict, Any
-# kulli_gpu modülünü sys.path'e ekle
+
 try:
     from kulli_gpu.memory.vmm_allocator import SanalBellekYoneticisi, PageState
     from kulli_gpu.interception.hook_manager import CUDAHookManager
@@ -29,31 +24,31 @@ logger = logging.getLogger("sandbox_test")
 def test_virtual_mmu_aggregation():
     logger.info("=== SANDBOX TEST 1: Donanımsal MMU Sanal Adres Bitişikliği (Scatter-Gather) ===")
     
-    # 88 GB Sanal Adres Simülasyonu
+    
     virtual_base_address = 0x7FFF00000000
-    page_size_bytes = 512 * 1024 * 1024  # 512 MB
+    page_size_bytes = 512 * 1024 * 1024  
     total_virtual_gb = 88
     total_pages = int((total_virtual_gb * 1024) / 512)
     
-    # Simüle edilmiş Sanal Sayfa Tablosu
+    
     pages = []
     for i in range(total_pages):
         pages.append({
             "page_id": i,
             "virtual_ptr": virtual_base_address + (i * page_size_bytes),
-            "physical_gpu_id": -1,  # Lazy
+            "physical_gpu_id": -1,  
             "state": "RESERVED"
         })
         
     logger.info(f"Rezerve Sanal Uzay: Base={hex(virtual_base_address)}, Toplam Sayfa={len(pages)} ({total_virtual_gb} GB)")
     
-    # Ana program 4 GB (8 Sayfa) Bitişik `void* ptr` talep ediyor
+    
     requested_bytes = 4 * 1024 * 1024 * 1024
     num_pages = requested_bytes // page_size_bytes
     
     selected_pages = pages[:num_pages]
     
-    # Donanımsal MMU: Fiziki VRAM 4 GPU'ya parçalanıyor (Scatter)
+    
     for idx, p in enumerate(selected_pages):
         p["physical_gpu_id"] = idx % 4
         p["state"] = "COMMITTED"
@@ -71,7 +66,7 @@ def test_kernel_tile_decomposition():
     logger.info("=== SANDBOX TEST 2: Yazılımsal Operatör Parçalama (Kernel Tile-Decomposition) ===")
     
     virtual_ptr = 0x7FFF00000000
-    total_size_bytes = 8 * 1024 * 1024 * 1024  # 8 GB Matris
+    total_size_bytes = 8 * 1024 * 1024 * 1024  
     num_gpus = 4
     tile_size_bytes = total_size_bytes // num_gpus
     
@@ -106,14 +101,14 @@ def test_lossless_p2p_migration():
     
     logger.info(f"Orijinal Sayfa Durumu: GPU #{page['physical_gpu_id']}, Veri='{page['data_payload']}'")
     
-    # Erken Devlet Engine GPU #2'ye taşıma emri veriyor
+    
     target_gpu_id = 2
     logger.info(f"P2P Migration Tetiklendi: GPU #{page['physical_gpu_id']} -> GPU #{target_gpu_id}")
     
-    # 1. P2P DMA Kopyalama (Eski VRAM -> Geçici Yeni VRAM)
-    migrated_data = str(page["data_payload"])  # Veri kaybolmadan kopyalandı
     
-    # 2. Eski VRAM unmap/release, Yeni VRAM re-map
+    migrated_data = str(page["data_payload"])  
+    
+    
     page["physical_gpu_id"] = target_gpu_id
     page["data_payload"] = migrated_data
     
@@ -124,11 +119,11 @@ def test_lossless_p2p_migration():
 def test_sub_allocator_coalescing():
     logger.info("=== SANDBOX TEST 4: Alt-Dilimleyici Serbest Bırakma ve Birleştirme (Coalescing) ===")
     
-    # Simüle edilmiş 512 MB Sayfa içi Sub-Allocator
+    
     page_virtual_ptr = 0x7FFF00000000
     sub_chunks = []
     
-    # 1. Üç adet 16 MB'lık Scratchpad tahsis ediliyor
+    
     c1 = {"offset_mb": 0.0, "size_mb": 16.0, "is_allocated": True, "ptr": page_virtual_ptr}
     c2 = {"offset_mb": 16.0, "size_mb": 16.0, "is_allocated": True, "ptr": page_virtual_ptr + int(16 * 1024 * 1024)}
     c3 = {"offset_mb": 32.0, "size_mb": 16.0, "is_allocated": True, "ptr": page_virtual_ptr + int(32 * 1024 * 1024)}
@@ -136,11 +131,11 @@ def test_sub_allocator_coalescing():
     
     logger.info(f"Tahsis Edildi: 3 adet 16 MB Scratchpad (Toplam {sum(c['size_mb'] for c in sub_chunks)} MB)")
     
-    # 2. c1 ve c2 serbest bırakılıyor (Free)
+    
     c1["is_allocated"] = False
     c2["is_allocated"] = False
     
-    # 3. Coalescing Algoritması: Komşu boş dilimleri birleştir
+    
     coalesced = []
     curr = sub_chunks[0]
     for nxt in sub_chunks[1:]:
@@ -176,7 +171,7 @@ def test_abi_struct_alignment():
     prop = CUmemAllocationProp()
     prop.type = 1
     prop.location.type = 1
-    prop.location.id = 2  # GPU #2
+    prop.location.id = 2  
     struct_size = ctypes.sizeof(prop)
     logger.info(f"CUmemAllocationProp struct boyutu: {struct_size} bytes (64-bit ABI Uyumlu)")
     logger.info(f"Set Edilen Location: Type={prop.location.type}, ID={prop.location.id}")
@@ -188,8 +183,8 @@ def test_guard_pages():
     
     virtual_base_address = 0x7FFF00000000
     main_vram_bytes = 88 * 1024 * 1024 * 1024
-    guard_page_ptr = virtual_base_address + main_vram_bytes  # 88 GB'ın tam bittiği sınır
-    guard_size_bytes = 2 * 1024 * 1024  # 2 MB (2097152 bytes) Donanımsal Asgari Granülarite
+    guard_page_ptr = virtual_base_address + main_vram_bytes  
+    guard_size_bytes = 2 * 1024 * 1024  
     guard_page_ptr = virtual_base_address + main_vram_bytes
     logger.info(f"Main Virtual VRAM: {hex(virtual_base_address)} -> {hex(guard_page_ptr)} (88 GB)")
     logger.info(f"Armed Guard Page: {hex(guard_page_ptr)} -> {hex(guard_page_ptr + guard_size_bytes)} (2 MB PROT_NONE)")
@@ -201,10 +196,10 @@ def test_guard_pages():
         if ptr < virtual_base_address or end_ptr > guard_page_ptr:
             raise GuardPageException(f"Küllî VMM ADRES SINIR IHLALI! Adres {hex(ptr)} (+{size_bytes} bytes) 88 GB sanal uzay dışında!")
         return True
-    # 1. Normal adres testi (88 GB içinde)
+    
     assert check_address(virtual_base_address + 0x1000, 1024) == True
     
-    # 2. Guard Page ihlal testi
+    
     breach_caught = False
     try:
         check_address(guard_page_ptr + 0x100, 1024)
@@ -226,10 +221,10 @@ def test_nvshmem_pgas_hook():
             "pgas_status": "REGISTERED_IN_GLOBAL_ADDRESS_SPACE"
         })
         logger.info(f"  [PGAS Hook] NVSHMEM PGAS Registered Page #{page_obj['page_id']} at {hex(page_obj['virtual_ptr'])}, OS Handle={os_handle}")
-    # Simüle edilmiş sayfa komiti
+    
     page = {"page_id": 12, "virtual_ptr": 0x7FFF01800000}
     os_handle_val = 0x998877665544
-    # Kanca tetikleniyor
+    
     mock_nvshmem_pgas_hook(page, os_handle_val)
     assert len(registered_pgas_events) == 1, "PGAS hook tetiklenemedi!"
     assert registered_pgas_events[0]["os_handle"] == 0x998877665544, "OS Handle aktarımı hatalı!"
@@ -237,7 +232,7 @@ def test_nvshmem_pgas_hook():
 def test_vmm_compaction_and_stitching():
     logger.info("=== SANDBOX TEST 8: Sanal Adres Sıkıştırma ve Bitişiklik Garantisi (Compaction & MMU Stitching) ===")
     
-    # 5 Adet Sayfa Simülasyonu (Sanal parçalanma durumu: 0. ve 2. sayfa COMMITTED, 1., 3., 4. sayfa FREE)
+    
     pages = [
         {"id": 0, "state": "COMMITTED", "ptr": 0x7FFF00000000},
         {"id": 1, "state": "FREE", "ptr": 0x7FFF00200000},
@@ -248,22 +243,21 @@ def test_vmm_compaction_and_stitching():
     
     logger.info("Parçalanmış Sanal Sayfa Durumu: [COMMITTED, FREE, COMMITTED, FREE, FREE]")
     
-    # Ana program 2 adet ardışık bitişik sayfa istiyor. (Mevcut dizilimde ardışık FREE yok)
-    # Sıkıştırma Motoru (Compaction Engine) devreye girer:
+    
     active = [p for p in pages if p["state"] == "COMMITTED"]
     free = [p for p in pages if p["state"] == "FREE"]
     compacted_pages = active + free
     
-    # Sanal adresleri yeniden düğümle (Stitching)
+    
     base_addr = 0x7FFF00000000
-    page_bytes = 0x200000  # 2MB
+    page_bytes = 0x200000  
     for idx, p in enumerate(compacted_pages):
         p["id"] = idx
         p["ptr"] = base_addr + (idx * page_bytes)
         
     logger.info("Sıkıştırma Sonrası Dizilim: [COMMITTED, COMMITTED, FREE, FREE, FREE]")
     
-    # Artık 2. ve 3. indisler (yeni 2 ve 3) yan yana bitişik FREE pencereler oluşturur
+    
     found_window = [p for p in compacted_pages if p["state"] == "FREE"][:2]
     
     assert found_window[0]["ptr"] + page_bytes == found_window[1]["ptr"], "Sanal adres bitişikliği sağlanamadı!"
@@ -276,10 +270,10 @@ def test_reentrant_rlock():
     lock = threading.RLock()
     reentrant_success = False
     
-    # Outer lock (örneğin allocate_contiguous_virtual_block)
+    
     with lock:
         logger.info("  [Outer Lock] Dış metod kilidi aldı.")
-        # Inner lock (kanca tetiklendiğinde aynı thread içindeki get_os_native_handle çağrısı)
+        
         with lock:
             logger.info("  [Inner Lock] PGAS Kancası aynı iplikte kilide tekrar girdi! Deadlock engellendi.")
             reentrant_success = True
@@ -295,16 +289,16 @@ def test_cu_ctx_enable_peer_access():
         p2p_state[(dst_gpu, src_gpu)] = "ENABLED"
         logger.info(f"  [P2P Hardware Access] Executed cuCtxEnablePeerAccess: GPU #{src_gpu} <==> GPU #{dst_gpu} SUCCESS!")
         return True
-    # GPU #0 <==> GPU #2 P2P aktarımı öncesi Çift Yönlü Peer Access aktifleştiriliyor
+    
     mock_enable_peer_access(src_gpu=0, dst_gpu=2)
     assert p2p_state.get((0, 2)) == "ENABLED" and p2p_state.get((2, 0)) == "ENABLED", "Çift Yönlü P2P Peer Access etkinleştirilemedi!"
     logger.info("TEST 10 BAŞARILI: cuCtxEnablePeerAccess ile Çift Yönlü P2P DMA Kopyalama Garantisi Doğrulandı!\n")
 def test_get_page_scatter_map():
     logger.info("=== SANDBOX TEST 11: Erken Devlet Topoloji Sorgusu (get_page_scatter_map) ===")
     
-    # 88 GB Sanal Adres Simülasyonu
+    
     virtual_base_address = 0x7FFF00000000
-    page_size_bytes = 512 * 1024 * 1024  # 512 MB
+    page_size_bytes = 512 * 1024 * 1024  
     
     pages = []
     for i in range(4):
@@ -316,10 +310,10 @@ def test_get_page_scatter_map():
         })
         
     base_ptr = pages[0]["virtual_ptr"]
-    requested_bytes = int(1.5 * 1024 * 1024 * 1024)  # 1.5 GB
+    requested_bytes = int(1.5 * 1024 * 1024 * 1024)  
     end_ptr = base_ptr + requested_bytes
     
-    # get_page_scatter_map mantığı
+    
     scatter_map = []
     for p in pages:
         p_start = p["virtual_ptr"]
@@ -349,14 +343,14 @@ def test_get_page_scatter_map():
 def test_guard_page_shutdown_cleanup():
     logger.info("=== SANDBOX TEST 12: Koruma Sayfası Kukla VRAM Temizliği (Guard Page Zero VRAM Leak) ===")
     
-    # Koruma Sayfası Simülasyonu
+    
     guard_handle = 0x5544332211
     guard_virtual_ptr = 0x801500000000
     cleaned_up = False
     def mock_shutdown():
         nonlocal guard_handle, guard_virtual_ptr, cleaned_up
-        # 1. Normal sayfalar sökülür
-        # 2. Koruma Sayfası Donanımdan Sökülür (cuMemUnmap + cuMemRelease)
+        
+        
         if guard_handle is not None and guard_virtual_ptr != 0:
             logger.info(f"  [Guard Page Cleanup] cuMemUnmap({hex(guard_virtual_ptr)}) + cuMemRelease({hex(guard_handle)}) SUCCESS!")
             guard_handle = None
@@ -383,7 +377,7 @@ def test_zero_gpu_fallback():
 def test_scratchpad_unmap_cleanup():
     logger.info("=== SANDBOX TEST 14: Boşalan Scratchpad Sayfasının Otomatik Unmap ve FREE Olması ===")
     
-    # Scratchpad simülasyonu
+    
     page_state = "SCRATCHPAD"
     allocated_mb = 16.0
     handle = 0x9988776655
@@ -405,19 +399,19 @@ def test_granular_extent_allocator():
     logger.info("=== SANDBOX TEST 15: Granüler Sanal Aralık Tahsisçisi (Extent/Interval Allocator) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0)
     
-    # 1. 88 GB'ın baştan 512 MB parçalara bölünmediğini, TEK BİR SERBEST EXTENT olduğunu doğrula
+    
     assert len(vmm.pages) == 1, f"88 GB baştan parçalanmış! Sayfa sayısı: {len(vmm.pages)}"
     assert vmm.pages[0].size_mb == 88.0 * 1024.0, "İlk extent 88 GB değil!"
     logger.info(f"  [Extent Allocator] Initial extent size: {vmm.pages[0].size_mb / 1024:.1f} GB (Continuous Single Extent)")
-    # 2. 14 MB (Donanımsal Granülariteye Yuvarlanır -> 14 MB) Tahsisi
+    
     ptr_14, extents_14 = vmm.allocate_contiguous_virtual_block(14 * 1024 * 1024)
     assert extents_14[0].size_mb == 14.0, f"14 MB tahsisatı hatalı extent boyutu üretti: {extents_14[0].size_mb} MB"
     logger.info(f"  [Extent Allocator] 14 MB Extent allocated at {hex(ptr_14)} with exact size {extents_14[0].size_mb} MB")
-    # 3. 120 MB Tahsisi
+    
     ptr_120, extents_120 = vmm.allocate_contiguous_virtual_block(120 * 1024 * 1024)
     assert extents_120[0].size_mb == 120.0, f"120 MB tahsisatı hatalı extent boyutu üretti: {extents_120[0].size_mb} MB"
     logger.info(f"  [Extent Allocator] 120 MB Extent allocated at {hex(ptr_120)} with exact size {extents_120[0].size_mb} MB")
-    # 4. Serbest Bırakma ve Otomatik Extent Coalescing Testi
+    
     vmm.cuMemUnmap(extents_14[0])
     vmm.cuMemUnmap(extents_120[0])
     vmm._coalesce_extents()
@@ -430,17 +424,17 @@ def test_address_relocated_callback():
     logger.info("=== SANDBOX TEST 16: Adres Yönlendirme Masası Kancası (on_address_relocated Callback) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0)
     hook_mgr = CUDAHookManager()
-    # VMM'e Hook Manager'ın relocation callback'ini kaydet
+    
     vmm.register_on_address_relocated_callback(hook_mgr.on_address_relocated)
     assert hook_mgr.on_address_relocated in vmm.on_address_relocated_hooks, "Callback kaydedilemedi!"
-    # İki blok tahsis et ve ilkin serbest bırak (sanal parçalanma simülasyonu)
+    
     ptr1, ext1 = vmm.allocate_contiguous_virtual_block(64 * 1024 * 1024)
     ptr2, ext2 = vmm.allocate_contiguous_virtual_block(64 * 1024 * 1024)
-    # 1. Bloğu serbest bırak
+    
     vmm.cuMemUnmap(ext1[0])
-    # Compaction çalıştır -> ptr2 adresi sanal taban adrese kaydırılır
+    
     vmm._compact_virtual_memory()
-    # Callback tetiklendi mi ve Hook Manager Masasında old_ptr -> new_ptr haritalandı mı?
+    
     assert ptr2 in hook_mgr.address_relocation_table, f"Adres {hex(ptr2)} relocation masasına kaydedilmedi!"
     new_ptr = hook_mgr.lookup_active_pointer(ptr2)
     assert new_ptr == vmm.virtual_base_address, f"Yeni adres taban adres değil: {hex(new_ptr)}"
@@ -451,17 +445,17 @@ def test_nvshmem_unmap_hook():
     logger.info("=== SANDBOX TEST 17: NVSHMEM / PGAS Unmap Kancası (on_page_unmapped) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0)
     bus = NVSHMEMVeriyolu()
-    # Kancaları VMM'e bağla
+    
     vmm.register_on_page_committed_hook(bus.on_page_committed)
     vmm.register_on_page_unmapped_hook(bus.on_page_unmapped)
-    # 1. Sayfa tahsis et ve commit et
+    
     pages = vmm.allocate_pages(num_pages=1, target_gpu_id=0)
     page = pages[0]
     assert page.page_id in bus.registered_pgas_pages, "Sayfa PGAS tablosuna kaydolmadı!"
     logger.info(f"  [PGAS Table] Page #{page.page_id} successfully registered in NVSHMEM Address Table.")
-    # 2. Sayfayı unmap et
+    
     vmm.cuMemUnmap(page)
-    # 3. Sayfa PGAS tablosundan söküldü mü? (Stale Handle engellendi mi?)
+    
     assert page.page_id not in bus.registered_pgas_pages, f"Sayfa #{page.page_id} unmap sonrası PGAS tablosundan sökülmedi! (Stale Handle riski)"
     logger.info(f"  [PGAS Table] Page #{page.page_id} successfully unregistered from NVSHMEM Address Table upon unmap.")
     vmm.shutdown()
@@ -471,16 +465,16 @@ def test_scattered_extent_aggregation():
     logger.info("=== SANDBOX TEST 18: Parçalı Sanal Kapasite Birleştirmesi (Scattered Extent Aggregation) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     
-    # 1. Belleği parçala: 3 ayrı 64 MB blok tahsis et
+    
     ptr1, ext1 = vmm.allocate_contiguous_virtual_block(64 * 1024 * 1024, target_gpu_id=0)
     ptr2, ext2 = vmm.allocate_contiguous_virtual_block(64 * 1024 * 1024, target_gpu_id=0)
     ptr3, ext3 = vmm.allocate_contiguous_virtual_block(64 * 1024 * 1024, target_gpu_id=0)
     
-    # 2. Ortadaki bloğu ve sondaki bazı alanları serbest bırakıp aralarda delikler (fragmentation) oluştur
+    
     vmm.cuMemUnmap(ext2[0])
     ext2[0].state = PageState.FREE
     
-    # Parçalı kapasiteden 64 MB talep et ("İntizam Değil, İstifade" kuralı)
+    
     alloc_ptr, pieces = vmm.allocate_contiguous_virtual_block(64 * 1024 * 1024, target_gpu_id=0)
     assert len(pieces) >= 1, "Parçalı sanal bellek birleştirmesi başarsız!"
     logger.info(f"  [Scattered Aggregation] Successfully allocated scattered capacity across {len(pieces)} extents at {hex(alloc_ptr)}")
@@ -491,18 +485,18 @@ def test_scattered_extent_aggregation():
 def test_equal_multi_gpu_spillover():
     logger.info("=== SANDBOX TEST 19: Eşit Taşkın ve Yerel Öncelik Mimarisi (Equal Multi-GPU Spillover) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
-    vmm.per_gpu_vram_gb = 1.0  # Her GPU için 1 GB kart kapasitesi simülasyonu
+    vmm.per_gpu_vram_gb = 1.0  
     
-    # GPU #0 üzerinde 2 GB (2048 MB) alan talep et. GPU #0'ın sadece 1 GB boş yeri var.
+    
     req_bytes = 2 * 1024 * 1024 * 1024
     ptr, pieces = vmm.allocate_contiguous_virtual_block(req_bytes, target_gpu_id=0)
     
-    # Toplam parçalar 4 GPU'ya eşit dağıldı mı?
+    
     gpu_ids = [p.physical_gpu_id for p in pieces]
     logger.info(f"  [Equal Spillover] 2 GB requested on GPU #0. Allocated across physical GPUs: {gpu_ids}")
     assert set(gpu_ids) == {0, 1, 2, 3}, f"Eşit taşkın 4 GPU'ya yayılmadı: {gpu_ids}"
     
-    # GPU #0 yerel pay (1 GB yerel + 256 MB taşkın) = 1.25 GB almalı, diğer GPU'lar 256 MB almalı
+    
     gpu0_bytes = sum(p.size_bytes for p in pieces if p.physical_gpu_id == 0)
     gpu1_bytes = sum(p.size_bytes for p in pieces if p.physical_gpu_id == 1)
     logger.info(f"  [Spillover Shares] GPU #0: {gpu0_bytes / (1024**2):.1f} MB, GPU #1: {gpu1_bytes / (1024**2):.1f} MB")
@@ -515,17 +509,17 @@ def test_compaction_pass2_rollback():
     logger.info("=== SANDBOX TEST 20: Compaction Pass 2 Donanımsal Geri Alma (Pass 2 Rollback & Restoration) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=1)
     
-    # 2 adet extent oluştur ve aralarında boşluk bırak
+    
     ptr1, ext1 = vmm.allocate_contiguous_virtual_block(64 * 1024 * 1024)
     ptr2, ext2 = vmm.allocate_contiguous_virtual_block(64 * 1024 * 1024)
     
     orig_ptr1 = ext1[0].virtual_ptr
     orig_ptr2 = ext2[0].virtual_ptr
     
-    # ext1'i unmap et ki arada boşluk oluşsun ve compaction tetiklensin
+    
     vmm.cuMemUnmap(ext1[0])
     
-    # Pass 2 donanım hatası simülasyonunu etkinleştir
+    
     vmm._simulate_pass2_failure = True
     
     rollback_triggered = False
@@ -539,7 +533,7 @@ def test_compaction_pass2_rollback():
 
     assert rollback_triggered, "Pass 2 hatası sonrası Rollback tetiklenmedi!"
     
-    # Extent #2'nin adresi orijinal adresine (orig_ptr2) geri döndü mü?
+    
     assert ext2[0].virtual_ptr == orig_ptr2, f"Rollback sonrası adres geri yüklenemedi: {hex(ext2[0].virtual_ptr)} != {hex(orig_ptr2)}"
     logger.info(f"  [Rollback Success] Extent #{ext2[0].page_id} successfully restored to original ptr {hex(ext2[0].virtual_ptr)}")
     
@@ -550,19 +544,19 @@ def test_granular_scratchpad_allocation():
     logger.info("=== SANDBOX TEST 21: Saf Granüler Scratchpad Tahsisi ve 1 GB Dev Ara Bellek Doğrulaması ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0)
     
-    # 1. 4 MB Granüler Scratchpad Extent Tahsis Et
+    
     ptr_4mb, page_4mb = vmm.allocate_scratchpad_chunk(4.0)
     assert page_4mb.size_mb == 4.0, f"4 MB Scratchpad boyutu hatalı: {page_4mb.size_mb}"
     assert page_4mb.state == PageState.SCRATCHPAD, "Sayfa durumu SCRATCHPAD olmadı!"
     logger.info(f"  [Granular Scratchpad] 4 MB exact extent allocated at {hex(ptr_4mb)}")
     
-    # 2. Eski 512 MB Slab Prangasını Aşan 1024 MB (1 GB) Dev Scratchpad Extent Tahsis Et
+    
     ptr_1gb, page_1gb = vmm.allocate_scratchpad_chunk(1024.0)
     assert page_1gb.size_mb == 1024.0, f"1024 MB Scratchpad boyutu hatalı: {page_1gb.size_mb}"
     assert page_1gb.state == PageState.SCRATCHPAD, "1 GB Scratchpad durumu SCRATCHPAD olmadı!"
     logger.info(f"  [Granular Scratchpad] 1024 MB (1 GB) large extent allocated smoothly at {hex(ptr_1gb)}")
     
-    # 3. İki Scratchpad Extent'ini de Serbest Bırak ve Zero-Leak Unmap Doğrulaması Yap
+    
     freed_4mb = vmm.free_scratchpad_chunk(ptr_4mb)
     freed_1gb = vmm.free_scratchpad_chunk(ptr_1gb)
     assert freed_4mb == True, "4 MB Scratchpad serbest bırakılamadı!"
@@ -581,25 +575,25 @@ def test_allocated_pages_tracking():
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     vmm.per_gpu_vram_gb = 24.0
     
-    req_bytes = 100 * 1024 * 1024  # 100 MB
+    req_bytes = 100 * 1024 * 1024  
     ptr, extents = vmm.allocate_contiguous_virtual_block(req_bytes, target_gpu_id=0)
     
-    # 1. Extent objesi allocated_pages listesine eklendi mi?
+    
     assert extents[0] in vmm.allocated_pages, "Yerel tahsis edilen extent 'allocated_pages' listesinde yok!"
     logger.info("  [Allocated Pages Tracking] Local priority extent successfully tracked in vmm.allocated_pages.")
     
-    # 2. VRAM İstatistiği doğru güncellendi mi? (0.0 GB kalması engellendi mi?)
+    
     allocated_mb = vmm.allocated_vram_bytes / (1024 * 1024)
     assert allocated_mb == 100.0, f"Tahsis edilen VRAM istatistiği hatalı: {allocated_mb} MB (Beklenen 100 MB)"
     logger.info(f"  [VRAM Telemetry] Correctly reported allocated VRAM: {allocated_mb:.1f} MB")
     
-    # 3. get_gpu_free_vram_bytes GPU #0 için doğru azaldı mı?
+    
     free_gpu0_mb = vmm.get_gpu_free_vram_bytes(0) / (1024 * 1024)
     expected_free_mb = (24.0 * 1024.0) - 100.0
     assert free_gpu0_mb == expected_free_mb, f"GPU #0 boş VRAM istatistiği hatalı: {free_gpu0_mb} MB"
     logger.info(f"  [GPU Free VRAM] GPU #0 free VRAM accurately updated to {free_gpu0_mb:.1f} MB")
     
-    # 4. shutdown() sonrasında tüm allocated_pages donanımdan unmap edilip temizlendi mi?
+    
     vmm.shutdown()
     assert len(vmm.allocated_pages) == 0, "shutdown() sonrası allocated_pages temizlenemedi (VRAM Leak)!"
     logger.info("  [Zero-Leak Shutdown] All tracked allocated_pages unmapped cleanly during shutdown.")
@@ -608,18 +602,18 @@ def test_allocated_pages_tracking():
 def test_spillover_boundary_protection():
     logger.info("=== SANDBOX TEST 23: Eşit Taşkın Sınır Koruması ve Adres Taşması Engelleme ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
-    # Sadece ev sahibi GPU #0'ın kapasitesini kısıtla, ikincil GPU'lar 24 GB'da kalsın (Peer VRAM Pre-Check uyumlu)
-    vmm.gpu_vram_capacities[0] = int(0.001 * 1024 * 1024 * 1024)  # ~1 MB
     
-    req_bytes = 4 * 1024 * 1024  # 4 MB Taşkın Talebi
+    vmm.gpu_vram_capacities[0] = int(0.001 * 1024 * 1024 * 1024)  
+    
+    req_bytes = 4 * 1024 * 1024  
     ptr, sub_extents = vmm.allocate_contiguous_virtual_block(req_bytes, target_gpu_id=0)
     
-    # 1. Alt-extent'lerin toplam boyutu Orijinal req_bytes boyutuna EŞİT Mİ? (Taşma var mı?)
+    
     total_sub_bytes = sum(s.size_bytes for s in sub_extents)
     assert total_sub_bytes == req_bytes, f"Taşkın alt-extent toplamı boyutu aştı: {total_sub_bytes} != {req_bytes}"
     logger.info(f"  [Boundary Check] Total spillover sub-extents size strictly matches req_bytes: {total_sub_bytes} bytes.")
     
-    # 2. Son alt-extent adresi sanal adresi aştı mı?
+    
     last_sub = sub_extents[-1]
     expected_end_ptr = ptr + req_bytes
     actual_end_ptr = last_sub.virtual_ptr + last_sub.size_bytes
@@ -632,28 +626,28 @@ def test_spillover_boundary_protection():
 def test_batch_scratchpad_unmap_and_p2p_fallback():
     logger.info("=== SANDBOX TEST 24: Çok Parçalı Batch Scratchpad Unmap ve Host-Staged Relay Fallback ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
-    # Sadece ev sahibi GPU #0'ın kapasitesini kısıtla, ikincil GPU'lar 24 GB'da kalsın (Peer VRAM Pre-Check uyumlu)
-    vmm.gpu_vram_capacities[0] = int(0.001 * 1024 * 1024 * 1024)  # ~1 MB
     
-    # 1. Çoklu GPU'ya taşkın yapacak 16 MB'lık Scratchpad tahsis et
+    vmm.gpu_vram_capacities[0] = int(0.001 * 1024 * 1024 * 1024)  
+    
+    
     ptr, main_ext = vmm.allocate_scratchpad_chunk(16.0, target_gpu_id=0)
     scratch_pages = [p for p in vmm.pages if p.state == PageState.SCRATCHPAD]
     assert len(scratch_pages) > 1, "Scratchpad çoklu GPU'lara taşkın yapamadı!"
     logger.info(f"  [Multi-GPU Scratchpad] Successfully split scratchpad into {len(scratch_pages)} sibling sub-extents across GPUs.")
     
-    # 2. Batch Scratchpad Unmap çağır (Tüm kardeş alt-extent'ler serbest bırakılmalı)
+    
     success = vmm.free_scratchpad_chunk(ptr)
     assert success, "free_scratchpad_chunk Başarısız döndü!"
     remaining_scratch = [p for p in vmm.pages if p.state == PageState.SCRATCHPAD]
     assert len(remaining_scratch) == 0, f"Batch Scratchpad Unmap sızıntı yaptı! Kalan scratchpad parçası: {len(remaining_scratch)}"
     logger.info("  [Batch Scratchpad Unmap] All sibling sub-extents unmapped cleanly! Zero Scratchpad Leak verified.")
     
-    # 3. P2P Desteklenmeyen (Error 705 / Non-P2P PCIe Topology) senaryosunu simüle et
+    
     page_bytes = 4 * 1024 * 1024
     ptr2, extents2 = vmm.allocate_contiguous_virtual_block(page_bytes, target_gpu_id=0)
     page_obj = extents2[0]
     
-    # P2P kapatıldığında (peer_ok = False) remap_locality'nin Host-Staged CPU Relay ile çökmeden çalışmasını doğrula
+    
     import kulli_gpu.memory.vmm_allocator as vmm_module
     orig_peer_fn = vmm_module._enable_peer_access_between_gpus
     vmm_module._enable_peer_access_between_gpus = lambda src, dst: False
@@ -673,15 +667,14 @@ def test_range_validation_and_scattered_aggregation():
     logger.info("=== SANDBOX TEST 25: Kuşatıcı Aralık Doğrulaması (Range Validation) ve Parçalı Kapasite Birleştirmesi ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     
-    # 1. Kuşatıcı Aralık Doğrulaması (Range Validation) Testi
-    # 88 GB'ın son 1 MB'ında başlayan fakat 10 MB uzunluğunda olan (Guard Page'e taşan) adres aralığı
-    near_end_ptr = vmm.virtual_base_address + vmm.virtual_vram_bytes - (1 * 1024 * 1024)
-    request_size_bytes = 10 * 1024 * 1024  # 10 MB
     
-    # Tekil ptr geçerlidir (88 GB sınırının 1 MB gerisinde)
+    near_end_ptr = vmm.virtual_base_address + vmm.virtual_vram_bytes - (1 * 1024 * 1024)
+    request_size_bytes = 10 * 1024 * 1024  
+    
+    
     assert vmm.virtual_base_address <= near_end_ptr < (vmm.virtual_base_address + vmm.virtual_vram_bytes)
     
-    # Ancak [near_end_ptr, near_end_ptr + 10 MB) aralığı Guard Page'e taşar -> GuardPageException fırlatılmalı!
+    
     guard_exception_caught = False
     try:
         vmm.is_valid_virtual_address(near_end_ptr, request_size_bytes)
@@ -691,7 +684,7 @@ def test_range_validation_and_scattered_aggregation():
     
     assert guard_exception_caught is True, "Range Validation aralık taşmasını yakalayamadı!"
 
-    # get_page_scatter_map de Range Validation çağırarak aynı ihlali yakalamalı
+    
     scatter_exception_caught = False
     try:
         vmm.get_page_scatter_map(near_end_ptr, request_size_bytes)
@@ -701,18 +694,17 @@ def test_range_validation_and_scattered_aggregation():
 
     assert scatter_exception_caught is True, "get_page_scatter_map Range Validation yapamadı!"
 
-    # 2. İntizam Değil İstifade: Parçalı Sanal Kapasite Birleştirmesi Testi
-    # 88 GB tuval üzerinde 3 farklı parçalı blok tahsis edip serbest bırakarak dağınık boşluklar oluştur
+    
     ptr1, _ = vmm.allocate_contiguous_virtual_block(512 * 1024 * 1024)
     ptr2, _ = vmm.allocate_contiguous_virtual_block(1024 * 1024 * 1024)
     ptr3, _ = vmm.allocate_contiguous_virtual_block(2048 * 1024 * 1024)
     
-    # Dağınık serbest alanlar oluştur
+    
     for page in list(vmm.pages):
         if page.virtual_ptr in (ptr1, ptr3):
             vmm.cuMemUnmap(page)
 
-    # Sanal tuval parçalandı. Şimdi parçalı boşlukların toplamından faydalanarak 2.5 GB blok iste
+    
     req_bytes = 2560 * 1024 * 1024
     agg_ptr, aggregated_extents = vmm.allocate_contiguous_virtual_block(req_bytes)
     total_agg_bytes = sum(ext.size_bytes for ext in aggregated_extents)
@@ -729,15 +721,15 @@ def test_p2p_capability_matrix_precomputation():
     logger.info("=== SANDBOX TEST 26: Ön Hesaplanmış P2P Topoloji Matrisi (P2P Capability Matrix) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     
-    # 1. P2P Topoloji Matrisinin sürücü açılışında tüm GPU çiftleri için önceden oluşturulduğunu doğrula
+    
     assert len(vmm.p2p_capability_matrix) == 16, f"P2P Topoloji matrisi eksik: {len(vmm.p2p_capability_matrix)} != 16"
     
-    # 2. Çapraz GPU sorgulaması (Matrix Query)
+    
     assert (0, 0) in vmm.p2p_capability_matrix and vmm.p2p_capability_matrix[(0, 0)] is True
     assert (0, 1) in vmm.p2p_capability_matrix
     assert (2, 3) in vmm.p2p_capability_matrix
     
-    # 3. can_p2p_access sorgusunun matristen anında sonuç döndürdüğünü doğrula
+    
     can_0_1 = vmm.can_p2p_access(0, 1)
     assert isinstance(can_0_1, bool), "can_p2p_access boolean döndürmedi!"
     logger.info(f"  [P2P Capability Matrix Query] GPU #0 <==> GPU #1 P2P Access: {can_0_1}")
@@ -749,19 +741,19 @@ def test_pass1_restoration_and_dynamic_p2p_invalidation():
     logger.info("=== SANDBOX TEST 27: Pass 1 Restoration Intizamı & Dinamik P2P Topoloji Geçersizleştirme ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     
-    # 1. Dynamic P2P Cache Invalidation Doğrulaması
+    
     vmm.p2p_capability_matrix[(0, 1)] = True
     vmm.p2p_capability_matrix[(1, 0)] = True
     assert vmm.can_p2p_access(0, 1) is True
     
-    # Simüle edilmiş GPU reset/TDR anında geçersizleştirme
+    
     vmm.invalidate_p2p_cache(0, 1)
     assert vmm.p2p_capability_matrix[(0, 1)] is False
     assert vmm.p2p_capability_matrix[(1, 0)] is False
     assert vmm.can_p2p_access(0, 1) is False, "Dynamic P2P Invalidation sonrası Fallback moduna kayılamadı!"
     logger.info("  [P2P Dynamic Invalidation] Cache dynamically invalidated and fallback engaged successfully.")
 
-    # 2. Sanal uzay sayfa dizilim intizamı kontrolü (self.pages.sort)
+    
     ptrs = [p.virtual_ptr for p in vmm.pages]
     assert ptrs == sorted(ptrs), "Pass 1 Restoration sanal uzay sıralama intizamını bozdu!"
     logger.info("  [Pass 1 Restoration Intizamı] Virtual page ordering in self.pages is 100% strictly sorted.")
@@ -773,7 +765,7 @@ def test_heterogeneous_gpu_capacity_detection():
     logger.info("=== SANDBOX TEST 28: Heterojen GPU Kümelemesinde Dinamik Kart Kapasitesi Teşhisi ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     
-    # Heterojen donanım kapasite haritası simülasyonu (GPU #0: 16GB RTX 4080, GPU #1: 80GB A100, GPU #2: 24GB RTX 3090, GPU #3: 40GB A100-40GB)
+    
     vmm.gpu_vram_capacities[0] = 16 * 1024 * 1024 * 1024
     vmm.gpu_vram_capacities[1] = 80 * 1024 * 1024 * 1024
     vmm.gpu_vram_capacities[2] = 24 * 1024 * 1024 * 1024
@@ -791,7 +783,7 @@ def test_compaction_read_state_lock():
     logger.info("=== SANDBOX TEST 29: Compaction Sıkıştırma Bitiş Durum Senkronizörü (Thread Suspension / Silent Block-Wait) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     
-    # 1. Sıkıştırma simülasyonu başlat (_is_compacting = True, _compaction_event clear)
+    
     vmm._is_compacting = True
     if hasattr(vmm, '_compaction_event'):
         vmm._compaction_event.clear()
@@ -801,7 +793,7 @@ def test_compaction_read_state_lock():
 
     def reader_thread():
         nonlocal thread_finished
-        # Bu iplik RuntimeError fırlatılmadan SESSİZCE ASKIDA BEKLEYECEK!
+        
         gb = vmm.get_allocated_gb()
         result_holder['allocated_gb'] = gb
         thread_finished = True
@@ -809,13 +801,13 @@ def test_compaction_read_state_lock():
     t = threading.Thread(target=reader_thread, name="TelemetryWorkerThread")
     t.start()
 
-    # İpliğin askıda olduğunu doğrula (0.1 saniye bekle, hâlâ tamamlanmamış olmalı)
+    
     t.join(timeout=0.1)
     assert t.is_alive(), "HATA: Okuyucu iplik sıkıştırma esnasında sessizce askıya alınmadı!"
     assert not thread_finished, "HATA: İplik sıkıştırma bitmeden tamamlandı!"
     logger.info("  [Thread Suspension Verified] Reader thread suspended silently without crashing or throwing RuntimeError!")
 
-    # 2. Sıkıştırmayı bitir (_is_compacting = False, _compaction_event set)
+    
     vmm._is_compacting = False
     if hasattr(vmm, '_compaction_event'):
         vmm._compaction_event.set()
@@ -833,16 +825,16 @@ def test_free_virtual_block_and_p2p_refresh():
     logger.info("=== SANDBOX TEST 30: free_virtual_block ve refresh_p2p_topology Doğrulaması ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     
-    # 1. Parçalı/Spillover bloğu tahsis et
+    
     ptr, extents = vmm.allocate_contiguous_virtual_block(100 * 1024 * 1024)
     assert len(extents) > 0, "Tahsis başarısız!"
     
-    # 2. free_virtual_block ile topluca serbest bırak
+    
     ok = vmm.free_virtual_block(ptr)
     assert ok, "free_virtual_block başarısız oldu!"
     logger.info("  [Batch Free] Virtual block freed successfully using starting virtual address.")
 
-    # 3. refresh_p2p_topology doğrulaması
+    
     vmm.refresh_p2p_topology()
     assert (0, 1) in vmm.p2p_capability_matrix, "P2P matris tazeleme başarısız!"
     logger.info("  [P2P Topology Refresh] Matrix topology refreshed and verified.")
@@ -856,33 +848,32 @@ def test_pinned_host_memory_and_staged_commit():
 
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
 
-    # 1. Pinned Host Memory Allocator Doğrulaması
+    
     host_ptr, raw_buf = _allocate_pinned_host_memory(2 * 1024 * 1024)
     assert host_ptr is not None and host_ptr != 0, "HATA: Pinned Host Memory ayrılamadı!"
     logger.info(f"  [Pinned Host Memory Verified] Allocated 2 MB at {hex(host_ptr)}.")
     _free_pinned_host_memory(host_ptr, raw_buf)
     logger.info("  [Pinned Host Memory Freed] Freed successfully.")
 
-    # 2. Scatter Map Hole Detection (contains_unmapped_holes) Doğrulaması
-    # A. Haritalanmamış boş alan için sorgu yap (Holes Present == True)
+    
     scatter_map_unmapped = vmm.get_page_scatter_map(vmm.virtual_base_address, 10 * 1024 * 1024)
     assert getattr(scatter_map_unmapped, "contains_unmapped_holes", False) == True, "HATA: Haritalanmamış boşluk teşhis edilemedi!"
     logger.info("  [Scatter Map Hole Detection] Unmapped range correctly identified contains_unmapped_holes = True.")
 
-    # B. Gerçek alan tahsis et ve haritalanmış aralık için sorgu yap (Holes Present == False)
+    
     ptr, extents = vmm.allocate_contiguous_virtual_block(10 * 1024 * 1024)
     scatter_map_mapped = vmm.get_page_scatter_map(ptr, 10 * 1024 * 1024)
     assert getattr(scatter_map_mapped, "contains_unmapped_holes", True) == False, "HATA: Tam haritalanmış aralıkta hatalı boşluk bayrağı verildi!"
     logger.info("  [Scatter Map Hole Detection] Fully committed range correctly identified contains_unmapped_holes = False.")
 
-    # 3. Aşamalı Güvenli Migrasyon (Staged Commit) Doğrulaması
+    
     target_extent = extents[0]
     mig_ok = vmm.remap_locality(target_extent, target_gpu_id=1)
     assert mig_ok, "HATA: remap_locality migrasyonu başarısız!"
     assert target_extent.physical_gpu_id == 1, "HATA: Migrasyon sonrası fiziksel GPU id güncellenmedi!"
     logger.info("  [Staged Commit Verified] Migration completed and page committed safely to target GPU #1.")
 
-    # 4. Ertelemeli Coalescing (Deferred Batch Unmap) Doğrulaması
+    
     vmm.free_virtual_block(ptr)
     assert sum(p.size_bytes for p in vmm.pages if p.state == PageState.FREE) == int(88 * 1024 * 1024 * 1024), "HATA: Toplu söküm sonrası bellek tam birleştirilmedi!"
     logger.info("  [Deferred Batch Unmap Verified] Batch unmapped extents coalesced cleanly at finalization.")
@@ -892,33 +883,26 @@ def test_pinned_host_memory_and_staged_commit():
 
 
 def test_rollback_no_false_relocation():
-    """
-    TEST 32: Compaction Rollback Sırasında Yalancı Adres Yönlendirme Kancası Bastırılması
-    (Zero False Relocation Invariant)
-    
-    Pass 2 çökerse Rollback çalışır, completed_relocations temizlenir ve üst katmanlara
-    hiçbir _trigger_on_address_relocated kancası GÖNDERİLMEZ.
-    """
     logger.info("=== SANDBOX TEST 32: Rollback Yalancı Adres Yönlendirme Bastırılması (Zero False Relocation Invariant) ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
 
-    # 1. Birden fazla extent tahsis et (sıkıştırmada yer değiştirebilsinler)
+    
     ptr1, ext1 = vmm.allocate_contiguous_virtual_block(10 * 1024 * 1024, target_gpu_id=0)
     ptr2, ext2 = vmm.allocate_contiguous_virtual_block(10 * 1024 * 1024, target_gpu_id=1)
-    # Araya bir boşluk oluştur (free_virtual_block ile)
+    
     vmm.free_virtual_block(ptr1)
 
-    # 2. Bir Adres Yönlendirme Callback'i kaydet ve çağrı sayısını takip et
+    
     callback_counter = {"count": 0}
     def spy_relocation_callback(old_ptr, new_ptr, page_obj):
         callback_counter["count"] += 1
 
     vmm.register_on_address_relocated_callback(spy_relocation_callback)
 
-    # 3. Pass 2 simüle edilmiş çöküşü aktif et
+    
     vmm._simulate_pass2_failure = True
 
-    # 4. Compaction çağır — RuntimeError fırlatılmalı
+    
     pass2_raised = False
     try:
         vmm._compact_virtual_memory()
@@ -928,7 +912,7 @@ def test_rollback_no_false_relocation():
 
     assert pass2_raised, "HATA: Pass 2 hatası fırlatılmadı!"
     
-    # 5. KRITIK DOĞRULAMA: Rollback çalıştığında callback hiç tetiklenmemeli!
+    
     assert callback_counter["count"] == 0, (
         f"HATA: Rollback çalıştığı halde {callback_counter['count']} adet yalancı adres kancası tetiklendi! "
         f"Zero False Relocation Invariant ihlal edildi!"
@@ -941,39 +925,33 @@ def test_rollback_no_false_relocation():
 
 
 def test_spillover_host_capacity_limit():
-    """
-    TEST 33: Spillover Ev Sahibi GPU Kapasite Sınırı ve İkincil GPU Eşit Dağıtım Doğrulaması
-    
-    Ev sahibi GPU yalnızca local_avail miktarını alır. Kalan taşkın tamamen ikincil GPU'lara eşit dağıtılır.
-    Tek GPU sisteminde taşkın gerektiğinde MemoryError fırlatılır.
-    """
     logger.info("=== SANDBOX TEST 33: Spillover Ev Sahibi GPU Kapasite Sınırı ve İkincil Eşit Dağıtım ===")
     
-    # SENARYO A: 4 GPU — Ev sahibi GPU #0'ın kapasitesi 2 MB, talep 10 MB
+    
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
-    vmm.gpu_vram_capacities[0] = 2 * 1024 * 1024  # GPU #0 yalnızca 2 MB
+    vmm.gpu_vram_capacities[0] = 2 * 1024 * 1024  
 
     ptr, sub_extents = vmm.allocate_contiguous_virtual_block(10 * 1024 * 1024, target_gpu_id=0)
     total_bytes = sum(s.size_bytes for s in sub_extents)
     assert total_bytes == 10 * 1024 * 1024, f"Toplam tahsis boyutu hatalı: {total_bytes}"
 
-    # Ev sahibi GPU #0'ın payı local_avail'i aşamaz (2 MB)
+    
     host_share = sum(s.size_bytes for s in sub_extents if s.physical_gpu_id == 0)
     assert host_share <= 2 * 1024 * 1024, (
         f"HATA: Ev sahibi GPU #0 kapasitesini aştı! Host share: {host_share} bytes, local_avail: {2 * 1024 * 1024} bytes"
     )
     logger.info(f"  [Host GPU Limit] GPU #0 received {host_share} bytes (≤ local_avail 2 MB). Capacity limit enforced!")
 
-    # Kalan 8 MB ikincil GPU'lara dağıtılmış mı?
+    
     peer_share = sum(s.size_bytes for s in sub_extents if s.physical_gpu_id != 0)
     assert peer_share == 10 * 1024 * 1024 - host_share, "İkincil GPU pay dağılımı hatalı!"
     logger.info(f"  [Peer Distribution] Peers received {peer_share} bytes (spillover correctly routed to secondary GPUs).")
 
     vmm.shutdown()
 
-    # SENARYO B: Tek GPU sistemi — taşkın gerektiğinde MemoryError
+    
     vmm_single = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=1)
-    vmm_single.gpu_vram_capacities[0] = 2 * 1024 * 1024  # 2 MB
+    vmm_single.gpu_vram_capacities[0] = 2 * 1024 * 1024  
 
     mem_error_raised = False
     try:
@@ -989,30 +967,24 @@ def test_spillover_host_capacity_limit():
 
 
 def test_dead_code_absence():
-    """
-    TEST 34: Legacy Dead Code (AltDilim, sub_chunks) Yokluk Doğrulaması
-    
-    512 MB Slab döneminden kalma AltDilim sınıfı ve SanalBellekSayfasi.sub_chunks
-    özniteliği tamamen kaldırıldığını doğrular.
-    """
     logger.info("=== SANDBOX TEST 34: Legacy Dead Code (AltDilim, sub_chunks) Yokluk Doğrulaması ===")
     import kulli_gpu.memory.vmm_allocator as vmm_module
     from kulli_gpu.memory.vmm_allocator import SanalBellekSayfasi as _SanalBellekSayfasi
 
-    # 1. AltDilim sınıfı modülde OLMAMALI
+    
     assert not hasattr(vmm_module, "AltDilim"), (
         "HATA: AltDilim sınıfı hâlâ modülde mevcut! Legacy dead code tamamen kazınmalı!"
     )
     logger.info("  [Dead Code Check] AltDilim class is ABSENT from vmm_allocator module — verified!")
 
-    # 2. SanalBellekSayfasi nesnelerinde sub_chunks OLMAMALI
+    
     page = _SanalBellekSayfasi(page_id=0, physical_gpu_id=0, size_bytes=2 * 1024 * 1024)
     assert not hasattr(page, "sub_chunks"), (
         "HATA: SanalBellekSayfasi.sub_chunks hâlâ mevcut! Legacy dead code tamamen kazınmalı!"
     )
     logger.info("  [Dead Code Check] SanalBellekSayfasi.sub_chunks is ABSENT — verified!")
 
-    # 3. __all__ listesinde AltDilim OLMAMALI
+    
     from kulli_gpu.memory import __all__ as memory_all
     assert "AltDilim" not in memory_all, (
         "HATA: AltDilim hâlâ __all__ listesinde! Legacy dead code kaldırılmalı!"
@@ -1023,15 +995,10 @@ def test_dead_code_absence():
 
 
 def test_cumemaddressreserve_zero_size_protection():
-    """
-    TEST 35: cuMemAddressReserve Sıfır/Negatif Bayt Girdisi Yazılımsal Koruma Doğrulaması
-    
-    0 veya negatif bayt isteklerinin C-API'ye gitmeden ValueError fırlattığını doğrular.
-    """
     logger.info("=== SANDBOX TEST 35: cuMemAddressReserve Sıfır/Negatif Bayt Girdisi Koruması ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
 
-    # 1. 0 Bayt İsteği
+    
     zero_err_caught = False
     try:
         vmm.cuMemAddressReserve(0)
@@ -1041,7 +1008,7 @@ def test_cumemaddressreserve_zero_size_protection():
 
     assert zero_err_caught, "HATA: cuMemAddressReserve(0) için ValueError fırlatılmadı!"
 
-    # 2. Negatif Bayt İsteği
+    
     neg_err_caught = False
     try:
         vmm.cuMemAddressReserve(-1048576)
@@ -1056,20 +1023,13 @@ def test_cumemaddressreserve_zero_size_protection():
 
 
 def test_lock_free_dma_streaming():
-    """
-    TEST 36: Kilitsiz DMA Akışı (Lock-Free DMA Streaming) Tıkanıklık Önleme Doğrulaması
-    
-    Migrasyon esnasında DMA kopyalama adımı kilit dışında yürütüldüğünden, eşzamanlı okuma
-    ipliklerinin kilitte beklemeden get_allocated_gb() veya is_valid_virtual_address()
-    çağrılarını başarıyla yürütmesini doğrular.
-    """
     logger.info("=== SANDBOX TEST 36: Kilitsiz DMA Akışı (Lock-Free DMA Streaming) Doğrulaması ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
 
     ptr, extents = vmm.allocate_contiguous_virtual_block(10 * 1024 * 1024, target_gpu_id=0)
     page_obj = extents[0]
 
-    # Migrasyonu çalıştır ve remap_locality'nin Lock-Free DMA Streaming özelliğini doğrula
+    
     mig_success = vmm.remap_locality(page_obj, target_gpu_id=1)
     assert mig_success, "HATA: Lock-Free DMA Streaming migrasyonu başarısız!"
     assert page_obj.physical_gpu_id == 1, "HATA: Migrasyon sonrası fiziksel GPU ID 1 olmadı!"
@@ -1080,12 +1040,6 @@ def test_lock_free_dma_streaming():
 
 
 def test_cpp_pointer_lock_guard():
-    """
-    TEST 37: CUDAHookManager / C++ Pointer LOCKED Sayfa Koruma Doğrulaması
-    
-    lock_page(page_obj) ile LOCKED durumuna alınan canlı sayfaların Compaction
-    esnasında sanal adreslerinin kesinlikle değiştirilmediğini (pinned) doğrular.
-    """
     logger.info("=== SANDBOX TEST 37: C++ Pointer LOCKED Sayfa Koruma Doğrulaması ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
 
@@ -1095,18 +1049,18 @@ def test_cpp_pointer_lock_guard():
     page1 = extents1[0]
     page2 = extents2[0]
 
-    # page1'i LOCKED moduna al (PyTorch/C++ aktif tensörü)
+    
     vmm.lock_page(page1)
     assert page1.state == PageState.LOCKED, "HATA: Sayfa 1 LOCKED moduna geçmedi!"
 
-    # Compaction çalıştır
+    
     vmm._compact_virtual_memory()
 
-    # Sayfa 1'in adresi değişmemiş olmalı
+    
     assert page1.virtual_ptr == ptr1, f"HATA: LOCKED sayfa 1 Compaction esnasında kaydırıldı! {hex(page1.virtual_ptr)} != {hex(ptr1)}"
     logger.info(f"  [LOCKED Page Guard] Page #1 remained pinned at {hex(page1.virtual_ptr)} during Compaction!")
 
-    # Unlock et
+    
     vmm.unlock_page(page1)
     assert page1.state == PageState.COMMITTED, "HATA: Sayfa 1 COMMITTED moduna dönmedi!"
 
@@ -1115,18 +1069,12 @@ def test_cpp_pointer_lock_guard():
 
 
 def test_raii_scratchpad_scope_guard():
-    """
-    TEST 38: ErkenDevletEngine RAII Scratchpad Scope Guard Doğrulaması
-    
-    with vmm.scratchpad_scope(128.0) kapsamından çıkıldığında (hata fırlatılsa dahi)
-    geçici belleğin yetim kalmadan otomatik olarak donanımdan söküldüğünü doğrular.
-    """
     logger.info("=== SANDBOX TEST 38: RAII Scratchpad Scope Guard Doğrulaması ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
 
     alloc_before = len(vmm.allocated_pages)
 
-    # 1. Normal Kapsam Çıkışı
+    
     with vmm.scratchpad_scope(128.0, target_gpu_id=0) as (ptr, extent):
         assert extent.state == PageState.SCRATCHPAD, "HATA: Scope içi sayfa SCRATCHPAD durumunda değil!"
         logger.info(f"  [RAII Scope Inside] Allocated scratchpad at {hex(ptr)}")
@@ -1134,7 +1082,7 @@ def test_raii_scratchpad_scope_guard():
     alloc_after_normal = len(vmm.allocated_pages)
     assert alloc_after_normal == alloc_before, "HATA: Normal kapsam çıkışında scratchpad sökülmedi!"
 
-    # 2. Hatalı Çıkış (Exception Case)
+    
     try:
         with vmm.scratchpad_scope(256.0, target_gpu_id=1) as (ptr_err, extent_err):
             raise ValueError("Simulated Engine Exception inside scratchpad scope")
@@ -1149,12 +1097,6 @@ def test_raii_scratchpad_scope_guard():
 
 
 def test_cuda_event_sync_hook():
-    """
-    TEST 39: SanalIslemciHavuzu CUDA Event Senkronizasyon Kancası Doğrulaması
-    
-    remap_locality sonrasında page_obj.sync_event nesnesinin kaydedildiğini ve
-    wait_for_migration_event metodunun donanım senkronizasyon emrini ilettiğini doğrular.
-    """
     logger.info("=== SANDBOX TEST 39: CUDA Event Senkronizasyon Kancası Doğrulaması ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
 
@@ -1165,7 +1107,7 @@ def test_cuda_event_sync_hook():
     assert page_obj.sync_event is not None, "HATA: Migrasyon sonrası page_obj.sync_event kaydedilmedi!"
     logger.info(f"  [CUDA Sync Event] Recorded sync event on page: {page_obj.sync_event}")
 
-    # Compute Pool sync wait simulation
+    
     wait_res = vmm.wait_for_migration_event(page_obj)
     logger.info(f"  [CUDA Sync Wait] wait_for_migration_event returned: {wait_res}")
 
@@ -1174,24 +1116,17 @@ def test_cuda_event_sync_hook():
 
 
 def test_nvshmem_pgas_lock_guard():
-    """
-    TEST 40: NVSHMEMVeriyolu PGAS Kilidi ve Erken Unmap Koruma Doğrulaması
-    
-    lock_pgas_page(page_obj) altındaki sayfaların cuMemUnmap çağrısında RuntimeError
-    fırlatarak NVSHMEM veriyolu çökmesini engellediğini, unlock_pgas_page sonrasında ise
-    güvenle serbest bırakıldığını doğrular.
-    """
     logger.info("=== SANDBOX TEST 40: NVSHMEM PGAS Kilidi ve Erken Unmap Koruması ===")
     vmm = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
 
     ptr, extents = vmm.allocate_contiguous_virtual_block(128 * 1024 * 1024, target_gpu_id=0)
     page_obj = extents[0]
 
-    # PGAS Kilidine Al
+    
     vmm.lock_pgas_page(page_obj)
     assert page_obj.is_pgas_locked is True, "HATA: Sayfa PGAS Kilidine alınamadı!"
 
-    # Erken Unmap Denemesi -> RuntimeError Fırlatmalı
+    
     unmap_err_caught = False
     try:
         vmm.cuMemUnmap(page_obj)
@@ -1201,7 +1136,7 @@ def test_nvshmem_pgas_lock_guard():
 
     assert unmap_err_caught, "HATA: PGAS kilitli sayfa cuMemUnmap edildiğinde RuntimeError fırlatılmadı!"
 
-    # Kilidi kaldır ve Unmap et
+    
     vmm.unlock_pgas_page(page_obj)
     assert page_obj.is_pgas_locked is False, "HATA: PGAS kilidi kaldırılamadı!"
 
@@ -1214,14 +1149,6 @@ def test_nvshmem_pgas_lock_guard():
 
 
 def test_vcompute_pool_integration():
-    """
-    TEST 41: Hakiki Sanal İşlemci Havuzu (SanalIslemciHavuzu) & Data-Locality Entegrasyon Doğrulaması
-    
-    1. Canlı donanım SM ve CUDA çekirdek metadata tespitini,
-    2. Fiziki CUDA Akış ve Event havuzlarını,
-    3. vmm_allocator ile Data-Locality duyarlı (Zero Bus Latency ve Proportional Scatter) sevklerini,
-    4. Canlı sayfa kilitleme (PageState.LOCKED Guard) ve SM yük izleyicisini doğrular.
-    """
     logger.info("=== SANDBOX TEST 41: Hakiki Sanal İşlemci Havuzu (SanalIslemciHavuzu) Entegrasyon Doğrulaması ===")
     from kulli_gpu.compute.vcompute_pool import SanalIslemciHavuzu
 
@@ -1232,7 +1159,7 @@ def test_vcompute_pool_integration():
     assert pool.total_cuda_cores > 0, "HATA: SanalIslemciHavuzu CUDA çekirdek sayısı sıfır!"
     logger.info(f"  [Hardware Topology] Detected Total Aggregated SMs: {pool.total_sm_cores}, CUDA Cores: {pool.total_cuda_cores}")
 
-    # 1. Yerel GPU #0 VRAM Tahsisi (Zero Bus Latency Senaryosu)
+    
     ptr0, extents0 = vmm.allocate_contiguous_virtual_block(512 * 1024 * 1024, target_gpu_id=0)
     dispatch_res0 = pool.dispatch_kernel(
         kernel_name="gemm_kernel_zero_latency",
@@ -1245,15 +1172,14 @@ def test_vcompute_pool_integration():
     assert dispatch_res0["workload_distribution"] == {0: 100.0}, f"HATA: İş yükü %100 GPU 0'a sevk edilmedi: {dispatch_res0['workload_distribution']}"
     logger.info(f"  [Zero Bus Latency] Dispatched GEMM kernel 100% to local GPU #0 without inter-GPU bus latency!")
 
-    # 2. Taşma (Spillover) Multi-GPU VRAM Tahsisi (Proportional Scatter Senaryosu)
-    # GPU 0 kapasitesini doldur
+    
     for i in range(40):
         try:
             vmm.allocate_contiguous_virtual_block(512 * 1024 * 1024, target_gpu_id=0)
         except MemoryError:
             break
 
-    # 1024 MB Taşkın Tahsisi (GPU 0 yetmeyeceği için GPU 1'e taşar)
+    
     ptr_spill, extents_spill = vmm.allocate_contiguous_virtual_block(1024 * 1024 * 1024, target_gpu_id=0)
     dispatch_spill = pool.dispatch_kernel(
         kernel_name="gemm_spillover_kernel",
@@ -1275,14 +1201,14 @@ def test_universal_workload_agnostic_engine():
 
     pool = SanalIslemciHavuzu(physical_gpus=4)
 
-    # 1. Donanımsal 4 İşlem Birimi Metadata Doğrulaması
+    
     assert pool.total_cuda_cores > 0, "HATA: CUDA Core sayısı 0 döndü!"
     assert pool.total_tensor_cores >= 0, "HATA: Tensor Core metrik negatif!"
     assert pool.total_rt_cores >= 0, "HATA: RT Core metrik negatif!"
     assert pool.total_copy_engines >= 4, "HATA: Asenkron Copy Engine sayısı yetersiz!"
     logger.info(f"  [4 Donanımsal Birim] Aggregated: {pool.total_cuda_cores} CUDA Cores, {pool.total_tensor_cores} Tensor Cores, {pool.total_rt_cores} RT Cores, {pool.total_copy_engines} Copy Engines.")
 
-    # 2. C-API Kancası 1 & Boyutsuz 3D Grid Karolaması (3D CFD / Hacimsel İş Yükü)
+    
     res_3d = pool.dispatch_kernel(
         kernel_name="cfd_3d_navier_stokes_kernel",
         matrix_shape=[256, 256, 256],
@@ -1294,7 +1220,7 @@ def test_universal_workload_agnostic_engine():
     assert res_3d["status"] == "DISPATCHED_AND_SYNCHRONIZED", f"HATA: 3D Kernel sevk edilemedi: {res_3d}"
     logger.info(f"  [3D Dimension-Agnostic Grid Partitioning] CFD Workload Dispatched across {len(res_3d['workload_distribution'])} GPUs!")
 
-    # 3. Ray Tracing Donanımsal Yönlendirme (RT Core Capability Dispatch)
+    
     res_rt = pool.dispatch_kernel(
         kernel_name="unreal_engine_raytracing_bvh_kernel",
         matrix_shape=[3840, 2160],
@@ -1306,7 +1232,7 @@ def test_universal_workload_agnostic_engine():
     assert res_rt["status"] == "DISPATCHED_AND_SYNCHRONIZED", f"HATA: Ray Tracing kernel sevk edilemedi: {res_rt}"
     logger.info(f"  [Capability Dispatch] Ray Tracing Workload Mode: {res_rt['data_locality_mode']}")
 
-    # 4. C-API Kancası 2: cuGraphLaunch (CUDA Task Graph Execution)
+    
     res_graph = pool.launch_graph(
         graph_exec_handle="MOCK_CUDA_GRAPH_EXEC_HANDLE",
         target_gpu_id=0,
@@ -1315,7 +1241,7 @@ def test_universal_workload_agnostic_engine():
     assert res_graph["status"] == "GRAPH_LAUNCHED_AND_SYNCHRONIZED", f"HATA: Graph Launch başarısız: {res_graph}"
     logger.info(f"  [C-API Primitive 2] CUDA Task Graph Launch Executed on GPU #{res_graph['target_gpu_id']}!")
 
-    # 5. C-API Kancası 3: cuMemcpyAsync / cuMemcpyPeerAsync (DMA Transfer Engine)
+    
     res_dma = pool.async_memcpy_dma(
         dst_ptr=0x7fff00000000,
         src_ptr=0x7fff04000000,
@@ -1336,7 +1262,7 @@ def test_musterek_hesap_havuzlari_ve_3_altin_kanun():
 
     pool = SanalIslemciHavuzu(physical_gpus=4)
 
-    # 1. 4 Müşterek Hesap Havuzu Özeti Doğrulaması
+    
     summary = pool.musterek_havuzlar.get_summary()
     assert summary["pooled_cuda_cores"] > 0, "HATA: Müşterek CUDA Core havuzu boş!"
     assert summary["pooled_tensor_cores"] >= 0, "HATA: Müşterek Tensor Core havuzu negatif!"
@@ -1344,7 +1270,7 @@ def test_musterek_hesap_havuzlari_ve_3_altin_kanun():
     assert summary["pooled_copy_engines"] >= 4, "HATA: Müşterek Copy Engine havuzu yetersiz!"
     logger.info(f"  [4 Müşterek Havuz Yapısı] Tensor: {summary['pooled_tensor_cores']} | CUDA: {summary['pooled_cuda_cores']} | RT: {summary['pooled_rt_cores']} | DMA: {summary['pooled_copy_engines']}")
 
-    # 2. 1. KANUN: YEREL İŞLEMCİ ÖNCELİĞİ (Local Compute Priority)
+    
     res_local = pool.dispatch_kernel(
         kernel_name="local_priority_kernel",
         matrix_shape=[1024, 1024],
@@ -1355,7 +1281,7 @@ def test_musterek_hesap_havuzlari_ve_3_altin_kanun():
     assert res_local["data_locality_mode"] == "EXPLICIT_TARGET_GPU", "HATA: Yerel mod hatalı!"
     logger.info("  [1. KANUN] Yerel İşlemci Önceliği Doğrulandı: %100 Yerel GPU #0 İcrası (Sıfır Veriyolu Gecikmesi)!")
 
-    # 3. 2. KANUN: EŞİT DAĞITIMLI PARALEL HESAP TAŞKINI (Equal Multi-GPU Compute Spillover)
+    
     res_spillover = pool.dispatch_kernel(
         kernel_name="massive_spillover_kernel",
         matrix_shape=[16384, 16384],
@@ -1368,7 +1294,7 @@ def test_musterek_hesap_havuzlari_ve_3_altin_kanun():
         assert share == 25.0, f"HATA: GPU #{g_id} payı eşit değil: {share}"
     logger.info("  [2. KANUN] Eşit Dağıtımlı Paralel Hesap Taşkını Doğrulandı: Taşkın hesap %25, %25, %25, %25 olarak 4 GPU'ya EŞİT bölündü!")
 
-    # 4. 3. KANUN: İNTİZAM DEĞİL, İSTİFADE (Compute Aggregation over Physical Boundaries)
+    
     total_aggregated = pool.total_sm_cores
     assert total_aggregated == 336, f"HATA: Toplam SM kapasitesi birleştirilemedi: {total_aggregated}"
     logger.info(f"  [3. KANUN] İntizam Değil İstifade Doğrulandı: Fiziksel sınırlar kaldırıldı, {total_aggregated} SM birleşik Sanal Tuvalde toplandı!")
@@ -1384,8 +1310,8 @@ def test_vcompute_pool_four_deep_flaws_remediation():
     allocator = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     pool = SanalIslemciHavuzu(physical_gpus=4)
 
-    # 1. ZAAF 1 DÜZELTİMİ: GPU Doyumda İse 2. Kanun (Eşit Hesap Taşkını) Tetiklenmesi
-    pool.load_monitor.sm_utilization_pct[0] = 85.0  # GPU #0 doyumda!
+    
+    pool.load_monitor.sm_utilization_pct[0] = 85.0  
     v_ptr, _ = allocator.allocate_contiguous_virtual_block(512 * 1024 * 1024, target_gpu_id=0)
 
     res_sat = pool.dispatch_kernel(
@@ -1399,7 +1325,7 @@ def test_vcompute_pool_four_deep_flaws_remediation():
     assert len(res_sat["workload_distribution"]) == 4, f"HATA: Doyumda olan GPU'nun işi 4 GPU'ya bölünmedi: {res_sat['workload_distribution']}"
     logger.info("  [ZAAF 1 DÜZELTİMİ] Doyuma Ulaşan GPU #0 SM Yükünde (%85) 2. Kanun Tetiklendi! İş kütlesi 4 GPU'ya DONANIMSAL GÜÇ ORANIYLA BÖLÜNDÜ.")
 
-    # 2. ZAAF 2 DÜZELTİMİ: Asenkron İcrada Zombi Kilit Reklamasyonu (Async Task Reclaimer)
+    
     pool.load_monitor.sm_utilization_pct[0] = 0.0
     res_async = pool.dispatch_kernel(
         kernel_name="async_leak_test_kernel",
@@ -1414,7 +1340,7 @@ def test_vcompute_pool_four_deep_flaws_remediation():
     assert len(pool.pending_async_tasks) == 0, "HATA: Reclaimed sonrası pending görev temizlenmedi!"
     logger.info("  [ZAAF 2 DÜZELTİMİ] Asenkron Görev Toplayıcı (Async Task Reclaimer) Zombi kilitli sayfayı tespit edip VRAM kilitlerini otomatik açtı!")
 
-    # 3. ZAAF 3 DÜZELTİMİ: Multi-GPU Karolamasında 3D Karo Offset Geçirimi
+    
     res_offset = pool.dispatch_kernel(
         kernel_name="tile_offset_kernel",
         matrix_shape=[4096, 4096],
@@ -1425,7 +1351,7 @@ def test_vcompute_pool_four_deep_flaws_remediation():
     assert res_offset["status"] == "DISPATCHED_AND_SYNCHRONIZED", "HATA: Multi-GPU offset sevk başarısız!"
     logger.info("  [ZAAF 3 DÜZELTİMİ] Multi-GPU 3D Grid Karolamasında (offset_x, offset_y, offset_z) kernel argümanlarına başarıyla enjekte edildi.")
 
-    # 4. ZAAF 4 DÜZELTİMİ: CUDA Graph ve DMA Kancalarında VRAM Page Lock Guard
+    
     res_graph = pool.launch_graph(
         graph_exec_handle="GRAPH_EXEC_DUMMY",
         target_gpu_id=0,
@@ -1462,7 +1388,7 @@ def test_vcompute_pool_additional_four_flaws_remediation():
     allocator = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     pool = SanalIslemciHavuzu(physical_gpus=4)
 
-    # 1. KUSUR 1 DÜZELTİMİ: Arka Plan Daemon İpliği (Active Background Task Reclaimer)
+    
     assert pool._reclaimer_thread.is_alive(), "HATA: Arka plan reclaimer daemon ipliği çalışmıyor!"
     v_ptr, _ = allocator.allocate_contiguous_virtual_block(256 * 1024 * 1024, target_gpu_id=0)
 
@@ -1475,25 +1401,25 @@ def test_vcompute_pool_additional_four_flaws_remediation():
     )
     assert len(pool.pending_async_tasks) == 1, "HATA: Asenkron görev ekleneceğinden emin olunamadı!"
 
-    # 150 ms bekle (yeni kernel çağırmadan daemon ipliği cuEventQuery ile kilitleri serbest bırakmalı)
+    
     time.sleep(0.2)
     assert len(pool.pending_async_tasks) == 0, "HATA: Arka plan daemon ipliği asenkron görevi otomatik reclaim etmedi!"
     logger.info("  [KUSUR 1 DÜZELTİMİ] Arka Plan Daemon İpliği (50 ms polling) yeni kernel sevkini beklemeden VRAM kilitlerini otomatik serbest bıraktı!")
 
-    # 2. KUSUR 2 DÜZELTİMİ: C++ Kernel Signature Arity Alignment Koruması
-    user_explicit_args = [0x7fff00000000, 1024, 1024, 64]  # Sabit 4 argümanlı C++ Kernel
+    
+    user_explicit_args = [0x7fff00000000, 1024, 1024, 64]  
     res_no_inject = pool.dispatch_kernel(
         kernel_name="strict_arity_kernel",
         matrix_shape=[1024, 1024],
         grid_dim=(256, 256, 1),
         kernel_args=user_explicit_args,
-        inject_tile_offsets=False,  # Hizalama ihlalini engelle!
+        inject_tile_offsets=False,  
         synchronize=True
     )
     assert res_no_inject["status"] == "DISPATCHED_AND_SYNCHRONIZED", "HATA: Strict arity kernel dispatch başarısız!"
     logger.info("  [KUSUR 2 DÜZELTİMİ] Standart C++ Kernel argüman imzası bozulmadan (Arity Mismatch önlenerek) sevk edildi.")
 
-    # 3. KUSUR 3 DÜZELTİMİ: Asenkron DMA Yük Takip Simetrisi
+    
     v_src, _ = allocator.allocate_contiguous_virtual_block(128 * 1024 * 1024, target_gpu_id=0)
     v_dst, _ = allocator.allocate_contiguous_virtual_block(128 * 1024 * 1024, target_gpu_id=1)
 
@@ -1510,12 +1436,12 @@ def test_vcompute_pool_additional_four_flaws_remediation():
         synchronize=True
     )
     assert res_dma_sym["status"] == "DMA_COPY_COMPLETED", "HATA: DMA transferi başarısız!"
-    # Senkronize bittikten sonra hem src hem dst görev sayaçları simetrik sıfırlanmalıdır!
+    
     assert pool.load_monitor.active_tasks_per_gpu[0] == initial_src_load, "HATA: SRC GPU yük takibi asimetrik!"
     assert pool.load_monitor.active_tasks_per_gpu[1] == initial_dst_load, "HATA: DST GPU yük takibi asimetrik!"
     logger.info("  [KUSUR 3 DÜZELTİMİ] Asenkron DMA aktarımında SRC (GPU #0) ve DST (GPU #1) SM yük takipleri %100 SİMETRİK işletildi.")
 
-    # 4. KUSUR 4 DÜZELTİMİ: Sürücü Kapatma Anında C-Driver Stream & Event Sızıntı Temizliği
+    
     pool.shutdown()
     assert not pool._reclaimer_thread.is_alive(), "HATA: Shutdown sonrası reclaimer daemon ipliği kapanmadı!"
     assert len(pool.stream_pools) == 0, "HATA: Stream havuzları temizlenmedi!"
@@ -1535,8 +1461,7 @@ def test_vcompute_pool_three_deep_subtle_flaws_remediation():
     allocator = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     pool = SanalIslemciHavuzu(physical_gpus=4)
 
-    # 1. HASSASİYET 1 DÜZELTİMİ: Kuşatıcı Çoklu Extent Kilitleme Motoru (_lock_all_extents_in_range)
-    # Devasa bir sanal blok tahsis et (örneğin 1.5 GB - parçalı extent'lere dağılır)
+    
     v_ptr, extents = allocator.allocate_contiguous_virtual_block(1536 * 1024 * 1024, target_gpu_id=0)
     locked_exts = _lock_all_extents_in_range(allocator, v_ptr, byte_size=1536 * 1024 * 1024)
 
@@ -1544,13 +1469,12 @@ def test_vcompute_pool_three_deep_subtle_flaws_remediation():
     for ext in locked_exts:
         assert ext.state.name == "LOCKED", f"HATA: Extent {ext.virtual_address:#x} LOCKED modunda değil: {ext.state.name}"
     
-    # Kilitleri serbest bırak
+    
     for ext in locked_exts:
         allocator.unlock_page(ext)
     logger.info(f"  [HASSASİYET 1 DÜZELTİMİ] Devasa Sanal Adres Aralığındaki ({len(locked_exts)} adet) TÜM parçalı Extent'ler 'PageState.LOCKED' ile tam korumaya alındı!")
 
-    # 2. HASSASİYET 2 DÜZELTİMİ: 3D Grid Karolamasında Mükerrer Karo Çakışmasının Önlenmesi
-    # Grid boyutu (3, 1, 1) ve GPU sayısı 4 iken çakışmasız kesin aralık testi
+    
     g0_dim, g0_off = _partition_3d_grid((3, 1, 1), share_pct=25.0, accumulated_ratios=0.0)
     g1_dim, g1_off = _partition_3d_grid((3, 1, 1), share_pct=25.0, accumulated_ratios=0.25)
     g2_dim, g2_off = _partition_3d_grid((3, 1, 1), share_pct=25.0, accumulated_ratios=0.50)
@@ -1561,7 +1485,7 @@ def test_vcompute_pool_three_deep_subtle_flaws_remediation():
     assert any(g[0] == 0 for g in [g0_dim, g1_dim, g2_dim, g3_dim]), "HATA: Fazla GPU'ya 0-boyutlu grid verilmedi (Mükerrer çakışma riski)!"
     logger.info("  [HASSASİYET 2 DÜZELTİMİ] Küçük 3D Grid Karolamasında [start_x, end_x) kesin aralıkları ile MÜKERRER KARO ÇAKIŞMASI önlendi.")
 
-    # 3. HASSASİYET 3 DÜZELTİMİ: Double-Precision (FP64) C-Driver Marshaller Hizalama Koruması
+    
     fp64_val = 3.14159265358979323846
     params_arr, c_vars = _build_kernel_params([
         0x7fff00000000,
@@ -1588,7 +1512,7 @@ def test_vcompute_pool_three_deep_subtle_flaws_part2_remediation():
     allocator = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     pool = SanalIslemciHavuzu(physical_gpus=4)
 
-    # 1. HASSASİYET 1 DÜZELTİMİ: Dynamic graph_byte_size ile CUDA Graph Kapsayıcı Kilitleme
+    
     v_ptr, _ = allocator.allocate_contiguous_virtual_block(1536 * 1024 * 1024, target_gpu_id=0)
     res_graph = pool.launch_graph(
         graph_exec_handle="dummy_exec_handle",
@@ -1601,7 +1525,7 @@ def test_vcompute_pool_three_deep_subtle_flaws_part2_remediation():
     assert res_graph["status"] == "GRAPH_LAUNCHED_AND_SYNCHRONIZED", "HATA: Dynamic graph launch başarısız!"
     logger.info("  [HASSASİYET 1 DÜZELTİMİ] CUDA Graph İcrasında 1.5 GB'lık sanal adres ayak izinin tamamı (graph_byte_size) kilitlendi.")
 
-    # 2. HASSASİYET 2 DÜZELTİMİ: C-Driver Parametre Paketleyicide Bilinmeyen Objeler İçin TypeError Fırlatılması
+    
     class UnknownObject:
         pass
 
@@ -1612,7 +1536,7 @@ def test_vcompute_pool_three_deep_subtle_flaws_part2_remediation():
         assert "Unsupported kernel argument type" in str(te), f"HATA: Beklenen TypeError mesajı dönmedi: {te}"
         logger.info("  [HASSASİYET 2 DÜZELTİMİ] C-Driver Marshaller bilinmeyen Python objesi için donanımsal Page Fault riskini önleyerek TypeError fırlattı.")
 
-    # 3. HASSASİYET 3 DÜZELTİMİ: shutdown() Esnasında Akış Süzme (cuStreamSynchronize Drain)
+    
     pool.shutdown()
     assert len(pool.stream_pools) == 0, "HATA: Akış havuzları kapatılamadı!"
     allocator.shutdown()
@@ -1626,7 +1550,7 @@ def test_vcompute_pool_three_state_duties_remediation():
     allocator = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=4)
     pool = SanalIslemciHavuzu(physical_gpus=4)
 
-    # 1. USUL 1 DÜZELTİMİ: Dinamik Talep İnceleme Motoru (_inspect_tensor_byte_footprint)
+    
     fp64_bytes = _inspect_tensor_byte_footprint([1024, 1024], dtype="FP64")
     fp32_bytes = _inspect_tensor_byte_footprint([1024, 1024], dtype="FP32")
     fp16_bytes = _inspect_tensor_byte_footprint([1024, 1024], dtype="FP16")
@@ -1638,12 +1562,12 @@ def test_vcompute_pool_three_state_duties_remediation():
     assert int8_bytes == 1024 * 1024 * 1, f"HATA: INT8 footprint yanlış: {int8_bytes}"
     logger.info("  [USUL 1 DÜZELTİMİ] Dinamik Talep İnceleme Motoru FP64 (8B), FP32 (4B), FP16 (2B) ve INT8 (1B) VRAM ayak izlerini %100 hassasiyetle hesapladı.")
 
-    # 2. USUL 2 DÜZELTİMİ: Kilitsiz (Lock-Free) Async Reclaimer
+    
     reclaimed = pool.reclaim_completed_async_tasks()
     assert isinstance(reclaimed, int), "HATA: Reclaimer integer dönmedi!"
     logger.info("  [USUL 2 DÜZELTİMİ] Async Reclaimer cuEventQuery C-Driver sorgularını kilitsiz (Lock-Free) olarak çalıştırdı.")
 
-    # 3. USUL 3 DÜZELTİMİ: Haritalanmamış Boşluk (Unmapped Hole) Donanımsal Koruma Duvarı
+    
     class DummyHoleScatterMap:
         def get_page_scatter_map(self, virtual_ptr, size_bytes=0, **kwargs):
             return {"contains_unmapped_holes": True, "page_slices": [{"is_unmapped_hole": True}]}
@@ -1661,7 +1585,7 @@ def test_vcompute_pool_three_state_duties_remediation():
         assert "Haritalanmamış Boşluk Var" in str(me), f"HATA: Beklenen MemoryError mesajı dönmedi: {me}"
         logger.info("  [USUL 3 DÜZELTİMİ] dispatch_kernel sanal adres uzayındaki haritalanmamış boşluğu tespit edip icrayı durdurdu ve MemoryError fırlattı.")
 
-    # 4. USUL 4 DÜZELTİMİ: CUDA Graph Kuşatıcı Ayak İzi (graph_byte_size & matrix_shape) Kilitleme Testi
+    
     ptr_graph, _ = allocator.allocate_contiguous_virtual_block(4 * 1024 * 1024 * 1024, target_gpu_id=0)
     graph_res = pool.launch_graph(
         graph_exec_handle="dummy_graph_handle",
@@ -1672,12 +1596,12 @@ def test_vcompute_pool_three_state_duties_remediation():
         synchronize=True
     )
     assert graph_res["status"] == "GRAPH_LAUNCHED_AND_SYNCHRONIZED", "HATA: launch_graph icra edilemedi!"
-    # 5. USUL 5 DÜZELTİMİ: Modüller Arası Öznitelik İsim Uyumsuzluğu (virtual_ptr) Doğrulaması
+    
     from kulli_gpu.compute.vcompute_pool import _lock_all_extents_in_range
     locked_exts = _lock_all_extents_in_range(allocator, ptr_graph, byte_size=64 * 1024 * 1024)
     assert len(locked_exts) > 0, "HATA: Extent'ler kilitlenemedi!"
     assert hasattr(locked_exts[0], "virtual_ptr"), "HATA: Extent objesinde virtual_ptr özniteliği yok!"
-    # 6. USUL 6 DÜZELTİMİ: Çok Boyutlu (2D/3D) Grid Karolamasında Bütünsel Adım Bayt Kayması Doğrulaması
+    
     dispatch_multi_axis = pool.dispatch_kernel(
         kernel_name="multi_axis_kernel",
         matrix_shape=[1024, 2048],
@@ -1698,19 +1622,16 @@ def test_vcompute_pool_three_state_duties_remediation():
 
 
 def test_non_linear_slicing_and_address_audit():
-    """
-    SANDBOX TEST 49: Doğrusal Olmayan Serbest İş Parçalama, Adres Teftiş Motoru ve Tek Satırlık Başlatma Doğrulaması.
-    """
     logger.info("=== SANDBOX TEST 49: Serbest İş Sevk, Adres Teftiş ve Tek Satır Başlatma Doğrulaması ===")
 
-    # 1. USUL 1 & 2: Serbest Parçalama ve Teftiş Motoru Birim Testi
+    
     from kulli_gpu.compute.vcompute_pool import (
         _partition_arbitrary_workload_sets,
         _audit_and_validate_partition_coverage
     )
 
-    total_bytes = 100 * 1024 * 1024  # 100 MB
-    gpu_caps = {0: 10.0, 1: 30.0, 2: 60.0}  # GPU #0 %10, GPU #1 %30, GPU #2 %60 dinamik kapasitede
+    total_bytes = 100 * 1024 * 1024  
+    gpu_caps = {0: 10.0, 1: 30.0, 2: 60.0}  
 
     slices = _partition_arbitrary_workload_sets(total_bytes, gpu_caps)
     assert len(slices) == 3, "HATA: 3 GPU için dilim oluşturulamadı!"
@@ -1719,7 +1640,7 @@ def test_non_linear_slicing_and_address_audit():
     assert is_valid, "HATA: Adres Teftiş Motoru serbest dilimleri doğrulayamadı!"
     logger.info("  [USUL 1 & 2 DOĞRULANDI] Doğrusal olmayan serbest parçalama yapıldı. Adres Teftiş Motoru (Sıfır Çakışma, Sıfır Boşluk, %100 Kapsama) onay verdi!")
 
-    # 2. USUL 3: Tek Satırlık "kulli_gpu.baslat()" Giriş Noktası Doğrulaması
+    
     import kulli_gpu
     driver_instance = kulli_gpu.baslat({"physical_gpus": 4, "virtual_vram_gb": 88.0})
     assert driver_instance is not None, "HATA: kulli_gpu.baslat() sürücüyü başlatamadı!"
@@ -1727,22 +1648,22 @@ def test_non_linear_slicing_and_address_audit():
 
     status = driver_instance.get_status()
     assert status["virtual_vram_gb"] == 88.0, "HATA: Sürücü durum raporu okunamadı!"
-    # 3. KEFE 1 DOĞRULAMASI: 3 Kritik Kusurun Düzeltim Doğrulaması
+    
     from kulli_gpu.compute.vcompute_pool import _inspect_tensor_byte_footprint, _build_kernel_params, ctypes
 
-    # Kusur 1: Şekilsiz/skaler footprint exact element_bytes döner (Kafadan 2MB atmaz!)
+    
     unshaped_fp64 = _inspect_tensor_byte_footprint([], dtype="FP64")
     unshaped_fp32 = _inspect_tensor_byte_footprint([], dtype="FP32")
     assert unshaped_fp64 == 8, f"HATA: Skaler FP64 footprint 8 bayt olmalı ancak {unshaped_fp64} döndü!"
     assert unshaped_fp32 == 4, f"HATA: Skaler FP32 footprint 4 bayt olmalı ancak {unshaped_fp32} döndü!"
     logger.info("  [KEFE 1 - KUSUR 1 DOĞRULANDI] _inspect_tensor_byte_footprint şekilsiz durumlarda kafadan 2MB atmayı bıraktı, tam eleman boyutu (8B/4B) döndü.")
 
-    # Kusur 2: Python float 64-bit c_double olarak korunur (c_float ile budanmaz!)
+    
     _, c_vars = _build_kernel_params([3.141592653589793])
     assert isinstance(c_vars[0], ctypes.c_double), f"HATA: Python float c_double yerine {type(c_vars[0])} olarak paketlendi!"
     logger.info("  [KEFE 1 - KUSUR 2 DOĞRULANDI] _build_kernel_params Python float değerlerini 64-bit IEEE c_double olarak muhafaza etti.")
 
-    # Kusur 3: launch_graph varsayılan 2MB yerine tahsis edilen extent boyutunu okur
+    
     alloc = driver_instance.vmm_allocator
     p_virt, _ = alloc.allocate_contiguous_virtual_block(512 * 1024 * 1024, target_gpu_id=0)
     g_res = driver_instance.compute_pool.launch_graph(
@@ -1761,14 +1682,10 @@ def test_non_linear_slicing_and_address_audit():
 
 
 def test_kefe_2_paradigm_and_structural_remediation():
-    """
-    SANDBOX TEST 50: KEFE 2 Paradigma ve Tertibat Münasebeti Düzeltim Doğrulaması.
-    """
     logger.info("=== SANDBOX TEST 50: KEFE 2 Paradigma ve Tertibat Düzeltim Doğrulaması ===")
     from kulli_gpu.compute.vcompute_pool import SanalIslemciHavuzu, GPUDeviceProperties
 
-    # 1. HATA 1 DOĞRULAMASI: Yük İzleme Kronolojisi
-    # cuEventSynchronize bittiğinde record_task_end çağrılır.
+    
     pool = SanalIslemciHavuzu(physical_gpus=2)
     pool.load_monitor.record_task_start(0, sm_demand_pct=50.0)
     assert pool.load_monitor.sm_utilization_pct[0] == 50.0
@@ -1780,17 +1697,16 @@ def test_kefe_2_paradigm_and_structural_remediation():
         gpu_ids=[0]
     )
     assert sync_res, "HATA: synchronize_and_unlock başarısız!"
-    assert pool.load_monitor.sm_utilization_pct[0] == 40.0  # 50 - 10 = 40 (Donanım bittikten sonra düşürüldü)
+    assert pool.load_monitor.sm_utilization_pct[0] == 40.0  
     logger.info("  [KEFE 2 - HATA 1 DOĞRULANDI] synchronize_and_unlock önce cuEventSynchronize donanım tamamlamasını bekledi, SONRA SM yükünü düşürdü.")
 
-    # 2. HATA 2 DOĞRULAMASI: Heterojen Güç Ağırlıklı Karolama (Straggler Bottleneck Önleme)
-    # GPU #0 = RTX 4090 (16384 Cores), GPU #1 = RTX 3060 (3584 Cores)
-    props_4090 = GPUDeviceProperties(0, name="RTX 4090", sm_count=128, clock_khz=2500000)  # 128*128=16384 Cores
-    props_3060 = GPUDeviceProperties(1, name="RTX 3060", sm_count=28, clock_khz=1700000)   # 28*128=3584 Cores
+    
+    props_4090 = GPUDeviceProperties(0, name="RTX 4090", sm_count=128, clock_khz=2500000)  
+    props_3060 = GPUDeviceProperties(1, name="RTX 3060", sm_count=28, clock_khz=1700000)   
     pool.device_props = {0: props_4090, 1: props_3060}
 
-    # GPU #0 doyuma ulaştığında (2. Kanun Spillover) eşit değil donanım gücüne orantılı bölüşüm yapılır
-    pool.load_monitor.sm_utilization_pct[0] = 85.0  # GPU #0 Saturated
+    
+    pool.load_monitor.sm_utilization_pct[0] = 85.0  
     res_spillover = pool.dispatch_kernel(
         kernel_name="straggler_test",
         matrix_shape=[1024, 1024],
@@ -1800,7 +1716,7 @@ def test_kefe_2_paradigm_and_structural_remediation():
     assert shares[0] > shares[1], f"HATA: Güçlü GPU #0 ({shares[0]}%), zayıf GPU #1'den ({shares[1]}%) fazla karo almalı!"
     logger.info(f"  [KEFE 2 - HATA 2 DOĞRULANDI] Straggler Bottleneck önlendi! Güçlü RTX 4090 %{shares[0]} karo aldı, zayıf RTX 3060 %{shares[1]} karo aldı.")
 
-    # 3. HATA 3 DOĞRULAMASI: Lock-Free Async Task Reclaimer (VMM Lock Contention Önleme)
+    
     reclaimed = pool.reclaim_completed_async_tasks()
     assert isinstance(reclaimed, int)
     logger.info("  [KEFE 2 - HATA 3 DOĞRULANDI] reclaim_completed_async_tasks VMM 'unlock_page' çağrılarını self._lock DIŞINDA çalıştırıp cross-module kilit tıkanmasını %100 engelledi.")
@@ -1810,47 +1726,44 @@ def test_kefe_2_paradigm_and_structural_remediation():
 
 
 def test_kefe_1_live_object_inspection_and_scatter_straggler_remediation():
-    """
-    SANDBOX TEST 51: KEFE 1 Canlı Nesne İnceleme ve Scatter Straggler Bottleneck Düzeltim Doğrulaması.
-    """
     logger.info("=== SANDBOX TEST 51: KEFE 1 Canlı Nesne İnceleme ve Scatter Straggler Düzeltim Doğrulaması ===")
     from kulli_gpu.compute.vcompute_pool import _inspect_tensor_byte_footprint, SanalIslemciHavuzu, GPUDeviceProperties
 
-    # 1. AJANIN HATASI 1 DOĞRULAMASI: Canlı PyTorch/NumPy nesne öznitelik (.element_size() / .itemsize) incelemesi
+    
     class MockPyTorchDoubleTensor:
         def element_size(self):
-            return 8  # FP64 / Double = 8 Bytes
+            return 8  
 
     class MockNumPyFloat16Array:
-        itemsize = 2  # FP16 = 2 Bytes
+        itemsize = 2  
 
     mock_torch_fp64 = MockPyTorchDoubleTensor()
     mock_numpy_fp16 = MockNumPyFloat16Array()
 
-    # dtype parametresi None verilmesine rağmen canlı nesneden 8 bayt okunmalı!
+    
     bytes_fp64 = _inspect_tensor_byte_footprint([1000, 1000], dtype=None, kernel_args=[mock_torch_fp64])
     assert bytes_fp64 == 1000 * 1000 * 8, f"HATA: Canlı PyTorch DoubleTensor eleman boyutu (8B) korunamadı: {bytes_fp64}"
     logger.info("  [KEFE 1 - HATA 1.1 DOĞRULANDI] _inspect_tensor_byte_footprint canlı PyTorch DoubleTensor nesnesinden element_size()=8B okuyarak 8MB VRAM ayak izini tam hesapladı.")
 
-    # NumPy FP16 canlı nesne incelemesi
+    
     bytes_fp16 = _inspect_tensor_byte_footprint([1000, 1000], dtype=None, kernel_args=[mock_numpy_fp16])
     assert bytes_fp16 == 1000 * 1000 * 2, f"HATA: Canlı NumPy FP16 eleman boyutu (2B) korunamadı: {bytes_fp16}"
     logger.info("  [KEFE 1 - HATA 1.2 DOĞRULANDI] _inspect_tensor_byte_footprint canlı NumPy FP16 nesnesinden itemsize=2B okuyarak 2MB VRAM ayak izini tam hesapladı.")
 
-    # 2. AJANIN HATASI 2 DOĞRULAMASI: Multi-GPU Scatter Karolamada VRAM Oranı + Çekirdek Gücü Harmanlaması
+    
     pool = SanalIslemciHavuzu(physical_gpus=2)
-    props_4090 = GPUDeviceProperties(0, name="RTX 4090", sm_count=128, clock_khz=2500000)  # 16384 Cores
-    props_3060 = GPUDeviceProperties(1, name="RTX 3060", sm_count=28, clock_khz=1700000)   # 3584 Cores
+    props_4090 = GPUDeviceProperties(0, name="RTX 4090", sm_count=128, clock_khz=2500000)  
+    props_3060 = GPUDeviceProperties(1, name="RTX 3060", sm_count=28, clock_khz=1700000)   
     pool.device_props = {0: props_4090, 1: props_3060}
 
-    # Mock VMM Allocator ile %50-%50 Eşit VRAM dağılımı taklit edelim
+    
     class MockVMMScatterAllocator:
         def get_page_scatter_map(self, virtual_ptr, size_bytes):
             return {
                 "contains_unmapped_holes": False,
                 "gpu_bytes_map": {
-                    0: size_bytes // 2,  # GPU #0 %50 VRAM tutuyor
-                    1: size_bytes // 2   # GPU #1 %50 VRAM tutuyor
+                    0: size_bytes // 2,  
+                    1: size_bytes // 2   
                 }
             }
 
@@ -1871,24 +1784,19 @@ def test_kefe_1_live_object_inspection_and_scatter_straggler_remediation():
 
 
 def test_kefe_2_part2_lock_inversion_and_dma_allocator_binding_remediation():
-    """
-    SANDBOX TEST 52: KEFE 2 AB-BA Çapraz Kilit Engelleme ve Otomatik Allocator Bağlama Düzeltim Doğrulaması.
-    """
     logger.info("=== SANDBOX TEST 52: KEFE 2 AB-BA Çapraz Kilit Engelleme ve Otomatik Allocator Bağlama Doğrulaması ===")
     from kulli_gpu.compute.vcompute_pool import SanalIslemciHavuzu
     from kulli_gpu.memory.vmm_allocator import SanalBellekYoneticisi
 
-    # Mock Allocator
+    
     alloc = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=2)
 
-    # 1. HATA 1 DOĞRULAMASI: AB-BA Cross-Module Lock Inversion Deadlock Önleme
-    # SanalIslemciHavuzu'na varsayılan allocator bağlanır
+    
     pool = SanalIslemciHavuzu(physical_gpus=2, default_allocator=alloc)
     assert pool.default_allocator is alloc
     logger.info("  [KEFE 2 - HATA 1 DOĞRULANDI] SanalIslemciHavuzu default_allocator ile başarıyla bağlandı (Lock-Free Async Task Reclaimer cross-module lock kilidini kaldırır).")
 
-    # 2. HATA 2 DOĞRULAMASI: async_memcpy_dma ve launch_graph metotlarında otomatik allocator bağlama ve koruma istisnası
-    # Allocator parametresi None geçilse dahi default_allocator'dan otomatik bağlanmalı ve VRAM kilitlenmeli
+    
     p_src, _ = alloc.allocate_contiguous_virtual_block(128 * 1024 * 1024, target_gpu_id=0)
     p_dst, _ = alloc.allocate_contiguous_virtual_block(128 * 1024 * 1024, target_gpu_id=1)
 
@@ -1896,13 +1804,13 @@ def test_kefe_2_part2_lock_inversion_and_dma_allocator_binding_remediation():
         dst_ptr=p_dst,
         src_ptr=p_src,
         byte_size=128 * 1024 * 1024,
-        allocator=None,  # None geçildi!
+        allocator=None,  
         synchronize=True
     )
     assert res_dma["status"] in ("DMA_COPIED_AND_SYNCHRONIZED", "DMA_COPIED_ASYNC", "DMA_COPY_COMPLETED")
     logger.info("  [KEFE 2 - HATA 2.1 DOĞRULANDI] async_memcpy_dma parametre None olmasına rağmen default_allocator'ı otomatik bağlayıp hem SRC hem DST VRAM sayfalarını kilit altına aldı!")
 
-    # Hiç allocator bağlı olmaması ve global sürücü/allocator olmaması durumunda koruyucu ValueError istisnası
+    
     import kulli_gpu
     from kulli_gpu.memory import vmm_allocator
     old_driver = getattr(kulli_gpu, "_GLOBAL_DRIVER_INSTANCE", None)
@@ -1933,14 +1841,11 @@ def test_kefe_2_part2_lock_inversion_and_dma_allocator_binding_remediation():
 
 
 def test_kefe_1_elem_bytes_and_kefe_2_grid_remainder_and_graph_footprint():
-    """
-    SANDBOX TEST 53: KEFE 1 elem_bytes Canlı Nesne Geçirimi, 3D Grid Karolama Küsürat Kaybı ve CUDA Graph Footprint Doğrulaması.
-    """
     logger.info("=== SANDBOX TEST 53: elem_bytes Canlı İnceleme, 3D Grid Küsürat ve CUDA Graph Footprint Doğrulaması ===")
     from kulli_gpu.compute.vcompute_pool import SanalIslemciHavuzu, _partition_3d_grid, _inspect_tensor_byte_footprint
     from kulli_gpu.memory.vmm_allocator import SanalBellekYoneticisi
 
-    # 1. KEFE 1 DOĞRULAMASI: elem_bytes hesabı canlı kernel_args ile FP64 nesnesini tespit eder (4B'ye düşmez!)
+    
     class MockTorchFP64Tensor:
         def element_size(self):
             return 8
@@ -1950,8 +1855,7 @@ def test_kefe_1_elem_bytes_and_kefe_2_grid_remainder_and_graph_footprint():
     assert elem_bytes == 8, f"HATA: kernel_args verilmesine rağmen elem_bytes {elem_bytes} olarak hesaplandı!"
     logger.info("  [KEFE 1 - KUSUR DOĞRULANDI] elem_bytes hesabı kernel_args parametresini eksiksiz ileterek canlı FP64 (8B) nesnesini tam tespit etti!")
 
-    # 2. KEFE 2 DOĞRULAMASI 1: 3D Grid Karolamasında Tamsayı Bölünme Küsürat Kaybı (Remainder Trailing)
-    # 10 blokluk grid, 3 GPU'ya bölündüğünde son GPU üst sınırı (10) tam alır ve 0 blok kaybolur!
+    
     dim_gpu0, _ = _partition_3d_grid((10, 1, 1), 33.33, 0.0, is_last_gpu=False)
     dim_gpu1, _ = _partition_3d_grid((10, 1, 1), 33.33, 0.3333, is_last_gpu=False)
     dim_gpu2, _ = _partition_3d_grid((10, 1, 1), 33.34, 0.6666, is_last_gpu=True)
@@ -1960,13 +1864,13 @@ def test_kefe_1_elem_bytes_and_kefe_2_grid_remainder_and_graph_footprint():
     assert total_assigned_blocks == 10, f"HATA: 10 blokluk 3D Grid bölünmesinde {total_assigned_blocks} blok atandı, son blok kayboldu!"
     logger.info(f"  [KEFE 2 - HATA 1 DOĞRULANDI] 3D Grid Karolama Küsürat Kaybı Önlendi! 10 blok 3 GPU'ya tam atandı ({dim_gpu0[0]} + {dim_gpu1[0]} + {dim_gpu2[0]} = 10).")
 
-    # 3. KEFE 2 DOĞRULAMASI 2: CUDA Graph launch_graph VMM Allocator'dan Kuşatıcı Sayfa Boyutunu (512 MB) Tam Okur
+    
     alloc = SanalBellekYoneticisi(virtual_vram_gb=88.0, physical_gpus=2)
     pool = SanalIslemciHavuzu(physical_gpus=2, default_allocator=alloc)
 
     p_virt, _ = alloc.allocate_contiguous_virtual_block(512 * 1024 * 1024, target_gpu_id=0)
 
-    # graph_byte_size ve matrix_shape None geçilmesine rağmen alloc.page_size_bytes veya extent size tam kilitlenmeli
+    
     res_graph = pool.launch_graph(
         graph_exec_handle="MOCK_CUDA_GRAPH_EXEC",
         target_gpu_id=0,
@@ -2000,7 +1904,7 @@ def test_funnel_principle_driver_flush_remediation():
     hook_mgr.bind_subsystems(vmm_allocator=allocator)
     hook_mgr.install_hooks()
 
-    # 1. HUNİ PRENSİBİ DOĞRULAMASI 1: torch.cuda.empty_cache çağrısı hook_manager üzerinden vmm_allocator.driver_flush'ı tetikler
+    
     flushed_bytes = allocator.driver_flush()
     assert isinstance(flushed_bytes, int), "HATA: driver_flush tamsayı bayt döndürmedi!"
     logger.info("  [HUNİ PRENSİBİ - DOĞRULANDI 1] driver_flush() VMM Allocator üzerindeki atıl extents bloklarını başarıyla süpürdü.")
@@ -2011,7 +1915,7 @@ def test_funnel_principle_driver_flush_remediation():
     else:
         logger.info("  [HUNİ PRENSİBİ - DOĞRULANDI 2] PyTorch/CUDA ortamı taklidi (Mocking & Hooking) ile kancalama başarıyla doğrulandı.")
 
-    # 2. HUNİ PRENSİBİ DOĞRULAMASI 2: cuMemFree_hook çağrısı vmm_allocator.free_virtual_block ve driver_flush'ı yürütür
+    
     ptr, _ = allocator.allocate_contiguous_virtual_block(512 * 1024 * 1024, target_gpu_id=0)
     res_free = hook_mgr.cuMemFree_hook(ptr)
     assert res_free == 0, "HATA: cuMemFree_hook başarısız!"
@@ -2077,8 +1981,3 @@ if __name__ == "__main__":
     test_funnel_principle_driver_flush_remediation()
     print("ALL SANDBOX TESTS PASSED SUCCESSFULLY!")
 
-
-
-
-
-

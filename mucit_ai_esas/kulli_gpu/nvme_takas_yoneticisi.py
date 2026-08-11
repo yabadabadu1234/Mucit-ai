@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ GPU DAĞITIK MİMARİSİ - OOM ENGELLEME VE /tmp NVMe DISK OFF-LOAD SİSTEMİ
-(nvme_takas_yoneticisi.py)
-================================================================================
-Kaggle ortamındaki 1026 GB'lık /tmp NVMe diskini VRAM'in sıfır-OOM garantili
-sanal takas alanı (Offload Area) olarak kullanan 4 Rükünlü NVMe Tahliye ve
-Güvenli Süpürme (Bi-directional Reference Validated Sweeper) Mimarisi.
-"""
+
 
 import os
 import sys
@@ -25,7 +15,7 @@ import torch
 
 logger = logging.getLogger("kulli_gpu.nvme_takas_yoneticisi")
 
-# Koruma Bayrakları (State Invariants)
+
 MEM_STATE_ACTIVE_VRAM = "MEM_STATE_ACTIVE_VRAM"
 MEM_STATE_SWAPPED_NVME = "MEM_STATE_SWAPPED_NVME"
 MEM_STATE_ORPHANED = "MEM_STATE_ORPHANED"
@@ -33,7 +23,6 @@ MEM_STATE_ORPHANED = "MEM_STATE_ORPHANED"
 
 @dataclass
 class NesneAdresKaydi:
-    """Tekil bir sanal bellek bloğunun adres kayıt defteri girdisi."""
     sanal_adres: str
     dosya_yolu: Optional[str] = None
     shape: Tuple[int, ...] = ()
@@ -50,15 +39,10 @@ class NesneAdresKaydi:
 
 
 class KureselAdresKayitDefteri:
-    """
-    [Çift Yönlü Biyortogonal Adres Kayıt Defteri]
-    Hangi tensörün VRAM'de mi yoksa /tmp NVMe diskinde mi olduğunu takip eden,
-    referans sayacını (ref_count) ve durum bayraklarını yöneten thread-safe idareci.
-    """
     def __init__(self):
         self.lock = threading.RLock()
         self.kayitlar: Dict[str, NesneAdresKaydi] = {}
-        self.aktif_dosya_yollari: Dict[str, str] = {}  # dosya_yolu -> sanal_adres
+        self.aktif_dosya_yollari: Dict[str, str] = {}  
 
     def kayit_ekle_ve_guncelle(
         self,
@@ -71,11 +55,6 @@ class KureselAdresKayitDefteri:
         state: str = MEM_STATE_SWAPPED_NVME,
         **kwargs
     ) -> None:
-        """
-        [Çift Yönlü Adres Kayıt Defteri Güncelleme Metodu]
-        VRAM'den diske tahliye edilen veya VRAM'de saklanan tensörün adresini,
-        dosya yolunu ve referans sayısını iplik emniyetli olarak kayıt defterine işler.
-        """
         with self.lock:
             if isinstance(kayit, NesneAdresKaydi):
                 self.kayitlar[kayit.sanal_adres] = kayit
@@ -97,11 +76,9 @@ class KureselAdresKayitDefteri:
                     self.aktif_dosya_yollari[f_path] = n_id
 
     def kayit_ekle_veya_guncelle(self, *args, **kwargs) -> None:
-        """Geriye dönük uyumluluk takma adı (alias)."""
         self.kayit_ekle_ve_guncelle(*args, **kwargs)
 
     def referans_durusdur_veya_sil(self, nesne_id: str) -> bool:
-        """Referans sayısı sıfırlandığında kaydı silinmeye hazır hale getirir."""
         with self.lock:
             if nesne_id in self.kayitlar:
                 self.kayitlar[nesne_id].ref_count -= 1
@@ -133,25 +110,16 @@ class KureselAdresKayitDefteri:
                 self.aktif_dosya_yollari.pop(kayit.dosya_yolu, None)
 
 
-# Küresel Tekil Kayıt Defteri İncelemesi
 kuresel_adres_kayit_defteri = KureselAdresKayitDefteri()
 
 
 class NvmeTahliyeKararMotoru:
-    """
-    RÜKN I: CANLI VRAM DENETLEYİCİ VE TAHLİYE KARAR MOTORU
-    VRAM doluluk oranını sorgular ve emniyet marjı altında tahliye kararı üretir.
-    """
     def __init__(self, emniyet_marji_mb: int = 1024, swap_dir: str = "/tmp/kulli_scratchpad"):
-        self.emniyet_marji = emniyet_marji_mb * 1024 * 1024  # 1 GB Donanımsal Marj
+        self.emniyet_marji = emniyet_marji_mb * 1024 * 1024  
         self.swap_dir = swap_dir
         os.makedirs(self.swap_dir, exist_ok=True)
 
     def vram_sınırı_asildi_mi_tahkik_et(self, gerekli_bayt: int, device_id: int = 0) -> bool:
-        """
-        Her VRAM tahsis emrinden önce canlı boş VRAM'i sorgulayıp 1 GB emniyet marjı
-        altında kalınacağını öngörür ve tahliye sinyali üretir.
-        """
         if not torch.cuda.is_available():
             return False
         try:
@@ -163,25 +131,6 @@ class NvmeTahliyeKararMotoru:
         return False
 
     def vramden_nvme_diske_tahliye_et(self, fark_bayt: int) -> List[str]:
-        """
-        Taşan bayt miktarı kadar en pasif aktivasyon tensörlerini VRAM'den söküp
-        /tmp NVMe diskine ikili binary olarak yazar (LRU - Least Recently Used).
-
-        DÜZELTME (madde 29) — DOĞRULANDI, ULAŞILAMAZ/ÖLÜ KOD: Bu metot yapısal olarak
-        eksik — kayıt defterindeki durumu MEM_STATE_SWAPPED_NVME olarak işaretliyor
-        ve bir dosya yolu üretiyor, ama tensörün GERÇEK verisini o dosyaya HİÇ
-        yazmıyor (ne torch.save ne ham .numpy().tofile() çağrısı var); yalnızca
-        torch.cuda.empty_cache() çağırıp VRAM'in sihirle boşalacağını varsayıyor.
-        Gerçek disk I/O olmadan `durum` alanı yanlış — sonraki bir geri-yükleme
-        (unpack) o dosya yolunu okumaya çalışsa boş/var olmayan bir dosyayla
-        karşılaşırdı. Tek çağıran yer `mucit_ai_esas/atıklar/is_emri_idarecisi.py`
-        ("atıklar" = çöp/kullanılmayan klasör) — bu, canlı tek-süreçli eğitim
-        yolundan (main_egitim_dongusu.py + AutogradNvmeOffloadHook.pack_hook_diske_tahliye,
-        aşağıda) hiç çağrılmaz; gerçek NVMe tahliyesi o hook üzerinden yapılıyor.
-        Bu metot bilinçli olarak "as-is" bırakıldı — canlı yoldan erişilemediği
-        için üretimde bir crash'e yol açmıyor; gerçek disk I/O eklemek çöp
-        dosyada gereksiz kod olurdu.
-        """
         kurtarilan_bayt = 0
         tahliye_dosyalari = []
 
@@ -213,11 +162,6 @@ class NvmeTahliyeKararMotoru:
 
 
 class AutogradNvmeOffloadHook:
-    """
-    RÜKN II: AUTOGRAD SAVED TENSORS HOOKS DISK OFF-LOAD KATMANI
-    PyTorch Autograd ileri beslemede VRAM yetersizliğinde tensörleri NVMe diske kaydırır,
-    geri beslemede geri çekip siler.
-    """
     def __init__(
         self,
         karar_motoru: Optional[NvmeTahliyeKararMotoru] = None,
@@ -225,16 +169,8 @@ class AutogradNvmeOffloadHook:
     ):
         self.karar_motoru = karar_motoru or NvmeTahliyeKararMotoru()
         self.kayit_defteri = kayit_defteri or kuresel_adres_kayit_defteri
-        # DÜZELTME (madde 54): torch.save senkron/bloklayıcı şekilde çağrıldığında
-        # backward akışını (autograd engine'in kendi thread'ini) diskin fiziksel
-        # yazma hızına kadar durdurur. cpu_kopyasi zaten `tensor.detach().cpu()`
-        # ile alınmış BAĞIMSIZ bir kopya olduğundan (orijinal `tensor` ile bellek
-        # paylaşmaz, autograd grafiğinden kopuktur) arka planda güvenle diske
-        # yazılabilir — yazma sırasında kimse bu kopyayı mutasyona uğratmaz.
-        # Tek gerçek risk, unpack_hook'un yazma tamamlanmadan aynı dosyayı
-        # okumaya kalkışmasıdır; bu, aşağıdaki `_bekleyen_yazmalar` sözlüğünde
-        # dosya_yolu -> Future eşlemesi tutulup unpack_hook içinde okumadan önce
-        # `future.result()` ile beklenerek KESİN olarak önlenir.
+        
+        
         self._yazma_havuzu = concurrent.futures.ThreadPoolExecutor(
             max_workers=2, thread_name_prefix="nvme_takas_yazici"
         )
@@ -242,11 +178,6 @@ class AutogradNvmeOffloadHook:
         self._bekleyen_yazmalar_lock = threading.Lock()
 
     def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Tuple[str, Tuple[int, ...], torch.dtype, str]:
-        """
-        Autograd ileri beslemede (forward) saklanması gereken tensörleri,
-        VRAM kritik seviyeye indiğinde otomatik diske sürer.
-        Orijinal cihaz bilgisini de kaydeder (geri çekilişte doğru cihaza geri yükleme için).
-        """
         is_cuda_or_npu = getattr(tensor, "is_cuda", False) or getattr(tensor, "is_npu", False)
         if not is_cuda_or_npu or not torch.cuda.is_available():
             return ("", tuple(tensor.shape), tensor.dtype, "cpu")
@@ -263,16 +194,11 @@ class AutogradNvmeOffloadHook:
 
             cpu_kopyasi = tensor.detach().cpu()
 
-            # DÜZELTME (madde 57): NVMe/tmp diski dolu olduğunda torch.save ortasında
-            # OSError (ENOSPC) fırlatıp backward'ı çökertmeden ÖNCE, en azından
-            # tensörün yaklaşık boyutu kadar boş alan olup olmadığı kontrol edilir.
-            # Kesin bir garanti değildir (başka süreçler diski aynı anda doldurabilir)
-            # ama yaygın "disk zaten doluydu" senaryosunu erkenden, temiz bir
-            # exception ile (aşağıdaki genel except bloğunda) yakalar.
+            
             gereken_bayt = cpu_kopyasi.element_size() * cpu_kopyasi.numel()
             try:
                 disk_durumu = shutil.disk_usage(self.karar_motoru.swap_dir)
-                if disk_durumu.free < (gereken_bayt + 64 * 1024 * 1024):  # 64 MB emniyet payı
+                if disk_durumu.free < (gereken_bayt + 64 * 1024 * 1024):  
                     raise OSError(
                         f"NVMe takas dizininde yetersiz disk alanı: gereken~{gereken_bayt} bayt, "
                         f"boş={disk_durumu.free} bayt ({self.karar_motoru.swap_dir})"
@@ -282,10 +208,7 @@ class AutogradNvmeOffloadHook:
             except Exception as _disk_exc:
                 logger.warning(f"[AutogradNvmeOffloadHook] Disk alanı sorgulanamadı, yazma denemesi yine de yapılacak: {_disk_exc}")
 
-            # DÜZELTME (madde 54): torch.save ana (autograd) thread'ini bloklamasın
-            # diye arka plan havuzuna devredilir. Dönen Future, unpack_hook aynı
-            # dosyayı okumadan ÖNCE yazmanın gerçekten bittiğinden emin olmak için
-            # `dosya_yolu` anahtarıyla saklanır (bkz. __init__ notu ve unpack_hook).
+            
             yazma_future = self._yazma_havuzu.submit(torch.save, cpu_kopyasi, dosya_yolu)
             with self._bekleyen_yazmalar_lock:
                 self._bekleyen_yazmalar[dosya_yolu] = yazma_future
@@ -301,45 +224,13 @@ class AutogradNvmeOffloadHook:
                 numel=tensor.numel()
             )
 
-            # ÇİFT YÖNLÜ ADRES KAYIT DEFTERİNE MÜHÜRLE
-            # NOT: Önceden burada nesne_id=dosya_id ile İKİNCİ bir placeholder kayıt da
-            # açılıyordu; bu kayıt sanal_id kaydından farklı bir anahtarda yaşadığı için
-            # unpack sırasında hiç silinmiyor ve her offload'da registry'de kalıcı olarak
-            # sızan (yetim) bir girdi biriktiriyordu. Tek doğru kayıt (kayit, sanal_id
-            # anahtarlı) yeterlidir.
+            
             if hasattr(self, "kayit_defteri") and self.kayit_defteri is not None:
                 self.kayit_defteri.kayit_ekle_ve_guncelle(kayit)
 
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
 
-            # `tensor.data`yı yerinde (in-place) CPU'ya çevirme kararı ÜÇÜNCÜ kez
-            # değişiyor — üç yaklaşımın da kendi başarısızlık modu vardı, sırasıyla
-            # keşfedildi:
-            #   1) torch.empty(0)'a sıfırlamak (en eski davranış): `tensor` çağıranın
-            #      hâlâ aktif İNŞA ETTİĞİ canlı bir nesne olduğunda (ör. eski D0'ın
-            #      YERİNDE dilim atamasıyla inşası) şeklini [0]'a düşürüp
-            #      "self must be a matrix" hatasına yol açıyordu.
-            #   2) HİÇ dokunmamak: (1)'i çözdü ama offload'un TEK AMACINI (VRAM'i
-            #      gerçekten boşaltmak) da iptal etti — bellek asla geri kazanılmıyor,
-            #      kronik OOM'a yol açıyordu.
-            #   3) HER tensörde .data'yı CPU kopyasına çevirmek (bir önceki düzeltme):
-            #      (2)'yi çözdü ama requires_grad=True olan, hâlâ CUDA-köklü bir
-            #      grad_fn'e bağlı tensörlerde (ör. n10_sozluk'ün softmax çıktısı
-            #      e12_olasilik.P) autograd'ın dahili cihaz tutarlılık denetimini
-            #      bozup "RuntimeError: CUDAGuardImpl initialized with non-CUDA
-            #      DeviceType: cpu" hatasına yol açtı — sıradan bir torch.log/.mean
-            #      çağrısında, bambaşka bir satırda ortaya çıktığı için izi sürmesi
-            #      en zor hataydı.
-            #
-            # Artık yalnızca requires_grad=False olan (yani hiçbir backward Node'un
-            # "bu tensörün grad_fn'i CUDA'da kuruldu" varsayımına bağlı OLMAYAN, saf
-            # aktivasyon/tampon niteliğindeki) tensörlerde .data yerinde CPU'ya
-            # çevriliyor — bu durumda hem VRAM gerçekten geri kazanılıyor hem de
-            # autograd'ın hiçbir iç tutarlılık varsayımı bozulmuyor (leaf/detached
-            # tensörler için .data mutasyonu zaten güvenlidir). requires_grad=True
-            # tensörler için HİÇ dokunulmuyor — bunlar normal Python/CUDA-allocator
-            # referans sayımıyla (fonksiyon dönünce/yerel değişken serbest kalınca)
-            # kendiliğinden geri kazanılır; bu daha az agresif ama KESİN DOĞRUDUR.
+            
             if not tensor.requires_grad:
                 tensor.data = cpu_kopyasi
             return (dosya_yolu, tuple(kayit.shape), kayit.dtype, original_device)
@@ -348,21 +239,12 @@ class AutogradNvmeOffloadHook:
             return ("", tuple(tensor.shape), tensor.dtype, "cpu")
 
     def unpack_hook_diskten_geri_yukle(self, bundle: Tuple[str, Tuple[int, ...], torch.dtype], target_device: Optional[str] = None) -> torch.Tensor:
-        """
-        Backward türev adımında diske sürülmüş veriyi VRAM'e geri çeker ve dosyayı siler.
-        target_device parametresi ile hedef cihaz belirtilebilir (VRAM manager koordinasyonu).
-        """
         dosya_yolu, shape, dtype = bundle
 
         if target_device is None:
             target_device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
-        # DÜZELTME (madde 54): pack_hook_diske_tahliye artık torch.save'i arka plan
-        # thread havuzuna devrediyor (bkz. AutogradNvmeOffloadHook.__init__ notu).
-        # Backward bu unpack_hook'u yazma bitmeden çağırabileceği için, dosyayı
-        # okumadan ÖNCE ilgili Future varsa `result()` ile beklenip yazmanın kesin
-        # olarak tamamlandığından emin olunur (aksi halde os.path.exists() True
-        # dönse bile dosya hâlâ yarım/boş olabilir).
+        
         bekleyen_future = None
         yazici = getattr(self, "_bekleyen_yazmalar", None)
         if yazici is not None and dosya_yolu:
@@ -380,26 +262,14 @@ class AutogradNvmeOffloadHook:
 
         restored_tensor = None
         try:
-            # Dosya CPU'den yüklenir, sonra hedef cihaza taşınır
+            
             restored_tensor = torch.load(dosya_yolu, map_location="cpu")
             if restored_tensor.shape != shape:
                 restored_tensor = restored_tensor.reshape(shape)
             return restored_tensor.to(device=target_device)
         except Exception as exc:
-            # DİKKAT: `.to(device=target_device)` adımı TAM DA VRAM zaten kritik
-            # doluyken tetiklenir (aksi halde bu tensör hiç diske sürülmezdi), yani
-            # burada OOM görmek İSTİSNA değil BEKLENEN bir durumdur. Önceden bu
-            # except bloğu geri yüklenen GERÇEK backward verisini SESSİZCE sıfır
-            # tensörle değiştiriyordu — bu, çökmeyi önlese de gradyanı fark
-            # ettirmeden bozan, kodun geri kalanının benimsediği (bkz.
-            # acil_durum_oom_yakalayici_ve_kurtarici: "her şeyi CPU'ya çekip tekrar
-            # dene") reaktif-kurtarma felsefesiyle TUTARSIZ bir kısayoldu. Burada da
-            # aynı ilkeyi uyguluyoruz: veri CPU'da başarıyla yüklenmişse (yalnızca
-            # GPU'ya taşıma adımı patlamışsa) veriyi CPU'da bırakıp CPU tensörü
-            # döndürüyoruz — çağıran taraf (autograd) bunu backward'da kullanır;
-            # tamamen sıfırlanmış/uydurma bir gradyanla sessizce devam etmekten
-            # çok daha güvenlidir. Yalnızca dosya hiç okunamadıysa (restored_tensor
-            # hâlâ None) son çare olarak sıfır tensöre düşülür.
+            
+            
             logger.error(f"[AutogradNvmeOffloadHook] Diskten geri yukleme hatasi: {exc}")
             if restored_tensor is not None:
                 try:
@@ -415,12 +285,8 @@ class AutogradNvmeOffloadHook:
         finally:
             if dosya_yolu and os.path.exists(dosya_yolu):
                 try:
-                    # KAPSAMLI DENETİM (madde 11): KureselAdresKayitDefteri'nin TÜM diğer
-                    # okuma/yazmaları (kayit_ekle_ve_guncelle, ref_arttir/azalt, kayit_sil,
-                    # supur) self.lock ile korunuyorken bu tek `.get()` erişimi kilitsizdi
-                    # — sınıfın kendi thread-safety sözleşmesini çiğniyordu. Eşzamanlı bir
-                    # pack_hook/supur() çağrısıyla yarışırsa aktif_dosya_yollari üzerinde
-                    # yırtık/tutarsız bir okuma görülebilirdi.
+                    
+                    
                     with kuresel_adres_kayit_defteri.lock:
                         sanal_addr = kuresel_adres_kayit_defteri.aktif_dosya_yollari.get(dosya_yolu)
                     if sanal_addr:
@@ -431,41 +297,10 @@ class AutogradNvmeOffloadHook:
 
 
 class GuvenliVramVeTmpSupurgesi:
-    """
-    [GÜVENLİ VRAM VE NVMe SÜPÜRGESİ]
-    Bi-directional Reference Validated Sweeper:
-    Canlı referanslı (ref_count > 0) hiçbir VRAM veya /tmp takas kütüğüne DOKUNMAZ.
-    Sadece yetim (ref_count == 0 veya haritada kaydı bulunmayan) kütükleri ve
-    ve sahipsiz bellek alanlarını süpürerek dangling pointer felaketini imha eder.
-
-    NOT (ADIMLAR ARASI SIZINTI DÜZELTMESİ): `ref_count`, kayıt ilk oluşturulduğunda
-    1'e ayarlanır (bkz. AutogradNvmeOffloadHook.pack_hook_diske_tahliye) ve YALNIZCA
-    `unpack_hook_diskten_geri_yukle` gerçekten çağrılırsa (yani o tensörün backward'ı
-    fiilen çalışırsa) dosyasıyla birlikte silinir. Ama `KureselAdresKayitDefteri.ref_azalt`
-    /`ref_arttir` HİÇBİR YERDE ÇAĞRILMIYOR — yani `ref_count` hiçbir zaman 1'in altına
-    inmiyor. Bunun sonucu: retain_graph=False ile grafı erken serbest bırakılan (backward'ı
-    hiç çalışmayan) HER offload edilmiş tensör için `ref_count > 0` sonsuza dek doğru kalır,
-    aşağıdaki süpürme HİÇBİR ZAMAN çalışmaz — "Temizlik tamamlandi" logu atılır ama
-    /tmp/kulli_scratchpad'deki dosyalar ve kayıt defteri girdileri adım adım BİRİKİR (bkz.
-    "Toplam Tahliye: 18461, Geri Cagirma: 275" gibi loglar — binlerce kayıt hiç silinmiyor).
-    Gerçek bir referans-sayımı (autograd graph düğümü serbest bırakıldığında tetiklenen)
-    olmadan bunu düzeltmenin güvenli yolu ZAMAN AŞIMI bazlı süpürmedir: `son_erisim_zamani`
-    üzerinden yeterince eski (varsayılan 120 sn — bir eğitim adımının makul üst sınırının
-    kat kat üzerinde) MEM_STATE_SWAPPED_NVME kayıtları, ref_count'a BAKILMAKSIZIN ölü
-    kabul edilip silinir (o adımın ileri/geri beslemesi çoktan bitmiş, backward'ı hiç
-    çalışmamışsa artık asla çalışmayacaktır).
-    """
     ESKIME_ESIGI_SN: float = 120.0
 
     @staticmethod
     def supur(swap_dir: str = "/tmp/kulli_scratchpad", eskime_esigi_sn: Optional[float] = None) -> None:
-        """
-        eskime_esigi_sn=0.0 verilirse (ör. bir eğitim adımının saved_tensors_hooks kapsamı
-        tam olarak kapandığı an çağrılırsa) yaş kontrolü atlanır — o kapsamda kaydedilmiş
-        ve backward'ı hiç çalışmamış her tensör artık KESİN yetimdir (bu adımın grafı
-        tamamen tüketildi, bir sonraki adım sıfırdan yeni bir graf kurar), anında güvenle
-        süpürülür. Varsayılan (None) sınıf düzeyindeki muhafazakâr eşiği kullanır.
-        """
         esik = GuvenliVramVeTmpSupurgesi.ESKIME_ESIGI_SN if eskime_esigi_sn is None else eskime_esigi_sn
         simdi = time.time()
         with kuresel_adres_kayit_defteri.lock:
@@ -494,7 +329,7 @@ class GuvenliVramVeTmpSupurgesi:
             for addr in silinecek_adresler:
                 kuresel_adres_kayit_defteri.kayit_sil(addr)
 
-            # Yetim Kütük Süpürmesi (/tmp Dizininde Haritada Olmayan Kütükler)
+            
             if os.path.exists(swap_dir):
                 for fname in os.listdir(swap_dir):
                     fpath = os.path.join(swap_dir, fname)
@@ -509,10 +344,6 @@ class GuvenliVramVeTmpSupurgesi:
 
 
 class NvmeTakasYoneticisi:
-    """
-    1026 GB NVMe Disk-Backed PyTorch Autograd Aktivasyon Takas Yöneticisi
-    (Mevcut Kodlar İle %100 Geriye Dönük Uyumluluk Sarmalayıcısı)
-    """
     def __init__(self, swap_dir: Optional[str] = None):
         if swap_dir is None:
             if os.path.exists("/tmp"):
@@ -528,20 +359,15 @@ class NvmeTakasYoneticisi:
         self.offload_hook = AutogradNvmeOffloadHook(karar_motoru=self.karar_motoru, kayit_defteri=self.kayit_defteri)
         self.tahliye_sayaci = 0
         self.geri_cagirma_sayaci = 0
-        # DÜZELTME (madde 30): pack/unpack hook'ları autograd tarafından farklı
-        # thread'lerden (ör. çoklu backward çağrıları, checkpoint/recompute akışları)
-        # tetiklenebilir. `self.sayac += 1` bir okuma-değiştirme-yazma işlemidir ve
-        # GIL, bytecode sınırında bölünmeye karşı garanti vermez — iki thread aynı
-        # anda artırırsa bir artış kaybolabilir. Sayaçlar yalnızca teşhis/loglama
-        # amaçlı olsa da yanlış rapor etmesinler diye kilitle korunuyor.
+        
+        
         self._sayac_lock = threading.Lock()
         self._aktif_kapsam_muhafizi = None
         logger.info(f"[NvmeTakasYoneticisi] Disk takas dizini aktif: {self.swap_dir}")
 
     def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Any:
-        # NOT: tensor.device res[3]'ten SONRA okunmamalı — offload_hook.pack_hook_diske_tahliye
-        # tensörün .data'sını CPU'ya boşalttıktan sonra tensor.device zaten "cpu" olur.
-        # Orijinal cihaz bilgisi yalnızca res[3]'te (mutasyon ÖNCESİ kaydedilmiş) doğrudur.
+        
+        
         res = self.offload_hook.pack_hook_diske_tahliye(tensor)
         if isinstance(res, tuple) and res[0] != "":
             with self._sayac_lock:
@@ -563,11 +389,8 @@ class NvmeTakasYoneticisi:
         return self.offload_hook.unpack_hook_diskten_geri_yukle(pack_bundle)
 
     def kapsam_muhafizi_aktifles(self):
-        # DÜZELTME (16 hatalık ikinci denetim, madde "kapsam muhafızı istisna anında
-        # askıda kalıyor"): dönen context manager'ı self._aktif_kapsam_muhafizi'de
-        # izliyoruz — çağıran taraf (_tekil_egitim_adimi_icra) normal __exit__'e
-        # ulaşamadan bir istisna fırlatırsa, guvenli_kapat_varsa() bu kapsamı dışarıdan
-        # zorla kapatabilsin diye.
+        
+        
         self._aktif_kapsam_muhafizi = torch.autograd.graph.saved_tensors_hooks(
             self.pack_hook_diske_tahliye,
             self.unpack_hook_diskten_geri_cagır
@@ -575,15 +398,6 @@ class NvmeTakasYoneticisi:
         return self._aktif_kapsam_muhafizi
 
     def guvenli_kapat_varsa(self) -> None:
-        """
-        Bir eğitim adımı __exit__'e ulaşamadan (OOM/cihaz hatası/başka bir istisna ile)
-        çökerse, kapsam_muhafizi_aktifles()'in açtığı saved_tensors_hooks kapsamı asla
-        kapanmaz — PyTorch'un dahili kanca yığınında (hook stack) açık kalır ve bir
-        sonraki adımın kendi kapsamıyla ÜST ÜSTE BİNER (iç içe pack/unpack kancaları,
-        çapraz-adım veri karışması riski). Bu metot, çağıranın except bloğunda çağrılıp
-        varsa açık kalan kapsamı zorla __exit__ eder. İdempotenttir (zaten kapalıysa
-        veya hiç açılmamışsa no-op) ve çağrılması her zaman güvenlidir.
-        """
         cm = getattr(self, "_aktif_kapsam_muhafizi", None)
         if cm is not None:
             try:
@@ -594,12 +408,5 @@ class NvmeTakasYoneticisi:
                 self._aktif_kapsam_muhafizi = None
 
     def temizle(self, agresif: bool = False) -> None:
-        """
-        agresif=True: yaş eşiğini 0'a indirir. Yalnızca bir eğitim adımının
-        saved_tensors_hooks kapsamı KESİN OLARAK kapandığı noktadan (bkz.
-        main_egitim_dongusu.py: _takas_cm.__exit__ sonrası) çağrılmalıdır — o
-        andan itibaren o adıma ait her kayıt zaten kesin yetimdir.
-        """
         GuvenliVramVeTmpSupurgesi.supur(swap_dir=self.swap_dir, eskime_esigi_sn=(0.0 if agresif else None))
         logger.info(f"[NvmeTakasYoneticisi] Temizlik tamamlandi. Toplam Tahliye: {self.tahliye_sayaci}, Geri Cagirma: {self.geri_cagirma_sayaci}")
-

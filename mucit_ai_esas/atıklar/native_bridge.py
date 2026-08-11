@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ SANAL GPU SÜRÜCÜSÜ - HAKİKİ C-SÜRÜCÜ KÜTÜPHANE KÖPRÜSÜ (NATIVE BRIDGE)
-Modül: kulli_gpu/native_bridge.py
-================================================================================
-Hakiki Kullanıcı Alanı Paylaşımlı GPU Sürücümüzü (`libkulli_cuda.so.1`) derleyen,
-yükleyen ve ctypes C-ABI seviyesinde Python çalışma zamanına bağlayan köprüdür.
-"""
+
 
 import os
 import sys
@@ -22,10 +13,6 @@ logger = logging.getLogger("kulli_gpu.native_bridge")
 _driver_cdll: Optional[ctypes.CDLL] = None
 
 def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
-    """
-    Kaggle ortamında yerel GCC ile 'libkulli_cuda.so.1' kütüphanesini JIT derler,
-    RTLD_GLOBAL ile canlı sürece bağlar. Sahte mock fallback'ler TAMAMEN SİLİNMİŞTİR.
-    """
     global _driver_cdll
     if _driver_cdll is not None:
         return _driver_cdll
@@ -37,17 +24,17 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
     native_dir = os.path.join(current_dir, "native")
     c_src_dir = os.path.join(native_dir, "src")
     
-    # Derleme Hedef Dizini: /tmp/kulli_driver/libkulli_cuda.so.1
+    
     target_dir = "/tmp/kulli_driver"
     os.makedirs(target_dir, exist_ok=True)
     so_path = os.path.join(target_dir, "libkulli_cuda.so.1")
 
-    # 1. HAKİKİ C KAYNAK DOSYALARINI TESPİT ET
+    
     assert os.path.exists(c_src_dir), f"KRİTİK HATA: C kaynak dizini bulunamadı -> {c_src_dir}"
     c_files = [os.path.join(c_src_dir, f) for f in os.listdir(c_src_dir) if f.endswith('.c')]
     assert len(c_files) > 0, "KRİTİK HATA: Derlenecek C kaynak dosyası (.c) bulunamadı!"
 
-    # 2. KAGGLE YEREL GCC İLE JIT DERLEME (Bozuk ELF Başlığı Engellenir)
+    
     inc_dir = os.path.join(native_dir, "include")
     gcc_path = shutil.which("gcc") or shutil.which("cc")
     
@@ -64,7 +51,7 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
         else:
             raise RuntimeError("KRİTİK HATA: Sistemde ne GCC compiler ne de hazir 'libkulli_cuda.so.1' kütüphanesi bulundu!")
 
-    # 3. SEMBOLİK BAĞLARI KUR (Symlink Interposition)
+    
     for sym in ["libcuda.so.1", "libcuda.so", "libcudart.so.12", "libcudart.so"]:
         sym_path = os.path.join(target_dir, sym)
         if not os.path.exists(sym_path):
@@ -73,7 +60,7 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
             except Exception:
                 pass
 
-    # 4. HAKİKİ C-KÜTÜPHANESİNİ BELLEĞE YÜKLE (RTLD_GLOBAL | RTLD_NOW)
+    
     RTLD_GLOBAL = getattr(os, 'RTLD_GLOBAL', 0x00100)
     RTLD_NOW = getattr(os, 'RTLD_NOW', 0x00002)
     
@@ -90,7 +77,7 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
 
     assert _driver_cdll is not None, f"KRİTİK HATA: '{so_path}' belleğe yüklenemedi!"
 
-    # C-API Sembol İmzalarının Ayarlanması ve Bağlanması
+    
     if hasattr(_driver_cdll, "KulliOpenCharacterDevices"):
         try:
             _driver_cdll.KulliOpenCharacterDevices()
@@ -118,4 +105,3 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
 
     logger.info(f"[NativeBridge] HAKİKİ C-SÜRÜCÜSÜ 'libkulli_cuda.so.1' BAŞARIYLA BELLEĞE YÜKLENDİ -> {so_path}")
     return _driver_cdll
-

@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ GPU DAĞITIK MİMARİSİ - RÜKN II
-CPU Ana İdareci ve Küresel Nesne Haritası Katmanı (cpu_ana_idareci.py)
-================================================================================
-Bu modül; CPU tarafında çalışan, hangi şardlanmış tensörün hangi GPU VRAM'inde
-ne kadar yer kapladığını ve şeklini tutan KureselNesneHaritasi atlasını ve GPU
-işçi süreçlerini doğurup (spawn) veriyi şardlayan, işlemleri Path A, B, C hatlarına
-sevk eden CpuAnaIdareci sınıfını içerir.
-"""
+
 
 import os
 import sys
@@ -26,8 +15,8 @@ from kulli_gpu.coklu_surec_isci import GpuIsciSureci, kimlik_islemi
 
 logger = logging.getLogger("kulli_gpu.cpu_ana_idareci")
 
-KULLI_PAGE_SIZE_2MB = 2 * 1024 * 1024  # 2 MB Sayfa Hizalama Sınırı
-IPC_YANIT_TIMEOUT_SN = 60.0  # Bir GPU işçisi çökerse/asılırsa CPU idarecisinin sonsuza dek beklememesi için
+KULLI_PAGE_SIZE_2MB = 2 * 1024 * 1024  
+IPC_YANIT_TIMEOUT_SN = 60.0  
 
 
 MEM_STATE_ACTIVE_VRAM = "MEM_STATE_ACTIVE_VRAM"
@@ -37,7 +26,6 @@ MEM_STATE_ORPHANED = "MEM_STATE_ORPHANED"
 
 @dataclass
 class NesneShardBilgisi:
-    """Tekil bir şardlanmış nesnenin küresel harita kaydı ve bellek durum bayrakları."""
     nesne_id: str
     toplam_sekil: Tuple[int, ...]
     dtype: torch.dtype
@@ -49,11 +37,6 @@ class NesneShardBilgisi:
 
 
 class KureselNesneHaritasi:
-    """
-    [Küresel Adres Kayıt Defteri / Global Object Registry]
-    VRAM'deki ve /tmp NVMe diskindeki tüm tensörlerin adreslerini,
-    dosya yollarını ve referans sayılarını çift yönlü takip eder.
-    """
     def __init__(self):
         import threading
         self._kayitlar: Dict[str, Any] = {}
@@ -68,11 +51,6 @@ class KureselNesneHaritasi:
         ref_count: int = 1,
         state: str = MEM_STATE_SWAPPED_NVME
     ) -> None:
-        """
-        [Çift Yönlü Adres Kayıt Defteri Güncelleme Metodu]
-        VRAM'den diske tahliye edilen veya VRAM'de saklanan tensörün adresini,
-        dosya yolunu ve referans sayısını iplik emniyetli olarak kayıt defterine işler.
-        """
         with self.lock:
             self._kayitlar[nesne_id] = {
                 "nesne_id": nesne_id,
@@ -85,7 +63,6 @@ class KureselNesneHaritasi:
             }
 
     def referans_durusdur_veya_sil(self, nesne_id: str) -> bool:
-        """Referans sayısı sıfırlandığında kaydı silinmeye hazır hale getirir."""
         with self.lock:
             if nesne_id in self._kayitlar:
                 if isinstance(self._kayitlar[nesne_id], dict):
@@ -129,10 +106,6 @@ class KureselNesneHaritasi:
 
 
 class CpuAnaIdareci:
-    """
-    CPU Ana İdareci (CPU-Master): GPU işçilerini spawn eder, veri doğuşunda
-    şardlama yapar ve iletişim ihtiyacına göre sevk yolunu (Path A/B/C) belirler.
-    """
     def __init__(self, master_addr: str = "127.0.0.1", master_port: int = 29500):
         self.master_addr = master_addr
         self.master_port = master_port
@@ -147,13 +120,6 @@ class CpuAnaIdareci:
         self._baslatildi = False
 
     def _cevap_kuyruklarini_bosalt(self) -> None:
-        """
-        KUSUR-44 düzeltmesi: bir IPC yanıt zaman aşımı oluştuğunda, o ana kadar
-        gecikmiş olup kuyruklara sonradan düşen "bayat" (stale) yanıtlar boşaltılmaz
-        ve bir sonraki adımda o adıma ait yanıt sanılarak yanlış eşleştirilebilirdi.
-        Zaman aşımı sonrası tüm cevap kuyrukları tamamen boşaltılarak bu sızıntı
-        önlenir.
-        """
         for cq in self.cevap_kuyruklari.values():
             while True:
                 try:
@@ -164,9 +130,6 @@ class CpuAnaIdareci:
                     break
 
     def surecleri_baslat_ve_ilkle(self) -> bool:
-        """
-        'spawn' bağlamı ile her GPU için izole Python süreci başlatır.
-        """
         if self._baslatildi:
             logger.info("[CpuAnaIdareci] Süreçler zaten başlatılmış.")
             return True
@@ -192,7 +155,7 @@ class CpuAnaIdareci:
             p.start()
             self.surecler.append(p)
 
-        # Tüm işçilerden HAZIR yanıtı bekle
+        
         for rank in range(self.world_size):
             cevap = self.cevap_kuyruklari[rank].get(timeout=30)
             if cevap.get("durum") != "HAZIR":
@@ -210,10 +173,6 @@ class CpuAnaIdareci:
         dtype: torch.dtype = torch.float32,
         shard_dim: int = 0
     ) -> NesneShardBilgisi:
-        """
-        Toplam tensör şeklini P adet GPU işçisine 2 MB sayfa hizalaması kuralına
-        uygun olarak böler ve NESNE_OLUSTUR emirlerini fırlatır.
-        """
         if not self._baslatildi:
             self.surecleri_baslat_ve_ilkle()
 
@@ -247,11 +206,7 @@ class CpuAnaIdareci:
                 "dtype": dtype
             })
 
-        # Yanıtları bekle
-        # NOT: Önceden timeout'suz .get() kullanılıyordu — bir GPU işçisi (OOM veya
-        # başka bir sebeple) çökerse veya yanıt vermeden takılırsa CPU idarecisi
-        # sonsuza dek bloke olurdu. Sınırlı timeout ile açık, teşhis edilebilir hata
-        # üretimi sağlanır.
+        
         for rank in range(P):
             try:
                 self.cevap_kuyruklari[rank].get(timeout=IPC_YANIT_TIMEOUT_SN)
@@ -279,21 +234,12 @@ class CpuAnaIdareci:
         nesne_idleri: List[str],
         ekstra_parametreler: Optional[dict] = None
     ) -> bool:
-        """
-        İşlem kategorisine göre emirleri sevk eder:
-        - PATH A (LOKAL): SIFIR iletişim, her GPU kendi şardına uygular.
-        - PATH B (ALL_REDUCE): Küresel redüksiyon (NCCL Ring).
-        - PATH C (HALO_SWAP): Topolojik komşu P2P sınır veri takası.
-        """
         params = ekstra_parametreler or {}
         P = self.world_size
 
         if islem_kategorisi == "LOKAL":
-            # NOT: 'islem_fn' varsayılanı ASLA bir lambda olmamalı — 'spawn' bağlamlı
-            # multiprocessing.Queue pickle kullanır ve lambda'lar pickle edilemez;
-            # eskiden burada `lambda x: x` varsayılanı vardı ve bu, açık islem_fn
-            # geçirilmeyen her LOKAL sevkiyatta worker sürecinde PicklingError ile
-            # çökerdi. kimlik_islemi modül-seviyesi (picklable) fonksiyonu kullanılır.
+            
+            
             islem_fn = params.get("islem_fn", None) or kimlik_islemi
             for nesne_id in nesne_idleri:
                 for rank in range(P):
@@ -324,8 +270,7 @@ class CpuAnaIdareci:
             logger.warning(f"[CpuAnaIdareci] Tanimsiz islem kategorisi: {islem_kategorisi}")
             return False
 
-        # Senkronizasyon yanıtlarını topla
-        # NOT: Önceki timeout'suz .get() burada da aynı sonsuz-bekleme riskini taşıyordu.
+        
         for rank in range(P):
             for _ in nesne_idleri:
                 try:
@@ -341,18 +286,13 @@ class CpuAnaIdareci:
         return True
 
     def durdur(self) -> None:
-        """Tüm GPU işçi süreçlerine durma emri gönderir."""
         if not self._baslatildi:
             return
 
         for rank in range(self.world_size):
             self.emir_kuyruklari[rank].put({"komut": "DUR"})
 
-        # KUSUR-41 düzeltmesi: önceden yalnızca join(timeout=5) çağrılıyordu; süreç
-        # DUR emrini zamanında işleyemezse (asılı kalmışsa) join timeout'tan sonra
-        # süreç canlı kalmaya devam eder ve VRAM'i elinde tutan bir zombie/orphan
-        # sürece dönüşürdü. Şimdi hâlâ canlıysa açıkça terminate() edilip son bir
-        # kez join ile temizleniyor.
+        
         for p in self.surecler:
             p.join(timeout=5)
             if p.is_alive():

@@ -1,20 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ
-Ana Çıkarım/Test Yürütücü Modülü (main_cikarsama_hatti.py)
-================================================================================
-Bu modül; eğitilmiş model ağırlıklarını yükleyen, test girdilerini (metin veya
-ARC-AGI JSON ızgaraları) topolojik veri kontratlarına dönüştüren, R-adımlı gizil
-uzay akıl yürütmesi sonrasında Chebyshev spektral projeksiyonu ile tüm cevabı
-milisaniyeler mertebesinde simültane üreten çıkarım hattıdır.
-"""
+
 
 import os
 import sys
 
-# Bulunduğu dizini otomatik olarak sys.path'e ekle (Kaggle Dataset İçe Aktarma Güvenliği)
+
 try:
     CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 except NameError:
@@ -94,21 +83,19 @@ from kontratlar import (
 
 from logging.handlers import RotatingFileHandler
 
-# ==============================================================================
-# LOGGING (GÜNLÜKLEME) YAPILANDIRMASI — DUPLICATE ENGELLEME VE SEVİYE AYRIMI
-# ==============================================================================
+
 def kur_logging_sistemi(log_dosyasi: str = 'cikarsama_hatti_icra.log') -> None:
     root = logging.getLogger()
     root.setLevel(logging.DEBUG)
-    root.handlers.clear()  # Çift basma (duplicate logging) sorununu kökten çözer
+    root.handlers.clear()  
 
-    # 1. Döner Dosya Handler'ı (Maksimum 10 MB)
+    
     fh = RotatingFileHandler(log_dosyasi, maxBytes=10*1024*1024, backupCount=1, encoding='utf-8')
     fh.setLevel(logging.DEBUG)
     fh.setFormatter(logging.Formatter('%(asctime)s - [%(levelname)s] - (%(name)s) - %(message)s'))
     root.addHandler(fh)
 
-    # 2. Konsol Handler'ı (Sadece Temiz Metrik Özetleri: INFO ve üzeri)
+    
     ch = logging.StreamHandler(sys.stdout)
     ch.setLevel(logging.INFO)
     ch.setFormatter(logging.Formatter('%(asctime)s - [%(levelname)s] - %(message)s'))
@@ -118,24 +105,19 @@ kur_logging_sistemi()
 logger = logging.getLogger('MainCikarsama')
 
 
-# ==============================================================================
-# I. HARİCİ DÖNÜŞTÜRÜCÜLER VE ÇIKARSAMA YÖNETİCİLERİ
-# ==============================================================================
 class Arc_IzgaraDonusturucu:
-    """ARC-AGI Izgara Formatını Metin Akışına Dönüştürücü"""
     def donustur(self, gorev_verisi: Dict[str, Any]) -> str:
         return json.dumps(gorev_verisi.get("train", []))
 
 
 class Arc_CiktiIzgaraInsaEdici:
-    """Olasılık Matrisinden ARC 2D Izgara Matrisi İnşa Edici"""
     def insa_et(self, olasilik_matrisi: E12_ParalelTokenOlasilikMatrisi, hedef_boyut: Tuple[int, int] = (3, 3)) -> Dict[str, List[List[int]]]:
-        # preds_full: tüm mikro-dilimlerin tam uzunluktaki argmax dizisi (P sadece ilk 64'lük dilim olabilir!)
+        
         if getattr(olasilik_matrisi, 'preds_full', None) is not None:
-            preds = olasilik_matrisi.preds_full[0].cpu().numpy()  # [N]
+            preds = olasilik_matrisi.preds_full[0].cpu().numpy()  
         else:
             P = olasilik_matrisi.P
-            preds = torch.argmax(P, dim=1)[0].cpu().numpy()  # [N]
+            preds = torch.argmax(P, dim=1)[0].cpu().numpy()  
 
         rows, cols = hedef_boyut
         izgara = []
@@ -143,7 +125,7 @@ class Arc_CiktiIzgaraInsaEdici:
         for r in range(rows):
             row = []
             for c in range(cols):
-                val = int(preds[idx % len(preds)]) % 10  # ARC renk kodları (0-9)
+                val = int(preds[idx % len(preds)]) % 10  
                 row.append(val)
                 idx += 1
             izgara.append(row)
@@ -157,13 +139,12 @@ class Arc_CiktiIzgaraInsaEdici:
 from checkpoint_manager import NPZCheckpointManager, CheckpointManager
 
 class Model_Agirlik_ve_CikarsamaYoneticisi:
-    """Model Ağırlıkları Yükleme ve Eval Yönetimi (NPZCheckpointManager Entegreli)"""
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
 
     def yukle(self, model_dizini: str, model: BiliselKanvasModeli) -> Tuple[BiliselKanvasModeli, bool]:
         target_dir = model_dizini
-        # Öncelikli Kaggle notebook çıktı dizinleri
+        
         priority_paths = [
             model_dizini,
             "/kaggle/input/notebooks/ulankaggle/mucit-ai"
@@ -207,26 +188,21 @@ class Model_Agirlik_ve_CikarsamaYoneticisi:
         return model, False
 
 
-
-
-# ==============================================================================
-# II. ANA ÇIKARSAMA YÜRÜTÜCÜ SÜRECİ (MAIN EXECUTION)
-# ==============================================================================
 def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str = "Ahmet eve gitti.") -> str:
     baslangic_zamani = time.time()
-    zaman_siniri_saniye = 900.0  # Zaman sınırı 900 saniyeye güncellendi (Kaggle/Üretim Marjı)
+    zaman_siniri_saniye = 900.0  
     
     logger.info("================================================================================")
     logger.info("BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ ÇIKARSAMA HATTI BAŞLATILIYOR")
     logger.info("================================================================================")
 
-    # 1. Konfigürasyon ve Cihaz Ayarı
+    
     config = Model_TopolojikKonfigurasyon()
     config.device = "cuda:0" if torch.cuda.is_available() else "cpu"
-    config.batch_size = 1  # Çıkarım tekil örnek üzerinden yapılır
+    config.batch_size = 1  
     logger.info(f"Çıkarım Cihazı: {config.device} | Varsayılan Dizi Uzunluğu (N): {config.N} | Azami Kapasite (N_max): {config.N_max} | Zaman Sınırı: {zaman_siniri_saniye} sn")
 
-    # 2. Modüllerin İlklemesi
+    
     arc_donusturucu = Arc_IzgaraDonusturucu()
     arc_insa_edici = Arc_CiktiIzgaraInsaEdici()
     agirlik_yonetici = Model_Agirlik_ve_CikarsamaYoneticisi(config)
@@ -234,13 +210,13 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
     model = BiliselKanvasModeli(config).to(config.device)
     model, yuklendi_mi = agirlik_yonetici.yukle(model_yolu, model)
 
-    # Restore sonrası Stiefel dikgenliğini tazele
+    
     stiefel_izdusurucu = N13_StiefelManifolduIzdusumu()
     
     eval_model = model.module if isinstance(model, nn.DataParallel) else model
     stiefel_izdusurucu.izdüsür(eval_model.n3_lif.phi_matrisleri)
 
-    # 3. Girdi Tespiti ve Topolojik Dönüştürme
+    
     is_arc_json = False
     if test_girdisi.endswith('.json') and os.path.exists(test_girdisi):
         is_arc_json = True
@@ -252,67 +228,63 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
         girdi_str = test_girdisi
         logger.info(f"Ham Metin Girdisi İşleniyor: '{test_girdisi}'")
 
-    # 4. Çıkarım İleri Besleme Akışı (12 Adımlı Şemaya Birebir Uyumlu İcra)
+    
     with torch.no_grad():
         gecen_saniye = time.time() - baslangic_zamani
         if gecen_saniye > zaman_siniri_saniye:
             logger.warning(f"Emniyet Zaman Sınırı Aşıldı ({gecen_saniye:.2f}s). İşlem iptal ediliyor.")
             return "{}"
 
-        # [E1] Giriş Metni
+        
         e1_girdi = E1_HamMetinAkisi(X_text=girdi_str)
 
-        # [N1] Byte Ayrıştırıcı -> E2
+        
         e2_byte, x_initial = eval_model.n1_byte(e1_girdi)
         logger.debug(f"[N1 Byte Ayrıştırıcı] E2 Byte Tensoru Şekli: {e2_byte.byte_tensor.shape} | İlk Gizil Durum x^(0): {x_initial.shape}")
 
-        # [N2] TopoX Hücre Kompleksi -> E3 (D1, D2) (Keyfiyet Projeksiyonu: mode='eval')
+        
         e3_sinir = eval_model.n2_topox(e2_byte, x_initial=x_initial, mode='eval')
         logger.debug(f"[N2 TopoX Kompleksi] E3 D1 (Sınır 1) Şekli: {e3_sinir.D1.shape} | D2 (Sınır 2) Şekli: {e3_sinir.D2.shape}")
 
-        # [N3] Sınırlama Matrisi Atama -> E4 (Phi Dict, x^(0))
+        
         e4_lif = eval_model.n3_lif(e3_sinir, x_initial)
         logger.debug(f"[N3 Sınırlama Matrisi Atama] E4 Lif Matrisleri Sayısı: {len(e4_lif.phi_matrisleri)}")
 
-        # [N_LA] Lif Laplasyeni İnşası -> E4_B (D0)
-        # NOT (matrissiz Laplasyen): insa_et artık VARSAYILAN OLARAK [D,D] boyutunda yoğun
-        # Delta_0'ı kurmuyor (VRAM baskısının başlıca kaynağıydı) — n6_aktor/n7_cozucu
-        # doğrudan D0 üzerinden laplasyen_ile_carp ile matematiksel olarak BİREBİR eşdeğer,
-        # matrissiz çalışıyor.
+        
         D0_op, _ = eval_model.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
         logger.debug(f"[N_LA Lif Laplasyeni İnşası] E4_B D0 Coboundary: {D0_op.shape}")
 
-        # Döngüsel Gizil Akıl Yürütme Çemberi (r = 1 ... R)
+        
         x_current = x_initial.clone()
         M_current = eval_model.bellek_yonetici.get_memory(active_batch_size=1).M
         eval_model.n6_aktor.update_operators(D0_op)
 
         for r in range(1, config.R + 1):
-            # Çıkarım Safhası: Tam Eşsınır (Exact Coboundary) Keyfiyet Projeksiyonlu Dinamik Topoloji
+            
             e3_sinir = eval_model.n2_topox(e2_byte, x_initial=x_current, mode='eval', D0_base=D0_op)
             D0_op, _ = eval_model.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
             eval_model.n6_aktor.update_operators(D0_op)
-            # [E5_A] Mevcut Gizil Durum & [E5_B] Mevcut Bellek Gönderimi
+            
             e5_a = E5_A_MevcutGizilDurum(x_r=x_current)
             e5_b = E5_B_BellekGonderimi(M=M_current)
             
-            # [N4] Sorgu Seçici (Q_theta: 4-Şartlı Rasyonel Merak Vektör Sahası) -> E6
+            
             e6_sorgu = eval_model.n4_sorgu(e5_a, D0_operator=D0_op, A_adjacency=e3_sinir.D1, bellek=e5_b)
             logger.debug(f"  ├─ [N4 Sorgu Seçici] (r={r}) Sorgu Vektörü q^({r}) Şekli: {e6_sorgu.q_r.shape}")
             
-            # [N5] Cevap Süzücü (A_phi: VSA Unbinding Bellek Okuyucu) -> E7
+            
             e7_lokal = eval_model.n5_cevap(e6_sorgu, e5_b)
             logger.debug(f"  ├─ [N5 Cevap Süzücü] (r={r}) Lokal Cevap Vektörü a^({r}) Şekli: {e7_lokal.a_r.shape}")
             
-            # [N6] Kohomolojik Aktüatör (H^1-Combat Abdisyon Hücresi & Sheaf-KAN Süperpozisyonu) -> E8
+            
             e8_sentetik = eval_model.n6_aktor(e5_a, e6_sorgu, e7_lokal)
             logger.debug(f"  ├─ [N6 Kohomolojik Aktüatör & Sheaf-KAN] (r={r}) Sentetik Hüküm h* Şekli: {e8_sentetik.synthetic_state.shape}")
             
-            # [N7] Lif Laplasyeni Çözücü (Topolojik Lif Taşınım-Difüzyon PDE & Sheaf Matrix Green's Kernel) -> E9_A (x^(r+1))
+            
             e9_guncel = eval_model.n7_cozucu(e8_sentetik, D0_op, e5_a)
             logger.debug(f"  ├─ [N7 Lif Laplasyeni Çözücü & Green's Kernel] (r={r}) Güncellenmiş Durum x^({r}) Şekli: {e9_guncel.x_next.shape}")
             
-            # [N12 / N_Yazici] SMW Biyortogonal Sıfır Parazitli Bellek Mühürleme -> E5_B_YENI
+            
             if hasattr(eval_model, 'bellek_yonetici') and isinstance(eval_model.bellek_yonetici, SMW_SifirParazit_BellekYoneticisi):
                 k_r_key = e6_sorgu.q_r[:, :getattr(config, 'K', 16)] if e6_sorgu.q_r.shape[1] >= getattr(config, 'K', 16) else F.pad(e6_sorgu.q_r, (0, getattr(config, 'K', 16) - e6_sorgu.q_r.shape[1]))
                 v_r_val = e7_lokal.a_r
@@ -321,7 +293,7 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
                 e5_b_yeni = eval_model.n_yazici.yaz(e9_guncel.x_next, e6_sorgu, e5_b, e7_lokal)
             logger.debug(f"  ├─ [N12 SMW Sıfır Parazitli Bellek] (r={r}) Güncellenmiş Bellek E5_B_YENI Şekli: {e5_b_yeni.M.shape}")
 
-            # Döngü Başına Geri Besleme (Feedback Update)
+            
             x_current = e9_guncel.x_next.detach()
             M_current = e5_b_yeni.M.detach()
 
@@ -331,43 +303,43 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
 
         logger.debug(f"[DÖNGÜ SONU (r={config.R})] Nihai Gizil Durum x^(R) Şekli: {x_current.shape}")
 
-        # [N8] Chebyshev Katsayı Projeksiyon Kafası -> E10 (C: Külli Mana Matrisi)
+        
         e10_kulli = eval_model.n8_chebyshev(e9_guncel)
         logger.debug(f"[N8 Chebyshev Katsayı Projeksiyon] E10 Külli Mana Matrisi C Şekli: {e10_kulli.C.shape}")
 
-        # [N8_B] Dinamik Uzunluk Seçici (Arc-Length & Parametrik Kafa Hibrit) -> E10_B (N*)
+        
         N_star, L_arc_val, N_teorik_val, delta_n_tensor = eval_model.n8_b_uzunluk(e10_kulli, eval_model.cheby_calc)
         logger.info(f"[N8_B Dinamik Uzunluk Seçici] Yay Uzunluğu L_arc: {L_arc_val:.4f} | Nyquist N_teorik: {N_teorik_val} | Kestirilen N*: {N_star}")
 
-        # [N9] Dinamik Chebyshev CGL Vandermonde Çarpım İstasyonu -> E11 (Gömülü Yörünge)
+        
         T_matrix = eval_model.cheby_calc.hesapla(N=N_star)
         e11_gomulu = eval_model.n9_vandermonde(e10_kulli, T_matrix)
         logger.debug(f"[N9 Vandermonde Çarpım] E11 Gömülü Yörünge Şekli: {e11_gomulu.X_output.shape}")
 
-        # [N10] Sözlük Softmax İzdüşüm Kafası -> E12 (Token Olasılıkları)
+        
         olasilik_matrisi = eval_model.n10_sozluk(e11_gomulu)
         logger.debug(f"[N10 Sözlük Softmax İzdüşüm] E12 Token Olasılık Matrisi P Şekli: {olasilik_matrisi.P.shape}")
 
-        # Topolojik Doğrulama Metrikleri (R^V ve R^E Vektörel Metrik Alanlarından Türetilmiştir)
+        
         d_vec = eval_model.n7_cozucu.hesapla_uyumsuzluk_vektoru(x_current, D0_op)
         e_vec = eval_model.n7_cozucu.hesapla_dirichlet_enerjisi_vektoru(x_current, D0_op)
         d_discrepancy = float(d_vec.mean().detach().item())
         dirichlet_energy = float(e_vec.mean().detach().item())
         logger.info(f"[Topolojik Metrikler] Vektörel Dirichlet Enerjisi E(x) in R^{len(e_vec)}: {dirichlet_energy:.6f} | Kohomolojik Uyumsuzluk in R^{len(d_vec)}: {d_discrepancy:.6f}")
 
-        # 5. Çıktı İnşası ve Akıllı UTF-8 Byte Deşifreleme
+        
         if is_arc_json:
             sonuc_dict = arc_insa_edici.insa_et(olasilik_matrisi, hedef_boyut=(3, 3))
             nihai_cikti = json.dumps(sonuc_dict, ensure_ascii=False)
         else:
-            # preds_full: tüm mikro-dilimlerin tam uzunluktaki argmax dizisi (P sadece ilk 64'lük dilim olabilir!)
+            
             if getattr(olasilik_matrisi, 'preds_full', None) is not None:
-                token_preds = olasilik_matrisi.preds_full[0].cpu().tolist()  # [N]
+                token_preds = olasilik_matrisi.preds_full[0].cpu().tolist()  
             else:
-                P_mat = olasilik_matrisi.P[0]  # [V_size, N]
-                token_preds = torch.argmax(P_mat, dim=0).cpu().tolist()  # [N]
+                P_mat = olasilik_matrisi.P[0]  
+                token_preds = torch.argmax(P_mat, dim=0).cpu().tolist()  
 
-            # SOTA BPE / Aksiyomatik Çevrimdışı Token İndekslerini İnsani Metne Deşifre Etme
+            
             tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
             valid_token_ids = [t % tokenizer.n_vocab for t in token_preds]
             dec_str = tokenizer.decode(valid_token_ids)
@@ -377,7 +349,7 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
             else:
                 nihai_cikti = "..."
 
-    # Bellek Temizliği
+    
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
         

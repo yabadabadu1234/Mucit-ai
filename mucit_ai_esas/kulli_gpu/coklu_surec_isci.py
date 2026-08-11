@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ GPU DAĞITIK MİMARİSİ - RÜKN I
-Çoklu Süreç GPU İşçi ve İletişim Veriyolu Katmanı (coklu_surec_isci.py)
-================================================================================
-Bu modül; GPU süreçleri arasında NVIDIA NCCL / Gloo halkası üzerinden milisaniyenin
-altında All-Reduce, All-Gather ve P2P Halo Exchange (Sınır Veri Takası) işlemlerini icra eden
-NcclIletisimHatti sınıfı ile tek bir fiziksel GPU'ya kilitlenmiş bağımsız Python sürecini
-temsil eden GpuIsciSureci sınıfını içerir.
-"""
+
 
 import os
 import sys
@@ -23,21 +12,10 @@ logger = logging.getLogger("kulli_gpu.coklu_surec_isci")
 
 
 def kimlik_islemi(x: torch.Tensor) -> torch.Tensor:
-    """
-    Varsayılan LOKAL_ICRA işlem fonksiyonu (kimlik dönüşümü / no-op).
-    'spawn' bağlamlı multiprocessing.Queue'dan geçirilen her nesne pickle edilebilir
-    olmak ZORUNDADIR; bir lambda (örn. `lambda x: x`) pickle edilemez ve worker
-    sürecinde PicklingError ile çöker. Bu modül-seviyesi fonksiyon her iki uçtan da
-    (CpuAnaIdareci ve GpuIsciSureci) aynı import yolu ile çözülebildiği için güvenlidir.
-    """
     return x
 
 
 class NcclIletisimHatti:
-    """
-    GPU süreçleri arasında NVIDIA NCCL halkası (Ring) üzerinden milisaniyenin altında
-    All-Reduce, All-Gather ve P2P Halo Exchange (Sınır Veri Takası) işlemlerini icra eder.
-    """
     _is_initialized: bool = False
     _backend: str = "nccl"
 
@@ -50,18 +28,15 @@ class NcclIletisimHatti:
         master_port: int = 29500,
         backend: str = "nccl"
     ) -> bool:
-        """
-        NCCL / Distributed iletişim halkasını C++ uyarısız ve soket hatasız ilklendirir.
-        """
         try:
-            # 1. KAGGLE DOCKER İÇİ SOKET VE İSİM ÇÖZÜMLEME AYARLARI (socket.cpp err=-3 ÖNLENİR)
+            
             os.environ["MASTER_ADDR"] = master_addr
             os.environ["MASTER_PORT"] = str(master_port)
             os.environ["WORLD_SIZE"] = str(world_size)
             os.environ["RANK"] = str(rank)
             os.environ["GLOO_SOCKET_IFNAME"] = "lo"
             os.environ["NCCL_SOCKET_IFNAME"] = "lo"
-            os.environ["NCCL_IB_DISABLE"] = "1"  # InfiniBand olmadığını belirt
+            os.environ["NCCL_IB_DISABLE"] = "1"  
 
             if torch.cuda.is_available():
                 gpu_count = torch.cuda.device_count()
@@ -74,7 +49,7 @@ class NcclIletisimHatti:
                 cls._backend = "gloo"
 
             if not dist.is_initialized():
-                # 2. AÇIK CİHAZ KİMLİĞİ İLE NCCL İLKLENDİRME (ProcessGroupNCCL Warning ÖNLENİR)
+                
                 init_kwargs = {
                     "backend": cls._backend,
                     "init_method": "env://",
@@ -86,7 +61,7 @@ class NcclIletisimHatti:
 
                 dist.init_process_group(**init_kwargs)
 
-            # 3. AÇIK CİHAZ KİMLİĞİ İLE BARRIER (c10d_logger Warning ÖNLENİR)
+            
             if torch.cuda.is_available() and dist.is_initialized():
                 dist.barrier(device_ids=[current_device.index])
 
@@ -107,17 +82,11 @@ class NcclIletisimHatti:
         tensor: torch.Tensor,
         op_type: str = "SUM"
     ) -> torch.Tensor:
-        """
-        Lokal hesaplanmış kısmi tensörü tüm GPU'lar arasında All-Reduce ile indirger/eşitleştirir.
-        """
         if not dist.is_initialized():
             logger.warning("[NcclIletisimHatti] Distributed modül ilklendirilmemiş, lokal tensör döndürülüyor.")
             return tensor
 
-        # KUSUR-31 düzeltmesi: NCCL backend'i bir CPU tensörü ile çağırmak (örn. VRAM'den
-        # tahliye edilip CPU'ya taşınmış bir düğüm çıktısı) SIGSEGV ile süreci öldürebilir.
-        # NCCL yalnızca CUDA tensörlerini destekler; bu durumda güvenli şekilde uyarıp
-        # tensörü değiştirmeden döndürüyoruz.
+        
         if cls._backend == "nccl" and not tensor.is_cuda:
             logger.warning(
                 "[NcclIletisimHatti] CPU tensörü ile NCCL all_reduce cagirilamaz "
@@ -125,10 +94,7 @@ class NcclIletisimHatti:
             )
             return tensor
 
-        # KUSUR-34 düzeltmesi: non-contiguous (slicing/transpose kaynaklı) tensörler
-        # NCCL çağrılarında tanımsız davranışa yol açabilir. all_reduce yerinde
-        # (in-place) çalıştığından, geçici contiguous kopya üzerinde indirgeyip
-        # sonucu orijinal tensöre geri kopyalıyoruz ki çağıranın referansı bozulmasın.
+        
         _orijinal_tensor = tensor
         _kopya_gerekti = not tensor.is_contiguous()
         if _kopya_gerekti:
@@ -136,7 +102,7 @@ class NcclIletisimHatti:
 
         op_map = {
             "SUM": dist.ReduceOp.SUM,
-            "MEAN": dist.ReduceOp.SUM,  # SUM + divide by world_size
+            "MEAN": dist.ReduceOp.SUM,  
             "MAX": dist.ReduceOp.MAX,
             "MIN": dist.ReduceOp.MIN,
             "PRODUCT": dist.ReduceOp.PRODUCT
@@ -162,13 +128,8 @@ class NcclIletisimHatti:
         sol_komsu_rank: int,
         sag_komsu_rank: int
     ) -> Tuple[torch.Tensor, torch.Tensor]:
-        """
-        Lif Laplasyeni ve TopoX Hücre işlemleri için komşu GPU'larla P2P (Point-to-Point)
-        sınır veri takasını asenkron fırlatır ve senkronize eder.
-        """
-        # world_size <= 1 durumunda sol/sağ komşu her zaman kendi rankına eşitlenir
-        # (örn. (0-1)%1=0). isend/irecv ile kendi kendine mesaj göndermek NCCL'de
-        # desteklenmez ve sonsuz beklemeye (deadlock) yol açar — bu yüzden erken çıkış şart.
+        
+        
         if not dist.is_initialized() or dist.get_world_size() <= 1:
             return lokal_halo_tensor.clone(), lokal_halo_tensor.clone()
 
@@ -182,10 +143,8 @@ class NcclIletisimHatti:
         sag_gecerli = sag_komsu_rank >= 0 and sag_komsu_rank < world_size
 
         if sol_gecerli and sag_gecerli and sol_komsu_rank == sag_komsu_rank:
-            # world_size == 2 durumunda halkanın tek komşusu her iki yönde de aynı rank'tır.
-            # Aynı tensörü aynı hedefe iki kez isend/irecv ile göndermek (eski davranış)
-            # gereksiz bant genişliği israfı ve backend'e bağlı mesaj sırası belirsizliği
-            # doğurur; tek bir karşılıklı takas yeterli ve doğrudur.
+            
+            
             reqs = [
                 dist.isend(lokal_halo_tensor, dst=sol_komsu_rank),
                 dist.irecv(sol_gelen, src=sol_komsu_rank),
@@ -195,12 +154,12 @@ class NcclIletisimHatti:
             sag_gelen = sol_gelen.clone()
         else:
             reqs = []
-            # Sol komşuya giden, sağ komşudan gelen
+            
             if sol_gecerli:
                 reqs.append(dist.isend(lokal_halo_tensor, dst=sol_komsu_rank))
                 reqs.append(dist.irecv(sol_gelen, src=sol_komsu_rank))
 
-            # Sağ komşuya giden, sol komşudan gelen
+            
             if sag_gecerli:
                 reqs.append(dist.isend(lokal_halo_tensor, dst=sag_komsu_rank))
                 reqs.append(dist.irecv(sag_gelen, src=sag_komsu_rank))
@@ -215,10 +174,6 @@ class NcclIletisimHatti:
 
 
 class GpuIsciSureci:
-    """
-    Tek bir fiziksel GPU'ya kilitlenmiş bağımsız Python sürecidir.
-    CPU Ana İdareciden gelen IPC emirlerini dinler, kendi VRAM diliminde icra eder.
-    """
     def __init__(self, rank: int, world_size: int):
         self.rank = rank
         self.world_size = world_size
@@ -234,9 +189,6 @@ class GpuIsciSureci:
         master_addr: str = "127.0.0.1",
         master_port: int = 29500
     ) -> None:
-        """
-        GPU İşçi Süreci Ana Döngüsü. Kuyruktan emir bekler ve icra eder.
-        """
         basari = NcclIletisimHatti.ilkle_nccl_halkasi(
             rank=rank,
             world_size=world_size,
@@ -252,11 +204,7 @@ class GpuIsciSureci:
 
         logger.info(f"[GpuIsciSureci] Rank {rank} ana dongusu baslatildi.")
 
-        # KUSUR-48 düzeltmesi: döngü içindeki bir komut hatası yakalanıp devam
-        # edilebiliyor olsa da, döngüyü tamamen kıran beklenmeyen bir istisna
-        # (örn. kuyruk borusu kopması) önceden process_group'u kapatmadan
-        # süreci sonlandırıyor ve diğer rank'ları NCCL veri yolunda sonsuza dek
-        # bekletiyordu. finally bloğu ile her çıkış yolunda temizlik garanti edilir.
+        
         try:
             cls._isci_ana_dongusu_govde(rank, world_size, emir_kuyrugu, cevap_kuyrugu, instance)
         finally:

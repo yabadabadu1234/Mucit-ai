@@ -1,23 +1,11 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ
-Ana Eğitim Yürütücü Modülü (main_egitim_dongusu.py)
-================================================================================
-Bu modül; ham metin külliyatını ve ARC-AGI ızgara verilerini topolojik veri
-kontratlarına dönüştürerek, R-adımlı gizil akıl yürütme döngüsü, kohomolojik
-aktüatör (H^1-Combat), Lif Laplasyeni difüzyonu ve GRPO/RLVR takviyeli öğrenme
-kriteri altında Stiefel manifoldu kısıtlarına riayet ederek eğiten ana Sevk ve
-İdare Merkezidir.
-"""
+
 
 import os
 import sys
 
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
-# Bulunduğu dizini otomatik olarak sys.path'e ekle (Kaggle Dataset İçe Aktarma Güvenliği)
+
 try:
     CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 except NameError:
@@ -115,21 +103,19 @@ from kontratlar import (
 
 from logging.handlers import RotatingFileHandler
 
-# ==============================================================================
-# LOGGING (GÜNLÜKLEME) YAPILANDIRMASI — DUPLICATE ENGELLEME VE SEVİYE AYRIMI
-# ==============================================================================
+
 def kur_logging_sistemi(log_dosyasi: str = 'egitim_dongusu_icra.log') -> None:
     root = logging.getLogger()
     root.setLevel(logging.DEBUG)
-    root.handlers.clear()  # Çift basma (duplicate logging) sorununu kökten çözer
+    root.handlers.clear()  
 
-    # 1. Döner Dosya Handler'ı (Maksimum 10 MB - Disk Şişmesini Engeller)
+    
     fh = RotatingFileHandler(log_dosyasi, maxBytes=10*1024*1024, backupCount=1, encoding='utf-8')
     fh.setLevel(logging.DEBUG)
     fh.setFormatter(logging.Formatter('%(asctime)s - [%(levelname)s] - (%(name)s) - %(message)s'))
     root.addHandler(fh)
 
-    # 2. Konsol Handler'ı (Sadece Temiz Metrik Özetleri: INFO ve üzeri)
+    
     ch = logging.StreamHandler(sys.stdout)
     ch.setLevel(logging.INFO)
     ch.setFormatter(logging.Formatter('%(asctime)s - [%(levelname)s] - %(message)s'))
@@ -138,27 +124,10 @@ def kur_logging_sistemi(log_dosyasi: str = 'egitim_dongusu_icra.log') -> None:
 kur_logging_sistemi()
 logger = logging.getLogger('MainEgitim')
 
-# ===========================================================================
-# KAGGLE SABİTLERİ VE API CLI UPLOADER
-# ===========================================================================
+
 KAGGLE_WORKING_DIR = "/kaggle/working" if os.path.exists("/kaggle/working") else "./checkpoints"
 
 class KaggleDatasetUploader:
-    """
-    Checkpoint NPZ dosyasını Kaggle özel veri seti olarak yükler.
-
-    Komut:
-      kaggle datasets version -p /kaggle/working -m "Commit checkpoint step N"
-
-    Gereksinimler:
-      - KAGGLE_USERNAME ve KAGGLE_KEY env var'ları set edilmiş olmalı
-        VEYA /kaggle/input/kaggle-api-cred/kaggle.json mevcut olmalı
-      - `kaggle` CLI kurulu olmalı (Kaggle notebook'larında varsayılan)
-
-    Hata politikası:
-      Upload başarısız olursa yalnızca uyarı loglanır.
-      Eğitim bu hata nedeniyle DURDURULMAZ.
-    """
 
     def __init__(self,
                  dataset_slug: str = "",
@@ -171,20 +140,19 @@ class KaggleDatasetUploader:
         self._setup_credentials()
 
     def _setup_credentials(self) -> None:
-        """Kaggle kimlik bilgilerini env var'a veya ~/.kaggle/kaggle.json'a kopyalar."""
-        # Önce mevcut env var'ları kontrol et
+        
         if os.environ.get("KAGGLE_USERNAME") and os.environ.get("KAGGLE_KEY"):
             self._configured = True
             return
 
-        # Bağlı credential dosyasını dene
+        
         if os.path.isfile(self.cred_path):
             try:
                 with open(self.cred_path, "r", encoding="utf-8") as f:
                     creds = json.load(f)
                 os.environ["KAGGLE_USERNAME"] = creds.get("username", "")
                 os.environ["KAGGLE_KEY"]      = creds.get("key", "")
-                # ~/.kaggle/kaggle.json'a da yaz (CLI için)
+                
                 kaggle_dir = os.path.expanduser("~/.kaggle")
                 os.makedirs(kaggle_dir, exist_ok=True)
                 dest = os.path.join(kaggle_dir, "kaggle.json")
@@ -203,11 +171,6 @@ class KaggleDatasetUploader:
             )
 
     def upload(self, step: int, message: Optional[str] = None) -> bool:
-        """
-        /kaggle/working dizinindeki checkpoint NPZ'yi yeni dataset versiyonu olarak yükler.
-
-        Döndürür: True → başarılı, False → hata (eğitim devam eder)
-        """
         if not self._configured:
             logger.warning("  [Upload] Kimlik bilgisi yok — upload atlandı.")
             return False
@@ -225,7 +188,7 @@ class KaggleDatasetUploader:
                 cmd,
                 capture_output=True,
                 text=True,
-                timeout=120,           # 2 dakika yükleme zaman aşımı
+                timeout=120,           
             )
             if result.returncode == 0:
                 logger.info(
@@ -250,12 +213,7 @@ class KaggleDatasetUploader:
             return False
 
 
-            
-# ==============================================================================
-# I. GRPO ÖDÜL VE KANIT (RLVR) MOTORLARI
-# ==============================================================================
 class Odul_TopolojikDevresmezlikMotoru:
-    """GRPO Topolojik Tutarlılık ve Doğruluk Skorlama Motoru (2D/3D Uyumlu)"""
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
 
@@ -276,7 +234,6 @@ class Odul_TopolojikDevresmezlikMotoru:
 
 
 class Kayip_GRPO_Kriteri:
-    """GRPO (Group Relative Policy Optimization) Kayıp Fonksiyonu (Çifte Logaritma Önlemeli & 2D/3D Uyumlu)"""
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
 
@@ -300,77 +257,46 @@ class Kayip_GRPO_Kriteri:
 
 
 class Odul_ButunculCumleKeyfiyetMotoru:
-    """
-    [Bütüncül Cümle Keyfiyet Motoru]
-
-    Kelime-bazlı (token-level) kemmiyet kontrolünün (N14_OdulTopolojikDevresmezlikMotoru'nun
-    P > 0.1 sezgiselinin) yanına, cümlenin bütününde organlar-arası mutabakatı ölçen
-    ÇARPIMSAL (AND mantıklı — tek organ ahenksizse skor çöker) bir keyfiyet sinyali ekler.
-    GRPO'ya 11. adlandırılmış Pareto-PCGrad-MGDA nesnesi olarak girer; mevcut GRPO/VICReg
-    sinyallerinin YERİNE geçmez, onlarla çakışma-farkında birleştirilir.
-
-    3 Organik Rükün:
-      1. Sorgu-Cevap Ahengi (N4-N5): q_son ile a_son arasındaki kosinüs benzerliği.
-      2. Eşsınır Kararlılığı (N4-N6/N7 üzerinden D0): c_defect = x @ D0^T normunun sönümü.
-      3. Spektral Eğri / Cümle Kapasitesi Uyumu (N8-N9): L_arc/N_ste'nin hedef cümle
-         uzunluğuyla örtüşmesi.
-
-    Graf-Canlılık Notu: q_son ve L_arc/N_ste, çağıran tarafta HER SEFERİNDE TAZE
-    (ayrı, bağımsız) forward çağrılarıyla üretilmelidir — mevcut R-döngüsü/Faz 4-5
-    tensörlerinin (sorgu_q_list[-1], L_arc_tensor, N_ste_tensor) grafı önceki
-    VJP'ler tarafından retain_graph=False ile zaten tüketilmiştir; onları ikinci
-    kez canlı kullanmaya çalışmak "Trying to backward through the graph a second
-    time" hatası doğurur (bkz. main döngüsündeki "HATA 1 DÜZELTMESİ" bloğu ve onun
-    hemen ardındaki taze n4_sorgu/n8_b_uzunluk çağrıları). x_son ve a_son ise
-    ÇAĞIRAN TARAF tarafından bilerek .detach() edilmiş olmalıdır. Bu motor kendi
-    içinde HİÇBİR .detach() çağırmaz — sorumluluk çağırana aittir.
-    """
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
 
     def hesapla_vektor(
         self,
-        q_son: torch.Tensor,        # [B, d_q] — CANLI (N4 parametrelerine gradyan taşır)
-        a_son: torch.Tensor,        # [B, d_a] — detached (çağıran tarafça)
-        x_son: torch.Tensor,        # [B, D]   — detached (çağıran tarafça)
-        D0_op: torch.Tensor,        # [E*d_e, D]
-        hedef_tokens: torch.Tensor, # [B, N*] (yalnızca hedef uzunluk için)
-        L_arc: torch.Tensor,        # skaler veya [B] — CANLI (N8_B parametrelerine gradyan taşır)
-        N_ste: torch.Tensor,        # skaler veya [B] — CANLI (N8_B parametrelerine gradyan taşır)
+        q_son: torch.Tensor,        
+        a_son: torch.Tensor,        
+        x_son: torch.Tensor,        
+        D0_op: torch.Tensor,        
+        hedef_tokens: torch.Tensor, 
+        L_arc: torch.Tensor,        
+        N_ste: torch.Tensor,        
     ) -> torch.Tensor:
-        # 1. SORGU-CEVAP AHENGİ: farklı boyutlu olabilirler (d_q != d_a), ortak boyuta kırp
+        
         d_min = min(q_son.shape[-1], a_son.shape[-1])
-        qa_ahenk = F.cosine_similarity(q_son[..., :d_min], a_son[..., :d_min], dim=-1)  # [B]
+        qa_ahenk = F.cosine_similarity(q_son[..., :d_min], a_son[..., :d_min], dim=-1)  
 
-        # 2. EŞSINIR KARARLILIĞI: N4'ün ZATEN kullandığı AYNI formül (c_defect = x @ D0^T),
-        # boyutsal olarak tutarlı ve anlamlı — q_son yerine x_son (D0 ile aynı D uzayında).
-        c_defect_cumle = torch.matmul(x_son, D0_op.T)  # [B, E*d_e]
-        c_kusur_norm = torch.norm(c_defect_cumle, p=2, dim=-1)  # [B]
-        # Boyut-bağımsız sönüm: normu E*d_e'nin karekökü ile ölçekle (büyük D0'larda
-        # norm doğal olarak büyür, ham norm sabit eşikle karşılaştırılamaz).
+        
+        c_defect_cumle = torch.matmul(x_son, D0_op.T)  
+        c_kusur_norm = torch.norm(c_defect_cumle, p=2, dim=-1)  
+        
+        
         olcek = max(1.0, float(D0_op.shape[0]) ** 0.5)
-        topolojik_keyfiyet = torch.exp(-c_kusur_norm / olcek)  # [B], kusursuzsa -> 1.0
+        topolojik_keyfiyet = torch.exp(-c_kusur_norm / olcek)  
 
-        # 3. SPEKTRAL EĞRİ / CÜMLE KAPASİTESİ UYUMU
+        
         N_hedef = float(hedef_tokens.shape[1])
         kapasite_uyumu = torch.exp(-0.05 * torch.abs(N_ste - N_hedef))
         if kapasite_uyumu.dim() == 0:
             kapasite_uyumu = kapasite_uyumu.expand_as(qa_ahenk)
 
-        # 4. ÇARPIMSAL (AND) MÜHÜRLEME: kemmiyetin toplama mantığı değil, keyfiyetin
-        # çarpım mantığı — tek bir organ ahenksizse bütün skor çöker.
-        cumle_keyfiyet_skoru = qa_ahenk * topolojik_keyfiyet * kapasite_uyumu  # [B]
+        
+        cumle_keyfiyet_skoru = qa_ahenk * topolojik_keyfiyet * kapasite_uyumu  
 
-        # GRPO tarzı grup-içi normalize edilmiş kayıp vektörü: keyfiyet yüksekse kayıp düşük.
+        
         kayip_vec = 1.0 - cumle_keyfiyet_skoru
         return kayip_vec
 
 
-# ==============================================================================
-# II. EĞİTİM DESTEK VE KONTROL NOKTASI YÖNETİCİLERİ
-# ==============================================================================
 class Riyazi_AgirlikIlkleyici:
-    """Ağırlık Dikgenleştirme ve İlklendirme Yöneticisi"""
     def __init__(self):
         pass
 
@@ -386,7 +312,6 @@ class Riyazi_AgirlikIlkleyici:
 
 
 class Egitim_KontrolNoktasiYoneticisi:
-    """Hakiki Model Checkpoint Kaydedici ve Yükleyici (NPZEntegreli)"""
     def __init__(self, kaydetme_dizini: str = "./checkpoints"):
         self.kaydetme_dizini = kaydetme_dizini
         self._npz_mgr = NPZCheckpointManager(checkpoint_dir=kaydetme_dizini)
@@ -405,11 +330,6 @@ class Egitim_KontrolNoktasiYoneticisi:
 from checkpoint_manager import NPZCheckpointManager, HiyerarşikHafizaYoneticisi
 
 class Egitim_TopolojikVeriYukleyici:
-    """
-    Çoklu Formatlı ve Klasör Yapılı Veri Yükleyici.
-    .txt, .md, .json, .py vb. tüm dosyaları özyinelemeli (recursive) tarar
-    ve hiyerarşik harita oluşturur.
-    """
     def __init__(self, config: Model_TopolojikKonfigurasyon, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json"):
         self.config = config
         self.manifest_yolu = manifest_yolu
@@ -417,7 +337,6 @@ class Egitim_TopolojikVeriYukleyici:
         self.tarama_yap()
 
     def tarama_yap(self):
-        """Manifest dosyasından veya yerel dizinden tüm veri kümesi ağacını kurar."""
         klasorler_veya_dosyalar = []
         if os.path.exists(self.manifest_yolu):
             try:
@@ -429,7 +348,7 @@ class Egitim_TopolojikVeriYukleyici:
                 logger.warning(f"Manifest okunurken hata: {e}")
 
         if not klasorler_veya_dosyalar:
-            klasorler_veya_dosyalar = ["./"]  # Varsayılan yerel arama
+            klasorler_veya_dosyalar = ["./"]  
 
         st_extensions = ('.txt', '.md', '.json', '.py', '.c', '.cpp', '.h', '.csv', '.yaml', '.yml')
 
@@ -450,11 +369,6 @@ class Egitim_TopolojikVeriYukleyici:
                         self.verisetleri[veriseti_adi][os.path.normpath(root)] = valid_files
 
     def dosya_parcalari_oku(self, dosya_yolu: str, chunk_size: int = 65536):
-        """
-        Büyük dosyaları (2 GB, 410 MB vb.) son baytına kadar parça parça (streaming chunk) okur.
-        Hiçbir dosyayı ilk 4KB'ta yarım bırakmaz.
-        Döndürür: (chunk_metin, hedef_tensor, is_last_chunk, chunk_idx, bytes_read)
-        """
         try:
             file_size = os.path.getsize(dosya_yolu)
         except Exception:
@@ -479,7 +393,7 @@ class Egitim_TopolojikVeriYukleyici:
                             break
                         continue
 
-                    # Metnin SOTA BPE / Aksiyomatik Çevrimdışı Token ID'lerini hedef tensör olarak çıkar
+                    
                     tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
                     token_ids = tokenizer.encode(metin)
                     if len(token_ids) < self.config.N:
@@ -494,11 +408,9 @@ class Egitim_TopolojikVeriYukleyici:
             logger.warning(f"Dosya okuma hatası ({dosya_yolu}): {e}")
 
     def dosya_okumu_yap(self, dosya_yolu: str) -> Tuple[str, torch.Tensor]:
-        """Geriye dönük uyumluluk için tekil parça okuma sarmalayıcısı."""
         for metin, hedef_tensor, _, _, _, _ in self.dosya_parcalari_oku(dosya_yolu, chunk_size=65536):
             return metin, hedef_tensor
         return "Bos icerikli veri dosyasi.", torch.tensor([[32] * self.config.N] * self.config.batch_size, dtype=torch.long, device=self.config.device)
-
 
 
 def _tekil_egitim_adimi_icra(
@@ -522,16 +434,9 @@ def _tekil_egitim_adimi_icra(
     gpu_cesitlendirici: Optional[Any] = None,
     takas_mgr: Optional[Any] = None
 ) -> Tuple[float, float, float, float]:
-    """
-    Tüm eğitim adımı bu müstakil iç fonksiyonun içinde icra edilir. Fonksiyon bittiği an (return)
-    CPython tüm geçici tensörleri Stack Frame'den fiziken yok eder ve VRAM 178 MB seviyesine düşer!
-    """
     optimizer.zero_grad(set_to_none=True)
 
-    # NVMe Takas Yöneticisi: sağlanmışsa, bu adımın tüm forward/backward'ı boyunca
-    # autograd'ın kaydedilen aktivasyon tensörlerini otomatik NVMe-tahliye kancalarıyla sarmalar.
-    # AnlasmaliVramGuvencesiAl'daki gc.collect()/empty_cache() zaten-boşta-duran belleği temizler;
-    # asıl "sıfır OOM" güvencesi canlı tensörleri diske süren bu kapsam muhafızından gelir.
+    
     _takas_cm = takas_mgr.kapsam_muhafizi_aktifles() if takas_mgr is not None else None
     if _takas_cm is not None:
         _takas_cm.__enter__()
@@ -555,115 +460,49 @@ def _tekil_egitim_adimi_icra(
     e1_girdi = E1_HamMetinAkisi(X_text=e1_girdi_metni_chunk)
 
     def vjp_cerrahi_enjekte_et(vector_loss: torch.Tensor, target_params: List[nn.Parameter], scale: float = 1.0, retain_graph: bool = False) -> None:
-        """
-        [Faz-İzoleli VJP Cerrahi Gradyan İzolasyonu]
-
-        Vektör hata sahasının (vector_loss) ilgili parametre alt-manifolduna (target_params)
-        VJP (Vector-Jacobian Product) tensör kontraksiyonu ile doğrudan gradyan enjeksiyonu yapar.
-        Skaler .backward() veya .mean() kullanılmaz! Autograd grafiği anında serbest bırakılır.
-
-        RuntimeError Güvencesi:
-          Adım 1'de hata_vektoru.detach() ile faz sınırı açıkça koparılır.
-          Böylece Faz 4-5 kayıpları Faz 2-3'ün silinmiş grafini aramamaya çalışmaz.
-          retain_graph=False (varsayılan) ile graf anında serbest bırakılarak VRAM
-          birikmesi engellenir.
-
-        KARDEŞ-VJP UYARISI (retain_graph parametresi): d_vec2/e_vec2 (Faz 2) ve
-        d_vec3/e_vec3 (Faz 3) gibi İKİZ nesne çiftleri AYNI üst-grafı (ör. x_initial
-        veya mevcut_durum.x_r, D0_op/Delta_0_op) paylaşır. Çiftin İLK çağrısı
-        retain_graph=False (varsayılan) ile backward yaparsa, o paylaşılan üst-grafı
-        ANINDA siler — çiftin İKİNCİ çağrısı aynı paylaşılan düğümlere tekrar
-        erişmeye çalışınca "Trying to backward through the graph a second time"
-        hatası fırlatır (bu fonksiyon bunu yutup sessizce logluyor — yani gradyan
-        SESSİZCE kaybolur, çökme olmaz ama öğrenme de olmaz). Çözüm: bir kardeş
-        grubundaki İLK çağrı retain_graph=True ile yapılır (paylaşılan üst-grafı
-        canlı tutar), grubun SON çağrısı varsayılan retain_graph=False ile yapılır
-        (artık kimse ihtiyaç duymadığı için gerçekten serbest bırakır).
-
-        Gradyan İzolasyon Aksiyomu:
-          Her faz kendi .grad'ını sıfırdan yazar (p.grad = g_clean).
-          Faz geçişlerinde önceki fazın artık gradyanı birikmez.
-          Faz gradyanlarının çakıştırılması görevi tamamen PCGrad operatörüne devredilmiştir.
-        """
         trainable_in_group = [p for p in target_params if p.requires_grad]
         if not trainable_in_group:
             return
 
-        # ADIM 1: FAZ SINIRI KOPARMA AKSİYOMU (Explicit State Detachment)
-        # vector_loss'u türev grafiğinden tamamen kopar → "silinmiş graf" RuntimeError imkânsız
+        
         temiz_hata = vector_loss.detach()
         temiz_hata = torch.nan_to_num(temiz_hata, nan=0.0, posinf=100.0, neginf=-100.0)
         temiz_hata = torch.clamp(temiz_hata, min=-100.0, max=100.0)
 
-        # ADIM 2: EMNİYETLİ VEKTÖR NORMALİZASYONU (Sayısal Kararlılık)
-        # torch.std() VARSAYILAN OLARAK unbiased=True'dur (n-1'e böler). temiz_hata
-        # tek elemanlıysa (numel=1, ör. tek-objektifli bir faz) n-1=0 olur ve std_val
-        # NaN döner (+ 1e-6 bunu DÜZELTMEZ, NaN kalır) — bu NaN sessizce v_probe'a ve
-        # oradan enjekte edilen gradyana bulaşır. unbiased=False (n'e bölen popülasyon
-        # std'si) numel>=1 için her zaman tanımlıdır ve bu dejenere durumu ortadan
-        # kaldırır.
+        
         std_val  = torch.std(temiz_hata, unbiased=False) + 1e-6
         norm_val = torch.norm(temiz_hata) + 1e-6
         v_probe  = scale * (1.0 / std_val) * (temiz_hata / norm_val)
 
-        # ADIM 3: PARAMETRE TAMPONLARINI TEMİZLE (Kanonik Gradyan Hijyeni)
-        # KAPSAMLI DENETİM DÜZELTMESİ: ÖNCEDEN yalnızca `trainable_in_group` (bu ÇAĞRININ
-        # hedeflediği parametreler) temizleniyordu. Ama _grad_anlik_kopyala() HER çağrıdan
-        # sonra TÜM trainable_params üzerinden anlık görüntü alıyor (bkz. o fonksiyonun
-        # docstring'i) ve hedeflenmeyen bir parametrenin .grad'ı None DEĞİLSE (yani ÖNCEKİ
-        # bir adlandırılmış-nesne VJP çağrısı onu ayarlamışsa) o ESKİ/İLGİSİZ değeri
-        # kopyalıyordu — "Her faz kendi .grad'ını sıfırdan yazar, önceki fazın artık
-        # gradyanı birikmez" aksiyomu (bkz. yukarıdaki docstring) yalnızca HEDEFLENEN
-        # parametreler için doğruydu, hedeflenmeyenler için SESSİZCE İHLAL EDİLİYORDU.
-        # Sonuç: bir nesnenin (ör. g_spektral) o parametreye GERÇEKTE hiç katkısı yokken,
-        # o pozisyonda başka bir nesnenin (ör. g_grpo) gradyanı sızıp Pareto-PCGrad'ın
-        # "her nesne kendi ayrı satırı" granülerlik varsayımını kirletiyordu. Artık TÜM
-        # trainable_params temizleniyor — hedeflenmeyen parametreler bu çağrı için
-        # doğru şekilde gerçek sıfır (_grad_anlik_kopyala'nın torch.zeros_like düşüşü)
-        # olarak raporlanıyor.
+        
         for p in trainable_params:
             p.grad = None
 
-        # ADIM 4: TEK-SÜRÜM VJP TÜREV ÇAĞRISI (retain_graph=False)
-        # outputs = temiz_hata: detach edilmiş kopya → graf tekrar-türev hatası imkânsız
-        # retain_graph=False   → graf anında silinir, VRAM boşalır
-        # allow_unused=True    → kullanılmayan parametreler None döner, hata vermez
+        
         try:
             grads = torch.autograd.grad(
-                outputs=vector_loss,        # orijinal tensör (canlı grad_fn üzerinden VJP)
+                outputs=vector_loss,        
                 inputs=trainable_in_group,
-                grad_outputs=v_probe,       # v_probe zaten detach edilmiş
+                grad_outputs=v_probe,       
                 retain_graph=retain_graph,
                 allow_unused=True
             )
-            # Gradyanları parametrelere mühürle (faz izolasyonu: sıfırdan yaz, biriktirme)
+            
             for p, g in zip(trainable_in_group, grads):
                 if g is not None:
                     g_clean = torch.nan_to_num(g.detach(), nan=0.0, posinf=1.0, neginf=-1.0)
                     g_norm  = torch.norm(g_clean)
                     if g_norm > 1.0:
                         g_clean = g_clean / (g_norm + 1e-8)
-                    # İzolasyon aksiyomu: mevcut grad'ı koru değil, üzerine yaz
+                    
                     p.grad = g_clean
         except Exception as exc:
             logger.warning(f"  [VJP Cerrahi Uyarısı] Gradyan enjeksiyonu uyarısı: {exc}")
 
     def _grad_anlik_kopyala() -> List[torch.Tensor]:
-        """
-        [Nesne-Seviyesi PCGrad/MGDA Granülaritesi]
-        vjp_cerrahi_enjekte_et'ten hemen sonra çağrılır; o TEK adlandırılmış hata
-        nesnesinin (d_vec2, relu(e_vec2), kayip_grpo_vec, l_var_vec, ... gibi farklı
-        fiziksel büyüklüklerin ASLA aynı VJP'de birleştirilmeden) ürettiği anlık gradyan
-        anlık görüntüsünü döndürür. Bu şekilde her nesne, dış Pareto-PCGrad-MGDA
-        birleştiricisine (birlestir_ve_uygula_dagitik_gradyanlar) kendi ayrı satırı
-        olarak girer — M~binlerce elemanlı tam Jacobiyen'in hesaplanamaz maliyetiyle,
-        3 kaba fazda her şeyi tek VJP'de eritmenin çatışma-körlüğü arasındaki orta yol.
-        """
         return [p.grad.detach().clone() if p.grad is not None else torch.zeros_like(p) for p in trainable_params]
 
-    # ------------------------------------------------------------------------------
-    # FAZ 2: TOPOLOJİK İSKELET VE LİF LAPLASYENİ HESABI (N1 -> N2 -> N3 -> N11)
-    # ------------------------------------------------------------------------------
+    
     AnlasmaliVramGuvencesiAl(n1_byte, e1_girdi, takas_mgr=takas_mgr)
     e2_byte, x_initial = AcilDurumOomYakalayiciVeKurtarici(n1_byte.forward, e1_girdi, modul_nesnesi=n1_byte, takas_mgr=takas_mgr)
     raw_n2_topox = gpu_dagitici.kok_modul_al(n2_topox) if gpu_dagitici is not None else (n2_topox.module if hasattr(n2_topox, 'module') else n2_topox)
@@ -674,26 +513,15 @@ def _tekil_egitim_adimi_icra(
     vram_denetci.yokla_ve_raporla("N1_N3_TopolojiIskelesi", adim_no=current_step)
     
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir.D1, takas_mgr=takas_mgr)
-    # NOT (matrissiz Laplasyen): insa_et artık VARSAYILAN OLARAK [D,D] boyutunda yoğun
-    # Delta_0'ı KURMUYOR (hesapla_yogun_delta0=False) — bu tek matris VRAM baskısının
-    # başlıca kaynağıydı. Delta_0'a ihtiyaç duyan tüm tüketiciler (n7_cozucu) artık D0
-    # üzerinden laplasyen_ile_carp ile matematiksel olarak BİREBİR eşdeğer, matrissiz
-    # çalışıyor.
-    # KAPSAMLI DENETİM DÜZELTMESİ: AnlasmaliVramGuvencesiAl yalnızca PROAKTİF bir tahmindir
-    # (tahmin_et_vram_bayt formülüne dayanır) — bu tahmin tutmazsa (ör. F.pad/torch.cat'in
-    # transient tepe belleği, VRAM parçalanması) GERÇEK bir OOM hâlâ patlayabilir. Bu tek
-    # çağrı (D0'ı bizzat inşa eden, en büyük tekil tensörü üreten düğüm) diğer TÜM N1-N10
-    # çağrılarının aksine hiçbir REAKTİF (AcilDurumOomYakalayiciVeKurtarici) yakalayıcısından
-    # geçmiyordu — tam da bu yüzden bir önceki turda çıplak OOM ile çöktü.
+    
+    
     D0_op, _ = AcilDurumOomYakalayiciVeKurtarici(
         laplasyen_insa.insa_et, e3_sinir, e4_lif.phi_matrisleri,
         modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr
     )
     vram_denetci.yokla_ve_raporla("N11_LifLaplasyeniInsa", adim_no=current_step)
 
-    # D0_op, AnlasmaliVramGuvencesiAl'ın laplasyen_insa için verdiği CPU kararına göre
-    # CPU'da gelebilirken x_initial hâlâ GPU'da olabilir — çıplak çağrı "Expected all
-    # tensors to be on the same device" ile çökerdi (bkz. n9/n10 vb. aynı desen).
+    
     d_vec2 = AcilDurumOomYakalayiciVeKurtarici(
         n7_cozucu.hesapla_uyumsuzluk_vektoru, x_initial, D0_op,
         modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
@@ -703,28 +531,16 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
     )
 
-    # Kohomolojik uyumsuzluk (d_vec2) ve Dirichlet enerjisi (e_vec2) FİZİKSEL OLARAK
-    # farklı büyüklüklerdir — tek bir torch.cat + tek VJP'de eritilmezler, her biri
-    # kendi VJP'sini alır ve dış Pareto-PCGrad-MGDA birleştiricisine ayrı satır olarak girer.
+    
     _faz2_hedef_params = list(n3_lif.parameters()) + list(n2_topox.parameters())
-    # KARDEŞ-VJP: d_vec2 ve e_vec2 AYNI üst-grafı (x_initial, D0_op/Delta_0_op → N1/N2/N3)
-    # paylaşır. İlk çağrı retain_graph=True ile bu paylaşılan grafı canlı tutar; son çağrı
-    # varsayılan retain_graph=False ile gerçekten serbest bırakır (bkz. vjp_cerrahi_enjekte_et
-    # docstring'indeki "KARDEŞ-VJP UYARISI").
+    
+    
     vjp_cerrahi_enjekte_et(d_vec2, _faz2_hedef_params, retain_graph=True)
     g_faz2_uyumsuzluk = _grad_anlik_kopyala()
     vjp_cerrahi_enjekte_et(F.relu(e_vec2), _faz2_hedef_params)
     g_faz2_dirichlet = _grad_anlik_kopyala()
 
-    # BELLEK TUTMA (RETENTION) DÜZELTMESİ: D0_op (Faz2'nin Laplasyen'i, ~birkaç GB) bu
-    # noktadan sonra BİR DAHA HİÇ KULLANILMIYOR (Faz3 kendi D0_op_sabit'ini kurar), ama
-    # Python yerel değişken olarak fonksiyon sonuna kadar (Faz3/4/5, Pareto-PCGrad dahil)
-    # canlı tutuyordu — tam da VRAM baskısının en yüksek olduğu anda gereksiz yer
-    # kaplıyordu. NOT: d_vec2/e_vec2 SİLİNMEDİ — fonksiyonun sonunda
-    # (_kayip_bileseni_listesi, satır ~1074) hâlâ okunuyorlar; VJP'leri tüketilmiş
-    # olsa da .mean() ile tekrar erişilen SKALER değerler için tensörlerin kendisi
-    # (küçük, [V] boyutunda) hâlâ gerekli — yalnızca D0_op ([E*d_e, D], gerçek
-    # büyük tüketici) siliniyor.
+    
     del D0_op
     import gc as _gc
     _gc.collect()
@@ -733,39 +549,30 @@ def _tekil_egitim_adimi_icra(
 
     vram_denetci.yokla_ve_raporla("LOCO_Faz2_GrafSilindi", adim_no=current_step)
 
-    # ------------------------------------------------------------------------------
-    # FAZ 3: R-ADIMLI REKÜRENS DÖNGÜSÜ VE H^1 KOHOMOLOJİK AKIL YÜRÜTME (N4 -> N5 -> N6 -> N7)
-    # ------------------------------------------------------------------------------
+    
     GRPO_G = getattr(config, 'GRPO_G', 4)
     x_start_grouped = x_initial.repeat_interleave(GRPO_G, dim=0).detach()
     if gpu_cesitlendirici is not None:
         x_start_grouped = gpu_cesitlendirici.cesitlendir(x_start_grouped, step_seed=current_step)
     elif GRPO_G > 1:
-        # FASİL 1 DÜZELTMESİ: Öklid gürültüsü Stiefel dikgenliğini bozduğu için
-        # Teğet Uzayı Jeodezik Cayley çeşitlendirmesi uygulanır.
-        # x_g = x_0 · Cayley(ε·A_g), A_g ∈ so(D) antisimetrik → x_g^T x_g = I garantili.
+        
+        
         _noise_std = 0.01
         _D = x_start_grouped.shape[-1]
-        # DİĞER TÜM N1-N11 DÜĞÜMLERİNDEN FARKLI OLARAK bu blok herhangi bir
-        # tahmin_et_vram_bayt() beyan eden modüle bağlı değildi ve hiç
-        # AnlasmaliVramGuvencesiAl/NVMe-tahliye kontratı yapmadan doğrudan BEŞ ayrı
-        # [D, D] tensör (_M_g, _A_g, _I_D, _left, _right) tahsis ediyordu — bu da
-        # tam olarak Laplasyen'in D×D boyutu kadar VRAM ister ama VRAM zaten
-        # kritik doluyken hiç kontrol edilmeden çöküyordu (OOM). Diğer düğümlerle
-        # aynı ön-icra kontratını burada da açıkça uyguluyoruz.
+        
+        
         _cayley_gerekli_bayt = 5 * _D * _D * x_start_grouped.element_size()
         vram_on_kontrol_ve_nvme_tahliye(_cayley_gerekli_bayt, takas_mgr=takas_mgr)
         try:
             _M_g = torch.randn(_D, _D, device=x_start_grouped.device, dtype=x_start_grouped.dtype)
-            _A_g = 0.5 * (_M_g - _M_g.T)  # Antisimetrik Lie cebiri üreteci ∈ so(D)
+            _A_g = 0.5 * (_M_g - _M_g.T)  
             _I_D = torch.eye(_D, device=x_start_grouped.device, dtype=x_start_grouped.dtype)
             _left  = _I_D - (_noise_std / 2.0) * _A_g
             _right = _I_D + (_noise_std / 2.0) * _A_g
-            _cayley = torch.linalg.solve(_left, _right)  # Cayley(ε A_g) ∈ O(D)
+            _cayley = torch.linalg.solve(_left, _right)  
         except Exception as _cayley_exc:
-            # Tahsislerin KENDİSİ de (torch.linalg.solve değil, _M_g/_I_D/_left/_right
-            # tahsisleri de) OOM atabilir — güvenli kimlik-matris fallback'i tüm
-            # bloğu kapsayacak şekilde genişletildi (önceden sadece solve() sarılıydı).
+            
+            
             logger.warning(f"[Faz3_CayleyCesitlendirme] Tahsis/çözüm başarısız, kimlik fallback: {_cayley_exc}")
             _cayley = torch.eye(_D, device=x_start_grouped.device, dtype=x_start_grouped.dtype)
         x_start_grouped = torch.matmul(x_start_grouped, _cayley)
@@ -774,50 +581,37 @@ def _tekil_egitim_adimi_icra(
     e2_byte_grouped = E2_ByteTensoru(byte_tensor=e2_byte.byte_tensor.repeat_interleave(GRPO_G, dim=0))
     hedef_grouped = hedef_tensor.repeat_interleave(GRPO_G, dim=0)
     active_b = x_current.shape[0]
-    # KAPSAMLI DENETİM (madde 5): meclis_bellek dosyanın geri kalanında (ör. write/yaz
-    # çağrılarında) her zaman AnlasmaliVramGuvencesiAl + AcilDurumOomYakalayiciVeKurtarici
-    # ile korunurken bu ilk get_memory çağrısı hiç korumasızdı — VRAM baskısı altında
-    # çıplak OOM ile tüm adımı çökertebilirdi.
+    
+    
     AnlasmaliVramGuvencesiAl(meclis_bellek, active_b, takas_mgr=takas_mgr)
     M_current = AcilDurumOomYakalayiciVeKurtarici(
         meclis_bellek.get_memory, active_b, modul_nesnesi=meclis_bellek, takas_mgr=takas_mgr
     ).M
-    # Güvenlik: config.R < 1 olursa döngü hiç çalışmaz; mevcut_durum başlangıç durumuna sabitlenir
+    
     mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
-    # KAPSAMLI DENETİM DÜZELTMESİ: raw_n2_topox.forward'ın Faz2'deki İLK çağrısı (yukarıda,
-    # satır ~658-659) AnlasmaliVramGuvencesiAl + AcilDurumOomYakalayiciVeKurtarici ile tam
-    # korumalıyken, bu Faz3 "sabit" çağrısı HİÇ KORUMASIZDI (ne proaktif kontrat ne reaktif
-    # yakalayıcı) — aynı düğümün aynı adımdaki İKİNCİ çağrısı unutulmuştu.
+    
+    
     AnlasmaliVramGuvencesiAl(raw_n2_topox, e2_byte_grouped, takas_mgr=takas_mgr)
     e3_sinir_sabit = AcilDurumOomYakalayiciVeKurtarici(
         raw_n2_topox.forward, e2_byte_grouped, x_initial=x_start_grouped, mode='train',
         modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
     )
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir_sabit.D1, takas_mgr=takas_mgr)
-    # NOT (matrissiz Laplasyen): bkz. yukarıdaki D0_op açıklaması — dense Delta_0 artık
-    # hiç kurulmuyor, n6_aktor/n7_cozucu doğrudan D0_op_sabit ile matrissiz çalışıyor.
-    # KAPSAMLI DENETİM: bkz. yukarıdaki D0_op için eklenen aynı reaktif sarmalayıcı gerekçesi.
+    
+    
     D0_op_sabit, _ = AcilDurumOomYakalayiciVeKurtarici(
         laplasyen_insa.insa_et, e3_sinir_sabit, e4_lif.phi_matrisleri,
         modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr
     )
     if hasattr(n6_aktor, 'update_operators'):
-        # KAPSAMLI DENETİM (madde 21): update_operators yalnızca register_buffer çağrıları
-        # yapar (gerçek tahsis/hesaplama yok), bu yüzden AcilDurumOomYakalayiciVeKurtarici
-        # (gereksiz CPU-taşıma riski taşırdı) yerine hafif bir savunma yeterli — buffer
-        # kaydı beklenmedik şekilde başarısız olursa adımın tamamı çıplak çökmesin.
+        
+        
         try:
             n6_aktor.update_operators(D0_op_sabit)
         except Exception as _update_ops_exc:
             logger.warning(f"  [N6 update_operators Uyarısı] {_update_ops_exc}")
 
-    # KAPSAMLI DENETİM (madde 20): ÖNCEDEN sorgu_q_list/cevap_a_list, R döngüsünün HER
-    # adımında büyüyen listelerdi, ama yalnızca SON eleman (son_q/son_a, satır ~957-958
-    # ve son_a_detached, satır ~1055) hiç okunuyordu. R-1 önceki adımın tensörleri
-    # (her biri [B*GRPO_G, d_q]/[d_a]) Faz4/5 ve Pareto-PCGrad birleştirmesi boyunca
-    # hiçbir işlevsel sebep olmadan liste referanslarıyla canlı tutuluyordu — D0_op'un
-    # daha önce düzeltilen gereksiz tutulma hatasıyla aynı sınıf. Artık yalnızca SON
-    # değer bir değişkende tutuluyor.
+    
     sorgu_q_son: Optional[torch.Tensor] = None
     cevap_a_son: Optional[torch.Tensor] = None
 
@@ -841,10 +635,8 @@ def _tekil_egitim_adimi_icra(
             e6_sorgu_st = E6_GizilSorgu(q_r=q_c)
             e7_lokal_st = E7_LokalBilgi(a_r=a_c)
             AnlasmaliVramGuvencesiAl(n6_aktor, x_c, takas_mgr=takas_mgr)
-            # NOT: checkpoint(use_reentrant=False) bu fonksiyonu backward'da AYNEN
-            # tekrar çalıştırır (recompute) — reaktif kurtarıcı try/except tabanlı,
-            # saf ve yan etkisiz olduğu için hem forward hem recompute çağrısında
-            # güvenle devreye girer.
+            
+            
             e8_sentetik_st = AcilDurumOomYakalayiciVeKurtarici(
                 n6_aktor.forward, e5_a_st, e6_sorgu_st, e7_lokal_st, modul_nesnesi=n6_aktor, takas_mgr=takas_mgr
             )
@@ -891,9 +683,7 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
     )
 
-    # Aynı gerekçeyle (bkz. Faz 2) d_vec3 ve e_vec3 ayrı VJP'lerdir. KARDEŞ-VJP: ikisi de
-    # mevcut_durum.x_r/D0_op_sabit/Delta_0_op_sabit üzerinden AYNI üst-grafı (R-döngüsü,
-    # checkpoint(N6/N7) zinciri) paylaşır — ilk çağrı retain_graph=True gerektirir.
+    
     _R_norm = float(max(1, config.R))
     _faz3_hedef_params = list(n6_aktor.parameters()) + list(n4_sorgu.parameters()) + list(n5_cevap.parameters())
     vjp_cerrahi_enjekte_et(d_vec3 / _R_norm, _faz3_hedef_params, retain_graph=True)
@@ -902,21 +692,12 @@ def _tekil_egitim_adimi_icra(
     g_faz3_dirichlet = _grad_anlik_kopyala()
     vram_denetci.yokla_ve_raporla("LOCO_Faz3_GrafSilindi", adim_no=current_step)
 
-    # ------------------------------------------------------------------------------
-    # FAZ 4-5: CHEBYSHEV SPEKTRAL PROJEKSİYON VE GRPO ÖDÜL KANVASI (N8 -> N10)
-    # ------------------------------------------------------------------------------
+    
     e9_guncel_detached = E9_GuncellenmisGizilDurum(x_next=e9_guncel.x_next.detach())
     AnlasmaliVramGuvencesiAl(n8_chebyshev, e9_guncel_detached.x_next, takas_mgr=takas_mgr)
     e10_kulli = AcilDurumOomYakalayiciVeKurtarici(n8_chebyshev.forward, e9_guncel_detached, modul_nesnesi=n8_chebyshev, takas_mgr=takas_mgr)
 
-    # DÜZELTME: n8_b_uzunluk.forward() "Dinamik Uzunluk Seçici" görevini yaparak
-    # N* = Clamp(N_teorik + Delta_N, N_min, N_max) hesaplıyordu (sınıf docstring'i:
-    # "Nihai Dinamik Uzunluk"), ama dönen N_star_int değeri `_` ile atılıyor, yerine
-    # SABİT config.N kullanılıyordu — bu, N8_B'nin bütün mimari amacını (arc-length
-    # geometrisine göre cümle uzunluğunu dinamik seçmek) tamamen devre dışı bırakıyordu.
-    # KAPSAMLI DENETİM: n8_b_uzunluk hiçbir yerde proaktif AnlasmaliVramGuvencesiAl
-    # kontratına girmiyordu (yalnızca reaktif sarmalayıcısı vardı) — diğer tüm N1-N10
-    # düğümleriyle aynı desene tamamlandı.
+    
     AnlasmaliVramGuvencesiAl(n8_b_uzunluk, e10_kulli.C, takas_mgr=takas_mgr)
     N_star_int, L_arc_tensor, N_ste_tensor, delta_n_tensor = AcilDurumOomYakalayiciVeKurtarici(
         n8_b_uzunluk.forward, e10_kulli, cheby_calc,
@@ -924,14 +705,12 @@ def _tekil_egitim_adimi_icra(
     )
     N_star = N_star_int
     L_arc_val = L_arc_tensor.item()
-    # KAPSAMLI DENETİM: cheby_calc.hesapla hiçbir korumadan (ne proaktif ne reaktif)
-    # geçmiyordu — T_matrix boyutu N_star'a bağlı olduğundan (dinamik) OOM riski taşır.
+    
+    
     T_matrix = AcilDurumOomYakalayiciVeKurtarici(cheby_calc.hesapla, N=N_star, takas_mgr=takas_mgr)
     hedef_clamped = torch.clamp(hedef_grouped[:, :N_star], min=0, max=getattr(config, 'V_size', 32000) - 1)
 
-    # NOT: N9 (Vandermonde) ve N10 (Softmax Sözlük İzdüşümü) [B, N, V_size] gibi devasa
-    # boyutlu tensörler ürettiği için OOM riski en yüksek düğümlerdir — reaktif kurtarıcı
-    # burada özellikle kritiktir.
+    
     AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_kulli.C.shape[0], N_star), takas_mgr=takas_mgr)
     e11_gomulu = AcilDurumOomYakalayiciVeKurtarici(n9_vandermonde.forward, e10_kulli, T_matrix, modul_nesnesi=n9_vandermonde, takas_mgr=takas_mgr)
     AnlasmaliVramGuvencesiAl(n10_sozluk, e11_gomulu.X_output, takas_mgr=takas_mgr)
@@ -939,25 +718,18 @@ def _tekil_egitim_adimi_icra(
 
     with torch.no_grad():
         x_start_detached = E9_GuncellenmisGizilDurum(x_next=x_start_grouped.detach())
-        # KAPSAMLI DENETİM: n8_chebyshev'in bu (cevapsız) çağrısı reaktif sarmalıydı ama
-        # kendi proaktif kontratı burada yoktu (yalnızca üstteki "cevaplı" çağrı guard'lıydı).
+        
+        
         AnlasmaliVramGuvencesiAl(n8_chebyshev, x_start_detached.x_next, takas_mgr=takas_mgr)
         e10_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n8_chebyshev.forward, x_start_detached, modul_nesnesi=n8_chebyshev, takas_mgr=takas_mgr)
         AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_cevapsiz.C.shape[0], N_star), takas_mgr=takas_mgr)
         e11_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n9_vandermonde.forward, e10_cevapsiz, T_matrix, modul_nesnesi=n9_vandermonde, takas_mgr=takas_mgr)
-        # KAPSAMLI DENETİM: n9'un guard'ı yalnızca n9'u kapsar — n10_sozluk'ün bu (cevapsız)
-        # çağrısının kendi proaktif kontratı hiç yoktu (yalnızca üstteki "cevaplı" çağrı
-        # guard'lıydı).
+        
+        
         AnlasmaliVramGuvencesiAl(n10_sozluk, e11_cevapsiz.X_output, takas_mgr=takas_mgr)
         e12_olasilik_cevapsiz = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward, e11_cevapsiz, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
 
-    # e12_olasilik.P ve e12_olasilik_cevapsiz.P, n10_sozluk'ün (birbirinden BAĞIMSIZ)
-    # iki ayrı çağrısından geliyor — her biri kendi VRAM kontratına göre CPU'ya
-    # düşmüş olabilir. Reaktif yakalayıcı yalnızca belirli hata mesajı kalıplarını
-    # tanıyor ("Expected all tensors..."); "CUDAGuardImpl initialized with non-CUDA
-    # DeviceType" gibi bir varyant o kalıba uymuyor ve çıplak çöküyordu. Burada
-    # tahmine/reaktif yakalamaya güvenmek yerine cihazı AÇIKÇA, tek kaynaktan
-    # (x_start_grouped'ın GPU/CPU durumu) hizalıyoruz.
+    
     _hesap_cihazi = x_start_grouped.device
     p_target_cevapli = e12_olasilik.P
     if p_target_cevapli.device != _hesap_cihazi:
@@ -970,12 +742,8 @@ def _tekil_egitim_adimi_icra(
 
     son_q = sorgu_q_son
     son_a = cevap_a_son
-    # n9/n10 gibi bu çağrı da AcilDurumOomYakalayiciVeKurtarici İLE sarmalanmalı:
-    # Delta_0=D0_op_sabit artık (bkz. Riyazi_LifLaplasyeniBlokInsaEdici.insa_et
-    # düzeltmesi) VRAM kontratı CPU'ya yönlendirdiğinde GERÇEKTEN CPU'da gelebiliyor,
-    # oysa q_r/a_r/x_context/kayip_* burada hâlâ GPU'da — çıplak çağrı "Expected all
-    # tensors to be on the same device" ile çöküyordu. Sarmalayıcı hem bunu hem de
-    # olası OOM'u yakalayıp tüm argümanları ortak bir cihaza (CPU) çekip tekrar dener.
+    
+    
     R_q, metrikler_q = AcilDurumOomYakalayiciVeKurtarici(
         odul_motoru.hesapla_aktif_sorgu_odulu,
         q_r=son_q, a_r=son_a, x_context=x_start_grouped,
@@ -983,24 +751,18 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=odul_motoru, takas_mgr=takas_mgr
     )
 
-    # Aynı gerekçe: e12_olasilik.P, n10_sozluk'ün VRAM kontratı CPU'ya yönlendirdiğinde
-    # CPU'da gelebilir; hedef_grouped ise hâlâ GPU'da olabilir — çıplak çağrı "Expected
-    # all tensors to be on the same device" ile çökerdi (bkz. toplam_oduller = oduller_base
-    # + R_q çökmesi: oduller_base CPU'da, R_q GPU'daydı).
+    
     oduller_base = AcilDurumOomYakalayiciVeKurtarici(
         odul_motoru.hesapla, e12_olasilik.P, hedef_grouped[:, :N_star],
         modul_nesnesi=odul_motoru, takas_mgr=takas_mgr
     )
-    # odul_motoru (N14_OdulTopolojikDevresmezlikMotoru) parametresiz düz bir sınıf —
-    # AcilDurumOomYakalayiciVeKurtarici'nin "geri_donus_cihazi" tahmini bu durumda
-    # ilk tensör argümanının (e12_olasilik.P) cihazına dayanır, ki bu da başka bir
-    # düğümün VRAM kontratına göre CPU olabilir. R_q ile toplanmadan ÖNCE tahmine
-    # güvenmeyip cihazı burada AÇIKÇA hizalıyoruz — tek kaynaktan doğruluk.
+    
+    
     if oduller_base.device != R_q.device:
         oduller_base = oduller_base.to(R_q.device)
     toplam_oduller = oduller_base + R_q
-    # e12_olasilik.P (n10_sozluk'ün CPU-fallback'inden kalmış olabilir) ve
-    # hedef_grouped/toplam_oduller (GPU) aynı çağrıda karışabiliyordu.
+    
+    
     kayip_grpo_vec = AcilDurumOomYakalayiciVeKurtarici(
         grpo_kriteri.hesapla_vektor, e12_olasilik.P, hedef_grouped[:, :N_star], toplam_oduller,
         modul_nesnesi=grpo_kriteri, takas_mgr=takas_mgr
@@ -1014,28 +776,7 @@ def _tekil_egitim_adimi_icra(
         vicreg_kriteri, x=e9_guncel_detached.x_next, z=e11_gomulu.X_output, modul_nesnesi=vicreg_kriteri, takas_mgr=takas_mgr
     )
     
-    # HATA #1/#2 DÜZELTMESİ (kapsamlı denetimde bulundu — 30 hatalık listenin 1. ve 2.
-    # maddesi): Bu 5 çağrı (kayip_grpo_vec, l_var_vec, l_cov_vec, l_rec_vec,
-    # kayip_spektral_vec) HEPSİ e10_kulli (n8_chebyshev'in çıktısı) üzerinden AYNI
-    # paylaşılan üst-grafı paylaşan TEK bir KARDEŞ-VJP grubudur:
-    #   kayip_grpo_vec        <- e12_olasilik.P <- n10_sozluk <- e11_gomulu <- n9_vandermonde <- e10_kulli
-    #   l_var/l_cov/l_rec_vec <- z=e11_gomulu.X_output        <- n9_vandermonde <- e10_kulli
-    #   kayip_spektral_vec    <- L_arc/N_ste/delta_n           <- n8_b_uzunluk  <- e10_kulli
-    # ÖNCEDEN hepsi retain_graph=False (varsayılan) kullanıyordu: İLK çağrı (kayip_grpo_vec)
-    # paylaşılan e10_kulli grafını ANINDA siliyor, sonraki 4 çağrının hepsi "Trying to
-    # backward through the graph a second time" hatası alıp vjp_cerrahi_enjekte_et'in
-    # çıplak `except`ine sessizce yutuluyordu — yani VICReg (var/cov/rec) ve spektral
-    # kayıp GERÇEKTE HİÇ EĞİTMİYORDU, hiçbir hata/uyarı görünür olmadan.
-    # DÜZELTME: grup içindeki İLK 4 çağrı retain_graph=True, yalnızca SON çağrı
-    # (kayip_spektral_vec) varsayılan retain_graph=False ile grafı gerçekten serbest bırakır.
-    #
-    # AYRICA (aynı kökten 2. hata): l_var/l_cov/l_rec_vec, n10_sozluk'ün DEĞİL —
-    # n9_vandermonde'un (ve onun atası n8_chebyshev'in) çıktısı olan z=e11_gomulu.X_output
-    # üzerinden hesaplanıyor; n10_sozluk bu tensörlerin atası bile değil. Eskiden
-    # `_n10_hedef_params` (n10_sozluk.parameters()) hedef olarak kullanılıyordu —
-    # allow_unused=True bu durumda sessizce None döndürüyordu. Artık doğru atalar
-    # (n9_vandermonde + n8_chebyshev; vicreg_kriteri parametresiz bir sınıf, dahil
-    # edilmedi) hedefleniyor.
+    
     _n10_hedef_params = list(n10_sozluk.parameters())
     _vicreg_hedef_params = list(n9_vandermonde.parameters()) + list(n8_chebyshev.parameters())
     vjp_cerrahi_enjekte_et(kayip_grpo_vec, _n10_hedef_params, retain_graph=True)
@@ -1050,69 +791,42 @@ def _tekil_egitim_adimi_icra(
     vjp_cerrahi_enjekte_et(kayip_spektral_vec, list(n8_chebyshev.parameters()) + list(n8_b_uzunluk.parameters()))
     g_spektral = _grad_anlik_kopyala()
 
-    # --- HATA 1 DÜZELTMESİ: Canlı Graf Üzerinden N4 VJP Enjeksiyonu ---
-    # sorgu_q_list[-1] kopuk graftan geliyor; N4 gradyanı için canlı forward gerekli
-    # x_r'ı donduruyoruz çünkü amacımız sadece N4 parametrelerine gradyan iletmek
+    
     _x_canli = mevcut_durum.x_r.detach()
     e5_a_canli_2 = E5_A_MevcutGizilDurum(x_r=_x_canli)
     e5_b_canli = E5_B_BellekGonderimi(M=M_current.detach())
-    # n4_sorgu.forward'ın Faz3 döngüsündeki ilk çağrısı (yukarıda, e6_sorgu =
-    # AcilDurumOomYakalayiciVeKurtarici(...)) zaten sarmalıyken bu TAZE çağrı
-    # çıplaktı — D0_operator=D0_op_sabit VRAM kontratına göre CPU'da gelebilirken
-    # n4_sorgu'nun kendi ağırlıkları GPU'da olabilir (ya da tam tersi, n4_sorgu'nun
-    # kendisi de AnlasmaliVramGuvencesiAl ile CPU'ya yönlendirilmiş olabilir).
+    
+    
     e6_sorgu_canli = AcilDurumOomYakalayiciVeKurtarici(
         n4_sorgu.forward, e5_a_canli_2,
         D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b_canli,
         modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
     )
     son_a_detached = cevap_a_son.detach()
-    # KAPSAMLI DENETİM (madde 7): e6_sorgu_canli.q_r (reaktif kurtarıcının CPU-fallback'inden
-    # kalmış olabilir) ve son_a_detached (hâlâ GPU'da olabilir) arasında açık cihaz hizalaması
-    # yoktu — çıplak çıkarma "Expected all tensors to be on the same device" ile çökerdi.
+    
+    
     _q_r_canli = e6_sorgu_canli.q_r
     if _q_r_canli.device != son_a_detached.device:
         _q_r_canli = _q_r_canli.to(son_a_detached.device)
     E_sorgu_canli = (_q_r_canli.unsqueeze(1) - son_a_detached.unsqueeze(2)).pow(2).mean(dim=-1)
     vjp_cerrahi_enjekte_et(E_sorgu_canli, list(n4_sorgu.parameters()))
     g_sorgu = _grad_anlik_kopyala()
-    # -----------------------------------------------------------------------
+    
 
-    # --- BÜTÜNCÜL CÜMLE KEYFİYETİ: 11. Adlandırılmış PCGrad Nesnesi ---
-    # Kelime-bazlı P > 0.1 sezgiselinin yanına, Sorgu-Cevap ahengi (N4), Eşsınır
-    # kararlılığı (D0 üzerinden) ve Spektral/Kapasite uyumunun (N8-N9) ÇARPIMSAL
-    # mutabakatını ölçen ayrı bir sinyal ekler.
-    #
-    # NOT: e6_sorgu_canli.q_r TEKRAR KULLANILAMAZ — g_sorgu'nun VJP'si
-    # (vjp_cerrahi_enjekte_et(E_sorgu_canli, ...)) retain_graph=False ile onun
-    # grafını zaten tüketti; aynı tensörü ikinci bir VJP'de kullanmaya çalışmak
-    # "Trying to backward through the graph a second time" hatası doğurur — tam
-    # olarak HATA 1'in kendisinin çözdüğü sorunun aynısı. Bu yüzden AYRI, TAZE bir
-    # n4_sorgu.forward() çağrısı ile bağımsız bir graf üretilir (e5_a_canli_2 ve
-    # e5_b_canli zaten detached/leaf girdiler olduğu için bu ikinci çağrı hiçbir
-    # paylaşılan graf düğümüne dokunmaz, tamamen bağımsızdır).
     e6_sorgu_canli_cumle = AcilDurumOomYakalayiciVeKurtarici(
         n4_sorgu.forward, e5_a_canli_2,
         D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b_canli,
         modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
     )
-    # NOT 2: L_arc_tensor/N_ste_tensor DE TEKRAR KULLANILAMAZ — kayip_spektral_vec'in
-    # VJP'si (n8_chebyshev + n8_b_uzunluk parametrelerini hedefleyerek) bu tensörlerin
-    # TÜM grafını retain_graph=False ile zaten tüketti. n8_b_uzunluk.forward() TAZE
-    # çağrılır (e10_kulli'nin KENDİ DEĞERİ hâlâ geçerlidir, yalnızca onun ESKİ backward
-    # grafı ölüdür — yeni bir forward çağrısı yeni, bağımsız bir graf üretir). Ancak
-    # e10_kulli'nin kendi atası (n8_chebyshev'e kadar) hâlâ ölü olduğu için bu VJP'nin
-    # hedefi yalnızca n8_b_uzunluk.parameters() ile sınırlı tutulur — n8_chebyshev.
-    # parameters() İSTENMEZ (aksi halde e10_kulli'nin ölü atasına geri backward
-    # denemesi gerekirdi ve aynı "graph a second time" hatası tekrar oluşurdu).
+    
+    
     AnlasmaliVramGuvencesiAl(n8_b_uzunluk, e10_kulli.C, takas_mgr=takas_mgr)
     _, L_arc_cumle, N_ste_cumle, _ = AcilDurumOomYakalayiciVeKurtarici(
         n8_b_uzunluk.forward, e10_kulli, cheby_calc,
         modul_nesnesi=n8_b_uzunluk, takas_mgr=takas_mgr
     )
-    # D0_op=D0_op_sabit burada da (bkz. yukarıdaki hesapla_aktif_sorgu_odulu /
-    # n4_sorgu.forward düzeltmeleri) VRAM kontratına göre CPU'da gelebilirken diğer
-    # argümanlar (e6_sorgu_canli_cumle.q_r, hedef_grouped vb.) GPU'da olabilir.
+    
+    
     kayip_cumle_keyfiyet_vec = AcilDurumOomYakalayiciVeKurtarici(
         cumle_keyfiyet_motoru.hesapla_vektor,
         q_son=e6_sorgu_canli_cumle.q_r,
@@ -1127,18 +841,11 @@ def _tekil_egitim_adimi_icra(
     _cumle_hedef_params = list(n4_sorgu.parameters()) + list(n8_b_uzunluk.parameters())
     vjp_cerrahi_enjekte_et(kayip_cumle_keyfiyet_vec, _cumle_hedef_params)
     g_cumle_keyfiyet = _grad_anlik_kopyala()
-    # -----------------------------------------------------------------------
+    
 
     vram_denetci.yokla_ve_raporla("LOCO_Faz4_5_GrafSilindi", adim_no=current_step)
 
-    # ------------------------------------------------------------------------------
-    # PARETO-PCGRAD DİKGEN PROJEKSİYONU VE NİHAİ KÜRESEL GÜNCELLEME
-    # ------------------------------------------------------------------------------
-    # [4. HATA DÜZELTMESİ] Nesne-Seviyesi Granülerlik: 3 kaba faz yerine, her adlandırılmış
-    # hata büyüklüğü (11 nesne — Bütüncül Cümle Keyfiyeti dahil) kendi ayrı satırı olarak
-    # Gram matrisine/PCGrad'a girer. Gerçek MGDA'nın istediği "her bileşen için ayrı gradyan"
-    # idealinin, M~binlerce elemanlı tam Jacobiyen yerine VRAM'e sığan bir yaklaşımı
-    # (bkz. _grad_anlik_kopyala).
+    
     shard_gradyanlari = [
         g_faz2_uyumsuzluk, g_faz2_dirichlet,
         g_faz3_uyumsuzluk, g_faz3_dirichlet,
@@ -1147,25 +854,8 @@ def _tekil_egitim_adimi_icra(
     ]
     _P_toplam = sum(p.numel() for p in trainable_params)
     AnlasmaliVramGuvencesiAl(pareto_pcgrad_operator, (len(shard_gradyanlari), _P_toplam), takas_mgr=takas_mgr)
-    # KAPSAMLI DENETİM (madde 6): Bu çağrı BİLEREK AcilDurumOomYakalayiciVeKurtarici'ye
-    # sarmalanmadı — o sarmalayıcının CPU-retry deseni trainable_params/optimizer gibi
-    # CANLI, optimizer durumuna bağlı nesneleri CPU'ya taşımaya çalışır, bu da optimizer
-    # momentum/varyans durumunu bozma riski taşır. Ama adımın en büyük, en son (VRAM zaten
-    # en dolu olduğu anda) tahsisini yapan bu çağrı hiçbir korumadan geçmeden çıplak
-    # bırakılıyordu. Burada CİHAZ DEĞİŞTİRMEYEN, güvenli bir tek-seferlik GPU-içi retry
-    # ekleniyor: gerçek bir OOM'da gc.collect()/empty_cache() ile bir kez temizlenip AYNI
-    # GPU'da tekrar denenir; yine başarısız olursa olduğu gibi yeniden fırlatılır (optimizer
-    # durumu asla yarım/tutarsız bir cihaza bölünmez).
-    # DÜZELTME (mat2 cuda:0 / cpu cihaz uyumsuzluğu — kök neden giderme): acil_durum_
-    # oom_yakalayici_ve_kurtarici artık kurtardığı modülleri ANINDA GPU'ya geri taşımıyor
-    # (bu, hâlâ canlı bir VJP grafiği varken parametrenin .data'sını değiştirip grafiği
-    # bozuyordu) — bunun yerine takas_mgr._bekleyen_cihaz_geri_yuklemeleri listesine
-    # kaydediyor. Bu noktada (Pareto-PCGrad'ın optimizer.step()'inden HEMEN ÖNCE) bu
-    # adımın TÜM VJP/backward çağrıları (Faz2-5, GRPO, VICReg, spektral, sorgu, cümle
-    # keyfiyet — hepsi yukarıda, retain_graph=False ile grafları serbest bırakarak tamamlandı)
-    # zaten bitmiş durumda — artık hiçbir canlı graf bu parametrelere referans tutmuyor,
-    # bu yüzden modülleri şimdi GPU'ya geri taşımak güvenlidir VE optimizer.step()'in
-    # "exp_avg cuda, param cpu" ile çökmesini önlemek için ZORUNLUDUR.
+    
+    
     _bekleyen_restore = getattr(takas_mgr, "_bekleyen_cihaz_geri_yuklemeleri", None) if takas_mgr is not None else None
     if _bekleyen_restore:
         for _modul, _hedef_cihaz in _bekleyen_restore:
@@ -1198,13 +888,7 @@ def _tekil_egitim_adimi_icra(
             max_norm=1.0
         )
 
-    # BELLEK TUTMA (RETENTION) DÜZELTMESİ: shard_gradyanlari (ve onu oluşturan 11 adet
-    # g_faz2_uyumsuzluk/g_faz2_dirichlet/.../g_cumle_keyfiyet parametre-uzayı boyutlu
-    # gradyan kopyası) birlestir_ve_uygula_dagitik_gradyanlar TAMAMLANDIKTAN sonra bir
-    # daha HİÇ okunmuyor — nihai gradyanlar zaten p.grad'a yazıldı (grad_norm_pareto
-    # p.grad üzerinden okur, shard_gradyanlari'ndan değil). Ama fonksiyon-seviyesi yerel
-    # değişkenler oldukları için adımın SONUNA kadar (Stiefel izdüşümü dahil) canlı
-    # kalıyorlardı — D0_op'un daha önce düzeltilen aynı sınıf gereksiz tutulma hatası.
+    
     del shard_gradyanlari
     del g_faz2_uyumsuzluk, g_faz2_dirichlet, g_faz3_uyumsuzluk, g_faz3_dirichlet
     del g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec, g_spektral, g_sorgu, g_cumle_keyfiyet
@@ -1220,7 +904,7 @@ def _tekil_egitim_adimi_icra(
 
     vram_denetci.yokla_ve_raporla("LOCO_Pareto_PCGrad_StepCompleted", adim_no=current_step)
 
-    # ADIM SONUNDA SMW MECLİS BELLEĞİNİ TÜREV GRAFİĞİNDEN KOPAR
+    
     if hasattr(meclis_bellek, 'detach_memory'):
         meclis_bellek.detach_memory()
     elif hasattr(meclis_bellek, 'M') and meclis_bellek.M is not None:
@@ -1228,16 +912,7 @@ def _tekil_egitim_adimi_icra(
         if hasattr(meclis_bellek, 'R') and meclis_bellek.R is not None:
             meclis_bellek.R = meclis_bellek.R.detach()
 
-    # HAKİKİ BİLEŞKE KAYIP: rastgele/eksik bir ham toplam (eskiden yalnızca 6/11 nesneyi
-    # kapsıyordu ve Pareto'nun uyguladığı gerçek ağırlıklandırmayla hiçbir illiyet bağı
-    # yoktu) yerine, shard_gradyanlari ile AYNI SIRADAKİ 11 nesnenin skaler ortalaması,
-    # optimizer.step()'e fiilen giren GERÇEK Pareto-optimal ağırlıklarla (alpha_pareto)
-    # tartılarak birleştirilir. NOT: grad_norm_pareto burada KULLANILMAZ — o,
-    # clip_grad_norm_(max_norm=1.0) SONRASI ölçüldüğü için neredeyse sabit (~1.0) bir
-    # değerdir ve best_loss ayrımı için bilgi taşımaz; gradyan şiddeti zaten kayıp
-    # kalitesiyle aynı şey değildir (yakınsama yaklaştıkça gradyan küçülür, bu "daha iyi
-    # model" anlamına gelmez). Aşağıdaki ağırlıklı toplam ise gerçekten "o adımda hangi
-    # bileşenin ne kadar önemsendiği" ile orantılı, kayıp-anlamlı bir skalerdir.
+    
     _kayip_bileseni_listesi = [
         d_vec2.mean(), F.relu(e_vec2).mean(),
         (d_vec3 / _R_norm).mean(), (F.relu(e_vec3) / _R_norm).mean(),
@@ -1250,13 +925,8 @@ def _tekil_egitim_adimi_icra(
     ))
     
     raw_n3_lif = gpu_dagitici.kok_modul_al(n3_lif) if gpu_dagitici is not None else (n3_lif.module if hasattr(n3_lif, 'module') else n3_lif)
-    # KAPSAMLI DENETİM (madde 21): izdüsür, raw_n3_lif.phi_base'i (canlı bir nn.Parameter)
-    # torch.no_grad() altında .copy_() ile YERİNDE günceller. AcilDurumOomYakalayiciVeKurtarici
-    # İLE SARMALANAMAZ: o sarmalayıcının CPU-retry deseni argümanı CPU'ya taşıyıp fonksiyonu
-    # o KOPYA üzerinde çalıştırır — phi_base'in gerçek GPU parametresi hiç güncellenmez,
-    # sessizce hiçbir şey olmamış gibi devam eder (D0 sınıfı bir sessiz-bozulma riski). Bunun
-    # yerine Pareto-PCGrad'daki (madde 6) ile aynı, cihaz DEĞİŞTİRMEYEN güvenli GPU-içi
-    # tek-seferlik retry uygulanıyor.
+    
+    
     try:
         stiefel_izdusurucu.izdüsür(raw_n3_lif.phi_base)
     except (torch.cuda.OutOfMemoryError if hasattr(torch.cuda, "OutOfMemoryError") else RuntimeError) as _stiefel_oom:
@@ -1272,55 +942,30 @@ def _tekil_egitim_adimi_icra(
 
     if _takas_cm is not None:
         _takas_cm.__exit__(None, None, None)
-        # Normal (istisnasız) çıkışta izlenen referans temizlenir — aksi halde
-        # ilerideki bir adımda guvenli_kapat_varsa() bu ZATEN KAPANMIŞ context
-        # manager'ı tekrar __exit__ edip kanca yığınını (hook stack) fazladan
-        # pop ederek bozabilirdi (bkz. guvenli_kapat_varsa tanımı).
+        
+        
         if takas_mgr is not None and hasattr(takas_mgr, "_aktif_kapsam_muhafizi"):
             takas_mgr._aktif_kapsam_muhafizi = None
-        # ADIMLAR ARASI SIZINTI DÜZELTMESİ: saved_tensors_hooks kapsamı (_takas_cm) tam
-        # burada kapanıyor — yani bu adımda offload edilmiş ama backward'ı hiç çalışmamış
-        # (retain_graph=False ile grafı erken serbest bırakılmış) her tensör artık KESİN
-        # OLARAK yetimdir; bir daha asla geri çağrılmayacaktır. GuvenliVramVeTmpSupurgesi
-        # bu tür kayıtları 120 sn'lik zaman aşımına kadar bekletiyordu (bkz. o sınıfın
-        # docstring'i — ref_count hiç düşmediği için önceden HİÇ süpürülmüyordu); burada
-        # adım sonunda AÇIKÇA temizleyerek /tmp/kulli_scratchpad'in ve kayıt defterinin
-        # adım adım büyümesini (sızıntıyı) önlüyoruz.
+        
+        
         if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
             takas_mgr.temizle(agresif=True)
 
-    # CPYTHON STACK FRAME SONU: Fonksiyon return ettiği an tüm yerel bellek değişkenleri yok edilir!
+    
     return kayip_val, L_arc_val, dirichlet_energy, d_discrepancy
 
 
-# ==============================================================================
-# III. HAKİKİ VE DETAYLI EĞİTİM YÜRÜTÜCÜ SÜRECİ (MAIN EXECUTION)
-# ==============================================================================
 def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json", idareci: Optional[Any] = None) -> None:
-    # NOT: 'idareci' parametresi KULLANILMAZ (geriye dönük çağrı uyumluluğu için
-    # kabul edilir, silinmez). Eski CpuAnaIdareci/GPU-işçi-süreci/NCCL çoklu-süreç
-    # mimarisi bu fonksiyonun içinde HİÇ referans edilmez — VRAM/OOM idaresi tek
-    # süreçte, AnlasmaliVramGuvencesiAl + AcilDurumOomYakalayiciVeKurtarici üzerinden
-    # yürür. Çağıran notebook hücresinde CpuAnaIdareci().surecleri_baslat_ve_ilkle()
-    # (4 GPU işçi süreci + NCCL halkası) çağrılıyorsa TAMAMEN GEREKSİZDİR, sadece
-    # başlangıçta zaman kaybettirir — kaldırılmalıdır.
+    
+    
     logger.info("================================================================================")
     logger.info("BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ EĞİTİM YÜRÜTÜCÜSÜ (ÇOKLU GPU PARALEL DÖNGÜ)")
     logger.info("================================================================================")
 
-    # TasmaFarkindaHesaplamaIdaresi.baslat() KASITLI OLARAK ÇAĞRILMIYOR — küresel
-    # torch.matmul/F.linear monkey-patch'i yalnızca bizim çağrılarımızı değil
-    # PyTorch'un KENDİ İÇ yollarını da (autograd backward ilkelleri, batched/broadcast
-    # matmul, .T transpose view'ları) yakalıyor ve gerçek bir Kaggle koşusunda 2. eğitim
-    # adımında "RuntimeError: self must be a matrix" üretti (insa_et içindeki
-    # Delta_0 = D0^T @ D0 çağrısı üzerinden). Taşma-bazlı çoklu-GPU dağıtımı artık
-    # yalnızca gerçekten büyük olduğu bilinen noktalarda AÇIKÇA
-    # (tasma_bazli_capraz_gpu_matmul_sardla) kullanılıyor — bkz. insa_et.
-
-    # NVMe Takas Yöneticisini İlkle (Sıfır OOM Garantisi)
+    
     takas_mgr = NvmeTakasYoneticisi()
     
-    # 1. Konfigürasyon Yükleme
+    
     param_dict = {}
     if konfig_yolu and os.path.exists(konfig_yolu):
         with open(konfig_yolu, 'r', encoding='utf-8') as f:
@@ -1333,15 +978,15 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     GRPO_G = getattr(config, 'GRPO_G', 4)
     logger.info(f"Çalışma Cihazı: {config.device} | GRPO Grup (G): {GRPO_G} | Rekürens (R): {config.R}")
 
-    # 2. Checkpoint ve Hiyerarşik Hafıza Yöneticisi
+    
     ckpt_dizini = "/kaggle/working" if os.path.exists("/kaggle/working") else "./checkpoints"
     npz_mgr = NPZCheckpointManager(checkpoint_dir=ckpt_dizini)
 
-    # Kaggle disk dolmasını engellemek için başlangıçta yetim ve eski dinamik dosyaları temizle
+    
     npz_mgr.purge_orphan_checkpoints()
     npz_mgr.load_hafiza_state()
 
-    # 3. Bilişsel Düğümler (N1 - N16) ve Modüllerin Açık İnşası
+    
     n1_byte = N1_ByteAyristirici(config).to(config.device)
     n2_topox = N2_TopoXHucreOlusumu(config).to(config.device)
     n3_lif = N3_LifSinirlamaAtama(config).to(config.device)
@@ -1391,12 +1036,9 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     }
 
 
-
-    # Modül Ağırlıklarını Dikgen (Orthogonal) Olarak İlkle
     agirlik_ilkleyici = Riyazi_AgirlikIlkleyici()
     agirlik_ilkleyici.ilkle(list(tum_moduller.values()))
 
-    # KÜLLÎ SANAL GPU: Modüller tekil sanal VRAM havuzunda doğrudan çalışır.
     
     trainable_params = []
     seen_params = set()
@@ -1411,11 +1053,11 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
 
     vram_denetci = Hafiza_Izleyici_ve_VRAM_Denetci(cihaz=config.device, kritik_esik_yuzde=0.85)
 
-    # Hakiki Checkpoint ve Hiyerarşik Hafıza Restorasyonu
+    
     baslangic_step, loss_history = npz_mgr.load_pytorch_model(tum_moduller, optimizer)
     current_step = baslangic_step
     
-    # Restore sonrası Stiefel dikgenliğini garantile
+    
     with torch.no_grad():
         n3_lif.phi_base.copy_(stiefel_qr_projection(n3_lif.phi_base.data))
     
@@ -1423,8 +1065,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     SAVE_EVERY_N_STEPS = getattr(config, 'save_every_n_steps', 100)
     logger.info(f"Eğitim Başlangıç Adımı (Step): {current_step} | En İyi Kayıp (Best Loss): {best_loss:.6f} | Periyodik Kayıt Sıklığı: {SAVE_EVERY_N_STEPS} Adım")
 
-    # 4. Hiyerarşik Dosya Hafızası ile Sürekli Eğitim Döngüsü
-    MAX_TRAINING_SECONDS = 41400.0  # 11 saat 30 dakika (Kaggle 12h aşımı öncesi emniyet kapaması)
+    
+    MAX_TRAINING_SECONDS = 41400.0  
     egitim_baslangic_zamani = time.time()
     global_bytes_processed = 0
     last_logged_500mb_chunk = 0
@@ -1434,16 +1076,16 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
         for klasor_yolu, dosyalar in klasorler.items():
             tum_klasor_dosyalari = dosyalar
             for dosya_yolu in dosyalar:
-                # 3 Kademeli Hiyerarşik Hafıza Kontrolü
+                
                 if npz_mgr.hafiza.is_dosya_islenmis(dosya_yolu, klasor_yolu, veriseti_adi):
                     logger.debug(f"  [Atlandı] Zaten eğitilmiş içerik: {dosya_yolu}")
                     continue
 
-                # Dosyayı SONUNA KADAR 64 KB parça parça (streaming chunk) oku ve eğit
+                
                 last_logged_pct = -1.0
                 for e1_girdi_metni, hedef_tensor, is_last_chunk, chunk_idx, bytes_read, file_size in veri_yukleyici.dosya_parcalari_oku(dosya_yolu, chunk_size=65536):
 
-                    # 11 Saat 30 Dakika Emniyet Zaman Sınırı Denetimi
+                    
                     gecen_toplam_sure = time.time() - egitim_baslangic_zamani
                     if gecen_toplam_sure >= MAX_TRAINING_SECONDS:
                         logger.info("================================================================================")
@@ -1463,20 +1105,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
 
                     epoch_baslangic = time.time()
 
-                    # DÜZELTME (16 hatalık ikinci denetim, "kapsam muhafızı istisna anında
-                    # askıda kalıyor" bulgusu): _tekil_egitim_adimi_icra içinde
-                    # takas_mgr.kapsam_muhafizi_aktifles() ile açılan saved_tensors_hooks
-                    # kapsamı yalnızca fonksiyonun NORMAL sonunda (satır ~1254) __exit__
-                    # ediliyordu. Fonksiyon gövdesinde HERHANGİ bir yerde (Pareto-PCGrad
-                    # OOM'u, cihaz uyumsuzluğu, herhangi bir düğüm hatası) bir istisna
-                    # fırlarsa bu __exit__ HİÇ çağrılmıyor, kanca yığını (hook stack) açık
-                    # kalıyor ve bir sonraki adımda üst üste binerek bozuk/çapraz veriye
-                    # yol açabiliyordu. Ayrıca bu çağrı hiçbir try/except'e sarılmadığından
-                    # TEK bir adımın kurtarılamaz OOM'u TÜM 12 saatlik eğitim koşusunu
-                    # (papermill sürecini) çökertiyordu. Artık adım, kurtarılamaz bir
-                    # istisna fırlatırsa bu CHUNK atlanır, kapsam muhafızı zorla kapatılır,
-                    # VRAM temizlenir ve eğitim BİR SONRAKİ chunk ile DEVAM eder — tek bir
-                    # adımın çöküşü artık tüm koşuyu bitirmiyor.
+                    
                     try:
                         curr_loss_val, L_arc_val, dirichlet_energy, d_discrepancy = _tekil_egitim_adimi_icra(
                             e1_girdi_metni=e1_girdi_metni,
@@ -1506,24 +1135,12 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         )
                         if takas_mgr is not None and hasattr(takas_mgr, "guvenli_kapat_varsa"):
                             takas_mgr.guvenli_kapat_varsa()
-                        # DÜZELTME (/tmp disk sızıntısı — kök neden): kapsam muhafızı zorla
-                        # kapatılıyordu ama takas_mgr.temizle(agresif=True) HİÇ çağrılmıyordu.
-                        # Normal (başarılı) bir adımın sonunda bu her zaman çağrılır (bkz. bu
-                        # fonksiyonun _takas_cm.__exit__ sonrası bloğu) — ama cihaz uyumsuzluğu
-                        # gibi bir hata ART ARDA tekrarlayıp her adım BU except bloğuna
-                        # düşerse, o adımların diske tahliye ettiği dosyalar hiçbir zaman
-                        # başarılı-adım temizliğine ulaşamaz; yalnızca 120 sn'lik zaman aşımı
-                        # süpürmesine kalır, ki sürekli art arda başarısızlıkta bu da devreye
-                        # giremeden /tmp/kulli_scratchpad birkaç yüz adımda dolabilir. Artık bu
-                        # adımın da tahliye ettiği her dosya agresif modda anında süpürülüyor.
+                        
+                        
                         if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
                             takas_mgr.temizle(agresif=True)
-                        # Bu adım optimizer.step()'e hiç ulaşamadan başarısız olduysa,
-                        # acil_durum_oom_yakalayici_ve_kurtarici'nin biriktirdiği ertelenmiş
-                        # cihaz-geri-yükleme kayıtları da işlenmeden kalmış olabilir — liste
-                        # sınırsız birikmesin diye temizlenir (o modüller zaten bir sonraki
-                        # kullanımlarında AnlasmaliVramGuvencesiAl tarafından yeniden
-                        # değerlendirilip gerekirse GPU'ya taşınacaktır).
+                        
+                        
                         _bekleyen_restore_temizle = getattr(takas_mgr, "_bekleyen_cihaz_geri_yuklemeleri", None) if takas_mgr is not None else None
                         if _bekleyen_restore_temizle:
                             _bekleyen_restore_temizle.clear()
@@ -1535,22 +1152,14 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         continue
 
                     current_step += 1
-                    # DÜZELTME (Sistem RAM OOM): loss_history ÖNCEDEN 11.5 saatlik bir
-                    # koşu boyunca (binlerce/on binlerce adım) SINIRSIZCA büyüyordu ve bu
-                    # TAM (kırpılmamış) liste her periyodik/en-iyi-kayıp checkpoint'inde
-                    # (checkpoint_manager.py: save_pytorch_model -> state_dict_to_save
-                    # ['loss_history']) `.pt` dosyasına gömülüyor, arka plan kaydı thread'i
-                    # boyunca da CPU RAM'inde ayrıca canlı tutuluyordu. NPZ tarafı zaten
-                    # yalnızca son 100 değeri kalıcı kılıyordu (save() içinde hist[-100:]),
-                    # bu yüzden canlı listeyi de aynı sınırda tutmak hiçbir bilgi
-                    # kaybetmeden (best_loss zaten ayrı takip ediliyor) bu sınırsız CPU RAM
-                    # birikimini önler.
+                    
+                    
                     loss_history.append(curr_loss_val)
                     if len(loss_history) > 10:
                         del loss_history[:-10]
                     gecen_sure = time.time() - epoch_baslangic
 
-                    # Küresel İşlenen Bayt Hesabı ve 500 MB Log Throttling (Log Şişmesini Kökten Önleme)
+                    
                     chunk_byte_len = len(e1_girdi_metni.encode('utf-8', errors='ignore'))
                     global_bytes_processed += chunk_byte_len
 
@@ -1566,7 +1175,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                     else:
                         logger.debug(f"Adım [{current_step}] | İşlenen Veri: {global_bytes_processed:,} B | Uyumsuzluk: {d_discrepancy:.6f}")
 
-                    # Periyodik ve En İyi Kayıp (Best Loss) Ağır Model Ağırlıkları Kaydı
+                    
                     is_periodic = (current_step % SAVE_EVERY_N_STEPS == 0)
                     is_best = False
                     if curr_loss_val < best_loss:
@@ -1583,7 +1192,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             is_best=is_best
                         )
 
-                    # Dosyayı SADECE son parçaya ulaşıldığında (dosya bitince) 'tamamlandı' olarak işaretle
+                    
                     if is_last_chunk:
                         npz_mgr.hafiza.dosya_tamamlandi(
                             dosya_yolu=dosya_yolu,
@@ -1594,14 +1203,12 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         )
                         npz_mgr.save_hafiza_state()
 
-                    # ==============================================================================
-                    # CPYTHON STACK FRAME SONRASI FİZİKSEL VRAM VE GARBAGE COLLECTION PROTOKOLÜ
-                    # ==============================================================================
+                    
                     gc.collect()
                     if torch.cuda.is_available():
                         torch.cuda.empty_cache()
 
-    # Eğitim Tamamlandığında Son Sabit Kayıt
+    
     npz_mgr.save_pytorch_model(
         step=current_step,
         token_offset=current_step * config.N,
@@ -1619,14 +1226,3 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
 if __name__ == "__main__":
     Main_EgitimYurutucu()
 
-
-
-
-
-
-
-
-
-
-
-    

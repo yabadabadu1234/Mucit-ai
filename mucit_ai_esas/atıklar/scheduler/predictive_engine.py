@@ -1,24 +1,3 @@
-"""
-MODÜL 3: Erken Devlet Sevk Motoru (Universal Predictive JIT DAG Engine)
-
-1. PyTorch FX / CUDA Graph JIT DAG Compiler Mimarisi:
-   İş yükünün (Oyun, DNA, CFD, LLM) ne olduğunu sormadan ve tek bir parametre dahi
-   kafadan atılmadan; uygulamanın tüm hesaplama grafiğini (DAG - Directed Acyclic Graph)
-   C-API / PyTorch FX seviyesinde sembolik olarak izler (Symbolic Trace).
-
-2. Topolojik Gelecek Penceresi (Topological Lookahead Window):
-   Hesaplama grafiğindeki düğümleri topolojik olarak sıralar (N_1, N_2 ... N_k).
-   O an N_i adımı işlenirken, gelecek 8 adımlık (N_{i+8}) pencerelerin VRAM
-   girdilerini dinamik tespit eder.
-
-3. Olay Bağlantılı Asenkron Prefetch (Event-Backed Asynchronous Prefetching):
-   Gelecekteki adımların VRAM verilerini NVSHMEM veriyolu üzerinden asenkron ön yükler (cudaMemPrefetchAsync).
-   Prefetch akışının ucuna bir CUDA Event (cudaEvent_t) bağlayarak verinin %100 hazır olmasını garanti eder.
-
-4. RAII Scratchpad Scope Guard:
-   Geçici ara bellekleri (Scratchpad) Python Context Manager altında kilitler. İşlem başarsa da
-   çökse de yetim bellek (Orphaned Scratchpad) kalmasını %100 engeller.
-"""
 
 import os
 import sys
@@ -31,18 +10,11 @@ from typing import List, Dict, Any, Optional, Tuple, Union
 logger = logging.getLogger("kulli_gpu.predictive_engine")
 logger.setLevel(logging.WARNING)
 
-# Native C-API & Driver DAG Compiler without external PyTorch dependencies
+
 _TORCH_FX_AVAILABLE = False
 
 
 class ExecutionNode:
-    """
-    Küllî DAG Hesaplama Düğümü Veri Yapısı (Universal Execution Node)
-    
-    Kafadan atma şablonlar (matmul, softmax vb.) YASAKTIR.
-    Her düğüm gerçek grafikten taranan VRAM adreslerini, bayt ayak izini
-    ve bağımlı olduğu önceki düğüm kancalarını tutar.
-    """
     def __init__(
         self,
         node_id: int,
@@ -61,7 +33,7 @@ class ExecutionNode:
         self.target_gpu_id = target_gpu_id
         self.scratchpad_bytes = scratchpad_bytes
         
-        # Senkronizasyon ve Prefetch Kancaları
+        
         self.prefetch_event_handle: Optional[Any] = None
         self.is_prefetched: bool = False
         self.scratchpad_handle: Optional[Any] = None
@@ -75,16 +47,13 @@ class ExecutionNode:
 
 
 class ErkenDevletEngine:
-    """
-    EVRENSEL TAHMİNLEME VE 4D SEVK MOTORU (Universal Predictive Matrix & DAG Engine)
-    """
     def __init__(self, allocator: Any, bus: Any, lookahead_depth: int = 8):
         self.allocator = allocator
         self.bus = bus
         self.lookahead_depth = max(1, lookahead_depth)
         self._lock = threading.RLock()
         
-        # Tahminleme önbelleği ve aktif grafik düğümleri
+        
         self.dag_nodes: List[ExecutionNode] = []
         self.current_step_index: int = 0
         
@@ -94,19 +63,11 @@ class ErkenDevletEngine:
         )
 
     def on_hesapla(self, operasyon_grafik_veya_model: Any) -> List[ExecutionNode]:
-        """
-        DİNAMİK TALEP İNCELEME MOTORU (Zero-Assumption Dynamic DAG Inspection).
-        
-        Kafadan atma varsayım ve hardcoded şablonlar ("matmul", "softmax" vb.) KESİNLİKLE YASAKTIR.
-        Gelen grafik veya C-API komut akışı ne olursa olsun:
-        1. Düğümleri ve VRAM adreslerini dinamik çıkarır.
-        2. Topolojik sıralı 'ExecutionNode' listesi döndürür.
-        """
         with self._lock:
             self.dag_nodes.clear()
             self.current_step_index = 0
 
-            # C-API veya Sözlük DAG Düğüm Taraması
+            
             if isinstance(operasyon_grafik_veya_model, dict):
                 raw_nodes = operasyon_grafik_veya_model.get("nodes", operasyon_grafik_veya_model.get("ops", []))
                 for idx, item in enumerate(raw_nodes):
@@ -137,20 +98,8 @@ class ErkenDevletEngine:
             return self.dag_nodes
 
     def tertip_et(self, node: ExecutionNode) -> Dict[str, Any]:
-        """
-        4D ZAMANLAMA VE GERÇEK VRAM/SCRATCHPAD KİLİTLEME MOTORU.
-        
-        4D İlkeler:
-        1. Ne zaman? (Zamansal bağımlılık çözümü).
-        2. Ne şartla? (Donanım yükü ve VRAM müsaitlik şartı).
-        3. Nerede? (Data Locality - Veri yakınlığı).
-        4. Nasıl? (Hassasiyet ve sevk stratejisi).
-        
-        Kağıt üzerinde 'scratchpad ayrıldı' YALANI YASAKTIR.
-        Gereken ara alan VMM Allocator üzerinden 'allocate_scratchpad_chunk' ile gerçekten ayrılır.
-        """
         with self._lock:
-            # 1. Data Locality Sorgusu (Veri Nerede?)
+            
             page_mapping = {}
             if node.virtual_ptr is not None and hasattr(self.allocator, "get_page_scatter_map"):
                 try:
@@ -163,7 +112,7 @@ class ErkenDevletEngine:
                 except Exception as loc_exc:
                     logger.debug(f"[Tertip Locality Notice] {loc_exc}")
 
-            # 2. Gerçek Scratchpad Tahsisi (Ara Alan Kilitleme)
+            
             scratchpad_ptr = None
             if node.scratchpad_bytes > 0 and hasattr(self.allocator, "allocate_scratchpad_chunk"):
                 try:
@@ -175,7 +124,7 @@ class ErkenDevletEngine:
                 except Exception as sc_exc:
                     logger.debug(f"[Scratchpad Allocation Notice] {sc_exc}")
 
-            # 3. Gelecek Adımları Tahmin Et ve Prefetch Başlat
+            
             self.sevk_et(node)
 
             return {
@@ -190,13 +139,6 @@ class ErkenDevletEngine:
             }
 
     def sevk_et(self, current_node: ExecutionNode) -> None:
-        """
-        ASENKRON YÜKLEME VE CUDA EVENT BAĞLANTI MOTORU (Event-Backed Prefetching).
-        
-        O anki düğüm işlenirken, gelecek 'lookahead_depth' (8 adım) sonrasındaki düğümlerin
-        VRAM adreslerini inceler ve NVSHMEM veriyolu üzerinden asenkron prefetch başlatır.
-        Prefetch akışının ucuna bir CUDA Event (cudaEvent_t) bağlar.
-        """
         with self._lock:
             if not self.dag_nodes:
                 return
@@ -208,10 +150,10 @@ class ErkenDevletEngine:
                 if future_node.is_prefetched or future_node.virtual_ptr is None or future_node.byte_size <= 0:
                     continue
 
-                # NVSHMEM / P2P Veriyolu Üzerinden Asenkron Prefetch Başlat
+                
                 if hasattr(self.bus, "p2p_transfer_async"):
                     try:
-                        # Prefetch emri tam sanal adres ve bayt boyutuyla iletilir
+                        
                         event_h = self.bus.p2p_transfer_async(
                             src_page=0,
                             dst_page=0,
@@ -230,19 +172,12 @@ class ErkenDevletEngine:
 
     @contextmanager
     def scratchpad_scope(self, node: ExecutionNode):
-        """
-        RAII SCRATCHPAD KAPSAM YÖNETİCİSİ (Scope Guard Context Manager).
-        
-        Düğüm icra edilirken geçici ara bellekleri kilitler. İşlem başarsa da,
-        GPU üzerinde donanımsal hata verip çökse de 'finally' bloğunda geçici VRAM'i
-        otomatik olarak serbest bırakır. Yetim bellek (Orphaned Scratchpad) kalmasını %100 engeller.
-        """
         try:
-            # Kapsama girerken tertip et ve scratchpad ayır
+            
             tertip_info = self.tertip_et(node)
             yield tertip_info
         finally:
-            # Kapsamdan çıkarken (Hata olsa dahi) Scratchpad'i serbest bırak
+            
             if node.scratchpad_handle is not None and hasattr(self.allocator, "free_scratchpad_chunk"):
                 try:
                     s_ptr = getattr(node.scratchpad_handle, "virtual_ptr", None)

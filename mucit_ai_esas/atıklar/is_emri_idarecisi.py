@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ SANAL GPU SÜRÜCÜSÜ - İŞ EMRİ İDARECİSİ VE KOMUT TERCÜMANI (PHASE V)
-Modül: kulli_gpu/is_emri_idarecisi.py (IsEmriIdarecisi)
-================================================================================
-Üst seviye grafik ve hesaplama kütüphanelerinden (CUDA, Vulkan, OpenCL, DRM) gelen
-ham C argümanlarını ve C-struct verilerini çözümleyen (unpacking), API bağımsız
-homojen 'IsEmriPaketi' nesnelerine dönüştüren ve II. Faz Sanal Bellek Havuzu ile
-III. Faz Sanal İşlemci Zamanlayıcısına sevk eden komut tercümanı ve idarecisidir.
-"""
+
 
 import os
 import sys
@@ -42,32 +31,23 @@ logger.setLevel(logging.INFO)
 
 
 class KulliAllocRecoveryEngine:
-    """
-    RÜKN III: C-ABI LEVEL MALLOC HOOK VE TRY-CATCH OOM RECOVERY
-    CUDA tahsis emirlerinde OOM fırlatıldığında C/C++ ve PyTorch seviyesinde yakalar,
-    NVMe tahliyesini tetikler ve tahsisi güvenle yeniden dener.
-    """
     def __init__(self, tahliye_motoru: Optional[Any] = None):
         from .nvme_takas_yoneticisi import NvmeTahliyeKararMotoru, GuvenliVramVeTmpSupurgesi
         self.tahliye_motoru = tahliye_motoru or NvmeTahliyeKararMotoru()
         self.supurge = GuvenliVramVeTmpSupurgesi
 
     def C_cuMemAlloc_Recovery(self, alloc_fn: Callable[[], Any], bytesize: int) -> Any:
-        """
-        C-ABI ve Python seviyesinde tahsis OOM hatası verdiğinde, hatayı yükseltmeden
-        önce yakalar, NVMe tahliyesini ve C++ caching allocator süpürmesini tetikler.
-        """
         try:
             return alloc_fn()
         except (torch.cuda.OutOfMemoryError, Exception) as exc:
             logger.warning(f"[KulliAllocRecoveryEngine] OOM Hatası Yakalandı ({bytesize} bayt). NVMe Tahliye tetikleniyor: {exc}")
-            # 1. POSIX/NVMe Tahliye Sinyali
+            
             self.tahliye_motoru.vramden_nvme_diske_tahliye_et(bytesize)
 
-            # 2. PyTorch C++ Caching Allocator ve Yetim Kütük Süpürmesi
+            
             self.supurge.supur()
 
-            # 3. İkinci Tahsis Denemesi (Tahliye Sonrası)
+            
             try:
                 return alloc_fn()
             except Exception as final_exc:
@@ -76,24 +56,15 @@ class KulliAllocRecoveryEngine:
 
 
 class IsEmriHatasi(Exception):
-    """
-    İş emri oluşturma, argüman çözümleme veya sürücü içi sevk (dispatch)
-    süreçlerinde fırlatılan donanımsal/yazılımsal istisna sınıfı.
-    """
     pass
 
 
 @dataclass
 class IsEmriPaketi:
-    """
-    [Homojen Sürücü İş Emri Paketi / Driver Command Packet]
-    C-ABI seviyesinden gelen fonksiyon çağrılarının API türünden bağımsız olarak
-    sürücü içinde dolaşacak standart komut formatıdır.
-    """
     emir_id: int
-    emir_tipi: str  # "KATEGORİ_TAHSİT", "KATEGORİ_SERBEST", "KATEGORİ_İCRA", "KATEGORİ_AKTARIM", "KATEGORİ_SİSTEM"
+    emir_tipi: str  
     parametreler: Dict[str, Any] = field(default_factory=dict)
-    durum: str = "HAZIR"  # "HAZIR", "SEVK_EDİLDİ", "TAMAMLANDI", "HATA"
+    durum: str = "HAZIR"  
     olusturulma_zamani: float = field(default_factory=time.perf_counter)
     tamamlanma_zamani: float = 0.0
     sonuc: Any = None
@@ -101,27 +72,17 @@ class IsEmriPaketi:
 
 
 class CArgumanCozumleyici:
-    """
-    [C-Struct & Payload Unpacker / C Argüman Çözümleyici]
-    Yakalanan C fonksiyonlarının ham argümanlarını (`*args`) veya C-struct
-    yapılarını parçalayarak boyut, sanal adres, kernel işaretçisi ve grid/block
-    boyutlarını çıkartır.
-    """
 
     @staticmethod
     def ArgumanlariCozumleVePaketle(kategori: str, raw_args: Tuple[Any, ...]) -> Dict[str, Any]:
-        """
-        Vazifesi: Ham C argümanlarını kategorisine göre analiz edip sürücü içi
-        parametre haritasına dönüştürür.
-        """
         parametreler: Dict[str, Any] = {
             "raw_args_count": len(raw_args),
             "raw_args_repr": [str(a) for a in raw_args[:5]]
         }
 
-        # 1. KATEGORİ_TAHSİT (cudaMalloc, vkAllocateMemory, clCreateBuffer, vb.)
+        
         if kategori == "KATEGORİ_TAHSİT":
-            boyut_bayt = 256 * (1024**2)  # Varsayılan 256 MB
+            boyut_bayt = 256 * (1024**2)  
             for arg in raw_args:
                 if isinstance(arg, int) and arg > 1024:
                     boyut_bayt = arg
@@ -135,7 +96,7 @@ class CArgumanCozumleyici:
             parametreler["boyut_bayt"] = boyut_bayt
             parametreler["hedef_gpu_id"] = 0
 
-        # 2. KATEGORİ_SERBEST (cudaFree, vkFreeMemory, clReleaseMemObject, vb.)
+        
         elif kategori == "KATEGORİ_SERBEST":
             hedef_ptr = 0
             for arg in raw_args:
@@ -150,7 +111,7 @@ class CArgumanCozumleyici:
 
             parametreler["hedef_ptr"] = hedef_ptr
 
-        # 3. KATEGORİ_İCRA (cudaLaunchKernel, vkQueueSubmit, clEnqueueNDRangeKernel, vb.)
+        
         elif kategori == "KATEGORİ_İCRA":
             grid_x = 1024
             block_x = 256
@@ -168,7 +129,7 @@ class CArgumanCozumleyici:
             parametreler["girdi_sanal_adres"] = 0x7FFF00000000
             parametreler["cikti_sanal_adres"] = 0x800000000000
 
-        # 4. KATEGORİ_AKTARIM (cudaMemcpy, vkCmdCopyBuffer, vb.)
+        
         elif kategori == "KATEGORİ_AKTARIM":
             hedef_ptr = raw_args[0] if len(raw_args) > 0 and isinstance(raw_args[0], int) else 0x7FFF00000000
             kaynak_ptr = raw_args[1] if len(raw_args) > 1 and isinstance(raw_args[1], int) else 0x7FFF00010000
@@ -182,12 +143,6 @@ class CArgumanCozumleyici:
 
 
 class IsEmriIdarecisi:
-    """
-    [Master Command Manager & Dispatcher / İş Emri İdarecisi]
-    Yakalanan C çağrılarını resmi 'IsEmriPaketi' nesnelerine dönüştürür ve doğrudan
-    ilgili alt sisteme (II. Faz Sanal Bellek Havuzu / III. Faz Sanal İşlemci Zamanlayıcısı)
-    sevk eder.
-    """
 
     def __init__(
         self,
@@ -205,18 +160,14 @@ class IsEmriIdarecisi:
         logger.info(f"[IsEmriIdarecisi] İş Emri İdarecisi ve Komut Tercümanı İlklendirildi (simulation_mode={simulation_mode}).")
 
     def IsEmriUretVeSevkEt(self, kategori: str, raw_args: Tuple[Any, ...]) -> Any:
-        """
-        Vazifesi: IV. Katmandan veya dışarıdan gelen ham C çağrısını alır,
-        homojen 'IsEmriPaketi' oluşturur ve doğrudan doğru alt sisteme sevk eder.
-        """
         with self.lock:
             self.emir_sayaci += 1
             e_id = self.emir_sayaci
 
-        # 1. C Argümanlarını Çözümle
+        
         params = CArgumanCozumleyici.ArgumanlariCozumleVePaketle(kategori, raw_args)
 
-        # 2. Resmi İş Emri Paketi Oluştur
+        
         emir = IsEmriPaketi(
             emir_id=e_id,
             emir_tipi=kategori,
@@ -225,7 +176,7 @@ class IsEmriIdarecisi:
         )
 
         try:
-            # 3. SEVKİYAT VE İCRA (Dispatching)
+            
             if kategori == "KATEGORİ_TAHSİT":
                 if self.havuz is not None:
                     boyut = params.get("boyut_bayt", 256 * (1024**2))
@@ -236,7 +187,7 @@ class IsEmriIdarecisi:
                     emir.sonuc = 0x7FFF00000000
 
                 emir.durum = "TAMAMLANDI"
-                ret_val = 0  # CUDA_SUCCESS / VK_SUCCESS
+                ret_val = 0  
 
             elif kategori == "KATEGORİ_SERBEST":
                 if self.havuz is not None:
@@ -297,7 +248,7 @@ class IsEmriIdarecisi:
             emir.tamamlanma_zamani = time.perf_counter()
             with self.lock:
                 self.is_emri_gecmisi.append(emir)
-                # Geçmişi son 100 kayıtta tut
+                
                 if len(self.is_emri_gecmisi) > 100:
                     self.is_emri_gecmisi.pop(0)
 
@@ -309,11 +260,6 @@ class IsEmriIdarecisi:
 
     @contextmanager
     def GeciciBellekMuhafizi(self, gecici_boyut_bayt: int, hedef_gpu_id: int = 0):
-        """
-        [Rükün / Algoritma 2: RAII Geçici Bellek Muhafızı (Scratchpad Scope Guard)]
-        Vazifesi: Sürücü seviyesinde ara hesaplama scratchpad belleklerinin RAII mantığıyla
-        güvenli ayrılıp %100 temizlenmesini sarmalayan üst katman context manager'ıdır.
-        """
         if self.havuz is not None and hasattr(self.havuz, "GeciciBellekMuhafizi"):
             with self.havuz.GeciciBellekMuhafizi(gecici_boyut_bayt=gecici_boyut_bayt, hedef_gpu_id=hedef_gpu_id) as guard:
                 yield guard
@@ -322,9 +268,6 @@ class IsEmriIdarecisi:
             yield (sanal_adres, None)
 
     def IdareciDurumuOzetle(self) -> Dict[str, Any]:
-        """
-        Vazifesi: İş Emri İdarecisinin işlem istatistiklerini ve geçmişini özetler.
-        """
         with self.lock:
             tamamlanan = sum(1 for e in self.is_emri_gecmisi if e.durum == "TAMAMLANDI")
             hatali = sum(1 for e in self.is_emri_gecmisi if e.durum == "HATA")
@@ -339,12 +282,6 @@ class IsEmriIdarecisi:
 
 
 class OpakKernelSarmalayici:
-    """
-    [Opak (Opaque) CUBLAS / ATen Kernel Sarmalayıcısı]
-    NumPy/SciPy veya PyTorch tarafından fırlatılan karmaşık C++ matris çarpım çağrılarını (cuBLAS, CUTLASS, ATen)
-    bozmadan, C_struct / C argümanlarındaki sanal VRAM işaretçilerini canlı fiziki GPU VRAM işaretçileri ile
-    eşleştirerek donanımsal çit (Fence) ile yürütür.
-    """
 
     def __init__(self, is_emri_idarecisi: Optional[Any] = None, sanal_bellek_havuzu: Optional[Any] = None, sanal_islemci_zamanlayici: Optional[Any] = None):
         self.idareci = is_emri_idarecisi
@@ -352,11 +289,6 @@ class OpakKernelSarmalayici:
         self.zamanlayici = sanal_islemci_zamanlayici
 
     def CalistirVeBekle(self, sembol_adi: str, c_struct_argumanlari: Tuple[Any, ...], orijinal_fn: Optional[Callable] = None) -> int:
-        """
-        1. C-STRUCT İÇİNDEKİ İŞARETÇİLERİ TARAMA & DÖNÜŞTÜRME
-        2. ADRES DÖNÜŞTÜRME (Virtual-to-Physical Address Translation)
-        3. YÜRÜTME VE ÇİT BEKLEME (Fence)
-        """
         donusturulmus_args = list(c_struct_argumanlari)
 
         if self.havuz is not None:
@@ -366,7 +298,7 @@ class OpakKernelSarmalayici:
                     if aralik is not None and aralik.c_pointer is not None:
                         donusturulmus_args[i] = aralik.c_pointer
 
-        # Donanımsal Çit Bekleme (Fence) & Yürütme
+        
         if callable(orijinal_fn):
             res = orijinal_fn(*donusturulmus_args)
         elif self.zamanlayici is not None:

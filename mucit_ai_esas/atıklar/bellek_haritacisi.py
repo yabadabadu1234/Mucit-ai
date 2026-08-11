@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ SANAL GPU SÜRÜCÜSÜ - BELLEK HARİTACISI VE FİZİKSEL EİŞİM BİRİMİ
-Modül: kulli_gpu/bellek_haritacisi.py (BellekHaritacisi)
-================================================================================
-GPU'nun fiziki VRAM'ini ve komut kayıtçılarını (Registers) Python sürecinin sanal
-adres alanına mmap ile canlı C-İşaretçisi (Pointer) olarak bağlayan fiziksel erişim birimidir.
-"""
+
 
 import os
 import sys
@@ -24,18 +15,12 @@ except ImportError:
         from .surucu_ayirici import FatalDriverError
     except ImportError:
         class FatalDriverError(Exception):
-            """Sürücü seviyesinde kritik yetki veya donanım erişim hatası."""
             pass
 
 logger = logging.getLogger("kulli_gpu.bellek_haritacisi")
 
 
 class BellekHaritacisi:
-    """
-    [Bellek Haritacısı ve Fiziki VRAM/MMIO C-İşaretçisi Erişim Birimi]
-    mmap, os.O_SYNC, ctypes ve HafizaCiti (Memory Barrier) kullanarak GPU fiziki
-    bellek kaynaklarını doğrudan Python süreç adres alanına bağlar.
-    """
 
     def __init__(self, simulation_mode: bool = False):
         self.simulation_mode = simulation_mode
@@ -47,17 +32,6 @@ class BellekHaritacisi:
         bolge_no: str = "1",
         simulation_mode: Optional[bool] = None
     ) -> int:
-        """
-        Vazifesi: GPU'nun fiziki bellek kaynaklarını temsil eden çekirdek kütüğünü,
-        önbelleksiz (uncached/direct) ham okuma-yazma ve O_SYNC modunda açar.
-        
-        Girdileri:
-        - pci_adresi: PCI veri yolu adresi (Örn: '0000:01:00.0')
-        - bolge_no: Resource bölge numarası ('0' BAR0 MMIO Kayıtçılar, '1' BAR1 VRAM)
-        - simulation_mode: Açık simülasyon modu isteği
-        
-        Çıktısı: Dosya Tanımlayıcı (file descriptor / fd integer)
-        """
         is_sim = self.simulation_mode if simulation_mode is None else simulation_mode
         kaynak_yolu = f"/sys/bus/pci/devices/{pci_adresi}/resource{bolge_no}"
         
@@ -82,11 +56,11 @@ class BellekHaritacisi:
         if not is_sim:
             raise FatalDriverError(f"[{pci_adresi}] Hakiki donanım resource{bolge_no} kütüğü bulunamadı: {kaynak_yolu}")
 
-        # Açık Simülasyon Modu Kapısı (Sadece simulation_mode=True durumunda)
+        
         sanal_path = f"/tmp/kulli_mock_gpu_{pci_adresi.replace(':', '_')}_res{bolge_no}.bin"
         if not os.path.exists(sanal_path) or os.path.getsize(sanal_path) < (128 * 1024 * 1024):
             with open(sanal_path, "wb") as f:
-                # 24GB or 128MB sparse mock buffer
+                
                 f.seek((128 * 1024 * 1024) - 1)
                 f.write(b"\x00")
         
@@ -101,13 +75,6 @@ class BellekHaritacisi:
         pci_adresi: Optional[str] = None,
         bolge_no: str = "1"
     ) -> int:
-        """
-        Vazifesi: Linux çekirdeği özel VFS kütüklerinde lseek illüzyonuna düşmeden,
-        BAR0/BAR1 bölgesinin hakiki bayt cinsinden fiziki boyutunu hesaplar.
-        
-        Girdileri: Dosya Tanımlayıcı (fd), VRAM Bayt Bilgisi, PCI Adresi, Bölge No
-        Çıktısı: Toplam Hakiki Boyut (Bytes)
-        """
         if vram_bytes is not None and vram_bytes > 0:
             logger.info(f"[HafizaSinirlariniOgren] Dışarıdan Doğrulanan Hakiki VRAM Boyutu: {vram_bytes} bayt ({round(vram_bytes / (1024**3), 2)} GB)")
             return vram_bytes
@@ -131,7 +98,7 @@ class BellekHaritacisi:
                 except Exception as err:
                     logger.warning(f"[{pci_adresi}] Resource satırı okuma uyarısı: {err}")
 
-        # Normal kütük / Mock dosya stat ölçümü
+        
         try:
             st = os.fstat(dosya_tanimlayici)
             if st.st_size > 0:
@@ -143,13 +110,6 @@ class BellekHaritacisi:
         return 128 * 1024 * 1024
 
     def VolatilHafizaCiti(self, c_isaretci: Any = None) -> bool:
-        """
-        Vazifesi: Sürücüyü yavaşlatan ağır mmap.flush() yerine, CPU önbelleğini dondurmadan
-        veriyi doğrudan PCIe hattına süren volatil bellek çiti (Store Buffer Flush) algoritmasıdır.
-        
-        Girdisi: C İşaretçisi (c_isaretci)
-        Çıktısı: True (İşlem başarılı)
-        """
         if c_isaretci is None:
             return False
         try:
@@ -169,16 +129,11 @@ class BellekHaritacisi:
         mmap_obj: Optional[mmap.mmap] = None,
         c_isaretci: Any = None
     ) -> bool:
-        """
-        Vazifesi: MMIO ve VRAM kayıtçılarına yazılan verilerin CPU L1/L2 önbelleğinde
-        beklemesini engelleyerek, anında fiziki ortama iletilmesini garanti eden
-        hafifletilmiş Volatile Memory Barrier mekanizması.
-        """
         if c_isaretci is not None:
             return self.VolatilHafizaCiti(c_isaretci)
         if mmap_obj is not None:
             try:
-                # Fallback volatile read on mmap buffer if C pointer not passed
+                
                 _ = mmap_obj[0]
                 return True
             except Exception:
@@ -186,12 +141,6 @@ class BellekHaritacisi:
         return True
 
     def CanliHafizayiHaritala(self, dosya_tanimlayici: int, toplam_boyut: int) -> mmap.mmap:
-        """
-        Vazifesi: GPU VRAM'inin fiziki adreslerini, Python sürecinin sanal bellek alanına mmap ile haritalar.
-        
-        Girdileri: Dosya Tanımlayıcı (fd), Toplam Boyut
-        Çıktısı: mmap nesnesi (mmap.mmap)
-        """
         try:
             haritalanmis_hafiza = mmap.mmap(
                 fileno=dosya_tanimlayici,
@@ -206,13 +155,6 @@ class BellekHaritacisi:
             return mmap.mmap(-1, toplam_boyut, flags=mmap.MAP_SHARED, prot=mmap.PROT_READ | mmap.PROT_WRITE)
 
     def DogrudanErisimIsaretcisiUret(self, haritalanmis_hafiza: mmap.mmap) -> ctypes.POINTER(ctypes.c_uint32):
-        """
-        Vazifesi: Haritalanan mmap bloğunu 64-bit adres emniyetiyle 32-bitlik Tamsayı
-        C İşaretçisine (Raw C Pointer) dönüştürür.
-        
-        Girdisi: Haritalanmış mmap nesnesi
-        Çıktısı: 32-bit C İşaretçisi (POINTER(ctypes.c_uint32))
-        """
         try:
             buf_char = ctypes.c_char.from_buffer(haritalanmis_hafiza)
             ham_adres_64 = ctypes.c_uint64(ctypes.addressof(buf_char)).value
@@ -225,10 +167,6 @@ class BellekHaritacisi:
             return ctypes.cast(dummy_val, ctypes.POINTER(ctypes.c_uint32))
 
     def HafizayiKapatVeSerbestBirak(self, haritalanmis_hafiza: mmap.mmap, dosya_tanimlayici: int) -> str:
-        """
-        Vazifesi: Haritalanan VRAM bölgesini tek bir son mmap.flush ile diske/çekirdeğe
-        senkronize ederek kapatır ve dosya tanımlayıcısını serbest bırakır.
-        """
         try:
             if haritalanmis_hafiza:
                 try:
@@ -255,10 +193,6 @@ class BellekHaritacisi:
         vram_bytes: Optional[int] = None,
         simulation_mode: Optional[bool] = None
     ) -> Dict[str, Any]:
-        """
-        Vazifesi: Tüm mmap haritalama, HafizaSinirlariniOgren ve C-İşaretçisi oluşturma
-        adımlarını zincirleme yürütür.
-        """
         is_sim = self.simulation_mode if simulation_mode is None else simulation_mode
         fd = self.DonanimKapisiniAc(pci_adresi, bolge_no, simulation_mode=is_sim)
         toplam_boyut = self.HafizaSinirlariniOgren(fd, vram_bytes=vram_bytes, pci_adresi=pci_adresi, bolge_no=bolge_no)

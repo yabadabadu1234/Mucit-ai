@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ SANAL GPU SÜRÜCÜSÜ - HAKİKİ DONANIM TEŞHİSİ VE HAKİMİYET TESİSİ
-Modül: kulli_gpu/gpu_tespitci.py (VeriyoluSorgulayicisi & DonanimArayici)
-================================================================================
-İşletim sisteminin metin kütüklerinden ve dosya hiyerarşisinden tamamen bağımsız;
-doğrudan PCIe Yapılandırma Alanı (PCI Configuration Space) 256 baytlık ikili
-(binary) başlık kayıtçılarını ve PCI-SIG standartlarını sorgulayarak
-hakiki donanım teşhisi ve hakimiyet tesisini gerçekleştirir.
-"""
+
 
 import os
 import sys
@@ -21,17 +10,17 @@ from typing import Dict, List, Tuple, Any, Optional, Union
 logger = logging.getLogger("kulli_gpu.hakimiyet_tesisi")
 logger.setLevel(logging.INFO)
 
-# PCI-SIG Sabitleri
+
 PCI_VENDOR_NVIDIA = 0x10DE
 PCI_VENDOR_AMD    = 0x1002
 PCI_VENDOR_INTEL  = 0x8086
 
-# PCI Sınıf Kodları (Class Codes)
+
 PCI_CLASS_DISPLAY_VGA   = 0x0300
 PCI_CLASS_DISPLAY_3D    = 0x0302
 PCI_CLASS_DISPLAY_OTHER = 0x0380
 
-# C-Kütüphanesi libpci.so Taraması
+
 _LIBPCI = None
 try:
     if os.name != 'nt':
@@ -45,12 +34,6 @@ except Exception:
 
 
 class VeriyoluSorgulayicisi:
-    """
-    [Hakiki Donanım Teşhisi & PCIe Veriyolu Sorgulayicisi]
-    PCI-SIG Donanım Standardına uygun olarak PCIe Veriyolunu doğrudan tarayan,
-    256-baytlık Binary Header kaydını okuyup çözen ve donanım hakimiyet durumunu
-    Command Register (Offset 0x04) üzerinden tespit eden sürücü keşif katmanı.
-    """
 
     def __init__(self, simulation_mode: bool = False):
         self.simulation_mode = simulation_mode
@@ -61,15 +44,10 @@ class VeriyoluSorgulayicisi:
         return self.VeriyoluBitisikleriniTara()
 
     def VeriyoluBitisikleriniTara(self, simulation_mode: Optional[bool] = None) -> List[Dict[str, Any]]:
-        """
-        Vazifesi: İşletim sistemine sormadan, PCIe veri yolundaki tüm yuvalara
-        (Domain:Bus:Device.Function) fiziksel ikili yapılandırma sorgusu atar.
-        Çıktısı: Sistemde tespit edilen tüm fiziksel PCI cihazlarının ham verileri.
-        """
         is_sim = self.simulation_mode if simulation_mode is None else simulation_mode
         cihazlar = []
 
-        # 1. YOL: /sys/bus/pci/devices altındaki ikili 'config' kayıtçılarını okuma
+        
         pci_dir = "/sys/bus/pci/devices"
         if os.path.exists(pci_dir):
             try:
@@ -92,7 +70,7 @@ class VeriyoluSorgulayicisi:
             except Exception as err:
                 logger.warning(f"Sysfs PCI tarama uyarısı: {err}")
 
-        # Simülasyon modunda veya fiziksel cihaz yokluğunda aksiyon al
+        
         if not cihazlar:
             if is_sim:
                 for slot_idx in range(2):
@@ -116,13 +94,6 @@ class VeriyoluSorgulayicisi:
         return cihazlar
 
     def IkiliBasligiCozumle(self, ham_bayt_dizisi: bytes) -> Dict[str, Any]:
-        """
-        Vazifesi: Donanımdan çekilen 256 baytlık ham ikili veriyi (binary blob)
-        PCI-SIG standartlarına göre parçalar ve donanımın gerçek kimliğini bulur.
-        
-        Girdisi: 256 baytlık ham ikili başlık (raw_header)
-        Çıktısı: Çözümlenmiş Donanım Kimlik Bilgileri (Vendor, Device, Class Code)
-        """
         if len(ham_bayt_dizisi) < 16:
             return {"is_gpu": False, "error": "Geçersiz Başlık Boyutu"}
 
@@ -137,7 +108,7 @@ class VeriyoluSorgulayicisi:
         }
         vendor_name = vendor_names.get(vendor_id, f"Bilinmeyen Üretici (0x{vendor_id:04x})")
 
-        # Ekran Kartı Teşhisi (PCI-SIG Markadan Bağımsız Sınıf Kodu Sorgusu)
+        
         is_gpu = (class_code in (PCI_CLASS_DISPLAY_VGA, PCI_CLASS_DISPLAY_3D, PCI_CLASS_DISPLAY_OTHER)) or (vendor_id == PCI_VENDOR_NVIDIA)
 
         return {
@@ -153,13 +124,6 @@ class VeriyoluSorgulayicisi:
         }
 
     def KardesCihazlariVeIommuyuTara(self, hedef_pci_adresi: str) -> Dict[str, Any]:
-        """
-        Vazifesi: Verilen GPU PCI adresinin IOMMU grup numarasını ve aynı PCIe hattındaki
-        tüm kardeş fonksiyonları (.0 Grafik, .1 Ses, vb.) tespit eder.
-        
-        Girdisi: hedef_pci_adresi (Örn: '0000:01:00.0')
-        Çıktısı: iommu_bilgi_paketi (Sözlük)
-        """
         iommu_path = f"/sys/bus/pci/devices/{hedef_pci_adresi}/iommu_group"
         grup_id = -1
         if os.path.exists(iommu_path):
@@ -190,13 +154,6 @@ class VeriyoluSorgulayicisi:
         }
 
     def ReBarDurumunuTahkikEt(self, bar1_boyut_bayt: int, toplam_vram_bayt: int) -> bool:
-        """
-        Vazifesi: GPU VRAM'inin 256 MB pencereye mi sıkıştığını yoksa tüm VRAM'in (24 GB)
-        tek seferde mmap edilip edilemeyeceğini (Resizable BAR) tahkik eder.
-        
-        Girdileri: BAR1 Boyutu (Bayt), Toplam VRAM (Bayt)
-        Çıktısı: rebar_aktif_mi (Boolean)
-        """
         if bar1_boyut_bayt >= toplam_vram_bayt and bar1_boyut_bayt > 0:
             logger.info("[ReBarDurumunuTahkikEt] ReBAR Açık: Tüm VRAM tek parçada mmap edilebilir.")
             return True
@@ -205,14 +162,6 @@ class VeriyoluSorgulayicisi:
             return False
 
     def BellekKapilariniOku(self, cihaz_bilgisi: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Vazifesi: Donanıma "VRAM ve kayıtçı adres aralıkların ne kadar?" sorusunu sorar.
-        PCI-SIG BAR0 - BAR5 kayıtçılarını /sys/bus/pci/devices/.../resource kütüğünden
-        kesin fiziki bayt boyutlarıyla okur. Sakat ikili türev boyut hesabı kaldırılmıştır.
-        
-        Girdisi: Cihaz bilgi sözlüğü
-        Çıktısı: BAR Hafıza Haritası, Hakiki VRAM Boyutu ve ReBAR Durumu
-        """
         pci_addr = cihaz_bilgisi.get("pci_address", "0000:01:00.0")
         resource_path = f"/sys/bus/pci/devices/{pci_addr}/resource"
 
@@ -220,7 +169,7 @@ class VeriyoluSorgulayicisi:
         total_vram_bytes = 0
         bar1_bytes = 0
 
-        # Kesin fiziki sysfs resource okuması
+        
         if os.path.exists(resource_path):
             try:
                 with open(resource_path, "r") as rf:
@@ -257,7 +206,7 @@ class VeriyoluSorgulayicisi:
             except Exception as err:
                 logger.warning(f"[{pci_addr}] Resource kütüğü okuma uyarısı: {err}")
 
-        # Varsayılan emniyet boyutu (24 GB)
+        
         if total_vram_bytes == 0:
             total_vram_bytes = 24 * (1024**3)
         if bar1_bytes == 0:
@@ -274,10 +223,6 @@ class VeriyoluSorgulayicisi:
         }
 
     def HakimiyetDurumunuOku(self, cihaz_bilgisi: Dict[str, Any]) -> str:
-        """
-        Vazifesi: Offset 0x04 adresindeki 16-bitlik Command Register ikili anahtarını okur.
-        Bit 1 (Memory Space Enable) ve Bit 2 (Bus Master Enable) kontrollerini yapar.
-        """
         raw_header = cihaz_bilgisi.get("raw_header", b"")
         pci_addr = cihaz_bilgisi.get("pci_address", "0000:00:00.0")
 
@@ -304,10 +249,6 @@ class VeriyoluSorgulayicisi:
         temiz_kart_listesi: List[Dict[str, Any]],
         sira_no: int = 0
     ) -> Dict[str, Any]:
-        """
-        Vazifesi: Birden fazla GPU arasından istenen sıra numaralı kartı seçer ve
-        `SurucuAyirici` sınıfına teslim edilecek Nihai Kart Bilgi Paketini oluşturur.
-        """
         if not temiz_kart_listesi:
             raise RuntimeError("HATA: Sistemde kullanılabilir hiçbir GPU donanımı bulunamadı!")
 
@@ -339,10 +280,6 @@ class VeriyoluSorgulayicisi:
 
 
 class DonanimArayici(VeriyoluSorgulayicisi):
-    """
-    [Geriye Dönük Uyumluluk Katmanı - DonanimArayici]
-    VeriyoluSorgulayicisi sınıfını sarmalayarak eski API imzalarını destekler.
-    """
 
     def TumKartlariTara(self) -> List[Dict[str, Any]]:
         return self.VeriyoluBitisikleriniTara()

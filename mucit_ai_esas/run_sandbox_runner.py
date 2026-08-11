@@ -1,17 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-YEREL SANDBOX EĞİTİM VE SÜREKLİ HİYERARŞİK CHECKPOINT RUNNER
-(run_sandbox_runner.py)
-================================================================================
-Bu betik; yerel sandbox ortamında çalıştırıldığında eğitilecek yerel test veriseti
-yollarını './verisetleri_manifest.json' dosyası olarak kaydeder.
 
-Ardından 'kulli_gpu' sanal sürücüsünü başlatır ve 'main_egitim_dongusu.py'
-modülündeki 'Main_EgitimYurutucu' sürecini başlatır.
-================================================================================
-"""
 
 import os
 import sys
@@ -21,7 +8,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s][%(name)s][%(levelname)s] %(message)s')
 logger = logging.getLogger('SandboxRunner')
 
-# 1. Dizin Yollarını sys.path'e Ekle
+
 try:
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 except NameError:
@@ -35,7 +22,6 @@ SAMPLE_DATASET_DIR = os.path.join(BASE_DIR, "sample_dataset")
 
 
 def manifest_olustur():
-    """Yerel çalışma dizininde verisetleri_manifest.json dosyasını yazar."""
     manifest_data = {
         "verisetleri": [
             SAMPLE_DATASET_DIR
@@ -52,10 +38,10 @@ if __name__ == "__main__":
     logger.info("YEREL SANDBOX BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS EĞİTİMİ BAŞLATILIYOR")
     logger.info("================================================================================")
 
-    # 1. Manifest Dosyasını Yaz
+    
     manifest_olustur()
 
-    # 2. Küllî GPU Sanal Sürücüsünü Başlat
+    
     try:
         import kulli_gpu
     except (ImportError, ModuleNotFoundError):
@@ -65,7 +51,7 @@ if __name__ == "__main__":
     driver = kulli_gpu.baslat()
     logger.info("[Külli_GPU Driver] Sanal Sürücü Başarıyla Başlatıldı.")
 
-    # 3. Ana Eğitim Yürütücüsünü Çağır
+    
     from main_egitim_dongusu import Main_EgitimYurutucu
 
     Main_EgitimYurutucu(manifest_yolu=MANIFEST_PATH)

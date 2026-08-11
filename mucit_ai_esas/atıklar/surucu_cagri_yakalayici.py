@@ -1,16 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-================================================================================
-KÜLLÎ SANAL GPU SÜRÜCÜSÜ - SÜRÜCÜ ÇAĞRI YAKALAYICI VE ŞEFFAF ARAYÜZ KATMANI (PHASE IV)
-Modül: kulli_gpu/surucu_cagri_yakalayici.py (SeffafEvrenselYakalayici)
-================================================================================
-Kullanıcı uygulamalarının (PyTorch, C++ executables, Vulkan/CUDA binaries) C-ABI
-ve kütüphane seviyesindeki çağrılarını (`cudaMalloc`, `cudaLaunchKernel`, `vkAllocateMemory`,
-`ioctl`, `dlsym`) sembolik desen eşleştirmesi (Pattern Matching) ile havada yakalayan,
-uygulamanın koduna müdahale etmeden çağrıları özgün Sanal Bellek Havuzumuza (II. Faz)
-ve Sanal İşlemci Zamanlayıcımıza (III. Faz) şeffaf olarak yönlendiren evrensel kanca katmanıdır.
-"""
+
 
 import os
 import sys
@@ -47,25 +35,15 @@ logger.setLevel(logging.INFO)
 
 
 class CagriYakalamaHatasi(Exception):
-    """
-    Sürücü çağrı yakalama, kanca oluşturma veya C-ABI dönüşüm süreçlerinde
-    fırlatılan özel istisna sınıfı.
-    """
     pass
 
 
 class EvrenselCagriKategorizeEtici:
-    """
-    [Müşterek Sembolik Desen Sınıflandırıcısı / Call Pattern Classifier]
-    Hiç tanınmayan veya yeni versiyon bir C kütüphane fonksiyon adını metinsel
-    kalıplarla inceleyerek 4 Müşterek Kategoriye (Tahsis, Serbest, İcra, Aktarım) ayırır.
-    POSIX CPU RAM çağrılarını ('malloc', 'free' vb.) GPU VRAM tahsislerinden ayırır.
-    """
 
-    # POSIX CPU RAM Çağrı Simgeleri
+    
     POSIX_CPU_SYMBOLS = {"malloc", "calloc", "realloc", "free", "posix_memalign", "cfree", "valloc", "pvalloc", "aligned_alloc"}
 
-    # Müşterek Sembolik Desenler (Regular Expression Patterns)
+    
     PATTERN_TAHSIS = re.compile(r".*(cudaMalloc|cuMemAlloc|vkAllocateMemory|clCreateBuffer|vram_alloc|gpu_alloc).*", re.IGNORECASE)
     PATTERN_SERBEST = re.compile(r".*(cudaFree|cuMemFree|vkFreeMemory|clReleaseMemObject|vram_free|gpu_free).*", re.IGNORECASE)
     PATTERN_ICRA = re.compile(r".*(launch|submit|exec|dispatch|run_kernel|enqueue_nd|cudaLaunchKernel|cuLaunchKernel).*", re.IGNORECASE)
@@ -74,16 +52,12 @@ class EvrenselCagriKategorizeEtici:
 
     @classmethod
     def FonksiyonuMusterenDesenleSiniflandir(cls, fonksiyon_adi: str) -> str:
-        """
-        Vazifesi: C fonksiyon ismini müşterek desenlerle inceleyip sürücü eylemini kategorize eder.
-        POSIX CPU RAM (malloc/free) çağrılarını PASSTHROUGH olarak işaretler.
-        """
         if not fonksiyon_adi or not isinstance(fonksiyon_adi, str):
             return "KATEGORİ_PASSTHROUGH"
 
         fn_str = fonksiyon_adi.strip()
 
-        # 1. CPU RAM Çağrı Kontrolü (NumPy / SciPy / POSIX malloc)
+        
         if fn_str in cls.POSIX_CPU_SYMBOLS or fn_str.startswith("__libc_"):
             return "KATEGORİ_PASSTHROUGH"
 
@@ -106,25 +80,19 @@ class EvrenselCagriKategorizeEtici:
 
 
 class AdresUzayiAyrıştırmalıEvrenselYakalayici:
-    """
-    [Adres Uzayı Ayrıştırmalı Evrensel Yakalayıcı / CPU-GPU Disambiguated Call Interceptor]
-    NumPy / SciPy / POSIX CPU RAM `malloc` çağrılarını orijinal libc.so.6'ya müdahalesiz
-    passthrough geçer; GPU cihaz düğümlerine ve CUDA/Vulkan C-ABI sembollerine yönelen
-    GPU VRAM tahsislerini yakalar.
-    """
 
     def __init__(self, is_emri_idarecisi: Optional[Any] = None, sanal_bellek_havuzu: Optional[Any] = None):
         self.idareci = is_emri_idarecisi
         self.havuz = sanal_bellek_havuzu
 
     def YakalaVeYonlendir(self, sembol_adi: str, c_argumanlari: Tuple[Any, ...], orijinal_fn: Optional[Callable] = None) -> Any:
-        # 1. C-ABI SEMBOL KONTROLÜ (POSIX CPU RAM Çağrıları):
+        
         if sembol_adi in EvrenselCagriKategorizeEtici.POSIX_CPU_SYMBOLS:
             if callable(orijinal_fn):
                 return orijinal_fn(*c_argumanlari)
             return None
 
-        # 2. GPU AĞIRLIKLI C-ABI SEMBOL KONTROLÜ:
+        
         kat = EvrenselCagriKategorizeEtici.FonksiyonuMusterenDesenleSiniflandir(sembol_adi)
         if kat != "KATEGORİ_PASSTHROUGH" and self.idareci is not None:
             return self.idareci.IsEmriUretVeSevkEt(kat, c_argumanlari)
@@ -135,12 +103,6 @@ class AdresUzayiAyrıştırmalıEvrenselYakalayici:
 
 
 class DinamikKancaUretici:
-    """
-    [JIT Generic Hook Generator / Metaprogramlama Kanca Üreticisi]
-    Her C fonksiyonu için elle sarmalayıcı yazmak yerine, kategorisine göre
-    hafızada anında jenerik bir Python/C kancası (Wrapper) üretir ve II/III/V. Faz
-    sürücü katmanlarımıza bağlar.
-    """
 
     def __init__(
         self,
@@ -169,9 +131,6 @@ class DinamikKancaUretici:
         fonksiyon_adi: str,
         kategori: str
     ) -> Callable:
-        """
-        Vazifesi: Kategorisi belirlenen C fonksiyonu için jenerik bir Python sarmalayıcısı üretir.
-        """
         with self.lock:
             self.kanca_sayaci += 1
 
@@ -182,7 +141,7 @@ class DinamikKancaUretici:
             if self.idareci is not None and kategori != "KATEGORİ_PASSTHROUGH":
                 return self.idareci.IsEmriUretVeSevkEt(kategori, args)
 
-            # 1. KATEGORİ_TAHSİT (cudaMalloc, vkAllocateMemory, clCreateBuffer, vb.)
+            
             if kategori == "KATEGORİ_TAHSİT" and self.havuz is not None:
                 try:
                     istenen_bayt = 256 * (1024**2)
@@ -199,7 +158,7 @@ class DinamikKancaUretici:
                     logger.error(f"[JenerikKanca] Tahsis kancası hatası ({fonksiyon_adi}): {err}")
                     return 1
 
-            # 2. KATEGORİ_SERBEST (cudaFree, vkFreeMemory, clReleaseMemObject, vb.)
+            
             elif kategori == "KATEGORİ_SERBEST" and self.havuz is not None:
                 try:
                     target_addr = 0
@@ -216,7 +175,7 @@ class DinamikKancaUretici:
                     logger.error(f"[JenerikKanca] Serbest bırakma kancası hatası ({fonksiyon_adi}): {err}")
                     return 1
 
-            # 3. KATEGORİ_İCRA (cudaLaunchKernel, vkQueueSubmit, clEnqueueNDRangeKernel, vb.)
+            
             elif kategori == "KATEGORİ_İCRA" and self.zamanlayici is not None:
                 try:
                     grid_x = 1024
@@ -237,7 +196,7 @@ class DinamikKancaUretici:
                     logger.error(f"[JenerikKanca] İcra kancası hatası ({fonksiyon_adi}): {err}")
                     return 1
 
-            # 4. KATEGORİ_AKTARIM (cudaMemcpy, vkCmdCopyBuffer, vb.)
+            
             elif kategori == "KATEGORİ_AKTARIM" and self.havuz is not None:
                 try:
                     logger.debug(f"[JenerikKanca] '{fonksiyon_adi}' -> Sanal VRAM Bellek Senkronizasyonu Tetiklendi.")
@@ -246,7 +205,7 @@ class DinamikKancaUretici:
                     logger.error(f"[JenerikKanca] Aktarım kancası hatası: {err}")
                     return 1
 
-            # 5. KATEGORİ_PASSTHROUGH / KATEGORİ_SİSTEM (Orijinal Fonksiyon Çağrısı)
+            
             if callable(orijinal_fonksiyon_ptr):
                 return orijinal_fonksiyon_ptr(*args, **kwargs)
             return 0
@@ -255,12 +214,6 @@ class DinamikKancaUretici:
 
 
 class SeffafEvrenselYakalayici:
-    """
-    [Master Interceptor & Transparent API Interception Layer]
-    Uygulamaların ve C runtime'ın `dlsym` ve dinamik sembol yükleme çağrılarını
-    global seviyede sarmalar (Hooking). Uygulama standart CUDA/Vulkan çağırdığını
-    sanırken, çağrıları bizim Sanal Bellek Havuzumuza ve Sanal İşlemci Zamanlayıcımıza iletir.
-    """
 
     def __init__(
         self,
@@ -297,14 +250,11 @@ class SeffafEvrenselYakalayici:
         self.KancalariAktiflestir()
 
     def KancalariAktiflestir(self):
-        """
-        Vazifesi: Müşterek GPU C-ABI sembol kancalarını hazırlar ve devreve sokar.
-        """
         with self.lock:
             if not self.kancalar_aktif_mi:
                 self.kancalar_aktif_mi = True
 
-                # Standart GPU Sembol Listesi (CUDA, Vulkan, OpenCL, DRM)
+                
                 hedef_semboller = [
                     "cudaMalloc", "cudaFree", "cudaLaunchKernel", "cudaMemcpy",
                     "cuMemAlloc", "cuMemFree", "cuLaunchKernel", "cuMemcpyHtoD",
@@ -324,10 +274,6 @@ class SeffafEvrenselYakalayici:
                 logger.info(f"[KancalariAktiflestir] {len(self.aktif_kancalar)} Müşterek C-ABI Sembol Kancası Aktifleştirildi.")
 
     def SeffafDlsymKancasi(self, kutuphane_kolu: Any, sembol_adi_str: str) -> Any:
-        """
-        Vazifesi (Evrensel Yakalama Kalbi):
-        Uygulamaların C kütüphanesinden fonksiyon adresi istemesini sağlayan `dlsym` çağrısını yakalar.
-        """
         with self.lock:
             kat = EvrenselCagriKategorizeEtici.FonksiyonuMusterenDesenleSiniflandir(sembol_adi_str)
             self.yakalanan_cagri_istatistikleri[kat] = self.yakalanan_cagri_istatistikleri.get(kat, 0) + 1
@@ -346,17 +292,11 @@ class SeffafEvrenselYakalayici:
             return None
 
     def SemboluManuelKancala(self, sembol_adi: str, kanca_fonksiyon: Callable):
-        """
-        Vazifesi: Manuel olarak özel bir kanca fonksiyonunu sürücü arayüzüne kaydeder.
-        """
         with self.lock:
             self.aktif_kancalar[sembol_adi] = kanca_fonksiyon
             logger.info(f"[SemboluManuelKancala] Manuel Kanca Eklendi -> '{sembol_adi}'")
 
     def YakalayiciDurumuOzetle(self) -> Dict[str, Any]:
-        """
-        Vazifesi: Yakalayıcı katmanın çağrı istatistiklerini ve aktif kanca durumunu özetler.
-        """
         with self.lock:
             return {
                 "kancalar_aktif_mi": self.kancalar_aktif_mi,
@@ -367,9 +307,6 @@ class SeffafEvrenselYakalayici:
             }
 
     def KancalariPasiflestir(self):
-        """
-        Vazifesi: Kancaları güvenle pasifleştirir.
-        """
         with self.lock:
             self.kancalar_aktif_mi = False
             self.aktif_kancalar.clear()
