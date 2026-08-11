@@ -164,6 +164,21 @@ class NvmeTahliyeKararMotoru:
         """
         Taşan bayt miktarı kadar en pasif aktivasyon tensörlerini VRAM'den söküp
         /tmp NVMe diskine ikili binary olarak yazar (LRU - Least Recently Used).
+
+        DÜZELTME (madde 29) — DOĞRULANDI, ULAŞILAMAZ/ÖLÜ KOD: Bu metot yapısal olarak
+        eksik — kayıt defterindeki durumu MEM_STATE_SWAPPED_NVME olarak işaretliyor
+        ve bir dosya yolu üretiyor, ama tensörün GERÇEK verisini o dosyaya HİÇ
+        yazmıyor (ne torch.save ne ham .numpy().tofile() çağrısı var); yalnızca
+        torch.cuda.empty_cache() çağırıp VRAM'in sihirle boşalacağını varsayıyor.
+        Gerçek disk I/O olmadan `durum` alanı yanlış — sonraki bir geri-yükleme
+        (unpack) o dosya yolunu okumaya çalışsa boş/var olmayan bir dosyayla
+        karşılaşırdı. Tek çağıran yer `mucit_ai_esas/atıklar/is_emri_idarecisi.py`
+        ("atıklar" = çöp/kullanılmayan klasör) — bu, canlı tek-süreçli eğitim
+        yolundan (main_egitim_dongusu.py + AutogradNvmeOffloadHook.pack_hook_diske_tahliye,
+        aşağıda) hiç çağrılmaz; gerçek NVMe tahliyesi o hook üzerinden yapılıyor.
+        Bu metot bilinçli olarak "as-is" bırakıldı — canlı yoldan erişilemediği
+        için üretimde bir crash'e yol açmıyor; gerçek disk I/O eklemek çöp
+        dosyada gereksiz kod olurdu.
         """
         kurtarilan_bayt = 0
         tahliye_dosyalari = []
