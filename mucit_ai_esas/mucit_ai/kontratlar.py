@@ -3480,10 +3480,19 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
             for j in range(n):
                 if i == j:
                     continue
-                dot_ij = torch.dot(pc_vektorleri[i], duzles_faz_vektorleri[j])
+                # KAPSAMLI DENETİM (madde 19): pc_vektorleri/duzles_faz_vektorleri bellek
+                # tasarrufu için bfloat16'dır (bkz. pcgrad_bellek_dtype). Ama bu ÇATIŞMA
+                # TESPİT TESTİ (dot_ij < 0) GradNorm ile birim-normalize edilmiş, YAKIN-
+                # ORTOGONAL (dot_ij ~ 0) gradyan çiftlerinde en kritik sınırdadır — bf16'nın
+                # ~3 anlamlı basamağı burada dot_ij'nin İŞARETİNİ çevirebilir, PCGrad'ın
+                # gerçek bir çakışmayı atlamasına veya çakışmayan bir çifti gereksizce
+                # dikgenleştirmesine yol açabilir (sessiz sayısal bozulma). Yalnızca bu
+                # karar-kritik nokta fp32'de hesaplanıyor; pc_vektorleri'nin kendisi
+                # (ve büyük O(n·P) belleği) bf16 kalıyor.
+                dot_ij = torch.dot(pc_vektorleri[i].float(), duzles_faz_vektorleri[j].float())
                 if dot_ij < 0:
-                    norm_sq_j = torch.sum(duzles_faz_vektorleri[j] ** 2) + 1e-8
-                    proj_coeff = dot_ij / norm_sq_j
+                    norm_sq_j = torch.sum(duzles_faz_vektorleri[j].float() ** 2) + 1e-8
+                    proj_coeff = (dot_ij / norm_sq_j).to(pc_vektorleri[i].dtype)
                     # Dikgenleştirme: çakışan bileşeni çıkar
                     pc_vektorleri[i] = pc_vektorleri[i] - proj_coeff * duzles_faz_vektorleri[j]
 
