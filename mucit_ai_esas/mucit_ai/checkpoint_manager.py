@@ -445,24 +445,31 @@ class NPZCheckpointManager:
         """
         Hakiki PyTorch nn.Module ve Optimizer durumunu sabit isimli atomik .pt ve .npz olarak kaydeder.
         """
-        extra_weights: Dict[str, np.ndarray] = {}
-        
-        if torch is not None:
-            if hasattr(model, 'state_dict'):
-                for k, v in model.state_dict().items():
-                    extra_weights[f"param_{k}"] = _tensor_to_numpy_safe(v)
-            elif isinstance(model, dict):
-                for mod_name, mod in model.items():
-                    if hasattr(mod, 'state_dict'):
-                        for k, v in mod.state_dict().items():
-                            extra_weights[f"param_{mod_name}.{k}"] = _tensor_to_numpy_safe(v)
-
+        # DÜZELTME (Sistem RAM OOM — Kaggle "tried to allocate more memory than is
+        # available"): ÖNCEDEN burada `extra_weights` adıyla TÜM model ağırlıklarının
+        # (`model.state_dict()`) TAM bir NumPy kopyası çıkarılıyor ve `self.save(...,
+        # extra=extra_weights)` ile geçiriliyordu. Ama `save()` fonksiyonunun kendisi
+        # ZATEN `model.state_dict()` üzerinden AYNI `param_*` NumPy dizilerini bağımsız
+        # olarak inşa ediyor (bkz. save() satır ~291-296) ve sonra `extra` sözlüğünü
+        # üzerine yazıyordu. Sonuç: her checkpoint kaydında modelin TAMAMININ (birkaç
+        # GB olabilir) İKİ ayrı tam NumPy kopyası (payload'ın kendi inşa ettiği ve
+        # `extra_weights`) CPU RAM'inde AYNI ANDA canlı oluyordu — üstelik
+        # `extra_weights` bu fonksiyonun yerel değişkeni olarak `self.save(...)` dönene
+        # kadar VE ardından `.pt` arka plan kaydı için `state_dict_cpu` inşa edilene
+        # kadar (satır ~534) canlı kalmaya devam ediyordu, bu da üçüncü bir tam kopyayla
+        # üst üste biniyordu. Bu, GPU VRAM'i değil SİSTEM (host) RAM'ini tüketir — çünkü
+        # np.savez_compressed'in gerçek bellek maliyeti sıkıştırma bitene kadar RAM'dedir,
+        # diske değil. Uzun (11+ saat) bir koşuda yüzlerce checkpoint turunda bu tekrar
+        # eden ikili/üçlü tam-model kopyalanması, Kaggle'ın sistem RAM sınırını aşıp
+        # "tried to allocate more memory than is available" ile süreci öldürebilirdi.
+        # DÜZELTME: `extra_weights` tamamen kaldırıldı — save() zaten aynı param_*
+        # verisini kendi state_dict() okumasından üretiyor, bu yüzden ayrı bir kopya
+        # çıkarmaya hiç gerek yok.
         npz_path = self.save(
             step=step,
             token_offset=token_offset,
             model=model,
             loss_history=loss_history,
-            extra=extra_weights,
             is_best=is_best
         )
 
