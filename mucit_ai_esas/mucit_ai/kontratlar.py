@@ -15,6 +15,7 @@ spektral projeksiyonu ve kapılı bellek yönetim mekanizmalarının tamamını 
 import os
 import sys
 import logging
+import collections
 import dataclasses
 from dataclasses import dataclass, is_dataclass, fields
 from typing import Dict, List, Tuple, Any, Optional, Union, Callable
@@ -525,11 +526,26 @@ class Yardimci_ChebyshevMatrisHesaplayici:
     [PERFORMANS OPTİMİZASYONU]: dT türev matrisi ve Vandermonde T matrisleri pre-computed cache 
     üzerinden $1.2 \text{ s}$ -> $0.001 \text{ s}$ anlık hızla bellekten çağrılır.
     """
+    # KAPSAMLI DENETİM (madde 16): Bu önbellekler (M_plus_1, N/num_quad, device) ile
+    # anahtarlanıyordu ve HİÇBİR sınır/tahliye mekanizması yoktu. N (dizi uzunluğu)
+    # hesapla_yay_uzunlugu üzerinden batch başına DİNAMİK olarak farklı değerler
+    # alabildiğinden, uzun bir eğitim koşusu boyunca görülen her farklı N değeri için
+    # bir [M_plus_1, N] tensörü sonsuza dek birikiyordu — "N adımdan sonra ama hemen
+    # değil" tipik OOM semptomlarını açıklayan yavaş bir bellek sızıntısı. Basit bir
+    # FIFO/LRU üst sınırı eklendi.
+    _ONBELLEK_AZAMI_GIRDI = 64
+
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
-        self._dt_cache = {}
-        self._t_quad_cache = {}
-        self._vandermonde_cache = {}
+        self._dt_cache = collections.OrderedDict()
+        self._t_quad_cache = collections.OrderedDict()
+        self._vandermonde_cache = collections.OrderedDict()
+
+    def _onbellege_ekle(self, onbellek: "collections.OrderedDict", anahtar: Any, deger: Any) -> None:
+        onbellek[anahtar] = deger
+        onbellek.move_to_end(anahtar)
+        while len(onbellek) > self._ONBELLEK_AZAMI_GIRDI:
+            onbellek.popitem(last=False)
 
     def get_precomputed_dT(self, M_p_1: int, num_quad: int, device: Union[torch.device, str]) -> Tuple[torch.Tensor, torch.Tensor]:
         if isinstance(device, str):
@@ -537,6 +553,8 @@ class Yardimci_ChebyshevMatrisHesaplayici:
         dev_key = (device.type, device.index if device.index is not None else 0)
         cache_key = (M_p_1, num_quad, dev_key)
         if cache_key in self._dt_cache:
+            self._dt_cache.move_to_end(cache_key)
+            self._t_quad_cache.move_to_end(cache_key)
             return self._dt_cache[cache_key], self._t_quad_cache[cache_key]
 
         t_quad = torch.linspace(-0.999, 0.999, num_quad, device=device)
@@ -544,8 +562,8 @@ class Yardimci_ChebyshevMatrisHesaplayici:
         for n in range(1, M_p_1):
             dT[n, :] = n * torch.sin(n * torch.acos(t_quad)) / torch.sqrt(1 - t_quad**2 + 1e-6)
 
-        self._dt_cache[cache_key] = dT
-        self._t_quad_cache[cache_key] = t_quad
+        self._onbellege_ekle(self._dt_cache, cache_key, dT)
+        self._onbellege_ekle(self._t_quad_cache, cache_key, t_quad)
         return dT, t_quad
 
     def hesapla(self, N: Optional[int] = None) -> torch.Tensor:
@@ -559,6 +577,7 @@ class Yardimci_ChebyshevMatrisHesaplayici:
         cache_key = (N, M_p_1, dev_key)
 
         if cache_key in self._vandermonde_cache:
+            self._vandermonde_cache.move_to_end(cache_key)
             return self._vandermonde_cache[cache_key]
 
         k_indices = torch.arange(N, dtype=torch.float32, device=device)
@@ -587,7 +606,7 @@ class Yardimci_ChebyshevMatrisHesaplayici:
             else:
                 T[n, :] = T_pos
 
-        self._vandermonde_cache[cache_key] = T
+        self._onbellege_ekle(self._vandermonde_cache, cache_key, T)
         return T
 
     def hesapla_yay_uzunlugu(self, C: torch.Tensor, delta_token: float = 0.5) -> Tuple[torch.Tensor, torch.Tensor]:
