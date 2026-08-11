@@ -1910,6 +1910,8 @@ def test_funnel_principle_driver_flush_remediation():
     logger.info("  [HUNİ PRENSİBİ - DOĞRULANDI 1] driver_flush() VMM Allocator üzerindeki atıl extents bloklarını başarıyla süpürdü.")
 
     if has_torch and torch.cuda.is_available():
+        import gc as _gc_vmm_test
+        _gc_vmm_test.collect()
         torch.cuda.empty_cache()
         logger.info("  [HUNİ PRENSİBİ - DOĞRULANDI 2] torch.cuda.empty_cache() çağrısı kancalanıp SÜRÜCÜNÜN (VMM Allocator) içinden başarıyla geçti ('DA').")
     else:

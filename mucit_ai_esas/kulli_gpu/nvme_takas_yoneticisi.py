@@ -270,6 +270,8 @@ class NvmeTahliyeKararMotoru:
                 kurtarilan_bayt += pasif.bayt_boyutu
                 tahliye_dosyalari.append(dosya_yolu)
 
+        import gc as _gc_tahliye
+        _gc_tahliye.collect()
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
@@ -404,6 +406,8 @@ class AutogradNvmeOffloadHook:
             logger.error(f"[AutogradNvmeOffloadHook] Diskten geri yukleme hatasi: {exc}")
             if restored_tensor is not None:
                 try:
+                    import gc as _gc_geri_yukleme
+                    _gc_geri_yukleme.collect()
                     torch.cuda.empty_cache()
                     return restored_tensor.to(device=target_device)
                 except Exception:
@@ -470,6 +474,8 @@ class GuvenliVramVeTmpSupurgesi:
                         except Exception:
                             pass
 
+        import gc as _gc_temizle
+        _gc_temizle.collect()
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 

@@ -349,10 +349,12 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
             else:
                 nihai_cikti = "..."
 
-    
+
+    import gc as _gc_cikarsama
+    _gc_cikarsama.collect()
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
-        
+
     toplam_sure = time.time() - baslangic_zamani
     logger.info(f"Çıkarım Başarıyla Tamamlandı | Toplam Süre: {toplam_sure * 1000.0:.2f} ms")
     logger.info("================================================================================")
