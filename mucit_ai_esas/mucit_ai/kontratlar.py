@@ -2870,7 +2870,14 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
         """
         if z.ndim > 2:
             z = z.view(-1, z.shape[-1])
-        std_z = torch.sqrt(torch.var(z, dim=0) + self.eps)
+        # KAPSAMLI DENETİM (madde 17): torch.var() VARSAYILAN OLARAK unbiased=True'dur
+        # (n-1'e böler). z'nin etkin batch boyutu 1 olduğunda (küçük/kısmi son batch,
+        # active_batch_size=1 çağrıları) n-1=0 olup std_z NaN döner (+ eps bunu
+        # düzeltmez), bu da var_loss_vec'i ve dolayısıyla toplam VICReg kaybını sessizce
+        # NaN'a bulaştırır. kovaryans_kaybi_vektor zaten unbiased=False kullanıyor (bkz.
+        # birkaç satır aşağı) — tutarlılık için burada da aynısı uygulandı; numel>=1 için
+        # her zaman tanımlıdır.
+        std_z = torch.sqrt(torch.var(z, dim=0, unbiased=False) + self.eps)
         var_loss_vec = torch.relu(self.gamma - std_z)  # [D]
         return var_loss_vec
 
