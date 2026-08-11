@@ -799,6 +799,19 @@ class NPZCheckpointManager:
                     result["errors"].append(
                         f"Boyut sınırı aşıldı: {result['size_mb']:.1f} MB > {self.max_mb} MB"
                     )
+                # KAPSAMLI DENETİM (madde 25): ÖNCEDEN yalnızca anahtar VARLIĞI ve toplam
+                # dosya boyutu kontrol ediliyordu — dizilerin kendisi hiç okunmuyordu
+                # (np.load NPZ girdilerini TEMBEL açar, gerçek zlib decompression yalnızca
+                # bir dizi indekslendiğinde gerçekleşir). Bozuk bir sıkıştırılmış blok
+                # (bit çürümesi, atomik yeniden adlandırma SONRASI oluşan kısmi disk
+                # yazımı) "valid": True raporlanıyordu, sonra load() gerçekten o diziye
+                # eriştiğinde eğitim çökerdi. Artık her dizi GERÇEKTEN açılıp bütünlüğü
+                # doğrulanıyor.
+                for key in data.files:
+                    try:
+                        _ = data[key]  # zlib decompression'ı zorla tetikle
+                    except Exception as arr_exc:
+                        result["errors"].append(f"Bozuk veri ({key}): {arr_exc}")
                 result["valid"] = len(result["errors"]) == 0
                 result["keys"]  = list(data.keys())
         except Exception as exc:
