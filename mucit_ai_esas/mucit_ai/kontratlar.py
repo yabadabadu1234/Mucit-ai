@@ -3306,6 +3306,9 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
     takas_mgr: Any = None,
     **kwargs: Any
 ) -> Any:
+    if not torch.cuda.is_available():
+        return hesaplama_fonksiyonu(*args, **kwargs)
+
     logger = logging.getLogger("mucit_ai.kontratlar")
     gercek_oom_tipleri = (torch.cuda.OutOfMemoryError,) if hasattr(torch.cuda, "OutOfMemoryError") else ()
 
