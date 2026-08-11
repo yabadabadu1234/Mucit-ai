@@ -146,6 +146,23 @@ class CpuAnaIdareci:
         self.surecler: List[Any] = []
         self._baslatildi = False
 
+    def _cevap_kuyruklarini_bosalt(self) -> None:
+        """
+        KUSUR-44 düzeltmesi: bir IPC yanıt zaman aşımı oluştuğunda, o ana kadar
+        gecikmiş olup kuyruklara sonradan düşen "bayat" (stale) yanıtlar boşaltılmaz
+        ve bir sonraki adımda o adıma ait yanıt sanılarak yanlış eşleştirilebilirdi.
+        Zaman aşımı sonrası tüm cevap kuyrukları tamamen boşaltılarak bu sızıntı
+        önlenir.
+        """
+        for cq in self.cevap_kuyruklari.values():
+            while True:
+                try:
+                    cq.get_nowait()
+                except queue.Empty:
+                    break
+                except Exception:
+                    break
+
     def surecleri_baslat_ve_ilkle(self) -> bool:
         """
         'spawn' bağlamı ile her GPU için izole Python süreci başlatır.
@@ -239,6 +256,7 @@ class CpuAnaIdareci:
             try:
                 self.cevap_kuyruklari[rank].get(timeout=IPC_YANIT_TIMEOUT_SN)
             except queue.Empty:
+                self._cevap_kuyruklarini_bosalt()
                 raise RuntimeError(
                     f"[CpuAnaIdareci] shardli_nesne_olustur: Rank {rank} işçisinden "
                     f"{IPC_YANIT_TIMEOUT_SN}s içinde yanıt gelmedi (nesne_id={nesne_id}). "
@@ -313,6 +331,7 @@ class CpuAnaIdareci:
                 try:
                     self.cevap_kuyruklari[rank].get(timeout=IPC_YANIT_TIMEOUT_SN)
                 except queue.Empty:
+                    self._cevap_kuyruklarini_bosalt()
                     raise RuntimeError(
                         f"[CpuAnaIdareci] islem_sevk_et: Rank {rank} işçisinden "
                         f"{IPC_YANIT_TIMEOUT_SN}s içinde yanıt gelmedi "
@@ -329,8 +348,20 @@ class CpuAnaIdareci:
         for rank in range(self.world_size):
             self.emir_kuyruklari[rank].put({"komut": "DUR"})
 
+        # KUSUR-41 düzeltmesi: önceden yalnızca join(timeout=5) çağrılıyordu; süreç
+        # DUR emrini zamanında işleyemezse (asılı kalmışsa) join timeout'tan sonra
+        # süreç canlı kalmaya devam eder ve VRAM'i elinde tutan bir zombie/orphan
+        # sürece dönüşürdü. Şimdi hâlâ canlıysa açıkça terminate() edilip son bir
+        # kez join ile temizleniyor.
         for p in self.surecler:
             p.join(timeout=5)
+            if p.is_alive():
+                logger.warning(
+                    f"[CpuAnaIdareci] Surec {p.pid} DUR emrine zamaninda yanit vermedi, "
+                    f"terminate ediliyor."
+                )
+                p.terminate()
+                p.join(timeout=5)
 
         self._baslatildi = False
         logger.info("[CpuAnaIdareci] Tum surecler durduruldu.")
