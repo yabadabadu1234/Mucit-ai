@@ -362,6 +362,33 @@ class NPZCheckpointManager:
         import uuid as _uuid
         out_path = self._npz_path(step, is_best=is_best)
         tmp_path = out_path.replace(".npz", f"_tmp_{_uuid.uuid4().hex}.npz")
+
+        # DÜZELTME (16 hatalık ikinci denetim, madde 15): NVMe takas dosyaları
+        # (/tmp/kulli_scratchpad) diski doldurmuş olabileceği hâlde bu hiç kontrol
+        # edilmiyordu — disk gerçekten dolduğunda np.savez_compressed/os.replace
+        # "No space left on device" ile patlıyor ve tüm eğitim çöküyordu. Artık
+        # yazımdan önce hedef dizindeki boş disk alanı ölçülüyor; kritik eşiğin
+        # altındaysa (checkpoint boyutunun ~3 katından az boş alan) NVMe takas
+        # yöneticisinin agresif süpürmesi TETİKLENİYOR, eğitim çökertilmiyor.
+        try:
+            import shutil as _shutil
+            _disk = _shutil.disk_usage(self.checkpoint_dir)
+            _bos_mb = _disk.free / (1024 * 1024)
+            if _bos_mb < (self.max_mb * 3.0):
+                logger.warning(
+                    f"  [Ckpt Disk Guard] Boş disk alanı kritik ({_bos_mb:.1f} MB) — "
+                    "NVMe takas dosyaları süpürülüyor..."
+                )
+                # checkpoint_manager.py bir NvmeTakasYoneticisi örneğine referans tutmaz
+                # (bağımsız modül); bilinen takas dizinini doğrudan süpürüyoruz.
+                try:
+                    from kulli_gpu.nvme_takas_yoneticisi import GuvenliVramVeTmpSupurgesi
+                    GuvenliVramVeTmpSupurgesi.supur(swap_dir="/tmp/kulli_scratchpad", eskime_esigi_sn=0.0)
+                except Exception as _supur_exc:
+                    logger.warning(f"  [Ckpt Disk Guard] Süpürme denemesi başarısız: {_supur_exc}")
+        except Exception as _disk_exc:
+            logger.debug(f"[Ckpt Disk Guard] Disk alanı kontrol edilemedi: {_disk_exc}")
+
         with self._save_lock:
             np.savez_compressed(tmp_path, **payload)
 
