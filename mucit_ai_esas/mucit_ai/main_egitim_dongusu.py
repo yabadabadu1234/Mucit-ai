@@ -1494,7 +1494,19 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         continue
 
                     current_step += 1
+                    # DÜZELTME (Sistem RAM OOM): loss_history ÖNCEDEN 11.5 saatlik bir
+                    # koşu boyunca (binlerce/on binlerce adım) SINIRSIZCA büyüyordu ve bu
+                    # TAM (kırpılmamış) liste her periyodik/en-iyi-kayıp checkpoint'inde
+                    # (checkpoint_manager.py: save_pytorch_model -> state_dict_to_save
+                    # ['loss_history']) `.pt` dosyasına gömülüyor, arka plan kaydı thread'i
+                    # boyunca da CPU RAM'inde ayrıca canlı tutuluyordu. NPZ tarafı zaten
+                    # yalnızca son 100 değeri kalıcı kılıyordu (save() içinde hist[-100:]),
+                    # bu yüzden canlı listeyi de aynı sınırda tutmak hiçbir bilgi
+                    # kaybetmeden (best_loss zaten ayrı takip ediliyor) bu sınırsız CPU RAM
+                    # birikimini önler.
                     loss_history.append(curr_loss_val)
+                    if len(loss_history) > 100:
+                        del loss_history[:-100]
                     gecen_sure = time.time() - epoch_baslangic
 
                     # Küresel İşlenen Bayt Hesabı ve 500 MB Log Throttling (Log Şişmesini Kökten Önleme)
