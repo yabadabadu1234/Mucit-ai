@@ -2459,10 +2459,21 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         """
         N10 VRAM Tahmin Formülü: VRAM_bayt = B * micro_chunk_size * V_size * 4 Bayt
+
+        KAPSAMLI DENETİM: Bu formül önceden dosyadaki HER DİĞER tahmin_et_vram_bayt
+        metodundan farklı olarak `vram_bayt_tahmin_et()` ortak çekirdeğini ATLAYIP
+        çıplak `B*micro_chunk_size*V_size*4` bayt sayısını dönüyordu — yani
+        guvenlik_katsayisi=3.0 (autograd backward ara tensörleri, forward()'daki
+        aynı-boy komşu tensörler logits_chunk/logits_norm/P_chunk/gather tamponları
+        ve CUDA parçalanma payı) burada HİÇ uygulanmıyordu. Bu, sistemdeki tek büyük
+        (V_size=200000) düğüm için AnlasmaliVramGuvencesiAl'e ~3 kat düşük bir tahmin
+        besleyip GPU'da aslında sığmayacak bir tahsisi onaylatabiliyordu — Kaggle
+        koşusunda step 0->1 arası ani VRAM sıçramasının uygun adaylarından biri.
+        Diğer tüm formüllerle tutarlı olsun diye ortak çekirdeğe taşındı.
         """
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
         micro_chunk_size = 64
-        return int(B * micro_chunk_size * self.V_size * 4)
+        return vram_bayt_tahmin_et(B, micro_chunk_size, self.V_size)
 
     def forward_sifir_oom_chunking(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None) -> E12_ParalelTokenOlasilikMatrisi:
         """RÜKN IV: 64'lük mikro-dilimlerle SIFIR-OOM hesaplama algoritması"""
