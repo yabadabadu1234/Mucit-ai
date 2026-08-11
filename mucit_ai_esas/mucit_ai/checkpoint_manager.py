@@ -576,9 +576,25 @@ class NPZCheckpointManager:
                 break
 
         if torch is not None and pt_file is not None:
+            # DÜZELTME (madde 26): Eskiden torch.load() VE state_dict uygulaması AYNI
+            # try/except Exception bloğundaydı. Eğer bazı modüller (mod_obj) BAŞARIYLA
+            # state_dict yüklüyor, sonraki bir modül hata veriyorsa, except bloğu
+            # bunu ".pt yok/bozuk, npz'ye geç" ile aynı şekilde ele alıyordu — halbuki
+            # model artık YARI-YÜKLENMİŞ (bazı modüller .pt'den, bazıları ilklenmiş
+            # durumda) karışık bir haldeydi ve npz fallback ağırlıkları HİÇ yüklemediği
+            # için bu tutarsız durum sessizce eğitime/çıkarsamaya devam ediyordu.
+            # Artık torch.load() (dosya okuma/bozukluk) ayrı, state_dict uygulaması
+            # (kısmi durum riski) ayrı ele alınıyor: ikincisi başarısız olursa npz'ye
+            # sessizce düşülmüyor, hata açıkça yükseltiliyor.
             try:
-                import re
                 checkpoint = torch.load(pt_file, map_location="cpu")
+            except Exception as load_exc:
+                logger.warning(f"  [Ckpt Mgr] .pt dosyası okunamadı ({load_exc}), .npz yüklemesine geçiliyor.")
+                checkpoint = None
+
+            if checkpoint is not None:
+              try:
+                import re
                 if 'model' in checkpoint:
                     st = checkpoint['model']
 
@@ -640,8 +656,13 @@ class NPZCheckpointManager:
                 step_ret = checkpoint.get('step', 0)
                 loss_ret = checkpoint.get('loss_history', [])
                 return step_ret, loss_ret
-            except Exception as exc:
-                logger.warning(f"  [Ckpt Mgr] .pt yükleme hatası ({exc}), .npz yüklemesine geçiliyor.")
+              except Exception as exc:
+                # NPZ'ye DÜŞÜLMÜYOR: bu noktaya gelindiyse torch.load() zaten başarılıydı
+                # ve bazı modüllerin state_dict'i muhtemelen ZATEN uygulanmış olabilir.
+                # Sessizce npz fallback'e geçmek modeli yarı-yüklenmiş bırakıp bunu
+                # gizlerdi. Hata açıkça yükseltiliyor ki çağıran taraf gerçek durumu görsün.
+                logger.error(f"  [Ckpt Mgr] .pt state_dict uygulama hatası ({exc}) — model YARI-YÜKLENMİŞ olabilir, npz'ye sessizce düşülmüyor.")
+                raise
 
         if resolved is None:
             logger.warning(f"  [Ckpt Mgr] Yüklenecek kontrol noktası bulunamadı.")
