@@ -752,11 +752,25 @@ class NPZCheckpointManager:
             "hiyerarsik_hafiza": self.hafiza.to_dict()
         }
         meta_path = self._meta_path(npz_path)
+        # DÜZELTME (KUSUR 5): Meta JSON, esas .npz/.pt dosyalarının aksine (tmp+os.replace
+        # ile atomik yazılıyor) doğrudan open(meta_path, "w") ile üzerine yazılıyordu.
+        # Yazma sırasında süreç kesilirse (OOM-kill, Kaggle oturum zaman aşımı) yarım
+        # yazılmış/bozuk bir JSON dosyası kalır; sonraki load()/list_checkpoints() çağrıları
+        # bunu sessizce atlar (json.JSONDecodeError yakalanıyor) ama step/hiyerarşik hafıza
+        # bilgisi kaybolur. Artık aynı UUID'li tmp + os.replace deseni kullanılıyor.
+        import uuid as _uuid_meta
+        meta_tmp = meta_path + f".tmp_{_uuid_meta.uuid4().hex}"
         try:
-            with open(meta_path, "w", encoding="utf-8") as f:
+            with open(meta_tmp, "w", encoding="utf-8") as f:
                 json.dump(meta, f, indent=2, ensure_ascii=False)
+            os.replace(meta_tmp, meta_path)
         except OSError as exc:
             logger.warning(f"  [Ckpt] Meta yazılamadı: {exc}")
+            try:
+                if os.path.isfile(meta_tmp):
+                    os.remove(meta_tmp)
+            except OSError:
+                pass
 
     def load(self, path: Optional[str] = None,
              step: Optional[int] = None) -> Dict[str, Any]:
