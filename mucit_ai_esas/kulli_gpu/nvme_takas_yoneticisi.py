@@ -354,9 +354,6 @@ class AutogradNvmeOffloadHook:
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
 
 
-            if not tensor.requires_grad:
-                tensor.data = cpu_kopyasi
-
             izlenebilir_dosya_yolu = _IzlenebilirDosyaYolu(dosya_yolu)
             kayit_defteri_hedefi = self.kayit_defteri if hasattr(self, "kayit_defteri") else None
             if kayit_defteri_hedefi is not None:
