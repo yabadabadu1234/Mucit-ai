@@ -2715,6 +2715,13 @@ class Kayip_GRPO_Kriteri:
         self._W_up_stiefel_cpu: torch.Tensor = Q  # CPU'da sabit tut
 
     def hesapla_vektor(self, P: torch.Tensor, hedefler: torch.Tensor, oduller: torch.Tensor) -> torch.Tensor:
+        # DÜZELTME (madde 16): OOM kurtarma sonrası hedefler/oduller CPU'da, P ise
+        # CUDA'da kalmış olabilir — P.gather(1, targets...) ve nll * avantajlar.detach()
+        # bu durumda "Expected all tensors to be on the same device" ile çöker.
+        if hedefler.device != P.device:
+            hedefler = hedefler.to(P.device)
+        if oduller.device != P.device:
+            oduller = oduller.to(P.device)
         if P.dim() == 2:
             # P zaten [B, N] boyutunda p_target olasılık tensörüdür!
             # NLL hesabı doğrudan p_target üzerinden tekil logaritma ile yapılır:
