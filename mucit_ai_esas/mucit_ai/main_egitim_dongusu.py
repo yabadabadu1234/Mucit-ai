@@ -802,7 +802,14 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr
     )
     if hasattr(n6_aktor, 'update_operators'):
-        n6_aktor.update_operators(D0_op_sabit)
+        # KAPSAMLI DENETİM (madde 21): update_operators yalnızca register_buffer çağrıları
+        # yapar (gerçek tahsis/hesaplama yok), bu yüzden AcilDurumOomYakalayiciVeKurtarici
+        # (gereksiz CPU-taşıma riski taşırdı) yerine hafif bir savunma yeterli — buffer
+        # kaydı beklenmedik şekilde başarısız olursa adımın tamamı çıplak çökmesin.
+        try:
+            n6_aktor.update_operators(D0_op_sabit)
+        except Exception as _update_ops_exc:
+            logger.warning(f"  [N6 update_operators Uyarısı] {_update_ops_exc}")
 
     # KAPSAMLI DENETİM (madde 20): ÖNCEDEN sorgu_q_list/cevap_a_list, R döngüsünün HER
     # adımında büyüyen listelerdi, ama yalnızca SON eleman (son_q/son_a, satır ~957-958
@@ -1208,7 +1215,22 @@ def _tekil_egitim_adimi_icra(
     ))
     
     raw_n3_lif = gpu_dagitici.kok_modul_al(n3_lif) if gpu_dagitici is not None else (n3_lif.module if hasattr(n3_lif, 'module') else n3_lif)
-    stiefel_izdusurucu.izdüsür(raw_n3_lif.phi_base)
+    # KAPSAMLI DENETİM (madde 21): izdüsür, raw_n3_lif.phi_base'i (canlı bir nn.Parameter)
+    # torch.no_grad() altında .copy_() ile YERİNDE günceller. AcilDurumOomYakalayiciVeKurtarici
+    # İLE SARMALANAMAZ: o sarmalayıcının CPU-retry deseni argümanı CPU'ya taşıyıp fonksiyonu
+    # o KOPYA üzerinde çalıştırır — phi_base'in gerçek GPU parametresi hiç güncellenmez,
+    # sessizce hiçbir şey olmamış gibi devam eder (D0 sınıfı bir sessiz-bozulma riski). Bunun
+    # yerine Pareto-PCGrad'daki (madde 6) ile aynı, cihaz DEĞİŞTİRMEYEN güvenli GPU-içi
+    # tek-seferlik retry uygulanıyor.
+    try:
+        stiefel_izdusurucu.izdüsür(raw_n3_lif.phi_base)
+    except (torch.cuda.OutOfMemoryError if hasattr(torch.cuda, "OutOfMemoryError") else RuntimeError) as _stiefel_oom:
+        logger.warning(f"  [Stiefel İzdüşüm OOM Kurtarıcı] Gerçek VRAM taşması yakalandı, GPU-içi temizlik sonrası tekrar deneniyor: {_stiefel_oom}")
+        import gc as _gc3
+        _gc3.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        stiefel_izdusurucu.izdüsür(raw_n3_lif.phi_base)
 
     d_discrepancy = float(d_vec3.mean().detach().item())
     dirichlet_energy = float(e_vec3.mean().detach().item())
