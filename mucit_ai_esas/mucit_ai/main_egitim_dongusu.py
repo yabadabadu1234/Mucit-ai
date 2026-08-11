@@ -1505,8 +1505,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                     # kaybetmeden (best_loss zaten ayrı takip ediliyor) bu sınırsız CPU RAM
                     # birikimini önler.
                     loss_history.append(curr_loss_val)
-                    if len(loss_history) > 100:
-                        del loss_history[:-100]
+                    if len(loss_history) > 10:
+                        del loss_history[:-10]
                     gecen_sure = time.time() - epoch_baslangic
 
                     # Küresel İşlenen Bayt Hesabı ve 500 MB Log Throttling (Log Şişmesini Kökten Önleme)

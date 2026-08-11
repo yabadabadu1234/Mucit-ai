@@ -339,7 +339,7 @@ class NPZCheckpointManager:
         payload["step"] = np.array([step], dtype=np.int64)
         payload["token_offset"] = np.array([token_offset], dtype=np.int64)
         hist = loss_history or []
-        payload["loss_history"] = np.array(hist[-100:], dtype=np.float32)
+        payload["loss_history"] = np.array(hist[-10:], dtype=np.float32)
 
         # Ek alanlar
         if extra:
