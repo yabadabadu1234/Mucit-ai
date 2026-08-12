@@ -660,11 +660,10 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         self.config = config
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
-        V = getattr(self.config, 'V_nodes', 8)
+        V = girdi_sekli[0] if len(girdi_sekli) > 0 else getattr(self.config, 'V_nodes', 8)
         E_num = max(V - 1, 1)
         d_e, d_v = self.config.d_e, self.config.d_v
-        D = V * d_v
-        return vram_bayt_tahmin_et(E_num * d_e, D)  
+        return vram_bayt_tahmin_et(2 * E_num, d_e, d_v)
 
     def insa_et(
         self,
