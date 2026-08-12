@@ -384,21 +384,107 @@ class Egitim_KontrolNoktasiYoneticisi:
 
 from checkpoint_manager import NPZCheckpointManager, HiyerarşikHafizaYoneticisi
 
+HF_YOL_ONEKI = "hf://"
+
+
+def hf_kaydini_metne_cevir(kayit: Any) -> str:
+
+
+
+
+
+    if isinstance(kayit, str):
+        return kayit
+    if not isinstance(kayit, dict):
+        return str(kayit)
+
+    for sohbet_alani in ("messages", "conversations", "conversation"):
+        mesajlar = kayit.get(sohbet_alani)
+        if isinstance(mesajlar, list) and mesajlar:
+            parcalar = []
+            for m in mesajlar:
+                if isinstance(m, dict):
+                    rol = m.get("role") or m.get("from") or ""
+                    icerik = m.get("content") or m.get("value") or ""
+                    parcalar.append(f"{rol}: {icerik}" if rol else str(icerik))
+                else:
+                    parcalar.append(str(m))
+            return "\n".join(parcalar)
+
+    sirali_alanlar = (
+        "description", "problem", "question", "instruction", "prompt",
+        "text", "content", "body", "solution", "answer", "response",
+        "code", "output",
+    )
+    parcalar = []
+    for alan in sirali_alanlar:
+        deger = kayit.get(alan)
+        if isinstance(deger, str) and deger.strip():
+            parcalar.append(deger)
+    if parcalar:
+        return "\n\n".join(parcalar)
+
+    try:
+        return json.dumps(kayit, ensure_ascii=False)
+    except Exception:
+        return str(kayit)
+
+
 class Egitim_TopolojikVeriYukleyici:
     def __init__(self, config: Model_TopolojikKonfigurasyon, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json"):
         self.config = config
         self.manifest_yolu = manifest_yolu
         self.verisetleri: Dict[str, Dict[str, List[str]]] = {}
+        self.hf_tanimlari: Dict[str, Dict[str, Any]] = {}
         self.tarama_yap()
+
+    def _hf_sanal_yol(self, tanim: Dict[str, Any]) -> str:
+        return (
+            f"{HF_YOL_ONEKI}{tanim['depo']}"
+            f"|{tanim.get('yapilandirma') or '-'}"
+            f"|{tanim.get('bolum', 'train')}"
+        )
+
+    def hf_verisetlerini_kaydet(self, hf_listesi: List[Any], baslangic_indeksi: int) -> None:
+        for idx, ham in enumerate(hf_listesi):
+            if isinstance(ham, str):
+                tanim: Dict[str, Any] = {"depo": ham}
+            elif isinstance(ham, dict) and ham.get("depo"):
+                tanim = dict(ham)
+            else:
+                logger.warning(f"  [HF Veri Seti] Tanınmayan girdi atlandı: {ham!r}")
+                continue
+
+            tanim.setdefault("bolum", "train")
+            tanim.setdefault("yapilandirma", None)
+            tanim.setdefault("azami_ornek", 20000)
+
+            sanal_yol = self._hf_sanal_yol(tanim)
+            self.hf_tanimlari[sanal_yol] = tanim
+
+            veriseti_adi = (
+                f"veriseti_{baslangic_indeksi + idx + 1}_hf_"
+                + str(tanim["depo"]).replace("/", "_")
+            )
+            self.verisetleri[veriseti_adi] = {HF_YOL_ONEKI.rstrip(":/"): [sanal_yol]}
+            logger.info(
+                f"  [HF Veri Seti] Kuyruğa alındı: {tanim['depo']} "
+                f"(bölüm={tanim['bolum']}, azami örnek={tanim['azami_ornek']}, "
+                f"akış modu — diske indirme YOK)"
+            )
 
     def tarama_yap(self):
         klasorler_veya_dosyalar = []
+        hf_listesi: List[Any] = []
         if os.path.exists(self.manifest_yolu):
             try:
                 with open(self.manifest_yolu, 'r', encoding='utf-8') as f:
                     manifest_data = json.load(f)
                     klasorler_veya_dosyalar = manifest_data.get("verisetleri", [])
+                    hf_listesi = manifest_data.get("huggingface_verisetleri", [])
                 logger.info(f"Manifest dosyasından {len(klasorler_veya_dosyalar)} veri yolu okundu: {self.manifest_yolu}")
+                if hf_listesi:
+                    logger.info(f"Manifest dosyasından {len(hf_listesi)} HuggingFace veri seti okundu.")
             except Exception as e:
                 logger.warning(f"Manifest okunurken hata: {e}")
 
@@ -423,7 +509,120 @@ class Egitim_TopolojikVeriYukleyici:
                     if valid_files:
                         self.verisetleri[veriseti_adi][os.path.normpath(root)] = valid_files
 
+        if hf_listesi:
+            self.hf_verisetlerini_kaydet(hf_listesi, len(klasorler_veya_dosyalar))
+
+    def _metni_hedef_tensore_cevir(self, metin: str) -> torch.Tensor:
+        tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
+        token_ids = tokenizer.encode(metin)
+        if len(token_ids) < self.config.N:
+            token_ids = token_ids + [0] * (self.config.N - len(token_ids))
+        else:
+            token_ids = token_ids[:self.config.N]
+        token_ids = [t % self.config.V_size for t in token_ids]
+        return torch.tensor(
+            [token_ids] * self.config.batch_size,
+            dtype=torch.long,
+            device=self.config.device,
+        )
+
+    def hf_parcalari_oku(self, sanal_yol: str, chunk_size: int = 65536):
+        tanim = self.hf_tanimlari.get(sanal_yol)
+        if tanim is None:
+            logger.warning(f"  [HF Veri Seti] Tanım bulunamadı: {sanal_yol}")
+            return
+
+        depo = tanim["depo"]
+        try:
+            from datasets import load_dataset
+        except ImportError:
+            logger.error(
+                f"  [HF Veri Seti] '{depo}' atlanıyor: 'datasets' kütüphanesi kurulu değil. "
+                f"Kurmak için: pip install datasets"
+            )
+            return
+
+        try:
+            akis = load_dataset(
+                depo,
+                tanim.get("yapilandirma") or None,
+                split=tanim.get("bolum", "train"),
+                streaming=True,
+            )
+        except Exception as exc:
+            logger.error(
+                f"  [HF Veri Seti] '{depo}' AÇILAMADI, bu veri seti atlanıyor (eğitim devam ediyor). "
+                f"Sebep: {exc}"
+            )
+            logger.error(
+                "  [HF Veri Seti] Sık görülen sebepler: veri seti adı yanlış, veri seti kapılı "
+                "(gated) ve HF_TOKEN gerekiyor, ya da ortamda internet erişimi kapalı "
+                "(Kaggle'da not defteri ayarlarından internet açılmalı)."
+            )
+            return
+
+        azami_ornek = int(tanim.get("azami_ornek", 20000))
+        tampon: List[str] = []
+        tampon_uzunlugu = 0
+        bytes_read = 0
+        chunk_idx = 0
+        islenen_ornek = 0
+
+        def _parca_uret(metin: str, son: bool):
+            nonlocal bytes_read, chunk_idx
+            bytes_read += len(metin.encode('utf-8', errors='ignore'))
+            chunk_idx += 1
+            return metin, self._metni_hedef_tensore_cevir(metin), son, chunk_idx, bytes_read, 0
+
+
+
+
+
+        bekleyen: Optional[str] = None
+
+        try:
+            for kayit in akis:
+                if islenen_ornek >= azami_ornek:
+                    break
+                islenen_ornek += 1
+
+                metin = hf_kaydini_metne_cevir(kayit)
+                if not metin or not metin.strip():
+                    continue
+
+                tampon.append(metin)
+                tampon_uzunlugu += len(metin)
+                if tampon_uzunlugu >= chunk_size:
+                    birlesik = "\n\n".join(tampon)
+                    tampon = []
+                    tampon_uzunlugu = 0
+                    if bekleyen is not None:
+                        yield _parca_uret(bekleyen, False)
+                    bekleyen = birlesik
+        except Exception as exc:
+            logger.error(
+                f"  [HF Veri Seti] '{depo}' akışı sırasında hata, bu veri seti sonlandırılıyor: {exc}"
+            )
+
+        if tampon:
+            if bekleyen is not None:
+                yield _parca_uret(bekleyen, False)
+            bekleyen = "\n\n".join(tampon)
+
+        if bekleyen is not None:
+            yield _parca_uret(bekleyen, True)
+
+        logger.info(
+            f"  [HF Veri Seti] '{depo}' tamamlandı: {islenen_ornek} örnek, "
+            f"{bytes_read / (1024 ** 2):.1f} MB metin akıtıldı (diske indirilmedi)."
+        )
+
     def dosya_parcalari_oku(self, dosya_yolu: str, chunk_size: int = 65536):
+        if str(dosya_yolu).startswith(HF_YOL_ONEKI) or str(dosya_yolu).startswith("hf:/"):
+            anahtar = dosya_yolu if dosya_yolu in self.hf_tanimlari else str(dosya_yolu).replace("hf:/", HF_YOL_ONEKI, 1)
+            yield from self.hf_parcalari_oku(anahtar, chunk_size=chunk_size)
+            return
+
         try:
             file_size = os.path.getsize(dosya_yolu)
         except Exception:

@@ -1,0 +1,100 @@
+{
+  "_aciklama": [
+    "verisetleri: yerel dosya/klasor yollari (mevcut davranis, degismedi).",
+    "huggingface_verisetleri: HuggingFace uzerinden AKIS (streaming) ile okunur.",
+    "Diske hicbir sey indirilmez; kayitlar tek tek cekilip metne cevrilir.",
+    "Her girdi ya duz bir depo adi ya da su alanlari olan bir nesnedir:",
+    "  depo          (zorunlu) HuggingFace veri seti kimligi",
+    "  bolum         (varsayilan 'train')",
+    "  yapilandirma  (varsayilan yok)",
+    "  azami_ornek   (varsayilan 20000) bu veri setinden okunacak azami kayit",
+    "GEREKSINIM: pip install datasets  ve ortamda internet erisimi.",
+    "Kaggle'da not defteri ayarlarindan Internet acik olmalidir.",
+    "Kapili (gated) veri setleri icin ortam degiskeni HF_TOKEN gerekir.",
+    "DOGRULANMADI: asagidaki depo adlari bu gelistirme ortamindan teyit",
+    "edilemedi (huggingface.co aga kapali). Yanlis bir ad kosuyu DUSURMEZ;",
+    "ilgili veri seti hata loglanarak atlanir, egitim devam eder."
+  ],
+
+  "verisetleri": [
+    "/kaggle/input/kendi-metinlerim"
+  ],
+
+  "huggingface_verisetleri": [
+    {
+      "depo": "barc0/200k_HEAVY_gpt4o-description-gpt4omini-code_generated_problems",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+    {
+      "depo": "barc0/100k-gpt4-description-gpt4omini-code_generated_problems",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+    {
+      "depo": "barc0/100k-gpt4omini-description-gpt4omini-code_generated_problems",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+
+    {
+      "depo": "open-web-math/open-web-math",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+    {
+      "depo": "HuggingFaceTB/finemath",
+      "yapilandirma": "finemath-4plus",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+
+    {
+      "depo": "tau/commonsense_qa",
+      "bolum": "train",
+      "azami_ornek": 10000
+    },
+    {
+      "depo": "ChilleD/riddle_sense",
+      "bolum": "train",
+      "azami_ornek": 10000
+    },
+    {
+      "depo": "lucasmccabe/logiqa",
+      "bolum": "train",
+      "azami_ornek": 10000
+    },
+    {
+      "depo": "metaeval/reclor",
+      "bolum": "train",
+      "azami_ornek": 10000
+    },
+    {
+      "depo": "allenai/winogrande",
+      "yapilandirma": "winogrande_xl",
+      "bolum": "train",
+      "azami_ornek": 10000
+    },
+
+    {
+      "depo": "M-AI-C/quran-tafseer",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+    {
+      "depo": "M-AI-C/hadith_lk",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+    {
+      "depo": "ImruQays/Thaqalayn-Classical-Arabic-English-Parallel-texts",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+    {
+      "depo": "ImruQays/Rasaif-Classical-Arabic-English-Parallel-texts",
+      "bolum": "train",
+      "azami_ornek": 20000
+    }
+  ]
+}
