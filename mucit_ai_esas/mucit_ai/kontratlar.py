@@ -2999,7 +2999,10 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
             for k, p in enumerate(trainable_params):
                 if p.requires_grad:
                     g = shard_gradyanlari[0][k]
-                    p.grad = (g if g is not None else torch.zeros_like(p)).to(p.device)
+                    if g is None:
+                        p.grad = torch.zeros_like(p)
+                    else:
+                        p.grad = g.to(device=p.device, dtype=p.dtype)
             torch.nn.utils.clip_grad_norm_(trainable_params, max_norm=max_norm)
             optimizer.step()
             return torch.tensor([1.0], device=ref_device, dtype=ref_dtype)

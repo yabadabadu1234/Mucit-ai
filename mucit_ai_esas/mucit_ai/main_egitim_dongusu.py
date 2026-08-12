@@ -525,8 +525,20 @@ def _tekil_egitim_adimi_icra(
         except Exception as exc:
             logger.warning(f"  [VJP Cerrahi Uyarısı] Gradyan enjeksiyonu uyarısı: {exc}")
 
+    _shard_saklama_dtype = torch.bfloat16 if torch.cuda.is_available() else None
+
     def _grad_anlik_kopyala() -> List[torch.Tensor]:
-        return [p.grad.detach().clone() if p.grad is not None else torch.zeros_like(p) for p in trainable_params]
+        if _shard_saklama_dtype is None:
+            return [
+                p.grad.detach().clone() if p.grad is not None else torch.zeros_like(p)
+                for p in trainable_params
+            ]
+        return [
+            p.grad.detach().to(_shard_saklama_dtype)
+            if p.grad is not None
+            else torch.zeros(p.shape, device=p.device, dtype=_shard_saklama_dtype)
+            for p in trainable_params
+        ]
 
     
     AnlasmaliVramGuvencesiAl(n1_byte, e1_girdi, takas_mgr=takas_mgr)
@@ -1200,9 +1212,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     )
     tamamlanan_dosya_sayisi = 0
     atlanan_dosya_sayisi = 0
-    ardisik_basarisiz_adim = 0
     toplam_basarisiz_adim = 0
-    AZAMI_ARDISIK_BASARISIZLIK = int(getattr(config, 'azami_ardisik_basarisizlik', 5))
     logger.info(f"Eğitilecek toplam dosya sayısı: {toplam_dosya_sayisi}")
 
     for veriseti_adi, klasorler in veri_yukleyici.verisetleri.items():
@@ -1285,56 +1295,39 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             arc_donusturucu=n16_arc_donusturucu
                         )
                     except Exception as _adim_exc:
-                        ardisik_basarisiz_adim += 1
                         toplam_basarisiz_adim += 1
+                        logger.error("=" * 80)
                         logger.error(
-                            f"  [Adım Kurtarıcı] Adım {current_step} BAŞARISIZ (ardışık {ardisik_basarisiz_adim}/"
-                            f"{AZAMI_ARDISIK_BASARISIZLIK}, toplam {toplam_basarisiz_adim}). Bu chunk atlanıyor. "
-                            f"DİKKAT: adım sayacı ilerlemedi, yani model bu chunk'tan HİÇBİR ŞEY ÖĞRENMEDİ. "
-                            f"Hata: {_adim_exc}"
+                            f"EĞİTİM DURDURULDU: Adım {current_step} başarısız oldu. "
+                            f"Chunk ATLANMIYOR, yeniden DENENMİYOR."
                         )
+                        logger.error(
+                            f"Gerekçe: bir adım kurtarılamıyorsa aynı işi tekrar denemek ya da chunk atlayıp "
+                            f"devam etmek eğitimi ilerletmez; yalnızca ilerliyormuş gibi gösterir. "
+                            f"Adım sayacı {current_step} değerinde ve model bu chunk'tan hiçbir şey öğrenmedi."
+                        )
+                        logger.error(f"Dosya: {os.path.basename(dosya_yolu)} | Veri seti: {veriseti_adi}")
+                        logger.error(f"Hata: {_adim_exc}")
+                        logger.error(
+                            "Çare: config.azami_dugum_sayisi, config.batch_size veya config.GRPO_G "
+                            "değerlerini düşürün."
+                        )
+                        logger.error("=" * 80)
+
                         if takas_mgr is not None and hasattr(takas_mgr, "guvenli_kapat_varsa"):
                             takas_mgr.guvenli_kapat_varsa()
-                        
-                        
-                        if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
-                            takas_mgr.temizle(agresif=True)
-                        
-                        
-                        _bekleyen_restore_temizle = getattr(takas_mgr, "_bekleyen_cihaz_geri_yuklemeleri", None) if takas_mgr is not None else None
-                        if _bekleyen_restore_temizle:
-                            _bekleyen_restore_temizle.clear()
                         optimizer.zero_grad(set_to_none=True)
-                        import gc as _gc_step
-                        _gc_step.collect()
+                        try:
+                            npz_mgr.save_hafiza_state()
+                        except Exception:
+                            pass
+                        if takas_mgr is not None and hasattr(takas_mgr, "kapat"):
+                            takas_mgr.kapat()
+                        gc.collect()
                         if torch.cuda.is_available():
                             torch.cuda.empty_cache()
+                        raise
 
-                        if ardisik_basarisiz_adim >= AZAMI_ARDISIK_BASARISIZLIK:
-                            logger.error("=" * 80)
-                            logger.error(
-                                f"EĞİTİM DURDURULDU: {ardisik_basarisiz_adim} adım ÜST ÜSTE başarısız oldu ve "
-                                f"adım sayacı {current_step} değerinde çakılı kaldı. Bu, eğitimin ilerlemediği, "
-                                f"aynı noktada kısır döngüye girildiği anlamına gelir."
-                            )
-                            logger.error(
-                                f"Sessizce dönüp durmak yerine süreç burada kesiliyor. Son hata: {_adim_exc}"
-                            )
-                            logger.error(
-                                "Muhtemel çare: config.azami_dugum_sayisi, config.batch_size veya "
-                                "config.GRPO_G değerlerini düşürün."
-                            )
-                            logger.error("=" * 80)
-                            npz_mgr.save_hafiza_state()
-                            if takas_mgr is not None and hasattr(takas_mgr, "kapat"):
-                                takas_mgr.kapat()
-                            raise RuntimeError(
-                                f"Egitim ilerlemiyor: {ardisik_basarisiz_adim} ardisik basarisiz adim "
-                                f"(adim sayaci {current_step} degerinde sabit). Son hata: {_adim_exc}"
-                            )
-                        continue
-
-                    ardisik_basarisiz_adim = 0
                     current_step += 1
 
                     dosya_kayiplari.append(curr_loss_val)
