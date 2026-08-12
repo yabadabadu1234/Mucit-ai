@@ -1413,8 +1413,26 @@ def _tekil_egitim_adimi_icra(
     )
     N_star = N_star_int
     H_spec_val = H_spec_tensor.item()
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+    _hedef_uzunlugu = int(hedef_grouped.shape[1])
+    if N_star > _hedef_uzunlugu:
+        logger.debug(
+            f"  [Erken Budama] N* {N_star} -> {_hedef_uzunlugu} (hedef uzunluğu). "
+            f"N9 ve nedensel süzgeç artık kullanılmayacak {N_star - _hedef_uzunlugu} "
+            f"pozisyonu hesaplamıyor."
+        )
+        N_star = _hedef_uzunlugu
+
     T_matrix = AcilDurumOomYakalayiciVeKurtarici(cheby_calc.hesapla, N=N_star, takas_mgr=takas_mgr)
     hedef_clamped = torch.clamp(hedef_grouped[:, :N_star], min=0, max=getattr(config, 'V_size', 32000) - 1)
     e13_hedef = E13_HedefTokenDizisi(target_tokens=hedef_clamped)
