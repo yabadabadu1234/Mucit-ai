@@ -925,17 +925,17 @@ def _tekil_egitim_adimi_icra(
 
     n1_byte = tum_moduller['n1_byte']
     n2_topox = tum_moduller['n2_topox']
-    n3_lif = tum_moduller['n3_phi']
-    n4_sorgu = tum_moduller['n4']
-    n5_cevap = tum_moduller['n5']
+    n3_lif = tum_moduller['n3_lif']
+    n4_sorgu = tum_moduller['n4_sorgu']
+    n5_cevap = tum_moduller['n5_cevap']
     n6_aktor = tum_moduller['n6_aktor']
-    n7_cozucu = tum_moduller['n7']
-    n8_chebyshev = tum_moduller['n8']
-    n8_b_uzunluk = tum_moduller['n8_b']
+    n7_cozucu = tum_moduller['n7_cozucu']
+    n8_chebyshev = tum_moduller['n8_chebyshev']
+    n8_b_uzunluk = tum_moduller['n8_b_uzunluk']
     n9_vandermonde = tum_moduller['n9_vandermonde']
-    n10_sozluk = tum_moduller['n10']
-    meclis_bellek = tum_moduller['bellek']
-    bellek_yazici = tum_moduller['bellek_yazici']
+    n10_sozluk = tum_moduller['n10_sozluk']
+    meclis_bellek = tum_moduller['bellek_yonetici']
+    bellek_yazici = tum_moduller['n_yazici']
 
     sistem_yapilandirmasi = SistemYapilandirmasi(
         batch_boyutu=getattr(config, 'batch_size', 1),
@@ -1612,29 +1612,32 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     npz_mgr.load_hafiza_state()
 
     
-    n1_byte = N1_ByteAyristirici(config).to(config.device)
-    n2_topox = N2_TopoXHucreOlusumu(config).to(config.device)
-    n3_lif = N3_LifSinirlamaAtama(config).to(config.device)
-    
-    e_coboundary_dim = (config.V_nodes - 1) * config.d_e
-    alt_n4 = N4_SorguSecici_AltAg(config).to(config.device)
-    alt_n5 = N5_CevapSuzucu_AltAg(config).to(config.device)
-    alt_n6 = N6_KohomolojikAktor_AltAg(config, e_coboundary_dim).to(config.device)
-    
-    n4_sorgu = N4_SorguSecici(config=config).to(config.device)
-    n5_cevap = N5_CevapSuzucu(config=config).to(config.device)
-    n6_aktor = N6_KohomolojikAktor(alt_n6, config=config).to(config.device)
-    n7_cozucu = N7_LifLaplasyeniCozucu(config).to(config.device)
-    n8_chebyshev = N8_ChebyshevKatsayiProjeksiyon(config).to(config.device)
-    n8_b_uzunluk = N8_B_DinamikUzunlukSecici(config).to(config.device)
-    n9_vandermonde = N9_ChebyshevVandermondeCarpim(config).to(config.device)
-    n10_sozluk = N10_SozlukSoftmaxIzdusem(config).to(config.device)
-    
-    cheby_calc = Yardimci_ChebyshevMatrisHesaplayici(config)
-    
-    laplasyen_insa = N11_LifLaplasyeniBlokInsaEdici(config)
-    meclis_bellek = N12_BellekBaglamYoneticisi(config).to(config.device)
-    bellek_yazici = Bellek_TopolojikDikkatYazici(config).to(config.device)
+
+
+
+
+
+
+
+
+    kanvas_model = BiliselKanvasModeli(config).to(config.device)
+
+    n1_byte = kanvas_model.n1_byte
+    n2_topox = kanvas_model.n2_topox
+    n3_lif = kanvas_model.n3_lif
+    n4_sorgu = kanvas_model.n4_sorgu
+    n5_cevap = kanvas_model.n5_cevap
+    n6_aktor = kanvas_model.n6_aktor
+    n7_cozucu = kanvas_model.n7_cozucu
+    n8_chebyshev = kanvas_model.n8_chebyshev
+    n8_b_uzunluk = kanvas_model.n8_b_uzunluk
+    n9_vandermonde = kanvas_model.n9_vandermonde
+    n10_sozluk = kanvas_model.n10_sozluk
+
+    cheby_calc = kanvas_model.cheby_calc
+    laplasyen_insa = kanvas_model.laplasyen_insa
+    meclis_bellek = kanvas_model.bellek_yonetici
+    bellek_yazici = kanvas_model.n_yazici
     odul_motoru = N14_OdulTopolojikDevresmezlikMotoru(config)
     grpo_kriteri = Kayip_GRPO_Kriteri(config)
     cumle_keyfiyet_motoru = Odul_ButunculCumleKeyfiyetMotoru(config)
@@ -1644,21 +1647,37 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     
     veri_yukleyici = Egitim_TopolojikVeriYukleyici(config, manifest_yolu=manifest_yolu)
 
+
+
+
+
+
+
     tum_moduller = {
-        'n1_byte': n1_byte,
-        'n2_topox': n2_topox,
-        'n3_phi': n3_lif,
-        'n4': n4_sorgu,
-        'n5': n5_cevap,
-        'n6_aktor': n6_aktor,
-        'n7': n7_cozucu,
-        'n8': n8_chebyshev,
-        'n8_b': n8_b_uzunluk,
-        'n9_vandermonde': n9_vandermonde,
-        'n10': n10_sozluk,
-        'bellek': meclis_bellek,
-        'bellek_yazici': bellek_yazici
+        ad: getattr(kanvas_model, ad)
+        for ad in (
+            'n1_byte', 'n2_topox', 'n3_lif', 'n4_sorgu', 'n5_cevap', 'n6_aktor',
+            'n7_cozucu', 'n8_chebyshev', 'n8_b_uzunluk', 'n9_vandermonde',
+            'n10_sozluk', 'bellek_yonetici', 'n_yazici',
+        )
     }
+
+    _model_tensorleri = set(kanvas_model.state_dict().keys())
+    _kaydedilecek_tensorler = {
+        f"{_ad}.{_k}" for _ad, _m in tum_moduller.items() for _k in _m.state_dict()
+    }
+    _kapsanmayan = _model_tensorleri - _kaydedilecek_tensorler
+    if _kapsanmayan:
+        raise RuntimeError(
+            f"Model yapısı ile kaydedilecek modül kümesi örtüşmüyor: {len(_kapsanmayan)} tensör "
+            f"hiçbir modüle ait değil ve kontrol noktasına yazılmayacaktı. "
+            f"Örnekler: {sorted(_kapsanmayan)[:5]}. "
+            f"BiliselKanvasModeli'ne yeni bir alt modül eklendiyse tum_moduller listesine de eklenmelidir."
+        )
+    logger.info(
+        f"  [Yapı Denetimi] Modelin {len(_model_tensorleri)} tensörünün tamamı "
+        f"{len(tum_moduller)} modül altında kontrol noktasına yazılacak."
+    )
 
 
     agirlik_ilkleyici = Riyazi_AgirlikIlkleyici()

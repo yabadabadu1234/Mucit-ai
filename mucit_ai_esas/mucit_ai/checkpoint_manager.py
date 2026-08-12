@@ -64,6 +64,13 @@ def egitim_adlarini_cikarsama_adlarina_cevir(duz_st: Dict[str, Any]) -> Dict[str
     return cevrilmis
 
 
+CALISMA_ZAMANI_DURUM_ANAHTARLARI = frozenset({
+    "bellek_yonetici.M",
+    "bellek_yonetici.R",
+    "bellek_yonetici.M_state",
+})
+
+
 def _tensor_to_numpy_safe(tensor: Any) -> np.ndarray:
     if torch is not None and hasattr(tensor, "dtype") and tensor.dtype == torch.bfloat16:
         tensor = tensor.to(torch.float32)
@@ -285,7 +292,7 @@ class NPZCheckpointManager:
 
         
         if isinstance(model, dict):
-            meclis_bellek = model.get("bellek") or model.get("meclis_bellek")
+            meclis_bellek = model.get("bellek_yonetici") or model.get("bellek_yonetici") or model.get("bellek") or model.get("meclis_bellek")
         else:
             meclis_bellek = getattr(model, "meclis_bellek", None)
             if meclis_bellek is None and hasattr(model, "SMW_SifirParazit_BellekYoneticisi"):
@@ -617,7 +624,7 @@ class NPZCheckpointManager:
                     f"parametre blokları açılmadı)"
                 )
                 if _smw_M is not None or _smw_R is not None:
-                    _meclis_bellek = model.get("bellek") if isinstance(model, dict) else getattr(model, "meclis_bellek", None)
+                    _meclis_bellek = model.get("bellek_yonetici") or model.get("bellek") if isinstance(model, dict) else getattr(model, "meclis_bellek", None)
                     if _meclis_bellek is not None:
                         if _smw_M is not None and hasattr(_meclis_bellek, "M"):
                             _hedef_M = _meclis_bellek.M
@@ -738,56 +745,81 @@ class NPZCheckpointManager:
 
 
                         _model_st = model.state_dict()
+                        _model_anahtarlari = set(_model_st.keys())
+                        _ckpt_anahtarlari = set(temiz_st.keys())
+
+                        _eksik = sorted(_model_anahtarlari - _ckpt_anahtarlari)
+                        _fazla = sorted(_ckpt_anahtarlari - _model_anahtarlari)
                         _sekil_uyusmayan = []
-                        for _k in list(temiz_st.keys()):
-                            _hedef = _model_st.get(_k)
-                            _kaynak = temiz_st[_k]
-                            if (_hedef is not None and hasattr(_hedef, "shape")
-                                    and hasattr(_kaynak, "shape")
-                                    and tuple(_hedef.shape) != tuple(_kaynak.shape)):
-                                _sekil_uyusmayan.append(
-                                    f"{_k} (checkpoint {tuple(_kaynak.shape)} != model {tuple(_hedef.shape)})"
+                        _durum_yenilenen = []
+
+                        for _k in sorted(_model_anahtarlari & _ckpt_anahtarlari):
+                            _hedef, _kaynak = _model_st[_k], temiz_st[_k]
+                            if not (hasattr(_hedef, "shape") and hasattr(_kaynak, "shape")):
+                                continue
+                            if tuple(_hedef.shape) == tuple(_kaynak.shape):
+                                continue
+
+
+
+
+
+                            if _k in CALISMA_ZAMANI_DURUM_ANAHTARLARI:
+                                _durum_yenilenen.append(
+                                    f"{_k} (kayıt {tuple(_kaynak.shape)}, model {tuple(_hedef.shape)})"
                                 )
-                                del temiz_st[_k]
-                        if _sekil_uyusmayan:
-                            logger.warning(
-                                f"  [Ckpt Mgr] {len(_sekil_uyusmayan)} tensör şekil uyuşmazlığı "
-                                f"yüzünden atlandı (çoğunlukla batch boyutuna bağlı çalışma zamanı "
-                                f"durumu, ağırlık değil): {'; '.join(_sekil_uyusmayan[:4])}"
+
+
+
+
+                                temiz_st[_k] = _hedef.clone()
+                            else:
+                                _sekil_uyusmayan.append(
+                                    f"{_k}: kayıt {tuple(_kaynak.shape)} != model {tuple(_hedef.shape)}"
+                                )
+
+                        if _durum_yenilenen:
+                            logger.info(
+                                f"  [Ckpt Mgr] {len(_durum_yenilenen)} adet batch'e bağlı çalışma zamanı "
+                                f"durumu mevcut batch boyutuna göre yeniden ilklendirildi (bunlar öğrenilmiş "
+                                f"ağırlık değildir): {'; '.join(_durum_yenilenen)}"
                             )
 
-                        try:
-                            model.load_state_dict(temiz_st, strict=True)
-                            logger.info("  [Ckpt Mgr] Tüm ağırlıklar strict=True ile yüklendi.")
-                        except RuntimeError:
-                            sonuc = model.load_state_dict(temiz_st, strict=False)
-                            model_anahtarlari = set(model.state_dict().keys())
-                            eslesen = [
-                                k for k in temiz_st
-                                if k in model_anahtarlari and k not in set(sonuc.unexpected_keys)
+                        if _eksik or _fazla or _sekil_uyusmayan:
+                            _rapor = [
+                                "KONTROL NOKTASI MODELE TAM OLARAK UYMUYOR — yükleme reddedildi.",
+                                f"Model tensör sayısı: {len(_model_anahtarlari)} | "
+                                f"kontrol noktası: {len(_ckpt_anahtarlari)}",
                             ]
-                            oran = (len(eslesen) / max(len(model_anahtarlari), 1)) * 100.0
-                            logger.warning(
-                                f"  [Ckpt Mgr] Kısmi yükleme: modelin {len(model_anahtarlari)} "
-                                f"tensöründen {len(eslesen)} tanesi dolduruldu (%{oran:.1f}). "
-                                f"Checkpoint'te karşılığı olmayan: {len(sonuc.missing_keys)}, "
-                                f"modelde karşılığı olmayan: {len(sonuc.unexpected_keys)}."
+                            if _eksik:
+                                _rapor.append(
+                                    f"Kontrol noktasında BULUNMAYAN {len(_eksik)} tensör: {_eksik[:8]}"
+                                )
+                            if _fazla:
+                                _rapor.append(
+                                    f"Modelde KARŞILIĞI OLMAYAN {len(_fazla)} tensör: {_fazla[:8]}"
+                                )
+                            if _sekil_uyusmayan:
+                                _rapor.append(
+                                    f"ŞEKLİ TUTMAYAN {len(_sekil_uyusmayan)} tensör: {_sekil_uyusmayan[:8]}"
+                                )
+                            _rapor.append(
+                                "Bu kontrol noktası mevcut mimari/konfigürasyon ile üretilmemiş. "
+                                "Eksik ağırlıklar rastgele kalırdı ve üretilen çıktı modelin kabiliyetini "
+                                "değil rastgele sayıları yansıtırdı; bu yüzden kısmi yükleme yapılmıyor."
                             )
-                            if len(eslesen) == 0:
-                                raise RuntimeError(
-                                    "Kontrol noktasından HİÇBİR ağırlık yüklenemedi; model tamamen "
-                                    "rastgele ilklendirilmiş durumda. Bu bir 'kısmi yükleme' değil, "
-                                    "tam başarısızlıktır ve çıkarım sonucu anlamsız olurdu. "
-                                    "Muhtemel sebep: kontrol noktası mevcut mimariden daha eski bir "
-                                    "sürümle üretilmiş. Örnek modelde beklenen ilk anahtarlar: "
-                                    f"{sorted(model_anahtarlari)[:3]} | checkpoint'te bulunanlar: "
-                                    f"{sorted(temiz_st.keys())[:3]}"
-                                )
-                            if oran < 50.0:
-                                logger.error(
-                                    f"  [Ckpt Mgr] UYARI: ağırlıkların yarısından azı yüklendi (%{oran:.1f}). "
-                                    f"Çıkarım çıktısı büyük ölçüde rastgele ağırlıklardan gelecektir."
-                                )
+                            _rapor.append(
+                                "Çare: modeli mevcut kodla yeniden eğitip taze bir kontrol noktası üretin, "
+                                "ya da kontrol noktasını üreten sürümdeki config değerlerini (d, M_plus_1, "
+                                "d_v, d_e, V_nodes) birebir geri koyun."
+                            )
+                            raise RuntimeError("\n".join(_rapor))
+
+                        model.load_state_dict(temiz_st, strict=True)
+                        logger.info(
+                            f"  [Ckpt Mgr] Modelin {len(_model_anahtarlari)} tensörünün TAMAMI yüklendi "
+                            f"(strict=True). Eksik yok, fazla yok, şekil uyuşmazlığı yok."
+                        )
 
                     logger.info(f"  [Ckpt Mgr] Hakiki PyTorch Modül Ağırlıkları Yüklendi: {pt_file}")
 

@@ -2828,13 +2828,24 @@ class BiliselKanvasModeli(nn.Module):
         self.n3_lif = N3_LifSinirlamaAtama(config)
 
         e_coboundary_dim = (config.V_nodes - 1) * config.d_e
-        self.alt_n4 = N4_SorguSecici_AltAg(config)
-        self.alt_n5 = N5_CevapSuzucu_AltAg(config)
-        self.alt_n6 = N6_KohomolojikAktor_AltAg(config, e_coboundary_dim)
+
+
+
+
+
+
+
+
+
+
+
+
 
         self.n4_sorgu = N4_SorguSecici(config=config)
         self.n5_cevap = N5_CevapSuzucu(config=config)
-        self.n6_aktor = N6_KohomolojikAktor(self.alt_n6, None, None, config=config)
+        self.n6_aktor = N6_KohomolojikAktor(
+            N6_KohomolojikAktor_AltAg(config, e_coboundary_dim), None, None, config=config
+        )
         self.n7_cozucu = N7_LifLaplasyeniCozucu(config)
         self.n8_chebyshev = N8_ChebyshevKatsayiProjeksiyon(config)
         self.n8_b_uzunluk = N8_B_DinamikUzunlukSecici(config)
