@@ -170,6 +170,7 @@ class Model_TopolojikKonfigurasyon:
         self.lr: float = params.get("lr", 1e-3)
         self.batch_size: int = params.get("batch_size", 2)
         self.azami_dugum_komsulugu: int = params.get("azami_dugum_komsulugu", 8)
+        self.azami_dugum_sayisi: int = params.get("azami_dugum_sayisi", 512)
         self.device: str = "cuda" if torch.cuda.is_available() else "cpu"
 
 
@@ -584,6 +585,13 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
 
         
         toplam_kolon = V_num * d_v
+        _d0_mb = (E_num * d_e) * toplam_kolon * 4 / (1024 ** 2)
+        if _d0_mb > 512.0:
+            logging.getLogger("mucit_ai.kontratlar").warning(
+                f"[Riyazi_LifLaplasyeniBlokInsaEdici] D0 yoğun matrisi büyük: "
+                f"[{E_num * d_e} x {toplam_kolon}] = {_d0_mb:.1f} MB (V={V_num}, E={E_num}). "
+                f"Bellek V^2 ile büyür; config.azami_dugum_sayisi düşürülmeli."
+            )
         D0 = torch.zeros((E_num * d_e, toplam_kolon), dtype=dtype, device=device)
         for e in range(E_num):
             satir_bas = e * d_e
@@ -760,6 +768,13 @@ class N1_HibritByteTokenAyristirici(nn.Module):
         token_ids = self.tokenizer.encode(girdi_metni)
         if len(token_ids) == 0:
             token_ids = [0]
+        azami_dugum = int(getattr(self.config, 'azami_dugum_sayisi', 512))
+        if azami_dugum > 0 and len(token_ids) > azami_dugum:
+            logging.getLogger("mucit_ai.kontratlar").debug(
+                f"[N1_HibritByteTokenAyristirici] Düğüm tavanı uygulandı: {len(token_ids)} -> {azami_dugum} token "
+                f"(D0 belleği O(V^2) büyüdüğü için zorunlu sınır)"
+            )
+            token_ids = token_ids[:azami_dugum]
         l_tokens = len(token_ids)
 
         
@@ -3009,6 +3024,32 @@ class Hafiza_Izleyici_ve_VRAM_Denetci:
         self.toplam_vram_mb = 88.0 * 1024.0
         self.esik_mb = self.toplam_vram_mb * kritik_esik_yuzde
 
+    def _sistem_ram_olc(self) -> Tuple[float, float]:
+        try:
+            import psutil
+            return (
+                psutil.Process().memory_info().rss / (1024 ** 2),
+                psutil.virtual_memory().total / (1024 ** 2),
+            )
+        except ImportError:
+            pass
+        surec_mb = 0.0
+        toplam_mb = 0.0
+        try:
+            with open("/proc/self/status", "r") as f:
+                for satir in f:
+                    if satir.startswith("VmRSS:"):
+                        surec_mb = int(satir.split()[1]) / 1024.0
+                        break
+            with open("/proc/meminfo", "r") as f:
+                for satir in f:
+                    if satir.startswith("MemTotal:"):
+                        toplam_mb = int(satir.split()[1]) / 1024.0
+                        break
+        except OSError:
+            pass
+        return surec_mb, toplam_mb
+
     def yokla_ve_raporla(self, dugum_adi: str, adim_no: int = 0) -> Dict[str, float]:
         tahsis_mb = 0.0
         rezerve_mb = 0.0
@@ -3016,26 +3057,32 @@ class Hafiza_Izleyici_ve_VRAM_Denetci:
         toplam_mb = self.toplam_vram_mb
 
         if torch.cuda.is_available() and self.cihaz.type == "cuda":
+            etiket = "VRAM"
             tahsis_mb = torch.cuda.memory_allocated(self.cihaz) / (1024 ** 2)
             rezerve_mb = torch.cuda.memory_reserved(self.cihaz) / (1024 ** 2)
             toplam_mb = torch.cuda.get_device_properties(self.cihaz).total_memory / (1024 ** 2)
             bos_mb = toplam_mb - tahsis_mb
+        else:
+            etiket = "Sistem RAM"
+            tahsis_mb, toplam_mb = self._sistem_ram_olc()
+            rezerve_mb = tahsis_mb
+            bos_mb = max(toplam_mb - tahsis_mb, 0.0)
 
         yuzde = (tahsis_mb / toplam_mb * 100) if toplam_mb > 0 else 0.0
 
         logger = logging.getLogger(__name__)
         logger.info(
-            f"[VRAM Denetçi] Adım:{adim_no} | Düğüm:{dugum_adi} | "
-            f"Aktif Tahsis: {tahsis_mb:.2f} MB / {toplam_mb:.2f} MB (%{yuzde:.1f}) | "
-            f"Boş VRAM: {bos_mb:.2f} MB"
+            f"[Bellek Denetçi/{etiket}] Adım:{adim_no} | Düğüm:{dugum_adi} | "
+            f"Kullanılan: {tahsis_mb:.2f} MB / {toplam_mb:.2f} MB (%{yuzde:.1f}) | "
+            f"Boş: {bos_mb:.2f} MB"
         )
 
-        
+
         self.esik_mb = toplam_mb * self.kritik_esik_yuzde
         if tahsis_mb > self.esik_mb:
             logger.warning(
-                f"CRITICAL VRAM UYARISI! [{dugum_adi}] adımında VRAM %{self.kritik_esik_yuzde*100:.1f} eşiğini aştı "
-                f"({tahsis_mb:.2f} MB > {self.esik_mb:.2f} MB). Acil VRAM Temizliği..."
+                f"KRİTİK {etiket} UYARISI! [{dugum_adi}] adımında %{self.kritik_esik_yuzde*100:.1f} eşiği aşıldı "
+                f"({tahsis_mb:.2f} MB > {self.esik_mb:.2f} MB). Acil temizlik..."
             )
             
             

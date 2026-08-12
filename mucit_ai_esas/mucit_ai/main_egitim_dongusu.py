@@ -1171,10 +1171,19 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     logger.info(f"Eğitim Başlangıç Adımı (Step): {current_step} | En İyi Kayıp (Best Loss): {best_loss:.6f} | Periyodik Kayıt Sıklığı: {SAVE_EVERY_N_STEPS} Adım")
 
     
-    MAX_TRAINING_SECONDS = 41400.0  
+    MAX_TRAINING_SECONDS = 41400.0
     egitim_baslangic_zamani = time.time()
     global_bytes_processed = 0
     last_logged_500mb_chunk = 0
+
+    toplam_dosya_sayisi = sum(
+        len(_dosyalar)
+        for _klasorler in veri_yukleyici.verisetleri.values()
+        for _dosyalar in _klasorler.values()
+    )
+    tamamlanan_dosya_sayisi = 0
+    atlanan_dosya_sayisi = 0
+    logger.info(f"Eğitilecek toplam dosya sayısı: {toplam_dosya_sayisi}")
 
     for veriseti_adi, klasorler in veri_yukleyici.verisetleri.items():
         tum_veriseti_klasorleri = list(klasorler.keys())
@@ -1189,11 +1198,23 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
             for dosya_yolu in dosyalar:
                 
                 if npz_mgr.hafiza.is_dosya_islenmis(dosya_yolu, klasor_yolu, veriseti_adi):
-                    logger.debug(f"  [Atlandı] Zaten eğitilmiş içerik: {dosya_yolu}")
+                    atlanan_dosya_sayisi += 1
+                    logger.info(
+                        f"  [Dosya ATLANDI] ({atlanan_dosya_sayisi}. atlama) Zaten eğitilmiş: "
+                        f"{os.path.basename(dosya_yolu)}"
+                    )
                     continue
 
-                
+
                 last_logged_pct = -1.0
+                dosya_baslangic_step = current_step
+                dosya_baslangic_zamani = time.time()
+                dosya_kayiplari: List[float] = []
+                logger.info(
+                    f"  [Dosya BAŞLADI] ({tamamlanan_dosya_sayisi + 1}/{toplam_dosya_sayisi}) "
+                    f"{os.path.basename(dosya_yolu)} | Boyut: {os.path.getsize(dosya_yolu) / (1024**2) if os.path.exists(dosya_yolu) else 0.0:.2f} MB "
+                    f"| Veri seti: {veriseti_adi}"
+                )
                 for e1_girdi_metni, hedef_tensor, is_last_chunk, chunk_idx, bytes_read, file_size in veri_yukleyici.dosya_parcalari_oku(dosya_yolu, chunk_size=65536):
 
                     
@@ -1267,8 +1288,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         continue
 
                     current_step += 1
-                    
-                    
+
+                    dosya_kayiplari.append(curr_loss_val)
                     loss_history.append(curr_loss_val)
                     if len(loss_history) > 10:
                         del loss_history[:-10]
@@ -1357,6 +1378,25 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             tum_veriseti_klasorleri=tum_veriseti_klasorleri
                         )
                         npz_mgr.save_hafiza_state()
+
+                        tamamlanan_dosya_sayisi += 1
+                        dosya_suresi = time.time() - dosya_baslangic_zamani
+                        dosya_adim_sayisi = current_step - dosya_baslangic_step
+                        _ilk_kayip = dosya_kayiplari[0] if dosya_kayiplari else float('nan')
+                        _son_kayip = dosya_kayiplari[-1] if dosya_kayiplari else float('nan')
+                        _ort_kayip = (sum(dosya_kayiplari) / len(dosya_kayiplari)) if dosya_kayiplari else float('nan')
+                        logger.info(
+                            f"  [DOSYA BİTTİ ✓] ({tamamlanan_dosya_sayisi}/{toplam_dosya_sayisi}) "
+                            f"{os.path.basename(dosya_yolu)} | Adım: {dosya_adim_sayisi} "
+                            f"({dosya_baslangic_step}->{current_step}) | Süre: {dosya_suresi:.1f} sn "
+                            f"| Kayıp ilk->son: {_ilk_kayip:.6f} -> {_son_kayip:.6f} (ort {_ort_kayip:.6f}) "
+                            f"| İşlenen: {file_size / (1024**2):.2f} MB | Veri seti: {veriseti_adi}"
+                        )
+                        _kalan_dosya = toplam_dosya_sayisi - tamamlanan_dosya_sayisi - atlanan_dosya_sayisi
+                        logger.info(
+                            f"  [İLERLEME] Tamamlanan: {tamamlanan_dosya_sayisi} | Atlanan: {atlanan_dosya_sayisi} "
+                            f"| Kalan: {max(_kalan_dosya, 0)} | Toplam geçen süre: {(time.time() - egitim_baslangic_zamani) / 60.0:.1f} dk"
+                        )
 
 
                     gc.collect()
