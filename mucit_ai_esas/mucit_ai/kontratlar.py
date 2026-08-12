@@ -576,6 +576,18 @@ class LifLaplasyenOperatoru:
         self.d_v = int(d_v)
         self.d_e = int(d_e)
         self.E_num = int(phi_kaynak.shape[0])
+        self._phi_kaynasik: Optional[torch.Tensor] = None
+
+    def _kaynasik_phi(self) -> torch.Tensor:
+
+
+
+
+
+
+        if self._phi_kaynasik is None:
+            self._phi_kaynasik = torch.cat([self.phi_hedef, -self.phi_kaynak], dim=2)
+        return self._phi_kaynasik
 
     @property
     def shape(self) -> Tuple[int, int]:
@@ -613,24 +625,22 @@ class LifLaplasyenOperatoru:
     def carp_transpoze(self, x: torch.Tensor) -> torch.Tensor:
         on_bicim = tuple(x.shape[:-1])
         x3 = x.reshape(-1, self.V_num, self.d_v)
-        x_kaynak = x3.index_select(1, self.kaynak_kolon)
-        x_hedef = x3.index_select(1, self.hedef_kolon)
-        y3 = (
-            torch.einsum('eij,bej->bei', self.phi_hedef, x_hedef)
-            - torch.einsum('eij,bej->bei', self.phi_kaynak, x_kaynak)
-        )
+        x_kaynasik = torch.cat([
+            x3.index_select(1, self.hedef_kolon),
+            x3.index_select(1, self.kaynak_kolon),
+        ], dim=2)
+        y3 = torch.einsum('eij,bej->bei', self._kaynasik_phi(), x_kaynasik)
         return y3.reshape(*on_bicim, self.E_num * self.d_e)
 
     def carp(self, y: torch.Tensor) -> torch.Tensor:
         on_bicim = tuple(y.shape[:-1])
         y3 = y.reshape(-1, self.E_num, self.d_e)
-        katki_hedef = torch.einsum('bei,eij->bej', y3, self.phi_hedef)
-        katki_kaynak = torch.einsum('bei,eij->bej', y3, self.phi_kaynak)
+        katki = torch.einsum('bei,eij->bej', y3, self._kaynasik_phi())
         cikti = torch.zeros(
             (y3.shape[0], self.V_num, self.d_v), device=y3.device, dtype=y3.dtype
         )
-        cikti = cikti.index_add(1, self.hedef_kolon, katki_hedef)
-        cikti = cikti.index_add(1, self.kaynak_kolon, -katki_kaynak)
+        cikti = cikti.index_add(1, self.hedef_kolon, katki[..., :self.d_v])
+        cikti = cikti.index_add(1, self.kaynak_kolon, katki[..., self.d_v:])
         return cikti.reshape(*on_bicim, self.V_num * self.d_v)
 
     def yogun(self) -> torch.Tensor:
@@ -1520,13 +1530,22 @@ class N6_KohomolojikAktor(nn.Module):
         else:
             v_pow = self.v_pow_persistent.to(device=device, dtype=dtype)
 
-        for _ in range(2):
-            v_pow = apply_M_vec(v_pow)
-            v_pow = v_pow / (v_pow.norm() + 1e-8)
 
-        self.v_pow_persistent = v_pow.detach()
-        M_v_pow = apply_M_vec(v_pow)
-        lambda_max = float(torch.sum(v_pow * M_v_pow).item()) + 1e-4
+
+
+
+
+
+
+
+        with torch.no_grad():
+            for _ in range(2):
+                v_pow = apply_M_vec(v_pow)
+                v_pow = v_pow / (v_pow.norm() + 1e-8)
+
+            self.v_pow_persistent = v_pow
+            M_v_pow = apply_M_vec(v_pow)
+            lambda_max = float(torch.sum(v_pow * M_v_pow).item()) + 1e-4
 
         
         alpha_scale = 1.0 / (lambda_max + 1e-4)
