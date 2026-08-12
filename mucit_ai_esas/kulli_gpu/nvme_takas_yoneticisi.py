@@ -17,6 +17,10 @@ import torch
 logger = logging.getLogger("kulli_gpu.nvme_takas_yoneticisi")
 
 
+class TakasVerisiKayipHatasi(RuntimeError):
+    pass
+
+
 class _IzlenebilirDosyaYolu(str):
     pass
 
@@ -258,35 +262,49 @@ class NvmeTahliyeKararMotoru:
             f"({kullanim / (1024**2):.1f} MB) — en eski dosyalar zorla siliniyor."
         )
         try:
-            dosyalar = []
+            with kuresel_adres_kayit_defteri.lock:
+                canli_yollar = set(kuresel_adres_kayit_defteri.aktif_dosya_yollari.keys())
+
+            referanssiz = []
+            canli_bayt = 0
             with os.scandir(self.swap_dir) as it:
                 for entry in it:
                     try:
-                        if entry.is_file(follow_symlinks=False):
-                            st = entry.stat()
-                            if (time.time() - st.st_mtime) < 5.0:
-                                continue
-                            dosyalar.append((st.st_mtime, entry.path, st.st_size))
+                        if not entry.is_file(follow_symlinks=False):
+                            continue
+                        st = entry.stat()
+                        if entry.path in canli_yollar:
+                            canli_bayt += st.st_size
+                            continue
+                        referanssiz.append((st.st_mtime, entry.path, st.st_size))
                     except OSError:
                         continue
-            dosyalar.sort(key=lambda x: x[0])
+
+            referanssiz.sort(key=lambda x: x[0])
             silinen_bayt = 0
-            for _mtime, fpath, fsize in dosyalar:
+            for _mtime, fpath, fsize in referanssiz:
                 if kullanim + esik_bayt_ekstra <= self.azami_disk_kullanimi_bayt:
                     break
                 try:
                     os.remove(fpath)
                     kullanim -= fsize
                     silinen_bayt += fsize
-                    with kuresel_adres_kayit_defteri.lock:
-                        sanal_addr = kuresel_adres_kayit_defteri.aktif_dosya_yollari.get(fpath)
-                        if sanal_addr:
-                            kuresel_adres_kayit_defteri.kayit_sil(sanal_addr)
                 except OSError:
                     continue
+
             logger.warning(
-                f"[NvmeTahliyeKararMotoru] Zorla silme ile {silinen_bayt / (1024**2):.1f} MB serbest bırakıldı."
+                f"[NvmeTahliyeKararMotoru] Referanssız dosyalardan {silinen_bayt / (1024**2):.1f} MB "
+                f"serbest bırakıldı."
             )
+
+            if kullanim + esik_bayt_ekstra > self.azami_disk_kullanimi_bayt:
+                logger.error(
+                    f"[NvmeTahliyeKararMotoru] Disk tavanı hâlâ aşılıyor "
+                    f"({kullanim / (1024**2):.1f} MB), ancak kalan {canli_bayt / (1024**2):.1f} MB "
+                    f"autograd tarafından HÂLÂ KULLANILAN takas verisidir ve SİLİNMEYECEKTİR. "
+                    f"Silinmesi, geri yayılımda sessizce sıfır gradyan üretip modeli bozardı. "
+                    f"config.azami_dugum_sayisi / batch boyutu düşürülmeli."
+                )
         except OSError as exc:
             logger.error(f"[NvmeTahliyeKararMotoru] Zorla silme sırasında hata: {exc}")
 
@@ -462,11 +480,17 @@ class AutogradNvmeOffloadHook:
             try:
                 bekleyen_future.result()
             except Exception as _yazma_exc:
-                logger.error(f"[AutogradNvmeOffloadHook] Arka plan diske yazma hatasi: {_yazma_exc}")
-                return torch.zeros(shape, dtype=dtype, device=target_device)
+                raise TakasVerisiKayipHatasi(
+                    f"Takas dosyasi diske yazilamadi ({dosya_yolu}): {_yazma_exc}. "
+                    f"Sessiz sifir tensor DONDURULMEDI; modelin bozuk gradyanla egitilmesi engellendi."
+                ) from _yazma_exc
 
         if not dosya_yolu or not os.path.exists(dosya_yolu):
-            return torch.zeros(shape, dtype=dtype, device=target_device)
+            raise TakasVerisiKayipHatasi(
+                f"Takas dosyasi geri yukleme aninda diskte bulunamadi: {dosya_yolu!r}. "
+                f"Bu, hala kullanimda olan bir dosyanin tahliye/supurme tarafindan silindigi anlamina gelir. "
+                f"Sessiz sifir tensor DONDURULMEDI; modelin bozuk gradyanla egitilmesi engellendi."
+            )
 
         restored_tensor = None
         try:
@@ -491,7 +515,10 @@ class AutogradNvmeOffloadHook:
                         "başarısız — veri CPU'da bırakılıyor (sıfırlanmıyor)."
                     )
                     return restored_tensor
-            return torch.zeros(shape, dtype=dtype, device="cpu")
+            raise TakasVerisiKayipHatasi(
+                f"Takas dosyasi okunamadi ({dosya_yolu}): {exc}. "
+                f"Sessiz sifir tensor DONDURULMEDI."
+            ) from exc
         finally:
             if dosya_yolu and os.path.exists(dosya_yolu):
                 try:
@@ -519,13 +546,7 @@ class GuvenliVramVeTmpSupurgesi:
                 if kayit.durum == MEM_STATE_ACTIVE_VRAM:
                     continue
 
-                yasi_sn = simdi - kayit.son_erisim_zamani
-                zaman_asimina_ugramis = (
-                    kayit.durum == MEM_STATE_SWAPPED_NVME
-                    and yasi_sn >= esik
-                )
-
-                if not (kayit.ref_count <= 0 or kayit.durum == MEM_STATE_ORPHANED or zaman_asimina_ugramis):
+                if not (kayit.ref_count <= 0 or kayit.durum == MEM_STATE_ORPHANED):
                     continue
 
                 if kayit.durum in (MEM_STATE_SWAPPED_NVME, MEM_STATE_ORPHANED):
