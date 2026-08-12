@@ -1910,15 +1910,12 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             is_best=is_best,
                             bekle=True
                         )
-                        try:
-                            _dogrulama = npz_mgr.verify(_kaydedilen_npz_yolu)
-                            if not _dogrulama.get("valid", False):
-                                logger.warning(
-                                    f"  [Ckpt Doğrulama] Adım [{current_step}] kaydı doğrulanamadı: "
-                                    f"{_dogrulama.get('errors')}"
-                                )
-                        except Exception as _dogrulama_exc:
-                            logger.debug(f"  [Ckpt Doğrulama] Doğrulama denemesi başarısız: {_dogrulama_exc}")
+                        if not _kaydedilen_npz_yolu or not os.path.isfile(_kaydedilen_npz_yolu):
+                            raise RuntimeError(
+                                f"Adım {current_step}: kontrol noktası diske yazılamadı "
+                                f"({_kaydedilen_npz_yolu!r}). Eğitim, kaydedilemeyen bir durumla "
+                                f"devam etmez."
+                            )
 
                         optimizer.zero_grad(set_to_none=True)
                         if takas_mgr is not None and hasattr(takas_mgr, "temizle"):

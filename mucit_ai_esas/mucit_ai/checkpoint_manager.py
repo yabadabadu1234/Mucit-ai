@@ -78,7 +78,47 @@ def _tensor_to_numpy_safe(tensor: Any) -> np.ndarray:
 
 
 CHECKPOINT_MAX_MB: float = 300.6
-CHECKPOINT_VERSION: str = "3.0.0-MUCIT-AI"
+CHECKPOINT_VERSION: str = "4.0.0-MUCIT-AI-TEK-DOSYA"
+
+
+
+
+
+
+
+KONTROL_NOKTASI_SON = "kontrol_noktasi_son.pt"
+KONTROL_NOKTASI_ONCEKI = "kontrol_noktasi_onceki.pt"
+
+
+SEKIL_BELIRLEYEN_CONFIG_ALANLARI = (
+    "d", "d_v", "d_e", "d_q", "d_a", "d_m", "d_h", "D",
+    "M_plus_1", "V_nodes", "V_size", "K", "N", "N_max", "R", "batch_size",
+)
+
+
+def config_ozeti_cikar(model: Any) -> Dict[str, Any]:
+
+
+
+
+    kaynak = None
+    if isinstance(model, dict):
+        for _m in model.values():
+            if hasattr(_m, "config"):
+                kaynak = _m.config
+                break
+    elif hasattr(model, "config"):
+        kaynak = model.config
+
+    if kaynak is None:
+        return {}
+
+    ozet: Dict[str, Any] = {}
+    for alan in SEKIL_BELIRLEYEN_CONFIG_ALANLARI:
+        deger = getattr(kaynak, alan, None)
+        if isinstance(deger, (int, float, str, bool)):
+            ozet[alan] = deger
+    return ozet
 
 
 @dataclass
@@ -407,43 +447,52 @@ class NPZCheckpointManager:
                            is_best: bool = False,
                            bekle: bool = False) -> str:
 
-        if torch is not None and not torch.cuda.is_available():
-            bekle = True
+        if torch is None:
+            return ""
 
-        npz_path = self.save(
-            step=step,
-            token_offset=token_offset,
-            model=model,
-            loss_history=loss_history,
-            is_best=is_best
-        )
+        bekle = True
 
-        if torch is not None:
-            tag = "best" if is_best else "latest"
-            pt_path = os.path.join(self.checkpoint_dir, f"topolojik_model_{tag}.pt")
-            import uuid
-            pt_tmp = os.path.join(self.checkpoint_dir, f"topolojik_model_{tag}_tmp_{uuid.uuid4().hex}.pt")
 
+
+
+
+
+
+        son_yol = os.path.join(self.checkpoint_dir, KONTROL_NOKTASI_SON)
+        onceki_yol = os.path.join(self.checkpoint_dir, KONTROL_NOKTASI_ONCEKI)
+        import uuid
+        pt_path = son_yol
+        pt_tmp = os.path.join(self.checkpoint_dir, f"kontrol_noktasi_tmp_{uuid.uuid4().hex}.pt")
+
+        if True:
             state_dict_to_save = {}
             if hasattr(model, 'state_dict'):
                 state_dict_to_save['model'] = model.state_dict()
             elif isinstance(model, dict):
                 state_dict_to_save['model'] = {k: m.state_dict() for k, m in model.items() if hasattr(m, 'state_dict')}
-            
+
             if optimizer is not None and hasattr(optimizer, 'state_dict'):
                 state_dict_to_save['optimizer'] = optimizer.state_dict()
             state_dict_to_save['step'] = step
+            state_dict_to_save['token_offset'] = token_offset
             state_dict_to_save['loss_history'] = loss_history or []
-            
+            state_dict_to_save['surum'] = CHECKPOINT_VERSION
+
+
+
+
+
+
+            state_dict_to_save['config'] = config_ozeti_cikar(model)
+            state_dict_to_save['hafiza'] = self.hafiza.to_dict()
+
             import threading
 
-            
             if self._save_lock.locked():
                 logger.warning(
-                    "  [Ckpt Mgr] Önceki arka plan .pt kaydı hâlâ sürüyor — bu turun "
-                    "kaydı atlanıyor (bir sonraki çağrıda güncel durum kaydedilecek)."
+                    "  [Ckpt Mgr] Önceki kayıt hâlâ sürüyor — bu turun kaydı atlanıyor."
                 )
-                return npz_path
+                return ""
 
             def _to_cpu_async(obj: Any) -> Any:
                 if isinstance(obj, dict):
@@ -481,31 +530,78 @@ class NPZCheckpointManager:
 
             state_dict_cpu = _to_cpu_senkron(state_dict_to_save) if bekle else _to_cpu_async(state_dict_to_save)
 
-            def _bg_save_worker(sd: Dict[str, Any], tmp_p: str, final_p: str, lock: Any):
+            def _kaydet_ve_dondur(sd: Dict[str, Any], tmp_p: str, lock: Any):
                 with lock:
+                    torch.save(sd, tmp_p)
+
+
+
+
+
+
+                    if os.path.isfile(son_yol):
+                        os.replace(son_yol, onceki_yol)
+                    os.replace(tmp_p, son_yol)
+
+                    _boyut_mb = os.path.getsize(son_yol) / (1024 ** 2)
+                    _onceki_var = os.path.isfile(onceki_yol)
+                    logger.info(
+                        f"  [Ckpt] Kaydedildi: {son_yol} ({_boyut_mb:.1f} MB) | adım={step} | "
+                        f"token_offset={token_offset:,} | diskte tutulan sürüm: "
+                        f"{'son + önceki (2)' if _onceki_var else 'yalnız son (1)'}"
+                    )
+
+            try:
+                _kaydet_ve_dondur(state_dict_cpu, pt_tmp, self._save_lock)
+            except Exception as ex:
+                logger.error(f"  [Ckpt Mgr] Kontrol noktası kaydı BAŞARISIZ: {ex}")
+                try:
+                    if os.path.isfile(pt_tmp):
+                        os.remove(pt_tmp)
+                except OSError:
+                    pass
+                raise
+
+            del state_dict_cpu, state_dict_to_save
+            import gc as _gc_ckpt
+            _gc_ckpt.collect()
+
+            self.save_hafiza_state()
+            self.fazlalik_dosyalari_temizle()
+            self.calisma_alanina_yansit()
+
+        return pt_path
+
+    def fazlalik_dosyalari_temizle(self) -> int:
+
+
+
+
+
+
+        korunacak = {KONTROL_NOKTASI_SON, KONTROL_NOKTASI_ONCEKI, "hafiza_state.json"}
+        silinen = 0
+        try:
+            for ad in os.listdir(self.checkpoint_dir):
+                if ad in korunacak:
+                    continue
+                yol = os.path.join(self.checkpoint_dir, ad)
+                if not os.path.isfile(yol):
+                    continue
+                if ad.endswith((".pt", ".npz", ".json")) or "_tmp_" in ad:
                     try:
-                        torch.save(sd, tmp_p)
-                        os.replace(tmp_p, final_p)
-                        logger.info(f"  [Ckpt Mgr] Sabit PyTorch Kontrol Noktası (.pt) Kaydedildi: {final_p}")
-                    except Exception as ex:
-                        logger.warning(f"  [Ckpt Mgr] Arka plan checkpoint kaydı hatası: {ex}")
-
-            if bekle:
-                _bg_save_worker(state_dict_cpu, pt_tmp, pt_path, self._save_lock)
-                del state_dict_cpu, state_dict_to_save
-                import gc as _gc_ckpt
-                _gc_ckpt.collect()
-
-
-
-                self.calisma_alanina_yansit()
-            else:
-                t = threading.Thread(target=_bg_save_worker, args=(state_dict_cpu, pt_tmp, pt_path, self._save_lock), daemon=True)
-                self._son_bg_thread = t
-                t.start()
-                del state_dict_to_save
-
-        return npz_path
+                        os.remove(yol)
+                        silinen += 1
+                    except OSError:
+                        pass
+        except OSError:
+            return 0
+        if silinen:
+            logger.info(
+                f"  [Ckpt] {silinen} fazlalık dosya silindi; diskte yalnız son ve önceki "
+                f"kontrol noktası duruyor."
+            )
+        return silinen
 
     def calisma_alanina_yansit(self, hedef_dizin: str = "/kaggle/working") -> List[str]:
         if not os.path.isdir(hedef_dizin):
@@ -516,14 +612,8 @@ class NPZCheckpointManager:
         import shutil
         import uuid as _uuid_yansit
 
-        korunacak_adlar = set()
         kopyalananlar: List[str] = []
-        for tag in ("best", "latest"):
-            for ad in (f"checkpoint_{tag}.npz",
-                       f"checkpoint_{tag}_meta.json",
-                       f"topolojik_model_{tag}.pt"):
-                korunacak_adlar.add(ad)
-        korunacak_adlar.add("hafiza_state.json")
+        korunacak_adlar = {KONTROL_NOKTASI_SON, KONTROL_NOKTASI_ONCEKI, "hafiza_state.json"}
 
         for ad in sorted(korunacak_adlar):
             kaynak = os.path.join(self.checkpoint_dir, ad)
@@ -647,16 +737,15 @@ class NPZCheckpointManager:
         pt_candidates = []
         if path and path.endswith(".pt") and os.path.isfile(path):
             pt_candidates.append(path)
-        pt_candidates.append(os.path.join(self.checkpoint_dir, "topolojik_model_best.pt"))
-        pt_candidates.append(os.path.join(self.checkpoint_dir, "topolojik_model_latest.pt"))
-        pt_candidates.append("/tmp/kulli_checkpoints/topolojik_model_best.pt")
-        pt_candidates.append("/tmp/kulli_checkpoints/topolojik_model_latest.pt")
-        pt_candidates.append("/kaggle/working/topolojik_model_best.pt")
-        pt_candidates.append("/kaggle/working/topolojik_model_latest.pt")
-        pt_candidates.append("/kaggle/input/notebooks/ulankaggle/mucit-ai/topolojik_model_best.pt")
-        pt_candidates.append("/kaggle/input/notebooks/ulankaggle/mucit-ai/topolojik_model_latest.pt")
-        if resolved:
-            pt_candidates.append(resolved.replace(".npz", ".pt").replace("checkpoint_", "topolojik_model_"))
+
+
+
+
+
+        for _dizin in (self.checkpoint_dir, "/tmp/kulli_checkpoints", "/kaggle/working",
+                       "/kaggle/input/notebooks/ulankaggle/mucit-ai"):
+            pt_candidates.append(os.path.join(_dizin, KONTROL_NOKTASI_SON))
+            pt_candidates.append(os.path.join(_dizin, KONTROL_NOKTASI_ONCEKI))
 
         pt_file = None
         for cand in pt_candidates:
@@ -808,10 +897,41 @@ class NPZCheckpointManager:
                                 "Eksik ağırlıklar rastgele kalırdı ve üretilen çıktı modelin kabiliyetini "
                                 "değil rastgele sayıları yansıtırdı; bu yüzden kısmi yükleme yapılmıyor."
                             )
+
+
+
+
+
+                            _kayit_config = checkpoint.get('config') or {}
+                            _canli_config = config_ozeti_cikar(model)
+                            if _kayit_config and _canli_config:
+                                _farklar = [
+                                    f"{_a}: kayıt={_kayit_config.get(_a)} != şimdi={_canli_config.get(_a)}"
+                                    for _a in SEKIL_BELIRLEYEN_CONFIG_ALANLARI
+                                    if _a in _kayit_config and _a in _canli_config
+                                    and _kayit_config[_a] != _canli_config[_a]
+                                ]
+                                if _farklar:
+                                    _rapor.append(
+                                        "SEBEP TESPİT EDİLDİ — config farkları: " + "; ".join(_farklar)
+                                    )
+                                    _rapor.append(
+                                        "Şekil uyuşmazlıklarının kaynağı bu alanlardır. Aynı ağırlıkları "
+                                        "kullanmak istiyorsanız config'i kayıttaki değerlere döndürün."
+                                    )
+                                else:
+                                    _rapor.append(
+                                        "Config alanları birebir aynı; fark mimari yapıdan geliyor "
+                                        "(modül eklenmiş/çıkarılmış)."
+                                    )
+                            elif not _kayit_config:
+                                _rapor.append(
+                                    "Bu kontrol noktası config bilgisi TAŞIMIYOR (eski sürüm). Yeni "
+                                    "kayıtlar config'i içinde saklar ve bu teşhis otomatik yapılır."
+                                )
                             _rapor.append(
                                 "Çare: modeli mevcut kodla yeniden eğitip taze bir kontrol noktası üretin, "
-                                "ya da kontrol noktasını üreten sürümdeki config değerlerini (d, M_plus_1, "
-                                "d_v, d_e, V_nodes) birebir geri koyun."
+                                "ya da yukarıda listelenen config alanlarını kayıttaki değerlere geri koyun."
                             )
                             raise RuntimeError("\n".join(_rapor))
 
@@ -953,22 +1073,11 @@ class NPZCheckpointManager:
     def get_latest(self) -> Optional[str]:
         if not os.path.isdir(self.checkpoint_dir):
             return None
-        
-        latest_fixed = os.path.join(self.checkpoint_dir, "checkpoint_latest.npz")
-        if os.path.isfile(latest_fixed):
-            return latest_fixed
-
-        best_fixed = os.path.join(self.checkpoint_dir, "checkpoint_best.npz")
-        if os.path.isfile(best_fixed):
-            return best_fixed
-
-        candidates = sorted([
-            f for f in os.listdir(self.checkpoint_dir)
-            if f.startswith("checkpoint_") and f.endswith(".npz")
-        ])
-        if not candidates:
-            return None
-        return os.path.join(self.checkpoint_dir, candidates[-1])
+        for ad in (KONTROL_NOKTASI_SON, KONTROL_NOKTASI_ONCEKI):
+            yol = os.path.join(self.checkpoint_dir, ad)
+            if os.path.isfile(yol):
+                return yol
+        return None
 
     def list_checkpoints(self) -> List[Dict]:
         if not os.path.isdir(self.checkpoint_dir):
