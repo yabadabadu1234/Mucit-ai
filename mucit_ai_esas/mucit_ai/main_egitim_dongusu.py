@@ -715,6 +715,48 @@ class Egitim_TopolojikVeriYukleyici:
             for i in range(0, len(metin), adim_uzunlugu)
         ]
 
+    def token_pencerelerine_ayir(self, metin: str, artik: List[int]) -> Tuple[List[Tuple[str, List[int]]], List[int]]:
+
+
+
+
+
+
+
+
+
+
+        tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
+        N = self._adim_metni_uzunlugu()
+
+        tokenlar = artik + tokenizer.encode(metin)
+        pencereler: List[Tuple[str, List[int]]] = []
+
+        i = 0
+        while i + N <= len(tokenlar):
+            pencere = tokenlar[i:i + N]
+            try:
+                pencere_metni = tokenizer.decode(pencere)
+            except Exception:
+                pencere_metni = ""
+            pencereler.append((pencere_metni, pencere))
+            i += N
+
+        return pencereler, tokenlar[i:]
+
+    def _token_penceresini_tensore_cevir(self, token_ids: List[int]) -> torch.Tensor:
+        N = self._adim_metni_uzunlugu()
+        if len(token_ids) < N:
+            token_ids = token_ids + [0] * (N - len(token_ids))
+        else:
+            token_ids = token_ids[:N]
+        token_ids = [t % self.config.V_size for t in token_ids]
+        return torch.tensor(
+            [token_ids] * self.config.batch_size,
+            dtype=torch.long,
+            device=self.config.device,
+        )
+
     def _metni_hedef_tensore_cevir(self, metin: str) -> torch.Tensor:
         tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
         token_ids = tokenizer.encode(metin)
@@ -838,7 +880,9 @@ class Egitim_TopolojikVeriYukleyici:
 
         bytes_read = 0
         chunk_idx = 0
-        bekleyen: Optional[str] = None
+        bekleyen: Optional[Tuple[str, List[int]]] = None
+        artik_tokenlar: List[int] = []
+
 
 
 
@@ -855,27 +899,45 @@ class Egitim_TopolojikVeriYukleyici:
                     if not blok:
                         break
 
-                    for dilim in self._metni_adim_dilimlerine_ayir(blok):
-                        if not dilim.strip():
-                            continue
+                    pencereler, artik_tokenlar = self.token_pencerelerine_ayir(blok, artik_tokenlar)
+                    for pencere in pencereler:
                         if bekleyen is not None:
-                            bytes_read += len(bekleyen.encode('utf-8', errors='ignore'))
+                            bytes_read += len(bekleyen[0].encode('utf-8', errors='ignore'))
                             chunk_idx += 1
                             yield (
-                                bekleyen,
-                                self._metni_hedef_tensore_cevir(bekleyen),
+                                bekleyen[0],
+                                self._token_penceresini_tensore_cevir(bekleyen[1]),
                                 False, chunk_idx, bytes_read, file_size,
                             )
-                        bekleyen = dilim
+                        bekleyen = pencere
         except Exception as e:
             logger.warning(f"Dosya okuma hatası ({dosya_yolu}): {e}")
 
+
+
+
+        if artik_tokenlar:
+            tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
+            try:
+                artik_metin = tokenizer.decode(artik_tokenlar)
+            except Exception:
+                artik_metin = ""
+            if bekleyen is not None:
+                bytes_read += len(bekleyen[0].encode('utf-8', errors='ignore'))
+                chunk_idx += 1
+                yield (
+                    bekleyen[0],
+                    self._token_penceresini_tensore_cevir(bekleyen[1]),
+                    False, chunk_idx, bytes_read, file_size,
+                )
+            bekleyen = (artik_metin, artik_tokenlar)
+
         if bekleyen is not None:
-            bytes_read += len(bekleyen.encode('utf-8', errors='ignore'))
+            bytes_read += len(bekleyen[0].encode('utf-8', errors='ignore'))
             chunk_idx += 1
             yield (
-                bekleyen,
-                self._metni_hedef_tensore_cevir(bekleyen),
+                bekleyen[0],
+                self._token_penceresini_tensore_cevir(bekleyen[1]),
                 True, chunk_idx, bytes_read, file_size,
             )
 
@@ -953,9 +1015,15 @@ def _tekil_egitim_adimi_icra(
     )
     logger.debug(f"  [SistemYapilandirmasi] Adım {current_step} yapılandırma anlık görüntüsü: {sistem_yapilandirmasi}")
 
-    max_chunk_len = getattr(config, 'N', 1024)
-    e1_girdi_metni_chunk = e1_girdi_metni[:max_chunk_len] if len(e1_girdi_metni) > max_chunk_len else e1_girdi_metni
-    e1_girdi = E1_HamMetinAkisi(X_text=e1_girdi_metni_chunk)
+
+
+
+
+
+
+
+
+    e1_girdi = E1_HamMetinAkisi(X_text=e1_girdi_metni)
 
     def vjp_cerrahi_enjekte_et(vector_loss: torch.Tensor, target_params: List[nn.Parameter], scale: float = 1.0, retain_graph: bool = False) -> None:
         trainable_in_group = [p for p in target_params if p.requires_grad]
