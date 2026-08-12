@@ -9,6 +9,7 @@ import tempfile
 import logging
 import threading
 import weakref
+import contextlib
 import concurrent.futures
 from dataclasses import dataclass, field
 from typing import Tuple, Dict, List, Any, Optional
@@ -594,7 +595,13 @@ class NvmeTakasYoneticisi:
             with self._sayac_lock:
                 self.tahliye_sayaci += 1
             return (res[0], res[1], res[2], res[3])
-        return tensor
+
+
+
+
+
+
+        return tensor.detach()
 
     def unpack_hook_diskten_geri_cagır(self, pack_bundle: Any) -> torch.Tensor:
         if isinstance(pack_bundle, torch.Tensor):
@@ -610,8 +617,14 @@ class NvmeTakasYoneticisi:
         return self.offload_hook.unpack_hook_diskten_geri_yukle(pack_bundle)
 
     def kapsam_muhafizi_aktifles(self):
-        
-        
+
+
+
+
+        if not torch.cuda.is_available():
+            self._aktif_kapsam_muhafizi = contextlib.nullcontext()
+            return self._aktif_kapsam_muhafizi
+
         self._aktif_kapsam_muhafizi = torch.autograd.graph.saved_tensors_hooks(
             self.pack_hook_diske_tahliye,
             self.unpack_hook_diskten_geri_cagır

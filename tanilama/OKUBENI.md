@@ -18,17 +18,42 @@ koşar. Depo kökünden çalıştırın:
 | `graf_capasi.py` | Modüllerde ve optimizer'da `grad_fn` taşıyan uzun ömürlü tensör arar | Sıfır — çapa modül durumunda değil |
 | `kok_avi.py`, `kok_avi2.py` | Geri-referans BFS ile çerçeve/traceback köküne ulaşmayı dener | Kök bulunamadı; zincir C++ autograd düğümlerinde kopuyor |
 
-Sızıntının şu ana kadar daraltıldığı yer: `main_egitim_dongusu.py` içindeki
-`_tekil_r_adimi` kapanışları. Her adımda R adet üretiliyor ve hiçbiri serbest
-kalmıyor; `torch.utils.checkpoint(..., use_reentrant=False)` bunları yeniden
-hesaplama için grafta tutuyor, kapanış da `D0_op_sabit` ile `e3_sinir_sabit`i
-beraberinde tutuyor. Kapanış sayısını doğrudan saymak için:
+## Kök sebep (bulundu ve giderildi)
 
-    kapanis = sum(1 for f in gc.get_objects()
-                  if isinstance(f, types.FunctionType)
-                  and f.__qualname__.endswith('_tekil_r_adimi'))
+`NvmeTakasYoneticisi.pack_hook_diske_tahliye`, tahliye etmediği tensörü
+**olduğu gibi** döndürüyordu:
 
-Grafı ayakta tutan asıl çapa **henüz bulunamadı**; sızıntı giderilmedi.
+    return tensor          # hatalı
+    return tensor.detach() # doğru
+
+PyTorch'un yerleşik `SavedVariable` mekanizması, bir tensör onu üreten düğümün
+kendisi tarafından kaydedildiğinde `grad_fn`'e **zayıf** referans tutar; bu,
+düğüm ile kaydedilen tensör arasında döngü oluşmasını engellemek içindir.
+`saved_tensors_hooks` ile pack kancası devreye girince bu koruma devre dışı
+kalır: kanca ne döndürürse graf onu güçlü referansla saklar. Canlı tensör
+döndürülünce tensör kendi `grad_fn`'ini güçlü tutar ve C++ tarafında Python çöp
+toplayıcısının kıramadığı bir döngü doğar.
+
+Sonuç: her adımın `_CheckpointFrame`'i, içindeki `recompute_fn` kapanışı ve o
+kapanışın yakaladığı her şey (`D0_op_sabit`, `e3_sinir_sabit`, aktivasyonlar)
+kalıcı olarak yaşar. Ölçülen etki: yerel konfigde adım başına +25 MB, Kaggle
+konfigünde +275 MB.
+
+`detach()` depoyu paylaşır (ek bellek yok), `grad_fn`'i yoktur (döngü kırılır),
+sürüm sayacı ortaktır (yerinde-değişim tespiti bozulmaz). Gradyanların
+değişmediği bit-aynı olarak doğrulandı.
+
+Ayrıca GPU yokken hiçbir tahliye mümkün olmadığından `kapsam_muhafizi_aktifles`
+artık CPU'da `nullcontext` döndürüyor.
+
+### Gerileme testi
+
+    python tanilama/sizinti_gerileme_testi.py
+
+Gerçek eğitim döngüsünü 7 adım koşturur, kapsam muhafızını CPU'da da zorla
+aktif eder ve canlı `E3_SinirOperatorleri` sayısının adımlar arası büyümediğini
+doğrular. Düzeltme geri alındığında büyüme 5, çıkış kodu 1 olur; düzeltme
+yerindeyken büyüme 0'dır.
 
 ## Pareto operatörü doğrulaması
 
