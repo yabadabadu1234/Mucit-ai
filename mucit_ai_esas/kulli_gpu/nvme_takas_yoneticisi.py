@@ -320,52 +320,40 @@ class NvmeTahliyeKararMotoru:
         return False
 
     def vramden_nvme_diske_tahliye_et(self, fark_bayt: int) -> List[str]:
-        kurtarilan_bayt = 0
-        tahliye_dosyalari = []
+        canli_cuda = 0
+        canli_bayt = 0
+        otograd_bagli = 0
 
         with kuresel_adres_kayit_defteri.lock:
-            pasif_adaylar = [
-                k for k in kuresel_adres_kayit_defteri.kayitlar.values()
-                if k.durum == MEM_STATE_ACTIVE_VRAM and k.ref_count > 0
-            ]
-            pasif_adaylar.sort(key=lambda x: x.son_erisim_zamani)
-
-            for pasif in pasif_adaylar:
-                if kurtarilan_bayt >= fark_bayt:
-                    break
-
-                canli_tensor = pasif.canli_tensor_ref() if pasif.canli_tensor_ref is not None else None
-                if canli_tensor is None:
-                    logger.debug(
-                        f"[NvmeTahliyeKararMotoru] '{pasif.sanal_adres}' için canlı tensör referansı yok "
-                        "(zaten toplanmış olabilir), gerçek veri yazılamadan atlanıyor."
-                    )
+            for kayit in kuresel_adres_kayit_defteri.kayitlar.values():
+                if kayit.durum == MEM_STATE_SWAPPED_NVME:
                     continue
-
-                dosya_id = f"offload_{uuid.uuid4().hex[:12]}.bin"
-                dosya_yolu = os.path.join(self.swap_dir, dosya_id)
-
-                try:
-                    torch.save(canli_tensor.detach().cpu(), dosya_yolu)
-                except Exception as exc:
-                    logger.warning(f"[NvmeTahliyeKararMotoru] '{pasif.sanal_adres}' diske yazılamadı: {exc}")
+                tensor = kayit.canli_tensor_ref() if kayit.canli_tensor_ref is not None else None
+                if tensor is None or not getattr(tensor, "is_cuda", False):
                     continue
+                canli_cuda += 1
+                canli_bayt += tensor.numel() * tensor.element_size()
+                if tensor.requires_grad or getattr(tensor, "grad_fn", None) is not None:
+                    otograd_bagli += 1
 
-                pasif.dosya_yolu = dosya_yolu
-                pasif.durum = MEM_STATE_SWAPPED_NVME
-                pasif.canli_tensor_ref = None
-                kuresel_adres_kayit_defteri.aktif_dosya_yollari[dosya_yolu] = pasif.sanal_adres
+        if canli_cuda == 0:
+            logger.info(
+                f"[NvmeTahliyeKararMotoru] Elle tahliye edilebilir kayıtlı VRAM tensörü yok "
+                f"(talep {fark_bayt / (1024 ** 2):.1f} MB). Aktivasyon tahliyesi autograd "
+                f"pack/unpack kancası üzerinden yürütülüyor; o yolun sayaçları "
+                f"NvmeTakasYoneticisi.tahliye_sayaci / geri_cagirma_sayaci alanlarındadır."
+            )
+            return []
 
-                kurtarilan_bayt += pasif.bayt_boyutu
-                tahliye_dosyalari.append(dosya_yolu)
-
-        import gc as _gc_tahliye
-        _gc_tahliye.collect()
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
-
-        logger.info(f"[NvmeTahliyeKararMotoru] NVMe diske {kurtarilan_bayt / (1024**2):.2f} MB tahliye edildi. Dosya sayisi: {len(tahliye_dosyalari)}")
-        return tahliye_dosyalari
+        logger.warning(
+            f"[NvmeTahliyeKararMotoru] Kayıtlı {canli_cuda} canlı VRAM tensörü "
+            f"({canli_bayt / (1024 ** 2):.1f} MB) var; {otograd_bagli} tanesi autograd grafına bağlı. "
+            f"HİÇBİRİ elle tahliye EDİLMEYECEK: kayıt defteri yalnızca zayıf referans (weakref) tutar, "
+            f"tensörün sahibi ileri geçiştir. Sahibin altından depolamayı çekmek (.data değiştirmek) "
+            f"ileri geçişi ve geri yayılımı bozar, üstelik geri yükleme kancası yoktur. "
+            f"Güvenli tahliyenin tek yolu saved_tensors_hooks (pack/unpack) mekanizmasıdır."
+        )
+        return []
 
 
 class AutogradNvmeOffloadHook:
