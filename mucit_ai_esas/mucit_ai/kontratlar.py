@@ -1338,6 +1338,21 @@ class N6_KohomolojikAktor(nn.Module):
             delattr(self, "D0")
         self.register_buffer("D0", D0_op, persistent=False)
 
+    def serbest_birak_operatorler(self) -> float:
+        serbest_mb = 0.0
+        mevcut = self._buffers.get("D0", None) if hasattr(self, "_buffers") else None
+        if mevcut is None:
+            mevcut = getattr(self, "D0", None)
+        if mevcut is not None and hasattr(mevcut, "numel"):
+            serbest_mb = mevcut.numel() * mevcut.element_size() / (1024 ** 2)
+        if "D0" in getattr(self, "_buffers", {}):
+            del self._buffers["D0"]
+        elif hasattr(self, "D0"):
+            delattr(self, "D0")
+        self.D0 = None
+        self.v_pow_persistent = None
+        return serbest_mb
+
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else (self.config.batch_size if self.config else 1)
         V = getattr(self.config, 'V_nodes', 8) if self.config else 8
@@ -3105,38 +3120,84 @@ HarmonikIsilDifuzyonIntegratoru = N7_LifLaplasyeniCozucu
 SMW_SifirParazit_BellekYoneticisi = SMW_SifirParazit_BellekYoneticisi
 LineerNedenselVolterraBlellochCozucu = N7_LifLaplasyeniCozucu
 
-def vram_on_kontrol_ve_nvme_tahliye(gerekli_bayt: int, takas_mgr: Any = None) -> None:
+TAHLIYE_SAYAClARI: Dict[str, float] = {
+    "toplam_cagri": 0.0,
+    "toplam_sure_sn": 0.0,
+    "toplam_kurtarilan_mb": 0.0,
+    "basarisiz_cagri": 0.0,
+}
+
+
+def tahliye_sayaclarini_sifirla() -> None:
+    for anahtar in TAHLIYE_SAYAClARI:
+        TAHLIYE_SAYAClARI[anahtar] = 0.0
+
+
+def vram_on_kontrol_ve_nvme_tahliye(gerekli_bayt: int, takas_mgr: Any = None, baglam: str = "") -> None:
     if not torch.cuda.is_available():
         return
 
     import gc
+    import time as _time_tahliye
     try:
         free_vram, total_vram = torch.cuda.mem_get_info(0)
     except Exception:
         return
 
-    
-    if gerekli_bayt > free_vram or free_vram < (2 * 1024 * 1024 * 1024):
-        logging.getLogger("mucit_ai.kontratlar").warning(
-            f"[Ön-Hesaplamalı NVMe Tahliye] Talep: {round(gerekli_bayt/(1024**2), 1)} MB | "
-            f"Boş VRAM: {round(free_vram/(1024**2), 1)} MB. /tmp NVMe Diske Tahliye Başlatılıyor..."
+    if not (gerekli_bayt > free_vram or free_vram < (2 * 1024 * 1024 * 1024)):
+        return
+
+    kayitci = logging.getLogger("mucit_ai.kontratlar")
+    TAHLIYE_SAYAClARI["toplam_cagri"] += 1.0
+    cagri_no = int(TAHLIYE_SAYAClARI["toplam_cagri"])
+    baslangic = _time_tahliye.time()
+    onceki_bos_mb = free_vram / (1024 ** 2)
+
+    kayitci.warning(
+        f"[Tahliye #{cagri_no}{(' | ' + baglam) if baglam else ''}] BAŞLADI | "
+        f"Talep: {gerekli_bayt / (1024 ** 2):.1f} MB | Boş VRAM: {onceki_bos_mb:.1f} MB"
+    )
+
+    gc.collect()
+    torch.cuda.empty_cache()
+
+    if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
+        takas_mgr.temizle()
+
+    karar_motoru = getattr(takas_mgr, "karar_motoru", None) if takas_mgr is not None else None
+    if karar_motoru is not None and hasattr(karar_motoru, "vramden_nvme_diske_tahliye_et"):
+        try:
+            karar_motoru.vramden_nvme_diske_tahliye_et(gerekli_bayt)
+        except Exception as _tahliye_exc:
+            TAHLIYE_SAYAClARI["basarisiz_cagri"] += 1.0
+            kayitci.warning(f"[Tahliye #{cagri_no}] Aktif VRAM tahliyesi başarısız: {_tahliye_exc}")
+
+    try:
+        sonraki_bos, _ = torch.cuda.mem_get_info(0)
+        sonraki_bos_mb = sonraki_bos / (1024 ** 2)
+    except Exception:
+        sonraki_bos_mb = onceki_bos_mb
+
+    gecen = _time_tahliye.time() - baslangic
+    kurtarilan_mb = sonraki_bos_mb - onceki_bos_mb
+    TAHLIYE_SAYAClARI["toplam_sure_sn"] += gecen
+    TAHLIYE_SAYAClARI["toplam_kurtarilan_mb"] += max(kurtarilan_mb, 0.0)
+    yeterli = (sonraki_bos_mb * 1024 * 1024) >= gerekli_bayt
+
+    kayitci.warning(
+        f"[Tahliye #{cagri_no}] BİTTİ | Süre: {gecen:.2f} sn | "
+        f"Kurtarılan: {kurtarilan_mb:+.1f} MB | Boş VRAM: {onceki_bos_mb:.1f} -> {sonraki_bos_mb:.1f} MB | "
+        f"Talep karşılandı: {'EVET' if yeterli else 'HAYIR'} | "
+        f"Bu adımda toplam {cagri_no} tahliye, {TAHLIYE_SAYAClARI['toplam_sure_sn']:.1f} sn harcandı"
+    )
+
+    if cagri_no % 25 == 0:
+        kayitci.error(
+            f"[Tahliye UYARI] Aynı adımda {cagri_no} kez tahliye çağrıldı ve toplam "
+            f"{TAHLIYE_SAYAClARI['toplam_sure_sn']:.1f} sn harcandı. Eğitim ilerlemiyor olabilir; "
+            f"kurtarılan toplam: {TAHLIYE_SAYAClARI['toplam_kurtarilan_mb']:.1f} MB, "
+            f"başarısız: {int(TAHLIYE_SAYAClARI['basarisiz_cagri'])}."
         )
-        
-        
-        gc.collect()
-        torch.cuda.empty_cache()
-
-        if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
-            takas_mgr.temizle()
-
-        karar_motoru = getattr(takas_mgr, "karar_motoru", None) if takas_mgr is not None else None
-        if karar_motoru is not None and hasattr(karar_motoru, "vramden_nvme_diske_tahliye_et"):
-            try:
-                karar_motoru.vramden_nvme_diske_tahliye_et(gerekli_bayt)
-            except Exception as _tahliye_exc:
-                logging.getLogger("mucit_ai.kontratlar").warning(
-                    f"[Ön-Hesaplamalı NVMe Tahliye] Aktif VRAM tahliyesi başarısız: {_tahliye_exc}"
-                )
 
 def girdi_cihaza_tasi(x: Any, device: torch.device) -> Any:
     if isinstance(x, torch.Tensor):

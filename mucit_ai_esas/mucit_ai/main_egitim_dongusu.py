@@ -437,6 +437,15 @@ def _tekil_egitim_adimi_icra(
 ) -> Tuple[float, float, float, float]:
     optimizer.zero_grad(set_to_none=True)
 
+    kontratlar.tahliye_sayaclarini_sifirla()
+    if torch.cuda.is_available():
+        _devreden_mb = torch.cuda.memory_allocated() / (1024 ** 2)
+        if _devreden_mb > 512.0:
+            logger.warning(
+                f"  [Adım Başı Devreden Bellek] Adım {current_step} daha başlamadan "
+                f"{_devreden_mb:.1f} MB VRAM dolu — önceki adımdan taşınan bellek var."
+            )
+
     
     _takas_cm = takas_mgr.kapsam_muhafizi_aktifles() if takas_mgr is not None else None
     if _takas_cm is not None:
@@ -1038,6 +1047,14 @@ def _tekil_egitim_adimi_icra(
 
     d_discrepancy = float(d_vec3.mean().detach().item())
     dirichlet_energy = float(e_vec3.mean().detach().item())
+
+    if hasattr(n6_aktor, 'serbest_birak_operatorler'):
+        _serbest_mb = n6_aktor.serbest_birak_operatorler()
+        if _serbest_mb > 64.0:
+            logger.info(
+                f"  [Adım Sonu Tahliye] N6 üzerindeki D0 operatör tamponu bırakıldı: {_serbest_mb:.1f} MB "
+                f"(adımlar arası taşınmıyor)"
+            )
 
     if _takas_cm is not None:
         _takas_cm.__exit__(None, None, None)
