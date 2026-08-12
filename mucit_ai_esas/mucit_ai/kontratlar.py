@@ -2988,7 +2988,11 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         ref_device = next((p.device for p in trainable_params if p.requires_grad), torch.device('cpu'))
         ref_dtype  = next((p.dtype  for p in trainable_params if p.requires_grad), torch.float32)
 
-        shard_gradyanlari = self.shard_gradyanlari_cihaza_tasi(shard_gradyanlari, ref_device)
+        hesap_cihazi = ref_device if ref_device.type == 'cuda' else None
+        if hesap_cihazi is not None:
+            shard_gradyanlari = self.shard_gradyanlari_cihaza_tasi(
+                shard_gradyanlari, torch.device('cpu')
+            )
 
         pcgrad_bellek_dtype = torch.bfloat16 if ref_device.type == 'cuda' else ref_dtype
 
@@ -3030,99 +3034,72 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
             norm_sq_vals[i] = acc
         norm_val: List[float] = [(v ** 0.5) + 1e-8 for v in norm_sq_vals]
 
-        
-        pc_durumu: List[Optional[Dict[int, torch.Tensor]]] = [None] * n
-
         def _duzles_blok(j: int, k: int) -> Optional[torch.Tensor]:
             g = _blok(j, k)
             if g is None:
                 return None
             return (g.detach().float() / norm_val[j]).to(pcgrad_bellek_dtype)
 
-        def _pc_blok(i: int, k: int) -> Optional[torch.Tensor]:
-            if pc_durumu[i] is not None:
-                return pc_durumu[i].get(k)
-            return _duzles_blok(i, k)
-
-        def _pc_tum_bloklari_somutlastir(i: int) -> None:
-            if pc_durumu[i] is not None:
-                return
-            pc_durumu[i] = {}
-            for k in trainable_idx:
+        R = torch.zeros((n, n), dtype=torch.float64)
+        for k in trainable_idx:
+            bloklar: List[Optional[torch.Tensor]] = []
+            for i in range(n):
                 b = _duzles_blok(i, k)
-                if b is None:
-                    p_ref = trainable_params[k]
-                    b = torch.zeros(p_ref.shape, device=p_ref.device, dtype=pcgrad_bellek_dtype)
-                pc_durumu[i][k] = b
+                if b is not None and hesap_cihazi is not None:
+                    b = b.to(device=hesap_cihazi)
+                bloklar.append(b)
+            for i in range(n):
+                if bloklar[i] is None:
+                    continue
+                bi = bloklar[i].float()
+                for j in range(i, n):
+                    if bloklar[j] is None:
+                        continue
+                    ikili = float(torch.sum(bi * bloklar[j].float()).item())
+                    R[i, j] += ikili
+                    if j != i:
+                        R[j, i] += ikili
+                del bi
+            bloklar.clear()
+            del bloklar
 
-        
+        A = torch.eye(n, dtype=torch.float64)
         for i in range(n):
             for j in range(n):
                 if i == j:
                     continue
-                
-                
-                dot_ij_t = torch.zeros((), device=ref_device, dtype=torch.float32)
-                for k in trainable_idx:
-                    a = _pc_blok(i, k)
-                    b = _duzles_blok(j, k)
-                    if a is None or b is None:
-                        continue
-                    
-                    dot_ij_t = dot_ij_t + torch.sum(a.to(device=ref_device, dtype=torch.float32) * b.to(device=ref_device, dtype=torch.float32))
-                dot_ij = float(dot_ij_t.item())
+                dot_ij = float(torch.dot(A[i], R[:, j]).item())
                 if dot_ij < 0.0:
-                    _pc_tum_bloklari_somutlastir(i)
-                    
-                    
                     norm_sq_j = (norm_sq_vals[j] / (norm_val[j] ** 2)) + 1e-8
-                    proj_coeff = dot_ij / norm_sq_j
-                    for k in trainable_idx:
-                        b = _duzles_blok(j, k)
-                        if b is None:
-                            continue
-                        pc_durumu[i][k] = pc_durumu[i][k] - proj_coeff * b
+                    A[i, j] -= dot_ij / norm_sq_j
 
-        
-        G = torch.zeros((n, n), device=ref_device, dtype=torch.float32)
-        for i in range(n):
-            for j in range(i, n):
-                acc_t = torch.zeros((), device=ref_device, dtype=torch.float32)
-                for k in trainable_idx:
-                    a = _pc_blok(i, k)
-                    b = _pc_blok(j, k)
-                    if a is None or b is None:
-                        continue
-                    acc_t = acc_t + torch.sum(a.to(device=ref_device, dtype=torch.float32) * b.to(device=ref_device, dtype=torch.float32))
-                G[i, j] = acc_t
-                if j != i:
-                    G[j, i] = acc_t
-
+        G = (A @ R @ A.t()).to(device=ref_device, dtype=torch.float32)
         alpha_star = self.coz_mgda_pareto_weights(G)
         del G
 
-        
+        etkin_agirlik = A.t() @ alpha_star.detach().to(device='cpu', dtype=torch.float64)
+
         optimizer.zero_grad(set_to_none=True)
         for k, p in enumerate(trainable_params):
             if not p.requires_grad:
                 continue
             toplam = None
-            for i in range(n):
-                a = _pc_blok(i, k)
-                if a is None:
+            for j in range(n):
+                b = _duzles_blok(j, k)
+                if b is None:
                     continue
-                
-                katki = float(alpha_star[i].item()) * a.float()
+                if hesap_cihazi is not None:
+                    b = b.to(device=hesap_cihazi)
+                katki = float(etkin_agirlik[j].item()) * b.float()
                 toplam = katki if toplam is None else (toplam + katki)
+                del katki, b
             if toplam is None:
-                
-                
                 p.grad = torch.zeros_like(p)
             else:
                 p.grad = toplam.reshape(p.shape).to(device=p.device, dtype=p.dtype)
+            del toplam
 
-        
-        del pc_durumu
+        del R, A
 
         
         torch.nn.utils.clip_grad_norm_(trainable_params, max_norm=max_norm)
