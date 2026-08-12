@@ -65,6 +65,17 @@ class CevrimdisiAksiyomatikTokenizer:
         return bytes([int(token_id) % 256])
 
 
+
+
+
+
+
+
+
+
+PADE_AZAMI_OGRENME_ORANI: float = 1e-2
+
+
 def stiefel_manifold_projection(tensor: torch.Tensor, grad: Optional[torch.Tensor] = None, lr: float = 1e-3) -> torch.Tensor:
     if not isinstance(tensor, torch.Tensor) or tensor.dim() != 2:
         return tensor
@@ -72,22 +83,28 @@ def stiefel_manifold_projection(tensor: torch.Tensor, grad: Optional[torch.Tenso
     G = grad if grad is not None else tensor
 
     if m <= n:
-        A = torch.matmul(G, tensor.T) - torch.matmul(tensor, G.T)  
+        A = torch.matmul(G, tensor.T) - torch.matmul(tensor, G.T)
         I_m = torch.eye(m, device=tensor.device, dtype=tensor.dtype)
-        left = I_m + (lr / 2.0) * A
-        right = I_m - (lr / 2.0) * A
         try:
+            if abs(lr) <= PADE_AZAMI_OGRENME_ORANI:
+                pade = I_m - lr * A + 0.5 * (lr ** 2) * torch.matmul(A, A)
+                return torch.matmul(pade, tensor)
+            left = I_m + (lr / 2.0) * A
+            right = I_m - (lr / 2.0) * A
             W_next = torch.matmul(torch.linalg.solve(left, right), tensor)
             return W_next
         except Exception:
             Q, _ = torch.linalg.qr(tensor.T)
             return Q.T
     else:
-        A = torch.matmul(G.T, tensor) - torch.matmul(tensor.T, G)  
+        A = torch.matmul(G.T, tensor) - torch.matmul(tensor.T, G)
         I_n = torch.eye(n, device=tensor.device, dtype=tensor.dtype)
-        left = I_n + (lr / 2.0) * A
-        right = I_n - (lr / 2.0) * A
         try:
+            if abs(lr) <= PADE_AZAMI_OGRENME_ORANI:
+                pade = I_n - lr * A + 0.5 * (lr ** 2) * torch.matmul(A, A)
+                return torch.matmul(tensor, pade.T)
+            left = I_n + (lr / 2.0) * A
+            right = I_n - (lr / 2.0) * A
             W_next = torch.matmul(tensor, torch.linalg.solve(left.T, right.T).T)
             return W_next
         except Exception:
@@ -421,25 +438,25 @@ class Maarif_NedenselSuzgec(nn.Module):
 
         
         k_indices = torch.arange(N, dtype=torch.float32, device=device)
-        t = -torch.cos(k_indices * math.pi / max(1, N - 1))  
-        
-        
-        dt = t - torch.cat([t[:1], t[:-1]], dim=0)  
+        t = -torch.cos(k_indices * math.pi / max(1, N - 1))
 
-        
         gamma_clamped = F.softplus(self.gamma) + 1e-4
-        decay = torch.exp(-gamma_clamped * dt).view(1, N, 1)  
 
-        
-        X_volterra = X_t
-        step = 1
-        while step < N:
-            decay_step = torch.pow(decay, step)
-            kaydirilmis_katki = decay_step[:, step:, :] * X_volterra[:, :-step, :]
-            X_volterra = X_volterra + F.pad(kaydirilmis_katki, (0, 0, step, 0))
-            step *= 2
 
-        
+
+
+
+
+
+
+
+        s = gamma_clamped * t
+        s_tavan = s.max().detach()
+        oncul = torch.exp(s - s_tavan).view(1, N, 1)
+        ardil = torch.exp(s_tavan - s).view(1, N, 1)
+        X_volterra = ardil * torch.cumsum(oncul * X_t, dim=1)
+
+
         w_j = math.pi / max(1, N - 1)
         X_volterra = X_volterra * w_j
 
@@ -3078,18 +3095,24 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
                 if b is not None and hesap_cihazi is not None:
                     b = b.to(device=hesap_cihazi)
                 bloklar.append(b)
-            for i in range(n):
-                if bloklar[i] is None:
-                    continue
-                bi = bloklar[i].float()
-                for j in range(i, n):
-                    if bloklar[j] is None:
-                        continue
-                    ikili = float(torch.sum(bi * bloklar[j].float()).item())
-                    R[i, j] += ikili
-                    if j != i:
-                        R[j, i] += ikili
-                del bi
+            gecerli = [i for i in range(n) if bloklar[i] is not None]
+            if gecerli:
+
+
+
+
+
+                indis = torch.tensor(gecerli, dtype=torch.long)
+                eleman_sayisi = bloklar[gecerli[0]].numel()
+                azami_parca = 1024 * 1024
+                for bas in range(0, eleman_sayisi, azami_parca):
+                    son = min(bas + azami_parca, eleman_sayisi)
+                    S = torch.stack([
+                        bloklar[i].reshape(-1)[bas:son].float() for i in gecerli
+                    ])
+                    kismi = torch.matmul(S, S.t()).double().cpu()
+                    R[indis[:, None], indis[None, :]] += kismi
+                    del S, kismi
             bloklar.clear()
             del bloklar
 
