@@ -1213,6 +1213,14 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     with torch.no_grad():
         n3_lif.phi_base.copy_(stiefel_qr_projection(n3_lif.phi_base.data))
     
+    gc.collect()
+    gc.freeze()
+    logger.info(
+        f"  [GC Dondurma] Model, optimizer ve modul agaci kalici nesle tasindi "
+        f"({len(gc.get_objects())} nesne tarama disi). Adim ici gc.collect cagrilari "
+        f"artik yalnizca yeni nesneleri tariyor."
+    )
+
     best_loss = min(loss_history) if loss_history else float('inf')
     SAVE_EVERY_N_STEPS = getattr(config, 'save_every_n_steps', 100)
     logger.info(f"Eğitim Başlangıç Adımı (Step): {current_step} | En İyi Kayıp (Best Loss): {best_loss:.6f} | Periyodik Kayıt Sıklığı: {SAVE_EVERY_N_STEPS} Adım")
