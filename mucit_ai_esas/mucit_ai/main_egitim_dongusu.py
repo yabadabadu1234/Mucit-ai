@@ -1200,6 +1200,9 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     )
     tamamlanan_dosya_sayisi = 0
     atlanan_dosya_sayisi = 0
+    ardisik_basarisiz_adim = 0
+    toplam_basarisiz_adim = 0
+    AZAMI_ARDISIK_BASARISIZLIK = int(getattr(config, 'azami_ardisik_basarisizlik', 5))
     logger.info(f"Eğitilecek toplam dosya sayısı: {toplam_dosya_sayisi}")
 
     for veriseti_adi, klasorler in veri_yukleyici.verisetleri.items():
@@ -1282,9 +1285,13 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             arc_donusturucu=n16_arc_donusturucu
                         )
                     except Exception as _adim_exc:
+                        ardisik_basarisiz_adim += 1
+                        toplam_basarisiz_adim += 1
                         logger.error(
-                            f"  [Adım Kurtarıcı] Adım {current_step} kurtarılamaz bir hatayla "
-                            f"başarısız oldu, bu chunk ATLANIYOR (eğitim devam ediyor): {_adim_exc}"
+                            f"  [Adım Kurtarıcı] Adım {current_step} BAŞARISIZ (ardışık {ardisik_basarisiz_adim}/"
+                            f"{AZAMI_ARDISIK_BASARISIZLIK}, toplam {toplam_basarisiz_adim}). Bu chunk atlanıyor. "
+                            f"DİKKAT: adım sayacı ilerlemedi, yani model bu chunk'tan HİÇBİR ŞEY ÖĞRENMEDİ. "
+                            f"Hata: {_adim_exc}"
                         )
                         if takas_mgr is not None and hasattr(takas_mgr, "guvenli_kapat_varsa"):
                             takas_mgr.guvenli_kapat_varsa()
@@ -1302,8 +1309,32 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         _gc_step.collect()
                         if torch.cuda.is_available():
                             torch.cuda.empty_cache()
+
+                        if ardisik_basarisiz_adim >= AZAMI_ARDISIK_BASARISIZLIK:
+                            logger.error("=" * 80)
+                            logger.error(
+                                f"EĞİTİM DURDURULDU: {ardisik_basarisiz_adim} adım ÜST ÜSTE başarısız oldu ve "
+                                f"adım sayacı {current_step} değerinde çakılı kaldı. Bu, eğitimin ilerlemediği, "
+                                f"aynı noktada kısır döngüye girildiği anlamına gelir."
+                            )
+                            logger.error(
+                                f"Sessizce dönüp durmak yerine süreç burada kesiliyor. Son hata: {_adim_exc}"
+                            )
+                            logger.error(
+                                "Muhtemel çare: config.azami_dugum_sayisi, config.batch_size veya "
+                                "config.GRPO_G değerlerini düşürün."
+                            )
+                            logger.error("=" * 80)
+                            npz_mgr.save_hafiza_state()
+                            if takas_mgr is not None and hasattr(takas_mgr, "kapat"):
+                                takas_mgr.kapat()
+                            raise RuntimeError(
+                                f"Egitim ilerlemiyor: {ardisik_basarisiz_adim} ardisik basarisiz adim "
+                                f"(adim sayaci {current_step} degerinde sabit). Son hata: {_adim_exc}"
+                            )
                         continue
 
+                    ardisik_basarisiz_adim = 0
                     current_step += 1
 
                     dosya_kayiplari.append(curr_loss_val)
@@ -1407,7 +1438,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             f"{os.path.basename(dosya_yolu)} | Adım: {dosya_adim_sayisi} "
                             f"({dosya_baslangic_step}->{current_step}) | Süre: {dosya_suresi:.1f} sn "
                             f"| Kayıp ilk->son: {_ilk_kayip:.6f} -> {_son_kayip:.6f} (ort {_ort_kayip:.6f}) "
-                            f"| İşlenen: {file_size / (1024**2):.2f} MB | Veri seti: {veriseti_adi}"
+                            f"| İşlenen: {file_size / (1024**2):.2f} MB | Başarısız adım: {toplam_basarisiz_adim} "
+                            f"| Veri seti: {veriseti_adi}"
                         )
                         _kalan_dosya = toplam_dosya_sayisi - tamamlanan_dosya_sayisi - atlanan_dosya_sayisi
                         logger.info(

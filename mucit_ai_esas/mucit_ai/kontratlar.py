@@ -3586,21 +3586,18 @@ def anlasmali_vram_guvencesi_al(
     
     if toplam_ihtiyac > free_bytes:
         logger.warning(
-            f"[VRAM/TMP İdarecisi] '{modul_adi}' için {resmi_gerekli_bayt / (1024**2):.2f} MB talebi "
-            f"tüm tahliye tedbirlerine rağmen karşılanamıyor (Boş: {free_bytes / (1024**2):.2f} MB). "
-            f"Bu adım CPU/TMP üzerinden yürütülecek."
+            f"[VRAM İdarecisi] '{modul_adi}' için {resmi_gerekli_bayt / (1024**2):.2f} MB talebi "
+            f"karşılanamıyor (Boş: {free_bytes / (1024**2):.2f} MB). Modül GPU'da BIRAKILIYOR: "
+            f"modülü tek başına CPU'ya taşımak, girdileri GPU'da kaldığı için grafı iki cihaza böler ve "
+            f"'Expected all tensors to be on the same device' hatası üretir. Gerçek bir OOM olursa "
+            f"AcilDurumOomYakalayiciVeKurtarici modülü ve girdileri BİRLİKTE CPU'ya alarak kurtarır."
         )
         if hasattr(modul_nesnesi, 'to'):
             try:
-                modul_nesnesi.to(cpu_device)
+                modul_nesnesi._vram_idare_zorunlu_cihaz = gpu_device
             except Exception:
                 pass
-        if hasattr(modul_nesnesi, '__dict__') or hasattr(modul_nesnesi, 'to'):
-            try:
-                modul_nesnesi._vram_idare_zorunlu_cihaz = cpu_device
-            except Exception:
-                pass
-        return cpu_device
+        return gpu_device
 
     if hasattr(modul_nesnesi, 'to'):
         try:
