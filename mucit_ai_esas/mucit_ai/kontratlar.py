@@ -540,11 +540,110 @@ class Yardimci_ChebyshevMatrisHesaplayici:
         return L_arc, N_teorik
 
 
-def laplasyen_ile_carp(x: torch.Tensor, D0: torch.Tensor) -> torch.Tensor:
-    return torch.matmul(torch.matmul(x, D0.transpose(-2, -1)), D0)
+class LifLaplasyenOperatoru:
+    def __init__(
+        self,
+        phi_kaynak: torch.Tensor,
+        phi_hedef: torch.Tensor,
+        kaynak_kolon: torch.Tensor,
+        hedef_kolon: torch.Tensor,
+        V_num: int,
+        d_v: int,
+        d_e: int,
+    ):
+        self.phi_kaynak = phi_kaynak
+        self.phi_hedef = phi_hedef
+        self.kaynak_kolon = kaynak_kolon
+        self.hedef_kolon = hedef_kolon
+        self.V_num = int(V_num)
+        self.d_v = int(d_v)
+        self.d_e = int(d_e)
+        self.E_num = int(phi_kaynak.shape[0])
+
+    @property
+    def shape(self) -> Tuple[int, int]:
+        return (self.E_num * self.d_e, self.V_num * self.d_v)
+
+    @property
+    def device(self) -> torch.device:
+        return self.phi_kaynak.device
+
+    @property
+    def dtype(self) -> torch.dtype:
+        return self.phi_kaynak.dtype
+
+    def dim(self) -> int:
+        return 2
+
+    def numel(self) -> int:
+        return self.shape[0] * self.shape[1]
+
+    def bellek_bayt(self) -> int:
+        toplam = 0
+        for _t in (self.phi_kaynak, self.phi_hedef, self.kaynak_kolon, self.hedef_kolon):
+            toplam += _t.numel() * _t.element_size()
+        return int(toplam)
+
+    def to(self, target_device: Any) -> "LifLaplasyenOperatoru":
+        return LifLaplasyenOperatoru(
+            self.phi_kaynak.to(target_device),
+            self.phi_hedef.to(target_device),
+            self.kaynak_kolon.to(target_device),
+            self.hedef_kolon.to(target_device),
+            self.V_num, self.d_v, self.d_e,
+        )
+
+    def carp_transpoze(self, x: torch.Tensor) -> torch.Tensor:
+        on_bicim = tuple(x.shape[:-1])
+        x3 = x.reshape(-1, self.V_num, self.d_v)
+        x_kaynak = x3.index_select(1, self.kaynak_kolon)
+        x_hedef = x3.index_select(1, self.hedef_kolon)
+        y3 = (
+            torch.einsum('eij,bej->bei', self.phi_hedef, x_hedef)
+            - torch.einsum('eij,bej->bei', self.phi_kaynak, x_kaynak)
+        )
+        return y3.reshape(*on_bicim, self.E_num * self.d_e)
+
+    def carp(self, y: torch.Tensor) -> torch.Tensor:
+        on_bicim = tuple(y.shape[:-1])
+        y3 = y.reshape(-1, self.E_num, self.d_e)
+        katki_hedef = torch.einsum('bei,eij->bej', y3, self.phi_hedef)
+        katki_kaynak = torch.einsum('bei,eij->bej', y3, self.phi_kaynak)
+        cikti = torch.zeros(
+            (y3.shape[0], self.V_num, self.d_v), device=y3.device, dtype=y3.dtype
+        )
+        cikti = cikti.index_add(1, self.hedef_kolon, katki_hedef)
+        cikti = cikti.index_add(1, self.kaynak_kolon, -katki_kaynak)
+        return cikti.reshape(*on_bicim, self.V_num * self.d_v)
+
+    def yogun(self) -> torch.Tensor:
+        D0 = torch.zeros(self.shape, device=self.device, dtype=self.dtype)
+        for e in range(self.E_num):
+            satir = e * self.d_e
+            k_kol = int(self.kaynak_kolon[e].item()) * self.d_v
+            h_kol = int(self.hedef_kolon[e].item()) * self.d_v
+            D0[satir:satir + self.d_e, k_kol:k_kol + self.d_v] += -self.phi_kaynak[e]
+            D0[satir:satir + self.d_e, h_kol:h_kol + self.d_v] += self.phi_hedef[e]
+        return D0
 
 
-def laplasyen_lambda_max_guc_yontemi(D0: torch.Tensor, iterasyon: int = 8) -> torch.Tensor:
+def d0_transpoze_carp(x: torch.Tensor, D0: Any) -> torch.Tensor:
+    if isinstance(D0, LifLaplasyenOperatoru):
+        return D0.carp_transpoze(x)
+    return torch.matmul(x, D0.transpose(-2, -1))
+
+
+def d0_carp(y: torch.Tensor, D0: Any) -> torch.Tensor:
+    if isinstance(D0, LifLaplasyenOperatoru):
+        return D0.carp(y)
+    return torch.matmul(y, D0)
+
+
+def laplasyen_ile_carp(x: torch.Tensor, D0: Any) -> torch.Tensor:
+    return d0_carp(d0_transpoze_carp(x, D0), D0)
+
+
+def laplasyen_lambda_max_guc_yontemi(D0: Any, iterasyon: int = 8) -> torch.Tensor:
     D = D0.shape[-1]
     v = torch.randn(1, D, device=D0.device, dtype=D0.dtype)
     v = v / (torch.norm(v) + 1e-8)
@@ -585,34 +684,59 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
 
         
         toplam_kolon = V_num * d_v
-        _d0_mb = (E_num * d_e) * toplam_kolon * 4 / (1024 ** 2)
-        if _d0_mb > 512.0:
-            logging.getLogger("mucit_ai.kontratlar").warning(
-                f"[Riyazi_LifLaplasyeniBlokInsaEdici] D0 yoğun matrisi büyük: "
-                f"[{E_num * d_e} x {toplam_kolon}] = {_d0_mb:.1f} MB (V={V_num}, E={E_num}). "
-                f"Bellek V^2 ile büyür; config.azami_dugum_sayisi düşürülmeli."
-            )
-        D0 = torch.zeros((E_num * d_e, toplam_kolon), dtype=dtype, device=device)
+        sifir_blok = torch.zeros((d_e, d_v), dtype=dtype, device=device)
+        kaynak_bloklari: List[torch.Tensor] = []
+        hedef_bloklari: List[torch.Tensor] = []
+        kaynak_kolonlari: List[int] = []
+        hedef_kolonlari: List[int] = []
+
         for e in range(E_num):
-            satir_bas = e * d_e
             key_start = f"phi_{e}_{e}"
             key_end = f"phi_{e+1}_{e}"
-            if key_start in phi_dict:
-                kolon_bas = e * d_v
-                if kolon_bas + d_v <= toplam_kolon:
-                    phi_s = phi_dict[key_start]
-                    phi_s = phi_s.to(device) if phi_s.device != device else phi_s
-                    D0[satir_bas:satir_bas + d_e, kolon_bas:kolon_bas + d_v] = -1.0 * phi_s
-            if key_end in phi_dict:
-                kolon_bas = (e + 1) * d_v
-                if kolon_bas + d_v <= toplam_kolon:
-                    phi_e = phi_dict[key_end]
-                    phi_e = phi_e.to(device) if phi_e.device != device else phi_e
-                    D0[satir_bas:satir_bas + d_e, kolon_bas:kolon_bas + d_v] = 1.0 * phi_e
 
-        
+            k_kolon = e
+            blok_kaynak = sifir_blok
+            if key_start in phi_dict and (k_kolon + 1) * d_v <= toplam_kolon:
+                phi_s = phi_dict[key_start]
+                blok_kaynak = phi_s.to(device) if phi_s.device != device else phi_s
+            else:
+                k_kolon = min(e, max(V_num - 1, 0))
+
+            h_kolon = e + 1
+            blok_hedef = sifir_blok
+            if key_end in phi_dict and (h_kolon + 1) * d_v <= toplam_kolon:
+                phi_e = phi_dict[key_end]
+                blok_hedef = phi_e.to(device) if phi_e.device != device else phi_e
+            else:
+                h_kolon = min(e + 1, max(V_num - 1, 0))
+
+            kaynak_bloklari.append(blok_kaynak)
+            hedef_bloklari.append(blok_hedef)
+            kaynak_kolonlari.append(k_kolon)
+            hedef_kolonlari.append(h_kolon)
+
+        if E_num == 0:
+            bos = torch.zeros((0, d_e, d_v), dtype=dtype, device=device)
+            bos_idx = torch.zeros((0,), dtype=torch.long, device=device)
+            D0 = LifLaplasyenOperatoru(bos, bos, bos_idx, bos_idx, V_num, d_v, d_e)
+        else:
+            D0 = LifLaplasyenOperatoru(
+                torch.stack(kaynak_bloklari, dim=0),
+                torch.stack(hedef_bloklari, dim=0),
+                torch.tensor(kaynak_kolonlari, dtype=torch.long, device=device),
+                torch.tensor(hedef_kolonlari, dtype=torch.long, device=device),
+                V_num, d_v, d_e,
+            )
+
+        logging.getLogger("mucit_ai.kontratlar").debug(
+            f"[Riyazi_LifLaplasyeniBlokInsaEdici] D0 operatör formunda: mantıksal "
+            f"[{E_num * d_e} x {toplam_kolon}] = {(E_num * d_e) * toplam_kolon * 4 / (1024 ** 2):.1f} MB yoğun karşılığı, "
+            f"gerçek bellek {D0.bellek_bayt() / (1024 ** 2):.2f} MB"
+        )
+
         if not hesapla_yogun_delta0:
             return D0, None
+        D0 = D0.yogun()
         
         
         Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T.contiguous(), D0)    
@@ -1149,7 +1273,7 @@ class N4_SorguSecici(nn.Module):
 
         
         if D0_operator is not None:
-            c_defect = torch.matmul(x_r, D0_operator.T)  
+            c_defect = d0_transpoze_carp(x_r, D0_operator)
             d_e = self.config.d_e if self.config else self.d_v
             E_num = c_defect.shape[1] // d_e if c_defect.shape[1] % d_e == 0 else 1
             c_reshaped = c_defect.view(B, E_num, d_e)
@@ -1300,10 +1424,7 @@ class N6_KohomolojikAktor(nn.Module):
         self.alt_ag = alt_ag
         self.config = config
         self.register_buffer("v_pow_persistent", None, persistent=False)
-        if D0_operator is not None:
-            self.register_buffer("D0", D0_operator, persistent=False)
-        else:
-            self.D0 = None
+        self.D0 = D0_operator
         
         
         d_v = getattr(config, 'd_v', 32) if config else 32
@@ -1331,24 +1452,21 @@ class N6_KohomolojikAktor(nn.Module):
         ):
             nn.init.orthogonal_(_lin.weight)
 
-    def update_operators(self, D0_op: torch.Tensor, Delta0_op: Optional[torch.Tensor] = None) -> None:
+    def update_operators(self, D0_op: Any, Delta0_op: Optional[torch.Tensor] = None) -> None:
         if "D0" in self._buffers:
             del self._buffers["D0"]
-        elif hasattr(self, "D0"):
-            delattr(self, "D0")
-        self.register_buffer("D0", D0_op, persistent=False)
+        self.D0 = D0_op
 
     def serbest_birak_operatorler(self) -> float:
         serbest_mb = 0.0
-        mevcut = self._buffers.get("D0", None) if hasattr(self, "_buffers") else None
-        if mevcut is None:
-            mevcut = getattr(self, "D0", None)
-        if mevcut is not None and hasattr(mevcut, "numel"):
-            serbest_mb = mevcut.numel() * mevcut.element_size() / (1024 ** 2)
-        if "D0" in getattr(self, "_buffers", {}):
+        mevcut = getattr(self, "D0", None)
+        if mevcut is not None:
+            if hasattr(mevcut, "bellek_bayt"):
+                serbest_mb = mevcut.bellek_bayt() / (1024 ** 2)
+            elif hasattr(mevcut, "numel") and hasattr(mevcut, "element_size"):
+                serbest_mb = mevcut.numel() * mevcut.element_size() / (1024 ** 2)
+        if "D0" in self._buffers:
             del self._buffers["D0"]
-        elif hasattr(self, "D0"):
-            delattr(self, "D0")
         self.D0 = None
         self.v_pow_persistent = None
         return serbest_mb
@@ -1376,8 +1494,8 @@ class N6_KohomolojikAktor(nn.Module):
 
         def apply_M_vec(v: torch.Tensor) -> torch.Tensor:
             
-            v_v = torch.matmul(v, D0)      
-            M_v = torch.matmul(v_v, D0.T)   
+            v_v = d0_carp(v, D0)
+            M_v = d0_transpoze_carp(v_v, D0)
             return M_v + eps_adaptive * v
 
         
@@ -1408,7 +1526,7 @@ class N6_KohomolojikAktor(nn.Module):
             u_accum = u_accum + v_k
 
         u = alpha_scale * u_accum
-        K_adjoint = torch.matmul(u, D0)  
+        K_adjoint = d0_carp(u, D0)
         return K_adjoint
 
     def VektorelChebyshevKrylovCozumu(self, c_defect: torch.Tensor, D0: torch.Tensor, P: int = 5) -> torch.Tensor:
@@ -1443,7 +1561,7 @@ class N6_KohomolojikAktor(nn.Module):
 
         
         if self.D0 is not None:
-            c_defect = torch.matmul(x_r, self.D0.T)  
+            c_defect = d0_transpoze_carp(x_r, self.D0)
             
             
             laplacian_grad = laplasyen_ile_carp(x_r, self.D0)  
@@ -1754,8 +1872,8 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         
         return x_free + a * x_forced
 
-    def hesapla_uyumsuzluk_vektoru(self, x_r: torch.Tensor, D0: torch.Tensor) -> torch.Tensor:
-        c_defect = torch.matmul(x_r, D0.T)  
+    def hesapla_uyumsuzluk_vektoru(self, x_r: torch.Tensor, D0: Any) -> torch.Tensor:
+        c_defect = d0_transpoze_carp(x_r, D0)
         B = c_defect.shape[0]
         d_e = getattr(self.config, 'd_e', 32)
         E_num = c_defect.shape[1] // d_e if c_defect.shape[1] % d_e == 0 else 1
@@ -1925,8 +2043,8 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
     def read(self, k_r: torch.Tensor) -> torch.Tensor:
         return torch.bmm(self.M, k_r.unsqueeze(-1)).squeeze(-1)
 
-    def hesapla_uyumsuzluk_vektoru(self, x_r: torch.Tensor, D0: torch.Tensor) -> torch.Tensor:
-        c_defect = torch.matmul(x_r, D0.T)  
+    def hesapla_uyumsuzluk_vektoru(self, x_r: torch.Tensor, D0: Any) -> torch.Tensor:
+        c_defect = d0_transpoze_carp(x_r, D0)
         B = c_defect.shape[0]
         d_e = self.config.d_e
         E_num = c_defect.shape[1] // d_e

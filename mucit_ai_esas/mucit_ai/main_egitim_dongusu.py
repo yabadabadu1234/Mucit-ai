@@ -275,7 +275,7 @@ class Odul_ButunculCumleKeyfiyetMotoru:
         qa_ahenk = F.cosine_similarity(q_son[..., :d_min], a_son[..., :d_min], dim=-1)  
 
         
-        c_defect_cumle = torch.matmul(x_son, D0_op.T)  
+        c_defect_cumle = kontratlar.d0_transpoze_carp(x_son, D0_op)
         c_kusur_norm = torch.norm(c_defect_cumle, p=2, dim=-1)  
         
         
@@ -709,7 +709,7 @@ def _tekil_egitim_adimi_icra(
         modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
     )
 
-    _c_defect_ham_faz3 = torch.matmul(mevcut_durum.x_r, D0_op_sabit.T)
+    _c_defect_ham_faz3 = kontratlar.d0_transpoze_carp(mevcut_durum.x_r, D0_op_sabit)
     _krylov_adjoint_faz3 = AcilDurumOomYakalayiciVeKurtarici(
         n6_aktor.VektorelChebyshevKrylovCozumu, _c_defect_ham_faz3, D0_op_sabit,
         modul_nesnesi=n6_aktor, takas_mgr=takas_mgr, P=5

@@ -38,7 +38,8 @@ class TopolojikIslemSevk:
         D0_op: torch.Tensor,
         n6_module: Any
     ) -> torch.Tensor:
-        result = torch.matmul(v_vector, D0_op.T) if D0_op.dim() == 2 else v_vector
+        from kontratlar import d0_transpoze_carp
+        result = d0_transpoze_carp(v_vector, D0_op) if D0_op is not None else v_vector
         return result
 
     def n8_n10_chebyshev_softmax_sevk(
