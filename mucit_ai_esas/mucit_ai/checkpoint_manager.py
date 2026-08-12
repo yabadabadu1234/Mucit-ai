@@ -31,6 +31,39 @@ def _flatten_nested_state_dict(st: Dict[str, Any], prefix: str = "") -> Dict[str
     return flat
 
 
+EGITIM_MODUL_ADI_ESLEMESI: Dict[str, str] = {
+    "n3_phi": "n3_lif",
+    "n4": "n4_sorgu",
+    "n5": "n5_cevap",
+    "n7": "n7_cozucu",
+    "n8": "n8_chebyshev",
+    "n8_b": "n8_b_uzunluk",
+    "n10": "n10_sozluk",
+    "bellek": "bellek_yonetici",
+    "bellek_yazici": "n_yazici",
+}
+
+
+def egitim_adlarini_cikarsama_adlarina_cevir(duz_st: Dict[str, Any]) -> Dict[str, Any]:
+
+
+
+
+
+
+
+
+    cevrilmis: Dict[str, Any] = {}
+    for anahtar, deger in duz_st.items():
+        metin = str(anahtar)
+        bas, ayrac, kalan = metin.partition(".")
+        if ayrac and bas in EGITIM_MODUL_ADI_ESLEMESI:
+            cevrilmis[f"{EGITIM_MODUL_ADI_ESLEMESI[bas]}.{kalan}"] = deger
+        else:
+            cevrilmis[metin] = deger
+    return cevrilmis
+
+
 def _tensor_to_numpy_safe(tensor: Any) -> np.ndarray:
     if torch is not None and hasattr(tensor, "dtype") and tensor.dtype == torch.bfloat16:
         tensor = tensor.to(torch.float32)
@@ -689,13 +722,72 @@ class NPZCheckpointManager:
 
                     elif hasattr(model, 'load_state_dict'):
                         flat_st = _flatten_nested_state_dict(st) if isinstance(st, dict) else st
-                        
+
                         temiz_st = {re.sub(r'^(module\.|model\.|modeller\.)', '', str(k)): v for k, v in flat_st.items()}
+
+
+
+
+
+                        temiz_st = egitim_adlarini_cikarsama_adlarina_cevir(temiz_st)
+
+
+
+
+
+
+
+                        _model_st = model.state_dict()
+                        _sekil_uyusmayan = []
+                        for _k in list(temiz_st.keys()):
+                            _hedef = _model_st.get(_k)
+                            _kaynak = temiz_st[_k]
+                            if (_hedef is not None and hasattr(_hedef, "shape")
+                                    and hasattr(_kaynak, "shape")
+                                    and tuple(_hedef.shape) != tuple(_kaynak.shape)):
+                                _sekil_uyusmayan.append(
+                                    f"{_k} (checkpoint {tuple(_kaynak.shape)} != model {tuple(_hedef.shape)})"
+                                )
+                                del temiz_st[_k]
+                        if _sekil_uyusmayan:
+                            logger.warning(
+                                f"  [Ckpt Mgr] {len(_sekil_uyusmayan)} tensör şekil uyuşmazlığı "
+                                f"yüzünden atlandı (çoğunlukla batch boyutuna bağlı çalışma zamanı "
+                                f"durumu, ağırlık değil): {'; '.join(_sekil_uyusmayan[:4])}"
+                            )
+
                         try:
                             model.load_state_dict(temiz_st, strict=True)
-                        except RuntimeError as strict_err:
-                            logger.warning(f"  [Ckpt Mgr] strict=True başarısız ({strict_err}), strict=False ile devam.")
-                            model.load_state_dict(temiz_st, strict=False)
+                            logger.info("  [Ckpt Mgr] Tüm ağırlıklar strict=True ile yüklendi.")
+                        except RuntimeError:
+                            sonuc = model.load_state_dict(temiz_st, strict=False)
+                            model_anahtarlari = set(model.state_dict().keys())
+                            eslesen = [
+                                k for k in temiz_st
+                                if k in model_anahtarlari and k not in set(sonuc.unexpected_keys)
+                            ]
+                            oran = (len(eslesen) / max(len(model_anahtarlari), 1)) * 100.0
+                            logger.warning(
+                                f"  [Ckpt Mgr] Kısmi yükleme: modelin {len(model_anahtarlari)} "
+                                f"tensöründen {len(eslesen)} tanesi dolduruldu (%{oran:.1f}). "
+                                f"Checkpoint'te karşılığı olmayan: {len(sonuc.missing_keys)}, "
+                                f"modelde karşılığı olmayan: {len(sonuc.unexpected_keys)}."
+                            )
+                            if len(eslesen) == 0:
+                                raise RuntimeError(
+                                    "Kontrol noktasından HİÇBİR ağırlık yüklenemedi; model tamamen "
+                                    "rastgele ilklendirilmiş durumda. Bu bir 'kısmi yükleme' değil, "
+                                    "tam başarısızlıktır ve çıkarım sonucu anlamsız olurdu. "
+                                    "Muhtemel sebep: kontrol noktası mevcut mimariden daha eski bir "
+                                    "sürümle üretilmiş. Örnek modelde beklenen ilk anahtarlar: "
+                                    f"{sorted(model_anahtarlari)[:3]} | checkpoint'te bulunanlar: "
+                                    f"{sorted(temiz_st.keys())[:3]}"
+                                )
+                            if oran < 50.0:
+                                logger.error(
+                                    f"  [Ckpt Mgr] UYARI: ağırlıkların yarısından azı yüklendi (%{oran:.1f}). "
+                                    f"Çıkarım çıktısı büyük ölçüde rastgele ağırlıklardan gelecektir."
+                                )
 
                     logger.info(f"  [Ckpt Mgr] Hakiki PyTorch Modül Ağırlıkları Yüklendi: {pt_file}")
 

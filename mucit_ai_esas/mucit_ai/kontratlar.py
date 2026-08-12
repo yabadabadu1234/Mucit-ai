@@ -2844,7 +2844,17 @@ class BiliselKanvasModeli(nn.Module):
 
         self.cheby_calc = Yardimci_ChebyshevMatrisHesaplayici(config)
         self.laplasyen_insa = Riyazi_LifLaplasyeniBlokInsaEdici(config)
-        self.bellek_yonetici = bellek_yonetici if bellek_yonetici is not None else Bellek_BaglamYoneticisi(config)
+
+
+
+
+
+
+
+        self.bellek_yonetici = (
+            bellek_yonetici if bellek_yonetici is not None
+            else SMW_SifirParazit_BellekYoneticisi(config)
+        )
         self.stiefel_izdusurucu = Riyazi_StiefelManifolduIzdusumu()
 
     def forward(self, girdi_metni: str, active_batch_size: Optional[int] = None, return_details: bool = False) -> Any:
@@ -2873,17 +2883,28 @@ class BiliselKanvasModeli(nn.Module):
         mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_start)
         mevcut_bellek_obj = self.bellek_yonetici.get_memory(b_size)
 
+
+
+
+
+
+        D0_op = None
+
         for r in range(1, self.config.R + 1):
-            
+
             e3_sinir = self.n2_topox(e2_byte, x_initial=mevcut_durum.x_r, mode=mode, D0_base=D0_op)
-            
-            
+
             D0_op, _ = self.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
-            n6_aktor = N6_KohomolojikAktor(self.alt_n6, D0_op, config=self.config)
+
+
+
+
+
+            self.n6_aktor.update_operators(D0_op)
 
             e6_sorgu = self.n4_sorgu(mevcut_durum, D0_operator=D0_op, A_adjacency=e3_sinir.D1, bellek=mevcut_bellek_obj)
             e7_lokal = self.n5_cevap(e6_sorgu, mevcut_bellek_obj)
-            e8_sentetik = n6_aktor(mevcut_durum, e6_sorgu, e7_lokal)
+            e8_sentetik = self.n6_aktor(mevcut_durum, e6_sorgu, e7_lokal)
             e9_guncel = self.n7_cozucu(e8_sentetik, D0_op, mevcut_durum)
 
             

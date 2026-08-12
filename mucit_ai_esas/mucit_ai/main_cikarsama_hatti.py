@@ -180,12 +180,28 @@ class Model_Agirlik_ve_CikarsamaYoneticisi:
         npz_mgr = NPZCheckpointManager(checkpoint_dir=target_dir)
         latest_ckpt = npz_mgr.get_latest()
 
-        step_loaded, _ = npz_mgr.load_pytorch_model(model=model, path=latest_ckpt)
-        if step_loaded >= 0:
-            logger.info(f"Model ağırlıkları NPZCheckpointManager ile başarıyla yüklendi. (Dizin: {target_dir} | Adım: {step_loaded})")
-            return model, True
 
-        return model, False
+
+
+
+
+        try:
+            step_loaded, _ = npz_mgr.load_pytorch_model(model=model, path=latest_ckpt)
+        except Exception as yukleme_hatasi:
+            logger.error("=" * 80)
+            logger.error(f"MODEL AĞIRLIKLARI YÜKLENEMEDİ: {yukleme_hatasi}")
+            logger.error(
+                "Çıkarım burada durduruluyor. Rastgele ağırlıklarla üretilen metin "
+                "modelin kabiliyeti hakkında hiçbir şey göstermez; 'çalışıyor ama kötü' "
+                "ile 'hiç yüklenmedi' birbirine karıştırılmamalıdır."
+            )
+            logger.error("=" * 80)
+            raise
+
+        logger.info(
+            f"Model ağırlıkları yüklendi. (Dizin: {target_dir} | Kaydedilen adım: {step_loaded})"
+        )
+        return model, True
 
 
 def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str = "Ahmet eve gitti.") -> str:
@@ -214,7 +230,12 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
     stiefel_izdusurucu = N13_StiefelManifolduIzdusumu()
     
     eval_model = model.module if isinstance(model, nn.DataParallel) else model
-    stiefel_izdusurucu.izdüsür(eval_model.n3_lif.phi_matrisleri)
+
+
+
+
+
+    stiefel_izdusurucu.izdüsür(eval_model.n3_lif.phi_base)
 
     
     is_arc_json = False
@@ -256,7 +277,11 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
 
         
         x_current = x_initial.clone()
-        M_current = eval_model.bellek_yonetici.get_memory(active_batch_size=1).M
+
+
+
+
+        M_current = eval_model.bellek_yonetici.get_memory(1).M
         eval_model.n6_aktor.update_operators(D0_op)
 
         for r in range(1, config.R + 1):
