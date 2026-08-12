@@ -572,6 +572,34 @@ class NPZCheckpointManager:
 
         return pt_path
 
+    def kontrol_noktasi_configunu_oku(self, path: Optional[str] = None) -> Dict[str, Any]:
+
+
+
+
+
+
+
+        if torch is None:
+            return {}
+        hedef = path or self.get_latest()
+        if not hedef or not os.path.isfile(hedef):
+            return {}
+        try:
+            paket = torch.load(hedef, map_location="cpu", weights_only=False)
+        except Exception as exc:
+            logger.warning(f"  [Ckpt Mgr] Config okunamadı ({hedef}): {exc}")
+            return {}
+        cfg = paket.get("config") if isinstance(paket, dict) else None
+        del paket
+        if not cfg:
+            logger.warning(
+                f"  [Ckpt Mgr] Kontrol noktası config bilgisi taşımıyor: {hedef}. "
+                f"Model varsayılan config ile kurulacak; şekiller tutmazsa sebebi budur."
+            )
+            return {}
+        return dict(cfg)
+
     def fazlalik_dosyalari_temizle(self) -> int:
 
 

@@ -1172,7 +1172,7 @@ def _tekil_egitim_adimi_icra(
             v_r_val = e7_lokal.a_r
             AnlasmaliVramGuvencesiAl(meclis_bellek, k_r_key, takas_mgr=takas_mgr)
             e5_b_yeni = AcilDurumOomYakalayiciVeKurtarici(
-                meclis_bellek.BiyortogonalKorelasyonYaz, k_r=k_r_key, v_r=v_r_val, modul_nesnesi=meclis_bellek, takas_mgr=takas_mgr
+                meclis_bellek.BiyortogonalKorelasyonYaz, k_r=k_r_key, v_r=v_r_val, q_r=e6_sorgu.q_r, a_r=e7_lokal.a_r, modul_nesnesi=meclis_bellek, takas_mgr=takas_mgr
             )
         else:
             AnlasmaliVramGuvencesiAl(bellek_yazici, e9_guncel.x_next, takas_mgr=takas_mgr)

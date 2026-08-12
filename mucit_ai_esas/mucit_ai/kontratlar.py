@@ -1995,6 +1995,30 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
         R_init = torch.eye(self.K, device=device).unsqueeze(0).repeat(config.batch_size, 1, 1)
         self.register_buffer("R", R_init)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        self.d_q = getattr(config, 'd_q', 64)
+        self.d_a = getattr(config, 'd_a', 64)
+        self.gate_net = nn.Sequential(
+            nn.Linear(self.d_q + self.d_a, self.d_m, device=device),
+            nn.Sigmoid(),
+        )
+        self.unutma_kapisi = nn.Sequential(
+            nn.Linear(self.d_q + self.d_a, 1, device=device),
+            nn.Sigmoid(),
+        )
+
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
         return vram_bayt_tahmin_et(B, self.K, self.K) + vram_bayt_tahmin_et(B, self.d_m, self.K)
@@ -2016,7 +2040,8 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
             self.reset_memory(batch_size)
         return E5_B_BellekGonderimi(M=self.M)
 
-    def write(self, k_r: torch.Tensor, v_r: torch.Tensor, alpha_pareto: Optional[torch.Tensor] = None) -> E5_B_BellekGonderimi:
+    def write(self, k_r: torch.Tensor, v_r: torch.Tensor, alpha_pareto: Optional[torch.Tensor] = None,
+              q_r: Optional[torch.Tensor] = None, a_r: Optional[torch.Tensor] = None) -> E5_B_BellekGonderimi:
         
         
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
@@ -2056,24 +2081,55 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
             g_r = g_r * pareto_gate
 
         
-        R_k_T = torch.bmm(k_r.unsqueeze(1), self.R)               
-        g_R_k_T = torch.bmm(g_r.unsqueeze(2), R_k_T)              
-        self.R = self.R - g_R_k_T
 
-        
-        M_k = torch.bmm(self.M, k_r.unsqueeze(-1)).squeeze(-1)  
-        error_vector = v_r - M_k  
-        
-        update_matrix = torch.bmm(error_vector.unsqueeze(2), g_r.unsqueeze(1))  
-        beta_forget = torch.sigmoid(torch.mean(v_r, dim=-1, keepdim=True)).unsqueeze(-1)  
-        self.M = (1.0 - beta_forget) * self.M + beta_forget * update_matrix
+
+
+
+
+
+
+
+
+
+        if q_r is not None and a_r is not None:
+            qa = torch.cat([q_r, a_r], dim=-1)
+            if qa.shape[-1] != (self.d_q + self.d_a):
+                qa = F.adaptive_avg_pool1d(
+                    qa.unsqueeze(1), self.d_q + self.d_a
+                ).squeeze(1)
+            kapi_M = self.gate_net(qa).unsqueeze(-1)
+            kapi_R = self.unutma_kapisi(qa).unsqueeze(-1)
+        else:
+
+
+
+            kapi_M = torch.sigmoid(torch.mean(v_r, dim=-1, keepdim=True)).unsqueeze(-1)
+            kapi_R = torch.ones((B, 1, 1), device=self.R.device, dtype=self.R.dtype)
+
+
+
+
+        R_k_T = torch.bmm(k_r.unsqueeze(1), self.R)
+        g_R_k_T = torch.bmm(g_r.unsqueeze(2), R_k_T)
+        self.R = self.R - kapi_R * g_R_k_T
+
+
+        M_k = torch.bmm(self.M, k_r.unsqueeze(-1)).squeeze(-1)
+        error_vector = v_r - M_k
+
+        update_matrix = torch.bmm(error_vector.unsqueeze(2), g_r.unsqueeze(1))
+
+
+
+        self.M = (1.0 - kapi_M) * self.M + kapi_M * update_matrix
         return E5_B_BellekGonderimi(M=self.M)
 
-    def BiyortogonalKorelasyonYaz(self, k_r: torch.Tensor, v_r: torch.Tensor, alpha_pareto: Optional[torch.Tensor] = None) -> E5_B_BellekGonderimi:
+    def BiyortogonalKorelasyonYaz(self, k_r: torch.Tensor, v_r: torch.Tensor, alpha_pareto: Optional[torch.Tensor] = None,
+                                  q_r: Optional[torch.Tensor] = None, a_r: Optional[torch.Tensor] = None) -> E5_B_BellekGonderimi:
         logging.getLogger("mucit_ai.kontratlar").debug(
             "[SMW_SifirParazit_BellekYoneticisi.BiyortogonalKorelasyonYaz] biyortogonal SMW bellek yazımı çağrıldı"
         )
-        return self.write(k_r, v_r, alpha_pareto=alpha_pareto)
+        return self.write(k_r, v_r, alpha_pareto=alpha_pareto, q_r=q_r, a_r=a_r)
 
     def read(self, k_r: torch.Tensor) -> torch.Tensor:
         return torch.bmm(self.M, k_r.unsqueeze(-1)).squeeze(-1)

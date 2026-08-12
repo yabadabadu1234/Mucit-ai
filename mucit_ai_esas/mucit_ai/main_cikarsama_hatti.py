@@ -213,9 +213,44 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
     logger.info("================================================================================")
 
     
-    config = Model_TopolojikKonfigurasyon()
+
+
+
+
+
+
+
+
+    _ckpt_dizini = None
+    for _aday in (model_yolu, "/kaggle/input/notebooks/ulankaggle/mucit-ai"):
+        if _aday and os.path.isdir(_aday):
+            _gecici_mgr = NPZCheckpointManager(checkpoint_dir=_aday)
+            if _gecici_mgr.get_latest():
+                _ckpt_dizini = _aday
+                break
+
+    _kayitli_config: Dict[str, Any] = {}
+    if _ckpt_dizini:
+        _kayitli_config = NPZCheckpointManager(
+            checkpoint_dir=_ckpt_dizini
+        ).kontrol_noktasi_configunu_oku()
+
+    if _kayitli_config:
+        logger.info(
+            "  [Config] Model, kontrol noktasının KENDİ config'i ile kuruluyor "
+            "(varsayılanlar kullanılmıyor): "
+            + ", ".join(f"{_k}={_v}" for _k, _v in sorted(_kayitli_config.items()))
+        )
+        config = Model_TopolojikKonfigurasyon(_kayitli_config)
+    else:
+        logger.warning(
+            "  [Config] Kontrol noktasından config okunamadı; varsayılan config "
+            "kullanılıyor. Eğitim farklı bir config ile yapıldıysa şekiller tutmaz."
+        )
+        config = Model_TopolojikKonfigurasyon()
+
     config.device = "cuda:0" if torch.cuda.is_available() else "cpu"
-    config.batch_size = 1  
+    config.batch_size = 1
     logger.info(f"Çıkarım Cihazı: {config.device} | Varsayılan Dizi Uzunluğu (N): {config.N} | Azami Kapasite (N_max): {config.N_max} | Zaman Sınırı: {zaman_siniri_saniye} sn")
 
     
@@ -313,7 +348,7 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
             if hasattr(eval_model, 'bellek_yonetici') and isinstance(eval_model.bellek_yonetici, SMW_SifirParazit_BellekYoneticisi):
                 k_r_key = e6_sorgu.q_r[:, :getattr(config, 'K', 16)] if e6_sorgu.q_r.shape[1] >= getattr(config, 'K', 16) else F.pad(e6_sorgu.q_r, (0, getattr(config, 'K', 16) - e6_sorgu.q_r.shape[1]))
                 v_r_val = e7_lokal.a_r
-                e5_b_yeni = eval_model.bellek_yonetici.write(k_r=k_r_key, v_r=v_r_val)
+                e5_b_yeni = eval_model.bellek_yonetici.write(k_r=k_r_key, v_r=v_r_val, q_r=e6_sorgu.q_r, a_r=e7_lokal.a_r)
             else:
                 e5_b_yeni = eval_model.n_yazici.yaz(e9_guncel.x_next, e6_sorgu, e5_b, e7_lokal)
             logger.debug(f"  ├─ [N12 SMW Sıfır Parazitli Bellek] (r={r}) Güncellenmiş Bellek E5_B_YENI Şekli: {e5_b_yeni.M.shape}")
