@@ -452,6 +452,7 @@ class Egitim_KontrolNoktasiYoneticisi:
 from checkpoint_manager import NPZCheckpointManager, HiyerarşikHafizaYoneticisi
 
 HF_YOL_ONEKI = "hf://"
+TOKEN_DEPOSU_ONEKI = "tokendepo://"
 
 
 def hf_kaydini_metne_cevir(kayit: Any) -> str:
@@ -504,6 +505,7 @@ class Egitim_TopolojikVeriYukleyici:
         self.verisetleri: Dict[str, Dict[str, List[str]]] = {}
         self.hf_tanimlari: Dict[str, Dict[str, Any]] = {}
         self.ertelenmis_git_listesi: List[Any] = []
+        self.token_deposu = None
         self.git_onbellek_dizini: str = "/tmp/mucit_git_kaynaklari"
         self.tarama_yap()
 
@@ -697,6 +699,11 @@ class Egitim_TopolojikVeriYukleyici:
                     if valid_files:
                         self.verisetleri[veriseti_adi][os.path.normpath(root)] = valid_files
 
+        if manifest_data.get("on_tokenize"):
+            self.on_tokenize_deposunu_kur(
+                manifest_data.get("token_deposu_yolu", "/tmp/mucit_token_deposu")
+            )
+
         if hf_listesi:
             self.hf_verisetlerini_kaydet(hf_listesi, len(klasorler_veya_dosyalar))
 
@@ -714,6 +721,96 @@ class Egitim_TopolojikVeriYukleyici:
             metin[i:i + adim_uzunlugu]
             for i in range(0, len(metin), adim_uzunlugu)
         ]
+
+    def on_tokenize_deposunu_kur(self, depo_yolu: str) -> None:
+
+
+
+
+
+
+
+
+        from tokenli_veri_deposu import TokenliVeriDeposuInsaEdici, TokenliVeriDeposuOkuyucu
+
+        yerel_dosyalar = [
+            d
+            for klasorler in self.verisetleri.values()
+            for dosyalar in klasorler.values()
+            for d in dosyalar
+            if not str(d).startswith(HF_YOL_ONEKI)
+        ]
+        if not yerel_dosyalar:
+            logger.info("  [Token Deposu] Ön-tokenize edilecek yerel dosya yok, atlandı.")
+            return
+
+        tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
+        insa = TokenliVeriDeposuInsaEdici(depo_yolu, tokenizer, self.config.V_size)
+
+        if insa.guncel_mi(yerel_dosyalar):
+            logger.info(
+                f"  [Token Deposu] Mevcut depo güncel ({len(yerel_dosyalar)} kaynak dosya), "
+                f"yeniden tokenize edilmiyor: {depo_yolu}{'.bin'}"
+            )
+        else:
+            logger.info(
+                f"  [Token Deposu] {len(yerel_dosyalar)} yerel dosya tek seferde tokenize "
+                f"edilip indeksli ikili depoya yazılıyor..."
+            )
+            insa.insa_et(yerel_dosyalar)
+
+        try:
+            self.token_deposu = TokenliVeriDeposuOkuyucu(depo_yolu)
+        except Exception as exc:
+            logger.error(
+                f"  [Token Deposu] Depo açılamadı, klasik metin okuma yoluna dönülüyor: {exc}"
+            )
+            return
+
+
+
+
+
+        self.verisetleri = {
+            ad: kl
+            for ad, kl in self.verisetleri.items()
+            if any(str(d).startswith(HF_YOL_ONEKI) for dosyalar in kl.values() for d in dosyalar)
+        }
+        self.verisetleri["veriseti_0_tokenli_depo"] = {
+            "tokenli_depo": [f"{TOKEN_DEPOSU_ONEKI}{depo_yolu}"]
+        }
+        logger.info(
+            f"  [Token Deposu] Yerel dosyalar tek bir mmap depoya indirgendi; "
+            f"{self.token_deposu.pencere_sayisi(self._adim_metni_uzunlugu()):,} adet "
+            f"tam dolu {self._adim_metni_uzunlugu()}-token penceresi hazır."
+        )
+
+    def token_deposu_pencereleri_oku(self, depo_yolu: str):
+        from tokenli_veri_deposu import TokenliVeriDeposuOkuyucu
+
+        okuyucu = getattr(self, "token_deposu", None)
+        if okuyucu is None:
+            okuyucu = TokenliVeriDeposuOkuyucu(depo_yolu)
+
+        tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
+        N = self._adim_metni_uzunlugu()
+        toplam_bayt = okuyucu.toplam_token * 4
+        okunan = 0
+        idx = 0
+
+        for pencere, son_mu in okuyucu.pencereler(N):
+            idler = [int(t) for t in pencere]
+            try:
+                metin = tokenizer.decode(idler)
+            except Exception:
+                metin = ""
+            idx += 1
+            okunan += N * 4
+            yield (
+                metin,
+                self._token_penceresini_tensore_cevir(idler),
+                son_mu, idx, okunan, toplam_bayt,
+            )
 
     def token_pencerelerine_ayir(self, metin: str, artik: List[int]) -> Tuple[List[Tuple[str, List[int]]], List[int]]:
 
@@ -868,6 +965,12 @@ class Egitim_TopolojikVeriYukleyici:
         )
 
     def dosya_parcalari_oku(self, dosya_yolu: str, chunk_size: int = 65536):
+        if str(dosya_yolu).startswith(TOKEN_DEPOSU_ONEKI):
+            yield from self.token_deposu_pencereleri_oku(
+                str(dosya_yolu)[len(TOKEN_DEPOSU_ONEKI):]
+            )
+            return
+
         if str(dosya_yolu).startswith(HF_YOL_ONEKI) or str(dosya_yolu).startswith("hf:/"):
             anahtar = dosya_yolu if dosya_yolu in self.hf_tanimlari else str(dosya_yolu).replace("hf:/", HF_YOL_ONEKI, 1)
             yield from self.hf_parcalari_oku(anahtar, chunk_size=chunk_size)

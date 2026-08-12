@@ -2379,8 +2379,19 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 logits_tepe = logits_parca.max(dim=-1, keepdim=True).values.detach()
                 logits_normal = (logits_parca - logits_tepe) / tau_parca
                 logits_normal = torch.clamp(logits_normal, min=-50.0, max=50.0)
-                log_olasilik = torch.log_softmax(logits_normal, dim=-1)
-                return log_olasilik.gather(2, h_parca_3d).squeeze(-1).exp()
+
+
+
+
+
+
+
+
+
+
+                hedef_logit = logits_normal.gather(2, h_parca_3d).squeeze(-1)
+                bolen = torch.logsumexp(logits_normal, dim=-1)
+                return (hedef_logit - bolen).exp()
 
             for i in range(0, cur_N, micro_chunk_size):
                 X_chunk = X_t[:, i:i+micro_chunk_size, :]

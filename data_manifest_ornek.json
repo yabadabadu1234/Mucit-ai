@@ -15,11 +15,19 @@
     "edilemedi (huggingface.co aga kapali). Yanlis bir ad kosuyu DUSURMEZ;",
     "ilgili veri seti hata loglanarak atlanir, egitim devam eder."
   ],
-
   "verisetleri": [
     "/kaggle/input/kendi-metinlerim"
   ],
-
+  "_on_tokenize_aciklama": [
+    "on_tokenize: true olunca yerel dosyalarin TAMAMI bir kez tokenize edilip",
+    "tek bir .bin ikili token akisina yazilir, .idx dosyasina dokuman sinirlari",
+    "kaydedilir. Egitim sirasinda .bin numpy.memmap ile acilir: RAM'e yuklenmez,",
+    "isletim sistemi sayfa sayfa okur. Her pencere tam N token, dolgu yoktur.",
+    "Kaynak dosyalarin boyut/mtime imzasi .idx'te tutulur; degismedikce yeniden",
+    "tokenize edilmez. Dokumanlar arasina ayrac tokeni konur."
+  ],
+  "on_tokenize": true,
+  "token_deposu_yolu": "/tmp/mucit_token_deposu",
   "huggingface_verisetleri": [
     {
       "depo": "barc0/200k_HEAVY_gpt4o-description-gpt4omini-code_generated_problems",
@@ -36,7 +44,6 @@
       "bolum": "train",
       "azami_ornek": 20000
     },
-
     {
       "depo": "open-web-math/open-web-math",
       "bolum": "train",
@@ -48,7 +55,6 @@
       "bolum": "train",
       "azami_ornek": 20000
     },
-
     {
       "depo": "tau/commonsense_qa",
       "bolum": "train",
@@ -75,7 +81,6 @@
       "bolum": "train",
       "azami_ornek": 10000
     },
-
     {
       "depo": "M-AI-C/quran-tafseer",
       "bolum": "train",
@@ -96,7 +101,6 @@
       "bolum": "train",
       "azami_ornek": 20000
     },
-
     {
       "depo": "wikimedia/wikipedia",
       "yapilandirma": "20231101.tr",
@@ -116,7 +120,6 @@
       "azami_ornek": 40000
     }
   ],
-
   "_git_aciklama": [
     "git_verisetleri: metin iceren herhangi bir git deposu. Baslangicta",
     "--depth 1 ile sig klonlanir, sonra normal klasor gibi taranir.",
