@@ -128,6 +128,79 @@ logger = logging.getLogger('MainEgitim')
 KOD_SURUM_ETIKETI = "2026-08-12-sizinti-giderildi-tekrar-dongusu-yok"
 
 
+TF32_ACIK: bool = True
+
+
+def donanim_hizlandirmasini_uygula() -> None:
+
+
+
+
+
+
+
+
+
+
+    if not torch.cuda.is_available():
+        logger.info("  [Hızlandırma] GPU yok; TF32/tensör çekirdeği ayarları atlandı.")
+        return
+
+    if TF32_ACIK:
+        torch.backends.cuda.matmul.allow_tf32 = True
+        torch.backends.cudnn.allow_tf32 = True
+        logger.info(
+            "  [Hızlandırma] TF32 tensör çekirdekleri AÇIK. Uyarı: TF32 mantisi 10 bit "
+            "(FP32'de 23 bit); üs aralığı aynı kaldığı için taşma/sönme olmaz ama "
+            "çarpım hassasiyeti ~1e-3 mertebesine iner. Stiefel dikliği ve Cayley "
+            "çözümü bundan etkilenebilir; şüphe halinde TF32_ACIK=False yapın."
+        )
+    else:
+        torch.backends.cuda.matmul.allow_tf32 = False
+        torch.backends.cudnn.allow_tf32 = False
+        logger.info("  [Hızlandırma] TF32 kapalı; matris çarpımları tam FP32.")
+
+
+
+
+
+
+    torch.backends.cudnn.benchmark = False
+    logger.info(
+        "  [Hızlandırma] cudnn.benchmark KAPALI bırakıldı: mimaride evrişim katmanı yok "
+        "ve N* her adımda değiştiği için benchmark her yeni şekilde yeniden ölçüm yapıp "
+        "zaman kaybettirirdi."
+    )
+
+
+def hizli_optimizer_kur(trainable_params: List[nn.Parameter], lr: float,
+                        weight_decay: float = 1e-4) -> torch.optim.Optimizer:
+
+
+
+
+
+
+    if torch.cuda.is_available():
+        try:
+            opt = optim.AdamW(trainable_params, lr=lr, weight_decay=weight_decay, fused=True)
+            logger.info(
+                "  [Hızlandırma] Fused AdamW etkin: tüm parametreler tek CUDA çekirdeğinde "
+                "güncelleniyor."
+            )
+            return opt
+        except (RuntimeError, TypeError, ValueError) as exc:
+            logger.warning(f"  [Hızlandırma] Fused AdamW kurulamadı ({exc}); foreach deneniyor.")
+
+    try:
+        opt = optim.AdamW(trainable_params, lr=lr, weight_decay=weight_decay, foreach=True)
+        logger.info("  [Hızlandırma] foreach AdamW etkin (parametreler toplu güncelleniyor).")
+        return opt
+    except (RuntimeError, TypeError, ValueError):
+        logger.info("  [Hızlandırma] Standart AdamW kullanılıyor.")
+        return optim.AdamW(trainable_params, lr=lr, weight_decay=weight_decay)
+
+
 ASGARI_BOS_DISK_MB: float = 1536.0
 ASGARI_BOS_RAM_MB: float = 768.0
 
@@ -1773,6 +1846,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     logger.info("BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ EĞİTİM YÜRÜTÜCÜSÜ (ÇOKLU GPU PARALEL DÖNGÜ)")
     logger.info("================================================================================")
     kod_surumu_bildir()
+    donanim_hizlandirmasini_uygula()
 
     
     takas_mgr = NvmeTakasYoneticisi()
@@ -1881,7 +1955,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                 seen_params.add(p)
                 trainable_params.append(p)
         
-    optimizer = optim.AdamW(trainable_params, lr=config.lr, weight_decay=1e-4)
+    optimizer = hizli_optimizer_kur(trainable_params, lr=config.lr, weight_decay=1e-4)
     logger.info("Tüm Sinir Ağları ve Stiefel Parametreleri Optimizasyona Bağlandı.")
 
     vram_denetci = Hafiza_Izleyici_ve_VRAM_Denetci(cihaz=config.device, kritik_esik_yuzde=0.85)

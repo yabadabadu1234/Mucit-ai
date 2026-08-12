@@ -1234,12 +1234,20 @@ class N3_LifSinirlamaAtama(nn.Module):
             R_e = torch.linalg.matrix_exp(A_e.float())
             Phi_batch = torch.matmul(R_e, self.phi_base.unsqueeze(0).float())
 
+
+
+
+
+
+
+
+
+        src_listesi = src_indices.tolist()
+        dst_listesi = dst_indices.tolist()
         for e in range(E_num):
-            v_src = int(src_indices[e].item())
-            v_dst = int(dst_indices[e].item())
             Phi_e = Phi_batch[e]
-            phi_dict[f"phi_{v_src}_{e}"] = Phi_e
-            phi_dict[f"phi_{v_dst}_{e}"] = Phi_e
+            phi_dict[f"phi_{src_listesi[e]}_{e}"] = Phi_e
+            phi_dict[f"phi_{dst_listesi[e]}_{e}"] = Phi_e
             
         return E4_LifDemeti(phi_matrisleri=phi_dict, baslangic_gizil_durumu=x_initial)
 
@@ -3191,12 +3199,20 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         
         norm_sq_vals: List[float] = [0.0] * n
         for i in range(n):
-            acc = 0.0
-            for k in trainable_idx:
-                g = _blok(i, k)
-                if g is not None:
-                    acc += float(torch.sum(g.detach().float() ** 2).item())
-            norm_sq_vals[i] = acc
+
+
+
+
+
+
+
+
+            parcalar = [
+                torch.sum(_blok(i, k).detach().float() ** 2)
+                for k in trainable_idx
+                if _blok(i, k) is not None
+            ]
+            norm_sq_vals[i] = float(torch.stack(parcalar).sum().item()) if parcalar else 0.0
         norm_val: List[float] = [(v ** 0.5) + 1e-8 for v in norm_sq_vals]
 
         def _duzles_blok(j: int, k: int) -> Optional[torch.Tensor]:
