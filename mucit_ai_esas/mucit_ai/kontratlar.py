@@ -35,6 +35,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.utils.checkpoint import checkpoint as _torch_checkpoint
 
 
 try:
@@ -429,11 +430,12 @@ class Maarif_NedenselSuzgec(nn.Module):
         decay = torch.exp(-gamma_clamped * dt).view(1, N, 1)  
 
         
-        X_volterra = X_t.clone()
+        X_volterra = X_t
         step = 1
         while step < N:
             decay_step = torch.pow(decay, step)
-            X_volterra[:, step:, :] = X_volterra[:, step:, :] + decay_step[:, step:, :] * X_volterra[:, :-step, :]
+            kaydirilmis_katki = decay_step[:, step:, :] * X_volterra[:, :-step, :]
+            X_volterra = X_volterra + F.pad(kaydirilmis_katki, (0, 0, step, 0))
             step *= 2
 
         
@@ -2101,38 +2103,34 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
             h_tensor = torch.clamp(h_tensor[:, :cur_N], min=0, max=self.V_size - 1).long()
             p_target_chunks = []
             
+            def _hedefli_chunk_olasiligi(X_parca: torch.Tensor, h_parca_3d: torch.Tensor, tau_parca: torch.Tensor) -> torch.Tensor:
+                logits_parca = self.vocab_head(X_parca)
+                while logits_parca.dim() < 3:
+                    logits_parca = logits_parca.unsqueeze(0)
+                logits_tepe = logits_parca.max(dim=-1, keepdim=True).values.detach()
+                logits_normal = (logits_parca - logits_tepe) / tau_parca
+                logits_normal = torch.clamp(logits_normal, min=-50.0, max=50.0)
+                log_olasilik = torch.log_softmax(logits_normal, dim=-1)
+                return log_olasilik.gather(2, h_parca_3d).squeeze(-1).exp()
+
             for i in range(0, cur_N, micro_chunk_size):
                 X_chunk = X_t[:, i:i+micro_chunk_size, :]
                 h_chunk = h_tensor[:, i:i+micro_chunk_size]
-                
-                logits_chunk = self.vocab_head(X_chunk)
-                
-                
-                if logits_chunk.dim() < 3:
-                    
-                    
-                    logging.getLogger("mucit_ai.kontratlar").error(
-                        f"[N10 Boyut Anomalisi] logits_chunk.dim()={logits_chunk.dim()} (beklenen: 3). "
-                        f"X_input.shape={tuple(X_input.shape)}, X_refined.shape={tuple(X_refined.shape)}, "
-                        f"X_t.shape={tuple(X_t.shape)}, X_chunk.shape={tuple(X_chunk.shape)}, "
-                        f"i={i}, micro_chunk_size={micro_chunk_size}, cur_N={cur_N}, B={B}, N={N}, d={d}, "
-                        f"vocab_head.weight.shape={tuple(self.vocab_head.weight.shape)}, "
-                        f"logits_chunk.shape={tuple(logits_chunk.shape)}"
-                    )
-                while logits_chunk.dim() < 3:
-                    logits_chunk = logits_chunk.unsqueeze(0)
-                logits_max = logits_chunk.max(dim=-1, keepdim=True).values.detach()
-                logits_norm = (logits_chunk - logits_max.to(device=logits_chunk.device)) / tau.to(device=logits_chunk.device)
-                P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1) 
-                
-                
-                _clen = P_chunk.shape[1]
+
+                _clen = X_chunk.shape[1]
                 h_chunk_aligned = h_chunk[:, :_clen] if h_chunk.shape[1] >= _clen else F.pad(h_chunk, (0, _clen - h_chunk.shape[1]))
-                h_chunk_3d = h_chunk_aligned.unsqueeze(-1).to(device=P_chunk.device, dtype=torch.int64)
-                p_t_chunk = P_chunk.gather(2, h_chunk_3d).squeeze(-1) 
+                h_chunk_3d = h_chunk_aligned.unsqueeze(-1).to(device=X_chunk.device, dtype=torch.int64)
+                tau_chunk = tau.to(device=X_chunk.device)
+
+                if torch.is_grad_enabled() and X_chunk.requires_grad:
+                    p_t_chunk = _torch_checkpoint(
+                        _hedefli_chunk_olasiligi, X_chunk, h_chunk_3d, tau_chunk, use_reentrant=False
+                    )
+                else:
+                    p_t_chunk = _hedefli_chunk_olasiligi(X_chunk, h_chunk_3d, tau_chunk)
                 p_target_chunks.append(p_t_chunk)
-                
-            p_target_full = torch.cat(p_target_chunks, dim=-1) 
+
+            p_target_full = torch.cat(p_target_chunks, dim=-1)
             return E12_ParalelTokenOlasilikMatrisi(P=p_target_full)
             
         else:
