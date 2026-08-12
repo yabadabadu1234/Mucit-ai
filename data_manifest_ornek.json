@@ -95,6 +95,38 @@
       "depo": "ImruQays/Rasaif-Classical-Arabic-English-Parallel-texts",
       "bolum": "train",
       "azami_ornek": 20000
+    },
+
+    {
+      "depo": "wikimedia/wikipedia",
+      "yapilandirma": "20231101.tr",
+      "bolum": "train",
+      "azami_ornek": 40000
+    },
+    {
+      "depo": "wikimedia/wikipedia",
+      "yapilandirma": "20231101.ar",
+      "bolum": "train",
+      "azami_ornek": 20000
+    },
+    {
+      "depo": "wikimedia/wikipedia",
+      "yapilandirma": "20231101.en",
+      "bolum": "train",
+      "azami_ornek": 40000
     }
-  ]
+  ],
+
+  "_git_aciklama": [
+    "git_verisetleri: metin iceren herhangi bir git deposu. Baslangicta",
+    "--depth 1 ile sig klonlanir, sonra normal klasor gibi taranir.",
+    "Zaten indirilmisse tekrar cekilmez. Cekilemezse hata loglanip atlanir.",
+    "Alanlar: url (zorunlu), ad, dal, alt_klasor, zaman_asimi_sn.",
+    "Buraya Risale-i Nur metin depolari, OpenITI alt kumeleri gibi",
+    "kaynaklar yazilabilir. Depo adreslerini kullanmadan once kendiniz",
+    "acip icerigini ve lisansini teyit edin; asagidakiler yer tutucudur",
+    "ve bu gelistirme ortamindan DOGRULANMAMISTIR."
+  ],
+  "git_onbellek_dizini": "/tmp/mucit_git_kaynaklari",
+  "git_verisetleri": []
 }

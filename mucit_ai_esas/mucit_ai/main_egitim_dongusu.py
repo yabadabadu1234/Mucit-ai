@@ -438,6 +438,79 @@ class Egitim_TopolojikVeriYukleyici:
         self.hf_tanimlari: Dict[str, Dict[str, Any]] = {}
         self.tarama_yap()
 
+    def git_kaynaklarini_getir(self, git_listesi: List[Any], onbellek_dizini: str) -> List[str]:
+
+
+
+
+
+        indirilen_yollar: List[str] = []
+        os.makedirs(onbellek_dizini, exist_ok=True)
+
+        for ham in git_listesi:
+            if isinstance(ham, str):
+                tanim: Dict[str, Any] = {"url": ham}
+            elif isinstance(ham, dict) and ham.get("url"):
+                tanim = dict(ham)
+            else:
+                logger.warning(f"  [Git Kaynağı] Tanınmayan girdi atlandı: {ham!r}")
+                continue
+
+            url = tanim["url"]
+            ad = tanim.get("ad") or os.path.basename(url.rstrip("/")).replace(".git", "")
+            hedef = os.path.join(onbellek_dizini, ad)
+            alt_klasor = tanim.get("alt_klasor")
+
+            if os.path.isdir(os.path.join(hedef, ".git")):
+                logger.info(f"  [Git Kaynağı] '{ad}' zaten indirilmiş, yeniden çekilmiyor: {hedef}")
+            else:
+                komut = ["git", "clone", "--depth", "1", "--single-branch"]
+                if tanim.get("dal"):
+                    komut += ["--branch", str(tanim["dal"])]
+                komut += [url, hedef]
+                logger.info(f"  [Git Kaynağı] İndiriliyor: {url}")
+                try:
+                    sonuc = subprocess.run(
+                        komut, capture_output=True, text=True,
+                        timeout=int(tanim.get("zaman_asimi_sn", 900)),
+                    )
+                except Exception as exc:
+                    logger.error(f"  [Git Kaynağı] '{url}' çekilemedi, atlanıyor: {exc}")
+                    continue
+                if sonuc.returncode != 0:
+                    logger.error(
+                        f"  [Git Kaynağı] '{url}' çekilemedi (kod {sonuc.returncode}), atlanıyor. "
+                        f"Sebep: {sonuc.stderr.strip()[:400]}"
+                    )
+                    logger.error(
+                        "  [Git Kaynağı] Sık görülen sebepler: depo adresi yanlış, depo özel, "
+                        "ya da ortamda internet erişimi kapalı."
+                    )
+                    continue
+
+            tarama_koku = os.path.join(hedef, alt_klasor) if alt_klasor else hedef
+            if not os.path.isdir(tarama_koku):
+                logger.error(f"  [Git Kaynağı] '{ad}' içinde alt klasör bulunamadı: {tarama_koku}")
+                continue
+
+            try:
+                toplam_bayt = sum(
+                    os.path.getsize(os.path.join(k, f))
+                    for k, _, dosyalar in os.walk(tarama_koku)
+                    for f in dosyalar
+                    if os.path.isfile(os.path.join(k, f))
+                )
+                logger.info(
+                    f"  [Git Kaynağı] '{ad}' hazır: {tarama_koku} "
+                    f"({toplam_bayt / (1024 ** 2):.1f} MB)"
+                )
+            except OSError:
+                pass
+
+            indirilen_yollar.append(tarama_koku)
+
+        return indirilen_yollar
+
     def _hf_sanal_yol(self, tanim: Dict[str, Any]) -> str:
         return (
             f"{HF_YOL_ONEKI}{tanim['depo']}"
@@ -482,9 +555,17 @@ class Egitim_TopolojikVeriYukleyici:
                     manifest_data = json.load(f)
                     klasorler_veya_dosyalar = manifest_data.get("verisetleri", [])
                     hf_listesi = manifest_data.get("huggingface_verisetleri", [])
+                    git_listesi = manifest_data.get("git_verisetleri", [])
+                    git_onbellek = manifest_data.get(
+                        "git_onbellek_dizini", "/tmp/mucit_git_kaynaklari"
+                    )
                 logger.info(f"Manifest dosyasından {len(klasorler_veya_dosyalar)} veri yolu okundu: {self.manifest_yolu}")
                 if hf_listesi:
                     logger.info(f"Manifest dosyasından {len(hf_listesi)} HuggingFace veri seti okundu.")
+                if git_listesi:
+                    logger.info(f"Manifest dosyasından {len(git_listesi)} git kaynağı okundu.")
+                    klasorler_veya_dosyalar = list(klasorler_veya_dosyalar) + \
+                        self.git_kaynaklarini_getir(git_listesi, git_onbellek)
             except Exception as e:
                 logger.warning(f"Manifest okunurken hata: {e}")
 
