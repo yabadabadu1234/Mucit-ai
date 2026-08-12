@@ -2159,6 +2159,21 @@ class N9_ChebyshevVandermondeCarpim(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
         self.config = config
+        d = getattr(config, 'd', 128)
+        M_plus_1 = getattr(config, 'M_plus_1', 7)
+
+
+
+
+        self.spektral_kazanc = nn.Parameter(torch.ones(d, M_plus_1))
+
+    def suzgec_kazancini_al(self, kullanilan_derece: int, cihaz: torch.device, veri_turu: torch.dtype) -> torch.Tensor:
+        g = self.spektral_kazanc
+        if g.shape[1] < kullanilan_derece:
+            g = F.pad(g, (0, kullanilan_derece - g.shape[1]), value=1.0)
+        elif g.shape[1] > kullanilan_derece:
+            g = g[:, :kullanilan_derece]
+        return g.to(device=cihaz, dtype=veri_turu)
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
@@ -2173,7 +2188,22 @@ class N9_ChebyshevVandermondeCarpim(nn.Module):
         kulli_mana = girdi_cihaza_tasi(kulli_mana, hedef_cihaz)
         if T_matrix.device != hedef_cihaz:
             T_matrix = T_matrix.to(hedef_cihaz)
-        X_output = torch.matmul(kulli_mana.C, T_matrix)
+
+        if self.spektral_kazanc.device != hedef_cihaz:
+            self.to(hedef_cihaz)
+
+        C = kulli_mana.C
+        kullanilan_derece = min(C.shape[-1], T_matrix.shape[0])
+        C = C[..., :kullanilan_derece]
+        T_matrix = T_matrix[:kullanilan_derece]
+
+        kazanc = self.suzgec_kazancini_al(kullanilan_derece, C.device, C.dtype)
+        if kazanc.shape[0] != C.shape[1]:
+            kazanc = F.adaptive_avg_pool1d(
+                kazanc.t().unsqueeze(0), C.shape[1]
+            ).squeeze(0).t()
+
+        X_output = torch.matmul(C * kazanc.unsqueeze(0), T_matrix)
         return E11_ParalelGomuluVektorlerMatrisi(X_output=X_output)
 
 

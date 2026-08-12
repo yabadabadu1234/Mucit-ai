@@ -437,6 +437,10 @@ class NPZCheckpointManager:
                 del state_dict_cpu, state_dict_to_save
                 import gc as _gc_ckpt
                 _gc_ckpt.collect()
+
+
+
+                self.calisma_alanina_yansit()
             else:
                 t = threading.Thread(target=_bg_save_worker, args=(state_dict_cpu, pt_tmp, pt_path, self._save_lock), daemon=True)
                 self._son_bg_thread = t
@@ -444,6 +448,68 @@ class NPZCheckpointManager:
                 del state_dict_to_save
 
         return npz_path
+
+    def calisma_alanina_yansit(self, hedef_dizin: str = "/kaggle/working") -> List[str]:
+        if not os.path.isdir(hedef_dizin):
+            return []
+        if os.path.abspath(hedef_dizin) == os.path.abspath(self.checkpoint_dir):
+            return []
+
+        import shutil
+        import uuid as _uuid_yansit
+
+        korunacak_adlar = set()
+        kopyalananlar: List[str] = []
+        for tag in ("best", "latest"):
+            for ad in (f"checkpoint_{tag}.npz",
+                       f"checkpoint_{tag}_meta.json",
+                       f"topolojik_model_{tag}.pt"):
+                korunacak_adlar.add(ad)
+        korunacak_adlar.add("hafiza_state.json")
+
+        for ad in sorted(korunacak_adlar):
+            kaynak = os.path.join(self.checkpoint_dir, ad)
+            if not os.path.isfile(kaynak):
+                continue
+            hedef = os.path.join(hedef_dizin, ad)
+            gecici = hedef + f".tmp_{_uuid_yansit.uuid4().hex}"
+            try:
+                shutil.copy2(kaynak, gecici)
+                os.replace(gecici, hedef)
+                kopyalananlar.append(hedef)
+            except OSError as exc:
+                logger.warning(f"  [Çalışma Alanı Yansıtma] {ad} kopyalanamadı: {exc}")
+                try:
+                    if os.path.isfile(gecici):
+                        os.remove(gecici)
+                except OSError:
+                    pass
+
+        silinen = 0
+        for ad in os.listdir(hedef_dizin):
+            yol = os.path.join(hedef_dizin, ad)
+            if not os.path.isfile(yol) or ad in korunacak_adlar:
+                continue
+            eskimis = (
+                (ad.startswith("checkpoint_") and (ad.endswith(".npz") or ad.endswith("_meta.json")))
+                or (ad.startswith("topolojik_model_") and ad.endswith(".pt"))
+                or ".tmp_" in ad
+            )
+            if eskimis:
+                try:
+                    os.remove(yol)
+                    silinen += 1
+                except OSError as exc:
+                    logger.debug(f"  [Çalışma Alanı Yansıtma] Eski dosya silinemedi: {ad} ({exc})")
+
+        if kopyalananlar:
+            toplam_mb = sum(os.path.getsize(y) for y in kopyalananlar if os.path.isfile(y)) / (1024 ** 2)
+            logger.info(
+                f"  [Çalışma Alanı Yansıtma] {len(kopyalananlar)} dosya {hedef_dizin} altına "
+                f"yazıldı ({toplam_mb:.1f} MB); {silinen} eski dosya silindi. "
+                f"Oturum bitse de en son ağırlıklar buradan alınabilir."
+            )
+        return kopyalananlar
 
     def tum_bekleyen_kayitlari_bekle(self, timeout: float = 60.0) -> None:
         t = getattr(self, "_son_bg_thread", None)
