@@ -128,6 +128,73 @@ logger = logging.getLogger('MainEgitim')
 KOD_SURUM_ETIKETI = "2026-08-12-sizinti-giderildi-tekrar-dongusu-yok"
 
 
+ASGARI_BOS_DISK_MB: float = 1536.0
+ASGARI_BOS_RAM_MB: float = 768.0
+
+
+def _bos_disk_mb(dizin: str) -> float:
+    try:
+        import shutil as _shutil
+        return _shutil.disk_usage(dizin).free / (1024 ** 2)
+    except Exception:
+        return float('inf')
+
+
+def _bos_ram_mb() -> float:
+    try:
+        with open('/proc/meminfo', 'r', encoding='utf-8') as f:
+            for satir in f:
+                if satir.startswith('MemAvailable:'):
+                    return int(satir.split()[1]) / 1024.0
+    except Exception:
+        pass
+    return float('inf')
+
+
+def kaynak_nobetcisi(izlenecek_dizinler: List[str], baglam: str = "") -> None:
+
+
+
+
+
+
+
+    darlik: List[str] = []
+
+    for dizin in izlenecek_dizinler:
+        if not dizin or not os.path.isdir(dizin):
+            continue
+        bos = _bos_disk_mb(dizin)
+        if bos < ASGARI_BOS_DISK_MB:
+            darlik.append(f"disk '{dizin}': {bos:.0f} MB boş (eşik {ASGARI_BOS_DISK_MB:.0f} MB)")
+
+    bos_ram = _bos_ram_mb()
+    if bos_ram < ASGARI_BOS_RAM_MB:
+        darlik.append(f"sistem RAM: {bos_ram:.0f} MB boş (eşik {ASGARI_BOS_RAM_MB:.0f} MB)")
+
+    if not darlik:
+        return
+
+    logger.error("=" * 80)
+    logger.error(f"KAYNAK NÖBETÇİSİ: süreç DERHAL sonlandırılıyor. Bağlam: {baglam}")
+    for sebep in darlik:
+        logger.error(f"  - {sebep}")
+    logger.error(
+        "Gerekçe: disk veya RAM tükendiğinde süreç yazma/ayırma çağrılarında asılı kalır; "
+        "işletim sisteminin bunu fark edip öldürmesi çok geç olur ve oturum boşa gider. "
+        "Beklemek yerine burada kesiliyor."
+    )
+    logger.error("=" * 80)
+
+    for _islenmemis in logging.getLogger().handlers:
+        try:
+            _islenmemis.flush()
+        except Exception:
+            pass
+
+    os._exit(9)
+
+
 def kod_surumu_bildir() -> None:
 
 
@@ -436,7 +503,43 @@ class Egitim_TopolojikVeriYukleyici:
         self.manifest_yolu = manifest_yolu
         self.verisetleri: Dict[str, Dict[str, List[str]]] = {}
         self.hf_tanimlari: Dict[str, Dict[str, Any]] = {}
+        self.ertelenmis_git_listesi: List[Any] = []
+        self.git_onbellek_dizini: str = "/tmp/mucit_git_kaynaklari"
         self.tarama_yap()
+
+    def ertelenmis_git_kaynaklarini_yukle(self) -> Dict[str, Dict[str, List[str]]]:
+
+
+
+
+
+        if not self.ertelenmis_git_listesi:
+            return {}
+
+        logger.info(
+            f"  [Git Kaynağı] Yerel veri setleri bitti; {len(self.ertelenmis_git_listesi)} "
+            f"ertelenmiş git kaynağı şimdi çekiliyor."
+        )
+        yollar = self.git_kaynaklarini_getir(
+            self.ertelenmis_git_listesi, self.git_onbellek_dizini
+        )
+        self.ertelenmis_git_listesi = []
+
+        st_extensions = ('.txt', '.md', '.json', '.py', '.c', '.cpp', '.h', '.csv', '.yaml', '.yml')
+        yeni: Dict[str, Dict[str, List[str]]] = {}
+        for idx, yol in enumerate(yollar):
+            veriseti_adi = f"veriseti_git_{idx + 1}_" + os.path.basename(os.path.normpath(yol))
+            yeni[veriseti_adi] = {}
+            for root, _dirs, files in os.walk(yol):
+                gecerli = [
+                    os.path.normpath(os.path.join(root, f))
+                    for f in files if f.endswith(st_extensions)
+                ]
+                if gecerli:
+                    yeni[veriseti_adi][os.path.normpath(root)] = gecerli
+            if not yeni[veriseti_adi]:
+                del yeni[veriseti_adi]
+        return yeni
 
     def git_kaynaklarini_getir(self, git_listesi: List[Any], onbellek_dizini: str) -> List[str]:
 
@@ -563,9 +666,13 @@ class Egitim_TopolojikVeriYukleyici:
                 if hf_listesi:
                     logger.info(f"Manifest dosyasından {len(hf_listesi)} HuggingFace veri seti okundu.")
                 if git_listesi:
-                    logger.info(f"Manifest dosyasından {len(git_listesi)} git kaynağı okundu.")
-                    klasorler_veya_dosyalar = list(klasorler_veya_dosyalar) + \
-                        self.git_kaynaklarini_getir(git_listesi, git_onbellek)
+                    logger.info(
+                        f"Manifest dosyasından {len(git_listesi)} git kaynağı okundu. "
+                        f"İndirme ERTELENDİ: yerel veri setleri bittikten sonra çekilecek, "
+                        f"böylece başlangıç gecikmiyor."
+                    )
+                    self.ertelenmis_git_listesi = list(git_listesi)
+                    self.git_onbellek_dizini = git_onbellek
             except Exception as e:
                 logger.warning(f"Manifest okunurken hata: {e}")
 
@@ -592,6 +699,21 @@ class Egitim_TopolojikVeriYukleyici:
 
         if hf_listesi:
             self.hf_verisetlerini_kaydet(hf_listesi, len(klasorler_veya_dosyalar))
+
+    def _adim_metni_uzunlugu(self) -> int:
+
+
+
+
+
+        return max(int(getattr(self.config, 'N', 1024)), 1)
+
+    def _metni_adim_dilimlerine_ayir(self, metin: str) -> List[str]:
+        adim_uzunlugu = self._adim_metni_uzunlugu()
+        return [
+            metin[i:i + adim_uzunlugu]
+            for i in range(0, len(metin), adim_uzunlugu)
+        ]
 
     def _metni_hedef_tensore_cevir(self, metin: str) -> torch.Tensor:
         tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
@@ -660,6 +782,8 @@ class Egitim_TopolojikVeriYukleyici:
 
 
         bekleyen: Optional[str] = None
+        adim_uzunlugu = self._adim_metni_uzunlugu()
+        birikim = ""
 
         try:
             for kayit in akis:
@@ -671,24 +795,27 @@ class Egitim_TopolojikVeriYukleyici:
                 if not metin or not metin.strip():
                     continue
 
-                tampon.append(metin)
-                tampon_uzunlugu += len(metin)
-                if tampon_uzunlugu >= chunk_size:
-                    birlesik = "\n\n".join(tampon)
-                    tampon = []
-                    tampon_uzunlugu = 0
+                birikim += ("\n\n" if birikim else "") + metin
+
+
+
+
+
+                while len(birikim) >= adim_uzunlugu:
+                    dilim = birikim[:adim_uzunlugu]
+                    birikim = birikim[adim_uzunlugu:]
                     if bekleyen is not None:
                         yield _parca_uret(bekleyen, False)
-                    bekleyen = birlesik
+                    bekleyen = dilim
         except Exception as exc:
             logger.error(
                 f"  [HF Veri Seti] '{depo}' akışı sırasında hata, bu veri seti sonlandırılıyor: {exc}"
             )
 
-        if tampon:
+        if birikim.strip():
             if bekleyen is not None:
                 yield _parca_uret(bekleyen, False)
-            bekleyen = "\n\n".join(tampon)
+            bekleyen = birikim
 
         if bekleyen is not None:
             yield _parca_uret(bekleyen, True)
@@ -711,36 +838,46 @@ class Egitim_TopolojikVeriYukleyici:
 
         bytes_read = 0
         chunk_idx = 0
-        
+        bekleyen: Optional[str] = None
+
+
+
+
+
+
+
+
+
         try:
             with open(dosya_yolu, 'r', encoding='utf-8', errors='ignore') as f:
                 while True:
-                    metin = f.read(chunk_size)
-                    if not metin:
+                    blok = f.read(chunk_size)
+                    if not blok:
                         break
-                    
-                    bytes_read += len(metin.encode('utf-8', errors='ignore'))
-                    chunk_idx += 1
-                    is_last = (file_size == 0) or (bytes_read >= file_size) or (len(metin) < chunk_size)
 
-                    if not metin.strip():
-                        if is_last:
-                            break
-                        continue
-
-                    
-                    tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
-                    token_ids = tokenizer.encode(metin)
-                    if len(token_ids) < self.config.N:
-                        token_ids = token_ids + [0] * (self.config.N - len(token_ids))
-                    else:
-                        token_ids = token_ids[:self.config.N]
-                    
-                    token_ids = [t % self.config.V_size for t in token_ids]
-                    hedef_tensor = torch.tensor([token_ids] * self.config.batch_size, dtype=torch.long, device=self.config.device)
-                    yield metin, hedef_tensor, is_last, chunk_idx, bytes_read, file_size
+                    for dilim in self._metni_adim_dilimlerine_ayir(blok):
+                        if not dilim.strip():
+                            continue
+                        if bekleyen is not None:
+                            bytes_read += len(bekleyen.encode('utf-8', errors='ignore'))
+                            chunk_idx += 1
+                            yield (
+                                bekleyen,
+                                self._metni_hedef_tensore_cevir(bekleyen),
+                                False, chunk_idx, bytes_read, file_size,
+                            )
+                        bekleyen = dilim
         except Exception as e:
             logger.warning(f"Dosya okuma hatası ({dosya_yolu}): {e}")
+
+        if bekleyen is not None:
+            bytes_read += len(bekleyen.encode('utf-8', errors='ignore'))
+            chunk_idx += 1
+            yield (
+                bekleyen,
+                self._metni_hedef_tensore_cevir(bekleyen),
+                True, chunk_idx, bytes_read, file_size,
+            )
 
     def dosya_okumu_yap(self, dosya_yolu: str) -> Tuple[str, torch.Tensor]:
         for metin, hedef_tensor, _, _, _, _ in self.dosya_parcalari_oku(dosya_yolu, chunk_size=65536):
@@ -1577,7 +1714,30 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     toplam_basarisiz_adim = 0
     logger.info(f"Eğitilecek toplam dosya sayısı: {toplam_dosya_sayisi}")
 
-    for veriseti_adi, klasorler in veri_yukleyici.verisetleri.items():
+    def _veriseti_akisi():
+
+
+
+
+
+        nonlocal toplam_dosya_sayisi
+        for _ad, _kl in list(veri_yukleyici.verisetleri.items()):
+            yield _ad, _kl
+
+        _ek = veri_yukleyici.ertelenmis_git_kaynaklarini_yukle()
+        if _ek:
+            veri_yukleyici.verisetleri.update(_ek)
+            toplam_dosya_sayisi += sum(
+                len(_dosyalar) for _kl in _ek.values() for _dosyalar in _kl.values()
+            )
+            logger.info(
+                f"  [Git Kaynağı] Kuyruğa {len(_ek)} yeni veri seti eklendi. "
+                f"Güncel toplam dosya sayısı: {toplam_dosya_sayisi}"
+            )
+            for _ad, _kl in _ek.items():
+                yield _ad, _kl
+
+    for veriseti_adi, klasorler in _veriseti_akisi():
         tum_veriseti_klasorleri = list(klasorler.keys())
         for klasor_yolu, dosyalar in klasorler.items():
             tum_klasor_dosyalari = dosyalar
@@ -1812,6 +1972,11 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                     gc.collect()
                     if torch.cuda.is_available():
                         torch.cuda.empty_cache()
+
+                    kaynak_nobetcisi(
+                        [ckpt_dizini, "/tmp", getattr(takas_mgr, "swap_dir", None)],
+                        baglam=f"adım {current_step} sonu",
+                    )
 
                     if kuresel_ram_denetci.esik_asildi_mi():
                         logger.warning(

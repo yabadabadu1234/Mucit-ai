@@ -216,11 +216,33 @@ kuresel_ram_denetci = DinamikSistemRamDenetci()
 
 
 class NvmeTahliyeKararMotoru:
-    def __init__(self, emniyet_marji_mb: int = 1024, swap_dir: str = "/tmp/kulli_scratchpad", azami_disk_kullanimi_mb: float = 20480.0):
+    def __init__(self, emniyet_marji_mb: int = 1024, swap_dir: str = "/tmp/kulli_scratchpad",
+                 azami_disk_kullanimi_mb: float = 20480.0,
+                 asgari_bos_disk_mb: float = 2048.0):
         self.emniyet_marji = emniyet_marji_mb * 1024 * 1024
         self.swap_dir = swap_dir
-        self.azami_disk_kullanimi_bayt = azami_disk_kullanimi_mb * 1024 * 1024
+        self.sabit_tavan_bayt = azami_disk_kullanimi_mb * 1024 * 1024
+        self.asgari_bos_disk_bayt = asgari_bos_disk_mb * 1024 * 1024
         os.makedirs(self.swap_dir, exist_ok=True)
+
+    @property
+    def azami_disk_kullanimi_bayt(self) -> float:
+
+
+
+
+
+
+
+
+        try:
+            kullanim = self.disk_kullanimini_olc()
+            bos = shutil.disk_usage(self.swap_dir).free
+        except OSError:
+            return self.sabit_tavan_bayt
+
+        gercekci_tavan = max(kullanim + bos - self.asgari_bos_disk_bayt, 0.0)
+        return min(self.sabit_tavan_bayt, gercekci_tavan)
 
     def disk_kullanimini_olc(self) -> int:
         toplam = 0

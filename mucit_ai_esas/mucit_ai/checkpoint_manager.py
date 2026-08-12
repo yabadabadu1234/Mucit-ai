@@ -131,6 +131,16 @@ class NPZCheckpointManager:
         self.checkpoint_dir = target_dir
         self.keep_last      = keep_last
         self.max_mb         = max_mb
+
+
+
+
+
+
+
+
+
+        self.npz_parametre_yaz = False
         self.hafiza         = HiyerarşikHafizaYoneticisi()
         self.serializer      = CheckpointSerializer(precision="float32")
         self._history: List[str] = []
@@ -216,21 +226,29 @@ class NPZCheckpointManager:
              is_best: bool = False) -> str:
         payload: Dict[str, np.ndarray] = {}
 
-        
-        if torch is not None and hasattr(model, "state_dict"):
-            try:
-                sd = model.state_dict()
-                for param_adi, tensor in sd.items():
-                    if hasattr(tensor, "detach"):
-                        payload[f"param_{param_adi}"] = _tensor_to_numpy_safe(tensor)
-            except Exception as e:
-                logger.debug(f"state_dict okuma uyarısı: {e}")
-        elif isinstance(model, dict):
-            for mod_name, mod in model.items():
-                if torch is not None and hasattr(mod, "state_dict"):
-                    for param_adi, tensor in mod.state_dict().items():
+
+
+
+
+
+
+
+
+        if self.npz_parametre_yaz:
+            if torch is not None and hasattr(model, "state_dict"):
+                try:
+                    sd = model.state_dict()
+                    for param_adi, tensor in sd.items():
                         if hasattr(tensor, "detach"):
-                            payload[f"param_{mod_name}.{param_adi}"] = _tensor_to_numpy_safe(tensor)
+                            payload[f"param_{param_adi}"] = _tensor_to_numpy_safe(tensor)
+                except Exception as e:
+                    logger.debug(f"state_dict okuma uyarısı: {e}")
+            elif isinstance(model, dict):
+                for mod_name, mod in model.items():
+                    if torch is not None and hasattr(mod, "state_dict"):
+                        for param_adi, tensor in mod.state_dict().items():
+                            if hasattr(tensor, "detach"):
+                                payload[f"param_{mod_name}.{param_adi}"] = _tensor_to_numpy_safe(tensor)
 
         
         if isinstance(model, dict):
