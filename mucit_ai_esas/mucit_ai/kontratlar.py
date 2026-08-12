@@ -168,6 +168,7 @@ class Model_TopolojikKonfigurasyon:
         self.dt: float = params.get("dt", 0.05)             
         self.lr: float = params.get("lr", 1e-3)
         self.batch_size: int = params.get("batch_size", 2)
+        self.azami_dugum_komsulugu: int = params.get("azami_dugum_komsulugu", 8)
         self.device: str = "cuda" if torch.cuda.is_available() else "cpu"
 
 
@@ -581,29 +582,23 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
 
         
         toplam_kolon = V_num * d_v
-        satir_bloklari: List[torch.Tensor] = []
+        D0 = torch.zeros((E_num * d_e, toplam_kolon), dtype=dtype, device=device)
         for e in range(E_num):
+            satir_bas = e * d_e
             key_start = f"phi_{e}_{e}"
             key_end = f"phi_{e+1}_{e}"
-            parcalar = []
             if key_start in phi_dict:
-                phi_s = phi_dict[key_start]
-                phi_s = phi_s.to(device) if phi_s.device != device else phi_s
-                parcalar.append(F.pad(-1.0 * phi_s, (e * d_v, toplam_kolon - (e + 1) * d_v)))
+                kolon_bas = e * d_v
+                if kolon_bas + d_v <= toplam_kolon:
+                    phi_s = phi_dict[key_start]
+                    phi_s = phi_s.to(device) if phi_s.device != device else phi_s
+                    D0[satir_bas:satir_bas + d_e, kolon_bas:kolon_bas + d_v] = -1.0 * phi_s
             if key_end in phi_dict:
-                phi_e = phi_dict[key_end]
-                phi_e = phi_e.to(device) if phi_e.device != device else phi_e
-                parcalar.append(F.pad(1.0 * phi_e, ((e + 1) * d_v, toplam_kolon - (e + 2) * d_v)))
-            if parcalar:
-                satir_bloku = parcalar[0] if len(parcalar) == 1 else sum(parcalar[1:], parcalar[0])
-            else:
-                satir_bloku = torch.zeros((d_e, toplam_kolon), dtype=dtype, device=device)
-            satir_bloklari.append(satir_bloku)
-
-        D0 = (
-            torch.cat(satir_bloklari, dim=0) if satir_bloklari
-            else torch.zeros((0, toplam_kolon), dtype=dtype, device=device)
-        )
+                kolon_bas = (e + 1) * d_v
+                if kolon_bas + d_v <= toplam_kolon:
+                    phi_e = phi_dict[key_end]
+                    phi_e = phi_e.to(device) if phi_e.device != device else phi_e
+                    D0[satir_bas:satir_bas + d_e, kolon_bas:kolon_bas + d_v] = 1.0 * phi_e
 
         
         if not hesapla_yogun_delta0:
@@ -914,33 +909,70 @@ class N2_TopoXHucreOlusumu(nn.Module):
             A_mat = A_raw
 
         
-        A_mean = A_mat.mean(dim=0)  
-        edge_pairs = []
-        for i in range(V):
-            for j in range(i + 1, V):
-                if (A_mean[i, j] + A_mean[j, i]) > 0.001:
-                    edge_pairs.append((i, j))
-        if len(edge_pairs) == 0:
-            for i in range(V - 1):
-                edge_pairs.append((i, i + 1))
+        A_mean = A_mat.mean(dim=0)
 
-        E = len(edge_pairs)
+        azami_komsu = int(getattr(self.config, 'azami_dugum_komsulugu', 8))
+        k_etkin = max(1, min(azami_komsu, V - 1)) if V > 1 else 0
+
+        if k_etkin > 0:
+            A_simetrik = A_mean + A_mean.transpose(0, 1)
+            A_simetrik = A_simetrik - torch.diag_embed(torch.diagonal(A_simetrik))
+            topk_deger, topk_indis = torch.topk(A_simetrik, k_etkin, dim=-1)
+            gecerli_maske = topk_deger > 0.001
+            kaynak_indis = torch.arange(V, device=device).unsqueeze(1).expand(V, k_etkin)
+            kaynak_secili = kaynak_indis[gecerli_maske]
+            hedef_secili = topk_indis[gecerli_maske]
+            u_ham = torch.minimum(kaynak_secili, hedef_secili)
+            v_ham = torch.maximum(kaynak_secili, hedef_secili)
+            kenar_anahtari = torch.unique(u_ham * V + v_ham)
+            u_dizisi = torch.div(kenar_anahtari, V, rounding_mode='floor')
+            v_dizisi = kenar_anahtari % V
+
+            azami_kenar = max(V - 1, 1)
+            if u_dizisi.numel() > azami_kenar:
+                kenar_agirliklari = A_simetrik[u_dizisi, v_dizisi].detach()
+                _, en_guclu_indis = torch.topk(kenar_agirliklari, azami_kenar)
+                en_guclu_indis, _ = torch.sort(en_guclu_indis)
+                u_dizisi = u_dizisi[en_guclu_indis]
+                v_dizisi = v_dizisi[en_guclu_indis]
+        else:
+            u_dizisi = torch.zeros(0, dtype=torch.long, device=device)
+            v_dizisi = torch.zeros(0, dtype=torch.long, device=device)
+
+        if u_dizisi.numel() == 0:
+            u_dizisi = torch.arange(max(V - 1, 1), device=device)
+            v_dizisi = torch.clamp(u_dizisi + 1, max=max(V - 1, 0))
+
+        E = int(u_dizisi.numel())
+        satir_normlari = torch.norm(A_mean, dim=-1)
+        w_kenar = torch.sqrt(0.5 * (satir_normlari[u_dizisi] + satir_normlari[v_dizisi]) + 1e-6)
         D1 = torch.zeros((E, V), dtype=torch.float32, device=device)
-        edge_map = {}
-        for e_idx, (u, v) in enumerate(edge_pairs):
-            edge_map[(u, v)] = e_idx
-            w_uv = torch.sqrt(0.5 * (torch.norm(A_mean[u, :], dim=-1) + torch.norm(A_mean[v, :], dim=-1)) + 1e-6)
-            D1[e_idx, u] = -1.0 * w_uv
-            D1[e_idx, v] = 1.0 * w_uv
+        e_indisleri = torch.arange(E, device=device)
+        D1[e_indisleri, u_dizisi] = -1.0 * w_kenar
+        D1[e_indisleri, v_dizisi] = 1.0 * w_kenar
 
-        
+        u_listesi = u_dizisi.tolist()
+        v_listesi = v_dizisi.tolist()
+        edge_map = {}
+        komsuluk: Dict[int, set] = {}
+        for e_idx in range(E):
+            u_d = int(u_listesi[e_idx])
+            v_d = int(v_listesi[e_idx])
+            edge_map[(u_d, v_d)] = e_idx
+            komsuluk.setdefault(u_d, set()).add(v_d)
+            komsuluk.setdefault(v_d, set()).add(u_d)
+
+        azami_ucgen = E
         triangles = []
-        for i in range(V):
-            for j in range(i + 1, V):
-                if (i, j) in edge_map:
-                    for k in range(j + 1, V):
-                        if (j, k) in edge_map and (i, k) in edge_map:
-                            triangles.append((i, j, k))
+        for (i_d, j_d) in edge_map.keys():
+            if len(triangles) >= azami_ucgen:
+                break
+            ortak_komsular = komsuluk.get(i_d, set()) & komsuluk.get(j_d, set())
+            for k_d in ortak_komsular:
+                if k_d > j_d and (j_d, k_d) in edge_map and (i_d, k_d) in edge_map:
+                    triangles.append((i_d, j_d, k_d))
+                    if len(triangles) >= azami_ucgen:
+                        break
 
         D2 = self.CekirdekBaziylaD2Kur(D1, triangles, edge_map, device)
 
