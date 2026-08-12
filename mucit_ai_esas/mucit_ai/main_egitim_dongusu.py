@@ -125,6 +125,61 @@ kur_logging_sistemi()
 logger = logging.getLogger('MainEgitim')
 
 
+KOD_SURUM_ETIKETI = "2026-08-12-sizinti-giderildi-tekrar-dongusu-yok"
+
+
+def kod_surumu_bildir() -> None:
+
+
+
+
+
+
+    logger.info(f"  [Kod Sürümü] Etiket: {KOD_SURUM_ETIKETI}")
+    logger.info(f"  [Kod Sürümü] Çalışan dosya: {os.path.abspath(__file__)}")
+
+    _kok = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    try:
+        _sonuc = subprocess.run(
+            ["git", "-C", _kok, "log", "-1", "--format=%h %cI %s"],
+            capture_output=True, text=True, timeout=10,
+        )
+        if _sonuc.returncode == 0 and _sonuc.stdout.strip():
+            logger.info(f"  [Kod Sürümü] Git commit: {_sonuc.stdout.strip()}")
+        else:
+            logger.warning(
+                "  [Kod Sürümü] Git bilgisi okunamadı — bu kod bir git deposundan DEĞİL, "
+                "muhtemelen kopyalanmış bir anlık görüntüden çalışıyor. "
+                "Günlükteki hataları düzeltilmiş sürümle karşılaştırırken bunu hesaba katın."
+            )
+    except Exception as _git_exc:
+        logger.warning(f"  [Kod Sürümü] Git sorgusu başarısız: {_git_exc}")
+
+    _beklenen_isaretler = {
+        "tekrar döngüsü kaldırıldı": "Chunk ATLANMIYOR, yeniden DENENMİYOR" in _bu_dosyanin_metni(),
+        "takas pack kancası detach": _takas_detach_var_mi(),
+    }
+    for _ad, _var in _beklenen_isaretler.items():
+        logger.info(f"  [Kod Sürümü] {_ad}: {'VAR' if _var else 'YOK (ESKİ SÜRÜM!)'}")
+
+
+def _bu_dosyanin_metni() -> str:
+    try:
+        with open(os.path.abspath(__file__), "r", encoding="utf-8") as f:
+            return f.read()
+    except Exception:
+        return ""
+
+
+def _takas_detach_var_mi() -> bool:
+    try:
+        import kulli_gpu.nvme_takas_yoneticisi as _takas_mod
+        with open(_takas_mod.__file__, "r", encoding="utf-8") as f:
+            return "return tensor.detach()" in f.read()
+    except Exception:
+        return False
+
+
 KAGGLE_WORKING_DIR = "/kaggle/working" if os.path.exists("/kaggle/working") else "./checkpoints"
 
 class KaggleDatasetUploader:
@@ -1111,6 +1166,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     logger.info("================================================================================")
     logger.info("BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ EĞİTİM YÜRÜTÜCÜSÜ (ÇOKLU GPU PARALEL DÖNGÜ)")
     logger.info("================================================================================")
+    kod_surumu_bildir()
 
     
     takas_mgr = NvmeTakasYoneticisi()

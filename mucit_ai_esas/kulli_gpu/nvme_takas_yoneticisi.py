@@ -413,11 +413,6 @@ class AutogradNvmeOffloadHook:
                 logger.warning(f"[AutogradNvmeOffloadHook] Disk alanı sorgulanamadı, yazma denemesi yine de yapılacak: {_disk_exc}")
 
             
-            yazma_future = self._yazma_havuzu.submit(torch.save, cpu_kopyasi, dosya_yolu)
-            yazma_future.add_done_callback(lambda _f: self._bekleyen_yazma_semaforu.release())
-            _semafor_devredildi = True
-            with self._bekleyen_yazmalar_lock:
-                self._bekleyen_yazmalar[dosya_yolu] = yazma_future
             sanal_id = f"addr_{uuid.uuid4().hex[:8]}"
             kayit = NesneAdresKaydi(
                 sanal_adres=sanal_id,
@@ -431,8 +426,18 @@ class AutogradNvmeOffloadHook:
             )
 
 
+
+
+
+
             if hasattr(self, "kayit_defteri") and self.kayit_defteri is not None:
                 self.kayit_defteri.kayit_ekle_ve_guncelle(kayit)
+
+            yazma_future = self._yazma_havuzu.submit(torch.save, cpu_kopyasi, dosya_yolu)
+            yazma_future.add_done_callback(lambda _f: self._bekleyen_yazma_semaforu.release())
+            _semafor_devredildi = True
+            with self._bekleyen_yazmalar_lock:
+                self._bekleyen_yazmalar[dosya_yolu] = yazma_future
 
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
 
@@ -509,17 +514,19 @@ class AutogradNvmeOffloadHook:
                 f"Sessiz sifir tensor DONDURULMEDI."
             ) from exc
         finally:
-            if dosya_yolu and os.path.exists(dosya_yolu):
-                try:
-                    
-                    
-                    with kuresel_adres_kayit_defteri.lock:
-                        sanal_addr = kuresel_adres_kayit_defteri.aktif_dosya_yollari.get(dosya_yolu)
-                    if sanal_addr:
-                        kuresel_adres_kayit_defteri.kayit_sil(sanal_addr)
-                    os.remove(dosya_yolu)
-                except Exception:
-                    pass
+
+
+
+
+
+
+
+
+
+
+
+
+            pass
 
 
 class GuvenliVramVeTmpSupurgesi:
