@@ -3230,6 +3230,47 @@ def tahliye_sayaclarini_sifirla() -> None:
         TAHLIYE_SAYAClARI[anahtar] = 0.0
 
 
+_LIBC_MALLOC_TRIM: Any = None
+_LIBC_MALLOC_TRIM_DENENDI: bool = False
+
+
+def surec_rss_bayt() -> int:
+    try:
+        with open("/proc/self/status", "r", encoding="utf-8") as f:
+            for satir in f:
+                if satir.startswith("VmRSS:"):
+                    return int(satir.split()[1]) * 1024
+    except Exception:
+        pass
+    return 0
+
+
+def cpu_yigin_belleginini_iade_et() -> int:
+    global _LIBC_MALLOC_TRIM, _LIBC_MALLOC_TRIM_DENENDI
+
+    if not _LIBC_MALLOC_TRIM_DENENDI:
+        _LIBC_MALLOC_TRIM_DENENDI = True
+        try:
+            import ctypes
+            import ctypes.util
+            _libc = ctypes.CDLL(ctypes.util.find_library("c") or "libc.so.6")
+            if hasattr(_libc, "malloc_trim"):
+                _LIBC_MALLOC_TRIM = _libc.malloc_trim
+        except Exception as exc:
+            logger.debug(f"[CPU Yığın İadesi] malloc_trim bulunamadı: {exc}")
+
+    if _LIBC_MALLOC_TRIM is None:
+        return 0
+
+    onceki = surec_rss_bayt()
+    try:
+        _LIBC_MALLOC_TRIM(0)
+    except Exception as exc:
+        logger.debug(f"[CPU Yığın İadesi] malloc_trim çağrısı başarısız: {exc}")
+        return 0
+    return max(onceki - surec_rss_bayt(), 0)
+
+
 def vram_on_kontrol_ve_nvme_tahliye(gerekli_bayt: int, takas_mgr: Any = None, baglam: str = "") -> None:
     if not torch.cuda.is_available():
         return

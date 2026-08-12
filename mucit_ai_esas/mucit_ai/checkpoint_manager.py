@@ -406,7 +406,22 @@ class NPZCheckpointManager:
                             return None
                 return obj
 
-            state_dict_cpu = _to_cpu_async(state_dict_to_save)
+            def _to_cpu_senkron(obj: Any) -> Any:
+                if isinstance(obj, dict):
+                    return {k: _to_cpu_senkron(v) for k, v in obj.items()}
+                elif hasattr(obj, 'detach') and hasattr(obj, 'to'):
+                    try:
+                        return obj.detach().cpu()
+                    except Exception as exc:
+                        logger.warning(
+                            f"  [Ckpt Mgr] Tensör CPU'ya alınamadı ({exc}) — alan atlanıyor."
+                        )
+                        return None
+                return obj
+
+
+
+            state_dict_cpu = _to_cpu_senkron(state_dict_to_save) if bekle else _to_cpu_async(state_dict_to_save)
 
             def _bg_save_worker(sd: Dict[str, Any], tmp_p: str, final_p: str, lock: Any):
                 with lock:
@@ -470,9 +485,20 @@ class NPZCheckpointManager:
         
         if resolved is not None:
             try:
-                _hafiza_data = self.load(path=resolved)
-                _smw_M = _hafiza_data.get("smw_M_matrix")
-                _smw_R = _hafiza_data.get("smw_R_matrix")
+                _smw_M = None
+                _smw_R = None
+                with np.load(resolved, allow_pickle=False) as _npz:
+                    if "smw_M_matrix" in _npz:
+                        _smw_M = self.serializer.yuklerken_normallestir(_npz["smw_M_matrix"])
+                    if "smw_R_matrix" in _npz:
+                        _smw_R = self.serializer.yuklerken_normallestir(_npz["smw_R_matrix"])
+                    _npz_step = int(_npz["step"][0]) if "step" in _npz else 0
+                    _npz_offset = int(_npz["token_offset"][0]) if "token_offset" in _npz else 0
+                logger.info(
+                    f"  [Ckpt] Yüklendi: {resolved} | step={_npz_step} | "
+                    f"token_offset={_npz_offset:,} (yalnız SMW M/R okundu, "
+                    f"parametre blokları açılmadı)"
+                )
                 if _smw_M is not None or _smw_R is not None:
                     _meclis_bellek = model.get("bellek") if isinstance(model, dict) else getattr(model, "meclis_bellek", None)
                     if _meclis_bellek is not None:
@@ -548,7 +574,19 @@ class NPZCheckpointManager:
                                 }
 
                             if not mod_st_raw:
-                                logger.warning(f"  [Ckpt Mgr] '{mod_key}' için checkpoint verisi bulunamadı, atlandı.")
+                                try:
+                                    _kendi_durumu = mod_obj.state_dict()
+                                except Exception:
+                                    _kendi_durumu = None
+                                if _kendi_durumu is not None and len(_kendi_durumu) == 0:
+                                    logger.debug(
+                                        f"  [Ckpt Mgr] '{mod_key}' modülünün hiç parametresi/tamponu yok; "
+                                        f"geri yüklenecek durum da yok, atlandı."
+                                    )
+                                else:
+                                    logger.warning(
+                                        f"  [Ckpt Mgr] '{mod_key}' için checkpoint verisi bulunamadı, atlandı."
+                                    )
                                 continue
 
                             

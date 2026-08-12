@@ -1084,6 +1084,24 @@ def _tekil_egitim_adimi_icra(
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
+    _iade_edilen_bayt = kontratlar.cpu_yigin_belleginini_iade_et()
+    _adim_sonu_rss = kontratlar.surec_rss_bayt()
+    _onceki_taban = getattr(_tekil_egitim_adimi_icra, "_onceki_adim_sonu_rss", 0)
+    _tekil_egitim_adimi_icra._onceki_adim_sonu_rss = _adim_sonu_rss
+    if _onceki_taban > 0:
+        _taban_kayma_mb = (_adim_sonu_rss - _onceki_taban) / (1024 ** 2)
+        logger.info(
+            f"  [Adım Sonu Taban RAM] Adım {current_step} | RSS: {_adim_sonu_rss / (1024 ** 2):.1f} MB "
+            f"| Önceki adım sonuna göre kayma: {_taban_kayma_mb:+.1f} MB "
+            f"| malloc_trim ile işletim sistemine iade: {_iade_edilen_bayt / (1024 ** 2):.1f} MB"
+        )
+    else:
+        logger.info(
+            f"  [Adım Sonu Taban RAM] Adım {current_step} | RSS: {_adim_sonu_rss / (1024 ** 2):.1f} MB "
+            f"| ilk ölçüm, kıyas yok | malloc_trim ile işletim sistemine iade: "
+            f"{_iade_edilen_bayt / (1024 ** 2):.1f} MB"
+        )
+
     return kayip_val, H_spec_val, dirichlet_energy, d_discrepancy
 
 
@@ -1387,6 +1405,12 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             torch.cuda.synchronize()
                             torch.cuda.empty_cache()
                             torch.cuda.ipc_collect()
+                        _ckpt_iade_bayt = kontratlar.cpu_yigin_belleginini_iade_et()
+                        if _ckpt_iade_bayt > 64 * 1024 * 1024:
+                            logger.info(
+                                f"  [Ckpt Sonrası CPU Temizliği] Kontrol noktası kaydı/yüklemesinden artan "
+                                f"{_ckpt_iade_bayt / (1024 ** 2):.1f} MB yığın belleği işletim sistemine iade edildi."
+                            )
 
                         _yeniden_baslangic_step, _yeniden_loss_history = npz_mgr.load_pytorch_model(tum_moduller, optimizer)
                         if _yeniden_baslangic_step is not None and _yeniden_baslangic_step > 0:
@@ -1454,8 +1478,9 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         if takas_mgr is not None and hasattr(takas_mgr, "temizle"):
                             takas_mgr.temizle(agresif=True)
                         gc.collect()
+                        kontratlar.cpu_yigin_belleginini_iade_et()
 
-    
+
     npz_mgr.save_pytorch_model(
         step=current_step,
         token_offset=current_step * config.N,
