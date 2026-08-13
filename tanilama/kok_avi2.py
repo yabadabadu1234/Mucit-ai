@@ -13,7 +13,6 @@ from kontratlar import E3_SinirOperatorleri
 _orijinal = M._tekil_egitim_adimi_icra
 _sayac = {'n': 0}
 
-
 def _etiket(o):
     t = type(o)
     ad = t.__name__
@@ -31,7 +30,6 @@ def _etiket(o):
         except Exception:
             return ad
     return f"{t.__module__}.{ad}"
-
 
 def _sarmal(*a, **kw):
     sonuc = _orijinal(*a, **kw)
@@ -80,7 +78,6 @@ def _sarmal(*a, **kw):
         print("   " + "\n     <- ".join(y), flush=True)
         print("   ---", flush=True)
     raise SystemExit(0)
-
 
 M._tekil_egitim_adimi_icra = _sarmal
 M.Main_EgitimYurutucu(konfig_yolu="/home/user/Mucit-ai/local_run/config.json",

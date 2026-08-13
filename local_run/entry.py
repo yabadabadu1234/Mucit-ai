@@ -24,13 +24,11 @@ MANIFEST_PATH = "/home/user/Mucit-ai/local_run/verisetleri_manifest.json"
 CONFIG_PATH = "/home/user/Mucit-ai/local_run/config.json"
 CKPT_DIR = "/home/user/Mucit-ai/local_run/checkpoints"
 
-
 def manifest_olustur():
     manifest_data = {"verisetleri": VERISETLERI_LISTESI}
     with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
         json.dump(manifest_data, f, indent=2, ensure_ascii=False)
     logger.info(f"Manifest dosyasi kaydedildi: {MANIFEST_PATH}")
-
 
 if __name__ == "__main__":
     logger.info("MUCIT AI YEREL DUZ CALISMA (CPU) BASLATILIYOR")

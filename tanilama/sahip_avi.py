@@ -13,7 +13,6 @@ from kontratlar import LifLaplasyenOperatoru, E3_SinirOperatorleri
 _orijinal = M._tekil_egitim_adimi_icra
 _sayac = {'n': 0}
 
-
 def _sarmal(*a, **kw):
     sonuc = _orijinal(*a, **kw)
     _sayac['n'] += 1
@@ -65,7 +64,6 @@ def _sarmal(*a, **kw):
     if not hucreler:
         print("  (kapanis yok)", flush=True)
     raise SystemExit(0)
-
 
 M._tekil_egitim_adimi_icra = _sarmal
 M.Main_EgitimYurutucu(konfig_yolu="/home/user/Mucit-ai/local_run/config.json",

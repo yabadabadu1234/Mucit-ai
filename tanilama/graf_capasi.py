@@ -12,7 +12,6 @@ import main_egitim_dongusu as M
 _orijinal = M._tekil_egitim_adimi_icra
 _sayac = {'n': 0}
 
-
 def _tara(kok, ad, derinlik=0, gorulen=None, cikti=None):
     if gorulen is None:
         gorulen = set()
@@ -42,7 +41,6 @@ def _tara(kok, ad, derinlik=0, gorulen=None, cikti=None):
             _tara(v, f"{ad}.{k}", derinlik + 1, gorulen, cikti)
     return cikti
 
-
 def _sarmal(*a, **kw):
     sonuc = _orijinal(*a, **kw)
     _sayac['n'] += 1
@@ -60,7 +58,6 @@ def _sarmal(*a, **kw):
     for ad, sekil, gf, bayt in bulgular:
         print(f"  {ad}  shape={sekil}  grad_fn={gf}  {bayt/1024**2:.2f} MB", flush=True)
     raise SystemExit(0)
-
 
 M._tekil_egitim_adimi_icra = _sarmal
 M.Main_EgitimYurutucu(konfig_yolu="/home/user/Mucit-ai/local_run/config.json",

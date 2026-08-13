@@ -19,22 +19,14 @@ import kulli_gpu.nvme_takas_yoneticisi as takas_modulu
 import main_egitim_dongusu as egitim
 from kontratlar import E3_SinirOperatorleri
 
-
 ILK_OLCUM_ADIMI = 2
 SON_OLCUM_ADIMI = 7
-
 
 def _canli_topoloji_sayisi() -> int:
     gc.collect()
     return sum(1 for o in gc.get_objects() if isinstance(o, E3_SinirOperatorleri))
 
-
 def kos() -> Tuple[int, int]:
-
-
-
-
-
     takas_modulu.NvmeTakasYoneticisi.kapsam_muhafizi_aktifles = (
         lambda self: torch.autograd.graph.saved_tensors_hooks(
             self.pack_hook_diske_tahliye,
@@ -72,10 +64,8 @@ def kos() -> Tuple[int, int]:
 
     return olcumler.get(ILK_OLCUM_ADIMI, -1), olcumler.get(SON_OLCUM_ADIMI, -1)
 
-
 class _YeterliAdim(Exception):
     pass
-
 
 def main() -> int:
     ilk, son = kos()
@@ -101,7 +91,6 @@ def main() -> int:
 
     print("BASARILI: adimlar arasi topoloji nesnesi birikmiyor.")
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

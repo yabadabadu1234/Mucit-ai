@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import ctypes
@@ -23,21 +22,18 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
         current_dir = os.path.join(os.getcwd(), "kulli_gpu")
     native_dir = os.path.join(current_dir, "native")
     c_src_dir = os.path.join(native_dir, "src")
-    
-    
+
     target_dir = "/tmp/kulli_driver"
     os.makedirs(target_dir, exist_ok=True)
     so_path = os.path.join(target_dir, "libkulli_cuda.so.1")
 
-    
     assert os.path.exists(c_src_dir), f"KRİTİK HATA: C kaynak dizini bulunamadı -> {c_src_dir}"
     c_files = [os.path.join(c_src_dir, f) for f in os.listdir(c_src_dir) if f.endswith('.c')]
     assert len(c_files) > 0, "KRİTİK HATA: Derlenecek C kaynak dosyası (.c) bulunamadı!"
 
-    
     inc_dir = os.path.join(native_dir, "include")
     gcc_path = shutil.which("gcc") or shutil.which("cc")
-    
+
     if gcc_path:
         cmd = [gcc_path, "-O3", "-shared", "-fPIC", "-pthread", "-D_GNU_SOURCE", "-I" + inc_dir] + c_files + ["-o", so_path, "-lrt", "-ldl"]
         logger.info(f"[NativeBridge] GCC JIT Derleme Başlatılıyor: {' '.join(cmd)}")
@@ -51,7 +47,6 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
         else:
             raise RuntimeError("KRİTİK HATA: Sistemde ne GCC compiler ne de hazir 'libkulli_cuda.so.1' kütüphanesi bulundu!")
 
-    
     for sym in ["libcuda.so.1", "libcuda.so", "libcudart.so.12", "libcudart.so"]:
         sym_path = os.path.join(target_dir, sym)
         if not os.path.exists(sym_path):
@@ -60,10 +55,9 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
             except Exception:
                 pass
 
-    
     RTLD_GLOBAL = getattr(os, 'RTLD_GLOBAL', 0x00100)
     RTLD_NOW = getattr(os, 'RTLD_NOW', 0x00002)
-    
+
     try:
         _driver_cdll = ctypes.CDLL(so_path, mode=RTLD_GLOBAL | RTLD_NOW)
     except OSError as err:
@@ -77,7 +71,6 @@ def YukleVeBaglaNativeSurucu() -> ctypes.CDLL:
 
     assert _driver_cdll is not None, f"KRİTİK HATA: '{so_path}' belleğe yüklenemedi!"
 
-    
     if hasattr(_driver_cdll, "KulliOpenCharacterDevices"):
         try:
             _driver_cdll.KulliOpenCharacterDevices()

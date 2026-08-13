@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import logging
@@ -8,7 +7,6 @@ from typing import Dict, List, Tuple, Any, Optional
 import torch
 
 logger = logging.getLogger("mucit_ai.topolojik_islem_sevk")
-
 
 class TopolojikIslemSevk:
     def __init__(self, idareci: Optional[Any] = None, model: Optional[Any] = None):
@@ -60,8 +58,7 @@ class TopolojikIslemSevk:
         cevap_a: torch.Tensor,
         bellek_module: Any
     ) -> torch.Tensor:
-        
-        
+
         if cevap_a.device != sorgu_q.device:
             cevap_a = cevap_a.to(sorgu_q.device)
 

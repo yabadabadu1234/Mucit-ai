@@ -8,33 +8,18 @@ import numpy as np
 
 logger = logging.getLogger("TokenliVeriDeposu")
 
-
 BIN_UZANTI = ".bin"
 IDX_UZANTI = ".idx"
 DEPO_SURUM = "1.0.0-mucit-indeksli-token-deposu"
 
-
 def ayrac_tokeni_bul(tokenizer: Any, V_size: int) -> int:
-
-
-
-
-
-
     for alan in ("eot_token", "eos_token_id", "eot_token_id"):
         deger = getattr(tokenizer, alan, None)
         if isinstance(deger, int) and 0 <= deger < V_size:
             return deger
     return 0
 
-
 class TokenliVeriDeposuInsaEdici:
-
-
-
-
-
-
     def __init__(self, depo_yolu: str, tokenizer: Any, V_size: int):
         self.depo_yolu = depo_yolu
         self.tokenizer = tokenizer
@@ -48,12 +33,6 @@ class TokenliVeriDeposuInsaEdici:
         return self.depo_yolu + IDX_UZANTI
 
     def guncel_mi(self, kaynak_dosyalar: List[str]) -> bool:
-
-
-
-
-
-
         if not (os.path.isfile(self._bin_yolu()) and os.path.isfile(self._idx_yolu())):
             return False
         try:
@@ -80,12 +59,6 @@ class TokenliVeriDeposuInsaEdici:
         return True
 
     def insa_et(self, kaynak_dosyalar: List[str], okuma_bloku: int = 1 << 20) -> Dict[str, Any]:
-
-
-
-
-
-
         os.makedirs(os.path.dirname(os.path.abspath(self._bin_yolu())) or ".", exist_ok=True)
         gecici_bin = self._bin_yolu() + ".tmp"
 
@@ -114,10 +87,6 @@ class TokenliVeriDeposuInsaEdici:
                             if not blok:
                                 break
 
-
-
-
-
                             birlesik = artik_metin + blok
                             kesme = birlesik.rfind("\n")
                             if kesme <= 0:
@@ -139,9 +108,6 @@ class TokenliVeriDeposuInsaEdici:
                                 toplam_token += int(dizi.size)
                 except Exception as exc:
                     logger.warning(f"  [Token Deposu] Okuma hatası ({mutlak}): {exc}")
-
-
-
 
                 cikti.write(np.asarray([self.ayrac], dtype=np.uint32).tobytes())
                 toplam_token += 1
@@ -172,14 +138,7 @@ class TokenliVeriDeposuInsaEdici:
         )
         return idx
 
-
 class TokenliVeriDeposuOkuyucu:
-
-
-
-
-
-
     def __init__(self, depo_yolu: str):
         self.depo_yolu = depo_yolu
         with open(depo_yolu + IDX_UZANTI, "r", encoding="utf-8") as f:
@@ -187,9 +146,6 @@ class TokenliVeriDeposuOkuyucu:
         self.toplam_token = int(self.idx["toplam_token"])
         self.ayrac = int(self.idx["ayrac"])
         self.dokuman_baslangiclari = list(self.idx.get("dokuman_baslangiclari", []))
-
-
-
 
         self.tokenlar = np.memmap(
             depo_yolu + BIN_UZANTI, dtype=np.uint32, mode="r", shape=(self.toplam_token,)
@@ -204,11 +160,6 @@ class TokenliVeriDeposuOkuyucu:
         return max(self.toplam_token // N, 0)
 
     def pencereler(self, N: int) -> Iterator[Tuple[np.ndarray, bool]]:
-
-
-
-
-
         toplam = self.pencere_sayisi(N)
         for i in range(toplam):
             bas = i * N

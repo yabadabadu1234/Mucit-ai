@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import time
@@ -7,7 +6,6 @@ import ctypes
 import logging
 import threading
 from typing import Dict, List, Any, Optional
-
 
 from kulli_gpu.gpu_tespitci import VeriyoluSorgulayicisi
 from kulli_gpu.surucu_ayirici import SurucuAyirici
@@ -25,9 +23,7 @@ if not logging.getLogger().hasHandlers():
     )
 logger = logging.getLogger("test_surucu_omurgasi")
 
-
 class KulliSurucuSahaTesti:
-
     def __init__(self, simulation_mode: bool = True):
         self.simulation_mode = simulation_mode
         self.sorgulayici: Optional[VeriyoluSorgulayicisi] = None
@@ -41,42 +37,35 @@ class KulliSurucuSahaTesti:
     def TestOmurgasiniIlklendir(self):
         logger.info("=== KÜLLÎ SANAL GPU SÜRÜCÜSÜ OLAĞANÜSTÜ SAHA TESTİ BAŞLATIYOR ===")
 
-        
         self.sorgulayici = VeriyoluSorgulayicisi(simulation_mode=self.simulation_mode)
 
-        
         self.ayirici = SurucuAyirici(simulation_mode=self.simulation_mode)
 
-        
         bh0 = BellekHaritacisi(simulation_mode=self.simulation_mode)
         bh1 = BellekHaritacisi(simulation_mode=self.simulation_mode)
         bh0.gpu_id = 0
-        bh0.cekirdek_sayisi = 16384  
+        bh0.cekirdek_sayisi = 16384
         bh1.gpu_id = 1
-        bh1.cekirdek_sayisi = 10752  
+        bh1.cekirdek_sayisi = 10752
         self.haritacilar = [bh0, bh1]
 
-        
         self.havuz = SanalBellekHavuzu(
             toplam_sanal_gb=88.0,
             gpu_haritacilari_listesi=self.haritacilar,
             simulation_mode=self.simulation_mode
         )
 
-        
         self.zamanlayici = SanalIslemciZamanlayici(
             sanal_bellek_havuzu_nesnesi=self.havuz,
             simulation_mode=self.simulation_mode
         )
 
-        
         self.idareci = IsEmriIdarecisi(
             sanal_bellek_havuzu=self.havuz,
             sanal_islemci_zamanlayici=self.zamanlayici,
             simulation_mode=self.simulation_mode
         )
 
-        
         self.yakalayici = SeffafEvrenselYakalayici(
             sanal_bellek_havuzu=self.havuz,
             sanal_islemci_zamanlayici=self.zamanlayici,
@@ -99,7 +88,6 @@ class KulliSurucuSahaTesti:
         assert res.get("mmap_object") is not None, "HATA: mmap nesnesi oluşturulmalıdır!"
         assert res.get("c_pointer") is not None, "HATA: Canlı C-işaretçisi None olamaz!"
 
-        
         c_ptr = res["c_pointer"]
         c_ptr[0] = 0xABCDEF00
         bh.VolatilHafizaCiti(c_ptr)
@@ -111,7 +99,6 @@ class KulliSurucuSahaTesti:
     def Senaryo_TaskinliVRAMTahsisTesti(self):
         logger.info("\n--- [TEST 2] Taşkınlı VRAM Tahsisi ve 2MB Küsürat Eritme Testi ---")
 
-        
         istenen_bayt = 30 * (1024**3)
         tahsis_res = self.havuz.TaskinliBellekTahsisEt(istenen_bayt=istenen_bayt, hedef_gpu_id=0)
 
@@ -121,12 +108,10 @@ class KulliSurucuSahaTesti:
         assert sanal_addr >= 0x7FFF00000000, f"HATA: Sanal taban adresi hatalı: {hex(sanal_addr)}"
         assert len(parcalar) >= 1, "HATA: Tahsis parçaları oluşturulmalı!"
 
-        
         for idx, p in enumerate(parcalar):
             b = p.get("allocated_bytes", 0) if isinstance(p, dict) else getattr(p, "boyut_bayt", 0)
             assert b % (2 * 1024 * 1024) == 0, f"HATA: Parça #{idx} 2 MB hizalı değil! Boyut: {b}"
 
-        
         serbest_res = self.havuz.BellekSerbestBirak(sanal_addr)
         assert serbest_res is True, "HATA: Bellek serbest bırakma başarısız oldu!"
 
@@ -138,7 +123,6 @@ class KulliSurucuSahaTesti:
     def Senaryo_KorumaSayfasiIhlalTesti(self):
         logger.info("\n--- [TEST 3] Güvenlik ve Koruma Sayfası İhlal Testi ---")
 
-        
         asimsiz_adres = 0x7FFF00000000 + int(90 * (1024**3))
         ihlal_a = False
         try:
@@ -149,7 +133,6 @@ class KulliSurucuSahaTesti:
 
         assert ihlal_a is True, "HATA: Sanal uzay dışındaki adrese ihlal hatası fırlatılmalıdır!"
 
-        
         koruma_adresi = self.havuz.koruma_sayfasi_baslangic
         ihlal_b = False
         try:
@@ -165,24 +148,19 @@ class KulliSurucuSahaTesti:
     def Senaryo_BellekParcalanmasiVeSikistirmaTesti(self):
         logger.info("\n--- [TEST 4] Parçalanma ve İki Aşamalı Sıkıştırma Testi ---")
 
-        
         t_a = self.havuz.TaskinliBellekTahsisEt(2 * (1024**3), hedef_gpu_id=0)
         t_b = self.havuz.TaskinliBellekTahsisEt(4 * (1024**3), hedef_gpu_id=0)
         t_c = self.havuz.TaskinliBellekTahsisEt(2 * (1024**3), hedef_gpu_id=0)
         t_d = self.havuz.TaskinliBellekTahsisEt(4 * (1024**3), hedef_gpu_id=0)
 
-        
         self.havuz.BellekSerbestBirak(t_b["sanal_adres"])
         self.havuz.BellekSerbestBirak(t_d["sanal_adres"])
 
-        
         self.havuz.AraliklariBirlestir()
 
-        
         sikistirma_res = self.havuz.SikistirVeGeriAl()
         assert sikistirma_res is True, "HATA: İki aşamalı sıkıştırma başarılı olmalıdır!"
 
-        
         self.havuz.BellekSerbestBirak(t_a["sanal_adres"])
         self.havuz.BellekSerbestBirak(t_c["sanal_adres"])
         self.havuz.AraliklariBirlestir()
@@ -209,22 +187,18 @@ class KulliSurucuSahaTesti:
     def Senaryo_SeffafCagriYakalamaTesti(self):
         logger.info("\n--- [TEST 6] Şeffaf C-ABI Çağrı Yakalama ve Sevk Testi ---")
 
-        
         malloc_hook = self.yakalayici.SeffafDlsymKancasi(None, "cudaMalloc")
-        ret_malloc = malloc_hook(1024 * 1024 * 1024)  
+        ret_malloc = malloc_hook(1024 * 1024 * 1024)
         assert ret_malloc == 0, f"HATA: cudaMalloc CUDA_SUCCESS (0) döndürmelidir! Alınan: {ret_malloc}"
 
-        
         memcpy_hook = self.yakalayici.SeffafDlsymKancasi(None, "cudaMemcpy")
         ret_memcpy = memcpy_hook(0x7FFF10000000, 0x7FFF00000000, 64 * 1024 * 1024)
         assert ret_memcpy == 0, f"HATA: cudaMemcpy CUDA_SUCCESS (0) döndürmelidir! Alınan: {ret_memcpy}"
 
-        
         launch_hook = self.yakalayici.SeffafDlsymKancasi(None, "cudaLaunchKernel")
         ret_launch = launch_hook(0x7FFF00001000, 500_000, 256, 0x7FFF00000000, 0x800000000000)
         assert ret_launch == 0, f"HATA: cudaLaunchKernel CUDA_SUCCESS (0) döndürmelidir! Alınan: {ret_launch}"
 
-        
         free_hook = self.yakalayici.SeffafDlsymKancasi(None, "cudaFree")
         ret_free = free_hook(0x7FFF00000000)
         assert ret_free == 0, f"HATA: cudaFree CUDA_SUCCESS (0) döndürmelidir! Alınan: {ret_free}"
@@ -241,25 +215,22 @@ class KulliSurucuSahaTesti:
 
         def iplik_is_yuku(thread_id: int):
             try:
-                
+
                 tahsis = self.havuz.TaskinliBellekTahsisEt(istenen_bayt=64 * 1024 * 1024, hedef_gpu_id=thread_id % len(self.haritacilar))
                 s_addr = tahsis["sanal_adres"]
                 if not s_addr:
                     raise Exception(f"Thread-{thread_id} Sanal Bellek Tahsisi Başarısız")
 
-                
                 launch_hook = self.yakalayici.SeffafDlsymKancasi(None, "cudaLaunchKernel")
                 ret_l = launch_hook(0x7FFF00001000, 50000, 256)
                 if ret_l != 0:
                     raise Exception(f"Thread-{thread_id} cudaLaunchKernel Başarısız")
 
-                
                 memcpy_hook = self.yakalayici.SeffafDlsymKancasi(None, "cudaMemcpy")
                 ret_c = memcpy_hook(s_addr, s_addr, 1024 * 1024)
                 if ret_c != 0:
                     raise Exception(f"Thread-{thread_id} cudaMemcpy Başarısız")
 
-                
                 free_hook = self.yakalayici.SeffafDlsymKancasi(None, "cudaFree")
                 ret_f = free_hook(s_addr)
                 if ret_f != 0:
@@ -286,7 +257,6 @@ class KulliSurucuSahaTesti:
             self.zamanlayici.ZamanlayiciyiKapat()
         logger.info("[Kapat] Sürücü saha testi omurgası başarıyla kapatıldı.")
 
-
 def MainSahaTestiCalistir():
     test_suite = KulliSurucuSahaTesti(simulation_mode=True)
     try:
@@ -306,7 +276,6 @@ def MainSahaTestiCalistir():
 
     finally:
         test_suite.Kapat()
-
 
 if __name__ == "__main__":
     MainSahaTestiCalistir()

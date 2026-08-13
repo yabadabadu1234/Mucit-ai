@@ -1,5 +1,4 @@
 
-
 import json
 import logging
 import os
@@ -17,7 +16,6 @@ except ImportError:
 
 logger = logging.getLogger("CheckpointMgr")
 
-
 def _flatten_nested_state_dict(st: Dict[str, Any], prefix: str = "") -> Dict[str, Any]:
     flat = {}
     if not isinstance(st, dict):
@@ -29,7 +27,6 @@ def _flatten_nested_state_dict(st: Dict[str, Any], prefix: str = "") -> Dict[str
         else:
             flat[key] = v
     return flat
-
 
 EGITIM_MODUL_ADI_ESLEMESI: Dict[str, str] = {
     "n3_phi": "n3_lif",
@@ -43,16 +40,7 @@ EGITIM_MODUL_ADI_ESLEMESI: Dict[str, str] = {
     "bellek_yazici": "n_yazici",
 }
 
-
 def egitim_adlarini_cikarsama_adlarina_cevir(duz_st: Dict[str, Any]) -> Dict[str, Any]:
-
-
-
-
-
-
-
-
     cevrilmis: Dict[str, Any] = {}
     for anahtar, deger in duz_st.items():
         metin = str(anahtar)
@@ -63,44 +51,33 @@ def egitim_adlarini_cikarsama_adlarina_cevir(duz_st: Dict[str, Any]) -> Dict[str
             cevrilmis[metin] = deger
     return cevrilmis
 
-
 CALISMA_ZAMANI_DURUM_ANAHTARLARI = frozenset({
     "bellek_yonetici.M",
     "bellek_yonetici.R",
     "bellek_yonetici.M_state",
 })
 
+CALISMA_ZAMANI_DURUM_SONEKLERI = frozenset(
+    anahtar.split(".")[-1] for anahtar in CALISMA_ZAMANI_DURUM_ANAHTARLARI
+)
 
 def _tensor_to_numpy_safe(tensor: Any) -> np.ndarray:
     if torch is not None and hasattr(tensor, "dtype") and tensor.dtype == torch.bfloat16:
         tensor = tensor.to(torch.float32)
     return tensor.detach().cpu().numpy()
 
-
 CHECKPOINT_MAX_MB: float = 300.6
 CHECKPOINT_VERSION: str = "4.0.0-MUCIT-AI-TEK-DOSYA"
 
-
-
-
-
-
-
 KONTROL_NOKTASI_SON = "kontrol_noktasi_son.pt"
 KONTROL_NOKTASI_ONCEKI = "kontrol_noktasi_onceki.pt"
-
 
 SEKIL_BELIRLEYEN_CONFIG_ALANLARI = (
     "d", "d_v", "d_e", "d_q", "d_a", "d_m", "d_h", "D",
     "M_plus_1", "V_nodes", "V_size", "K", "N", "N_max", "R", "batch_size",
 )
 
-
 def config_ozeti_cikar(model: Any) -> Dict[str, Any]:
-
-
-
-
     kaynak = None
     if isinstance(model, dict):
         for _m in model.values():
@@ -120,7 +97,6 @@ def config_ozeti_cikar(model: Any) -> Dict[str, Any]:
             ozet[alan] = deger
     return ozet
 
-
 @dataclass
 class CheckpointMetadata:
     version: str = CHECKPOINT_VERSION
@@ -130,7 +106,6 @@ class CheckpointMetadata:
     last_loss: float = 0.0
     hiyerarsik_hafiza: Optional[Dict] = None
 
-
 @dataclass
 class CognitiveState:
     model_params: Optional[Dict] = None
@@ -138,7 +113,6 @@ class CognitiveState:
     smw_R_matrix: Optional[np.ndarray] = None
     optimizer_state: Optional[Dict] = None
     hiyerarsik_hafiza: Optional[Dict] = None
-
 
 class HiyerarşikHafizaYoneticisi:
     def __init__(self):
@@ -149,7 +123,7 @@ class HiyerarşikHafizaYoneticisi:
     def is_dosya_islenmis(self, dosya_yolu: str, klasor_yolu: str = "", veriseti_adi: str = "") -> bool:
         norm_file = os.path.normpath(dosya_yolu) if dosya_yolu else ""
         norm_folder = os.path.normpath(klasor_yolu) if klasor_yolu else (os.path.dirname(norm_file) if norm_file else "")
-        
+
         if veriseti_adi and veriseti_adi in self.biten_verisetleri:
             return True
         if norm_folder and norm_folder in self.biten_klasorler:
@@ -161,10 +135,10 @@ class HiyerarşikHafizaYoneticisi:
     def dosya_tamamlandi(self, dosya_yolu: str, klasor_yolu: str = "", veriseti_adi: str = "", tum_klasor_dosyalari: Optional[List[str]] = None, tum_veriseti_klasorleri: Optional[List[str]] = None):
         norm_file = os.path.normpath(dosya_yolu)
         norm_folder = os.path.normpath(klasor_yolu) if klasor_yolu else os.path.dirname(norm_file)
-        
+
         self.biten_dosyalar.add(norm_file)
         logger.debug(f"  [Hafıza] Dosya tamamlandı: {norm_file}")
-        
+
         if tum_klasor_dosyalari and len(tum_klasor_dosyalari) > 0:
             all_files_done = all(os.path.normpath(f) in self.biten_dosyalar for f in tum_klasor_dosyalari)
             if all_files_done:
@@ -172,7 +146,7 @@ class HiyerarşikHafizaYoneticisi:
                 for f in tum_klasor_dosyalari:
                     self.biten_dosyalar.discard(os.path.normpath(f))
                 logger.info(f"  [Hafıza] Klasördeki TÜM dosyalar tamamlandı! Klasör seviyesine yükseltildi: {norm_folder}")
-                
+
                 if veriseti_adi and tum_veriseti_klasorleri and len(tum_veriseti_klasorleri) > 0:
                     all_folders_done = all(os.path.normpath(k) in self.biten_klasorler for k in tum_veriseti_klasorleri)
                     if all_folders_done:
@@ -195,14 +169,12 @@ class HiyerarşikHafizaYoneticisi:
         self.biten_klasorler = set(data.get("biten_klasorler", []))
         self.biten_dosyalar = set(data.get("biten_dosyalar", []))
 
-
 class NPZCheckpointManager:
-
     def __init__(self,
                  checkpoint_dir: str = "/kaggle/working",
                  keep_last: int = 2,
                  max_mb: float = CHECKPOINT_MAX_MB):
-        
+
         if checkpoint_dir == "/kaggle/working" and os.path.exists("/tmp"):
             target_dir = "/tmp/kulli_checkpoints"
         else:
@@ -211,14 +183,6 @@ class NPZCheckpointManager:
         self.checkpoint_dir = target_dir
         self.keep_last      = keep_last
         self.max_mb         = max_mb
-
-
-
-
-
-
-
-
 
         self.npz_parametre_yaz = False
         self.hafiza         = HiyerarşikHafizaYoneticisi()
@@ -272,7 +236,6 @@ class NPZCheckpointManager:
             if os.path.isdir(fpath):
                 continue
 
-            
             is_tmp_file = fname.endswith(".tmp") or "_tmp." in fname or "_tmp_" in fname
             is_dynamic_pt = (fname.startswith("topolojik_model_step_") or fname.startswith("topolojik_model_epoch_")) and fname.endswith(".pt")
             is_dynamic_npz = fname.startswith("checkpoint_") and fname.endswith(".npz") and not (fname.startswith("checkpoint_latest") or fname.startswith("checkpoint_best"))
@@ -306,14 +269,6 @@ class NPZCheckpointManager:
              is_best: bool = False) -> str:
         payload: Dict[str, np.ndarray] = {}
 
-
-
-
-
-
-
-
-
         if self.npz_parametre_yaz:
             if torch is not None and hasattr(model, "state_dict"):
                 try:
@@ -330,7 +285,6 @@ class NPZCheckpointManager:
                             if hasattr(tensor, "detach"):
                                 payload[f"param_{mod_name}.{param_adi}"] = _tensor_to_numpy_safe(tensor)
 
-        
         if isinstance(model, dict):
             meclis_bellek = model.get("bellek_yonetici") or model.get("bellek_yonetici") or model.get("bellek") or model.get("meclis_bellek")
         else:
@@ -344,7 +298,6 @@ class NPZCheckpointManager:
             if hasattr(meclis_bellek, "R") and meclis_bellek.R is not None:
                 payload["smw_R_matrix"] = meclis_bellek.R.detach().cpu().numpy() if hasattr(meclis_bellek.R, "detach") else np.asarray(meclis_bellek.R)
 
-        
         if optimizer_m is not None:
             payload["adam_m"] = np.asarray(optimizer_m, dtype=np.float32)
         elif hasattr(model, "_adam_m") and model._adam_m is not None:
@@ -355,18 +308,15 @@ class NPZCheckpointManager:
         elif hasattr(model, "_adam_v") and model._adam_v is not None:
             payload["adam_v"] = np.asarray(model._adam_v, dtype=np.float32)
 
-        
         payload["step"] = np.array([step], dtype=np.int64)
         payload["token_offset"] = np.array([token_offset], dtype=np.int64)
         hist = loss_history or []
         payload["loss_history"] = np.array(hist[-10:], dtype=np.float32)
 
-        
         if extra:
             for k, v in extra.items():
                 payload[k] = np.asarray(v)
 
-        
         try:
             if torch is not None and torch.cuda.is_available():
                 allocated = torch.cuda.memory_allocated()
@@ -384,12 +334,10 @@ class NPZCheckpointManager:
         except Exception as vram_exc:
             logger.debug(f"[Checkpoint VRAM Guard Warning] {vram_exc}")
 
-        
         import uuid as _uuid
         out_path = self._npz_path(step, is_best=is_best)
         tmp_path = out_path.replace(".npz", f"_tmp_{_uuid.uuid4().hex}.npz")
 
-        
         try:
             import shutil as _shutil
             _disk = _shutil.disk_usage(self.checkpoint_dir)
@@ -399,8 +347,7 @@ class NPZCheckpointManager:
                     f"  [Ckpt Disk Guard] Boş disk alanı kritik ({_bos_mb:.1f} MB) — "
                     "NVMe takas dosyaları süpürülüyor..."
                 )
-                
-                
+
                 try:
                     from kulli_gpu.nvme_takas_yoneticisi import GuvenliVramVeTmpSupurgesi
                     GuvenliVramVeTmpSupurgesi.supur(swap_dir="/tmp/kulli_scratchpad", eskime_esigi_sn=0.0)
@@ -412,7 +359,6 @@ class NPZCheckpointManager:
         with self._save_lock:
             np.savez_compressed(tmp_path, **payload)
 
-            
             size_mb = os.path.getsize(tmp_path) / (1024 * 1024)
             if size_mb > self.max_mb:
                 logger.warning(
@@ -426,10 +372,8 @@ class NPZCheckpointManager:
 
             os.replace(tmp_path, out_path)
 
-        
         self._write_meta(out_path, step, token_offset, size_mb, loss_history)
 
-        
         self.save_hafiza_state()
 
         logger.info(
@@ -452,12 +396,6 @@ class NPZCheckpointManager:
 
         bekle = True
 
-
-
-
-
-
-
         son_yol = os.path.join(self.checkpoint_dir, KONTROL_NOKTASI_SON)
         onceki_yol = os.path.join(self.checkpoint_dir, KONTROL_NOKTASI_ONCEKI)
         import uuid
@@ -478,11 +416,6 @@ class NPZCheckpointManager:
             state_dict_to_save['loss_history'] = loss_history or []
             state_dict_to_save['surum'] = CHECKPOINT_VERSION
 
-
-
-
-
-
             state_dict_to_save['config'] = config_ozeti_cikar(model)
             state_dict_to_save['hafiza'] = self.hafiza.to_dict()
 
@@ -501,8 +434,7 @@ class NPZCheckpointManager:
                     try:
                         return obj.detach().clone().to('cpu', non_blocking=False)
                     except Exception as exc:
-                        
-                        
+
                         try:
                             return obj.detach().cpu().clone()
                         except Exception:
@@ -526,18 +458,11 @@ class NPZCheckpointManager:
                         return None
                 return obj
 
-
-
             state_dict_cpu = _to_cpu_senkron(state_dict_to_save) if bekle else _to_cpu_async(state_dict_to_save)
 
             def _kaydet_ve_dondur(sd: Dict[str, Any], tmp_p: str, lock: Any):
                 with lock:
                     torch.save(sd, tmp_p)
-
-
-
-
-
 
                     if os.path.isfile(son_yol):
                         os.replace(son_yol, onceki_yol)
@@ -573,13 +498,6 @@ class NPZCheckpointManager:
         return pt_path
 
     def kontrol_noktasi_configunu_oku(self, path: Optional[str] = None) -> Dict[str, Any]:
-
-
-
-
-
-
-
         if torch is None:
             return {}
         hedef = path or self.get_latest()
@@ -601,12 +519,6 @@ class NPZCheckpointManager:
         return dict(cfg)
 
     def fazlalik_dosyalari_temizle(self) -> int:
-
-
-
-
-
-
         korunacak = {KONTROL_NOKTASI_SON, KONTROL_NOKTASI_ONCEKI, "hafiza_state.json"}
         silinen = 0
         try:
@@ -724,7 +636,6 @@ class NPZCheckpointManager:
 
         resolved = self._resolve_path(path, step)
 
-        
         if resolved is not None:
             try:
                 _smw_M = None
@@ -766,10 +677,6 @@ class NPZCheckpointManager:
         if path and path.endswith(".pt") and os.path.isfile(path):
             pt_candidates.append(path)
 
-
-
-
-
         for _dizin in (self.checkpoint_dir, "/tmp/kulli_checkpoints", "/kaggle/working",
                        "/kaggle/input/notebooks/ulankaggle/mucit-ai"):
             pt_candidates.append(os.path.join(_dizin, KONTROL_NOKTASI_SON))
@@ -782,8 +689,7 @@ class NPZCheckpointManager:
                 break
 
         if torch is not None and pt_file is not None:
-            
-            
+
             try:
                 checkpoint = torch.load(pt_file, map_location="cpu")
             except Exception as load_exc:
@@ -797,16 +703,15 @@ class NPZCheckpointManager:
                     st = checkpoint['model']
 
                     if isinstance(model, dict):
-                        
+
                         for mod_key, mod_obj in model.items():
                             if not hasattr(mod_obj, 'load_state_dict'):
                                 continue
 
-                            
                             if isinstance(st, dict) and mod_key in st:
                                 mod_st_raw = st[mod_key]
                             else:
-                                
+
                                 flat_st = _flatten_nested_state_dict(st) if isinstance(st, dict) else st
                                 mod_st_raw = {
                                     k[len(mod_key)+1:]: v
@@ -830,36 +735,42 @@ class NPZCheckpointManager:
                                     )
                                 continue
 
-                            
                             temiz_st = {}
                             for k, v in mod_st_raw.items():
                                 yeni_k = re.sub(r'^(module\.|model\.|modeller\.)', '', str(k))
                                 temiz_st[yeni_k] = v
 
-                            
-                            try:
-                                mod_obj.load_state_dict(temiz_st, strict=True)
-                                logger.info(f"  [Ckpt Mgr] '{mod_key}' strict=True ile yüklendi.")
-                            except RuntimeError as strict_err:
-                                logger.warning(f"  [Ckpt Mgr] '{mod_key}' strict=True başarısız ({strict_err}), strict=False deneniyor.")
-                                mod_obj.load_state_dict(temiz_st, strict=False)
+                            _kendi_st = mod_obj.state_dict()
+                            for _k in list(temiz_st.keys()):
+                                if _k not in _kendi_st:
+                                    continue
+                                _hedef, _kaynak = _kendi_st[_k], temiz_st[_k]
+                                if not (hasattr(_hedef, "shape") and hasattr(_kaynak, "shape")):
+                                    continue
+                                if tuple(_hedef.shape) == tuple(_kaynak.shape):
+                                    continue
+                                _yalniz_yigin_boyutu = (
+                                    len(_hedef.shape) == len(_kaynak.shape)
+                                    and tuple(_hedef.shape[1:]) == tuple(_kaynak.shape[1:])
+                                )
+                                if _k in CALISMA_ZAMANI_DURUM_SONEKLERI and _yalniz_yigin_boyutu:
+                                    temiz_st[_k] = _hedef.detach().clone()
+                                    logger.info(
+                                        f"  [Ckpt Mgr] '{mod_key}.{_k}' çalışma zamanı durumu: "
+                                        f"checkpoint {tuple(_kaynak.shape)}, model {tuple(_hedef.shape)}. "
+                                        f"Yalnız yığın boyutu farklı, aktif yığına göre yeniden "
+                                        f"kuruluyor (öğrenilmiş ağırlık değil)."
+                                    )
+
+                            mod_obj.load_state_dict(temiz_st, strict=True)
+                            logger.info(f"  [Ckpt Mgr] '{mod_key}' strict=True ile yüklendi.")
 
                     elif hasattr(model, 'load_state_dict'):
                         flat_st = _flatten_nested_state_dict(st) if isinstance(st, dict) else st
 
                         temiz_st = {re.sub(r'^(module\.|model\.|modeller\.)', '', str(k)): v for k, v in flat_st.items()}
 
-
-
-
-
                         temiz_st = egitim_adlarini_cikarsama_adlarina_cevir(temiz_st)
-
-
-
-
-
-
 
                         _model_st = model.state_dict()
                         _model_anahtarlari = set(_model_st.keys())
@@ -877,17 +788,10 @@ class NPZCheckpointManager:
                             if tuple(_hedef.shape) == tuple(_kaynak.shape):
                                 continue
 
-
-
-
-
                             if _k in CALISMA_ZAMANI_DURUM_ANAHTARLARI:
                                 _durum_yenilenen.append(
                                     f"{_k} (kayıt {tuple(_kaynak.shape)}, model {tuple(_hedef.shape)})"
                                 )
-
-
-
 
                                 temiz_st[_k] = _hedef.clone()
                             else:
@@ -925,10 +829,6 @@ class NPZCheckpointManager:
                                 "Eksik ağırlıklar rastgele kalırdı ve üretilen çıktı modelin kabiliyetini "
                                 "değil rastgele sayıları yansıtırdı; bu yüzden kısmi yükleme yapılmıyor."
                             )
-
-
-
-
 
                             _kayit_config = checkpoint.get('config') or {}
                             _canli_config = config_ozeti_cikar(model)
@@ -982,8 +882,7 @@ class NPZCheckpointManager:
                 loss_ret = checkpoint.get('loss_history', [])
                 return step_ret, loss_ret
               except Exception as exc:
-                
-                
+
                 logger.error(f"  [Ckpt Mgr] .pt state_dict uygulama hatası ({exc}) — model YARI-YÜKLENMİŞ olabilir, npz'ye sessizce düşülmüyor.")
                 raise
 
@@ -1008,8 +907,7 @@ class NPZCheckpointManager:
             "hiyerarsik_hafiza": self.hafiza.to_dict()
         }
         meta_path = self._meta_path(npz_path)
-        
-        
+
         import uuid as _uuid_meta
         meta_tmp = meta_path + f".tmp_{_uuid_meta.uuid4().hex}"
         try:
@@ -1033,7 +931,6 @@ class NPZCheckpointManager:
                 f"path={path} step={step}"
             )
 
-        
         with np.load(resolved, allow_pickle=False) as data:
             meta_path = self._meta_path(resolved)
             meta_dict = {}
@@ -1051,8 +948,7 @@ class NPZCheckpointManager:
                 "token_offset":      int(data["token_offset"][0]) if "token_offset" in data else 0,
                 "step":              int(data["step"][0])          if "step"         in data else 0,
                 "loss_history":      list(data["loss_history"])    if "loss_history" in data else [],
-                
-                
+
                 "smw_M_matrix":      self.serializer.yuklerken_normallestir(data["smw_M_matrix"]) if "smw_M_matrix" in data else None,
                 "smw_R_matrix":      self.serializer.yuklerken_normallestir(data["smw_R_matrix"]) if "smw_R_matrix" in data else None,
                 "adam_m":            self.serializer.yuklerken_normallestir(data["adam_m"]) if "adam_m" in data else None,
@@ -1076,8 +972,7 @@ class NPZCheckpointManager:
         if path is not None and os.path.isfile(path):
             return path
         if step is not None:
-            
-            
+
             p = self._npz_path(step)
             if os.path.isfile(p):
                 meta_path = self._meta_path(p)
@@ -1140,8 +1035,7 @@ class NPZCheckpointManager:
             return result
         result["size_mb"] = round(os.path.getsize(path) / (1024 * 1024), 2)
         try:
-            
-            
+
             with np.load(path, allow_pickle=False) as data:
                 required = ["token_offset", "step"]
                 for key in required:
@@ -1151,11 +1045,10 @@ class NPZCheckpointManager:
                     result["errors"].append(
                         f"Boyut sınırı aşıldı: {result['size_mb']:.1f} MB > {self.max_mb} MB"
                     )
-                
-                
+
                 for key in data.files:
                     try:
-                        _ = data[key]  
+                        _ = data[key]
                     except Exception as arr_exc:
                         result["errors"].append(f"Bozuk veri ({key}): {arr_exc}")
                 result["valid"] = len(result["errors"]) == 0
@@ -1164,9 +1057,7 @@ class NPZCheckpointManager:
             result["errors"].append(str(exc))
         return result
 
-
 class CheckpointSerializer:
-
     def __init__(self, precision: str = "float32"):
         self.precision = precision
 
@@ -1186,9 +1077,7 @@ class CheckpointSerializer:
             return arr.astype(np.float32)
         return arr
 
-
 class CheckpointManager:
-
     def __init__(self,
                  checkpoint_dir: str = "checkpoints",
                  keep_last: int = 2,
@@ -1285,7 +1174,6 @@ class CheckpointManager:
         self.cognitive_state = state
         return state, meta
 
-
 def create_default_checkpoint_manager(
     checkpoint_dir: str = "checkpoints",
 ) -> CheckpointManager:
@@ -1295,7 +1183,6 @@ def create_default_checkpoint_manager(
         precision="float32",
         max_checkpoint_mb=CHECKPOINT_MAX_MB,
     )
-
 
 def create_npz_manager(
     checkpoint_dir: str = "/kaggle/working",

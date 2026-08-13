@@ -10,7 +10,6 @@ shardlar = [[torch.randn(*s) for s in sekiller] for _ in range(n)]
 
 op = Riyazi_Pareto_PCGrad_MGDA_Operator()
 
-
 def eski_referans(shard_gradyanlari, trainable_params, op):
     n = len(shard_gradyanlari)
     duz = [torch.cat([g.reshape(-1).double() for g in sh]) for sh in shard_gradyanlari]
@@ -32,7 +31,6 @@ def eski_referans(shard_gradyanlari, trainable_params, op):
     alpha = op.coz_mgda_pareto_weights(G.float())
     toplam = sum(float(alpha[i].item()) * pc[i] for i in range(n))
     return alpha, toplam
-
 
 alpha_eski, duz_eski = eski_referans(shardlar, params, op)
 

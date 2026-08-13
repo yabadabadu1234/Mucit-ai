@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import mmap
@@ -19,9 +18,7 @@ except ImportError:
 
 logger = logging.getLogger("kulli_gpu.bellek_haritacisi")
 
-
 class BellekHaritacisi:
-
     def __init__(self, simulation_mode: bool = False):
         self.simulation_mode = simulation_mode
         logger.info(f"[BellekHaritacisi] Fiziki VRAM & Kayıtçı Haritalama Birimi İlklendirildi (simulation_mode={simulation_mode}).")
@@ -34,7 +31,7 @@ class BellekHaritacisi:
     ) -> int:
         is_sim = self.simulation_mode if simulation_mode is None else simulation_mode
         kaynak_yolu = f"/sys/bus/pci/devices/{pci_adresi}/resource{bolge_no}"
-        
+
         flags = os.O_RDWR
         if hasattr(os, "O_SYNC"):
             flags |= os.O_SYNC
@@ -56,14 +53,13 @@ class BellekHaritacisi:
         if not is_sim:
             raise FatalDriverError(f"[{pci_adresi}] Hakiki donanım resource{bolge_no} kütüğü bulunamadı: {kaynak_yolu}")
 
-        
         sanal_path = f"/tmp/kulli_mock_gpu_{pci_adresi.replace(':', '_')}_res{bolge_no}.bin"
         if not os.path.exists(sanal_path) or os.path.getsize(sanal_path) < (128 * 1024 * 1024):
             with open(sanal_path, "wb") as f:
-                
+
                 f.seek((128 * 1024 * 1024) - 1)
                 f.write(b"\x00")
-        
+
         fd = os.open(sanal_path, flags)
         logger.info(f"[{pci_adresi}] Sanal donanım kapısı açıldı (fd={fd}) -> {sanal_path}")
         return fd
@@ -98,7 +94,6 @@ class BellekHaritacisi:
                 except Exception as err:
                     logger.warning(f"[{pci_adresi}] Resource satırı okuma uyarısı: {err}")
 
-        
         try:
             st = os.fstat(dosya_tanimlayici)
             if st.st_size > 0:
@@ -133,7 +128,7 @@ class BellekHaritacisi:
             return self.VolatilHafizaCiti(c_isaretci)
         if mmap_obj is not None:
             try:
-                
+
                 _ = mmap_obj[0]
                 return True
             except Exception:

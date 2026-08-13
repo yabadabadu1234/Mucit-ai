@@ -13,7 +13,6 @@ from kontratlar import LifLaplasyenOperatoru, E3_SinirOperatorleri
 _orijinal = M._tekil_egitim_adimi_icra
 _sayac = {'n': 0}
 
-
 def _etiket(o):
     t = type(o)
     ad = t.__name__
@@ -27,7 +26,6 @@ def _etiket(o):
     if ad in ('list', 'tuple', 'set'):
         return f"{ad}(len={len(o)})"
     return f"{t.__module__}.{ad}"
-
 
 def _yol_bul(nesne, azami_derinlik=6):
     gorulen = {id(nesne)}
@@ -52,7 +50,6 @@ def _yol_bul(nesne, azami_derinlik=6):
             break
     return sinir[0][1] if sinir else []
 
-
 def _sarmal(*a, **kw):
     sonuc = _orijinal(*a, **kw)
     _sayac['n'] += 1
@@ -67,7 +64,6 @@ def _sarmal(*a, **kw):
         for adim in _yol_bul(op):
             print(f"     <- {adim}", flush=True)
     raise SystemExit(0)
-
 
 M._tekil_egitim_adimi_icra = _sarmal
 M.Main_EgitimYurutucu(konfig_yolu="/home/user/Mucit-ai/local_run/config.json",

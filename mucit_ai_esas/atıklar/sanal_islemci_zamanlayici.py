@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import time
@@ -28,13 +27,10 @@ except ImportError:
 logger = logging.getLogger("kulli_gpu.sanal_islemci_zamanlayici")
 logger.setLevel(logging.INFO)
 
-
 class IsYukuHataIstisnasi(Exception):
     pass
 
-
 class IsYukuPaketi:
-
     def __init__(
         self,
         kernel_isaretci: Any,
@@ -54,7 +50,7 @@ class IsYukuPaketi:
         self.ek_parametreler = ek_parametreler or {}
 
         self.tamamlandi_citi = threading.Event()
-        self.durum = "KUYRUKTA"  
+        self.durum = "KUYRUKTA"
         self.hata_mesaji: Optional[str] = None
         self.islem_baslangic_zamanı: float = 0.0
         self.islem_bitis_zamanı: float = 0.0
@@ -71,9 +67,7 @@ class IsYukuPaketi:
             f"Offset: {self.grid_offset_x}] Durum: {self.durum}>"
         )
 
-
 class GpuIslemciKanali:
-
     def __init__(
         self,
         gpu_id: int,
@@ -166,24 +160,21 @@ class GpuIslemciKanali:
                 continue
 
             try:
-                
+
                 self.GelecegeBakisliAsenkronOnYukle(bakis_derinligi=8)
 
                 paket.durum = "ÇALIŞIYOR"
                 paket.islem_baslangic_zamanı = time.perf_counter()
 
-                
                 if self.haritaci is not None and hasattr(self.haritaci, "VolatilHafizaCiti"):
                     try:
                         self.haritaci.VolatilHafizaCiti(paket.girdi_sanal_adres)
                     except Exception as mm_err:
                         logger.debug(f"[GPU #{self.gpu_id}] Memory barrier uyarısı: {mm_err}")
 
-                
                 exec_time = max(0.0001, (paket.grid_boyutu_x / (self.cekirdek_sayisi * 1e6)))
                 time.sleep(min(0.01, exec_time))
 
-                
                 paket.islem_bitis_zamanı = time.perf_counter()
                 paket.durum = "TAMAMLANDI"
 
@@ -210,9 +201,7 @@ class GpuIslemciKanali:
                     self.worker_thread.join(timeout=2.0)
                 logger.info(f"[GpuIslemciKanali] GPU #{self.gpu_id} Kanalı Durduruldu.")
 
-
 class SanalIslemciZamanlayici:
-
     def __init__(
         self,
         sanal_bellek_havuzu_nesnesi: Optional[Any] = None,
@@ -236,7 +225,6 @@ class SanalIslemciZamanlayici:
             gpu_haritacilari = getattr(self.havuz, "gpu_haritacilari", []) if self.havuz else []
             toplam_gpu = max(1, len(gpu_haritacilari))
 
-            
             varsayilan_cekirdekler = [16384, 10752, 8960, 5888]
 
             self.gpu_cekirdek_sayilari = {}
@@ -253,12 +241,10 @@ class SanalIslemciZamanlayici:
 
             toplam_sistem_cekirdegi = sum(self.gpu_cekirdek_sayilari.values())
 
-            
             self.gpu_agirliklari = {}
             for g_idx, c_cnt in self.gpu_cekirdek_sayilari.items():
                 self.gpu_agirliklari[g_idx] = c_cnt / max(1, toplam_sistem_cekirdegi)
 
-            
             for g_idx in range(toplam_gpu):
                 haritaci = gpu_haritacilari[g_idx] if g_idx < len(gpu_haritacilari) else None
                 if g_idx not in self.kanallar or not self.kanallar[g_idx].aktif_mi:
@@ -291,11 +277,9 @@ class SanalIslemciZamanlayici:
 
             for g_id in gpu_id_listesi:
                 agirlik = self.gpu_agirliklari.get(g_id, 1.0 / toplam_gpu_sayisi)
-                
-                
+
                 ham_parca_grid = int(toplam_grid * agirlik)
 
-                
                 hizali_parca_grid = (ham_parca_grid // blok_boyutu) * blok_boyutu
 
                 if hizali_parca_grid > 0:
@@ -308,19 +292,18 @@ class SanalIslemciZamanlayici:
                         grid_offset_x=baslangic_offset,
                         ek_parametreler={"parent_gpu_id": g_id, "agirlik": agirlik}
                     )
-                    
+
                     self.kanallar[g_id].is_kuyrugu.put(alt_paket)
                     alt_paketler.append(alt_paket)
                     baslangic_offset += hizali_parca_grid
 
-            
             kalan_grid = toplam_grid - baslangic_offset
             if kalan_grid > 0:
-                
+
                 en_guclu_gpu = max(self.gpu_agirliklari.items(), key=lambda x: x[1])[0]
 
                 if alt_paketler:
-                    
+
                     bulundu = False
                     for p in alt_paketler:
                         if p.ek_parametreler.get("parent_gpu_id") == en_guclu_gpu:
@@ -369,7 +352,6 @@ class SanalIslemciZamanlayici:
             if alt_paket.durum == "HATA":
                 raise IsYukuHataIstisnasi(f"DONANIM HATASI: {alt_paket.hata_mesaji}")
 
-        
         if self.havuz is not None and hasattr(self.havuz, "AraliklariBirlestir"):
             try:
                 self.havuz.AraliklariBirlestir()

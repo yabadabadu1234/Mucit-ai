@@ -10,9 +10,7 @@ from typing import List, Dict, Any, Optional, Tuple, Union
 logger = logging.getLogger("kulli_gpu.predictive_engine")
 logger.setLevel(logging.WARNING)
 
-
 _TORCH_FX_AVAILABLE = False
-
 
 class ExecutionNode:
     def __init__(
@@ -32,8 +30,7 @@ class ExecutionNode:
         self.input_ptrs = input_ptrs or []
         self.target_gpu_id = target_gpu_id
         self.scratchpad_bytes = scratchpad_bytes
-        
-        
+
         self.prefetch_event_handle: Optional[Any] = None
         self.is_prefetched: bool = False
         self.scratchpad_handle: Optional[Any] = None
@@ -45,18 +42,16 @@ class ExecutionNode:
             f"Target GPU: #{self.target_gpu_id}>"
         )
 
-
 class ErkenDevletEngine:
     def __init__(self, allocator: Any, bus: Any, lookahead_depth: int = 8):
         self.allocator = allocator
         self.bus = bus
         self.lookahead_depth = max(1, lookahead_depth)
         self._lock = threading.RLock()
-        
-        
+
         self.dag_nodes: List[ExecutionNode] = []
         self.current_step_index: int = 0
-        
+
         logger.debug(
             f"[ErkenDevletEngine] Universal JIT DAG Engine Initialized! "
             f"Lookahead Window Depth: {self.lookahead_depth} steps."
@@ -67,7 +62,6 @@ class ErkenDevletEngine:
             self.dag_nodes.clear()
             self.current_step_index = 0
 
-            
             if isinstance(operasyon_grafik_veya_model, dict):
                 raw_nodes = operasyon_grafik_veya_model.get("nodes", operasyon_grafik_veya_model.get("ops", []))
                 for idx, item in enumerate(raw_nodes):
@@ -99,7 +93,7 @@ class ErkenDevletEngine:
 
     def tertip_et(self, node: ExecutionNode) -> Dict[str, Any]:
         with self._lock:
-            
+
             page_mapping = {}
             if node.virtual_ptr is not None and hasattr(self.allocator, "get_page_scatter_map"):
                 try:
@@ -112,7 +106,6 @@ class ErkenDevletEngine:
                 except Exception as loc_exc:
                     logger.debug(f"[Tertip Locality Notice] {loc_exc}")
 
-            
             scratchpad_ptr = None
             if node.scratchpad_bytes > 0 and hasattr(self.allocator, "allocate_scratchpad_chunk"):
                 try:
@@ -124,7 +117,6 @@ class ErkenDevletEngine:
                 except Exception as sc_exc:
                     logger.debug(f"[Scratchpad Allocation Notice] {sc_exc}")
 
-            
             self.sevk_et(node)
 
             return {
@@ -150,10 +142,9 @@ class ErkenDevletEngine:
                 if future_node.is_prefetched or future_node.virtual_ptr is None or future_node.byte_size <= 0:
                     continue
 
-                
                 if hasattr(self.bus, "p2p_transfer_async"):
                     try:
-                        
+
                         event_h = self.bus.p2p_transfer_async(
                             src_page=0,
                             dst_page=0,
@@ -173,11 +164,11 @@ class ErkenDevletEngine:
     @contextmanager
     def scratchpad_scope(self, node: ExecutionNode):
         try:
-            
+
             tertip_info = self.tertip_et(node)
             yield tertip_info
         finally:
-            
+
             if node.scratchpad_handle is not None and hasattr(self.allocator, "free_scratchpad_chunk"):
                 try:
                     s_ptr = getattr(node.scratchpad_handle, "virtual_ptr", None)

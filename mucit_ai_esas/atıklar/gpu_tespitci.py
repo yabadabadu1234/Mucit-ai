@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import struct
@@ -10,16 +9,13 @@ from typing import Dict, List, Tuple, Any, Optional, Union
 logger = logging.getLogger("kulli_gpu.hakimiyet_tesisi")
 logger.setLevel(logging.INFO)
 
-
 PCI_VENDOR_NVIDIA = 0x10DE
 PCI_VENDOR_AMD    = 0x1002
 PCI_VENDOR_INTEL  = 0x8086
 
-
 PCI_CLASS_DISPLAY_VGA   = 0x0300
 PCI_CLASS_DISPLAY_3D    = 0x0302
 PCI_CLASS_DISPLAY_OTHER = 0x0380
-
 
 _LIBPCI = None
 try:
@@ -32,9 +28,7 @@ except Exception:
     except Exception:
         _LIBPCI = None
 
-
 class VeriyoluSorgulayicisi:
-
     def __init__(self, simulation_mode: bool = False):
         self.simulation_mode = simulation_mode
         self.lib_pci = _LIBPCI
@@ -47,7 +41,6 @@ class VeriyoluSorgulayicisi:
         is_sim = self.simulation_mode if simulation_mode is None else simulation_mode
         cihazlar = []
 
-        
         pci_dir = "/sys/bus/pci/devices"
         if os.path.exists(pci_dir):
             try:
@@ -70,7 +63,6 @@ class VeriyoluSorgulayicisi:
             except Exception as err:
                 logger.warning(f"Sysfs PCI tarama uyarısı: {err}")
 
-        
         if not cihazlar:
             if is_sim:
                 for slot_idx in range(2):
@@ -108,7 +100,6 @@ class VeriyoluSorgulayicisi:
         }
         vendor_name = vendor_names.get(vendor_id, f"Bilinmeyen Üretici (0x{vendor_id:04x})")
 
-        
         is_gpu = (class_code in (PCI_CLASS_DISPLAY_VGA, PCI_CLASS_DISPLAY_3D, PCI_CLASS_DISPLAY_OTHER)) or (vendor_id == PCI_VENDOR_NVIDIA)
 
         return {
@@ -169,7 +160,6 @@ class VeriyoluSorgulayicisi:
         total_vram_bytes = 0
         bar1_bytes = 0
 
-        
         if os.path.exists(resource_path):
             try:
                 with open(resource_path, "r") as rf:
@@ -206,7 +196,6 @@ class VeriyoluSorgulayicisi:
             except Exception as err:
                 logger.warning(f"[{pci_addr}] Resource kütüğü okuma uyarısı: {err}")
 
-        
         if total_vram_bytes == 0:
             total_vram_bytes = 24 * (1024**3)
         if bar1_bytes == 0:
@@ -278,9 +267,7 @@ class VeriyoluSorgulayicisi:
             "status": "Nihai Donanım Bilgi Paketi Hazırlandı"
         }
 
-
 class DonanimArayici(VeriyoluSorgulayicisi):
-
     def TumKartlariTara(self) -> List[Dict[str, Any]]:
         return self.VeriyoluBitisikleriniTara()
 

@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import atexit
@@ -25,9 +24,7 @@ if not logging.getLogger().hasHandlers():
     )
 logger = logging.getLogger("kulli_surucu_orkestratoru")
 
-
 class KulliSurucuOrkestratoru:
-
     _instance = None
     _lock = threading.Lock()
 
@@ -45,7 +42,6 @@ class KulliSurucuOrkestratoru:
         self.surucu_calisiyor_mu: bool = False
         self.lock = threading.RLock()
 
-        
         self.sorgulayici: Optional[VeriyoluSorgulayicisi] = None
         self.ayirici: Optional[SurucuAyirici] = None
         self.haritacilar: List[BellekHaritacisi] = []
@@ -125,25 +121,22 @@ class KulliSurucuOrkestratoru:
             logger.info("================================================================================")
 
             try:
-                
+
                 logger.info("[Faz I] Donanım Teşhis ve Sürücü Devir Teslim Katmanı İlklendiriliyor...")
                 self.sorgulayici = VeriyoluSorgulayicisi(simulation_mode=simulation_mode)
                 self.ayirici = SurucuAyirici(simulation_mode=simulation_mode)
 
-                
                 self.havuz = self.OtomatikVramKapasiteHesaplaVeKur(
                     toplam_sanal_gb=toplam_sanal_gb,
                     simulation_mode=simulation_mode
                 )
 
-                
                 logger.info("[Faz III] Sanal İşlemci Zamanlayıcısı ve GPU İşçi Kanalları Başlatılıyor...")
                 self.zamanlayici = SanalIslemciZamanlayici(
                     sanal_bellek_havuzu_nesnesi=self.havuz,
                     simulation_mode=simulation_mode
                 )
 
-                
                 logger.info("[Faz V] İş Emri İdarecisi ve Komut Tercümanı İlklendiriliyor...")
                 self.idareci = IsEmriIdarecisi(
                     sanal_bellek_havuzu=self.havuz,
@@ -151,7 +144,6 @@ class KulliSurucuOrkestratoru:
                     simulation_mode=simulation_mode
                 )
 
-                
                 logger.info("[Faz IV] Hakiki C-Sürücüsü ('libkulli_cuda.so.1') Yükleniyor ve C-ABI Kancaları Aktifleştiriliyor...")
                 self.native_cdll = YukleVeBaglaNativeSurucu()
                 assert self.native_cdll is not None, "SÜRÜCÜ HAKİMİYETİ BAŞARISIZ: Hakiki C-Sürücüsü Yüklenemedi!"
@@ -166,14 +158,13 @@ class KulliSurucuOrkestratoru:
                 )
                 self.yakalayici.KancalariAktiflestir()
 
-                
                 if not self._atexit_registered:
                     atexit.register(self.durdur)
                     for sig in (signal.SIGINT, signal.SIGTERM):
                         try:
                             signal.signal(sig, self._sinyal_yakalayici)
                         except (ValueError, OSError):
-                            pass  
+                            pass
                     self._atexit_registered = True
 
                 self.surucu_calisiyor_mu = True
@@ -195,21 +186,18 @@ class KulliSurucuOrkestratoru:
 
             logger.info("\n[KulliSurucuOrkestratoru] Küllî Sürücü Kapatılıyor ve Kaynaklar Temizleniyor...")
 
-            
             if self.yakalayici is not None:
                 try:
                     self.yakalayici.KancalariPasiflestir()
                 except Exception as e:
                     logger.debug(f"[durdur] Kanca pasifleştirme uyarısı: {e}")
 
-            
             if self.zamanlayici is not None:
                 try:
                     self.zamanlayici.ZamanlayiciyiKapat()
                 except Exception as e:
                     logger.debug(f"[durdur] Zamanlayıcı kapatma uyarısı: {e}")
 
-            
             if self.havuz is not None:
                 try:
                     with self.havuz.lock:
@@ -219,17 +207,15 @@ class KulliSurucuOrkestratoru:
                 except Exception as e:
                     logger.debug(f"[durdur] Bellek havuzu kapatma uyarısı: {e}")
 
-            
             for bh in self.haritacilar:
                 try:
                     bh.HafizayiKapatVeSerbestBirak()
                 except Exception as e:
                     logger.debug(f"[durdur] Haritacı kapatma uyarısı: {e}")
 
-            
             if self.ayirici is not None:
                 try:
-                    
+
                     pass
                 except Exception as e:
                     logger.debug(f"[durdur] Sürücü ayırıcı iade uyarısı: {e}")

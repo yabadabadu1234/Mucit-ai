@@ -3,15 +3,12 @@ import pprint
 
 print("=== KÜLLÎ SANAL GPU SÜRÜCÜSÜ - NİHAİ ANA ORKESTRATÖR TESTİ ===")
 
-
 basarili = kulli_gpu.baslat(toplam_sanal_gb=88.0, simulation_mode=True)
 print("Sürücü Başlatıldı Mı:", basarili)
-
 
 ozet = kulli_gpu.durum_ozetle()
 print("\nAnlık Sürücü Durumu:")
 pprint.pprint(ozet)
-
 
 yakalayici = kulli_gpu._orkestrator.yakalayici
 malloc_fn = yakalayici.SeffafDlsymKancasi(None, "cudaMalloc")
@@ -25,7 +22,6 @@ print("cudaMemcpy Kanca Sonucu:", ret_c)
 free_fn = yakalayici.SeffafDlsymKancasi(None, "cudaFree")
 ret_f = free_fn(0x7FFF00000000)
 print("cudaFree Kanca Sonucu:", ret_f)
-
 
 durduruldu = kulli_gpu.durdur()
 print("\nSürücü Güvenle Durduruldu Mu:", durduruldu)

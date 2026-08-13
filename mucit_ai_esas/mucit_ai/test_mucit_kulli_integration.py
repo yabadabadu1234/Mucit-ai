@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import logging
@@ -7,7 +6,6 @@ import logging
 if not logging.getLogger().hasHandlers():
     logging.basicConfig(level=logging.INFO, format='[%(asctime)s][%(name)s][%(levelname)s] %(message)s', stream=sys.stdout)
 logger = logging.getLogger("MucitKulliIntegrationTest")
-
 
 try:
     import kulli_gpu
@@ -33,15 +31,12 @@ from mucit_ai.kontratlar import (
 )
 from mucit_ai.checkpoint_manager import NPZCheckpointManager
 
-
 def main():
     logger.info("=== MUCİT_AI & KÜLLÎ_GPU HAKİKİ ENTEGRASYON TESTİ (AYNA SINAĞI) BAŞLATILIYOR ===")
 
-    
     driver = kulli_gpu.baslat()
     logger.info("[Küllî_GPU Driver] Sanal Sürücü ve C-API Huni Kancaları Başarıyla Aktif Edildi.")
 
-    
     config = Model_TopolojikKonfigurasyon({
         "batch_size": 1,
         "d_v": 32,
@@ -57,7 +52,6 @@ def main():
         "K": 16,
     })
 
-    
     turkce_cumle = (
         "Türk bilişsel yapay zeka mimarimiz topolojik rekürens ve lif laplasyeni kuramları "
         "üzerine inşa edilmiş olup külli gpu sanal sürücüsü vasıtasıyla sekiz gigabaytlık "
@@ -67,25 +61,21 @@ def main():
     logger.info(f"Sentetik Türkçe Girdi Cümlesi ({kelime_sayisi} Kelime): '{turkce_cumle}'")
     assert kelime_sayisi == 30, f"Cümle tam 30 kelime olmalıdır! Mevcut: {kelime_sayisi}"
 
-    
     e1_input = E1_HamMetinAkisi(X_text=turkce_cumle)
     n1_ayristirici = N1_HibritByteTokenAyristirici(config)
     e2_bytes, x_initial = n1_ayristirici(e1_input)
     logger.info(f"N1 Çıktısı Doğrulandı: Byte/Token Uzunluğu={e2_bytes.l_bytes}, Initial Latent={type(x_initial)}")
 
-    
     n2_hucre = N2_TopoXHucreOlusumu(config)
     e3_sinir_op = n2_hucre(e2_bytes, x_initial=x_initial)
     logger.info("N2 Çıktısı Doğrulandı: Sınır Operatörleri D1 ve D2 üretildi.")
 
-    
     n3_lif = N3_LifSinirlamaAtama(config)
     e4_lif_demeti = n3_lif(e3_sinir_op, x_initial)
     laplasyen_insaci = Riyazi_LifLaplasyeniBlokInsaEdici(config)
     D0_op, Delta_0 = laplasyen_insaci.insa_et(e3_sinir_op, e4_lif_demeti.phi_matrisleri)
     logger.info("Laplasyen İnşası Doğrulandı: Coboundary D0 ve Lif Laplasyeni Delta_0 üretildi.")
 
-    
     n4_sorgu = N4_SorguSecici(config)
     n5_cevap = N5_CevapSuzucu(config=config)
     bellek_yonetici = Bellek_BaglamYoneticisi(config)
@@ -99,7 +89,6 @@ def main():
         m_bellek.M = bellek_yonetici.guncelle(m_bellek.M, e6_q, e7_a)
         logger.info(f"Rekürens Adımı r={r+1}/{config.R} Başarıyla Tamamlandı.")
 
-    
     ckpt_mgr = NPZCheckpointManager(checkpoint_dir="/tmp/test_mucit_kulli_ckpt")
     saved_path = ckpt_mgr.save_pytorch_model(
         step=1,
@@ -110,7 +99,6 @@ def main():
     logger.info(f"NPZ Checkpoint Kaydı Başarılı: {saved_path}")
 
     logger.info("=== MUCİT_AI & KÜLLÎ_GPU HAKİKİ ENTEGRASYON TESTİ (AYNA SINAĞI) BAŞARIYLA TAMAMLANDI ===")
-
 
 if __name__ == "__main__":
     main()

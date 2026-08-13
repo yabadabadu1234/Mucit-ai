@@ -19,16 +19,9 @@ import kontratlar
 from kontratlar import Model_TopolojikKonfigurasyon, BiliselKanvasModeli, E1_HamMetinAkisi
 from kulli_gpu.nvme_takas_yoneticisi import NvmeTakasYoneticisi
 
-
 OLCUMLER: List[Tuple[str, float]] = []
 
-
 class ZamanOlcer:
-
-
-
-
-
     def __init__(self, etiket: str):
         self.etiket = etiket
         self.cuda_var = torch.cuda.is_available()
@@ -53,13 +46,7 @@ class ZamanOlcer:
         OLCUMLER.append((self.etiket, gpu_ms))
         print(f"  {self.etiket:<48} {gpu_ms:>9.2f} ms   (cpu {cpu_ms:>8.2f} ms)")
 
-
 def sarmalayici_yukunu_olc() -> None:
-
-
-
-
-
     asil = kontratlar.acil_durum_oom_yakalayici_ve_kurtarici
     sayac = {"n": 0, "sarmalayici_ms": 0.0, "ic_ms": 0.0}
 
@@ -98,7 +85,6 @@ def sarmalayici_yukunu_olc() -> None:
     print(f"  Doğrudan çağrı maliyeti                : {bos_dogrudan_ms * 1000:>9.2f} µs")
     print(f"  Net sarmalayıcı yükü (çağrı başına)    : {fark * 1000:>9.2f} µs")
     print(f"  Adım başına 97 çağrı için toplam yük   : {fark * 97:>9.3f} ms")
-
 
 def dugum_profili_cikar() -> None:
     config = Model_TopolojikKonfigurasyon()
@@ -175,7 +161,6 @@ def dugum_profili_cikar() -> None:
         for _ in range(100):
             _ = kontratlar.d0_carp(y, D0_op)
 
-
 def rapor_bas() -> None:
     print("\n" + "=" * 78)
     print("EN PAHALI 12 ÖLÇÜM (azalan)")
@@ -198,7 +183,6 @@ def rapor_bas() -> None:
     for anahtar, sure in sorted(birikim.items(), key=lambda x: -x[1]):
         print(f"  {anahtar:<48} {sure:>9.2f} ms")
 
-
 def main() -> int:
     print("=" * 78)
     print("UMUMİ EĞİTİM HATTI ANATOMİK PROFİL")
@@ -208,7 +192,6 @@ def main() -> int:
     sarmalayici_yukunu_olc()
     rapor_bas()
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

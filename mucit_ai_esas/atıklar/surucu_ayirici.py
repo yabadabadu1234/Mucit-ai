@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import time
@@ -10,13 +9,10 @@ from typing import Dict, List, Any, Optional
 logger = logging.getLogger("kulli_gpu.surucu_ayirici")
 logger.setLevel(logging.INFO)
 
-
 class FatalDriverError(Exception):
     pass
 
-
 class SurucuAyirici:
-
     def __init__(self, simulation_mode: bool = False):
         self.simulation_mode = simulation_mode
         logger.info(f"[SurucuAyirici] Sürücü Ayırıcı ve Devir Teslim Birimi İlklendirildi (simulation_mode={simulation_mode}).")
@@ -29,7 +25,7 @@ class SurucuAyirici:
                 try:
                     os.write(fd, b"1")
                     logger.info(f"[{pci_adresi}] Donanımsal PCI Bus Reset icra edildi (Hard Reset OK).")
-                    time.sleep(0.3)  
+                    time.sleep(0.3)
                     return True
                 finally:
                     os.close(fd)
@@ -50,29 +46,29 @@ class SurucuAyirici:
 
     def MevcutBaglantiyiSorgula(self, pci_adresi: str) -> str:
         driver_path = Path(f"/sys/bus/pci/devices/{pci_adresi}/driver")
-        
+
         if driver_path.exists():
             try:
-                
+
                 real_driver_path = os.readlink(str(driver_path))
                 driver_name = os.path.basename(real_driver_path)
                 return driver_name
             except Exception as err:
                 logger.warning(f"[{pci_adresi}] Sürücü bağlama okuma uyarısı: {err}")
                 return "nvidia"
-        
+
         return "Boşta"
 
     def MevcutSurucudenAyir(self, pci_adresi: str) -> str:
         aktif_surucu = self.MevcutBaglantiyiSorgula(pci_adresi)
-        
+
         if aktif_surucu == "Boşta":
             logger.info(f"[{pci_adresi}] Donanım zaten boşta, unbind atlanıyor.")
             self.DonanimsalSifirla(pci_adresi)
             return "Zaten Boşta"
 
         unbind_path = f"/sys/bus/pci/drivers/{aktif_surucu}/unbind"
-        
+
         try:
             if os.path.exists(unbind_path):
                 fd = os.open(unbind_path, os.O_WRONLY)
@@ -93,18 +89,16 @@ class SurucuAyirici:
                 raise FatalDriverError(f"[{pci_adresi}] Unbind başarısız: {err}")
             logger.warning(f"[{pci_adresi}] Unbind hatası: {err}")
 
-        
         self.DonanimsalSifirla(pci_adresi)
 
-        
         time.sleep(0.2)
-        
+
         logger.info(f"[{pci_adresi}] Donanımın {aktif_surucu} sürücüsü ile ilişiği kesildi.")
         return "İlişik Kesildi"
 
     def HedefSurucuyuTanit(self, pci_adresi: str, hedef_surucu_adi: str = "vfio-pci") -> str:
         override_path = f"/sys/bus/pci/devices/{pci_adresi}/driver_override"
-        
+
         try:
             if os.path.exists(override_path):
                 fd = os.open(override_path, os.O_WRONLY)
@@ -130,7 +124,7 @@ class SurucuAyirici:
 
     def YeniSurucuyeBagla(self, pci_adresi: str, hedef_surucu_adi: str = "vfio-pci") -> str:
         bind_path = f"/sys/bus/pci/drivers/{hedef_surucu_adi}/bind"
-        
+
         if os.path.exists(bind_path):
             try:
                 fd = os.open(bind_path, os.O_WRONLY)
@@ -149,7 +143,6 @@ class SurucuAyirici:
         else:
             logger.info(f"[{pci_adresi}] Hedef bind kütüğü mevcut değil veya sanal modda: '{hedef_surucu_adi}'")
 
-        
         time.sleep(0.1)
 
         logger.info(f"[{pci_adresi}] Donanım '{hedef_surucu_adi}' sürücüsüne bağlandı.")
@@ -157,12 +150,12 @@ class SurucuAyirici:
 
     def DevirDurumunuDogrula(self, pci_adresi: str, hedef_surucu_adi: str = "vfio-pci") -> bool:
         son_durum = self.MevcutBaglantiyiSorgula(pci_adresi)
-        
+
         if son_durum == hedef_surucu_adi:
             logger.info(f"[{pci_adresi}] Devir Doğrulandı: Donanım '{hedef_surucu_adi}' sevkinde.")
             return True
         else:
-            
+
             logger.info(f"[{pci_adresi}] Devir Doğrulandı (Sanal Katman): '{hedef_surucu_adi}' aktif.")
             return True
 
@@ -201,22 +194,18 @@ class SurucuAyirici:
         kardes_cihazlar_listesi: List[str],
         hedef_surucu: str = "vfio-pci"
     ) -> bool:
-        
+
         for dev in kardes_cihazlar_listesi:
             self.MevcutSurucudenAyir(dev)
 
-        
         time.sleep(0.2)
 
-        
         for dev in kardes_cihazlar_listesi:
             self.HedefSurucuyuTanit(dev, hedef_surucu)
 
-        
         for dev in kardes_cihazlar_listesi:
             self.YeniSurucuyeBagla(dev, hedef_surucu)
 
-        
         all_ok = True
         for dev in kardes_cihazlar_listesi:
             if not self.DevirDurumunuDogrula(dev, hedef_surucu):
@@ -251,7 +240,6 @@ class SurucuAyirici:
         if gpu_id_a == gpu_id_b:
             return True
 
-        
         gpu_min = min(gpu_id_a, gpu_id_b)
         gpu_max = max(gpu_id_a, gpu_id_b)
 

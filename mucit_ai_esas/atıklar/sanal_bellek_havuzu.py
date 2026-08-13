@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import math
@@ -25,13 +24,10 @@ except ImportError:
 logger = logging.getLogger("kulli_gpu.sanal_bellek_havuzu")
 logger.setLevel(logging.INFO)
 
-
 class SanalBellekIhlalHatasi(Exception):
     pass
 
-
 class SanalBellekAraligi:
-
     def __init__(
         self,
         sanal_adres: int,
@@ -42,7 +38,7 @@ class SanalBellekAraligi:
         self.sanal_adres = sanal_adres
         self.boyut_bayt = boyut_bayt
         self.gpu_id = gpu_id
-        self.durum = durum  
+        self.durum = durum
         self.fiziksel_mmap_nesnesi: Any = None
         self.c_pointer: Any = None
         self.parca_haritalari: List[Dict[str, Any]] = []
@@ -58,9 +54,7 @@ class SanalBellekAraligi:
             f"Boyut: {sz_mb} MB | Durum: {self.durum} | GPU: #{self.gpu_id}>"
         )
 
-
 class SanalBellekHavuzu:
-
     def __init__(
         self,
         toplam_sanal_gb: float = 88.0,
@@ -69,12 +63,12 @@ class SanalBellekHavuzu:
     ):
         self.lock = threading.RLock()
         self.simulation_mode = simulation_mode
-        self.sanal_taban_adresi = 0x7FFF00000000  
+        self.sanal_taban_adresi = 0x7FFF00000000
         self.toplam_sanal_bayt = int(toplam_sanal_gb * (1024**3))
         self.gpu_haritacilari = gpu_haritacilari_listesi or []
         self.araliklar_listesi: List[SanalBellekAraligi] = []
         self.koruma_sayfasi_baslangic = 0
-        self.koruma_sayfasi_boyutu = 2 * 1024 * 1024  
+        self.koruma_sayfasi_boyutu = 2 * 1024 * 1024
 
         logger.info(
             f"[SanalBellekHavuzu] Sanal Bellek Havuzu İlklendirildi "
@@ -86,7 +80,7 @@ class SanalBellekHavuzu:
 
     def IlklendirVeKorumaSayfasiKur(self):
         with self.lock:
-            
+
             ana_aralik = SanalBellekAraligi(
                 sanal_adres=self.sanal_taban_adresi,
                 boyut_bayt=self.toplam_sanal_bayt,
@@ -94,7 +88,6 @@ class SanalBellekHavuzu:
                 durum="BOŞ"
             )
 
-            
             self.koruma_sayfasi_baslangic = self.sanal_taban_adresi + self.toplam_sanal_bayt
             koruma_araligi = SanalBellekAraligi(
                 sanal_adres=self.koruma_sayfasi_baslangic,
@@ -194,7 +187,6 @@ class SanalBellekHavuzu:
             bh = BellekHaritacisi(simulation_mode=self.simulation_mode)
             return bh.VRAMErisimHattiKur(pci_adresi=pci_addr, bolge_no="1", vram_bytes=bytes_to_map)
 
-        
         dummy_c_ptr = ctypes.cast(ctypes.c_uint64(self.sanal_taban_adresi + gpu_idx * 0x100000000), ctypes.POINTER(ctypes.c_uint32))
         return {
             "status": "Simülasyon C-İşaretçi Atandı",
@@ -239,7 +231,6 @@ class SanalBellekHavuzu:
             try:
                 tahsissiz = [a for a in self.araliklar_listesi if a.durum == "TAHSİS_EDİLDİ"]
 
-                
                 for item in tahsissiz:
                     for p_map in item.parca_haritalari:
                         self._unmap_gpu_vram(p_map)
@@ -247,7 +238,6 @@ class SanalBellekHavuzu:
                 cur_addr = self.sanal_taban_adresi
                 yeni_araliklar: List[SanalBellekAraligi] = []
 
-                
                 for item in tahsissiz:
                     item.sanal_adres = cur_addr
                     cur_addr += item.boyut_bayt
@@ -283,7 +273,6 @@ class SanalBellekHavuzu:
                     yeni_bos = SanalBellekAraligi(cur_addr, kalan_bos_bayt, gpu_id=-1, durum="BOŞ")
                     yeni_araliklar.append(yeni_bos)
 
-                
                 koruma_araligi = SanalBellekAraligi(
                     self.koruma_sayfasi_baslangic,
                     self.koruma_sayfasi_boyutu,
@@ -298,7 +287,7 @@ class SanalBellekHavuzu:
 
             except Exception as err:
                 logger.critical(f"[SikistirVeGeriAl] Compaction Hatası: {err}. Rollback icra ediliyor...")
-                
+
                 self.araliklar_listesi = []
                 for s_addr, b_bytes, g_id, st, p_maps in eski_durum:
                     rec = SanalBellekAraligi(s_addr, b_bytes, g_id, st)
@@ -329,12 +318,11 @@ class SanalBellekHavuzu:
     def CachingAllocatorKilitliCompaction(self) -> bool:
         with self.lock:
             logger.info("[CachingAllocatorKilitliCompaction] Kilitli Compaction Başlatılıyor...")
-            
+
             for aralik in self.araliklar_listesi:
                 if aralik.durum == "TAHSİS_EDİLDİ" and getattr(aralik, "kilitli", False):
                     aralik.durum = "KİLİTLİ"
 
-            
             serbest_tahsisliler = [a for a in self.araliklar_listesi if a.durum == "TAHSİS_EDİLDİ"]
             kilitli_tahsisliler = [a for a in self.araliklar_listesi if a.durum in ("KİLİTLİ", "KORUMA")]
 
@@ -342,7 +330,6 @@ class SanalBellekHavuzu:
                 for p_map in item.parca_haritalari:
                     self._unmap_gpu_vram(p_map)
 
-            
             cur_addr = self.sanal_taban_adresi
             yeni_araliklar: List[SanalBellekAraligi] = []
 
@@ -380,7 +367,6 @@ class SanalBellekHavuzu:
 
                     yeni_araliklar.append(item)
 
-            
             for aralik in yeni_araliklar:
                 if aralik.durum == "KİLİTLİ":
                     aralik.durum = "TAHSİS_EDİLDİ"
@@ -402,14 +388,12 @@ class SanalBellekHavuzu:
 
         tam_tur_blok_bayt = gpu_sayisi * sayfa_esigi
 
-        
         tam_bolunen_kitle = (toplam_taskin_bayt // tam_tur_blok_bayt) * tam_tur_blok_bayt if tam_tur_blok_bayt > 0 else 0
         gpu_basi_ana_pay = tam_bolunen_kitle // gpu_sayisi if gpu_sayisi > 0 else 0
 
         gpu_tahsisleri = {g_id: gpu_basi_ana_pay for g_id in gpu_id_listesi}
         kusurat_bayt = toplam_taskin_bayt - tam_bolunen_kitle
 
-        
         while kusurat_bayt >= tam_tur_blok_bayt and tam_tur_blok_bayt > 0:
             bolunebilir_alt_dilim = (kusurat_bayt // tam_tur_blok_bayt) * tam_tur_blok_bayt
             gpu_basi_ek_pay = bolunebilir_alt_dilim // gpu_sayisi
@@ -417,7 +401,6 @@ class SanalBellekHavuzu:
                 gpu_tahsisleri[g_id] += gpu_basi_ek_pay
             kusurat_bayt -= bolunebilir_alt_dilim
 
-        
         if kusurat_bayt > 0:
             en_musait_gpu = None
             max_kullanilabilir_vram = -1
@@ -443,10 +426,9 @@ class SanalBellekHavuzu:
         hedef_gpu_id: int = 0
     ) -> Dict[str, Any]:
         with self.lock:
-            
+
             self.AraliklariBirlestir()
 
-            
             hedef_aralik: Optional[SanalBellekAraligi] = None
             for aralik in self.araliklar_listesi:
                 if aralik.durum == "BOŞ" and aralik.boyut_bayt >= istenen_bayt:
@@ -454,7 +436,7 @@ class SanalBellekHavuzu:
                     break
 
             if hedef_aralik is None:
-                
+
                 self.CachingAllocatorKilitliCompaction()
                 for aralik in self.araliklar_listesi:
                     if aralik.durum == "BOŞ" and aralik.boyut_bayt >= istenen_bayt:
@@ -466,17 +448,15 @@ class SanalBellekHavuzu:
                     f"YETERSİZ BELLEK: {round(istenen_bayt/(1024**2), 2)} MB miktarında boş sanal VRAM bulunamadı!"
                 )
 
-            
             self.AralikDogrula(hedef_aralik.sanal_adres, istenen_bayt)
 
-            
             toplam_gpu = max(1, len(self.gpu_haritacilari))
             yerel_bos_vram = self._get_gpu_free_vram(hedef_gpu_id)
 
             haritalama_parcalari: List[Dict[str, Any]] = []
 
             if yerel_bos_vram >= istenen_bayt or toplam_gpu <= 1:
-                
+
                 mmap_res = self._map_gpu_vram(hedef_gpu_id, istenen_bayt)
                 haritalama_parcalari.append({
                     "gpu_id": hedef_gpu_id,
@@ -489,7 +469,7 @@ class SanalBellekHavuzu:
                     "c_pointer": mmap_res.get("c_pointer")
                 })
             else:
-                
+
                 yerel_tahsis_bayt = max(0, yerel_bos_vram)
                 kalan_bayt = istenen_bayt - yerel_tahsis_bayt
 
@@ -526,7 +506,6 @@ class SanalBellekHavuzu:
                         })
                         cur_off += parca_bayt
 
-            
             artik_bayt = hedef_aralik.boyut_bayt - istenen_bayt
             sanal_baslangic = hedef_aralik.sanal_adres
 
@@ -535,7 +514,6 @@ class SanalBellekHavuzu:
             hedef_aralik.durum = "TAHSİS_EDİLDİ"
             hedef_aralik.parca_haritalari = haritalama_parcalari
 
-            
             if haritalama_parcalari:
                 hedef_aralik.c_pointer = haritalama_parcalari[0].get("c_pointer")
                 hedef_aralik.fiziksel_mmap_nesnesi = haritalama_parcalari[0].get("mmap_object")
@@ -578,11 +556,9 @@ class SanalBellekHavuzu:
             if aralik.durum == "KORUMA":
                 raise SanalBellekIhlalHatasi("GÜVENLİK İHLALİ: Koruma Sayfası (Guard Page) serbest bırakılamaz!")
 
-            
             for p_map in aralik.parca_haritalari:
                 self._unmap_gpu_vram(p_map)
 
-            
             aralik.durum = "BOŞ"
             aralik.gpu_id = -1
             aralik.c_pointer = None
@@ -617,7 +593,7 @@ class SanalBellekHavuzu:
         if gpu_id1 < 0 or gpu_id2 < 0:
             return False
         if self.simulation_mode:
-            return True  
+            return True
         if 0 <= gpu_id1 < len(self.gpu_haritacilari) and 0 <= gpu_id2 < len(self.gpu_haritacilari):
             gh1 = self.gpu_haritacilari[gpu_id1]
             if hasattr(gh1, "p2p_supported") and callable(getattr(gh1, "p2p_supported")):
@@ -632,7 +608,6 @@ class SanalBellekHavuzu:
         if gpu_id_a == gpu_id_b:
             return True
 
-        
         gpu_min = min(gpu_id_a, gpu_id_b)
         gpu_max = max(gpu_id_a, gpu_id_b)
 
@@ -689,11 +664,10 @@ class SanalBellekHavuzu:
         kopyalanacak_bayt: int
     ) -> bool:
         with self.lock:
-            
+
             self.AralikDogrula(kaynak_sanal_adres, kopyalanacak_bayt)
             self.AralikDogrula(hedef_sanal_adres, kopyalanacak_bayt)
 
-            
             kaynak_aralik = self.AdrestenAralikBul(kaynak_sanal_adres)
             hedef_aralik = self.AdrestenAralikBul(hedef_sanal_adres)
 
@@ -703,7 +677,6 @@ class SanalBellekHavuzu:
             if kopyalanacak_bayt <= 0:
                 return True
 
-            
             kaynak_ofset = kaynak_sanal_adres - kaynak_aralik.sanal_adres
             hedef_ofset = hedef_sanal_adres - hedef_aralik.sanal_adres
 
@@ -724,10 +697,9 @@ class SanalBellekHavuzu:
             kaynak_fiziksel_ptr = kaynak_base_ptr + kaynak_ofset
             hedef_fiziksel_ptr = hedef_base_ptr + hedef_ofset
 
-            
             senaryo = "A"
             try:
-                
+
                 if kaynak_aralik.gpu_id == hedef_aralik.gpu_id:
                     senaryo = "A (Aynı GPU VRAM-to-VRAM)"
                     try:
@@ -735,7 +707,6 @@ class SanalBellekHavuzu:
                     except (OSError, ValueError, TypeError) as mem_err:
                         logger.debug(f"[SanalAdreslerArasiKopyala] Senaryo A simülasyon aktarımı: {mem_err}")
 
-                
                 elif self.GPU_P2P_Erisim_Aktif_Mi(kaynak_aralik.gpu_id, hedef_aralik.gpu_id):
                     senaryo = "B (P2P PCIe/NVLink DMA)"
                     self.AsimetrikSiraliP2PVeriyoluKilitleme(kaynak_aralik.gpu_id, hedef_aralik.gpu_id)
@@ -744,14 +715,13 @@ class SanalBellekHavuzu:
                     except (OSError, ValueError, TypeError) as mem_err:
                         logger.debug(f"[SanalAdreslerArasiKopyala] Senaryo B simülasyon aktarımı: {mem_err}")
 
-                
                 else:
                     senaryo = "C (Host-Staged Relay)"
                     gecici_tampon = ctypes.create_string_buffer(kopyalanacak_bayt)
                     try:
-                        
+
                         ctypes.memmove(gecici_tampon, kaynak_fiziksel_ptr, kopyalanacak_bayt)
-                        
+
                         ctypes.memmove(hedef_fiziksel_ptr, gecici_tampon, kopyalanacak_bayt)
                     except (OSError, ValueError, TypeError) as mem_err:
                         logger.debug(f"[SanalAdreslerArasiKopyala] Senaryo C simülasyon aktarımı: {mem_err}")
@@ -759,7 +729,6 @@ class SanalBellekHavuzu:
             except Exception as err:
                 logger.warning(f"[SanalAdreslerArasiKopyala] Aktarım simüle edildi ({err})")
 
-            
             if BellekHaritacisi is not None:
                 try:
                     bh = BellekHaritacisi(simulation_mode=self.simulation_mode)
@@ -774,14 +743,13 @@ class SanalBellekHavuzu:
                 f"Boyut: {kopyalanacak_bayt} Bayt"
             )
 
-            
             return True
 
     def HavuzDurumuOzetle(self) -> Dict[str, Any]:
         with self.lock:
             toplam_tahsis = sum(a.boyut_bayt for a in self.araliklar_listesi if a.durum == "TAHSİS_EDİLDİ")
             toplam_bos = sum(a.boyut_bayt for a in self.araliklar_listesi if a.durum == "BOŞ")
-            
+
             return {
                 "toplam_sanal_gb": round(self.toplam_sanal_bayt / (1024**3), 2),
                 "tahsis_edilen_mb": round(toplam_tahsis / (1024**2), 2),

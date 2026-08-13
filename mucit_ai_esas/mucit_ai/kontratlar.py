@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import logging
@@ -12,7 +11,6 @@ import json
 import types
 
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
-
 
 try:
     from scipy.special import iv, ive
@@ -37,14 +35,12 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.checkpoint import checkpoint as _torch_checkpoint
 
-
 try:
     import tiktoken
     from tiktoken.load import load_tiktoken_bpe
 except ImportError:
     tiktoken = None
     load_tiktoken_bpe = None
-
 
 class CevrimdisiAksiyomatikTokenizer:
     def __init__(self, vocab_size: int = 200000):
@@ -64,29 +60,9 @@ class CevrimdisiAksiyomatikTokenizer:
     def decode_single_token_bytes(self, token_id: int) -> bytes:
         return bytes([int(token_id) % 256])
 
-
-
-
-
-
-
-
-
-
 PADE_AZAMI_OGRENME_ORANI: float = 1e-2
 
-
 def gradyanlari_parametreye_hizala(trainable_params: List[Any]) -> int:
-
-
-
-
-
-
-
-
-
-
     duzeltilen = 0
     for p in trainable_params:
         g = p.grad
@@ -101,19 +77,7 @@ def gradyanlari_parametreye_hizala(trainable_params: List[Any]) -> int:
             duzeltilen += 1
     return duzeltilen
 
-
 def optimizer_durumunu_parametreye_hizala(optimizer: Any, trainable_params: List[Any]) -> int:
-
-
-
-
-
-
-
-
-
-
-
     tasinan = 0
     durum = getattr(optimizer, "state", None)
     if not durum:
@@ -130,7 +94,6 @@ def optimizer_durumunu_parametreye_hizala(optimizer: Any, trainable_params: List
                 p_durum[anahtar] = deger.to(device=p.device, dtype=hedef_dtype)
                 tasinan += 1
     return tasinan
-
 
 def stiefel_manifold_projection(tensor: torch.Tensor, grad: Optional[torch.Tensor] = None, lr: float = 1e-3) -> torch.Tensor:
     if not isinstance(tensor, torch.Tensor) or tensor.dim() != 2:
@@ -169,7 +132,6 @@ def stiefel_manifold_projection(tensor: torch.Tensor, grad: Optional[torch.Tenso
 
 stiefel_qr_projection = stiefel_manifold_projection
 
-
 _GLOBAL_TOKENIZER_CACHE: Dict[str, Any] = {}
 
 def al_cevrimdisi_veya_tiktoken_tokenizer(encoding_name: str = "o200k_base"):
@@ -181,7 +143,6 @@ def al_cevrimdisi_veya_tiktoken_tokenizer(encoding_name: str = "o200k_base"):
     import logging
     logger = logging.getLogger(__name__)
 
-    
     olasi_kaggle_yollari = [
         "/kaggle/input/datasets/ulankaggle/tiktoken/o200k_base.tiktoken",
         "/kaggle/input/tiktoken-o200k-base/o200k_base.tiktoken",
@@ -217,42 +178,39 @@ def al_cevrimdisi_veya_tiktoken_tokenizer(encoding_name: str = "o200k_base"):
     _GLOBAL_TOKENIZER_CACHE[encoding_name] = fallback_tok
     return fallback_tok
 
-
 class Model_TopolojikKonfigurasyon:
     def __init__(self, param_dict: Optional[Dict[str, Any]] = None):
         params = param_dict or {}
-        self.V_nodes: int = params.get("V_nodes", 8)        
-        self.d_v: int = params.get("d_v", 32)               
-        self.d_e: int = params.get("d_e", 32)               
-        self.d_q: int = params.get("d_q", 64)               
-        self.d_a: int = params.get("d_a", 64)               
-        self.d_m: int = params.get("d_m", 64)               
-        self.d_h: int = params.get("d_h", 64)               
-        self.d: int = params.get("d", 128)                  
-        self.D: int = self.V_nodes * self.d_v               
-        self.M_plus_1: int = params.get("M_plus_1", 32)     
-        self.N: int = params.get("N", 1024)                 
-        self.N_max: int = params.get("N_max", 2048)         
-        self.R: int = params.get("R", 4)                    
-        self.K: int = params.get("K", 16)                   
-        self.V_size: int = params.get("V_size", 200000)     
-        self.V_byte_size: int = params.get("V_byte_size", 256) 
-        self.GRPO_G: int = params.get("GRPO_G", 4)          
-        self.beta_kl: float = params.get("beta_kl", 0.05)   
-        self.dt: float = params.get("dt", 0.05)             
+        self.V_nodes: int = params.get("V_nodes", 8)
+        self.d_v: int = params.get("d_v", 32)
+        self.d_e: int = params.get("d_e", 32)
+        self.d_q: int = params.get("d_q", 64)
+        self.d_a: int = params.get("d_a", 64)
+        self.d_m: int = params.get("d_m", 64)
+        self.d_h: int = params.get("d_h", 64)
+        self.d: int = params.get("d", 128)
+        self.D: int = self.V_nodes * self.d_v
+        self.M_plus_1: int = params.get("M_plus_1", 32)
+        self.N: int = params.get("N", 1024)
+        self.N_max: int = params.get("N_max", 2048)
+        self.R: int = params.get("R", 4)
+        self.K: int = params.get("K", 16)
+        self.V_size: int = params.get("V_size", 200000)
+        self.V_byte_size: int = params.get("V_byte_size", 256)
+        self.GRPO_G: int = params.get("GRPO_G", 4)
+        self.beta_kl: float = params.get("beta_kl", 0.05)
+        self.dt: float = params.get("dt", 0.05)
         self.lr: float = params.get("lr", 1e-3)
         self.batch_size: int = params.get("batch_size", 2)
         self.azami_dugum_komsulugu: int = params.get("azami_dugum_komsulugu", 8)
         self.azami_dugum_sayisi: int = params.get("azami_dugum_sayisi", 512)
         self.device: str = "cuda" if torch.cuda.is_available() else "cpu"
 
-
 def vram_bayt_tahmin_et(*boyutlar: int, eleman_bayt: int = 4, guvenlik_katsayisi: float = 3.0) -> int:
     eleman_sayisi = 1
     for b in boyutlar:
         eleman_sayisi *= max(1, int(b))
     return int(eleman_sayisi * eleman_bayt * guvenlik_katsayisi)
-
 
 @dataclass
 class SistemYapilandirmasi:
@@ -269,85 +227,70 @@ class SistemYapilandirmasi:
     sozluk_boyutu: int = 256
     rekurens_dongu_sayisi: int = 4
 
-
 @dataclass
 class E1_HamMetinAkisi:
     X_text: str
 
-
 @dataclass
 class E2_ByteTensoru:
-    byte_tensor: torch.Tensor  
+    byte_tensor: torch.Tensor
     l_bytes: int = 0
 
     def __post_init__(self):
         if (self.l_bytes == 0 or self.l_bytes is None) and hasattr(self.byte_tensor, 'shape') and len(self.byte_tensor.shape) >= 2:
             self.l_bytes = int(self.byte_tensor.shape[1])
 
-
 @dataclass
 class E3_SinirOperatorleri:
-    D1: torch.Tensor  
-    D2: torch.Tensor  
-
+    D1: torch.Tensor
+    D2: torch.Tensor
 
 @dataclass
 class E4_LifDemeti:
-    phi_matrisleri: nn.ParameterDict  
-    baslangic_gizil_durumu: torch.Tensor  
-
+    phi_matrisleri: nn.ParameterDict
+    baslangic_gizil_durumu: torch.Tensor
 
 @dataclass
 class E5_A_MevcutGizilDurum:
-    x_r: torch.Tensor  
-
+    x_r: torch.Tensor
 
 @dataclass
 class E5_B_BellekGonderimi:
-    M: torch.Tensor  
-
+    M: torch.Tensor
 
 @dataclass
 class E6_GizilSorgu:
-    q_r: torch.Tensor  
-
+    q_r: torch.Tensor
 
 @dataclass
 class E7_LokalBilgi:
-    a_r: torch.Tensor  
-
+    a_r: torch.Tensor
 
 @dataclass
 class E8_SentetikAraDurum:
-    synthetic_state: torch.Tensor  
-
+    synthetic_state: torch.Tensor
 
 @dataclass
 class E9_GuncellenmisGizilDurum:
-    x_next: torch.Tensor  
-
+    x_next: torch.Tensor
 
 @dataclass
 class E10_KulliManaMatrisi:
-    C: torch.Tensor  
-
+    C: torch.Tensor
 
 @dataclass
 class E11_ParalelGomuluVektorlerMatrisi:
-    X_output: torch.Tensor  
-
+    X_output: torch.Tensor
 
 @dataclass
 class E12_ParalelTokenOlasilikMatrisi:
-    P: torch.Tensor  
+    P: torch.Tensor
     P_chunks: Optional[List[torch.Tensor]] = None
-    preds_full: Optional[torch.Tensor] = None  
-
+    preds_full: Optional[torch.Tensor] = None
 
 @dataclass
 class E13_HedefTokenDizisi:
-    target_tokens: torch.Tensor  
-
+    target_tokens: torch.Tensor
 
 @dataclass
 class E14_SistemKayipMetrikleri:
@@ -356,17 +299,14 @@ class E14_SistemKayipMetrikleri:
     laplacian_loss: torch.Tensor
     cohomology_loss: torch.Tensor
 
-
 @dataclass
 class E15_GuncellenmisBellekMatrisi:
-    updated_memory: torch.Tensor  
-
+    updated_memory: torch.Tensor
 
 @dataclass
 class E16_UretilenMetinCiktisi:
     generated_text: str
     token_ids: List[int]
-
 
 @dataclass
 class E17_EgitimGradiyantPaketi:
@@ -374,13 +314,11 @@ class E17_EgitimGradiyantPaketi:
     current_lr: float
     grad_norm: float
 
-
 @dataclass
 class E18_TopolojiDenetimRaporu:
     is_stable: bool
     max_eigenvalue: float
     spectral_gap: float
-
 
 class N4_SorguSecici_AltAg(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -395,7 +333,6 @@ class N4_SorguSecici_AltAg(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         return self.net(x)
 
-
 class N5_CevapSuzucu_AltAg(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
@@ -408,7 +345,6 @@ class N5_CevapSuzucu_AltAg(nn.Module):
 
     def forward(self, q: torch.Tensor) -> torch.Tensor:
         return self.net(q)
-
 
 class N6_KohomolojikAktor_AltAg(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon, e_coboundary_dim: int):
@@ -431,28 +367,11 @@ class N6_KohomolojikAktor_AltAg(nn.Module):
         self.out_proj = nn.Linear(d_h * 2, d_h)
         self.config = config
 
-
-
-
-
-
-
-
-
-
-
-
         self.hafiza_metrik_tabani = nn.Parameter(
             torch.randn(getattr(config, 'K', 16), d_h * 2) * (1.0 / math.sqrt(d_h * 2))
         )
 
     def hafiza_metrigi_kur(self, R_hafiza: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
-
-
-
-
-
-
         R_kosegen = torch.diagonal(R_hafiza, dim1=-2, dim2=-1)
         s_R = R_kosegen.sum(dim=-1, keepdim=True)
         W = self.hafiza_metrik_tabani.to(device=R_hafiza.device, dtype=R_hafiza.dtype)
@@ -460,11 +379,6 @@ class N6_KohomolojikAktor_AltAg(nn.Module):
         return M_R, s_R
 
     def lie_braketi_R(self, u: torch.Tensor, v: torch.Tensor, M_R: torch.Tensor) -> torch.Tensor:
-
-
-
-
-
         uM = torch.einsum('bi,bij->bj', u, M_R)
         vM = torch.einsum('bi,bij->bj', v, M_R)
         return uM * v - vM * u
@@ -502,14 +416,6 @@ class N6_KohomolojikAktor_AltAg(nn.Module):
             + self.superpoz_bias
         )
 
-
-
-
-
-
-
-
-
         if R_hafiza is not None and R_hafiza.dim() == 3:
             if R_hafiza.shape[0] != h_q.shape[0]:
                 if R_hafiza.shape[0] == 1:
@@ -529,7 +435,6 @@ class N6_KohomolojikAktor_AltAg(nn.Module):
         y = self.act(y)
         return self.out_proj(y)
 
-
 class Maarif_NedenselSuzgec(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
@@ -543,8 +448,6 @@ class Maarif_NedenselSuzgec(nn.Module):
         nn.init.zeros_(self.out_proj.bias)
 
     def forward(self, X_output: torch.Tensor) -> torch.Tensor:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         device = zorunlu_cihaz if zorunlu_cihaz is not None else X_output.device
         if next(self.parameters(), None) is not None:
@@ -553,26 +456,16 @@ class Maarif_NedenselSuzgec(nn.Module):
         if X_output.device != device:
             X_output = X_output.to(device)
 
-        
         X_t = X_output.transpose(1, 2)
         B, N, d = X_t.shape
 
         if N <= 1:
             return X_output
 
-        
         k_indices = torch.arange(N, dtype=torch.float32, device=device)
         t = -torch.cos(k_indices * math.pi / max(1, N - 1))
 
         gamma_clamped = F.softplus(self.gamma) + 1e-4
-
-
-
-
-
-
-
-
 
         s = gamma_clamped * t
         s_tavan = s.max().detach()
@@ -580,17 +473,13 @@ class Maarif_NedenselSuzgec(nn.Module):
         ardil = torch.exp(s_tavan - s).view(1, N, 1)
         X_volterra = ardil * torch.cumsum(oncul * X_t, dim=1)
 
-
         w_j = math.pi / max(1, N - 1)
         X_volterra = X_volterra * w_j
 
         X_refined = X_t + self.out_proj(X_volterra)
         return X_refined.transpose(1, 2)
 
-
 class Yardimci_ChebyshevMatrisHesaplayici:
-    
-    
     _ONBELLEK_AZAMI_GIRDI = 64
 
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -643,19 +532,17 @@ class Yardimci_ChebyshevMatrisHesaplayici:
 
         T = torch.zeros((M_p_1, N), device=device)
         M_val = float(M_p_1 - 1)
-        
+
         for n in range(M_p_1):
-            
+
             if M_val > 0:
                 alpha = math.pi / (M_val + 2.0)
                 sigma_n = ((M_val - n + 1.0) * math.cos(n * alpha) + math.sin(n * alpha) / math.tan(alpha)) / (M_val + 2.0)
             else:
                 sigma_n = 1.0
 
-            
             T_pos = sigma_n * torch.cos(n * torch.acos(torch.clamp(t_sample, -0.9999, 0.9999)))
-            
-            
+
             if n > 0:
                 dT_vel = sigma_n * n * torch.sin(n * torch.acos(torch.clamp(t_sample, -0.9999, 0.9999))) / torch.sqrt(1 - t_sample**2 + 1e-6)
                 T[n, :] = T_pos + (0.05 / math.sqrt(max(1, N))) * dT_vel
@@ -667,19 +554,17 @@ class Yardimci_ChebyshevMatrisHesaplayici:
 
     def hesapla_yay_uzunlugu(self, C: torch.Tensor, delta_token: float = 0.5) -> Tuple[torch.Tensor, torch.Tensor]:
         B, d, M_p_1 = C.shape
-        num_quad = 50  
+        num_quad = 50
         dT, t_quad = self.get_precomputed_dT(M_p_1, num_quad, C.device)
-            
-        
+
         dX_dt = torch.matmul(C, dT)
-        velocity_norms = torch.sqrt(torch.sum(dX_dt ** 2, dim=1) + 1e-8)  
-        L_arc = torch.trapz(velocity_norms, t_quad, dim=-1)  
-        
+        velocity_norms = torch.sqrt(torch.sum(dX_dt ** 2, dim=1) + 1e-8)
+        L_arc = torch.trapz(velocity_norms, t_quad, dim=-1)
+
         N_teorik = torch.ceil(L_arc / delta_token).to(torch.int64)
         n_max_cap = getattr(self.config, 'N_max', self.config.N * 2)
         N_teorik = torch.clamp(N_teorik, min=8, max=n_max_cap)
         return L_arc, N_teorik
-
 
 class LifLaplasyenOperatoru:
     def __init__(
@@ -703,12 +588,6 @@ class LifLaplasyenOperatoru:
         self._phi_kaynasik: Optional[torch.Tensor] = None
 
     def _kaynasik_phi(self) -> torch.Tensor:
-
-
-
-
-
-
         if self._phi_kaynasik is None:
             self._phi_kaynasik = torch.cat([self.phi_hedef, -self.phi_kaynak], dim=2)
         return self._phi_kaynasik
@@ -777,22 +656,18 @@ class LifLaplasyenOperatoru:
             D0[satir:satir + self.d_e, h_kol:h_kol + self.d_v] += self.phi_hedef[e]
         return D0
 
-
 def d0_transpoze_carp(x: torch.Tensor, D0: Any) -> torch.Tensor:
     if isinstance(D0, LifLaplasyenOperatoru):
         return D0.carp_transpoze(x)
     return torch.matmul(x, D0.transpose(-2, -1))
-
 
 def d0_carp(y: torch.Tensor, D0: Any) -> torch.Tensor:
     if isinstance(D0, LifLaplasyenOperatoru):
         return D0.carp(y)
     return torch.matmul(y, D0)
 
-
 def laplasyen_ile_carp(x: torch.Tensor, D0: Any) -> torch.Tensor:
     return d0_carp(d0_transpoze_carp(x, D0), D0)
-
 
 def laplasyen_lambda_max_guc_yontemi(D0: Any, iterasyon: int = 8) -> torch.Tensor:
     D = D0.shape[-1]
@@ -804,7 +679,6 @@ def laplasyen_lambda_max_guc_yontemi(D0: Any, iterasyon: int = 8) -> torch.Tenso
             v = v / (torch.norm(v) + 1e-8)
         lambda_max = torch.norm(laplasyen_ile_carp(v, D0))
     return lambda_max
-
 
 class Riyazi_LifLaplasyeniBlokInsaEdici:
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -822,17 +696,15 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         phi_dict: nn.ParameterDict,
         hesapla_yogun_delta0: bool = False,
     ) -> Tuple[torch.Tensor, Optional[torch.Tensor]]:
-        D1 = sinir_operatorleri.D1  
+        D1 = sinir_operatorleri.D1
         E_num, V_num = D1.shape
         d_e, d_v = self.config.d_e, self.config.d_v
 
-        
         device = getattr(self, '_vram_idare_zorunlu_cihaz', None) or D1.device
         if D1.device != device:
             D1 = D1.to(device)
         dtype = D1.dtype
 
-        
         toplam_kolon = V_num * d_v
         sifir_blok = torch.zeros((d_e, d_v), dtype=dtype, device=device)
         kaynak_bloklari: List[torch.Tensor] = []
@@ -887,14 +759,12 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         if not hesapla_yogun_delta0:
             return D0, None
         D0 = D0.yogun()
-        
-        
-        Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T.contiguous(), D0)    
+
+        Delta_0 = tasma_bazli_capraz_gpu_matmul_sardla(D0.T.contiguous(), D0)
         return D0, Delta_0
 
     def tasintilar_cihaza(self, D0: torch.Tensor, Delta_0: Optional[torch.Tensor], target_device: torch.device) -> Tuple[torch.Tensor, Optional[torch.Tensor]]:
         return D0.to(target_device), (Delta_0.to(target_device) if Delta_0 is not None else None)
-
 
 class Bellek_TopolojikDikkatYazici(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -913,8 +783,6 @@ class Bellek_TopolojikDikkatYazici(nn.Module):
         return vram_bayt_tahmin_et(B, self.config.d_m, self.config.K)
 
     def yaz(self, x_next: torch.Tensor, sorgu: E6_GizilSorgu, mevcut_bellek: E5_B_BellekGonderimi, yeni_bilgi: E7_LokalBilgi) -> E5_B_BellekGonderimi:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
@@ -925,11 +793,10 @@ class Bellek_TopolojikDikkatYazici(nn.Module):
             mevcut_bellek = girdi_cihaza_tasi(mevcut_bellek, zorunlu_cihaz)
             yeni_bilgi = girdi_cihaza_tasi(yeni_bilgi, zorunlu_cihaz)
 
-        M_current = mevcut_bellek.M  
+        M_current = mevcut_bellek.M
         B = M_current.shape[0]
         d_v = getattr(self.config, 'd_v', 32)
-        
-        
+
         if x_next.dim() == 1:
             x_next = x_next.unsqueeze(0)
         if x_next.shape[-1] != d_v and x_next.shape[-1] > 0:
@@ -939,32 +806,27 @@ class Bellek_TopolojikDikkatYazici(nn.Module):
                 x_next_pooled = F.adaptive_avg_pool1d(x_next.unsqueeze(1), d_v).squeeze(1)
         else:
             x_next_pooled = x_next
-        
-        
-        Q = self.W_q(x_next_pooled).unsqueeze(1)  
-        K = self.W_k(M_current.transpose(1, 2))  
-        
-        
-        scores = torch.bmm(Q, K.transpose(1, 2)) / math.sqrt(self.config.d_m)  
-        alpha = torch.softmax(scores, dim=-1)  
-        
-        
+
+        Q = self.W_q(x_next_pooled).unsqueeze(1)
+        K = self.W_k(M_current.transpose(1, 2))
+
+        scores = torch.bmm(Q, K.transpose(1, 2)) / math.sqrt(self.config.d_m)
+        alpha = torch.softmax(scores, dim=-1)
+
         qa = torch.cat([sorgu.q_r, yeni_bilgi.a_r], dim=-1)
         V = self.W_v(qa).view(B, self.config.d_m, self.config.K)
-        
+
         x_qa = torch.cat([x_next_pooled, qa], dim=-1)
-        g = self.gate_net(x_qa).unsqueeze(-1)  
-        
+        g = self.gate_net(x_qa).unsqueeze(-1)
+
         M_updated = (1.0 - g) * M_current + g * (V * alpha)
         return E5_B_BellekGonderimi(M=M_updated)
-
 
 class Bellek_BaglamYoneticisi(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
         self.config = config
-        
-        
+
         self.M_state = nn.Parameter(torch.zeros((config.batch_size, config.d_m, config.K), device=config.device))
         self.gate_net = nn.Sequential(
             nn.Linear(config.d_q + config.d_a, config.d_m),
@@ -976,10 +838,8 @@ class Bellek_BaglamYoneticisi(nn.Module):
         )
 
     def get_memory(self, active_batch_size: int) -> E5_B_BellekGonderimi:
-        
-        
         if active_batch_size != self.M_state.shape[0]:
-            repeat_factor = -(-active_batch_size // self.M_state.shape[0])  
+            repeat_factor = -(-active_batch_size // self.M_state.shape[0])
             M_active = self.M_state.repeat(repeat_factor, 1, 1)[:active_batch_size]
         else:
             M_active = self.M_state
@@ -993,24 +853,22 @@ class Bellek_BaglamYoneticisi(nn.Module):
         M_next = (1.0 - g) * M_current + g * u
         return M_next
 
-
 class N1_HibritByteTokenAyristirici(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
         self.config = config
         self.tokenizer = al_cevrimdisi_veya_tiktoken_tokenizer("o200k_base")
-        
+
         self.token_embeddings = nn.Embedding(config.V_size, config.d_v)
         self.byte_embeddings = nn.Embedding(max(257, config.V_byte_size), config.d_v, padding_idx=0)
-        
-        
+
         self.Q_dict = nn.ParameterDict()
         for m in range(1, 33):
             _W = torch.randn((config.d_v, config.d_v), device=config.device)
             _Q, _R = torch.linalg.qr(_W)
             _ph = torch.sign(torch.diag(_R))
-            _ph = torch.where(_ph == 0, torch.ones_like(_ph), _ph)  
-            _Q_haar = _Q * _ph.unsqueeze(0)  
+            _ph = torch.where(_ph == 0, torch.ones_like(_ph), _ph)
+            _Q_haar = _Q * _ph.unsqueeze(0)
             self.Q_dict[str(m)] = nn.Parameter(_Q_haar)
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
@@ -1021,22 +879,6 @@ class N1_HibritByteTokenAyristirici(nn.Module):
 
     def geodezik_suzgec_genislet(self, d_g_kare: float, d_g_kare_onceki: Optional[float] = None,
                                  eta_taban: float = 1e-2) -> float:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         if d_g_kare is None or not math.isfinite(float(d_g_kare)):
             return 0.0
@@ -1088,8 +930,6 @@ class N1_HibritByteTokenAyristirici(nn.Module):
                     param.copy_(stiefel_qr_projection(param.data))
 
     def forward(self, girdi: E1_HamMetinAkisi) -> Tuple[E2_ByteTensoru, torch.Tensor]:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         device = zorunlu_cihaz if zorunlu_cihaz is not None else torch.device(self.config.device)
         if next(self.parameters(), None) is not None:
@@ -1098,7 +938,6 @@ class N1_HibritByteTokenAyristirici(nn.Module):
 
         girdi_metni = girdi.X_text if girdi.X_text else " "
 
-        
         token_ids = self.tokenizer.encode(girdi_metni)
         if len(token_ids) == 0:
             token_ids = [0]
@@ -1111,63 +950,53 @@ class N1_HibritByteTokenAyristirici(nn.Module):
             token_ids = token_ids[:azami_dugum]
         l_tokens = len(token_ids)
 
-        
         raw_bytes = list(girdi_metni.encode('utf-8'))
         if len(raw_bytes) == 0:
             raw_bytes = [32]
         l_bytes = len(raw_bytes)
 
-        
         t_tokens = torch.tensor([token_ids], dtype=torch.int64, device=device).repeat(self.config.batch_size, 1)
         t_bytes = torch.tensor([raw_bytes], dtype=torch.int64, device=device).repeat(self.config.batch_size, 1)
 
-        
         emb_token = self.token_embeddings(t_tokens % self.config.V_size)
 
-        
         ortho_byte_blocks = []
-        
+
         for i, tok_id in enumerate(token_ids):
-            
+
             try:
                 tok_bytes = list(self.tokenizer.decode_single_token_bytes(tok_id))
             except Exception:
                 tok_bytes = [32]
-            
+
             m_i = max(1, min(len(tok_bytes), 32))
             key_m = str(m_i)
-            Q_m = self.Q_dict[key_m] 
-            
-            
+            Q_m = self.Q_dict[key_m]
+
             tok_b_tensor = torch.tensor(tok_bytes, dtype=torch.int64, device=device)
             tok_b_tensor_shifted = torch.clamp(tok_b_tensor + 1, min=1, max=256)
             b_embs = self.byte_embeddings(tok_b_tensor_shifted)
 
-
             b_norm_kare_toplami = b_embs.pow(2).sum()
             b_blok_i = b_embs.sum(dim=0) / torch.sqrt(b_norm_kare_toplami + 1e-6)
-            
-            
-            q_proj_i = F.linear(b_blok_i.unsqueeze(0), Q_m) 
+
+            q_proj_i = F.linear(b_blok_i.unsqueeze(0), Q_m)
             ortho_byte_blocks.append(q_proj_i)
 
-        
         batch_sz = emb_token.shape[0] if emb_token.dim() >= 2 else 1
         if ortho_byte_blocks:
-            Q_ortho_base = torch.cat(ortho_byte_blocks, dim=0).unsqueeze(0)  
+            Q_ortho_base = torch.cat(ortho_byte_blocks, dim=0).unsqueeze(0)
             Q_ortho = Q_ortho_base.repeat(batch_sz, 1, 1)
         else:
             Q_ortho = torch.zeros_like(emb_token)
 
-        
-        x_nodes = emb_token + Q_ortho 
-        
-        
+        x_nodes = emb_token + Q_ortho
+
         self.config.V_nodes = l_tokens
         self.config.D = l_tokens * self.config.d_v
-        
-        x_initial = x_nodes.reshape(batch_sz, -1) 
-        
+
+        x_initial = x_nodes.reshape(batch_sz, -1)
+
         return E2_ByteTensoru(byte_tensor=t_bytes, l_bytes=l_bytes), x_initial
 
     def StiefelCayleyIzometrikIzduşum(self, W: torch.Tensor, G: Optional[torch.Tensor] = None, eta: float = 1e-3) -> torch.Tensor:
@@ -1176,44 +1005,11 @@ class N1_HibritByteTokenAyristirici(nn.Module):
         )
         return stiefel_manifold_projection(W, grad=G, lr=eta)
 
-
 N1_ByteAyristirici = N1_HibritByteTokenAyristirici
-
 
 SPARSEMAX_BASLANGIC_ADAYI: int = 64
 
-
 def sparsemax(logits: torch.Tensor, dim: int = -1) -> torch.Tensor:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     n = int(logits.shape[dim])
     m = min(max(SPARSEMAX_BASLANGIC_ADAYI, 1), n)
 
@@ -1238,7 +1034,6 @@ def sparsemax(logits: torch.Tensor, dim: int = -1) -> torch.Tensor:
     tau = (torch.gather(kismi_toplam, dim, (k_star - 1).long()) - 1.0) / k_star
     return F.relu(logits - tau)
 
-
 class N2_TopoXHucreOlusumu(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
@@ -1254,26 +1049,14 @@ class N2_TopoXHucreOlusumu(nn.Module):
         E = max(V - 1, 1)
         F_num = max(V - 2, 1)
         return (
-            vram_bayt_tahmin_et(B, V, V) +          
-            vram_bayt_tahmin_et(B, V, d_v * 2) +    
-            vram_bayt_tahmin_et(E, V) +              
-            vram_bayt_tahmin_et(F_num, E)            
+            vram_bayt_tahmin_et(B, V, V) +
+            vram_bayt_tahmin_et(B, V, d_v * 2) +
+            vram_bayt_tahmin_et(E, V) +
+            vram_bayt_tahmin_et(F_num, E)
         )
 
     @staticmethod
     def kohomolojik_ceza_hazirla(D1: torch.Tensor, d_disc: torch.Tensor, d_v: int) -> Tuple[torch.Tensor, torch.Tensor]:
-
-
-
-
-
-
-
-
-
-
-
-
         with torch.no_grad():
             d_disc = d_disc.detach().reshape(-1)
             E, V = int(D1.shape[0]), int(D1.shape[1])
@@ -1292,16 +1075,6 @@ class N2_TopoXHucreOlusumu(nn.Module):
         return d_dugum, gamma
 
     def ham_skor_hesapla(self, girdi: E2_ByteTensoru, x_initial: Optional[torch.Tensor] = None) -> Dict[str, Any]:
-
-
-
-
-
-
-
-
-
-
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
@@ -1327,17 +1100,6 @@ class N2_TopoXHucreOlusumu(nn.Module):
                           D0_base: Optional[torch.Tensor] = None,
                           d_dugum_gecmis: Optional[torch.Tensor] = None,
                           gamma_gecmis: Optional[torch.Tensor] = None) -> E3_SinirOperatorleri:
-
-
-
-
-
-
-
-
-
-
-
 
         scores = ham_skor["skorlar"]
         V = int(ham_skor["V"])
@@ -1369,7 +1131,6 @@ class N2_TopoXHucreOlusumu(nn.Module):
         else:
             A_mat = A_raw
 
-        
         A_mean = A_mat.mean(dim=0)
 
         azami_komsu = int(getattr(self.config, 'azami_dugum_komsulugu', 8))
@@ -1437,17 +1198,12 @@ class N2_TopoXHucreOlusumu(nn.Module):
 
         D2 = self.CekirdekBaziylaD2Kur(D1, triangles, edge_map, device)
 
-
         return E3_SinirOperatorleri(D1=D1, D2=D2)
 
     def forward(self, girdi: E2_ByteTensoru, x_initial: Optional[torch.Tensor] = None, mode: str = 'train',
                 D0_base: Optional[torch.Tensor] = None,
                 d_dugum_gecmis: Optional[torch.Tensor] = None,
                 gamma_gecmis: Optional[torch.Tensor] = None) -> E3_SinirOperatorleri:
-
-
-
-
 
         ham = self.ham_skor_hesapla(girdi, x_initial=x_initial)
         return self.komsuluk_guncelle(
@@ -1467,8 +1223,7 @@ class N2_TopoXHucreOlusumu(nn.Module):
                 e_ij = edge_map[(i, j)]
                 e_jk = edge_map[(j, k)]
                 e_ik = edge_map[(i, k)]
-                
-                
+
                 w_ij = torch.where(D1[e_ij, j] != 0, torch.abs(D1[e_ij, j]), torch.ones((), device=device, dtype=D1.dtype))
                 w_jk = torch.where(D1[e_jk, k] != 0, torch.abs(D1[e_jk, k]), torch.ones((), device=device, dtype=D1.dtype))
                 w_ik = torch.where(D1[e_ik, k] != 0, torch.abs(D1[e_ik, k]), torch.ones((), device=device, dtype=D1.dtype))
@@ -1479,23 +1234,20 @@ class N2_TopoXHucreOlusumu(nn.Module):
             D2 = torch.zeros((1, E), dtype=torch.float32, device=device)
         return D2
 
-
 class N3_LifSinirlamaAtama(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
         self.config = config
-        
-        
+
         _W_phi = torch.randn((config.d_e, config.d_v), device=config.device)
         _Q_phi, _R_phi = torch.linalg.qr(_W_phi)
         _ph_phi = torch.sign(torch.diag(_R_phi))
         _ph_phi = torch.where(_ph_phi == 0, torch.ones_like(_ph_phi), _ph_phi)
-        _Q_haar_phi = _Q_phi * _ph_phi.unsqueeze(0)  
+        _Q_haar_phi = _Q_phi * _ph_phi.unsqueeze(0)
         self.phi_base = nn.Parameter(_Q_haar_phi)
         self.W_u = nn.Linear(config.d_v, config.d_e, device=config.device)
         self.W_v = nn.Linear(config.d_v, config.d_e, device=config.device)
-        
-        
+
         self.shift_v_to_dv = nn.Linear(config.d_e, config.d_v, device=config.device)
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
@@ -1505,8 +1257,6 @@ class N3_LifSinirlamaAtama(nn.Module):
         return vram_bayt_tahmin_et(E_num, d_e, d_v)
 
     def forward(self, sinir_operatorleri: E3_SinirOperatorleri, x_initial: torch.Tensor) -> E4_LifDemeti:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
@@ -1527,12 +1277,12 @@ class N3_LifSinirlamaAtama(nn.Module):
             X = x_initial
         else:
             X = x_initial.unsqueeze(0)
-        
+
         V_x = X.shape[1]
         src_indices = torch.arange(E_num, device=X.device) % V_x
         dst_indices = (torch.arange(E_num, device=X.device) + 1) % V_x
-        x_u = X[:, src_indices, :]  
-        x_v = X[:, dst_indices, :]  
+        x_u = X[:, src_indices, :]
+        x_v = X[:, dst_indices, :]
 
         u_e = F.silu(self.W_u(x_u)).mean(dim=0)
         v_e = F.silu(self.W_v(x_v)).mean(dim=0)
@@ -1543,23 +1293,14 @@ class N3_LifSinirlamaAtama(nn.Module):
             R_e = torch.linalg.matrix_exp(A_e.float())
             Phi_batch = torch.matmul(R_e, self.phi_base.unsqueeze(0).float())
 
-
-
-
-
-
-
-
-
         src_listesi = src_indices.tolist()
         dst_listesi = dst_indices.tolist()
         for e in range(E_num):
             Phi_e = Phi_batch[e]
             phi_dict[f"phi_{src_listesi[e]}_{e}"] = Phi_e
             phi_dict[f"phi_{dst_listesi[e]}_{e}"] = Phi_e
-            
-        return E4_LifDemeti(phi_matrisleri=phi_dict, baslangic_gizil_durumu=x_initial)
 
+        return E4_LifDemeti(phi_matrisleri=phi_dict, baslangic_gizil_durumu=x_initial)
 
 class N4_SorguSecici(nn.Module):
     def __init__(self, config: Optional[Model_TopolojikKonfigurasyon] = None, alt_ag: Any = None):
@@ -1569,8 +1310,7 @@ class N4_SorguSecici(nn.Module):
         d_q = getattr(config, 'd_q', 64) if config else 64
         self.d_v = d_v
         self.d_q = d_q
-        
-        
+
         device = getattr(config, 'device', 'cpu')
         self.W_Q = nn.Parameter(torch.randn((d_v, d_q), device=device))
         with torch.no_grad():
@@ -1586,13 +1326,11 @@ class N4_SorguSecici(nn.Module):
         E_num = max(V - 1, 1)
         d_e = getattr(self.config, 'd_e', 32) if self.config else 32
         return (
-            vram_bayt_tahmin_et(B, E_num * d_e) +   
-            vram_bayt_tahmin_et(B, V, self.d_q)     
+            vram_bayt_tahmin_et(B, E_num * d_e) +
+            vram_bayt_tahmin_et(B, V, self.d_q)
         )
 
     def forward(self, mevcut_durum: E5_A_MevcutGizilDurum, D0_operator: Optional[torch.Tensor] = None, A_adjacency: Optional[torch.Tensor] = None, bellek: Optional[E5_B_BellekGonderimi] = None) -> E6_GizilSorgu:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
@@ -1604,23 +1342,21 @@ class N4_SorguSecici(nn.Module):
                 A_adjacency = A_adjacency.to(zorunlu_cihaz)
             bellek = girdi_cihaza_tasi(bellek, zorunlu_cihaz)
 
-        x_r = mevcut_durum.x_r  
+        x_r = mevcut_durum.x_r
         B = x_r.shape[0]
         V_num = x_r.shape[1] // self.d_v if x_r.shape[1] % self.d_v == 0 else (self.config.V_nodes if self.config else 1)
-        X = x_r.view(B, V_num, self.d_v)  
+        X = x_r.view(B, V_num, self.d_v)
 
-        
-        probs = F.softmax(X, dim=-1)  
+        probs = F.softmax(X, dim=-1)
         log_probs = F.log_softmax(X, dim=-1) / math.log(2.0)
-        H_entropy = -torch.sum(probs * log_probs, dim=-1, keepdim=True)  
+        H_entropy = -torch.sum(probs * log_probs, dim=-1, keepdim=True)
 
-        
         if D0_operator is not None:
             c_defect = d0_transpoze_carp(x_r, D0_operator)
             d_e = self.config.d_e if self.config else self.d_v
             E_num = c_defect.shape[1] // d_e if c_defect.shape[1] % d_e == 0 else 1
             c_reshaped = c_defect.view(B, E_num, d_e)
-            edge_norm = torch.norm(c_reshaped, p=2, dim=-1)  
+            edge_norm = torch.norm(c_reshaped, p=2, dim=-1)
             if E_num >= V_num:
                 c_node = edge_norm[:, :V_num].unsqueeze(-1)
             else:
@@ -1628,23 +1364,21 @@ class N4_SorguSecici(nn.Module):
         else:
             c_node = torch.ones((B, V_num, 1), device=x_r.device)
 
-        
-        Q_cand = torch.matmul(X, self.W_Q)  
+        Q_cand = torch.matmul(X, self.W_Q)
 
-        
         if bellek is not None and bellek.M is not None:
-            M = bellek.M  
+            M = bellek.M
             if M.dim() == 3:
                 if M.shape[1] != self.d_q:
-                    M_trans = M.transpose(1, 2)  
+                    M_trans = M.transpose(1, 2)
                 else:
-                    M_trans = M.transpose(1, 2)  
-                
+                    M_trans = M.transpose(1, 2)
+
                 Q_norm = F.normalize(Q_cand, p=2, dim=-1)
                 M_norm = F.normalize(M_trans, p=2, dim=-1)
                 if Q_norm.shape[-1] == M_norm.shape[-1]:
-                    cos_sim = torch.matmul(Q_norm, M_norm.transpose(1, 2))  
-                    E_easiness = torch.max(cos_sim, dim=-1, keepdim=True)[0]  
+                    cos_sim = torch.matmul(Q_norm, M_norm.transpose(1, 2))
+                    E_easiness = torch.max(cos_sim, dim=-1, keepdim=True)[0]
                     E_easiness = torch.clamp(E_easiness, min=0.0, max=1.0)
                 else:
                     E_easiness = torch.ones((B, V_num, 1), device=x_r.device) * 0.5
@@ -1653,24 +1387,22 @@ class N4_SorguSecici(nn.Module):
         else:
             E_easiness = torch.ones((B, V_num, 1), device=x_r.device) * 0.5
 
-        
         if A_adjacency is not None and A_adjacency.dim() >= 2:
             if A_adjacency.dim() == 3:
-                deg = torch.sum(torch.abs(A_adjacency), dim=1)  
+                deg = torch.sum(torch.abs(A_adjacency), dim=1)
                 if deg.shape[1] != V_num:
                     deg = F.interpolate(deg.transpose(1, 2), size=V_num, mode='linear', align_corners=False).transpose(1, 2)
             else:
                 if A_adjacency.shape[0] != V_num and A_adjacency.shape[1] == V_num:
-                    deg_v = torch.sum(torch.abs(A_adjacency), dim=0, keepdim=True).T 
+                    deg_v = torch.sum(torch.abs(A_adjacency), dim=0, keepdim=True).T
                 elif A_adjacency.shape[0] == V_num:
-                    deg_v = torch.sum(torch.abs(A_adjacency), dim=1, keepdim=True) 
+                    deg_v = torch.sum(torch.abs(A_adjacency), dim=1, keepdim=True)
                 else:
                     deg_v = torch.ones((V_num, 1), device=x_r.device)
-                deg = deg_v.unsqueeze(0).repeat(B, 1, 1)  
+                deg = deg_v.unsqueeze(0).repeat(B, 1, 1)
             A_path = deg + 1.0
         else:
             A_path = torch.ones((B, V_num, 1), device=x_r.device)
-
 
         gamma = (H_entropy + 1e-4) * (c_node + 1e-4) * (E_easiness + 1e-4) * A_path
 
@@ -1684,10 +1416,8 @@ class N4_SorguSecici(nn.Module):
 
         Q_field = torch.matmul(Q_gamma, S_tilde)
 
-
         q_r = torch.mean(Q_field, dim=1)
         return E6_GizilSorgu(q_r=q_r)
-
 
 class N5_CevapSuzucu(nn.Module):
     def __init__(self, alt_ag: Any = None, config: Optional[Model_TopolojikKonfigurasyon] = None):
@@ -1721,8 +1451,6 @@ class N5_CevapSuzucu(nn.Module):
         return vram_bayt_tahmin_et(B, self.d_m, K_slots)
 
     def forward(self, sorgu: E6_GizilSorgu, bellek: E5_B_BellekGonderimi) -> E7_LokalBilgi:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
@@ -1730,36 +1458,31 @@ class N5_CevapSuzucu(nn.Module):
             sorgu = girdi_cihaza_tasi(sorgu, zorunlu_cihaz)
             bellek = girdi_cihaza_tasi(bellek, zorunlu_cihaz)
 
-        q_r = sorgu.q_r  
-        M = bellek.M  
+        q_r = sorgu.q_r
+        M = bellek.M
         B = q_r.shape[0]
 
         if M.dim() == 3:
             if M.shape[1] != self.d_m and M.shape[2] == self.d_m:
-                M_slots = M.transpose(1, 2)  
+                M_slots = M.transpose(1, 2)
             else:
-                M_slots = M  
+                M_slots = M
         else:
             M_slots = torch.zeros((B, self.d_m, 16), device=q_r.device)
 
-        
-        q_W = torch.matmul(q_r, self.W_K)  
-
+        q_W = torch.matmul(q_r, self.W_K)
 
         tau = self.tau_min + (self.tau_max - self.tau_min) * torch.sigmoid(self.tau_gamma)
         q_norm = F.normalize(q_W, p=2, dim=-1)
         M_norm = F.normalize(M_slots, p=2, dim=1)
         scale_factor = tau * math.sqrt(float(self.d_m))
-        scores = torch.bmm(q_norm.unsqueeze(1), M_norm).squeeze(1) / scale_factor  
-        s_match = F.softmax(scores, dim=-1)  
+        scores = torch.bmm(q_norm.unsqueeze(1), M_norm).squeeze(1) / scale_factor
+        s_match = F.softmax(scores, dim=-1)
 
-        
-        m_read = torch.bmm(M_slots, s_match.unsqueeze(-1)).squeeze(-1)  
+        m_read = torch.bmm(M_slots, s_match.unsqueeze(-1)).squeeze(-1)
 
-        
-        a_r = torch.matmul(m_read, self.W_V)  
+        a_r = torch.matmul(m_read, self.W_V)
         return E7_LokalBilgi(a_r=a_r)
-
 
 class N6_KohomolojikAktor(nn.Module):
     def __init__(self, alt_ag: Optional[N6_KohomolojikAktor_AltAg] = None, D0_operator: Optional[torch.Tensor] = None, Delta0_operator: Optional[torch.Tensor] = None, config: Optional[Model_TopolojikKonfigurasyon] = None):
@@ -1768,15 +1491,13 @@ class N6_KohomolojikAktor(nn.Module):
         self.config = config
         self.register_buffer("v_pow_persistent", None, persistent=False)
         self.D0 = D0_operator
-        
-        
+
         d_v = getattr(config, 'd_v', 32) if config else 32
         d_q = getattr(config, 'd_q', 64) if config else 64
         d_a = getattr(config, 'd_a', 64) if config else 64
         d_h = getattr(config, 'd_h', 64) if config else 64
         V_dim = getattr(config, 'V_nodes', 276) if config else 276
 
-        
         self.adj_proj_layer = nn.Linear(V_dim, d_v)
         self.lap_proj_layer = nn.Linear(V_dim, d_v)
         self.disc_proj_layer = nn.Linear(1, d_v)
@@ -1823,9 +1544,9 @@ class N6_KohomolojikAktor(nn.Module):
         d_q = getattr(self.config, 'd_q', 64) if self.config else 64
         d_a = getattr(self.config, 'd_a', 64) if self.config else 64
         return (
-            vram_bayt_tahmin_et(B, E_num * d_e) +          
-            vram_bayt_tahmin_et(B, V * d_v) +               
-            vram_bayt_tahmin_et(B, 4 * d_v + d_q + d_a)     
+            vram_bayt_tahmin_et(B, E_num * d_e) +
+            vram_bayt_tahmin_et(B, V * d_v) +
+            vram_bayt_tahmin_et(B, 4 * d_v + d_q + d_a)
         )
 
     def hesapla_moore_penrose_psodoters_vektor_etkisi(self, c_defect: torch.Tensor, D0: torch.Tensor, P: int = 5) -> torch.Tensor:
@@ -1836,24 +1557,14 @@ class N6_KohomolojikAktor(nn.Module):
         eps_adaptive = max(1e-4, 1e-3 * float(c_defect.norm().detach().item()))
 
         def apply_M_vec(v: torch.Tensor) -> torch.Tensor:
-            
             v_v = d0_carp(v, D0)
             M_v = d0_transpoze_carp(v_v, D0)
             return M_v + eps_adaptive * v
 
-        
         if self.v_pow_persistent is None or self.v_pow_persistent.shape[-1] != E_dim or self.v_pow_persistent.device != device:
             v_pow = torch.ones((1, E_dim), device=device, dtype=dtype) / math.sqrt(E_dim)
         else:
             v_pow = self.v_pow_persistent.to(device=device, dtype=dtype)
-
-
-
-
-
-
-
-
 
         with torch.no_grad():
             for _ in range(2):
@@ -1864,7 +1575,6 @@ class N6_KohomolojikAktor(nn.Module):
             M_v_pow = apply_M_vec(v_pow)
             lambda_max = float(torch.sum(v_pow * M_v_pow).item()) + 1e-4
 
-        
         alpha_scale = 1.0 / (lambda_max + 1e-4)
 
         def apply_M_diff_vec(v: torch.Tensor) -> torch.Tensor:
@@ -1889,8 +1599,7 @@ class N6_KohomolojikAktor(nn.Module):
 
     def forward(self, mevcut_durum: E5_A_MevcutGizilDurum, sorgu: E6_GizilSorgu, lokal_bilgi: E7_LokalBilgi,
                 d_discrepancy: Optional[torch.Tensor] = None, E_dirichlet: Optional[torch.Tensor] = None) -> E8_SentetikAraDurum:
-        
-        
+
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
@@ -1905,25 +1614,22 @@ class N6_KohomolojikAktor(nn.Module):
             if E_dirichlet is not None:
                 E_dirichlet = E_dirichlet.to(zorunlu_cihaz)
 
-        x_r = mevcut_durum.x_r  
-        q_r = sorgu.q_r  
-        a_r = lokal_bilgi.a_r  
+        x_r = mevcut_durum.x_r
+        q_r = sorgu.q_r
+        a_r = lokal_bilgi.a_r
         B = x_r.shape[0]
         d_v = getattr(self.config, 'd_v', 32) if self.config else 32
 
-        
         if self.D0 is not None:
             c_defect = d0_transpoze_carp(x_r, self.D0)
-            
-            
-            laplacian_grad = laplasyen_ile_carp(x_r, self.D0)  
-            K_adjoint = self.hesapla_moore_penrose_psodoters_vektor_etkisi(c_defect, self.D0)  
+
+            laplacian_grad = laplasyen_ile_carp(x_r, self.D0)
+            K_adjoint = self.hesapla_moore_penrose_psodoters_vektor_etkisi(c_defect, self.D0)
         else:
             c_defect = torch.zeros((B, x_r.shape[1]), device=x_r.device, dtype=x_r.dtype)
             laplacian_grad = torch.zeros((B, x_r.shape[1]), device=x_r.device, dtype=x_r.dtype)
             K_adjoint = torch.zeros((B, x_r.shape[1]), device=x_r.device, dtype=x_r.dtype)
 
-        
         V_aktuel = K_adjoint.shape[-1]
         if V_aktuel != d_v:
             if V_aktuel % d_v == 0:
@@ -1942,7 +1648,6 @@ class N6_KohomolojikAktor(nn.Module):
         else:
             lap_grad_field = laplacian_grad
 
-        
         if d_discrepancy is not None:
             if d_discrepancy.ndim == 1:
                 d_disc_field = d_discrepancy.unsqueeze(-1) if d_discrepancy.shape[0] == B else d_discrepancy.unsqueeze(0).repeat(B, 1)
@@ -1990,7 +1695,6 @@ class N6_KohomolojikAktor(nn.Module):
 
         return E8_SentetikAraDurum(synthetic_state=synthetic_state)
 
-
 class N7_LifLaplasyeniCozucu(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
@@ -2004,7 +1708,7 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         V = getattr(self.config, 'V_nodes', 8) if self.config else 8
         d_v = getattr(self.config, 'd_v', 32) if self.config else 32
         D = V * d_v
-        return vram_bayt_tahmin_et(B, D) * 6  
+        return vram_bayt_tahmin_et(B, D) * 6
 
     def laplasyen_lambda_max(self, D0: torch.Tensor) -> torch.Tensor:
         if D0 is None or D0.numel() == 0:
@@ -2035,8 +1739,6 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         return g_var + g_metric + g_ricci
 
     def forward(self, sentetik_durum: E8_SentetikAraDurum, D0: torch.Tensor, mevcut_durum: E5_A_MevcutGizilDurum) -> E9_GuncellenmisGizilDurum:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
@@ -2051,10 +1753,9 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         d_v = getattr(self.config, 'd_v', 32)
         V_num = D_dyn // d_v if D_dyn % d_v == 0 else 1
 
-        
         lambda_max = self.laplasyen_lambda_max(D0)
-        syn_v = self.syn_proj_layer(sentetik_durum.synthetic_state) 
-        syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(B, D_dyn) 
+        syn_v = self.syn_proj_layer(sentetik_durum.synthetic_state)
+        syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(B, D_dyn)
 
         lap1 = laplasyen_ile_carp(x_r, D0)
         lap2 = laplasyen_ile_carp(lap1, D0)
@@ -2066,7 +1767,6 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         x_next = x_r + dt_yildiz * (-lap1 + syn_proj) - dt_yildiz_ricci * lambda_ricci * lap2
         return E9_GuncellenmisGizilDurum(x_next=x_next)
 
-    
     def coz_r_adimlari_blelloch(self, synthetic_states_seq: torch.Tensor, Delta_0: torch.Tensor, x_init: torch.Tensor) -> torch.Tensor:
         R_steps, B, d_h = synthetic_states_seq.shape
         D_dyn = x_init.shape[-1]
@@ -2076,11 +1776,11 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         dt = self.config.dt
         B_seq_list = []
         for r in range(R_steps):
-            syn_v = self.syn_proj_layer(synthetic_states_seq[r])  
-            syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(B, D_dyn)  
+            syn_v = self.syn_proj_layer(synthetic_states_seq[r])
+            syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(B, D_dyn)
             B_seq_list.append(dt * syn_proj)
-        
-        B_seq = torch.stack(B_seq_list, dim=0)  
+
+        B_seq = torch.stack(B_seq_list, dim=0)
         x_final = self.blelloch_parallel_heat_scan(Delta_0=Delta_0, B_seq=B_seq, x_init=x_init)
         return x_final
 
@@ -2089,7 +1789,7 @@ class N7_LifLaplasyeniCozucu(nn.Module):
             A_out = torch.matmul(A2, A1)
         else:
             A_out = torch.matmul(A2, A1)
-            
+
         if A2.dim() == 2:
             B_out = torch.matmul(B1, A2.T) + B2
         else:
@@ -2100,15 +1800,13 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         R_steps, B, D = B_seq.shape
         device = Delta_0.device
         dt = self.config.dt
-        
-        
+
         I_D = torch.eye(D, device=device)
-        A_step = I_D - dt * Delta_0  
-        
+        A_step = I_D - dt * Delta_0
+
         A_list = [A_step for _ in range(R_steps)]
         B_list = [B_seq[r] for r in range(R_steps)]
-        
-        
+
         step = 1
         while step < R_steps:
             for i in range(2 * step - 1, R_steps, 2 * step):
@@ -2118,7 +1816,6 @@ class N7_LifLaplasyeniCozucu(nn.Module):
                 )
             step *= 2
 
-        
         step = R_steps // 2
         while step > 0:
             for i in range(2 * step - 1 + step, R_steps, 2 * step):
@@ -2127,7 +1824,7 @@ class N7_LifLaplasyeniCozucu(nn.Module):
                     A_list[i], B_list[i]
                 )
             step //= 2
-            
+
         x_out_list = []
         for r in range(R_steps):
             A_r = A_list[r]
@@ -2137,8 +1834,8 @@ class N7_LifLaplasyeniCozucu(nn.Module):
             else:
                 x_r = torch.bmm(x_init.unsqueeze(1), A_r.transpose(1, 2)).squeeze(1) + B_r
             x_out_list.append(x_r)
-            
-        return torch.stack(x_out_list, dim=0)  
+
+        return torch.stack(x_out_list, dim=0)
 
     def _chebyshev_bessel_matrix_exp_vector(self, Delta_0: torch.Tensor, x_0: torch.Tensor, tau: float, eps_tol: float = 1e-7, max_k: int = 64, M_terms: Optional[int] = None) -> torch.Tensor:
         device = Delta_0.device
@@ -2147,7 +1844,6 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         if M_terms is not None:
             max_k = max(2, M_terms)
 
-        
         with torch.no_grad():
             v_dummy = torch.randn(1, D, device=device)
             v_dummy = v_dummy / (torch.norm(v_dummy) + 1e-8)
@@ -2157,20 +1853,16 @@ class N7_LifLaplasyeniCozucu(nn.Module):
             lambda_max = torch.matmul(v_dummy, torch.matmul(Delta_0, v_dummy.T)).item()
             lambda_max = max(abs(lambda_max), 1e-4)
 
-        
         def apply_shifted_delta_t(v_in: torch.Tensor) -> torch.Tensor:
             return (2.0 / lambda_max) * torch.matmul(v_in, Delta_0.T) - v_in
 
-        
         z = (tau * lambda_max) / 2.0
 
-        
         T_prev = x_0
         c0 = float(ive(0, z))
         x_green = c0 * T_prev
         x_norm_0 = torch.norm(x_0, p=2) + 1e-8
 
-        
         T_curr = apply_shifted_delta_t(x_0)
         c1 = 2.0 * (-1.0) * float(ive(1, z))
         x_green = x_green + c1 * T_curr
@@ -2181,13 +1873,12 @@ class N7_LifLaplasyeniCozucu(nn.Module):
             T_prev = T_curr
             T_curr = T_next
             c_k = 2.0 * ((-1.0) ** k) * float(ive(k, z))
-            
-            
+
             term_energy = abs(c_k) * torch.norm(T_curr, p=2)
             x_green = x_green + c_k * T_curr
 
             if (term_energy / x_norm_0) < eps_tol:
-                break  
+                break
 
             k += 1
 
@@ -2212,19 +1903,16 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         dt = self.config.dt
         t_total = r_step * dt
         tau = t_total * b
-        
-        
-        x_free = self._chebyshev_bessel_matrix_exp_vector(Delta_0, x_0, tau, eps_tol=1e-7)
-        
-        
-        syn_v = self.syn_proj_layer(h_syn)  
-        V_num = D // syn_v.shape[-1] if (syn_v.shape[-1] > 0 and D % syn_v.shape[-1] == 0) else 1
-        syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(x_0.shape[0], D)  
 
-        
+        x_free = self._chebyshev_bessel_matrix_exp_vector(Delta_0, x_0, tau, eps_tol=1e-7)
+
+        syn_v = self.syn_proj_layer(h_syn)
+        V_num = D // syn_v.shape[-1] if (syn_v.shape[-1] > 0 and D % syn_v.shape[-1] == 0) else 1
+        syn_proj = syn_v.unsqueeze(1).repeat(1, V_num, 1).view(x_0.shape[0], D)
+
         syn_proj_exp = self._chebyshev_bessel_matrix_exp_vector(Delta_0, syn_proj, tau, eps_tol=1e-7)
         x_forced = syn_proj - syn_proj_exp
-        
+
         return x_free + a * x_forced
 
     def hesapla_uyumsuzluk_vektoru(self, x_r: torch.Tensor, D0: Any) -> torch.Tensor:
@@ -2233,19 +1921,17 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         d_e = getattr(self.config, 'd_e', 32)
         E_num = c_defect.shape[1] // d_e if c_defect.shape[1] % d_e == 0 else 1
         c_reshaped = c_defect.view(B, E_num, -1)
-        d_vec = torch.norm(c_reshaped, p=2, dim=-1).mean(dim=0)  
+        d_vec = torch.norm(c_reshaped, p=2, dim=-1).mean(dim=0)
         return d_vec
 
     def hesapla_dirichlet_enerjisi_vektoru(self, x_r: torch.Tensor, D0: torch.Tensor) -> torch.Tensor:
-        
-        
-        laplacian_flow = laplasyen_ile_carp(x_r, D0)  
+        laplacian_flow = laplasyen_ile_carp(x_r, D0)
         B = x_r.shape[0]
         d_v = getattr(self.config, 'd_v', 32)
         V_num = x_r.shape[1] // d_v if x_r.shape[1] % d_v == 0 else 1
         x_res = x_r.view(B, V_num, -1)
         flow_res = laplacian_flow.view(B, V_num, -1)
-        e_vec = torch.sum(x_res * flow_res, dim=-1).mean(dim=0)  
+        e_vec = torch.sum(x_res * flow_res, dim=-1).mean(dim=0)
         return e_vec
 
     def hesapla_uyumsuzluk(self, x_r: torch.Tensor, D0: torch.Tensor) -> float:
@@ -2256,15 +1942,13 @@ class N7_LifLaplasyeniCozucu(nn.Module):
         e_vec = self.hesapla_dirichlet_enerjisi_vektoru(x_r, D0)
         return float(e_vec.mean().detach().item())
 
-
 class Sheaf_KAN_Superpozisyon_Operatoru(nn.Module):
     def __init__(self, dim_in: int, dim_out: int, degree: int = 4):
         super().__init__()
         self.dim_in = dim_in
         self.dim_out = dim_out
         self.degree = degree
-        
-        
+
         self.cheby_coeffs = nn.Parameter(torch.randn(dim_out, dim_in, degree + 1) * 0.1)
         self.outer_scale = nn.Parameter(torch.ones(dim_out))
 
@@ -2276,29 +1960,24 @@ class Sheaf_KAN_Superpozisyon_Operatoru(nn.Module):
         else:
             x_2d = x
 
-        
         if x_2d.shape[-1] != self.dim_in:
             x_2d = F.interpolate(x_2d.unsqueeze(1), size=self.dim_in, mode='linear', align_corners=False).squeeze(1)
 
-        x_norm = torch.tanh(x_2d)  
+        x_norm = torch.tanh(x_2d)
 
-        
         T_list = [torch.ones_like(x_norm), x_norm]
         for k in range(1, self.degree):
             T_next = 2.0 * x_norm * T_list[-1] - T_list[-2]
             T_list.append(T_next)
 
-        T_stack = torch.stack(T_list, dim=-1)  
+        T_stack = torch.stack(T_list, dim=-1)
 
-        
         phi_inner = torch.einsum('bik,oik->bo', T_stack, self.cheby_coeffs)
 
-        
         out = self.outer_scale * F.silu(phi_inner)
         if len(orig_shape) == 3:
             out = out.view(orig_shape[0], orig_shape[1], -1)
         return out
-
 
 class SMW_SifirParazit_BellekYoneticisi(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -2307,26 +1986,11 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
         self.d_m = getattr(config, 'd_m', 64)
         self.K = getattr(config, 'K', 16)
         device = getattr(config, 'device', 'cpu')
-        
-        
+
         self.register_buffer("M", torch.zeros(config.batch_size, self.d_m, self.K, device=device))
-        
-        
+
         R_init = torch.eye(self.K, device=device).unsqueeze(0).repeat(config.batch_size, 1, 1)
         self.register_buffer("R", R_init)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         self.d_q = getattr(config, 'd_q', 64)
         self.d_a = getattr(config, 'd_a', 64)
@@ -2362,8 +2026,7 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
 
     def write(self, k_r: torch.Tensor, v_r: torch.Tensor, alpha_pareto: Optional[torch.Tensor] = None,
               q_r: Optional[torch.Tensor] = None, a_r: Optional[torch.Tensor] = None) -> E5_B_BellekGonderimi:
-        
-        
+
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if self.M.device != zorunlu_cihaz:
@@ -2386,30 +2049,16 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
             else:
                 self.M = self.M[:B]
                 self.R = self.R[:B]
-            
-        
-        R_k = torch.bmm(self.R, k_r.unsqueeze(-1)).squeeze(-1)  
-        k_R_k = torch.sum(k_r * R_k, dim=-1, keepdim=True)       
-        gamma_r = 1.0 + k_R_k                                    
 
-        
+        R_k = torch.bmm(self.R, k_r.unsqueeze(-1)).squeeze(-1)
+        k_R_k = torch.sum(k_r * R_k, dim=-1, keepdim=True)
+        gamma_r = 1.0 + k_R_k
+
         g_r = R_k / torch.clamp(gamma_r, min=1e-6)
 
-        
         if alpha_pareto is not None:
             pareto_gate = torch.clamp(alpha_pareto.mean(), min=0.1, max=2.0)
             g_r = g_r * pareto_gate
-
-        
-
-
-
-
-
-
-
-
-
 
         if q_r is not None and a_r is not None:
             qa = torch.cat([q_r, a_r], dim=-1)
@@ -2421,25 +2070,17 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
             kapi_R = self.unutma_kapisi(qa).unsqueeze(-1)
         else:
 
-
-
             kapi_M = torch.sigmoid(torch.mean(v_r, dim=-1, keepdim=True)).unsqueeze(-1)
             kapi_R = torch.ones((B, 1, 1), device=self.R.device, dtype=self.R.dtype)
-
-
-
 
         R_k_T = torch.bmm(k_r.unsqueeze(1), self.R)
         g_R_k_T = torch.bmm(g_r.unsqueeze(2), R_k_T)
         self.R = self.R - kapi_R * g_R_k_T
 
-
         M_k = torch.bmm(self.M, k_r.unsqueeze(-1)).squeeze(-1)
         error_vector = v_r - M_k
 
         update_matrix = torch.bmm(error_vector.unsqueeze(2), g_r.unsqueeze(1))
-
-
 
         self.M = (1.0 - kapi_M) * self.M + kapi_M * update_matrix
         return E5_B_BellekGonderimi(M=self.M)
@@ -2460,17 +2101,17 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
         d_e = self.config.d_e
         E_num = c_defect.shape[1] // d_e
         c_reshaped = c_defect.view(B, E_num, d_e)
-        d_vec = torch.norm(c_reshaped, p=2, dim=-1).mean(dim=0)  
+        d_vec = torch.norm(c_reshaped, p=2, dim=-1).mean(dim=0)
         return d_vec
 
     def hesapla_dirichlet_enerjisi_vektoru(self, x_r: torch.Tensor, Delta_0: torch.Tensor) -> torch.Tensor:
-        laplacian_flow = torch.matmul(x_r, Delta_0.T)  
+        laplacian_flow = torch.matmul(x_r, Delta_0.T)
         B = x_r.shape[0]
         d_v = self.config.d_v
         V_num = x_r.shape[1] // d_v
         x_res = x_r.view(B, V_num, d_v)
         flow_res = laplacian_flow.view(B, V_num, d_v)
-        e_vec = torch.sum(x_res * flow_res, dim=-1).mean(dim=0)  
+        e_vec = torch.sum(x_res * flow_res, dim=-1).mean(dim=0)
         return e_vec
 
     def hesapla_uyumsuzluk(self, x_r: torch.Tensor, D0: torch.Tensor) -> float:
@@ -2480,7 +2121,6 @@ class SMW_SifirParazit_BellekYoneticisi(nn.Module):
     def hesapla_dirichlet_enerjisi(self, x_r: torch.Tensor, Delta_0: torch.Tensor) -> float:
         e_vec = self.hesapla_dirichlet_enerjisi_vektoru(x_r, Delta_0)
         return float(e_vec.mean().detach().item())
-
 
 class N8_ChebyshevKatsayiProjeksiyon(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -2494,8 +2134,6 @@ class N8_ChebyshevKatsayiProjeksiyon(nn.Module):
         return vram_bayt_tahmin_et(B, self.config.d, self.config.M_plus_1)
 
     def forward(self, final_durumu: E9_GuncellenmisGizilDurum) -> E10_KulliManaMatrisi:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
@@ -2506,8 +2144,7 @@ class N8_ChebyshevKatsayiProjeksiyon(nn.Module):
         B = x_next.shape[0]
         if x_next.dim() == 1:
             x_next = x_next.unsqueeze(0)
-        
-        
+
         if x_next.shape[-1] != self.in_dim and x_next.shape[-1] > 0:
             if x_next.shape[-1] % self.in_dim == 0:
                 x_pooled = x_next.view(B, -1, self.in_dim).mean(dim=1)
@@ -2519,7 +2156,6 @@ class N8_ChebyshevKatsayiProjeksiyon(nn.Module):
         flat_C = self.proj(x_pooled)
         C = flat_C.view(B, self.config.d, self.config.M_plus_1)
         return E10_KulliManaMatrisi(C=C)
-
 
 class N8_B_DinamikUzunlukSecici(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -2566,16 +2202,12 @@ class N8_B_DinamikUzunlukSecici(nn.Module):
 
         return N_star_int, H_spec.mean(), N_ste.mean(), delta_n_tensor
 
-
 class N9_ChebyshevVandermondeCarpim(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
         self.config = config
         d = getattr(config, 'd', 128)
         M_plus_1 = getattr(config, 'M_plus_1', 7)
-
-
-
 
         self.spektral_kazanc = nn.Parameter(torch.ones(d, M_plus_1))
 
@@ -2593,8 +2225,6 @@ class N9_ChebyshevVandermondeCarpim(nn.Module):
         return vram_bayt_tahmin_et(B, self.config.d, N_star)
 
     def forward(self, kulli_mana: E10_KulliManaMatrisi, T_matrix: torch.Tensor) -> E11_ParalelGomuluVektorlerMatrisi:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         hedef_cihaz = zorunlu_cihaz if zorunlu_cihaz is not None else kulli_mana.C.device
         kulli_mana = girdi_cihaza_tasi(kulli_mana, hedef_cihaz)
@@ -2617,7 +2247,6 @@ class N9_ChebyshevVandermondeCarpim(nn.Module):
 
         X_output = torch.matmul(C * kazanc.unsqueeze(0), T_matrix)
         return E11_ParalelGomuluVektorlerMatrisi(X_output=X_output)
-
 
 class N10_SozlukSoftmaxIzdusem(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -2644,13 +2273,12 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
 
     def forward(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None,
                 h_spec: Optional[torch.Tensor] = None) -> E12_ParalelTokenOlasilikMatrisi:
-        X_input = e11_gomulu.X_output  
+        X_input = e11_gomulu.X_output
         if X_input.dim() == 2:
             X_input = X_input.unsqueeze(0)
         elif X_input.dim() == 1:
             X_input = X_input.unsqueeze(0).unsqueeze(-1)
 
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         device = zorunlu_cihaz if zorunlu_cihaz is not None else X_input.device
         if next(self.parameters(), None) is not None:
@@ -2669,23 +2297,15 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
         X_t = (X_t / _rms) * self.rms_g.to(device=X_t.device, dtype=X_t.dtype)
         tau = F.softplus(self.log_sicaklik.to(device=X_t.device)) + 1e-4
 
-
-
-
-
-
-
-
         if h_spec is not None:
             _h = h_spec if isinstance(h_spec, torch.Tensor) else torch.tensor(float(h_spec))
             _h = _h.to(device=X_t.device, dtype=tau.dtype).reshape(())
             tau = tau * (1.0 + torch.tanh(_h))
 
         micro_chunk_size = 64
-        
-        
+
         if hedefler is not None:
-            
+
             if hedefler.dim() == 1:
                 h_tensor = hedefler.unsqueeze(0)
             elif hedefler.dim() == 3:
@@ -2694,18 +2314,17 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 h_tensor = hedefler
 
             if h_tensor.shape[0] != B:
-                
-                
+
                 if h_tensor.shape[0] == 1:
                     h_tensor = h_tensor.expand(B, -1)
                 else:
-                    tekrar = -(-B // h_tensor.shape[0])  
+                    tekrar = -(-B // h_tensor.shape[0])
                     h_tensor = h_tensor.repeat(tekrar, 1)[:B]
 
             cur_N = min(N, h_tensor.shape[1])
             h_tensor = torch.clamp(h_tensor[:, :cur_N], min=0, max=self.V_size - 1).long()
             p_target_chunks = []
-            
+
             def _hedefli_chunk_olasiligi(X_parca: torch.Tensor, h_parca_3d: torch.Tensor, tau_parca: torch.Tensor) -> torch.Tensor:
                 logits_parca = self.vocab_head(X_parca)
                 while logits_parca.dim() < 3:
@@ -2713,15 +2332,6 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 logits_tepe = logits_parca.max(dim=-1, keepdim=True).values.detach()
                 logits_normal = (logits_parca - logits_tepe) / tau_parca
                 logits_normal = torch.clamp(logits_normal, min=-50.0, max=50.0)
-
-
-
-
-
-
-
-
-
 
                 hedef_logit = logits_normal.gather(2, h_parca_3d).squeeze(-1)
                 bolen = torch.logsumexp(logits_normal, dim=-1)
@@ -2746,19 +2356,17 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
 
             p_target_full = torch.cat(p_target_chunks, dim=-1)
             return E12_ParalelTokenOlasilikMatrisi(P=p_target_full)
-            
+
         else:
-            
+
             P_chunks = []
             preds_chunks = []
             for i in range(0, N, micro_chunk_size):
                 X_chunk = X_t[:, i:i+micro_chunk_size, :]
                 logits_chunk = self.vocab_head(X_chunk)
-                
-                
+
                 if logits_chunk.dim() < 3:
-                    
-                    
+
                     logging.getLogger("mucit_ai.kontratlar").error(
                         f"[N10 Boyut Anomalisi] logits_chunk.dim()={logits_chunk.dim()} (beklenen: 3). "
                         f"X_input.shape={tuple(X_input.shape)}, X_refined.shape={tuple(X_refined.shape)}, "
@@ -2772,21 +2380,17 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
                 logits_max = logits_chunk.max(dim=-1, keepdim=True).values.detach()
                 logits_norm = (logits_chunk - logits_max.to(device=logits_chunk.device)) / tau.to(device=logits_chunk.device)
                 P_chunk = torch.softmax(torch.clamp(logits_norm, min=-50.0, max=50.0), dim=-1).transpose(1, 2)
-                
-                
+
                 preds_chunks.append(torch.argmax(P_chunk, dim=1))
                 P_chunks.append(P_chunk.detach() if not self.training else P_chunk)
 
-            preds_full = torch.cat(preds_chunks, dim=-1)  
-            
-            return E12_ParalelTokenOlasilikMatrisi(P=P_chunks[0], P_chunks=P_chunks, preds_full=preds_full)
+            preds_full = torch.cat(preds_chunks, dim=-1)
 
+            return E12_ParalelTokenOlasilikMatrisi(P=P_chunks[0], P_chunks=P_chunks, preds_full=preds_full)
 
 N11_LifLaplasyeniBlokInsaEdici = Riyazi_LifLaplasyeniBlokInsaEdici
 
-
 N12_BellekBaglamYoneticisi = SMW_SifirParazit_BellekYoneticisi
-
 
 class Riyazi_StiefelManifolduIzdusumu:
     def izdusur(self, phi_dict: Union[Dict[str, torch.Tensor], nn.ParameterDict, torch.Tensor, Any]):
@@ -2806,7 +2410,6 @@ class Riyazi_StiefelManifolduIzdusumu:
         self.izdusur(phi_dict)
 
 N13_StiefelManifolduIzdusumu = Riyazi_StiefelManifolduIzdusumu
-
 
 class N14_OdulTopolojikDevresmezlikMotoru:
     def __init__(self, config: Model_TopolojikKonfigurasyon):
@@ -2860,38 +2463,33 @@ class N14_OdulTopolojikDevresmezlikMotoru:
 
 Odul_TopolojikDevresmezlikMotoru = N14_OdulTopolojikDevresmezlikMotoru
 
-
 class Kayip_GRPO_Kriteri:
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
-        
+
         d_a = getattr(config, 'd_a', 64)
         d_v = getattr(config, 'd_v', 32)
         W_raw = torch.randn(d_a, d_v)
         Q, _ = torch.linalg.qr(W_raw)
-        self._W_up_stiefel_cpu: torch.Tensor = Q  
+        self._W_up_stiefel_cpu: torch.Tensor = Q
 
     def hesapla_vektor(self, P: torch.Tensor, hedefler: torch.Tensor, oduller: torch.Tensor) -> torch.Tensor:
-        
-        
         if hedefler.device != P.device:
             hedefler = hedefler.to(P.device)
         if oduller.device != P.device:
             oduller = oduller.to(P.device)
         if P.dim() == 2:
-            
-            
-            nll = -torch.log(torch.clamp(P, min=1e-9, max=1.0)).mean(dim=-1)  
+
+            nll = -torch.log(torch.clamp(P, min=1e-9, max=1.0)).mean(dim=-1)
         else:
             B, V_size, N = P.shape
             targets = hedefler[:, :N]
-            p_target = P.gather(1, targets.unsqueeze(1)).squeeze(1)  
-            nll = -torch.log(torch.clamp(p_target, min=1e-9, max=1.0)).mean(dim=-1)  
+            p_target = P.gather(1, targets.unsqueeze(1)).squeeze(1)
+            nll = -torch.log(torch.clamp(p_target, min=1e-9, max=1.0)).mean(dim=-1)
 
-        
         std = oduller.std() if oduller.std() > 0 else 1e-8
         avantajlar = (oduller - oduller.mean()) / (std + 1e-8)
-        kayip_vec = nll * avantajlar.detach()  
+        kayip_vec = nll * avantajlar.detach()
         return kayip_vec
 
     def hesapla(self, P: torch.Tensor, hedefler: torch.Tensor, oduller: torch.Tensor) -> torch.Tensor:
@@ -2909,49 +2507,43 @@ class Kayip_GRPO_Kriteri:
                                    beta3: float = 0.01,
                                    beta4: float = 0.1,
                                    beta5: float = 0.05) -> Tuple[torch.Tensor, Dict[str, float]]:
-        
-        info_gain = kayip_cevapsiz - kayip_cevapli  
+
+        info_gain = kayip_cevapsiz - kayip_cevapli
         B_grouped = a_r.shape[0]
         d_a = a_r.shape[-1]
         d_v = getattr(self.config, 'd_v', 32) if self.config else 32
         D_total = x_context.shape[-1]
-        
+
         V_nodes = D_total // d_v if D_total % d_v == 0 else max(1, -(-D_total // d_v))
-        
+
         if D_total == V_nodes * d_v:
             x_nodes_all = x_context.view(B_grouped, V_nodes, d_v)
         else:
             x_nodes_all = F.adaptive_avg_pool1d(x_context.unsqueeze(1), V_nodes * d_v).view(B_grouped, V_nodes, d_v)
 
-        L_bilgi_kazanci_v = info_gain.unsqueeze(-1).repeat(1, V_nodes)  
+        L_bilgi_kazanci_v = info_gain.unsqueeze(-1).repeat(1, V_nodes)
 
-        
         W_up = self._W_up_stiefel_cpu.to(device=x_context.device, dtype=x_context.dtype)
 
-        
-        x_nodes_proj = torch.matmul(x_nodes_all, W_up.T)  
-        diff_nodes_ax = a_r.unsqueeze(1) - x_nodes_proj              
-        dist_nodes_sq = torch.clamp(torch.sum(diff_nodes_ax ** 2, dim=-1), min=1e-4) 
-        L_mesafe_v = torch.clamp(1.0 / dist_nodes_sq, max=100.0)        
-        dist_penalty = L_mesafe_v.mean(dim=-1)                          
+        x_nodes_proj = torch.matmul(x_nodes_all, W_up.T)
+        diff_nodes_ax = a_r.unsqueeze(1) - x_nodes_proj
+        dist_nodes_sq = torch.clamp(torch.sum(diff_nodes_ax ** 2, dim=-1), min=1e-4)
+        L_mesafe_v = torch.clamp(1.0 / dist_nodes_sq, max=100.0)
+        dist_penalty = L_mesafe_v.mean(dim=-1)
 
-        
         K_slots = getattr(self.config, 'K', 16) if self.config else 16
         diff_aq = a_r - q_r
-        L_kolaylik_k = torch.sum(diff_aq ** 2, dim=-1, keepdim=True).repeat(1, K_slots)  
-        complexity_penalty = L_kolaylik_k.mean(dim=-1)                                 
+        L_kolaylik_k = torch.sum(diff_aq ** 2, dim=-1, keepdim=True).repeat(1, K_slots)
+        complexity_penalty = L_kolaylik_k.mean(dim=-1)
 
-        
-        L_yogunluk_v = torch.norm(x_nodes_all, p=2, dim=-1) - torch.mean(torch.abs(x_nodes_all), dim=-1)  
-        entropy_penalty = L_yogunluk_v.mean(dim=-1)                                                        
+        L_yogunluk_v = torch.norm(x_nodes_all, p=2, dim=-1) - torch.mean(torch.abs(x_nodes_all), dim=-1)
+        entropy_penalty = L_yogunluk_v.mean(dim=-1)
 
-        
         q_r_proj_v = F.adaptive_avg_pool1d(q_r.unsqueeze(1), d_v).squeeze(1).unsqueeze(1)
-        contra_sim_v = F.cosine_similarity(q_r_proj_v, -x_nodes_all, dim=-1)  
-        L_celiskisizlik_v = F.relu(contra_sim_v)                              
-        contra_penalty = L_celiskisizlik_v.mean(dim=-1)                       
+        contra_sim_v = F.cosine_similarity(q_r_proj_v, -x_nodes_all, dim=-1)
+        L_celiskisizlik_v = F.relu(contra_sim_v)
+        contra_penalty = L_celiskisizlik_v.mean(dim=-1)
 
-        
         qa_diff = q_r - a_r
         if Delta_0 is not None:
             if qa_diff.shape[-1] != Delta_0.shape[0]:
@@ -2960,13 +2552,12 @@ class Kayip_GRPO_Kriteri:
                 qa_diff_proj = qa_diff
             geodesic_flow = torch.matmul(qa_diff_proj, Delta_0.T)
             g_flow_sq = qa_diff_proj * geodesic_flow
-            L_geodesic_v = F.adaptive_avg_pool1d(g_flow_sq.unsqueeze(1), V_nodes).squeeze(1)  
+            L_geodesic_v = F.adaptive_avg_pool1d(g_flow_sq.unsqueeze(1), V_nodes).squeeze(1)
             geodesic_penalty = torch.sum(g_flow_sq, dim=-1)
         else:
             L_geodesic_v = torch.sum(qa_diff ** 2, dim=-1, keepdim=True).repeat(1, V_nodes)
             geodesic_penalty = L_geodesic_v.mean(dim=-1)
 
-        
         E_sorgu_node_matrix = torch.stack([
             L_mesafe_v.mean(dim=0),
             L_bilgi_kazanci_v.mean(dim=0),
@@ -2974,15 +2565,12 @@ class Kayip_GRPO_Kriteri:
             L_celiskisizlik_v.mean(dim=0),
             L_yogunluk_v.mean(dim=0),
             L_geodesic_v.mean(dim=0)
-        ], dim=-1)  
+        ], dim=-1)
 
-        
-        L_sorgu_field = E_sorgu_node_matrix.reshape(-1)  
+        L_sorgu_field = E_sorgu_node_matrix.reshape(-1)
 
-        
         R_q_raw = info_gain - (beta1 * dist_penalty) - (beta2 * complexity_penalty) - (beta3 * entropy_penalty) - (beta4 * contra_penalty) - (beta5 * geodesic_penalty)
 
-        
         std_r = R_q_raw.std() if R_q_raw.std() > 0 else 1e-8
         R_q_normalized = (R_q_raw - R_q_raw.mean()) / (std_r + 1e-8)
 
@@ -3001,7 +2589,7 @@ class Kayip_GRPO_Kriteri:
         return R_q_normalized, metrikler
 
 class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
-    def __init__(self, gamma: float = 1.0, eps: float = 1e-4, 
+    def __init__(self, gamma: float = 1.0, eps: float = 1e-4,
                  var_weight: float = 1.0, cov_weight: float = 1.0, rec_weight: float = 1.0):
         super().__init__()
         self.gamma = gamma
@@ -3023,10 +2611,9 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
     def varyans_kaybi_vektor(self, z: torch.Tensor) -> torch.Tensor:
         if z.ndim > 2:
             z = z.view(-1, z.shape[-1])
-        
-        
+
         std_z = torch.sqrt(torch.var(z, dim=0, unbiased=False) + self.eps)
-        var_loss_vec = torch.relu(self.gamma - std_z)  
+        var_loss_vec = torch.relu(self.gamma - std_z)
         return var_loss_vec
 
     def varyans_kaybi(self, z: torch.Tensor) -> torch.Tensor:
@@ -3039,20 +2626,17 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
         if B <= 1:
             return torch.zeros(max(1, B), device=z.device)
 
-        
-        z_mean = torch.mean(z, dim=0, keepdim=True)  
-        z_centered = z - z_mean                      
+        z_mean = torch.mean(z, dim=0, keepdim=True)
+        z_centered = z - z_mean
 
-        
-        K_gram = torch.matmul(z_centered, z_centered.T)  
+        K_gram = torch.matmul(z_centered, z_centered.T)
 
-        
         denom = float(max(1, (B - 1) ** 2))
-        sample_cov_frobenius_sq = torch.sum(K_gram ** 2, dim=1) / denom  
-        variances = torch.var(z, dim=0, unbiased=False)                  
-        diag_cov_sq = torch.sum(variances ** 2)                          
+        sample_cov_frobenius_sq = torch.sum(K_gram ** 2, dim=1) / denom
+        variances = torch.var(z, dim=0, unbiased=False)
+        diag_cov_sq = torch.sum(variances ** 2)
 
-        cov_loss_vec = F.relu((sample_cov_frobenius_sq - (diag_cov_sq / float(B))) / float(D))  
+        cov_loss_vec = F.relu((sample_cov_frobenius_sq - (diag_cov_sq / float(B))) / float(D))
         return cov_loss_vec
 
     def kovaryans_kaybi(self, z: torch.Tensor) -> torch.Tensor:
@@ -3060,7 +2644,7 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
 
     def rekonstruksiyon_kaybi_vektor(self, x: torch.Tensor, z: torch.Tensor, W: Optional[torch.Tensor] = None) -> torch.Tensor:
         if z.ndim == 3:
-            z_flat = z.mean(dim=-1)  
+            z_flat = z.mean(dim=-1)
         elif z.ndim > 2:
             z_flat = z.view(x.shape[0], -1)
         else:
@@ -3082,8 +2666,6 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
         return self.rekonstruksiyon_kaybi_vektor(x, z, W).mean()
 
     def forward(self, x: torch.Tensor, z: torch.Tensor, W: Optional[torch.Tensor] = None) -> Tuple[Tuple[torch.Tensor, torch.Tensor, torch.Tensor], Dict[str, float]]:
-        
-        
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if x.device != zorunlu_cihaz:
@@ -3093,16 +2675,16 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
             if W is not None and W.device != zorunlu_cihaz:
                 W = W.to(zorunlu_cihaz)
 
-        l_var_vec = self.varyans_kaybi_vektor(z)        
-        l_cov_vec = self.kovaryans_kaybi_vektor(z)      
-        l_rec_vec = self.rekonstruksiyon_kaybi_vektor(x, z, W)  
+        l_var_vec = self.varyans_kaybi_vektor(z)
+        l_cov_vec = self.kovaryans_kaybi_vektor(z)
+        l_rec_vec = self.rekonstruksiyon_kaybi_vektor(x, z, W)
 
         l_var_skaler = l_var_vec.mean()
         l_cov_skaler = l_cov_vec.mean()
         l_rec_skaler = l_rec_vec.mean()
 
-        toplam_vicreg_skaler = (self.var_weight * l_var_skaler + 
-                                self.cov_weight * l_cov_skaler + 
+        toplam_vicreg_skaler = (self.var_weight * l_var_skaler +
+                                self.cov_weight * l_cov_skaler +
                                 self.rec_weight * l_rec_skaler)
 
         metrikler = {
@@ -3113,27 +2695,23 @@ class Kayip_VICReg_UcluBilgiKorunumu(nn.Module):
         }
         return (l_var_vec, l_cov_vec, l_rec_vec), metrikler
 
-
 class LPT_DosyaDengeliDagitici:
     @staticmethod
     def dagit(dosya_listesi: List[Tuple[str, int]], num_gpus: int = 1) -> List[List[str]]:
         if num_gpus <= 1 or not dosya_listesi:
             return [[f[0] for f in dosya_listesi]]
-        
-        
+
         sirali_dosyalar = sorted(dosya_listesi, key=lambda x: x[1], reverse=True)
-        
+
         gpu_dosyalari: List[List[str]] = [[] for _ in range(num_gpus)]
         gpu_yukleri: List[int] = [0] * num_gpus
-        
-        
+
         for dosya_yolu, bayt_boyutu in sirali_dosyalar:
             min_gpu_idx = gpu_yukleri.index(min(gpu_yukleri))
             gpu_dosyalari[min_gpu_idx].append(dosya_yolu)
             gpu_yukleri[min_gpu_idx] += bayt_boyutu
-            
-        return gpu_dosyalari
 
+        return gpu_dosyalari
 
 class N15_EgitimKontrolNoktasiYoneticisi:
     def __init__(self, kaydetme_dizini: str = "./checkpoints"):
@@ -3142,16 +2720,16 @@ class N15_EgitimKontrolNoktasiYoneticisi:
     def kaydet(self, epoch: int, model: Any, optimizer: torch.optim.Optimizer, kayip: float, is_master: bool = True):
         if not is_master:
             return
-            
+
         import os
         os.makedirs(self.kaydetme_dizini, exist_ok=True)
         dosya_yolu = os.path.join(self.kaydetme_dizini, f"topolojik_model_epoch_{epoch}.pt")
-        
+
         if isinstance(model, dict):
             model_state = {k: (v.module.state_dict() if hasattr(v, 'module') else v.state_dict()) for k, v in model.items()}
         else:
             model_state = model.module.state_dict() if hasattr(model, 'module') else model.state_dict()
-            
+
         state_dict = {
             'epoch': epoch,
             'kayip': kayip,
@@ -3190,13 +2768,11 @@ class N15_EgitimKontrolNoktasiYoneticisi:
 
         return state_dict
 
-
 class N16_ArcIzgaraDonusturucu:
     def donustur(self, gorev_verisi: Dict[str, Any]) -> str:
         return json.dumps(gorev_verisi.get("train", []))
 
     def insa_et(self, olasilik_matrisi: E12_ParalelTokenOlasilikMatrisi, hedef_boyut: Tuple[int, int] = (3, 3)) -> Dict[str, List[List[int]]]:
-        
         if olasilik_matrisi.preds_full is not None:
             preds = olasilik_matrisi.preds_full[0].cpu().numpy()
         else:
@@ -3218,7 +2794,6 @@ class N16_ArcIzgaraDonusturucu:
             izgara.append(row)
         return {"attempt_1": izgara, "attempt_2": izgara}
 
-
 class BiliselKanvasModeli(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon, bellek_yonetici: Optional[Bellek_BaglamYoneticisi] = None):
         super().__init__()
@@ -3229,18 +2804,6 @@ class BiliselKanvasModeli(nn.Module):
         self.n3_lif = N3_LifSinirlamaAtama(config)
 
         e_coboundary_dim = (config.V_nodes - 1) * config.d_e
-
-
-
-
-
-
-
-
-
-
-
-
 
         self.n4_sorgu = N4_SorguSecici(config=config)
         self.n5_cevap = N5_CevapSuzucu(config=config)
@@ -3256,12 +2819,6 @@ class BiliselKanvasModeli(nn.Module):
 
         self.cheby_calc = Yardimci_ChebyshevMatrisHesaplayici(config)
         self.laplasyen_insa = Riyazi_LifLaplasyeniBlokInsaEdici(config)
-
-
-
-
-
-
 
         self.bellek_yonetici = (
             bellek_yonetici if bellek_yonetici is not None
@@ -3281,10 +2838,8 @@ class BiliselKanvasModeli(nn.Module):
         e3_sinir = self.n2_topox(e2_byte, x_initial=x_initial, mode=mode)
         e4_lif = self.n3_lif(e3_sinir, x_initial)
 
-        
         if b_size != x_initial.shape[0]:
-            
-            
+
             repeat_factor = -(-b_size // x_initial.shape[0])
             repeat_dims = [1] * x_initial.dim()
             repeat_dims[0] = repeat_factor
@@ -3295,15 +2850,7 @@ class BiliselKanvasModeli(nn.Module):
         mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_start)
         mevcut_bellek_obj = self.bellek_yonetici.get_memory(b_size)
 
-
-
-
-
-
         D0_op = None
-
-
-
 
         d_dugum_gecmis = None
         gamma_gecmis = None
@@ -3317,10 +2864,6 @@ class BiliselKanvasModeli(nn.Module):
 
             D0_op, _ = self.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
 
-
-
-
-
             self.n6_aktor.update_operators(D0_op)
 
             e6_sorgu = self.n4_sorgu(mevcut_durum, D0_operator=D0_op, A_adjacency=e3_sinir.D1, bellek=mevcut_bellek_obj)
@@ -3328,13 +2871,8 @@ class BiliselKanvasModeli(nn.Module):
             e8_sentetik = self.n6_aktor(mevcut_durum, e6_sorgu, e7_lokal)
             e9_guncel = self.n7_cozucu(e8_sentetik, D0_op, mevcut_durum)
 
-            
             mevcut_bellek_obj = self.n_yazici.yaz(e9_guncel.x_next, e6_sorgu, mevcut_bellek_obj, e7_lokal)
             mevcut_durum = E5_A_MevcutGizilDurum(x_r=e9_guncel.x_next)
-
-
-
-
 
             with torch.no_grad():
                 _d_disc_r = self.n7_cozucu.hesapla_uyumsuzluk_vektoru(
@@ -3374,11 +2912,10 @@ class BiliselKanvasModeli(nn.Module):
             izgara_str = json.dumps(test_girdisi)
             olasilik_matrisi = self.forward(izgara_str, active_batch_size=1)
 
-            
             if olasilik_matrisi.preds_full is not None:
                 preds = olasilik_matrisi.preds_full[0].cpu().numpy()
             else:
-                P = olasilik_matrisi.P  
+                P = olasilik_matrisi.P
                 preds = torch.argmax(P, dim=1)[0].cpu().numpy()
 
             rows = len(test_girdisi)
@@ -3399,7 +2936,6 @@ class BiliselKanvasModeli(nn.Module):
 
             return att1, att2
 
-
 class Riyazi_Pareto_PCGrad_MGDA_Operator:
     def __init__(self):
         pass
@@ -3407,14 +2943,13 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         n_shard = girdi_sekli[0] if len(girdi_sekli) > 0 else 3
         P_toplam = girdi_sekli[1] if len(girdi_sekli) > 1 else 0
-        return vram_bayt_tahmin_et(n_shard, P_toplam) * 2  
+        return vram_bayt_tahmin_et(n_shard, P_toplam) * 2
 
     def coz_mgda_pareto_weights(self, G: torch.Tensor, max_iter: int = 30) -> torch.Tensor:
         n = G.shape[0]
         if n == 1:
             return torch.tensor([1.0], device=G.device, dtype=G.dtype)
 
-        
         with torch.amp.autocast(device_type='cuda', enabled=False):
             G_fp32 = G.float()
             U, S, Vh = torch.linalg.svd(G_fp32)
@@ -3437,7 +2972,7 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
                 break
             num = -torch.matmul(d_t, grad_obj)
             gamma = torch.clamp(num / (2.0 * denom), 0.0, 1.0)
-            
+
             alpha = alpha + gamma * d_t
             if gamma < 1e-6:
                 break
@@ -3465,7 +3000,6 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         if K == 0:
             return torch.zeros(0)
 
-        
         if K > 1:
             L_mean = L_vec.mean()
             L_diff = L_vec - L_mean
@@ -3474,22 +3008,17 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         else:
             v_det = torch.ones_like(L_vec).detach()
 
-        
         vjp_loss = torch.dot(v_det, L_vec)
 
-        
         vjp_loss.backward()
 
-        
         gradyanlari_parametreye_hizala(trainable_params)
         optimizer_durumunu_parametreye_hizala(optimizer, trainable_params)
         torch.nn.utils.clip_grad_norm_(trainable_params, max_norm=max_norm)
         optimizer.step()
 
-        
         alpha_effective = torch.abs(v_det) / (torch.abs(v_det).sum() + 1e-8)
 
-        
         import gc as _gc_alpha
         _gc_alpha.collect()
         if torch.cuda.is_available():
@@ -3506,7 +3035,6 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         if n == 0:
             return torch.zeros(0)
 
-
         ref_device = next((p.device for p in trainable_params if p.requires_grad), torch.device('cpu'))
         ref_dtype  = next((p.dtype  for p in trainable_params if p.requires_grad), torch.float32)
 
@@ -3519,7 +3047,7 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         pcgrad_bellek_dtype = torch.bfloat16 if ref_device.type == 'cuda' else ref_dtype
 
         if n == 1:
-            
+
             optimizer.zero_grad(set_to_none=True)
             imlec = 0
             for k, p in enumerate(trainable_params):
@@ -3540,23 +3068,14 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
-        
         trainable_idx = [k for k, p in enumerate(trainable_params) if p.requires_grad]
 
         def _blok(i: int, k: int) -> Optional[torch.Tensor]:
             g_list = shard_gradyanlari[i]
             return g_list[k] if k < len(g_list) else None
 
-        
         norm_sq_vals: List[float] = [0.0] * n
         for i in range(n):
-
-
-
-
-
-
-
 
             parcalar = [
                 torch.sum(_blok(i, k).detach().float() ** 2)
@@ -3582,10 +3101,6 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
                 bloklar.append(b)
             gecerli = [i for i in range(n) if bloklar[i] is not None]
             if gecerli:
-
-
-
-
 
                 indis = torch.tensor(gecerli, dtype=torch.long)
                 eleman_sayisi = bloklar[gecerli[0]].numel()
@@ -3639,7 +3154,6 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
 
         del R, A
 
-        
         gradyanlari_parametreye_hizala(trainable_params)
         optimizer_durumunu_parametreye_hizala(optimizer, trainable_params)
         torch.nn.utils.clip_grad_norm_(trainable_params, max_norm=max_norm)
@@ -3664,14 +3178,13 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
             tasili_shardlar.append(tasili_list)
         return tasili_shardlar
 
-
 class Hafiza_Izleyici_ve_VRAM_Denetci:
     def __init__(self, cihaz: Union[torch.device, str] = "cuda", kritik_esik_yuzde: float = 0.85):
         if isinstance(cihaz, str):
             self.cihaz = torch.device(cihaz)
         else:
             self.cihaz = cihaz
-            
+
         self.kritik_esik_yuzde = kritik_esik_yuzde
         self.toplam_vram_mb = 88.0 * 1024.0
         self.esik_mb = self.toplam_vram_mb * kritik_esik_yuzde
@@ -3729,15 +3242,13 @@ class Hafiza_Izleyici_ve_VRAM_Denetci:
             f"Boş: {bos_mb:.2f} MB"
         )
 
-
         self.esik_mb = toplam_mb * self.kritik_esik_yuzde
         if tahsis_mb > self.esik_mb:
             logger.warning(
                 f"KRİTİK {etiket} UYARISI! [{dugum_adi}] adımında %{self.kritik_esik_yuzde*100:.1f} eşiği aşıldı "
                 f"({tahsis_mb:.2f} MB > {self.esik_mb:.2f} MB). Acil temizlik..."
             )
-            
-            
+
             import gc as _gc_denetci
             _gc_denetci.collect()
             if torch.cuda.is_available():
@@ -3748,7 +3259,6 @@ class Hafiza_Izleyici_ve_VRAM_Denetci:
             "rezerve_mb": rezerve_mb,
             "bos_mb": bos_mb
         }
-
 
 StatikIzometrikByteAyristirici = N1_HibritByteTokenAyristirici
 RiyaziCebirselHomolojiInsaEdici = N2_TopoXHucreOlusumu
@@ -3764,15 +3274,12 @@ TAHLIYE_SAYAClARI: Dict[str, float] = {
     "basarisiz_cagri": 0.0,
 }
 
-
 def tahliye_sayaclarini_sifirla() -> None:
     for anahtar in TAHLIYE_SAYAClARI:
         TAHLIYE_SAYAClARI[anahtar] = 0.0
 
-
 _LIBC_MALLOC_TRIM: Any = None
 _LIBC_MALLOC_TRIM_DENENDI: bool = False
-
 
 def surec_rss_bayt() -> int:
     try:
@@ -3783,7 +3290,6 @@ def surec_rss_bayt() -> int:
     except Exception:
         pass
     return 0
-
 
 def cpu_yigin_belleginini_iade_et() -> int:
     global _LIBC_MALLOC_TRIM, _LIBC_MALLOC_TRIM_DENENDI
@@ -3809,7 +3315,6 @@ def cpu_yigin_belleginini_iade_et() -> int:
         logger.debug(f"[CPU Yığın İadesi] malloc_trim çağrısı başarısız: {exc}")
         return 0
     return max(onceki - surec_rss_bayt(), 0)
-
 
 def vram_on_kontrol_ve_nvme_tahliye(gerekli_bayt: int, takas_mgr: Any = None, baglam: str = "") -> None:
     if not torch.cuda.is_available():
@@ -3893,7 +3398,6 @@ def girdi_cihaza_tasi(x: Any, device: torch.device) -> Any:
         return type(x)(tasinmis)
     return x
 
-
 def _rekursif_tasma_bazli_matmul(
     A: torch.Tensor,
     B: torch.Tensor,
@@ -3920,8 +3424,7 @@ def _rekursif_tasma_bazli_matmul(
         return orijinal_matmul_fn(A, B)
 
     if tam_cikti_bayt + emniyet_bayt <= free_bayt or derinlik >= maks_derinlik or device_count <= 1:
-        
-        
+
         return orijinal_matmul_fn(A, B)
 
     if derinlik == 0:
@@ -3948,12 +3451,12 @@ def _rekursif_tasma_bazli_matmul(
 
         kullanilabilir = free_bayt_i - emniyet_bayt
         if gpu_id != home_device.index:
-            kullanilabilir -= A_bayt  
+            kullanilabilir -= A_bayt
 
         if kullanilabilir <= 0:
-            continue  
+            continue
 
-        birim_bayt = m * dtype_bayt  
+        birim_bayt = m * dtype_bayt
         sigacak_n = min(kalan_n, int(kullanilabilir // birim_bayt)) if birim_bayt > 0 else kalan_n
         if sigacak_n <= 0:
             continue
@@ -3963,7 +3466,6 @@ def _rekursif_tasma_bazli_matmul(
         B_dilim = B[:, imlec:imlec + sigacak_n]
         B_dilim_burada = B_dilim if B_dilim.device == hedef_cihaz else B_dilim.to(hedef_cihaz)
 
-        
         cikti_dilim = _rekursif_tasma_bazli_matmul(
             A_burada, B_dilim_burada, orijinal_matmul_fn, emniyet_marji_mb, derinlik + 1, maks_derinlik
         )
@@ -3973,8 +3475,7 @@ def _rekursif_tasma_bazli_matmul(
         kalan_n -= sigacak_n
 
     if kalan_n > 0:
-        
-        
+
         logger.warning(
             f"[TaşmaFarkındaHesaplamaİdaresi] {kalan_n}/{n} sütun hiçbir GPU'ya sığmadı "
             f"(tüm görünür {device_count} cihaz taştı) — CPU'da tamamlanıyor."
@@ -3985,11 +3486,9 @@ def _rekursif_tasma_bazli_matmul(
         parcalar.append((imlec, cikti_cpu))
         kalan_n = 0
 
-    
     parcalar.sort(key=lambda p: p[0])
     cikti_parcalari = [p[1].to(home_device) if p[1].device != home_device else p[1] for p in parcalar]
     return torch.cat(cikti_parcalari, dim=1)
-
 
 def tasma_bazli_capraz_gpu_matmul_sardla(
     A: torch.Tensor,
@@ -3997,7 +3496,6 @@ def tasma_bazli_capraz_gpu_matmul_sardla(
     emniyet_marji_mb: float = 256.0,
 ) -> torch.Tensor:
     return _rekursif_tasma_bazli_matmul(A, B, torch.matmul, emniyet_marji_mb)
-
 
 class TasmaFarkindaHesaplamaIdaresi:
     _kurulu: bool = False
@@ -4007,8 +3505,6 @@ class TasmaFarkindaHesaplamaIdaresi:
 
     @classmethod
     def baslat(cls, emniyet_marji_mb: float = 256.0) -> None:
-        
-        
         raise RuntimeError(
             "[TasmaFarkindaHesaplamaIdaresi] Bu kuresel monkey-patch DEVRE DISIDIR "
             "(PyTorch ic cagri yollarini bozup 'RuntimeError: self must be a matrix' "
@@ -4028,8 +3524,6 @@ class TasmaFarkindaHesaplamaIdaresi:
         orijinal_linear = cls._orijinal_linear
 
         def _idareli_matmul(input: torch.Tensor, other: torch.Tensor, *, out=None):
-            
-            
             if (
                 out is None
                 and isinstance(input, torch.Tensor) and isinstance(other, torch.Tensor)
@@ -4040,8 +3534,6 @@ class TasmaFarkindaHesaplamaIdaresi:
             return orijinal_matmul(input, other) if out is None else orijinal_matmul(input, other, out=out)
 
         def _idareli_linear(input: torch.Tensor, weight: torch.Tensor, bias: Optional[torch.Tensor] = None):
-            
-            
             if (
                 isinstance(input, torch.Tensor) and isinstance(weight, torch.Tensor)
                 and input.dim() == 2 and input.is_cuda
@@ -4083,7 +3575,6 @@ class TasmaFarkindaHesaplamaIdaresi:
         cls._kurulu = False
         logger.info("[TaşmaFarkındaHesaplamaİdaresi] Küresel yamalar geri alındı.")
 
-
 def anlasmali_vram_guvencesi_al(
     modul_nesnesi: Any,
     girdi_tensoru_veya_sekli: Any,
@@ -4096,7 +3587,6 @@ def anlasmali_vram_guvencesi_al(
 
     gpu_device = torch.device('cuda')
 
-    
     if hasattr(girdi_tensoru_veya_sekli, 'shape'):
         girdi_sekli = tuple(girdi_tensoru_veya_sekli.shape)
     elif isinstance(girdi_tensoru_veya_sekli, (tuple, list)):
@@ -4104,7 +3594,6 @@ def anlasmali_vram_guvencesi_al(
     else:
         girdi_sekli = (1, 1024)
 
-    
     if hasattr(modul_nesnesi, 'tahmin_et_vram_bayt'):
         try:
             resmi_gerekli_bayt = int(modul_nesnesi.tahmin_et_vram_bayt(girdi_sekli))
@@ -4113,7 +3602,6 @@ def anlasmali_vram_guvencesi_al(
     else:
         resmi_gerekli_bayt = 128 * 1024 * 1024
 
-    
     try:
         free_bytes, total_bytes = torch.cuda.mem_get_info()
     except Exception:
@@ -4124,7 +3612,6 @@ def anlasmali_vram_guvencesi_al(
     modul_adi = modul_nesnesi.__class__.__name__ if hasattr(modul_nesnesi, '__class__') else str(modul_nesnesi)
     logger = logging.getLogger("mucit_ai.kontratlar")
 
-    
     if toplam_ihtiyac > free_bytes:
         logger.info(
             f"[Açık VRAM Anlaşması] Düğüm '{modul_adi}' {resmi_gerekli_bayt / (1024**2):.2f} MB VRAM talep etti. "
@@ -4136,15 +3623,13 @@ def anlasmali_vram_guvencesi_al(
 
         free_bytes, _ = torch.cuda.mem_get_info()
         if toplam_ihtiyac > free_bytes:
-            
-            
+
             vram_on_kontrol_ve_nvme_tahliye(toplam_ihtiyac, takas_mgr)
             try:
                 free_bytes, _ = torch.cuda.mem_get_info()
             except Exception:
                 free_bytes = 0
 
-    
     if toplam_ihtiyac > free_bytes:
         logger.warning(
             f"[VRAM İdarecisi] '{modul_adi}' için {resmi_gerekli_bayt / (1024**2):.2f} MB talebi "
@@ -4174,7 +3659,6 @@ def anlasmali_vram_guvencesi_al(
 
 AnlasmaliVramGuvencesiAl = anlasmali_vram_guvencesi_al
 
-
 def acil_durum_oom_yakalayici_ve_kurtarici(
     hesaplama_fonksiyonu: Callable,
     *args: Any,
@@ -4194,8 +3678,7 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
         mesaj = str(exc).lower()
         gercek_oom = bool(gercek_oom_tipleri) and isinstance(exc, gercek_oom_tipleri)
         oom_mesaji = "out of memory" in mesaj
-        
-        
+
         gercek_cuda_calisma_zamani_hatasi = (
             "device-side assert" in mesaj
             or "an illegal memory access was encountered" in mesaj
@@ -4211,7 +3694,7 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
             or ("cuda" in mesaj and "device" in mesaj)
         )
         if not (gercek_oom or oom_mesaji or cihaz_uyumsuzlugu):
-            
+
             raise
 
         neden = "VRAM taşması" if (gercek_oom or oom_mesaji) else "cihaz uyumsuzluğu"
@@ -4229,7 +3712,6 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
 
         cpu_device = torch.device('cpu')
 
-        
         geri_donus_cihazi = cpu_device
         if modul_nesnesi is not None and hasattr(modul_nesnesi, 'parameters'):
             ilk_param = next(modul_nesnesi.parameters(), None)
@@ -4261,7 +3743,6 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
             logger.error(f"[Acil Durum OOM Kurtarıcı] CPU üzerinde tekrar deneme de başarısız oldu: {cpu_exc}")
             raise
 
-        
         if modul_nesnesi is not None and geri_donus_cihazi != cpu_device:
             try:
                 modul_nesnesi._vram_idare_zorunlu_cihaz = cpu_device
@@ -4273,8 +3754,7 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
                         takas_mgr._bekleyen_cihaz_geri_yuklemeleri = []
                     takas_mgr._bekleyen_cihaz_geri_yuklemeleri.append((modul_nesnesi, geri_donus_cihazi))
                 except Exception:
-                    
-                    
+
                     if hasattr(modul_nesnesi, 'to'):
                         try:
                             modul_nesnesi.to(geri_donus_cihazi)
@@ -4290,9 +3770,7 @@ def acil_durum_oom_yakalayici_ve_kurtarici(
 
         return girdi_cihaza_tasi(cpu_sonuc, geri_donus_cihazi)
 
-
 AcilDurumOomYakalayiciVeKurtarici = acil_durum_oom_yakalayici_ve_kurtarici
-
 
 if __name__ == "__main__":
     config = Model_TopolojikKonfigurasyon()
@@ -4301,4 +3779,3 @@ if __name__ == "__main__":
     print(f"Çalışma Cihazı: {config.device} | Toplam Gizil Durum Boyutu D: {config.D}")
     out = model("Ahmet iyi bir yüzücüdür.")
     print(f"Çıktı Olasılık Matrisi P Şekli: {out.P.shape}")
-

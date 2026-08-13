@@ -4,7 +4,6 @@ import logging
 logging.disable(logging.INFO)
 from checkpoint_manager import NPZCheckpointManager
 
-
 def rss_mb():
     with open('/proc/self/status') as f:
         for l in f:
@@ -12,12 +11,10 @@ def rss_mb():
                 return int(l.split()[1]) / 1024.0
     return -1.0
 
-
 class Blok(nn.Module):
     def __init__(self, n):
         super().__init__()
         self.l = nn.Linear(n, n)
-
 
 moduller = {f'm{i}': Blok(1400) for i in range(12)}
 moduller['bos'] = nn.Module()

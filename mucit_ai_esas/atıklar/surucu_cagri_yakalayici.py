@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import re
@@ -33,17 +32,12 @@ except ImportError:
 logger = logging.getLogger("kulli_gpu.surucu_cagri_yakalayici")
 logger.setLevel(logging.INFO)
 
-
 class CagriYakalamaHatasi(Exception):
     pass
 
-
 class EvrenselCagriKategorizeEtici:
-
-    
     POSIX_CPU_SYMBOLS = {"malloc", "calloc", "realloc", "free", "posix_memalign", "cfree", "valloc", "pvalloc", "aligned_alloc"}
 
-    
     PATTERN_TAHSIS = re.compile(r".*(cudaMalloc|cuMemAlloc|vkAllocateMemory|clCreateBuffer|vram_alloc|gpu_alloc).*", re.IGNORECASE)
     PATTERN_SERBEST = re.compile(r".*(cudaFree|cuMemFree|vkFreeMemory|clReleaseMemObject|vram_free|gpu_free).*", re.IGNORECASE)
     PATTERN_ICRA = re.compile(r".*(launch|submit|exec|dispatch|run_kernel|enqueue_nd|cudaLaunchKernel|cuLaunchKernel).*", re.IGNORECASE)
@@ -57,7 +51,6 @@ class EvrenselCagriKategorizeEtici:
 
         fn_str = fonksiyon_adi.strip()
 
-        
         if fn_str in cls.POSIX_CPU_SYMBOLS or fn_str.startswith("__libc_"):
             return "KATEGORİ_PASSTHROUGH"
 
@@ -78,21 +71,17 @@ class EvrenselCagriKategorizeEtici:
 
         return "KATEGORİ_PASSTHROUGH"
 
-
 class AdresUzayiAyrıştırmalıEvrenselYakalayici:
-
     def __init__(self, is_emri_idarecisi: Optional[Any] = None, sanal_bellek_havuzu: Optional[Any] = None):
         self.idareci = is_emri_idarecisi
         self.havuz = sanal_bellek_havuzu
 
     def YakalaVeYonlendir(self, sembol_adi: str, c_argumanlari: Tuple[Any, ...], orijinal_fn: Optional[Callable] = None) -> Any:
-        
         if sembol_adi in EvrenselCagriKategorizeEtici.POSIX_CPU_SYMBOLS:
             if callable(orijinal_fn):
                 return orijinal_fn(*c_argumanlari)
             return None
 
-        
         kat = EvrenselCagriKategorizeEtici.FonksiyonuMusterenDesenleSiniflandir(sembol_adi)
         if kat != "KATEGORİ_PASSTHROUGH" and self.idareci is not None:
             return self.idareci.IsEmriUretVeSevkEt(kat, c_argumanlari)
@@ -101,9 +90,7 @@ class AdresUzayiAyrıştırmalıEvrenselYakalayici:
             return orijinal_fn(*c_argumanlari)
         return 0
 
-
 class DinamikKancaUretici:
-
     def __init__(
         self,
         sanal_bellek_havuzu: Optional[Any] = None,
@@ -141,7 +128,6 @@ class DinamikKancaUretici:
             if self.idareci is not None and kategori != "KATEGORİ_PASSTHROUGH":
                 return self.idareci.IsEmriUretVeSevkEt(kategori, args)
 
-            
             if kategori == "KATEGORİ_TAHSİT" and self.havuz is not None:
                 try:
                     istenen_bayt = 256 * (1024**2)
@@ -158,7 +144,6 @@ class DinamikKancaUretici:
                     logger.error(f"[JenerikKanca] Tahsis kancası hatası ({fonksiyon_adi}): {err}")
                     return 1
 
-            
             elif kategori == "KATEGORİ_SERBEST" and self.havuz is not None:
                 try:
                     target_addr = 0
@@ -175,7 +160,6 @@ class DinamikKancaUretici:
                     logger.error(f"[JenerikKanca] Serbest bırakma kancası hatası ({fonksiyon_adi}): {err}")
                     return 1
 
-            
             elif kategori == "KATEGORİ_İCRA" and self.zamanlayici is not None:
                 try:
                     grid_x = 1024
@@ -196,7 +180,6 @@ class DinamikKancaUretici:
                     logger.error(f"[JenerikKanca] İcra kancası hatası ({fonksiyon_adi}): {err}")
                     return 1
 
-            
             elif kategori == "KATEGORİ_AKTARIM" and self.havuz is not None:
                 try:
                     logger.debug(f"[JenerikKanca] '{fonksiyon_adi}' -> Sanal VRAM Bellek Senkronizasyonu Tetiklendi.")
@@ -205,16 +188,13 @@ class DinamikKancaUretici:
                     logger.error(f"[JenerikKanca] Aktarım kancası hatası: {err}")
                     return 1
 
-            
             if callable(orijinal_fonksiyon_ptr):
                 return orijinal_fonksiyon_ptr(*args, **kwargs)
             return 0
 
         return dinamik_kanca
 
-
 class SeffafEvrenselYakalayici:
-
     def __init__(
         self,
         sanal_bellek_havuzu: Optional[Any] = None,
@@ -254,7 +234,6 @@ class SeffafEvrenselYakalayici:
             if not self.kancalar_aktif_mi:
                 self.kancalar_aktif_mi = True
 
-                
                 hedef_semboller = [
                     "cudaMalloc", "cudaFree", "cudaLaunchKernel", "cudaMemcpy",
                     "cuMemAlloc", "cuMemFree", "cuLaunchKernel", "cuMemcpyHtoD",

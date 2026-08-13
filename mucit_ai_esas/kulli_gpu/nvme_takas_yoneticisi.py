@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import uuid
@@ -17,14 +16,11 @@ import torch
 
 logger = logging.getLogger("kulli_gpu.nvme_takas_yoneticisi")
 
-
 class TakasVerisiKayipHatasi(RuntimeError):
     pass
 
-
 class _IzlenebilirDosyaYolu(str):
     pass
-
 
 def _paket_gc_edildi_geri_cagirma(sanal_id: str, kayit_defteri_ref) -> None:
     kayit_defteri = kayit_defteri_ref()
@@ -35,11 +31,9 @@ def _paket_gc_edildi_geri_cagirma(sanal_id: str, kayit_defteri_ref) -> None:
     except Exception as exc:
         logger.debug(f"[NvmeTakasYoneticisi] GC-tetiklemeli referans düşürme uyarısı: {exc}")
 
-
 MEM_STATE_ACTIVE_VRAM = "MEM_STATE_ACTIVE_VRAM"
 MEM_STATE_SWAPPED_NVME = "MEM_STATE_SWAPPED_NVME"
 MEM_STATE_ORPHANED = "MEM_STATE_ORPHANED"
-
 
 @dataclass
 class NesneAdresKaydi:
@@ -58,12 +52,11 @@ class NesneAdresKaydi:
     def bayt_boyutu(self) -> int:
         return self.element_size * self.numel if self.numel > 0 else 0
 
-
 class KureselAdresKayitDefteri:
     def __init__(self):
         self.lock = threading.RLock()
         self.kayitlar: Dict[str, NesneAdresKaydi] = {}
-        self.aktif_dosya_yollari: Dict[str, str] = {}  
+        self.aktif_dosya_yollari: Dict[str, str] = {}
 
     def kayit_ekle_ve_guncelle(
         self,
@@ -153,9 +146,7 @@ class KureselAdresKayitDefteri:
             if kayit and kayit.dosya_yolu:
                 self.aktif_dosya_yollari.pop(kayit.dosya_yolu, None)
 
-
 kuresel_adres_kayit_defteri = KureselAdresKayitDefteri()
-
 
 def al_dinamik_toplam_ram_bayt() -> int:
     try:
@@ -176,7 +167,6 @@ def al_dinamik_toplam_ram_bayt() -> int:
     except OSError:
         pass
     return 8 * 1024 * 1024 * 1024
-
 
 class DinamikSistemRamDenetci:
     def __init__(self, oran: float = 0.90):
@@ -211,9 +201,7 @@ class DinamikSistemRamDenetci:
     def esik_asildi_mi(self) -> bool:
         return self.aktif_ram_bayt() >= self.esik_ram_bayt
 
-
 kuresel_ram_denetci = DinamikSistemRamDenetci()
-
 
 class NvmeTahliyeKararMotoru:
     def __init__(self, emniyet_marji_mb: int = 1024, swap_dir: str = "/tmp/kulli_scratchpad",
@@ -227,14 +215,6 @@ class NvmeTahliyeKararMotoru:
 
     @property
     def azami_disk_kullanimi_bayt(self) -> float:
-
-
-
-
-
-
-
-
         try:
             kullanim = self.disk_kullanimini_olc()
             bos = shutil.disk_usage(self.swap_dir).free
@@ -378,7 +358,6 @@ class NvmeTahliyeKararMotoru:
         )
         return []
 
-
 class AutogradNvmeOffloadHook:
     def __init__(
         self,
@@ -387,8 +366,7 @@ class AutogradNvmeOffloadHook:
     ):
         self.karar_motoru = karar_motoru or NvmeTahliyeKararMotoru()
         self.kayit_defteri = kayit_defteri or kuresel_adres_kayit_defteri
-        
-        
+
         self._yazma_havuzu = concurrent.futures.ThreadPoolExecutor(
             max_workers=2, thread_name_prefix="nvme_takas_yazici"
         )
@@ -420,11 +398,10 @@ class AutogradNvmeOffloadHook:
 
             cpu_kopyasi = tensor.detach().cpu()
 
-            
             gereken_bayt = cpu_kopyasi.element_size() * cpu_kopyasi.numel()
             try:
                 disk_durumu = shutil.disk_usage(self.karar_motoru.swap_dir)
-                if disk_durumu.free < (gereken_bayt + 64 * 1024 * 1024):  
+                if disk_durumu.free < (gereken_bayt + 64 * 1024 * 1024):
                     raise OSError(
                         f"NVMe takas dizininde yetersiz disk alanı: gereken~{gereken_bayt} bayt, "
                         f"boş={disk_durumu.free} bayt ({self.karar_motoru.swap_dir})"
@@ -434,7 +411,6 @@ class AutogradNvmeOffloadHook:
             except Exception as _disk_exc:
                 logger.warning(f"[AutogradNvmeOffloadHook] Disk alanı sorgulanamadı, yazma denemesi yine de yapılacak: {_disk_exc}")
 
-            
             sanal_id = f"addr_{uuid.uuid4().hex[:8]}"
             kayit = NesneAdresKaydi(
                 sanal_adres=sanal_id,
@@ -447,11 +423,6 @@ class AutogradNvmeOffloadHook:
                 numel=tensor.numel()
             )
 
-
-
-
-
-
             if hasattr(self, "kayit_defteri") and self.kayit_defteri is not None:
                 self.kayit_defteri.kayit_ekle_ve_guncelle(kayit)
 
@@ -462,7 +433,6 @@ class AutogradNvmeOffloadHook:
                 self._bekleyen_yazmalar[dosya_yolu] = yazma_future
 
             logger.debug(f"[NvmeTakasYoneticisi] VRAM -> NVMe Akıllı Tahliye Mühürlendi: {dosya_id}")
-
 
             izlenebilir_dosya_yolu = _IzlenebilirDosyaYolu(dosya_yolu)
             kayit_defteri_hedefi = self.kayit_defteri if hasattr(self, "kayit_defteri") else None
@@ -486,7 +456,6 @@ class AutogradNvmeOffloadHook:
         if target_device is None:
             target_device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
-        
         bekleyen_future = None
         yazici = getattr(self, "_bekleyen_yazmalar", None)
         if yazici is not None and dosya_yolu:
@@ -510,14 +479,13 @@ class AutogradNvmeOffloadHook:
 
         restored_tensor = None
         try:
-            
+
             restored_tensor = torch.load(dosya_yolu, map_location="cpu")
             if restored_tensor.shape != shape:
                 restored_tensor = restored_tensor.reshape(shape)
             return restored_tensor.to(device=target_device)
         except Exception as exc:
-            
-            
+
             logger.error(f"[AutogradNvmeOffloadHook] Diskten geri yukleme hatasi: {exc}")
             if restored_tensor is not None:
                 try:
@@ -537,19 +505,7 @@ class AutogradNvmeOffloadHook:
             ) from exc
         finally:
 
-
-
-
-
-
-
-
-
-
-
-
             pass
-
 
 class GuvenliVramVeTmpSupurgesi:
     ESKIME_ESIGI_SN: float = 120.0
@@ -578,7 +534,6 @@ class GuvenliVramVeTmpSupurgesi:
             for addr in silinecek_adresler:
                 kuresel_adres_kayit_defteri.kayit_sil(addr)
 
-            
             if os.path.exists(swap_dir):
                 for fname in os.listdir(swap_dir):
                     fpath = os.path.join(swap_dir, fname)
@@ -592,7 +547,6 @@ class GuvenliVramVeTmpSupurgesi:
         _gc_temizle.collect()
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
-
 
 class NvmeTakasYoneticisi:
     def __init__(self, swap_dir: Optional[str] = None):
@@ -610,25 +564,17 @@ class NvmeTakasYoneticisi:
         self.offload_hook = AutogradNvmeOffloadHook(karar_motoru=self.karar_motoru, kayit_defteri=self.kayit_defteri)
         self.tahliye_sayaci = 0
         self.geri_cagirma_sayaci = 0
-        
-        
+
         self._sayac_lock = threading.Lock()
         self._aktif_kapsam_muhafizi = None
         logger.info(f"[NvmeTakasYoneticisi] Disk takas dizini aktif: {self.swap_dir}")
 
     def pack_hook_diske_tahliye(self, tensor: torch.Tensor) -> Any:
-        
-        
         res = self.offload_hook.pack_hook_diske_tahliye(tensor)
         if isinstance(res, tuple) and res[0] != "":
             with self._sayac_lock:
                 self.tahliye_sayaci += 1
             return (res[0], res[1], res[2], res[3])
-
-
-
-
-
 
         return tensor.detach()
 
@@ -646,10 +592,6 @@ class NvmeTakasYoneticisi:
         return self.offload_hook.unpack_hook_diskten_geri_yukle(pack_bundle)
 
     def kapsam_muhafizi_aktifles(self):
-
-
-
-
         if not torch.cuda.is_available():
             self._aktif_kapsam_muhafizi = contextlib.nullcontext()
             return self._aktif_kapsam_muhafizi

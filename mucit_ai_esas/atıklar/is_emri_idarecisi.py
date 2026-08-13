@@ -1,5 +1,4 @@
 
-
 import os
 import sys
 import time
@@ -29,7 +28,6 @@ except ImportError:
 logger = logging.getLogger("kulli_gpu.is_emri_idarecisi")
 logger.setLevel(logging.INFO)
 
-
 class KulliAllocRecoveryEngine:
     def __init__(self, tahliye_motoru: Optional[Any] = None):
         from .nvme_takas_yoneticisi import NvmeTahliyeKararMotoru, GuvenliVramVeTmpSupurgesi
@@ -41,38 +39,32 @@ class KulliAllocRecoveryEngine:
             return alloc_fn()
         except (torch.cuda.OutOfMemoryError, Exception) as exc:
             logger.warning(f"[KulliAllocRecoveryEngine] OOM Hatası Yakalandı ({bytesize} bayt). NVMe Tahliye tetikleniyor: {exc}")
-            
+
             self.tahliye_motoru.vramden_nvme_diske_tahliye_et(bytesize)
 
-            
             self.supurge.supur()
 
-            
             try:
                 return alloc_fn()
             except Exception as final_exc:
                 logger.error(f"[KulliAllocRecoveryEngine] Tahliye sonrası kurtarılamayan OOM: {final_exc}")
                 raise final_exc
 
-
 class IsEmriHatasi(Exception):
     pass
-
 
 @dataclass
 class IsEmriPaketi:
     emir_id: int
-    emir_tipi: str  
+    emir_tipi: str
     parametreler: Dict[str, Any] = field(default_factory=dict)
-    durum: str = "HAZIR"  
+    durum: str = "HAZIR"
     olusturulma_zamani: float = field(default_factory=time.perf_counter)
     tamamlanma_zamani: float = 0.0
     sonuc: Any = None
     hata_mesaji: Optional[str] = None
 
-
 class CArgumanCozumleyici:
-
     @staticmethod
     def ArgumanlariCozumleVePaketle(kategori: str, raw_args: Tuple[Any, ...]) -> Dict[str, Any]:
         parametreler: Dict[str, Any] = {
@@ -80,9 +72,8 @@ class CArgumanCozumleyici:
             "raw_args_repr": [str(a) for a in raw_args[:5]]
         }
 
-        
         if kategori == "KATEGORİ_TAHSİT":
-            boyut_bayt = 256 * (1024**2)  
+            boyut_bayt = 256 * (1024**2)
             for arg in raw_args:
                 if isinstance(arg, int) and arg > 1024:
                     boyut_bayt = arg
@@ -96,7 +87,6 @@ class CArgumanCozumleyici:
             parametreler["boyut_bayt"] = boyut_bayt
             parametreler["hedef_gpu_id"] = 0
 
-        
         elif kategori == "KATEGORİ_SERBEST":
             hedef_ptr = 0
             for arg in raw_args:
@@ -111,7 +101,6 @@ class CArgumanCozumleyici:
 
             parametreler["hedef_ptr"] = hedef_ptr
 
-        
         elif kategori == "KATEGORİ_İCRA":
             grid_x = 1024
             block_x = 256
@@ -129,7 +118,6 @@ class CArgumanCozumleyici:
             parametreler["girdi_sanal_adres"] = 0x7FFF00000000
             parametreler["cikti_sanal_adres"] = 0x800000000000
 
-        
         elif kategori == "KATEGORİ_AKTARIM":
             hedef_ptr = raw_args[0] if len(raw_args) > 0 and isinstance(raw_args[0], int) else 0x7FFF00000000
             kaynak_ptr = raw_args[1] if len(raw_args) > 1 and isinstance(raw_args[1], int) else 0x7FFF00010000
@@ -141,9 +129,7 @@ class CArgumanCozumleyici:
 
         return parametreler
 
-
 class IsEmriIdarecisi:
-
     def __init__(
         self,
         sanal_bellek_havuzu: Optional[Any] = None,
@@ -164,10 +150,8 @@ class IsEmriIdarecisi:
             self.emir_sayaci += 1
             e_id = self.emir_sayaci
 
-        
         params = CArgumanCozumleyici.ArgumanlariCozumleVePaketle(kategori, raw_args)
 
-        
         emir = IsEmriPaketi(
             emir_id=e_id,
             emir_tipi=kategori,
@@ -176,7 +160,7 @@ class IsEmriIdarecisi:
         )
 
         try:
-            
+
             if kategori == "KATEGORİ_TAHSİT":
                 if self.havuz is not None:
                     boyut = params.get("boyut_bayt", 256 * (1024**2))
@@ -187,7 +171,7 @@ class IsEmriIdarecisi:
                     emir.sonuc = 0x7FFF00000000
 
                 emir.durum = "TAMAMLANDI"
-                ret_val = 0  
+                ret_val = 0
 
             elif kategori == "KATEGORİ_SERBEST":
                 if self.havuz is not None:
@@ -248,7 +232,7 @@ class IsEmriIdarecisi:
             emir.tamamlanma_zamani = time.perf_counter()
             with self.lock:
                 self.is_emri_gecmisi.append(emir)
-                
+
                 if len(self.is_emri_gecmisi) > 100:
                     self.is_emri_gecmisi.pop(0)
 
@@ -280,9 +264,7 @@ class IsEmriIdarecisi:
                 "status": "İş Emri İdarecisi ve Komut Tercümanı Sağlıklı"
             }
 
-
 class OpakKernelSarmalayici:
-
     def __init__(self, is_emri_idarecisi: Optional[Any] = None, sanal_bellek_havuzu: Optional[Any] = None, sanal_islemci_zamanlayici: Optional[Any] = None):
         self.idareci = is_emri_idarecisi
         self.havuz = sanal_bellek_havuzu
@@ -298,7 +280,6 @@ class OpakKernelSarmalayici:
                     if aralik is not None and aralik.c_pointer is not None:
                         donusturulmus_args[i] = aralik.c_pointer
 
-        
         if callable(orijinal_fn):
             res = orijinal_fn(*donusturulmus_args)
         elif self.zamanlayici is not None:

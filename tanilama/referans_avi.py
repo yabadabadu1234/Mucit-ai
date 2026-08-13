@@ -12,7 +12,6 @@ import main_egitim_dongusu as M
 _orijinal = M._tekil_egitim_adimi_icra
 _sayac = {'n': 0}
 
-
 def _tanit(o, derinlik=0):
     t = type(o).__name__
     if isinstance(o, dict):
@@ -20,7 +19,6 @@ def _tanit(o, derinlik=0):
     if isinstance(o, (list, tuple)):
         return f"{t}(len={len(o)})"
     return t
-
 
 def _sarmal(*a, **kw):
     sonuc = _orijinal(*a, **kw)
@@ -58,7 +56,6 @@ def _sarmal(*a, **kw):
     for k, v in turler.most_common(20):
         print(f"  {v:6d}  {k}", flush=True)
     raise SystemExit(0)
-
 
 M._tekil_egitim_adimi_icra = _sarmal
 M.Main_EgitimYurutucu(konfig_yolu="/home/user/Mucit-ai/local_run/config.json",

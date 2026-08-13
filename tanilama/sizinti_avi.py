@@ -14,7 +14,6 @@ _orijinal = M._tekil_egitim_adimi_icra
 _sayac = {'n': 0}
 _gecmis = {}
 
-
 def _tensor_dokumu():
     d = collections.Counter()
     bayt = collections.Counter()
@@ -27,7 +26,6 @@ def _tensor_dokumu():
         except Exception:
             pass
     return d, bayt
-
 
 def _sarmal(*a, **kw):
     sonuc = _orijinal(*a, **kw)
@@ -55,7 +53,6 @@ def _sarmal(*a, **kw):
                   f"requires_grad={k[2]} grad_fn={k[3]}", flush=True)
         raise SystemExit(0)
     return sonuc
-
 
 M._tekil_egitim_adimi_icra = _sarmal
 
