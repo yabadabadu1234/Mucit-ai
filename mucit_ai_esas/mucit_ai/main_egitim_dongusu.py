@@ -101,12 +101,32 @@ from kontratlar import (
 
 from logging.handlers import RotatingFileHandler
 
+SESSIZ_URETIM_MODU: bool = True
+OZET_ADIM_ARALIGI: int = 10
+LOG_DOSYA_TAVANI_BAYT: int = 100 * 1024
+DURUM_DOSYASI: str = 'egitim_durumu.txt'
+
 def kur_logging_sistemi(log_dosyasi: str = 'egitim_dongusu_icra.log') -> None:
     root = logging.getLogger()
-    root.setLevel(logging.DEBUG)
     root.handlers.clear()
 
-    fh = RotatingFileHandler(log_dosyasi, maxBytes=10*1024*1024, backupCount=1, encoding='utf-8')
+    if SESSIZ_URETIM_MODU:
+        root.setLevel(logging.ERROR)
+        fh = RotatingFileHandler(log_dosyasi, maxBytes=LOG_DOSYA_TAVANI_BAYT,
+                                 backupCount=1, encoding='utf-8')
+        fh.setLevel(logging.ERROR)
+        fh.setFormatter(logging.Formatter('%(asctime)s - [%(levelname)s] - (%(name)s) - %(message)s'))
+        root.addHandler(fh)
+        ch = logging.StreamHandler(sys.stdout)
+        ch.setLevel(logging.ERROR)
+        ch.setFormatter(logging.Formatter('%(asctime)s - [%(levelname)s] - %(message)s'))
+        root.addHandler(ch)
+        return
+
+    root.setLevel(logging.DEBUG)
+
+    fh = RotatingFileHandler(log_dosyasi, maxBytes=LOG_DOSYA_TAVANI_BAYT,
+                             backupCount=1, encoding='utf-8')
     fh.setLevel(logging.DEBUG)
     fh.setFormatter(logging.Formatter('%(asctime)s - [%(levelname)s] - (%(name)s) - %(message)s'))
     root.addHandler(fh)
@@ -116,8 +136,87 @@ def kur_logging_sistemi(log_dosyasi: str = 'egitim_dongusu_icra.log') -> None:
     ch.setFormatter(logging.Formatter('%(asctime)s - [%(levelname)s] - %(message)s'))
     root.addHandler(ch)
 
+def kur_ozet_kanali() -> logging.Logger:
+    ozet = logging.getLogger('MucitOzet')
+    ozet.handlers.clear()
+    ozet.setLevel(logging.INFO)
+    ozet.propagate = False
+    ch = logging.StreamHandler(sys.stdout)
+    ch.setLevel(logging.INFO)
+    ch.setFormatter(logging.Formatter('%(message)s'))
+    ozet.addHandler(ch)
+    return ozet
+
 kur_logging_sistemi()
 logger = logging.getLogger('MainEgitim')
+ozet_logger = kur_ozet_kanali()
+
+class SessizVramDenetci:
+
+    def __init__(self, gercek_denetci: Any = None):
+        self.gercek_denetci = gercek_denetci
+
+    def yokla_ve_raporla(self, *args: Any, **kwargs: Any) -> None:
+        return None
+
+    def __getattr__(self, ad: str) -> Any:
+        return getattr(self.gercek_denetci, ad)
+
+def egitim_parametrelerini_topla(config: Any, trainable_params: List[nn.Parameter],
+                                 adim: int, kayip: float, ek: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    with torch.no_grad():
+
+        _kareler: Dict[Any, torch.Tensor] = {}
+        _grad_kareler: Dict[Any, torch.Tensor] = {}
+        _sayi = 0
+        for p in trainable_params:
+            _cihaz = p.device
+            _v = p.detach().float().pow(2).sum()
+            _kareler[_cihaz] = _v if _cihaz not in _kareler else _kareler[_cihaz] + _v
+            _sayi += p.numel()
+            if p.grad is not None:
+                _gv = p.grad.detach().float().pow(2).sum()
+                _grad_kareler[_cihaz] = _gv if _cihaz not in _grad_kareler else _grad_kareler[_cihaz] + _gv
+        _norm_kare = sum(float(_v) for _v in _kareler.values())
+        _grad_norm_kare = sum(float(_v) for _v in _grad_kareler.values())
+
+    deger: Dict[str, Any] = {'adim': adim, 'kayip': kayip}
+    for ad in ('V_nodes', 'd_v', 'd_e', 'd_q', 'd_a', 'd_m', 'd_h', 'd', 'D', 'M_plus_1',
+               'N', 'N_max', 'R', 'K', 'V_size', 'V_byte_size', 'GRPO_G', 'beta_kl',
+               'dt', 'lr', 'batch_size', 'azami_dugum_komsulugu', 'azami_dugum_sayisi',
+               'device'):
+        deger[ad] = getattr(config, ad, None)
+    deger['parametre_sayisi'] = _sayi
+    deger['agirlik_L2'] = _norm_kare ** 0.5
+    deger['gradyan_L2'] = _grad_norm_kare ** 0.5
+    if torch.cuda.is_available():
+        deger['vram_MB'] = torch.cuda.memory_allocated() / (1024 ** 2)
+
+        deger['vram_tepe_MB'] = torch.cuda.max_memory_allocated() / (1024 ** 2)
+        torch.cuda.reset_peak_memory_stats()
+    if ek:
+        deger.update(ek)
+    return deger
+
+def durum_ozetini_bas(deger: Dict[str, Any], durum_dosyasi: str = DURUM_DOSYASI) -> None:
+
+    satirlar = [f"===== MUCIT AI EGITIM DURUMU | adim {deger.get('adim')} ====="]
+    for ad, v in deger.items():
+        if isinstance(v, float):
+            satirlar.append(f"  {ad:24s} = {v:.6g}")
+        else:
+            satirlar.append(f"  {ad:24s} = {v}")
+    metin = "\n".join(satirlar)
+
+    ozet_logger.info(metin)
+
+    try:
+        gecici = durum_dosyasi + ".tmp"
+        with open(gecici, "w", encoding="utf-8") as f:
+            f.write(metin + "\n")
+        os.replace(gecici, durum_dosyasi)
+    except OSError:
+        pass
 
 KOD_SURUM_ETIKETI = "2026-08-12-sizinti-giderildi-tekrar-dongusu-yok"
 
@@ -1754,7 +1853,10 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     kod_surumu_bildir()
     donanim_hizlandirmasini_uygula()
 
-    takas_mgr = NvmeTakasYoneticisi()
+    if SESSIZ_URETIM_MODU:
+        takas_mgr = None
+    else:
+        takas_mgr = NvmeTakasYoneticisi()
 
     param_dict = {}
     if konfig_yolu and os.path.exists(konfig_yolu):
@@ -1844,6 +1946,8 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     logger.info("Tüm Sinir Ağları ve Stiefel Parametreleri Optimizasyona Bağlandı.")
 
     vram_denetci = Hafiza_Izleyici_ve_VRAM_Denetci(cihaz=config.device, kritik_esik_yuzde=0.85)
+    if SESSIZ_URETIM_MODU:
+        vram_denetci = SessizVramDenetci(vram_denetci)
 
     baslangic_step, loss_history = npz_mgr.load_pytorch_model(tum_moduller, optimizer)
     current_step = baslangic_step
@@ -2028,6 +2132,18 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                             last_logged_500mb_chunk = curr_500mb_chunk
                     else:
                         logger.debug(f"Adım [{current_step}] | İşlenen Veri: {global_bytes_processed:,} B | Uyumsuzluk: {d_discrepancy:.6f}")
+
+                    if current_step % OZET_ADIM_ARALIGI == 0:
+                        durum_ozetini_bas(egitim_parametrelerini_topla(
+                            config, trainable_params, current_step, curr_loss_val,
+                            ek={
+                                'islenen_MB': global_bytes_processed / (1024 * 1024),
+                                'H_spec': H_spec_val,
+                                'dirichlet_E': dirichlet_energy,
+                                'uyumsuzluk_d': d_discrepancy,
+                                'adim_suresi_sn': gecen_sure,
+                            },
+                        ))
 
                     is_periodic = (current_step % SAVE_EVERY_N_STEPS == 0)
                     is_best = False

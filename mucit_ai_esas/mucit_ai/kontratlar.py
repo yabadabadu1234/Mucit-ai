@@ -1009,6 +1009,15 @@ N1_ByteAyristirici = N1_HibritByteTokenAyristirici
 
 SPARSEMAX_BASLANGIC_ADAYI: int = 64
 
+N10_CHUNK_TOKEN_BUTCESI: int = 512
+N10_ASGARI_CHUNK: int = 8
+N10_AZAMI_CHUNK: int = 64
+
+
+def n10_chunk_boyu_sec(B: int) -> int:
+    return max(N10_ASGARI_CHUNK, min(N10_AZAMI_CHUNK, N10_CHUNK_TOKEN_BUTCESI // max(int(B), 1)))
+
+
 def sparsemax(logits: torch.Tensor, dim: int = -1) -> torch.Tensor:
     n = int(logits.shape[dim])
     m = min(max(SPARSEMAX_BASLANGIC_ADAYI, 1), n)
@@ -2261,7 +2270,7 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
 
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
-        micro_chunk_size = 64
+        micro_chunk_size = n10_chunk_boyu_sec(B)
         return vram_bayt_tahmin_et(B, micro_chunk_size, self.V_size)
 
     def forward_sifir_oom_chunking(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None,
@@ -2302,7 +2311,7 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
             _h = _h.to(device=X_t.device, dtype=tau.dtype).reshape(())
             tau = tau * (1.0 + torch.tanh(_h))
 
-        micro_chunk_size = 64
+        micro_chunk_size = n10_chunk_boyu_sec(B)
 
         if hedefler is not None:
 
