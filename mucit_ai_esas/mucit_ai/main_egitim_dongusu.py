@@ -1386,8 +1386,11 @@ def _tekil_egitim_adimi_icra(
     
     
     AnlasmaliVramGuvencesiAl(raw_n2_topox, e2_byte_grouped, takas_mgr=takas_mgr)
+    _gecmis_ceza = getattr(raw_n2_topox, '_gecmis_dugum_cezasi', None)
+    _gecmis_gamma = getattr(raw_n2_topox, '_gecmis_gamma', None)
     e3_sinir_sabit = AcilDurumOomYakalayiciVeKurtarici(
         raw_n2_topox.forward, e2_byte_grouped, x_initial=x_start_grouped, mode='train',
+        d_dugum_gecmis=_gecmis_ceza, gamma_gecmis=_gecmis_gamma,
         modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
     )
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir_sabit.D1, takas_mgr=takas_mgr)
@@ -1831,6 +1834,40 @@ def _tekil_egitim_adimi_icra(
 
     raw_n1_byte = gpu_dagitici.kok_modul_al(n1_byte) if gpu_dagitici is not None else (n1_byte.module if hasattr(n1_byte, 'module') else n1_byte)
     raw_n1_byte.izdusur_stiefel()
+
+
+
+
+    try:
+        _dg = float(
+            torch.sum((son_q.detach().float() - son_a_detached.float()) ** 2, dim=-1).mean().item()
+        )
+        _d_ort = abs(d_discrepancy)
+        _e_ort = abs(dirichlet_energy)
+        _toplam = _d_ort + _e_ort + 1e-8
+        _lambda1 = _d_ort / _toplam
+        _lambda2 = _e_ort / _toplam
+        _dg_kare = _dg + _lambda1 * _d_ort + _lambda2 * _e_ort
+
+        _onceki_dg = getattr(raw_n1_byte, '_gecmis_d_g_kare', None)
+        _aci = raw_n1_byte.geodezik_suzgec_genislet(_dg_kare, _onceki_dg)
+        raw_n1_byte._gecmis_d_g_kare = _dg_kare
+        if _aci > 0.0:
+            logger.debug(
+                f"  [N14->N1 Geri Besleme] d_g^2={_dg_kare:.4f} "
+                f"(lambda1={_lambda1:.3f}, lambda2={_lambda2:.3f}) -> Haar süzgeç dönme açısı {_aci:.3e}"
+            )
+    except Exception as _dg_exc:
+        logger.debug(f"  [N14->N1 Geri Besleme] Geodezik ceza uygulanamadı, atlandı: {_dg_exc}")
+
+    try:
+        _yeni_ceza, _yeni_gamma = N2_TopoXHucreOlusumu.kohomolojik_ceza_hazirla(
+            e3_sinir_sabit.D1, d_vec3, getattr(config, 'd_v', 32)
+        )
+        raw_n2_topox._gecmis_dugum_cezasi = _yeni_ceza
+        raw_n2_topox._gecmis_gamma = _yeni_gamma
+    except Exception as _ceza_exc:
+        logger.debug(f"  [N7->N2 Geri Besleme] Ceza hazirlanamadi, atlandi: {_ceza_exc}")
 
     d_discrepancy = float(d_vec3.mean().detach().item())
     dirichlet_energy = float(e_vec3.mean().detach().item())

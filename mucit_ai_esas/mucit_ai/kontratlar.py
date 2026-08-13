@@ -1019,6 +1019,66 @@ class N1_HibritByteTokenAyristirici(nn.Module):
         d_v = getattr(self.config, 'd_v', 32)
         return int(B * N * d_v * 4)
 
+    def geodezik_suzgec_genislet(self, d_g_kare: float, d_g_kare_onceki: Optional[float] = None,
+                                 eta_taban: float = 1e-2) -> float:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if d_g_kare is None or not math.isfinite(float(d_g_kare)):
+            return 0.0
+
+        with torch.no_grad():
+            sapmalar = []
+            for _k, param in self.Q_dict.items():
+                Q = param.data
+                if Q.dim() != 2 or Q.shape[0] != Q.shape[1]:
+                    continue
+                pay = torch.linalg.matrix_norm(Q - Q.t(), ord='fro')
+                payda = torch.linalg.matrix_norm(Q, ord='fro') + 1e-8
+                sapmalar.append(pay / payda)
+            if not sapmalar:
+                return 0.0
+            alpha_stiefel = torch.stack(sapmalar).mean()
+
+            if d_g_kare_onceki is None or not math.isfinite(float(d_g_kare_onceki)):
+                delta_L = torch.tensor(1.0, device=alpha_stiefel.device, dtype=alpha_stiefel.dtype)
+            else:
+                delta_L = torch.tensor(
+                    abs(float(d_g_kare) - float(d_g_kare_onceki))
+                    / (abs(float(d_g_kare_onceki)) + 1e-8),
+                    device=alpha_stiefel.device, dtype=alpha_stiefel.dtype,
+                )
+
+            eta = eta_taban * (1.0 / (1.0 + alpha_stiefel)) * (1.0 - torch.exp(-delta_L))
+            aci = eta * torch.tanh(torch.tensor(float(d_g_kare), device=eta.device, dtype=eta.dtype))
+
+            if float(aci.abs()) < 1e-9:
+                return 0.0
+
+            for _k, param in self.Q_dict.items():
+                Q = param.data
+                if Q.dim() != 2 or Q.shape[0] != Q.shape[1]:
+                    continue
+                Xi = Q - Q.t()
+                donme = torch.linalg.matrix_exp((aci.to(Q.dtype) * Xi).float()).to(Q.dtype)
+                param.copy_(torch.matmul(donme, Q))
+
+        return float(aci)
+
     def izdusur_stiefel(self):
         with torch.no_grad():
             for k, param in self.Q_dict.items():
@@ -1158,7 +1218,41 @@ class N2_TopoXHucreOlusumu(nn.Module):
             vram_bayt_tahmin_et(F_num, E)            
         )
 
-    def forward(self, girdi: E2_ByteTensoru, x_initial: Optional[torch.Tensor] = None, mode: str = 'train', D0_base: Optional[torch.Tensor] = None) -> E3_SinirOperatorleri:
+    @staticmethod
+    def kohomolojik_ceza_hazirla(D1: torch.Tensor, d_disc: torch.Tensor, d_v: int) -> Tuple[torch.Tensor, torch.Tensor]:
+
+
+
+
+
+
+
+
+
+
+
+
+        with torch.no_grad():
+            d_disc = d_disc.detach().reshape(-1)
+            E, V = int(D1.shape[0]), int(D1.shape[1])
+            if d_disc.numel() != E:
+                if d_disc.numel() > E:
+                    d_disc = d_disc[:E]
+                else:
+                    d_disc = F.pad(d_disc, (0, E - d_disc.numel()))
+
+            d_dugum = torch.matmul(D1.detach().abs().t(), d_disc)
+
+            rho_graf = float(E) / float(max(V, 1))
+            sigma_kare = torch.var(d_disc, unbiased=False)
+            gamma = torch.tanh(rho_graf * sigma_kare) / math.sqrt(max(d_v, 1))
+
+        return d_dugum, gamma
+
+    def forward(self, girdi: E2_ByteTensoru, x_initial: Optional[torch.Tensor] = None, mode: str = 'train',
+                D0_base: Optional[torch.Tensor] = None,
+                d_dugum_gecmis: Optional[torch.Tensor] = None,
+                gamma_gecmis: Optional[torch.Tensor] = None) -> E3_SinirOperatorleri:
         
         
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
@@ -1186,10 +1280,25 @@ class N2_TopoXHucreOlusumu(nn.Module):
         
         Q = self.W_q(X)  
         K = self.W_k(X)  
-        scores = torch.matmul(Q, K.transpose(1, 2)) / math.sqrt(self.d_v)  
+        scores = torch.matmul(Q, K.transpose(1, 2)) / math.sqrt(self.d_v)
 
-        
-        A_raw = sparsemax(scores, dim=-1)  
+
+
+
+
+
+
+
+
+        if d_dugum_gecmis is not None and gamma_gecmis is not None:
+            _dd = d_dugum_gecmis.detach().to(device=scores.device, dtype=scores.dtype).reshape(-1)
+            if _dd.numel() != V:
+                _dd = F.pad(_dd, (0, V - _dd.numel())) if _dd.numel() < V else _dd[:V]
+            P = 0.5 * (_dd.unsqueeze(1) + _dd.unsqueeze(0))
+            _gamma = gamma_gecmis.detach().to(device=scores.device, dtype=scores.dtype).reshape(())
+            scores = scores - _gamma * P.unsqueeze(0)
+
+        A_raw = sparsemax(scores, dim=-1)
 
         if mode == 'eval' and D0_base is not None:
             V_guncel = A_raw.shape[-1]
@@ -3117,9 +3226,18 @@ class BiliselKanvasModeli(nn.Module):
 
         D0_op = None
 
+
+
+
+        d_dugum_gecmis = None
+        gamma_gecmis = None
+
         for r in range(1, self.config.R + 1):
 
-            e3_sinir = self.n2_topox(e2_byte, x_initial=mevcut_durum.x_r, mode=mode, D0_base=D0_op)
+            e3_sinir = self.n2_topox(
+                e2_byte, x_initial=mevcut_durum.x_r, mode=mode, D0_base=D0_op,
+                d_dugum_gecmis=d_dugum_gecmis, gamma_gecmis=gamma_gecmis,
+            )
 
             D0_op, _ = self.laplasyen_insa.insa_et(e3_sinir, e4_lif.phi_matrisleri)
 
@@ -3137,6 +3255,18 @@ class BiliselKanvasModeli(nn.Module):
             
             mevcut_bellek_obj = self.n_yazici.yaz(e9_guncel.x_next, e6_sorgu, mevcut_bellek_obj, e7_lokal)
             mevcut_durum = E5_A_MevcutGizilDurum(x_r=e9_guncel.x_next)
+
+
+
+
+
+            with torch.no_grad():
+                _d_disc_r = self.n7_cozucu.hesapla_uyumsuzluk_vektoru(
+                    mevcut_durum.x_r.detach(), D0_op
+                )
+                d_dugum_gecmis, gamma_gecmis = N2_TopoXHucreOlusumu.kohomolojik_ceza_hazirla(
+                    e3_sinir.D1, _d_disc_r, self.config.d_v
+                )
 
         e10_kulli = self.n8_chebyshev(e9_guncel)
         N_star, L_arc_val, N_teorik_val, delta_n_tensor = self.n8_b_uzunluk(e10_kulli, self.cheby_calc)
