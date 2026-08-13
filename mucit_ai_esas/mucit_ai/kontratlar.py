@@ -76,6 +76,62 @@ class CevrimdisiAksiyomatikTokenizer:
 PADE_AZAMI_OGRENME_ORANI: float = 1e-2
 
 
+def gradyanlari_parametreye_hizala(trainable_params: List[Any]) -> int:
+
+
+
+
+
+
+
+
+
+
+    duzeltilen = 0
+    for p in trainable_params:
+        g = p.grad
+        if g is None:
+            continue
+        if g.shape != p.shape:
+            g = g.detach().reshape(p.shape)
+            p.grad = g
+            duzeltilen += 1
+        if g.dtype != p.dtype or g.device != p.device or g.layout != p.layout:
+            p.grad = g.detach().to(device=p.device, dtype=p.dtype)
+            duzeltilen += 1
+    return duzeltilen
+
+
+def optimizer_durumunu_parametreye_hizala(optimizer: Any, trainable_params: List[Any]) -> int:
+
+
+
+
+
+
+
+
+
+
+
+    tasinan = 0
+    durum = getattr(optimizer, "state", None)
+    if not durum:
+        return 0
+    for p in trainable_params:
+        p_durum = durum.get(p)
+        if not p_durum:
+            continue
+        for anahtar, deger in list(p_durum.items()):
+            if not isinstance(deger, torch.Tensor):
+                continue
+            if deger.device != p.device or (deger.is_floating_point() and deger.dtype != p.dtype):
+                hedef_dtype = p.dtype if deger.is_floating_point() else deger.dtype
+                p_durum[anahtar] = deger.to(device=p.device, dtype=hedef_dtype)
+                tasinan += 1
+    return tasinan
+
+
 def stiefel_manifold_projection(tensor: torch.Tensor, grad: Optional[torch.Tensor] = None, lr: float = 1e-3) -> torch.Tensor:
     if not isinstance(tensor, torch.Tensor) or tensor.dim() != 2:
         return tensor
@@ -3134,6 +3190,8 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         vjp_loss.backward()
 
         
+        gradyanlari_parametreye_hizala(trainable_params)
+        optimizer_durumunu_parametreye_hizala(optimizer, trainable_params)
         torch.nn.utils.clip_grad_norm_(trainable_params, max_norm=max_norm)
         optimizer.step()
 
@@ -3180,6 +3238,8 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
                         p.grad = torch.zeros_like(p)
                     else:
                         p.grad = g.to(device=p.device, dtype=p.dtype)
+            gradyanlari_parametreye_hizala(trainable_params)
+            optimizer_durumunu_parametreye_hizala(optimizer, trainable_params)
             torch.nn.utils.clip_grad_norm_(trainable_params, max_norm=max_norm)
             optimizer.step()
             return torch.tensor([1.0], device=ref_device, dtype=ref_dtype)
@@ -3289,6 +3349,8 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         del R, A
 
         
+        gradyanlari_parametreye_hizala(trainable_params)
+        optimizer_durumunu_parametreye_hizala(optimizer, trainable_params)
         torch.nn.utils.clip_grad_norm_(trainable_params, max_norm=max_norm)
         optimizer.step()
 

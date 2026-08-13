@@ -131,6 +131,14 @@ KOD_SURUM_ETIKETI = "2026-08-12-sizinti-giderildi-tekrar-dongusu-yok"
 TF32_ACIK: bool = True
 
 
+
+
+
+
+
+FUSED_ADAMW_ACIK: bool = False
+
+
 def donanim_hizlandirmasini_uygula() -> None:
 
 
@@ -181,7 +189,39 @@ def hizli_optimizer_kur(trainable_params: List[nn.Parameter], lr: float,
 
 
 
-    if torch.cuda.is_available():
+
+
+
+
+
+
+
+
+
+
+
+
+
+    _cihazlar = {p.device for p in trainable_params}
+    _dtipler = {p.dtype for p in trainable_params}
+    _fused_uygun = (
+        FUSED_ADAMW_ACIK
+        and torch.cuda.is_available()
+        and len(_cihazlar) == 1
+        and len(_dtipler) == 1
+        and next(iter(_cihazlar)).type == 'cuda'
+    )
+
+    if torch.cuda.is_available() and not _fused_uygun:
+        logger.info(
+            f"  [Hızlandırma] Fused AdamW KULLANILMIYOR. Sebep: "
+            f"{'bayrak kapalı' if not FUSED_ADAMW_ACIK else f'parametreler {len(_cihazlar)} cihaz / {len(_dtipler)} dtype üzerinde dağılmış'}. "
+            f"Fused çekirdek parametre, gradyan ve optimizer durumunun aynı cihaz ve "
+            f"dtype'ta olmasını şart koşar; acil durum kurtarıcı modülleri CPU'ya "
+            f"taşıyabildiği için bu şart garanti edilemez."
+        )
+
+    if _fused_uygun:
         try:
             opt = optim.AdamW(trainable_params, lr=lr, weight_decay=weight_decay, fused=True)
             logger.info(
@@ -1237,7 +1277,7 @@ def _tekil_egitim_adimi_icra(
                     if g_norm > 1.0:
                         g_clean = g_clean / (g_norm + 1e-8)
                     
-                    p.grad = g_clean
+                    p.grad = g_clean.to(device=p.device, dtype=p.dtype)
         except Exception as exc:
             logger.warning(f"  [VJP Cerrahi Uyarısı] Gradyan enjeksiyonu uyarısı: {exc}")
 
