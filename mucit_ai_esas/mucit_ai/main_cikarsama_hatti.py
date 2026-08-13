@@ -127,46 +127,47 @@ class Arc_CiktiIzgaraInsaEdici:
             "attempt_2": izgara
         }
 
-from checkpoint_manager import NPZCheckpointManager, CheckpointManager
+from checkpoint_manager import NPZCheckpointManager, CheckpointManager, KONTROL_NOKTASI_SON, KONTROL_NOKTASI_ONCEKI
 
 class Model_Agirlik_ve_CikarsamaYoneticisi:
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
 
-    def yukle(self, model_dizini: str, model: BiliselKanvasModeli) -> Tuple[BiliselKanvasModeli, bool]:
-        target_dir = model_dizini
+    @staticmethod
+    def resolve_checkpoint_dir(tercih_edilen_dizin: str) -> Optional[str]:
 
         priority_paths = [
-            model_dizini,
+            tercih_edilen_dizin,
             "/kaggle/input/notebooks/ulankaggle/mucit-ai"
         ]
 
-        has_ckpt = False
         for p in priority_paths:
-            if os.path.exists(p) and os.path.isdir(p):
-                if any(f.endswith('.pt') or f.endswith('.npz') for f in os.listdir(p) if os.path.isfile(os.path.join(p, f))):
-                    target_dir = p
-                    has_ckpt = True
-                    logger.info(f"  [Öncelikli Yol] Model kontrol noktası dizini bulundu: {target_dir}")
-                    break
+            if p and os.path.exists(p) and os.path.isdir(p):
+                if NPZCheckpointManager(checkpoint_dir=p).get_latest():
+                    logger.info(f"  [Öncelikli Yol] Model kontrol noktası dizini bulundu: {p}")
+                    return p
 
-        if not has_ckpt:
-            def find_checkpoint_dir(start_dir: str) -> Optional[str]:
-                if not os.path.exists(start_dir):
-                    return None
-                for root, dirs, files in os.walk(start_dir):
-                    if any(f.endswith('.pt') or f.endswith('.npz') for f in files):
-                        return root
+        def find_checkpoint_dir(start_dir: str) -> Optional[str]:
+            if not os.path.exists(start_dir):
                 return None
+            for root, dirs, files in os.walk(start_dir):
+                if any(f in (KONTROL_NOKTASI_SON, KONTROL_NOKTASI_ONCEKI) for f in files):
+                    return root
+            return None
 
-            logger.info(f"Öncelikli dizinlerde checkpoint bulunamadı. Genel Kaggle dataset yolları taranıyor...")
-            found = find_checkpoint_dir("/kaggle/input") or find_checkpoint_dir("./checkpoints") or find_checkpoint_dir("./")
-            if found:
-                target_dir = found
-                logger.info(f"  [Otomatik Tespit] Model kontrol noktası dizini bulundu: {target_dir}")
-            else:
-                logger.error(f"  [HATA] Hiçbir dizinde kontrol noktası (.pt / .npz) bulunamadı! Rastgele ilklendirilmiş ağırlıklar kullanılacak.")
-                return model, False
+        logger.info("Öncelikli dizinlerde checkpoint bulunamadı. Genel Kaggle dataset yolları taranıyor...")
+        found = find_checkpoint_dir("/kaggle/input") or find_checkpoint_dir("./checkpoints") or find_checkpoint_dir("./")
+        if found:
+            logger.info(f"  [Otomatik Tespit] Model kontrol noktası dizini bulundu: {found}")
+            return found
+
+        logger.error("  [HATA] Hiçbir dizinde kontrol noktası (.pt) bulunamadı! Rastgele ilklendirilmiş ağırlıklar kullanılacak.")
+        return None
+
+    def yukle(self, model_dizini: str, model: BiliselKanvasModeli, onceden_cozulmus_dizin: Optional[str] = None) -> Tuple[BiliselKanvasModeli, bool]:
+        target_dir = onceden_cozulmus_dizin or self.resolve_checkpoint_dir(model_dizini)
+        if target_dir is None:
+            return model, False
 
         npz_mgr = NPZCheckpointManager(checkpoint_dir=target_dir)
         latest_ckpt = npz_mgr.get_latest()
@@ -197,13 +198,7 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
     logger.info("BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ ÇIKARSAMA HATTI BAŞLATILIYOR")
     logger.info("================================================================================")
 
-    _ckpt_dizini = None
-    for _aday in (model_yolu, "/kaggle/input/notebooks/ulankaggle/mucit-ai"):
-        if _aday and os.path.isdir(_aday):
-            _gecici_mgr = NPZCheckpointManager(checkpoint_dir=_aday)
-            if _gecici_mgr.get_latest():
-                _ckpt_dizini = _aday
-                break
+    _ckpt_dizini = Model_Agirlik_ve_CikarsamaYoneticisi.resolve_checkpoint_dir(model_yolu)
 
     _kayitli_config: Dict[str, Any] = {}
     if _ckpt_dizini:
@@ -234,7 +229,7 @@ def Main_CikarsamaYurutucu(model_yolu: str = "./checkpoints", test_girdisi: str 
     agirlik_yonetici = Model_Agirlik_ve_CikarsamaYoneticisi(config)
 
     model = BiliselKanvasModeli(config).to(config.device)
-    model, yuklendi_mi = agirlik_yonetici.yukle(model_yolu, model)
+    model, yuklendi_mi = agirlik_yonetici.yukle(model_yolu, model, onceden_cozulmus_dizin=_ckpt_dizini)
 
     stiefel_izdusurucu = N13_StiefelManifolduIzdusumu()
 

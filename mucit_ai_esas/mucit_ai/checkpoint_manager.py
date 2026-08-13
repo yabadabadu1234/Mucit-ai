@@ -677,10 +677,8 @@ class NPZCheckpointManager:
         if path and path.endswith(".pt") and os.path.isfile(path):
             pt_candidates.append(path)
 
-        for _dizin in (self.checkpoint_dir, "/tmp/kulli_checkpoints", "/kaggle/working",
-                       "/kaggle/input/notebooks/ulankaggle/mucit-ai"):
-            pt_candidates.append(os.path.join(_dizin, KONTROL_NOKTASI_SON))
-            pt_candidates.append(os.path.join(_dizin, KONTROL_NOKTASI_ONCEKI))
+        pt_candidates.append(os.path.join(self.checkpoint_dir, KONTROL_NOKTASI_SON))
+        pt_candidates.append(os.path.join(self.checkpoint_dir, KONTROL_NOKTASI_ONCEKI))
 
         pt_file = None
         for cand in pt_candidates:

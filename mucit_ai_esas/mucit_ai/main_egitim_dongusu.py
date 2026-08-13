@@ -107,9 +107,15 @@ OZET_ADIM_ARALIGI: int = 10
 LOG_DOSYA_TAVANI_BAYT: int = 100 * 1024
 DURUM_DOSYASI: str = 'egitim_durumu.txt'
 
-def kur_logging_sistemi(log_dosyasi: str = 'egitim_dongusu_icra.log') -> None:
+def kur_logging_sistemi(log_dosyasi: str = 'egitim_dongusu_icra.log', yerel_rank: int = 0) -> None:
     root = logging.getLogger()
     root.handlers.clear()
+
+    if yerel_rank != 0:
+
+        root.setLevel(logging.CRITICAL)
+        root.addHandler(logging.NullHandler())
+        return
 
     if SESSIZ_URETIM_MODU:
         root.setLevel(logging.ERROR)
@@ -524,7 +530,10 @@ class Kayip_GRPO_Kriteri:
             p_target = P.gather(1, targets.unsqueeze(1)).squeeze(1)
             nll = -torch.log(torch.clamp(p_target, min=1e-9, max=1.0)).mean(dim=-1)
 
-        std = oduller.std() if oduller.std() > 0 else 1e-8
+        std = oduller.std()
+        if std <= 1e-6:
+
+            return nll
         avantajlar = (oduller - oduller.mean()) / (std + 1e-8)
         kayip_vec = nll * avantajlar.detach()
         return kayip_vec

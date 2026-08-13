@@ -20,7 +20,7 @@ def rank_egitimi(yerel_rank: int, dunya: int) -> None:
     import main_egitim_dongusu as M
 
     M.SESSIZ_URETIM_MODU = True
-    M.kur_logging_sistemi()
+    M.kur_logging_sistemi(yerel_rank=yerel_rank)
 
     try:
         M.Main_EgitimYurutucu(
