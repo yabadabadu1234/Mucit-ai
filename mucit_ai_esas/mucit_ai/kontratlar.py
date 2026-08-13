@@ -431,6 +431,44 @@ class N6_KohomolojikAktor_AltAg(nn.Module):
         self.out_proj = nn.Linear(d_h * 2, d_h)
         self.config = config
 
+
+
+
+
+
+
+
+
+
+
+
+        self.hafiza_metrik_tabani = nn.Parameter(
+            torch.randn(getattr(config, 'K', 16), d_h * 2) * (1.0 / math.sqrt(d_h * 2))
+        )
+
+    def hafiza_metrigi_kur(self, R_hafiza: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+
+
+
+
+
+
+        R_kosegen = torch.diagonal(R_hafiza, dim1=-2, dim2=-1)
+        s_R = R_kosegen.sum(dim=-1, keepdim=True)
+        W = self.hafiza_metrik_tabani.to(device=R_hafiza.device, dtype=R_hafiza.dtype)
+        M_R = torch.einsum('ki,bk,kj->bij', W, R_kosegen, W)
+        return M_R, s_R
+
+    def lie_braketi_R(self, u: torch.Tensor, v: torch.Tensor, M_R: torch.Tensor) -> torch.Tensor:
+
+
+
+
+
+        uM = torch.einsum('bi,bij->bj', u, M_R)
+        vM = torch.einsum('bi,bij->bj', v, M_R)
+        return uM * v - vM * u
+
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         B = girdi_sekli[0] if len(girdi_sekli) > 0 else self.config.batch_size
         d_v = getattr(self.config, 'd_v', 32)
@@ -446,17 +484,47 @@ class N6_KohomolojikAktor_AltAg(nn.Module):
         d_disc_field: torch.Tensor,
         e_dir_field: torch.Tensor,
         q_r: torch.Tensor,
-        a_r: torch.Tensor
+        a_r: torch.Tensor,
+        R_hafiza: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
+        h_k_adj = self.superpoz_w_k_adj(k_adj_field)
+        h_lap = self.superpoz_w_lap_grad(lap_grad_field)
+        h_q = self.superpoz_w_q(q_r)
+        h_a = self.superpoz_w_a(a_r)
+
         y_sup = (
-            self.superpoz_w_k_adj(k_adj_field)
-            + self.superpoz_w_lap_grad(lap_grad_field)
+            h_k_adj
+            + h_lap
             + self.superpoz_w_d_disc(d_disc_field)
             + self.superpoz_w_e_dir(e_dir_field)
-            + self.superpoz_w_q(q_r)
-            + self.superpoz_w_a(a_r)
+            + h_q
+            + h_a
             + self.superpoz_bias
         )
+
+
+
+
+
+
+
+
+
+        if R_hafiza is not None and R_hafiza.dim() == 3:
+            if R_hafiza.shape[0] != h_q.shape[0]:
+                if R_hafiza.shape[0] == 1:
+                    R_hafiza = R_hafiza.expand(h_q.shape[0], -1, -1)
+                else:
+                    _tekrar = -(-h_q.shape[0] // R_hafiza.shape[0])
+                    R_hafiza = R_hafiza.repeat(_tekrar, 1, 1)[:h_q.shape[0]]
+            M_R, s_R = self.hafiza_metrigi_kur(R_hafiza.detach())
+            _K = max(int(M_R.shape[0] > 0) * getattr(self.config, 'K', 16), 1)
+            kavis = s_R / float(_K)
+            y_sup = y_sup + kavis * (
+                self.lie_braketi_R(h_k_adj, h_q, M_R)
+                + self.lie_braketi_R(h_lap, h_a, M_R)
+            )
+
         y = self.norm(y_sup)
         y = self.act(y)
         return self.out_proj(y)
@@ -1719,7 +1787,10 @@ class N6_KohomolojikAktor(nn.Module):
             e_dir_field = torch.zeros((B, d_v), device=x_r.device, dtype=x_r.dtype)
 
         if self.alt_ag is not None:
-            synthetic_state = self.alt_ag(K_adj_field, lap_grad_field, d_disc_field, e_dir_field, q_r, a_r)
+            synthetic_state = self.alt_ag(
+                K_adj_field, lap_grad_field, d_disc_field, e_dir_field, q_r, a_r,
+                R_hafiza=getattr(self, '_hafiza_korelasyon_R', None)
+            )
         else:
             y_sup = (
                 self.superpoz_w_k_adj(K_adj_field)
@@ -2379,13 +2450,15 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
         micro_chunk_size = 64
         return vram_bayt_tahmin_et(B, micro_chunk_size, self.V_size)
 
-    def forward_sifir_oom_chunking(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None) -> E12_ParalelTokenOlasilikMatrisi:
+    def forward_sifir_oom_chunking(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None,
+                                   h_spec: Optional[torch.Tensor] = None) -> E12_ParalelTokenOlasilikMatrisi:
         logging.getLogger("mucit_ai.kontratlar").debug(
             "[N10_SozlukSoftmaxIzdusem.forward_sifir_oom_chunking] sıfır-OOM zincirleme sözlük softmax izdüşümü çağrıldı"
         )
-        return self.forward(e11_gomulu, hedefler=hedefler)
+        return self.forward(e11_gomulu, hedefler=hedefler, h_spec=h_spec)
 
-    def forward(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None) -> E12_ParalelTokenOlasilikMatrisi:
+    def forward(self, e11_gomulu: E11_ParalelGomuluVektorlerMatrisi, hedefler: Optional[torch.Tensor] = None,
+                h_spec: Optional[torch.Tensor] = None) -> E12_ParalelTokenOlasilikMatrisi:
         X_input = e11_gomulu.X_output  
         if X_input.dim() == 2:
             X_input = X_input.unsqueeze(0)
@@ -2410,6 +2483,18 @@ class N10_SozlukSoftmaxIzdusem(nn.Module):
         _rms = torch.sqrt(X_t.pow(2).mean(dim=-1, keepdim=True) + 1e-6)
         X_t = (X_t / _rms) * self.rms_g.to(device=X_t.device, dtype=X_t.dtype)
         tau = F.softplus(self.log_sicaklik.to(device=X_t.device)) + 1e-4
+
+
+
+
+
+
+
+
+        if h_spec is not None:
+            _h = h_spec if isinstance(h_spec, torch.Tensor) else torch.tensor(float(h_spec))
+            _h = _h.to(device=X_t.device, dtype=tau.dtype).reshape(())
+            tau = tau * (1.0 + torch.tanh(_h))
 
         micro_chunk_size = 64
         

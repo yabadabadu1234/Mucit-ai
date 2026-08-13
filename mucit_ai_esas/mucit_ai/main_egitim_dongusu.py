@@ -1425,6 +1425,7 @@ def _tekil_egitim_adimi_icra(
             AnlasmaliVramGuvencesiAl(n5_cevap, e6_sorgu_st.q_r, takas_mgr=takas_mgr)
             e7_lokal_st = AcilDurumOomYakalayiciVeKurtarici(n5_cevap.forward, e6_sorgu_st, e5_b_st, modul_nesnesi=n5_cevap, takas_mgr=takas_mgr)
 
+            n6_aktor._hafiza_korelasyon_R = getattr(meclis_bellek, 'R', None)
             AnlasmaliVramGuvencesiAl(n6_aktor, x_c, takas_mgr=takas_mgr)
             e8_sentetik_st = AcilDurumOomYakalayiciVeKurtarici(
                 n6_aktor.forward, e5_a_st, e6_sorgu_st, e7_lokal_st, modul_nesnesi=n6_aktor, takas_mgr=takas_mgr
@@ -1555,7 +1556,7 @@ def _tekil_egitim_adimi_icra(
     AnlasmaliVramGuvencesiAl(n9_vandermonde, (e10_kulli.C.shape[0], N_star), takas_mgr=takas_mgr)
     e11_gomulu = AcilDurumOomYakalayiciVeKurtarici(n9_vandermonde.forward, e10_kulli, T_matrix, modul_nesnesi=n9_vandermonde, takas_mgr=takas_mgr)
     AnlasmaliVramGuvencesiAl(n10_sozluk, e11_gomulu.X_output, takas_mgr=takas_mgr)
-    e12_olasilik = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward_sifir_oom_chunking, e11_gomulu, hedefler=hedef_clamped, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
+    e12_olasilik = AcilDurumOomYakalayiciVeKurtarici(n10_sozluk.forward_sifir_oom_chunking, e11_gomulu, hedefler=hedef_clamped, h_spec=H_spec_tensor, modul_nesnesi=n10_sozluk, takas_mgr=takas_mgr)
 
     try:
         with torch.no_grad():
