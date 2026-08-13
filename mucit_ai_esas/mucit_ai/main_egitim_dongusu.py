@@ -139,6 +139,21 @@ TF32_ACIK: bool = True
 FUSED_ADAMW_ACIK: bool = False
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+N7_N2_MIKRO_ZAMAN_ACIK: bool = True
+
+
 def donanim_hizlandirmasini_uygula() -> None:
 
 
@@ -1388,8 +1403,19 @@ def _tekil_egitim_adimi_icra(
     AnlasmaliVramGuvencesiAl(raw_n2_topox, e2_byte_grouped, takas_mgr=takas_mgr)
     _gecmis_ceza = getattr(raw_n2_topox, '_gecmis_dugum_cezasi', None)
     _gecmis_gamma = getattr(raw_n2_topox, '_gecmis_gamma', None)
+
+
+
+
+
+
+
+    ham_skor_sabit = AcilDurumOomYakalayiciVeKurtarici(
+        raw_n2_topox.ham_skor_hesapla, e2_byte_grouped, x_initial=x_start_grouped,
+        modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
+    )
     e3_sinir_sabit = AcilDurumOomYakalayiciVeKurtarici(
-        raw_n2_topox.forward, e2_byte_grouped, x_initial=x_start_grouped, mode='train',
+        raw_n2_topox.komsuluk_guncelle, ham_skor_sabit, mode='train',
         d_dugum_gecmis=_gecmis_ceza, gamma_gecmis=_gecmis_gamma,
         modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
     )
@@ -1415,14 +1441,22 @@ def _tekil_egitim_adimi_icra(
     cevap_a_son: Optional[torch.Tensor] = None
     _n7_syn_states_seq_list: List[torch.Tensor] = []
 
+    _E_kenar_mevcut = int(e3_sinir_sabit.D1.shape[0])
+
     for r in range(1, config.R + 1):
-        def _tekil_r_adimi(x_c, m_c):
+
+
+
+
+
+
+        def _tekil_r_adimi(x_c, m_c, _D0_r=D0_op_sabit, _D1_r=e3_sinir_sabit.D1):
             e5_a_st = E5_A_MevcutGizilDurum(x_r=x_c)
             e5_b_st = E5_B_BellekGonderimi(M=m_c)
 
             AnlasmaliVramGuvencesiAl(n4_sorgu, x_c, takas_mgr=takas_mgr)
             e6_sorgu_st = AcilDurumOomYakalayiciVeKurtarici(
-                n4_sorgu.forward, e5_a_st, D0_operator=D0_op_sabit, A_adjacency=e3_sinir_sabit.D1, bellek=e5_b_st,
+                n4_sorgu.forward, e5_a_st, D0_operator=_D0_r, A_adjacency=_D1_r, bellek=e5_b_st,
                 modul_nesnesi=n4_sorgu, takas_mgr=takas_mgr
             )
             AnlasmaliVramGuvencesiAl(n5_cevap, e6_sorgu_st.q_r, takas_mgr=takas_mgr)
@@ -1435,7 +1469,7 @@ def _tekil_egitim_adimi_icra(
             )
             AnlasmaliVramGuvencesiAl(n7_cozucu, e8_sentetik_st.synthetic_state, takas_mgr=takas_mgr)
             e9_guncel_st = AcilDurumOomYakalayiciVeKurtarici(
-                n7_cozucu.forward, e8_sentetik_st, D0_op_sabit, e5_a_st, modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
+                n7_cozucu.forward, e8_sentetik_st, _D0_r, e5_a_st, modul_nesnesi=n7_cozucu, takas_mgr=takas_mgr
             )
             return e9_guncel_st.x_next, e8_sentetik_st.synthetic_state, e6_sorgu_st.q_r, e7_lokal_st.a_r
 
@@ -1471,6 +1505,54 @@ def _tekil_egitim_adimi_icra(
         x_current = e9_guncel.x_next
         M_current = e5_b_yeni.M
         mevcut_durum = E5_A_MevcutGizilDurum(x_r=x_current)
+
+
+
+
+
+
+
+
+
+
+        if N7_N2_MIKRO_ZAMAN_ACIK and r < config.R:
+            with torch.no_grad():
+                _d_disc_r = n7_cozucu.hesapla_uyumsuzluk_vektoru(x_current.detach(), D0_op_sabit)
+                _ceza_r, _gamma_r = N2_TopoXHucreOlusumu.kohomolojik_ceza_hazirla(
+                    e3_sinir_sabit.D1, _d_disc_r, getattr(config, 'd_v', 32)
+                )
+
+            e3_sinir_sabit = raw_n2_topox.komsuluk_guncelle(
+                ham_skor_sabit, mode='train',
+                d_dugum_gecmis=_ceza_r, gamma_gecmis=_gamma_r,
+            )
+
+
+
+
+            _E_kenar_yeni = int(e3_sinir_sabit.D1.shape[0])
+            if _E_kenar_yeni != _E_kenar_mevcut:
+                e4_lif = AcilDurumOomYakalayiciVeKurtarici(
+                    n3_lif.forward, e3_sinir_sabit, x_start_grouped,
+                    modul_nesnesi=n3_lif, takas_mgr=takas_mgr
+                )
+                _E_kenar_mevcut = _E_kenar_yeni
+
+            D0_op_sabit, Delta_0_sabit = AcilDurumOomYakalayiciVeKurtarici(
+                laplasyen_insa.insa_et, e3_sinir_sabit, e4_lif.phi_matrisleri,
+                modul_nesnesi=laplasyen_insa, takas_mgr=takas_mgr, hesapla_yogun_delta0=False
+            )
+            if hasattr(laplasyen_insa, 'tasintilar_cihaza') and D0_op_sabit.device != x_start_grouped.device:
+                D0_op_sabit, Delta_0_sabit = laplasyen_insa.tasintilar_cihaza(
+                    D0_op_sabit, Delta_0_sabit, x_start_grouped.device
+                )
+            if hasattr(n6_aktor, 'update_operators'):
+                n6_aktor.update_operators(D0_op_sabit)
+
+            logger.debug(
+                f"  [N7->N2 Mikro-Zaman] r={r}->{r + 1}: gamma={float(_gamma_r):.6f}, "
+                f"kenar sayisi {_E_kenar_mevcut}"
+            )
 
     d_vec3 = AcilDurumOomYakalayiciVeKurtarici(
         n7_cozucu.hesapla_uyumsuzluk_vektoru, mevcut_durum.x_r, D0_op_sabit,
@@ -1860,14 +1942,17 @@ def _tekil_egitim_adimi_icra(
     except Exception as _dg_exc:
         logger.debug(f"  [N14->N1 Geri Besleme] Geodezik ceza uygulanamadı, atlandı: {_dg_exc}")
 
-    try:
+    if not N7_N2_MIKRO_ZAMAN_ACIK:
+
+
+
+
+
         _yeni_ceza, _yeni_gamma = N2_TopoXHucreOlusumu.kohomolojik_ceza_hazirla(
             e3_sinir_sabit.D1, d_vec3, getattr(config, 'd_v', 32)
         )
         raw_n2_topox._gecmis_dugum_cezasi = _yeni_ceza
         raw_n2_topox._gecmis_gamma = _yeni_gamma
-    except Exception as _ceza_exc:
-        logger.debug(f"  [N7->N2 Geri Besleme] Ceza hazirlanamadi, atlandi: {_ceza_exc}")
 
     d_discrepancy = float(d_vec3.mean().detach().item())
     dirichlet_energy = float(e_vec3.mean().detach().item())

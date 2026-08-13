@@ -1180,20 +1180,62 @@ class N1_HibritByteTokenAyristirici(nn.Module):
 N1_ByteAyristirici = N1_HibritByteTokenAyristirici
 
 
+SPARSEMAX_BASLANGIC_ADAYI: int = 64
+
+
 def sparsemax(logits: torch.Tensor, dim: int = -1) -> torch.Tensor:
-    logits_sorted, _ = torch.sort(logits, dim=dim, descending=True)
-    cumsum_sorted = torch.cumsum(logits_sorted, dim=dim)
-    k = torch.arange(1, logits.shape[dim] + 1, device=logits.device, dtype=logits.dtype)
-    shape_ones = [1] * logits.dim()
-    shape_ones[dim] = logits.shape[dim]
-    k_tensor = k.view(*shape_ones)
-    
-    bound = 1.0 + k_tensor * logits_sorted
-    is_greater = (bound > cumsum_sorted).to(logits.dtype)
-    k_star = torch.sum(is_greater, dim=dim, keepdim=True)
-    k_star = torch.clamp(k_star, min=1)
-    
-    tau = (torch.gather(cumsum_sorted, dim, (k_star - 1).long()) - 1.0) / k_star
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    n = int(logits.shape[dim])
+    m = min(max(SPARSEMAX_BASLANGIC_ADAYI, 1), n)
+
+    while True:
+        z_ust, _ = torch.topk(logits, m, dim=dim, sorted=True)
+        kismi_toplam = torch.cumsum(z_ust, dim=dim)
+
+        k = torch.arange(1, m + 1, device=logits.device, dtype=logits.dtype)
+        shape_ones = [1] * logits.dim()
+        shape_ones[dim] = m
+        k_tensor = k.view(*shape_ones)
+
+        bound = 1.0 + k_tensor * z_ust
+        is_greater = (bound > kismi_toplam).to(logits.dtype)
+        k_star = torch.sum(is_greater, dim=dim, keepdim=True)
+        k_star = torch.clamp(k_star, min=1)
+
+        if m >= n or int(k_star.max().item()) < m:
+            break
+        m = min(n, m * 4)
+
+    tau = (torch.gather(kismi_toplam, dim, (k_star - 1).long()) - 1.0) / k_star
     return F.relu(logits - tau)
 
 
@@ -1249,20 +1291,23 @@ class N2_TopoXHucreOlusumu(nn.Module):
 
         return d_dugum, gamma
 
-    def forward(self, girdi: E2_ByteTensoru, x_initial: Optional[torch.Tensor] = None, mode: str = 'train',
-                D0_base: Optional[torch.Tensor] = None,
-                d_dugum_gecmis: Optional[torch.Tensor] = None,
-                gamma_gecmis: Optional[torch.Tensor] = None) -> E3_SinirOperatorleri:
-        
-        
+    def ham_skor_hesapla(self, girdi: E2_ByteTensoru, x_initial: Optional[torch.Tensor] = None) -> Dict[str, Any]:
+
+
+
+
+
+
+
+
+
+
         zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
         if zorunlu_cihaz is not None:
             if next(self.parameters(), None) is not None and next(self.parameters()).device != zorunlu_cihaz:
                 self.to(zorunlu_cihaz)
             if x_initial is not None and x_initial.device != zorunlu_cihaz:
                 x_initial = x_initial.to(zorunlu_cihaz)
-            if D0_base is not None and D0_base.device != zorunlu_cihaz:
-                D0_base = D0_base.to(zorunlu_cihaz)
 
         if x_initial is not None and x_initial.dim() == 2:
             V = x_initial.shape[1] // self.d_v
@@ -1272,16 +1317,16 @@ class N2_TopoXHucreOlusumu(nn.Module):
             device = zorunlu_cihaz if zorunlu_cihaz is not None else self.config.device
             X = torch.randn((self.config.batch_size, V, self.d_v), device=device)
 
-        device = X.device
-        dtype = X.dtype
-        E = max(V - 1, 1)
-        F_num = max(V - 2, 1)
-
-        
-        Q = self.W_q(X)  
-        K = self.W_k(X)  
+        Q = self.W_q(X)
+        K = self.W_k(X)
         scores = torch.matmul(Q, K.transpose(1, 2)) / math.sqrt(self.d_v)
 
+        return {"skorlar": scores, "V": int(V), "cihaz": X.device, "dtype": X.dtype}
+
+    def komsuluk_guncelle(self, ham_skor: Dict[str, Any], mode: str = 'train',
+                          D0_base: Optional[torch.Tensor] = None,
+                          d_dugum_gecmis: Optional[torch.Tensor] = None,
+                          gamma_gecmis: Optional[torch.Tensor] = None) -> E3_SinirOperatorleri:
 
 
 
@@ -1289,6 +1334,22 @@ class N2_TopoXHucreOlusumu(nn.Module):
 
 
 
+
+
+
+
+
+        scores = ham_skor["skorlar"]
+        V = int(ham_skor["V"])
+        device = ham_skor["cihaz"]
+        dtype = ham_skor["dtype"]
+
+        zorunlu_cihaz = getattr(self, '_vram_idare_zorunlu_cihaz', None)
+        if zorunlu_cihaz is not None and D0_base is not None and D0_base.device != zorunlu_cihaz:
+            D0_base = D0_base.to(zorunlu_cihaz)
+
+        E = max(V - 1, 1)
+        F_num = max(V - 2, 1)
 
         if d_dugum_gecmis is not None and gamma_gecmis is not None:
             _dd = d_dugum_gecmis.detach().to(device=scores.device, dtype=scores.dtype).reshape(-1)
@@ -1378,6 +1439,21 @@ class N2_TopoXHucreOlusumu(nn.Module):
 
 
         return E3_SinirOperatorleri(D1=D1, D2=D2)
+
+    def forward(self, girdi: E2_ByteTensoru, x_initial: Optional[torch.Tensor] = None, mode: str = 'train',
+                D0_base: Optional[torch.Tensor] = None,
+                d_dugum_gecmis: Optional[torch.Tensor] = None,
+                gamma_gecmis: Optional[torch.Tensor] = None) -> E3_SinirOperatorleri:
+
+
+
+
+
+        ham = self.ham_skor_hesapla(girdi, x_initial=x_initial)
+        return self.komsuluk_guncelle(
+            ham, mode=mode, D0_base=D0_base,
+            d_dugum_gecmis=d_dugum_gecmis, gamma_gecmis=gamma_gecmis,
+        )
 
     def CekirdekBaziylaD2Kur(self, D1: torch.Tensor, triangles: List[Tuple[int, int, int]], edge_map: Dict[Tuple[int, int], int], device: torch.device) -> torch.Tensor:
         logging.getLogger("mucit_ai.kontratlar").debug(
