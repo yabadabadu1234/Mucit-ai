@@ -92,7 +92,12 @@ def config_ozeti_cikar(model: Any) -> Dict[str, Any]:
 
     ozet: Dict[str, Any] = {}
     for alan in SEKIL_BELIRLEYEN_CONFIG_ALANLARI:
-        deger = getattr(kaynak, alan, None)
+
+        donmus_alan = f"_insa_{alan}"
+        if hasattr(kaynak, donmus_alan):
+            deger = getattr(kaynak, donmus_alan)
+        else:
+            deger = getattr(kaynak, alan, None)
         if isinstance(deger, (int, float, str, bool)):
             ozet[alan] = deger
     return ozet

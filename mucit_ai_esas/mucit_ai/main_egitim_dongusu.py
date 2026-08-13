@@ -1935,6 +1935,9 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     config = Model_TopolojikKonfigurasyon(param_dict)
     config.device = zorunlu_cihaz or ("cuda:0" if torch.cuda.is_available() else "cpu")
 
+    config._insa_V_nodes = config.V_nodes
+    config._insa_D = config.D
+
     GRPO_G = getattr(config, 'GRPO_G', 4)
     logger.info(f"Çalışma Cihazı: {config.device} | GRPO Grup (G): {GRPO_G} | Rekürens (R): {config.R}")
 
