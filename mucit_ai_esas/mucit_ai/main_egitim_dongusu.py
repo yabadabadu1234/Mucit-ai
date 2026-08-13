@@ -2015,7 +2015,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
     optimizer = hizli_optimizer_kur(trainable_params, lr=config.lr, weight_decay=1e-4)
     logger.info("Tüm Sinir Ağları ve Stiefel Parametreleri Optimizasyona Bağlandı.")
 
-    vram_denetci = Hafiza_Izleyici_ve_VRAM_Denetci(cihaz=config.device, kritik_esik_yuzde=0.85)
+    vram_denetci = Hafiza_Izleyici_ve_VRAM_Denetci(cihaz=config.device, kritik_esik_yuzde=0.95)
     if SESSIZ_URETIM_MODU:
         vram_denetci = SessizVramDenetci(vram_denetci)
 

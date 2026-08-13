@@ -3226,7 +3226,7 @@ class Riyazi_Pareto_PCGrad_MGDA_Operator:
         return tasili_shardlar
 
 class Hafiza_Izleyici_ve_VRAM_Denetci:
-    def __init__(self, cihaz: Union[torch.device, str] = "cuda", kritik_esik_yuzde: float = 0.85):
+    def __init__(self, cihaz: Union[torch.device, str] = "cuda", kritik_esik_yuzde: float = 0.95):
         if isinstance(cihaz, str):
             self.cihaz = torch.device(cihaz)
         else:
