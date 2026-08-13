@@ -1829,6 +1829,9 @@ def _tekil_egitim_adimi_icra(
     raw_n1_byte = gpu_dagitici.kok_modul_al(n1_byte) if gpu_dagitici is not None else (n1_byte.module if hasattr(n1_byte, 'module') else n1_byte)
     raw_n1_byte.izdusur_stiefel()
 
+    d_discrepancy = float(d_vec3.mean().detach().item())
+    dirichlet_energy = float(e_vec3.mean().detach().item())
+
     try:
         _dg = float(
             torch.sum((son_q.detach().float() - son_a_detached.float()) ** 2, dim=-1).mean().item()
@@ -1858,9 +1861,6 @@ def _tekil_egitim_adimi_icra(
         )
         raw_n2_topox._gecmis_dugum_cezasi = _yeni_ceza
         raw_n2_topox._gecmis_gamma = _yeni_gamma
-
-    d_discrepancy = float(d_vec3.mean().detach().item())
-    dirichlet_energy = float(e_vec3.mean().detach().item())
 
     if hasattr(n6_aktor, 'serbest_birak_operatorler'):
         _serbest_mb = n6_aktor.serbest_birak_operatorler()
