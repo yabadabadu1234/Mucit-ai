@@ -684,6 +684,33 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         self.config = config
 
+        self._muhur_anahtari: Optional[Tuple[Any, ...]] = None
+        self._muhurlu_D0: Optional["LifLaplasyenOperatoru"] = None
+        self.muhur_isabet = 0
+        self.muhur_iska = 0
+
+    @staticmethod
+    def _muhur_anahtari_uret(D1: torch.Tensor, phi_dict: Any) -> Optional[Tuple[Any, ...]]:
+
+
+
+
+
+
+
+
+
+
+
+
+        try:
+            phi_kimlikleri = tuple(
+                sorted((str(k), id(v), v._version) for k, v in phi_dict.items())
+            )
+        except (AttributeError, TypeError):
+            return None
+        return (id(D1), D1._version, tuple(D1.shape), phi_kimlikleri)
+
     def tahmin_et_vram_bayt(self, girdi_sekli: Tuple[int, ...]) -> int:
         V = girdi_sekli[0] if len(girdi_sekli) > 0 else getattr(self.config, 'V_nodes', 8)
         E_num = max(V - 1, 1)
@@ -697,6 +724,14 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         hesapla_yogun_delta0: bool = False,
     ) -> Tuple[torch.Tensor, Optional[torch.Tensor]]:
         D1 = sinir_operatorleri.D1
+
+        _anahtar = self._muhur_anahtari_uret(D1, phi_dict)
+        if (not hesapla_yogun_delta0) and _anahtar is not None \
+                and _anahtar == self._muhur_anahtari and self._muhurlu_D0 is not None:
+            self.muhur_isabet += 1
+            return self._muhurlu_D0, None
+        self.muhur_iska += 1
+
         E_num, V_num = D1.shape
         d_e, d_v = self.config.d_e, self.config.d_v
 
@@ -757,6 +792,9 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         )
 
         if not hesapla_yogun_delta0:
+            if _anahtar is not None:
+                self._muhur_anahtari = _anahtar
+                self._muhurlu_D0 = D0
             return D0, None
         D0 = D0.yogun()
 

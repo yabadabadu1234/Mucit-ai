@@ -29,6 +29,7 @@ from typing import Dict, Any, List, Tuple, Optional, Union
 
 from kulli_gpu import NvmeTakasYoneticisi, kuresel_ram_denetci
 from mucit_ai.topolojik_islem_sevk import TopolojikIslemSevk
+import dagitik_egitim
 
 import kontratlar
 import torch
@@ -150,6 +151,20 @@ def kur_ozet_kanali() -> logging.Logger:
 kur_logging_sistemi()
 logger = logging.getLogger('MainEgitim')
 ozet_logger = kur_ozet_kanali()
+
+class SadeceAnaSurecHafiza:
+
+    def __init__(self, gercek: Any):
+        self._gercek = gercek
+
+    def save_hafiza_state(self, *args: Any, **kwargs: Any) -> None:
+        return None
+
+    def save_pytorch_model(self, *args: Any, **kwargs: Any) -> str:
+        return ""
+
+    def __getattr__(self, ad: str) -> Any:
+        return getattr(self._gercek, ad)
 
 class SessizVramDenetci:
 
@@ -1240,7 +1255,14 @@ def _tekil_egitim_adimi_icra(
     e2_byte, x_initial = AcilDurumOomYakalayiciVeKurtarici(n1_byte.forward, e1_girdi, modul_nesnesi=n1_byte, takas_mgr=takas_mgr)
     raw_n2_topox = gpu_dagitici.kok_modul_al(n2_topox) if gpu_dagitici is not None else (n2_topox.module if hasattr(n2_topox, 'module') else n2_topox)
     AnlasmaliVramGuvencesiAl(raw_n2_topox, e2_byte, takas_mgr=takas_mgr)
-    e3_sinir = AcilDurumOomYakalayiciVeKurtarici(raw_n2_topox.forward, e2_byte, x_initial=x_initial, mode='train', modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr)
+    ham_skor = AcilDurumOomYakalayiciVeKurtarici(
+        raw_n2_topox.ham_skor_hesapla, e2_byte, x_initial=x_initial,
+        modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
+    )
+    e3_sinir = AcilDurumOomYakalayiciVeKurtarici(
+        raw_n2_topox.komsuluk_guncelle, ham_skor, mode='train',
+        modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
+    )
     AnlasmaliVramGuvencesiAl(n3_lif, e3_sinir, takas_mgr=takas_mgr)
     e4_lif = AcilDurumOomYakalayiciVeKurtarici(n3_lif.forward, e3_sinir, x_initial, modul_nesnesi=n3_lif, takas_mgr=takas_mgr)
     vram_denetci.yokla_ve_raporla("N1_N3_TopolojiIskelesi", adim_no=current_step)
@@ -1317,15 +1339,33 @@ def _tekil_egitim_adimi_icra(
     _gecmis_ceza = getattr(raw_n2_topox, '_gecmis_dugum_cezasi', None)
     _gecmis_gamma = getattr(raw_n2_topox, '_gecmis_gamma', None)
 
-    ham_skor_sabit = AcilDurumOomYakalayiciVeKurtarici(
-        raw_n2_topox.ham_skor_hesapla, e2_byte_grouped, x_initial=x_start_grouped,
-        modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
+    _gruplama_kimlik = (
+        GRPO_G == 1
+        and gpu_cesitlendirici is None
+        and _gecmis_ceza is None
+        and _gecmis_gamma is None
     )
-    e3_sinir_sabit = AcilDurumOomYakalayiciVeKurtarici(
-        raw_n2_topox.komsuluk_guncelle, ham_skor_sabit, mode='train',
-        d_dugum_gecmis=_gecmis_ceza, gamma_gecmis=_gecmis_gamma,
-        modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
-    )
+
+    if _gruplama_kimlik:
+        ham_skor_sabit = {
+            "skorlar": ham_skor["skorlar"].detach(),
+            "V": ham_skor["V"],
+            "cihaz": ham_skor["cihaz"],
+            "dtype": ham_skor["dtype"],
+        }
+        e3_sinir_sabit = E3_SinirOperatorleri(
+            D1=e3_sinir.D1.detach(), D2=e3_sinir.D2.detach()
+        )
+    else:
+        ham_skor_sabit = AcilDurumOomYakalayiciVeKurtarici(
+            raw_n2_topox.ham_skor_hesapla, e2_byte_grouped, x_initial=x_start_grouped,
+            modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
+        )
+        e3_sinir_sabit = AcilDurumOomYakalayiciVeKurtarici(
+            raw_n2_topox.komsuluk_guncelle, ham_skor_sabit, mode='train',
+            d_dugum_gecmis=_gecmis_ceza, gamma_gecmis=_gecmis_gamma,
+            modul_nesnesi=raw_n2_topox, takas_mgr=takas_mgr
+        )
     AnlasmaliVramGuvencesiAl(laplasyen_insa, e3_sinir_sabit.D1, takas_mgr=takas_mgr)
 
     D0_op_sabit, Delta_0_sabit = AcilDurumOomYakalayiciVeKurtarici(
@@ -1672,6 +1712,24 @@ def _tekil_egitim_adimi_icra(
         g_grpo, g_vicreg_var, g_vicreg_cov, g_vicreg_rec,
         g_spektral, g_sorgu, g_cumle_keyfiyet,
     ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    dagitik_egitim.shardlari_esitle(shard_gradyanlari)
+
     _P_toplam = sum(p.numel() for p in trainable_params)
     AnlasmaliVramGuvencesiAl(pareto_pcgrad_operator, (len(shard_gradyanlari), _P_toplam), takas_mgr=takas_mgr)
 
@@ -1846,7 +1904,8 @@ def _tekil_egitim_adimi_icra(
 
     return kayip_val, H_spec_val, dirichlet_energy, d_discrepancy
 
-def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json") -> None:
+def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = "/kaggle/working/verisetleri_manifest.json",
+                        zorunlu_cihaz: Optional[str] = None) -> None:
     logger.info("================================================================================")
     logger.info("BİLİŞSEL KANVAS TOPOLOJİK REKÜRENS MİMARİSİ EĞİTİM YÜRÜTÜCÜSÜ (ÇOKLU GPU PARALEL DÖNGÜ)")
     logger.info("================================================================================")
@@ -1865,13 +1924,15 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
         logger.info(f"Konfigürasyon dosyasından yüklendi: {konfig_yolu}")
 
     config = Model_TopolojikKonfigurasyon(param_dict)
-    config.device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    config.device = zorunlu_cihaz or ("cuda:0" if torch.cuda.is_available() else "cpu")
 
     GRPO_G = getattr(config, 'GRPO_G', 4)
     logger.info(f"Çalışma Cihazı: {config.device} | GRPO Grup (G): {GRPO_G} | Rekürens (R): {config.R}")
 
     ckpt_dizini = "/kaggle/working" if os.path.exists("/kaggle/working") else "./checkpoints"
     npz_mgr = NPZCheckpointManager(checkpoint_dir=ckpt_dizini)
+    if not dagitik_egitim.ana_surec_mi():
+        npz_mgr = SadeceAnaSurecHafiza(npz_mgr)
     n15_yedek_yoneticisi = N15_EgitimKontrolNoktasiYoneticisi(kaydetme_dizini=os.path.join(ckpt_dizini, "n15_tasinabilir_yedek"))
     n16_arc_donusturucu = N16_ArcIzgaraDonusturucu()
 
@@ -1950,6 +2011,13 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
         vram_denetci = SessizVramDenetci(vram_denetci)
 
     baslangic_step, loss_history = npz_mgr.load_pytorch_model(tum_moduller, optimizer)
+
+    if dagitik_egitim.dagitik_aktif():
+        dagitik_egitim.agirliklari_ranktan_yay(list(tum_moduller.values()), kaynak=0)
+        logger.info(
+            f"  [Dagitik] rank {dagitik_egitim.rank()}: baslangic agirliklari rank 0'dan "
+            f"yayinlandi; W_0 tum ranklarda birebir ayni."
+        )
     current_step = baslangic_step
 
     with torch.no_grad():
@@ -2029,7 +2097,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                     f"{os.path.basename(dosya_yolu)} | Boyut: {os.path.getsize(dosya_yolu) / (1024**2) if os.path.exists(dosya_yolu) else 0.0:.2f} MB "
                     f"| Veri seti: {veriseti_adi}"
                 )
-                for e1_girdi_metni, hedef_tensor, is_last_chunk, chunk_idx, bytes_read, file_size in veri_yukleyici.dosya_parcalari_oku(dosya_yolu, chunk_size=65536):
+                for e1_girdi_metni, hedef_tensor, is_last_chunk, chunk_idx, bytes_read, file_size in dagitik_egitim.pencereleri_bolustur(veri_yukleyici.dosya_parcalari_oku(dosya_yolu, chunk_size=65536)):
 
                     gecen_toplam_sure = time.time() - egitim_baslangic_zamani
                     if gecen_toplam_sure >= MAX_TRAINING_SECONDS:
@@ -2151,7 +2219,7 @@ def Main_EgitimYurutucu(konfig_yolu: Optional[str] = None, manifest_yolu: str = 
                         best_loss = curr_loss_val
                         is_best = True
 
-                    if is_periodic or is_best:
+                    if (is_periodic or is_best) and dagitik_egitim.ana_surec_mi():
                         _kaydedilen_npz_yolu = npz_mgr.save_pytorch_model(
                             step=current_step,
                             token_offset=current_step * config.N,
