@@ -48,10 +48,19 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
          huggingface_hub'in repo_id dogrulamasi dahil hicbir kod
          yoluna girmeyen, en dip seviye yerel yukleme yoludur.
       4) yalnizca ucu de basarisiz olursa, son care trust_remote_code=True.
-    """
-    from transformers import AutoModelForCausalLM
 
+    Yol HAM bir .pth kontrol noktasiysa (transformers config.json
+    tasimiyorsa -- model_indir.py'nin BlinkDL/rwkv7-g1'den indirdigi
+    dosya tam olarak boyle), yukaridaki dort kademe hic denenmez;
+    dogrudan `rwkv` pip paketiyle native yuklenir (bkz. rwkv_native.py)."""
     yol = yerel_model_yolu(model_ailesi)
+
+    if model_ailesi == RWKV:
+        from rwkv_native import native_rwkv_yukle, rwkv_ham_pth_mi
+        if rwkv_ham_pth_mi(yol):
+            return native_rwkv_yukle(yol, veri_tipi=veri_tipi)
+
+    from transformers import AutoModelForCausalLM
 
     try:
         return AutoModelForCausalLM.from_pretrained(
@@ -86,9 +95,14 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
 
 
 def tokenizer_yukle(model_ailesi: str) -> Any:
-    from transformers import AutoTokenizer
-
     yol = yerel_model_yolu(model_ailesi)
+
+    if model_ailesi == RWKV:
+        from rwkv_native import native_rwkv_tokenizer_yukle, rwkv_ham_pth_mi
+        if rwkv_ham_pth_mi(yol):
+            return native_rwkv_tokenizer_yukle()
+
+    from transformers import AutoTokenizer
 
     try:
         tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=False, local_files_only=True)
@@ -111,6 +125,23 @@ def tokenizer_yukle(model_ailesi: str) -> Any:
 
 
 def lora_adaptoru_kur(base_model: Any, model_ailesi: str, r: int = 8, alpha: int = 16, dropout: float = 0.05) -> Any:
+    from rwkv_native import RWKVUyumluModel
+
+    if isinstance(base_model, RWKVUyumluModel):
+        # `rwkv` pip paketinin agirliklari (self.w) standart nn.Linear
+        # alt-moduller DEGIL, duz bir tensor sozlugu; peft.get_peft_model
+        # target_modules eslesmesini nn.Module agac gezintisiyle yapar ve
+        # bu yapida CALISMAZ. Sessizce yanlis/eksik bir LoRA kurup
+        # kullaniciyi yaniltmaktansa, acikca atlayip modeli oldugu gibi
+        # donduruyoruz -- inference/degerlendirme calisir, TTT (gorev
+        # basina ince ayar) bu native yolda devre disi kalir.
+        print(
+            "[ttt_lora] UYARI: native RWKV (.pth) modelinde peft/LoRA uygulanamıyor "
+            "(ağırlıklar nn.Linear alt-modül değil, düz tensör sözlüğü). "
+            "TTT bu model için devre dışı; yalnızca çıkarım/değerlendirme çalışacak."
+        )
+        return base_model
+
     from peft import LoraConfig, get_peft_model
 
     hedef_moduller = LORA_HEDEF_MODULLERI[model_ailesi]

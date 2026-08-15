@@ -39,6 +39,13 @@ def _ttt_uygula(
     ttt_adim_sayisi: int,
     azami_token: int,
 ) -> None:
+    if not hasattr(lora_model, "peft_config"):
+        # LoRA uygulanamayan (ör. native RWKV .pth) modellerde TTT atlanır
+        # -- peft olmadan tüm 7B+ parametreyi yanlışlıkla tam ince ayara
+        # sokmaktansa (bellek patlaması + amaç dışı), açıkça devre dışı
+        # bırakılır; lora_adaptoru_kur() zaten bunun uyarısını basmıştı.
+        return
+
     if varsayilan_lora_agirliklari is not None:
         from peft import set_peft_model_state_dict
         set_peft_model_state_dict(lora_model, varsayilan_lora_agirliklari.copy(), adapter_name="default")
