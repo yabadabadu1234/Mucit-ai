@@ -1,24 +1,51 @@
 import argparse
 import time
-from typing import Any, Dict
+from typing import Any, Dict, List, Optional, Tuple
 
 from arc import make_submission, read_tasks_from_single_file
 from coz_yurutucu import gorevi_coz
+from model_yapilandirmalari import MODEL_ONCELIK_SIRASI
 from ttt_lora import lora_adaptoru_kur, temel_model_yukle, tokenizer_yukle
 
 TEST_CHALLENGES_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json"
 
 
+def ana_model_ile_dene_yedekle(oncelik_sirasi: List[str] = MODEL_ONCELIK_SIRASI) -> Tuple[str, Any, Any]:
+    """oncelik_sirasi[0] ANA modeldir; yuklemesi basarisiz olursa (dosya
+    eksik/bozuk, OOM, mimari desteklenmiyor vb.) sirayla sonraki yedek
+    modele duser. Hicbiri yuklenemezse son hatayi firlatir."""
+    son_hata: Optional[Exception] = None
+    for i, aday_aile in enumerate(oncelik_sirasi):
+        etiket = "ANA MODEL" if i == 0 else f"YEDEK MODEL #{i}"
+        print(f"[gonderim_uret] {etiket} deneniyor: '{aday_aile}' (yerel dosya, internet KAPALI)...")
+        try:
+            base_model = temel_model_yukle(aday_aile)
+            tokenizer = tokenizer_yukle(aday_aile)
+            print(f"[gonderim_uret] '{aday_aile}' başarıyla yüklendi, bu model kullanılacak.")
+            return aday_aile, base_model, tokenizer
+        except Exception as exc:
+            print(f"[gonderim_uret] '{aday_aile}' yüklenemedi: {exc}")
+            son_hata = exc
+    raise RuntimeError(
+        f"Öncelik sırasındaki hiçbir model yüklenemedi ({oncelik_sirasi}). Son hata: {son_hata}"
+    )
+
+
 def submission_uret(
-    model_ailesi: str,
+    model_ailesi: Optional[str] = None,
+    oncelik_sirasi: List[str] = MODEL_ONCELIK_SIRASI,
     cikti_yolu: str = "submission.json",
     cogaltma_n: int = 16,
     ttt_adim_sayisi: int = 20,
 ) -> Dict[str, Any]:
 
-    print(f"[gonderim_uret] '{model_ailesi}' ailesi icin yerel model yukleniyor (internet KAPALI)...")
-    base_model = temel_model_yukle(model_ailesi)
-    tokenizer = tokenizer_yukle(model_ailesi)
+    if model_ailesi is not None:
+        print(f"[gonderim_uret] '{model_ailesi}' ailesi icin yerel model yukleniyor (internet KAPALI)...")
+        base_model = temel_model_yukle(model_ailesi)
+        tokenizer = tokenizer_yukle(model_ailesi)
+    else:
+        model_ailesi, base_model, tokenizer = ana_model_ile_dene_yedekle(oncelik_sirasi)
+
     lora_model = lora_adaptoru_kur(base_model, model_ailesi)
 
     from peft import get_peft_model_state_dict
@@ -54,7 +81,10 @@ def submission_uret(
 
 def _cli() -> None:
     ayristirici = argparse.ArgumentParser(description="ARC-AGI 2026 TTT+LoRA+arac-cagirma gönderim üretici")
-    ayristirici.add_argument("--model_ailesi", type=str, default="rwkv", choices=["rwkv", "mamba", "falcon_mamba"])
+    ayristirici.add_argument(
+        "--model_ailesi", type=str, default=None, choices=["rwkv", "mamba", "falcon_mamba"],
+        help="Belirtilmezse MODEL_ONCELIK_SIRASI'na göre ana model denenir, başarısız olursa yedeğe düşer.",
+    )
     ayristirici.add_argument("--cikti", type=str, default="submission.json")
     ayristirici.add_argument("--cogaltma_n", type=int, default=16)
     ayristirici.add_argument("--ttt_adim_sayisi", type=int, default=20)

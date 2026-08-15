@@ -18,10 +18,15 @@ FALCON_MAMBA = "falcon_mamba"
 # Kaggle input dizinine yerel olarak eklenmis model klasorlerine isaret eder.
 # ==============================================================================
 YEREL_MODEL_YOLLARI: Dict[str, str] = {
-    RWKV: "/kaggle/input/rwkv7-g1/transformers/g1/1",
-    MAMBA: "/kaggle/input/mamba-codestral-7b-v0-1/transformers/default/1",
+    RWKV: "/kaggle/input/models/ulankaggle/rwkv-7/transformers/default/1/rwkv7-g1",
+    MAMBA: "/kaggle/input/models/ulankaggle/mistral-mamba-codestral-7b-v0-1/transformers/default/1/Mamba-Codestral-7B-v0.1",
     FALCON_MAMBA: "/kaggle/input/falcon-mamba-7b-instruct/transformers/default/1",
 }
+
+# Ana model / yedek model sirasi: gonderim_uret.py ana modeli yuklemeyi
+# dener, basarisiz olursa (dosya eksik/bozuk, OOM, mimari desteklenmiyor
+# vb.) otomatik olarak yedek modele duser.
+MODEL_ONCELIK_SIRASI: List[str] = [RWKV, MAMBA]
 
 # ==============================================================================
 # LoRA hedef modulleri (mimari basina)
