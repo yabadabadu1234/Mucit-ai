@@ -14,23 +14,49 @@ from model_yapilandirmalari import (
 )
 
 
+def _guven_kodu_gerekli_mi(hata: Exception) -> bool:
+    metin = str(hata).lower()
+    return "trust_remote_code" in metin or "does not recognize this architecture" in metin
+
+
 def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16) -> Any:
     """Model DAIMA yerel dosya yolundan yuklenir; internet erisimi kapali
-    oldugundan `local_files_only=True` her zaman zorunludur."""
+    oldugundan `local_files_only=True` her zaman zorunludur.
+
+    `trust_remote_code=True`, dinamik modul cozumlemesinde yerel yolu bile
+    once bir "repo_id" gibi regex ile dogrulamaya calisip cok-slash'li
+    yerel yollarda hataya dusebiliyor (huggingface_hub validate_repo_id).
+    Bu yuzden ONCE trust_remote_code=False ile denenir (mimari transformers
+    icinde yerlesikse -- RWKV ve Mamba genelde oyledir); yalnizca gercekten
+    ozel kod gerektiren bir hata alinirsa trust_remote_code=True ile tekrar
+    denenir."""
     from transformers import AutoModelForCausalLM
 
     yol = yerel_model_yolu(model_ailesi)
-    return AutoModelForCausalLM.from_pretrained(
-        yol, torch_dtype=veri_tipi, device_map="cuda", trust_remote_code=True,
-        local_files_only=True,
-    )
+    try:
+        return AutoModelForCausalLM.from_pretrained(
+            yol, torch_dtype=veri_tipi, device_map="cuda",
+            trust_remote_code=False, local_files_only=True,
+        )
+    except Exception as ilk_hata:
+        if not _guven_kodu_gerekli_mi(ilk_hata):
+            raise
+        return AutoModelForCausalLM.from_pretrained(
+            yol, torch_dtype=veri_tipi, device_map="cuda",
+            trust_remote_code=True, local_files_only=True,
+        )
 
 
 def tokenizer_yukle(model_ailesi: str) -> Any:
     from transformers import AutoTokenizer
 
     yol = yerel_model_yolu(model_ailesi)
-    tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=True, local_files_only=True)
+    try:
+        tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=False, local_files_only=True)
+    except Exception as ilk_hata:
+        if not _guven_kodu_gerekli_mi(ilk_hata):
+            raise
+        tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=True, local_files_only=True)
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     return tok
