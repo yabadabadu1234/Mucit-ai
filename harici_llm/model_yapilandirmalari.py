@@ -168,6 +168,13 @@ def model_ailesini_belirle(model_id_veya_yol: str) -> str:
     raise ValueError(f"Bilinmeyen model ailesi: {model_id_veya_yol}")
 
 
+_ORTAM_DEGISKENI_ADLARI = {
+    RWKV: "MUCIT_RWKV_YOLU",
+    MAMBA: "MUCIT_MAMBA_YOLU",
+    FALCON_MAMBA: "MUCIT_FALCON_MAMBA_YOLU",
+}
+
+
 def yerel_model_yolu(model_ailesi: str, dogrula: bool = True) -> str:
     if model_ailesi not in YEREL_MODEL_YOLLARI:
         raise ValueError(
@@ -175,7 +182,17 @@ def yerel_model_yolu(model_ailesi: str, dogrula: bool = True) -> str:
             f"Internet erisimi kapali oldugundan model indirilemez; "
             f"YEREL_MODEL_YOLLARI sozlugune gercek Kaggle yolunu ekleyin."
         )
-    yol = YEREL_MODEL_YOLLARI[model_ailesi]
+
+    # model_indir.py ile internet-acik ilk calistirmada indirilen modeller,
+    # ikinci (internet-kapali) calistirmada Kaggle'in verdigi GERCEK input
+    # yoluna monte edilir -- bu yol onceden bilinemez. Ortam degiskeni
+    # (MUCIT_RWKV_YOLU / MUCIT_MAMBA_YOLU / MUCIT_FALCON_MAMBA_YOLU) verilirse
+    # sabit YEREL_MODEL_YOLLARI sozlugune HIC bakilmadan o kullanilir.
+    ortam_degiskeni = _ORTAM_DEGISKENI_ADLARI.get(model_ailesi)
+    if ortam_degiskeni and os.environ.get(ortam_degiskeni):
+        yol = os.environ[ortam_degiskeni]
+    else:
+        yol = YEREL_MODEL_YOLLARI[model_ailesi]
 
     if dogrula and not os.path.isdir(yol):
         # transformers, os.path.isdir() False donerse yolu bir "repo_id"
