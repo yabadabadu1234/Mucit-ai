@@ -98,6 +98,29 @@ def mamba_indir(hedef_kok: str = VARSAYILAN_INDIRME_KOKU) -> str:
     return hedef_dizin
 
 
+PAKET_HEDEF_KOK = "/kaggle/working/paketler"
+
+# `rwkv` PyPI'de gercekten var (BlinkDL yayinliyor) -- offline calistirmada
+# `pip install rwkv` internete erisemedigi icin basarisiz olur. Cozum: bu
+# INTERNET-ACIK betikte wheel'i (ve tum bagimliliklarini) KURMADAN, sadece
+# indirip diske kaydediyoruz; offline calistirmada `pip install --no-index`
+# ile yerel klasordan kuruluyor.
+PAKET_ADLARI = ["rwkv", "tokenizers", "ninja"]
+
+
+def paketleri_indir(hedef_kok: str = PAKET_HEDEF_KOK, paketler: List[str] = PAKET_ADLARI) -> str:
+    import subprocess
+    import sys
+
+    os.makedirs(hedef_kok, exist_ok=True)
+    print(f"[model_indir] === pip paketleri indiriliyor (KURULMUYOR, sadece indiriliyor) -> {hedef_kok} ===")
+    komut = [sys.executable, "-m", "pip", "download", "-d", hedef_kok] + paketler
+    print(f"[model_indir] çalıştırılıyor: {' '.join(komut)}")
+    subprocess.run(komut, check=True)
+    print(f"[model_indir] paketler indirildi: {hedef_kok}")
+    return hedef_kok
+
+
 def hepsini_indir(
     rwkv_boyutu: str = RWKV_ANA_BOYUT, hedef_kok: str = VARSAYILAN_INDIRME_KOKU
 ) -> None:
@@ -107,14 +130,21 @@ def hepsini_indir(
     print("\n[model_indir] ================= YEDEK MODEL: Mamba-Codestral-7B-v0.1 =================")
     mamba_yolu = mamba_indir(hedef_kok=hedef_kok)
 
+    print("\n[model_indir] ================= PIP PAKETLERİ (rwkv ve bağımlılıkları) =================")
+    paket_yolu = paketleri_indir()
+
     print("\n[model_indir] ================= TAMAMLANDI =================")
     print(f"[model_indir] RWKV yerel yolu : {rwkv_yolu}")
     print(f"[model_indir] Mamba yerel yolu: {mamba_yolu}")
+    print(f"[model_indir] pip paketleri   : {paket_yolu}")
     print(
-        "[model_indir] Bu klasör (\"/kaggle/working/modeller\") notebook bitince otomatik olarak "
-        "çıktı veri kümesi haline gelir. İkinci (internet KAPALI) çalıştırmada bu çıktıyı girdi "
-        "olarak ekleyip, Kaggle'ın verdiği gerçek input yolunu MUCIT_RWKV_YOLU / MUCIT_MAMBA_YOLU "
-        "ortam değişkenleriyle geçin (model_yapilandirmalari.py bunları otomatik okur)."
+        "[model_indir] Bu klasörler (\"/kaggle/working/modeller\" ve \"/kaggle/working/paketler\") "
+        "notebook bitince otomatik olarak çıktı veri kümesi haline gelir. İkinci (internet KAPALI) "
+        "çalıştırmada bu çıktıyı girdi olarak ekleyip:\n"
+        "  1) Kaggle'ın verdiği gerçek model yolunu MUCIT_RWKV_YOLU / MUCIT_MAMBA_YOLU ortam "
+        "değişkenleriyle geçin (model_yapilandirmalari.py bunları otomatik okur).\n"
+        "  2) `pip install --no-index --find-links=<paketler_yolu> rwkv` ile paketi TAMAMEN "
+        "internete dokunmadan kurun (notebook_giris.py'nin başına eklenmeli)."
     )
 
 
@@ -124,12 +154,14 @@ if __name__ == "__main__":
     ayristirici = argparse.ArgumentParser(description="RWKV-7 G1 (öncelikli) ve Mamba-Codestral (yedek) modellerini HF'den indir")
     ayristirici.add_argument("--rwkv_boyutu", type=str, default=RWKV_ANA_BOYUT, choices=sorted(RWKV_DOSYA_ADLARI))
     ayristirici.add_argument("--hedef_kok", type=str, default=VARSAYILAN_INDIRME_KOKU)
-    ayristirici.add_argument("--sadece", type=str, default=None, choices=["rwkv", "mamba"])
+    ayristirici.add_argument("--sadece", type=str, default=None, choices=["rwkv", "mamba", "paketler"])
     args = ayristirici.parse_args()
 
     if args.sadece == "rwkv":
         rwkv_indir(boyut=args.rwkv_boyutu, hedef_kok=args.hedef_kok)
     elif args.sadece == "mamba":
         mamba_indir(hedef_kok=args.hedef_kok)
+    elif args.sadece == "paketler":
+        paketleri_indir()
     else:
         hepsini_indir(rwkv_boyutu=args.rwkv_boyutu, hedef_kok=args.hedef_kok)

@@ -12,14 +12,36 @@ Internet KAPALI oldugundan iki model de yalnizca yukaridaki yerel Kaggle
 input yollarindan okunur, hicbir model indirilmez.
 """
 import os
+import subprocess
 import sys
 
 HARICI_LLM_KOKU = "/kaggle/working/Mucit-ai/harici_llm"
 if HARICI_LLM_KOKU not in sys.path:
     sys.path.insert(0, HARICI_LLM_KOKU)
 
-# arac-cagirma ve TTT icin gerekli paketler (internetsiz ortamda onceden
-# kurulu olmalari beklenir; Kaggle "Add-ons > Internet" KAPALI kalmalidir).
+# `rwkv` pip paketi PyPI'de var ama internet KAPALI oldugundan normal
+# `pip install rwkv` calismaz. model_indir.py'nin internet-acik
+# calistirmada `pip download` ile indirdigi wheel'leri, buradaki yerel
+# klasorden --no-index ile (aga hic dokunmadan) kuruyoruz. Klasor yolu,
+# ikinci calistirmada Kaggle'in verdigi gercek input yoluna gore
+# MUCIT_PAKETLER_YOLU ortam degiskeniyle degistirilebilir.
+PAKETLER_YOLU = os.environ.get(
+    "MUCIT_PAKETLER_YOLU",
+    "/kaggle/input/notebooks/ulankaggle/harici-llm/paketler",
+)
+if os.path.isdir(PAKETLER_YOLU):
+    print(f"[notebook_giris] pip paketleri yerel klasörden (internetsiz) kuruluyor: {PAKETLER_YOLU}")
+    subprocess.run(
+        [sys.executable, "-m", "pip", "install", "--no-index", "--find-links", PAKETLER_YOLU, "rwkv"],
+        check=True,
+    )
+else:
+    print(
+        f"[notebook_giris] UYARI: pip paket klasörü bulunamadı: {PAKETLER_YOLU}. "
+        f"'rwkv' zaten kurulu değilse RWKV yükleme başarısız olur (Mamba yedeğe düşülür). "
+        f"model_indir.py'yi internet açıkken çalıştırıp bu klasörü de girdi olarak eklediğinizden emin olun."
+    )
+
 import torch
 from gonderim_uret import submission_uret
 
