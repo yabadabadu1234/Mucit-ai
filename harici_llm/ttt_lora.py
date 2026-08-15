@@ -23,19 +23,32 @@ def _repo_id_dogrulama_hatasi_mi(hata: Exception) -> bool:
     return "repo id must be in the form" in str(hata).lower()
 
 
+def _hub_tarzi_hata_mi(hata: Exception) -> bool:
+    return _guven_kodu_gerekli_mi(hata) or _repo_id_dogrulama_hatasi_mi(hata)
+
+
 def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16) -> Any:
     """Model DAIMA yerel dosya yolundan yuklenir; internet erisimi kapali
-    oldugundan `local_files_only=True` her zaman zorunludur.
+    oldugundan `local_files_only=True` her zaman zorunludur. Ayrica
+    model_yapilandirmalari.py, bu modul import edilmeden ONCE
+    HF_HUB_OFFLINE / TRANSFORMERS_OFFLINE ortam degiskenlerini ayarlar --
+    huggingface_hub/transformers'in HER TURLU hub-tarzi cozumlemesi
+    (agdan dosya var mi sormasi dahil) boylece tamamen kapatilir.
 
-    Ucuncu bir kademe uyguluyor:
-      1) trust_remote_code=False (mimari transformers'a yerlesikse yeter)
-      2) yerlesik degilse: ozel_kod_kaydi ile Config/Model siniflarini
-         DOGRUDAN dosyadan importlib ile yukleyip Auto* kayit defterine
-         ekle, sonra YINE trust_remote_code=False ile dene -- artik hicbir
-         hub-tarzi dinamik modul cozumlemesi devreye girmez.
-      3) yalnizca 1 ve 2 de basarisiz olursa, son care olarak
-         trust_remote_code=True denenir (bazi transformers surumlerinde
-         yerel yol + repo_id dogrulama hatasi hic olusmayabilir)."""
+    Dort kademeli yukleme (her biri bir onceki basarisiz olursa devreye
+    girer):
+      1) AutoModelForCausalLM.from_pretrained(trust_remote_code=False)
+      2) ozel_kod_kaydi.ozel_kodu_manuel_kaydet: config.json'daki
+         auto_map'i okuyup Config/Model siniflarini DOGRUDAN .py
+         dosyasindan importlib ile yukleyip Auto*'ya kaydeder, sonra
+         YINE trust_remote_code=False ile from_pretrained dener.
+      3) ozel_kod_kaydi.dogrudan_yukle: from_pretrained'e HIC
+         dokunmadan -- config.json ve safetensors/bin agirlik
+         dosyalarini DOGRUDAN diskten okuyup modeli elle kurar. Bu,
+         huggingface_hub'in repo_id dogrulamasi dahil hicbir kod
+         yoluna girmeyen, en dip seviye yerel yukleme yoludur.
+      4) yalnizca ucu de basarisiz olursa, son care trust_remote_code=True.
+    """
     from transformers import AutoModelForCausalLM
 
     yol = yerel_model_yolu(model_ailesi)
@@ -46,10 +59,11 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
             trust_remote_code=False, local_files_only=True,
         )
     except Exception as ilk_hata:
-        if not _guven_kodu_gerekli_mi(ilk_hata):
+        if not _hub_tarzi_hata_mi(ilk_hata):
             raise
+        print(f"[ttt_lora] 1. kademe (from_pretrained) başarısız: {ilk_hata}")
 
-    from ozel_kod_kaydi import ozel_kodu_manuel_kaydet
+    from ozel_kod_kaydi import dogrudan_yukle, ozel_kodu_manuel_kaydet
 
     try:
         ozel_kodu_manuel_kaydet(yol)
@@ -58,10 +72,17 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
             trust_remote_code=False, local_files_only=True,
         )
     except Exception as ikinci_hata:
-        return AutoModelForCausalLM.from_pretrained(
-            yol, torch_dtype=veri_tipi, device_map="cuda",
-            trust_remote_code=True, local_files_only=True,
-        )
+        print(f"[ttt_lora] 2. kademe (manuel kayıt + from_pretrained) başarısız: {ikinci_hata}")
+
+    try:
+        return dogrudan_yukle(yol, veri_tipi=veri_tipi)
+    except Exception as ucuncu_hata:
+        print(f"[ttt_lora] 3. kademe (dogrudan_yukle) başarısız: {ucuncu_hata}")
+
+    return AutoModelForCausalLM.from_pretrained(
+        yol, torch_dtype=veri_tipi, device_map="cuda",
+        trust_remote_code=True, local_files_only=True,
+    )
 
 
 def tokenizer_yukle(model_ailesi: str) -> Any:
@@ -72,14 +93,16 @@ def tokenizer_yukle(model_ailesi: str) -> Any:
     try:
         tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=False, local_files_only=True)
     except Exception as ilk_hata:
-        if not _guven_kodu_gerekli_mi(ilk_hata):
+        if not _hub_tarzi_hata_mi(ilk_hata):
             raise
+        print(f"[ttt_lora] tokenizer 1. kademe başarısız: {ilk_hata}")
 
         from ozel_kod_kaydi import ozel_kodu_manuel_kaydet
         try:
             ozel_kodu_manuel_kaydet(yol)
             tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=False, local_files_only=True)
-        except Exception:
+        except Exception as ikinci_hata:
+            print(f"[ttt_lora] tokenizer 2. kademe başarısız: {ikinci_hata}")
             tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=True, local_files_only=True)
 
     if tok.pad_token is None:

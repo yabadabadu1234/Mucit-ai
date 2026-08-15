@@ -126,3 +126,95 @@ def ozel_kodu_manuel_kaydet(yol: str) -> Tuple[Optional[Type], Optional[Type]]:
                     pass
 
     return ConfigSinifi, ModelSinifi
+
+
+def _agirlik_dosyalarini_bul(yol: str) -> Tuple[str, list]:
+    """Sharded/tekil safetensors ya da .bin agirlik dosyalarini, hicbir
+    hub/index-cozumleme cagrisi yapmadan, DOGRUDAN dizin listelemesiyle
+    bulur. Doner: (bicim, [dosya_yollari])."""
+    dosyalar = set(os.listdir(yol))
+
+    if "model.safetensors.index.json" in dosyalar:
+        with open(os.path.join(yol, "model.safetensors.index.json"), "r", encoding="utf-8") as f:
+            index = json.load(f)
+        parcalar = sorted(set(index.get("weight_map", {}).values()))
+        return "safetensors", [os.path.join(yol, p) for p in parcalar]
+
+    if "model.safetensors" in dosyalar:
+        return "safetensors", [os.path.join(yol, "model.safetensors")]
+
+    if "pytorch_model.bin.index.json" in dosyalar:
+        with open(os.path.join(yol, "pytorch_model.bin.index.json"), "r", encoding="utf-8") as f:
+            index = json.load(f)
+        parcalar = sorted(set(index.get("weight_map", {}).values()))
+        return "bin", [os.path.join(yol, p) for p in parcalar]
+
+    if "pytorch_model.bin" in dosyalar:
+        return "bin", [os.path.join(yol, "pytorch_model.bin")]
+
+    raise FileNotFoundError(
+        f"'{yol}' içinde model.safetensors(.index.json) ya da pytorch_model.bin(.index.json) "
+        f"bulunamadı. Dizindeki dosyalar: {sorted(dosyalar)}"
+    )
+
+
+def dogrudan_yukle(yol: str, veri_tipi: Any = None) -> Any:
+    """`AutoModelForCausalLM.from_pretrained` HİÇ çağrılmadan, config.json
+    ve ağırlık dosyaları DOĞRUDAN diskten okunup model bu şekilde kurulur.
+    huggingface_hub'ın repo_id doğrulaması dahil hiçbir kod yolu devreye
+    girmez -- bu, "internet aramasını ve huggingface'i tamamen iptal et"
+    talebinin harfiyen karşılandığı, en dip seviye yükleme yoludur."""
+    import torch
+
+    config_verisi = _config_oku(yol)
+    auto_map = config_verisi.get("auto_map", {})
+
+    ConfigSinifi: Optional[Type] = None
+    config_referansi = auto_map.get("AutoConfig")
+    if config_referansi:
+        ConfigSinifi = _dosyadan_sinif_yukle(yol, config_referansi)
+
+    ModelSinifi: Optional[Type] = None
+    model_referansi = auto_map.get("AutoModelForCausalLM") or auto_map.get("AutoModel")
+    if model_referansi:
+        ModelSinifi = _dosyadan_sinif_yukle(yol, model_referansi)
+
+    if ConfigSinifi is None or ModelSinifi is None:
+        # ozel kod yoksa (auto_map bos), transformers'in kendi yerlesik
+        # sinifini model_type uzerinden CONFIG_MAPPING/MODEL_MAPPING'den
+        # hub'a hic dokunmadan bulur.
+        from transformers.models.auto.configuration_auto import CONFIG_MAPPING
+        from transformers.models.auto.modeling_auto import MODEL_FOR_CAUSAL_LM_MAPPING
+
+        model_turu = config_verisi.get("model_type")
+        if ConfigSinifi is None:
+            ConfigSinifi = CONFIG_MAPPING[model_turu]
+        if ModelSinifi is None:
+            ModelSinifi = MODEL_FOR_CAUSAL_LM_MAPPING[type(ConfigSinifi())]
+
+    config = ConfigSinifi(**config_verisi)
+
+    model = ModelSinifi(config)
+
+    bicim, agirlik_dosyalari = _agirlik_dosyalarini_bul(yol)
+    tam_state_dict: Dict[str, Any] = {}
+    if bicim == "safetensors":
+        from safetensors.torch import load_file
+        for dosya in agirlik_dosyalari:
+            tam_state_dict.update(load_file(dosya))
+    else:
+        for dosya in agirlik_dosyalari:
+            tam_state_dict.update(torch.load(dosya, map_location="cpu"))
+
+    eksik, fazla = model.load_state_dict(tam_state_dict, strict=False)
+    if eksik:
+        print(f"[ozel_kod_kaydi] Uyarı: state_dict'te eksik {len(eksik)} anahtar (ör. {eksik[:3]})")
+    if fazla:
+        print(f"[ozel_kod_kaydi] Uyarı: state_dict'te fazla {len(fazla)} anahtar (ör. {fazla[:3]})")
+
+    if veri_tipi is not None:
+        model = model.to(veri_tipi)
+    if torch.cuda.is_available():
+        model = model.to("cuda")
+
+    return model

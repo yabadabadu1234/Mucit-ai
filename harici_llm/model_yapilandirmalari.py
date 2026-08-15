@@ -7,7 +7,20 @@ tasindi. Yeni bir model eklendiginde yalnizca bu dosyaya yeni bir giris
 eklemek yeterli; ttt_lora.py, arc_loader.py, coz_yurutucu.py hepsi buradan
 okur.
 """
+import os
 from typing import Any, Dict, List, Optional
+
+# Internet erisimi TAMAMEN kapatilir: huggingface_hub/transformers'in HER
+# TURLU hub-tarzi cozumlemesi (repo_id dogrulamasi, "dosya var mi" agdan
+# sorma, vb.) bu ortam degiskenleriyle devre disi birakilir. Bu dosya,
+# harici_llm'deki diger her modulden ONCE import edildigi icin (ttt_lora.py
+# dahil hepsi buradan okur) burada set edilmesi transformers ilk kez
+# import edilmeden once devreye girer.
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
+os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
+os.environ.setdefault("HF_DATASETS_OFFLINE", "1")
+os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
+os.environ.setdefault("HF_HUB_DISABLE_IMPLICIT_TOKEN", "1")
 
 RWKV = "rwkv"
 MAMBA = "mamba"
@@ -155,11 +168,31 @@ def model_ailesini_belirle(model_id_veya_yol: str) -> str:
     raise ValueError(f"Bilinmeyen model ailesi: {model_id_veya_yol}")
 
 
-def yerel_model_yolu(model_ailesi: str) -> str:
+def yerel_model_yolu(model_ailesi: str, dogrula: bool = True) -> str:
     if model_ailesi not in YEREL_MODEL_YOLLARI:
         raise ValueError(
             f"'{model_ailesi}' icin yerel model yolu tanimli degil. "
             f"Internet erisimi kapali oldugundan model indirilemez; "
             f"YEREL_MODEL_YOLLARI sozlugune gercek Kaggle yolunu ekleyin."
         )
-    return YEREL_MODEL_YOLLARI[model_ailesi]
+    yol = YEREL_MODEL_YOLLARI[model_ailesi]
+
+    if dogrula and not os.path.isdir(yol):
+        # transformers, os.path.isdir() False donerse yolu bir "repo_id"
+        # sanip anlasilmaz "Repo id must be in the form..." hatasi
+        # firlatiyor. Burada erkenden, GERCEKTEN neyin nerede oldugunu
+        # gosteren acik bir teshis veriyoruz.
+        ebeveyn = os.path.dirname(yol.rstrip("/"))
+        try:
+            ebeveyn_icerigi = sorted(os.listdir(ebeveyn)) if os.path.isdir(ebeveyn) else None
+        except OSError as e:
+            ebeveyn_icerigi = [f"<listelenemedi: {e}>"]
+        raise FileNotFoundError(
+            f"'{model_ailesi}' modeli icin belirtilen yerel yol GERCEKTE diskte yok: '{yol}'. "
+            f"Ebeveyn dizin ('{ebeveyn}') icerigi: {ebeveyn_icerigi}. "
+            f"Kaggle dataset/model eki notebook'a doğru şekilde bağlanmamış olabilir; "
+            f"sağdaki 'Add Input' panelinden modelin gerçekten bu isimle eklendiğini "
+            f"ve tam yolunu (üstteki listeden) doğrulayın, YEREL_MODEL_YOLLARI'nı buna göre düzeltin."
+        )
+
+    return yol
