@@ -54,7 +54,8 @@ def _ttt_uygula(
 
     egitim_metinleri = [ornek["text"] for ornek in ds.as_list(formatter)]
     gorev_ozelinde_ince_ayar(
-        lora_model, tokenizer, egitim_metinleri, adim_sayisi=ttt_adim_sayisi, azami_token=azami_token
+        lora_model, tokenizer, egitim_metinleri, model_ailesi=model_ailesi,
+        adim_sayisi=ttt_adim_sayisi, azami_token=azami_token,
     )
 
 

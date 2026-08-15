@@ -21,7 +21,7 @@ import torch.nn as nn
 from arc import Example, Task
 from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut, submit_answer_arac
 from mcts_dallanma import arac_kelime_dagarcigi_olustur, inference_turbo_dfs
-from ttt_lora import gorev_ozelinde_ince_ayar
+from ttt_lora import _tamamlama_sadece_etiketleri_olustur, gorev_ozelinde_ince_ayar
 
 BASARISIZLIK_SAYACI = {"n": 0}
 
@@ -256,6 +256,88 @@ def test_7_uctan_uca_gorevi_coz() -> None:
     print(f"    -> gorevi_coz sonucu: {sonuc}")
 
 
+class _OfsetliSahteTokenizer:
+    """offset_mapping destekleyen bir hızlı tokenizer'ı taklit eder;
+    tamamlama-sadece (completion-only) maskeleme testinde kullanılır."""
+
+    def __call__(self, metin, return_tensors=None, truncation=True, max_length=4096, return_offsets_mapping=False):
+        idler = [(ord(c) % 30) + 2 for c in metin]
+        if return_offsets_mapping:
+            offsetler = [(i, i + 1) for i in range(len(metin))]
+            return {"input_ids": idler, "offset_mapping": offsetler}
+        return {"input_ids": idler}
+
+
+def test_8_tamamlama_sadece_maskeleme() -> None:
+    print("[test 8] arc_solver.py'nin QwenDataCollatorForCompletionOnlyLM'inin genel karşılığı: yalnız asistan/çıktı kısmından gradyan...")
+
+    tok = _OfsetliSahteTokenizer()
+    metin = "User: 12\n\nAssistant: 21\n\nUser: 34\n\nAssistant: 43\n\n"
+    kodlama = tok(metin, return_offsets_mapping=True)
+
+    etiketler = _tamamlama_sadece_etiketleri_olustur(tok, metin, "rwkv", kodlama["input_ids"], kodlama["offset_mapping"])
+
+    _dogrula(etiketler is not None, "tamamlama maskesi üretildi (None dönmedi)")
+
+    ilk_assistant_baslangic = metin.index("Assistant:") + len("Assistant:")
+    ilk_assistant_bitis = metin.index("\n\n", ilk_assistant_baslangic)
+    _dogrula(
+        all(e == -100 for e in etiketler[:ilk_assistant_baslangic]),
+        "ilk 'User:' bölümündeki TÜM tokenlar -100 ile maskelendi (bu kısımdan gradyan alınmıyor)",
+    )
+    _dogrula(
+        all(e != -100 for e in etiketler[ilk_assistant_baslangic:ilk_assistant_bitis]),
+        "ilk 'Assistant:' çıktı bölümündeki tokenlar MASKELENMEDİ (yalnızca buradan gradyan alınıyor)",
+    )
+
+    ikinci_assistant_baslangic = metin.index("Assistant:", ilk_assistant_bitis) + len("Assistant:")
+    _dogrula(
+        etiketler[ikinci_assistant_baslangic] != -100,
+        "İKİNCİ 'Assistant:' turu da (çok-turlu metin) doğru şekilde maskesiz bırakıldı",
+    )
+    print(f"    -> {sum(1 for e in etiketler if e == -100)}/{len(etiketler)} token maskelendi (yalnız kullanıcı/girdi kısmı).")
+
+
+def test_9_ne_olursa_olsun_kayit_garantisi() -> None:
+    print("[test 9] gonderim_uret._SonuCuKaydedici: hata/kesme/süre bitmesi FARK ETMEKSİZİN o ana kadarki sonuçlar kaydediliyor mu?...")
+
+    import json
+    import os
+    import tempfile
+
+    from gonderim_uret import _SonuCuKaydedici
+
+    sahte_gorevler = [
+        Task(test_example=Example(input=np.zeros((1, 1)), output=np.zeros((1, 1))), train_examples=[], name=f"gorev{i}-0")
+        for i in range(5)
+    ]
+
+    with tempfile.TemporaryDirectory() as gecici_dizin:
+        cikti_yolu = os.path.join(gecici_dizin, "submission.json")
+        kaydedici = _SonuCuKaydedici(sahte_gorevler, cikti_yolu)
+
+        kaydedici.ekle([[[1, 1]], [[1, 1]]])
+        kaydedici.ekle([[[2, 2]], [[2, 2]]])
+
+        try:
+            raise RuntimeError("simüle edilmiş çökme (3. görev sırasında)")
+        except RuntimeError:
+            pass
+        finally:
+            kaydedici._son_kayit()
+
+        _dogrula(os.path.isfile(cikti_yolu), "hata sonrası submission.json dosyası GERÇEKTEN diskte var")
+
+        with open(cikti_yolu, "r", encoding="utf-8") as f:
+            diskteki = json.load(f)
+
+        _dogrula(len(diskteki) == 5, f"tüm {len(sahte_gorevler)} görev submission şemasında yer alıyor (eksik kalanlar boş dolduruldu)")
+        _dogrula(diskteki["gorev0"][0]["attempt_1"] == [[1, 1]], "1. görevin GERÇEK sonucu (çökmeden önce üretilen) kayıtlı")
+        _dogrula(diskteki["gorev1"][0]["attempt_1"] == [[2, 2]], "2. görevin GERÇEK sonucu (çökmeden önce üretilen) kayıtlı")
+        _dogrula(diskteki["gorev2"][0]["attempt_1"] == [[0, 0], [0, 0]], "hiç işlenmemiş 3. görev BOŞ yer tutucuyla dolduruldu, uydurma bir sonuç yazılmadı")
+        print(f"    -> diskteki submission.json: {list(diskteki.keys())}")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -264,6 +346,8 @@ def calistir() -> None:
     test_5_mcts_turbo_dfs_dallanma()
     test_6_kaide_kodu_yok_denetimi()
     test_7_uctan_uca_gorevi_coz()
+    test_8_tamamlama_sadece_maskeleme()
+    test_9_ne_olursa_olsun_kayit_garantisi()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

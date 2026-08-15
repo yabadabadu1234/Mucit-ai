@@ -112,13 +112,70 @@ def adaptoru_sifirla(lora_model: Any) -> None:
                 torch.nn.init.zeros_(parametre)
 
 
+_TAMAMLAMA_ISARETLERI = {
+    RWKV: ("Assistant:", "\n\n"),
+    "mamba": ("Output:\n", "\n\n"),
+    "falcon_mamba": ("Output:\n", "\n\n"),
+}
+
+
+def _tamamlama_araliklarini_bul(metin: str, baslangic_isareti: str, bitis_isareti: str) -> List[Any]:
+    araliklar = []
+    idx = 0
+    while True:
+        b = metin.find(baslangic_isareti, idx)
+        if b == -1:
+            break
+        b_icerik = b + len(baslangic_isareti)
+        e = metin.find(bitis_isareti, b_icerik)
+        e = e if e != -1 else len(metin)
+        araliklar.append((b_icerik, e))
+        idx = e
+    return araliklar
+
+
+def _tamamlama_sadece_etiketleri_olustur(
+    tokenizer: Any, metin: str, model_ailesi: str, input_ids: List[int], offsetler: Optional[List[Any]]
+) -> Optional[List[int]]:
+    """arc_solver.py'deki QwenDataCollatorForCompletionOnlyLM'in genel
+    hali: USER_TOKEN_ID/ASSISTANT_TOKEN_ID gibi TEK bir tokenizer'a
+    (Qwen) sabitlenmis token ID'leri yerine, metindeki 'Assistant:'/
+    'Output:\\n' gibi donus isaretlerinin KARAKTER araliklarini bulup,
+    hizli tokenizer'in offset_mapping'i ile bu araliklarin disinda kalan
+    (yani kullanicinin/girdinin oldugu) tum tokenlari -100 ile maskeler.
+    Yalnizca modelin URETMESI gereken asistan/cikti kismindan gradyan
+    alinir. offset_mapping desteklenmeyen (yavas) bir tokenizer icin
+    None doner; cagiran taraf bu durumda tam-dizi kaybina duser."""
+    if offsetler is None:
+        return None
+
+    isaretler = _TAMAMLAMA_ISARETLERI.get(model_ailesi)
+    if isaretler is None:
+        return None
+
+    tamamlama_araliklari = _tamamlama_araliklarini_bul(metin, *isaretler)
+    if not tamamlama_araliklari:
+        return None
+
+    etiketler: List[int] = []
+    for i, (tok_b, tok_e) in enumerate(offsetler):
+        icinde_mi = any(a_b <= tok_b < a_e for a_b, a_e in tamamlama_araliklari)
+        etiketler.append(input_ids[i] if icinde_mi else -100)
+
+    if all(e == -100 for e in etiketler):
+        return None
+    return etiketler
+
+
 def gorev_ozelinde_ince_ayar(
     lora_model: Any,
     tokenizer: Any,
     egitim_metinleri: List[str],
+    model_ailesi: Optional[str] = None,
     ogrenme_orani: float = 2e-4,
     adim_sayisi: int = 20,
     azami_token: int = 1024,
+    tamamlama_sadece: bool = True,
 ) -> List[float]:
 
     if not egitim_metinleri:
@@ -134,11 +191,30 @@ def gorev_ozelinde_ince_ayar(
     n = len(egitim_metinleri)
     for adim in range(adim_sayisi):
         metin = egitim_metinleri[adim % n]
-        girdiler = tokenizer(
-            metin, return_tensors="pt", truncation=True, max_length=azami_token
-        ).to(cihaz)
 
-        ciktilar = lora_model(**girdiler, labels=girdiler["input_ids"])
+        etiketler_tensoru = None
+        if tamamlama_sadece and model_ailesi is not None:
+            try:
+                kodlama = tokenizer(
+                    metin, return_tensors=None, truncation=True, max_length=azami_token,
+                    return_offsets_mapping=True,
+                )
+                etiketler = _tamamlama_sadece_etiketleri_olustur(
+                    tokenizer, metin, model_ailesi, kodlama["input_ids"], kodlama.get("offset_mapping")
+                )
+                if etiketler is not None:
+                    girdiler = {"input_ids": torch.tensor([kodlama["input_ids"]], dtype=torch.long, device=cihaz)}
+                    etiketler_tensoru = torch.tensor([etiketler], dtype=torch.long, device=cihaz)
+            except TypeError:
+                pass  # tokenizer offset_mapping desteklemiyor -> tam-dizi kaybina duselim
+
+        if etiketler_tensoru is None:
+            girdiler = tokenizer(
+                metin, return_tensors="pt", truncation=True, max_length=azami_token
+            ).to(cihaz)
+            etiketler_tensoru = girdiler["input_ids"]
+
+        ciktilar = lora_model(**girdiler, labels=etiketler_tensoru)
         kayip = ciktilar.loss
 
         optimizer.zero_grad(set_to_none=True)
