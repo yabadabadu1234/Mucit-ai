@@ -1,0 +1,276 @@
+"""
+Uctan uca boru hatti testi.
+
+Onemli: bu dosya bulmacanin kaidesini COZMEZ ve kaide kodu icermez — kural
+kesfi daima gercek modelin (RWKV/Mamba/Falcon-Mamba, Kaggle'da) isidir.
+Burada sadece MEKANIZMANIN dogru calistigi kanitlanir: arac-cagirma
+ayiklama+yurutme, submit_answer'in satir/sutun tutarsizligini KENDIMIZ
+DUZELTMEDEN reddetmesi, gercek gradyan adimlariyla TTT, ve turbo_dfs MCTS
+dallanmasinin gercekten birden fazla aday uretmesi. Model olarak "bizim
+vasifsiz model de olabilir" talimati geregince kucuk, gercek (mock degil,
+gercekten forward/backward calisan) bir torch modeli kullanilir; bu model
+bulmacayi COZEMEYECEK kadar kucuktur ve bu beklenen bir durumdur.
+"""
+import sys
+from typing import Any, Dict, List, Optional
+
+import numpy as np
+import torch
+import torch.nn as nn
+
+from arc import Example, Task
+from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut, submit_answer_arac
+from mcts_dallanma import arac_kelime_dagarcigi_olustur, inference_turbo_dfs
+from ttt_lora import gorev_ozelinde_ince_ayar
+
+BASARISIZLIK_SAYACI = {"n": 0}
+
+
+def _dogrula(kosul: bool, mesaj: str) -> None:
+    if not kosul:
+        BASARISIZLIK_SAYACI["n"] += 1
+        print(f"  [BAŞARISIZ] {mesaj}")
+    else:
+        print(f"  [OK] {mesaj}")
+
+
+class VasifsizKucukDil(nn.Module):
+    """Gercekten forward/backward calisan, kucuk (vasifsiz) bir dil modeli
+    kaligi. Herhangi bir ARC kuralini bilmez / bilemez; sadece boru hattinin
+    mekanizmasini (TTT gradyan akisi, MCTS onbellek arayuzu) test etmek
+    icindir."""
+
+    def __init__(self, vocab_boyutu: int = 32, d: int = 16):
+        super().__init__()
+        self.gomulu = nn.Embedding(vocab_boyutu, d)
+        self.govde = nn.GRUCell(d, d)
+        self.baslik = nn.Linear(d, vocab_boyutu)
+        self.d = d
+
+    @property
+    def device(self):
+        return next(self.parameters()).device
+
+    def forward(self, input_ids: torch.Tensor, position_ids=None,
+                past_key_values=None, use_cache=True, return_dict=True, labels=None):
+        B, T = input_ids.shape
+        h = past_key_values if past_key_values is not None else torch.zeros(B, self.d, device=input_ids.device)
+        tum_logitler = []
+        for t in range(T):
+            x = self.gomulu(input_ids[:, t])
+            h = self.govde(x, h)
+            tum_logitler.append(self.baslik(h))
+        logits = torch.stack(tum_logitler, dim=1)
+
+        class _Cikti:
+            pass
+        cikti = _Cikti()
+        cikti.logits = logits
+        cikti.past_key_values = h
+        cikti.loss = None
+        if labels is not None:
+            kaydirilmis_logits = logits[:, :-1, :].reshape(-1, logits.shape[-1])
+            kaydirilmis_hedefler = labels[:, 1:].reshape(-1)
+            if kaydirilmis_hedefler.numel() > 0:
+                cikti.loss = torch.nn.functional.cross_entropy(kaydirilmis_logits, kaydirilmis_hedefler)
+            else:
+                cikti.loss = logits.sum() * 0.0
+        return cikti
+
+
+class _CihazaTasinabilirSozluk(dict):
+    def to(self, cihaz):
+        return _CihazaTasinabilirSozluk({k: v.to(cihaz) for k, v in self.items()})
+
+
+class BasitTokenizer:
+    """Karakter tabanli, gercek bir tokenizer'in minimal arayuzunu (encode,
+    __call__ (HF BatchEncoding gibi .to() destekler), pad_token_id,
+    eos_token_id) taklit eder."""
+
+    def __init__(self, vocab_boyutu: int = 32):
+        self.vocab_boyutu = vocab_boyutu
+        self.pad_token_id = 0
+        self.eos_token_id = 1
+
+    def encode(self, metin: str, add_special_tokens: bool = True) -> List[int]:
+        return [(ord(c) % (self.vocab_boyutu - 2)) + 2 for c in metin]
+
+    def __call__(self, metin: str, return_tensors: str = "pt", truncation: bool = True, max_length: int = 4096):
+        idler = self.encode(metin)[:max_length]
+        if not idler:
+            idler = [self.pad_token_id]
+        return _CihazaTasinabilirSozluk({"input_ids": torch.tensor([idler], dtype=torch.long)})
+
+    def decode(self, idler, skip_special_tokens: bool = True) -> str:
+        return "".join(chr(max(32, int(t))) for t in idler)
+
+
+def test_1_arac_cagrisi_ayiklama() -> None:
+    print("[test 1] Araç çağrısı ayıklama (iki RWKV şablon biçimi)...")
+
+    metin_a = '```json\n{"name": "submit_answer", "arguments": {"grid": [[1, 2], [3, 4]]}}\n```'
+    cagrilar_a = arac_cagrilarini_ayikla(metin_a)
+    _dogrula(len(cagrilar_a) == 1 and cagrilar_a[0]["name"] == "submit_answer", "```json fence biçimi ayıklandı")
+
+    metin_b = '<think></think\n<tool_call>\n{"name": "execute_python", "arguments": {"code": "sonuc = 1+1"}}\n</tool_call>'
+    cagrilar_b = arac_cagrilarini_ayikla(metin_b)
+    _dogrula(len(cagrilar_b) == 1 and cagrilar_b[0]["name"] == "execute_python", "<tool_call> etiket biçimi ayıklandı")
+
+
+def test_2_cevap_verme_araci_boyut_tutarliligi() -> None:
+    print("[test 2] submit_answer: tutarsız satır/sütun sayısı REDDEDİLMELİ, kendimiz düzeltmemeliyiz...")
+
+    defter = CevapDefteri()
+    tutarsiz_grid = [[1, 2, 3], [4, 5], [6, 7, 8]]
+    sonuc = submit_answer_arac(tutarsiz_grid, defter)
+
+    _dogrula(sonuc["basarili"] is False, "tutarsız ızgara reddedildi")
+    _dogrula(defter.kaydedilen_cevap is None, "reddedilen ızgara SESSİZCE düzeltilip kaydedilmedi")
+    _dogrula("satır 0: 3 sütun" in sonuc["hata"] and "satır 1: 2 sütun" in sonuc["hata"],
+              "hata mesajı hangi satırların kaç sütun olduğunu açıkça söylüyor")
+    print(f"    -> döndürülen hata: {sonuc['hata']}")
+
+    defter2 = CevapDefteri()
+    tutarli_grid_farkli_boyut = [[9, 9, 9, 9, 9], [8, 8, 8, 8, 8]]
+    sonuc2 = submit_answer_arac(tutarli_grid_farkli_boyut, defter2)
+    _dogrula(sonuc2["basarili"] is True, "kendi içinde tutarlı fakat train örneklerinden FARKLI boyutlu ızgara kabul edildi (boyut değişebilir)")
+    _dogrula(defter2.kaydedilen_cevap == tutarli_grid_farkli_boyut, "kaydedilen cevap AYNEN (yeniden boyutlandırılmadan) saklandı")
+
+
+def test_3_arac_cagrisini_yurutme_ve_hata_donen_akis() -> None:
+    print("[test 3] Ajan döngüsü: önce hatalı boyut dener, hatayı görür, sonra düzeltir...")
+
+    defter = CevapDefteri()
+
+    cagri_1 = {"name": "submit_answer", "arguments": {"grid": [[1, 1], [2]]}}
+    sonuc_1 = arac_cagrisini_yurut(cagri_1, defter)
+    _dogrula(not sonuc_1["basarili"], "1. deneme (tutarsız) reddedildi")
+    _dogrula(defter.kaydedilen_cevap is None, "1. denemeden sonra kayıtlı cevap hâlâ yok")
+
+    cagri_2 = {"name": "execute_python", "arguments": {"code": "sonuc = [x*2 for x in range(3)]"}}
+    sonuc_2 = arac_cagrisini_yurut(cagri_2, defter)
+    _dogrula(sonuc_2["basarili"] and sonuc_2["sonuc"] == [0, 2, 4], "execute_python aracı gerçekten çalıştı ve doğru sonucu döndü")
+
+    cagri_3 = {"name": "submit_answer", "arguments": {"grid": [[1, 1], [2, 2]]}}
+    sonuc_3 = arac_cagrisini_yurut(cagri_3, defter)
+    _dogrula(sonuc_3["basarili"], "2. deneme (tutarlı) kabul edildi")
+    _dogrula(defter.kaydedilen_cevap == [[1, 1], [2, 2]], "nihai cevap doğru kaydedildi")
+
+
+def test_4_gercek_ttt_gradyan_adimlari() -> None:
+    print("[test 4] Gerçek TTT gradyan adımları (vasıfsız küçük model üzerinde)...")
+
+    model = VasifsizKucukDil()
+    tokenizer = BasitTokenizer()
+
+    baslangic_agirlik = model.baslik.weight.detach().clone()
+
+    egitim_metinleri = [
+        "Task ID: test\n\nInput:\n12\n34\n\nOutput:\n21\n43",
+        "Task ID: test\n\nInput:\n56\n78\n\nOutput:\n65\n87",
+    ]
+    kayip_gecmisi = gorev_ozelinde_ince_ayar(model, tokenizer, egitim_metinleri, adim_sayisi=8, azami_token=64)
+
+    _dogrula(len(kayip_gecmisi) == 8, "8 gerçek eğitim adımı çalıştı")
+    _dogrula(not torch.allclose(baslangic_agirlik, model.baslik.weight), "ağırlıklar gerçekten güncellendi (gradyan aktı)")
+    print(f"    -> kayıp geçmişi: {[round(k, 4) for k in kayip_gecmisi]}")
+
+
+def test_5_mcts_turbo_dfs_dallanma() -> None:
+    print("[test 5] MCTS/turbo_dfs dallanma: verilen algoritma gerçekten çoklu aday üretiyor mu?...")
+
+    model = VasifsizKucukDil(vocab_boyutu=16, d=8)
+    tokenizer = BasitTokenizer(vocab_boyutu=16)
+    arac_vocab = arac_kelime_dagarcigi_olustur(tokenizer)
+
+    onek = tokenizer.encode("12")
+    sonuclar = inference_turbo_dfs(
+        model, "standart", arac_vocab,
+        prefix_tokens=[onek],
+        max_new_tokens=3,
+        max_score=8.0,
+        end_time=__import__("time").time() + 10,
+    )
+
+    _dogrula(len(sonuclar) >= 1, "turbo_dfs en az bir dal döndürdü")
+    toplam_dal = sum(len(beams) for _bid, beams in sonuclar)
+    _dogrula(toplam_dal >= 2, f"MCTS dallanması BİRDEN FAZLA aday ürettiği (gerçek dallanma): {toplam_dal} dal")
+    print(f"    -> {toplam_dal} dal üretildi (skorlu aday diziler).")
+
+
+def test_6_kaide_kodu_yok_denetimi() -> None:
+    print("[test 6] Kendi yazdığım kural/kaide kodu deposundan tamamen silindi mi?...")
+
+    import os
+    for dosya in os.listdir("."):
+        if not dosya.endswith(".py") or dosya == "test_boru_hatti.py":
+            continue
+        with open(dosya, "r", encoding="utf-8") as f:
+            icerik = f.read()
+        _dogrula(
+            "def transform(grid" not in icerik,
+            f"{dosya} içinde sabit-kodlanmış bir 'def transform(grid...' kural fonksiyonu YOK",
+        )
+
+
+def test_7_uctan_uca_gorevi_coz() -> None:
+    print("[test 7] coz_yurutucu.gorevi_coz(): gerçek Task + gerçek TTT + çok-turlu araç döngüsü birlikte...")
+
+    import coz_yurutucu
+
+    task = Task(
+        test_example=Example(input=np.array([[0, 0], [0, 0]]), output=np.array([[0, 0], [0, 0]])),
+        train_examples=[
+            Example(input=np.array([[1, 2], [3, 4]]), output=np.array([[4, 3], [2, 1]])),
+            Example(input=np.array([[5, 6], [7, 8]]), output=np.array([[8, 7], [6, 5]])),
+        ],
+        name="testgorev-0",
+    )
+
+    model = VasifsizKucukDil()
+    tokenizer = BasitTokenizer()
+
+    senaryo = [
+        '```json\n{"name": "execute_python", "arguments": {"code": "sonuc = 1"}}\n```',
+        '```json\n{"name": "submit_answer", "arguments": {"grid": [[1, 2, 3], [4]]}}\n```',
+        '```json\n{"name": "submit_answer", "arguments": {"grid": [[9, 9], [9, 9]]}}\n```',
+    ]
+    sayac = {"i": 0}
+
+    def sahte_uret_sohbet(lora_model, tok, model_ailesi, mesajlar, azami_yeni_token=900):
+        yanit = senaryo[min(sayac["i"], len(senaryo) - 1)]
+        sayac["i"] += 1
+        return yanit
+
+    coz_yurutucu.uret_sohbet = sahte_uret_sohbet
+
+    sonuc = coz_yurutucu.gorevi_coz(
+        model, tokenizer, "rwkv", task,
+        varsayilan_lora_agirliklari=None, cogaltma_n=2, ttt_adim_sayisi=2,
+        azami_token=256, azami_tur=4,
+    )
+
+    _dogrula("attempt_1" in sonuc and "attempt_2" in sonuc, "gorevi_coz submission şemasını (attempt_1/attempt_2) döndürdü")
+    _dogrula(sonuc["attempt_1"] == [[9, 9], [9, 9]], "tutarsız ilk deneme atlandı, tutarlı ikinci deneme kaydedildi")
+    print(f"    -> gorevi_coz sonucu: {sonuc}")
+
+
+def calistir() -> None:
+    test_1_arac_cagrisi_ayiklama()
+    test_2_cevap_verme_araci_boyut_tutarliligi()
+    test_3_arac_cagrisini_yurutme_ve_hata_donen_akis()
+    test_4_gercek_ttt_gradyan_adimlari()
+    test_5_mcts_turbo_dfs_dallanma()
+    test_6_kaide_kodu_yok_denetimi()
+    test_7_uctan_uca_gorevi_coz()
+
+    if BASARISIZLIK_SAYACI["n"] == 0:
+        print("\n[test] TÜMÜ BAŞARILI.")
+    else:
+        print(f"\n[test] {BASARISIZLIK_SAYACI['n']} DOĞRULAMA BAŞARISIZ.")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    calistir()

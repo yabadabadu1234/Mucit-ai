@@ -1,58 +1,45 @@
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 import torch
 
-MODEL_AILE_HEDEF_MODULLERI = {
-    "rwkv": ["key", "value", "receptance", "output", "gate"],
-    "mamba": ["in_proj", "out_proj", "x_proj", "dt_proj"],
-    "falcon_mamba": ["in_proj", "out_proj", "x_proj", "dt_proj"],
-}
-
-DESTEKLENEN_MODELLER = {
-    "BlinkDL/rwkv7-g1": "rwkv",
-    "mistralai/Mamba-Codestral-7B-v0.1": "mamba",
-    "tiiuae/falcon-mamba-7b-instruct": "falcon_mamba",
-}
-
-
-def model_ailesini_belirle(model_id: str) -> str:
-    if model_id in DESTEKLENEN_MODELLER:
-        return DESTEKLENEN_MODELLER[model_id]
-    kucuk = model_id.lower()
-    if "rwkv" in kucuk:
-        return "rwkv"
-    if "falcon" in kucuk and "mamba" in kucuk:
-        return "falcon_mamba"
-    if "mamba" in kucuk:
-        return "mamba"
-    raise ValueError(
-        f"Bilinmeyen model ailesi: {model_id}. Desteklenen: {sorted(DESTEKLENEN_MODELLER)} "
-        f"veya adında 'rwkv'/'mamba' geçen bir model_id."
-    )
+from model_yapilandirmalari import (
+    DECODING_ONERILERI,
+    LORA_HEDEF_MODULLERI,
+    RWKV,
+    asistan_donusu_sar,
+    kullanici_donusu_sar,
+    model_ailesini_belirle,
+    rwkv_fonksiyon_cagirma_sistem_promptu,
+    yerel_model_yolu,
+)
 
 
-def temel_model_yukle(model_id: str, cihaz: str = "cuda", veri_tipi: torch.dtype = torch.bfloat16) -> Any:
+def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16) -> Any:
+    """Model DAIMA yerel dosya yolundan yuklenir; internet erisimi kapali
+    oldugundan `local_files_only=True` her zaman zorunludur."""
     from transformers import AutoModelForCausalLM
 
+    yol = yerel_model_yolu(model_ailesi)
     return AutoModelForCausalLM.from_pretrained(
-        model_id, torch_dtype=veri_tipi, device_map=cihaz, trust_remote_code=True
+        yol, torch_dtype=veri_tipi, device_map="cuda", trust_remote_code=True,
+        local_files_only=True,
     )
 
 
-def tokenizer_yukle(model_id: str) -> Any:
+def tokenizer_yukle(model_ailesi: str) -> Any:
     from transformers import AutoTokenizer
 
-    tok = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
+    yol = yerel_model_yolu(model_ailesi)
+    tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=True, local_files_only=True)
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     return tok
 
 
-def lora_adaptoru_kur(base_model: Any, model_id: str, r: int = 8, alpha: int = 16, dropout: float = 0.05) -> Any:
+def lora_adaptoru_kur(base_model: Any, model_ailesi: str, r: int = 8, alpha: int = 16, dropout: float = 0.05) -> Any:
     from peft import LoraConfig, get_peft_model
 
-    aile = model_ailesini_belirle(model_id)
-    hedef_moduller = MODEL_AILE_HEDEF_MODULLERI[aile]
+    hedef_moduller = LORA_HEDEF_MODULLERI[model_ailesi]
 
     peft_config = LoraConfig(
         r=r,
@@ -116,37 +103,58 @@ def gorev_ozelinde_ince_ayar(
     return kayip_gecmisi
 
 
-def uret(
+def _rwkv_mesajlari_metne_sar(mesajlar: List[Dict[str, str]]) -> str:
+    parcalar = []
+    for mesaj in mesajlar:
+        rol, icerik = mesaj["role"], mesaj["content"]
+        if rol == "system":
+            parcalar.append(icerik if icerik.startswith("System:") else f"System: {icerik}")
+        elif rol == "user" or rol == "tool":
+            parcalar.append(kullanici_donusu_sar(icerik, RWKV))
+        elif rol == "assistant":
+            parcalar.append(asistan_donusu_sar(icerik, RWKV))
+    return "".join(parcalar)
+
+
+def mesajlari_metne_donustur(tokenizer: Any, model_ailesi: str, mesajlar: List[Dict[str, str]]) -> str:
+    if model_ailesi == RWKV:
+        return _rwkv_mesajlari_metne_sar(mesajlar)
+    if hasattr(tokenizer, "apply_chat_template"):
+        return tokenizer.apply_chat_template(mesajlar, tokenize=False, add_generation_prompt=True)
+    return "\n".join(f"{m['role']}: {m['content']}" for m in mesajlar) + "\nassistant:"
+
+
+def uret_sohbet(
     lora_model: Any,
     tokenizer: Any,
-    sistem_promptu: str,
-    kullanici_promptu: str,
+    model_ailesi: str,
+    mesajlar: List[Dict[str, str]],
     azami_yeni_token: int = 768,
-    sicaklik: float = 0.7,
-    ornekleme: bool = True,
+    preset: str = "fonksiyon_cagirma",
 ) -> str:
     cihaz = next(lora_model.parameters()).device
+    ayar = DECODING_ONERILERI[model_ailesi][preset]
 
-    if hasattr(tokenizer, "apply_chat_template"):
-        mesajlar = [
-            {"role": "system", "content": sistem_promptu},
-            {"role": "user", "content": kullanici_promptu},
-        ]
-        girdi_metni = tokenizer.apply_chat_template(mesajlar, tokenize=False, add_generation_prompt=True)
-    else:
-        girdi_metni = f"{sistem_promptu}\n\n{kullanici_promptu}\n\nAssistant:"
-
+    girdi_metni = mesajlari_metne_donustur(tokenizer, model_ailesi, mesajlar)
     girdiler = tokenizer(girdi_metni, return_tensors="pt").to(cihaz)
 
+    ornekleme = ayar["temp"] > 0.0
+
     with torch.no_grad():
-        cikti_idler = lora_model.generate(
+        uretim_kwargs: Dict[str, Any] = dict(
             **girdiler,
             max_new_tokens=azami_yeni_token,
             do_sample=ornekleme,
-            temperature=sicaklik if ornekleme else None,
-            top_p=0.9 if ornekleme else None,
             pad_token_id=tokenizer.pad_token_id,
         )
+        if ornekleme:
+            uretim_kwargs["temperature"] = ayar["temp"]
+            if ayar.get("top_p", 0.0) > 0.0:
+                uretim_kwargs["top_p"] = ayar["top_p"]
+        if ayar.get("alpha_presence"):
+            uretim_kwargs["repetition_penalty"] = 1.0 + ayar["alpha_presence"] / 10.0
+
+        cikti_idler = lora_model.generate(**uretim_kwargs)
 
     uretilen = cikti_idler[0][girdiler["input_ids"].shape[1]:]
     return tokenizer.decode(uretilen, skip_special_tokens=True)

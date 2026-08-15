@@ -1,15 +1,21 @@
-from typing import Any, Dict, List, Optional
+from typing import List
 
-from arc_veri import Cift, Grid, izgarayi_metne_cevir
+from arc import Example, Task
+from arc_loader import convert_grid_to_string
+from araclar import tool_tanimlari_json_metni
 
-SISTEM_PROMPTU = """You are an ARC-AGI puzzle-solving agent. You are given a small number of
+SISTEM_PROMPTU_SABLONU = """You are an ARC-AGI puzzle-solving agent. You are given a small number of
 input/output grid pairs (train examples) that all share one hidden transformation rule, and a
 new test input grid. Your job is to discover that rule and apply it.
+
+Tools:
+{tool_tanimlari}
+Return only a JSON function call, exactly as shown in the examples below.
 
 STRICT OPERATING PROCEDURE — follow every step, in order, every time:
 
 1. STATE THE RULE AS A NATURAL-LANGUAGE ALGORITHM SENTENCE.
-   Before writing any code, you must reason step by step through the train examples and then
+   Before calling any tool, you must reason step by step through the train examples and then
    state the discovered rule as ONE complete, precise sentence that reads like an algorithm
    description — specific enough that another person could re-implement it without seeing the
    grids. Do not stop at a vague description ("it repeats a pattern"); state exact conditions,
@@ -64,43 +70,54 @@ STRICT OPERATING PROCEDURE — follow every step, in order, every time:
    concrete evidence in the train examples, every collision or edge case resolved with an
    explicit priority/tie-break rule, and the whole thing collapsed into one final sentence.
 
-2. ALWAYS WORK BY WRITING AND RUNNING CODE. NEVER "SOLVE" THE PUZZLE BY THINKING OUT LOUD ALONE.
-   After stating the rule sentence, you must implement it as a single executable Python function
-   with this exact signature:
+2. ALWAYS WORK BY CALLING TOOLS. NEVER "SOLVE" THE PUZZLE BY THINKING OUT LOUD ALONE.
+   After stating the rule sentence, use the `execute_python` tool as many times as you need to
+   write and test code that implements your rule against the train examples (you may call it
+   multiple times to iterate). When you are confident, call `submit_answer` with the final grid
+   for the current test input. `submit_answer` is the ONLY way to register your final answer —
+   text output alone is never scored.
 
-   ```python
-   def transform(grid: list[list[int]]) -> list[list[int]]:
-       ...
-   ```
+   You are never restricted from using either tool: `execute_python` and `submit_answer` are
+   always both available to you, in every turn, for every puzzle.
 
-   The function must be completely self-contained (only using the Python standard library),
-   deterministic, and must implement exactly the rule you stated in step 1 — not a special case
-   memorized from the train examples. Put it in a single fenced ```python code block. Do not
-   describe what the code does in prose instead of writing it; do not output pseudocode; do not
-   skip writing the function under any circumstance. Verbal-only reasoning without code is an
-   incomplete answer and will be rejected.
+3. GRID SHAPE DISCIPLINE.
+   The grid you pass to `submit_answer` must be rectangular: every row must have the same number
+   of columns as every other row IN THAT GRID. The overall shape (rows x columns) is free to be
+   anything and may differ from every train example's shape — only internal consistency is
+   required. If `submit_answer` returns an error about inconsistent row lengths, that error is
+   telling you your own code or reasoning produced a malformed grid; go back, find the actual bug
+   in your rule or code, and submit again — never patch the shape by truncating or padding rows
+   to force them equal, since that discards information about what your rule actually computed.
 
-3. OUTPUT FORMAT.
-   Your reply must contain, in order: the "Final Rule Sentence" line, then exactly one fenced
-   ```python block containing the `transform` function and nothing else executable. Do not print
-   or return the grids yourself — the code will be executed against the real grids by an external
-   Python interpreter, not by you.
+Example function call format:
+
+User: Translate "Will it rain tomorrow?" into Japanese.
+
+Assistant: ```json
+{{"name": "translate_text", "arguments": {{"text": "Will it rain tomorrow?", "target_language": "Japanese"}}}}
+```
 """
+
+
+def sistem_promptu_olustur() -> str:
+    return SISTEM_PROMPTU_SABLONU.format(tool_tanimlari=tool_tanimlari_json_metni())
+
 
 _ORNEK_1AE2FEB7_ID = "1ae2feb7"
 
 
-def _grid_bloklarini_olustur(ciftler: List[Cift]) -> str:
+def _grid_bloklarini_olustur(train_examples: List[Example]) -> str:
     parcalar = []
-    for i, (girdi, cikti) in enumerate(ciftler, start=1):
+    for i, ornek in enumerate(train_examples, start=1):
         parcalar.append(
-            f"Train example {i} — input:\n{izgarayi_metne_cevir(girdi)}\n"
-            f"Train example {i} — output:\n{izgarayi_metne_cevir(cikti)}"
+            f"Train example {i} — input:\n{convert_grid_to_string(ornek.input)}\n"
+            f"Train example {i} — output:\n{convert_grid_to_string(ornek.output)}"
         )
     return "\n\n".join(parcalar)
 
 
-def gorev_kullanici_promptu_olustur(task_id: str, train_ciftleri: List[Cift], test_girdisi: Grid) -> str:
+def gorev_kullanici_promptu_olustur(task: Task) -> str:
+    task_id = task.name.split("-")[0] if task.name else ""
     on_ek = ""
     if task_id == _ORNEK_1AE2FEB7_ID:
         on_ek = (
@@ -112,22 +129,15 @@ def gorev_kullanici_promptu_olustur(task_id: str, train_ciftleri: List[Cift], te
     return (
         f"{on_ek}"
         f"Task ID: {task_id}\n\n"
-        f"{_grid_bloklarini_olustur(train_ciftleri)}\n\n"
-        f"Test input:\n{izgarayi_metne_cevir(test_girdisi)}\n\n"
-        f"State your Final Rule Sentence, then write the `transform` function as instructed."
+        f"{_grid_bloklarini_olustur(task.train_examples)}\n\n"
+        f"Test input:\n{convert_grid_to_string(task.test_example.input)}\n\n"
+        f"State your Final Rule Sentence, then use the tools to verify and submit your answer."
     )
 
 
-def ttt_egitim_metni_olustur(task_id: str, girdi: Grid, cikti: Grid) -> str:
+def ttt_egitim_metni_olustur(task_id: str, ornek: Example) -> str:
     return (
         f"Task ID: {task_id}\n\n"
-        f"Input:\n{izgarayi_metne_cevir(girdi)}\n\n"
-        f"Output:\n{izgarayi_metne_cevir(cikti)}"
+        f"Input:\n{convert_grid_to_string(ornek.input)}\n\n"
+        f"Output:\n{convert_grid_to_string(ornek.output)}"
     )
-
-
-def tam_prompt_olustur(task_id: str, train_ciftleri: List[Cift], test_girdisi: Grid) -> Dict[str, str]:
-    return {
-        "system": SISTEM_PROMPTU,
-        "user": gorev_kullanici_promptu_olustur(task_id, train_ciftleri, test_girdisi),
-    }
