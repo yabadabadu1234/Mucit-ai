@@ -126,7 +126,9 @@ def submission_uret(
         lora_model = lora_adaptoru_kur(base_model, model_ailesi)
 
         varsayilan_lora_agirliklari = None
-        if hasattr(lora_model, "peft_config"):
+        if hasattr(lora_model, "durum_ayari"):
+            varsayilan_lora_agirliklari = lora_model.durum_anlik_goruntusu_al()
+        elif hasattr(lora_model, "peft_config"):
             from peft import get_peft_model_state_dict
 
             varsayilan_lora_agirliklari = get_peft_model_state_dict(lora_model, adapter_name="default")

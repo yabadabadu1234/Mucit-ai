@@ -75,7 +75,13 @@ class RWKVUyumluModel(torch.nn.Module):
         (native RWKV RNN state'i satirlar arasinda paylasilamaz), sonuclari
         yigin haline getirir. past_key_values burada aslinda per-satir
         RWKV state listesidir (isim, geri kalan koddaki genel 'onbellek'
-        kavramiyla uyumlu kalsin diye korunuyor)."""
+        kavramiyla uyumlu kalsin diye korunuyor).
+
+        HER T konumundaki logit toplanir (yalnizca sonuncusu degil) --
+        state-tuning'in ogrenilebilir baslangic durumu ile HEDEF cikti
+        dizisinin TUM pozisyonlarindan ogrenmesi icin sart; mcts_dallanma.
+        py'nin `outputs.logits[:, -1]` kullanimi da bu bicimle (B,T,V)
+        sorunsuz calisir."""
         B, T = input_ids.shape
         durumlar = list(past_key_values) if past_key_values is not None else [None] * B
 
@@ -83,11 +89,12 @@ class RWKVUyumluModel(torch.nn.Module):
         yeni_durumlar = []
         for b in range(B):
             durum = durumlar[b]
-            son_logits = None
+            satir_logitleri = []
             for t in range(T):
                 token = int(input_ids[b, t].item())
-                son_logits, durum = self._rwkv.forward([token], durum)
-            tum_logitler.append(torch.as_tensor(son_logits, device=self._cihaz).unsqueeze(0))
+                logit, durum = self._rwkv.forward([token], durum)
+                satir_logitleri.append(torch.as_tensor(logit, device=self._cihaz))
+            tum_logitler.append(torch.stack(satir_logitleri, dim=0))
             yeni_durumlar.append(durum)
 
         cikti = _RWKVCiktisi()
@@ -96,9 +103,10 @@ class RWKVUyumluModel(torch.nn.Module):
         cikti.state = yeni_durumlar
         cikti.loss = None
         if labels is not None:
+            kaydirilmis_logits = cikti.logits[:, :-1, :].reshape(-1, cikti.logits.shape[-1])
+            kaydirilmis_hedefler = labels[:, 1:].reshape(-1)
             cikti.loss = torch.nn.functional.cross_entropy(
-                cikti.logits.reshape(-1, cikti.logits.shape[-1]), labels.reshape(-1),
-                ignore_index=-100,
+                kaydirilmis_logits, kaydirilmis_hedefler, ignore_index=-100,
             )
         return cikti
 
@@ -106,11 +114,12 @@ class RWKVUyumluModel(torch.nn.Module):
     def generate(self, input_ids: torch.Tensor, max_new_tokens: int = 768,
                  do_sample: bool = True, temperature: Optional[float] = None,
                  top_p: Optional[float] = None, pad_token_id: Optional[int] = None,
+                 baslangic_durumu: Optional[List[torch.Tensor]] = None,
                  **_yoksayilan: Any) -> torch.Tensor:
         B, T = input_ids.shape
         assert B == 1, "native RWKV generate() şu an tek örnek (B=1) destekliyor"
 
-        durum = None
+        durum = [t.clone() for t in baslangic_durumu] if baslangic_durumu is not None else None
         son_logits = None
         for t in range(T):
             token = int(input_ids[0, t].item())

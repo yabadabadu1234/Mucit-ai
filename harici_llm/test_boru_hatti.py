@@ -338,6 +338,73 @@ def test_9_ne_olursa_olsun_kayit_garantisi() -> None:
         print(f"    -> diskteki submission.json: {list(diskteki.keys())}")
 
 
+class _SahteNativeRWKV:
+    """rwkv.model.RWKV'nin minimal, TÜREVLENEBİLİR bir taklidi: gerçek
+    forward([token], state) arayüzünü ve self.w ağırlık sözlüğünü taşır."""
+
+    def __init__(self, vocab: int = 60, d: int = 4):
+        self.vocab = vocab
+        self.d = d
+        self.emb = torch.nn.Parameter(torch.randn(vocab, d))
+        self.head = torch.nn.Parameter(torch.randn(d, vocab))
+        self.w = {"emb.weight": self.emb, "head.weight": self.head}
+
+    def forward(self, tokens, state):
+        durum = state if state is not None else [torch.zeros(self.d)]
+        x = self.emb[tokens[0]]
+        yeni_durum0 = 0.5 * durum[0] + 0.5 * x
+        logits = yeni_durum0 @ self.head
+        return logits, [yeni_durum0]
+
+
+class _RWKVStateTuningTokenizer:
+    def __call__(self, metin, return_tensors=None, truncation=True, max_length=64, return_offsets_mapping=False):
+        idler = [(ord(c) % 58) + 1 for c in metin][:max_length]
+        if return_tensors == "pt":
+            class _D(dict):
+                def to(self, cihaz):
+                    return self
+            return _D({"input_ids": torch.tensor([idler])})
+        return {"input_ids": idler}
+
+    def encode(self, metin, add_special_tokens=True):
+        return [(ord(c) % 58) + 1 for c in metin]
+
+
+def test_10_rwkv_state_tuning() -> None:
+    print("[test 10] RWKV state-tuning: LoRA'nın çalışmadığı native (.pth) yolda ağırlıklara dokunmadan öğrenilebilir başlangıç durumu...")
+
+    from rwkv_native import RWKVUyumluModel
+    from rwkv_state_tuning import RWKVDurumAyarlayici, state_egitimi_calisir_mi_dogrula
+    from ttt_lora import adaptoru_sifirla
+
+    native = _SahteNativeRWKV()
+    sarmali = RWKVUyumluModel(native, "cpu fp32")
+    durum_ayarlayici = RWKVDurumAyarlayici(sarmali)
+
+    state_egitimi_calisir_mi_dogrula(durum_ayarlayici)
+    print("    -> autograd doğrulaması geçti (state parametrelerinden gerçek gradyan akıyor).")
+
+    _dogrula(not native.emb.requires_grad and not native.head.requires_grad,
+              "taban (native) ağırlıklar requires_grad=False ile donduruldu")
+
+    egitilebilir = [p for p in durum_ayarlayici.parameters() if p.requires_grad]
+    _dogrula(len(egitilebilir) == len(list(durum_ayarlayici.durum_parametreleri)),
+              "optimizer'a giden eğitilebilir parametreler YALNIZCA state parametreleri (taban ağırlıklar değil)")
+
+    tok = _RWKVStateTuningTokenizer()
+    oncesi = durum_ayarlayici.durum_anlik_goruntusu_al()
+    gorev_ozelinde_ince_ayar(durum_ayarlayici, tok, ["abcabc", "xyzxyz"], adim_sayisi=5, azami_token=32)
+    sonrasi = durum_ayarlayici.durum_anlik_goruntusu_al()
+    _dogrula(any(not torch.allclose(a, b) for a, b in zip(oncesi, sonrasi)),
+              "state parametreleri gerçek gradyan adımlarıyla güncellendi")
+
+    adaptoru_sifirla(durum_ayarlayici)
+    sifirlanmis = durum_ayarlayici.durum_anlik_goruntusu_al()
+    _dogrula(all(torch.allclose(a, torch.zeros_like(a)) for a in sifirlanmis),
+              "adaptoru_sifirla() ile state başlangıç değerine (sıfır) geri döndü")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -348,6 +415,7 @@ def calistir() -> None:
     test_7_uctan_uca_gorevi_coz()
     test_8_tamamlama_sadece_maskeleme()
     test_9_ne_olursa_olsun_kayit_garantisi()
+    test_10_rwkv_state_tuning()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

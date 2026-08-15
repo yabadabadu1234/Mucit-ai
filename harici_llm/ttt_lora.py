@@ -131,16 +131,19 @@ def lora_adaptoru_kur(base_model: Any, model_ailesi: str, r: int = 8, alpha: int
         # `rwkv` pip paketinin agirliklari (self.w) standart nn.Linear
         # alt-moduller DEGIL, duz bir tensor sozlugu; peft.get_peft_model
         # target_modules eslesmesini nn.Module agac gezintisiyle yapar ve
-        # bu yapida CALISMAZ. Sessizce yanlis/eksik bir LoRA kurup
-        # kullaniciyi yaniltmaktansa, acikca atlayip modeli oldugu gibi
-        # donduruyoruz -- inference/degerlendirme calisir, TTT (gorev
-        # basina ince ayar) bu native yolda devre disi kalir.
+        # bu yapida CALISMAZ. Bunun yerine RWKV toplulugunun kendi PEFT
+        # yontemi olan STATE-TUNING kullanilir: agirliklara dokunmadan,
+        # yalnizca ogrenilebilir bir baslangic RNN durumu egitilir.
+        from rwkv_state_tuning import RWKVDurumAyarlayici, state_egitimi_calisir_mi_dogrula
+
+        durum_ayarlayici = RWKVDurumAyarlayici(base_model)
+        state_egitimi_calisir_mi_dogrula(durum_ayarlayici)
         print(
-            "[ttt_lora] UYARI: native RWKV (.pth) modelinde peft/LoRA uygulanamıyor "
-            "(ağırlıklar nn.Linear alt-modül değil, düz tensör sözlüğü). "
-            "TTT bu model için devre dışı; yalnızca çıkarım/değerlendirme çalışacak."
+            "[ttt_lora] native RWKV (.pth) için state-tuning devreye alındı "
+            f"({sum(p.numel() for p in durum_ayarlayici.durum_parametreleri)} öğrenilebilir "
+            f"state parametresi) — autograd doğrulaması geçti, TTT bu model için AKTİF."
         )
-        return base_model
+        return durum_ayarlayici
 
     from peft import LoraConfig, get_peft_model
 
@@ -158,6 +161,9 @@ def lora_adaptoru_kur(base_model: Any, model_ailesi: str, r: int = 8, alpha: int
 
 
 def adaptoru_sifirla(lora_model: Any) -> None:
+    if hasattr(lora_model, "durum_ayari"):
+        lora_model.sifirla()
+        return
     with torch.no_grad():
         for isim, parametre in lora_model.named_parameters():
             if "lora_A" in isim:
