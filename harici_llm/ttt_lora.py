@@ -19,20 +19,27 @@ def _guven_kodu_gerekli_mi(hata: Exception) -> bool:
     return "trust_remote_code" in metin or "does not recognize this architecture" in metin
 
 
+def _repo_id_dogrulama_hatasi_mi(hata: Exception) -> bool:
+    return "repo id must be in the form" in str(hata).lower()
+
+
 def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16) -> Any:
     """Model DAIMA yerel dosya yolundan yuklenir; internet erisimi kapali
     oldugundan `local_files_only=True` her zaman zorunludur.
 
-    `trust_remote_code=True`, dinamik modul cozumlemesinde yerel yolu bile
-    once bir "repo_id" gibi regex ile dogrulamaya calisip cok-slash'li
-    yerel yollarda hataya dusebiliyor (huggingface_hub validate_repo_id).
-    Bu yuzden ONCE trust_remote_code=False ile denenir (mimari transformers
-    icinde yerlesikse -- RWKV ve Mamba genelde oyledir); yalnizca gercekten
-    ozel kod gerektiren bir hata alinirsa trust_remote_code=True ile tekrar
-    denenir."""
+    Ucuncu bir kademe uyguluyor:
+      1) trust_remote_code=False (mimari transformers'a yerlesikse yeter)
+      2) yerlesik degilse: ozel_kod_kaydi ile Config/Model siniflarini
+         DOGRUDAN dosyadan importlib ile yukleyip Auto* kayit defterine
+         ekle, sonra YINE trust_remote_code=False ile dene -- artik hicbir
+         hub-tarzi dinamik modul cozumlemesi devreye girmez.
+      3) yalnizca 1 ve 2 de basarisiz olursa, son care olarak
+         trust_remote_code=True denenir (bazi transformers surumlerinde
+         yerel yol + repo_id dogrulama hatasi hic olusmayabilir)."""
     from transformers import AutoModelForCausalLM
 
     yol = yerel_model_yolu(model_ailesi)
+
     try:
         return AutoModelForCausalLM.from_pretrained(
             yol, torch_dtype=veri_tipi, device_map="cuda",
@@ -41,6 +48,16 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
     except Exception as ilk_hata:
         if not _guven_kodu_gerekli_mi(ilk_hata):
             raise
+
+    from ozel_kod_kaydi import ozel_kodu_manuel_kaydet
+
+    try:
+        ozel_kodu_manuel_kaydet(yol)
+        return AutoModelForCausalLM.from_pretrained(
+            yol, torch_dtype=veri_tipi, device_map="cuda",
+            trust_remote_code=False, local_files_only=True,
+        )
+    except Exception as ikinci_hata:
         return AutoModelForCausalLM.from_pretrained(
             yol, torch_dtype=veri_tipi, device_map="cuda",
             trust_remote_code=True, local_files_only=True,
@@ -51,12 +68,20 @@ def tokenizer_yukle(model_ailesi: str) -> Any:
     from transformers import AutoTokenizer
 
     yol = yerel_model_yolu(model_ailesi)
+
     try:
         tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=False, local_files_only=True)
     except Exception as ilk_hata:
         if not _guven_kodu_gerekli_mi(ilk_hata):
             raise
-        tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=True, local_files_only=True)
+
+        from ozel_kod_kaydi import ozel_kodu_manuel_kaydet
+        try:
+            ozel_kodu_manuel_kaydet(yol)
+            tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=False, local_files_only=True)
+        except Exception:
+            tok = AutoTokenizer.from_pretrained(yol, trust_remote_code=True, local_files_only=True)
+
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     return tok
