@@ -257,6 +257,7 @@ class E5_A_MevcutGizilDurum:
 @dataclass
 class E5_B_BellekGonderimi:
     M: torch.Tensor
+    S: Optional[torch.Tensor] = None
 
 @dataclass
 class E6_GizilSorgu:
@@ -805,14 +806,29 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         return D0.to(target_device), (Delta_0.to(target_device) if Delta_0 is not None else None)
 
 class Bellek_TopolojikDikkatYazici(nn.Module):
+    """N12 nöral uzun-dönemli bellek yazıcısı. Titans (arXiv:2501.00663)
+    sürpriz + momentum + unutma kuralını uygular:
+
+        S_t = eta_t * S_{t-1} - theta_t * grad_M L(M_{t-1}; x_t)
+        M_t = (1 - alpha_t) * M_{t-1} + S_t
+
+    L(M; x_t) = 0.5 * ||M - aday||^2 (bellek ile o anki kanıttan çıkan
+    "aday" arasındaki basit karesel farkı bir çağrışımsal yeniden-
+    yapılandırma kaybı olarak alıyoruz; kapalı-form gradyanı grad_M L =
+    M - aday, ekstra bir backward() çağrısı gerektirmeden hesaplanır).
+    eta (momentum sönümü), theta (anlık sürpriz öğrenme oranı) ve alpha
+    (unutma faktörü) üçü de girdiye duyarlı (data-dependent) ayrı
+    kapılarla üretilir -- eskiden tek bir g kapısı hem yazma hem unutmayı
+    aynı anda kontrol ediyordu, artık üçü ayrışmış durumda."""
+
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()
         self.config = config
         self.W_q = nn.Linear(config.d_v, config.d_m)
         self.W_k = nn.Linear(config.d_m, config.d_m)
         self.W_v = nn.Linear(config.d_q + config.d_a, config.d_m * config.K)
-        self.gate_net = nn.Sequential(
-            nn.Linear(config.d_v + config.d_q + config.d_a, config.d_m),
+        self.surpriz_kapisi_net = nn.Sequential(
+            nn.Linear(config.d_v + config.d_q + config.d_a, config.d_m * 3),
             nn.Sigmoid()
         )
 
@@ -853,12 +869,20 @@ class Bellek_TopolojikDikkatYazici(nn.Module):
 
         qa = torch.cat([sorgu.q_r, yeni_bilgi.a_r], dim=-1)
         V = self.W_v(qa).view(B, self.config.d_m, self.config.K)
+        aday = V * alpha
 
         x_qa = torch.cat([x_next_pooled, qa], dim=-1)
-        g = self.gate_net(x_qa).unsqueeze(-1)
+        eta, theta, alpha_unutma = self.surpriz_kapisi_net(x_qa).chunk(3, dim=-1)
+        eta = eta.unsqueeze(-1)
+        theta = theta.unsqueeze(-1)
+        alpha_unutma = alpha_unutma.unsqueeze(-1)
 
-        M_updated = (1.0 - g) * M_current + g * (V * alpha)
-        return E5_B_BellekGonderimi(M=M_updated)
+        S_onceki = mevcut_bellek.S if mevcut_bellek.S is not None else torch.zeros_like(M_current)
+        surpriz_gradyani = M_current - aday
+        S_guncel = eta * S_onceki - theta * surpriz_gradyani
+
+        M_updated = (1.0 - alpha_unutma) * M_current + S_guncel
+        return E5_B_BellekGonderimi(M=M_updated, S=S_guncel)
 
 class Bellek_BaglamYoneticisi(nn.Module):
     def __init__(self, config: Model_TopolojikKonfigurasyon):
