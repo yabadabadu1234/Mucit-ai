@@ -137,7 +137,23 @@ def lora_adaptoru_kur(base_model: Any, model_ailesi: str, r: int = 8, alpha: int
         from rwkv_state_tuning import RWKVDurumAyarlayici, state_egitimi_calisir_mi_dogrula
 
         durum_ayarlayici = RWKVDurumAyarlayici(base_model)
-        state_egitimi_calisir_mi_dogrula(durum_ayarlayici)
+        try:
+            state_egitimi_calisir_mi_dogrula(durum_ayarlayici)
+        except RuntimeError as autograd_hatasi:
+            # `rwkv` pip paketinin forward_one/forward_seq'i KENDI
+            # KAYNAĞINDA torch.no_grad() ile sarmalı (yalnızca çıkarım
+            # için yazılmış, gradyan akışına izin vermiyor) -- bu durumda
+            # state-tuning hiçbir zaman çalışamaz. TTT'siz devam etmek,
+            # tüm çalıştırmayı çökertmekten iyidir: çıkarım/MCTS dallanma
+            # etkilenmeden çalışır, yalnızca görev-başına ince ayar yok.
+            print(
+                "[ttt_lora] UYARI: state-tuning autograd doğrulaması başarısız "
+                f"({autograd_hatasi}). `rwkv` pip paketi bu strateji altında yalnızca "
+                "çıkarım içindir (forward'ları no_grad ile sarmalı). TTT bu model için "
+                "DEVRE DIŞI bırakılıyor; çıkarım/değerlendirme etkilenmeden çalışacak."
+            )
+            return base_model
+
         print(
             "[ttt_lora] native RWKV (.pth) için state-tuning devreye alındı "
             f"({sum(p.numel() for p in durum_ayarlayici.durum_parametreleri)} öğrenilebilir "

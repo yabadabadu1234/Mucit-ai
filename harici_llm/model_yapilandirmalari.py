@@ -22,6 +22,18 @@ os.environ.setdefault("HF_DATASETS_OFFLINE", "1")
 os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
 os.environ.setdefault("HF_HUB_DISABLE_IMPLICIT_TOKEN", "1")
 
+# `rwkv` pip paketinin KENDI kaynagi (rwkv/model.py) modul yuklenirken
+# `RWKV_V7_ON` ortam degiskenini kontrol edip, yalnizca '1' ise modul
+# sonunda `RWKV = RWKV_x070` atamasi yaparak RWKV-7'yi DOGRU tanıyan
+# sinifi devreye sokuyor (self.n_head/self.head_size'i
+# temp_z['blocks.0.att.r_k'].shape'ten dogru turetiyor). Bu degisken
+# `rwkv.model` ilk import edildiginde OKUNUYOR (modul-seviyesi kod, bir
+# kez calisir); bu yuzden en erken import edilen bu dosyada, herhangi
+# bir `from rwkv...` cagrisindan once ayarlanmasi sarttir. Ayarlanmazsa
+# paket sessizce ESKI (RWKV-7'yi TANIMAYAN v4/5/6) yukleyiciye duser ve
+# ilk forward() cagrisinda 'args has no attribute n_head' hatasi verir.
+os.environ.setdefault("RWKV_V7_ON", "1")
+
 RWKV = "rwkv"
 MAMBA = "mamba"
 FALCON_MAMBA = "falcon_mamba"

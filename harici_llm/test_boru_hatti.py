@@ -357,6 +357,16 @@ class _SahteNativeRWKV:
         return logits, [yeni_durum0]
 
 
+class _SahteNativeRWKVNoGrad(_SahteNativeRWKV):
+    """Gerçek `rwkv` pip paketinin forward_one/forward_seq'inin (rwkv==0.8.32
+    kaynağında doğrudan tespit edilen) `torch.no_grad()` sarmalını taklit
+    eder: state-tuning için gradyan akışı YAPISAL olarak imkansızdır."""
+
+    def forward(self, tokens, state):
+        with torch.no_grad():
+            return super().forward(tokens, state)
+
+
 class _RWKVStateTuningTokenizer:
     def __call__(self, metin, return_tensors=None, truncation=True, max_length=64, return_offsets_mapping=False):
         idler = [(ord(c) % 58) + 1 for c in metin][:max_length]
@@ -405,6 +415,23 @@ def test_10_rwkv_state_tuning() -> None:
               "adaptoru_sifirla() ile state başlangıç değerine (sıfır) geri döndü")
 
 
+def test_11_rwkv_no_grad_backend_zarifce_devre_disi_birakir() -> None:
+    print("[test 11] Gerçek `rwkv` paketindeki gibi torch.no_grad()-sarmalı bir backend ile lora_adaptoru_kur() ÇÖKMEDEN TTT'yi devre dışı bırakıyor mu?...")
+
+    from rwkv_native import RWKVUyumluModel
+    from ttt_lora import lora_adaptoru_kur
+
+    native = _SahteNativeRWKVNoGrad()
+    sarmali = RWKVUyumluModel(native, "cpu fp32")
+
+    sonuc = lora_adaptoru_kur(sarmali, "rwkv")
+
+    _dogrula(sonuc is sarmali,
+              "no_grad backend'de lora_adaptoru_kur() çökmeden çıplak base_model'i döndürdü (TTT devre dışı)")
+    _dogrula(not hasattr(sonuc, "durum_parametreleri"),
+              "dönen model bir RWKVDurumAyarlayici DEĞİL (state-tuning sarmalanmadı)")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -416,6 +443,7 @@ def calistir() -> None:
     test_8_tamamlama_sadece_maskeleme()
     test_9_ne_olursa_olsun_kayit_garantisi()
     test_10_rwkv_state_tuning()
+    test_11_rwkv_no_grad_backend_zarifce_devre_disi_birakir()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
