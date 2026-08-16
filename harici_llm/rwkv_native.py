@@ -58,13 +58,31 @@ class RWKVUyumluModel(torch.nn.Module):
     def device(self) -> torch.device:
         return self._cihaz
 
+    def _agirlik_sozlugu(self) -> Any:
+        """RWKV-7 (RWKV_x070) ağırlıklarını `self.z` sözlüğünde tutar;
+        eski (v4/5/6) `RWKV` sınıfı `self.w` kullanır. RWKV_V7_ON=1 ile
+        artık daima RWKV_x070 kullanıldığından `z` önce denenir, ama
+        eski sınıfla da (örn. test/gelecek uyumluluk) çalışmaya devam
+        etsin diye `w`'ye geri düşülür. Gerçek kurulu `rwkv==0.8.32`
+        kaynağı doğrudan okunarak doğrulandı (RWKV_x070.__init__ içinde
+        `self.z = {}`, `self.w` YOK)."""
+        sozluk = getattr(self._rwkv, "z", None)
+        if sozluk is None:
+            sozluk = getattr(self._rwkv, "w", None)
+        if sozluk is None:
+            raise AttributeError(
+                "native rwkv modelinde ne 'z' (RWKV-7) ne de 'w' (eski sürüm) "
+                "ağırlık sözlüğü bulundu; `rwkv` paketinin sürümü/mimarisi değişmiş olabilir."
+            )
+        return sozluk
+
     def parameters(self, recurse: bool = True):
-        for tensor in self._rwkv.w.values():
+        for tensor in self._agirlik_sozlugu().values():
             if isinstance(tensor, torch.Tensor):
                 yield tensor
 
     def named_parameters(self, prefix: str = "", recurse: bool = True):
-        for isim, tensor in self._rwkv.w.items():
+        for isim, tensor in self._agirlik_sozlugu().items():
             if isinstance(tensor, torch.Tensor):
                 yield isim, tensor
 
@@ -182,33 +200,15 @@ class RWKVUyumluTokenizer:
         return cikti
 
 
-_RWKV_HEAD_BOYUTU = 64  # README: "Head size = 64 for all current models"
-
-
-def _rwkv_args_eksiklerini_tamamla(ham_model: Any) -> None:
-    """`rwkv` pip paketinin (en azindan 0.8.32 surumunde) RWKV-7
-    kontrol noktalarini yuklerken kendi ic `args` (SimpleNamespace)
-    nesnesine `n_head` alanini EKLEMEDIGI durum icin savunma: state=None
-    ile ilk forward() cagrisinda kutuphanenin kendi state-sifirlama kodu
-    `args.n_head`'e erisip AttributeError firlatiyor. Kutuphane kaynagina
-    dokunmadan, eksik alani n_embd/head_boyutu formuluyle turetip
-    args'a ekliyoruz -- boylece kutuphanenin KENDI state init kodu
-    degismeden calisabiliyor."""
-    args = getattr(ham_model, "args", None)
-    if args is None:
-        return
-    if not hasattr(args, "n_head") and hasattr(args, "n_embd"):
-        args.n_head = args.n_embd // _RWKV_HEAD_BOYUTU
-        print(
-            f"[rwkv_native] `rwkv` paketinin args nesnesinde eksik olan "
-            f"n_head, n_embd={args.n_embd} / head_boyutu={_RWKV_HEAD_BOYUTU} "
-            f"formülüyle tamamlandı: n_head={args.n_head}"
-        )
-    if not hasattr(args, "n_att") and hasattr(args, "n_embd"):
-        args.n_att = args.n_embd
-
-
 def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16) -> RWKVUyumluModel:
+    # RWKV_V7_ON=1 (model_yapilandirmalari.py'de import-oncesi ayarlanir)
+    # `rwkv.model.RWKV`'yi DAIMA `RWKV_x070` sinifina cozer -- gercek
+    # kurulu rwkv==0.8.32 kaynagi dogrudan okunarak dogrulandi (model.py
+    # satir 1679-1680: `if RWKV_V7_ON == '1': RWKV = RWKV_x070`). Eski
+    # (v4/5/6) `RWKV` sinifina ozgu `args.n_head`/`args.n_att` yamasi
+    # bu yuzden hicbir zaman calismiyordu/gerekmiyordu -- RWKV_x070
+    # kendi `self.n_head`/`self.head_size` degerlerini checkpoint'ten
+    # dogrudan turetiyor (bkz. RWKVUyumluModel._agirlik_sozlugu).
     from rwkv.model import RWKV
 
     strateji = "cuda fp16" if torch.cuda.is_available() else "cpu fp32"
@@ -219,7 +219,6 @@ def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16) ->
 
     print(f"[rwkv_native] `rwkv` pip paketiyle native yükleniyor: {model_yolu} | strateji={strateji}")
     ham_model = RWKV(model=model_yolu, strategy=strateji)
-    _rwkv_args_eksiklerini_tamamla(ham_model)
     return RWKVUyumluModel(ham_model, strateji)
 
 

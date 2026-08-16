@@ -357,6 +357,18 @@ class _SahteNativeRWKV:
         return logits, [yeni_durum0]
 
 
+class _SahteNativeRWKV_x070(_SahteNativeRWKV):
+    """Gerçek `rwkv==0.8.32` kaynağında (RWKV_V7_ON=1 iken kullanılan
+    RWKV_x070 sınıfı) doğrulandığı gibi ağırlıklar `self.w` DEĞİL
+    `self.z` sözlüğünde tutulur. Bu sınıf o gerçek adlandırmayı taklit
+    eder; RWKVUyumluModel._agirlik_sozlugu() 'z'yi bulup kullanabilmeli."""
+
+    def __init__(self, vocab: int = 60, d: int = 4):
+        super().__init__(vocab, d)
+        self.z = self.w
+        del self.w
+
+
 class _SahteNativeRWKVNoGrad(_SahteNativeRWKV):
     """Gerçek `rwkv` pip paketinin forward_one/forward_seq'inin (rwkv==0.8.32
     kaynağında doğrudan tespit edilen) `torch.no_grad()` sarmalını taklit
@@ -432,6 +444,25 @@ def test_11_rwkv_no_grad_backend_zarifce_devre_disi_birakir() -> None:
               "dönen model bir RWKVDurumAyarlayici DEĞİL (state-tuning sarmalanmadı)")
 
 
+def test_12_rwkv_x070_z_sozlugu_gercek_kaggle_cokmesi() -> None:
+    print("[test 12] Gerçek Kaggle çökmesi (AttributeError: 'RecursiveScriptModule' object has no attribute 'w'): RWKV_x070'in GERÇEK 'z' sözlüğü ile parameters()/named_parameters() çalışıyor mu?...")
+
+    from rwkv_native import RWKVUyumluModel
+    from rwkv_state_tuning import RWKVDurumAyarlayici, state_egitimi_calisir_mi_dogrula
+
+    native = _SahteNativeRWKV_x070()
+    _dogrula(not hasattr(native, "w"), "sahte model gerçek RWKV_x070 gibi 'w' TAŞIMIYOR (yalnızca 'z')")
+
+    sarmali = RWKVUyumluModel(native, "cpu fp32")
+    parametreler = list(sarmali.parameters())
+    _dogrula(len(parametreler) == 2, "parameters() 'z' sözlüğünden gerçek tensörleri okuyabildi (eski 'w' varsayımıyla çökmedi)")
+
+    durum_ayarlayici = RWKVDurumAyarlayici(sarmali)
+    state_egitimi_calisir_mi_dogrula(durum_ayarlayici)
+    _dogrula(not native.emb.requires_grad and not native.head.requires_grad,
+              "'z' sözlüğü üzerinden de taban ağırlıklar requires_grad=False ile donduruldu")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -444,6 +475,7 @@ def calistir() -> None:
     test_9_ne_olursa_olsun_kayit_garantisi()
     test_10_rwkv_state_tuning()
     test_11_rwkv_no_grad_backend_zarifce_devre_disi_birakir()
+    test_12_rwkv_x070_z_sozlugu_gercek_kaggle_cokmesi()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
