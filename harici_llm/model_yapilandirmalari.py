@@ -34,7 +34,12 @@ YEREL_MODEL_YOLLARI: Dict[str, str] = {
     # model_indir.py ile indirilen HAM .pth kontrol noktası (transformers
     # config.json TAŞIMIYOR) — bkz. rwkv_native.py, ttt_lora.py bu dosya
     # yolunu görünce otomatik olarak `rwkv` pip paketiyle yükler.
-    RWKV: "/kaggle/input/notebooks/ulankaggle/harici-llm/modeller/modeller/rwkv/rwkv7-g1i-7.2b-20260805-ctx16384.pth",
+    # NOT: bu yol yalnizca bir BASLANGIC tahminidir -- Kaggle her
+    # yuklemede farkli bir ic klasor yapisi uretebiliyor. Bu yuzden
+    # yerel_model_yolu(), bu yol GERCEKTE yoksa /kaggle/input altinda
+    # ayni dosya adini ARAR (bkz. _kaggle_input_altinda_ara); asagidaki
+    # deger sadece hicbir ortam degiskeni verilmemisse ilk denenecek yol.
+    RWKV: "/kaggle/input/notebooks/ulankaggle/harici-llm/modeller/rwkv/rwkv7-g1i-7.2b-20260805-ctx16384.pth",
     MAMBA: "/kaggle/input/models/ulankaggle/mistral-mamba-codestral-7b-v0-1/transformers/default/1/Mamba-Codestral-7B-v0.1",
     FALCON_MAMBA: "/kaggle/input/falcon-mamba-7b-instruct/transformers/default/1",
 }
@@ -178,6 +183,25 @@ _ORTAM_DEGISKENI_ADLARI = {
 }
 
 
+def _kaggle_input_altinda_ara(dosya_adi: str, kok: str = "/kaggle/input", azami_derinlik: int = 8) -> Optional[str]:
+    """Sabit-kodlanmis yol GERCEKTE diskte yoksa, ayni dosya adini
+    /kaggle/input altinda TARAR. Kaggle'in her yuklemede farkli bir ic
+    klasor yapisi (tek/cift 'modeller' ic ice gecmesi, zip'in nasil acildigi
+    vb.) uretmesi -- ayni betigin farkli calistirmalarinda bile -- yol
+    tahmininin kirilgan oldugunu gosterdi; bu yuzden sabit yol yerine
+    GERCEK dosya sistemine bakan bir arama tercih edilir."""
+    if not os.path.isdir(kok):
+        return None
+    kok_derinlik = kok.rstrip("/").count("/")
+    for dizin_yolu, alt_dizinler, dosyalar in os.walk(kok):
+        if dizin_yolu.count("/") - kok_derinlik > azami_derinlik:
+            alt_dizinler[:] = []
+            continue
+        if dosya_adi in dosyalar:
+            return os.path.join(dizin_yolu, dosya_adi)
+    return None
+
+
 def yerel_model_yolu(model_ailesi: str, dogrula: bool = True) -> str:
     if model_ailesi not in YEREL_MODEL_YOLLARI:
         raise ValueError(
@@ -198,19 +222,29 @@ def yerel_model_yolu(model_ailesi: str, dogrula: bool = True) -> str:
         yol = YEREL_MODEL_YOLLARI[model_ailesi]
 
     if dogrula and not (os.path.isdir(yol) or os.path.isfile(yol)):
-        # transformers, os.path.isdir() False donerse yolu bir "repo_id"
-        # sanip anlasilmaz "Repo id must be in the form..." hatasi
-        # firlatiyor. Burada erkenden, GERCEKTEN neyin nerede oldugunu
-        # gosteren acik bir teshis veriyoruz. Yol bir dosyaya (.pth gibi)
-        # da isaret edebilir -- yalnizca dizin degil dosya varligi da
-        # kabul edilir.
+        # Sabit-kodlanmis/ortam degiskenli yol yoksa, PES ETMEDEN ONCE
+        # ayni dosya adini /kaggle/input altinda ara -- Kaggle'in her
+        # yuklemede farkli klasor ic ice gecmesi uretmesi karsisinda tek
+        # gercekten guvenilir yontem bu.
+        dosya_adi = os.path.basename(yol.rstrip("/"))
+        if dosya_adi:
+            bulunan = _kaggle_input_altinda_ara(dosya_adi)
+            if bulunan:
+                print(
+                    f"[model_yapilandirmalari] '{yol}' bulunamadı ama aynı dosya adı "
+                    f"('{dosya_adi}') /kaggle/input altında farklı bir yolda bulundu ve "
+                    f"kullanılıyor: {bulunan}"
+                )
+                return bulunan
+
         ebeveyn = os.path.dirname(yol.rstrip("/"))
         try:
             ebeveyn_icerigi = sorted(os.listdir(ebeveyn)) if os.path.isdir(ebeveyn) else None
         except OSError as e:
             ebeveyn_icerigi = [f"<listelenemedi: {e}>"]
         raise FileNotFoundError(
-            f"'{model_ailesi}' modeli icin belirtilen yerel yol GERCEKTE diskte yok: '{yol}'. "
+            f"'{model_ailesi}' modeli icin belirtilen yerel yol GERCEKTE diskte yok: '{yol}' "
+            f"(ve /kaggle/input altında aynı dosya adıyla arama da sonuçsuz kaldı). "
             f"Ebeveyn dizin ('{ebeveyn}') icerigi: {ebeveyn_icerigi}. "
             f"Kaggle dataset/model eki notebook'a doğru şekilde bağlanmamış olabilir; "
             f"sağdaki 'Add Input' panelinden modelin gerçekten bu isimle eklendiğini "

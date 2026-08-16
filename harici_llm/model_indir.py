@@ -91,7 +91,12 @@ def rwkv_indir(boyut: str = RWKV_ANA_BOYUT, hedef_kok: str = GECICI_INDIRME_KOKU
         raise ValueError(f"Bilinmeyen RWKV boyutu: {boyut!r}. Seçenekler: {sorted(RWKV_DOSYA_ADLARI)}")
 
     secilen_pth = RWKV_DOSYA_ADLARI[boyut]
-    hedef_dizin = os.path.join(hedef_kok, "modeller", "rwkv")
+    # NOT: burada AYRICA "modeller" alt-klasoru EKLENMEZ -- nihai_kok zaten
+    # ".../modeller" adiyla /kaggle/working'e kopyalaniyor
+    # (_geciciyi_nihaiye_tasi); iki kez "modeller" eklemek eskiden
+    # /kaggle/working/modeller/modeller/rwkv/... gibi cift ic ice
+    # gecmis, kirilgan bir yapi uretiyordu.
+    hedef_dizin = os.path.join(hedef_kok, "rwkv")
 
     print(f"[model_indir] === RWKV-7 G1 ({boyut}, dosya: {secilen_pth}) /tmp'ye indiriliyor -> {hedef_dizin} ===")
     _tum_pth_disindaki_dosyalari_ve_secileni_indir(RWKV_REPO_ID, secilen_pth, hedef_dizin)
