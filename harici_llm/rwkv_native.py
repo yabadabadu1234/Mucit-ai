@@ -101,28 +101,39 @@ class RWKVUyumluModel(torch.nn.Module):
         state-tuning'in ogrenilebilir baslangic durumu ile HEDEF cikti
         dizisinin TUM pozisyonlarindan ogrenmesi icin sart; mcts_dallanma.
         py'nin `outputs.logits[:, -1]` kullanimi da bu bicimle (B,T,V)
-        sorunsuz calisir."""
+        sorunsuz calisir.
+
+        ONEMLI PERFORMANS NOTU: `rwkv` paketinin KENDI forward() metodu,
+        TEK bir cagriya BIRDEN FAZLA token listesi verilince (`len(idx)>1`)
+        otomatik olarak `forward_seq`'e yonlenir -- bu, katman basina TEK
+        Python/JIT cagrisiyla tum diziyi isler. Onceden burada her token
+        icin AYRI bir `forward([token], state)` cagrisi yapiliyordu; bu,
+        7.2B/32-katmanlik modelde katman-basi kurulum/JIT dispatch
+        maliyetini T KERE tekrarlatip devasa bir yavaslamaya yol aciyordu.
+        Simdi satir basina TEK cagri (`forward(tum_token_listesi, state,
+        full_output=True)`) yapiliyor."""
         B, T = input_ids.shape
         durumlar = list(past_key_values) if past_key_values is not None else [None] * B
 
         baslangic = time.time()
-        if B * T > _ILERLEME_ADIMI:
-            print(f"[rwkv_native] forward(): {B} satır x {T} token, native RWKV her tokeni TEK TEK işler (toplam {B * T} adım)...")
+        if B > _ILERLEME_ADIMI:
+            print(f"[rwkv_native] forward(): {B} satır x {T} token, her satır TEK forward_seq çağrısıyla işleniyor...")
         tum_logitler = []
         yeni_durumlar = []
         for b in range(B):
             durum = durumlar[b]
-            satir_logitleri = []
-            for t in range(T):
-                token = int(input_ids[b, t].item())
-                logit, durum = self._rwkv.forward([token], durum)
-                satir_logitleri.append(torch.as_tensor(logit, device=self._cihaz))
-                adim = b * T + t + 1
-                if adim % _ILERLEME_ADIMI == 0 or adim == B * T:
-                    gecen = time.time() - baslangic
-                    print(f"[rwkv_native]   forward(): {adim}/{B * T} adım ({gecen:.1f} sn, {adim / max(gecen, 1e-6):.2f} adım/sn)")
-            tum_logitler.append(torch.stack(satir_logitleri, dim=0))
+            token_listesi = input_ids[b].tolist()
+            if len(token_listesi) > 1:
+                logitler, durum = self._rwkv.forward(token_listesi, durum, full_output=True)
+                satir_logitleri = torch.as_tensor(logitler, device=self._cihaz)
+            else:
+                logit, durum = self._rwkv.forward(token_listesi, durum)
+                satir_logitleri = torch.as_tensor(logit, device=self._cihaz).unsqueeze(0)
+            tum_logitler.append(satir_logitleri)
             yeni_durumlar.append(durum)
+            if (b + 1) % _ILERLEME_ADIMI == 0 or (b + 1) == B:
+                gecen = time.time() - baslangic
+                print(f"[rwkv_native]   forward(): {b + 1}/{B} satır işlendi ({gecen:.1f} sn)")
 
         cikti = _RWKVCiktisi()
         cikti.logits = torch.stack(tum_logitler, dim=0)
@@ -147,15 +158,19 @@ class RWKVUyumluModel(torch.nn.Module):
         assert B == 1, "native RWKV generate() şu an tek örnek (B=1) destekliyor"
 
         durum = [t.clone() for t in baslangic_durumu] if baslangic_durumu is not None else None
-        son_logits = None
         onbellek_baslangici = time.time()
-        print(f"[rwkv_native] prompt işleniyor: {T} token, HER biri ayrı ayrı (native RWKV batching desteklemez) -- bu adım büyük promptlarda uzun sürebilir...")
-        for t in range(T):
-            token = int(input_ids[0, t].item())
-            son_logits, durum = self._rwkv.forward([token], durum)
-            if (t + 1) % _ILERLEME_ADIMI == 0 or (t + 1) == T:
-                gecen = time.time() - onbellek_baslangici
-                print(f"[rwkv_native]   prompt: {t + 1}/{T} token işlendi ({gecen:.1f} sn, {(t + 1) / max(gecen, 1e-6):.2f} token/sn)")
+        prompt_token_listesi = input_ids[0].tolist()
+        # PERFORMANS: onceden burada T ayrı forward([token], state) cagrisi
+        # yapiliyordu (bkz. forward()'daki not) -- tum prompt'u TEK
+        # forward_seq cagrisiyla isleyip yalnizca son pozisyonun logitini
+        # istiyoruz (full_output=False, kutuphanenin varsayilani).
+        if len(prompt_token_listesi) > 1:
+            print(f"[rwkv_native] prompt işleniyor: {T} token, TEK forward_seq çağrısıyla...")
+            son_logits, durum = self._rwkv.forward(prompt_token_listesi, durum)
+        else:
+            son_logits, durum = self._rwkv.forward(prompt_token_listesi, durum)
+        gecen = time.time() - onbellek_baslangici
+        print(f"[rwkv_native] prompt işlendi: {T} token, {gecen:.1f} sn ({T / max(gecen, 1e-6):.2f} token/sn).")
 
         uretim_baslangici = time.time()
         uretilenler: List[int] = []

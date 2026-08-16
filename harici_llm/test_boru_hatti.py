@@ -340,7 +340,12 @@ def test_9_ne_olursa_olsun_kayit_garantisi() -> None:
 
 class _SahteNativeRWKV:
     """rwkv.model.RWKV'nin minimal, TÜREVLENEBİLİR bir taklidi: gerçek
-    forward([token], state) arayüzünü ve self.w ağırlık sözlüğünü taşır."""
+    forward(idx, state, full_output=False) arayüzünü (tek token İSE
+    forward_one, BİRDEN FAZLA token listesi İSE forward_seq'e denk
+    düşen tek-çağrılık toplu işleme) ve self.w ağırlık sözlüğünü taşır.
+    Bu ayrım kritik: gerçek pakette forward([t1,t2,...], state) TEK bir
+    çağrıda tüm diziyi işler (rwkv_native.py'nin performans düzeltmesi
+    tam olarak bunu kullanıyor) -- token-başına ayrı çağrı YAPMAZ."""
 
     def __init__(self, vocab: int = 60, d: int = 4):
         self.vocab = vocab
@@ -348,13 +353,23 @@ class _SahteNativeRWKV:
         self.emb = torch.nn.Parameter(torch.randn(vocab, d))
         self.head = torch.nn.Parameter(torch.randn(d, vocab))
         self.w = {"emb.weight": self.emb, "head.weight": self.head}
+        self.coklu_token_cagri_sayaci = 0
+        self.tekli_token_cagri_sayaci = 0
 
-    def forward(self, tokens, state):
+    def forward(self, tokens, state, full_output=False):
+        if len(tokens) > 1:
+            self.coklu_token_cagri_sayaci += 1
+        else:
+            self.tekli_token_cagri_sayaci += 1
         durum = state if state is not None else [torch.zeros(self.d)]
-        x = self.emb[tokens[0]]
-        yeni_durum0 = 0.5 * durum[0] + 0.5 * x
-        logits = yeni_durum0 @ self.head
-        return logits, [yeni_durum0]
+        tum_logitler = []
+        for tok in tokens:
+            x = self.emb[tok]
+            durum = [0.5 * durum[0] + 0.5 * x]
+            tum_logitler.append(durum[0] @ self.head)
+        if len(tokens) > 1 and full_output:
+            return torch.stack(tum_logitler, dim=0), durum
+        return tum_logitler[-1], durum
 
 
 class _SahteNativeRWKV_x070(_SahteNativeRWKV):
@@ -374,9 +389,9 @@ class _SahteNativeRWKVNoGrad(_SahteNativeRWKV):
     kaynağında doğrudan tespit edilen) `torch.no_grad()` sarmalını taklit
     eder: state-tuning için gradyan akışı YAPISAL olarak imkansızdır."""
 
-    def forward(self, tokens, state):
+    def forward(self, tokens, state, full_output=False):
         with torch.no_grad():
-            return super().forward(tokens, state)
+            return super().forward(tokens, state, full_output=full_output)
 
 
 class _RWKVStateTuningTokenizer:
@@ -463,6 +478,28 @@ def test_12_rwkv_x070_z_sozlugu_gercek_kaggle_cokmesi() -> None:
               "'z' sözlüğü üzerinden de taban ağırlıklar requires_grad=False ile donduruldu")
 
 
+def test_13_rwkv_prompt_isleme_token_basina_degil_tek_cagriyla() -> None:
+    print("[test 13] Performans: forward()/generate() promptu TOKEN-BAŞINA AYRI çağrı yerine TEK forward_seq çağrısıyla mı işliyor?...")
+
+    from rwkv_native import RWKVUyumluModel
+
+    native = _SahteNativeRWKV()
+    sarmali = RWKVUyumluModel(native, "cpu fp32")
+
+    uzun_prompt = torch.tensor([[(i % native.vocab) for i in range(37)]], dtype=torch.long)
+    sarmali.forward(uzun_prompt)
+    _dogrula(native.coklu_token_cagri_sayaci == 1 and native.tekli_token_cagri_sayaci == 0,
+              "forward(): 37 token'lık tek satır TEK çoklu-token çağrısıyla işlendi (37 ayrı tekli-token çağrısı DEĞİL)")
+
+    native2 = _SahteNativeRWKV()
+    sarmali2 = RWKVUyumluModel(native2, "cpu fp32")
+    sarmali2.generate(uzun_prompt, max_new_tokens=5, do_sample=False)
+    _dogrula(native2.coklu_token_cagri_sayaci == 1,
+              "generate(): 37 token'lık prompt TEK çoklu-token çağrısıyla (prefill) işlendi")
+    _dogrula(native2.tekli_token_cagri_sayaci == 5,
+              "generate(): prefill sonrası yalnızca gerçekten üretilen 5 token için (kaçınılmaz biçimde) tekli-token çağrısı yapıldı")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -476,6 +513,7 @@ def calistir() -> None:
     test_10_rwkv_state_tuning()
     test_11_rwkv_no_grad_backend_zarifce_devre_disi_birakir()
     test_12_rwkv_x070_z_sozlugu_gercek_kaggle_cokmesi()
+    test_13_rwkv_prompt_isleme_token_basina_degil_tek_cagriyla()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
