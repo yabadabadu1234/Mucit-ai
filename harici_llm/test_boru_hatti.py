@@ -145,16 +145,16 @@ def test_2_cevap_verme_araci_boyut_tutarliligi() -> None:
     tutarsiz_grid = [[1, 2, 3], [4, 5], [6, 7, 8]]
     sonuc = submit_answer_arac(tutarsiz_grid, defter)
 
-    _dogrula(sonuc["basarili"] is False, "tutarsız ızgara reddedildi")
+    _dogrula(sonuc["success"] is False, "tutarsız ızgara reddedildi")
     _dogrula(defter.kaydedilen_cevap is None, "reddedilen ızgara SESSİZCE düzeltilip kaydedilmedi")
-    _dogrula("satır 0: 3 sütun" in sonuc["hata"] and "satır 1: 2 sütun" in sonuc["hata"],
-              "hata mesajı hangi satırların kaç sütun olduğunu açıkça söylüyor")
-    print(f"    -> döndürülen hata: {sonuc['hata']}")
+    _dogrula("row 0: 3 columns" in sonuc["error"] and "row 1: 2 columns" in sonuc["error"],
+              "hata mesajı hangi satırların kaç sütun olduğunu açıkça söylüyor (model'e İngilizce geri besleniyor)")
+    print(f"    -> döndürülen hata: {sonuc['error']}")
 
     defter2 = CevapDefteri()
     tutarli_grid_farkli_boyut = [[9, 9, 9, 9, 9], [8, 8, 8, 8, 8]]
     sonuc2 = submit_answer_arac(tutarli_grid_farkli_boyut, defter2)
-    _dogrula(sonuc2["basarili"] is True, "kendi içinde tutarlı fakat train örneklerinden FARKLI boyutlu ızgara kabul edildi (boyut değişebilir)")
+    _dogrula(sonuc2["success"] is True, "kendi içinde tutarlı fakat train örneklerinden FARKLI boyutlu ızgara kabul edildi (boyut değişebilir)")
     _dogrula(defter2.kaydedilen_cevap == tutarli_grid_farkli_boyut, "kaydedilen cevap AYNEN (yeniden boyutlandırılmadan) saklandı")
 
 
@@ -165,16 +165,16 @@ def test_3_arac_cagrisini_yurutme_ve_hata_donen_akis() -> None:
 
     cagri_1 = {"name": "submit_answer", "arguments": {"grid": [[1, 1], [2]]}}
     sonuc_1 = arac_cagrisini_yurut(cagri_1, defter)
-    _dogrula(not sonuc_1["basarili"], "1. deneme (tutarsız) reddedildi")
+    _dogrula(not sonuc_1["success"], "1. deneme (tutarsız) reddedildi")
     _dogrula(defter.kaydedilen_cevap is None, "1. denemeden sonra kayıtlı cevap hâlâ yok")
 
     cagri_2 = {"name": "execute_python", "arguments": {"code": "sonuc = [x*2 for x in range(3)]"}}
     sonuc_2 = arac_cagrisini_yurut(cagri_2, defter)
-    _dogrula(sonuc_2["basarili"] and sonuc_2["sonuc"] == [0, 2, 4], "execute_python aracı gerçekten çalıştı ve doğru sonucu döndü")
+    _dogrula(sonuc_2["success"] and sonuc_2["result"] == [0, 2, 4], "execute_python aracı gerçekten çalıştı ve doğru sonucu döndü")
 
     cagri_3 = {"name": "submit_answer", "arguments": {"grid": [[1, 1], [2, 2]]}}
     sonuc_3 = arac_cagrisini_yurut(cagri_3, defter)
-    _dogrula(sonuc_3["basarili"], "2. deneme (tutarlı) kabul edildi")
+    _dogrula(sonuc_3["success"], "2. deneme (tutarlı) kabul edildi")
     _dogrula(defter.kaydedilen_cevap == [[1, 1], [2, 2]], "nihai cevap doğru kaydedildi")
 
 
@@ -1349,6 +1349,79 @@ def test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu() -> Non
         _dogrula(len(bu_gpu_partileri) == 1, f"gpu{gpu_index}: payı B'den küçük olduğu için TEK partide (kendi payının tamamı) çekildi, başka vezirin payına asla el atmadı")
 
 
+def test_27_modele_geri_beslenen_arac_yanitlari_ingilizce_mi() -> None:
+    print("[test 27] araclar.py: submit_answer/execute_python hata mesajları -- modele DOĞRUDAN geri beslenen (Türkçe eğitim verisi görmemiş modelin ANLAYAMAYACAĞI) hiçbir Türkçe karakter/kelime kalmamış mı?...")
+
+    import json
+    import re as _re
+
+    from araclar import CevapDefteri, arac_cagrisini_yurut
+
+    _TURKCE_HARF_DESENI = _re.compile(r"[çğıöşüÇĞİÖŞÜ]")
+
+    defter = CevapDefteri()
+    senaryolar = [
+        {"name": "submit_answer", "arguments": {"grid": "gecersiz"}},
+        {"name": "submit_answer", "arguments": {"grid": [[1, 2, 3], [4, 5]]}},
+        {"name": "submit_answer", "arguments": {"grid": [[1, "x"]]}},
+        {"name": "submit_answer", "arguments": {"grid": [[1, 2]]}},
+        {"name": "execute_python", "arguments": {"code": "import os"}},
+        {"name": "boyle_bir_arac_yok", "arguments": {}},
+    ]
+    for cagri in senaryolar:
+        sonuc = arac_cagrisini_yurut(cagri, defter)
+        metin = json.dumps(sonuc, ensure_ascii=False)
+        _dogrula(not _TURKCE_HARF_DESENI.search(metin),
+                  f"{cagri['name']} çağrısının modele geri beslenen tool_response'unda Türkçe karakter YOK: {metin!r}")
+
+
+def test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu() -> None:
+    print("[test 28] rwkv_native.uret_devam: kullanıcının gerçek transkriptinde görülen 'aynı bloğu onlarca kez tekrarlama' döngüsü, TÜM bütçe tüketilmeden ERKEN yakalanıp durduruluyor mu?...")
+
+    from rwkv_native import RWKVUyumluModel, _tekrara_kilitlenme_periyodu
+
+    _dogrula(_tekrara_kilitlenme_periyodu(list(range(30))) is None, "gerçekten TEKRARSIZ (hep artan) bir dizi yozlaşmış döngü SANILMADI")
+    tekrarli = ([1, 2, 3, 4, 5] * 3)
+    _dogrula(_tekrara_kilitlenme_periyodu(tekrarli) == 5, "5 uzunluğunda bir bloğun 3 kez ardışık tekrarı doğru periyotla (5) tespit edildi")
+
+    class _SonsuzTekrarEdenRWKV:
+        """Gerçek transkriptteki gibi: bir noktadan sonra hep AYNI 20
+        token'lık bloğu sonsuza dek tekrarlayan yozlaşmış bir model taklidi."""
+
+        def __init__(self, vocab: int = 64, d: int = 4, blok_uzunlugu: int = 20):
+            self.vocab = vocab
+            self.d = d
+            self.blok = list(range(1, blok_uzunlugu + 1))
+            self.emb = torch.nn.Parameter(torch.randn(vocab, d))
+            self.head = torch.nn.Parameter(torch.randn(d, vocab))
+            self.w = {"emb.weight": self.emb, "head.weight": self.head}
+            self._sayac = 0
+
+        def forward(self, tokens, state, full_output=False):
+            # HANGİ token verilirse verilsin, tekrarlayan bloktaki bir
+            # sonraki token'ı KESİN seçtirecek tek-sıcak (one-hot) bir
+            # logit üretir -- gerçek modelin döngüye KİLİTLENMESİNİN
+            # matematiksel eşdeğeri.
+            sonraki = self.blok[self._sayac % len(self.blok)]
+            self._sayac += 1
+            logit = torch.full((self.vocab,), -10.0)
+            logit[sonraki] = 10.0
+            return logit, (state or [torch.zeros(self.d)])
+
+    native = _SonsuzTekrarEdenRWKV()
+    model = RWKVUyumluModel(native, "cpu fp32")
+    son_logits = torch.full((native.vocab,), -10.0)
+    son_logits[native.blok[0]] = 10.0
+
+    uretilenler, _son_logits, _durum = model.uret_devam(
+        son_logits, None, max_new_tokens=50000, do_sample=False,
+    )
+    _dogrula(len(uretilenler) < 50000,
+              f"YOZLAŞMIŞ DÖNGÜ erken yakalanıp üretim durduruldu ({len(uretilenler)} token üretildi, 50000 TOKENLİK BÜTÇENİN TAMAMI BOŞA HARCANMADI)")
+    _dogrula(len(uretilenler) < 2000,
+              f"tespit MAKUL bir sürede (birkaç kontrol adımı içinde) gerçekleşti, geç kalmadı ({len(uretilenler)} token)")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1376,6 +1449,8 @@ def calistir() -> None:
     test_24_onisle_toplu_farkli_uzunluk_gercek_rwkv_ile_ragged_batch_dogrulamasi()
     test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
     test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu()
+    test_27_modele_geri_beslenen_arac_yanitlari_ingilizce_mi()
+    test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

@@ -95,33 +95,40 @@ def arac_cagrilarini_ayikla(model_ciktisi: str) -> List[Dict[str, Any]]:
 
 def _izgara_tutarliligini_denetle(grid: Any) -> Tuple[bool, str]:
 
+    # NOT (Turkce): bu mesajlar dogrudan model'e (tool_response olarak)
+    # GERI BESLENIR -- model cogunlukla Ingilizce egitim verisiyle
+    # calistigi icin bu metinler DAIMA Ingilizce olmali, aksi halde model
+    # HATASININ NE OLDUGUNU ANLAYAMAZ ve kendini duzeltemez (kullanicinin
+    # gercek Kaggle transkriptinde gozlemledigi -- gecersiz bir grid
+    # gonderdikten sonra modelin donup dolasip ayni seyi tekrarladigi
+    # cikmaz dongunun dogrudan sebeplerinden biri buydu).
     if not isinstance(grid, list) or not grid:
-        return False, "Geçersiz: 'grid' boş olmayan bir liste-of-liste olmalı."
+        return False, "Invalid: 'grid' must be a non-empty list of lists."
 
     satir_uzunluklari = []
     for i, satir in enumerate(grid):
         if not isinstance(satir, list) or not satir:
-            return False, f"Geçersiz: satır {i} boş ya da liste değil."
+            return False, f"Invalid: row {i} is empty or is not a list."
         satir_uzunluklari.append(len(satir))
 
     farkli = sorted(set(satir_uzunluklari))
     if len(farkli) > 1:
         detay = ", ".join(
-            f"satır {i}: {n} sütun" for i, n in enumerate(satir_uzunluklari) if n in farkli
+            f"row {i}: {n} columns" for i, n in enumerate(satir_uzunluklari) if n in farkli
         )
         return False, (
-            f"Geçersiz: satır uzunlukları tutarsız ({detay}). "
-            f"İzgaranın boyutu bulmacadan bulmacaya değişebilir, ama TEK bir izgara içinde "
-            f"her satır aynı sütun sayısına sahip olmalıdır. Boyutları kendimiz eşitlemeyiz; "
-            f"lütfen kuralınızı tekrar gözden geçirip tutarlı bir izgara üretin."
+            f"Invalid: inconsistent row lengths ({detay}). "
+            f"The grid's overall shape may differ from puzzle to puzzle, but WITHIN a single "
+            f"grid every row must have the same number of columns. We will not fix the shape "
+            f"for you; please re-check your rule and produce a consistent grid."
         )
 
     for i, satir in enumerate(grid):
         for j, hucre in enumerate(satir):
             if not isinstance(hucre, int) or not (0 <= hucre <= 9):
-                return False, f"Geçersiz: [{i}][{j}] = {hucre!r} 0-9 arası bir tamsayı değil."
+                return False, f"Invalid: [{i}][{j}] = {hucre!r} is not an integer between 0 and 9."
 
-    return True, "Geçerli."
+    return True, "Valid."
 
 
 class CevapDefteri:
@@ -133,20 +140,25 @@ class CevapDefteri:
 
 
 def submit_answer_arac(grid: Any, defter: CevapDefteri) -> Dict[str, Any]:
+    # NOT (Turkce): bu sozlugun ANAHTARLARI da (asagida "success"/"error"
+    # olarak) modele GERI BESLENIR -- "basarili"/"hata" gibi Turkce
+    # anahtar adlari, Ingilizce egitim verisiyle calisan model icin
+    # bilinmeyen/anlamsiz kelimeler olurdu. Anahtarlar da (deger metinleri
+    # gibi) daima Ingilizce olmali.
     gecerli, mesaj = _izgara_tutarliligini_denetle(grid)
     defter.deneme_gecmisi.append({"grid": grid, "gecerli": gecerli, "mesaj": mesaj})
     if not gecerli:
-        return {"basarili": False, "hata": mesaj}
+        return {"success": False, "error": mesaj}
 
     defter.kaydedilen_cevap = grid
-    return {"basarili": True, "mesaj": "Cevap kaydedildi."}
+    return {"success": True, "message": "Answer recorded."}
 
 
 def execute_python_arac(code: str) -> Dict[str, Any]:
     basarili, sonuc = kodu_guvenle_calistir_serbest(code)
     if not basarili:
-        return {"basarili": False, "hata": sonuc}
-    return {"basarili": True, "sonuc": sonuc}
+        return {"success": False, "error": sonuc}
+    return {"success": True, "result": sonuc}
 
 
 def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
@@ -159,7 +171,7 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
     from kod_ajani import _guvenli_mi
 
     if not _guvenli_mi(kod):
-        return False, "kod güvenlik denetiminden geçemedi (yasak eval/exec/open/dunder)"
+        return False, "code failed the security check (forbidden eval/exec/open/dunder)"
 
     def _calistir(kuyruk: "multiprocessing.Queue") -> None:
         ns: Dict[str, Any] = {}
@@ -189,9 +201,9 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
     if surec.is_alive():
         surec.terminate()
         surec.join()
-        return False, "zaman aşımı (5.0 sn)"
+        return False, "timeout (5.0 s)"
     if kuyruk.empty():
-        return False, "alt süreç sonuç döndürmeden sonlandı"
+        return False, "subprocess exited without returning a result"
     durum, sonuc = kuyruk.get()
     return (durum == "basari"), sonuc
 
@@ -203,7 +215,7 @@ def arac_cagrisini_yurut(cagri: Dict[str, Any], defter: CevapDefteri) -> Dict[st
         return execute_python_arac(args.get("code", ""))
     if ad == "submit_answer":
         return submit_answer_arac(args.get("grid"), defter)
-    return {"basarili": False, "hata": f"Bilinmeyen araç: {ad}"}
+    return {"success": False, "error": f"Unknown tool: {ad}"}
 
 
 def tool_response_mesaji_olustur(sonuc: Dict[str, Any]) -> str:

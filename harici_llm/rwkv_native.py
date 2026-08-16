@@ -29,6 +29,30 @@ import torch
 _HAM_PTH_UYARISI_BASILDI = False
 _ILERLEME_ADIMI = 5000  # her N tokende bir ilerleme satırı bas (sessiz kalıp "donmuş gibi" görünmesin diye)
 
+# Kullanıcının GERÇEK Kaggle transkriptinde doğrudan gözlemlendi: küçük/az
+# eğitilmiş model bazen aynı token dizisini (ör. kendi orijinal promptunun
+# kuyruğunu) ONLARCA kez ARDIŞIK olarak birebir tekrarlayan yozlaşmış bir
+# döngüye kilitleniyor -- bu durumda 55000/60000 tokenlik BÜTÜN bütçe
+# anlamsız tekrara harcanıyor. Token-seviyesinde ucuz bir tekrar
+# denetimiyle bu döngü ERKEN yakalanıp üretim durdurulur (harcanan zaman/
+# token boşa gitmez, İKAZ/yeniden-deneme mantığı daha erken devreye girer).
+_TEKRAR_KONTROL_ADIMI = 500
+_TEKRAR_AZAMI_PERIYOT = 750
+_TEKRAR_ASGARI_PERIYOT = 4
+
+
+def _tekrara_kilitlenme_periyodu(tokenler: List[int]) -> Optional[int]:
+    """`tokenler`in KUYRUĞU, uzunluğu p olan bir alt-dizinin ARDIŞIK EN AZ
+    3 kez BİREBİR tekrarından mı oluşuyor (p, _TEKRAR_ASGARI_PERIYOT..
+    _TEKRAR_AZAMI_PERIYOT arasında)? Öyleyse o p'yi döndürür (yozlaşmış
+    döngü kanıtı), yoksa None."""
+    n = len(tokenler)
+    azami_p = min(_TEKRAR_AZAMI_PERIYOT, n // 3)
+    for p in range(_TEKRAR_ASGARI_PERIYOT, azami_p + 1):
+        if tokenler[-p:] == tokenler[-2 * p:-p] == tokenler[-3 * p:-2 * p]:
+            return p
+    return None
+
 
 def rwkv_ham_pth_mi(yol: str) -> bool:
     """Yol bir .pth DOSYASI ise (transformers dizini degil), native
@@ -207,6 +231,16 @@ class RWKVUyumluModel(torch.nn.Module):
                 print(f"[rwkv_native] ({self._cihaz})   üretim: {_adim + 1}/{max_new_tokens} token üretildi ({gecen:.1f} sn, {(_adim + 1) / max(gecen, 1e-6):.2f} token/sn)")
             if pad_token_id is not None and sonraki_token == pad_token_id:
                 break
+            if (_adim + 1) % _TEKRAR_KONTROL_ADIMI == 0:
+                periyot = _tekrara_kilitlenme_periyodu(uretilenler)
+                if periyot is not None:
+                    print(
+                        f"[rwkv_native] ({self._cihaz})   YOZLAŞMIŞ DÖNGÜ tespit edildi: son "
+                        f"{3 * periyot} token, {periyot} token'lık bir alt-diziyi ARDIŞIK 3 kez "
+                        f"birebir tekrarlıyor -- {_adim + 1}. tokende üretim ERKEN durduruluyor "
+                        f"(kalan {max_new_tokens - _adim - 1} token boşa harcanmayacak)."
+                    )
+                    break
 
             son_logits, durum = self._rwkv.forward([sonraki_token], durum)
 

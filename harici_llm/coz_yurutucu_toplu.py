@@ -37,6 +37,7 @@ from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut,
 from coz_yurutucu import BOS_TAHMIN, IKAZ_ESIGI_TOKEN, IKAZ_METNI, _ARAC_CAGRISI_YOK_UYARISI, _ilk_mesajlar
 from model_yapilandirmalari import RWKV
 from rwkv_batch import adim_toplu_maskeli, onisle_toplu_farkli_uzunluk, sifir_durum_toplu
+from rwkv_native import _tekrara_kilitlenme_periyodu
 from transkript import transkript_satiri_yaz
 from ttt_lora import mesajlari_metne_donustur, rwkv_tek_mesaji_sar, uretim_ayarlarini_al
 
@@ -158,7 +159,7 @@ def toplu_gorevleri_coz(
                         "gorev": tasks[b].name, "deneme": deneme_etiketi, "tur": 1,
                         "rol": "arac-sonucu", "arac": cagri.get("name"), "icerik": sonuc,
                     })
-                    if cagri.get("name") == "submit_answer" and sonuc.get("basarili"):
+                    if cagri.get("name") == "submit_answer" and sonuc.get("success"):
                         sonuclar[b] = defterler[b].kaydedilen_cevap
                         bitti[b] = True
                 if bitti[b]:
@@ -167,6 +168,25 @@ def toplu_gorevleri_coz(
                         "rol": "assistant", "icerik": metin_simdi,
                     })
                     continue
+            # Yozlaşmış döngü kontrolü: tek bir dizi kilitlenip hiç bitmezse
+            # (kullanıcının gerçek transkriptinde görülen davranış), paylaşılan
+            # while döngüsü `not all(bitti)` şartı yüzünden TÜM batch'i azami_
+            # yeni_token'a kadar bekletir -- bu diziyi ERKEN "bitti" işaretleyip
+            # (cevapsız) dondurmak, aynı batch'teki DİĞER görevlerin beklemeden
+            # bitmesini sağlar.
+            periyot = _tekrara_kilitlenme_periyodu(uretilen_tokenler[b])
+            if periyot is not None:
+                print(
+                    f"{_ONEK} ({deneme_etiketi})   {tasks[b].name}: YOZLAŞMIŞ DÖNGÜ tespit edildi "
+                    f"({periyot} token'lık alt-dizi 3 kez tekrarlandı) -- bu dizi ERKEN durduruldu, "
+                    f"batch'teki DİĞER görevler beklemeden devam ediyor."
+                )
+                transkript_satiri_yaz({
+                    "gorev": tasks[b].name, "deneme": deneme_etiketi, "tur": 1,
+                    "rol": "sistem-uyari", "icerik": f"yozlaşmış döngü tespit edildi (periyot={periyot}), üretim erken durduruldu",
+                })
+                bitti[b] = True
+                continue
             if not ikaz_enjekte_edildi[b] and adim >= IKAZ_ESIGI_TOKEN:
                 ikaz_enjekte_edildi[b] = True
                 print(f"{_ONEK} ({deneme_etiketi})   {tasks[b].name}: İKAZ enjekte ediliyor (yazma hakkı tükenmek üzere).")

@@ -187,7 +187,7 @@ def _tek_deneme_uret_artimli(
                 "rol": "arac-sonucu", "arac": cagri.get("name"), "icerik": sonuc,
             })
 
-            if cagri.get("name") == "submit_answer" and sonuc.get("basarili"):
+            if cagri.get("name") == "submit_answer" and sonuc.get("success"):
                 return defter.kaydedilen_cevap
 
     return defter.kaydedilen_cevap
@@ -247,7 +247,7 @@ def _tek_deneme_uret(
                 "rol": "arac-sonucu", "arac": cagri.get("name"), "icerik": sonuc,
             })
 
-            if cagri.get("name") == "submit_answer" and sonuc.get("basarili"):
+            if cagri.get("name") == "submit_answer" and sonuc.get("success"):
                 return defter.kaydedilen_cevap
 
     return defter.kaydedilen_cevap
