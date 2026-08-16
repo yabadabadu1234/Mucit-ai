@@ -652,57 +652,57 @@ def test_17_yarisma_false_dogruluk_kontrolu() -> None:
               "attempt_2'nin GERÇEKTEN submit edilmediği (boş yer tutucuya düştüğü) doğru tespit edildi -- tesadüfen doğru çıksa bile bu ayrım kaybolmaz")
 
 
-class _GunlukluSahteNativeRWKV(_SahteNativeRWKV):
-    """_SahteNativeRWKV ile aynı, ama her forward() çağrısını PAYLAŞILAN bir
-    günlüğe (gpu_etiketi, çoklu-token mi) kaydeder -- coklu_gpu.py'nin
-    round-robin zamanlayıcısının GERÇEKTEN iç içe geçmiş (bir GPU'yu tam
-    bitirmeden diğerine geçen) çağrılar ürettiğini kanıtlamak için."""
+def test_18_coklu_gpu_padisah_vezir_gercekten_paralel_mi() -> None:
+    print("[test 18] coklu_gpu.padisah_vezir_havuzuyla_coz: padişah bir veziri BEKLEMEDEN diğerini başlatıyor mu, GERÇEK duvar-saati hızlanması var mı?...")
 
-    def __init__(self, gpu_etiketi: str, paylasilan_gunluk: List[str], vocab: int = 60, d: int = 4):
-        super().__init__(vocab, d)
-        self._gpu_etiketi = gpu_etiketi
-        self._gunluk = paylasilan_gunluk
+    import threading
+    import time as _time
 
-    def forward(self, tokens, state, full_output=False):
-        if len(tokens) == 1:
-            self._gunluk.append(self._gpu_etiketi)
-        return super().forward(tokens, state, full_output=full_output)
+    from coklu_gpu import padisah_vezir_havuzuyla_coz
 
+    ADIM_SURESI = 0.05
+    baslama_zamanlari: List[float] = []
+    kilit = threading.Lock()
 
-def test_18_coklu_gpu_round_robin_gercekten_ic_ice_geciyor_mu() -> None:
-    print("[test 18] coklu_gpu.CokluGPUCozucu: N 'GPU' round-robin ile GERÇEKTEN iç içe geçmiş adımlarla ilerliyor mu (biri tam bitmeden diğerine geçiyor mu)?...")
-
-    from rwkv_native import RWKVUyumluModel
-    from coklu_gpu import CokluGPUCozucu
-
-    gunluk: List[str] = []
-    nativeler = [_GunlukluSahteNativeRWKV(f"gpu{i}", gunluk) for i in range(2)]
-    modeller = [RWKVUyumluModel(n, "cpu fp32") for n in nativeler]
-    tok = _KarakterTabanliRWKVTokenizer()
+    def _yavas_gorevi_coz(gpu_index: int, task: Task) -> Dict[str, Any]:
+        with kilit:
+            baslama_zamanlari.append(_time.time())
+        _time.sleep(ADIM_SURESI)  # gerçek bir GPU işinin süresini taklit eder
+        return {"attempt_1": [[gpu_index, gpu_index]], "attempt_1_gonderildi_mi": True}
 
     tasks = [
         Task(
-            test_example=Example(input=np.array([[0, 0], [0, 0]]), output=np.array([[0, 0], [0, 0]])),
+            test_example=Example(input=np.array([[0, 0]]), output=np.array([[0, 0]])),
             train_examples=[], name=f"gorev{i}",
         )
-        for i in range(2)
+        for i in range(8)
     ]
 
-    cozucu = CokluGPUCozucu(
-        modeller, tok, azami_tur=1, azami_yeni_token=5,
-        uretim_ayarlari={"do_sample": False, "pad_token_id": 0},
-    )
-    sonuclar = cozucu.coz(tasks)
+    baslangic = _time.time()
+    sonuclar = padisah_vezir_havuzuyla_coz(4, tasks, _yavas_gorevi_coz)
+    gecen = _time.time() - baslangic
 
-    _dogrula(len(sonuclar) == 2, "her iki görev de sonuçlandı")
-    _dogrula(set(gunluk) == {"gpu0", "gpu1"}, "GERÇEKTEN her iki 'GPU' de tek-token üretim adımları yaptı")
+    _dogrula(len(sonuclar) == 8, "8 görevin hepsi sonuçlandı")
+    _dogrula(all(sonuclar[t.name]["attempt_1_gonderildi_mi"] for t in tasks), "hepsi gerçekten çözüldü (boş yer tutucuya düşen olmadı)")
 
-    ilk_gpu1_indeksi = gunluk.index("gpu1")
-    ilk_gpu0_sonrasi_gpu0_sayisi = gunluk[:ilk_gpu1_indeksi].count("gpu0")
+    # 4 vezir, 8 gorev -> her vezir 2 gorev cozer (kuyruktan dinamik alarak).
+    # SIRALI calisirsa 8*0.05=0.40 sn surer; GERCEKTEN paralel calisirsa
+    # ~2*0.05=0.10 sn civari surer. Aradaki net fark, padisahin vezirleri
+    # BIRBIRINI BEKLETMEDEN baslattigini VE isin kuyruktan dinamik
+    # dagitildigini kanitlar.
     _dogrula(
-        ilk_gpu0_sonrasi_gpu0_sayisi < 5,
-        "gpu0, gpu1 devreye girmeden önce TÜM tokenlerini (5) bitirmedi -- round-robin GERÇEKTEN iç içe geçiyor "
-        f"(gpu1 devreye girene kadar gpu0 yalnızca {ilk_gpu0_sonrasi_gpu0_sayisi} adım attı)",
+        gecen < 0.30,
+        f"8 görev GERÇEKTEN paralel çözüldü (duvar-saati: {gecen:.3f} sn, sıralı olsaydı ~{len(tasks) * ADIM_SURESI:.2f} sn sürerdi)",
+    )
+
+    # Padişahın vezir 2/3/4'ü, vezir 1'in İLK görevini bitirmesini
+    # BEKLEMEDEN başlattığını kanıtla: ilk 4 dispatch (thread.start()
+    # çağrıları) tek bir ADIM_SURESI içinde, art arda gerçekleşmiş olmalı.
+    _dogrula(len(baslama_zamanlari) >= 4, "en az 4 görev işbaşı yaptı")
+    ilk_dort = sorted(baslama_zamanlari)[:4]
+    _dogrula(
+        (ilk_dort[-1] - ilk_dort[0]) < ADIM_SURESI,
+        "4 vezir de BİRBİRİNİN bitmesini beklemeden, hemen art arda işbaşı yaptı (padişah sıraya sokmadı)",
     )
 
 
@@ -724,7 +724,7 @@ def calistir() -> None:
     test_15_coz_yurutucu_artimli_yol_uctan_uca()
     test_16_execute_python_gercekten_numpy_calistirabiliyor_mu()
     test_17_yarisma_false_dogruluk_kontrolu()
-    test_18_coklu_gpu_round_robin_gercekten_ic_ice_geciyor_mu()
+    test_18_coklu_gpu_padisah_vezir_gercekten_paralel_mi()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

@@ -172,28 +172,6 @@ class RWKVUyumluModel(torch.nn.Module):
             print(f"[rwkv_native] {len(token_ids)} token TEK çağrıyla işlendi ({gecen:.1f} sn, {len(token_ids) / max(gecen, 1e-6):.2f} token/sn).")
         return son_logits, durum
 
-    def uret_devam_adim(self, son_logits: Any, durum: Optional[List[torch.Tensor]],
-                         do_sample: bool = True, temperature: Optional[float] = None
-                         ) -> Tuple[int, Any, List[torch.Tensor]]:
-        """uret_devam()'in TEK bir adımı: bir sonraki tokeni örnekler ve
-        state'i bir adım ileri götürür. coklu_gpu.py'nin CPU-seviyesinde
-        HİÇBİR senkronizasyon bariyeri kullanmayan round-robin çoklu-GPU
-        zamanlayıcısı, N GPU'daki N bağımsız modeli SIRAYLA bu metotla
-        TEK TOKEN ilerletir: her çağrı yalnızca KENDİ cihazının stream'ini
-        bekler (örnekleme .item() adımı bu cihaza özeldir), diğer
-        cihazlarda ÇOKTAN kuyruklanmış işleri durdurmaz -- bu yüzden bir
-        süre sonra tüm GPU'lar donanım seviyesinde gerçekten paralel
-        çalışıyor gibi olur, hiçbir thread/process/lock gerekmeden."""
-        olasiliklar = torch.softmax(
-            torch.as_tensor(son_logits) / max(temperature or 1.0, 1e-4), dim=-1
-        )
-        if do_sample:
-            sonraki_token = int(torch.multinomial(olasiliklar, 1).item())
-        else:
-            sonraki_token = int(torch.argmax(olasiliklar).item())
-        son_logits, durum = self._rwkv.forward([sonraki_token], durum)
-        return sonraki_token, son_logits, durum
-
     def uret_devam(self, son_logits: Any, durum: Optional[List[torch.Tensor]], max_new_tokens: int,
                     do_sample: bool = True, temperature: Optional[float] = None,
                     top_p: Optional[float] = None, pad_token_id: Optional[int] = None
