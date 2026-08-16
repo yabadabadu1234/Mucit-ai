@@ -1485,6 +1485,46 @@ def test_29_tekrar_cezasi_gercekten_ayni_tokene_saplanmayi_zorlastiriyor_mu() ->
               f"ajan preset'i (fonksiyon_cagirma, temp=0.0 -> greedy) artık repetition_penalty>1.0 taşıyor: {ayarlar.get('repetition_penalty')}")
 
 
+def test_30_rwkv_tokenizer_decode_tek_kotu_id_tum_metni_yok_etmiyor_mu() -> None:
+    print("[test 30] rwkv_native.RWKVUyumluTokenizer.decode(): GERÇEK kurulu `rwkv` paketinin kendi decode()'u dizide TEK bir kötü id varsa (ör. bizim pad_token_id=0) TÜM çıktıyı '�' tek karaktere indirgiyor -- bizim sarmalayıcımız bunu düzeltip geri kalan GEÇERLİ metni koruyor mu?...")
+
+    import os
+
+    os.environ.setdefault("RWKV_V7_ON", "1")
+    from rwkv.utils import PIPELINE
+
+    from rwkv_native import native_rwkv_tokenizer_yukle
+
+    ham_pipeline = PIPELINE(None, "rwkv_vocab_v20230424")
+    tok = native_rwkv_tokenizer_yukle()
+
+    gercek_ids = ham_pipeline.encode("Hello world")
+    _dogrula(len(gercek_ids) >= 2, "sınama için gerçek tokenizer'dan en az 2 gerçek id alındı")
+
+    # ÖNCE: kurulu `rwkv` paketinin KENDİ decode()'unun GERÇEKTEN bu kadar
+    # kırılgan olduğunu kanıtla (bizim sarmalayıcımız olmadan) -- bu bir
+    # varsayım DEĞİL, gerçek pakete karşı ölçülmüş bir gerçek.
+    ids_pad_gomulu = gercek_ids + [0] + gercek_ids
+    ham_sonuc = ham_pipeline.decode(ids_pad_gomulu)
+    _dogrula(ham_sonuc == "�",
+              f"KANIT: kurulu rwkv paketinin ham decode()'u, aralarında TEK bir pad(0) id'si olan iki 'Hello world' kopyasını (toplam {len(ids_pad_gomulu)} id) TAMAMEN yok edip TEK '�' karakterine indirgiyor (ölçülen: {ham_sonuc!r})")
+
+    # SONRA: bizim RWKVUyumluTokenizer.decode() aynı diziyi GEÇERLİ metni
+    # KORUYARAK doğru çözüyor.
+    bizim_sonuc = tok.decode(ids_pad_gomulu)
+    beklenen = "Hello worldHello world"  # pad(0) skip_special_tokens ile atlanır
+    _dogrula(bizim_sonuc == beklenen,
+              f"DÜZELTİLDİ: bizim decode() aynı diziyi doğru çözüyor, GEÇERLİ metin KAYBOLMUYOR (bulunan: {bizim_sonuc!r})")
+
+    # Kesik (yarım kalmış çok-baytlı UTF-8 kuyruklu) bir dizi de -- yalnızca
+    # KUYRUK '�' olmalı, BAŞTAKİ geçerli metin kaybolmamalı.
+    emoji_ids = ham_pipeline.encode("plain text before, then an emoji: 😀 and more after")
+    kesik_ids = emoji_ids[:-1]
+    kesik_sonuc = tok.decode(kesik_ids)
+    _dogrula(kesik_sonuc.startswith("plain text before, then an emoji:"),
+              f"BAŞTAKİ geçerli metin, SONDAKİ kesik/geçersiz bayt dizisine rağmen KORUNDU (bulunan: {kesik_sonuc!r})")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1515,6 +1555,7 @@ def calistir() -> None:
     test_27_modele_geri_beslenen_arac_yanitlari_ingilizce_mi()
     test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu()
     test_29_tekrar_cezasi_gercekten_ayni_tokene_saplanmayi_zorlastiriyor_mu()
+    test_30_rwkv_tokenizer_decode_tek_kotu_id_tum_metni_yok_etmiyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

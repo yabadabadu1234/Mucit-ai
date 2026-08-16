@@ -321,9 +321,37 @@ class RWKVUyumluTokenizer:
         return self._pipeline.encode(metin)
 
     def decode(self, token_idler: Any, skip_special_tokens: bool = True) -> str:
+        """KRİTİK: `rwkv` pip paketinin KENDİ `TRIE_TOKENIZER.decode()`'u
+        (site-packages/rwkv_tokenizer.py) TÜM diziyi TEK bir `bytes.decode
+        ('utf-8')` çağrısına sokuyor ve ETRAFINA ÇIPLAK bir `except:`
+        koyuyor -- dizide TEK bir sorunlu id olsa bile (ör. bizim
+        pad_token_id=0 -- ki bu id'nin idx2token'da HİÇ karşılığı yok,
+        `decodeBytes` KeyError fırlatıyor -- ya da üretim tam bir çok-
+        baytlı UTF-8 karakterin ORTASINDA kesildiyse) TÜM çıktıyı TEK bir
+        '\\ufffd' karakterine indirger, geri kalan (belki binlerce
+        karakterlik) GEÇERLİ metni de birlikte YOK EDER. Kullanıcının
+        gerçek Kaggle transkriptinde "model çıktısı (2 karakter): '��'"
+        olarak gördüğü şeyin GERÇEK kök nedeni -- muhtemelen modelin
+        ürettiği asıl (belki tutarlı) metnin çoğu kaybolmuştu.
+
+        Burada `decodeBytes` DOĞRUDAN kullanılır: (a) vocab'da karşılığı
+        OLMAYAN id'ler (pad/eos sentinel'i dahil) SESSİZCE atlanır --
+        çökmeye/tüm-diziyi-bozmaya değil, (b) `errors='replace'` ile
+        yalnızca GERÇEKTEN geçersiz olan bayt aralığı '\\ufffd' olur,
+        ETRAFINDAKİ geçerli metin KORUNUR."""
         if hasattr(token_idler, "tolist"):
             token_idler = token_idler.tolist()
-        return self._pipeline.decode(list(token_idler))
+        ham_tokenizer = self._pipeline.tokenizer
+        idx2token = ham_tokenizer.idx2token
+        parcalar = []
+        for tok in token_idler:
+            if skip_special_tokens and tok == self.pad_token_id:
+                continue
+            parca = idx2token.get(tok) if isinstance(idx2token, dict) else None
+            if parca is None:
+                continue  # vocab'da olmayan/özel id -- SESSİZCE atla, tüm diziyi bozmasın
+            parcalar.append(parca)
+        return b"".join(parcalar).decode("utf-8", errors="replace")
 
     def __call__(self, metin: str, return_tensors: Optional[str] = None, truncation: bool = True,
                  max_length: int = 4096, return_offsets_mapping: bool = False) -> Any:
