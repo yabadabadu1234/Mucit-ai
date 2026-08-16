@@ -37,7 +37,7 @@ from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut,
 from coz_yurutucu import BOS_TAHMIN, IKAZ_ESIGI_TOKEN, IKAZ_METNI, _ARAC_CAGRISI_YOK_UYARISI, _ilk_mesajlar
 from model_yapilandirmalari import RWKV
 from rwkv_batch import adim_toplu_maskeli, onisle_toplu_farkli_uzunluk, sifir_durum_toplu
-from rwkv_native import _tekrara_kilitlenme_periyodu
+from rwkv_native import _tekrar_cezasi_uygula, _tekrara_kilitlenme_periyodu
 from transkript import transkript_satiri_yaz
 from ttt_lora import mesajlari_metne_donustur, rwkv_tek_mesaji_sar, uretim_ayarlarini_al
 
@@ -49,7 +49,10 @@ def _boyutlari_al(ham_rwkv_modeli: Any):
     return ham_rwkv_modeli.n_layer, ham_rwkv_modeli.n_embd, ham_rwkv_modeli.n_head, ham_rwkv_modeli.head_size
 
 
-def _sample_tek(logit_satiri: torch.Tensor, do_sample: bool, temperature: Optional[float]) -> int:
+def _sample_tek(logit_satiri: torch.Tensor, do_sample: bool, temperature: Optional[float],
+                 repetition_penalty: Optional[float] = None, gecmis_tokenler: Optional[List[int]] = None) -> int:
+    if repetition_penalty and repetition_penalty > 1.0 and gecmis_tokenler:
+        logit_satiri = _tekrar_cezasi_uygula(logit_satiri, gecmis_tokenler, repetition_penalty)
     if not do_sample:
         return int(torch.argmax(logit_satiri).item())
     olasiliklar = torch.softmax(logit_satiri / max(temperature or 1.0, 1e-4), dim=-1)
@@ -87,6 +90,7 @@ def toplu_gorevleri_coz(
     uretim_ayarlari = uretim_ayarlarini_al(RWKV, tokenizer)
     do_sample = uretim_ayarlari.get("do_sample", True)
     temperature = uretim_ayarlari.get("temperature")
+    repetition_penalty = uretim_ayarlari.get("repetition_penalty")
 
     # 1) B FARKLI prompt -- FARKLI görev içeriği, dolayısıyla FARKLI
     # token dizileri (uzunlukları da genelde farklıdır). Bu, "aynı
@@ -129,7 +133,7 @@ def toplu_gorevleri_coz(
             if bitti[b]:
                 sonraki_tokenler.append(0)
                 continue
-            tok = _sample_tek(son_logits[b], do_sample, temperature)
+            tok = _sample_tek(son_logits[b], do_sample, temperature, repetition_penalty, uretilen_tokenler[b])
             uretilen_tokenler[b].append(tok)
             sonraki_tokenler.append(tok)
 

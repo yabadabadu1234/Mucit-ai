@@ -56,7 +56,7 @@ class RWKVSohbetOturumu:
 
     def uret(self, azami_yeni_token: int, do_sample: bool = False,
              temperature: Optional[float] = None, top_p: Optional[float] = None,
-             pad_token_id: Optional[int] = None) -> str:
+             pad_token_id: Optional[int] = None, repetition_penalty: Optional[float] = None) -> str:
         if not self._en_az_bir_kez_islendi:
             raise RuntimeError(
                 "RWKVSohbetOturumu.uret(): uret()'ten once en az bir kez metin_isle() cagrilmalidir "
@@ -65,5 +65,6 @@ class RWKVSohbetOturumu:
         uretilenler, self.son_logits, self.durum = self.model.uret_devam(
             self.son_logits, self.durum, azami_yeni_token,
             do_sample=do_sample, temperature=temperature, top_p=top_p, pad_token_id=pad_token_id,
+            repetition_penalty=repetition_penalty,
         )
         return self.tokenizer.decode(uretilenler, skip_special_tokens=True)

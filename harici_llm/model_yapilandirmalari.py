@@ -89,8 +89,15 @@ RWKV_HEAD_BOYUTU = 64
 # ==============================================================================
 DECODING_ONERILERI: Dict[str, Dict[str, Dict[str, float]]] = {
     RWKV: {
-        # Fonksiyon cagirma / agent: deterministik, sicaklik=0
-        "fonksiyon_cagirma": {"temp": 0.0, "top_p": 0.0, "penalty": 0.0},
+        # Fonksiyon cagirma / agent: deterministik, sicaklik=0.
+        # repetition_penalty ONEMLI: temp=0.0 -> do_sample=False (greedy/
+        # argmax) demektir; greedy karar rastgelelik ICERMEZ, bu yuzden
+        # bir kez yozlasmis bir tekrar donguesune girdi mi hicbir sans
+        # payi olmadan SONSUZA DEK o dongude kalir (kullanicinin gercek
+        # Kaggle transkriptinde dogrudan gozlemlenen davranis). Ceza,
+        # zaten uretilmis tokenlerin olasiligini dusurup modelin ayni
+        # tekrara SAPLANMASINI baslangicta ZORLASTIRIR.
+        "fonksiyon_cagirma": {"temp": 0.0, "top_p": 0.0, "penalty": 0.0, "repetition_penalty": 1.3},
         # not: RWKV pip paketi topp'u temp'ten SONRA uygular
         "sohbet": {"temp": 1.0, "top_p": 0.5, "alpha_presence": 2.0, "alpha_frequency": 0.1, "alpha_decay": 0.99},
         "yaratici": {"temp": 0.6, "top_p": 0.7, "alpha_presence": 2.0, "alpha_frequency": 0.2, "alpha_decay": 0.99},

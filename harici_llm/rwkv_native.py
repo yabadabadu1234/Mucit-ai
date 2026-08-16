@@ -41,6 +41,26 @@ _TEKRAR_AZAMI_PERIYOT = 750
 _TEKRAR_ASGARI_PERIYOT = 4
 
 
+def _tekrar_cezasi_uygula(logits: torch.Tensor, gecmis_tokenler: List[int], ceza: float) -> torch.Tensor:
+    """HF'nin standart `repetition_penalty`siyle AYNI mantık: `gecmis_
+    tokenler`de (bu ana kadar ÜRETİLEN tokenler) daha önce görülmüş her
+    token'ın logit'i cezalandırılır (pozitifse cezaya BÖLÜNÜR, negatifse
+    cezaYLA ÇARPILIR -- işareti koruyup büyüklüğü küçültür), böylece aynı
+    token'ı TEKRAR seçme olasılığı düşer. `ceza<=1.0` iken hiçbir etkisi
+    yoktur (no-op) -- kullanıcının fark ettiği yozlaşmış döngü olgusuna
+    karşı `_tekrara_kilitlenme_periyodu`nun (kesin/geç kalan bir "zaten
+    kilitlendi" tespiti) TAMAMLAYICISIdır: bu fonksiyon döngüye GİRMEYİ
+    baştan ZORLAŞTIRIR, öteki ise girildiyse ERKEN çıkışı garanti eder."""
+    if ceza is None or ceza <= 1.0 or not gecmis_tokenler:
+        return logits
+    benzersiz = torch.as_tensor(sorted(set(gecmis_tokenler)), dtype=torch.long, device=logits.device)
+    degerler = logits[benzersiz]
+    cezali = torch.where(degerler > 0, degerler / ceza, degerler * ceza)
+    logits = logits.clone()
+    logits[benzersiz] = cezali
+    return logits
+
+
 def _tekrara_kilitlenme_periyodu(tokenler: List[int]) -> Optional[int]:
     """`tokenler`in KUYRUĞU, uzunluğu p olan bir alt-dizinin ARDIŞIK EN AZ
     3 kez BİREBİR tekrarından mı oluşuyor (p, _TEKRAR_ASGARI_PERIYOT..
@@ -207,18 +227,30 @@ class RWKVUyumluModel(torch.nn.Module):
 
     def uret_devam(self, son_logits: Any, durum: Optional[List[torch.Tensor]], max_new_tokens: int,
                     do_sample: bool = True, temperature: Optional[float] = None,
-                    top_p: Optional[float] = None, pad_token_id: Optional[int] = None
+                    top_p: Optional[float] = None, pad_token_id: Optional[int] = None,
+                    repetition_penalty: Optional[float] = None,
                     ) -> Tuple[List[int], Any, List[torch.Tensor]]:
         """generate()'in oto-regresif kısmı: HAZIR bir (son_logits, durum)
         çiftinden devam eder, prefill'i TEKRARLAMAZ. Dönen `durum`, üretilen
         TÜM tokenleri de kapsar (RNN'in doğası gereği state zaten bu tokenleri
         "görmüş" haldedir) -- bir sonraki turde bu tokenleri TEKRAR beslemeye
-        gerek yoktur."""
+        gerek yoktur.
+
+        `repetition_penalty` (>1.0): daha önce üretilmiş tokenlerin
+        olasılığını düşürür (bkz. _tekrar_cezasi_uygula) -- ÖZELLİKLE
+        `do_sample=False` (greedy/argmax) iken kritik, çünkü greedy
+        kararlar rastgelelik içermez: bir kez döngüye girerse hiçbir
+        şansa dayalı kaçış yolu yoktur, ceza YOKSA sonsuza dek aynı
+        döngüde kalır (kullanıcının gerçek transkriptinde gözlemlenen
+        davranış tam olarak budur -- ajan preset'i `temp=0.0` kullanır)."""
         uretim_baslangici = time.time()
         uretilenler: List[int] = []
         for _adim in range(max_new_tokens):
+            logit_bu_adim = torch.as_tensor(son_logits)
+            if repetition_penalty and repetition_penalty > 1.0 and uretilenler:
+                logit_bu_adim = _tekrar_cezasi_uygula(logit_bu_adim, uretilenler, repetition_penalty)
             olasiliklar = torch.softmax(
-                torch.as_tensor(son_logits) / max(temperature or 1.0, 1e-4), dim=-1
+                logit_bu_adim / max(temperature or 1.0, 1e-4), dim=-1
             )
             if do_sample:
                 sonraki_token = int(torch.multinomial(olasiliklar, 1).item())
@@ -253,6 +285,7 @@ class RWKVUyumluModel(torch.nn.Module):
                  do_sample: bool = True, temperature: Optional[float] = None,
                  top_p: Optional[float] = None, pad_token_id: Optional[int] = None,
                  baslangic_durumu: Optional[List[torch.Tensor]] = None,
+                 repetition_penalty: Optional[float] = None,
                  **_yoksayilan: Any) -> torch.Tensor:
         B, T = input_ids.shape
         assert B == 1, "native RWKV generate() şu an tek örnek (B=1) destekliyor"
@@ -268,6 +301,7 @@ class RWKVUyumluModel(torch.nn.Module):
         uretilenler, _son_logits, _durum = self.uret_devam(
             son_logits, durum, max_new_tokens,
             do_sample=do_sample, temperature=temperature, top_p=top_p, pad_token_id=pad_token_id,
+            repetition_penalty=repetition_penalty,
         )
         tam_dizi = input_ids[0].tolist() + uretilenler
         return torch.tensor([tam_dizi], device=self._cihaz, dtype=torch.long)

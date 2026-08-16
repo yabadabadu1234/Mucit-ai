@@ -336,10 +336,11 @@ def mesajlari_metne_donustur(tokenizer: Any, model_ailesi: str, mesajlar: List[D
 
 
 def uretim_ayarlarini_al(model_ailesi: str, tokenizer: Any, preset: str = "fonksiyon_cagirma") -> Dict[str, Any]:
-    """DECODING_ONERILERI'nden do_sample/temperature/top_p/pad_token_id
-    türetir -- hem uret_sohbet() (tam-yeniden-işleme yolu) hem de
-    rwkv_oturum.RWKVSohbetOturumu (artımlı/tek-kez-işleme yolu, bkz.
-    coz_yurutucu._tek_deneme_uret) AYNI karar mantığını kullanır."""
+    """DECODING_ONERILERI'nden do_sample/temperature/top_p/pad_token_id/
+    repetition_penalty türetir -- hem uret_sohbet() (tam-yeniden-işleme
+    yolu) hem de rwkv_oturum.RWKVSohbetOturumu (artımlı/tek-kez-işleme
+    yolu, bkz. coz_yurutucu._tek_deneme_uret) AYNI karar mantığını
+    kullanır."""
     ayar = DECODING_ONERILERI[model_ailesi][preset]
     ornekleme = ayar["temp"] > 0.0
     sonuc: Dict[str, Any] = {"do_sample": ornekleme, "pad_token_id": tokenizer.pad_token_id}
@@ -347,6 +348,8 @@ def uretim_ayarlarini_al(model_ailesi: str, tokenizer: Any, preset: str = "fonks
         sonuc["temperature"] = ayar["temp"]
         if ayar.get("top_p", 0.0) > 0.0:
             sonuc["top_p"] = ayar["top_p"]
+    if ayar.get("repetition_penalty", 1.0) > 1.0:
+        sonuc["repetition_penalty"] = ayar["repetition_penalty"]
     return sonuc
 
 
@@ -384,6 +387,8 @@ def uret_sohbet(
                 uretim_kwargs["top_p"] = ayar["top_p"]
         if ayar.get("alpha_presence"):
             uretim_kwargs["repetition_penalty"] = 1.0 + ayar["alpha_presence"] / 10.0
+        elif ayar.get("repetition_penalty", 1.0) > 1.0:
+            uretim_kwargs["repetition_penalty"] = ayar["repetition_penalty"]
 
         cikti_idler = lora_model.generate(**uretim_kwargs)
 

@@ -1422,6 +1422,69 @@ def test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu() -> None:
               f"tespit MAKUL bir sürede (birkaç kontrol adımı içinde) gerçekleşti, geç kalmadı ({len(uretilenler)} token)")
 
 
+def test_29_tekrar_cezasi_gercekten_ayni_tokene_saplanmayi_zorlastiriyor_mu() -> None:
+    print("[test 29] rwkv_native._tekrar_cezasi_uygula + uret_devam(repetition_penalty=...): greedy (do_sample=False) kararda, daha önce üretilmiş bir token'ın olasılığı GERÇEKTEN düşüyor mu -- kullanıcının istediği 'modele tekrar cezası' bu mu?...")
+
+    from rwkv_native import RWKVUyumluModel, _tekrar_cezasi_uygula
+
+    # --- Birim test: pozitif logit cezaya BÖLÜNÜR, negatif logit cezaYLA
+    # ÇARPILIR (işaret korunur, büyüklük küçülür) -- HF'nin standart
+    # repetition_penalty tanımıyla AYNI.
+    logits = torch.tensor([4.0, -4.0, 1.0, 0.0])
+    cezali = _tekrar_cezasi_uygula(logits, gecmis_tokenler=[0, 1], ceza=2.0)
+    _dogrula(abs(cezali[0].item() - 2.0) < 1e-6, "pozitif logit (4.0) cezaya BÖLÜNDÜ (2.0)")
+    _dogrula(abs(cezali[1].item() - (-8.0)) < 1e-6, "negatif logit (-4.0) cezaYLA ÇARPILDI (-8.0, işaret korundu)")
+    _dogrula(cezali[2].item() == 1.0 and cezali[3].item() == 0.0, "hiç geçmemiş tokenler (2,3) DOKUNULMADAN kaldı")
+    _dogrula(_tekrar_cezasi_uygula(logits, [], 2.0) is logits, "geçmiş boşsa ceza uygulanmadan AYNI tensör döndü (gereksiz kopya yok)")
+    _dogrula(_tekrar_cezasi_uygula(logits, [0], 1.0) is logits, "ceza<=1.0 iken no-op (geriye dönük uyumluluk, varsayılan davranış bozulmadı)")
+
+    # --- Uçtan uca: kasıtlı olarak "tek bir token'a saplanmaya EĞİLİMLİ"
+    # (o tokenin logiti hep en yüksek) sahte bir model, CEZASIZ iken hep
+    # AYNI tokeni seçer (yozlaşmış döngünün ta kendisi); ceza AÇILINCA
+    # birden fazla FARKLI token arasında geçiş yapmaya BAŞLAMALI.
+    class _TekTokene_Saplanan_RWKV:
+        def __init__(self, vocab: int = 8, d: int = 4):
+            self.vocab, self.d = vocab, d
+            self.emb = torch.nn.Parameter(torch.randn(vocab, d))
+            self.head = torch.nn.Parameter(torch.randn(d, vocab))
+            self.w = {"emb.weight": self.emb, "head.weight": self.head}
+
+        def forward(self, tokens, state, full_output=False):
+            # Token 3'ün logiti HER ZAMAN en yüksek (5.5), diğerleri 5.0 --
+            # ceza olmadan greedy karar SONSUZA DEK 3'ü seçer. Fark (0.5)
+            # KASITLI OLARAK KÜÇÜK: repetition_penalty=1.3 uygulanınca
+            # 5.5/1.3≈4.23 < 5.0 olup sıralamayı GERÇEKTEN değiştirir --
+            # gerçek modeldeki ince olasılık farklarını temsil eder.
+            logit = torch.full((self.vocab,), 5.0)
+            logit[3] = 5.5
+            return logit, (state or [torch.zeros(self.d)])
+
+    native = _TekTokene_Saplanan_RWKV()
+    model = RWKVUyumluModel(native, "cpu fp32")
+    son_logits = torch.full((native.vocab,), 5.0)
+    son_logits[3] = 5.5
+
+    cezasiz, _l1, _d1 = model.uret_devam(son_logits.clone(), None, max_new_tokens=6, do_sample=False)
+    _dogrula(cezasiz == [3, 3, 3, 3, 3, 3], "CEZASIZ (varsayılan): greedy karar beklendiği gibi hep AYNI tokende (3) SAPLANIP KALIYOR")
+
+    cezali_uret, _l2, _d2 = model.uret_devam(son_logits.clone(), None, max_new_tokens=6, do_sample=False, repetition_penalty=1.3)
+    _dogrula(len(set(cezali_uret)) > 1, f"repetition_penalty=1.3 İLE: greedy karar artık TEK bir tokende saplanıp kalmıyor, birden fazla farklı token üretti: {cezali_uret}")
+    _dogrula(cezali_uret[0] == 3, "İLK token hâlâ 3 (henüz geçmişte yok, cezalanmadı) -- ceza yalnızca DAHA ÖNCE üretilmiş tokenleri etkiliyor")
+    _dogrula(cezali_uret[1] != 3, "ceza uygulanınca İKİNCİ adımda artık 3 TEKRAR seçilmiyor (olasılığı düşürüldü)")
+
+    # --- Üretim ayarlarının GERÇEKTEN devreye girdiğini doğrula: ajan
+    # (fonksiyon_cagirma) preset'inde artık repetition_penalty>1.0 var mı?
+    from model_yapilandirmalari import RWKV
+    from ttt_lora import uretim_ayarlarini_al
+
+    class _SahteTokenizer:
+        pad_token_id = 0
+
+    ayarlar = uretim_ayarlarini_al(RWKV, _SahteTokenizer())
+    _dogrula(ayarlar.get("repetition_penalty", 1.0) > 1.0,
+              f"ajan preset'i (fonksiyon_cagirma, temp=0.0 -> greedy) artık repetition_penalty>1.0 taşıyor: {ayarlar.get('repetition_penalty')}")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1451,6 +1514,7 @@ def calistir() -> None:
     test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu()
     test_27_modele_geri_beslenen_arac_yanitlari_ingilizce_mi()
     test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu()
+    test_29_tekrar_cezasi_gercekten_ayni_tokene_saplanmayi_zorlastiriyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
