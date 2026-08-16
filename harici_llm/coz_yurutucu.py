@@ -83,6 +83,7 @@ def _tek_deneme_uret(
     ]
 
     for _tur in range(azami_tur):
+        print(f"[coz_yurutucu] {task.name}: tur {_tur + 1}/{azami_tur} başlıyor...")
         model_ciktisi = uret_sohbet(
             lora_model, tokenizer, model_ailesi, mesajlar, azami_yeni_token=azami_yeni_token
         )

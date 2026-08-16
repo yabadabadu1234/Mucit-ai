@@ -21,11 +21,13 @@ devre disi kalir (inference/degerlendirme calisir, TTT calismaz). Bu,
 kaide/hile ile ortulmez -- kullaniciya acikca bildirilir.
 """
 import os
+import time
 from typing import Any, List, Optional
 
 import torch
 
 _HAM_PTH_UYARISI_BASILDI = False
+_ILERLEME_ADIMI = 20  # her N tokende bir ilerleme satırı bas (sessiz kalıp "donmuş gibi" görünmesin diye)
 
 
 def rwkv_ham_pth_mi(yol: str) -> bool:
@@ -103,6 +105,9 @@ class RWKVUyumluModel(torch.nn.Module):
         B, T = input_ids.shape
         durumlar = list(past_key_values) if past_key_values is not None else [None] * B
 
+        baslangic = time.time()
+        if B * T > _ILERLEME_ADIMI:
+            print(f"[rwkv_native] forward(): {B} satır x {T} token, native RWKV her tokeni TEK TEK işler (toplam {B * T} adım)...")
         tum_logitler = []
         yeni_durumlar = []
         for b in range(B):
@@ -112,6 +117,10 @@ class RWKVUyumluModel(torch.nn.Module):
                 token = int(input_ids[b, t].item())
                 logit, durum = self._rwkv.forward([token], durum)
                 satir_logitleri.append(torch.as_tensor(logit, device=self._cihaz))
+                adim = b * T + t + 1
+                if adim % _ILERLEME_ADIMI == 0 or adim == B * T:
+                    gecen = time.time() - baslangic
+                    print(f"[rwkv_native]   forward(): {adim}/{B * T} adım ({gecen:.1f} sn, {adim / max(gecen, 1e-6):.2f} adım/sn)")
             tum_logitler.append(torch.stack(satir_logitleri, dim=0))
             yeni_durumlar.append(durum)
 
@@ -139,12 +148,18 @@ class RWKVUyumluModel(torch.nn.Module):
 
         durum = [t.clone() for t in baslangic_durumu] if baslangic_durumu is not None else None
         son_logits = None
+        onbellek_baslangici = time.time()
+        print(f"[rwkv_native] prompt işleniyor: {T} token, HER biri ayrı ayrı (native RWKV batching desteklemez) -- bu adım büyük promptlarda uzun sürebilir...")
         for t in range(T):
             token = int(input_ids[0, t].item())
             son_logits, durum = self._rwkv.forward([token], durum)
+            if (t + 1) % _ILERLEME_ADIMI == 0 or (t + 1) == T:
+                gecen = time.time() - onbellek_baslangici
+                print(f"[rwkv_native]   prompt: {t + 1}/{T} token işlendi ({gecen:.1f} sn, {(t + 1) / max(gecen, 1e-6):.2f} token/sn)")
 
+        uretim_baslangici = time.time()
         uretilenler: List[int] = []
-        for _ in range(max_new_tokens):
+        for _adim in range(max_new_tokens):
             olasiliklar = torch.softmax(
                 torch.as_tensor(son_logits) / max(temperature or 1.0, 1e-4), dim=-1
             )
@@ -154,11 +169,16 @@ class RWKVUyumluModel(torch.nn.Module):
                 sonraki_token = int(torch.argmax(olasiliklar).item())
 
             uretilenler.append(sonraki_token)
+            if (_adim + 1) % _ILERLEME_ADIMI == 0:
+                gecen = time.time() - uretim_baslangici
+                print(f"[rwkv_native]   üretim: {_adim + 1}/{max_new_tokens} token üretildi ({gecen:.1f} sn, {(_adim + 1) / max(gecen, 1e-6):.2f} token/sn)")
             if pad_token_id is not None and sonraki_token == pad_token_id:
                 break
 
             son_logits, durum = self._rwkv.forward([sonraki_token], durum)
 
+        gecen_toplam = time.time() - uretim_baslangici
+        print(f"[rwkv_native] üretim tamamlandı: {len(uretilenler)} token, {gecen_toplam:.1f} sn.")
         tam_dizi = input_ids[0].tolist() + uretilenler
         return torch.tensor([tam_dizi], device=self._cihaz, dtype=torch.long)
 

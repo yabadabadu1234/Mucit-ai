@@ -1,3 +1,4 @@
+import time
 from typing import Any, Dict, List, Optional
 
 import torch
@@ -343,6 +344,11 @@ def uret_sohbet(
 
     ornekleme = ayar["temp"] > 0.0
 
+    baslangic = time.time()
+    print(
+        f"[ttt_lora] uret_sohbet: {girdiler['input_ids'].shape[1]} girdi tokeni, "
+        f"azami {azami_yeni_token} yeni token üretilecek (prompt-işleme dahil, uzun sürebilir)..."
+    )
     with torch.no_grad():
         uretim_kwargs: Dict[str, Any] = dict(
             **girdiler,
@@ -360,4 +366,6 @@ def uret_sohbet(
         cikti_idler = lora_model.generate(**uretim_kwargs)
 
     uretilen = cikti_idler[0][girdiler["input_ids"].shape[1]:]
+    gecen = time.time() - baslangic
+    print(f"[ttt_lora] uret_sohbet: {len(uretilen)} token üretildi ({gecen:.1f} sn, {len(uretilen) / max(gecen, 1e-6):.2f} token/sn).")
     return tokenizer.decode(uretilen, skip_special_tokens=True)
