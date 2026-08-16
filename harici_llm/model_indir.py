@@ -2,16 +2,22 @@
 INTERNETLI ilk calistirma icin indirme betigi.
 
 Kullanim akisi (kullanicinin belirttigi iki asamali yontem):
-  1) BU dosya, internet ACIK bir Kaggle notebook'unda calistirilir. Her sey
+  1) BU dosya, internet ACIK bir Kaggle notebook'unda calistirilir. Model
      ONCE /tmp altina (GECICI_INDIRME_KOKU) indirilir; /kaggle/working'in
-     20GB cikti sinirini asip asmadigi olcculur. Asmiyorsa /tmp'deki
+     20GB cikti sinirini asip asmadigi olculur. Asmiyorsa /tmp'deki
      her sey oldugu gibi /kaggle/working/modeller'e KOPYALANIR. Asiyorsa,
-     /tmp'de biriken HER SEY (model + pip paketleri) TEK bir zip dosyasinda
-     toplanip yalnizca o zip /kaggle/working'e yazilir.
+     /tmp'de biriken TUM model dosyalari TEK bir zip dosyasinda toplanip
+     yalnizca o zip /kaggle/working'e yazilir.
   2) O cikti (klasor ya da zip), ikinci (internet KAPALI) calistirmada
      girdi olarak eklenir. model_yapilandirmalari.py, ortam degiskenleri
      (MUCIT_RWKV_YOLU) veya asagidaki VARSAYILAN_INDIRME_KOKU altindaki
      yerel yolu otomatik bulur.
+
+  NOT: `rwkv` pip paketi ARTIK BU BETIK TARAFINDAN INDIRILMIYOR --
+  Kaggle notebook'unun kendi "Install dependencies" bolumune eklendi,
+  notebook baslamadan once (internet acik/kapali farketmeksizin)
+  kuruluyor. Asagida hangi paketlerin o bolume eklenmesi gerektigi
+  listelenir.
 
 Onemli duzeltmeler / kararlar:
   - Mamba-Codestral YEDEK MODEL OLARAK KALDIRILDI (kullanici talebiyle).
@@ -93,26 +99,10 @@ def rwkv_indir(boyut: str = RWKV_ANA_BOYUT, hedef_kok: str = GECICI_INDIRME_KOKU
     return hedef_dizin
 
 
-# `rwkv` PyPI'de gercekten var (BlinkDL yayinliyor) -- offline calistirmada
-# `pip install rwkv` internete erisemedigi icin basarisiz olur. Cozum: bu
-# INTERNET-ACIK betikte wheel'i (ve tum bagimliliklarini) KURMADAN, sadece
-# indirip diske kaydediyoruz; offline calistirmada `pip install --no-index`
-# ile yerel klasordan kuruluyor.
-PAKET_ADLARI = ["rwkv", "tokenizers", "ninja"]
-
-
-def paketleri_indir(hedef_kok: str = GECICI_INDIRME_KOKU, paketler: List[str] = PAKET_ADLARI) -> str:
-    import subprocess
-    import sys
-
-    hedef_dizin = os.path.join(hedef_kok, "paketler")
-    os.makedirs(hedef_dizin, exist_ok=True)
-    print(f"[model_indir] === pip paketleri /tmp'ye indiriliyor (KURULMUYOR, sadece indiriliyor) -> {hedef_dizin} ===")
-    komut = [sys.executable, "-m", "pip", "download", "-d", hedef_dizin] + paketler
-    print(f"[model_indir] çalıştırılıyor: {' '.join(komut)}")
-    subprocess.run(komut, check=True)
-    print(f"[model_indir] paketler /tmp'ye indirildi: {hedef_dizin}")
-    return hedef_dizin
+# `rwkv` (ve tum bagimliliklari) artik Kaggle notebook'unun "Install
+# dependencies" bolumune eklendi -- notebook baslamadan ONCE, internet
+# acik/kapali farketmeksizin kuruluyor. Bu betik artik pip paketi
+# indirmiyor; yalnizca model agirligini indirir.
 
 
 def _dizin_boyutu_bayt(dizin: str) -> int:
@@ -157,9 +147,6 @@ def hepsini_indir(
     print("[model_indir] ================= RWKV-7 G1 (/tmp'ye) =================")
     rwkv_indir(boyut=rwkv_boyutu, hedef_kok=gecici_kok)
 
-    print("\n[model_indir] ================= PIP PAKETLERİ (/tmp'ye) =================")
-    paketleri_indir(hedef_kok=gecici_kok)
-
     print("\n[model_indir] ================= /tmp -> /kaggle/working AKTARIMI =================")
     sonuc_yolu = _geciciyi_nihaiye_tasi(gecici_kok, nihai_kok, zip_yolu)
 
@@ -168,8 +155,7 @@ def hepsini_indir(
     print(
         "[model_indir] Bu çıktı notebook bitince otomatik olarak veri kümesi haline gelir. "
         "İkinci (internet KAPALI) çalıştırmada bunu girdi olarak ekleyip "
-        "(zip ise önce unzip edin), MUCIT_RWKV_YOLU / MUCIT_PAKETLER_YOLU ortam "
-        "değişkenleriyle gerçek yolları geçin."
+        "(zip ise önce unzip edin), MUCIT_RWKV_YOLU ortam değişkeniyle gerçek yolu geçin."
     )
     return sonuc_yolu
 
@@ -177,20 +163,14 @@ def hepsini_indir(
 if __name__ == "__main__":
     import argparse
 
-    ayristirici = argparse.ArgumentParser(description="RWKV-7 G1 modelini ve rwkv pip paketini /tmp üzerinden indirir")
+    ayristirici = argparse.ArgumentParser(description="RWKV-7 G1 modelini /tmp üzerinden indirir")
     ayristirici.add_argument("--rwkv_boyutu", type=str, default=RWKV_ANA_BOYUT, choices=sorted(RWKV_DOSYA_ADLARI))
     ayristirici.add_argument("--gecici_kok", type=str, default=GECICI_INDIRME_KOKU)
     ayristirici.add_argument("--nihai_kok", type=str, default=VARSAYILAN_INDIRME_KOKU)
     ayristirici.add_argument("--zip_yolu", type=str, default=ZIP_CIKTI_YOLU)
-    ayristirici.add_argument("--sadece", type=str, default=None, choices=["rwkv", "paketler"])
     args = ayristirici.parse_args()
 
-    if args.sadece == "rwkv":
-        rwkv_indir(boyut=args.rwkv_boyutu, hedef_kok=args.gecici_kok)
-    elif args.sadece == "paketler":
-        paketleri_indir(hedef_kok=args.gecici_kok)
-    else:
-        hepsini_indir(
-            rwkv_boyutu=args.rwkv_boyutu, gecici_kok=args.gecici_kok,
-            nihai_kok=args.nihai_kok, zip_yolu=args.zip_yolu,
-        )
+    hepsini_indir(
+        rwkv_boyutu=args.rwkv_boyutu, gecici_kok=args.gecici_kok,
+        nihai_kok=args.nihai_kok, zip_yolu=args.zip_yolu,
+    )
