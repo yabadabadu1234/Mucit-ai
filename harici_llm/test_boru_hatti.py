@@ -12,7 +12,7 @@ gercekten forward/backward calisan) bir torch modeli kullanilir; bu model
 bulmacayi COZEMEYECEK kadar kucuktur ve bu beklenen bir durumdur.
 """
 import sys
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 import torch
@@ -903,6 +903,88 @@ def test_20_rwkv_batch_gercek_rwkv_paketiyle_sayisal_dogrulama() -> None:
                   f"RWKVTopluDurumYoneticisi sarmalayıcısı da referansla eşleşti (azami fark={fark2:.2e})")
 
 
+def test_21_vram_tabanli_b_kesfi() -> None:
+    print("[test 21] vram_izleyici.VramTabanliBKesifcisi: gerçek ölçümle azami-B tahmini doğru sıçrıyor mu, günlükler görev başına mı, OOM'a 1 B'lik payla mı tepki veriyor?...")
+
+    from vram_izleyici import VramTabanliBKesifcisi, oom_korumali_calistir
+
+    # --- Senaryo A: iki farklı B'de ölçüm alınınca marjinal maliyet
+    # DOĞRU hesaplanıp azami B'ye DOĞRUDAN sıçranmalı (129,130 diye
+    # sürünmeden) -- burada GERÇEK CUDA yok, bu yüzden bellek_olcer
+    # enjekte edilerek "toplam 21 GB, ağırlık 14.6 GB, B başına 39 MB"
+    # senaryosu SAYISAL olarak taklit ediliyor.
+    TOPLAM_BAYT = 21 * 1024 ** 3
+    AGIRLIK_BAYT = int(14.6 * 1024 ** 3)
+    B_BASINA_BAYT = 39 * 1024 ** 2
+
+    def _bellek_olcer_taklit(cihaz: str) -> Tuple[int, int]:
+        b = kayitli_b["deger"]
+        return AGIRLIK_BAYT + b * B_BASINA_BAYT, TOPLAM_BAYT
+
+    kayitli_b = {"deger": 128}
+    loglar: List[str] = []
+    kesifci = VramTabanliBKesifcisi(
+        "cuda:0", baslangic_b=128,
+        bellek_olcer=_bellek_olcer_taklit, bellek_sifirla=lambda cihaz: None,
+        log_yaz=loglar.append,
+    )
+
+    yeni_b = kesifci.gorev_sonrasi_olc_ve_ayarla()
+    _dogrula(kesifci.azami_guvenli_b is None, "TEK ölçümle henüz azami B kesinleşmedi (marjinal maliyet bilinmiyor)")
+    _dogrula(yeni_b == 129, "marjinal maliyet bilinmezken bir sonraki deneme İHTİYATLA yalnızca +1 arttı (129)")
+    _dogrula(len(loglar) == 1, "her görev sonrası TAM OLARAK bir özet log basıldı (ne spam ne sessizlik)")
+
+    kayitli_b["deger"] = 129
+    yeni_b = kesifci.gorev_sonrasi_olc_ve_ayarla()
+    # Artık iki farklı B ölçümü var -> gerçek marjinal maliyet (39MB/B)
+    # hesaplanıp DOĞRUDAN tavana sıçranmalı.
+    beklenen_ust_sinir = int(TOPLAM_BAYT * 0.93)
+    beklenen_azami = 129 + int((beklenen_ust_sinir - (AGIRLIK_BAYT + 129 * B_BASINA_BAYT)) // B_BASINA_BAYT)
+    _dogrula(kesifci.azami_guvenli_b == beklenen_azami,
+              f"iki ölçümden GERÇEK marjinal maliyet (39MB/B) çıkarılıp azami B'ye DOĞRUDAN sıçrandı (beklenen={beklenen_azami}, bulunan={kesifci.azami_guvenli_b})")
+    _dogrula(kesifci.calisan_b() == kesifci.azami_guvenli_b - 1,
+              "çalışan B, azami güvenli B'den TAM OLARAK 1 eksik (kullanıcının istediği tek birimlik pay, fazlası değil)")
+    _dogrula(len(loglar) == 3, "tahmin DEĞİŞTİĞİ için özet logun HEMEN ardından ayrı bir 'tavan güncellendi' logu da basıldı (2+1=3)")
+    _dogrula("AZAMİ GÜVENLİ B TAHMİNİ GÜNCELLENDİ" in loglar[2], "tavan değişim logu belirgin biçimde işaretlendi")
+
+    # --- Senaryo B: gerçek bir OOM yakalanınca azami B KESİN olarak
+    # OOM'a düşen B - 1'e sabitlenmeli (artık tahmin değil).
+    def _her_zaman_oom(b: int) -> str:
+        raise __import__("torch").OutOfMemoryError("sahte OOM")
+
+    loglar2: List[str] = []
+    kesifci2 = VramTabanliBKesifcisi(
+        "cuda:1", baslangic_b=200,
+        bellek_olcer=lambda cihaz: (0, TOPLAM_BAYT), bellek_sifirla=lambda cihaz: None,
+        log_yaz=loglar2.append,
+    )
+    kesifci2.azami_guvenli_b = 200  # önceden "sanılan" tavan
+    try:
+        oom_korumali_calistir(kesifci2, _her_zaman_oom)
+        _dogrula(False, "OOM her defasında tekrarlanıyorsa sonunda pes edilip hata yükseltilmeliydi")
+    except Exception:
+        pass
+    _dogrula(kesifci2.azami_guvenli_b < 200,
+              "OOM sonrası azami güvenli B kesinlikle DÜŞÜRÜLDÜ (artık iyimser tahmin değil)")
+    _dogrula(any("KESİN" in s for s in loglar2), "OOM'un HEMEN ardından, gecikmeden bir 'kesin sınır' logu basıldı")
+
+    # --- Senaryo C: OOM YOKSA oom_korumali_calistir çağrıyı doğru B ile
+    # yapar ve sonucu döndürür.
+    kesifci3 = VramTabanliBKesifcisi(
+        "cuda:2", baslangic_b=64,
+        bellek_olcer=lambda cihaz: (1, TOPLAM_BAYT), bellek_sifirla=lambda cihaz: None,
+        log_yaz=lambda s: None,
+    )
+    kullanilan_b_larla: List[int] = []
+
+    def _basarili(b: int) -> str:
+        kullanilan_b_larla.append(b)
+        return "tamam"
+
+    sonuc = oom_korumali_calistir(kesifci3, _basarili)
+    _dogrula(sonuc == "tamam" and kullanilan_b_larla == [64], "OOM yoksa iş TEK seferde, kesifci'nin o anki çalışan B'siyle çalıştırıldı")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -924,6 +1006,7 @@ def calistir() -> None:
     test_18_coklu_gpu_padisah_vezir_gercekten_paralel_mi()
     test_19_ikaz_esigi_yazma_hakki_tukenmek_uzere()
     test_20_rwkv_batch_gercek_rwkv_paketiyle_sayisal_dogrulama()
+    test_21_vram_tabanli_b_kesfi()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
