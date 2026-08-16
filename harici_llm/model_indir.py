@@ -2,35 +2,45 @@
 INTERNETLI ilk calistirma icin indirme betigi.
 
 Kullanim akisi (kullanicinin belirttigi iki asamali yontem):
-  1) BU dosya, internet ACIK bir Kaggle notebook'unda calistirilir.
-     Modeller /kaggle/working/modeller altina indirilir; notebook
-     bitince bu klasor otomatik olarak notebook'un CIKTI veri kumesi
-     (output dataset) olur.
-  2) O cikti, ikinci (internet KAPALI) calistirmada girdi olarak eklenir.
-     model_yapilandirmalari.py, ortam degiskenleri (MUCIT_RWKV_YOLU /
-     MUCIT_MAMBA_YOLU) veya asagidaki VARSAYILAN_INDIRME_KOKU altindaki
-     yerel yolu otomatik bulur -- ayni harici_llm/gonderim_uret.py hicbir
-     degisiklik yapilmadan calisir.
+  1) BU dosya, internet ACIK bir Kaggle notebook'unda calistirilir. Her sey
+     ONCE /tmp altina (GECICI_INDIRME_KOKU) indirilir; /kaggle/working'in
+     20GB cikti sinirini asip asmadigi olcculur. Asmiyorsa /tmp'deki
+     her sey oldugu gibi /kaggle/working/modeller'e KOPYALANIR. Asiyorsa,
+     /tmp'de biriken HER SEY (model + pip paketleri) TEK bir zip dosyasinda
+     toplanip yalnizca o zip /kaggle/working'e yazilir.
+  2) O cikti (klasor ya da zip), ikinci (internet KAPALI) calistirmada
+     girdi olarak eklenir. model_yapilandirmalari.py, ortam degiskenleri
+     (MUCIT_RWKV_YOLU) veya asagidaki VARSAYILAN_INDIRME_KOKU altindaki
+     yerel yolu otomatik bulur.
 
-Onemli duzeltmeler:
-  - mlx-community/Mamba-Codestral-7B-v0.1 Apple MLX formatindadir, CUDA/
-    PyTorch ile CALISMAZ. Bunun yerine orijinal, PyTorch/safetensors
-    formatindaki mistralai/Mamba-Codestral-7B-v0.1 indirilir.
+Onemli duzeltmeler / kararlar:
+  - Mamba-Codestral YEDEK MODEL OLARAK KALDIRILDI (kullanici talebiyle).
+    Yalnizca RWKV-7 indirilir; ttt_lora.py'deki ana/yedek dusme mantigi
+    artik tek adaya sahip.
   - RWKV-7 icin ANA secim 7.2B'dir (7.2B FP16 ~14.4GB agirlik, 22.5GB VRAM
     butcesinde LoRA+TTT+MCTS dallanmasi icin hala yer birakiyor; 1.5B'ye
     gore akil yurutme kapasitesi farki, quantization kaybindan cok daha
-    buyuktur). VRAM sikisirsa `8bit_quantize_et=True` ile calistirin.
+    buyuktur).
   - BlinkDL/rwkv7-g1 deposu HEM ham .pth kontrol noktalarini (orijinal
     `rwkv` pip paketiyle kullanilir) HEM DE (varsa) transformers-uyumlu
     config/tokenizer dosyalarini barindirabilir. Bu betik once deponun
     GERCEK dosya listesini `list_repo_files` ile okur (kor tahmin
     yapmaz), sonra istenmeyen diger boy .pth dosyalarini HARIC tutarak
     geri kalan her seyi + secilen .pth'i indirir.
+  - NOT: .pth/.safetensors dosyalari zaten yogun ikili (float16) veri
+    oldugundan zip sikistirmasi bunlarda buyuk bir boyut kazanci
+    SAGLAMAYABILIR; yine de istenen usul (20GB'i asinca tek zip'e alma)
+    harfiyen uygulanir.
 """
 import os
+import shutil
 from typing import List, Optional
 
+GECICI_INDIRME_KOKU = "/tmp/mucit_gecici_indirmeler"
 VARSAYILAN_INDIRME_KOKU = "/kaggle/working/modeller"
+ZIP_CIKTI_YOLU = "/kaggle/working/mucit_harici_llm_paketi.zip"
+
+CIKTI_ESIK_BAYT = 20 * 1024 ** 3  # 20 GB — /kaggle/working çıktı sınırı
 
 RWKV_REPO_ID = "BlinkDL/rwkv7-g1"
 RWKV_DOSYA_ADLARI = {
@@ -39,8 +49,6 @@ RWKV_DOSYA_ADLARI = {
     "7.2b": "rwkv7-g1i-7.2b-20260805-ctx16384.pth",
 }
 RWKV_ANA_BOYUT = "7.2b"  # öneri: bkz. bu dosyanın başındaki gerekçe
-
-MAMBA_REPO_ID = "mistralai/Mamba-Codestral-7B-v0.1"  # mlx-community DEĞİL — o Apple MLX formatı, CUDA'da çalışmaz
 
 
 def _tum_pth_disindaki_dosyalari_ve_secileni_indir(
@@ -72,33 +80,18 @@ def _tum_pth_disindaki_dosyalari_ve_secileni_indir(
     return indirilenler
 
 
-def rwkv_indir(boyut: str = RWKV_ANA_BOYUT, hedef_kok: str = VARSAYILAN_INDIRME_KOKU) -> str:
+def rwkv_indir(boyut: str = RWKV_ANA_BOYUT, hedef_kok: str = GECICI_INDIRME_KOKU) -> str:
     if boyut not in RWKV_DOSYA_ADLARI:
         raise ValueError(f"Bilinmeyen RWKV boyutu: {boyut!r}. Seçenekler: {sorted(RWKV_DOSYA_ADLARI)}")
 
     secilen_pth = RWKV_DOSYA_ADLARI[boyut]
-    hedef_dizin = os.path.join(hedef_kok, "rwkv")
+    hedef_dizin = os.path.join(hedef_kok, "modeller", "rwkv")
 
-    print(f"[model_indir] === RWKV-7 G1 ({boyut}, dosya: {secilen_pth}) indiriliyor -> {hedef_dizin} ===")
+    print(f"[model_indir] === RWKV-7 G1 ({boyut}, dosya: {secilen_pth}) /tmp'ye indiriliyor -> {hedef_dizin} ===")
     _tum_pth_disindaki_dosyalari_ve_secileni_indir(RWKV_REPO_ID, secilen_pth, hedef_dizin)
-    print(f"[model_indir] RWKV-7 G1 tamamlandı: {hedef_dizin}")
+    print(f"[model_indir] RWKV-7 G1 /tmp'ye indirme tamamlandı: {hedef_dizin}")
     return hedef_dizin
 
-
-def mamba_indir(hedef_kok: str = VARSAYILAN_INDIRME_KOKU) -> str:
-    from huggingface_hub import snapshot_download
-
-    hedef_dizin = os.path.join(hedef_kok, "mamba")
-    print(f"[model_indir] === Mamba-Codestral-7B-v0.1 (mistralai, PyTorch) indiriliyor -> {hedef_dizin} ===")
-    snapshot_download(
-        repo_id=MAMBA_REPO_ID, local_dir=hedef_dizin,
-        allow_patterns=["*.json", "*.safetensors", "*.safetensors.index.json", "*.model", "*.txt", "tokenizer*"],
-    )
-    print(f"[model_indir] Mamba-Codestral tamamlandı: {hedef_dizin}")
-    return hedef_dizin
-
-
-PAKET_HEDEF_KOK = "/kaggle/working/paketler"
 
 # `rwkv` PyPI'de gercekten var (BlinkDL yayinliyor) -- offline calistirmada
 # `pip install rwkv` internete erisemedigi icin basarisiz olur. Cozum: bu
@@ -108,60 +101,96 @@ PAKET_HEDEF_KOK = "/kaggle/working/paketler"
 PAKET_ADLARI = ["rwkv", "tokenizers", "ninja"]
 
 
-def paketleri_indir(hedef_kok: str = PAKET_HEDEF_KOK, paketler: List[str] = PAKET_ADLARI) -> str:
+def paketleri_indir(hedef_kok: str = GECICI_INDIRME_KOKU, paketler: List[str] = PAKET_ADLARI) -> str:
     import subprocess
     import sys
 
-    os.makedirs(hedef_kok, exist_ok=True)
-    print(f"[model_indir] === pip paketleri indiriliyor (KURULMUYOR, sadece indiriliyor) -> {hedef_kok} ===")
-    komut = [sys.executable, "-m", "pip", "download", "-d", hedef_kok] + paketler
+    hedef_dizin = os.path.join(hedef_kok, "paketler")
+    os.makedirs(hedef_dizin, exist_ok=True)
+    print(f"[model_indir] === pip paketleri /tmp'ye indiriliyor (KURULMUYOR, sadece indiriliyor) -> {hedef_dizin} ===")
+    komut = [sys.executable, "-m", "pip", "download", "-d", hedef_dizin] + paketler
     print(f"[model_indir] çalıştırılıyor: {' '.join(komut)}")
     subprocess.run(komut, check=True)
-    print(f"[model_indir] paketler indirildi: {hedef_kok}")
-    return hedef_kok
+    print(f"[model_indir] paketler /tmp'ye indirildi: {hedef_dizin}")
+    return hedef_dizin
+
+
+def _dizin_boyutu_bayt(dizin: str) -> int:
+    toplam = 0
+    for kok, _dizinler, dosyalar in os.walk(dizin):
+        for ad in dosyalar:
+            yol = os.path.join(kok, ad)
+            if os.path.isfile(yol):
+                toplam += os.path.getsize(yol)
+    return toplam
+
+
+def _geciciyi_nihaiye_tasi(gecici_kok: str, nihai_kok: str, zip_yolu: str) -> str:
+    """/tmp'de biriken her sey icin: 20GB'i asiyorsa TEK bir zip'e
+    toplayip zip'i /kaggle/working'e yazar; asmiyorsa /tmp'deki agac
+    oldugu gibi /kaggle/working'e kopyalanir."""
+    toplam_bayt = _dizin_boyutu_bayt(gecici_kok)
+    toplam_gb = toplam_bayt / 1024 ** 3
+    print(f"[model_indir] /tmp'de biriken toplam boyut: {toplam_gb:.2f} GB (eşik: {CIKTI_ESIK_BAYT / 1024**3:.0f} GB)")
+
+    if toplam_bayt > CIKTI_ESIK_BAYT:
+        print(f"[model_indir] Eşik aşıldı -> ZIP sıkıştırma etkinleştirildi: {zip_yolu}")
+        os.makedirs(os.path.dirname(zip_yolu), exist_ok=True)
+        taban_yol = zip_yolu[:-4] if zip_yolu.endswith(".zip") else zip_yolu
+        uretilen_zip = shutil.make_archive(taban_yol, "zip", root_dir=gecici_kok)
+        zip_boyutu_gb = os.path.getsize(uretilen_zip) / 1024 ** 3
+        print(f"[model_indir] ZIP tamamlandı: {uretilen_zip} ({zip_boyutu_gb:.2f} GB)")
+        return uretilen_zip
+
+    print(f"[model_indir] Eşik aşılmadı -> doğrudan kopyalanıyor: {nihai_kok}")
+    shutil.copytree(gecici_kok, nihai_kok, dirs_exist_ok=True)
+    print(f"[model_indir] Kopyalama tamamlandı: {nihai_kok}")
+    return nihai_kok
 
 
 def hepsini_indir(
-    rwkv_boyutu: str = RWKV_ANA_BOYUT, hedef_kok: str = VARSAYILAN_INDIRME_KOKU
-) -> None:
-    print("[model_indir] ================= ÖNCELİKLİ MODEL: RWKV-7 G1 =================")
-    rwkv_yolu = rwkv_indir(boyut=rwkv_boyutu, hedef_kok=hedef_kok)
+    rwkv_boyutu: str = RWKV_ANA_BOYUT,
+    gecici_kok: str = GECICI_INDIRME_KOKU,
+    nihai_kok: str = VARSAYILAN_INDIRME_KOKU,
+    zip_yolu: str = ZIP_CIKTI_YOLU,
+) -> str:
+    print("[model_indir] ================= RWKV-7 G1 (/tmp'ye) =================")
+    rwkv_indir(boyut=rwkv_boyutu, hedef_kok=gecici_kok)
 
-    print("\n[model_indir] ================= YEDEK MODEL: Mamba-Codestral-7B-v0.1 =================")
-    mamba_yolu = mamba_indir(hedef_kok=hedef_kok)
+    print("\n[model_indir] ================= PIP PAKETLERİ (/tmp'ye) =================")
+    paketleri_indir(hedef_kok=gecici_kok)
 
-    print("\n[model_indir] ================= PIP PAKETLERİ (rwkv ve bağımlılıkları) =================")
-    paket_yolu = paketleri_indir()
+    print("\n[model_indir] ================= /tmp -> /kaggle/working AKTARIMI =================")
+    sonuc_yolu = _geciciyi_nihaiye_tasi(gecici_kok, nihai_kok, zip_yolu)
 
     print("\n[model_indir] ================= TAMAMLANDI =================")
-    print(f"[model_indir] RWKV yerel yolu : {rwkv_yolu}")
-    print(f"[model_indir] Mamba yerel yolu: {mamba_yolu}")
-    print(f"[model_indir] pip paketleri   : {paket_yolu}")
+    print(f"[model_indir] Nihai çıktı: {sonuc_yolu}")
     print(
-        "[model_indir] Bu klasörler (\"/kaggle/working/modeller\" ve \"/kaggle/working/paketler\") "
-        "notebook bitince otomatik olarak çıktı veri kümesi haline gelir. İkinci (internet KAPALI) "
-        "çalıştırmada bu çıktıyı girdi olarak ekleyip:\n"
-        "  1) Kaggle'ın verdiği gerçek model yolunu MUCIT_RWKV_YOLU / MUCIT_MAMBA_YOLU ortam "
-        "değişkenleriyle geçin (model_yapilandirmalari.py bunları otomatik okur).\n"
-        "  2) `pip install --no-index --find-links=<paketler_yolu> rwkv` ile paketi TAMAMEN "
-        "internete dokunmadan kurun (notebook_giris.py'nin başına eklenmeli)."
+        "[model_indir] Bu çıktı notebook bitince otomatik olarak veri kümesi haline gelir. "
+        "İkinci (internet KAPALI) çalıştırmada bunu girdi olarak ekleyip "
+        "(zip ise önce unzip edin), MUCIT_RWKV_YOLU / MUCIT_PAKETLER_YOLU ortam "
+        "değişkenleriyle gerçek yolları geçin."
     )
+    return sonuc_yolu
 
 
 if __name__ == "__main__":
     import argparse
 
-    ayristirici = argparse.ArgumentParser(description="RWKV-7 G1 (öncelikli) ve Mamba-Codestral (yedek) modellerini HF'den indir")
+    ayristirici = argparse.ArgumentParser(description="RWKV-7 G1 modelini ve rwkv pip paketini /tmp üzerinden indirir")
     ayristirici.add_argument("--rwkv_boyutu", type=str, default=RWKV_ANA_BOYUT, choices=sorted(RWKV_DOSYA_ADLARI))
-    ayristirici.add_argument("--hedef_kok", type=str, default=VARSAYILAN_INDIRME_KOKU)
-    ayristirici.add_argument("--sadece", type=str, default=None, choices=["rwkv", "mamba", "paketler"])
+    ayristirici.add_argument("--gecici_kok", type=str, default=GECICI_INDIRME_KOKU)
+    ayristirici.add_argument("--nihai_kok", type=str, default=VARSAYILAN_INDIRME_KOKU)
+    ayristirici.add_argument("--zip_yolu", type=str, default=ZIP_CIKTI_YOLU)
+    ayristirici.add_argument("--sadece", type=str, default=None, choices=["rwkv", "paketler"])
     args = ayristirici.parse_args()
 
     if args.sadece == "rwkv":
-        rwkv_indir(boyut=args.rwkv_boyutu, hedef_kok=args.hedef_kok)
-    elif args.sadece == "mamba":
-        mamba_indir(hedef_kok=args.hedef_kok)
+        rwkv_indir(boyut=args.rwkv_boyutu, hedef_kok=args.gecici_kok)
     elif args.sadece == "paketler":
-        paketleri_indir()
+        paketleri_indir(hedef_kok=args.gecici_kok)
     else:
-        hepsini_indir(rwkv_boyutu=args.rwkv_boyutu, hedef_kok=args.hedef_kok)
+        hepsini_indir(
+            rwkv_boyutu=args.rwkv_boyutu, gecici_kok=args.gecici_kok,
+            nihai_kok=args.nihai_kok, zip_yolu=args.zip_yolu,
+        )

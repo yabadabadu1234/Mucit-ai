@@ -1,15 +1,11 @@
 """
 Kaggle notebook giris hucresi.
 
-Ana model: RWKV-7 G1
-  /kaggle/input/models/ulankaggle/rwkv-7/transformers/default/1/rwkv7-g1
-Yedek model: Mamba-Codestral-7B-v0.1
-  /kaggle/input/models/ulankaggle/mistral-mamba-codestral-7b-v0-1/transformers/default/1/Mamba-Codestral-7B-v0.1
+Ana model: RWKV-7 G1 (tek model -- Mamba yedeği indirme listesinden çıkarıldı)
+  yol: MUCIT_RWKV_YOLU ortam değişkeni veya model_yapilandirmalari.YEREL_MODEL_YOLLARI
 
-Bu hucre ana modeli yuklemeyi dener; dosya eksik/bozuksa, mimari
-desteklenmiyorsa ya da VRAM yetmiyorsa OTOMATIK olarak yedek modele duser.
-Internet KAPALI oldugundan iki model de yalnizca yukaridaki yerel Kaggle
-input yollarindan okunur, hicbir model indirilmez.
+Internet KAPALI olduğundan model yalnızca yerel Kaggle input yolundan
+okunur, hiçbir model indirilmez.
 """
 import os
 import subprocess
@@ -38,7 +34,7 @@ if os.path.isdir(PAKETLER_YOLU):
 else:
     print(
         f"[notebook_giris] UYARI: pip paket klasörü bulunamadı: {PAKETLER_YOLU}. "
-        f"'rwkv' zaten kurulu değilse RWKV yükleme başarısız olur (Mamba yedeğe düşülür). "
+        f"'rwkv' zaten kurulu değilse RWKV yükleme başarısız olur (yedek model yok, çalıştırma durur). "
         f"model_indir.py'yi internet açıkken çalıştırıp bu klasörü de girdi olarak eklediğinizden emin olun."
     )
 
@@ -51,10 +47,10 @@ TTT_ADIM_SAYISI = 20     # her bulmaca icin kac LoRA ince-ayar adimi atilacak
 
 if __name__ == "__main__":
     print(f"[notebook_giris] CUDA erisilebilir mi: {torch.cuda.is_available()}")
-    print("[notebook_giris] Ana model: rwkv (RWKV-7 G1) | Yedek model: mamba (Mamba-Codestral-7B-v0.1)")
+    print("[notebook_giris] Model: rwkv (RWKV-7 G1) — tek model, yedek yok")
 
     submission = submission_uret(
-        model_ailesi=None,  # None -> once ana modeli (rwkv) dener, olmazsa yedege (mamba) duser
+        model_ailesi=None,  # None -> MODEL_ONCELIK_SIRASI'ndaki (yalnızca rwkv) modeli dener
         cikti_yolu=SUBMISSION_YOLU,
         cogaltma_n=COGALTMA_N,
         ttt_adim_sayisi=TTT_ADIM_SAYISI,

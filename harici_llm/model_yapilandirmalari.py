@@ -39,10 +39,10 @@ YEREL_MODEL_YOLLARI: Dict[str, str] = {
     FALCON_MAMBA: "/kaggle/input/falcon-mamba-7b-instruct/transformers/default/1",
 }
 
-# Ana model / yedek model sirasi: gonderim_uret.py ana modeli yuklemeyi
-# dener, basarisiz olursa (dosya eksik/bozuk, OOM, mimari desteklenmiyor
-# vb.) otomatik olarak yedek modele duser.
-MODEL_ONCELIK_SIRASI: List[str] = [RWKV, MAMBA]
+# Ana model sirasi: Mamba, model_indir.py'nin indirme listesinden
+# CIKARILDI (kullanici talebiyle) -- yedek olarak da denenmiyor, cunku
+# offline calistirmada yerel dosyasi zaten bulunmayacak. Yalnizca RWKV.
+MODEL_ONCELIK_SIRASI: List[str] = [RWKV]
 
 # ==============================================================================
 # LoRA hedef modulleri (mimari basina)
