@@ -93,6 +93,18 @@ class RWKVDurumAyarlayici(nn.Module):
         baslangic = [p.clone().detach() for p in self.durum_parametreleri]
         return self.model.generate(input_ids, baslangic_durumu=baslangic, **kwargs)
 
+    def baslangic_durumu_kopyala(self) -> List[torch.Tensor]:
+        """rwkv_oturum.py'nin çok-turlu, TEK-KEZ-İŞLE oturumu için: öğrenilmiş
+        (ya da state-tuning atlanmışsa sıfır) başlangıç durumunun bağımsız bir
+        kopyasını verir."""
+        return [p.clone().detach() for p in self.durum_parametreleri]
+
+    def ileri_besle_tokenler(self, token_ids: List[int], durum: Optional[List[torch.Tensor]]) -> Any:
+        return self.model.ileri_besle_tokenler(token_ids, durum)
+
+    def uret_devam(self, son_logits: Any, durum: Optional[List[torch.Tensor]], max_new_tokens: int, **kwargs: Any) -> Any:
+        return self.model.uret_devam(son_logits, durum, max_new_tokens, **kwargs)
+
 
 def state_egitimi_calisir_mi_dogrula(durum_ayarlayici: RWKVDurumAyarlayici) -> None:
     """State-tuning'in gercekten gradyan uretip uretmedigini KANITLAR;

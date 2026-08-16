@@ -307,17 +307,24 @@ def gorev_ozelinde_ince_ayar(
     return kayip_gecmisi
 
 
+def rwkv_tek_mesaji_sar(mesaj: Dict[str, str]) -> str:
+    """Tek bir mesaji (rol/icerik) RWKV metin sablonuna sarar. `rwkv_oturum.
+    RWKVSohbetOturumu` (bkz. o dosya) bunu, HER turde TUM gecmisi yeniden
+    metne cevirmek yerine yalnizca YENI eklenen mesaji islemek icin kullanir
+    -- `_rwkv_mesajlari_metne_sar` ile AYNI sarma mantigi (tek mesajlik
+    ozel durumu), tek kaynaktan (bu fonksiyon) beslenir."""
+    rol, icerik = mesaj["role"], mesaj["content"]
+    if rol == "system":
+        return icerik if icerik.startswith("System:") else f"System: {icerik}"
+    if rol == "user" or rol == "tool":
+        return kullanici_donusu_sar(icerik, RWKV)
+    if rol == "assistant":
+        return asistan_donusu_sar(icerik, RWKV)
+    return ""
+
+
 def _rwkv_mesajlari_metne_sar(mesajlar: List[Dict[str, str]]) -> str:
-    parcalar = []
-    for mesaj in mesajlar:
-        rol, icerik = mesaj["role"], mesaj["content"]
-        if rol == "system":
-            parcalar.append(icerik if icerik.startswith("System:") else f"System: {icerik}")
-        elif rol == "user" or rol == "tool":
-            parcalar.append(kullanici_donusu_sar(icerik, RWKV))
-        elif rol == "assistant":
-            parcalar.append(asistan_donusu_sar(icerik, RWKV))
-    return "".join(parcalar)
+    return "".join(rwkv_tek_mesaji_sar(mesaj) for mesaj in mesajlar)
 
 
 def mesajlari_metne_donustur(tokenizer: Any, model_ailesi: str, mesajlar: List[Dict[str, str]]) -> str:
@@ -326,6 +333,21 @@ def mesajlari_metne_donustur(tokenizer: Any, model_ailesi: str, mesajlar: List[D
     if hasattr(tokenizer, "apply_chat_template"):
         return tokenizer.apply_chat_template(mesajlar, tokenize=False, add_generation_prompt=True)
     return "\n".join(f"{m['role']}: {m['content']}" for m in mesajlar) + "\nassistant:"
+
+
+def uretim_ayarlarini_al(model_ailesi: str, tokenizer: Any, preset: str = "fonksiyon_cagirma") -> Dict[str, Any]:
+    """DECODING_ONERILERI'nden do_sample/temperature/top_p/pad_token_id
+    türetir -- hem uret_sohbet() (tam-yeniden-işleme yolu) hem de
+    rwkv_oturum.RWKVSohbetOturumu (artımlı/tek-kez-işleme yolu, bkz.
+    coz_yurutucu._tek_deneme_uret) AYNI karar mantığını kullanır."""
+    ayar = DECODING_ONERILERI[model_ailesi][preset]
+    ornekleme = ayar["temp"] > 0.0
+    sonuc: Dict[str, Any] = {"do_sample": ornekleme, "pad_token_id": tokenizer.pad_token_id}
+    if ornekleme:
+        sonuc["temperature"] = ayar["temp"]
+        if ayar.get("top_p", 0.0) > 0.0:
+            sonuc["top_p"] = ayar["top_p"]
+    return sonuc
 
 
 def uret_sohbet(

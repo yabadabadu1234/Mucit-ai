@@ -22,7 +22,7 @@ kaide/hile ile ortulmez -- kullaniciya acikca bildirilir.
 """
 import os
 import time
-from typing import Any, List, Optional
+from typing import Any, List, Optional, Tuple
 
 import torch
 
@@ -59,6 +59,12 @@ class RWKVUyumluModel(torch.nn.Module):
     @property
     def device(self) -> torch.device:
         return self._cihaz
+
+    def baslangic_durumu_kopyala(self) -> None:
+        """rwkv_oturum.py için: TTT devre dışıysa (bkz. ttt_lora.lora_adaptoru_kur)
+        öğrenilmiş bir durum yok -- `rwkv` paketi zaten `durum=None`'ı sıfır
+        durum olarak yorumluyor, o yüzden burada da None döndürülür."""
+        return None
 
     def _agirlik_sozlugu(self) -> Any:
         """RWKV-7 (RWKV_x070) ağırlıklarını `self.z` sözlüğünde tutar;
@@ -148,30 +154,33 @@ class RWKVUyumluModel(torch.nn.Module):
             )
         return cikti
 
-    @torch.no_grad()
-    def generate(self, input_ids: torch.Tensor, max_new_tokens: int = 768,
-                 do_sample: bool = True, temperature: Optional[float] = None,
-                 top_p: Optional[float] = None, pad_token_id: Optional[int] = None,
-                 baslangic_durumu: Optional[List[torch.Tensor]] = None,
-                 **_yoksayilan: Any) -> torch.Tensor:
-        B, T = input_ids.shape
-        assert B == 1, "native RWKV generate() şu an tek örnek (B=1) destekliyor"
-
-        durum = [t.clone() for t in baslangic_durumu] if baslangic_durumu is not None else None
-        onbellek_baslangici = time.time()
-        prompt_token_listesi = input_ids[0].tolist()
-        # PERFORMANS: onceden burada T ayrı forward([token], state) cagrisi
-        # yapiliyordu (bkz. forward()'daki not) -- tum prompt'u TEK
-        # forward_seq cagrisiyla isleyip yalnizca son pozisyonun logitini
-        # istiyoruz (full_output=False, kutuphanenin varsayilani).
-        if len(prompt_token_listesi) > 1:
-            print(f"[rwkv_native] prompt işleniyor: {T} token, TEK forward_seq çağrısıyla...")
-            son_logits, durum = self._rwkv.forward(prompt_token_listesi, durum)
+    def ileri_besle_tokenler(self, token_ids: List[int], durum: Optional[List[torch.Tensor]]) -> Tuple[Any, List[torch.Tensor]]:
+        """Verilen token dizisini TEK bir forward çağrısıyla besler, (son_logit,
+        güncellenmiş_durum) döndürür. ÇAĞIRAN TARAF durumu SAKLAYIP bir sonraki
+        adımda buradan devam edebilir -- coz_yurutucu.py'nin çok-turlu araç
+        döngüsünde (bkz. rwkv_oturum.py) AYNI tokenlerin İKİNCİ kez asla
+        işlenmemesi tam olarak bu metotla sağlanır."""
+        if not token_ids:
+            raise ValueError("ileri_besle_tokenler: boş token listesi verildi")
+        baslangic = time.time()
+        if len(token_ids) > 1:
+            son_logits, durum = self._rwkv.forward(token_ids, durum, full_output=False)
         else:
-            son_logits, durum = self._rwkv.forward(prompt_token_listesi, durum)
-        gecen = time.time() - onbellek_baslangici
-        print(f"[rwkv_native] prompt işlendi: {T} token, {gecen:.1f} sn ({T / max(gecen, 1e-6):.2f} token/sn).")
+            son_logits, durum = self._rwkv.forward(token_ids, durum)
+        if len(token_ids) > 1:
+            gecen = time.time() - baslangic
+            print(f"[rwkv_native] {len(token_ids)} token TEK çağrıyla işlendi ({gecen:.1f} sn, {len(token_ids) / max(gecen, 1e-6):.2f} token/sn).")
+        return son_logits, durum
 
+    def uret_devam(self, son_logits: Any, durum: Optional[List[torch.Tensor]], max_new_tokens: int,
+                    do_sample: bool = True, temperature: Optional[float] = None,
+                    top_p: Optional[float] = None, pad_token_id: Optional[int] = None
+                    ) -> Tuple[List[int], Any, List[torch.Tensor]]:
+        """generate()'in oto-regresif kısmı: HAZIR bir (son_logits, durum)
+        çiftinden devam eder, prefill'i TEKRARLAMAZ. Dönen `durum`, üretilen
+        TÜM tokenleri de kapsar (RNN'in doğası gereği state zaten bu tokenleri
+        "görmüş" haldedir) -- bir sonraki turde bu tokenleri TEKRAR beslemeye
+        gerek yoktur."""
         uretim_baslangici = time.time()
         uretilenler: List[int] = []
         for _adim in range(max_new_tokens):
@@ -194,6 +203,29 @@ class RWKVUyumluModel(torch.nn.Module):
 
         gecen_toplam = time.time() - uretim_baslangici
         print(f"[rwkv_native] üretim tamamlandı: {len(uretilenler)} token, {gecen_toplam:.1f} sn.")
+        return uretilenler, son_logits, durum
+
+    @torch.no_grad()
+    def generate(self, input_ids: torch.Tensor, max_new_tokens: int = 768,
+                 do_sample: bool = True, temperature: Optional[float] = None,
+                 top_p: Optional[float] = None, pad_token_id: Optional[int] = None,
+                 baslangic_durumu: Optional[List[torch.Tensor]] = None,
+                 **_yoksayilan: Any) -> torch.Tensor:
+        B, T = input_ids.shape
+        assert B == 1, "native RWKV generate() şu an tek örnek (B=1) destekliyor"
+
+        durum = [t.clone() for t in baslangic_durumu] if baslangic_durumu is not None else None
+        prompt_token_listesi = input_ids[0].tolist()
+        # PERFORMANS: onceden burada T ayrı forward([token], state) cagrisi
+        # yapiliyordu (bkz. forward()'daki not) -- tum prompt'u TEK
+        # forward_seq cagrisiyla isleyip yalnizca son pozisyonun logitini
+        # istiyoruz (full_output=False, kutuphanenin varsayilani).
+        son_logits, durum = self.ileri_besle_tokenler(prompt_token_listesi, durum)
+
+        uretilenler, _son_logits, _durum = self.uret_devam(
+            son_logits, durum, max_new_tokens,
+            do_sample=do_sample, temperature=temperature, top_p=top_p, pad_token_id=pad_token_id,
+        )
         tam_dizi = input_ids[0].tolist() + uretilenler
         return torch.tensor([tam_dizi], device=self._cihaz, dtype=torch.long)
 

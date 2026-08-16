@@ -500,6 +500,103 @@ def test_13_rwkv_prompt_isleme_token_basina_degil_tek_cagriyla() -> None:
               "generate(): prefill sonrası yalnızca gerçekten üretilen 5 token için (kaçınılmaz biçimde) tekli-token çağrısı yapıldı")
 
 
+class _KarakterTabanliRWKVTokenizer:
+    """RWKVUyumluTokenizer'ın minimal, karakter-tabanlı bir taklidi
+    (gerçek dünya rwkv_vocab_v20230424 yerine, deterministik test için)."""
+
+    def __init__(self) -> None:
+        self.pad_token_id = 0
+        self.eos_token_id = 0
+
+    def encode(self, metin: str, add_special_tokens: bool = True) -> List[int]:
+        return [(ord(c) % 58) + 1 for c in metin]
+
+    def decode(self, token_idler: Any, skip_special_tokens: bool = True) -> str:
+        if hasattr(token_idler, "tolist"):
+            token_idler = token_idler.tolist()
+        return "".join(chr(32 + (int(t) % 90)) for t in token_idler)
+
+
+def test_14_rwkv_oturum_turler_arasi_durum_tasir_yeniden_islemez() -> None:
+    print("[test 14] rwkv_oturum.RWKVSohbetOturumu: çok-turlu döngüde önceki turların tokenleri İKİNCİ kez işleniyor mu (performans)?...")
+
+    from rwkv_native import RWKVUyumluModel
+    from rwkv_oturum import RWKVSohbetOturumu
+
+    native = _SahteNativeRWKV()
+    sarmali = RWKVUyumluModel(native, "cpu fp32")
+    tok = _KarakterTabanliRWKVTokenizer()
+
+    oturum = RWKVSohbetOturumu(sarmali, tok)
+    oturum.metin_isle("AAAA")  # 4 token, tek çoklu-token çağrısı
+    _dogrula(native.coklu_token_cagri_sayaci == 1 and native.tekli_token_cagri_sayaci == 0,
+              "ilk metin_isle(): 4 token TEK çoklu-token çağrısıyla işlendi")
+
+    oturum.uret(azami_yeni_token=3, do_sample=False)
+    _dogrula(native.tekli_token_cagri_sayaci == 3,
+              "1. uret(): yalnızca gerçekten üretilen 3 token için tekli-token çağrısı yapıldı (prefill tekrarlanmadı)")
+
+    oturum.metin_isle("BB")  # 2 YENİ token -- önceki 4+3=7 token TEKRAR işlenmemeli
+    _dogrula(native.coklu_token_cagri_sayaci == 2,
+              "2. metin_isle(): yalnızca 2 YENİ token için (önceki 7 token'ı YENİDEN işlemeden) ikinci bir çoklu-token çağrısı yapıldı")
+
+    onceki_tekli = native.tekli_token_cagri_sayaci
+    oturum.uret(azami_yeni_token=2, do_sample=False)
+    _dogrula(native.tekli_token_cagri_sayaci - onceki_tekli == 2,
+              "2. uret(): yalnızca 2 YENİ üretilen token için tekli-token çağrısı yapıldı")
+
+    toplam_forward_cagrisi = native.coklu_token_cagri_sayaci + native.tekli_token_cagri_sayaci
+    _dogrula(toplam_forward_cagrisi == 2 + 3 + 2,
+              f"TOPLAM forward çağrısı tam olarak işlenen benzersiz token sayısına eşit ({toplam_forward_cagrisi} == 7); "
+              f"eski 'her turde tüm geçmişi yeniden işle' yaklaşımında bu sayı çok daha yüksek olurdu (ör. 4+7+9=20)")
+
+
+def test_15_coz_yurutucu_artimli_yol_uctan_uca() -> None:
+    print("[test 15] coz_yurutucu._tek_deneme_uret_artimli(): native RWKV modelle uçtan uca (araç çağrısı ayıklama + submit_answer akışı) doğru çalışıyor mu?...")
+
+    import coz_yurutucu
+    from rwkv_native import RWKVUyumluModel
+
+    task = Task(
+        test_example=Example(input=np.array([[0, 0], [0, 0]]), output=np.array([[0, 0], [0, 0]])),
+        train_examples=[Example(input=np.array([[1, 2], [3, 4]]), output=np.array([[4, 3], [2, 1]]))],
+        name="testgorev-artimli",
+    )
+
+    native = _SahteNativeRWKV()
+    model = RWKVUyumluModel(native, "cpu fp32")
+    tok = _KarakterTabanliRWKVTokenizer()
+
+    senaryo = [
+        '```json\n{"name": "submit_answer", "arguments": {"grid": [[1, 2, 3], [4]]}}\n```',
+        '```json\n{"name": "submit_answer", "arguments": {"grid": [[7, 7], [7, 7]]}}\n```',
+    ]
+    sayac = {"i": 0}
+
+    class _SahteOturum:
+        def __init__(self, model, tokenizer):
+            pass
+
+        def metin_isle(self, metin: str) -> None:
+            pass
+
+        def uret(self, azami_yeni_token, **kwargs) -> str:
+            yanit = senaryo[min(sayac["i"], len(senaryo) - 1)]
+            sayac["i"] += 1
+            return yanit
+
+    import rwkv_oturum
+    gercek_sinif = rwkv_oturum.RWKVSohbetOturumu
+    rwkv_oturum.RWKVSohbetOturumu = _SahteOturum
+    try:
+        sonuc = coz_yurutucu._tek_deneme_uret_artimli(model, tok, "rwkv", task, azami_tur=4, azami_yeni_token=50)
+    finally:
+        rwkv_oturum.RWKVSohbetOturumu = gercek_sinif
+
+    _dogrula(sonuc == [[7, 7], [7, 7]],
+              "tutarsız ilk deneme (satır uzunlukları farklı) reddedildi, tutarlı ikinci deneme kaydedildi")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -514,6 +611,8 @@ def calistir() -> None:
     test_11_rwkv_no_grad_backend_zarifce_devre_disi_birakir()
     test_12_rwkv_x070_z_sozlugu_gercek_kaggle_cokmesi()
     test_13_rwkv_prompt_isleme_token_basina_degil_tek_cagriyla()
+    test_14_rwkv_oturum_turler_arasi_durum_tasir_yeniden_islemez()
+    test_15_coz_yurutucu_artimli_yol_uctan_uca()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
