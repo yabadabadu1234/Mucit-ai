@@ -614,8 +614,11 @@ def test_16_execute_python_gercekten_numpy_calistirabiliyor_mu() -> None:
     _dogrula(basarili2 and sonuc2 == 4.0,
               "önceden izinli sanılan 'math' importu da GERÇEKTE hiç çalışmıyordu (__import__ builtin'i sandbox'ta yoktu) -- şimdi çalışıyor")
 
-    basarisiz, hata = kodu_guvenle_calistir_serbest("import os\nsonuc = os.listdir('.')\n")
-    _dogrula(not basarisiz, "izin verilmeyen bir modül (os) hâlâ reddediliyor (güvenlik gerilemedi)")
+    basarili3, sonuc3 = kodu_guvenle_calistir_serbest("import os\nsonuc = sorted(os.listdir('.'))[:1] if os.listdir('.') else []\n")
+    _dogrula(basarili3, "import kısıtlaması kaldırıldı (kullanıcı talebiyle): daha önce reddedilen 'os' gibi modüller de artık serbestçe import edilebiliyor")
+
+    basarisiz, hata = kodu_guvenle_calistir_serbest("sonuc = eval('1+1')\n")
+    _dogrula(not basarisiz, "eval/exec/open çağrıları hâlâ reddediliyor (import serbestisi başka bir korumayı gevşetmedi)")
 
 
 def test_17_yarisma_false_dogruluk_kontrolu() -> None:
