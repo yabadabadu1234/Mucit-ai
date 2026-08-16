@@ -172,6 +172,28 @@ class RWKVUyumluModel(torch.nn.Module):
             print(f"[rwkv_native] {len(token_ids)} token TEK çağrıyla işlendi ({gecen:.1f} sn, {len(token_ids) / max(gecen, 1e-6):.2f} token/sn).")
         return son_logits, durum
 
+    def uret_devam_adim(self, son_logits: Any, durum: Optional[List[torch.Tensor]],
+                         do_sample: bool = True, temperature: Optional[float] = None
+                         ) -> Tuple[int, Any, List[torch.Tensor]]:
+        """uret_devam()'in TEK bir adımı: bir sonraki tokeni örnekler ve
+        state'i bir adım ileri götürür. coklu_gpu.py'nin CPU-seviyesinde
+        HİÇBİR senkronizasyon bariyeri kullanmayan round-robin çoklu-GPU
+        zamanlayıcısı, N GPU'daki N bağımsız modeli SIRAYLA bu metotla
+        TEK TOKEN ilerletir: her çağrı yalnızca KENDİ cihazının stream'ini
+        bekler (örnekleme .item() adımı bu cihaza özeldir), diğer
+        cihazlarda ÇOKTAN kuyruklanmış işleri durdurmaz -- bu yüzden bir
+        süre sonra tüm GPU'lar donanım seviyesinde gerçekten paralel
+        çalışıyor gibi olur, hiçbir thread/process/lock gerekmeden."""
+        olasiliklar = torch.softmax(
+            torch.as_tensor(son_logits) / max(temperature or 1.0, 1e-4), dim=-1
+        )
+        if do_sample:
+            sonraki_token = int(torch.multinomial(olasiliklar, 1).item())
+        else:
+            sonraki_token = int(torch.argmax(olasiliklar).item())
+        son_logits, durum = self._rwkv.forward([sonraki_token], durum)
+        return sonraki_token, son_logits, durum
+
     def uret_devam(self, son_logits: Any, durum: Optional[List[torch.Tensor]], max_new_tokens: int,
                     do_sample: bool = True, temperature: Optional[float] = None,
                     top_p: Optional[float] = None, pad_token_id: Optional[int] = None
@@ -330,7 +352,7 @@ def _rwkv_cuda_kernelini_dene_etkinlestir() -> None:
         )
 
 
-def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16) -> RWKVUyumluModel:
+def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16, cihaz: Optional[str] = None) -> RWKVUyumluModel:
     # RWKV_V7_ON=1 (model_yapilandirmalari.py'de import-oncesi ayarlanir)
     # `rwkv.model.RWKV`'yi DAIMA `RWKV_x070` sinifina cozer -- gercek
     # kurulu rwkv==0.8.32 kaynagi dogrudan okunarak dogrulandi (model.py
@@ -342,7 +364,14 @@ def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16) ->
     _rwkv_cuda_kernelini_dene_etkinlestir()
     from rwkv.model import RWKV
 
-    strateji = "cuda fp16" if torch.cuda.is_available() else "cpu fp32"
+    # coklu_gpu.py, ayni modelin BAGIMSIZ birer kopyasini her GPU'ya
+    # yerlestirmek icin `cihaz`'i acikca "cuda:0", "cuda:1" ... olarak
+    # verir; `rwkv` paketinin strateji regex'i "cuda:N fp16" bicimini
+    # zaten destekliyor.
+    if cihaz is not None:
+        strateji = f"{cihaz} fp16" if cihaz.startswith("cuda") else f"{cihaz} fp32"
+    else:
+        strateji = "cuda fp16" if torch.cuda.is_available() else "cpu fp32"
     if pth_yolu.endswith(".pth"):
         model_yolu = pth_yolu[: -len(".pth")]
     else:

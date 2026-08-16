@@ -652,6 +652,60 @@ def test_17_yarisma_false_dogruluk_kontrolu() -> None:
               "attempt_2'nin GERÇEKTEN submit edilmediği (boş yer tutucuya düştüğü) doğru tespit edildi -- tesadüfen doğru çıksa bile bu ayrım kaybolmaz")
 
 
+class _GunlukluSahteNativeRWKV(_SahteNativeRWKV):
+    """_SahteNativeRWKV ile aynı, ama her forward() çağrısını PAYLAŞILAN bir
+    günlüğe (gpu_etiketi, çoklu-token mi) kaydeder -- coklu_gpu.py'nin
+    round-robin zamanlayıcısının GERÇEKTEN iç içe geçmiş (bir GPU'yu tam
+    bitirmeden diğerine geçen) çağrılar ürettiğini kanıtlamak için."""
+
+    def __init__(self, gpu_etiketi: str, paylasilan_gunluk: List[str], vocab: int = 60, d: int = 4):
+        super().__init__(vocab, d)
+        self._gpu_etiketi = gpu_etiketi
+        self._gunluk = paylasilan_gunluk
+
+    def forward(self, tokens, state, full_output=False):
+        if len(tokens) == 1:
+            self._gunluk.append(self._gpu_etiketi)
+        return super().forward(tokens, state, full_output=full_output)
+
+
+def test_18_coklu_gpu_round_robin_gercekten_ic_ice_geciyor_mu() -> None:
+    print("[test 18] coklu_gpu.CokluGPUCozucu: N 'GPU' round-robin ile GERÇEKTEN iç içe geçmiş adımlarla ilerliyor mu (biri tam bitmeden diğerine geçiyor mu)?...")
+
+    from rwkv_native import RWKVUyumluModel
+    from coklu_gpu import CokluGPUCozucu
+
+    gunluk: List[str] = []
+    nativeler = [_GunlukluSahteNativeRWKV(f"gpu{i}", gunluk) for i in range(2)]
+    modeller = [RWKVUyumluModel(n, "cpu fp32") for n in nativeler]
+    tok = _KarakterTabanliRWKVTokenizer()
+
+    tasks = [
+        Task(
+            test_example=Example(input=np.array([[0, 0], [0, 0]]), output=np.array([[0, 0], [0, 0]])),
+            train_examples=[], name=f"gorev{i}",
+        )
+        for i in range(2)
+    ]
+
+    cozucu = CokluGPUCozucu(
+        modeller, tok, azami_tur=1, azami_yeni_token=5,
+        uretim_ayarlari={"do_sample": False, "pad_token_id": 0},
+    )
+    sonuclar = cozucu.coz(tasks)
+
+    _dogrula(len(sonuclar) == 2, "her iki görev de sonuçlandı")
+    _dogrula(set(gunluk) == {"gpu0", "gpu1"}, "GERÇEKTEN her iki 'GPU' de tek-token üretim adımları yaptı")
+
+    ilk_gpu1_indeksi = gunluk.index("gpu1")
+    ilk_gpu0_sonrasi_gpu0_sayisi = gunluk[:ilk_gpu1_indeksi].count("gpu0")
+    _dogrula(
+        ilk_gpu0_sonrasi_gpu0_sayisi < 5,
+        "gpu0, gpu1 devreye girmeden önce TÜM tokenlerini (5) bitirmedi -- round-robin GERÇEKTEN iç içe geçiyor "
+        f"(gpu1 devreye girene kadar gpu0 yalnızca {ilk_gpu0_sonrasi_gpu0_sayisi} adım attı)",
+    )
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -670,6 +724,7 @@ def calistir() -> None:
     test_15_coz_yurutucu_artimli_yol_uctan_uca()
     test_16_execute_python_gercekten_numpy_calistirabiliyor_mu()
     test_17_yarisma_false_dogruluk_kontrolu()
+    test_18_coklu_gpu_round_robin_gercekten_ic_ice_geciyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

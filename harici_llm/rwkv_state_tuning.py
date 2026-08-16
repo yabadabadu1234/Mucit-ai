@@ -105,6 +105,9 @@ class RWKVDurumAyarlayici(nn.Module):
     def uret_devam(self, son_logits: Any, durum: Optional[List[torch.Tensor]], max_new_tokens: int, **kwargs: Any) -> Any:
         return self.model.uret_devam(son_logits, durum, max_new_tokens, **kwargs)
 
+    def uret_devam_adim(self, son_logits: Any, durum: Optional[List[torch.Tensor]], **kwargs: Any) -> Any:
+        return self.model.uret_devam_adim(son_logits, durum, **kwargs)
+
 
 def state_egitimi_calisir_mi_dogrula(durum_ayarlayici: RWKVDurumAyarlayici) -> None:
     """State-tuning'in gercekten gradyan uretip uretmedigini KANITLAR;

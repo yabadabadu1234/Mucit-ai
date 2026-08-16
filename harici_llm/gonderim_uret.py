@@ -136,6 +136,73 @@ def _dogrulugu_kontrol_et(task: Any, sonuc: Dict[str, Any]) -> None:
     })
 
 
+def _gorevleri_yukle(yarisma: bool) -> List[Any]:
+    if yarisma:
+        print(f"[gonderim_uret] YARISMA=True: gerçek yarışma test kümesi kullanılıyor (cevaplar bilinmiyor).")
+        tasks = read_tasks_from_single_file(TEST_CHALLENGES_YOLU, test=True)
+        print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {TEST_CHALLENGES_YOLU}")
+    else:
+        print(
+            f"[gonderim_uret] YARISMA=False: DENEME modu -- değerlendirme kümesi (gerçek cevaplar BİLİNİYOR) "
+            f"kullanılıyor, her görevden sonra doğruluk otomatik kontrol edilip loglanacak."
+        )
+        tasks = read_tasks_from_single_file(
+            EVALUATION_CHALLENGES_YOLU, solution_file=EVALUATION_SOLUTIONS_YOLU,
+        )
+        print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {EVALUATION_CHALLENGES_YOLU} (+ çözümler: {EVALUATION_SOLUTIONS_YOLU})")
+    return tasks
+
+
+def coklu_gpu_submission_uret(
+    model_ailesi: str = None,
+    cikti_yolu: str = "submission.json",
+    calisma_suresi_saniye: float = CALISMA_SURESI_SANIYE,
+    yarisma: bool = True,
+    azami_gpu: int = 4,
+) -> Dict[str, Any]:
+    """submission_uret()'in coklu-GPU (round-robin, TEK surecten boru
+    hatti) varyanti -- bkz. coklu_gpu.py basindaki not. Ayni modelin
+    GPU basina BAGIMSIZ bir kopyasi yuklenir, gorevler GPU sayisi kadar
+    ESZAMANLI (donanim seviyesinde paralel, CPU-seviyesinde senkron
+    BARIYER OLMADAN) cozulur. NOT: bu yol salt-cikarimdir (gorev-basina
+    TTT/state-tuning burada YOK -- coz_yurutucu.gorevi_coz'un tek-GPU
+    yolunda kalir)."""
+    from model_yapilandirmalari import RWKV
+    from coklu_gpu import CokluGPUCozucu, dort_kopya_yukle
+
+    model_ailesi = model_ailesi or RWKV
+    bitis_zamani = time.time() + calisma_suresi_saniye
+    print(
+        f"[gonderim_uret] [ÇOKLU-GPU] Çalışma bütçesi: {calisma_suresi_saniye / 3600:.2f} saat "
+        f"(bitiş: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(bitis_zamani))})"
+    )
+
+    tasks = _gorevleri_yukle(yarisma)
+    kaydedici = _SonuCuKaydedici(tasks, cikti_yolu)
+
+    try:
+        modeller, tokenizer = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu)
+        cozucu = CokluGPUCozucu(modeller, tokenizer)
+        sonuclar = cozucu.coz(tasks, bitis_zamani=bitis_zamani)
+
+        for task in tasks:
+            sonuc = sonuclar.get(task.name, {"attempt_1": [[0, 0], [0, 0]], "attempt_1_gonderildi_mi": False})
+            attempt_1 = sonuc["attempt_1"]
+            kaydedici.ekle([attempt_1, attempt_1])
+            if not yarisma:
+                _dogrulugu_kontrol_et(task, {
+                    "attempt_1": attempt_1, "attempt_2": attempt_1,
+                    "attempt_1_gonderildi_mi": sonuc.get("attempt_1_gonderildi_mi", False),
+                    "attempt_2_gonderildi_mi": sonuc.get("attempt_1_gonderildi_mi", False),
+                })
+    finally:
+        kaydedici._son_kayit()
+
+    submission = make_submission(tasks, kaydedici._bekleyen_gorevleri_bos_doldur(), path=cikti_yolu)
+    print(f"[gonderim_uret] [ÇOKLU-GPU] Yazıldı: {cikti_yolu} ({len(submission)} görev)")
+    return submission
+
+
 def submission_uret(
     model_ailesi: Optional[str] = None,
     oncelik_sirasi: List[str] = MODEL_ONCELIK_SIRASI,
@@ -157,19 +224,7 @@ def submission_uret(
         f"bitse bile o süre boyunca model ne 'konuştu' orada görülebilir."
     )
 
-    if yarisma:
-        print(f"[gonderim_uret] YARISMA=True: gerçek yarışma test kümesi kullanılıyor (cevaplar bilinmiyor).")
-        tasks = read_tasks_from_single_file(TEST_CHALLENGES_YOLU, test=True)
-        print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {TEST_CHALLENGES_YOLU}")
-    else:
-        print(
-            f"[gonderim_uret] YARISMA=False: DENEME modu -- değerlendirme kümesi (gerçek cevaplar BİLİNİYOR) "
-            f"kullanılıyor, her görevden sonra doğruluk otomatik kontrol edilip loglanacak."
-        )
-        tasks = read_tasks_from_single_file(
-            EVALUATION_CHALLENGES_YOLU, solution_file=EVALUATION_SOLUTIONS_YOLU,
-        )
-        print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {EVALUATION_CHALLENGES_YOLU} (+ çözümler: {EVALUATION_SOLUTIONS_YOLU})")
+    tasks = _gorevleri_yukle(yarisma)
 
     kaydedici = _SonuCuKaydedici(tasks, cikti_yolu)
 
