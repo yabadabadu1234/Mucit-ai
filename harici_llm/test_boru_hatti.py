@@ -1242,7 +1242,7 @@ def test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
     VOCAB = 256
     kayit = {"onisle_token_dizileri": None, "adim_sayisi": 0}
 
-    def _mock_onisle(z, n_layer, n_embd, n_head, head_size, token_dizileri):
+    def _mock_onisle(z, n_layer, n_embd, n_head, head_size, token_dizileri, ilerleme_geri_cagirma=None, ilerleme_adimi=200):
         kayit["onisle_token_dizileri"] = token_dizileri
         B = len(token_dizileri)
         logits = torch.full((B, VOCAB), -10.0)
@@ -1525,6 +1525,109 @@ def test_30_rwkv_tokenizer_decode_tek_kotu_id_tum_metni_yok_etmiyor_mu() -> None
               f"BAŞTAKİ geçerli metin, SONDAKİ kesik/geçersiz bayt dizisine rağmen KORUNDU (bulunan: {kesik_sonuc!r})")
 
 
+def test_31_ayrintili_log_uzun_prefill_boyunca_sessiz_kalmiyor_mu() -> None:
+    print("[test 31] rwkv_batch.onisle_toplu_farkli_uzunluk + coz_yurutucu_toplu: kullanıcının '800 saniyedir hiç log yok' diye fark ettiği batched-prefill sessizliği, ayrintili_log=True iken GERÇEKTEN kapatılıyor mu?...")
+
+    import rwkv_batch
+
+    # --- Birim test: ilerleme_geri_cagirma GERÇEKTEN periyodik (ve bitişte)
+    # çağrılıyor mu -- en uzun promptun 6300+ adımlık bir prefill'i
+    # boyunca sessiz kalmamalı.
+    B, vocab, n_layer, n_embd, n_head, head_size = 2, 8, 1, 4, 1, 4
+    z = {
+        "emb.weight": torch.randn(vocab, n_embd), "head.weight": torch.randn(n_embd, vocab),
+        "ln_out.weight": torch.ones(n_embd), "ln_out.bias": torch.zeros(n_embd),
+        "blocks.0.ln1.weight": torch.ones(n_embd), "blocks.0.ln1.bias": torch.zeros(n_embd),
+        "blocks.0.ln2.weight": torch.ones(n_embd), "blocks.0.ln2.bias": torch.zeros(n_embd),
+        "blocks.0.att.x_r": torch.zeros(n_embd), "blocks.0.att.x_w": torch.zeros(n_embd),
+        "blocks.0.att.x_k": torch.zeros(n_embd), "blocks.0.att.x_v": torch.zeros(n_embd),
+        "blocks.0.att.x_a": torch.zeros(n_embd), "blocks.0.att.x_g": torch.zeros(n_embd),
+        "blocks.0.att.w0": torch.zeros(n_embd), "blocks.0.att.w1": torch.zeros(n_embd, 2), "blocks.0.att.w2": torch.zeros(2, n_embd),
+        "blocks.0.att.a0": torch.zeros(n_embd), "blocks.0.att.a1": torch.zeros(n_embd, 2), "blocks.0.att.a2": torch.zeros(2, n_embd),
+        "blocks.0.att.v0": torch.zeros(n_embd), "blocks.0.att.v1": torch.zeros(n_embd, 2), "blocks.0.att.v2": torch.zeros(2, n_embd),
+        "blocks.0.att.g1": torch.zeros(n_embd, 2), "blocks.0.att.g2": torch.zeros(2, n_embd),
+        "blocks.0.att.k_k": torch.zeros(n_embd), "blocks.0.att.k_a": torch.zeros(n_embd), "blocks.0.att.r_k": torch.zeros(n_head, head_size),
+        "blocks.0.att.receptance.weight": torch.eye(n_embd), "blocks.0.att.key.weight": torch.eye(n_embd),
+        "blocks.0.att.value.weight": torch.eye(n_embd), "blocks.0.att.output.weight": torch.eye(n_embd),
+        "blocks.0.att.ln_x.weight": torch.ones(n_embd), "blocks.0.att.ln_x.bias": torch.zeros(n_embd),
+        "blocks.0.ffn.x_k": torch.zeros(n_embd), "blocks.0.ffn.key.weight": torch.eye(n_embd), "blocks.0.ffn.value.weight": torch.eye(n_embd),
+    }
+    token_dizileri = [[1, 2, 3, 4, 5], [1, 2]]  # farklı uzunluk -- 5 adımlık prefill
+
+    cagrilar: List[Any] = []
+    rwkv_batch.onisle_toplu_farkli_uzunluk(
+        z, n_layer, n_embd, n_head, head_size, token_dizileri,
+        ilerleme_geri_cagirma=lambda t, azami: cagrilar.append((t, azami)), ilerleme_adimi=2,
+    )
+    _dogrula(cagrilar == [(2, 5), (4, 5), (5, 5)],
+              f"5 adımlık bir prefill'de, ilerleme_adimi=2 iken geri çağırma TAM OLARAK 2,4 ve bitişte (5) tetiklendi: {cagrilar}")
+
+    cagrilar_yok: List[Any] = []
+    rwkv_batch.onisle_toplu_farkli_uzunluk(z, n_layer, n_embd, n_head, head_size, token_dizileri)
+    _dogrula(cagrilar_yok == [], "geri çağırma verilmezse (varsayılan davranış, YARISMA=True) HİÇ ek log üretilmedi")
+
+    # --- toplu_gorevleri_coz uçtan uca: ayrintili_log=True iken prefill
+    # SIRASINDA ("batched prefill:" satırları) stdout'ta GERÇEKTEN görünüyor
+    # mu -- kullanıcının "800 saniyedir tek log yok" diye şikayet ettiği
+    # tam o boşluk.
+    import io
+    from contextlib import redirect_stdout
+
+    import coz_yurutucu_toplu as cyt
+
+    def _mock_onisle(z, n_layer, n_embd, n_head, head_size, token_dizileri, ilerleme_geri_cagirma=None, ilerleme_adimi=200):
+        if ilerleme_geri_cagirma is not None:
+            for t in (200, 400, 500):
+                ilerleme_geri_cagirma(t, 500)
+        B = len(token_dizileri)
+        return torch.zeros(B, 4), ["durum"]
+
+    def _mock_adim(z, n_layer, n_embd, n_head, head_size, token_idler, durum, aktif_maske):
+        B = len(token_idler)
+        return torch.zeros(B, 4), durum
+
+    tasks = [
+        Task(test_example=Example(input=np.array([[1]]), output=np.array([[1]])), train_examples=[], name="uzun-gorev"),
+    ]
+    eski_onisle, eski_adim = cyt.onisle_toplu_farkli_uzunluk, cyt.adim_toplu_maskeli
+    eski_ayarlar = cyt.uretim_ayarlarini_al
+    cyt.onisle_toplu_farkli_uzunluk = _mock_onisle
+    cyt.adim_toplu_maskeli = _mock_adim
+    cyt.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False, "pad_token_id": 0}
+    try:
+        yakalanan_sessiz = io.StringIO()
+        with redirect_stdout(yakalanan_sessiz):
+            cyt.toplu_gorevleri_coz(_SahteHamModelCyt(), _TamTersinirTokenizerCyt(), tasks, azami_yeni_token=1, kontrol_araligi=1, ayrintili_log=False)
+
+        yakalanan_ayrintili = io.StringIO()
+        with redirect_stdout(yakalanan_ayrintili):
+            cyt.toplu_gorevleri_coz(_SahteHamModelCyt(), _TamTersinirTokenizerCyt(), tasks, azami_yeni_token=1, kontrol_araligi=1, ayrintili_log=True)
+    finally:
+        cyt.onisle_toplu_farkli_uzunluk, cyt.adim_toplu_maskeli = eski_onisle, eski_adim
+        cyt.uretim_ayarlarini_al = eski_ayarlar
+
+    _dogrula("batched prefill:" not in yakalanan_sessiz.getvalue(), "ayrintili_log=False (YARISMA=True varsayılanı) iken prefill İLERLEME logu basılmadı (yarışma logu şişirilmiyor)")
+    _dogrula(yakalanan_ayrintili.getvalue().count("batched prefill:") == 3, "ayrintili_log=True (YARISMA=False) iken prefill SIRASINDA 3 ilerleme logu GERÇEKTEN basıldı -- kullanıcının fark ettiği sessizlik kapatıldı")
+
+
+class _SahteHamModelCyt:
+    z: Dict[str, Any] = {}
+    n_layer = n_embd = n_head = head_size = 1
+
+
+class _TamTersinirTokenizerCyt:
+    pad_token_id = 0
+    eos_token_id = 0
+
+    def encode(self, metin: str, add_special_tokens: bool = True) -> List[int]:
+        return [ord(c) for c in metin]
+
+    def decode(self, token_idler: Any, skip_special_tokens: bool = True) -> str:
+        if hasattr(token_idler, "tolist"):
+            token_idler = token_idler.tolist()
+        return "".join(chr(int(t)) for t in token_idler)
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1556,6 +1659,7 @@ def calistir() -> None:
     test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu()
     test_29_tekrar_cezasi_gercekten_ayni_tokene_saplanmayi_zorlastiriyor_mu()
     test_30_rwkv_tokenizer_decode_tek_kotu_id_tum_metni_yok_etmiyor_mu()
+    test_31_ayrintili_log_uzun_prefill_boyunca_sessiz_kalmiyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

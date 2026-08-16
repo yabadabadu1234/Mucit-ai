@@ -195,6 +195,11 @@ def coklu_gpu_submission_uret(
             cozucu = CokluGPUTopluCozucu(
                 modeller, tokenizer, b_boyutu=b_boyutu, gpu_etiketleri=gpu_etiketleri,
                 vram_kesifcileri=vram_kesifcileri,
+                # YARISMA=False (deneme) modunda ayrıntılı ilerleme logu
+                # otomatik açılır -- kullanıcının "800 saniyedir hiç log
+                # yok" diye fark ettiği sessiz boşluğu (batched prefill'in
+                # KENDİSİ hiç ilerleme raporlamıyordu) kapatır.
+                ayrintili_log=not yarisma,
             )
         else:
             cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri)

@@ -21,7 +21,7 @@ Bu eşdeğerlik, test_boru_hatti.py'de kurulu GERÇEK `rwkv` paketiyle
 (sentetik ama gerçek biçimli bir .pth ağırlığı üzerinden, B=1 döngüsüyle
 üretilen referans çıktıya karşı) sayısal olarak doğrulanır.
 """
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import torch
 import torch.nn.functional as F
@@ -164,7 +164,9 @@ def adim_toplu_maskeli(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_
 @torch.no_grad()
 def onisle_toplu_farkli_uzunluk(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: int, head_size: int,
                                  token_dizileri: List[List[int]],
-                                 durum: Optional[List[torch.Tensor]] = None
+                                 durum: Optional[List[torch.Tensor]] = None,
+                                 ilerleme_geri_cagirma: Optional[Callable[[int, int], None]] = None,
+                                 ilerleme_adimi: int = 200,
                                  ) -> Tuple[torch.Tensor, List[torch.Tensor]]:
     """B BAĞIMSIZ ve FARKLI UZUNLUKTAKİ prompt'u (ör. B FARKLI ARC
     bulmacasının B FARKLI metni) TEK bir batched prefill'de işler --
@@ -172,7 +174,14 @@ def onisle_toplu_farkli_uzunluk(z: Dict[str, torch.Tensor], n_layer: int, n_embd
     kendi uzunluğuna ulaşınca dondurulur (daha kısa promptlu dizilerin
     durumu, daha uzun promptlu dizileri BEKLERKEN BOZULMAZ). Döner:
     (B, vocab) biçiminde HER dizinin KENDİ son promptu tokenından sonraki
-    logit'i (sonraki_token tahmini) ve güncel durum."""
+    logit'i (sonraki_token tahmini) ve güncel durum.
+
+    `ilerleme_geri_cagirma(t, azami_uzunluk)` verilirse, her `ilerleme_adimi`
+    adımda bir (ve bitişte) çağrılır -- kullanıcının fark ettiği gibi, en
+    uzun promptlu bir görev varsa (ör. 6000+ token) prefill TEK BAŞINA
+    dakikalarca sürebilir ve bu SÜRE BOYUNCA hiçbir log basılmıyordu;
+    çağıran taraf (coz_yurutucu_toplu.py) bunu YARISMA=False iken
+    ayrıntılı ilerleme logu basmak için kullanır."""
     B = len(token_dizileri)
     if durum is None:
         durum = sifir_durum_toplu(z, n_layer, n_embd, n_head, head_size, B)
@@ -186,6 +195,9 @@ def onisle_toplu_farkli_uzunluk(z: Dict[str, torch.Tensor], n_layer: int, n_embd
         for b in range(B):
             if aktif_maske[b]:
                 son_logitler[b] = logitler[b]
+
+        if ilerleme_geri_cagirma is not None and ((t + 1) % ilerleme_adimi == 0 or (t + 1) == azami_uzunluk):
+            ilerleme_geri_cagirma(t + 1, azami_uzunluk)
 
     return torch.stack(son_logitler, dim=0), durum
 

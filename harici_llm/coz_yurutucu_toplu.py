@@ -80,10 +80,18 @@ def toplu_gorevleri_coz(
     azami_yeni_token: int = 60000,
     kontrol_araligi: int = 1000,
     deneme_etiketi: str = "toplu",
+    ayrintili_log: bool = False,
 ) -> Dict[str, Dict[str, Any]]:
     """B = len(tasks) görevin HEPSİNİ, TEK GPU'da, AYNI ağırlıkları
     (ham_rwkv_modeli.z) paylaşan TEK bir batched adım zinciriyle EŞZAMANLI
-    çözer. Döner: {task.name: {"attempt_1": grid, "attempt_1_gonderildi_mi": bool}}."""
+    çözer. Döner: {task.name: {"attempt_1": grid, "attempt_1_gonderildi_mi": bool}}.
+
+    `ayrintili_log=True` (YARISMA=False iken gonderim_uret.py tarafından
+    otomatik açılır): en uzun promptlu görev tek başına dakikalarca
+    sürebilen batched prefill AŞAMASINDA da (daha önce tamamen sessizdi --
+    kullanıcının "800 saniyedir tek log yok" diye fark ettiği boşluk tam
+    burasıydı) VE üretim aşamasında çok daha sık (varsayılan 5000 yerine
+    200 adımda bir) ilerleme logu basılır."""
     B = len(tasks)
     z = ham_rwkv_modeli.z
     n_layer, n_embd, n_head, head_size = _boyutlari_al(ham_rwkv_modeli)
@@ -91,6 +99,7 @@ def toplu_gorevleri_coz(
     do_sample = uretim_ayarlari.get("do_sample", True)
     temperature = uretim_ayarlari.get("temperature")
     repetition_penalty = uretim_ayarlari.get("repetition_penalty")
+    ilerleme_adimi = 200 if ayrintili_log else _ILERLEME_ADIMI
 
     # 1) B FARKLI prompt -- FARKLI görev içeriği, dolayısıyla FARKLI
     # token dizileri (uzunlukları da genelde farklıdır). Bu, "aynı
@@ -113,8 +122,18 @@ def toplu_gorevleri_coz(
     # 2) Batched prefill: FARKLI uzunluktaki B prompt, TEK maskeli
     # döngüde işlenir (kısa promptlar kendi sonlarında dondurulur).
     baslangic = time.time()
-    son_logits, durum = onisle_toplu_farkli_uzunluk(z, n_layer, n_embd, n_head, head_size, prompt_tokenleri)
-    print(f"{_ONEK} ({deneme_etiketi}) batched prefill tamamlandı: {max(len(t) for t in prompt_tokenleri)} adım, {time.time() - baslangic:.1f} sn.")
+    azami_prompt_uzunlugu = max(len(t) for t in prompt_tokenleri)
+
+    def _prefill_ilerleme(t: int, azami: int) -> None:
+        gecen = time.time() - baslangic
+        print(f"{_ONEK} ({deneme_etiketi})   batched prefill: {t}/{azami} adım ({gecen:.1f} sn, {t / max(gecen, 1e-6):.2f} adım/sn TÜM batch için).")
+
+    son_logits, durum = onisle_toplu_farkli_uzunluk(
+        z, n_layer, n_embd, n_head, head_size, prompt_tokenleri,
+        ilerleme_geri_cagirma=_prefill_ilerleme if ayrintili_log else None,
+        ilerleme_adimi=ilerleme_adimi,
+    )
+    print(f"{_ONEK} ({deneme_etiketi}) batched prefill tamamlandı: {azami_prompt_uzunlugu} adım, {time.time() - baslangic:.1f} sn.")
 
     # 3) Batched üretim: her adımda B dizinin HER BİRİ İÇİN AYRI örneklenen
     # bir sonraki token, TEK adim_toplu_maskeli çağrısıyla hep birlikte
@@ -143,7 +162,7 @@ def toplu_gorevleri_coz(
                 son_logits[b] = yeni_logits[b]
         adim += 1
 
-        if adim % _ILERLEME_ADIMI == 0:
+        if adim % ilerleme_adimi == 0:
             aktif_sayisi = sum(1 for x in bitti if not x)
             gecen = time.time() - uretim_baslangici
             print(f"{_ONEK} ({deneme_etiketi})   üretim: {adim}/{azami_yeni_token} adım, {aktif_sayisi}/{B} görev hâlâ aktif ({gecen:.1f} sn, {adim / max(gecen, 1e-6):.2f} adım/sn TÜM batch için).")

@@ -290,7 +290,7 @@ class CokluGPUTopluCozucu:
 
     def __init__(self, modeller: List[Any], tokenizer: Any, b_boyutu: int = 128,
                  azami_yeni_token: int = 60000, gpu_etiketleri: Optional[List[str]] = None,
-                 vram_kesifcileri: Optional[List[Any]] = None):
+                 vram_kesifcileri: Optional[List[Any]] = None, ayrintili_log: bool = False):
         self.modeller = modeller
         self.tokenizer = tokenizer
         self.b_boyutu = b_boyutu
@@ -299,6 +299,13 @@ class CokluGPUTopluCozucu:
             str(getattr(m, "device", f"gpu{i}")) for i, m in enumerate(modeller)
         ]
         self.vram_kesifcileri = vram_kesifcileri
+        # YARISMA=False (deneme) modunda gonderim_uret.py bunu True yapar:
+        # kullanıcının fark ettiği gibi, en uzun promptlu görev tek başına
+        # dakikalarca sürebilen batched prefill'de HİÇ log yoktu -- bu
+        # bayrak açıkken prefill + üretim çok daha sık (200 adımda bir)
+        # ilerleme logu basar. Gerçek yarışma koşusunda (YARISMA=True) log
+        # hacmini şişirmemek için VARSAYILAN OLARAK KAPALIDIR.
+        self.ayrintili_log = ayrintili_log
 
     def coz(self, tasks: List[Task], bitis_zamani: Optional[float] = None) -> Dict[str, Dict[str, Any]]:
         from coz_yurutucu_toplu import toplu_gorevleri_coz
@@ -313,6 +320,7 @@ class CokluGPUTopluCozucu:
             sonuc = toplu_gorevleri_coz(
                 ham_model, self.tokenizer, gorev_partisi,
                 azami_yeni_token=self.azami_yeni_token, deneme_etiketi=self.gpu_etiketleri[gpu_index],
+                ayrintili_log=self.ayrintili_log,
             )
             if self.vram_kesifcileri is not None:
                 self.vram_kesifcileri[gpu_index].gorev_sonrasi_olc_ve_ayarla()
