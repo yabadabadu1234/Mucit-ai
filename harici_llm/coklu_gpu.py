@@ -173,6 +173,23 @@ class CokluGPUCozucu:
         )
 
 
+def _gorevleri_esit_dagit(tasks: List[Task], gpu_sayisi: int) -> List[List[Task]]:
+    """Padişah, İŞ BAŞLAMADAN ÖNCE, CPU'da, görevleri gpu_sayisi kadar
+    PAYA MÜMKÜN OLDUĞUNCA EŞİT böler (round-robin -- kalan varsa bazı
+    paylara yalnızca BİR FAZLA düşer, ondan fazlası asla). Bu, ORTAK
+    tek bir kuyruğun yol açacağı şu soruna karşı bir önlemdir: 240
+    görev, 4 GPU, B=128 iken paylaşımlı bir kuyruktan çekilseydi ilk 2
+    hızlı vezir kuyruğun TAMAMINI (240) kapıp diğer 2'sini HİÇ İŞ
+    ALAMADAN atıl bırakabilirdi. Baştan sabit pay verilince her vezir
+    YALNIZCA KENDİ payından çeker, başka vezirin payına asla dokunmaz."""
+    if gpu_sayisi <= 0:
+        return []
+    paylar: List[List[Task]] = [[] for _ in range(gpu_sayisi)]
+    for i, task in enumerate(tasks):
+        paylar[i % gpu_sayisi].append(task)
+    return paylar
+
+
 def padisah_vezir_toplu_havuzuyla_coz(
     gpu_sayisi: int,
     tasks: List[Task],
@@ -181,18 +198,31 @@ def padisah_vezir_toplu_havuzuyla_coz(
     bitis_zamani: Optional[float] = None,
     etiketler: Optional[List[str]] = None,
 ) -> Dict[str, Dict[str, Any]]:
-    """padisah_vezir_havuzuyla_coz'un TOPLU (batched) varyantı: her vezir
-    ortak kuyruktan TEK bir görev değil, KENDİ o anki güvenli B boyutu
-    kadar (b_boyutu_al(gpu_index) -- ör. vram_izleyici.VramTabanliBKesifcisi.
-    calisan_b()) görevi BİRDEN çeker ve `gorevleri_coz_toplu` (gerçekte
-    coz_yurutucu_toplu.toplu_gorevleri_coz) ile TEK bir batched adım
-    zincirinde HEPSİNİ BİRLİKTE çözer -- kullanıcının açıkça istediği
+    """padisah_vezir_havuzuyla_coz'un TOPLU (batched) varyantı.
+
+    Padişah İŞE BAŞLAMADAN ÖNCE görevleri gpu_sayisi kadar EŞİT paya
+    böler (bkz. _gorevleri_esit_dagit) -- her vezirin KENDİ AYRI kuyruğu
+    vardır, ORTAK bir kuyruk YOKTUR. Her vezir yalnızca KENDİ payından,
+    KENDİ o anki güvenli B boyutu kadar (b_boyutu_al(gpu_index) -- ör.
+    vram_izleyici.VramTabanliBKesifcisi.calisan_b()) görevi BİRDEN çekip
+    `gorevleri_coz_toplu` (gerçekte coz_yurutucu_toplu.toplu_gorevleri_coz)
+    ile TEK bir batched adım zincirinde HEPSİNİ BİRLİKTE çözer:
+
+      - Payı B'den BÜYÜKSE, kendi payını B'şer B'şer (birkaç toplu parti
+        halinde) çeker.
+      - Payı B'den KÜÇÜKSE, elindeki KADARINI (tek partide) çeker --
+        fazlası zaten yoktur, başka vezirin payına el atmaz.
+
     "tek GPU'daki model gerçekten B soruya AYNI ANDA baksın" davranışı
     budur; padisah_vezir_havuzuyla_coz (B=1) yalnızca görevleri seri
     olarak, GPU başına tek tek çözer."""
-    gorev_kuyrugu: "queue.Queue[Task]" = queue.Queue()
-    for task in tasks:
-        gorev_kuyrugu.put(task)
+    paylar = _gorevleri_esit_dagit(tasks, gpu_sayisi)
+    kendi_kuyruklari: List["queue.Queue[Task]"] = []
+    for pay in paylar:
+        kuyruk: "queue.Queue[Task]" = queue.Queue()
+        for task in pay:
+            kuyruk.put(task)
+        kendi_kuyruklari.append(kuyruk)
 
     sonuclar: Dict[str, Dict[str, Any]] = {}
     kilit = threading.Lock()
@@ -204,7 +234,13 @@ def padisah_vezir_toplu_havuzuyla_coz(
             return etiketler[gpu_index]
         return f"cuda:{gpu_index}"
 
+    print(
+        f"[coklu_gpu] {toplam} görev, {gpu_sayisi} vezire İŞ BAŞLAMADAN ÖNCE EŞİT paylaştırıldı: "
+        f"{[len(p) for p in paylar]} (hiçbir vezir başka vezirin payına dokunmayacak)."
+    )
+
     def _vezir(gpu_index: int) -> None:
+        kendi_kuyrugu = kendi_kuyruklari[gpu_index]
         while True:
             if bitis_zamani is not None and time.time() > bitis_zamani:
                 return
@@ -212,11 +248,11 @@ def padisah_vezir_toplu_havuzuyla_coz(
             parti: List[Task] = []
             for _ in range(b_boyutu):
                 try:
-                    parti.append(gorev_kuyrugu.get_nowait())
+                    parti.append(kendi_kuyrugu.get_nowait())
                 except queue.Empty:
                     break
             if not parti:
-                return  # kuyrukta iş kalmadı -- bu vezir görevini tamamladı
+                return  # KENDİ payı tükendi -- başka vezirin payına asla el atmaz
             try:
                 parti_sonuclari = gorevleri_coz_toplu(gpu_index, parti)
             except Exception as hata:
@@ -227,7 +263,7 @@ def padisah_vezir_toplu_havuzuyla_coz(
                 gecen = time.time() - baslangic
                 print(f"[coklu_gpu] ({_etiket(gpu_index)}) ({len(sonuclar)}/{toplam}) {len(parti)} görevlik TOPLU (B={len(parti)}) parti tamamlandı | toplam süre: {gecen:.1f} sn")
             for _ in parti:
-                gorev_kuyrugu.task_done()
+                kendi_kuyrugu.task_done()
 
     veziler = []
     for gpu_index in range(gpu_sayisi):

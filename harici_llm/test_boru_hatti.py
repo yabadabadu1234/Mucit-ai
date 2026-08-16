@@ -1301,6 +1301,54 @@ def test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
     )
 
 
+def test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu() -> None:
+    print("[test 26] coklu_gpu.padisah_vezir_toplu_havuzuyla_coz: paylaşımlı TEK kuyruk yerine, işe başlamadan ÖNCE görevler eşit paylaştırılıp her vezir SADECE kendi payını mı çekiyor (hızlı bir vezirin kuyruğu tek başına yutup diğerlerini aç bırakması engelleniyor mu)?...")
+
+    import threading
+
+    import coklu_gpu
+
+    # Kullanıcının somut senaryosu: 240 görev, 4 GPU, B çoğu görevden
+    # BÜYÜK -- eski (paylaşımlı tek kuyruk) tasarımda 2 hızlı vezir
+    # kuyruğun TAMAMINI kapıp diğer 2'sü HİÇ iş alamazdı.
+    tasks = [
+        Task(test_example=Example(input=np.array([[0]]), output=np.array([[0]])), train_examples=[], name=f"gorev{i}")
+        for i in range(10)
+    ]
+
+    isleyen_partiler: List[Any] = []
+    kilit = threading.Lock()
+
+    def _gorevleri_coz_toplu(gpu_index: int, parti: List[Task]) -> Dict[str, Any]:
+        with kilit:
+            isleyen_partiler.append((gpu_index, [t.name for t in parti]))
+        return {t.name: {"attempt_1": [[gpu_index]], "attempt_1_gonderildi_mi": True} for t in parti}
+
+    # 4 vezirin HEPSİNE, gerçekte olduğu gibi, KENDİ payından çok daha
+    # BÜYÜK bir B (100) veriliyor -- eğer hâlâ paylaşımlı TEK kuyruk
+    # kullanılıyor olsaydı, gpu_index=0 (ilk başlayan) TÜM 10 görevi TEK
+    # partide kapardı ve diğer vezirler HİÇ iş alamazdı.
+    sonuclar = coklu_gpu.padisah_vezir_toplu_havuzuyla_coz(
+        4, tasks, _gorevleri_coz_toplu, b_boyutu_al=lambda gpu_index: 100,
+    )
+
+    _dogrula(len(sonuclar) == 10, "10 görevin hepsi sonuçlandı")
+
+    gpu_basina_gorev_sayisi: Dict[int, int] = {}
+    for gpu_index, isimler in isleyen_partiler:
+        gpu_basina_gorev_sayisi[gpu_index] = gpu_basina_gorev_sayisi.get(gpu_index, 0) + len(isimler)
+
+    _dogrula(len(gpu_basina_gorev_sayisi) == 4, f"4 vezirin HEPSİ en az bir görev işledi (gördüğü GPU'lar: {sorted(gpu_basina_gorev_sayisi)}) -- hiçbiri aç bırakılmadı")
+    sayilar = sorted(gpu_basina_gorev_sayisi.values())
+    _dogrula(sayilar[-1] - sayilar[0] <= 1, f"10 görev 4 vezire MÜMKÜN OLDUĞUNCA EŞİT (fark ≤1) paylaştırıldı: {gpu_basina_gorev_sayisi}")
+
+    # Her vezir yalnızca TEK bir partide (kendi payı B=100'den küçük
+    # olduğu için) çalışmış olmalı -- başka vezirin payına asla dokunmadı.
+    for gpu_index in range(4):
+        bu_gpu_partileri = [isimler for g, isimler in isleyen_partiler if g == gpu_index]
+        _dogrula(len(bu_gpu_partileri) == 1, f"gpu{gpu_index}: payı B'den küçük olduğu için TEK partide (kendi payının tamamı) çekildi, başka vezirin payına asla el atmadı")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1327,6 +1375,7 @@ def calistir() -> None:
     test_23_gpu_tespit_derinlemesine_ve_gorunmeyen_indeksler_dogru_etiketleniyor()
     test_24_onisle_toplu_farkli_uzunluk_gercek_rwkv_ile_ragged_batch_dogrulamasi()
     test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
+    test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
