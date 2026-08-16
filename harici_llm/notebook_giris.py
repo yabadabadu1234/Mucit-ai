@@ -26,15 +26,28 @@ SUBMISSION_YOLU = "/kaggle/working/submission.json"
 COGALTMA_N = 16          # her bulmaca icin TTT'de kac augment ornegi uretilecek
 TTT_ADIM_SAYISI = 20     # her bulmaca icin kac LoRA ince-ayar adimi atilacak
 
+# YARISMA=True  -> gercek yarisma test kumesi (arc-agi_test_challenges.json),
+#                  cevaplar bilinmiyor, submission.json yarismaya gonderilir.
+# YARISMA=False -> DENEME modu: cevaplari BILINEN degerlendirme kumesi
+#                  (arc-agi_evaluation_challenges.json + _solutions.json)
+#                  kullanilir; coz_yurutucu'nun cozdugu HER gorevden hemen
+#                  sonra dogru mu yanlis mi oldugu VE submit_answer'in
+#                  gercekten basariyla cagrilip cagrilmadigi (bos yer
+#                  tutucuya dusup dusmedigi) hem konsola hem
+#                  konusma_transkriptleri.jsonl'e loglanir.
+YARISMA = True
+
 if __name__ == "__main__":
     print(f"[notebook_giris] CUDA erisilebilir mi: {torch.cuda.is_available()}")
     print("[notebook_giris] Model: rwkv (RWKV-7 G1) — tek model, yedek yok")
+    print(f"[notebook_giris] YARISMA={YARISMA}")
 
     submission = submission_uret(
         model_ailesi=None,  # None -> MODEL_ONCELIK_SIRASI'ndaki (yalnızca rwkv) modeli dener
         cikti_yolu=SUBMISSION_YOLU,
         cogaltma_n=COGALTMA_N,
         ttt_adim_sayisi=TTT_ADIM_SAYISI,
+        yarisma=YARISMA,
     )
 
     print(f"[notebook_giris] Bitti. {len(submission)} görev için {SUBMISSION_YOLU} yazıldı.")

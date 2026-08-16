@@ -124,10 +124,25 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
     import ast
     import multiprocessing
 
-    from kod_ajani import _guvenli_mi
+    from kod_ajani import _IZIN_VERILEN_MODULLER, _guvenli_mi
 
     if not _guvenli_mi(kod):
         return False, "kod güvenlik denetiminden geçemedi (yasak import/eval/exec/dunder)"
+
+    def _guvenli_import(isim, globals=None, locals=None, fromlist=(), level=0):
+        # KRITIK DUZELTME: onceki sandbox __builtins__ sozlugunde `__import__`
+        # HIC YOKTU -- yani AST asamasi bir module izin verse bile (ornegin
+        # eskiden 'math'), `import X` calisirken Python'in kendi import
+        # mekanizmasi __builtins__['__import__']'i arayip BULAMADIGI icin
+        # HER import cagrisi calisma anında patliyordu. Model urettigi
+        # kodun neredeyse tamami "import numpy as np" ile basladigindan
+        # (bkz. transkript kayitlari), execute_python'in GERCEK anlamda
+        # HICBIR ZAMAN calismamis olma ihtimali yuksekti.
+        kok = isim.split(".")[0]
+        if kok not in _IZIN_VERILEN_MODULLER:
+            raise ImportError(f"'{isim}' modülüne izin verilmiyor")
+        import importlib
+        return importlib.import_module(isim)
 
     def _calistir(kuyruk: "multiprocessing.Queue") -> None:
         ns: Dict[str, Any] = {}
@@ -139,7 +154,7 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
                 "bool": bool, "str": str, "tuple": tuple, "map": map, "filter": filter,
                 "any": any, "all": all, "isinstance": isinstance, "print": print,
                 "iter": iter, "next": next, "round": round, "frozenset": frozenset,
-                "divmod": divmod, "pow": pow,
+                "divmod": divmod, "pow": pow, "__import__": _guvenli_import,
             }}, ns)
             kuyruk.put(("basari", ns.get("sonuc", ns.get("result"))))
         except Exception as exc:

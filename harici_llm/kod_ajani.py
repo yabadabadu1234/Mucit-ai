@@ -1,6 +1,9 @@
 import ast
 
-_IZIN_VERILEN_MODULLER = frozenset({"math", "itertools", "collections", "functools"})
+# NOT: modelin GERCEKTE urettigi kodun neredeyse tamami "import numpy as np"
+# ile basliyor (bkz. transkript kayitlari) -- numpy eksikti, bu yuzden HER
+# execute_python cagrisi AST asamasinda "yasak import" diye reddediliyordu.
+_IZIN_VERILEN_MODULLER = frozenset({"math", "itertools", "collections", "functools", "numpy"})
 
 
 def _guvenli_mi(kod: str) -> bool:

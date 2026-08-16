@@ -4,13 +4,22 @@ import signal
 import time
 from typing import Any, Dict, List, Optional, Tuple
 
+import numpy as np
+
 from arc import make_submission, read_tasks_from_single_file
 from coz_yurutucu import gorevi_coz
 from model_yapilandirmalari import MODEL_ONCELIK_SIRASI
-from transkript import TRANSKRIPT_YOLU
+from transkript import TRANSKRIPT_YOLU, transkript_satiri_yaz
 from ttt_lora import lora_adaptoru_kur, temel_model_yukle, tokenizer_yukle
 
 TEST_CHALLENGES_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json"
+
+# YARISMA=False (deneme/degerlendirme modu) icin: gercek cevaplari BILEN
+# degerlendirme kumesi. read_tasks_from_single_file zaten solution_file
+# destekliyor (arc.py) -- verilince task.test_example.output GERCEK cevapla
+# doldurulur, boylece her cozumden sonra doğruluk KONTROL edilebilir.
+EVALUATION_CHALLENGES_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_evaluation_challenges.json"
+EVALUATION_SOLUTIONS_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_evaluation_solutions.json"
 
 # Verilen orijinal koddaki `global_end_time = time.time() + 12*3600 - 600`
 # deseniyle aynı usul: 11 saat 30 dakikalık toplam çalışma bütçesi.
@@ -96,6 +105,37 @@ def ana_model_ile_dene_yedekle(oncelik_sirasi: List[str] = MODEL_ONCELIK_SIRASI)
     )
 
 
+def _dogrulugu_kontrol_et(task: Any, sonuc: Dict[str, Any]) -> None:
+    """YARISMA=False (deneme) modunda: gercek cevap (task.test_example.output,
+    solution_file'dan doldurulmus) ile attempt_1/2'yi karsilastirir, hem
+    dogruluk hem de GERCEKTEN submit_answer'in basariyla cagrilip
+    cagrilmadigini (bos yer tutucuya dusup dusmedigini) hem stdout'a hem
+    transkript.jsonl'e yazar."""
+    gercek_cevap = task.test_example.output.tolist()
+    sonuclar = {}
+    for etiket in ("attempt_1", "attempt_2"):
+        try:
+            dogru_mu = np.array_equal(np.array(sonuc[etiket], dtype=object).astype(int), np.array(gercek_cevap))
+        except (ValueError, TypeError):
+            dogru_mu = False
+        sonuclar[etiket] = {
+            "dogru_mu": dogru_mu,
+            "gercekten_submit_edildi_mi": sonuc.get(f"{etiket}_gonderildi_mi", False),
+        }
+
+    print(
+        f"[gonderim_uret]   DEGERLENDIRME [{task.name}]: "
+        f"attempt_1 doğru={sonuclar['attempt_1']['dogru_mu']} "
+        f"(gerçekten submit edildi={sonuclar['attempt_1']['gercekten_submit_edildi_mi']}), "
+        f"attempt_2 doğru={sonuclar['attempt_2']['dogru_mu']} "
+        f"(gerçekten submit edildi={sonuclar['attempt_2']['gercekten_submit_edildi_mi']})"
+    )
+    transkript_satiri_yaz({
+        "gorev": task.name, "rol": "degerlendirme",
+        "icerik": {"gercek_cevap": gercek_cevap, **sonuclar},
+    })
+
+
 def submission_uret(
     model_ailesi: Optional[str] = None,
     oncelik_sirasi: List[str] = MODEL_ONCELIK_SIRASI,
@@ -103,6 +143,7 @@ def submission_uret(
     cogaltma_n: int = 16,
     ttt_adim_sayisi: int = 20,
     calisma_suresi_saniye: float = CALISMA_SURESI_SANIYE,
+    yarisma: bool = True,
 ) -> Dict[str, Any]:
 
     bitis_zamani = time.time() + calisma_suresi_saniye
@@ -116,8 +157,19 @@ def submission_uret(
         f"bitse bile o süre boyunca model ne 'konuştu' orada görülebilir."
     )
 
-    tasks = read_tasks_from_single_file(TEST_CHALLENGES_YOLU, test=True)
-    print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {TEST_CHALLENGES_YOLU}")
+    if yarisma:
+        print(f"[gonderim_uret] YARISMA=True: gerçek yarışma test kümesi kullanılıyor (cevaplar bilinmiyor).")
+        tasks = read_tasks_from_single_file(TEST_CHALLENGES_YOLU, test=True)
+        print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {TEST_CHALLENGES_YOLU}")
+    else:
+        print(
+            f"[gonderim_uret] YARISMA=False: DENEME modu -- değerlendirme kümesi (gerçek cevaplar BİLİNİYOR) "
+            f"kullanılıyor, her görevden sonra doğruluk otomatik kontrol edilip loglanacak."
+        )
+        tasks = read_tasks_from_single_file(
+            EVALUATION_CHALLENGES_YOLU, solution_file=EVALUATION_SOLUTIONS_YOLU,
+        )
+        print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {EVALUATION_CHALLENGES_YOLU} (+ çözümler: {EVALUATION_SOLUTIONS_YOLU})")
 
     kaydedici = _SonuCuKaydedici(tasks, cikti_yolu)
 
@@ -158,6 +210,8 @@ def submission_uret(
                     cogaltma_n=cogaltma_n, ttt_adim_sayisi=ttt_adim_sayisi,
                 )
                 kaydedici.ekle([sonuc["attempt_1"], sonuc["attempt_2"]])
+                if not yarisma:
+                    _dogrulugu_kontrol_et(task, sonuc)
             except Exception as exc:
                 print(f"[gonderim_uret] Görev {task.name} başarısız, boş tahmin yazılıyor: {exc}")
                 kaydedici.ekle([[[0, 0], [0, 0]], [[0, 0], [0, 0]]])
@@ -186,12 +240,17 @@ def _cli() -> None:
     ayristirici.add_argument("--cogaltma_n", type=int, default=16)
     ayristirici.add_argument("--ttt_adim_sayisi", type=int, default=20)
     ayristirici.add_argument("--calisma_suresi_saniye", type=float, default=CALISMA_SURESI_SANIYE)
+    ayristirici.add_argument(
+        "--yarisma", type=lambda s: s.lower() != "false", default=True,
+        help="False verilirse: değerlendirme kümesi (cevaplar bilinen arc-agi_evaluation_*) kullanılır, "
+             "her görevden sonra doğruluk otomatik kontrol edilip loglanır.",
+    )
     args = ayristirici.parse_args()
 
     submission_uret(
         model_ailesi=args.model_ailesi, cikti_yolu=args.cikti,
         cogaltma_n=args.cogaltma_n, ttt_adim_sayisi=args.ttt_adim_sayisi,
-        calisma_suresi_saniye=args.calisma_suresi_saniye,
+        calisma_suresi_saniye=args.calisma_suresi_saniye, yarisma=args.yarisma,
     )
 
 

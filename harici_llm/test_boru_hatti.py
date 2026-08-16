@@ -597,6 +597,58 @@ def test_15_coz_yurutucu_artimli_yol_uctan_uca() -> None:
               "tutarsız ilk deneme (satır uzunlukları farklı) reddedildi, tutarlı ikinci deneme kaydedildi")
 
 
+def test_16_execute_python_gercekten_numpy_calistirabiliyor_mu() -> None:
+    print("[test 16] execute_python: gerçek Kaggle transkriptlerinde görülen 'import numpy as np' GERÇEKTEN çalışıyor mu (önceden hiçbir import çalışmıyordu)?...")
+
+    from araclar import kodu_guvenle_calistir_serbest
+
+    basarili, sonuc = kodu_guvenle_calistir_serbest(
+        "import numpy as np\n"
+        "a = np.array([[1, 2], [3, 4]])\n"
+        "sonuc = (a * 2).tolist()\n"
+    )
+    _dogrula(basarili, "'import numpy as np' içeren gerçek kod BAŞARIYLA çalıştı (eskiden AST aşamasında reddedilirdi)")
+    _dogrula(sonuc == [[2, 4], [6, 8]], "numpy ile hesaplanan sonuç doğru")
+
+    basarili2, sonuc2 = kodu_guvenle_calistir_serbest("import math\nsonuc = math.sqrt(16)\n")
+    _dogrula(basarili2 and sonuc2 == 4.0,
+              "önceden izinli sanılan 'math' importu da GERÇEKTE hiç çalışmıyordu (__import__ builtin'i sandbox'ta yoktu) -- şimdi çalışıyor")
+
+    basarisiz, hata = kodu_guvenle_calistir_serbest("import os\nsonuc = os.listdir('.')\n")
+    _dogrula(not basarisiz, "izin verilmeyen bir modül (os) hâlâ reddediliyor (güvenlik gerilemedi)")
+
+
+def test_17_yarisma_false_dogruluk_kontrolu() -> None:
+    print("[test 17] YARISMA=False (deneme) modu: gonderim_uret._dogrulugu_kontrol_et gerçek cevapla doğru/yanlış ve gerçek-submit durumunu doğru tespit ediyor mu?...")
+
+    import gonderim_uret
+
+    task = Task(
+        test_example=Example(input=np.array([[0, 0], [0, 0]]), output=np.array([[9, 9], [9, 9]])),
+        train_examples=[],
+        name="testgorev-degerlendirme",
+    )
+
+    dogru_sonuc = {
+        "attempt_1": [[9, 9], [9, 9]], "attempt_1_gonderildi_mi": True,
+        "attempt_2": [[0, 0], [0, 0]], "attempt_2_gonderildi_mi": False,
+    }
+
+    yakalanan = {}
+    gercek_yaz = gonderim_uret.transkript_satiri_yaz
+    gonderim_uret.transkript_satiri_yaz = lambda kayit: yakalanan.update(kayit)
+    try:
+        gonderim_uret._dogrulugu_kontrol_et(task, dogru_sonuc)
+    finally:
+        gonderim_uret.transkript_satiri_yaz = gercek_yaz
+
+    _dogrula(yakalanan["icerik"]["attempt_1"]["dogru_mu"] is True, "attempt_1 (gerçek cevapla birebir aynı) DOĞRU olarak tespit edildi")
+    _dogrula(yakalanan["icerik"]["attempt_1"]["gercekten_submit_edildi_mi"] is True, "attempt_1'in gerçekten submit_answer ile geldiği doğru tespit edildi")
+    _dogrula(yakalanan["icerik"]["attempt_2"]["dogru_mu"] is False, "attempt_2 (yanlış/boş yer tutucu) YANLIŞ olarak tespit edildi")
+    _dogrula(yakalanan["icerik"]["attempt_2"]["gercekten_submit_edildi_mi"] is False,
+              "attempt_2'nin GERÇEKTEN submit edilmediği (boş yer tutucuya düştüğü) doğru tespit edildi -- tesadüfen doğru çıksa bile bu ayrım kaybolmaz")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -613,6 +665,8 @@ def calistir() -> None:
     test_13_rwkv_prompt_isleme_token_basina_degil_tek_cagriyla()
     test_14_rwkv_oturum_turler_arasi_durum_tasir_yeniden_islemez()
     test_15_coz_yurutucu_artimli_yol_uctan_uca()
+    test_16_execute_python_gercekten_numpy_calistirabiliyor_mu()
+    test_17_yarisma_false_dogruluk_kontrolu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

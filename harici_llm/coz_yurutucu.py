@@ -233,4 +233,10 @@ def gorevi_coz(
     return {
         "attempt_1": attempt_1 if attempt_1 is not None else BOS_TAHMIN,
         "attempt_2": attempt_2 if attempt_2 is not None else (attempt_1 or BOS_TAHMIN),
+        # YARISMA=False degerlendirme modunda dogruluk/denetim raporu icin:
+        # gercekten submit_answer basariyla cagrildi mi, yoksa bos yer
+        # tutucuya mi dusuldu -- bunu attempt_N'in kendisinden AYIRT ETMEK
+        # gerekiyor (bos yer tutucu tesaduefen dogru cevapla ayni olabilir).
+        "attempt_1_gonderildi_mi": attempt_1 is not None,
+        "attempt_2_gonderildi_mi": attempt_2 is not None,
     }
