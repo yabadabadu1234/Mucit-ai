@@ -23,7 +23,7 @@ if HARICI_LLM_KOKU not in sys.path:
 # MUCIT_PAKETLER_YOLU ortam degiskeniyle degistirilebilir.
 PAKETLER_YOLU = os.environ.get(
     "MUCIT_PAKETLER_YOLU",
-    "/kaggle/input/notebooks/ulankaggle/harici-llm/paketler",
+    "/kaggle/input/notebooks/ulankaggle/harici-llm/modeller/paketler",
 )
 if os.path.isdir(PAKETLER_YOLU):
     print(f"[notebook_giris] pip paketleri yerel klasörden (internetsiz) kuruluyor: {PAKETLER_YOLU}")

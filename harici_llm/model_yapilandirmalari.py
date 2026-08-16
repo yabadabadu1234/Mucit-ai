@@ -34,7 +34,7 @@ YEREL_MODEL_YOLLARI: Dict[str, str] = {
     # model_indir.py ile indirilen HAM .pth kontrol noktası (transformers
     # config.json TAŞIMIYOR) — bkz. rwkv_native.py, ttt_lora.py bu dosya
     # yolunu görünce otomatik olarak `rwkv` pip paketiyle yükler.
-    RWKV: "/kaggle/input/notebooks/ulankaggle/harici-llm/modeller/rwkv/rwkv7-g1i-7.2b-20260805-ctx16384.pth",
+    RWKV: "/kaggle/input/notebooks/ulankaggle/harici-llm/modeller/modeller/rwkv/rwkv7-g1i-7.2b-20260805-ctx16384.pth",
     MAMBA: "/kaggle/input/models/ulankaggle/mistral-mamba-codestral-7b-v0-1/transformers/default/1/Mamba-Codestral-7B-v0.1",
     FALCON_MAMBA: "/kaggle/input/falcon-mamba-7b-instruct/transformers/default/1",
 }
