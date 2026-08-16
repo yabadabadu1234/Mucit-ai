@@ -81,6 +81,7 @@ def toplu_gorevleri_coz(
     kontrol_araligi: int = 1000,
     deneme_etiketi: str = "toplu",
     ayrintili_log: bool = False,
+    bitis_zamani: Optional[float] = None,
 ) -> Dict[str, Dict[str, Any]]:
     """B = len(tasks) görevin HEPSİNİ, TEK GPU'da, AYNI ağırlıkları
     (ham_rwkv_modeli.z) paylaşan TEK bir batched adım zinciriyle EŞZAMANLI
@@ -91,7 +92,18 @@ def toplu_gorevleri_coz(
     sürebilen batched prefill AŞAMASINDA da (daha önce tamamen sessizdi --
     kullanıcının "800 saniyedir tek log yok" diye fark ettiği boşluk tam
     burasıydı) VE üretim aşamasında çok daha sık (varsayılan 5000 yerine
-    200 adımda bir) ilerleme logu basılır."""
+    200 adımda bir) ilerleme logu basılır.
+
+    `bitis_zamani` (mutlak time.time() zaman damgası) verilirse: ÖNCEDEN
+    yalnızca padisah_vezir_toplu_havuzuyla_coz KOTALAR ARASINDA bakıyordu
+    -- TEK bir batched parti, kendi azami_yeni_token'ına (60000 adım)
+    kadar süre bütçesini HİÇ dinlemeden çalışabiliyordu. Bu, kullanıcının
+    fark ettiği yavaşlamanın gerçek nedenlerinden biri: attempt_1 + attempt_2
+    (iki tam bağımsız koşu) art arda çalışırken, İÇERDEKİ bir parti tek
+    başına saatler sürebiliyordu. Artık üretim döngüsü kontrol_araligi
+    aralığında bitis_zamani'yi de kontrol eder; aşılmışsa HENÜZ BİTMEMİŞ
+    dizileri "zaman aşımı" ile dondurup elindekiyle döner -- diğer
+    vezirlerin/koşuların bütçesini yemez."""
     B = len(tasks)
     z = ham_rwkv_modeli.z
     n_layer, n_embd, n_head, head_size = _boyutlari_al(ham_rwkv_modeli)
@@ -169,6 +181,16 @@ def toplu_gorevleri_coz(
 
         if adim % kontrol_araligi != 0 and adim != azami_yeni_token:
             continue
+
+        if bitis_zamani is not None and time.time() > bitis_zamani and not all(bitti):
+            print(
+                f"{_ONEK} ({deneme_etiketi})   SÜRE BÜTÇESİ TÜKENDİ: {adim} adımda, {sum(1 for x in bitti if not x)}/{B} "
+                f"görev HÂLÂ bitmemişken durduruluyor -- bu partinin kalanı boş tahminle işaretlenecek."
+            )
+            for b in range(B):
+                if not bitti[b]:
+                    bitti[b] = True
+            break
 
         for b in range(B):
             if bitti[b]:

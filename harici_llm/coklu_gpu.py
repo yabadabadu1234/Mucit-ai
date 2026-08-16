@@ -320,7 +320,7 @@ class CokluGPUTopluCozucu:
             sonuc = toplu_gorevleri_coz(
                 ham_model, self.tokenizer, gorev_partisi,
                 azami_yeni_token=self.azami_yeni_token, deneme_etiketi=self.gpu_etiketleri[gpu_index],
-                ayrintili_log=self.ayrintili_log,
+                ayrintili_log=self.ayrintili_log, bitis_zamani=bitis_zamani,
             )
             if self.vram_kesifcileri is not None:
                 self.vram_kesifcileri[gpu_index].gorev_sonrasi_olc_ve_ayarla()

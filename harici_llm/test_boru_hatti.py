@@ -1754,6 +1754,48 @@ def test_33_coklu_gpu_sure_kalmazsa_attempt_2_attempt_1e_geri_duser() -> None:
               "süre yoksa attempt_2 GÜVENLE attempt_1'e düştü (cevapsız kalmaktan iyidir)")
 
 
+def test_34_toplu_gorevleri_coz_suresi_dolunca_uretim_ortasinda_duruyor_mu() -> None:
+    print("[test 34] coz_yurutucu_toplu.toplu_gorevleri_coz: kullanıcının fark ettiği yavaşlamanın gerçek nedeni -- TEK bir batched parti, azami_yeni_token'a (60000 adım) kadar süre bütçesini HİÇ dinlemeden çalışabiliyordu. Artık bitis_zamani ORTA ADIMDA da denetleniyor mu?...")
+
+    import time as _time
+
+    import coz_yurutucu_toplu as cyt
+
+    call_sayaci = {"n": 0}
+
+    def _mock_onisle(z, n_layer, n_embd, n_head, head_size, token_dizileri, ilerleme_geri_cagirma=None, ilerleme_adimi=200):
+        B = len(token_dizileri)
+        return torch.zeros(B, 4), ["durum"]
+
+    def _mock_adim(z, n_layer, n_embd, n_head, head_size, token_idler, durum, aktif_maske):
+        call_sayaci["n"] += 1
+        _time.sleep(0.01)  # her adımın GERÇEKTEN zaman aldığını taklit eder
+        B = len(token_idler)
+        return torch.zeros(B, 4), durum
+
+    tasks = [
+        Task(test_example=Example(input=np.array([[1]]), output=np.array([[1]])), train_examples=[], name="hicbitmeyen-gorev"),
+    ]
+    eski_onisle, eski_adim, eski_ayarlar = cyt.onisle_toplu_farkli_uzunluk, cyt.adim_toplu_maskeli, cyt.uretim_ayarlarini_al
+    cyt.onisle_toplu_farkli_uzunluk = _mock_onisle
+    cyt.adim_toplu_maskeli = _mock_adim
+    cyt.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False, "pad_token_id": 0}
+    try:
+        bitis_zamani = _time.time() + 0.2  # 0.01sn/adım * kontrol_araligi=10 -> birkaç kontrolde dolar
+        baslangic = _time.time()
+        sonuc = cyt.toplu_gorevleri_coz(
+            _SahteHamModelCyt(), _TamTersinirTokenizerCyt(), tasks,
+            azami_yeni_token=1_000_000, kontrol_araligi=10, bitis_zamani=bitis_zamani,
+        )
+        gecen = _time.time() - baslangic
+    finally:
+        cyt.onisle_toplu_farkli_uzunluk, cyt.adim_toplu_maskeli, cyt.uretim_ayarlarini_al = eski_onisle, eski_adim, eski_ayarlar
+
+    _dogrula(call_sayaci["n"] < 1000, f"1.000.000 adımlık BÜTÇE verilmesine rağmen, üretim döngüsü SÜRE BÜTÇESİ (0.2sn) yüzünden ÇOK ERKEN durduruldu ({call_sayaci['n']} adımda) -- kullanıcının fark ettiği 'tek bir parti bütçeyi hiç dinlemiyor' sorunu düzeltildi")
+    _dogrula(gecen < 2.0, f"gerçek geçen süre ({gecen:.2f} sn) süre bütçesine (0.2 sn) yakın kaldı, 1M adımlık teorik süreye YAKLAŞMADI BİLE")
+    _dogrula(sonuc["hicbitmeyen-gorev"]["attempt_1_gonderildi_mi"] is False, "hiç bitirilemeyen görev, süre bütçesi yüzünden dürüstçe 'gönderilmedi' olarak işaretlendi")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1789,6 +1831,7 @@ def calistir() -> None:
     test_31_ayrintili_log_uzun_prefill_boyunca_sessiz_kalmiyor_mu()
     test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil()
     test_33_coklu_gpu_sure_kalmazsa_attempt_2_attempt_1e_geri_duser()
+    test_34_toplu_gorevleri_coz_suresi_dolunca_uretim_ortasinda_duruyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
