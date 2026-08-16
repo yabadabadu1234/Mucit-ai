@@ -182,6 +182,32 @@ class RWKVUyumluTokenizer:
         return cikti
 
 
+_RWKV_HEAD_BOYUTU = 64  # README: "Head size = 64 for all current models"
+
+
+def _rwkv_args_eksiklerini_tamamla(ham_model: Any) -> None:
+    """`rwkv` pip paketinin (en azindan 0.8.32 surumunde) RWKV-7
+    kontrol noktalarini yuklerken kendi ic `args` (SimpleNamespace)
+    nesnesine `n_head` alanini EKLEMEDIGI durum icin savunma: state=None
+    ile ilk forward() cagrisinda kutuphanenin kendi state-sifirlama kodu
+    `args.n_head`'e erisip AttributeError firlatiyor. Kutuphane kaynagina
+    dokunmadan, eksik alani n_embd/head_boyutu formuluyle turetip
+    args'a ekliyoruz -- boylece kutuphanenin KENDI state init kodu
+    degismeden calisabiliyor."""
+    args = getattr(ham_model, "args", None)
+    if args is None:
+        return
+    if not hasattr(args, "n_head") and hasattr(args, "n_embd"):
+        args.n_head = args.n_embd // _RWKV_HEAD_BOYUTU
+        print(
+            f"[rwkv_native] `rwkv` paketinin args nesnesinde eksik olan "
+            f"n_head, n_embd={args.n_embd} / head_boyutu={_RWKV_HEAD_BOYUTU} "
+            f"formülüyle tamamlandı: n_head={args.n_head}"
+        )
+    if not hasattr(args, "n_att") and hasattr(args, "n_embd"):
+        args.n_att = args.n_embd
+
+
 def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16) -> RWKVUyumluModel:
     from rwkv.model import RWKV
 
@@ -193,6 +219,7 @@ def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16) ->
 
     print(f"[rwkv_native] `rwkv` pip paketiyle native yükleniyor: {model_yolu} | strateji={strateji}")
     ham_model = RWKV(model=model_yolu, strategy=strateji)
+    _rwkv_args_eksiklerini_tamamla(ham_model)
     return RWKVUyumluModel(ham_model, strateji)
 
 
