@@ -205,15 +205,39 @@ def coklu_gpu_submission_uret(
             cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri)
         sonuclar = cozucu.coz(tasks, bitis_zamani=bitis_zamani)
 
+        # ARC ödül kuralı görev başına 2 BAĞIMSIZ deneme hakkı tanır (ikisi
+        # de yanlışsa fark etmez, biri doğruysa görev sayılır). ÖNCEKİ
+        # kodda attempt_2, attempt_1'in DÜZ KOPYASIYDI -- bu hakkın
+        # YARISI hiç kullanılmıyordu. Artık do_sample=True/temperature=1.0
+        # sayesinde (bkz. model_yapilandirmalari.py) ikinci bir bağımsız
+        # koşu GERÇEKTEN farklı bir örnekleme/cevap verebilir; süre bütçesi
+        # varsa (bitis_zamani hâlâ geçmediyse) ikinci, TAMAMEN BAĞIMSIZ bir
+        # toplu koşu daha yapılır. Süre kalmadıysa (ilk koşu bütçenin
+        # tamamını yediyse) attempt_1'e sessizce geri düşülür -- iki deneme
+        # hakkının biri boşa gitmiş olsa da hiç cevapsız kalmaktan iyidir.
+        sonuclar_2: Dict[str, Dict[str, Any]] = {}
+        if bitis_zamani is None or time.time() < bitis_zamani:
+            print("[gonderim_uret] [ÇOKLU-GPU] attempt_2 için İKİNCİ, BAĞIMSIZ bir toplu koşu başlıyor (aynı görevler, yeniden örneklenir)...")
+            sonuclar_2 = cozucu.coz(tasks, bitis_zamani=bitis_zamani)
+        else:
+            print("[gonderim_uret] [ÇOKLU-GPU] Süre bütçesi tükendi -- attempt_2 için ikinci koşu ATLANDI, attempt_1 tekrar kullanılacak.")
+
         for task in tasks:
             sonuc = sonuclar.get(task.name, {"attempt_1": [[0, 0], [0, 0]], "attempt_1_gonderildi_mi": False})
             attempt_1 = sonuc["attempt_1"]
-            kaydedici.ekle([attempt_1, attempt_1])
+            sonuc_2 = sonuclar_2.get(task.name)
+            if sonuc_2 is not None and sonuc_2.get("attempt_1_gonderildi_mi"):
+                attempt_2 = sonuc_2["attempt_1"]
+                attempt_2_gonderildi_mi = True
+            else:
+                attempt_2 = attempt_1
+                attempt_2_gonderildi_mi = sonuc.get("attempt_1_gonderildi_mi", False)
+            kaydedici.ekle([attempt_1, attempt_2])
             if not yarisma:
                 _dogrulugu_kontrol_et(task, {
-                    "attempt_1": attempt_1, "attempt_2": attempt_1,
+                    "attempt_1": attempt_1, "attempt_2": attempt_2,
                     "attempt_1_gonderildi_mi": sonuc.get("attempt_1_gonderildi_mi", False),
-                    "attempt_2_gonderildi_mi": sonuc.get("attempt_1_gonderildi_mi", False),
+                    "attempt_2_gonderildi_mi": attempt_2_gonderildi_mi,
                 })
     finally:
         kaydedici._son_kayit()

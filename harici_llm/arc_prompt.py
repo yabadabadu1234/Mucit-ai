@@ -104,6 +104,11 @@ STRICT OPERATING PROCEDURE — follow every step, in order, every time:
    for the current test input. `submit_answer` is the ONLY way to register your final answer —
    text output alone is never scored.
 
+   THIS IS ENFORCED, NOT OPTIONAL: `submit_answer` will be REJECTED if you have not successfully
+   called `execute_python` at least once first. There is no way around this — write code that
+   applies your candidate rule to every train input and checks the result against the real train
+   output before you attempt to submit.
+
    You are never restricted from using either tool: `execute_python` and `submit_answer` are
    always both available to you, in every turn, for every puzzle.
 

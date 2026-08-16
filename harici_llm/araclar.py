@@ -132,11 +132,22 @@ def _izgara_tutarliligini_denetle(grid: Any) -> Tuple[bool, str]:
 
 
 class CevapDefteri:
-    """submit_answer ile kaydedilen son gecerli cevabi tutar."""
+    """submit_answer ile kaydedilen son gecerli cevabi tutar.
+
+    `execute_python_basariyla_calisti_mi`: gerçek Kaggle transkriptlerinde
+    tekrar tekrar görüldü -- model, kuralını train örnekleriyle HİÇ
+    doğrulamadan (tek bir execute_python çağrısı bile yapmadan) doğrudan
+    submit_answer'a atlıyor ve kendi "Final Rule Sentence"iyle çelişen bir
+    grid gönderiyordu (bkz. sistem promptunun kendi 4. maddesi: "ALWAYS
+    WORK BY CALLING TOOLS... use execute_python as many times as you need
+    to write and test code that implements your rule against the train
+    examples"). Bu artık yalnızca bir TELKİN değil, submit_answer_arac
+    tarafından FİİLEN ZORUNLU kılınıyor (bkz. aşağıdaki kontrol)."""
 
     def __init__(self) -> None:
         self.kaydedilen_cevap: Optional[List[List[int]]] = None
         self.deneme_gecmisi: List[Dict[str, Any]] = []
+        self.execute_python_basariyla_calisti_mi: bool = False
 
 
 def submit_answer_arac(grid: Any, defter: CevapDefteri) -> Dict[str, Any]:
@@ -145,6 +156,26 @@ def submit_answer_arac(grid: Any, defter: CevapDefteri) -> Dict[str, Any]:
     # anahtar adlari, Ingilizce egitim verisiyle calisan model icin
     # bilinmeyen/anlamsiz kelimeler olurdu. Anahtarlar da (deger metinleri
     # gibi) daima Ingilizce olmali.
+    #
+    # ZORUNLU DOGRULAMA: gercek Kaggle transkriptlerinde model, kuralini
+    # train orneklerine karsi HIC test etmeden dogrudan (yanlis/tutarsiz
+    # bir) cevap gonderiyordu. Sistem promptu zaten "execute_python'i
+    # kuralini train ornekleriyle dogrulamak icin kullan" diyor ama bu
+    # yalnizca bir TELKINDI, hicbir sey ZORUNLU KILMIYORDU. Simdi en az
+    # BIR basarili execute_python cagrisi yapilmadan submit_answer
+    # REDDEDILIR -- bu, kuralin dogru oldugunun KANITI degildir (model
+    # yanlis bir dogrulama kodu da yazabilir), ama en azindan modeli HIC
+    # DUSUNMEDEN/TEST ETMEDEN cevap gondermekten ALIKOYAR.
+    if not defter.execute_python_basariyla_calisti_mi:
+        mesaj = (
+            "Rejected: you must call execute_python at least once, successfully, to test your "
+            "rule against the train examples BEFORE calling submit_answer. Write code that "
+            "applies your candidate rule to each train input and checks it against the real "
+            "train output -- then call submit_answer once that check passes."
+        )
+        defter.deneme_gecmisi.append({"grid": grid, "gecerli": False, "mesaj": mesaj})
+        return {"success": False, "error": mesaj}
+
     gecerli, mesaj = _izgara_tutarliligini_denetle(grid)
     defter.deneme_gecmisi.append({"grid": grid, "gecerli": gecerli, "mesaj": mesaj})
     if not gecerli:
@@ -154,8 +185,10 @@ def submit_answer_arac(grid: Any, defter: CevapDefteri) -> Dict[str, Any]:
     return {"success": True, "message": "Answer recorded."}
 
 
-def execute_python_arac(code: str) -> Dict[str, Any]:
+def execute_python_arac(code: str, defter: Optional[CevapDefteri] = None) -> Dict[str, Any]:
     basarili, sonuc = kodu_guvenle_calistir_serbest(code)
+    if defter is not None and basarili:
+        defter.execute_python_basariyla_calisti_mi = True
     if not basarili:
         return {"success": False, "error": sonuc}
     return {"success": True, "result": sonuc}
@@ -212,7 +245,7 @@ def arac_cagrisini_yurut(cagri: Dict[str, Any], defter: CevapDefteri) -> Dict[st
     ad = cagri.get("name")
     args = cagri.get("arguments", {})
     if ad == "execute_python":
-        return execute_python_arac(args.get("code", ""))
+        return execute_python_arac(args.get("code", ""), defter)
     if ad == "submit_answer":
         return submit_answer_arac(args.get("grid"), defter)
     return {"success": False, "error": f"Unknown tool: {ad}"}

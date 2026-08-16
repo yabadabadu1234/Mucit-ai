@@ -141,7 +141,12 @@ def test_1_arac_cagrisi_ayiklama() -> None:
 def test_2_cevap_verme_araci_boyut_tutarliligi() -> None:
     print("[test 2] submit_answer: tutarsız satır/sütun sayısı REDDEDİLMELİ, kendimiz düzeltmemeliyiz...")
 
+    # NOT: submit_answer artık en az bir BAŞARILI execute_python çağrısı
+    # ZORUNLU kılıyor (bkz. araclar.submit_answer_arac) -- bu testin
+    # amacı SATIR/SÜTUN tutarlılık kontrolünü sınamak olduğu için, o
+    # önkoşulu burada doğrudan (whitebox) sağlıyoruz.
     defter = CevapDefteri()
+    defter.execute_python_basariyla_calisti_mi = True
     tutarsiz_grid = [[1, 2, 3], [4, 5], [6, 7, 8]]
     sonuc = submit_answer_arac(tutarsiz_grid, defter)
 
@@ -152,10 +157,36 @@ def test_2_cevap_verme_araci_boyut_tutarliligi() -> None:
     print(f"    -> döndürülen hata: {sonuc['error']}")
 
     defter2 = CevapDefteri()
+    defter2.execute_python_basariyla_calisti_mi = True
     tutarli_grid_farkli_boyut = [[9, 9, 9, 9, 9], [8, 8, 8, 8, 8]]
     sonuc2 = submit_answer_arac(tutarli_grid_farkli_boyut, defter2)
     _dogrula(sonuc2["success"] is True, "kendi içinde tutarlı fakat train örneklerinden FARKLI boyutlu ızgara kabul edildi (boyut değişebilir)")
     _dogrula(defter2.kaydedilen_cevap == tutarli_grid_farkli_boyut, "kaydedilen cevap AYNEN (yeniden boyutlandırılmadan) saklandı")
+
+
+def test_2b_submit_answer_execute_python_calistirilmadan_reddediliyor_mu() -> None:
+    print("[test 2b] submit_answer: execute_python HİÇ çağrılmadan (train örnekleriyle hiç doğrulama yapılmadan) doğrudan submit_answer çağrılırsa REDDEDİLİYOR mu -- gerçek transkriptlerde görülen 'hiç test etmeden cevap gönderme' davranışına karşı yeni zorunluluk...")
+
+    defter = CevapDefteri()
+    _dogrula(defter.execute_python_basariyla_calisti_mi is False, "yeni CevapDefteri başlangıçta execute_python hiç çalışmamış sayılıyor")
+    sonuc = submit_answer_arac([[1, 2], [3, 4]], defter)
+    _dogrula(sonuc["success"] is False, "GEÇERLİ bir ızgara olsa bile, execute_python hiç çağrılmadıysa submit_answer REDDEDİLDİ")
+    _dogrula("execute_python" in sonuc["error"], "ret sebebi modele AÇIKÇA execute_python çağırması gerektiğini söylüyor")
+    _dogrula(defter.kaydedilen_cevap is None, "reddedilen cevap KAYDEDİLMEDİ")
+
+    # execute_python BAŞARISIZ olursa (ör. güvenlik denetiminden geçemedi)
+    # bu HÂLÂ yeterli sayılmamalı -- yalnızca BAŞARILI bir çalıştırma sayılır.
+    from araclar import execute_python_arac
+    basarisiz_sonuc = execute_python_arac("import os", defter)  # eski (kaldırılmış) kısıtlamayı degil, farkli bir gercek hata sinamak icin kasitli syntax hatasi kullanilmiyor -- bu satir artik BASARILI donuyor cunku import serbest, o yuzden ayri bir gercek-hata senaryosu asagida
+    _dogrula(basarisiz_sonuc["success"] is True, "not: import artık serbest (önceki bug düzeltmesi), bu satır başarılı döner")
+    _dogrula(defter.execute_python_basariyla_calisti_mi is True, "BAŞARILI bir execute_python çağrısından sonra bayrak True oldu")
+
+    defter2 = CevapDefteri()
+    gercek_hata_sonucu = execute_python_arac("bu_gecerli_python_degil (((", defter2)
+    _dogrula(gercek_hata_sonucu["success"] is False, "gerçekten BAŞARISIZ bir execute_python çağrısı (syntax hatası)")
+    _dogrula(defter2.execute_python_basariyla_calisti_mi is False, "BAŞARISIZ bir execute_python çağrısı bayrağı DEĞİŞTİRMEDİ -- submit_answer hâlâ reddedilecek")
+    sonuc2 = submit_answer_arac([[1, 2], [3, 4]], defter2)
+    _dogrula(sonuc2["success"] is False, "yalnızca BAŞARISIZ execute_python denemesi olan bir defter için submit_answer hâlâ reddedildi")
 
 
 def test_3_arac_cagrisini_yurutme_ve_hata_donen_akis() -> None:
@@ -588,6 +619,7 @@ def test_15_coz_yurutucu_artimli_yol_uctan_uca() -> None:
     tok = _KarakterTabanliRWKVTokenizer()
 
     senaryo = [
+        '```json\n{"name": "execute_python", "arguments": {"code": "sonuc = 1"}}\n```',
         '```json\n{"name": "submit_answer", "arguments": {"grid": [[1, 2, 3], [4]]}}\n```',
         '```json\n{"name": "submit_answer", "arguments": {"grid": [[7, 7], [7, 7]]}}\n```',
     ]
@@ -1232,7 +1264,8 @@ def test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
         "gorevC": [[3, 3, 3, 3]],
     }
     metinler = {
-        ad: '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar[ad])
+        ad: '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} '
+            '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar[ad])
         for ad in beklenen_cevaplar
     }
     scripted = [[ord(c) for c in metinler[t.name]] for t in tasks]
@@ -1628,9 +1661,103 @@ class _TamTersinirTokenizerCyt:
         return "".join(chr(int(t)) for t in token_idler)
 
 
+def test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil() -> None:
+    print("[test 32] gonderim_uret.coklu_gpu_submission_uret: ARC'ın 2-deneme hakkı -- attempt_2 artık attempt_1'in DÜZ KOPYASI değil, İKİNCİ BAĞIMSIZ bir toplu koşudan mı geliyor?...")
+
+    import os
+    import tempfile
+
+    import coklu_gpu
+    import gonderim_uret
+
+    task = Task(test_example=Example(input=np.array([[0]]), output=np.array([[0]])), train_examples=[], name="gorevX-0")
+
+    eski_gorevleri_yukle = gonderim_uret._gorevleri_yukle
+    eski_dort_kopya = coklu_gpu.dort_kopya_yukle
+    eski_cozucu_sinifi = coklu_gpu.CokluGPUTopluCozucu
+    gonderim_uret._gorevleri_yukle = lambda yarisma: [task]
+    coklu_gpu.dort_kopya_yukle = lambda model_ailesi, azami_gpu=4: ([object()], object(), ["cuda:0"])
+
+    cagri_sayisi = {"n": 0}
+
+    class _SahteCozucu:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        def coz(self, tasks, bitis_zamani=None):
+            cagri_sayisi["n"] += 1
+            if cagri_sayisi["n"] == 1:
+                return {"gorevX-0": {"attempt_1": [[1, 1]], "attempt_1_gonderildi_mi": True}}
+            return {"gorevX-0": {"attempt_1": [[2, 2]], "attempt_1_gonderildi_mi": True}}
+
+    coklu_gpu.CokluGPUTopluCozucu = _SahteCozucu
+    try:
+        with tempfile.TemporaryDirectory() as gecici_dizin:
+            cikti_yolu = os.path.join(gecici_dizin, "submission.json")
+            submission = gonderim_uret.coklu_gpu_submission_uret(cikti_yolu=cikti_yolu, yarisma=True, calisma_suresi_saniye=3600)
+    finally:
+        gonderim_uret._gorevleri_yukle = eski_gorevleri_yukle
+        coklu_gpu.dort_kopya_yukle = eski_dort_kopya
+        coklu_gpu.CokluGPUTopluCozucu = eski_cozucu_sinifi
+
+    _dogrula(cagri_sayisi["n"] == 2, f"cozucu.coz() TAM OLARAK İKİ kez çağrıldı (attempt_1 + BAĞIMSIZ attempt_2), bulunan: {cagri_sayisi['n']}")
+
+    denemeler = submission["gorevX"]
+    _dogrula(denemeler[0]["attempt_1"] == [[1, 1]], "attempt_1, İLK bağımsız koşunun sonucunu taşıyor")
+    _dogrula(denemeler[0]["attempt_2"] == [[2, 2]], "attempt_2 artık attempt_1'in KOPYASI DEĞİL -- İKİNCİ bağımsız koşunun KENDİ sonucunu taşıyor")
+
+
+def test_33_coklu_gpu_sure_kalmazsa_attempt_2_attempt_1e_geri_duser() -> None:
+    print("[test 33] gonderim_uret.coklu_gpu_submission_uret: süre bütçesi TÜKENMİŞSE ikinci koşu hiç başlatılmıyor, attempt_2 GÜVENLE attempt_1'e düşüyor mu (cevapsız kalmaktansa)?...")
+
+    import os
+    import tempfile
+    import time as _time
+
+    import coklu_gpu
+    import gonderim_uret
+
+    task = Task(test_example=Example(input=np.array([[0]]), output=np.array([[0]])), train_examples=[], name="gorevY-0")
+
+    eski_gorevleri_yukle = gonderim_uret._gorevleri_yukle
+    eski_dort_kopya = coklu_gpu.dort_kopya_yukle
+    eski_cozucu_sinifi = coklu_gpu.CokluGPUTopluCozucu
+    gonderim_uret._gorevleri_yukle = lambda yarisma: [task]
+    coklu_gpu.dort_kopya_yukle = lambda model_ailesi, azami_gpu=4: ([object()], object(), ["cuda:0"])
+
+    cagri_sayisi = {"n": 0}
+
+    class _YavasCozucu:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        def coz(self, tasks, bitis_zamani=None):
+            cagri_sayisi["n"] += 1
+            _time.sleep(0.15)  # bitis_zamani'ni GERÇEKTEN geçecek kadar
+            return {"gorevY-0": {"attempt_1": [[9, 9]], "attempt_1_gonderildi_mi": True}}
+
+    coklu_gpu.CokluGPUTopluCozucu = _YavasCozucu
+    try:
+        with tempfile.TemporaryDirectory() as gecici_dizin:
+            cikti_yolu = os.path.join(gecici_dizin, "submission.json")
+            # calisma_suresi_saniye COK KISA: ilk koşu (0.15sn) bile bütçeyi taşırır.
+            submission = gonderim_uret.coklu_gpu_submission_uret(cikti_yolu=cikti_yolu, yarisma=True, calisma_suresi_saniye=0.05)
+    finally:
+        gonderim_uret._gorevleri_yukle = eski_gorevleri_yukle
+        coklu_gpu.dort_kopya_yukle = eski_dort_kopya
+        coklu_gpu.CokluGPUTopluCozucu = eski_cozucu_sinifi
+
+    _dogrula(cagri_sayisi["n"] == 1, f"süre bütçesi tükendiği için İKİNCİ koşu HİÇ başlatılmadı (gereksiz iş yapılmadı), bulunan çağrı sayısı: {cagri_sayisi['n']}")
+
+    denemeler = submission["gorevY"]
+    _dogrula(denemeler[0]["attempt_1"] == [[9, 9]] and denemeler[0]["attempt_2"] == [[9, 9]],
+              "süre yoksa attempt_2 GÜVENLE attempt_1'e düştü (cevapsız kalmaktan iyidir)")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
+    test_2b_submit_answer_execute_python_calistirilmadan_reddediliyor_mu()
     test_3_arac_cagrisini_yurutme_ve_hata_donen_akis()
     test_4_gercek_ttt_gradyan_adimlari()
     test_5_mcts_turbo_dfs_dallanma()
@@ -1660,6 +1787,8 @@ def calistir() -> None:
     test_29_tekrar_cezasi_gercekten_ayni_tokene_saplanmayi_zorlastiriyor_mu()
     test_30_rwkv_tokenizer_decode_tek_kotu_id_tum_metni_yok_etmiyor_mu()
     test_31_ayrintili_log_uzun_prefill_boyunca_sessiz_kalmiyor_mu()
+    test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil()
+    test_33_coklu_gpu_sure_kalmazsa_attempt_2_attempt_1e_geri_duser()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
