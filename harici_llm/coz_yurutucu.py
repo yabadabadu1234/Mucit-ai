@@ -27,6 +27,22 @@ BOS_TAHMIN = [[0, 0], [0, 0]]
 
 _ARAC_CAGRISI_YOK_UYARISI = "You must call a tool (execute_python or submit_answer) as a JSON function call."
 
+# Tur basina token butcesi (coz_yurutucu.gorevi_coz'un azami_yeni_token
+# varsayilani 60000) buyudukce, model butcenin tamamini "dusunerek"
+# tuketip hicbir zaman submit_answer'a varamama riski tasiyor (bkz.
+# gercek Kaggle transkriptlerinde gorulen sonsuz-tekrar donguleri).
+# Bu esige ulasildiginda -- HALA arac cagrisi yoksa -- modele acikca
+# yazma hakkinin tukenmek uzere oldugu ve artik MAKUL, kesin bir karar
+# vermesi gerektigi hatirlatilir.
+IKAZ_ESIGI_TOKEN = 55000
+IKAZ_METNI = (
+    "You are running low on your writing budget for this response: only a few thousand tokens "
+    "remain before your ability to continue is cut off entirely. Do not start any new open-ended "
+    "exploration. Make the single most reasonable, best-supported decision you can with your "
+    "current understanding of the rule, and call submit_answer now -- an unfinished analysis with "
+    "no submitted answer scores exactly the same as a wrong one."
+)
+
 
 def _task_dict_al(task: Task) -> Dict[str, Any]:
     veri = task.serialize()
@@ -78,6 +94,28 @@ def _ilk_mesajlar(task: Task) -> List[Dict[str, str]]:
     ]
 
 
+def _esikli_uret(oturum: Any, azami_yeni_token: int, uretim_ayarlari: Dict[str, Any],
+                  ikaz_esigi: int = IKAZ_ESIGI_TOKEN) -> Any:
+    """oturum.uret()'i çağırır; ama azami_yeni_token, ikaz_esigi'ni aşıyorsa
+    üretimi İKİYE böler: önce ikaz_esigi kadar üret, hâlâ bir araç çağrısı
+    yoksa modele "yazma hakkın tükenmek üzere" ikazını enjekte et, sonra
+    kalan tokenle devam et. Model ilk parçada zaten cevaba varmışsa
+    (arac_cagrilarini_ayikla bir şey buluyorsa) ikinci parça hiç
+    üretilmez -- gereksiz token israf edilmez.
+    Döner: (tam_metin, ikaz_enjekte_edildi_mi)."""
+    if azami_yeni_token <= ikaz_esigi:
+        return oturum.uret(azami_yeni_token, **uretim_ayarlari), False
+
+    ilk_parca = oturum.uret(ikaz_esigi, **uretim_ayarlari)
+    if arac_cagrilarini_ayikla(ilk_parca):
+        return ilk_parca, False
+
+    oturum.metin_isle(rwkv_tek_mesaji_sar({"role": "user", "content": IKAZ_METNI}))
+    kalan_token = azami_yeni_token - ikaz_esigi
+    ikinci_parca = oturum.uret(kalan_token, **uretim_ayarlari)
+    return ilk_parca + ikinci_parca, True
+
+
 def _tek_deneme_uret_artimli(
     lora_model: Any,
     tokenizer: Any,
@@ -106,7 +144,13 @@ def _tek_deneme_uret_artimli(
 
     for _tur in range(azami_tur):
         print(f"[coz_yurutucu] {task.name}: tur {_tur + 1}/{azami_tur} başlıyor (artımlı oturum)...")
-        model_ciktisi = oturum.uret(azami_yeni_token, **uretim_ayarlari)
+        model_ciktisi, ikaz_enjekte_edildi_mi = _esikli_uret(oturum, azami_yeni_token, uretim_ayarlari)
+        if ikaz_enjekte_edildi_mi:
+            print(f"[coz_yurutucu]   İKAZ: {IKAZ_ESIGI_TOKEN} tokene ulaşıldı, modele yazma hakkının tükenmek üzere olduğu hatırlatıldı.")
+            transkript_satiri_yaz({
+                "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
+                "rol": "sistem-ikaz", "icerik": IKAZ_METNI,
+            })
         mesajlar.append({"role": "assistant", "content": model_ciktisi})
         print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter, TAM METİN transkript dosyasında): {model_ciktisi[:800]!r}{' ...[kırpıldı, transkriptte tam hali var]' if len(model_ciktisi) > 800 else ''}")
         transkript_satiri_yaz({

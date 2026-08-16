@@ -706,6 +706,59 @@ def test_18_coklu_gpu_padisah_vezir_gercekten_paralel_mi() -> None:
     )
 
 
+class _SecenekliSahteOturum:
+    """coz_yurutucu._esikli_uret()'i, gerçek RWKV/tokenizer'a hiç
+    dokunmadan, oturum.uret() çağrı SAYISINI ve ARGÜMANLARINI doğrudan
+    doğrulamak için taklit eder."""
+
+    def __init__(self, senaryo: List[str]):
+        self._senaryo = senaryo
+        self.uret_cagrilari: List[int] = []
+        self.metin_isle_cagrilari: List[str] = []
+
+    def metin_isle(self, metin: str) -> None:
+        self.metin_isle_cagrilari.append(metin)
+
+    def uret(self, azami_yeni_token: int, **kwargs) -> str:
+        self.uret_cagrilari.append(azami_yeni_token)
+        return self._senaryo[len(self.uret_cagrilari) - 1]
+
+
+def test_19_ikaz_esigi_yazma_hakki_tukenmek_uzere() -> None:
+    print("[test 19] coz_yurutucu._esikli_uret: token bütçesi eşiğine ulaşılınca modele İKAZ enjekte ediliyor mu (ve gereksiz yere DEĞİL)?...")
+
+    from coz_yurutucu import IKAZ_METNI, _esikli_uret
+
+    # Durum A: butce esigi asilmiyor -> tek cagri, ikaz YOK.
+    oturum_a = _SecenekliSahteOturum(["kisa cevap"])
+    metin_a, ikaz_a = _esikli_uret(oturum_a, azami_yeni_token=100, uretim_ayarlari={}, ikaz_esigi=55000)
+    _dogrula(oturum_a.uret_cagrilari == [100], "bütçe eşiğin altındaysa TEK çağrı yapıldı (bölünmedi)")
+    _dogrula(not ikaz_a and not oturum_a.metin_isle_cagrilari, "bütçe eşiğin altındaysa İKAZ enjekte edilmedi")
+
+    # Durum B: esik asiliyor, model ilk parcada HENUZ arac cagrisi
+    # uretmemis (hala dusunuyor) -> ikaz enjekte edilmeli, ikinci parca
+    # kalan token butcesiyle uretilmeli.
+    oturum_b = _SecenekliSahteOturum(["hâlâ düşünüyorum, araç çağrısı yok", " ve sonunda submit_answer çağırdım"])
+    metin_b, ikaz_b = _esikli_uret(oturum_b, azami_yeni_token=100, uretim_ayarlari={}, ikaz_esigi=60)
+    _dogrula(oturum_b.uret_cagrilari == [60, 40], "eşik aşılınca üretim İKİYE bölündü (60 + kalan 40)")
+    _dogrula(ikaz_b, "eşik aşılıp hâlâ araç çağrısı yokken İKAZ enjekte edildi")
+    _dogrula(oturum_b.metin_isle_cagrilari and IKAZ_METNI in oturum_b.metin_isle_cagrilari[0],
+              "modele GERÇEKTEN 'yazma hakkın tükenmek üzere' ikaz metni beslendi")
+    _dogrula(metin_b == "hâlâ düşünüyorum, araç çağrısı yok ve sonunda submit_answer çağırdım",
+              "iki parçanın metni doğru birleştirildi")
+
+    # Durum C: esik asiliyor AMA model ilk parcada ZATEN gecerli bir
+    # arac cagrisi uretmis -- ikinci parca (ve ikaz) GEREKSIZ yere
+    # UretilMEMELI (token israfi olmamali).
+    oturum_c = _SecenekliSahteOturum([
+        '```json\n{"name": "submit_answer", "arguments": {"grid": [[1, 1], [1, 1]]}}\n```',
+        "BU HİÇ ÇAĞRILMAMALI",
+    ])
+    metin_c, ikaz_c = _esikli_uret(oturum_c, azami_yeni_token=100, uretim_ayarlari={}, ikaz_esigi=60)
+    _dogrula(oturum_c.uret_cagrilari == [60], "ilk parçada zaten geçerli bir araç çağrısı varsa İKİNCİ parça HİÇ üretilmedi (israf yok)")
+    _dogrula(not ikaz_c, "cevap zaten bulunduysa İKAZ enjekte edilmedi")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -725,6 +778,7 @@ def calistir() -> None:
     test_16_execute_python_gercekten_numpy_calistirabiliyor_mu()
     test_17_yarisma_false_dogruluk_kontrolu()
     test_18_coklu_gpu_padisah_vezir_gercekten_paralel_mi()
+    test_19_ikaz_esigi_yazma_hakki_tukenmek_uzere()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
