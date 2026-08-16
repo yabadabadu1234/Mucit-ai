@@ -1,6 +1,8 @@
 """
-Coz_yurutucu.py'nin cok-turlu arac-cagirma dongusu (azami_tur=6'ya kadar)
-icin: her turde TUM konusma metnini bastan tokenlestirip modelden GECIRME
+Coz_yurutucu.py'nin cok-turlu arac-cagirma dongusu (varsayilan azami_tur=1,
+ama arac-cagrisi/arac-yaniti ic ice devam ederse birden fazla "metin_isle+
+uret" adimi ayni denemede yine olusabilir) icin: her adimda TUM konusma
+metnini bastan tokenlestirip modelden GECIRME
 -- rwkv_native.py'nin token-basina-forward duzeltmesinden (bkz. o dosyanin
 basindaki not) SONRA bile hala var olan, AYRI bir performans acigi --
 yerine RWKV'nin kendi RNN durumunu (state) TUR TUR TASIYARAK yalnizca o

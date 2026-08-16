@@ -108,7 +108,7 @@ def _tek_deneme_uret_artimli(
         print(f"[coz_yurutucu] {task.name}: tur {_tur + 1}/{azami_tur} başlıyor (artımlı oturum)...")
         model_ciktisi = oturum.uret(azami_yeni_token, **uretim_ayarlari)
         mesajlar.append({"role": "assistant", "content": model_ciktisi})
-        print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter): {model_ciktisi[:500]!r}")
+        print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter, TAM METİN transkript dosyasında): {model_ciktisi[:800]!r}{' ...[kırpıldı, transkriptte tam hali var]' if len(model_ciktisi) > 800 else ''}")
         transkript_satiri_yaz({
             "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
             "rol": "assistant", "icerik": model_ciktisi,
@@ -119,6 +119,11 @@ def _tek_deneme_uret_artimli(
 
         cagrilar = arac_cagrilarini_ayikla(model_ciktisi)
         if not cagrilar:
+            print(
+                f"[coz_yurutucu]   UYARI: bu turda araç çağrısı bulunamadı -- model muhtemelen "
+                f"{azami_yeni_token} token sınırına ulaşana kadar (JSON çağrısına varmadan) "
+                f"düşünmeye/analiz etmeye devam etti."
+            )
             mesaj = {"role": "user", "content": _ARAC_CAGRISI_YOK_UYARISI}
             mesajlar.append(mesaj)
             oturum.metin_isle(rwkv_tek_mesaji_sar(mesaj))
@@ -171,7 +176,7 @@ def _tek_deneme_uret(
             lora_model, tokenizer, model_ailesi, mesajlar, azami_yeni_token=azami_yeni_token
         )
         mesajlar.append({"role": "assistant", "content": model_ciktisi})
-        print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter): {model_ciktisi[:500]!r}")
+        print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter, TAM METİN transkript dosyasında): {model_ciktisi[:800]!r}{' ...[kırpıldı, transkriptte tam hali var]' if len(model_ciktisi) > 800 else ''}")
         transkript_satiri_yaz({
             "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
             "rol": "assistant", "icerik": model_ciktisi,
@@ -179,7 +184,11 @@ def _tek_deneme_uret(
 
         cagrilar = arac_cagrilarini_ayikla(model_ciktisi)
         if not cagrilar:
-
+            print(
+                f"[coz_yurutucu]   UYARI: bu turda araç çağrısı bulunamadı -- model muhtemelen "
+                f"{azami_yeni_token} token sınırına ulaşana kadar (JSON çağrısına varmadan) "
+                f"düşünmeye/analiz etmeye devam etti."
+            )
             mesajlar.append({
                 "role": "user",
                 "content": "You must call a tool (execute_python or submit_answer) as a JSON function call.",
@@ -209,8 +218,8 @@ def gorevi_coz(
     cogaltma_n: int = 16,
     ttt_adim_sayisi: int = 20,
     azami_token: int = 4096,
-    azami_yeni_token: int = 900,
-    azami_tur: int = 6,
+    azami_yeni_token: int = 60000,
+    azami_tur: int = 1,
 ) -> Dict[str, List[List[int]]]:
 
     _ttt_uygula(

@@ -267,6 +267,69 @@ class RWKVUyumluTokenizer:
         return cikti
 
 
+_RWKV_CUDA_ON_DENENDI = False
+
+
+def _rwkv_cuda_kernelini_dene_etkinlestir() -> None:
+    """`rwkv` paketi, RWKV_CUDA_ON=1 ile (rwkv.model.py satır 200-220
+    civarı, WKV_7 sınıfı) token-başına üretimi ELLE YAZILMIŞ, derlenmiş bir
+    CUDA kernel'iyle (rwkv7.cu) çalıştırabiliyor -- bu, bizim şu an
+    kullandığımız genel PyTorch yolundan (ölçülen: ~16 token/sn, 7.2B
+    modelde beklenenden yavaş) kayda değer ölçüde hızlı olabilir.
+
+    RİSK: bu, `torch.utils.cpp_extension.load` ile bir CUDA uzantısını
+    JIT DERLER; derleme ortamda nvcc/ninja yoksa ya da mimari uyuşmazsa
+    İSTİSNA fırlatır -- ve bu istisna `rwkv.model` İLK import edildiğinde
+    modül-seviyesinde gerçekleştiği için, ana süreçte doğrudan denersek
+    BAŞARISIZLIK TÜM ÇALIŞTIRMAYI ÇÖKERTİR (geri dönüşü yok, çünkü RWKV
+    tek model adayımız). Bu yüzden önce AYRI bir alt süreçte (asıl model
+    yüklemesini hiç etkilemeden) "derlenebiliyor mu" diye TEK SEFERLİK
+    sınanır; yalnızca o sınama BAŞARILI olursa RWKV_CUDA_ON=1 ana sürece
+    de yansıtılır. Başarısız olursa (ya da zaten env var elle verilmişse,
+    ya da CUDA yoksa) sessizce şimdiki (her zaman çalışan, ama yavaş)
+    PyTorch yoluna devam edilir."""
+    global _RWKV_CUDA_ON_DENENDI
+    if _RWKV_CUDA_ON_DENENDI:
+        return
+    _RWKV_CUDA_ON_DENENDI = True
+
+    if os.environ.get("RWKV_CUDA_ON") is not None:
+        return  # kullanıcı zaten elle ayarlamış, dokunma
+    if not torch.cuda.is_available():
+        return  # özel CUDA kernel'i yalnızca GPU'da anlamlı
+
+    import subprocess
+    import sys as _sys
+
+    prob_kodu = (
+        "import os; os.environ['RWKV_V7_ON']='1'; os.environ['RWKV_CUDA_ON']='1'; "
+        "import rwkv.model; print('RWKV_CUDA_PROB_OK')"
+    )
+    sonuc = None
+    try:
+        sonuc = subprocess.run(
+            [_sys.executable, "-c", prob_kodu],
+            capture_output=True, text=True, timeout=300,
+        )
+        basarili = sonuc.returncode == 0 and "RWKV_CUDA_PROB_OK" in sonuc.stdout
+    except Exception as prob_hatasi:
+        basarili = False
+        print(f"[rwkv_native] RWKV_CUDA_ON sınaması çalıştırılamadı: {prob_hatasi}")
+
+    if basarili:
+        os.environ["RWKV_CUDA_ON"] = "1"
+        print(
+            "[rwkv_native] RWKV_CUDA_ON=1: özel CUDA kernel derlemesi BAŞARILI "
+            "(ayrı bir alt süreçte sınandı) -- hızlandırılmış üretim yolu etkinleştiriliyor."
+        )
+    elif sonuc is not None:
+        hata_ozeti = (sonuc.stderr or "")[-1000:]
+        print(
+            "[rwkv_native] RWKV_CUDA_ON=1 sınaması BAŞARISIZ -- genel (daha yavaş ama "
+            f"HER ZAMAN çalışan) PyTorch yoluna devam ediliyor. Alt süreç hatası:\n{hata_ozeti}"
+        )
+
+
 def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16) -> RWKVUyumluModel:
     # RWKV_V7_ON=1 (model_yapilandirmalari.py'de import-oncesi ayarlanir)
     # `rwkv.model.RWKV`'yi DAIMA `RWKV_x070` sinifina cozer -- gercek
@@ -276,6 +339,7 @@ def native_rwkv_yukle(pth_yolu: str, veri_tipi: torch.dtype = torch.bfloat16) ->
     # bu yuzden hicbir zaman calismiyordu/gerekmiyordu -- RWKV_x070
     # kendi `self.n_head`/`self.head_size` degerlerini checkpoint'ten
     # dogrudan turetiyor (bkz. RWKVUyumluModel._agirlik_sozlugu).
+    _rwkv_cuda_kernelini_dene_etkinlestir()
     from rwkv.model import RWKV
 
     strateji = "cuda fp16" if torch.cuda.is_available() else "cpu fp32"
