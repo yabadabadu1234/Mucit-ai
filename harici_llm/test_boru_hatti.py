@@ -759,6 +759,150 @@ def test_19_ikaz_esigi_yazma_hakki_tukenmek_uzere() -> None:
     _dogrula(not ikaz_c, "cevap zaten bulunduysa İKAZ enjekte edilmedi")
 
 
+def _sentetik_rwkv_x070_pth_olustur(yol: str, vocab: int = 16, n_layer: int = 2,
+                                     n_head: int = 2, head_size: int = 4) -> None:
+    """GERÇEK rwkv paketinin RWKV_x070.__init__'inin (site-packages/rwkv/model.py
+    satır 245-281) beklediği TAM anahtar adları/şekilleriyle sentetik (rastgele
+    ama biçim olarak gerçek) bir .pth ağırlık sözlüğü üretir -- ffn_dim ve
+    LoRA ara boyutları (D_DECAY/D_AAA/D_MV/D_GATE) rastgele küçük değerler,
+    sonuçların doğruluğu şekle bağlı değildir."""
+    n_embd = n_head * head_size
+    ffn_dim = 10
+    d_decay, d_aaa, d_mv, d_gate = 6, 5, 5, 7
+    g = torch.Generator().manual_seed(1234)
+
+    def r(*shape):
+        return torch.randn(*shape, generator=g) * 0.1
+
+    z: Dict[str, torch.Tensor] = {
+        "emb.weight": r(vocab, n_embd),
+        "head.weight": r(vocab, n_embd),  # nn.Linear(out=vocab,in=n_embd) ham hali
+        "ln_out.weight": torch.ones(n_embd),
+        "ln_out.bias": torch.zeros(n_embd),
+    }
+    for i in range(n_layer):
+        bbb, att, ffn = f"blocks.{i}.", f"blocks.{i}.att.", f"blocks.{i}.ffn."
+        if i == 0:
+            z[bbb + "ln0.weight"] = torch.ones(n_embd)
+            z[bbb + "ln0.bias"] = torch.zeros(n_embd)
+        z[bbb + "ln1.weight"] = torch.ones(n_embd)
+        z[bbb + "ln1.bias"] = torch.zeros(n_embd)
+        z[bbb + "ln2.weight"] = torch.ones(n_embd)
+        z[bbb + "ln2.bias"] = torch.zeros(n_embd)
+
+        z[att + "x_r"] = r(n_embd)
+        z[att + "x_w"] = r(n_embd)
+        z[att + "x_k"] = r(n_embd)
+        z[att + "x_v"] = r(n_embd)
+        z[att + "x_a"] = r(n_embd)
+        z[att + "x_g"] = r(n_embd)
+        z[att + "w0"] = r(n_embd)
+        z[att + "w1"] = r(n_embd, d_decay)
+        z[att + "w2"] = r(d_decay, n_embd)
+        z[att + "a0"] = r(n_embd)
+        z[att + "a1"] = r(n_embd, d_aaa)
+        z[att + "a2"] = r(d_aaa, n_embd)
+        z[att + "v0"] = r(n_embd)
+        z[att + "v1"] = r(n_embd, d_mv)
+        z[att + "v2"] = r(d_mv, n_embd)
+        z[att + "g1"] = r(n_embd, d_gate)
+        z[att + "g2"] = r(d_gate, n_embd)
+        z[att + "k_k"] = r(n_embd)
+        z[att + "k_a"] = r(n_embd)
+        z[att + "r_k"] = r(n_head, head_size)
+        z[att + "receptance.weight"] = r(n_embd, n_embd)  # nn.Linear ham hali (out,in)
+        z[att + "key.weight"] = r(n_embd, n_embd)
+        z[att + "value.weight"] = r(n_embd, n_embd)
+        z[att + "output.weight"] = r(n_embd, n_embd)
+        z[att + "ln_x.weight"] = torch.ones(n_embd)
+        z[att + "ln_x.bias"] = torch.zeros(n_embd)
+
+        z[ffn + "x_k"] = r(n_embd)
+        z[ffn + "key.weight"] = r(ffn_dim, n_embd)    # nn.Linear(in=n_embd,out=ffn_dim) ham hali
+        z[ffn + "value.weight"] = r(n_embd, ffn_dim)  # nn.Linear(in=ffn_dim,out=n_embd) ham hali
+
+    torch.save(z, yol)
+
+
+def test_20_rwkv_batch_gercek_rwkv_paketiyle_sayisal_dogrulama() -> None:
+    print("[test 20] rwkv_batch.adim_toplu: GERÇEK kurulu `rwkv` paketinin RWKV_x070 sınıfıyla (forward_one, B=1 döngüsü referans alınarak) sayısal olarak eşleşiyor mu?...")
+
+    import os
+    import tempfile
+
+    os.environ["RWKV_V7_ON"] = "1"
+    os.environ.setdefault("RWKV_JIT_ON", "0")
+    os.environ.setdefault("RWKV_CUDA_ON", "0")
+    from rwkv.model import RWKV as GercekRWKV
+
+    import rwkv_batch
+
+    B, adim_sayisi, vocab = 3, 5, 16
+    with tempfile.TemporaryDirectory() as tmp:
+        model_kok = os.path.join(tmp, "sentetik_model")
+        _sentetik_rwkv_x070_pth_olustur(model_kok + ".pth", vocab=vocab)
+
+        gercek_model = GercekRWKV(model=model_kok, strategy="cpu fp32")
+
+        rastgele = torch.Generator().manual_seed(99)
+        token_dizileri = [
+            [int(t) for t in torch.randint(0, vocab, (adim_sayisi,), generator=rastgele)]
+            for _ in range(B)
+        ]
+
+        # Referans: GERÇEK pakedin kendi forward_one()'ı ile HER diziyi AYRI
+        # AYRI, kendi bağımsız state'iyle, adım adım işleyip son adımın
+        # logit'ini topluyoruz.
+        referans_logitler = []
+        for dizi in token_dizileri:
+            durum = None
+            logit = None
+            for tok in dizi:
+                logit, durum = gercek_model.forward([tok], durum)
+            referans_logitler.append(logit)
+        referans = torch.stack(referans_logitler, dim=0)
+
+        # Toplu (batched): AYNI gerçek modelin .z sözlüğünü PAYLAŞARAK, B
+        # diziyi TEK bir adim_toplu() çağrı zincirinde birlikte işliyoruz.
+        durum_toplu = rwkv_batch.sifir_durum_toplu(
+            gercek_model.z, gercek_model.n_layer, gercek_model.n_embd,
+            gercek_model.n_head, gercek_model.head_size, B,
+        )
+        toplu_logit = None
+        for adim in range(adim_sayisi):
+            token_idler = [token_dizileri[b][adim] for b in range(B)]
+            toplu_logit, durum_toplu = rwkv_batch.adim_toplu(
+                gercek_model.z, gercek_model.n_layer, gercek_model.n_embd,
+                gercek_model.n_head, gercek_model.head_size, token_idler, durum_toplu,
+            )
+
+        _dogrula(toplu_logit.shape == referans.shape,
+                  f"toplu çıktı şekli referansla eşleşti: {tuple(toplu_logit.shape)}")
+        fark = (toplu_logit - referans).abs().max().item()
+        _dogrula(fark < 1e-4,
+                  f"adim_toplu() B={B} bağımsız diziyi, GERÇEK rwkv paketinin forward_one() B kere ayrı çağrılmasıyla AYNI sonucu üretti (azami fark={fark:.2e})")
+
+        # RWKVTopluDurumYoneticisi sarmalayıcısı da aynı sonucu vermeli ve
+        # ağırlıkları KOPYALAMAMALI (aynı .z referansını paylaşmalı).
+        yonetici = rwkv_batch.RWKVTopluDurumYoneticisi(gercek_model, B)
+        # NOT: gercek_model bir torch.jit.ScriptModule (RWKV_JIT_ON=1 varsayılan
+        # olsaydı) olduğunda .z özelliğine her erişim JIT tarafından yeni bir
+        # sarmalayıcı nesne döndürebilir (kimlik/`is` karşılaştırması bu yüzden
+        # güvenilir değildir); burada test RWKV_JIT_ON=0 ile çalıştığından `z`
+        # düz bir dict'tir -- asıl garanti, aynı TENSÖR nesnelerinin (VRAM'in)
+        # paylaşıldığıdır, bunu tek bir tensörün `is` kimliğiyle doğruluyoruz.
+        ornek_anahtar = next(iter(gercek_model.z))
+        _dogrula(yonetici.z[ornek_anahtar] is gercek_model.z[ornek_anahtar],
+                  "RWKVTopluDurumYoneticisi ağırlık tensörlerini KOPYALAMADI, gerçek modelin tensörlerini doğrudan paylaştı")
+        son_logit = None
+        for adim in range(adim_sayisi):
+            token_idler = [token_dizileri[b][adim] for b in range(B)]
+            son_logit = yonetici.adim(token_idler)
+        fark2 = (son_logit - referans).abs().max().item()
+        _dogrula(fark2 < 1e-4,
+                  f"RWKVTopluDurumYoneticisi sarmalayıcısı da referansla eşleşti (azami fark={fark2:.2e})")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -779,6 +923,7 @@ def calistir() -> None:
     test_17_yarisma_false_dogruluk_kontrolu()
     test_18_coklu_gpu_padisah_vezir_gercekten_paralel_mi()
     test_19_ikaz_esigi_yazma_hakki_tukenmek_uzere()
+    test_20_rwkv_batch_gercek_rwkv_paketiyle_sayisal_dogrulama()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
