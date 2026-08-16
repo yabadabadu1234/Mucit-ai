@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from arc import make_submission, read_tasks_from_single_file
 from coz_yurutucu import gorevi_coz
 from model_yapilandirmalari import MODEL_ONCELIK_SIRASI
+from transkript import TRANSKRIPT_YOLU
 from ttt_lora import lora_adaptoru_kur, temel_model_yukle, tokenizer_yukle
 
 TEST_CHALLENGES_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json"
@@ -108,6 +109,11 @@ def submission_uret(
     print(
         f"[gonderim_uret] Çalışma bütçesi: {calisma_suresi_saniye / 3600:.2f} saat "
         f"(bitiş: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(bitis_zamani))})"
+    )
+    print(
+        f"[gonderim_uret] Modelin GERÇEKTEN ürettiği her metin (araç çağırdı/çağırmadı fark etmeksizin) "
+        f"'{TRANSKRIPT_YOLU}' dosyasına ANINDA (flush+fsync ile) yazılıyor -- bir görev boş tahminle "
+        f"bitse bile o süre boyunca model ne 'konuştu' orada görülebilir."
     )
 
     tasks = read_tasks_from_single_file(TEST_CHALLENGES_YOLU, test=True)

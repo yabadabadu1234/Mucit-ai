@@ -20,6 +20,7 @@ from araclar import (
 )
 from arc_prompt import gorev_kullanici_promptu_olustur, sistem_promptu_olustur, ttt_egitim_metni_olustur
 from model_yapilandirmalari import RWKV
+from transkript import transkript_satiri_yaz
 from ttt_lora import gorev_ozelinde_ince_ayar, mesajlari_metne_donustur, rwkv_tek_mesaji_sar, uret_sohbet, uretim_ayarlarini_al
 
 BOS_TAHMIN = [[0, 0], [0, 0]]
@@ -84,6 +85,7 @@ def _tek_deneme_uret_artimli(
     task: Task,
     azami_tur: int,
     azami_yeni_token: int,
+    deneme_etiketi: str = "?",
 ) -> Optional[List[List[int]]]:
     """RWKV native/state-tuning yolu için: `_tek_deneme_uret`in HER turde
     tüm konuşma metnini baştan işleyen versiyonuna göre performans
@@ -106,6 +108,11 @@ def _tek_deneme_uret_artimli(
         print(f"[coz_yurutucu] {task.name}: tur {_tur + 1}/{azami_tur} başlıyor (artımlı oturum)...")
         model_ciktisi = oturum.uret(azami_yeni_token, **uretim_ayarlari)
         mesajlar.append({"role": "assistant", "content": model_ciktisi})
+        print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter): {model_ciktisi[:500]!r}")
+        transkript_satiri_yaz({
+            "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
+            "rol": "assistant", "icerik": model_ciktisi,
+        })
         # NOT: assistan'in kendi urettigi metni tekrar tokenlestirip
         # oturum.metin_isle() ile BESLEMIYORUZ -- uret() zaten state'i bu
         # tokenlerle ilerletti (bkz. rwkv_native.uret_devam).
@@ -115,6 +122,10 @@ def _tek_deneme_uret_artimli(
             mesaj = {"role": "user", "content": _ARAC_CAGRISI_YOK_UYARISI}
             mesajlar.append(mesaj)
             oturum.metin_isle(rwkv_tek_mesaji_sar(mesaj))
+            transkript_satiri_yaz({
+                "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
+                "rol": "sistem-uyari", "icerik": _ARAC_CAGRISI_YOK_UYARISI,
+            })
             continue
 
         for cagri in cagrilar:
@@ -122,6 +133,10 @@ def _tek_deneme_uret_artimli(
             mesaj = {"role": "user", "content": tool_response_mesaji_olustur(sonuc)}
             mesajlar.append(mesaj)
             oturum.metin_isle(rwkv_tek_mesaji_sar(mesaj))
+            transkript_satiri_yaz({
+                "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
+                "rol": "arac-sonucu", "arac": cagri.get("name"), "icerik": sonuc,
+            })
 
             if cagri.get("name") == "submit_answer" and sonuc.get("basarili"):
                 return defter.kaydedilen_cevap
@@ -136,6 +151,7 @@ def _tek_deneme_uret(
     task: Task,
     azami_tur: int,
     azami_yeni_token: int,
+    deneme_etiketi: str = "?",
 ) -> Optional[List[List[int]]]:
 
     if model_ailesi == RWKV and hasattr(lora_model, "ileri_besle_tokenler"):
@@ -143,7 +159,7 @@ def _tek_deneme_uret(
         # her turde tum gecmisi yeniden isleyen genel yol yerine, RNN
         # durumunu tasiyan artimli/performansli yolu kullan.
         return _tek_deneme_uret_artimli(
-            lora_model, tokenizer, model_ailesi, task, azami_tur, azami_yeni_token
+            lora_model, tokenizer, model_ailesi, task, azami_tur, azami_yeni_token, deneme_etiketi
         )
 
     defter = CevapDefteri()
@@ -155,6 +171,11 @@ def _tek_deneme_uret(
             lora_model, tokenizer, model_ailesi, mesajlar, azami_yeni_token=azami_yeni_token
         )
         mesajlar.append({"role": "assistant", "content": model_ciktisi})
+        print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter): {model_ciktisi[:500]!r}")
+        transkript_satiri_yaz({
+            "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
+            "rol": "assistant", "icerik": model_ciktisi,
+        })
 
         cagrilar = arac_cagrilarini_ayikla(model_ciktisi)
         if not cagrilar:
@@ -168,6 +189,10 @@ def _tek_deneme_uret(
         for cagri in cagrilar:
             sonuc = arac_cagrisini_yurut(cagri, defter)
             mesajlar.append({"role": "user", "content": tool_response_mesaji_olustur(sonuc)})
+            transkript_satiri_yaz({
+                "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
+                "rol": "arac-sonucu", "arac": cagri.get("name"), "icerik": sonuc,
+            })
 
             if cagri.get("name") == "submit_answer" and sonuc.get("basarili"):
                 return defter.kaydedilen_cevap
@@ -193,8 +218,8 @@ def gorevi_coz(
         cogaltma_n, ttt_adim_sayisi, azami_token,
     )
 
-    attempt_1 = _tek_deneme_uret(lora_model, tokenizer, model_ailesi, task, azami_tur, azami_yeni_token)
-    attempt_2 = _tek_deneme_uret(lora_model, tokenizer, model_ailesi, task, azami_tur, azami_yeni_token)
+    attempt_1 = _tek_deneme_uret(lora_model, tokenizer, model_ailesi, task, azami_tur, azami_yeni_token, "attempt_1")
+    attempt_2 = _tek_deneme_uret(lora_model, tokenizer, model_ailesi, task, azami_tur, azami_yeni_token, "attempt_2")
 
     return {
         "attempt_1": attempt_1 if attempt_1 is not None else BOS_TAHMIN,
