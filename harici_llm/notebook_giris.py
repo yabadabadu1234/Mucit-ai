@@ -15,12 +15,18 @@ kurulum yapar.
 """
 import sys
 
+# NOT: bu yol, reponun Kaggle'da NEREYE mount edildiğine göre değişir --
+# "/kaggle/working/Mucit-ai/harici_llm" (bir hücrede git clone edildiyse)
+# ya da "/kaggle/input/datasets/<kullanici>/<dataset-adi>/<repo>/harici_llm"
+# (bir Kaggle Dataset olarak eklendiyse) olabilir. Kendi ortamınıza göre
+# TEK satırı güncelleyin; kod bu yol dışında hiçbir şeye dokunmaz.
 HARICI_LLM_KOKU = "/kaggle/working/Mucit-ai/harici_llm"
 if HARICI_LLM_KOKU not in sys.path:
     sys.path.insert(0, HARICI_LLM_KOKU)
 
 import torch
 from gonderim_uret import coklu_gpu_submission_uret, submission_uret
+from gpu_tespit import kullanilabilir_gpu_indeksleri
 
 SUBMISSION_YOLU = "/kaggle/working/submission.json"
 COGALTMA_N = 16          # her bulmaca icin TTT'de kac augment ornegi uretilecek
@@ -39,16 +45,25 @@ AZAMI_GPU = 4            # birden fazla GPU varsa: modelin GPU başına bağıms
 YARISMA = True
 
 if __name__ == "__main__":
-    gpu_sayisi = torch.cuda.device_count() if torch.cuda.is_available() else 0
-    print(f"[notebook_giris] CUDA erisilebilir mi: {torch.cuda.is_available()} (GPU sayısı: {gpu_sayisi})")
+    gorulen_gpu_sayisi = torch.cuda.device_count() if torch.cuda.is_available() else 0
+    print(f"[notebook_giris] torch.cuda.is_available()={torch.cuda.is_available()} , torch.cuda.device_count()={gorulen_gpu_sayisi}")
     print("[notebook_giris] Model: rwkv (RWKV-7 G1) — tek model, yedek yok")
     print(f"[notebook_giris] YARISMA={YARISMA}")
 
-    if gpu_sayisi > 1:
+    # ÖNEMLİ: torch.cuda.device_count()/is_available() yalnızca GPU'nun
+    # GÖRÜNDÜĞÜNÜ söyler, GERÇEKTEN kullanılabildiğini DEĞİL (Kaggle'da
+    # görünüp arka planda erişilemeyen/donan GPU'lar yaşandı). Bu yüzden
+    # karar, HER cihazda GERÇEK bir matmul çalıştıran izole bir alt-süreç
+    # sınamasından (gpu_tespit.kullanilabilir_gpu_indeksleri) geçer.
+    gercek_gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=AZAMI_GPU) if gorulen_gpu_sayisi > 0 else []
+    print(f"[notebook_giris] Derin sınamadan GEÇEN GPU sayısı: {len(gercek_gpu_indeksleri)} (indeksler: {gercek_gpu_indeksleri})")
+
+    if len(gercek_gpu_indeksleri) > 1:
         print(
-            f"[notebook_giris] {gpu_sayisi} GPU tespit edildi -- modelin GPU başına BAĞIMSIZ bir kopyasıyla "
-            f"round-robin (tek süreçten boru hattı, CPU-seviyesinde senkron bariyer YOK) paralel çözüm modu "
-            f"kullanılıyor (bkz. coklu_gpu.py). NOT: bu yol salt-çıkarımdır, görev-başına TTT burada yok."
+            f"[notebook_giris] {len(gercek_gpu_indeksleri)} GERÇEKTEN kullanılabilir GPU -- modelin GPU başına "
+            f"BAĞIMSIZ bir kopyasıyla padişah/vezir (tek süreçten boru hattı, CPU-seviyesinde senkron bariyer "
+            f"YOK) paralel çözüm modu kullanılıyor (bkz. coklu_gpu.py). NOT: bu yol salt-çıkarımdır, görev-başına "
+            f"TTT burada yok."
         )
         submission = coklu_gpu_submission_uret(
             cikti_yolu=SUBMISSION_YOLU, yarisma=YARISMA, azami_gpu=AZAMI_GPU,

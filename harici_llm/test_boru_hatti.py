@@ -1028,6 +1028,101 @@ def test_22_coklu_gpu_loglarinda_hangi_gpu_oldugu_ayirt_edilebiliyor_mu() -> Non
     _dogrula(cikti.count("(gpu2)") >= 2, "etiket TEK bir satırda değil, o görevin İLGİLİ TÜM konsol satırlarında tekrarlanıyor (karışıklık olmasın diye)")
 
 
+def test_23_gpu_tespit_derinlemesine_ve_gorunmeyen_indeksler_dogru_etiketleniyor() -> None:
+    print("[test 23] gpu_tespit.kullanilabilir_gpu_indeksleri + coklu_gpu: 'görünüyor ama kullanılamıyor' GPU'lar elenip GERÇEK (olası ARALIKLI) indekslerle doğru etiketleniyor mu?...")
+
+    import gpu_tespit
+
+    # --- Senaryo A: CUDA hiç görünmüyorsa hiçbir alt süreç başlatılmadan
+    # (yavaş/gereksiz olmadan) hemen boş liste dönmeli.
+    class _SahteCuda:
+        @staticmethod
+        def is_available() -> bool:
+            return False
+
+    gercek_torch = __import__("torch")
+    eski_cuda = gercek_torch.cuda
+    gercek_torch.cuda = _SahteCuda
+    try:
+        sonuc = gpu_tespit.kullanilabilir_gpu_indeksleri()
+    finally:
+        gercek_torch.cuda = eski_cuda
+    _dogrula(sonuc == [], "CUDA görünmüyorsa hiç alt süreç başlatılmadan boş liste döndü")
+
+    # --- Senaryo B: coklu_gpu.dort_kopya_yukle, derin sınamadan HİÇBİR
+    # GPU geçemezse (torch GPU görse bile) AÇIKÇA hata vermeli, sessizce
+    # 0 GPU'ya düşmemeli.
+    import coklu_gpu
+
+    eski_kullanilabilir = gpu_tespit.kullanilabilir_gpu_indeksleri
+    gpu_tespit.kullanilabilir_gpu_indeksleri = lambda azami_gpu=None, zaman_asimi_sn=45.0: []
+    try:
+        hata_alindi = False
+        try:
+            coklu_gpu.dort_kopya_yukle()
+        except RuntimeError:
+            hata_alindi = True
+        _dogrula(hata_alindi, "derin sınamadan geçen hiç GPU yoksa dort_kopya_yukle AÇIKÇA RuntimeError verdi (sessizce yutmadı)")
+    finally:
+        gpu_tespit.kullanilabilir_gpu_indeksleri = eski_kullanilabilir
+
+    # --- Senaryo C: derin sınamadan GEÇEN GPU'lar ARALIKLI olabilir (ör.
+    # yalnızca cuda:0 ve cuda:2 çalışıyor, cuda:1/cuda:3 elendi). Bu
+    # durumda modeller listesi 2 elemanlı olsa da (konum 0,1) GERÇEK
+    # etiketler ["cuda:0","cuda:2"] olmalı -- ESKİ kodda konum==cuda
+    # numarası varsayılıp "cuda:1" gibi YANLIŞ bir etiket basılırdı.
+    import rwkv_native
+    import ttt_lora
+
+    gpu_tespit.kullanilabilir_gpu_indeksleri = lambda azami_gpu=None, zaman_asimi_sn=45.0: [0, 2]
+
+    yuklenen_cihazlar: List[str] = []
+
+    class _SahteYuklenmisModel:
+        def __init__(self, cihaz: str):
+            self.device = cihaz
+
+    def _sahte_native_rwkv_yukle(yol, veri_tipi=None, cihaz=None):
+        yuklenen_cihazlar.append(cihaz)
+        return _SahteYuklenmisModel(cihaz)
+
+    eski_native_yukle = rwkv_native.native_rwkv_yukle
+    eski_rwkv_ham_pth_mi = rwkv_native.rwkv_ham_pth_mi
+    eski_tokenizer_yukle = ttt_lora.tokenizer_yukle
+    eski_yerel_model_yolu = ttt_lora.yerel_model_yolu
+    rwkv_native.native_rwkv_yukle = _sahte_native_rwkv_yukle
+    rwkv_native.rwkv_ham_pth_mi = lambda yol: True
+    ttt_lora.tokenizer_yukle = lambda model_ailesi: "sahte-tokenizer"
+    ttt_lora.yerel_model_yolu = lambda model_ailesi: "/sahte/yol/model.pth"
+    try:
+        modeller, tokenizer, gpu_etiketleri = coklu_gpu.dort_kopya_yukle()
+    finally:
+        rwkv_native.native_rwkv_yukle = eski_native_yukle
+        rwkv_native.rwkv_ham_pth_mi = eski_rwkv_ham_pth_mi
+        ttt_lora.tokenizer_yukle = eski_tokenizer_yukle
+        ttt_lora.yerel_model_yolu = eski_yerel_model_yolu
+        gpu_tespit.kullanilabilir_gpu_indeksleri = eski_kullanilabilir
+
+    _dogrula(yuklenen_cihazlar == ["cuda:0", "cuda:2"], "yalnızca derin sınamadan GEÇEN (aralıklı) cuda:0 ve cuda:2'ye model yüklendi, cuda:1/3'e HİÇ dokunulmadı")
+    _dogrula(gpu_etiketleri == ["cuda:0", "cuda:2"], "dönen etiketler GERÇEK cuda numaralarını taşıyor (konumsal 0,1 DEĞİL)")
+
+    # --- Senaryo D: padisah_vezir_havuzuyla_coz, bu ARALIKLI etiketleri
+    # LOGLARDA da doğru yansıtmalı (konumsal indeksle değil).
+    import io
+    from contextlib import redirect_stdout
+
+    def _hizli_coz(gpu_index: int, task: Task) -> Dict[str, Any]:
+        return {"attempt_1": [[1, 1]], "attempt_1_gonderildi_mi": True}
+
+    tasks = [Task(test_example=Example(input=np.array([[0]]), output=np.array([[0]])), train_examples=[], name="g0")]
+    yakalanan = io.StringIO()
+    with redirect_stdout(yakalanan):
+        coklu_gpu.padisah_vezir_havuzuyla_coz(2, tasks, _hizli_coz, etiketler=["cuda:0", "cuda:2"])
+    cikti = yakalanan.getvalue()
+    _dogrula("(cuda:2)" in cikti or "(cuda:0)" in cikti, "loglarda GERÇEK cuda etiketi (cuda:0/cuda:2) göründü")
+    _dogrula("(cuda:1)" not in cikti, "asla var olmayan/elenmiş 'cuda:1' etiketiyle YANLIŞ bir log basılmadı")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1051,6 +1146,7 @@ def calistir() -> None:
     test_20_rwkv_batch_gercek_rwkv_paketiyle_sayisal_dogrulama()
     test_21_vram_tabanli_b_kesfi()
     test_22_coklu_gpu_loglarinda_hangi_gpu_oldugu_ayirt_edilebiliyor_mu()
+    test_23_gpu_tespit_derinlemesine_ve_gorunmeyen_indeksler_dogru_etiketleniyor()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

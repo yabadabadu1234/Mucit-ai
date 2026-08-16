@@ -29,29 +29,39 @@ from model_yapilandirmalari import RWKV
 
 def dort_kopya_yukle(model_ailesi: str = RWKV, azami_gpu: int = 4):
     """Modelin GPU başına BAĞIMSIZ bir kopyasını yükler (ağırlıklar
-    paylaşılmaz -- her GPU kendi VRAM'inde tam bir kopya taşır)."""
-    import torch
+    paylaşılmaz -- her GPU kendi VRAM'inde tam bir kopya taşır).
+
+    ÖNEMLİ: hangi GPU'lara kopya yükleneceği `torch.cuda.device_count()`
+    gibi hazır bir sorguya KÖRÜ KÖRÜNE güvenilerek DEĞİL, gpu_tespit.
+    kullanilabilir_gpu_indeksleri() ile HER cihazın GERÇEKTEN bir matmul
+    çalıştırabildiği izole bir alt süreçte doğrulanarak belirlenir --
+    "görünüyor ama arka planda kullanılamıyor" GPU'lar (kullanıcının
+    gerçek Kaggle deneyiminde karşılaştığı durum) sessizce atlanır."""
+    from gpu_tespit import kullanilabilir_gpu_indeksleri
     from rwkv_native import native_rwkv_yukle, rwkv_ham_pth_mi
     from ttt_lora import tokenizer_yukle, yerel_model_yolu
 
-    if not torch.cuda.is_available():
-        raise RuntimeError("coklu_gpu.dort_kopya_yukle: CUDA yok, GPU başına ayrı kopya yüklenemez.")
-    gpu_sayisi = min(torch.cuda.device_count(), azami_gpu)
-    if gpu_sayisi < 1:
-        raise RuntimeError("coklu_gpu.dort_kopya_yukle: hiç CUDA cihazı görünmüyor.")
+    gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=azami_gpu)
+    if not gpu_indeksleri:
+        raise RuntimeError(
+            "coklu_gpu.dort_kopya_yukle: derinlemesine sınamadan (gerçek matmul) GEÇEN hiçbir GPU yok "
+            "-- torch GPU görüyor olsa bile hiçbiri fiilen kullanılabilir değil."
+        )
 
     yol = yerel_model_yolu(model_ailesi)
     if not rwkv_ham_pth_mi(yol):
         raise RuntimeError("coklu_gpu şu an yalnızca native RWKV (.pth) yolunu destekliyor.")
 
     modeller = []
-    for i in range(gpu_sayisi):
+    gpu_etiketleri = []
+    for i in gpu_indeksleri:
         print(f"[coklu_gpu] cuda:{i} için model kopyası yükleniyor...")
         modeller.append(native_rwkv_yukle(yol, cihaz=f"cuda:{i}"))
+        gpu_etiketleri.append(f"cuda:{i}")
 
     tokenizer = tokenizer_yukle(model_ailesi)
-    print(f"[coklu_gpu] {gpu_sayisi} GPU'da modelin BAĞIMSIZ birer kopyası hazır: {[f'cuda:{i}' for i in range(gpu_sayisi)]}")
-    return modeller, tokenizer
+    print(f"[coklu_gpu] {len(modeller)} GPU'da modelin BAĞIMSIZ birer kopyası hazır: {gpu_etiketleri}")
+    return modeller, tokenizer, gpu_etiketleri
 
 
 def padisah_vezir_havuzuyla_coz(
@@ -59,11 +69,20 @@ def padisah_vezir_havuzuyla_coz(
     tasks: List[Task],
     gorevi_coz: Callable[[int, Task], Dict[str, Any]],
     bitis_zamani: Optional[float] = None,
+    etiketler: Optional[List[str]] = None,
 ) -> Dict[str, Dict[str, Any]]:
     """Genel amaçlı padişah/vezir iş havuzu -- `gorevi_coz(gpu_index, task)`
     RWKV'ye özgü değildir, bu yüzden testlerde de gerçek threading
     davranışını (senkronsuz dispatch + dinamik yeniden dağıtım) RWKV
-    yüklemeden doğrudan sınamak mümkündür."""
+    yüklemeden doğrudan sınamak mümkündür.
+
+    `gpu_index` burada yalnızca `gorevi_coz`'un modeller listesindeki
+    KONUM (0..gpu_sayisi-1) -- GERÇEK cuda cihaz numarasıyla AYNI OLMAK
+    ZORUNDA DEĞİLDİR (bazı GPU'lar gpu_tespit.kullanilabilir_gpu_indeksleri
+    tarafından elenmiş olabilir, ör. yalnızca cuda:0 ve cuda:2 çalışıyorsa
+    konum 0->cuda:0, konum 1->cuda:2'dir). Log/etiket için GERÇEK cihaz
+    adı `etiketler[gpu_index]`'ten okunur; verilmezse geriye dönük uyumluluk
+    için "cuda:{gpu_index}" varsayılır."""
     gorev_kuyrugu: "queue.Queue[Task]" = queue.Queue()
     for task in tasks:
         gorev_kuyrugu.put(task)
@@ -72,6 +91,11 @@ def padisah_vezir_havuzuyla_coz(
     kilit = threading.Lock()
     toplam = len(tasks)
     baslangic = time.time()
+
+    def _etiket(gpu_index: int) -> str:
+        if etiketler is not None and gpu_index < len(etiketler):
+            return etiketler[gpu_index]
+        return f"cuda:{gpu_index}"
 
     def _vezir(gpu_index: int) -> None:
         while True:
@@ -84,19 +108,19 @@ def padisah_vezir_havuzuyla_coz(
             try:
                 sonuc = gorevi_coz(gpu_index, task)
             except Exception as hata:
-                print(f"[coklu_gpu] (cuda:{gpu_index}) {task.name} başarısız: {hata}")
+                print(f"[coklu_gpu] ({_etiket(gpu_index)}) {task.name} başarısız: {hata}")
                 sonuc = {"attempt_1": BOS_TAHMIN, "attempt_1_gonderildi_mi": False}
             with kilit:
                 sonuclar[task.name] = sonuc
                 gecen = time.time() - baslangic
-                print(f"[coklu_gpu] (cuda:{gpu_index}) ({len(sonuclar)}/{toplam}) {task.name} tamamlandı | toplam süre: {gecen:.1f} sn")
+                print(f"[coklu_gpu] ({_etiket(gpu_index)}) ({len(sonuclar)}/{toplam}) {task.name} tamamlandı | toplam süre: {gecen:.1f} sn")
             gorev_kuyrugu.task_done()
 
     veziler = []
     for gpu_index in range(gpu_sayisi):
         # HER vezir HEMEN işbaşı yapar; padişah bir sonrakini başlatmadan
         # ÖNCEKİ vezirin bitmesini ASLA beklemez (thread.start() bloklamaz).
-        vezir = threading.Thread(target=_vezir, args=(gpu_index,), daemon=True, name=f"vezir-cuda{gpu_index}")
+        vezir = threading.Thread(target=_vezir, args=(gpu_index,), daemon=True, name=f"vezir-{_etiket(gpu_index)}")
         vezir.start()
         veziler.append(vezir)
 
@@ -119,11 +143,17 @@ class CokluGPUCozucu:
     sona kendi hızında çözer."""
 
     def __init__(self, modeller: List[Any], tokenizer: Any, azami_tur: int = 1,
-                 azami_yeni_token: int = 60000):
+                 azami_yeni_token: int = 60000, gpu_etiketleri: Optional[List[str]] = None):
         self.modeller = modeller
         self.tokenizer = tokenizer
         self.azami_tur = azami_tur
         self.azami_yeni_token = azami_yeni_token
+        # GERÇEK cuda cihaz adları (ör. ["cuda:0", "cuda:2"]) -- verilmezse
+        # modeller listesindeki her elemanın kendi .device'ından okunur,
+        # bu da olmazsa (çok eski/farklı sarmalayıcı) konumsal isim kullanılır.
+        self.gpu_etiketleri = gpu_etiketleri or [
+            str(getattr(m, "device", f"gpu{i}")) for i, m in enumerate(modeller)
+        ]
 
     def coz(self, tasks: List[Task], bitis_zamani: Optional[float] = None) -> Dict[str, Dict[str, Any]]:
         from coz_yurutucu import _tek_deneme_uret_artimli
@@ -131,11 +161,13 @@ class CokluGPUCozucu:
         def _gorevi_coz(gpu_index: int, task: Task) -> Dict[str, Any]:
             cevap = _tek_deneme_uret_artimli(
                 self.modeller[gpu_index], self.tokenizer, RWKV, task,
-                self.azami_tur, self.azami_yeni_token, f"gpu{gpu_index}",
+                self.azami_tur, self.azami_yeni_token, self.gpu_etiketleri[gpu_index],
             )
             return {
                 "attempt_1": cevap if cevap is not None else BOS_TAHMIN,
                 "attempt_1_gonderildi_mi": cevap is not None,
             }
 
-        return padisah_vezir_havuzuyla_coz(len(self.modeller), tasks, _gorevi_coz, bitis_zamani=bitis_zamani)
+        return padisah_vezir_havuzuyla_coz(
+            len(self.modeller), tasks, _gorevi_coz, bitis_zamani=bitis_zamani, etiketler=self.gpu_etiketleri,
+        )

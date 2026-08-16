@@ -181,8 +181,8 @@ def coklu_gpu_submission_uret(
     kaydedici = _SonuCuKaydedici(tasks, cikti_yolu)
 
     try:
-        modeller, tokenizer = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu)
-        cozucu = CokluGPUCozucu(modeller, tokenizer)
+        modeller, tokenizer, gpu_etiketleri = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu)
+        cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri)
         sonuclar = cozucu.coz(tasks, bitis_zamani=bitis_zamani)
 
         for task in tasks:
