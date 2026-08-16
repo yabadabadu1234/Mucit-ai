@@ -123,7 +123,7 @@ class RWKVUyumluModel(torch.nn.Module):
 
         baslangic = time.time()
         if B > _ILERLEME_ADIMI:
-            print(f"[rwkv_native] forward(): {B} satır x {T} token, her satır TEK forward_seq çağrısıyla işleniyor...")
+            print(f"[rwkv_native] ({self._cihaz}) forward(): {B} satır x {T} token, her satır TEK forward_seq çağrısıyla işleniyor...")
         tum_logitler = []
         yeni_durumlar = []
         for b in range(B):
@@ -139,7 +139,7 @@ class RWKVUyumluModel(torch.nn.Module):
             yeni_durumlar.append(durum)
             if (b + 1) % _ILERLEME_ADIMI == 0 or (b + 1) == B:
                 gecen = time.time() - baslangic
-                print(f"[rwkv_native]   forward(): {b + 1}/{B} satır işlendi ({gecen:.1f} sn)")
+                print(f"[rwkv_native] ({self._cihaz})   forward(): {b + 1}/{B} satır işlendi ({gecen:.1f} sn)")
 
         cikti = _RWKVCiktisi()
         cikti.logits = torch.stack(tum_logitler, dim=0)
@@ -169,7 +169,7 @@ class RWKVUyumluModel(torch.nn.Module):
             son_logits, durum = self._rwkv.forward(token_ids, durum)
         if len(token_ids) > 1:
             gecen = time.time() - baslangic
-            print(f"[rwkv_native] {len(token_ids)} token TEK çağrıyla işlendi ({gecen:.1f} sn, {len(token_ids) / max(gecen, 1e-6):.2f} token/sn).")
+            print(f"[rwkv_native] ({self._cihaz}) {len(token_ids)} token TEK çağrıyla işlendi ({gecen:.1f} sn, {len(token_ids) / max(gecen, 1e-6):.2f} token/sn).")
         return son_logits, durum
 
     def uret_devam(self, son_logits: Any, durum: Optional[List[torch.Tensor]], max_new_tokens: int,
@@ -195,14 +195,14 @@ class RWKVUyumluModel(torch.nn.Module):
             uretilenler.append(sonraki_token)
             if (_adim + 1) % _ILERLEME_ADIMI == 0:
                 gecen = time.time() - uretim_baslangici
-                print(f"[rwkv_native]   üretim: {_adim + 1}/{max_new_tokens} token üretildi ({gecen:.1f} sn, {(_adim + 1) / max(gecen, 1e-6):.2f} token/sn)")
+                print(f"[rwkv_native] ({self._cihaz})   üretim: {_adim + 1}/{max_new_tokens} token üretildi ({gecen:.1f} sn, {(_adim + 1) / max(gecen, 1e-6):.2f} token/sn)")
             if pad_token_id is not None and sonraki_token == pad_token_id:
                 break
 
             son_logits, durum = self._rwkv.forward([sonraki_token], durum)
 
         gecen_toplam = time.time() - uretim_baslangici
-        print(f"[rwkv_native] üretim tamamlandı: {len(uretilenler)} token, {gecen_toplam:.1f} sn.")
+        print(f"[rwkv_native] ({self._cihaz}) üretim tamamlandı: {len(uretilenler)} token, {gecen_toplam:.1f} sn.")
         return uretilenler, son_logits, durum
 
     @torch.no_grad()

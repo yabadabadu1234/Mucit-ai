@@ -985,6 +985,49 @@ def test_21_vram_tabanli_b_kesfi() -> None:
     _dogrula(sonuc == "tamam" and kullanilan_b_larla == [64], "OOM yoksa iş TEK seferde, kesifci'nin o anki çalışan B'siyle çalıştırıldı")
 
 
+def test_22_coklu_gpu_loglarinda_hangi_gpu_oldugu_ayirt_edilebiliyor_mu() -> None:
+    print("[test 22] coz_yurutucu/_tek_deneme_uret_artimli: kullanıcının gerçek Kaggle logunda fark ettiği gibi, konsol çıktısında HANGİ GPU'nun/vezirin çalıştığı hiç görünmüyordu (deneme_etiketi yalnızca transkript dosyasına yazılıyor, stdout'ta kayboluyordu) -- artık her satırda görünüyor mu?...")
+
+    import io
+    from contextlib import redirect_stdout
+
+    import coz_yurutucu
+    from rwkv_native import RWKVUyumluModel
+
+    task = Task(
+        test_example=Example(input=np.array([[0, 0], [0, 0]]), output=np.array([[0, 0], [0, 0]])),
+        train_examples=[Example(input=np.array([[1, 2], [3, 4]]), output=np.array([[4, 3], [2, 1]]))],
+        name="testgorev-etiket",
+    )
+    native = _SahteNativeRWKV()
+    model = RWKVUyumluModel(native, "cpu fp32")
+    tok = _KarakterTabanliRWKVTokenizer()
+
+    class _SahteOturum:
+        def __init__(self, model, tokenizer):
+            pass
+
+        def metin_isle(self, metin: str) -> None:
+            pass
+
+        def uret(self, azami_yeni_token, **kwargs) -> str:
+            return '```json\n{"name": "submit_answer", "arguments": {"grid": [[1, 1]]}}\n```'
+
+    import rwkv_oturum
+    gercek_sinif = rwkv_oturum.RWKVSohbetOturumu
+    rwkv_oturum.RWKVSohbetOturumu = _SahteOturum
+    yakalanan = io.StringIO()
+    try:
+        with redirect_stdout(yakalanan):
+            coz_yurutucu._tek_deneme_uret_artimli(model, tok, "rwkv", task, azami_tur=1, azami_yeni_token=50, deneme_etiketi="gpu2")
+    finally:
+        rwkv_oturum.RWKVSohbetOturumu = gercek_sinif
+
+    cikti = yakalanan.getvalue()
+    _dogrula("(gpu2)" in cikti, "coz_yurutucu'nun 'tur başlıyor' ve 'model çıktısı' logları artık HANGİ vezir/GPU olduğunu (deneme_etiketi='gpu2') açıkça gösteriyor")
+    _dogrula(cikti.count("(gpu2)") >= 2, "etiket TEK bir satırda değil, o görevin İLGİLİ TÜM konsol satırlarında tekrarlanıyor (karışıklık olmasın diye)")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1007,6 +1050,7 @@ def calistir() -> None:
     test_19_ikaz_esigi_yazma_hakki_tukenmek_uzere()
     test_20_rwkv_batch_gercek_rwkv_paketiyle_sayisal_dogrulama()
     test_21_vram_tabanli_b_kesfi()
+    test_22_coklu_gpu_loglarinda_hangi_gpu_oldugu_ayirt_edilebiliyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

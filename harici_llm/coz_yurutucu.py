@@ -143,16 +143,16 @@ def _tek_deneme_uret_artimli(
     uretim_ayarlari = uretim_ayarlarini_al(model_ailesi, tokenizer)
 
     for _tur in range(azami_tur):
-        print(f"[coz_yurutucu] {task.name}: tur {_tur + 1}/{azami_tur} başlıyor (artımlı oturum)...")
+        print(f"[coz_yurutucu] ({deneme_etiketi}) {task.name}: tur {_tur + 1}/{azami_tur} başlıyor (artımlı oturum)...")
         model_ciktisi, ikaz_enjekte_edildi_mi = _esikli_uret(oturum, azami_yeni_token, uretim_ayarlari)
         if ikaz_enjekte_edildi_mi:
-            print(f"[coz_yurutucu]   İKAZ: {IKAZ_ESIGI_TOKEN} tokene ulaşıldı, modele yazma hakkının tükenmek üzere olduğu hatırlatıldı.")
+            print(f"[coz_yurutucu] ({deneme_etiketi})   İKAZ: {IKAZ_ESIGI_TOKEN} tokene ulaşıldı, modele yazma hakkının tükenmek üzere olduğu hatırlatıldı.")
             transkript_satiri_yaz({
                 "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
                 "rol": "sistem-ikaz", "icerik": IKAZ_METNI,
             })
         mesajlar.append({"role": "assistant", "content": model_ciktisi})
-        print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter, TAM METİN transkript dosyasında): {model_ciktisi[:800]!r}{' ...[kırpıldı, transkriptte tam hali var]' if len(model_ciktisi) > 800 else ''}")
+        print(f"[coz_yurutucu] ({deneme_etiketi})   model çıktısı ({len(model_ciktisi)} karakter, TAM METİN transkript dosyasında): {model_ciktisi[:800]!r}{' ...[kırpıldı, transkriptte tam hali var]' if len(model_ciktisi) > 800 else ''}")
         transkript_satiri_yaz({
             "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
             "rol": "assistant", "icerik": model_ciktisi,
@@ -164,7 +164,7 @@ def _tek_deneme_uret_artimli(
         cagrilar = arac_cagrilarini_ayikla(model_ciktisi)
         if not cagrilar:
             print(
-                f"[coz_yurutucu]   UYARI: bu turda araç çağrısı bulunamadı -- model muhtemelen "
+                f"[coz_yurutucu] ({deneme_etiketi})   UYARI: bu turda araç çağrısı bulunamadı -- model muhtemelen "
                 f"{azami_yeni_token} token sınırına ulaşana kadar (JSON çağrısına varmadan) "
                 f"düşünmeye/analiz etmeye devam etti."
             )
@@ -215,12 +215,12 @@ def _tek_deneme_uret(
     mesajlar = _ilk_mesajlar(task)
 
     for _tur in range(azami_tur):
-        print(f"[coz_yurutucu] {task.name}: tur {_tur + 1}/{azami_tur} başlıyor...")
+        print(f"[coz_yurutucu] ({deneme_etiketi}) {task.name}: tur {_tur + 1}/{azami_tur} başlıyor...")
         model_ciktisi = uret_sohbet(
             lora_model, tokenizer, model_ailesi, mesajlar, azami_yeni_token=azami_yeni_token
         )
         mesajlar.append({"role": "assistant", "content": model_ciktisi})
-        print(f"[coz_yurutucu]   model çıktısı ({len(model_ciktisi)} karakter, TAM METİN transkript dosyasında): {model_ciktisi[:800]!r}{' ...[kırpıldı, transkriptte tam hali var]' if len(model_ciktisi) > 800 else ''}")
+        print(f"[coz_yurutucu] ({deneme_etiketi})   model çıktısı ({len(model_ciktisi)} karakter, TAM METİN transkript dosyasında): {model_ciktisi[:800]!r}{' ...[kırpıldı, transkriptte tam hali var]' if len(model_ciktisi) > 800 else ''}")
         transkript_satiri_yaz({
             "gorev": task.name, "deneme": deneme_etiketi, "tur": _tur + 1,
             "rol": "assistant", "icerik": model_ciktisi,
@@ -229,7 +229,7 @@ def _tek_deneme_uret(
         cagrilar = arac_cagrilarini_ayikla(model_ciktisi)
         if not cagrilar:
             print(
-                f"[coz_yurutucu]   UYARI: bu turda araç çağrısı bulunamadı -- model muhtemelen "
+                f"[coz_yurutucu] ({deneme_etiketi})   UYARI: bu turda araç çağrısı bulunamadı -- model muhtemelen "
                 f"{azami_yeni_token} token sınırına ulaşana kadar (JSON çağrısına varmadan) "
                 f"düşünmeye/analiz etmeye devam etti."
             )
