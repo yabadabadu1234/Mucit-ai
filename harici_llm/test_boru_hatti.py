@@ -117,6 +117,26 @@ def test_1_arac_cagrisi_ayiklama() -> None:
     cagrilar_b = arac_cagrilarini_ayikla(metin_b)
     _dogrula(len(cagrilar_b) == 1 and cagrilar_b[0]["name"] == "execute_python", "<tool_call> etiket biçimi ayıklandı")
 
+    # GERÇEK Kaggle transkriptinde (kullanıcının paylaştığı) modelin ÇIPLAK
+    # (```json fence'siz, <tool_call> etiketsiz) ürettiği TAM biçim -- eski
+    # _CIPLAK_JSON_DESENI regex'i "\{[^{}]*...[^{}]*\}" idi ve İÇ İÇE süslü
+    # parantez İÇEREMEZDİ; ama GERÇEK her araç çağrısının "arguments" alanı
+    # da bir nesnedir, yani HER çıplak çağrı en az bir iç içe {} taşır --
+    # eski regex bu yüzden ÇIPLAK hiçbir gerçek çağrıyı asla bulamıyordu.
+    # Bu, kullanıcının transkriptinde "araç çağrısı bulunamadı" uyarısının
+    # GERÇEK kök nedeniydi.
+    metin_c = '{"name": "submit_answer", "arguments": {"grid": [[1, 1]]}}'
+    cagrilar_c = arac_cagrilarini_ayikla(metin_c)
+    _dogrula(len(cagrilar_c) == 1 and cagrilar_c[0]["name"] == "submit_answer",
+              "ÇIPLAK (fence'siz) ve İÇ İÇE süslü parantez içeren GERÇEK biçimdeki bir araç çağrısı artık doğru ayıklanıyor")
+
+    metin_d = 'Bazı açıklama metni {"amaçsız": "bir sözlük"} sonra gerçek çağrı: {"name": "execute_python", "arguments": {"code": "d = {1: 2, 3: 4}"}}'
+    cagrilar_d = arac_cagrilarini_ayikla(metin_d)
+    _dogrula(
+        len(cagrilar_d) == 1 and cagrilar_d[0]["name"] == "execute_python" and cagrilar_d[0]["arguments"]["code"] == "d = {1: 2, 3: 4}",
+        "metinde ARAÇLA ALAKASIZ bir süslü-parantez bloğu ve kodun İÇİNDE de iç içe süslü parantez olsa bile yalnızca GERÇEK ('name' anahtarlı) çağrı ayıklandı",
+    )
+
 
 def test_2_cevap_verme_araci_boyut_tutarliligi() -> None:
     print("[test 2] submit_answer: tutarsız satır/sütun sayısı REDDEDİLMELİ, kendimiz düzeltmemeliyiz...")
@@ -1123,6 +1143,164 @@ def test_23_gpu_tespit_derinlemesine_ve_gorunmeyen_indeksler_dogru_etiketleniyor
     _dogrula("(cuda:1)" not in cikti, "asla var olmayan/elenmiş 'cuda:1' etiketiyle YANLIŞ bir log basılmadı")
 
 
+def test_24_onisle_toplu_farkli_uzunluk_gercek_rwkv_ile_ragged_batch_dogrulamasi() -> None:
+    print("[test 24] rwkv_batch.onisle_toplu_farkli_uzunluk: test_20 yalnızca EŞİT uzunluktaki diziler denemişti -- GERÇEKTEN FARKLI uzunluktaki (ragged) B prompt, GERÇEK rwkv paketiyle hâlâ birebir eşleşiyor mu?...")
+
+    import os
+    import tempfile
+
+    os.environ["RWKV_V7_ON"] = "1"
+    os.environ.setdefault("RWKV_JIT_ON", "0")
+    os.environ.setdefault("RWKV_CUDA_ON", "0")
+    from rwkv.model import RWKV as GercekRWKV
+
+    import rwkv_batch
+
+    vocab = 16
+    with tempfile.TemporaryDirectory() as tmp:
+        model_kok = os.path.join(tmp, "sentetik_model_ragged")
+        _sentetik_rwkv_x070_pth_olustur(model_kok + ".pth", vocab=vocab)
+        gercek_model = GercekRWKV(model=model_kok, strategy="cpu fp32")
+
+        # KASITLI OLARAK farklı uzunlukta 3 "prompt" -- gerçek üretimde B
+        # farklı ARC bulmacasının farklı uzunluktaki metinlerine karşılık
+        # gelir (test_20'de HEPSİ aynı sabit uzunluktaydı, bu boşluğu kapatır).
+        rastgele = torch.Generator().manual_seed(7)
+        token_dizileri = [
+            [int(t) for t in torch.randint(0, vocab, (n,), generator=rastgele)]
+            for n in (3, 9, 5)
+        ]
+        _dogrula(len({len(t) for t in token_dizileri}) == 3, "sınama dizileri GERÇEKTEN 3 farklı uzunlukta (3,5,9) -- eşit uzunluk kaçamağı yok")
+
+        referans_logitler = []
+        for dizi in token_dizileri:
+            durum = None
+            logit = None
+            for tok in dizi:
+                logit, durum = gercek_model.forward([tok], durum)
+            referans_logitler.append(logit)
+        referans = torch.stack(referans_logitler, dim=0)
+
+        toplu_logit, _durum = rwkv_batch.onisle_toplu_farkli_uzunluk(
+            gercek_model.z, gercek_model.n_layer, gercek_model.n_embd,
+            gercek_model.n_head, gercek_model.head_size, token_dizileri,
+        )
+
+        fark = (toplu_logit - referans).abs().max().item()
+        _dogrula(fark < 1e-4,
+                  f"FARKLI uzunluktaki (ragged) 3 prompt TEK batched prefill'de, kısa promptlar kendi sonlarında DONDURULARAK, GERÇEK forward_one() referansıyla birebir eşleşti (azami fark={fark:.2e})")
+
+
+def test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu() -> None:
+    print("[test 25] coz_yurutucu_toplu.toplu_gorevleri_coz: B GERÇEKTEN FARKLI görev, AYNI promptun kopyası DEĞİL -- tek batched adım zincirinde EŞZAMANLI, HER BİRİ KENDİ DOĞRU cevabını mı üretiyor?...")
+
+    import json as _json
+
+    import coz_yurutucu_toplu as cyt
+
+    class _TamTersinirTokenizer:
+        pad_token_id = 0
+        eos_token_id = 0
+
+        def encode(self, metin: str, add_special_tokens: bool = True) -> List[int]:
+            return [ord(c) for c in metin]
+
+        def decode(self, token_idler: Any, skip_special_tokens: bool = True) -> str:
+            if hasattr(token_idler, "tolist"):
+                token_idler = token_idler.tolist()
+            return "".join(chr(int(t)) for t in token_idler)
+
+    tok = _TamTersinirTokenizer()
+
+    # 3 GERÇEKTEN FARKLI görev -- farklı train/test ızgaraları, dolayısıyla
+    # farklı prompt metinleri (aynı promptun 3 kopyası DEĞİL).
+    tasks = [
+        Task(test_example=Example(input=np.array([[1]]), output=np.array([[1]])),
+             train_examples=[Example(input=np.array([[1, 2]]), output=np.array([[2, 1]]))], name="gorevA"),
+        Task(test_example=Example(input=np.array([[3, 3], [3, 3]]), output=np.array([[3, 3], [3, 3]])),
+             train_examples=[Example(input=np.array([[5]]), output=np.array([[6]]))], name="gorevB"),
+        Task(test_example=Example(input=np.array([[9, 0, 9]]), output=np.array([[0, 9, 0]])),
+             train_examples=[Example(input=np.array([[7, 7, 7]]), output=np.array([[8, 8, 8]]))], name="gorevC"),
+    ]
+
+    # Her göreve, BİRBİRİNDEN AYIRT EDİLEBİLİR, FARKLI bir doğru cevap
+    # "senaryolandırılıyor" -- sonuçta HANGİ görevin HANGİ cevabı ürettiği
+    # karışmışsa (ör. hepsi aynı/yanlış göreve yazılmışsa) test yakalar.
+    beklenen_cevaplar = {
+        "gorevA": [[1, 1]],
+        "gorevB": [[2, 2], [2, 2]],
+        "gorevC": [[3, 3, 3, 3]],
+    }
+    metinler = {
+        ad: '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar[ad])
+        for ad in beklenen_cevaplar
+    }
+    scripted = [[ord(c) for c in metinler[t.name]] for t in tasks]
+    uzunluklar = {len(s) for s in scripted}
+    _dogrula(len(uzunluklar) >= 2, "senaryolandırılan 3 cevap GERÇEKTEN farklı uzunlukta (kısa biten görev, uzun süren görevi HİÇ beklemeden bitmeli)")
+
+    VOCAB = 256
+    kayit = {"onisle_token_dizileri": None, "adim_sayisi": 0}
+
+    def _mock_onisle(z, n_layer, n_embd, n_head, head_size, token_dizileri):
+        kayit["onisle_token_dizileri"] = token_dizileri
+        B = len(token_dizileri)
+        logits = torch.full((B, VOCAB), -10.0)
+        for b in range(B):
+            logits[b, scripted[b][0]] = 10.0
+        return logits, ["durum-baslangic"] * 1
+
+    def _mock_adim(z, n_layer, n_embd, n_head, head_size, token_idler, durum, aktif_maske):
+        kayit["adim_sayisi"] += 1
+        pozisyon = kayit["adim_sayisi"]
+        B = len(token_idler)
+        logits = torch.full((B, VOCAB), -10.0)
+        for b in range(B):
+            if not aktif_maske[b]:
+                continue
+            if pozisyon < len(scripted[b]):
+                logits[b, scripted[b][pozisyon]] = 10.0
+            else:
+                logits[b, ord(' ')] = 10.0
+        return logits, durum
+
+    eski_onisle = cyt.onisle_toplu_farkli_uzunluk
+    eski_adim = cyt.adim_toplu_maskeli
+    eski_ayarlar = cyt.uretim_ayarlarini_al
+    cyt.onisle_toplu_farkli_uzunluk = _mock_onisle
+    cyt.adim_toplu_maskeli = _mock_adim
+    cyt.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False, "pad_token_id": 0}
+
+    class _SahteHamModel:
+        z: Dict[str, Any] = {}
+        n_layer = n_embd = n_head = head_size = 1
+
+    try:
+        sonuc = cyt.toplu_gorevleri_coz(_SahteHamModel(), tok, tasks, azami_yeni_token=500, kontrol_araligi=1, deneme_etiketi="test-toplu")
+    finally:
+        cyt.onisle_toplu_farkli_uzunluk = eski_onisle
+        cyt.adim_toplu_maskeli = eski_adim
+        cyt.uretim_ayarlarini_al = eski_ayarlar
+
+    onisle_dizileri = kayit["onisle_token_dizileri"]
+    _dogrula(onisle_dizileri is not None and len(onisle_dizileri) == 3, "toplu_gorevleri_coz, 3 görevi TEK bir batched prefill çağrısına (B=3) gönderdi")
+    _dogrula(len({tuple(t) for t in onisle_dizileri}) == 3, "prefill'e giden 3 prompt GERÇEKTEN BİRBİRİNDEN FARKLI (aynı promptun 3 kopyası DEĞİL -- her görev kendi soru metnini taşıyor)")
+
+    for task in tasks:
+        _dogrula(sonuc[task.name]["attempt_1_gonderildi_mi"] is True, f"{task.name}: gerçekten submit_answer ile sonuçlandı")
+        _dogrula(sonuc[task.name]["attempt_1"] == beklenen_cevaplar[task.name],
+                  f"{task.name}: TEK batched çalıştırmada KENDİ doğru cevabını üretti ({sonuc[task.name]['attempt_1']}) -- başka görevin cevabıyla KARIŞMADI")
+
+    en_uzun = max(len(s) for s in scripted)
+    toplam_seri_olsaydi = sum(len(s) for s in scripted)
+    _dogrula(
+        kayit["adim_sayisi"] < toplam_seri_olsaydi and kayit["adim_sayisi"] <= en_uzun + 1,
+        f"toplam batched adım sayısı ({kayit['adim_sayisi']}) EN UZUN görevin uzunluğuna ({en_uzun}) yakın, "
+        f"3 görevi SIRAYLA çözseydik gereken toplam adıma ({toplam_seri_olsaydi}) DEĞİL -- kısa biten görev UZUN "
+        f"olanı HİÇ beklemeden bitti, ikisi de AYNI batched adım zincirinde EŞZAMANLI ilerledi",
+    )
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -1147,6 +1325,8 @@ def calistir() -> None:
     test_21_vram_tabanli_b_kesfi()
     test_22_coklu_gpu_loglarinda_hangi_gpu_oldugu_ayirt_edilebiliyor_mu()
     test_23_gpu_tespit_derinlemesine_ve_gorunmeyen_indeksler_dogru_etiketleniyor()
+    test_24_onisle_toplu_farkli_uzunluk_gercek_rwkv_ile_ragged_batch_dogrulamasi()
+    test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

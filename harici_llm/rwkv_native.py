@@ -60,6 +60,15 @@ class RWKVUyumluModel(torch.nn.Module):
     def device(self) -> torch.device:
         return self._cihaz
 
+    @property
+    def ham_model(self) -> Any:
+        """rwkv_batch.py'nin (toplu/batched çok-görev çözümü) ihtiyaç
+        duyduğu ham `.z`/`.n_layer`/`.n_embd`/`.n_head`/`.head_size`
+        özniteliklerini taşıyan, `rwkv` pip paketinin GERÇEK model
+        nesnesi -- dışarıya `_rwkv` private alanına doğrudan erişmek
+        yerine temiz bir kapı."""
+        return self._rwkv
+
     def baslangic_durumu_kopyala(self) -> None:
         """rwkv_oturum.py için: TTT devre dışıysa (bkz. ttt_lora.lora_adaptoru_kur)
         öğrenilmiş bir durum yok -- `rwkv` paketi zaten `durum=None`'ı sıfır

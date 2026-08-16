@@ -159,22 +159,29 @@ def coklu_gpu_submission_uret(
     calisma_suresi_saniye: float = CALISMA_SURESI_SANIYE,
     yarisma: bool = True,
     azami_gpu: int = 4,
+    toplu_mod: bool = True,
+    b_boyutu: int = 128,
 ) -> Dict[str, Any]:
-    """submission_uret()'in coklu-GPU (round-robin, TEK surecten boru
-    hatti) varyanti -- bkz. coklu_gpu.py basindaki not. Ayni modelin
-    GPU basina BAGIMSIZ bir kopyasi yuklenir, gorevler GPU sayisi kadar
-    ESZAMANLI (donanim seviyesinde paralel, CPU-seviyesinde senkron
-    BARIYER OLMADAN) cozulur. NOT: bu yol salt-cikarimdir (gorev-basina
-    TTT/state-tuning burada YOK -- coz_yurutucu.gorevi_coz'un tek-GPU
-    yolunda kalir)."""
+    """submission_uret()'in coklu-GPU varyantı -- bkz. coklu_gpu.py
+    başındaki not. Aynı modelin GPU başına BAĞIMSIZ bir kopyası yüklenir.
+
+    toplu_mod=True (varsayılan): her GPU, kendisine atanan görevleri TEK
+    TEK değil, B TANESİNİ AYNI ANDA (gerçek batched adım zinciriyle, bkz.
+    coz_yurutucu_toplu.toplu_gorevleri_coz) çözer -- B, o GPU'nun gerçek
+    VRAM ölçümüyle keşfedilen güvenli B'sidir (vram_izleyici.
+    VramTabanliBKesifcisi, baslangic_b=b_boyutu). toplu_mod=False: eski
+    davranış (GPU başına aynı anda TEK görev, bkz. CokluGPUCozucu) --
+    yalnızca geriye dönük uyumluluk/karşılaştırma için tutulur.
+    NOT: bu yol salt-çıkarımdır (görev-başına TTT/state-tuning burada
+    YOK -- coz_yurutucu.gorevi_coz'un tek-GPU yolunda kalır)."""
     from model_yapilandirmalari import RWKV
-    from coklu_gpu import CokluGPUCozucu, dort_kopya_yukle
+    from coklu_gpu import CokluGPUCozucu, CokluGPUTopluCozucu, dort_kopya_yukle
 
     model_ailesi = model_ailesi or RWKV
     bitis_zamani = time.time() + calisma_suresi_saniye
     print(
         f"[gonderim_uret] [ÇOKLU-GPU] Çalışma bütçesi: {calisma_suresi_saniye / 3600:.2f} saat "
-        f"(bitiş: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(bitis_zamani))})"
+        f"(bitiş: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(bitis_zamani))}) | toplu_mod={toplu_mod}"
     )
 
     tasks = _gorevleri_yukle(yarisma)
@@ -182,7 +189,15 @@ def coklu_gpu_submission_uret(
 
     try:
         modeller, tokenizer, gpu_etiketleri = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu)
-        cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri)
+        if toplu_mod:
+            from vram_izleyici import VramTabanliBKesifcisi
+            vram_kesifcileri = [VramTabanliBKesifcisi(etiket, baslangic_b=b_boyutu) for etiket in gpu_etiketleri]
+            cozucu = CokluGPUTopluCozucu(
+                modeller, tokenizer, b_boyutu=b_boyutu, gpu_etiketleri=gpu_etiketleri,
+                vram_kesifcileri=vram_kesifcileri,
+            )
+        else:
+            cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri)
         sonuclar = cozucu.coz(tasks, bitis_zamani=bitis_zamani)
 
         for task in tasks:

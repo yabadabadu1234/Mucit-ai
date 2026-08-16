@@ -21,7 +21,7 @@ Bu eşdeğerlik, test_boru_hatti.py'de kurulu GERÇEK `rwkv` paketiyle
 (sentetik ama gerçek biçimli bir .pth ağırlığı üzerinden, B=1 döngüsüyle
 üretilen referans çıktıya karşı) sayısal olarak doğrulanır.
 """
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import torch
 import torch.nn.functional as F
@@ -124,6 +124,70 @@ def adim_toplu(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: in
     x = F.layer_norm(x, (n_embd,), weight=z['ln_out.weight'], bias=z['ln_out.bias'])
     x = x @ z['head.weight']
     return x, durum
+
+
+def _maske_uygula(yeni: torch.Tensor, eski: torch.Tensor, aktif_maske: torch.Tensor) -> torch.Tensor:
+    """aktif_maske[b]=True olan B dilimlerinde `yeni`, False olanlarda
+    `eski` tensörü tutulur -- durum[i] (B,C) veya (B,H,N,N) şekilli
+    olabildiği için maske, B dışındaki TÜM eksenlere broadcast edilir."""
+    sekil = [aktif_maske.shape[0]] + [1] * (yeni.dim() - 1)
+    return torch.where(aktif_maske.view(*sekil), yeni, eski)
+
+
+@torch.no_grad()
+def adim_toplu_maskeli(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: int, head_size: int,
+                        token_idler: List[int], durum: List[torch.Tensor],
+                        aktif_maske: List[bool]) -> Tuple[torch.Tensor, List[torch.Tensor]]:
+    """adim_toplu()'yu TÜM B için çalıştırır, ama yalnızca aktif_maske[b]=True
+    olan dizilerin durumunu İLERLETİR -- aktif_maske[b]=False olan
+    dizilerin durumu (state) AYNEN korunur. Bu, TEK bir batched çağrı
+    içinde:
+      (a) FARKLI UZUNLUKTAKİ B promptu (batched prefill -- kısa promptlu
+          diziler, kendi son gerçek tokenlerinden sonra "dondurulur",
+          uzun promptlu diziler onlar bitene kadar ilerlemeye devam eder),
+      (b) B görevden bazıları ERKEN bitince (submit_answer çağrıldığında)
+          o dizileri "dondurup" geri kalanların TEK bir batch'te devam
+          etmesini
+    mümkün kılar -- gerçek `rwkv` paketinin forward_one()'ında BÖYLE bir
+    kavram yoktur (o zaten hep B=1'dir); bu fonksiyon TAMAMEN bizim
+    eklediğimiz, ama matematiksel olarak forward_one()'ın B kere ayrı ayrı,
+    HER BİRİNİN KENDİ GERÇEK token dizisiyle çağrılmasıyla AYNI sonucu
+    üreten bir mekanizmadır (bkz. test_boru_hatti.py'deki doğrulama)."""
+    eski_durum = list(durum)  # sığ kopya: adim_toplu ESKİ tensörleri MUTATE ETMEZ, yalnızca liste yuvalarını YENİ tensörlerle değiştirir
+    yeni_logits, yeni_durum = adim_toplu(z, n_layer, n_embd, n_head, head_size, token_idler, durum)
+    maske_t = torch.as_tensor(aktif_maske, device=yeni_logits.device, dtype=torch.bool)
+    for i in range(len(yeni_durum)):
+        yeni_durum[i] = _maske_uygula(yeni_durum[i], eski_durum[i], maske_t)
+    return yeni_logits, yeni_durum
+
+
+@torch.no_grad()
+def onisle_toplu_farkli_uzunluk(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: int, head_size: int,
+                                 token_dizileri: List[List[int]],
+                                 durum: Optional[List[torch.Tensor]] = None
+                                 ) -> Tuple[torch.Tensor, List[torch.Tensor]]:
+    """B BAĞIMSIZ ve FARKLI UZUNLUKTAKİ prompt'u (ör. B FARKLI ARC
+    bulmacasının B FARKLI metni) TEK bir batched prefill'de işler --
+    her dizi t < kendi_uzunluğu olduğu sürece aktif_maske ile ilerletilir,
+    kendi uzunluğuna ulaşınca dondurulur (daha kısa promptlu dizilerin
+    durumu, daha uzun promptlu dizileri BEKLERKEN BOZULMAZ). Döner:
+    (B, vocab) biçiminde HER dizinin KENDİ son promptu tokenından sonraki
+    logit'i (sonraki_token tahmini) ve güncel durum."""
+    B = len(token_dizileri)
+    if durum is None:
+        durum = sifir_durum_toplu(z, n_layer, n_embd, n_head, head_size, B)
+    azami_uzunluk = max(len(t) for t in token_dizileri)
+    son_logitler: List[Optional[torch.Tensor]] = [None] * B
+
+    for t in range(azami_uzunluk):
+        aktif_maske = [t < len(token_dizileri[b]) for b in range(B)]
+        token_idler = [token_dizileri[b][t] if aktif_maske[b] else token_dizileri[b][-1] for b in range(B)]
+        logitler, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, token_idler, durum, aktif_maske)
+        for b in range(B):
+            if aktif_maske[b]:
+                son_logitler[b] = logitler[b]
+
+    return torch.stack(son_logitler, dim=0), durum
 
 
 class RWKVTopluDurumYoneticisi:

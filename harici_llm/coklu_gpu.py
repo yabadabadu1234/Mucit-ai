@@ -171,3 +171,118 @@ class CokluGPUCozucu:
         return padisah_vezir_havuzuyla_coz(
             len(self.modeller), tasks, _gorevi_coz, bitis_zamani=bitis_zamani, etiketler=self.gpu_etiketleri,
         )
+
+
+def padisah_vezir_toplu_havuzuyla_coz(
+    gpu_sayisi: int,
+    tasks: List[Task],
+    gorevleri_coz_toplu: Callable[[int, List[Task]], Dict[str, Dict[str, Any]]],
+    b_boyutu_al: Callable[[int], int],
+    bitis_zamani: Optional[float] = None,
+    etiketler: Optional[List[str]] = None,
+) -> Dict[str, Dict[str, Any]]:
+    """padisah_vezir_havuzuyla_coz'un TOPLU (batched) varyantı: her vezir
+    ortak kuyruktan TEK bir görev değil, KENDİ o anki güvenli B boyutu
+    kadar (b_boyutu_al(gpu_index) -- ör. vram_izleyici.VramTabanliBKesifcisi.
+    calisan_b()) görevi BİRDEN çeker ve `gorevleri_coz_toplu` (gerçekte
+    coz_yurutucu_toplu.toplu_gorevleri_coz) ile TEK bir batched adım
+    zincirinde HEPSİNİ BİRLİKTE çözer -- kullanıcının açıkça istediği
+    "tek GPU'daki model gerçekten B soruya AYNI ANDA baksın" davranışı
+    budur; padisah_vezir_havuzuyla_coz (B=1) yalnızca görevleri seri
+    olarak, GPU başına tek tek çözer."""
+    gorev_kuyrugu: "queue.Queue[Task]" = queue.Queue()
+    for task in tasks:
+        gorev_kuyrugu.put(task)
+
+    sonuclar: Dict[str, Dict[str, Any]] = {}
+    kilit = threading.Lock()
+    toplam = len(tasks)
+    baslangic = time.time()
+
+    def _etiket(gpu_index: int) -> str:
+        if etiketler is not None and gpu_index < len(etiketler):
+            return etiketler[gpu_index]
+        return f"cuda:{gpu_index}"
+
+    def _vezir(gpu_index: int) -> None:
+        while True:
+            if bitis_zamani is not None and time.time() > bitis_zamani:
+                return
+            b_boyutu = max(1, b_boyutu_al(gpu_index))
+            parti: List[Task] = []
+            for _ in range(b_boyutu):
+                try:
+                    parti.append(gorev_kuyrugu.get_nowait())
+                except queue.Empty:
+                    break
+            if not parti:
+                return  # kuyrukta iş kalmadı -- bu vezir görevini tamamladı
+            try:
+                parti_sonuclari = gorevleri_coz_toplu(gpu_index, parti)
+            except Exception as hata:
+                print(f"[coklu_gpu] ({_etiket(gpu_index)}) {len(parti)} görevlik TOPLU parti başarısız: {hata}")
+                parti_sonuclari = {t.name: {"attempt_1": BOS_TAHMIN, "attempt_1_gonderildi_mi": False} for t in parti}
+            with kilit:
+                sonuclar.update(parti_sonuclari)
+                gecen = time.time() - baslangic
+                print(f"[coklu_gpu] ({_etiket(gpu_index)}) ({len(sonuclar)}/{toplam}) {len(parti)} görevlik TOPLU (B={len(parti)}) parti tamamlandı | toplam süre: {gecen:.1f} sn")
+            for _ in parti:
+                gorev_kuyrugu.task_done()
+
+    veziler = []
+    for gpu_index in range(gpu_sayisi):
+        vezir = threading.Thread(target=_vezir, args=(gpu_index,), daemon=True, name=f"vezir-toplu-{_etiket(gpu_index)}")
+        vezir.start()
+        veziler.append(vezir)
+    for vezir in veziler:
+        vezir.join()
+
+    for task in tasks:
+        if task.name not in sonuclar:
+            sonuclar[task.name] = {"attempt_1": BOS_TAHMIN, "attempt_1_gonderildi_mi": False}
+
+    return sonuclar
+
+
+class CokluGPUTopluCozucu:
+    """N GPU'daki N bağımsız model kopyasını, HER GPU'da B GÖREVİ TEK bir
+    batched adım zinciriyle EŞZAMANLI çözecek şekilde kullanır (bkz.
+    coz_yurutucu_toplu.toplu_gorevleri_coz). B, `vram_kesifcileri`
+    verilirse (bkz. vram_izleyici.VramTabanliBKesifcisi) her partiden
+    SONRA gerçek VRAM ölçümüyle otomatik ayarlanır; verilmezse sabit
+    `b_boyutu` kullanılır."""
+
+    def __init__(self, modeller: List[Any], tokenizer: Any, b_boyutu: int = 128,
+                 azami_yeni_token: int = 60000, gpu_etiketleri: Optional[List[str]] = None,
+                 vram_kesifcileri: Optional[List[Any]] = None):
+        self.modeller = modeller
+        self.tokenizer = tokenizer
+        self.b_boyutu = b_boyutu
+        self.azami_yeni_token = azami_yeni_token
+        self.gpu_etiketleri = gpu_etiketleri or [
+            str(getattr(m, "device", f"gpu{i}")) for i, m in enumerate(modeller)
+        ]
+        self.vram_kesifcileri = vram_kesifcileri
+
+    def coz(self, tasks: List[Task], bitis_zamani: Optional[float] = None) -> Dict[str, Dict[str, Any]]:
+        from coz_yurutucu_toplu import toplu_gorevleri_coz
+
+        def _b_boyutu_al(gpu_index: int) -> int:
+            if self.vram_kesifcileri is not None:
+                return self.vram_kesifcileri[gpu_index].calisan_b()
+            return self.b_boyutu
+
+        def _gorevleri_coz_toplu(gpu_index: int, gorev_partisi: List[Task]) -> Dict[str, Dict[str, Any]]:
+            ham_model = getattr(self.modeller[gpu_index], "ham_model", self.modeller[gpu_index])
+            sonuc = toplu_gorevleri_coz(
+                ham_model, self.tokenizer, gorev_partisi,
+                azami_yeni_token=self.azami_yeni_token, deneme_etiketi=self.gpu_etiketleri[gpu_index],
+            )
+            if self.vram_kesifcileri is not None:
+                self.vram_kesifcileri[gpu_index].gorev_sonrasi_olc_ve_ayarla()
+            return sonuc
+
+        return padisah_vezir_toplu_havuzuyla_coz(
+            len(self.modeller), tasks, _gorevleri_coz_toplu, _b_boyutu_al,
+            bitis_zamani=bitis_zamani, etiketler=self.gpu_etiketleri,
+        )

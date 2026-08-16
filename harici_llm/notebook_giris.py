@@ -32,6 +32,7 @@ SUBMISSION_YOLU = "/kaggle/working/submission.json"
 COGALTMA_N = 16          # her bulmaca icin TTT'de kac augment ornegi uretilecek
 TTT_ADIM_SAYISI = 20     # her bulmaca icin kac LoRA ince-ayar adimi atilacak
 AZAMI_GPU = 4            # birden fazla GPU varsa: modelin GPU başına bağımsız kopyasıyla round-robin paralel çözüm (bkz. coklu_gpu.py)
+B_BOYUTU = 128           # her GPU'nun AYNI ANDA (tek batched adım zinciriyle) bakacağı görev sayısı için BAŞLANGIÇ tahmini -- gerçek değer vram_izleyici ile çalışma sırasında otomatik ayarlanır
 
 # YARISMA=True  -> gercek yarisma test kumesi (arc-agi_test_challenges.json),
 #                  cevaplar bilinmiyor, submission.json yarismaya gonderilir.
@@ -58,15 +59,16 @@ if __name__ == "__main__":
     gercek_gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=AZAMI_GPU) if gorulen_gpu_sayisi > 0 else []
     print(f"[notebook_giris] Derin sınamadan GEÇEN GPU sayısı: {len(gercek_gpu_indeksleri)} (indeksler: {gercek_gpu_indeksleri})")
 
-    if len(gercek_gpu_indeksleri) > 1:
+    if len(gercek_gpu_indeksleri) >= 1:
         print(
-            f"[notebook_giris] {len(gercek_gpu_indeksleri)} GERÇEKTEN kullanılabilir GPU -- modelin GPU başına "
-            f"BAĞIMSIZ bir kopyasıyla padişah/vezir (tek süreçten boru hattı, CPU-seviyesinde senkron bariyer "
-            f"YOK) paralel çözüm modu kullanılıyor (bkz. coklu_gpu.py). NOT: bu yol salt-çıkarımdır, görev-başına "
-            f"TTT burada yok."
+            f"[notebook_giris] {len(gercek_gpu_indeksleri)} GERÇEKTEN kullanılabilir GPU -- her GPU, kendisine "
+            f"düşen görevleri TEK TEK değil, B TANESİNİ (VRAM ölçümüyle otomatik keşfedilen güvenli B, bkz. "
+            f"vram_izleyici.py, başlangıç tahmini B_BOYUTU={B_BOYUTU}) AYNI ANDA, TEK bir batched adım zinciriyle "
+            f"çözüyor (bkz. coklu_gpu.CokluGPUTopluCozucu / coz_yurutucu_toplu.toplu_gorevleri_coz). NOT: bu yol "
+            f"salt-çıkarımdır, görev-başına TTT burada yok."
         )
         submission = coklu_gpu_submission_uret(
-            cikti_yolu=SUBMISSION_YOLU, yarisma=YARISMA, azami_gpu=AZAMI_GPU,
+            cikti_yolu=SUBMISSION_YOLU, yarisma=YARISMA, azami_gpu=AZAMI_GPU, b_boyutu=B_BOYUTU,
         )
     else:
         submission = submission_uret(

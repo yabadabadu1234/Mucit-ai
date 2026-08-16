@@ -39,7 +39,39 @@ def tool_tanimlari_json_metni() -> str:
 
 _JSON_BLOK_DESENI = re.compile(r"```json\s*\n(.*?)```", re.DOTALL)
 _TOOL_CALL_ETIKET_DESENI = re.compile(r"<tool_call>\s*(.*?)\s*</tool_call>", re.DOTALL)
-_CIPLAK_JSON_DESENI = re.compile(r"\{[^{}]*\"name\"\s*:\s*\"[a-zA-Z_]+\"[^{}]*\}", re.DOTALL)
+
+
+def _dengeli_ciplak_json_adaylarini_bul(metin: str) -> List[str]:
+    """Çıplak (```json ``` ya da <tool_call> ile SARILMAMIŞ) bir JSON
+    nesnesini metin içinde bulur. ESKİ regex (`\\{[^{}]*"name"...[^{}]*\\}`)
+    süslü parantez İÇİNDE süslü parantez OLAMAZ varsayıyordu -- ama GERÇEK
+    her araç çağrısının "arguments" alanı da bir nesnedir
+    (`{"name": "submit_answer", "arguments": {"grid": [[1,1]]}}`), yani
+    HER çıplak araç çağrısı en az BİR İÇ İÇE süslü parantez içerir. Bu
+    yüzden eski regex ÇIPLAK (fence'siz) HİÇBİR gerçek araç çağrısını asla
+    eşleştiremiyordu -- kullanıcının paylaştığı gerçek Kaggle transkriptinde
+    model tam olarak bu biçimde ("...}}}" ile biten, fence'siz) bir
+    submit_answer çağrısı üretmiş ve "araç çağrısı bulunamadı" uyarısı
+    almıştı; kök neden buydu. Python'ın `re` modülü keyfi derinlikte iç
+    içe geçmeyi ifade EDEMEZ (recursion desteklemez), bu yüzden burada
+    basit bir YIĞIN tabanlı (stack-based) parantez eşleştirici kullanılır
+    -- ANY nesting derinliğini doğru bulur; sahte eşleşmeler zaten
+    çağıran tarafta json.loads + "name" anahtarı kontrolüyle elenir."""
+    adaylar: List[str] = []
+    derinlik = 0
+    baslangic: Optional[int] = None
+    for i, karakter in enumerate(metin):
+        if karakter == "{":
+            if derinlik == 0:
+                baslangic = i
+            derinlik += 1
+        elif karakter == "}":
+            if derinlik > 0:
+                derinlik -= 1
+                if derinlik == 0 and baslangic is not None:
+                    adaylar.append(metin[baslangic:i + 1])
+                    baslangic = None
+    return adaylar
 
 
 def arac_cagrilarini_ayikla(model_ciktisi: str) -> List[Dict[str, Any]]:
@@ -48,7 +80,7 @@ def arac_cagrilarini_ayikla(model_ciktisi: str) -> List[Dict[str, Any]]:
     adaylar += _TOOL_CALL_ETIKET_DESENI.findall(model_ciktisi)
     adaylar += _JSON_BLOK_DESENI.findall(model_ciktisi)
     if not adaylar:
-        adaylar += _CIPLAK_JSON_DESENI.findall(model_ciktisi)
+        adaylar += _dengeli_ciplak_json_adaylarini_bul(model_ciktisi)
 
     cagrilar = []
     for aday in adaylar:
