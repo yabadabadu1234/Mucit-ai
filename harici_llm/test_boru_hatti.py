@@ -1526,10 +1526,14 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
     gorev_X = Task(test_example=Example(input=np.array([[9]]), output=np.array([[9]])), train_examples=[], name="tX-0")
     gorev_Y = Task(test_example=Example(input=np.array([[7]]), output=np.array([[7]])), train_examples=[], name="tY-0")
 
-    # tX'in İLK denemesi (yükleme #1) YOZLAŞMIŞ bir döngüye (4 karakterlik
-    # "abcd" bloğunun ardışık tekrarı) GİRER, HİÇ submit_answer içermez.
-    # 2. yüklemede (yeniden deneme) ise GEÇERLİ bir submit_answer üretir.
-    garbage_script = [ord(c) for c in ("abcd" * 30)]
+    # tX'in İLK denemesi (yükleme #1) YOZLAŞMIŞ bir döngüye GİRER, HİÇ
+    # submit_answer içermez. 2. yüklemede (yeniden deneme) ise GEÇERLİ bir
+    # submit_answer üretir. NOT: eşik artık kullanıcının talebiyle 4000-6000
+    # token aralığına çekildiği için (bkz. rwkv_native.py), tetiklemek için
+    # ARTIK EN AZ ~12000 token'lık bir tekrar gerekiyor -- tek bir karakterin
+    # (sabit dizinin HERHANGİ bir periyotla trivially eşleştiği) uzun bir
+    # tekrarı bunu ucuza sağlar.
+    garbage_script = [ord('a')] * 12300
     valid_grid = [[5, 5]]
     valid_metin = '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} ' \
                   '{"name": "submit_answer", "arguments": {"grid": [[5, 5]]}}'
@@ -1538,11 +1542,14 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
 
     # tY GERÇEKTEN uzun (tX'in TÜM denemelerinden -- yozlaşmış döngü +
     # yeniden deneme + geçerli cevap -- daha uzun) bir script izler; tX'in
-    # yaşadığı hiçbir şeyden ETKİLENMEDEN kendi cevabını üretmeli.
+    # yaşadığı hiçbir şeyden ETKİLENMEDEN kendi cevabını üretmeli. İÇERİK
+    # KASITLI OLARAK TEKRARSIZ (artan sayı dizisi metni) -- sabit/periyodik
+    # bir dolgu, yükseltilmiş 4000-6000 eşiğinde YANLIŞLIKLA kendi kendine
+    # yozlaşmış döngü SANILABİLİRDİ.
     tY_grid = [[6, 6, 6]]
     tY_metin = ('{"name": "execute_python", "arguments": {"code": "sonuc = 1  # %s"}} '
                 '{"name": "submit_answer", "arguments": {"grid": [[6, 6, 6]]}}') % (
-                    " ".join(f"tok{i}" for i in range(80)),
+                    " ".join(str(i) for i in range(4000)),
                 )
     tY_script = [ord(c) for c in tY_metin]
     _dogrula(len(tY_script) > len(garbage_script) + len(valid_script),
@@ -1631,7 +1638,7 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
 
     try:
         sonuc = cyt.toplu_gorevleri_coz(
-            _SahteHamModel(), tok, [gorev_X, gorev_Y], azami_yeni_token=5000, kontrol_araligi=1,
+            _SahteHamModel(), tok, [gorev_X, gorev_Y], azami_yeni_token=40000, kontrol_araligi=500,
             deneme_etiketi="test-yeniden-deneme",
             # sonraki_gorev_al KASITLI OLARAK verilmedi (None) -- boş kuyruk
             # simüle ediliyor, bu yüzden tX'in slotu ADMİSYON yoluyla değil
@@ -1739,8 +1746,14 @@ def test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu() -> None:
     from rwkv_native import RWKVUyumluModel, _tekrara_kilitlenme_periyodu
 
     _dogrula(_tekrara_kilitlenme_periyodu(list(range(30))) is None, "gerçekten TEKRARSIZ (hep artan) bir dizi yozlaşmış döngü SANILMADI")
-    tekrarli = ([1, 2, 3, 4, 5] * 3)
-    _dogrula(_tekrara_kilitlenme_periyodu(tekrarli) == 5, "5 uzunluğunda bir bloğun 3 kez ardışık tekrarı doğru periyotla (5) tespit edildi")
+    # NOT: eşik artık kullanıcının talebiyle 4000-6000 token aralığına
+    # çekildi (bkz. rwkv_native.py'deki gerekçe) -- ARC ızgaralarındaki KISA
+    # (ör. 4-6 token'lık) meşru sayı tekrarları artık YANLIŞLIKLA yozlaşmış
+    # döngü SANILMIYOR. Kısa bir tekrar (period=5) artık HİÇ tespit
+    # edilmemeli; yalnızca eşiğin İÇİNDEKİ (4000+) bir periyot tespit edilir.
+    _dogrula(_tekrara_kilitlenme_periyodu([1, 2, 3, 4, 5] * 600) is None, "5 token'lık (ARC'ta sık görülebilecek KISA, MEŞRU bir tekrar örneği) bir bloğun tekrarı ARTIK yozlaşmış döngü SANILMIYOR (eşik altında kaldığı için)")
+    tekrarli = (list(range(4000)) * 3)
+    _dogrula(_tekrara_kilitlenme_periyodu(tekrarli) == 4000, "4000 token'lık (eşiğin İÇİNDEKİ) bir bloğun 3 kez ardışık tekrarı doğru periyotla (4000) tespit edildi")
 
     class _SonsuzTekrarEdenRWKV:
         """Gerçek transkriptteki gibi: bir noktadan sonra hep AYNI 20
@@ -1776,8 +1789,15 @@ def test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu() -> None:
     )
     _dogrula(len(uretilenler) < 50000,
               f"YOZLAŞMIŞ DÖNGÜ erken yakalanıp üretim durduruldu ({len(uretilenler)} token üretildi, 50000 TOKENLİK BÜTÇENİN TAMAMI BOŞA HARCANMADI)")
-    _dogrula(len(uretilenler) < 2000,
-              f"tespit MAKUL bir sürede (birkaç kontrol adımı içinde) gerçekleşti, geç kalmadı ({len(uretilenler)} token)")
+    # NOT: eşik artık kullanıcının talebiyle yükseltildiği için (bkz.
+    # rwkv_native.py'deki _TEKRAR_ASGARI_PERIYOT gerekçesi) tespit ARTIK
+    # eskisi kadar erken (birkaç yüz token içinde) OLMAK ZORUNDA DEĞİL --
+    # en az 3 × 4000 = 12000 token üretilmeden hiçbir tespit MÜMKÜN DEĞİL,
+    # bu BİLİNÇLİ bir ödünleşim (ARC'deki meşru kısa tekrarları false-
+    # positive saymamak için). Yine de TAM bütçenin (50000) çok altında
+    # kalmalı.
+    _dogrula(len(uretilenler) < 14000,
+              f"tespit, YÜKSELTİLMİŞ eşiğe rağmen (en az ~12000 token gerekiyor) yine de MAKUL bir sürede gerçekleşti, tam bütçeye (50000) YAKLAŞMADI ({len(uretilenler)} token)")
 
 
 def test_29_tekrar_cezasi_gercekten_ayni_tokene_saplanmayi_zorlastiriyor_mu() -> None:
@@ -2150,9 +2170,11 @@ def test_35_hf_toplu_gorevleri_coz_granite_lfm_hazirlik_dogru_ve_yozlasmis_dongu
               '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["hfA-0"])
     metin_C = '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} ' \
               '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["hfC-0"])
-    # gorev_B HİÇ submit_answer içermeyen, 4 karakterlik "wxyz" bloğunun
-    # ardışık tekrarından oluşan YOZLAŞMIŞ bir döngü üretir.
-    metin_B = "wxyz" * 30
+    # gorev_B HİÇ submit_answer içermeyen, YOZLAŞMIŞ bir döngü üretir. NOT:
+    # eşik artık kullanıcının talebiyle 4000-6000 token aralığına çekildi
+    # (bkz. rwkv_native.py) -- tetiklemek için EN AZ ~12000 token'lık bir
+    # tekrar gerekiyor (tek karakterin uzun tekrarı bunu ucuza sağlar).
+    metin_B = "w" * 12300
 
     scripted = {"hfA-0": metin_A, "hfB-0": metin_B, "hfC-0": metin_C}
 
@@ -2221,7 +2243,7 @@ def test_35_hf_toplu_gorevleri_coz_granite_lfm_hazirlik_dogru_ve_yozlasmis_dongu
     try:
         sonuc = hct.hf_toplu_gorevleri_coz(
             model, tok, "test_ailesi", [gorev_A, gorev_B, gorev_C],
-            azami_yeni_token=1000, kontrol_araligi=5, deneme_etiketi="test-hf-toplu",
+            azami_yeni_token=13000, kontrol_araligi=500, deneme_etiketi="test-hf-toplu",
         )
     finally:
         hct._ilk_mesajlar = eski["_ilk_mesajlar"]

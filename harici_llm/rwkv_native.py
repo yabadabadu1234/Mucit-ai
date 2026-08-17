@@ -37,8 +37,19 @@ _ILERLEME_ADIMI = 5000  # her N tokende bir ilerleme satırı bas (sessiz kalıp
 # denetimiyle bu döngü ERKEN yakalanıp üretim durdurulur (harcanan zaman/
 # token boşa gitmez, İKAZ/yeniden-deneme mantığı daha erken devreye girer).
 _TEKRAR_KONTROL_ADIMI = 500
-_TEKRAR_AZAMI_PERIYOT = 750
-_TEKRAR_ASGARI_PERIYOT = 4
+# NOT (kullanıcının açık talebi): eski eşik (asgari periyot 4 token) ARC-AGI
+# ızgaralarının KENDİ DOĞASINDA zaten var olan kısa tekrarları (ör. bir
+# ızgarada "0, 0, 0, 0, ..." gibi aynı sayının art arda geçmesi -- YOZLAŞMIŞ
+# bir döngü DEĞİL, tamamen GEÇERLİ bulmaca içeriği) yanlışlıkla yakalıyordu
+# ("6 token'lık alt-dizi 3 kez tekrarlandı" gibi false-positive'ler).
+# Eşik artık çok daha yükseğe (binlerce token) çekildi -- BEDELİ: gerçekten
+# yozlaşmış bir döngü de artık en az 3 × _TEKRAR_ASGARI_PERIYOT (yaklaşık
+# 12.000) token üretilmeden YAKALANAMAZ; kısa (13-48 token'lık) döngüleri
+# yakaladığımız ÖNCEKİ gerçek Kaggle vakası artık bu eşiğin ALTINDA kalır.
+# Bu BİLİNÇLİ bir ödünleşim: ARC'de sürekli ve MEŞRU sayı tekrarı, kısa
+# döngü tespitinden çok daha sık/yaygın bir durum olduğu için tercih edildi.
+_TEKRAR_AZAMI_PERIYOT = 6000
+_TEKRAR_ASGARI_PERIYOT = 4000
 
 
 def _tekrar_cezasi_uygula(logits: torch.Tensor, gecmis_tokenler: List[int], ceza: float) -> torch.Tensor:
