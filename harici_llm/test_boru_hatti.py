@@ -2311,6 +2311,37 @@ def test_36_hf_toplu_gorevleri_coz_suresi_dolunca_ortada_duruyor_mu() -> None:
     _dogrula(sonuc["hicbitmeyen-hf"]["attempt_1_gonderildi_mi"] is False, "hiç bitirilemeyen görev dürüstçe 'gönderilmedi' işaretlendi")
 
 
+def test_37_rwkv_batch_derleme_hatasi_tam_izle_raporlaniyor_mu() -> None:
+    print("[test 37] rwkv_batch._derleme_hatasini_bildir: kullanıcının gerçek Kaggle logunda gördüğü "
+          "'...eager moda düşülüyor:' ile KESİK/boş kalan hata satırı -- önceki halde yalnızca str(hata) "
+          "(bazı hatalarda BOŞ/teşhis için yetersiz) basılıyordu. Artık traceback.format_exc() ile TAM "
+          "hata izi (dosya/satır/çağrı zinciri) mi basılıyor?...")
+
+    import io
+    import contextlib
+
+    import rwkv_batch as rb
+
+    def _ic_ice_cagri_zinciri():
+        def _en_dipteki_fonksiyon():
+            raise RuntimeError("sahte CUDA/inductor çalışma zamanı hatası")
+        _en_dipteki_fonksiyon()
+
+    yakalanan_cikti = io.StringIO()
+    with contextlib.redirect_stdout(yakalanan_cikti):
+        try:
+            _ic_ice_cagri_zinciri()
+        except RuntimeError:
+            rb._derleme_hatasini_bildir("test bağlamı", "cuda:1")
+
+    basilan = yakalanan_cikti.getvalue()
+    _dogrula("sahte CUDA/inductor çalışma zamanı hatası" in basilan, "hatanın MESAJI (str(hata)) hâlâ mesajda var")
+    _dogrula("Traceback (most recent call last)" in basilan, "GERÇEK bir Python traceback'i basıldı (önceki halde bu YOKTU -- yalnızca mesaj basılıyordu)")
+    _dogrula("_ic_ice_cagri_zinciri" in basilan and "_en_dipteki_fonksiyon" in basilan, "traceback, hatanın GERÇEKTEN nerede (hangi iç içe çağrıda) patladığını gösteren dosya/fonksiyon adlarını içeriyor")
+    _dogrula(basilan.count("\n") > 3, f"çıktı TEK satırlık/kesik bir mesaj DEĞİL, çok satırlı gerçek bir iz (satır sayısı: {basilan.count(chr(10))})")
+    _dogrula("cuda:1" in basilan, "hangi cihazda başarısız olduğu (cuda:1) açıkça belirtiliyor")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -2352,6 +2383,7 @@ def calistir() -> None:
     test_34_toplu_gorevleri_coz_suresi_dolunca_uretim_ortasinda_duruyor_mu()
     test_35_hf_toplu_gorevleri_coz_granite_lfm_hazirlik_dogru_ve_yozlasmis_donguyu_yakaliyor_mu()
     test_36_hf_toplu_gorevleri_coz_suresi_dolunca_ortada_duruyor_mu()
+    test_37_rwkv_batch_derleme_hatasi_tam_izle_raporlaniyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")

@@ -22,6 +22,7 @@ Bu eşdeğerlik, test_boru_hatti.py'de kurulu GERÇEK `rwkv` paketiyle
 üretilen referans çıktıya karşı) sayısal olarak doğrulanır.
 """
 import os
+import traceback
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import torch
@@ -150,6 +151,23 @@ def _adim_toplu_cekirdek(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, 
     return x, durum
 
 
+def _derleme_hatasini_bildir(baglam: str, anahtar: str) -> None:
+    """torch.compile derleme VEYA çalışma-zamanı hatalarının TEK, ORTAK
+    raporlama noktası. NOT (kullanıcının gerçek Kaggle logunda yakaladığı
+    hata): önceki sürümde burada yalnızca `{hata}` (str(exception) --
+    YALNIZCA hatanın MESAJINI verir) basılıyordu; bazı CUDA/inductor
+    hataları için bu mesaj BOŞ ya da tek satırlık/teşhis için yetersiz
+    çıkıyor ve log ekranda "...eager moda düşülüyor:" ile KESİK/boş
+    görünüyordu. `traceback.format_exc()` çağıran fonksiyonun İÇİNDE,
+    aktif bir except bloğu SIRASINDA çağrılmalıdır (Python'ın sys.exc_info
+    durumunu okur) -- bu yüzden bu fonksiyon her zaman bir except bloğunun
+    içinden çağrılmalıdır."""
+    print(
+        f"[rwkv_batch] UYARI: {baglam} ({anahtar}) BAŞARISIZ, eager moda KALICI OLARAK düşülüyor. "
+        f"TAM HATA İZİ:\n{traceback.format_exc()}"
+    )
+
+
 def _cekirdek_fonksiyonu_al(cihaz: torch.device):
     """Yalnızca CUDA'da ve yalnızca DAHA ÖNCE başarıyla derlenebildiyse
     torch.compile'lı çekirdeği döner -- derleme BAŞARISIZ olursa o cihaz
@@ -166,8 +184,8 @@ def _cekirdek_fonksiyonu_al(cihaz: torch.device):
                 f"[rwkv_batch] {anahtar}: adim_toplu için torch.compile (mode=reduce-overhead) etkinleştirildi "
                 f"-- prefill/üretimdeki tekrarlanan küçük adımların kernel-başlatma yükü azaltılacak."
             )
-        except Exception as hata:
-            print(f"[rwkv_batch] UYARI: {anahtar} için torch.compile BAŞARISIZ, eager moda KALICI OLARAK düşülüyor: {hata}")
+        except Exception:
+            _derleme_hatasini_bildir("torch.compile derlemesi", anahtar)
             _derleme_basarisiz_cihazlar.add(anahtar)
             return _adim_toplu_cekirdek
     return _derlenmis_cekirdek_onbellek[anahtar]
@@ -190,11 +208,11 @@ def adim_toplu(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: in
     fn = _cekirdek_fonksiyonu_al(cihaz)
     try:
         return fn(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
-    except Exception as hata:
+    except Exception:
         if fn is _adim_toplu_cekirdek:
             raise
         anahtar = str(cihaz)
-        print(f"[rwkv_batch] UYARI: derlenmiş adim_toplu ÇALIŞMA ZAMANINDA hata verdi, {anahtar} için KALICI OLARAK eager moda düşülüyor: {hata}")
+        _derleme_hatasini_bildir("derlenmiş adim_toplu ÇALIŞMA ZAMANI", anahtar)
         _derleme_basarisiz_cihazlar.add(anahtar)
         return _adim_toplu_cekirdek(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
 
