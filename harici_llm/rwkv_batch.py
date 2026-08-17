@@ -21,6 +21,7 @@ Bu eşdeğerlik, test_boru_hatti.py'de kurulu GERÇEK `rwkv` paketiyle
 (sentetik ama gerçek biçimli bir .pth ağırlığı üzerinden, B=1 döngüsüyle
 üretilen referans çıktıya karşı) sayısal olarak doğrulanır.
 """
+import os
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import torch
@@ -89,17 +90,40 @@ def _cmix_adim_toplu(x, x_prev, x_k, K_, V_):
     return k @ V_, x
 
 
-@torch.no_grad()
-def adim_toplu(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: int, head_size: int,
-               token_idler: List[int], durum: List[torch.Tensor]) -> Tuple[torch.Tensor, List[torch.Tensor]]:
-    """B BAĞIMSIZ dizinin HER BİRİNİN bir sonraki-token logitini, AYNI
-    ağırlıkları (z) PAYLAŞARAK TEK bir toplu ileri-geçişte hesaplar --
-    forward_one()'in B kere ayrı ayrı çağrılmasıyla MATEMATİKSEL OLARAK
-    AYNI sonucu, tek GPU'da gerçek çoklu-dizi paralelliğiyle üretir
-    (ağırlık-okuma maliyeti B'ye bölünür -- bant genişliği-sınırlı RNN
-    dekodlamasında asıl kazanç budur)."""
-    B = len(token_idler)
-    x = z['emb.weight'][torch.as_tensor(token_idler, device=z['emb.weight'].device, dtype=torch.long)]
+# NOT (Turkce): kullanicinin "prefil hizlandir" talebi -- gercek Kaggle
+# logunda 43 gorevlik bir partide en uzun promptun (6326 token) BATCHED
+# prefill'i TEK BASINA ~1584 saniye surmustu (~0.25 sn/adim). Bu, RWKV'nin
+# ZORUNLU olarak SIRALI (recurrent) doğasından degil -- her adimda 32
+# katmanin HER BIRINDE birkac KUCUK matmul/elementwise islem calisiyor,
+# ve bu KUCUK islemlerin GPU'da GERCEK hesaplama suresi degil, Python
+# yorumlayicisinin + CUDA kernel BASLATMA (launch) gecikmesinin baskin
+# oldugu bir rejimden geliyor (klasik "kernel-launch-bound" darbogaz).
+# Cozum: torch.compile(mode="reduce-overhead") ile ayni sekle (B, n_layer)
+# sahip TEKRARLANAN bu adimi TEK BIR derlenmis grafige (CUDA Graph replay
+# dahil) donusturmek -- Python/kernel-baslatma yukunu neredeyse SIFIRLAR,
+# GERCEK matematigi degistirmez. GPU'suz bu ortamda (CPU) DOGRULANAMADI --
+# torch.compile yalnizca CUDA cihazlarinda denenir, CPU'da/derleme
+# BASARISIZ olursa (Kaggle'in eski CUDA arac zincirinde triton/inductor
+# arizalanabilir) SESSIZCE ve KALICI OLARAK ayni eager (yorumlanan, test_20
+# ile GERCEK rwkv paketine karsi sayisal olarak dogrulanmis) koda duser --
+# asla YANLIS sonuca yol acmaz, yalnizca hiz kazanci kaybolabilir.
+_TORCH_COMPILE_ETKIN = os.environ.get("RWKV_BATCH_TORCH_COMPILE", "1") != "0"
+_derlenmis_cekirdek_onbellek: Dict[str, Any] = {}
+_derleme_basarisiz_cihazlar: set = set()
+
+
+def _adim_toplu_cekirdek(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: int, head_size: int,
+                          token_tensor: torch.Tensor, durum: List[torch.Tensor]) -> Tuple[torch.Tensor, List[torch.Tensor]]:
+    """adim_toplu()'nun GERÇEK matematiği -- token id'lerini bir Python
+    LİSTESİ değil, ÇAĞIRAN TARAFIN (adim_toplu) ÖNCEDEN oluşturduğu bir
+    torch.Tensor olarak alır. Bunun TEK sebebi torch.compile UYUMLULUĞU:
+    bir Python int listesi torch.compile'a doğrudan verilirse, listenin
+    İÇERİĞİ (her adımda FARKLI token id'leri) DEĞER-bazlı bir 'guard'
+    oluşturur ve HER TEK adımda YENİDEN DERLEMEYE yol açar -- derlemenin
+    tüm kazancını yer. Aynı ŞEKİLDEKİ bir torch.Tensor ise DEĞERİ her
+    adımda değişse bile TEK bir derlemeyle çalışır (yalnızca B/n_layer
+    ŞEKLİ değişirse yeniden derlenir)."""
+    x = z['emb.weight'][token_tensor]
     v_first = torch.empty_like(x)
 
     for i in range(n_layer):
@@ -124,6 +148,55 @@ def adim_toplu(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: in
     x = F.layer_norm(x, (n_embd,), weight=z['ln_out.weight'], bias=z['ln_out.bias'])
     x = x @ z['head.weight']
     return x, durum
+
+
+def _cekirdek_fonksiyonu_al(cihaz: torch.device):
+    """Yalnızca CUDA'da ve yalnızca DAHA ÖNCE başarıyla derlenebildiyse
+    torch.compile'lı çekirdeği döner -- derleme BAŞARISIZ olursa o cihaz
+    için SESSİZCE ve KALICI OLARAK eager çekirdeğe düşülür (bir daha
+    denenmez -- her adımda yeniden deneyip başarısız olmak, tam da
+    önlemeye çalıştığımız yavaşlığı geri getirir)."""
+    anahtar = str(cihaz)
+    if not _TORCH_COMPILE_ETKIN or cihaz.type != "cuda" or anahtar in _derleme_basarisiz_cihazlar:
+        return _adim_toplu_cekirdek
+    if anahtar not in _derlenmis_cekirdek_onbellek:
+        try:
+            _derlenmis_cekirdek_onbellek[anahtar] = torch.compile(_adim_toplu_cekirdek, mode="reduce-overhead")
+            print(
+                f"[rwkv_batch] {anahtar}: adim_toplu için torch.compile (mode=reduce-overhead) etkinleştirildi "
+                f"-- prefill/üretimdeki tekrarlanan küçük adımların kernel-başlatma yükü azaltılacak."
+            )
+        except Exception as hata:
+            print(f"[rwkv_batch] UYARI: {anahtar} için torch.compile BAŞARISIZ, eager moda KALICI OLARAK düşülüyor: {hata}")
+            _derleme_basarisiz_cihazlar.add(anahtar)
+            return _adim_toplu_cekirdek
+    return _derlenmis_cekirdek_onbellek[anahtar]
+
+
+@torch.no_grad()
+def adim_toplu(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: int, head_size: int,
+               token_idler: List[int], durum: List[torch.Tensor]) -> Tuple[torch.Tensor, List[torch.Tensor]]:
+    """B BAĞIMSIZ dizinin HER BİRİNİN bir sonraki-token logitini, AYNI
+    ağırlıkları (z) PAYLAŞARAK TEK bir toplu ileri-geçişte hesaplar --
+    forward_one()'in B kere ayrı ayrı çağrılmasıyla MATEMATİKSEL OLARAK
+    AYNI sonucu, tek GPU'da gerçek çoklu-dizi paralelliğiyle üretir
+    (ağırlık-okuma maliyeti B'ye bölünür -- bant genişliği-sınırlı RNN
+    dekodlamasında asıl kazanç budur). CUDA'da, torch.compile başarıyla
+    derlenebildiyse (bkz. _cekirdek_fonksiyonu_al) bu adım kernel-başlatma
+    yükünü azaltan derlenmiş bir grafikle çalışır; CPU'da veya derleme
+    başarısız olursa MATEMATİKSEL OLARAK AYNI eager kod çalışır."""
+    cihaz = z['emb.weight'].device
+    token_tensor = torch.as_tensor(token_idler, device=cihaz, dtype=torch.long)
+    fn = _cekirdek_fonksiyonu_al(cihaz)
+    try:
+        return fn(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
+    except Exception as hata:
+        if fn is _adim_toplu_cekirdek:
+            raise
+        anahtar = str(cihaz)
+        print(f"[rwkv_batch] UYARI: derlenmiş adim_toplu ÇALIŞMA ZAMANINDA hata verdi, {anahtar} için KALICI OLARAK eager moda düşülüyor: {hata}")
+        _derleme_basarisiz_cihazlar.add(anahtar)
+        return _adim_toplu_cekirdek(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
 
 
 def _maske_uygula(yeni: torch.Tensor, eski: torch.Tensor, aktif_maske: torch.Tensor) -> torch.Tensor:

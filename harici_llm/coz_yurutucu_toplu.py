@@ -43,6 +43,13 @@ from ttt_lora import mesajlari_metne_donustur, rwkv_tek_mesaji_sar, uretim_ayarl
 
 _ONEK = "[coz_yurutucu_toplu]"
 _ILERLEME_ADIMI = 5000
+# Yozlaşmış döngüye giren ama HENÜZ geçerli bir cevabı olmayan bir slot,
+# kuyruktan YENİ bir göreve geçmeden önce AYNI promptla en fazla kaç kez
+# baştan denenir (kullanıcının açık talebi: "yoksa sadece o silinsin ve
+# yeniden aynı promptla çözülmeye çalışılsın") -- do_sample=True olduğu
+# sürece her deneme FARKLI örneklenir; bu sınır yalnızca greedy/şanssız
+# durumlarda sonsuz döngüye karşı bir GÜVENLİK ÇATISIdır.
+AZAMI_AYNI_PROMPT_YENIDEN_DENEME = 3
 
 
 def _boyutlari_al(ham_rwkv_modeli: Any):
@@ -212,6 +219,7 @@ def toplu_gorevleri_coz(
     slot_gorev: List[Task] = list(tasks)  # her slotun O ANKİ sakini -- admission ile DEĞİŞEBİLİR
     sonuclar_by_name: Dict[str, Dict[str, Any]] = {}
     admit_edilen_sayisi = 0
+    yeniden_deneme_sayisi = [0] * B  # yozlaşmış döngüden AYNI promptla kaç kez yeniden başlandı
 
     def _slot_sonucla_bitir(b: int) -> None:
         """Slot b'nin O ANKİ sakinini SONUÇLANDIRIR (kayda geçirir, geri
@@ -259,6 +267,7 @@ def toplu_gorevleri_coz(
         if yeni_gorev is not None:
             admit_edilen_sayisi += 1
             _slota_yeni_gorev_yukle(b, yeni_gorev)
+            yeniden_deneme_sayisi[b] = 0
 
     uretim_baslangici = time.time()
     adim = 0
@@ -323,19 +332,51 @@ def toplu_gorevleri_coz(
             # Yozlaşmış döngü kontrolü: tek bir dizi kilitlenip hiç bitmezse
             # (kullanıcının gerçek transkriptinde görülen davranış), paylaşılan
             # while döngüsü `not all(bitti)` şartı yüzünden TÜM batch'i azami_
-            # yeni_token'a kadar bekletir -- bu diziyi ERKEN "bitti" işaretleyip
-            # (cevapsız) dondurmak, aynı batch'teki DİĞER görevlerin beklemeden
-            # bitmesini sağlar.
+            # yeni_token'a kadar bekletir. Kullanıcının açık talebi: ÖNCE bu
+            # slotta ZATEN kaydedilmiş GEÇERLİ bir cevap var mı diye bak --
+            # varsa o cevabı KORU (döngüdeki gevezelik atılır, cevap atılmaz).
+            # Yoksa üretileni SİL ve AYNI promptla (kuyruktan YENİ bir görev
+            # ÇEKMEDEN) yeniden dene -- diğer B-1 slota HİÇ dokunulmaz. Sonsuz
+            # döngüye karşı AZAMI_AYNI_PROMPT_YENIDEN_DENEME kez denenir,
+            # sonra pes edilip (kuyruk varsa) slot normal admisyon yoluna girer.
             periyot = _tekrara_kilitlenme_periyodu(uretilen_tokenler[b])
             if periyot is not None:
+                if defterler[b].kaydedilen_cevap is not None:
+                    sonuclar[b] = defterler[b].kaydedilen_cevap
+                    print(
+                        f"{_ONEK} ({deneme_etiketi})   {slot_gorev[b].name}: YOZLAŞMIŞ DÖNGÜ tespit edildi ama "
+                        f"DAHA ÖNCE KAYDEDİLMİŞ geçerli bir cevap var -- o cevap KORUNUYOR, döngüdeki gevezelik atılıyor."
+                    )
+                    transkript_satiri_yaz({
+                        "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
+                        "rol": "sistem-uyari", "icerik": f"yozlaşmış döngü (periyot={periyot}) ama önceden kaydedilmiş cevap korundu",
+                    })
+                    _slot_ilerlet(b)
+                    continue
+
+                yeniden_deneme_sayisi[b] += 1
+                if yeniden_deneme_sayisi[b] <= AZAMI_AYNI_PROMPT_YENIDEN_DENEME:
+                    print(
+                        f"{_ONEK} ({deneme_etiketi})   {slot_gorev[b].name}: YOZLAŞMIŞ DÖNGÜ tespit edildi "
+                        f"({periyot} token'lık alt-dizi 3 kez tekrarlandı), HENÜZ geçerli bir cevap YOK -- "
+                        f"üretilen metin SİLİNİP AYNI promptla {yeniden_deneme_sayisi[b]}/{AZAMI_AYNI_PROMPT_YENIDEN_DENEME}. kez "
+                        f"YENİDEN deneniyor (diğer {B - 1} slota DOKUNULMUYOR, kuyruktan YENİ görev ÇEKİLMEDİ)."
+                    )
+                    transkript_satiri_yaz({
+                        "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
+                        "rol": "sistem-uyari",
+                        "icerik": f"yozlaşmış döngü (periyot={periyot}), cevap yok, {yeniden_deneme_sayisi[b]}. kez aynı promptla yeniden deneniyor",
+                    })
+                    _slota_yeni_gorev_yukle(b, slot_gorev[b])
+                    continue
+
                 print(
-                    f"{_ONEK} ({deneme_etiketi})   {slot_gorev[b].name}: YOZLAŞMIŞ DÖNGÜ tespit edildi "
-                    f"({periyot} token'lık alt-dizi 3 kez tekrarlandı) -- bu dizi ERKEN durduruldu, "
-                    f"batch'teki DİĞER görevler beklemeden devam ediyor."
+                    f"{_ONEK} ({deneme_etiketi})   {slot_gorev[b].name}: YOZLAŞMIŞ DÖNGÜ {AZAMI_AYNI_PROMPT_YENIDEN_DENEME} kez "
+                    f"aynı promptla yeniden denendi, HÂLÂ geçerli cevap yok -- pes ediliyor."
                 )
                 transkript_satiri_yaz({
                     "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
-                    "rol": "sistem-uyari", "icerik": f"yozlaşmış döngü tespit edildi (periyot={periyot}), üretim erken durduruldu",
+                    "rol": "sistem-uyari", "icerik": f"yozlaşmış döngü {AZAMI_AYNI_PROMPT_YENIDEN_DENEME} yeniden denemeden sonra pes edildi",
                 })
                 _slot_ilerlet(b)
                 continue

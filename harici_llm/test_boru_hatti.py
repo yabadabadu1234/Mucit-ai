@@ -1502,6 +1502,163 @@ def test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dold
     _dogrula(len(kayit["prefill_gorenler"]) == 2, "başlangıç batched prefill'i HÂLÂ yalnızca B=2 (tA, tB) ile yapıldı -- tD prefill'e DEĞİL, admission yoluna girdi")
 
 
+def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_diger_slotlara_dokunmadan_yeniden_deniyor_mu() -> None:
+    print("[test 25c] coz_yurutucu_toplu.toplu_gorevleri_coz: kullanıcının açık talebi -- yozlaşmış döngüye giren "
+          "bir slotun ÖNCE geçerli bir cevabı var mı bakılıyor mu (yoksa AYNI promptla, kuyruktan YENİ bir görev "
+          "ÇEKMEDEN, DİĞER slota HİÇ DOKUNMADAN yeniden deneniyor mu)?...")
+
+    import coz_yurutucu_toplu as cyt
+
+    class _TamTersinirTokenizer:
+        pad_token_id = 0
+        eos_token_id = 0
+
+        def encode(self, metin: str, add_special_tokens: bool = True) -> List[int]:
+            return [ord(c) for c in metin]
+
+        def decode(self, token_idler: Any, skip_special_tokens: bool = True) -> str:
+            if hasattr(token_idler, "tolist"):
+                token_idler = token_idler.tolist()
+            return "".join(chr(int(t)) for t in token_idler)
+
+    tok = _TamTersinirTokenizer()
+
+    gorev_X = Task(test_example=Example(input=np.array([[9]]), output=np.array([[9]])), train_examples=[], name="tX-0")
+    gorev_Y = Task(test_example=Example(input=np.array([[7]]), output=np.array([[7]])), train_examples=[], name="tY-0")
+
+    # tX'in İLK denemesi (yükleme #1) YOZLAŞMIŞ bir döngüye (4 karakterlik
+    # "abcd" bloğunun ardışık tekrarı) GİRER, HİÇ submit_answer içermez.
+    # 2. yüklemede (yeniden deneme) ise GEÇERLİ bir submit_answer üretir.
+    garbage_script = [ord(c) for c in ("abcd" * 30)]
+    valid_grid = [[5, 5]]
+    valid_metin = '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} ' \
+                  '{"name": "submit_answer", "arguments": {"grid": [[5, 5]]}}'
+    valid_script = [ord(c) for c in valid_metin]
+    tX_denemeler = [garbage_script, valid_script]
+
+    # tY GERÇEKTEN uzun (tX'in TÜM denemelerinden -- yozlaşmış döngü +
+    # yeniden deneme + geçerli cevap -- daha uzun) bir script izler; tX'in
+    # yaşadığı hiçbir şeyden ETKİLENMEDEN kendi cevabını üretmeli.
+    tY_grid = [[6, 6, 6]]
+    tY_metin = ('{"name": "execute_python", "arguments": {"code": "sonuc = 1  # %s"}} '
+                '{"name": "submit_answer", "arguments": {"grid": [[6, 6, 6]]}}') % (
+                    " ".join(f"tok{i}" for i in range(80)),
+                )
+    tY_script = [ord(c) for c in tY_metin]
+    _dogrula(len(tY_script) > len(garbage_script) + len(valid_script),
+              "tY'nin scripti, tX'in yozlaşmış döngü+yeniden deneme dahil TÜM sürecinden daha uzun")
+
+    VOCAB = 256
+    kayit = {
+        "slot_occupant": {}, "slot_position": {}, "X_yukleme_sayisi": 0,
+        "yeniden_yukleme_cagrilari": [],
+    }
+
+    def _aktif_script(ad: str) -> List[int]:
+        if ad == "tX-0":
+            idx = min(kayit["X_yukleme_sayisi"] - 1, len(tX_denemeler) - 1)
+            return tX_denemeler[idx]
+        return tY_script
+
+    def _mock_onisle(z, n_layer, n_embd, n_head, head_size, token_dizileri, ilerleme_geri_cagirma=None, ilerleme_adimi=200):
+        B = len(token_dizileri)
+        logits = torch.full((B, VOCAB), -10.0)
+        for b in range(B):
+            ad = "".join(chr(t) for t in token_dizileri[b])
+            kayit["slot_occupant"][b] = ad
+            kayit["slot_position"][b] = 1
+            if ad == "tX-0":
+                kayit["X_yukleme_sayisi"] = 1
+            logits[b, _aktif_script(ad)[0]] = 10.0
+        return logits, ["durum-baslangic"]
+
+    def _mock_adim(z, n_layer, n_embd, n_head, head_size, token_idler, durum, aktif_maske):
+        B = len(token_idler)
+        logits = torch.full((B, VOCAB), -10.0)
+        for b in range(B):
+            if not aktif_maske[b]:
+                continue
+            ad = kayit["slot_occupant"][b]
+            pos = kayit["slot_position"][b]
+            script = _aktif_script(ad)
+            if pos < len(script):
+                logits[b, script[pos]] = 10.0
+            else:
+                logits[b, ord(' ')] = 10.0
+            kayit["slot_position"][b] += 1
+        return logits, durum
+
+    def _mock_slota_prompt_besle(z, n_layer, n_embd, n_head, head_size, b, B, prompt_tokenleri, durum):
+        ad = "".join(chr(t) for t in prompt_tokenleri)
+        kayit["yeniden_yukleme_cagrilari"].append((b, ad))
+        if ad == "tX-0":
+            kayit["X_yukleme_sayisi"] += 1
+        kayit["slot_occupant"][b] = ad
+        kayit["slot_position"][b] = 1
+        logit = torch.full((VOCAB,), -10.0)
+        logit[_aktif_script(ad)[0]] = 10.0
+        return logit, durum
+
+    def _mock_slot_sifirla(durum, b, B):
+        return durum
+
+    def _mock_mesajlari_metne_donustur(tokenizer, model_ailesi, mesajlar):
+        return mesajlar[0]["content"]
+
+    def _mock_ilk_mesajlar(task):
+        return [{"role": "user", "content": task.name}]
+
+    eski = {
+        "onisle_toplu_farkli_uzunluk": cyt.onisle_toplu_farkli_uzunluk,
+        "adim_toplu_maskeli": cyt.adim_toplu_maskeli,
+        "uretim_ayarlarini_al": cyt.uretim_ayarlarini_al,
+        "_slota_prompt_besle": cyt._slota_prompt_besle,
+        "_slot_durumunu_sifirla": cyt._slot_durumunu_sifirla,
+        "mesajlari_metne_donustur": cyt.mesajlari_metne_donustur,
+        "_ilk_mesajlar": cyt._ilk_mesajlar,
+    }
+    cyt.onisle_toplu_farkli_uzunluk = _mock_onisle
+    cyt.adim_toplu_maskeli = _mock_adim
+    cyt.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False, "pad_token_id": 0}
+    cyt._slota_prompt_besle = _mock_slota_prompt_besle
+    cyt._slot_durumunu_sifirla = _mock_slot_sifirla
+    cyt.mesajlari_metne_donustur = _mock_mesajlari_metne_donustur
+    cyt._ilk_mesajlar = _mock_ilk_mesajlar
+
+    class _SahteHamModel:
+        z: Dict[str, Any] = {}
+        n_layer = n_embd = n_head = head_size = 1
+
+    try:
+        sonuc = cyt.toplu_gorevleri_coz(
+            _SahteHamModel(), tok, [gorev_X, gorev_Y], azami_yeni_token=5000, kontrol_araligi=1,
+            deneme_etiketi="test-yeniden-deneme",
+            # sonraki_gorev_al KASITLI OLARAK verilmedi (None) -- boş kuyruk
+            # simüle ediliyor, bu yüzden tX'in slotu ADMİSYON yoluyla değil
+            # yalnızca RETRY yoluyla ilerleyebilir.
+        )
+    finally:
+        cyt.onisle_toplu_farkli_uzunluk = eski["onisle_toplu_farkli_uzunluk"]
+        cyt.adim_toplu_maskeli = eski["adim_toplu_maskeli"]
+        cyt.uretim_ayarlarini_al = eski["uretim_ayarlarini_al"]
+        cyt._slota_prompt_besle = eski["_slota_prompt_besle"]
+        cyt._slot_durumunu_sifirla = eski["_slot_durumunu_sifirla"]
+        cyt.mesajlari_metne_donustur = eski["mesajlari_metne_donustur"]
+        cyt._ilk_mesajlar = eski["_ilk_mesajlar"]
+
+    _dogrula(len(sonuc) == 2, f"başlangıçta B=2 verilen 2 görev de sonuçlandı, YENİ bir görev ADMİT EDİLMEDİ (bulunan: {list(sonuc)})")
+    _dogrula(sonuc["tX-0"]["attempt_1_gonderildi_mi"] is True, "tX-0: yozlaşmış döngüden sonra YENİDEN DENENİP nihayet submit_answer ile sonuçlandı")
+    _dogrula(sonuc["tX-0"]["attempt_1"] == valid_grid, f"tX-0: yeniden denemedeki GEÇERLİ cevabı taşıyor (bulunan: {sonuc['tX-0']['attempt_1']})")
+    _dogrula(sonuc["tY-0"]["attempt_1_gonderildi_mi"] is True, "tY-0: tX'in yozlaşmış döngüsünden/yeniden denemesinden HİÇ ETKİLENMEDEN kendi cevabını üretti")
+    _dogrula(sonuc["tY-0"]["attempt_1"] == tY_grid, f"tY-0: KENDİ doğru cevabını üretti (bulunan: {sonuc['tY-0']['attempt_1']})")
+
+    _dogrula(
+        len(kayit["yeniden_yukleme_cagrilari"]) == 1 and kayit["yeniden_yukleme_cagrilari"][0] == (0, "tX-0"),
+        f"slot 0 (tX'in koltuğu) TAM OLARAK BİR KEZ, AYNI görev adıyla ('tX-0') yeniden yüklendi -- yeni bir "
+        f"göreve GEÇİLMEDİ, KENDİ promptuyla yeniden denendi (bulunan: {kayit['yeniden_yukleme_cagrilari']})",
+    )
+
+
 def test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu() -> None:
     print("[test 26] coklu_gpu.padisah_vezir_toplu_havuzuyla_coz: paylaşımlı TEK kuyruk yerine, işe başlamadan ÖNCE görevler eşit paylaştırılıp her vezir SADECE kendi payını mı çekiyor (hızlı bir vezirin kuyruğu tek başına yutup diğerlerini aç bırakması engelleniyor mu)?...")
 
@@ -2002,6 +2159,7 @@ def calistir() -> None:
     test_24_onisle_toplu_farkli_uzunluk_gercek_rwkv_ile_ragged_batch_dogrulamasi()
     test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
     test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dolduruyor_mu()
+    test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_diger_slotlara_dokunmadan_yeniden_deniyor_mu()
     test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu()
     test_27_modele_geri_beslenen_arac_yanitlari_ingilizce_mi()
     test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu()
