@@ -1395,30 +1395,38 @@ def test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dold
 
     gorev_A = Task(test_example=Example(input=np.array([[1]]), output=np.array([[1]])), train_examples=[], name="tA-0")
     gorev_B = Task(test_example=Example(input=np.array([[2]]), output=np.array([[2]])), train_examples=[], name="tB-0")
-    gorev_D = Task(test_example=Example(input=np.array([[4]]), output=np.array([[4]])), train_examples=[], name="tD-0")
+    # NOT: D'nin görev adı KASITLI OLARAK TEK KARAKTER ("D") -- artık admit
+    # edilen bir görevin prompt'u (bkz. coz_yurutucu_toplu.py'deki yeni
+    # bekleyen_prompt mekanizması) PAYLAŞILAN ana adım döngüsünde, HER
+    # PROMPT TOKEN'İ İÇİN AYRI bir _mock_adim çağrısıyla tüketiliyor (tek
+    # bir özel "prefill" fonksiyonu YOK artık) -- prompt tek karakterse bu,
+    # tıpkı _mock_onisle'ın başlangıç görevleri için yaptığı gibi TEK bir
+    # mock çağrısında pozisyonu 0'dan 1'e taşır, script indeksleme
+    # karmaşıklaşmaz.
+    gorev_D = Task(test_example=Example(input=np.array([[4]]), output=np.array([[4]])), train_examples=[], name="D")
 
-    beklenen_cevaplar = {"tA-0": [[1, 1]], "tB-0": [[2, 2], [2, 2]], "tD-0": [[4, 4, 4]]}
+    beklenen_cevaplar = {"tA-0": [[1, 1]], "tB-0": [[2, 2], [2, 2]], "D": [[4, 4, 4]]}
     # tB'nin "execute_python" kodu KASITLI OLARAK çok daha uzun (dolgu
-    # metniyle) -- tA erkenden bitip slotu boşaltana, 3. görev (tD) o
+    # metniyle) -- tA erkenden bitip slotu boşaltana, 3. görev (D) o
     # boşalan koltuğa ADMİT edilip O DA bitene kadar tB HÂLÂ bitmemiş olsun.
     metinler = {
         "tA-0": '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} '
                 '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["tA-0"]),
-        "tD-0": '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} '
-                '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["tD-0"]),
+        "D": '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} '
+             '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["D"]),
         "tB-0": '{"name": "execute_python", "arguments": {"code": "sonuc = 1  # %s"}} '
                 '{"name": "submit_answer", "arguments": {"grid": %s}}' % (
                     " ".join(f"pad{i}" for i in range(60)), _json.dumps(beklenen_cevaplar["tB-0"]),
                 ),
     }
     scripted = {ad: [ord(c) for c in metin] for ad, metin in metinler.items()}
-    _dogrula(len(scripted["tB-0"]) > len(scripted["tA-0"]) + len(scripted["tD-0"]),
-              "tB'nin senaryolandırılmış çıktısı GERÇEKTEN tA+tD'nin toplamından daha uzun (tB hâlâ bitmemişken tA VE tD'nin ikisi de bitebilmeli)")
+    _dogrula(len(scripted["tB-0"]) > len(scripted["tA-0"]) + len(scripted["D"]),
+              "tB'nin senaryolandırılmış çıktısı GERÇEKTEN tA+D'nin toplamından daha uzun (tB hâlâ bitmemişken tA VE D'nin ikisi de bitebilmeli)")
 
     VOCAB = 256
     kayit = {
         "slot_occupant": {}, "slot_position": {}, "prefill_gorenler": [],
-        "admit_edilenler": [], "tamamlanan_sirasi": [],
+        "admit_edilenler": [], "tamamlanan_sirasi": [], "son_istenen_ad": None,
     }
 
     def _mock_onisle(z, n_layer, n_embd, n_head, head_size, token_dizileri, ilerleme_geri_cagirma=None, ilerleme_adimi=200):
@@ -1448,23 +1456,25 @@ def test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dold
             kayit["slot_position"][b] += 1
         return logits, durum
 
-    def _mock_slota_prompt_besle(z, n_layer, n_embd, n_head, head_size, b, B, prompt_tokenleri, durum):
-        ad = "".join(chr(t) for t in prompt_tokenleri)
-        kayit["slot_occupant"][b] = ad
-        kayit["slot_position"][b] = 1
-        kayit["admit_edilenler"].append((b, ad))
-        logit = torch.full((VOCAB,), -10.0)
-        logit[scripted[ad][0]] = 10.0
-        return logit, durum
-
-    def _mock_slot_sifirla(durum, b, B):
-        return durum  # bu testte gerçek state ÖNEMSİZ, mock zaten b'ye göre ayrı script takip ediyor
-
     def _mock_mesajlari_metne_donustur(tokenizer, model_ailesi, mesajlar):
-        return mesajlar[0]["content"]
+        # YAN ETKİ (KASITLI): _slota_yeni_gorev_yukle içinde bu fonksiyon
+        # _slot_durumunu_sifirla'dan HEMEN ÖNCE çağrılıyor -- hangi görevin
+        # HANGİ slota yükleneceğini burada "STAŞLAYIP" _slot_durumunu_
+        # sifirla mock'unda (b PARAMETRESİYLE) tüketiyoruz; artık ayrı bir
+        # "_slota_prompt_besle" fonksiyonu YOK, tek gözlem noktamız bu ikisi.
+        ad = mesajlar[0]["content"]
+        kayit["son_istenen_ad"] = ad
+        return ad
 
     def _mock_ilk_mesajlar(task):
         return [{"role": "user", "content": task.name}]
+
+    def _mock_slot_sifirla(durum, b, B):
+        ad = kayit["son_istenen_ad"]
+        kayit["slot_occupant"][b] = ad
+        kayit["slot_position"][b] = 0
+        kayit["admit_edilenler"].append((b, ad))
+        return durum
 
     kuyruk = [gorev_D]
 
@@ -1478,7 +1488,6 @@ def test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dold
         "onisle_toplu_farkli_uzunluk": cyt.onisle_toplu_farkli_uzunluk,
         "adim_toplu_maskeli": cyt.adim_toplu_maskeli,
         "uretim_ayarlarini_al": cyt.uretim_ayarlarini_al,
-        "_slota_prompt_besle": cyt._slota_prompt_besle,
         "_slot_durumunu_sifirla": cyt._slot_durumunu_sifirla,
         "mesajlari_metne_donustur": cyt.mesajlari_metne_donustur,
         "_ilk_mesajlar": cyt._ilk_mesajlar,
@@ -1486,7 +1495,6 @@ def test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dold
     cyt.onisle_toplu_farkli_uzunluk = _mock_onisle
     cyt.adim_toplu_maskeli = _mock_adim
     cyt.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False, "pad_token_id": 0}
-    cyt._slota_prompt_besle = _mock_slota_prompt_besle
     cyt._slot_durumunu_sifirla = _mock_slot_sifirla
     cyt.mesajlari_metne_donustur = _mock_mesajlari_metne_donustur
     cyt._ilk_mesajlar = _mock_ilk_mesajlar
@@ -1505,21 +1513,20 @@ def test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dold
         cyt.onisle_toplu_farkli_uzunluk = eski["onisle_toplu_farkli_uzunluk"]
         cyt.adim_toplu_maskeli = eski["adim_toplu_maskeli"]
         cyt.uretim_ayarlarini_al = eski["uretim_ayarlarini_al"]
-        cyt._slota_prompt_besle = eski["_slota_prompt_besle"]
         cyt._slot_durumunu_sifirla = eski["_slot_durumunu_sifirla"]
         cyt.mesajlari_metne_donustur = eski["mesajlari_metne_donustur"]
         cyt._ilk_mesajlar = eski["_ilk_mesajlar"]
 
-    _dogrula(len(sonuc) == 3, f"başlangıçta B=2 verilmesine rağmen, ADMİT edilen 3. görev (tD) de dahil TOPLAM 3 görev sonuçlandı (bulunan: {list(sonuc)})")
-    for ad in ("tA-0", "tB-0", "tD-0"):
+    _dogrula(len(sonuc) == 3, f"başlangıçta B=2 verilmesine rağmen, ADMİT edilen 3. görev (D) de dahil TOPLAM 3 görev sonuçlandı (bulunan: {list(sonuc)})")
+    for ad in ("tA-0", "tB-0", "D"):
         _dogrula(sonuc[ad]["attempt_1_gonderildi_mi"] is True, f"{ad}: gerçekten submit_answer ile sonuçlandı")
         _dogrula(sonuc[ad]["attempt_1"] == beklenen_cevaplar[ad], f"{ad}: KENDİ doğru cevabını üretti, başka görevle karışmadı")
 
-    _dogrula(len(kayit["admit_edilenler"]) == 1 and kayit["admit_edilenler"][0][1] == "tD-0",
-              f"kuyruktaki tD, boşalan slota GERÇEKTEN ADMİT edildi (bulunan: {kayit['admit_edilenler']}) -- partinin TAMAMI bitmeden yeni görev kabul edildi")
+    _dogrula(len(kayit["admit_edilenler"]) == 1 and kayit["admit_edilenler"][0][1] == "D",
+              f"kuyruktaki D, boşalan slota GERÇEKTEN ADMİT edildi (bulunan: {kayit['admit_edilenler']}) -- partinin TAMAMI bitmeden yeni görev kabul edildi")
     _dogrula(kayit["tamamlanan_sirasi"][-1] == "tB-0",
-              f"tB (en uzun script) SON sırada bitti -- tA VE tD, tB'yi HİÇ beklemeden ondan ÖNCE bitirildi (sıralama: {kayit['tamamlanan_sirasi']})")
-    _dogrula(len(kayit["prefill_gorenler"]) == 2, "başlangıç batched prefill'i HÂLÂ yalnızca B=2 (tA, tB) ile yapıldı -- tD prefill'e DEĞİL, admission yoluna girdi")
+              f"tB (en uzun script) SON sırada bitti -- tA VE D, tB'yi HİÇ beklemeden ondan ÖNCE bitirildi (sıralama: {kayit['tamamlanan_sirasi']})")
+    _dogrula(len(kayit["prefill_gorenler"]) == 2, "başlangıç batched prefill'i HÂLÂ yalnızca B=2 (tA, tB) ile yapıldı -- D prefill'e DEĞİL, admission yoluna girdi")
 
 
 def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_diger_slotlara_dokunmadan_yeniden_deniyor_mu() -> None:
@@ -1543,7 +1550,10 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
 
     tok = _TamTersinirTokenizer()
 
-    gorev_X = Task(test_example=Example(input=np.array([[9]]), output=np.array([[9]])), train_examples=[], name="tX-0")
+    # NOT: X'in adı KASITLI OLARAK TEK KARAKTER -- bkz. test 25b'deki AYNI
+    # gerekçe (bekleyen_prompt artık prompt'u tek karakterlik adımlarla
+    # tüketiyor, tek karakterlik bir "prompt" script indekslemeyi basitleştirir).
+    gorev_X = Task(test_example=Example(input=np.array([[9]]), output=np.array([[9]])), train_examples=[], name="X")
     gorev_Y = Task(test_example=Example(input=np.array([[7]]), output=np.array([[7]])), train_examples=[], name="tY-0")
 
     # tX'in İLK denemesi (yükleme #1) YOZLAŞMIŞ bir döngüye GİRER, HİÇ
@@ -1578,11 +1588,11 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
     VOCAB = 256
     kayit = {
         "slot_occupant": {}, "slot_position": {}, "X_yukleme_sayisi": 0,
-        "yeniden_yukleme_cagrilari": [],
+        "yeniden_yukleme_cagrilari": [], "son_istenen_ad": None,
     }
 
     def _aktif_script(ad: str) -> List[int]:
-        if ad == "tX-0":
+        if ad == "X":
             idx = min(kayit["X_yukleme_sayisi"] - 1, len(tX_denemeler) - 1)
             return tX_denemeler[idx]
         return tY_script
@@ -1594,7 +1604,7 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
             ad = "".join(chr(t) for t in token_dizileri[b])
             kayit["slot_occupant"][b] = ad
             kayit["slot_position"][b] = 1
-            if ad == "tX-0":
+            if ad == "X":
                 kayit["X_yukleme_sayisi"] = 1
             logits[b, _aktif_script(ad)[0]] = 10.0
         return logits, ["durum-baslangic"]
@@ -1615,31 +1625,29 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
             kayit["slot_position"][b] += 1
         return logits, durum
 
-    def _mock_slota_prompt_besle(z, n_layer, n_embd, n_head, head_size, b, B, prompt_tokenleri, durum):
-        ad = "".join(chr(t) for t in prompt_tokenleri)
-        kayit["yeniden_yukleme_cagrilari"].append((b, ad))
-        if ad == "tX-0":
-            kayit["X_yukleme_sayisi"] += 1
-        kayit["slot_occupant"][b] = ad
-        kayit["slot_position"][b] = 1
-        logit = torch.full((VOCAB,), -10.0)
-        logit[_aktif_script(ad)[0]] = 10.0
-        return logit, durum
-
-    def _mock_slot_sifirla(durum, b, B):
-        return durum
-
     def _mock_mesajlari_metne_donustur(tokenizer, model_ailesi, mesajlar):
-        return mesajlar[0]["content"]
+        # bkz. test 25b'deki AYNI "stash" gerekçesi: _slota_yeni_gorev_yukle
+        # bu fonksiyonu _slot_durumunu_sifirla'dan HEMEN ÖNCE çağırıyor.
+        ad = mesajlar[0]["content"]
+        kayit["son_istenen_ad"] = ad
+        return ad
 
     def _mock_ilk_mesajlar(task):
         return [{"role": "user", "content": task.name}]
+
+    def _mock_slot_sifirla(durum, b, B):
+        ad = kayit["son_istenen_ad"]
+        kayit["yeniden_yukleme_cagrilari"].append((b, ad))
+        if ad == "X":
+            kayit["X_yukleme_sayisi"] += 1
+        kayit["slot_occupant"][b] = ad
+        kayit["slot_position"][b] = 0
+        return durum
 
     eski = {
         "onisle_toplu_farkli_uzunluk": cyt.onisle_toplu_farkli_uzunluk,
         "adim_toplu_maskeli": cyt.adim_toplu_maskeli,
         "uretim_ayarlarini_al": cyt.uretim_ayarlarini_al,
-        "_slota_prompt_besle": cyt._slota_prompt_besle,
         "_slot_durumunu_sifirla": cyt._slot_durumunu_sifirla,
         "mesajlari_metne_donustur": cyt.mesajlari_metne_donustur,
         "_ilk_mesajlar": cyt._ilk_mesajlar,
@@ -1647,7 +1655,6 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
     cyt.onisle_toplu_farkli_uzunluk = _mock_onisle
     cyt.adim_toplu_maskeli = _mock_adim
     cyt.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False, "pad_token_id": 0}
-    cyt._slota_prompt_besle = _mock_slota_prompt_besle
     cyt._slot_durumunu_sifirla = _mock_slot_sifirla
     cyt.mesajlari_metne_donustur = _mock_mesajlari_metne_donustur
     cyt._ilk_mesajlar = _mock_ilk_mesajlar
@@ -1668,20 +1675,19 @@ def test_25c_toplu_gorevleri_coz_yozlasmis_dongude_cevap_yoksa_ayni_promptla_dig
         cyt.onisle_toplu_farkli_uzunluk = eski["onisle_toplu_farkli_uzunluk"]
         cyt.adim_toplu_maskeli = eski["adim_toplu_maskeli"]
         cyt.uretim_ayarlarini_al = eski["uretim_ayarlarini_al"]
-        cyt._slota_prompt_besle = eski["_slota_prompt_besle"]
         cyt._slot_durumunu_sifirla = eski["_slot_durumunu_sifirla"]
         cyt.mesajlari_metne_donustur = eski["mesajlari_metne_donustur"]
         cyt._ilk_mesajlar = eski["_ilk_mesajlar"]
 
     _dogrula(len(sonuc) == 2, f"başlangıçta B=2 verilen 2 görev de sonuçlandı, YENİ bir görev ADMİT EDİLMEDİ (bulunan: {list(sonuc)})")
-    _dogrula(sonuc["tX-0"]["attempt_1_gonderildi_mi"] is True, "tX-0: yozlaşmış döngüden sonra YENİDEN DENENİP nihayet submit_answer ile sonuçlandı")
-    _dogrula(sonuc["tX-0"]["attempt_1"] == valid_grid, f"tX-0: yeniden denemedeki GEÇERLİ cevabı taşıyor (bulunan: {sonuc['tX-0']['attempt_1']})")
-    _dogrula(sonuc["tY-0"]["attempt_1_gonderildi_mi"] is True, "tY-0: tX'in yozlaşmış döngüsünden/yeniden denemesinden HİÇ ETKİLENMEDEN kendi cevabını üretti")
+    _dogrula(sonuc["X"]["attempt_1_gonderildi_mi"] is True, "X: yozlaşmış döngüden sonra YENİDEN DENENİP nihayet submit_answer ile sonuçlandı")
+    _dogrula(sonuc["X"]["attempt_1"] == valid_grid, f"X: yeniden denemedeki GEÇERLİ cevabı taşıyor (bulunan: {sonuc['X']['attempt_1']})")
+    _dogrula(sonuc["tY-0"]["attempt_1_gonderildi_mi"] is True, "tY-0: X'in yozlaşmış döngüsünden/yeniden denemesinden HİÇ ETKİLENMEDEN kendi cevabını üretti")
     _dogrula(sonuc["tY-0"]["attempt_1"] == tY_grid, f"tY-0: KENDİ doğru cevabını üretti (bulunan: {sonuc['tY-0']['attempt_1']})")
 
     _dogrula(
-        len(kayit["yeniden_yukleme_cagrilari"]) == 1 and kayit["yeniden_yukleme_cagrilari"][0] == (0, "tX-0"),
-        f"slot 0 (tX'in koltuğu) TAM OLARAK BİR KEZ, AYNI görev adıyla ('tX-0') yeniden yüklendi -- yeni bir "
+        len(kayit["yeniden_yukleme_cagrilari"]) == 1 and kayit["yeniden_yukleme_cagrilari"][0] == (0, "X"),
+        f"slot 0 (X'in koltuğu) TAM OLARAK BİR KEZ, AYNI görev adıyla ('X') yeniden yüklendi -- yeni bir "
         f"göreve GEÇİLMEDİ, KENDİ promptuyla yeniden denendi (bulunan: {kayit['yeniden_yukleme_cagrilari']})",
     )
 

@@ -94,20 +94,6 @@ def _slot_durumunu_sifirla(durum: List[torch.Tensor], b: int, B: int) -> List[to
     return durum
 
 
-def _slota_prompt_besle(z, n_layer, n_embd, n_head, head_size, b: int, B: int,
-                         prompt_tokenleri: List[int], durum: List[torch.Tensor]) -> tuple:
-    """Yeni görevin prompt'unu, YALNIZCA slot b'yi ilerleterek (kalan
-    B-1 slot dondurularak) işler -- diğer slotlar KENDİ üretimlerine
-    hiç kesintisiz devam ederken, boşalan slot arka planda yeni görevinin
-    prefill'ini yapar. Döner: (son_logit, güncel durum)."""
-    son_logit = None
-    for tok in prompt_tokenleri:
-        aktif_maske = [False] * B
-        aktif_maske[b] = True
-        tum_tokenler = [tok] * B
-        logits, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, tum_tokenler, durum, aktif_maske)
-        son_logit = logits[b]
-    return son_logit, durum
 
 
 def toplu_gorevleri_coz(
@@ -151,13 +137,27 @@ def toplu_gorevleri_coz(
     fikri): verilirse, B slottan biri (submit_answer başarılı olduğunda VEYA
     yozlaşmış döngü tespit edildiğinde) boşaldığı anda, o koltuk PARTİNİN
     SONUNA KADAR BOŞ BEKLEMEK yerine HEMEN `sonraki_gorev_al()` ile kuyruktan
-    çekilen YENİ bir görevle doldurulur (o slotun state'i sıfırlanıp yeni
-    görevin prompt'u yalnızca o slotta -- diğer B-1 slot kesintisiz devam
-    ederken -- prefill edilir). ÖNCEKİ halde biten bir görevin koltuğu,
-    partideki EN YAVAŞ görev bitene kadar boşa gidiyordu (BlockServe'in
-    "Effective Compute Ratio" dediği, statik batch'te 0.07'ye kadar düşen
-    metrik) -- bu artık slot-recycling ile önlenir. `sonraki_gorev_al()`
-    None dönerse (kuyruk boş) slot eskisi gibi kalıcı olarak dondurulur.
+    çekilen YENİ bir görevle doldurulur. ÖNCEKİ halde biten bir görevin
+    koltuğu, partideki EN YAVAŞ görev bitene kadar boşa gidiyordu
+    (BlockServe'in "Effective Compute Ratio" dediği, statik batch'te 0.07'ye
+    kadar düşen metrik) -- bu artık slot-recycling ile önlenir.
+    `sonraki_gorev_al()` None dönerse (kuyruk boş) slot eskisi gibi kalıcı
+    olarak dondurulur.
+
+    ÖNEMLİ (kullanıcının haklı itirazı -- "neden birbirlerini beklesinler,
+    42 tanesi 1000. token'i üretirken 43'üncü 100. token'inde olabilir"):
+    yeni/yeniden denenen bir görevin prompt'u ARTIK AYRI, SENKRON bir alt
+    döngüde (o bitene kadar TÜM diğer slotları donduran bir iç `for` ile)
+    HEMEN baştan sona işlenmiyor. Bunun yerine slot b, `bekleyen_prompt[b]`
+    kuyruğuna KONUP paylaşılan ana adım döngüsüne GERİ dönüyor -- her paylaşılan
+    `adim`'de, HENÜZ prompt'u tüketmekte olan slotlar kuyruklarından BİR
+    sonraki prompt token'ini, AYNI ANDA gerçekten ÜRETMEKTE olan diğer
+    slotlar da KENDİ örneklenen bir sonraki token'lerini alır -- hepsi TEK
+    bir `adim_toplu_maskeli` çağrısında birlikte ilerler. Böylece bir slotun
+    (binlerce token olabilen) prompt'unu yeniden işlemesi, diğer B-1 slotun
+    tek bir adımını bile GECİKTİRMEZ -- her slot GERÇEKTEN kendi hızında,
+    kendi "pozisyonunda" ilerler (biri 100. adımdayken diğeri 1000. adımda
+    olabilir), yalnızca ALT SEVİYEDE aynı batched matris çarpımını paylaşırlar.
 
     `tamamlanma_geri_cagirma(task_adi, sonuc)` verilirse, HER görev (başlangıç
     B'si veya arada admit edilen) bitirilir bitirilmez -- partinin/koşunun
@@ -220,6 +220,12 @@ def toplu_gorevleri_coz(
     sonuclar_by_name: Dict[str, Dict[str, Any]] = {}
     admit_edilen_sayisi = 0
     yeniden_deneme_sayisi = [0] * B  # yozlaşmış döngüden AYNI promptla kaç kez yeniden başlandı
+    # Slot b niye bu listede boş DEĞİL: o slot HENÜZ yeni (admit edilmiş/
+    # yeniden denenen) bir görevin PROMPT'unu tüketiyor -- her paylaşılan
+    # `adim`de listenin BAŞINDAN bir token çekilip beslenir, diğer B-1 slot
+    # bu sırada KENDİ üretimine (sampling) devam eder, KİMSE KİMSEYİ
+    # BEKLEMEZ (bkz. fonksiyon docstring'i).
+    bekleyen_prompt: List[List[int]] = [[] for _ in range(B)]
 
     def _slot_sonucla_bitir(b: int) -> None:
         """Slot b'nin O ANKİ sakinini SONUÇLANDIRIR (kayda geçirir, geri
@@ -235,12 +241,18 @@ def toplu_gorevleri_coz(
         bitti[b] = True
 
     def _slota_yeni_gorev_yukle(b: int, yeni_gorev: Task) -> None:
+        """Slot b'yi yeni_gorev ile YENİDEN BAŞLATIR -- ama prompt'u BURADA
+        senkron olarak İŞLEMEZ (eski davranış tüm B-1 diğer slotu bloke
+        ediyordu). Bunun yerine slotun state'i sıfırlanır ve prompt'un
+        TAMAMI `bekleyen_prompt[b]`ye KUYRUKLANIR -- paylaşılan ana adım
+        döngüsü, her adımda bu kuyruktan BİR token çekip besleyerek,
+        DİĞER slotların KENDİ gerçek üretim adımlarıyla AYNI ANDA (tek
+        `adim_toplu_maskeli` çağrısında) ilerletecek."""
         nonlocal durum
         metin = mesajlari_metne_donustur(tokenizer, RWKV, _ilk_mesajlar(yeni_gorev))
         yeni_prompt = tokenizer.encode(metin)
         durum = _slot_durumunu_sifirla(durum, b, B)
-        son_logit, durum = _slota_prompt_besle(z, n_layer, n_embd, n_head, head_size, b, B, yeni_prompt, durum)
-        son_logits[b] = son_logit
+        bekleyen_prompt[b] = list(yeni_prompt)
         slot_gorev[b] = yeni_gorev
         defterler[b] = CevapDefteri()
         uretilen_tokenler[b] = []
@@ -249,9 +261,9 @@ def toplu_gorevleri_coz(
         bitti[b] = False
         if ayrintili_log:
             print(
-                f"{_ONEK} ({deneme_etiketi})   SLOT {b} YENİLENDİ: '{yeni_gorev.name}' "
-                f"(prompt {len(yeni_prompt)} token) kuyruktan alınıp AYNI batch koltuğuna yüklendi -- "
-                f"diğer {B - 1} slot bu sırada KESİNTİSİZ devam etti."
+                f"{_ONEK} ({deneme_etiketi})   SLOT {b} YENİLENDİ: '{yeni_gorev.name}' (prompt {len(yeni_prompt)} "
+                f"token) kuyruklandı -- paylaşılan adım döngüsünde diğer {B - 1} slotla AYNI ANDA, hiçbirini "
+                f"BEKLETMEDEN tüketilecek."
             )
 
     def _slot_ilerlet(b: int) -> None:
@@ -277,6 +289,15 @@ def toplu_gorevleri_coz(
         for b in range(B):
             if bitti[b]:
                 sonraki_tokenler.append(0)
+                continue
+            if bekleyen_prompt[b]:
+                # Bu slot HENÜZ (admit edilmiş/yeniden denenen) bir görevin
+                # prompt'unu tüketiyor -- ÖRNEKLEME YOK, kuyruktan bir
+                # SONRAKİ gerçek prompt token'i beslenir; diğer, GERÇEKTEN
+                # üretmekte olan slotlar bu satırın etkilenmeden AŞAĞIDAKİ
+                # normal örnekleme yoluna girer -- aynı `adim`de, aynı tek
+                # adim_toplu_maskeli çağrısında birlikte ilerlerler.
+                sonraki_tokenler.append(bekleyen_prompt[b].pop(0))
                 continue
             tok = _sample_tek(son_logits[b], do_sample, temperature, repetition_penalty, uretilen_tokenler[b])
             uretilen_tokenler[b].append(tok)
@@ -309,6 +330,12 @@ def toplu_gorevleri_coz(
 
         for b in range(B):
             if bitti[b]:
+                continue
+            if bekleyen_prompt[b]:
+                # Prompt'u HÂLÂ tüketiyor -- henüz hiç GERÇEK içerik
+                # üretmedi, araç-çağrısı/yozlaşmış-döngü/İKAZ kontrolünün
+                # bu slot için bir anlamı yok (uretilen_tokenler[b] hâlâ
+                # boş). Diğer slotlar bu kontrolden ETKİLENMEDEN devam eder.
                 continue
             metin_simdi = tokenizer.decode(uretilen_tokenler[b])
             cagrilar = arac_cagrilarini_ayikla(metin_simdi)
