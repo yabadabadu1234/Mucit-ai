@@ -32,12 +32,22 @@ class _SonuCuKaydedici:
     submission.json'a mutlaka yazılmasını garanti eder. Ana eğitim
     döngüsünde (main_egitim_dongusu.py) checkpoint'in HER durumda
     kaydolmasını sağlayan usulün aynısı: periyodik ara-kayıt + try/finally
-    + sinyal yakalayıcı ile son-kayıt garantisi."""
+    + sinyal yakalayıcı ile son-kayıt garantisi.
+
+    GÖREV-ADI ANAHTARLI: kullanıcının gerçek Kaggle koşusunda gördüğü "5000/
+    60000 adım ilerleme logu var ama submission.json BOMBOŞ" hatasının kök
+    nedeni -- coklu_gpu_submission_uret ÖNCEDEN `ekle()`yi yalnızca TÜM 172
+    görevlik attempt_1 koşusu (cozucu.coz() TAMAMEN dönene kadar) bittikten
+    SONRA, sıraya göre çağırıyordu; koşu ORTASINDA çöken/kesilen bir süreçte
+    tek bir `ekle()` bile hiç çalışmamış oluyordu. Artık her görev (SÜREKLİ
+    ADMİSYON ile parti bitmeden de) bitirilir bitirilmez `guncelle(ad, ...)`
+    ÇAĞRILABİLİR -- görev adına göre anahtarlanmış olduğu için sıra ÖNEMLİ
+    DEĞİLDİR ve aynı görev ikinci kez (ör. attempt_2 ile) güncellenebilir."""
 
     def __init__(self, tasks: List[Any], cikti_yolu: str) -> None:
         self.tasks = tasks
         self.cikti_yolu = cikti_yolu
-        self.predictions: List[List[Any]] = []
+        self.tahminler_by_ad: Dict[str, List[Any]] = {}
         self._son_yazilan_sayi = -1
         self._kaydedildi = False
 
@@ -45,24 +55,33 @@ class _SonuCuKaydedici:
         signal.signal(signal.SIGTERM, self._sinyal_ile_kaydet)
         signal.signal(signal.SIGINT, self._sinyal_ile_kaydet)
 
-    def ekle(self, tahmin: List[Any]) -> None:
-        self.predictions.append(tahmin)
+    def guncelle(self, task_adi: str, attempt_1: Any, attempt_2: Optional[Any] = None) -> None:
+        """Tek bir görevin tahminini (attempt_2 henüz yoksa attempt_1'in
+        kopyasıyla) HEMEN kaydeder ve diske yazar -- görevin ait olduğu
+        koşunun/partinin TAMAMEN bitmesini BEKLEMEZ."""
+        self.tahminler_by_ad[task_adi] = [attempt_1, attempt_2 if attempt_2 is not None else attempt_1]
         self._ara_kayit()
 
-    def _bekleyen_gorevleri_bos_doldur(self) -> List[List[Any]]:
-        eksik = len(self.tasks) - len(self.predictions)
+    def ekle(self, task_adi: str, tahmin: List[Any]) -> None:
+        self.tahminler_by_ad[task_adi] = tahmin
+        self._ara_kayit()
+
+    def _sirali_tahmin_listesi(self) -> List[List[Any]]:
         bos = [[[0, 0], [0, 0]], [[0, 0], [0, 0]]]
-        return self.predictions + [bos for _ in range(max(0, eksik))]
+        return [self.tahminler_by_ad.get(task.name, bos) for task in self.tasks]
+
+    def _bekleyen_gorevleri_bos_doldur(self) -> List[List[Any]]:
+        return self._sirali_tahmin_listesi()
 
     def _ara_kayit(self) -> None:
         # Her görevden sonra diske yazılır; süreç o an ölse bile o ana
         # kadarki tüm sonuçlar submission.json'da kalır.
-        if len(self.predictions) == self._son_yazilan_sayi:
+        if len(self.tahminler_by_ad) == self._son_yazilan_sayi:
             return
-        tam_liste = self._bekleyen_gorevleri_bos_doldur()
+        tam_liste = self._sirali_tahmin_listesi()
         try:
             make_submission(self.tasks, tam_liste, path=self.cikti_yolu)
-            self._son_yazilan_sayi = len(self.predictions)
+            self._son_yazilan_sayi = len(self.tahminler_by_ad)
         except Exception as yazma_hatasi:
             print(f"[gonderim_uret] ARA KAYIT HATASI (yoksayılıp devam edilecek): {yazma_hatasi}")
 
@@ -71,10 +90,10 @@ class _SonuCuKaydedici:
             return
         self._kaydedildi = True
         print(
-            f"[gonderim_uret] SON KAYIT: {len(self.predictions)}/{len(self.tasks)} görev tamamlanmış "
+            f"[gonderim_uret] SON KAYIT: {len(self.tahminler_by_ad)}/{len(self.tasks)} görev tamamlanmış "
             f"haliyle '{self.cikti_yolu}' yazılıyor..."
         )
-        tam_liste = self._bekleyen_gorevleri_bos_doldur()
+        tam_liste = self._sirali_tahmin_listesi()
         make_submission(self.tasks, tam_liste, path=self.cikti_yolu)
         print(f"[gonderim_uret] SON KAYIT tamamlandı: '{self.cikti_yolu}'.")
 
@@ -223,27 +242,45 @@ def coklu_gpu_submission_uret(
         baslangic_zamani = time.time()
         ara_bitis = baslangic_zamani + (bitis_zamani - baslangic_zamani) / 2
         print(f"[gonderim_uret] [ÇOKLU-GPU] attempt_1 için YARI bütçe ayrıldı (bitiş: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(ara_bitis))}), attempt_2 kalan yarıyı kullanacak.")
-        sonuclar = cozucu.coz(tasks, bitis_zamani=ara_bitis)
+
+        # ÖNEMLİ (kullanıcının "5000/60000 adım ilerleme logu var ama
+        # submission.json BOMBOŞ" hatasının kök nedeni): ÖNCEDEN kaydedici.
+        # ekle() yalnızca cozucu.coz() TÜM 172 görevi bitirip TAMAMEN
+        # dönene kadar hiç çağrılmıyordu -- koşu ortasında çöken/kesilen
+        # bir süreçte diskte HİÇBİR sonuç olmazdı. Artık SÜREKLİ ADMİSYON
+        # sayesinde her görev (partinin/koşunun tamamı değil) bitirilir
+        # bitirilmez bu geri çağrı tetiklenir ve o AN diske yazılır.
+        def _attempt1_tamamlandi(task_adi: str, sonuc: Dict[str, Any]) -> None:
+            kaydedici.guncelle(task_adi, sonuc["attempt_1"])
+
+        sonuclar = cozucu.coz(tasks, bitis_zamani=ara_bitis, tamamlanma_geri_cagirma=_attempt1_tamamlandi)
 
         sonuclar_2: Dict[str, Dict[str, Any]] = {}
         if time.time() < bitis_zamani:
             print("[gonderim_uret] [ÇOKLU-GPU] attempt_2 için İKİNCİ, BAĞIMSIZ bir toplu koşu başlıyor (aynı görevler, yeniden örneklenir)...")
-            sonuclar_2 = cozucu.coz(tasks, bitis_zamani=bitis_zamani)
+
+            def _attempt2_tamamlandi(task_adi: str, sonuc2: Dict[str, Any]) -> None:
+                attempt_1 = sonuclar.get(task_adi, {}).get("attempt_1", [[0, 0], [0, 0]])
+                if sonuc2.get("attempt_1_gonderildi_mi"):
+                    kaydedici.guncelle(task_adi, attempt_1, sonuc2["attempt_1"])
+                else:
+                    kaydedici.guncelle(task_adi, attempt_1, attempt_1)
+
+            sonuclar_2 = cozucu.coz(tasks, bitis_zamani=bitis_zamani, tamamlanma_geri_cagirma=_attempt2_tamamlandi)
         else:
             print("[gonderim_uret] [ÇOKLU-GPU] Süre bütçesi tükendi -- attempt_2 için ikinci koşu ATLANDI, attempt_1 tekrar kullanılacak.")
 
-        for task in tasks:
-            sonuc = sonuclar.get(task.name, {"attempt_1": [[0, 0], [0, 0]], "attempt_1_gonderildi_mi": False})
-            attempt_1 = sonuc["attempt_1"]
-            sonuc_2 = sonuclar_2.get(task.name)
-            if sonuc_2 is not None and sonuc_2.get("attempt_1_gonderildi_mi"):
-                attempt_2 = sonuc_2["attempt_1"]
-                attempt_2_gonderildi_mi = True
-            else:
-                attempt_2 = attempt_1
-                attempt_2_gonderildi_mi = sonuc.get("attempt_1_gonderildi_mi", False)
-            kaydedici.ekle([attempt_1, attempt_2])
-            if not yarisma:
+        if not yarisma:
+            for task in tasks:
+                sonuc = sonuclar.get(task.name, {"attempt_1": [[0, 0], [0, 0]], "attempt_1_gonderildi_mi": False})
+                attempt_1 = sonuc["attempt_1"]
+                sonuc_2 = sonuclar_2.get(task.name)
+                if sonuc_2 is not None and sonuc_2.get("attempt_1_gonderildi_mi"):
+                    attempt_2 = sonuc_2["attempt_1"]
+                    attempt_2_gonderildi_mi = True
+                else:
+                    attempt_2 = attempt_1
+                    attempt_2_gonderildi_mi = sonuc.get("attempt_1_gonderildi_mi", False)
                 _dogrulugu_kontrol_et(task, {
                     "attempt_1": attempt_1, "attempt_2": attempt_2,
                     "attempt_1_gonderildi_mi": sonuc.get("attempt_1_gonderildi_mi", False),
@@ -318,12 +355,12 @@ def submission_uret(
                     varsayilan_lora_agirliklari=varsayilan_lora_agirliklari,
                     cogaltma_n=cogaltma_n, ttt_adim_sayisi=ttt_adim_sayisi,
                 )
-                kaydedici.ekle([sonuc["attempt_1"], sonuc["attempt_2"]])
+                kaydedici.ekle(task.name, [sonuc["attempt_1"], sonuc["attempt_2"]])
                 if not yarisma:
                     _dogrulugu_kontrol_et(task, sonuc)
             except Exception as exc:
                 print(f"[gonderim_uret] Görev {task.name} başarısız, boş tahmin yazılıyor: {exc}")
-                kaydedici.ekle([[[0, 0], [0, 0]], [[0, 0], [0, 0]]])
+                kaydedici.ekle(task.name, [[[0, 0], [0, 0]], [[0, 0], [0, 0]]])
 
             gecen = time.time() - baslangic
             print(f"[gonderim_uret] ({i}/{len(tasks)}) {task.name} tamamlandı | toplam süre: {gecen:.1f} sn")

@@ -244,6 +244,16 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
 def arac_cagrisini_yurut(cagri: Dict[str, Any], defter: CevapDefteri) -> Dict[str, Any]:
     ad = cagri.get("name")
     args = cagri.get("arguments", {})
+    # NOT (Turkce): gercek Kaggle kosusunda modelin urettigi bir cagride
+    # "arguments" alani (JSON olarak GECERLI olsa bile) bir nesne DEGIL,
+    # duz bir metin/liste/sayi olabiliyordu (ör. {"name": "execute_python",
+    # "arguments": "print(1)"}). Bu durumda asagidaki args.get(...)
+    # cagrilari 'str' object has no attribute 'get' ile COKUYORDU ve
+    # coklu_gpu.py'de bu hata TUM 43 gorevlik partiyi bos tahminle
+    # (BOS_TAHMIN) isaretleyip atlaniyordu -- tek bir bozuk arac cagrisi
+    # yuzunden partideki DIGER gorevler de kaybediliyordu.
+    if not isinstance(args, dict):
+        args = {}
     if ad == "execute_python":
         return execute_python_arac(args.get("code", ""), defter)
     if ad == "submit_answer":

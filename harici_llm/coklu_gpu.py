@@ -197,6 +197,8 @@ def padisah_vezir_toplu_havuzuyla_coz(
     b_boyutu_al: Callable[[int], int],
     bitis_zamani: Optional[float] = None,
     etiketler: Optional[List[str]] = None,
+    surekli_admisyon: bool = False,
+    tamamlanma_geri_cagirma: Optional[Callable[[str, Dict[str, Any]], None]] = None,
 ) -> Dict[str, Dict[str, Any]]:
     """padisah_vezir_havuzuyla_coz'un TOPLU (batched) varyantı.
 
@@ -206,16 +208,25 @@ def padisah_vezir_toplu_havuzuyla_coz(
     KENDİ o anki güvenli B boyutu kadar (b_boyutu_al(gpu_index) -- ör.
     vram_izleyici.VramTabanliBKesifcisi.calisan_b()) görevi BİRDEN çekip
     `gorevleri_coz_toplu` (gerçekte coz_yurutucu_toplu.toplu_gorevleri_coz)
-    ile TEK bir batched adım zincirinde HEPSİNİ BİRLİKTE çözer:
+    ile TEK bir batched adım zincirinde HEPSİNİ BİRLİKTE çözer.
 
-      - Payı B'den BÜYÜKSE, kendi payını B'şer B'şer (birkaç toplu parti
-        halinde) çeker.
-      - Payı B'den KÜÇÜKSE, elindeki KADARINI (tek partide) çeker --
-        fazlası zaten yoktur, başka vezirin payına el atmaz.
+    `surekli_admisyon=False` (varsayılan, geriye dönük uyumlu -- eski
+    davranış): payı B'den büyükse kendi payını B'şer B'şer (birkaç AYRI
+    toplu parti halinde, HER PARTİ TAMAMEN bitene kadar bir SONRAKİ
+    başlamadan) çeker -- bir partideki en yavaş görev biterken, o partide
+    ERKEN biten görevlerin koltuğu partinin SONUNA KADAR boşa gider
+    (BlockServe makalesinin tarif ettiği "Effective Compute Ratio" düşüşü).
 
-    "tek GPU'daki model gerçekten B soruya AYNI ANDA baksın" davranışı
-    budur; padisah_vezir_havuzuyla_coz (B=1) yalnızca görevleri seri
-    olarak, GPU başına tek tek çözer."""
+    `surekli_admisyon=True` (BlockServe/JBAS'tan çıkan block-grained
+    scheduling): vezir kendi payından yalnızca BİR KEZ ilk B kadar görev
+    çeker, ardından `gorevleri_coz_toplu`'yu TEK bir çağrıyla, kendi
+    KUYRUĞUNA DOĞRUDAN erişen bir `sonraki_gorev_al` geri çağrısıyla
+    başlatır -- böylece B slottan biri boşaldığı AN, parti bitmeden,
+    kuyruktaki bir SONRAKİ görevle HEMEN doldurulur (bkz.
+    coz_yurutucu_toplu.toplu_gorevleri_coz'daki gerçek admission mantığı).
+    `tamamlanma_geri_cagirma(task_adi, sonuc)` verilirse HER görev
+    (partinin/koşunun TAMAMI değil) bitirilir bitirilmez tetiklenir --
+    gonderim_uret.py bunu submission.json'a ARA KAYIT için kullanır."""
     paylar = _gorevleri_esit_dagit(tasks, gpu_sayisi)
     kendi_kuyruklari: List["queue.Queue[Task]"] = []
     for pay in paylar:
@@ -239,8 +250,50 @@ def padisah_vezir_toplu_havuzuyla_coz(
         f"{[len(p) for p in paylar]} (hiçbir vezir başka vezirin payına dokunmayacak)."
     )
 
+    def _tekli_gorev_tamamlandi(task_adi: str, sonuc: Dict[str, Any]) -> None:
+        with kilit:
+            sonuclar[task_adi] = sonuc
+            gecen = time.time() - baslangic
+            print(f"[coklu_gpu] ({len(sonuclar)}/{toplam}) {task_adi} tamamlandı (SÜREKLİ ADMİSYON ile slot yenilendi) | toplam süre: {gecen:.1f} sn")
+        if tamamlanma_geri_cagirma is not None:
+            tamamlanma_geri_cagirma(task_adi, sonuc)
+
     def _vezir(gpu_index: int) -> None:
         kendi_kuyrugu = kendi_kuyruklari[gpu_index]
+
+        if surekli_admisyon:
+            b_boyutu = max(1, b_boyutu_al(gpu_index))
+            ilk_parti: List[Task] = []
+            for _ in range(b_boyutu):
+                try:
+                    ilk_parti.append(kendi_kuyrugu.get_nowait())
+                except queue.Empty:
+                    break
+            if not ilk_parti:
+                return
+
+            def _sonraki_gorev_al() -> Optional[Task]:
+                if bitis_zamani is not None and time.time() > bitis_zamani:
+                    return None
+                try:
+                    return kendi_kuyrugu.get_nowait()
+                except queue.Empty:
+                    return None
+
+            try:
+                parti_sonuclari = gorevleri_coz_toplu(
+                    gpu_index, ilk_parti,
+                    sonraki_gorev_al=_sonraki_gorev_al,
+                    tamamlanma_geri_cagirma=_tekli_gorev_tamamlandi,
+                )
+            except Exception as hata:
+                print(f"[coklu_gpu] ({_etiket(gpu_index)}) SÜREKLİ ADMİSYON partisi başarısız: {hata}")
+                parti_sonuclari = {}
+            with kilit:
+                for ad, sonuc in parti_sonuclari.items():
+                    sonuclar.setdefault(ad, sonuc)
+            return
+
         while True:
             if bitis_zamani is not None and time.time() > bitis_zamani:
                 return
@@ -307,7 +360,9 @@ class CokluGPUTopluCozucu:
         # hacmini şişirmemek için VARSAYILAN OLARAK KAPALIDIR.
         self.ayrintili_log = ayrintili_log
 
-    def coz(self, tasks: List[Task], bitis_zamani: Optional[float] = None) -> Dict[str, Dict[str, Any]]:
+    def coz(self, tasks: List[Task], bitis_zamani: Optional[float] = None,
+            tamamlanma_geri_cagirma: Optional[Callable[[str, Dict[str, Any]], None]] = None,
+            surekli_admisyon: bool = True) -> Dict[str, Dict[str, Any]]:
         from coz_yurutucu_toplu import toplu_gorevleri_coz
 
         def _b_boyutu_al(gpu_index: int) -> int:
@@ -315,12 +370,13 @@ class CokluGPUTopluCozucu:
                 return self.vram_kesifcileri[gpu_index].calisan_b()
             return self.b_boyutu
 
-        def _gorevleri_coz_toplu(gpu_index: int, gorev_partisi: List[Task]) -> Dict[str, Dict[str, Any]]:
+        def _gorevleri_coz_toplu(gpu_index: int, gorev_partisi: List[Task], **surekli_kwargs) -> Dict[str, Dict[str, Any]]:
             ham_model = getattr(self.modeller[gpu_index], "ham_model", self.modeller[gpu_index])
             sonuc = toplu_gorevleri_coz(
                 ham_model, self.tokenizer, gorev_partisi,
                 azami_yeni_token=self.azami_yeni_token, deneme_etiketi=self.gpu_etiketleri[gpu_index],
                 ayrintili_log=self.ayrintili_log, bitis_zamani=bitis_zamani,
+                **surekli_kwargs,
             )
             if self.vram_kesifcileri is not None:
                 self.vram_kesifcileri[gpu_index].gorev_sonrasi_olc_ve_ayarla()
@@ -329,4 +385,5 @@ class CokluGPUTopluCozucu:
         return padisah_vezir_toplu_havuzuyla_coz(
             len(self.modeller), tasks, _gorevleri_coz_toplu, _b_boyutu_al,
             bitis_zamani=bitis_zamani, etiketler=self.gpu_etiketleri,
+            surekli_admisyon=surekli_admisyon, tamamlanma_geri_cagirma=tamamlanma_geri_cagirma,
         )

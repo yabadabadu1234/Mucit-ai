@@ -209,6 +209,21 @@ def test_3_arac_cagrisini_yurutme_ve_hata_donen_akis() -> None:
     _dogrula(defter.kaydedilen_cevap == [[1, 1], [2, 2]], "nihai cevap doğru kaydedildi")
 
 
+def test_3b_arac_cagrisi_arguments_alani_dict_degilse_cokmuyor_mu() -> None:
+    print("[test 3b] araclar.arac_cagrisini_yurut: kullanıcının gerçek Kaggle koşusunda gördüğü "
+          "'str' object has no attribute 'get' çökmesi -- modelin ürettiği 'arguments' alanı GEÇERLİ JSON ama "
+          "bir nesne DEĞİL (düz metin) olduğunda artık çökmeden hatayı düzgünce mi bildiriyor?...")
+
+    defter = CevapDefteri()
+    cagri = {"name": "execute_python", "arguments": "print(1)"}
+    sonuc = arac_cagrisini_yurut(cagri, defter)  # önceki halde: AttributeError fırlatırdı
+    _dogrula("success" in sonuc, "'arguments' bir dict değilken (düz metin) çökmeden düzgün bir {'success': ...} sonucu döndü (boş argümanla execute_python çalıştı)")
+
+    cagri_2 = {"name": "submit_answer", "arguments": ["grid", "olmayan", "liste"]}
+    sonuc_2 = arac_cagrisini_yurut(cagri_2, defter)
+    _dogrula(sonuc_2["success"] is False, "'arguments' bir liste olsa da çökmeden düzgünce başarısız sonuç döndü")
+
+
 def test_4_gercek_ttt_gradyan_adimlari() -> None:
     print("[test 4] Gerçek TTT gradyan adımları (vasıfsız küçük model üzerinde)...")
 
@@ -367,8 +382,8 @@ def test_9_ne_olursa_olsun_kayit_garantisi() -> None:
         cikti_yolu = os.path.join(gecici_dizin, "submission.json")
         kaydedici = _SonuCuKaydedici(sahte_gorevler, cikti_yolu)
 
-        kaydedici.ekle([[[1, 1]], [[1, 1]]])
-        kaydedici.ekle([[[2, 2]], [[2, 2]]])
+        kaydedici.ekle("gorev0-0", [[[1, 1]], [[1, 1]]])
+        kaydedici.ekle("gorev1-0", [[[2, 2]], [[2, 2]]])
 
         try:
             raise RuntimeError("simüle edilmiş çökme (3. görev sırasında)")
@@ -1334,6 +1349,159 @@ def test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
     )
 
 
+def test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dolduruyor_mu() -> None:
+    print("[test 25b] coz_yurutucu_toplu.toplu_gorevleri_coz: SÜREKLİ ADMİSYON (continuous batching) -- B=2 "
+          "slotluk bir batch'te KISA süren bir görev bitince, o koltuk partinin TAMAMI bitene kadar boşa gitmek "
+          "yerine kuyruktaki 3. bir görevle HEMEN dolduruluyor mu (BlockServe/JBAS'tan çıkan block-grained "
+          "scheduling)?...")
+
+    import json as _json
+
+    import coz_yurutucu_toplu as cyt
+
+    class _TamTersinirTokenizer:
+        pad_token_id = 0
+        eos_token_id = 0
+
+        def encode(self, metin: str, add_special_tokens: bool = True) -> List[int]:
+            return [ord(c) for c in metin]
+
+        def decode(self, token_idler: Any, skip_special_tokens: bool = True) -> str:
+            if hasattr(token_idler, "tolist"):
+                token_idler = token_idler.tolist()
+            return "".join(chr(int(t)) for t in token_idler)
+
+    tok = _TamTersinirTokenizer()
+
+    gorev_A = Task(test_example=Example(input=np.array([[1]]), output=np.array([[1]])), train_examples=[], name="tA-0")
+    gorev_B = Task(test_example=Example(input=np.array([[2]]), output=np.array([[2]])), train_examples=[], name="tB-0")
+    gorev_D = Task(test_example=Example(input=np.array([[4]]), output=np.array([[4]])), train_examples=[], name="tD-0")
+
+    beklenen_cevaplar = {"tA-0": [[1, 1]], "tB-0": [[2, 2], [2, 2]], "tD-0": [[4, 4, 4]]}
+    # tB'nin "execute_python" kodu KASITLI OLARAK çok daha uzun (dolgu
+    # metniyle) -- tA erkenden bitip slotu boşaltana, 3. görev (tD) o
+    # boşalan koltuğa ADMİT edilip O DA bitene kadar tB HÂLÂ bitmemiş olsun.
+    metinler = {
+        "tA-0": '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} '
+                '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["tA-0"]),
+        "tD-0": '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} '
+                '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["tD-0"]),
+        "tB-0": '{"name": "execute_python", "arguments": {"code": "sonuc = 1  # %s"}} '
+                '{"name": "submit_answer", "arguments": {"grid": %s}}' % (
+                    " ".join(f"pad{i}" for i in range(60)), _json.dumps(beklenen_cevaplar["tB-0"]),
+                ),
+    }
+    scripted = {ad: [ord(c) for c in metin] for ad, metin in metinler.items()}
+    _dogrula(len(scripted["tB-0"]) > len(scripted["tA-0"]) + len(scripted["tD-0"]),
+              "tB'nin senaryolandırılmış çıktısı GERÇEKTEN tA+tD'nin toplamından daha uzun (tB hâlâ bitmemişken tA VE tD'nin ikisi de bitebilmeli)")
+
+    VOCAB = 256
+    kayit = {
+        "slot_occupant": {}, "slot_position": {}, "prefill_gorenler": [],
+        "admit_edilenler": [], "tamamlanan_sirasi": [],
+    }
+
+    def _mock_onisle(z, n_layer, n_embd, n_head, head_size, token_dizileri, ilerleme_geri_cagirma=None, ilerleme_adimi=200):
+        B = len(token_dizileri)
+        logits = torch.full((B, VOCAB), -10.0)
+        for b in range(B):
+            ad = "".join(chr(t) for t in token_dizileri[b])
+            kayit["slot_occupant"][b] = ad
+            kayit["slot_position"][b] = 1  # 0. pozisyon bu logit'le zaten veriliyor
+            kayit["prefill_gorenler"].append(ad)
+            logits[b, scripted[ad][0]] = 10.0
+        return logits, ["durum-baslangic"]
+
+    def _mock_adim(z, n_layer, n_embd, n_head, head_size, token_idler, durum, aktif_maske):
+        B = len(token_idler)
+        logits = torch.full((B, VOCAB), -10.0)
+        for b in range(B):
+            if not aktif_maske[b]:
+                continue
+            ad = kayit["slot_occupant"][b]
+            pos = kayit["slot_position"][b]
+            script = scripted[ad]
+            if pos < len(script):
+                logits[b, script[pos]] = 10.0
+            else:
+                logits[b, ord(' ')] = 10.0
+            kayit["slot_position"][b] += 1
+        return logits, durum
+
+    def _mock_slota_prompt_besle(z, n_layer, n_embd, n_head, head_size, b, B, prompt_tokenleri, durum):
+        ad = "".join(chr(t) for t in prompt_tokenleri)
+        kayit["slot_occupant"][b] = ad
+        kayit["slot_position"][b] = 1
+        kayit["admit_edilenler"].append((b, ad))
+        logit = torch.full((VOCAB,), -10.0)
+        logit[scripted[ad][0]] = 10.0
+        return logit, durum
+
+    def _mock_slot_sifirla(durum, b, B):
+        return durum  # bu testte gerçek state ÖNEMSİZ, mock zaten b'ye göre ayrı script takip ediyor
+
+    def _mock_mesajlari_metne_donustur(tokenizer, model_ailesi, mesajlar):
+        return mesajlar[0]["content"]
+
+    def _mock_ilk_mesajlar(task):
+        return [{"role": "user", "content": task.name}]
+
+    kuyruk = [gorev_D]
+
+    def _sonraki_gorev_al() -> Optional[Task]:
+        return kuyruk.pop(0) if kuyruk else None
+
+    def _tamamlanma(ad: str, sonuc: Dict[str, Any]) -> None:
+        kayit["tamamlanan_sirasi"].append(ad)
+
+    eski = {
+        "onisle_toplu_farkli_uzunluk": cyt.onisle_toplu_farkli_uzunluk,
+        "adim_toplu_maskeli": cyt.adim_toplu_maskeli,
+        "uretim_ayarlarini_al": cyt.uretim_ayarlarini_al,
+        "_slota_prompt_besle": cyt._slota_prompt_besle,
+        "_slot_durumunu_sifirla": cyt._slot_durumunu_sifirla,
+        "mesajlari_metne_donustur": cyt.mesajlari_metne_donustur,
+        "_ilk_mesajlar": cyt._ilk_mesajlar,
+    }
+    cyt.onisle_toplu_farkli_uzunluk = _mock_onisle
+    cyt.adim_toplu_maskeli = _mock_adim
+    cyt.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False, "pad_token_id": 0}
+    cyt._slota_prompt_besle = _mock_slota_prompt_besle
+    cyt._slot_durumunu_sifirla = _mock_slot_sifirla
+    cyt.mesajlari_metne_donustur = _mock_mesajlari_metne_donustur
+    cyt._ilk_mesajlar = _mock_ilk_mesajlar
+
+    class _SahteHamModel:
+        z: Dict[str, Any] = {}
+        n_layer = n_embd = n_head = head_size = 1
+
+    try:
+        sonuc = cyt.toplu_gorevleri_coz(
+            _SahteHamModel(), tok, [gorev_A, gorev_B], azami_yeni_token=5000, kontrol_araligi=1,
+            deneme_etiketi="test-admisyon", sonraki_gorev_al=_sonraki_gorev_al,
+            tamamlanma_geri_cagirma=_tamamlanma,
+        )
+    finally:
+        cyt.onisle_toplu_farkli_uzunluk = eski["onisle_toplu_farkli_uzunluk"]
+        cyt.adim_toplu_maskeli = eski["adim_toplu_maskeli"]
+        cyt.uretim_ayarlarini_al = eski["uretim_ayarlarini_al"]
+        cyt._slota_prompt_besle = eski["_slota_prompt_besle"]
+        cyt._slot_durumunu_sifirla = eski["_slot_durumunu_sifirla"]
+        cyt.mesajlari_metne_donustur = eski["mesajlari_metne_donustur"]
+        cyt._ilk_mesajlar = eski["_ilk_mesajlar"]
+
+    _dogrula(len(sonuc) == 3, f"başlangıçta B=2 verilmesine rağmen, ADMİT edilen 3. görev (tD) de dahil TOPLAM 3 görev sonuçlandı (bulunan: {list(sonuc)})")
+    for ad in ("tA-0", "tB-0", "tD-0"):
+        _dogrula(sonuc[ad]["attempt_1_gonderildi_mi"] is True, f"{ad}: gerçekten submit_answer ile sonuçlandı")
+        _dogrula(sonuc[ad]["attempt_1"] == beklenen_cevaplar[ad], f"{ad}: KENDİ doğru cevabını üretti, başka görevle karışmadı")
+
+    _dogrula(len(kayit["admit_edilenler"]) == 1 and kayit["admit_edilenler"][0][1] == "tD-0",
+              f"kuyruktaki tD, boşalan slota GERÇEKTEN ADMİT edildi (bulunan: {kayit['admit_edilenler']}) -- partinin TAMAMI bitmeden yeni görev kabul edildi")
+    _dogrula(kayit["tamamlanan_sirasi"][-1] == "tB-0",
+              f"tB (en uzun script) SON sırada bitti -- tA VE tD, tB'yi HİÇ beklemeden ondan ÖNCE bitirildi (sıralama: {kayit['tamamlanan_sirasi']})")
+    _dogrula(len(kayit["prefill_gorenler"]) == 2, "başlangıç batched prefill'i HÂLÂ yalnızca B=2 (tA, tB) ile yapıldı -- tD prefill'e DEĞİL, admission yoluna girdi")
+
+
 def test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu() -> None:
     print("[test 26] coklu_gpu.padisah_vezir_toplu_havuzuyla_coz: paylaşımlı TEK kuyruk yerine, işe başlamadan ÖNCE görevler eşit paylaştırılıp her vezir SADECE kendi payını mı çekiyor (hızlı bir vezirin kuyruğu tek başına yutup diğerlerini aç bırakması engelleniyor mu)?...")
 
@@ -1684,11 +1852,16 @@ def test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil() -> None:
         def __init__(self, *args, **kwargs):
             pass
 
-        def coz(self, tasks, bitis_zamani=None):
+        def coz(self, tasks, bitis_zamani=None, tamamlanma_geri_cagirma=None, surekli_admisyon=True):
             cagri_sayisi["n"] += 1
             if cagri_sayisi["n"] == 1:
-                return {"gorevX-0": {"attempt_1": [[1, 1]], "attempt_1_gonderildi_mi": True}}
-            return {"gorevX-0": {"attempt_1": [[2, 2]], "attempt_1_gonderildi_mi": True}}
+                sonuc = {"gorevX-0": {"attempt_1": [[1, 1]], "attempt_1_gonderildi_mi": True}}
+            else:
+                sonuc = {"gorevX-0": {"attempt_1": [[2, 2]], "attempt_1_gonderildi_mi": True}}
+            if tamamlanma_geri_cagirma is not None:
+                for ad, s in sonuc.items():
+                    tamamlanma_geri_cagirma(ad, s)
+            return sonuc
 
     coklu_gpu.CokluGPUTopluCozucu = _SahteCozucu
     try:
@@ -1731,10 +1904,14 @@ def test_33_coklu_gpu_sure_kalmazsa_attempt_2_attempt_1e_geri_duser() -> None:
         def __init__(self, *args, **kwargs):
             pass
 
-        def coz(self, tasks, bitis_zamani=None):
+        def coz(self, tasks, bitis_zamani=None, tamamlanma_geri_cagirma=None, surekli_admisyon=True):
             cagri_sayisi["n"] += 1
             _time.sleep(0.15)  # bitis_zamani'ni GERÇEKTEN geçecek kadar
-            return {"gorevY-0": {"attempt_1": [[9, 9]], "attempt_1_gonderildi_mi": True}}
+            sonuc = {"gorevY-0": {"attempt_1": [[9, 9]], "attempt_1_gonderildi_mi": True}}
+            if tamamlanma_geri_cagirma is not None:
+                for ad, s in sonuc.items():
+                    tamamlanma_geri_cagirma(ad, s)
+            return sonuc
 
     coklu_gpu.CokluGPUTopluCozucu = _YavasCozucu
     try:
@@ -1801,6 +1978,7 @@ def calistir() -> None:
     test_2_cevap_verme_araci_boyut_tutarliligi()
     test_2b_submit_answer_execute_python_calistirilmadan_reddediliyor_mu()
     test_3_arac_cagrisini_yurutme_ve_hata_donen_akis()
+    test_3b_arac_cagrisi_arguments_alani_dict_degilse_cokmuyor_mu()
     test_4_gercek_ttt_gradyan_adimlari()
     test_5_mcts_turbo_dfs_dallanma()
     test_6_kaide_kodu_yok_denetimi()
@@ -1823,6 +2001,7 @@ def calistir() -> None:
     test_23_gpu_tespit_derinlemesine_ve_gorunmeyen_indeksler_dogru_etiketleniyor()
     test_24_onisle_toplu_farkli_uzunluk_gercek_rwkv_ile_ragged_batch_dogrulamasi()
     test_25_toplu_gorevleri_coz_gercekten_farkli_sorulara_ayni_anda_bakiyor_mu()
+    test_25b_toplu_gorevleri_coz_bosalan_slotu_kuyruktan_yeni_gorevle_hemen_dolduruyor_mu()
     test_26_padisah_vezir_toplu_ise_baslamadan_once_esit_pay_veriyor_mu()
     test_27_modele_geri_beslenen_arac_yanitlari_ingilizce_mi()
     test_28_uret_devam_yozlasmis_donguyu_erken_yakaliyor_mu()
