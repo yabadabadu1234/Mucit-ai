@@ -260,11 +260,36 @@ def onisle_toplu_farkli_uzunluk(z: Dict[str, torch.Tensor], n_layer: int, n_embd
         durum = sifir_durum_toplu(z, n_layer, n_embd, n_head, head_size, B)
     azami_uzunluk = max(len(t) for t in token_dizileri)
     son_logitler: List[Optional[torch.Tensor]] = [None] * B
+    cihaz = z['emb.weight'].device
+
+    # NOT (Turkce): kullanicinin haklı sorusu -- "neden bu kadar cok kernel
+    # cagrisi" -- burada GERCEK bir kaynagi vardı: ONCEKI kod her t adiminda
+    # (1) YENİ bir Python listesi kuruyordu (2) adim_toplu icindeki
+    # torch.as_tensor(...) bu listeyi HER SEFERINDE CPU'dan GPU'ya YENIDEN
+    # kopyaliyordu -- T=6326 adimlik bir prefill'de bu, kernel baslatmalarina
+    # EK OLARAK 6326 AYRI host->device transferi demekti (her biri kendi
+    # senkronizasyon/gecikme maliyetiyle). Tum (T,B) token/maske izgarasi
+    # PREFILL BASLAMADAN ONCE zaten TAM OLARAK biliniyor -- bu yuzden TEK
+    # SEFERDE GPU'ya tasiniyor, dongu icinde ise ZATEN GPU'da olan bir
+    # satiri DILIMLEMEKTEN (host->device transferi YOK) baska bir sey
+    # yapilmiyor. Hesaplanan deger/matematik BIREBIR AYNI kalir -- yalnizca
+    # veriyi GPU'ya tasima YONTEMI degisti (test_20/test_24 bunu sayisal
+    # olarak dogruluyor).
+    token_izgara = torch.zeros((azami_uzunluk, B), dtype=torch.long)
+    maske_izgara = torch.zeros((azami_uzunluk, B), dtype=torch.bool)
+    for b in range(B):
+        dizi_tensor = torch.as_tensor(token_dizileri[b], dtype=torch.long)
+        uzunluk = dizi_tensor.shape[0]
+        token_izgara[:uzunluk, b] = dizi_tensor
+        if uzunluk < azami_uzunluk:
+            token_izgara[uzunluk:, b] = dizi_tensor[-1]  # dondurulmus adimlarda deger onemsiz (maskeleniyor), yalnizca -1 gibi GECERSIZ bir embedding indeksinden kacinmak icin son gercek token tekrarlanir
+        maske_izgara[:uzunluk, b] = True
+    token_izgara = token_izgara.to(cihaz, non_blocking=True)
+    maske_izgara = maske_izgara.to(cihaz, non_blocking=True)
 
     for t in range(azami_uzunluk):
-        aktif_maske = [t < len(token_dizileri[b]) for b in range(B)]
-        token_idler = [token_dizileri[b][t] if aktif_maske[b] else token_dizileri[b][-1] for b in range(B)]
-        logitler, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, token_idler, durum, aktif_maske)
+        aktif_maske = maske_izgara[t]
+        logitler, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, token_izgara[t], durum, aktif_maske)
         for b in range(B):
             if aktif_maske[b]:
                 son_logitler[b] = logitler[b]
