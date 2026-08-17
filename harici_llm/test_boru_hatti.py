@@ -2130,6 +2130,187 @@ def test_34_toplu_gorevleri_coz_suresi_dolunca_uretim_ortasinda_duruyor_mu() -> 
     _dogrula(sonuc["hicbitmeyen-gorev"]["attempt_1_gonderildi_mi"] is False, "hiç bitirilemeyen görev, süre bütçesi yüzünden dürüstçe 'gönderilmedi' olarak işaretlendi")
 
 
+def test_35_hf_toplu_gorevleri_coz_granite_lfm_hazirlik_dogru_ve_yozlasmis_donguyu_yakaliyor_mu() -> None:
+    print("[test 35] hf_coz_yurutucu_toplu.hf_toplu_gorevleri_coz: Granite4/LFM25 (standart transformers "
+          "batched generate()) hazırlığı -- B FARKLI görev KARIŞMADAN kendi cevabını mı üretiyor, YOZLAŞMIŞ "
+          "DÖNGÜ RWKV'deki gibi burada da yakalanıp diğer görevi beklemeden bitiriliyor mu, süre bütçesi "
+          "ORTA ADIMDA denetleniyor mu (transformers'ın GERÇEK generate() matematiği MOCK'landı -- test edilen "
+          "SADECE bizim sürücü mantığımız: dolgu/batching/araç-çağrısı döngüsü/zaman bütçesi)?...")
+
+    import json as _json
+
+    import hf_coz_yurutucu_toplu as hct
+
+    gorev_A = Task(test_example=Example(input=np.array([[1]]), output=np.array([[1]])), train_examples=[], name="hfA-0")
+    gorev_B = Task(test_example=Example(input=np.array([[2]]), output=np.array([[2]])), train_examples=[], name="hfB-0")
+    gorev_C = Task(test_example=Example(input=np.array([[3]]), output=np.array([[3]])), train_examples=[], name="hfC-0")
+
+    beklenen_cevaplar = {"hfA-0": [[1, 1]], "hfC-0": [[3, 3, 3]]}
+    metin_A = '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} ' \
+              '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["hfA-0"])
+    metin_C = '{"name": "execute_python", "arguments": {"code": "sonuc = 1"}} ' \
+              '{"name": "submit_answer", "arguments": {"grid": %s}}' % _json.dumps(beklenen_cevaplar["hfC-0"])
+    # gorev_B HİÇ submit_answer içermeyen, 4 karakterlik "wxyz" bloğunun
+    # ardışık tekrarından oluşan YOZLAŞMIŞ bir döngü üretir.
+    metin_B = "wxyz" * 30
+
+    scripted = {"hfA-0": metin_A, "hfB-0": metin_B, "hfC-0": metin_C}
+
+    class _SahteTokenizer:
+        pad_token_id = 0
+        pad_token = "<pad>"
+        eos_token = "<eos>"
+        padding_side = "right"
+
+        def __call__(self, metinler: List[str], return_tensors: str = "pt", padding: bool = True):
+            diziler = [[ord(c) for c in m] for m in metinler]
+            azami = max(len(d) for d in diziler)
+            if self.padding_side == "left":
+                dolgulu = [[0] * (azami - len(d)) + d for d in diziler]
+            else:
+                dolgulu = [d + [0] * (azami - len(d)) for d in diziler]
+            input_ids = torch.tensor(dolgulu, dtype=torch.long)
+            attention_mask = (input_ids != 0).long()
+
+            class _Batch(dict):
+                def to(self, cihaz):
+                    return self
+            return _Batch(input_ids=input_ids, attention_mask=attention_mask)
+
+        def decode(self, token_idler, skip_special_tokens: bool = True) -> str:
+            if hasattr(token_idler, "tolist"):
+                token_idler = token_idler.tolist()
+            return "".join(chr(int(t)) for t in token_idler if t != 0)
+
+    class _SahteModel(torch.nn.Module):
+        def parameters(self):
+            yield torch.nn.Parameter(torch.zeros(1))
+
+        def generate(self, input_ids, attention_mask=None, max_new_tokens=None, pad_token_id=None,
+                     do_sample=None, temperature=None, top_p=None, repetition_penalty=None):
+            B, T = input_ids.shape
+            satirlar = []
+            for b in range(B):
+                onek = input_ids[b].tolist()
+                gercek = [t for t in onek if t != 0]
+                metin_simdi = "".join(chr(t) for t in gercek)
+                eslesen_ad = next((ad for ad in scripted if metin_simdi.startswith(ad)), None)
+                script = scripted.get(eslesen_ad, "")
+                uretilen_simdiye_kadar = metin_simdi[len(eslesen_ad):] if eslesen_ad else ""
+                devam = script[len(uretilen_simdiye_kadar):len(uretilen_simdiye_kadar) + max_new_tokens]
+                if not devam:
+                    devam = " " * max_new_tokens
+                yeni_tokenler = [ord(c) for c in devam]
+                satirlar.append(onek + yeni_tokenler)
+            azami = max(len(s) for s in satirlar)
+            dolgulu = [s + [0] * (azami - len(s)) for s in satirlar]
+            return torch.tensor(dolgulu, dtype=torch.long)
+
+    tok = _SahteTokenizer()
+    model = _SahteModel()
+
+    eski = {
+        "_ilk_mesajlar": hct._ilk_mesajlar,
+        "mesajlari_metne_donustur": hct.mesajlari_metne_donustur,
+        "uretim_ayarlarini_al": hct.uretim_ayarlarini_al,
+    }
+    hct._ilk_mesajlar = lambda task: [{"role": "user", "content": task.name}]
+    hct.mesajlari_metne_donustur = lambda tokenizer, model_ailesi, mesajlar: mesajlar[0]["content"]
+    hct.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False}
+
+    try:
+        sonuc = hct.hf_toplu_gorevleri_coz(
+            model, tok, "test_ailesi", [gorev_A, gorev_B, gorev_C],
+            azami_yeni_token=1000, kontrol_araligi=5, deneme_etiketi="test-hf-toplu",
+        )
+    finally:
+        hct._ilk_mesajlar = eski["_ilk_mesajlar"]
+        hct.mesajlari_metne_donustur = eski["mesajlari_metne_donustur"]
+        hct.uretim_ayarlarini_al = eski["uretim_ayarlarini_al"]
+
+    _dogrula(len(sonuc) == 3, f"3 görevin hepsi sonuçlandı (bulunan: {list(sonuc)})")
+    _dogrula(sonuc["hfA-0"]["attempt_1_gonderildi_mi"] is True, "hfA-0: gerçekten submit_answer ile sonuçlandı")
+    _dogrula(sonuc["hfA-0"]["attempt_1"] == beklenen_cevaplar["hfA-0"], f"hfA-0: KENDİ doğru cevabını üretti (bulunan: {sonuc['hfA-0']['attempt_1']})")
+    _dogrula(sonuc["hfC-0"]["attempt_1_gonderildi_mi"] is True, "hfC-0: gerçekten submit_answer ile sonuçlandı")
+    _dogrula(sonuc["hfC-0"]["attempt_1"] == beklenen_cevaplar["hfC-0"], f"hfC-0: KENDİ doğru cevabını üretti, hfA-0'la KARIŞMADI (bulunan: {sonuc['hfC-0']['attempt_1']})")
+    _dogrula(sonuc["hfB-0"]["attempt_1_gonderildi_mi"] is False, "hfB-0: YOZLAŞMIŞ DÖNGÜ tespit edilip cevapsız (dürüstçe) sonuçlandırıldı, submit_answer'a hiç ulaşmadı")
+
+
+def test_36_hf_toplu_gorevleri_coz_suresi_dolunca_ortada_duruyor_mu() -> None:
+    print("[test 36] hf_coz_yurutucu_toplu.hf_toplu_gorevleri_coz: coz_yurutucu_toplu.py'deki AYNI ders -- "
+          "süre bütçesi ORTA ADIMDA denetlenip, dolmadıysa üretim ERKEN mi durduruluyor?...")
+
+    import time as _time
+
+    import hf_coz_yurutucu_toplu as hct
+
+    gorev = Task(test_example=Example(input=np.array([[1]]), output=np.array([[1]])), train_examples=[], name="hicbitmeyen-hf")
+
+    call_sayaci = {"n": 0}
+
+    class _SahteTokenizer:
+        pad_token_id = 0
+        pad_token = "<pad>"
+        eos_token = "<eos>"
+        padding_side = "right"
+
+        def __call__(self, metinler, return_tensors="pt", padding=True):
+            input_ids = torch.zeros(len(metinler), 1, dtype=torch.long)
+
+            class _Batch(dict):
+                def to(self, cihaz):
+                    return self
+            return _Batch(input_ids=input_ids, attention_mask=torch.ones_like(input_ids))
+
+        def decode(self, token_idler, skip_special_tokens=True):
+            return " "
+
+    class _SahteModel(torch.nn.Module):
+        def parameters(self):
+            yield torch.nn.Parameter(torch.zeros(1))
+
+        def generate(self, input_ids, attention_mask=None, max_new_tokens=None, **kwargs):
+            _time.sleep(0.02)  # her turun GERÇEKTEN zaman aldığını taklit eder
+            B, T = input_ids.shape
+            # NOT: sabit/tekrarlayan bir dolgu (ör. hep boşluk) kendi başına
+            # YOZLAŞMIŞ DÖNGÜ dedektörünü (herhangi bir sabit dizi HER
+            # periyotta trivially eşleşir) YANLIŞLIKLA tetikleyip bu testin
+            # asıl ölçmek istediği (SÜRE BÜTÇESİ) yoldan farklı bir yoldan
+            # erken çıkışa yol açar -- bu yüzden burada GERÇEKTEN tekrarsız
+            # (26 karakterlik döngüde, çağrı sayısına göre kayan) bir dolgu
+            # üretiliyor.
+            baslangic_ofset = call_sayaci["n"] * max_new_tokens
+            call_sayaci["n"] += 1
+            yeni_tokenler = [65 + ((baslangic_ofset + i) % 26) for i in range(max_new_tokens)]
+            return torch.cat([input_ids, torch.tensor([yeni_tokenler] * B, dtype=torch.long)], dim=1)
+
+    eski = {
+        "_ilk_mesajlar": hct._ilk_mesajlar,
+        "mesajlari_metne_donustur": hct.mesajlari_metne_donustur,
+        "uretim_ayarlarini_al": hct.uretim_ayarlarini_al,
+    }
+    hct._ilk_mesajlar = lambda task: [{"role": "user", "content": task.name}]
+    hct.mesajlari_metne_donustur = lambda tokenizer, model_ailesi, mesajlar: mesajlar[0]["content"]
+    hct.uretim_ayarlarini_al = lambda model_ailesi, tokenizer: {"do_sample": False}
+
+    try:
+        bitis_zamani = _time.time() + 0.15
+        baslangic = _time.time()
+        sonuc = hct.hf_toplu_gorevleri_coz(
+            _SahteModel(), _SahteTokenizer(), "test_ailesi", [gorev],
+            azami_yeni_token=1_000_000, kontrol_araligi=5, bitis_zamani=bitis_zamani,
+        )
+        gecen = _time.time() - baslangic
+    finally:
+        hct._ilk_mesajlar = eski["_ilk_mesajlar"]
+        hct.mesajlari_metne_donustur = eski["mesajlari_metne_donustur"]
+        hct.uretim_ayarlarini_al = eski["uretim_ayarlarini_al"]
+
+    _dogrula(call_sayaci["n"] < 100, f"1.000.000 adımlık bütçe verilmesine rağmen süre bütçesi (0.15sn) yüzünden ÇOK ERKEN durduruldu ({call_sayaci['n']} tur)")
+    _dogrula(gecen < 2.0, f"gerçek geçen süre ({gecen:.2f} sn) süre bütçesine yakın kaldı")
+    _dogrula(sonuc["hicbitmeyen-hf"]["attempt_1_gonderildi_mi"] is False, "hiç bitirilemeyen görev dürüstçe 'gönderilmedi' işaretlendi")
+
+
 def calistir() -> None:
     test_1_arac_cagrisi_ayiklama()
     test_2_cevap_verme_araci_boyut_tutarliligi()
@@ -2169,6 +2350,8 @@ def calistir() -> None:
     test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil()
     test_33_coklu_gpu_sure_kalmazsa_attempt_2_attempt_1e_geri_duser()
     test_34_toplu_gorevleri_coz_suresi_dolunca_uretim_ortasinda_duruyor_mu()
+    test_35_hf_toplu_gorevleri_coz_granite_lfm_hazirlik_dogru_ve_yozlasmis_donguyu_yakaliyor_mu()
+    test_36_hf_toplu_gorevleri_coz_suresi_dolunca_ortada_duruyor_mu()
 
     if BASARISIZLIK_SAYACI["n"] == 0:
         print("\n[test] TÜMÜ BAŞARILI.")
