@@ -224,6 +224,26 @@ def test_3b_arac_cagrisi_arguments_alani_dict_degilse_cokmuyor_mu() -> None:
     _dogrula(sonuc_2["success"] is False, "'arguments' bir liste olsa da çökmeden düzgünce başarısız sonuç döndü")
 
 
+def test_3c_execute_python_code_alani_metin_degilse_cokmuyor_mu() -> None:
+    print("[test 3c] kod_ajani._guvenli_mi / araclar.execute_python_arac: kullanıcının gerçek Kaggle koşusunda "
+          "gördüğü 'compile() arg 1 must be a string, bytes or AST object' çökmesi -- execute_python'a verilen "
+          "'code' alanı GEÇERLİ JSON ama bir METİN DEĞİLSE (ör. iç içe bir nesne) artık çökmeden mi bildiriyor? "
+          "(Bu, TEK bir bozuk execute_python çağrısının SÜREKLİ ADMİSYON partisinin TAMAMINI -- 43 görevi -- "
+          "boşa düşürdüğü gerçek Kaggle hatasının kök nedeniydi.)...")
+
+    from kod_ajani import _guvenli_mi
+
+    _dogrula(_guvenli_mi({"ic": "ice"}) is False, "'code' bir dict olduğunda ast.parse'ın TypeError'ı ARTIK yakalanıp güvensiz sayılıyor (önceki halde: çökerdi)")
+    _dogrula(_guvenli_mi([1, 2, 3]) is False, "'code' bir liste olduğunda da çökmeden güvensiz sayılıyor")
+    _dogrula(_guvenli_mi(123) is False, "'code' bir sayı olduğunda da çökmeden güvensiz sayılıyor")
+    _dogrula(_guvenli_mi("sonuc = 1 + 1") is True, "gerçek, güvenli bir kod parçası HÂLÂ güvenli sayılıyor (regresyon yok)")
+
+    defter = CevapDefteri()
+    cagri = {"name": "execute_python", "arguments": {"code": {"ic": "ice"}}}
+    sonuc = arac_cagrisini_yurut(cagri, defter)  # önceki halde: TypeError fırlatırdı
+    _dogrula(sonuc["success"] is False, "uçtan uca: 'code' alanı bir nesne olduğunda arac_cagrisini_yurut çökmeden düzgünce başarısız sonuç döndü")
+
+
 def test_4_gercek_ttt_gradyan_adimlari() -> None:
     print("[test 4] Gerçek TTT gradyan adımları (vasıfsız küçük model üzerinde)...")
 
@@ -2370,6 +2390,7 @@ def calistir() -> None:
     test_2b_submit_answer_execute_python_calistirilmadan_reddediliyor_mu()
     test_3_arac_cagrisini_yurutme_ve_hata_donen_akis()
     test_3b_arac_cagrisi_arguments_alani_dict_degilse_cokmuyor_mu()
+    test_3c_execute_python_code_alani_metin_degilse_cokmuyor_mu()
     test_4_gercek_ttt_gradyan_adimlari()
     test_5_mcts_turbo_dfs_dallanma()
     test_6_kaide_kodu_yok_denetimi()

@@ -7,6 +7,17 @@ import ast
 
 
 def _guvenli_mi(kod: str) -> bool:
+    # NOT (Turkce): gercek Kaggle kosusunda modelin uretttigi execute_python
+    # cagrisinin "code" alani GECERLI JSON ama bir METIN DEGILSE (ornegin
+    # {"code": {"ic": "ice"}} gibi bir nesne/liste/sayi) ast.parse(kod)
+    # SyntaxError DEGIL TypeError firlatiyordu ("compile() arg 1 must be a
+    # string, bytes or AST object") -- bu, YALNIZCA SyntaxError yakalanan
+    # eski kodda YAKALANMADAN yukari firliyor, TUM 43 gorevlik SUREKLI
+    # ADMISYON partisini (coklu_gpu.py'nin dis except'i partiyi TAMAMEN
+    # bosa dusuruyor) coker hale getiriyordu -- tek bir bozuk arac cagrisi
+    # yuzunden partideki DIGER gorevler de kaybediliyordu.
+    if not isinstance(kod, str):
+        return False
     try:
         agac = ast.parse(kod)
     except SyntaxError:
