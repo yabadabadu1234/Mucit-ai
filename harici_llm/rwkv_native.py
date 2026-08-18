@@ -72,15 +72,61 @@ def _tekrar_cezasi_uygula(logits: torch.Tensor, gecmis_tokenler: List[int], ceza
     return logits
 
 
+# HIZ (kullanıcının açık talebi -- "seyrekleştirmek yetmez, makalelerden
+# mülhem, matematiksel olarak gerçekten hızlı bir usul kullan"): eski
+# uygulama p'yi _TEKRAR_ASGARI_PERIYOT..._TEKRAR_AZAMI_PERIYOT (4000..6000)
+# arasında TARIYOR, HER p adayı için tokenler[-p:] gibi p-uzunluklu YENİ
+# Python listeleri DİLİMLEYİP karşılaştırıyordu -- bu O((azami-asgari) * p)
+# demekti; azami_p=6000 civarında bu, TEK bir kontrolde onlarca milyon
+# eleman karşılaştırmasına çıkabiliyordu. Burada Rabin-Karp'ın (Karp &
+# Rabin, "Efficient randomized pattern-matching algorithms", 1987)
+# POLİNOM ÖZ-İMZA (rolling hash) fikri kullanılıyor: kuyruktaki EN FAZLA
+# 3*azami_p'lik pencerenin ÖN-EK hash'leri TEK GEÇİŞTE (O(pencere))
+# hesaplanır; ardından HER p adayı için üç alt-dizinin (son p, ondan
+# önceki p, ondan önceki p) hash'i O(1)'de karşılaştırılır -- p'ye göre
+# DOĞRUSAL değil SABİT maliyetli. Hash eşleşmesi (ÇOK NADİR bir çakışma
+# hariç) GERÇEK bir eşleşmenin KANITIdır; olası bir hash ÇAKIŞMASINA karşı
+# (yanlış-pozitif YOZLAŞMIŞ-DÖNGÜ tespiti riskini SIFIRLAMAK için) hash
+# eşleştiğinde YİNE DE gerçek dilim karşılaştırmasıyla DOĞRULANIR -- bu
+# doğrulama yalnızca hash eşleştiğinde (pratikte hemen hiç) çalıştığından
+# ortalama karmaşıklığı ETKİLEMEZ, sonucun eski uygulamayla BİREBİR AYNI
+# (asla yanlış-pozitif/yanlış-negatif üretmeyen) olmasını GARANTİ eder.
+_HASH_TABAN = 1_000_003
+_HASH_MODULUS = (1 << 61) - 1  # Mersenne asalı -- Rabin-Karp icin standart secim
+
+
 def _tekrara_kilitlenme_periyodu(tokenler: List[int]) -> Optional[int]:
     """`tokenler`in KUYRUĞU, uzunluğu p olan bir alt-dizinin ARDIŞIK EN AZ
     3 kez BİREBİR tekrarından mı oluşuyor (p, _TEKRAR_ASGARI_PERIYOT..
     _TEKRAR_AZAMI_PERIYOT arasında)? Öyleyse o p'yi döndürür (yozlaşmış
-    döngü kanıtı), yoksa None."""
+    döngü kanıtı), yoksa None. Semantik ESKİ O(p^2) uygulamayla BİREBİR
+    AYNIDIR (bkz. yukarıdaki not) -- yalnızca ASİMPTOTİK olarak çok daha
+    hızlıdır."""
     n = len(tokenler)
     azami_p = min(_TEKRAR_AZAMI_PERIYOT, n // 3)
+    if azami_p < _TEKRAR_ASGARI_PERIYOT:
+        return None
+
+    pencere_uzunlugu = min(n, 3 * azami_p)
+    pencere = tokenler[-pencere_uzunlugu:]
+    L = len(pencere)
+
+    on_hash = [0] * (L + 1)
+    guc = [1] * (L + 1)
+    for i, tok in enumerate(pencere):
+        on_hash[i + 1] = (on_hash[i] * _HASH_TABAN + (tok + 1)) % _HASH_MODULUS
+        guc[i + 1] = (guc[i] * _HASH_TABAN) % _HASH_MODULUS
+
+    def _dilim_hash(basi: int, bitis: int) -> int:
+        return (on_hash[bitis] - on_hash[basi] * guc[bitis - basi]) % _HASH_MODULUS
+
     for p in range(_TEKRAR_ASGARI_PERIYOT, azami_p + 1):
-        if tokenler[-p:] == tokenler[-2 * p:-p] == tokenler[-3 * p:-2 * p]:
+        if 3 * p > L:
+            break
+        h1 = _dilim_hash(L - p, L)
+        h2 = _dilim_hash(L - 2 * p, L - p)
+        h3 = _dilim_hash(L - 3 * p, L - 2 * p)
+        if h1 == h2 == h3 and pencere[-p:] == pencere[-2 * p:-p] == pencere[-3 * p:-2 * p]:
             return p
     return None
 

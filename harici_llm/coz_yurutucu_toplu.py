@@ -51,13 +51,6 @@ _ILERLEME_ADIMI = 5000
 # sürece her deneme FARKLI örneklenir; bu sınır yalnızca greedy/şanssız
 # durumlarda sonsuz döngüye karşı bir GÜVENLİK ÇATISIdır.
 AZAMI_AYNI_PROMPT_YENIDEN_DENEME = 3
-# Yozlaşmış-döngü taramasının (_tekrara_kilitlenme_periyodu, p=4000..6000
-# üzerinde O(p) liste-dilimi karşılaştırması yapar) kontrol_araligi'ne göre
-# KAÇ KAT seyrek çalışacağı -- tool-çağrısı kontrolünün AKSİNE bu tarama
-# gecikmeli olabilir (eşik zaten 12000+ token), bu yüzden onu HER
-# kontrol_araligi'nde değil, kontrol_araligi * bu_çarpan'da bir çalıştırarak
-# B aktif slot başına tekrarlanan pahalı Python taramasını azaltıyoruz.
-_DONGU_KONTROL_CARPANI = 4
 
 
 def _boyutlari_al(ham_rwkv_modeli: Any):
@@ -459,23 +452,16 @@ def toplu_gorevleri_coz(
             # döngüye karşı AZAMI_AYNI_PROMPT_YENIDEN_DENEME kez denenir,
             # sonra pes edilip (kuyruk varsa) slot normal admisyon yoluna girer.
             #
-            # HIZ (gerçek, ikinci bir darboğaz -- kullanıcının "formüllerin
-            # derinine in" talebiyle bulundu): _tekrara_kilitlenme_periyodu
-            # p'yi 4000..6000 arasında TARAR, her p için tokenler[-p:] gibi
-            # p-uzunluklu liste dilimleri OLUŞTURUP karşılaştırır -- uzun bir
-            # üretimde (n >= 12000) bu, HER kontrol_araligi'nde (1000 adımda
-            # bir) tek başına milyonlarca eleman karşılaştırması demektir,
-            # ve B aktif slotun HER BİRİ için tekrar tekrar çalışır. Bu
-            # kontrolün amacı yalnızca "er ya da geç" bir yozlaşmış döngüyü
-            # yakalamak (zaten eşik 12000+ token gecikmeli) -- tool-çağrısı
-            # kontrolü kadar SIK çalışmasına hiç gerek yok. Bu yüzden bu
-            # pahalı taramayı kontrol_araligi'nin katbekat seyrek bir
-            # katında (_DONGU_KONTROL_CARPANI) çalıştırıyoruz; tool-çağrısı
-            # kontrolü (yukarıda) ETKİLENMEDEN eskisi gibi HER kontrol_araligi'nde
-            # çalışmaya devam ediyor.
-            periyot = None
-            if adim % (kontrol_araligi * _DONGU_KONTROL_CARPANI) == 0:
-                periyot = _tekrara_kilitlenme_periyodu(uretilen_tokenler[b])
+            # HIZ NOTU: _tekrara_kilitlenme_periyodu ESKİDEN p=4000..6000
+            # arasını O(p) liste-dilimi karşılaştırmasıyla TARAYIP HER
+            # kontrol_araligi'nde B aktif slotun HER BİRİ için milyonlarca
+            # eleman karşılaştırması yapabiliyordu. Bu artık rwkv_native.py
+            # içinde Rabin-Karp rolling-hash (bkz. oradaki not) ile O(pencere)
+            # tek geçişte + O(1) aday karşılaştırmasıyla çalışıyor -- bu
+            # yüzden ARTIK seyrekleştirmeye GEREK YOK, her kontrol_araligi'nde
+            # (eskisi gibi) çalıştırmak hem ucuz hem de yozlaşmış döngüyü
+            # daha ERKEN yakalıyor.
+            periyot = _tekrara_kilitlenme_periyodu(uretilen_tokenler[b])
             if periyot is not None:
                 if defterler[b].kaydedilen_cevap is not None:
                     sonuclar[b] = defterler[b].kaydedilen_cevap
