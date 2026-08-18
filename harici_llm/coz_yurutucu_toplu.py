@@ -34,7 +34,13 @@ from typing import Any, Callable, Dict, List, Optional
 import torch
 
 from arc import Task
-from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut, tool_response_mesaji_olustur
+from araclar import (
+    CevapDefteri,
+    arac_cagrilarini_ayikla,
+    arac_cagrisini_yurut,
+    tool_response_mesaji_olustur,
+    train_examples_sandbox_bicimine_donustur,
+)
 from coz_yurutucu import BOS_TAHMIN, IKAZ_ESIGI_TOKEN, IKAZ_METNI, _ARAC_CAGRISI_YOK_UYARISI, _ilk_mesajlar
 from model_yapilandirmalari import RWKV
 from rwkv_batch import _adim_toplu_cekirdek, _maske_uygula, adim_toplu_maskeli, onisle_toplu_farkli_uzunluk, sifir_durum_toplu
@@ -209,7 +215,9 @@ def toplu_gorevleri_coz(
     for task in tasks:
         metin = mesajlari_metne_donustur(tokenizer, RWKV, _ilk_mesajlar(task))
         prompt_tokenleri.append(tokenizer.encode(metin))
-        defterler.append(CevapDefteri())
+        yeni_defter = CevapDefteri()
+        yeni_defter.train_examples = train_examples_sandbox_bicimine_donustur(task.train_examples)
+        defterler.append(yeni_defter)
 
     benzersiz_prompt_sayisi = len({tuple(t) for t in prompt_tokenleri})
     print(
@@ -286,6 +294,7 @@ def toplu_gorevleri_coz(
         bekleyen_prompt[b] = list(yeni_prompt)
         slot_gorev[b] = yeni_gorev
         defterler[b] = CevapDefteri()
+        defterler[b].train_examples = train_examples_sandbox_bicimine_donustur(yeni_gorev.train_examples)
         uretilen_tokenler[b] = []
         ikaz_enjekte_edildi[b] = False
         sonuclar[b] = None

@@ -131,6 +131,17 @@ def _izgara_tutarliligini_denetle(grid: Any) -> Tuple[bool, str]:
     return True, "Valid."
 
 
+def train_examples_sandbox_bicimine_donustur(train_examples: Any) -> List[Tuple[List[List[int]], List[List[int]]]]:
+    """`task.train_examples` (arc.Example nesnelerinin listesi -- her biri
+    `.input`/`.output` numpy Grid taşır) girdisini, execute_python
+    sandbox'ına enjekte edilecek düz Python (liste-of-liste) çiftlerine
+    çevirir. numpy'a bağımlı kalmamak için burada `arc.Example`'ı
+    doğrudan İMPORT ETMİYORUZ -- yalnızca `.input`/`.output` özniteliğine
+    (ve onların `.tolist()`'ine) güveniyoruz, bu da araclar.py'nin arc.py
+    ile gereksiz bir bağımlılık ilişkisine girmesini önler."""
+    return [(ornek.input.tolist(), ornek.output.tolist()) for ornek in train_examples]
+
+
 class CevapDefteri:
     """submit_answer ile kaydedilen son gecerli cevabi tutar.
 
@@ -148,6 +159,21 @@ class CevapDefteri:
         self.kaydedilen_cevap: Optional[List[List[int]]] = None
         self.deneme_gecmisi: List[Dict[str, Any]] = []
         self.execute_python_basariyla_calisti_mi: bool = False
+        # KRİTİK (kullanıcının gerçek Kaggle transkriptinde bulduğu kök
+        # neden): sistem promptumuzun KENDİ örneği (arc_prompt.py,
+        # "Example function call format") modele `train_examples` adlı
+        # bir değişkenin execute_python sandbox'ında HAZIR olduğunu
+        # (`for inp, out in train_examples: ...`) ÖĞRETİYOR -- ama bu
+        # SÖZ hiçbir yerde GERÇEKTEN TUTULMUYORDU, sandbox'a böyle bir
+        # değişken HİÇ enjekte edilmiyordu. Model, TAM OLARAK verdiğimiz
+        # örneği takip ettiği için "name 'train_examples' is not defined"
+        # hatasını ALIYORDU -- bu bir halüsinasyon değil, bizim kendi
+        # örneğimizin tutulmayan bir vaadiydi. Artık çağıran taraf (coz_
+        # yurutucu.py / coz_yurutucu_toplu.py), gerçek Task nesnesinden
+        # GÜNCEL görevin train_examples'ını (input/output çiftleri, düz
+        # Python listesi olarak) BURAYA yazıyor; execute_python_arac bunu
+        # okuyup GERÇEKTEN sandbox'a enjekte ediyor (bkz. aşağıda).
+        self.train_examples: Optional[List[Tuple[List[List[int]], List[List[int]]]]] = None
 
 
 def submit_answer_arac(grid: Any, defter: CevapDefteri) -> Dict[str, Any]:
@@ -186,7 +212,8 @@ def submit_answer_arac(grid: Any, defter: CevapDefteri) -> Dict[str, Any]:
 
 
 def execute_python_arac(code: str, defter: Optional[CevapDefteri] = None) -> Dict[str, Any]:
-    basarili, sonuc = kodu_guvenle_calistir_serbest(code)
+    train_examples = defter.train_examples if defter is not None else None
+    basarili, sonuc = kodu_guvenle_calistir_serbest(code, train_examples=train_examples)
     if defter is not None and basarili:
         defter.execute_python_basariyla_calisti_mi = True
     if not basarili:
@@ -214,10 +241,19 @@ def _json_uyumlu_yap(deger: Any) -> Any:
     return str(deger)
 
 
-def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
+def kodu_guvenle_calistir_serbest(
+    kod: str, train_examples: Optional[List[Tuple[List[List[int]], List[List[int]]]]] = None,
+) -> Tuple[bool, Any]:
     """execute_python araci icin: transform(grid) imzasi sart kosmadan,
     serbest bir kod parcasini ayni AST guvenlik/izolasyon rejimiyle
-    calistirir (kod_ajani.py'deki izolasyon mekanizmasini yeniden kullanir)."""
+    calistirir (kod_ajani.py'deki izolasyon mekanizmasini yeniden kullanir).
+
+    `train_examples` verilirse (bkz. CevapDefteri.train_examples'daki not),
+    sandbox namespace'ine `train_examples` adıyla GERÇEKTEN enjekte edilir
+    -- sistem promptunun kendi örneğinin (arc_prompt.py) vaat ettiği ama
+    eskiden HİÇ tutulmayan şey artık gerçekten tutuluyor. None ise (görev
+    bağlamı olmayan çağrılar/testler) hiçbir şey enjekte edilmez, eski
+    davranış (NameError) korunur."""
     import builtins
     import multiprocessing
 
@@ -226,7 +262,7 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
     if not _guvenli_mi(kod):
         return False, "code failed the security check (forbidden eval/exec/open/dunder)"
 
-    def _calistir(kuyruk: "multiprocessing.Queue") -> None:
+    def _calistir(kuyruk: "multiprocessing.Queue", train_examples: Optional[List[Tuple[Any, Any]]]) -> None:
         import io
         import os as _os
         import sys as _sys
@@ -277,6 +313,8 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
             "iter": iter, "next": next, "round": round, "frozenset": frozenset,
             "divmod": divmod, "pow": pow, "__import__": builtins.__import__,
         }}
+        if train_examples is not None:
+            ns["train_examples"] = train_examples
         try:
             # Import kisitlamasi KALDIRILDI (kullanici talebiyle): kod zaten
             # izole bir alt surecte (5 sn zaman asimiyla) calisiyor, ana
@@ -289,7 +327,7 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
             kuyruk.put(("hata", str(exc)))
 
     kuyruk: multiprocessing.Queue = multiprocessing.Queue()
-    surec = multiprocessing.Process(target=_calistir, args=(kuyruk,))
+    surec = multiprocessing.Process(target=_calistir, args=(kuyruk, train_examples))
     surec.start()
     surec.join(timeout=5.0)
     if surec.is_alive():

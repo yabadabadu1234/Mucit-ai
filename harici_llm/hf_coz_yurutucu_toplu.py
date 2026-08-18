@@ -31,7 +31,7 @@ from typing import Any, Dict, List, Optional
 import torch
 
 from arc import Task
-from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut
+from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut, train_examples_sandbox_bicimine_donustur
 from coz_yurutucu import BOS_TAHMIN, _ilk_mesajlar
 from rwkv_native import _tekrara_kilitlenme_periyodu
 from transkript import transkript_satiri_yaz
@@ -68,6 +68,8 @@ def hf_toplu_gorevleri_coz(
 
     metinler = [mesajlari_metne_donustur(tokenizer, model_ailesi, _ilk_mesajlar(t)) for t in tasks]
     defterler = [CevapDefteri() for _ in tasks]
+    for _defter, _task in zip(defterler, tasks):
+        _defter.train_examples = train_examples_sandbox_bicimine_donustur(_task.train_examples)
     uretilen_metin = [""] * B
     uretilen_tokenler: List[List[int]] = [[] for _ in range(B)]
     bitti = [False] * B

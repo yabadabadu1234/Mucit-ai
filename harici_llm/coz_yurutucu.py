@@ -17,6 +17,7 @@ from araclar import (
     arac_cagrilarini_ayikla,
     arac_cagrisini_yurut,
     tool_response_mesaji_olustur,
+    train_examples_sandbox_bicimine_donustur,
 )
 from arc_prompt import gorev_kullanici_promptu_olustur, sistem_promptu_olustur, ttt_egitim_metni_olustur
 from model_yapilandirmalari import RWKV
@@ -135,6 +136,7 @@ def _tek_deneme_uret_artimli(
     from rwkv_oturum import RWKVSohbetOturumu
 
     defter = CevapDefteri()
+    defter.train_examples = train_examples_sandbox_bicimine_donustur(task.train_examples)
     mesajlar = _ilk_mesajlar(task)
 
     oturum = RWKVSohbetOturumu(lora_model, tokenizer)
@@ -212,6 +214,7 @@ def _tek_deneme_uret(
         )
 
     defter = CevapDefteri()
+    defter.train_examples = train_examples_sandbox_bicimine_donustur(task.train_examples)
     mesajlar = _ilk_mesajlar(task)
 
     for _tur in range(azami_tur):
