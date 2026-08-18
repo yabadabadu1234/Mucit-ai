@@ -222,53 +222,22 @@ def coklu_gpu_submission_uret(
             )
         else:
             cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri)
-        # ARC ödül kuralı görev başına 2 BAĞIMSIZ deneme hakkı tanır (ikisi
-        # de yanlışsa fark etmez, biri doğruysa görev sayılır). ÖNCEKİ
-        # kodda attempt_2, attempt_1'in DÜZ KOPYASIYDI -- bu hakkın YARISI
-        # hiç kullanılmıyordu. Artık do_sample=True/temperature=1.0
-        # sayesinde (bkz. model_yapilandirmalari.py) ikinci bir bağımsız
-        # koşu GERÇEKTEN farklı bir örnekleme/cevap verebilir.
-        #
-        # ÖNEMLİ (kullanıcının fark ettiği yavaşlamanın gerçek nedeni):
-        # attempt_1'e TÜM bitis_zamani'yi verip attempt_2'yi "kalan zaman
-        # varsa" ÜSTÜNE eklemek, toplam koşu süresini pratikte 2 KATINA
-        # çıkarabiliyordu (attempt_1 zaten bütçenin çoğunu kullanınca
-        # attempt_2 hiç veya çok az kalırdı, ama attempt_1'in kendisi hâlâ
-        # TAM bütçe kadar sürebiliyordu). Artık bütçe İKİYE BÖLÜNÜYOR:
-        # attempt_1'e YARI bütçe (ara_bitis), attempt_2'ye kalan yarı
-        # (asıl bitis_zamani) veriliyor -- toplam koşu süresi hâlâ
-        # calisma_suresi_saniye ile SINIRLI kalıyor, öncekinin 2 katına
-        # ÇIKMIYOR.
-        baslangic_zamani = time.time()
-        ara_bitis = baslangic_zamani + (bitis_zamani - baslangic_zamani) / 2
-        print(f"[gonderim_uret] [ÇOKLU-GPU] attempt_1 için YARI bütçe ayrıldı (bitiş: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(ara_bitis))}), attempt_2 kalan yarıyı kullanacak.")
-
-        # ÖNEMLİ (kullanıcının "5000/60000 adım ilerleme logu var ama
-        # submission.json BOMBOŞ" hatasının kök nedeni): ÖNCEDEN kaydedici.
-        # ekle() yalnızca cozucu.coz() TÜM 172 görevi bitirip TAMAMEN
-        # dönene kadar hiç çağrılmıyordu -- koşu ortasında çöken/kesilen
-        # bir süreçte diskte HİÇBİR sonuç olmazdı. Artık SÜREKLİ ADMİSYON
-        # sayesinde her görev (partinin/koşunun tamamı değil) bitirilir
-        # bitirilmez bu geri çağrı tetiklenir ve o AN diske yazılır.
+        # ARC ödül kuralı görev başına 2 BAĞIMSIZ deneme hakkı tanır, ve bir
+        # ara sürümde bunu GERÇEKTEN kullanmak için bütçeyi ikiye bölüp
+        # attempt_2'yi bağımsız bir ikinci koşu yapmıştık. KULLANICININ AÇIK
+        # TALEBİYLE bu GERİ ALINDI: RWKV'nin gerçek başarı oranı o kadar
+        # düşük (gerçek bir koşuda 259 görevden yalnızca 1 tanesi attempt_1'i
+        # bile bitirebilmişti) ki bütçenin yarısını attempt_1'e ayırmak,
+        # işi ortasından kesip görevlerin çoğunun HİÇ bitirilememesine yol
+        # açıyordu. Artık TÜM bütçe (bitis_zamani) TEK bir koşuya (attempt_1)
+        # veriliyor; attempt_2 HİÇ ayrı bir koşu YAPMIYOR, doğrudan attempt_1
+        # ile AYNI cevabı taşıyor (kaydedici.guncelle'nin attempt_2=None
+        # varsayılanı zaten bunu yapar).
         def _attempt1_tamamlandi(task_adi: str, sonuc: Dict[str, Any]) -> None:
             kaydedici.guncelle(task_adi, sonuc["attempt_1"])
 
-        sonuclar = cozucu.coz(tasks, bitis_zamani=ara_bitis, tamamlanma_geri_cagirma=_attempt1_tamamlandi)
-
+        sonuclar = cozucu.coz(tasks, bitis_zamani=bitis_zamani, tamamlanma_geri_cagirma=_attempt1_tamamlandi)
         sonuclar_2: Dict[str, Dict[str, Any]] = {}
-        if time.time() < bitis_zamani:
-            print("[gonderim_uret] [ÇOKLU-GPU] attempt_2 için İKİNCİ, BAĞIMSIZ bir toplu koşu başlıyor (aynı görevler, yeniden örneklenir)...")
-
-            def _attempt2_tamamlandi(task_adi: str, sonuc2: Dict[str, Any]) -> None:
-                attempt_1 = sonuclar.get(task_adi, {}).get("attempt_1", [[0, 0], [0, 0]])
-                if sonuc2.get("attempt_1_gonderildi_mi"):
-                    kaydedici.guncelle(task_adi, attempt_1, sonuc2["attempt_1"])
-                else:
-                    kaydedici.guncelle(task_adi, attempt_1, attempt_1)
-
-            sonuclar_2 = cozucu.coz(tasks, bitis_zamani=bitis_zamani, tamamlanma_geri_cagirma=_attempt2_tamamlandi)
-        else:
-            print("[gonderim_uret] [ÇOKLU-GPU] Süre bütçesi tükendi -- attempt_2 için ikinci koşu ATLANDI, attempt_1 tekrar kullanılacak.")
 
         if not yarisma:
             for task in tasks:

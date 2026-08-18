@@ -2096,11 +2096,14 @@ class _TamTersinirTokenizerCyt:
         return "".join(chr(int(t)) for t in token_idler)
 
 
-def test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil() -> None:
-    print("[test 32] gonderim_uret.coklu_gpu_submission_uret: ARC'ın 2-deneme hakkı -- attempt_2 artık attempt_1'in DÜZ KOPYASI değil, İKİNCİ BAĞIMSIZ bir toplu koşudan mı geliyor?...")
+def test_32_coklu_gpu_attempt_2_artik_ayri_kosu_yapmiyor_tum_butce_attempt_1e() -> None:
+    print("[test 32] gonderim_uret.coklu_gpu_submission_uret: kullanıcının açık talebi -- attempt_2'ye HİÇ süre "
+          "ayrılmıyor, aynı cevap kopyalanıyor, TÜM bütçe attempt_1'e mi veriliyor (RWKV'nin gerçek başarı oranı "
+          "çok düşükken bütçeyi ikiye bölmek işi yarıda kesip görevlerin çoğunu hiç bitiremiyordu)?...")
 
     import os
     import tempfile
+    import time
 
     import coklu_gpu
     import gonderim_uret
@@ -2114,6 +2117,7 @@ def test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil() -> None:
     coklu_gpu.dort_kopya_yukle = lambda model_ailesi, azami_gpu=4: ([object()], object(), ["cuda:0"])
 
     cagri_sayisi = {"n": 0}
+    verilen_bitis_zamanlari = []
 
     class _SahteCozucu:
         def __init__(self, *args, **kwargs):
@@ -2121,10 +2125,8 @@ def test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil() -> None:
 
         def coz(self, tasks, bitis_zamani=None, tamamlanma_geri_cagirma=None, surekli_admisyon=True):
             cagri_sayisi["n"] += 1
-            if cagri_sayisi["n"] == 1:
-                sonuc = {"gorevX-0": {"attempt_1": [[1, 1]], "attempt_1_gonderildi_mi": True}}
-            else:
-                sonuc = {"gorevX-0": {"attempt_1": [[2, 2]], "attempt_1_gonderildi_mi": True}}
+            verilen_bitis_zamanlari.append(bitis_zamani)
+            sonuc = {"gorevX-0": {"attempt_1": [[1, 1]], "attempt_1_gonderildi_mi": True}}
             if tamamlanma_geri_cagirma is not None:
                 for ad, s in sonuc.items():
                     tamamlanma_geri_cagirma(ad, s)
@@ -2134,68 +2136,23 @@ def test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil() -> None:
     try:
         with tempfile.TemporaryDirectory() as gecici_dizin:
             cikti_yolu = os.path.join(gecici_dizin, "submission.json")
-            submission = gonderim_uret.coklu_gpu_submission_uret(cikti_yolu=cikti_yolu, yarisma=True, calisma_suresi_saniye=3600)
+            baslangic = time.time()
+            calisma_suresi = 3600.0
+            submission = gonderim_uret.coklu_gpu_submission_uret(cikti_yolu=cikti_yolu, yarisma=True, calisma_suresi_saniye=calisma_suresi)
     finally:
         gonderim_uret._gorevleri_yukle = eski_gorevleri_yukle
         coklu_gpu.dort_kopya_yukle = eski_dort_kopya
         coklu_gpu.CokluGPUTopluCozucu = eski_cozucu_sinifi
 
-    _dogrula(cagri_sayisi["n"] == 2, f"cozucu.coz() TAM OLARAK İKİ kez çağrıldı (attempt_1 + BAĞIMSIZ attempt_2), bulunan: {cagri_sayisi['n']}")
+    _dogrula(cagri_sayisi["n"] == 1, f"cozucu.coz() ARTIK TAM OLARAK TEK KEZ çağrılıyor -- attempt_2 için AYRI bir koşu YOK (bulunan çağrı sayısı: {cagri_sayisi['n']})")
+    _dogrula(
+        abs(verilen_bitis_zamanlari[0] - (baslangic + calisma_suresi)) < 2.0,
+        f"tek çağrıya verilen bitis_zamani TÜM calisma_suresi_saniye'yi (bölünmemiş) yansıtıyor -- attempt_1 ARTIK YARI değil TAM bütçeyi kullanıyor (bulunan: {verilen_bitis_zamanlari[0]}, beklenen ~{baslangic + calisma_suresi})",
+    )
 
     denemeler = submission["gorevX"]
-    _dogrula(denemeler[0]["attempt_1"] == [[1, 1]], "attempt_1, İLK bağımsız koşunun sonucunu taşıyor")
-    _dogrula(denemeler[0]["attempt_2"] == [[2, 2]], "attempt_2 artık attempt_1'in KOPYASI DEĞİL -- İKİNCİ bağımsız koşunun KENDİ sonucunu taşıyor")
-
-
-def test_33_coklu_gpu_sure_kalmazsa_attempt_2_attempt_1e_geri_duser() -> None:
-    print("[test 33] gonderim_uret.coklu_gpu_submission_uret: süre bütçesi TÜKENMİŞSE ikinci koşu hiç başlatılmıyor, attempt_2 GÜVENLE attempt_1'e düşüyor mu (cevapsız kalmaktansa)?...")
-
-    import os
-    import tempfile
-    import time as _time
-
-    import coklu_gpu
-    import gonderim_uret
-
-    task = Task(test_example=Example(input=np.array([[0]]), output=np.array([[0]])), train_examples=[], name="gorevY-0")
-
-    eski_gorevleri_yukle = gonderim_uret._gorevleri_yukle
-    eski_dort_kopya = coklu_gpu.dort_kopya_yukle
-    eski_cozucu_sinifi = coklu_gpu.CokluGPUTopluCozucu
-    gonderim_uret._gorevleri_yukle = lambda yarisma: [task]
-    coklu_gpu.dort_kopya_yukle = lambda model_ailesi, azami_gpu=4: ([object()], object(), ["cuda:0"])
-
-    cagri_sayisi = {"n": 0}
-
-    class _YavasCozucu:
-        def __init__(self, *args, **kwargs):
-            pass
-
-        def coz(self, tasks, bitis_zamani=None, tamamlanma_geri_cagirma=None, surekli_admisyon=True):
-            cagri_sayisi["n"] += 1
-            _time.sleep(0.15)  # bitis_zamani'ni GERÇEKTEN geçecek kadar
-            sonuc = {"gorevY-0": {"attempt_1": [[9, 9]], "attempt_1_gonderildi_mi": True}}
-            if tamamlanma_geri_cagirma is not None:
-                for ad, s in sonuc.items():
-                    tamamlanma_geri_cagirma(ad, s)
-            return sonuc
-
-    coklu_gpu.CokluGPUTopluCozucu = _YavasCozucu
-    try:
-        with tempfile.TemporaryDirectory() as gecici_dizin:
-            cikti_yolu = os.path.join(gecici_dizin, "submission.json")
-            # calisma_suresi_saniye COK KISA: ilk koşu (0.15sn) bile bütçeyi taşırır.
-            submission = gonderim_uret.coklu_gpu_submission_uret(cikti_yolu=cikti_yolu, yarisma=True, calisma_suresi_saniye=0.05)
-    finally:
-        gonderim_uret._gorevleri_yukle = eski_gorevleri_yukle
-        coklu_gpu.dort_kopya_yukle = eski_dort_kopya
-        coklu_gpu.CokluGPUTopluCozucu = eski_cozucu_sinifi
-
-    _dogrula(cagri_sayisi["n"] == 1, f"süre bütçesi tükendiği için İKİNCİ koşu HİÇ başlatılmadı (gereksiz iş yapılmadı), bulunan çağrı sayısı: {cagri_sayisi['n']}")
-
-    denemeler = submission["gorevY"]
-    _dogrula(denemeler[0]["attempt_1"] == [[9, 9]] and denemeler[0]["attempt_2"] == [[9, 9]],
-              "süre yoksa attempt_2 GÜVENLE attempt_1'e düştü (cevapsız kalmaktan iyidir)")
+    _dogrula(denemeler[0]["attempt_1"] == [[1, 1]], "attempt_1 tek koşunun sonucunu taşıyor")
+    _dogrula(denemeler[0]["attempt_2"] == [[1, 1]], "attempt_2 artık AYRI bir koşu yapmıyor -- doğrudan attempt_1'in KOPYASINI taşıyor (kullanıcının açık talebi)")
 
 
 def test_34_toplu_gorevleri_coz_suresi_dolunca_uretim_ortasinda_duruyor_mu() -> None:
@@ -2492,8 +2449,7 @@ def calistir() -> None:
     test_29_tekrar_cezasi_gercekten_ayni_tokene_saplanmayi_zorlastiriyor_mu()
     test_30_rwkv_tokenizer_decode_tek_kotu_id_tum_metni_yok_etmiyor_mu()
     test_31_ayrintili_log_uzun_prefill_boyunca_sessiz_kalmiyor_mu()
-    test_32_coklu_gpu_attempt_2_artik_attempt_1in_kopyasi_degil()
-    test_33_coklu_gpu_sure_kalmazsa_attempt_2_attempt_1e_geri_duser()
+    test_32_coklu_gpu_attempt_2_artik_ayri_kosu_yapmiyor_tum_butce_attempt_1e()
     test_34_toplu_gorevleri_coz_suresi_dolunca_uretim_ortasinda_duruyor_mu()
     test_35_hf_toplu_gorevleri_coz_granite_lfm_hazirlik_dogru_ve_yozlasmis_donguyu_yakaliyor_mu()
     test_36_hf_toplu_gorevleri_coz_suresi_dolunca_ortada_duruyor_mu()
