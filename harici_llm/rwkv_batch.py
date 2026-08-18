@@ -99,16 +99,37 @@ def _cmix_adim_toplu(x, x_prev, x_k, K_, V_):
 # ve bu KUCUK islemlerin GPU'da GERCEK hesaplama suresi degil, Python
 # yorumlayicisinin + CUDA kernel BASLATMA (launch) gecikmesinin baskin
 # oldugu bir rejimden geliyor (klasik "kernel-launch-bound" darbogaz).
-# Cozum: torch.compile(mode="reduce-overhead") ile ayni sekle (B, n_layer)
-# sahip TEKRARLANAN bu adimi TEK BIR derlenmis grafige (CUDA Graph replay
-# dahil) donusturmek -- Python/kernel-baslatma yukunu neredeyse SIFIRLAR,
-# GERCEK matematigi degistirmez. GPU'suz bu ortamda (CPU) DOGRULANAMADI --
-# torch.compile yalnizca CUDA cihazlarinda denenir, CPU'da/derleme
-# BASARISIZ olursa (Kaggle'in eski CUDA arac zincirinde triton/inductor
-# arizalanabilir) SESSIZCE ve KALICI OLARAK ayni eager (yorumlanan, test_20
-# ile GERCEK rwkv paketine karsi sayisal olarak dogrulanmis) koda duser --
-# asla YANLIS sonuca yol acmaz, yalnizca hiz kazanci kaybolabilir.
-_TORCH_COMPILE_ETKIN = os.environ.get("RWKV_BATCH_TORCH_COMPILE", "1") != "0"
+#
+# DENENDI, GERCEK Kaggle kosusunda KANITLANMIS SEKILDE CALISMIYOR: fikir
+# torch.compile(mode="reduce-overhead") ile bu adimi TEK BIR derlenmis
+# grafige (CUDA Graph replay dahil) donusturmekti. Ama kullanicinin
+# GERCEK Kaggle logu, coklu_gpu.py'nin HER GPU'yu AYRI bir Python
+# threading.Thread'inde (surec DEGIL) calistirdigi bu mimaride, HER
+# denemede iki farkli sekilde coktugunu gosterdi:
+#   - cuda:1: "AssertionError: assert torch._C._is_key_in_tls(...)" --
+#     inductor'un cudagraph_trees mekanizmasi thread-local state'e
+#     dayanir; derleme BIR thread'de yapilip calisma zamaninda (potansiyel
+#     olarak) FARKLI bir baglamdan tetiklenince bu anahtar bulunamiyor.
+#   - cuda:0: "Detected that you are using FX to symbolically trace a
+#     dynamo-optimized function" -- dynamo'nun kendi ic tutarlilik
+#     denetimi.
+# HER IKI hata da calisma ZAMANINDA (derleme SIRASINDA degil) cikiyor --
+# asagidaki try/except bunlari YAKALAYIP kalici olarak eager'a dusuyor
+# (bu yuzden calisiyordu, ama HER kosuda derleme+basarisiz calisma
+# denemesi icin bosa zaman harcaniyordu). DAHA CIDDISI: cuda:2 gibi
+# derleme+ILK calistirma BASARILI gorunen bir cihazda bile, CUDA
+# Graph'in "girdi tensorlerinin ADRESI sabit kalir" varsayimi bizim
+# gercek kullanimimizla CELISIYOR -- adim_toplu_maskeli, `durum`
+# listesindeki her elemani HER adimda torch.where ile YENI bir tensor
+# nesnesiyle DEGISTIRIYOR (_maske_uygula). Bu, hicbir exception
+# FIRLATMADAN SESSIZCE yanlis/eski bellek okuyan bir CUDA Graph
+# replay'ine yol acabilir -- yani basarili gorunen bir derleme bile
+# GUVENLI degil. Bu ikisinin BILESIMI (kanitlanmis coklu cokme + sessiz
+# yanlislik riski) yuzunden bu artik VARSAYILAN OLARAK KAPALI. Uyumlu
+# (tek-thread/tek-surec, durum tensorlerini yerinde guncelleyen) baska
+# bir dagitimda denemek isteyen RWKV_BATCH_TORCH_COMPILE=1 ile ACABILIR,
+# ama bu depodaki coklu_gpu.py mimarisiyle ONERILMEZ.
+_TORCH_COMPILE_ETKIN = os.environ.get("RWKV_BATCH_TORCH_COMPILE", "0") == "1"
 _derlenmis_cekirdek_onbellek: Dict[str, Any] = {}
 _derleme_basarisiz_cihazlar: set = set()
 
