@@ -1,8 +1,57 @@
-from typing import List
+import functools
+import os
+from typing import List, Optional
 
-from arc import Example, Task
+from arc import Example, Task, read_tasks_from_single_file
 from arc_loader import convert_grid_to_string
 from araclar import tool_tanimlari_json_metni
+
+_ARC_VERI_DIZINI = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/"
+_ORNEK_1AE2FEB7_TASK_ADI = "1ae2feb7"
+
+
+@functools.lru_cache(maxsize=1)
+def _ornek_1ae2feb7_izgaralarini_yukle() -> Optional[Task]:
+    """Sistem promptundaki 1ae2feb7 çalışılmış örneğinin gerçek grid'lerini,
+    gerçek eğitim veri setinden (arc-agi_training_challenges/solutions.json)
+    parametrik olarak çeker. Kaggle dışı (yerel geliştirme) ortamlarda bu
+    dosyalar bulunmayabilir; böyle durumda None döner ve şablon, grid'siz
+    (yalnız düzyazı analiz) haliyle render edilir."""
+    zorluklar_dosyasi = os.path.join(_ARC_VERI_DIZINI, "arc-agi_training_challenges.json")
+    cozumler_dosyasi = os.path.join(_ARC_VERI_DIZINI, "arc-agi_training_solutions.json")
+    if not os.path.isfile(zorluklar_dosyasi) or not os.path.isfile(cozumler_dosyasi):
+        return None
+    try:
+        gorevler = read_tasks_from_single_file(
+            zorluklar_dosyasi, solution_file=cozumler_dosyasi
+        )
+    except (OSError, ValueError, KeyError):
+        return None
+    for gorev in gorevler:
+        if gorev.name.split("-")[0] == _ORNEK_1AE2FEB7_TASK_ADI:
+            return gorev
+    return None
+
+
+def _ornek_1ae2feb7_izgara_blogu_olustur() -> str:
+    gorev = _ornek_1ae2feb7_izgaralarini_yukle()
+    if gorev is None:
+        return (
+            "   (Actual train/test grids for 1ae2feb7 are loaded automatically from the real "
+            "ARC dataset files when running in the competition environment; they are not "
+            "available in this offline context.)\n"
+        )
+    parcalar = []
+    for i, ornek in enumerate(gorev.train_examples, start=1):
+        parcalar.append(
+            f"   Train example {i} — input:\n{convert_grid_to_string(ornek.input)}\n\n"
+            f"   Train example {i} — output:\n{convert_grid_to_string(ornek.output)}"
+        )
+    parcalar.append(
+        f"   Test — input:\n{convert_grid_to_string(gorev.test_example.input)}\n\n"
+        f"   Test — output:\n{convert_grid_to_string(gorev.test_example.output)}"
+    )
+    return "\n\n".join(parcalar) + "\n"
 
 SISTEM_PROMPTU_SABLONU = """You are an ARC-AGI puzzle-solving agent. You are given a small number of
 input/output grid pairs (train examples) that all share one hidden transformation rule, and a
@@ -31,8 +80,9 @@ STRICT OPERATING PROCEDURE — follow every step, in order, every time:
    algorithm in a spec document.
 
    Here is a worked example of the required depth of reasoning and the required form of the
-   final rule sentence, for a different puzzle (task 1ae2feb7):
+   final rule sentence, for a different puzzle (task 1ae2feb7). Its actual train/test grids:
 
+{ornek_1ae2feb7_izgaralari}
    ### Logical Analysis and Deliberation
 
    1. **Grid Structure and Divider Line:**
@@ -143,7 +193,10 @@ Assistant: ```json
 
 
 def sistem_promptu_olustur() -> str:
-    return SISTEM_PROMPTU_SABLONU.format(tool_tanimlari=tool_tanimlari_json_metni())
+    return SISTEM_PROMPTU_SABLONU.format(
+        tool_tanimlari=tool_tanimlari_json_metni(),
+        ornek_1ae2feb7_izgaralari=_ornek_1ae2feb7_izgara_blogu_olustur(),
+    )
 
 
 _ORNEK_1AE2FEB7_ID = "1ae2feb7"
