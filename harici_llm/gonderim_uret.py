@@ -160,7 +160,21 @@ def _gorevleri_yukle(yarisma: bool, azami_soru_sayisi: Optional[int] = None) -> 
     koşuları tüm kümeyle çok uzun sürüyor): toplam görev sayısı bu
     değerden BÜYÜK veya EŞİTSE hepsi kullanılır (davranış değişmez);
     KÜÇÜKSE ilk `azami_soru_sayisi` görev alınır (tasks[:N] -- kümenin
-    BAŞINDAN seçim). None ise (varsayılan) davranış hiç değişmez."""
+    BAŞINDAN seçim). None ise (varsayılan) davranış hiç değişmez.
+
+    GÜVENLİK KİLİDİ (kullanıcının açık talebi): `yarisma=True` (GERÇEK
+    yarışma koşusu) ise `azami_soru_sayisi` NE OLURSA OLSUN GÖRMEZDEN
+    GELİNİR -- notebook_giris.py'de deneme için bırakılmış/unutulmuş bir
+    SORU_SAYISI (ör. ortam değişkeninden gelen), gerçek yarışma
+    gönderiminin YALNIZCA birkaç göreve indirgenerek eksik bir
+    submission.json üretmesine ASLA yol açamaz. Yalnızca YARISMA=False
+    (deneme/değerlendirme modu) iken kısaltma uygulanır."""
+    if yarisma and azami_soru_sayisi is not None:
+        print(
+            f"[gonderim_uret] GÜVENLİK: YARISMA=True iken azami_soru_sayisi={azami_soru_sayisi} GÖRMEZDEN "
+            f"GELİNİYOR -- gerçek yarışma koşusunda SORU_SAYISI ne olursa olsun TÜM sorular çözülür."
+        )
+        azami_soru_sayisi = None
     if yarisma:
         print(f"[gonderim_uret] YARISMA=True: gerçek yarışma test kümesi kullanılıyor (cevaplar bilinmiyor).")
         tasks = read_tasks_from_single_file(TEST_CHALLENGES_YOLU, test=True)

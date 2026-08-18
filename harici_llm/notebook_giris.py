@@ -20,6 +20,7 @@ görev bile saatler sürer) ve iki farklı kod yolu arasında kafa
 karıştırıyordu. GPU hiç yoksa/hiçbiri gerçekten çalışmıyorsa bu hücre
 BİLİNÇLİ OLARAK çöker (RuntimeError) -- sessizce yanlış moda düşmez.
 """
+import os
 import sys
 
 # NOT: bu yol, reponun Kaggle'da NEREYE mount edildiğine göre değişir --
@@ -55,9 +56,20 @@ YARISMA = True
 # değişmez). Bir tamsayı verilirse: toplam görev sayısı BUNDAN büyük ya
 # da eşitse yine hepsi kullanılır; küçükse kümenin BAŞINDAN yalnızca ilk
 # SORU_SAYISI görev alınır (ör. 4 -> yalnızca ilk 4 görev çözülür, hızlı
-# bir deneme/duman testi için). YARISMA=True iken de aynı mantık geçerlidir
-# -- gerçek yarışma koşusunda SORU_SAYISI=None bırakılmalıdır.
-SORU_SAYISI = None
+# bir deneme/duman testi için).
+#
+# MUCIT_SORU_SAYISI ortam değişkeni verilmişse, dosyayı hiç değiştirmeden
+# (ör. Kaggle notebook ortam değişkenlerinden) geçici bir deneme
+# kısıtlaması uygulayabilmek için buradaki sabit değeri EZER.
+#
+# GÜVENLİK KİLİDİ: YARISMA=True (gerçek yarışma koşusu) iken bu değer ne
+# olursa olsun (dosyada unutulmuş bir SORU_SAYISI VEYA ortam değişkeni
+# fark etmez) coklu_gpu_submission_uret/_gorevleri_yukle tarafında
+# GÖRMEZDEN GELİNİR -- gerçek yarışma gönderimi ASLA eksik göreve
+# indirgenmez (bkz. gonderim_uret._gorevleri_yukle). SORU_SAYISI yalnızca
+# YARISMA=False (deneme) koşularında etkilidir.
+_SORU_SAYISI_ORTAM_DEGISKENI = os.environ.get("MUCIT_SORU_SAYISI")
+SORU_SAYISI = int(_SORU_SAYISI_ORTAM_DEGISKENI) if _SORU_SAYISI_ORTAM_DEGISKENI else None
 
 if __name__ == "__main__":
     gorulen_gpu_sayisi = torch.cuda.device_count() if torch.cuda.is_available() else 0
