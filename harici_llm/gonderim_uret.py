@@ -155,7 +155,12 @@ def _dogrulugu_kontrol_et(task: Any, sonuc: Dict[str, Any]) -> None:
     })
 
 
-def _gorevleri_yukle(yarisma: bool) -> List[Any]:
+def _gorevleri_yukle(yarisma: bool, azami_soru_sayisi: Optional[int] = None) -> List[Any]:
+    """`azami_soru_sayisi` verilirse (kullanıcının açık talebi -- deneme
+    koşuları tüm kümeyle çok uzun sürüyor): toplam görev sayısı bu
+    değerden BÜYÜK veya EŞİTSE hepsi kullanılır (davranış değişmez);
+    KÜÇÜKSE ilk `azami_soru_sayisi` görev alınır (tasks[:N] -- kümenin
+    BAŞINDAN seçim). None ise (varsayılan) davranış hiç değişmez."""
     if yarisma:
         print(f"[gonderim_uret] YARISMA=True: gerçek yarışma test kümesi kullanılıyor (cevaplar bilinmiyor).")
         tasks = read_tasks_from_single_file(TEST_CHALLENGES_YOLU, test=True)
@@ -169,6 +174,18 @@ def _gorevleri_yukle(yarisma: bool) -> List[Any]:
             EVALUATION_CHALLENGES_YOLU, solution_file=EVALUATION_SOLUTIONS_YOLU,
         )
         print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {EVALUATION_CHALLENGES_YOLU} (+ çözümler: {EVALUATION_SOLUTIONS_YOLU})")
+
+    if azami_soru_sayisi is not None and azami_soru_sayisi < len(tasks):
+        print(
+            f"[gonderim_uret] SORU_SAYISI={azami_soru_sayisi} < toplam {len(tasks)} alt-görev -- "
+            f"kümenin BAŞINDAN yalnızca ilk {azami_soru_sayisi} görev alınıyor (deneme koşusunu kısaltmak için)."
+        )
+        tasks = tasks[:azami_soru_sayisi]
+    elif azami_soru_sayisi is not None:
+        print(
+            f"[gonderim_uret] SORU_SAYISI={azami_soru_sayisi} >= toplam {len(tasks)} alt-görev -- "
+            f"tümü kullanılıyor, kısaltma yapılmadı."
+        )
     return tasks
 
 
@@ -180,9 +197,16 @@ def coklu_gpu_submission_uret(
     azami_gpu: int = 4,
     toplu_mod: bool = True,
     b_boyutu: int = 128,
+    azami_soru_sayisi: Optional[int] = None,
 ) -> Dict[str, Any]:
     """submission_uret()'in coklu-GPU varyantı -- bkz. coklu_gpu.py
     başındaki not. Aynı modelin GPU başına BAĞIMSIZ bir kopyası yüklenir.
+
+    `azami_soru_sayisi` (kullanıcının açık talebi -- SORU_SAYISI):
+    verilirse `_gorevleri_yukle`'ye AYNEN aktarılır -- toplam görev
+    sayısı bundan büyük/eşitse hepsi kullanılır, küçükse kümenin
+    BAŞINDAN yalnızca bu kadarı alınır (deneme koşularını kısaltmak
+    için). None ise (varsayılan) davranış hiç değişmez.
 
     toplu_mod=True (varsayılan): her GPU, kendisine atanan görevleri TEK
     TEK değil, B TANESİNİ AYNI ANDA (gerçek batched adım zinciriyle, bkz.
@@ -203,7 +227,7 @@ def coklu_gpu_submission_uret(
         f"(bitiş: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(bitis_zamani))}) | toplu_mod={toplu_mod}"
     )
 
-    tasks = _gorevleri_yukle(yarisma)
+    tasks = _gorevleri_yukle(yarisma, azami_soru_sayisi=azami_soru_sayisi)
     kaydedici = _SonuCuKaydedici(tasks, cikti_yolu)
 
     try:

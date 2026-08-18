@@ -50,6 +50,15 @@ B_BOYUTU = 128           # her GPU'nun AYNI ANDA (tek batched adım zinciriyle) 
 #                  konusma_transkriptleri.jsonl'e loglanir.
 YARISMA = True
 
+# SORU_SAYISI (kullanıcının açık talebi -- deneme koşuları tüm kümeyle
+# aşırı uzun sürüyor): None -> tüm görev kümesi kullanılır (davranış
+# değişmez). Bir tamsayı verilirse: toplam görev sayısı BUNDAN büyük ya
+# da eşitse yine hepsi kullanılır; küçükse kümenin BAŞINDAN yalnızca ilk
+# SORU_SAYISI görev alınır (ör. 4 -> yalnızca ilk 4 görev çözülür, hızlı
+# bir deneme/duman testi için). YARISMA=True iken de aynı mantık geçerlidir
+# -- gerçek yarışma koşusunda SORU_SAYISI=None bırakılmalıdır.
+SORU_SAYISI = None
+
 if __name__ == "__main__":
     gorulen_gpu_sayisi = torch.cuda.device_count() if torch.cuda.is_available() else 0
     print(f"[notebook_giris] torch.cuda.is_available()={torch.cuda.is_available()} , torch.cuda.device_count()={gorulen_gpu_sayisi}")
@@ -77,6 +86,7 @@ if __name__ == "__main__":
     )
     submission = coklu_gpu_submission_uret(
         cikti_yolu=SUBMISSION_YOLU, yarisma=YARISMA, azami_gpu=AZAMI_GPU, b_boyutu=B_BOYUTU,
+        azami_soru_sayisi=SORU_SAYISI,
     )
 
     print(f"[notebook_giris] Bitti. {len(submission)} görev için {SUBMISSION_YOLU} yazıldı.")
