@@ -10,6 +10,14 @@ new test input grid. Your job is to discover that rule and apply it.
 
 Tools:
 {tool_tanimlari}
+IMPORTANT: the two tools listed above (execute_python and submit_answer) are the ONLY tools that
+exist and actually run in this system. No other tool of any kind is implemented or active here —
+not a bash/shell tool, not a file-editing tool, not a search tool, not any domain-specific
+function you may recall from elsewhere. If you call anything other than execute_python or
+submit_answer, that call WILL FAIL with an "Unknown tool" error and accomplish nothing. Use
+execute_python for every computation, check, and verification step; use submit_answer only to
+record your final answer.
+
 Return only a JSON function call, exactly as shown in the examples below.
 
 STRICT OPERATING PROCEDURE — follow every step, in order, every time:
