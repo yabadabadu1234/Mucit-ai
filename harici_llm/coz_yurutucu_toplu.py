@@ -27,6 +27,7 @@ hakikaten 128 soruya AYNI ANDA bakması" -- bu dosya tam olarak bunu yapar:
      dizinin "koltuğu" boşa düşer ama batch'in geri kalanı kesintisiz
      sürer.
 """
+import json
 import time
 from typing import Any, Callable, Dict, List, Optional
 
@@ -37,7 +38,7 @@ from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut,
 from coz_yurutucu import BOS_TAHMIN, IKAZ_ESIGI_TOKEN, IKAZ_METNI, _ARAC_CAGRISI_YOK_UYARISI, _ilk_mesajlar
 from model_yapilandirmalari import RWKV
 from rwkv_batch import _maske_uygula, adim_toplu_maskeli, onisle_toplu_farkli_uzunluk, sifir_durum_toplu
-from rwkv_native import _tekrar_cezasi_uygula, _tekrara_kilitlenme_periyodu
+from rwkv_native import _tekrara_kilitlenme_periyodu
 from transkript import transkript_satiri_yaz
 from ttt_lora import mesajlari_metne_donustur, rwkv_tek_mesaji_sar, uretim_ayarlarini_al
 
@@ -56,28 +57,24 @@ def _boyutlari_al(ham_rwkv_modeli: Any):
     return ham_rwkv_modeli.n_layer, ham_rwkv_modeli.n_embd, ham_rwkv_modeli.n_head, ham_rwkv_modeli.head_size
 
 
-def _sample_tek(logit_satiri: torch.Tensor, do_sample: bool, temperature: Optional[float],
-                 repetition_penalty: Optional[float] = None, gecmis_tokenler: Optional[List[int]] = None) -> int:
-    if repetition_penalty and repetition_penalty > 1.0 and gecmis_tokenler:
-        logit_satiri = _tekrar_cezasi_uygula(logit_satiri, gecmis_tokenler, repetition_penalty)
-    if not do_sample:
-        return int(torch.argmax(logit_satiri).item())
-    olasiliklar = torch.softmax(logit_satiri / max(temperature or 1.0, 1e-4), dim=-1)
-    return int(torch.multinomial(olasiliklar, 1).item())
-
-
 def _ek_metni_tek_diziye_besle(z, n_layer, n_embd, n_head, head_size, b: int, B: int,
-                                token_idler: List[int], durum: List[torch.Tensor]) -> List[torch.Tensor]:
+                                token_idler: List[int], durum: List[torch.Tensor]) -> tuple:
     """Yalnızca dizi b'yi, kalan B-1 diziyi DONDURARAK (aktif_maske'de
-    False bırakarak) verilen ek token dizisiyle ilerletir -- IKAZ
-    (yazma hakkı tükeniyor) metninin, YALNIZCA o eşiğe ulaşan diziye,
-    diğerlerini etkilemeden enjekte edilmesini sağlar."""
+    False bırakarak) verilen ek token dizisiyle ilerletir -- IKAZ (yazma
+    hakkı tükeniyor) metninin VEYA bir araç-çağrısı sonucunun (bkz.
+    toplu_gorevleri_coz'daki tool_response enjeksiyonu), YALNIZCA o slota,
+    diğerlerini etkilemeden enjekte edilmesini sağlar. Döner: (son_logit,
+    güncel durum) -- son_logit, b'nin beslenen metnin SON tokenından
+    sonraki tahminidir; çağıran taraf bunu DOĞRUDAN son_logits[b] için
+    kullanabilir, ekstra bir "yenile" adımına GEREK YOKTUR."""
+    son_logit = None
     for tok in token_idler:
         aktif_maske = [False] * B
         aktif_maske[b] = True
         tum_tokenler = [tok] * B
-        _logits, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, tum_tokenler, durum, aktif_maske)
-    return durum
+        logits, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, tum_tokenler, durum, aktif_maske)
+        son_logit = logits[b]
+    return son_logit, durum
 
 
 def _slot_durumunu_sifirla(durum: List[torch.Tensor], b: int, B: int) -> List[torch.Tensor]:
@@ -226,6 +223,11 @@ def toplu_gorevleri_coz(
     # bu sırada KENDİ üretimine (sampling) devam eder, KİMSE KİMSEYİ
     # BEKLEMEZ (bkz. fonksiyon docstring'i).
     bekleyen_prompt: List[List[int]] = [[] for _ in range(B)]
+    # Her slotun DAHA ÖNCE çalıştırılmış/yanıtlanmış araç-çağrısı
+    # "parmak izlerini" (isim+argümanlar) tutar -- aynı çağrı bir daha
+    # görülünce (bkz. ana döngüdeki gerekçe) tekrar ÇALIŞTIRILMAZ/
+    # YANITLANMAZ.
+    islenen_cagri_izleri: List[set] = [set() for _ in range(B)]
 
     def _slot_sonucla_bitir(b: int) -> None:
         """Slot b'nin O ANKİ sakinini SONUÇLANDIRIR (kayda geçirir, geri
@@ -259,6 +261,8 @@ def toplu_gorevleri_coz(
         ikaz_enjekte_edildi[b] = False
         sonuclar[b] = None
         bitti[b] = False
+        islenen_cagri_izleri[b] = set()
+        gorulen_maske[b, :] = False  # yeni görevin tekrar-cezası geçmişi TEMİZ başlar
         if ayrintili_log:
             print(
                 f"{_ONEK} ({deneme_etiketi})   SLOT {b} YENİLENDİ: '{yeni_gorev.name}' (prompt {len(yeni_prompt)} "
@@ -281,10 +285,45 @@ def toplu_gorevleri_coz(
             _slota_yeni_gorev_yukle(b, yeni_gorev)
             yeniden_deneme_sayisi[b] = 0
 
+    # HIZ (kullanıcının açık talebi -- adım/sn çok düşüktü, kaynağı CUDA
+    # DEĞİL, Python tarafındaki formül/tekrar fazlalığıydı): ÖNCEKİ kod
+    # HER adımda B kez ayrı ayrı _sample_tek() çağırıyordu -- her çağrı
+    # KENDİ softmax/multinomial GPU çağrısını başlatıyordu (B küçük GPU
+    # çağrısı, TEK büyük bir çağrı yerine) VE repetition_penalty için
+    # `sorted(set(uretilen_tokenler[b]))`'i O DİZİ NE KADAR UZUNSA O KADAR
+    # PAHALI olacak şekilde HER ADIMDA SIFIRDAN yeniden kuruyordu (5000+
+    # tokenlik bir üretimde bu, üretim boyunca toplamda O(n²) Python işi
+    # demekti -- asıl yavaşlığın kaynağı muhtemelen buydu). Artık TÜM B
+    # satır TEK bir vektörize softmax/multinomial çağrısında birlikte
+    # örnekleniyor; "daha önce görülen token" takibi de dizi geçmişini
+    # yeniden taramak yerine kalıcı bir (B, vocab) bool tensörünü TEK bir
+    # scatter-yazma ile güncelliyor (O(1) artımlı, O(n) yeniden-tarama
+    # DEĞİL).
+    vocab_boyutu = son_logits.shape[-1]
+    cihaz = son_logits.device
+    gorulen_maske = torch.zeros(B, vocab_boyutu, dtype=torch.bool, device=cihaz)
+
     uretim_baslangici = time.time()
     adim = 0
     while adim < azami_yeni_token and not all(bitti):
         aktif_maske = [not bitti[b] for b in range(B)]
+        aktif_maske_t = torch.tensor(aktif_maske, device=cihaz, dtype=torch.bool)
+        gercek_uretim_maskesi = torch.tensor(
+            [not bitti[b] and not bekleyen_prompt[b] for b in range(B)], device=cihaz, dtype=torch.bool
+        )
+
+        if repetition_penalty and repetition_penalty > 1.0 and gercek_uretim_maskesi.any():
+            etkilenen = gorulen_maske & gercek_uretim_maskesi.unsqueeze(1)
+            son_logits = torch.where(etkilenen & (son_logits > 0), son_logits / repetition_penalty, son_logits)
+            son_logits = torch.where(etkilenen & (son_logits <= 0), son_logits * repetition_penalty, son_logits)
+
+        if do_sample:
+            olasiliklar = torch.softmax(son_logits / max(temperature or 1.0, 1e-4), dim=-1)
+            ornekler = torch.multinomial(olasiliklar, 1).squeeze(1)
+        else:
+            ornekler = torch.argmax(son_logits, dim=-1)
+        ornekler_liste = ornekler.tolist()
+
         sonraki_tokenler: List[int] = []
         for b in range(B):
             if bitti[b]:
@@ -299,14 +338,13 @@ def toplu_gorevleri_coz(
                 # adim_toplu_maskeli çağrısında birlikte ilerlerler.
                 sonraki_tokenler.append(bekleyen_prompt[b].pop(0))
                 continue
-            tok = _sample_tek(son_logits[b], do_sample, temperature, repetition_penalty, uretilen_tokenler[b])
+            tok = ornekler_liste[b]
             uretilen_tokenler[b].append(tok)
             sonraki_tokenler.append(tok)
+            gorulen_maske[b, tok] = True
 
         yeni_logits, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, sonraki_tokenler, durum, aktif_maske)
-        for b in range(B):
-            if aktif_maske[b]:
-                son_logits[b] = yeni_logits[b]
+        son_logits = torch.where(aktif_maske_t.unsqueeze(1), yeni_logits, son_logits)
         adim += 1
 
         if adim % ilerleme_adimi == 0:
@@ -346,9 +384,30 @@ def toplu_gorevleri_coz(
                 # boş). Diğer slotlar bu kontrolden ETKİLENMEDEN devam eder.
                 continue
             metin_simdi = tokenizer.decode(uretilen_tokenler[b])
+            # NOT (KRITIK -- kullanicinin gercek Kaggle transkriptinde
+            # binlerce "Unknown tool"/basarisiz sonuc gorulmesinin GERCEK
+            # kok nedeni burasiydi): arac_cagrilarini_ayikla, HER kontrolde
+            # metin_simdi'nin TAMAMINI (ONCEKI turlarda ZATEN islenmis
+            # cagrilar DAHIL) yeniden tarar -- bu, PARCALI/yarim JSON'un
+            # bir sonraki kontrolde TAMAMLANMIS haliyle yakalanabilmesi
+            # icin BILEREK boyle (kisa vadeli metin dilimi taramak bunu
+            # kacirirdi). Ama bu, DAHA ONCE ZATEN calistirilmis/yanit
+            # verilmis bir cagrinin (ozellikle basarisiz/execute_python
+            # gibi bitti[b]=True YAPMAYAN her cagrinin) HER SONRAKI
+            # kontrolde YENIDEN calistirilmasi anlamina geliyordu -- tek
+            # bir execute_python cagrisi, o slot calismaya devam ettigi
+            # surece DUZINELERCE kez tekrar tekrar sandbox'ta calisiyordu.
+            # islenen_cagri_izleri[b], HER cagrinin (isim+argumanlar)
+            # parmak izini tutar -- ayni cagri ikinci kez gorulunce
+            # calistirilmadan/yanit verilmeden atlanir.
             cagrilar = arac_cagrilarini_ayikla(metin_simdi)
             if cagrilar:
                 for cagri in cagrilar:
+                    izi = json.dumps(cagri, sort_keys=True, default=str)
+                    if izi in islenen_cagri_izleri[b]:
+                        continue
+                    islenen_cagri_izleri[b].add(izi)
+
                     sonuc = arac_cagrisini_yurut(cagri, defterler[b])
                     transkript_satiri_yaz({
                         "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
@@ -357,6 +416,24 @@ def toplu_gorevleri_coz(
                     if cagri.get("name") == "submit_answer" and sonuc.get("success"):
                         sonuclar[b] = defterler[b].kaydedilen_cevap
                         bitti[b] = True
+                    else:
+                        # NOT (KRITIK -- kullanicinin ana sikayeti): bu
+                        # ARTIK modele HIC geri beslenmiyordu -- model
+                        # kendi execute_python ciktisini, submit_answer
+                        # reddini ("once execute_python calistir" gibi)
+                        # veya "Unknown tool" hatasini HICBIR ZAMAN
+                        # GORMEDEN, tamamen KOR bicimde uretmeye devam
+                        # ediyordu. coz_yurutucu.py'nin (ardisik/tek-gorev
+                        # yolu) ZATEN yaptigi <tool_response> enjeksiyonu,
+                        # burada da AYNI bicimde -- YALNIZCA bu slota,
+                        # diger B-1 slota DOKUNMADAN -- uygulaniyor.
+                        tool_yaniti_metni = rwkv_tek_mesaji_sar({"role": "user", "content": tool_response_mesaji_olustur(sonuc)})
+                        tool_yaniti_tokenleri = tokenizer.encode(tool_yaniti_metni)
+                        if tool_yaniti_tokenleri:
+                            yeni_logit, durum = _ek_metni_tek_diziye_besle(
+                                z, n_layer, n_embd, n_head, head_size, b, B, tool_yaniti_tokenleri, durum
+                            )
+                            son_logits[b] = yeni_logit
                 if bitti[b]:
                     transkript_satiri_yaz({
                         "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
@@ -419,14 +496,8 @@ def toplu_gorevleri_coz(
                 ikaz_enjekte_edildi[b] = True
                 print(f"{_ONEK} ({deneme_etiketi})   {slot_gorev[b].name}: İKAZ enjekte ediliyor (yazma hakkı tükenmek üzere).")
                 ikaz_tokenleri = tokenizer.encode(rwkv_tek_mesaji_sar({"role": "user", "content": IKAZ_METNI}))
-                durum = _ek_metni_tek_diziye_besle(z, n_layer, n_embd, n_head, head_size, b, B, ikaz_tokenleri, durum)
-                # o dizinin son_logits'ini IKAZ sonrası duruma göre yenile
-                _tek_logit, durum = adim_toplu_maskeli(
-                    z, n_layer, n_embd, n_head, head_size,
-                    [uretilen_tokenler[b][-1] if uretilen_tokenler[b] else 0] * B, durum,
-                    [i == b for i in range(B)],
-                )
-                son_logits[b] = _tek_logit[b]
+                yeni_logit, durum = _ek_metni_tek_diziye_besle(z, n_layer, n_embd, n_head, head_size, b, B, ikaz_tokenleri, durum)
+                son_logits[b] = yeni_logit
                 transkript_satiri_yaz({
                     "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
                     "rol": "sistem-ikaz", "icerik": IKAZ_METNI,
