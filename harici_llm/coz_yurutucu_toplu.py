@@ -306,22 +306,43 @@ def toplu_gorevleri_coz(
     uretim_baslangici = time.time()
     adim = 0
     while adim < azami_yeni_token and not all(bitti):
-        aktif_maske = [not bitti[b] for b in range(B)]
+        # HIZ (kullanıcının açık talebi -- "model forward'ında değil diye
+        # ehemmiyet vermediğin ne varsa istisnasız düzelt"): aktif_maske ve
+        # gercek_uretim_maskesi ESKİDEN İKİ AYRI liste comprehension'ıyla
+        # (2*B Python yinelemesi) kuruluyordu; artık TEK bir Python
+        # döngüsünde birlikte hesaplanıyor (B yineleme).
+        aktif_maske = [False] * B
+        gercek_uretim_maske_listesi = [False] * B
+        for b in range(B):
+            aktif = not bitti[b]
+            aktif_maske[b] = aktif
+            gercek_uretim_maske_listesi[b] = aktif and not bekleyen_prompt[b]
         aktif_maske_t = torch.tensor(aktif_maske, device=cihaz, dtype=torch.bool)
-        gercek_uretim_maskesi = torch.tensor(
-            [not bitti[b] and not bekleyen_prompt[b] for b in range(B)], device=cihaz, dtype=torch.bool
-        )
+        gercek_uretim_maskesi = torch.tensor(gercek_uretim_maske_listesi, device=cihaz, dtype=torch.bool)
 
         if repetition_penalty and repetition_penalty > 1.0 and gercek_uretim_maskesi.any():
             etkilenen = gorulen_maske & gercek_uretim_maskesi.unsqueeze(1)
             son_logits = torch.where(etkilenen & (son_logits > 0), son_logits / repetition_penalty, son_logits)
             son_logits = torch.where(etkilenen & (son_logits <= 0), son_logits * repetition_penalty, son_logits)
 
-        if do_sample:
-            olasiliklar = torch.softmax(son_logits / max(temperature or 1.0, 1e-4), dim=-1)
-            ornekler = torch.multinomial(olasiliklar, 1).squeeze(1)
-        else:
-            ornekler = torch.argmax(son_logits, dim=-1)
+        # HIZ: softmax+multinomial ESKİDEN B satırın TAMAMI için (bekleyen_
+        # prompt tüketen VEYA zaten bitmiş -- örneklenen değeri HER HALÜKARDA
+        # atılacak slotlar DAHİL) hesaplanıyordu. Artık yalnızca GERÇEKTEN
+        # örneklenecek (gercek_uretim_maskesi=True) satırlar için hesaplanıp
+        # sonuç B boyutlu bir tensöre "saçılıyor" (scatter) -- diğer
+        # satırlardaki değer (0) zaten hiç KULLANILMIYOR (bitti[b] ise
+        # aşağıda 0 sabiti gönderiliyor, bekleyen_prompt[b] ise kuyruktan
+        # gerçek bir token alınıyor).
+        gercek_idx = gercek_uretim_maskesi.nonzero(as_tuple=True)[0]
+        ornekler = torch.zeros(B, dtype=torch.long, device=cihaz)
+        if gercek_idx.numel() > 0:
+            altset_logits = son_logits.index_select(0, gercek_idx)
+            if do_sample:
+                olasiliklar = torch.softmax(altset_logits / max(temperature or 1.0, 1e-4), dim=-1)
+                ornekler_altset = torch.multinomial(olasiliklar, 1).squeeze(1)
+            else:
+                ornekler_altset = torch.argmax(altset_logits, dim=-1)
+            ornekler.index_copy_(0, gercek_idx, ornekler_altset)
         ornekler_liste = ornekler.tolist()
 
         sonraki_tokenler: List[int] = []
