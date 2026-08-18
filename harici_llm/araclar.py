@@ -248,22 +248,42 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
         _sys.stdout = open(_os.devnull, "w")
         _sys.stderr = open(_os.devnull, "w")
 
-        ns: Dict[str, Any] = {}
+        # NOT (KRİTİK -- kullanıcının gerçek Kaggle transkriptinde tekrar
+        # tekrar görülen "name 'train_examples' is not defined",
+        # "name 'execute_python' is not defined", "name 'submit_answer'
+        # is not defined", "name '__name__' is not defined" gibi -- BİRBİRİYLE
+        # HİÇ İLGİSİZ görünen ama HEPSİ AYNI kök nedene sahip -- hataların
+        # GERÇEK kaynağı burasıydı: exec(kod, globals_sozlugu, ns) İKİ AYRI
+        # sözlükle çağrılıyordu. Python'ın klasik (ve iyi bilinen) bir
+        # tuzağı: exec()'e AYRI globals/locals verildiğinde, üst seviye kod
+        # `locals` (ns) sözlüğüne yazılır, AMA kod İÇİNDE tanımlanan bir
+        # fonksiyonun __globals__'ı `globals` sözlüğüne (locals'a DEĞİL)
+        # bağlanır -- yani üst seviyede tanımlanan bir değişkeni/fonksiyonu
+        # (ör. `train_examples = [...]` veya `def transform(): ...`)
+        # SONRADAN tanımlanan başka bir fonksiyonun İÇİNDEN çağırmak
+        # NameError verir, sanki o isim hiç var olmamış gibi -- BU MODELİN
+        # HATASI DEĞİLDİ, tamamen bizim sandbox'ımızın yapısındaki bir
+        # kusurdu. Standalone bir script'te REPRODUCE edilip (aynı hata
+        # mesajıyla) doğrulandı. Düzeltme: TEK bir paylaşılan sözlük hem
+        # globals hem locals olarak kullanılıyor (exec(kod, ns)) -- gerçek
+        # bir Python modülünün namespace davranışıyla AYNI, üst seviyedeki
+        # HİÇBİR isim artık nested fonksiyonlardan görünmez değil.
+        ns: Dict[str, Any] = {"__name__": "__main__", "__builtins__": {
+            "range": range, "len": len, "list": list, "dict": dict, "set": set,
+            "min": min, "max": max, "sum": sum, "enumerate": enumerate, "zip": zip,
+            "sorted": sorted, "reversed": reversed, "abs": abs, "int": int, "float": float,
+            "bool": bool, "str": str, "tuple": tuple, "map": map, "filter": filter,
+            "any": any, "all": all, "isinstance": isinstance, "print": print,
+            "iter": iter, "next": next, "round": round, "frozenset": frozenset,
+            "divmod": divmod, "pow": pow, "__import__": builtins.__import__,
+        }}
         try:
             # Import kisitlamasi KALDIRILDI (kullanici talebiyle): kod zaten
             # izole bir alt surecte (5 sn zaman asimiyla) calisiyor, ana
             # makineye zarar verme ihtimali yok -- gercek `builtins.__import__`
             # kullanilarak model istedigi HERHANGI BIR modulu (numpy, scipy,
             # vs.) serbestce import edebiliyor.
-            exec(kod, {"__builtins__": {
-                "range": range, "len": len, "list": list, "dict": dict, "set": set,
-                "min": min, "max": max, "sum": sum, "enumerate": enumerate, "zip": zip,
-                "sorted": sorted, "reversed": reversed, "abs": abs, "int": int, "float": float,
-                "bool": bool, "str": str, "tuple": tuple, "map": map, "filter": filter,
-                "any": any, "all": all, "isinstance": isinstance, "print": print,
-                "iter": iter, "next": next, "round": round, "frozenset": frozenset,
-                "divmod": divmod, "pow": pow, "__import__": builtins.__import__,
-            }}, ns)
+            exec(kod, ns)
             kuyruk.put(("basari", _json_uyumlu_yap(ns.get("sonuc", ns.get("result")))))
         except Exception as exc:
             kuyruk.put(("hata", str(exc)))
