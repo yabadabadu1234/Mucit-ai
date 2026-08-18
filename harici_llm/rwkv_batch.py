@@ -22,6 +22,7 @@ Bu eşdeğerlik, test_boru_hatti.py'de kurulu GERÇEK `rwkv` paketiyle
 üretilen referans çıktıya karşı) sayısal olarak doğrulanır.
 """
 import os
+import threading
 import traceback
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
@@ -100,38 +101,59 @@ def _cmix_adim_toplu(x, x_prev, x_k, K_, V_):
 # yorumlayicisinin + CUDA kernel BASLATMA (launch) gecikmesinin baskin
 # oldugu bir rejimden geliyor (klasik "kernel-launch-bound" darbogaz).
 #
-# DENENDI, GERCEK Kaggle kosusunda KANITLANMIS SEKILDE CALISMIYOR: fikir
-# torch.compile(mode="reduce-overhead") ile bu adimi TEK BIR derlenmis
-# grafige (CUDA Graph replay dahil) donusturmekti. Ama kullanicinin
-# GERCEK Kaggle logu, coklu_gpu.py'nin HER GPU'yu AYRI bir Python
-# threading.Thread'inde (surec DEGIL) calistirdigi bu mimaride, HER
-# denemede iki farkli sekilde coktugunu gosterdi:
-#   - cuda:1: "AssertionError: assert torch._C._is_key_in_tls(...)" --
-#     inductor'un cudagraph_trees mekanizmasi thread-local state'e
-#     dayanir; derleme BIR thread'de yapilip calisma zamaninda (potansiyel
-#     olarak) FARKLI bir baglamdan tetiklenince bu anahtar bulunamiyor.
-#   - cuda:0: "Detected that you are using FX to symbolically trace a
-#     dynamo-optimized function" -- dynamo'nun kendi ic tutarlilik
-#     denetimi.
-# HER IKI hata da calisma ZAMANINDA (derleme SIRASINDA degil) cikiyor --
-# asagidaki try/except bunlari YAKALAYIP kalici olarak eager'a dusuyor
-# (bu yuzden calisiyordu, ama HER kosuda derleme+basarisiz calisma
-# denemesi icin bosa zaman harcaniyordu). DAHA CIDDISI: cuda:2 gibi
-# derleme+ILK calistirma BASARILI gorunen bir cihazda bile, CUDA
-# Graph'in "girdi tensorlerinin ADRESI sabit kalir" varsayimi bizim
-# gercek kullanimimizla CELISIYOR -- adim_toplu_maskeli, `durum`
-# listesindeki her elemani HER adimda torch.where ile YENI bir tensor
-# nesnesiyle DEGISTIRIYOR (_maske_uygula). Bu, hicbir exception
-# FIRLATMADAN SESSIZCE yanlis/eski bellek okuyan bir CUDA Graph
-# replay'ine yol acabilir -- yani basarili gorunen bir derleme bile
-# GUVENLI degil. Bu ikisinin BILESIMI (kanitlanmis coklu cokme + sessiz
-# yanlislik riski) yuzunden bu artik VARSAYILAN OLARAK KAPALI. Uyumlu
-# (tek-thread/tek-surec, durum tensorlerini yerinde guncelleyen) baska
-# bir dagitimda denemek isteyen RWKV_BATCH_TORCH_COMPILE=1 ile ACABILIR,
-# ama bu depodaki coklu_gpu.py mimarisiyle ONERILMEZ.
-_TORCH_COMPILE_ETKIN = os.environ.get("RWKV_BATCH_TORCH_COMPILE", "0") == "1"
+# KOK NEDEN BULUNDU VE DUZELTILDI (kullanicinin gercek Kaggle logu iki
+# AYRI hatayi acikca gosterdi -- ikisi de coklu_gpu.py'nin HER GPU'yu
+# AYRI bir Python threading.Thread'inde, surec DEGIL, calistirmasindan
+# kaynaklaniyor, ve ikisinin de BILINEN, standart cozumu var):
+#
+#   1) cuda:1: "AssertionError: assert torch._C._is_key_in_tls(...)"
+#      -- bu, SADECE mode="reduce-overhead"in kullandigi CUDA Graph
+#      Trees mekanizmasindan (inductor/cudagraph_trees.py) gelir; o
+#      mekanizma thread-local state'e dayanir ve DOKUMANLI olarak coklu
+#      thread'ler arasinda GUVENLI DEGILDIR. COZUM: mode="reduce-overhead"
+#      (CUDA Graph capture/replay) KULLANILMIYOR ARTIK -- asagida sade
+#      torch.compile(fn) (mode belirtilmeden, "default" backend)
+#      kullaniliyor. Bu hala Triton/inductor ile KUCUK islemleri BUYUK,
+#      FUZE edilmis kernel'lere birlestirip kernel-baslatma sayisini
+#      ciddi olcude azaltir (asil hedefimiz), ama CUDA Graph replay
+#      YAPMAZ -- yani cudagraph_trees'in thread-local durumuna hic
+#      girmez, DOLAYISIYLA bu spesifik hata SINIFI kokten ortadan kalkar.
+#      Yan fayda: "girdi tensorlerinin adresi sabit kalir" varsayimi da
+#      (CUDA Graph'e ozgu) artik gecerli degil -- adim_toplu_maskeli'nin
+#      `durum` listesini her adimda YENI tensorlerle degistirmesi (bkz.
+#      _maske_uygula) ARTIK bir sessiz-yanlislik riski TASIMIYOR.
+#
+#   2) cuda:0: "Detected that you are using FX to symbolically trace a
+#      dynamo-optimized function" -- TorchDynamo'nun kendisi RESMEN
+#      thread-safe DEGILDIR (PyTorch belgeleri: "TorchDynamo is
+#      currently not thread safe"); N GPU thread'i NEREDEYSE AYNI ANDA
+#      kendi ILK cagrisinda derlemeyi/izlemeyi (tracing) TETIKLEYINCE,
+#      dynamo'nun paylasilan ic durumu (frame evaluation hook'lari,
+#      guard insasi) thread'ler arasinda YARISA girip BOZULABILIYOR --
+#      gordugumuz hata TAM OLARAK bu bilinen sinifta. COZUM: her
+#      cihazin ILK gercek cagrisini (derlemenin/izlemenin fiilen
+#      gerceklestigi an) KURESEL bir kilit (_DERLEME_KILIDI) altinda
+#      SERILESTIRIYORUZ -- yani N GPU thread'i ayni anda DERLEMEYE
+#      GIRMEZ, sirayla derlenir. Derleme/ilk-cagri BIR KEZ tamamlandiktan
+#      SONRA o cihazin derlenmis fonksiyonu kilitsiz, TAM PARALEL
+#      calisir (bu yuzden coklu-GPU paralelligi KAYBEDILMEZ -- yalnizca
+#      baslangictaki kisa derleme penceresi sirali hale gelir).
+#
+# Bu iki hedefli duzeltmeyle torch.compile artik VARSAYILAN OLARAK
+# tekrar ACIK. RWKV_BATCH_TORCH_COMPILE=0 ile HALA kapatilabilir (ornegin
+# Kaggle'in arac zincirinde triton/inductor'un kendisi BASARISIZ olursa
+# -- bu durumda zaten asagidaki try/except o cihaz icin KALICI eager'a
+# duser, calisma DURMAZ).
+_TORCH_COMPILE_ETKIN = os.environ.get("RWKV_BATCH_TORCH_COMPILE", "1") != "0"
 _derlenmis_cekirdek_onbellek: Dict[str, Any] = {}
 _derleme_basarisiz_cihazlar: set = set()
+# TorchDynamo resmen thread-safe DEGIL -- N GPU thread'inin AYNI ANDA
+# derlemeye/ilk-izlemeye girmesini onlemek icin KURESEL bir kilit
+# kullaniliyor (yalnizca ILK cagri boyunca tutulur, bkz. yukaridaki not
+# ve asagidaki adim_toplu). Derlenmis fonksiyonun SONRAKI cagrilari
+# kilitsiz, TAM PARALEL calisir.
+_DERLEME_KILIDI = threading.Lock()
+_ilk_cagrisi_tamamlanan_cihazlar: set = set()
 
 
 def _adim_toplu_cekirdek(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: int, head_size: int,
@@ -200,10 +222,16 @@ def _cekirdek_fonksiyonu_al(cihaz: torch.device):
         return _adim_toplu_cekirdek
     if anahtar not in _derlenmis_cekirdek_onbellek:
         try:
-            _derlenmis_cekirdek_onbellek[anahtar] = torch.compile(_adim_toplu_cekirdek, mode="reduce-overhead")
+            # NOT: mode="reduce-overhead" (CUDA Graph Trees) BİLİNÇLİ OLARAK
+            # kullanılmıyor -- bkz. yukarıdaki uzun not (thread-local state'e
+            # dayanır, coklu-thread mimarimizde çöker). Mode belirtilmeden
+            # (varsayılan inductor backend'i) yine Triton ile küçük
+            # işlemleri füze edilmiş kernel'lere birleştirip kernel-başlatma
+            # sayısını azaltır, ama CUDA Graph replay YAPMAZ.
+            _derlenmis_cekirdek_onbellek[anahtar] = torch.compile(_adim_toplu_cekirdek)
             print(
-                f"[rwkv_batch] {anahtar}: adim_toplu için torch.compile (mode=reduce-overhead) etkinleştirildi "
-                f"-- prefill/üretimdeki tekrarlanan küçük adımların kernel-başlatma yükü azaltılacak."
+                f"[rwkv_batch] {anahtar}: adim_toplu için torch.compile (CUDA Graph'siz -- bkz. dosya başındaki "
+                f"not) etkinleştirildi -- prefill/üretimdeki tekrarlanan küçük adımların kernel-başlatma yükü azaltılacak."
             )
         except Exception:
             _derleme_hatasini_bildir("torch.compile derlemesi", anahtar)
@@ -227,12 +255,32 @@ def adim_toplu(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: in
     cihaz = z['emb.weight'].device
     token_tensor = torch.as_tensor(token_idler, device=cihaz, dtype=torch.long)
     fn = _cekirdek_fonksiyonu_al(cihaz)
+    anahtar = str(cihaz)
+    # NOT (Turkce): TorchDynamo thread-safe DEGIL -- her cihazin fiili
+    # derleme/izlemenin GERCEKTEN gerceklestigi ILK cagrisini kuresel bir
+    # kilit altinda SERILESTIRIYORUZ (bkz. dosya basindaki not). Bu ilk
+    # cagri tamamlandiktan SONRA ayni cihaz icin bir daha kilit
+    # TUTULMUYOR -- derlenmis fonksiyon serbestce, PARALEL calisir.
+    ilk_cagri_mi = fn is not _adim_toplu_cekirdek and anahtar not in _ilk_cagrisi_tamamlanan_cihazlar
+    if ilk_cagri_mi:
+        with _DERLEME_KILIDI:
+            # Kilidi beklerken baska bir thread AYNI cihazin ilk cagrisini
+            # ZATEN tamamlamis olabilir -- cift kontrol.
+            ilk_cagri_mi = anahtar not in _ilk_cagrisi_tamamlanan_cihazlar
+            if ilk_cagri_mi:
+                try:
+                    sonuc = fn(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
+                    _ilk_cagrisi_tamamlanan_cihazlar.add(anahtar)
+                    return sonuc
+                except Exception:
+                    _derleme_hatasini_bildir("derlenmiş adim_toplu ÇALIŞMA ZAMANI (ilk çağrı)", anahtar)
+                    _derleme_basarisiz_cihazlar.add(anahtar)
+                    return _adim_toplu_cekirdek(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
     try:
         return fn(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
     except Exception:
         if fn is _adim_toplu_cekirdek:
             raise
-        anahtar = str(cihaz)
         _derleme_hatasini_bildir("derlenmiş adim_toplu ÇALIŞMA ZAMANI", anahtar)
         _derleme_basarisiz_cihazlar.add(anahtar)
         return _adim_toplu_cekirdek(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
