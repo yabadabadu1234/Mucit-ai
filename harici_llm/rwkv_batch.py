@@ -268,28 +268,47 @@ def adim_toplu(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_head: in
     başarısız olursa MATEMATİKSEL OLARAK AYNI eager kod çalışır."""
     cihaz = z['emb.weight'].device
     token_tensor = torch.as_tensor(token_idler, device=cihaz, dtype=torch.long)
-    fn = _cekirdek_fonksiyonu_al(cihaz)
     anahtar = str(cihaz)
-    # NOT (Turkce): TorchDynamo thread-safe DEGIL -- her cihazin fiili
-    # derleme/izlemenin GERCEKTEN gerceklestigi ILK cagrisini kuresel bir
-    # kilit altinda SERILESTIRIYORUZ (bkz. dosya basindaki not). Bu ilk
-    # cagri tamamlandiktan SONRA ayni cihaz icin bir daha kilit
-    # TUTULMUYOR -- derlenmis fonksiyon serbestce, PARALEL calisir.
-    ilk_cagri_mi = fn is not _adim_toplu_cekirdek and anahtar not in _ilk_cagrisi_tamamlanan_cihazlar
-    if ilk_cagri_mi:
+    # NOT (Turkce -- BURADA GERCEK BIR HATA VARDI, kullanicinin gercek
+    # Kaggle logu bunu kanitladi: bir onceki "duzeltme" YALNIZCA ilk
+    # GERCEK CAGRIYI (fn(...) calistirmayi) kilit altina aliyordu, ama
+    # _cekirdek_fonksiyonu_al(cihaz) -- yani torch.compile(_adim_toplu_
+    # cekirdek) SARMA cagrisinin KENDISI -- KILIT DISINDA, HER 4 thread
+    # icin NEREDEYSE AYNI ANDA cagriliyordu (log: 4 cihazin "etkinlestirildi"
+    # mesaji AYNI saniyede basiliyordu). torch.compile(), SARDIGI ham
+    # Python fonksiyonunun (BURADA: TEK, PAYLASILAN _adim_toplu_cekirdek
+    # kod nesnesi -- 4 cihaz AYNI fonksiyonu sarar) frame-degerlendirme
+    # kancasini/guard kayitlarini dynamo'nun PAYLASILAN ic durumuna
+    # islemeye BASLAR -- bu, "lazy" olsa da (gercek izleme ilk cagriya
+    # ertelenir) GERCEK CAGRI OLMADAN BILE thread-guvenli DEGILDIR. 4
+    # thread AYNI ANDA AYNI kod nesnesini sarinca dynamo'nun ic kayitlari
+    # CAKISIYOR, ve SONRA gelen ilk gercek cagri (benim kilidim koruyordu)
+    # bu ONCEDEN BOZULMUS durumu miras alip "FX ile symbolik izleme"
+    # hatasini firlatiyordu. DUZELTME: artik torch.compile() SARMA
+    # cagrisinin KENDISI de (_cekirdek_fonksiyonu_al icinde) BU kilit
+    # altinda, ilk gercek cagriyla AYNI kritik bolgede yapiliyor.
+    if (_TORCH_COMPILE_ETKIN and cihaz.type == "cuda"
+            and anahtar not in _derleme_basarisiz_cihazlar
+            and anahtar not in _ilk_cagrisi_tamamlanan_cihazlar):
         with _DERLEME_KILIDI:
-            # Kilidi beklerken baska bir thread AYNI cihazin ilk cagrisini
-            # ZATEN tamamlamis olabilir -- cift kontrol.
-            ilk_cagri_mi = anahtar not in _ilk_cagrisi_tamamlanan_cihazlar
-            if ilk_cagri_mi:
-                try:
-                    sonuc = fn(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
-                    _ilk_cagrisi_tamamlanan_cihazlar.add(anahtar)
-                    return sonuc
-                except Exception:
-                    _derleme_hatasini_bildir("derlenmiş adim_toplu ÇALIŞMA ZAMANI (ilk çağrı)", anahtar)
-                    _derleme_basarisiz_cihazlar.add(anahtar)
-                    return _adim_toplu_cekirdek(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
+            # Kilidi beklerken baska bir thread AYNI cihazin derlemesini/
+            # ilk cagrisini ZATEN tamamlamis (veya basarisiz kilmis)
+            # olabilir -- cift kontrol.
+            if anahtar not in _derleme_basarisiz_cihazlar and anahtar not in _ilk_cagrisi_tamamlanan_cihazlar:
+                fn = _cekirdek_fonksiyonu_al(cihaz)  # torch.compile(...) SARMA cagrisi ARTIK kilit ALTINDA
+                if fn is not _adim_toplu_cekirdek:
+                    try:
+                        sonuc = fn(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
+                        _ilk_cagrisi_tamamlanan_cihazlar.add(anahtar)
+                        return sonuc
+                    except Exception:
+                        _derleme_hatasini_bildir("derlenmiş adim_toplu ÇALIŞMA ZAMANI (ilk çağrı)", anahtar)
+                        _derleme_basarisiz_cihazlar.add(anahtar)
+                        return _adim_toplu_cekirdek(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
+    # Buraya ya (a) compile kapalı/CPU/önceden başarısız, ya da (b) bu
+    # cihaz için derleme+ilk çağrı ZATEN (kilit altında) tamamlanmış
+    # olarak gelinir -- kilitsiz, tam paralel hızlı yol.
+    fn = _cekirdek_fonksiyonu_al(cihaz)
     try:
         return fn(z, n_layer, n_embd, n_head, head_size, token_tensor, durum)
     except Exception:
