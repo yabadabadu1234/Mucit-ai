@@ -129,12 +129,15 @@ STRICT OPERATING PROCEDURE — follow every step, in order, every time:
    in your rule or code, and submit again — never patch the shape by truncating or padding rows
    to force them equal, since that discards information about what your rule actually computed.
 
-Example function call format:
-
-User: Translate "Will it rain tomorrow?" into Japanese.
+Example function call format (using the ONLY two real tools -- execute_python to test your rule,
+submit_answer to record your final grid):
 
 Assistant: ```json
-{{"name": "translate_text", "arguments": {{"text": "Will it rain tomorrow?", "target_language": "Japanese"}}}}
+{{"name": "execute_python", "arguments": {{"code": "def transform(grid):\\n    return [[grid[r][c] for c in range(len(grid[0]))] for r in range(len(grid))]\\n\\nfor inp, out in train_examples:\\n    assert transform(inp) == out, 'rule failed on a train example'\\nprint('rule verified against all train examples')"}}}}
+```
+
+Assistant: ```json
+{{"name": "submit_answer", "arguments": {{"grid": [[0, 1], [1, 0]]}}}}
 ```
 """
 
