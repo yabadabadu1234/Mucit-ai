@@ -243,10 +243,30 @@ def adim_toplu_maskeli(z: Dict[str, torch.Tensor], n_layer: int, n_embd: int, n_
     kavram yoktur (o zaten hep B=1'dir); bu fonksiyon TAMAMEN bizim
     eklediğimiz, ama matematiksel olarak forward_one()'ın B kere ayrı ayrı,
     HER BİRİNİN KENDİ GERÇEK token dizisiyle çağrılmasıyla AYNI sonucu
-    üreten bir mekanizmadır (bkz. test_boru_hatti.py'deki doğrulama)."""
+    üreten bir mekanizmadır (bkz. test_boru_hatti.py'deki doğrulama).
+
+    HIZ (kullanıcının gerçek darboğaz talebi): `_adim_toplu_cekirdek`
+    CUDA'da torch.compile(mode="reduce-overhead") ile TEK bir derlenmiş
+    grafiğe/CUDA-graph'e indirgeniyor -- ama bu maskeleme döngüsü (aşağıda)
+    o derlenmiş grafiğin TAMAMEN DIŞINDA, HER adımda n_layer*3 (32
+    katmanlı bir modelde 96) AYRI eager `torch.where` çağrısı yapıyordu.
+    Bu da tam olarak compile'ın ortadan kaldırmaya çalıştığı "kernel-
+    başlatma-sınırlı" gecikmeyi, derlenmiş çekirdeğin HEMEN ARDINDAN
+    geri getiriyordu. Oysa üretim döngüsünün ASIL sık durumunda (henüz
+    hiçbir slot bitmemiş/donmamışken) aktif_maske TAMAMEN True'dur --
+    bu durumda maskeleme matematiksel olarak TAM BİR NO-OP'tur (yeni
+    durum, eskisinin YERİNE geçer, hiçbir satır korunmaz). Bu döngü artık
+    yalnızca GERÇEKTEN bir slot donmuşken (bazı b'ler aktif_maske=False)
+    çalıştırılıyor; aksi halde yeni_durum DOĞRUDAN, hiç maskelemeden
+    döndürülüyor -- sonuç matematiksel olarak BİREBİR AYNI (True/False
+    karışık değilken torch.where(True, yeni, eski) zaten her zaman
+    yeni'yi seçer), yalnızca 96 gereksiz kernel başlatması adım başına
+    ORTADAN KALKIYOR."""
+    maske_t = torch.as_tensor(aktif_maske, device=z['emb.weight'].device, dtype=torch.bool)
+    if maske_t.all():
+        return adim_toplu(z, n_layer, n_embd, n_head, head_size, token_idler, durum)
     eski_durum = list(durum)  # sığ kopya: adim_toplu ESKİ tensörleri MUTATE ETMEZ, yalnızca liste yuvalarını YENİ tensörlerle değiştirir
     yeni_logits, yeni_durum = adim_toplu(z, n_layer, n_embd, n_head, head_size, token_idler, durum)
-    maske_t = torch.as_tensor(aktif_maske, device=yeni_logits.device, dtype=torch.bool)
     for i in range(len(yeni_durum)):
         yeni_durum[i] = _maske_uygula(yeni_durum[i], eski_durum[i], maske_t)
     return yeni_logits, yeni_durum
