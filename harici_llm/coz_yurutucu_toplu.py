@@ -318,10 +318,18 @@ def toplu_gorevleri_coz(
             continue
 
         if bitis_zamani is not None and time.time() > bitis_zamani and not all(bitti):
+            # NOT (Turkce): "SURE BUTCESI TUKENDI" burada YALNIZCA bu ÇAĞRIYA
+            # verilen bitis_zamani (ör. attempt_1'e ayrılan YARI bütçe) icin
+            # gecerlidir -- TOPLAM calisma_suresi_saniye (ornegin 11.5 saat)
+            # DEGIL. Kullanicinin "daha 11.5 saat olmamis ki" itirazi tam bu
+            # noktada: mesaj bunu acikca soylemedigi icin TUM kosunun
+            # bitis sanılıyordu. Artik hangi bitis_zamani'nin doldugu ve
+            # bunun TOPLAM butceyle AYNI olmayabilecegi acikca belirtiliyor.
             print(
-                f"{_ONEK} ({deneme_etiketi})   SÜRE BÜTÇESİ TÜKENDİ: {adim} adımda, {sum(1 for x in bitti if not x)}/{B} "
-                f"görev HÂLÂ bitmemişken durduruluyor -- bu partinin kalanı boş tahminle işaretlenecek "
-                f"(kapanış anında YENİ görev ADMİT EDİLMEZ)."
+                f"{_ONEK} ({deneme_etiketi})   BU ÇAĞRIYA AYRILAN SÜRE (bitis_zamani={time.strftime('%H:%M:%S', time.localtime(bitis_zamani))}) "
+                f"DOLDU -- TOPLAM koşu bütçesi değil, yalnızca bu partiye/denemeye (attempt) ayrılan pay. "
+                f"{adim} adımda, {sum(1 for x in bitti if not x)}/{B} görev HÂLÂ bitmemişken durduruluyor -- "
+                f"bu partinin kalanı boş tahminle işaretlenecek (kapanış anında YENİ görev ADMİT EDİLMEZ)."
             )
             for b in range(B):
                 if not bitti[b]:

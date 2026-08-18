@@ -194,6 +194,26 @@ def execute_python_arac(code: str, defter: Optional[CevapDefteri] = None) -> Dic
     return {"success": True, "result": sonuc}
 
 
+def _json_uyumlu_yap(deger: Any) -> Any:
+    """execute_python ile çalıştırılan (numpy'yi serbestçe kullanabilen)
+    modelin ürettiği 'sonuc'/'result' değişkenini, JSON'a (transkript.py,
+    tool_response) GÜVENLE yazılabilecek düz Python türlerine çevirir --
+    numpy.ndarray/numpy skaler türleri GEÇERLİ JSON DEĞİLDİR ve json.dumps
+    bunlarla TypeError fırlatır (kullanıcının gerçek Kaggle logunda gördüğü
+    "Object of type ndarray is not JSON serializable" çökmesinin kök nedeni
+    tam olarak buydu -- tek bir görevin numpy döndüren kodu, o görevin
+    bulunduğu 65 görevlik SÜREKLİ ADMİSYON partisinin TAMAMINI çöktürüyordu)."""
+    if hasattr(deger, "tolist"):  # numpy.ndarray ve numpy skaler türleri
+        return _json_uyumlu_yap(deger.tolist())
+    if isinstance(deger, dict):
+        return {str(k): _json_uyumlu_yap(v) for k, v in deger.items()}
+    if isinstance(deger, (list, tuple)):
+        return [_json_uyumlu_yap(v) for v in deger]
+    if deger is None or isinstance(deger, (bool, int, float, str)):
+        return deger
+    return str(deger)
+
+
 def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
     """execute_python araci icin: transform(grid) imzasi sart kosmadan,
     serbest bir kod parcasini ayni AST guvenlik/izolasyon rejimiyle
@@ -207,6 +227,27 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
         return False, "code failed the security check (forbidden eval/exec/open/dunder)"
 
     def _calistir(kuyruk: "multiprocessing.Queue") -> None:
+        import io
+        import os as _os
+        import sys as _sys
+
+        # NOT (Turkce): kullanicinin gercek Kaggle logunda sikayet ettigi
+        # "ekrana basliksiz, manasiz garip seyler basiliyor" (ornegin
+        # tekrar tekrar basilan sayi dizileri) -- kok neden: model uretilen
+        # execute_python kodu icinde ozgurce print() cagirabiliyor
+        # (asagida "print": print ile GERCEK builtin veriliyor), ve bu kod
+        # AYRI bir OS surecinde (multiprocessing.Process) calistigi icin o
+        # surecin stdout'u VARSAYILAN OLARAK ana surecinkiyle AYNI dosya
+        # tanimlayicisini (fd 1) miras aliyordu -- yani modelin KENDI
+        # ic-gozlem/debug amacli print()leri, bizim GERCEK log satirlarimizla
+        # AYNI Kaggle log akisina, hicbir etiket olmadan karisiyordu. Burada
+        # bu ALT SURECIN stdout/stderr'i os.devnull'a yonlendirilerek TAMAMEN
+        # susturuluyor -- modelin print() cikisi zaten skorlanmiyor/
+        # kullanilmiyor (yalnizca "sonuc"/"result" degiskeni okunuyor), bu
+        # yuzden atmak veri kaybi degil, gurultu temizligi.
+        _sys.stdout = open(_os.devnull, "w")
+        _sys.stderr = open(_os.devnull, "w")
+
         ns: Dict[str, Any] = {}
         try:
             # Import kisitlamasi KALDIRILDI (kullanici talebiyle): kod zaten
@@ -223,7 +264,7 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
                 "iter": iter, "next": next, "round": round, "frozenset": frozenset,
                 "divmod": divmod, "pow": pow, "__import__": builtins.__import__,
             }}, ns)
-            kuyruk.put(("basari", ns.get("sonuc", ns.get("result"))))
+            kuyruk.put(("basari", _json_uyumlu_yap(ns.get("sonuc", ns.get("result")))))
         except Exception as exc:
             kuyruk.put(("hata", str(exc)))
 

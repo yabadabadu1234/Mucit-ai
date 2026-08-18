@@ -35,8 +35,20 @@ def transkript_satiri_yaz(kayit: Dict[str, Any]) -> None:
     try:
         with _YAZMA_KILIDI:
             with open(TRANSKRIPT_YOLU, "a", encoding="utf-8") as f:
-                f.write(json.dumps(kayit, ensure_ascii=False) + "\n")
+                # NOT (Turkce): kullanicinin gercek Kaggle logunda gordugu
+                # "Object of type ndarray is not JSON serializable" cokmesinin
+                # KOK NEDENI burasiydi -- modelin execute_python koduyla
+                # (numpy serbestce import edilebiliyor) urettigi bir sonuc
+                # (ornegin bir numpy dizisi) "icerik" olarak buraya geldiginde
+                # json.dumps TypeError firlatiyordu, ama asagida SADECE
+                # OSError yakalaniyordu -- TypeError yakalanmadan yukari
+                # firlayip TUM 65 gorevlik SUREKLI ADMISYON partisini
+                # coksturuyordu. default=str, JSON'un DOGRUDAN temsil
+                # edemedigi HERHANGI bir nesneyi (ndarray, custom sinif, vb.)
+                # sessizce metne cevirir -- gelecekte baska bir tur icin de
+                # ayni cokme bir daha YASANMAZ.
+                f.write(json.dumps(kayit, ensure_ascii=False, default=str) + "\n")
                 f.flush()
                 os.fsync(f.fileno())
-    except OSError as yazma_hatasi:
+    except (OSError, TypeError, ValueError) as yazma_hatasi:
         print(f"[transkript] YAZMA HATASI (yoksayılıp devam edilecek): {yazma_hatasi}")

@@ -708,6 +708,70 @@ def test_16_execute_python_gercekten_numpy_calistirabiliyor_mu() -> None:
     _dogrula(not basarisiz, "eval/exec/open çağrıları hâlâ reddediliyor (import serbestisi başka bir korumayı gevşetmedi)")
 
 
+def test_16b_execute_python_ham_numpy_sonucu_ve_stdout_sizintisi_duzeltildi_mi() -> None:
+    print("[test 16b] araclar.kodu_guvenle_calistir_serbest: kullanıcının gerçek Kaggle logunda gördüğü iki hata -- "
+          "(1) 'Object of type ndarray is not JSON serializable' (65 görevlik bir SÜREKLİ ADMİSYON partisinin "
+          "TAMAMINI çöktürdü), (2) modelin execute_python içindeki print() çıktısının etiketsizce Kaggle log "
+          "akışına sızması -- ikisi de düzeltildi mi?...")
+
+    import io
+    import contextlib
+    import json as _json
+
+    from araclar import _json_uyumlu_yap, kodu_guvenle_calistir_serbest
+    from transkript import transkript_satiri_yaz
+
+    # --- (1) execute_python'un SONUCU .tolist() ile ÇEVRİLMEDEN, HAM bir
+    # numpy dizisi/skaleri olarak bırakılırsa -- gerçek transkriptte
+    # görüldüğü gibi -- artık çökmeden JSON-uyumlu bir değere dönüşüyor mu?
+    basarili, sonuc = kodu_guvenle_calistir_serbest(
+        "import numpy as np\nsonuc = np.array([[2, 2, 2], [2, 2, 2]])\n"  # önceki halde: .tolist() UNUTULURSA ham ndarray dönerdi
+    )
+    _dogrula(basarili, "ham (dönüştürülmemiş) bir numpy dizisi döndüren kod ÇÖKMEDEN başarıyla çalıştı")
+    _dogrula(sonuc == [[2, 2, 2], [2, 2, 2]], f"ham numpy dizisi otomatik olarak düz Python listesine çevrildi (bulunan: {sonuc})")
+    _dogrula(_json.dumps(sonuc) is not None, "sonuç GERÇEKTEN json.dumps ile serileştirilebiliyor (önceki halde TypeError fırlatırdı)")
+
+    basarili2, sonuc2 = kodu_guvenle_calistir_serbest("import numpy as np\nsonuc = np.int64(7)\n")
+    _dogrula(basarili2 and sonuc2 == 7 and isinstance(sonuc2, int), f"ham bir numpy skaleri de düz Python int'ine çevrildi (bulunan: {sonuc2!r}, tür: {type(sonuc2)})")
+
+    # --- _json_uyumlu_yap birim testi: iç içe yapılar da doğru çevriliyor mu?
+    ic_ice = {"grid": np.array([[1, 2], [3, 4]]), "sayi": 5}
+    cevrilmis = _json_uyumlu_yap(ic_ice)
+    _dogrula(cevrilmis == {"grid": [[1, 2], [3, 4]], "sayi": 5}, f"iç içe dict/ndarray yapısı da düzgün çevrildi (bulunan: {cevrilmis})")
+
+    # --- Uçtan uca: transkript_satiri_yaz artık HAM bir ndarray içeren bir
+    # kaydı çökmeden yazabiliyor mu (kullanıcının gördüğü asıl çökme
+    # noktası -- SÜREKLİ ADMİSYON partisinin TAMAMINI batıran hata)?
+    import os
+    import tempfile
+
+    import transkript as _transkript_modulu
+    eski_yol = _transkript_modulu.TRANSKRIPT_YOLU
+    with tempfile.TemporaryDirectory() as gecici_dizin:
+        _transkript_modulu.TRANSKRIPT_YOLU = os.path.join(gecici_dizin, "transkript.jsonl")
+        try:
+            transkript_satiri_yaz({"gorev": "test-0", "icerik": {"success": True, "result": np.array([[1, 2], [3, 4]])}})
+        finally:
+            yazilan_yol = _transkript_modulu.TRANSKRIPT_YOLU
+            _transkript_modulu.TRANSKRIPT_YOLU = eski_yol
+        with open(yazilan_yol, "r", encoding="utf-8") as f:
+            satir = f.readline()
+        _dogrula(satir.strip() != "", "transkript_satiri_yaz HAM bir ndarray içeren kayıtla ÇÖKMEDEN diske GERÇEKTEN bir satır yazdı (önceki halde: TypeError, hiçbir satır yazılmazdı)")
+        _dogrula(_json.loads(satir) is not None, "yazılan satır GEÇERLİ JSON (default=str ile ndarray güvenle metne çevrildi)")
+
+    # --- (2) print() sızıntısı: modelin execute_python içindeki print()
+    # çıktısı artık PARENT sürecin (bizim asıl log akışımızın) stdout'una
+    # SIZMIYOR mu?
+    yakalanan = io.StringIO()
+    with contextlib.redirect_stdout(yakalanan):
+        basarili3, _sonuc3 = kodu_guvenle_calistir_serbest(
+            "print('20202000400400040040004004000400400040040')\nsonuc = 1\n"
+        )
+    _dogrula(basarili3, "print() içeren kod hâlâ başarıyla çalışıyor")
+    _dogrula("20202000400400040040004004000400400040040" not in yakalanan.getvalue(),
+              f"modelin execute_python içindeki print() çıktısı artık PARENT sürecin stdout'una SIZMIYOR (bulunan çıktı: {yakalanan.getvalue()!r})")
+
+
 def test_17_yarisma_false_dogruluk_kontrolu() -> None:
     print("[test 17] YARISMA=False (deneme) modu: gonderim_uret._dogrulugu_kontrol_et gerçek cevapla doğru/yanlış ve gerçek-submit durumunu doğru tespit ediyor mu?...")
 
@@ -2410,6 +2474,7 @@ def calistir() -> None:
     test_14_rwkv_oturum_turler_arasi_durum_tasir_yeniden_islemez()
     test_15_coz_yurutucu_artimli_yol_uctan_uca()
     test_16_execute_python_gercekten_numpy_calistirabiliyor_mu()
+    test_16b_execute_python_ham_numpy_sonucu_ve_stdout_sizintisi_duzeltildi_mi()
     test_17_yarisma_false_dogruluk_kontrolu()
     test_18_coklu_gpu_padisah_vezir_gercekten_paralel_mi()
     test_19_ikaz_esigi_yazma_hakki_tukenmek_uzere()
