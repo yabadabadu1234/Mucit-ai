@@ -282,8 +282,30 @@ def kodu_guvenle_calistir_serbest(kod: str) -> Tuple[bool, Any]:
     return (durum == "basari"), sonuc
 
 
+# Gerçek Kaggle transkriptlerinde model, "execute_python" YERİNE kod
+# çalıştırma NİYETİYLE (ama pretrain verisinden hatırladığı BAŞKA bir
+# ajan/fonksiyon-çağırma şemasının ismiyle) bu isimlerden birini
+# çağırıyordu -- HEPSİ anlamca "kod çalıştır" demek, TEK bir gerçek
+# yeteneğimize (execute_python) karşılık geliyorlar. Bunları TANIMAK
+# (execute_python'a yönlendirmek), modelin ANLAMSIZ/alakasız isimleri
+# (ör. "calculate_shipping", "validate_password" -- ARC bulmacasıyla
+# HİÇBİR ilgisi olmayan, sentetik fonksiyon-çağırma eğitim verisinden
+# ezberlenmiş isimler) TANIMLAMAKTAN farklıdır: buradakiler GERÇEKTEN
+# bizim TEK BİR yeteneğimizin (execute_python) eş anlamlılarıdır, o
+# yüzden yönlendirmek doğru bir düzeltme; alakasız isimleri "tanımlamak"
+# ise modelin hiçbir anlamı olmayan bir çağrıyı sanki bir şey yapmış gibi
+# ödüllendirmek olurdu.
+_EXECUTE_PYTHON_TAKMA_ADLARI = frozenset({
+    "execute_bash", "execute_system", "execute_code", "execute_python_code",
+    "execute_program", "add_and_execute_jupyter_code_cell", "run_python",
+    "run_code", "python", "code_interpreter", "bash",
+})
+
+
 def arac_cagrisini_yurut(cagri: Dict[str, Any], defter: CevapDefteri) -> Dict[str, Any]:
     ad = cagri.get("name")
+    if ad in _EXECUTE_PYTHON_TAKMA_ADLARI:
+        ad = "execute_python"
     args = cagri.get("arguments", {})
     # NOT (Turkce): gercek Kaggle kosusunda modelin urettigi bir cagride
     # "arguments" alani (JSON olarak GECERLI olsa bile) bir nesne DEGIL,
@@ -296,10 +318,29 @@ def arac_cagrisini_yurut(cagri: Dict[str, Any], defter: CevapDefteri) -> Dict[st
     if not isinstance(args, dict):
         args = {}
     if ad == "execute_python":
-        return execute_python_arac(args.get("code", ""), defter)
+        # NOT: takma-ad ile yönlendirilen çağrılarda model "code" yerine
+        # kendi hatırladığı şemanın alan adını (ör. "command"/"script")
+        # kullanmış olabilir -- ilk boş olmayanı kabul ediyoruz.
+        kod = args.get("code") or args.get("command") or args.get("script") or ""
+        return execute_python_arac(kod, defter)
     if ad == "submit_answer":
         return submit_answer_arac(args.get("grid"), defter)
-    return {"success": False, "error": f"Unknown tool: {ad}"}
+    # NOT (Turkce): bu mesaj artik MODELE GERI BESLENIYOR (bkz.
+    # coz_yurutucu_toplu.py'deki tool_response enjeksiyonu) -- ONCEDEN bu
+    # geri besleme HIC yapilmiyordu, model "Unknown tool" hatasini asla
+    # GORMUYORDU. Artik gorecegi icin, mesaj GECERLI iki aracin ADLARINI
+    # ACIKCA tekrarliyor -- boylece model kendi hatali/hayali arac adindan
+    # (ör. execute_bash, calculate_shipping -- ARC bulmacasiyla ilgisiz,
+    # sentetik egitim verisinden ezberlenmis isimler) VAZGECIP dogru
+    # araclara DONEBILIR.
+    return {
+        "success": False,
+        "error": (
+            f"Unknown tool: {ad!r}. The ONLY two tools available are execute_python and "
+            f"submit_answer (see the system prompt's tool list). Call one of those two, "
+            f"using their exact names."
+        ),
+    }
 
 
 def tool_response_mesaji_olustur(sonuc: Dict[str, Any]) -> str:
