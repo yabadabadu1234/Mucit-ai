@@ -37,7 +37,7 @@ from arc import Task
 from araclar import CevapDefteri, arac_cagrilarini_ayikla, arac_cagrisini_yurut, tool_response_mesaji_olustur
 from coz_yurutucu import BOS_TAHMIN, IKAZ_ESIGI_TOKEN, IKAZ_METNI, _ARAC_CAGRISI_YOK_UYARISI, _ilk_mesajlar
 from model_yapilandirmalari import RWKV
-from rwkv_batch import _maske_uygula, adim_toplu_maskeli, onisle_toplu_farkli_uzunluk, sifir_durum_toplu
+from rwkv_batch import _adim_toplu_cekirdek, _maske_uygula, adim_toplu_maskeli, onisle_toplu_farkli_uzunluk, sifir_durum_toplu
 from rwkv_native import _tekrara_kilitlenme_periyodu
 from transkript import transkript_satiri_yaz
 from ttt_lora import mesajlari_metne_donustur, rwkv_tek_mesaji_sar, uretim_ayarlarini_al
@@ -51,6 +51,13 @@ _ILERLEME_ADIMI = 5000
 # sürece her deneme FARKLI örneklenir; bu sınır yalnızca greedy/şanssız
 # durumlarda sonsuz döngüye karşı bir GÜVENLİK ÇATISIdır.
 AZAMI_AYNI_PROMPT_YENIDEN_DENEME = 3
+# Araç-çağrısı taraması için decode edilen/regex ile taranan KUYRUK
+# penceresi (token cinsinden) -- bkz. ana döngüdeki kullanım notu. Gerçek
+# tool-call JSON'ları (execute_python kod blokları dahil) pratikte birkaç
+# yüz tokenu nadiren aşar; kontrol_araligi'nin (varsayılan 1000) kat kat
+# üzerinde tutmak, bir çağrının iki kontrol arasında YARIM kalıp bu
+# pencereden TAŞMASI riskini ihmal edilebilir kılar.
+_TARAMA_PENCERESI = 4000
 
 
 def _boyutlari_al(ham_rwkv_modeli: Any):
@@ -59,21 +66,43 @@ def _boyutlari_al(ham_rwkv_modeli: Any):
 
 def _ek_metni_tek_diziye_besle(z, n_layer, n_embd, n_head, head_size, b: int, B: int,
                                 token_idler: List[int], durum: List[torch.Tensor]) -> tuple:
-    """Yalnızca dizi b'yi, kalan B-1 diziyi DONDURARAK (aktif_maske'de
-    False bırakarak) verilen ek token dizisiyle ilerletir -- IKAZ (yazma
-    hakkı tükeniyor) metninin VEYA bir araç-çağrısı sonucunun (bkz.
-    toplu_gorevleri_coz'daki tool_response enjeksiyonu), YALNIZCA o slota,
-    diğerlerini etkilemeden enjekte edilmesini sağlar. Döner: (son_logit,
-    güncel durum) -- son_logit, b'nin beslenen metnin SON tokenından
-    sonraki tahminidir; çağıran taraf bunu DOĞRUDAN son_logits[b] için
-    kullanabilir, ekstra bir "yenile" adımına GEREK YOKTUR."""
+    """Yalnızca dizi b'yi, kalan B-1 diziyi DONDURARAK verilen ek token
+    dizisiyle ilerletir -- IKAZ (yazma hakkı tükeniyor) metninin VEYA bir
+    araç-çağrısı sonucunun (bkz. toplu_gorevleri_coz'daki tool_response
+    enjeksiyonu), YALNIZCA o slota, diğerlerini etkilemeden enjekte
+    edilmesini sağlar. Döner: (son_logit, güncel durum) -- son_logit,
+    b'nin beslenen metnin SON tokenından sonraki tahminidir; çağıran
+    taraf bunu DOĞRUDAN son_logits[b] için kullanabilir, ekstra bir
+    "yenile" adımına GEREK YOKTUR.
+
+    HIZ (kullanıcının açık talebi -- "torch.compile çalışmadığı senaryo
+    için yapılan çağrı sayısını B nispetinde azalt"): ESKİDEN bu, K
+    token için K kez TAM B-genişliğinde `adim_toplu_maskeli` çağırıyordu
+    -- her çağrıda 32 katmanın TAMAMI B satırın HEPSİ için yeniden
+    hesaplanıyordu (aktif_maske yalnızca b'yi True yapsa da, `adim_toplu`
+    İÇİNDE hesaplama B satırın HEPSİ için GERÇEKTEN yapılıyor, maskeleme
+    yalnızca SONUÇTA hangi satırın state'inin GÜNCELLENECEĞİNİ seçiyor --
+    B-1 satırın hesaplanan değeri BASİTÇE ATILIYORDU). torch.compile
+    ÇALIŞMIYORKEN (eager, ~480 kernel çağrısı/adım) bu, K token için
+    B kat FAZLADAN iş demekti -- B ne kadar büyükse o kadar israf.
+    Artık yalnızca slot b'nin state'i (B=1'e DİLİMLENEREK) GERÇEK bir
+    B=1 ileri-geçişle ilerletiliyor -- diğer B-1 satır HİÇ HESAPLANMIYOR.
+    Bilinçli olarak `_adim_toplu_cekirdek` (HAM eager fonksiyon) DOĞRUDAN
+    çağrılıyor, `adim_toplu`/torch.compile YOLU DEĞİL -- B=1 şekli, B'nin
+    kendi (compile edilmiş) şekil-cache'inden FARKLI bir yeni "guard"
+    tetikleyip TorchDynamo'nun (thread-safe OLMAYAN) derleme yolunu
+    tekrar devreye sokmasın diye (bkz. rwkv_batch.py'deki ilk-çağrı
+    kilidi notu -- o kilit yalnızca HER cihazın gerçek B'sinin ilk
+    çağrısını korur, B=1 gibi YENİ bir şekli DEĞİL)."""
+    durum_b = [d[b:b + 1] for d in durum]
     son_logit = None
     for tok in token_idler:
-        aktif_maske = [False] * B
-        aktif_maske[b] = True
-        tum_tokenler = [tok] * B
-        logits, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, tum_tokenler, durum, aktif_maske)
-        son_logit = logits[b]
+        token_tensor = torch.as_tensor([tok], device=durum_b[0].device, dtype=torch.long)
+        logit_b, durum_b = _adim_toplu_cekirdek(z, n_layer, n_embd, n_head, head_size, token_tensor, durum_b)
+        son_logit = logit_b[0]
+    for i in range(len(durum)):
+        durum[i] = durum[i].clone()
+        durum[i][b:b + 1] = durum_b[i]
     return son_logit, durum
 
 
@@ -404,11 +433,31 @@ def toplu_gorevleri_coz(
                 # bu slot için bir anlamı yok (uretilen_tokenler[b] hâlâ
                 # boş). Diğer slotlar bu kontrolden ETKİLENMEDEN devam eder.
                 continue
-            metin_simdi = tokenizer.decode(uretilen_tokenler[b])
+            # HIZ (kullanıcının açık talebi -- "torch.compile çalışmadığında
+            # yapılan çağrı sayısını B nispetinde azalt"): ESKİDEN burada
+            # tokenizer.decode(uretilen_tokenler[b]) -- yani slotun BAŞINDAN
+            # BERİ üretilen TÜM token geçmişi -- HER kontrol_araligi'nde
+            # YENİDEN decode edilip TAMAMI regex ile taranıyordu. Üretim
+            # uzadıkça (ör. 30000 token) bu, kontrol başına gittikçe büyüyen
+            # bir maliyet demekti VE bu, B aktif slotun HER BİRİ için ayrı
+            # ayrı tekrarlanıyordu -- toplamda hem üretim uzunluğuyla HEM
+            # DE B ile birlikte büyüyen bir maliyet. Artık yalnızca son
+            # `_TARAMA_PENCERESI` token'lık SINIRLI bir kuyruk decode
+            # edilip taranıyor (arac_cagrilarini_ayikla bu pencerede de
+            # PARÇALI/yarım JSON'u yakalayabilir -- pencere kontrol_araligi'nin
+            # kat kat üzerinde tutulduğu için, bir çağrının bu pencereden
+            # TAŞMASI pratikte olası değil). islenen_cagri_izleri[b] zaten
+            # aynı çağrının tekrar İŞLENMESİNİ engelliyor, bu yüzden
+            # pencerenin ESKİ kısımlarını YENİDEN görmek zararsız. Slot
+            # BİTTİĞİNDE (aşağıda) transkripte yazılan metin hâlâ TAM
+            # (bkz. metin_tam) -- kayıt eksiksiz kalır, yalnızca ARA
+            # taramalar pencereli.
+            tarama_tokenleri = uretilen_tokenler[b][-_TARAMA_PENCERESI:]
+            metin_tarama = tokenizer.decode(tarama_tokenleri)
             # NOT (KRITIK -- kullanicinin gercek Kaggle transkriptinde
             # binlerce "Unknown tool"/basarisiz sonuc gorulmesinin GERCEK
             # kok nedeni burasiydi): arac_cagrilarini_ayikla, HER kontrolde
-            # metin_simdi'nin TAMAMINI (ONCEKI turlarda ZATEN islenmis
+            # metin_tarama'nin TAMAMINI (ONCEKI turlarda ZATEN islenmis
             # cagrilar DAHIL) yeniden tarar -- bu, PARCALI/yarim JSON'un
             # bir sonraki kontrolde TAMAMLANMIS haliyle yakalanabilmesi
             # icin BILEREK boyle (kisa vadeli metin dilimi taramak bunu
@@ -421,7 +470,7 @@ def toplu_gorevleri_coz(
             # islenen_cagri_izleri[b], HER cagrinin (isim+argumanlar)
             # parmak izini tutar -- ayni cagri ikinci kez gorulunce
             # calistirilmadan/yanit verilmeden atlanir.
-            cagrilar = arac_cagrilarini_ayikla(metin_simdi)
+            cagrilar = arac_cagrilarini_ayikla(metin_tarama)
             if cagrilar:
                 for cagri in cagrilar:
                     izi = json.dumps(cagri, sort_keys=True, default=str)
@@ -456,9 +505,14 @@ def toplu_gorevleri_coz(
                             )
                             son_logits[b] = yeni_logit
                 if bitti[b]:
+                    # NOT: buradaki kayıt kasıtlı olarak TAM metni (baştan
+                    # sona TÜM üretim) kullanır, yukarıdaki pencereli
+                    # metin_tarama'yı DEĞİL -- bu decode yalnızca slot
+                    # BİTTİĞİNDE (her kontrolde DEĞİL) bir kez çalışır, bu
+                    # yüzden pahalı değildir ve transkript kaydı EKSİKSİZ kalır.
                     transkript_satiri_yaz({
                         "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
-                        "rol": "assistant", "icerik": metin_simdi,
+                        "rol": "assistant", "icerik": tokenizer.decode(uretilen_tokenler[b]),
                     })
                     _slot_ilerlet(b)
                     continue

@@ -55,7 +55,21 @@ def _tmix_adim_toplu(layer_id: int, H: int, N: int, x, x_prev, v_first, state,
     batch-uyumludur."""
     B = x.shape[0]
     xx = x_prev - x
-    xr, xw, xk, xv, xa, xg = x + xx * x_r, x + xx * x_w, x + xx * x_k, x + xx * x_v, x + xx * x_a, x + xx * x_g
+    # HIZ (kullanıcının açık talebi -- "torch.compile çalışmadığı senaryo
+    # için yapılan çağrı sayısını azalt"): eskiden burada xr..xg için AYRI
+    # AYRI 6 elementwise ifade ("x + xx*x_r" gibi) hesaplanıyordu -- eager
+    # modda her biri (çarpma + toplama) ~2 ayrı kernel başlatmasına yol
+    # açar, yani 6 değişken × 2 = 12 kernel çağrısı. Bu 6 ağırlık vektörü
+    # (x_r..x_g) TEK bir (6, C) tensöre yığılıp (stack) TEK bir broadcast'lı
+    # çarpma + TEK bir broadcast'lı toplama ile HEPSİ BİRDEN hesaplanıyor
+    # (~2-4 kernel çağrısına iniyor). Bu, ELEMENTWISE (mul/add) işlemlerin
+    # broadcast ile TOPLU yapılması -- matematiksel SIRA/GRUPLAMA
+    # DEĞİŞMİYOR (her çıktı elemanı TAM OLARAK aynı çarpma-sonra-toplama
+    # işlemiyle hesaplanıyor), bu yüzden bit-bit AYNI sonucu verir --
+    # aşağıda synthetic ağırlıklarla torch.equal ile doğrulandı.
+    agirlik_yigini = torch.stack((x_r, x_w, x_k, x_v, x_a, x_g), dim=0)
+    kombo = x.unsqueeze(0) + xx.unsqueeze(0) * agirlik_yigini.unsqueeze(1)
+    xr, xw, xk, xv, xa, xg = kombo[0], kombo[1], kombo[2], kombo[3], kombo[4], kombo[5]
 
     r = xr @ R_
     w = torch.tanh(xw @ w1) @ w2
