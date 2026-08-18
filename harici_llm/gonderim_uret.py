@@ -14,10 +14,15 @@ from ttt_lora import lora_adaptoru_kur, temel_model_yukle, tokenizer_yukle
 
 TEST_CHALLENGES_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json"
 
-# YARISMA=False (deneme/degerlendirme modu) icin: gercek cevaplari BILEN
-# degerlendirme kumesi. read_tasks_from_single_file zaten solution_file
+# YARISMA=False (deneme/kayıt modu) icin: gercek cevaplari BILEN iki kume
+# (training + evaluation). read_tasks_from_single_file zaten solution_file
 # destekliyor (arc.py) -- verilince task.test_example.output GERCEK cevapla
 # doldurulur, boylece her cozumden sonra doğruluk KONTROL edilebilir.
+# Kullanıcının açık talebi: "kayıt" (deneme) koşusu training VE evaluation
+# kümesinin İKİSİNDEN de görev çekebilmeli -- yalnızca evaluation ile
+# sınırlı DEĞİL.
+TRAINING_CHALLENGES_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_training_challenges.json"
+TRAINING_SOLUTIONS_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_training_solutions.json"
 EVALUATION_CHALLENGES_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_evaluation_challenges.json"
 EVALUATION_SOLUTIONS_YOLU = "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_evaluation_solutions.json"
 
@@ -181,13 +186,22 @@ def _gorevleri_yukle(yarisma: bool, azami_soru_sayisi: Optional[int] = None) -> 
         print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {TEST_CHALLENGES_YOLU}")
     else:
         print(
-            f"[gonderim_uret] YARISMA=False: DENEME modu -- değerlendirme kümesi (gerçek cevaplar BİLİNİYOR) "
-            f"kullanılıyor, her görevden sonra doğruluk otomatik kontrol edilip loglanacak."
+            f"[gonderim_uret] YARISMA=False: DENEME/KAYIT modu -- training + evaluation kümeleri (gerçek "
+            f"cevaplar BİLİNİYOR) kullanılıyor, her görevden sonra doğruluk otomatik kontrol edilip loglanacak."
         )
-        tasks = read_tasks_from_single_file(
+        training_tasks = read_tasks_from_single_file(
+            TRAINING_CHALLENGES_YOLU, solution_file=TRAINING_SOLUTIONS_YOLU,
+        )
+        print(f"[gonderim_uret] {len(training_tasks)} alt-görev bulundu: {TRAINING_CHALLENGES_YOLU} (+ çözümler: {TRAINING_SOLUTIONS_YOLU})")
+        evaluation_tasks = read_tasks_from_single_file(
             EVALUATION_CHALLENGES_YOLU, solution_file=EVALUATION_SOLUTIONS_YOLU,
         )
-        print(f"[gonderim_uret] {len(tasks)} alt-görev bulundu: {EVALUATION_CHALLENGES_YOLU} (+ çözümler: {EVALUATION_SOLUTIONS_YOLU})")
+        print(f"[gonderim_uret] {len(evaluation_tasks)} alt-görev bulundu: {EVALUATION_CHALLENGES_YOLU} (+ çözümler: {EVALUATION_SOLUTIONS_YOLU})")
+        # NOT (Turkce): training ONCE, evaluation SONRA -- azami_soru_sayisi
+        # ile kismi secim yapilirken (asagida) "kumenin BASINDAN" ilk once
+        # training'den, o tukenirse evaluation'dan alinir.
+        tasks = training_tasks + evaluation_tasks
+        print(f"[gonderim_uret] toplam {len(tasks)} alt-görev (training+evaluation birleşik).")
 
     if azami_soru_sayisi is not None and azami_soru_sayisi < len(tasks):
         print(

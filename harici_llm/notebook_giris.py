@@ -19,6 +19,15 @@ KALDIRILDI, çünkü bu yarışma koşusu için pratik değildi (CPU'da tek
 görev bile saatler sürer) ve iki farklı kod yolu arasında kafa
 karıştırıyordu. GPU hiç yoksa/hiçbiri gerçekten çalışmıyorsa bu hücre
 BİLİNÇLİ OLARAK çöker (RuntimeError) -- sessizce yanlış moda düşmez.
+
+[TASARRUF NİZAMI] (kullanıcının açık talebi): Kaggle, "Submit" butonuna
+basıldığında bu notebook'u İKİ AYRI kez çalıştırır -- (1) KAYDETME/COMMIT
+anında ("Save & Run All" ile görülen, salt biçim/hata doğrulaması için,
+GERÇEK puanlamayı ETKİLEMEZ) ve (2) GERÇEK PUANLAMA (rerun) anında
+(gizli gerçek test kümesiyle, submission.json BURADA gerçekten puanlanır).
+Kaggle, YALNIZCA (2) sırasında `KAGGLE_IS_COMPETITION_RERUN` ortam
+değişkenini ayarlar. Aşağıdaki kısayol, (1) sırasında GPU/saat harcamadan
+geçerli biçimli sahte bir submission.json bırakıp ANINDA çıkar.
 """
 import os
 import sys
@@ -32,49 +41,79 @@ HARICI_LLM_KOKU = "/kaggle/working/Mucit-ai/harici_llm"
 if HARICI_LLM_KOKU not in sys.path:
     sys.path.insert(0, HARICI_LLM_KOKU)
 
-import torch
-from gonderim_uret import coklu_gpu_submission_uret
-from gpu_tespit import kullanilabilir_gpu_indeksleri
-
 SUBMISSION_YOLU = "/kaggle/working/submission.json"
-AZAMI_GPU = 4            # birden fazla GPU varsa: modelin GPU başına bağımsız kopyasıyla padişah/vezir paralel çözüm (bkz. coklu_gpu.py)
-B_BOYUTU = 128           # her GPU'nun AYNI ANDA (tek batched adım zinciriyle) bakacağı görev sayısı için BAŞLANGIÇ tahmini -- gerçek değer vram_izleyici ile çalışma sırasında otomatik ayarlanır
 
 # YARISMA=True  -> gercek yarisma test kumesi (arc-agi_test_challenges.json),
 #                  cevaplar bilinmiyor, submission.json yarismaya gonderilir.
-# YARISMA=False -> DENEME modu: cevaplari BILINEN degerlendirme kumesi
-#                  (arc-agi_evaluation_challenges.json + _solutions.json)
-#                  kullanilir; coz_yurutucu'nun cozdugu HER gorevden hemen
-#                  sonra dogru mu yanlis mi oldugu VE submit_answer'in
+# YARISMA=False -> DENEME modu: cevaplari BILINEN training+evaluation
+#                  kumesi kullanilir; coz_yurutucu'nun cozdugu HER gorevden
+#                  hemen sonra dogru mu yanlis mi oldugu VE submit_answer'in
 #                  gercekten basariyla cagrilip cagrilmadigi (bos yer
 #                  tutucuya dusup dusmedigi) hem konsola hem
 #                  konusma_transkriptleri.jsonl'e loglanir.
 YARISMA = True
+
+# DENEME_MODU (kullanıcının açık talebi): True ise, aşağıdaki [TASARRUF
+# NİZAMI] kısayolunu TAMAMEN YOK SAYAR -- YARISMA=True olsa bile, commit
+# anında bile (KAGGLE_IS_COMPETITION_RERUN yokken de) notebook'u SONUNA
+# KADAR çalıştırır. Yalnızca yerel/manuel hata ayıklama ve kod
+# değişikliklerini GERÇEKTEN uçtan uca test etmek için True yapılmalı --
+# gerçek bir yarışma gönderiminde False bırakılmalıdır (aksi halde her
+# commit denemesi GPU/saat harcar).
+DENEME_MODU = False
+
+_rerun_mu = os.environ.get("KAGGLE_IS_COMPETITION_RERUN")
+
+if YARISMA and not DENEME_MODU and not _rerun_mu:
+    import json
+
+    # NOT: "007d5130" gerçek bir ARC görev kimliğidir -- Kaggle'ın "Submit"
+    # butonunun geçerli bir submission.json biçimi beklediği bilinir; bu
+    # anda GERÇEK cevap ÖNEMSİZDİR (bu dosya puanlanmaz, yalnızca GERÇEK
+    # rerun'da üretilen submission.json puanlanır), yalnızca biçim geçerli
+    # olmalıdır.
+    with open(SUBMISSION_YOLU, "w") as f:
+        json.dump({"007d5130": [{"attempt_1": [[0]], "attempt_2": [[0]]}]}, f)
+    print(
+        "[notebook_giris] [TASARRUF NİZAMI] KAYDETME/COMMIT aşamasındayız "
+        "(KAGGLE_IS_COMPETITION_RERUN ayarlı DEĞİL) -- GPU/saat harcanmadan "
+        f"geçerli biçimli sahte bir submission.json '{SUBMISSION_YOLU}'na bırakılıp çıkılıyor."
+    )
+    sys.exit(0)
+
+# Buraya yalnızca (a) GERÇEK PUANLAMA (rerun, KAGGLE_IS_COMPETITION_RERUN
+# ayarlı) anında VEYA (b) DENEME_MODU=True iken ULAŞILIR -- yalnızca bu
+# durumlarda ağır bağımlılıklar (torch, model) yüklenir.
+import torch
+from gonderim_uret import coklu_gpu_submission_uret
+from gpu_tespit import kullanilabilir_gpu_indeksleri
+
+AZAMI_GPU = 4            # birden fazla GPU varsa: modelin GPU başına bağımsız kopyasıyla padişah/vezir paralel çözüm (bkz. coklu_gpu.py)
+B_BOYUTU = 128           # her GPU'nun AYNI ANDA (tek batched adım zinciriyle) bakacağı görev sayısı için BAŞLANGIÇ tahmini -- gerçek değer vram_izleyici ile çalışma sırasında otomatik ayarlanır
 
 # SORU_SAYISI (kullanıcının açık talebi -- deneme koşuları tüm kümeyle
 # aşırı uzun sürüyor): None -> tüm görev kümesi kullanılır (davranış
 # değişmez). Bir tamsayı verilirse: toplam görev sayısı BUNDAN büyük ya
 # da eşitse yine hepsi kullanılır; küçükse kümenin BAŞINDAN yalnızca ilk
 # SORU_SAYISI görev alınır (ör. 4 -> yalnızca ilk 4 görev çözülür, hızlı
-# bir deneme/duman testi için).
+# bir deneme/duman testi için). Yalnızca YARISMA=False (training+evaluation
+# kümesi) koşularında etkilidir.
 #
 # MUCIT_SORU_SAYISI ortam değişkeni verilmişse, dosyayı hiç değiştirmeden
 # (ör. Kaggle notebook ortam değişkenlerinden) geçici bir deneme
 # kısıtlaması uygulayabilmek için buradaki sabit değeri EZER.
 #
-# GÜVENLİK KİLİDİ: YARISMA=True (gerçek yarışma koşusu) iken bu değer ne
-# olursa olsun (dosyada unutulmuş bir SORU_SAYISI VEYA ortam değişkeni
-# fark etmez) coklu_gpu_submission_uret/_gorevleri_yukle tarafında
-# GÖRMEZDEN GELİNİR -- gerçek yarışma gönderimi ASLA eksik göreve
-# indirgenmez (bkz. gonderim_uret._gorevleri_yukle). SORU_SAYISI yalnızca
-# YARISMA=False (deneme) koşularında etkilidir.
+# GÜVENLİK KİLİDİ: gonderim_uret._gorevleri_yukle, yarisma=True iken
+# azami_soru_sayisi'ni (dosyada unutulmuş bir SORU_SAYISI VEYA ortam
+# değişkeni fark etmez) HER ZAMAN GÖRMEZDEN GELİR -- gerçek yarışma
+# gönderimi (test kümesindeki TÜM sorular) ASLA eksik göreve indirgenemez.
 _SORU_SAYISI_ORTAM_DEGISKENI = os.environ.get("MUCIT_SORU_SAYISI")
 SORU_SAYISI = int(_SORU_SAYISI_ORTAM_DEGISKENI) if _SORU_SAYISI_ORTAM_DEGISKENI else None
 
 if __name__ == "__main__":
     gorulen_gpu_sayisi = torch.cuda.device_count() if torch.cuda.is_available() else 0
     print(f"[notebook_giris] torch.cuda.is_available()={torch.cuda.is_available()} , torch.cuda.device_count()={gorulen_gpu_sayisi}")
-    print(f"[notebook_giris] YARISMA={YARISMA}")
+    print(f"[notebook_giris] YARISMA={YARISMA} , DENEME_MODU={DENEME_MODU} , KAGGLE_IS_COMPETITION_RERUN={_rerun_mu!r}")
 
     # ÖNEMLİ: torch.cuda.device_count()/is_available() yalnızca GPU'nun
     # GÖRÜNDÜĞÜNÜ söyler, GERÇEKTEN kullanılabildiğini DEĞİL (Kaggle'da
