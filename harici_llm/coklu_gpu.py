@@ -267,6 +267,11 @@ def _surec_gpu_calistir(
         ham_model = getattr(ham_model_sarmali, "ham_model", ham_model_sarmali)
         tokenizer = tokenizer_yukle(model_ailesi)
         print(f"[coklu_gpu] (süreç, {gpu_etiketi}) model hazır -- kendi payı: {len(kendi_gorevleri)} görev.")
+        # KONUS DOĞRULAMASI (kullanıcının açık talebi): bu sürece GERÇEKTEN
+        # ulaşan azami_yeni_token'ı burada da basıyoruz -- notebook_giris.py
+        # -> gonderim_uret.py -> CokluGPUTopluCozucu -> BU SÜRECE kadar
+        # KONUS'un doğru taşındığını bir sonraki gerçek koşuda kanıtlamak için.
+        print(f"[coklu_gpu] (süreç, {gpu_etiketi}) KONUS DOĞRULAMASI: bu sürece ulaşan azami_yeni_token={azami_yeni_token}.")
 
         vram_kesifci = None
         b_boyutu = max(1, b_boyutu_baslangic)

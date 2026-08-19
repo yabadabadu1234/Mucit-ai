@@ -240,6 +240,15 @@ def toplu_gorevleri_coz(
         f"{_ONEK} ({deneme_etiketi}) B={B} görev, {benzersiz_prompt_sayisi} BENZERSİZ prompt "
         f"(uzunluklar: {[len(t) for t in prompt_tokenleri]}) -- TEK batched adım zincirinde eşzamanlı çözülüyor."
     )
+    # KONUS DOĞRULAMASI (kullanıcının açık talebi -- "KONUS=5000 yazmama
+    # rağmen 60000 yapıyor" itirazı): bu satır, ÇAĞRIYA GERÇEKTEN ULAŞAN
+    # azami_yeni_token değerini AÇIKÇA basar -- KONUS'un notebook_giris.py
+    # -> gonderim_uret.py -> coklu_gpu.py -> BURAYA kadar doğru taşınıp
+    # taşınmadığı bir sonraki gerçek koşuda TARTIŞMASIZ görülebilsin diye
+    # (log 60000 gösteriyorsa sorun BU FONKSİYONA gelen değerdedir; 5000
+    # gösteriyorsa değer doğru geldi demektir, o zaman soruna Kaggle'ın
+    # ESKİ kod/dataset kullanması sebep olabilir).
+    print(f"{_ONEK} ({deneme_etiketi}) KONUS DOĞRULAMASI: bu çağrıya GERÇEKTEN ulaşan azami_yeni_token={azami_yeni_token}.")
     if benzersiz_prompt_sayisi != B:
         print(f"{_ONEK} ({deneme_etiketi}) UYARI: {B - benzersiz_prompt_sayisi} görev BİRBİRİNİN BİREBİR AYNI promptuna sahip (muhtemelen tekrarlanan görev adı/içerik).")
 
@@ -284,6 +293,20 @@ def toplu_gorevleri_coz(
     # Slot başına, hiç araç çağrısı bulunamadığında kaç kez "araç
     # çağırman gerekiyor" uyarısı enjekte edildiği (bkz. _AZAMI_ARAC_UYARISI).
     arac_uyarisi_sayisi: List[int] = [0] * B
+    # HATA (kullanıcının açık talebi -- "sadece araç çıktılarını değil,
+    # TÜM metin çıktıları kaydet"): ESKİDEN slotun ürettiği HAM metin
+    # yalnızca slot TAMAMEN bittiğinde (submit_answer başarılı OLDUĞUNDA
+    # ya da bütçe/süre dolup koşu SONLANDIĞINDA) transkripte yazılıyordu.
+    # Süreç bu iki noktaya varmadan (ör. Kaggle'da ortadan) kesilirse/
+    # çökerse, o ana kadar üretilmiş binlerce token TAMAMEN kaybediliyordu
+    # -- submission.json için zaten var olan "her görevden sonra ANINDA
+    # diske yaz" garantisinin (bkz. gonderim_uret._SonuCuKaydedici) HAM
+    # METİN için hiç karşılığı yoktu. Düzeltme: her slotun KENDİ son
+    # transkripte yazılmış indeksi (bir sonraki token'dan itibaren HENÜZ
+    # kaydedilmemiş kısmı) izlenir -- her kontrol_araligi'nde yalnızca O
+    # ANA KADAR YAZILMAMIŞ YENİ parça (tüm geçmiş DEĞİL -- pahalı olmasın
+    # diye) transkripte "assistant-parça" olarak ANINDA yazılır.
+    son_yazilan_metin_idx: List[int] = [0] * B
 
     def _slot_sonucla_bitir(b: int) -> None:
         """Slot b'nin O ANKİ sakinini SONUÇLANDIRIR (kayda geçirir, geri
@@ -315,6 +338,7 @@ def toplu_gorevleri_coz(
         defterler[b] = CevapDefteri()
         defterler[b].train_examples = train_examples_sandbox_bicimine_donustur(yeni_gorev.train_examples)
         uretilen_tokenler[b] = []
+        son_yazilan_metin_idx[b] = 0
         ikaz_enjekte_edildi[b] = False
         sonuclar[b] = None
         bitti[b] = False
@@ -519,6 +543,19 @@ def toplu_gorevleri_coz(
             # BİTTİĞİNDE (aşağıda) transkripte yazılan metin hâlâ TAM
             # (bkz. metin_tam) -- kayıt eksiksiz kalır, yalnızca ARA
             # taramalar pencereli.
+            # ANINDA HAM METİN KAYDI (kullanıcının açık talebi -- yalnızca
+            # araç sonuçları değil, TÜM metin çıktıları): son yazımdan beri
+            # üretilmiş YENİ token'lar (tüm geçmiş DEĞİL) decode edilip
+            # transkripte eklenir -- süreç bir sonraki checkpoint'e varmadan
+            # kesilse bile bu ana kadarki metin diskte KALIR.
+            if len(uretilen_tokenler[b]) > son_yazilan_metin_idx[b]:
+                yeni_parca = tokenizer.decode(uretilen_tokenler[b][son_yazilan_metin_idx[b]:])
+                transkript_satiri_yaz({
+                    "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
+                    "rol": "assistant-parça", "icerik": yeni_parca,
+                })
+                son_yazilan_metin_idx[b] = len(uretilen_tokenler[b])
+
             tarama_tokenleri = uretilen_tokenler[b][-_TARAMA_PENCERESI:]
             metin_tarama = tokenizer.decode(tarama_tokenleri)
             # NOT (KRITIK -- kullanicinin gercek Kaggle transkriptinde
