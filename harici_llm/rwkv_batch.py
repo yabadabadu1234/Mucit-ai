@@ -71,41 +71,27 @@ def _tmix_adim_toplu(layer_id: int, H: int, N: int, x, x_prev, v_first, state,
     kombo = x.unsqueeze(0) + xx.unsqueeze(0) * agirlik_yigini.unsqueeze(1)
     xr, xw, xk, xv, xa, xg = kombo[0], kombo[1], kombo[2], kombo[3], kombo[4], kombo[5]
 
-    # HIZ (kullanıcının açık talebi -- eager modda kalan kernel-başlatma
-    # yükünü daha da azalt): r/k/v projeksiyonları (xr@R_, xk@K_, xv@V_)
-    # ÜÇ farklı girdinin AYNI (C,C) şekilli AMA FARKLI ağırlıklarla çarpımı
-    # -- birbirinden BAĞIMSIZ, sıralı bir veri bağımlılığı YOK. Bu, "grouped/
-    # batched linear projections" (ör. transformer'larda Q/K/V projeksiyon-
-    # larını TEK bir füzyonlu matris çarpımına indirgeme -- flash-attention
-    # ve çoğu verimli transformer uygulamasında standart bir teknik) fikriyle
-    # AYNI: üç girdi (3,B,C)'ye, üç ağırlık (3,C,C)'ye yığılıp TEK bir
-    # torch.bmm ile hesaplanıyor -- 3 ayrı matmul kernel çağrısı yerine 1.
-    # bmm'nin HER dilimi kendi bağımsız matris çarpımını, TOPLAMA SIRASI
-    # DEĞİŞMEDEN hesaplar -- bu yüzden sonuç 3 ayrı @ ile BİREBİR AYNIDIR
-    # (aşağıda synthetic ağırlıklarla torch.equal ile doğrulandı).
-    rkv_girdi = torch.stack((xr, xk, xv), dim=0)
-    rkv_agirlik = torch.stack((R_, K_, V_), dim=0)
-    rkv = torch.bmm(rkv_girdi, rkv_agirlik)
-    r, k, v = rkv[0], rkv[1], rkv[2]
-
-    # HIZ: w/a/g kapıları da (xw@w1->tanh->@w2, xa@a1->@a2 (a0 sonra),
-    # xg@g1->sigmoid->@g2) ÜÇ farklı DÜŞÜK-RANKLI (C,32)/(32,C) projeksiyon
-    # ZİNCİRİ -- aralarında hiçbir veri bağımlılığı yok, yalnızca ARA
-    # doğrusal-olmayanlık (tanh/sigmoid/yok) farklı. İKİ bmm'e (birinci
-    # aşama + ikinci aşama) indirgeniyor -- 6 ayrı matmul yerine 2. Ara
-    # doğrusal-olmayanlıklar HER dala AYNEN (tanh->w, hiçbiri->a,
-    # sigmoid->g) uygulanıyor -- matematiksel olarak eski kodla BİREBİR
-    # AYNI, yalnızca kernel-başlatma sayısı azalıyor.
-    wag_girdi = torch.stack((xw, xa, xg), dim=0)
-    wag_agirlik1 = torch.stack((w1, a1, g1), dim=0)
-    wag_asama1_ham = torch.bmm(wag_girdi, wag_agirlik1)
-    wag_asama1 = torch.stack(
-        (torch.tanh(wag_asama1_ham[0]), wag_asama1_ham[1], torch.sigmoid(wag_asama1_ham[2])), dim=0
-    )
-    wag_agirlik2 = torch.stack((w2, a2, g2), dim=0)
-    wag_asama2 = torch.bmm(wag_asama1, wag_agirlik2)
-    w, a_ham, g = wag_asama2[0], wag_asama2[1], wag_asama2[2]
-    a = torch.sigmoid(a0 + a_ham)
+    # NOT (KRİTİK -- kullanıcının gerçek Kaggle logunda yakaladığı çökme:
+    # "stack expects each tensor to be equal size, but got [4096, 128] at
+    # entry 0 and [4096, 480] at entry 2"): burada ÖNCEDEN r/k/v'yi TEK bir
+    # torch.bmm'e, w/a/g kapılarını da (w1/a1/g1 ve w2/a2/g2) İKİ bmm'e
+    # FÜZYONLAMIŞTIM -- bunun için w1/a1/g1'i (ve w2/a2/g2'yi) TEK bir
+    # tensöre yığmak (torch.stack) gerekiyordu, ki bu YALNIZCA üçü de AYNI
+    # şekle sahipse çalışır. Doğrulamamda kullandığım SENTETİK ağırlık
+    # fixture'ında hepsine (yanlışlıkla) AYNI rank'i (32) vermiştim --
+    # ama GERÇEK RWKV-7 mimarisinde w (decay)/a (in-context-learning)/g
+    # (gate) LoRA rank'leri BİRBİRİNDEN FARKLIDIR (ör. checkpoint'te
+    # w2 (128,C), a2 (?,C), g2 (480,C) gibi) -- bu yüzden torch.stack
+    # gerçek model ağırlıklarıyla ANINDA çöküyordu. Bu, benim doğrulama
+    # metodolojimdeki gerçek bir kusurdu (sentetik veri gerçek mimari
+    # kısıtını yakalamadı) -- füzyon TAMAMEN GERİ ALINDI, eski (her biri
+    # ayrı @ ile hesaplanan, rank'ten bağımsız çalışan) haline dönüldü.
+    r = xr @ R_
+    w = torch.tanh(xw @ w1) @ w2
+    k = xk @ K_
+    v = xv @ V_
+    a = torch.sigmoid(a0 + (xa @ a1) @ a2)
+    g = torch.sigmoid(xg @ g1) @ g2
 
     kk = F.normalize((k * k_k).view(B, H, N), dim=-1, p=2.0).view(B, H * N)
     k = k * (1 + (a - 1) * k_a)
