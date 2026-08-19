@@ -226,6 +226,7 @@ def coklu_gpu_submission_uret(
     toplu_mod: bool = True,
     b_boyutu: int = 128,
     azami_soru_sayisi: Optional[int] = None,
+    azami_yeni_token: Optional[int] = None,
 ) -> Dict[str, Any]:
     """submission_uret()'in coklu-GPU varyantı -- bkz. coklu_gpu.py
     başındaki not. Aynı modelin GPU başına BAĞIMSIZ bir kopyası yüklenir.
@@ -235,6 +236,12 @@ def coklu_gpu_submission_uret(
     sayısı bundan büyük/eşitse hepsi kullanılır, küçükse kümenin
     BAŞINDAN yalnızca bu kadarı alınır (deneme koşularını kısaltmak
     için). None ise (varsayılan) davranış hiç değişmez.
+
+    `azami_yeni_token` (kullanıcının açık talebi -- KONUS): görev başına
+    üretilecek AZAMİ token sayısı (coz_yurutucu_toplu.toplu_gorevleri_coz'a
+    aynen aktarılır). None ise (varsayılan) altta yatan 60000 sabiti
+    DEĞİŞMEDEN kullanılır -- 60000 ile deneme yapmak çok yavaş olduğu
+    için, deneme koşularında bunu ör. 1000'e düşürmek amaçlanır.
 
     toplu_mod=True (varsayılan): her GPU, kendisine atanan görevleri TEK
     TEK değil, B TANESİNİ AYNI ANDA (gerçek batched adım zinciriyle, bkz.
@@ -257,6 +264,10 @@ def coklu_gpu_submission_uret(
 
     tasks = _gorevleri_yukle(yarisma, azami_soru_sayisi=azami_soru_sayisi)
     kaydedici = _SonuCuKaydedici(tasks, cikti_yolu)
+    # KONUS (kullanıcının açık talebi): None ise altta yatan sınıfların
+    # kendi varsayılanı (60000) DOKUNULMADAN kullanılır -- bu yüzden
+    # sadece verilmişse kwargs'a eklenir, aksi halde hiç geçilmez.
+    azami_yeni_token_kwargs = {} if azami_yeni_token is None else {"azami_yeni_token": azami_yeni_token}
 
     try:
         modeller, tokenizer, gpu_etiketleri = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu)
@@ -271,9 +282,10 @@ def coklu_gpu_submission_uret(
                 # yok" diye fark ettiği sessiz boşluğu (batched prefill'in
                 # KENDİSİ hiç ilerleme raporlamıyordu) kapatır.
                 ayrintili_log=not yarisma,
+                **azami_yeni_token_kwargs,
             )
         else:
-            cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri)
+            cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri, **azami_yeni_token_kwargs)
         # ARC ödül kuralı görev başına 2 BAĞIMSIZ deneme hakkı tanır, ve bir
         # ara sürümde bunu GERÇEKTEN kullanmak için bütçeyi ikiye bölüp
         # attempt_2'yi bağımsız bir ikinci koşu yapmıştık. KULLANICININ AÇIK

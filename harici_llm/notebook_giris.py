@@ -110,6 +110,13 @@ B_BOYUTU = 128           # her GPU'nun AYNI ANDA (tek batched adım zinciriyle) 
 _SORU_SAYISI_ORTAM_DEGISKENI = os.environ.get("MUCIT_SORU_SAYISI")
 SORU_SAYISI = int(_SORU_SAYISI_ORTAM_DEGISKENI) if _SORU_SAYISI_ORTAM_DEGISKENI else None
 
+# KONUS (kullanıcının açık talebi): görev başına üretilecek AZAMİ token
+# sayısı. None -> altta yatan varsayılan (60000) DEĞİŞMEDEN kullanılır --
+# gerçek yarışma koşusunda böyle bırakılmalı. Bir tamsayı verilirse (ör.
+# KONUS = 1000) o değer GEÇERLİ olur -- 60000 ile deneme yapmak çok yavaş
+# olduğu için, hızlı deneme/duman testlerinde bunu düşürmek içindir.
+KONUS = None
+
 if __name__ == "__main__":
     gorulen_gpu_sayisi = torch.cuda.device_count() if torch.cuda.is_available() else 0
     print(f"[notebook_giris] torch.cuda.is_available()={torch.cuda.is_available()} , torch.cuda.device_count()={gorulen_gpu_sayisi}")
@@ -137,7 +144,7 @@ if __name__ == "__main__":
     )
     submission = coklu_gpu_submission_uret(
         cikti_yolu=SUBMISSION_YOLU, yarisma=YARISMA, azami_gpu=AZAMI_GPU, b_boyutu=B_BOYUTU,
-        azami_soru_sayisi=SORU_SAYISI,
+        azami_soru_sayisi=SORU_SAYISI, azami_yeni_token=KONUS,
     )
 
     print(f"[notebook_giris] Bitti. {len(submission)} görev için {SUBMISSION_YOLU} yazıldı.")
