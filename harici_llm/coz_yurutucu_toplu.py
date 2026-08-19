@@ -64,6 +64,22 @@ AZAMI_AYNI_PROMPT_YENIDEN_DENEME = 3
 # üzerinde tutmak, bir çağrının iki kontrol arasında YARIM kalıp bu
 # pencereden TAŞMASI riskini ihmal edilebilir kılar.
 _TARAMA_PENCERESI = 4000
+# Sürekli admisyonda kalan PAYLAŞILAN adım bütçesi (azami_yeni_token - adim)
+# bu değerin altına düşerse YENİ görev admit edilmez (bkz. _slot_ilerlet'teki
+# not) -- prompt tüketimi (genelde birkaç bin token) + en azından bir ilk
+# tool-çağrısına ulaşmak için MAKUL bir alt sınır. Çok küçük tutulursa
+# doomed görevler başlatılıp hiç konuşamadan harcanır; çok büyük tutulursa
+# koşunun sonuna doğru gereksiz yere slot dondurulur (zararsız -- o slotun
+# GPU maliyeti zaten B'ye bölünüyor, bkz. rwkv_batch.py'deki bant genişliği
+# notu) -- bu yüzden ihtiyatlı (büyük) tarafta hata yapmak tercih edilir.
+_ASGARI_ADMISYON_PAYI = 8000
+# Bir slot HİÇ araç çağrısı üretmeden art arda kaç kontrol_araligi'nde
+# "araç çağırman gerekiyor" uyarısı alabilir (bkz. ana döngüdeki not) --
+# sınırsız bırakılırsa gerçekten hiç JSON üretemeyen bir slot her kontrolde
+# aynı uyarıyı sonsuza kadar enjekte eder (Python-tarafı işi boşa gitmez
+# ama anlamsız tekrar olur); bu sınırdan sonra slot yalnızca yozlaşmış-
+# döngü tespitine/İKAZ'a/bütçe tükenmesine bırakılır.
+_AZAMI_ARAC_UYARISI = 5
 
 
 def _boyutlari_al(ham_rwkv_modeli: Any):
@@ -265,6 +281,9 @@ def toplu_gorevleri_coz(
     # görülünce (bkz. ana döngüdeki gerekçe) tekrar ÇALIŞTIRILMAZ/
     # YANITLANMAZ.
     islenen_cagri_izleri: List[set] = [set() for _ in range(B)]
+    # Slot başına, hiç araç çağrısı bulunamadığında kaç kez "araç
+    # çağırman gerekiyor" uyarısı enjekte edildiği (bkz. _AZAMI_ARAC_UYARISI).
+    arac_uyarisi_sayisi: List[int] = [0] * B
 
     def _slot_sonucla_bitir(b: int) -> None:
         """Slot b'nin O ANKİ sakinini SONUÇLANDIRIR (kayda geçirir, geri
@@ -300,6 +319,7 @@ def toplu_gorevleri_coz(
         sonuclar[b] = None
         bitti[b] = False
         islenen_cagri_izleri[b] = set()
+        arac_uyarisi_sayisi[b] = 0
         gorulen_maske[b, :] = False  # yeni görevin tekrar-cezası geçmişi TEMİZ başlar
         if ayrintili_log:
             print(
@@ -312,10 +332,34 @@ def toplu_gorevleri_coz(
         """Slot b'nin O ANKİ sakini bitti -- sonucu kaydeder, geri çağrıyı
         tetikler, KUYRUKTA yeni görev varsa slotu HEMEN o görevle doldurup
         devam ettirir (bkz. fonksiyon docstring'i: continuous batching /
-        admission control), yoksa slotu kalıcı olarak dondurur."""
+        admission control), yoksa slotu kalıcı olarak dondurur.
+
+        HATA (kullanıcının açık talebi -- "konuşmayı felç edecek hata
+        bul"): `azami_yeni_token`, TÜM batch'in PAYLAŞILAN `adim` sayacına
+        karşı kontrol edilir (bkz. ana döngü: `while adim < azami_yeni_
+        token`) -- yani sürekli admisyonda bu, tek bir görevin değil,
+        TÜM oturumun toplam adım bütçesidir. Koşunun sonuna doğru (ör.
+        adim=58000/60000) admit edilen bir görev, kendi prompt'unu (ki
+        tek başına birkaç bin token sürebilir) tüketmeye BİLE
+        başlayamadan bütçe dolar -- HİÇBİR gerçek token üretemeden,
+        HİÇ konuşmadan BOS_TAHMIN ile kapanır; o slotun harcadığı süre
+        TAMAMEN BOŞA gider. Düzeltme: kalan paylaşılan bütçe
+        (`azami_yeni_token - adim`) `_ASGARI_ADMISYON_PAYI`'nin altındaysa
+        YENİ görev HİÇ ÇEKİLMEZ (kuyruktaki görev DOKUNULMADAN kalır) --
+        slot yalnızca dondurulur. Anlamsızca doomed bir görevi başlatıp
+        modelin hiç konuşamadan harcanmasındansa, kalan payı hiç
+        kullanmamak tercih edilir."""
         nonlocal admit_edilen_sayisi
         _slot_sonucla_bitir(b)
         if sonraki_gorev_al is None:
+            return
+        if azami_yeni_token - adim < _ASGARI_ADMISYON_PAYI:
+            if ayrintili_log:
+                print(
+                    f"{_ONEK} ({deneme_etiketi})   SLOT {b}: kalan paylaşılan bütçe ({azami_yeni_token - adim} adım) "
+                    f"_ASGARI_ADMISYON_PAYI'nin ({_ASGARI_ADMISYON_PAYI}) altında -- YENİ görev admit EDİLMİYOR "
+                    f"(kuyruktaki görev dokunulmadan kalır), slot dondurulacak."
+                )
             return
         yeni_gorev = sonraki_gorev_al()
         if yeni_gorev is not None:
@@ -494,6 +538,39 @@ def toplu_gorevleri_coz(
             # parmak izini tutar -- ayni cagri ikinci kez gorulunce
             # calistirilmadan/yanit verilmeden atlanir.
             cagrilar = arac_cagrilarini_ayikla(metin_tarama)
+            # HATA (kullanıcının açık talebi -- "konuşmayı felç edecek hata
+            # bul"): coz_yurutucu.py'nin (ardışık/tek-görev yolu) "bu turda
+            # hiç araç çağrısı bulunamadı" nudge'ı (_ARAC_CAGRISI_YOK_UYARISI)
+            # bu dosyaya İMPORT EDİLMİŞTİ ama HİÇBİR YERDE kullanılmıyordu --
+            # ölü kod. Sonuç: bir slot binlerce token boyunca (İKAZ eşiğine
+            # kadar) SADECE serbest metin/analiz üretip TEK BİR geçerli JSON
+            # araç çağrısı bile üretemese, model HİÇBİR ZAMAN "bir araç
+            # çağırman gerekiyor" diye uyarılmıyordu -- yozlaşmış-döngü
+            # tespiti de BİREBİR/periyodik tekrar aramadığı için bu durumu
+            # YAKALAMAZ (rastgele/çeşitli ama hiçbir zaman JSON'a varmayan
+            # metin, tam olarak "modelin hiç konuşamadan" bütçesinin
+            # tükendiği senaryodur). Düzeltme: bir slot hiç araç çağrısı
+            # ÜRETMEMİŞKEN (islenen_cagri_izleri[b] hâlâ boş) bu kontrolde
+            # de YİNE bulunamazsa, ardışık yoldakiyle AYNI nudge (yalnızca
+            # bu slota) enjekte edilir -- sınırsız TEKRARI önlemek için en
+            # fazla _AZAMI_ARAC_UYARISI kez.
+            if not cagrilar and not islenen_cagri_izleri[b] and arac_uyarisi_sayisi[b] < _AZAMI_ARAC_UYARISI:
+                arac_uyarisi_sayisi[b] += 1
+                print(
+                    f"{_ONEK} ({deneme_etiketi})   {slot_gorev[b].name}: {len(uretilen_tokenler[b])} token üretildi "
+                    f"ama HİÇ araç çağrısı bulunamadı -- 'araç çağırman gerekiyor' uyarısı enjekte ediliyor "
+                    f"({arac_uyarisi_sayisi[b]}/{_AZAMI_ARAC_UYARISI})."
+                )
+                uyari_tokenleri = tokenizer.encode(rwkv_tek_mesaji_sar({"role": "user", "content": _ARAC_CAGRISI_YOK_UYARISI}))
+                if uyari_tokenleri:
+                    yeni_logit, durum = _ek_metni_tek_diziye_besle(
+                        z, n_layer, n_embd, n_head, head_size, b, B, uyari_tokenleri, durum
+                    )
+                    son_logits[b] = yeni_logit
+                transkript_satiri_yaz({
+                    "gorev": slot_gorev[b].name, "deneme": deneme_etiketi, "tur": 1,
+                    "rol": "sistem-uyari", "icerik": _ARAC_CAGRISI_YOK_UYARISI,
+                })
             if cagrilar:
                 for cagri in cagrilar:
                     izi = json.dumps(cagri, sort_keys=True, default=str)
@@ -600,7 +677,23 @@ def toplu_gorevleri_coz(
                 })
                 _slot_ilerlet(b)
                 continue
-            if not ikaz_enjekte_edildi[b] and adim >= IKAZ_ESIGI_TOKEN:
+            # HATA (kullanıcının açık talebi -- "konuşmayı felç edecek hata
+            # bul"): burada ESKİDEN paylaşılan `adim` (TÜM batch'in ortak
+            # adım sayacı) IKAZ_ESIGI_TOKEN ile karşılaştırılıyordu. Ama
+            # `adim`, sürekli admisyonla GEÇ katılan bir slot için o
+            # slotun KENDİ ürettiği token sayısını YANSITMAZ -- ör. adim
+            # zaten 56000'deyken (IKAZ_ESIGI_TOKEN=55000'i çoktan aşmışken)
+            # admit edilen bir görev, DAHA İLK gerçek tokenini üretir
+            # üretmez (henüz kendi prompt'unu bile bitirmemiş/bir cümle bile
+            # yazmamışken) SAHTE bir "yazma hakkın tükeniyor" ikazı alıyordu
+            # -- modelin gerçekte HİÇ konuşma fırsatı olmadan erken bir
+            # baskı altına girmesi, tam da kullanıcının "modelin konuşamamış
+            # olması" endişesine denk düşen bir senaryo. Düzeltme: artık
+            # slotun KENDİ ürettiği gerçek token sayısı (len(uretilen_
+            # tokenler[b])) kontrol ediliyor -- geç admit edilen bir görev,
+            # DİĞER slotlarla AYNI eşiğe (kendi 55000 tokenine) ulaşana kadar
+            # ikazsız yazabilir.
+            if not ikaz_enjekte_edildi[b] and len(uretilen_tokenler[b]) >= IKAZ_ESIGI_TOKEN:
                 ikaz_enjekte_edildi[b] = True
                 print(f"{_ONEK} ({deneme_etiketi})   {slot_gorev[b].name}: İKAZ enjekte ediliyor (yazma hakkı tükenmek üzere).")
                 ikaz_tokenleri = tokenizer.encode(rwkv_tek_mesaji_sar({"role": "user", "content": IKAZ_METNI}))
