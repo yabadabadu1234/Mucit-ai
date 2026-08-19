@@ -280,6 +280,21 @@ def coklu_gpu_submission_uret(
     # sadece verilmişse kwargs'a eklenir, aksi halde hiç geçilmez.
     azami_yeni_token_kwargs = {} if azami_yeni_token is None else {"azami_yeni_token": azami_yeni_token}
 
+    # HIZ (kullanıcının açık talebi -- "4'ten az soru gönderirsem kaç soru
+    # varsa o kadar GPU'ya model kopyalansın, geri kalanlarına
+    # kopyalanmasın"): görev sayısı zaten BURADA (model yüklenmeden ÖNCE)
+    # biliniyor -- azami_gpu'yu görev sayısının ÜZERİNE ÇIKARMANIN hiçbir
+    # faydası yok, yalnızca hiç iş almayacak GPU'lara boşuna model kopyası
+    # yükleyip (her kopya onlarca saniye/GB VRAM tutar) zaman kaybettirir.
+    # len(tasks)==0 durumunda dokunulmuyor -- o zaten ayrı bir uç durum.
+    if tasks and azami_gpu > len(tasks):
+        print(
+            f"[gonderim_uret] {len(tasks)} görev var, azami_gpu={azami_gpu} idi -- "
+            f"gereksiz GPU kopyalamasını önlemek için azami_gpu={len(tasks)}'e düşürüldü "
+            f"(görev sayısından fazla GPU'ya model yüklemenin faydası yok)."
+        )
+        azami_gpu = len(tasks)
+
     try:
         modeller, tokenizer, gpu_etiketleri = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu, cihaz_modu=cihaz_modu)
         if toplu_mod:
