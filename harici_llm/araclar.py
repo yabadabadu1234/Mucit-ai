@@ -263,7 +263,6 @@ def kodu_guvenle_calistir_serbest(
         return False, "code failed the security check (forbidden eval/exec/open/dunder)"
 
     def _calistir(kuyruk: "multiprocessing.Queue", train_examples: Optional[List[Tuple[Any, Any]]]) -> None:
-        import io
         import os as _os
         import sys as _sys
 

@@ -18,7 +18,7 @@ varsayar. Eğer belirli bir strateji (özellikle int8/custom CUDA
 hızlandırmalı) autograd'i kırarsa, ilk adımda RuntimeError ile açıkça
 bildirilir -- sessizce sıfır gradyanla "başarılı" gibi görünmez.
 """
-from typing import Any, Dict, List, Optional
+from typing import Any, List, Optional
 
 import torch
 import torch.nn as nn

@@ -40,7 +40,7 @@ Onemli duzeltmeler / kararlar:
 """
 import os
 import shutil
-from typing import List, Optional
+from typing import List
 
 GECICI_INDIRME_KOKU = "/tmp/mucit_gecici_indirmeler"
 VARSAYILAN_INDIRME_KOKU = "/kaggle/working/modeller"

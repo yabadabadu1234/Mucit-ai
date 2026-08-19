@@ -26,7 +26,6 @@ from typing import Any, List, Optional, Tuple
 
 import torch
 
-_HAM_PTH_UYARISI_BASILDI = False
 _ILERLEME_ADIMI = 5000  # her N tokende bir ilerleme satırı bas (sessiz kalıp "donmuş gibi" görünmesin diye)
 
 # Kullanıcının GERÇEK Kaggle transkriptinde doğrudan gözlemlendi: küçük/az

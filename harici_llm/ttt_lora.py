@@ -9,8 +9,6 @@ from model_yapilandirmalari import (
     RWKV,
     asistan_donusu_sar,
     kullanici_donusu_sar,
-    model_ailesini_belirle,
-    rwkv_fonksiyon_cagirma_sistem_promptu,
     yerel_model_yolu,
 )
 

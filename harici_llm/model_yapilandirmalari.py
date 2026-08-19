@@ -8,7 +8,7 @@ eklemek yeterli; ttt_lora.py, arc_loader.py, coz_yurutucu.py hepsi buradan
 okur.
 """
 import os
-from typing import Any, Dict, List, Optional
+from typing import Dict, List, Optional
 
 # Internet erisimi TAMAMEN kapatilir: huggingface_hub/transformers'in HER
 # TURLU hub-tarzi cozumlemesi (repo_id dogrulamasi, "dosya var mi" agdan
@@ -126,9 +126,6 @@ RWKV_BOYUT_TABLOSU: Dict[str, Dict[str, int]] = {
     "7.2B": {"L": 32, "D": 4096},
     "13.3B": {"L": 61, "D": 4096},
 }
-RWKV_VOCAB_BOYUTU = 65536
-RWKV_HEAD_BOYUTU = 64
-
 # ==============================================================================
 # DECODING (uretim parametreleri) ONERILERI — README'den birebir
 # ==============================================================================
@@ -171,11 +168,6 @@ DECODING_ONERILERI: Dict[str, Dict[str, Dict[str, float]]] = {
     },
 }
 
-FIM_ONEK_TOKENI = "✿prefix✿"
-FIM_SONEK_TOKENI = "✿suffix✿"
-FIM_ORTA_TOKENI = "✿middle✿"
-
-
 def cevap_sonu_isaretleri(model_ailesi: str) -> str:
     """Bir donusun (turn) bittigini isaretleyen ayirici. RWKV pretrain
     verisinde '\\n\\n' 'sohbet turu ayiricisi' olarak kullanildigindan,
@@ -208,54 +200,6 @@ def asistan_donusu_sar(metin: str, model_ailesi: str) -> str:
     if model_ailesi == RWKV:
         return f" {metin}"
     return metin
-
-
-def rwkv_fonksiyon_cagirma_sistem_promptu(tool_tanimlari_metni: str) -> str:
-    """README'deki iki resmi RWKV-7 G1 fonksiyon-cagirma sablonundan
-    (duz liste ve JSON-array) JSON-array bicimini kullanir; <think></think>
-    (sahte dusunme) ile birlikte."""
-    return f"System: Tools:\n{tool_tanimlari_metni}\nReturn only a JSON function call.\n\n"
-
-
-def rwkv_dusunme_promptu_sar(kullanici_metni: str, mod: str = "fake") -> str:
-    """
-    mod:
-      'fake'  -> '<think></think' (bos dusunme, en yuksek tavsiye edilen)
-      'think' -> '<think' (gercek dusunme, zor promptlar icin)
-      'kisa'  -> '(think a bit)' + '<think'
-      'uzun'  -> '(think a lot)' + '<think'
-    """
-    temiz = rwkv_kullanici_metnini_temizle(kullanici_metni)
-    if mod == "fake":
-        return f"User: {temiz}\n\nAssistant: <think></think"
-    if mod == "kisa":
-        return f"User: {temiz} (think a bit)\n\nAssistant: <think"
-    if mod == "uzun":
-        return f"User: {temiz} (think a lot)\n\nAssistant: <think"
-    return f"User: {temiz}\n\nAssistant: <think"
-
-
-def rwkv_fim_promptu(onek: str, sonek: str, orta_yer_tutucu: bool = True) -> str:
-    """FIM (fill-in-the-middle) sablonu, G1c ve sonrasi icin. Onerilen bicim:
-    onek/sonek bos birakilip gercek onek en sona (middle sonrasina) tasinir."""
-    if orta_yer_tutucu:
-        return f"{FIM_ONEK_TOKENI}{FIM_SONEK_TOKENI}{sonek}{FIM_ORTA_TOKENI}{onek}"
-    return f"{FIM_ONEK_TOKENI}{onek}{FIM_SONEK_TOKENI}{sonek}{FIM_ORTA_TOKENI}"
-
-
-def model_ailesini_belirle(model_id_veya_yol: str) -> str:
-    kucuk = model_id_veya_yol.lower()
-    if "rwkv" in kucuk:
-        return RWKV
-    if "falcon" in kucuk and "mamba" in kucuk:
-        return FALCON_MAMBA
-    if "mamba" in kucuk:
-        return MAMBA
-    if "granite" in kucuk:
-        return GRANITE4
-    if "lfm" in kucuk or "liquid" in kucuk:
-        return LFM25
-    raise ValueError(f"Bilinmeyen model ailesi: {model_id_veya_yol}")
 
 
 _ORTAM_DEGISKENI_ADLARI = {

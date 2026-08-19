@@ -29,8 +29,6 @@ Neden bu tasarım:
   3. Gerçek bir CUDA OOM (torch.cuda.OutOfMemoryError / torch.OutOfMemoryError)
      yakalanırsa azami güvenli B kesin olarak "OOM'a düşen B - 1" yapılır.
 """
-import os
-import time
 from typing import Any, Callable, List, Optional, Tuple
 
 from transkript import transkript_satiri_yaz

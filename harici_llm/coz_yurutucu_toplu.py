@@ -43,7 +43,7 @@ from araclar import (
 )
 from coz_yurutucu import BOS_TAHMIN, IKAZ_ESIGI_TOKEN, IKAZ_METNI, _ARAC_CAGRISI_YOK_UYARISI, _ilk_mesajlar
 from model_yapilandirmalari import RWKV
-from rwkv_batch import _adim_toplu_cekirdek, _maske_uygula, adim_toplu_maskeli, onisle_toplu_farkli_uzunluk, sifir_durum_toplu
+from rwkv_batch import _adim_toplu_cekirdek, _maske_uygula, adim_toplu_maskeli, onisle_toplu_farkli_uzunluk
 from rwkv_native import _tekrara_kilitlenme_periyodu
 from transkript import transkript_satiri_yaz
 from ttt_lora import mesajlari_metne_donustur, rwkv_tek_mesaji_sar, uretim_ayarlarini_al

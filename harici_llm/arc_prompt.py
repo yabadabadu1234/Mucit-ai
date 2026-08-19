@@ -229,11 +229,3 @@ def gorev_kullanici_promptu_olustur(task: Task) -> str:
         f"Test input:\n{convert_grid_to_string(task.test_example.input)}\n\n"
         f"State your Final Rule Sentence, then use the tools to verify and submit your answer."
     )
-
-
-def ttt_egitim_metni_olustur(task_id: str, ornek: Example) -> str:
-    return (
-        f"Task ID: {task_id}\n\n"
-        f"Input:\n{convert_grid_to_string(ornek.input)}\n\n"
-        f"Output:\n{convert_grid_to_string(ornek.output)}"
-    )

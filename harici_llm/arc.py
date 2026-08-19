@@ -8,19 +8,13 @@ read_from_single_file: a function to read challenge problems and solutions from 
 make_submission: a function to create a submission file
 """
 import dataclasses
-import glob
 import json
-import os
 from typing import List, Optional
 
 import numpy as np
 
 
 Grid = np.ndarray
-
-
-def to_tuple(arr):
-    return tuple(tuple([int(e) for e in row]) for row in arr)
 
 
 def to_list(arr):
@@ -177,26 +171,6 @@ class Task:
 
         # mean entropy
         return np.mean(entropy)
-
-
-@dataclasses.dataclass
-class TaskWithDescription(Task):
-    description: str = ""
-
-
-def read_tasks_from_folder(task_folder: str, test: bool = False) -> List[Task]:
-    """
-    Read tasks from a folder
-    """
-    all_tasks = []
-    for file in glob.glob(f"{task_folder}/*.json"):
-        basename = os.path.basename(file)
-        idx = basename.replace(".json", "")
-        tasks = read_tasks_from_file(file, test=test)
-        for i, task in enumerate(tasks):
-            task.name = idx + "-" + str(i)
-        all_tasks += tasks
-    return all_tasks
 
 
 def read_tasks_from_single_file(

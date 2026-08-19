@@ -7,10 +7,9 @@ sablonuyla calisir. Nihai cevap, kaidesi ajan tarafindan bulunan
 `submit_answer` arac cagrisiyla kaydedilir; boyut tutarsizligi varsa
 kendimiz duzeltmeyiz, hatayi ajana geri donduren `araclar.py` bunu saglar.
 """
-import time
 from typing import Any, Dict, List, Optional
 
-from arc import Example, Task
+from arc import Task
 from arc_loader import ArcDataset, GenelSohbetBicimlendirici
 from araclar import (
     CevapDefteri,
@@ -19,7 +18,7 @@ from araclar import (
     tool_response_mesaji_olustur,
     train_examples_sandbox_bicimine_donustur,
 )
-from arc_prompt import gorev_kullanici_promptu_olustur, sistem_promptu_olustur, ttt_egitim_metni_olustur
+from arc_prompt import gorev_kullanici_promptu_olustur, sistem_promptu_olustur
 from model_yapilandirmalari import RWKV
 from transkript import transkript_satiri_yaz
 from ttt_lora import gorev_ozelinde_ince_ayar, mesajlari_metne_donustur, rwkv_tek_mesaji_sar, uret_sohbet, uretim_ayarlarini_al
