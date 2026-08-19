@@ -264,7 +264,7 @@ def coklu_gpu_submission_uret(
     NOT: bu yol salt-çıkarımdır (görev-başına TTT/state-tuning burada
     YOK -- coz_yurutucu.gorevi_coz'un tek-GPU yolunda kalır)."""
     from model_yapilandirmalari import RWKV
-    from coklu_gpu import CokluGPUCozucu, CokluGPUTopluCozucu, dort_kopya_yukle
+    from coklu_gpu import CokluGPUCozucu, CokluGPUTopluCozucu, dort_kopya_yukle, _cihaz_etiketlerini_belirle
 
     model_ailesi = model_ailesi or RWKV
     bitis_zamani = time.time() + calisma_suresi_saniye
@@ -296,21 +296,17 @@ def coklu_gpu_submission_uret(
         azami_gpu = len(tasks)
 
     try:
-        modeller, tokenizer, gpu_etiketleri = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu, cihaz_modu=cihaz_modu)
         if toplu_mod:
-            # CIHAZ='cpu' (ya da 'serbest' ile CPU'ya düşüldüyse): VRAM
-            # ölçümü burada anlamsız -- gpu_etiketleri=["cpu"] iken
-            # VramTabanliBKesifcisi'nin torch.cuda.* çağrıları CUDA'sız
-            # bir makinede zaten çökerdi. Bu durumda vram_kesifcileri HİÇ
-            # kurulmuyor, CokluGPUTopluCozucu sabit b_boyutu'yu kullanır.
-            if gpu_etiketleri == ["cpu"]:
-                vram_kesifcileri = None
-            else:
-                from vram_izleyici import VramTabanliBKesifcisi
-                vram_kesifcileri = [VramTabanliBKesifcisi(etiket, baslangic_b=b_boyutu) for etiket in gpu_etiketleri]
+            # HIZ (kullanıcının açık talebi -- her GPU'yu CPU'nun BAĞIMSIZ
+            # bir çekirdeği idare etsin, GIL çekişmesi olmasın): artık
+            # model burada (padişah/parent süreçte) YÜKLENMİYOR -- yalnızca
+            # cihaz etiketleri belirlenir, GERÇEK model yüklemesi her GPU
+            # için AYRI bir multiprocessing.Process içinde (kendi bağımsız
+            # Python yorumlayıcısı/GIL'iyle) CokluGPUTopluCozucu.coz
+            # içinde yapılır -- bkz. coklu_gpu._surec_gpu_calistir.
+            gpu_etiketleri = _cihaz_etiketlerini_belirle(azami_gpu, cihaz_modu)
             cozucu = CokluGPUTopluCozucu(
-                modeller, tokenizer, b_boyutu=b_boyutu, gpu_etiketleri=gpu_etiketleri,
-                vram_kesifcileri=vram_kesifcileri,
+                model_ailesi=model_ailesi, gpu_etiketleri=gpu_etiketleri, b_boyutu=b_boyutu,
                 # YARISMA=False (deneme) modunda ayrıntılı ilerleme logu
                 # otomatik açılır -- kullanıcının "800 saniyedir hiç log
                 # yok" diye fark ettiği sessiz boşluğu (batched prefill'in
@@ -319,6 +315,7 @@ def coklu_gpu_submission_uret(
                 **azami_yeni_token_kwargs,
             )
         else:
+            modeller, tokenizer, gpu_etiketleri = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu, cihaz_modu=cihaz_modu)
             cozucu = CokluGPUCozucu(modeller, tokenizer, gpu_etiketleri=gpu_etiketleri, **azami_yeni_token_kwargs)
         # ARC ödül kuralı görev başına 2 BAĞIMSIZ deneme hakkı tanır, ve bir
         # ara sürümde bunu GERÇEKTEN kullanmak için bütçeyi ikiye bölüp

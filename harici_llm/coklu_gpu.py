@@ -17,6 +17,7 @@ BAŞTAN SONA, kendi hızında, kimseyi beklemeden çözer. Padişah (ana süreç
   3) Padişah yalnızca TÜM vezirlerin (nihayetinde) işini bitirmesini
      bekler (join) -- aralarında hiçbir sıra/bariyer/senkron YOKTUR.
 """
+import multiprocessing
 import queue
 import threading
 import time
@@ -27,28 +28,41 @@ from coz_yurutucu import BOS_TAHMIN
 from model_yapilandirmalari import RWKV
 
 
+def _cihaz_etiketlerini_belirle(azami_gpu: int, cihaz_modu: str) -> List[str]:
+    """`dort_kopya_yukle`'nin GPU/CPU KARAR mantığının, MODEL YÜKLEMEDEN
+    ayrıştırılmış hali -- yalnızca HANGİ cihaz etiketlerinin (["cuda:0",
+    "cuda:1", ...] ya da ["cpu"]) kullanılacağına karar verir, hiçbir
+    model yüklemez. `CokluGPUTopluCozucu` artık modeli PADİŞAH'ta değil
+    HER SÜRECİN KENDİSİNDE yüklediği için (bkz. dosya başındaki not) bu
+    ayrım gerekli hale geldi -- padişahın modele hiç ihtiyacı yok, yalnızca
+    kaç/hangi cihaza süreç başlatacağını bilmesi yeterli."""
+    if cihaz_modu == "cpu":
+        print("[coklu_gpu] cihaz_modu='cpu' -- GPU sınaması yapılmadan TEK bir 'cpu' süreci kullanılacak.")
+        return ["cpu"]
+
+    from gpu_tespit import kullanilabilir_gpu_indeksleri
+    gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=azami_gpu)
+    if not gpu_indeksleri:
+        if cihaz_modu == "serbest":
+            print("[coklu_gpu] cihaz_modu='serbest': derin sınamadan geçen GERÇEK GPU yok -- 'cpu'ya düşülüyor.")
+            return ["cpu"]
+        raise RuntimeError(
+            "coklu_gpu: derinlemesine sınamadan (gerçek matmul) GEÇEN hiçbir GPU yok "
+            "-- torch GPU görüyor olsa bile hiçbiri fiilen kullanılabilir değil."
+        )
+    return [f"cuda:{i}" for i in gpu_indeksleri]
+
+
 def dort_kopya_yukle(model_ailesi: str = RWKV, azami_gpu: int = 4, cihaz_modu: str = "gpu"):
     """Modelin GPU başına BAĞIMSIZ bir kopyasını yükler (ağırlıklar
     paylaşılmaz -- her GPU kendi VRAM'inde tam bir kopya taşır).
 
-    ÖNEMLİ: hangi GPU'lara kopya yükleneceği `torch.cuda.device_count()`
-    gibi hazır bir sorguya KÖRÜ KÖRÜNE güvenilerek DEĞİL, gpu_tespit.
-    kullanilabilir_gpu_indeksleri() ile HER cihazın GERÇEKTEN bir matmul
-    çalıştırabildiği izole bir alt süreçte doğrulanarak belirlenir --
-    "görünüyor ama arka planda kullanılamıyor" GPU'lar (kullanıcının
-    gerçek Kaggle deneyiminde karşılaştığı durum) sessizce atlanır.
-
-    `cihaz_modu` (kullanıcının açık talebi -- CIHAZ, GPU kotası bittiğinde
-    çalışmaya devam edebilmek için):
-      - "gpu" (varsayılan): ESKİ/tek davranış -- yalnızca derin sınamadan
-        GEÇEN GERÇEK GPU'lar kullanılır, hiçbiri yoksa RuntimeError
-        fırlatılır. CPU'ya SESSİZCE düşülmez.
-      - "cpu": GPU sınaması HİÇ yapılmaz, doğrudan TEK bir model kopyası
-        "cpu" cihazına yüklenir (yavaş ama çalışır -- ör. GPU kotası
-        tükendiğinde bile deneme yapılabilmesi için).
-      - "serbest": önce GERÇEK GPU'lar (yukarıdaki gibi) denenir; hiçbiri
-        yoksa RuntimeError fırlatmak YERİNE "cpu" moduna DÜŞÜLÜR (GPU
-        varsa GPU kullanılır -- CPU'ya gereksiz yere düşülmez)."""
+    NOT: bu fonksiyon artık YALNIZCA geriye dönük uyumluluk için
+    (CokluGPUCozucu -- eski, thread tabanlı, salt karşılaştırma amaçlı
+    yol) tutuluyor. Gerçek üretim yolu (CokluGPUTopluCozucu) artık
+    modeli PADİŞAH sürecinde DEĞİL, her GPU için AYRI bir OS SÜRECİNİN
+    (multiprocessing.Process) kendi içinde yüklüyor -- bkz. dosya
+    başındaki not."""
     from rwkv_native import native_rwkv_yukle, rwkv_ham_pth_mi
     from ttt_lora import tokenizer_yukle, yerel_model_yolu
 
@@ -56,33 +70,18 @@ def dort_kopya_yukle(model_ailesi: str = RWKV, azami_gpu: int = 4, cihaz_modu: s
     if not rwkv_ham_pth_mi(yol):
         raise RuntimeError("coklu_gpu şu an yalnızca native RWKV (.pth) yolunu destekliyor.")
 
-    def _cpu_yukle():
-        print("[coklu_gpu] cihaz_modu='cpu' (veya GPU bulunamayıp 'serbest' ile düşüldü) -- "
-              "TEK bir model kopyası 'cpu' cihazına yükleniyor (yavaş olacaktır).")
+    gpu_etiketleri = _cihaz_etiketlerini_belirle(azami_gpu, cihaz_modu)
+    if gpu_etiketleri == ["cpu"]:
+        print("[coklu_gpu] TEK bir model kopyası 'cpu' cihazına yükleniyor (yavaş olacaktır).")
         model = native_rwkv_yukle(yol, cihaz="cpu")
         tokenizer = tokenizer_yukle(model_ailesi)
         print("[coklu_gpu] CPU'da modelin TEK kopyası hazır.")
         return [model], tokenizer, ["cpu"]
 
-    if cihaz_modu == "cpu":
-        return _cpu_yukle()
-
-    from gpu_tespit import kullanilabilir_gpu_indeksleri
-    gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=azami_gpu)
-    if not gpu_indeksleri:
-        if cihaz_modu == "serbest":
-            return _cpu_yukle()
-        raise RuntimeError(
-            "coklu_gpu.dort_kopya_yukle: derinlemesine sınamadan (gerçek matmul) GEÇEN hiçbir GPU yok "
-            "-- torch GPU görüyor olsa bile hiçbiri fiilen kullanılabilir değil."
-        )
-
     modeller = []
-    gpu_etiketleri = []
-    for i in gpu_indeksleri:
-        print(f"[coklu_gpu] cuda:{i} için model kopyası yükleniyor...")
-        modeller.append(native_rwkv_yukle(yol, cihaz=f"cuda:{i}"))
-        gpu_etiketleri.append(f"cuda:{i}")
+    for etiket in gpu_etiketleri:
+        print(f"[coklu_gpu] {etiket} için model kopyası yükleniyor...")
+        modeller.append(native_rwkv_yukle(yol, cihaz=etiket))
 
     tokenizer = tokenizer_yukle(model_ailesi)
     print(f"[coklu_gpu] {len(modeller)} GPU'da modelin BAĞIMSIZ birer kopyası hazır: {gpu_etiketleri}")
@@ -215,168 +214,121 @@ def _gorevleri_esit_dagit(tasks: List[Task], gpu_sayisi: int) -> List[List[Task]
     return paylar
 
 
-def padisah_vezir_toplu_havuzuyla_coz(
-    gpu_sayisi: int,
-    tasks: List[Task],
-    gorevleri_coz_toplu: Callable[[int, List[Task]], Dict[str, Dict[str, Any]]],
-    b_boyutu_al: Callable[[int], int],
-    bitis_zamani: Optional[float] = None,
-    etiketler: Optional[List[str]] = None,
-    surekli_admisyon: bool = False,
-    tamamlanma_geri_cagirma: Optional[Callable[[str, Dict[str, Any]], None]] = None,
-) -> Dict[str, Dict[str, Any]]:
-    """padisah_vezir_havuzuyla_coz'un TOPLU (batched) varyantı.
+# NOT (Turkce -- kullanicinin acik talebi, gercek Kaggle deneyimiyle
+# DOGRULANMIS bir gozlem): B=65 (tek GPU) ~1.25-4 adim/sn iken B=1 (tek
+# GPU, TEK vezir -- baska hicbir GPU thread'i AYNI ANDA calismiyorken)
+# ~15 adim/sn olcduldu -- bu fark, salt B-olcekleme (bant genisligi-sinirli
+# RNN'de B'nin adim suresine etkisinin sinirli olmasi beklenirdi) ile
+# ACIKLANAMAYACAK kadar buyuk. Gercek ek kaynak: coklu_gpu.py ESKIDEN
+# HER GPU'yu AYRI bir threading.Thread ile (AYNI Python surecinde, AYNI
+# GIL'i PAYLASARAK) yonetiyordu. CUDA kernel'lerinin KENDISI GPU'da
+# gercekten paralel calissa da, HER adimdaki PYTHON-taraf isi (32
+# katmanli eager donguntin op dispatch'i, token secimi, tensor
+# indeksleme vb.) SADECE TEK BIR thread'in ayni anda calisabildigi GIL
+# tarafindan SIRALANIYORDU -- yani 4 GPU thread'i "paralel" gorunse de,
+# Python'un KENDISI hala TEK SEFERDE bir thread'in isini yapiyordu; 4
+# thread GIL icin birbirini BEKLETIYORDU. Duzeltme: her GPU artik GERCEK
+# bir OS SURECINDE (multiprocessing.Process, kendi Python yorumlayicisi
+# + kendi GIL'i + kendi CUDA baglami) calisiyor -- 4 surec GERCEKTEN
+# PARALEL Python calistirir (isletim sistemi tarafindan farkli CPU
+# cekirdeklerine zamanlanir), GIL PAYLASIMI YOKTUR. Modelin KENDISI de
+# artik padisahta DEGIL, HER SURECIN KENDI ICINDE yukleniyor (bkz.
+# _surec_gpu_calistir) -- CUDA baglamlarinin surecler arasinda
+# PAYLASILAMAMASI zaten bunu GEREKTIRIYORDU.
+def _surec_gpu_calistir(
+    gpu_index: int,
+    model_ailesi: str,
+    gpu_etiketi: str,
+    kendi_gorevleri: List[Task],
+    b_boyutu_baslangic: int,
+    azami_yeni_token: int,
+    bitis_zamani: Optional[float],
+    ayrintili_log: bool,
+    sonuc_kuyrugu: "multiprocessing.Queue",
+) -> None:
+    """AYRI bir OS sürecinde (multiprocessing.Process hedefi) çalışır.
+    Modelini KENDİSİ yükler, kendi payındaki görevleri SÜREKLİ ADMİSYONLA
+    (bkz. coz_yurutucu_toplu.toplu_gorevleri_coz) çözer, HER görev
+    bitirilir bitirilmez `sonuc_kuyrugu`'ya ("sonuc", task_adi, sonuc)
+    mesajı koyar -- padişah bu kuyruktan OKUYUP submission.json'a ARA
+    KAYIT yapar. Bitirdiğinde ("bitti", gpu_index) mesajıyla haber verir
+    (padişahın ne zaman TÜM süreçlerin işini bitirdiğini bilmesi için)."""
+    try:
+        from rwkv_native import native_rwkv_yukle
+        from ttt_lora import tokenizer_yukle, yerel_model_yolu
+        from coz_yurutucu_toplu import toplu_gorevleri_coz
 
-    Padişah İŞE BAŞLAMADAN ÖNCE görevleri gpu_sayisi kadar EŞİT paya
-    böler (bkz. _gorevleri_esit_dagit) -- her vezirin KENDİ AYRI kuyruğu
-    vardır, ORTAK bir kuyruk YOKTUR. Her vezir yalnızca KENDİ payından,
-    KENDİ o anki güvenli B boyutu kadar (b_boyutu_al(gpu_index) -- ör.
-    vram_izleyici.VramTabanliBKesifcisi.calisan_b()) görevi BİRDEN çekip
-    `gorevleri_coz_toplu` (gerçekte coz_yurutucu_toplu.toplu_gorevleri_coz)
-    ile TEK bir batched adım zincirinde HEPSİNİ BİRLİKTE çözer.
-
-    `surekli_admisyon=False` (varsayılan, geriye dönük uyumlu -- eski
-    davranış): payı B'den büyükse kendi payını B'şer B'şer (birkaç AYRI
-    toplu parti halinde, HER PARTİ TAMAMEN bitene kadar bir SONRAKİ
-    başlamadan) çeker -- bir partideki en yavaş görev biterken, o partide
-    ERKEN biten görevlerin koltuğu partinin SONUNA KADAR boşa gider
-    (BlockServe makalesinin tarif ettiği "Effective Compute Ratio" düşüşü).
-
-    `surekli_admisyon=True` (BlockServe/JBAS'tan çıkan block-grained
-    scheduling): vezir kendi payından yalnızca BİR KEZ ilk B kadar görev
-    çeker, ardından `gorevleri_coz_toplu`'yu TEK bir çağrıyla, kendi
-    KUYRUĞUNA DOĞRUDAN erişen bir `sonraki_gorev_al` geri çağrısıyla
-    başlatır -- böylece B slottan biri boşaldığı AN, parti bitmeden,
-    kuyruktaki bir SONRAKİ görevle HEMEN doldurulur (bkz.
-    coz_yurutucu_toplu.toplu_gorevleri_coz'daki gerçek admission mantığı).
-    `tamamlanma_geri_cagirma(task_adi, sonuc)` verilirse HER görev
-    (partinin/koşunun TAMAMI değil) bitirilir bitirilmez tetiklenir --
-    gonderim_uret.py bunu submission.json'a ARA KAYIT için kullanır."""
-    paylar = _gorevleri_esit_dagit(tasks, gpu_sayisi)
-    kendi_kuyruklari: List["queue.Queue[Task]"] = []
-    for pay in paylar:
-        kuyruk: "queue.Queue[Task]" = queue.Queue()
-        for task in pay:
-            kuyruk.put(task)
-        kendi_kuyruklari.append(kuyruk)
-
-    sonuclar: Dict[str, Dict[str, Any]] = {}
-    kilit = threading.Lock()
-    toplam = len(tasks)
-    baslangic = time.time()
-
-    def _etiket(gpu_index: int) -> str:
-        if etiketler is not None and gpu_index < len(etiketler):
-            return etiketler[gpu_index]
-        return f"cuda:{gpu_index}"
-
-    print(
-        f"[coklu_gpu] {toplam} görev, {gpu_sayisi} vezire İŞ BAŞLAMADAN ÖNCE EŞİT paylaştırıldı: "
-        f"{[len(p) for p in paylar]} (hiçbir vezir başka vezirin payına dokunmayacak)."
-    )
-
-    def _tekli_gorev_tamamlandi(task_adi: str, sonuc: Dict[str, Any]) -> None:
-        with kilit:
-            sonuclar[task_adi] = sonuc
-            gecen = time.time() - baslangic
-            print(f"[coklu_gpu] ({len(sonuclar)}/{toplam}) {task_adi} tamamlandı (SÜREKLİ ADMİSYON ile slot yenilendi) | toplam süre: {gecen:.1f} sn")
-        if tamamlanma_geri_cagirma is not None:
-            tamamlanma_geri_cagirma(task_adi, sonuc)
-
-    def _vezir(gpu_index: int) -> None:
-        kendi_kuyrugu = kendi_kuyruklari[gpu_index]
-
-        if surekli_admisyon:
-            b_boyutu = max(1, b_boyutu_al(gpu_index))
-            ilk_parti: List[Task] = []
-            for _ in range(b_boyutu):
-                try:
-                    ilk_parti.append(kendi_kuyrugu.get_nowait())
-                except queue.Empty:
-                    break
-            if not ilk_parti:
-                return
-
-            def _sonraki_gorev_al() -> Optional[Task]:
-                if bitis_zamani is not None and time.time() > bitis_zamani:
-                    return None
-                try:
-                    return kendi_kuyrugu.get_nowait()
-                except queue.Empty:
-                    return None
-
-            try:
-                parti_sonuclari = gorevleri_coz_toplu(
-                    gpu_index, ilk_parti,
-                    sonraki_gorev_al=_sonraki_gorev_al,
-                    tamamlanma_geri_cagirma=_tekli_gorev_tamamlandi,
-                )
-            except Exception as hata:
-                print(f"[coklu_gpu] ({_etiket(gpu_index)}) SÜREKLİ ADMİSYON partisi başarısız: {hata}")
-                parti_sonuclari = {}
-            with kilit:
-                for ad, sonuc in parti_sonuclari.items():
-                    sonuclar.setdefault(ad, sonuc)
+        if not kendi_gorevleri:
             return
 
-        while True:
+        yol = yerel_model_yolu(model_ailesi)
+        print(f"[coklu_gpu] (süreç, {gpu_etiketi}) model kopyası yükleniyor...")
+        ham_model_sarmali = native_rwkv_yukle(yol, cihaz=gpu_etiketi)
+        ham_model = getattr(ham_model_sarmali, "ham_model", ham_model_sarmali)
+        tokenizer = tokenizer_yukle(model_ailesi)
+        print(f"[coklu_gpu] (süreç, {gpu_etiketi}) model hazır -- kendi payı: {len(kendi_gorevleri)} görev.")
+
+        vram_kesifci = None
+        b_boyutu = max(1, b_boyutu_baslangic)
+        if gpu_etiketi != "cpu":
+            from vram_izleyici import VramTabanliBKesifcisi
+            vram_kesifci = VramTabanliBKesifcisi(gpu_etiketi, baslangic_b=b_boyutu_baslangic)
+            b_boyutu = max(1, vram_kesifci.calisan_b())
+
+        kalan: List[Task] = list(kendi_gorevleri)
+        ilk_parti = kalan[:b_boyutu]
+        kalan = kalan[b_boyutu:]
+        if not ilk_parti:
+            return
+
+        def _sonraki_gorev_al() -> Optional[Task]:
             if bitis_zamani is not None and time.time() > bitis_zamani:
-                return
-            b_boyutu = max(1, b_boyutu_al(gpu_index))
-            parti: List[Task] = []
-            for _ in range(b_boyutu):
-                try:
-                    parti.append(kendi_kuyrugu.get_nowait())
-                except queue.Empty:
-                    break
-            if not parti:
-                return  # KENDİ payı tükendi -- başka vezirin payına asla el atmaz
-            try:
-                parti_sonuclari = gorevleri_coz_toplu(gpu_index, parti)
-            except Exception as hata:
-                print(f"[coklu_gpu] ({_etiket(gpu_index)}) {len(parti)} görevlik TOPLU parti başarısız: {hata}")
-                parti_sonuclari = {t.name: {"attempt_1": BOS_TAHMIN, "attempt_1_gonderildi_mi": False} for t in parti}
-            with kilit:
-                sonuclar.update(parti_sonuclari)
-                gecen = time.time() - baslangic
-                print(f"[coklu_gpu] ({_etiket(gpu_index)}) ({len(sonuclar)}/{toplam}) {len(parti)} görevlik TOPLU (B={len(parti)}) parti tamamlandı | toplam süre: {gecen:.1f} sn")
-            for _ in parti:
-                kendi_kuyrugu.task_done()
+                return None
+            if not kalan:
+                return None
+            return kalan.pop(0)
 
-    veziler = []
-    for gpu_index in range(gpu_sayisi):
-        vezir = threading.Thread(target=_vezir, args=(gpu_index,), daemon=True, name=f"vezir-toplu-{_etiket(gpu_index)}")
-        vezir.start()
-        veziler.append(vezir)
-    for vezir in veziler:
-        vezir.join()
+        def _tamamlandi(task_adi: str, sonuc: Dict[str, Any]) -> None:
+            sonuc_kuyrugu.put(("sonuc", task_adi, sonuc))
+            if vram_kesifci is not None:
+                vram_kesifci.gorev_sonrasi_olc_ve_ayarla()
 
-    for task in tasks:
-        if task.name not in sonuclar:
-            sonuclar[task.name] = {"attempt_1": BOS_TAHMIN, "attempt_1_gonderildi_mi": False}
-
-    return sonuclar
+        try:
+            toplu_gorevleri_coz(
+                ham_model, tokenizer, ilk_parti,
+                azami_yeni_token=azami_yeni_token, deneme_etiketi=gpu_etiketi,
+                ayrintili_log=ayrintili_log, bitis_zamani=bitis_zamani,
+                sonraki_gorev_al=_sonraki_gorev_al, tamamlanma_geri_cagirma=_tamamlandi,
+            )
+        except Exception as hata:
+            # NOT: toplu_gorevleri_coz zaten HER biten görevi kendi içinde
+            # tamamlanma_geri_cagirma ile bildirir -- bu except yalnızca
+            # toplu_gorevleri_coz'un KENDİSİ (ör. batched prefill sırasında)
+            # çökerse devreye girer. Bildirilmemiş görevler için özel bir
+            # şey yapmaya GEREK YOK -- padişah, TÜM süreçler bittikten
+            # SONRA `tasks` listesinin TAMAMINI tarayıp sonuç ALAMADIĞI
+            # her görevi zaten BOS_TAHMIN ile dolduruyor (bkz.
+            # CokluGPUTopluCozucu.coz).
+            print(f"[coklu_gpu] (süreç, {gpu_etiketi}) SÜREKLİ ADMİSYON partisi başarısız: {hata}")
+    finally:
+        sonuc_kuyrugu.put(("bitti", gpu_index))
 
 
 class CokluGPUTopluCozucu:
-    """N GPU'daki N bağımsız model kopyasını, HER GPU'da B GÖREVİ TEK bir
-    batched adım zinciriyle EŞZAMANLI çözecek şekilde kullanır (bkz.
-    coz_yurutucu_toplu.toplu_gorevleri_coz). B, `vram_kesifcileri`
-    verilirse (bkz. vram_izleyici.VramTabanliBKesifcisi) her partiden
-    SONRA gerçek VRAM ölçümüyle otomatik ayarlanır; verilmezse sabit
-    `b_boyutu` kullanılır."""
+    """N GPU'yu, HER BİRİNİ AYRI bir OS sürecinde (multiprocessing.Process)
+    çalıştırarak kullanır -- her süreç kendi model kopyasını KENDİSİ
+    yükler, kendi payındaki görevleri sürekli admisyonla (bkz.
+    coz_yurutucu_toplu.toplu_gorevleri_coz) çözer. Padişah (bu sınıf)
+    modeli HİÇ yüklemez, yalnızca süreçleri başlatır ve sonuç kuyruğunu
+    dinler -- bkz. _surec_gpu_calistir'deki GIL notu (bunun NEDEN gerçek
+    threading yerine gerçek süreçler kullandığı için)."""
 
-    def __init__(self, modeller: List[Any], tokenizer: Any, b_boyutu: int = 128,
-                 azami_yeni_token: int = 60000, gpu_etiketleri: Optional[List[str]] = None,
-                 vram_kesifcileri: Optional[List[Any]] = None, ayrintili_log: bool = False):
-        self.modeller = modeller
-        self.tokenizer = tokenizer
+    def __init__(self, model_ailesi: str, gpu_etiketleri: List[str], b_boyutu: int = 128,
+                 azami_yeni_token: int = 60000, ayrintili_log: bool = False):
+        self.model_ailesi = model_ailesi
+        self.gpu_etiketleri = gpu_etiketleri
         self.b_boyutu = b_boyutu
         self.azami_yeni_token = azami_yeni_token
-        self.gpu_etiketleri = gpu_etiketleri or [
-            str(getattr(m, "device", f"gpu{i}")) for i, m in enumerate(modeller)
-        ]
-        self.vram_kesifcileri = vram_kesifcileri
         # YARISMA=False (deneme) modunda gonderim_uret.py bunu True yapar:
         # kullanıcının fark ettiği gibi, en uzun promptlu görev tek başına
         # dakikalarca sürebilen batched prefill'de HİÇ log yoktu -- bu
@@ -388,27 +340,67 @@ class CokluGPUTopluCozucu:
     def coz(self, tasks: List[Task], bitis_zamani: Optional[float] = None,
             tamamlanma_geri_cagirma: Optional[Callable[[str, Dict[str, Any]], None]] = None,
             surekli_admisyon: bool = True) -> Dict[str, Dict[str, Any]]:
-        from coz_yurutucu_toplu import toplu_gorevleri_coz
-
-        def _b_boyutu_al(gpu_index: int) -> int:
-            if self.vram_kesifcileri is not None:
-                return self.vram_kesifcileri[gpu_index].calisan_b()
-            return self.b_boyutu
-
-        def _gorevleri_coz_toplu(gpu_index: int, gorev_partisi: List[Task], **surekli_kwargs) -> Dict[str, Dict[str, Any]]:
-            ham_model = getattr(self.modeller[gpu_index], "ham_model", self.modeller[gpu_index])
-            sonuc = toplu_gorevleri_coz(
-                ham_model, self.tokenizer, gorev_partisi,
-                azami_yeni_token=self.azami_yeni_token, deneme_etiketi=self.gpu_etiketleri[gpu_index],
-                ayrintili_log=self.ayrintili_log, bitis_zamani=bitis_zamani,
-                **surekli_kwargs,
+        if not surekli_admisyon:
+            raise NotImplementedError(
+                "CokluGPUTopluCozucu.coz: süreç tabanlı yeni uygulama yalnızca surekli_admisyon=True'yu "
+                "destekliyor -- hiçbir üretim çağrısı False geçmiyor, bu yüzden sessizce yok saymak yerine "
+                "açıkça hata veriyoruz."
             )
-            if self.vram_kesifcileri is not None:
-                self.vram_kesifcileri[gpu_index].gorev_sonrasi_olc_ve_ayarla()
-            return sonuc
+        gpu_sayisi = len(self.gpu_etiketleri)
+        if gpu_sayisi == 0 or not tasks:
+            for task in tasks:
+                pass
+            return {task.name: {"attempt_1": BOS_TAHMIN, "attempt_1_gonderildi_mi": False} for task in tasks}
 
-        return padisah_vezir_toplu_havuzuyla_coz(
-            len(self.modeller), tasks, _gorevleri_coz_toplu, _b_boyutu_al,
-            bitis_zamani=bitis_zamani, etiketler=self.gpu_etiketleri,
-            surekli_admisyon=surekli_admisyon, tamamlanma_geri_cagirma=tamamlanma_geri_cagirma,
+        paylar = _gorevleri_esit_dagit(tasks, gpu_sayisi)
+        print(
+            f"[coklu_gpu] {len(tasks)} görev, {gpu_sayisi} SÜRECE İŞ BAŞLAMADAN ÖNCE EŞİT paylaştırıldı: "
+            f"{[len(p) for p in paylar]} (her GPU AYRI bir OS sürecinde, kendi GIL'iyle, BAĞIMSIZ çalışacak)."
         )
+
+        # NOT: 'spawn' KASITLI OLARAK seçildi -- 'fork' (Linux varsayılanı),
+        # ana süreçte HERHANGİ bir CUDA bağlamı zaten kurulmuşsa (ör. daha
+        # önceki bir GPU sınaması/olası bir torch.cuda çağrısı) çocuk
+        # süreçte GÜVENSİZDİR/tanımsız davranışa yol açabilir. 'spawn' her
+        # çocuğu SIFIRDAN bir Python yorumlayıcısıyla başlatır -- daha
+        # yavaş başlar ama CUDA ile KANITLANMIŞ şekilde güvenlidir.
+        baglam = multiprocessing.get_context("spawn")
+        sonuc_kuyrugu = baglam.Queue()
+        surecler = []
+        for gpu_index, (etiket, pay) in enumerate(zip(self.gpu_etiketleri, paylar)):
+            surec = baglam.Process(
+                target=_surec_gpu_calistir,
+                args=(gpu_index, self.model_ailesi, etiket, pay, self.b_boyutu,
+                      self.azami_yeni_token, bitis_zamani, self.ayrintili_log, sonuc_kuyrugu),
+                daemon=True, name=f"vezir-surec-{etiket}",
+            )
+            surec.start()
+            surecler.append(surec)
+
+        sonuclar: Dict[str, Dict[str, Any]] = {}
+        toplam = len(tasks)
+        baslangic = time.time()
+        bitenler = 0
+        while bitenler < gpu_sayisi:
+            tur, *govde = sonuc_kuyrugu.get()
+            if tur == "sonuc":
+                task_adi, sonuc = govde
+                sonuclar[task_adi] = sonuc
+                gecen = time.time() - baslangic
+                print(f"[coklu_gpu] ({len(sonuclar)}/{toplam}) {task_adi} tamamlandı (bağımsız SÜREÇ ile) | toplam süre: {gecen:.1f} sn")
+                if tamamlanma_geri_cagirma is not None:
+                    tamamlanma_geri_cagirma(task_adi, sonuc)
+            elif tur == "bitti":
+                bitenler += 1
+
+        for surec in surecler:
+            surec.join(timeout=30)
+            if surec.is_alive():
+                print(f"[coklu_gpu] UYARI: {surec.name} 30 sn içinde kapanmadı -- terminate ediliyor.")
+                surec.terminate()
+                surec.join()
+
+        for task in tasks:
+            if task.name not in sonuclar:
+                sonuclar[task.name] = {"attempt_1": BOS_TAHMIN, "attempt_1_gonderildi_mi": False}
+        return sonuclar
