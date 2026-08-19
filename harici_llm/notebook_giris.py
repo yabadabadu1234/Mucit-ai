@@ -117,34 +117,54 @@ SORU_SAYISI = int(_SORU_SAYISI_ORTAM_DEGISKENI) if _SORU_SAYISI_ORTAM_DEGISKENI 
 # olduğu için, hızlı deneme/duman testlerinde bunu düşürmek içindir.
 KONUS = None
 
+# CIHAZ (kullanıcının açık talebi -- GPU kotası tükendiğinde bile
+# çalışmaya devam edebilmek için): "" veya "GPU" (varsayılan) -> ESKİ/
+# sıkı davranış, GERÇEK GPU bulunamazsa RuntimeError, CPU'ya SESSİZCE
+# düşülmez. "CPU" -> GPU sınaması hiç yapılmadan doğrudan CPU'da
+# çalışılır. "serbest" -> önce GERÇEK GPU denenir, bulunamazsa CPU'ya
+# DÜŞÜLEBİLİR (hata fırlatılmaz). Büyük/küçük harf ve boşluk önemsizdir.
+CIHAZ = ""
+_CIHAZ_NORMALIZE = (CIHAZ or "gpu").strip().lower()
+if _CIHAZ_NORMALIZE not in ("gpu", "cpu", "serbest"):
+    raise ValueError(f"notebook_giris: CIHAZ={CIHAZ!r} tanınmıyor -- '' (ya da 'GPU'), 'CPU' veya 'serbest' olmalı.")
+
 if __name__ == "__main__":
-    gorulen_gpu_sayisi = torch.cuda.device_count() if torch.cuda.is_available() else 0
-    print(f"[notebook_giris] torch.cuda.is_available()={torch.cuda.is_available()} , torch.cuda.device_count()={gorulen_gpu_sayisi}")
-    print(f"[notebook_giris] YARISMA={YARISMA} , DENEME_MODU={DENEME_MODU} , KAGGLE_IS_COMPETITION_RERUN={_rerun_mu!r}")
+    print(f"[notebook_giris] YARISMA={YARISMA} , DENEME_MODU={DENEME_MODU} , KAGGLE_IS_COMPETITION_RERUN={_rerun_mu!r} , CIHAZ={CIHAZ!r}")
 
-    # ÖNEMLİ: torch.cuda.device_count()/is_available() yalnızca GPU'nun
-    # GÖRÜNDÜĞÜNÜ söyler, GERÇEKTEN kullanılabildiğini DEĞİL (Kaggle'da
-    # görünüp arka planda erişilemeyen/donan GPU'lar yaşandı). Bu yüzden
-    # karar, HER cihazda GERÇEK bir matmul çalıştıran izole bir alt-süreç
-    # sınamasından (gpu_tespit.kullanilabilir_gpu_indeksleri) geçer.
-    gercek_gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=AZAMI_GPU) if gorulen_gpu_sayisi > 0 else []
-    print(f"[notebook_giris] Derin sınamadan GEÇEN GPU sayısı: {len(gercek_gpu_indeksleri)} (indeksler: {gercek_gpu_indeksleri})")
-    if not gercek_gpu_indeksleri:
-        raise RuntimeError(
-            "notebook_giris: derin sınamadan GEÇEN hiçbir GPU yok -- bu yarışma koşusu GPU gerektirir, "
-            "CPU'ya sessizce düşülmeyecek. Kaggle notebook ayarlarından bir GPU hızlandırıcı seçili olduğunu doğrulayın."
-        )
+    if _CIHAZ_NORMALIZE == "cpu":
+        print("[notebook_giris] CIHAZ='cpu' -- GPU sınaması ATLANIYOR, doğrudan CPU'da TEK bir model kopyasıyla çalışılacak (YAVAŞ olacaktır).")
+    else:
+        gorulen_gpu_sayisi = torch.cuda.device_count() if torch.cuda.is_available() else 0
+        print(f"[notebook_giris] torch.cuda.is_available()={torch.cuda.is_available()} , torch.cuda.device_count()={gorulen_gpu_sayisi}")
 
-    print(
-        f"[notebook_giris] {len(gercek_gpu_indeksleri)} GERÇEKTEN kullanılabilir GPU -- her GPU, kendisine "
-        f"düşen görevleri TEK TEK değil, B TANESİNİ (VRAM ölçümüyle otomatik keşfedilen güvenli B, bkz. "
-        f"vram_izleyici.py, başlangıç tahmini B_BOYUTU={B_BOYUTU}) AYNI ANDA, TEK bir batched adım zinciriyle "
-        f"çözüyor (bkz. coklu_gpu.CokluGPUTopluCozucu / coz_yurutucu_toplu.toplu_gorevleri_coz). NOT: bu yol "
-        f"salt-çıkarımdır, görev-başına TTT burada yok."
-    )
+        # ÖNEMLİ: torch.cuda.device_count()/is_available() yalnızca GPU'nun
+        # GÖRÜNDÜĞÜNÜ söyler, GERÇEKTEN kullanılabildiğini DEĞİL (Kaggle'da
+        # görünüp arka planda erişilemeyen/donan GPU'lar yaşandı). Bu yüzden
+        # karar, HER cihazda GERÇEK bir matmul çalıştıran izole bir alt-süreç
+        # sınamasından (gpu_tespit.kullanilabilir_gpu_indeksleri) geçer.
+        gercek_gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=AZAMI_GPU) if gorulen_gpu_sayisi > 0 else []
+        print(f"[notebook_giris] Derin sınamadan GEÇEN GPU sayısı: {len(gercek_gpu_indeksleri)} (indeksler: {gercek_gpu_indeksleri})")
+        if not gercek_gpu_indeksleri:
+            if _CIHAZ_NORMALIZE == "serbest":
+                print("[notebook_giris] CIHAZ='serbest': derin sınamadan geçen GERÇEK GPU yok -- CPU'ya DÜŞÜLÜYOR (YAVAŞ olacaktır).")
+            else:
+                raise RuntimeError(
+                    "notebook_giris: derin sınamadan GEÇEN hiçbir GPU yok -- CIHAZ='' (ya da 'GPU') iken bu koşu "
+                    "GPU gerektirir, CPU'ya sessizce düşülmeyecek. Kaggle notebook ayarlarından bir GPU hızlandırıcı "
+                    "seçili olduğunu doğrulayın -- ya da GPU kotanız tükendiyse CIHAZ = 'CPU' veya CIHAZ = 'serbest' yapın."
+                )
+        else:
+            print(
+                f"[notebook_giris] {len(gercek_gpu_indeksleri)} GERÇEKTEN kullanılabilir GPU -- her GPU, kendisine "
+                f"düşen görevleri TEK TEK değil, B TANESİNİ (VRAM ölçümüyle otomatik keşfedilen güvenli B, bkz. "
+                f"vram_izleyici.py, başlangıç tahmini B_BOYUTU={B_BOYUTU}) AYNI ANDA, TEK bir batched adım zinciriyle "
+                f"çözüyor (bkz. coklu_gpu.CokluGPUTopluCozucu / coz_yurutucu_toplu.toplu_gorevleri_coz). NOT: bu yol "
+                f"salt-çıkarımdır, görev-başına TTT burada yok."
+            )
+
     submission = coklu_gpu_submission_uret(
         cikti_yolu=SUBMISSION_YOLU, yarisma=YARISMA, azami_gpu=AZAMI_GPU, b_boyutu=B_BOYUTU,
-        azami_soru_sayisi=SORU_SAYISI, azami_yeni_token=KONUS,
+        azami_soru_sayisi=SORU_SAYISI, azami_yeni_token=KONUS, cihaz_modu=_CIHAZ_NORMALIZE,
     )
 
     print(f"[notebook_giris] Bitti. {len(submission)} görev için {SUBMISSION_YOLU} yazıldı.")

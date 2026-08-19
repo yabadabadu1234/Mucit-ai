@@ -27,7 +27,7 @@ from coz_yurutucu import BOS_TAHMIN
 from model_yapilandirmalari import RWKV
 
 
-def dort_kopya_yukle(model_ailesi: str = RWKV, azami_gpu: int = 4):
+def dort_kopya_yukle(model_ailesi: str = RWKV, azami_gpu: int = 4, cihaz_modu: str = "gpu"):
     """Modelin GPU başına BAĞIMSIZ bir kopyasını yükler (ağırlıklar
     paylaşılmaz -- her GPU kendi VRAM'inde tam bir kopya taşır).
 
@@ -36,21 +36,46 @@ def dort_kopya_yukle(model_ailesi: str = RWKV, azami_gpu: int = 4):
     kullanilabilir_gpu_indeksleri() ile HER cihazın GERÇEKTEN bir matmul
     çalıştırabildiği izole bir alt süreçte doğrulanarak belirlenir --
     "görünüyor ama arka planda kullanılamıyor" GPU'lar (kullanıcının
-    gerçek Kaggle deneyiminde karşılaştığı durum) sessizce atlanır."""
-    from gpu_tespit import kullanilabilir_gpu_indeksleri
+    gerçek Kaggle deneyiminde karşılaştığı durum) sessizce atlanır.
+
+    `cihaz_modu` (kullanıcının açık talebi -- CIHAZ, GPU kotası bittiğinde
+    çalışmaya devam edebilmek için):
+      - "gpu" (varsayılan): ESKİ/tek davranış -- yalnızca derin sınamadan
+        GEÇEN GERÇEK GPU'lar kullanılır, hiçbiri yoksa RuntimeError
+        fırlatılır. CPU'ya SESSİZCE düşülmez.
+      - "cpu": GPU sınaması HİÇ yapılmaz, doğrudan TEK bir model kopyası
+        "cpu" cihazına yüklenir (yavaş ama çalışır -- ör. GPU kotası
+        tükendiğinde bile deneme yapılabilmesi için).
+      - "serbest": önce GERÇEK GPU'lar (yukarıdaki gibi) denenir; hiçbiri
+        yoksa RuntimeError fırlatmak YERİNE "cpu" moduna DÜŞÜLÜR (GPU
+        varsa GPU kullanılır -- CPU'ya gereksiz yere düşülmez)."""
     from rwkv_native import native_rwkv_yukle, rwkv_ham_pth_mi
     from ttt_lora import tokenizer_yukle, yerel_model_yolu
-
-    gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=azami_gpu)
-    if not gpu_indeksleri:
-        raise RuntimeError(
-            "coklu_gpu.dort_kopya_yukle: derinlemesine sınamadan (gerçek matmul) GEÇEN hiçbir GPU yok "
-            "-- torch GPU görüyor olsa bile hiçbiri fiilen kullanılabilir değil."
-        )
 
     yol = yerel_model_yolu(model_ailesi)
     if not rwkv_ham_pth_mi(yol):
         raise RuntimeError("coklu_gpu şu an yalnızca native RWKV (.pth) yolunu destekliyor.")
+
+    def _cpu_yukle():
+        print("[coklu_gpu] cihaz_modu='cpu' (veya GPU bulunamayıp 'serbest' ile düşüldü) -- "
+              "TEK bir model kopyası 'cpu' cihazına yükleniyor (yavaş olacaktır).")
+        model = native_rwkv_yukle(yol, cihaz="cpu")
+        tokenizer = tokenizer_yukle(model_ailesi)
+        print("[coklu_gpu] CPU'da modelin TEK kopyası hazır.")
+        return [model], tokenizer, ["cpu"]
+
+    if cihaz_modu == "cpu":
+        return _cpu_yukle()
+
+    from gpu_tespit import kullanilabilir_gpu_indeksleri
+    gpu_indeksleri = kullanilabilir_gpu_indeksleri(azami_gpu=azami_gpu)
+    if not gpu_indeksleri:
+        if cihaz_modu == "serbest":
+            return _cpu_yukle()
+        raise RuntimeError(
+            "coklu_gpu.dort_kopya_yukle: derinlemesine sınamadan (gerçek matmul) GEÇEN hiçbir GPU yok "
+            "-- torch GPU görüyor olsa bile hiçbiri fiilen kullanılabilir değil."
+        )
 
     modeller = []
     gpu_etiketleri = []

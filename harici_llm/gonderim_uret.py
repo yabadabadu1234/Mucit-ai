@@ -227,6 +227,7 @@ def coklu_gpu_submission_uret(
     b_boyutu: int = 128,
     azami_soru_sayisi: Optional[int] = None,
     azami_yeni_token: Optional[int] = None,
+    cihaz_modu: str = "gpu",
 ) -> Dict[str, Any]:
     """submission_uret()'in coklu-GPU varyantı -- bkz. coklu_gpu.py
     başındaki not. Aynı modelin GPU başına BAĞIMSIZ bir kopyası yüklenir.
@@ -242,6 +243,16 @@ def coklu_gpu_submission_uret(
     aynen aktarılır). None ise (varsayılan) altta yatan 60000 sabiti
     DEĞİŞMEDEN kullanılır -- 60000 ile deneme yapmak çok yavaş olduğu
     için, deneme koşularında bunu ör. 1000'e düşürmek amaçlanır.
+
+    `cihaz_modu` (kullanıcının açık talebi -- CIHAZ, GPU kotası
+    tükendiğinde bile çalışabilmek için) `dort_kopya_yukle`'ye AYNEN
+    aktarılır: "gpu" (varsayılan, ESKİ davranış -- GERÇEK GPU yoksa
+    RuntimeError, CPU'ya SESSİZCE düşülmez), "cpu" (GPU sınaması hiç
+    yapılmadan doğrudan TEK bir CPU kopyası), "serbest" (önce GERÇEK
+    GPU dener, yoksa CPU'ya düşer). CPU modunda VRAM ölçümü ANLAMSIZ
+    olduğundan (torch.cuda.* çağrıları CUDA'sız bir makinede zaten
+    çökerdi) vram_kesifcileri HİÇ kurulmuyor -- CokluGPUTopluCozucu
+    sabit `b_boyutu`yu kullanır.
 
     toplu_mod=True (varsayılan): her GPU, kendisine atanan görevleri TEK
     TEK değil, B TANESİNİ AYNI ANDA (gerçek batched adım zinciriyle, bkz.
@@ -270,10 +281,18 @@ def coklu_gpu_submission_uret(
     azami_yeni_token_kwargs = {} if azami_yeni_token is None else {"azami_yeni_token": azami_yeni_token}
 
     try:
-        modeller, tokenizer, gpu_etiketleri = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu)
+        modeller, tokenizer, gpu_etiketleri = dort_kopya_yukle(model_ailesi, azami_gpu=azami_gpu, cihaz_modu=cihaz_modu)
         if toplu_mod:
-            from vram_izleyici import VramTabanliBKesifcisi
-            vram_kesifcileri = [VramTabanliBKesifcisi(etiket, baslangic_b=b_boyutu) for etiket in gpu_etiketleri]
+            # CIHAZ='cpu' (ya da 'serbest' ile CPU'ya düşüldüyse): VRAM
+            # ölçümü burada anlamsız -- gpu_etiketleri=["cpu"] iken
+            # VramTabanliBKesifcisi'nin torch.cuda.* çağrıları CUDA'sız
+            # bir makinede zaten çökerdi. Bu durumda vram_kesifcileri HİÇ
+            # kurulmuyor, CokluGPUTopluCozucu sabit b_boyutu'yu kullanır.
+            if gpu_etiketleri == ["cpu"]:
+                vram_kesifcileri = None
+            else:
+                from vram_izleyici import VramTabanliBKesifcisi
+                vram_kesifcileri = [VramTabanliBKesifcisi(etiket, baslangic_b=b_boyutu) for etiket in gpu_etiketleri]
             cozucu = CokluGPUTopluCozucu(
                 modeller, tokenizer, b_boyutu=b_boyutu, gpu_etiketleri=gpu_etiketleri,
                 vram_kesifcileri=vram_kesifcileri,
