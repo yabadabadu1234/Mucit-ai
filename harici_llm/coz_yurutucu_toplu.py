@@ -400,7 +400,21 @@ def toplu_gorevleri_coz(
             tok = ornekler_liste[b]
             uretilen_tokenler[b].append(tok)
             sonraki_tokenler.append(tok)
-            gorulen_maske[b, tok] = True
+
+        # HIZ (kullanıcının açık talebi -- eager'da kalan üçüncü darboğaz):
+        # `gorulen_maske[b, tok] = True` ESKİDEN yukarıdaki for-b döngüsü
+        # İÇİNDE, HER gerçek-üretim satırı için AYRI bir skaler tensör
+        # yazma işlemiyle yapılıyordu -- B büyüdükçe (128'e kadar) bu,
+        # adım başına B'ye kadar ayrı küçük GPU yazma kernel'i demekti.
+        # Artık TEK bir vektörize scatter-yazma ile hepsi birden
+        # yapılıyor -- `gercek_idx` (gerçekten örneklenen satırların
+        # indeksleri) ve `ornekler` (onların örneklenen token'leri) zaten
+        # yukarıda hesaplanmıştı; ikisini birlikte indeksleyip tek bir
+        # ileri-atama (advanced indexing assignment) yapmak, B ayrı
+        # yazma yerine 1 kernel çağrısına iniyor -- matematiksel olarak
+        # BİREBİR aynı (aynı (b, tok) çiftlerine aynı True değeri yazılıyor).
+        if gercek_idx.numel() > 0:
+            gorulen_maske[gercek_idx, ornekler.index_select(0, gercek_idx)] = True
 
         yeni_logits, durum = adim_toplu_maskeli(z, n_layer, n_embd, n_head, head_size, sonraki_tokenler, durum, aktif_maske)
         son_logits = torch.where(aktif_maske_t.unsqueeze(1), yeni_logits, son_logits)
