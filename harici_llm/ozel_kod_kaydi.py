@@ -16,6 +16,7 @@ ile transformers'a KAYDEDIYORUZ. Bu kayittan sonra from_pretrained
 trust_remote_code=False ile cagrilabilir; artik ozel kod icin herhangi bir
 dinamik/hub cozumlemesi devreye girmez.
 """
+import importlib.machinery
 import importlib.util
 import json
 import os
@@ -78,10 +79,41 @@ def _config_oku(yol: str) -> Dict[str, Any]:
         return json.load(f)
 
 
+def _paket_adi(yol: str) -> str:
+    return f"_ozel_kod_paket_{abs(hash(yol)) % 10**8}"
+
+
+def _sentetik_paketi_kaydet(yol: str) -> str:
+    """HATA (kullanıcının açık talebi -- "attempted relative import with
+    no known parent package", ardından "module has no attribute
+    NemotronHForCausalLM" -- kökten çöz): Nemotron-H'nin (ve büyük
+    ihtimalle benzer başka trust_remote_code mimarilerinin) modeling
+    dosyası, kendi dizinindeki diğer dosyaları GÖRECELİ import ediyor
+    (`from .configuration_nemotron_h import ...`) -- transformers'ın
+    RESMİ trust_remote_code yükleyicisi (get_cached_module_file) bunu,
+    dosyaları GERÇEK bir paket klasörüne KOPYALAYIP __init__.py ekleyerek
+    çözer. Biz repo_id doğrulaması yüzünden o yolu kullanamıyoruz (bkz.
+    dosya başındaki not), ama AYNI sonucu kopyalamadan da elde edebiliriz:
+    `yol` dizinini sys.modules'a __path__'i o dizine işaret eden SENTETİK
+    bir paket olarak kaydedersek, Python'ın KENDİ import makinesi o
+    dizindeki `.py` dosyalarını normal alt-modül olarak bulup GÖRECELİ
+    importları KENDİSİ çözer -- elle hiçbir ek iş gerekmez."""
+    paket_adi = _paket_adi(yol)
+    if paket_adi not in sys.modules:
+        paket = importlib.util.module_from_spec(
+            importlib.machinery.ModuleSpec(paket_adi, loader=None, is_package=True)
+        )
+        paket.__path__ = [yol]
+        sys.modules[paket_adi] = paket
+    return paket_adi
+
+
 def _dosyadan_sinif_yukle(yol: str, referans: str) -> Type:
     """referans formatı: 'modeling_rwkv7.Rwkv7ForCausalLM' gibi
     'dosya_adi.SinifAdi'. Dosyayı doğrudan yerel yoldan, hiçbir
-    hub/repo_id kavramına dokunmadan importlib ile yükler."""
+    hub/repo_id kavramına dokunmadan importlib ile yükler -- ama
+    _sentetik_paketi_kaydet sayesinde dosyanın KENDİ İÇİNDEKİ göreceli
+    importlar (aynı dizindeki başka bir dosyadan) da çalışır."""
     if "." not in referans:
         raise ValueError(f"Beklenmeyen auto_map referansı: {referans!r}")
     modul_dosya_adi, sinif_adi = referans.rsplit(".", 1)
@@ -92,21 +124,34 @@ def _dosyadan_sinif_yukle(yol: str, referans: str) -> Type:
             f"'{yol}' dizininin içeriğini kontrol edin (dosya adı auto_map ile eşleşmiyor olabilir)."
         )
 
-    benzersiz_modul_adi = f"_ozel_kod_{modul_dosya_adi}_{abs(hash(yol)) % 10**8}"
-    if benzersiz_modul_adi in sys.modules:
-        return getattr(sys.modules[benzersiz_modul_adi], sinif_adi)
+    paket_adi = _sentetik_paketi_kaydet(yol)
+    tam_modul_adi = f"{paket_adi}.{modul_dosya_adi}"
+    if tam_modul_adi in sys.modules:
+        return getattr(sys.modules[tam_modul_adi], sinif_adi)
 
-    spec = importlib.util.spec_from_file_location(benzersiz_modul_adi, modul_yolu)
+    spec = importlib.util.spec_from_file_location(tam_modul_adi, modul_yolu, submodule_search_locations=[])
     if spec is None or spec.loader is None:
         raise ImportError(f"'{modul_yolu}' için import spec oluşturulamadı.")
     modul = importlib.util.module_from_spec(spec)
-    sys.modules[benzersiz_modul_adi] = modul
+    modul.__package__ = paket_adi
+    sys.modules[tam_modul_adi] = modul
+    setattr(sys.modules[paket_adi], modul_dosya_adi, modul)
 
     onceki_dizin = list(sys.path)
     if yol not in sys.path:
         sys.path.insert(0, yol)
     try:
         spec.loader.exec_module(modul)
+    except BaseException:
+        # HATA (kullanıcının gerçek Kaggle logunda görülen İKİNCİ hata --
+        # "module has no attribute NemotronHForCausalLM" -- bu, BİRİNCİ
+        # denemenin (relative-import hatasıyla) YARIM kalmış modülünün
+        # sys.modules'ta KALIP bir SONRAKİ (dogrudan_yukle) denemesinde
+        # "zaten yüklü" sanılıp AYNEN geri döndürülmesinden kaynaklanıyordu.
+        # Artık başarısız bir exec_module SONRASI yarım modül sys.modules'
+        # tan SİLİNİYOR -- bir sonraki deneme SIFIRDAN, temiz başlıyor.
+        sys.modules.pop(tam_modul_adi, None)
+        raise
     finally:
         sys.path[:] = onceki_dizin
 
