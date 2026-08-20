@@ -100,13 +100,18 @@ LORA_HEDEF_MODULLERI: Dict[str, List[str]] = {
     RWKV: ["key", "value", "receptance", "output", "gate"],
     MAMBA: ["in_proj", "out_proj", "x_proj", "dt_proj"],
     FALCON_MAMBA: ["in_proj", "out_proj", "x_proj", "dt_proj"],
-    # Granite 4.0 hibrit (Mamba-2 + azınlık transformer katmanı): araştırma
-    # raporunun bulduğu açık peft/transformers issue'ları (peft#2274,
-    # transformers#44929), Mamba-2 katmanlarına LoRA hedeflemenin HENÜZ
-    # olgunlaşmamış olduğunu gösteriyor -- bu yüzden İLK PİLOTTA BİLEREK
-    # yalnızca (iyi belgelenmiş, IBM'in kendi LoRA kılavuzunun da kapsadığı)
-    # transformer-attention azınlığı hedefleniyor; Mamba-2 katmanlarına
-    # LoRA, bu ilk doğrulamadan SONRA, ayrı bir denemeyle eklenmeli.
+    # DÜZELTME (kullanıcının IBM'in resmi mimari dokümantasyonunu
+    # paylaşmasıyla DOĞRULANDI): granite-4.1-8b, ÖNCEKİ tahminin varsaydığı
+    # gibi Granite 4.0 hibrit (Mamba-2 + azınlık transformer) DEĞİL --
+    # standart YOĞUN (dense) decoder-only transformer (GQA + RoPE + SwiGLU
+    # MLP + RMSNorm, HF transformers'taki Llama/Mistral tarzı klasik
+    # mimariyle AYNI aile). Bu yüzden Mamba-2 LoRA olgunluğu endişesi
+    # (aşağıdaki eski not) BU MODEL İÇİN GEÇERSİZ -- q/k/v/o_proj standart
+    # GQA attention projeksiyon adlarıdır, HF'nin kendi Llama-tarzı
+    # implementasyonlarında (Granite dahil) BİREBİR bu isimlerle geçer.
+    # Yine de gerçek ağırlık bu ortamda `print(model)` ile GÖRÜLEMEDİĞİ
+    # için ilk pilotta doğrulama önerisi (yukarıdaki genel not) geçerliliğini
+    # korur.
     GRANITE4: ["q_proj", "k_proj", "v_proj", "o_proj"],
     # LFM2.5 (LIV: kısa evrişim + azınlık GQA attention): araştırma
     # raporunun bulduğu resmi Liquid TRL/leap-finetune dokümantasyonu, konvol-
