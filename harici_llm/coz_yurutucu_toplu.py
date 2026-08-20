@@ -293,6 +293,20 @@ def toplu_gorevleri_coz(
     # Slot başına, hiç araç çağrısı bulunamadığında kaç kez "araç
     # çağırman gerekiyor" uyarısı enjekte edildiği (bkz. _AZAMI_ARAC_UYARISI).
     arac_uyarisi_sayisi: List[int] = [0] * B
+    # HATA (kullanıcının gerçek Kaggle transkriptinde REDDEDİLEN bir
+    # submit_answer'dan SONRA modelin bir daha HİÇ araç çağırmadan --
+    # sahte "User: cevabın yanlış" diyaloğu uydurup tutarsız metin
+    # üreterek -- tüm bütçeyi tükettiği gözlemlendi): nudge koşulu ESKİDEN
+    # yalnızca `islenen_cagri_izleri[b]` (slot HİÇ çağrı bulmadıysa) BOŞ
+    # olduğunda tetikleniyordu -- slot BİR KEZ (reddedilmiş de olsa) bir
+    # çağrı bulduğu anda bu set boş olmaktan çıkıyor ve nudge SONSUZA DEK
+    # susuyordu, "bir kez denedi sonra sessizliğe gömüldü" durumunu hiç
+    # yakalamıyordu. Artık bunun yerine EN SON bir çağrı bulunduğunda
+    # slotun o ANDAKİ token sayısı tutulur -- nudge artık "hiç çağrı yok"
+    # değil "son çağrıdan beri (veya hiç yoksa başından beri) çok token
+    # geçti" koşuluyla tetiklenir, bu yüzden reddedilen bir çağrıdan sonra
+    # da yeniden devreye girer.
+    son_cagri_token_sayisi: List[int] = [0] * B
     # HATA (kullanıcının açık talebi -- "sadece araç çıktılarını değil,
     # TÜM metin çıktıları kaydet"): ESKİDEN slotun ürettiği HAM metin
     # yalnızca slot TAMAMEN bittiğinde (submit_answer başarılı OLDUĞUNDA
@@ -339,6 +353,7 @@ def toplu_gorevleri_coz(
         defterler[b].train_examples = train_examples_sandbox_bicimine_donustur(yeni_gorev.train_examples)
         uretilen_tokenler[b] = []
         son_yazilan_metin_idx[b] = 0
+        son_cagri_token_sayisi[b] = 0
         ikaz_enjekte_edildi[b] = False
         sonuclar[b] = None
         bitti[b] = False
@@ -586,17 +601,29 @@ def toplu_gorevleri_coz(
             # tespiti de BİREBİR/periyodik tekrar aramadığı için bu durumu
             # YAKALAMAZ (rastgele/çeşitli ama hiçbir zaman JSON'a varmayan
             # metin, tam olarak "modelin hiç konuşamadan" bütçesinin
-            # tükendiği senaryodur). Düzeltme: bir slot hiç araç çağrısı
-            # ÜRETMEMİŞKEN (islenen_cagri_izleri[b] hâlâ boş) bu kontrolde
-            # de YİNE bulunamazsa, ardışık yoldakiyle AYNI nudge (yalnızca
-            # bu slota) enjekte edilir -- sınırsız TEKRARI önlemek için en
-            # fazla _AZAMI_ARAC_UYARISI kez.
-            if not cagrilar and not islenen_cagri_izleri[b] and arac_uyarisi_sayisi[b] < _AZAMI_ARAC_UYARISI:
+            # tükendiği senaryodur). Düzeltme: bir slot son bir çağrıdan
+            # (ya da hiç yoksa başından) beri `kontrol_araligi` kadar token
+            # üretmiş ve HÂLÂ yeni bir çağrı bulamamışsa, ardışık yoldakiyle
+            # AYNI nudge (yalnızca bu slota) enjekte edilir -- sınırsız
+            # TEKRARI önlemek için en fazla _AZAMI_ARAC_UYARISI kez. NOT
+            # (kullanıcının gerçek Kaggle transkriptinde REDDEDİLEN bir
+            # submit_answer'dan SONRA modelin bir daha hiç çağrı yapmadan
+            # sahte diyalog uydurup tükendiği gözlemlendi): önceki sürüm
+            # yalnızca "hiç çağrı yok"u kontrol ediyordu (`islenen_cagri_
+            # izleri[b]` boş mu), bu yüzden BİR KEZ (reddedilse dahi) çağrı
+            # bulan bir slotta nudge sonsuza dek susuyordu -- artık süre
+            # (token sayısı) bazlı olduğu için reddedilen bir çağrıdan
+            # sonraki sessizlikte de yeniden devreye girer.
+            if (
+                not cagrilar
+                and len(uretilen_tokenler[b]) - son_cagri_token_sayisi[b] >= kontrol_araligi
+                and arac_uyarisi_sayisi[b] < _AZAMI_ARAC_UYARISI
+            ):
                 arac_uyarisi_sayisi[b] += 1
                 print(
                     f"{_ONEK} ({deneme_etiketi})   {slot_gorev[b].name}: {len(uretilen_tokenler[b])} token üretildi "
-                    f"ama HİÇ araç çağrısı bulunamadı -- 'araç çağırman gerekiyor' uyarısı enjekte ediliyor "
-                    f"({arac_uyarisi_sayisi[b]}/{_AZAMI_ARAC_UYARISI})."
+                    f"ama son çağrıdan beri (veya hiç yoksa başından beri) yeni bir araç çağrısı bulunamadı -- "
+                    f"'araç çağırman gerekiyor' uyarısı enjekte ediliyor ({arac_uyarisi_sayisi[b]}/{_AZAMI_ARAC_UYARISI})."
                 )
                 uyari_tokenleri = tokenizer.encode(rwkv_tek_mesaji_sar({"role": "user", "content": _ARAC_CAGRISI_YOK_UYARISI}))
                 if uyari_tokenleri:
@@ -609,6 +636,10 @@ def toplu_gorevleri_coz(
                     "rol": "sistem-uyari", "icerik": _ARAC_CAGRISI_YOK_UYARISI,
                 })
             if cagrilar:
+                # Bulunan çağrı DAHA ÖNCE işlenmiş (tekrar) olsa bile
+                # sayaç güncellenir -- burada ölçülen "model hâlâ araç
+                # çağırmaya çalışıyor mu" sorusu, "yeni bir çağrı mı" değil.
+                son_cagri_token_sayisi[b] = len(uretilen_tokenler[b])
                 for cagri in cagrilar:
                     izi = json.dumps(cagri, sort_keys=True, default=str)
                     if izi in islenen_cagri_izleri[b]:
