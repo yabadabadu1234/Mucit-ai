@@ -46,6 +46,15 @@ FALCON_MAMBA = "falcon_mamba"
 # FALCON_MAMBA ile AYNI ŞEKİLDE bu ikisi için de çalışır, ek kod gerekmez.
 GRANITE4 = "granite4"
 LFM25 = "lfm25"
+# NVIDIA Nemotron-H-8B: GERÇEK hibrit Mamba2+attention (config.json'daki
+# hybrid_override_pattern="M-M-M-M*-..." -- M=Mamba2, *=attention azınlığı),
+# yani ZAYA1-8B'nin aksine (bkz. o denemenin GİT geçmişi) modeling_nemotron_h.py
+# + configuration_nemotron_h.py DOSYALARI repo İÇİNDE mevcut -- Zyphra'nın
+# fork gerektiren ZAYA1'inden FARKLI olarak `trust_remote_code=True` ile
+# TAMAMEN yerelden, internete hiç çıkmadan yüklenebilir (ttt_lora.py'nin
+# 2. kademesi -- config.json'daki auto_map'i okuyup .py dosyalarını
+# importlib ile kaydetme -- bunun için zaten var).
+NEMOTRON_H = "nemotron_h"
 
 # ==============================================================================
 # YEREL DOSYA YOLLARI — internet KAPALI, model asla indirilmeyecek.
@@ -72,14 +81,19 @@ YEREL_MODEL_YOLLARI: Dict[str, str] = {
     # granite-4-0-h-small tahmininin YERİNE (farklı model, farklı yol).
     GRANITE4: "/kaggle/input/notebooks/ulankaggle/indir-hbm/granite-4.1-8b",
     LFM25: "/kaggle/input/lfm2-5-2-6b/transformers/default/1",
+    # NOT: bu yol da BAŞLANGIÇ TAHMİNİ (GRANITE4/LFM25 gibi) -- kullanıcı
+    # ağırlıkları henüz Kaggle'a indirip yerleştirmedi. Gerçek yol
+    # belirlenince ya buradaki değer güncellensin ya da MUCIT_NEMOTRON_H_YOLU
+    # ortam değişkeniyle geçilsin (bkz. _ORTAM_DEGISKENI_ADLARI).
+    NEMOTRON_H: "/kaggle/input/notebooks/ulankaggle/indir-hbm/nemotron-h-8b",
 }
 
 # Ana model sirasi: Mamba, model_indir.py'nin indirme listesinden
 # CIKARILDI (kullanici talebiyle) -- yedek olarak da denenmiyor, cunku
 # offline calistirmada yerel dosyasi zaten bulunmayacak. Yalnizca RWKV.
-# GRANITE4/LFM25 bu sıraya BİLEREK eklenmedi -- kullanıcı bunları AYRI
-# notebook'larda, model_ailesi PARAMETRESİ AÇIKÇA VERİLEREK (RWKV'nin
-# yedeğe düşme zincirine karışmadan, tek başına) çalıştıracak.
+# GRANITE4/LFM25/NEMOTRON_H bu sıraya BİLEREK eklenmedi -- kullanıcı
+# bunları AYRI notebook'larda, model_ailesi PARAMETRESİ AÇIKÇA VERİLEREK
+# (RWKV'nin yedeğe düşme zincirine karışmadan, tek başına) çalıştıracak.
 MODEL_ONCELIK_SIRASI: List[str] = [RWKV]
 
 # ==============================================================================
@@ -120,6 +134,26 @@ LORA_HEDEF_MODULLERI: Dict[str, List[str]] = {
     # projeksiyon adları tahmin edildi. Gerçek modül ağacı indirilip
     # `print(model)` ile görülünce KESİNLEŞTİRİLMELİ.
     LFM25: ["q_proj", "k_proj", "v_proj", "out_proj", "in_proj"],
+    # DÜRÜSTLÜK PAYI -- AMA burada tahmin DEĞİL: nvidia/Nemotron-H-8B-Base-8K
+    # HF reposunun GERÇEK model.safetensors.index.json'ı okunarak (Hugging
+    # Face MCP aracıyla, `print(model)` gerekmeden) doğrulandı. hybrid_
+    # override_pattern="M-M-M-M*-..." katmanları üç türe ayrılıyor:
+    #   - Mamba2 katmanları ("M"): mixer.in_proj / mixer.out_proj (+ mixer.
+    #     A_log, D, conv1d, dt_bias -- bunlar ham parametre/konvolüsyon,
+    #     LoRA hedefi OLAMAZLAR, projeksiyon değiller).
+    #   - Attention katmanları ("*"): mixer.q_proj / k_proj / v_proj / o_proj
+    #     (standart GQA isimleri, MAMBA/GRANITE4 ile aynı desen).
+    #   - MLP katmanları: mixer.up_proj / down_proj -- BİLEREK hedef
+    #     listesine EKLENMEDİ, çünkü "up_proj"/"down_proj" ismi Mamba
+    #     katmanlarının "in_proj"/"out_proj"'undan FARKLI olsa da MLP'ye
+    #     LoRA eklemek RWKV/MAMBA/GRANITE4 ile tutarlı "yalnızca karıştırma
+    #     (mixer) katmanları" ilkesinden sapar; istenirse ayrı denemeyle
+    #     eklenebilir.
+    # "in_proj"/"out_proj"/"q_proj"/"k_proj"/"v_proj"/"o_proj" isimleri
+    # peft'in alt-dizge eşleştirmesiyle YALNIZCA mixer katmanlarını
+    # bulur -- MLP'nin up_proj/down_proj'una YANLIŞLIKLA çarpmaz (isimler
+    # ayrık).
+    NEMOTRON_H: ["in_proj", "out_proj", "q_proj", "k_proj", "v_proj", "o_proj"],
 }
 
 # ==============================================================================
@@ -173,6 +207,13 @@ DECODING_ONERILERI: Dict[str, Dict[str, Dict[str, float]]] = {
         "fonksiyon_cagirma": {"temp": 0.7, "top_p": 0.9, "penalty": 0.0, "repetition_penalty": 1.15},
         "sohbet": {"temp": 0.7, "top_p": 0.9, "penalty": 0.0},
     },
+    # NEMOTRON_H: aynı ders (temp=0.0 tam greedy, yozlaşmış döngüde sıfır
+    # kaçış şansı bırakır) GRANITE4/LFM25'te olduğu gibi burada da
+    # uygulanıyor -- hafif örnekleme + repetition_penalty açık.
+    NEMOTRON_H: {
+        "fonksiyon_cagirma": {"temp": 0.7, "top_p": 0.9, "penalty": 0.0, "repetition_penalty": 1.15},
+        "sohbet": {"temp": 0.7, "top_p": 0.9, "penalty": 0.0},
+    },
 }
 
 def cevap_sonu_isaretleri(model_ailesi: str) -> str:
@@ -215,6 +256,7 @@ _ORTAM_DEGISKENI_ADLARI = {
     FALCON_MAMBA: "MUCIT_FALCON_MAMBA_YOLU",
     GRANITE4: "MUCIT_GRANITE4_YOLU",
     LFM25: "MUCIT_LFM25_YOLU",
+    NEMOTRON_H: "MUCIT_NEMOTRON_H_YOLU",
 }
 
 
