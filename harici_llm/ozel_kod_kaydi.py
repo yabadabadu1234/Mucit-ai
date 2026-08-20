@@ -24,6 +24,51 @@ from typing import Any, Dict, Optional, Tuple, Type
 
 _KAYITLI_MODEL_TURLERI: set = set()
 
+# HATA (kullanıcının açık talebi -- "mamba-ssm is required by the Mamba
+# model but cannot be imported ... başkası için de yapıyorsa kökten çöz"):
+# bazı trust_remote_code mimarileri (Nemotron-H gibi) config.json'da
+# use_mamba_kernels=True taşır ve model KURULURKEN (construction, forward
+# DEĞİL) bu bayrak True'yken mamba_ssm/causal_conv1d import edilemezse
+# ImportError fırlatır -- resmi transformers'ın kendi Mamba/Mamba2/
+# FalconMamba sınıflarının aksine (onlar sessizce yavaş/saf-PyTorch yoluna
+# düşer, hata vermez). Kök çözüm: bu bayrakları paket eksikse model
+# KURULMADAN ÖNCE burada kapatıp modelin kendi yavaş yoluna düşmesini
+# SAĞLAMAK -- yeni bir mimaride benzer bir "ağır isteğe bağlı kernel"
+# bayrağı çıkarsa tek yapılması gereken bu sözlüğe bir satır eklemek,
+# yükleme zincirinin geri kalanına DOKUNMADAN her model ailesi için
+# otomatik olarak devreye girer.
+_AGIR_KERNEL_BAYRAKLARI: Dict[str, Tuple[str, ...]] = {
+    "use_mamba_kernels": ("mamba_ssm", "causal_conv1d"),
+}
+
+
+def _paketler_mevcut_mu(paket_adlari: Tuple[str, ...]) -> bool:
+    import importlib
+    for paket in paket_adlari:
+        try:
+            importlib.import_module(paket)
+        except ImportError:
+            return False
+    return True
+
+
+def agir_kernel_bayraklarini_yumusat(config_verisi: Dict[str, Any]) -> Dict[str, Any]:
+    """`config_verisi` (config.json'dan okunmuş ham sözlük ya da
+    `AutoConfig.to_dict()` çıktısı) içindeki _AGIR_KERNEL_BAYRAKLARI'ndan
+    her biri True İSE ve gerektirdiği paketler bu ortamda kurulu DEĞİLSE,
+    o bayrağı False'a zorlar (kopyası üzerinde -- girdi değiştirilmez).
+    Bayrak hiç yoksa (RWKV/GRANITE4/LFM25 gibi bunu hiç taşımayan
+    mimariler) hiçbir şey değişmez."""
+    config_verisi = dict(config_verisi)
+    for bayrak, paketler in _AGIR_KERNEL_BAYRAKLARI.items():
+        if config_verisi.get(bayrak) and not _paketler_mevcut_mu(paketler):
+            print(
+                f"[ozel_kod_kaydi] {'/'.join(paketler)} kurulu değil -- config.{bayrak}=False'a "
+                f"zorlanıyor, model kendi yavaş/saf-PyTorch yoluna düşecek (daha yavaş ama ÇALIŞIR)."
+            )
+            config_verisi[bayrak] = False
+    return config_verisi
+
 
 def _config_oku(yol: str) -> Dict[str, Any]:
     config_yolu = os.path.join(yol, "config.json")
@@ -166,7 +211,7 @@ def dogrudan_yukle(yol: str, veri_tipi: Any = None) -> Any:
     talebinin harfiyen karşılandığı, en dip seviye yükleme yoludur."""
     import torch
 
-    config_verisi = _config_oku(yol)
+    config_verisi = agir_kernel_bayraklarini_yumusat(_config_oku(yol))
     auto_map = config_verisi.get("auto_map", {})
 
     ConfigSinifi: Optional[Type] = None

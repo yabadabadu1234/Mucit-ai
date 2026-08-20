@@ -59,11 +59,33 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
         if rwkv_ham_pth_mi(yol):
             return native_rwkv_yukle(yol, veri_tipi=veri_tipi)
 
-    from transformers import AutoModelForCausalLM
+    from transformers import AutoConfig, AutoModelForCausalLM
+
+    def _yumusatilmis_config(guven_kodu: bool) -> Optional[Any]:
+        # HATA (kullanıcının açık talebi -- "mamba-ssm is required ...
+        # başkası için de yapıyorsa kökten çöz"): bazı trust_remote_code
+        # mimarileri (Nemotron-H gibi) config.json'da use_mamba_kernels=
+        # True taşır ve model KURULURKEN mamba_ssm/causal_conv1d import
+        # edilemezse ImportError fırlatır. Burada AutoConfig ÖNCEDEN
+        # yüklenip agir_kernel_bayraklarini_yumusat ile yumuşatılır, sonra
+        # from_pretrained'e config=... olarak AÇIKÇA verilir -- from_
+        # pretrained kendi config'ini içeride YENİDEN okumaz. Config
+        # yüklemenin kendisi başarısız olursa (ör. bu tier zaten hub-tarzı
+        # bir hatayla karşılaşacaksa) None döner, çağıran eski davranışa
+        # (config=None, from_pretrained kendi config'ini okur) düşer.
+        try:
+            from ozel_kod_kaydi import agir_kernel_bayraklarini_yumusat
+            config = AutoConfig.from_pretrained(yol, trust_remote_code=guven_kodu, local_files_only=True)
+            for anahtar, deger in agir_kernel_bayraklarini_yumusat(config.to_dict()).items():
+                if hasattr(config, anahtar):
+                    setattr(config, anahtar, deger)
+            return config
+        except Exception:
+            return None
 
     try:
         return AutoModelForCausalLM.from_pretrained(
-            yol, torch_dtype=veri_tipi, device_map="cuda",
+            yol, config=_yumusatilmis_config(False), torch_dtype=veri_tipi, device_map="cuda",
             trust_remote_code=False, local_files_only=True,
         )
     except Exception as ilk_hata:
@@ -76,7 +98,7 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
     try:
         ozel_kodu_manuel_kaydet(yol)
         return AutoModelForCausalLM.from_pretrained(
-            yol, torch_dtype=veri_tipi, device_map="cuda",
+            yol, config=_yumusatilmis_config(False), torch_dtype=veri_tipi, device_map="cuda",
             trust_remote_code=False, local_files_only=True,
         )
     except Exception as ikinci_hata:
@@ -88,7 +110,7 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
         print(f"[ttt_lora] 3. kademe (dogrudan_yukle) başarısız: {ucuncu_hata}")
 
     return AutoModelForCausalLM.from_pretrained(
-        yol, torch_dtype=veri_tipi, device_map="cuda",
+        yol, config=_yumusatilmis_config(True), torch_dtype=veri_tipi, device_map="cuda",
         trust_remote_code=True, local_files_only=True,
     )
 
