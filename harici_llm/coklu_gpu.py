@@ -254,18 +254,57 @@ def _surec_gpu_calistir(
     KAYIT yapar. Bitirdiğinde ("bitti", gpu_index) mesajıyla haber verir
     (padişahın ne zaman TÜM süreçlerin işini bitirdiğini bilmesi için)."""
     try:
-        from rwkv_native import native_rwkv_yukle
-        from ttt_lora import tokenizer_yukle, yerel_model_yolu
-        from coz_yurutucu_toplu import toplu_gorevleri_coz
+        from model_yapilandirmalari import RWKV
+        from ttt_lora import yerel_model_yolu
 
         if not kendi_gorevleri:
             return
 
-        yol = yerel_model_yolu(model_ailesi)
+        # HATA (kullanıcının açık talebi -- "nemotron veya başka bir model
+        # kullanınca 'rwkv' pip modülünü İSTEMESİN"): bu fonksiyon ESKİDEN
+        # model_ailesi NE OLURSA OLSUN kayıtsız şartsız native_rwkv_yukle
+        # (ki içi `rwkv` pip paketini import eder) ÇAĞIRIYORDU -- RWKV
+        # DIŞINDAKİ hiçbir aile (GRANITE4/LFM25/NEMOTRON_H) için `rwkv`
+        # paketine gerçekte hiç ihtiyaç yokken, salt bu satır yüzünden
+        # ModuleNotFoundError('rwkv') fırlatılıyordu. Artık model_ailesi'ne
+        # göre AYRI iki yükleme/çözüm yoluna dallanıyor -- RWKV kendi native
+        # yolunda (rwkv_native.py + coz_yurutucu_toplu.py'nin özel maskeli-
+        # adım motoru) kalmaya devam ediyor, DİĞER TÜM aileler standart
+        # `transformers` (ttt_lora.temel_model_yukle, `rwkv` paketine hiç
+        # dokunmaz) + hf_coz_yurutucu_toplu.hf_toplu_gorevleri_coz (resmi
+        # model.generate() batched yolu) üzerinden çözülüyor.
+        rwkv_mi = model_ailesi == RWKV
+
         print(f"[coklu_gpu] (süreç, {gpu_etiketi}) model kopyası yükleniyor...")
-        ham_model_sarmali = native_rwkv_yukle(yol, cihaz=gpu_etiketi)
-        ham_model = getattr(ham_model_sarmali, "ham_model", ham_model_sarmali)
-        tokenizer = tokenizer_yukle(model_ailesi)
+        if rwkv_mi:
+            from rwkv_native import native_rwkv_yukle
+            from ttt_lora import tokenizer_yukle
+
+            yol = yerel_model_yolu(model_ailesi)
+            ham_model_sarmali = native_rwkv_yukle(yol, cihaz=gpu_etiketi)
+            ham_model = getattr(ham_model_sarmali, "ham_model", ham_model_sarmali)
+            tokenizer = tokenizer_yukle(model_ailesi)
+        else:
+            import torch
+
+            from ttt_lora import temel_model_yukle, tokenizer_yukle
+
+            # `temel_model_yukle` içindeki `AutoModelForCausalLM.from_pretrained(
+            # ..., device_map="cuda")` İNDEKSSİZ "cuda" -- yani accelerate
+            # bunu `torch.cuda.current_device()`e çözer. Her GPU süreci
+            # (multiprocessing.Process, spawn) kendi CUDA_VISIBLE_DEVICES'ı
+            # AYRI ayarlanmadığı için, "current device" varsayılan olarak
+            # HER süreçte cuda:0 olurdu -- yani 4 süreç de "farklı" GPU'ya
+            # değil, hepsi AYNI (0.) GPU'ya yüklenirdi. `torch.cuda.
+            # set_device(gpu_etiketi)`, `device_map="cuda"` çözülmeden
+            # ÖNCE çağrılarak "current device"ı bu sürecin GERÇEK payı olan
+            # GPU'ya sabitler -- model.to() SONRADAN çağırmıyoruz çünkü
+            # device_map ile accelerate hook'larıyla dağıtılmış bir modeli
+            # .to() ile taşımak desteklenmez/hataya yol açar.
+            if gpu_etiketi != "cpu":
+                torch.cuda.set_device(gpu_etiketi)
+            model = temel_model_yukle(model_ailesi)
+            tokenizer = tokenizer_yukle(model_ailesi)
         print(f"[coklu_gpu] (süreç, {gpu_etiketi}) model hazır -- kendi payı: {len(kendi_gorevleri)} görev.")
         # KONUS DOĞRULAMASI (kullanıcının açık talebi): bu sürece GERÇEKTEN
         # ulaşan azami_yeni_token'ı burada da basıyoruz -- notebook_giris.py
@@ -273,48 +312,76 @@ def _surec_gpu_calistir(
         # KONUS'un doğru taşındığını bir sonraki gerçek koşuda kanıtlamak için.
         print(f"[coklu_gpu] (süreç, {gpu_etiketi}) KONUS DOĞRULAMASI: bu sürece ulaşan azami_yeni_token={azami_yeni_token}.")
 
-        vram_kesifci = None
-        b_boyutu = max(1, b_boyutu_baslangic)
-        if gpu_etiketi != "cpu":
-            from vram_izleyici import VramTabanliBKesifcisi
-            vram_kesifci = VramTabanliBKesifcisi(gpu_etiketi, baslangic_b=b_boyutu_baslangic)
-            b_boyutu = max(1, vram_kesifci.calisan_b())
+        if rwkv_mi:
+            from coz_yurutucu_toplu import toplu_gorevleri_coz
 
-        kalan: List[Task] = list(kendi_gorevleri)
-        ilk_parti = kalan[:b_boyutu]
-        kalan = kalan[b_boyutu:]
-        if not ilk_parti:
-            return
+            vram_kesifci = None
+            b_boyutu = max(1, b_boyutu_baslangic)
+            if gpu_etiketi != "cpu":
+                from vram_izleyici import VramTabanliBKesifcisi
+                vram_kesifci = VramTabanliBKesifcisi(gpu_etiketi, baslangic_b=b_boyutu_baslangic)
+                b_boyutu = max(1, vram_kesifci.calisan_b())
 
-        def _sonraki_gorev_al() -> Optional[Task]:
-            if bitis_zamani is not None and time.time() > bitis_zamani:
-                return None
-            if not kalan:
-                return None
-            return kalan.pop(0)
+            kalan: List[Task] = list(kendi_gorevleri)
+            ilk_parti = kalan[:b_boyutu]
+            kalan = kalan[b_boyutu:]
+            if not ilk_parti:
+                return
 
-        def _tamamlandi(task_adi: str, sonuc: Dict[str, Any]) -> None:
-            sonuc_kuyrugu.put(("sonuc", task_adi, sonuc))
-            if vram_kesifci is not None:
-                vram_kesifci.gorev_sonrasi_olc_ve_ayarla()
+            def _sonraki_gorev_al() -> Optional[Task]:
+                if bitis_zamani is not None and time.time() > bitis_zamani:
+                    return None
+                if not kalan:
+                    return None
+                return kalan.pop(0)
 
-        try:
-            toplu_gorevleri_coz(
-                ham_model, tokenizer, ilk_parti,
-                azami_yeni_token=azami_yeni_token, deneme_etiketi=gpu_etiketi,
-                ayrintili_log=ayrintili_log, bitis_zamani=bitis_zamani,
-                sonraki_gorev_al=_sonraki_gorev_al, tamamlanma_geri_cagirma=_tamamlandi,
-            )
-        except Exception as hata:
-            # NOT: toplu_gorevleri_coz zaten HER biten görevi kendi içinde
-            # tamamlanma_geri_cagirma ile bildirir -- bu except yalnızca
-            # toplu_gorevleri_coz'un KENDİSİ (ör. batched prefill sırasında)
-            # çökerse devreye girer. Bildirilmemiş görevler için özel bir
-            # şey yapmaya GEREK YOK -- padişah, TÜM süreçler bittikten
-            # SONRA `tasks` listesinin TAMAMINI tarayıp sonuç ALAMADIĞI
-            # her görevi zaten BOS_TAHMIN ile dolduruyor (bkz.
-            # CokluGPUTopluCozucu.coz).
-            print(f"[coklu_gpu] (süreç, {gpu_etiketi}) SÜREKLİ ADMİSYON partisi başarısız: {hata}")
+            def _tamamlandi(task_adi: str, sonuc: Dict[str, Any]) -> None:
+                sonuc_kuyrugu.put(("sonuc", task_adi, sonuc))
+                if vram_kesifci is not None:
+                    vram_kesifci.gorev_sonrasi_olc_ve_ayarla()
+
+            try:
+                toplu_gorevleri_coz(
+                    ham_model, tokenizer, ilk_parti,
+                    azami_yeni_token=azami_yeni_token, deneme_etiketi=gpu_etiketi,
+                    ayrintili_log=ayrintili_log, bitis_zamani=bitis_zamani,
+                    sonraki_gorev_al=_sonraki_gorev_al, tamamlanma_geri_cagirma=_tamamlandi,
+                )
+            except Exception as hata:
+                # NOT: toplu_gorevleri_coz zaten HER biten görevi kendi içinde
+                # tamamlanma_geri_cagirma ile bildirir -- bu except yalnızca
+                # toplu_gorevleri_coz'un KENDİSİ (ör. batched prefill sırasında)
+                # çökerse devreye girer. Bildirilmemiş görevler için özel bir
+                # şey yapmaya GEREK YOK -- padişah, TÜM süreçler bittikten
+                # SONRA `tasks` listesinin TAMAMINI tarayıp sonuç ALAMADIĞI
+                # her görevi zaten BOS_TAHMIN ile dolduruyor (bkz.
+                # CokluGPUTopluCozucu.coz).
+                print(f"[coklu_gpu] (süreç, {gpu_etiketi}) SÜREKLİ ADMİSYON partisi başarısız: {hata}")
+        else:
+            # DÜRÜSTLÜK NOTU: hf_coz_yurutucu_toplu.hf_toplu_gorevleri_coz
+            # (kendi dosyasındaki notta da açıkça yazdığı gibi) SÜREKLİ
+            # ADMİSYON/geri-dönüştürme YAPMAZ -- kendisine verilen TÜM
+            # görevleri TEK bir sabit batch olarak, KV-cache turlar arası
+            # taşınmadan çözer. Bu yüzden burada (RWKV yolunun aksine)
+            # kendi payındaki TÜM görevler TEK ÇAĞRIDA verilir, sonuçlar
+            # TEK TEK değil, fonksiyon TAMAMEN bittiğinde toplu olarak
+            # kuyruğa yazılır -- padişah yine de her görevi ayrı "sonuc"
+            # mesajıyla görür (ara-kayıt için), yalnızca hepsi AYNI ANDA gelir.
+            from hf_coz_yurutucu_toplu import hf_toplu_gorevleri_coz
+
+            try:
+                sonuclar = hf_toplu_gorevleri_coz(
+                    model, tokenizer, model_ailesi, kendi_gorevleri,
+                    azami_yeni_token=azami_yeni_token, deneme_etiketi=gpu_etiketi,
+                    bitis_zamani=bitis_zamani,
+                )
+            except Exception as hata:
+                print(f"[coklu_gpu] (süreç, {gpu_etiketi}) hf_toplu_gorevleri_coz başarısız: {hata}")
+                sonuclar = {}
+
+            for task in kendi_gorevleri:
+                sonuc = sonuclar.get(task.name, {"attempt_1": BOS_TAHMIN, "attempt_1_gonderildi_mi": False})
+                sonuc_kuyrugu.put(("sonuc", task.name, sonuc))
     finally:
         sonuc_kuyrugu.put(("bitti", gpu_index))
 
