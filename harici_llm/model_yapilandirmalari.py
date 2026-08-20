@@ -68,7 +68,9 @@ YEREL_MODEL_YOLLARI: Dict[str, str] = {
     # olusturulduktan sonra GERCEK yol degisebilir (bkz. yerel_model_yolu'nun
     # /kaggle/input altinda dosya adiyla ARAMA yaptigi mekanizma -- RWKV
     # icin de ayni sekilde calisir, sabit yol yanlissa otomatik bulunur).
-    GRANITE4: "/kaggle/input/granite-4-0-h-small/transformers/default/1",
+    # Kullanıcının açık talebiyle GERÇEK yol -- granite-4.1-8b, DAHA ÖNCEKİ
+    # granite-4-0-h-small tahmininin YERİNE (farklı model, farklı yol).
+    GRANITE4: "/kaggle/input/notebooks/ulankaggle/indir-hbm/granite-4.1-8b",
     LFM25: "/kaggle/input/lfm2-5-2-6b/transformers/default/1",
 }
 
