@@ -81,11 +81,9 @@ YEREL_MODEL_YOLLARI: Dict[str, str] = {
     # granite-4-0-h-small tahmininin YERİNE (farklı model, farklı yol).
     GRANITE4: "/kaggle/input/notebooks/ulankaggle/indir-hbm/granite-4.1-8b",
     LFM25: "/kaggle/input/lfm2-5-2-6b/transformers/default/1",
-    # NOT: bu yol da BAŞLANGIÇ TAHMİNİ (GRANITE4/LFM25 gibi) -- kullanıcı
-    # ağırlıkları henüz Kaggle'a indirip yerleştirmedi. Gerçek yol
-    # belirlenince ya buradaki değer güncellensin ya da MUCIT_NEMOTRON_H_YOLU
-    # ortam değişkeniyle geçilsin (bkz. _ORTAM_DEGISKENI_ADLARI).
-    NEMOTRON_H: "/kaggle/input/notebooks/ulankaggle/indir-hbm/nemotron-h-8b",
+    # Kullanıcının açık talebiyle GERÇEK yol -- Nemotron-H-8B-Reasoning-128K
+    # (base model DEĞİL, 128K bağlamlı reasoning/instruct varyantı).
+    NEMOTRON_H: "/kaggle/input/notebooks/ulankaggle/indir-nvidia-nemotron-h-8b-reasoning-128k/Nemotron-H-8B-Reasoning-128K",
 }
 
 # Ana model sirasi: Mamba, model_indir.py'nin indirme listesinden
