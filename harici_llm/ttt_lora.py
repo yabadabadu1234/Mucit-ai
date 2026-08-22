@@ -105,19 +105,29 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
             _native_config_verisi = agir_kernel_bayraklarini_yumusat(_native_config_verisi)
             # HATA (kullanıcının açık talebi -- "KeyError: '-'" kökten çöz):
             # nemotron_h checkpoint'inin config.json'undaki hybrid_override_
-            # pattern alanı, katmanlar arasına "-" koyuyor (ör. "M-M-M-M*-...")
-            # -- bu, checkpoint'in ESKİ/repo-içi (trust_remote_code'la gelen)
-            # kod tarafından beklenen format. transformers'ın NATIVE
-            # NemotronHConfig._pattern_to_list'i ise (kütüphanenin GitHub'daki
-            # v5.3.0 kaynağından doğrulandı) yalnızca {"M","E","*"} karakter
-            # kümesini tanıyor, "-" için pattern_mapping'de KARŞILIK YOK --
-            # yani "-" salt bir okunabilirlik ayracı, native ayrıştırıcı bunu
-            # HİÇ beklemiyor. Burada silinmesi, native koda checkpoint'in
-            # AYNI hibrit düzenini (kaç Mamba2/attention/MoE katmanı, hangi
-            # sırada) -- yalnızca sözdizimini uyarlayarak -- doğru aktarır.
-            if isinstance(_native_config_verisi.get("hybrid_override_pattern"), str):
-                _native_config_verisi["hybrid_override_pattern"] = (
-                    _native_config_verisi["hybrid_override_pattern"].replace("-", "")
+            # pattern alanı katmanlar arasına "-" koyuyor (ör. "M-M-M-M*-...").
+            # DÜZELTME GERİ ALINDI -- ÖNCEKİ "-" işaretlerini sil" yaklaşımım
+            # YANLIŞTI: pattern'in TİRELER DAHİL uzunluğu num_hidden_layers'a
+            # (52) BİREBİR eşit -- yani "-" da GERÇEK bir katmana karşılık
+            # geliyor, salt okunabilirlik ayracı DEĞİL. Tireleri silmek
+            # 52 katmanı 28'e düşürüyordu -- bu "yavaş ama doğru" değil,
+            # DOĞRUDAN YANLIŞ mimari (checkpoint'in ağırlıklarıyla
+            # UYUŞMAYAN bir katman dizilimi) kurmak demekti, cache-bug'ından
+            # çok daha kötü bir sonuç. transformers'ın v5.3.0 kaynağında
+            # "-"nin GERÇEK anlamı belgeli değil (yalnızca "M"/"E"/"*"
+            # belgeli) -- bu yüzden UYDURMAK yerine, "-" içeren bir pattern'i
+            # GÜVENLE yorumlayamadığımızı kabul edip 0. kademeyi burada
+            # İPTAL ediyoruz (aşağıdaki raise, dıştaki except'e düşüp eski
+            # 1-4 kademe/trust_remote_code zincirine yönlendirir -- o zincir
+            # DOĞRU mimariyi kurduğu KANITLANMIŞTI, yalnızca cache bug'ı
+            # yüzünden yavaştı; yanlış mimariden kesinlikle daha iyi).
+            _ham_pattern = _native_config_verisi.get("hybrid_override_pattern")
+            if isinstance(_ham_pattern, str) and "-" in _ham_pattern:
+                raise RuntimeError(
+                    f"hybrid_override_pattern ('{_ham_pattern[:40]}...') '-' karakteri içeriyor -- "
+                    f"native transformers'ın pattern_mapping'i bunu tanımıyor VE '-'nin gerçek anlamı "
+                    f"burada güvenle çözülemiyor (silmek katman sayısını YANLIŞ değiştiriyordu). "
+                    f"Yanlış mimari kurmaktansa 0. kademe burada güvenle iptal ediliyor."
                 )
             _native_config = CONFIG_MAPPING[_model_turu](**_native_config_verisi)
             return AutoModelForCausalLM.from_pretrained(
