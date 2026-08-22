@@ -27,6 +27,53 @@ def _hub_tarzi_hata_mi(hata: Exception) -> bool:
     return _guven_kodu_gerekli_mi(hata) or _repo_id_dogrulama_hatasi_mi(hata)
 
 
+def _cache_parametre_uyumsuzlugunu_duzelt(model: Any) -> Any:
+    """HATA (kullanıcının Kaggle'da checkpoint'in KENDİ kaynağından
+    grep'lediği KESİN kanıt -- "NemotronH requires an initialized
+    NemotronHHybridDynamicCache ... None was provided" uyarısının GERÇEK
+    kök nedeni): checkpoint'in modeling_nemotron_h.py'si (kendi yorumunda
+    da itiraf ettiği gibi) `prepare_inputs_for_generation`'ı Jamba'nın
+    kodundan KOPYALAMIŞ ama YENİDEN ADLANDIRMAYI UNUTMUŞ -- dönen sözlüğe
+    `"past_key_values": <hazır cache nesnesi>` koyuyor, ama `forward()`
+    parametreyi `cache_params` adıyla bekliyor. `forward`'ın `**kwargs`'ı
+    bu yanlış adlı değeri sessizce yutup ATIYOR, `cache_params` HİÇ
+    ulaşmıyor, cache asla kullanılmıyor (~20 kat yavaşlama). Native
+    transformers>=5.3.0 nemotron_h'yi bu checkpoint'in mimarisini
+    (düz "mlp" katmanları) desteklemediği için KULLANAMIYORUZ (bkz. 0.
+    kademedeki not) -- yani checkpoint'in KENDİ (bug'lı) kodunda
+    kalmak ZORUNDAYIZ. Çözüm: kaynağa dokunmadan, model NESNESİNİN
+    `prepare_inputs_for_generation`'ını burada saracak şekilde
+    monkeypatch'liyoruz -- dönen sözlükte "past_key_values" varken
+    "cache_params" YOKSA, anahtarı DOĞRU isme taşıyoruz. `forward`
+    imzasında GERÇEKTEN `cache_params` parametresi olup `past_key_values`
+    OLMAYAN modellerde (bu spesifik kopyala-yapıştır hatasının izi)
+    devreye girer; standart modellerde (forward zaten `past_key_values`
+    bekliyorsa) HİÇBİR ŞEY DEĞİŞTİRMEZ."""
+    try:
+        import inspect
+
+        forward_imzasi = inspect.signature(model.forward)
+        parametreler = forward_imzasi.parameters
+        if "cache_params" in parametreler and "past_key_values" not in parametreler:
+            _orijinal_pig = model.prepare_inputs_for_generation
+
+            def _yamali_prepare_inputs_for_generation(*args: Any, **kwargs: Any) -> Dict[str, Any]:
+                girdi = _orijinal_pig(*args, **kwargs)
+                if isinstance(girdi, dict) and "past_key_values" in girdi and "cache_params" not in girdi:
+                    girdi["cache_params"] = girdi.pop("past_key_values")
+                return girdi
+
+            model.prepare_inputs_for_generation = _yamali_prepare_inputs_for_generation
+            print(
+                "[ttt_lora] cache parametre adı uyumsuzluğu (past_key_values vs cache_params) tespit "
+                "edildi ve monkeypatch ile düzeltildi -- cache artık GERÇEKTEN kullanılacak (~20 kat "
+                "hız kazancı beklenir)."
+            )
+    except Exception as _yama_hatasi:
+        print(f"[ttt_lora] cache parametre uyumsuzluğu düzeltmesi denendi ama başarısız oldu (yoksayılıp devam edilecek): {_yama_hatasi}")
+    return model
+
+
 def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16) -> Any:
     """Model DAIMA yerel dosya yolundan yuklenir; internet erisimi kapali
     oldugundan `local_files_only=True` her zaman zorunludur. Ayrica
@@ -182,10 +229,10 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
             "taşıyan 1-3. kademeler ATLANIP doğrudan kanıtlanmış temiz trust_remote_code=True yoluna "
             "geçiliyor."
         )
-        return AutoModelForCausalLM.from_pretrained(
+        return _cache_parametre_uyumsuzlugunu_duzelt(AutoModelForCausalLM.from_pretrained(
             yol, dtype=veri_tipi, device_map="cuda",
             trust_remote_code=True, local_files_only=True,
-        )
+        ))
 
     def _yumusatilmis_config(guven_kodu: bool) -> Optional[Any]:
         # HATA (kullanıcının açık talebi -- "mamba-ssm is required ...
@@ -223,22 +270,22 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
 
     try:
         ozel_kodu_manuel_kaydet(yol)
-        return AutoModelForCausalLM.from_pretrained(
+        return _cache_parametre_uyumsuzlugunu_duzelt(AutoModelForCausalLM.from_pretrained(
             yol, config=_yumusatilmis_config(False), dtype=veri_tipi, device_map="cuda",
             trust_remote_code=False, local_files_only=True,
-        )
+        ))
     except Exception as ikinci_hata:
         print(f"[ttt_lora] 2. kademe (manuel kayıt + from_pretrained) başarısız: {ikinci_hata}")
 
     try:
-        return dogrudan_yukle(yol, veri_tipi=veri_tipi)
+        return _cache_parametre_uyumsuzlugunu_duzelt(dogrudan_yukle(yol, veri_tipi=veri_tipi))
     except Exception as ucuncu_hata:
         print(f"[ttt_lora] 3. kademe (dogrudan_yukle) başarısız: {ucuncu_hata}")
 
-    return AutoModelForCausalLM.from_pretrained(
+    return _cache_parametre_uyumsuzlugunu_duzelt(AutoModelForCausalLM.from_pretrained(
         yol, config=_yumusatilmis_config(True), dtype=veri_tipi, device_map="cuda",
         trust_remote_code=True, local_files_only=True,
-    )
+    ))
 
 
 def tokenizer_yukle(model_ailesi: str) -> Any:
