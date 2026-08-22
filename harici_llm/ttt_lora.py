@@ -1,3 +1,4 @@
+import sys
 import time
 from typing import Any, Dict, List, Optional
 
@@ -94,6 +95,25 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
         with open(_os.path.join(yol, "config.json"), "r", encoding="utf-8") as _f:
             _ham_config = _json.load(_f)
         _model_turu = _ham_config.get("model_type")
+
+        # HATA (kullanıcının açık talebi -- "NemotronHHybridDynamicCache ...
+        # None was provided" uyarısı 0. kademe DEVREDEYKEN bile devam
+        # ediyordu, ama bu metin transformers'ın v5.3.0 KAYNAĞINDA hiç
+        # yok): bu, native koda değil, HÂLÂ checkpoint'in ESKİ/bug'lı
+        # modeling_nemotron_h.py'sine dokunulduğunu gösteriyor -- muhtemel
+        # sebep, AYNI Python sürecinde (kernel yeniden başlatılmadan) daha
+        # önce yapılmış bir trust_remote_code=True/manuel kayıt denemesinin
+        # bıraktığı KÜRESEL sys.modules/Auto* kayıt kalıntısı. Kökten
+        # çözüm olarak, 0. kademe native sınıfı zorlamadan HEMEN ÖNCE bu
+        # model_type'a ait olası eski dinamik-modül kalıntılarını sys.
+        # modules'tan proaktif olarak temizliyoruz -- kernel yeniden
+        # başlatılmasa bile bu süreçte YENİ bir 0. kademe denemesi eski
+        # kalıntıyla çakışmasın diye.
+        for _kalinti_adi in list(sys.modules):
+            if "transformers_modules" in _kalinti_adi and _model_turu and _model_turu.replace("_", "") in _kalinti_adi.lower().replace("_", ""):
+                del sys.modules[_kalinti_adi]
+                print(f"[ttt_lora] 0. kademe: ESKİ dinamik-modül kalıntısı sys.modules'tan temizlendi: {_kalinti_adi}")
+
         if _model_turu in CONFIG_MAPPING:
             print(
                 f"[ttt_lora] 0. kademe: model_type='{_model_turu}' transformers'ın KENDİ (native, "
