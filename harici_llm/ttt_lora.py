@@ -106,64 +106,66 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
             # HATA (kullanıcının açık talebi -- "KeyError: '-'" kökten çöz):
             # nemotron_h checkpoint'inin config.json'undaki hybrid_override_
             # pattern alanı katmanlar arasına "-" koyuyor (ör. "M-M-M-M*-...").
-            # DÜZELTME GERİ ALINDI -- ÖNCEKİ "-" işaretlerini sil" yaklaşımım
-            # YANLIŞTI: pattern'in TİRELER DAHİL uzunluğu num_hidden_layers'a
-            # (52) BİREBİR eşit -- yani "-" da GERÇEK bir katmana karşılık
-            # geliyor, salt okunabilirlik ayracı DEĞİL. Tireleri silmek
-            # 52 katmanı 28'e düşürüyordu -- bu "yavaş ama doğru" değil,
-            # DOĞRUDAN YANLIŞ mimari (checkpoint'in ağırlıklarıyla
-            # UYUŞMAYAN bir katman dizilimi) kurmak demekti, cache-bug'ından
-            # çok daha kötü bir sonuç. transformers'ın v5.3.0 kaynağında
-            # "-"nin GERÇEK anlamı belgeli değil (yalnızca "M"/"E"/"*"
-            # belgeli) -- bu yüzden UYDURMAK yerine, "-" içeren bir pattern'i
-            # GÜVENLE yorumlayamadığımızı kabul edip 0. kademeyi burada
-            # İPTAL ediyoruz (aşağıdaki raise, dıştaki except'e düşüp eski
-            # 1-4 kademe/trust_remote_code zincirine yönlendirir -- o zincir
-            # DOĞRU mimariyi kurduğu KANITLANMIŞTI, yalnızca cache bug'ı
-            # yüzünden yavaştı; yanlış mimariden kesinlikle daha iyi).
+            # ÖNCEKİ İKİ DÜZELTME DE YANLIŞTI: "-"yi silmek katman sayısını
+            # (52->28) bozuyordu; "-"yi tamamen belirsiz sayıp 0. kademeyi
+            # iptal etmek de KENDİ İÇİNDE bir başka regresyona (küresel Auto*
+            # kayıt kirlenmesi) yol açtı. GERÇEK ANLAM artık checkpoint'in
+            # KENDİ configuration_nemotron_h.py'sinden (kullanıcının Kaggle'da
+            # doğrudan grep'lediği kaynak) KANITLANDI:
+            #   layers_block_type[i] = "mamba" if pattern[i]=="M" else
+            #                           "attention" if pattern[i]=="*" else "mlp"
+            # yani "-" (M/*'DAN FARKLI HER KARAKTER) -> "mlp" (düz MLP-only
+            # katman, ne Mamba2 ne attention). transformers'ın NATIVE
+            # NemotronHConfig._pattern_to_list'i ise yalnızca {"M","E","*"}
+            # tanıyor, "mlp" düşüşünü (else dalını) DESTEKLEMİYOR -- bu
+            # yüzden pattern STRING'i native koda hiç verilmiyor; bunun
+            # yerine checkpoint'in KENDİ (kanıtlanmış doğru) mantığıyla
+            # layers_block_type LİSTESİ burada elle hesaplanıp DOĞRUDAN
+            # geçiriliyor -- native config, layers_block_type açıkça
+            # verildiğinde hybrid_override_pattern'i zaten hiç okumuyor
+            # (transformers kaynağından ayrıca doğrulandı).
             _ham_pattern = _native_config_verisi.get("hybrid_override_pattern")
-            if isinstance(_ham_pattern, str) and "-" in _ham_pattern:
-                raise RuntimeError(
-                    f"hybrid_override_pattern ('{_ham_pattern[:40]}...') '-' karakteri içeriyor -- "
-                    f"native transformers'ın pattern_mapping'i bunu tanımıyor VE '-'nin gerçek anlamı "
-                    f"burada güvenle çözülemiyor (silmek katman sayısını YANLIŞ değiştiriyordu). "
-                    f"Yanlış mimari kurmaktansa 0. kademe burada güvenle iptal ediliyor."
-                )
+            if isinstance(_ham_pattern, str):
+                _native_config_verisi["layers_block_type"] = [
+                    "mamba" if karakter == "M" else "attention" if karakter == "*" else "mlp"
+                    for karakter in _ham_pattern
+                ]
             _native_config = CONFIG_MAPPING[_model_turu](**_native_config_verisi)
             return AutoModelForCausalLM.from_pretrained(
                 yol, config=_native_config, torch_dtype=veri_tipi, device_map="cuda",
                 trust_remote_code=False, local_files_only=True,
             )
     except Exception as _sifirinci_hata:
-        print(f"[ttt_lora] 0. kademe (native sınıf zorlama) uygulanamadı, eski zincire devam: {_sifirinci_hata}")
+        print(f"[ttt_lora] 0. kademe (native sınıf zorlama) uygulanamadı: {_sifirinci_hata}")
         # HATA (kullanıcının gerçek Kaggle logunda görülen İKİNCİ, DAHA
         # KÖTÜ regresyon -- "MISSING"/"UNEXPECTED" onlarca anahtar, katman
         # 1-27 ile 28-51 arası tipler birbirine karışmış): 0. kademe
-        # yukarıdaki "-" güvenlik kontrolüyle iptal edildikten SONRA, 2.
-        # kademenin (ozel_kodu_manuel_kaydet) config.json'daki auto_map'i
-        # okuyup ESKİ/checkpoint-içi Config/Model sınıflarını transformers'ın
-        # KÜRESEL Auto* kayıt defterlerine (AutoConfig.register/
-        # AutoModelForCausalLM.register) kaydetmesi, transformers'ın KENDİ
-        # trust_remote_code=True dinamik modül önbelleğiyle (~/.cache/
-        # huggingface/modules/...) ÇAKIŞIP 4. kademenin (trust_remote_code=
-        # True) DAHA ÖNCE (tier 0 hiç yokken) TEMİZ ÇALIŞAN halinden FARKLI,
-        # BOZUK bir sonuç üretmesine yol açmış görünüyor -- kesin mekanizma
-        # doğrulanamadı ama gözlem NET: tier 0 eklenmeden ÖNCE tek başına
-        # trust_remote_code=True TÜM ağırlıkları (311/311, MISSING/
-        # UNEXPECTED YOK) sorunsuz yüklemişti. Bu yüzden 0. kademe "-"
-        # yüzünden güvenle iptal olduğunda, 2/3. kademelerin (küresel kayıt
-        # defterini kirletme riski taşıyan) HİÇBİRİNE uğramadan DOĞRUDAN
-        # 4. kademeye (temiz, kanıtlanmış trust_remote_code=True) atlıyoruz.
-        if "'-' karakteri içeriyor" in str(_sifirinci_hata):
-            print(
-                "[ttt_lora] 0. kademe '-' pattern'i yüzünden iptal edildi -- küresel Auto* kayıt "
-                "defterini kirletme riski taşıyan 1-3. kademeler ATLANIP doğrudan kanıtlanmış temiz "
-                "trust_remote_code=True yoluna geçiliyor."
-            )
-            return AutoModelForCausalLM.from_pretrained(
-                yol, torch_dtype=veri_tipi, device_map="cuda",
-                trust_remote_code=True, local_files_only=True,
-            )
+        # başarısız olup 2. kademeye (ozel_kodu_manuel_kaydet) düşüldüğünde,
+        # bu kademenin config.json'daki auto_map'i okuyup ESKİ/checkpoint-içi
+        # Config/Model sınıflarını transformers'ın KÜRESEL Auto* kayıt
+        # defterlerine (AutoConfig.register/AutoModelForCausalLM.register)
+        # kaydetmesi, transformers'ın KENDİ trust_remote_code=True dinamik
+        # modül önbelleğiyle (~/.cache/huggingface/modules/...) ÇAKIŞIP 4.
+        # kademenin (trust_remote_code=True) DAHA ÖNCE (tier 0 hiç yokken)
+        # TEMİZ ÇALIŞAN halinden FARKLI, BOZUK bir sonuç üretmesine yol
+        # açmış görünüyor -- kesin mekanizma doğrulanamadı ama gözlem NET:
+        # tier 0 eklenmeden ÖNCE tek başına trust_remote_code=True TÜM
+        # ağırlıkları (311/311, MISSING/UNEXPECTED YOK) sorunsuz yüklemişti.
+        # Bu yüzden 0. kademe HANGİ SEBEPLE olursa olsun başarısız olunca
+        # (yalnızca belirli bir hata metniyle SINIRLI TUTMADAN -- bu
+        # kısayolun genel bir güvenlik önlemi olması gerekiyor), 2/3.
+        # kademelerin (küresel kayıt defterini kirletme riski taşıyan)
+        # HİÇBİRİNE uğramadan DOĞRUDAN 4. kademeye (temiz, kanıtlanmış
+        # trust_remote_code=True) atlıyoruz.
+        print(
+            "[ttt_lora] 0. kademe başarısız olduğu için, küresel Auto* kayıt defterini kirletme riski "
+            "taşıyan 1-3. kademeler ATLANIP doğrudan kanıtlanmış temiz trust_remote_code=True yoluna "
+            "geçiliyor."
+        )
+        return AutoModelForCausalLM.from_pretrained(
+            yol, torch_dtype=veri_tipi, device_map="cuda",
+            trust_remote_code=True, local_files_only=True,
+        )
 
     def _yumusatilmis_config(guven_kodu: bool) -> Optional[Any]:
         # HATA (kullanıcının açık talebi -- "mamba-ssm is required ...
