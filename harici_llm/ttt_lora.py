@@ -61,6 +61,56 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
 
     from transformers import AutoConfig, AutoModelForCausalLM
 
+    # HATA (kullanıcının açık talebi -- "NemotronH requires an initialized
+    # NemotronHHybridDynamicCache ... hiçbir log yok, takılı mı kaldı"):
+    # bu bir donma DEĞİL -- transformers'ın BİLİNEN bir hatası (GitHub
+    # issue #34739): modeling_nemotron_h.py'de prepare_inputs_for_
+    # generation() ile forward() arasında bir parametre adı UYUŞMAZLIĞI
+    # (past_key_values vs cache_params) var, cache HİÇ kullanılamıyor,
+    # model HER yeni token için TÜM diziyi baştan yeniden hesaplıyor
+    # (~20 kat yavaşlama). Bu, transformers>=5.3.0'da KÜTÜPHANENİN
+    # KENDİSİNDE düzeltildi -- AMA trust_remote_code=True kullanılırsa,
+    # kütüphanenin düzeltilmiş native kodu yerine modelin REPOSUNDAKİ
+    # ESKİ/bug'lı modeling_nemotron_h.py cache'e indirilip KULLANILIYOR,
+    # düzeltmeyi tamamen eziyor. Bizim 2/3/4. kademelerimiz (trust_remote_
+    # code=True / manuel .py kaydı) tam olarak bu tuzağa düşüyordu.
+    #
+    # Kökten çözüm -- "0. kademe": config.json'un model_type'ı transformers'ın
+    # KENDİ CONFIG_MAPPING'inde (native, kütüphaneye GÖMÜLÜ) zaten
+    # kayıtlıysa, auto_map'i (dolayısıyla trust_remote_code gereksinimini)
+    # TAMAMEN YOK SAYIP doğrudan o native sınıfı kullanıyoruz -- bu, ilgili
+    # GitHub issue'sunun önerdiği "bayrağı kaldır, kütüphanenin native
+    # implementasyonuna bırak" çözümünün BİREBİR karşılığı. model_type
+    # native olarak TANINMIYORSA (transformers eski/model henüz
+    # birleştirilmemiş) bu kademe sessizce atlanır, eski 1-4 kademe zinciri
+    # DEĞİŞMEDEN devam eder.
+    try:
+        import json as _json
+        import os as _os
+
+        from ozel_kod_kaydi import agir_kernel_bayraklarini_yumusat
+        from transformers.models.auto.configuration_auto import CONFIG_MAPPING
+
+        with open(_os.path.join(yol, "config.json"), "r", encoding="utf-8") as _f:
+            _ham_config = _json.load(_f)
+        _model_turu = _ham_config.get("model_type")
+        if _model_turu in CONFIG_MAPPING:
+            print(
+                f"[ttt_lora] 0. kademe: model_type='{_model_turu}' transformers'ın KENDİ (native, "
+                f"kütüphaneye gömülü) sınıfında kayıtlı -- auto_map/trust_remote_code TAMAMEN atlanıp "
+                f"doğrudan native sınıf kullanılacak (bilinen cache/performans hatalarının düzeltmesi "
+                f"YALNIZCA bu yolda geçerlidir)."
+            )
+            _native_config_verisi = {k: v for k, v in _ham_config.items() if k != "auto_map"}
+            _native_config_verisi = agir_kernel_bayraklarini_yumusat(_native_config_verisi)
+            _native_config = CONFIG_MAPPING[_model_turu](**_native_config_verisi)
+            return AutoModelForCausalLM.from_pretrained(
+                yol, config=_native_config, torch_dtype=veri_tipi, device_map="cuda",
+                trust_remote_code=False, local_files_only=True,
+            )
+    except Exception as _sifirinci_hata:
+        print(f"[ttt_lora] 0. kademe (native sınıf zorlama) uygulanamadı, eski zincire devam: {_sifirinci_hata}")
+
     def _yumusatilmis_config(guven_kodu: bool) -> Optional[Any]:
         # HATA (kullanıcının açık talebi -- "mamba-ssm is required ...
         # başkası için de yapıyorsa kökten çöz"): bazı trust_remote_code
