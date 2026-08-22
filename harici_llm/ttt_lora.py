@@ -103,6 +103,22 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
             )
             _native_config_verisi = {k: v for k, v in _ham_config.items() if k != "auto_map"}
             _native_config_verisi = agir_kernel_bayraklarini_yumusat(_native_config_verisi)
+            # HATA (kullanıcının açık talebi -- "KeyError: '-'" kökten çöz):
+            # nemotron_h checkpoint'inin config.json'undaki hybrid_override_
+            # pattern alanı, katmanlar arasına "-" koyuyor (ör. "M-M-M-M*-...")
+            # -- bu, checkpoint'in ESKİ/repo-içi (trust_remote_code'la gelen)
+            # kod tarafından beklenen format. transformers'ın NATIVE
+            # NemotronHConfig._pattern_to_list'i ise (kütüphanenin GitHub'daki
+            # v5.3.0 kaynağından doğrulandı) yalnızca {"M","E","*"} karakter
+            # kümesini tanıyor, "-" için pattern_mapping'de KARŞILIK YOK --
+            # yani "-" salt bir okunabilirlik ayracı, native ayrıştırıcı bunu
+            # HİÇ beklemiyor. Burada silinmesi, native koda checkpoint'in
+            # AYNI hibrit düzenini (kaç Mamba2/attention/MoE katmanı, hangi
+            # sırada) -- yalnızca sözdizimini uyarlayarak -- doğru aktarır.
+            if isinstance(_native_config_verisi.get("hybrid_override_pattern"), str):
+                _native_config_verisi["hybrid_override_pattern"] = (
+                    _native_config_verisi["hybrid_override_pattern"].replace("-", "")
+                )
             _native_config = CONFIG_MAPPING[_model_turu](**_native_config_verisi)
             return AutoModelForCausalLM.from_pretrained(
                 yol, config=_native_config, torch_dtype=veri_tipi, device_map="cuda",
