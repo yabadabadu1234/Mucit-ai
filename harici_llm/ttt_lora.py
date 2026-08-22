@@ -61,6 +61,23 @@ def _cache_parametre_uyumsuzlugunu_duzelt(model: Any) -> Any:
                 girdi = _orijinal_pig(*args, **kwargs)
                 if isinstance(girdi, dict) and "past_key_values" in girdi and "cache_params" not in girdi:
                     girdi["cache_params"] = girdi.pop("past_key_values")
+                # HATA (kullanıcının Kaggle'da checkpoint'in KENDİ modeling
+                # dosyasını grep'lediği İKİNCİ kesin kanıt -- "'Hybrid
+                # MambaAttentionDynamicCache' object has no attribute
+                # 'conv_kernel_size'"): checkpoint'in cache sınıfının
+                # __init__'i conv_kernel_size'ı HİÇ set etmiyor, ama mixer
+                # kodu (Jamba'dan kopyalanırken) `cache_params.
+                # conv_kernel_size`'ı doğrudan okuyor -- oysa bu değer
+                # zaten mixer'ın KENDİ `self.conv_kernel_size`'inde
+                # (config.conv_kernel) mevcut, cache nesnesine hiç
+                # kopyalanmamış. Eksik özniteliği burada, cache nesnesi
+                # HER oluşturulduğunda (yalnızca eksikse) ekliyoruz --
+                # zararsız, saf bir eksiklik tamamlama.
+                _cache_nesnesi = girdi.get("cache_params")
+                if _cache_nesnesi is not None and not hasattr(_cache_nesnesi, "conv_kernel_size"):
+                    _conv_kernel = getattr(model.config, "conv_kernel", None)
+                    if _conv_kernel is not None:
+                        _cache_nesnesi.conv_kernel_size = _conv_kernel
                 return girdi
 
             model.prepare_inputs_for_generation = _yamali_prepare_inputs_for_generation
