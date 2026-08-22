@@ -110,6 +110,23 @@ def _cache_parametre_uyumsuzlugunu_duzelt(model: Any) -> Any:
                     _liste = getattr(_cache_nesnesi, _liste_adi, None) if _cache_nesnesi is not None else None
                     if isinstance(_liste, list) and not isinstance(_liste, _CihazDestekliListe):
                         setattr(_cache_nesnesi, _liste_adi, _CihazDestekliListe(_liste))
+                # HATA (aynı "Jamba'dan kopyala-yapıştır" ailesinden, henüz
+                # TETİKLENMEMİŞ ama kaynakta GÖRÜLEN bir sonraki risk):
+                # HybridMambaAttentionDynamicCache.reset() `self.conv_
+                # states.zero_()` / `self.ssm_states.zero_()` çağırıyor --
+                # `.zero_()` bir TENSÖR metodu, listede yok, çağrılırsa
+                # AttributeError verir. reset() burada, HER liste elemanını
+                # (gerçek tensörü) TEK TEK sıfırlayan doğru bir versiyonla
+                # değiştiriliyor -- kaynağa dokunmadan, davranış AYNI
+                # (tüm state'leri sıfırlamak), yalnızca liste-uyumlu.
+                if _cache_nesnesi is not None and hasattr(_cache_nesnesi, "reset") and not getattr(_cache_nesnesi, "_reset_yamali_mi", False):
+                    def _yamali_reset(_nesne: Any = _cache_nesnesi) -> None:
+                        for _liste_adi2 in ("conv_states", "ssm_states"):
+                            for _tensor in getattr(_nesne, _liste_adi2, []) or []:
+                                if hasattr(_tensor, "zero_"):
+                                    _tensor.zero_()
+                    _cache_nesnesi.reset = _yamali_reset
+                    _cache_nesnesi._reset_yamali_mi = True
                 return girdi
 
             model.prepare_inputs_for_generation = _yamali_prepare_inputs_for_generation
