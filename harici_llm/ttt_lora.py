@@ -136,6 +136,34 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
             )
     except Exception as _sifirinci_hata:
         print(f"[ttt_lora] 0. kademe (native sınıf zorlama) uygulanamadı, eski zincire devam: {_sifirinci_hata}")
+        # HATA (kullanıcının gerçek Kaggle logunda görülen İKİNCİ, DAHA
+        # KÖTÜ regresyon -- "MISSING"/"UNEXPECTED" onlarca anahtar, katman
+        # 1-27 ile 28-51 arası tipler birbirine karışmış): 0. kademe
+        # yukarıdaki "-" güvenlik kontrolüyle iptal edildikten SONRA, 2.
+        # kademenin (ozel_kodu_manuel_kaydet) config.json'daki auto_map'i
+        # okuyup ESKİ/checkpoint-içi Config/Model sınıflarını transformers'ın
+        # KÜRESEL Auto* kayıt defterlerine (AutoConfig.register/
+        # AutoModelForCausalLM.register) kaydetmesi, transformers'ın KENDİ
+        # trust_remote_code=True dinamik modül önbelleğiyle (~/.cache/
+        # huggingface/modules/...) ÇAKIŞIP 4. kademenin (trust_remote_code=
+        # True) DAHA ÖNCE (tier 0 hiç yokken) TEMİZ ÇALIŞAN halinden FARKLI,
+        # BOZUK bir sonuç üretmesine yol açmış görünüyor -- kesin mekanizma
+        # doğrulanamadı ama gözlem NET: tier 0 eklenmeden ÖNCE tek başına
+        # trust_remote_code=True TÜM ağırlıkları (311/311, MISSING/
+        # UNEXPECTED YOK) sorunsuz yüklemişti. Bu yüzden 0. kademe "-"
+        # yüzünden güvenle iptal olduğunda, 2/3. kademelerin (küresel kayıt
+        # defterini kirletme riski taşıyan) HİÇBİRİNE uğramadan DOĞRUDAN
+        # 4. kademeye (temiz, kanıtlanmış trust_remote_code=True) atlıyoruz.
+        if "'-' karakteri içeriyor" in str(_sifirinci_hata):
+            print(
+                "[ttt_lora] 0. kademe '-' pattern'i yüzünden iptal edildi -- küresel Auto* kayıt "
+                "defterini kirletme riski taşıyan 1-3. kademeler ATLANIP doğrudan kanıtlanmış temiz "
+                "trust_remote_code=True yoluna geçiliyor."
+            )
+            return AutoModelForCausalLM.from_pretrained(
+                yol, torch_dtype=veri_tipi, device_map="cuda",
+                trust_remote_code=True, local_files_only=True,
+            )
 
     def _yumusatilmis_config(guven_kodu: bool) -> Optional[Any]:
         # HATA (kullanıcının açık talebi -- "mamba-ssm is required ...
