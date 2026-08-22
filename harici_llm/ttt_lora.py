@@ -132,7 +132,7 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
                 ]
             _native_config = CONFIG_MAPPING[_model_turu](**_native_config_verisi)
             return AutoModelForCausalLM.from_pretrained(
-                yol, config=_native_config, torch_dtype=veri_tipi, device_map="cuda",
+                yol, config=_native_config, dtype=veri_tipi, device_map="cuda",
                 trust_remote_code=False, local_files_only=True,
             )
     except Exception as _sifirinci_hata:
@@ -163,7 +163,7 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
             "geçiliyor."
         )
         return AutoModelForCausalLM.from_pretrained(
-            yol, torch_dtype=veri_tipi, device_map="cuda",
+            yol, dtype=veri_tipi, device_map="cuda",
             trust_remote_code=True, local_files_only=True,
         )
 
@@ -191,7 +191,7 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
 
     try:
         return AutoModelForCausalLM.from_pretrained(
-            yol, config=_yumusatilmis_config(False), torch_dtype=veri_tipi, device_map="cuda",
+            yol, config=_yumusatilmis_config(False), dtype=veri_tipi, device_map="cuda",
             trust_remote_code=False, local_files_only=True,
         )
     except Exception as ilk_hata:
@@ -204,7 +204,7 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
     try:
         ozel_kodu_manuel_kaydet(yol)
         return AutoModelForCausalLM.from_pretrained(
-            yol, config=_yumusatilmis_config(False), torch_dtype=veri_tipi, device_map="cuda",
+            yol, config=_yumusatilmis_config(False), dtype=veri_tipi, device_map="cuda",
             trust_remote_code=False, local_files_only=True,
         )
     except Exception as ikinci_hata:
@@ -216,7 +216,7 @@ def temel_model_yukle(model_ailesi: str, veri_tipi: torch.dtype = torch.bfloat16
         print(f"[ttt_lora] 3. kademe (dogrudan_yukle) başarısız: {ucuncu_hata}")
 
     return AutoModelForCausalLM.from_pretrained(
-        yol, config=_yumusatilmis_config(True), torch_dtype=veri_tipi, device_map="cuda",
+        yol, config=_yumusatilmis_config(True), dtype=veri_tipi, device_map="cuda",
         trust_remote_code=True, local_files_only=True,
     )
 
