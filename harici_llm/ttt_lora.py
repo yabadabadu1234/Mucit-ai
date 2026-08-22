@@ -27,6 +27,19 @@ def _hub_tarzi_hata_mi(hata: Exception) -> bool:
     return _guven_kodu_gerekli_mi(hata) or _repo_id_dogrulama_hatasi_mi(hata)
 
 
+class _CihazDestekliListe(list):
+    """Sıradan bir Python listesi gibi davranır (indeksleme/atama/`+=`
+    dahil BİREBİR aynı) -- yalnızca `.device` özniteliği EKLER (ilk
+    elemanın cihazını yansıtır). nemotron_h checkpoint'inin kendi
+    kodundaki `cache_params.ssm_states.device` / `self.conv_states.device`
+    gibi (liste yerine tensör bekleyen) hatalı okumaları güvenle
+    karşılamak için kullanılır -- bkz. _cache_parametre_uyumsuzlugunu_duzelt."""
+
+    @property
+    def device(self) -> Any:
+        return self[0].device if self else torch.device("cpu")
+
+
 def _cache_parametre_uyumsuzlugunu_duzelt(model: Any) -> Any:
     """HATA (kullanıcının Kaggle'da checkpoint'in KENDİ kaynağından
     grep'lediği KESİN kanıt -- "NemotronH requires an initialized
@@ -78,6 +91,25 @@ def _cache_parametre_uyumsuzlugunu_duzelt(model: Any) -> Any:
                     _conv_kernel = getattr(model.config, "conv_kernel", None)
                     if _conv_kernel is not None:
                         _cache_nesnesi.conv_kernel_size = _conv_kernel
+                # HATA (kullanıcının gerçek Kaggle logu -- "'list' object
+                # has no attribute 'device'"): checkpoint kodu HEM
+                # `torch_forward`'ın (yavaş/fast-path-yok yolu, mamba_ssm
+                # 2.3.2.post1'in yeni API'si transformers'ın eski algılama
+                # kontrolüyle uyuşmadığı için burada devrede) 2.+ token
+                # dalında `cache_params.ssm_states.device` HEM
+                # `update_conv_state`'te `self.conv_states.device` diye
+                # okuyor -- ama __init__'te `ssm_states`/`conv_states`
+                # birer düz Python LİSTESİ (katman başına bir tensör),
+                # listelerin `.device` özniteliği YOK. Küçük bir liste alt
+                # sınıfıyla (yalnızca ilk elemanın cihazını yansıtan bir
+                # `.device` property'si ekleyerek) listeleri YERİNDE
+                # sarmalıyoruz -- indeksleme/atama (`ssm_states[i] = ...`,
+                # `+=`) davranışı BİREBİR aynı kalıyor, yalnızca `.device`
+                # artık çalışıyor.
+                for _liste_adi in ("ssm_states", "conv_states"):
+                    _liste = getattr(_cache_nesnesi, _liste_adi, None) if _cache_nesnesi is not None else None
+                    if isinstance(_liste, list) and not isinstance(_liste, _CihazDestekliListe):
+                        setattr(_cache_nesnesi, _liste_adi, _CihazDestekliListe(_liste))
                 return girdi
 
             model.prepare_inputs_for_generation = _yamali_prepare_inputs_for_generation
