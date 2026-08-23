@@ -1,0 +1,387 @@
+<title>Nefs-i Müdrike Mimarisi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #f6f1e6;
+    --paper: #fbf8f1;
+    --ink: #241f16;
+    --ink-dim: #6b6250;
+    --line: #a89a78;
+    --line-soft: #d8cdb2;
+    --tier-bg: #eee6d3;
+    --accent: #9c3b1f;
+    --accent-soft: #e7cdb9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16130e;
+      --paper: #1c1810;
+      --ink: #ece3cf;
+      --ink-dim: #a89a78;
+      --line: #6f6449;
+      --line-soft: #362f22;
+      --tier-bg: #221d14;
+      --accent: #e08856;
+      --accent-soft: #3a2418;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16130e;
+    --paper: #1c1810;
+    --ink: #ece3cf;
+    --ink-dim: #a89a78;
+    --line: #6f6449;
+    --line-soft: #362f22;
+    --tier-bg: #221d14;
+    --accent: #e08856;
+    --accent-soft: #3a2418;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter", system-ui, sans-serif;
+    padding: 56px 28px 80px;
+  }
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(30px, 4.4vw, 46px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    text-wrap: balance;
+    max-width: 15ch;
+  }
+  .intro {
+    max-width: 66ch;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+  .intro p { margin: 0 0 14px; }
+  .intro strong { font-weight: 600; }
+  .method {
+    max-width: 66ch;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--ink-dim);
+    border-left: 2px solid var(--line-soft);
+    padding-left: 16px;
+    margin: 22px 0 44px;
+  }
+
+  figure {
+    margin: 0;
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 14px;
+    padding: 28px clamp(8px, 2vw, 28px) 22px;
+  }
+  .scroll {
+    overflow-x: auto;
+  }
+  svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+  figcaption {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-dim);
+    max-width: 72ch;
+    margin: 18px auto 0;
+    padding: 0 4px;
+  }
+  figcaption b { color: var(--ink); font-weight: 600; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+    margin: 30px 0 0;
+    font-size: 13px;
+    color: var(--ink-dim);
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .swatch { width: 22px; height: 2px; flex: none; }
+  .swatch.flow { background: var(--line); }
+  .swatch.loop { background: var(--accent); height: 2px; background-image: linear-gradient(90deg, var(--accent) 60%, transparent 0); background-size: 8px 2px; }
+  .dot { width: 11px; height: 11px; border-radius: 3px; flex: none; background: var(--accent-soft); border: 1.5px solid var(--accent); }
+
+  footer {
+    max-width: 66ch;
+    margin: 40px auto 0;
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+  }
+</style>
+
+<main>
+  <p class="eyebrow">Nefs-i Müdrike Mimarisi &middot; Rükün Şeması</p>
+  <h1>41 Zihnî Melekenin Hiyerarşik Akış Haritası</h1>
+  <div class="intro">
+    <p>Kaynak belgenin (<code>nefs_i_mudrike_mimarisi.tex</code>) sonundaki "41 melekenin girdi/çıktı manifoldu" bölümü, ham metindeki 255 tekil bağlantıyı olduğu gibi çizmek yerine, <strong>her melekenin işlevine bakılarak</strong> dokuz kademeli bir işlem hattına yerleştirildi &mdash; tıpkı bir model mimarisi şemasının katman katman okunması gibi.</p>
+  </div>
+  <p class="method">Bu bir grafik-çizim algoritmasının (yay/çember yerleşimi) ürünü değildir: her meleke, girdi/çıktı listesindeki fiili rolüne göre elle bir kademeye atandı, kademeler arası oklar 255 kenarın toplulaştırılmış <em>ana akışını</em> gösterir; belgenin ısrarla vurguladığı iki geri-besleme halkası (gaye&nbsp;&rarr;&nbsp;müşahede ve tahsil&nbsp;&rarr;&nbsp;gaye) ayrıca vurgulu çizildi.</p>
+
+  <figure>
+    <div class="scroll">
+<svg viewBox="0 0 1588 1194" role="img" aria-label="41 zihnî melekenin dokuz kademeli hiyerarşik akış şeması: dış girdiden başlayıp ham algı, ham malzeme, kavramsallaştırma, sınama, derin muhakeme çekirdeği, hüküm, yön/gaye ve beyan kademelerinden geçip kapanışta tekrar gaye belirlemeye ve müşahedeye geri bağlanan bir döngü.">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"></path>
+    </marker>
+    <marker id="arrowAccent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--accent)"></path>
+    </marker>
+  </defs>
+
+  <!-- ============ TIER BAND BACKGROUNDS ============ -->
+  <g fill="var(--tier-bg)">
+    <rect x="40" y="86" width="1508" height="54"></rect>
+    <rect x="40" y="198" width="1508" height="54"></rect>
+    <rect x="40" y="310" width="1508" height="54"></rect>
+    <rect x="40" y="422" width="1508" height="54"></rect>
+    <rect x="40" y="534" width="1508" height="54"></rect>
+    <rect x="40" y="646" width="1508" height="54"></rect>
+    <rect x="40" y="758" width="1508" height="54"></rect>
+    <rect x="40" y="870" width="1508" height="54"></rect>
+    <rect x="40" y="982" width="1508" height="54"></rect>
+    <rect x="40" y="1094" width="1508" height="54"></rect>
+  </g>
+
+  <!-- ============ TIER LABELS ============ -->
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" letter-spacing="0.07em" fill="var(--ink-dim)">
+    <text x="60" y="65">DIŞ GİRDİ</text>
+    <text x="60" y="177">1&nbsp;&middot; HAM ALGI</text>
+    <text x="60" y="289">2&nbsp;&middot; HAM MALZEME</text>
+    <text x="60" y="401">3&nbsp;&middot; KAVRAMSALLAŞTIRMA</text>
+    <text x="60" y="513">4&nbsp;&middot; SINAMA VE KIYAS</text>
+    <text x="60" y="625">5&nbsp;&middot; DERİN MUHAKEME ÇEKİRDEĞİ</text>
+    <text x="60" y="737">6&nbsp;&middot; HÜKÜM</text>
+    <text x="60" y="849">7&nbsp;&middot; YÖN / GAYE</text>
+    <text x="60" y="961">8&nbsp;&middot; BEYAN</text>
+    <text x="60" y="1073">9&nbsp;&middot; KAPANIŞ</text>
+  </g>
+
+  <!-- ============ MAIN FLOW ARROWS (aggregate, one per tier gap) ============ -->
+  <g stroke="var(--line)" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="794" y1="140" x2="794" y2="196"></line>
+    <line x1="794" y1="252" x2="794" y2="308"></line>
+    <line x1="794" y1="364" x2="794" y2="420"></line>
+    <line x1="794" y1="476" x2="794" y2="532"></line>
+    <line x1="794" y1="588" x2="794" y2="644"></line>
+    <line x1="794" y1="700" x2="794" y2="756"></line>
+    <line x1="794" y1="812" x2="794" y2="868"></line>
+    <line x1="794" y1="924" x2="794" y2="980"></line>
+    <line x1="794" y1="1036" x2="794" y2="1092"></line>
+  </g>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="var(--ink-dim)" text-anchor="start">
+    <text x="808" y="172">duyu verisi</text>
+    <text x="808" y="284">ham kayıt</text>
+    <text x="808" y="396">soyutlanmış öge</text>
+    <text x="808" y="508">kavram</text>
+    <text x="808" y="620">sınanmış öncül</text>
+    <text x="808" y="732">istidlâl zinciri</text>
+    <text x="808" y="844">hüküm</text>
+    <text x="808" y="956">gaye süzgeci</text>
+    <text x="808" y="1068">mühürlenmiş beyan</text>
+  </g>
+
+  <!-- ============ FEEDBACK LOOP 1: Gaye Belirleme -> Müşahede ============ -->
+  <path d="M666,897 C250,897 90,700 90,480 C90,300 90,260 300,230 C500,205 680,220 731,224"
+        fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"
+        marker-end="url(#arrowAccent)"></path>
+  <text font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--accent)" text-anchor="middle">
+    <tspan x="90" y="555">gaye idrakı</tspan>
+    <tspan x="90" y="570">yönlendirir</tspan>
+  </text>
+
+  <!-- ============ FEEDBACK LOOP 2: Tahsil -> Gaye Belirleme (closing ring) ============ -->
+  <path d="M922,1121 C1500,1121 1500,950 1500,897 C1500,897 850,897 790,897"
+        fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"
+        marker-end="url(#arrowAccent)"></path>
+  <text font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--accent)" text-anchor="end">
+    <tspan x="1494" y="1000">yeni idrak</tspan>
+    <tspan x="1494" y="1015">sermayesi</tspan>
+  </text>
+
+  <!-- ============ NODE BOXES ============ -->
+  <g font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">
+
+    <!-- Tier 0: Dış Girdi -->
+    <g fill="var(--paper)" stroke="var(--line-soft)" stroke-width="1.4">
+      <rect x="666" y="90" width="122" height="46" rx="7"></rect>
+      <rect x="800" y="90" width="122" height="46" rx="7"></rect>
+    </g>
+    <g fill="var(--ink-dim)">
+      <text x="727" y="109">Dış Âlem</text><text x="727" y="123">Hadiseleri</text>
+      <text x="861" y="116">İhtiyaç / Fıtrat</text>
+    </g>
+
+    <!-- Tier 1: Ham Algı -->
+    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.6">
+      <rect x="733" y="202" width="122" height="46" rx="7"></rect>
+    </g>
+    <text x="794" y="229" fill="var(--ink)" font-weight="600">Müşahede</text>
+
+    <!-- Tier 2: Ham Malzeme -->
+    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
+      <rect x="599" y="314" width="122" height="46" rx="7"></rect>
+      <rect x="733" y="314" width="122" height="46" rx="7"></rect>
+      <rect x="867" y="314" width="122" height="46" rx="7"></rect>
+    </g>
+    <g fill="var(--ink)">
+      <text x="660" y="341">Hayal</text>
+      <text x="794" y="341">Tecrit</text>
+      <text x="928" y="341">Tahlil</text>
+    </g>
+
+    <!-- Tier 3: Kavramsallaştırma -->
+    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
+      <rect x="465" y="426" width="122" height="46" rx="7"></rect>
+      <rect x="599" y="426" width="122" height="46" rx="7"></rect>
+      <rect x="733" y="426" width="122" height="46" rx="7"></rect>
+      <rect x="867" y="426" width="122" height="46" rx="7"></rect>
+      <rect x="1001" y="426" width="122" height="46" rx="7"></rect>
+    </g>
+    <g fill="var(--ink)">
+      <text x="526" y="446">Hayal</text><text x="526" y="460">Kurma</text>
+      <text x="660" y="453">Tertip</text>
+      <text x="794" y="453">Tasavvur</text>
+      <text x="928" y="453">Mana</text>
+      <text x="1062" y="453">Terkip</text>
+    </g>
+
+    <!-- Tier 4: Sınama -->
+    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
+      <rect x="398" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="532" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="666" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="800" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="934" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="1068" y="538" width="122" height="46" rx="7"></rect>
+    </g>
+    <g fill="var(--ink)">
+      <text x="459" y="565">Tezat</text>
+      <text x="593" y="558">Tenakuz</text><text x="593" y="572">Bulma</text>
+      <text x="727" y="565">Tenkit</text>
+      <text x="861" y="565">Kıyas</text>
+      <text x="995" y="565">Temsil</text>
+      <text x="1129" y="565">Teşbih</text>
+    </g>
+
+    <!-- Tier 5: Derin Muhakeme Çekirdeği -->
+    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
+      <rect x="130" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="264" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="398" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="532" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="666" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="800" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="934" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="1068" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="1202" y="650" width="122" height="46" rx="7"></rect>
+      <rect x="1336" y="650" width="122" height="46" rx="7"></rect>
+    </g>
+    <g fill="var(--ink)">
+      <text x="191" y="677">Tefekkür</text>
+      <text x="325" y="670">İllet</text><text x="325" y="684">Keşfi</text>
+      <text x="459" y="670">Mantık</text><text x="459" y="684">Yürütme</text>
+      <text x="593" y="677">İspat</text>
+      <text x="727" y="677">Teemmül</text>
+      <text x="861" y="677">Tedebbür</text>
+      <text x="995" y="677">Tetkik</text>
+      <text x="1129" y="677">Tahkik</text>
+      <text x="1263" y="670">İhtimal</text><text x="1263" y="684">Hesabı</text>
+      <text x="1397" y="670">Deneme-</text><text x="1397" y="684">Yanılma</text>
+    </g>
+
+    <!-- Tier 6: Hüküm -->
+    <g stroke-width="1.4">
+      <g fill="var(--paper)" stroke="var(--line)">
+        <rect x="398" y="762" width="122" height="46" rx="7"></rect>
+        <rect x="532" y="762" width="122" height="46" rx="7"></rect>
+        <rect x="666" y="762" width="122" height="46" rx="7"></rect>
+        <rect x="800" y="762" width="122" height="46" rx="7"></rect>
+        <rect x="934" y="762" width="122" height="46" rx="7"></rect>
+      </g>
+      <rect x="1068" y="762" width="122" height="46" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8"></rect>
+    </g>
+    <g fill="var(--ink)">
+      <text x="459" y="789">Tasdik</text>
+      <text x="593" y="782">Şek-Zan-</text><text x="593" y="796">Yakîn İdraki</text>
+      <text x="727" y="789">Temkin</text>
+      <text x="861" y="789">Tashih</text>
+      <text x="995" y="789">Teyit</text>
+    </g>
+    <text x="1129" y="789" fill="var(--accent)" font-weight="700">Muhakeme</text>
+
+    <!-- Tier 7: Yön / Gaye -->
+    <g fill="var(--paper)" stroke="var(--accent)" stroke-width="1.6">
+      <rect x="666" y="874" width="122" height="46" rx="7"></rect>
+      <rect x="800" y="874" width="122" height="46" rx="7"></rect>
+    </g>
+    <g fill="var(--ink)" font-weight="600">
+      <text x="727" y="894">Gaye</text><text x="727" y="908">Belirleme</text>
+      <text x="861" y="894">Merak ve</text><text x="861" y="908">Sual Tevcihi</text>
+    </g>
+
+    <!-- Tier 8: Beyan -->
+    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
+      <rect x="264" y="986" width="122" height="46" rx="7"></rect>
+      <rect x="398" y="986" width="122" height="46" rx="7"></rect>
+      <rect x="532" y="986" width="122" height="46" rx="7"></rect>
+      <rect x="666" y="986" width="122" height="46" rx="7"></rect>
+      <rect x="800" y="986" width="122" height="46" rx="7"></rect>
+      <rect x="934" y="986" width="122" height="46" rx="7"></rect>
+      <rect x="1068" y="986" width="122" height="46" rx="7"></rect>
+      <rect x="1202" y="986" width="122" height="46" rx="7"></rect>
+    </g>
+    <g fill="var(--ink)">
+      <text x="325" y="1013">Tafsil</text>
+      <text x="459" y="1013">Tefsir</text>
+      <text x="593" y="1013">Tevil</text>
+      <text x="727" y="1013">Fesâhat</text>
+      <text x="861" y="1013">Talâkat</text>
+      <text x="995" y="1013">Belâgat</text>
+      <text x="1129" y="1013">Sanat</text>
+      <text x="1263" y="1013">Münazara</text>
+    </g>
+
+    <!-- Tier 9: Kapanış -->
+    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
+      <rect x="666" y="1098" width="122" height="46" rx="7"></rect>
+      <rect x="800" y="1098" width="122" height="46" rx="7"></rect>
+    </g>
+    <g fill="var(--ink)">
+      <text x="727" y="1125">Talim</text>
+      <text x="861" y="1125">Tahsil</text>
+    </g>
+  </g>
+</svg>
+    </div>
+    <figcaption><b>Kademelere ayrım nasıl yapıldı:</b> her meleke, belgedeki kendi "Girdiler / Çıktılar" tanımı okunarak &mdash; ham veriye ne kadar yakın çalıştığına ve hangi kademenin çıktısını beslediğine bakılarak &mdash; elle bir sıraya yerleştirildi. <b>Muhakeme</b> vurgulanmıştır: belgede en çok girdi alan (11 kaynak) ve hüküm kademesinin fiilî toplama noktası olan meleke budur. Kademeler arası oklar, o iki kademe arasındaki 255 kenarın <b>ortak yönünü</b> özetler &mdash; her tekil bağlantıyı değil.</figcaption>
+  </figure>
+
+  <div class="legend">
+    <span><span class="swatch flow"></span> kademeler arası ana akış</span>
+    <span><span class="swatch loop"></span> belgenin vurguladığı geri-besleme halkası</span>
+    <span><span class="dot"></span> Muhakeme &mdash; şebekenin toplama noktası</span>
+  </div>
+
+  <footer>docs/nefs_i_mudrike_mimarisi.tex &middot; el ile kademelendirilmiş şema, otomatik graf yerleşimi kullanılmadı</footer>
+</main>
