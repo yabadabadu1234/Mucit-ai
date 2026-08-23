@@ -131,488 +131,1301 @@
 
 <main>
   <p class="eyebrow">Nefs-i Müdrike Mimarisi &middot; Rükün Şeması</p>
-  <h1>41 Zihnî Melekenin Hiyerarşik Akış Haritası</h1>
+  <h1>43 Zihnî Melekenin 43 Ayrı Yerel Haritası, Tek Hiyerarşi İçinde</h1>
   <div class="intro">
-    <p>Kaynak belgenin (<code>nefs_i_mudrike_mimarisi.tex</code>) sonundaki "41 melekenin girdi/çıktı manifoldu" bölümündeki <strong>245 tekil bağlantının tamamı</strong>, hiçbirini toplulaştırmadan, tek tek çizilmiştir. Düğümlerin yeri ise &mdash; her melekenin işlevine bakılarak, tıpkı bir model mimarisi şemasının katman katman okunması gibi &mdash; on kademeli bir hiyerarşiye elle yerleştirildi.</p>
+    <p>Bu, <strong>tek bir grafik değil, kademe sırasına dizilmiş 43 ayrı küçük haritadır</strong> &mdash; belgedeki her meleke (ve kapanıştaki Talim/Tahsil) için bir tane. Her haritacık kendi meleke kutusunu ortada tutar; üstünde o melekeyi besleyen <b>girdiler</b>, altında ondan çıkan <b>çıktılar</b> düz bir çizgiyle sıralanır. Aynı isim (ör. "Muhakeme") onlarca farklı haritada &mdash; hem kendi haritasının başlığı, hem başka haritaların bir girdi/çıktı satırı olarak &mdash; tekrar tekrar geçer.</p>
   </div>
-  <p class="method">Bu bir grafik-çizim algoritmasının (yay/çember yerleşimi, kör itme-çekme motoru) ürünü değildir: her meleke, girdi/çıktı listesindeki fiili rolüne bakılarak elle bir kademeye atandı ve o karar hiçbir otomatik yerleştiriciye havale edilmedi. Her ok, belgede gerçekten var olan <em>tek bir</em> bağlantıdır &mdash; toplulaştırılmış bir özet değil. Kademe sırasıyla aynı yönde akan oklar soluk çizgiyle, aynı kademe içi yatay oklar noktalı çizgiyle, hiyerarşiye ters (geriye/yukarı) akan &mdash; belgenin ısrarla vurguladığı geri-besleme türünden &mdash; bağlantılar ise vurgu rengiyle ayrıca işaretlendi; gaye&nbsp;&rarr;&nbsp;müşahede ve tahsil&nbsp;&rarr;&nbsp;gaye halkaları bu türün en belirgin iki örneğidir.</p>
+  <p class="method">Kesişen tek bir dev şebeke yerine bunu tercih ettik: düğüm <b>tek kez değil, kaç ilişkisi varsa o kadar kez</b> çizilir, böylece her haritacığın içindeki üç-dört çizgi asla birbirini kesmez. Haritacıkların kendisi de &mdash; önceki sürümdeki gibi &mdash; hiçbir otomatik graf-yerleşim algoritmasına havale edilmeden, meleke rolüne bakılarak elle on kademeye dizildi; aynı satırdaki/yakın kademedeki haritacıklara bakarak aynı ismin nerelerde geçtiğini gözle takip edebilirsiniz.</p>
 
   <figure>
     <div class="scroll">
-<svg viewBox="0 0 1588 1194" role="img" aria-label="41 zihnî melekenin on kademeli hiyerarşik akış şeması: dış girdiden başlayıp ham algı, ham malzeme, kavramsallaştırma, sınama, derin muhakeme çekirdeği, hüküm, yön/gaye ve beyan kademelerinden geçip kapanışta tekrar gaye belirlemeye ve müşahedeye geri bağlanan bir döngü; 245 tekil bağlantının tamamı ayrı ayrı çizilmiştir.">
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"></path>
-    </marker>
-    <marker id="arrowAccent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="var(--accent)"></path>
-    </marker>
-  </defs>
-
-  <!-- ============ TIER BAND BACKGROUNDS ============ -->
-  <g fill="var(--tier-bg)">
-    <rect x="40" y="86" width="1508" height="54"></rect>
-    <rect x="40" y="198" width="1508" height="54"></rect>
-    <rect x="40" y="310" width="1508" height="54"></rect>
-    <rect x="40" y="422" width="1508" height="54"></rect>
-    <rect x="40" y="534" width="1508" height="54"></rect>
-    <rect x="40" y="646" width="1508" height="54"></rect>
-    <rect x="40" y="758" width="1508" height="54"></rect>
-    <rect x="40" y="870" width="1508" height="54"></rect>
-    <rect x="40" y="982" width="1508" height="54"></rect>
-    <rect x="40" y="1094" width="1508" height="54"></rect>
+<svg viewBox="0 0 1832 2670" role="img" aria-label="43 meleke için ayrı ayrı çizilmiş, kademe sırasına dizilmiş 43 küçük yerel harita; her haritacık kendi girdilerini üstünde, çıktılarını altında, düğümü tekrar tekrar kullanarak kesişimsiz şekilde gösterir.">
+  <text x="20.0" y="48.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 48.0)" text-anchor="start">HAM ALGI</text>
+  <text x="20.0" y="319.5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 319.5)" text-anchor="start">HAM MALZEME</text>
+  <text x="20.0" y="591.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 591.0)" text-anchor="start">KAVRAMSALLAŞTIRMA</text>
+  <text x="20.0" y="862.5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 862.5)" text-anchor="start">SINAMA</text>
+  <text x="20.0" y="1134.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 1134.0)" text-anchor="start">DERİN MUHAKEME ÇEKİRDEĞİ</text>
+  <text x="20.0" y="1420.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 1420.0)" text-anchor="start">HÜKÜM</text>
+  <text x="20.0" y="1807.5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 1807.5)" text-anchor="start">YÖN / GAYE</text>
+  <text x="20.0" y="2079.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 2079.0)" text-anchor="start">BEYAN</text>
+  <text x="20.0" y="2437.5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="0.06em" fill="var(--ink-dim)" transform="rotate(-90 20.0 2437.5)" text-anchor="start">KAPANIŞ</text>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="916.0" y1="65.2" x2="916.0" y2="140.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="913.0" y1="65.2" x2="919.0" y2="65.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="68.0" text-anchor="middle">Dış Âlem Hadiseleri</text>
+    <line x1="913.0" y1="79.8" x2="919.0" y2="79.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="82.5" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="913.0" y1="94.2" x2="919.0" y2="94.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="97.0" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="913.0" y1="108.8" x2="919.0" y2="108.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="111.5" text-anchor="middle">Deneme-Yanılma</text>
+    <line x1="913.0" y1="123.2" x2="919.0" y2="123.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="126.0" text-anchor="middle">Tetkik</text>
   </g>
-
-  <!-- ============ TIER LABELS ============ -->
-  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" letter-spacing="0.07em" fill="var(--ink-dim)">
-    <text x="60" y="65">DIŞ GİRDİ</text>
-    <text x="60" y="177">1&nbsp;&middot; HAM ALGI</text>
-    <text x="60" y="289">2&nbsp;&middot; HAM MALZEME</text>
-    <text x="60" y="401">3&nbsp;&middot; KAVRAMSALLAŞTIRMA</text>
-    <text x="60" y="513">4&nbsp;&middot; SINAMA VE KIYAS</text>
-    <text x="60" y="625">5&nbsp;&middot; DERİN MUHAKEME ÇEKİRDEĞİ</text>
-    <text x="60" y="737">6&nbsp;&middot; HÜKÜM</text>
-    <text x="60" y="849">7&nbsp;&middot; YÖN / GAYE</text>
-    <text x="60" y="961">8&nbsp;&middot; BEYAN</text>
-    <text x="60" y="1073">9&nbsp;&middot; KAPANIŞ</text>
+  <rect x="857.0" y="140.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="916.0" y="158.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Müşahede</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="916.0" y1="168.5" x2="916.0" y2="248.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="913.0" y1="175.8" x2="919.0" y2="175.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="178.6" text-anchor="middle">Hayal</text>
+    <line x1="913.0" y1="190.2" x2="919.0" y2="190.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="193.1" text-anchor="middle">Tecrit</text>
+    <line x1="913.0" y1="204.8" x2="919.0" y2="204.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="207.6" text-anchor="middle">Tahlil</text>
+    <line x1="913.0" y1="219.2" x2="919.0" y2="219.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="222.1" text-anchor="middle">İllet Keşfi</text>
+    <line x1="913.0" y1="233.8" x2="919.0" y2="233.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="236.6" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="913.0" y1="248.2" x2="919.0" y2="248.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="251.1" text-anchor="middle">Tahkik</text>
   </g>
-
-  <!-- ============ EDGES: 245 tekil bağlantının tamamı ============ -->
-  <g class="edges-forward" fill="none" stroke="var(--line)" stroke-opacity="0.38" stroke-width="1">
-    <path d="M995,1032 C955,1065 767,1065 727,1098" marker-end="url(#arrow)"><title>Belâgat → Talim</title></path>
-    <path d="M1397,696 C1317,729 941,729 861,762" marker-end="url(#arrow)"><title>Deneme-Yanılma → Tashih</title></path>
-    <path d="M1397,696 C1337,729 1055,729 995,762" marker-end="url(#arrow)"><title>Deneme-Yanılma → Teyit</title></path>
-    <path d="M660,136 C680,169 774,169 794,202" marker-end="url(#arrow)"><title>Dış Âlem Hadiseleri → Müşahede</title></path>
-    <path d="M727,920 C767,953 955,953 995,986" marker-end="url(#arrow)"><title>Gaye Belirleme → Belâgat</title></path>
-    <path d="M660,360 C640,393 546,393 526,426" marker-end="url(#arrow)"><title>Hayal → Hayal Kurma</title></path>
-    <path d="M660,360 C700,393 888,393 928,426" marker-end="url(#arrow)"><title>Hayal → Mana</title></path>
-    <path d="M660,360 C730,673 1059,673 1129,986" marker-end="url(#arrow)"><title>Hayal → Sanat</title></path>
-    <path d="M660,360 C680,393 774,393 794,426" marker-end="url(#arrow)"><title>Hayal → Tasavvur</title></path>
-    <path d="M660,360 C660,393 660,393 660,426" marker-end="url(#arrow)"><title>Hayal → Tertip</title></path>
-    <path d="M660,360 C620,449 432,449 392,538" marker-end="url(#arrow)"><title>Hayal → Tezat</title></path>
-    <path d="M660,360 C720,449 1002,449 1062,538" marker-end="url(#arrow)"><title>Hayal → Teşbih</title></path>
-    <path d="M526,472 C657,561 1266,561 1397,650" marker-end="url(#arrow)"><title>Hayal Kurma → Deneme-Yanılma</title></path>
-    <path d="M526,472 C566,505 754,505 794,538" marker-end="url(#arrow)"><title>Hayal Kurma → Kıyas</title></path>
-    <path d="M526,472 C616,729 1039,729 1129,986" marker-end="url(#arrow)"><title>Hayal Kurma → Sanat</title></path>
-    <path d="M526,472 C586,505 868,505 928,538" marker-end="url(#arrow)"><title>Hayal Kurma → Temsil</title></path>
-    <path d="M794,584 C744,617 509,617 459,650" marker-end="url(#arrow)"><title>Kıyas → Mantık Yürütme</title></path>
-    <path d="M794,584 C864,785 1193,785 1263,986" marker-end="url(#arrow)"><title>Kıyas → Münazara</title></path>
-    <path d="M794,584 C744,785 509,785 459,986" marker-end="url(#arrow)"><title>Kıyas → Tefsir</title></path>
-    <path d="M794,584 C864,617 1193,617 1263,650" marker-end="url(#arrow)"><title>Kıyas → İhtimal Hesabı</title></path>
-    <path d="M794,584 C764,617 623,617 593,650" marker-end="url(#arrow)"><title>Kıyas → İspat</title></path>
-    <path d="M928,472 C938,729 985,729 995,986" marker-end="url(#arrow)"><title>Mana → Belâgat</title></path>
-    <path d="M928,472 C898,673 757,673 727,874" marker-end="url(#arrow)"><title>Mana → Gaye Belirleme</title></path>
-    <path d="M928,472 C858,617 529,617 459,762" marker-end="url(#arrow)"><title>Mana → Tasdik</title></path>
-    <path d="M928,472 C817,561 302,561 191,650" marker-end="url(#arrow)"><title>Mana → Tefekkür</title></path>
-    <path d="M928,472 C858,729 529,729 459,986" marker-end="url(#arrow)"><title>Mana → Tefsir</title></path>
-    <path d="M928,472 C878,729 643,729 593,986" marker-end="url(#arrow)"><title>Mana → Tevil</title></path>
-    <path d="M459,696 C560,729 1028,729 1129,762" marker-end="url(#arrow)"><title>Mantık Yürütme → Muhakeme</title></path>
-    <path d="M459,696 C459,729 459,729 459,762" marker-end="url(#arrow)"><title>Mantık Yürütme → Tasdik</title></path>
-    <path d="M861,920 C921,953 1203,953 1263,986" marker-end="url(#arrow)"><title>Merak ve Sual Tevcihi → Münazara</title></path>
-    <path d="M1129,808 C1109,897 1015,897 995,986" marker-end="url(#arrow)"><title>Muhakeme → Belâgat</title></path>
-    <path d="M1129,808 C1069,841 787,841 727,874" marker-end="url(#arrow)"><title>Muhakeme → Gaye Belirleme</title></path>
-    <path d="M1129,808 C1008,897 446,897 325,986" marker-end="url(#arrow)"><title>Muhakeme → Tafsil</title></path>
-    <path d="M1129,808 C1028,897 560,897 459,986" marker-end="url(#arrow)"><title>Muhakeme → Tefsir</title></path>
-    <path d="M1129,808 C1049,897 673,897 593,986" marker-end="url(#arrow)"><title>Muhakeme → Tevil</title></path>
-    <path d="M928,136 C908,225 814,225 794,314" marker-end="url(#arrow)"><title>Mukayese → Tecrit</title></path>
-    <path d="M928,136 C848,337 472,337 392,538" marker-end="url(#arrow)"><title>Mukayese → Tezat</title></path>
-    <path d="M928,136 C948,337 1042,337 1062,538" marker-end="url(#arrow)"><title>Mukayese → Teşbih</title></path>
-    <path d="M794,248 C774,281 680,281 660,314" marker-end="url(#arrow)"><title>Müşahede → Hayal</title></path>
-    <path d="M794,248 C844,449 1079,449 1129,650" marker-end="url(#arrow)"><title>Müşahede → Tahkik</title></path>
-    <path d="M794,248 C814,281 908,281 928,314" marker-end="url(#arrow)"><title>Müşahede → Tahlil</title></path>
-    <path d="M794,248 C794,281 794,281 794,314" marker-end="url(#arrow)"><title>Müşahede → Tecrit</title></path>
-    <path d="M794,248 C754,393 566,393 526,538" marker-end="url(#arrow)"><title>Müşahede → Tenakuz Bulma</title></path>
-    <path d="M794,248 C724,449 395,449 325,650" marker-end="url(#arrow)"><title>Müşahede → İllet Keşfi</title></path>
-    <path d="M1129,1032 C1089,1065 901,1065 861,1098" marker-end="url(#arrow)"><title>Sanat → Tahsil</title></path>
-    <path d="M325,1032 C385,1065 667,1065 727,1098" marker-end="url(#arrow)"><title>Tafsil → Talim</title></path>
-    <path d="M1129,696 C1129,729 1129,729 1129,762" marker-end="url(#arrow)"><title>Tahkik → Muhakeme</title></path>
-    <path d="M1129,696 C1028,841 560,841 459,986" marker-end="url(#arrow)"><title>Tahkik → Tefsir</title></path>
-    <path d="M1129,696 C1069,729 787,729 727,762" marker-end="url(#arrow)"><title>Tahkik → Temkin</title></path>
-    <path d="M1129,696 C1049,729 673,729 593,762" marker-end="url(#arrow)"><title>Tahkik → Şek-Zan-Yakîn İdraki</title></path>
-    <path d="M928,360 C928,393 928,393 928,426" marker-end="url(#arrow)"><title>Tahlil → Mana</title></path>
-    <path d="M928,360 C868,449 586,449 526,538" marker-end="url(#arrow)"><title>Tahlil → Tenakuz Bulma</title></path>
-    <path d="M928,360 C948,393 1042,393 1062,426" marker-end="url(#arrow)"><title>Tahlil → Terkip</title></path>
-    <path d="M928,360 C888,393 700,393 660,426" marker-end="url(#arrow)"><title>Tahlil → Tertip</title></path>
-    <path d="M928,360 C848,449 472,449 392,538" marker-end="url(#arrow)"><title>Tahlil → Tezat</title></path>
-    <path d="M861,1032 C841,1065 747,1065 727,1098" marker-end="url(#arrow)"><title>Talâkat → Talim</title></path>
-    <path d="M794,472 C844,617 1079,617 1129,762" marker-end="url(#arrow)"><title>Tasavvur → Muhakeme</title></path>
-    <path d="M794,472 C744,617 509,617 459,762" marker-end="url(#arrow)"><title>Tasavvur → Tasdik</title></path>
-    <path d="M794,472 C724,561 395,561 325,650" marker-end="url(#arrow)"><title>Tasavvur → İllet Keşfi</title></path>
-    <path d="M459,808 C439,897 345,897 325,986" marker-end="url(#arrow)"><title>Tasdik → Tafsil</title></path>
-    <path d="M459,808 C499,953 687,953 727,1098" marker-end="url(#arrow)"><title>Tasdik → Talim</title></path>
-    <path d="M861,808 C841,897 747,897 727,986" marker-end="url(#arrow)"><title>Tashih → Fesâhat</title></path>
-    <path d="M794,360 C814,393 908,393 928,426" marker-end="url(#arrow)"><title>Tecrit → Mana</title></path>
-    <path d="M794,360 C744,505 509,505 459,650" marker-end="url(#arrow)"><title>Tecrit → Mantık Yürütme</title></path>
-    <path d="M794,360 C794,393 794,393 794,426" marker-end="url(#arrow)"><title>Tecrit → Tasavvur</title></path>
-    <path d="M794,360 C774,449 680,449 660,538" marker-end="url(#arrow)"><title>Tecrit → Tenkit</title></path>
-    <path d="M794,360 C724,505 395,505 325,650" marker-end="url(#arrow)"><title>Tecrit → İllet Keşfi</title></path>
-    <path d="M794,360 C764,505 623,505 593,650" marker-end="url(#arrow)"><title>Tecrit → İspat</title></path>
-    <path d="M861,696 C841,785 747,785 727,874" marker-end="url(#arrow)"><title>Tedebbür → Gaye Belirleme</title></path>
-    <path d="M861,696 C901,729 1089,729 1129,762" marker-end="url(#arrow)"><title>Tedebbür → Muhakeme</title></path>
-    <path d="M727,696 C747,785 841,785 861,874" marker-end="url(#arrow)"><title>Teemmül → Merak ve Sual Tevcihi</title></path>
-    <path d="M727,696 C727,729 727,729 727,762" marker-end="url(#arrow)"><title>Teemmül → Temkin</title></path>
-    <path d="M459,1032 C499,1065 687,1065 727,1098" marker-end="url(#arrow)"><title>Tefsir → Talim</title></path>
-    <path d="M727,808 C727,897 727,897 727,986" marker-end="url(#arrow)"><title>Temkin → Fesâhat</title></path>
-    <path d="M727,808 C807,897 1183,897 1263,986" marker-end="url(#arrow)"><title>Temkin → Münazara</title></path>
-    <path d="M928,584 C938,785 985,785 995,986" marker-end="url(#arrow)"><title>Temsil → Belâgat</title></path>
-    <path d="M928,584 C898,841 757,841 727,1098" marker-end="url(#arrow)"><title>Temsil → Talim</title></path>
-    <path d="M526,584 C576,729 811,729 861,874" marker-end="url(#arrow)"><title>Tenakuz Bulma → Merak ve Sual Tevcihi</title></path>
-    <path d="M526,584 C616,673 1039,673 1129,762" marker-end="url(#arrow)"><title>Tenakuz Bulma → Muhakeme</title></path>
-    <path d="M526,584 C576,673 811,673 861,762" marker-end="url(#arrow)"><title>Tenakuz Bulma → Tashih</title></path>
-    <path d="M526,584 C536,785 583,785 593,986" marker-end="url(#arrow)"><title>Tenakuz Bulma → Tevil</title></path>
-    <path d="M526,584 C536,673 583,673 593,762" marker-end="url(#arrow)"><title>Tenakuz Bulma → Şek-Zan-Yakîn İdraki</title></path>
-    <path d="M660,584 C730,673 1059,673 1129,762" marker-end="url(#arrow)"><title>Tenkit → Muhakeme</title></path>
-    <path d="M660,584 C730,617 1059,617 1129,650" marker-end="url(#arrow)"><title>Tenkit → Tahkik</title></path>
-    <path d="M660,584 C690,673 831,673 861,762" marker-end="url(#arrow)"><title>Tenkit → Tashih</title></path>
-    <path d="M660,584 C650,673 603,673 593,762" marker-end="url(#arrow)"><title>Tenkit → Şek-Zan-Yakîn İdraki</title></path>
-    <path d="M1062,472 C1052,729 1005,729 995,986" marker-end="url(#arrow)"><title>Terkip → Belâgat</title></path>
-    <path d="M1062,472 C1072,729 1119,729 1129,986" marker-end="url(#arrow)"><title>Terkip → Sanat</title></path>
-    <path d="M1062,472 C951,729 436,729 325,986" marker-end="url(#arrow)"><title>Terkip → Tafsil</title></path>
-    <path d="M1062,472 C972,617 549,617 459,762" marker-end="url(#arrow)"><title>Terkip → Tasdik</title></path>
-    <path d="M1062,472 C992,561 663,561 593,650" marker-end="url(#arrow)"><title>Terkip → İspat</title></path>
-    <path d="M660,472 C680,505 774,505 794,538" marker-end="url(#arrow)"><title>Tertip → Kıyas</title></path>
-    <path d="M660,472 C630,561 489,561 459,650" marker-end="url(#arrow)"><title>Tertip → Mantık Yürütme</title></path>
-    <path d="M660,472 C610,729 375,729 325,986" marker-end="url(#arrow)"><title>Tertip → Tafsil</title></path>
-    <path d="M660,472 C670,785 717,785 727,1098" marker-end="url(#arrow)"><title>Tertip → Talim</title></path>
-    <path d="M660,472 C690,729 831,729 861,986" marker-end="url(#arrow)"><title>Tertip → Talâkat</title></path>
-    <path d="M660,472 C650,561 603,561 593,650" marker-end="url(#arrow)"><title>Tertip → İspat</title></path>
-    <path d="M995,696 C975,729 881,729 861,762" marker-end="url(#arrow)"><title>Tetkik → Tashih</title></path>
-    <path d="M995,696 C995,729 995,729 995,762" marker-end="url(#arrow)"><title>Tetkik → Teyit</title></path>
-    <path d="M995,808 C955,953 767,953 727,1098" marker-end="url(#arrow)"><title>Teyit → Talim</title></path>
-    <path d="M392,584 C402,617 449,617 459,650" marker-end="url(#arrow)"><title>Tezat → Mantık Yürütme</title></path>
-    <path d="M392,584 C422,785 563,785 593,986" marker-end="url(#arrow)"><title>Tezat → Tevil</title></path>
-    <path d="M1062,584 C1052,785 1005,785 995,986" marker-end="url(#arrow)"><title>Teşbih → Belâgat</title></path>
-    <path d="M1062,584 C1072,785 1119,785 1129,986" marker-end="url(#arrow)"><title>Teşbih → Sanat</title></path>
-    <path d="M1263,696 C1243,729 1149,729 1129,762" marker-end="url(#arrow)"><title>İhtimal Hesabı → Muhakeme</title></path>
-    <path d="M1263,696 C1183,729 807,729 727,762" marker-end="url(#arrow)"><title>İhtimal Hesabı → Temkin</title></path>
-    <path d="M1263,696 C1162,729 694,729 593,762" marker-end="url(#arrow)"><title>İhtimal Hesabı → Şek-Zan-Yakîn İdraki</title></path>
-    <path d="M794,136 C784,505 737,505 727,874" marker-end="url(#arrow)"><title>İhtiyaç / Fıtrat → Gaye Belirleme</title></path>
-    <path d="M325,696 C365,841 553,841 593,986" marker-end="url(#arrow)"><title>İllet Keşfi → Tevil</title></path>
-    <path d="M593,696 C673,729 1049,729 1129,762" marker-end="url(#arrow)"><title>İspat → Muhakeme</title></path>
-    <path d="M593,696 C694,841 1162,841 1263,986" marker-end="url(#arrow)"><title>İspat → Münazara</title></path>
-    <path d="M593,696 C573,729 479,729 459,762" marker-end="url(#arrow)"><title>İspat → Tasdik</title></path>
-    <path d="M593,696 C653,729 935,729 995,762" marker-end="url(#arrow)"><title>İspat → Teyit</title></path>
-    <path d="M593,696 C593,729 593,729 593,762" marker-end="url(#arrow)"><title>İspat → Şek-Zan-Yakîn İdraki</title></path>
-    <path d="M593,808 C633,841 821,841 861,874" marker-end="url(#arrow)"><title>Şek-Zan-Yakîn İdraki → Merak ve Sual Tevcihi</title></path>
-    <path d="M593,808 C593,897 593,897 593,986" marker-end="url(#arrow)"><title>Şek-Zan-Yakîn İdraki → Tevil</title></path>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="740.0" y1="336.8" x2="740.0" y2="412.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="737.0" y1="336.8" x2="743.0" y2="336.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="339.6" text-anchor="middle">Müşahede</text>
+    <line x1="737.0" y1="351.2" x2="743.0" y2="351.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="354.1" text-anchor="middle">Hayal Kurma</text>
+    <line x1="737.0" y1="365.8" x2="743.0" y2="365.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="368.6" text-anchor="middle">Tecrit</text>
+    <line x1="737.0" y1="380.2" x2="743.0" y2="380.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="383.1" text-anchor="middle">Temsil</text>
+    <line x1="737.0" y1="394.8" x2="743.0" y2="394.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="397.6" text-anchor="middle">Teşbih</text>
   </g>
-  <g class="edges-lateral" fill="none" stroke="var(--line)" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3 3">
-    <path d="M1056,1009 Q1129,1025 1202,1009" marker-end="url(#arrow)"><title>Belâgat → Münazara</title></path>
-    <path d="M1056,1009 Q1062,1025 1068,1009" marker-end="url(#arrow)"><title>Belâgat → Sanat</title></path>
-    <path d="M934,1009 Q928,1025 922,1009" marker-end="url(#arrow)"><title>Belâgat → Talâkat</title></path>
-    <path d="M1336,673 Q1330,689 1324,673" marker-end="url(#arrow)"><title>Deneme-Yanılma → İhtimal Hesabı</title></path>
-    <path d="M1336,673 Q861,689 386,673" marker-end="url(#arrow)"><title>Deneme-Yanılma → İllet Keşfi</title></path>
-    <path d="M788,1009 Q861,1025 934,1009" marker-end="url(#arrow)"><title>Fesâhat → Belâgat</title></path>
-    <path d="M788,1009 Q995,1025 1202,1009" marker-end="url(#arrow)"><title>Fesâhat → Münazara</title></path>
-    <path d="M788,1009 Q928,1025 1068,1009" marker-end="url(#arrow)"><title>Fesâhat → Sanat</title></path>
-    <path d="M788,1009 Q794,1025 800,1009" marker-end="url(#arrow)"><title>Fesâhat → Talâkat</title></path>
-    <path d="M788,897 Q794,913 800,897" marker-end="url(#arrow)"><title>Gaye Belirleme → Merak ve Sual Tevcihi</title></path>
-    <path d="M587,449 Q660,465 733,449" marker-end="url(#arrow)"><title>Hayal Kurma → Tasavvur</title></path>
-    <path d="M587,449 Q794,465 1001,449" marker-end="url(#arrow)"><title>Hayal Kurma → Terkip</title></path>
-    <path d="M867,449 Q727,465 587,449" marker-end="url(#arrow)"><title>Mana → Hayal Kurma</title></path>
-    <path d="M520,673 Q861,689 1202,673" marker-end="url(#arrow)"><title>Mantık Yürütme → İhtimal Hesabı</title></path>
-    <path d="M520,673 Q526,689 532,673" marker-end="url(#arrow)"><title>Mantık Yürütme → İspat</title></path>
-    <path d="M1068,1009 Q1062,1025 1056,1009" marker-end="url(#arrow)"><title>Sanat → Belâgat</title></path>
-    <path d="M1068,1009 Q928,1025 788,1009" marker-end="url(#arrow)"><title>Sanat → Fesâhat</title></path>
-    <path d="M386,1009 Q660,1025 934,1009" marker-end="url(#arrow)"><title>Tafsil → Belâgat</title></path>
-    <path d="M386,1009 Q526,1025 666,1009" marker-end="url(#arrow)"><title>Tafsil → Fesâhat</title></path>
-    <path d="M386,1009 Q593,1025 800,1009" marker-end="url(#arrow)"><title>Tafsil → Talâkat</title></path>
-    <path d="M1068,673 Q660,689 252,673" marker-end="url(#arrow)"><title>Tahkik → Tefekkür</title></path>
-    <path d="M1068,673 Q1062,689 1056,673" marker-end="url(#arrow)"><title>Tahkik → Tetkik</title></path>
-    <path d="M867,337 Q861,353 855,337" marker-end="url(#arrow)"><title>Tahlil → Tecrit</title></path>
-    <path d="M788,1121 Q794,1137 800,1121" marker-end="url(#arrow)"><title>Talim → Tahsil</title></path>
-    <path d="M922,1009 Q928,1025 934,1009" marker-end="url(#arrow)"><title>Talâkat → Belâgat</title></path>
-    <path d="M922,1009 Q1062,1025 1202,1009" marker-end="url(#arrow)"><title>Talâkat → Münazara</title></path>
-    <path d="M855,449 Q861,465 867,449" marker-end="url(#arrow)"><title>Tasavvur → Mana</title></path>
-    <path d="M855,449 Q928,465 1001,449" marker-end="url(#arrow)"><title>Tasavvur → Terkip</title></path>
-    <path d="M520,785 Q794,801 1068,785" marker-end="url(#arrow)"><title>Tasdik → Muhakeme</title></path>
-    <path d="M520,785 Q593,801 666,785" marker-end="url(#arrow)"><title>Tasdik → Temkin</title></path>
-    <path d="M520,785 Q526,801 532,785" marker-end="url(#arrow)"><title>Tasdik → Şek-Zan-Yakîn İdraki</title></path>
-    <path d="M922,785 Q995,801 1068,785" marker-end="url(#arrow)"><title>Tashih → Muhakeme</title></path>
-    <path d="M922,785 Q928,801 934,785" marker-end="url(#arrow)"><title>Tashih → Teyit</title></path>
-    <path d="M733,337 Q727,353 721,337" marker-end="url(#arrow)"><title>Tecrit → Hayal</title></path>
-    <path d="M800,673 Q794,689 788,673" marker-end="url(#arrow)"><title>Tedebbür → Teemmül</title></path>
-    <path d="M922,673 Q1062,689 1202,673" marker-end="url(#arrow)"><title>Tedebbür → İhtimal Hesabı</title></path>
-    <path d="M666,673 Q459,689 252,673" marker-end="url(#arrow)"><title>Teemmül → Tefekkür</title></path>
-    <path d="M788,673 Q861,689 934,673" marker-end="url(#arrow)"><title>Teemmül → Tetkik</title></path>
-    <path d="M252,673 Q325,689 398,673" marker-end="url(#arrow)"><title>Tefekkür → Mantık Yürütme</title></path>
-    <path d="M252,673 Q526,689 800,673" marker-end="url(#arrow)"><title>Tefekkür → Tedebbür</title></path>
-    <path d="M252,673 Q258,689 264,673" marker-end="url(#arrow)"><title>Tefekkür → İllet Keşfi</title></path>
-    <path d="M520,1009 Q727,1025 934,1009" marker-end="url(#arrow)"><title>Tefsir → Belâgat</title></path>
-    <path d="M398,1009 Q392,1025 386,1009" marker-end="url(#arrow)"><title>Tefsir → Tafsil</title></path>
-    <path d="M520,1009 Q526,1025 532,1009" marker-end="url(#arrow)"><title>Tefsir → Tevil</title></path>
-    <path d="M788,785 Q928,801 1068,785" marker-end="url(#arrow)"><title>Temkin → Muhakeme</title></path>
-    <path d="M666,785 Q660,801 654,785" marker-end="url(#arrow)"><title>Temkin → Şek-Zan-Yakîn İdraki</title></path>
-    <path d="M867,561 Q861,577 855,561" marker-end="url(#arrow)"><title>Temsil → Kıyas</title></path>
-    <path d="M989,561 Q995,577 1001,561" marker-end="url(#arrow)"><title>Temsil → Teşbih</title></path>
-    <path d="M587,561 Q861,577 1135,561" marker-end="url(#arrow)"><title>Tenakuz Bulma → Cerh</title></path>
-    <path d="M587,561 Q593,577 599,561" marker-end="url(#arrow)"><title>Tenakuz Bulma → Tenkit</title></path>
-    <path d="M1001,449 Q794,465 587,449" marker-end="url(#arrow)"><title>Terkip → Hayal Kurma</title></path>
-    <path d="M1001,449 Q861,465 721,449" marker-end="url(#arrow)"><title>Terkip → Tertip</title></path>
-    <path d="M721,449 Q727,465 733,449" marker-end="url(#arrow)"><title>Tertip → Tasavvur</title></path>
-    <path d="M654,1009 Q794,1025 934,1009" marker-end="url(#arrow)"><title>Tevil → Belâgat</title></path>
-    <path d="M654,1009 Q928,1025 1202,1009" marker-end="url(#arrow)"><title>Tevil → Münazara</title></path>
-    <path d="M532,1009 Q526,1025 520,1009" marker-end="url(#arrow)"><title>Tevil → Tefsir</title></path>
-    <path d="M1056,785 Q1062,801 1068,785" marker-end="url(#arrow)"><title>Teyit → Muhakeme</title></path>
-    <path d="M934,785 Q727,801 520,785" marker-end="url(#arrow)"><title>Teyit → Tasdik</title></path>
-    <path d="M934,785 Q794,801 654,785" marker-end="url(#arrow)"><title>Teyit → Şek-Zan-Yakîn İdraki</title></path>
-    <path d="M453,561 Q593,577 733,561" marker-end="url(#arrow)"><title>Tezat → Kıyas</title></path>
-    <path d="M453,561 Q459,577 465,561" marker-end="url(#arrow)"><title>Tezat → Tenakuz Bulma</title></path>
-    <path d="M453,561 Q526,577 599,561" marker-end="url(#arrow)"><title>Tezat → Tenkit</title></path>
-    <path d="M1001,561 Q928,577 855,561" marker-end="url(#arrow)"><title>Teşbih → Kıyas</title></path>
-    <path d="M1001,561 Q995,577 989,561" marker-end="url(#arrow)"><title>Teşbih → Temsil</title></path>
-    <path d="M1324,673 Q1330,689 1336,673" marker-end="url(#arrow)"><title>İhtimal Hesabı → Deneme-Yanılma</title></path>
-    <path d="M1202,673 Q1062,689 922,673" marker-end="url(#arrow)"><title>İhtimal Hesabı → Tedebbür</title></path>
-    <path d="M386,673 Q392,689 398,673" marker-end="url(#arrow)"><title>İllet Keşfi → Mantık Yürütme</title></path>
-    <path d="M386,673 Q727,689 1068,673" marker-end="url(#arrow)"><title>İllet Keşfi → Tahkik</title></path>
-    <path d="M386,673 Q593,689 800,673" marker-end="url(#arrow)"><title>İllet Keşfi → Tedebbür</title></path>
-    <path d="M386,673 Q459,689 532,673" marker-end="url(#arrow)"><title>İllet Keşfi → İspat</title></path>
-    <path d="M654,673 Q861,689 1068,673" marker-end="url(#arrow)"><title>İspat → Tahkik</title></path>
-    <path d="M654,785 Q861,801 1068,785" marker-end="url(#arrow)"><title>Şek-Zan-Yakîn İdraki → Muhakeme</title></path>
-    <path d="M654,785 Q660,801 666,785" marker-end="url(#arrow)"><title>Şek-Zan-Yakîn İdraki → Temkin</title></path>
+  <rect x="681.0" y="412.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="740.0" y="429.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Hayal</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="740.0" y1="440.0" x2="740.0" y2="519.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="737.0" y1="447.2" x2="743.0" y2="447.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="450.1" text-anchor="middle">Hayal Kurma</text>
+    <line x1="737.0" y1="461.8" x2="743.0" y2="461.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="464.6" text-anchor="middle">Tertip</text>
+    <line x1="737.0" y1="476.2" x2="743.0" y2="476.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="479.1" text-anchor="middle">Tasavvur</text>
+    <line x1="737.0" y1="490.8" x2="743.0" y2="490.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="493.6" text-anchor="middle">Mana</text>
+    <line x1="737.0" y1="505.2" x2="743.0" y2="505.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="508.1" text-anchor="middle">Tezat</text>
+    <line x1="737.0" y1="519.8" x2="743.0" y2="519.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="522.5" text-anchor="middle">Sanat</text>
   </g>
-  <g class="edges-backward" fill="none" stroke="var(--accent)" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="1 5">
-    <path d="M1336,673 C1396,673 915,225 855,225" marker-end="url(#arrowAccent)"><title>Deneme-Yanılma → Müşahede</title></path>
-    <path d="M788,897 C728,897 1276,673 1336,673" marker-end="url(#arrowAccent)"><title>Gaye Belirleme → Deneme-Yanılma</title></path>
-    <path d="M788,897 C728,897 1008,785 1068,785" marker-end="url(#arrowAccent)"><title>Gaye Belirleme → Muhakeme</title></path>
-    <path d="M666,897 C606,897 192,673 252,673" marker-end="url(#arrowAccent)"><title>Gaye Belirleme → Tefekkür</title></path>
-    <path d="M788,897 C728,897 728,785 788,785" marker-end="url(#arrowAccent)"><title>Gaye Belirleme → Temkin</title></path>
-    <path d="M587,449 C527,449 539,337 599,337" marker-end="url(#arrowAccent)"><title>Hayal Kurma → Hayal</title></path>
-    <path d="M855,561 C915,561 1061,449 1001,449" marker-end="url(#arrowAccent)"><title>Kıyas → Terkip</title></path>
-    <path d="M520,673 C460,673 405,561 465,561" marker-end="url(#arrowAccent)"><title>Mantık Yürütme → Tenakuz Bulma</title></path>
-    <path d="M520,673 C460,673 539,449 599,449" marker-end="url(#arrowAccent)"><title>Mantık Yürütme → Tertip</title></path>
-    <path d="M922,897 C982,897 1396,673 1336,673" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Deneme-Yanılma</title></path>
-    <path d="M800,897 C860,897 647,449 587,449" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Hayal Kurma</title></path>
-    <path d="M800,897 C860,897 915,225 855,225" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Müşahede</title></path>
-    <path d="M922,897 C982,897 927,337 867,337" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Tahlil</title></path>
-    <path d="M800,897 C860,897 848,673 788,673" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Teemmül</title></path>
-    <path d="M800,897 C860,897 312,673 252,673" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Tefekkür</title></path>
-    <path d="M1068,785 C1128,785 982,673 922,673" marker-end="url(#arrowAccent)"><title>Muhakeme → Tedebbür</title></path>
-    <path d="M1068,785 C1128,785 848,673 788,673" marker-end="url(#arrowAccent)"><title>Muhakeme → Teemmül</title></path>
-    <path d="M1068,785 C1128,785 1116,673 1056,673" marker-end="url(#arrowAccent)"><title>Muhakeme → Tetkik</title></path>
-    <path d="M1202,1009 C1262,1009 1250,673 1190,673" marker-end="url(#arrowAccent)"><title>Münazara → Tahkik</title></path>
-    <path d="M1202,1009 C1262,1009 982,785 922,785" marker-end="url(#arrowAccent)"><title>Münazara → Tashih</title></path>
-    <path d="M1202,1009 C1262,1009 781,561 721,561" marker-end="url(#arrowAccent)"><title>Münazara → Tenkit</title></path>
-    <path d="M1202,1009 C1262,1009 1116,785 1056,785" marker-end="url(#arrowAccent)"><title>Münazara → Teyit</title></path>
-    <path d="M1202,1009 C1262,1009 513,561 453,561" marker-end="url(#arrowAccent)"><title>Münazara → Tezat</title></path>
-    <path d="M1068,1009 C1128,1009 647,449 587,449" marker-end="url(#arrowAccent)"><title>Sanat → Hayal Kurma</title></path>
-    <path d="M1068,1009 C1128,1009 1049,561 989,561" marker-end="url(#arrowAccent)"><title>Sanat → Temsil</title></path>
-    <path d="M1068,1009 C1128,1009 1183,561 1123,561" marker-end="url(#arrowAccent)"><title>Sanat → Teşbih</title></path>
-    <path d="M386,1009 C326,1009 807,561 867,561" marker-end="url(#arrowAccent)"><title>Tafsil → Temsil</title></path>
-    <path d="M386,1009 C326,1009 874,673 934,673" marker-end="url(#arrowAccent)"><title>Tafsil → Tetkik</title></path>
-    <path d="M922,1121 C982,1121 982,1009 922,1009" marker-end="url(#arrowAccent)"><title>Tahsil → Talâkat</title></path>
-    <path d="M788,1121 C728,1121 728,1009 788,1009" marker-end="url(#arrowAccent)"><title>Talim → Fesâhat</title></path>
-    <path d="M855,449 C915,449 927,337 867,337" marker-end="url(#arrowAccent)"><title>Tasavvur → Tahlil</title></path>
-    <path d="M922,785 C982,785 1128,673 1068,673" marker-end="url(#arrowAccent)"><title>Tashih → Tahkik</title></path>
-    <path d="M922,785 C982,785 1061,449 1001,449" marker-end="url(#arrowAccent)"><title>Tashih → Terkip</title></path>
-    <path d="M800,673 C860,673 781,449 721,449" marker-end="url(#arrowAccent)"><title>Tedebbür → Tertip</title></path>
-    <path d="M788,673 C728,673 807,337 867,337" marker-end="url(#arrowAccent)"><title>Teemmül → Tahlil</title></path>
-    <path d="M788,673 C728,673 673,337 733,337" marker-end="url(#arrowAccent)"><title>Teemmül → Tecrit</title></path>
-    <path d="M666,673 C606,673 661,561 721,561" marker-end="url(#arrowAccent)"><title>Teemmül → Tenkit</title></path>
-    <path d="M252,673 C192,673 673,449 733,449" marker-end="url(#arrowAccent)"><title>Tefekkür → Tasavvur</title></path>
-    <path d="M252,673 C192,673 807,561 867,561" marker-end="url(#arrowAccent)"><title>Tefekkür → Temsil</title></path>
-    <path d="M252,673 C192,673 941,449 1001,449" marker-end="url(#arrowAccent)"><title>Tefekkür → Terkip</title></path>
-    <path d="M252,673 C192,673 941,561 1001,561" marker-end="url(#arrowAccent)"><title>Tefekkür → Teşbih</title></path>
-    <path d="M520,1009 C460,1009 807,449 867,449" marker-end="url(#arrowAccent)"><title>Tefsir → Mana</title></path>
-    <path d="M788,785 C728,785 740,673 800,673" marker-end="url(#arrowAccent)"><title>Temkin → Tedebbür</title></path>
-    <path d="M788,785 C728,785 874,673 934,673" marker-end="url(#arrowAccent)"><title>Temkin → Tetkik</title></path>
-    <path d="M867,561 C927,561 781,337 721,337" marker-end="url(#arrowAccent)"><title>Temsil → Hayal</title></path>
-    <path d="M721,561 C661,561 673,337 733,337" marker-end="url(#arrowAccent)"><title>Tenkit → Tecrit</title></path>
-    <path d="M934,673 C994,673 915,225 855,225" marker-end="url(#arrowAccent)"><title>Tetkik → Müşahede</title></path>
-    <path d="M934,673 C994,673 1049,337 989,337" marker-end="url(#arrowAccent)"><title>Tetkik → Tahlil</title></path>
-    <path d="M934,673 C994,673 647,561 587,561" marker-end="url(#arrowAccent)"><title>Tetkik → Tenakuz Bulma</title></path>
-    <path d="M934,673 C994,673 513,561 453,561" marker-end="url(#arrowAccent)"><title>Tetkik → Tezat</title></path>
-    <path d="M654,1009 C594,1009 807,449 867,449" marker-end="url(#arrowAccent)"><title>Tevil → Mana</title></path>
-    <path d="M1056,785 C1116,785 1128,673 1068,673" marker-end="url(#arrowAccent)"><title>Teyit → Tahkik</title></path>
-    <path d="M1001,561 C1061,561 781,337 721,337" marker-end="url(#arrowAccent)"><title>Teşbih → Hayal</title></path>
-    <path d="M654,785 C594,785 606,673 666,673" marker-end="url(#arrowAccent)"><title>Şek-Zan-Yakîn İdraki → Teemmül</title></path>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="916.0" y1="336.8" x2="916.0" y2="412.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="913.0" y1="336.8" x2="919.0" y2="336.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="339.6" text-anchor="middle">Müşahede</text>
+    <line x1="913.0" y1="351.2" x2="919.0" y2="351.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="354.1" text-anchor="middle">Tahlil</text>
+    <line x1="913.0" y1="365.8" x2="919.0" y2="365.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="368.6" text-anchor="middle">Mukayese</text>
+    <line x1="913.0" y1="380.2" x2="919.0" y2="380.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="383.1" text-anchor="middle">Tenkit</text>
+    <line x1="913.0" y1="394.8" x2="919.0" y2="394.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="397.6" text-anchor="middle">Teemmül</text>
   </g>
-
-  <!-- ============ FEEDBACK LOOP 1: Gaye Belirleme -> Müşahede ============ -->
-  <path d="M666,897 C250,897 90,700 90,480 C90,300 90,260 300,230 C500,205 680,220 731,224"
-        fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"
-        marker-end="url(#arrowAccent)"></path>
-  <text font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--accent)" text-anchor="middle">
-    <tspan x="90" y="555">gaye idrakı</tspan>
-    <tspan x="90" y="570">yönlendirir</tspan>
-  </text>
-
-  <!-- ============ FEEDBACK LOOP 2: Tahsil -> Gaye Belirleme (closing ring) ============ -->
-  <path d="M922,1121 C1500,1121 1500,950 1500,897 C1500,897 850,897 790,897"
-        fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"
-        marker-end="url(#arrowAccent)"></path>
-  <text font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="var(--accent)" text-anchor="end">
-    <tspan x="1494" y="1000">yeni idrak</tspan>
-    <tspan x="1494" y="1015">sermayesi</tspan>
-  </text>
-
-  <!-- ============ NODE BOXES ============ -->
-  <g font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">
-
-    <!-- Tier 0: Dış Girdi -->
-    <g fill="var(--paper)" stroke="var(--line-soft)" stroke-width="1.4">
-      <rect x="599" y="90" width="122" height="46" rx="7"></rect>
-      <rect x="733" y="90" width="122" height="46" rx="7"></rect>
-      <rect x="867" y="90" width="122" height="46" rx="7"></rect>
-    </g>
-    <g fill="var(--ink-dim)">
-      <text x="660" y="109">Dış Âlem</text><text x="660" y="123">Hadiseleri</text>
-      <text x="794" y="109">İhtiyaç /</text><text x="794" y="123">Fıtrat</text>
-      <text x="928" y="116">Mukayese</text>
-    </g>
-
-    <!-- Tier 1: Ham Algı -->
-    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.6">
-      <rect x="733" y="202" width="122" height="46" rx="7"></rect>
-    </g>
-    <text x="794" y="229" fill="var(--ink)" font-weight="600">Müşahede</text>
-
-    <!-- Tier 2: Ham Malzeme -->
-    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
-      <rect x="599" y="314" width="122" height="46" rx="7"></rect>
-      <rect x="733" y="314" width="122" height="46" rx="7"></rect>
-      <rect x="867" y="314" width="122" height="46" rx="7"></rect>
-    </g>
-    <g fill="var(--ink)">
-      <text x="660" y="341">Hayal</text>
-      <text x="794" y="341">Tecrit</text>
-      <text x="928" y="341">Tahlil</text>
-    </g>
-
-    <!-- Tier 3: Kavramsallaştırma -->
-    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
-      <rect x="465" y="426" width="122" height="46" rx="7"></rect>
-      <rect x="599" y="426" width="122" height="46" rx="7"></rect>
-      <rect x="733" y="426" width="122" height="46" rx="7"></rect>
-      <rect x="867" y="426" width="122" height="46" rx="7"></rect>
-      <rect x="1001" y="426" width="122" height="46" rx="7"></rect>
-    </g>
-    <g fill="var(--ink)">
-      <text x="526" y="446">Hayal</text><text x="526" y="460">Kurma</text>
-      <text x="660" y="453">Tertip</text>
-      <text x="794" y="453">Tasavvur</text>
-      <text x="928" y="453">Mana</text>
-      <text x="1062" y="453">Terkip</text>
-    </g>
-
-    <!-- Tier 4: Sınama -->
-    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
-      <rect x="331" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="465" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="599" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="733" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="867" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="1001" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="1135" y="538" width="122" height="46" rx="7"></rect>
-    </g>
-    <g fill="var(--ink)">
-      <text x="392" y="565">Tezat</text>
-      <text x="526" y="558">Tenakuz</text><text x="526" y="572">Bulma</text>
-      <text x="660" y="565">Tenkit</text>
-      <text x="794" y="565">Kıyas</text>
-      <text x="928" y="565">Temsil</text>
-      <text x="1062" y="565">Teşbih</text>
-      <text x="1196" y="565">Cerh</text>
-    </g>
-
-    <!-- Tier 5: Derin Muhakeme Çekirdeği -->
-    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
-      <rect x="130" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="264" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="398" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="532" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="666" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="800" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="934" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="1068" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="1202" y="650" width="122" height="46" rx="7"></rect>
-      <rect x="1336" y="650" width="122" height="46" rx="7"></rect>
-    </g>
-    <g fill="var(--ink)">
-      <text x="191" y="677">Tefekkür</text>
-      <text x="325" y="670">İllet</text><text x="325" y="684">Keşfi</text>
-      <text x="459" y="670">Mantık</text><text x="459" y="684">Yürütme</text>
-      <text x="593" y="677">İspat</text>
-      <text x="727" y="677">Teemmül</text>
-      <text x="861" y="677">Tedebbür</text>
-      <text x="995" y="677">Tetkik</text>
-      <text x="1129" y="677">Tahkik</text>
-      <text x="1263" y="670">İhtimal</text><text x="1263" y="684">Hesabı</text>
-      <text x="1397" y="670">Deneme-</text><text x="1397" y="684">Yanılma</text>
-    </g>
-
-    <!-- Tier 6: Hüküm -->
-    <g stroke-width="1.4">
-      <g fill="var(--paper)" stroke="var(--line)">
-        <rect x="398" y="762" width="122" height="46" rx="7"></rect>
-        <rect x="532" y="762" width="122" height="46" rx="7"></rect>
-        <rect x="666" y="762" width="122" height="46" rx="7"></rect>
-        <rect x="800" y="762" width="122" height="46" rx="7"></rect>
-        <rect x="934" y="762" width="122" height="46" rx="7"></rect>
-      </g>
-      <rect x="1068" y="762" width="122" height="46" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8"></rect>
-    </g>
-    <g fill="var(--ink)">
-      <text x="459" y="789">Tasdik</text>
-      <text x="593" y="782">Şek-Zan-</text><text x="593" y="796">Yakîn İdraki</text>
-      <text x="727" y="789">Temkin</text>
-      <text x="861" y="789">Tashih</text>
-      <text x="995" y="789">Teyit</text>
-    </g>
-    <text x="1129" y="789" fill="var(--accent)" font-weight="700">Muhakeme</text>
-
-    <!-- Tier 7: Yön / Gaye -->
-    <g fill="var(--paper)" stroke="var(--accent)" stroke-width="1.6">
-      <rect x="666" y="874" width="122" height="46" rx="7"></rect>
-      <rect x="800" y="874" width="122" height="46" rx="7"></rect>
-    </g>
-    <g fill="var(--ink)" font-weight="600">
-      <text x="727" y="894">Gaye</text><text x="727" y="908">Belirleme</text>
-      <text x="861" y="894">Merak ve</text><text x="861" y="908">Sual Tevcihi</text>
-    </g>
-
-    <!-- Tier 8: Beyan -->
-    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
-      <rect x="264" y="986" width="122" height="46" rx="7"></rect>
-      <rect x="398" y="986" width="122" height="46" rx="7"></rect>
-      <rect x="532" y="986" width="122" height="46" rx="7"></rect>
-      <rect x="666" y="986" width="122" height="46" rx="7"></rect>
-      <rect x="800" y="986" width="122" height="46" rx="7"></rect>
-      <rect x="934" y="986" width="122" height="46" rx="7"></rect>
-      <rect x="1068" y="986" width="122" height="46" rx="7"></rect>
-      <rect x="1202" y="986" width="122" height="46" rx="7"></rect>
-    </g>
-    <g fill="var(--ink)">
-      <text x="325" y="1013">Tafsil</text>
-      <text x="459" y="1013">Tefsir</text>
-      <text x="593" y="1013">Tevil</text>
-      <text x="727" y="1013">Fesâhat</text>
-      <text x="861" y="1013">Talâkat</text>
-      <text x="995" y="1013">Belâgat</text>
-      <text x="1129" y="1013">Sanat</text>
-      <text x="1263" y="1013">Münazara</text>
-    </g>
-
-    <!-- Tier 9: Kapanış -->
-    <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
-      <rect x="666" y="1098" width="122" height="46" rx="7"></rect>
-      <rect x="800" y="1098" width="122" height="46" rx="7"></rect>
-    </g>
-    <g fill="var(--ink)">
-      <text x="727" y="1125">Talim</text>
-      <text x="861" y="1125">Tahsil</text>
-    </g>
+  <rect x="857.0" y="412.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="916.0" y="429.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tecrit</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="916.0" y1="440.0" x2="916.0" y2="505.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="913.0" y1="447.2" x2="919.0" y2="447.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="450.1" text-anchor="middle">Tasavvur</text>
+    <line x1="913.0" y1="461.8" x2="919.0" y2="461.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="464.6" text-anchor="middle">Mana</text>
+    <line x1="913.0" y1="476.2" x2="919.0" y2="476.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="479.1" text-anchor="middle">İllet Keşfi</text>
+    <line x1="913.0" y1="490.8" x2="919.0" y2="490.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="493.6" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="913.0" y1="505.2" x2="919.0" y2="505.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="508.1" text-anchor="middle">İspat</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1092.0" y1="336.8" x2="1092.0" y2="412.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1089.0" y1="336.8" x2="1095.0" y2="336.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="339.6" text-anchor="middle">Müşahede</text>
+    <line x1="1089.0" y1="351.2" x2="1095.0" y2="351.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="354.1" text-anchor="middle">Tasavvur</text>
+    <line x1="1089.0" y1="365.8" x2="1095.0" y2="365.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="368.6" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="1089.0" y1="380.2" x2="1095.0" y2="380.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="383.1" text-anchor="middle">Teemmül</text>
+    <line x1="1089.0" y1="394.8" x2="1095.0" y2="394.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="397.6" text-anchor="middle">Tetkik</text>
+  </g>
+  <rect x="1033.0" y="412.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1092.0" y="429.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tahlil</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1092.0" y1="440.0" x2="1092.0" y2="519.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1089.0" y1="447.2" x2="1095.0" y2="447.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="450.1" text-anchor="middle">Tertip</text>
+    <line x1="1089.0" y1="461.8" x2="1095.0" y2="461.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="464.6" text-anchor="middle">Tecrit</text>
+    <line x1="1089.0" y1="476.2" x2="1095.0" y2="476.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="479.1" text-anchor="middle">Mana</text>
+    <line x1="1089.0" y1="490.8" x2="1095.0" y2="490.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="493.6" text-anchor="middle">Terkip</text>
+    <line x1="1089.0" y1="505.2" x2="1095.0" y2="505.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="508.1" text-anchor="middle">Tezat</text>
+    <line x1="1089.0" y1="519.8" x2="1095.0" y2="519.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="522.5" text-anchor="middle">Tenakuz Bulma</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="564.0" y1="608.2" x2="564.0" y2="683.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="561.0" y1="608.2" x2="567.0" y2="608.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="611.0" text-anchor="middle">Hayal</text>
+    <line x1="561.0" y1="622.8" x2="567.0" y2="622.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="625.5" text-anchor="middle">Mana</text>
+    <line x1="561.0" y1="637.2" x2="567.0" y2="637.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="640.0" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="561.0" y1="651.8" x2="567.0" y2="651.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="654.5" text-anchor="middle">Terkip</text>
+    <line x1="561.0" y1="666.2" x2="567.0" y2="666.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="669.0" text-anchor="middle">Sanat</text>
+  </g>
+  <rect x="505.0" y="683.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="564.0" y="701.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Hayal Kurma</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="564.0" y1="711.5" x2="564.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="561.0" y1="718.8" x2="567.0" y2="718.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="721.5" text-anchor="middle">Hayal</text>
+    <line x1="561.0" y1="733.2" x2="567.0" y2="733.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="736.0" text-anchor="middle">Tasavvur</text>
+    <line x1="561.0" y1="747.8" x2="567.0" y2="747.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="750.5" text-anchor="middle">Kıyas</text>
+    <line x1="561.0" y1="762.2" x2="567.0" y2="762.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="765.0" text-anchor="middle">Temsil</text>
+    <line x1="561.0" y1="776.8" x2="567.0" y2="776.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="779.5" text-anchor="middle">Deneme-Yanılma</text>
+    <line x1="561.0" y1="791.2" x2="567.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="564.0" y="794.0" text-anchor="middle">Sanat</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="740.0" y1="608.2" x2="740.0" y2="683.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="737.0" y1="608.2" x2="743.0" y2="608.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="611.0" text-anchor="middle">Hayal</text>
+    <line x1="737.0" y1="622.8" x2="743.0" y2="622.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="625.5" text-anchor="middle">Tahlil</text>
+    <line x1="737.0" y1="637.2" x2="743.0" y2="637.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="640.0" text-anchor="middle">Terkip</text>
+    <line x1="737.0" y1="651.8" x2="743.0" y2="651.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="654.5" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="737.0" y1="666.2" x2="743.0" y2="666.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="669.0" text-anchor="middle">Tedebbür</text>
+  </g>
+  <rect x="681.0" y="683.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="740.0" y="701.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tertip</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="740.0" y1="711.5" x2="740.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="737.0" y1="718.8" x2="743.0" y2="718.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="721.5" text-anchor="middle">Tasavvur</text>
+    <line x1="737.0" y1="733.2" x2="743.0" y2="733.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="736.0" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="737.0" y1="747.8" x2="743.0" y2="747.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="750.5" text-anchor="middle">Kıyas</text>
+    <line x1="737.0" y1="762.2" x2="743.0" y2="762.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="765.0" text-anchor="middle">İspat</text>
+    <line x1="737.0" y1="776.8" x2="743.0" y2="776.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="779.5" text-anchor="middle">Tafsil</text>
+    <line x1="737.0" y1="791.2" x2="743.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="740.0" y="794.0" text-anchor="middle">Talim</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="916.0" y1="608.2" x2="916.0" y2="683.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="913.0" y1="608.2" x2="919.0" y2="608.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="611.0" text-anchor="middle">Hayal</text>
+    <line x1="913.0" y1="622.8" x2="919.0" y2="622.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="625.5" text-anchor="middle">Hayal Kurma</text>
+    <line x1="913.0" y1="637.2" x2="919.0" y2="637.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="640.0" text-anchor="middle">Tertip</text>
+    <line x1="913.0" y1="651.8" x2="919.0" y2="651.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="654.5" text-anchor="middle">Tecrit</text>
+    <line x1="913.0" y1="666.2" x2="919.0" y2="666.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="669.0" text-anchor="middle">Tefekkür</text>
+  </g>
+  <rect x="857.0" y="683.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="916.0" y="701.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tasavvur</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="916.0" y1="711.5" x2="916.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="913.0" y1="718.8" x2="919.0" y2="718.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="721.5" text-anchor="middle">Mana</text>
+    <line x1="913.0" y1="733.2" x2="919.0" y2="733.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="736.0" text-anchor="middle">Tahlil</text>
+    <line x1="913.0" y1="747.8" x2="919.0" y2="747.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="750.5" text-anchor="middle">Terkip</text>
+    <line x1="913.0" y1="762.2" x2="919.0" y2="762.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="765.0" text-anchor="middle">Tasdik</text>
+    <line x1="913.0" y1="776.8" x2="919.0" y2="776.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="779.5" text-anchor="middle">İllet Keşfi</text>
+    <line x1="913.0" y1="791.2" x2="919.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="916.0" y="794.0" text-anchor="middle">Muhakeme</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1092.0" y1="608.2" x2="1092.0" y2="683.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1089.0" y1="608.2" x2="1095.0" y2="608.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="611.0" text-anchor="middle">Hayal</text>
+    <line x1="1089.0" y1="622.8" x2="1095.0" y2="622.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="625.5" text-anchor="middle">Tecrit</text>
+    <line x1="1089.0" y1="637.2" x2="1095.0" y2="637.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="640.0" text-anchor="middle">Tasavvur</text>
+    <line x1="1089.0" y1="651.8" x2="1095.0" y2="651.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="654.5" text-anchor="middle">Tahlil</text>
+    <line x1="1089.0" y1="666.2" x2="1095.0" y2="666.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="669.0" text-anchor="middle">Tevil</text>
+  </g>
+  <rect x="1033.0" y="683.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1092.0" y="701.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Mana</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1092.0" y1="711.5" x2="1092.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1089.0" y1="718.8" x2="1095.0" y2="718.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="721.5" text-anchor="middle">Hayal Kurma</text>
+    <line x1="1089.0" y1="733.2" x2="1095.0" y2="733.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="736.0" text-anchor="middle">Tasdik</text>
+    <line x1="1089.0" y1="747.8" x2="1095.0" y2="747.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="750.5" text-anchor="middle">Tefekkür</text>
+    <line x1="1089.0" y1="762.2" x2="1095.0" y2="762.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="765.0" text-anchor="middle">Tefsir</text>
+    <line x1="1089.0" y1="776.8" x2="1095.0" y2="776.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="779.5" text-anchor="middle">Tevil</text>
+    <line x1="1089.0" y1="791.2" x2="1095.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1092.0" y="794.0" text-anchor="middle">Belâgat</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1268.0" y1="608.2" x2="1268.0" y2="683.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1265.0" y1="608.2" x2="1271.0" y2="608.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="611.0" text-anchor="middle">Hayal Kurma</text>
+    <line x1="1265.0" y1="622.8" x2="1271.0" y2="622.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="625.5" text-anchor="middle">Tahlil</text>
+    <line x1="1265.0" y1="637.2" x2="1271.0" y2="637.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="640.0" text-anchor="middle">Tefekkür</text>
+    <line x1="1265.0" y1="651.8" x2="1271.0" y2="651.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="654.5" text-anchor="middle">Kıyas</text>
+    <line x1="1265.0" y1="666.2" x2="1271.0" y2="666.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="669.0" text-anchor="middle">Tashih</text>
+  </g>
+  <rect x="1209.0" y="683.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1268.0" y="701.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Terkip</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1268.0" y1="711.5" x2="1268.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1265.0" y1="718.8" x2="1271.0" y2="718.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="721.5" text-anchor="middle">Tertip</text>
+    <line x1="1265.0" y1="733.2" x2="1271.0" y2="733.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="736.0" text-anchor="middle">Tasdik</text>
+    <line x1="1265.0" y1="747.8" x2="1271.0" y2="747.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="750.5" text-anchor="middle">İspat</text>
+    <line x1="1265.0" y1="762.2" x2="1271.0" y2="762.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="765.0" text-anchor="middle">Sanat</text>
+    <line x1="1265.0" y1="776.8" x2="1271.0" y2="776.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="779.5" text-anchor="middle">Tafsil</text>
+    <line x1="1265.0" y1="791.2" x2="1271.0" y2="791.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1268.0" y="794.0" text-anchor="middle">Belâgat</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="476.0" y1="879.8" x2="476.0" y2="955.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="473.0" y1="879.8" x2="479.0" y2="879.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="882.5" text-anchor="middle">Hayal</text>
+    <line x1="473.0" y1="894.2" x2="479.0" y2="894.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="897.0" text-anchor="middle">Tahlil</text>
+    <line x1="473.0" y1="908.8" x2="479.0" y2="908.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="911.5" text-anchor="middle">Mukayese</text>
+    <line x1="473.0" y1="923.2" x2="479.0" y2="923.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="926.0" text-anchor="middle">Münazara</text>
+    <line x1="473.0" y1="937.8" x2="479.0" y2="937.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="940.5" text-anchor="middle">Tetkik</text>
+  </g>
+  <rect x="417.0" y="955.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="476.0" y="972.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tezat</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="476.0" y1="983.0" x2="476.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="473.0" y1="990.2" x2="479.0" y2="990.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="993.0" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="473.0" y1="1004.8" x2="479.0" y2="1004.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1007.5" text-anchor="middle">Tenkit</text>
+    <line x1="473.0" y1="1019.2" x2="479.0" y2="1019.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1022.0" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="473.0" y1="1033.8" x2="479.0" y2="1033.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1036.5" text-anchor="middle">Kıyas</text>
+    <line x1="473.0" y1="1048.2" x2="479.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1051.0" text-anchor="middle">Tevil</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="652.0" y1="879.8" x2="652.0" y2="955.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="649.0" y1="879.8" x2="655.0" y2="879.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="882.5" text-anchor="middle">Müşahede</text>
+    <line x1="649.0" y1="894.2" x2="655.0" y2="894.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="897.0" text-anchor="middle">Tahlil</text>
+    <line x1="649.0" y1="908.8" x2="655.0" y2="908.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="911.5" text-anchor="middle">Tezat</text>
+    <line x1="649.0" y1="923.2" x2="655.0" y2="923.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="926.0" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="649.0" y1="937.8" x2="655.0" y2="937.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="940.5" text-anchor="middle">Tetkik</text>
+  </g>
+  <rect x="593.0" y="955.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="652.0" y="972.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tenakuz Bulma</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="652.0" y1="983.0" x2="652.0" y2="1062.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="649.0" y1="990.2" x2="655.0" y2="990.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="993.0" text-anchor="middle">Tenkit</text>
+    <line x1="649.0" y1="1004.8" x2="655.0" y2="1004.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1007.5" text-anchor="middle">Tashih</text>
+    <line x1="649.0" y1="1019.2" x2="655.0" y2="1019.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1022.0" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="649.0" y1="1033.8" x2="655.0" y2="1033.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1036.5" text-anchor="middle">Cerh</text>
+    <line x1="649.0" y1="1048.2" x2="655.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1051.0" text-anchor="middle">Tevil</text>
+    <line x1="649.0" y1="1062.8" x2="655.0" y2="1062.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1065.5" text-anchor="middle">Muhakeme</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="879.8" x2="828.0" y2="955.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="879.8" x2="831.0" y2="879.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="882.5" text-anchor="middle">Tecrit</text>
+    <line x1="825.0" y1="894.2" x2="831.0" y2="894.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="897.0" text-anchor="middle">Tezat</text>
+    <line x1="825.0" y1="908.8" x2="831.0" y2="908.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="911.5" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="825.0" y1="923.2" x2="831.0" y2="923.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="926.0" text-anchor="middle">Teemmül</text>
+    <line x1="825.0" y1="937.8" x2="831.0" y2="937.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="940.5" text-anchor="middle">Münazara</text>
+  </g>
+  <rect x="769.0" y="955.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="828.0" y="972.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tenkit</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="983.0" x2="828.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="990.2" x2="831.0" y2="990.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="993.0" text-anchor="middle">Tecrit</text>
+    <line x1="825.0" y1="1004.8" x2="831.0" y2="1004.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1007.5" text-anchor="middle">Tashih</text>
+    <line x1="825.0" y1="1019.2" x2="831.0" y2="1019.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1022.0" text-anchor="middle">Tahkik</text>
+    <line x1="825.0" y1="1033.8" x2="831.0" y2="1033.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1036.5" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="825.0" y1="1048.2" x2="831.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1051.0" text-anchor="middle">Muhakeme</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="879.8" x2="1004.0" y2="955.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="879.8" x2="1007.0" y2="879.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="882.5" text-anchor="middle">Hayal Kurma</text>
+    <line x1="1001.0" y1="894.2" x2="1007.0" y2="894.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="897.0" text-anchor="middle">Tertip</text>
+    <line x1="1001.0" y1="908.8" x2="1007.0" y2="908.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="911.5" text-anchor="middle">Tezat</text>
+    <line x1="1001.0" y1="923.2" x2="1007.0" y2="923.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="926.0" text-anchor="middle">Temsil</text>
+    <line x1="1001.0" y1="937.8" x2="1007.0" y2="937.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="940.5" text-anchor="middle">Teşbih</text>
+  </g>
+  <rect x="945.0" y="955.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1004.0" y="972.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Kıyas</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="983.0" x2="1004.0" y2="1062.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="990.2" x2="1007.0" y2="990.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="993.0" text-anchor="middle">Terkip</text>
+    <line x1="1001.0" y1="1004.8" x2="1007.0" y2="1004.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1007.5" text-anchor="middle">İhtimal Hesabı</text>
+    <line x1="1001.0" y1="1019.2" x2="1007.0" y2="1019.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1022.0" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="1001.0" y1="1033.8" x2="1007.0" y2="1033.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1036.5" text-anchor="middle">İspat</text>
+    <line x1="1001.0" y1="1048.2" x2="1007.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1051.0" text-anchor="middle">Tefsir</text>
+    <line x1="1001.0" y1="1062.8" x2="1007.0" y2="1062.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1065.5" text-anchor="middle">Münazara</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1180.0" y1="879.8" x2="1180.0" y2="955.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1177.0" y1="879.8" x2="1183.0" y2="879.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="882.5" text-anchor="middle">Hayal Kurma</text>
+    <line x1="1177.0" y1="894.2" x2="1183.0" y2="894.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="897.0" text-anchor="middle">Teşbih</text>
+    <line x1="1177.0" y1="908.8" x2="1183.0" y2="908.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="911.5" text-anchor="middle">Tefekkür</text>
+    <line x1="1177.0" y1="923.2" x2="1183.0" y2="923.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="926.0" text-anchor="middle">Tafsil</text>
+    <line x1="1177.0" y1="937.8" x2="1183.0" y2="937.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="940.5" text-anchor="middle">Sanat</text>
+  </g>
+  <rect x="1121.0" y="955.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1180.0" y="972.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Temsil</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1180.0" y1="983.0" x2="1180.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1177.0" y1="990.2" x2="1183.0" y2="990.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="993.0" text-anchor="middle">Hayal</text>
+    <line x1="1177.0" y1="1004.8" x2="1183.0" y2="1004.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1007.5" text-anchor="middle">Kıyas</text>
+    <line x1="1177.0" y1="1019.2" x2="1183.0" y2="1019.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1022.0" text-anchor="middle">Teşbih</text>
+    <line x1="1177.0" y1="1033.8" x2="1183.0" y2="1033.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1036.5" text-anchor="middle">Belâgat</text>
+    <line x1="1177.0" y1="1048.2" x2="1183.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1051.0" text-anchor="middle">Talim</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1356.0" y1="879.8" x2="1356.0" y2="955.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1353.0" y1="879.8" x2="1359.0" y2="879.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="882.5" text-anchor="middle">Hayal</text>
+    <line x1="1353.0" y1="894.2" x2="1359.0" y2="894.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="897.0" text-anchor="middle">Temsil</text>
+    <line x1="1353.0" y1="908.8" x2="1359.0" y2="908.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="911.5" text-anchor="middle">Tefekkür</text>
+    <line x1="1353.0" y1="923.2" x2="1359.0" y2="923.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="926.0" text-anchor="middle">Mukayese</text>
+    <line x1="1353.0" y1="937.8" x2="1359.0" y2="937.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="940.5" text-anchor="middle">Sanat</text>
+  </g>
+  <rect x="1297.0" y="955.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1356.0" y="972.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Teşbih</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1356.0" y1="983.0" x2="1356.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1353.0" y1="990.2" x2="1359.0" y2="990.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="993.0" text-anchor="middle">Hayal</text>
+    <line x1="1353.0" y1="1004.8" x2="1359.0" y2="1004.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1007.5" text-anchor="middle">Kıyas</text>
+    <line x1="1353.0" y1="1019.2" x2="1359.0" y2="1019.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1022.0" text-anchor="middle">Temsil</text>
+    <line x1="1353.0" y1="1033.8" x2="1359.0" y2="1033.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1036.5" text-anchor="middle">Sanat</text>
+    <line x1="1353.0" y1="1048.2" x2="1359.0" y2="1048.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1051.0" text-anchor="middle">Belâgat</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="124.0" y1="1151.2" x2="124.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="121.0" y1="1151.2" x2="127.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1154.0" text-anchor="middle">Mana</text>
+    <line x1="121.0" y1="1165.8" x2="127.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1168.5" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="121.0" y1="1180.2" x2="127.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1183.0" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="121.0" y1="1194.8" x2="127.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1197.5" text-anchor="middle">Teemmül</text>
+    <line x1="121.0" y1="1209.2" x2="127.0" y2="1209.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1212.0" text-anchor="middle">Tahkik</text>
+  </g>
+  <rect x="65.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="124.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tefekkür</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="124.0" y1="1269.0" x2="124.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="121.0" y1="1276.2" x2="127.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1279.0" text-anchor="middle">Tasavvur</text>
+    <line x1="121.0" y1="1290.8" x2="127.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1293.5" text-anchor="middle">Terkip</text>
+    <line x1="121.0" y1="1305.2" x2="127.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1308.0" text-anchor="middle">İllet Keşfi</text>
+    <line x1="121.0" y1="1319.8" x2="127.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1322.5" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="121.0" y1="1334.2" x2="127.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1337.0" text-anchor="middle">Tedebbür</text>
+    <line x1="121.0" y1="1348.8" x2="127.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="124.0" y="1351.5" text-anchor="middle">Temsil</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="300.0" y1="1151.2" x2="300.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="297.0" y1="1151.2" x2="303.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1154.0" text-anchor="middle">Müşahede</text>
+    <line x1="297.0" y1="1165.8" x2="303.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1168.5" text-anchor="middle">Tecrit</text>
+    <line x1="297.0" y1="1180.2" x2="303.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1183.0" text-anchor="middle">Tasavvur</text>
+    <line x1="297.0" y1="1194.8" x2="303.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1197.5" text-anchor="middle">Deneme-Yanılma</text>
+    <line x1="297.0" y1="1209.2" x2="303.0" y2="1209.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1212.0" text-anchor="middle">Tefekkür</text>
+  </g>
+  <rect x="241.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="300.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">İllet Keşfi</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="300.0" y1="1269.0" x2="300.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="297.0" y1="1276.2" x2="303.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1279.0" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="297.0" y1="1290.8" x2="303.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1293.5" text-anchor="middle">İspat</text>
+    <line x1="297.0" y1="1305.2" x2="303.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1308.0" text-anchor="middle">Tahkik</text>
+    <line x1="297.0" y1="1319.8" x2="303.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1322.5" text-anchor="middle">Tedebbür</text>
+    <line x1="297.0" y1="1334.2" x2="303.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="1337.0" text-anchor="middle">Tevil</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="476.0" y1="1151.2" x2="476.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="473.0" y1="1151.2" x2="479.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1154.0" text-anchor="middle">Tertip</text>
+    <line x1="473.0" y1="1165.8" x2="479.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1168.5" text-anchor="middle">Tecrit</text>
+    <line x1="473.0" y1="1180.2" x2="479.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1183.0" text-anchor="middle">Tezat</text>
+    <line x1="473.0" y1="1194.8" x2="479.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1197.5" text-anchor="middle">Kıyas</text>
+    <line x1="473.0" y1="1209.2" x2="479.0" y2="1209.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1212.0" text-anchor="middle">Tefekkür</text>
+    <line x1="473.0" y1="1223.8" x2="479.0" y2="1223.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1226.5" text-anchor="middle">İllet Keşfi</text>
+  </g>
+  <rect x="417.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="476.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Mantık Yürütme</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="476.0" y1="1269.0" x2="476.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="473.0" y1="1276.2" x2="479.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1279.0" text-anchor="middle">Tertip</text>
+    <line x1="473.0" y1="1290.8" x2="479.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1293.5" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="473.0" y1="1305.2" x2="479.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1308.0" text-anchor="middle">Tasdik</text>
+    <line x1="473.0" y1="1319.8" x2="479.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1322.5" text-anchor="middle">İhtimal Hesabı</text>
+    <line x1="473.0" y1="1334.2" x2="479.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1337.0" text-anchor="middle">İspat</text>
+    <line x1="473.0" y1="1348.8" x2="479.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1351.5" text-anchor="middle">Muhakeme</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="652.0" y1="1151.2" x2="652.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="649.0" y1="1151.2" x2="655.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1154.0" text-anchor="middle">Tertip</text>
+    <line x1="649.0" y1="1165.8" x2="655.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1168.5" text-anchor="middle">Tecrit</text>
+    <line x1="649.0" y1="1180.2" x2="655.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1183.0" text-anchor="middle">Terkip</text>
+    <line x1="649.0" y1="1194.8" x2="655.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1197.5" text-anchor="middle">Kıyas</text>
+    <line x1="649.0" y1="1209.2" x2="655.0" y2="1209.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1212.0" text-anchor="middle">İllet Keşfi</text>
+    <line x1="649.0" y1="1223.8" x2="655.0" y2="1223.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1226.5" text-anchor="middle">Mantık Yürütme</text>
+  </g>
+  <rect x="593.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="652.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">İspat</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="652.0" y1="1269.0" x2="652.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="649.0" y1="1276.2" x2="655.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1279.0" text-anchor="middle">Tasdik</text>
+    <line x1="649.0" y1="1290.8" x2="655.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1293.5" text-anchor="middle">Teyit</text>
+    <line x1="649.0" y1="1305.2" x2="655.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1308.0" text-anchor="middle">Tahkik</text>
+    <line x1="649.0" y1="1319.8" x2="655.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1322.5" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="649.0" y1="1334.2" x2="655.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1337.0" text-anchor="middle">Muhakeme</text>
+    <line x1="649.0" y1="1348.8" x2="655.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1351.5" text-anchor="middle">Münazara</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="1151.2" x2="828.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="1151.2" x2="831.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1154.0" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="825.0" y1="1165.8" x2="831.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1168.5" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="825.0" y1="1180.2" x2="831.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1183.0" text-anchor="middle">Tedebbür</text>
+    <line x1="825.0" y1="1194.8" x2="831.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1197.5" text-anchor="middle">Muhakeme</text>
+  </g>
+  <rect x="769.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="828.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Teemmül</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="1269.0" x2="828.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="1276.2" x2="831.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1279.0" text-anchor="middle">Tecrit</text>
+    <line x1="825.0" y1="1290.8" x2="831.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1293.5" text-anchor="middle">Tahlil</text>
+    <line x1="825.0" y1="1305.2" x2="831.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1308.0" text-anchor="middle">Tenkit</text>
+    <line x1="825.0" y1="1319.8" x2="831.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1322.5" text-anchor="middle">Tefekkür</text>
+    <line x1="825.0" y1="1334.2" x2="831.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1337.0" text-anchor="middle">Tetkik</text>
+    <line x1="825.0" y1="1348.8" x2="831.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1351.5" text-anchor="middle">Temkin</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="1151.2" x2="1004.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="1151.2" x2="1007.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1154.0" text-anchor="middle">İhtimal Hesabı</text>
+    <line x1="1001.0" y1="1165.8" x2="1007.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1168.5" text-anchor="middle">Tefekkür</text>
+    <line x1="1001.0" y1="1180.2" x2="1007.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1183.0" text-anchor="middle">İllet Keşfi</text>
+    <line x1="1001.0" y1="1194.8" x2="1007.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1197.5" text-anchor="middle">Temkin</text>
+    <line x1="1001.0" y1="1209.2" x2="1007.0" y2="1209.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1212.0" text-anchor="middle">Muhakeme</text>
+  </g>
+  <rect x="945.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1004.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tedebbür</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="1269.0" x2="1004.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="1276.2" x2="1007.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1279.0" text-anchor="middle">Tertip</text>
+    <line x1="1001.0" y1="1290.8" x2="1007.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1293.5" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="1001.0" y1="1305.2" x2="1007.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1308.0" text-anchor="middle">İhtimal Hesabı</text>
+    <line x1="1001.0" y1="1319.8" x2="1007.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1322.5" text-anchor="middle">Teemmül</text>
+    <line x1="1001.0" y1="1334.2" x2="1007.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1337.0" text-anchor="middle">Muhakeme</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1180.0" y1="1151.2" x2="1180.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1177.0" y1="1151.2" x2="1183.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1154.0" text-anchor="middle">Teemmül</text>
+    <line x1="1177.0" y1="1165.8" x2="1183.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1168.5" text-anchor="middle">Temkin</text>
+    <line x1="1177.0" y1="1180.2" x2="1183.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1183.0" text-anchor="middle">Tahkik</text>
+    <line x1="1177.0" y1="1194.8" x2="1183.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1197.5" text-anchor="middle">Muhakeme</text>
+    <line x1="1177.0" y1="1209.2" x2="1183.0" y2="1209.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1212.0" text-anchor="middle">Tafsil</text>
+  </g>
+  <rect x="1121.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1180.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tetkik</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1180.0" y1="1269.0" x2="1180.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1177.0" y1="1276.2" x2="1183.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1279.0" text-anchor="middle">Müşahede</text>
+    <line x1="1177.0" y1="1290.8" x2="1183.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1293.5" text-anchor="middle">Tahlil</text>
+    <line x1="1177.0" y1="1305.2" x2="1183.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1308.0" text-anchor="middle">Tezat</text>
+    <line x1="1177.0" y1="1319.8" x2="1183.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1322.5" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="1177.0" y1="1334.2" x2="1183.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1337.0" text-anchor="middle">Tashih</text>
+    <line x1="1177.0" y1="1348.8" x2="1183.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1351.5" text-anchor="middle">Teyit</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1356.0" y1="1151.2" x2="1356.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1353.0" y1="1151.2" x2="1359.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1154.0" text-anchor="middle">Müşahede</text>
+    <line x1="1353.0" y1="1165.8" x2="1359.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1168.5" text-anchor="middle">Tenkit</text>
+    <line x1="1353.0" y1="1180.2" x2="1359.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1183.0" text-anchor="middle">İllet Keşfi</text>
+    <line x1="1353.0" y1="1194.8" x2="1359.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1197.5" text-anchor="middle">İspat</text>
+    <line x1="1353.0" y1="1209.2" x2="1359.0" y2="1209.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1212.0" text-anchor="middle">Tashih</text>
+    <line x1="1353.0" y1="1223.8" x2="1359.0" y2="1223.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1226.5" text-anchor="middle">Teyit</text>
+  </g>
+  <rect x="1297.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1356.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tahkik</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1356.0" y1="1269.0" x2="1356.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1353.0" y1="1276.2" x2="1359.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1279.0" text-anchor="middle">Tefekkür</text>
+    <line x1="1353.0" y1="1290.8" x2="1359.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1293.5" text-anchor="middle">Temkin</text>
+    <line x1="1353.0" y1="1305.2" x2="1359.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1308.0" text-anchor="middle">Tetkik</text>
+    <line x1="1353.0" y1="1319.8" x2="1359.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1322.5" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="1353.0" y1="1334.2" x2="1359.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1337.0" text-anchor="middle">Muhakeme</text>
+    <line x1="1353.0" y1="1348.8" x2="1359.0" y2="1348.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1351.5" text-anchor="middle">Tefsir</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1532.0" y1="1151.2" x2="1532.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1529.0" y1="1151.2" x2="1535.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1154.0" text-anchor="middle">Deneme-Yanılma</text>
+    <line x1="1529.0" y1="1165.8" x2="1535.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1168.5" text-anchor="middle">Kıyas</text>
+    <line x1="1529.0" y1="1180.2" x2="1535.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1183.0" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="1529.0" y1="1194.8" x2="1535.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1197.5" text-anchor="middle">Tedebbür</text>
+  </g>
+  <rect x="1473.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1532.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">İhtimal Hesabı</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1532.0" y1="1269.0" x2="1532.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1529.0" y1="1276.2" x2="1535.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1279.0" text-anchor="middle">Deneme-Yanılma</text>
+    <line x1="1529.0" y1="1290.8" x2="1535.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1293.5" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="1529.0" y1="1305.2" x2="1535.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1308.0" text-anchor="middle">Temkin</text>
+    <line x1="1529.0" y1="1319.8" x2="1535.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1322.5" text-anchor="middle">Tedebbür</text>
+    <line x1="1529.0" y1="1334.2" x2="1535.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="1337.0" text-anchor="middle">Muhakeme</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1708.0" y1="1151.2" x2="1708.0" y2="1241.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1705.0" y1="1151.2" x2="1711.0" y2="1151.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1154.0" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="1705.0" y1="1165.8" x2="1711.0" y2="1165.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1168.5" text-anchor="middle">Hayal Kurma</text>
+    <line x1="1705.0" y1="1180.2" x2="1711.0" y2="1180.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1183.0" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="1705.0" y1="1194.8" x2="1711.0" y2="1194.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1197.5" text-anchor="middle">İhtimal Hesabı</text>
+  </g>
+  <rect x="1649.0" y="1241.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1708.0" y="1258.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Deneme-Yanılma</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1708.0" y1="1269.0" x2="1708.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1705.0" y1="1276.2" x2="1711.0" y2="1276.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1279.0" text-anchor="middle">Müşahede</text>
+    <line x1="1705.0" y1="1290.8" x2="1711.0" y2="1290.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1293.5" text-anchor="middle">İhtimal Hesabı</text>
+    <line x1="1705.0" y1="1305.2" x2="1711.0" y2="1305.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1308.0" text-anchor="middle">Tashih</text>
+    <line x1="1705.0" y1="1319.8" x2="1711.0" y2="1319.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1322.5" text-anchor="middle">Teyit</text>
+    <line x1="1705.0" y1="1334.2" x2="1711.0" y2="1334.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1708.0" y="1337.0" text-anchor="middle">İllet Keşfi</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="476.0" y1="1437.2" x2="476.0" y2="1599.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="473.0" y1="1437.2" x2="479.0" y2="1437.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1440.0" text-anchor="middle">Tasavvur</text>
+    <line x1="473.0" y1="1451.8" x2="479.0" y2="1451.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1454.5" text-anchor="middle">Mana</text>
+    <line x1="473.0" y1="1466.2" x2="479.0" y2="1466.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1469.0" text-anchor="middle">Terkip</text>
+    <line x1="473.0" y1="1480.8" x2="479.0" y2="1480.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1483.5" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="473.0" y1="1495.2" x2="479.0" y2="1495.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1498.0" text-anchor="middle">İspat</text>
+    <line x1="473.0" y1="1509.8" x2="479.0" y2="1509.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1512.5" text-anchor="middle">Teyit</text>
+  </g>
+  <rect x="417.0" y="1599.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="476.0" y="1617.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tasdik</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="476.0" y1="1627.5" x2="476.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="473.0" y1="1634.8" x2="479.0" y2="1634.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1637.5" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="473.0" y1="1649.2" x2="479.0" y2="1649.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1652.0" text-anchor="middle">Temkin</text>
+    <line x1="473.0" y1="1663.8" x2="479.0" y2="1663.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1666.5" text-anchor="middle">Muhakeme</text>
+    <line x1="473.0" y1="1678.2" x2="479.0" y2="1678.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1681.0" text-anchor="middle">Tafsil</text>
+    <line x1="473.0" y1="1692.8" x2="479.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="1695.5" text-anchor="middle">Talim</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="652.0" y1="1437.2" x2="652.0" y2="1599.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="649.0" y1="1437.2" x2="655.0" y2="1437.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1440.0" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="649.0" y1="1451.8" x2="655.0" y2="1451.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1454.5" text-anchor="middle">Tenkit</text>
+    <line x1="649.0" y1="1466.2" x2="655.0" y2="1466.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1469.0" text-anchor="middle">Tasdik</text>
+    <line x1="649.0" y1="1480.8" x2="655.0" y2="1480.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1483.5" text-anchor="middle">İhtimal Hesabı</text>
+    <line x1="649.0" y1="1495.2" x2="655.0" y2="1495.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1498.0" text-anchor="middle">İspat</text>
+    <line x1="649.0" y1="1509.8" x2="655.0" y2="1509.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1512.5" text-anchor="middle">Teyit</text>
+    <line x1="649.0" y1="1524.2" x2="655.0" y2="1524.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1527.0" text-anchor="middle">Tahkik</text>
+  </g>
+  <rect x="593.0" y="1599.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="652.0" y="1617.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Şek-Zan-Yakîn İdraki</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="652.0" y1="1627.5" x2="652.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="649.0" y1="1634.8" x2="655.0" y2="1634.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1637.5" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="649.0" y1="1649.2" x2="655.0" y2="1649.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1652.0" text-anchor="middle">Teemmül</text>
+    <line x1="649.0" y1="1663.8" x2="655.0" y2="1663.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1666.5" text-anchor="middle">Temkin</text>
+    <line x1="649.0" y1="1678.2" x2="655.0" y2="1678.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1681.0" text-anchor="middle">Muhakeme</text>
+    <line x1="649.0" y1="1692.8" x2="655.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="1695.5" text-anchor="middle">Tevil</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="1437.2" x2="828.0" y2="1599.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="1437.2" x2="831.0" y2="1437.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1440.0" text-anchor="middle">Tasdik</text>
+    <line x1="825.0" y1="1451.8" x2="831.0" y2="1451.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1454.5" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="825.0" y1="1466.2" x2="831.0" y2="1466.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1469.0" text-anchor="middle">İhtimal Hesabı</text>
+    <line x1="825.0" y1="1480.8" x2="831.0" y2="1480.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1483.5" text-anchor="middle">Teemmül</text>
+    <line x1="825.0" y1="1495.2" x2="831.0" y2="1495.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1498.0" text-anchor="middle">Tahkik</text>
+  </g>
+  <rect x="769.0" y="1599.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="828.0" y="1617.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Temkin</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="1627.5" x2="828.0" y2="1707.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="1634.8" x2="831.0" y2="1634.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1637.5" text-anchor="middle">Tetkik</text>
+    <line x1="825.0" y1="1649.2" x2="831.0" y2="1649.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1652.0" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="825.0" y1="1663.8" x2="831.0" y2="1663.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1666.5" text-anchor="middle">Tedebbür</text>
+    <line x1="825.0" y1="1678.2" x2="831.0" y2="1678.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1681.0" text-anchor="middle">Muhakeme</text>
+    <line x1="825.0" y1="1692.8" x2="831.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1695.5" text-anchor="middle">Fesâhat</text>
+    <line x1="825.0" y1="1707.2" x2="831.0" y2="1707.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1710.0" text-anchor="middle">Münazara</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="1437.2" x2="1004.0" y2="1599.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="1437.2" x2="1007.0" y2="1437.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1440.0" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="1001.0" y1="1451.8" x2="1007.0" y2="1451.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1454.5" text-anchor="middle">Tenkit</text>
+    <line x1="1001.0" y1="1466.2" x2="1007.0" y2="1466.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1469.0" text-anchor="middle">Deneme-Yanılma</text>
+    <line x1="1001.0" y1="1480.8" x2="1007.0" y2="1480.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1483.5" text-anchor="middle">Tetkik</text>
+    <line x1="1001.0" y1="1495.2" x2="1007.0" y2="1495.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1498.0" text-anchor="middle">Münazara</text>
+  </g>
+  <rect x="945.0" y="1599.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1004.0" y="1617.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tashih</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="1627.5" x2="1004.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="1634.8" x2="1007.0" y2="1634.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1637.5" text-anchor="middle">Terkip</text>
+    <line x1="1001.0" y1="1649.2" x2="1007.0" y2="1649.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1652.0" text-anchor="middle">Teyit</text>
+    <line x1="1001.0" y1="1663.8" x2="1007.0" y2="1663.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1666.5" text-anchor="middle">Tahkik</text>
+    <line x1="1001.0" y1="1678.2" x2="1007.0" y2="1678.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1681.0" text-anchor="middle">Muhakeme</text>
+    <line x1="1001.0" y1="1692.8" x2="1007.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1695.5" text-anchor="middle">Fesâhat</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1180.0" y1="1437.2" x2="1180.0" y2="1599.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1177.0" y1="1437.2" x2="1183.0" y2="1437.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1440.0" text-anchor="middle">Deneme-Yanılma</text>
+    <line x1="1177.0" y1="1451.8" x2="1183.0" y2="1451.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1454.5" text-anchor="middle">İspat</text>
+    <line x1="1177.0" y1="1466.2" x2="1183.0" y2="1466.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1469.0" text-anchor="middle">Tetkik</text>
+    <line x1="1177.0" y1="1480.8" x2="1183.0" y2="1480.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1483.5" text-anchor="middle">Tashih</text>
+    <line x1="1177.0" y1="1495.2" x2="1183.0" y2="1495.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1498.0" text-anchor="middle">Münazara</text>
+  </g>
+  <rect x="1121.0" y="1599.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1180.0" y="1617.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Teyit</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1180.0" y1="1627.5" x2="1180.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1177.0" y1="1634.8" x2="1183.0" y2="1634.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1637.5" text-anchor="middle">Tasdik</text>
+    <line x1="1177.0" y1="1649.2" x2="1183.0" y2="1649.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1652.0" text-anchor="middle">Tahkik</text>
+    <line x1="1177.0" y1="1663.8" x2="1183.0" y2="1663.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1666.5" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="1177.0" y1="1678.2" x2="1183.0" y2="1678.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1681.0" text-anchor="middle">Muhakeme</text>
+    <line x1="1177.0" y1="1692.8" x2="1183.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="1695.5" text-anchor="middle">Talim</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1356.0" y1="1437.2" x2="1356.0" y2="1599.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1353.0" y1="1437.2" x2="1359.0" y2="1437.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1440.0" text-anchor="middle">Tasavvur</text>
+    <line x1="1353.0" y1="1451.8" x2="1359.0" y2="1451.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1454.5" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="1353.0" y1="1466.2" x2="1359.0" y2="1466.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1469.0" text-anchor="middle">Tenkit</text>
+    <line x1="1353.0" y1="1480.8" x2="1359.0" y2="1480.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1483.5" text-anchor="middle">Tasdik</text>
+    <line x1="1353.0" y1="1495.2" x2="1359.0" y2="1495.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1498.0" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="1353.0" y1="1509.8" x2="1359.0" y2="1509.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1512.5" text-anchor="middle">Mantık Yürütme</text>
+    <line x1="1353.0" y1="1524.2" x2="1359.0" y2="1524.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1527.0" text-anchor="middle">İspat</text>
+    <line x1="1353.0" y1="1538.8" x2="1359.0" y2="1538.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1541.5" text-anchor="middle">Temkin</text>
+    <line x1="1353.0" y1="1553.2" x2="1359.0" y2="1553.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1556.0" text-anchor="middle">Tahkik</text>
+    <line x1="1353.0" y1="1567.8" x2="1359.0" y2="1567.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1570.5" text-anchor="middle">Tedebbür</text>
+    <line x1="1353.0" y1="1582.2" x2="1359.0" y2="1582.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1585.0" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+  </g>
+  <rect x="1297.0" y="1599.5" width="118" height="28" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.7"></rect>
+  <text x="1356.0" y="1617.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="700" fill="var(--accent)">Muhakeme</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1356.0" y1="1627.5" x2="1356.0" y2="1736.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1353.0" y1="1634.8" x2="1359.0" y2="1634.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1637.5" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="1353.0" y1="1649.2" x2="1359.0" y2="1649.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1652.0" text-anchor="middle">Teemmül</text>
+    <line x1="1353.0" y1="1663.8" x2="1359.0" y2="1663.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1666.5" text-anchor="middle">Tetkik</text>
+    <line x1="1353.0" y1="1678.2" x2="1359.0" y2="1678.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1681.0" text-anchor="middle">Tedebbür</text>
+    <line x1="1353.0" y1="1692.8" x2="1359.0" y2="1692.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1695.5" text-anchor="middle">Tafsil</text>
+    <line x1="1353.0" y1="1707.2" x2="1359.0" y2="1707.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1710.0" text-anchor="middle">Tefsir</text>
+    <line x1="1353.0" y1="1721.8" x2="1359.0" y2="1721.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1724.5" text-anchor="middle">Tevil</text>
+    <line x1="1353.0" y1="1736.2" x2="1359.0" y2="1736.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="1739.0" text-anchor="middle">Belâgat</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="1824.8" x2="828.0" y2="1900.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="1824.8" x2="831.0" y2="1824.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1827.5" text-anchor="middle">İhtiyaç / Fıtrat</text>
+    <line x1="825.0" y1="1839.2" x2="831.0" y2="1839.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1842.0" text-anchor="middle">Mana</text>
+    <line x1="825.0" y1="1853.8" x2="831.0" y2="1853.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1856.5" text-anchor="middle">Tedebbür</text>
+    <line x1="825.0" y1="1868.2" x2="831.0" y2="1868.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1871.0" text-anchor="middle">Muhakeme</text>
+    <line x1="825.0" y1="1882.8" x2="831.0" y2="1882.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1885.5" text-anchor="middle">Tahsil</text>
+  </g>
+  <rect x="769.0" y="1900.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="828.0" y="1917.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Gaye Belirleme</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="1928.0" x2="828.0" y2="2007.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="1935.2" x2="831.0" y2="1935.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1938.0" text-anchor="middle">Müşahede</text>
+    <line x1="825.0" y1="1949.8" x2="831.0" y2="1949.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1952.5" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="825.0" y1="1964.2" x2="831.0" y2="1964.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1967.0" text-anchor="middle">Tefekkür</text>
+    <line x1="825.0" y1="1978.8" x2="831.0" y2="1978.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1981.5" text-anchor="middle">Temkin</text>
+    <line x1="825.0" y1="1993.2" x2="831.0" y2="1993.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="1996.0" text-anchor="middle">Muhakeme</text>
+    <line x1="825.0" y1="2007.8" x2="831.0" y2="2007.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2010.5" text-anchor="middle">Belâgat</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="1824.8" x2="1004.0" y2="1900.0" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="1824.8" x2="1007.0" y2="1824.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1827.5" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="1001.0" y1="1839.2" x2="1007.0" y2="1839.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1842.0" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="1001.0" y1="1853.8" x2="1007.0" y2="1853.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1856.5" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="1001.0" y1="1868.2" x2="1007.0" y2="1868.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1871.0" text-anchor="middle">Teemmül</text>
+  </g>
+  <rect x="945.0" y="1900.0" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1004.0" y="1917.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Merak ve Sual Tevcihi</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="1928.0" x2="1004.0" y2="2007.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="1935.2" x2="1007.0" y2="1935.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1938.0" text-anchor="middle">Müşahede</text>
+    <line x1="1001.0" y1="1949.8" x2="1007.0" y2="1949.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1952.5" text-anchor="middle">Hayal Kurma</text>
+    <line x1="1001.0" y1="1964.2" x2="1007.0" y2="1964.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1967.0" text-anchor="middle">Tahlil</text>
+    <line x1="1001.0" y1="1978.8" x2="1007.0" y2="1978.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1981.5" text-anchor="middle">Deneme-Yanılma</text>
+    <line x1="1001.0" y1="1993.2" x2="1007.0" y2="1993.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="1996.0" text-anchor="middle">Tefekkür</text>
+    <line x1="1001.0" y1="2007.8" x2="1007.0" y2="2007.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2010.5" text-anchor="middle">Münazara</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="300.0" y1="2096.2" x2="300.0" y2="2258.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="297.0" y1="2096.2" x2="303.0" y2="2096.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2099.1" text-anchor="middle">Tertip</text>
+    <line x1="297.0" y1="2110.8" x2="303.0" y2="2110.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2113.6" text-anchor="middle">Terkip</text>
+    <line x1="297.0" y1="2125.2" x2="303.0" y2="2125.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2128.1" text-anchor="middle">Tasdik</text>
+    <line x1="297.0" y1="2139.8" x2="303.0" y2="2139.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2142.6" text-anchor="middle">Muhakeme</text>
+    <line x1="297.0" y1="2154.2" x2="303.0" y2="2154.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2157.1" text-anchor="middle">Tefsir</text>
+  </g>
+  <rect x="241.0" y="2258.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="300.0" y="2276.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tafsil</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="300.0" y1="2286.5" x2="300.0" y2="2366.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="297.0" y1="2293.8" x2="303.0" y2="2293.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2296.6" text-anchor="middle">Temsil</text>
+    <line x1="297.0" y1="2308.2" x2="303.0" y2="2308.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2311.1" text-anchor="middle">Tetkik</text>
+    <line x1="297.0" y1="2322.8" x2="303.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2325.6" text-anchor="middle">Fesâhat</text>
+    <line x1="297.0" y1="2337.2" x2="303.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2340.1" text-anchor="middle">Talâkat</text>
+    <line x1="297.0" y1="2351.8" x2="303.0" y2="2351.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2354.6" text-anchor="middle">Belâgat</text>
+    <line x1="297.0" y1="2366.2" x2="303.0" y2="2366.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="300.0" y="2369.1" text-anchor="middle">Talim</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="476.0" y1="2096.2" x2="476.0" y2="2258.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="473.0" y1="2096.2" x2="479.0" y2="2096.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2099.1" text-anchor="middle">Mana</text>
+    <line x1="473.0" y1="2110.8" x2="479.0" y2="2110.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2113.6" text-anchor="middle">Kıyas</text>
+    <line x1="473.0" y1="2125.2" x2="479.0" y2="2125.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2128.1" text-anchor="middle">Tahkik</text>
+    <line x1="473.0" y1="2139.8" x2="479.0" y2="2139.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2142.6" text-anchor="middle">Muhakeme</text>
+    <line x1="473.0" y1="2154.2" x2="479.0" y2="2154.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2157.1" text-anchor="middle">Tevil</text>
+  </g>
+  <rect x="417.0" y="2258.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="476.0" y="2276.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tefsir</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="476.0" y1="2286.5" x2="476.0" y2="2351.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="473.0" y1="2293.8" x2="479.0" y2="2293.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2296.6" text-anchor="middle">Mana</text>
+    <line x1="473.0" y1="2308.2" x2="479.0" y2="2308.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2311.1" text-anchor="middle">Tafsil</text>
+    <line x1="473.0" y1="2322.8" x2="479.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2325.6" text-anchor="middle">Tevil</text>
+    <line x1="473.0" y1="2337.2" x2="479.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2340.1" text-anchor="middle">Belâgat</text>
+    <line x1="473.0" y1="2351.8" x2="479.0" y2="2351.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="476.0" y="2354.6" text-anchor="middle">Talim</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="652.0" y1="2096.2" x2="652.0" y2="2258.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="649.0" y1="2096.2" x2="655.0" y2="2096.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2099.1" text-anchor="middle">Mana</text>
+    <line x1="649.0" y1="2110.8" x2="655.0" y2="2110.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2113.6" text-anchor="middle">Tezat</text>
+    <line x1="649.0" y1="2125.2" x2="655.0" y2="2125.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2128.1" text-anchor="middle">Tenakuz Bulma</text>
+    <line x1="649.0" y1="2139.8" x2="655.0" y2="2139.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2142.6" text-anchor="middle">İllet Keşfi</text>
+    <line x1="649.0" y1="2154.2" x2="655.0" y2="2154.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2157.1" text-anchor="middle">Şek-Zan-Yakîn İdraki</text>
+    <line x1="649.0" y1="2168.8" x2="655.0" y2="2168.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2171.6" text-anchor="middle">Tefsir</text>
+  </g>
+  <rect x="593.0" y="2258.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="652.0" y="2276.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tevil</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="652.0" y1="2286.5" x2="652.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="649.0" y1="2293.8" x2="655.0" y2="2293.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2296.6" text-anchor="middle">Mana</text>
+    <line x1="649.0" y1="2308.2" x2="655.0" y2="2308.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2311.1" text-anchor="middle">Tefsir</text>
+    <line x1="649.0" y1="2322.8" x2="655.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2325.6" text-anchor="middle">Belâgat</text>
+    <line x1="649.0" y1="2337.2" x2="655.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="652.0" y="2340.1" text-anchor="middle">Münazara</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="2096.2" x2="828.0" y2="2258.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="2096.2" x2="831.0" y2="2096.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2099.1" text-anchor="middle">Temkin</text>
+    <line x1="825.0" y1="2110.8" x2="831.0" y2="2110.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2113.6" text-anchor="middle">Tashih</text>
+    <line x1="825.0" y1="2125.2" x2="831.0" y2="2125.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2128.1" text-anchor="middle">Tafsil</text>
+    <line x1="825.0" y1="2139.8" x2="831.0" y2="2139.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2142.6" text-anchor="middle">Sanat</text>
+    <line x1="825.0" y1="2154.2" x2="831.0" y2="2154.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2157.1" text-anchor="middle">Talim</text>
+  </g>
+  <rect x="769.0" y="2258.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="828.0" y="2276.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Fesâhat</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="2286.5" x2="828.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="2293.8" x2="831.0" y2="2293.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2296.6" text-anchor="middle">Talâkat</text>
+    <line x1="825.0" y1="2308.2" x2="831.0" y2="2308.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2311.1" text-anchor="middle">Belâgat</text>
+    <line x1="825.0" y1="2322.8" x2="831.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2325.6" text-anchor="middle">Sanat</text>
+    <line x1="825.0" y1="2337.2" x2="831.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2340.1" text-anchor="middle">Münazara</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="2096.2" x2="1004.0" y2="2258.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="2096.2" x2="1007.0" y2="2096.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2099.1" text-anchor="middle">Tertip</text>
+    <line x1="1001.0" y1="2110.8" x2="1007.0" y2="2110.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2113.6" text-anchor="middle">Tafsil</text>
+    <line x1="1001.0" y1="2125.2" x2="1007.0" y2="2125.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2128.1" text-anchor="middle">Fesâhat</text>
+    <line x1="1001.0" y1="2139.8" x2="1007.0" y2="2139.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2142.6" text-anchor="middle">Belâgat</text>
+    <line x1="1001.0" y1="2154.2" x2="1007.0" y2="2154.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2157.1" text-anchor="middle">Tahsil</text>
+  </g>
+  <rect x="945.0" y="2258.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1004.0" y="2276.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Talâkat</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="2286.5" x2="1004.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="2293.8" x2="1007.0" y2="2293.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2296.6" text-anchor="middle">Belâgat</text>
+    <line x1="1001.0" y1="2308.2" x2="1007.0" y2="2308.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2311.1" text-anchor="middle">Münazara</text>
+    <line x1="1001.0" y1="2322.8" x2="1007.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2325.6" text-anchor="middle">Talim</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1180.0" y1="2096.2" x2="1180.0" y2="2258.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1177.0" y1="2096.2" x2="1183.0" y2="2096.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2099.1" text-anchor="middle">Mana</text>
+    <line x1="1177.0" y1="2110.8" x2="1183.0" y2="2110.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2113.6" text-anchor="middle">Terkip</text>
+    <line x1="1177.0" y1="2125.2" x2="1183.0" y2="2125.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2128.1" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="1177.0" y1="2139.8" x2="1183.0" y2="2139.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2142.6" text-anchor="middle">Temsil</text>
+    <line x1="1177.0" y1="2154.2" x2="1183.0" y2="2154.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2157.1" text-anchor="middle">Teşbih</text>
+    <line x1="1177.0" y1="2168.8" x2="1183.0" y2="2168.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2171.6" text-anchor="middle">Muhakeme</text>
+    <line x1="1177.0" y1="2183.2" x2="1183.0" y2="2183.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2186.1" text-anchor="middle">Tafsil</text>
+    <line x1="1177.0" y1="2197.8" x2="1183.0" y2="2197.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2200.6" text-anchor="middle">Tefsir</text>
+    <line x1="1177.0" y1="2212.2" x2="1183.0" y2="2212.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2215.1" text-anchor="middle">Tevil</text>
+    <line x1="1177.0" y1="2226.8" x2="1183.0" y2="2226.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2229.6" text-anchor="middle">Fesâhat</text>
+    <line x1="1177.0" y1="2241.2" x2="1183.0" y2="2241.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2244.1" text-anchor="middle">Talâkat</text>
+  </g>
+  <rect x="1121.0" y="2258.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1180.0" y="2276.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Belâgat</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1180.0" y1="2286.5" x2="1180.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1177.0" y1="2293.8" x2="1183.0" y2="2293.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2296.6" text-anchor="middle">Talâkat</text>
+    <line x1="1177.0" y1="2308.2" x2="1183.0" y2="2308.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2311.1" text-anchor="middle">Sanat</text>
+    <line x1="1177.0" y1="2322.8" x2="1183.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2325.6" text-anchor="middle">Münazara</text>
+    <line x1="1177.0" y1="2337.2" x2="1183.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1180.0" y="2340.1" text-anchor="middle">Talim</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1356.0" y1="2096.2" x2="1356.0" y2="2258.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1353.0" y1="2096.2" x2="1359.0" y2="2096.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2099.1" text-anchor="middle">Hayal</text>
+    <line x1="1353.0" y1="2110.8" x2="1359.0" y2="2110.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2113.6" text-anchor="middle">Hayal Kurma</text>
+    <line x1="1353.0" y1="2125.2" x2="1359.0" y2="2125.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2128.1" text-anchor="middle">Terkip</text>
+    <line x1="1353.0" y1="2139.8" x2="1359.0" y2="2139.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2142.6" text-anchor="middle">Teşbih</text>
+    <line x1="1353.0" y1="2154.2" x2="1359.0" y2="2154.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2157.1" text-anchor="middle">Fesâhat</text>
+    <line x1="1353.0" y1="2168.8" x2="1359.0" y2="2168.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2171.6" text-anchor="middle">Belâgat</text>
+  </g>
+  <rect x="1297.0" y="2258.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1356.0" y="2276.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Sanat</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1356.0" y1="2286.5" x2="1356.0" y2="2366.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1353.0" y1="2293.8" x2="1359.0" y2="2293.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2296.6" text-anchor="middle">Hayal Kurma</text>
+    <line x1="1353.0" y1="2308.2" x2="1359.0" y2="2308.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2311.1" text-anchor="middle">Temsil</text>
+    <line x1="1353.0" y1="2322.8" x2="1359.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2325.6" text-anchor="middle">Teşbih</text>
+    <line x1="1353.0" y1="2337.2" x2="1359.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2340.1" text-anchor="middle">Fesâhat</text>
+    <line x1="1353.0" y1="2351.8" x2="1359.0" y2="2351.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2354.6" text-anchor="middle">Belâgat</text>
+    <line x1="1353.0" y1="2366.2" x2="1359.0" y2="2366.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1356.0" y="2369.1" text-anchor="middle">Tahsil</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1532.0" y1="2096.2" x2="1532.0" y2="2258.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1529.0" y1="2096.2" x2="1535.0" y2="2096.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2099.1" text-anchor="middle">Merak ve Sual Tevcihi</text>
+    <line x1="1529.0" y1="2110.8" x2="1535.0" y2="2110.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2113.6" text-anchor="middle">Kıyas</text>
+    <line x1="1529.0" y1="2125.2" x2="1535.0" y2="2125.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2128.1" text-anchor="middle">İspat</text>
+    <line x1="1529.0" y1="2139.8" x2="1535.0" y2="2139.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2142.6" text-anchor="middle">Temkin</text>
+    <line x1="1529.0" y1="2154.2" x2="1535.0" y2="2154.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2157.1" text-anchor="middle">Tevil</text>
+    <line x1="1529.0" y1="2168.8" x2="1535.0" y2="2168.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2171.6" text-anchor="middle">Fesâhat</text>
+    <line x1="1529.0" y1="2183.2" x2="1535.0" y2="2183.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2186.1" text-anchor="middle">Talâkat</text>
+    <line x1="1529.0" y1="2197.8" x2="1535.0" y2="2197.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2200.6" text-anchor="middle">Belâgat</text>
+  </g>
+  <rect x="1473.0" y="2258.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1532.0" y="2276.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Münazara</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1532.0" y1="2286.5" x2="1532.0" y2="2351.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1529.0" y1="2293.8" x2="1535.0" y2="2293.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2296.6" text-anchor="middle">Tezat</text>
+    <line x1="1529.0" y1="2308.2" x2="1535.0" y2="2308.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2311.1" text-anchor="middle">Tenkit</text>
+    <line x1="1529.0" y1="2322.8" x2="1535.0" y2="2322.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2325.6" text-anchor="middle">Tashih</text>
+    <line x1="1529.0" y1="2337.2" x2="1535.0" y2="2337.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2340.1" text-anchor="middle">Teyit</text>
+    <line x1="1529.0" y1="2351.8" x2="1535.0" y2="2351.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1532.0" y="2354.6" text-anchor="middle">Tahkik</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="2454.8" x2="828.0" y2="2573.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="2454.8" x2="831.0" y2="2454.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2457.6" text-anchor="middle">Tertip</text>
+    <line x1="825.0" y1="2469.2" x2="831.0" y2="2469.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2472.1" text-anchor="middle">Tasdik</text>
+    <line x1="825.0" y1="2483.8" x2="831.0" y2="2483.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2486.6" text-anchor="middle">Temsil</text>
+    <line x1="825.0" y1="2498.2" x2="831.0" y2="2498.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2501.1" text-anchor="middle">Teyit</text>
+    <line x1="825.0" y1="2512.8" x2="831.0" y2="2512.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2515.6" text-anchor="middle">Tafsil</text>
+    <line x1="825.0" y1="2527.2" x2="831.0" y2="2527.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2530.1" text-anchor="middle">Tefsir</text>
+    <line x1="825.0" y1="2541.8" x2="831.0" y2="2541.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2544.6" text-anchor="middle">Talâkat</text>
+    <line x1="825.0" y1="2556.2" x2="831.0" y2="2556.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2559.1" text-anchor="middle">Belâgat</text>
+  </g>
+  <rect x="769.0" y="2573.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="828.0" y="2591.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Talim</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="828.0" y1="2601.5" x2="828.0" y2="2623.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="825.0" y1="2608.8" x2="831.0" y2="2608.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2611.6" text-anchor="middle">Fesâhat</text>
+    <line x1="825.0" y1="2623.2" x2="831.0" y2="2623.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="828.0" y="2626.1" text-anchor="middle">Tahsil</text>
+  </g>
+  <g class="panel-in" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="2454.8" x2="1004.0" y2="2573.5" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="2454.8" x2="1007.0" y2="2454.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2457.6" text-anchor="middle">Sanat</text>
+    <line x1="1001.0" y1="2469.2" x2="1007.0" y2="2469.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2472.1" text-anchor="middle">Talim</text>
+  </g>
+  <rect x="945.0" y="2573.5" width="118" height="28" rx="6" fill="var(--paper)" stroke="var(--line)" stroke-width="1.3"></rect>
+  <text x="1004.0" y="2591.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="600" fill="var(--ink)">Tahsil</text>
+  <g class="panel-out" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8.6" fill="var(--ink-dim)">
+    <line x1="1004.0" y1="2601.5" x2="1004.0" y2="2623.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <line x1="1001.0" y1="2608.8" x2="1007.0" y2="2608.8" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2611.6" text-anchor="middle">Gaye Belirleme</text>
+    <line x1="1001.0" y1="2623.2" x2="1007.0" y2="2623.2" stroke="var(--line-soft)" stroke-width="1"></line>
+    <text x="1004.0" y="2626.1" text-anchor="middle">Talâkat</text>
   </g>
 </svg>
     </div>
-    <figcaption><b>Kademelere ayrım nasıl yapıldı:</b> her meleke, belgedeki kendi "Girdiler / Çıktılar" tanımı okunarak &mdash; ham veriye ne kadar yakın çalıştığına ve hangi kademenin çıktısını beslediğine bakılarak &mdash; elle bir sıraya yerleştirildi; bu yerleştirme hiçbir grafik-çizim algoritmasına havale edilmedi. <b>Muhakeme</b> vurgulanmıştır: belgede en çok girdi alan (11 kaynak) ve hüküm kademesinin fiilî toplama noktası olan meleke budur. Çizilen <b>245 ok</b>, belgedeki 245 tekil bağlantının tamamıdır &mdash; hiçbiri özetlenmemiş veya toplulaştırılmamıştır; her okun üzerine gelindiğinde kaynak&nbsp;&rarr;&nbsp;hedef ismi görünür.</figcaption>
+    <figcaption><b>Nasıl okunur:</b> her kutu bir melekedir; kutunun üstündeki satırlar onu besleyen girdiler, altındaki satırlar ondan çıkan çıktılardır &mdash; ok değil, düz bağlayıcı çizgidir, çünkü yön zaten yukarıdan (girdi) aşağıya (çıktı) sabittir. Aynı meleke adı, girdi/çıktı listelerinde başka haritacıklarda da metin olarak geçer; iki haritacık arasındaki ilişkiyi görmek için aynı ismi arayın. <b>Muhakeme</b> vurgulanmıştır: belgede en çok girdi alan (11 kaynak) melekedir.</figcaption>
   </figure>
 
   <div class="legend">
-    <span><span class="swatch flow"></span> kademeler arası ileri akış (soluk çizgi)</span>
-    <span><span class="swatch loop"></span> hiyerarşiye ters / geri-besleme bağlantısı (vurgu rengi)</span>
-    <span><span class="dot"></span> Muhakeme &mdash; şebekenin toplama noktası</span>
+    <span><span class="dot"></span> Muhakeme &mdash; en çok girdi alan meleke</span>
+    <span>43 haritacık &middot; her biri kendi girdi/çıktı listesini taşır, kesişim yoktur</span>
   </div>
 
-  <footer>docs/nefs_i_mudrike_mimarisi.tex &middot; el ile kademelendirilmiş şema, otomatik graf yerleşimi kullanılmadı</footer>
+  <footer>docs/nefs_i_mudrike_mimarisi.tex &middot; 43 melekenin her biri ayrı haritacık olarak elle kademelendirildi, otomatik graf yerleşimi kullanılmadı</footer>
 </main>
