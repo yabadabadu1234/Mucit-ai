@@ -133,13 +133,13 @@
   <p class="eyebrow">Nefs-i Müdrike Mimarisi &middot; Rükün Şeması</p>
   <h1>41 Zihnî Melekenin Hiyerarşik Akış Haritası</h1>
   <div class="intro">
-    <p>Kaynak belgenin (<code>nefs_i_mudrike_mimarisi.tex</code>) sonundaki "41 melekenin girdi/çıktı manifoldu" bölümü, ham metindeki 255 tekil bağlantıyı olduğu gibi çizmek yerine, <strong>her melekenin işlevine bakılarak</strong> dokuz kademeli bir işlem hattına yerleştirildi &mdash; tıpkı bir model mimarisi şemasının katman katman okunması gibi.</p>
+    <p>Kaynak belgenin (<code>nefs_i_mudrike_mimarisi.tex</code>) sonundaki "41 melekenin girdi/çıktı manifoldu" bölümündeki <strong>245 tekil bağlantının tamamı</strong>, hiçbirini toplulaştırmadan, tek tek çizilmiştir. Düğümlerin yeri ise &mdash; her melekenin işlevine bakılarak, tıpkı bir model mimarisi şemasının katman katman okunması gibi &mdash; on kademeli bir hiyerarşiye elle yerleştirildi.</p>
   </div>
-  <p class="method">Bu bir grafik-çizim algoritmasının (yay/çember yerleşimi) ürünü değildir: her meleke, girdi/çıktı listesindeki fiili rolüne göre elle bir kademeye atandı, kademeler arası oklar 255 kenarın toplulaştırılmış <em>ana akışını</em> gösterir; belgenin ısrarla vurguladığı iki geri-besleme halkası (gaye&nbsp;&rarr;&nbsp;müşahede ve tahsil&nbsp;&rarr;&nbsp;gaye) ayrıca vurgulu çizildi.</p>
+  <p class="method">Bu bir grafik-çizim algoritmasının (yay/çember yerleşimi, kör itme-çekme motoru) ürünü değildir: her meleke, girdi/çıktı listesindeki fiili rolüne bakılarak elle bir kademeye atandı ve o karar hiçbir otomatik yerleştiriciye havale edilmedi. Her ok, belgede gerçekten var olan <em>tek bir</em> bağlantıdır &mdash; toplulaştırılmış bir özet değil. Kademe sırasıyla aynı yönde akan oklar soluk çizgiyle, aynı kademe içi yatay oklar noktalı çizgiyle, hiyerarşiye ters (geriye/yukarı) akan &mdash; belgenin ısrarla vurguladığı geri-besleme türünden &mdash; bağlantılar ise vurgu rengiyle ayrıca işaretlendi; gaye&nbsp;&rarr;&nbsp;müşahede ve tahsil&nbsp;&rarr;&nbsp;gaye halkaları bu türün en belirgin iki örneğidir.</p>
 
   <figure>
     <div class="scroll">
-<svg viewBox="0 0 1588 1194" role="img" aria-label="41 zihnî melekenin dokuz kademeli hiyerarşik akış şeması: dış girdiden başlayıp ham algı, ham malzeme, kavramsallaştırma, sınama, derin muhakeme çekirdeği, hüküm, yön/gaye ve beyan kademelerinden geçip kapanışta tekrar gaye belirlemeye ve müşahedeye geri bağlanan bir döngü.">
+<svg viewBox="0 0 1588 1194" role="img" aria-label="41 zihnî melekenin on kademeli hiyerarşik akış şeması: dış girdiden başlayıp ham algı, ham malzeme, kavramsallaştırma, sınama, derin muhakeme çekirdeği, hüküm, yön/gaye ve beyan kademelerinden geçip kapanışta tekrar gaye belirlemeye ve müşahedeye geri bağlanan bir döngü; 245 tekil bağlantının tamamı ayrı ayrı çizilmiştir.">
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"></path>
@@ -177,28 +177,255 @@
     <text x="60" y="1073">9&nbsp;&middot; KAPANIŞ</text>
   </g>
 
-  <!-- ============ MAIN FLOW ARROWS (aggregate, one per tier gap) ============ -->
-  <g stroke="var(--line)" stroke-width="2" fill="none" marker-end="url(#arrow)">
-    <line x1="794" y1="140" x2="794" y2="196"></line>
-    <line x1="794" y1="252" x2="794" y2="308"></line>
-    <line x1="794" y1="364" x2="794" y2="420"></line>
-    <line x1="794" y1="476" x2="794" y2="532"></line>
-    <line x1="794" y1="588" x2="794" y2="644"></line>
-    <line x1="794" y1="700" x2="794" y2="756"></line>
-    <line x1="794" y1="812" x2="794" y2="868"></line>
-    <line x1="794" y1="924" x2="794" y2="980"></line>
-    <line x1="794" y1="1036" x2="794" y2="1092"></line>
+  <!-- ============ EDGES: 245 tekil bağlantının tamamı ============ -->
+  <g class="edges-forward" fill="none" stroke="var(--line)" stroke-opacity="0.38" stroke-width="1">
+    <path d="M995,1032 C955,1065 767,1065 727,1098" marker-end="url(#arrow)"><title>Belâgat → Talim</title></path>
+    <path d="M1397,696 C1317,729 941,729 861,762" marker-end="url(#arrow)"><title>Deneme-Yanılma → Tashih</title></path>
+    <path d="M1397,696 C1337,729 1055,729 995,762" marker-end="url(#arrow)"><title>Deneme-Yanılma → Teyit</title></path>
+    <path d="M660,136 C680,169 774,169 794,202" marker-end="url(#arrow)"><title>Dış Âlem Hadiseleri → Müşahede</title></path>
+    <path d="M727,920 C767,953 955,953 995,986" marker-end="url(#arrow)"><title>Gaye Belirleme → Belâgat</title></path>
+    <path d="M660,360 C640,393 546,393 526,426" marker-end="url(#arrow)"><title>Hayal → Hayal Kurma</title></path>
+    <path d="M660,360 C700,393 888,393 928,426" marker-end="url(#arrow)"><title>Hayal → Mana</title></path>
+    <path d="M660,360 C730,673 1059,673 1129,986" marker-end="url(#arrow)"><title>Hayal → Sanat</title></path>
+    <path d="M660,360 C680,393 774,393 794,426" marker-end="url(#arrow)"><title>Hayal → Tasavvur</title></path>
+    <path d="M660,360 C660,393 660,393 660,426" marker-end="url(#arrow)"><title>Hayal → Tertip</title></path>
+    <path d="M660,360 C620,449 432,449 392,538" marker-end="url(#arrow)"><title>Hayal → Tezat</title></path>
+    <path d="M660,360 C720,449 1002,449 1062,538" marker-end="url(#arrow)"><title>Hayal → Teşbih</title></path>
+    <path d="M526,472 C657,561 1266,561 1397,650" marker-end="url(#arrow)"><title>Hayal Kurma → Deneme-Yanılma</title></path>
+    <path d="M526,472 C566,505 754,505 794,538" marker-end="url(#arrow)"><title>Hayal Kurma → Kıyas</title></path>
+    <path d="M526,472 C616,729 1039,729 1129,986" marker-end="url(#arrow)"><title>Hayal Kurma → Sanat</title></path>
+    <path d="M526,472 C586,505 868,505 928,538" marker-end="url(#arrow)"><title>Hayal Kurma → Temsil</title></path>
+    <path d="M794,584 C744,617 509,617 459,650" marker-end="url(#arrow)"><title>Kıyas → Mantık Yürütme</title></path>
+    <path d="M794,584 C864,785 1193,785 1263,986" marker-end="url(#arrow)"><title>Kıyas → Münazara</title></path>
+    <path d="M794,584 C744,785 509,785 459,986" marker-end="url(#arrow)"><title>Kıyas → Tefsir</title></path>
+    <path d="M794,584 C864,617 1193,617 1263,650" marker-end="url(#arrow)"><title>Kıyas → İhtimal Hesabı</title></path>
+    <path d="M794,584 C764,617 623,617 593,650" marker-end="url(#arrow)"><title>Kıyas → İspat</title></path>
+    <path d="M928,472 C938,729 985,729 995,986" marker-end="url(#arrow)"><title>Mana → Belâgat</title></path>
+    <path d="M928,472 C898,673 757,673 727,874" marker-end="url(#arrow)"><title>Mana → Gaye Belirleme</title></path>
+    <path d="M928,472 C858,617 529,617 459,762" marker-end="url(#arrow)"><title>Mana → Tasdik</title></path>
+    <path d="M928,472 C817,561 302,561 191,650" marker-end="url(#arrow)"><title>Mana → Tefekkür</title></path>
+    <path d="M928,472 C858,729 529,729 459,986" marker-end="url(#arrow)"><title>Mana → Tefsir</title></path>
+    <path d="M928,472 C878,729 643,729 593,986" marker-end="url(#arrow)"><title>Mana → Tevil</title></path>
+    <path d="M459,696 C560,729 1028,729 1129,762" marker-end="url(#arrow)"><title>Mantık Yürütme → Muhakeme</title></path>
+    <path d="M459,696 C459,729 459,729 459,762" marker-end="url(#arrow)"><title>Mantık Yürütme → Tasdik</title></path>
+    <path d="M861,920 C921,953 1203,953 1263,986" marker-end="url(#arrow)"><title>Merak ve Sual Tevcihi → Münazara</title></path>
+    <path d="M1129,808 C1109,897 1015,897 995,986" marker-end="url(#arrow)"><title>Muhakeme → Belâgat</title></path>
+    <path d="M1129,808 C1069,841 787,841 727,874" marker-end="url(#arrow)"><title>Muhakeme → Gaye Belirleme</title></path>
+    <path d="M1129,808 C1008,897 446,897 325,986" marker-end="url(#arrow)"><title>Muhakeme → Tafsil</title></path>
+    <path d="M1129,808 C1028,897 560,897 459,986" marker-end="url(#arrow)"><title>Muhakeme → Tefsir</title></path>
+    <path d="M1129,808 C1049,897 673,897 593,986" marker-end="url(#arrow)"><title>Muhakeme → Tevil</title></path>
+    <path d="M928,136 C908,225 814,225 794,314" marker-end="url(#arrow)"><title>Mukayese → Tecrit</title></path>
+    <path d="M928,136 C848,337 472,337 392,538" marker-end="url(#arrow)"><title>Mukayese → Tezat</title></path>
+    <path d="M928,136 C948,337 1042,337 1062,538" marker-end="url(#arrow)"><title>Mukayese → Teşbih</title></path>
+    <path d="M794,248 C774,281 680,281 660,314" marker-end="url(#arrow)"><title>Müşahede → Hayal</title></path>
+    <path d="M794,248 C844,449 1079,449 1129,650" marker-end="url(#arrow)"><title>Müşahede → Tahkik</title></path>
+    <path d="M794,248 C814,281 908,281 928,314" marker-end="url(#arrow)"><title>Müşahede → Tahlil</title></path>
+    <path d="M794,248 C794,281 794,281 794,314" marker-end="url(#arrow)"><title>Müşahede → Tecrit</title></path>
+    <path d="M794,248 C754,393 566,393 526,538" marker-end="url(#arrow)"><title>Müşahede → Tenakuz Bulma</title></path>
+    <path d="M794,248 C724,449 395,449 325,650" marker-end="url(#arrow)"><title>Müşahede → İllet Keşfi</title></path>
+    <path d="M1129,1032 C1089,1065 901,1065 861,1098" marker-end="url(#arrow)"><title>Sanat → Tahsil</title></path>
+    <path d="M325,1032 C385,1065 667,1065 727,1098" marker-end="url(#arrow)"><title>Tafsil → Talim</title></path>
+    <path d="M1129,696 C1129,729 1129,729 1129,762" marker-end="url(#arrow)"><title>Tahkik → Muhakeme</title></path>
+    <path d="M1129,696 C1028,841 560,841 459,986" marker-end="url(#arrow)"><title>Tahkik → Tefsir</title></path>
+    <path d="M1129,696 C1069,729 787,729 727,762" marker-end="url(#arrow)"><title>Tahkik → Temkin</title></path>
+    <path d="M1129,696 C1049,729 673,729 593,762" marker-end="url(#arrow)"><title>Tahkik → Şek-Zan-Yakîn İdraki</title></path>
+    <path d="M928,360 C928,393 928,393 928,426" marker-end="url(#arrow)"><title>Tahlil → Mana</title></path>
+    <path d="M928,360 C868,449 586,449 526,538" marker-end="url(#arrow)"><title>Tahlil → Tenakuz Bulma</title></path>
+    <path d="M928,360 C948,393 1042,393 1062,426" marker-end="url(#arrow)"><title>Tahlil → Terkip</title></path>
+    <path d="M928,360 C888,393 700,393 660,426" marker-end="url(#arrow)"><title>Tahlil → Tertip</title></path>
+    <path d="M928,360 C848,449 472,449 392,538" marker-end="url(#arrow)"><title>Tahlil → Tezat</title></path>
+    <path d="M861,1032 C841,1065 747,1065 727,1098" marker-end="url(#arrow)"><title>Talâkat → Talim</title></path>
+    <path d="M794,472 C844,617 1079,617 1129,762" marker-end="url(#arrow)"><title>Tasavvur → Muhakeme</title></path>
+    <path d="M794,472 C744,617 509,617 459,762" marker-end="url(#arrow)"><title>Tasavvur → Tasdik</title></path>
+    <path d="M794,472 C724,561 395,561 325,650" marker-end="url(#arrow)"><title>Tasavvur → İllet Keşfi</title></path>
+    <path d="M459,808 C439,897 345,897 325,986" marker-end="url(#arrow)"><title>Tasdik → Tafsil</title></path>
+    <path d="M459,808 C499,953 687,953 727,1098" marker-end="url(#arrow)"><title>Tasdik → Talim</title></path>
+    <path d="M861,808 C841,897 747,897 727,986" marker-end="url(#arrow)"><title>Tashih → Fesâhat</title></path>
+    <path d="M794,360 C814,393 908,393 928,426" marker-end="url(#arrow)"><title>Tecrit → Mana</title></path>
+    <path d="M794,360 C744,505 509,505 459,650" marker-end="url(#arrow)"><title>Tecrit → Mantık Yürütme</title></path>
+    <path d="M794,360 C794,393 794,393 794,426" marker-end="url(#arrow)"><title>Tecrit → Tasavvur</title></path>
+    <path d="M794,360 C774,449 680,449 660,538" marker-end="url(#arrow)"><title>Tecrit → Tenkit</title></path>
+    <path d="M794,360 C724,505 395,505 325,650" marker-end="url(#arrow)"><title>Tecrit → İllet Keşfi</title></path>
+    <path d="M794,360 C764,505 623,505 593,650" marker-end="url(#arrow)"><title>Tecrit → İspat</title></path>
+    <path d="M861,696 C841,785 747,785 727,874" marker-end="url(#arrow)"><title>Tedebbür → Gaye Belirleme</title></path>
+    <path d="M861,696 C901,729 1089,729 1129,762" marker-end="url(#arrow)"><title>Tedebbür → Muhakeme</title></path>
+    <path d="M727,696 C747,785 841,785 861,874" marker-end="url(#arrow)"><title>Teemmül → Merak ve Sual Tevcihi</title></path>
+    <path d="M727,696 C727,729 727,729 727,762" marker-end="url(#arrow)"><title>Teemmül → Temkin</title></path>
+    <path d="M459,1032 C499,1065 687,1065 727,1098" marker-end="url(#arrow)"><title>Tefsir → Talim</title></path>
+    <path d="M727,808 C727,897 727,897 727,986" marker-end="url(#arrow)"><title>Temkin → Fesâhat</title></path>
+    <path d="M727,808 C807,897 1183,897 1263,986" marker-end="url(#arrow)"><title>Temkin → Münazara</title></path>
+    <path d="M928,584 C938,785 985,785 995,986" marker-end="url(#arrow)"><title>Temsil → Belâgat</title></path>
+    <path d="M928,584 C898,841 757,841 727,1098" marker-end="url(#arrow)"><title>Temsil → Talim</title></path>
+    <path d="M526,584 C576,729 811,729 861,874" marker-end="url(#arrow)"><title>Tenakuz Bulma → Merak ve Sual Tevcihi</title></path>
+    <path d="M526,584 C616,673 1039,673 1129,762" marker-end="url(#arrow)"><title>Tenakuz Bulma → Muhakeme</title></path>
+    <path d="M526,584 C576,673 811,673 861,762" marker-end="url(#arrow)"><title>Tenakuz Bulma → Tashih</title></path>
+    <path d="M526,584 C536,785 583,785 593,986" marker-end="url(#arrow)"><title>Tenakuz Bulma → Tevil</title></path>
+    <path d="M526,584 C536,673 583,673 593,762" marker-end="url(#arrow)"><title>Tenakuz Bulma → Şek-Zan-Yakîn İdraki</title></path>
+    <path d="M660,584 C730,673 1059,673 1129,762" marker-end="url(#arrow)"><title>Tenkit → Muhakeme</title></path>
+    <path d="M660,584 C730,617 1059,617 1129,650" marker-end="url(#arrow)"><title>Tenkit → Tahkik</title></path>
+    <path d="M660,584 C690,673 831,673 861,762" marker-end="url(#arrow)"><title>Tenkit → Tashih</title></path>
+    <path d="M660,584 C650,673 603,673 593,762" marker-end="url(#arrow)"><title>Tenkit → Şek-Zan-Yakîn İdraki</title></path>
+    <path d="M1062,472 C1052,729 1005,729 995,986" marker-end="url(#arrow)"><title>Terkip → Belâgat</title></path>
+    <path d="M1062,472 C1072,729 1119,729 1129,986" marker-end="url(#arrow)"><title>Terkip → Sanat</title></path>
+    <path d="M1062,472 C951,729 436,729 325,986" marker-end="url(#arrow)"><title>Terkip → Tafsil</title></path>
+    <path d="M1062,472 C972,617 549,617 459,762" marker-end="url(#arrow)"><title>Terkip → Tasdik</title></path>
+    <path d="M1062,472 C992,561 663,561 593,650" marker-end="url(#arrow)"><title>Terkip → İspat</title></path>
+    <path d="M660,472 C680,505 774,505 794,538" marker-end="url(#arrow)"><title>Tertip → Kıyas</title></path>
+    <path d="M660,472 C630,561 489,561 459,650" marker-end="url(#arrow)"><title>Tertip → Mantık Yürütme</title></path>
+    <path d="M660,472 C610,729 375,729 325,986" marker-end="url(#arrow)"><title>Tertip → Tafsil</title></path>
+    <path d="M660,472 C670,785 717,785 727,1098" marker-end="url(#arrow)"><title>Tertip → Talim</title></path>
+    <path d="M660,472 C690,729 831,729 861,986" marker-end="url(#arrow)"><title>Tertip → Talâkat</title></path>
+    <path d="M660,472 C650,561 603,561 593,650" marker-end="url(#arrow)"><title>Tertip → İspat</title></path>
+    <path d="M995,696 C975,729 881,729 861,762" marker-end="url(#arrow)"><title>Tetkik → Tashih</title></path>
+    <path d="M995,696 C995,729 995,729 995,762" marker-end="url(#arrow)"><title>Tetkik → Teyit</title></path>
+    <path d="M995,808 C955,953 767,953 727,1098" marker-end="url(#arrow)"><title>Teyit → Talim</title></path>
+    <path d="M392,584 C402,617 449,617 459,650" marker-end="url(#arrow)"><title>Tezat → Mantık Yürütme</title></path>
+    <path d="M392,584 C422,785 563,785 593,986" marker-end="url(#arrow)"><title>Tezat → Tevil</title></path>
+    <path d="M1062,584 C1052,785 1005,785 995,986" marker-end="url(#arrow)"><title>Teşbih → Belâgat</title></path>
+    <path d="M1062,584 C1072,785 1119,785 1129,986" marker-end="url(#arrow)"><title>Teşbih → Sanat</title></path>
+    <path d="M1263,696 C1243,729 1149,729 1129,762" marker-end="url(#arrow)"><title>İhtimal Hesabı → Muhakeme</title></path>
+    <path d="M1263,696 C1183,729 807,729 727,762" marker-end="url(#arrow)"><title>İhtimal Hesabı → Temkin</title></path>
+    <path d="M1263,696 C1162,729 694,729 593,762" marker-end="url(#arrow)"><title>İhtimal Hesabı → Şek-Zan-Yakîn İdraki</title></path>
+    <path d="M794,136 C784,505 737,505 727,874" marker-end="url(#arrow)"><title>İhtiyaç / Fıtrat → Gaye Belirleme</title></path>
+    <path d="M325,696 C365,841 553,841 593,986" marker-end="url(#arrow)"><title>İllet Keşfi → Tevil</title></path>
+    <path d="M593,696 C673,729 1049,729 1129,762" marker-end="url(#arrow)"><title>İspat → Muhakeme</title></path>
+    <path d="M593,696 C694,841 1162,841 1263,986" marker-end="url(#arrow)"><title>İspat → Münazara</title></path>
+    <path d="M593,696 C573,729 479,729 459,762" marker-end="url(#arrow)"><title>İspat → Tasdik</title></path>
+    <path d="M593,696 C653,729 935,729 995,762" marker-end="url(#arrow)"><title>İspat → Teyit</title></path>
+    <path d="M593,696 C593,729 593,729 593,762" marker-end="url(#arrow)"><title>İspat → Şek-Zan-Yakîn İdraki</title></path>
+    <path d="M593,808 C633,841 821,841 861,874" marker-end="url(#arrow)"><title>Şek-Zan-Yakîn İdraki → Merak ve Sual Tevcihi</title></path>
+    <path d="M593,808 C593,897 593,897 593,986" marker-end="url(#arrow)"><title>Şek-Zan-Yakîn İdraki → Tevil</title></path>
   </g>
-  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="var(--ink-dim)" text-anchor="start">
-    <text x="808" y="172">duyu verisi</text>
-    <text x="808" y="284">ham kayıt</text>
-    <text x="808" y="396">soyutlanmış öge</text>
-    <text x="808" y="508">kavram</text>
-    <text x="808" y="620">sınanmış öncül</text>
-    <text x="808" y="732">istidlâl zinciri</text>
-    <text x="808" y="844">hüküm</text>
-    <text x="808" y="956">gaye süzgeci</text>
-    <text x="808" y="1068">mühürlenmiş beyan</text>
+  <g class="edges-lateral" fill="none" stroke="var(--line)" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3 3">
+    <path d="M1056,1009 Q1129,1025 1202,1009" marker-end="url(#arrow)"><title>Belâgat → Münazara</title></path>
+    <path d="M1056,1009 Q1062,1025 1068,1009" marker-end="url(#arrow)"><title>Belâgat → Sanat</title></path>
+    <path d="M934,1009 Q928,1025 922,1009" marker-end="url(#arrow)"><title>Belâgat → Talâkat</title></path>
+    <path d="M1336,673 Q1330,689 1324,673" marker-end="url(#arrow)"><title>Deneme-Yanılma → İhtimal Hesabı</title></path>
+    <path d="M1336,673 Q861,689 386,673" marker-end="url(#arrow)"><title>Deneme-Yanılma → İllet Keşfi</title></path>
+    <path d="M788,1009 Q861,1025 934,1009" marker-end="url(#arrow)"><title>Fesâhat → Belâgat</title></path>
+    <path d="M788,1009 Q995,1025 1202,1009" marker-end="url(#arrow)"><title>Fesâhat → Münazara</title></path>
+    <path d="M788,1009 Q928,1025 1068,1009" marker-end="url(#arrow)"><title>Fesâhat → Sanat</title></path>
+    <path d="M788,1009 Q794,1025 800,1009" marker-end="url(#arrow)"><title>Fesâhat → Talâkat</title></path>
+    <path d="M788,897 Q794,913 800,897" marker-end="url(#arrow)"><title>Gaye Belirleme → Merak ve Sual Tevcihi</title></path>
+    <path d="M587,449 Q660,465 733,449" marker-end="url(#arrow)"><title>Hayal Kurma → Tasavvur</title></path>
+    <path d="M587,449 Q794,465 1001,449" marker-end="url(#arrow)"><title>Hayal Kurma → Terkip</title></path>
+    <path d="M867,449 Q727,465 587,449" marker-end="url(#arrow)"><title>Mana → Hayal Kurma</title></path>
+    <path d="M520,673 Q861,689 1202,673" marker-end="url(#arrow)"><title>Mantık Yürütme → İhtimal Hesabı</title></path>
+    <path d="M520,673 Q526,689 532,673" marker-end="url(#arrow)"><title>Mantık Yürütme → İspat</title></path>
+    <path d="M1068,1009 Q1062,1025 1056,1009" marker-end="url(#arrow)"><title>Sanat → Belâgat</title></path>
+    <path d="M1068,1009 Q928,1025 788,1009" marker-end="url(#arrow)"><title>Sanat → Fesâhat</title></path>
+    <path d="M386,1009 Q660,1025 934,1009" marker-end="url(#arrow)"><title>Tafsil → Belâgat</title></path>
+    <path d="M386,1009 Q526,1025 666,1009" marker-end="url(#arrow)"><title>Tafsil → Fesâhat</title></path>
+    <path d="M386,1009 Q593,1025 800,1009" marker-end="url(#arrow)"><title>Tafsil → Talâkat</title></path>
+    <path d="M1068,673 Q660,689 252,673" marker-end="url(#arrow)"><title>Tahkik → Tefekkür</title></path>
+    <path d="M1068,673 Q1062,689 1056,673" marker-end="url(#arrow)"><title>Tahkik → Tetkik</title></path>
+    <path d="M867,337 Q861,353 855,337" marker-end="url(#arrow)"><title>Tahlil → Tecrit</title></path>
+    <path d="M788,1121 Q794,1137 800,1121" marker-end="url(#arrow)"><title>Talim → Tahsil</title></path>
+    <path d="M922,1009 Q928,1025 934,1009" marker-end="url(#arrow)"><title>Talâkat → Belâgat</title></path>
+    <path d="M922,1009 Q1062,1025 1202,1009" marker-end="url(#arrow)"><title>Talâkat → Münazara</title></path>
+    <path d="M855,449 Q861,465 867,449" marker-end="url(#arrow)"><title>Tasavvur → Mana</title></path>
+    <path d="M855,449 Q928,465 1001,449" marker-end="url(#arrow)"><title>Tasavvur → Terkip</title></path>
+    <path d="M520,785 Q794,801 1068,785" marker-end="url(#arrow)"><title>Tasdik → Muhakeme</title></path>
+    <path d="M520,785 Q593,801 666,785" marker-end="url(#arrow)"><title>Tasdik → Temkin</title></path>
+    <path d="M520,785 Q526,801 532,785" marker-end="url(#arrow)"><title>Tasdik → Şek-Zan-Yakîn İdraki</title></path>
+    <path d="M922,785 Q995,801 1068,785" marker-end="url(#arrow)"><title>Tashih → Muhakeme</title></path>
+    <path d="M922,785 Q928,801 934,785" marker-end="url(#arrow)"><title>Tashih → Teyit</title></path>
+    <path d="M733,337 Q727,353 721,337" marker-end="url(#arrow)"><title>Tecrit → Hayal</title></path>
+    <path d="M800,673 Q794,689 788,673" marker-end="url(#arrow)"><title>Tedebbür → Teemmül</title></path>
+    <path d="M922,673 Q1062,689 1202,673" marker-end="url(#arrow)"><title>Tedebbür → İhtimal Hesabı</title></path>
+    <path d="M666,673 Q459,689 252,673" marker-end="url(#arrow)"><title>Teemmül → Tefekkür</title></path>
+    <path d="M788,673 Q861,689 934,673" marker-end="url(#arrow)"><title>Teemmül → Tetkik</title></path>
+    <path d="M252,673 Q325,689 398,673" marker-end="url(#arrow)"><title>Tefekkür → Mantık Yürütme</title></path>
+    <path d="M252,673 Q526,689 800,673" marker-end="url(#arrow)"><title>Tefekkür → Tedebbür</title></path>
+    <path d="M252,673 Q258,689 264,673" marker-end="url(#arrow)"><title>Tefekkür → İllet Keşfi</title></path>
+    <path d="M520,1009 Q727,1025 934,1009" marker-end="url(#arrow)"><title>Tefsir → Belâgat</title></path>
+    <path d="M398,1009 Q392,1025 386,1009" marker-end="url(#arrow)"><title>Tefsir → Tafsil</title></path>
+    <path d="M520,1009 Q526,1025 532,1009" marker-end="url(#arrow)"><title>Tefsir → Tevil</title></path>
+    <path d="M788,785 Q928,801 1068,785" marker-end="url(#arrow)"><title>Temkin → Muhakeme</title></path>
+    <path d="M666,785 Q660,801 654,785" marker-end="url(#arrow)"><title>Temkin → Şek-Zan-Yakîn İdraki</title></path>
+    <path d="M867,561 Q861,577 855,561" marker-end="url(#arrow)"><title>Temsil → Kıyas</title></path>
+    <path d="M989,561 Q995,577 1001,561" marker-end="url(#arrow)"><title>Temsil → Teşbih</title></path>
+    <path d="M587,561 Q861,577 1135,561" marker-end="url(#arrow)"><title>Tenakuz Bulma → Cerh</title></path>
+    <path d="M587,561 Q593,577 599,561" marker-end="url(#arrow)"><title>Tenakuz Bulma → Tenkit</title></path>
+    <path d="M1001,449 Q794,465 587,449" marker-end="url(#arrow)"><title>Terkip → Hayal Kurma</title></path>
+    <path d="M1001,449 Q861,465 721,449" marker-end="url(#arrow)"><title>Terkip → Tertip</title></path>
+    <path d="M721,449 Q727,465 733,449" marker-end="url(#arrow)"><title>Tertip → Tasavvur</title></path>
+    <path d="M654,1009 Q794,1025 934,1009" marker-end="url(#arrow)"><title>Tevil → Belâgat</title></path>
+    <path d="M654,1009 Q928,1025 1202,1009" marker-end="url(#arrow)"><title>Tevil → Münazara</title></path>
+    <path d="M532,1009 Q526,1025 520,1009" marker-end="url(#arrow)"><title>Tevil → Tefsir</title></path>
+    <path d="M1056,785 Q1062,801 1068,785" marker-end="url(#arrow)"><title>Teyit → Muhakeme</title></path>
+    <path d="M934,785 Q727,801 520,785" marker-end="url(#arrow)"><title>Teyit → Tasdik</title></path>
+    <path d="M934,785 Q794,801 654,785" marker-end="url(#arrow)"><title>Teyit → Şek-Zan-Yakîn İdraki</title></path>
+    <path d="M453,561 Q593,577 733,561" marker-end="url(#arrow)"><title>Tezat → Kıyas</title></path>
+    <path d="M453,561 Q459,577 465,561" marker-end="url(#arrow)"><title>Tezat → Tenakuz Bulma</title></path>
+    <path d="M453,561 Q526,577 599,561" marker-end="url(#arrow)"><title>Tezat → Tenkit</title></path>
+    <path d="M1001,561 Q928,577 855,561" marker-end="url(#arrow)"><title>Teşbih → Kıyas</title></path>
+    <path d="M1001,561 Q995,577 989,561" marker-end="url(#arrow)"><title>Teşbih → Temsil</title></path>
+    <path d="M1324,673 Q1330,689 1336,673" marker-end="url(#arrow)"><title>İhtimal Hesabı → Deneme-Yanılma</title></path>
+    <path d="M1202,673 Q1062,689 922,673" marker-end="url(#arrow)"><title>İhtimal Hesabı → Tedebbür</title></path>
+    <path d="M386,673 Q392,689 398,673" marker-end="url(#arrow)"><title>İllet Keşfi → Mantık Yürütme</title></path>
+    <path d="M386,673 Q727,689 1068,673" marker-end="url(#arrow)"><title>İllet Keşfi → Tahkik</title></path>
+    <path d="M386,673 Q593,689 800,673" marker-end="url(#arrow)"><title>İllet Keşfi → Tedebbür</title></path>
+    <path d="M386,673 Q459,689 532,673" marker-end="url(#arrow)"><title>İllet Keşfi → İspat</title></path>
+    <path d="M654,673 Q861,689 1068,673" marker-end="url(#arrow)"><title>İspat → Tahkik</title></path>
+    <path d="M654,785 Q861,801 1068,785" marker-end="url(#arrow)"><title>Şek-Zan-Yakîn İdraki → Muhakeme</title></path>
+    <path d="M654,785 Q660,801 666,785" marker-end="url(#arrow)"><title>Şek-Zan-Yakîn İdraki → Temkin</title></path>
+  </g>
+  <g class="edges-backward" fill="none" stroke="var(--accent)" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="1 5">
+    <path d="M1336,673 C1396,673 915,225 855,225" marker-end="url(#arrowAccent)"><title>Deneme-Yanılma → Müşahede</title></path>
+    <path d="M788,897 C728,897 1276,673 1336,673" marker-end="url(#arrowAccent)"><title>Gaye Belirleme → Deneme-Yanılma</title></path>
+    <path d="M788,897 C728,897 1008,785 1068,785" marker-end="url(#arrowAccent)"><title>Gaye Belirleme → Muhakeme</title></path>
+    <path d="M666,897 C606,897 192,673 252,673" marker-end="url(#arrowAccent)"><title>Gaye Belirleme → Tefekkür</title></path>
+    <path d="M788,897 C728,897 728,785 788,785" marker-end="url(#arrowAccent)"><title>Gaye Belirleme → Temkin</title></path>
+    <path d="M587,449 C527,449 539,337 599,337" marker-end="url(#arrowAccent)"><title>Hayal Kurma → Hayal</title></path>
+    <path d="M855,561 C915,561 1061,449 1001,449" marker-end="url(#arrowAccent)"><title>Kıyas → Terkip</title></path>
+    <path d="M520,673 C460,673 405,561 465,561" marker-end="url(#arrowAccent)"><title>Mantık Yürütme → Tenakuz Bulma</title></path>
+    <path d="M520,673 C460,673 539,449 599,449" marker-end="url(#arrowAccent)"><title>Mantık Yürütme → Tertip</title></path>
+    <path d="M922,897 C982,897 1396,673 1336,673" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Deneme-Yanılma</title></path>
+    <path d="M800,897 C860,897 647,449 587,449" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Hayal Kurma</title></path>
+    <path d="M800,897 C860,897 915,225 855,225" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Müşahede</title></path>
+    <path d="M922,897 C982,897 927,337 867,337" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Tahlil</title></path>
+    <path d="M800,897 C860,897 848,673 788,673" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Teemmül</title></path>
+    <path d="M800,897 C860,897 312,673 252,673" marker-end="url(#arrowAccent)"><title>Merak ve Sual Tevcihi → Tefekkür</title></path>
+    <path d="M1068,785 C1128,785 982,673 922,673" marker-end="url(#arrowAccent)"><title>Muhakeme → Tedebbür</title></path>
+    <path d="M1068,785 C1128,785 848,673 788,673" marker-end="url(#arrowAccent)"><title>Muhakeme → Teemmül</title></path>
+    <path d="M1068,785 C1128,785 1116,673 1056,673" marker-end="url(#arrowAccent)"><title>Muhakeme → Tetkik</title></path>
+    <path d="M1202,1009 C1262,1009 1250,673 1190,673" marker-end="url(#arrowAccent)"><title>Münazara → Tahkik</title></path>
+    <path d="M1202,1009 C1262,1009 982,785 922,785" marker-end="url(#arrowAccent)"><title>Münazara → Tashih</title></path>
+    <path d="M1202,1009 C1262,1009 781,561 721,561" marker-end="url(#arrowAccent)"><title>Münazara → Tenkit</title></path>
+    <path d="M1202,1009 C1262,1009 1116,785 1056,785" marker-end="url(#arrowAccent)"><title>Münazara → Teyit</title></path>
+    <path d="M1202,1009 C1262,1009 513,561 453,561" marker-end="url(#arrowAccent)"><title>Münazara → Tezat</title></path>
+    <path d="M1068,1009 C1128,1009 647,449 587,449" marker-end="url(#arrowAccent)"><title>Sanat → Hayal Kurma</title></path>
+    <path d="M1068,1009 C1128,1009 1049,561 989,561" marker-end="url(#arrowAccent)"><title>Sanat → Temsil</title></path>
+    <path d="M1068,1009 C1128,1009 1183,561 1123,561" marker-end="url(#arrowAccent)"><title>Sanat → Teşbih</title></path>
+    <path d="M386,1009 C326,1009 807,561 867,561" marker-end="url(#arrowAccent)"><title>Tafsil → Temsil</title></path>
+    <path d="M386,1009 C326,1009 874,673 934,673" marker-end="url(#arrowAccent)"><title>Tafsil → Tetkik</title></path>
+    <path d="M922,1121 C982,1121 982,1009 922,1009" marker-end="url(#arrowAccent)"><title>Tahsil → Talâkat</title></path>
+    <path d="M788,1121 C728,1121 728,1009 788,1009" marker-end="url(#arrowAccent)"><title>Talim → Fesâhat</title></path>
+    <path d="M855,449 C915,449 927,337 867,337" marker-end="url(#arrowAccent)"><title>Tasavvur → Tahlil</title></path>
+    <path d="M922,785 C982,785 1128,673 1068,673" marker-end="url(#arrowAccent)"><title>Tashih → Tahkik</title></path>
+    <path d="M922,785 C982,785 1061,449 1001,449" marker-end="url(#arrowAccent)"><title>Tashih → Terkip</title></path>
+    <path d="M800,673 C860,673 781,449 721,449" marker-end="url(#arrowAccent)"><title>Tedebbür → Tertip</title></path>
+    <path d="M788,673 C728,673 807,337 867,337" marker-end="url(#arrowAccent)"><title>Teemmül → Tahlil</title></path>
+    <path d="M788,673 C728,673 673,337 733,337" marker-end="url(#arrowAccent)"><title>Teemmül → Tecrit</title></path>
+    <path d="M666,673 C606,673 661,561 721,561" marker-end="url(#arrowAccent)"><title>Teemmül → Tenkit</title></path>
+    <path d="M252,673 C192,673 673,449 733,449" marker-end="url(#arrowAccent)"><title>Tefekkür → Tasavvur</title></path>
+    <path d="M252,673 C192,673 807,561 867,561" marker-end="url(#arrowAccent)"><title>Tefekkür → Temsil</title></path>
+    <path d="M252,673 C192,673 941,449 1001,449" marker-end="url(#arrowAccent)"><title>Tefekkür → Terkip</title></path>
+    <path d="M252,673 C192,673 941,561 1001,561" marker-end="url(#arrowAccent)"><title>Tefekkür → Teşbih</title></path>
+    <path d="M520,1009 C460,1009 807,449 867,449" marker-end="url(#arrowAccent)"><title>Tefsir → Mana</title></path>
+    <path d="M788,785 C728,785 740,673 800,673" marker-end="url(#arrowAccent)"><title>Temkin → Tedebbür</title></path>
+    <path d="M788,785 C728,785 874,673 934,673" marker-end="url(#arrowAccent)"><title>Temkin → Tetkik</title></path>
+    <path d="M867,561 C927,561 781,337 721,337" marker-end="url(#arrowAccent)"><title>Temsil → Hayal</title></path>
+    <path d="M721,561 C661,561 673,337 733,337" marker-end="url(#arrowAccent)"><title>Tenkit → Tecrit</title></path>
+    <path d="M934,673 C994,673 915,225 855,225" marker-end="url(#arrowAccent)"><title>Tetkik → Müşahede</title></path>
+    <path d="M934,673 C994,673 1049,337 989,337" marker-end="url(#arrowAccent)"><title>Tetkik → Tahlil</title></path>
+    <path d="M934,673 C994,673 647,561 587,561" marker-end="url(#arrowAccent)"><title>Tetkik → Tenakuz Bulma</title></path>
+    <path d="M934,673 C994,673 513,561 453,561" marker-end="url(#arrowAccent)"><title>Tetkik → Tezat</title></path>
+    <path d="M654,1009 C594,1009 807,449 867,449" marker-end="url(#arrowAccent)"><title>Tevil → Mana</title></path>
+    <path d="M1056,785 C1116,785 1128,673 1068,673" marker-end="url(#arrowAccent)"><title>Teyit → Tahkik</title></path>
+    <path d="M1001,561 C1061,561 781,337 721,337" marker-end="url(#arrowAccent)"><title>Teşbih → Hayal</title></path>
+    <path d="M654,785 C594,785 606,673 666,673" marker-end="url(#arrowAccent)"><title>Şek-Zan-Yakîn İdraki → Teemmül</title></path>
   </g>
 
   <!-- ============ FEEDBACK LOOP 1: Gaye Belirleme -> Müşahede ============ -->
@@ -224,12 +451,14 @@
 
     <!-- Tier 0: Dış Girdi -->
     <g fill="var(--paper)" stroke="var(--line-soft)" stroke-width="1.4">
-      <rect x="666" y="90" width="122" height="46" rx="7"></rect>
-      <rect x="800" y="90" width="122" height="46" rx="7"></rect>
+      <rect x="599" y="90" width="122" height="46" rx="7"></rect>
+      <rect x="733" y="90" width="122" height="46" rx="7"></rect>
+      <rect x="867" y="90" width="122" height="46" rx="7"></rect>
     </g>
     <g fill="var(--ink-dim)">
-      <text x="727" y="109">Dış Âlem</text><text x="727" y="123">Hadiseleri</text>
-      <text x="861" y="116">İhtiyaç / Fıtrat</text>
+      <text x="660" y="109">Dış Âlem</text><text x="660" y="123">Hadiseleri</text>
+      <text x="794" y="109">İhtiyaç /</text><text x="794" y="123">Fıtrat</text>
+      <text x="928" y="116">Mukayese</text>
     </g>
 
     <!-- Tier 1: Ham Algı -->
@@ -268,20 +497,22 @@
 
     <!-- Tier 4: Sınama -->
     <g fill="var(--paper)" stroke="var(--line)" stroke-width="1.4">
-      <rect x="398" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="532" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="666" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="800" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="934" y="538" width="122" height="46" rx="7"></rect>
-      <rect x="1068" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="331" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="465" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="599" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="733" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="867" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="1001" y="538" width="122" height="46" rx="7"></rect>
+      <rect x="1135" y="538" width="122" height="46" rx="7"></rect>
     </g>
     <g fill="var(--ink)">
-      <text x="459" y="565">Tezat</text>
-      <text x="593" y="558">Tenakuz</text><text x="593" y="572">Bulma</text>
-      <text x="727" y="565">Tenkit</text>
-      <text x="861" y="565">Kıyas</text>
-      <text x="995" y="565">Temsil</text>
-      <text x="1129" y="565">Teşbih</text>
+      <text x="392" y="565">Tezat</text>
+      <text x="526" y="558">Tenakuz</text><text x="526" y="572">Bulma</text>
+      <text x="660" y="565">Tenkit</text>
+      <text x="794" y="565">Kıyas</text>
+      <text x="928" y="565">Temsil</text>
+      <text x="1062" y="565">Teşbih</text>
+      <text x="1196" y="565">Cerh</text>
     </g>
 
     <!-- Tier 5: Derin Muhakeme Çekirdeği -->
@@ -374,12 +605,12 @@
   </g>
 </svg>
     </div>
-    <figcaption><b>Kademelere ayrım nasıl yapıldı:</b> her meleke, belgedeki kendi "Girdiler / Çıktılar" tanımı okunarak &mdash; ham veriye ne kadar yakın çalıştığına ve hangi kademenin çıktısını beslediğine bakılarak &mdash; elle bir sıraya yerleştirildi. <b>Muhakeme</b> vurgulanmıştır: belgede en çok girdi alan (11 kaynak) ve hüküm kademesinin fiilî toplama noktası olan meleke budur. Kademeler arası oklar, o iki kademe arasındaki 255 kenarın <b>ortak yönünü</b> özetler &mdash; her tekil bağlantıyı değil.</figcaption>
+    <figcaption><b>Kademelere ayrım nasıl yapıldı:</b> her meleke, belgedeki kendi "Girdiler / Çıktılar" tanımı okunarak &mdash; ham veriye ne kadar yakın çalıştığına ve hangi kademenin çıktısını beslediğine bakılarak &mdash; elle bir sıraya yerleştirildi; bu yerleştirme hiçbir grafik-çizim algoritmasına havale edilmedi. <b>Muhakeme</b> vurgulanmıştır: belgede en çok girdi alan (11 kaynak) ve hüküm kademesinin fiilî toplama noktası olan meleke budur. Çizilen <b>245 ok</b>, belgedeki 245 tekil bağlantının tamamıdır &mdash; hiçbiri özetlenmemiş veya toplulaştırılmamıştır; her okun üzerine gelindiğinde kaynak&nbsp;&rarr;&nbsp;hedef ismi görünür.</figcaption>
   </figure>
 
   <div class="legend">
-    <span><span class="swatch flow"></span> kademeler arası ana akış</span>
-    <span><span class="swatch loop"></span> belgenin vurguladığı geri-besleme halkası</span>
+    <span><span class="swatch flow"></span> kademeler arası ileri akış (soluk çizgi)</span>
+    <span><span class="swatch loop"></span> hiyerarşiye ters / geri-besleme bağlantısı (vurgu rengi)</span>
     <span><span class="dot"></span> Muhakeme &mdash; şebekenin toplama noktası</span>
   </div>
 
