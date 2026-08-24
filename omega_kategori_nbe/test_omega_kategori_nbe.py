@@ -199,6 +199,31 @@ def test_pi1_cember():
 
 
 # =====================================================================
+#  4b. Taşınan katmanlar
+# =====================================================================
+def test_turetimler():
+    from . import turetimler as T
+    r = T.dogrula_hepsi()
+    hatalar = [n for n in r if n["netice"] != "GEÇTİ"]
+    assert not hatalar, hatalar
+    assert len(r) >= 30
+
+
+def test_geometri():
+    from . import geometri as G
+    r = G.dogrula_hepsi()
+    assert not [n for n in r if n["netice"] != "GEÇTİ"]
+    assert len(r) >= 20
+
+
+def test_iliskiler():
+    from . import iliskiler as I
+    r = I.dogrula_hepsi()
+    assert not [n for n in r if n["netice"] != "GEÇTİ"]
+    assert len(r) >= 20
+
+
+# =====================================================================
 #  5. MENFÎ sınamalar
 # =====================================================================
 def _red(f):

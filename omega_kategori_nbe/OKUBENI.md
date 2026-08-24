@@ -5,7 +5,10 @@ yan yana yaşıyor. Aynı sözdizimi ve aynı aralık cebrini paylaşırlar,
 **indirgeyicileri farklıdır**.
 
 ```
-python3 -m omega_kategori_nbe.test_omega_kategori_nbe    # 21 sınama
+python3 -m omega_kategori_nbe.test_omega_kategori_nbe    # 24 sınama
+python3 -c "from omega_kategori_nbe import turetimler as T; print(T.rapor())"
+python3 -c "from omega_kategori_nbe import geometri as G; print(G.rapor())"
+python3 -c "from omega_kategori_nbe import iliskiler as I; print(I.rapor())"
 ```
 
 ## Neden
@@ -28,13 +31,30 @@ Aynı makine, aynı kütüphane terimleri:
 | `sarim(dongu³)` | **>100 s (bitmiyor)** | **0.12 s** |
 | `sarim(dongu⁵)` | **>100 s (bitmiyor)** | **0.20 s** |
 | `sarim(dongu⁻¹)` | **>100 s (bitmiyor)** | **0.03 s** |
+| `sarim(dongu²⁰)` | **>100 s (bitmiyor)** | **0.97 s** |
 
-`sarim(dongu¹⁰) = +10` da 0.51 s'de düşüyor. **π₁(S¹) ≅ ℤ artık fiilen
-hesaplanıyor.**
+**π₁(S¹) ≅ ℤ artık fiilen hesaplanıyor.** Tepe bellek: **21.7 MB**.
 
-Negatif kuvvetler pozitiflerden ağır (`dongu⁻²` ≈ 8 s, `dongu⁻⁵` ≈ 41 s):
-`ters` daha karmaşık bir `hcomp` yapısı doğuruyor. Yine de **bitiyor** —
-eski sürümde hiç bitmiyordu.
+Negatif kuvvetler pozitiflerden ağır (`dongu⁻²` ≈ 5.7 s, `dongu⁻⁵` ≈ 29 s):
+`ters` daha karmaşık bir `hcomp` doğuruyor. Yine de **bitiyor**.
+
+### Bellek değil, zaman
+
+Ölçüldü: en ağır hesapta bile tepe RSS **21.7 MB**. Yani darboğaz tahsis
+değil, tekrar hesaptır. Profil, en sıcak noktanın aralık cebrindeki
+antizincir normalleştirmesi olduğunu gösterdi (3.1 M çağrı, sürenin %42'si);
+oradaki algoritmik düzeltme ve `yerine_koy`daki erken çıkış ~%30 kazandırdı.
+
+**Ölçümle reddedilen:** kafes işlemlerini belleğe alma (hash-consing
+fikrinin bu katmana tatbiki). Hız aynı kaldı, tepe bellek 20 MB'dan
+**1281 MB**'a çıktı. Kaldırıldı.
+
+**Sağlam olmayan:** yüz formülleri için ROBDD. ROBDD *Boole* fonksiyonlarını
+kanonikleştirir; CCHM aralığı ise **serbest De Morgan cebridir** ve orada
+`i ∧ ~i ≠ 0`. ROBDD bu ikisini özdeşleştirir, yani teorinin muhtaç olduğu
+kanunu kırar. Mevcut temsil (yutma altında indirgenmiş DNF antizinciri)
+zaten kanoniktir ve eşitliği hash ile O(1)'dir -- istenen gaye başka ve
+**sağlam** bir yolla hâlihazırda sağlanmış durumdadır.
 
 ## Mimari
 
@@ -75,17 +95,22 @@ Eski sürümde bulunup düzeltilen iki hata burada **baştan** doğru:
   (`ua e` tuzağı: iki uç da `ℤ` olduğu hâlde çizgi sabit değildir).
   Denetleyicideki `_sabit_cizgi_mi` ise normal formda serbest geçişe bakar.
 
+## Taşınan katmanlar
+
+`turetimler.py`, `geometri.py`, `iliskiler.py` **taşındı** ve bu sürümde de
+çalışıyor (`denetle_t` terim arayüzü ve `Baglam.genislet_t` üzerinden):
+
+```
+turetimler: 31/31   ·   geometri: 24/24   ·   iliskiler: 23/23
+```
+
+NbE sürümünde `turetimler` ayrıca π₁(S¹) hesabını da **doğrulanan türetim**
+olarak taşır (`sarim(dongu²)=+2`, `sarim(dongu³)=+3`, `sarim(dongu⁻¹)=-1`).
+
 ## Durum
 
 ```
-21 sınamanın 21'i geçiyor  (6'sı menfî)
+24 sınamanın 24'ü geçiyor  (6'sı menfî)
 uaβ hesaplanıyor · isoToEquiv denetimden geçiyor · π₁(S¹) ≅ ℤ HESAPLANIYOR
+turetimler 31/31 · geometri 24/24 · iliskiler 23/23
 ```
-
-## Henüz taşınmadı
-
-`turetimler.py`, `geometri.py`, `iliskiler.py` bu sürüme **taşınmadı**.
-Bunlar saf sözdizim + tip denetimi katmanlarıdır; taşımak,
-`denetle(t, tip_terim, g)` çağrılarını `denetle(t, g.d(tip_terim), g)`
-hâline getirmekten ibarettir. Şimdilik o üç katman yalnız eski sürümde
-çalışır.

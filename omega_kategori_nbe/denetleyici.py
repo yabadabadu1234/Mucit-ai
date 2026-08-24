@@ -345,3 +345,18 @@ def denetle(t: Terim, tip: Deger, g: Baglam) -> None:
         raise DenetimHatasi("tip uyuşmazlığı:\n  terim   : %s\n  beklenen: %s\n"
                             "  bulunan : %s"
                             % (t, geri_oku(tip), geri_oku(bulunan)))
+
+
+# =====================================================================
+#  Terim arayüzü -- eski sürümdeki katmanların taşınabilmesi için
+# =====================================================================
+def denetle_t(t: Terim, tip_terim: Terim, g: Baglam) -> None:
+    """``denetle`` ama beklenen tip TERİM olarak verilir."""
+    denetle(t, g.d(tip_terim), g)
+
+
+def _genislet_t(self: Baglam, ad: str, tip_terim: Terim) -> Baglam:
+    return self.genislet(ad, self.d(tip_terim))
+
+
+Baglam.genislet_t = _genislet_t   # type: ignore[attr-defined]
