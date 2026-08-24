@@ -19,7 +19,7 @@ bir aralık ifadesinin 0'a yahut 1'e eşit olma şartını yüz kafesine indirge
 """
 from __future__ import annotations
 
-from typing import Dict, FrozenSet, Iterable, Tuple
+from typing import Dict, FrozenSet, Iterable, List, Tuple
 
 # Bir literal: (degisken_adi, pozitif_mi).  (i, True) = i,  (i, False) = ~i
 Literal = Tuple[str, bool]
@@ -33,15 +33,23 @@ def _antizincire_indir(cumleler: Iterable[Cumle]) -> FrozenSet[Cumle]:
     Bir cümle, başka bir cümlenin üst kümesiyse gereksizdir (daha zayıftır)
     ve atılır. Geriye kapsama sıralamasına göre bir ANTİZİNCİR kalır; bu,
     serbest dağılmalı kafesin kanonik normal formudur.
+
+    Hız: bu fonksiyon çekirdeğin en sıcak noktasıdır (ölçüldü). Uzunluğa
+    göre sıralanınca her hakiki alt küme DAHA ÖNCE gelir, dolayısıyla
+    yalnız önek taranır; eşit uzunlukta iki farklı cümle birbirinin alt
+    kümesi olamaz.
     """
-    kalan = list({frozenset(c) for c in cumleler})
-    sonuc = []
-    for i, c in enumerate(kalan):
-        if any(i != j and d <= c for j, d in enumerate(kalan)
-               # eşitlik hâlinde yalnız birini tut: küçük indisli kazanır
-               if not (d == c and j > i)):
-            continue
-        sonuc.append(c)
+    kume = {frozenset(c) for c in cumleler}
+    if len(kume) <= 1:
+        return frozenset(kume)
+    kalan = sorted(kume, key=len)
+    sonuc: List[Cumle] = []
+    for c in kalan:
+        for d in sonuc:
+            if d <= c:
+                break
+        else:
+            sonuc.append(c)
     return frozenset(sonuc)
 
 
@@ -86,6 +94,9 @@ class Aralik:
     # ---- yerine koyma ---------------------------------------------------
     def yerine_koy(self, atama: Dict[str, "Aralik"]) -> "Aralik":
         """``i ↦ r`` aralık ikamesi. Değişkenler eşzamanlı değiştirilir."""
+        # erken çıkış: ikame bu ifadeye hiç dokunmuyorsa kopya üretme
+        if not atama or not (self.degiskenler() & atama.keys()):
+            return self
         sonuc = SIFIR
         for cumle in self.cumleler:
             carpim = BIR
@@ -127,6 +138,12 @@ class Aralik:
 
 SIFIR = Aralik([])                    # 0  (boş birleşim)
 BIR = Aralik([frozenset()])           # 1  (boş çarpım içeren birleşim)
+
+# NOT: Bir ara ``ve``/``veya``/``degil``/``yerine_koy`` işlemleri belleğe
+# alınmıştı (hash-consing fikri). ÖLÇÜM bunu reddetti: hız aynı kaldı,
+# tepe bellek 20 MB'dan 1281 MB'a çıktı. Kaldırıldı. Kazanç, önbellekten
+# değil, ``_antizincire_indir``in algoritmasından ve ``yerine_koy``un
+# erken çıkışından geliyor.
 
 
 # =====================================================================
@@ -188,6 +205,8 @@ class Kofibrasyon:
 
     def yerine_koy(self, atama: Dict[str, Aralik]) -> "Kofibrasyon":
         """Yüzlere aralık ikamesi uygular; ``(i=ε)[i↦r]`` = ``(r=ε)``."""
+        if not atama:
+            return self
         sonuc = YANLIS
         for yuz in self.yuzler:
             carpim = DOGRU
