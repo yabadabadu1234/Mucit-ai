@@ -356,45 +356,49 @@ def bosluklar() -> List[Dict[str, str]]:
     """Bu çekirdeğin BİLİNEN eksikleri. Sessiz değil, kütüklü."""
     return [
         {
-            "ad": "comp^i U  (cizgi_denkligi / lineToEquiv)",
-            "durum": "İMÂL EDİLMEDİ -- çağrıldığında EksikKural yükseltir",
-            "sebep": "Bir tip çizgisinden denklik üretmek, taşımanın bir "
-                     "denklik olduğunun nesne dilinde ispatını gerektirir.",
-            "netice": "Tip ailelerinin U içinde hcomp'u indirgenmez.",
-        },
-        {
-            "ad": "comp^i (Glue ...)",
-            "durum": "İMÂL EDİLMEDİ -- çağrıldığında EksikKural yükseltir",
-            "sebep": "CCHM (2018) §6.2'deki kural; ∀i.φ ve lif tamamlama "
-                     "yapı taşları hazır (denklik.her_i_icin, "
-                     "denklik.lifi_tamamla) fakat kural birleştirilmedi.",
-            "netice": "ua TEŞKİL EDİLİR, tip denetiminden geçer, uçları "
-                      "TANIMSAL doğrudur; fakat ua boyunca TAŞIMA "
-                      "indirgenmez. Yani π₁(S¹) ≅ ℤ bu çekirdekte İFADE "
-                      "edilebilir, HESAPLANAMAZ.",
-        },
-        {
-            "ad": "izo_denklige (isoToEquiv)",
-            "durum": "İMÂL EDİLMEDİ",
-            "sebep": "Bir izomorfizmden denklik üretmek yarı-eşlenik "
-                     "(half-adjoint) düzeltmesi ister.",
-            "netice": "Denklikler elle, isEquiv ispatıyla verilmelidir; "
-                      "ozdeslik_denkligi hazırdır.",
+            "ad": "S¹ hcomp üzerinde sarım sayısı (|n| ≥ 2 ve n < 0)",
+            "durum": "DOĞRU fakat PRATİKTE BİTMİYOR -- hız duvarı",
+            "sebep": "S¹ içindeki bir hcomp'a helix uygulanınca 'comp^i U' "
+                     "doğar; o da her katmanda BÜTÜN Denklik yapısını "
+                     "(Σ/Π/isContr kulesi) taşır. Çekirdek terim seviyesinde, "
+                     "paylaşımsız ikame ile çalıştığı için terim patlar. "
+                     "Bu bir DOĞRULUK boşluğu değil, değerlendirici mimarisi "
+                     "meselesidir; kapanışı NbE'ye (kapanışlı değerler) geçmeyi "
+                     "gerektirir.",
+            "netice": "sarim(dongu⁰)=+0 ve sarim(dongu¹)=+1 HESAPLANIR; "
+                      "|n|≥2 ve negatif n makul sürede bitmez. Buna karşılık "
+                      "uaβ (transport (ua sucEquiv) n = n+1) her n için "
+                      "hesaplanır -- yani Glue kuralının kendisi işler.",
         },
         {
             "ad": "Genel HIT'ler (süspansiyon, pushout, n-kesme)",
             "durum": "YALNIZ S¹ imâl edildi",
             "sebep": "Her HIT'in kendi hcomp kuralı vardır; genel bir HIT "
                      "şeması yazılmadı.",
-            "netice": "Sⁿ (n≥2), kesme (truncation) ve dolayısıyla πₙ'in "
-                      "KÜME olarak tarifi bu çekirdekte yok; Ωⁿ vardır.",
+            "netice": "Sⁿ (n≥2) ve kesme (truncation) yok; dolayısıyla πₙ "
+                      "KÜME olarak tarif edilemiyor. Ωⁿ vardır.",
         },
         {
-            "ad": "ℕ / ℤ ayrıklığı",
-            "durum": "TANIMSAL KURAL olarak alındı",
-            "sebep": "Sabit çizgide comp{ℕ} = u0 kabul edildi (regülerlik). "
-                     "Propozisyonel olarak doğrudur; burada tanımsal kılındı.",
-            "netice": "ℕ ve ℤ üzerinde Kan işlemleri daima indirgenir.",
+            "ad": "Pürüzsüz ∞-topos / SDG / de Rham",
+            "durum": "POSTULAT",
+            "sebep": "Kock-Lawvere, ℑ kipi ve dış türev d'nin HESAPLANAN bir "
+                     "indirgeme kuralı hiçbir kübik çekirdekte yoktur "
+                     "(Cubical Agda dâhil).",
+            "netice": "Tipleri makine ile denetlenir (iyi teşkil edilmiş "
+                      "aksiyom), sakinleri aksiyomdur. Teğet demeti X^D, "
+                      "tensör tipleri, monoid/Lie nesneleri bu postulatlar "
+                      "ÜZERİNE fiilen kurulur ve tip denetiminden geçer.",
+        },
+        {
+            "ad": "ℕ / ℤ üzerinde comp",
+            "durum": "DÜZELTİLDİ -- evvelce SAĞLAM DEĞİLDİ",
+            "sebep": "Başlangıçta 'ℕ/ℤ ayrıktır, comp = u0' kuralı konmuştu. "
+                     "Bu SAĞLAM DEĞİLDİR: sistemin i=1'deki değeri tabana "
+                     "yalnız propozisyonel eşittir, tanımsal değil; kural "
+                     "bütün ℤ dolgularını çökertiyordu.",
+            "netice": "Yerine doğru yapısal kural kondu: taban kurucusuna "
+                      "göre sistem bileşenlere dağıtılır; dallar aynı "
+                      "kurucuyla başlamıyorsa comp TAKILI kalır.",
         },
     ]
 

@@ -268,3 +268,141 @@ def oncel_z() -> Terim:
                                    n, poz_dali,
                                    n, S.NegArd(S.Ard(_t(n))),
                                    _t("z")))
+
+
+# =====================================================================
+#  İzomorfizmden denklik (isoToEquiv)
+# =====================================================================
+def izo_denklige(A: Terim, B: Terim, f: Terim, g: Terim,
+                 s: Terim, t: Terim) -> Terim:
+    """``f : A→B``, ``g : B→A``, ``s : Π b. f(g b) ≡ b``,
+    ``t : Π a. g(f a) ≡ a`` verildiğinde ``Denklik A B``.
+
+    Lifin büzülebilirliği, iki lif elemanını birleştiren bir kare (``sq``)
+    ve onun ``s`` ile ``B``ye taşınmışı (``sq1``) üzerinden kurulur; bu,
+    yarı-eşlenik (half-adjoint) düzeltmesinin kübik hâlidir.
+    """
+    y, x0, x1, p0, p1, z = (K.taze("y"), K.taze("x0"), K.taze("x1"),
+                            K.taze("p0"), K.taze("p1"), K.taze("z"))
+    i, j, k = K.taze("i"), K.taze("j"), K.taze("k")
+    I, J, Kk = (Aralik.degisken(i), Aralik.degisken(j), Aralik.degisken(k))
+    Y, X0, X1, P0, P1 = _t(y), _t(x0), _t(x1), _t(p0), _t(p1)
+    uy = K.uygula
+
+    gy = uy(g, Y)
+
+    def _fill(x, p):
+        return K.dolgu(k, A,
+            [(S.yuz(**{i: 1}), K.yol_uygula(uy(t, x), Kk)),
+             (S.yuz(**{i: 0}), gy)],
+            uy(g, K.yol_uygula(p, I.degil())))
+
+    fill0, fill1 = _fill(X0, P0), _fill(X1, P1)
+    at = lambda trm, iv, kv: K.ara_ikame(trm, {i: iv, k: kv})
+
+    fill2 = K.dolgu(k, A,
+        [(S.yuz(**{i: 1}), at(fill1, Kk, BIR)),
+         (S.yuz(**{i: 0}), at(fill0, Kk, BIR))],
+        gy)
+
+    p_yol = S.YolLam(i, at(fill2, I, BIR))          # p : Path A x0 x1
+
+    sq = S.HKomp(A, k,
+        [(S.yuz(**{i: 1}), at(fill1, J, Kk.degil())),
+         (S.yuz(**{i: 0}), at(fill0, J, Kk.degil())),
+         (S.yuz(**{j: 0}), gy),
+         (S.yuz(**{j: 1}), K.yol_uygula(uy(t, at(fill2, I, BIR)),
+                                        Kk.degil()))],
+        at(fill2, I, J))                             # i, j serbest
+
+    # sq'nun j yönü p0/p1'e göre TERSİNEDİR: fill1 j (~k) ucu g(p1 @ ~j)
+    # verir. Bu yüzden sq1'in i-dallarında p @ ~j, ve j=0/j=1 dalları
+    # (g y / f (p i)) sırasıyla yer alır.
+    sq1 = S.HKomp(B, k,
+        [(S.yuz(**{i: 1}), K.yol_uygula(uy(s, K.yol_uygula(P1, J.degil())),
+                                        Kk)),
+         (S.yuz(**{i: 0}), K.yol_uygula(uy(s, K.yol_uygula(P0, J.degil())),
+                                        Kk)),
+         (S.yuz(**{j: 0}), K.yol_uygula(uy(s, Y), Kk)),
+         (S.yuz(**{j: 1}), K.yol_uygula(uy(s, uy(f, K.yol_uygula(p_yol, I))),
+                                        Kk))],
+        uy(f, sq))                                   # i, j serbest
+
+    lem = S.YolLam(i, S.Cift(
+        K.yol_uygula(p_yol, I),
+        S.YolLam(j, K.ara_ikame(sq1, {j: J.degil()}))))
+
+    # isEquiv f : Π (y:B). isContr (fiber f y)
+    merkez = S.Cift(gy, uy(s, Y))
+    buzme = S.Lam(z, K.ikame(lem, {x0: gy, p0: uy(s, Y),
+                                   x1: S.Birinci(_t(z)),
+                                   p1: S.Ikinci(_t(z))}))
+    return S.Cift(f, S.Lam(y, S.Cift(merkez, buzme)))
+
+
+# =====================================================================
+#  ℤ üzerinde ardıl bir denkliktir
+# =====================================================================
+def _z_yol_ispati(dis_govde, ic_sfr, ic_ard, neg_govde) -> Terim:
+    """ℤ tümevarımı + poz dalında ℕ tümevarımı ile yol ispatı iskeleti."""
+    Z = S.Tamsayi()
+    z, n, m = K.taze("z"), K.taze("n"), K.taze("m")
+    poz_dali = S.DogalInd(m, dis_govde(S.Poz(_t(m))), ic_sfr,
+                          m, "_r", ic_ard(_t(m)), _t(n))
+    return S.Lam("w", S.TamsayiInd(z, dis_govde(_t(z)),
+                                   n, poz_dali,
+                                   n, neg_govde(_t(n)),
+                                   _t("w")))
+
+
+def ardil_oncel() -> Terim:
+    """``Π b:ℤ. sucZ (predZ b) ≡ b`` -- her hâlde refl ile kapanır."""
+    Z = S.Tamsayi()
+    suc, pred = ardil_z(), oncel_z()
+    ifade = lambda w: S.yol(Z, K.uygula(suc, K.uygula(pred, w)), w)
+    return _z_yol_ispati(
+        ifade,
+        refl(S.Poz(S.Sfr())),
+        lambda m: refl(S.Poz(S.Ard(m))),
+        lambda n: refl(S.NegArd(n)))
+
+
+def oncel_ardil() -> Terim:
+    """``Π a:ℤ. predZ (sucZ a) ≡ a``"""
+    Z = S.Tamsayi()
+    suc, pred = ardil_z(), oncel_z()
+    ifade = lambda w: S.yol(Z, K.uygula(pred, K.uygula(suc, w)), w)
+    z, n, m = K.taze("z"), K.taze("n"), K.taze("m")
+    poz_dali = refl(S.Poz(_t(n)))
+    neg_ic = S.DogalInd(m, ifade(S.NegArd(_t(m))), refl(S.NegArd(S.Sfr())),
+                        m, "_r", refl(S.NegArd(S.Ard(_t(m)))), _t(n))
+    return S.Lam("w", S.TamsayiInd(z, ifade(_t(z)),
+                                   n, poz_dali, n, neg_ic, _t("w")))
+
+
+def ardil_denkligi() -> Terim:
+    """``sucEquiv : Denklik ℤ ℤ``"""
+    Z = S.Tamsayi()
+    return izo_denklige(Z, Z, ardil_z(), oncel_z(),
+                        ardil_oncel(), oncel_ardil())
+
+
+# =====================================================================
+#  Sarmal (helix) ve sarım sayısı -- π₁(S¹)
+# =====================================================================
+def sarmal(nokta: Terim) -> Terim:
+    """``helix : S¹ → U``;  ``taban ↦ ℤ``,  ``dongu ↦ ua sucEquiv``."""
+    Z = S.Tamsayi()
+    i = K.taze("i")
+    govde = S.Yapistir(Z, [
+        (S.yuz(**{i: 0}), Z, ardil_denkligi()),
+        (S.yuz(**{i: 1}), Z, ozdeslik_denkligi(Z)),
+    ])
+    return S.CemberInd("_", U, Z, i, govde, nokta)
+
+
+def sarim(p: Terim) -> Terim:
+    """``sarim : (Path S¹ taban taban) → ℤ`` -- sarım sayısı."""
+    i = K.taze("i")
+    cizgi = sarmal(K.yol_uygula(p, Aralik.degisken(i)))
+    return S.Transp(i, cizgi, YANLIS, S.Poz(S.Sfr()))

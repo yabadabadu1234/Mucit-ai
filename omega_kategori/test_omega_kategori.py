@@ -264,27 +264,61 @@ def test_menfi_glue_yuzunde_denklik_uyusmuyor():
 
 
 # =====================================================================
-#  5. Bilinen boşluklar SESSİZ DEĞİL
+#  5. Glue hesabı -- tümel değişmezlik HESAPLANIYOR
 # =====================================================================
-def test_eksik_kurallar_acikca_yukselir():
-    for cagri in (lambda: Dk.cizgi_denkligi("i", D("A")),
-                  lambda: Dk.komp_yapistir("i", None, [], D("A"))):
-        try:
-            cagri()
-        except Dk.EksikKural:
-            continue
-        raise AssertionError("eksik kural sessizce bir netice verdi")
+def test_cizgi_denkligi():
+    """``comp^i U``nun dayandığı lineToEquiv."""
+    N = S.Dogal()
+    denetle(Dk.cizgi_denkligi("k", N), L.denklik_tipi(N, N), Baglam())
 
 
-def test_ua_boyunca_tasima_sessizce_yanlis_cevap_vermiyor():
-    A, B, e, x = D("A"), D("B"), D("e"), D("x")
-    g = Baglam({"A": U, "B": U, "e": L.denklik_tipi(A, B), "x": A})
-    try:
-        K.nf(L.tasi(L.ua(A, B, e), x), g.tipler)
-    except Dk.EksikKural:
-        return
-    raise AssertionError("ua boyunca taşıma bir netice verdi -- "
-                         "boşluk kütüğü ile çelişiyor")
+def test_izo_denklige_sucEquiv():
+    """isoToEquiv: sucZ bir denkliktir -- TİP DENETİMİNDEN geçer."""
+    Z = S.Tamsayi()
+    denetle(L.ardil_denkligi(), L.denklik_tipi(Z, Z), Baglam())
+
+
+def test_ua_beta_ozdeslik_denkligiyle():
+    N = S.Dogal()
+    uaN = L.ua(N, N, L.ozdeslik_denkligi(N))
+    denetle(uaN, S.yol(U, N, N), Baglam())
+    assert K.esdeger_mi(L.tasi(uaN, S.dogal_sayi(3)), S.dogal_sayi(3))
+
+
+def test_ua_beta_asikar_olmayan_denklikle():
+    """ASIL SINAV: ua sucEquiv boyunca taşıma ardılı vermeli.
+
+    Bu, Glue'nun comp kuralının fiilen ve doğru işlediğinin delilidir;
+    aşikâr olmayan bir denklik kullanıldığı için özdeşlikle geçiştirilemez.
+    """
+    Z = S.Tamsayi()
+    uaS = L.ua(Z, Z, L.ardil_denkligi())
+    denetle(uaS, S.yol(U, Z, Z), Baglam())
+    for n in (-2, -1, 0, 1, 3):
+        assert K.esdeger_mi(L.tasi(uaS, S.tam_sayi(n)), S.tam_sayi(n + 1)), n
+
+
+def test_helix_ve_sarim():
+    """π₁(S¹): sarmal tip denetiminden geçer, sarım sayısı hesaplanır.
+
+    NOT: |n| ≥ 2 ve negatif n için hesap pratikte bitmez (hız duvarı,
+    turetimler.bosluklar() kütüğünde kayıtlı); doğruluk meselesi değildir.
+    """
+    S1 = S.Cember()
+    denetle(S.Lam("x", L.sarmal(D("x"))), S.ok(S1, U), Baglam())
+    assert K.esdeger_mi(L.sarim(L.dongu_kuvveti(0)), S.tam_sayi(0))
+    assert K.esdeger_mi(L.sarim(L.dongu_kuvveti(1)), S.tam_sayi(1))
+
+
+# =====================================================================
+#  6. Geometri katmanı: teğet, tensör, monoid nesnesi
+# =====================================================================
+def test_geometri_hepsi():
+    from . import geometri as G
+    neticeler = G.dogrula_hepsi()
+    hatalar = [n for n in neticeler if n["netice"] != "GEÇTİ"]
+    assert not hatalar, "geometri katmanında hata: %s" % hatalar
+    assert len(neticeler) >= 20
 
 
 # =====================================================================

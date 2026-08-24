@@ -41,10 +41,45 @@ class TipHatasi(Exception):
 
 
 # =====================================================================
+#  Önbellek
+# =====================================================================
+# Terimler değişmez ve hash'lenebilir; bağlamlar da kurulduktan sonra
+# değiştirilmez. Bu yüzden (bağlam kimliği, terim) çifti güvenli bir
+# anahtardır. Yığılmış comp'larda aynı alt terim defalarca
+# normalleştirildiğinden kazanç büyüktür.
+_ONBELLEK_SINIRI = 400000
+_nf_onb: Dict = {}
+_whnf_onb: Dict = {}
+_serbest_onb: Dict = {}
+_ikame_onb: Dict = {}
+_komp_onb: Dict = {}
+_baglam_capa: List = []
+_baglam_kimlik: Set[int] = set()
+
+
+def _capala(baglam) -> None:
+    """Bağlamı canlı tut ki id() yeniden kullanılmasın."""
+    if baglam is not None and id(baglam) not in _baglam_kimlik:
+        _baglam_kimlik.add(id(baglam))
+        _baglam_capa.append(baglam)
+
+
+def onbellegi_bosalt() -> None:
+    _nf_onb.clear()
+    _whnf_onb.clear()
+    _serbest_onb.clear()
+    _ikame_onb.clear()
+    _komp_onb.clear()
+
+
+# =====================================================================
 #  Serbest değişkenler
 # =====================================================================
 def ara_serbest(t: Terim) -> Set[str]:
     """Terimdeki serbest ARALIK değişkenleri."""
+    onb = _serbest_onb.get(t)
+    if onb is not None:
+        return onb
     g: Set[str] = set()
 
     def yuzler_ekle(dallar):
@@ -128,6 +163,8 @@ def ara_serbest(t: Terim) -> Set[str]:
             yur(alt, bagli)
 
     yur(t, set())
+    if len(_serbest_onb) < _ONBELLEK_SINIRI:
+        _serbest_onb[t] = g
     return g
 
 
@@ -261,6 +298,17 @@ def ara_ikame(t: Terim, sigma: Dict[str, Aralik]) -> Terim:
     """Aralık değişkenlerinin eşzamanlı ikamesi."""
     if not sigma:
         return t
+    anahtar = (t, frozenset(sigma.items()))
+    onb = _ikame_onb.get(anahtar)
+    if onb is not None:
+        return onb
+    sonuc = _ara_ikame_hesapla(t, sigma)
+    if len(_ikame_onb) < _ONBELLEK_SINIRI:
+        _ikame_onb[anahtar] = sonuc
+    return sonuc
+
+
+def _ara_ikame_hesapla(t: Terim, sigma: Dict[str, Aralik]) -> Terim:
     f = lambda x: ara_ikame(x, sigma)
 
     if isinstance(t, (S.Deg, S.Evren, S.Dogal, S.Tamsayi, S.Cember,
@@ -588,6 +636,19 @@ def komp(ad: str, cizgi: Terim, dallar, u0: Terim,
          baglam: Optional[Baglam] = None) -> Terim:
     """ASLİ Kan işlemi: ``comp^ad cizgi [dallar] u0``."""
     dallar = list(dallar)
+    anahtar = (ad, cizgi, tuple(dallar), u0, id(baglam))
+    onb = _komp_onb.get(anahtar)
+    if onb is not None:
+        return onb
+    sonuc = _komp_hesapla(ad, cizgi, dallar, u0, baglam)
+    if len(_komp_onb) < _ONBELLEK_SINIRI:
+        _capala(baglam)
+        _komp_onb[anahtar] = sonuc
+    return sonuc
+
+
+def _komp_hesapla(ad: str, cizgi: Terim, dallar, u0: Terim,
+                  baglam: Optional[Baglam] = None) -> Terim:
 
     # (a) Bir dalın yüzü zaten ⊤ ise, o dalın 1'deki değeri neticedir.
     for (y, govde) in dallar:
@@ -642,10 +703,29 @@ def komp(ad: str, cizgi: Terim, dallar, u0: Terim,
         govde = komp(ad, ic_cizgi, ic_dallar, yol_uygula(u0, j_ar), baglam)
         return S.YolLam(j, govde)
 
-    # ---- ayrık veri tipleri (ℕ, ℤ) ----
-    # Bunlar ayrıktır: her yol sabittir, dolayısıyla comp = u0.
+    # ---- veri tipleri (ℕ, ℤ): kurucuya İTİLEREK indirgenir ----
+    # DİKKAT: "ayrık olduğu için comp = u0" SAĞLAM DEĞİLDİR -- sistemin
+    # i=1'deki değeri tabana yalnız PROPOZİSYONEL eşittir, tanımsal değil.
+    # Doğru kural, tabanın kurucusuna göre sistemi bileşenlere dağıtmaktır;
+    # bütün dallar aynı kurucuyla başlamıyorsa comp TAKILI kalır.
     if isinstance(A, (S.Dogal, S.Tamsayi)):
-        return whnf(u0, baglam)
+        u0w = whnf(u0, baglam)
+        govdeler = [whnf(g, baglam) for (_, g) in dallar]
+        yuzler = [y for (y, _) in dallar]
+
+        def _ic(ic_tip, alt_u0, altlar):
+            return komp(ad, ic_tip, list(zip(yuzler, altlar)), alt_u0, baglam)
+
+        if isinstance(u0w, S.Sfr) and all(isinstance(x, S.Sfr) for x in govdeler):
+            return S.Sfr()
+        if isinstance(u0w, S.Ard) and all(isinstance(x, S.Ard) for x in govdeler):
+            return S.Ard(_ic(S.Dogal(), u0w.alt, [x.alt for x in govdeler]))
+        if isinstance(u0w, S.Poz) and all(isinstance(x, S.Poz) for x in govdeler):
+            return S.Poz(_ic(S.Dogal(), u0w.alt, [x.alt for x in govdeler]))
+        if isinstance(u0w, S.NegArd) and all(isinstance(x, S.NegArd)
+                                             for x in govdeler):
+            return S.NegArd(_ic(S.Dogal(), u0w.alt, [x.alt for x in govdeler]))
+        return S.Komp(ad, cizgi, dallar, u0)
 
     # ---- S¹ : hcomp KANONİK bir değerdir ----
     if isinstance(A, S.Cember):
@@ -656,7 +736,7 @@ def komp(ad: str, cizgi: Terim, dallar, u0: Terim,
     # ---- U : Glue ile ----
     if isinstance(A, S.Evren):
         from .denklik import cizgi_denkligi
-        taban = ara_ikame(u0, {})  # u0 : U, comp'un tabanı
+        taban = u0  # comp'un tabanı, kendisi bir tip
         yeni_dallar = []
         for (y, g) in dallar:
             T1 = ara_ikame(g, {ad: BIR})
@@ -680,6 +760,18 @@ def komp(ad: str, cizgi: Terim, dallar, u0: Terim,
 #  Zayıf-baş normal form
 # =====================================================================
 def whnf(t: Terim, baglam: Optional[Baglam] = None) -> Terim:
+    anahtar = (id(baglam), t)
+    onb = _whnf_onb.get(anahtar)
+    if onb is not None:
+        return onb
+    sonuc = _whnf_hesapla(t, baglam)
+    if len(_whnf_onb) < _ONBELLEK_SINIRI:
+        _capala(baglam)
+        _whnf_onb[anahtar] = sonuc
+    return sonuc
+
+
+def _whnf_hesapla(t: Terim, baglam: Optional[Baglam] = None) -> Terim:
     while True:
         if isinstance(t, S.Uygula):
             f = whnf(t.fonk, baglam)
@@ -817,6 +909,21 @@ def sentez(t: Terim, baglam: Baglam) -> Optional[Terim]:
         if isinstance(pt, S.YolP):
             return ara_ikame(pt.cizgi, {pt.ad: t.r})
         return None
+    # eliminatörler ve Kan işlemleri: tipleri terimden okunur
+    if isinstance(t, S.DogalInd):
+        return ikame(t.hedef, {t.ad: t.sayi})
+    if isinstance(t, S.TamsayiInd):
+        return ikame(t.hedef, {t.ad: t.sayi})
+    if isinstance(t, S.CemberInd):
+        return ikame(t.hedef, {t.ad: t.nokta})
+    if isinstance(t, (S.Komp, S.Transp)):
+        return ara_ikame(t.cizgi, {t.ad: BIR})
+    if isinstance(t, S.HKomp):
+        return t.tip
+    if isinstance(t, S.Coz):
+        return t.taban
+    if isinstance(t, S.YapistirTerim):
+        return None
     return None
 
 
@@ -825,6 +932,18 @@ def sentez(t: Terim, baglam: Baglam) -> Optional[Terim]:
 # =====================================================================
 def nf(t: Terim, baglam: Optional[Baglam] = None) -> Terim:
     """Tam normal form (bağlayıcıların altına da iner)."""
+    anahtar = (id(baglam), t)
+    onb = _nf_onb.get(anahtar)
+    if onb is not None:
+        return onb
+    sonuc = _nf_hesapla(t, baglam)
+    if len(_nf_onb) < _ONBELLEK_SINIRI:
+        _capala(baglam)
+        _nf_onb[anahtar] = sonuc
+    return sonuc
+
+
+def _nf_hesapla(t: Terim, baglam: Optional[Baglam] = None) -> Terim:
     t = whnf(t, baglam)
     f = lambda x: nf(x, baglam)
     if isinstance(t, (S.Deg, S.Evren, S.Dogal, S.Tamsayi, S.Cember,

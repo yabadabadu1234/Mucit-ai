@@ -1,114 +1,131 @@
 # omega_kategori — (∞,∞)-kategori / kübik tip teorisi çekirdeği
 
-Saf Python, hiçbir harici bağımlılık yok.
+Saf Python, hiçbir harici bağımlılık yok (~4200 satır).
 
 ```
-python3 -m omega_kategori.test_omega_kategori     # sınama takımı
-python3 -c "from omega_kategori import turetimler; print(turetimler.rapor())"
+python3 -m omega_kategori.test_omega_kategori                       # 26 sınama
+python3 -c "from omega_kategori import turetimler as T; print(T.rapor())"
+python3 -c "from omega_kategori import geometri as G; print(G.rapor())"
 ```
 
 ## Ne olduğu
 
-Bu, `(∞,∞)`-kategorileri ve HoTT'un uzay türetimlerini **fiilen denetleyen**
-bir çekirdektir: CCHM tarzı, De Morgan aralıklı kübik tip teorisinin
-tümü Python'da imâl edilmiş bir tip denetleyicisi ve indirgeyicisi.
-
-Kilit nokta şudur: **hiçbir matematiksel iddia Python'da "kabul edilmez".**
-Python yalnızca terim inşa eder; her iddia nesne dilinde bir terimdir ve
-`denetleyici` tarafından makine ile doğrulanır. Bu yüzden aşağıdaki
-"geçti" satırları, kendi kendini onaylayan beyanlar değil, denetlenmiş
-neticelerdir.
-
-## Katmanlar
+CCHM tarzı, De Morgan aralıklı kübik tip teorisinin **çalışan** bir
+çekirdeği: indirgeyici + iki yönlü tip denetleyici. **Hiçbir matematiksel
+iddia Python'da "kabul edilmez"** — Python yalnız terim inşa eder; her
+iddia nesne dilinde bir terimdir ve denetleyiciden geçer.
 
 | Dosya | İş |
 |---|---|
 | `aralik.py` | De Morgan aralık cebri **ve** yüz (kofibrasyon) kafesi |
 | `sozdizim.py` | terimler |
 | `cekirdek.py` | ikame, indirgeme, Kan işlemleri (asli işlem: `comp`) |
+| `denklik.py` | **Glue'nun Kan hesabı** — `comp^i U` ve `comp^i (Glue …)` |
 | `denetleyici.py` | iki yönlü tip denetleyici |
-| `kutuphane.py` | nesne dilinde temel kütüphane |
-| `denklik.py` | denklik yapıları + **açık boşluklar** |
-| `turetimler.py` | uzayların türetilmesi + aksiyom/boşluk kütüğü |
+| `kutuphane.py` | nesne dilinde kütüphane (∞-grupoid, J, `ua`, isoToEquiv, sarmal) |
+| `turetimler.py` | uzayların türetilmesi + boşluk kütüğü |
+| `geometri.py` | teğet demeti, tensörler, monoid/Lie nesneleri, de Rham |
 
 ### İki kafes, bir köprü
 
-Kübik çekirdek yazarken en sık yapılan hata iki kafesi karıştırmaktır:
+* **Aralık `I`**: `{i, ~i}` üzerine **serbest De Morgan cebri**. Burada
+  `i ∧ ~i ≠ 0` — tümleyen kanunu **yoktur**.
+* **Yüz kafesi**: `(i=0)`, `(i=1)` atomları; burada `(i=0) ∧ (i=1) = ⊥`.
 
-* **Aralık `I`**: `{i, ~i}` üzerine **serbest De Morgan cebri**.
-  Burada `i ∧ ~i ≠ 0` — tümleyen kanunu **yoktur**.
-* **Yüz kafesi**: `(i=0)`, `(i=1)` atomları. Burada `(i=0) ∧ (i=1) = ⊥`.
+Köprü `aralik_esitligi(r, ε)`. Terim seviyesinde indirgeme tercih edilmesinin
+sebebi budur: bir yüzün ikame altında **birden çok yüze açılması**
+(`(i=0)[i↦j∧k] = (j=0)∨(k=0)`) doğrudan cebre devredilir.
 
-Köprü `aralik_esitligi(r, ε)`: bir aralık ifadesinin `0`/`1`e eşit olma
-şartını yüz kafesine indirger (`(i∧j = 0) = (i=0) ∨ (j=0)` gibi). Sınama
-takımı bu ayrımı açıkça sınar.
+## Tümel değişmezlik HESAPLANIYOR
 
-### Neden NbE değil, terim seviyesinde indirgeme
+Glue'nun Kan kuralı tamamlandı; ikisi de imâl edildi:
 
-Kübik tip teorisinde değerlerin **aralık ikamesi** altındaki davranışı
-incedir (yerli kapanışların ikamesi çift-ikame hatasına açıktır). Terim
-seviyesinde bu bedavaya gelir: bir yüzün ikame altında **birden çok yüze
-açılması** (`(i=0)[i↦j∧k] = (j=0)∨(k=0)`) doğrudan kofibrasyon cebrine
-devredilir. Doğruluk, hız için tercih edilmiştir.
+* **`comp^i U`** — `cizgi_denkligi`. Taşımanın denklik olduğunu ayrıca
+  ispatlamak yerine, **özdeşlik denkliğini denklik-tipleri çizgisi boyunca
+  taşıyoruz**: `transp^i (Denklik A(0) A(i)) ⊥ (idEquiv A(0))`. Bu yalnız
+  Σ/Π/Path'te `transp` gerektirir.
+* **`comp^i (Glue A [φ ↦ (T,w)])`** — CCHM (2018) §6.2 silsilesi:
+  `δ = ∀i.φ`, `a'1`, `t'1`, `pres`, denklikle lif tamamlama, `a1`, `glue`.
+  `t1` ve `α`, `φ(1)`in **her yüzü için ayrı ayrı** o yüze kısıtlanmış
+  bağlamda hesaplanır.
 
-## (A) Hesaplanan ve denetlenen
+Ayrıca **`isoToEquiv`** (`izo_denklige`) imâl edildi ve tip denetiminden
+geçiyor; `sucZ : ℤ → ℤ` bununla bir denkliğe çevriliyor.
 
-* Π, Σ, seviyeli tümeller, `PathP`; η dâhil tanımsal eşitlik
-* `comp` asli Kan işlemi; `transp`, `hcomp`, `fill` ondan türetilir
-* Kan kuralları: Π, Σ, PathP, ℕ, ℤ, S¹
-* **∞-grupoid kulesi**: her tipin `n`-morfizmleri; birleşme gibi kanunlar
-  **katı eşitlik değil**, bir üst mertebeden morfizm (yol) olarak
-* h-mertebeleri: büzülebilir / önerme / küme / grupoid / `n`-tip
-* `Ωⁿ`, `J` (yol tümevarımı), lif, `isEquiv`, `Equiv`, `idEquiv`
-* S¹ ve döngü kuvvetleri (`dongu³`, `dongu⁻²` …) — HIT'in `hcomp` kuralı
-  eliminatörle doğru etkileşiyor
-* **Kümeler** 0-mertebeye indirgemeden; **monoid / grup / değişmeli halka /
-  kategori** bu kümeler üzerine Σ-tipleri olarak; **globüler tipler**
-  `Glob(k+1) = Σ (Ob:U). Ob → Ob → Glob(k)`
+**Delil** — aşikâr olmayan bir denklikle `uaβ`:
 
-## (B) İfade edilen, hesaplanmayan
+```
+transport (ua sucEquiv) n  ↝  n+1      (n = −2, −1, 0, 1, 3 için sınandı)
+```
 
-`ua` teşkil edilir, tip denetiminden geçer, **uçları tanımsal olarak
-doğrudur** (`ua e @ 0 ≡ A`, `ua e @ 1 ≡ B`). Fakat `ua` **boyunca taşıma
-indirgenmez**: `comp^i (Glue …)` kuralı (CCHM 2018 §6.2) imâl edilmedi.
+Özdeşlik denkliğiyle geçiştirilemeyecek bir sınamadır; Glue kuralının
+fiilen ve doğru işlediğini gösterir.
 
-Bunun somut neticesi: **π₁(S¹) ≅ ℤ bu çekirdekte ifade edilebilir, fakat
-hesaplanamaz.** Sarmal (helix) `S¹ → U` özyinelemesi `comp^i U` gerektirir,
-o da `Glue` hesabına dayanır.
+## π₁(S¹) — kısmen
 
-Bu boşluk **sessiz değildir**: ilgili kod yolu `EksikKural` yükseltir ve
-sınama takımında bunun böyle olduğu ayrıca sınanır. Yapı taşları hazırdır
-(`denklik.her_i_icin` = `∀i.φ`, `denklik.lifi_tamamla`); eksik olan
-kuralın kendisidir.
+`sarmal : S¹ → U` (`taban ↦ ℤ`, `dongu ↦ ua sucEquiv`) tip denetiminden
+geçiyor ve:
 
-## (C) Postulat
+```
+sarim(dongu⁰) = +0        sarim(dongu¹) = +1
+```
 
-Aşağıdakiler nesne dilinde **ispatlanmaz**; aksiyom olarak eklenir.
-Tipleri yine de makine ile denetlenir — yani "iyi teşkil edilmiş aksiyom"
-oldukları doğrulanır:
+`|n| ≥ 2` ve negatif `n` için hesap **pratikte bitmiyor**. Sebebi doğruluk
+değil, değerlendirici mimarisidir: S¹ içindeki bir `hcomp`'a `sarmal`
+uygulanınca `comp^i U` doğar, o da her katmanda bütün `Denklik` kulesini
+(Σ/Π/isContr) taşır; terim seviyesinde, paylaşımsız ikameyle çalışan bir
+indirgeyicide terim patlar. Kapanışı NbE'ye (kapanışlı değerler) geçmeyi
+gerektirir. `turetimler.bosluklar()` kütüğünde kayıtlıdır.
 
-* `R`, `top_R`, `carp_R`, `sifir_R` — pürüzsüz doğru ve halka işlemleri
-* **Kock–Lawvere**: `D = Σ (x:R). x·x = 0` üzerindeki her fonksiyon tek bir
-  afin form ile temsil edilir → türev kavramı buradan doğar
-* `Im` — sonsuz küçük şekil kipi ℑ, ve birimi `X → ℑX`
-* `uaBeta` — `ua` boyunca taşımanın denkliğin fonksiyonu olduğu
+## Türetilen uzaylar (hepsi denetlenmiş)
 
-Pürüzsüz `∞`-topos ve yüksek topos teorisi bu katmandadır. Bu bir eksiklik
-itirafı değil, sahanın hâlidir: **hiçbir kübik çekirdek — Cubical Agda
-dâhil — pürüzsüz ∞-toposu hesaplayan bir indirgeyici vermez**; oralarda da
-bu aksiyomdur.
+**`turetimler`** — 28/28: ∞-grupoid kulesi (`n`-morfizmler; birleşme
+**katı eşitlik değil**, üst mertebeden yol), h-mertebeleri, `Ωⁿ`, kümeler,
+monoid / grup / değişmeli halka, kategori, globüler tipler
+`Glob(k+1) = Σ (Ob:U). Ob → Ob → Glob(k)`, S¹ ve döngü kuvvetleri.
+
+**`geometri`** — 24/24, mesajdaki silsileyi takip eder:
+
+1. `D = Σ (x:R). x·x = 0`
+2. **`TX := X^D`** — teğet demeti bir **haritalama uzayıdır**; uzayı kurmak
+   teğetini de kurmaktır. Lif: `T_x X = Σ (v : D→X). v(0) = x`
+3. `Mod_R`, doğrusal dönüşümler, dual `M*`
+4. `(r,s)`-tensör: `r` kovektör + `s` vektör ↦ skaler; **her yuvada
+   doğrusallık şartıyla** (`tensor_yapisi`). Metrik `(0,2)`, Riemann `(1,3)`
+5. **Monoid nesnesi** `μ, η` — `Mod_R` içinde monoid nesnesi tam olarak
+   birleşmeli birimli `R`-cebridir
+6. **Lie**: parantez, antisimetri, Jacobi — ve `koherens_kulesi(n)` ile
+   Jacobi'nin bir üst mertebeden yolla koherensi
+7. **de Rham**: `Ωⁿ(X)`, `d` ve `d∘d = 0` (postulat, tipleri denetlenmiş)
+
+## Postulat katmanı
+
+Nesne dilinde **ispatlanmaz**, aksiyom eklenir; **tipleri** yine de makine
+ile denetlenir: `R` ve halka işlemleri, **Kock–Lawvere**, sonsuz küçük şekil
+kipi `ℑ`, dış türev `d`. Bu bir eksiklik itirafı değil sahanın hâlidir:
+**hiçbir kübik çekirdek — Cubical Agda dâhil — pürüzsüz ∞-toposu hesaplayan
+bir indirgeyici vermez.**
+
+## Düzeltilen bir sağlamlık hatası
+
+İlk sürümde "ℕ/ℤ ayrıktır, `comp = u0`" kuralı vardı. **Bu sağlam
+değildi**: sistemin `i=1`deki değeri tabana yalnız propozisyonel eşittir,
+tanımsal değil — kural bütün ℤ dolgularını çökertiyor, `isoToEquiv`'i
+imkânsız kılıyordu. Yerine doğru yapısal kural kondu: taban kurucusuna göre
+sistem bileşenlere dağıtılır, dallar aynı kurucuyla başlamıyorsa `comp`
+**takılı kalır**.
 
 ## Menfî sınamalar
 
-Bir tip denetleyicisinin "geçti" demesi, ancak yanlışı **reddettiği**
-gösterilirse bir şey ifade eder. Takımda 7 menfî sınama vardır: tip
-uyuşmazlığı, kapsam dışı değişken, yolun ucunun tutmaması, çakışan yüzde
-uyuşmayan sistem, tabanla uyuşmayan sistem, kofibrasyonda sabit olmayan
-`transp` çizgisi, ve yüzünde denkliği tutmayan `glue`.
+"Geçti" demek, ancak yanlışın **reddedildiği** gösterilirse bir şey ifade
+eder. 7 menfî sınama: tip uyuşmazlığı, kapsam dışı değişken, yolun ucunun
+tutmaması, çakışan yüzde uyuşmayan sistem, tabanla uyuşmayan sistem,
+kofibrasyonda sabit olmayan `transp` çizgisi, yüzünde denkliği tutmayan
+`glue`.
 
-## Şu anki durum
+## Durum
 
 ```
-22 sınamanın 22'si geçiyor  (7'si menfî)
-27 türetim tip denetiminden geçiyor, 1 bilinen eksik kural, 0 hata
+26 sınamanın 26'sı geçiyor  (7'si menfî)
+turetimler: 28/28   ·   geometri: 24/24
 ```
