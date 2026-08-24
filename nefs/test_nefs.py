@@ -408,3 +408,66 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+# =====================================================================
+#  KAN tabanı: RBF ile B-spline yan yana
+# =====================================================================
+
+def test_kan_temelleri_kiyas() -> None:
+    """İki taban da çalışmalı; farkları İDDİA değil ÖLÇÜM olmalı.
+
+    Risaleler KAN kenarlarını B-spline ile tarif ediyor; ilk gerçekleme
+    Gauss RBF kullanıyordu.  İkisi de tek değişkenli taban verir, fakat
+    B-spline üç şeyi garanti eder ki RBF etmez.  Burada o üçü tartılır.
+    """
+    from nefs.idrak import kan_temeli
+
+    rng = np.random.default_rng(0)
+    v = rng.normal(0.0, 1.0, (200, 6))
+    nb = 12
+
+    B_rbf = kan_temeli(v, nb, "rbf")
+    B_spl = kan_temeli(v, nb, "bspline")
+    assert B_rbf.shape == B_spl.shape == (200, 6, nb)
+    assert np.all(np.isfinite(B_rbf)) and np.all(np.isfinite(B_spl))
+
+    # 1) Birliğin bölünmesi — B-spline'da tam, RBF'te değil.
+    top_spl = B_spl.sum(axis=2)
+    top_rbf = B_rbf.sum(axis=2)
+    ic = np.abs(v) < 1.5                      # ızgaranın iç bölgesi
+    spl_sapma = float(np.max(np.abs(top_spl[ic] - 1.0)))
+    rbf_dalga = float(np.max(top_rbf[ic]) - np.min(top_rbf[ic]))
+    assert spl_sapma < 1e-12, spl_sapma
+    assert rbf_dalga > 1e-3, "RBF toplamı sabit çıktı — kıyas boş"
+
+    # 2) Yerellik — B-spline'da her satırda pek az sıfırdan farklı terim.
+    spl_dolu = float(np.mean(np.sum(B_spl > 1e-12, axis=2)))
+    rbf_dolu = float(np.mean(np.sum(B_rbf > 1e-12, axis=2)))
+    assert spl_dolu <= 4.0 + 1e-9, spl_dolu     # derece 3 → en çok 4
+    assert rbf_dolu > spl_dolu
+
+    # 3) Negatiflik — ikisi de negatif değer üretmemeli.
+    assert np.min(B_spl) > -1e-12 and np.min(B_rbf) >= 0.0
+
+    # 4) İkisi de gerçek melekede koşabilmeli ve SONLU çıktı vermeli.
+    import nefs.idrak as idrak
+    eski = idrak.KAN_TEMELI
+    ciktilar = {}
+    try:
+        for tur in ("rbf", "bspline"):
+            idrak.KAN_TEMELI = tur
+            d = Nefs(3).idrak_et(_E(3))
+            assert np.all(np.isfinite(d.Z_muhayyile)), tur
+            assert np.all(np.isfinite(d.S)) and np.all(np.isfinite(d.N)), tur
+            # Muhayyile'nin vaadi: serbestlik her hâlükârda τ'nun altında
+            assert d.olcum.al("muhayyile.serbestlik") <= \
+                d.olcum.al("muhayyile.tau") + 1e-9, tur
+            ciktilar[tur] = d.Z_muhayyile.copy()
+    finally:
+        idrak.KAN_TEMELI = eski
+
+    # İki taban aynı sayıyı vermez (vermeseydi kıyas anlamsız olurdu),
+    # ama ikisi de melekenin şartını sağlar.
+    fark = float(np.max(np.abs(ciktilar["rbf"] - ciktilar["bspline"])))
+    assert fark > 0.0, "iki taban birebir aynı çıktı verdi — kıyas boş"

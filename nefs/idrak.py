@@ -11,7 +11,7 @@ tarafındadır ve orada makine ile denetlenir. Burada onların yerine, aynı
 """
 from __future__ import annotations
 
-from typing import Tuple
+from typing import Optional, Tuple
 
 import numpy as np
 
@@ -113,6 +113,52 @@ class Hayal(Meleke):
         d.olcum.koy("hayal.kapı_ortalaması", np.mean(alfa))
 
 
+#: KAN kenarlarının tek değişkenli tabanı: ``"rbf"`` veya ``"bspline"``.
+#:
+#: Risalelerde KAN kenarları **B-spline** ile tarif edilir; buradaki ilk
+#: gerçekleme ise Gauss RBF kullanıyordu.  İkisi de tek değişkenli bir
+#: taban verir, fakat üç noktada ayrışırlar ve bu ayrım ölçülebilir:
+#:
+#: * **Yerellik** — derece ``k`` B-spline'ı yalnız ``k+1`` düğüm
+#:   aralığında sıfırdan farklıdır; bir katsayıyı oynatmak uzaktaki
+#:   değerleri HİÇ etkilemez.  Gauss RBF her yerde sıfırdan farklıdır.
+#: * **Birliğin bölünmesi** — ``Σ_i B_i(t) = 1`` tam sağlanır, yani
+#:   çıktı tabanın konveks birleşimidir ve ölçek kaymaz.  RBF'te böyle
+#:   bir garanti yoktur; toplam ``t``ye göre dalgalanır.
+#: * **Kenar dışı** — B-spline ızgara dışında tam sıfırdır (o yüzden
+#:   :mod:`token_uzaylari.kan_spline` ayrıca bir taban terimi taşır);
+#:   RBF üstel küçük ama sıfırdan farklı kalır.
+#:
+#: Varsayılan ``"rbf"`` bırakıldı ki mevcut ölçümler ve testler aynı
+#: kalsın; ``"bspline"`` belgelere sadık olandır ve
+#: ``test_kan_temelleri_kiyas`` ikisini yan yana tartar.
+KAN_TEMELI = "rbf"
+
+
+def kan_temeli(v: np.ndarray, nb: int, tur: Optional[str] = None
+               ) -> np.ndarray:
+    """``(n, d)`` girdiden ``(n, d, nb)`` tek değişkenli taban dizeyi.
+
+    ``tur`` verilmezse :data:`KAN_TEMELI` kullanılır.
+    """
+    tur = tur or KAN_TEMELI
+    if tur == "rbf":
+        dugum = np.linspace(-2.5, 2.5, nb)
+        h = (dugum[1] - dugum[0]) * 1.5
+        return np.exp(-0.5 * ((v[:, :, None] - dugum) / h) ** 2)
+    if tur == "bspline":
+        from token_uzaylari.kan_spline import bspline_temeli, dugum_dizisi
+        k = 3
+        G = nb - k                      # temel sayısı G+k = nb olsun
+        if G < 1:
+            raise ValueError("bspline için nb > 3 olmalı")
+        d = dugum_dizisi(G, k, -2.5, 2.5)
+        n, dh = v.shape
+        B = bspline_temeli(v.reshape(-1), d, k)      # (n·dh, nb)
+        return B.reshape(n, dh, nb)
+    raise ValueError(f"bilinmeyen KAN tabanı: {tur!r}")
+
+
 # =====================================================================
 @kaydet
 class Muhayyile(Meleke):
@@ -120,7 +166,8 @@ class Muhayyile(Meleke):
 
     Hesaplanan: Lie tasarrufu ``R ▷ (Z ⊗ M)``; **KAN biçimi**
     ``Φ_kurgu(x) = Σ_q Φ_q(Σ_p φ_{q,p}(z_p))`` (HoTT nüshası, 4-5.
-    denklemler) -- kenar fonksiyonları RBF tabanında; yaratıcılık gürültüsü
+    denklemler) -- kenar fonksiyonları :func:`kan_temeli` ile (RBF veya
+    B-spline, bkz. :data:`KAN_TEMELI`); yaratıcılık gürültüsü
     ``ξ ~ 𝒩(0, σ²)``; ve ``Serbestlik = D_KL(P(Ẑ) ‖ P(Z))`` ile fantezi
     süzgeci.
 
@@ -141,15 +188,13 @@ class Muhayyile(Meleke):
         M = p.W("muhayyile.M", (dh, dh))
         taban = (Z @ M) @ R.T
 
-        # KAN: kenarlarda RBF, düğümlerde toplam
+        # KAN: kenarlarda tek değişkenli taban, düğümlerde yalnız toplam.
         nb = 12
-        dugum = np.linspace(-2.5, 2.5, nb)
-        h = (dugum[1] - dugum[0]) * 1.5
 
         def kenar(v: np.ndarray, ad: str) -> np.ndarray:
             """``Σ_p φ_{q,p}(v_p)``: her (girdi kanalı, taban) çifti için bir
             ağırlık; düğüm yalnız toplar. KAN'ın tarifi budur."""
-            B = np.exp(-0.5 * ((v[:, :, None] - dugum) / h) ** 2)   # (n, dh, nb)
+            B = kan_temeli(v, nb)                                   # (n, dh, nb)
             C = p.W(ad, (dh * nb, v.shape[1])).reshape(dh, nb, v.shape[1])
             return np.einsum("npb,pbk->nk", B, C)
 
