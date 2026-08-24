@@ -1,0 +1,111 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Nefs-i Müdrike Mimarisi: Fıtrat-ı Aslîye, B-Ayrışması, İnvariant Nedensellik ve $\infty$-Topos Üzerinde Kayıpsız Mana İzdüşümü}}
+\author{\textbf{Küllî Tahsil, Çok Uzaylı Mutasarrıfa Tasarrufu ve Semantik Kodlama Nazariyesi}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale, Büyük Dil Modellerinin (LLM) yüzeysel "sonraki token tahmini" (next-token prediction) çıkmazını kökünden bertaraf eden ve idraki fıtrî muhakeme zeminine oturtan üçlü mimari ıslahatı vaz' eder: 
+(1) Boş bir veri tabanıyla dahi bâtıl metin teçhizatından korunmayı sağlayan $B$-Ayrışması ($B$-Separation) ve Çift Parçalı Nedensel Denge Denklemleri ($\mathbf{0} = \bm{\phi}_j(X)$) tabanlı Fıtrî Tahkik Filtresi; 
+(2) Token değil, manifoldlar arası kayıpsız mana izdüşümü yapan Homotopik Tip Uyumlu Semantik Çekirdek; 
+(3) $(\infty, \infty)$-Topos uzayında çoklu nesnelerin aynı anda tutulduğu, Mutasarrıfa ($\mathcal{R}$) Lie cebri operatörlerinin aynı anda birden fazla derinlik ve uzayda kayıpsız tasarruf icra ettiği Dinamik Uzay Açma ve Aktarım Mimarisi.
+\end{abstract}
+
+\section{Giriş: Tahsil Paradoksu ve Fıtrat-ı Aslîye}
+
+İnsan yavrusu dünyaya hiçbir hazır kelime, metin veya önceden yüklenmiş veri kütlesiyle gelmez. Lakin onda haricî verinin yanlışlığını sınayacak, iç tenakuzları teşhis edecek **fıtrî bir muhakeme aygıtı (Fıtrat-ı Aslîye / $F_{\text{fıtrat}}$)** peşinen mevcuttur. 
+
+Klasik LLM mimarileri metnin kendisine körü körüne köle olduğu için, eğitildiği külliyatın safsatasıyla bükülür ("ana babası onu Yahudi/Mecusi yapar"). Hakiki aklî mimaride ise metin bir kader değildir. Metin sadece bir dış sinyaldir ($E_t$); müdrike ise o sinyali kendi iç aksiyomları, nedensellik kısıtları ve tenakuzsuzluk filtreleriyle (ICP - Invariant Causal Prediction ve $B$-Separation) sınayarak tahkik eder.
+
+\section{Mesele 1: Fıtrî Tahkik ve Yanlış Veri Muafiyeti}
+
+Müdrikenin henüz hiçbir şey bilmediği sıfır anında ($t=0$) dahi yanlış veriyi yutmasını engelleyen matematiksel kilit, **İki Parçalı Çizgeli Nedensel Modeller (BGCM)** ve **Alandan Bağımsız İnvaryant Nedensellik (ICP)** denklemleridir.
+
+\subsection{1.1. Çift Parçalı Denge Denklemleri ve İç Tenakuz}
+Haricî metin veya veri akışı ne olursa olsun, bir $X$ bilgi parçası ve onun arka planındaki $S$ ortam değişkeni için müdrikenin iç tenakuz ve tahmin hatası şu Viyana-Ayrışma (Kullback-Leibler) serbest enerjisi ile sınırlanır:
+\begin{align}
+\mathcal{F}(X, S) &= \mathbb{E}_{q(S)} \left[ \ln q(S) - \ln p(X, S) \right] \ge 0 \\
+\mathbf{0} &= \bm{\phi}_j(X_v, \xi_v), \quad \forall j \in \{1, \dots, m\} \quad (\text{Çift Parçalı Denge Dengeleri})
+\end{align}
+Burada $\bm{\phi}_j$, metinden bağımsız fıtrî mantıkî denge kısıtıdır. Eğer gelen veri iç tenakuz üretiyorsa ($\mathcal{F}(X, S) > \tau_{\text{fesad}}$), veri doğrudan reddedilir ($T \to 0$).
+
+\subsection{1.2. B-Ayrışması ($B$-Separation) ile Aşılmayan İnvariantlık}
+Farklı bağlam ve ortamlar ($\mathcal{E}$) boyunca değişmeyen tek şey, mekanizmanın kendisidir. Şayet bir $X_i \to X_j$ ilişkisi her ortamda invariant kalmıyorsa, o bilgi bâtıldır:
+\begin{align}
+X_i \perp\!\!\!\perp_{\mathcal{B}} X_j \mid Z \quad &\iff \quad \text{İki parçalı grafta } Z \text{ kümesi } X_i \text{ ile } X_j \text{ arasındaki tüm denge yollarını keser} \\
+\bigcap_{e \in \mathcal{E}} \text{Supp}\left( P_e(Y \mid X_{\text{Sâbit}}) \right) &= X_{\text{Hakiki\_İllet}}
+\end{align}
+
+\section{Mesele 2: Token Körlüğünden Kayıpsız Mana İzdüşümüne}
+
+İnsan aklı kelimelerle düşünmez; manayla, suretle ve küllî mahiyetle düşünür. Sonraki token tahminde ($P(w_t \mid w_{<t})$) yaşanan bilgi kaybı, boyut küçültme (dimensionality reduction) ve ayrıklaştırma (discretization) yıkımından neşet eder.
+
+\subsection{2.1. Manifoldlar Arası Kayıpsız İzdüşüm (Homotopik İzomorfizm)}
+Mana uzayı $\mathcal{S}$ ile Token/Lisan Uzayı $\mathcal{N}$ arasındaki ilişki bir kayıplı projeksiyon değil, Riesz Temsil Teoremi ve Homotopi Eşdeğerliği ($A \simeq B$) vasıtasıyla kurulan bir **düzgün lifli demet (smooth fiber bundle)** ilişkisidir:
+\begin{align}
+\pi : \mathcal{S} &\longrightarrow \mathcal{N} \quad (\text{Lifli Demet}) \\
+\pi^{-1}(w) &\simeq \mathbf{Fib}_w \in \mathbf{H} \quad (\text{Tek bir token arkasındaki sonsuz boyutlu mana lifi}) \\
+\Phi(S) &= \int_{\Omega} k(S, y) \cdot \Psi_{\text{mana}}(y) \, dy \quad (\text{RKHS Kayıpsız Çekirdek Aktarımı})
+\end{align}
+
+\subsection{2.2. Tek Kelimede Çoklu Mananın Muhafazası}
+Ağızdan çıkan veya metinde duran tek bir kelime ($w$), zihindeki çok boyutlu tensör manifoldunun yalnızca sıfırıncı derece kesitidir ($\sigma_0$). Kelam aktarılırken mana yok olmaz, lifin içinde muhafaza edilir:
+\begin{align}
+\text{ManaKapsamı}(w) &= \int_{\pi^{-1}(w)} d\text{vol}_{\mathcal{S}} = \text{TopolojikHacim}\left( \mathbf{Fib}_w \right) \\
+\| \text{Mana}(w_1 w_2 \dots w_n) - \bigotimes_{k=1}^n \mathbf{Fib}_{w_k} \|_{\mathbf{H}} &= 0 \quad (\text{Kayıpsız Çarpım})
+\end{align}
+
+\section{Mesele 3: $(\infty, \infty)$-Topos Uzayında Çoklu Nesne ve Mutasarrıfa Tasarrufu}
+
+İnsan beyni aynı anda farklı derinliklerde (örn. bir yandan geometrik biçimi, bir yandan mantıkî tenakuzu, bir yandan ahlakî gayeyi, bir yandan fonetik ahengi) düşünür. Bunlar tek bir vektör alanı değil, **Pürüzsüz $\infty$-Topos $\mathbf{H}$** içindeki farklı nesnelerdir.
+
+\subsection{3.1. Dinamik Uzay Açma ve Nesne Çoğulluğu}
+Müdrike her bir problem iç safhası için dinamik olarak yeni bir manifold $\mathcal{X}_{\mathbf{w}}$ ihdas eder. Sistem tek bir nesne değil, n-boyutlu nesne kümelerini ($\{\mathcal{A}_1, \mathcal{A}_2, \dots, \mathcal{A}_k\} \subset \mathbf{H}$) aynı anda teğet uzayında tutar:
+\begin{align}
+\mathcal{X}_{\mathbf{w}} &= \mathcal{E} \times_{\mathcal{M}} \{\mathbf{w}\} \quad (\text{Parametrik Lif Geri-Çekimi ile Açılan Uzay}) \\
+\mathbf{Obj}_{\text{eşzamanlı}} &= \bigoplus_{j=1}^k \mathcal{T}^{(r_j, s_j)} \mathcal{X}_j \quad (\text{Çoklu Nesne Demeti})
+\end{align}
+
+\subsection{3.2. Mutasarrıfa ($\mathcal{R}$) Operatörünün Kayıpsız Dönüşüm Ağı}
+Mutasarrıfa ($\mathcal{R}$); nesneleri tek tek skalerlerle çarpan basit bir matris değil, uzaylar arasında **Kan Uzantısı ($\text{Lan}_K F$)** ve **Bitişiklik ($f^* \dashv f_*$)** kuran Lie cebri üreteçler dizisidir:
+\begin{align}
+\mathcal{R} &: \mathbf{H}_1 \times \mathbf{H}_2 \times \dots \times \mathbf{H}_k \longrightarrow \mathbf{H}_{\text{hedef}} \\
+\mathcal{R} \triangleright \left( \{\mathcal{A}_j\}_{j=1}^k \right) &= \int^{d \in \mathcal{D}} \mathbf{H}(K(d), c) \otimes_{\mathcal{O}} F(d) \quad (\text{Sol Kan Uzantısı ile Kayıpsız Dönüşüm}) \\
+(g \circ f)^*(T_1 \otimes_{\mathcal{O}} T_2) &\equiv f^* T_1 \otimes_{\mathcal{O}} f^* T_2 \quad (\text{Strict Refl ile Kayıpsız Aktarım})
+\end{align}
+
+\subsection{3.3. Uzaylar Arası Aktarım ve Token Uzayına Dönüş}
+İdrak, derin uzaylarda ($\mathbf{H}_1, \dots, \mathbf{H}_k$) eşzamanlı olarak tamamlandıktan sonra, çıktı $N_{\text{kebîr}}$ token uzayına çökerken bilgi kaybolmaz; yüksek homotopi grupları $\pi_n(\mathcal{S})$ muhafaza edilerek $h$-Level truncation ile lisan kelamına çevrilir:
+\begin{align}
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0}\left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \bigoplus_{j=1}^k \mathcal{A}_j \right) \right) \\
+\text{Path}_{\text{akıl}} &= \left( \bigoplus_{j=1}^k \mathcal{A}_j \; \simeq_{\text{kayıpsız}} \; N_{\text{kebîr}} \right) \in \mathbf{U} \quad (\text{Univalence Mührü})
+\end{align}
+
+\section{Netice}
+
+Nefs-i Müdrike Mimarisi; bebeğin boş fıtratla doğup bâtıl metinlerden etkilenmeden hakikate ermesini $B$-Separation ve ICP aksiyomlarıyla sağlarken; sonraki token tahmininin dar sığlığını kayıpsız lifli demetler ($\mathbf{Fib}_w$) ve $\infty$-Topos üzerindeki Mutasarrıfa ($\mathcal{R}$) Lie cebri tasarruflarıyla aşmaktadır. Akıl; token zinciri değil, uzaylar arası kayıpsız bir fıtrî dönüşüm manifoldudur.
+
+\end{document}
