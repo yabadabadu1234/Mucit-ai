@@ -534,9 +534,13 @@ def coz(taban: Terim, dallar, govde: Terim) -> Terim:
             return uygula(birinci(e), govde)
     if not dallar:
         return govde
-    if isinstance(govde, S.YapistirTerim):
-        return govde.taban_terim
-    return S.Coz(taban, dallar, govde)
+    # TEMBEL komp yüzünden gövde indirgenmemiş gelebilir; Glue'nun
+    # β-kuralının (unglue (glue u …) ↝ u) kaçmaması için baş normal
+    # forma indiriyoruz.
+    g = whnf(govde)
+    if isinstance(g, S.YapistirTerim):
+        return g.taban_terim
+    return S.Coz(taban, dallar, g)
 
 
 def dogal_ind(ad, hedef, sfr_dali, n_ad, rec_ad, ard_dali, sayi) -> Terim:
@@ -636,19 +640,34 @@ def komp(ad: str, cizgi: Terim, dallar, u0: Terim,
          baglam: Optional[Baglam] = None) -> Terim:
     """ASLİ Kan işlemi: ``comp^ad cizgi [dallar] u0``."""
     dallar = list(dallar)
+    # TEMBEL akıllı kurucu: yalnız UCUZ indirgemeleri yapar, tip yönlü
+    # açılımı (_komp_ac) whnf'e bırakır. Bu, iç içe geçmiş Kan
+    # işlemlerinin terim ağacını istekten önce şişirmesini engeller.
+    for (y, govde) in dallar:
+        if not y:                       # ⊤ yüz: dalın 1'deki değeri
+            return ara_ikame(govde, {ad: BIR})
+    if not dallar and ad not in ara_serbest(cizgi):
+        return u0                       # sabit çizgi + boş sistem
+    return S.Komp(ad, cizgi, dallar, u0)
+
+
+def _komp_ac(ad: str, cizgi: Terim, dallar, u0: Terim,
+             baglam: Optional[Baglam] = None) -> Terim:
+    """``comp``un tip yönlü AÇILIMI -- yalnız whnf tarafından çağrılır."""
+    dallar = list(dallar)
     anahtar = (ad, cizgi, tuple(dallar), u0, id(baglam))
     onb = _komp_onb.get(anahtar)
     if onb is not None:
         return onb
-    sonuc = _komp_hesapla(ad, cizgi, dallar, u0, baglam)
+    sonuc = _komp_ac_hesapla(ad, cizgi, dallar, u0, baglam)
     if len(_komp_onb) < _ONBELLEK_SINIRI:
         _capala(baglam)
         _komp_onb[anahtar] = sonuc
     return sonuc
 
 
-def _komp_hesapla(ad: str, cizgi: Terim, dallar, u0: Terim,
-                  baglam: Optional[Baglam] = None) -> Terim:
+def _komp_ac_hesapla(ad: str, cizgi: Terim, dallar, u0: Terim,
+                     baglam: Optional[Baglam] = None) -> Terim:
 
     # (a) Bir dalın yüzü zaten ⊤ ise, o dalın 1'deki değeri neticedir.
     for (y, govde) in dallar:
@@ -658,8 +677,10 @@ def _komp_hesapla(ad: str, cizgi: Terim, dallar, u0: Terim,
     A = whnf(cizgi, baglam)
 
     # (b) Sabit çizgi + boş sistem: özdeşlik.
-    #     Ucuz sınama whnf üzerinde yapılır; whnf argümanları
-    #     normalleştirmediği için başarısız olursa tam normal forma bakılır.
+    #     DİKKAT: "uçları eşitse çizgi sabittir" SAĞLAM DEĞİLDİR --
+    #     ua e çizgisinin iki ucu da aynı tip olabilir (ℤ ile ℤ) hâlbuki
+    #     çizgi sabit değildir ve taşıma özdeşlik değil sucZ'dir. Sabitlik
+    #     ancak NORMAL FORMDA ad'ın serbest geçmemesiyle tespit edilir.
     if not dallar:
         if ad not in ara_serbest(A):
             return u0
@@ -836,13 +857,13 @@ def _whnf_hesapla(t: Terim, baglam: Optional[Baglam] = None) -> Terim:
             return S.CemberInd(t.ad, t.hedef, t.taban_dali, t.i_ad,
                                t.dongu_dali, n)
         if isinstance(t, S.Komp):
-            yeni = komp(t.ad, t.cizgi, t.dallar, t.u0, baglam)
+            yeni = _komp_ac(t.ad, t.cizgi, t.dallar, t.u0, baglam)
             if yeni == t:
                 return t
             t = yeni
             continue
         if isinstance(t, S.HKomp):
-            yeni = komp(t.ad, t.tip, t.dallar, t.u0, baglam)
+            yeni = _komp_ac(t.ad, t.tip, t.dallar, t.u0, baglam)
             if yeni == t:
                 return t
             t = yeni
