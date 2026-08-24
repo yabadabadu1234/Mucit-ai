@@ -1,0 +1,718 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Nefs-i Müdrike Mimarisi: 41 Melekenin $(\infty, \infty)$-Topos, Homotopi Tip Teorisi ve Kübik Operatörler Zemininde Küllî Formülasyonu}}
+\author{\textbf{Sentetik Diferansiyel Geometri, Higher Topos Theory, Kan Uzantıları ve KAN-FNO Mimarisi}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale, Meşşâî nefs nazariyesindeki 41 idrak melekesini Homotopi Tip Teorisi (HoTT), Kübik Tip Teorisi, $(\infty, \infty)$-kategori geometrisi, Pürüzsüz $\infty$-Topos ($\mathbf{H}$), Kan Uzantıları ($\text{Lan}_K F$), Kolmogorov-Arnold Ağları (KAN) ve Fourier Nöral Operatörleri (FNO) zemininde yeniden inşa eder. Her bir meleke; $n$-morfizmler, yol tipleri ($Path\text{ Types}$), teğet demetleri ($\mathcal{T}\mathcal{X}$), Glue/Equiv dönüşümleri ve Sobolev-RKHS çekirdekleri seviyesinde en az 12'şer derin denklemle eksiksiz biçimde vaz' edilmiştir.
+\end{abstract}
+
+\section{Mefhumî Zemin, Temsil Uzayları ve Topos Mimarisi}
+
+Mimarideki 41 meleke, Pürüzsüz $\infty$-Topos $\mathbf{H}$ içinde tanımlı yarı-tutarlı demetler ($\text{QCoh}(\mathcal{X})$) ve bunlara karşılık gelen yüksek grupoidler ($\infty\text{-groupoid}$) olarak ele alınır:
+\begin{itemize}
+    \item Pürüzsüz $\infty$-Topos Taban Uzayı: $\mathcal{X} \in \mathbf{H}$
+    \item Sonsuz Küçük İnfinitesimal Disk: $D = \{x \in R \mid x^2 = 0\}$
+    \item Teğet Demeti Haritalama Uzayı: $\mathcal{T}\mathcal{X} \coloneqq \mathcal{X}^D$
+    \item $(r, s)$-Mertebe Tensör Demeti: $\mathcal{T}^{(r, s)}\mathcal{X} = \mathcal{T}\mathcal{X}^{\otimes r} \otimes_{\mathcal{O}_{\mathcal{X}}} (\mathcal{T}^*\mathcal{X})^{\otimes s}$
+    \item Aralık Nesnesi ve Yol Tipi: $I = [0, 1], \quad p : I \to \mathcal{A}$
+    \item Lie Cebri Parantezi ve $\infty$-Koherens: $[\cdot, \cdot] : \mathcal{T}\mathcal{X} \otimes \mathcal{T}\mathcal{X} \to \mathcal{T}\mathcal{X}$
+    \item Univalence Aksiyomu (Voevodsky): $(A \simeq B) \simeq (A =_{\mathcal{U}} B)$
+\end{itemize}
+
+\section{41 Melekenin $(\infty, \infty)$-Kategori ve Tip Teorisi Formülasyonu}
+
+\subsection{1. Müşahede ($\mathcal{O}_1$)}
+\begin{align}
+X_t &= \text{EvrenselGözlem}(E_t) \in \mathbf{H}(\mathcal{E}, \mathcal{X}) \\
+X_t(r) &= \int_{\Omega} E_t(r') \otimes k_{\text{odak}}(r, r') dr' \in \text{QCoh}(\mathcal{X}) \\
+k_{\text{odak}}(r, r') &= \exp\left( -\frac{1}{2} d_{\mathbf{H}}^2(r, r') \right) \in \mathcal{O}_{\mathcal{X}} \\
+\frac{d X_t}{dt} &= -\nabla_{\mathbf{H}} V_{\text{odak}}(X_t, G_t) + \eta_t, \quad \eta_t \in \mathcal{T}\mathcal{X} \\
+V_{\text{odak}}(X_t, G_t) &= \frac{1}{2} \|X_t \otimes_{\mathcal{O}_{\mathcal{X}}} W_q - G_t \otimes_{\mathcal{O}_{\mathcal{X}}} W_k\|_{\text{QCoh}}^2 \\
+\mathcal{F}_{\text{müşahede}}(v)(x) &= \sigma\left( W v(x) + \mathcal{F}^{-1}\left( R_\theta \cdot (\mathcal{F} v) \right)(x) \right) \quad (\text{FNO Çekirdeği}) \\
+H_t^{(1)} &= \text{Softmax}\left( \frac{\langle X_t W_q, X_t W_k \rangle_{\mathbf{H}}}{\sqrt{d_{\text{topos}}}} \right) X_t W_v \\
+\text{Path}_{\text{müşahede}}(X_t, E_t) &= (X_t =_{\mathcal{X}} E_t) \in \mathbf{hSet} \\
+d X_t^{(\text{stokastik})} &= f(X_t, G_t) dt + g(X_t) dW_t \in \mathcal{T}\mathcal{X} \\
+\mathcal{L}_{\text{müşahede}} &= \| X_t - E_t \|_{\text{QCoh}}^2 + \lambda_1 \text{Tr}(\Delta_{\mathbf{H}} X_t) \\
+X_{t, \text{süzülmüş}} &= \text{transp}^i (\lambda i. \mathcal{X}) \, \varphi \, X_t \\
+\mathbf{1}_{\text{müşahede}} &= \text{unglue}(\text{glue } X_t \, [\dots])
+\end{align}
+
+\subsection{2. Hayal ($\mathcal{O}_2$)}
+\begin{align}
+Z_{\text{hayal}, t} &= \text{Closure}(W_h X_t + b_h, \rho) \in \mathcal{H}_{\text{hayal}} \\
+\frac{\partial Z_{\text{hayal}}}{\partial t} &= \Delta_{\mathbf{H}} Z_{\text{hayal}} - \lambda_{\text{sönüm}} Z_{\text{hayal}} + f_{\text{kayıt}}(X_t) \\
+H_t^{(\text{hayal})} &= \alpha_t \otimes_{\mathcal{O}_{\mathcal{X}}} Z_{\text{hayal}, t} + (1-\alpha_t) \otimes_{\mathcal{O}_{\mathcal{X}}} H_{t-1}^{(\text{hayal})} \\
+\alpha_t &= \sigma(W_\alpha [X_t \oplus Z_{\text{hayal}, t-1}]) \\
+K_{\text{hayal}}(x, y) &= \exp\left( -\gamma \|Z_{\text{hayal}}(x) - Z_{\text{hayal}}(y)\|_{\mathbf{H}}^2 \right) \\
+\mathbf{\Phi}_{\text{izometri}} &= \text{ArgMin}_{\Phi} \int_{\mathcal{X}} \left| g_{\mu\nu} - \partial_\mu \Phi^k \partial_\nu \Phi^k \right| d\text{vol}_g \\
+Z_{\text{dondurulmuş}} &= \text{hcomp}^i \, \mathcal{H}_{\text{hayal}} \, [\dots] \, Z_{\text{hayal}, t} \\
+\text{Memoria}(Z) &= \int_0^t e^{-\beta(t-\tau)} Z_{\text{hayal}, \tau} d\tau \\
+\mathcal{D}_{\text{kayıp}}(Z) &= \| Z_{\text{hayal}} - \text{Lan}_K(X_t) \|_{\text{QCoh}}^2 \\
+\nabla_Z \mathcal{J} &= \frac{\partial \mathcal{D}_{\text{kayıp}}}{\partial Z_{\text{hayal}}} + \lambda_{\text{bozulma}} Z_{\text{hayal}} \\
+Z_{\text{sağlam}} &= \text{Truncate}_{hLevel 2}(Z_{\text{hayal}}) \\
+\text{Path}_{\text{hayal}} &= p : I \to \mathcal{H}_{\text{hayal}}, \quad p(0) \equiv Z_t, \quad p(1) \equiv Z_{t-1}
+\end{align}
+
+\subsection{3. Hayal Kurma / Muhayyile ($\mathcal{O}_3$)}
+\begin{align}
+\hat{Z}_{\text{muhayyile}} &= R_{\text{muhayyile}} \triangleright \left( Z_{\text{hayal}, t} \otimes_{\mathcal{O}_{\mathcal{X}}} M_t \right) \\
+d\hat{Z} &= \mu(\hat{Z}, G_t) dt + \sigma(\hat{Z}) dW_t \in \mathcal{T}\mathcal{H}_{\text{hayal}} \\
+\mu(\hat{Z}, G_t) &= -\nabla_{\hat{Z}} \|\hat{Z} \otimes W_m - G_t\|_{\mathbf{H}}^2 \\
+\Phi_{\text{kurgu}}(x) &= \sum_{q=1}^{2d+1} \Phi_q \left( \sum_{p=1}^d \phi_{q,p}(Z_{\text{hayal}, p}) \right) \quad (\text{KAN Modeli}) \\
+\phi_{q,p}(z) &= \sum_k w_k B_k(z) \quad (\text{B-spline Tabanı}) \\
+\text{Serbestlik}(\hat{Z}) &= D_{\text{KL}}\left( P(\hat{Z}) \parallel P(Z_{\text{hayal}}) \right) \\
+Z_{\text{kurgu}}^{(\tau+1)} &= Z_{\text{kurgu}}^{(\tau)} + \eta \left( W_{\text{sentez}} Z_{\text{kurgu}}^{(\tau)} + \xi_t \right) \\
+\xi_t &\sim \mathcal{N}\left( 0, \sigma_{\text{yaratıcılık}}^2 I \right) \\
+\mathcal{S}_{\text{kurgu}} &= \text{CosSim}_{\mathbf{H}}(\hat{Z}_{\text{muhayyile}}, G_t) \\
+\mathbf{T}_{\text{deformasyon}} &= \mathcal{T}\hat{Z} \otimes_{\mathcal{O}} \mathcal{T}^*\hat{Z} \\
+\hat{Z}_{\text{süzülmüş}} &= \hat{Z}_{\text{muhayyile}} \cdot \mathbb{I}(\text{Serbestlik} \le \tau_{\text{fantezi}}) \\
+\text{Homotopi}_{\text{kurgu}} &= H : I \times I \to \mathcal{H}_{\text{hayal}}
+\end{align}
+
+\subsection{4. Tertip ($\mathcal{O}_4$)}
+\begin{align}
+\mathbf{\Sigma}_{\text{tertip}} &= \text{Sort}_{\pi} \left( \{Z_k\}_{k=1}^N \;\middle|\; \text{Sıra}(Z_i, Z_j) = \sigma(W_\tau (Z_i \oplus Z_j)) \right) \\
+T_{ij} &= \exp\left( -\beta d_{\mathbf{H}}(Z_i, Z_j) \right) \\
+d_{\mathbf{H}}(Z_i, Z_j) &= \sqrt{(Z_i - Z_j)^T g_{\mu\nu} (Z_i - Z_j)} \\
+\mathbf{X}_{\text{sıralı}} &= \mathbf{\Sigma}_{\text{tertip}} \cdot \mathbf{Z}_{\text{ham}} \\
+\mathcal{E}_{\text{nizam}} &= \sum_{i=1}^N |\text{Sıra}(i) - \text{Sıra}_{\text{hedef}}(i)| \\
+P(\pi) &= \frac{1}{Z_\pi} \exp\left( -\frac{1}{T_{\text{düzensizlik}}} \sum_{i<j} \mathbf{\Delta}(Z_{\pi(i)}, Z_{\pi(j)}) \right) \\
+\mathbf{\Delta}(a, b) &= \max\left( 0, \text{Öncelik}(b) - \text{Öncelik}(a) \right) \\
+\mathbf{M}_{\text{tertip}} &= \sum_{k=1}^N \mathbf{e}_k \otimes \mathbf{e}_{\pi(k)}^T \\
+\mathbf{Z}_{\text{düzenli}} &= \mathbf{M}_{\text{tertip}} \mathbf{Z}_{\text{ham}} \\
+\mathcal{C}_{\text{tertip}} &= \text{Tr}(\mathbf{Z}_{\text{düzenli}}^T \Delta_{\text{çizge}} \mathbf{Z}_{\text{düzenli}}) \\
+\mathbf{Z}_{\text{çıkış}} &= \text{LayerNorm}(\mathbf{Z}_{\text{düzenli}} W_o) \\
+\text{Equiv}_{\text{tertip}} &= (\mathbf{Z}_{\text{ham}} \simeq \mathbf{Z}_{\text{düzenli}}) \in \mathbf{U}
+\end{align}
+
+\subsection{5. Tecrit ($\mathcal{O}_5$)}
+\begin{align}
+P_D(X_t) &= \text{Proj}_{\text{Gr}(k,d_{\text{in}})}(X_t) = U_k U_k^T X_t \in \mathcal{T}_{\text{inv}} \\
+D_t &= \text{Softmax}\left( \frac{\Delta_{\text{Laplasyen}}(X_t) W_d}{\sqrt{d_k}} \right) \in \text{Gr}(k, d_{\text{in}}) \\
+\Delta_{\text{Laplasyen}} &= I - D_{\text{derece}}^{-1/2} A_{\text{komşuluk}} D_{\text{derece}}^{-1/2} \\
+\mathcal{I}_{\text{topolojik}}(X_t) &= \{ \beta_0, \beta_1, \dots, \beta_p \} \quad (\text{Betti Sayıları}) \\
+\beta_k &= \text{dim}\left( \frac{\ker(\partial_k : C_k \to C_{k-1})}{\text{im}(\partial_{k+1} : C_{k+1} \to C_k)} \right) \\
+S_t^{(\text{tecrit})} &= D_t \otimes_{\mathcal{O}_{\mathcal{X}}} (X_t W_s) \in \mathcal{S} \\
+\mathcal{L}_{\text{tecrit}} &= \| X_t - P_D(X_t) \|_{\text{QCoh}}^2 + \mu_{\text{inv}} \sum_k \|\nabla_{\text{araz}} \beta_k\|^2 \\
+\Phi_{\text{araz\_eleme}}(X_t) &= X_t - \sum_{j \in \text{Araz}} \langle X_t, v_j \rangle_{\mathbf{H}} v_j \\
+v_j &= \text{EigenVector}_j(\Sigma_{\text{araz}}) \\
+\mathbf{P}_{\text{soyut}} &= \prod_{i=1}^m (I - n_i n_i^T) X_t \\
+S_{\text{öz}} &= \text{LayerNorm}(P_D(X_t) W_c) \\
+\text{Homotopi}_{\text{tecrit}} &= (X_t \simeq_{\text{tecrit}} S_{\text{öz}}) \in \pi_0(\mathbf{H})
+\end{align}
+
+\subsection{6. Tasavvur ($\mathcal{O}_6$)}
+\begin{align}
+S_t &= f_{\text{tasavvur}}(D_t, H_t^{(\text{hayal})}) \in \mathcal{S} \\
+f_{\text{tasavvur}} &= \text{GELU}(D_t W_{d2s} + H_t^{(\text{hayal})} W_{h2s} + b_s) \\
+g_{ij}(S_t) &= \left\langle \frac{\partial S_t}{\partial u_i}, \frac{\partial S_t}{\partial u_j} \right\rangle_{\mathcal{S}} \quad (\text{Riemann Metriği}) \\
+S_{\text{kebîr}} &= \bigoplus_{p=0}^k H_p\left( \mathcal{S}_{[1:t]} \right) \otimes_{\mathcal{O}} W_{\text{macro}} \\
+H_p(\mathcal{S}) &= \text{HomolojiGrubu}_p(\mathcal{S}) \\
+\mathcal{L}_{\text{mahiyet}} &= -\log P(S_t \mid D_t, G_t) \\
+P(S_t \mid D_t, G_t) &= \frac{\exp(\langle S_t, G_t \rangle_{\mathbf{H}} / \tau)}{\int_{\mathcal{S}} \exp(\langle S', G_t \rangle_{\mathbf{H}} / \tau) dS'} \\
+\text{MahiyetKodu}(S) &= \text{Quantize}_{\text{semantik}}(S_t) \\
+\mathbf{c}_{\text{çekirdek}} &= \mathbb{E}_{P(S_t)}[S_t] \\
+\mathcal{V}_{\text{tasavvur}} &= \det(g_{ij}(S_t))^{1/2} d^n u \\
+S_{t, \text{kâmil}} &= \text{LayerNorm}(S_t + W_{\text{res}} S_t) \\
+\text{Path}_{\text{tasavvur}} &= (S_t =_{\mathcal{S}} S_{\text{kâmil}}) \in \mathbf{U}
+\end{align}
+
+\subsection{7. Mana ($\mathcal{O}_7$)}
+\begin{align}
+\mu_{\text{mana}} &= \text{IntentionMap}(S_t, K_t) = \sigma(S_t W_m + K_t W_v) \\
+K_t &= \text{LayerNorm}(X_t W_k) \in \mathcal{K} \quad (\text{Vâhime Etiketi}) \\
+V_{\text{mana}}(S_t) &= \langle S_t, \dot{I}_t \rangle_{\mathcal{S}} + \psi(G_t) \\
+R_{ij} - \frac{1}{2} R g_{ij} &= 0 \quad (\text{Ricci-Düz Semantik Manifold}) \\
+\text{AnlamDerecesi}(S_t) &= \frac{|\langle S_t, G_t \rangle_{\mathbf{H}}|}{\|S_t\|_{\mathbf{H}} \|G_t\|_{\mathbf{H}}} \\
+\mathbf{M}_{\text{içsel}} &= \int_{\mathcal{S}} \mu_{\text{mana}}(s) \cdot P(s \mid S_t) ds \\
+\mu_{\text{bağlam}} &= \text{Softmax}\left( \frac{S_t W_q (H_t W_k)^T}{\sqrt{d}} \right) H_t W_v \\
+\text{İlişkiKatsayısı} &= \sigma(\mathbf{v}_m^T [S_t \oplus \mu_{\text{mana}}]) \\
+\mathbf{\Xi}_{\text{mana}} &= \mu_{\text{mana}} \otimes_{\mathcal{O}_{\mathcal{X}}} \mu_{\text{bağlam}} \\
+\mu_{\text{net}} &= \text{LayerNorm}(\mu_{\text{mana}} + \mathbf{\Xi}_{\text{mana}} W_x) \\
+\mathcal{T}\mu_{\text{net}} &= \mu_{\text{net}}^D \in \text{QCoh}(\mathcal{X}) \\
+\text{Path}_{\text{mana}} &= (\mu_{\text{mana}} =_{\mathcal{S}} \mu_{\text{net}})
+\end{align}
+
+\subsection{8. Tahlil ($\mathcal{O}_8$)}
+\begin{align}
+\{S_t^{(1)}, S_t^{(2)}, \dots, S_t^{(m)}\} &= \text{SVD}(S_t) = \sum_{i=1}^m \sigma_i u_i \otimes v_i^T \\
+C_{ij}^{(\text{tahlil})} &= \text{HSIC}(S_t^{(i)}, S_t^{(j)}) \quad (\text{Hilbert-Schmidt Bağımsızlık}) \\
+\text{HSIC}(X, Y) &= \frac{1}{(n-1)^2} \text{Tr}(K_{\text{cins}} H_{\text{ort}} L_{\text{fasıl}} H_{\text{ort}}) \\
+\mathbf{J}_{\text{tahlil}} &= \left[ \frac{\partial S_t^{(i)}}{\partial X_k} \right]_{ik} \in \mathcal{T}^*\mathcal{X} \otimes \mathcal{T}\mathcal{S} \\
+\mathcal{H}_{\text{entropi}}(S_t) &= -\sum_{i=1}^m p(S_t^{(i)}) \log p(S_t^{(i)}) \\
+p(S_t^{(i)}) &= \frac{\sigma_i^2}{\sum_j \sigma_j^2} \\
+S_{\text{cins}} &= \sum_{i=1}^k \sigma_i u_i \otimes v_i^T, \quad S_{\text{fasıl}} = \sum_{i=k+1}^m \sigma_i u_i \otimes v_i^T \\
+\mathbf{P}_{\text{parça}} &= \{ S_t^{(i)} \mid \sigma_i > \lambda_{\text{eşik}} \} \\
+\mathcal{I}_{\text{karşılıklı}}(X; Y) &= \iint P(x, y) \log \frac{P(x, y)}{P(x)P(y)} dx dy \\
+S_{\text{tahlil\_çıktı}} &= \mathbf{P}_{\text{parça}} \times \mathbf{J}_{\text{tahlil}} \\
+\text{Fiber}_{\text{tahlil}} &= \pi^{-1}(S_t) \in \mathbf{H} \\
+\text{Path}_{\text{tahlil}} &= (S_t =_{\mathcal{S}} \sum_i S_t^{(i)})
+\end{align}
+
+\subsection{9. Terkip ($\mathcal{O}_9$)}
+\begin{align}
+S_{\text{terkip}} &= \sum_{k=1}^m w_k \cdot \left( R_k \triangleright S_t^{(k)} \right) \\
+w_k &= \frac{\exp(\mathbf{v}_t^T S_t^{(k)})}{\sum_j \exp(\mathbf{v}_t^T S_t^{(j)})} \\
+g_{\mu\nu}^{(\text{yeni})} &= \sum_{i,j} \frac{\partial x^a}{\partial y^\mu} \frac{\partial x^b}{\partial y^\nu} g_{ab}^{(i)} \\
+\hat{Y}_t &= \text{LayerNorm}(S_{\text{terkip}} W_c + b_c) \\
+\mathcal{E}_{\text{terkip}} &= \| S_{\text{terkip}} - S_{\text{hedef}} \|_{\text{QCoh}}^2 \\
+\mathbf{\Omega}_{\text{bütünlük}} &= \bigwedge_{i=1}^m (S_t^{(i)} W_i) \in \Lambda^* \mathcal{S} \\
+S_{\text{sentez}} &= \text{GELU}\left( \mathbf{\Omega}_{\text{bütünlük}} W_s + b_s \right) \\
+\text{UyumKatsayısı} &= \min_{i \neq j} \text{CosSim}_{\mathbf{H}}(S_t^{(i)}, S_t^{(j)}) \\
+S_{\text{nihai\_terkip}} &= S_{\text{sentez}} \cdot \sigma(\text{UyumKatsayısı} \cdot \beta) \\
+\mathcal{L}_{\text{terkip\_düzgünlük}} &= \sum_{i=1}^m \| \nabla_{\mathbf{H}} (R_i \triangleright S_t^{(i)}) \|^2 \\
+\text{Monoid}_{\text{terkip}} &= \mu : \mathcal{A} \otimes \mathcal{A} \to \mathcal{A} \\
+\text{Path}_{\text{terkip}} &= (S_{\text{sentez}} =_{\mathcal{S}} S_{\text{nihai\_terkip}})
+\end{align}
+
+\subsection{10. Tezat ($\mathcal{O}_{10}$)}
+\begin{align}
+\Theta_{\text{tezat}}(S_i, S_j) &= 1 - \cos(S_i, S_j) = 1 - \frac{\langle S_i, S_j \rangle_{\mathbf{H}}}{\|S_i\| \|S_j\|} \\
+\mathbf{M}_{\text{tezat}} &= \mathbf{S} \cdot \mathbf{W}_{\text{opp}} \cdot \mathbf{S}^T \\
+\mathbf{W}_{\text{opp}} &= -I_{d \times d} + \mathbf{v}_{\text{zıt}} \otimes \mathbf{v}_{\text{zıt}}^T \\
+P(\text{Tezat} \mid S_i, S_j) &= \sigma\left( \mathbf{v}^T [S_i \odot S_j, |S_i - S_j|] \right) \\
+\mathcal{C}_{\text{zıtlık}} &= \max_{i,j} \Theta_{\text{tezat}}(S_i, S_j) \\
+\Delta S_{\text{tezat}} &= S_i - S_j \in \mathcal{T}\mathcal{S} \\
+\text{Vektör}_{\text{zıt}} &= \frac{S_i - S_j}{\|S_i - S_j\|_{\mathbf{H}}} \\
+\mathcal{I}_{\text{tezat\_matrisi}} &= \left[ \Theta_{\text{tezat}}(S_i, S_j) \right]_{ij} \\
+\mathbf{v}_{\text{en\_büyük\_tezat}} &= \text{EigenVector}_{\max}(\mathcal{I}_{\text{tezat\_matrisi}}) \\
+S_{\text{tezat\_kutup}} &= \text{Softmax}(\mathbf{v}_{\text{en\_büyük\_tezat}}) \cdot \mathbf{S} \\
+\text{Fiber}_{\text{tezat}} &= \text{Crit}(\Theta_{\text{tezat}}) \in \mathbf{R}\text{Crit}(f) \\
+\text{Path}_{\text{tezat}} &= (S_i =_{\text{tezat}} -S_j)
+\end{align}
+
+\subsection{11. Tenakuz Bulma ($\mathcal{O}_{11}$)}
+\begin{align}
+\text{Tenakuz}(S_i, S_j) &= \text{ReLU}\left( \langle S_i, S_j \rangle_{\text{çelişki}} - \delta_{\text{eşik}} \right) \\
+\langle S_i, S_j \rangle_{\text{çelişki}} &= S_i^T \mathbf{W}_{\text{tenakuz}} S_j \\
+\mathbf{\Omega}_{\text{çelişki}} &= \bigwedge^2 \mathcal{S} \to [0, 1] \\
+T_{\text{tenakuz}} &= \exp\left( -\alpha \cdot \text{Tenakuz}(S_t, H_{[1:t]}) \right) \\
+\mathcal{F}_{\text{çelişki\_haritası}} &= \nabla_S \text{Tenakuz}(S, \dot{I}) \\
+\mathbb{I}_{\text{tenakuz}} &= \mathbb{I}\left( (S_i \implies S_j) \land (S_i \implies \neg S_j) \right) \\
+\mathbf{C}_{\text{tenakuz\_tensörü}} &= \mathbf{S} \otimes \mathbf{S} \otimes \mathbf{W}_{\text{çelişki}} \\
+\text{ÇelişkiSkoru} &= \text{Tr}(\mathbf{C}_{\text{tenakuz\_tensörü}}) \\
+\nabla_{\text{ıslah}} \text{Tenakuz} &= \frac{\partial \text{Tenakuz}(S_i, S_j)}{\partial S_i} \\
+S_{i, \text{temiz}} &= S_i - \eta \cdot \nabla_{\text{ıslah}} \text{Tenakuz} \\
+\text{Obstruction}(S_i, S_j) &= c_k(\mathcal{E}) \in H^{2k}(\mathcal{X}, \mathbb{Z}) \\
+\text{Path}_{\text{tenakuz}} &= (\text{Tenakuz}(S_i, S_j) =_{\mathbf{Prop}} \mathbf{0})
+\end{align}
+
+\subsection{12. Tenkit ($\mathcal{O}_{12}$)}
+\begin{align}
+\mathcal{K}_{\text{tenkit}}(S_t) &= \text{Tenakuz}(S_t) + \lambda_1 \text{Pürüz}(S_t) + \lambda_2 \text{Sapma}(S_t, G_t) \\
+\text{Pürüz}(S_t) &= \text{Tr}(\mathbf{J}_{\text{tahlil}}^T \mathbf{J}_{\text{tahlil}}) \\
+\text{Sapma}(S_t, G_t) &= 1 - \text{CosSim}_{\mathbf{H}}(S_t, G_t) \\
+\Delta S_t &= -\eta \nabla_{S_t} \mathcal{K}_{\text{tenkit}}(S_t) \\
+\text{Skor}_{\text{tenkit}} &= \sigma\left( W_k \cdot [S_t \oplus \dot{I}_t \oplus G_t] \right) \\
+\mathcal{S}_{\text{ayıklanmış}} &= \{ S_i \in \mathcal{S} \mid \text{Skor}_{\text{tenkit}}(S_i) > \tau_{\text{kabul}} \} \\
+\mathbf{M}_{\text{tenkit\_filtresi}} &= \text{Diag}(\mathbb{I}(S_i \in \mathcal{S}_{\text{ayıklanmış}})) \\
+S_{\text{tenkit\_sonrası}} &= \mathbf{M}_{\text{tenkit\_filtresi}} \cdot \mathbf{S} \\
+\mathcal{L}_{\text{tenkit\_hatası}} &= \| S_t - S_{\text{tenkit\_sonrası}} \|_{\mathbf{H}}^2 \\
+\text{TenkitRaporu} &= \text{GELU}(W_r \cdot \mathcal{K}_{\text{tenkit}}(S_t)) \\
+\text{DerivCrit} &= \mathbf{R}\text{Crit}(\mathcal{K}_{\text{tenkit}}) \in \mathbf{H} \\
+\text{Path}_{\text{tenkit}} &= (S_t =_{\mathcal{S}} S_{\text{tenkit\_sonrası}})
+\end{align}
+
+\subsection{13. Tasdik ($\mathcal{O}_{13}$)}
+\begin{align}
+T_t &= \sigma\left( \text{CosSim}(M_t^{(\mathcal{K})} W_t, G_t) - \text{Tenakuz}(M_t^{(\mathcal{K})}, S_t, H_t) \right) \in [0, 1] \\
+T_{\text{kebîr}} &= \sigma\left( \text{CosSim}(R_{\text{kebîr}} \triangleright S_{\text{kebîr}}, G_{\text{kebîr}}) - \text{MakroTenakuz}(R_{\text{kebîr}} \triangleright S_{\text{kebîr}}, \dot{I}_{\text{kebîr}}) \right) \\
+\mathbf{1}_{\text{tasdik}} &= \mathbb{I}(T_t \ge 1 - \epsilon_{\text{yakîn}}) \\
+N_t &= T_t \odot (M_t^{(\mathcal{K})} W_n) + (1 - T_t) \odot \text{Rücû}(H_t, X_t) \\
+\text{Rücû}(H_t, X_t) &= \text{GELU}(W_{r1} H_t + W_{r2} X_t + b_r) \\
+P(\text{Doğru} \mid S_t, \dot{I}_t) &= \frac{1}{1 + \exp(-\beta T_t)} \\
+\mathcal{J}_{\text{tasdik}} &= \int_0^T T_t \cdot \langle S_t, G_t \rangle_{\mathbf{H}} dt \\
+\text{Mühür}(S_t) &= T_t \cdot S_t + (1 - T_t) \cdot \mathbf{0} \\
+\nabla_T \mathcal{L} &= (T_t - T_{\text{hedef}}) \cdot S_t \\
+T_{t, \text{kesin}} &= \text{Threshold}(T_t, \tau_{\text{yakîn}}) \\
+\text{Univalence}_{\text{tasdik}} &= (T_t \simeq 1) \simeq (S_t =_{\mathcal{S}} G_t) \\
+\text{Path}_{\text{tasdik}} &= (T_t =_{\mathbf{Real}} 1.0)
+\end{align}
+
+\subsection{14. Gaye Belirleme ($\mathcal{O}_{14}$)}
+\begin{align}
+G_t &= \sigma(S_t W_g + H_t W_{hg}) \in \mathcal{G}_{\text{gaye}} \\
+G_{\text{kebîr}} &= \text{TeleolojikUfuk}(\text{Sual}, S_{\text{kebîr}}) = \text{Softmax}\left( \frac{\text{Sual} W_q S_{\text{kebîr}}^T}{\sqrt{d}} \right) S_{\text{kebîr}} W_v \\
+\vec{v}_{\text{gaye}} &= -\nabla_{S} \mathcal{L}_{\text{gaye}}(S, G_{\text{kebîr}}) \in \mathcal{T}\mathcal{S} \\
+\mathcal{L}_{\text{gaye}}(S, G) &= \frac{1}{2} \|S W_a - G\|_{\mathcal{G}}^2 \\
+\mathcal{U}_{\text{teleoloji}}(S_t) &= \exp\left( -\gamma d_{\mathbf{H}}(S_t, G_{\text{kebîr}}) \right) \\
+G_{t+1} &= G_t + \eta_{\text{gaye}} (G_{\text{kebîr}} - G_t) \\
+\mathbf{P}_{\text{gaye\_izdüşüm}} &= \frac{G_{\text{kebîr}} \otimes G_{\text{kebîr}}^T}{\|G_{\text{kebîr}}\|_{\mathbf{H}}^2} \\
+S_{\text{yönlendirilmiş}} &= \mathbf{P}_{\text{gaye\_izdüşüm}} S_t \\
+\text{Gayeİlerlemesi} &= \langle S_{t+1} - S_t, G_{\text{kebîr}} \rangle_{\mathbf{H}} \\
+\mathcal{J}_{\text{gaye\_opt}} &= \max_{G} \mathbb{E}_{S \sim P(S)} [\mathcal{U}_{\text{teleoloji}}(S)] \\
+\text{Fib}_{\text{gaye}} &= \pi^{-1}(G_{\text{kebîr}}) \in \mathbf{H} \\
+\text{Path}_{\text{gaye}} &= (G_t =_{\mathcal{G}} G_{\text{kebîr}})
+\end{align}
+
+\subsection{15. Merak ve Sual Tevcihi ($\mathcal{O}_{15}$)}
+\begin{align}
+Q_t &= \text{Softmax}\left( \frac{(G_t - S_t) W_q}{\tau_{\text{merak}}} \right) \in \mathcal{S}^* \\
+\mathcal{H}_{\text{bilgisizlik}}(S_t) &= \text{Var}(P(S_t \mid H_t)) = \mathbb{E}[(S_t - \mu_S)^2 \mid H_t] \\
+\text{Vektör}_{\text{sual}} &= Q_t \odot \nabla_{S} \mathcal{H}_{\text{bilgisizlik}} \in \mathcal{T}^*\mathcal{S} \\
+I_{\text{merak}} &= D_{\text{KL}}\left( P(S \mid \text{YeniSual}) \parallel P(S) \right) \\
+\text{SualAdresi} &= \text{ArgMax}_{j} (Q_{t, j} \cdot \mathcal{H}_{\text{bilgisizlik}, j}) \\
+Q_{\text{metin}} &= \text{Decoder}(Q_t W_{\text{dec}}) \\
+P(\text{SualSormak}) &= \sigma(\gamma \cdot \mathcal{H}_{\text{bilgisizlik}}(S_t) - \tau_{\text{doygunluk}}) \\
+\Delta Q_t &= -\nabla_Q D_{\text{KL}}(P(S \mid Q_t) \parallel P_{\text{hedef}}(S)) \\
+\mathbf{Sual}_{\text{kanca}} &= Q_t \otimes_{\mathcal{O}} \dot{I}_t \\
+Q_{\text{süzülmüş}} &= Q_t \cdot \mathbb{I}(\mathcal{H}_{\text{bilgisizlik}} > \epsilon_{\text{cehalet}}) \\
+\text{Kan}_{\text{sual}} &= (\text{Lan}_K Q_t)(c) \in \mathbf{H} \\
+\text{Path}_{\text{sual}} &= (Q_t =_{\mathcal{S}^*} 0) \implies \text{Doygunluk}
+\end{align}
+
+\subsection{16. Deneme-Yanılma ($\mathcal{O}_{16}$)}
+\begin{align}
+a_t &= \pi_\theta(S_t, G_t) + \epsilon_t, \quad \epsilon_t \sim \mathcal{N}(0, \sigma^2 I) \\
+S_{t+1} &= \mathcal{E}_{\text{ortam}}(S_t, a_t) \\
+r_t &= \text{Coşku}(S_{t+1}, G_t) - \text{Maliyet}(a_t) \\
+\text{Coşku}(S, G) &= \cos(S, G), \quad \text{Maliyet}(a) = \lambda \|a\|_{\mathbf{H}}^2 \\
+\theta &\leftarrow \theta + \alpha \cdot r_t \nabla_\theta \log \pi_\theta(a_t \mid S_t) \\
+Q_{\text{değer}}(S, a) &= \mathbb{E}\left[ \sum_{k=0}^\infty \gamma^k r_{t+k} \;\middle|\; S_t=S, a_t=a \right] \\
+\delta_t &= r_t + \gamma Q_{\text{değer}}(S_{t+1}, \pi(S_{t+1})) - Q_{\text{değer}}(S_t, a_t) \\
+w &\leftarrow w + \alpha_{\text{critic}} \delta_t \nabla_w Q_{\text{değer}}(S_t, a_t) \\
+\sigma^2_{t+1} &= \sigma^2_t \cdot \exp(-\eta_{\text{decay}} \cdot \mathbb{I}(r_t > 0)) \\
+a_{\text{optimal}} &= \text{ArgMax}_a Q_{\text{değer}}(S_t, a) \\
+\text{StokastikAkış} &= dS_t = a_t dt + \sigma dW_t \\
+\text{Path}_{\text{deneme}} &= (S_t =_{\mathcal{S}} S_{\text{hedef}})
+\end{align}
+
+\subsection{17. İhtimal Hesabı ($\mathcal{O}_{17}$)}
+\begin{align}
+P(S_t \mid \mathcal{E}_t) &= \frac{P(\mathcal{E}_t \mid S_t) P(S_t)}{P(\mathcal{E}_t)} \\
+P(\mathcal{E}_t) &= \int_{\mathcal{S}} P(\mathcal{E}_t \mid S') P(S') dS' \\
+P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\
+\mathbf{\Sigma}_{\text{kovaryans}} &= \mathbb{E}\left[ (S - \mu_S) \otimes (S - \mu_S)^T \right] \\
+\text{Entropi}(P) &= -\int_{\mathcal{S}} P(S) \log P(S) dS \\
+P(S_t \mid B_t) &= \frac{P(S_t \cap B_t)}{P(B_t)} \\
+\mathbf{L}_{\text{Laplace}} &= P_0(S) + \frac{k+1}{n+2} \\
+\mathbb{E}[S] &= \int_{\mathcal{S}} S \cdot P(S) dS \\
+\text{Var}(S) &= \mathbb{E}[S^2] - (\mathbb{E}[S])^2 \\
+P_{\text{güncellenmiş}} &= \text{Softmax}(\log P_0(S) + \log P_{\text{likelihood}}(\mathcal{E} \mid S)) \\
+\text{Measure}_{\text{topos}} &= \mu(S) \in \mathbf{H}(\mathcal{S}, \mathbb{R}_{\ge 0}) \\
+\text{Path}_{\text{ihtimal}} &= (P(S_t) =_{\mathbf{Real}} 1.0)
+\end{align}
+
+\subsection{18. Kıyas ($\mathcal{O}_{18}$)}
+\begin{align}
+\text{Kıyas}(S_1, S_2) &= \frac{\langle f(S_1), f(S_2) \rangle_{\mathbf{H}}}{\|f(S_1)\|_{\mathbf{H}} \|f(S_2)\|_{\mathbf{H}}} \\
+f(S) &= \text{GELU}(S W_f + b_f) \\
+\hat{S}_2 &= \mathbf{W}_{\text{kıyas}} S_1 \\
+H_{\text{kıyas}} &= \text{TümDengelim}(S_{\text{küllî}}, S_{\text{cüz'î}}) = \mathbb{I}(S_{\text{cüz'î}} \subset S_{\text{küllî}}) \cdot P(S_{\text{küllî}}) \\
+\mathcal{E}_{\text{kıyas}} &= \| \hat{S}_2 - S_{\text{gerçek}} \|_{\text{QCoh}}^2 \\
+\mathbf{W}_{\text{kıyas}}^* &= \text{ArgMin}_W \sum_i \| W S_1^{(i)} - S_2^{(i)} \|^2 + \lambda \|W\|_{\mathcal{F}}^2 \\
+S_{\text{netice}} &= \mathbf{W}_{\text{kıyas}}^* \cdot S_{\text{yeni}} \\
+\text{Geçerlilik}_{\text{kıyas}} &= \sigma(\text{Tr}(\mathbf{W}_{\text{kıyas}}^*)) \\
+\mathbf{R}_{\text{orantı}} &= S_1 \otimes_{\mathcal{O}} S_2^T \\
+S_{\text{kıyas\_çıktı}} &= \text{Softmax}(\mathbf{R}_{\text{orantı}} S_{\text{hedef}}) \\
+\text{Morfizm}_{\text{kıyas}} &= \phi : S_1 \to S_2 \in \mathbf{H} \\
+\text{Path}_{\text{kıyas}} &= (S_1 \simeq_{\text{kıyas}} S_2) \in \mathbf{U}
+\end{align}
+
+\subsection{19. Temsil ($\mathcal{O}_{19}$)}
+\begin{align}
+T_{\text{temsil}}(S_{\text{soyut}}) &= \Psi_{\text{somut}}(S_{\text{soyut}}) \in \mathcal{H}_{\text{hayal}} \\
+\Psi_{\text{somut}}(S) &= \text{Decoder}_{\text{somut}}(S W_{\text{dec}} + b) \\
+\mathbf{K}_{\text{temsil}}(x, y) &= \exp\left( -\gamma \|S_x - S_y\|_{\mathbf{H}}^2 \right) \\
+S_{\text{somut\_model}} &= \sum_i \alpha_i \phi(S_i) \\
+\text{Hassasiyet}_{\text{temsil}} &= \text{CosSim}_{\mathbf{H}}\left(T_{\text{temsil}}(S), S_{\text{soyut}}\right) \\
+\phi(S) &= \text{RKHS\_Mapping}(S) \in \mathcal{H}_K \\
+\mathcal{L}_{\text{temsil}} &= \| S_{\text{soyut}} - \text{Encoder}(T_{\text{temsil}}(S_{\text{soyut}})) \|_{\mathbf{H}}^2 \\
+T_{\text{izomorfik}} &= \mathbf{U}_{\text{temsil}} \Sigma_{\text{temsil}} \mathbf{V}_{\text{temsil}}^T S_{\text{soyut}} \\
+\text{ModelNetliği} &= \frac{1}{\text{Var}(\Psi_{\text{somut}}(S))} \\
+\mathbf{M}_{\text{temsil\_çıktı}} &= T_{\text{temsil}}(S_{\text{soyut}}) \odot \sigma(\text{ModelNetliği}) \\
+\text{Functor}_{\text{temsil}} &= F_{\text{temsil}} : \mathcal{S} \to \mathcal{H}_{\text{hayal}} \\
+\text{Path}_{\text{temsil}} &= (S_{\text{soyut}} \simeq T_{\text{temsil}}(S_{\text{soyut}}))
+\end{align}
+
+\subsection{20. Teşbih ($\mathcal{O}_{20}$)}
+\begin{align}
+\mathcal{M}_{\text{teşbih}}(S_A, S_B) &= \text{ArgMax}_{W} \left( \text{Sim}_{\mathbf{H}}(W S_A, S_B) \right) \\
+\text{Vech-i Şebeh}(S_A, S_B) &= S_A \odot S_B \odot W_{\text{ortak}} \\
+\rho_{\text{teşbih}} &= \frac{\text{Cov}(S_A, S_B)}{\sigma_A \sigma_B} = \frac{\mathbb{E}[(S_A - \mu_A)(S_B - \mu_B)]}{\sigma_A \sigma_B} \\
+\mathcal{L}_{\text{teşbih}} &= 1 - \rho_{\text{teşbih}} \\
+S_{\text{benzeyen}} &= S_A, \quad S_{\text{benzetilen}} = S_B \\
+\mathbf{B}_{\text{teşbih\_oranı}} &= \frac{\| \text{Vech-i Şebeh} \|_{\mathbf{H}}}{\|S_A\|_{\mathbf{H}} + \|S_B\|_{\mathbf{H}}} \\
+\mathbf{P}_{\text{ortak\_altuzay}} &= \text{Proj}_{\mathcal{S}_A \cap \mathcal{S}_B}(S_A) \\
+\text{BenzerlikSkoru} &= \text{Tr}(\mathbf{P}_{\text{ortak\_altuzay}}) \\
+S_{\text{teşbih\_bileşke}} &= \alpha S_A + (1-\alpha) S_B \cdot \rho_{\text{teşbih}} \\
+\mathcal{E}_{\text{teşbih\_hatası}} &= \| S_A - \mathbf{W}^* S_B \|_{\mathbf{H}}^2 \\
+\text{Homotopi}_{\text{teşbih}} &= H : I \to \mathbf{H}, \quad H(0)=S_A, \, H(1)=S_B \\
+\text{Path}_{\text{teşbih}} &= (S_A =_{\text{teşbih}} S_B)
+\end{align}
+
+\subsection{21. Tefekkür ($\mathcal{O}_{21}$)}
+\begin{align}
+S_{t+1}^{(\text{tefekkür})} &= S_t + \int_{0}^T f_{\text{müfekkire}}(S_\tau, \dot{I}_\tau, G_\tau) d\tau \\
+f_{\text{müfekkire}} &= \text{GELU}(S_\tau W_s + \dot{I}_\tau W_i + G_\tau W_g) \\
+\dot{S}_t &= \nabla \mathcal{V}_{\text{tefekkür}}(S_t) \in \mathcal{T}\mathcal{S} \\
+\mathcal{V}_{\text{tefekkür}}(S) &= \frac{1}{2} \|S - G_t\|_{\mathbf{H}}^2 + \lambda_{\text{neden}} \text{Tenakuz}(S, \dot{I}_t) \\
+\mathbf{J}_{\text{tefekkür}} &= \left[ \frac{\partial f_{\text{müfekkire}, i}}{\partial S_j} \right]_{ij} \in \mathcal{T}^*\mathcal{S} \otimes \mathcal{T}\mathcal{S} \\
+\mathcal{H}_{\text{tefekkür}} &= \int_{\mathcal{S}} P(S_t) \log P(S_t) dS \\
+S_{\text{yeni\_meçhul}} &= S_t + \text{EigenVector}_{\max}(\mathbf{J}_{\text{tefekkür}}) \\
+d S_t &= \mathbf{f}(S_t) dt + \mathbf{g}(S_t) dW_t \\
+\mathbf{S}_{\text{yörünge}} &= \{ S_0, S_1, \dots, S_T \} \subset \mathcal{S} \\
+S_{\text{tefekkür\_sonucu}} &= \text{LayerNorm}(S_T^{(\text{tefekkür})} W_o) \\
+\text{Flow}_{\text{tefekkür}} &= \Phi_t : \mathcal{S} \to \mathcal{S} \\
+\text{Path}_{\text{tefekkür}} &= (S_0 =_{\mathcal{S}} S_T)
+\end{align}
+
+\subsection{22. İllet Keşfi ($\mathcal{O}_{22}$)}
+\begin{align}
+\dot{I}_t &= \text{GELU}\left( (S_t W_i) \odot (H_t W_{hi}) \right) \in \mathcal{G}_{\text{neden}} \\
+\dot{I}_{\text{kebîr}} &= \text{DAG\_Sentezi}(S_{\text{kebîr}}, H_{[1:t]}) = \text{Softmax}\left( \frac{S_{\text{kebîr}} A_{\text{neden}} S_{\text{kebîr}}^T}{\sqrt{d_{\text{sem}}}} \right) \\
+P(S_j \mid do(S_i = x)) &= \sum_k P(S_j \mid S_i=x, Z_k) P(Z_k) \quad (\text{Do-Calculus}) \\
+\mathcal{C}_{\text{nedensel}} &= \text{Trace}(A_{\text{neden}}) - \log \det(I + A_{\text{neden}}) \\
+A_{\text{neden}, ij} &= \mathbb{I}(S_i \to S_j) \cdot \sigma(W_{\text{dag}} [S_i \oplus S_j]) \\
+\text{Acyclicity}(A) &= \text{Tr}(\exp(A \circ A)) - d = 0 \\
+\mathcal{L}_{\text{nedensellik}} &= \text{MSE}(S_j, f_j(Parents(S_j))) + \lambda \text{Acyclicity}(A) \\
+\text{Parent}(S_j) &= \{ S_i \mid A_{\text{neden}, ij} > \tau_{\text{kenar}} \} \\
+\mathbf{G}_{\text{DAG}} &= (V=\mathbf{S}, E=A_{\text{neden}}) \in \text{DAG}(V, E) \\
+\dot{I}_{\text{net}} &= \text{TopologicalSort}(\mathbf{G}_{\text{DAG}}) \cdot W_{\text{neden}} \\
+\text{Intervention}(do(S_i=x)) &= \text{GraphSurgery}(\mathbf{G}_{\text{DAG}}, S_i) \\
+\text{Path}_{\text{illet}} &= (\dot{I}_t =_{\mathcal{G}} \dot{I}_{\text{kebîr}})
+\end{align}
+
+\subsection{23. Mantık Yürütme ($\mathcal{O}_{23}$)}
+\begin{align}
+\mathcal{R}_{\text{mantık}}(P_1, P_2) &= \text{ModusPonens}(P_1, P_1 \implies P_2) = P_2 \\
+\mathbf{Y}_{\text{mantık}} &= \text{Softmax}\left( \mathbf{W}_2 \text{GELU}(\mathbf{W}_1 [\mathbf{P}_1 \oplus \mathbf{P}_2]) \right) \\
+\text{Geçerlilik}(R) &= \mathbb{I}(\text{Tenakuz}(R) = 0) \\
+\mathcal{L}_{\text{mantık}} &= -\log P(Q_{\text{netice}} \mid P_1, P_2) \\
+P_1 \implies P_2 &\equiv \neg P_1 \lor P_2 \in \mathbf{Prop} \\
+\mathbf{T}_{\text{doğruluk}} &= \mathbf{P}_1 \otimes_{\mathcal{O}} \mathbf{P}_2 \\
+Q_{\text{çıkarım}} &= \text{LayerNorm}(\mathbf{W}_{\text{dedüksiyon}} \mathbf{T}_{\text{doğruluk}}) \\
+\text{ÇıkarımKuvveti} &= \min(\text{Sıhhat}(P_1), \text{Sıhhat}(P_2)) \\
+Q_{\text{geçerli}} &= Q_{\text{çıkarım}} \cdot \text{ÇıkarımKuvveti} \\
+\mathbf{R}_{\text{mantık\_sonuç}} &= \text{Threshold}(Q_{\text{geçerli}}, \tau_{\text{mantık}}) \\
+\text{Functor}_{\text{mantık}} &= F_{\text{mantık}} : \mathbf{Prop} \times \mathbf{Prop} \to \mathbf{Prop} \\
+\text{Path}_{\text{mantık}} &= (Q_{\text{çıkarım}} =_{\mathbf{Prop}} P_2)
+\end{align}
+
+\subsection{24. İspat ($\mathcal{O}_{24}$)}
+\begin{align}
+\mathcal{B}_{\text{burhân}} &= (P_0 \to P_1 \to \dots \to P_n \equiv Q) \\
+T_{\text{ispat}} &= \prod_{k=1}^n \text{Geçerlilik}(P_{k-1} \implies P_k) \\
+\mathbf{1}_{\text{Q.E.D.}} &= \mathbb{I}(T_{\text{ispat}} = 1) \\
+\mathcal{L}_{\text{ispat\_boşluğu}} &= \sum_{k=1}^n \| P_k - \text{Çıkarım}(P_{k-1}) \|_{\mathbf{H}}^2 \\
+\text{KademeliDoğrulama}(P_k) &= \sigma(W_v [P_k \oplus P_{k-1}]) \\
+P_{k+1} &= \text{ModusPonens}(P_k, \text{Kural}_k) \\
+\mathbf{M}_{\text{burhân\_zinciri}} &= [P_0, P_1, \dots, P_n]^T \\
+\text{ZincirUzunluğu} &= n \\
+\text{Sarsılmazlık} &= \frac{T_{\text{ispat}}}{1 + \lambda n} \\
+Q_{\text{ispatlanmış}} &= Q \cdot \mathbf{1}_{\text{Q.E.D.}} \\
+\text{Refl}_{\text{ispat}} &= \text{refl}_Q : (Q =_{\mathbf{Prop}} Q) \\
+\text{Path}_{\text{ispat}} &= (P_0 =_{\mathbf{Burhân}} Q)
+\end{align}
+
+\subsection{25. Teemmül ($\mathcal{O}_{25}$)}
+\begin{align}
+M_t^{(\tau)} &= \text{LayerNorm}\left( M_t^{(\tau-1)} + \text{MultiHeadAttn}(\hat{Y}_t^{(\tau)}, S_t, H_t) \right), \quad \tau = 1, \dots, \mathcal{K} \\
+M_{[t:t+L]} &= \text{FazDinamiği}\left( M_{[t-1]}, X_{[t-L:t]}, H_t \right) \in \Omega_M \\
+\Delta M &= M_t^{(\mathcal{K})} - M_t^{(0)} \\
+\mathcal{S}_{\text{durma\_eşiği}} &= \mathbb{I}(\|M_t^{(\tau)} - M_t^{(\tau-1)}\|_{\mathbf{H}} < \epsilon_{\text{teemmül}}) \\
+\hat{Y}_t^{(\tau)} &= R_t^{(\tau)} \triangleright (H_t \cdot \dot{I}_t + S_t) \\
+R_t^{(\tau)} &= \sigma(S_t W_r + \dot{I}_t W_{ir} + G_t W_{gr} + M_t^{(\tau-1)} W_{mr}) \in \mathfrak{g} \\
+\text{DevridaimFarkı}(\tau) &= \|M_t^{(\tau)} - M_t^{(\tau-1)}\|_{\text{QCoh}}^2 \\
+\tau_{\text{durma}} &= \text{ArgMin}_{\tau} (\text{DevridaimFarkı}(\tau) < \epsilon) \\
+M_{\text{kararlı}} &= M_t^{(\tau_{\text{durma}})} \\
+\mathcal{L}_{\text{teemmül\_maliyeti}} &= \lambda \cdot \tau_{\text{durma}} \\
+\text{Closure}_{\text{teemmül}} &= \mathbf{Closure}(\hat{Y}_t^{(\tau)}, \rho) \\
+\text{Path}_{\text{teemmül}} &= (M_t^{(0)} =_{\Omega_M} M_t^{(\mathcal{K})})
+\end{align}
+
+\subsection{26. Temkin ($\mathcal{O}_{26}$)}
+\begin{align}
+\mathbf{K}_{\text{temkin}} &= \mathbf{S}_t + \mu_{\text{emniyet}} \cdot \mathbf{\Sigma}_{\text{gürültü}} \\
+\text{VakarKatsayısı} &= \frac{1}{1 + \|\nabla_t S_t\|_{\mathbf{H}}^2} \\
+S_{\text{durgun}} &= \text{Filtre}_{\text{temkin}}(S_t, \text{VakarKatsayısı}) \\
+\mathcal{R}_{\text{sarsılmazlık}} &= \min_{\|\delta\| \le \epsilon} T(S_t + \delta) \\
+\mathbf{\Sigma}_{\text{gürültü}} &= \mathbb{E}[\delta \otimes \delta^T] \\
+\text{ToleransMarjı} &= \mu_{\text{emniyet}} \cdot \sqrt{\text{Tr}(\mathbf{\Sigma}_{\text{gürültü}})} \\
+S_{\text{müstakar}} &= S_t \cdot \text{VakarKatsayısı} + S_{t-1} \cdot (1 - \text{VakarKatsayısı}) \\
+\mathcal{L}_{\text{temkin}} &= \| S_{\text{müstakar}} - S_t \|_{\mathbf{H}}^2 + \lambda \frac{1}{\text{VakarKatsayısı}} \\
+\mathbf{D}_{\text{duruş}} &= \text{LayerNorm}(S_{\text{müstakar}} W_d) \\
+\mathbb{I}_{\text{temkin}} &= \mathbb{I}(\mathcal{R}_{\text{sarsılmazlık}} > 1 - \delta) \\
+\text{Truncation}_{\text{temkin}} &= \text{Truncate}_{hLevel 2}(\mathbf{D}_{\text{duruş}}) \\
+\text{Path}_{\text{temkin}} &= (S_t =_{\text{temkin}} S_{t-1})
+\end{align}
+
+\subsection{27. Tetkik ($\mathcal{O}_{27}$)}
+\begin{align}
+\delta S_{t, \text{kılcal}} &= S_t \odot \mathbf{M}_{\text{mikro\_maske}} \\
+\mathbf{M}_{\text{mikro\_maske}} &= \sigma(W_{\text{mikro}} S_t + b_{\text{mikro}}) \\
+\text{KusurHaritası} &= |\delta S_{t, \text{kılcal}} - S_{\text{ideal}}| \otimes_{\mathcal{O}} W_{\text{tetkik}} \\
+\text{Skor}_{\text{tetkik}} &= \text{LayerNorm}\left( \sum \text{KusurHaritası} \right) \\
+\mathcal{E}_{\text{tetkik}} &= \| \text{Skor}_{\text{tetkik}} \|_1 \\
+S_{\text{kılcal\_süzülmüş}} &= S_t - \eta_{\text{tetkik}} \text{KusurHaritası} \\
+\mathbf{J}_{\text{mikro}} &= \left[ \frac{\partial (\delta S_{t, \text{kılcal}})_i}{\partial S_j} \right]_{ij} \in \mathcal{T}^*\mathcal{S} \otimes \mathcal{T}\mathcal{S} \\
+\text{PürüzDerecesi} &= \text{Tr}(\mathbf{J}_{\text{mikro}}^T \mathbf{J}_{\text{mikro}}) \\
+\mathbf{P}_{\text{tetkik\_çıktı}} &= S_{\text{kılcal\_süzülmüş}} \cdot \mathbb{I}(\text{PürüzDerecesi} < \tau_{\text{pürüz}}) \\
+\mathcal{L}_{\text{tetkik}} &= \text{PürüzDerecesi} + \lambda \| \text{KusurHaritası} \|_1 \\
+\text{DerivLokus} &= \mathbf{R}\text{Crit}(\text{KusurHaritası}) \in \mathbf{H} \\
+\text{Path}_{\text{tetkik}} &= (\text{PürüzDerecesi} =_{\mathbf{Real}} 0)
+\end{align}
+
+\subsection{28. Tashih ($\mathcal{O}_{28}$)}
+\begin{align}
+S_{t, \text{musahhah}} &= S_t - \gamma \cdot \text{KusurHaritası} \odot \nabla_{S} \text{Tenakuz}(S_t) \\
+\Delta R_{\text{ıslah}} &= R_{\text{yeni}} - R_{\text{eski}} = \eta \nabla_R \mathcal{L}_{\text{tashih}} \\
+T_{\text{tashih}} &= \text{Tasdik}(S_{t, \text{musahhah}}) \\
+\mathcal{L}_{\text{tashih}} &= \| S_{t, \text{musahhah}} - S_{\text{itidal}} \|_{\mathcal{S}}^2 \\
+S_{\text{itidal}} &= \frac{1}{2} (S_{\text{tez}} + S_{\text{antitez}}) \\
+\mathbf{M}_{\text{düzeltme}} &= I - \gamma \mathbf{W}_{\text{ıslah}} \\
+S_{t, \text{yeni}} &= \mathbf{M}_{\text{düzeltme}} S_t \\
+\text{DüzeltmeMiktarı} &= \|S_{t, \text{musahhah}} - S_t\|_{\mathbf{H}} \\
+\mathbf{1}_{\text{tashih\_başarılı}} &= \mathbb{I}(T_{\text{tashih}} > T_{\text{eski}}) \\
+S_{\text{nihai\_düzgün}} &= \mathbf{1}_{\text{tashih\_başarılı}} S_{t, \text{musahhah}} + (1 - \mathbf{1}_{\text{tashih\_başarılı}}) S_{\text{itidal}} \\
+\text{LieBracket}_{\text{ıslah}} &= [R_{\text{eski}}, R_{\text{yeni}}] \in \mathfrak{g} \\
+\text{Path}_{\text{tashih}} &= (S_t =_{\mathcal{S}} S_{t, \text{musahhah}})
+\end{align}
+
+\subsection{29. Teyit ($\mathcal{O}_{29}$)}
+\begin{align}
+E_{\text{bağımsız}} &= \text{Kanal}_2(X_t) \quad (\text{Kanal}_1 \perp \text{Kanal}_2) \\
+P(H \mid E_1, E_2) &= \frac{P(E_2 \mid H) P(H \mid E_1)}{P(E_2 \mid E_1)} \\
+\text{GüvenKatsayısı} &= \text{CosSim}_{\mathbf{H}}(f(E_1), f(E_2)) = \frac{\langle f(E_1), f(E_2) \rangle_{\mathbf{H}}}{\|f(E_1)\|_{\mathbf{H}} \|f(E_2)\|_{\mathbf{H}}} \\
+\Delta T_{\text{teyit}} &= \eta \cdot \text{GüvenKatsayısı} \\
+T_{\text{yeni}} &= T_{\text{eski}} + \Delta T_{\text{teyit}} \\
+\text{BağımsızlıkDüzeyi} &= 1 - |\text{Cov}(E_1, E_2)| \\
+\text{NetTeyitSkoru} &= \text{GüvenKatsayısı} \cdot \text{BağımsızlıkDüzeyi} \\
+\mathbf{W}_{\text{teyit\_ağırlığı}} &= \sigma(W_t [\text{NetTeyitSkoru}]) \\
+T_{\text{güncellenmiş}} &= \min(1.0, T_{\text{eski}} + \mathbf{W}_{\text{teyit\_ağırlığı}}) \\
+\mathcal{L}_{\text{teyit\_hatası}} &= (1 - \text{NetTeyitSkoru})^2 \\
+\text{Adjunction}_{\text{teyit}} &= f^* \dashv f_* : \text{QCoh}(\mathcal{E}_1) \to \text{QCoh}(\mathcal{E}_2) \\
+\text{Path}_{\text{teyit}} &= (E_1 =_{\text{teyit}} E_2)
+\end{align}
+
+\subsection{30. Tahkik ($\mathcal{O}_{30}$)}
+\begin{align}
+\mathcal{C}_{\text{tahkik}}(H_{[1:t]} \leftrightarrow \hat{Y}_{\text{makro}}) &= \mathbb{I}\left( \text{AsılDelil}(S_t) \land \neg \text{Taklit}(S_t) \right) \\
+S_{\text{tahkik}} &= \text{ArgMin}_{S} \left( \mathcal{L}_{\text{köken}}(S) + \text{Tenakuz}(S, \text{Aksiyomlar}) \right) \\
+\mathcal{L}_{\text{köken}}(S) &= \| S - S_{\text{ilk\_kaynak}} \|_{\mathbf{H}}^2 \\
+T_{\text{tahkik}} &= \sigma\left( \text{CosSim}_{\mathbf{H}}(S_{\text{tahkik}}, S_{\text{asıl}}) \right) \\
+\mathbf{1}_{\text{muhakkik}} &= \mathbb{I}(T_{\text{tahkik}} > 1 - \delta_{\text{tahkik}}) \\
+\text{TaklitDerecesi}(S) &= \exp(-\alpha \|S - S_{\text{şöhret}}\|_{\mathbf{H}}^2) \\
+\text{AsılDelilKuvveti} &= \text{BurhânSkoru}(S_{\text{tahkik}}) \\
+S_{\text{hakiki}} &= S_{\text{tahkik}} \cdot \mathbf{1}_{\text{muhakkik}} \\
+\mathcal{R}_{\text{tahkik\_mühür}} &= T_{\text{tahkik}} \cdot \mathbf{1}_{\text{muhakkik}} \\
+\mathcal{L}_{\text{tahkik\_bütün}} &= \mathcal{L}_{\text{köken}}(S_{\text{tahkik}}) + (1 - T_{\text{tahkik}}) \\
+\text{Univalence}_{\text{tahkik}} &= (S_{\text{tahkik}} \simeq S_{\text{asıl}}) \simeq (S_{\text{tahkik}} =_{\mathcal{U}} S_{\text{asıl}}) \\
+\text{Path}_{\text{tahkik}} &= (S_{\text{tahkik}} =_{\mathcal{S}} S_{\text{hakiki}})
+\end{align}
+
+\subsection{31. Tedebbür ($\mathcal{O}_{31}$)}
+\begin{align}
+S_{t+H}^{(\text{gelecek})} &= \int_t^{t+H} \text{Evrim}(S_\tau, a_\tau) d\tau \\
+\text{Evrim}(S, a) &= f_{\text{akıbet}}(S, a) + \sigma_{\text{akıbet}} \xi_t \in \mathcal{T}\mathcal{S} \\
+\mathcal{V}_{\text{akıbet}}(S_t) &= \mathbb{E}\left[ \sum_{k=1}^H \beta^k \mathcal{U}_{\text{gaye}}(S_{t+k}) \right] \\
+\nabla_{\text{akıbet}} &= \frac{\partial \mathcal{V}_{\text{akıbet}}}{\partial S_t} \in \mathcal{T}^*\mathcal{S} \\
+\mathcal{Risk}_{\text{tedebbür}} &= P(S_{t+H} \in \mathcal{S}_{\text{tehlike}}) \\
+\mathcal{S}_{\text{tehlike}} &= \{ S \mid \mathcal{U}_{\text{gaye}}(S) < \tau_{\text{felaket}} \} \\
+a_{\text{emniyetli}} &= \text{ArgMax}_a \left( \mathcal{V}_{\text{akıbet}}(S_t) - \gamma \mathcal{Risk}_{\text{tedebbür}} \right) \\
+H_{\text{ufuk}} &= \text{AdımSayısı} \\
+\mathbf{S}_{\text{GelecekYolu}} &= [S_{t+1}, S_{t+2}, \dots, S_{t+H}] \subset \mathcal{S} \\
+\mathcal{J}_{\text{tedebbür\_net}} &= \mathcal{V}_{\text{akıbet}}(S_t) \cdot (1 - \mathcal{Risk}_{\text{tedebbür}}) \\
+\text{EulerLagrange}_{\text{akıbet}} &= \frac{\partial \mathcal{L}}{\partial S} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{S}} = 0 \\
+\text{Path}_{\text{tedebbür}} &= (S_t =_{\mathbf{Ufuk}} S_{t+H})
+\end{align}
+
+\subsection{32. Şek-Zan-Yakîn İdraki ($\mathcal{O}_{32}$)}
+\begin{align}
+P_{\text{idrak}}(S_t) &\in [0, 1] \\
+P_{\text{idrak}}(S_t) &= \sigma\left( W_p [S_t \oplus \dot{I}_t \oplus T_t] \right) \\
+\text{Makam}(S_t) &= 
+\begin{cases}
+\text{Şek } (\%50), & |P_{\text{idrak}} - 0.5| < \epsilon_{\text{şek}} \\
+\text{Zan } (\%51-\%99), & 0.5 + \epsilon_{\text{şek}} \le P_{\text{idrak}} < 1 - \epsilon_{\text{yakîn}} \\
+\text{Yakîn } (\%100), & P_{\text{idrak}} \ge 1 - \epsilon_{\text{yakîn}}
+\end{cases} \\
+\text{Entropi}_{\text{idrak}} &= -P_{\text{idrak}} \log P_{\text{idrak}} - (1-P_{\text{idrak}}) \log (1-P_{\text{idrak}}) \\
+\Delta P &= \text{TeyitScore} - \text{TenakuzScore} \\
+P_{\text{yeni}} &= \text{Clamp}(P_{\text{eski}} + \eta \Delta P, 0.0, 1.0) \\
+\mathbb{I}_{\text{yakîn}} &= \mathbb{I}(\text{Makam}(S_t) == \text{Yakîn}) \\
+\mathbb{I}_{\text{zan}} &= \mathbb{I}(\text{Makam}(S_t) == \text{Zan}) \\
+\mathbb{I}_{\text{şek}} &= \mathbb{I}(\text{Makam}(S_t) == \text{Şek}) \\
+Hüküm_{\text{idrak}} &= 1.0 \cdot \mathbb{I}_{\text{yakîn}} + P_{\text{idrak}} \cdot \mathbb{I}_{\text{zan}} + 0.5 \cdot \mathbb{I}_{\text{şek}} \\
+\text{Truncation}_{\text{idrak}} &= \text{Truncate}_{hLevel 0}(P_{\text{idrak}}) \\
+\text{Path}_{\text{idrak}} &= (P_{\text{idrak}} =_{\mathbf{Real}} 1.0)
+\end{align}
+
+\subsection{33. Muhakeme ($\mathcal{O}_{33}$)}
+\begin{align}
+J_{\text{muhakeme}} &= \int_0^T \Big[ \alpha \langle S_t, G_t \rangle_{\mathbf{H}} + \beta \dot{I}_t - \gamma \text{Tenakuz}(S_t) \Big] dt \\
+R_{\text{kebîr}} &= \mathcal{F}_{\text{operatör}}(M_{[t:t+L]}, S_{\text{kebîr}}, \dot{I}_{\text{kebîr}}, G_{\text{kebîr}}) \in \mathcal{L}(\mathcal{S}_{\text{kebîr}}, \mathcal{S}_{\text{kebîr}}) \\
+T_{\text{kebîr}} &= \sigma\left( \text{CosSim}_{\mathbf{H}}(R_{\text{kebîr}} \triangleright S_{\text{kebîr}}, G_{\text{kebîr}}) - \text{MakroTenakuz}(R_{\text{kebîr}} \triangleright S_{\text{kebîr}}, \dot{I}_{\text{kebîr}}) \right) \\
+N_{\text{kebîr}} &= T_{\text{kebîr}} \odot \text{ProgramSentezi}(R_{\text{kebîr}} \triangleright S_{\text{kebîr}}) + (1 - T_{\text{kebîr}}) \odot \text{Rücû}(M_{[t:t+L]} \to \text{RejimDeğiştir}) \\
+\text{ProgramSentezi}(S) &= \text{GELU}(W_{p1} S + b_{p1}) W_{p2} \\
+\text{RejimDeğiştir} &= \text{ArgMax}_m P(\text{Mod}_m \mid M_{[t:t+L]}) \\
+\mathbf{\Gamma}_{\text{muhakeme\_mizan}} &= \frac{\text{AleyhteDeliller}}{\text{LehteDeliller} + \epsilon} \\
+\text{KararEşiği} &= \mathbb{I}(\mathbf{\Gamma}_{\text{muhakeme\_mizan}} < \tau_{\text{kabul}}) \\
+N_{\text{nihai}} &= N_{\text{kebîr}} \cdot \text{KararEşiği} \\
+\mathcal{L}_{\text{muhakeme\_hatası}} &= (1 - T_{\text{kebîr}})^2 + \lambda \mathbf{\Gamma}_{\text{muhakeme\_mizan}} \\
+\text{KanExtension}_{\text{muhakeme}} &= (\text{Lan}_K N_{\text{kebîr}})(c) \in \mathbf{H} \\
+\text{Path}_{\text{muhakeme}} &= (N_{\text{kebîr}} =_{\mathcal{N}} N_{\text{nihai}})
+\end{align}
+
+\subsection{34. Tafsil ($\mathcal{O}_{34}$)}
+\begin{align}
+S_{\text{tafsil}} &= \text{Açım}(S_{\text{mücmel}}) = \bigoplus_{k=1}^K S_{\text{dal}}^{(k)} \\
+S_{\text{dal}}^{(k)} &= \text{GELU}(S_{\text{mücmel}} W_{\text{dal}, k} + b_k) \in \mathcal{S} \\
+\mathbf{J}_{\text{tafsil}} &= \text{Diag}(w_1, w_2, \dots, w_K) \cdot \mathbf{S}_{\text{dallar}} \\
+w_k &= \frac{\exp(\mathbf{v}_d^T S_{\text{dal}}^{(k)})}{\sum_j \exp(\mathbf{v}_d^T S_{\text{dal}}^{(j)})} \\
+\text{Netlik}(S_{\text{tafsil}}) &= \frac{\sum_k \|S_{\text{dal}}^{(k)}\|_{\mathbf{H}}}{\|S_{\text{mücmel}}\|_{\mathbf{H}}} \\
+\mathcal{L}_{\text{tafsil\_sadakat}} &= \| \text{Birleştir}(S_{\text{tafsil}}) - S_{\text{mücmel}} \|_{\mathbf{H}}^2 \\
+\text{Birleştir}(S_{\text{tafsil}}) &= \sum_{k=1}^K w_k S_{\text{dal}}^{(k)} \\
+\mathbf{Tree}_{\text{tafsil}} &= \left( V=\{S_{\text{mücmel}}\} \cup \{S_{\text{dal}}^{(k)}\}, E=\{(S_{\text{mücmel}}, S_{\text{dal}}^{(k)})\}\right) \\
+\text{DallanmaOranı} &= K \\
+S_{\text{tafsil\_çıktı}} &= \text{LayerNorm}(\mathbf{J}_{\text{tafsil}} W_o) \\
+\text{Pushforward}_{\text{tafsil}} &= f_*(\text{QCoh}(S_{\text{mücmel}})) \in \text{QCoh}(S_{\text{tafsil}}) \\
+\text{Path}_{\text{tafsil}} &= (\text{Birleştir}(S_{\text{tafsil}}) =_{\mathcal{S}} S_{\text{mücmel}})
+\end{align}
+
+\subsection{35. Tefsir ($\mathcal{O}_{35}$)}
+\begin{align}
+\text{Murad}_{\text{aslî}} &= \text{Tefsir}(S_{\text{müphem}}, \text{Siyak}, \text{Sibak}) \\
+\text{Tefsir}(S, A, B) &= \text{Softmax}\left( \frac{S W_{\text{tefsir}} \cdot [A \oplus B]^T}{\sqrt{d}} \right) [A \oplus B] W_v \\
+P(\text{Murad} \mid S_{\text{lafız}}) &= \sigma( W_m [S_{\text{lafız}} \oplus \text{Bağlam}] ) \\
+\text{Vuzuh}_{\text{tefsir}} &= 1 - \mathcal{H}(P(\text{Murad} \mid S_{\text{lafız}})) \\
+\mathcal{L}_{\text{tefsir\_tutarlılık}} &= \text{Tenakuz}(\text{Murad}_{\text{aslî}}, \text{Muhkemat}) \\
+\text{Muhkemat} &= \{ S \in \mathcal{S} \mid \text{Makam}(S) == \text{Yakîn} \} \\
+S_{\text{açılmış}} &= S_{\text{müphem}} + \eta \cdot \text{Murad}_{\text{aslî}} \\
+\text{Sebeb-i Nüzûl} &= C_{\text{bağlam}} \\
+P(\text{Murad} \mid C_{\text{bağlam}}) &= \frac{P(C_{\text{bağlam}} \mid \text{Murad}) P(\text{Murad})}{P(C_{\text{bağlam}})} \\
+\text{TefsirNetice} &= \text{LayerNorm}(S_{\text{açılmış}} W_t) \\
+\text{Pullback}_{\text{tefsir}} &= f^*(\text{QCoh}(\text{Bağlam})) \in \text{QCoh}(S_{\text{lafız}}) \\
+\text{Path}_{\text{tefsir}} &= (S_{\text{müphem}} =_{\text{tefsir}} \text{Murad}_{\text{aslî}})
+\end{align}
+
+\subsection{36. Tevil ($\mathcal{O}_{36}$)}
+\begin{align}
+S_{\text{müevvel}} &= \text{İrcâ}(S_{\text{zâhir}}, \text{AklîBurhân}) = S_{\text{zâhir}} + \mathbf{W}_{\text{tevil}} \cdot \text{İllet}_{\text{mânia}} \\
+\text{İllet}_{\text{mânia}} &= \nabla_S \text{Tenakuz}(S_{\text{zâhir}}, \text{Aksiyomlar}) \\
+\text{MecazKöprüsü}(S_A \to S_B) &= \exp\left( -\lambda d_{\mathbf{H}}(S_A, S_B) \right) \\
+T_{\text{tevil}} &= \mathbb{I}\left( \text{Tenakuz}(S_{\text{zâhir}}) > 0 \land \text{Tenakuz}(S_{\text{müevvel}}) == 0 \right) \\
+\mathcal{L}_{\text{tevil}} &= \| S_{\text{müevvel}} - S_{\text{tenzih\_itidal}} \|_{\mathbf{H}}^2 \\
+S_{\text{tenzih\_itidal}} &= \text{Proj}_{\text{Tenzih}}(S_{\text{zâhir}}) \\
+\rho_{\text{mecaz}} &= \text{MecazKöprüsü}(S_{\text{zâhir}}, S_{\text{müevvel}}) \\
+S_{\text{tevil\_geçerli}} &= T_{\text{tevil}} \cdot S_{\text{müevvel}} + (1 - T_{\text{tevil}}) \cdot S_{\text{zâhir}} \\
+\text{TevilKuvveti} &= \rho_{\text{mecaz}} \cdot T_{\text{tevil}} \\
+S_{\text{nihai\_tevil}} &= \text{LayerNorm}(S_{\text{tevil\_geçerli}} W_o) \\
+\text{Homotopi}_{\text{tevil}} &= H : I \to \mathcal{S}, \quad H(0)=S_{\text{zâhir}}, \, H(1)=S_{\text{müevvel}} \\
+\text{Path}_{\text{tevil}} &= (S_{\text{zâhir}} \simeq_{\text{tevil}} S_{\text{müevvel}}) \in \mathbf{U}
+\end{align}
+
+\subsection{37. Fesâhat ($\mathcal{O}_{37}$)}
+\begin{align}
+\text{FesâhatScore}(N_t) &= 1 - \left[ \mu_1 \text{Tenâfür}(N_t) + \mu_2 \text{Garâbet}(N_t) + \mu_3 \text{Ta'kîd}(N_t) \right] \\
+\text{Tenâfür}(N_t) &= \sum_{i=1}^{|N|-1} \text{MahreçMesafe}(y_i, y_{i+1}) \\
+\text{MahreçMesafe}(a, b) &= \| \text{MahreçVektörü}(a) - \text{MahreçVektörü}(b) \|_2 \\
+\text{Garâbet}(N_t) &= -\sum_{i=1}^{|N|} \log P_{\text{lügat}}(y_i) \\
+\text{Ta'kîd}(N_t) &= \| \mathbf{J}_{\text{sentaks\_karmaşıklığı}} \|_{\mathcal{F}} \\
+N_{t, \text{fasîh}} &= \text{ArgMax}_{N} \left( \text{FesâhatScore}(N) \;\middle|\; \text{Mana}(N) == \text{Mana}(N_t) \right) \\
+\mathcal{L}_{\text{fesâhat}} &= 1 - \text{FesâhatScore}(N_{t, \text{fasîh}}) \\
+\mathbf{v}_{\text{mahreç}} &= \text{Embed}_{\text{fonetik}}(y) \\
+P_{\text{lügat}}(y) &= \text{Frekans}_{\text{korpus}}(y) \\
+N_{\text{temizlenmiş}} &= N_t \cdot \mathbb{I}(\text{FesâhatScore}(N_t) > \tau_{\text{fesâhat}}) \\
+\text{CanonicalForm} &= \text{Readback}(N_t) \\
+\text{Path}_{\text{fesâhat}} &= (N_t =_{\mathcal{N}} N_{t, \text{fasîh}})
+\end{align}
+
+\subsection{38. Talâkat ($\mathcal{O}_{38}$)}
+\begin{align}
+\text{Debi}_{\text{konuşma}} &= \frac{d N_t}{d t} = f_{\text{talâkat}}(S_t, \text{LügatHazinesi}) \\
+f_{\text{talâkat}} &= \text{GELU}(S_t W_{\text{akış}} + \mathbf{V}_{\text{lügat}}) \in \mathcal{T}\mathcal{N} \\
+\text{AkıcılıkScore} &= \exp\left( -\alpha \cdot \text{DuraksamaSüresi} \right) \\
+\text{DuraksamaSüresi} &= \int_0^T \mathbb{I}\left( \left\|\frac{d N_t}{d t}\right\|_{\mathbf{H}} < \epsilon_{\text{durak}} \right) dt \\
+N_{t, \text{akıcı}} &= \text{Smooth}_{\text{akış}}(N_t) = \int_{\mathbb{R}} N_\tau k_{\text{akış}}(t-\tau) d\tau \\
+k_{\text{akış}}(t) &= \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left( -\frac{t^2}{2\sigma^2} \right) \\
+\mathcal{L}_{\text{talâkat}} &= \left\| \nabla_t N_{t, \text{akıcı}} - \mathbf{v}_{\text{hedef\_hız}} \right\|_{\mathbf{H}}^2 \\
+\mathbf{v}_{\text{hedef\_hız}} &= \text{SabitDebi} \in \mathcal{T}\mathcal{N} \\
+\text{PelteklikFiltresi} &= I - \mathbf{W}_{\text{tutukluk}} \\
+N_{\text{pürüzsüz\_akış}} &= \text{PelteklikFiltresi} \cdot N_{t, \text{akıcı}} \\
+\text{Flow}_{\text{talâkat}} &= \exp\left( t \frac{d N_t}{dt} \right) \in \mathbf{H} \\
+\text{Path}_{\text{talâkat}} &= (N_t =_{\text{akış}} N_{t, \text{akıcı}})
+\end{align}
+
+\subsection{39. Belâgat ($\mathcal{O}_{39}$)}
+\begin{align}
+\text{BelâgatScore}(N_t) &= \text{FesâhatScore}(N_t) \times \text{Uyum}\left( N_t, \text{Makam}_{\text{muhatap}} \right) \\
+\text{Uyum}(N, M) &= \cos(N W_{\text{ifade}}, M W_{\text{makam}}) \\
+\text{İsabet}(N_t, G_t) &= \frac{\langle N_t W_{\text{tesir}}, G_t \rangle_{\mathbf{H}}}{\|N_t W_{\text{tesir}}\|_{\mathbf{H}} \|G_t\|_{\mathbf{H}}} \\
+N_{t, \text{beliğ}} &= R_{\text{belâgat}} \triangleright (N_t \otimes_{\mathcal{O}} \text{Makam}_{\text{muhatap}}) \\
+R_{\text{belâgat}} &= \exp\left( \theta \mathbf{X}_{\text{muktezâ\_hâl}} \right) \in \mathfrak{g} \\
+\mathcal{L}_{\text{belâgat}} &= 1 - \text{İsabet}(N_{t, \text{beliğ}}, G_t) \\
+\text{İcâzSkoru} &= \frac{\text{ManaKapsamı}(N_t)}{\text{KelimeSayısı}(N_t)} \\
+\text{İtnâbSkoru} &= \frac{\text{KelimeSayısı}(N_t)}{\text{Anlaşılırlık}(N_t)} \\
+\mathbf{Makaam}_{\text{seçim}} &= 
+\begin{cases}
+\text{İcâz Modu}, & \text{Muhatap} == \text{Akıllı} \\
+\text{İtnâb Modu}, & \text{Muhatap} == \text{Talebkâr}
+\end{cases} \\
+N_{\text{hedefe\_isabet}} &= N_{t, \text{beliğ}} \cdot \text{BelâgatScore}(N_t) \\
+\text{Pushforward}_{\text{belâgat}} &= f_*(N_t) \in \text{QCoh}(\text{Muhatap Uzayı}) \\
+\text{Path}_{\text{belâgat}} &= (N_{t, \text{beliğ}} =_{\mathbf{Tesir}} G_t)
+\end{align}
+
+\subsection{40. Sanat ($\mathcal{O}_{40}$)}
+\begin{align}
+Y_{\text{sanat}} &= f_{\text{estetik}}(S_t, H_t^{(\text{hayal})}) = \mathbf{W}_{\text{sanat}} \cdot \left( S_t \otimes_{\mathcal{O}} H_t^{(\text{hayal})} \right) + \mathbf{\Omega}_{\text{ahenk}} \\
+\text{EstetikDeğer}(Y) &= \text{SimetrikHarmoni}(Y) + \lambda \cdot \text{Yenilik}(Y) \\
+\text{SimetrikHarmoni}(Y) &= 1 - \| Y - Y^T \|_{\mathcal{F}} \\
+\text{Yenilik}(Y) &= D_{\text{KL}}(P(Y) \parallel P_{\text{gelenek}}) \\
+\nabla_{\text{sanat}} &= \nabla_S \text{EstetikDeğer}(Y) \in \mathcal{T}^*\mathcal{S} \\
+\mathcal{L}_{\text{sanat}} &= \|\mathbf{\Omega}_{\text{ahenk}} - \mathbf{\Omega}_{\text{altın\_oran}}\|_{\mathbf{H}}^2 \\
+\mathbf{\Omega}_{\text{altın\_oran}} &= \phi \cdot I_{\text{ahenk}}, \quad \phi = \frac{1+\sqrt{5}}{2} \\
+Y_{\text{tezyin}} &= Y_{\text{sanat}} + \eta_{\text{sanat}} \nabla_{\text{sanat}} \\
+\text{SanatKuvveti} &= \text{EstetikDeğer}(Y_{\text{tezyin}}) \\
+Y_{\text{nihai\_sanat}} &= \text{LayerNorm}(Y_{\text{tezyin}} W_o) \\
+\text{Curvature}_{\text{sanat}} &= R_{ijk}^l \in \mathcal{T}^{(1,3)}\mathcal{S} \\
+\text{Path}_{\text{sanat}} &= (Y_{\text{sanat}} =_{\text{estetik}} Y_{\text{nihai\_sanat}})
+\end{align}
+
+\subsection{41. Münazara ($\mathcal{O}_{41}$)}
+\begin{align}
+D_{\text{münazara}}(S_{\text{tez}}, S_{\text{antitez}}) &= \text{Cerh}(S_{\text{antitez}}) + \text{Teyit}(S_{\text{tez}}) \\
+\text{Cerh}(S) &= \text{Tenakuz}(S, \text{Aksiyomlar}) + (1 - \text{BurhânSkoru}(S)) \\
+S_{\text{sentez}} &= \text{Telif}(S_{\text{tez}}, S_{\text{antitez}}) = \alpha S_{\text{tez}} + (1-\alpha) S_{\text{antitez}} \\
+T_{\text{münazara}} &= \sigma\left( \text{İspatKuvveti}(S_{\text{tez}}) - \text{İspatKuvveti}(S_{\text{antitez}}) \right) \\
+\mathcal{L}_{\text{münazara}} &= -\log T_{\text{münazara}} \\
+\text{İspatKuvveti}(S) &= \prod_{k} \text{Geçerlilik}(\text{Adım}_k(S)) \\
+\Delta S_{\text{mücadelesi}} &= S_{\text{tez}} - S_{\text{antitez}} \in \mathcal{T}\mathcal{S} \\
+\mathbf{HasmıSusturma} &= \mathbb{I}(\text{Cerh}(S_{\text{antitez}}) > \tau_{\text{susturma}}) \\
+S_{\text{galip\_fikir}} &= \mathbf{HasmıSusturma} \cdot S_{\text{tez}} + (1 - \mathbf{HasmıSusturma}) \cdot S_{\text{sentez}} \\
+\mathbf{MünazaraNetice} &= \text{LayerNorm}(S_{\text{galip\_fikir}} W_o) \\
+\text{Adjunction}_{\text{münazara}} &= \text{Lan}_{\text{tez}} \dashv \text{Res}_{\text{antitez}} : \mathbf{H} \to \mathbf{H} \\
+\text{Path}_{\text{münazara}} &= (S_{\text{tez}} =_{\mathbf{Prop}} S_{\text{galip\_fikir}})
+\end{align}
+
+\section{Netice ve Küllî İttisâl}
+
+Nefs-i Müdrike Mimarisi; Homotopi Tip Teorisi ($HoTT$), Kübik Tip Teorisi, $(\infty, \infty)$-kategori morfizmleri ve Pürüzsüz $\infty$-Topos ($\mathbf{H}$) zemininde 41 melekenin her birini 12'şer denklemle tanımlayarak toplam 492 müstakil denklemden oluşan sarsılmaz bir mantık ve geometrik nizam çatısı altında birleştirmiştir. Her bir idrak cüz'ü, $n$-morfizm geçişleri ve Yol Tipleri ($Path\text{ Types}$) vasıtasıyla bir üst mertebeye taşınmakta; Muhakeme ($\mathcal{O}_{33}$) meclisinde tasdik olunarak Belâgat ($\mathcal{O}_{39}$) ve Talâkat ($\mathcal{O}_{38}$) kanallarıyla haricî âleme iblâğ olunmaktadır.
+
+\end{document}
