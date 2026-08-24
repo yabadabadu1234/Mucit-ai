@@ -24,6 +24,7 @@ iddia nesne dilinde bir terimdir ve denetleyiciden geçer.
 | `denetleyici.py` | iki yönlü tip denetleyici |
 | `kutuphane.py` | nesne dilinde kütüphane (∞-grupoid, J, `ua`, isoToEquiv, sarmal) |
 | `turetimler.py` | uzayların türetilmesi + boşluk kütüğü |
+| `iliskiler.py` | uzaylar arası dönüşüm, ayrık uzaylar, uç haller, moduli |
 | `geometri.py` | teğet demeti, tensörler, monoid/Lie nesneleri, de Rham |
 
 ### İki kafes, bir köprü
@@ -77,12 +78,39 @@ uygulanınca `comp^i U` doğar, o da her katmanda bütün `Denklik` kulesini
 indirgeyicide terim patlar. Kapanışı NbE'ye (kapanışlı değerler) geçmeyi
 gerektirir. `turetimler.bosluklar()` kütüğünde kayıtlıdır.
 
+## Hız üzerine: neyin işe yaradığı, neyin yaramadığı
+
+Denenen ve **tutulan**: `comp` tembel akıllı kurucuya çevrildi (tip yönlü
+açılım artık yalnız `whnf` isteyince yapılıyor); `nf`/`whnf`/`ara_ikame`/
+`komp` önbelleğe alındı. İkisi de doğru ve faydalı, fakat **S¹ hcomp
+duvarını yıkmıyor**.
+
+Denenen ve **reddedilen** — `hcomp {ℤ} [φ↦u] u₀ ↝ u₀`: bu kural **sağlam
+değildir**. Somut karşı-örnek: `isoToEquiv` içindeki `fill0 1 1` tanımsal
+olarak `t x₀ @ 1 = x₀` olmalıdır; kural onu `g (f x₀)` yapar. İkisi
+propozisyonel eşit, tanımsal değil — sınır şartı kırılır ve `isoToEquiv`
+imkânsız hâle gelir. Bu, evvelce fiilen yaşanmış bir hatadır.
+
+Ayrıca optimizasyon sırasında eklediğim **"çizginin iki ucu eşitse çizgi
+sabittir"** kısayolu da sağlam değildi ve `uaβ`yı özdeşliğe çevirip
+**yanlış cevap** ürettiriyordu (`ua e` çizgisinin iki ucu da `ℤ` olabilir).
+Kaldırıldı; sabitlik yalnız normal formda tespit ediliyor.
+
+Gerçek çözüm NbE'dir (kapanışlı değerler, paylaşımlı ortam). Bu, terim
+seviyesindeki indirgeyicinin baştan yazılmasıdır ve yapılmadı.
+
 ## Türetilen uzaylar (hepsi denetlenmiş)
 
 **`turetimler`** — 28/28: ∞-grupoid kulesi (`n`-morfizmler; birleşme
 **katı eşitlik değil**, üst mertebeden yol), h-mertebeleri, `Ωⁿ`, kümeler,
 monoid / grup / değişmeli halka, kategori, globüler tipler
 `Glob(k+1) = Σ (Ob:U). Ob → Ob → Glob(k)`, S¹ ve döngü kuvvetleri.
+
+**`iliskiler`** — 23/23: `f^*`, `Σ_f`, `Π_f` ve `Σ_f ⊣ f^* ⊣ Π_f`;
+ayrık uzaylar (0-kesilmişlik + "yüksek morfizmler önemsizleşir" **ispatı**);
+kritik lokus; parametrik lif demeti (moduli) ve kip. **Zincir kuralı
+`(g∘f)^* ≡ f^*∘g^*`, monoidal uyum `f^*(P×Q) ≡ f^*P × f^*Q` ve teğet
+zinciri `T(g∘f) ≡ Tg∘Tf` bu çatıda TANIMSALDIR — `refl` ile ispatlanır.**
 
 **`geometri`** — 24/24, mesajdaki silsileyi takip eder:
 
@@ -126,6 +154,6 @@ kofibrasyonda sabit olmayan `transp` çizgisi, yüzünde denkliği tutmayan
 ## Durum
 
 ```
-26 sınamanın 26'sı geçiyor  (7'si menfî)
-turetimler: 28/28   ·   geometri: 24/24
+28 sınamanın 28'i geçiyor  (7'si menfî)
+turetimler: 28/28  ·  geometri: 24/24  ·  iliskiler: 23/23
 ```
