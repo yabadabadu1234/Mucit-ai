@@ -407,3 +407,263 @@ def test_kan_en_az_iki_boyut_istiyor():
 def test_rapor_uretiliyor(modul):
     m = modul.rapor()
     assert isinstance(m, str) and len(m) > 200
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  5. FNO — ızgaradan bağımsızlık
+# ══════════════════════════════════════════════════════════════════════
+
+from token_uzaylari import fno as fn
+from token_uzaylari import kan as kn
+from token_uzaylari import yapistir as yp
+
+
+@pytest.mark.parametrize("N", [16, 17, 63, 64, 128, 257])
+def test_parseval(N):
+    v = fn.yeniden_ornekle(fn._ornek_alan, N)
+    assert fn.parseval_sapmasi(v) < 1e-13
+
+
+def test_kesme_kipi_band_sinirli_alanda_kucuk():
+    x = np.linspace(0, 1, 256, endpoint=False)
+    tek = np.sin(2 * np.pi * x)[:, None]
+    assert fn.kesme_kipi(tek, 1e-12) == 1
+    # Beyaz gürültüde kesilecek kuyruk yok:
+    g = np.random.default_rng(0).normal(0, 1, (256, 1))
+    assert fn.kesme_kipi(g, 1e-2) > 100
+
+
+def test_kesme_kipi_bos_sinyalde_sifir():
+    assert fn.kesme_kipi(np.zeros((32, 2))) == 0
+
+
+def test_fno_izgaradan_bagimsiz_evrisim_degil():
+    """Asıl iddia: FNO'nun çekirdeği KİP cinsinden, evrişiminki piksel."""
+    f = fn.SpektralKatman(2, 3, k_kesme=8, tohum=1)
+    e = fn.EvrisimKatmani(2, 3, yari_genislik=4, tohum=1)
+    for Nk, Ni in ((32, 64), (64, 256)):
+        a = fn.izgaradan_bagimsizlik(f, fn._ornek_alan, Nk, Ni)
+        b = fn.izgaradan_bagimsizlik(e, fn._ornek_alan, Nk, Ni)
+        assert a["bağıl_fark"] < 1e-12, (Nk, Ni, a)
+        assert b["bağıl_fark"] > 1e-2, (Nk, Ni, b)
+
+
+def test_izgara_kat_degilse_kiyas_reddediliyor():
+    f = fn.SpektralKatman(2, 2, 4)
+    with pytest.raises(ValueError):
+        fn.izgaradan_bagimsizlik(f, fn._ornek_alan, 30, 64)
+
+
+def test_yigindaki_sapmanin_sebebi_ortusme():
+    """Doğrusal aktivasyonda makine hassasiyeti; tanh'ta örtüşme."""
+    dogrusal = fn.FNO([2, 8, 8, 1], k_kesme=12, tohum=2)
+    for kat in dogrusal.katmanlar:
+        kat.aktivasyon = lambda z: z
+    tanhli = fn.FNO([2, 8, 8, 1], k_kesme=12, tohum=2)
+    a = fn.izgaradan_bagimsizlik(dogrusal, fn._ornek_alan, 64, 256)
+    b = fn.izgaradan_bagimsizlik(tanhli, fn._ornek_alan, 64, 256)
+    assert a["bağıl_fark"] < 1e-12
+    assert b["bağıl_fark"] > a["bağıl_fark"] * 1e6
+
+
+def test_kip_sayisi_izgaradan_fazla_istenirse():
+    kat = fn.SpektralKatman(2, 2, k_kesme=40, tohum=0)
+    for N in (8, 16, 64, 128):
+        assert kat.kullanilan_kip(N) == min(41, N // 2 + 1)
+        y = kat.ileri(fn.yeniden_ornekle(fn._ornek_alan, N))
+        assert y.shape == (N, 2) and np.all(np.isfinite(y))
+
+
+def test_fno_girdi_kanali_denetleniyor():
+    with pytest.raises(ValueError):
+        fn.SpektralKatman(2, 3, 4).ileri(np.zeros((32, 5)))
+    with pytest.raises(ValueError):
+        fn.SpektralKatman(2, 3, -1)
+    with pytest.raises(ValueError):
+        fn.FNO([4])
+
+
+def test_rfft_tam_fft_ile_ayni():
+    v = fn.yeniden_ornekle(fn._ornek_alan, 128)
+    Vr = np.fft.rfft(v, axis=0)
+    Vf = np.fft.fft(v, axis=0)[:Vr.shape[0]]
+    assert np.max(np.abs(Vr - Vf)) < 1e-12
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  6. Kan genişlemeleri
+# ══════════════════════════════════════════════════════════════════════
+
+@pytest.fixture
+def ok_kat():
+    return kn.ok_kategorisi()
+
+
+@pytest.fixture
+def F_ok(ok_kat):
+    return kn.Funktor(ok_kat,
+                      {"0": frozenset({"x", "y"}), "1": frozenset({"p"})},
+                      {("id", "0"): {"x": "x", "y": "y"},
+                       ("id", "1"): {"p": "p"},
+                       "u": {"x": "p", "y": "p"}}, ad="F")
+
+
+def test_kategori_aksiyomlari_denetleniyor():
+    with pytest.raises(ValueError):
+        kn.Kategori(("a",), (("id", "a"), "kacak"),
+                    {("id", "a"): "a", "kacak": "a"},
+                    {("id", "a"): "a", "kacak": "a"},
+                    {}, {"a": ("id", "a")})
+
+
+def test_funktor_denetimi(F_ok, ok_kat):
+    assert F_ok.funktoryel_mi()[0] is True
+    bozuk = kn.Funktor(ok_kat,
+                       {"0": frozenset({"x"}), "1": frozenset({"p", "q"})},
+                       {("id", "0"): {"x": "x"},
+                        ("id", "1"): {"p": "q", "q": "p"},
+                        "u": {"x": "p"}})
+    ok, sebep = bozuk.funktoryel_mi()
+    assert ok is False and "birim" in sebep
+
+
+def test_lan_ve_ran_id_boyunca_F_yi_veriyor(F_ok, ok_kat):
+    idA = kn.Funktor(ok_kat, {a: a for a in ok_kat.nesneler},
+                     {f: f for f in ok_kat.oklar}, hedef=ok_kat, ad="id")
+    for b in ok_kat.nesneler:
+        assert kn.lan(idA, F_ok, b)["sınıf_sayısı"] == len(F_ok.nes[b])
+        assert kn.ran(idA, F_ok, b)["eleman_sayısı"] == len(F_ok.nes[b])
+
+
+def test_lan_sola_eslenik(ok_kat):
+    """|Nat(Lan_K F, G)| = |Nat(F, G∘K)| — sayılarak."""
+    T = kn.sonlu_kategori(("*",), [], ad="1")
+    F0 = kn.Funktor(T, {"*": frozenset({"a", "b"})},
+                    {("id", "*"): {"a": "a", "b": "b"}}, ad="F0")
+    Gler = [
+        kn.Funktor(ok_kat, {"0": frozenset({"p"}), "1": frozenset({"p"})},
+                   {("id", "0"): {"p": "p"}, ("id", "1"): {"p": "p"},
+                    "u": {"p": "p"}}),
+        kn.Funktor(ok_kat, {"0": frozenset({"x", "y"}),
+                            "1": frozenset({"p"})},
+                   {("id", "0"): {"x": "x", "y": "y"},
+                    ("id", "1"): {"p": "p"}, "u": {"x": "p", "y": "p"}}),
+        kn.Funktor(ok_kat, {"0": frozenset({"x"}),
+                            "1": frozenset({"p", "q"})},
+                   {("id", "0"): {"x": "x"},
+                    ("id", "1"): {"p": "p", "q": "q"}, "u": {"x": "q"}}),
+    ]
+    toplam = 0
+    for hedef in ("0", "1"):
+        K = kn.Funktor(T, {"*": hedef}, {("id", "*"): ("id", hedef)},
+                       hedef=ok_kat, ad=f"K{hedef}")
+        assert K.funktoryel_mi()[0]
+        LanF = kn.lan_funktor(K, F0)
+        assert LanF.funktoryel_mi()[0], LanF.funktoryel_mi()[1]
+        for G in Gler:
+            sol = kn.dogal_donusumler(LanF, G)
+            sag = kn.dogal_donusumler(F0, kn.bileske_funktor(G, K))
+            assert sol == sag, (hedef, sol, sag)
+            toplam += sol
+    assert toplam > 6, "sağlama boş olmasın"
+
+
+def test_monoid_kategorisi_ve_kaydirma_etkisi():
+    M = kn.monoid_kategorisi(3)
+    tasiyici = frozenset(range(3))
+    FM = kn.Funktor(M, {"*": tasiyici},
+                    {("m", i): {x: (x + i) % 3 for x in range(3)}
+                     for i in range(3)})
+    assert FM.funktoryel_mi()[0]
+    idM = kn.Funktor(M, {"*": "*"}, {f: f for f in M.oklar}, hedef=M)
+    L = kn.lan(idM, FM, "*")
+    assert L["ham_eleman"] == 9      # 3 ok × 3 eleman
+    assert L["sınıf_sayısı"] == 3    # ≅ F(*)
+    assert kn.ran(idM, FM, "*")["eleman_sayısı"] == 3
+
+
+def test_birlestir_bul():
+    bb = kn.birlestir_bul()
+    for i in range(1000):
+        bb.ekle(i)
+    for i in range(999):
+        bb.birlestir(i, i + 1)
+    assert len(bb.siniflar()) == 1
+    bb2 = kn.birlestir_bul()
+    for i in range(1000):
+        bb2.ekle(i)
+    for i in range(0, 998, 2):
+        bb2.birlestir(i, i + 2)
+    assert len(bb2.siniflar()) == 501
+    assert bb2.birlestir(0, 2) is False   # zaten aynı sınıfta
+
+
+def test_cevrimli_serbest_kategori_reddediliyor():
+    with pytest.raises(ValueError):
+        kn.sonlu_kategori(("a", "b"),
+                          [("f", "a", "b"), ("g", "b", "a")])
+
+
+def test_lan_yanlis_tipte_funktoru_reddediyor(ok_kat, F_ok):
+    with pytest.raises(ValueError):
+        kn.lan(F_ok, F_ok, "0")          # F: A→Set, K olamaz
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  7. Glue köprüsü
+# ══════════════════════════════════════════════════════════════════════
+
+def test_ua_sinirda_cokuyor():
+    from omega_kategori_nbe import kutuphane as L
+    from omega_kategori_nbe import sozdizim as S
+    Z = S.Tamsayi()
+    for e in (L.ozdeslik_denkligi(Z), L.ardil_denkligi()):
+        r = yp.ua_sinirda_cokuyor_mu(Z, Z, e)
+        assert r["her_ikisi"] is True
+
+
+def test_ua_ardil_boyunca_tasima_bir_arttiriyor():
+    assert yp.ardil_tasima_olc()["eşit"] is True
+
+
+def test_token_denkligi_tersinir():
+    noktalar = [[0.3, -0.5, 1.2, 0.8], [1.0, 0.0, -0.4, 2.1]]
+    d = yp.permutasyon_denkligi([2, 0, 3, 1])
+    assert d.denklik_mi(noktalar) is True
+    assert d.gidis_donus(noktalar)["ileri_sonra_geri"] == 0.0
+
+
+def test_gecersiz_permutasyon_reddediliyor():
+    with pytest.raises(ValueError):
+        yp.permutasyon_denkligi([0, 0, 1])
+
+
+def test_tekil_dizey_denklik_degil():
+    with pytest.raises(np.linalg.LinAlgError):
+        yp.dogrusal_denklik(np.array([[1.0, 2.0], [2.0, 4.0]]))
+    with pytest.raises(ValueError):
+        yp.dogrusal_denklik(np.zeros((2, 3)))
+
+
+def test_tersinirlik_ile_izometri_ayri_seyler():
+    """×2 tersinirdir ama izometri DEĞİLDİR — ölçüt ayırt etmeli."""
+    noktalar = [[0.3, -0.5, 1.2, 0.8], [1.0, 0.0, -0.4, 2.1]]
+    olcek = yp.dogrusal_denklik(np.diag([2.0, 2.0, 2.0, 2.0]))
+    k = yp.kayipsizlik_karnesi(olcek, noktalar)
+    assert k["tersinir"] is True
+    assert k["izometri"] is False
+    assert k["|det|"] == pytest.approx(16.0)
+
+    donme = np.array([[np.cos(0.7), -np.sin(0.7), 0, 0],
+                      [np.sin(0.7), np.cos(0.7), 0, 0],
+                      [0, 0, np.cos(0.3), -np.sin(0.3)],
+                      [0, 0, np.sin(0.3), np.cos(0.3)]])
+    kd = yp.kayipsizlik_karnesi(yp.dogrusal_denklik(donme), noktalar)
+    assert kd["tersinir"] is True and kd["izometri"] is True
+    assert kd["|det|"] == pytest.approx(1.0, abs=1e-9)
+
+
+@pytest.mark.parametrize("modul", [fn, kn, yp])
+def test_yeni_modul_raporlari(modul):
+    m = modul.rapor()
+    assert isinstance(m, str) and len(m) > 200
