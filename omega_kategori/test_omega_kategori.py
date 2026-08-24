@@ -321,6 +321,26 @@ def test_geometri_hepsi():
     assert len(neticeler) >= 20
 
 
+def test_iliskiler_hepsi():
+    """Uzaylar arası münasebetler; zincir kuralı ve monoidal uyum REFL ile."""
+    from . import iliskiler as I
+    neticeler = I.dogrula_hepsi()
+    hatalar = [n for n in neticeler if n["netice"] != "GEÇTİ"]
+    assert not hatalar, "ilişkiler katmanında hata: %s" % hatalar
+    assert len(neticeler) >= 20
+
+
+def test_zincir_kurali_tanimsal():
+    """(g∘f)^* ≡ f^*∘g^* ve T(g∘f) ≡ Tg∘Tf REFL ile ispatlanır."""
+    from . import iliskiler as I
+    g = I._baglam()
+    X, Z, f, gg, P = D("X"), D("Z"), D("f"), D("gg"), D("P")
+    denetle(I.zincir_kurali_ispati(X, Z, f, gg, P),
+            I.zincir_kurali_tipi(X, Z, f, gg, P), g)
+    denetle(I.teget_zincir_ispati(X, Z, f, gg),
+            I.teget_zincir_tipi(X, Z, f, gg), g)
+
+
 # =====================================================================
 #  Doğrudan çalıştırma
 # =====================================================================
