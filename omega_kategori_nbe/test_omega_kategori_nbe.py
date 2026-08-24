@@ -193,9 +193,22 @@ def test_pi1_cember():
 
     Terim seviyesindeki sürüm |n| ≥ 2 için bu hesabı BİTİREMİYORDU.
     """
-    for n in (0, 1, 2, 3, 5, -1):
+    for n in (0, 1, 2, 3, 5, -1, -2, -3, -5):
         r = K.nf(L.sarim(L.dongu_kuvveti(n)))
         assert K.esdeger_mi(r, S.tam_sayi(n)), (n, r)
+
+
+def test_dongu_tersi_genel_tersle_ayni_sarim():
+    """``<i> dongu(~i)`` ile genel ``ters(dongu)`` aynı sarımı vermeli.
+
+    Negatif kuvvetlerdeki hızlanma bir KISA YOL değil, S¹'in kendi
+    involüsyonudur; sağlaması, pahalı olan genel inşayla kıyastır.
+    """
+    for n in (-1, -2, -3):
+        sade = K.nf(L.sarim(L.dongu_kuvveti(n)))
+        genel = K.nf(L.sarim(L.dongu_kuvveti_genel_ters(n)))
+        assert K.esdeger_mi(sade, genel), (n, sade, genel)
+        assert K.esdeger_mi(sade, S.tam_sayi(n)), (n, sade)
 
 
 # =====================================================================

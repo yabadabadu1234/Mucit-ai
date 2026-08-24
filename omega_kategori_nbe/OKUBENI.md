@@ -5,7 +5,7 @@ yan yana yaşıyor. Aynı sözdizimi ve aynı aralık cebrini paylaşırlar,
 **indirgeyicileri farklıdır**.
 
 ```
-python3 -m omega_kategori_nbe.test_omega_kategori_nbe    # 24 sınama
+python3 -m omega_kategori_nbe.test_omega_kategori_nbe    # 25 sınama
 python3 -c "from omega_kategori_nbe import turetimler as T; print(T.rapor())"
 python3 -c "from omega_kategori_nbe import geometri as G; print(G.rapor())"
 python3 -c "from omega_kategori_nbe import iliskiler as I; print(I.rapor())"
@@ -30,13 +30,26 @@ Aynı makine, aynı kütüphane terimleri:
 | `sarim(dongu²)` | **>100 s (bitmiyor)** | **0.07 s** |
 | `sarim(dongu³)` | **>100 s (bitmiyor)** | **0.12 s** |
 | `sarim(dongu⁵)` | **>100 s (bitmiyor)** | **0.20 s** |
-| `sarim(dongu⁻¹)` | **>100 s (bitmiyor)** | **0.03 s** |
-| `sarim(dongu²⁰)` | **>100 s (bitmiyor)** | **0.97 s** |
+| `sarim(dongu⁻¹)` | **>100 s (bitmiyor)** | **0.02 s** |
+| `sarim(dongu⁻⁵)` | **>100 s (bitmiyor)** | **0.13 s** |
+| `sarim(dongu⁻²⁰)` | **>100 s (bitmiyor)** | **0.82 s** |
+| `sarim(dongu²⁰)` | **>100 s (bitmiyor)** | **1.04 s** |
 
 **π₁(S¹) ≅ ℤ artık fiilen hesaplanıyor.** Tepe bellek: **21.7 MB**.
 
-Negatif kuvvetler pozitiflerden ağır (`dongu⁻²` ≈ 5.7 s, `dongu⁻⁵` ≈ 29 s):
-`ters` daha karmaşık bir `hcomp` doğuruyor. Yine de **bitiyor**.
+### Negatif kuvvet asimetrisi — teşhis ve tedavi
+
+Bir ara `dongu⁻⁵` 27.4 s sürerken `dongu²⁰` 0.97 s sürüyordu. Sebep
+`invEquiv` **değildi** (bu kodda öyle bir şey yok); sebep, umumî yol
+tersleme `ters`in bir `hcomp` kurması ve terkip zincirinde bu hcomp'ların
+**iç içe geçmesiydi**.
+
+Tedavi kütüphane seviyesindedir, çekirdekte kısa yol değil: S¹ döngüsünün
+tersi zaten aralık involüsyonuyla verilir, `dongu⁻¹ = <i> dongu(~i)`.
+Ölçülen kazanç **245 kat** (`dongu⁻⁵`: 27.4 s → 0.11 s). Sağlaması
+`dongu_kuvveti_genel_ters` ile kıyastır; ikisi aynı sarımı verir
+(`test_dongu_tersi_genel_tersle_ayni_sarim`), yani hız bir yaklaşıklıktan
+değil, aynı yolun daha sade bir sakininden geliyor.
 
 ### Bellek değil, zaman
 
@@ -110,7 +123,7 @@ olarak taşır (`sarim(dongu²)=+2`, `sarim(dongu³)=+3`, `sarim(dongu⁻¹)=-1`
 ## Durum
 
 ```
-24 sınamanın 24'ü geçiyor  (6'sı menfî)
+25 sınamanın 25'i geçiyor  (6'sı menfî)
 uaβ hesaplanıyor · isoToEquiv denetimden geçiyor · π₁(S¹) ≅ ℤ HESAPLANIYOR
 turetimler 31/31 · geometri 24/24 · iliskiler 23/23
 ```
