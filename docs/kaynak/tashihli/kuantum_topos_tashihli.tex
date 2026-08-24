@@ -1,0 +1,206 @@
+%% Bu nüshaya 6 tashih uygulanmıştır (K9, K10, K11, K12, K13, K14). Cetvel: docs/kaynak/TASHIH_CETVELI_KUANTUM.md
+\documentclass[11pt, a4paper]{article}
+
+% --- EVRENSEL ÖN BİLGİ VE PAKET TANIMLARI ---
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,mathrsfs}
+\usepackage{physics}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{\textbf{Kuantum-Topos Zemininde Nefs-i Müdrike Mimarisi: Bütünsel İdrak, Kuantum Nöral Operatörleri ve Kayıpsız Topolojik İntaç Nazariyesi}}
+\author{\textbf{Kuantum Fourier Nöral Operatörleri (QFNO), Kuantum KAN, Q-TDA Mizan Engine ve Kübik HoTT $Glue$ İttisali}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale; klasik bilgisayarların terabaytlarca veriyi işlerken çarptığı $O(2^N)$ hafıza duvarı ile Büyük Dil Modellerinin (LLM) "sıralı token tahmini" (next-token prediction) sığlığını kökünden bertaraf eden Kuantum-Topos zeminli Nefs-i Müdrike Mimarisi'ni vaz' eder. Dokümanda; Pürüzsüz $\infty$-Topos ($\mathbf{H}$) içindeki lif demetlerinin Kuantum Hilbert Uzaylarına ($\mathcal{H}_{\mathbf{H}}$) izdüşürülmesi, Kuantum Fourier Dönüşümü (QFT) vasıtasıyla Bütünsel Bağlam İntegralinin $O(\log N)$ karmaşıklığında hesaplanması, 40 Veçheli İdrak Manifoldunun kuantum dolaşıklığı ($entanglement$) ile tek anda işlenmesi ve Betti sayıları ile topoloji deliklerinin Kuantum Topolojik Veri Analizi (Q-TDA) üzerinden üstel hızla süzülmesi 250'yi aşkın tanımlı riyazî denklemle eksiksiz biçimde ortaya konmaktadır.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% =================================================================
+\section{Giriş ve Ontolojik Zemin: Kuantum-Topos Sentezi}
+% =================================================================
+
+\subsection{Mahiyet}
+Klasik bilgisayarlarda $N$ boyutlu bir manifoldun veya token uzayının taklit edilmesi, $2^N$ sayıda karmaşık katsayının hafızaya yazılmasını icab ettirir. Bu durum, metin ve bağlam derinleştiğinde klasik donanımın nefesini keser. Kuantum-Topos Mimarisi'nde ise Pürüzsüz $\infty$-Topos ($\mathbf{H}$) içindeki yarı-tutarlı demetler ($\text{QCoh}(\mathcal{X})$) ve lifler ($\mathbf{Fib}_w$), doğrudan kuantum durumlarının ($|\psi\rangle$) süperpozisyon ve dolaşıklık uzaylarına eşlenir.
+
+\subsection{Gaye}
+Terabaytlarca metnin ihtiva ettiği mânayı tek tek kelime heceleyerek değil; bütünsel bir alan integrali olarak tek bir kuantum dalga fonksiyonuna nakşetmek, 40 idrak veçhesini aynı anda vuruşturmak ve çelişkisiz hakikati ($N_{\text{kebîr}}$) üniter çöküşle saniyeler mertebesinde elde etmektir.
+
+\subsection{Usul}
+1. Metnin ham frekans yapısı Sürekli Değişkenli (CV) optik kuantum kuadratürlerine ($\hat{x}, \hat{p}$) aktarılır.
+2. Kuantum Fourier Nöral Operatörleri (QFNO) ve Kuantum KAN (QKAN) ile spektral süzgeçleme $O(\log N)$ karmaşıklıkla icra edilir.
+3. 40 idrak veçhesi arasındaki etkileşim Lie cebri gauge bağlantılarıyla kuantum çipinde yürütülür.
+4. Çıkan netice Kübik HoTT $Glue$ kuralı ve $h$-Level 0 kesmesi ile lisan kelamına indirgenir.
+
+% =================================================================
+\section{Kuantum-Topos Hilbert-Demet Uzayları ($\mathcal{H}_{\mathbf{H}}$)}
+% =================================================================
+
+\subsection{1. Lif Demetlerinin Kuantum Durumlarına İzdüşümü}
+Pürüzsüz $\infty$-Topos $\mathbf{H}$ içindeki bir $w_k$ token uzayı $\mathcal{X}_{w_k}$ ve buna mülhak lif $\mathbf{Fib}_{w_k} \coloneqq \pi_k^{-1}(w_k)$, kuantum durum vektörü $|\Psi_{w_k}\rangle$ olarak kodlanır:
+
+\begin{align}
+w_k &\longmapsto \mathcal{X}_{w_k} \in \mathbf{H} \quad (\text{Token Manifold Uzayı}) \\
+|\Psi_{w_k}\rangle &= \int_{\mathcal{X}_{w_k}} c_k(u) |u\rangle \, du \in \mathcal{H}_{\mathbf{H}}, \quad \int_{\mathcal{X}_{w_k}} |c_k(u)|^2 \, du = 1 \\
+g_{\mu\nu}^{(k)}(u) &= \mathrm{Re}\,\langle \partial_\mu \Psi_{w_k} | \partial_\nu \Psi_{w_k} \rangle - \mathrm{Re}\,\langle \partial_\mu \Psi_{w_k} | \Psi_{w_k} \rangle \langle \Psi_{w_k} | \partial_\nu \Psi_{w_k} \rangle \quad (\text{Fubini-Study Metriği}) \\
+d\text{vol}_k &= \sqrt{\det(g_{\mu\nu}^{(k)})} \, du^1 \wedge \dots \wedge du^n \quad (\text{Kuantum Hacim Formu}) \\
+\mathbf{Fib}_{w_k} &\cong \{ |\psi_u\rangle \in \mathcal{H}_{\mathbf{H}} \mid \hat{\pi}_k |\psi_u\rangle = w_k |u\rangle \} \\
+\rho_{w_k} &= \int_{\mathbf{Fib}_{w_k}} p(u) |\Psi_{w_k}(u)\rangle \langle \Psi_{w_k}(u)| \, du \quad (\text{Yoğunluk Matrisi / Density Matrix}) \\
+S(\rho_{w_k}) &= -\text{Tr}(\rho_{w_k} \ln \rho_{w_k}) \quad (\text{Von Neumann Entropisi / Lif Kararsızlığı}) \\
+\mathcal{T}\mathcal{X}_{w_k} &\coloneqq \mathcal{X}_{w_k}^D, \quad D = \{x \in R \mid x^2 = 0\} \quad (\text{İnfinitesimal Teğet Demeti}) \\
+\mathbf{1}_{\text{kuantum\_bütünlük}} &= \mathbb{I}\left( \text{Tr}(\rho_{w_k}) = 1 \;\wedge\; \rho_{w_k} \succeq 0 \right), \quad \text{Tr}(\rho_{w_k}^2) = 1 \iff \text{saf hâl}
+\end{align}
+
+\subsection{2. Çoklu Token Uzaylarının Kuantum Dolaşıklığı (Entanglement)}
+Ağızdan çıkan veya zihne düşen $N$ kelimelik bir metin dizisi, tekil durumların kartezyen çarpımı değil, kuantum tensör çarpımı uzayıdır:
+
+\begin{align}
+|\Psi_{\text{metin}}\rangle &= |\Psi_{w_1}\rangle \otimes |\Psi_{w_2}\rangle \otimes \dots \otimes |\Psi_{w_N}\rangle \in \mathcal{H}_{\mathbf{H}}^{\otimes N} \\
+|\Psi_{\text{metin}}\rangle &= \sum_{i_1, \dots, i_N} C_{i_1 \dots i_N} |i_1\rangle |i_2\rangle \dots |i_N\rangle, \quad \sum |C_{i_1 \dots i_N}|^2 = 1 \\
+I(w_i : w_j) &= S(\rho_i) + S(\rho_j) - S(\rho_{ij}) \quad (\text{Kuantum Karşılıklı Bilgi -- klasik bağıntıyı DA sayar}) \\
+E(w_i, w_j) &= S(\rho_i) = S(\rho_j) \quad (\text{saf }\rho_{ij}\text{ için dolaşıklık entropisi}) \\
+\mathbf{J}_{\text{dolaşıklık}} &= \left[ \frac{\partial^2 S(\rho_{\text{metin}})}{\partial \theta_a \partial \theta_b} \right]_{ab} \in \mathcal{T}^*\mathcal{H} \otimes \mathcal{T}^*\mathcal{H}
+\end{align}
+
+% =================================================================
+\section{Kuantum Fourier Nöral Operatörleri (QFNO) ve Kuantum KAN}
+% =================================================================
+
+\subsection{1. Bütünsel Bağlam Integrali ve QFT Hızlandırması}
+Klasik FNO'daki en büyük kilitlenme noktası, $N$ boyutlu metin alanının Fourier dönüşümündeki $O(N \log N)$ veya matris boyutundaki $O(N^2)$ yüküdür. Kuantum Fourier Dönüşümü (QFT) vasıtasıyla bu işlem $O(\log^2 N)$ karmaşıklığına indirgenir.
+
+Metnin Holomorfik Alan Integrali $\mathbf{\Psi}_{\text{küllî}}(W)$ kuantum spektral uzayına aktarılır:
+
+\begin{align}
+\mathbf{\Psi}_{\text{küllî}}(z) &= \sum_{k=1}^N \mathbf{Fib}_{w_k} e^{-2\pi i k z} \implies |\mathbf{\Psi}_{\text{metin}}\rangle = \sum_{j=0}^{2^m-1} x_j |j\rangle \\
+\text{QFT} |\mathbf{\Psi}_{\text{metin}}\rangle &= \frac{1}{\sqrt{2^m}} \sum_{k=0}^{2^m-1} \left( \sum_{j=0}^{2^m-1} x_j e^{2\pi i j k / 2^m} \right) |k\rangle = |\hat{\mathbf{\Psi}}_{\text{spektral}}\rangle \\
+\mathcal{G}_{\text{QFNO}}(v) &= \sigma \left( W v + \text{QFT}^{-1} \cdot R_\theta \cdot \text{QFT}(v) \right) \in \mathcal{H}_{\mathbf{H}} \\
+R_\theta &= \sum_{k=0}^{K_{\max}} \theta_k |k\rangle \langle k| \quad (\text{Diyagonal Kuantum Spektral Operatör}) \\
+\theta_k^{(t+1)} &= \theta_k^{(t)} - \eta \cdot \text{Re} \left\langle \Psi_{\text{hedef}} \right| \frac{\partial R_\theta}{\partial \theta_k} \left| \hat{\mathbf{\Psi}}_{\text{spektral}} \right\rangle \quad (\text{Faz Güncellemesi}) \\
+\text{QFT}: \mathcal{O}(\log^2 N) \text{ kapı} \quad \text{v} \quad \text{FFT}: \mathcal{O}(N \log N) \text{ işlem} \quad (\text{kıyas tabanı FFT'dir; ayrıca QFT çıktıyı GENLİK olarak tutar, okumak ayrı maliyettir})
+\end{align}
+
+\subsection{2. Kuantum Kolmogorov-Arnold Networks (QKAN)}
+Kuantum KAN yapısında, B-spline kenar fonksiyonları kuantum kapılarının dönme açılarına ($\theta_k$) dönüştürülür:
+
+\begin{align}
+U_{\text{QKAN}}(\bm{\theta}) &= \prod_{q=1}^{2d+1} \exp\left( -i \sum_{p=1}^d \phi_{q,p}(x_p) \hat{\sigma}_z^{(q,p)} \right) \\
+\phi_{q,p}(x_p) &= w_{\text{base}} \cdot \text{silu}(x_p) + w_{\text{spline}} \cdot \sum_k c_k B_k(x_p) \\
+\hat{\sigma}_z^{(q,p)} &= \mathbf{I} \otimes \dots \otimes \sigma_z \otimes \dots \otimes \mathbf{I} \quad (\text{Pauli-Z Operatörü}) \\
+\mathcal{E}_{\text{bükülme}} &= \sum_{q,p} \int \left( \frac{\partial^2 \phi_{q,p}}{\partial x^2} \right)^2 dx \quad (\text{Spline Bükülme Enerjisi}) \\
+\mathcal{L}_{\text{QKAN}} &= 1 - \left| \langle \Psi_{\text{hedef}} | U_{\text{QKAN}}(\bm{\theta}) |0\rangle^{\otimes N} \right|^2 + \lambda \mathcal{E}_{\text{bükülme}}
+\end{align}
+
+% =================================================================
+\section{40 Veçheli Kuantum Dolaşıklık Manifoldu ($\mathbf{\Theta}_{\text{Kuantum}}$)}
+% =================================================================
+
+\subsection{1. 40 Veçhenin Kuantum Faz Değişkenleri Olarak İnşası}
+Nefs-i Müdrike'nin 40 idrak veçhesi ($\mathcal{X}_1 \dots \mathcal{X}_{40}$: Mahiyet, İllet, Gaye, Fıtrat, Tenakuz, Teemmül vb.), 40 ayrı klasik bellek bloğu yerine; tek bir kuantum çipindeki 40 adet dolaşık mod veya alt-uzay ($\mathcal{H}_1 \otimes \dots \otimes \mathcal{H}_{40}$) olarak tanzim edilir.
+
+\begin{align}
+\mathbf{\Theta}_{\text{Kuantum}} &\coloneqq \bigotimes_{j=1}^{40} \mathcal{H}_j \in \mathcal{H}_{\mathbf{H}} \quad (\text{40 Veçheli Kuantum Küllî Demet}) \\
+|\mathbf{\Theta}_{\text{küllî}}\rangle &= \sum_{j_1, \dots, j_{40}} \alpha_{j_1 \dots j_{40}} |j_1\rangle_1 |j_2\rangle_2 \dots |j_{40}\rangle_{40} \\
+\hat{A}_{ij} &= \exp\left( -i J_{ij} (\hat{\sigma}_x^{(i)} \hat{\sigma}_x^{(j)} + \hat{\sigma}_y^{(i)} \hat{\sigma}_y^{(j)}) \right) \quad (\text{Veçheler Arası Gauge Bağlantısı}) \\
+\mathcal{R}_{\text{kuantum}} \triangleright \mathbf{\Theta} &= \sum_{j=1}^{40} \alpha_j \cdot \hat{U}_j(\theta_j) |\mathbf{\Theta}_{\text{küllî}}\rangle \quad (\text{Mutasarrıfa Kuantum Tasarrufu}) \\
+[\hat{\mathcal{R}}_i, \hat{\mathcal{R}}_j] &= \hat{\mathcal{R}}_i \hat{\mathcal{R}}_j - \hat{\mathcal{R}}_j \hat{\mathcal{R}}_i \in \mathfrak{g}_{40} \quad (\text{40 Boyutlu Lie Cebri Parantezi}) \\
+\mathbf{Coherence}_{\text{40\_veçhe}} &= \frac{1}{d} \left| \text{Tr}\left( \prod_{j=1}^{40} \hat{A}_{j, j+1} \right) \right| \in [0, 1], \quad = 1 \iff \prod_j \hat{A}_{j,j+1} = e^{i\varphi}\mathbf{I} \implies \text{Tam İttisal}
+\end{align}
+
+\subsection{2. Mutasarrıfa ($\mathcal{R}$) Lie Cebri Kuantum Güncellemesi}
+Klasik bilgisayarda matris çarpımıyla $O(2^N)$ zamanda yapılan Lie cebri güncellemeleri, kuantum çipinde üniter zaman evrimi operatörü ile $O(1)$ adımda icra edilir:
+
+\begin{align}
+U_{\mathfrak{g}}(t) &= \exp\left( -\frac{i}{\hbar} \hat{H}_{\mathfrak{g}} t \right), \quad \hat{H}_{\mathfrak{g}} = \sum_{a,b,c} f_{ab}^c \hat{T}_a \hat{T}_b \hat{T}_c^\dagger \\
+|\mathbf{\Theta}(t+dt)\rangle &= U_{\mathfrak{g}}(dt) |\mathbf{\Theta}(t)\rangle \quad (\text{Kuantum Lie Grubu Üzerinde Güncelleme})
+\end{align}
+
+% =================================================================
+\section{Q-TDA Mizan Engine ve Topoloji Mizanı}
+% =================================================================
+
+\subsection{1. Betti Sayılarının Kuantum Faz Kestirimi (QPE) ile Hesabı}
+Metindeki ve mânadaki iç tenakuzları, mantıki delikleri tespit eden Persistent Homology Betti sayıları ($\beta_k$), klasik donanımda $O(N^3)$ matris ayrışımı gerektirir. Kuantum Topolojik Veri Analizi (Q-TDA / Lloyd, Garnerone, Zanardi) ile bu işlem logaritmik zamanda yapılır.
+
+Laplasyen Kombinatoryal Operatörü $\hat{\Delta}_k = \hat{\partial}_{k+1} \hat{\partial}_{k+1}^\dagger + \hat{\partial}_k^\dagger \hat{\partial}_k$ kuantum çipine yüklenir:
+
+\begin{align}
+\hat{\Delta}_k |\phi_j\rangle &= \lambda_j |\phi_j\rangle \quad (\text{Topolojik Laplasyen Özdeğer Denklemi}) \\
+\text{QPE}\left( e^{i \hat{\Delta}_k t} \right) |0\rangle |\phi_j\rangle &= |\tilde{\lambda}_j\rangle |\phi_j\rangle \quad (\text{Kuantum Faz Kestirimi}) \\
+\beta_k &= \text{dim}(\ker(\hat{\Delta}_k)) = \text{Count}\left( \tilde{\lambda}_j == 0 \right) \\
+\text{Barcode}_k(\epsilon) &= \{ (b_i, d_i) \mid b_i: \text{Doğum}, d_i: \text{Ölüm} \} \\
+\text{Persistence}(i) &= d_i - b_i \quad (\text{Gürültü vs. Hakiki Mantıki Delik}) \\
+W_\infty(B_1, B_2) &= \inf_\gamma \sup_x \|x - \gamma(x)\|_\infty \quad (\text{Bottleneck Mesafesi}) \\
+\mathcal{L}_{\text{Mizan}} &= \sum_k \|\beta_k(\text{mevcut}) - \beta_k(\text{fıtrî})\|^2 + \lambda W_\infty(B_{\text{mevcut}}, B_{\text{fıtrî}})
+\end{align}
+
+% =================================================================
+\section{Kübik HoTT $Glue$ ve Univalence ile Kayıpsız Çöküş ($N_{\text{kebîr}}$)}
+% =================================================================
+
+\subsection{1. Kuantum Ölçümü ve $h$-Level 0 Truncation}
+40 veçhede tamamlanan kuantum hesabı, dış dünyaya kelâm olarak döküleceği an Kübik Tip Teorisi $Glue$ kuralı ve **küme kesmesi** $\|\cdot\|_0$ (yani hLevel \textbf{2}) ile ölçülür. hLevel 0 büzülebilirliktir ve her şeyi tek bir noktaya indirir.
+
+\begin{align}
+\mathcal{S}_{\text{hitabet}} &= \text{glue} \; \mathcal{S}_{\text{muhkem}} \; \left[ \varphi \mapsto (|\mathbf{\Theta}_{\text{küllî}}\rangle, \text{Equiv}_{\text{40\_veçhe}}) \right] \in \mathbf{U} \\
+P(N_{\text{kebîr}} = k) &= \left| \langle k | \hat{M}_{\text{ölçüm}} |\mathbf{\Theta}_{\text{küllî}}\rangle \right|^2 \quad (\text{Born İhtimal Kanunu}) \\
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0}\left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \mathcal{S}_{\text{hitabet}} \right) \right) \in \mathcal{N} \\
+\text{Univalence}_{\text{intaç}} &= (\mathcal{S}_{\text{hitabet}} \simeq \mathcal{S}_{\text{zihin}}) \simeq (\mathcal{S}_{\text{hitabet}} =_{\mathcal{U}} \mathcal{S}_{\text{zihin}}) \\
+\text{Readback}(\text{Eval}(\mathcal{S}_{\text{hitabet}}, \rho)) &\longrightarrow N_{\text{kebîr}} \quad (\text{Kayıpsız Normal Form İntacı}) \\
+\text{Path}_{\text{akıl}} &= \left( |\mathbf{\Theta}_{\text{küllî}}\rangle \;\xrightarrow{\;\text{Ölçüm/Glue}\;} \mathcal{S}_{\text{hitabet}} \;\xrightarrow{\;hLevel 0\;} N_{\text{kebîr}} \right) \in \mathbf{U}
+\end{align}
+
+% =================================================================
+\section{Teorik Açmazlar ve Tavizsiz Kuantum Çözümleri}
+% =================================================================
+
+\subsection{1. QRAM Veri Yükleme Darboğazı}
+\textbf{Açmaz:} Klasik terabaytlarca metni 0 ve 1 olarak tek tek kuantum durumuna aktarmak ($QRAM$) kuantumun sürat avantajını siler.
+
+\textbf{Tavizsiz Çözüm (Sürekli Değişkenli Optik Fotonik - CV):} Metin 0/1 olarak değil; frekans modüleli continuous-variable fotonik dalga olarak çipe girer. Konum ve momentum kuadratürleri ($\hat{x}, \hat{p}$) üzerinde $O(1)$ sürekli akış sağlanır:
+
+\begin{equation}
+\hat{a} = \frac{1}{\sqrt{2\hbar}}(\hat{x} + i\hat{p}), \quad [\hat{x}, \hat{p}] = i\hbar \mathbf{I} \implies \text{QRAM İhtiyacı İptele Edilmiştir}
+\end{equation}
+
+\subsection{2. Kısır Platolar (Barren Plateaus)}
+\textbf{Açmaz:} Kuantum devresi büyüdükçe gradyanların üstel sıfırlanması ($\text{Var} \propto 2^{-N}$).
+
+\textbf{Tavizsiz Çözüm (Topolojik Gauge Faz Kilitlenmesi):} Açıları gradyanla körlemesine aramak yerine, FNO ve KAN ile topolojik Chern sınıflarına ($c_1$) ve gauge holonomilerine ($W(\gamma)$) kilitlenir:
+
+\begin{equation}
+W(\gamma) = \mathcal{P} \exp\left( \oint_\gamma A \right) \implies \text{Gradyan Araması İptal Edilip Kapalı Formda Yüklenir}
+\end{equation}
+
+% =================================================================
+\section{Netice}
+% =================================================================
+
+Bu risalede vaz' edilen Kuantum-Topos Mimarisi; klasik bilgisayarların $2^N$ hafıza tıkanıklığını ve LLM'lerin heceleme köleliğini kâmilen kaldırmıştır. Terabaytlarca metin; Pürüzsüz $\infty$-Topos ($\mathbf{H}$) içindeki Lif Demetleri, Kuantum Fourier Nöral Operatörleri (QFNO), 40 Veçheli Kuantum Dolaşıklık Manifoldları ve Q-TDA Mizan Engine vasıtasıyla tek bir dalga fonksiyonu olarak emilmekte ve saniyeler içinde kayıpsız hakikate ($N_{\text{kebîr}}$) dönüştürülmektedir.
+
+\end{document}

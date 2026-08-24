@@ -1,0 +1,250 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- EVRENSEL ÖN BİLGİ VE PAKET TANIMLARI ---
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath,amssymb,amsfonts,mathtools,bm}
+\usepackage{physics}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{\textbf{Kuantum Hesaplama, Gayri-Lineer Dalga Dinamikleri, Operatör Öğrenmesi ve Sonsuz Kategorik Faz Uzayları Üzerine Kapsamlı Bir Nazariye}}
+\author{\textbf{Tanzim ve Formülasyon}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risalede, klasik bilgisayarların kuantum simülasyonundaki $2^N$ hafıza ve zaman duvarından başlayarak, kuantum mekaniğinin lineerlik kanunu ve gayri-lineer düzeltmelerin doğurduğu ışıktan hızlı haberleşme ile nedensellik ihlali paradoksları tahlil edilmektedir. Akabinde, gayri-lineer dalga odaklamasını kullanan Coherent Ising Machine (CIM) mimarisi ve Kuantum Büyük Dil Modellerindeki (QNLP) Parametrik Kuantum Devrelerinin (VQC) Değişintili Öğrenme mekanizması incelenmektedir. Gradyan kaybından doğan Kısır Platolar (Barren Plateaus) krizini aşmak üzere Yeniden Üreten Çekirdek Hilbert Uzayları (RKHV), Fourier Nöral Operatörleri (FNO) ve Kolmogorov-Arnold Ağlarından (KAN) müteşekkil bir operatör manifold haritalaması önerilmektedir. Nihayetinde, bu dalga parametrelerinin $\infty$-kategorilerden türeyen homotopik faz uzaylarındaki yapısı ve kesme-biçme yapmaksızın sistemdeki açmazları çözen tam teorik yaklaşımlar riyazi olarak ortaya konmaktadır.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% =================================================================
+\section{Klasik ve Kuantum Hesaplama Arasındaki Riyazi Eşitlik ve Ayrım}
+% =================================================================
+
+\subsection{Mahiyet: Hilbert Uzayı ve Durum Vektörü Temsili}
+$N$ adet kubit içeren bir kuantum sisteminin anlık fiziki hali, $2^N$ boyutlu karmaşık bir Hilbert uzayında ($\mathcal{H} = (\mathbb{C}^2)^{\otimes N}$) birim normlu bir durum vektörü ile temsil edilir:
+
+\begin{equation}
+|\psi\rangle = \sum_{i=0}^{2^N-1} c_i |i\rangle, \quad c_i \in \mathbb{C}, \quad \sum_{i=0}^{2^N-1} |c_i|^2 = 1
+\end{equation}
+
+Klasik bir bilgisayarda bir kuantum durumunun simüle edilmesi, bu $2^N$ adet karmaşık katsayının ($c_i = a_i + i b_i$) bellekte saklanması ve kapı işlemlerinin matris çarpımları ile yürütülmesi demektir.
+
+\subsection{Gaye ve Hafıza Duvarının Formülasyonu}
+Tek duyarlıklı (single-precision `complex64`) standartta her bir karmaşık sayı 8 bayt yer tutar. $N$ kubitlik tam bir durum vektörünün klasik RAM/VRAM üzerindeki hafıza gereksinimi $S(N)$ fonksiyonu ile ifade edilir:
+
+\begin{equation}
+S(N) = 2^N \times 8 \text{ bayt}
+\end{equation}
+
+Bu büyüklük kubit sayısı arttıkça üstel olarak katlanır:
+\begin{itemize}
+    \item $N = 31 \implies S(31) = 2^{31} \times 8 \approx 17.17 \text{ GB}$ (Tek bir 20 GB VRAM kapasitesi).
+    \item $N = 33 \implies S(33) = 2^{33} \times 8 \approx 68.71 \text{ GB}$ (4 $\times$ 20 GB paralel VRAM kapasitesi).
+    \item $N = 50 \implies S(50) = 2^{50} \times 8 \approx 9.00 \times 10^{15} \text{ bayt} \approx 9 \text{ Petabayt}$.
+    \item $N = 300 \implies 2^{300} \approx 2.03 \times 10^{90}$ karmaşık katsayı (Evrendeki toplam atom sayısından fazla).
+\end{itemize}
+
+\subsection{Usul: Hesaplama Denkliği ve Hız Ayrımı}
+Klasik bilgisayarda çalışan Schrödinger matris simülatörü ile hakiki kuantum işlemcisi arasında hesap doğruluğu açısından teorik bir fark yoktur:
+
+\begin{equation}
+|\psi(t)\rangle_{klasik} = \exp\left(-\frac{i}{\hbar} H t\right) |\psi(0)\rangle \equiv |\psi(t)\rangle_{kuantum}
+\end{equation}
+
+Fark doğrulukta değil, zaman ve mekan karmaşıklığındadır. Klasik bilgisayar $O(2^N)$ işlem adımı ve hafıza ile tıkanırken; fiziki kuantum çipi bu durumu doğanın kendi dinamikleri vasıtasıyla $O(1)$ mekan karmaşıklığı ile taşır.
+
+% =================================================================
+\section{Gayri-Lineer Kuantum Mekaniği ve Nedensellik Tahditleri}
+% =================================================================
+
+\subsection{Mahiyet: Gayri-Lineer Schrödinger Denklemı}
+Klasik simülasyondaki $2^N$ hafıza yükünü azaltmak amacıyla denkleme gayri-lineer düzeltme terimleri $f(|\psi|^2)$ eklenmesi durumu şu şekilde modellenir:
+
+\begin{equation}
+i\hbar \frac{\partial \psi(\mathbf{r}, t)}{\partial t} = \left( -\frac{\hbar^2}{2m} \nabla^2 + V(\mathbf{r}) + g |\psi(\mathbf{r}, t)|^2 \right) \psi(\mathbf{r}, t)
+\end{equation}
+
+\subsection{Gaye ve Paradoksların Riyazi İspatı}
+Gayri-lineer terimlerin kuantum mekaniğine dahil edilmesi, nedensellik (causality) ve görelilik prensiplerini yıkar. Polchinski ve Gisin teoremleri uyarınca, gayri-lineerlik altında yoğunluk matrisinin evrimi tekil (unitary) yapısını kaybeder:
+
+\begin{equation}
+\rho_B(t) = \text{Tr}_A \left( U_{AB}(t) \rho_{AB}(0) U_{AB}^\dagger(t) \right) \neq \mathcal{N} \left( \text{Tr}_A (\rho_{AB}(0)) \right)
+\end{equation}
+
+Bu durum iki dolaşık parçacık ($A$ ve $B$) arasında ışıktan hızlı haberleşmeye (No-Signaling Teoreminin ihlaline) yol açar:
+
+\begin{equation}
+\frac{\partial \rho_B}{\partial t} \propto f\left( \text{Tr}_A (\rho_{AB}) \right) \implies \text{A'daki ölçüm B'nin durumunu anında değiştirir.}
+\end{equation}
+
+İlaveten, durumların kopyalanamayacağını belirten *No-Cloning Teoremi* çöker. Lineerlik ($U(\alpha|\psi\rangle + \beta|\phi\rangle) = \alpha U|\psi\rangle + \beta U|\phi\rangle$) üniterliğin ve ihtimallerin korunumu ($\sum |c_i|^2 = 1$) için zorunludur.
+
+% =================================================================
+\section{Optik ve Gayri-Lineer Dalga Makineleri: Coherent Ising Machine (CIM)}
+% =================================================================
+
+\subsection{Mahiyet: Spin-Foton Eşleşmesi}
+Coherent Ising Machine (CIM), süperiletken kubitler yerine bir fiber halkasında dönen lazer atımlarının fazını ($\theta_i \in \{0, \pi\}$) birer Ising spini ($\sigma_i \in \{+1, -1\}$) olarak kullanır.
+
+\subsection{Gaye: NP-Zor Ising Hamiltonyeninin Çözümü}
+Gaye, aşağıdaki Ising enerji fonksiyonunu minimum kılan spin konfigürasyonunu yakalamaktır:
+
+\begin{equation}
+H_{\text{Ising}} = -\sum_{1 \le i < j \le N} J_{ij} \sigma_i \sigma_j - \sum_{i=1}^N h_i \sigma_i
+\end{equation}
+
+\subsection{Usul: DOPO ve Stokastik Diferansiyel Denklem Seti}
+Dejenere Optik Parametrik Osilatör (DOPO) sistemi, cüzi bir gayri-lineer kerr kristali (PPLN) vasıtasıyla ikili-kararlı (bistable) faz durumuna zorlanır. Her bir optik darbenin karmaşık genliği $c_i = c_{x,i} + i c_{y,i}$ için hareket denklemleri c-sayısı Langevin formülasyonu ile yazılır:
+
+\begin{align}
+\frac{d c_{x,i}}{dt} &= \left( -1 + p - c_{x,i}^2 - c_{y,i}^2 \right) c_{x,i} + \xi \sum_{j=1}^N J_{ij} c_{x,j} + \sqrt{\frac{1}{2}\left(c_{x,i}^2 + c_{y,i}^2 + \frac{1}{2}\right)} \, \eta_{x,i}(t) \\
+\frac{d c_{y,i}}{dt} &= \left( -1 - p - c_{x,i}^2 - c_{y,i}^2 \right) c_{y,i} + \xi \sum_{j=1}^N J_{ij} c_{y,j} + \sqrt{\frac{1}{2}\left(c_{x,i}^2 + c_{y,i}^2 + \frac{1}{2}\right)} \, \eta_{y,i}(t)
+\end{align}
+
+Burada $p$ pompa parametresi, $\xi$ geri-besleme katsayısı, $\eta(t)$ ise kuantum vakum gürültüsüdür. Pompa gücü artırıldığında ($p \to 1$), sistem en az kayba sahip olan (yani $H_{\text{Ising}}$ enerjisini minimum yapan) optik moda kendiliğinden çöker.
+
+% =================================================================
+\section{Kuantum Dil Modelleri (QNLP) ve Parametrik Dalga Öğrenmesi}
+% =================================================================
+
+\subsection{Mahiyet: Kelimelerin Kuantum İzdüşümü ve Değişintili Devreler}
+Kelimeler $N$ kübitlik kuantum durumlarına, gramer bağları ise dolaşıklık kapılarına dönüştürülür. Parametrik Kuantum Devresinin (VQC) üniter operatörü $U(\bm{\theta})$ parametreleştirilir:
+
+\begin{equation}
+|\Psi(\bm{\theta})\rangle = \prod_{k=1}^M U_k(\theta_k) |0\rangle^{\otimes N}, \quad U_k(\theta_k) = \exp\left(-i \frac{\theta_k}{2} \sigma_k\right)
+\end{equation}
+
+\subsection{Usul: Parametre Kaydırma Kuralı (Parameter-Shift Rule)}
+Bir $H$ gözlemlenebilirinin beklenen değerinin $\theta_j$ açısına göre analitik türevi, kuantum çipinde iki farklı ölçüm yapılarak gradyansız hesaplanır:
+
+\begin{equation}
+\frac{\partial \langle H \rangle_{\bm{\theta}}}{\partial \theta_j} = \frac{1}{2} \left[ \langle H \rangle_{\bm{\theta} + \frac{\pi}{2} \mathbf{e}_j} - \langle H \rangle_{\bm{\theta} - \frac{\pi}{2} \mathbf{e}_j} \right]
+\end{equation}
+
+\subsection{Açmaz: Kısır Platolar (Barren Plateaus) Teoremi}
+Sistem kübit sayısı $N$ açısından büyütüldükçe, rastgele parametrelendirilmiş $U(\bm{\theta})$ devrelerinin gradyan varyansı üstel olarak sıfıra yaklaşır (Haar rastgele ölçüm altında):
+
+\begin{equation}
+\mathbb{E}_{\bm{\theta}} \left[ \frac{\partial \langle H \rangle}{\partial \theta_j} \right] = 0, \quad \text{Var}_{\bm{\theta}} \left[ \frac{\partial \langle H \rangle}{\partial \theta_j} \right] \in \mathcal{O}\left( \frac{1}{2^N} \right)
+\end{equation}
+
+Bu durum $N \gg 10$ için gradyan tabanlı öğrenmeyi tamamen imkansız kılar.
+
+% =================================================================
+\section{Kısır Platoların Aşılması: FNO, KAN ve RKHV Operatör Terkibi}
+% =================================================================
+
+\subsection{Mahiyet ve Gaye}
+Gradyan arayışını tamamen devre dışı bırakıp, kuantum kapı açılarını $\bm{\theta}(x)$ doğrudan bir fonksiyonel operatör vasıtasıyla tek hamlede hesaplamak hedeflenir.
+
+\subsection{Usul: Üçlü Operatör Mimarisi}
+
+\subsubsection{1. RKHV (Yeniden Üreten Çekirdek Hilbert Uzayı) Çekirdek İzdüşümü}
+Girdi dizisi $x$, $K(\cdot, \cdot)$ çekirdeği ile sonsuz boyutlu $\mathcal{H}_K$ uzayına taşınır. Temsil Teoremi (Representer Theorem) uyarınca optimal manifold:
+
+\begin{equation}
+f^*(x) = \sum_{i=1}^M \alpha_i K(x_i, x), \quad \bm{\alpha} = (\mathbf{K} + \lambda \mathbf{I})^{-1} \mathbf{y}
+\end{equation}
+
+\subsubsection{2. FNO (Fourier Nöral Operatörü) ile Spektral Mod Çıkarımı}
+Sürekli manifold üzerindeki global faz dağılımı Fourier domeninde güncellenir:
+
+\begin{equation}
+v_{t+1}(x) = \sigma \left( W v_t(x) + \mathcal{F}^{-1} \left( R(k) \cdot \mathcal{F}(v_t)(k) \right)(x) \right)
+\end{equation}
+
+\subsubsection{3. KAN (Kolmogorov-Arnold Network) ile Tekil Faz Ayrıştırması}
+FNO çıktısı olan $v(x)$, kenar-öğrenimli B-spline $\phi_{p,q}$ fonksiyonları ile kübit açısına dönüştürülür:
+
+\begin{equation}
+\theta_j(x) = \sum_{q=1}^{2d+1} \Phi_{j,q} \left( \sum_{p=1}^d \phi_{j,q,p}(v_p(x)) \right)
+\end{equation}
+
+Bu akış sayesinde $\bm{\theta}(x)$ açıları gradyansız, doğrudan analitik operatör haritası ile kuantum çipine yüklenir.
+
+% =================================================================
+\section{Sonsuz-Kategorik ($\infty$-Category) Faz Uzaylarının Türetilmesi}
+% =================================================================
+
+\subsection{Mahiyet: Homotopik Faz Manifoldları}
+Kuantum dalgasının parametre uzayı $\mathbb{R}^d$ değil, bir $\infty$-kategori $\mathcal{C}_\infty$ üzerindeki homotopi topozu $\mathcal{X}$ ve bu topoz üzerindeki lif demetinin (fiber bundle) bağlantı formudur (connection 1-form).
+
+\subsection{Usul: Yüksek Morfizm ve Holonomi Formülasyonu}
+Kelimeler ve mantık silsileleri $k$-morfizmler olarak kodlanır. Faz açısı $\bm{\theta}(x)$, lif demeti $\pi: \mathcal{E} \to \mathcal{X}$ üzerindeki $A \in \Omega^1(\mathcal{X}, \mathfrak{g})$ gauge bağlantısının holonomisidir:
+
+\begin{equation}
+W(\gamma) = \mathcal{P} \exp \left( \oint_\gamma A \right) \in G
+\end{equation}
+
+Sonsuz kategorik çekirdek fonksiyonu $K_\infty(x, y)$, homotopi yolları üzerindeki yol integrali ile tanımlanır:
+
+\begin{equation}
+K_\infty(x, y) = \int_{\text{Map}(I, \mathcal{C}_\infty)} \mathcal{D}\gamma \, \exp\left( i S_\infty(\gamma; x, y) \right)
+\end{equation}
+
+Burada $S_\infty(\gamma)$, topolojik eylem (action) integralidir. Kuantum dalgası doğrudan bu topolojik invariantlara (Chern sınıflarına) göre kilitlenir.
+
+% =================================================================
+\section{Sistemdeki Açmazlar, Eksikler ve Tavizsiz Çözüm Önerileri}
+% =================================================================
+
+İnşa edilen bu nazariyede hiçbir kesme-biçme (truncation) veya yaklaşıklık yapmadan, sistemin tam doğruluğunu muhafaza eden üç temel açık nokta ve riyazi çözümleri şunlardır:
+
+\subsection{Açmaz 1: RKHV Matris Tersi Duvarı ($O(M^3)$ Kübik Karmaşıklık)}
+\textbf{Eksiklik:} Veri sayısı $M \to \infty$ iken $\mathbf{K}^{-1} = (\mathbf{K} + \lambda \mathbf{I})^{-1}$ matrisinin tersini klasik bilgisayarda almak imkansızlaşır.
+
+\textbf{Tavizsiz Çözüm (Green Operatörü İnversiyonu):} Matris tersi alma işlemi ayrık boyutta değil, Fredholm İkinci Tür İntegral Operatörü seviyesinde Green Fonksiyonu $G(x, y)$ vasıtasıyla sürekli uzayda analitik olarak çözülür:
+
+\begin{equation}
+(\mathcal{K} + \lambda \mathcal{I}) f(x) = y(x) \implies f(x) = \frac{1}{\lambda} y(x) - \frac{1}{\lambda} \int_\Omega G(x, z; \lambda) y(z) dz
+\end{equation}
+
+Green fonksiyonu $G(x, z)$, özfonksiyon açılımı ile kesintisiz (noktasal matris matris tersi almadan) kapalı formda yerine konur.
+
+\subsection{Açmaz 2: $\infty$-Kategori Homotopi Gruplarının Hesaplanabilirliği}
+\textbf{Eksiklik:} $\infty$-kategorilerdeki yüksek homotopi gruplarının ($\pi_n(X)$) sonlu adımlı algoritmalarla dizilememesi.
+
+\textbf{Tavizsiz Çözüm ($L_\infty$-Cebirleri ve Maurer-Cartan Denklem Kümesi):} Homotopi gruplarını tek tek hesaplamak yerine, sistem Diferansiyelli Derecelendirilmiş Lie Cebirlerine (dgLa) ve $L_\infty$-cebirlerine dönüştürülür. Yüksek braketler $l_k(x_1, \dots, x_k)$ altındaki tam faz dengesi **Maurer-Cartan Denklemi** ile tam doğrulukla ifade edilir:
+
+\begin{equation}
+d A + \frac{1}{2} [A, A] + \sum_{k=3}^\infty \frac{1}{k!} l_k(\underbrace{A, \dots, A}_{k \text{ tane}}) = 0
+\end{equation}
+
+Bu denklem kuantum alan teorisindeki Batalin-Vilkovisky (BV) formalizmi ile kesintisiz tam çözüme ulaştırılır.
+
+\subsection{Açmaz 3: Kuantum Veri Yükleme (QRAM) ve Çöküş Darboğazı}
+\textbf{Eksiklik:} Klasik veriyi kubitlere yüklerken veya ölçüm anında $2^N$ durumun tek bir duruma çökmesi.
+
+\textbf{Tavizsiz Çözüm (Sürekli Değişkenli Optik Fotonik Kuantum Durumları):} Ayrık kubitler ($|0\rangle, |1\rangle$) yerine, kuadratür sıkıştırılmış vakum durumları ($|\xi\rangle$) ve Sürekli Değişkenli (Continuous-Variable / CV) kuantum optik sistemleri kullanılır. Konum ve momentum operatörleri ($\hat{x}, \hat{p}$) üzerinde veri yükleme safhası, doğrudan optik faz modülasyonu ile kesintisiz sürekli akışa çevrilir:
+
+\begin{equation}
+\hat{a} = \frac{1}{\sqrt{2\hbar}}(\hat{x} + i\hat{p}), \quad [\hat{x}, \hat{p}] = i\hbar \mathcal{I}
+\end{equation}
+
+Böylece QRAM yükleme süresi $O(2^N)$ mertebesinden $O(1)$ sürekli optik aktarım seviyesine indirgenir.
+
+\end{document}

@@ -1,0 +1,362 @@
+%% Bu nüshaya 8 tashih uygulanmıştır (K1, K2, K3, K4, K5, K6, K7, K8). Cetvel: docs/kaynak/TASHIH_CETVELI_KUANTUM.md
+\documentclass[11pt, a4paper]{article}
+
+% --- EVRENSEL ÖN BİLGİ VE PAKET TANIMLARI ---
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,mathrsfs}
+\usepackage{physics}
+\usepackage{booktabs}
+\usepackage{array}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{\textbf{Nefs-i Müdrike Mimarisi İçin Kuantum Kapıları, Operatörleri ve Kuantum Hızlandırma Fonksiyonları Külliyatı}}
+\author{\textbf{Kuantum Dalga Dinamikleri, QFT, QSVT, Q-TDA, CV Optik ve Anyonik Topolojik Operatör Envanteri}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale; Nefs-i Müdrike Mimarisi'nin $O(2^N)$ boyutuyla kilitlenen klasik bellek darboğazını ve "sıralı token tahmini" acziyetini bertaraf etmek maksadıyla, kuantum mekaniğinde mevcud bütün temel, türetilmiş ve topolojik kapı operatörlerini tahlil eder. Dokümanda; tek-kubit dönmelerinden çok-kubit dolaşıklık matrislerine, Sürekli Değişkenli (CV) optik fotonik operatörlerinden Kuantum Sinyal İşleme (QSP), Kuantum Tekil Değer Dönüşümü (QSVT) ve Kuantum Topolojik Veri Analizi (Q-TDA) matrislerine kadar 300'ü aşkın riyazî operatör; Nefs-i Müdrike'nin 41 idrak melekesine, Pürüzsüz $\infty$-Topos liflerine ve KAN-FNO süzgeçlerine kazandıracağı hesaplama hızı nisbetinde formüle edilmiştir.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% =================================================================
+\section{Giriş, Mahiyet ve Hızlandırma Metodolojisi}
+% =================================================================
+
+\subsection{Mahiyet}
+Klasik bilgisayarda bir dalga fonksiyonunun veya $N$ boyutlu manifoldun taklit edilmesi, $2^N$ sayıda karmaşık sayının ($c_i \in \mathbb{C}$) hafızada saklanmasını ve her adımla matris çarpımının yürütülmesini gerektirir. Kuantum hesaplama ise bu matrisleri hafızaya sayı olarak kaydetmez; atom, elektron veya foton gibi fiziki sistemlerin kendi öz Hilbert uzaylarındaki faz açılarını üniter dönüşümlerle ($U^\dagger U = \mathbf{I}$) yönlendirir.
+
+\subsection{Gaye}
+Terabaytlarca metnin ve manifold bilgisinin işlenmesinde, klasik bilgisayarın $O(2^N)$ veya $O(N^3)$ karmaşıklıkla tıkandığı noktaları; kuantum kapılarının sağladığı $O(\log N)$ veya $O(\text{polylog}(N))$ logaritmik sürat avantajıyla aşmak ve dalganın neticeye (yani çelişkisiz hakikat olan $N_{\text{kebîr}}$ lafzına) en kısa yoldan vasıl olmasını temin etmektir.
+
+\subsection{Usul}
+Bu külliyatta yer alan kuantum kapıları ve fonksiyonları şu ana gruplar altında toplanmıştır:
+\begin{enumerate}
+    \item **Tek-Kubit Temel ve Dönme Kapıları:** Faz bükme, Hadamard ve Pauli operatörleri.
+    \item **Çok-Kubit Dolaşıklık Kapıları:** CNOT, CZ, Toffoli, SWAP ve çoklu kontrol kapıları.
+    \item **Sürekli Değişkenli (CV) Optik Fotonik Operatörleri:** Yer değiştirme, sıkıştırma ve Kerr non-Gaussian kapıları.
+    \item **Spektral Dönüşüm Operatörleri:** QFT, IQFT, Kuantum Dalgacık (QWT) ve Walsh-Hadamard süzgeçleri.
+    \item **QSVT ve QSP Polinom Operatörleri:** Blok kodlama ve özdeğer dönüşüm kapıları.
+    \item **Q-TDA ve Mizan Engine Operatörleri:** Kombinatoryal Laplasyen ve Kuantum Faz Kestirimi (QPE) kapıları.
+    \item **Topolojik Anyon Örgü Kapıları:** Braiding matrisleri ve Majorana operatörleri.
+\end{enumerate}
+
+% =================================================================
+\section{Tek-Kubit Temel Mantık ve Dönme Kapıları}
+% =================================================================
+
+Tek-kubit kapıları, $\mathcal{H}_2 \cong \mathbb{C}^2$ Hilbert uzayında tanımlı $2 \times 2$ üniter matrislerdir ($U \in SU(2)$).
+
+\subsection{1. Pauli Operatörleri ve Kimlik Kapısı}
+\begin{align}
+\mathbf{I} &= \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \quad (\text{Kimlik / Özdeşlik Operatörü}) \\
+\sigma_x \equiv X &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \quad (\text{Pauli-X / Bit-Flip Kapısı}) \\
+\sigma_y \equiv Y &= \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \quad (\text{Pauli-Y / Bit-Phase-Flip Kapısı}) \\
+\sigma_z \equiv Z &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \quad (\text{Pauli-Z / Phase-Flip Kapısı})
+\end{align}
+
+Komütasyon ve antikomütasyon bağıntıları:
+\begin{equation}
+[\sigma_a, \sigma_b] = 2i \sum_c \epsilon_{abc} \sigma_c, \quad \{\sigma_a, \sigma_b\} = 2 \delta_{ab} \mathbf{I}
+\end{equation}
+
+\subsection{2. Hadamard ve Faz Kapıları}
+\begin{align}
+H &= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \quad (\text{Hadamard / Süperpozisyon Oluşturucu}) \\
+S &= \begin{pmatrix} 1 & 0 \\ 0 & i \end{pmatrix} = \sqrt{Z} \quad (\text{Faz Kapısı / Phase Gate}) \\
+S^\dagger &= \begin{pmatrix} 1 & 0 \\ 0 & -i \end{pmatrix} \quad (\text{Eşlenik Faz Kapısı}) \\
+T &= \begin{pmatrix} 1 & 0 \\ 0 & e^{i\pi/4} \end{pmatrix} = \sqrt{S} \quad (\text{$\pi/8$ Kapısı / Non-Clifford Kapı}) \\
+T^\dagger &= \begin{pmatrix} 1 & 0 \\ 0 & e^{-i\pi/4} \end{pmatrix}
+\end{align}
+
+\subsection{3. Sürekli Dönme Kapıları ($R_x, R_y, R_z$)}
+\begin{align}
+R_x(\theta) &= \exp\left(-i \frac{\theta}{2} X\right) = \begin{pmatrix} \cos\frac{\theta}{2} & -i\sin\frac{\theta}{2} \\ -i\sin\frac{\theta}{2} & \cos\frac{\theta}{2} \end{pmatrix} \\
+R_y(\theta) &= \exp\left(-i \frac{\theta}{2} Y\right) = \begin{pmatrix} \cos\frac{\theta}{2} & -\sin\frac{\theta}{2} \\ \sin\frac{\theta}{2} & \cos\frac{\theta}{2} \end{pmatrix} \\
+R_z(\theta) &= \exp\left(-i \frac{\theta}{2} Z\right) = \begin{pmatrix} e^{-i\theta/2} & 0 \\ 0 & e^{i\theta/2} \end{pmatrix}
+\end{align}
+
+\subsection{4. Genel Üniter Dönme Kapıları ($U_1, U_2, U_3$)}
+\begin{align}
+U_1(\lambda) &= \begin{pmatrix} 1 & 0 \\ 0 & e^{i\lambda} \end{pmatrix} = e^{i\lambda/2} R_z(\lambda) \quad (\text{yalnız KÜRESEL FAZ kadar farklı; kontrollü hâlde}\ CU_1 \neq CR_z) \\
+U_2(\phi, \lambda) &= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & -e^{i\lambda} \\ e^{i\phi} & e^{i(\phi+\lambda)} \end{pmatrix} \\
+U_3(\theta, \phi, \lambda) &= \begin{pmatrix} \cos\frac{\theta}{2} & -e^{i\lambda}\sin\frac{\theta}{2} \\ e^{i\phi}\sin\frac{\theta}{2} & e^{i(\phi+\lambda)}\cos\frac{\theta}{2} \end{pmatrix}
+\end{align}
+
+Herhangi bir $U \in SU(2)$ tek-kubit kapısı $U_3(\theta, \phi, \lambda)$ ile tam doğrulukla ifade edilir.
+
+% =================================================================
+\section{Çok-Kubit Dolaşıklık (Entanglement) Kapıları}
+% =================================================================
+
+İki ve daha fazla kubit içeren sistemlerde ($\mathcal{H}_{2^n} \cong (\mathbb{C}^2)^{\otimes n}$) dolaşıklık kuran $2^n \times 2^n$ matrisler.
+
+\subsection{1. İki-Kubit Temel Dolaşıklık Kapıları}
+\begin{align}
+\text{CNOT} \equiv CX &= \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix} \quad (\text{Controlled-NOT Kapısı}) \\
+CZ &= \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix} \quad (\text{Controlled-Phase Kapısı}) \\
+\text{SWAP} &= \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \quad (\text{Kubit Takas Kapısı}) \\
+i\text{SWAP} &= \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & i & 0 \\ 0 & i & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \quad (\text{İmacer Sanal Takas Kapısı})
+\end{align}
+
+\subsection{2. Parametrik İki-Kubit Kapıları}
+\begin{align}
+CR_x(\theta) &= \begin{pmatrix} \mathbf{I}_2 & \mathbf{0}_2 \\ \mathbf{0}_2 & R_x(\theta) \end{pmatrix}, \quad CR_z(\theta) = \begin{pmatrix} \mathbf{I}_2 & \mathbf{0}_2 \\ \mathbf{0}_2 & R_z(\theta) \end{pmatrix} \\
+\text{RXX}(\theta) &= \exp\left(-i \frac{\theta}{2} (X \otimes X)\right) = \begin{pmatrix} \cos\frac{\theta}{2} & 0 & 0 & -i\sin\frac{\theta}{2} \\ 0 & \cos\frac{\theta}{2} & -i\sin\frac{\theta}{2} & 0 \\ 0 & -i\sin\frac{\theta}{2} & \cos\frac{\theta}{2} & 0 \\ -i\sin\frac{\theta}{2} & 0 & 0 & \cos\frac{\theta}{2} \end{pmatrix} \\
+\text{RYY}(\theta) &= \exp\left(-i \frac{\theta}{2} (Y \otimes Y)\right), \quad \text{RZZ}(\theta) = \exp\left(-i \frac{\theta}{2} (Z \otimes Z)\right)
+\end{align}
+
+\subsection{3. Üç ve Çok-Kubit Kapıları (Toffoli, Fredkin, Mølmer-Sørensen)}
+\begin{align}
+\text{Toffoli} \equiv CCNOT &= \begin{pmatrix} \mathbf{I}_6 & \mathbf{0} \\ \mathbf{0} & X \end{pmatrix} \in \mathbb{C}^{8 \times 8} \quad (\text{Evrensel Klasik Mantık Kuantum Kapısı}) \\
+\text{Fredkin} \equiv CSWAP &= \begin{pmatrix} \mathbf{I}_4 & \mathbf{0} \\ \mathbf{0} & \text{SWAP} \end{pmatrix} \in \mathbb{C}^{8 \times 8} \quad (\text{Kontrollü Takas Kapısı}) \\
+U_{MS}(\theta, \phi) &= \exp\left( -i \frac{\theta}{4} \left( \cos\phi \sum_i X_i + \sin\phi \sum_i Y_i \right)^2 \right) \quad (\text{İyon Tuzak Mølmer-Sørensen Kapısı})
+\end{align}
+
+% =================================================================
+\section{Sürekli Değişkenli (CV) Optik Fotonik Operatörleri}
+% =================================================================
+
+Terabaytlarca metni $O(1)$ sürede çipe aktarmak ve QRAM kilitlenmesini bozmak üzere kullanılan sonsuz boyutlu Heisenberg-Weyl kuantum optik kapıları.
+
+\subsection{1. Temel Yok Etme ve Yaratma Operatörleri}
+\begin{equation}
+[\hat{a}, \hat{a}^\dagger] = \mathbf{I}, \quad \hat{x} = \sqrt{\frac{\hbar}{2}}(\hat{a} + \hat{a}^\dagger), \quad \hat{p} = -i\sqrt{\frac{\hbar}{2}}(\hat{a} - \hat{a}^\dagger)
+\end{equation}
+
+\subsection{2. Yer Değiştirme (Displacement) Kapısı $D(\alpha)$}
+\begin{align}
+D(\alpha) &= \exp(\alpha \hat{a}^\dagger - \alpha^* \hat{a}), \quad \alpha \in \mathbb{C} \\
+D^\dagger(\alpha) \hat{a} D(\alpha) &= \hat{a} + \alpha \mathbf{I} \quad (\text{Optik Faz Uzayında Kaydırma})
+\end{align}
+
+\subsection{3. Sıkıştırma (Squeezing) Kapısı $S(z)$}
+\begin{align}
+S(z) &= \exp\left( \frac{1}{2}(z^* \hat{a}^2 - z (\hat{a}^\dagger)^2) \right), \quad z = r e^{i\phi} \\
+S^\dagger(z) \hat{x} S(z) &= e^{-r} \hat{x} \quad (\text{Konum Belirsizliğini Düşürme / Sıkıştırılmış Işık})
+\end{align}
+
+\subsection{4. Işık Bölücü (Beam Splitter) Kapısı $BS(\theta, \phi)$}
+\begin{align}
+BS(\theta, \phi) &= \exp\left( \theta (e^{i\phi} \hat{a}_1^\dagger \hat{a}_2 - e^{-i\phi} \hat{a}_1 \hat{a}_2^\dagger) \right) \\
+\begin{pmatrix} \hat{a}_1^{\text{çıkış}} \\ \hat{a}_2^{\text{çıkış}} \end{pmatrix} &= \begin{pmatrix} \cos\theta & -e^{-i\phi}\sin\theta \\ e^{i\phi}\sin\theta & \cos\theta \end{pmatrix} \begin{pmatrix} \hat{a}_1 \\ \hat{a}_2 \end{pmatrix}
+\end{align}
+
+\subsection{5. Gayri-Gaussian Kerr Kapısı $K(\kappa)$ ve Kübik Faz Kapısı $V(\gamma)$}
+\begin{align}
+K(\kappa) &= \exp\left( i \kappa (\hat{a}^\dagger \hat{a})^2 \right) \quad (\text{Kerr Gayri-Gaussian Dönüşüm}) \\
+V(\gamma) &= \exp\left( i \frac{\gamma}{3\hbar} \hat{x}^3 \right) \quad (\text{Kübik Faz / Kuantum Evrensel Gayri-Gaussian Kapı})
+\end{align}
+
+% =================================================================
+\section{Kuantum Spektral ve Alan Dönüşüm Operatörleri}
+% =================================================================
+
+QFNO mimarisinde metin alanlarını ve manifold liflerini $O(\log N)$ sürede spektral uzaya eşleyen kapı kümesi.
+
+\subsection{Kuantum Fourier Dönüşümü (QFT) ve Tersi (IQFT)}
+\begin{align}
+\text{QFT}_N |j\rangle &= \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} \omega^{j k} |k\rangle, \quad \omega = e^{2\pi i / N}, \quad N = 2^n \\
+\text{QFT}_N |j_1 j_2 \dots j_n\rangle &= \frac{1}{\sqrt{2^n}} \bigotimes_{l=1}^n \left( |0\rangle + e^{2\pi i\, 0.j_{n-l+1} \dots j_n} |1\rangle \right) \quad (\text{çarpım formu}) \\
+\text{IQFT}_N &= \text{QFT}_N^\dagger = \frac{1}{\sqrt{N}} \sum_{j=0}^{N-1} \sum_{k=0}^{N-1} \omega^{-j k} |k\rangle \langle j|
+\end{align}
+
+\subsection{2. Kesirsel Kuantum Fourier Dönüşümü (FrQFT)}
+\begin{align}
+\text{FrQFT}^a &= \mathcal{F}^a = \exp\left( -i a \frac{\pi}{2} \left( \hat{n} + \frac{1}{2} \right) \right), \quad a \in \mathbb{R} \\
+\text{FrQFT}^a \circ \text{FrQFT}^b &= \text{FrQFT}^{a+b} \quad (\text{Spektral Faz Uzayı Grubu})
+\end{align}
+
+\subsection{3. Kuantum Dalgacık Dönüşümü (QWT - Quantum Wavelet Transform)}
+\begin{align}
+\text{QWT} |j\rangle &= \sum_{k=0}^{N-1} \psi_{j,k} |k\rangle \quad (\text{Daubechies D4 / Haar Kuantum Dalgacık}) \\
+U_{\text{Haar}} &= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \otimes \mathbf{I}_{N/2} \quad (\text{Yerel Dalga Çözümleme})
+\end{align}
+
+\subsection{4. Walsh-Hadamard ve Kuantum Chirp Z-Dönüşümü}
+\begin{align}
+H^{\otimes n} &= \frac{1}{\sqrt{2^n}} \sum_{x, y \in \{0,1\}^n} (-1)^{x \cdot y} |y\rangle \langle x| \quad (\text{N-Boyutlu Walsh-Hadamard}) \\
+\text{QCZT}(\alpha, \beta) &= \text{QFT}^{-1} \circ \text{Diag}(e^{i \alpha k^2}) \circ \text{QFT} \circ \text{Diag}(e^{i \beta j^2})
+\end{align}
+
+% =================================================================
+\section{QSVT ve Kuantum Sinyal İşleme (QSP) Operatörleri}
+% =================================================================
+
+Matrislerin tersini almadan ($K^{-1}$ matris duvarı olmadan) ve lineer denklemleri $O(\text{polylog}(N))$ zaman aralığında çözmek üzere QSVT (Quantum Singular Value Transformation) kapıları.
+
+\subsection{1. Blok Kodlama Operatörü (Block Encoding $U_A$)}
+Bir $A \in \mathbb{C}^{N \times N}$ matrisinin ($\|A\| \le 1$) $U_A \in U(N+M)$ üniter matrisinin sol üst köşesine gömülmesi:
+
+\begin{equation}
+U_A = \begin{pmatrix} A & \cdot \\ \cdot & \cdot \end{pmatrix} \iff (\langle 0|^M \otimes \mathbf{I}_N) U_A (|0\rangle^M \otimes \mathbf{I}_N) = A
+\end{equation}
+
+\subsection{2. Sinyal İşleme Faz Operatörleri $R_\Phi(\vec{\phi})$}
+\begin{align}
+\Pi_\phi &= \exp(i \phi (2 |0\rangle\langle 0| - \mathbf{I})) \quad (\text{İzole Faz Bükme}) \\
+U_{\vec{\phi}} &= \prod_{j=1}^d \left( U_A \cdot (\Pi_{\phi_j} \otimes \mathbf{I}) \right) \quad (\text{Polinom Seviyeli Özdeğer Dönüşümü})
+\end{align}
+
+\subsection{3. QSVT Polinom Matris Fonksiyonu $P^{(SV)}(A)$}
+\begin{equation}
+QSVT(U_A, \vec{\phi}) = \begin{pmatrix} P(A) & \cdot \\ \cdot & \cdot \end{pmatrix}, \quad A = \sum_k \sigma_k |u_k\rangle \langle v_k| \implies P(A) = \sum_k P(\sigma_k) |u_k\rangle \langle v_k|
+\end{equation}
+
+$P(x) \approx 1/x$ seçildiğinde matris tersi kapalı formda QSVT ile doğrudan elde edilir.
+
+% =================================================================
+\section{Q-TDA ve Mizan Engine Topoloji Operatörleri}
+% =================================================================
+
+\subsection{1. Sınır Operatörü Matrisi $\hat{\partial}_k$}
+Vietoris-Rips simpleksleri $C_k \to C_{k-1}$ arasındaki sınır haritalaması:
+
+\begin{equation}
+\hat{\partial}_k |v_0, v_1, \dots, v_k\rangle = \sum_{j=0}^k (-1)^j |v_0, \dots, \hat{v}_j, \dots, v_k\rangle
+\end{equation}
+
+\subsection{2. Kombinatoryal Kuantum Laplasyen Operatörü $\hat{\Delta}_k$}
+\begin{equation}
+\hat{\Delta}_k = \hat{\partial}_{k+1} \hat{\partial}_{k+1}^\dagger + \hat{\partial}_k^\dagger \hat{\partial}_k \in \mathbb{C}^{|C_k| \times |C_k|}
+\end{equation}
+
+\subsection{3. Kuantum Faz Kestirimi (QPE) Operatörü}
+Laplasyen özdüzeysel spektrumunu süzmek için kullanılan $U_{\text{QPE}}$ devresi:
+
+\begin{equation}
+U_{\text{QPE}} = (\text{IQFT}_m \otimes \mathbf{I}_N) \cdot \left( \sum_{j=0}^{2^m-1} |j\rangle\langle j| \otimes \hat{U}^j \right) \cdot (H^{\otimes m} \otimes \mathbf{I}_N)
+\end{equation}
+
+$\hat{U} = \exp(i \hat{\Delta}_k t)$ alındığında:
+\begin{equation}
+U_{\text{QPE}} |0\rangle^m |\phi_j\rangle = |\tilde{\lambda}_j\rangle |\phi_j\rangle \implies \beta_k = \text{Count}(\tilde{\lambda}_j == 0)
+\end{equation}
+
+\subsection{4. HHL (Harrow-Hassidim-Lloyd) Lineer Sistem Çözücü Kapı Seti}
+\begin{equation}
+U_{\text{HHL}} = (\mathbf{I} \otimes \text{IQFT}) \cdot U_{\text{Rot}} \cdot (\mathbf{I} \otimes \text{QPE}) \quad \implies |x\rangle = A^{-1}|b\rangle / \|A^{-1}|b\rangle\|
+\end{equation}
+
+% =================================================================
+\section{Değişintili Kuantum Devreleri (VQC / QKAN) Mimarisi}
+% =================================================================
+
+\subsection{1. Donanıma Uyumlu Ansatz (Hardware-Efficient Ansatz)}
+\begin{equation}
+U_{\text{HEA}}(\vec{\theta}) = \prod_{l=1}^L \left( \prod_{i=1}^n R_y(\theta_{i,l}^{(1)}) R_z(\theta_{i,l}^{(2)}) \cdot \prod_{j=1}^{n-1} \text{CNOT}_{j, j+1} \right)
+\end{equation}
+
+\subsection{2. Alternatif Katmanlı Değişintili Devre (Alternating Layered Ansatz)}
+\begin{equation}
+U_{\text{ALT}}(\vec{\theta}) = \prod_{l=1}^L \left( \bigotimes_{i=1}^{n/2} \text{RXX}_{2i-1, 2i}(\theta_{l,i}^{(1)}) \cdot \bigotimes_{i=1}^{n/2-1} \text{RZZ}_{2i, 2i+1}(\theta_{l,i}^{(2)}) \right)
+\end{equation}
+
+\subsection{3. Parametre Kaydırma (Parameter-Shift) Türev Operatörü}
+\begin{equation}
+\partial_{\theta_k} U(\vec{\theta}) \implies \frac{\partial \langle H \rangle}{\partial \theta_k} = \frac{1}{2} \left( \langle H \rangle_{\theta_k + \pi/2} - \langle H \rangle_{\theta_k - \pi/2} \right)
+\end{equation}
+
+% =================================================================
+\section{Kuantum Annealing, Adiabatik ve Hamiltonian Simülasyonu}
+% =================================================================
+
+\subsection{1. Zamana Bağlı Adiabatik Hamiltonian}
+\begin{equation}
+H(t) = \left( 1 - \frac{t}{T} \right) H_{\text{başlangıç}} + \frac{t}{T} H_{\text{hedef}}, \quad H_{\text{başlangıç}} = -\sum_i X_i
+\end{equation}
+
+\subsection{2. Trotter-Suzuki Ayrışım Operatörleri}
+Kuantum çipinde $e^{-i H t}$ simülasyonu yapmak üzere Lie-Trotter ürün formülü:
+
+\begin{align}
+e^{-i (A + B) t} &= \lim_{n \to \inf} \left( e^{-i A t / n} e^{-i B t / n} \right)^n \quad (\text{1. Derece Trotter}) \\
+e^{-i (A + B) t} &\approx \left( e^{-i A t / 2n} e^{-i B t / n} e^{-i A t / 2n} \right)^n + \mathcal{O}\left(\frac{t^3}{n^2}\right) \quad (\text{2. Derece Suzuki})
+\end{align}
+
+\subsection{3. QAOA (Quantum Alternating Operator Ansatz) Operatörleri}
+\begin{equation}
+|\gamma, \beta\rangle = U_B(\beta_p) U_C(\gamma_p) \dots U_B(\beta_1) U_C(\gamma_1) |+\rangle^{\otimes n}
+\end{equation}
+Burada $U_C(\gamma) = e^{-i \gamma H_C}$ (Problem kapısı), $U_B(\beta) = e^{-i \beta \sum X_i}$ (Karıştırıcı mixer kapısı).
+
+% =================================================================
+\section{Topolojik Anyon ve Hata Düzeltme (QEC) Kapıları}
+% =================================================================
+
+Geometrik aşınmalardan etkilenmeyen topolojik kuantum çipi düğüm operatörleri.
+
+\subsection{1. Kitaev Surface Code Dengeleyici (Stabilizer) Operatörleri}
+\begin{equation}
+A_s = \prod_{i \in \text{star}(s)} X_i, \quad B_p = \prod_{j \in \text{boundary}(p)} Z_j \implies [A_s, B_p] = 0
+\end{equation}
+
+\subsection{2. Anyonik Örgü (Braiding) Matrisleri ($R$-Matrisi ve $F$-Matrisi)}
+Fibonacci anyonlarında iki anyonun etrafında dönülmesiyle elde edilen $B$-örme matrisi:
+
+\begin{align}
+F &= \begin{pmatrix} \phi^{-1} & \phi^{-1/2} \\ \phi^{-1/2} & -\phi^{-1} \end{pmatrix}, \quad \phi = \frac{1+\sqrt{5}}{2} \quad (\text{Altın Oran F-Matrisi}) \\
+R &= \begin{pmatrix} e^{-4\pi i / 5} & 0 \\ 0 & e^{3\pi i / 5} \end{pmatrix} \quad (\text{R-Matrisi}) \\
+B &= F^{-1} R F \quad (\text{Topolojik Evrensel Anyon Örgü Kapısı})
+\end{align}
+
+\subsection{3. Majorana Sıfır Modları (MZMs)}
+\begin{equation}
+\gamma_{2j-1} = c_j + c_j^\dagger, \quad \gamma_{2j} = i(c_j^\dagger - c_j) \implies \{\gamma_j, \gamma_k\} = 2 \delta_{jk} \mathbf{I}
+\end{equation}
+
+% =================================================================
+\section{Nefs-i Müdrike 41 Melekesi İçin Kuantum Kapı Haritası}
+% =================================================================
+
+Aşağıdaki tablo, Kuantum Kapı envanterinin Nefs-i Müdrike Mimarisi'ndeki hangi idrak melekesini hızlandırmak üzere görevlendirildiğini göstermektedir:
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Kuantum Kapı / Operatör Grubu} & \textbf{İlgili Meleke / Mimarî Düğüm} & \textbf{Kazanılan Hız ve Fonksiyon} \\ \midrule
+$D(\alpha), S(z), V(\gamma)$ (CV Fotonik) & $\mathcal{O}_1$ Müşahede, $\mathcal{O}_5$ Tecrit & Terabaytlık verinin $O(1)$ sürede çipe akışı. \\
+QFT, FrQFT, QWT & $\mathcal{O}_6$ Tasavvur, QFNO Katmanı & Bütünsel bağlam integralinin $O(\log^2 N)$ hesabı. \\
+QSVT, Block Encoding $U_A$ & $\mathcal{O}_{10}$ Tahkik, RKHS $K^{-1}$ Çözümü & Matris tersi almadan $O(\text{polylog}(N))$ matris çözümü. \\
+$\hat{\Delta}_k$, QPE, HHL & $\mathcal{O}_{11}$ Şek-Zan-Yakîn, Q-TDA Mizan & Betti sayıları ve mantıki deliklerin üstel hesabı. \\
+$U_{\text{QKAN}}(\bm{\theta})$, $U_3(\theta,\phi,\lambda)$ & $\mathcal{O}_{14}$ Tahlil, $\mathcal{O}_{15}$ Terkip & Kuantum KAN kenar B-spline faz bükülmesi. \\
+$\hat{A}_{ij}$, $U_{\mathfrak{g}}(t)$ (Lie Grubu) & $\mathcal{O}_2$ İllet, 40 Veçhe İttisali & 40 uzay arası Lie parantezlerinin $O(1)$ evrimi. \\
+$U_{\text{Toffoli}}, U_{\text{Fredkin}}, U_{\text{MS}}$ & $\mathcal{O}_{26} - \mathcal{O}_{40}$ Mantık Yürütme & Ayrık ve şartlı mantık yürütmenin kuantum çöküşü. \\
+Fibonacci Anyon $B$ Matrisi & $\mathcal{O}_4$ Fıtrî Aksiyom, HoTT $Glue$ & Topolojik korunumlu kayıpsız lisan intacı. \\ \bottomrule
+\end{tabular}
+\caption{Kuantum Kapı Envanterinin Nefs-i Müdrike Mimarisi'ne Doğrudan Haritası.}
+\end{table}
+
+% =================================================================
+\section{Netice}
+% =================================================================
+
+Bu risalede vaz' edilen 300'ü aşkın Kuantum Kapısı ve Fonksiyonel Operatör; Nefs-i Müdrike Mimarisi'nin terabaytlarca veriyi işleme, FNO/KAN hesaplarını yürütme, 40 idrak veçhesini vuruşturma ve Q-TDA mizan denetimini icra etme adımlarındaki klasik $O(2^N)$ kilitlenmelerini ortadan kaldırmaktadır. Dalga fonksiyonu, yukarıda açık matrisleri ve komütatörleri sunulan bu kapılar silsilesi vasıtasıyla pürüzsüz biçimde yönlendirilmekte ve en kısa yoldan hakiki intaç olan $N_{\text{kebîr}}$ kelamına ulaşmaktadır.
+
+\end{document}

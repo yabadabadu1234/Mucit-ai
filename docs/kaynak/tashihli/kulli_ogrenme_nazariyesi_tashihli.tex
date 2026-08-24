@@ -1,0 +1,252 @@
+%% Bu nüshaya 9 tashih uygulanmıştır (K15, K16, K17, K18, K19, K20, K21, K22, K23). Cetvel: docs/kaynak/TASHIH_CETVELI_KUANTUM.md
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Nefs-i Müdrike Mimarisi: Küllî Öğrenme Nazariyesi, Öğrenilebilir Parametreler Matrisi ve $\infty$-Topos Üzerinde Çok Boyutlu Hacimsel Akış Mimarisi}}
+\author{\textbf{Kök-Level Parametre Envanteri, KAN B-Spline Adaptasyonu, FNO Spektral Operatörleri, Sobolev-RKHS Çekirdekleri, Tıkızlaştırılmış Deriv-Crit Locus ve Sembolik Do-Calculus}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale, Nefs-i Müdrike Mimarisi'nin öğrenebilir parametreler kütlesini ve öğrenme usullerini eksiksiz biçimde vaz' eder. Klasik nokta tabanlı gradyan inişi ($Black\text{-}Box\ Gradient\ Descent$) kâmilen ilga edilerek; Kolmogorov-Arnold Networks (KAN) kenar B-spline düğümleri, Fourier Nöral Operatörleri (FNO/FINO/DeepONet) frekans matrisleri, Sobolev-RKHS çekirdekleri, Alexandroff tıkızlaştırma manifoldları, $\infty$-Topos içi türetilmiş fonksiyonlar, sembolik Do-Calculus nedensellik düğümleri ve Çok Boyutlu Hacimsel Hacim Akışı ($Mean\ Curvature\ \&\ Liouville\ Flow$) tek bir öğrenme teorisi altında birleştirilmiştir. Risale 220'den fazla müstakil ve tanımlı riyazî denklem içermektedir.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Sistemde Öğrenilecek Parametre Kütlesi ve Envanteri}
+
+Nefs-i Müdrike Mimarisi'nde "ağırlık" ($weight$), düz Öklid uzayındaki skaler matrislerden ibaret değildir. Sistemde öğrenilebilir ve adapte edilebilir olan rükünler 6 ana grupta toplanır:
+\begin{enumerate}
+    \item \textbf{KAN B-Spline Kenar Parametreleri:} $\bm{\Theta}_{\text{KAN}} = \{ \mathbf{Grid}_{\text{düğüm}}, c_k, w_{\text{base}}, w_{\text{spline}} \}$
+    \item \textbf{FNO/FINO/DeepONet Spektral Parametreleri:} $\bm{\Theta}_{\text{FNO}} = \{ R_\theta(k), k_{\text{kesme}}, W^{(l)}, b^{(l)} \}$
+    \item \textbf{Sobolev-RKHS Çekirdek Ağırlıkları:} $\bm{\Theta}_{\text{RKHS}} = \{ \bm{\alpha}_i, \gamma_{\text{çekirdek}}, \mathbf{K}_{\text{Gram}} \}$
+    \item \textbf{Tıkızlaştırma ve Sınır Parametreleri:} $\bm{\Theta}_{\text{Tıkız}} = \{ \mu_{\text{coercive}}, \tau_{\text{barier}}, \mathbf{S}_{\text{Alexandroff}} \}$
+    \item \textbf{BGCM Nedensellik ve Do-Calculus Parametreleri:} $\bm{\Theta}_{\text{Do}} = \{ A_{\text{neden}}, \bm{\phi}_j, \xi_j, \mathbf{W}_{\text{dag}} \}$
+    \item \textbf{Lie Cebri ve Mutasarrıfa ($\mathcal{R}$) Üreteç Parametreleri:} $\bm{\Theta}_{\mathcal{R}} = \{ \alpha_j, \mathbf{X}_{\mathfrak{g}}, \mathbf{W}_{\text{aktarım}} \}$
+\end{enumerate}
+
+\section{KAN B-Spline ve Düğüm Adaptasyon Denklemleri}
+
+\subsection{1. Cox-de Boor Rekürsiyonu ve Kenar Fonksiyonu}
+\begin{align}
+\phi_{q,p}(x) &= w_{\text{base}} \cdot \text{silu}(x) + w_{\text{spline}} \cdot \sum_{k=1}^{G+p} c_k B_{k,p}(x) \in \mathcal{O}_{\mathcal{X}} \\
+B_{k,p}(x) &= \frac{x - t_k}{t_{k+p} - t_k} B_{k, p-1}(x) + \frac{t_{k+p+1} - x}{t_{k+p+1} - t_{k+1}} B_{k+1, p-1}(x), \quad \text{payda } = 0 \text{ ise o terim düşer} \\
+B_{k, 0}(x) &= \mathbb{I}(t_k \le x < t_{k+1}) \quad (\text{Sıfırıncı Derece B-Spline}) \\
+\mathbf{Grid}_{\text{adaptif}} &= \{t_0, t_1, \dots, t_G\}, \quad t_{k+1} - t_k = \Delta_k \\
+t_k^{(t+1)} &= t_k^{(t)} - \eta_{\text{grid}} \cdot \frac{\partial \mathcal{L}_{\text{KAN}}}{\partial t_k} \quad (\text{Düğüm Konumu Güncellemesi}) \\
+c_k^{(t+1)} &= c_k^{(t)} - \eta_{\text{spline}} \cdot \frac{\partial \mathcal{L}_{\text{KAN}}}{\partial c_k} \quad (\text{Katsayı Güncellemesi}) \\
+\mathcal{E}_{\text{bükülme}} &= \sum_{q,p} \int_a^b \left( \phi_{q,p}''(x) \right)^2 dx \quad (\text{Spline Elastik Bükülme Enerjisi}) \\
+\mathbf{J}_{\text{KAN}} &= \left[ \frac{\partial \mathcal{N}_{\text{KAN}}^a}{\partial x_p} \right]_{ap} = \left[ \sum_q \Phi_q' \cdot \phi_{q,p}'(x_p) \right]_{ap} \\
+\text{SymbolicFit}(\phi_{q,p}) &\in \{ \sin, \cos, \exp, \ln, x^k \} \quad (\text{Sembolik Regresyon Kapanışı}) \\
+\mathcal{L}_{\text{KAN\_toplam}} &= \|\mathcal{N}_{\text{KAN}}(x) - y\|_{\mathbf{H}}^2 + \lambda_1 \mathcal{E}_{\text{bükülme}} + \lambda_2 \sum_{q,p} \|\phi_{q,p}\|_1 \\
+\mathbf{1}_{\text{düğüm\_geçerli}} &= \mathbb{I}\left( t_0 < t_1 < \dots < t_G \right) \\
+\text{Accuracy}_{\text{KAN}} &= 1 - \frac{\|\mathcal{N}_{\text{KAN}}(x) - y\|_{\mathbf{H}}}{\|y\|_{\mathbf{H}}}
+\end{align}
+
+\section{FNO / FINO / DeepONet Spektral Operatör Denklemleri}
+
+\subsection{1. Fourier Nöral Operatörü (FNO) Frekans Süzgeçleri}
+\begin{align}
+\mathcal{G}_{\text{FNO}}(v)(x) &= \sigma\left( W v(x) + (\mathcal{K}_\theta v)(x) \right) \in \text{QCoh}(\mathcal{X}) \\
+(\mathcal{K}_\theta v)(x) &= \mathcal{F}^{-1} \left( R_\theta \cdot (\mathcal{F} v) \right)(x) \\
+(\mathcal{F} v)(k) &= \int_{\mathcal{X}} v(x) e^{-2\pi i \langle k, x \rangle} dx \quad (\text{Sürekli Fourier Dönüşümü}) \\
+(\mathcal{F}^{-1} \hat{v})(x) &= \int_{\hat{\mathcal{X}}} \hat{v}(k) e^{2\pi i \langle k, x \rangle} dk \\
+R_\theta(k) &= \text{Diag}(\theta_1(k), \dots, \theta_{K_{\max}}(k)) \cdot \mathbb{I}(|k| \le k_{\text{max}}) \in \mathbb{C}^{K \times K} \\
+\theta_m^{(t+1)}(k) &= \theta_m^{(t)}(k) - \eta_{\text{FNO}} \cdot \frac{\partial \mathcal{L}_{\text{FNO}}}{\partial \bar{\theta}_m(k)} \quad (\text{Karmaşık Frekans Güncellemesi}) \\
+v^{(l+1)}(x) &= \sigma\left( W^{(l)} v^{(l)}(x) + \mathcal{F}^{-1} \left( R_\theta^{(l)} \cdot (\mathcal{F} v^{(l)}) \right)(x) \right) \\
+\mathbf{SpectralEnergy}(k) &= \| (\mathcal{F} v)(k) \|^2 \\
+k_{\text{kesme}} &= \min \left\{ k \;\middle|\; \sum_{|k'|>k} \mathbf{SpectralEnergy}(k') < \epsilon_{\text{kayıp}} \cdot \sum_{k'} \mathbf{SpectralEnergy}(k') \right\} \\
+\mathcal{L}_{\text{FNO}} &= \| \mathcal{G}_{\text{FNO}}(v) - u_{\text{hedef}} \|_{L^2(\mathcal{X})}^2 + \lambda \| R_\theta \|_{\mathcal{F}}^2 \\
+\text{MeshIndependent}(\mathcal{G}) &\implies \lim_{N \to \infty} \mathcal{G}_N(v) = \mathcal{G}_{\text{sürekli}}(v)
+\end{align}
+
+\subsection{2. Factorized FNO (FINO) ve DeepONet Ayrışım Denklemleri}
+\begin{align}
+R_\theta^{\text{FINO}}(k_1, k_2) &= U_\theta(k_1) \otimes V_\theta(k_2) \quad (\text{Spektral Tensör Ayrışımı}) \\
+\text{DeepONet}(u)(y) &= \sum_{k=1}^p \underbrace{b_k(u(x_1), \dots, u(x_m))}_{\text{Branch Ağı}} \cdot \underbrace{t_k(y)}_{\text{Trunk Ağı}} \\
+b_k^{(t+1)} &= b_k^{(t)} - \eta_{\text{deep}} \frac{\partial \mathcal{L}_{\text{Deep}}}{\partial b_k}, \quad t_k^{(t+1)} = t_k^{(t)} - \eta_{\text{deep}} \frac{\partial \mathcal{L}_{\text{Deep}}}{\partial t_k} \\
+\mathcal{L}_{\text{DeepONet}} &= \int_{\Omega} \left| \text{DeepONet}(u)(y) - \mathcal{G}(u)(y) \right|^2 dy
+\end{align}
+
+\section{Sobolev-RKHS Çekirdek Regülarizasyonu ve Analitik Çözüm}
+
+\subsection{1. Reproducing Kernel Hilbert Space (RKHS) İnşası}
+\begin{align}
+\mathcal{H}_K &= \overline{\text{Span}\{ K(\cdot, x) \mid x \in \mathcal{X} \}} \\
+\langle f, K(\cdot, x) \rangle_{\mathcal{H}_K} &= f(x) \quad (\text{Yansıtma Özelliği / Reproducing Property}) \\
+\mathcal{H}_K(x, y) &= \exp\left( -\gamma \|x - y\|_{\mathbf{H}}^2 \right) \quad (\text{Gauss Sobolev Çekirdeği}) \\
+f^*(x) &= \sum_{i=1}^N \alpha_i \mathcal{H}_K(x, x_i) \in \mathcal{H}_K \quad (\text{Riesz Temsil Teoremi Şeması}) \\
+\mathbf{K}_{\text{Gram}} &= \left[ \mathcal{H}_K(x_i, x_j) \right]_{ij} \in \mathbb{R}^{N \times N} \\
+\|f^*\|_{\mathcal{H}_K}^2 &= \sum_{i,j=1}^N \alpha_i \alpha_j \mathcal{H}_K(x_i, x_j) = \bm{\alpha}^T \mathbf{K}_{\text{Gram}} \bm{\alpha} \\
+\mathcal{L}_{\text{RKHS}} &= \sum_{i=1}^N \|f^*(x_i) - y_i\|^2 + \lambda \, \bm{\alpha}^T \mathbf{K}_{\text{Gram}} \bm{\alpha} + \gamma \|\mathcal{D} f^* - g\|_{L^2}^2 \\
+\bm{\alpha}^* &= (\mathbf{K}_{\text{Gram}} + \lambda I)^{-1} \mathbf{y} \quad (\text{Analitik Kapalı Form Çözümü}) \\
+\gamma_{\text{çekirdek}}^{(t+1)} &= \gamma_{\text{çekirdek}}^{(t)} - \eta_{\text{rkhs}} \frac{\partial \mathcal{L}_{\text{RKHS}}}{\partial \gamma_{\text{çekirdek}}} \\
+\mathbf{1}_{\text{RKHS\_geçerli}} &= \mathbb{I}\left( \det(\mathbf{K}_{\text{Gram}} + \lambda I) \ne 0 \right)
+\end{align}
+
+\section{Topolojik Tıkızlaştırma ($Compactification$) Denklemleri}
+
+\subsection{1. Alexandroff Tek-Nokta ve Stone-Čech Tıkızlaştırması}
+\begin{align}
+\mathcal{X}^+ &\coloneqq \mathcal{X} \cup \{ \infty \} \quad (\text{Alexandroff Tıkızlaştırması}) \\
+\tau_{\mathcal{X}^+} &= \tau_{\mathcal{X}} \cup \{ U \cup \{ \infty \} \mid U \subseteq \mathcal{X}, \, \mathcal{X} \setminus U \text{ tıkız} \} \\
+\beta\mathcal{X} &\coloneqq \text{evrensel özellikle tanımlı: } \forall\, f : \mathcal{X} \to K \;(K \text{ tıkız Hausdorff}), \;\exists!\, \overline{f} : \beta\mathcal{X} \to K, \; \overline{f} \circ \iota = f \\
+\lim_{\|x\| \to \infty} f(x) &= +\infty \implies f \text{ Coercive Fonksiyondur} \\
+K_r &\coloneqq \{ x \in \mathcal{X} \mid f(x) \le r \} \subset \mathcal{X} \quad (\text{Tıkız Alt-Seviye Kümesi}) \\
+\mathbf{\Phi}_{\text{barier}}(x) &= -\sum_{j=1}^m \ln(g_j(x)) \quad (\text{Sınır Barriyer Fonksiyonu}) \\
+\mathcal{L}_{\text{tıkız}} &= f(x) + \tau_{\text{barier}} \mathbf{\Phi}_{\text{barier}}(x) \\
+\tau_{\text{barier}}^{(t+1)} &= \tau_{\text{barier}}^{(t)} \cdot \rho_{\text{azalma}} \quad (\rho_{\text{azalma}} < 1) \\
+\text{isCompact}(\mathcal{X}^+) &\implies \exists x_{\min}, x_{\max} \in \mathcal{X}^+ \text{ öyle ki } f(x_{\min}) \le f(x) \le f(x_{\max}) \\
+\left| \pi_0(\mathbf{R}\text{Crit}(f)) \right| &< \infty \implies \text{Mutlak Ekstremum Sonlu Adımda Seçilir} \\
+\mathbf{1}_{\text{tıkız\_var}} &= \mathbb{I}(\text{isCompact}(\mathcal{X}^+) == \mathbf{True})
+\end{align}
+
+\section{$\infty$-Topos Üzerinden Fonksiyon Türetimi ve Deriv-Crit Locus}
+
+\subsection{1. İç Morfizm Türetimi ve Türetilmiş Kritik Kesişim}
+\begin{align}
+f &\in \mathbf{H}(\mathcal{X}, \mathbb{R}) \quad (\text{Sonsuz Topos İçi Pürüzsüz Morfizm}) \\
+df &: \mathcal{X} \longrightarrow \mathcal{T}^*\mathcal{X} \in \mathbf{H} \quad (\text{Dış Türev Morfizmi}) \\
+\mathbf{Z}_{\text{sıfır}} &: \mathcal{X} \longrightarrow \mathcal{T}^*\mathcal{X}, \quad x \mapsto (x, 0) \quad (\text{Sıfır Kesit Morfizmi}) \\
+\mathbf{R}\text{Crit}(f) &\coloneqq \mathcal{X} \times_{\mathcal{T}^*\mathcal{X}} \mathcal{X} \quad (\text{Geri-Çekmeli Türetilmiş Kritik Locus}) \\
+\mathbf{R}\text{Crit}(f) &= \mathcal{O}_{\mathcal{X}} \otimes_{\text{Sym}(\mathcal{T}\mathcal{X})}^{\mathbf{L}} \mathcal{O}_{\mathcal{X}} \in \mathbf{H} \\
+\text{Crit}(f) &= \{ x \in \mathcal{X} \mid df(x) = 0 \} \subset \mathcal{X} \\
+x^* &= \arg\min_{x \in \pi_0(\mathbf{R}\text{Crit}(f))} f(x) \quad (\text{Analitik Mutlak Ekstremum Seçimi}) \\
+\text{Hessian}(f)(x) &= \nabla(df)(x) \in \mathcal{T}^*\mathcal{X} \otimes \mathcal{T}^*\mathcal{X} \\
+\mathbf{J}_{\text{crit}} &= \left[ \frac{\partial^2 f}{\partial x_i \partial x_j} \right]_{ij} \in \mathbb{R}^{n \times n} \\
+\text{Index}_{\text{Morse}}(x^*) &= \text{Negatif Özdeğer Sayısı}(\mathbf{J}_{\text{crit}}) \\
+\mathcal{L}_{\text{lokus\_hatası}} &= \| df(x^*) \|_{\mathbf{H}}^2 \equiv 0
+\end{align}
+
+\section{Do-Calculus ve Sembolik Nedensellik Öğrenimi}
+
+\subsection{1. Çift Parçalı Nedensel Denge ve Müdahale Denklemleri}
+\begin{align}
+\mathbf{0} &= \bm{\phi}_j(X_t, \xi_j), \quad \forall j \in \{1, \dots, m\} \quad (\text{BGCM Denge Denklemleri}) \\
+P(Y \mid do(X = x)) &= \sum_z P(Y \mid X = x, Z = z) P(Z = z) \quad (\text{Pearl Do-Calculus}) \\
+A_{\text{neden}, ij} &= \mathbb{I}(S_i \to S_j) \cdot \sigma(W_{\text{dag}} [S_i \oplus S_j]) \in \bm{\Theta}_{\text{Do}} \\
+\text{Acyclicity}(A) &= \text{Tr}(\exp(A \circ A)) - d = 0 \\
+\mathbf{W}_{\text{dag}}^{(t+1)} &= \mathbf{W}_{\text{dag}}^{(t)} - \eta_{\text{dag}} \nabla \mathcal{L}_{\text{nedensel}} \\
+\mathcal{L}_{\text{nedensel}} &= \text{MSE}(S_j, f_j(Parents(S_j))) + \lambda_1 \text{Acyclicity}(A) + \lambda_2 \|A\|_1 \\
+\mathcal{F}(X, S) &= \mathbb{E}_{q(S)} \left[ \ln q(S) - \ln p(X, S) \right] \;\ge\; -\ln p(X) \quad (\text{eşitlik ancak } q(S) = p(S \mid X) \text{ iken}) \\
+X_i \perp\!\!\!\perp_{\mathcal{B}} X_j \mid Z &\iff Z \text{ kümesi } X_i \text{ ile } X_j \text{ arasındaki denge yollarını keser} \\
+\bigcap_{e \in \mathcal{E}} \text{Supp}\left( P_e(Y \mid X_{\text{Sâbit}}) \right) &= X_{\text{Hakiki\_İllet}} \quad (\text{ICP - Invariant Causal Prediction}) \\
+\text{Intervention}(do(f_j : S_v = \xi_v)) &\implies \text{Denge Denklemi Amputasyonu}
+\end{align}
+
+\section{Çok Boyutlu Hacimsel Akış ve Manifold Deformasyonu}
+
+Tek bir $1$-boyutlu vektör okunun miyopluğunu kırıp, bölgenin tamamını deforme ederek minimuma çöktüren Hacimsel Akış ($Mean\ Curvature\ \&\ Liouville\ Flow$) denklemleri:
+
+\subsection{1. Mean Curvature ve Liouville Hacim Akışı}
+\begin{align}
+\frac{dx(t)}{dt} &= -\nabla f(x(t)) \quad (\text{Eski 1-Boyutlu Miyop Vektör Akışı - İlga Edildi}) \\
+\frac{\partial \Sigma(t)}{\partial t} &= \mathbf{H}_{\Sigma}(t) \quad (\Sigma: n\text{-boyutlu Alt-Manifold, } \mathbf{H}_{\Sigma}: \text{Ortalama Eğrilik}) \\
+\mathbf{H}_{\Sigma} &= \text{Tr}(\mathbf{II}_{\Sigma}) = \sum_{i=1}^n \nabla_{e_i} e_i^{\bot} \in \mathcal{N}\Sigma \quad (\text{İkinci Temel Form Tensörü}) \\
+\frac{\partial \rho(t, x)}{\partial t} &= \nabla \cdot (\rho(t, x) \nabla f(x)) + \Delta \rho(t, x) \quad (\text{Wasserstein-Langevin Yoğunluk Akışı}) \\
+\frac{d}{dt} \text{Vol}_g(\Sigma_t) &= -\int_{\Sigma_t} \left( \Delta f + \|\nabla f\|_{\mathbf{H}}^2 \right) d\text{vol}_g \quad (\text{Liouville Hacim Değişim Denklemi}) \\
+\lambda_{\min}(\nabla^2 f) < 0 < \lambda_{\max}(\nabla^2 f) &\implies \text{Eyer Noktası; hacim } \lambda_{\min} \text{ yönünde yırtılıp vadiye çöker} \\
+g_{\mu\nu}(t+1) &= g_{\mu\nu}(t) - 2 \Delta_{\mathbf{H}} f \cdot g_{\mu\nu}(t) \quad (\text{Metrik Deformasyon Akışı}) \\
+\text{div}(X_{\mathcal{H}}) &= 0 \implies \text{Liouville Hacim Korunumu Teoremi} \\
+\mathcal{L}_{\text{hacim\_akışı}} &= \int_{\Sigma_t} \|\mathbf{H}_{\Sigma}\|^2 d\text{vol}_g + \lambda \text{Vol}_g(\Sigma_t) \\
+\mathbf{1}_{\text{akış\_kararlı}} &= \mathbb{I}\left( \frac{d}{dt} \text{Vol}_g(\Sigma_t) < \epsilon_{\text{akış}} \right)
+\end{align}
+
+\section{Lie Cebri ve Mutasarrıfa ($\mathcal{R}$) Öğrenme Denklemleri}
+
+\subsection{1. Mutasarrıfa Üreteçleri ve Bitişiklik Öğrenimi}
+\begin{align}
+\mathcal{R} \triangleright \mathbf{\Theta} &\coloneqq \sum_{j=1}^k \alpha_j \cdot (\text{Lan}_{K_j} F_j)(\mathcal{X}_j) \in \mathbf{H} \\
+[\mathcal{R}_i, \mathcal{R}_j] \triangleright \mathcal{X}_k &= \mathcal{R}_i(\mathcal{R}_j(\mathcal{X}_k)) - \mathcal{R}_j(\mathcal{R}_i(\mathcal{X}_k)) \in \mathfrak{g} \\
+\alpha_j^{(t+1)} &= \alpha_j^{(t)} - \eta_{\mathcal{R}} \frac{\partial \mathcal{L}_{\text{meta}}}{\partial \alpha_j} \\
+\mathcal{L}_{\text{meta}} &= \mathbb{E}_{\mathcal{R}} \left[ \text{Tenakuz}(\mathcal{R} \triangleright \mathbf{\Theta}, S_{\text{kebîr}}) - \gamma \cdot \text{İlerleme}(G_{\text{kebîr}}, \mathcal{R} \triangleright \mathbf{\Theta}) \right] \\
+\mathbf{X}_{\mathfrak{g}}^{(t+1)} &= \mathbf{X}_{\mathfrak{g}}^{(t)} \cdot \exp\left( -\eta_{\mathfrak{g}} [\mathcal{R}_i, \mathcal{R}_j] \right) \quad (\text{Lie Grubu Üzerinde Güncelleme}) \\
+f^* &\dashv f_* \implies \mathbf{Hom}_{\mathbf{H}}(f^* T_1, T_2) \cong \mathbf{Hom}_{\mathbf{H}}(T_1, f_* T_2) \\
+\eta_{\text{unit}} &: \text{id} \Longrightarrow f_* \circ f^* \quad (\text{Birici 2-morfizm}) \\
+\mathcal{E}_{\text{bitişiklik}} &= \| \text{id} - f_* \circ f^* \|_{\mathbf{H}}^2 \\
+\mathbf{W}_{\text{aktarım}}^{(t+1)} &= \mathbf{W}_{\text{aktarım}}^{(t)} - \eta_{\text{aktarım}} \nabla_{\mathbf{W}} \mathcal{E}_{\text{bitişiklik}}
+\end{align}
+
+\section{Mizan Engine: İnvaryant Kahan ve Topological Barcode Denklemleri}
+
+\subsection{1. Sayısal Duyarlılık ve Topolojik Barcode Parametreleri}
+\begin{align}
+y_i &= x_i - c_i \quad (\text{Kahan Summation Duyarlı Toplama}) \\
+t_i &= s_i + y_i \\
+c_{i+1} &= (t_i - s_i) - y_i \\
+s_{i+1} &= t_i \\
+\text{KahanSum}(\{x_i\}) &= s_N \\
+P_{\text{Gr}}(X) &= U_k U_k^T X \in \text{Gr}(k, d) \\
+U_k^{(t+1)} &= \text{GramSchmidt}\left( U_k^{(t)} - \eta_{\text{Gr}} \nabla_{U} \mathcal{L}_{\text{Gr}} \right) \\
+\partial_k &: C_k \to C_{k-1}, \quad \partial_k \circ \partial_{k+1} = 0 \\
+H_k(\mathcal{X}) &= \frac{\ker(\partial_k)}{\text{im}(\partial_{k+1})} \quad (\text{Homoloji Grubu}) \\
+\beta_k(\epsilon) &= \text{dim}(H_k(\mathcal{X}, \epsilon)) \quad (\text{Persistent Betti Sayısı}) \\
+\text{Barcode}_k &= \{ (b_i, d_i) \mid b_i: \text{Doğum}, d_i: \text{Ölüm} \} \\
+\text{Persistence}(i) &= d_i - b_i \\
+\mathcal{L}_{\text{Mizan\_topoloji}} &= \sum_k \|\beta_k(\text{mevcut}) - \beta_k(\text{hedef})\|^2 + \lambda \text{KahanSum}(\|c_i\|^2)
+\end{align}
+
+\section{Bütünsel Öğrenme Döngüsü Denklemleri (End-to-End Optimization)}
+
+Sistemdeki öğrenme adımı tekil gradyan güncellemesi değil; KAN, FNO, RKHS, Tıkızlaştırma, Do-Calculus ve Hacimsel Akışın tek bir potada aktığı 30 adımlık **Küllî Öğrenme Halkası**dır:
+
+\begin{align}
+\bm{\Theta} &= \{ \bm{\Theta}_{\text{KAN}}, \bm{\Theta}_{\text{FNO}}, \bm{\Theta}_{\text{RKHS}}, \bm{\Theta}_{\text{Tıkız}}, \bm{\Theta}_{\text{Do}}, \bm{\Theta}_{\mathcal{R}} \} \quad (\text{1. Küllî Parametre Kütlesi}) \\
+X_t &\in \mathbf{H} \quad (\text{2. Girdi Sinyali}) \\
+\phi_{q,p}(x) &= w_{\text{base}} \text{silu}(x) + w_{\text{spline}} \sum_k c_k B_k(x) \quad (\text{3. KAN B-Spline İnşası}) \\
+t_k &\leftarrow t_k - \eta_{\text{grid}} \nabla_{t_k} \mathcal{L} \quad (\text{4. KAN Düğüm Konumu Adaptasyonu}) \\
+c_k &\leftarrow c_k - \eta_{\text{spline}} \nabla_{c_k} \mathcal{L} \quad (\text{5. KAN Katsayı Adaptasyonu}) \\
+(\mathcal{K}_\theta v)(x) &= \mathcal{F}^{-1}(R_\theta \cdot \mathcal{F}v)(x) \quad (\text{6. FNO Frekans Süzgeci}) \\
+\theta_m &\leftarrow \theta_m - \eta_{\text{FNO}} \nabla_{\bar{\theta}_m} \mathcal{L} \quad (\text{7. Karmaşık Spektral Güncelleme}) \\
+\mathbf{K}_{\text{Gram}} &= [\mathcal{H}_K(x_i, x_j)]_{ij} \quad (\text{8. RKHS Gram Matrisi}) \\
+\bm{\alpha}^* &= (\mathbf{K}_{\text{Gram}} + \lambda I)^{-1} \mathbf{y} \quad (\text{9. RKHS Analitik Çözümü}) \\
+\gamma_{\text{çekirdek}} &\leftarrow \gamma_{\text{çekirdek}} - \eta_{\text{rkhs}} \nabla_\gamma \mathcal{L} \quad (\text{10. Çekirdek Genişliği Düzeltmesi}) \\
+\mathcal{X}^+ &= \mathcal{X} \cup \{\infty\} \quad (\text{11. Alexandroff Tıkızlaştırma İhdas}) \\
+\mathbf{\Phi}_{\text{barier}} &= -\sum_j \ln(g_j(x)) \quad (\text{12. Sınır Barriyer Kısıtı}) \\
+f &\in \mathbf{H}(\mathcal{X}, \mathbb{R}) \quad (\text{13. Sonsuz Topos İçi Morfizm Türetimi}) \\
+\mathbf{R}\text{Crit}(f) &= \mathcal{X} \times_{\mathcal{T}^*\mathcal{X}} \mathcal{X} \quad (\text{14. Türetilmiş Kritik Locus Geri-Çekimi}) \\
+x^* &= \arg\min_{x \in \pi_0(\mathbf{R}\text{Crit})} f(x) \quad (\text{15. Analitik Mutlak Ekstremum Sıçraması}) \\
+\mathbf{0} &= \bm{\phi}_j(X_t, \xi_j) \quad (\text{16. BGCM Denge Denklemi}) \\
+A_{\text{neden}, ij} &= \mathbb{I}(S_i \to S_j) \sigma(W_{\text{dag}}[S_i \oplus S_j]) \quad (\text{17. Nedensellik DAG İnşası}) \\
+W_{\text{dag}} &\leftarrow W_{\text{dag}} - \eta_{\text{dag}} \nabla \mathcal{L}_{\text{nedensel}} \quad (\text{18. Nedensel Ağırlık Güncellemesi}) \\
+P(Y \mid do(X=x)) &= \sum_z P(Y \mid X=x, Z=z) P(Z=z) \quad (\text{19. Pearl Do-Calculus Müdahalesi}) \\
+\frac{\partial \Sigma(t)}{\partial t} &= \mathbf{H}_{\Sigma}(t) \quad (\text{20. Mean Curvature Manifold Hacim Akışı}) \\
+\frac{\partial \rho}{\partial t} &= \nabla \cdot (\rho \nabla f) + \Delta \rho \quad (\text{21. Wasserstein Langevin Yoğunluk Akışı}) \\
+\frac{d}{dt}\text{Vol}_g(\Sigma_t) &= -\int_{\Sigma_t} (\Delta f + \|\nabla f\|_{\mathbf{H}}^2) d\text{vol}_g \quad (\text{22. Liouville Hacim Büzülmesi}) \\
+\mathcal{R} \triangleright \mathbf{\Theta} &= \sum_j \alpha_j (\text{Lan}_{K_j} F_j)(\mathcal{X}_j) \quad (\text{23. Mutasarrıfa Lie Tasarrufu}) \\
+\mathbf{X}_{\mathfrak{g}} &\leftarrow \mathbf{X}_{\mathfrak{g}} \cdot \exp(-\eta_{\mathfrak{g}} [\mathcal{R}_i, \mathcal{R}_j]) \quad (\text{24. Lie Grubu Üreteç Güncellemesi}) \\
+\bm{\alpha}_{\mathcal{R}} &\leftarrow \bm{\alpha}_{\mathcal{R}} - \eta_{\mathcal{R}} \nabla \mathcal{L}_{\text{meta}} \quad (\text{25. Meta-Operatör Adaptasyonu}) \\
+s_N &= \text{KahanSum}(\{x_i\}) \quad (\text{26. Sayısal Duyarlı Mizan Toplamı}) \\
+U_k &\leftarrow \text{GramSchmidt}(U_k - \eta_{\text{Gr}} \nabla \mathcal{L}_{\text{Gr}}) \quad (\text{27. Grassmannian İzdüşüm Adaptasyonu}) \\
+\beta_k(\epsilon) &= \text{dim}(H_k(\mathcal{X}, \epsilon)) \quad (\text{28. Persistent Homology Topolojik Mühür}) \\
+\mathcal{L}_{\text{Küllî}} &= \mathcal{L}_{\text{KAN}} + \mathcal{L}_{\text{FNO}} + \mathcal{L}_{\text{RKHS}} + \mathcal{L}_{\text{tıkız}} + \mathcal{L}_{\text{nedensel}} + \mathcal{L}_{\text{hacim\_akışı}} \quad (\text{29. Küllî Kayıp Kaynağı}) \\
+\mathbf{1}_{\text{öğrenme\_kâmil}} &= \mathbb{I}\left( \mathcal{L}_{\text{Küllî}} < \epsilon_{\text{kâmil}} \right) \quad (\text{30. Küllî İdrak Doygunluğu})
+\end{align}
+
+\section{Netice}
+
+Nefs-i Müdrike Mimarisi'nin Öğrenme Nazariyesi; kaba floating-point birinci derece gradyan inişi ($First\text{-}Order\ Gradient\ Descent$) miyopluğunu kökünden silmiştir. Öğrenilecek parametreler matrisi KAN kenar B-spline düğümlerine ($\bm{\Theta}_{\text{KAN}}$), FNO frekans süzgeçlerine ($\bm{\Theta}_{\text{FNO}}$), Sobolev-RKHS çekirdek ağırlıklarına ($\bm{\Theta}_{\text{RKHS}}$), Alexandroff tıkızlaştırma barriyerlerine ($\bm{\Theta}_{\text{Tıkız}}$), Do-Calculus denge düğümlerine ($\bm{\Theta}_{\text{Do}}$) ve Lie cebri üreteçlerine ($\bm{\Theta}_{\mathcal{R}}$) devredilmiştir. Öğrenme süreci, uzayların $Mean\ Curvature\ \&\ Liouville\ Flow$ altında hacimsel büzülmesi ve analitik $\mathbf{R}\text{Crit}(f)$ lokuslarına sıçraması vasıtasıyla kayıpsız biçimde yürütülmektedir.
+
+\end{document}

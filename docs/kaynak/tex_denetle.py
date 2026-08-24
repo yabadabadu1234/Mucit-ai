@@ -116,12 +116,16 @@ def denetle(metin: str) -> List[Bulgu]:
 
 
 def denklem_sayisi(metin: str) -> int:
-    """``align`` ortamlarındaki NUMARALANACAK satır sayısı.
+    """NUMARALANACAK denklem sayısı: ``align`` satırları **ve** ``equation``.
 
     İç içe ortamlardaki (``cases``, ``array``, ``aligned``…) satır sonları
     numara üretmez; sayılmadan önce o bloklar düşürülür. Düşürülmezse
     sayım şişer -- ölçüldü: ``cases`` blokları yüzünden 41-meleke
     metninde 419 yerine 421 çıkıyordu.
+
+    Müstakil ``equation`` ortamları da sayılır.  İlk hâlde yalnız
+    ``align`` sayılıyordu; ölçüldü: ağırlıkla ``equation`` kullanan
+    kuantum risalesinde 19 denklem varken 2 raporlanıyordu.
     """
     ic_ortam = re.compile(r"\\begin\{(cases|array|aligned|matrix|[pbv]matrix|split)\}"
                           r".*?\\end\{\1\}", re.S)
@@ -129,6 +133,7 @@ def denklem_sayisi(metin: str) -> int:
     for m in re.finditer(r"\\begin\{align\}(.*?)\\end\{align\}", metin, re.S):
         govde = ic_ortam.sub("", m.group(1))
         toplam += govde.count("\\\\") + 1
+    toplam += len(re.findall(r"\\begin\{equation\}", metin))
     return toplam
 
 
