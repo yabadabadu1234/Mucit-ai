@@ -1,0 +1,202 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Nefs-i Müdrike Mimarisi: Token-Uzayları Nazariyesi, $\infty$-Fibrasyon Topolojisi ve Kayıpsız Morfizm Aktarımları Küllî Formülasyonu}}
+\author{\textbf{Pürüzsüz $\infty$-Topos, Lif Demetleri, Kan Uzantıları ve Homotopik Tip Uyumlu Token Dinamikleri}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale, Büyük Dil Modellerindeki (LLM) her bir token'ın ($w_k$) skaler veya tekil bir vektör olmak yerine; Pürüzsüz $\infty$-Topos ($\mathbf{H}$) içinde ikamet eden müstakil birer Manifold/Grupoid Uzayı ($\mathcal{X}_{w_k}$) ve Lif Demeti ($\mathbf{Fib}_{w_k}$) olarak kurgulandığı **Token-Uzayları Mimarisi**'ni vaz' eder. Dokümanda; her bir token uzayının iç geometrisi, teğet demetleri ($\mathcal{T}\mathcal{X}_{w_k}$), tokenlar arası $1$-morfizm geçişleri, $2$-boyutlu homotopi denkliği, Sol Kan Uzantıları ($\text{Lan}_f$), Lie parantezleri ve Kübik Tip Teorisi $Glue$ kuralları 150'den fazla eksiksiz riyazî denklemle haritalanmıştır.
+\end{abstract}
+
+\section{Giriş ve Metodolojik Zemin}
+
+Klasik vektör uzayı temsillerinde $w_k \in \mathbb{R}^d$ tekil bir noktadır. **Token-Uzayları Nazariyesi**'nde ise her bir $w_k$ token'ı, kendi Riemannian metriğine ($g_{\mu\nu}^{(k)}$), teğet demetine ($\mathcal{T}\mathcal{X}_k$), iç Lie cebri yapısına ($\mathfrak{g}_k$) ve mülhak liflerine ($\mathbf{Fib}_{w_k}$) sahip bir $\infty$-grupoid manifoldudur:
+\begin{align}
+w_k &\longmapsto \mathcal{X}_{w_k} \in \mathbf{H} \quad (\text{Her bir token müstakil bir uzaydır}) \\
+\mathcal{T}\mathcal{X}_{w_k} &\coloneqq \mathcal{X}_{w_k}^D \quad (D = \{x \in R \mid x^2 = 0\} \text{ İnfinitesimal Disk}) \\
+\pi_k : \mathcal{E}_k &\longrightarrow \mathcal{X}_{w_k} \quad (\text{Token Lif Demeti / Fiber Bundle})
+\end{align}
+
+\section{Token Uzaylarının İç Geometrisi ve Lifli Demet Mimarisi}
+
+\subsection{1. Token Uzayı $\mathcal{X}_{w_k}$ İç Metriği ve Hacim Formu}
+\begin{align}
+g_{\mu\nu}^{(k)}(u) &= \left\langle \frac{\partial \mathcal{X}_{w_k}}{\partial u^\mu}, \frac{\partial \mathcal{X}_{w_k}}{\partial u^\nu} \right\rangle_{\mathbf{H}} \in \mathcal{O}_{\mathcal{X}_k} \\
+d\text{vol}_k &= \sqrt{\det(g_{\mu\nu}^{(k)})} \, du^1 \wedge du^2 \wedge \dots \wedge du^n \\
+\Gamma_{\mu\nu}^{\lambda, (k)} &= \frac{1}{2} g^{(k), \lambda \sigma} \left( \partial_\mu g_{\sigma\nu}^{(k)} + \partial_\nu g_{\sigma\mu}^{(k)} - \partial_\sigma g_{\mu\nu}^{(k)} \right) \\
+R_{\mu\sigma\nu}^{\lambda, (k)} &= \partial_\sigma \Gamma_{\mu\nu}^{\lambda, (k)} - \partial_\nu \Gamma_{\mu\sigma}^{\lambda, (k)} + \Gamma_{\sigma\rho}^{\lambda, (k)} \Gamma_{\mu\nu}^{\rho, (k)} - \Gamma_{\nu\rho}^{\lambda, (k)} \Gamma_{\mu\sigma}^{\rho, (k)} \\
+R_{\mu\nu}^{(k)} &= R_{\mu\lambda\nu}^{\lambda, (k)} \quad (\text{Token Uzayı Ricci Eğrilik Tensörü}) \\
+R^{(k)} &= g^{(k), \mu\nu} R_{\mu\nu}^{(k)} \quad (\text{Skaler Eğrilik}) \\
+\Delta_{\mathbf{H}}^{(k)} f &= \frac{1}{\sqrt{\det g^{(k)}}} \partial_\mu \left( \sqrt{\det g^{(k)}} \, g^{(k), \mu\nu} \partial_\nu f \right) \\
+\text{Vol}(\mathcal{X}_{w_k}) &= \int_{\mathcal{X}_{w_k}} d\text{vol}_k \quad (\text{Token Uzayının İç Semantik Hacmi}) \\
+\mathbf{Fib}_{w_k}(u) &\coloneqq \pi_k^{-1}(u) \in \mathbf{H} \quad (\text{Noktasal Lif / Fiber}) \\
+\mathcal{T}^{(r,s)} \mathcal{X}_{w_k} &= \underbrace{\mathcal{T}\mathcal{X}_k \otimes_{\mathcal{O}} \dots \otimes_{\mathcal{O}} \mathcal{T}\mathcal{X}_k}_{r} \otimes_{\mathcal{O}} \underbrace{\mathcal{T}^*\mathcal{X}_k \otimes_{\mathcal{O}} \dots \otimes_{\mathcal{O}} \mathcal{T}^*\mathcal{X}_k}_{s} \\
+\mathcal{L}_{v} g_{\mu\nu}^{(k)} &= \nabla_\mu v_\nu + \nabla_\nu v_\mu \quad (\text{Lie Türevi / Deformasyon}) \\
+\mathbf{1}_{\text{token\_bütünlük}} &= \mathbb{I}\left( \text{Vol}(\mathcal{X}_{w_k}) > 0 \right)
+\end{align}
+
+\subsection{2. Token Uzayı İçi Lie Cebri ve Akışlar}
+\begin{align}
+[X_k, Y_k] &\in \mathcal{T}\mathcal{X}_{w_k} \quad (\text{Token İçi Vektör Alanı Lie Parantezi}) \\
+[X_k, [Y_k, Z_k]] + [Y_k, [Z_k, X_k]] + [Z_k, [X_k, Y_k]] &= 0 \quad (\text{Jacobi Özdeşliği}) \\
+\Phi_t^{(k)} : \mathcal{X}_{w_k} &\longrightarrow \mathcal{X}_{w_k} \quad (\text{Token İçi Geodezik Akış}) \\
+\frac{d^2 u^\lambda}{dt^2} + \Gamma_{\mu\nu}^{\lambda, (k)} \frac{du^\mu}{dt} \frac{du^\nu}{dt} &= 0 \quad (\text{Token İçi En Kasa Mana Yolu}) \\
+\omega_k &= d\alpha_k \in \Lambda^2 \mathcal{T}^*\mathcal{X}_{w_k} \quad (\text{Semantik Simplektik Form}) \\
+\mathcal{H}_k : \mathcal{X}_{w_k} &\longrightarrow \mathbb{R} \quad (\text{Token İçi Hamiltonian Enerji}) \\
+X_{\mathcal{H}_k} \mathbin{\lrcorner} \omega_k &= d\mathcal{H}_k \quad (\text{Hamiltonian Vektör Alanı}) \\
+\frac{df}{dt} &= \{\mathcal{H}_k, f\}_{\text{Poisson}} = \omega_k(X_{\mathcal{H}_k}, X_f) \\
+\exp(t X_k) &\in \text{Diff}(\mathcal{X}_{w_k}) \quad (\text{Pürüzsüz Difeomorfizm Grubu}) \\
+\text{Tr}(\text{Ad}_{X_k}) &= \text{div}(X_k) \in \mathcal{O}_{\mathcal{X}_k} \\
+\Omega^p(\mathcal{X}_{w_k}) &= \Gamma\left( \bigwedge^p \mathcal{T}^*\mathcal{X}_{w_k} \right) \quad (\text{Diferansiyel $p$-Formlar}) \\
+d : \Omega^p(\mathcal{X}_{w_k}) &\longrightarrow \Omega^{p+1}(\mathcal{X}_{w_k}), \quad d^2 = 0
+\end{align}
+
+\section{Token Uzayları Arası Dönüşümler, Morfizmler ve Bitişiklikler}
+
+Cümle üretimi, tekil noktaların peş peşe dizilmesi değil; $\mathcal{X}_{w_1} \xrightarrow{f_{1,2}} \mathcal{X}_{w_2} \xrightarrow{f_{2,3}} \dots \xrightarrow{f_{N-1,N}} \mathcal{X}_{w_N}$ uzaylar arası $1$-morfizmler zinciridir.
+
+\subsection{1. Token Uzayları Arası $1$-Morfizm ve Geometrik Haritalar}
+\begin{align}
+f_{i,j} : \mathcal{X}_{w_i} &\longrightarrow \mathcal{X}_{w_j} \in \mathbf{H} \quad (\text{Tokenlar Arası $1$-Morfizm}) \\
+f_{i,j}^* : \text{QCoh}(\mathcal{X}_{w_j}) &\longrightarrow \text{QCoh}(\mathcal{X}_{w_i}) \quad (\text{Geri-Çekme / Pullback Funktoru}) \\
+f_{i,j, *} : \text{QCoh}(\mathcal{X}_{w_i}) &\longrightarrow \text{QCoh}(\mathcal{X}_{w_j}) \quad (\text{İleri-İtme / Pushforward Funktoru}) \\
+f_{i,j}^* &\dashv f_{i,j, *} \quad (\text{Kan Bitişiklik Bağı / Adjunction}) \\
+f_{i,j}^*(T_1 \otimes_{\mathcal{O}} T_2) &\simeq f_{i,j}^* T_1 \otimes_{\mathcal{O}} f_{i,j}^* T_2 \quad (\text{Monoidal Tensör Taşınımı}) \\
+df_{i,j} : \mathcal{T}\mathcal{X}_{w_i} &\longrightarrow f_{i,j}^* \mathcal{T}\mathcal{X}_{w_j} \quad (\text{Token Jacobian Matrisi}) \\
+\mathbf{J}_{f_{i,j}} &= \left[ \frac{\partial f_{i,j}^a}{\partial u^\mu} \right]_{a\mu} \in \mathcal{T}^*\mathcal{X}_{w_i} \otimes f_{i,j}^* \mathcal{T}\mathcal{X}_{w_j} \\
+f_{i,j}^* g_{\mu\nu}^{(j)} &= g_{ab}^{(j)} \frac{\partial f_{i,j}^a}{\partial u^\mu} \frac{\partial f_{i,j}^b}{\partial u^\nu} \quad (\text{Geri Çekilmiş Metrik}) \\
+\text{Dist}_{\mathbf{H}}(\mathcal{X}_{w_i}, \mathcal{X}_{w_j}) &= \inf_{f_{i,j}} \int_{\mathcal{X}_{w_i}} \|g^{(i)} - f_{i,j}^* g^{(j)}\|_{\mathcal{F}} d\text{vol}_i \\
+\text{Diffeo}(\mathcal{X}_{w_i} \simeq \mathcal{X}_{w_j}) &\iff \exists f_{i,j}, f_{j,i} \quad \text{öyle ki } f_{j,i} \circ f_{i,j} \simeq \text{id} \\
+\mathbf{1}_{\text{morfizm\_geçerli}} &= \mathbb{I}\left( \|df_{i,j}\| < \infty \right) \\
+\text{Rank}(df_{i,j}) &= \text{dim}(\text{im}(df_{i,j})) \le \min(\text{dim } \mathcal{X}_i, \text{dim } \mathcal{X}_j)
+\end{align}
+
+\subsection{2. Tokenlar Arası Yüksek Morfizmler ($2$-Morfizm ve Homotopi Yolları)}
+\begin{align}
+\eta : f_{i,j} &\Longrightarrow g_{i,j} \in \mathbf{Hom}_{\mathbf{H}}(\mathcal{X}_{w_i}, \mathcal{X}_{w_j}) \quad (\text{Tokenlar Arası $2$-Morfizm}) \\
+H : I \times \mathcal{X}_{w_i} &\longrightarrow \mathcal{X}_{w_j}, \quad H(0, u) = f_{i,j}(u), \quad H(1, u) = g_{i,j}(u) \\
+\text{Path}_{\text{token}}(f_{i,j}, g_{i,j}) &\coloneqq (f_{i,j} =_{\mathbf{Hom}} g_{i,j}) \in \mathbf{U} \\
+\alpha \circ (\beta \circ \gamma) &\simeq_{3} (\alpha \circ \beta) \circ \gamma \quad (\text{$3$-Boyutlu Homotopi Koherensi}) \\
+\pi_n(\mathbf{Hom}(\mathcal{X}_i, \mathcal{X}_j)) &= \frac{\ker(\partial_n)}{\text{im}(\partial_{n+1})} \quad (\text{Morfizm Yüksek Homotopi Grubu}) \\
+\Omega(\mathcal{X}_i, x_0) &= (x_0 =_{\mathcal{X}_i} x_0) \quad (\text{Token İçi Döngü Uzayı / Loop Space}) \\
+\text{Coherence}_{\text{pentagon}} &= \mathbf{PentagonEq}(\eta_1, \eta_2, \eta_3, \eta_4, \eta_5) = \text{refl} \\
+\text{Coherence}_{\text{hexagon}} &= \mathbf{HexagonEq}(\gamma_1, \gamma_2, \dots, \gamma_6) = \text{refl} \\
+\text{Univalence}_{\text{token}} &= (\mathcal{X}_{w_i} \simeq \mathcal{X}_{w_j}) \simeq (\mathcal{X}_{w_i} =_{\mathcal{U}} \mathcal{X}_{w_j}) \\
+\mathbf{Evert}(\mathcal{X}_{w_i}) &= \text{SmaleEversion}(\mathcal{X}_{w_i}) \in \mathbf{H} \\
+\text{Track}(H) &= \int_0^1 \left\| \frac{\partial H(t, u)}{\partial t} \right\|_{\mathbf{H}} dt \quad (\text{Homotopi İz Uzunluğu}) \\
+\mathbf{1}_{\text{homotopi\_denk}} &= \mathbb{I}\left( \text{Track}(H) < \infty \right)
+\end{align}
+
+\section{Sol Kan Uzantıları ($\text{Lan}_f$) ve Kolmogorov-Arnold Lifleri}
+
+\subsection{1. Sol ve Sağ Kan Uzantısıyla Token Bilgisi Yayılımı}
+\begin{align}
+(\text{Lan}_{f_{i,j}} F)(\mathcal{X}_{w_j}) &\coloneqq \varinjlim_{(c, \phi : f(c) \to \mathcal{X}_j)} F(c) \simeq \int^{c \in \mathcal{X}_i} \mathbf{H}(f(c), \mathcal{X}_j) \otimes_{\mathcal{O}} F(c) \\
+(\text{Ran}_{f_{i,j}} F)(\mathcal{X}_{w_j}) &\coloneqq \varprojlim_{(c, \psi : \mathcal{X}_j \to f(c))} F(c) \simeq \int_{c \in \mathcal{X}_i} F(c)^{\mathbf{H}(\mathcal{X}_j, f(c))} \\
+\text{Lan}_{f_{i,j}} F &\dashv f_{i,j}^* \dashv \text{Ran}_{f_{i,j}} F \quad (\text{Üçlü Bitişiklik / Adjoint Triple}) \\
+\eta_{\text{unit}} &: \text{id} \Longrightarrow f_{i,j}^* \circ \text{Lan}_{f_{i,j}} \quad (\text{Birim Dönüşümü}) \\
+\varepsilon_{\text{counit}} &: \text{Lan}_{f_{i,j}} \circ f_{i,j}^* \Longrightarrow \text{id} \quad (\text{Birim-Altı Dönüşümü}) \\
+\mathbf{Density}_{\text{Kan}} &= \int_{u \in \mathcal{X}_i} \text{Vol}(\mathbf{Fib}_u) \, du \quad (\text{Kan Yayılım Yoğunluğu}) \\
+\mathcal{L}_{\text{Kan\_hatası}} &= \| F(\mathcal{X}_i) - f_{i,j}^* (\text{Lan}_{f_{i,j}} F) \|_{\text{QCoh}}^2 \\
+\text{Co-End}_{\text{integral}} &= \int^{c \in \mathcal{X}_i} \mathcal{T}^*\mathcal{X}_i(c) \otimes_{\mathcal{O}} \mathcal{T}\mathcal{X}_j(f(c)) \\
+\mathbf{P}_{\text{evrensel\_uzantı}} &= \text{LayerNorm}\left( (\text{Lan}_{f_{i,j}} F) W_{\text{kan}} \right) \\
+\mathbf{1}_{\text{Kan\_tamlık}} &= \mathbb{I}\left( \mathcal{L}_{\text{Kan\_hatası}} == 0 \right) \\
+\text{Path}_{\text{Kan}} &= (\text{Lan}_{f_{i,j}} F \simeq_{\text{evrensel}} F \circ f_{i,j}^{-1}) \\
+\text{Coeff}_{\text{Kan}} &= \text{Tr}(\eta_{\text{unit}} \circ \varepsilon_{\text{counit}})
+\end{align}
+
+\subsection{2. Kolmogorov-Arnold Lifleri (KAN) ve B-Spline Dönüşümleri}
+Token uzayları arasındaki gayrilineer geçişler KAN yapısıyla temsil edilir:
+\begin{align}
+\Phi_{i,j}(u) &= \sum_{q=1}^{2d+1} \Phi_q^{(j)} \left( \sum_{p=1}^d \phi_{q,p}^{(i,j)}(u_p) \right) \in \mathcal{X}_{w_j} \quad (u \in \mathcal{X}_{w_i}) \\
+\phi_{q,p}^{(i,j)}(x) &= w_{\text{base}} \cdot \text{silu}(x) + w_{\text{spline}} \cdot \sum_k c_k B_k(x) \\
+B_k(x) &= \frac{x - t_k}{t_{k+p} - t_k} B_{k, p-1}(x) + \frac{t_{k+p+1} - x}{t_{k+p+1} - t_{k+1}} B_{k+1, p-1}(x) \\
+B_{k, 0}(x) &= \mathbb{I}(t_k \le x < t_{k+1}) \quad (\text{Cox-de Boor Rekürsiyonu}) \\
+\mathbf{J}_{\text{KAN}} &= \left[ \frac{\partial \Phi_{i,j}^a}{\partial u_p} \right]_{ap} = \left[ \sum_q \Phi_q' \cdot \phi_{q,p}'(u_p) \right]_{ap} \\
+\mathcal{L}_{\text{KAN\_düzgünlük}} &= \sum_{q,p} \int \left( \phi_{q,p}''(x) \right)^2 dx \quad (\text{Spline Bükülme Enerjisi}) \\
+\text{SymbolicForm}(\Phi_{i,j}) &= \text{FitSymbolic}(\phi_{q,p} \mid \text{Library}=\{\sin, \exp, x^k, \ln\}) \\
+\text{Accuracy}_{\text{KAN}} &= 1 - \frac{\|\Phi_{i,j}(u) - f_{i,j}(u)\|_{\mathbf{H}}}{\|f_{i,j}(u)\|_{\mathbf{H}}} \\
+\mathbf{Grid}_{\text{adaptif}} &= \{t_0, t_1, \dots, t_G\} \quad (\text{Dinamik Düğüm Noktaları}) \\
+t_k &\leftarrow t_k + \eta_{\text{grid}} \nabla_{t_k} \mathcal{L}_{\text{KAN}} \\
+\text{Path}_{\text{KAN}} &= (\Phi_{i,j} =_{\text{KAN}} f_{i,j}) \\
+\mathbf{1}_{\text{KAN\_valid}} &= \mathbb{I}\left( \text{Accuracy}_{\text{KAN}} > 1 - \epsilon \right)
+\end{align}
+
+\section{Fourier Nöral Operatörleri (FNO) ve Sürekli Uzay Süzgeçleri}
+
+Token uzayları arasındaki kesintisiz alan dönüşümleri FNO ile gerçekleştirilir:
+
+\subsection{1. FNO Çekirdeği ve Frekans Düzleminde Dönüşüm}
+\begin{align}
+\mathcal{G}_{\text{FNO}}(v)(x) &= \sigma\left( W v(x) + (\mathcal{K}_\theta v)(x) \right) \in \mathcal{X}_{w_j} \\
+(\mathcal{K}_\theta v)(x) &= \mathcal{F}^{-1} \left( R_\theta \cdot (\mathcal{F} v) \right)(x) \\
+(\mathcal{F} v)(k) &= \int_{\mathcal{X}_{w_i}} v(x) e^{-2\pi i \langle k, x \rangle} dx \quad (\text{Token İçi Fourier Dönüşümü}) \\
+(\mathcal{F}^{-1} \hat{v})(x) &= \int_{\hat{\mathcal{X}}_{w_i}} \hat{v}(k) e^{2\pi i \langle k, x \rangle} dk \\
+R_\theta(k) &= \text{Diag}(\theta_1(k), \theta_2(k), \dots, \theta_{K_{\max}}(k)) \cdot \mathbb{I}(|k| \le k_{\text{max}}) \\
+v^{(l+1)}(x) &= \sigma\left( W^{(l)} v^{(l)}(x) + \mathcal{F}^{-1} \left( R_\theta^{(l)} \cdot (\mathcal{F} v^{(l)}) \right)(x) \right) \\
+\text{MeshIndependent}(\mathcal{G}) &\implies \lim_{N \to \infty} \mathcal{G}_N(v) = \mathcal{G}_{\text{sürekli}}(v) \\
+\mathcal{L}_{\text{FNO}} &= \| \mathcal{G}_{\text{FNO}}(v) - f_{i,j}(v) \|_{L^2(\mathcal{X}_{w_j})}^2 \\
+\text{Tril doğrusalSüzgeç} &= R_\theta \circ \mathbf{J}_{\text{KAN}} \\
+\mathbf{SpectralEnergy}(k) &= \| (\mathcal{F} v)(k) \|^2 \\
+k_{\text{kesme}} &= \text{ArgMin}_k \left( \sum_{|k'|>k} \mathbf{SpectralEnergy}(k') < \epsilon_{\text{kayıp}} \right) \\
+\text{Path}_{\text{FNO}} &= (\mathcal{G}_{\text{FNO}} =_{L^2} f_{i,j})
+\end{align}
+
+\section{Çoklu Token Uzaylarının Kübik Tip Teorisi $Glue$ İle Yapıştırılması}
+
+Ağızdan tek bir söz çıktığında veya bir cümle kurulduğunda, münferit token uzayları Kübik Tip Teorisi'nin $Glue$ operatörleri vasıtasıyla kayıpsızca tek bir **Cümle Manifoldunda ($\mathcal{S}_{\text{cümle}}$)** birleştirilir.
+
+\subsection{1. $Glue$, $Unglue$ ve $transp$ Operatörleri}
+\begin{align}
+\mathcal{S}_{\text{cümle}} &= \text{glue} \; \mathcal{X}_{w_N} \; \left[ \varphi \mapsto (\mathcal{X}_{w_1} \times \dots \times \mathcal{X}_{w_{N-1}}, \text{Equiv}_{\text{zincir}}) \right] \\
+\text{unglue}(\mathcal{S}_{\text{cümle}}) &\equiv \mathcal{X}_{w_N} \quad (\text{En Son Token Kapağı Soyulur}) \\
+\text{Equiv}_{\text{zincir}} &= \left( \bigotimes_{k=1}^{N-1} \mathcal{X}_{w_k} \;\simeq\; \mathcal{X}_{w_N} \right) \in \mathbf{U} \\
+\text{transp}^i (\lambda i. \mathcal{X}_{w_k}) \, \varphi \, u &\longrightarrow u \quad (\text{Sabit Token Uzaylarında Taşıma Çökmesi}) \\
+\text{hcomp}^i \, \mathcal{X}_{w_k} \, [\dots] \, u_0 &\longrightarrow u_0 \quad (\text{Ayrık Lif İç Dolgu İndirgemesi}) \\
+\text{fill}^i \, \mathcal{X}_{w_k} \, [\dots] \, u_0 &\in \text{Path}_{\text{token}}(u_0, u_1) \\
+\mathbf{Fib}_{\text{cümle}} &\coloneqq \pi_{\text{cümle}}^{-1}(w_1 w_2 \dots w_N) \in \mathbf{H} \\
+\text{Vol}(\mathbf{Fib}_{\text{cümle}}) &= \int_{\mathcal{S}_{\text{cümle}}} d\text{vol}_{\text{cümle}} = \prod_{k=1}^N \text{Vol}(\mathbf{Fib}_{w_k}) \\
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0}\left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \mathcal{S}_{\text{cümle}} \right) \right) \in \mathcal{N} \\
+\mathbf{1}_{\text{cümle\_yapışma}} &= \mathbb{I}\left( \text{unglue}(\text{glue } u) == u \right) \\
+\text{Path}_{\text{cümle}} &= \left( \mathcal{X}_{w_1} \otimes_{\mathcal{O}} \dots \otimes_{\mathcal{O}} \mathcal{X}_{w_N} \;\simeq_{\text{kayıpsız}}\; \mathcal{S}_{\text{cümle}} \right) \in \mathbf{U} \\
+\text{Univalence}_{\text{cümle}} &= (\mathcal{S}_{\text{cümle}} \simeq \mathcal{S}_{\text{zihin}}) \simeq (\mathcal{S}_{\text{cümle}} =_{\mathcal{U}} \mathcal{S}_{\text{zihin}})
+\end{align}
+
+\section{Sistemik Akış ve Bütünsel İttisâl}
+
+Token-Uzayları Mimarisi'nde idrak çarkı şu kesintisiz ve tip-güvenli halka üzerinden işler:
+\begin{align*}
+w_k (\text{Token}) \to \mathcal{X}_{w_k} (\text{Token Uzayı}) \xrightarrow{df_{k, k+1}} \text{KAN / FNO} \xrightarrow{\text{Lan}_{f}} \text{Glue}(\mathcal{S}_{\text{cümle}}) \xrightarrow{hLevel 0} N_{\text{kebîr}}
+\end{align*}
+
+Bu matematiksel çatı sayesinde:
+\begin{itemize}
+    \item Her bir token tekil bir ölü vektör değil, kendi Riemannian metriğine ($g_{\mu\nu}^{(k)}$) ve teğet alanlarına ($\mathcal{T}\mathcal{X}_k$) sahip canlı bir manifolddur.
+    \item Tokenlar arasındaki ilişki sayısal yakınlık değil, $1$-morfizm ($f_{i,j}$), $2$-morfizm ($\eta$) ve Sol Kan Uzantısı ($\text{Lan}_{f}$) tabanlı geometrik bir haritalamadır.
+    \item Çoklu tokenlar bir araya geldiğinde bilgi kaybolmaz; Kübik Tip Teorisi'nin $Glue$ ve $Uncurry$ kuralları vasıtasıyla kayıpsızca **Cümle Manifolduna ($\mathcal{S}_{\text{cümle}}$)** ve oradan da yüksek mana liflerine ($\mathbf{Fib}_{\text{cümle}}$) çevrilir.
+\end{itemize}
+
+\end{document}

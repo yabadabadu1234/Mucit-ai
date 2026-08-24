@@ -1,0 +1,326 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Zeyl-i Mîzân-ı Muhakemat: Dünya Tarihindeki Bütün Mantık Yürütme, Aksiyom ve Çıkarım Usullerinin Ansiklopedik Mütemmim Formülasyonu}\\ \normalsize\textmd{(Tashihli nüsha --- 9 formül düzeltmesi; gerekçeler \texttt{docs/kaynak/TASHIH\_CETVELI.md} dosyasındadır)}}
+\author{\textbf{Stoacı/Megara Mantığı, Doğal Çıkarım (Gentzen), Sezgisellik (Brouwer), Jainist Syādvāda, Paratutarlı, Relevans, Kuantum ve Substructural Mantık Sistemleri}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale, evvelki külliyatta zikredilmeyen ve dünya tarihinde tanımlanmış olan bütün diğer mantık yürütme Usullerini, Çıkarım Kurallarını (Inference Rules), Aksiyomatik Sistemleri ve Doğruluk Fonksiyonlarını eksiksiz biçimde vaz' eder. Dokümanda Stoacı mantıktan Gentzen'in Ardışık Hesap ($Sequent\ Calculus$) kurallarına, Jainist 7 Katlı Mantıktan Paratutarlı ve Kuantum Mantık denklemlerine kadar tüm müstakil usuller saf mantıksal formülleriyle gösterilmiştir.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Giriş ve Metodolojik Çerçeve}
+
+Bu mütemmim risale, mantık ilminin tarihî tecrübesinde teşekkül etmiş ancak klasik Aristoteles/İbn Sînâ kalıplarının haricinde kalan bütün diğer aksiyomatik ve sembolik çıkarım Usullerini formüle eder. Her bir Usul, kendi doğruluk değerleri, aksiyomları ve türetim kuralları ($Inference\ Rules$) ile vaz' olunmuştur.
+
+\section{Stoacı ve Megara Mantığı (Antik Dönem Önermeler Mantığı)}
+
+Stoacı Chrysippus tarafından kurulan ve terimler yerine önermeleri ($P, Q$) esas alan 5 temel müstakil çıkarım usulü ($Anapodeiktoi$):
+
+\subsection{1. Birinci Kanıtlanamaz Usul (Modus Ponens Stoicus)}
+\begin{align}
+P_1 &: \text{Eğer birincisi varsa, ikincisi vardır } (P \implies Q) \\
+P_2 &: \text{Birincisi vardır } (P) \\
+\mathcal{Q}_{1} &: \text{O halde ikincisi vardır } (Q)
+\end{align}
+
+\subsection{2. İkinci Kanıtlanamaz Usul (Modus Tollens Stoicus)}
+\begin{align}
+P_1 &: \text{Eğer birincisi varsa, ikincisi vardır } (P \implies Q) \\
+P_2 &: \text{İkincisi yoktur } (\neg Q) \\
+\mathcal{Q}_{2} &: \text{O halde birincisi yoktur } (\neg P)
+\end{align}
+
+\subsection{3. Üçüncü Kanıtlanamaz Usul (Modus Ponendo Tollens I)}
+\begin{align}
+P_1 &: \text{Aynı anda hem birincisi hem ikincisi var olamaz } (\neg(P \land Q)) \\
+P_2 &: \text{Birincisi vardır } (P) \\
+\mathcal{Q}_{3} &: \text{O halde ikincisi yoktur } (\neg Q)
+\end{align}
+
+\subsection{4. Dördüncü Kanıtlanamaz Usul (Modus Ponendo Tollens II)}
+\begin{align}
+P_1 &: \text{Ya birincisi ya ikincisi vardır } (P \veebar Q) \\
+P_2 &: \text{Birincisi vardır } (P) \\
+\mathcal{Q}_{4} &: \text{O halde ikincisi yoktur } (\neg Q)
+\end{align}
+
+\subsection{5. Beşinci Kanıtlanamaz Usul (Modus Tollendo Ponens II)}
+\begin{align}
+P_1 &: \text{Ya birincisi ya ikincisi vardır } (P \veebar Q) \\
+P_2 &: \text{Birincisi yoktur } (\neg P) \\
+\mathcal{Q}_{5} &: \text{O halde ikincisi vardır } (Q)
+\end{align}
+
+\section{Gentzen Doğal Çıkarım Kuralları (Natural Deduction - $\mathcal{N}$)}
+
+Gerhard Gentzen tarafından geliştirilen ve zihnin tabii düşünüş adımlarını simüle eden türetim kuralları:
+
+\subsection{1. "Ve" ($\land$) Kuralları}
+\begin{align}
+\frac{\Gamma \vdash A \quad \Gamma \vdash B}{\Gamma \vdash A \land B} \quad (\land\text{-Giriş / Introduction}) \qquad
+\frac{\Gamma \vdash A \land B}{\Gamma \vdash A} \quad (\land\text{-Eleme}_1) \qquad
+\frac{\Gamma \vdash A \land B}{\Gamma \vdash B} \quad (\land\text{-Eleme}_2)
+\end{align}
+
+\subsection{2. "Veya" ($\lor$) Kuralları}
+\begin{align}
+\frac{\Gamma \vdash A}{\Gamma \vdash A \lor B} \quad (\lor\text{-Giriş}_1) \qquad
+\frac{\Gamma \vdash B}{\Gamma \vdash A \lor B} \quad (\lor\text{-Giriş}_2) \qquad
+\frac{\Gamma \vdash A \lor B \quad \Gamma, A \vdash C \quad \Gamma, B \vdash C}{\Gamma \vdash C} \quad (\lor\text{-Eleme})
+\end{align}
+
+\subsection{3. "İse" ($\implies$) Kuralları}
+\begin{align}
+\frac{\Gamma, A \vdash B}{\Gamma \vdash A \implies B} \quad (\implies\text{-Giriş}) \qquad
+\frac{\Gamma \vdash A \implies B \quad \Gamma \vdash A}{\Gamma \vdash B} \quad (\implies\text{-Eleme / Modus Ponens})
+\end{align}
+
+\subsection{4. Değilleme ($\neg$) ve Çelişki ($\bot$) Kuralları}
+\begin{align}
+\frac{\Gamma, A \vdash \bot}{\Gamma \vdash \neg A} \quad (\neg\text{-Giriş}) \qquad
+\frac{\Gamma \vdash A \quad \Gamma \vdash \neg A}{\Gamma \vdash \bot} \quad (\neg\text{-Eleme / Absurdity}) \qquad
+\frac{\Gamma \vdash \bot}{\Gamma \vdash C} \quad (\text{Ex Falso Quodlibet})
+\end{align}
+
+\section{Gentzen Ardışık Hesabı (Sequent Calculus - $\mathcal{L}\mathcal{K}$)}
+
+Giriş ve eleme kuralları yerine sol ($\mathcal{L}$) ve sağ ($\mathcal{R}$) kural kurumu:
+
+\subsection{1. Aksiyom ve Kesme (Cut) Kuralı}
+\begin{align}
+\frac{}{A \vdash A} \quad (\text{Aksiyom}) \qquad
+\frac{\Gamma \vdash \Delta, A \quad A, \Sigma \vdash \Pi}{\Gamma, \Sigma \vdash \Delta, \Pi} \quad (\text{Cut / Kesme Kuralı})
+\end{align}
+
+\subsection{2. Yapısal Kurallar (Structural Rules)}
+\begin{align}
+\frac{\Gamma \vdash \Delta}{\Gamma, A \vdash \Delta} \quad (\mathcal{L}\text{-Zayıflatma}) \qquad
+\frac{\Gamma \vdash \Delta}{\Gamma \vdash \Delta, A} \quad (\mathcal{R}\text{-Zayıflatma}) \\
+\frac{\Gamma, A, A \vdash \Delta}{\Gamma, A \vdash \Delta} \quad (\mathcal{L}\text{-Büzülme}) \qquad
+\frac{\Gamma \vdash \Delta, A, A}{\Gamma \vdash \Delta, A} \quad (\mathcal{R}\text{-Büzülme})
+\end{align}
+
+\section{Frege, Peano ve Hilbert Tipi Aksiyomatik Önermeler Hesabı}
+
+Jan Łukasiewicz ve David Hilbert tarafından tek tipleştirilen 3 aksiyomlu tam önermeler mantığı:
+
+\subsection{1. Hilbert-Łukasiewicz Aksiyom Sistemi}
+\begin{align}
+\mathbf{Aks}_1 &: A \implies (B \implies A) \quad (\text{Zayıflatma Aksiyomu}) \\
+\mathbf{Aks}_2 &: (A \implies (B \implies C)) \implies ((A \implies B) \implies (A \implies C)) \quad (\text{Dağılma Aksiyomu}) \\
+\mathbf{Aks}_3 &: (\neg B \implies \neg A) \implies (A \implies B) \quad (\text{Transpozisyon / Karşıt Pozitif Aksiyom})
+\end{align}
+
+\subsection{2. Yegâne Çıkarım Kuralı}
+\begin{align}
+\frac{\vdash A \quad \vdash A \implies B}{\vdash B} \quad (\text{Modus Ponens})
+\end{align}
+
+\section{Brouwer ve Heyting Sezgisellik Mantığı (Intuitionistic Logic - $\mathcal{I}\mathcal{P}\mathcal{C}$)}
+
+Üçüncü Halin İmkânsızlığı ($Law\ of\ Excluded\ Middle$) ve Çifte Değilleme Elemesini ($\neg\neg A \implies A$) reddeden, inşacı mantık usulü:
+
+\subsection{1. BHK (Brouwer--Heyting--Kolmogorov) İnşacı Semantiği}
+\begin{align}
+\text{İspat}(A \land B) &\equiv \langle \text{İspat}(A), \text{İspat}(B) \rangle \quad (\text{Sıralı İspat Çifti}) \\
+\text{İspat}(A \lor B) &\equiv (0, \text{İspat}(A)) \lor (1, \text{İspat}(B)) \quad (\text{Etiketli İspat}) \\
+\text{İspat}(A \implies B) &\equiv f : \text{İspat}(A) \longrightarrow \text{İspat}(B) \quad (\text{İspat Dönüştürücü Fonksiyon}) \\
+\text{İspat}(\neg A) &\equiv f : \text{İspat}(A) \longrightarrow \bot \quad (\text{Çelişki Dönüştürücü})
+\end{align}
+
+\subsection{2. Heyting Cebri Aksiyomları}
+\begin{align}
+A \land B \le A, \qquad A \land B \le B \qquad &(\text{Alt Sınır}) \\
+(A \le B) \ \text{ve} \ (A \le C) \iff A \le B \land C \qquad &(\text{en büyük alt sınırın evrensel hususiyeti}) \\
+C \land A \le B \iff C \le (A \implies B) \qquad &(\text{Heyting İplikasyonu / Pseudo-Complement})
+\end{align}
+
+\section{Jainist Mantık: Syādvāda (7 Katlı Göreli Mantık Usulü)}
+
+Antik Hint Jain felsefesinde bir önermenin aynı anda farklı veçhelerden 7 farklı doğruluk durumuna sahip olabileceğini savunan Usul:
+
+\subsection{1. Saptabhaṅgīnaya (7 Katlı Hüküm Formülleri)}
+\begin{align}
+1. \text{Syād-Asti} &: \text{Belki vardır } (v(P) = \text{Var}) \\
+2. \text{Syād-Nāsti} &: \text{Belki yoktur } (v(P) = \text{Yok}) \\
+3. \text{Syād-Asti-Nāsti} &: \text{Belki hem vardır hem yoktur } (v(P) = \text{Var} \land \text{Yok}) \\
+4. \text{Syād-Avaktavya} &: \text{Belki ifade edilemezdir } (v(P) = \text{İfade Edilemez}) \\
+5. \text{Syād-Asti-Avaktavya} &: \text{Belki vardır ve ifade edilemezdir } (v(P) = \text{Var} \land \text{İfade Edilemez}) \\
+6. \text{Syād-Nāsti-Avaktavya} &: \text{Belki yoktur ve ifade edilemezdir } (v(P) = \text{Yok} \land \text{İfade Edilemez}) \\
+7. \text{Syād-Asti-Nāsti-Avaktavya} &: \text{Belki vardır, yoktur ve ifade edilemezdir } (v(P) = \text{Tüm Durumlar})
+\end{align}
+
+\section{Paratutarlı Mantık (Paraconsistent Logic - Çelişkiye Dayanıklı Usul)}
+
+Çelişkiden her şeyin türetilebileceğini söyleyen *Ex Falso Quodlibet* ($A \land \neg A \implies B$) kuralını reddeden usul:
+
+\subsection{1. Priest Dialetheism Aksiyomları ($LP$ - Logic of Paradox)}
+Doğruluk değerleri kümesi: $\mathcal{V} = \{1, 0, b\}$ (1: Doğru, 0: Yanlış, b: Hem Doğru Hem Yanlış).
+
+\begin{align}
+v(\neg A) &= 
+\begin{cases}
+1, & v(A) = 0 \\
+0, & v(A) = 1 \\
+b, & v(A) = b
+\end{cases} \\
+v(A \land B) &= \min(v(A), v(B)) \quad \text{öyle ki } 0 < b < 1 \\
+v(A \lor B) &= \max(v(A), v(B))
+\end{align}
+
+\subsection{2. Önemsizleşmeme ($Non-Triviality$) Şartı}
+\begin{align}
+\exists A, B \quad \text{öyle ki } \{A, \neg A\} \nvdash B \quad (\text{Çelişki sistemi patlatmaz})
+\end{align}
+
+\section{Relevans / Bağlantılılık Mantığı (Relevance Logic - $\mathbf{R}$)}
+
+Gerektirme ($Implication$) ilişkisinin kurulabilmesi için öncül ile netice arasında içerik bağı arayan usul:
+
+\subsection{1. Patlama İlkesinin ($Principle\ of\ Explosion$) Reddini Veren Aksiyomlar}
+\begin{align}
+A &\implies A \quad (\text{Özdeşlik}) \\
+(A \implies B) &\implies ((B \implies C) \implies (A \implies C)) \quad (\text{Geçişlilik}) \\
+(A \implies (A \implies B)) &\implies (A \implies B) \quad (\text{Büzülme}) \\
+(A \implies (B \implies C)) &\implies (B \implies (A \implies C)) \quad (\text{Değişme})
+\end{align}
+\textit{Reddedilen Aksiyom (Maddi Gerektirme Paradoksu):} $A \implies (B \implies A)$ (Çünkü B ile A arasında içerik bağı olmayabilir).
+
+\section{Substructural (Yapısal-Altı) Mantık Sistemleri}
+
+Gentzen'in yapısal kurallarının (Zayıflatma, Büzülme, Değişme) kaldırılmasıyla elde edilen mantıklar:
+
+\subsection{1. Doğrusal Mantık (Linear Logic - Girard)}
+Kaynakların ($Hypotheses$) tam olarak 1 defa tüketilmesi esasına dayanır.
+
+\subsubsection{1.1. Çarpmalı ve Toplamalı Operatörler}
+\begin{align}
+A \otimes B \quad &(\text{Çarpmalı Ve / Tensor: Hem A hem B kaynak olarak tüketilir}) \\
+A \bindnasrepma B \quad &(\text{Çarpmalı Veya / Par: A ve B eşzamanlı alternatiftir}) \\
+A \oplus B \quad &(\text{Toplamalı Veya / Plus: İkisinden biri seçilir}) \\
+A \mathbin{\&} B \quad &(\text{Toplamalı Ve / With: İkisine de erişim vardır ama biri kullanılır})
+\end{align}
+
+\subsubsection{1.2. Doğrusal Gerektirme ($Lollipop$)}
+\begin{align}
+A \multimap B \equiv A^{\bot} \bindnasrepma B \quad (\text{A kaynağı tam 1 defa tüketilip B elde edilir})
+\end{align}
+
+\subsection{2. Affine Mantık (Zayıflatma Var, Büzülme Yok)}
+\begin{align}
+\text{Bir kaynak en fazla 1 defa kullanılabilir, ama kullanılmadan atılabilir.}
+\end{align}
+
+\subsection{3. Strict / Sıkı Mantık (Büzülme Var, Zayıflatma Yok)}
+\begin{align}
+\text{Bir kaynak en az 1 defa kullanılmalıdır, atılamaz.}
+\end{align}
+
+\section{Kuantum Mantığı (Birkhoff \& von Neumann - $\mathcal{Q}\mathcal{L}$)}
+
+Klasik Dağılma Kanununun ($Distributivity$) geçerli olmadığı, Hilbert uzayındaki kapalı alt-uzaylar mantığı:
+
+\subsection{1. Projektif Geometri Semantiği}
+Önermeler, bir $\mathcal{H}$ Hilbert uzayındaki kapalı alt-uzaylardır ($L(\mathcal{H})$).
+
+\begin{align}
+A \land B &\equiv A \cap B \quad (\text{Alt-uzay Kesişimi}) \\
+A \lor B &\equiv \overline{A + B} \quad (\text{Alt-uzayların Toplamının Kapanışı}) \\
+\neg A &\equiv A^{\bot} \quad (\text{Dik Tamamlayıcı / Orthogonal Complement})
+\end{align}
+
+\subsection{2. Dağılma Kanununun Kırılması (Orthomodular Aksiyomu)}
+\begin{align}
+(A \land B) \lor (A \land C) &\le A \land (B \lor C) \quad (\text{dâima}); \quad \text{eşitlik GEREKMEZ (dağılma geçersiz)} \\
+A \le B \implies B &= A \lor (B \land A^{\bot}) \quad (\text{Ortomodüler Kanun})
+\end{align}
+
+\section{Bulanık (Fuzzy) ve Çok Değerli İleri Mantıklar}
+
+\subsection{1. T-Norm ve S-Norm Esaslı Bulanık Mantıklar}
+
+\subsubsection{1.1. Schweizer-Sklar T-Normu}
+\begin{align}
+T_{SS}(a, b; p) = \left( \max(0, a^p + b^p - 1) \right)^{1/p}, \quad p > 0 \qquad \left( p < 0: \ (a^p + b^p - 1)^{1/p} \right)
+\end{align}
+
+\subsubsection{1.2. Yager T-Normu}
+\begin{align}
+T_{Y}(a, b; p) = 1 - \min\left(1, \left((1-a)^p + (1-b)^p\right)^{1/p}\right), \quad p > 0
+\end{align}
+
+\subsubsection{1.3. Dombi T-Normu}
+\begin{align}
+T_{D}(a, b; p) = \begin{cases} 0, & a = 0 \ \text{yahut} \ b = 0 \\ \dfrac{1}{1 + \left( \left(\frac{1-a}{a}\right)^p + \left(\frac{1-b}{b}\right)^p \right)^{1/p}}, & \text{aksi hâlde} \end{cases}, \quad p > 0
+\end{align}
+
+\section{Probabilistik (Olasılıksal) ve Nilpotent Mantıklar}
+
+\subsection{1. Adams Olasılıksal Çıkarım Mantığı}
+\begin{align}
+P(A \implies B) &\coloneqq P(B \mid A) = \frac{P(A \land B)}{P(A)}, \quad P(A) > 0 \quad (\text{Adams tezi}) \\
+\text{Belirsizlik}(A) &\coloneqq 1 - P(A) \\
+\text{Belirsizlik}(B) &\le \text{Belirsizlik}(A) + \text{Belirsizlik}(A \implies B) \quad (\text{Olasılıksal Modus Ponens Sınırı})
+\end{align}
+
+\subsection{2. Nilpotent Minimum Mantığı}
+\begin{align}
+T_{NM}(a, b) &= 
+\begin{cases}
+0, & a + b \le 1 \\
+\min(a, b), & a + b > 1
+\end{cases} \\
+I_{NM}(a, b) &= 
+\begin{cases}
+1, & a \le b \\
+\max(1-a, b), & a > b
+\end{cases}
+\end{align}
+
+\section{Tarihî İslâm Mantıkçılarının Hususî Formülleri}
+
+\subsection{1. Fârâbî'nin Şartlı Kıyas Açılımları}
+Fârâbî'nin *Kitâbü'l-Kıyâs*'ta vaz' ettiği muttasıl şartlı birleşme formülü:
+\begin{align}
+P_1 &: (A \implies B) \implies C \\
+P_2 &: A \implies B \\
+\mathcal{Q}_{\text{Fârâbî}} &: C
+\end{align}
+
+\subsection{2. Gazâlî'nin Mı'yârü'l-İlm Kıyas Süzgeçleri}
+İmam Gazâlî'nin öncüllerin yakîniliğini tartmak için *Mı'yârü'l-İlm*'de kurduğu mizan denklemi:
+\begin{align}
+\text{Yakîn}(Q) = \min_{i} \left( \text{Yakîn}(P_i) \right) \times \mathbb{I}(\text{Şekil Geçerli})
+\end{align}
+
+\section{Netice ve Küllî Mantık Usulleri Matrisi}
+
+İnsanlığın düşünce tarihinde kurduğu bütün bu mantık usulleri; zihnin farklı bağlamlarda (kesinlik, olasılık, kaynak kısıtı, çelişki tahammülü, zaman akışı, ödev ve ahlak) hatasız düşünmesini sağlayan sarsılmaz birer aksiyom külliyatıdır. Her bir Usul, kendi zâtî parametreleri ve türetim kuralları ile mevcudiyetini muhafaza eder.
+
+\end{document}

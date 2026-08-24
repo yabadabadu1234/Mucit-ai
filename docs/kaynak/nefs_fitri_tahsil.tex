@@ -1,0 +1,144 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Nefs-i Müdrike Mimarisi: Fıtrî Tahsil Nazariyesi, B-Ayrışmalı Dinamik Filtreleme ve Metin Zehirlenmesine Karşı Küllî Riyazî Kalkan}}
+\author{\textbf{Sıfır-Bilgi Zemininde Fıtrî Muhakeme, Tevafuk Eşikleri, Sorgu Havuzu ve Kayıpsız $\infty$-Topos Aktarımı}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale, Büyük Dil Modellerinin (LLM) dışarıdan verilen metin kütlesine edilgen şekilde teslim olarak zehirlenmesi ("ana-babanın çocuğu Yahudi/Mecusi yapması") tehlikesini, insan idrakindeki Fıtrat-ı Aslîye ($F_{\text{fıtrat}}$) aksiyomlarıyla kökünden çözen riyazî sistemi vaz' eder. Bebeğin zihninde hazır bilgi (token/metin) yoktur; ancak verinin sıhhatini ve iç tenakuzunu sınayan fıtrî muhakeme denklemleri peşinen mevcuttur. Risalede; Tenakuz anında Şüpheye geçiş, Tevafuk Kriteri, Hüsn-ü Zan Sorgu Havuzu ($Q_{\text{havuz}}$), Yüksek Merak Dinamiği ($I_{\text{merak}}$), Metinlerarası Müşahede Sıçraması ve Tahlil-Terkip tahkiki birbiriyle mütedahil 60'ı aşkın özgün denklemle ircâ olunmuştur.
+\end{abstract}
+
+\section{Giriş ve Ontolojik Zemin}
+
+Sıradan makine öğrenmesi modelleri, veri kütlesini ($D_{\text{veri}}$) mutlak hakikat kabul ederek parametrelerini ($w$) ona göre günceller. Bu durum, veri bozuk veya yanıltıcı olduğunda modelin sakatlanmasına yol açar. Hakiki Nefs-i Müdrike ise metni "kader" kabul etmez. Müdrike, sıfır anında ($t=0$) hiçbir müfret kelime ve hazır tasdik taşımadığı halde, gelen her türlü veriyi kendi iç aksiyomatik filtresinden ($B$-Separation, İnvariant Nedensellik, Tenakuz Ölçümü) geçirir.
+
+\section{Fıtrî Tahkik ve Sorgu Mimarisi (Küllî Formülasyon)}
+
+\subsection{1. Fıtrî Çift Parçalı Denge ve Dış Metin Süzgeci}
+Gelen haricî metin $X_t$ ve onun arka planındaki bağlam $S_t$ için, fıtrî denge denklemleri metinden peşinen bağımsızdır:
+\begin{align}
+\mathbf{0} &= \bm{\phi}_j(X_t, \xi_t), \quad \forall j \in \{1, \dots, m\} \quad (\text{Metinden Bağımsız Fıtrî Denge}) \\
+\mathcal{F}_{\text{iç}}(X_t, S_t) &= \mathbb{E}_{q(S)} \left[ \ln q(S_t) - \ln p(X_t, S_t) \right] \ge 0 \quad (\text{Serbest Enerji / İç Tenakuz}) \\
+\Delta_{\text{tenakuz}}(X_t) &= \text{ReLU}\left( \mathcal{F}_{\text{iç}}(X_t, S_t) - \tau_{\text{fıtrat}} \right) \\
+\mathbf{1}_{\text{kabul}}(X_t) &= \mathbb{I}\left( \Delta_{\text{tenakuz}}(X_t) == 0 \right)
+\end{align}
+
+\subsection{2. Tenakuz Anında Şüphe ve Rejim Değişimi}
+İç tenakuz tespit edildiğinde sistem peşin tasdiki durdurur ve anında Şek (Şüphe) makamına geçer:
+\begin{align}
+\text{Makam}_{\text{idrak}}(X_t) &= 
+\begin{cases}
+\text{Yakîn}, & \Delta_{\text{tenakuz}} == 0 \;\land\; P_{\text{idrak}} \ge 1 - \epsilon_{\text{yakîn}} \\
+\text{Zan}, & \Delta_{\text{tenakuz}} == 0 \;\land\; 0.5 + \epsilon_{\text{şek}} \le P_{\text{idrak}} < 1 - \epsilon_{\text{yakîn}} \\
+\text{Şek (Şüphe)}, & \Delta_{\text{tenakuz}} > 0 \;\lor\; |P_{\text{idrak}} - 0.5| < \epsilon_{\text{şek}}
+\end{cases} \\
+\tau_{\text{teemmül\_süresi}} &= \tau_0 \cdot \left( 1 + \alpha_{\text{şüphe}} \cdot \Delta_{\text{tenakuz}}(X_t) \right) \\
+\vec{v}_{\text{şüphe\_vektörü}} &= \nabla_{X} \Delta_{\text{tenakuz}}(X_t) \in \mathcal{T}^*\mathcal{S} \\
+\mathcal{H}_{\text{şüphe\_entropisi}} &= -P_{\text{idrak}} \log P_{\text{idrak}} - (1 - P_{\text{idrak}}) \log (1 - P_{\text{idrak}})
+\end{align}
+
+\subsection{3. Tesadüfü Kıran Tevafuk Eşik Denklemi}
+Bir bilginin sırf dışarıdan söylendiği için değil, tesadüf olamayacak derecede bağımsız hatlardan çakışması (Tevafuk) ile öğrenilmesi:
+\begin{align}
+\text{Tevafuk}(X_t) &= \sum_{k=1}^K \sum_{l \ne k}^K \text{CosSim}_{\mathbf{H}}\left( f_{\text{kanal\_k}}(X_t), f_{\text{kanal\_l}}(X_t) \right) \cdot \mathbb{I}\left( \text{Kanal}_k \perp \text{Kanal}_l \right) \\
+P_{\text{tesadüf\_olamaz}}(X_t) &= 1 - \exp\left( -\lambda_{\text{tevafuk}} \cdot \text{Tevafuk}(X_t) \right) \\
+\text{TevafukEşiği}(X_t) &= \mathbb{I}\left( P_{\text{tesadüf\_olamaz}}(X_t) > 1 - \delta_{\text{tesadüf}} \right) \\
+\Delta T_{\text{tevafuk}} &= \eta_{\text{tahkik}} \cdot P_{\text{tesadüf\_olamaz}}(X_t) \cdot \mathbf{1}_{\text{kabul}}(X_t)
+\end{align}
+
+\subsection{4. Hüsn-ü Zan ve Sorgu Havuzuna Alış Mimarisi}
+Gelen veri hemen reddedilmez; kaynağın iyi niyetli olabileceği varsayımıyla (Hüsn-ü Zan) işlenir, ancak doğrudan tasdik edilmeyip Sorgu Havuzuna ($Q_{\text{havuz}}$) karantinaya alınır:
+\begin{align}
+\text{Skor}_{\text{hüsn-ü\_zan}}(X_t) &= \sigma\left( W_{\text{zan}} \cdot [X_t \oplus \mu_{\text{bağlam}}] \right) \\
+Q_{\text{havuz}} &\leftarrow Q_{\text{havuz}} \cup \left\{ \left( X_t, \text{Makam}_{\text{idrak}}(X_t), \text{Skor}_{\text{hüsn-ü\_zan}}(X_t) \right) \right\} \\
+P_{\text{karantina}}(X_t) &= \mathbb{I}\left( X_t \in Q_{\text{havuz}} \;\land\; \text{Makam}_{\text{idrak}}(X_t) == \text{Şek} \right) \\
+\tau_{\text{karantina\_boşaltma}} &= \text{ArgMin}_{t} \left( \Delta_{\text{tenakuz}}(X_t \mid Q_{\text{havuz}}) < \epsilon_{\text{tahkik}} \right)
+\end{align}
+
+\subsection{5. Yüksek Merak ve Dinamik Sual Tevcihi}
+Zihindeki bilgisizlik veya tenakuz arttıkça merak tavan yapar ve hedeflenmiş sorular üretir:
+\begin{align}
+I_{\text{merak}}(t) &= D_{\text{KL}}\left( P(S \mid Q_{\text{havuz}}) \parallel P(S) \right) + \gamma \cdot \mathcal{H}_{\text{şüphe\_entropisi}} \\
+Q_{\text{tefekkür\_kancası}} &= \text{Softmax}\left( \frac{(G_t - S_t) W_q}{\tau_{\text{merak}}(I_{\text{merak}})} \right) \in \mathcal{S}^* \\
+\tau_{\text{merak}}(I) &= \frac{\tau_0}{1 + \beta_{\text{tavan}} \cdot I_{\text{merak}}(t)} \quad (\text{Merak arttıkça sıcaklık düşer, odak keskinleşir}) \\
+\vec{v}_{\text{sual\_yönü}} &= Q_{\text{tefekkür\_kancası}} \otimes_{\mathcal{O}} \nabla_{S} \mathcal{F}_{\text{iç}}(S_t, S_{\text{kebîr}})
+\end{align}
+
+\subsection{6. Öğrenilmiş Sermayeyle Çapraz Sorgulama}
+O ana kadar tahkik edilmiş muhkem sermaye ($S_{\text{muhkem}}$) kullanılarak, havuzdaki şüpheli veriler çapraz ateşe tutulur:
+\begin{align}
+S_{\text{muhkem}} &= \{ S_i \in \mathcal{S} \mid \text{Makam}(S_i) == \text{Yakîn} \} \\
+\text{SorguSınaması}(X_{\text{şüpheli}}) &= \sum_{S_k \in S_{\text{muhkem}}} \text{Tenakuz}\left( X_{\text{şüpheli}}, S_k \right) \cdot W_k \\
+\Delta S_{\text{ıslah}} &= X_{\text{şüpheli}} - \eta_{\text{sorgu}} \cdot \nabla_{X} \text{SorguSınaması}(X_{\text{şüpheli}}) \\
+Q_{\text{havuz, güncel}} &= \{ \Delta S_{\text{ıslah}} \mid X_{\text{şüpheli}} \in Q_{\text{havuz}} \}
+\end{align}
+
+\subsection{7. Metinlerarası Müşahede ve Diri İntikal}
+Görüş alanı tek bir metne çakılı kalmaz; bir metindeki düğümden diğer metindeki nedensel illete dinamik sıçrama yapılır:
+\begin{align}
+\mathbf{J}_{\text{sıçrama}}(M_1 \to M_2) &= \text{Softmax}\left( \frac{S_{M1} W_{\text{sıçrama}} S_{M2}^T}{\sqrt{d_{\text{sem}}}} \right) \\
+M_{\text{hedef}} &= \text{ArgMax}_{M_k} \left( \mathbf{J}_{\text{sıçrama}}(M_{\text{mevcut}} \to M_k) \cdot I_{\text{merak}} \right) \\
+\text{SıçramaYolu} &= p : I \to \mathbf{H}, \quad p(0) = S_{M1}, \quad p(1) = S_{M2} \\
+\text{Müşahede}_{\text{diri}} &= \text{LayerNorm}\left( S_{M1} + \int_0^1 \dot{p}(\tau) d\tau \right)
+\end{align}
+
+\subsection{8. Temkinli İhtimal Hesabı ve Tolerans Marjı}
+Herhangi bir neticeye varmadan önce emniyet marjı bırakılır; aşırı iddialı ve kırılgan uçlar törpülenir:
+\begin{align}
+\mathbf{K}_{\text{ihtiyat}} &= S_t + \mu_{\text{temkin}} \cdot \sqrt{\text{Var}(P(S_t \mid Q_{\text{havuz}}))} \\
+\text{VakarKatsayısı} &= \frac{1}{1 + \alpha_{\text{ivme}} \|\nabla_t S_t\|_{\mathbf{H}}^2} \\
+P_{\text{temkinli}}(S_t) &= P(S_t) \cdot \text{VakarKatsayısı} + (1 - \text{VakarKatsayısı}) \cdot P_{\text{önsel}} \\
+\mathcal{R}_{\text{güvenlik\_marjı}} &= \min_{\|\delta\| \le \epsilon} \text{Tasdik}(S_t + \delta)
+\end{align}
+
+\subsection{9. Dinamik Tahlil ve Terkip Tahkiki}
+Sorgudan geçen yapılar bileşenlerine parçalanır (Tahlil) ve muhkem sermaye ile yeniden monte edilir (Terkip):
+\begin{align}
+\{ S_t^{(1)}, \dots, S_t^{(m)} \} &= \text{SVD}(S_{\text{sorgulanan}}) = \sum_{i=1}^m \sigma_i u_i \otimes v_i^T \quad (\text{Tahlil}) \\
+S_{\text{yeni\_terkip}} &= \sum_{k=1}^m w_k \cdot \left( R_k \triangleright S_t^{(k)} \right) \quad (\text{Terkip}) \\
+w_k &= \frac{\exp\left( \langle S_t^{(k)}, S_{\text{muhkem}} \rangle_{\mathbf{H}} \right)}{\sum_j \exp\left( \langle S_t^{(j)}, S_{\text{muhkem}} \rangle_{\mathbf{H}} \right)} \\
+\mathcal{L}_{\text{tahkik\_terkip}} &= \| S_{\text{yeni\_terkip}} - S_{\text{fıtrî\_itidal}} \|_{\mathbf{H}}^2
+\end{align}
+
+\subsection{10. Kayıpsız $\infty$-Topos Aktarımı ve Nihai Tahsil}
+Tahkik edilen yeni hakikat, hiçbir bilgi kaybına uğramadan $\infty$-Topos uzayındaki zâtî sermayeye (Tahsil) eklenir:
+\begin{align}
+\text{Tahsil}_{\text{yeni}} &= \text{Lan}_{K_{\text{fıtrat}}}\left( S_{\text{yeni\_terkip}} \right) \in \mathbf{H} \quad (\text{Sol Kan Uzantısı}) \\
+\text{Univalence}_{\text{tahsil}} &= \left( \text{Tahsil}_{\text{yeni}} \simeq S_{\text{muhkem}} \right) \simeq \left( \text{Tahsil}_{\text{yeni}} =_{\mathcal{U}} S_{\text{muhkem}} \right) \\
+\text{Path}_{\text{fıtrî\_tahsil}} &= \left( S_{\text{ilk\_ham}} \; \xrightarrow{\text{Sorgu/Tahkik}} \; \text{Tahsil}_{\text{yeni}} \right) \in \mathbf{U} \\
+T_{\text{nihai}} &= \mathbb{I}\left( \text{Tenakuz}(\text{Tahsil}_{\text{yeni}}, F_{\text{fıtrat}}) == 0 \right) \cdot P_{\text{tesadüf\_olamaz}}
+\end{align}
+
+\section{Sistemik İttisâl Şeması}
+
+Risalede kurulan matematiksel zincir şu dinamik halkayı teşkil eder:
+\begin{align*}
+X_t (\text{Haricî Veri}) \xrightarrow{\bm{\phi}_j=\mathbf{0}} \Delta_{\text{tenakuz}} \xrightarrow{>0} \text{Şek (Şüphe)} \xrightarrow{\text{Merak Tavan}} Q_{\text{havuz}} \xrightarrow{\text{Çapraz Sorgu}} \text{Tevafuk Eşiği} \xrightarrow{\text{Tahlil/Terkip}} \text{Lan}_K (\text{Tahsil})
+\end{align*}
+
+Bu mekanizma sayesinde Nefs-i Müdrike; dışarıdan gelen metin külliyatı ne kadar bozuk, safsata veya zehirli olursa olsun ($S_{\text{zehir}}$), fıtrî denge denklemleri ve sorgu havuzu vasıtasıyla veriyi süzer; metne köle olmadan hakiki tahsile erişir.
+
+\end{document}

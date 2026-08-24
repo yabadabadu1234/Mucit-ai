@@ -1,0 +1,361 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Külliyat-ı Mîzân-ı Muhakemat: Dünya Tarihindeki Bütün İlmî, Klasik ve Sembolik Mantık Yürütme Usullerinin Ansiklopedik Formülasyonu}}
+\author{\textbf{Aristoteles, İbn Sînâ, Farabi, Ali Sedad Efendi, Nyaya Okulu, Modal, Deontik, Temporal ve Çok Değerli Mantık Sistemleri}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale; Antik Yunan'dan Klasik İslam Felsefesine, Osmanlı Mantık Risalelerinden Hint Nyaya Tradisyonuna ve Modern Sembolik/Modal Mantık Okullarına kadar dünya tarihinde tanımlanmış bütün mantık yürütme Usullerini, Silojizm Şekillerini, Çıkarım Kurallarını ve Aksiyomatik Denklemleri saf mantıkî formülleriyle vaz' eder. Doküman, herhangi bir yazılımsal veya mühendislik indirgemesinden bağımsız, mantık ilminin zâtî formül külliyatıdır.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Klasik Aristo ve İslam Mantığı (Kıyas-ı İktiranî / Kategorik Silojizma)}
+
+Kategorik Kıyaslarda Terimler:
+\begin{itemize}
+    \item $M$: Hadd-i Evsat (Orta Terim - Bağlayıcı Cüz)
+    \item $S$: Hadd-i Asgar (Küçük Terim - Neticenin Öznesi)
+    \item $P$: Hadd-i Ekber (Büyük Terim - Neticenin Yüklemi)
+\end{itemize}
+
+\subsection{1. Birinci Şekil (Şekl-i Evvel / M Birincide Yüklem, İkincide Özne)}
+
+\subsubsection{1.1. Barbara (Mûcebe-i Külliyye + Mûcebe-i Külliyye $\implies$ Mûcebe-i Külliyye)}
+\begin{align}
+P_1 &: \forall x (M(x) \implies P(x)) \quad (\text{Her M, P'dir}) \\
+P_2 &: \forall x (S(x) \implies M(x)) \quad (\text{Her S, M'dir}) \\
+\mathcal{Q}_{\text{Barbara}} &: \forall x (S(x) \implies P(x)) \quad (\text{Her S, P'dir})
+\end{align}
+
+\subsubsection{1.2. Celarent (Sâlibe-i Külliyye + Mûcebe-i Külliyye $\implies$ Sâlibe-i Külliyye)}
+\begin{align}
+P_1 &: \forall x (M(x) \implies \neg P(x)) \quad (\text{Hiçbir M, P değildir}) \\
+P_2 &: \forall x (S(x) \implies M(x)) \quad (\text{Her S, M'dir}) \\
+\mathcal{Q}_{\text{Celarent}} &: \forall x (S(x) \implies \neg P(x)) \quad (\text{Hiçbir S, P değildir})
+\end{align}
+
+\subsubsection{1.3. Darii (Mûcebe-i Külliyye + Mûcebe-i Cüz'iyye $\implies$ Mûcebe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (M(x) \implies P(x)) \quad (\text{Her M, P'dir}) \\
+P_2 &: \exists x (S(x) \land M(x)) \quad (\text{Bazı S'ler M'dir}) \\
+\mathcal{Q}_{\text{Darii}} &: \exists x (S(x) \land P(x)) \quad (\text{Bazı S'ler P'dir})
+\end{align}
+
+\subsubsection{1.4. Ferio (Sâlibe-i Külliyye + Mûcebe-i Cüz'iyye $\implies$ Sâlibe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (M(x) \implies \neg P(x)) \quad (\text{Hiçbir M, P değildir}) \\
+P_2 &: \exists x (S(x) \land M(x)) \quad (\text{Bazı S'ler M'dir}) \\
+\mathcal{Q}_{\text{Ferio}} &: \exists x (S(x) \land \neg P(x)) \quad (\text{Bazı S'ler P değildir})
+\end{align}
+
+\subsection{2. İkinci Şekil (Şekl-i Sânî / M Her İki Öncülde de Yüklem)}
+
+\subsubsection{2.1. Cesare (Sâlibe-i Külliyye + Mûcebe-i Külliyye $\implies$ Sâlibe-i Külliyye)}
+\begin{align}
+P_1 &: \forall x (P(x) \implies \neg M(x)) \quad (\text{Hiçbir P, M değildir}) \\
+P_2 &: \forall x (S(x) \implies M(x)) \quad (\text{Her S, M'dir}) \\
+\mathcal{Q}_{\text{Cesare}} &: \forall x (S(x) \implies \neg P(x)) \quad (\text{Hiçbir S, P değildir})
+\end{align}
+
+\subsubsection{2.2. Camestres (Mûcebe-i Külliyye + Sâlibe-i Külliyye $\implies$ Sâlibe-i Külliyye)}
+\begin{align}
+P_1 &: \forall x (P(x) \implies M(x)) \quad (\text{Her P, M'dir}) \\
+P_2 &: \forall x (S(x) \implies \neg M(x)) \quad (\text{Hiçbir S, M değildir}) \\
+\mathcal{Q}_{\text{Camestres}} &: \forall x (S(x) \implies \neg P(x)) \quad (\text{Hiçbir S, P değildir})
+\end{align}
+
+\subsubsection{2.3. Festino (Sâlibe-i Külliyye + Mûcebe-i Cüz'iyye $\implies$ Sâlibe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (P(x) \implies \neg M(x)) \quad (\text{Hiçbir P, M değildir}) \\
+P_2 &: \exists x (S(x) \land M(x)) \quad (\text{Bazı S'ler M'dir}) \\
+\mathcal{Q}_{\text{Festino}} &: \exists x (S(x) \land \neg P(x)) \quad (\text{Bazı S'ler P değildir})
+\end{align}
+
+\subsubsection{2.4. Baroco (Mûcebe-i Külliyye + Sâlibe-i Cüz'iyye $\implies$ Sâlibe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (P(x) \implies M(x)) \quad (\text{Her P, M'dir}) \\
+P_2 &: \exists x (S(x) \land \neg M(x)) \quad (\text{Bazı S'ler M değildir}) \\
+\mathcal{Q}_{\text{Baroco}} &: \exists x (S(x) \land \neg P(x)) \quad (\text{Bazı S'ler P değildir})
+\end{align}
+
+\subsection{3. Üçüncü Şekil (Şekl-i Sâlis / M Her İki Öncülde de Özne)}
+
+\subsubsection{3.1. Darapti (Mûcebe-i Külliyye + Mûcebe-i Külliyye $\implies$ Mûcebe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (M(x) \implies P(x)) \quad (\text{Her M, P'dir}) \\
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Darapti}} &: \exists x (S(x) \land P(x)) \quad (\text{Bazı S'ler P'dir})
+\end{align}
+
+\subsubsection{3.2. Felapton (Sâlibe-i Külliyye + Mûcebe-i Külliyye $\implies$ Sâlibe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (M(x) \implies \neg P(x)) \quad (\text{Hiçbir M, P değildir}) \\
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Felapton}} &: \exists x (S(x) \land \neg P(x)) \quad (\text{Bazı S'ler P değildir})
+\end{align}
+
+\subsubsection{3.3. Disamis (Mûcebe-i Cüz'iyye + Mûcebe-i Külliyye $\implies$ Mûcebe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \exists x (M(x) \land P(x)) \quad (\text{Bazı M'ler P'dir}) \\
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Disamis}} &: \exists x (S(x) \land P(x)) \quad (\text{Bazı S'ler P'dir})
+\end{align}
+
+\subsubsection{3.4. Datisi (Mûcebe-i Külliyye + Mûcebe-i Cüz'iyye $\implies$ Mûcebe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (M(x) \implies P(x)) \quad (\text{Her M, P'dir}) \\
+P_2 &: \exists x (M(x) \land S(x)) \quad (\text{Bazı M'ler S'dir}) \\
+\mathcal{Q}_{\text{Datisi}} &: \exists x (S(x) \land P(x)) \quad (\text{Bazı S'ler P'dir})
+\end{align}
+
+\subsubsection{3.5. Bocardo (Sâlibe-i Cüz'iyye + Mûcebe-i Külliyye $\implies$ Sâlibe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \exists x (M(x) \land \neg P(x)) \quad (\text{Bazı M'ler P değildir}) \\
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Bocardo}} &: \exists x (S(x) \land \neg P(x)) \quad (\text{Bazı S'ler P değildir})
+\end{align}
+
+\subsubsection{3.6. Ferison (Sâlibe-i Külliyye + Mûcebe-i Cüz'iyye $\implies$ Sâlibe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (M(x) \implies \neg P(x)) \quad (\text{Hiçbir M, P değildir}) \\
+P_2 &: \exists x (M(x) \land S(x)) \quad (\text{Bazı M'ler S'dir}) \\
+\mathcal{Q}_{\text{Ferison}} &: \exists x (S(x) \land \neg P(x)) \quad (\text{Bazı S'ler P değildir})
+\end{align}
+
+\subsection{4. Dördüncü Şekil (Şekl-i Râbi' / M Birincide Özne, İkincide Yüklem)}
+
+\subsubsection{4.1. Bamalip (Mûcebe-i Külliyye + Mûcebe-i Külliyye $\implies$ Mûcebe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (P(x) \implies M(x)) \quad (\text{Her P, M'dir}) \\
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Bamalip}} &: \exists x (S(x) \land P(x)) \quad (\text{Bazı S'ler P'dir})
+\end{align}
+
+\subsubsection{4.2. Camenes (Mûcebe-i Külliyye + Sâlibe-i Külliyye $\implies$ Sâlibe-i Külliyye)}
+\begin{align}
+P_1 &: \forall x (P(x) \implies M(x)) \quad (\text{Her P, M'dir}) \\
+P_2 &: \forall x (M(x) \implies \neg S(x)) \quad (\text{Hiçbir M, S değildir}) \\
+\mathcal{Q}_{\text{Camenes}} &: \forall x (S(x) \implies \neg P(x)) \quad (\text{Hiçbir S, P değildir})
+\end{align}
+
+\subsubsection{4.3. Dimatis (Mûcebe-i Cüz'iyye + Mûcebe-i Külliyye $\implies$ Mûcebe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \exists x (P(x) \land M(x)) \quad (\text{Bazı P'ler M'dir}) \\
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Dimatis}} &: \exists x (S(x) \land P(x)) \quad (\text{Bazı S'ler P'dir})
+\end{align}
+
+\subsubsection{4.4. Fesapo (Sâlibe-i Külliyye + Mûcebe-i Külliyye $\implies$ Sâlibe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (P(x) \implies \neg M(x)) \quad (\text{Hiçbir P, M değildir}) \\
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Fesapo}} &: \exists x (S(x) \land \neg P(x)) \quad (\text{Bazı S'ler P değildir})
+\end{align}
+
+\subsubsection{4.5. Fresison (Sâlibe-i Külliyye + Mûcebe-i Cüz'iyye $\implies$ Sâlibe-i Cüz'iyye)}
+\begin{align}
+P_1 &: \forall x (P(x) \implies \neg M(x)) \quad (\text{Hiçbir P, M değildir}) \\
+P_2 &: \exists x (M(x) \land S(x)) \quad (\text{Bazı M'ler S'dir}) \\
+\mathcal{Q}_{\text{Fresison}} &: \exists x (S(x) \land \neg P(x)) \quad (\text{Bazı S'ler P değildir})
+\end{align}
+
+\section{Kıyas-ı İstisnasî ve Şartlı Mantık Formülleri}
+
+\subsection{1. Bitişik Şartlı Kıyaslar (Muttasıla)}
+
+\subsubsection{1.1. Modus Ponens (Ayn-ı Mukaddemi İstisna)}
+\begin{align}
+P_1 &: P \implies Q \quad (\text{P ise Q'dur}) \\
+P_2 &: P \quad (\text{Lakin P'dir}) \\
+\mathcal{Q}_{\text{ModusPonens}} &: Q \quad (\text{O halde Q'dur})
+\end{align}
+
+\subsubsection{1.2. Modus Tollens (Nizâ-ı Tâlîyi İstisna)}
+\begin{align}
+P_1 &: P \implies Q \quad (\text{P ise Q'dur}) \\
+P_2 &: \neg Q \quad (\text{Lakin Q değildir}) \\
+\mathcal{Q}_{\text{ModusTollens}} &: \neg P \quad (\text{O halde P değildir})
+\end{align}
+
+\subsection{2. Ayrık Şartlı Kıyaslar (Munfasıla)}
+
+\subsubsection{2.1. Hakiki Ayrık Kıyas (Mâniatü'l-Cem' ve'l-Hulüvv)}
+\begin{align}
+P_1 &: P \veebar Q \quad (\text{Ya P'dir ya Q'dur}) \\
+P_2 &: P \implies \mathcal{Q}_1 = \neg Q \\
+P_3 &: \neg P \implies \mathcal{Q}_2 = Q
+\end{align}
+
+\subsubsection{2.2. Mâniatü'l-Cem' (Birlikte Bulunamaz)}
+\begin{align}
+P_1 &: \neg (P \land Q) \\
+P_2 &: P \implies \neg Q
+\end{align}
+
+\subsubsection{2.3. Mâniatü'l-Hulüvv (Birlikte Yok Olamaz)}
+\begin{align}
+P_1 &: P \lor Q \\
+P_2 &: \neg P \implies Q
+\end{align}
+
+\section{İstikra (Tümevarım), Temsil (Analoji) ve Fıkıh Mantığı}
+
+\subsection{1. Kıyas-ı İstikraî (Tümevarım)}
+
+\subsubsection{1.1. İstikra-i Tâmm (Tam Tümevarım)}
+\begin{align}
+P_1 &: \forall i \in \{1, 2, \dots, n\}, \, S_i \in K \\
+P_2 &: \forall i \in \{1, 2, \dots, n\}, \, P(S_i) \\
+\mathcal{Q}_{\text{Tamİstikra}} &: \forall x \in K, \, P(x)
+\end{align}
+
+\subsubsection{1.2. İstikra-i Nâkıs (Eksik Tümevarım / Olasılıklı İllet Keşfi)}
+\begin{align}
+P_1 &: \{S_1, S_2, \dots, S_k\} \subset K \quad (k < |K|) \\
+P_2 &: \bigwedge_{i=1}^k P(S_i) \\
+\mathcal{Q}_{\text{Eksikİstikra}} &: P\left( \forall x \in K, P(x) \right) = 1 - \prod_{i=1}^k (1 - p_i)
+\end{align}
+
+\subsection{2. Temsil (Analoji / Kıyas-ı Usulî - Fıkıh Mantığı)}
+\begin{align}
+\text{Asıl} &: A \in \mathbf{U}, \quad H(A) = \text{Doğru} \quad (\text{Hükmü bilinen nass}) \\
+\text{Fer'} &: B \in \mathbf{U} \quad (\text{Hükmü aranan mesele}) \\
+\text{İllet} &: \dot{I}(x) \in \mathbf{Prop} \quad (\text{Hükmün neşet ettiği ortak vasıf}) \\
+P_1 &: \dot{I}(A) \implies H(A) \\
+P_2 &: \dot{I}(B) \\
+\mathcal{Q}_{\text{Temsil}} &: H(B) \quad (\text{Fer'in hükmü de Asıl gibidir})
+\end{align}
+
+\section{Osmanlı Mantık Usulü (Ali Sedad Efendi - Mîzânü'l-Ukûl)}
+
+\subsection{1. Tenakuz ve Aks (Çevirme) Denklemleri}
+
+\subsubsection{1.1. Aks-i Müstevî (Düz Çevirme)}
+\begin{align}
+\text{Aks}(\forall x (S(x) \implies P(x))) &\implies \exists x (P(x) \land S(x)) \quad (\text{Mûcebe-i Külliyye $\to$ Mûcebe-i Cüz'iyye}) \\
+\text{Aks}(\forall x (S(x) \implies \neg P(x))) &\implies \forall x (P(x) \implies \neg S(x)) \quad (\text{Sâlibe-i Külliyye $\to$ Sâlibe-i Külliyye}) \\
+\text{Aks}(\exists x (S(x) \land P(x))) &\implies \exists x (P(x) \land S(x)) \quad (\text{Mûcebe-i Cüz'iyye $\to$ Mûcebe-i Cüz'iyye}) \\
+\text{Aks}(\exists x (S(x) \land \neg P(x))) &\implies \text{Tanımsız} \quad (\text{Sâlibe-i Cüz'iyye'nin aksi yoktur})
+\end{align}
+
+\subsubsection{1.2. Aks-i Nakîz (Tersine Çevirme)}
+\begin{align}
+\text{AksNakîz}(\forall x (S(x) \implies P(x))) &\implies \forall x (\neg P(x) \implies \neg S(x)) \\
+\text{AksNakîz}(\exists x (S(x) \land \neg P(x))) &\implies \exists x (\neg P(x) \land \neg (\neg S(x)))
+\end{align}
+
+\subsection{2. Sorites (Zincirleme Kıyaslar)}
+
+\subsubsection{2.1. Aristoteles Soritesi}
+\begin{align}
+P_1 &: A \implies B, \quad P_2 : B \implies C, \quad P_3 : C \implies D, \quad P_4 : D \implies E \\
+\mathcal{Q}_{\text{AristoSorites}} &: A \implies E
+\end{align}
+
+\subsubsection{2.2. Goclenius Soritesi}
+\begin{align}
+P_1 &: D \implies E, \quad P_2 : C \implies D, \quad P_3 : B \implies C, \quad P_4 : A \implies B \\
+\mathcal{Q}_{\text{GocleniusSorites}} &: A \implies E
+\end{align}
+
+\section{İlm-i Münazara, Cedel ve Retorik Formülleri}
+
+\subsection{1. Münazara Hamleleri}
+
+\subsubsection{1.1. Mânî' (Engelleme)}
+\begin{align}
+\text{Dâvâ} &: P_1 \land P_2 \implies Q \\
+\text{Hamle}_{\text{Mâni'}} &: \neg P_1 \quad (\text{Öncül reddedilir})
+\end{align}
+
+\subsubsection{1.2. Naqz (Çürütme / Karşı Örnek)}
+\begin{align}
+\text{Kural} &: \forall x (A(x) \implies B(x)) \\
+\text{Hamle}_{\text{Naqz}} &: \exists x_0 (A(x_0) \land \neg B(x_0))
+\end{align}
+
+\subsubsection{1.3. Muârada (Karşı Delil)}
+\begin{align}
+\text{Müddiî} &: P_1 \implies Q \\
+\text{Hamle}_{\text{Muârada}} &: P_2 \implies \neg Q
+\end{align}
+
+\section{Sınaât-ı Hamse (Beş Sanat Mantığı)}
+
+\begin{align}
+\text{Burhan (Kesin)} &: \text{Sıhhat}(P_i) = 1.0 \implies \text{Sıhhat}(\mathcal{Q}) = 1.0 \quad (\text{Evveliyyât, Müşâhedât}) \\
+\text{Cedel (Diyalektik)} &: P_i \in \text{Meşhûrât} \implies \text{Toplumsal Kabul} \\
+\text{Hitabet (Retorik)} &: P_i \in \text{Maznûnât} \implies P(\mathcal{Q}) > 0.5 \quad (\text{Zannî İkna}) \\
+\text{Şiir (Poetik)} &: P_i \in \text{Tahayyülât} \implies \text{Duygu Uyandırma} \\
+\text{Muğalata (Safsata)} &: P_i \in \text{Müşebbehât} \implies \text{Yanıltma}
+\end{align}
+
+\section{Hint (Nyaya) Pañcāvayava Kıyası}
+
+\begin{align}
+1. \text{Pratijñā (İddia)} &: P(a) \quad (\text{Dağda ateş vardır}) \\
+2. \text{Hetu (İllet)} &: H(a) \quad (\text{Çünkü duman vardır}) \\
+3. \text{Udāharaṇa (Genel Örnek)} &: \forall x (H(x) \implies P(x)) \quad (\text{Dumanlı her yerde ateş vardır, mutfak gibi}) \\
+4. \text{Upanaya (Uygulama)} &: H(a) \quad (\text{Bu dağ dumanlıdır}) \\
+5. \text{Nigamana (Netice)} &: P(a) \quad (\text{O halde bu dağda ateş vardır})
+\end{align}
+
+\section{Modern Modal, Deontik, Temporal ve Çok Değerli Mantıklar}
+
+\subsection{1. Modal Mantık (Kiplik Mantığı)}
+
+\begin{align}
+\Diamond P &\equiv \neg \Box \neg P, \quad \Box P \equiv \neg \Diamond \neg P \\
+\mathbf{K} &: \Box(P \implies Q) \implies (\Box P \implies \Box Q) \\
+\mathbf{T} &: \Box P \implies P, \quad \mathbf{4} : \Box P \implies \Box \Box P, \quad \mathbf{5} : \alpha \implies \Box \Diamond \alpha
+\end{align}
+
+\subsection{2. Deontik Mantık (Ödev Mantığı)}
+
+\begin{align}
+O P \quad (\text{Ödev}), \quad P P \quad (\text{Caiz}), \quad F P \quad (\text{Mebğuz/Yasak}) \\
+P P &\equiv \neg O \neg P, \quad F P \equiv O \neg P
+\end{align}
+
+\subsection{3. Temporal Mantık (Zaman Mantığı)}
+
+\begin{align}
+G P \quad (\text{Gelecekte daima}), \quad F P \quad (\text{Gelecekte bir an}) \\
+H P \quad (\text{Geçmişte daima}), \quad P P \quad (\text{Geçmişte bir an}) \\
+P \, \mathbf{U} \, Q &\iff \exists t (Q(t) \land \forall t' < t, P(t')) \quad (\text{Until Operatörü})
+\end{align}
+
+\subsection{4. Çok Değerli Mantıklar (Łukasiewicz, Gödel, Product)}
+
+\begin{align}
+\text{Łukasiewicz} &: v(P \implies Q) = \min(1, 1 - v(P) + v(Q)) \\
+\text{Gödel} &: v(P \implies Q) = \mathbb{I}(v(P) \le v(Q)) + v(Q) \cdot \mathbb{I}(v(P) > v(Q)) \\
+\text{Product} &: v(P \land Q) = v(P) \cdot v(Q), \quad v(P \implies Q) = \min\left(1, \frac{v(Q)}{v(P)}\right)
+\end{align}
+
+\end{document}

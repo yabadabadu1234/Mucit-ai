@@ -24,6 +24,9 @@ from typing import Iterable, List, Tuple
 Bulgu = Tuple[int, str]
 
 _KACIS = re.compile(r"\\[{}$&%#_]")
+_IC_ORTAM = re.compile(
+    r"\\begin\{(cases|array|aligned|matrix|[pbv]matrix|split|smallmatrix)\}"
+    r".*?\\end\{\1\}", re.S)
 _YORUM = re.compile(r"(?<!\\)%.*$")
 
 
@@ -77,9 +80,17 @@ def denetle(metin: str) -> List[Bulgu]:
                         (no, r"ortam uyuşmuyor: \begin{%s} (satır %d) ile \end{%s}"
                          % (acik, acik_no, ad)))
 
-        # align içinde satır başına en fazla bir '&'
+        # align içinde satır başına en fazla bir '&'.
+        # DİKKAT: iç ortamların (``cases``, ``array``…) ``&``leri SÜTUN
+        # ayracıdır, hizalama işareti değil. Aynı satırda açılıp kapanan
+        # iç ortamlar sayımdan önce düşürülmezse denetleyici yanlış alarm
+        # verir -- ilk kurulumda tam bunu yaptı: tek satıra sığdırılmış
+        # bir ``cases`` bloğu ``2 hizalama işareti'' diye bildirildi.
         if ortam_yigini and ortam_yigini[-1] in ("align", "align*"):
-            govde = s.split(r"\\")[0]
+            # SIRA mühim: önce iç ortamlar düşürülür, SONRA satır sonuna
+            # göre bölünür. Tersi yapılırsa ``cases`` içindeki ``\\\\``
+            # bölmeyi erken tetikler ve blok hiç düşürülemez (ölçüldü).
+            govde = _IC_ORTAM.sub("", s).split(r"\\")[0]
             if govde.count("&") > 1:
                 bulgular.append((no, "align satırında %d hizalama işareti '&' "
                                      "(en fazla 1 olmalı)" % govde.count("&")))

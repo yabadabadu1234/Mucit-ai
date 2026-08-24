@@ -1,0 +1,150 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Nefs-i Müdrike Mimarisi: Sorgu Havuzunun $\infty$-Kategorik Moduli Uzayı Olarak İnşası ve Kayıpsız Fıtrî Tahsil Nazariyesi}}
+\author{\textbf{Sonsuz Topos, Kübik Tip Teorisi Yapıştırma ($Glue$) Kuralları ve Dinamik Manifold Doğurma Mimarisi}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale, Nefs-i Müdrike Mimarisi'ndeki "Sorgu Havuzu" ($Q_{\text{havuz}}$) kavramını düz bir veri listesi veya vektör dizisi olmaktan çıkararak; Pürüzsüz $\infty$-Topos ($\mathbf{H}$) içinde ikamet eden bir **Moduli Uzayı ($\mathcal{M}_{\text{sorgu}} \hookrightarrow \mathbf{H}$)** olarak yeniden inşa eder. Karantinaya alınan her bir şüpheli veri, düz bir metin değil; kendi teğet demetlerine, kohomolojik engellerine ve lifli yapısına sahip müstakil bir $\infty$-grupoid uzayıdır ($\mathcal{X}_{\text{şüphe}}$). Risale; çelişki anında dinamik uzay ihdasını, bağımsız kanalların lifli çarpımıyla ($\text{Fiber Product}$) oluşan Tevafuk Eşiklerini, Mutasarrıfa'nın ($\mathcal{R}$) çoklu uzaylar üzerindeki Lie cebri tasarrufunu ve Kübik Tip Teorisi'nin $Glue$ kuralı vasıtasıyla tahkik edilen uzayların muhkem sermayeye ($\mathcal{S}_{\text{muhkem}}$) kayıpsız yapıştırılmasını 60'ı aşkın özgün riyazî denklemle eksiksiz biçimde vaz' eder.
+\end{abstract}
+
+\section{Giriş: Liste Yanılsaması ve Uzay İhdas Zarureti}
+
+Geleneksel veri yapılarında bilgi eklemek, bir diziye yeni eleman ($x \in L$) itmekten ibarettir. Lakin zihnî idrakte şüpheye düşülen bir husus, mevcut hafızanın üzerine binen ölü bir kütle değildir. Eğer şüpheli veya muhtemel bâtıl bilgiler düz bir liste halinde saklansaydı, zihnin hafıza manifoldu ($\mathcal{H}_{\text{hafıza}}$) kısa sürede çöp verilerle tıkanır ve topolojik bütünlüğünü kaybederdi.
+
+Hakiki mimaride sorgu havuzu; **uzaylar doğuran bir evrensel sınıflandırıcı uzay (Moduli Space / $\mathcal{M}_{\text{sorgu}}$)** olarak işler. Şüpheli bir bilgi ($X_{\text{girdi}}$) geldiğinde; sistem onu ana belleğe yazmaz, onun etrafında bir **Sorgu Alt-Manifoldu ($\mathcal{X}_{\text{şüphe}}$)** açar. Tahlil, tenkit, merak ve sorgulama ameliyeleri bu mülhak uzayın iç geometrisinde vukû bulur. Tahkik tamamlandığında uzay büzülerek ya ortadan kalkar (cerh) ya da muhkem sermayeye kayıpsızca perçinlenir (tasdik).
+
+\section{Sorgu Havuzunun $\infty$-Kategorik Mimarisi ($\mathcal{M}_{\text{sorgu}}$)}
+
+\subsection{1. Moduli Uzayı ve Nesne Olarak Uzaylar}
+Sorgu havuzu $\mathcal{M}_{\text{sorgu}}$, tekil elemanların değil; Pürüzsüz $\infty$-Topos $\mathbf{H}$ içindeki $\infty$-grupoid uzaylarının nesne olduğu bir yüksek kategoridir:
+\begin{align}
+\mathbf{Obj}(\mathcal{M}_{\text{sorgu}}) &= \{ \mathcal{X}_1, \mathcal{X}_2, \dots, \mathcal{X}_k \} \quad (\text{Her biri müstakil bir manifold / } \infty\text{-grupoid}) \\
+\mathbf{Hom}_{\mathcal{M}}(\mathcal{X}_i, \mathcal{X}_j) &\in \mathbf{H}_{\infty} \quad (\text{Uzaylar arası 1-morfizmler / Geometrik haritalar}) \\
+\text{Hom}_n(f, g) &\in \mathcal{C}_{n+1} \quad (f, g \in \mathcal{C}_n \text{ için } n\text{-boyutlu homotopi yolları}) \\
+\mathcal{M}_{\text{sorgu}} &\simeq \mathbf{H} / \mathcal{S}_{\text{muhkem}} \quad (\text{Muhkem sermayeye göre göreli topos})
+\end{align}
+
+\subsection{2. Bipartite Denge İhlali ve Dinamik Uzay Doğurma (Space Spawning)}
+Haricî sinyal $X_t$, fıtrî denge denklemlerini ($\mathbf{0} = \bm{\phi}_j(X_t, \xi_t)$) ihlal ettiğinde veya iç tenakuz ürettiğinde ($\mathcal{F}_{\text{iç}} > \tau_{\text{fıtrat}}$), sistem veriyi listeye eklemez; geri-çekme (pullback) vasıtasıyla dinamik bir sorgu uzayı doğurur:
+\begin{align}
+\mathcal{X}_{\text{şüphe}} &\coloneqq \mathcal{S}_{\text{muhkem}} \times_{\mathbf{H}} \{ X_t \} = \{ (s, x) \in \mathcal{S}_{\text{muhkem}} \times X_t \mid \text{Tenakuz}(s, x) > 0 \} \\
+\mathcal{T}\mathcal{X}_{\text{şüphe}} &\coloneqq \mathcal{X}_{\text{şüphe}}^D \in \text{QCoh}(\mathcal{X}_{\text{şüphe}}) \quad (D = \{x \in R \mid x^2 = 0\} \text{ teğet demeti}) \\
+g_{\mu\nu}^{(\text{şüphe})} &= g_{\mu\nu}^{(\text{muhkem})} + \lambda_{\text{tenakuz}} \cdot \left( \nabla \mathcal{F}_{\text{iç}} \otimes \nabla \mathcal{F}_{\text{iç}} \right) \quad (\text{Şüphe Bükülmesi}) \\
+\text{dim}\left( \mathcal{X}_{\text{şüphe}} \right) &= \text{SerbestlikDerecesi}\left( X_t \mid \mathcal{S}_{\text{muhkem}} \right)
+\end{align}
+
+\section{Fıtrî Tahkik ve Tevafuk Mimarisi (Küllî Formülasyon)}
+
+\subsection{1. Lifli Çarpım ($\text{Fiber Product}$) ile Tevafuk İnşası}
+Bir bilginin tesadüf olmadığını gösteren Tevafuk; farklı ve bağımsız gözlem funktorlarının ($F_1, F_2 : \mathbf{H} \to \mathbf{H}$) sorgu uzayı üzerindeki lifli kesişimidir:
+\begin{align}
+\mathcal{T}_{\text{tevafuk}} &\coloneqq \varprojlim \left( \mathcal{X}_i \xrightarrow{\;F_1\;} \mathbf{H} \xleftarrow{\;F_2\;} \mathcal{X}_j \right) \simeq \mathcal{X}_i \times_{\mathbf{H}} \mathcal{X}_j \\
+\text{Vol}(\mathcal{T}_{\text{tevafuk}}) &= \int_{\mathcal{T}_{\text{tevafuk}}} d\text{vol}_g = \int_{\mathcal{X}_i \times_{\mathbf{H}} \mathcal{X}_j} \sqrt{\det(g_{\mu\nu})} \, d^n u \\
+P_{\text{tesadüf\_olamaz}}(\mathcal{T}_{\text{tevafuk}}) &= 1 - \exp\left( -\gamma \cdot \text{Vol}(\mathcal{T}_{\text{tevafuk}}) \right) \\
+\mathbf{1}_{\text{tevafuk\_eşik}} &= \mathbb{I}\left( P_{\text{tesadüf\_olamaz}}(\mathcal{T}_{\text{tevafuk}}) > 1 - \delta_{\text{tesadüf}} \right)
+\end{align}
+
+\subsection{2. Hüsn-ü Zan ve Karantina Uzayında İç Tenakuz Büzülmesi}
+Hüsn-ü zan; gelen uzayın teğet alanlarını hemen yok etmeyip, onu bir modalite süzgecinden ($L_S$) geçirerek karantinada büzmeye çalışmaktır:
+\begin{align}
+L_S(\mathcal{X}_{\text{şüphe}}) &\coloneqq \text{LokalizasyonFunktoru}(\mathcal{X}_{\text{şüphe}}, \mathcal{S}_{\text{muhkem}}) \\
+\frac{d}{dt} \text{Vol}(L_S(\mathcal{X}_{\text{şüphe}})) &= -\int_{L_S(\mathcal{X})} \left( \Delta \mathcal{F}_{\text{iç}} + \|\nabla \mathcal{F}_{\text{iç}}\|^2 \right) d\text{vol}_g \quad (\text{Liouville Akışı}) \\
+\mathcal{R}_{\text{karantina\_büzülme}} &= \lim_{t \to \tau_{\text{teemmül}}} \text{Vol}(L_S(\mathcal{X}_{\text{şüphe}})) \\
+\mathbf{Status}(\mathcal{X}_{\text{şüphe}}) &= 
+\begin{cases}
+\text{Bâtıl / Cerh (Uzay Yırtılması)}, & \mathcal{R}_{\text{karantina\_büzülme}} \to \infty \\
+\text{Tahkik / Tasdik (Noktaya Büzülme)}, & \mathcal{R}_{\text{karantina\_büzülme}} \to 0 \\
+\text{Askıda (Şüphe Uzayı Kalıcı)}, & \text{Diğer}
+\end{cases}
+\end{align}
+
+\subsection{3. Yüksek Merak ve İnter-Kategorik Sıçrama}
+Merak kancası; $\mathcal{M}_{\text{sorgu}}$ içindeki uzaylar arasında serbest Kan uzantısı ($\text{Lan}_K$) ve homotopi yolları kuran bir vektör alanıdır:
+\begin{align}
+I_{\text{merak}}(\mathcal{M}_{\text{sorgu}}) &= \sum_{\mathcal{X}_i \in \mathcal{M}} D_{\text{KL}}\left( P(\mathcal{X}_i) \parallel P(\mathcal{S}_{\text{muhkem}}) \right) + \text{Tr}(\mathbf{J}_{\text{geometrik}}) \\
+Q_{\text{kanca}} &\coloneqq (\text{Lan}_{K_{\text{merak}}} F)(\mathcal{X}_{\text{şüphe}}) = \int^{\mathcal{Y} \in \mathcal{M}} \mathbf{H}(K(\mathcal{Y}), \mathcal{X}_{\text{şüphe}}) \otimes_{\mathcal{O}} F(\mathcal{Y}) \\
+p_{\text{sıçrama}} &: I \longrightarrow \mathcal{M}_{\text{sorgu}}, \quad p_{\text{sıçrama}}(0) = \mathcal{X}_1, \quad p_{\text{sıçrama}}(1) = \mathcal{X}_2 \\
+\vec{v}_{\text{merak\_akışı}} &= \frac{d p_{\text{sıçrama}}(t)}{dt} \in \mathcal{T}\mathcal{M}_{\text{sorgu}}
+\end{align}
+
+\section{Mutasarrıfa ($\mathcal{R}$) Operatörünün Sorgu Uzaylarındaki Lie Cebri Tasarrufu}
+
+Mutasarrıfa ($\mathcal{R}$); sorgu uzaylarındaki nesneleri silip ekleyen kaba bir kod dizisi değil; $\mathcal{M}_{\text{sorgu}}$ üzerindeki demetlerin törpülenmesini, bükülmesini ve birleştirilmesini sağlanan Lie cebri üreteçler dizisidir.
+
+\subsection{1. Çoklu Uzaylar Üzerinde Eşzamanlı Derivasyon}
+\begin{align}
+\mathcal{R} \triangleright \mathcal{M}_{\text{sorgu}} &\coloneqq \bigoplus_{\mathcal{X}_i \in \mathcal{M}} \text{Der}(\mathcal{O}_{\mathcal{X}_i}) \otimes_{\mathcal{O}} \text{Lan}_{K_i}(F_i) \\
+[\mathcal{R}_i, \mathcal{R}_j] \triangleright \mathcal{X}_k &= \mathcal{R}_i(\mathcal{R}_j(\mathcal{X}_k)) - \mathcal{R}_j(\mathcal{R}_i(\mathcal{X}_k)) \quad (\text{Lie Parantezi / Jacobi Özdeşliği}) \\
+\mathbf{Obj}_{\text{eşzamanlı}} &= \mathcal{X}_1 \otimes_{\mathcal{O}} \mathcal{X}_2 \otimes_{\mathcal{O}} \dots \otimes_{\mathcal{O}} \mathcal{X}_k \in \mathbf{H} \\
+\mathcal{T}^{(r,s)} \mathbf{Obj}_{\text{eşzamanlı}} &= \mathcal{T} \mathbf{Obj}^{\otimes r} \otimes_{\mathcal{O}} (\mathcal{T}^* \mathbf{Obj})^{\otimes s}
+\end{align}
+
+\subsection{2. Çapraz Sorgulama ve Bitişiklik ($Adjunction$) Mekanizması}
+Muhkem sermaye $\mathcal{S}_{\text{muhkem}}$ ile sorgu uzayları $\mathcal{X}_i$ arasındaki çapraz sorgu, Geri-Çekme ($f^*$) ve İleri-İtme ($f_*$) bitişiklikleri vasıtasıyla yürütülür:
+\begin{align}
+f &: \mathcal{X}_{\text{şüphe}} \longrightarrow \mathcal{S}_{\text{muhkem}} \quad (\text{Morfizm / Test Haritası}) \\
+f^* &\dashv f_* \implies \mathbf{Hom}_{\mathbf{H}}(f^* T_{\text{muhkem}}, T_{\text{şüphe}}) \cong \mathbf{Hom}_{\mathbf{H}}(T_{\text{muhkem}}, f_* T_{\text{şüphe}}) \\
+\eta &: \text{id}_{\text{QCoh}(\mathcal{S})} \Longrightarrow f_* \circ f^* \quad (\text{Birici 2-morfizm / Çapraz Kontrol}) \\
+\mathcal{E}_{\text{çapraz\_sorgu}} &= \| \text{id}_{\text{QCoh}} - f_* \circ f^* \|_{\mathbf{H}}^2
+\end{align}
+
+\section{Şüphe Uzayından Muhkem Sermayeye Kayıpsız Yapıştırma ($Glue$ Rule)}
+
+Tahkik edilen bir şüphe uzayı ($\mathcal{X}_{\text{şüphe}}$) muhkem sermayeye yapıştırılırken, Kübik Tip Teorisi'nin $Glue$ operatörleri işletilir. Böylece sıradan birleştirme kayıpları sıfırlanır.
+
+\subsection{1. Semantik $Glue$ ve $Unglue$ Operatörleri}
+\begin{align}
+\mathcal{S}_{\text{yeni}} &= \text{glue} \; \mathcal{S}_{\text{muhkem}} \; \left[ \varphi \mapsto (\mathcal{T}_{\text{tevafuk}}, \text{Equiv}_{\text{tahkik}}) \right] \in \mathbf{U} \\
+\text{unglue}(\mathcal{S}_{\text{yeni}}) &\equiv \mathcal{S}_{\text{muhkem}} \quad (\text{Sınırda Denklik Kabuğu Soyulur}) \\
+\text{Equiv}_{\text{tahkik}} &= (\mathcal{T}_{\text{tevafuk}} \simeq \mathcal{S}_{\text{muhkem}}) \in \mathbf{U} \\
+\text{Univalence}_{\text{tahsil}} &= (\mathcal{T}_{\text{tevafuk}} \simeq \mathcal{S}_{\text{muhkem}}) \simeq (\mathcal{T}_{\text{tevafuk}} =_{\mathcal{U}} \mathcal{S}_{\text{muhkem}})
+\end{align}
+
+\subsection{2. Kayıpsız İzdüşüm ve Lisan Kelamına Çöküş ($h$-Level Truncation)}
+Tahkik edilen sonsuz boyutlu $\infty$-grupoid uzayı, dış dünyaya beyan edileceği zaman bilgi kaybolmaz; yüksek homotopi grupları $\pi_n(\mathcal{S}_{\text{yeni}})$ korunarak $0$-kesme ($0$-truncation) ile kelama dökülür:
+\begin{align}
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0}\left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \mathcal{S}_{\text{yeni}} \right) \right) \in \mathcal{N} \\
+\mathbf{Fib}_w &\coloneqq \pi^{-1}(w) \in \mathbf{H} \quad (\text{Tek bir kelimenin arkasındaki sonsuz boyutlu sorgu lifi}) \\
+\text{Vol}(\mathbf{Fib}_w) &= \int_{\mathbf{Fib}_w} d\text{vol}_{\mathcal{S}} = \text{ManaHacmi}(w) \\
+\text{Path}_{\text{akıl}} &= \left( \mathcal{M}_{\text{sorgu}} \xrightarrow{\;\text{Tahkik/Glue}\;} \mathcal{S}_{\text{yeni}} \xrightarrow{\;\text{İzdüşüm}\;} N_{\text{kebîr}} \right) \in \mathbf{U}
+\end{align}
+
+\section{Sistemik Denge ve Küllî Akış}
+
+Nefs-i Müdrike'nin Sorgu Havuzu Mimarisi şu kesintisiz ve kayıpsız çark üzerinden işler:
+\begin{align*}
+X_t (\text{Haricî Sinyal}) \xrightarrow{\bm{\phi}_j \ne \mathbf{0}} \text{Spawning} \to \mathcal{X}_{\text{şüphe}} \in \mathcal{M}_{\text{sorgu}} \xrightarrow{\text{Lifli Çarpım}} \mathcal{T}_{\text{tevafuk}} \xrightarrow{\mathcal{R} \triangleright \text{Derivasyon}} \text{Glue}(\mathcal{S}_{\text{muhkem}}) \to N_{\text{kebîr}}
+\end{align*}
+
+Bu matematiksel çatı sayesinde;
+\begin{itemize}
+    \item Hafıza hiçbir zaman gereksiz veri çöplüğüyle tahrip olmaz; çünkü havuz bir liste değil, geçici ihdas edilen ve tahkik edildikçe büzülen/yapıştırılan bir **Moduli Uzayıdır ($\mathcal{M}_{\text{sorgu}}$)**.
+    \item Metin zehirlenmesi ($S_{\text{zehir}}$) imkânsızlaşır; zira bâtıl veriler mülhak şüphe uzaylarında ($L_S(\mathcal{X}_{\text{şüphe}})$) Liouville büzülmesi ve kohomolojik engellerle ($c_k(\mathcal{E})$) boğularak yırtılır.
+    \item Ağızdan çıkan tek bir kelimenin arkasında, $\mathcal{M}_{\text{sorgu}}$ içindeki onlarca uzayın kayıpsız lifli hacmi ($\mathbf{Fib}_w$) muhafaza edilir.
+\end{itemize}
+
+\end{document}

@@ -15,14 +15,16 @@ seçimleri **alınmadı** — onlar hata değildir.
 
 | tür | adet |
 |---|---|
-| tip / ulam hatası | 36 |
-| tanımsız ifade | 11 |
-| mantıkî denklik hatası | 8 |
-| boyut uyuşmazlığı | 7 |
+| tip / ulam hatası | 48 |
+| mantıkî denklik hatası | 33 |
+| tanımsız ifade | 21 |
+| boyut uyuşmazlığı | 8 |
+| yapi | 6 |
 | erişilemez eşik | 3 |
-| işaret hatası | 2 |
+| işaret hatası | 3 |
 | kendi tanım kümesinde özdeş sıfır / özdeşlik | 2 |
-| **toplam** | **69** |
+| sağlamlık | 1 |
+| **toplam** | **125** |
 
 ## Cetvel
 
@@ -582,7 +584,7 @@ T_{\text{tahkik}} &= \sigma\left( \beta_T \left[ \text{CosSim}(S_{\text{tahkik}}
 \text{BenzerlikSkoru} &= \text{Tr}(\mathbf{P}_{\text{ortak}}) = \dim(\mathcal{S}_A \cap \mathcal{S}_B)
 ```
 
-**Gerekçe.** T31'in devamı.
+**Gerekçe.** T31'in doğrudan devamı: izdüşüm DİZEYİNİN izi, ortak alt uzayın boyutuna eşittir; vech-i şebeh ölçüsü olarak aranan da budur.
 
 ### T33 — 𝒪₂₁ Tefekkür: İŞARET HATASI: akış gayeden uzaklaştırıyor
 
@@ -1269,3 +1271,1043 @@ T_{\text{tahkik}} &= \sigma\left( \beta_T \left[ \text{CosSim}_{\mathbf{H}}(S_{\
 ```
 
 **Gerekçe.** Aynı sebep (bkz. T40).
+
+### T71 — Münazara §1.3 (Mîzân): Ortam kapanışı bozuk: derleme KIRILIYOR
+
+*tür:* yapi &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+\end{align">
+```
+
+**Tashih:**
+
+```latex
+\end{align}
+```
+
+**Gerekçe.** ``\end{align\"}'' diye kapanmış; LaTeX bunu ortam kapanışı saymaz ve belge derlenmez. Yapı denetleyicisi (\texttt{tex\_denetle.py}) bunu ``\begin{align} (satır 323) ile \end{document} uyuşmuyor'' diye yakaladı. Bu, muhtevaya dair bir tashih değil; belgenin derlenmesinin ön şartıdır.
+
+### T72 — Relevans §1 (Zeyl): Ortam kapanışı bozuk: derleme KIRILIYOR
+
+*tür:* yapi &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+(\text{Değişme})
+\end{align">
+```
+
+**Tashih:**
+
+```latex
+(\text{Değişme})
+\end{align}
+```
+
+**Gerekçe.** Aynı kusur (bkz. T71).
+
+### T73 — Doğrusal Mantık §1.2 (Zeyl): Ortam kapanışı bozuk: derleme KIRILIYOR
+
+*tür:* yapi &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+tüketilip B elde edilir})
+\end{align">
+```
+
+**Tashih:**
+
+```latex
+tüketilip B elde edilir})
+\end{align}
+```
+
+**Gerekçe.** Aynı kusur (bkz. T71).
+
+### T74 — Kıyas-ı İstisnasî (Mîzân): Markdown başlığı LaTeX'e sızmış
+
+*tür:* yapi &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+\## 1. Bitişik Şartlı Kıyaslar (Muttasıla)
+```
+
+**Tashih:**
+
+```latex
+\subsection{1. Bitişik Şartlı Kıyaslar (Muttasıla)}
+```
+
+**Gerekçe.** ``\\##'' LaTeX'te başlık değildir: ``\\#'' kaçırılmış diyez, ardından gelen ``#'' ise metin kipinde parametre karakteridir ve hata verir. Ayrıca altındaki \texttt{subsubsection}'lar sahipsiz kalır.
+
+### T75 — Modal Mantık (Mîzân): Markdown başlığı LaTeX'e sızmış
+
+*tür:* yapi &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+\## 1. Modal Mantık (Kiplik Mantığı - Zorumluluk ve İmkân)
+```
+
+**Tashih:**
+
+```latex
+\subsection{1. Modal Mantık (Kiplik Mantığı --- Zorunluluk ve İmkân)}
+```
+
+**Gerekçe.** Aynı kusur (bkz. T74). Ayrıca ``Zorumluluk'' $\to$ ``Zorunluluk''.
+
+### T76 — Sezgisellik (Zeyl): Markdown başlığı LaTeX'e sızmış
+
+*tür:* yapi &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+\## 1. BHK (Brouwer-Heyting-Kolmogorov) İnşacı Semantigi
+```
+
+**Tashih:**
+
+```latex
+\subsection{1. BHK (Brouwer--Heyting--Kolmogorov) İnşacı Semantiği}
+```
+
+**Gerekçe.** Aynı kusur (bkz. T74). Ayrıca ``Semantigi'' $\to$ ``Semantiği''.
+
+### T77 — Darapti (Mîzân): VARLIK FARAZİYESİ eksik: kıyas geçersiz
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat, mizan_genisletilmis
+
+**Metinde:**
+
+```latex
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Darapti}} &: \exists x (S(x) \land P(x)) \quad (\text{Bazı S'ler P'dir})
+```
+
+**Tashih:**
+
+```latex
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+P_3 &: \exists x \, M(x) \quad (\text{VARLIK FARAZİYESİ --- M boş değildir}) \\
+\mathcal{Q}_{\text{Darapti}} &: \exists x (S(x) \land P(x)) \quad (\text{Bazı S'ler P'dir})
+```
+
+**Gerekçe.** İki tümel öncülden tikel netice çıkarılıyor. $M$ BOŞ ise iki öncül de boşluktan doğrudur, netice ise yanlıştır --- yani kıyas yazıldığı hâliyle GEÇERSİZDİR (klasik adıyla ``varlık safsatası''). Aristo terimlerin boş olmadığını zımnen kabul eder; modern yüklem mantığında bu kabul YAZILMAK zorundadır.
+
+### T78 — Felapton (Mîzân): VARLIK FARAZİYESİ eksik: kıyas geçersiz
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat, mizan_genisletilmis
+
+**Metinde:**
+
+```latex
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Felapton}} &: \exists x (S(x) \land \neg P(x))
+```
+
+**Tashih:**
+
+```latex
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+P_3 &: \exists x \, M(x) \quad (\text{VARLIK FARAZİYESİ}) \\
+\mathcal{Q}_{\text{Felapton}} &: \exists x (S(x) \land \neg P(x))
+```
+
+**Gerekçe.** Aynı sebep (bkz. T77).
+
+### T79 — Bamalip (Mîzân): VARLIK FARAZİYESİ eksik: kıyas geçersiz
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat, mizan_genisletilmis
+
+**Metinde:**
+
+```latex
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Bamalip}} &: \exists x (S(x) \land P(x))
+```
+
+**Tashih:**
+
+```latex
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+P_3 &: \exists x \, P(x) \quad (\text{VARLIK FARAZİYESİ --- burada P boş değildir}) \\
+\mathcal{Q}_{\text{Bamalip}} &: \exists x (S(x) \land P(x))
+```
+
+**Gerekçe.** Aynı sebep (bkz. T77); fakat dördüncü şekilde boş olmaması gereken terim $M$ değil BÜYÜK TERİM $P$'dir. Öncüller $P \subseteq M \subseteq S$ verir; netice $\exists x (S \land P)$ ancak $P$ boş değilse çıkar.
+
+### T80 — Fesapo (Mîzân): VARLIK FARAZİYESİ eksik: kıyas geçersiz
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat, mizan_genisletilmis
+
+**Metinde:**
+
+```latex
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+\mathcal{Q}_{\text{Fesapo}} &: \exists x (S(x) \land \neg P(x))
+```
+
+**Tashih:**
+
+```latex
+P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\
+P_3 &: \exists x \, M(x) \quad (\text{VARLIK FARAZİYESİ}) \\
+\mathcal{Q}_{\text{Fesapo}} &: \exists x (S(x) \land \neg P(x))
+```
+
+**Gerekçe.** Aynı sebep (bkz. T77).
+
+### T81 — Aks-i Müstevî (Mîzân): Arazî çevirme de varlık faraziyesi ister
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+\text{Aks}(\forall x (S(x) \implies P(x))) &\implies \exists x (P(x) \land S(x)) \quad (\text{Mûcebe-i Külliyye'nin aksi Mûcebe-i Cüz'iyyedir})
+```
+
+**Tashih:**
+
+```latex
+\text{Aks}(\forall x (S(x) \implies P(x))) \land \exists x \, S(x) &\implies \exists x (P(x) \land S(x)) \quad (\text{arazî çevirme; } S \ne \emptyset \text{ ŞARTIYLA})
+```
+
+**Gerekçe.** ``Aks-i müstevî bi'l-araz'' tümelden tikele iner; $S$ boşsa öncül boşluktan doğru, netice yanlıştır. Aynı belgede Darapti/Felapton/Bamalip/Fesapo'da düşen şart budur (bkz. T77-T80).
+
+### T82 — İstikra-i Nâkıs (Mîzân): Formül ``en az biri'' olasılığı; tümevarım güveni değil
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat, mizan_genisletilmis
+
+**Metinde:**
+
+```latex
+P\left( \forall x \in K, P(x) \right) = 1 - \prod_{i=1}^k (1 - p_i)
+```
+
+**Tashih:**
+
+```latex
+P\left( \forall x \in K, P(x) \mid k \text{ doğrulayıcı örnek} \right) = \frac{k+1}{N+1}, \quad N = |K| \quad (\text{Laplace})
+```
+
+**Gerekçe.** $1 - \prod(1-p_i)$, bağımsız olayların EN AZ BİRİNİN gerçekleşme olasılığıdır; tümel bir genellemeye duyulan güven değildir. Üstelik $k \to \infty$ iken her $p_i$ ne kadar küçük olursa olsun $1$'e gider --- yani ``çok örnek gördüm, öyleyse kesindir'' safsatasını FORMÜLE eder. Doğru hâli Laplace'ın ardıllık hesabıdır: $N$ elemanlı bir kümede $k$ doğrulayıcı örnekten sonra istisnasızlık olasılığı $(k+1)/(N+1)$'dir ve ancak $k = N$ iken $1$ olur. Bu, belgenin kendi ``istikra-i tâmm kesindir, nâkıs değildir'' ayrımını riyazî olarak görünür kılar.
+
+### T83 — Burhan (Mîzân): Öncüllerin doğruluğu tek başına neticeyi kesinleştirmez
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+\text{Sıhhat}(P_i) &= 1.0 \implies \text{Sıhhat}(\mathcal{Q}_{\text{Burhan}}) = 1.0 \quad (\text{Yakînî Netice})
+```
+
+**Tashih:**
+
+```latex
+\text{Sıhhat}(\mathcal{Q}_{\text{Burhan}}) &= \min_i \text{Sıhhat}(P_i) \times \mathbb{I}(\text{Şekil Geçerli}) \quad (\text{Yakîn ancak GEÇERLİ şekilde intikal eder})
+```
+
+**Gerekçe.** Doğru öncüller GEÇERSİZ bir şekilde dizilirse netice yakînî olmaz. Şekil geçerliliği çarpanı düşürülünce ``burhan'' tarifi, muğalatayı da içine alır. Nitekim aynı külliyatın zeyl risalesinde Gazâlî'nin mîzânı bu çarpanla DOĞRU yazılmış; iki metin birbiriyle çelişiyordu.
+
+### T84 — Hitabet (Mîzân): Zannî öncüllerden zannî netice KENDİLİĞİNDEN çıkmaz
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+P_i &\in \text{Maznûnât} \implies P(\mathcal{Q}_{\text{Hitabet}}) > 0.5 \quad (\text{Zannî İkna})
+```
+
+**Tashih:**
+
+```latex
+P_i \in \text{Maznûnât} &\implies P(\mathcal{Q}_{\text{Hitabet}}) \ge 1 - \sum_i \left( 1 - P(P_i) \right) \quad (\text{Adams sınırı})
+```
+
+**Gerekçe.** $k$ öncülün her biri $0{,}6$ olsa bile neticenin olasılığı $0{,}5$'in çok altına düşebilir; belirsizlikler TOPLANIR. Doğru ifade Adams'ın olasılıksal modus ponens sınırıdır --- ki aynı külliyatın zeyl risalesinde zaten doğru yazılmış: $\text{Belirsizlik}(B) \le \text{Belirsizlik}(A) + \text{Belirsizlik}(A \implies B)$.
+
+### T85 — Modal aksiyomlar (Genişletilmiş): ``5'' diye yazılan aksiyom aslında B'dir
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_genisletilmis
+
+**Metinde:**
+
+```latex
+\mathbf{5} : \alpha \implies \Box \Diamond \alpha
+```
+
+**Tashih:**
+
+```latex
+\mathbf{5} : \Diamond \alpha \implies \Box \Diamond \alpha, \quad \mathbf{B} : \alpha \implies \Box \Diamond \alpha
+```
+
+**Gerekçe.** $\alpha \implies \Box\Diamond\alpha$ Brouwersche aksiyomu ($\mathbf{B}$, simetrik $R$) iken $\mathbf{5}$ (Öklidyen $R$) $\Diamond\alpha \implies \Box\Diamond\alpha$'dır. İkisi farklı çerçeve şartlarına karşılık gelir. Aynı külliyatın ana nüshasında $\mathbf{5}$ DOĞRU yazılmış; iki metin çelişiyordu.
+
+### T86 — Deontik/Temporal (Mîzân): ``P'' aynı sayfada ÜÇ ayrı şey
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+O P \quad (\text{P ödevdir / mecburdur}), \quad P P \quad (\text{P caizdir / izinlidir}), \quad F P \quad (\text{P memnudur / yasaktır}) \\
+P P &\equiv \neg O \neg P \\
+F P &\equiv O \neg P \\
+```
+
+**Tashih:**
+
+```latex
+\mathrm{O}\varphi \ (\text{ödev}), \quad \mathrm{Pm}\,\varphi \ (\text{caiz}), \quad \mathrm{F}\varphi \ (\text{yasak}) \\
+\mathrm{Pm}\,\varphi &\equiv \neg \mathrm{O} \neg \varphi \\
+\mathrm{F}\varphi &\equiv \mathrm{O} \neg \varphi \\
+```
+
+**Gerekçe.** ``$P$'' bu iki alt bölümde (i) önerme değişkeni, (ii) deontik ``caiz'' işlemcisi ve (iii) temporal ``geçmişte bir an'' işlemcisi olarak kullanılıyor. ``$PP$'' ifadesi bu yüzden okunamaz. Önerme değişkeni $\varphi$'ye, deontik izin $\mathrm{Pm}$'ye alındı.
+
+### T87 — Temporal (Mîzân): ``$HP \equiv \neg P \neg P$'' okunamaz
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+G P \quad (\text{Gelecekte daima P}), \quad F P \quad (\text{Gelecekte bir zaman P}) \\
+H P \quad (\text{Geçmişte daima P}), \quad P P \quad (\text{Geçmişte bir zaman P}) \\
+G P &\equiv \neg F \neg P \\
+H P &\equiv \neg P \neg P \\
+```
+
+**Tashih:**
+
+```latex
+\mathrm{G}\varphi, \ \mathrm{F}\varphi \ (\text{gelecekte daima / bir an}), \quad \mathrm{H}\varphi, \ \mathsf{P}\varphi \ (\text{geçmişte daima / bir an}) \\
+\mathrm{G}\varphi &\equiv \neg \mathrm{F} \neg \varphi \\
+\mathrm{H}\varphi &\equiv \neg \mathsf{P} \neg \varphi \\
+```
+
+**Gerekçe.** T86'daki çakışmanın doğrudan neticesi: ``$\neg P \neg P$'' üç ayrı ``$P$''nin yan yana gelmesidir ve ayrıştırılamaz. Geçmiş-imkân işlemcisi $\mathsf{P}$'ye alınınca kural okunur hâle gelir.
+
+### T88 — Until (Mîzân): Alt sınırsız ``until'' sonsuz geçmişi de kapsar
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+P \, \mathbf{U} \, Q &\iff \exists t (Q(t) \land \forall t' < t, P(t')) \quad (\text{Until / -e Kadar Operatörü})
+```
+
+**Tashih:**
+
+```latex
+\varphi \, \mathbf{U} \, \psi &\iff \exists t \ge t_0 \, \big( \psi(t) \land \forall t' \in [t_0, t), \, \varphi(t') \big) \quad (t_0: \text{şimdiki an})
+```
+
+**Gerekçe.** $\forall t' < t$ alt sınırsızdır; sonsuz geçmişte de $P$'nin sağlanmasını ister. ``-e kadar'' ŞİMDİDEN başlar.
+
+### T89 — Łukasiewicz (Mîzân): Gerektirme ile bağlaçlar birbirinin eşleniği değil
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+v(P \land Q) &= \min(v(P), v(Q)) \\
+v(P \lor Q) &= \max(v(P), v(Q)) \\
+```
+
+**Tashih:**
+
+```latex
+v(P \otimes Q) &= \max(0, v(P) + v(Q) - 1) \quad (\text{KUVVETLİ ve; } \to \text{'nin eşleniği}) \\
+v(P \land Q) = \min(v(P), v(Q)), &\quad v(P \lor Q) = \max(v(P), v(Q)) \quad (\text{zayıf/kafes bağlaçları}) \\
+```
+
+**Gerekçe.** $v(P \to Q) = \min(1, 1-v(P)+v(Q))$ Łukasiewicz T-normunun KALINTISIDIR (residuum). Kalıntı bağıntısı $v(A \otimes B) \le v(C) \iff v(A) \le v(B \to C)$ ancak $\otimes$ kuvvetli ``ve'' iken sağlanır; $\min$ ile SAĞLANMAZ. Yazıldığı hâliyle gerektirme ile bağlaçlar aynı cebre ait değildir. Zayıf bağlaçlar da Łukasiewicz'de vardır, fakat eşlenik olan onlar değildir.
+
+### T90 — Product mantığı (Mîzân): $v(P)=0$'da tanımsız
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* mizan_i_muhakemat
+
+**Metinde:**
+
+```latex
+v(P \implies Q) &= \min\left(1, \frac{v(Q)}{v(P)}\right)
+```
+
+**Tashih:**
+
+```latex
+v(P \implies Q) &= \begin{cases} 1, & v(P) \le v(Q) \\ v(Q)/v(P), & v(P) > v(Q) \end{cases} \quad (v(P) = 0 \Rightarrow 1)
+```
+
+**Gerekçe.** $v(P) = 0$ iken bölme tanımsızdır; oysa çarpım mantığında $0 \to Q$ doğrudur ($=1$). Kalıntı biçiminde yazılınca hem tanım kümesi tamamlanır hem $\min$ gereksizleşir.
+
+### T91 — Stoacı 4. usul (Zeyl): Usul yanlış adlandırılmış
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+\subsection{4. Dördüncü Kanıtlanamaz Usul (Modus Tollendo Ponens I)}
+```
+
+**Tashih:**
+
+```latex
+\subsection{4. Dördüncü Kanıtlanamaz Usul (Modus Ponendo Tollens II)}
+```
+
+**Gerekçe.** Dördüncü usul ``$P \veebar Q$, $P$; öyleyse $\neg Q$''dur: bir tarafı KOYARAK öbürünü KALDIRIR, yani \textit{ponendo tollens}. \textit{Tollendo ponens} ise kaldırarak koyar --- o da beşinci usuldür ve orada doğru adlandırılmış.
+
+### T92 — Heyting cebri (Zeyl): Meta-``ve'' ile kafes ``$\wedge$''i karışmış; ad yanlış
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+A \le B \land A \le C \implies A \le B \land C \qquad &(\text{Ekok})
+```
+
+**Tashih:**
+
+```latex
+(A \le B) \ \text{ve} \ (A \le C) \iff A \le B \land C \qquad &(\text{en büyük alt sınırın evrensel hususiyeti})
+```
+
+**Gerekçe.** Soldaki ``$\land$'' meta-seviyede ``ve'', sağdaki ise kafes buluşmasıdır; aynı simge iki ayrı seviyede kullanılınca ifade ayrıştırılamaz. Ayrıca bağıntı tek yönlü değil, ÇİFT yönlüdür --- buluşmayı tanımlayan evrensel hususiyet budur. ``Ekok'' (en küçük ortak kat) ise alâkasız bir addır; burada söz konusu olan en büyük ALT sınırdır.
+
+### T93 — Kuantum mantık (Zeyl): Dağılma her zaman BOZULMAZ; genel bağıntı bir eşitsizliktir
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+A \land (B \lor C) &\neq (A \land B) \lor (A \land C) \quad (\text{Dağılma Geçersizdir})
+```
+
+**Tashih:**
+
+```latex
+(A \land B) \lor (A \land C) &\le A \land (B \lor C) \quad (\text{dâima}); \quad \text{eşitlik GEREKMEZ (dağılma geçersiz)}
+```
+
+**Gerekçe.** ``$\neq$'' yazmak ``her zaman eşit değildir'' demektir; oysa uyumlu (commuting) alt uzaylarda eşitlik SAĞLANIR. Ortolatislerde her zaman geçerli olan bağıntı yukarıdaki eşitsizliktir; kuantum mantığını klasikten ayıran şey, ters yönün genelde sağlanmamasıdır.
+
+### T94 — Dombi T-normu (Zeyl): $a=0$ yahut $b=0$'da tanımsız
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+T_{D}(a, b; p) = \frac{1}{1 + \left( \left(\frac{1-a}{a}\right)^p + \left(\frac{1-b}{b}\right)^p \right)^{1/p}}, \quad p > 0
+```
+
+**Tashih:**
+
+```latex
+T_{D}(a, b; p) = \begin{cases} 0, & a = 0 \ \text{yahut} \ b = 0 \\ \dfrac{1}{1 + \left( \left(\frac{1-a}{a}\right)^p + \left(\frac{1-b}{b}\right)^p \right)^{1/p}}, & \text{aksi hâlde} \end{cases}, \quad p > 0
+```
+
+**Gerekçe.** $a = 0$'da $(1-a)/a$ tanımsızdır. T-norm olabilmesi için $T(0,b) = 0$ şartı zaten gereklidir; sınır hâli açıkça yazılmalıdır.
+
+### T95 — Schweizer--Sklar (Zeyl): Verilen biçim yalnız $p>0$ için doğru
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+T_{SS}(a, b; p) = \left( \max(0, a^p + b^p - 1) \right)^{1/p}, \quad p \neq 0
+```
+
+**Tashih:**
+
+```latex
+T_{SS}(a, b; p) = \left( \max(0, a^p + b^p - 1) \right)^{1/p}, \quad p > 0 \qquad \left( p < 0: \ (a^p + b^p - 1)^{1/p} \right)
+```
+
+**Gerekçe.** $p < 0$ iken $a^p + b^p - 1 > 0$ dâima sağlanır ve $\max(0,\cdot)$ gereksizleşir; dahası $1/p < 0$ olduğundan kesme yanlış dala yönlendirir. Ailenin negatif kolu ayrı yazılır.
+
+### T96 — Adams (Zeyl): $P(A) = 0$'da şartlı olasılık tanımsız
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* mizan_zeyl
+
+**Metinde:**
+
+```latex
+P(A \implies B) &\coloneqq P(B \mid A) = \frac{P(A \land B)}{P(A)} \quad (\text{Adams Şartlı Olasılık Kuralı})
+```
+
+**Tashih:**
+
+```latex
+P(A \implies B) &\coloneqq P(B \mid A) = \frac{P(A \land B)}{P(A)}, \quad P(A) > 0 \quad (\text{Adams tezi})
+```
+
+**Gerekçe.** Adams tezi ancak öncül olumlu olasılıklıyken kurulur; $P(A) = 0$ hâlinde şartlı olasılık tanımsızdır ve bir sonraki satırdaki belirsizlik sınırı da düşer.
+
+### T97 — Token Uzayları §Glue: SAĞLAMLIK HATASI: hcomp $u_0$'a indirgenmez
+
+*tür:* sağlamlık &nbsp;·&nbsp; *dosya:* nefs_token_uzaylari
+
+**Metinde:**
+
+```latex
+\text{hcomp}^i \, \mathcal{X}_{w_k} \, [\dots] \, u_0 &\longrightarrow u_0 \quad (\text{Ayrık Lif İç Dolgu İndirgemesi})
+```
+
+**Tashih:**
+
+```latex
+\text{hcomp}^i \, \mathcal{X}_{w_k} \, [\varphi \mapsto u] \, u_0 &\equiv u(1) \ \text{ on } \varphi; \quad \varphi = \bot \Rightarrow \equiv u_0 \quad (\text{SINIR şartı})
+```
+
+**Gerekçe.** Bu kural SAĞLAM DEĞİLDİR ve depoda makineyle çürütüldü. $\text{hcomp}$'un tarifi gereği $\varphi$ üzerinde $u$'ya eşit olması gerekir; $u_0$'a indirgemek tam olarak o sınır şartını kırar. \texttt{omega\_kategori} çekirdeğinde bu kural bir ara kurulmuştu ve neticeleri ölçüldü: \texttt{isoToEquiv}'in kare inşası bozuldu ($\texttt{fill0 1 1}$ $x_0$ yerine $g(f\,x_0)$ verdi) ve $\mathbb{Z}$ üzerindeki bütün dolgular çöktü. Kaldırıldı; yerine kurucuya iten YAPISAL kural konuldu. Metinde ``ayrık lif'' gerekçesi de tutmaz: liflerin ayrıklığı $\varphi$ boş olmadıkça dolguyu tabana indirmez.
+
+### T98 — Token Uzayları §Kan: Bitişiklik üçlüsünde $F$ fazladan
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* nefs_token_uzaylari
+
+**Metinde:**
+
+```latex
+\text{Lan}_{f_{i,j}} F &\dashv f_{i,j}^* \dashv \text{Ran}_{f_{i,j}} F \quad (\text{Üçlü Bitişiklik / Adjoint Triple})
+```
+
+**Tashih:**
+
+```latex
+\text{Lan}_{f_{i,j}} &\dashv f_{i,j}^* \dashv \text{Ran}_{f_{i,j}} \quad (\text{funktorlar arası üçlü bitişiklik})
+```
+
+**Gerekçe.** Bitişiklik FUNKTORLAR arasındadır, funktorun bir değerdeki çıktısı arasında değil. $\text{Lan}_f F$ bir funktor değil, bir nesnedir; $\dashv$'in solunda duramaz.
+
+### T99 — Token Uzayları §Kan: Birim ile eş-birim bu sırayla bileşemez
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* nefs_token_uzaylari
+
+**Metinde:**
+
+```latex
+\text{Coeff}_{\text{Kan}} &= \text{Tr}(\eta_{\text{unit}} \circ \varepsilon_{\text{counit}})
+```
+
+**Tashih:**
+
+```latex
+(\varepsilon \ast \text{Lan}_f) \cdot (\text{Lan}_f \ast \eta) &= \mathrm{id}_{\text{Lan}_f}, \quad (f^* \ast \varepsilon) \cdot (\eta \ast f^*) = \mathrm{id}_{f^*} \quad (\text{üçgen özdeşlikleri})
+```
+
+**Gerekçe.** $\eta : \mathrm{id} \Rightarrow f^* \circ \text{Lan}_f$ ile $\varepsilon : \text{Lan}_f \circ f^* \Rightarrow \mathrm{id}$ doğrudan bileşemez: birinin hedefi öbürünün kaynağı değildir. Bitişikliği karakterize eden bağıntılar ÜÇGEN ÖZDEŞLİKLERİDİR ve yatay ($\ast$) ile dikey ($\cdot$) bileşimi ayırarak yazılır. Bir de ``$\text{Tr}$'' burada tanımsızdır; iz bir doğal dönüşümün değil, bir endomorfizmanın niteliğidir.
+
+### T100 — Token Uzayları §1-Morfizm: Tek yanlı ters denklik vermez
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* nefs_token_uzaylari
+
+**Metinde:**
+
+```latex
+\text{Diffeo}(\mathcal{X}_{w_i} \simeq \mathcal{X}_{w_j}) &\iff \exists f_{i,j}, f_{j,i} \quad \text{öyle ki } f_{j,i} \circ f_{i,j} \simeq \text{id}
+```
+
+**Tashih:**
+
+```latex
+\text{Diffeo}(\mathcal{X}_{w_i} \simeq \mathcal{X}_{w_j}) &\iff \exists f_{i,j}, f_{j,i}: \ f_{j,i} \circ f_{i,j} \simeq \mathrm{id}_{\mathcal{X}_{w_i}} \ \textbf{ve} \ f_{i,j} \circ f_{j,i} \simeq \mathrm{id}_{\mathcal{X}_{w_j}}
+```
+
+**Gerekçe.** Yalnız bir bileşke birime homotop ise $f_{i,j}$ ancak bir BÖLÜMLENMİŞ monomorfizmadır (section/retract); denklik değildir. Denklik iki yanlı tersi ister.
+
+### T101 — Token Uzayları §Glue: Lif hacminin çarpım olması TRİVİALLİK ister
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* nefs_token_uzaylari
+
+**Metinde:**
+
+```latex
+\text{Vol}(\mathbf{Fib}_{\text{cümle}}) &= \int_{\mathcal{S}_{\text{cümle}}} d\text{vol}_{\text{cümle}} = \prod_{k=1}^N \text{Vol}(\mathbf{Fib}_{w_k})
+```
+
+**Tashih:**
+
+```latex
+\mathcal{S}_{\text{cümle}} \cong \textstyle\prod_k \mathbf{Fib}_{w_k} \ (\text{TRİVİAL demet}) \ &\Rightarrow \ \text{Vol}(\mathbf{Fib}_{\text{cümle}}) = \prod_{k=1}^N \text{Vol}(\mathbf{Fib}_{w_k})
+```
+
+**Gerekçe.** Hacmin çarpım olması, demetin çarpım demeti (trivial) olmasına bağlıdır. Oysa aynı bölüm cümleyi $\text{glue}$ ile, yani AŞİKÂR OLMAYAN bir yapıştırmayla kuruyor; bükülü bir demette lif hacimleri çarpılmaz. İki satır birbiriyle çelişiyor. Şart açıkça yazılınca iddia geçerli hâle gelir.
+
+### T102 — Sorgu Uzayı §2: Liouville akışı hacmi KORUR; burada değişiyor
+
+*tür:* işaret hatası &nbsp;·&nbsp; *dosya:* nefs_sorgu_uzayi, mantik_noronlari
+
+**Metinde:**
+
+```latex
+\frac{d}{dt} \text{Vol}(L_S(\mathcal{X}_{\text{şüphe}})) &= -\int_{L_S(\mathcal{X})} \left( \Delta \mathcal{F}_{\text{iç}} + \|\nabla \mathcal{F}_{\text{iç}}\|^2 \right) d\text{vol}_g \quad (\text{Liouville Akışı})
+```
+
+**Tashih:**
+
+```latex
+\frac{d}{dt} \text{Vol}(L_S(\mathcal{X}_{\text{şüphe}})) &= -\int_{L_S(\mathcal{X})} \Delta \mathcal{F}_{\text{iç}} \, d\text{vol}_g \quad (\text{GRADYAN akışı; Liouville DEĞİL})
+```
+
+**Gerekçe.** İki kusur. (i) \textbf{Ad}: Liouville teoremi Hamilton akışının hacmi KORUDUĞUNU söyler ($\mathrm{div}\, X_{\mathcal{H}} = 0$, $d\text{Vol}/dt = 0$) --- nitekim aynı yazarın mantık nöronları risalesi bunu doğru yazıyor. Hacmi değiştiren bir akışa Liouville denemez. (ii) \textbf{Formül}: hız alanı $v = -\nabla\mathcal{F}$ olan bir akışta hacmin türevi $\int \mathrm{div}(v) = -\int \Delta\mathcal{F}$'dir; $\|\nabla\mathcal{F}\|^2$ terimi buradan gelmez (o, ağırlıklı hacim $\int e^{-\mathcal{F}}$ alınırsa doğar ve o zaman da işareti ARTIDIR).
+
+### T103 — Sorgu Uzayı §2: Hacmi sonsuza giden uzay çürütülmüş değil, ASKIDADIR
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* nefs_sorgu_uzayi
+
+**Metinde:**
+
+```latex
+\text{Bâtıl / Cerh (Uzay Yırtılması)}, & \mathcal{R}_{\text{karantina\_büzülme}} \to \infty \\
+\text{Tahkik / Tasdik (Noktaya Büzülme)}, & \mathcal{R}_{\text{karantina\_büzülme}} \to 0 \\
+\text{Askıda (Şüphe Uzayı Kalıcı)}, & \text{Diğer}
+```
+
+**Tashih:**
+
+```latex
+\text{Tahkik / Tasdik (noktaya büzülme)}, & \mathcal{R}_{\text{karantina\_büzülme}} \to 0 \\
+\text{Bâtıl / Cerh}, & \Delta_{\text{tenakuz}} > \tau_{\text{fıtrat}} \ \text{ hâlâ} \ (t = \tau_{\text{teemmül}}) \\
+\text{Askıda}, & \text{aksi hâlde (hacim büyüyor yahut sabit)}
+```
+
+**Gerekçe.** ``Büzülme'' adı taşıyan bir büyüklüğün sonsuza gitmesi zaten çelişkili; asıl kusur ise mânâdadır: şüphe uzayının hacminin BÜYÜMESİ, o bilginin çürütüldüğü değil, belirsizliğin arttığı anlamına gelir --- yani tam olarak ``askıda''dır. Cerh, hacim ölçüsünden değil, tenakuzun eşiğin üstünde KALMASINDAN çıkar. Yazıldığı hâliyle üçüncü dal da fiilen boş kalıyordu.
+
+### T104 — Sorgu Uzayı §Kesme: $hLevel\,0$ çıktıyı bir noktaya çökertir
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* nefs_sorgu_uzayi
+
+**Metinde:**
+
+```latex
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0}\left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \mathcal{S}_{\text{yeni}} \right) \right) \in \mathcal{N}
+```
+
+**Tashih:**
+
+```latex
+N_{\text{kebîr}} &= \big\| \text{Lan}_{\text{Lisan}} \big( \mathcal{R} \triangleright \mathcal{S}_{\text{yeni}} \big) \big\|_0 = \text{Truncate}_{hLevel\,2}(\cdots) \in \mathcal{N} \quad (\text{KÜME kesmesi})
+```
+
+**Gerekçe.** Bu külliyatın kendi kullandığı hlevel sayımında (mantık nöronları risalesi, \S2.1) $hLevel\,0$ BÜZÜLEBİLİR, $hLevel\,1$ önerme, $hLevel\,2$ kümedir. O hâlde $hLevel\,0$'a kesmek çıktıyı tek bir noktaya indirir ve korunmaya çalışılan bilginin TAMAMINI yok eder. $n$-tip gösteriminde küme kesmesi $\|\cdot\|_0$, hlevel gösteriminde $hLevel\,2$'dir.
+
+### T105 — Token Uzayları §Glue: $hLevel\,0$ çıktıyı bir noktaya çökertir
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* nefs_token_uzaylari
+
+**Metinde:**
+
+```latex
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0}\left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \mathcal{S}_{\text{cümle}} \right) \right) \in \mathcal{N}
+```
+
+**Tashih:**
+
+```latex
+N_{\text{kebîr}} &= \big\| \text{Lan}_{\text{Lisan}} \big( \mathcal{R} \triangleright \mathcal{S}_{\text{cümle}} \big) \big\|_0 = \text{Truncate}_{hLevel\,2}(\cdots) \in \mathcal{N}
+```
+
+**Gerekçe.** Aynı sebep (bkz. T104).
+
+### T106 — Bütünsel İdrak §3: $hLevel\,0$ çıktıyı bir noktaya çökertir
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* nefs_butunsel_idrak
+
+**Metinde:**
+
+```latex
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0} \left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R}_{\text{küllî}} \triangleright \mathcal{S}_{\text{hitabet}} \right) \right) \in \mathcal{N}
+```
+
+**Tashih:**
+
+```latex
+N_{\text{kebîr}} &= \big\| \text{Lan}_{\text{Lisan}} \big( \mathcal{R}_{\text{küllî}} \triangleright \mathcal{S}_{\text{hitabet}} \big) \big\|_0 = \text{Truncate}_{hLevel\,2}(\cdots) \in \mathcal{N}
+```
+
+**Gerekçe.** Aynı sebep (bkz. T104).
+
+### T107 — Mütedahile §Aktarım: $hLevel\,0$ çıktıyı bir noktaya çökertir
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* mizan_mutedahile
+
+**Metinde:**
+
+```latex
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0} \left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \mathcal{S}_{\text{birleşik}} \right) \right) \in \mathcal{N}
+```
+
+**Tashih:**
+
+```latex
+N_{\text{kebîr}} &= \big\| \text{Lan}_{\text{Lisan}} \big( \mathcal{R} \triangleright \mathcal{S}_{\text{birleşik}} \big) \big\|_0 = \text{Truncate}_{hLevel\,2}(\cdots) \in \mathcal{N}
+```
+
+**Gerekçe.** Aynı sebep (bkz. T104).
+
+### T108 — Mantık Nöronları §2.1: Homotopi grubu KÜME kesmesidir
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* mantik_noronlari
+
+**Metinde:**
+
+```latex
+\pi_n(\mathcal{A}, a_0) &= \text{Truncate}_{hLevel 0}(\Omega^n(\mathcal{A}, a_0)) \quad (\text{Homotopi Grubu})
+```
+
+**Tashih:**
+
+```latex
+\pi_n(\mathcal{A}, a_0) &= \big\| \Omega^n(\mathcal{A}, a_0) \big\|_0 = \text{Truncate}_{hLevel\,2}(\Omega^n(\mathcal{A}, a_0)) \quad (\text{KÜME kesmesi})
+```
+
+**Gerekçe.** Bu satır, üç satır yukarıdaki kendi tanımıyla çelişiyor: aynı bölüm $\text{isContr}(A) \iff \dots$ ($h$-Level 0) ve $\text{isSet}(A) \iff \dots$ ($h$-Level 2) diye DOĞRU yazıyor. $hLevel\,0$'a kesilirse her homotopi grubu aşikâr gruba çöker. Homotopi grupları döngü uzayının KÜME kesmesidir.
+
+### T109 — Mantık Nöronları §7.2: $hLevel\,0$ çıktıyı bir noktaya çökertir
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* mantik_noronlari
+
+**Metinde:**
+
+```latex
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0}\left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \mathcal{S}_{\text{yeni}} \right) \right) \in \mathcal{N}
+```
+
+**Tashih:**
+
+```latex
+N_{\text{kebîr}} &= \big\| \text{Lan}_{\text{Lisan}} \big( \mathcal{R} \triangleright \mathcal{S}_{\text{yeni}} \big) \big\|_0 = \text{Truncate}_{hLevel\,2}(\cdots) \in \mathcal{N}
+```
+
+**Gerekçe.** Aynı sebep (bkz. T104, T108).
+
+### T110 — Mantık Nöronları §3.1: Türetilmiş kritik yerde iki haritanın hangisi olduğu yazılmamış
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* mantik_noronlari
+
+**Metinde:**
+
+```latex
+\mathbf{R}\text{Crit}(f) &\coloneqq \mathcal{X} \times_{\mathcal{T}^*\mathcal{X}} \mathcal{X} \quad (\text{Türetilmiş Kritik Alt-Uzay / Locus})
+```
+
+**Tashih:**
+
+```latex
+\mathbf{R}\text{Crit}(f) &\coloneqq \mathcal{X} \times^{h}_{df, \, \mathcal{T}^*\mathcal{X}, \, 0} \mathcal{X} \quad (df \text{ ile SIFIR kesitinin homotopi lif çarpımı})
+```
+
+**Gerekçe.** Lif çarpımının hangi iki harita üzerinden alındığı yazılmazsa nesne belirsizdir; ve ``türetilmiş'' olması için çarpımın HOMOTOPİ lif çarpımı olması şarttır (bir sonraki satırdaki $\otimes^{\mathbf{L}}$ zaten bunu söylüyor). Kritik yer, $df$ ile sıfır kesitinin kesişmesidir.
+
+### T111 — Mantık Nöronları §3.1: Serbest enerji $\ge 0$ değildir
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mantik_noronlari
+
+**Metinde:**
+
+```latex
+\mathcal{F}(X, S) &= \mathbb{E}_{q(S)} \left[ \ln q(S) - \ln p(X, S) \right] \ge 0 \quad (\text{Serbest Enerji / Tenakuz})
+```
+
+**Tashih:**
+
+```latex
+\mathcal{F}(X, S) &= \text{KL}\big( q(S) \,\|\, p(S \mid X) \big) - \ln p(X) \ \ge \ -\ln p(X) \quad (\text{değişimsel serbest enerji})
+```
+
+**Gerekçe.** Değişimsel serbest enerji $-\ln p(X)$ ile alttan sınırlıdır, $0$ ile değil; $\mathcal{F} \ge 0$ ancak $p(X) \le 1$ iken, yani AYRIK $X$ için doğrudur ve yoğunluklarda yanlıştır. Negatif olmayan büyüklük KL terimidir.
+
+### T112 — Fıtrî Tahsil §1: Serbest enerji $\ge 0$ değildir
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* nefs_fitri_tahsil
+
+**Metinde:**
+
+```latex
+\mathcal{F}_{\text{iç}}(X_t, S_t) &= \mathbb{E}_{q(S)} \left[ \ln q(S_t) - \ln p(X_t, S_t) \right] \ge 0 \quad (\text{Serbest Enerji / İç Tenakuz})
+```
+
+**Tashih:**
+
+```latex
+\mathcal{F}_{\text{iç}}(X_t, S_t) &= \text{KL}\big( q(S_t) \,\|\, p(S_t \mid X_t) \big) - \ln p(X_t) \ \ge \ -\ln p(X_t)
+```
+
+**Gerekçe.** Aynı sebep (bkz. T111).
+
+### T113 — Mantık Nöronları §3.1: ICP kesişimi YORDAYICI KÜMELER üzerinden alınır
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* mantik_noronlari
+
+**Metinde:**
+
+```latex
+\bigcap_{e \in \mathcal{E}} \text{Supp}\left( P_e(Y \mid X_{\text{Sâbit}}) \right) &= X_{\text{Hakiki\_İllet}} \quad (\text{ICP - Invariant Causal Prediction})
+```
+
+**Tashih:**
+
+```latex
+S^{\star} = \bigcap \big\{ S \subseteq \{1,\dots,p\} : P_e(Y \mid X_S) \ \text{her } e \in \mathcal{E} \text{ için AYNI} \big\} &\subseteq \text{PA}(Y) \quad (\text{ICP})
+```
+
+**Gerekçe.** Desteklerin kesişimi bir SONUÇ kümesi verir; oysa aranan bir DEĞİŞKEN kümesidir. ICP (Peters--Bühlmann--Meinshausen) kabul edilen yordayıcı kümelerini kesiştirir ve netice gerçek ebeveyn kümesinin ALT kümesidir --- eşitlik değil, kapsama.
+
+### T114 — Mantık Nöronları §6.2: Zincir kuralı ile monoidallik tek denkleme sıkışmış
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mantik_noronlari
+
+**Metinde:**
+
+```latex
+(g \circ f)^*(T_1 \otimes_{\mathcal{O}} T_2) &\equiv f^* T_1 \otimes_{\mathcal{O}} f^* T_2 \quad (\text{Strict Refl Monoidal Aktarım})
+```
+
+**Tashih:**
+
+```latex
+(g \circ f)^* &\equiv f^* \circ g^* \ (\text{zincir kuralı}); \qquad f^*(T_1 \otimes_{\mathcal{O}} T_2) \equiv f^* T_1 \otimes_{\mathcal{O}} f^* T_2 \ (\text{monoidallik})
+```
+
+**Gerekçe.** Sol taraf $g \circ f$ boyunca, sağ taraf yalnız $f$ boyunca taşıyor; eşitlik olduğu gibi YANLIŞTIR. Bunlar iki AYRI kanundur ve ikisi de bu depoda TANIMSAL olarak sağlanır, yani \texttt{refl} ile ispatlanır (\texttt{omega\_kategori}: \texttt{test\_zincir\_kurali\_tanimsal}).
+
+### T115 — Mütedahile §Aktarım: Zincir kuralı ile monoidallik tek denkleme sıkışmış
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_mutedahile
+
+**Metinde:**
+
+```latex
+(g \circ f)^* (T_1 \otimes_{\mathcal{O}} T_2) &\equiv f^* T_1 \otimes_{\mathcal{O}} f^* T_2 \quad (\text{Strict Refl Monoidal Taşınım})
+```
+
+**Tashih:**
+
+```latex
+(g \circ f)^* &\equiv f^* \circ g^* \ (\text{zincir kuralı}); \qquad f^*(T_1 \otimes_{\mathcal{O}} T_2) \equiv f^* T_1 \otimes_{\mathcal{O}} f^* T_2 \ (\text{monoidallik})
+```
+
+**Gerekçe.** Aynı sebep (bkz. T114).
+
+### T116 — Fıtrî Tahsil §2: Makam parçalanışında BOŞLUK
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* nefs_fitri_tahsil
+
+**Metinde:**
+
+```latex
+\text{Şek (Şüphe)}, & \Delta_{\text{tenakuz}} > 0 \;\lor\; |P_{\text{idrak}} - 0.5| < \epsilon_{\text{şek}}
+```
+
+**Tashih:**
+
+```latex
+\text{Şek (Şüphe)}, & \Delta_{\text{tenakuz}} > 0 \;\lor\; |P_{\text{idrak}} - 0.5| < \epsilon_{\text{şek}} \\
+\text{Vehim (aleyhte zan)}, & \Delta_{\text{tenakuz}} = 0 \;\land\; P_{\text{idrak}} < 0.5 - \epsilon_{\text{şek}}
+```
+
+**Gerekçe.** Yazılan üç dal, $\Delta_{\text{tenakuz}} = 0$ VE $P_{\text{idrak}} < 0{,}5 - \epsilon_{\text{şek}}$ hâlini kapsamıyor; orada $\text{Makam}$ tanımsız kalıyor. Bu, tenakuz bulunmadığı hâlde delilin ALEYHTE olduğu durumdur ve klasik adı vehimdir. Eklenince parçalanış tam ve ayrık olur.
+
+### T117 — Fıtrî Tahsil §3: Tevafuk toplamı her çifti İKİ kere sayıyor
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* nefs_fitri_tahsil
+
+**Metinde:**
+
+```latex
+\text{Tevafuk}(X_t) &= \sum_{k=1}^K \sum_{l \ne k}^K \text{CosSim}_{\mathbf{H}}\left( f_{\text{kanal\_k}}(X_t), f_{\text{kanal\_l}}(X_t) \right) \cdot \mathbb{I}\left( \text{Kanal}_k \perp \text{Kanal}_l \right)
+```
+
+**Tashih:**
+
+```latex
+\text{Tevafuk}(X_t) &= \sum_{1 \le k < l \le K} \text{CosSim}_{\mathbf{H}}\left( f_{\text{kanal\_k}}(X_t), f_{\text{kanal\_l}}(X_t) \right) \cdot \mathbb{I}\left( E_k \perp\!\!\!\perp E_l \mid H \right)
+```
+
+**Gerekçe.** İki kusur. (i) $\text{CosSim}$ simetrik olduğundan $\sum_k \sum_{l \ne k}$ her çifti iki kere sayar ve tevafuku iki katına çıkarır. (ii) Delilin kuvvetlenmesi için gereken şart MARJİNAL bağımsızlık değil, hipotez verildiğinde ŞARTLI bağımsızlıktır --- Bayes güncellemesinin geçerli olduğu şart budur.
+
+### T118 — Fıtrî Tahsil §8: Olasılığın varyansı değil, $S_t$'nin şartlı varyansı
+
+*tür:* tanımsız ifade &nbsp;·&nbsp; *dosya:* nefs_fitri_tahsil
+
+**Metinde:**
+
+```latex
+\mathbf{K}_{\text{ihtiyat}} &= S_t + \mu_{\text{temkin}} \cdot \sqrt{\text{Var}(P(S_t \mid Q_{\text{havuz}}))}
+```
+
+**Tashih:**
+
+```latex
+\mathbf{K}_{\text{ihtiyat}} &= S_t + \mu_{\text{temkin}} \cdot \sqrt{\text{Var}_{P(\cdot \mid Q_{\text{havuz}})}[S_t]}
+```
+
+**Gerekçe.** ``Bir olasılığın varyansı'' tanımsızdır; kastedilen $S_t$'nin şartlı dağılım altındaki varyansıdır.
+
+### T119 — Bütünsel İdrak §1: Cauchy formülünde $1/2\pi i$ çarpanı düşmüş
+
+*tür:* boyut uyuşmazlığı &nbsp;·&nbsp; *dosya:* nefs_butunsel_idrak
+
+**Metinde:**
+
+```latex
+\mathbf{\Psi}_{\text{küllî}}(W) &\coloneqq \oint_{\partial \Omega} \frac{\Phi_{\text{metin}}(z)}{z - z_0} dz \in \mathbf{H} \quad (\text{Cauchy İntegral Formülü ile Metnin Tek Anda İdrakı})
+```
+
+**Tashih:**
+
+```latex
+\mathbf{\Psi}_{\text{küllî}}(W) &\coloneqq \frac{1}{2\pi i} \oint_{\partial \Omega} \frac{\Phi_{\text{metin}}(z)}{z - z_0} \, dz = \Phi_{\text{metin}}(z_0) \quad (\text{Cauchy integral formülü})
+```
+
+**Gerekçe.** Cauchy integral formülü $f(z_0) = \frac{1}{2\pi i}\oint \frac{f(z)}{z-z_0}dz$'dir. $1/2\pi i$ çarpanı olmadan sol taraf $f(z_0)$'a eşit olmaz, $2\pi i$ katı çıkar. Formülün bütün gücü o eşitliktedir.
+
+### T120 — Bütünsel İdrak §1: Lif UZAYI karmaşık bir sayıyla çarpılamaz
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* nefs_butunsel_idrak
+
+**Metinde:**
+
+```latex
+\Phi_{\text{metin}}(z) &= \sum_{k=1}^N \mathbf{Fib}_{w_k} \cdot \exp\left( -2\pi i \, k \cdot z \right) \quad (\text{Bütün Metnin Frekans Manifoldu})
+```
+
+**Tashih:**
+
+```latex
+\Phi_{\text{metin}}(z) &= \sum_{k=1}^N c_{w_k} \exp\left( -2\pi i \, k z \right), \quad c_{w_k} \in \mathbb{C}^d \ (\mathbf{Fib}_{w_k}\text{'nın kesiti})
+```
+
+**Gerekçe.** $\mathbf{Fib}_{w_k}$ bir UZAYDIR; karmaşık bir üstel ile çarpılamaz ve toplanamaz. Holomorf bir fonksiyon kurmak için lifin sayısal bir KESİTİ (bir katsayı vektörü) alınmalıdır. Bu düzeltilmeden bir sonraki satırdaki Cauchy integrali de tanımsız kalır.
+
+### T121 — Bütünsel İdrak §2: 40 veçhe hacmi çarpım olması TRİVİALLİK ister
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* nefs_butunsel_idrak
+
+**Metinde:**
+
+```latex
+\text{ManaHacmi}(w) &= \int_{\mathbf{Fib}_w} d\text{vol}_{1} \wedge d\text{vol}_{2} \dots \wedge d\text{vol}_{40} = \prod_{j=1}^{40} \text{Vol}(\mathcal{X}_j)
+```
+
+**Tashih:**
+
+```latex
+\mathbf{Fib}_w \cong \textstyle\prod_{j=1}^{40} \mathcal{X}_j \ (\text{TRİVİAL demet}) \ &\Rightarrow \ \text{ManaHacmi}(w) = \prod_{j=1}^{40} \text{Vol}(\mathcal{X}_j)
+```
+
+**Gerekçe.** Farklı çarpanlardan gelen tepe formların dış çarpımı, ancak lif ÇARPIM uzayı ise hacim formunu verir; bükülü bir demette hacimler çarpılmaz (bkz. T101).
+
+### T122 — Bütünsel İdrak §2: ``Tam ittisâl'' şartı fiilen AŞİKÂRDIR
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* nefs_butunsel_idrak
+
+**Metinde:**
+
+```latex
+\mathbf{Coherence}_{\text{40\_veçhe}} &= \mathbf{1} \iff \forall i, j, \, \mathbf{Hom}_{\mathbf{H}}(\mathcal{X}_i, \mathcal{X}_j) \neq \emptyset \quad (\text{Veçheler Arası Tam İttisal})
+```
+
+**Tashih:**
+
+```latex
+\mathbf{Coherence}_{\text{40\_veçhe}} &= \mathbf{1} \iff \forall i, j, k: \ f_{jk} \circ f_{ij} \simeq f_{ik} \quad (\text{eş-devir/cocycle şartı})
+```
+
+**Gerekçe.** Bir toposta uç nesne vardır; hedefin bir küresel noktası olduğu her an $\mathbf{Hom}(\mathcal{X}_i,\mathcal{X}_j) \ne \emptyset$ sağlanır. Yani şart neredeyse hiçbir şey söylemez; ``tam ittisâl'' gibi kuvvetli bir iddianın karşılığı olamaz. Veçhelerin gerçekten tutarlı biçimde birbirine bağlanması, geçiş haritalarının BİLEŞİM altında uyuşmasıdır.
+
+### T123 — Mütedahile §Barbara: Kan uzantısı bir ÖNERME boyunca alınamaz
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* mizan_mutedahile
+
+**Metinde:**
+
+```latex
+\mathcal{Q}_{\text{Barbara}} &= (\text{Lan}_{P_2} P_1)(S) \in \text{QCoh}(S \times P) \quad (\text{Sol Kan Uzantısı ile Çıkarım})
+```
+
+**Tashih:**
+
+```latex
+\mathcal{Q}_{\text{Barbara}} &= \iota_{MP} \circ \iota_{SM} : S \hookrightarrow P \quad (\text{alt nesne kafesinde GEÇİŞLİLİK; bileşke})
+```
+
+**Gerekçe.** Kan uzantısı bir FUNKTOR boyunca alınır; $P_2$ ise bir önermedir (bir alt nesne / doğruluk değeri), funktor değildir. Barbara'nın kategorik karşılığı zaten çok daha sadedir: $S \hookrightarrow M \hookrightarrow P$ monomorfizmalarının BİLEŞİMİ, yani alt nesne kafesindeki $\le$ bağıntısının geçişliliği. Kan uzantısına ihtiyaç yoktur ve zorlanması tip hatası doğurur.
+
+### T124 — Mütedahile §İstikra: Tam tümevarım TÜKETİCİ sayım ister
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_mutedahile
+
+**Metinde:**
+
+```latex
+\mathcal{M}_{\text{Tamİstikra}} &\coloneqq \varprojlim_{i \in \{1,\dots,n\}} \{ S_i \in K \mid P(S_i) \} \implies \forall x \in K, \, P(x)
+```
+
+**Tashih:**
+
+```latex
+\mathcal{M}_{\text{Tamİstikra}} &\coloneqq \textstyle\prod_{i=1}^n \{ S_i \mid P(S_i) \} \ \land \ \{S_1,\dots,S_n\} = K \ \implies \ \forall x \in K, \, P(x)
+```
+
+**Gerekçe.** ``Tam'' tümevarımı ``nâkıs''tan ayıran şey, örneklemin kümenin TAMAMI olmasıdır; bu şart yazılmazsa çıkarım geçersizdir. Ayrıca ayrık sonlu bir indis üzerindeki ters limit çarpımdır --- ters limit gösterimi burada fazladan bir yapı ima ediyor.
+
+### T125 — Mütedahile §İstikra: Güven, örneklenen ORANA bağlıdır
+
+*tür:* mantıkî denklik hatası &nbsp;·&nbsp; *dosya:* mizan_mutedahile
+
+**Metinde:**
+
+```latex
+P_{\text{güven}}(\mathcal{M}_{\text{Eksikİstikra}}) &= 1 - \exp\left( -\lambda_{\text{örnek}} \cdot \text{Vol}(\mathcal{D}) \right)
+```
+
+**Tashih:**
+
+```latex
+P_{\text{güven}}(\mathcal{M}_{\text{Eksikİstikra}}) &= \frac{k+1}{N+1}, \quad k = |\mathcal{D}|, \ N = |K| \quad (\text{Laplace; } k = N \text{ iken } 1)
+```
+
+**Gerekçe.** Yazılan biçim, örneklem hacmi büyüdükçe --- kümenin ne kadarına karşılık geldiğine BAKMADAN --- güveni $1$'e götürür. Oysa eksik tümevarımın kusuru tam olarak budur: güven, örneklenenin kümeye ORANINA bağlı olmalıdır (bkz. T82).
+
+### T126 — Mütedahile §Syādvāda: Uzaylar gerçel ağırlıklarla toplanamaz
+
+*tür:* tip / ulam hatası &nbsp;·&nbsp; *dosya:* mizan_mutedahile
+
+**Metinde:**
+
+```latex
+\text{Path}_{\text{Syād}} &= \left( \sum_{k=1}^7 w_k \mathcal{M}_{\text{Syād}_k} \;\simeq_{\text{göreler}}\; \mathbf{Hakikat} \right)
+```
+
+**Tashih:**
+
+```latex
+\{ \mathcal{M}_{\text{Syād}_k} \}_{k=1}^{7} &\ \leftrightarrow \ \{ \emptyset \ne A \subseteq \{\text{asti}, \text{nāsti}, \text{avaktavya}\} \}, \quad 2^3 - 1 = 7; \quad \mathbf{Hakikat} = \varinjlim_k \mathcal{M}_{\text{Syād}_k}
+```
+
+**Gerekçe.** Uzayların gerçel katsayılı toplamı tanımsızdır (vektörlerin değil, NESNELERİN toplamı). Ayrıca bu yazılış ``niçin yedi?'' sorusunu cevapsız bırakıyor. Yedi mod, üç temel yüklemin boş olmayan alt kümeleridir: $2^3 - 1 = 7$. Bileşke hakikat de toplam değil, eş-limittir (colimit).

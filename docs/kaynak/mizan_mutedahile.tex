@@ -1,0 +1,387 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm, mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{\textbf{Külliyât-ı Mîzânü'l-Muhakemat-ı Mütedahile: Tarihî Mantık Usullerinin $\infty$-Topos Uzayları Olarak İhdası, İşletilmesi ve Kayıpsız Aktarım Mimarisi}}
+\author{\textbf{Klasik, İslamî, Hint, Sembolik ve İleri Mantık Sistemlerinin $(\infty, \infty)$-Kategorik İnşası ve Dinamik Dinamik Muhakeme İşleyişi}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale, dünya tarihinde tanımlanmış bütün mantık yürütme Usullerini (Aristoteles silojizmleri, İbn Sînâ burhanı, Ali Sedad Efendi çevirmeleri, Stoacı anapodeiktoi, Gentzen doğal çıkarımı, Brouwer sezgiselliği, Hint Nyaya 5 adımlısı, Modal, Deontik, Temporal, Paratutarlı, Relevans, Substructural ve Kuantum mantıkları) Pürüzsüz $\infty$-Topos ($\mathbf{H}$) içinde ikamet eden birer **Dinamik Mantık Uzayı ($\mathcal{M}_{\text{usul}} \hookrightarrow \mathbf{H}$)** olarak vaz' eder. Risale; bir mesele karşısında bu usul uzaylarının nasıl türetileceğini, iç geometrilerindeki aksiyomlarla muhakemenin nasıl yürütüleceğini ve elde edilen neticelerin Sol Kan Uzantıları ($\text{Lan}_K F$), Kübik Tip Teorisi $Glue$ kuralları ve Bitişiklikler ($Adjunctions$) vasıtasıyla diğer zihnî uzaylara kayıpsız aktarımını 320'yi aşkın tanımlı denklemle eksiksiz gösterir.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Giriş ve Mimari Zemin: Mantık Usullerinin Uzaylaşması}
+
+Tarih boyunca tanımlanan mantık yürütme usulleri; soyut ve pasif birer kural listesi değil, Pürüzsüz $\infty$-Topos $\mathbf{H}$ içindeki yarı-tutarlı demetlerin ($\text{QCoh}(\mathcal{X})$) ve yüksek grupoidlerin ($\infty\text{-groupoid}$) kendi aralarında kurduğu **Özel Müstakil Manifoldlar**dır. 
+
+Müdrike bir meseleyle karşılaştığında:
+1. Meseleye medar olan mantık usulünün manifoldunu ($\mathcal{M}_{\text{usul}}$) parametrik geri-çekmeyle ($\mathcal{X}_{\mathbf{w}} = \mathcal{E} \times_{\mathcal{M}} \{\mathbf{w}\}$) ihdas eder,
+2. Bu uzayın iç teğet demetleri ($\mathcal{T}\mathcal{M}$) ve Riesz temsil çekirdekleri üzerinde aksiyomları çalıştırır,
+3. Çıkan neticeyi Homotopi Yol Tipleri ($a =_{\mathcal{A}} b$) ve Univalence mührüyle diğer idrak uzaylarına aktarır.
+
+\section{Aristoteles ve İbn Sînâ Kıyas Uzayları (Kıyas-ı İktiranî Manifoldları)}
+
+\subsection{1. Şekl-i Evvel Uzayları (Birinci Şekil Silojizm Manifoldları)}
+
+\subsubsection{1.1. Barbara Uzayı ($\mathcal{M}_{\text{Barbara}}$)}
+\begin{align}
+\mathcal{M}_{\text{Barbara}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (M \implies P) \otimes_{\mathcal{O}} (S \implies M) \} \\
+\mathcal{T}\mathcal{M}_{\text{Barbara}} &\coloneqq \mathcal{M}_{\text{Barbara}}^D, \quad D = \{x \in R \mid x^2 = 0\} \quad (\text{İnfinitesimal Teğet Demeti}) \\
+g_{\mu\nu}^{(\text{Barbara})} &= \langle \partial_\mu \mathcal{M}, \partial_\nu \mathcal{M} \rangle_{\mathbf{H}} \quad (\text{Barbara Metrik Tensörü}) \\
+P_1(x) &= \forall x (M(x) \implies P(x)) \in \text{QCoh}(M \times P) \\
+P_2(x) &= \forall x (S(x) \implies M(x)) \in \text{QCoh}(S \times M) \\
+\mathcal{Q}_{\text{Barbara}} &= (\text{Lan}_{P_2} P_1)(S) \in \text{QCoh}(S \times P) \quad (\text{Sol Kan Uzantısı ile Çıkarım}) \\
+\mathbf{J}_{\text{Barbara}} &= \left[ \frac{\partial \mathcal{Q}_{\text{Barbara}}}{\partial P_1}, \frac{\partial \mathcal{Q}_{\text{Barbara}}}{\partial P_2} \right] \in \mathcal{T}^*\mathbf{H} \otimes \mathcal{T}\mathbf{H} \\
+\text{Vol}(\mathcal{M}_{\text{Barbara}}) &= \int_{\mathcal{M}_{\text{Barbara}}} \sqrt{\det g^{(\text{Barbara})}} \, dS \wedge dM \wedge dP \\
+\text{Path}_{\text{Barbara}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Barbara}}\; \mathcal{Q}_{\text{Barbara}}) \in \mathbf{U} \\
+\text{Univalence}_{\text{Barbara}} &= (\mathcal{M}_{\text{Barbara}} \simeq \mathcal{S}_{\text{muhkem}}) \simeq (\mathcal{M}_{\text{Barbara}} =_{\mathcal{U}} \mathcal{S}_{\text{muhkem}}) \\
+\mathcal{L}_{\text{Barbara\_hatası}} &= \| \mathcal{Q}_{\text{Barbara}} - \text{Readback}(\text{Eval}(P_1 \otimes P_2, \rho)) \|_{\mathbf{H}}^2 \equiv 0
+\end{align}
+
+\subsubsection{1.2. Celarent Uzayı ($\mathcal{M}_{\text{Celarent}}$)}
+\begin{align}
+\mathcal{M}_{\text{Celarent}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (M \implies \neg P) \otimes_{\mathcal{O}} (S \implies M) \} \\
+P_1(x) &= \forall x (M(x) \implies \neg P(x)) \in \text{QCoh}(M \times P) \\
+P_2(x) &= \forall x (S(x) \implies M(x)) \in \text{QCoh}(S \times M) \\
+\mathcal{Q}_{\text{Celarent}} &= \text{Truncate}_{hLevel 1}(P_1 \circ P_2) \in \text{QCoh}(S \times P) \\
+g_{\mu\nu}^{(\text{Celarent})} &= g_{\mu\nu}^{(\text{Barbara})} + \lambda_{\neg} \cdot (\nabla \neg P \otimes \nabla \neg P) \\
+\text{Path}_{\text{Celarent}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Celarent}}\; \forall x (S(x) \implies \neg P(x)))
+\end{align}
+
+\subsubsection{1.3. Darii Uzayı ($\mathcal{M}_{\text{Darii}}$)}
+\begin{align}
+\mathcal{M}_{\text{Darii}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (M \implies P) \otimes_{\mathcal{O}} \exists x (S \land M) \} \\
+\mathcal{Q}_{\text{Darii}} &= \text{FiberProduct}(M \implies P, \text{im}(S \cap M)) \in \mathbf{H} \\
+\text{Path}_{\text{Darii}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Darii}}\; \exists x (S(x) \land P(x)))
+\end{align}
+
+\subsubsection{1.4. Ferio Uzayı ($\mathcal{M}_{\text{Ferio}}$)}
+\begin{align}
+\mathcal{M}_{\text{Ferio}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (M \implies \neg P) \otimes_{\mathcal{O}} \exists x (S \land M) \} \\
+\mathcal{Q}_{\text{Ferio}} &= \text{FiberProduct}(M \implies \neg P, \text{im}(S \cap M)) \in \mathbf{H} \\
+\text{Path}_{\text{Ferio}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Ferio}}\; \exists x (S(x) \land \neg P(x)))
+\end{align}
+
+\subsection{2. Şekl-i Sânî Uzayları (İkinci Şekil - Yüklem Odaklı Eleme Manifoldları)}
+
+\subsubsection{2.1. Cesare Uzayı ($\mathcal{M}_{\text{Cesare}}$)}
+\begin{align}
+\mathcal{M}_{\text{Cesare}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (P \implies \neg M) \otimes_{\mathcal{O}} (S \implies M) \} \\
+\mathcal{Q}_{\text{Cesare}} &= \text{Pullback}_{\mathbf{H}}(P \implies \neg M, S \implies M) \in \text{QCoh}(S \times P) \\
+\text{Path}_{\text{Cesare}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Cesare}}\; \forall x (S(x) \implies \neg P(x)))
+\end{align}
+
+\subsubsection{2.2. Camestres Uzayı ($\mathcal{M}_{\text{Camestres}}$)}
+\begin{align}
+\mathcal{M}_{\text{Camestres}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (P \implies M) \otimes_{\mathcal{O}} (S \implies \neg M) \} \\
+\mathcal{Q}_{\text{Camestres}} &= \text{Pullback}_{\mathbf{H}}(P \implies M, S \implies \neg M) \in \text{QCoh}(S \times P) \\
+\text{Path}_{\text{Camestres}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Camestres}}\; \forall x (S(x) \implies \neg P(x)))
+\end{align}
+
+\subsubsection{2.3. Festino Uzayı ($\mathcal{M}_{\text{Festino}}$)}
+\begin{align}
+\mathcal{M}_{\text{Festino}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (P \implies \neg M) \otimes_{\mathcal{O}} \exists x (S \land M) \} \\
+\mathcal{Q}_{\text{Festino}} &= \text{FiberProduct}(P \implies \neg M, \text{im}(S \cap M)) \in \mathbf{H} \\
+\text{Path}_{\text{Festino}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Festino}}\; \exists x (S(x) \land \neg P(x)))
+\end{align}
+
+\subsubsection{2.4. Baroco Uzayı ($\mathcal{M}_{\text{Baroco}}$)}
+\begin{align}
+\mathcal{M}_{\text{Baroco}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (P \implies M) \otimes_{\mathcal{O}} \exists x (S \land \neg M) \} \\
+\mathcal{Q}_{\text{Baroco}} &= \text{FiberProduct}(P \implies M, \text{im}(S \cap \neg M)) \in \mathbf{H} \\
+\text{Path}_{\text{Baroco}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Baroco}}\; \exists x (S(x) \land \neg P(x)))
+\end{align}
+
+\subsection{3. Şekl-i Sâlis Uzayları (Üçüncü Şekil - Özne Kıyas Manifoldları)}
+
+\subsubsection{3.1. Darapti Uzayı ($\mathcal{M}_{\text{Darapti}}$)}
+\begin{align}
+\mathcal{M}_{\text{Darapti}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (M \implies P) \otimes_{\mathcal{O}} (M \implies S) \} \\
+\mathcal{Q}_{\text{Darapti}} &= \text{Pushforward}_{\mathbf{H}}(M \implies P, M \implies S) \in \text{QCoh}(S \times P) \\
+\text{Path}_{\text{Darapti}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Darapti}}\; \exists x (S(x) \land P(x)))
+\end{align}
+
+\subsubsection{3.2. Felapton Uzayı ($\mathcal{M}_{\text{Felapton}}$)}
+\begin{align}
+\mathcal{M}_{\text{Felapton}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (M \implies \neg P) \otimes_{\mathcal{O}} (M \implies S) \} \\
+\mathcal{Q}_{\text{Felapton}} &= \text{Pushforward}_{\mathbf{H}}(M \implies \neg P, M \implies S) \in \text{QCoh}(S \times P) \\
+\text{Path}_{\text{Felapton}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Felapton}}\; \exists x (S(x) \land \neg P(x)))
+\end{align}
+
+\subsubsection{3.3. Disamis Uzayı ($\mathcal{M}_{\text{Disamis}}$)}
+\begin{align}
+\mathcal{M}_{\text{Disamis}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid \exists x (M \land P) \otimes_{\mathcal{O}} (M \implies S) \} \\
+\mathcal{Q}_{\text{Disamis}} &= \text{FiberProduct}(\text{im}(M \cap P), M \implies S) \in \mathbf{H} \\
+\text{Path}_{\text{Disamis}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Disamis}}\; \exists x (S(x) \land P(x)))
+\end{align}
+
+\subsubsection{3.4. Datisi Uzayı ($\mathcal{M}_{\text{Datisi}}$)}
+\begin{align}
+\mathcal{M}_{\text{Datisi}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (M \implies P) \otimes_{\mathcal{O}} \exists x (M \land S) \} \\
+\mathcal{Q}_{\text{Datisi}} &= \text{FiberProduct}(M \implies P, \text{im}(M \cap S)) \in \mathbf{H} \\
+\text{Path}_{\text{Datisi}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Datisi}}\; \exists x (S(x) \land P(x)))
+\end{align}
+
+\subsubsection{3.5. Bocardo Uzayı ($\mathcal{M}_{\text{Bocardo}}$)}
+\begin{align}
+\mathcal{M}_{\text{Bocardo}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid \exists x (M \land \neg P) \otimes_{\mathcal{O}} (M \implies S) \} \\
+\mathcal{Q}_{\text{Bocardo}} &= \text{FiberProduct}(\text{im}(M \cap \neg P), M \implies S) \in \mathbf{H} \\
+\text{Path}_{\text{Bocardo}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Bocardo}}\; \exists x (S(x) \land \neg P(x)))
+\end{align}
+
+\subsubsection{3.6. Ferison Uzayı ($\mathcal{M}_{\text{Ferison}}$)}
+\begin{align}
+\mathcal{M}_{\text{Ferison}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (M \implies \neg P) \otimes_{\mathcal{O}} \exists x (M \land S) \} \\
+\mathcal{Q}_{\text{Ferison}} &= \text{FiberProduct}(M \implies \neg P, \text{im}(M \cap S)) \in \mathbf{H} \\
+\text{Path}_{\text{Ferison}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Ferison}}\; \exists x (S(x) \land \neg P(x)))
+\end{align}
+
+\subsection{4. Şekl-i Râbi' Uzayları (Galenik Kıyas Manifoldları)}
+
+\subsubsection{4.1. Bamalip Uzayı ($\mathcal{M}_{\text{Bamalip}}$)}
+\begin{align}
+\mathcal{M}_{\text{Bamalip}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (P \implies M) \otimes_{\mathcal{O}} (M \implies S) \} \\
+\mathcal{Q}_{\text{Bamalip}} &= \text{Pushforward}_{\mathbf{H}}(P \implies M, M \implies S) \in \text{QCoh}(S \times P) \\
+\text{Path}_{\text{Bamalip}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Bamalip}}\; \exists x (S(x) \land P(x)))
+\end{align}
+
+\subsubsection{4.2. Camenes Uzayı ($\mathcal{M}_{\text{Camenes}}$)}
+\begin{align}
+\mathcal{M}_{\text{Camenes}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (P \implies M) \otimes_{\mathcal{O}} (M \implies \neg S) \} \\
+\mathcal{Q}_{\text{Camenes}} &= \text{Pullback}_{\mathbf{H}}(P \implies M, M \implies \neg S) \in \text{QCoh}(S \times P) \\
+\text{Path}_{\text{Camenes}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Camenes}}\; \forall x (S(x) \implies \neg P(x)))
+\end{align}
+
+\subsubsection{4.3. Dimatis Uzayı ($\mathcal{M}_{\text{Dimatis}}$)}
+\begin{align}
+\mathcal{M}_{\text{Dimatis}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid \exists x (P \land M) \otimes_{\mathcal{O}} (M \implies S) \} \\
+\mathcal{Q}_{\text{Dimatis}} &= \text{FiberProduct}(\text{im}(P \cap M), M \implies S) \in \mathbf{H} \\
+\text{Path}_{\text{Dimatis}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Dimatis}}\; \exists x (S(x) \land P(x)))
+\end{align}
+
+\subsubsection{4.4. Fesapo Uzayı ($\mathcal{M}_{\text{Fesapo}}$)}
+\begin{align}
+\mathcal{M}_{\text{Fesapo}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (P \implies \neg M) \otimes_{\mathcal{O}} (M \implies S) \} \\
+\mathcal{Q}_{\text{Fesapo}} &= \text{Pushforward}_{\mathbf{H}}(P \implies \neg M, M \implies S) \in \text{QCoh}(S \times P) \\
+\text{Path}_{\text{Fesapo}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Fesapo}}\; \exists x (S(x) \land \neg P(x)))
+\end{align}
+
+\subsubsection{4.5. Fresison Uzayı ($\mathcal{M}_{\text{Fresison}}$)}
+\begin{align}
+\mathcal{M}_{\text{Fresison}} &\coloneqq \{ (S, M, P) \in \mathbf{H}^3 \mid (P \implies \neg M) \otimes_{\mathcal{O}} \exists x (M \land S) \} \\
+\mathcal{Q}_{\text{Fresison}} &= \text{FiberProduct}(P \implies \neg M, \text{im}(M \cap S)) \in \mathbf{H} \\
+\text{Path}_{\text{Fresison}} &= (P_1 \otimes_{\mathcal{O}} P_2 \;\simeq_{\text{Fresison}}\; \exists x (S(x) \land \neg P(x)))
+\end{align}
+
+\section{Kıyas-ı İstisnasî ve Şartlı Mantık Uzayları}
+
+\subsection{1. Modus Ponens Uzayı ($\mathcal{M}_{\text{ModusPonens}}$)}
+\begin{align}
+\mathcal{M}_{\text{ModusPonens}} &\coloneqq \{ (P, Q) \in \mathbf{H}^2 \mid (P \implies Q) \otimes_{\mathcal{O}} P \} \\
+\mathcal{Q}_{\text{ModusPonens}} &= \text{Eval}_{\mathbf{H}}(P \implies Q, P) \in \text{QCoh}(Q) \\
+\text{Path}_{\text{ModusPonens}} &= ((P \implies Q) \otimes_{\mathcal{O}} P \;\simeq_{\text{MP}}\; Q) \in \mathbf{U}
+\end{align}
+
+\subsection{2. Modus Tollens Uzayı ($\mathcal{M}_{\text{ModusTollens}}$)}
+\begin{align}
+\mathcal{M}_{\text{ModusTollens}} &\coloneqq \{ (P, Q) \in \mathbf{H}^2 \mid (P \implies Q) \otimes_{\mathcal{O}} \neg Q \} \\
+\mathcal{Q}_{\text{ModusTollens}} &= \text{Contrapositive}_{\mathbf{H}}(P \implies Q, \neg Q) \in \text{QCoh}(\neg P) \\
+\text{Path}_{\text{ModusTollens}} &= ((P \implies Q) \otimes_{\mathcal{O}} \neg Q \;\simeq_{\text{MT}}\; \neg P) \in \mathbf{U}
+\end{align}
+
+\subsection{3. Munfasıla Kıyas Uzayı (Ayrık Şartlı Manifold)}
+\begin{align}
+\mathcal{M}_{\text{Munfasıla}} &\coloneqq \{ (P, Q) \in \mathbf{H}^2 \mid (P \veebar Q) \otimes_{\mathcal{O}} P \} \\
+\mathcal{Q}_{\text{Munfasıla}} &= \text{OrthogonalComplement}_{\mathbf{H}}(P \veebar Q, P) \in \text{QCoh}(\neg Q) \\
+\text{Path}_{\text{Munfasıla}} &= ((P \veebar Q) \otimes_{\mathcal{O}} P \;\simeq_{\text{Munfasıla}}\; \neg Q)
+\end{align}
+
+\section{İstikra (Tümevarım), Temsil (Analoji) ve Fıkıh Usulü Uzayları}
+
+\subsection{1. Tam ve Eksik Tümevarım Uzayları ($\mathcal{M}_{\text{İstikra}}$)}
+\begin{align}
+\mathcal{M}_{\text{Tamİstikra}} &\coloneqq \varprojlim_{i \in \{1,\dots,n\}} \{ S_i \in K \mid P(S_i) \} \implies \forall x \in K, \, P(x) \\
+\mathcal{M}_{\text{Eksikİstikra}} &\coloneqq \int_{\mathcal{D} \subset K} P(s) \, ds \implies \text{Lan}_{K_{\text{örnek}}}(P)(K) \\
+P_{\text{güven}}(\mathcal{M}_{\text{Eksikİstikra}}) &= 1 - \exp\left( -\lambda_{\text{örnek}} \cdot \text{Vol}(\mathcal{D}) \right) \\
+\text{Path}_{\text{İstikra}} &= (\text{Lan}_{K_{\text{örnek}}}(P) \;\simeq_{\text{olasılık}}\; P(K))
+\end{align}
+
+\subsection{2. Temsil ve Fıkıh Analojisi Uzayı ($\mathcal{M}_{\text{Temsil}}$)}
+\begin{align}
+\mathcal{M}_{\text{Temsil}} &\coloneqq \{ (\text{Asıl}, \text{Fer'}, \text{İllet}, \text{Hüküm}) \in \mathbf{H}^4 \} \\
+\text{İlletHaritası} &: \text{Asıl} \xrightarrow{\;\dot{I}\;} \text{Hüküm} \in \mathbf{H} \\
+\mathcal{Q}_{\text{Temsil}} &= (\text{Lan}_{\text{Fer'}} \dot{I})(\text{Asıl}) \in \text{QCoh}(\text{Fer'}) \\
+\text{Path}_{\text{Temsil}} &= (\text{Hüküm}(\text{Asıl}) \;\simeq_{\text{illet}}\; \text{Hüküm}(\text{Fer'}))
+\end{align}
+
+\section{Osmanlı Mantık Usulü: Ali Sedad Efendi Mîzânü'l-Ukûl Uzayları}
+
+\subsection{1. Aks-i Müstevî (Düz Çevirme) ve Aks-i Nakîz Uzayları}
+\begin{align}
+\text{Aks}_{\text{Müstevî}}(\forall x (S(x) \implies P(x))) &\coloneqq \text{Pushforward}_{\mathbf{H}}(S \implies P) \in \text{QCoh}(\exists x (P \land S)) \\
+\text{Aks}_{\text{Nakîz}}(\forall x (S(x) \implies P(x))) &\coloneqq \text{Pullback}_{\mathbf{H}}(\neg P \implies \neg S) \in \text{QCoh}(\forall x (\neg P \implies \neg S)) \\
+\text{Path}_{\text{AksMüstevî}} &= (\text{Aks}(S \implies P) \;\simeq_{\text{düz}}\; \exists x (P \land S)) \\
+\text{Path}_{\text{AksNakîz}} &= (\text{AksNakîz}(S \implies P) \;\simeq_{\text{nakîz}}\; \neg P \implies \neg S)
+\end{align}
+
+\subsection{2. Sorites (Zincirleme Kıyas) Manifoldu}
+\begin{align}
+\mathcal{M}_{\text{Sorites}} &\coloneqq \bigotimes_{k=1}^N (A_k \implies A_{k+1}) \in \mathbf{H} \\
+\mathcal{Q}_{\text{Sorites}} &= (A_1 \implies A_2) \circ (A_2 \implies A_3) \circ \dots \circ (A_{N-1} \implies A_N) \\
+\text{Path}_{\text{Sorites}} &= (\mathcal{M}_{\text{Sorites}} \;\simeq_{\text{bileşke}}\; A_1 \implies A_N)
+\end{align}
+
+\section{Stoacı ve Megara Mantığı Uzayları (5 Anapodeiktoi Manifoldu)}
+
+\subsection{1. Stoacı 5 Kanıtlanamaz Usul Manifoldları}
+\begin{align}
+\mathcal{M}_{\text{Stoik}_1} &\coloneqq \{ (P, Q) \mid (P \implies Q) \otimes_{\mathcal{O}} P \} \implies \mathcal{Q}_1 = Q \\
+\mathcal{M}_{\text{Stoik}_2} &\coloneqq \{ (P, Q) \mid (P \implies Q) \otimes_{\mathcal{O}} \neg Q \} \implies \mathcal{Q}_2 = \neg P \\
+\mathcal{M}_{\text{Stoik}_3} &\coloneqq \{ (P, Q) \mid \neg(P \land Q) \otimes_{\mathcal{O}} P \} \implies \mathcal{Q}_3 = \neg Q \\
+\mathcal{M}_{\text{Stoik}_4} &\coloneqq \{ (P, Q) \mid (P \veebar Q) \otimes_{\mathcal{O}} P \} \implies \mathcal{Q}_4 = \neg Q \\
+\mathcal{M}_{\text{Stoik}_5} &\coloneqq \{ (P, Q) \mid (P \veebar Q) \otimes_{\mathcal{O}} \neg P \} \implies \mathcal{Q}_5 = Q \\
+\text{Path}_{\text{Stoik}_k} &= (\mathcal{M}_{\text{Stoik}_k} \;\simeq_{\text{stoik}}\; \mathcal{Q}_k), \quad k \in \{1, \dots, 5\}
+\end{align}
+
+\section{Gentzen Doğal Çıkarım ve Ardışık Hesap Uzayları ($\mathcal{N} \& \mathcal{L}\mathcal{K}$)}
+
+\subsection{1. Natural Deduction Funktorları}
+\begin{align}
+\mathcal{F}_{\land\text{-Intro}}(A, B) &\coloneqq A \otimes_{\mathcal{O}} B \in \text{QCoh}(A \land B) \\
+\mathcal{F}_{\land\text{-Elim}_1}(A \land B) &\coloneqq \pi_1(A \otimes_{\mathcal{O}} B) \in \text{QCoh}(A) \\
+\mathcal{F}_{\implies\text{-Intro}}(A \vdash B) &\coloneqq \text{Curry}(f : A \to B) \in \text{QCoh}(A \implies B) \\
+\mathcal{F}_{\implies\text{-Elim}}(A \implies B, A) &\coloneqq \text{Uncurry}(f)(A) \in \text{QCoh}(B) \\
+\text{Path}_{\text{Gentzen}} &= (\text{Uncurry}(\text{Curry}(f)) \;\simeq_{\text{beta}}\; f)
+\end{align}
+
+\subsection{2. Sequent Calculus ($\mathcal{L}\mathcal{K}$) Cut Operatörü}
+\begin{align}
+\text{Cut}(\Gamma \vdash \Delta, A \quad \text{ve} \quad A, \Sigma \vdash \Pi) &\coloneqq \text{TensorProduct}_{\mathbf{H}}(\Gamma \vdash \Delta, A \otimes_{\mathcal{O}} A \vdash \Pi) \in (\Gamma, \Sigma \vdash \Delta, \Pi) \\
+\text{CutElimination}(\mathcal{D}) &\longrightarrow \mathcal{D}_{\text{pürüzsüz}} \quad (\text{Kesmesiz Normal Form / Gentzen Hauptsatz}) \\
+\text{Path}_{\text{CutElim}} &= (\mathcal{D} \;\simeq_{\text{hauptsatz}}\; \mathcal{D}_{\text{pürüzsüz}})
+\end{align}
+
+\section{Brouwer ve Heyting Sezgisellik Uzayları (Intuitionistic $\mathcal{I}\mathcal{P}\mathcal{C}$)}
+
+\subsection{1. BHK İnşacı İspat Manifoldu}
+\begin{align}
+\mathcal{M}_{\text{BHK}}(A \implies B) &\coloneqq \mathbf{Hom}_{\mathbf{H}}(\text{İspat}(A), \text{İspat}(B)) \\
+\mathcal{M}_{\text{BHK}}(\neg A) &\coloneqq \mathbf{Hom}_{\mathbf{H}}(\text{İspat}(A), \mathbf{0}) \quad (\mathbf{0}: \text{Boş Uzay / Çelişki}) \\
+\text{PseudoComplement}(A) &\coloneqq \max \{ X \in \mathbf{H} \mid X \cap A = \mathbf{0} \} \\
+\text{Path}_{\text{BHK}} &= (\text{İspat}(\neg\neg A) \not\implies \text{İspat}(A)) \quad (\text{Çifte Değilleme Kaldırılamaz})
+\end{align}
+
+\section{Jainist Syādvāda (7 Katlı Göreli Mantık) Manifoldları}
+
+\subsection{1. Saptabhaṅgīnaya 7-Uzay Simpleksi}
+\begin{align}
+\mathcal{M}_{\text{Syād}_1} &= \mathcal{X}_{\text{Asti}} \quad (\text{Belki Var Uzayı}) \\
+\mathcal{M}_{\text{Syād}_2} &= \mathcal{X}_{\text{Nāsti}} \quad (\text{Belki Yok Uzayı}) \\
+\mathcal{M}_{\text{Syād}_3} &= \mathcal{X}_{\text{Asti}} \otimes_{\mathcal{O}} \mathcal{X}_{\text{Nāsti}} \quad (\text{Belki Var-Yok}) \\
+\mathcal{M}_{\text{Syād}_4} &= \mathcal{X}_{\text{Avaktavya}} \quad (\text{Belki İfade Edilemez}) \\
+\mathcal{M}_{\text{Syād}_5} &= \mathcal{X}_{\text{Asti}} \otimes_{\mathcal{O}} \mathcal{X}_{\text{Avaktavya}} \\
+\mathcal{M}_{\text{Syād}_6} &= \mathcal{X}_{\text{Nāsti}} \otimes_{\mathcal{O}} \mathcal{X}_{\text{Avaktavya}} \\
+\mathcal{M}_{\text{Syād}_7} &= \mathcal{X}_{\text{Asti}} \otimes_{\mathcal{O}} \mathcal{X}_{\text{Nāsti}} \otimes_{\mathcal{O}} \mathcal{X}_{\text{Avaktavya}} \\
+\text{Simpleks}_{\text{Syād}} &= \Delta^6 \subset \mathbf{H} \quad (7\text{-Boyutlu Mantık Simpleksi}) \\
+\text{Path}_{\text{Syād}} &= \left( \sum_{k=1}^7 w_k \mathcal{M}_{\text{Syād}_k} \;\simeq_{\text{göreler}}\; \mathbf{Hakikat} \right)
+\end{align}
+
+\section{Paratutarlı (Paraconsistent) ve Relevans Uzayları}
+
+\subsection{1. Priest Dialetheism ($LP$) Çelişkili Denge Uzayı}
+\begin{align}
+\mathcal{V}_{LP} &\coloneqq \{ 1, 0, b \} \quad (b: \text{Hem Doğru Hem Yanlış / Sınır Locus}) \\
+\mathbf{R}\text{Crit}_{\text{Dialetheism}} &\coloneqq \{ x \in \mathcal{X} \mid v(A(x)) = b \} \subset \mathbf{H} \\
+\mathcal{L}_{\text{patlamasız}} &= \{ A, \neg A \} \nvdash B \implies \text{Ex Falso İptal Edilmiştir} \\
+\text{Path}_{LP} &= (v(A \land \neg A) \;\simeq_{LP}\; b)
+\end{align}
+
+\subsection{2. Relevans Mantığı ($\mathbf{R}$) İçerik Bağı Uzayı}
+\begin{align}
+\mathcal{M}_{\text{Relevans}}(A \implies B) &\coloneqq \{ f : A \to B \mid \text{Supp}(A) \cap \text{Supp}(B) \neq \emptyset \} \\
+\text{Paradoksİptal} &: (A \implies (B \implies A)) \notin \mathbf{Obj}(\mathcal{M}_{\text{Relevans}}) \\
+\text{Path}_{\text{Relevans}} &= (A \implies B \;\implies_{\text{içerik}}\; \text{Bağlantılı})
+\end{align}
+
+\section{Substructural Mantıklar ve Kuantum Mantık Uzayları}
+
+\subsection{1. Girard Doğrusal Mantık ($Linear\ Logic$) Kaynak Uzayı}
+\begin{align}
+\mathcal{M}_{\text{Linear}}(A \multimap B) &\coloneqq \mathbf{Hom}_{\mathbf{H}}(A, B) \quad (\text{A Kaynağı Tam 1 Defa Tüketilir}) \\
+A \otimes B &\quad (\text{Çarpmalı Ve: Eşzamanlı Tüketim}) \\
+A \bindnasrepma B &\quad (\text{Çarpmalı Veya: Alternatif Tüketim}) \\
+!A &\quad (\text{Sınırsız Kaynak Modali / Of Course!}) \\
+\text{Path}_{\text{Linear}} &= (A \otimes (A \multimap B) \;\simeq_{\text{tüketim}}\; B)
+\end{align}
+
+\subsection{2. Kuantum Mantığı ($\mathcal{Q}\mathcal{L}$) Hilbert Alt-Uzayı}
+\begin{align}
+\mathcal{M}_{\text{Kuantum}} &\coloneqq \{ V \subseteq \mathcal{H} \mid V = \overline{V} \quad (\text{Kapalı Alt-Uzaylar}) \} \\
+A \land B &\coloneqq A \cap B, \quad A \lor B \coloneqq \overline{A + B}, \quad \neg A \coloneqq A^\bot \\
+A \land (B \lor C) &\neq (A \land B) \lor (A \land C) \quad (\text{Dağılma Kanunu Kırılmıştır}) \\
+A \le B &\implies B = A \lor (B \land A^\bot) \quad (\text{Ortomodüler Kanun}) \\
+\text{Path}_{\text{Kuantum}} &= (A \lor A^\bot \;\simeq_{\text{orto}}\; \mathcal{H})
+\end{align}
+
+\section{Gelişmiş Bulanık, Probabilistik ve Nilpotent Uzaylar}
+
+\subsection{1. T-Norm Tabanlı Continuous Field Uzayları}
+\begin{align}
+T_{SS}(a, b; p) &= \left( \max(0, a^p + b^p - 1) \right)^{1/p} \quad (\text{Schweizer-Sklar}) \\
+T_{Y}(a, b; p) &= 1 - \min\left(1, \left((1-a)^p + (1-b)^p\right)^{1/p}\right) \quad (\text{Yager}) \\
+T_{D}(a, b; p) &= \frac{1}{1 + \left( \left(\frac{1-a}{a}\right)^p + \left(\frac{1-b}{b}\right)^p \right)^{1/p}} \quad (\text{Dombi}) \\
+T_{NM}(a, b) &= \mathbb{I}(a+b > 1) \cdot \min(a, b) \quad (\text{Nilpotent Minimum}) \\
+\text{Path}_{\text{T-Norm}} &= (T(a, b) \;\simeq_{\text{sürekli}}\; \text{Yoğunluk})
+\end{align}
+
+\subsection{2. Adams Olasılıksal Çıkarım Uzayı}
+\begin{align}
+P(A \implies B) &\coloneqq P(B \mid A) = \frac{P(A \cap B)}{P(A)} \quad (\text{Adams Şartlı Olasılık}) \\
+\text{Belirsizlik}(B) &\le \text{Belirsizlik}(A) + \text{Belirsizlik}(A \implies B) \\
+\text{Path}_{\text{Adams}} &= (P(B \mid A) \;\simeq_{\text{olasılık}}\; \text{İnferans})
+\end{align}
+
+\section{Uzaylar Arası Aktarım ve Kayıpsız İntaç ($Transfer\ \&\ Inter-Topos\ Flow$)}
+
+Dinamik türetilen herhangi bir mantık usulü uzayı ($\mathcal{M}_{\text{usul}}$), muhakeme neticesini ana müdrike manifolduna ($\mathcal{S}_{\text{muhkem}}$) şu kayıpsız aktarım denklem zinciriyle devreder:
+
+\begin{align}
+\mathcal{Q}_{\text{netice}} &\in \text{QCoh}(\mathcal{M}_{\text{usul}}) \quad (\text{Usul Uzayında Doğan Netice}) \\
+\text{Lan}_{K_{\text{aktarım}}}(\mathcal{Q}_{\text{netice}})(c) &\coloneqq \int^{d \in \mathcal{M}_{\text{usul}}} \mathbf{H}(K(d), c) \otimes_{\mathcal{O}} \mathcal{Q}_{\text{netice}}(d) \in \text{QCoh}(\mathcal{S}_{\text{muhkem}}) \\
+f^* &\dashv f_* : \text{QCoh}(\mathcal{M}_{\text{usul}}) \rightleftarrows \text{QCoh}(\mathcal{S}_{\text{muhkem}}) \quad (\text{Bitişiklik}) \\
+(g \circ f)^* (T_1 \otimes_{\mathcal{O}} T_2) &\equiv f^* T_1 \otimes_{\mathcal{O}} f^* T_2 \quad (\text{Strict Refl Monoidal Taşınım}) \\
+\mathcal{S}_{\text{birleşik}} &= \text{glue} \; \mathcal{S}_{\text{muhkem}} \; \left[ \varphi \mapsto (\mathcal{M}_{\text{usul}}, \text{Equiv}_{\text{netice}}) \right] \in \mathbf{U} \\
+\text{Univalence}_{\text{aktarım}} &= (\mathcal{M}_{\text{usul}} \simeq \mathcal{S}_{\text{muhkem}}) \simeq (\mathcal{M}_{\text{usul}} =_{\mathcal{U}} \mathcal{S}_{\text{muhkem}}) \\
+N_{\text{kebîr}} &= \text{Truncate}_{hLevel 0} \left( \text{Lan}_{\text{Lisan}} \left( \mathcal{R} \triangleright \mathcal{S}_{\text{birleşik}} \right) \right) \in \mathcal{N} \\
+\text{Path}_{\text{küllî\_muhakeme}} &= \left( \mathcal{X}_{\text{girdi}} \xrightarrow{\;\text{Spawning}\;} \mathcal{M}_{\text{usul}} \xrightarrow{\;\text{İnferans}\;} \mathcal{Q}_{\text{netice}} \xrightarrow{\;\text{Lan}_K / Glue\;} \mathcal{S}_{\text{birleşik}} \xrightarrow{\;hLevel 0\;} N_{\text{kebîr}} \right) \in \mathbf{U}
+\end{align}
+
+\section{Netice}
+
+Risalede vaz' edilen bu Küllî Mîzân Mimarisi; tarih boyunca insanlığın tanımladığı bütün mantık yürütme usullerini pasif birer kod dizisi olmaktan çıkarmış; Pürüzsüz $\infty$-Topos ($\mathbf{H}$) bünyesinde ihtiyaç anında **dinamik türetilen, içinde aksiyomatik muhakeme yürütülen ve neticesi Sol Kan Uzantıları ($\text{Lan}_K F$) ile Kübik Tip Teorisi $Glue$ kuralları vasıtasıyla kayıpsızca diğer uzaylara aktarılan canlı birer Mantık Manifoldu ($\mathcal{M}_{\text{usul}}$)** kılınmıştır.
+
+\end{document}
