@@ -69,6 +69,81 @@ kanunu kırar. Mevcut temsil (yutma altında indirgenmiş DNF antizinciri)
 zaten kanoniktir ve eşitliği hash ile O(1)'dir -- istenen gaye başka ve
 **sağlam** bir yolla hâlihazırda sağlanmış durumdadır.
 
+## De Bruijn seviyeleri ve bit maskesi — tam tahkik
+
+Ayrı bir iş olarak ele alındı ve **ölçümle sonuçlandırıldı**. Netice:
+şimdilik yapılmamalı. Gerekçeler sırayla:
+
+### 1. Cebir zaten küçük; küresel ad uzayı büyük
+
+`sarim(dongu¹⁰)` koşusunda ölçüldü:
+
+| ölçü | değer |
+|---|---|
+| üretilen taze aralık adı | **7 766** |
+| bir ifadede âzamî **ayrı değişken** | **5** |
+| bir cümlede âzamî literal | **4** |
+| bir ifadede âzamî cümle | **4** |
+
+Yani mesele cebrin büyüklüğü değil, **indekslerin büyüklüğüdür**.
+
+### 2. Bit maskesi, De Bruijn OLMADAN zarar veriyor
+
+Gerçekçi iş yükünde (20 000 ifade × 10 tur; ≤5 değişken, ≤4 literal,
+≤4 cümle) dört temsil ölçüldü:
+
+| temsil | süre | mevcut hâle göre |
+|---|---|---|
+| A — bugünkü `frozenset((ad, işaret))` | 0.164 s | 1.00× |
+| B — küresel interne edilmiş `frozenset(int)` | 0.143 s | 1.15× hızlı |
+| C — **bit maskesi, küresel indeks** | **1.284 s** | **7.8× YAVAŞ** |
+| D — bit maskesi, küçük indeks (De Bruijn gibi) | 0.102 s | 1.6× hızlı |
+
+C'nin çökmesinin sebebi açık: küresel indekste maskeler 32 819 bitlik
+Python tam sayıları olur; `&` işlemi kelime kelime yürür. Yani bit
+maskesi fikri **De Bruijn seviyelerine bağımlıdır** -- ikisi ayrılamaz,
+ve yalnız maskeye geçmek kodu 7.8 kat yavaşlatır.
+
+### 3. Kazanç tavanı ~%13, ve düşük
+
+Bugünkü profil (`sarim(dongu¹⁰)`): `_antizincire_indir` sürenin
+**%9.7'si** (eskiden %42'ydi; oradaki algoritmik düzeltme o payı zaten
+aldı). Bütün `aralik.py` ≈ %34. D temsilinin 1.6 katı buna tatbik
+edilirse uçtan uca tavan **≈ %13**'tür -- hem de tavan, gerçek değil.
+
+Buna karşılık maliyet: aralık ikamesinin (`act`) bütün değerlendirici
+boyunca derinlik taşıması gerekir. Bu, **sağlamlık açısından en hassas**
+yerdir; bu modülün bütün tarihi oradaki hatalardan ibarettir.
+
+### 4. Seviyeler zaten var — muhtaç olunan yerde
+
+`geri_oku` hâlihazırda **De Bruijn seviyeleri** kullanıyor: terim
+değişkenleri `#k`, aralık değişkenleri `%k` (`_tv`, `_iv`). Yani normal
+form zaten seviye indeksli ve alfa-kanonik. `taze()` adları yalnız
+değerlendirme sırasında yaşıyor. Geçişin *kanoniklik* tarafı bitmiş
+durumda; geriye kalan yalnız hız tarafıdır ve o da yukarıdaki tavanla
+sınırlıdır.
+
+### Yan ürün: gönderim tablosu denendi ve geri alındı
+
+Profil, `degerlendir`in 30 dallı `isinstance` zincirinde çağrı başına
+**10.2** deneme yaptığını ve `isinstance`in 863 bin çağrıyla sürenin
+%5.6'sını tuttuğunu gösteriyordu. Tip anahtarlı gönderim tablosu
+yazıldı, eski zincirle **fark sınamasından** geçti (sekiz iş yükünde
+birebir aynı normal form). Fakat temiz kıyasta hız farkı **ölçülemedi**
+(en iyi 0.2702 s → 0.2724 s; ortancalar gürültünün içinde). Geri alındı.
+
+Buradaki ders kayda değer: `cProfile`, ucuz gömülü çağrıları çağrı başına
+sabit bir maliyetle şişirir. Profilin "%5.6" dediği yer, gerçekte
+ölçülemeyecek kadar küçüktü. **Profil bir işaret, ölçüm bir hükümdür.**
+
+### Hüküm
+
+De Bruijn seviyelerine geçiş, *hız için* yapılmamalı. Yapılacaksa
+gerekçesi başka olmalı (ör. `taze()`yi bütünüyle kaldırmak, aralık
+bağlayıcılarının alfa-denkliğini inşa gereği kanonik kılmak); o zaman
+bit maskesi kazancı da yanında bedava gelir.
+
 ## Mimari
 
 | Dosya | Durum |
