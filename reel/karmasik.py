@@ -34,6 +34,14 @@ hızlı çıkıyor.  Netice: kaynağın "reel zemine geç" teklifi, hız
 bakımından da savunulabilir -- ama sebebi kaynağın söylediği ("sanal
 sayı yanılsaması") değil, kütüphane gerçekliğidir.  Doğruluk her iki
 yolda aynıdır (fark 1e-13).
+
+**UYARI -- bu hüküm YALNIZ TEK SİSTEM içindir.**  Buradaki gömme
+``ρ(AB) = ρ(A)ρ(B)`` anlamında birebirdir (ölçüldü: 1.8e-15).  Fakat
+**birleşik** sistemde çarpımsal DEĞİLDİR: ``dim_ℝ(ℂ^m ⊗ ℂ^n) = 2mn``
+iken ``ℝ^{2m} ⊗ ℝ^{2n} = 4mn``dir ve ``ρ(A⊗B)`` ile ``ρ(A)⊗ρ(B)``nin
+şekilleri bile tutmaz (8×8 / 16×16).  "Sanal sayıya ihtiyaç yok"
+neticesi buradan **çıkarılamaz**; reel kuantum kuramı tartışmasının
+tamamı o birleştirme kaidesindedir.  Bkz. :mod:`hesap.palmer`.
 """
 
 from __future__ import annotations
