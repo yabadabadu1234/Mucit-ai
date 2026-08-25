@@ -30,7 +30,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from . import arc
+from . import arc, sekil
 from .model import Ayar, NefsModeli, parametre_sayisi
 
 __all__ = ["Toplu", "toplu_hazirla", "degerlendir", "egit", "ana"]
@@ -143,10 +143,15 @@ def degerlendir(model: NefsModeli, gorevler: Sequence[arc.Gorev],
     hucre_d, hucre_t = 0, 0
     izgara_d, izgara_t = 0, 0
     sekil_d_top = 0
+    kaide_sayisi = 0
     cozulen: List[str] = []
     ornek_cikti = None
     for g in gorevler[:azami_gorev]:
         kaynak = g.sinama if sinamadan else g.egitim
+        # Şekil kaidesi gösterim çiftlerinden ÇIKARILIR (bkz. idrak.sekil).
+        # Ölçüldü: kaide sınama çiftlerinin %85.5'ini kapsıyor ve
+        # kapsayınca %99.8 isabetli; sinir ağının şekil başı ise 500
+        # adımda ancak 0.027'de.  Kaide susarsa başa dönülür.
         gorev_tam = True
         gorev_var = False
         for j in range(len(kaynak)):
@@ -163,7 +168,19 @@ def degerlendir(model: NefsModeli, gorevler: Sequence[arc.Gorev],
             # KISITLI çözümleme: şekil başından okunan boyutta, her zaman
             # iyi biçimli ızgara üretiliyor. Böylece tam eşleşme yalnız
             # RENKLERE kalıyor; biçim/şekil hatası sınıfı kalkıyor.
-            uz, sr, st = model.uret_kisitli(t.baglam)
+            # SIZINTI YOK: kaide, ``gorev_dizisi``'nin bağlam kurarken
+            # yaptığının aynısıyla, hedef çift DIŞARIDA bırakılarak
+            # çıkarılır.  (Aksi hâlde eğitim bölmesinde hedefin kendi
+            # şekli kaideye girerdi.)
+            gosterim = (g.egitim if sinamadan else
+                        [c for k, c in enumerate(g.egitim) if k != j])
+            kaide = sekil.sekil_kaidesi(gosterim)
+            ks = kaide.kestir(kaynak[j][0]) if kaide is not None else None
+            if ks is not None:
+                kaide_sayisi += 1
+            uz, sr, st = model.uret_kisitli(
+                t.baglam, None if ks is None else ks[0],
+                None if ks is None else ks[1])
             uret = uz[0].cpu().tolist()
             sekil_d_top += int((sr, st) == tuple(
                 arc.belirtec_izgara(h).shape)
@@ -189,6 +206,7 @@ def degerlendir(model: NefsModeli, gorevler: Sequence[arc.Gorev],
     model.train()
     return {"hücre": hucre_d / max(hucre_t, 1),
             "şekil": sekil_d_top / max(izgara_t, 1),
+            "kaide_kapsamı": kaide_sayisi / max(izgara_t, 1),
             "ızgara": izgara_d / max(izgara_t, 1),
             "ızgara_doğru": izgara_d, "ızgara_toplam": izgara_t,
             "çözülen_görev": cozulen, "çözülen_sayı": len(cozulen),
