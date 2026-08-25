@@ -717,3 +717,67 @@ def test_pencereden_sonra_parseval():
     V = np.fft.fft(v)
     assert abs(np.sum(np.abs(np.fft.fft(vw)) ** 2) / N
                - np.sum(np.abs(V) ** 2) / N) > 0.1 * np.sum(v ** 2)
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  K36-K38: kodlama sırasında ölçümle çıkan eksikler
+# ══════════════════════════════════════════════════════════════════════
+
+def test_iz_olcutu_yanlis_log_u_yakalamiyor():
+    """K36: ``Tr(Exp(Log)) = Tr(G₂)`` ölçütü yanlış Log'u geçirir."""
+    from ogrenme import grassmann as gr
+
+    Y1, Y2 = gr._rastgele(8, 3, 0), gr._rastgele(8, 3, 1)
+    kotu = gr.exp_haritasi(Y1, gr.log_haritasi_arcsin(Y1, Y2))
+    # Eski ölçüt: iz eşitliği — yanlış Log'da da SAĞLANIYOR
+    assert abs(float(np.trace(gr.izdusum(kotu)))
+               - float(np.trace(gr.izdusum(Y2)))) < 1e-12
+    # Yeni ölçüt: izdüşüm farkı — yanlış Log'u YAKALIYOR
+    assert gr.alt_uzay_hatasi(kotu, Y2) > 0.5
+    # ve doğru Log'da sıfır
+    assert gr.gidis_donus_hatasi(Y1, Y2, gr.log_haritasi) < 1e-12
+
+
+def test_dogrusal_olmayan_gurultude_tekil():
+    """K37: abduction toplamsal gürültüde tekil DEĞİL, u²'de tekil."""
+    from fitrat import karsi_olgusal as ko
+    from fitrat.ayrisma import Cizge
+
+    g = Cizge(("A", "B"), (("A", "B"),))
+    toplamsal = ko.YapisalModel(g, {"A": lambda pa, u: u,
+                                    "B": lambda pa, u: pa["A"] + u})
+    kareli = ko.YapisalModel(g, {"A": lambda pa, u: u,
+                                 "B": lambda pa, u: pa["A"] + u * u})
+    goz = {"A": 1.0, "B": 2.0}
+    assert not ko.abduction_tekil_mi(toplamsal, goz)["tekil_mi"]
+    assert ko.abduction_degismezi(toplamsal, goz)["hata"] < 1e-12
+    t = ko.abduction_tekil_mi(kareli, goz)
+    assert t["tekil_mi"] and t["tekil_düğümler"] == ["B"]
+    # B < A: u² = negatif — kök yok, hüküm verilmiyor
+    assert ko.karsiolgusal(kareli, {"A": 1.0, "B": 0.5},
+                           {"A": 3.0})["geçerli"] is False
+
+
+def test_duzeltmesiz_tegetin_locustan_kaydigi():
+    """K38: Formül 48.3 tek başına yetmiyor — kayma birikiyor."""
+    import math
+
+    from fitrat import karsi_olgusal as ko
+
+    def phi(x):
+        return np.array([float(x @ x) - 1.0])
+
+    def jac(x):
+        return 2.0 * x[None, :]
+
+    def grad(x):
+        return np.array([1.0, 0.0])
+
+    x0 = np.array([math.cos(0.4), math.sin(0.4)])
+    for adim in (0.05, 0.2, 0.5):
+        a = ko.locus_uzerinde_yurut(phi, jac, grad, x0, adim=adim,
+                                    duzelt=False)
+        b = ko.locus_uzerinde_yurut(phi, jac, grad, x0, adim=adim,
+                                    duzelt=True)
+        assert a["azamî_ihlal"] > 1e-2
+        assert b["azamî_ihlal"] < a["azamî_ihlal"] / 50
