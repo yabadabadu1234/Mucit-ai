@@ -70,25 +70,57 @@ Parametre: `D=128`'de 2.34 M.
 
 `D₄` dihedral grubu (`reel.meleke`'deki permütasyon kapılarının ta
 kendisi — sınamada `‖PᵀP−I‖ < 1e-12` ile teyit ediliyor) + renk
-eşlemesi + döşeme + kırpma + ölçekleme.
+eşlemesi + döşeme + kırpma + ölçekleme + bakışım onarımı + bağlı
+bileşen (nesne) seçimi + yerçekimi.
 
 Bir aday, görevin **bütün gösterim çiftlerini** tam tutmadıkça
 kullanılmaz; tutan aday yoksa **cevap verilmez**.
 
 | Küme | tam çözülen | cevap verilen | yanlış | susulan | cevap verince isabet |
 |---|---|---|---|---|---|
-| resmî eğitim (1000) | **22 (%2.2)** | 23 | 1 | 977 | **%95.7** |
-| doğrulama bölmesi (100) | **1** (`bc4146bd`) | — | — | — | — |
+| resmî eğitim (1000) | **30 (%3.0)** | 32 | 2 | 968 | **%93.8** |
+| doğrulama bölmesi (100) | **2** (`bc4146bd`, `1f85a75f`) | 2 | 0 | 98 | **%100** |
 | resmî değerlendirme (120) | **0** | 0 | 0 | 120 | — |
 
 Kullanılan kurallar: `D4:devrik`, `D4:dön90`, `D4:dön180`,
 `D4:yatay_ayna`, `D4:dikey_ayna`, `aynalı_döşeme_1x2`,
-`aynalı_döşeme_1x5`, `döşeme_1x2`, `fraktal`, `kırp`,
-`kırp+D4:yatay_ayna`, `renk_eşlemesi`, `ölçek_2x2`, `ölçek_3x3`.
+`aynalı_döşeme_1x5`, `bakışım_onarımı_renk4`, `döşeme_1x2`, `fraktal`,
+`kırp`, `kırp+D4:yatay_ayna`, `nesne:en_buyuk`, `nesne:en_kucuk`,
+`nesne:tek_renk`, `renk_eşlemesi`, `yerçekimi:asagi`,
+`yerçekimi:yukari`, `ölçek_2x2`, `ölçek_3x3`.
 
 **Değerlendirme kümesinde 0/120 — ve bu bir başarısızlıktır, öyle
 yazılıyor.** ARC-AGI-2'nin değerlendirme kümesi tam da bu sınıf basit
 dönüşüm aramalarını yenmek için kuruldu; ARC-AGI-1'den farkı budur.
+
+## Şekil kaidesi (`sekil.py`) — tam eşleşmenin ön şartı
+
+**Ölçümün yakaladığı asıl kusur.** Şekil başı yokken model ürettiği
+ızgaraların **%96'sını iyi biçimli** yapıyordu ama **şekli %0** doğru
+oluyordu; yani tam eşleşme *imkânsızdı*. Şekil başı (`satir_bas`,
+`sutun_bas` + kısıtlı çözümleme) eklendi, fakat 500 adımda doğrulama
+şekil isabeti ancak **0.027**'ye çıktı.
+
+Bunun mimarî mi eğitim eksikliği mi olduğunu **ölçtüm**: donuk
+kodlayıcının havuz vektörü üstünde doğrusal yoklama satır **0.325**,
+sütun **0.338** verdi. Bilgi kısmen orada ama 31 sınıflı bir
+sınıflandırma olarak ağır.
+
+Oysa ARC'ta şekil çoğunlukla gösterim çiftlerinden **cebirle** çıkar.
+Her eksen için bağımsız kaide aranıyor — `sabit`, `oran` (aynı
+kenarın `p/q`'si), `capraz` (öteki kenarın `p/q`'si; devrik bununla
+kapanıyor) — ve katsayılar `Fraction` ile **tam** tutuluyor:
+"yaklaşık 3 kat" kabul edilmiyor.
+
+| Küme | kapsam | kapsayınca isabet | kipler |
+|---|---|---|---|
+| resmî eğitim (1076 sınama çifti) | **0.855** | **0.998** | `oran\|oran` 877, `sabit\|sabit` 34, `capraz\|oran` 5, … |
+| resmî değerlendirme (167 çift) | **0.725** | **0.983** | `oran\|oran` 117, `capraz\|capraz` 2, `sabit\|sabit` 2 |
+
+Kaide bütün gösterim çiftlerinde tutmazsa `None` döner — çözücüdeki
+**ya ispat ya sükût** ölçütünün aynısı — ve sinir ağının şekil başına
+dönülür. **Sızıntı yok:** kaide, `gorev_dizisi`'nin bağlamı kurarken
+yaptığının aynısıyla hedef çift dışarıda bırakılarak çıkarılıyor.
 
 ## Eğitim (`egitim.py`)
 
