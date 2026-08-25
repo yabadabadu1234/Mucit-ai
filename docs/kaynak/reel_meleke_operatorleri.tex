@@ -1,0 +1,218 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- EVRENSEL ÖN BİLGİ VE PAKET TANIMLARI ---
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,mathrsfs}
+\usepackage{physics}
+\usepackage{booktabs}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{\textbf{Nefs-i Müdrike Mimarisi: Sanal Sayıların ($i = \sqrt{-1}$) İlgası ve 41 Melekenin Hakiki Reel Kuantum Operatörleri ile Geometrik Cebir Formülasyonu}}
+\author{\textbf{Reel Geometrik Cebir ($Cl_{3,0}$), Reel Ortogonal Gruplar ($SO(N)$), Reel Hartley Spektral Süzgeçleri ve $p$-Adic Rasyonel İntaç Nazariyesi}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale; kuantum hesaplamaya sızdırılan soyut ve hayali sanal sayıları ($i = \sqrt{-1}$, karmaşık karmaşasını) kâmilen ilga ederek, Nefs-i Müdrike Mimarisi'ndeki 41 idrak melekesini hakiki ve fiziki karşılığı olan **Reel Geometrik Cebir ($Clifford\ Algebra\ Cl_{3,0}$)**, **Reel Yatkın-Simetrik Operatörler ($J \in \mathfrak{so}(2N)$)** ve **Reel Hartley Spektral Süzgeçleri** zemininde yeniden inşa eder. Dokümanda; 41 melekenin her birinin sanal $i$ birimi içermeyen matris yapıları, Reel Schrödinger-Liouville denklemleri, Reel Komütatörler ve $p$-adic rasyonel vektör uzaylarındaki yıkıcı ve yapıcı çakışma kuralları eksiksiz biçimde vaz' edilmektedir.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% =================================================================
+\section{Giriş: Sanal Sayıların ($i = \sqrt{-1}$) İlgası ve Hakiki Reel Zemin}
+% =================================================================
+
+\subsection{Mahiyet: $i$ Biriminin Geometrik Hakikate Tercümesi}
+Matematikteki $i = \sqrt{-1}$ sanal bir kurgudur. Hakiki fizikte ve kuantum mekaniğinde $i$ birimi, 2-boyutlu reel düzlemdeki $\pi/2$ (90 derece) dik dönme matrisinden veya 3-boyutlu Reel Geometrik Cebirdeki ($Cl_{3,0}$) bivektörden ($I_{12} = e_1 e_2$) başka bir şey değildir:
+
+\begin{equation}
+i \iff J = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \in \mathbb{R}^{2 \times 2}, \quad J^2 = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} = -\mathbf{I}_2
+\end{equation}
+
+Bu ikame sayesinde, karmaşık uzay ($\mathbb{C}^N$) iki kat boyutlu **Reel Hilbert Uzayı ($\mathcal{H}_{\mathbb{R}} \cong \mathbb{R}^{2N}$)** haline getirilir. Hiçbir denklemde hayali $i$ birimi kullanılmaz.
+
+\subsection{Gaye}
+Sanal sayıların ürettiği karmaşık faz kafa karışıklığını ilga etmek; 41 melekenin tamamını **Reel Ortogonal Dönüşüm Matrisleri ($U_{\mathbb{R}} \in SO(2N)$)** ve **Reel Kliford Rotorları ($R \in Spin(N)$)** olarak çalıştırıp, sıfır sapmayla neticeye ulaşmaktır.
+
+\subsection{Usul: Reel Schrödinger-Liouville Büküm Denklemi}
+Reel durum vektörü $|\Psi(t)\rangle_{\mathbb{R}} = \begin{pmatrix} \mathbf{u}(t) \\ \mathbf{v}(t) \end{pmatrix} \in \mathbb{R}^{2N}$ için zamana bağlı evrim denklemi:
+
+\begin{align}
+\hbar \frac{d}{dt} |\Psi(t)\rangle_{\mathbb{R}} &= J \cdot H_{\mathbb{R}} |\Psi(t)\rangle_{\mathbb{R}}, \quad H_{\mathbb{R}} = \begin{pmatrix} A & -B \\ B & A \end{pmatrix} \in \mathbb{R}^{2N \times 2N} \\
+\hat{U}_{\mathbb{R}}(t) &= \exp\left( \frac{t}{\hbar} J \cdot H_{\mathbb{R}} \right) = \cos\left( \frac{H t}{\hbar} \right) \mathbf{I} + \sin\left( \frac{H t}{\hbar} \right) J \in SO(2N)
+\end{align}
+
+% =================================================================
+\section{41 Melekenin Hakiki Reel Kuantum Operatör Formülasyonları}
+% =================================================================
+
+Aşağıda 41 idrak melekesinin sanal $i$ içermeyen hakiki reel matris ve operatör formülleri vaz' edilmiştir.
+
+\subsection{1. Müşahede Kapısı ($\hat{U}_{\mathcal{O}_1}$)}
+\textbf{Mahiyet:} Haricî sinyali Reel Hilbert uzayına taşıyan reel fotonik mod kipleme kapısı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_1} = \exp\left( \theta_1(\mathbf{x}) J \cdot (\hat{x}(\mathbf{x}) + \hat{p}(\mathbf{x})) \right) \in SO(2N)
+\end{equation">
+
+\subsection{2. İllet Keşfi Kapısı ($\hat{U}_{\mathcal{O}_2}$)}
+\textbf{Mahiyet:} Nedensel bağlılığı sağlayan reel yatkın-simetrik (skew-symmetric) etkileşim kapısı.
+\begin{equation}
+\hat{H}_{\mathcal{O}_2} = J_{\text{nedensel}} \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \otimes (\hat{a}_{\text{sebep}}^T \hat{a}_{\text{müsebbep}} - \hat{a}_{\text{müsebbep}}^T \hat{a}_{\text{sebep}})
+\end{equation}
+
+\subsection{3. Gaye Belirleme Kapısı ($\hat{U}_{\mathcal{O}_3}$)}
+\textbf{Mahiyet:} Dalganın hedef duruma ($|x^*\rangle_{\mathbb{R}}$) odaklanmasını sağlayan reel potansiyel yansıma kapısı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_3} = \mathbf{I} - 2 |x^*\rangle_{\mathbb{R}} \langle x^*|_{\mathbb{R}} \quad (\text{Reel Householder Yansıması})
+\end{equation}
+
+\subsection{4. Fıtrâtı İdrak Kapısı ($\hat{U}_{\mathcal{O}_4}$)}
+\textbf{Mahiyet:} Fıtrî aksiyom ihlallerinde işareti değiştiren reel parite kapısı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_4} = (-1)^{\hat{P}_{\text{fıtrat\_ihlali}}} \cdot \mathbf{I} \in \mathbb{R}^{2N \times 2N}
+\end{equation}
+
+\subsection{5. Tecrit Kapısı ($\hat{U}_{\mathcal{O}_5}$)}
+\textbf{Mahiyet:} Reel Grassmannian manifoldu ($Gr(k, n, \mathbb{R})$) üzerindeki dik izdüşüm kapısı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_5} = \mathbf{P}_{\text{öz}} = Q Q^T, \quad Q \in \mathbb{R}^{n \times k}, \quad Q^T Q = \mathbf{I}_k
+\end{equation}
+
+\subsection{6. Tasavvur Kapısı ($\hat{U}_{\mathcal{O}_6}$)}
+\textbf{Mahiyet:} Karmaşık QFT yerine, tamamen reel olan Kuantum Hartley Dönüşümü (RHT) kapısı.
+\begin{align}
+\text{cas}(\theta) &\coloneqq \cos(\theta) + \sin(\theta) \quad (\text{Reel Hartley Çirpması}) \\
+\hat{U}_{\mathcal{O}_6} \equiv \text{RHT}_N &= \frac{1}{\sqrt{N}} \left[ \text{cas}\left( \frac{2\pi j k}{N} \right) \right]_{j,k=0}^{N-1} \in \mathbb{R}^{N \times N}
+\end{align}
+
+\subsection{7. Teemmül Kapısı ($\hat{U}_{\mathcal{O}_7}$)}
+\textbf{Mahiyet:} Dalganın reel dik uzayda dönmesini sağlayan adyabatik evrim kapısı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_7} = \mathcal{P} \exp\left( \frac{1}{\hbar} \int_0^T J \cdot H_{\text{teemmül}}(t) \, dt \right) \in SO(2N)
+\end{equation}
+
+\subsection{8. Tenakuz Bulma Kapısı ($\hat{U}_{\mathcal{O}_8}$)}
+\textbf{Mahiyet:} Çelişkili durumların genliğini reel vektör uzayında zıt işarete ($-1$) katlayıp yok eden kırpma kapısı.
+\begin{align}
+\hat{U}_{\mathcal{O}_8} &= \mathbf{I} - 2 |\Psi_{\text{tenakuz}}\rangle_{\mathbb{R}} \langle \Psi_{\text{tenakuz}}|_{\mathbb{R}} \\
+\hat{U}_{\mathcal{O}_8} |\Psi_{\text{metin}}\rangle_{\mathbb{R}} &= \begin{cases} -|\Psi_{\text{metin}}\rangle_{\mathbb{R}}, & \text{Çelişki Var} \implies (-1) \text{ İşaret Değişimi} \\ |\Psi_{\text{metin}}\rangle_{\mathbb{R}}, & \text{Çelişki Yok} \end{cases}
+\end{align}
+
+\subsection{9. Tezat İdraki Kapısı ($\hat{U}_{\mathcal{O}_9}$)}
+\textbf{Mahiyet:} Zıt iki fikri zıt eksenlere ayıran reel diyagonal kapı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_9} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}_{\text{tezat}} \otimes \mathbf{I}
+\end{equation}
+
+\subsection{10. Tahkik Kapısı ($\hat{U}_{\mathcal{O}_{10}}$)}
+\textbf{Mahiyet:} Reel Matris Tekil Değer Ayrışımı (Real SVD) ile tahkik icra eden kapı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_{10}} = \text{QSVT}_{\mathbb{R}}(A_{\mathbb{R}}, \vec{\phi}) = \sum_k P(\sigma_k) |u_k\rangle_{\mathbb{R}} \langle v_k|_{\mathbb{R}}
+\end{equation}
+
+\subsection{11. Şek-Zan-Yakîn İdraki Kapısı ($\hat{U}_{\mathcal{O}_{11}}$)}
+\textbf{Mahiyet:} 3-boyutlu reel dik dönme matrisi ($SO(3)$) ile ihtimal derecelerini veren kapı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_{11}} = \begin{pmatrix} \cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \end{pmatrix} \in SO(3)
+\end{equation}
+
+\subsection{12. Muhakeme Kapısı ($\hat{U}_{\mathcal{O}_{12}}$)}
+\textbf{Mahiyet:} Reel Kombinatoryal Hodge-Laplasyen ($\hat{\Delta}_k = \partial_{k+1} \partial_{k+1}^T + \partial_k^T \partial_k$) kapısı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_{12}} = \exp\left( J \cdot \hat{\Delta}_k t \right) \in SO(2N)
+\end{equation}
+
+\subsection{13. İspat Kapısı ($\hat{U}_{\mathcal{O}_{13}}$)}
+\textbf{Mahiyet:} Reel Kübik HoTT $Glue$ denkliği ile muhkem duruma bağlama kapısı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_{13}} = \text{Glue}_{\mathbb{R}} \implies (\mathcal{A} \simeq_{\mathbb{R}} \mathcal{B}) \implies \hat{U}_{\mathcal{O}_{13}} |\mathcal{A}\rangle_{\mathbb{R}} = |\mathcal{B}\rangle_{\mathbb{R}}
+\end{equation">
+
+\subsection{14. Tahlil Kapısı ($\hat{U}_{\mathcal{O}_{14}}$)}
+\textbf{Mahiyet:} Reel Givens dönme matrisleri ile KAN ayrışımı yapan kapı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_{14}} = \prod_{q,p} \begin{pmatrix} \cos\phi_{q,p} & -\sin\phi_{q,p} \\ \sin\phi_{q,p} & \cos\phi_{q,p} \end{pmatrix}
+\end{equation}
+
+\subsection{15. Terkip Kapısı ($\hat{U}_{\mathcal{O}_{15}}$)}
+\textbf{Mahiyet:} Reel Hartley süzgeçleri ile bileşenleri birleştiren kapı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_{15}} = \text{RHT}^{-1} \cdot R_{\text{reel}} \cdot \text{RHT}
+\end{equation}
+
+\subsection{16. İhtimal Hesabı Kapısı ($\hat{U}_{\mathcal{O}_{16}}$)}
+\textbf{Mahiyet:} Reel vektör genliklerinin karesiyle çalışan Born kuralı kapısı.
+\begin{equation}
+\hat{U}_{\mathcal{O}_{16}} = \sum_x P(x) |x\rangle_{\mathbb{R}} \langle x|_{\mathbb{R}}, \quad P(x) = \psi(x)_{\mathbb{R}}^2
+\end{equation}
+
+\subsection{17--25. Akli ve Mantıki İdrak Melekeleri Kapı Grubu ($\hat{U}_{\mathcal{O}_{17} \dots \mathcal{O}_{25}}$)}
+Kıyas, Temsil, Teşbih, Temkin, Tashih, Tertip, Tafsil, Mizan, İntaç melekelerinin reel matrisleri:
+\begin{align}
+\hat{U}_{\text{Kıyas}} &= \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix} \quad (\text{Reel Orantı Takas Kapısı}) \\
+\hat{U}_{\text{Mizan}} &= \exp\left( J \cdot \lambda (\hat{H}_{\text{mevcut}} - \hat{H}_{\text{fıtrî}})^2 \right) \in SO(2N) \\
+\hat{U}_{\text{İntaç}} &= \hat{P}_{hLevel 0} \quad (\text{Reel Kesme İntaç Kapısı})
+\end{align}
+
+\subsection{26--41. Lisan ve Belagat Kapı Grubu ($\hat{U}_{\mathcal{O}_{26} \dots \mathcal{O}_{41}}$)}
+Hafıza, İrade, Kelam, Tefsir, Tevil, Fesahat, Talakat, Belagat, Sanat ve Münazara melekelerinin reel kapıları:
+\begin{align}
+\hat{U}_{\text{Hafıza}} &= \mathbf{I}_{\mathbb{Q}_p} \quad (\text{$p$-Adic Ultradinamik Bozulmasız Saklama Kapısı}) \\
+\hat{U}_{\text{Kelam}} &= U_{\text{Reel\_Fotonik}} \quad (\text{Reel Sürekli Değişkenli İntaç Kapısı}) \\
+\hat{U}_{\text{Münazara}} &= \begin{pmatrix} 0 & -\mathbf{I} \\ \mathbf{I} & 0 \end{pmatrix} \quad (\text{Reel Cerh ve Teyit Matrisi})
+\end{align}
+
+% =================================================================
+\section{Melekeler Arası Reel Lie Cebrail Komütatörleri}
+% =================================================================
+
+Reel ortogonal gruplardaki ($\mathfrak{so}(2N)$) Lie cebri komütatörleri, sanal $i$ çarpanı olmaksızın doğrudan yatkın-simetrik yapıyla ifade olunur:
+
+\begin{equation}
+[\hat{U}_{\mathcal{O}_i}, \hat{U}_{\mathcal{O}_j}] = \sum_{k=1}^{41} C_{ij}^k \hat{U}_{\mathcal{O}_k} \in \mathfrak{so}(2N)
+\end{equation">
+
+Bu bağıntı idrakteki mukaddemlik ve muahharık (öncelik-sonralık) sırasının kesin garantisidir.
+
+% =================================================================
+\section{Reel Vektör Uzayında Çakışma ve İlgasız İntaç}
+% =================================================================
+
+Metin dalgası $|\Psi_{\text{metin}}\rangle_{\mathbb{R}}$ ile 41 meleke dalgası arasındaki çakışma, karmaşık integraller yerine **Reel Vektör Toplamı ve Yansımaları** ile icra edilir:
+
+\begin{equation}
+|\Psi_{\text{neticeli}}\rangle_{\mathbb{R}} = \left( \prod_{k=1}^{41} \hat{U}_{\mathcal{O}_k} \right) |\Psi_{\text{metin}}\rangle_{\mathbb{R}}
+\end{equation">
+
+Çelişkili ve tenakuzlu cümle bileşenleri Householder yansımaları ($-\mathbf{I}$) sayesinde birbirini zıt vektör eklemesiyle ($v + (-v) = 0$) tamamen sıfırlar. Geriye yalnız hakiki kelam kalır.
+
+% =================================================================
+\section{Netice}
+% =================================================================
+
+Bu risalede vaz' edilen formülasyon ile uydurma sanal $i = \sqrt{-1}$ birimi kâmilen ilga edilmiştir. Nefs-i Müdrike Mimarisi'nin 41 idrak melekesi tamamıyla **Reel Geometrik Cebir ($Cl_{3,0}$)**, **Reel Ortogonal Dönüşüm Matrisleri ($SO(2N)$)** ve **Reel Hartley Spektral Süzgeçleri** zemininde yeniden vaz' edilmiş; sistem sanal sayı yanılsamasından arındırılmıştır.
+
+\end{document}

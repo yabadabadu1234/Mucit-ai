@@ -1,0 +1,136 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- EVRENSEL ÖN BİLGİ VE PAKET TANIMLARI ---
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage[turkish, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{turkish}
+\babelprovide[import, onchar=ids fonts]{english}
+
+\babelfont{rm}{Noto Sans}
+\babelfont[turkish]{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=-}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,mathrsfs}
+\usepackage{physics}
+\usepackage{booktabs}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{\textbf{Kuantum Süperpozisyonu Tabanlı Küresel Asgari Arama Mimarisi: Gradyansız Dalga Genliği Büyütme ve Adyabatik Evrim Nazariyesi}}
+\author{\textbf{Durr-Høyer Kuantum Asgari Algoritması, Faz Kehaneti (Oracle) ve KAN-FNO Entegrasyonu}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu risale; klasik yapay zekadaki dereceli iniş (gradient descent) metotlarının mahalli asgari (local minima) tuzaklarını ve kısır platoları sıfırlamak üzere, $N$ kubitlik bir kuantum süperpozisyon uzayında $2^N$ adet fonksiyon değerini eşzamanlı değerlendiren ve kuantum dalga genliğini küresel asgari nokta ($x^* = \arg\min f(x)$) etrafında toplayan Kuantum Asgari Arama Mimarisi'ni vaz' eder. Dokümanda; Durr-Høyer Kuantum Asgari Algoritması, Kuantum Faz Kehanet Operatörleri ($\mathbf{O}_f$), Adyabatik Kuantum Evrim Hamiltonian'ı ($H_{\text{adyabatik}}$) ve bu mekanizmanın KAN-FNO-RKHS mimarimizle birleşimi riyazî ispatlarıyla gösterilmektedir.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% =================================================================
+\section{Giriş ve Ontolojik Mahiyet}
+% =================================================================
+
+\subsection{Mahiyet}
+Klasik bilgisayarlarda bir $f(x)$ kayıp fonksiyonunun (loss function) en küçük değerini bulmak için türev/gradyan ($\nabla f(x)$) alınır. Bu usul, fonksiyon yüzeyindeki çukurlara (mahalli asgari noktalarına) saplanır ve $2^N$ boyutlu devasa uzayları ancak nokta nokta gezebilir. 
+
+Kuantum Süperpozisyon Tabanlı Asgari Arama Mimarisi'nde ise tanım kümesindeki bütün $x$ değerleri ($x \in \{0, 1, \dots, 2^N-1\}$) tek bir hamlede süperpozisyon dalgasına dökülür:
+
+\begin{equation}
+|\Psi_0\rangle = H^{\otimes N} |0\rangle^{\otimes N} = \frac{1}{\sqrt{2^N}} \sum_{x=0}^{2^N-1} |x\rangle
+\end{equation}
+
+Fonksiyonun bütün değerleri ($f(0), f(1), \dots, f(2^N-1)$) tek bir kuantum adımında paralel olarak hesaplanır ve dalga genliği yapıcı girişim (constructive interference) ile sadece $f(x^*)$ değerinin en küçük olduğu $x^*$ durumunda zirveye çıkarılır.
+
+\subsection{Gaye}
+Arama ve optimizasyon karmaşıklığını klasik $O(2^N)$ veya miyop $O(\text{gradyan})$ adımlarından; kuantum dalga müdahalesi vasıtasıyla $O(\sqrt{2^N})$ veya adyabatik evrimle $O(\text{polylog}(N))$ seviyesine indirgemektir.
+
+% =================================================================
+\section{Kuantum Faz Kehanet Operatörü ($\mathbf{O}_f$) ve Dalga Bükme}
+% =================================================================
+
+\subsection{1. Fonksiyon Değerinin Faz Açısına Kodlanması}
+Bir $f: \{0,1\}^N \to \mathbb{R}$ fonksiyonunun çıktıları, kuantum durumlarının faz açılarına ($\theta(x) = \gamma f(x)$) doğrudan nakşedilir:
+
+\begin{align}
+\mathbf{O}_f |x\rangle &= e^{i \gamma f(x)} |x\rangle \quad (\text{Kuantum Faz Kehanet Operatörü}) \\
+\mathbf{O}_f &= \sum_{x=0}^{2^N-1} e^{i \gamma f(x)} |x\rangle \langle x| \in U(2^N)
+\end{align}
+
+Burada $\gamma > 0$ ölçekleme parametresidir. Fonksiyonun küçük değer aldığı $x$ noktalarında faz bükülmesi daha düşük kalırken, büyük değerlerde faz hızlı döner.
+
+\subsection{2. Durr-Høyer Kuantum Asgari Arama Algoritması (QMS)}
+Küresel asgariyi ($x^* = \arg\min f(x)$) bulmak üzere Durr-Høyer algoritmasının kuantum kapı dizilimi:
+
+\begin{enumerate}
+    \item Rastgele bir eşik değeri $y \in \{0, 1, \dots, 2^N-1\}$ seçilir.
+    \item Eşik şartı kehaneti $\mathbf{O}_y$ tanımlanır:
+    \begin{equation}
+    \mathbf{O}_y |x\rangle = \begin{cases} -|x\rangle, & f(x) < f(y) \\ |x\rangle, & f(x) \ge f(y) \end{cases}
+    \end{equation}
+    \item Grover Difüzyon Operatörü $\mathbf{D} = 2 |\Psi_0\rangle \langle \Psi_0| - \mathbf{I}$ tatbik edilir:
+    \begin{equation}
+    \mathbf{G}_y = \mathbf{D} \cdot \mathbf{O}_y = (2 |\Psi_0\rangle \langle \Psi_0| - \mathbf{I}) \cdot \mathbf{O}_y
+    \end{equation}
+    \item $\mathbf{G}_y$ operatörü $m \approx \frac{\pi}{4} \sqrt{\frac{2^N}{K}}$ defa döndürülür; $K$, $f(x) < f(y)$ şartını sağlayan eleman sayısıdır.
+    \item Ölçüm yapılır; yeni bir $x'$ elde edilir. Eğer $f(x') < f(y)$ ise $y \leftarrow x'$ olarak güncellenir ve adımlar $f(x^*)$ değerine ulaşılana kadar tekrarlanır.
+\end{enumerate">
+
+% =================================================================
+\section{Kuantum Adyabatik Evrim ile Küresel Asgari Çöküşü}
+% =================================================================
+
+\subsection{1. Zamana Bağlı Adyabatik Hamiltonian}
+Arama işlemini adımlı kapılar yerine sürekli bir fiziki evrimle icra etmek için adyabatik kuantum hesabı kullanılır. Başlangıç Hamiltonian'ı $H_{\text{başlangıç}}$ ile hedef problem Hamiltonian'ı $H_{\text{hedef}}$ tanımlanır:
+
+\begin{align}
+H_{\text{başlangıç}} &= -\sum_{i=1}^N \sigma_x^{(i)} \quad (\text{Bütün Durumların Eşit Süperpozisyon Öz-Tabanı}) \\
+H_{\text{hedef}} &= \sum_{x=0}^{2^N-1} f(x) |x\rangle \langle x| \quad (\text{Hedef Fonksiyon Diyagonal Matrisi}) \\
+H(t) &= \left( 1 - \frac{t}{T} \right) H_{\text{başlangıç}} + \frac{t}{T} H_{\text{hedef}}, \quad t \in [0, T]
+\end{align">
+
+\subsection{2. Adyabatik Teorem ve Enerji Aralığı (Spectral Gap) İspatı}
+Adyabatik Teoreme göre, eğer evrim süresi $T$ yeterince yavaş seçilirse; sistem başlangıçtaki temel durumundan ($|E_0(0)\rangle = |\Psi_0\rangle$) hiçbir yüksek enerji seviyesine sıçramadan $H_{\text{hedef}}$'in temel durumuna ($|E_0(T)\rangle = |x^*\rangle$) evrilir:
+
+\begin{align}
+i\hbar \frac{d}{dt} |\psi(t)\rangle &= H(t) |\psi(t)\rangle \\
+g_{\min} &= \min_{t \in [0,T]} \left( E_1(t) - E_0(t) \right) \quad (\text{Özdeğerler Arası Minimum Spektral Aralık}) \\
+T &\ge \frac{\hbar \cdot \max_t \left| \left\langle E_1(t) \right| \frac{dH}{dt} \left| E_0(t) \right\rangle \right|}{g_{\min}^2} \implies |\psi(T)\rangle = |x^*\rangle
+\end{align}
+
+Böylece $t=T$ anında kuantum çipi ölçüldüğünde, %100 doğrulukla fonksiyonu minimum kılan $x^*$ noktası elde edilir.
+
+% =================================================================
+\section{Nefs-i Müdrike KAN-FNO Mimarisi İle Entegrasyonu}
+% =================================================================
+
+Kuantum Asgari Arama Mimarisi, Nefs-i Müdrike'deki KAN B-spline düğümlerinin ve FNO spektral ağırlıklarının en uygun değerlerini tek hamlede bulmak üzere entegre edilir:
+
+\begin{align}
+\mathcal{L}_{\text{küllî}}(\bm{\theta}) &= \mathcal{L}_{\text{KAN}}(\bm{\theta}_{\text{KAN}}) + \mathcal{L}_{\text{FNO}}(\bm{\theta}_{\text{FNO}}) + \mathcal{L}_{\text{RKHS}}(\bm{\theta}_{\text{RKHS}}) \\
+H_{\text{Nefs-i\_Müdrike}} &= \sum_{\bm{\theta}} \mathcal{L}_{\text{küllî}}(\bm{\theta}) |\bm{\theta}\rangle \langle \bm{\theta}| \\
+|\mathbf{\Theta}_{\text{optimal}}\rangle &= \lim_{T \to \infty} \mathcal{P} \exp\left( -\frac{i}{\hbar} \int_0^T H(t) dt \right) |\Psi_0\rangle \\
+\bm{\theta}^* &= \text{Ölüm/Ölçüm}\left( |\mathbf{\Theta}_{\text{optimal}}\rangle \right) \implies \nabla \mathcal{L} \text{ Gradyanına İhtiyaç Kalmamıştır}
+\end{align}
+
+% =================================================================
+\section{Netice}
+% =================================================================
+
+Bu risalede vaz' edilen Kuantum Asgari Arama Mimarisi; klasik yapay zekadaki dereceli iniş (gradient descent) çaresizliğini tamamen ortadan kaldırmıştır. 30 kubitle $2^{30} \approx 1.07$ milyar veya $N$ kubitle $2^N$ adet parametre kombinasyonu tek bir kuantum süperpozisyon dalgasına yüklenmekte; Kuantum Faz Kehaneti ve Adyabatik Evrim vasıtasıyla dalga doğrudan en küçük kayıp değerine ($x^* = \arg\min f(x)$) odaklanmaktadır.
+
+\end{document}
