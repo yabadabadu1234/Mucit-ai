@@ -117,3 +117,43 @@ Test takımının tamamı **0.73 s** (62 test).
 python3 -m fitrat.denge        # ve diğer dört modül
 python3 -m pytest fitrat/test_fitrat.py -q
 ```
+
+---
+
+## `karsi_olgusal.py` — karşıolgusal 3-pas ve nedensel değişmezler
+
+Kaynak: `docs/kaynak/analitik_darbogazlar.txt` Darboğaz 45-48.
+37 sınama, 0.35 s. Gösterim: `python3 -m fitrat.karsi_olgusal`.
+
+| Hüküm | Ölçüm |
+|---|---|
+| **Formül 46.5** değişmezi `Sol(G,u) == Y_göz` | hata **4.4e-16** |
+| 3-pas kapalı formu tutuyor | `Z→X→Y`, `Z→Y` modelinde `do(X=x)` altında `Y = 3x − Z + u_Y`; `x=−2,0,2` için ölçülen −5.2000 / +0.8000 / +6.8000 — kapalı formla aynı |
+| Müdahale **giren** oku siler | `do(X)` sonrası `Z→X` gitti, `X→Y` ve `Z→Y` durdu |
+| Gözlemden gelen `u` korunuyor | `do(X=9)` altında bile `u_Z=0.5`, `u_Y=1.3` |
+| Abduction ne zaman tekil kalır? | toplamsal `u`da **hiç**; `B = A + u²` gibi doğrusal olmayan girişte `B` düğümünde tekil — bu hâlde karşıolgusal hüküm **verilmiyor** |
+| **Formül 45.3** gradyanı doğru | `∂h/∂A = 2(exp(A∘A))ᵀ∘A`; sonlu farkla azamî bağıl fark **1.4e-08** |
+| `h(A) = 0` ⟺ çevrimsiz | DAG/2-çevrim/3-çevrim/öz-döngü/boş — beşinde de kombinatorik Kahn sayımıyla **uyuşuyor** (`h`: 0, 1.086, 0.504, 0.094, 0) |
+| Örtük değişken sahte bağıntı üretir | `a=b=1`: ham **+0.5082** (kuram +0.5000); `L`ye koşullu −0.0137; `do(L)` altında −0.0076 |
+
+**Kaynağın eksik bıraktığı iki yer.**
+
+1. *Abduction'ın tekilleşme şartı yazılmamış.* "Denklem tekil kalıyor"
+   deniyor ama ne zaman kalacağı yok. Şart: yapısal denklemler
+   toplamsal gürültüyle yazıldığı sürece `u` **her zaman** tek türlü
+   çözülür (Jacobi alt üçgensel, köşegeni `I`). Tekillik ancak gürültü
+   doğrusal olmayan biçimde girerse doğar. İki hâl de kuruldu ve
+   ölçüldü.
+
+2. *Teğet izdüşümü tek başına yetmiyor (Darboğaz 48).* Formül 48.2 ve
+   48.3 doğru ama eksik: `P = I − Jᵀ(JJᵀ)⁻¹J` birinci mertebeden
+   doğrudur, ikinci mertebeden kayma her adımda birikir. Birim
+   çemberde ölçülen azamî ihlal `adım=0.05`'te **9.9e-02**,
+   `adım=0.5`'te **1.2e+00**. Her adımdan sonra bir Newton düzeltmesi
+   (`x ← x − J⁺φ(x)`) eklenince **1.6e-06** ve **1.3e-02**'ye iniyor,
+   nokta locus'ta kalıyor ve doğru asgarîye (`x₀ = −1`) varıyor.
+
+Ayrıca ölçülen bir incelik: `(1,0)` noktasında hedef gradyanı tamamen
+normal yöndedir, teğet izdüşümü sıfır verir ve yürüyüş **hiç
+kımıldamaz**. Bu bir kusur değil, kritik noktanın kendisidir — gösterim
+genel bir noktadan başlıyor.
