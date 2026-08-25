@@ -1,0 +1,101 @@
+# `idrak` — külliyatın mimarisi ARC-AGI-2 üzerinde
+
+Bu paket, risalelerdeki parçaların **birbirine bağlandığı** ve gerçek
+bir görev üzerinde ölçüldüğü yerdir.
+
+```
+python3 -m pytest idrak -q                    # 51 sınama
+python3 -m idrak.arc ; python3 -m idrak.kubit
+python3 -m idrak.model ; python3 -m idrak.cozucu
+python3 -m idrak.egitim --D 128 --adim 9000 --baglam 2048 --hedef 640
+```
+
+## Veri
+
+| Kaynak | İçerik |
+|---|---|
+| [arcprize/ARC-AGI-2](https://github.com/arcprize/ARC-AGI-2) | **1000** eğitim + **120** değerlendirme görevi |
+| [cristianoc/arc-agi-2-abstraction-dataset](https://github.com/cristianoc/arc-agi-2-abstraction-dataset) | 120 değerlendirme görevinin **hepsi** için sözlü algoritma (`abstractions.md`) + tipli DSL + çalışan çözücü |
+
+**Bölme: 900 / 100 / 120 (%80 / %9 / %11).** 50/50 değil, çünkü sınama
+kümesinin tek işi tarafsız kestirimdir ve kestirimin standart hatası
+`√(p(1−p)/n)` ile *sınama* boyutuna bağlıdır — 120 görevde ≈ 4.6 puan,
+yeterli. Eğitimi yarıya indirmek kestirimi ancak 2.1 puana iyileştirir
+ama öğrenmeyi doğrudan zayıflatır. Üstelik bölmeyi uydurmuyoruz: ARC'ın
+kendi bölmesine uyuyoruz.
+
+**Kendi denetimimin yakaladığı sızıntı.** İlk hâlde hedef örnek
+bağlamın içindeydi — model kaideyi öğrenmeden **kopyalayarak**
+çözebilirdi. Çıkarıldı. Kalan 33/300 sızıntı, çıktının görevler arası
+gerçekten tekrar ettiği hâllerdir (verinin kendi özelliği).
+
+**Uzunluk sınırı kapsamı ölçüldü ve düzeltildi:**
+
+| bağlam | hedef | örnek | eğitim örneği | değerlendirme kapsamı |
+|---|---|---|---|---|
+| 768 | 320 | 3 | 1844 | **3 / 120 (%2)** |
+| 2048 | 640 | 2 | 2964 | **65 / 120 (%54)** |
+| 3072 | 900 | 2 | 3147 | 98 / 120 (%82) |
+
+İlk ayarla model kümenin %98'ine **dokunamıyordu bile**; `2048/640/2`ye
+geçildi.
+
+## Kübit katmanı (`kubit.py`)
+
+| Ölçüm | Sonuç |
+|---|---|
+| Kapılar dik mi? | `n=2…5`: `‖UᵀU−I‖` **3.6e-07 … 6.6e-07**, `det = +1.000000` |
+| Norm korunuyor mu? | `max\|‖ψ‖²−1\|` **≤ 4.8e-07**; okuma toplamı 1.0000000 |
+| Kontrollü kapı dolaşıklık üretiyor mu? | Bell durumu `[+0.7071, 0, 0, +0.7071]`, Schmidt `(0.7071, 0.7071)`; kontrollü açı 0 iken `(1.0, 0.0)` = çarpım durumu |
+| Maliyet | `n=4`: 3.1 ms, `n=16`: **108 ms** — `2^n` ile büyüyor |
+
+**Dürüstlük şartı.** Bu bir kuantum bilgisayarı **değildir**; klasik
+benzetimdir. "Kübit koyduk, hızlandık" demek yanlış olurdu — ölçülen
+tek kazanç norm korunumu ve dikliktir.
+
+## Model (`model.py`) — D=512 varsayılan, D=128 hızlı deneme
+
+| Risaledeki parça | Ölçüm |
+|---|---|
+| **M29** Hartley süzgeci, çift simetri | `‖r[k]−r[N−k]‖ = **0.00e+00**` — yalnız yarısı öğrenildiği için bozulması **imkânsız** |
+| Süzgeç gerçekten evrişim mi? | dolaşımlıdan sapma **5.96e-08** |
+| Cayley dik karışım (41 meleke) | `‖QᵀQ−I‖ = 7.2e-07`, `det = +1.000001` |
+| Çözücü nedensel mi? | geçmiş değişimi **0.00e+00**; gelecek 1.5676 |
+| Kodlayıcı nedensel mi? | 0.3272 — **beklenmiyor** (bağlam tam gözlenmiş) |
+| Hartley vs dikkat | `N=2048`: 1.30 ms / 9.94 ms → **7.6×** |
+
+Parametre: `D=128`'de 2.34 M.
+
+## Doğrulanabilir çözücü (`cozucu.py`) — **ya ispat ya sükût**
+
+`D₄` dihedral grubu (`reel.meleke`'deki permütasyon kapılarının ta
+kendisi — sınamada `‖PᵀP−I‖ < 1e-12` ile teyit ediliyor) + renk
+eşlemesi + döşeme + kırpma + ölçekleme.
+
+Bir aday, görevin **bütün gösterim çiftlerini** tam tutmadıkça
+kullanılmaz; tutan aday yoksa **cevap verilmez**.
+
+| Küme | tam çözülen | cevap verilen | yanlış | susulan | cevap verince isabet |
+|---|---|---|---|---|---|
+| resmî eğitim (1000) | **22 (%2.2)** | 23 | 1 | 977 | **%95.7** |
+| doğrulama bölmesi (100) | **1** (`bc4146bd`) | — | — | — | — |
+| resmî değerlendirme (120) | **0** | 0 | 0 | 120 | — |
+
+Kullanılan kurallar: `D4:devrik`, `D4:dön90`, `D4:dön180`,
+`D4:yatay_ayna`, `D4:dikey_ayna`, `aynalı_döşeme_1x2`,
+`aynalı_döşeme_1x5`, `döşeme_1x2`, `fraktal`, `kırp`,
+`kırp+D4:yatay_ayna`, `renk_eşlemesi`, `ölçek_2x2`, `ölçek_3x3`.
+
+**Değerlendirme kümesinde 0/120 — ve bu bir başarısızlıktır, öyle
+yazılıyor.** ARC-AGI-2'nin değerlendirme kümesi tam da bu sınıf basit
+dönüşüm aramalarını yenmek için kuruldu; ARC-AGI-1'den farkı budur.
+
+## Eğitim (`egitim.py`)
+
+Ölçüt **tam ızgara eşleşmesidir**, hücre doğruluğu değil: boş bir
+ızgarada hücrelerin çoğu zaten siyahtır. Değerlendirmede öğretmen
+zorlaması **yoktur** — açgözlü üretim yapılır.
+
+**Ölçümün yakaladığı hız kusuru.** `uret` her belirteçte bağlamı
+yeniden kodluyordu; 20 görevlik değerlendirme 100 sn'yi aşıyordu.
+Bağlam bir kere kodlanınca **2.1 sn**'ye indi.
