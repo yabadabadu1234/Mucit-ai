@@ -37,11 +37,12 @@ __all__ = ["Toplu", "toplu_hazirla", "degerlendir", "egit", "ana"]
 
 
 class Toplu:
-    """Bir yığın: bağlam, çözücü girişi, hedef, maske."""
+    """Bir yığın: bağlam, çözücü girişi, hedef, maske, hedef şekli."""
 
-    def __init__(self, baglam, giris, hedef, maske):
+    def __init__(self, baglam, giris, hedef, maske, satir=None, sutun=None):
         self.baglam, self.giris = baglam, giris
         self.hedef, self.maske = hedef, maske
+        self.satir, self.sutun = satir, sutun
 
 
 def _ornekler(gorevler: Sequence[arc.Gorev], ayar: Ayar,
@@ -91,7 +92,12 @@ def toplu_hazirla(ciftler: Sequence[Tuple[List[int], List[int]]],
     giris = torch.full((B, nh), arc.DOLGU, dtype=torch.long)
     hedef = torch.full((B, nh), arc.DOLGU, dtype=torch.long)
     maske = torch.zeros(B, nh)
+    satir = torch.zeros(B, dtype=torch.long)
+    sutun = torch.zeros(B, dtype=torch.long)
     for i, (b, h) in enumerate(ciftler):
+        g = arc.belirtec_izgara(h)
+        if g is not None:
+            satir[i], sutun[i] = g.shape
         baglam[i, :len(b)] = torch.tensor(b)
         # öğretmen zorlaması: giriş = [BAŞLA] + hedef[:-1]
         giris[i, 0] = arc.DOLGU
@@ -100,18 +106,28 @@ def toplu_hazirla(ciftler: Sequence[Tuple[List[int], List[int]]],
         hedef[i, :len(h)] = torch.tensor(h)
         maske[i, :len(h)] = 1.0
     return Toplu(baglam.to(aygit), giris.to(aygit), hedef.to(aygit),
-                 maske.to(aygit))
+                 maske.to(aygit), satir.to(aygit), sutun.to(aygit))
 
 
-def _kayip(model: NefsModeli, t: Toplu) -> Tuple[torch.Tensor, float]:
-    cikti = model(t.baglam, t.giris)
+def _kayip(model: NefsModeli, t: Toplu, sekil_agirlik: float = 0.5
+           ) -> Tuple[torch.Tensor, float, float]:
+    """Belirteç kaybı + **şekil kaybı**.
+
+    Şekil ayrı bir baştan öğreniliyor; ölçüldü ki şekilsiz modelde
+    üretilen ızgaraların %96'sı iyi biçimli ama şekli **%0** doğru
+    oluyordu, yani tam eşleşme imkânsızdı.
+    """
+    cikti, sa, su = model(t.baglam, t.giris, sekil_de=True)
     kayip = F.cross_entropy(cikti.reshape(-1, cikti.shape[-1]),
                             t.hedef.reshape(-1), reduction="none")
     kayip = (kayip * t.maske.reshape(-1)).sum() / t.maske.sum().clamp(min=1)
+    sk = (F.cross_entropy(sa, t.satir) + F.cross_entropy(su, t.sutun)) / 2
     with torch.no_grad():
         dogru = ((cikti.argmax(-1) == t.hedef).float() * t.maske).sum()
         oran = float(dogru / t.maske.sum().clamp(min=1))
-    return kayip, oran
+        sd = float(((sa.argmax(-1) == t.satir)
+                    & (su.argmax(-1) == t.sutun)).float().mean())
+    return kayip + sekil_agirlik * sk, oran, sd
 
 
 @torch.no_grad()
@@ -126,6 +142,7 @@ def degerlendir(model: NefsModeli, gorevler: Sequence[arc.Gorev],
     model.eval()
     hucre_d, hucre_t = 0, 0
     izgara_d, izgara_t = 0, 0
+    sekil_d_top = 0
     cozulen: List[str] = []
     ornek_cikti = None
     for g in gorevler[:azami_gorev]:
@@ -143,8 +160,14 @@ def degerlendir(model: NefsModeli, gorevler: Sequence[arc.Gorev],
                 continue
             gorev_var = True
             t = toplu_hazirla([(b, h)], ayar, aygit)
-            uret = model.uret(t.baglam, len(h),
-                              dur=arc.IZGARA_SONU)[0].cpu().tolist()
+            # KISITLI çözümleme: şekil başından okunan boyutta, her zaman
+            # iyi biçimli ızgara üretiliyor. Böylece tam eşleşme yalnız
+            # RENKLERE kalıyor; biçim/şekil hatası sınıfı kalkıyor.
+            uz, sr, st = model.uret_kisitli(t.baglam)
+            uret = uz[0].cpu().tolist()
+            sekil_d_top += int((sr, st) == tuple(
+                arc.belirtec_izgara(h).shape)
+                if arc.belirtec_izgara(h) is not None else 0)
             uret = (uret + [arc.DOLGU] * len(h))[:len(h)]
             hedef = h
             hucre_d += sum(int(a == c) for a, c in zip(uret, hedef))
@@ -165,6 +188,7 @@ def degerlendir(model: NefsModeli, gorevler: Sequence[arc.Gorev],
             cozulen.append(g.ad)
     model.train()
     return {"hücre": hucre_d / max(hucre_t, 1),
+            "şekil": sekil_d_top / max(izgara_t, 1),
             "ızgara": izgara_d / max(izgara_t, 1),
             "ızgara_doğru": izgara_d, "ızgara_toplam": izgara_t,
             "çözülen_görev": cozulen, "çözülen_sayı": len(cozulen),
@@ -221,7 +245,7 @@ def egit(D: int = 128, adim: int = 20000, yigin: int = 4,
     for k in range(1, adim + 1):
         idx = r.integers(0, len(egt), size=yigin)
         t = toplu_hazirla([egt[int(i)] for i in idx], ayar)
-        kayip, oran = _kayip(model, t)
+        kayip, oran, sekil_d = _kayip(model, t)
         opt.zero_grad(set_to_none=True)
         kayip.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
@@ -233,6 +257,7 @@ def egit(D: int = 128, adim: int = 20000, yigin: int = 4,
             gecen = time.time() - bas
             yaz({"tür": "adım", "adım": k, "kayıp": round(float(kayip), 4),
                  "hücre_öğretmenli": round(oran, 4),
+                 "şekil_doğru": round(sekil_d, 4),
                  "lr": round(plan.get_last_lr()[0], 6),
                  "belirteç": toplam_belirtec,
                  "belirteç_sn": round(toplam_belirtec / max(gecen, 1e-9), 1)})
@@ -241,6 +266,8 @@ def egit(D: int = 128, adim: int = 20000, yigin: int = 4,
             dv = degerlendir(model, dog_gorev, ayar, 40, sinamadan=True)
             se = degerlendir(model, egt_gorev, ayar, 40, sinamadan=False)
             yaz({"tür": "değerlendirme", "adım": k,
+                 "eğitim_şekil": round(se["şekil"], 4),
+                 "doğrulama_şekil": round(dv["şekil"], 4),
                  "eğitim_hücre": round(se["hücre"], 4),
                  "eğitim_ızgara": round(se["ızgara"], 4),
                  "eğitim_çözülen": se["çözülen_sayı"],

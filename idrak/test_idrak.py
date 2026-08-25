@@ -238,6 +238,45 @@ def test_uret_forward_ile_ayni_sonucu_veriyor():
     assert torch.equal(hizli, y[:, 1:])
 
 
+def test_sekil_basi_kisitli_uretimi_zorluyor():
+    """ÖLÇÜLEN KUSUR: şekil başı yokken üretilen ızgaraların %96'sı iyi
+    biçimliydi ama şekli %0 doğruydu — tam eşleşme imkânsızdı."""
+    torch.manual_seed(0)
+    m = NefsModeli(Ayar(D=32, kodlayici=1, cozucu=1, bas=2))
+    m.eval()
+    b = torch.randint(0, 10, (1, 60))
+    for h, w in ((1, 1), (4, 5), (30, 30), (7, 2)):
+        y, sr, st = m.uret_kisitli(b, satir=h, sutun=w)
+        g = arc.belirtec_izgara(y[0].tolist())
+        assert g is not None                      # HER ZAMAN iyi biçimli
+        assert g.shape == (h, w)                  # HER ZAMAN istenen şekil
+        assert (sr, st) == (h, w)
+    # şekil verilmezse baştan okunuyor ve yine tutuyor
+    y2, sr2, st2 = m.uret_kisitli(b)
+    g2 = arc.belirtec_izgara(y2[0].tolist())
+    assert g2 is not None and g2.shape == (sr2, st2)
+    assert 1 <= sr2 <= m.azami_kenar and 1 <= st2 <= m.azami_kenar
+
+
+def test_sekil_basi_ogreniliyor():
+    """Şekil ayrı ve KOLAY öğrenilen bir alt problem."""
+    from idrak.egitim import _kayip, _ornekler, toplu_hazirla
+    torch.manual_seed(0)
+    ayar = Ayar(D=32, kodlayici=1, cozucu=1, bas=2, azami_baglam=2048,
+                azami_hedef=640, azami_baglam_ornek=2)
+    m = NefsModeli(ayar)
+    c = _ornekler(arc.yukle_hepsi("training")[:60], ayar)[:2]
+    t = toplu_hazirla(c, ayar)
+    assert int(t.satir.min()) >= 1 and int(t.sutun.min()) >= 1
+    opt = torch.optim.AdamW(m.parameters(), lr=3e-3)
+    for _ in range(40):
+        k, _o, _s = _kayip(m, t)
+        opt.zero_grad(); k.backward(); opt.step()
+    _k, oran, sekil = _kayip(m, t)
+    assert sekil == 1.0                            # şekil TAM öğrenildi
+    assert oran > 0.9
+
+
 def test_model_cikti_sekli_ve_parametre():
     torch.manual_seed(0)
     ayar = Ayar(D=HIZLI_BOYUT)
@@ -280,6 +319,7 @@ def test_degerlendirme_tam_izgara_esmesi_sayiyor():
     m = NefsModeli(ayar)
     d = degerlendir(m, arc.yukle_hepsi("evaluation")[:40], ayar, 40)
     assert 0.0 <= d["ızgara"] <= 1.0
+    assert 0.0 <= d["şekil"] <= 1.0
     assert d["ızgara_toplam"] > 0
     assert d["çözülen_sayı"] == len(d["çözülen_görev"])
 
@@ -294,10 +334,10 @@ def test_bir_adim_kaybi_dusuruyor():
     c = _ornekler(arc.yukle_hepsi("training")[:40], ayar)[:2]
     t = toplu_hazirla(c, ayar)
     opt = torch.optim.AdamW(m.parameters(), lr=3e-3)
-    ilk, _ = _kayip(m, t)
+    ilk, _o0, _s0 = _kayip(m, t)
     for _ in range(30):
-        k, _o = _kayip(m, t)
+        k, _o, _s = _kayip(m, t)
         opt.zero_grad(); k.backward(); opt.step()
-    son, oran = _kayip(m, t)
+    son, oran, _sd = _kayip(m, t)
     assert float(son) < float(ilk) * 0.7
     assert oran > 0.5

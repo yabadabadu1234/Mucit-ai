@@ -238,6 +238,14 @@ class NefsModeli(nn.Module):
             [CozucuBlok(ayar) for _ in range(ayar.cozucu)])
         self.son = nn.LayerNorm(D)
         self.bas = nn.Linear(D, ayar.sozluk)
+        # Şekil başı: çıktı ızgarasının (satır, sütun) sayısı.
+        # ÖLÇÜLDÜ: şekil başı yokken model %96 iyi biçimli ızgara
+        # üretiyordu ama ŞEKLİ %0 doğruydu -- yani tam eşleşme
+        # imkânsızdı. Şekil ayrı ve kolay öğrenilen bir alt problemdir;
+        # ayrı baş + kısıtlı çözümleme bu hata sınıfını tamamen kaldırır.
+        self.azami_kenar = 30                       # ARC ızgara sınırı
+        self.satir_bas = nn.Linear(D, self.azami_kenar + 1)
+        self.sutun_bas = nn.Linear(D, self.azami_kenar + 1)
 
     def kodla(self, baglam: torch.Tensor) -> Tuple[torch.Tensor,
                                                    torch.Tensor,
@@ -258,12 +266,21 @@ class NefsModeli(nn.Module):
             y = blok(y, bellek, maske)
         return self.bas(self.son(y))
 
-    def forward(self, baglam: torch.Tensor, hedef_giris: torch.Tensor
-                ) -> torch.Tensor:
+    def sekil_tahmini(self, havuz: torch.Tensor
+                      ) -> Tuple[torch.Tensor, torch.Tensor]:
+        """``(satır, sütun)`` sınıflandırma çıktıları."""
+        return self.satir_bas(havuz), self.sutun_bas(havuz)
+
+    def forward(self, baglam: torch.Tensor, hedef_giris: torch.Tensor,
+                sekil_de: bool = False):
         bellek, maske, havuz = self.kodla(baglam)
         # kübit yazmacı: bağlamdan evrilen dik kayıt, belleğe eklenir
         kb = self.kubit(havuz).unsqueeze(1)
-        return self.coz(bellek, maske, kb, hedef_giris)
+        c = self.coz(bellek, maske, kb, hedef_giris)
+        if sekil_de:
+            sa, su = self.sekil_tahmini(havuz)
+            return c, sa, su
+        return c
 
     @torch.no_grad()
     def uret(self, baglam: torch.Tensor, azami: int, baslangic: int = DOLGU,
@@ -288,6 +305,42 @@ class NefsModeli(nn.Module):
             if dur is not None and bool((y == dur).any(dim=1).all()):
                 break
         return y[:, 1:]
+
+    @torch.no_grad()
+    def uret_kisitli(self, baglam: torch.Tensor,
+                     satir: Optional[int] = None, sutun: Optional[int] = None
+                     ) -> Tuple[torch.Tensor, int, int]:
+        """**Kısıtlı** çözümleme: tam ``satır × sütun`` ızgara üret.
+
+        Şekil verilmezse şekil başından okunur.  Satır sonu ve ızgara
+        sonu belirteçleri **zorlanır**; renk belirteçleri yalnız renk
+        aralığından (``0-9``) seçilir.  Böylece çıktı **her zaman**
+        iyi biçimli ve istenen şekilde olur; geriye yalnız renkleri
+        doğru bilmek kalır.
+        """
+        from .arc import IZGARA_SONU, RENK, SATIR_SONU
+        bellek, maske, havuz = self.kodla(baglam)
+        kb = self.kubit(havuz).unsqueeze(1)
+        if satir is None or sutun is None:
+            sa, su = self.sekil_tahmini(havuz)
+            satir = int(sa[0].argmax()) if satir is None else satir
+            sutun = int(su[0].argmax()) if sutun is None else sutun
+        satir = max(1, min(satir, self.azami_kenar))
+        sutun = max(1, min(sutun, self.azami_kenar))
+        B = baglam.shape[0]
+        y = torch.full((B, 1), DOLGU, dtype=torch.long,
+                       device=baglam.device)
+        for i in range(satir):
+            for _ in range(sutun):
+                mant = self.coz(bellek, maske, kb, y)[:, -1]
+                r = mant[:, :RENK].argmax(-1, keepdim=True)
+                y = torch.cat([y, r], dim=1)
+            y = torch.cat([y, torch.full((B, 1), SATIR_SONU,
+                                         dtype=torch.long,
+                                         device=y.device)], dim=1)
+        y = torch.cat([y, torch.full((B, 1), IZGARA_SONU, dtype=torch.long,
+                                     device=y.device)], dim=1)
+        return y[:, 1:], satir, sutun
 
 
 def parametre_sayisi(m: nn.Module) -> Dict[str, int]:
