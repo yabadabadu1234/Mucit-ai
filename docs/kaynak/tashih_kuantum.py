@@ -609,6 +609,56 @@ _t(35, "Darboğaz 41", "Kare olmayan Jacobi'nin tayfı yoktur",
    "tip", None),
 
 
+_t(36, "Darboğaz 2", "İz eşitliği alt uzay eşitliğini göstermez",
+   [DARBOGAZ],
+   " * Formül 2.5 (Kesintisiz İki-Uzay Aktarım İnvaryantı): "
+   "Tr(Exp_(G_1)(Log_(G_1)(G_2))) == Tr(G_2)",
+   " * Formul 2.5 (Kesintisiz Iki-Uzay Aktarim Invaryanti): "
+   "|| P(Exp_(G_1)(Log_(G_1)(G_2))) - P(G_2) ||_F == 0, "
+   "P(Y) = Y (Y^T Y)^(-1) Y^T.  (Iz esitligi ZAYIFTIR: Gr(k,d)'nin "
+   "HER noktasinin izi k'dir, dolayisiyla Tr esitligi yanlis bir "
+   "Log haritasinda da saglanir)",
+   "Grassmann noktalarının izdüşümlerinin izi **her zaman** ``k``dır; "
+   "bu yüzden ``Tr(Exp(Log(G₂))) = Tr(G₂)`` her zaman sağlanır ve "
+   "hiçbir şey sınamaz. Ölçüldü: kasten yanlış ``arcsin`` Log'uyla "
+   "bile iz 3.0000000000 çıkıyor, oysa izdüşümler arası Frobenius "
+   "farkı 0.7154. Doğru değişmez izdüşüm farkıdır.",
+   "olcut", "test_iz_olcutu_yanlis_log_u_yakalamiyor"),
+
+_t(37, "Darboğaz 46", "Abduction'ın tekilleşme şartı yazılmamış",
+   [DARBOGAZ],
+   "Sorun: Abduction (Gözlemden gürültü u bulma) safhasında "
+   "u = Y_obs - pred denkleminin tekil kalması.",
+   "Sorun: Abduction (Gozlemden gurultu u bulma) safhasinda "
+   "f_i(pa_i, u_i) = X_i denkleminin u_i icin tek cozumu olmamasi.  "
+   "SART: gurultu TOPLAMSAL girdigi surece (X_i = f_i(pa_i) + u_i) "
+   "Jacobi alt ucgenseldir, kosegeni I'dir ve u HER ZAMAN tek turlu "
+   "cozulur; tekillik ancak gurultu dogrusal olmayan bicimde "
+   "girerse (ornek: X_i = f_i(pa_i) + u_i^2) dogar.",
+   "Kaynak \"tekil kalıyor\" diyor ama şartını yazmıyor; bu hâliyle "
+   "hiçbir zaman tekil olmayan modellerde de bir sorun varmış gibi "
+   "görünüyor. Ölçüldü: toplamsal gürültüde abduction 4.4e-16 "
+   "hatayla geri çözülüyor; ``B = A + u²`` modelinde ise ``B < A`` "
+   "gözleminde kök yoktur ve karşıolgusal hüküm verilemez.",
+   "eksik_sart", "test_dogrusal_olmayan_gurultude_tekil"),
+
+_t(38, "Darboğaz 48", "Teğet izdüşümü tek başına locus'ta tutmuyor",
+   [DARBOGAZ],
+   " * Formül 48.3 (Locus İçi İlerleme Step): "
+   "X_(k+1) = X_k + eta * P_locus * v_teğet",
+   " * Formul 48.3 (Locus Ici Ilerleme Step): "
+   "X_(k+1/2) = X_k + eta * P_locus * v_teget, ardindan Newton "
+   "duzeltmesi X_(k+1) = X_(k+1/2) - J_phi^+ phi(X_(k+1/2)).  "
+   "(Teget izdusumu yalniz BIRINCI mertebeden dogrudur; ikinci "
+   "mertebeden kayma her adimda birikir)",
+   "Formül 48.2 doğru, 48.3 **eksiktir**. Teğet izdüşümü ``φ``yi "
+   "birinci mertebeden korur; eğrilik yüzünden her adımda "
+   "``O(η²)`` kayma birikir. Ölçüldü (birim çember, 200 adım): "
+   "düzeltmesiz azamî ihlal ``η=0.05``te 9.9e-02, ``η=0.5``te "
+   "1.2e+00. Newton düzeltmesiyle 1.6e-06 ve 1.3e-02.",
+   "eksik_adim", "test_duzeltmesiz_tegetin_locustan_kaydigi"),
+
+
 # =====================================================================
 #  Uygulama
 # =====================================================================

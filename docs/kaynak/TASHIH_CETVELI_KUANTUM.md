@@ -2,7 +2,7 @@
 
 Bu cetvel `docs/kaynak/tashih_kuantum.py` içindeki kayıtlardan **üretilmiştir**; elle yazılmamıştır.
 
-Toplam **35** tashih, 5 belgede.
+Toplam **38** tashih, 5 belgede.
 
 | tür | adet | ne demek |
 |---|---:|---|
@@ -15,8 +15,11 @@ Toplam **35** tashih, 5 belgede.
 | `boyut` | 1 | sayım veya indis aralığı yanlış |
 | `isaret` | 1 | işaret veya ters fonksiyon hatası |
 | `istatistik` | 1 | gerek şart yeter şart gibi kullanılmış |
+| `olcut` | 1 |  |
+| `eksik_sart` | 1 |  |
+| `eksik_adim` | 1 |  |
 
-Bunların **29**'i ayrıca makine ile sağlanıyor (`docs/kaynak/test_tashih_kuantum.py`).
+Bunların **32**'i ayrıca makine ile sağlanıyor (`docs/kaynak/test_tashih_kuantum.py`).
 
 ## K1 — Ortam kapanışı bozuk: \end{equation">
 
@@ -717,3 +720,63 @@ K_\infty(x, y) = \int_{\text{Map}(I, \mathcal{C}_\infty)} \mathcal{D}\gamma \; \
 ```
 
 **Gerekçe.** Formül 41.3 $J_\phi = [\partial\phi_j/\partial X_k]$'yi $m \times n$ olarak tanımlıyor (Formül 41.2'de $A_{\text{BGCM}} \in \mathbb{R}^{n\times m}$). Kare olmayan bir dizeyin **özdeğeri yoktur**, dolayısıyla $\mathrm{Spec}(J_\phi)$ tanımsızdır. Kararlılık ancak $m = n$ iken özdeğerlerle konuşulur.
+
+## K36 — İz eşitliği alt uzay eşitliğini göstermez
+
+*Yer:* Darboğaz 2  ·  *Tür:* `olcut`  ·  *Belge:* analitik_darbogazlar.txt
+
+*Makine sağlaması:* `test_iz_olcutu_yanlis_log_u_yakalamiyor`
+
+**Kaynakta:**
+
+```
+ * Formül 2.5 (Kesintisiz İki-Uzay Aktarım İnvaryantı): Tr(Exp_(G_1)(Log_(G_1)(G_2))) == Tr(G_2)
+```
+
+**Tashih:**
+
+```
+ * Formul 2.5 (Kesintisiz Iki-Uzay Aktarim Invaryanti): || P(Exp_(G_1)(Log_(G_1)(G_2))) - P(G_2) ||_F == 0, P(Y) = Y (Y^T Y)^(-1) Y^T.  (Iz esitligi ZAYIFTIR: Gr(k,d)'nin HER noktasinin izi k'dir, dolayisiyla Tr esitligi yanlis bir Log haritasinda da saglanir)
+```
+
+**Gerekçe.** Grassmann noktalarının izdüşümlerinin izi **her zaman** ``k``dır; bu yüzden ``Tr(Exp(Log(G₂))) = Tr(G₂)`` her zaman sağlanır ve hiçbir şey sınamaz. Ölçüldü: kasten yanlış ``arcsin`` Log'uyla bile iz 3.0000000000 çıkıyor, oysa izdüşümler arası Frobenius farkı 0.7154. Doğru değişmez izdüşüm farkıdır.
+
+## K37 — Abduction'ın tekilleşme şartı yazılmamış
+
+*Yer:* Darboğaz 46  ·  *Tür:* `eksik_sart`  ·  *Belge:* analitik_darbogazlar.txt
+
+*Makine sağlaması:* `test_dogrusal_olmayan_gurultude_tekil`
+
+**Kaynakta:**
+
+```
+Sorun: Abduction (Gözlemden gürültü u bulma) safhasında u = Y_obs - pred denkleminin tekil kalması.
+```
+
+**Tashih:**
+
+```
+Sorun: Abduction (Gozlemden gurultu u bulma) safhasinda f_i(pa_i, u_i) = X_i denkleminin u_i icin tek cozumu olmamasi.  SART: gurultu TOPLAMSAL girdigi surece (X_i = f_i(pa_i) + u_i) Jacobi alt ucgenseldir, kosegeni I'dir ve u HER ZAMAN tek turlu cozulur; tekillik ancak gurultu dogrusal olmayan bicimde girerse (ornek: X_i = f_i(pa_i) + u_i^2) dogar.
+```
+
+**Gerekçe.** Kaynak "tekil kalıyor" diyor ama şartını yazmıyor; bu hâliyle hiçbir zaman tekil olmayan modellerde de bir sorun varmış gibi görünüyor. Ölçüldü: toplamsal gürültüde abduction 4.4e-16 hatayla geri çözülüyor; ``B = A + u²`` modelinde ise ``B < A`` gözleminde kök yoktur ve karşıolgusal hüküm verilemez.
+
+## K38 — Teğet izdüşümü tek başına locus'ta tutmuyor
+
+*Yer:* Darboğaz 48  ·  *Tür:* `eksik_adim`  ·  *Belge:* analitik_darbogazlar.txt
+
+*Makine sağlaması:* `test_duzeltmesiz_tegetin_locustan_kaydigi`
+
+**Kaynakta:**
+
+```
+ * Formül 48.3 (Locus İçi İlerleme Step): X_(k+1) = X_k + eta * P_locus * v_teğet
+```
+
+**Tashih:**
+
+```
+ * Formul 48.3 (Locus Ici Ilerleme Step): X_(k+1/2) = X_k + eta * P_locus * v_teget, ardindan Newton duzeltmesi X_(k+1) = X_(k+1/2) - J_phi^+ phi(X_(k+1/2)).  (Teget izdusumu yalniz BIRINCI mertebeden dogrudur; ikinci mertebeden kayma her adimda birikir)
+```
+
+**Gerekçe.** Formül 48.2 doğru, 48.3 **eksiktir**. Teğet izdüşümü ``φ``yi birinci mertebeden korur; eğrilik yüzünden her adımda ``O(η²)`` kayma birikir. Ölçüldü (birim çember, 200 adım): düzeltmesiz azamî ihlal ``η=0.05``te 9.9e-02, ``η=0.5``te 1.2e+00. Newton düzeltmesiyle 1.6e-06 ve 1.3e-02.

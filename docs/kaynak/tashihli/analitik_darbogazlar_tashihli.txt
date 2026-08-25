@@ -1,4 +1,4 @@
-[Bu nüshaya 11 tashih uygulanmıştır (K25, K26, K27, K28, K29, K30, K31, K32, K33, K34, K35). Cetvel: docs/kaynak/TASHIH_CETVELI_KUANTUM.md]
+[Bu nüshaya 14 tashih uygulanmıştır (K25, K26, K27, K28, K29, K30, K31, K32, K33, K34, K35, K36, K37, K38). Cetvel: docs/kaynak/TASHIH_CETVELI_KUANTUM.md]
 ================================================================================
 NEFS-İ MÜDRİKE MİMARİSİ: ANALİTİK DARBOĞAZLAR VE İSPATLI ÇÖZÜMLER KÜLLİYATI
 Mahiyet: Bu risale, Nefs-i Müdrike Mimarisi'nin hesaplama, bellek, topoloji, nedensellik ve çıkarım safhalarında karşılaşılan 70 çetin analitik darboğazı ve bu darboğazları hakikatten taviz vermeksizin kat'î olarak çözen 350 kesinbekes ispatlı formülü vaz' eder.
@@ -16,7 +16,7 @@ Sorun: Farklı gaye alt-uzayları G_1 ve G_2 arasındaki koordinat dönüşümü
  * Formül 2.2 (Geodezik Manifold Mesafesi): d_Gr(G_1, G_2) = sqrt( sum_(i=1)^k theta_i^2 )
  * Formül 2.3 (Lie Grubu Geodezik Akış Haritası): Exp_(G_1)(t * V) = G_1 * cos(t * Sigma) + U * sin(t * Sigma)
  * Formül 2.4 (Logaritma Donusum Haritasi): Log_(G_1)(G_2) = U * diag(theta_i) * V^T,  theta_i = arccos(sigma_i(U_1^T U_2))   [Formul 2.1'de cos(theta_i) tanimlandigina gore ana acilar arccos ile okunur; arcsin baska bir buyuklugu verir]
- * Formül 2.5 (Kesintisiz İki-Uzay Aktarım İnvaryantı): Tr(Exp_(G_1)(Log_(G_1)(G_2))) == Tr(G_2)
+ * Formul 2.5 (Kesintisiz Iki-Uzay Aktarim Invaryanti): || P(Exp_(G_1)(Log_(G_1)(G_2))) - P(G_2) ||_F == 0, P(Y) = Y (Y^T Y)^(-1) Y^T.  (Iz esitligi ZAYIFTIR: Gr(k,d)'nin HER noktasinin izi k'dir, dolayisiyla Tr esitligi yanlis bir Log haritasinda da saglanir)
 [DARBOĞAZ 3] Persistent Homology Barkodlarında Gürültü ve Hakiki Delik Ayrışmazlığı
 Sorun: Filtrasyon parametresi t büyürken ortaya çıkan geçici topolojik gürültülerin hakiki aksiyomatik deliklerle karışması.
  * Formül 3.1 (Vietoris-Rips Kompleks Kapanışı): VR(X, eps) = { {x_0, ..., x_k} | d(x_i, x_j) <= eps }
@@ -324,7 +324,7 @@ Sorun: Acyclicity kısıtının matris üssü alırken O(d^3) bellek ve NaN patl
  * Formül 45.4 (Augmented Lagrangian Nedensellik Kaybı): L_DAG = MSE + rho/2 * (h(A))^2 + alpha * h(A)
  * Formül 45.5 (Kesin Döngüsüzlük Dengesi): | h(A) | <= 1e-8
 [DARBOĞAZ 46] Karşıolgusal (Counterfactual) 3-Pass Adımında Abduction Kaybı
-Sorun: Abduction (Gözlemden gürültü u bulma) safhasında u = Y_obs - pred denkleminin tekil kalması.
+Sorun: Abduction (Gozlemden gurultu u bulma) safhasinda f_i(pa_i, u_i) = X_i denkleminin u_i icin tek cozumu olmamasi.  SART: gurultu TOPLAMSAL girdigi surece (X_i = f_i(pa_i) + u_i) Jacobi alt ucgenseldir, kosegeni I'dir ve u HER ZAMAN tek turlu cozulur; tekillik ancak gurultu dogrusal olmayan bicimde girerse (ornek: X_i = f_i(pa_i) + u_i^2) dogar.
  * Formül 46.1 (1. Pas - Abduction / Çıkarım): u_kabuk = Y_obs - J_BGCM * X_obs
  * Formül 46.2 (2. Pas - Action / Müdahale): G_ampute ==> do(X_k = x_sanal)
  * Formül 46.3 (3. Pas - Prediction / Tahmin): Y_karşıolgusal = Sol(G_ampute, u_kabuk)
@@ -341,7 +341,7 @@ Sorun: Gözlemlenmeyen L değişkenlerinin X_i ve X_j arasında sahte B-Ayrışm
 Sorun: S_locus = {X | phi(X) = 0} manifoldu üzerinde hareket ederken gradyanın locus dışına fırlaması.
  * Formül 48.1 (Denge Lokusu Teğet Uzayı): T(S_locus) = ker(d phi)
  * Formül 48.2 (Locus İzdüşüm Matrisi): P_locus = I - J_phi^T * (J_phi * J_phi^T)^(-1) * J_phi
- * Formül 48.3 (Locus İçi İlerleme Step): X_(k+1) = X_k + eta * P_locus * v_teğet
+ * Formul 48.3 (Locus Ici Ilerleme Step): X_(k+1/2) = X_k + eta * P_locus * v_teget, ardindan Newton duzeltmesi X_(k+1) = X_(k+1/2) - J_phi^+ phi(X_(k+1/2)).  (Teget izdusumu yalniz BIRINCI mertebeden dogrudur; ikinci mertebeden kayma her adimda birikir)
  * Formül 48.4 (Locus Dışına Sapma Onarımı): X_musahhah = X_(k+1) - J_phi^T * (J_phi * J_phi^T)^(-1) * phi(X_(k+1))
  * Formül 48.5 (Kesin Locus Pozisyonu): || phi(X_musahhah) || <= 1e-10
 [DARBOĞAZ 49] Bipartite Çizgelerde Herbert Simon Sıralamasının Kilitlenmesi
