@@ -5,6 +5,7 @@
 * ``kapilar`` — tek/çok kübitli üniter kapılar, küresel faz ayrımı
 * ``devre``   — durum vektörü simülatörü, QFT, QPE, Trotter–Suzuki
 * ``tda``     — kombinatoryal Laplasyen, Betti, barkod, bottleneck, Kahan
+* ``qsvt``    — blok kodlama, QSP, tekil değer dönüşümü
 """
 
-__all__ = ["kapilar", "devre", "tda"]
+__all__ = ["kapilar", "devre", "tda", "qsvt"]
