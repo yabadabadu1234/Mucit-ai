@@ -245,12 +245,18 @@ def test_sekil_basi_kisitli_uretimi_zorluyor():
     m = NefsModeli(Ayar(D=32, kodlayici=1, cozucu=1, bas=2))
     m.eval()
     b = torch.randint(0, 10, (1, 60))
-    for h, w in ((1, 1), (4, 5), (30, 30), (7, 2)):
+    for h, w in ((1, 1), (4, 5), (7, 2), (12, 9)):
         y, sr, st = m.uret_kisitli(b, satir=h, sutun=w)
         g = arc.belirtec_izgara(y[0].tolist())
         assert g is not None                      # HER ZAMAN iyi biçimli
         assert g.shape == (h, w)                  # HER ZAMAN istenen şekil
         assert (sr, st) == (h, w)
+    # Bütçeyi aşan şekil KIRPILIR, patlamaz (30×30 = 931 belirteç ister)
+    y, sr, st = m.uret_kisitli(b, satir=30, sutun=30)
+    g = arc.belirtec_izgara(y[0].tolist())
+    assert g is not None and g.shape == (sr, st)
+    assert sr * (st + 1) <= m.ayar.azami_hedef - 2
+    assert sr < 30 and st == 30                   # satır kırpıldı
     # şekil verilmezse baştan okunuyor ve yine tutuyor
     y2, sr2, st2 = m.uret_kisitli(b)
     g2 = arc.belirtec_izgara(y2[0].tolist())
@@ -317,7 +323,9 @@ def test_degerlendirme_tam_izgara_esmesi_sayiyor():
     ayar = Ayar(D=32, kodlayici=1, cozucu=1, bas=2, azami_baglam=2048,
                 azami_hedef=640, azami_baglam_ornek=2)
     m = NefsModeli(ayar)
-    d = degerlendir(m, arc.yukle_hepsi("evaluation")[:40], ayar, 40)
+    # 40 görev, kısıtlı çözümlemeyle ~87 örnek × 640 belirteç eder ve
+    # sınama dakikalarca sürer. Mekanizmayı tartmak için 12 yeter.
+    d = degerlendir(m, arc.yukle_hepsi("evaluation")[:12], ayar, 12)
     assert 0.0 <= d["ızgara"] <= 1.0
     assert 0.0 <= d["şekil"] <= 1.0
     assert d["ızgara_toplam"] > 0

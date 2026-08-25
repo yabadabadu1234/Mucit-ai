@@ -327,6 +327,14 @@ class NefsModeli(nn.Module):
             sutun = int(su[0].argmax()) if sutun is None else sutun
         satir = max(1, min(satir, self.azami_kenar))
         sutun = max(1, min(sutun, self.azami_kenar))
+        # Belirteç bütçesi: satır×(sütun+1) hücre/satır-sonu + 1 ızgara
+        # sonu + 1 başlangıç.  Konum gömmesi ``azami_hedef`` uzunluğunda
+        # olduğundan bütçe aşılırsa satır sayısı KIRPILIR.
+        # (Ölçüldü: 30×30 = 931 belirteç isterken bütçe 320'ydi ve
+        #  yayın hatası veriyordu -- sınama yakaladı.)
+        butce = self.ayar.azami_hedef - 2
+        if satir * (sutun + 1) > butce:
+            satir = max(1, butce // (sutun + 1))
         B = baglam.shape[0]
         y = torch.full((B, 1), DOLGU, dtype=torch.long,
                        device=baglam.device)
