@@ -345,7 +345,17 @@ def ana(argv: Optional[Sequence[str]] = None) -> int:
     a.add_argument("--baglam", type=int, default=2048)
     a.add_argument("--hedef", type=int, default=640)
     a.add_argument("--ornek", type=int, default=2)
+    # ÖLÇÜLDÜ: 4 çekirdekli bu makinede iki torch süreci aynı anda
+    # koşarken iş parçacıkları birbirini eziyor.  Tek bir çözümleme
+    # adımı yüklü hâlde 658.8 ms sürüyordu; aynı adım
+    # ``set_num_threads(1)`` ile 16.6 ms -- yani 40× fark ALGORİTMADAN
+    # DEĞİL, iş parçacığı aşırı-abonesinden geliyordu.  Bu yüzden
+    # eşzamanlı koşarken --iplik 1 verilmelidir.
+    a.add_argument("--iplik", type=int, default=0,
+                   help="torch iş parçacığı sayısı (0 = dokunma)")
     n = a.parse_args(argv)
+    if n.iplik > 0:
+        torch.set_num_threads(n.iplik)
     r = egit(D=n.D, adim=n.adim, yigin=n.yigin, ogrenme=n.lr,
              gunluk=n.gunluk, kayit_dizin=n.dizin,
              degerlendirme_araligi=n.aralik, azami_saat=n.saat,

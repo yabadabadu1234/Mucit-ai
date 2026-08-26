@@ -349,3 +349,47 @@ def test_bir_adim_kaybi_dusuruyor():
     son, oran, _sd = _kayip(m, t)
     assert float(son) < float(ilk) * 0.7
     assert oran > 0.5
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  Çözücü penceresi — hız kazancı DOĞRULUKTAN taviz vermeden
+# ══════════════════════════════════════════════════════════════════════
+
+def test_pencere_bitsel_ayni():
+    """Kayan pencere, bütün ön eki işlemekle **bitsel** aynı olmalı."""
+    torch.manual_seed(0)
+    ayar = Ayar(D=64, azami_baglam=256, azami_hedef=640)
+    m = NefsModeli(ayar)
+    m.eval()
+    p = m.cozucu_penceresi
+    assert p == len(m.cozucu) * (m.cozucu[0].K - 1) + 1
+    b = torch.randint(0, 10, (1, 200))
+    with torch.no_grad():
+        bellek, maske, havuz = m.kodla(b)
+        kb = m.kubit(havuz).unsqueeze(1)
+        y = torch.randint(0, 10, (1, 300))
+        tam = m.coz(bellek, maske, kb, y)[:, -1]
+        t0 = y.shape[1] - p
+        pen = m.coz(bellek, maske, kb, y[:, t0:], t0)[:, -1]
+        assert torch.equal(tam, pen)                  # BİTSEL aynı
+
+
+def test_pencere_siniri_dar_kalirsa_bozuluyor():
+    """Sınır **sıkı**: bir belirteç kısaltınca sonuç artık aynı değil.
+
+    Bu sınama pencerenin keyfî seçilmediğini ispatlar.
+    """
+    torch.manual_seed(0)
+    ayar = Ayar(D=64, azami_baglam=256, azami_hedef=640)
+    m = NefsModeli(ayar)
+    m.eval()
+    p = m.cozucu_penceresi
+    b = torch.randint(0, 10, (1, 200))
+    with torch.no_grad():
+        bellek, maske, havuz = m.kodla(b)
+        kb = m.kubit(havuz).unsqueeze(1)
+        y = torch.randint(0, 10, (1, 300))
+        tam = m.coz(bellek, maske, kb, y)[:, -1]
+        t0 = y.shape[1] - p + 1
+        dar = m.coz(bellek, maske, kb, y[:, t0:], t0)[:, -1]
+        assert not torch.equal(tam, dar)

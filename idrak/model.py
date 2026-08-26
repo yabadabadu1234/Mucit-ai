@@ -258,10 +258,26 @@ class NefsModeli(nn.Module):
         havuz = (x * gecerli).sum(1) / gecerli.sum(1).clamp(min=1.0)
         return x, maske, havuz
 
+    @property
+    def cozucu_penceresi(self) -> int:
+        """Çözücünün **tam** alıcı alanı: ``katman·(K−1) + 1``.
+
+        Çözücüde y üstünde öz-dikkat **yoktur**; yalnız genişliği ``K``
+        olan nedensel evrişim vardır (çapraz dikkat belleğe bakar,
+        y'ye değil).  Dolayısıyla ``t`` anındaki çıktı yalnız son
+        ``katman·(K−1)+1`` belirtece bağlıdır -- daha eskisi çıktıyı
+        **matematiken** değiştiremez.  Üretimde bütün ön eki yeniden
+        işlemek bu yüzden gereksizdir; pencere kaydırmak **birebir aynı
+        sayıyı** verir (sınamada bitsel eşitlik olarak denetleniyor).
+        """
+        return len(self.cozucu) * (self.cozucu[0].K - 1) + 1
+
     def coz(self, bellek: torch.Tensor, maske: torch.Tensor,
-            kb: torch.Tensor, hedef_giris: torch.Tensor) -> torch.Tensor:
+            kb: torch.Tensor, hedef_giris: torch.Tensor,
+            konum_basi: int = 0) -> torch.Tensor:
+        n = hedef_giris.shape[1]
         y = (self.gomme(hedef_giris)
-             + self.c_konum[:hedef_giris.shape[1]].unsqueeze(0) + kb)
+             + self.c_konum[konum_basi:konum_basi + n].unsqueeze(0) + kb)
         for blok in self.cozucu:
             y = blok(y, bellek, maske)
         return self.bas(self.son(y))
@@ -338,9 +354,16 @@ class NefsModeli(nn.Module):
         B = baglam.shape[0]
         y = torch.full((B, 1), DOLGU, dtype=torch.long,
                        device=baglam.device)
+        # HIZ. Bütün ön eki her belirteçte yeniden işlemek O(L²) idi ve
+        # 30×30 ızgarada 931 adım ediyordu.  Çözücünün alıcı alanı
+        # sonlu olduğundan (bkz. ``cozucu_penceresi``) yalnız son
+        # pencere işlenir: O(L). Doğruluktan taviz yok -- sınama
+        # ``test_pencere_bitsel_ayni`` bitsel eşitliği denetliyor.
+        p = self.cozucu_penceresi
         for i in range(satir):
             for _ in range(sutun):
-                mant = self.coz(bellek, maske, kb, y)[:, -1]
+                t0 = max(0, y.shape[1] - p)
+                mant = self.coz(bellek, maske, kb, y[:, t0:], t0)[:, -1]
                 r = mant[:, :RENK].argmax(-1, keepdim=True)
                 y = torch.cat([y, r], dim=1)
             y = torch.cat([y, torch.full((B, 1), SATIR_SONU,
