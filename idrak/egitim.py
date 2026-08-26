@@ -218,15 +218,30 @@ def egit(D: int = 128, adim: int = 20000, yigin: int = 4,
          kayit_dizin: str = "kayit", degerlendirme_araligi: int = 500,
          tohum: int = 0, azami_baglam: int = 768, azami_hedef: int = 320,
          en_az_cozulen: int = 1, azami_saat: float = 6.0,
-         azami_baglam_ornek: int = 2) -> Dict[str, object]:
+         azami_baglam_ornek: int = 2, iplik: int = 0,
+         surdur: Optional[str] = None) -> Dict[str, object]:
     torch.manual_seed(tohum)
     np.random.seed(tohum)
-    torch.set_num_threads(max(1, os.cpu_count() or 1))
+    # ÖLÇÜLDÜ: 4 çekirdekte iki torch süreci çakışınca tek çözümleme
+    # adımı 658.8 ms; ``set_num_threads(1)`` ile 16.6 ms.  Bu yüzden
+    # iş parçacığı sayısı artık dışarıdan verilebiliyor.
+    torch.set_num_threads(iplik if iplik > 0
+                          else max(1, os.cpu_count() or 1))
     os.makedirs(kayit_dizin, exist_ok=True)
 
     ayar = Ayar(D=D, azami_baglam=azami_baglam, azami_hedef=azami_hedef,
                 azami_baglam_ornek=azami_baglam_ornek)
     model = NefsModeli(ayar)
+    baslangic_adimi = 0
+    if surdur:
+        # Sürdürme: ayar dosyadan gelir, komut satırından değil --
+        # yoksa ağırlıklar başka bir mimariye yüklenmiş olurdu.
+        d = torch.load(surdur, map_location="cpu", weights_only=False)
+        kayitli = d["ayar"]
+        ayar = Ayar(**kayitli) if isinstance(kayitli, dict) else kayitli
+        model = NefsModeli(ayar)
+        model.load_state_dict(d["model"])
+        baslangic_adimi = int(d.get("adım", 0))
     p = parametre_sayisi(model)
 
     hepsi = arc.yukle_hepsi("training")
@@ -256,7 +271,8 @@ def egit(D: int = 128, adim: int = 20000, yigin: int = 4,
          "azami_bağlam": azami_baglam, "azami_hedef": azami_hedef,
          "bağlam_örneği": azami_baglam_ornek,
          "değerlendirme_kapsamı": len(_ornekler(sin_gorev, ayar, True)),
-         "yığın": yigin, "adım": adim, "iş_parçacığı": torch.get_num_threads()})
+         "yığın": yigin, "adım": adim, "iş_parçacığı": torch.get_num_threads(),
+         "sürdürüldü": surdur or "", "sürdürme_adımı": baslangic_adimi})
 
     en_iyi = -1.0
     toplam_belirtec = 0
@@ -353,10 +369,10 @@ def ana(argv: Optional[Sequence[str]] = None) -> int:
     # eşzamanlı koşarken --iplik 1 verilmelidir.
     a.add_argument("--iplik", type=int, default=0,
                    help="torch iş parçacığı sayısı (0 = dokunma)")
+    a.add_argument("--surdur", default=None,
+                   help="kaldığı yerden sürdürülecek denetim noktası")
     n = a.parse_args(argv)
-    if n.iplik > 0:
-        torch.set_num_threads(n.iplik)
-    r = egit(D=n.D, adim=n.adim, yigin=n.yigin, ogrenme=n.lr,
+    r = egit(iplik=n.iplik, surdur=n.surdur, D=n.D, adim=n.adim, yigin=n.yigin, ogrenme=n.lr,
              gunluk=n.gunluk, kayit_dizin=n.dizin,
              degerlendirme_araligi=n.aralik, azami_saat=n.saat,
              azami_baglam=n.baglam, azami_hedef=n.hedef,
