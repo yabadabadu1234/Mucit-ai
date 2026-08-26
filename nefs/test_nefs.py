@@ -324,6 +324,8 @@ def test_tefekkur_potansiyeli_dusuruyor():
 def test_talakat_puruzu_azaltiyor():
     for t in range(4):
         d = Nefs(t).idrak_et(_E(t))
+        if d.sukut:
+            continue          # sükûtta kelam kurulmaz, düzleşecek şey yok
         assert d.olcum.al("talâkat.düzleşti") == 1.0, t
 
 
@@ -346,7 +348,73 @@ def test_tashih_ancak_iyilestiriyorsa():
 def test_belagat_fesahati_asamaz():
     for t in range(4):
         d = Nefs(t).idrak_et(_E(t))
+        if d.sukut:
+            continue
         assert d.olcum.al("belâgat.fesâhatı_aşamaz") == 1.0, t
+
+
+# =====================================================================
+#  Şahitlik hattı (kütük H6) ve sükût (H10)
+# =====================================================================
+def _sahitli_akis(m=4, t=6, d_in=12, bozuk=None, tohum=0):
+    """``m`` şahitlik, hepsi aynı dik kaideye tâbi bir akış."""
+    rng = np.random.default_rng(tohum)
+    R = np.linalg.qr(rng.normal(size=(d_in, d_in)))[0]
+    R2 = np.linalg.qr(rng.normal(size=(d_in, d_in)))[0]
+    bloklar = []
+    for k in range(m):
+        G = rng.normal(size=(t, d_in))
+        C = G @ (R2 if k == bozuk else R).T
+        bloklar.append(np.vstack([G, C + 6.0]) + 60.0 * k)
+    return np.vstack(bloklar)
+
+
+def test_sahit_bolutlemesi_ayirac_sembolu_aramadan():
+    """Şahit sayısı **duyudan** sezilir; bayrakla verilmez."""
+    d = Nefs(0).idrak_et(_sahitli_akis(m=4))
+    assert d.olcum.al("tertip.şahit_verildi") == 0.0
+    assert len(d.sahitler) == 4
+
+
+def test_nakz_yalniz_bozuk_sahidi_dusurur():
+    """Kurallı akışta nakz boş; bir şahit bozuksa YALNIZ o düşer."""
+    temiz = Nefs(0).idrak_et(_sahitli_akis(m=4))
+    assert temiz.nakz == []
+    bozuk = Nefs(0).idrak_et(_sahitli_akis(m=4, bozuk=2))
+    assert bozuk.nakz == [2], bozuk.nakz
+
+
+def test_nakz_yakini_dusurur():
+    """Tek karşı örnek küllî iddianın idrakini düşürür."""
+    temiz = Nefs(0).idrak_et(_sahitli_akis(m=4))
+    bozuk = Nefs(0).idrak_et(_sahitli_akis(m=4, bozuk=2))
+    assert bozuk.P_idrak < temiz.P_idrak
+
+
+def test_istikra_sonlu_sahitle_yakin_vermez():
+    """``β > 0`` iken ardışıklık kaidesi 1'e ulaşmaz (dürüstlük şartı)."""
+    d = Nefs(0).idrak_et(_sahitli_akis(m=4))
+    if d.olcum.al("idrak.vekil_formül") == 0.0:
+        assert d.P_idrak < 1.0
+        assert d.olcum.al("idrak.tam_istikrâ") == 0.0
+
+
+def test_sekte_sukut_edilir():
+    """Makam Şek ise beyan kurulmaz: kelam sıfırdır."""
+    import numpy as _np
+    d = Nefs(0).idrak_et(_E(0))
+    if d.makam == "Şek":
+        assert d.sukut
+        assert float(_np.linalg.norm(d.N)) == 0.0
+    assert d.sukut == (d.makam == "Şek")
+
+
+def test_hukum_kaydi_semboliktir():
+    """𝒪₁₃ mühürü sayı olarak değil KAYIT olarak bırakır (kütük H4)."""
+    d = Nefs(0).idrak_et(_E(0))
+    assert isinstance(d.hukum, dict)
+    assert d.hukum["mühür_sırası"] == 2      # akışta iki kere koşar
+    assert set(("T", "mühür", "makam", "gerekçe")) <= set(d.hukum)
 
 
 def test_tasdik_uyusan_delille_yukseliyor():

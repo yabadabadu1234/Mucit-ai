@@ -18,9 +18,12 @@ from typing import Dict, List, Sequence, Tuple
 
 import numpy as np
 
+from mizan.munazara import mertebe_adi, yakin_gazali
+
 from .meleke import Meleke, kaydet
-from .uzaylar import (Durum, Parametreler, celiski_dizeyi, celiski_gradyani,
-                      celiski_skoru, dikkat, gelu, guvenli_bol, kat_norm,
+from .sahit import artiklar, kaide_uydur, nakz_bul
+from .uzaylar import (Durum, Parametreler, celiski_dizeyi, celiski_esigi,
+                      celiski_gradyani, celiski_skoru, dikkat, gelu, guvenli_bol, kat_norm,
                       kosinus, sigmoid, softmax)
 
 
@@ -40,13 +43,23 @@ class Tenakuz(Meleke):
     """
 
     no, ad = 11, "Tenakuz Bulma"
-    okur, yazar = ("S",), ()
+    okur, yazar = ("S",), ("S", "tenakuz")
+    ihtiyari = ("tezat_kutbu",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
         n, ds = S.shape
         A = p.W("tenakuz.A", (ds, ds))
-        delta = 0.5
+        # 𝒪₁₀ Tezat bir kutup bulduysa çelişki çekirdeği o kutup boyunca
+        # KUVVETLENDİRİLİR: ``A ← A + v vᵀ``. ``AᵀA`` hâlâ yarı-pozitiftir,
+        # dolayısıyla ``uzaylar.celiski_dizeyi``nin iki şartı (kendisiyle
+        # çelişmemek, nakîziyle çelişmek) bozulmaz -- bunlar ``M = AᵀA``nın
+        # yarı-pozitifliğinden çıkar, ``A``nın husûsî şeklinden değil.
+        if d.tezat_kutbu is not None:
+            v = np.asarray(d.tezat_kutbu, float)
+            A = A + np.outer(v, v)
+        delta = celiski_esigi(S, A, 0.5)
+        d.olcum.koy("tenakuz.eşik", delta)
         C = celiski_dizeyi(S, A)
         skor = celiski_skoru(S, A, delta)
         d.tenakuz = skor
@@ -73,7 +86,7 @@ class Tenkit(Meleke):
     """
 
     no, ad = 12, "Tenkit"
-    okur, yazar = ("S", "S_kebir"), ()
+    okur, yazar = ("S", "S_kebir"), ("S",)
     ihtiyari = ("G",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
@@ -105,10 +118,16 @@ class Tasdik(Meleke):
 
     Bu meleke akışta **iki kere** koşar (𝒪₁₃ sırasında ve 𝒪₃₃'ten sonra
     mühür olarak); ikisinde de aynı formül işler.
+
+    **Mühür artık kayda geçer.** Tasdik bir hüküm melekesidir; hükmü
+    sayı olarak değil **kayıt** olarak bırakır (kütük H4): hangi
+    mertebede, hangi delille, nakz var mı, mühür düştü mü. ``d.hukum``
+    sözlüktür, tensör değildir ve tensöre çevrilmez. İkinci koşuda
+    üstüne yazar; ``mühür_sırası`` kaçıncı mühür olduğunu söyler.
     """
 
     no, ad = 13, "Tasdik"
-    okur, yazar = ("S",), ()
+    okur, yazar = ("S",), ("hukum",)
     ihtiyari = ("G", "M")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
@@ -120,9 +139,25 @@ class Tasdik(Meleke):
         uyum = kosinus((M @ p.W("tasdik.t", (M.shape[1], ds))).mean(0), hedef)
         d.T = float(sigmoid(4.0 * (uyum - d.tenakuz)))
         eps = 0.05
+        muhurlendi = bool(d.T >= 1 - eps)
+
+        onceki = d.hukum or {}
+        d.hukum = {
+            "mühür_sırası": int(onceki.get("mühür_sırası", 0)) + 1,
+            "T": d.T,
+            "uyum": uyum,
+            "tenakuz": d.tenakuz,
+            "mühür": muhurlendi,
+            "makam": d.makam,
+            "nakz": list(d.nakz) if d.nakz is not None else None,
+            "şahit_sayısı": len(d.sahitler) if d.sahitler is not None else 0,
+            "müteber_şahit": d.muteber_sahit,
+            "gerekçe": ("tasdik: uyum − tenakuz = %.4f" % (uyum - d.tenakuz)),
+        }
         d.olcum.koy("tasdik.T", d.T)
         d.olcum.koy("tasdik.uyum", uyum)
-        d.olcum.koy("tasdik.mühür", float(d.T >= 1 - eps))
+        d.olcum.koy("tasdik.mühür", float(muhurlendi))
+        d.olcum.koy("tasdik.mühür_sırası", float(d.hukum["mühür_sırası"]))
         d.not_dus(self.ad, "T=%.4f (uyum=%.3f, tenakuz=%.3f)"
                   % (d.T, uyum, d.tenakuz))
 
@@ -276,14 +311,55 @@ class Kiyas(Meleke):
     ``W* = ArgMin_W Σ‖W S₁⁽ⁱ⁾ − S₂⁽ⁱ⁾‖² + λ‖W‖²`` (sırt bağlanımı,
     kapalı çözüm). Sınanabilir iddia: veri gerçekten ``S₂ = A S₁`` ile
     üretilmişse ``W* ≈ A``.
+
+    **Şahit başına kaide burada uydurulur** (kütük H6). Kıyas, bilinen
+    vakadan bilinmeyene geçmektir; şahitler bilinen vakalardır. Her
+    şahidin girdi→çıktı dönüşümü **dik Procrustes** ile kapalı formda
+    çözülür (``sahit.kaide_uydur``): ``R = polar(ÇᵀG)``. Ne adım boyu
+    vardır ne yakınsama şartı; kütük H3'ün "uydurma kapalı formdur"
+    hükmü burada fiilen işler.
+
+    Kaideler ``d.kaideler``e konur; onları sınamak (nakz) 𝒪₂₃ Mantık'ın,
+    tartmak (tevafuk) 𝒪₂₉ Teyit'in, mühürlemek 𝒪₃₀ Tahkik'in işidir.
+
+    **Kaide HAM DUYU üzerinde uydurulur, mana üzerinde değil.** Bu
+    ölçümden çıktı: kaide ``S`` üzerinde uydurulunca, kurala tâbi olduğu
+    kesin bilinen dört şahitlik bir akışta iki şahit nakzedilmiş
+    görünüyordu -- yani sistem kendi bildiği kuralı bulamıyordu. Sebep
+    𝒪₁ Müşahede'deki öz-dikkattir: dikkat SATIRLARI KARIŞTIRIR, oysa
+    girdi satırı ile çıktı satırı arasındaki eşleşme kaidenin ta
+    kendisidir. Karıştıktan sonra o eşleşme artık yoktur. Kıyas, vakayı
+    **görüldüğü gibi** kıyaslar.
+
+    Bunun bir bedeli vardır ve saklanmaz: küllî kaide ``d_in`` uzayında
+    yaşar, mana uzayında (``d_sem``) değil. 𝒪₃₃ Muhakeme onu ancak
+    boyutlar denk düştüğünde doğrudan tatbik edebilir; denk düşmediğinde
+    şahit delilini mîzâna **hüküm olarak** katar, dizey olarak değil.
     """
 
     no, ad = 18, "Kıyas"
-    okur, yazar = ("S",), ()
+    okur, yazar = ("S", "E"), ("kaideler",)
+    ihtiyari = ("sahitler",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
         n, ds = S.shape
+
+        sahitler = d.sahitler or []
+        E = d.E
+        d.kaideler = [kaide_uydur(E, s) for s in sahitler]
+        d.olcum.koy("kıyas.kaide_sayısı", float(len(d.kaideler)))
+        if d.kaideler:
+            oz = [float(np.mean(artiklar(E, s, R)))
+                  for s, R in zip(sahitler, d.kaideler)
+                  if artiklar(E, s, R).size]
+            d.olcum.koy("kıyas.şahit_içi_artık",
+                        float(np.mean(oz)) if oz else float("nan"))
+            d.olcum.koy("kıyas.kaide_dikliği",
+                        float(np.max([np.max(np.abs(R.T @ R
+                                                    - np.eye(E.shape[1])))
+                                      for R in d.kaideler])))
+
         if n < 4:
             d.olcum.koy("kıyas.geçerlilik", 0.0)
             return
@@ -373,9 +449,23 @@ class Tefekkur(Meleke):
 
     no, ad = 21, "Tefekkür"
     okur, yazar = ("S", "G"), ("S",)
+    ihtiyari = ("mu_mana",)
 
     def uygula(self, d: Durum, p: Parametreler, adim: int = 30) -> None:
-        S, G = d.S.copy(), d.G
+        S = d.S.copy()
+        # Tefekkürün hedefi yalnız gaye değildir; 𝒪₇ Mana'nın çıkardığı
+        # mana merkezi de çeker. Evvelce ``mu_mana`` yazılıyor, hiçbir
+        # meleke okumuyordu -- ölçüldü: 𝒪₇ düşürülünce netice hiç
+        # değişmiyordu. Harman gayeye ağırlıklıdır (0.75/0.25): tefekkür
+        # manaya dalar, fakat gayeyi bırakmaz.
+        G = d.G
+        if d.mu_mana is not None and np.shape(d.mu_mana)[-1] == len(d.G):
+            mana = np.asarray(d.mu_mana, float)
+            mana = mana.mean(0) if mana.ndim == 2 else mana
+            G = 0.75 * d.G + 0.25 * mana
+            d.olcum.koy("tefekkür.mana_katkısı", 1.0)
+        else:
+            d.olcum.koy("tefekkür.mana_katkısı", 0.0)
         lam = 0.1
         A = p.W("tefekkür.A", (S.shape[1], S.shape[1]))
 
@@ -464,30 +554,94 @@ def arka_kapi(x: np.ndarray, z: np.ndarray, y: np.ndarray) -> float:
 # =====================================================================
 @kaydet
 class Mantik(Meleke):
-    """𝒪₂₃ Mantık Yürütme -- ``ModusPonens(P₁, P₁⟹P₂) = P₂``.
+    """𝒪₂₃ Mantık Yürütme -- küllî önermeyi kurmak ve **nakza sunmak**.
 
     Doğruluk tablosu TAM hesaplanır: ``P₁ ⟹ P₂ ≡ ¬P₁ ∨ P₂``. Bu, dört
-    satırın hepsinde sınanır; yaklaşık değildir.
+    satırın hepsinde sınanır; yaklaşık değildir (`ima`, `modus_ponens`).
+
+    **Önermeler nereden geliyor?** Evvelce ``S.mean(1) > 0`` idi: mana
+    dizeyinin satır ortalamasının işareti "önerme" sayılıyor, komşu
+    satırlar arasında modus ponens işletiliyordu. Bu bir vekildi --
+    ölçüldü: bu meleke düşürüldüğünde neticedeki ``‖ΔN‖ = 0`` çıkıyordu,
+    yani hiçbir mantık fiilen yürümüyordu. Şimdi önermeler **şahitlerden**
+    gelir:
+
+        Pₖ : "küllî kaide, k'ıncı şahitte tutar"
+        Netice : "bütün şahitler aynı kurala tâbidir"
+
+    Netice küllîdir; küllî önermeyi düşüren şey **nakz**dır: tek karşı
+    örnek yeter (`mizan.munazara.nakz_gecerli_mi` ile aynı hüküm).
+    Nakz, dışarıda-bırak sınamasıyla aranır (`sahit.nakz_bul`): ``j``
+    olmadan kurulan kaide ``j``de tutmuyorsa ``j`` karşı örnektir.
+
+    Neticenin yakîni Gazâlî mîzânıyla hesaplanır: ``min`` -- çarpım
+    değil (`mizan.munazara.yakin_gazali`). Sebebi oradadır: kat'î
+    öncüllerden kurulu uzun bir ispat, sırf uzun diye değersizleşmemeli.
     """
 
     no, ad = 23, "Mantık Yürütme"
-    okur, yazar = ("S",), ()
+    okur, yazar = ("S", "E"), ("nakz", "ispat")
+    ihtiyari = ("sahitler", "kaideler")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
-        # önermeler: mananın işaretinden okunan doğruluk değerleri
         S = d.S
-        onerme = (S.mean(1) > 0)
-        n = len(onerme)
-        gecerli = 0
-        toplam = 0
-        for i in range(n - 1):
-            P1, P2 = bool(onerme[i]), bool(onerme[i + 1])
-            if ima(P1, P2) and P1:
-                toplam += 1
-                gecerli += int(modus_ponens(P1, P2) == P2)
-        d.olcum.koy("mantık.uygulanan_çıkarım", float(toplam))
-        d.olcum.koy("mantık.geçerli_çıkarım", float(gecerli))
-        d.olcum.koy("mantık.doğru_önerme_oranı", float(np.mean(onerme)))
+        sahitler = d.sahitler or []
+        kaideler = d.kaideler or []
+
+        # --- doğruluk tablosu: dört satırın hepsi (yaklaşık değil)
+        tablo = [(P1, P2, ima(P1, P2)) for P1 in (False, True)
+                 for P2 in (False, True)]
+        d.olcum.koy("mantık.tablo_tam", float(len(tablo) == 4))
+        d.olcum.koy("mantık.tablo_doğru",
+                    float(all(im == ((not P1) or P2) for P1, P2, im in tablo)))
+
+        if len(sahitler) < 2 or len(kaideler) != len(sahitler):
+            d.nakz = []
+            d.ispat = [{"nev": "küllî_iddia", "sebep": "şahit yetersiz",
+                        "yakîn": 0.0, "şekil_geçerli": False}]
+            d.olcum.koy("mantık.şahit_yeter", 0.0)
+            d.olcum.koy("mantık.yakîn", 0.0)
+            return
+
+        n = nakz_bul(d.E, sahitler, kaideler)
+        d.nakz = list(n["nakz"])
+        tol = float(n["tolerans"])
+        artik = list(n["artık"])
+
+        # her şahit bir öncüldür; yakîni artığından okunur
+        onculler = [float(np.exp(-a / max(tol, 1e-12))) for a in artik]
+        onculler = [float(np.clip(y, 0.0, 1.0)) for y in onculler]
+        sekil_gecerli = len(d.nakz) == 0        # nakz varsa küllî şekil düşer
+        yakin = yakin_gazali(onculler, sekil_gecerli)
+
+        ispat: List[Dict[str, object]] = []
+        for k, (a, y) in enumerate(zip(artik, onculler)):
+            ispat.append({"nev": "öncül", "şahit": k, "artık": a,
+                          "yakîn": y, "nakzedildi": k in d.nakz})
+        ispat.append({
+            "nev": "küllî_iddia",
+            "ifade": "bütün şahitler aynı kaideye tâbidir",
+            "şekil_geçerli": sekil_gecerli,
+            "nakz": list(d.nakz),
+            "yakîn": yakin,
+            "mertebe": mertebe_adi(yakin),
+            "tolerans": tol,
+        })
+        d.ispat = ispat
+
+        # modus ponens burada FİİLEN işler: küllî önerme + "hedef bir
+        # şahittir" ⟹ "kaide hedefte de tutar".
+        P1 = sekil_gecerli
+        P2 = sekil_gecerli
+        uygulandi = bool(P1 and ima(P1, P2))
+        d.olcum.koy("mantık.şahit_yeter", 1.0)
+        d.olcum.koy("mantık.nakz_sayısı", float(len(d.nakz)))
+        d.olcum.koy("mantık.yakîn", yakin)
+        d.olcum.koy("mantık.uygulanan_çıkarım", float(uygulandi))
+        d.olcum.koy("mantık.geçerli_çıkarım",
+                    float(uygulandi and modus_ponens(P1, P2) == P2))
+        d.not_dus(self.ad, "şahit=%d nakz=%s yakîn=%.4f (%s)"
+                  % (len(sahitler), d.nakz, yakin, mertebe_adi(yakin)))
 
 
 def ima(P1: bool, P2: bool) -> bool:

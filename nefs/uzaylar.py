@@ -120,6 +120,34 @@ def celiski_gradyani(S: np.ndarray, A: np.ndarray, delta: float) -> np.ndarray:
     return -2.0 * (maske @ S @ M)
 
 
+def celiski_esigi(S: np.ndarray, A: np.ndarray, oran: float = 0.5) -> float:
+    """``δ = oran · ortalama(−C_ii)`` -- ÖLÇEKTEN BAĞIMSIZ çelişki eşiği.
+
+    Sabit ``δ = 0.5`` ölçekten habersizdi: ``C = −S(AᵀA)Sᵀ`` ``S``in
+    normuyla karesel büyür, eşik ise sabit kalır. Aynı sistem, girdisi
+    iki kat büyütülünce "iki kat daha çelişkili" görünürdü. Eşik artık
+    melekenin kendi tarifinden çıkar: bir önerme kendi nakîziyle
+    ``+‖A Sᵢ‖²`` kadar çelişir (bkz. `celiski_dizeyi`) ve bu ``−C_ii``dir.
+    ``δ``, onun oranıdır -- "kendi nakîziyle çelişeceğinin yarısı kadar
+    çelişiyorsa, çelişiyordur".
+
+    **Ölçülen ve düzeltilmeyen.** Bu değişiklik, ``tenakuz``un rastgele
+    girdide **tam sıfır** çıkmasını ortadan KALDIRMADI; ölçüldü, hâlâ
+    sıfır. Sebep eşik değil, hâlin kendisidir: yüksek boyutta rastgele
+    iki satırın ``M`` metriğindeki kosinüsü ``≈ ±1/√d_sem`` mertebesinde
+    kalır, yani hiçbir çift "birbirinin nakîzine yarı yolda" değildir.
+    Yani rastgele gürültüde çelişki YOKTUR ve sistem doğru davranmaktadır.
+    Bunun bedeli ``nefs/tesir.py``de görünür: 𝒪₁₁ Tenakuz, 𝒪₂₈ Tashih ve
+    𝒪₃₆ Tevil rastgele girdide tesirsiz ölçülür. Bu, o melekelerin boş
+    olduğu anlamına gelmez -- ölçüldükleri girdide yapacak işleri
+    olmadığı anlamına gelir; ``tesir.py`` bu yüzden yapılandırılmış bir
+    girdiyle de ölçer.
+    """
+    C = celiski_dizeyi(S, A)
+    olcek = float(np.mean(-np.diag(C)))
+    return oran * max(olcek, 0.0)
+
+
 def celiski_skoru(S: np.ndarray, A: np.ndarray, delta: float) -> float:
     C = celiski_dizeyi(S, A)
     T = np.maximum(C - delta, 0.0)
@@ -248,12 +276,46 @@ class Durum:
     # --- O37..O41
     N: Optional[np.ndarray] = None                 # beyan (ifade)
 
+    # -----------------------------------------------------------------
+    #  ŞAHİTLİK HATTI (kütük H6)
+    # -----------------------------------------------------------------
+    # Bir bulmacanın gösterim çiftleri. Dışarıdan verilebilir; verilmezse
+    # 𝒪₄ Tertip bunu ham duyudaki kopmalardan **sezer**. Bayrak değildir:
+    # sezilir, sınanır, nakzedilebilir.
+    sahitler: Optional[List[Any]] = None           # List[sahit.Sahit]
+    kaideler: Optional[List[np.ndarray]] = None    # şahit başına dik kaide
+    kaide: Optional[np.ndarray] = None             # küllî kaide (𝒪₃₀ mühürler)
+    nakz: Optional[List[int]] = None               # küllî kaideyi düşüren şahitler
+    sahit_agirliklari: Optional[np.ndarray] = None # tevafukla düzeltilmiş ağırlık
+    muteber_sahit: float = 0.0                     # fazla saymadan arındırılmış sayı
+    tevafuk: float = 0.0
+
+    # -----------------------------------------------------------------
+    #  SEMBOLİK ALANLAR (kütük H4)
+    # -----------------------------------------------------------------
+    # Bu alanlar tensör DEĞİLDİR ve tensöre çevrilmezler. Hüküm veren
+    # meleke sayı değil hüküm üretir; veri yolu bunu taşıyabilmelidir.
+    ispat: Optional[List[Dict[str, Any]]] = None   # burhân kayıtları
+    hukum: Optional[Dict[str, Any]] = None         # mühürlenmiş hüküm
+    sukut: bool = False                            # makam Şek ise susulur
+    tezat_kutbu: Optional[np.ndarray] = None       # 𝒪₁₀ → 𝒪₁₁
+    w_kesit: Optional[np.ndarray] = None           # ℳ üzerindeki kesit (H3)
+
     olcum: Olcumler = field(default_factory=Olcumler)
     gunluk: List[str] = field(default_factory=list)
 
     @staticmethod
-    def kur(E: np.ndarray, d_hayal: int = 24, d_sem: int = 16) -> "Durum":
-        return Durum(E=E, d_in=E.shape[1], d_hayal=d_hayal, d_sem=d_sem)
+    def kur(E: np.ndarray, d_hayal: int = 24, d_sem: int = 16,
+            sahitler: Optional[List[Any]] = None) -> "Durum":
+        """``sahitler`` verilirse 𝒪₄ Tertip onu **olduğu gibi** kabul eder.
+
+        Verilmezse bölütleme duyudan sezilir. İkisi de meşrudur; hangisi
+        olduğu ``olcum["tertip.şahit_verildi"]`` ile bildirilir, çünkü
+        dışarıdan verilen bölütleme modelin kendi kabiliyeti değildir ve
+        öyle sayılmamalıdır.
+        """
+        return Durum(E=E, d_in=E.shape[1], d_hayal=d_hayal, d_sem=d_sem,
+                     sahitler=list(sahitler) if sahitler is not None else None)
 
     def not_dus(self, meleke: str, mesaj: str) -> None:
         self.gunluk.append("%-24s %s" % (meleke, mesaj))

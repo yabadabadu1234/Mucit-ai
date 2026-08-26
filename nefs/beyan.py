@@ -12,11 +12,18 @@ from typing import Dict, List, Tuple
 
 import numpy as np
 
+from mizan.munazara import MERTEBELER, mertebe_adi, yakin_zinciri
+
 from .meleke import Meleke, kaydet
 from .uzaylar import (Durum, Parametreler, gelu, guvenli_bol, kat_norm,
                       kosinus, sigmoid, softmax)
 
 ALTIN_ORAN = (1.0 + np.sqrt(5.0)) / 2.0
+
+# mertebe adlarının sayısal sırası -- ölçüm defteri float ister
+MERTEBE_SIRA: Dict[str, int] = {
+    ad: i for i, (_, ad) in enumerate(reversed(MERTEBELER), start=1)
+}
 
 
 # =====================================================================
@@ -34,13 +41,26 @@ class Fesahat(Meleke):
     Üçü de ``[0,1]``e sıkıştırılır, yoksa skor negatife kaçar ve
     "fesâhat" ölçüsü olmaktan çıkar (ölçüldü: sıkıştırmasız kurulumda
     skor −18'e iniyordu).
+
+    **Sükût hakkı buradan başlar** (kütük H10). ``d.sukut`` kalkmışsa
+    (makam Şek) beyan **kurulmaz**: ``N`` sıfır kelamdır. Susmak,
+    boş konuşmanın kibar hâli değildir; hükümsüzlüğün doğru ifadesidir.
+    Sonraki beyan melekeleri sükûtu bozmaz, yalnız kayda geçer.
     """
 
     no, ad = 37, "Fesâhat"
     okur, yazar = ("S_kebir",), ("N",)
+    ihtiyari = ("sukut",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         ds = len(d.S_kebir)
+        if d.sukut:
+            d.N = np.zeros(ds)
+            d.olcum.koy("fesâhat.sükût", 1.0)
+            d.olcum.koy("fesâhat.skor", float("nan"))
+            d.not_dus(self.ad, "sükût: makam Şek, kelam kurulmadı")
+            return
+        d.olcum.koy("fesâhat.sükût", 0.0)
         N = kat_norm(gelu(d.S_kebir @ p.W("fesâhat.dec", (ds, ds))))
         d.N = N
 
@@ -54,6 +74,20 @@ class Fesahat(Meleke):
         d.olcum.koy("fesâhat.garâbet", garabet)
         d.olcum.koy("fesâhat.ta'kîd", takid)
         d.olcum.koy("fesâhat.skor", skor)
+
+
+def susuldu_mu(d: Durum, meleke: "Meleke") -> bool:
+    """Sükût hâlinde beyan melekeleri kelamı **bozmaz**.
+
+    Sükûtu her melekede ayrı ayrı ele almak yerine tek kapı: ``N``
+    sıfırdır ve sıfır kalır. Aksi hâlde Talâkat sıfırı düzleştirir,
+    Belâgat ölçekler, Münazara döndürür ve sonuçta susulmuş olmaz --
+    gürültü çıkar. Ölçüm yine konur ki sükût **görünsün**.
+    """
+    if not d.sukut:
+        return False
+    d.olcum.koy("%s.sükût" % meleke.ad.lower(), 1.0)
+    return True
 
 
 def _sik(x: float) -> float:
@@ -76,8 +110,11 @@ class Talakat(Meleke):
 
     no, ad = 38, "Talâkat"
     okur, yazar = ("N",), ("N",)
+    ihtiyari = ("sukut",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
+        if susuldu_mu(d, self):
+            return
         N = d.N
         n = len(N)
         t = np.arange(n)
@@ -118,8 +155,11 @@ class Belagat(Meleke):
 
     no, ad = 39, "Belâgat"
     okur, yazar = ("N", "G_kebir"), ("N",)
+    ihtiyari = ("sukut",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
+        if susuldu_mu(d, self):
+            return
         N = d.N
         ds = len(N)
         # muhatabın makamı: gayenin kendisi (kime, ne için söylüyoruz)
@@ -159,8 +199,11 @@ class Sanat(Meleke):
 
     no, ad = 40, "Sanat"
     okur, yazar = ("N", "H_hayal"), ()
+    ihtiyari = ("sukut",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
+        if susuldu_mu(d, self):
+            return
         N, H = d.N, d.H_hayal
         ds = len(N)
         Y = np.outer(N, H.mean(0) @ p.W("sanat.h", (H.shape[1], ds)))
@@ -212,19 +255,53 @@ class Munazara(Meleke):
     ``HasmıSusturma`` ancak cerh eşiği aşarsa gerçekleşir; aksi hâlde
     netice **sentezdir**. Yani münazaranın tabiî sonucu galibiyet değil,
     telîftir; galibiyet istisnadır.
+
+    **Burhân zinciri burada tartılır** (kütük H6). 𝒪₂₃'ün bıraktığı
+    ``d.ispat`` kayıtları bir kıyas zinciridir; zincirin yakîni
+    `mizan.munazara.yakin_zinciri` ile hesaplanır -- ``min``, çarpım
+    değil. Cerh, o yakînin eksiğidir: ``Cerh = 1 − yakîn``. Evvelce
+    burhân kuvveti ``d.olcum.al("ispat.T", 0.5)``ten okunuyordu, yani
+    ölçüm defterinden; şimdi delilin kendisinden okunur.
     """
 
     no, ad = 41, "Münazara"
     okur, yazar = ("S_kebir", "N"), ("N",)
+    ihtiyari = ("sukut", "ispat", "hukum", "burhan")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
+        if susuldu_mu(d, self):
+            d.olcum.koy("münazara.netice_sentez", 0.0)
+            return
         ds = len(d.S_kebir)
         tez = d.S_kebir
         R = p.lie_tasarruf("münazara.antitez", ds, teta=1.4)
         antitez = R @ tez                       # tezden döndürülmüş karşı görüş
 
         aksiyom = d.G_kebir if d.G_kebir is not None else tez
-        burhan = d.olcum.al("ispat.T", 0.5)
+
+        # burhân kuvveti: ispat zincirinin yakîni (Gazâlî mîzânı)
+        halkalar: List[Tuple[List[float], bool]] = []
+        for kayit in (d.ispat or []):
+            if kayit.get("nev") == "küllî_iddia":
+                halkalar.append(([float(kayit.get("yakîn", 0.0))],
+                                 bool(kayit.get("şekil_geçerli", False))))
+        if halkalar:
+            burhan = float(yakin_zinciri(halkalar))
+            d.olcum.koy("münazara.burhân_kaynağı", 1.0)   # delilden
+        else:
+            burhan = float(d.olcum.al("ispat.T", 0.5))
+            d.olcum.koy("münazara.burhân_kaynağı", 0.0)   # ölçüm defterinden
+        # **Mühür cerhe girer.** 𝒪₁₃ Tasdik'in mührü düşmemişse tezin
+        # burhânı eksiktir. Evvelce ``d.hukum`` hiç okunmuyordu; 𝒪₁₃
+        # mühürlüyor, kimse bakmıyordu.
+        muhur = bool((d.hukum or {}).get("mühür", False))
+        if d.hukum is not None:
+            burhan = burhan if muhur else burhan * 0.5
+        d.olcum.koy("münazara.mühür", float(muhur))
+        d.olcum.koy("münazara.burhân", burhan)
+        d.olcum.koy("münazara.mertebe_sayısal",
+                    float(MERTEBE_SIRA.get(mertebe_adi(
+                        float(np.clip(burhan, 0.0, 1.0))), 0)))
 
         def cerh(S: np.ndarray, kuvvet: float) -> float:
             return max(0.0, -kosinus(S, aksiyom)) + (1.0 - kuvvet)

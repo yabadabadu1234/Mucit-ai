@@ -16,6 +16,7 @@ from typing import Optional, Tuple
 import numpy as np
 
 from .meleke import Meleke, kaydet
+from .sahit import bolutle
 from .uzaylar import (Durum, Olcumler, Parametreler, dikkat, gelu, guvenli_bol,
                       kat_norm, kosinus, nicele, sigmoid, softmax)
 
@@ -271,14 +272,47 @@ class Tertip(Meleke):
     iddiasıdır: permütasyon tersinirdir, dolayısıyla tertip bilgi
     kaybetmez. Burada bu, ``M``in permütasyon olduğunun (satır ve sütun
     toplamlarının 1 olması) sınanmasıyla karşılanır.
+
+    **Şahit bölütlemesi burada yapılır** (kütük H6). Tertip, suretleri
+    yalnız sıralamaz; onları **bölümlere** de ayırır -- bir bulmacanın
+    örneklerini birbirinden ayıran şey de bir tertiptir. Ayıraç sembolü
+    ARANMAZ; akıştaki kopmalar ölçülür (``sahit.bolutle``). Böylece
+    "bunlar ayrı örneklerdir" bilgisi modele bayrakla verilmiş olmaz,
+    organla sezilmiş olur.
+
+    Dışarıdan ``Durum.kur(..., sahitler=...)`` ile bölütleme verilirse o
+    kabul edilir ve ``tertip.şahit_verildi = 1`` diye **işaretlenir**;
+    verilen bölütleme modelin kabiliyeti sayılamaz.
     """
 
     no, ad = 4, "Tertip"
-    okur, yazar = ("Z_hayal",), ("sira",)
+    okur, yazar = ("E", "Z_hayal"), ("sira", "sahitler")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         Z = d.Z_hayal
         n, dh = Z.shape
+
+        # --- şahit bölütlemesi: **ham duyu** üzerinden
+        #
+        # Bölütleme evvelce ``Z_hayal`` üzerinden yapılıyordu ve ölçüldü:
+        # kurallı beş şahitlik bir akışta üç şahit bulunuyor, kurallı ile
+        # bozuk akış aynı bölütlemeyi veriyordu. Sebep 𝒪₁ Müşahede'nin
+        # odak penceresi (``k_odak``) ve spektral kesmesidir: ikisi de
+        # akışı yumuşatır, örnek sınırlarındaki kopmayı siler. Örnek
+        # sınırı ham akışın hususiyetidir; onu suret kurulduktan sonra
+        # aramak, delili işlemden sonra aramaya benzer.
+        verildi = d.sahitler is not None
+        if not verildi:
+            b = bolutle(d.E)
+            d.sahitler = b.sahitler
+            d.olcum.koy("tertip.kopma_eşiği", b.esik)
+            d.olcum.koy("tertip.bölütleme_yeterli", float(b.yeterli))
+            if not b.yeterli and b.sebep:
+                d.not_dus(self.ad, "şahit yok: %s" % b.sebep)
+        else:
+            d.olcum.koy("tertip.bölütleme_yeterli", float(len(d.sahitler) >= 2))
+        d.olcum.koy("tertip.şahit_verildi", float(verildi))
+        d.olcum.koy("tertip.şahit_sayısı", float(len(d.sahitler)))
         oncelik = (Z @ p.v("tertip.τ", dh))
         pi = np.argsort(-oncelik)               # yüksek öncelik önce
         d.sira = pi
@@ -311,7 +345,7 @@ class Tecrit(Meleke):
     """
 
     no, ad = 5, "Tecrit"
-    okur, yazar = ("X",), ("U_k", "D")
+    okur, yazar = ("X",), ("U_k", "D", "w_kesit")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         X = d.X
@@ -321,6 +355,19 @@ class Tecrit(Meleke):
         Uk = Vt[:k].T                                   # (d_in, k) ortonormal
         d.U_k = Uk
         d.D = X @ Uk @ Uk.T                             # P_D(X)
+
+        # ``w ∈ ℳ``: AĞIRLIK, bir kayıp fonksiyonunun durağan noktası
+        # değil, parametrize lifleşmenin **kesitidir** (kütük H3).
+        # ``ℳ = Gr(k, d_in)`` taban uzayı, lif ``U_k``ın gerdiği alt uzay;
+        # kesit, veriden KAPALI FORMDA (SVD ile) okunur -- adım yok,
+        # gradyan yok. ``omega_kategori_nbe.iliskiler.kesit_tipi`` bu
+        # kesitin tip teorisi tarafındaki karşılığını makineyle denetler;
+        # burada onun sayısal cismi taşınır.
+        d.w_kesit = Uk
+        # kesitin lifte kaldığının sağlaması: ``U_kᵀU_k = I``
+        diklik = float(np.max(np.abs(Uk.T @ Uk - np.eye(k))))
+        d.olcum.koy("tecrit.kesit_diklik_hatası", diklik)
+        d.olcum.koy("tecrit.kesit_boyutu", float(k))
 
         # komşuluk çizgesi: eşik üstü kosinüs benzerliği
         Xn = X / (np.linalg.norm(X, axis=1, keepdims=True) + 1e-12)
@@ -376,16 +423,31 @@ class Tasavvur(Meleke):
     Hesaplanan: ``S = GELU(D W_{d2s} + H W_{h2s} + b)``; Riemann metriği
     ``g_ij = ⟨∂S/∂uᵢ, ∂S/∂uⱼ⟩`` (sonlu farkla); hacim ögesi
     ``√det g``; makro kavram ``S_kebîr``; ve ``LayerNorm`` ile kemâl.
+
+    **Muhayyile buraya katılır.** Tasavvur, hâfızadaki sureti (``H``)
+    ve soyutlanmış özü (``D``) birleştirir; fakat kavram yalnız
+    görülenden kurulmaz -- muhayyilenin ürettiği varyasyon (``𝒪₃``) da
+    girer. Evvelce ``Z_muhayyile`` yazılıyor, kimse okumuyordu: ölçüldü,
+    𝒪₃ düşürülünce netice hiç değişmiyordu. Katkı **küçük tutulur**
+    (katsayı 0.25), çünkü muhayyile kavramı kurmaz, zenginleştirir.
     """
 
     no, ad = 6, "Tasavvur"
     okur, yazar = ("D", "H_hayal"), ("S", "S_kebir")
+    ihtiyari = ("Z_muhayyile",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         D, H = d.D, d.H_hayal
         n, di = D.shape
         dh, ds = d.d_hayal, d.d_sem
         S = gelu(D @ p.W("tasavvur.d2s", (di, ds)) + H @ p.W("tasavvur.h2s", (dh, ds)))
+        if d.Z_muhayyile is not None and d.Z_muhayyile.shape[0] == n:
+            S = S + 0.25 * gelu(d.Z_muhayyile
+                                @ p.W("tasavvur.m2s",
+                                      (d.Z_muhayyile.shape[1], ds)))
+            d.olcum.koy("tasavvur.muhayyile_katkısı", 1.0)
+        else:
+            d.olcum.koy("tasavvur.muhayyile_katkısı", 0.0)
         S = kat_norm(S + S @ p.W("tasavvur.res", (ds, ds)))
         d.S = S
         d.S_kebir = kat_norm(S.mean(0) @ p.W("tasavvur.macro", (ds, ds)))
@@ -542,12 +604,17 @@ class Tezat(Meleke):
     özvektör ile "tezat kutbu"; ve ``W_opp = −I + v v ᵀ`` zıtlık
     operatörü.
 
-    Bu meleke ``Durum``a yeni alan YAZMAZ; vazifesi ölçmektir. Hüküm
-    ``𝒪₁₁ Tenakuz``ün işidir.
+    Hüküm ``𝒪₁₁ Tenakuz``ün işidir; fakat Tezat'ın bulduğu **kutup**
+    ona verilir. Evvelce bu meleke ``Durum``a hiçbir şey yazmıyordu ve
+    ölçüldü: düşürüldüğünde neticede ``‖ΔN‖ = 0`` çıkıyordu -- yani
+    hesaplanan her şey günlüğe yazılıp atılıyordu. Tezat kutbu artık
+    veri yoluna konur ve 𝒪₁₁ çelişki çekirdeğini o kutupla kurar.
+    Ölçmekle hükmetmek yine ayrıdır; ayrı olan, ölçünün ZAYİ olması
+    değildir.
     """
 
     no, ad = 10, "Tezat"
-    okur, yazar = ("S",), ()
+    okur, yazar = ("S",), ("tezat_kutbu",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
@@ -556,8 +623,10 @@ class Tezat(Meleke):
         Theta = 1.0 - Sn @ Sn.T
         d.olcum.koy("tezat.azami", float(np.max(Theta)))
         d.olcum.koy("tezat.ortalama", float(np.mean(Theta)))
+        kutup = S.mean(0)
         if n >= 2:
             oz, vek = np.linalg.eigh(0.5 * (Theta + Theta.T))
             d.olcum.koy("tezat.baskın_özdeğer", float(oz[-1]))
             kutup = softmax(vek[:, -1]) @ S
             d.olcum.koy("tezat.kutup_normu", float(np.linalg.norm(kutup)))
+        d.tezat_kutbu = kutup / (float(np.linalg.norm(kutup)) + 1e-12)

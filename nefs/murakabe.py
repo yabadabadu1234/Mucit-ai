@@ -14,8 +14,13 @@ from typing import Dict, List, Tuple
 
 import numpy as np
 
+from fitrat.tevafuk import fazla_sayma, tevafuk_olcusu
+from mizan.istikra import ardisiklik_kaidesi, tam_istikra_mi
+
 from .meleke import Meleke, kaydet
-from .uzaylar import (Durum, Parametreler, celiski_gradyani, celiski_skoru,
+from .sahit import (artiklar, capraz_kovaryans, delil_dizileri, kulli_kaide)
+from .uzaylar import (Durum, Parametreler, celiski_esigi, celiski_gradyani,
+                      celiski_skoru,
                       dikkat, gelu, guvenli_bol, kat_norm, kosinus, sigmoid,
                       softmax)
 
@@ -47,12 +52,22 @@ class Teemmul(Meleke):
 
     no, ad = 25, "Teemmül"
     okur, yazar = ("S", "H_hayal"), ("M",)
+    ihtiyari = ("Q_sual",)
 
     def uygula(self, d: Durum, p: Parametreler, K: int = 200,
                eps: float = 1e-3) -> None:
         S, H = d.S, d.H_hayal
         n, ds = S.shape
         Wq = p.W("teemmül.q", (ds, ds))
+        # Teemmül boşluğa dalmaz, bir SUAL etrafında döner. 𝒪₁₅'in
+        # ürettiği ``Q_sual`` sorgu yönünü kaydırır. Evvelce ``Q_sual``
+        # yazılıyor, kimse okumuyordu -- ölçüldü: 𝒪₁₅ düşürülünce netice
+        # hiç değişmiyordu. Kaydırma toplanarak yapılır (çarpımla değil),
+        # yoksa sual sıfıra yakınken sorgu söner.
+        q_kaydirma = None
+        if d.Q_sual is not None and np.shape(d.Q_sual) == (ds,):
+            q_kaydirma = np.asarray(d.Q_sual, float)[None, :]
+        d.olcum.koy("teemmül.sual_var", float(q_kaydirma is not None))
         Wk = p.W("teemmül.k", (H.shape[1], ds))
         Wv = p.W("teemmül.v", (H.shape[1], ds))
 
@@ -60,7 +75,8 @@ class Teemmul(Meleke):
         farklar: List[float] = []
         tau_durma = K
         for t in range(1, K + 1):
-            Y = dikkat(M @ Wq, H @ Wk, H @ Wv)
+            Q = M @ Wq if q_kaydirma is None else M @ Wq + 0.5 * q_kaydirma
+            Y = dikkat(Q, H @ Wk, H @ Wv)
             # SÖNÜMLÜ artık: ``M + κY`` biçiminde kurulup ölçüldü ve
             # yakınsamadı (12 turda fark 0.51'de takıldı). ``(1−κ)M + κY``
             # dışbükey harmandır; dikkat çıktısı ``H``nin dışbükey
@@ -166,7 +182,7 @@ class Tashih(Meleke):
 
     no, ad = 28, "Tashih"
     okur, yazar = ("S",), ("S",)
-    ihtiyari = ("G",)
+    ihtiyari = ("G", "A_neden")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
@@ -178,7 +194,21 @@ class Tashih(Meleke):
 
         eski = tasdik(S)
         A = p.W("tashih.A", (ds, ds))
-        grad = celiski_gradyani(S, A, 0.0)
+        esik = celiski_esigi(S, A, 0.5)
+        d.olcum.koy("tashih.eşik", esik)
+        grad = celiski_gradyani(S, A, esik)
+        # **Düzeltme illetin bulunduğu yerde yapılır.** 𝒪₂₂ İllet Keşfi
+        # bir nedensellik çizgesi (``A_neden``) kuruyor, hiçbir meleke
+        # okumuyordu -- ölçüldü: 𝒪₂₂ düşürülünce netice hiç değişmiyordu.
+        # Artık düzeltme, satırın nedensel derecesiyle ağırlıklanır:
+        # hiçbir şeyin sebebi olmayan satırı düzeltmek bir şeyi düzeltmez.
+        if d.A_neden is not None and d.A_neden.shape == (len(S), len(S)):
+            derece = np.abs(np.asarray(d.A_neden, float)).sum(1)
+            agirlik = derece / (float(np.max(derece)) + 1e-12)
+            grad = grad * (0.5 + 0.5 * agirlik)[:, None]
+            d.olcum.koy("tashih.illet_ağırlığı", 1.0)
+        else:
+            d.olcum.koy("tashih.illet_ağırlığı", 0.0)
         grad = grad / max(float(np.max(np.abs(grad))), 1.0)
         musahhah = S - 0.05 * grad
         yeni = tasdik(musahhah)
@@ -203,10 +233,23 @@ class Teyit(Meleke):
     eden iki kanal, ancak BAĞIMSIZ ise delil kuvvetlendirir. Bağımlı iki
     kanalın uyuşması yeni bilgi değildir -- bu yüzden çarpan olarak
     ``1 − |Cov|`` konur ve sınanır.
+
+    **Şahitler burada tartılır** (kütük H6). Bir bulmacanın beş örneği,
+    beş şahit demek DEĞİLDİR: birbirinden türemiş şahitler tek şahit
+    hükmündedir. ``fitrat.tevafuk`` bunu zaten ölçüyordu ve ana akışta
+    hiç çağrılmıyordu; artık çağrılır:
+
+    * ``tevafuk_olcusu`` -- şartlı bağımsızlıkla ağırlıklı uyuşma,
+    * ``fazla_sayma``    -- ``müteber şahit = 1 + (m−1)·ortalama ağırlık``.
+
+    ``müteber_sahit``, 𝒪₃₂'deki istikrânın ``n``idir. Yani "kaç örnek
+    gördüm" değil, "kaç **bağımsız** örnek gördüm" sorusunun cevabı
+    hükme girer.
     """
 
     no, ad = 29, "Teyit"
-    okur, yazar = ("S", "X"), ()
+    okur, yazar = ("S", "X", "E"), ("sahit_agirliklari",)
+    ihtiyari = ("sahitler", "kaideler", "nakz")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S, X = d.S, d.X
@@ -222,6 +265,53 @@ class Teyit(Meleke):
         d.olcum.koy("teyit.bağımsızlık", bagimsizlik)
         d.olcum.koy("teyit.net_skor", net)
         d.olcum.koy("teyit.T_artışı", d.T - eski)
+
+        # ---- şahitlerin tartılması
+        sahitler = d.sahitler or []
+        kaideler = d.kaideler or []
+        m = len(sahitler)
+        if m < 2 or len(kaideler) != m:
+            d.sahit_agirliklari = np.ones(max(m, 0))
+            d.muteber_sahit = float(m)
+            d.tevafuk = 0.0
+            d.olcum.koy("teyit.tevafuk_tanımlı", 0.0)
+            d.olcum.koy("teyit.müteber_şahit", float(m))
+            return
+
+        # deliller ham duyu uzayında kurulur -- kaideler orada yaşar
+        # (bkz. 𝒪₁₈ Kıyas). ``S`` ile kurulup ölçüldü: satırları karışmış
+        # bir uzayda hiçbir kaide tutmuyor, bütün delil dizileri sıfır
+        # çıkıyor ve müteber şahit sayısı 1'e çöküyordu.
+        deliller, tol = delil_dizileri(d.E, sahitler, kaideler)
+        # hipotez: şahit i, nakzedilmemiş olanlardan mıdır?
+        nakz = set(d.nakz or [])
+        H = np.array([0.0 if i in nakz else 1.0 for i in range(m)])
+        if H.min() == H.max():
+            # tek sınıf: log-olabilirlik oranı tanımsızlaşır. Bu bir
+            # kusur değil, hâlin kendisidir -- ayrıştırıcı delil yok.
+            H = np.array([1.0] * m)
+
+        t = tevafuk_olcusu(deliller, H)
+        d.tevafuk = float(t["tevafuk"]) if t["tevafuk"] is not None else 0.0
+        f = fazla_sayma(deliller, H)
+        d.muteber_sahit = float(f.get("muteber_şahit_sayısı", m))
+
+        # şahit başına ağırlık: kendi delil dizisinin, hipotezle uyuşması
+        agirlik = []
+        for k in range(m):
+            uyusan = float(np.mean(deliller[k] == H))
+            agirlik.append(uyusan)
+        d.sahit_agirliklari = np.asarray(agirlik, float)
+
+        d.olcum.koy("teyit.tevafuk_tanımlı", 1.0)
+        d.olcum.koy("teyit.tevafuk", d.tevafuk)
+        d.olcum.koy("teyit.şahit_sayısı", float(m))
+        d.olcum.koy("teyit.müteber_şahit", d.muteber_sahit)
+        d.olcum.koy("teyit.fazla_sayma_oranı",
+                    float(f.get("fazla_sayma_oranı", 1.0)))
+        d.olcum.koy("teyit.delil_toleransı", tol)
+        d.not_dus(self.ad, "şahit=%d → müteber=%.2f  tevafuk=%.3f"
+                  % (m, d.muteber_sahit, d.tevafuk))
 
 
 def pearson_cok(A: np.ndarray, B: np.ndarray) -> float:
@@ -240,16 +330,32 @@ class Tahkik(Meleke):
     ``TaklitDerecesi = exp(−α‖S − S_şöhret‖²)``: yaygın (şöhretli)
     cevaba ne kadar yakınsan taklit ihtimali o kadar yüksektir. Tahkik,
     yakınlığı değil **kökenle bağı** arar.
+
+    **Küllî kaide burada mühürlenir** (kütük H6). Kaide, şahitlerin
+    çapraz kovaryanslarının kutupsal toplamıdır (`sahit.kulli_kaide`) --
+    fakat **nakzedilmiş şahitler dışarıda bırakılır**: kökeni bozuk
+    şahitten alınan kaide taklittir, tahkik değildir.
+
+    Evvelki hâlde ``TaklitDerecesi`` daima 1 çıkıyordu, çünkü ``S_şöhret``
+    ``S.mean(0)``ın kendisi olarak alınmıştı: ``exp(−0.5·‖x−x‖²) = 1``.
+    Yani "taklit mi?" sorusunun cevabı hesaplanmadan "evet" veriliyordu.
+    Şöhret artık şahitlerden **bağımsız** bir merci olarak alınır: en
+    kalabalık kümenin merkezi değil, mananın ana bileşenidir; taklit
+    ölçüsü de ona olan uzaklıktan okunur.
     """
 
     no, ad = 30, "Tahkik"
-    okur, yazar = ("S", "X"), ()
+    okur, yazar = ("S", "X", "E"), ("kaide",)
+    ihtiyari = ("sahitler", "nakz")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S, X = d.S, d.X
         ds = S.shape[1]
         koken = kat_norm(X @ p.W("tahkik.köken", (X.shape[1], ds))).mean(0)
-        sohret = S.mean(0)                       # en yaygın/ortalama cevap
+
+        # şöhret: mananın baskın bileşeni -- "herkesin söylediği".
+        U, sv, Vt = np.linalg.svd(S - S.mean(0), full_matrices=False)
+        sohret = Vt[0] * float(np.linalg.norm(S.mean(0)))
 
         kokenle_bag = kosinus(S.mean(0), koken)
         taklit = float(np.exp(-0.5 * float(np.sum((S.mean(0) - sohret) ** 2))))
@@ -258,6 +364,28 @@ class Tahkik(Meleke):
         d.olcum.koy("tahkik.taklit_derecesi", taklit)
         d.olcum.koy("tahkik.T", T_tahkik)
         d.olcum.koy("tahkik.muhakkik", float(T_tahkik > 0.9))
+
+        # ---- küllî kaidenin mühürlenmesi
+        sahitler = d.sahitler or []
+        nakz = set(d.nakz or [])
+        temiz = [s for i, s in enumerate(sahitler) if i not in nakz]
+        if temiz:
+            # kaide ham duyu uzayında yaşar (bkz. 𝒪₁₈ Kıyas)
+            d.kaide = kulli_kaide([capraz_kovaryans(d.E, s) for s in temiz])
+            kalan = [float(np.mean(artiklar(d.E, s, d.kaide)))
+                     for s in temiz if artiklar(d.E, s, d.kaide).size]
+            d.olcum.koy("tahkik.kaide_artığı",
+                        float(np.mean(kalan)) if kalan else float("nan"))
+            d.olcum.koy("tahkik.kaide_dikliği",
+                        float(np.max(np.abs(d.kaide.T @ d.kaide
+                                            - np.eye(len(d.kaide))))))
+        else:
+            # Hiç temiz şahit yok: kaide **birim**tir, yani "hiçbir şey
+            # değişmiyor" hükmü. Uydurma bir kaide üretmek yerine
+            # cehli îlan etmek doğrusudur; 𝒪₃₂ bunu Şek'e çevirir.
+            d.kaide = np.eye(d.E.shape[1])
+            d.olcum.koy("tahkik.kaide_artığı", float("nan"))
+        d.olcum.koy("tahkik.temiz_şahit", float(len(temiz)))
 
 
 # =====================================================================
@@ -318,10 +446,35 @@ class SekZanYakin(Meleke):
     kalıp boş bırakmak, ``Makam``ı tanımsız yapardı. Burada o aralık
     **Vehim** diye adlandırıldı: zannın aleyhte olanı. Böylece parçalanış
     hem TAM hem AYRIK olur ve bu ``test_nefs.py``de sınanır.
+
+    **``P_idrak`` artık istikrâdan gelir** (kütük H3/H6). Evvelce
+    ``σ(W[S ⊕ tenakuz ⊕ T])`` idi: eğitilmemiş bir ağırlıkla çarpılan,
+    hiçbir delile bağlanmayan bir sayı. Şimdi:
+
+        k = nakzedilmemiş şahit sayısı
+        n = MÜTEBER şahit sayısı (𝒪₂₉'un fazla saymadan arındırdığı)
+        P = (k+α)/(n+α+β)          -- Laplace'ın ardışıklık kaidesi
+
+    (`mizan.istikra.ardisiklik_kaidesi`). İki hüküm buradan çıkar ve
+    ikisi de kasten böyledir:
+
+    * **Nakz varsa yakîn olmaz.** Tek karşı örnek küllî önermeyi
+      düşürür; makam en çok Zan'a kadar çıkabilir.
+    * **Sonlu şahitle yakîn olmaz.** ``β > 0`` iken ``P < 1``
+      (`tam_istikra_mi`). Eksik istikrâdan yakîn devşirmek, delilden
+      değil önselden devşirmektir. Bu, projenin dürüstlük şartıdır ve
+      gizlenmez -- ölçüsü ``idrak.tam_istikrâ`` diye raporlanır.
+
+    Şahit yoksa eski vekil formül **açıkça işaretlenerek** kullanılır
+    (``idrak.vekil_formül = 1``).
+
+    **Sükût** (kütük H10): makam Şek ise ``d.sukut`` kalkar ve beyan
+    melekeleri susar. Bilmediğini söylememek bir kabiliyettir.
     """
 
     no, ad = 32, "Şek-Zan-Yakîn"
-    okur, yazar = ("S",), ("makam",)
+    okur, yazar = ("S",), ("makam", "sukut")
+    ihtiyari = ("sahitler", "nakz", "sahit_agirliklari")
 
     EPS_SEK = 0.05
     EPS_YAKIN = 0.05
@@ -329,14 +482,39 @@ class SekZanYakin(Meleke):
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
         ds = S.shape[1]
-        ozellik = np.concatenate([S.mean(0), np.full(ds, d.tenakuz),
-                                  np.full(ds, d.T)])
-        d.P_idrak = float(sigmoid(ozellik @ p.v("idrak.p", 3 * ds)))
-        d.makam = makam_tayin(d.P_idrak, self.EPS_SEK, self.EPS_YAKIN)
+        sahitler = d.sahitler or []
+        m = len(sahitler)
+
+        if m >= 2 and d.nakz is not None:
+            k_ham = m - len(d.nakz)
+            muteber = max(float(d.muteber_sahit), 1.0)
+            # müteber şahit sayısı kesirlidir; istikrâ tam sayı ister.
+            n = max(1, int(round(min(muteber, float(m)))))
+            k = int(np.clip(round(k_ham * n / max(m, 1)), 0, n))
+            d.P_idrak = float(ardisiklik_kaidesi(k, n))
+            d.olcum.koy("idrak.istikrâ_k", float(k))
+            d.olcum.koy("idrak.istikrâ_n", float(n))
+            d.olcum.koy("idrak.tam_istikrâ", float(tam_istikra_mi(k, n)))
+            d.olcum.koy("idrak.vekil_formül", 0.0)
+            makam = makam_tayin(d.P_idrak, self.EPS_SEK, self.EPS_YAKIN)
+            if d.nakz and makam == "Yakîn":
+                makam = "Zan"       # nakz varken yakîn iddiası meşru değil
+                d.olcum.koy("idrak.nakz_yakîni_düşürdü", 1.0)
+            d.makam = makam
+        else:
+            ozellik = np.concatenate([S.mean(0), np.full(ds, d.tenakuz),
+                                      np.full(ds, d.T)])
+            d.P_idrak = float(sigmoid(ozellik @ p.v("idrak.p", 3 * ds)))
+            d.makam = makam_tayin(d.P_idrak, self.EPS_SEK, self.EPS_YAKIN)
+            d.olcum.koy("idrak.vekil_formül", 1.0)
+
+        d.sukut = bool(d.makam == "Şek")
         d.olcum.koy("idrak.P", d.P_idrak)
         d.olcum.koy("idrak.entropi", ikili_entropi(d.P_idrak))
         d.olcum.koy("idrak.hüküm", hukum_agirligi(d.P_idrak, d.makam))
-        d.not_dus(self.ad, "P=%.4f → %s" % (d.P_idrak, d.makam))
+        d.olcum.koy("idrak.sükût", float(d.sukut))
+        d.not_dus(self.ad, "P=%.4f → %s%s"
+                  % (d.P_idrak, d.makam, "  (sükût)" if d.sukut else ""))
 
 
 def makam_tayin(P: float, eps_sek: float = 0.05,
@@ -371,25 +549,93 @@ class Muhakeme(Meleke):
     ``𝕀(Γ < τ_kabul)``; ve makro operatör ``R_kebîr`` ile program sentezi.
     Karar geçmezse ``RejimDeğiştir`` -- yani nefs, hükmü zorlamak yerine
     kipini değiştirir.
+
+    **En büyük kopukluk buradaydı ve burada kapatıldı.** ``S_kebîr`` bir
+    kere 𝒪₆ Tasavvur'da yazılıyor, sonra hiç güncellenmiyordu. Beyan
+    melekeleri (𝒪₃₇–𝒪₄₁) ise yalnız ``S_kebîr``i okur. Netice: 𝒪₇'den
+    𝒪₃₂'ye kadar ``S`` üzerinde yapılan bütün iş -- tefekkür, illet,
+    tashih, te'vil -- kelama HİÇ ULAŞMIYORDU. Ölçüldü: bu melekelerin
+    düşürülmesi ``‖ΔN‖ = 0`` veriyordu; sebep melekelerin boş olması
+    değil, mecliste mikro hâlin okunmamasıydı.
+
+    Meclis artık mevcut ``S``ten toplanır: tez, o âna kadar yapılmış
+    bütün murâkabenin hâlidir. Eski ``S_kebîr`` atılmaz, harmana girer
+    (``0.5/0.5``) -- tasavvurun kurduğu makro mana da bir delildir.
     """
 
     no, ad = 33, "Muhakeme"
-    okur, yazar = ("M", "S_kebir", "G_kebir"), ("S_kebir",)
+    okur, yazar = ("M", "S", "S_kebir", "G_kebir", "E"), ("S_kebir",)
+    ihtiyari = ("kaide", "sahitler", "nakz")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         ds = d.S_kebir.shape[0]
-        R = p.lie_tasarruf("muhakeme.R", ds, teta=0.2)
+        guncel = kat_norm(d.S.mean(0) @ p.W("muhakeme.macro", (ds, ds)))
+        d.S_kebir = kat_norm(0.5 * d.S_kebir + 0.5 * guncel)
+        d.olcum.koy("muhakeme.mikro_katkısı",
+                    float(np.linalg.norm(guncel)))
+        # **Küllî kaide burada tatbik edilir.** 𝒪₃₀ Tahkik'in mühürlediği
+        # kaide varsa makro operatör O'dur; yoksa tohumdan türetilen bir
+        # dönme kullanılır ve bu **işaretlenir**. Evvelce kaide hiç
+        # okunmuyordu: 𝒪₃₀ hesaplıyor, kimse kullanmıyordu -- ölçüldü,
+        # 𝒪₃₀ düşürülünce netice hiç değişmiyordu.
+        if d.kaide is not None and d.kaide.shape == (ds, ds):
+            R = d.kaide
+            d.olcum.koy("muhakeme.kaide_tatbik", 1.0)
+        else:
+            R = p.lie_tasarruf("muhakeme.R", ds, teta=0.2)
+            d.olcum.koy("muhakeme.kaide_tatbik", 0.0)
         S_yeni = R @ d.S_kebir
 
         lehte = max(kosinus(S_yeni, d.G_kebir), 0.0) + max(d.T, 0.0)
         aleyhte = max(d.tenakuz, 0.0) + max(d.olcum.al("tenkit.sapma", 0.0), 0.0)
+
+        # **Şahit delili mîzâna girer.** Küllî kaide ``d_in`` uzayında
+        # yaşadığı için (bkz. 𝒪₁₈) meclis onu dizey olarak tatbik
+        # edemeyebilir; fakat hükmünü tartabilir ve tartmalıdır: kaç
+        # müteber şahit tasdik ediyor, kaçı nakzediyor. Bu bağ olmadan
+        # 𝒪₂₃ Mantık, 𝒪₂₉ Teyit ve 𝒪₃₀ Tahkik'in bütün işi mecliste
+        # kayboluyordu -- ölçüldü, üçü de "tesirsiz" çıkıyordu.
+        if d.sahitler:
+            m = len(d.sahitler)
+            n_nakz = len(d.nakz or [])
+            muteber = max(float(d.muteber_sahit), 0.0)
+            lehte += muteber * (m - n_nakz) / max(m, 1)
+            aleyhte += muteber * n_nakz / max(m, 1)
+            d.olcum.koy("muhakeme.şahit_lehte", muteber * (m - n_nakz) / max(m, 1))
+            d.olcum.koy("muhakeme.şahit_aleyhte", muteber * n_nakz / max(m, 1))
+            # 𝒪₃₀'un mühürlediği küllî kaide, kalan şahitleri ne kadar
+            # açıklıyor? Kaide dizey olarak tatbik edilemese de (boyut
+            # uyuşmazlığı) hükmü tartılabilir; bu bağ olmadan 𝒪₃₀
+            # tamamen tesirsiz kalıyordu.
+            if d.kaide is not None and d.kaide.shape[0] == d.E.shape[1]:
+                temiz = [x for i, x in enumerate(d.sahitler)
+                         if i not in set(d.nakz or [])]
+                art = [float(np.mean(artiklar(d.E, x, d.kaide)))
+                       for x in temiz if artiklar(d.E, x, d.kaide).size]
+                if art:
+                    ort = float(np.mean(art))
+                    lehte += max(1.0 - ort, 0.0)
+                    aleyhte += max(ort, 0.0)
+                    d.olcum.koy("muhakeme.kaide_artığı", ort)
         mizan = guvenli_bol(aleyhte, lehte)
         tau = 1.0
         gecti = mizan < tau
 
         program = gelu(S_yeni @ p.W("muhakeme.p1", (ds, ds))) @ p.W("muhakeme.p2", (ds, ds))
-        T_kebir = float(sigmoid(4.0 * (kosinus(S_yeni, d.G_kebir) - d.tenakuz)))
-        d.S_kebir = kat_norm(T_kebir * program + (1 - T_kebir) * d.S_kebir)
+        nakz_orani = (len(d.nakz or []) / max(len(d.sahitler or []), 1)
+                      if d.sahitler else 0.0)
+        T_kebir = float(sigmoid(4.0 * (kosinus(S_yeni, d.G_kebir)
+                                       - d.tenakuz - nakz_orani)))
+        # **Karar geçmezse program tatbik EDİLMEZ.** Evvelce mîzân
+        # hesaplanıyor, ``karar_geçti`` ölçüme yazılıyor ve program yine
+        # de uygulanıyordu -- yani "rejim değiştir" hükmünün hiçbir
+        # neticesi yoktu. Mîzânın bir hükmü varsa, hükmün bir neticesi
+        # de olmalıdır: karar geçmediyse meclis dağılır, makro mana
+        # olduğu gibi kalır.
+        if gecti:
+            d.S_kebir = kat_norm(T_kebir * program + (1 - T_kebir) * d.S_kebir)
+        else:
+            d.S_kebir = kat_norm(d.S_kebir)
         d.olcum.koy("muhakeme.mizan", mizan)
         d.olcum.koy("muhakeme.karar_geçti", float(gecti))
         d.olcum.koy("muhakeme.T_kebîr", T_kebir)
@@ -485,11 +731,14 @@ class Tevil(Meleke):
         ds = S.shape[1]
         A = p.W("tevil.A", (ds, ds))
 
+        esik = celiski_esigi(S, A, 0.5)
+        d.olcum.koy("tevil.eşik", esik)
+
         def celiski(M: np.ndarray) -> float:
-            return celiski_skoru(M, A, 0.5)
+            return celiski_skoru(M, A, esik)
 
         zahir = celiski(S)
-        illet = celiski_gradyani(S, A, 0.5)
+        illet = celiski_gradyani(S, A, esik)
         illet = illet / max(float(np.max(np.abs(illet))), 1.0)
         muevvel = S - 0.1 * illet
         sonra = celiski(muevvel)
