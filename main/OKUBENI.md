@@ -75,6 +75,37 @@ n=16 → 0,28 sn, n=20 → 0,66 sn, n=22 → 1,05 sn.
 `iliskiler.tikanma_postulati`, `kesit_tipi` ve `evrensel_demet` akitleri de
 denetimden geçti.
 
+### Uzak kapı: takas ağı değil, **MPO**
+
+Uzak iki kübite kapı vurmak için onları yan yana getirmek (takas ağı),
+geçilen her kesitte hakiki dolaşıklığı **sürükler**. Ölçüldü ve `χ` ile
+kapanmadı: χ=8'de kapı başına 4,0e-02 kesme, χ=128'de hâlâ 4,4e-02.
+Sebep `χ`nin darlığı değil, MPS'in bir boyutlu oluşudur (H26).
+
+`Yazmac.mpo_uygula` operatörü zincire yayar; **hiçbir kübit oynamaz**:
+
+| χ | MPO kesmesi | takas ağı kesmesi | kazanç |
+|---|---|---|---|
+| 8 | 1,1e-01 | 1,60e+01 | 145× |
+| 64 | **2,7e-03** | 2,06e+01 | **7600×** |
+
+Doğruluğu **ispatlandı**: kayıpsız şartlarda (χ=512, kesme 1e-30) iki
+usul arasındaki fark 5,8e-08 – 4,3e-07, MPO'nun normu tam 1,000000.
+
+MPO bağı yalnız **2**'dir: `R(Σφ) = Π R(φ)` olduğu için zincirde taşınan
+şey sayaç değil (o `N+1` bağ isterdi), iki boyutlu dönme cebrinin
+elemanıdır.
+
+### Düzeltilen üniterlik kusuru
+
+`_cift_kapi_dilim`, tekil değerleri "norm koru" niyetiyle birim yapıyordu.
+MPS kanonik değilken bu, durumu her iki-kübitlik kapıda yeniden
+ölçekliyordu. Ölçüldü (χ=128, kesme 0): tek TAKAS git-gel
+`‖Δgenlik‖/‖genlik‖ = 2,52e-01`, en iyi ölçek çıkarılınca kalan 6,5e-08
+ve ölçek **0,748** — saf bir büzülme. Satır kalkınca aynı ölçüm
+**1,57e-15**. Bütün okumalar normalize olduğu için gizlenmişti; yazmaç o
+hâliyle üniter değildi. Dolaşıklık ölçümleri değişmedi.
+
 ## Neyin iddia edilmediği
 
 Kuantum donanımı yoktur; **kuantum hız avantajı iddia edilmez** (H19).
