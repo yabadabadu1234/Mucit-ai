@@ -188,9 +188,23 @@ class Yazmac:
         Uk = U[:, :, :r]                        # (m, 2X, r)
         sk = s[:, :r]
         Vk = Vt[:, :r, :]                       # (m, r, 2X)
-        # norm koru: her çiftin tekil değerleri birim yapılır
-        nrm = np.sqrt(np.sum(sk ** 2, axis=1, keepdims=True)) + 1e-20
-        sk = sk / nrm
+        # **BURADA BİR KUSUR VARDI VE KALDIRILDI.** Evvelce tekil
+        # değerler ``sk / ‖sk‖`` ile cebren birim yapılıyordu ("norm
+        # koru" niyetiyle). Bu yanlıştı: MPS kanonik biçimde değilken
+        # ``‖sk‖`` durumun normu değil, o bağdaki ayar (gauge)
+        # büyüklüğüdür; birim yapmak durumu her iki-kübitlik kapıda
+        # yeniden ölçekler.
+        #
+        # Ölçüldü (χ=128, kesme = 0, float64): tek TAKAS git-gel sonrası
+        # ``‖Δgenlik‖/‖genlik‖ = 2.52e-01``; fakat en iyi ölçek
+        # çıkarıldığında kalan 6.5e-08 ve ölçek **0.748**. Yani hata saf
+        # bir büzülmeydi: yön doğru, şiddet kayıp. Satır kalkınca aynı
+        # ölçüm **1.57e-15** verir -- yani işlem tam tersinir olur.
+        #
+        # Şimdiye kadar gizlenmesinin sebebi bütün okumaların normalize
+        # olmasıdır (``ρ/iz``, ``P/Σ``). Fakat yazmaç o hâliyle üniter
+        # DEĞİLDİ; kapılar dik olduğu için norm zaten cebren korunur ve
+        # bu satıra hiç ihtiyaç yoktur.
         yeni_sol = np.zeros((m, X, 2, X), dtype=self.tip)
         yeni_sag = np.zeros((m, X, 2, X), dtype=self.tip)
         yeni_sol[:, :, :, :r] = (Uk * np.sqrt(sk)[:, None, :]
@@ -200,6 +214,140 @@ class Yazmac:
         self.A[bas:bas + 2 * m:2] = yeni_sol
         self.A[bas + 1:bas + 2 * m:2] = yeni_sag
         return atilan / toplam
+
+    # -----------------------------------------------------------------
+    #  Yuvaya mahsus kapılar, takas ve **tek süpürme**
+    # -----------------------------------------------------------------
+    def tek_kapi_yuva(self, i: int, G: np.ndarray) -> None:
+        """Yalnız ``i``inci yuvaya tek kübitlik kapı.
+
+        ``tek_kapi`` aynı kapıyı bütün yuvalara vurur; melekelerin
+        çoğunda ise her yuvaya **kendi** kapısı lazımdır.
+        """
+        i = int(i) % self.n
+        Ai = self.A[i]
+        np.einsum("pq,aqb->apb", G.astype(self.tip), Ai.copy(),
+                  out=Ai, optimize=True)
+
+    def cift_kapi_yuva(self, i: int, G: np.ndarray) -> float:
+        """``(i, i+1)`` komşu çiftine tek bir ``4×4`` kapı.
+
+        ``_cift_kapi_dilim``in ``m = 1`` hâli; kesme hatasını döndürür.
+        """
+        i = int(i)
+        if i < 0 or i + 1 >= self.n:
+            raise IndexError("çift kapı için i, i+1 zincirde olmalı")
+        return self._cift_kapi_dilim(G, i, 1)
+
+    #: SWAP: ``|ij⟩ → |ji⟩``. İki kübitlik indeks düzeni ``2i+j``dir
+    #: (bkz. ``_cift_kapi_dilim``deki ``reshape(m, X, 4, X)``).
+    TAKAS = np.array([[1., 0., 0., 0.],
+                      [0., 0., 1., 0.],
+                      [0., 1., 0., 0.],
+                      [0., 0., 0., 1.]], dtype=np.float32)
+
+    def takas(self, i: int) -> float:
+        """``i`` ile ``i+1``i yer değiştir -- **tam**, yaklaşık değil."""
+        return self.cift_kapi_yuva(i, self.TAKAS)
+
+    def supurme(self, blok_bas: int, blok_uzunluk: int,
+                duraklar: Sequence[int], kapi,
+                geri_gotur: bool = True) -> Dict[str, float]:
+        """Bir bloğu zincirde **bir kere** yürüt, geçerken kapıları vur.
+
+        Naif usulde her uzak kapı için ayrı gidip gelinir: ``k`` kapı ve
+        ortalama ``D`` mesafe için ``O(k·D)`` takas. Zincirde ``k``
+        durağın hepsine uğranacaksa bu ``O(N²)``dir.
+
+        Burada blok soldan sağa **tek** süpürülür; her durağın yanından
+        geçerken kapı orada vurulur. Toplam takas ``O(N)``dir. Bu,
+        dikkatteki "tek geçişte hepsini hallet" fikrinin MPS
+        karşılığıdır.
+
+        **Ne kadar aynı?** Ölçüldü (14 kübit, 4 durak, float64,
+        genlikler üzerinden -- yani ayardan bağımsız):
+
+        =====  =====================  ==================
+        ``χ``  süpürme − naif         süpürme kesmesi
+        =====  =====================  ==================
+        64     2.10e-03               4.07e-30
+        128    3.39e-05               5.68e-30
+        256    6.18e-07               1.14e-29
+        512    6.57e-07               2.28e-29
+        =====  =====================  ==================
+
+        ``χ`` yeterliyken fark sayısal hassasiyete iner (çok sayıda SVD
+        biriktiği için tam sıfır olmaz). ``χ`` darken fark gerçektir ve
+        kesmeden gelir: iki usul zinciri farklı yollardan geçtiği için
+        farklı yerlerde budama yapar. "Birebir aynıdır" DENMEZ; ölçülen
+        budur.
+
+        Takas sayısı: bu misalde 20'ye karşı 44 (2.2×). Kazanç durak
+        sayısıyla büyür: ``k`` durak ve ``D`` ortalama mesafe için naif
+        ``2kD``, süpürme ``~2D``.
+
+        ``geri_gotur`` VARSAYILAN OLARAK AÇIKTIR ve öyle olmalıdır.
+        Kapatmak o an bir şey kaybettirmez (durum, hangi kübitin ipte
+        kaçıncı boncuk olduğu dışında aynıdır) fakat **borç bırakır**:
+        (1) yerellik gider -- blok ortada kalırsa bir satırın kendi
+        kübitleri ikiye bölünür, sonraki melekenin "yerel" kapısı artık
+        yerel değildir; (2) takas, geçtiği kesitlerde dolaşıklığı
+        sürükler ve ``χ``yi zorlar, yani **kesme hatası** biriktirir.
+        Geri götürmek o sürüklemeyi geri sarar. Maliyet iki katıdır ve
+        hâlâ ``O(N)``dir.
+
+        ``kapi(durak, blok_yeri) -> 4×4 dizey | None`` çağrılır; ``None``
+        dönerse o durakta kapı vurulmaz.
+        """
+        yer = int(blok_bas)
+        kesme = 0.0
+        takas_sayisi = 0
+        vurulan = 0
+        # Duraklar, bloğun YOL SIRASINA göre dizilir. Artan sırada
+        # dizmek kurulup ölçüldü ve **kaldı**: blok sağ uçtan başlayıp en
+        # soldaki durağa gidiyor, sonra geri sağa dönüyordu -- zikzak,
+        # yani tek süpürme değil. Yön, durakların ağırlık merkezinden
+        # okunur; sıra o yönde tekdüze (monoton) olur.
+        ham = [int(x) for x in duraklar]
+        if not ham:
+            return {"takas": 0.0, "kapı": 0.0, "kesme": 0.0,
+                    "blok_yeri": float(blok_bas)}
+        yon = 1.0 if (sum(ham) / len(ham)) >= blok_bas else -1.0
+        hedefler = sorted(ham, key=lambda h: (h - blok_bas) * yon)
+        # Blok, sol ucundan itibaren sağa doğru yürür. Blok ``blok_uzunluk``
+        # kübittir; yürütmek, bloğun sol komşusuyla takasını blok boyunca
+        # tekrarlamaktır.
+        for hedef in hedefler:
+            while yer > hedef + 1:
+                for k in range(blok_uzunluk):
+                    kesme += self.takas(yer - 1 + k)
+                    takas_sayisi += 1
+                yer -= 1
+            while yer + blok_uzunluk <= hedef:
+                for k in range(blok_uzunluk - 1, -1, -1):
+                    kesme += self.takas(yer + k)
+                    takas_sayisi += 1
+                yer += 1
+            # blok artık durağın bitişiğinde: kapıyı vur
+            G = kapi(hedef, yer)
+            if G is not None:
+                komsu = yer - 1 if yer > hedef else yer + blok_uzunluk - 1
+                komsu = max(0, min(komsu, self.n - 2))
+                kesme += self.cift_kapi_yuva(komsu, G)
+                vurulan += 1
+        if geri_gotur:
+            while yer > blok_bas:
+                for k in range(blok_uzunluk):
+                    kesme += self.takas(yer - 1 + k)
+                    takas_sayisi += 1
+                yer -= 1
+            while yer < blok_bas:
+                for k in range(blok_uzunluk - 1, -1, -1):
+                    kesme += self.takas(yer + k)
+                    takas_sayisi += 1
+                yer += 1
+        return {"takas": float(takas_sayisi), "kapı": float(vurulan),
+                "kesme": float(kesme), "blok_yeri": float(yer)}
 
     # -----------------------------------------------------------------
     #  MERA

@@ -319,6 +319,13 @@ class Durum:
     ahenk: float = 1.0                         # 𝒪₄₀ → 𝒪₄₁  (estetik ölçek)
     serbest_enerji: float = 0.0                # 𝒪₁₁ → 𝒪₃₂  (F_tenakuz, H16)
 
+    # 20 ∞-kategori mertebesinden geçişin bıraktığı iz (``nefs/mertebe.py``).
+    # 𝒪₂₁ Tefekkür yazar; 𝒪₃₂ makamı, 𝒪₃₃ mîzânı onunla tartar. Mertebeler
+    # arası taşınamayan bileşen **tıkanıklıktır**: mana bir mertebeden
+    # ötekine geçemiyorsa, o manadan yakîn devşirilemez.
+    mertebe_tikanikligi: Optional[np.ndarray] = None   # 𝒪₂₁ → 𝒪₃₂, 𝒪₃₃
+    mertebe_betti: Optional[np.ndarray] = None         # 𝒪₂₁ → 𝒪₃₂, 𝒪₃₃
+
     # Karesel melekelerin göreceği azamî satır sayısı. Bunun üstünde
     # ``nefs/kule.py`` devreye girer ve maliyet satır sayısında
     # DOĞRUSALA iner. ``Durum``da durur ki koşuya göre ayarlanabilsin.

@@ -22,6 +22,7 @@ from mizan.munazara import mertebe_adi, yakin_gazali
 
 from .meleke import Meleke, kaydet
 from .kule import ince, kaba
+from .mertebe import mertebe_gecisi
 from .sahit import artiklar, kaide_uydur, nakz_bul
 from .uzaylar import (Durum, Parametreler, celiski_dizeyi, celiski_esigi,
                       celiski_gradyani, celiski_skoru, dikkat, gelu, guvenli_bol, kat_norm,
@@ -477,10 +478,19 @@ class Tefekkur(Meleke):
     ``𝒱 = ½‖S − G‖² + λ Tenakuz(S, İ)``. Bu bir gradyan akışıdır;
     dolayısıyla ``yaklasim.akislar``daki kaideye tâbidir: potansiyel
     boyunca **azalmalıdır**. Ölçülür ve sınanır.
+
+    Tefekkür yalnız tek bir uzayda akmaz. Akıştan sonra ``S``, yirmi
+    ∞-kategori mertebesinden geçip esas uzaya geri mühürlenir
+    (``nefs/mertebe.py``). Bu, ``main/`` modelinin icadının buraya
+    nakledilen hükmüdür (kütük H40): mertebeler **toplanmaz** (H21),
+    ayrı eksenlerde işler ve bileşke terkiptir. Geçişin bıraktığı
+    **tıkanıklık** hükme girer: bir mana bir mertebeden ötekine
+    geçemiyorsa, o manadan yakîn devşirilemez (𝒪₃₂), ve mîzânda aleyhte
+    delildir (𝒪₃₃).
     """
 
     no, ad = 21, "Tefekkür"
-    okur, yazar = ("S", "G"), ("S",)
+    okur, yazar = ("S", "G"), ("S", "mertebe_tikanikligi", "mertebe_betti")
     ihtiyari = ("mu_mana", "strateji")
 
     def uygula(self, d: Durum, p: Parametreler, adim: int = 30) -> None:
@@ -538,10 +548,31 @@ class Tefekkur(Meleke):
             if R is not None:
                 grad = grad + 0.25 * (S @ R - S)
             S = S - 0.02 * grad
-        d.S = S
         d.olcum.koy("tefekkür.V_ilk", ilk)
         d.olcum.koy("tefekkür.V_son", V(S))
         d.olcum.koy("tefekkür.azaldı", float(V(S) < ilk))
+
+        # --- 20 ∞-KATEGORİ MERTEBESİNDEN GEÇİŞ (kütük H40)
+        # Akış bittikten SONRA koşar ki yukarıdaki "potansiyel azaldı"
+        # iddiası bozulmasın: mertebe geçişi bir gradyan adımı değildir,
+        # başka bir iştir ve ölçüsü ayrıdır. Bileşke artıktır (nizamname
+        # Kademe 4): ince eksen silinmez, mertebenin bükümü ona yayılır.
+        M20, tik, b0, buzulme = mertebe_gecisi(S, p)
+        kappa = 0.35
+        d.S = S + kappa * (M20 - S)
+        d.mertebe_tikanikligi = tik
+        d.mertebe_betti = b0
+        d.olcum.koy("tefekkür.mertebe_büzülme", buzulme)
+        d.olcum.koy("tefekkür.tıkanıklık_ort", float(tik.mean()))
+        d.olcum.koy("tefekkür.tıkanıklık_azamî", float(tik.max()))
+        d.olcum.koy("tefekkür.tıkanık_lif",
+                    float(np.sum(tik > 0.9)))
+        d.olcum.koy("tefekkür.ezber_lif", float(np.sum(b0 > 1)))
+        d.olcum.koy("tefekkür.mertebe_bükümü",
+                    float(np.linalg.norm(d.S - S)))
+        d.not_dus(self.ad, "20 mertebe: tıkanıklık ort=%.3f âzamî=%.3f, "
+                           "ezberli lif=%d" % (tik.mean(), tik.max(),
+                                               int(np.sum(b0 > 1))))
 
 
 # =====================================================================

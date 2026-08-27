@@ -521,7 +521,8 @@ class SekZanYakin(Meleke):
 
     no, ad = 32, "Şek-Zan-Yakîn"
     okur, yazar = ("S",), ("makam", "sukut")
-    ihtiyari = ("sahitler", "nakz", "sahit_agirliklari")
+    ihtiyari = ("sahitler", "nakz", "sahit_agirliklari",
+                "mertebe_tikanikligi")
 
     EPS_SEK = 0.05
     EPS_YAKIN = 0.05
@@ -554,6 +555,24 @@ class SekZanYakin(Meleke):
             d.P_idrak = float(sigmoid(ozellik @ p.v("idrak.p", 3 * ds)))
             d.makam = makam_tayin(d.P_idrak, self.EPS_SEK, self.EPS_YAKIN)
             d.olcum.koy("idrak.vekil_formül", 1.0)
+
+        # **Mertebe tıkanıklığı yakîni düşürür** (kütük H40). 𝒪₂₁'in
+        # 20 ∞-kategori mertebesinden geçirdiği mana bir mertebeden
+        # ötekine TAŞINAMIYORSA -- yani taşınamayan dik bileşen normun
+        # onda dokuzunu aşıyorsa -- o mana bir mertebeye hapsolmuştur.
+        # Hapsolmuş bir manadan yakîn devşirmek, nakz varken yakîn
+        # iddia etmekle aynı hatadır: küllîlik iddiası yerel bir delille
+        # temellendirilmiş olur. Makam en çok Zan'a çıkabilir.
+        if d.mertebe_tikanikligi is not None:
+            tik = np.asarray(d.mertebe_tikanikligi, float)
+            tikanik = int(np.sum(tik > 0.9))
+            d.olcum.koy("idrak.tıkanık_lif", float(tikanik))
+            d.olcum.koy("idrak.tıkanıklık_ort", float(tik.mean()))
+            if tikanik and d.makam == "Yakîn":
+                d.makam = "Zan"
+                d.olcum.koy("idrak.tıkanıklık_yakîni_düşürdü", 1.0)
+            else:
+                d.olcum.koy("idrak.tıkanıklık_yakîni_düşürdü", 0.0)
 
         # **Sükût iki kapıdan geçer** (kütük H16). Birincisi makamdır:
         # Şek'te söylenecek bir şey yoktur. İkincisi serbest enerjidir:
@@ -623,7 +642,8 @@ class Muhakeme(Meleke):
 
     no, ad = 33, "Muhakeme"
     okur, yazar = ("M", "S", "S_kebir", "G_kebir", "E"), ("S_kebir",)
-    ihtiyari = ("kaide", "sahitler", "nakz")
+    ihtiyari = ("kaide", "sahitler", "nakz", "mertebe_tikanikligi",
+                "mertebe_betti")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         ds = d.S_kebir.shape[0]
@@ -677,6 +697,25 @@ class Muhakeme(Meleke):
                     lehte += max(1.0 - ort, 0.0)
                     aleyhte += max(ort, 0.0)
                     d.olcum.koy("muhakeme.kaide_artığı", ort)
+        # **Mertebeler arası tıkanıklık ve ezber mîzâna girer** (H40).
+        # 𝒪₂₁'in 20 mertebeden geçirdiği mana bir mertebede hapsolduysa
+        # (tıkanıklık) yahut ayrık adacıklara bölündüyse (``β₀ > 1``,
+        # yani ezber -- H23), bu aleyhte delildir. Tıkanıklığın TERSİ de
+        # delildir ve lehte sayılır: yirmi mertebenin hepsinde tutan bir
+        # mana, tek mertebede tutandan kuvvetlidir.
+        if d.mertebe_tikanikligi is not None:
+            tik = np.asarray(d.mertebe_tikanikligi, float)
+            ort = float(tik.mean())
+            aleyhte += ort
+            lehte += max(1.0 - ort, 0.0)
+            d.olcum.koy("muhakeme.mertebe_aleyhte", ort)
+            d.olcum.koy("muhakeme.mertebe_lehte", max(1.0 - ort, 0.0))
+        if d.mertebe_betti is not None:
+            b0 = np.asarray(d.mertebe_betti, float)
+            ezber = float(np.mean(np.maximum(b0 - 1.0, 0.0)))
+            aleyhte += ezber
+            d.olcum.koy("muhakeme.mertebe_ezber", ezber)
+
         mizan = guvenli_bol(aleyhte, lehte)
         tau = 1.0
         gecti = mizan < tau
