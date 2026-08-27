@@ -18,6 +18,7 @@ from fitrat.tevafuk import fazla_sayma, tevafuk_olcusu
 from mizan.istikra import ardisiklik_kaidesi, tam_istikra_mi
 
 from .meleke import Meleke, kaydet
+from .kule import ince, kaba
 from .sahit import (artiklar, capraz_kovaryans, delil_dizileri, kulli_kaide)
 from .uzaylar import (Durum, Parametreler, celiski_esigi, celiski_gradyani,
                       celiski_skoru,
@@ -56,8 +57,15 @@ class Teemmul(Meleke):
 
     def uygula(self, d: Durum, p: Parametreler, K: int = 200,
                eps: float = 1e-3) -> None:
-        S, H = d.S, d.H_hayal
+        # 200 tur boyunca ``n×n`` dikkat koşar; kule olmadan bu, uzun
+        # pencerede akışın en pahalı yeridir. Devridaim kaba kademede
+        # döner; ``M`` ince eksene geri yayılır (artık bağı korunur).
+        S_ham, H_ham = d.S, d.H_hayal
+        n_ham = len(S_ham)
+        S, kademe, _ = kaba(S_ham, d.tavan)
+        H, _, _ = kaba(H_ham, d.tavan)
         n, ds = S.shape
+        d.olcum.koy("teemmül.kule_kademesi", float(kademe))
         Wq = p.W("teemmül.q", (ds, ds))
         # Teemmül boşluğa dalmaz, bir SUAL etrafında döner. 𝒪₁₅'in
         # ürettiği ``Q_sual`` sorgu yönünü kaydırır. Evvelce ``Q_sual``
@@ -98,7 +106,7 @@ class Teemmul(Meleke):
             if fark < eps:
                 tau_durma = t
                 break
-        d.M = M
+        d.M = M if kademe == 0 else ince(M, n_ham, kademe)
         d.olcum.koy("teemmül.τ_durma", float(tau_durma))
         d.olcum.koy("teemmül.son_fark", farklar[-1])
         d.olcum.koy("teemmül.yakınsadı", float(farklar[-1] < eps))
@@ -220,9 +228,12 @@ class Tashih(Meleke):
 
         eski = tasdik(S)
         A = p.W("tashih.A", (ds, ds))
-        esik = celiski_esigi(S, A, 0.5)
+        Sk, kademe_t, _ = kaba(S, d.tavan)   # çelişki dizeyi ``n×n``
+        esik = celiski_esigi(Sk, A, 0.5)
         d.olcum.koy("tashih.eşik", esik)
-        grad = celiski_gradyani(S, A, esik)
+        grad = celiski_gradyani(Sk, A, esik)
+        if kademe_t:
+            grad = ince(grad, len(S), kademe_t)
         # **Düzeltme illetin bulunduğu yerde yapılır.** 𝒪₂₂ İllet Keşfi
         # bir nedensellik çizgesi (``A_neden``) kuruyor, hiçbir meleke
         # okumuyordu -- ölçüldü: 𝒪₂₂ düşürülünce netice hiç değişmiyordu.
@@ -743,7 +754,8 @@ class Tefsir(Meleke):
     okur, yazar = ("S", "H_hayal"), ("murad",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
-        S, H = d.S, d.H_hayal
+        S, _, _ = kaba(d.S, d.tavan)     # dikkat ``n×2n``dir; kule şart
+        H = d.H_hayal
         ds = S.shape[1]
         siyak = np.roll(S, 1, axis=0)               # önceki bağlam
         sibak = np.roll(S, -1, axis=0)              # sonraki bağlam
@@ -782,14 +794,18 @@ class Tevil(Meleke):
         ds = S.shape[1]
         A = p.W("tevil.A", (ds, ds))
 
-        esik = celiski_esigi(S, A, 0.5)
+        Sk, kademe_v, _ = kaba(S, d.tavan)   # çelişki dizeyi ``n×n``
+        esik = celiski_esigi(Sk, A, 0.5)
         d.olcum.koy("tevil.eşik", esik)
 
         def celiski(M: np.ndarray) -> float:
-            return celiski_skoru(M, A, esik)
+            Mk, _, _ = kaba(M, d.tavan)
+            return celiski_skoru(Mk, A, esik)
 
         zahir = celiski(S)
-        illet = celiski_gradyani(S, A, esik)
+        illet = celiski_gradyani(Sk, A, esik)
+        if kademe_v:
+            illet = ince(illet, len(S), kademe_v)
         illet = illet / max(float(np.max(np.abs(illet))), 1.0)
         muevvel = S - 0.1 * illet
         sonra = celiski(muevvel)

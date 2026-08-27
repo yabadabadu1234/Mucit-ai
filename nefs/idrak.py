@@ -16,6 +16,7 @@ from typing import Optional, Tuple
 import numpy as np
 
 from .meleke import Meleke, kaydet
+from .kule import ince, kaba
 from .sahit import bolutle
 from .uzaylar import (Durum, Olcumler, Parametreler, dikkat, gelu, guvenli_bol,
                       kat_norm, kosinus, nicele, sigmoid, softmax)
@@ -58,9 +59,23 @@ class Musahede(Meleke):
         X_fno = np.fft.irfft(F, n=n, axis=0)
         X = np.tanh(X @ p.W("müşahede.W", (di, di)) + X_fno)
 
-        # öz-dikkat
+        # öz-dikkat -- KULE ÜZERİNDEN (bkz. nefs/kule.py)
+        #
+        # ``dikkat`` satır sayısında karesel maliyetlidir; ana modelin
+        # uzun pencere tutamamasının birinci sebebi buydu (ölçüldü:
+        # 64→0,06 sn, 256→3,09 sn, 1024→12,5 sn). Dikkat artık kaba
+        # kademede koşar ve neticesi ince eksene ARTIK olarak geri
+        # yayılır -- ince eksen silinmez (nizamname Kademe 4).
         Wq, Wk, Wv = (p.W("müşahede." + a, (di, di)) for a in "qkv")
-        H1 = dikkat(X @ Wq, X @ Wk, X @ Wv)
+        Xk, kademe, kayip = kaba(X, d.tavan)
+        H1k = dikkat(Xk @ Wq, Xk @ Wk, Xk @ Wv)
+        if kademe == 0:
+            H1 = H1k
+        else:
+            H1 = X @ Wv + ince(H1k, n, kademe)      # artık bağı
+        d.olcum.koy("kule.kademe", float(kademe))
+        d.olcum.koy("kule.kaba_satır", float(len(Xk)))
+        d.olcum.koy("kule.kayıp", kayip)
 
         # süzgeç kapısı  X ⊙ σ(W_süzgeç X)
         kapi = sigmoid(H1 @ p.W("müşahede.süzgeç", (di, di)))
@@ -317,15 +332,18 @@ class Tertip(Meleke):
         pi = np.argsort(-oncelik)               # yüksek öncelik önce
         d.sira = pi
 
-        M = np.zeros((n, n))
-        M[np.arange(n), pi] = 1.0
-        Zd = M @ Z
+        # Permütasyon dizeyi ``n×n``dir; 65.536 satırda 32 GiB ister
+        # (ölçüldü, akış çöktü). Permütasyon zaten ``pi`` indeksinde
+        # duruyor: dizey yalnız "permütasyon mu?" sağlaması için
+        # kuruluyordu. Sağlama indeks üzerinden AYNEN yapılabilir --
+        # dizeyi kurmak bilgi eklemiyordu, yalnız bellek yiyordu.
+        Zd = Z[pi]
+        permutasyon_mu = float(np.array_equal(np.sort(pi), np.arange(n)))
 
         # çizge Laplasyeni ile nizam maliyeti (komşu farkları)
         C = float(np.sum((Zd[1:] - Zd[:-1]) ** 2))
         d.olcum.koy("tertip.nizam_maliyeti", C)
-        d.olcum.koy("tertip.permütasyon_mu",
-                    float(np.allclose(M.sum(0), 1) and np.allclose(M.sum(1), 1)))
+        d.olcum.koy("tertip.permütasyon_mu", permutasyon_mu)
         d.olcum.koy("tertip.düzensizlik",
                     float(np.sum(np.abs(np.argsort(pi) - np.arange(n)))))
 
@@ -369,8 +387,12 @@ class Tecrit(Meleke):
         d.olcum.koy("tecrit.kesit_diklik_hatası", diklik)
         d.olcum.koy("tecrit.kesit_boyutu", float(k))
 
-        # komşuluk çizgesi: eşik üstü kosinüs benzerliği
-        Xn = X / (np.linalg.norm(X, axis=1, keepdims=True) + 1e-12)
+        # komşuluk çizgesi: eşik üstü kosinüs benzerliği.
+        # Bitişiklik dizeyi ``n×n``dir -- 16.384 satırda 268 milyon
+        # hücre eder ve tek başına akışı kilitler. Betti sayıları
+        # topolojik ORANLARDIR; çizge kaba kademede kurulur.
+        Xk, _, _ = kaba(X, d.tavan)
+        Xn = Xk / (np.linalg.norm(Xk, axis=1, keepdims=True) + 1e-12)
         A = (Xn @ Xn.T > 0.5).astype(float)
         np.fill_diagonal(A, 0.0)
         b0, b1 = betti_1iskelet(A)
@@ -485,6 +507,7 @@ class Mana(Meleke):
         mu = sigmoid(S @ p.W("mana.m", (ds, ds)) + K @ p.W("mana.v", (ds, ds)))
 
         H = d.H_hayal if d.H_hayal is not None else S
+        H, _, _ = kaba(H, d.tavan)      # bağlam dikkati ``n×n``dir
         Wq = p.W("mana.q", (ds, ds))
         Wk = p.W("mana.hk", (H.shape[1], ds))
         Wv = p.W("mana.hv", (H.shape[1], ds))
@@ -544,6 +567,13 @@ def hsic(x: np.ndarray, y: np.ndarray, olcek: float | None = None) -> float:
     n = len(x)
     if n < 4:
         return 0.0
+    # Gram dizeyleri ``n×n``dir; uzun pencerede tek başına akışı yer
+    # (ölçüldü: 4096 satırda 𝒪₈ Tahlil 4,1 sn). HSIC bir ORAN ölçüsüdür;
+    # düzgün aralıklı bir alt örneklem aynı bağımsızlık hükmünü verir.
+    TAVAN = 512
+    if n > TAVAN:
+        idx = np.linspace(0, n - 1, TAVAN).astype(int)
+        x, y, n = x[idx], y[idx], TAVAN
 
     def gram(v: np.ndarray) -> np.ndarray:
         d2 = (v[:, None] - v[None, :]) ** 2
@@ -584,11 +614,14 @@ class Terkip(Meleke):
         Om = 0.5 * (Om - Om.T)                     # ⋀: ters simetrik kısım
         sentez = gelu(terkip + terkip @ Om.T * 0.1)
 
-        # uyum: parçalar arası en KÜÇÜK kosinüs
-        Sn = S / (np.linalg.norm(S, axis=1, keepdims=True) + 1e-12)
+        # uyum: parçalar arası en KÜÇÜK kosinüs. Kosinüs dizeyi ``n×n``
+        # -- 65.536 satırda 32 GiB (ölçüldü, akış çöktü). Asgarî bir
+        # ORAN ölçüsüdür; kaba kademede aranır.
+        Sk, _, _ = kaba(S, d.tavan)
+        Sn = Sk / (np.linalg.norm(Sk, axis=1, keepdims=True) + 1e-12)
         C = Sn @ Sn.T
         np.fill_diagonal(C, np.inf)
-        uyum = float(np.min(C)) if n > 1 else 1.0
+        uyum = float(np.min(C)) if len(Sk) > 1 else 1.0
         d.S = kat_norm(sentez) * float(sigmoid(3.0 * uyum))
         d.olcum.koy("terkip.uyum_katsayısı", uyum)
         d.olcum.koy("terkip.ω_ters_simetrik",
@@ -617,7 +650,9 @@ class Tezat(Meleke):
     okur, yazar = ("S",), ("tezat_kutbu",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
-        S = d.S
+        # Tezat dizeyi ``n×n`` ve özayrışımı ``O(n³)``dür -- kule
+        # olmadan uzun pencerede tek başına akışı kilitler.
+        S, _, _ = kaba(d.S, d.tavan)
         n = len(S)
         Sn = S / (np.linalg.norm(S, axis=1, keepdims=True) + 1e-12)
         Theta = 1.0 - Sn @ Sn.T

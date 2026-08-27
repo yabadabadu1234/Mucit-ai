@@ -295,3 +295,32 @@ değerlendirmede kaç soru) **ölçülür**.
 ## H33 — Bağlanmadık `𝒪_x` bırakılmaz
 
 41 melekenin tamamı ana icra akışında fiilen tesirli olacaktır.
+
+---
+
+## H34 — Kule: uzun pencereyi **ana modelin kendisi** tutar
+
+`main/`'in icadı ana modele nakledildi. Nakledilen şey kübit, dalga veya
+faz değil; **hiyerarşik taşıyıcıdır** (`nefs/kule.py`).
+
+Ana modelin karesel olduğu **on yer** ölçümle bulundu ve kule üzerinden
+geçirildi: 𝒪₁ öz-dikkat, 𝒪₄ permütasyon dizeyi, 𝒪₅ komşuluk çizgesi,
+𝒪₇ bağlam dikkati, 𝒪₈ HSIC Gram dizeyleri, 𝒪₉ kosinüs dizeyi,
+𝒪₁₀ tezat dizeyi + özayrışım, 𝒪₁₁/𝒪₂₁/𝒪₂₈/𝒪₃₆ çelişki dizeyi,
+𝒪₂₂ nedensellik çizgesi, 𝒪₂₅ 200 turluk dikkat, 𝒪₃₅ siyak-sibak dikkati.
+
+Ölçülen (tek çekirdek, `d_in=12`):
+
+| satır | evvel | şimdi |
+|---|---|---|
+| 1.024 | 12,52 sn | **0,38 sn** (33×) |
+| 4.096 | ölçülemedi | **0,96 sn** |
+| 16.384 | çöktü (32 GiB) | **10,6 sn** |
+
+**Kalan.** Hâlâ tam doğrusal değil (4× satır ≈ 11× zaman); en az bir
+karesel yer daha var ve bulunmadı. Bu gizlenmiyor.
+
+**Bedeli de gizlenmiyor.** Kaba taneleme ortalamadır; `kule.kayıp`
+ölçülür (1.024 satırda 0,85). İnce eksen silinmez — kaba netice ona
+**artık** olarak yayılır (nizamname Kademe 4). Şahit bölütlemesi ham `E`
+üzerinde kalır, kuleden etkilenmez.

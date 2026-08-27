@@ -319,6 +319,11 @@ class Durum:
     ahenk: float = 1.0                         # 𝒪₄₀ → 𝒪₄₁  (estetik ölçek)
     serbest_enerji: float = 0.0                # 𝒪₁₁ → 𝒪₃₂  (F_tenakuz, H16)
 
+    # Karesel melekelerin göreceği azamî satır sayısı. Bunun üstünde
+    # ``nefs/kule.py`` devreye girer ve maliyet satır sayısında
+    # DOĞRUSALA iner. ``Durum``da durur ki koşuya göre ayarlanabilsin.
+    tavan: int = 256
+
     olcum: Olcumler = field(default_factory=Olcumler)
     gunluk: List[str] = field(default_factory=list)
 

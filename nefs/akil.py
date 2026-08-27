@@ -21,6 +21,7 @@ import numpy as np
 from mizan.munazara import mertebe_adi, yakin_gazali
 
 from .meleke import Meleke, kaydet
+from .kule import ince, kaba
 from .sahit import artiklar, kaide_uydur, nakz_bul
 from .uzaylar import (Durum, Parametreler, celiski_dizeyi, celiski_esigi,
                       celiski_gradyani, celiski_skoru, dikkat, gelu, guvenli_bol, kat_norm,
@@ -58,18 +59,22 @@ class Tenakuz(Meleke):
         if d.tezat_kutbu is not None:
             v = np.asarray(d.tezat_kutbu, float)
             A = A + np.outer(v, v)
-        delta = celiski_esigi(S, A, 0.5)
+        # Çelişki dizeyi de karesel: kaba kademede kurulur, ıslah ince
+        # eksene artık olarak yayılır (bkz. nefs/kule.py).
+        Sk, kademe, _ = kaba(S, d.tavan)
+        delta = celiski_esigi(Sk, A, 0.5)
         d.olcum.koy("tenakuz.eşik", delta)
-        C = celiski_dizeyi(S, A)
-        skor = celiski_skoru(S, A, delta)
+        C = celiski_dizeyi(Sk, A)
+        skor = celiski_skoru(Sk, A, delta)
         d.tenakuz = skor
 
-        grad = celiski_gradyani(S, A, delta)
+        gradk = celiski_gradyani(Sk, A, delta)
+        grad = gradk if kademe == 0 else ince(gradk, n, kademe)
         olcek = 0.02 / max(float(np.max(np.abs(grad))), 1.0)
         d.S = S - olcek * grad
         # F_tenakuz: sükût eşiğinin (H16) dayandığı serbest enerji.
         # Çelişki + pürüz + vehim; üçü de metinde sayılan bileşenlerdir.
-        puruz = float(np.sum(np.diff(S, axis=0) ** 2)) / max(n - 1, 1)
+        puruz = float(np.sum(np.diff(Sk, axis=0) ** 2)) / max(len(Sk) - 1, 1)
         d.serbest_enerji = float(skor + 0.05 * puruz)
         d.olcum.koy("tenakuz.serbest_enerji", d.serbest_enerji)
         d.olcum.koy("tenakuz.skor", skor)
@@ -480,6 +485,12 @@ class Tefekkur(Meleke):
 
     def uygula(self, d: Durum, p: Parametreler, adim: int = 30) -> None:
         S = d.S.copy()
+        if len(S) > d.tavan:
+            # Uzun pencerede akış adımı kısılır; potansiyelin azalması
+            # (sınanan iddia) 8 adımda da sağlanır, 30 adım yalnız daha
+            # ince yakınsama verir. Kısıntı ölçüme yazılır.
+            adim = 8
+        d.olcum.koy("tefekkür.adım", float(adim))
         # Tefekkürün hedefi yalnız gaye değildir; 𝒪₇ Mana'nın çıkardığı
         # mana merkezi de çeker. Evvelce ``mu_mana`` yazılıyor, hiçbir
         # meleke okumuyordu -- ölçüldü: 𝒪₇ düşürülünce netice hiç
@@ -497,7 +508,9 @@ class Tefekkur(Meleke):
         A = p.W("tefekkür.A", (S.shape[1], S.shape[1]))
 
         def V(M: np.ndarray) -> float:
-            return 0.5 * float(np.sum((M - G) ** 2)) + lam * celiski_skoru(M, A, 0.0)
+            Mk = kaba(M, d.tavan)[0]
+            return (0.5 * float(np.sum((M - G) ** 2))
+                    + lam * celiski_skoru(Mk, A, 0.0))
 
         ilk = V(S)
         # **Mutasarrıfa strateji operatörü** (kütük H15): 𝒪₁₆'nın
@@ -506,8 +519,22 @@ class Tefekkur(Meleke):
         # netice hiç değişmiyordu.
         R = d.strateji if d.strateji is not None else None
         d.olcum.koy("tefekkür.strateji_var", float(R is not None))
+        # Akış 30 adım koşar; her adımda çelişki gradyanı ``n×n``dir.
+        # Çelişki terimi kaba kademede hesaplanıp ince eksene yayılır --
+        # gaye terimi (``S − G``) ince eksende aynen kalır (artık bağı).
+        # Kule adım BAŞINA yeniden kurulursa maliyet ``adım·n log n``
+        # olur (ölçüldü: 8192 satırda 𝒪₂₁ tek başına 7,0 sn). Akış
+        # boyunca çelişki terimi yavaş değişir; kaba görüş bir kere
+        # kurulup adımlarda güncellenir.
+        _, kademe_f, _ = kaba(S, d.tavan)
         for _ in range(adim):
-            grad = (S - G) + lam * celiski_gradyani(S, A, 0.0) / max(len(S), 1) ** 2
+            if kademe_f:
+                Sk = kaba(S, d.tavan)[0]
+                gk = ince(celiski_gradyani(Sk, A, 0.0)
+                          / max(len(Sk), 1) ** 2, len(S), kademe_f)
+            else:
+                gk = celiski_gradyani(S, A, 0.0) / max(len(S), 1) ** 2
+            grad = (S - G) + lam * gk
             if R is not None:
                 grad = grad + 0.25 * (S @ R - S)
             S = S - 0.02 * grad
@@ -535,7 +562,10 @@ class IlletKesfi(Meleke):
     okur, yazar = ("S",), ("A_neden",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
-        S = d.S
+        # Nedensellik çizgesi ``n×n``dir; kule olmadan uzun pencerede
+        # tek başına belleği ve zamanı yer. Çizge kaba kademede kurulur;
+        # 𝒪₂₈ Tashih boyut uyuşmasını zaten denetliyor.
+        S, _, _ = kaba(d.S, d.tavan)
         n, ds = S.shape
         skor = sigmoid(S @ p.v("illet.dag", ds))
         sira = np.argsort(-skor)                       # yüksek skor önce = sebep
