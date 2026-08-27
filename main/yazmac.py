@@ -353,7 +353,9 @@ class Yazmac:
     #  MPO: kübitleri oynatmadan bütün zincire aynı anda etki et
     # -----------------------------------------------------------------
     def mpo_uygula(self, W: Dict[int, np.ndarray], D: int,
-                   bas: int = 0, son: Optional[int] = None) -> float:
+                   bas: int = 0, son: Optional[int] = None,
+                   sol_sinir: Optional[np.ndarray] = None,
+                   sag_sinir: Optional[np.ndarray] = None) -> float:
         """Matris Çarpım Operatörünü duruma uygula ve ``χ``ye geri sıkıştır.
 
         **Takas ağının kapanan yolu.** Uzak iki kübite kapı vurmak için
@@ -393,10 +395,30 @@ class Yazmac:
             Wk = W.get(k, kimlik)
             # (wl, i, j, wr) × (a, j, b) → (wl, a, i, wr, b)
             M = np.einsum("pijq,ajb->paiqb", Wk, Ak, optimize=True)
-            T.append(M.reshape(D * X, 2, D * X))
-        # sınır: MPO bağının solu 0. bileşenden başlar, sağı 0'da biter
-        T[0] = T[0][:X]                                     # wl = 0
-        T[-1] = T[-1][:, :, :X]                             # wr = 0
+            T.append(M.reshape(D, X, 2, D, X))
+        # --- sınır vektörleri
+        # Varsayılan ``e₀``dır: bağ birim cebir elemanıyla başlar ve
+        # 0. bileşende kapanır. Fakat bazı operatörler bunu istemez:
+        # kontrollü DAĞITIM (küllî hüküm sağda, duraklar solda) iki
+        # dalı -- kaynak ``|0⟩`` ve kaynak ``|1⟩`` -- ayrı bağ
+        # bileşenlerinde taşır ve solda **ikisini de** toplar. O hâlde
+        # sol sınır ``(1,1)``dir. Sınırlar ayarlanabilir olmasaydı o
+        # operatör hiç kurulamazdı.
+        sl = np.zeros(D) if sol_sinir is None else np.asarray(sol_sinir, float)
+        sr = np.zeros(D) if sag_sinir is None else np.asarray(sag_sinir, float)
+        if sol_sinir is None:
+            sl[0] = 1.0
+        if sag_sinir is None:
+            sr[0] = 1.0
+        T[0] = np.einsum("p,paiqb->aiqb", sl, T[0], optimize=True
+                         ).reshape(X, 2, D * X)
+        T[-1] = np.einsum("q,paiqb->paib", sr, T[-1], optimize=True
+                          ).reshape(D * X, 2, X)
+        for i in range(1, len(T) - 1):
+            T[i] = T[i].reshape(D * X, 2, D * X)
+        if len(T) == 1:
+            T[0] = np.einsum("p,q,paiqb->aib", sl, sr,
+                             M.reshape(D, X, 2, D, X), optimize=True)
 
         # --- 2) sıkıştırma: sağdan sola QR (kanonikleştir), sonra SVD
         atilan = 0.0

@@ -15,7 +15,16 @@ Zincir düzeni (kullanıcı hükmü: "ikisi birden")::
   mi, bu satır kusurlu mu). Satırın **bitişiğindedir**, dolayısıyla ona
   dokunan kapı yereldir ve ucuzdur.
 * **küllî hüküm bloğu** -- zincirin sonunda: makam(2), mîzân(4),
-  tenakuz(2), tasdik(2), sükût(1), nakz(2). Bütünün hükmü buradadır.
+  tenakuz(2), tasdik(2), sükût(1), nakz(2), **kelam(4)**. Bütünün hükmü
+  buradadır.
+
+**Kelam neden ayrı bir alan?** Ölçüldü: 41 meleke koştuktan sonra bir
+satırın dört veri kübitinin ortak dağılımı **tam düzgün** çıkıyor
+(16 durumun her biri 0.0625). Bu bir kusur değil, dolaşıklığın
+tabiatıdır: her şey her şeyle dolaştığında küçük bir bloğun marjinali
+âzamî karışıktır. Yani model o kübitlerden **konuşamaz**. Kelam bu
+yüzden ayrı, ``|0⟩``da başlayan dört kübittir; beyan melekeleri
+(𝒪₃₇–𝒪₄₁) hükmü ve manayı oraya MPO ile akıtır, belirteç oradan okunur.
 
 Yerel hükümler küllî bloğa **tek süpürmeyle** akıtılır
 (``main.yazmac.Yazmac.supurme``): naif usulde ``k`` durak × ``D`` mesafe
@@ -91,7 +100,7 @@ class QAyar:
     #: Küllî hüküm bloğunun alanları ve kaç kübit tuttukları.
     kulli_alanlar: Tuple[Tuple[str, int], ...] = (
         ("makam", 2), ("mizan", 4), ("tenakuz", 2),
-        ("tasdik", 2), ("sukut", 1), ("nakz", 2),
+        ("tasdik", 2), ("sukut", 1), ("nakz", 2), ("kelam", 4),
     )
 
     @property
@@ -113,6 +122,7 @@ class QIz:
     entropi_once: float = 0.0
     entropi_sonra: float = 0.0
     schmidt: int = 1
+    schmidt_once: int = 1
     norm_hatasi: float = 0.0
     kapi: int = 0
     takas: int = 0
@@ -211,10 +221,20 @@ class QYazmac:
         vermez ve bu ölçülür (``entropi_once`` → ``entropi_sonra``).
         """
         a = self.ayar
-        self.iz.entropi_once = float(self.y.dolasiklik_entropisi()["entropi"])
+        # ``entropi_once`` yalnız İLK MERA'da yazılır. Evvelce her
+        # çağrıda üzerine yazılıyordu ve 𝒪₆ Tasavvur ikinci kademeyi
+        # kurunca "MERA öncesi entropi" 1.77 görünüyordu -- oysa o an
+        # 𝒪₁–𝒪₅ zaten dolaşıklık kurmuştu. Ölçüm yalanlanmasın diye
+        # başlangıç bir kere zabıtlanır.
+        if self.iz.mera_kademe == 0:
+            self.iz.entropi_once = float(
+                self.y.dolasiklik_entropisi()["entropi"])
+            self.iz.schmidt_once = int(
+                self.y.dolasiklik_entropisi()["schmidt"])
         kad = a.mera_kademe if kademe is None else int(kademe)
         izler = self.y.mera_kur(kademe=kad, teta=teta)
-        self.iz.mera_kademe = len(izler)
+        self.iz.mera_kademe += len(izler)
+        self.iz.kapi += len(izler) * self.n      # MERA da kapıdır, sayılır
         self.iz.mera_kesme += float(sum(k.kesme_hatasi for k in izler))
         e = self.y.dolasiklik_entropisi()
         self.iz.entropi_sonra = float(e["entropi"])
@@ -312,6 +332,53 @@ class QYazmac:
         self.iz.supurme += 1
         return float(kesme)
 
+    def mpo_dagit(self, alan: str, acilar: Sequence[float],
+                  duraklar: Optional[Sequence[int]] = None,
+                  j: int = 0) -> float:
+        """``mpo_topla``ın aynası: küllî hüküm **duraklara dağıtılır**.
+
+        Toplamada kontrol duraklardaydı, hedef küllî bloktu; burada
+        tersi: küllî hüküm **kontrol**, duraklar hedeftir. Tafsil (𝒪₃₄)
+        mücmeli dallarına açar, Belâgat (𝒪₃₉) makamı kelama sirayet
+        ettirir; ikisi de bu operatördür.
+
+        Uygulanan üniter::
+
+            U = |0⟩⟨0|_küllî ⊗ I  +  |1⟩⟨1|_küllî ⊗ Π_d R(θ_d)
+
+        Yani küllî hüküm uyanıksa bütün duraklar döner, uyanık değilse
+        hiçbiri dönmez. İki dal iki ayrı bağ bileşeninde taşınır ve sol
+        sınırda **ikisi de** toplanır -- ``sol_sinir = (1,1)``. Bağ yine
+        2'dir; küllî blok zincirin sağında olduğu için akış sağdan
+        soladır.
+        """
+        dur = self.yereller() if duraklar is None else list(duraklar)
+        acilar = list(acilar)
+        if len(acilar) != len(dur):
+            acilar = list(np.resize(np.asarray(acilar, float), len(dur)))
+        kaynak = self.kulli(alan, j)
+        if any(d >= kaynak for d in dur):
+            raise ValueError("MPO dağıtımı duraklar kaynağın solunda iken kurulur")
+
+        W: Dict[int, np.ndarray] = {}
+        for d, teta in zip(dur, acilar):
+            Wd = np.zeros((2, 2, 2, 2))
+            Wd[0, :, :, 0] = np.eye(2)                  # dal 0: kimlik
+            Wd[1, :, :, 1] = donme(teta)                # dal 1: R(θ)
+            W[d] = Wd
+        Wk = np.zeros((2, 2, 2, 2))
+        Wk[0, 0, 0, 0] = 1.0                            # |0⟩⟨0| → dal 0
+        Wk[1, 1, 1, 0] = 1.0                            # |1⟩⟨1| → dal 1
+        W[kaynak] = Wk
+
+        kesme = self.y.mpo_uygula(W, D=2, bas=min(dur), son=kaynak + 1,
+                                  sol_sinir=np.array([1.0, 1.0]),
+                                  sag_sinir=np.array([1.0, 0.0]))
+        self.iz.kesme += float(kesme)
+        self.iz.kapi += len(dur) + 1
+        self.iz.supurme += 1
+        return float(kesme)
+
     def supur(self, alan: str, kapi: Callable[[int, int], Optional[np.ndarray]],
               duraklar: Optional[Sequence[int]] = None) -> Dict[str, float]:
         """Küllî hüküm alanını zincirde **tek** yürüt, geçerken kapıları vur.
@@ -357,6 +424,84 @@ class QYazmac:
         """
         R = self.y.yuva_yogunluklari(list(yuvalar))
         return np.stack([R[:, 0, 0] - R[:, 1, 1], 2.0 * R[:, 0, 1]], axis=1)
+
+    def blok_dagilimi(self, bas: int, kac: int) -> np.ndarray:
+        """``bas``tan itibaren ``kac`` kübitin **ortak** dağılımı -- tam.
+
+        Tek yuva yoğunlukları (``yuva_yogunluklari``) bağımsızlık varsayar
+        ve dolaşık bir durumda yanıltır; belirteç ise ``kac`` kübite
+        birden kodlanmıştır. Onun için burada gerçek indirgenmiş yoğunluk
+        kurulur: sol çevre ``E_L`` zincirin başından, sağ çevre ``E_R``
+        sonundan sarılır, blok ikisinin arasına yerleştirilir::
+
+            ρ_blok = Tr_çevre |Ψ⟩⟨Ψ|,   P(x) = ⟨x|ρ_blok|x⟩
+
+        Bu bir POVM'dir (``Σ E_x = I``) ve **çöküş yoktur** (kütük H31):
+        dalga okunduktan sonra da diridir, hiçbir yere çökertilmez.
+
+        Maliyet ``O(N χ³ + 4^kac χ²)``; ``kac`` küçük tutulmalıdır
+        (belirteç başına kübit sayısı kadar, varsayılan 4 → 16 durum).
+        """
+        bas = int(bas)
+        kac = int(kac)
+        if kac < 1 or bas + kac > self.n:
+            raise IndexError("blok zincirin dışına taşıyor")
+        X = self.y.bag
+        A = self.y.A
+
+        # sol çevre: MPS ilk yuvanın 0. bağ indisinde başlar
+        L = np.zeros((X, X))
+        L[0, 0] = 1.0
+        for k in range(bas):
+            Ak = A[k].astype(np.float64)
+            L = np.einsum("ac,aib,cid->bd", L, Ak, Ak, optimize=True)
+        # sağ çevre: son yuvanın 0. bağ indisinde biter
+        R = np.zeros((X, X))
+        R[0, 0] = 1.0
+        for k in range(self.n - 1, bas + kac - 1, -1):
+            Ak = A[k].astype(np.float64)
+            R = np.einsum("bd,aib,cid->ac", R, Ak, Ak, optimize=True)
+
+        # blok: L ile başlayıp fizikî indisleri açık tutarak ilerle
+        M = L                                        # (a, c)
+        boyut = 1
+        for k in range(bas, bas + kac):
+            Ak = A[k].astype(np.float64)
+            M = np.einsum("...ac,aib,cjd->...ijbd", M, Ak, Ak,
+                          optimize=True)
+            boyut *= 2
+            # (…, i, j, b, d) → fizikî indisleri toplu tut
+            sekil = M.shape
+            M = M.reshape(sekil[:-4] + (sekil[-4] * 1, sekil[-3] * 1,
+                                        sekil[-2], sekil[-1]))
+        rho = np.einsum("...bd,bd->...", M, R, optimize=True)
+        # rho'nun indisleri (i₁,j₁,i₂,j₂,…); köşegeni al
+        rho = rho.reshape([2] * (2 * kac))
+        eks = list(range(0, 2 * kac, 2)) + list(range(1, 2 * kac, 2))
+        rho = np.transpose(rho, eks).reshape(boyut, boyut)
+        P = np.clip(np.real(np.diag(rho)), 0.0, None)
+        t = float(P.sum())
+        return P / t if t > 1e-30 else np.full(boyut, 1.0 / boyut)
+
+    def beyan(self, sozluk: int, satir: Optional[int] = None) -> np.ndarray:
+        """Belirteç dağılımı: **kelam alanından** okunur.
+
+        Model neyi konuşacaksa oradadır; veri kübitlerinden okunmaz,
+        çünkü onların marjinali dolaşıklık yüzünden düzgündür (ölçüldü). ``sozluk`` ``2^k``den küçükse
+        artan durumlar son sınıfa toplanır -- atılmaz (H14: kaba
+        sıfırlama yasak).
+        """
+        _, k = self._alan["kelam"]
+        P = self.blok_dagilimi(self.kulli("kelam", 0), k)
+        if sozluk >= len(P):
+            out = np.zeros(sozluk)
+            out[:len(P)] = P
+            return out
+        out = np.zeros(sozluk)
+        out[:sozluk - 1] = P[:sozluk - 1]
+        out[sozluk - 1] = float(P[sozluk - 1:].sum())
+        t = float(out.sum())
+        return out / t if t > 1e-30 else np.full(sozluk, 1.0 / sozluk)
 
     def makam_dagilimi(self) -> np.ndarray:
         """Makamın dört taban durumu üzerindeki dağılımı -- çöküşsüz.

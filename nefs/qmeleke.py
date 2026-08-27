@@ -1,0 +1,1005 @@
+"""
+41 melekenin **üniter** hâli -- hiçbiri okumaz, hepsi kapıdır.
+
+Kullanıcı hükmü: *"Her meleke bizzat bir üniter olsun, hiç reel görüş
+alınmasın"* ve *"hüküm de üniter olsun: makam bir faza kodlansın"*.
+Buradaki 41 sınıfın hiçbirinde ``yuva_yogunluklari``, ``povm`` yahut
+başka bir okuma çağrısı **yoktur**. Melekeler dalgayı büker; hükmün
+sayısı ancak en sonda, tek bir zayıf ölçümle okunur (kütük H31).
+
+Bunun bedeli açıktır ve saklanmaz: bir meleke kendi girdisine bakıp
+"şuna göre şu kadar dönderelim" diyemez. Açılar ya **parametreden**
+gelir (öğrenilir; ``Parametreler`` tohumludur ve tekrarlanabilir) ya da
+melekenin kendi tarifinden (altın oran, ∞-kategori mertebesi). Bilginin
+kendisi açıya değil, **dolaşıklığa** girer: kontrollü dönme, veriyi
+hükümle dolaştırır; hangi hükmün uyandığı veriye bağlıdır, fakat bu
+bağlılık hiçbir yerde sayıya dökülmez.
+
+Kullanılan kapılar ve maliyetleri:
+
+* ``tek(i, R)``        -- ``O(χ²)``, bedava sayılır.
+* ``cift(i, G)``       -- komşu çift, bir SVD.
+* ``uzak_cift(i,j,G)`` -- takas ağı; **yalnız küllî blok içinde** ve
+  kısa mesafede kullanılır (blok 13 kübittir).
+* ``mpo_topla`` / ``mpo_dagit`` -- uzun menzil; kübit oynamaz, bağ 2,
+  kesme ölçüldü: χ=64'te 2.7e-03 (takas ağı aynı işte 2.06e+01 idi).
+
+Uzun menzilli her iş MPO iledir. Takas ağı zincirin gövdesinde
+**kullanılmaz**; ölçüldü ve dolaşıklığı yok ediyordu.
+"""
+from __future__ import annotations
+
+import math
+from typing import Dict, List, Optional, Sequence, Tuple
+
+import numpy as np
+
+from main.yazmac import dik_iki_kubit
+
+from .mertebe import DINAMIK, lifleri_kur
+from .qyazmac import QYazmac, donme, faz_z, kontrollu_donme
+from .uzaylar import Parametreler
+
+__all__ = ["QMeleke", "qsicil", "qmelekeler", "QAKIS"]
+
+#: Altın oran -- 𝒪₄₀ Sanat'ın kendi tarifinden gelen açı.
+ALTIN = (1.0 + math.sqrt(5.0)) / 2.0
+
+_QSICIL: Dict[int, "QMeleke"] = {}
+
+
+def qkaydet(sinif):
+    ornek = sinif()
+    if ornek.no in _QSICIL:
+        raise ValueError("𝒪%d iki kere kaydedildi" % ornek.no)
+    _QSICIL[ornek.no] = ornek
+    return sinif
+
+
+def qsicil() -> Dict[int, "QMeleke"]:
+    return dict(_QSICIL)
+
+
+def qmelekeler() -> List["QMeleke"]:
+    return [_QSICIL[i] for i in sorted(_QSICIL)]
+
+
+class QParametre:
+    """Bütün melekelerin açılarını taşıyan **tek düz vektör**.
+
+    Eğitim motoru (AS-GEK) tek bir ``ℝ^d`` vektörü üzerinde çalışır;
+    dolayısıyla melekelerin açıları dağınık duramaz. Her meleke ilk
+    istediğinde kendine bir dilim ayrılır ve o dilim ebediyen onundur --
+    yer tahsisi **çağrı sırasına göre** ve tekrarlanabilirdir.
+
+    Bu, ``main/``daki dersin ana modele taşınmış hâlidir: orada
+    Hamiltonyen parametreleri mertebeye anahtarlanınca ayrık motor
+    kendi öğrendiğini siliyordu (kütük H39). Burada anahtar melekenin
+    **numarası ve adı**dır; akış sırası değişse de dilim kaymaz.
+    """
+
+    def __init__(self, tohum: int = 0) -> None:
+        self.tohum = int(tohum)
+        self._yer: Dict[str, Tuple[int, int]] = {}
+        self._n = 0
+        self._vek: Optional[np.ndarray] = None
+
+    # -- yer tahsisi --------------------------------------------------
+    def al(self, anahtar: str, n: int) -> np.ndarray:
+        if anahtar not in self._yer:
+            self._yer[anahtar] = (self._n, int(n))
+            self._n += int(n)
+        bas, kac = self._yer[anahtar]
+        if self._vek is None or len(self._vek) < self._n:
+            self._buyut()
+        return self._vek[bas:bas + kac]
+
+    def _buyut(self) -> None:
+        eski = self._vek
+        rng = np.random.default_rng(self.tohum)
+        yeni = rng.normal(scale=1.0, size=max(self._n, 1))
+        if eski is not None:
+            yeni[:len(eski)] = eski
+        self._vek = yeni
+
+    # -- eğitim arayüzü -----------------------------------------------
+    def __len__(self) -> int:
+        return self._n
+
+    def vektor(self) -> np.ndarray:
+        if self._vek is None:
+            self._buyut()
+        return np.asarray(self._vek[:self._n], float).copy()
+
+    def yukle(self, v: np.ndarray) -> None:
+        """Eğitim motorunun verdiği vektörü yerine koy."""
+        v = np.asarray(v, float).reshape(-1)
+        if self._vek is None:
+            self._buyut()
+        m = min(len(v), len(self._vek))
+        self._vek[:m] = v[:m]
+
+    def defter(self) -> Dict[str, Tuple[int, int]]:
+        """Hangi melekenin nerede olduğu -- dürüstlük için raporlanır."""
+        return dict(self._yer)
+
+
+class QMeleke:
+    """Üniter melekenin ortak atası."""
+
+    no: int = 0
+    ad: str = ""
+    #: Bir küllî alanda birikecek açıların **sabit** sayısı. Durak sayısı
+    #: değişse de bu değişmez; açılar duraklara devrolur.
+    BIRIKIM_ACI: int = 8
+
+    def aci(self, p, n: int, olcek: float = 0.6) -> np.ndarray:
+        """Bu melekenin öğrenilen açıları -- düz vektördeki kendi dilimi."""
+        # Anahtara UZUNLUK da girer. Girmediğinde ölçüldü ve kırıldı:
+        # 𝒪₁ Müşahede önce 4, sonra 6 açı istiyor; tek anahtar ikisini
+        # aynı dilime yolluyordu ve ``dik_iki_kubit`` 6 yerine 4 açı
+        # alıyordu. Uzunluk artık girdiden bağımsız olduğu için (bkz.
+        # ``yay``) anahtar da kararlıdır.
+        anahtar = "q%d.%s/%d" % (self.no, self.ad, int(n))
+        if isinstance(p, QParametre):
+            return olcek * p.al(anahtar, n)
+        return olcek * p.v(anahtar, n)          # eski (tohumlu) arayüz
+
+    def yay(self, p, n_sabit: int, hedef: int, olcek: float = 0.6
+            ) -> np.ndarray:
+        """``n_sabit`` öğrenilen açıyı ``hedef`` durağa **yay**.
+
+        **Ölçülen ve düzeltilen kusur.** Açılar evvelce satır sayısı
+        kadar isteniyordu (``aci(p, n_satir*k)``); 4 satırla kurulan
+        model 8 satır görünce ``IndexError`` veriyordu. Daha kötüsü:
+        parametre sayısı girdinin uzunluğuna bağlı olsaydı model
+        uzunluklar arasında hiç genelleyemezdi -- öğrendiği şey "bu
+        uzunlukta ne yapılır" olurdu.
+
+        Doğrusu, parametrenin **satırdan bağımsız** olmasıdır: öğrenilen
+        şey "kaçıncı satırda ne yapılır" değil, "bir satırın kaçıncı
+        kübitinde ne yapılır"dır. Evrişimin (convolution) ötelemeye
+        bağışıklığı ile aynı kaidedir. Fazla durak varsa açılar
+        devrolur (tile), eksikse kesilir.
+        """
+        a = self.aci(p, int(n_sabit), olcek)
+        if hedef <= 0:
+            return np.zeros(0)
+        return np.resize(a, int(hedef))
+
+    def birikim(self, p, n: int, olcek: float = 0.6) -> np.ndarray:
+        """Bir küllî alanda BİRİKECEK açılar -- ``n`` ile bölünmüş.
+
+        **Ölçülen ve düzeltilen kusur.** Birikim açıları doğrudan
+        ``aci()``den alınıp 20 duraktan geçirilince toplam dönme ~10
+        radyana çıkıyor; çember sarılıyor ve hedef kübit tamamen faz
+        siliniyor. Ölçüldü: kelam alanının 16 taban durumu **tam
+        düzgün** (her biri 0.0625) çıkıyordu, yani model konuşamıyordu.
+
+        Sebep dolaşıklığın tabiatı değil, ölçeğin yanlışlığıydı: bir
+        şahidin küllî hükme katkısı sınırlı olmalıdır ki yüz şahit
+        çemberi tur atmasın. Birikim açısı ``θ_i / n``dir; böylece
+        toplam dönme durak sayısından bağımsız olarak ``O(1)`` kalır ve
+        hüküm, delil çoğaldıkça **keskinleşir**, silinmez.
+        """
+        return self.yay(p, self.BIRIKIM_ACI, n, olcek) / max(float(n), 1.0)
+
+    def uygula(self, q: QYazmac, p: Parametreler) -> None:  # pragma: no cover
+        raise NotImplementedError
+
+    def kosu(self, q: QYazmac, p: Parametreler) -> None:
+        n0 = q.iz.kapi
+        self.uygula(q, p)
+        q.iz.not_dus("𝒪%d %s" % (self.no, self.ad),
+                     "%d kapı" % (q.iz.kapi - n0))
+
+    # -- müşterek desenler -------------------------------------------
+    def tugla(self, q: QYazmac, p: Parametreler, ofset: int = 0,
+              olcek: float = 0.5) -> None:
+        """Veri kübitleri üzerinde fırça (brick) düzeninde ``SO(4)`` katmanı.
+
+        Komşu çiftlere dik kapı vurmak dolaşıklığı yayar; iki ofsetli iki
+        katman, menzili bir kademede iki katına çıkarır (MERA'nın MPS
+        üzerindeki fiilî karşılığı).
+        """
+        a = self.aci(p, 6, olcek)
+        G = dik_iki_kubit(a)
+        k = q.ayar.satir_kubiti
+        for i in range(q.n_satir):
+            for j in range(ofset, k - 1, 2):
+                q.cift(q.veri(i, j), G)
+
+    def satir_donmesi(self, q: QYazmac, p: Parametreler,
+                      olcek: float = 0.6) -> None:
+        """Her satırın her veri kübitine kendi öğrenilen dönmesi."""
+        k = q.ayar.satir_kubiti
+        a = self.aci(p, k, olcek)          # sütun başına, satırdan bağımsız
+        for i in range(q.n_satir):
+            for j in range(k):
+                q.tek(q.veri(i, j), donme(float(a[j])))
+
+
+# =====================================================================
+#  𝒪₁–𝒪₁₀  İDRAK
+# =====================================================================
+@qkaydet
+class QMusahede(QMeleke):
+    """𝒪₁ Müşahede -- odaklanma: veri kübitlerine öz-dikkat katmanı.
+
+    Reel modelde bu ``Softmax(QKᵀ/√d)V`` idi ve ``n×n`` maliyetliydi.
+    Üniter karşılığı fırça düzeninde iki ``SO(4)`` katmanıdır: her kapı
+    komşu iki kübitin genliklerini karıştırır, iki ofset menzili
+    ikiye katlar. Maliyet yuva sayısında **doğrusal**; dikkatin karesel
+    derdi burada yoktur (kütük H34'ün kule ile çözdüğü şeyi, kübit
+    yazmacı yapısı gereği çözer).
+    """
+    no, ad = 1, "Müşahede"
+
+    def uygula(self, q, p):
+        self.satir_donmesi(q, p, 0.7)
+        self.tugla(q, p, ofset=0, olcek=0.6)
+        self.tugla(q, p, ofset=1, olcek=0.6)
+
+
+@qkaydet
+class QHayal(QMeleke):
+    """𝒪₂ Hayal -- suretin açılması: kısmî süperpozisyon.
+
+    Tam Hadamard bütün ihtimalleri eşitler; hayal o kadar başıboş
+    değildir. Her satırın son veri kübiti ``θ`` kadar açılır: ihtimal
+    kapısı aralanır, fakat mevcut suret silinmez.
+    """
+    no, ad = 2, "Hayal"
+
+    def uygula(self, q, p):
+        a = self.yay(p, 4, q.n_satir, 0.9)
+        j = q.ayar.satir_kubiti - 1
+        for i in range(q.n_satir):
+            q.tek(q.veri(i, j), donme(0.25 * math.pi + float(a[i])))
+
+
+@qkaydet
+class QMuhayyile(QMeleke):
+    """𝒪₃ Muhayyile -- terkip serbestliği: uzak kübitleri karıştırır.
+
+    Hayal gördüğünü açar; muhayyile **görmediğini** birleştirir. Bunun
+    için satır içinde atlamalı çiftler (``j`` ile ``j+2``) kullanılır --
+    komşuluk değil, sıçrama.
+    """
+    no, ad = 3, "Muhayyile"
+
+    def uygula(self, q, p):
+        G = dik_iki_kubit(self.aci(p, 6, 0.8))
+        k = q.ayar.satir_kubiti
+        for i in range(q.n_satir):
+            for j in range(0, k - 2):
+                q.uzak_cift(q.veri(i, j), q.veri(i, j + 2), G)
+
+
+@qkaydet
+class QTertip(QMeleke):
+    """𝒪₄ Tertip -- şahit bölütlemesi: satırı kendi yerel hükmüne bağlar.
+
+    Kütük H6: "hepsi aynı kurala tâbidir" bilgisi bayrakla bildirilmez,
+    organlarla sezilir. Burada her satırın son veri kübiti, o satırın
+    yerel hüküm kübitine **kontrollü dönme** ile bağlanır; ikisi zincirde
+    bitişiktir, dolayısıyla kapı yereldir ve ucuzdur. Satırın muhtevası
+    hiçbir yerde okunmaz; hüküm onunla **dolaşır**.
+    """
+    no, ad = 4, "Tertip"
+
+    def uygula(self, q, p):
+        a = self.yay(p, 4, q.n_satir, 0.7)
+        j = q.ayar.satir_kubiti - 1
+        for i in range(q.n_satir):
+            q.cift(q.veri(i, j), kontrollu_donme(float(a[i])))
+
+
+@qkaydet
+class QTecrit(QMeleke):
+    """𝒪₅ Tecrit -- soyutlama: dolanıklık **çözücü**.
+
+    MERA'nın ``U``su gibi çalışır fakat ters yönde: ortak olmayanı ayırır.
+    Fırça katmanının tersi (``Gᵀ``) uygulanır; dik olduğu için bu tam
+    tersidir ve bilgi kaybetmez -- tecrit, atmak değil **ayırmaktır**.
+    """
+    no, ad = 5, "Tecrit"
+
+    def uygula(self, q, p):
+        G = dik_iki_kubit(self.aci(p, 6, 0.5))
+        k = q.ayar.satir_kubiti
+        for i in range(q.n_satir):
+            for j in range(1, k - 1, 2):
+                q.cift(q.veri(i, j), G.T)
+
+
+@qkaydet
+class QTasavvur(QMeleke):
+    """𝒪₆ Tasavvur -- küllî mahiyetin kurulması: bir MERA kademesi daha.
+
+    Dolaşıklığı satırlar arasına taşıyan yer burasıdır; tek satırın
+    kendi içindeki kapılar mahiyeti küllîleştirmez.
+    """
+    no, ad = 6, "Tasavvur"
+
+    def uygula(self, q, p):
+        q.mera(kademe=1, teta=self.aci(p, 24, 0.6))
+
+
+@qkaydet
+class QMana(QMeleke):
+    """𝒪₇ Mana -- satırların manası küllî tasdike akar.
+
+    Bütün yerel hükümler tek bir MPO ile ``tasdik`` alanına akıtılır.
+    Kübit oynamaz, dolaşıklık sürüklenmez; bağ 2'dir.
+    """
+    no, ad = 7, "Mana"
+
+    def uygula(self, q, p):
+        q.mpo_topla("tasdik", self.birikim(p, q.n_satir, 0.9))
+
+
+@qkaydet
+class QTahlil(QMeleke):
+    """𝒪₈ Tahlil -- bileşenlerine ayırma: kübit başına ayrı dönme.
+
+    Her kübit kendi açısıyla çevrilince ortak hâl bileşenlerine ayrışır;
+    bu, tekil değer ayrışımının üniter karşılığıdır (dik dönmeler).
+    """
+    no, ad = 8, "Tahlil"
+
+    def uygula(self, q, p):
+        self.satir_donmesi(q, p, 0.8)
+
+
+@qkaydet
+class QTerkip(QMeleke):
+    """𝒪₉ Terkip -- ayrılanı birleştirme: ters yönlü fırça katmanı."""
+    no, ad = 9, "Terkip"
+
+    def uygula(self, q, p):
+        self.tugla(q, p, ofset=1, olcek=0.7)
+
+
+@qkaydet
+class QTezat(QMeleke):
+    """𝒪₁₀ Tezat -- **yıkıcı girişim**: zıt kutupların işareti çevrilir.
+
+    Kütük H19'un üç şartından üçüncüsü budur ve burada fiilen olur:
+    ``σ_z`` bir taban durumunun işaretini çevirir, o genlik komşusuyla
+    toplandığında **sıfırlanır**. Klasik bir "tezat skoru" hesaplansaydı
+    bu olmazdı; girişim ancak işaretli genlikte olur.
+    """
+    no, ad = 10, "Tezat"
+
+    def uygula(self, q, p):
+        Z = faz_z()
+        k = q.ayar.satir_kubiti
+        for i in range(q.n_satir):
+            if i % 2 == 1:
+                q.tek(q.veri(i, k - 1), Z)
+
+
+# =====================================================================
+#  𝒪₁₁–𝒪₂₄  HÜKÜM, GAYE, BURHÂN
+# =====================================================================
+@qkaydet
+class QTenakuz(QMeleke):
+    """𝒪₁₁ Tenakuz -- çelişkinin küllî ``tenakuz`` alanına akıtılması.
+
+    Reel modelde çelişki ``C = −S(AᵀA)Sᵀ`` idi: ``n×n``, karesel. Burada
+    çelişki bir dizey değil, bir **dolaşıklıktır**: her satırın yerel
+    hükmü küllî tenakuz kübitine bağlanır; birbiriyle uyuşmayan satırlar
+    o kübitte zıt yönde dönme üretir ve **birbirini söndürür** (yıkıcı
+    girişim). Uyuşanlar ise aynı yönde döner ve yapıcı girişimle
+    kuvvetlenir. Ölçü hiçbir yerde çıkmaz; hüküm dalgada durur.
+    """
+    no, ad = 11, "Tenakuz Bulma"
+
+    def uygula(self, q, p):
+        a = self.birikim(p, q.n_satir, 1.1)
+        # işaret satır sırasına göre alternatiflenir: uyuşmazlık zıt döner
+        isaret = np.where(np.arange(q.n_satir) % 2 == 0, 1.0, -1.0)
+        q.mpo_topla("tenakuz", a * isaret)
+
+
+@qkaydet
+class QTenkit(QMeleke):
+    """𝒪₁₂ Tenkit -- zayıf satırın yerel hükmü ``|0⟩``a doğru çevrilir.
+
+    Elemek, reel modelde satırı **sıfırlamaktı** -- kayıplı ve H14'e
+    aykırı. Üniter karşılığı elemek değil **bastırmaktır**: yerel hüküm
+    kübiti sıfır yönüne döndürülür, bilgi silinmez, ağırlığı düşer.
+    """
+    no, ad = 12, "Tenkit"
+
+    def uygula(self, q, p):
+        a = self.yay(p, 4, q.n_satir, 0.4)
+        for i in range(q.n_satir):
+            q.tek(q.yerel(i), donme(-abs(float(a[i]))))
+
+
+@qkaydet
+class QTasdik(QMeleke):
+    """𝒪₁₃ Tasdik -- mühür: küllî tasdik alanı içinde faz kilidi.
+
+    Akışta **iki kere** koşar (kendi mertebesinde ve 𝒪₃₃'ten sonra);
+    ikisinde de aynı kapıdır. Mühür, tasdik kübitlerini birbirine
+    bağlayan bir kontrollü dönmedir: ikisi hemfikirse mühür tutar.
+    """
+    no, ad = 13, "Tasdik"
+
+    def uygula(self, q, p):
+        a = self.aci(p, 2, 0.5)
+        q.cift(q.kulli("tasdik", 0), kontrollu_donme(float(a[0])))
+        q.tek(q.kulli("tasdik", 1), donme(float(a[1])))
+
+
+@qkaydet
+class QGaye(QMeleke):
+    """𝒪₁₄ Gaye -- teleolojik ufuk: tasdik ``mîzân``a bağlanır.
+
+    Gaye, hükmün nereye çekildiğidir. Tasdik alanı mîzân alanına
+    kontrollü dönme ile bağlanır; ikisi de küllî blok içindedir ve
+    aralarındaki mesafe blok boyu kadardır (13 kübit), dolayısıyla takas
+    burada meşrudur ve ucuzdur.
+    """
+    no, ad = 14, "Gaye Belirleme"
+
+    def uygula(self, q, p):
+        a = self.aci(p, 4, 0.5)
+        for j in range(2):
+            q.uzak_cift(q.kulli("tasdik", j), q.kulli("mizan", j),
+                        kontrollu_donme(float(a[j])))
+
+
+@qkaydet
+class QMerak(QMeleke):
+    """𝒪₁₅ Merak -- bilgisizliğin açılması: ``nakz`` alanı süperpozisyona.
+
+    Sual sormak, cevabı bilmediğini ilan etmektir; kuantum karşılığı o
+    kübiti süperpozisyona sokmaktır. Merak ayrıca tünelleme vanasını
+    açan melekedir (kütük H29) -- ``Γ`` buradan yükselir.
+    """
+    no, ad = 15, "Merak ve Sual"
+
+    def uygula(self, q, p):
+        a = self.aci(p, 2, 0.5)
+        for j in range(2):
+            q.tek(q.kulli("nakz", j), donme(0.25 * math.pi + float(a[j])))
+
+
+@qkaydet
+class QDenemeYanilma(QMeleke):
+    """𝒪₁₆ Deneme-Yanılma -- keşif: küçük rastgele (fakat tohumlu) hamleler.
+
+    Oyuncu-eleştirmen döngüsünün üniter karşılığı, ödülü ölçüp geri
+    beslemek değildir (o okuma olurdu); **hamle dizisini** uygulamaktır.
+    Hangi hamlenin iyi olduğunu eğitim motoru söyler: bu melekenin
+    açıları öğrenilen parametrelerdir.
+    """
+    no, ad = 16, "Deneme-Yanılma"
+
+    def uygula(self, q, p):
+        k = q.ayar.satir_kubiti
+        a = self.aci(p, k, 0.3)
+        for i in range(q.n_satir):
+            for j in range(k):
+                q.tek(q.veri(i, j), donme(float(a[j])))
+
+
+@qkaydet
+class QIhtimal(QMeleke):
+    """𝒪₁₇ İhtimal -- Bayes: önselin mîzâna yazılması.
+
+    ``P(S|ℰ) ∝ P(ℰ|S)P(S)``. Üniter karşılığı, mîzân kübitlerinin
+    önsel açıyla çevrilmesidir; olabilirlik ise 𝒪₇ Mana'nın akıttığı
+    dolaşıklıkta zaten durmaktadır. Çarpım, dönmelerin **bileşkesidir**
+    (``R(α)R(β) = R(α+β)``) -- yani logaritmik toplama.
+    """
+    no, ad = 17, "İhtimal Hesabı"
+
+    def uygula(self, q, p):
+        a = self.aci(p, 4, 0.4)
+        for j in range(4):
+            q.tek(q.kulli("mizan", j), donme(float(a[j])))
+
+
+@qkaydet
+class QKiyas(QMeleke):
+    """𝒪₁₈ Kıyas -- şahitten şahide: komşu satırlar arasında kapı.
+
+    Bilinen vakadan bilinmeyene geçmek, iki satırı aynı kapıdan
+    geçirmektir: aralarındaki dönüşüm ortak olursa dolaşıklık kurulur.
+    Satırlar zincirde ``oge`` kadar uzaktır (varsayılan 5); bu kısa
+    mesafede takas meşrudur.
+    """
+    no, ad = 18, "Kıyas"
+
+    def uygula(self, q, p):
+        G = dik_iki_kubit(self.aci(p, 6, 0.5))
+        for i in range(q.n_satir - 1):
+            q.uzak_cift(q.veri(i, 0), q.veri(i + 1, 0), G)
+
+
+@qkaydet
+class QTemsil(QMeleke):
+    """𝒪₁₉ Temsil -- soyutu somuta indirmek, **tersinir** olarak.
+
+    Reel modelde bu bir kodlayıcı/çözücü çiftiydi ve devir hatası
+    ölçülüyordu. Üniter kapı dik olduğu için devir hatası **cebren
+    sıfırdır**: ``GᵀG = I``. Temsilin bilgi kaybetmemesi burada bir
+    iddia değil, kapının tarifidir.
+    """
+    no, ad = 19, "Temsil"
+
+    def uygula(self, q, p):
+        G = dik_iki_kubit(self.aci(p, 6, 0.6))
+        k = q.ayar.satir_kubiti
+        for i in range(q.n_satir):
+            q.cift(q.veri(i, 0), G)
+            if k >= 4:
+                q.cift(q.veri(i, 2), G)
+
+
+@qkaydet
+class QTesbih(QMeleke):
+    """𝒪₂₀ Teşbih -- vech-i şebeh: ilk iki satırın ortak yönü.
+
+    Benzeyen ile benzetilen arasındaki ortak vecih, iki satırı aynı
+    kapıdan geçirip dolaştırmakla kurulur.
+    """
+    no, ad = 20, "Teşbih"
+
+    def uygula(self, q, p):
+        if q.n_satir < 2:
+            return
+        G = dik_iki_kubit(self.aci(p, 6, 0.5))
+        k = q.ayar.satir_kubiti
+        for j in range(k):
+            q.uzak_cift(q.veri(0, j), q.veri(1, j), G)
+
+
+@qkaydet
+class QTefekkur(QMeleke):
+    """𝒪₂₁ Tefekkür -- **20 ∞-kategori mertebesinden geçiş** (kütük H40).
+
+    Ana modelin ``main/``dan devraldığı asıl icat budur. Yirmi lif
+    ``omega_kategori_nbe`` ile kurulup makineyle denetlenir; her lif
+    dalgayı **kendi mertebesine mahsus** açı ve menzille büker:
+
+    * ``olcek`` -- dönme açısı ``1/(1+log(1+m))``; yüksek mertebe az büker.
+    * ``adim``  -- lifin baktığı satır mesafesi ``1+⌊log₂(1+m)⌋``; yüksek
+      mertebe **uzak menzilli** tutarlılıktır.
+    * ``pencere`` -- lifin dokunduğu kübit bloğunun genişliği.
+
+    Mertebeler **toplanmaz** (H21); ayrı liflerde ayrı eksenlere etki
+    eder, bileşke terkiptir. Uzak menzilli bağ MPO ile kurulur -- yani
+    1000. mertebe 16 satır ötesine takas yapmadan dokunur.
+    """
+    no, ad = 21, "Tefekkür"
+
+    def uygula(self, q, p):
+        lifler = lifleri_kur(DINAMIK)
+        a = self.aci(p, len(lifler), 1.0)
+        k = q.ayar.satir_kubiti
+        for lif in lifler:
+            teta = lif.olcek * (1.0 + 0.3 * float(a[lif.yuva]))
+            j = lif.yuva % k                       # lifin dokunduğu eksen
+            for i in range(q.n_satir):
+                q.tek(q.veri(i, j), donme(teta))
+            # uzak menzilli tutarlılık: mertebe kadar ötedeki satırla bağ
+            adim = lif.adim
+            if adim < q.n_satir:
+                duraklar = [q.veri(i, j) for i in range(0, q.n_satir, adim)]
+                if duraklar and max(duraklar) < q.kulli("makam", 0):
+                    q.mpo_topla("makam",
+                                [teta / len(duraklar)] * len(duraklar),
+                                duraklar=duraklar)
+
+
+@qkaydet
+class QIllet(QMeleke):
+    """𝒪₂₂ İllet Keşfi -- nedensellik: **yönlü** bağ.
+
+    Nedensellik simetrik değildir; sebep sonuçtan öncedir. Kontrollü
+    dönme tam da böyledir: kontrol (önceki satır) ``|1⟩`` iken hedef
+    (sonraki satır) döner, tersi olmaz. Asiklik şartı inşa gereği
+    sağlanır -- kapı hep soldan sağadır.
+    """
+    no, ad = 22, "İllet Keşfi"
+
+    def uygula(self, q, p):
+        a = self.yay(p, 4, max(q.n_satir - 1, 1), 0.5)
+        for i in range(q.n_satir - 1):
+            q.uzak_cift(q.veri(i, 0), q.veri(i + 1, 0),
+                        kontrollu_donme(float(a[i])))
+
+
+@qkaydet
+class QMantik(QMeleke):
+    """𝒪₂₃ Mantık -- nakz: tek karşı örnek küllî önermeyi düşürür.
+
+    Kütük H6'nın kaidesi burada bir üniterdir: her yerel hüküm ``nakz``
+    alanına **negatif** açıyla akar. Bir tek şahit ters yönde uyanırsa
+    küllî nakz kübiti döner ve 𝒪₃₂'de yakîni düşürür. Toplama değil
+    girişimdir: nakzlar birbirini kuvvetlendirir, tasdikler söndürür.
+    """
+    no, ad = 23, "Mantık Yürütme"
+
+    def uygula(self, q, p):
+        q.mpo_topla("nakz", -np.abs(self.birikim(p, q.n_satir, 0.8)))
+
+
+@qkaydet
+class QIspat(QMeleke):
+    """𝒪₂₄ İspat -- burhân zinciri: yerel hükümler ardışık bağlanır.
+
+    ``P₀ → P₁ → … → Pₙ``. Zincirin her halkası bir kontrollü dönmedir;
+    bir halka kopuksa (kontrol ``|0⟩``) sonraki hiç dönmez -- yani
+    geçersiz öncülden netice çıkmaz. Occam cezası açıların küçülmesiyle
+    temsil edilir: uzun zincir daha az döndürür.
+    """
+    no, ad = 24, "İspat"
+
+    def uygula(self, q, p):
+        a = self.yay(p, 4, max(q.n_satir - 1, 1), 0.5)
+        for i in range(q.n_satir - 1):
+            teta = float(a[i]) / (1.0 + 0.1 * i)      # Occam: uzun zincir zayıf
+            q.uzak_cift(q.yerel(i), q.yerel(i + 1), kontrollu_donme(teta))
+
+
+# =====================================================================
+#  𝒪₂₅–𝒪₃₆  MURÂKABE
+# =====================================================================
+@qkaydet
+class QTeemmul(QMeleke):
+    """𝒪₂₅ Teemmül -- devridaim: aynı katman birkaç kere.
+
+    Reel modelde 200 tur dikkat koşuyor ve durma ölçütü aranıyordu; o,
+    her turda okuma isterdi. Üniter karşılığı sabit sayıda tekrardır ve
+    yakınsama **kapının kendisinden** gelir: ``R(θ)`` tekrarı ``R(kθ)``
+    verir, yani devridaim bir dönmeye eşdeğerdir ve ıraksamaz.
+    """
+    no, ad = 25, "Teemmül"
+    TUR = 3
+
+    def uygula(self, q, p):
+        for t in range(self.TUR):
+            self.tugla(q, p, ofset=t % 2, olcek=0.3)
+
+
+@qkaydet
+class QTemkin(QMeleke):
+    """𝒪₂₆ Temkin -- sarsılmazlık: küçük açı, büyük vakar.
+
+    Temkin, hâli az değiştirmektir. Açılar kasten küçüktür; bu bir
+    ihmal değil melekenin tarifidir.
+    """
+    no, ad = 26, "Temkin"
+
+    def uygula(self, q, p):
+        a = self.yay(p, 4, q.n_satir, 0.12)
+        for i in range(q.n_satir):
+            q.tek(q.yerel(i), donme(float(a[i])))
+
+
+@qkaydet
+class QTetkik(QMeleke):
+    """𝒪₂₇ Tetkik -- kılcal inceleme: her kübite ayrı ince dönme."""
+    no, ad = 27, "Tetkik"
+
+    def uygula(self, q, p):
+        self.satir_donmesi(q, p, 0.2)
+
+
+@qkaydet
+class QTashih(QMeleke):
+    """𝒪₂₈ Tashih -- düzeltme: tetkikin bulduğunun **tersi**.
+
+    Reel modelde düzeltme "iyileştirdiyse kabul" edilirdi; o bir okuma
+    isterdi. Üniter karşılığı, tetkikin uyguladığı dönmenin bir kısmını
+    geri almaktır: ``R(−λθ)``. ``λ`` öğrenilir; eğitim motoru ne kadar
+    geri alınacağını söyler.
+    """
+    no, ad = 28, "Tashih"
+
+    def uygula(self, q, p):
+        k = q.ayar.satir_kubiti
+        tetkik = QTetkik().aci(p, k, 0.2)
+        lam = float(np.tanh(self.aci(p, 1, 1.0)[0]))
+        for i in range(q.n_satir):
+            for j in range(k):
+                q.tek(q.veri(i, j), donme(-lam * float(tetkik[j])))
+
+
+@qkaydet
+class QTeyit(QMeleke):
+    """𝒪₂₉ Teyit -- **bağımsız** ikinci kanal.
+
+    Bir satırın ilk kübiti ile son kübiti ayrı kanallardır. İkisi
+    dolaştırılınca uyuşma yapıcı, uyuşmazlık yıkıcı girişim verir.
+    Bağımlı iki kanalın uyuşması yeni bilgi değildir; burada kanallar
+    satırın iki ucundan alınır ki mümkün olduğunca ayrı olsunlar.
+    """
+    no, ad = 29, "Teyit"
+
+    def uygula(self, q, p):
+        k = q.ayar.satir_kubiti
+        if k < 2:
+            return
+        G = dik_iki_kubit(self.aci(p, 6, 0.5))
+        for i in range(q.n_satir):
+            q.uzak_cift(q.veri(i, 0), q.veri(i, k - 1), G)
+
+
+@qkaydet
+class QTahkik(QMeleke):
+    """𝒪₃₀ Tahkik -- kökene inmek: küllî kaidenin mühürlenmesi.
+
+    Yerel hükümler ikinci defa, fakat bu sefer **tasdik** alanına ve
+    farklı açılarla akıtılır. Taklit ile tahkiki ayıran budur: aynı
+    delil iki ayrı yoldan aynı hükmü veriyorsa tahkik, yalnız birinden
+    geliyorsa taklittir. İki yol girişimle karşılaştırılır.
+    """
+    no, ad = 30, "Tahkik"
+
+    def uygula(self, q, p):
+        q.mpo_topla("tasdik", self.birikim(p, q.n_satir, 1.0), j=1)
+
+
+@qkaydet
+class QTedebbur(QMeleke):
+    """𝒪₃₁ Tedebbür -- âkıbete bakmak: evrim operatörünün tekrarı.
+
+    ``S_{t+H} = ∫ Evrim``. Üniter karşılığı aynı dik operatörün ``H``
+    kere uygulanmasıdır. Risk ölçülmez (okuma olurdu); onun yerine
+    ileri sarımın kendisi mîzâna bağlanır.
+    """
+    no, ad = 31, "Tedebbür"
+    UFUK = 4
+
+    def uygula(self, q, p):
+        G = dik_iki_kubit(self.aci(p, 6, 0.25))
+        k = q.ayar.satir_kubiti
+        for _ in range(self.UFUK):
+            for i in range(q.n_satir):
+                q.cift(q.veri(i, 0), G)
+        a = self.aci(p, 2, 0.3)
+        for j in range(2):
+            q.tek(q.kulli("mizan", 2 + j), donme(float(a[j])))
+
+
+@qkaydet
+class QSekZanYakin(QMeleke):
+    """𝒪₃₂ Şek-Zan-Yakîn -- **makam bir faza kodlanır** (kullanıcı hükmü).
+
+    Makam iki kübittir: ``00=Şek, 01=Zan, 10=Yakîn, 11=Vehim``. Hiçbir
+    yerde okunmaz; **çevrilir**:
+
+    * ``nakz`` uyanıksa makam Yakîn'den geri döndürülür -- tek karşı
+      örnek küllî önermeyi düşürür (H6). Kontrollü dönme bunu cebren
+      yapar: nakz ``|1⟩`` iken makam kübiti ters yöne döner.
+    * ``tenakuz`` uyanıksa makam Şek'e çekilir.
+    * ``tasdik`` uyanıksa makam Yakîn'e çekilir.
+
+    Üçü de kontrollü dönmedir, üçü de küllî blok içindedir. Makamın
+    sayısı ancak nihaî POVM'de doğar ve o da bir **dağılımdır** --
+    "makam Zan'dır" diye sert bir hüküm hiç kurulmaz (H31).
+    """
+    no, ad = 32, "Şek-Zan-Yakîn"
+
+    def uygula(self, q, p):
+        a = self.aci(p, 3, 0.6)
+        q.uzak_cift(q.kulli("nakz", 0), q.kulli("makam", 0),
+                    kontrollu_donme(-abs(float(a[0]))))
+        q.uzak_cift(q.kulli("tenakuz", 0), q.kulli("makam", 1),
+                    kontrollu_donme(-abs(float(a[1]))))
+        q.uzak_cift(q.kulli("tasdik", 0), q.kulli("makam", 0),
+                    kontrollu_donme(abs(float(a[2]))))
+        # Sükût kapısı: makam Şek'e yakınsa sükût kübiti uyanır.
+        q.uzak_cift(q.kulli("makam", 0), q.kulli("sukut", 0),
+                    kontrollu_donme(-abs(float(a[0]))))
+
+
+@qkaydet
+class QMuhakeme(QMeleke):
+    """𝒪₃₃ Muhakeme -- meclis: bütün küllî alanların tartıldığı yer.
+
+    Mîzân ``Γ = aleyhte/lehte``dir. Üniter karşılığı bir bölme değil,
+    **zıt yönlü dönmelerin bileşkesidir**: lehte deliller (tasdik) mîzânı
+    bir yöne, aleyhte deliller (tenakuz, nakz) öbür yöne çevirir. Netice
+    ``R(Σ lehte − Σ aleyhte)``dir -- bölmenin logaritmik karşılığı.
+    Hiçbir yerde bölme yapılmaz, dolayısıyla sıfıra bölme derdi de yoktur.
+    """
+    no, ad = 33, "Muhakeme"
+
+    def uygula(self, q, p):
+        a = self.aci(p, 6, 0.5)
+        # lehte: tasdik → mîzân (artı yön)
+        for j in range(2):
+            q.uzak_cift(q.kulli("tasdik", j), q.kulli("mizan", j),
+                        kontrollu_donme(abs(float(a[j]))))
+        # aleyhte: tenakuz ve nakz → mîzân (eksi yön)
+        for j in range(2):
+            q.uzak_cift(q.kulli("tenakuz", j), q.kulli("mizan", 2 + j),
+                        kontrollu_donme(-abs(float(a[2 + j]))))
+        for j in range(2):
+            q.uzak_cift(q.kulli("nakz", j), q.kulli("mizan", j),
+                        kontrollu_donme(-abs(float(a[4 + j]))))
+
+
+@qkaydet
+class QTafsil(QMeleke):
+    """𝒪₃₄ Tafsil -- mücmeli dallarına açmak: küllîden yerele **dağıtım**.
+
+    Buraya kadar bilgi hep yukarı aktı; tafsil onu geri indirir.
+    ``mpo_dagit`` bunu kübit oynatmadan yapar. Sadakat şartı (açılan
+    şey toplanınca geri gelmeli) burada cebren sağlanır: dağıtım
+    üniterdir, tersi vardır.
+    """
+    no, ad = 34, "Tafsil"
+
+    def uygula(self, q, p):
+        q.mpo_dagit("makam", self.birikim(p, q.n_satir, 0.7))
+
+
+@qkaydet
+class QTefsir(QMeleke):
+    """𝒪₃₅ Tefsir -- müphemi siyak ve sibakla açmak.
+
+    Her satır hem öncekiyle hem sonrakiyle bağlanır; murâd, bu üçlünün
+    ortak dolaşıklığında durur.
+    """
+    no, ad = 35, "Tefsir"
+
+    def uygula(self, q, p):
+        G = dik_iki_kubit(self.aci(p, 6, 0.4))
+        k = q.ayar.satir_kubiti
+        for i in range(1, q.n_satir):
+            q.uzak_cift(q.veri(i - 1, k - 1), q.veri(i, 0), G)
+
+
+@qkaydet
+class QTevil(QMeleke):
+    """𝒪₃₆ Tevil -- zâhir çelişince irca; **şartlı** ve üniter.
+
+    Keyfî te'vilin önündeki sed, kontrolün ta kendisidir: te'vil ancak
+    ``tenakuz`` kübiti uyanıkken döner. Çelişki yoksa kontrol ``|0⟩``dır
+    ve te'vil hiç olmaz -- "gereksiz te'vil yok" şartı burada bir ölçüm
+    değil, kapının tarifidir.
+    """
+    no, ad = 36, "Tevil"
+
+    def uygula(self, q, p):
+        a = self.aci(p, 2, 0.5)
+        for j in range(2):
+            q.uzak_cift(q.kulli("tenakuz", j), q.kulli("tasdik", j),
+                        kontrollu_donme(float(a[j])))
+
+
+# =====================================================================
+#  𝒪₃₇–𝒪₄₁  BEYAN
+# =====================================================================
+@qkaydet
+class QFesahat(QMeleke):
+    """𝒪₃₇ Fesâhat -- mana **kelam alanına** akar.
+
+    Buraya kadar bütün iş veri ve hüküm kübitlerindeydi; kelam ``|0⟩``da
+    bekliyordu. Fesâhat, satırların manasını kelama akıtan ilk
+    melekedir: her satırın ilk veri kübiti, kelamın bir kübitine MPO
+    ile bağlanır.
+
+    **Neden ayrı bir alan.** Ölçüldü: veri kübitlerinden okunan
+    dağılım tam düzgün çıkıyordu (16 durumun her biri 0.0625) -- her
+    şey her şeyle dolaştığında küçük bloğun marjinali âzamî karışıktır
+    ve model konuşamaz. Kelam ``|0⟩``dan başlayıp yalnız beyan
+    melekelerinin yazdığı bir alandır; oradan okunan dağılım
+    yoğunlaşabilir.
+    """
+    no, ad = 37, "Fesâhat"
+
+    def uygula(self, q, p):
+        _, kk = q._alan["kelam"]
+        a = self.birikim(p, q.n_satir * kk, 1.2) * kk
+        duraklar = [q.veri(i, 0) for i in range(q.n_satir)]
+        for j in range(kk):
+            q.mpo_topla("kelam", a[j * q.n_satir:(j + 1) * q.n_satir],
+                        duraklar=duraklar, j=j)
+
+
+@qkaydet
+class QTalakat(QMeleke):
+    """𝒪₃₈ Talâkat -- akıcılık: kelam kübitleri arası bağ.
+
+    Kelam kopuk hecelerden ibaret olmasın diye kelam alanının komşu
+    kübitleri birbirine bağlanır; bunlar bitişiktir, kapı yereldir.
+    """
+    no, ad = 38, "Talâkat"
+
+    def uygula(self, q, p):
+        _, kk = q._alan["kelam"]
+        G = dik_iki_kubit(self.aci(p, 6, 0.4))
+        for j in range(kk - 1):
+            q.cift(q.kulli("kelam", j), G)
+        self.tugla(q, p, ofset=0, olcek=0.15)
+
+
+@qkaydet
+class QBelagat(QMeleke):
+    """𝒪₃₉ Belâgat -- makamın kelama sirayeti.
+
+    Belâgat, sözü **makamına göre** söylemektir. Küllî makam kübiti
+    bütün satırlara dağıtılır: Yakîn makamında kelam başka, Şek
+    makamında başka bükülür. Dağıtım MPO iledir.
+    """
+    no, ad = 39, "Belâgat"
+
+    def uygula(self, q, p):
+        _, kk = q._alan["kelam"]
+        a = np.concatenate([self.aci(p, kk, 0.45),
+                            self.birikim(p, q.n_satir, 0.7)])
+        # makam kelama sirayet eder: küllî blok içinde, kısa mesafe
+        for j in range(kk):
+            q.uzak_cift(q.kulli("makam", j % 2), q.kulli("kelam", j),
+                        kontrollu_donme(float(a[j])))
+        # ayrıca satırlara da iner: mücmel tafsile döner
+        q.mpo_dagit("makam", a[kk:], j=1)
+
+
+@qkaydet
+class QSanat(QMeleke):
+    """𝒪₄₀ Sanat -- **altın oran**: açı melekenin kendi tarifinden gelir.
+
+    Bu melekenin açısı öğrenilmez ve öğrenilmemelidir: ``2π/φ²``
+    altın açıdır ve ardışık uygulandığında hiçbir yuvaya iki kere aynı
+    fazı vermez (en düzgün dağılım). Ahenk bir tercih değil, bir sayıdır.
+    """
+    no, ad = 40, "Sanat"
+
+    def uygula(self, q, p):
+        altin_aci = 2.0 * math.pi / (ALTIN ** 2)
+        k = q.ayar.satir_kubiti
+        for i in range(q.n_satir):
+            for j in range(k):
+                q.tek(q.veri(i, j),
+                      donme((altin_aci * (i * k + j)) % (2 * math.pi)))
+        _, kk = q._alan["kelam"]
+        for j in range(kk):
+            q.tek(q.kulli("kelam", j),
+                  donme((altin_aci * (j + 1)) % (2 * math.pi)))
+
+
+@qkaydet
+class QMunazara(QMeleke):
+    """𝒪₄₁ Münazara -- tez ve antitezin telîfi: son bileşke.
+
+    Mîzân ile makam son kere bağlanır; beyan bundan sonra okunur.
+    """
+    no, ad = 41, "Münazara"
+
+    def uygula(self, q, p):
+        _, kk = q._alan["kelam"]
+        a = self.aci(p, 4 + kk, 0.5)
+        for j in range(2):
+            q.uzak_cift(q.kulli("mizan", j), q.kulli("makam", j),
+                        kontrollu_donme(float(a[j])))
+        # SÜKÛT KAPISI (kütük H10/H16): sükût kübiti uyanıksa kelam
+        # bastırılır. Bilmediğini söylememek bir kabiliyettir ve burada
+        # bir kapıdır: kontrol |1⟩ iken kelam sıfır yönüne döner.
+        for j in range(kk):
+            q.uzak_cift(q.kulli("sukut", 0), q.kulli("kelam", j),
+                        kontrollu_donme(-abs(float(a[4 + j]))))
+        q.tek(q.kulli("sukut", 0), donme(float(a[2]) * 0.5))
+
+
+#: Akış sırası -- reel modelin ``AKIS``ıyla birebir aynı (𝒪₁₃ iki kere).
+QAKIS: Tuple[int, ...] = (
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 23, 24,
+    25, 26, 27, 28, 29, 30, 31, 32,
+    33, 13,
+    34, 35, 36,
+    37, 38, 39, 40, 41,
+)

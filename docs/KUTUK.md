@@ -373,3 +373,107 @@ sonrası 6.000.000 kübitte zirve 3,37 GB — durumun yalnız 1,18 katı.
 Ayrık motor bir mertebeyi sıçrattığında sıçrayan şey lifin **adresidir**,
 lifin kendisi değil. Parametreler mertebe değerine anahtarlanırsa
 (`F.50` gibi) motor kendi öğrendiğini siler. Anahtar `0…19` yuvasıdır.
+
+## H40 — Ana model H32 mimarisinin **tamamını** kullanır
+
+*"Bir şeyi nakzetmene gerek yok; ana model tamamen H32'yi kullanmaya
+başlayacak, bir eksik dahi olmadan."*
+
+H32 (tecrit mimarisi ayrı bir modeldir) **nakzedilmemiştir**: `main/`
+müstakil model olarak durur. Nakledilen şey mimarinin kendisidir ve
+tamamıdır: kübit yazmacı, MERA, 20 ∞-kategori uzayı, Hamiltonyen, enine
+zırh, tünelleme, BEC, POVM, AS-GEK, hedef güdümü, Postnikov, tersine
+tavlama. İki model aynı fiziği **tek nüshadan** çağırır (`main.yazmac`,
+`main.optimize`); tekrar yoktur.
+
+**`S` diye ayrı bir reel hâl yoktur** (kullanıcı hükmü). Nefsin bir
+andaki bütün hâli tek bir kuantum durumudur.
+
+**41 melekenin hepsi üniterdir** ve hiçbiri okumaz (kullanıcı hükmü:
+"hiç reel görüş alınmasın"). Hüküm de üniterdir: makam iki kübite
+(`00=Şek, 01=Zan, 10=Yakîn, 11=Vehim`) kodlanır, kontrollü dönmelerle
+çevrilir. Hükmün sayısı ancak en sonda, POVM zayıf ölçümüyle doğar --
+ve bir sayı değil **dağılımdır**.
+
+Zincir düzeni: her satırın veri kübitlerinin dibinde kendi yerel hüküm
+kübiti; zincirin sonunda küllî hüküm bloğu (makam 2, mîzân 4, tenakuz 2,
+tasdik 2, sükût 1, nakz 2, kelam 4).
+
+`nefs/akis.py` (reel akış) **yerinde durur** ve 41 sınaması geçmeye
+devam eder; kübit akışı yanına kuruldu, karşılaştırılabilsin diye.
+
+## H41 — Takas ağı kapalı yoldur; **operatör yürür, kübit oynamaz**
+
+Uzak iki kübite kapı vurmak için onları yan yana getirmek (takas ağı),
+geçilen her kesitte hakiki dolaşıklığı **sürükler**. Ölçüldü ve `χ` ile
+kapanmadı:
+
+| χ | takas ağı, kapı başına kesme | dolaşıklık S |
+|---|---|---|
+| 8 | 4,0e-02 | 1,93 → 1,44 |
+| 32 | 7,4e-02 | 2,50 → 1,87 |
+| 128 | 4,4e-02 | 2,61 → 2,34 |
+
+Sebep `χ`nin darlığı değil, MPS'in bir boyutlu oluşudur (H26).
+
+Çare veriyi taşımak yerine **operatörü yürütmektir**: Matris Çarpım
+Operatörü (`Yazmac.mpo_uygula`) bütün zincire aynı anda etki eder,
+hiçbir kübit yer değiştirmez. Aynı işte ölçülen:
+
+| χ | MPO kesmesi | dolaşıklık S | süre |
+|---|---|---|---|
+| 8 | 1,1e-01 | 1,93 → **2,08** | 0,03 sn |
+| 64 | **2,7e-03** | 2,61 → **4,09** | 0,99 sn |
+
+χ=64'te kesme **7600 kat** azdır, süre yarıdır ve dolaşıklık artar
+(takas ağı ise yok ediyordu).
+
+**Doğruluğu ispatlandı**, iddia edilmedi: kayıpsız şartlarda (χ=512,
+kesme 1e-30) MPO ile takas ağı arasındaki fark 5,8e-08 ile 4,3e-07
+arası, MPO'nun normu tam **1,000000**.
+
+**MPO bağı yalnız 2'dir** ve sebebi cebridir: `R(Σφ) = Π R(φ)`, yani
+zincirde taşınması gereken şey sayaç değil (o `N+1` bağ isterdi), iki
+boyutlu dönme cebrinin elemanıdır.
+
+## H42 — Yazmacın üniterliğini bozan ölçek kusuru
+
+`_cift_kapi_dilim`, iki-yuva güncellemesinde tekil değerleri "norm koru"
+niyetiyle birim yapıyordu (`sk /= ‖sk‖`). MPS kanonik biçimde değilken
+`‖sk‖` durumun normu değil, o bağdaki **ayar** büyüklüğüdür.
+
+Ölçüldü (χ=128, kesme 0, float64, genlikler üzerinden): tek TAKAS
+git-gel `‖Δgenlik‖/‖genlik‖ = 2,52e-01`; en iyi ölçek çıkarıldığında
+kalan 6,5e-08 ve ölçek **0,748**. Yani hata saf bir büzülmeydi: yön
+doğru, şiddet kayıp. Satır kalkınca aynı ölçüm **1,57e-15** verir.
+
+Bütün okumalar normalize olduğu için (`ρ/iz`, `P/Σ`) gizlenmişti; fakat
+yazmaç o hâliyle **üniter değildi** ve H19'un üç şartından biri budur.
+Dolaşıklık ölçümleri değişmedi (4096 kübit MERA(6): S=1,979102).
+
+## H43 — Kelam ayrı bir alandır; birikim açısı **durak sayısına bölünür**
+
+İki ölçüm, iki hüküm:
+
+1. 41 meleke koştuktan sonra bir satırın dört veri kübitinin ortak
+   dağılımı **tam düzgün** çıkıyor (16 durumun her biri 0,0625). Bu bir
+   kusur değil, dolaşıklığın tabiatıdır: her şey her şeyle dolaştığında
+   küçük bloğun marjinali âzamî karışıktır. Model o kübitlerden
+   **konuşamaz**. Onun için kelam, `|0⟩`da başlayan ve yalnız beyan
+   melekelerinin (𝒪₃₇–𝒪₄₁) yazdığı ayrı bir alandır.
+
+2. Birikim açıları doğrudan alınınca 20 duraktan geçen toplam dönme ~10
+   radyana çıkıyor; çember sarılıyor ve hedef kübit tamamen faz
+   siliniyor. Birikim açısı `θ_i / n` olmalıdır: bir şahidin küllî
+   hükme katkısı sınırlı olsun ki yüz şahit çemberi tur atmasın. Böylece
+   hüküm, delil çoğaldıkça **keskinleşir**, silinmez.
+
+## H44 — Parametre girdinin uzunluğuna bağlanamaz
+
+Açılar satır sayısı kadar isteniyordu; 4 satırla kurulan model 8 satır
+görünce kırılıyordu. Daha kötüsü: parametre sayısı uzunluğa bağlı olsaydı
+model uzunluklar arasında hiç genelleyemezdi -- öğrendiği şey "bu
+uzunlukta ne yapılır" olurdu. Öğrenilen şey "kaçıncı satırda ne yapılır"
+değil, "bir satırın kaçıncı kübitinde ne yapılır"dır (evrişimin ötelemeye
+bağışıklığı ile aynı kaide). Fazla durak varsa açılar devrolur.
+
