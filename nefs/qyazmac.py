@@ -1,0 +1,398 @@
+"""
+Ana modelin kübit yazmacı -- ``S`` diye ayrı bir reel hâl YOKTUR.
+
+Nefsin bir andaki bütün hâli tek bir kuantum durumudur. ``main/`` ile
+aynı yazmaç kullanılır (``main.yazmac.Yazmac``); iki model aynı fiziği
+paylaşır, bu bir tekrar değil **tek nüshadır**.
+
+Zincir düzeni (kullanıcı hükmü: "ikisi birden")::
+
+    [sat0 veri × k][sat0 yerel h.] [sat1 veri × k][sat1 yerel h.] …
+      … [satN-1 veri × k][satN-1 yerel h.]  [ K Ü L L Î   H Ü K Ü M ]
+
+* **veri kübitleri** -- ham duyunun kübitlere kodlanmış hâli.
+* **yerel hüküm kübiti** -- o satır hakkındaki hüküm (bu şahit nakzedildi
+  mi, bu satır kusurlu mu). Satırın **bitişiğindedir**, dolayısıyla ona
+  dokunan kapı yereldir ve ucuzdur.
+* **küllî hüküm bloğu** -- zincirin sonunda: makam(2), mîzân(4),
+  tenakuz(2), tasdik(2), sükût(1), nakz(2). Bütünün hükmü buradadır.
+
+Yerel hükümler küllî bloğa **tek süpürmeyle** akıtılır
+(``main.yazmac.Yazmac.supurme``): naif usulde ``k`` durak × ``D`` mesafe
+için ``2kD`` takas, süpürmede ``~2D``. Blok yerine iade edilir; edilmezse
+yerellik gider ve takas dolaşıklığı sürükleyip ``χ``yi zorlar.
+
+**Hiçbir yerde çöküş yoktur.** Hüküm melekeleri de üniterdir: makam
+``|Şek⟩,|Zan⟩,|Yakîn⟩,|Vehim⟩`` taban durumlarına kodlanır ve bir dönme
+ile çevrilir. Hükmün sayısı ancak en sonda, POVM zayıf ölçümüyle okunur
+(kütük H31).
+"""
+from __future__ import annotations
+
+import math
+from dataclasses import dataclass, field
+from typing import Callable, Dict, List, Optional, Sequence, Tuple
+
+import numpy as np
+
+from main.yazmac import Yazmac, dik_iki_kubit, hadamard
+
+__all__ = ["QAyar", "QYazmac", "donme", "faz_z", "kontrollu_donme",
+           "MAKAM_ADLARI"]
+
+#: Makam iki kübite kodlanır: 00=Şek, 01=Zan, 10=Yakîn, 11=Vehim.
+#: Sıra kasıtlıdır: Şek ve Vehim uçlardadır, Zan ile Yakîn ortadadır;
+#: tek kübitlik bir dönme Şek'ten Zan'a, Zan'dan Yakîn'e geçirir.
+MAKAM_ADLARI: Tuple[str, ...] = ("Şek", "Zan", "Yakîn", "Vehim")
+
+
+def donme(teta: float) -> np.ndarray:
+    """``R(θ) = [[cos,−sin],[sin,cos]]`` -- reel tek kübitlik dönme.
+
+    Reel cebirde faz işarettir (bkz. ``main/yazmac.py``); ``e^{iθ}``
+    yerine ``SO(2)`` dönmesi taşınır. Dik olduğu için normu korur.
+    """
+    c, s = math.cos(float(teta)), math.sin(float(teta))
+    return np.array([[c, -s], [s, c]], dtype=np.float64)
+
+
+def faz_z() -> np.ndarray:
+    """``σ_z`` -- işaret çevirme. Yıkıcı girişimi kuran kapı."""
+    return np.array([[1.0, 0.0], [0.0, -1.0]], dtype=np.float64)
+
+
+def kontrollu_donme(teta: float) -> np.ndarray:
+    """``CR(θ)``: kontrol ``|1⟩`` iken hedefe ``R(θ)``.
+
+    İki kübitlik indeks düzeni ``2i+j``dir (``i`` kontrol, ``j`` hedef) --
+    ``main.yazmac._cift_kapi_dilim``deki düzenle aynı. Dik bir dizeydir;
+    dolayısıyla dolaşıklığı kurar ve normu korur.
+    """
+    R = donme(teta)
+    G = np.eye(4, dtype=np.float64)
+    G[2:, 2:] = R
+    return G
+
+
+@dataclass
+class QAyar:
+    """Yazmacın bütün ölçüleri -- hiçbiri koda gömülü değildir.
+
+    Varsayılan **küçük** tutulur (kullanıcı hükmü): akış saniyeler içinde
+    bitsin, her melekenin doğru çalıştığı ölçülebilsin. Kapasite ayrı
+    ölçülür; ``main/`` onu 6 000 000 kübitte zaten ölçtü.
+    """
+    satir_kubiti: int = 4          # bir satır kaç veri kübitine kodlanır
+    yerel_kubit: int = 1           # satır başına yerel hüküm kübiti
+    bag: int = 8                   # χ
+    mera_kademe: int = 3
+    tohum: int = 0
+    obek: int = 150_000
+    #: Küllî hüküm bloğunun alanları ve kaç kübit tuttukları.
+    kulli_alanlar: Tuple[Tuple[str, int], ...] = (
+        ("makam", 2), ("mizan", 4), ("tenakuz", 2),
+        ("tasdik", 2), ("sukut", 1), ("nakz", 2),
+    )
+
+    @property
+    def kulli_kubit(self) -> int:
+        return sum(n for _, n in self.kulli_alanlar)
+
+    def kubit_sayisi(self, n_satir: int) -> int:
+        return n_satir * (self.satir_kubiti + self.yerel_kubit) + self.kulli_kubit
+
+
+@dataclass
+class QIz:
+    """Bir kübit akışının icra izi -- nizamnamenin 5. kademesi."""
+    kubit: int = 0
+    satir: int = 0
+    durum_bayt: int = 0
+    mera_kademe: int = 0
+    mera_kesme: float = 0.0
+    entropi_once: float = 0.0
+    entropi_sonra: float = 0.0
+    schmidt: int = 1
+    norm_hatasi: float = 0.0
+    kapi: int = 0
+    takas: int = 0
+    kesme: float = 0.0
+    supurme: int = 0
+    gunluk: List[str] = field(default_factory=list)
+
+    def not_dus(self, meleke: str, mesaj: str) -> None:
+        self.gunluk.append("%-24s %s" % (meleke, mesaj))
+
+
+class QYazmac:
+    """Nefsin bütün hâli: tek kuantum durumu, üniter melekeler."""
+
+    def __init__(self, n_satir: int, ayar: Optional[QAyar] = None) -> None:
+        self.ayar = ayar or QAyar()
+        a = self.ayar
+        self.n_satir = int(n_satir)
+        self.oge = a.satir_kubiti + a.yerel_kubit        # satır başına kübit
+        self.n = a.kubit_sayisi(self.n_satir)
+        self.y = Yazmac(self.n, bag=a.bag, tohum=a.tohum, obek=a.obek)
+        self.iz = QIz(kubit=self.n, satir=self.n_satir,
+                      durum_bayt=self.y.bayt)
+        # küllî bloğun alan adresleri (blok başına göre kayma)
+        self.kulli_bas = self.n_satir * self.oge
+        self._alan: Dict[str, Tuple[int, int]] = {}
+        k = 0
+        for ad, kac in a.kulli_alanlar:
+            self._alan[ad] = (self.kulli_bas + k, kac)
+            k += kac
+
+    # -----------------------------------------------------------------
+    #  Adresler
+    # -----------------------------------------------------------------
+    def veri(self, i: int, j: int = 0) -> int:
+        """``i``inci satırın ``j``inci veri kübitinin zincir yeri."""
+        return i * self.oge + j
+
+    def yerel(self, i: int) -> int:
+        """``i``inci satırın yerel hüküm kübitinin zincir yeri."""
+        return i * self.oge + self.ayar.satir_kubiti
+
+    def kulli(self, ad: str, j: int = 0) -> int:
+        """Küllî hüküm bloğundaki ``ad`` alanının ``j``inci kübiti."""
+        bas, kac = self._alan[ad]
+        return bas + (int(j) % kac)
+
+    def yereller(self) -> List[int]:
+        return [self.yerel(i) for i in range(self.n_satir)]
+
+    # -----------------------------------------------------------------
+    #  Kodlama
+    # -----------------------------------------------------------------
+    def kodla(self, E: np.ndarray) -> None:
+        """Ham duyuyu veri kübitlerine kodla -- **kayıpsız intibak** (H14).
+
+        Her satırın ``d_in`` boyutlu vektörü ``satir_kubiti`` kübite
+        indirilir. Kaba sıfırlama yasaktır; onun yerine satır, kübit
+        sayısı kadar **dilime bölünüp** her dilimin ortalaması bir
+        açıya çevrilir ve o açı kübite bir dönme olarak yazılır. Böylece
+        bilgi atılmaz, açıya sarılır; ölçek ``tanh`` ile sınırlanır ki
+        dönme sarmalanıp ayırt edilemez hâle gelmesin.
+        """
+        E = np.asarray(E, float)
+        n, d = E.shape
+        k = self.ayar.satir_kubiti
+        sinir = np.array_split(np.arange(d), k)
+        for i in range(min(n, self.n_satir)):
+            for j, dil in enumerate(sinir):
+                v = float(np.mean(E[i, dil])) if len(dil) else 0.0
+                teta = 0.25 * math.pi * (1.0 + math.tanh(v))
+                self.tek(self.veri(i, j), donme(teta))
+
+    def superpozisyon(self, yalniz_veri: bool = True) -> None:
+        """Hadamard: ``2^N`` taban durumu eşit genlikte.
+
+        ``yalniz_veri`` iken hüküm kübitlerine dokunulmaz: hüküm henüz
+        verilmemiştir, ``|0⟩`` (=Şek, mîzân sıfır) doğru başlangıçtır.
+        Hepsine vurmak, daha hiçbir delil görülmeden bütün hükümleri
+        eşit ihtimalli ilan etmek olurdu.
+        """
+        H = hadamard().astype(np.float64)
+        if not yalniz_veri:
+            self.y.tek_kapi(H.astype(self.y.tip))
+            self.iz.kapi += self.n
+            return
+        for i in range(self.n_satir):
+            for j in range(self.ayar.satir_kubiti):
+                self.tek(self.veri(i, j), H)
+
+    def mera(self, kademe: Optional[int] = None,
+             teta: Optional[np.ndarray] = None) -> None:
+        """MERA: dolanıklık çözücü ``U`` + izometri ``W`` (kütük H24).
+
+        Dolaşıklığı üreten budur; süperpozisyon tek başına dolaşıklık
+        vermez ve bu ölçülür (``entropi_once`` → ``entropi_sonra``).
+        """
+        a = self.ayar
+        self.iz.entropi_once = float(self.y.dolasiklik_entropisi()["entropi"])
+        kad = a.mera_kademe if kademe is None else int(kademe)
+        izler = self.y.mera_kur(kademe=kad, teta=teta)
+        self.iz.mera_kademe = len(izler)
+        self.iz.mera_kesme += float(sum(k.kesme_hatasi for k in izler))
+        e = self.y.dolasiklik_entropisi()
+        self.iz.entropi_sonra = float(e["entropi"])
+        self.iz.schmidt = int(e["schmidt"])
+
+    # -----------------------------------------------------------------
+    #  Üniter kapılar
+    # -----------------------------------------------------------------
+    def tek(self, i: int, G: np.ndarray) -> None:
+        self.y.tek_kapi_yuva(i, G)
+        self.iz.kapi += 1
+
+    def cift(self, i: int, G: np.ndarray) -> None:
+        """Komşu ``(i, i+1)`` çiftine kapı."""
+        self.iz.kesme += self.y.cift_kapi_yuva(i, G)
+        self.iz.kapi += 1
+
+    def uzak_cift(self, i: int, j: int, G: np.ndarray) -> None:
+        """Uzak ``(i, j)`` çiftine kapı -- takas ağıyla, sonra iade.
+
+        Tek bir uzak kapı için kullanılır. Çok sayıda uzak kapı varsa
+        ``supur`` kullanılmalıdır: o, hepsini tek geçişte halleder.
+        """
+        i, j = int(i), int(j)
+        if i == j:
+            raise ValueError("uzak çift için i ≠ j olmalı")
+        if i > j:
+            i, j = j, i
+        yer = j
+        while yer > i + 1:
+            self.iz.kesme += self.y.takas(yer - 1)
+            self.iz.takas += 1
+            yer -= 1
+        self.cift(i, G)
+        while yer < j:
+            self.iz.kesme += self.y.takas(yer)
+            self.iz.takas += 1
+            yer += 1
+
+    # -----------------------------------------------------------------
+    #  MPO ile toplama -- kübitler HİÇ oynamaz
+    # -----------------------------------------------------------------
+    def mpo_topla(self, alan: str, acilar: Sequence[float],
+                  duraklar: Optional[Sequence[int]] = None,
+                  j: int = 0) -> float:
+        """Bütün durakların hükmünü küllî alana **tek operatörle** akıt.
+
+        Uygulanan üniter::
+
+            U = Π_i exp(θ_i · n_i ⊗ Y_küllî) = exp((Σ_i θ_i n_i) ⊗ Y)
+
+        ``n_i = |1⟩⟨1|_i`` sayı işlemcisidir; hepsi birbiriyle sıra
+        değiştirir (aynı tabanda köşegen), dolayısıyla çarpım tam olarak
+        üstele eşittir -- hiçbir Trotter hatası yoktur.
+
+        **MPO bağı yalnız 2'dir** ve sebebi cebridir: küllî kübite
+        uygulanan dönme ``R(φ) = cos φ·I + sin φ·J`` iki boyutlu bir
+        cebirde yaşar (``J² = −I``), ve ``R(Σφ_i) = Π R(φ_i)``. Yani
+        zincir boyunca taşınması gereken şey sayaç değil, o iki boyutlu
+        cebir elemanıdır. Sayaç taşınsaydı bağ ``N+1`` olurdu.
+
+        Takas ağıyla aynı neticeyi verir; farkı, hiçbir kübitin yer
+        değiştirmemesi ve dolayısıyla dolaşıklığın sürüklenmemesidir.
+        """
+        dur = self.yereller() if duraklar is None else list(duraklar)
+        acilar = list(acilar)
+        if len(acilar) != len(dur):
+            acilar = list(np.resize(np.asarray(acilar, float), len(dur)))
+        hedef = self.kulli(alan, j)
+        if any(d >= hedef for d in dur):
+            raise ValueError("MPO toplaması duraklar hedefin solunda iken kurulur")
+
+        W: Dict[int, np.ndarray] = {}
+        for d, teta in zip(dur, acilar):
+            # n_i = 0 → cebirde birim; n_i = 1 → R(θ) elemanı
+            Wd = np.zeros((2, 2, 2, 2))
+            Wd[0, 0, 0, 0] = 1.0                  # |0⟩⟨0| ⊗ birim
+            Wd[1, 0, 0, 1] = 1.0
+            c, s = math.cos(teta), math.sin(teta)
+            # |1⟩⟨1| ⊗ R(θ):  (c,s) ile cebirde çarp
+            Wd[0, 1, 1, 0] = c
+            Wd[0, 1, 1, 1] = s
+            Wd[1, 1, 1, 0] = -s
+            Wd[1, 1, 1, 1] = c
+            W[d] = Wd
+        # küllî kübitte biriken cebir elemanı fiilen uygulanır
+        Wh = np.zeros((2, 2, 2, 2))
+        Wh[0, :, :, 0] = np.eye(2)                       # bileşen I
+        Wh[1, :, :, 0] = np.array([[0.0, -1.0], [1.0, 0.0]])   # bileşen J
+        W[hedef] = Wh
+
+        kesme = self.y.mpo_uygula(W, D=2, bas=min(dur), son=hedef + 1)
+        self.iz.kesme += float(kesme)
+        self.iz.kapi += len(dur) + 1
+        self.iz.supurme += 1
+        return float(kesme)
+
+    def supur(self, alan: str, kapi: Callable[[int, int], Optional[np.ndarray]],
+              duraklar: Optional[Sequence[int]] = None) -> Dict[str, float]:
+        """Küllî hüküm alanını zincirde **tek** yürüt, geçerken kapıları vur.
+
+        ``kapi(durak, blok_yeri) -> 4×4 | None``. Blok yerine iade edilir
+        (``geri_gotur=True``): iade edilmezse yerellik gider ve takas,
+        geçtiği kesitlerde dolaşıklığı sürükleyip ``χ``yi zorlar.
+        """
+        bas, kac = self._alan[alan]
+        dur = self.yereller() if duraklar is None else list(duraklar)
+        r = self.y.supurme(bas, kac, dur, kapi, geri_gotur=True)
+        self.iz.takas += int(r["takas"])
+        self.iz.kapi += int(r["kapı"])
+        self.iz.kesme += float(r["kesme"])
+        self.iz.supurme += 1
+        return r
+
+    # -----------------------------------------------------------------
+    #  Hüküm kapıları -- hepsi ÜNİTER, hiçbiri okumaz
+    # -----------------------------------------------------------------
+    def hukum_cevir(self, alan: str, teta: float, j: int = 0) -> None:
+        """Küllî hüküm alanının bir kübitini ``θ`` kadar çevir."""
+        self.tek(self.kulli(alan, j), donme(teta))
+
+    def hukum_bagla(self, alan: str, kaynak: int, teta: float,
+                    j: int = 0) -> None:
+        """Bir veri/yerel kübitini küllî hüküm kübitine **dolaştır**.
+
+        Kontrollü dönme: kaynak ``|1⟩`` iken hüküm ``θ`` kadar çevrilir.
+        Hükmün sayısı hiçbir yerde çıkmaz; hüküm delille dolaşır.
+        """
+        self.uzak_cift(kaynak, self.kulli(alan, j), kontrollu_donme(teta))
+
+    # -----------------------------------------------------------------
+    #  Ölçüm -- yalnız en sonda, ZAYIF (kütük H31)
+    # -----------------------------------------------------------------
+    def povm(self, yuvalar: Sequence[int]) -> np.ndarray:
+        """``ρ_i = Tr_çevre|Ψ⟩⟨Ψ|``den Bloch benzeri iki reel sayı.
+
+        Sert (Von Neumann) ölçüm yapılmaz: durum çökertilmez.
+        Dönen ``(k, 2)``: ``z = ρ₀₀−ρ₁₁`` (nüfus farkı), ``x = 2ρ₀₁``
+        (uyum).
+        """
+        R = self.y.yuva_yogunluklari(list(yuvalar))
+        return np.stack([R[:, 0, 0] - R[:, 1, 1], 2.0 * R[:, 0, 1]], axis=1)
+
+    def makam_dagilimi(self) -> np.ndarray:
+        """Makamın dört taban durumu üzerindeki dağılımı -- çöküşsüz.
+
+        İki makam kübitinin yoğunluklarından çarpım dağılımı okunur:
+        ``P(Şek), P(Zan), P(Yakîn), P(Vehim)``. Bu bir POVM'dir
+        (``Σ E_x = I``); dalga diri kalır.
+        """
+        R = self.y.yuva_yogunluklari([self.kulli("makam", 0),
+                                      self.kulli("makam", 1)])
+        p0 = float(np.clip(R[0, 0, 0], 0.0, 1.0))
+        p1 = float(np.clip(R[1, 0, 0], 0.0, 1.0))
+        P = np.array([p0 * p1, p0 * (1 - p1), (1 - p0) * p1,
+                      (1 - p0) * (1 - p1)])
+        t = float(P.sum())
+        return P / t if t > 1e-12 else np.full(4, 0.25)
+
+    def alan_degeri(self, ad: str) -> float:
+        """Bir küllî hüküm alanının ``[0,1]`` değeri -- zayıf okuma.
+
+        Alanın kübitlerinin ``ρ₁₁`` nüfuslarının ortalamasıdır; yani
+        "bu hüküm ne kadar uyanmış". Yalnız RAPOR ve nihaî beyan için
+        çağrılır; akış içinde hiçbir meleke bunu okumaz.
+        """
+        bas, kac = self._alan[ad]
+        R = self.y.yuva_yogunluklari(list(range(bas, bas + kac)))
+        return float(np.mean(R[:, 1, 1]))
+
+    def olcumler(self) -> Dict[str, float]:
+        """Bütün küllî hükümlerin zayıf okuması + dolaşıklık."""
+        d = {ad: self.alan_degeri(ad) for ad, _ in self.ayar.kulli_alanlar}
+        e = self.y.dolasiklik_entropisi()
+        d["entropi"] = float(e["entropi"])
+        d["schmidt"] = float(e["schmidt"])
+        d["norm_hatası"] = float(self.y.norm_hatasi(ornek=32))
+        P = self.makam_dagilimi()
+        for ad, p in zip(MAKAM_ADLARI, P):
+            d["P_" + ad] = float(p)
+        return d

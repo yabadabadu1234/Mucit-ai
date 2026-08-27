@@ -158,9 +158,27 @@ def as_gek_adimi(f: Callable[[np.ndarray], float], x0: np.ndarray,
     ag = np.stack(np.meshgrid(*eks, indexing="ij"), -1).reshape(-1, r)
     V = np.asarray(vekil(ag), float).reshape([izgara] * r)
 
-    if hedef_ceza is not None:                # hedef bilgisi sızdırma
-        C = np.array([hedef_ceza(x0 + W1 @ u) for u in ag]).reshape(V.shape)
-        V = V + lam_hedef * C
+    # --- HEDEF BİLGİSİ SIZDIRMA (kütük H28)
+    # ``V_toplam = V_GEK + λ‖𝒢(u) − y_hedef‖²``. Minimumun NEREDE
+    # olduğunu bilmesek de orada hangi şartın sağlanacağını biliriz;
+    # o şart potansiyele doğrudan konur.
+    #
+    # Cezayı ızgaranın her düğümünde hesaplamak, ``izgara^r`` tam ileri
+    # geçiş demektir (r=2, izgara=20 → 400 geçiş, çevrim başına
+    # dakikalar). Bunun yerine ceza da AYNI ``n_nokta`` örnekte ölçülüp
+    # kendi GEK yüzeyine oturtulur ve ızgarada vekilden okunur. Böylece
+    # sızdırma fiilen olur, maliyeti ise ``n_nokta`` kadardır.
+    hedef_bilgisi = 0.0
+    if hedef_ceza is not None:
+        c = np.array([float(hedef_ceza(x0 + W1 @ u)) for u in Ur])
+        ceza_vekili = gek_uydur(Ur, c, nystrom=min(16, n_nokta // 2))
+        C = np.asarray(ceza_vekili(ag), float).reshape(V.shape)
+        # İki yüzey aynı mertebeye getirilir; aksi hâlde biri ötekini
+        # ezer ve sızdırma ya hiç iş görmez ya yüzeyi tamamen ele geçirir.
+        Vn = (V - V.min()) / (V.max() - V.min() + 1e-12)
+        Cn = (C - C.min()) / (C.max() - C.min() + 1e-12)
+        V = Vn + lam_hedef * Cn
+        hedef_bilgisi = float(np.mean(c))
 
     V = (V - V.min()) / (V.max() - V.min() + 1e-12) * 30.0
     tepe, _ = dalga_yayilimi(V)
@@ -169,7 +187,9 @@ def as_gek_adimi(f: Callable[[np.ndarray], float], x0: np.ndarray,
 
     return x_yeni, {"r": float(r),
                     "özdeğer_oranı": float(ozdeger[0] / (ozdeger.sum() + 1e-12)),
-                    "vekil_min": float(V.min()), "vekil_max": float(V.max())}
+                    "vekil_min": float(V.min()), "vekil_max": float(V.max()),
+                    "hedef_sızdırıldı": float(hedef_ceza is not None),
+                    "hedef_cezası": hedef_bilgisi}
 
 
 # =====================================================================

@@ -350,6 +350,101 @@ class Yazmac:
                 "kesme": float(kesme), "blok_yeri": float(yer)}
 
     # -----------------------------------------------------------------
+    #  MPO: kübitleri oynatmadan bütün zincire aynı anda etki et
+    # -----------------------------------------------------------------
+    def mpo_uygula(self, W: Dict[int, np.ndarray], D: int,
+                   bas: int = 0, son: Optional[int] = None) -> float:
+        """Matris Çarpım Operatörünü duruma uygula ve ``χ``ye geri sıkıştır.
+
+        **Takas ağının kapanan yolu.** Uzak iki kübite kapı vurmak için
+        onları yan yana getirmek, geçilen her kesitte hakiki dolaşıklığı
+        sürükler; ölçüldü ve ``χ`` ile KAPANMADI (χ=8'de kapı başına
+        4.0e-02 kesme, χ=128'de hâlâ 4.4e-02). Sebep ``χ``nin darlığı
+        değil, MPS'in bir boyutlu oluşudur (kütük H26).
+
+        Çare, veriyi taşımak yerine **operatörü yürütmektir**. MPO,
+        zincirin her yuvasında bir ``(D, 2, 2, D)`` tensörüdür ve bütün
+        zincire aynı anda etki eder. Hiçbir kübit yer değiştirmez,
+        dolayısıyla hiçbir dolaşıklık sürüklenmez. Maliyet ``O(N χ³ D³)``,
+        yani yuva sayısında **doğrusal**.
+
+        ``W`` sözlüğü yalnız kimliğe eşit OLMAYAN yuvaları taşır; kalan
+        yuvalarda kimlik (``δ_ab δ_{w_l w_r}``) varsayılır -- yani seyrek
+        bir operatör bedava taşınır.
+
+        Uygulama iki adımdır: (1) birleştirme -- bağ ``χ·D``ye çıkar;
+        (2) sıkıştırma -- sağdan sola QR, soldan sağa SVD ile ``χ``ye
+        iner. Atılan ağırlık döndürülür; gizlenmez.
+        """
+        son = self.n if son is None else int(son)
+        bas = max(0, int(bas))
+        if son <= bas:
+            return 0.0
+        X = self.bag
+        kimlik = np.zeros((D, 2, 2, D))
+        for w in range(D):
+            kimlik[w, 0, 0, w] = 1.0
+            kimlik[w, 1, 1, w] = 1.0
+
+        # --- 1) birleştirme: A'[k] = Σ_j W[k][wl,i,j,wr] A[k][a,j,b]
+        T: List[np.ndarray] = []
+        for k in range(bas, son):
+            Ak = self.A[k].astype(np.float64)               # (X, 2, X)
+            Wk = W.get(k, kimlik)
+            # (wl, i, j, wr) × (a, j, b) → (wl, a, i, wr, b)
+            M = np.einsum("pijq,ajb->paiqb", Wk, Ak, optimize=True)
+            T.append(M.reshape(D * X, 2, D * X))
+        # sınır: MPO bağının solu 0. bileşenden başlar, sağı 0'da biter
+        T[0] = T[0][:X]                                     # wl = 0
+        T[-1] = T[-1][:, :, :X]                             # wr = 0
+
+        # --- 2) sıkıştırma: sağdan sola QR (kanonikleştir), sonra SVD
+        atilan = 0.0
+        for k in range(len(T) - 1, 0, -1):
+            t = T[k]
+            dl, _, dr = t.shape
+            M = t.reshape(dl, 2 * dr)
+            # ``M = Rᵀ Qᵀ``: sağ tensör ``Qᵀ`` olur, ``Rᵀ`` sola geçer.
+            # ``einsum("aib,cb->aic", …, Rᵀ)`` yazılıp ölçüldü ve **kaldı**:
+            # o, ``Rᵀ``nin ikinci indisiyle sözleşerek fiilen ``R`` ile
+            # çarpar; MPO'nun normu 1'den 0.97'ye düşüyor, netice takas
+            # ağıyla %25 ayrışıyordu. Doğrusu ``b`` indisini ``Rᵀ``nin
+            # BİRİNCİ indisiyle sözleştirmektir.
+            Q, R = np.linalg.qr(M.T)                        # (2dr, r), (r, dl)
+            r = Q.shape[1]
+            T[k] = Q.T.reshape(r, 2, dr)
+            T[k - 1] = np.einsum("aib,bc->aic", T[k - 1], R.T, optimize=True)
+        for k in range(len(T) - 1):
+            t = T[k]
+            dl, _, dr = t.shape
+            U, s, Vt = np.linalg.svd(t.reshape(dl * 2, dr),
+                                     full_matrices=False)
+            r = min(X, len(s))
+            top = float(np.sum(s ** 2)) + 1e-30
+            atilan += float(np.sum(s[r:] ** 2)) / top
+            T[k] = U[:, :r].reshape(dl, 2, r)
+            T[k + 1] = np.einsum("a,ab,bic->aic", s[:r], Vt[:r, :],
+                                 T[k + 1], optimize=True)
+        # son yuva da ``χ``ye sığmalı
+        if T[-1].shape[0] > X:
+            t = T[-1]
+            U, s, Vt = np.linalg.svd(t.reshape(t.shape[0], 2 * t.shape[2]),
+                                     full_matrices=False)
+            r = min(X, len(s))
+            top = float(np.sum(s ** 2)) + 1e-30
+            atilan += float(np.sum(s[r:] ** 2)) / top
+            T[-1] = (np.diag(s[:r]) @ Vt[:r]).reshape(r, 2, t.shape[2])
+
+        # --- 3) geri yaz
+        for i, k in enumerate(range(bas, son)):
+            yeni = np.zeros((X, 2, X))
+            t = T[i]
+            a, _, b = t.shape
+            yeni[:min(a, X), :, :min(b, X)] = t[:X, :, :X]
+            self.A[k] = yeni.astype(self.tip)
+        return atilan
+
+    # -----------------------------------------------------------------
     #  MERA
     # -----------------------------------------------------------------
     def mera_kur(self, kademe: Optional[int] = None,

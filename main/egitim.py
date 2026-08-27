@@ -80,22 +80,66 @@ def uygunluk(model: Dimag, veri: Sequence[Tuple[List[int], int]],
 
 
 # =====================================================================
+def hedef_cezasi(model: Dimag, veri: Sequence[Tuple[List[int], int]],
+                 p: np.ndarray) -> float:
+    """``‖𝒢(u) − y_hedef‖²`` -- hedef bilgisinin potansiyele sızdırılması.
+
+    Minimumun nerede olduğunu bilmiyoruz; fakat orada ne olacağını
+    biliyoruz: doğru belirtecin ihtimali 1, ötekilerinki 0. Bu şart
+    ``uygunluk``taki ``−log P``den farklıdır ve ondan daha keskindir --
+    ``−log P`` yalnız doğru belirtece bakar, bu ise **bütün dağılımın**
+    hedefe olan uzaklığını cezalandırır (yanlışların hepsi bastırılır).
+    İkisi ayrı yüzeylerdir ve ``as_gek_adimi`` içinde ayrı ayrı vekile
+    oturtulup öyle toplanır (kütük H28).
+    """
+    if not len(veri):
+        return 0.0
+    top = 0.0
+    for baglam, hedef in veri:
+        P, _ = model.ileri(baglam, p)
+        y = np.zeros_like(P)
+        y[hedef % len(P)] = 1.0
+        top += float(np.sum((P - y) ** 2))
+    return top / len(veri)
+
+
 def egit(model: Dimag, veri: Sequence[Tuple[List[int], int]],
          cevrim: int = 6, r: int = 2, n_ornek: int = 20,
-         ayrik: bool = True, tohum: int = 0,
+         ayrik: bool = True, tohum: int = 0, lam_hedef: float = 0.5,
+         gama_azami: float = 0.25,
          gunluk: Optional[List[str]] = None) -> Dict[str, object]:
-    """Çift motorlu eğitim çevrimi."""
+    """Çift motorlu eğitim çevrimi -- hedef güdümlü ve tünelleme vanalı."""
     p = model.p.copy()
     V0 = uygunluk(model, veri, p)
     kayit: List[float] = [V0]
     t0 = time.perf_counter()
     D = tuple(model.ayar.dinamik)
+    gama = 0.0
+    tunel_kaydi: List[float] = []
 
     for c in range(cevrim):
-        # --- sürekli motor: AS → GEK → dalga
-        p_yeni, tani = as_gek_adimi(lambda q: uygunluk(model, veri, q), p,
-                                    yaricap=0.5, r=r, izgara=20,
-                                    n_ornek=n_ornek, tohum=tohum + c)
+        # --- TÜNELLEME VANASI (kütük H29): başıboş değil, teşhise kilitli.
+        # Metnin melekeleri burada yoktur; fakat vananın açılma şartı
+        # aynen vardır: (i) TIKANMA teşhis edilecek (kohomolojik
+        # tıkanıklık yüksek), (ii) ŞEK olacak (potansiyel bir evvelki
+        # çevrimde inmemiş, yani sıkışılmış). İkisi birden olmadan Γ
+        # açılmaz; açıldıktan sonra ilerleme olursa **mühürlenir**.
+        _, iz_v = model.ileri(veri[0][0], p)
+        tik_ort = float(np.mean(list(iz_v.tikaniklik.values()) or [0.0]))
+        sikisti = c > 0 and kayit[-1] >= kayit[-2] - 1e-9
+        if sikisti and tik_ort > 0.5:
+            gama = min(gama_azami, gama + 0.1)      # Merak Γ'yı yükseltir
+        elif not sikisti:
+            gama = 0.0                              # Tahkik mühürler
+        model.ayar.gama = gama
+        tunel_kaydi.append(gama)
+
+        # --- sürekli motor: AS → GEK → hedef sızdırma → dalga
+        p_yeni, tani = as_gek_adimi(
+            lambda q: uygunluk(model, veri, q), p,
+            yaricap=0.5, r=r, izgara=20, n_ornek=n_ornek,
+            hedef_ceza=lambda q: hedef_cezasi(model, veri[:4], q),
+            lam_hedef=lam_hedef, tohum=tohum + c)
         V_yeni = uygunluk(model, veri, p_yeni)
         if V_yeni < kayit[-1]:
             p, V = p_yeni, V_yeni
@@ -131,7 +175,8 @@ def egit(model: Dimag, veri: Sequence[Tuple[List[int], int]],
     model.p = p
     return {"V_ilk": V0, "V_son": kayit[-1], "seyir": kayit,
             "süre_sn": time.perf_counter() - t0, "dinamik": D,
-            "parametre": len(model)}
+            "parametre": len(model), "tünel": tunel_kaydi,
+            "tünel_açıldı": float(sum(1 for g in tunel_kaydi if g > 0.0))}
 
 
 # =====================================================================
