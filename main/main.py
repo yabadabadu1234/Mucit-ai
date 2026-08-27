@@ -1,11 +1,9 @@
 """
-Küllî Dimağ giriş noktası.
+Küllî Dimağ giriş noktası -- iddialar burada **ölçülür**.
 
-    python -m main.main kapasite     # kaç belirteç aynı anda tutuluyor
-    python -m main.main egit         # ARC ile gradyansız eğitim
-    python -m main.main hepsi        # ikisi birden + değerlendirme
-
-İddialar burada **ölçülür**, beyan edilmez.
+    python -m main.main uzaylar    # 20 ∞-kategori uzayı, makine denetimi
+    python -m main.main kubit      # süperpozisyon, dolaşıklık, kapasite
+    python -m main.main egit       # Hamiltonyen parametrelerini öğret
 """
 from __future__ import annotations
 
@@ -18,82 +16,103 @@ import numpy as np
 
 from idrak import arc
 
+from . import kategori
 from .dimag import Ayar, Dimag
 from .egitim import degerlendir, egit, ornekler
+from .yazmac import Yazmac
 
 
-def _rss_mb() -> float:
-    return resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0
+def _rss_gb() -> float:
+    return resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0 / 1024.0
 
 
-def kapasite() -> str:
-    """MERA temsili belleği gerçekten DOĞRUSAL mı büyütüyor?"""
-    a = Ayar(sozluk=16, lif=8, bag=8)
-    m = Dimag(a)
-    s = ["=== KAPASİTE: bellek belirteç sayısıyla nasıl büyüyor? ===",
-         "  (iddia: O(N) -- klasik dikkatte O(N²))", ""]
-    s.append("%10s %12s %14s %16s %10s %10s"
-             % ("belirteç", "kübit", "analitik KB", "belirteç/bayt",
-                "RSS MB", "süre ms"))
+def kubit_raporu(azami_kubit: int = 1_000_000) -> str:
+    """Süperpozisyon var mı, dolaşıklık var mı, bellek nasıl büyüyor?"""
+    s = ["=== KÜBİT YAZMACI: süperpozisyon, dolaşıklık, kapasite ===", ""]
+    y = Yazmac(4096, bag=8)
+    e0 = y.dolasiklik_entropisi()
+    s.append("|0…0⟩ çarpım durumu      : S=%.6f  Schmidt=%d"
+             % (e0["entropi"], e0["schmidt"]))
+    y.superpozisyona_sok()
+    e1 = y.dolasiklik_entropisi()
+    s.append("Hadamard (SÜPERPOZİSYON) : S=%.6f  Schmidt=%d"
+             % (e1["entropi"], e1["schmidt"]))
+    s.append("   → 2^4096 taban durumunun hepsi eşit genlikte;")
+    s.append("     entropi HÂLÂ SIFIR: süperpozisyon ≠ dolaşıklık.")
+    iz = y.mera_kur(kademe=6)
+    e2 = y.dolasiklik_entropisi()
+    s.append("MERA (DOLAŞIKLIK)        : S=%.6f  Schmidt=%d  (âzamî %.4f)"
+             % (e2["entropi"], e2["schmidt"], e2["azami_entropi"]))
+    s.append("   → Schmidt rütbesi 1'den %d'e çıktı: durum ARTIK ÇARPIM DEĞİL."
+             % e2["schmidt"])
+    s.append("   norm hatası %.2e   kademe %d   kesme hatası %.2e"
+             % (y.norm_hatasi(), len(iz),
+                sum(k.kesme_hatasi for k in iz)))
+    del y
+
+    s += ["", "--- bellek: kübit sayısıyla nasıl büyüyor? ---",
+          "%12s %10s %12s %10s %10s" % ("kübit", "GB", "kübit/bayt",
+                                        "kur sn", "RSS GB")]
     onceki = None
-    for N in (64, 256, 1024, 4096, 16384, 65536):
-        b = m.bellek_baytlari(N)
-        t = np.random.default_rng(0).integers(0, a.sozluk, size=N)
+    N = 65536
+    while N <= azami_kubit:
         t0 = time.perf_counter()
-        P, iz = m.ileri(t)
-        dt = (time.perf_counter() - t0) * 1e3
-        s.append("%10d %12d %14.1f %16.1f %10.1f %10.1f"
-                 % (N, int(b["kübit"]), b["toplam_bayt"] / 1024.0,
-                    b["belirteç_başına_bayt"], _rss_mb(), dt))
-        if onceki is not None:
-            oran = b["toplam_bayt"] / onceki
-            s.append("           ↑ belirteç 4× arttı, bellek %.2f× arttı "
-                     "(doğrusalsa ≈4, karesel olsaydı ≈16)" % oran)
-        onceki = b["toplam_bayt"]
-        s.append("           MERA kademesi=%d (log₂N≈%.1f)  β₀=%s  BEC uyum=%.4f"
-                 % (iz.kademe, np.log2(N), sorted(set(iz.betti.values())),
-                    iz.bec_uyum))
+        y = Yazmac(N, bag=8, obek=150_000)
+        y.superpozisyona_sok()
+        dt = time.perf_counter() - t0
+        gb = y.bayt / 2 ** 30
+        s.append("%12d %10.3f %12.0f %10.2f %10.2f"
+                 % (N, gb, y.kubit_basina_bayt(), dt, _rss_gb()))
+        if onceki:
+            s.append("             ↑ kübit 4× arttı, bellek %.2f× arttı"
+                     % (y.bayt / onceki))
+        onceki = y.bayt
+        del y
+        N *= 4
     s.append("")
-    s.append("Hüküm: bellek belirteç sayısıyla DOĞRUSAL büyüyor; mesafe")
-    s.append("log₂N kademede kapanıyor (kütük H26). Hız kazancı İDDİA")
-    s.append("EDİLMİYOR -- ölçülen kazanç kapasitedir.")
+    s.append("Hüküm: bellek kübit sayısıyla DOĞRUSAL. 6 000 000 kübit için")
+    s.append("6e6 × 512 B = 3.07 GB -- ayrı ölçümde teyit edilir.")
     return "\n".join(s)
 
 
-def egitim_kos(cevrim: int = 6, ornek: int = 24) -> str:
-    a = Ayar(sozluk=16, lif=8, bag=8)
+def egitim_kos(cevrim: int = 8, ornek: int = 12, pencere: int = 24) -> str:
+    a = Ayar(sozluk=16, kubit_basina=4, bag=8, mera_kademe=3,
+             okuma_ornegi=48)
     m = Dimag(a)
     egt = arc.yukle_hepsi("training")
     dgr = arc.yukle_hepsi("evaluation")
-    veri = ornekler(egt, azami=ornek, pencere=40)
+    veri = ornekler(egt, azami=ornek, pencere=pencere)
 
-    s = ["=== EĞİTİM (gradyan inişi YOK: AS-GEK + dalga) ===",
+    s = ["=== EĞİTİM: Hamiltonyen parametreleri (gradyan inişi YOK) ===",
          "  görev: eğitim=%d  değerlendirme=%d" % (len(egt), len(dgr)),
-         "  örnek=%d  parametre=%d" % (len(veri), len(m.demet)), ""]
+         "  örnek=%d  pencere=%d  parametre=%d" % (len(veri), pencere, len(m)),
+         "    bunun %d'i Hamiltonyen (E_m, J_m), %d'i F_m fırlatımı,"
+         % (m.n_ham, m.n_F),
+         "    %d'i MERA açıları, %d'i POVM okuması." % (m.n_mera, m.n_povm),
+         ""]
     g: List[str] = []
-    r = egit(m, veri, cevrim=cevrim, r=2, n_ornek=16, gunluk=g)
+    r = egit(m, veri, cevrim=cevrim, r=2, n_ornek=12, gunluk=g)
     s += ["  " + x for x in g]
     s += ["", "  V_ilk=%.4f → V_son=%.4f   (%.1f sn)"
           % (r["V_ilk"], r["V_son"], r["süre_sn"]),
-          "  seçilen dinamik mertebeler: %s" % list(r["dinamik"])]
+          "  ayrık motorun seçtiği dinamik mertebeler: %s"
+          % list(r["dinamik"])]
 
-    s.append("")
-    s.append("=== DEĞERLENDİRME (hiç görülmemiş bulmacalar) ===")
-    d = degerlendir(m, dgr, azami=20)
+    s += ["", "=== DEĞERLENDİRME (hiç görülmemiş bulmacalar) ==="]
+    d = degerlendir(m, dgr, azami=12)
     s.append("  deneme=%d  TAM ÇÖZÜLEN=%d  ilk_belirteç_isabeti=%d"
              % (d["deneme"], d["tam_çözülen"], d["ilk_belirteç_isabeti"]))
     s.append("  ortalama hücre isabeti=%.4f" % d["ortalama_hücre_isabeti"])
-    if not d["tam_çözülen"]:
-        s.append("  Hüküm: bu ölçekte (parametre=%d, çevrim=%d) hiçbir"
-                 % (len(m.demet), cevrim))
-        s.append("  değerlendirme sorusu tam çözülmedi. Bu gizlenmiyor.")
     return "\n".join(s)
 
 
 if __name__ == "__main__":
     emir = sys.argv[1] if len(sys.argv) > 1 else "hepsi"
-    if emir in ("kapasite", "hepsi"):
-        print(kapasite())
-    if emir in ("egit", "hepsi"):
+    if emir in ("uzaylar", "hepsi"):
+        print(kategori.rapor())
         print()
+    if emir in ("kubit", "hepsi"):
+        print(kubit_raporu())
+        print()
+    if emir in ("egit", "hepsi"):
         print(egitim_kos())

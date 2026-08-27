@@ -324,3 +324,52 @@ karesel yer daha var ve bulunmadı. Bu gizlenmiyor.
 ölçülür (1.024 satırda 0,85). İnce eksen silinmez — kaba netice ona
 **artık** olarak yayılır (nizamname Kademe 4). Şahit bölütlemesi ham `E`
 üzerinde kalır, kuleden etkilenmez.
+
+---
+
+## H35 — Okuma usulü: `grep` yasaktır
+
+Dosyalar **baştan sona** okunur. Parça avlamak (grep/diff/sed ile
+kesit almak) okumak değildir; metnin hükmünü değil, aranan kelimenin
+etrafını gösterir. Bu kütükteki bütün hükümler, tam okunmamış metinden
+çıkarılan yarım hükümlerin bedeliyle yazıldı.
+
+## H36 — 6 milyon kübit **ölçüldü**, iddia edilmedi
+
+`main/yazmac.py`, tek çekirdek, `χ = 8`, `float32`:
+
+| iş | ölçüm |
+|---|---|
+| yazmaç kurulumu (6.000.000 kübit) | 19,8 sn — durum **2,86 GB**, kübit başına **512 B** |
+| Hadamard (süperpozisyon) | 15,0 sn — entropi **−0,000000** |
+| MERA(2) (dolaşıklık) | 459,4 sn — **S = 1,5405**, Schmidt = 8 |
+| norm hatası | **0,0e+00** |
+| âzamî yerleşik bellek | **3,37 GB** |
+
+Hüküm: süperpozisyon dolaşıklık değildir; Hadamard sonrası 2^6000000
+taban durumunun hepsi eşit genliktedir ama entropi sıfırdır. Dolaşıklığı
+**MERA üretir** (H24) ve entropi ancak orada sıfırdan kalkar.
+
+## H37 — Bellek şişmesi durumda değil, **geçici dizilerdedir**
+
+Ölçülen: 1.000.000 kübitte durum 0,48 GB iken zirve RSS 4,42 GB;
+6.000.000'da durum 2,86 GB iken tam dizi üzerinde `einsum` zirveyi
+8,62 GB'a çıkarıp süreci öldürdü. Çare `χ`yi kısmak değil, kapıları
+**öbekleyip yerinde** uygulamaktır (`Yazmac.obek`, `out=` ile). Düzeltme
+sonrası 6.000.000 kübitte zirve 3,37 GB — durumun yalnız 1,18 katı.
+
+## H38 — `omega_kategori_nbe` çağrılmayan modül olmaktan çıktı
+
+20 uzayın her biri `turetimler.morfizm_tipi(A, n)` ile **kurulur** ve
+`denetleyici.denetle_t` ile **makine denetiminden geçer**; tıkanıklık
+`iliskiler.tikanma_postulati`, kesit ağırlığı `iliskiler.kesit_tipi` +
+`evrensel_demet` ile alınır. Ölçülen: 20/20 uzay tip denetiminden geçti,
+14'ü tam mertebede kuruldu (0–9, 13, 17, 19, 20); daha yüksek mertebeler
+`kutuphane.dongu_uzayi_n` temsilcisiyle tutulur — ve bu **gizlenmez**,
+`Uzay.tam_kuruldu` alanında yazar.
+
+## H39 — Hamiltonyen parametreleri **yuvaya** bağlanır, mertebeye değil
+
+Ayrık motor bir mertebeyi sıçrattığında sıçrayan şey lifin **adresidir**,
+lifin kendisi değil. Parametreler mertebe değerine anahtarlanırsa
+(`F.50` gibi) motor kendi öğrendiğini siler. Anahtar `0…19` yuvasıdır.

@@ -20,6 +20,7 @@ import numpy as np
 from idrak import arc
 
 from .dimag import Ayar, Dimag
+from .kategori import uzaylari_kur
 from .optimize import as_gek_adimi, postnikov_adresi, tersine_tavlama
 
 __all__ = ["ornekler", "uygunluk", "egit", "degerlendir"]
@@ -67,8 +68,14 @@ def uygunluk(model: Dimag, veri: Sequence[Tuple[List[int], int]],
     for baglam, hedef in veri:
         P, iz = model.ileri(baglam, p)
         top -= float(np.log(P[hedef % len(P)] + 1e-12))
+        # Topolojik ceza metnin kendi kaidesidir (H23): β₀ > 1 ezber,
+        # tıkanıklık mertebeler arası yırtıktır. İkisi de dalganın
+        # gördüğü potansiyele girer ve ayrık motora sinyal olur.
         ceza += 0.02 * sum(max(b - 1, 0) for b in iz.betti.values())
         ceza += 0.05 * float(np.mean(list(iz.tikaniklik.values()) or [0.0]))
+        # Dolaşıklık ÖDÜLLENDİRİLİR: çarpım durumuna çöken bir yazmaç
+        # süperpozisyonun zenginliğini kaybetmiş demektir.
+        ceza -= 0.05 * float(iz.entropi_sonra)
     return top / len(veri) + ceza / len(veri)
 
 
@@ -78,7 +85,7 @@ def egit(model: Dimag, veri: Sequence[Tuple[List[int], int]],
          ayrik: bool = True, tohum: int = 0,
          gunluk: Optional[List[str]] = None) -> Dict[str, object]:
     """Çift motorlu eğitim çevrimi."""
-    p = model.demet.p.copy()
+    p = model.p.copy()
     V0 = uygunluk(model, veri, p)
     kayit: List[float] = [V0]
     t0 = time.perf_counter()
@@ -104,22 +111,27 @@ def egit(model: Dimag, veri: Sequence[Tuple[List[int], int]],
             aday[int(np.argmax([iz.tikaniklik.get(m, 0.0) for m in aday]))] = adres
 
             def E_ayrik(vek: Tuple[int, ...]) -> float:
+                # Mertebe değişince 20 uzay YENİDEN kurulur ve yeniden
+                # makine denetiminden geçer -- ayrık motorun seçtiği
+                # mertebe, tip denetiminden geçmeyen bir uzay olamaz.
                 model.ayar.dinamik = tuple(vek)
+                model.uzaylar = uzaylari_kur(vek)
                 return uygunluk(model, veri[:4], p)
 
             D_yeni, E_iyi = tersine_tavlama(E_ayrik, aday, adim=12,
                                             tohum=tohum + c)
             model.ayar.dinamik = tuple(D_yeni)
+            model.uzaylar = uzaylari_kur(D_yeni)
             D = tuple(D_yeni)
 
         if gunluk is not None:
             gunluk.append("çevrim %d: V=%.4f  aktif_özdeğer=%.3f  D=%s"
                           % (c, V, tani["özdeğer_oranı"], list(D)[:4]))
 
-    model.demet.p = p
+    model.p = p
     return {"V_ilk": V0, "V_son": kayit[-1], "seyir": kayit,
             "süre_sn": time.perf_counter() - t0, "dinamik": D,
-            "parametre": len(model.demet)}
+            "parametre": len(model)}
 
 
 # =====================================================================
@@ -144,7 +156,7 @@ def degerlendir(model: Dimag, gorevler: Sequence,
         baglam = list(dizi)
         uretilen: List[int] = []
         for _ in range(len(hedef)):
-            P, _ = model.ileri(baglam[-64:])
+            P, _ = model.ileri(baglam[-48:])
             t = int(np.argmax(P))
             uretilen.append(t)
             baglam.append(t)
