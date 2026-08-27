@@ -67,6 +67,11 @@ class Tenakuz(Meleke):
         grad = celiski_gradyani(S, A, delta)
         olcek = 0.02 / max(float(np.max(np.abs(grad))), 1.0)
         d.S = S - olcek * grad
+        # F_tenakuz: sükût eşiğinin (H16) dayandığı serbest enerji.
+        # Çelişki + pürüz + vehim; üçü de metinde sayılan bileşenlerdir.
+        puruz = float(np.sum(np.diff(S, axis=0) ** 2)) / max(n - 1, 1)
+        d.serbest_enerji = float(skor + 0.05 * puruz)
+        d.olcum.koy("tenakuz.serbest_enerji", d.serbest_enerji)
         d.olcum.koy("tenakuz.skor", skor)
         # köşegen ``ReLU`` sonrası dâima 0: ``C_ii ≤ 0``
         d.olcum.koy("tenakuz.köşegen",
@@ -238,7 +243,7 @@ class DenemeYanilma(Meleke):
     """
 
     no, ad = 16, "Deneme-Yanılma"
-    okur, yazar = ("S", "G"), ()
+    okur, yazar = ("S", "G"), ("strateji",)
 
     def uygula(self, d: Durum, p: Parametreler, tur: int = 60) -> None:
         S, G = d.S, d.G
@@ -251,6 +256,14 @@ class DenemeYanilma(Meleke):
         taban = 0.0            # eleştirmenin en sade hâli: kayan ortalama
         for t in range(tur):
             a = s @ teta + sigma * rng.normal(size=ds)
+            # Politika ıraksarsa ``a`` patlar (ölçüldü: ``a@a`` taşıp inf
+            # oluyor, ``θ`` NaN'a düşüyordu). Evvelce bu NaN melekenin
+            # içinde kalıyordu; artık ``strateji`` olarak veri yoluna
+            # çıktığı için bütün akışı zehirler. Hamle normu sınırlanır --
+            # keşif kalır, ıraksama kalkar.
+            n_a = float(np.linalg.norm(a))
+            if n_a > 10.0:
+                a = a * (10.0 / n_a)
             s_yeni = kat_norm(s + 0.3 * a)
             r = kosinus(s_yeni, G) - 0.01 * float(a @ a)
             oduller.append(r)
@@ -269,6 +282,16 @@ class DenemeYanilma(Meleke):
         son = float(np.mean(oduller[-10:]))
         d.olcum.koy("deneme.ilk_ödül", ilk)
         d.olcum.koy("deneme.son_ödül", son)
+        # **Mutasarrıfa strateji operatörü** (kütük H15). Öğrenilen ``θ``
+        # burada ölmez; veri yoluna konur ve 𝒪₂₁ Tefekkür akışı onunla
+        # büker. Evvelce bu meleke 60 tur koşup öğrendiğini çöpe atıyordu.
+        if not np.all(np.isfinite(teta)):
+            teta = p.W("deneme.θ", (ds, ds))     # ıraksadı: başlangıca dön
+            d.olcum.koy("deneme.ıraksadı", 1.0)
+        else:
+            d.olcum.koy("deneme.ıraksadı", 0.0)
+        d.strateji = kat_norm(teta)
+        d.olcum.koy("deneme.strateji_normu", float(np.linalg.norm(d.strateji)))
         d.olcum.koy("deneme.öğrendi", float(son > ilk))
         d.not_dus(self.ad, "ödül %.4f → %.4f" % (ilk, son))
 
@@ -284,7 +307,7 @@ class Ihtimal(Meleke):
     """
 
     no, ad = 17, "İhtimal Hesabı"
-    okur, yazar = ("S", "G"), ()
+    okur, yazar = ("S", "G"), ("sonsal",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S, G = d.S, d.G
@@ -293,6 +316,7 @@ class Ihtimal(Meleke):
         olabilirlik = np.array([np.exp(kosinus(s, G)) for s in S])
         kanit = float(olabilirlik @ onsel)
         sonsal = (olabilirlik * onsel) / max(kanit, 1e-300)
+        d.sonsal = sonsal          # 𝒪₂₅ Teemmül bunu önsel olarak okur
         d.olcum.koy("ihtimal.kanıt", kanit)
         d.olcum.koy("ihtimal.sonsal_toplamı", float(sonsal.sum()))
         d.olcum.koy("ihtimal.sonsal_azami", float(sonsal.max()))
@@ -390,13 +414,14 @@ class Temsil(Meleke):
     """
 
     no, ad = 19, "Temsil"
-    okur, yazar = ("S",), ()
+    okur, yazar = ("S",), ("somut",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
         ds, dh = S.shape[1], d.d_hayal
         W = p.W("temsil.dec", (ds, dh))
         somut = gelu(S @ W)
+        d.somut = somut            # 𝒪₂₇ Tetkik kusuru buna göre ölçer
         geri = somut @ np.linalg.pinv(W)
         d.olcum.koy("temsil.devir_hatası",
                     float(np.linalg.norm(geri - S) / max(np.linalg.norm(S), 1e-12)))
@@ -415,16 +440,18 @@ class Tesbih(Meleke):
     """
 
     no, ad = 20, "Teşbih"
-    okur, yazar = ("S",), ()
+    okur, yazar = ("S",), ("vech",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
         n = len(S)
         if n < 2:
+            d.vech = S[0] if n else np.zeros(S.shape[1])
             return
         A, B = S[0], S[min(1, n - 1)]
         d.olcum.koy("teşbih.ρ", pearson(A, B))
         vech = A * B * p.v("teşbih.ortak", len(A))
+        d.vech = vech              # 𝒪₃₉ Belâgat teşbihi kelama katar
         d.olcum.koy("teşbih.oran",
                     guvenli_bol(float(np.linalg.norm(vech)),
                                 float(np.linalg.norm(A) + np.linalg.norm(B))))
@@ -449,7 +476,7 @@ class Tefekkur(Meleke):
 
     no, ad = 21, "Tefekkür"
     okur, yazar = ("S", "G"), ("S",)
-    ihtiyari = ("mu_mana",)
+    ihtiyari = ("mu_mana", "strateji")
 
     def uygula(self, d: Durum, p: Parametreler, adim: int = 30) -> None:
         S = d.S.copy()
@@ -473,8 +500,16 @@ class Tefekkur(Meleke):
             return 0.5 * float(np.sum((M - G) ** 2)) + lam * celiski_skoru(M, A, 0.0)
 
         ilk = V(S)
+        # **Mutasarrıfa strateji operatörü** (kütük H15): 𝒪₁₆'nın
+        # öğrendiği ``θ`` akışın yönünü büker. Evvelce ``deneme.θ``
+        # meleke içinde doğup orada ölüyordu -- ölçüldü: 𝒪₁₆ düşürülünce
+        # netice hiç değişmiyordu.
+        R = d.strateji if d.strateji is not None else None
+        d.olcum.koy("tefekkür.strateji_var", float(R is not None))
         for _ in range(adim):
             grad = (S - G) + lam * celiski_gradyani(S, A, 0.0) / max(len(S), 1) ** 2
+            if R is not None:
+                grad = grad + 0.25 * (S @ R - S)
             S = S - 0.02 * grad
         d.S = S
         d.olcum.koy("tefekkür.V_ilk", ilk)

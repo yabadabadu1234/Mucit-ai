@@ -52,7 +52,7 @@ class Teemmul(Meleke):
 
     no, ad = 25, "Teemmül"
     okur, yazar = ("S", "H_hayal"), ("M",)
-    ihtiyari = ("Q_sual",)
+    ihtiyari = ("Q_sual", "sonsal")
 
     def uygula(self, d: Durum, p: Parametreler, K: int = 200,
                eps: float = 1e-3) -> None:
@@ -71,7 +71,16 @@ class Teemmul(Meleke):
         Wk = p.W("teemmül.k", (H.shape[1], ds))
         Wv = p.W("teemmül.v", (H.shape[1], ds))
 
-        M = kat_norm(S.copy())
+        # 𝒪₁₇'nin Bayes ardılı, teemmülün hangi satıra ağırlık vereceğini
+        # söyler. Evvelce ``sonsal`` hesaplanıp atılıyordu -- ölçüldü:
+        # 𝒪₁₇ düşürülünce netice hiç değişmiyordu.
+        if d.sonsal is not None and len(d.sonsal) == n:
+            agirlik = np.asarray(d.sonsal, float)[:, None] * n
+            d.olcum.koy("teemmül.sonsal_var", 1.0)
+        else:
+            agirlik = 1.0
+            d.olcum.koy("teemmül.sonsal_var", 0.0)
+        M = kat_norm(S.copy() * agirlik)
         farklar: List[float] = []
         tau_durma = K
         for t in range(1, K + 1):
@@ -114,7 +123,7 @@ class Temkin(Meleke):
     """
 
     no, ad = 26, "Temkin"
-    okur, yazar = ("S", "M"), ()
+    okur, yazar = ("S", "M"), ("S",)
 
     def uygula(self, d: Durum, p: Parametreler, ornek: int = 24) -> None:
         S, M = d.S, d.M
@@ -133,6 +142,12 @@ class Temkin(Meleke):
         d.olcum.koy("temkin.vakar", vakar)
         d.olcum.koy("temkin.sarsılmazlık", en_kotu)
         d.olcum.koy("temkin.tolerans_marjı", temel - en_kotu)
+        # **Temkin fiilen sarsılmazlığı KURAR.** Metin "S_müstakar,
+        # hâlihazırdaki ile öncekinin vakarla ağırlıklı harmanıdır" der;
+        # evvelce yalnız ölçülüyordu. Vakar yüksekse (akış pürüzsüzse)
+        # hâl korunur; düşükse teemmül belleğine yaslanılır.
+        d.S = kat_norm(vakar * S + (1.0 - vakar) * M)
+        d.olcum.koy("temkin.harman", float(np.linalg.norm(d.S - S)))
         d.olcum.koy("temkin.emin", float(temel - en_kotu < 0.05))
 
 
@@ -148,7 +163,8 @@ class Tetkik(Meleke):
     """
 
     no, ad = 27, "Tetkik"
-    okur, yazar = ("S",), ()
+    okur, yazar = ("S",), ("kusur",)
+    ihtiyari = ("somut",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
@@ -160,7 +176,17 @@ class Tetkik(Meleke):
         U, s, Vt = np.linalg.svd(S, full_matrices=False)
         k = max(1, len(s) // 2)
         ideal = (U[:, :k] * s[:k]) @ Vt[:k]
+        # 𝒪₁₉ Temsil'in somut hâli varsa "ideal" ona göre düzeltilir:
+        # kusur, sinyalin kendi düzgün hâlinden VE somut temsilinden
+        # sapmasıdır. Evvelce ``somut`` üretilip atılıyordu.
+        if d.somut is not None and d.somut.shape[0] == n:
+            geri = d.somut @ np.linalg.pinv(p.W("temsil.dec", (ds, d.d_hayal)))
+            ideal = 0.5 * ideal + 0.5 * geri
+            d.olcum.koy("tetkik.somut_var", 1.0)
+        else:
+            d.olcum.koy("tetkik.somut_var", 0.0)
         kusur = np.abs(kilcal - ideal)
+        d.kusur = kusur          # 𝒪₂₈ Tashih bunu kendi formülünde kullanır
 
         d.olcum.koy("tetkik.kusur_l1", float(np.sum(kusur)))
         d.olcum.koy("tetkik.pürüz_derecesi", float(np.sum(np.diff(kilcal, axis=0) ** 2)))
@@ -182,7 +208,7 @@ class Tashih(Meleke):
 
     no, ad = 28, "Tashih"
     okur, yazar = ("S",), ("S",)
-    ihtiyari = ("G", "A_neden")
+    ihtiyari = ("G", "A_neden", "kusur")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
@@ -209,6 +235,15 @@ class Tashih(Meleke):
             d.olcum.koy("tashih.illet_ağırlığı", 1.0)
         else:
             d.olcum.koy("tashih.illet_ağırlığı", 0.0)
+        # Metnin kendi formülü: ``S − γ·KusurHaritası ⊙ ∇Tenakuz``.
+        # Kusur haritası evvelce hiç çarpılmıyordu -- formül yazılıydı,
+        # icra edilmiyordu.
+        if d.kusur is not None and d.kusur.shape == grad.shape:
+            k = d.kusur / (float(np.max(d.kusur)) + 1e-12)
+            grad = grad * k
+            d.olcum.koy("tashih.kusur_kullanıldı", 1.0)
+        else:
+            d.olcum.koy("tashih.kusur_kullanıldı", 0.0)
         grad = grad / max(float(np.max(np.abs(grad))), 1.0)
         musahhah = S - 0.05 * grad
         yeni = tasdik(musahhah)
@@ -402,7 +437,7 @@ class Tedebbur(Meleke):
     """
 
     no, ad = 31, "Tedebbür"
-    okur, yazar = ("M", "G"), ()
+    okur, yazar = ("M", "G"), ("akibet",)
 
     def uygula(self, d: Durum, p: Parametreler, H: int = 8,
                sarim: int = 24) -> None:
@@ -424,6 +459,7 @@ class Tedebbur(Meleke):
                 felaket += 1
         risk = felaket / sarim
         V_ort = float(np.mean(degerler))
+        d.akibet = float(risk)   # 𝒪₃₃ mîzânda aleyhte delil olarak tartar
         d.olcum.koy("tedebbür.değer", V_ort)
         d.olcum.koy("tedebbür.risk", risk)
         d.olcum.koy("tedebbür.net", V_ort * (1 - risk))
@@ -508,7 +544,18 @@ class SekZanYakin(Meleke):
             d.makam = makam_tayin(d.P_idrak, self.EPS_SEK, self.EPS_YAKIN)
             d.olcum.koy("idrak.vekil_formül", 1.0)
 
-        d.sukut = bool(d.makam == "Şek")
+        # **Sükût iki kapıdan geçer** (kütük H16). Birincisi makamdır:
+        # Şek'te söylenecek bir şey yoktur. İkincisi serbest enerjidir:
+        # ``F_tenakuz ≤ ε_durgun`` ise zihinde çözülmesi gereken bir
+        # tenakuz kalmamıştır ve zihin durgun suya döner. ``ε_durgun``
+        # ELLE KONMAZ (H17): mananın kendi gürültü tabanından türetilir.
+        eps_durgun = float(np.mean(np.abs(np.diff(S, axis=0)))) * 0.05 \
+            if len(S) > 1 else 0.0
+        durgun = bool(d.serbest_enerji <= eps_durgun)
+        d.sukut = bool(d.makam == "Şek" or durgun)
+        d.olcum.koy("idrak.ε_durgun", eps_durgun)
+        d.olcum.koy("idrak.F_tenakuz", d.serbest_enerji)
+        d.olcum.koy("idrak.durgun", float(durgun))
         d.olcum.koy("idrak.P", d.P_idrak)
         d.olcum.koy("idrak.entropi", ikili_entropi(d.P_idrak))
         d.olcum.koy("idrak.hüküm", hukum_agirligi(d.P_idrak, d.makam))
@@ -587,7 +634,9 @@ class Muhakeme(Meleke):
         S_yeni = R @ d.S_kebir
 
         lehte = max(kosinus(S_yeni, d.G_kebir), 0.0) + max(d.T, 0.0)
-        aleyhte = max(d.tenakuz, 0.0) + max(d.olcum.al("tenkit.sapma", 0.0), 0.0)
+        aleyhte = (max(d.tenakuz, 0.0)
+                   + max(d.olcum.al("tenkit.sapma", 0.0), 0.0)
+                   + max(d.akibet, 0.0))     # 𝒪₃₁'in ölçtüğü âkıbet riski
 
         # **Şahit delili mîzâna girer.** Küllî kaide ``d_in`` uzayında
         # yaşadığı için (bkz. 𝒪₁₈) meclis onu dizey olarak tatbik
@@ -657,7 +706,7 @@ class Tafsil(Meleke):
     """
 
     no, ad = 34, "Tafsil"
-    okur, yazar = ("S_kebir",), ()
+    okur, yazar = ("S_kebir",), ("dallar",)
 
     def uygula(self, d: Durum, p: Parametreler, K: int = 5) -> None:
         mucmel = d.S_kebir
@@ -671,6 +720,7 @@ class Tafsil(Meleke):
         olcek = float(birlesik @ mucmel) / max(float(birlesik @ birlesik), 1e-12)
         hata = float(np.linalg.norm(olcek * birlesik - mucmel)
                      / max(np.linalg.norm(mucmel), 1e-12))
+        d.dallar = np.asarray(birlesik, float)   # 𝒪₃₇ Fesâhat kelamı buradan kurar
         d.olcum.koy("tafsil.dallanma", float(K))
         d.olcum.koy("tafsil.sadakat_hatası", hata)
         d.olcum.koy("tafsil.netlik",
@@ -690,7 +740,7 @@ class Tefsir(Meleke):
     """
 
     no, ad = 35, "Tefsir"
-    okur, yazar = ("S", "H_hayal"), ()
+    okur, yazar = ("S", "H_hayal"), ("murad",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S, H = d.S, d.H_hayal
@@ -702,6 +752,7 @@ class Tefsir(Meleke):
         agirlik = softmax((S @ W) @ baglam.T / np.sqrt(ds))
         murad = agirlik @ baglam @ p.W("tefsir.v", (ds, ds))
 
+        d.murad = np.asarray(murad.mean(0), float)   # 𝒪₃₉ Belâgat murada uyar
         pr = agirlik.mean(0)
         nz = pr > 0
         H_ent = -float(np.sum(pr[nz] * np.log(pr[nz])))

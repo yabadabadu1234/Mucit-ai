@@ -301,6 +301,24 @@ class Durum:
     tezat_kutbu: Optional[np.ndarray] = None       # 𝒪₁₀ → 𝒪₁₁
     w_kesit: Optional[np.ndarray] = None           # ℳ üzerindeki kesit (H3)
 
+    # -----------------------------------------------------------------
+    #  BAĞLANMAMIŞ MELEKE BIRAKILMAZ (kütük H33)
+    # -----------------------------------------------------------------
+    # Aşağıdaki alanların her biri, evvelce yalnız ölçüm defterine yazıp
+    # neticeye hiç dokunmayan bir melekenin fiilî çıktısıdır. Her birinin
+    # bir yazanı ve **en az bir okuyanı** vardır; okuyanı olmayan alan
+    # açılmamıştır.
+    strateji: Optional[np.ndarray] = None      # 𝒪₁₆ → 𝒪₂₁  (Mutasarrıfa R_t, H15)
+    sonsal: Optional[np.ndarray] = None        # 𝒪₁₇ → 𝒪₂₅  (Bayes ardılı)
+    somut: Optional[np.ndarray] = None         # 𝒪₁₉ → 𝒪₂₇  (somut temsil)
+    vech: Optional[np.ndarray] = None          # 𝒪₂₀ → 𝒪₃₉  (vech-i şebeh)
+    kusur: Optional[np.ndarray] = None         # 𝒪₂₇ → 𝒪₂₈  (kusur haritası)
+    akibet: float = 0.0                        # 𝒪₃₁ → 𝒪₃₃  (risk)
+    dallar: Optional[np.ndarray] = None        # 𝒪₃₄ → 𝒪₃₇  (tafsil dalları)
+    murad: Optional[np.ndarray] = None         # 𝒪₃₅ → 𝒪₃₉  (tefsirin muradı)
+    ahenk: float = 1.0                         # 𝒪₄₀ → 𝒪₄₁  (estetik ölçek)
+    serbest_enerji: float = 0.0                # 𝒪₁₁ → 𝒪₃₂  (F_tenakuz, H16)
+
     olcum: Olcumler = field(default_factory=Olcumler)
     gunluk: List[str] = field(default_factory=list)
 

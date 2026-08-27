@@ -50,7 +50,7 @@ class Fesahat(Meleke):
 
     no, ad = 37, "Fesâhat"
     okur, yazar = ("S_kebir",), ("N",)
-    ihtiyari = ("sukut",)
+    ihtiyari = ("sukut", "dallar")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         ds = len(d.S_kebir)
@@ -61,7 +61,15 @@ class Fesahat(Meleke):
             d.not_dus(self.ad, "sükût: makam Şek, kelam kurulmadı")
             return
         d.olcum.koy("fesâhat.sükût", 0.0)
-        N = kat_norm(gelu(d.S_kebir @ p.W("fesâhat.dec", (ds, ds))))
+        # 𝒪₃₄ Tafsil mücmeli dallarına açtıysa kelam o dallardan kurulur;
+        # evvelce dallar hesaplanıp atılıyordu.
+        taban = d.S_kebir
+        if d.dallar is not None and len(d.dallar) == ds:
+            taban = kat_norm(0.5 * d.S_kebir + 0.5 * d.dallar)
+            d.olcum.koy("fesâhat.dallar_var", 1.0)
+        else:
+            d.olcum.koy("fesâhat.dallar_var", 0.0)
+        N = kat_norm(gelu(taban @ p.W("fesâhat.dec", (ds, ds))))
         d.N = N
 
         tenafur = _sik(float(np.mean(np.abs(np.diff(N)))))
@@ -155,7 +163,7 @@ class Belagat(Meleke):
 
     no, ad = 39, "Belâgat"
     okur, yazar = ("N", "G_kebir"), ("N",)
-    ihtiyari = ("sukut",)
+    ihtiyari = ("sukut", "vech", "murad")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         if susuldu_mu(d, self):
@@ -163,7 +171,18 @@ class Belagat(Meleke):
         N = d.N
         ds = len(N)
         # muhatabın makamı: gayenin kendisi (kime, ne için söylüyoruz)
+        # Muhatabın makamı gayedir; fakat söz **murada** uymalı ve
+        # teşbihin vech-i şebehini taşımalıdır. 𝒪₂₀ ve 𝒪₃₅ evvelce
+        # ölçüm defterinde kalıyordu.
         makam_muhatap = d.G_kebir
+        katki = 0
+        if d.murad is not None and len(d.murad) == ds:
+            makam_muhatap = makam_muhatap + 0.3 * kat_norm(d.murad)
+            katki += 1
+        if d.vech is not None and len(d.vech) == ds:
+            makam_muhatap = makam_muhatap + 0.2 * kat_norm(d.vech)
+            katki += 2
+        d.olcum.koy("belâgat.murad_vech", float(katki))
         R = p.lie_tasarruf("belâgat.R", ds, teta=0.2)
         belig = R @ (N * makam_muhatap)
 
@@ -198,7 +217,7 @@ class Sanat(Meleke):
     """
 
     no, ad = 40, "Sanat"
-    okur, yazar = ("N", "H_hayal"), ()
+    okur, yazar = ("N", "H_hayal"), ("ahenk",)
     ihtiyari = ("sukut",)
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
@@ -214,6 +233,8 @@ class Sanat(Meleke):
         yenilik = float(np.linalg.norm(Om - gelenek) / max(np.sqrt(Om.size), 1.0))
         estetik = harmoni + 0.3 * yenilik
 
+        # Estetik değer kelamı FİİLEN ölçekler; 𝒪₄₁ bunu okur.
+        d.ahenk = float(np.clip(0.5 + 0.5 * harmoni, 0.25, 1.5))
         d.olcum.koy("sanat.harmoni", harmoni)
         d.olcum.koy("sanat.yenilik", yenilik)
         d.olcum.koy("sanat.estetik", estetik)
@@ -266,7 +287,7 @@ class Munazara(Meleke):
 
     no, ad = 41, "Münazara"
     okur, yazar = ("S_kebir", "N"), ("N",)
-    ihtiyari = ("sukut", "ispat", "hukum", "burhan")
+    ihtiyari = ("sukut", "ispat", "hukum", "burhan", "ahenk")
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         if susuldu_mu(d, self):
@@ -315,7 +336,12 @@ class Munazara(Meleke):
         susturma = c_anti > 1.2
         galip = tez if susturma else sentez
 
-        d.N = kat_norm(galip * d.N)
+        # 𝒪₂₄'ün burhân zinciri ve 𝒪₄₀'ın ahengi kelama fiilen girer.
+        if d.burhan is not None and len(d.burhan):
+            zincir = float(np.clip(len(d.burhan) / (len(d.burhan) + 4.0), 0, 1))
+            burhan = max(burhan, zincir * burhan + (1 - zincir) * 0.5 * burhan)
+            d.olcum.koy("münazara.burhân_halkası", float(len(d.burhan)))
+        d.N = kat_norm(galip * d.N) * d.ahenk
         d.olcum.koy("münazara.cerh_tez", c_tez)
         d.olcum.koy("münazara.cerh_antitez", c_anti)
         d.olcum.koy("münazara.T", T)
