@@ -25,7 +25,8 @@ kuantum makinesi değil.
       3. Bağlantı    : İttisal (+) / Teferruk (−)
       4. Doku        : Huşunet (+) / Meles (−)
       5. Geçirgenlik : Şeffafiyet (+) / Kesafet (−)
-      6. Mukayese    : Teşabüh (+) / İhtilaf (−)
+      6. Mukayese    : Teşabüh (+) / İhtilaf (−)   [NESNELER arası,
+                       hücreler arası değil -- ölçüm bunu mecbur kıldı]
 
     YEDİ İŞARETSİZ ASIL:
       7. Levn   8. Mekân   9. Bu'd   10. Şekil
@@ -42,7 +43,7 @@ Adet bütün ızgaranın vasfıdır. Onun için çıktı bir dizey değil,
     Tabaka 0 (noktasal / hücre)  : ışık, levn, geçirgenlik, mekân
     Tabaka 1 (çizgisel / kenar)  : bağlantı, doku
     Tabaka 2 (nesne / cisim)     : şekil, ızam, bu'd, nesne mekânı
-    Tabaka 3 (küllî / münasebet) : adet, tenasüb, mukayese, hüsn, kubh
+    Tabaka 3 (küllî / münasebet) : adet, tenasüb, emsal, katman, hüsn, kubh
     Tabaka 4 (ızgaralar arası)   : devinim, ihtilaf
 
 Hiçbir vasıf iki tabakada tekrar etmez; her tabaka bir öncekinden
@@ -55,21 +56,19 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["Nesne", "Mesud", "musahede_et", "devinim_olc", "RENK_PARLAKLIK"]
+__all__ = ["Nesne", "Mesud", "musahede_et", "devinim_olc"]
 
-#: ARC'nin 10 rengi için parlaklık (Ziyâ ekseni). 0 zemin/karanlıktır.
-#: Değerler ARC renk paletinin algısal parlaklığından alınmıştır; sabit
-#: değil **ölçülebilir** bir tercihtir ve değiştirilebilir.
-RENK_PARLAKLIK = np.array([0.00,   # 0 siyah (zemin)
-                           0.45,   # 1 mavi
-                           0.50,   # 2 kırmızı
-                           0.60,   # 3 yeşil
-                           0.85,   # 4 sarı
-                           0.55,   # 5 gri
-                           0.55,   # 6 fuşya
-                           0.65,   # 7 turuncu
-                           0.70,   # 8 açık mavi
-                           0.35])  # 9 bordo
+#: **KALDIRILDI.** Evvelce ARC'nin 10 rengine bir "algısal parlaklık"
+#: tablosu dayatılmıştı. Ölçüldü ve çöktü: Δışık 174 çiftin **hiçbirinde**
+#: baskın çıkmadı (0/174). Sebebi tabloda değil, tablonun kendisindeydi:
+#: ARC renkleri **kategoriktir**; 3 ile 7 arasında "parlaklık farkı"
+#: yoktur, ikisi ayrı sembolduir. O tablo İbnü'l-Heysem'in Ziyâ'sı değil,
+#: benim uydurduğum sahte bir sıralamaydı.
+#:
+#: ARC'de Ziyâ'nın hakikati şudur (kullanıcı hükmü): **varlık / yokluk**.
+#: Zulmet = 0 rengi = taban / boşluk / nötr zemin (kuantumda ``|0⟩``).
+#: Ziyâ   = 1-9 = taban üzerindeki her türlü mevcudiyet.
+#: Zıl    = bir figürün kenarındaki yerel negatif eğim (ayrı kanal değil).
 
 
 @dataclass
@@ -105,8 +104,10 @@ class Mesud:
 
     # --- Tabaka 3: küllî
     adet: Dict[int, int]            # renk → bileşen sayısı
-    tenasub: Tuple[float, float, float]
-    mukayese: np.ndarray            # (H, W) Teşabüh(+)/İhtilaf(−)
+    tenasub: Tuple[float, float, float]   # nesne başına, ızam ağırlıklı
+    mukayese: np.ndarray            # (H, W) aykırılık alanı (Teşabüh DEĞİL)
+    emsal: Dict[str, float]         # NESNELER arası Teşabüh(+)/İhtilaf(−)
+    katman: Dict[str, float]        # kavşak / kesafet / şeffafiyet
     husn: float
     kubh: float
 
@@ -118,7 +119,14 @@ class Mesud:
             "bağlantı_ort": float(self.baglanti.mean()),
             "doku_ort": float(self.doku.mean()),
             "geçirgenlik_ort": float(self.gecirgenlik.mean()),
-            "mukayese_ort": float(self.mukayese.mean()),
+            "aykırılık_ort": float(self.mukayese.mean()),
+            "emsal_şekil": self.emsal["emsal_şekil"],
+            "emsal_dönük": self.emsal["emsal_dönük"],
+            "ihtilaf": self.emsal["ihtilaf"],
+            "şekil_sınıfı": self.emsal["sınıf"],
+            "kavşak": self.katman["kavşak"],
+            "kesafet": self.katman["kesafet"],
+            "şeffafiyet": self.katman["şeffafiyet"],
             "nesne_sayısı": float(len(self.nesneler)),
             "renk_sayısı": float(len(self.adet)),
             "en_boy": float(self.tenasub[0]),
@@ -133,16 +141,20 @@ class Mesud:
 #  Tabaka 0 — noktasal vasıflar
 # =====================================================================
 def _isik(g: np.ndarray) -> np.ndarray:
-    """Işık ekseni: Ziyâ(+) / Zulmet(−), Zıl yerel negatif eğim olarak.
+    """Işık ekseni: Ziyâ(+) = varlık, Zulmet(−) = taban, Zıl = kenar eğimi.
 
-    Mutlak parlaklık değil, **yerel zemine göre** parlaklık alınır --
-    çünkü retina da mutlak ışığı değil, yanal baskılamayla farkı iletir
-    (yatay hücreler). Zıl (gölge) ayrı bir kanal değildir: parlak bir
-    bölgenin kenarındaki negatif eğim olarak **kendiliğinden** doğar.
+    ARC'de foton yoktur; Ziyâ **mevcudiyettir**. Dolu hücre uyarılmış
+    (``+1``), zemin hücresi taban durumudur (``−1``). Zıl ayrı bir kanal
+    değildir: figürün kenarında bu alanın yerel eğimi kendiliğinden
+    negatifleşir, gölge oradan doğar.
+
+    Uydurma parlaklık tablosuyla ölçülüp çökmüştü (0/174); bu hâliyle
+    yeniden ölçülmelidir ve ölçülür.
     """
-    L = RENK_PARLAKLIK[np.clip(g, 0, 9)]
-    yerel = _pencere_ortalamasi(L, 3)
-    return L - yerel
+    varlik = np.where(g != 0, 1.0, -1.0)
+    yerel = _pencere_ortalamasi(varlik, 3)
+    # Ziyâ mevcudiyetin kendisi, Zıl ise yerel düşüştür; ikisi TEK eksende
+    return 0.5 * varlik + 0.5 * (varlik - yerel)
 
 
 def _levn(g: np.ndarray) -> np.ndarray:
@@ -363,15 +375,131 @@ def _tenasub_maske(m: np.ndarray) -> Tuple[float, float, float]:
     return (float(oran), yatay, dikey)
 
 
-def _mukayese(g: np.ndarray, pencere: int = 3) -> np.ndarray:
-    """Teşabüh(+) / İhtilaf(−): hücrenin komşuluğu, ızgaranın hâkim
-    dokusuna ne kadar benziyor?
+def _tenasub_kulli(g: np.ndarray, nesneler: Sequence[Nesne]
+                   ) -> Tuple[float, float, float]:
+    """Küllî tenasüb: nesnelerin oran ve simetrilerinin ızam ağırlıklı ortası.
 
-    **İhtilaf iki ölçekte yaşar ve ikisi karıştırılmamalıdır:**
-    yerel ihtilaf (komşuyla fark) zaten ``_baglanti``dadır; buradaki
-    ise **küllî ihtilaftır** -- hücrenin komşuluğunun, ızgaranın genel
-    örgüsünden sapması. Retinadaki yanal baskılama birincisi, IT
-    korteksindeki örüntü kıyası ikincisidir.
+    Nesne yoksa ızgaranın kendi oranına düşülür ve bu **işaretlenir**
+    (boş ızgarada tenasüb ızgaranındır, uydurma değildir).
+    """
+    if not nesneler:
+        return _tenasub_maske(g != 0)
+    w = np.array([n.izam for n in nesneler], float)
+    w = w / w.sum()
+    T = np.array([n.tenasub for n in nesneler], float)
+    return (float(w @ T[:, 0]), float(w @ T[:, 1]), float(w @ T[:, 2]))
+
+
+def _emsal(nesneler: Sequence[Nesne]) -> Dict[str, float]:
+    """**İkinci mertebe müşahede**: Teşabüh(+) / İhtilaf(−), NESNELER arası.
+
+    Kullanıcı hükmü: *"İki nesnenin şekilce benzediğini görmek hâlâ
+    müşahededir (gözün emsal tespiti); lakin kuralı birinden ötekine
+    aktarmak Kıyas'tır."* Sınır buradadır ve aşılmaz: bu fonksiyon
+    hangi nesnelerin emsal olduğunu **söyler**, aralarında hüküm
+    **taşımaz**.
+
+    Evvelce Teşabüh hücre komşuluğunda hesaplanıyor ve ``doku`` ile
+    ``bağlantı``dan türetildiği için onları **çift sayıyordu** (ölçüldü:
+    86/174 çiftte baskın, bağımsız değil). Yeri burasıdır.
+    """
+    m = len(nesneler)
+    if m < 2:
+        return {"emsal_şekil": 0.0, "emsal_ızam": 0.0, "emsal_renk": 0.0,
+                "emsal_dönük": 0.0, "ihtilaf": 0.0, "sınıf": float(m)}
+    ayni_sekil = ayni_izam = ayni_renk = donuk = 0
+    cift = 0
+    for i in range(m):
+        for j in range(i + 1, m):
+            cift += 1
+            a, b = nesneler[i], nesneler[j]
+            if a.izam == b.izam:
+                ayni_izam += 1
+            if a.renk == b.renk:
+                ayni_renk += 1
+            if a.sekil.shape == b.sekil.shape and np.array_equal(a.sekil,
+                                                                 b.sekil):
+                ayni_sekil += 1
+            else:
+                # dönme ve yansımayla emsal mi (8 katlı dihedral grup)
+                for k in range(4):
+                    R = np.rot90(b.sekil, k)
+                    if R.shape == a.sekil.shape and (
+                            np.array_equal(a.sekil, R)
+                            or np.array_equal(a.sekil, R[:, ::-1])):
+                        donuk += 1
+                        break
+    # şekil kümesi sayısı: kaç ayrı "cins" var
+    imza = set()
+    for n in nesneler:
+        imza.add((n.sekil.shape, n.sekil.tobytes()))
+    return {"emsal_şekil": ayni_sekil / cift,
+            "emsal_ızam": ayni_izam / cift,
+            "emsal_renk": ayni_renk / cift,
+            "emsal_dönük": donuk / cift,
+            "ihtilaf": 1.0 - (ayni_sekil + donuk) / cift,
+            "sınıf": float(len(imza))}
+
+
+def _seffafiyet(g: np.ndarray) -> Dict[str, float]:
+    """Şeffafiyet: **katman topolojisi** -- Ziyâ ile çakışmaz (kullanıcı hükmü).
+
+    Ziyâ varlık/yokluktur; Şeffafiyet ise iki figür üst üste bindiğinde
+    arkadakinin hissedilip hissedilmediğidir. ARC'de bunun fiilî izi
+    **kavşaklardır**: yatay bir dizi ile dikey bir dizi kesiştiğinde
+    kavşak hücresini hangi renk tutuyor?
+
+    * Kavşakta hep aynı renk kazanıyorsa → **Kesafet** (bir katman üstte,
+      öteki kesilmiş).
+    * Kavşak rengi değişiyorsa yahut üçüncü bir renkse → **Şeffafiyet**
+      (katmanlar birbirini yok etmiyor).
+
+    Bu bir **vekil ölçüdür** ve öyle bildirilir: hakiki katman sırası
+    ARC'de verilmez, kavşaktan çıkarılır.
+    """
+    H, W = g.shape
+    kavsak = 0
+    yatay_kazandi = 0
+    dikey_kazandi = 0
+    ucuncu = 0
+    for i in range(H):
+        for j in range(W):
+            c = g[i, j]
+            if c == 0:
+                continue
+            # yatay komşuların hâkim rengi, dikey komşuların hâkim rengi
+            y = [g[i, j - 1] if j > 0 else 0, g[i, j + 1] if j + 1 < W else 0]
+            d = [g[i - 1, j] if i > 0 else 0, g[i + 1, j] if i + 1 < H else 0]
+            ys = y[0] if y[0] == y[1] and y[0] != 0 else 0
+            ds = d[0] if d[0] == d[1] and d[0] != 0 else 0
+            if ys and ds and ys != ds:
+                kavsak += 1
+                if c == ys:
+                    yatay_kazandi += 1
+                elif c == ds:
+                    dikey_kazandi += 1
+                else:
+                    ucuncu += 1
+    if kavsak == 0:
+        return {"kavşak": 0.0, "kesafet": 0.0, "şeffafiyet": 0.0}
+    tutarli = max(yatay_kazandi, dikey_kazandi) / kavsak
+    return {"kavşak": float(kavsak),
+            "kesafet": float(tutarli),           # bir katman hep üstte
+            "şeffafiyet": float(ucuncu / kavsak)}  # üçüncü renk = karışım
+
+
+def _mukayese(g: np.ndarray, pencere: int = 3) -> np.ndarray:
+    """**Aykırılık alanı** -- hücrenin, ızgaranın hâkim örgüsünden sapması.
+
+    **Bu artık "Teşabüh/İhtilaf" DEĞİLDİR.** Öyle adlandırılmıştı ve
+    ölçüm yalanladı: ``doku`` ve ``bağlantı``dan türetildiği hâlde
+    174 çiftin 86'sında baskın çıkıyordu -- yani bağımsız bir eksen
+    değil, ötekilerin toplamıydı. Tekrar günahı buydu.
+
+    Teşabüh/İhtilaf'ın hakiki yeri **nesneler arasıdır** (``_emsal``).
+    Burada kalan şey ise başka ve meşru bir şeydir: bir hücrenin
+    ızgaranın genel örgüsüne göre **ne kadar sıra dışı** olduğu --
+    ARC'de "tek farklı hücre" bulmacalarının doğrudan sinyali.
     """
     H, W = g.shape
     d = _doku(g)
@@ -410,11 +538,20 @@ def musahede_et(izgara: np.ndarray) -> Mesud:
     for n in nesneler:
         adet[n.renk] = adet.get(n.renk, 0) + 1
 
-    ten = _tenasub_maske(g != 0)
+    # **DÜZELTİLDİ.** Evvelce tenasüb ızgaranın tamamından ölçülüyordu;
+    # ızgara şekli sabit kalınca ``Δen_boy`` cebren sıfır çıkıyordu
+    # (ölçüldü: ortalama 0.0000, sıfır olma oranı 1.00 -- kanal ÖLÜYDÜ).
+    # Tenasüb bir **nesnenin** vasfıdır; nesneler üzerinden toplanır.
+    ten = _tenasub_kulli(g, nesneler)
     muk = _mukayese(g)
+    ems = _emsal(nesneler)
+    kat = _seffafiyet(g)
     # Hüsn: intizam. Simetri yüksek, aykırılık düşük, oran dengeli ise
     # güzeldir. Türevdir; ayrı bir detektörü yoktur (mertebe 2).
-    husn = float(0.5 * (ten[1] + ten[2]) * (0.5 + 0.5 * muk.mean())
+    # Hüsn TÜREVDİR (mertebe 2): simetri × emsal-nizamı ÷ oran sapması.
+    # Ayrı bir detektörü yoktur; Tenasüb + Teşabüh'ten doğar.
+    husn = float(0.5 * (ten[1] + ten[2])
+                 * (0.5 + 0.5 * ems["emsal_şekil"])
                  / (1.0 + abs(np.log(max(ten[0], 1e-6)))))
     return Mesud(
         izgara=g,
@@ -429,6 +566,8 @@ def musahede_et(izgara: np.ndarray) -> Mesud:
         adet=adet,
         tenasub=ten,
         mukayese=muk,
+        emsal=ems,
+        katman=kat,
         husn=husn,
         kubh=1.0 - husn)
 
@@ -465,4 +604,8 @@ def devinim_olc(a: Mesud, b: Mesud) -> Dict[str, float]:
     out["Δyatay_sim"] = float(b.tenasub[1] - a.tenasub[1])
     out["Δdikey_sim"] = float(b.tenasub[2] - a.tenasub[2])
     out["Δhüsn"] = float(b.husn - a.husn)
+    for k in ("emsal_şekil", "emsal_dönük", "ihtilaf", "sınıf"):
+        out["Δ" + k] = float(b.emsal[k] - a.emsal[k])
+    for k in ("kavşak", "kesafet", "şeffafiyet"):
+        out["Δ" + k] = float(b.katman[k] - a.katman[k])
     return out

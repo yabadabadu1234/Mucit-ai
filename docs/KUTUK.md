@@ -510,3 +510,58 @@ yoktur. Ayakta duran ve ölçülen kısım şudur: 6 milyon kübit MERA,
 MPO'nun takas ağına 7600 katlık üstünlüğü, 20 lifin makine denetimi,
 üniterlik kusurunun bulunup düzeltilmesi. **Öğrenme kısmı ayakta
 değildir.**
+
+## H46 — Göz kuruldu, ölçüldü; **22 vasfın 19'u ARC'de zararlı çıktı**
+
+Modelin gözü yoktu: ham duyu bir satır diliminin ortalaması alınıp
+`tanh` ile açıya çevriliyordu. İki boyut, komşuluk, renk, sınır --
+hiçbiri yoktu. **0/120 neticesinin sebebi kuantum makinesi değil,
+modelin bulmacayı hiç görmemesidir.**
+
+`nefs/mubser.py`: 22 mübser vasıf, çelişkisiz ve tekrarsız 15 kanala
+indirildi (6 işaretli eksen + 7 asıl + 2 türev). Çıktı tek tensör
+değil, tabakalı kayıttır.
+
+**Ölçülenler (gerçek ARC ızgaraları):**
+
+| ölçü | değer |
+|---|---|
+| 240 girdi-çıktı çifti | 4,3 sn (kübit modelinin **tek** geçişi 0,54 sn idi) |
+| öteleme eş-değişkenliği | **0,00e+00** (tam) |
+| ızgara şekli değişen çift | **%28** |
+| görev içi / görev dışı imza ayrışması | **AUC 0,8686** |
+
+**Kanal ablasyonu -- acı netice:**
+
+| kanal kümesi | AUC |
+|---|---|
+| 22 kanalın hepsi | 0,8686 |
+| **yalnız 3 kanal** (Δadet · hareket · Δbağlantı) | **0,8981** |
+| altı kanal | 0,8856 |
+| yalnız Δadet | 0,7232 |
+
+**19 kanal net zararlıdır.** Bu bir normalizasyon artefaktı değildir
+(sd tabanı konunca AUC 0,8661→0,8686, değişmedi). ARC'de görev kimliği
+üç şeyde yaşıyor: kaç nesne var (**Adet**), ne kadarı değişti
+(**Hareket**), neyin neye bitişik olduğu (**İttisal/Teferruk**).
+
+**Ölçüm üç kusuru daha yakaladı ve üçü de düzeltildi:**
+1. Tenasüb ızgara başına ölçülüyordu → `Δen_boy` cebren sıfırdı (ölü
+   kanal). Nesne başına alındı: |ort| 0,4936.
+2. Ziyâ için ARC renklerine uydurma bir parlaklık tablosu dayatılmıştı
+   → 0/174 çiftte baskın. Ziyâ ARC'de **varlık/yokluk**tur; öyle
+   yapıldı: 14/174.
+3. Mukayese, `doku`+`bağlantı`dan türetildiği hâlde 86/174 çiftte
+   baskın çıkıyordu -- **çift sayıyordu**. Teşabüh/İhtilaf'ın yeri
+   nesneler arasıdır; oraya taşındı.
+
+**Düzelmeyen:** Şeffafiyet kanalı ölü (sıfır oranı 0,99). Kavşak
+vekili ARC'de neredeyse hiç ateşlemiyor.
+
+**Yanlış ölçüt uyarısı.** Evvela "değişimin kanallara yoğunlaşması"
+ölçülmüştü; yanlıştı. Bir nesneyi kaydırmak bağlantı, ışık, levn,
+bu'd'u **hep birden** değiştirir. Kanallar *tasvir* olarak bağımsız
+olmalıdır, *dönüşüm* altında değil.
+
+**Aşırı iddia yasağı:** AUC 0,90 ARC'yi çözmek değildir. Görev kimliğini
+ayırt etmek, çıktı ızgarasını üretmek demek değildir.
