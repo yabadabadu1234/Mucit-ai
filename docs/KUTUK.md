@@ -898,3 +898,117 @@ Devamı 𝒪₄'ün strateji manifoldu (Mutasarrıfa) ve program terkibi +
 tasdiktir. **Çevrimsizlik şartı** (``İz(exp(A∘A)) = Boyut``) dikkat
 çekicidir: ağacın çevrimsizliğiyle (H53) aynı kaidedir — tesadüf
 değildir, tecridin ağaç üstünde yaşamasının sebebidir.
+
+## H63 — 𝒪₈ Tahlil **dört** şeyi ayırır ve dördüncüsü ucu açıktır
+
+Kullanıcı hükmü:
+
+> *"Hem kaideleri alt kaidelere ayırır, hem şahitleri birbirinden ayırır,
+> hem boyut değişiminin sebeplerini ayırır, hem de **dinamik olarak sorgu
+> üretecek** bu mimaride belli şeyleri."*
+
+1. **Kaideyi alt kaidelere.** Girdi→çıktı dönüşümü birbirinden bağımsız
+   daha küçük dönüşümlere ayrılır (önce döndür, sonra boya). Kübitte:
+   çıktı ağacına vurulacak kapı dizisinin **çarpanlara** ayrılması.
+2. **Şahitleri birbirinden.** Her şahidin hangi kısmı küllî kaideye,
+   hangi kısmı o şahide has tesadüfe ait. Nakzın (𝒪₂₃) hammaddesidir.
+3. **Boyut değişimini sebeplerine.** H62 gereği boyut aklın işidir;
+   tahlil *"boyut niye değişti"* sualini parçalara ayırır.
+4. **Dinamik sorgu üretimi.** Tahlil yalnız eldekini bölmez; mimarînin
+   içinde **yeni sual üretir**. Bu, tahlili edilgen bir ayrıştırıcı
+   olmaktan çıkarır: neyin bölüneceğine bakarken neyin sorulacağını da
+   tayin eder. Ucu açıktır ve sabit bir bölme listesiyle yazılamaz --
+   H60'taki tertip hükmüyle aynı cinstendir.
+
+Not: müşahedenin (𝒪₁) yaptığı nesne bölütlemesi tahlile **dâhil
+değildir**; tekrar edilmeyecektir.
+
+## H64 — Ağaç MPO kapısı kuruldu ve **tam hesapla** sınandı
+
+`nefs/agac.py`. Kullanıcı hükmü: *"Ağaç MPO — operatörü yol boyunca
+yay, kübit oynatma."* Aynen yapıldı: ``G = Σₖ Aₖ ⊗ Bₖ`` ayrıştırılır,
+``k`` indisi iki yaprak arasındaki **tek yol** boyunca ``T ⊗ δ`` ile
+taşınır, zirvede aynı ``δ`` operatörü kapatır. Hiçbir hücre yer
+değiştirmez. Kanonik hâl (yapraklardan merkeze QR) eklendi ki kesme
+**en iyi** olsun ve raporlanan kesme sayısı yalan olmasın.
+
+Ölçüm (rastgele üniterler, tam dalga vektörüyle birebir karşılaştırma):
+
+| ızgara | renk | χ | kapı | ‖Δψ‖/‖ψ‖ | norm | kesme |
+|---|---|---|---|---|---|---|
+| 2×2 | 2 | 16 | 6 | 2,780e-15 | 1,000000000 | 0 |
+| 2×3 | 2 | 64 | 8 | 2,804e-15 | 1,000000000 | 0 |
+| 3×3 | 2 | 64 | 10 | 2,906e-15 | 1,000000000 | 0 |
+| 2×3 | 3 | 81 | 6 | 4,345e-15 | 1,000000000 | 0 |
+
+χ kısılınca (aynı devre, 3×3, renk 2):
+
+| χ | ‖Δψ‖/‖ψ‖ | kesme |
+|---|---|---|
+| 2 | 6,824e-01 | 5,145e-01 |
+| 4 | **2,906e-15** | 0 |
+| 8 / 16 / 64 | 2,906e-15 | 0 |
+
+Köşe-köşe mesafe (zincir → ağaç): 3×3 8→6, 5×5 24→10, 10×10 99→14,
+**30×30 899→18 (49,9 kat)**. (H53'teki tablo *âzamî* mesafeyi veriyordu;
+bu tablo *köşe-köşe*yi verir — ikisi ayrı ölçüdür, biri ötekini
+nakzetmez.)
+
+## H65 — Üç ağaç kuruldu; **boyut ihtimal uzayına girdi**
+
+`nefs/ucagac.py`. H56 ve H62 beraber icra edildi.
+
+* Hücrenin hâl sayısı ``renk`` değil **``renk+1``**dir; fazladan hâl
+  ``HARİÇ`` = *"bu hücre çıktının dışındadır"*. Düzgün süperpozisyonda
+  **bütün boyutlar aynı anda askıdadır**. Ölçüldü: her hücrede
+  ``P(dolu) = 0,909 = 10/11``, tam beklenen değer.
+* Şahitler ayrı ayrı ``AgacYazmaci`` olamaz — dolaşamazlardı. Hepsi
+  **tek** ağacın blokları olarak dizildi:
+  ``[ş₀.girdi][ş₀.çıktı][ş₁.girdi][ş₁.çıktı][test.girdi][ÇIKTI]``.
+  Kilitli bloklarda ``‖P−δ‖`` sapması **0,00e+00**.
+* Şahit hücresiyle çıktı hücresi fiilen dolaştı (ağaç MPO, 10 adımlık
+  yol): çıktı (0,0)'da doğru rengin ihtimali **0,0909 → 0,8729**,
+  norm 1,000000000, kesme 0.
+
+**KUSUR (ölçüldü, gizlenmiyor):** kanaat açısı ``θ`` tek yönlü bir
+"kuvvet" değildir. Başlangıç açısı ``arctan(√10) ≈ 1,26`` rad olduğu
+için θ büyüdükçe içerideki doluluk önce 1'e çıkıp sonra **geri düşüyor**
+(θ=0,3 → 1,000 ; θ=0,9 → 0,687). Doğrusu, açının hedefe olan **fark**
+olarak verilmesidir; sabit θ yanlıştır. Düzeltmesi, açıyı verecek
+melekenin formülüne bağlıdır ve o formül henüz kararlaşmamıştır.
+
+**İddia edilmeyen:** `ucagac.py` bir ARC çözücüsü **değildir**. Kurulan
+şey zemindir; boyutun ihtimal uzayında olduğu ve kapının onu
+söndürebildiği ölçülmüştür, o kadar.
+
+## H66 — 𝒪₂ Hayal kuruldu: üç kademe + tersinir temizlik
+
+`nefs/hayal.py`. H58'in üç şartı da koda geçti:
+
+* Üç kademe (`sabit` / `sürekli` / `anlık`) ayrı defterde durur.
+* **Destekçisiz tahsis reddedilir** (`PermissionError`) — hayal kendi
+  kendine karar vermez; her tahsis ve her aktarma bir meleke adıyla
+  yapılır. Sabit kademe hiç taşınmaz.
+* Anlık kademeye vurulan her kapı kaydedilir ve ``U†`` ters sırayla
+  vurularak **geri alınır**. Sebebi: ``|ψ⟩|çöp⟩`` hâlinde çöp kübiti
+  hangi dalın seçildiğini "bilir" ve dallar bir daha girişemez —
+  Grover'ın çalışmamasının klasik sebebi budur.
+
+Ölçüm: 5 kapı vuruldu (anlık hücrelerde sapma 3,262e-01), geri alındı;
+**anlık hücre hatası 3,331e-15**, **sabit hücre hatası 3,331e-16**,
+norm 1,000000000, kesme 0. `nefs/test_nefs.py`: 41/41 geçiyor.
+
+## H67 — Cevap bekleyen sualler (BORÇ)
+
+Kullanıcı 𝒪₆, 𝒪₇, 𝒪₉ için *"başka / ben tarif edeceğim"* dedi ve
+cevapları hazırladığını bildirdi. **Bunlar uydurulmayacaktır**:
+
+* **𝒪₆ Tasavvur** — tecritten gelen mânâyı ne yapar? (sûret kurar mı,
+  ihtimal açar mı, ikisi birden mi)
+* **𝒪₇ Mânâ** — 𝒪₅ Tecrit'ten nasıl ayrılır? (isimlendirme mi, Vâhime
+  gibi hisle alınmayan mânâ mı)
+* **𝒪₉ Terkip** — hangi uzayda birleştirir? (𝒪₄'ün verdiği uzay mı,
+  daima ağaç mı, program terkibi mi)
+
+Bu üçü cevaplanmadan `ucagac.py`'deki kanaat açısı formülü
+yazılmayacaktır; H65'teki θ kusuru da onlara bağlıdır.
