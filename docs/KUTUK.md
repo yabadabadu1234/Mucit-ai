@@ -477,3 +477,36 @@ uzunlukta ne yapılır" olurdu. Öğrenilen şey "kaçıncı satırda ne yapıl�
 değil, "bir satırın kaçıncı kübitinde ne yapılır"dır (evrişimin ötelemeye
 bağışıklığı ile aynı kaide). Fazla durak varsa açılar devrolur.
 
+## H45 — Kübit ana modelinin eğitimi ölçüldü: **netice olumsuz**
+
+55 kübit, 250 açı, 8 çevrim, 1.629 sn. `V_ilk = 3,5162 → V_son = 3,3218`;
+potansiyel 2. çevrimden sonra hiç inmedi. Tünelleme 5 çevrimde açıldı
+(Γ 0,3'e kadar), **sıçratamadı**.
+
+Değerlendirme (6 hiç görülmemiş bulmaca):
+
+| ölçü | eğitim öncesi | eğitim sonrası |
+|---|---|---|
+| tam çözülen | **0** | **0** |
+| ilk belirteç isabeti | **0** | **0** |
+| ortalama hücre isabeti | 0,0641 | **0,0429** |
+| sükût | 140 | **0** |
+
+**Eğitim değerlendirmeyi kötüleştirdi.** Gizlenmez. Üç sebep, üçü de
+ölçümden çıkar:
+
+1. Potansiyel düştü, isabet düştü — **ölçüt yanlış yeri ödüllendiriyor**.
+   Mîzân cezası (tenakuz + nakz + tasdik + sükût) ARC teriminden ağır
+   basmış olabilir: model doğru bilmeyi değil, kendini tutarlı
+   hissetmeyi öğreniyor.
+2. Sükût 140 → 0. Ceza formülünde `0,5·sükût` vardı; model susmamayı
+   öğrendi, fakat **bilmeden konuşmayı** öğrendi. Bu H10'a (sükût hakkı)
+   doğrudan zarardır ve ceza formülü bu yüzden yeniden yazılmalıdır.
+3. 250 parametre / 8 çevrim / 6 örnek ARC için hiçbir şey. Kıyas:
+   `main/` modeli 4.305 parametreyle 0,0347 aldı — o da çözemedi.
+
+**Bir soru bile çözülmedi — iki modelde de.** İddia edilecek bir şey
+yoktur. Ayakta duran ve ölçülen kısım şudur: 6 milyon kübit MERA,
+MPO'nun takas ağına 7600 katlık üstünlüğü, 20 lifin makine denetimi,
+üniterlik kusurunun bulunup düzeltilmesi. **Öğrenme kısmı ayakta
+değildir.**
