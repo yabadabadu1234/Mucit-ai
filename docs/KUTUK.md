@@ -679,3 +679,61 @@ sıralı olduğu için MPS metinde doğrudur; ızgara iki boyutlu olduğu için
 
 Bu, H26'nın (tensör treni yerine ağaç/MERA) ARC'ye tatbik edilmiş ve
 **rakamla ispatlanmış** hâlidir.
+
+## H53 — MERA ile PEPS **barıştırıldı**: ağaçta çevrim yoktur
+
+Kullanıcı hükmü: *"MERA ile PEPS'i barıştırarak yapabiliyorsan yap,
+yaklaşıklığı yok etmenin çaresini düşün."* ve *"MPS'i iki boyutlu ağacın
+YAPRAKLARINDA kullan."*
+
+Yaklaşıklık nereden geliyordu:
+
+* **MPS**: büzülme tam, hendese yanlış (``χ ≈ renk^w``, H52).
+* **PEPS**: hendese doğru, fakat ağda **çevrim** var → büzülme
+  ``#P``-zor, ancak yaklaşık, hatası **kontrol edilemez**.
+* **AĞAÇ (TTN)**: çevrim **yok** → büzülme MPS gibi **tam**; hendese
+  iki boyutlu → ızgara kareye yakın bloklara bölünür.
+
+**Barışma budur ve yaklaşıklığı öldüren şey çevrimsizliktir.**
+
+Ölçülen (`nefs/agac.py`):
+
+| sınama | netice |
+|---|---|
+| tam büzülme, 1×2 / 2×2 / 2×3 / 3×3 | durum boyutu tam ``d^(h·w)``, ``ΣP = 1,0000000000`` |
+
+| ızgara | zincirde âzamî mesafe | ağaçta | kazanç |
+|---|---|---|---|
+| 3×3 | 8 | 7 | 1,1 kat |
+| 5×5 | 24 | 11 | 2,2 kat |
+| 10×10 | 99 | 16 | 6,2 kat |
+| **30×30** | **899** | **20** | **45 kat** |
+
+Bölme usulü: her adımda dikdörtgenin **uzun kenarı** kesilir; bloklar
+kareye yakın kalır, blok sınırı (dolayısıyla gereken ``χ``) asgarîdir.
+
+**İddia edilmeyen:** ağaç iki boyutlu alan kanununu KALDIRMAZ; hiçbir
+tensör ağı kaldıramaz. Kaldırdığı şey PEPS'in büzülme yaklaşıklığı ve
+MPS'in mesafe cezasıdır.
+
+## H54 — Ajanın dikkate almadığı iki vesikadaki beş kusur (BORÇ)
+
+Kullanıcı iki teşhis vesikası gönderdi, ajan bunları fiilen dikkate
+almadı. Beşi de doğrudur ve dördü hâlâ ayaktadır; borç olarak zabıtlanır:
+
+1. **1 boyutlu pencere** -- ARC iki boyutlu, `pencere=8` bir maskaraydı.
+   → H52/H53 ile **kapatıldı** (ağaç kuruldu).
+2. **8 örnekli AS-GEK istatistikî olarak imkânsız** -- 250 boyutlu
+   uzayda vekil yüzey kurmak için asgarî ``10×d = 2.500`` değerlendirme
+   gerekir; ajan 8 çevrim koştu ve 2. çevrimde sığ bir çukura saplandı.
+   → **AÇIK BORÇ**.
+3. **Ayrık motorun seçtiği yüksek mertebeler fiilen koşmuyor** --
+   `D=[13,17,19,20]` dışındakiler (30, 55, 1000…) icra döngüsüne hiç
+   girmiyor; Postnikov sıçraması kâğıt üzerinde kalıyor.
+   → **AÇIK BORÇ**.
+4. **BEC, POVM'yi ve sükûtu boğuyor** -- ``g|Ψ|²`` faz kilidi belirsizlik
+   eşiğini sıfırladı; sükût 140 → 0, isabet %6,41 → %4,29.
+   → **AÇIK BORÇ**.
+5. **Python döngüsü hamallığı** -- 250 parametrenin 8 çevrimi 27 dakika;
+   vektörize edilse saniyeler sürmeli.
+   → **AÇIK BORÇ**.
