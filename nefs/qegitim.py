@@ -241,14 +241,15 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
 
 # =====================================================================
 def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
-                pencere: int = 8, sozluk: int = 16) -> Dict[str, object]:
+                pencere: int = 8, sozluk: int = 16,
+                azami_uret: int = 0) -> Dict[str, object]:
     """Hiç görülmemiş bulmacalar: hedef ızgara **tam** çözüldü mü?
 
     Ölçü serttir ve öyle olmalıdır. Ayrıca ilk belirteç isabeti ve
     ortalama hücre isabeti raporlanır; model hiçbir şey bilmiyorsa
     üçü de sıfır çıkar ve iddia edilecek bir şey kalmaz.
     """
-    cozulen = isabet = deneme = 0
+    cozulen = isabet = deneme = kesilen = 0
     hucre: List[float] = []
     sukut_sayisi = 0
     for g in gorevler[:azami]:
@@ -260,7 +261,14 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
         baglam = [int(x) % sozluk for x in dizi]
         h = [int(x) % sozluk for x in hedef]
         uretilen: List[int] = []
-        for _ in range(len(h)):
+        # Üretilecek belirteç sayısına HAD. Her belirteç tam bir kübit
+        # ileri geçişidir (ölçüldü: 0,53 sn); hedef 100 belirteçse tek
+        # görev 53 saniye eder ve "kısa CPU koşusu" iddiası yalan olur.
+        # Had konunca tam çözüm İMKÂNSIZ hâle gelir -- onun için had
+        # aşıldığında görev ``kesildi`` diye ayrı sayılır ve tam çözüm
+        # oranına dâhil EDİLMEZ; gizlenmez.
+        kac = len(h) if azami_uret <= 0 else min(len(h), azami_uret)
+        for _ in range(kac):
             pen = baglam[-pencere:] if len(baglam) >= pencere else \
                 ([0] * (pencere - len(baglam)) + baglam)
             P, o = _kos(nefs, pen, sozluk)
@@ -271,12 +279,15 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
             baglam.append(t)
         n = min(len(h), len(uretilen))
         dogru = sum(1 for i in range(n) if h[i] == uretilen[i])
-        hucre.append(dogru / max(len(h), 1))
-        if uretilen[:len(h)] == h:
+        hucre.append(dogru / max(n, 1))
+        if kac < len(h):
+            kesilen += 1
+        elif uretilen[:len(h)] == h:
             cozulen += 1
         if n and uretilen[0] == h[0]:
             isabet += 1
     return {"deneme": deneme, "tam_çözülen": cozulen,
+            "kesilen": kesilen,
             "ilk_belirteç_isabeti": isabet, "sükût": sukut_sayisi,
             "ortalama_hücre_isabeti":
                 float(np.mean(hucre)) if hucre else 0.0}

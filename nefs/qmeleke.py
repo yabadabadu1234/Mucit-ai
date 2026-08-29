@@ -588,14 +588,28 @@ class QTefekkur(QMeleke):
             j = lif.yuva % k                       # lifin dokunduğu eksen
             for i in range(q.n_satir):
                 q.tek(q.veri(i, j), donme(teta))
-            # uzak menzilli tutarlılık: mertebe kadar ötedeki satırla bağ
-            adim = lif.adim
-            if adim < q.n_satir:
-                duraklar = [q.veri(i, j) for i in range(0, q.n_satir, adim)]
-                if duraklar and max(duraklar) < q.kulli("makam", 0):
-                    q.mpo_topla("makam",
-                                [teta / len(duraklar)] * len(duraklar),
-                                duraklar=duraklar)
+            # Uzak menzilli tutarlılık. **Ölçülen ve düzeltilen kusur
+            # (kütük H54, 3. borç).** Mesafe evvelce SATIR cinsinden
+            # alınıyor ve ``adim < n_satir`` şartına takılıyordu. Ölçüldü:
+            # 6 satırlık bir girdide ``adım`` 1000. mertebe için 10,
+            # 60 000. mertebe için 17 çıkıyor; ikisi de 6'dan büyük
+            # olduğu için yüksek mertebelerin **ayırt edici tarafı olan
+            # uzak menzil hiç ateşlenmiyordu**. Geriye yalnız ``olcek``
+            # kalıyor, o da 1000 ile 60 000 arasında 0,126'ya karşı
+            # 0,083 -- yani ayrık motorun seçtiği yüksek mertebe fiilen
+            # hiçbir şey yapmıyordu.
+            #
+            # Doğrusu, mesafeyi satırda değil **kübit zincirinde** ölçmek.
+            # Yazmaç zaten bir zincirdir; 6 satır × 12 kübit = 72 kübitlik
+            # bir zincirde 17 adımlık bir sıçrama pekâlâ tanımlıdır ve
+            # satır sayısından bağımsızdır.
+            bas = q.veri(0, j)
+            son = q.kulli("makam", 0)
+            duraklar = list(range(bas, son, lif.adim))
+            if len(duraklar) >= 2:
+                q.mpo_topla("makam",
+                            [teta / len(duraklar)] * len(duraklar),
+                            duraklar=duraklar)
 
 
 @qkaydet

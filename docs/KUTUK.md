@@ -1012,3 +1012,221 @@ cevapları hazırladığını bildirdi. **Bunlar uydurulmayacaktır**:
 
 Bu üçü cevaplanmadan `ucagac.py`'deki kanaat açısı formülü
 yazılmayacaktır; H65'teki θ kusuru da onlara bağlıdır.
+
+---
+
+# DÖRDÜNCÜ CERİDE — modern kompakt temsiller ve GPU'da dalga eniyilemesi
+
+*Kullanıcı iki vesika verdi (NQS / Stabilizer Rank / PTR ve patlamasız
+dalga eniyilemesi) ve şunu istedi: "bu dosyaların kodunu yaz ve mimariye
+kesin bir surette bağla", "Kaggle'a yani gerçek 21×4 = 84 GB GPU'ya
+paralel çalışacak şekilde hazırla", "modelin tüm parametrelerini mümkün
+olan hududun en sonuna kadar aç", "en azından CPU'da eğitimin çok kısa
+hâli çalışabilmeli".*
+
+## H68 — NQS kuruldu: durum bir **dizi değil, fonksiyondur**
+
+`kuantum/nqs.py`. ``|Ψ⟩ = Σ_x ψ_θ(x)|x⟩``, ``ψ_θ = exp(Σ_k KAN_k(x))``.
+
+* Doğrusalsızlık **kenardadır** (KAN), Chebyshev tabanında açılır --
+  kütük H3'ün *"uydurma = KAN sembolik kapanışı"* şartıyla aynıdır.
+* Son kat **karmaşıktır**: faz da öğrenilir. Reel bir dalga ile girişim
+  olmaz; bu bir tercih değil şarttır.
+* Bellek ``2^N`` değil ``dim(θ)`` kadardır.
+* `ozellik()` son kattan önceki Chebyshev özelliklerini verir ve
+  ``log ψ`` onlarda **doğrusaldır** -- son kat **kapalı formda en küçük
+  karelerle** oturur. Gradyan yasağı böylece mahrumiyet değil usul olur.
+
+## H69 — Dalga eniyileyicisi: ``2^N`` hiçbir yerde açılmaz
+
+`kuantum/dalga.py`. Sebebi cebirdir: ``U_L`` köşegen, ``D`` rütbe-bir.
+Onun için ``G^k|Ψ₀⟩``ın genliği daima ``ψ₀(x)·P_k(z(x))``tir ve ``P_k``
+yalnız **momentlere** bağlıdır. Bütün Grover özyinelemesi ``k+1`` sayı
+üzerinde yürür; bellek ``O(k)``, ``N`` hiç girmez.
+
+Eşik orağında polinom uzayı **iki boyuta** çöker ve özyineleme kapalı
+formda çözülür (``α, β``); ``k* = round((π/2−θ)/(2θ))``, ``sin θ = √μ``.
+Vesikadaki ``(π/4)√(2^N/M)`` bunun ``μ→0`` haddidir.
+
+**AŞIRI İDDİA REDDEDİLDİ.** Klasik GPU'da bu usul ``√`` hızlanma
+**vermez**; Grover'ın hızlanması kuantum donanımına aittir. Kazanılan
+dört şey ölçülebilir: gradyansızlık, en iyi ``k``nın kapalı formda
+bilinmesi, kapalı formda öğrenme, ve tek noktadan değil bütün uzaydan
+tartma.
+
+## H70 — Dalga eniyileyicisinin ÜÇ kusuru ölçüldü ve düzeltildi
+
+Hiçbiri tahminle değil, ölçümle bulundu:
+
+1. **Örnekleyici kilitleniyordu.** Yalnız tek bit çevirmeyle kabul oranı
+   0,23 → 0,08'e düşüyor, zincirler tek havzada kalıyordu (3-SAT'ta 11'e
+   karşı rastgele 12). Düzeltme: çok bitli teklif + elit tohumlama +
+   **bağımsız teklif** (öğrenilen kenar dağılımından, MH düzeltmesiyle).
+2. **Eşik yükseliyordu.** Eşik her çevrimin kendi niceliğinden alınınca
+   dağılım keskinleştikçe eşik de 18'den 19'a çıkıyor, arama duruyordu.
+   Düzeltme: Dürr–Høyer eşiği **monoton azalır**.
+3. **Unutma ve aşırı keskinleşme.** Girişim çarpanı yalnız son 512
+   örneğe oturtulunca Rastrigin'de 12 çevrimde rastgeleyi geçiyor
+   (48,7'ye 54,6), **40 çevrimde yeniliyordu** (48,7'ye 35,4).
+   Düzeltme: Grover bir **tavlama takvimi** olarak kullanılır --
+   ``Δβ = ln R / ΔL``, ``R = (α/β)²`` -- ve hedef, biriken çarpan değil
+   mutlak yüzey ``−(β/2)L``dir. Tavlama hızı ``β·σ_L`` biriminde
+   sınırlanır; sınırsız bırakılınca Ackley'de ``β = 69,9``a çıkıp dalga
+   daha aramayı bitirmeden donuyordu.
+
+**Netice (ikili kodlu sürekli yüzey, 8 parametre × 6 bit = 48 kübit,
+40 çevrim × 512 örnek = 20 480 kayıp çağrısı, aynı bütçe):**
+
+| yüzey | dalga | rastgele arama |
+|---|---|---|
+| Ackley | **3,24** | 4,92 |
+| Rastrigin | 37,25 | **35,40** |
+
+**Rastrigin'de rastgele aramaya YENİLİYOR ve bu gizlenmiyor.** Sebebi
+ölçüldü: MCMC örnekleri bağımsız değildir; kabul oranı ~0,15 ve
+seyreltme 4 iken 20 480 örneğin müessir sayısı çok daha azdır.
+Rastgele arama i.i.d. örnek verir. Yani dalga usulünün bedeli
+**örnekleyicinin karışma maliyetidir** ve açık bir borçtur.
+
+## H71 — Stabilizer rank: dolaşıklık bedava, magic pahalı
+
+`kuantum/stabilizer.py`. Köşegen Clifford yörüngesi
+``|φ⟩ = 2^{−n/2} Σ_y i^{q(y)}|y⟩`` (``q`` kuadratik, mod 4).
+
+| ölçüm | netice |
+|---|---|
+| 60 Clifford kapısı (CZ+S) sonrası rank | **1** (dolaşıklık rankı hiç büyütmüyor) |
+| genlik büyüklüğü sapması | 0,00e+00 |
+| T kapısı: t=12 sonrası rank | 4096 (= 2^t, naif ayrışım) |
+
+**Naif budama İFLAS ETTİ ve bu bir kazançtır.** χ 4096→64 inince atılan
+``ℓ₂`` ağırlığı **1,607e-03** iken genlik hatası **9,866e-01**. Sebep:
+terimler dik değildir, ``ℓ₂`` katsayı ağırlığı hatanın ölçüsü değildir.
+
+**Bravyi–Gosset rastgele seyrekleştirmesi** yazıldı ve haddi altı
+satırın **hepsinde** tuttu (``𝔼‖Ψ−Ω‖² ≤ ‖c‖₁²/k``, ``‖c‖₁ = 2,586``):
+
+| k | ayrık terim | ölçülen hata | nazarî had |
+|---|---|---|---|
+| 16 | 16 | 3,252e-01 | 4,179e-01 |
+| 64 | 64 | **6,220e-02** | 1,045e-01 |
+| 256 | 253 | 1,955e-02 | 2,612e-02 |
+| 1024 | 907 | 4,933e-03 | 6,530e-03 |
+| 16384 | 4026 | 3,059e-04 | 4,081e-04 |
+
+Yani χ=64'te naif budama %98,7 hata verirken seyrekleştirme %6,2.
+
+**Temsil edilmeyen:** ``H`` kapısı. Umumî Clifford için CH-formu lazımdır;
+**yazılmadı ve yazıldığı iddia edilmiyor.** İhtiyacımız olan devre bu
+sınıftadır: referans ``|+⟩^n``, orak köşegen, difüzyon devre değil
+rütbe-bir cebir.
+
+## H72 — PTR kuruldu; **kendi tahminim yanlış çıktı**
+
+`kuantum/ptr.py`. Halka ``ψ(x) = Tr(Π G_k[:,x_k,:])``; sürekli
+parametrede ``G_k(t) = Σ_p C[k,p] T_p(t)``; uydurma **ALS ile kapalı
+formda** (gradyan yok).
+
+Halkanın üstünlüğünü hedefin **döngüselliğine** bağlamıştım. Ölçüm bunu
+**doğrulamadı**:
+
+| hedef | halka | zincir |
+|---|---|---|
+| döngüsel | **0,3547** | 0,5482 |
+| uçları açık | **0,3406** | 0,5435 |
+
+Halka her ikisinde de daha iyi. Demek ki kazanç dönemlilikten değil
+uçların **serbestliğinden** geliyor: zincirde uç vektörleri ``e₀``a
+sabitli, her iki uçta ``χ−1`` boyut boşa gidiyor. Dönemlilik faydası
+varsa bu ölçüm onu ayıramadı.
+
+Ayrıca bir kusur bulundu ve düzeltildi: zincir kolunun tasarım dizeyi
+iz formülüyle kuruluyordu; o hâliyle mukayese geçersizdi (zincir 1,22
+görünüyordu). Düzeltilince 0,548 oldu.
+
+Çevrim bedeli duruyor: halkada kanonik hâl yoktur. Onun için PTR **yüzey**
+temsilidir; **durum** temsili ağaçtadır (H53).
+
+## H73 — H54'ün üç borcu KAPANDI, ikisi ölçülü kaldı
+
+**3. borç -- yüksek mertebeler fiilen koşmuyor: KAPANDI.**
+Gerçeği ölçümle bulundu: 20 lifin **hepsi** kuruluyor ve koşuyordu,
+fakat uzak menzilli kısım ``adim < n_satir`` şartına takılıyordu.
+6 satırlık girdide ``adım`` 1000. mertebe için 10, 60 000. mertebe için
+17; ikisi de 6'dan büyük olduğu için **yüksek mertebelerin ayırt edici
+tarafı hiç ateşlenmiyordu**. Geriye yalnız ``olcek`` kalıyor, o da 1000
+ile 60 000 arasında 0,126'ya karşı 0,083. Düzeltme: mesafe satırda değil
+**kübit zincirinde** ölçülür (6×12 = 72 kübitlik zincirde 17 adım
+pekâlâ tanımlıdır). Şimdi 20 lifin hepsi MPO vuruyor: koşuda MPO sayısı
+30, norm hatası 2,22e-16, entropi 2,0794.
+
+**4. borç -- BEC sükûtu boğuyor: KAPANDI.** Ölçüldü:
+
+| | sükût | tasdik | tenakuz | P_Şek |
+|---|---|---|---|---|
+| BEC yok | 0,7924 | 0,3685 | 0,3305 | 0,1553 |
+| BEC (eski, bütün bloğa) | **0,0626** | 0,3499 | **0,5758** | 0,2561 |
+| BEC (yeni, yalnız hüküm alanlarına) | **0,7924** | 0,3499 | **0,3305** | 0,2561 |
+
+Yani eski hâl nefsi hem susamaz hem **daha çelişkili** kılıyordu.
+Düzeltme kavramîdir: BEC **hükmün ittihadıdır**; sükût bir hüküm
+değildir, tenakuz ve nakz da hüküm değil hükmün önündeki engellerdir.
+Yoğuşmaya (``YOGUSAN``) yalnız makam, mîzân, tasdik, kelam girer.
+
+**5. borç -- Python döngüsü hamallığı: KISMEN kapandı, ölçüldü.**
+Profil çıkarıldı: 3 satırlık minik koşuda ``einsum`` 0,420 sn tutuyor ve
+bunun **0,232 sn'si ``einsum_path``**, yani 2×2'lik tensörler için en iyi
+büzülme sırasını **aramak**. Sıra zaten sabittir. İki sıcak yol
+(``_cift_kapi_dilim``, ``tek_kapi_yuva``) yığın çarpımına çevrildi:
+
+| yazmaç | önce | sonra | kazanç |
+|---|---|---|---|
+| 3 satır × 4 kübit, χ=16 | 0,658 sn | **0,530 sn** | 1,24× |
+| 4 satır × 6 kübit, χ=32 | 2,767 sn | **2,619 sn** | 1,06× |
+| 6 satır × 12 kübit, χ=64 | 36,33 sn | **30,92 sn** | 1,17× |
+
+41 sınama geçmeye devam ediyor; ağaç kapısı hatası hâlâ 2,9e-15.
+**Kalan borç dürüstçe duruyor:** geri kalan maliyet minik dizeylerde
+LAPACK çağrı masrafıdır (SVD 0,324 sn, QR 0,352 sn). Asıl çare, ayrık
+çiftleri **yığın hâlinde** işlemektir; şu anki zincir düzeni (veri ile
+yerel hüküm kübitlerinin birbirine geçmesi) buna izin vermiyor.
+Düzeni değiştirmek ayrı bir hükümdür ve sorulmadan yapılmayacaktır.
+
+**2. borç -- 8 örnekli AS-GEK: yapı olarak kapatıldı, ölçümü Kaggle'da.**
+Dalga motorunda örnekler **birikir** (tampon); AS-GEK ise her çevrimde
+8 örneğini atıp yüzeyi sıfırdan kuruyordu. `AZAMI_KAGGLE` ayarında
+çevrim başına 4 096 örnek, 400 çevrimde ~1,6 milyon değerlendirme --
+250 boyut için gereken ``10·d = 2 500`` haddinin çok üstünde.
+
+## H74 — Kaggle: iş bölünür, ağırlık bölünmez
+
+`main/kaggle.py`, `hesap/donanim.py`, `docs/KAGGLE.md`.
+
+Gradyan olmadığı için (H3) cihazlar arası ``all_reduce`` **yoktur**.
+Bölünen şey iştir: kübit ileri geçişi süreçlere, NQS genlik ve
+örneklemesi cihazlara, Grover özyinelemesi hiç (zaten bedava).
+
+**84 GB'ın çoğu boşta kalır ve bu bir kusur değildir.** ``2^N`` hiçbir
+yerde açılmaz; VRAM'i tüketen tek şey yığın büyüklüğüdür. Onun için
+azamî ayarda büyütülen şey belleğe sığdırma numarası değil **örnek
+sayısıdır** -- yani istatistikî sağlamlık.
+
+**GPU yolu BURADA KOŞMADI ve koştuğu İDDİA EDİLMİYOR:** bu makinede
+torch yoktur. ``NQS._ileri_torch`` numpy yoluyla aynı formüldür, fakat
+aynı sayıyı verdiği ancak Kaggle'da ölçülebilir. `hesap/donanim.rapor()`
+hangi yolda olunduğunu her koşuda açıkça yazar.
+
+## H75 — Bütün parametreler açıldı
+
+`nefs/kulli_egitim.py:EgitimAyari`. Yazmaç ölçüleri (satır kübiti, χ,
+MERA kademesi), veri ölçüleri (görev, örnek, pencere, sözlük), kodlama
+(bit, yarıçap), dalga ölçüleri (NQS gizli katları, derece, çevrim,
+örnek, zincir, oran, kademe, λ) ve donanım (süreç) **tek yerdedir ve
+hiçbiri koda gömülü değildir**. Üç hazır ayar: `KISA_CPU`, `ORTA`,
+`AZAMI_KAGGLE`.
+
+Parametre kübite **Gri kodla** açılır: komşu tam sayılar tek bit
+farkeder (sınandı: ardışıklar arası bit farkı kümesi = {1}), dolayısıyla
+Metropolis'in tek bit çevirmesi parametre uzayında küçük bir adımdır.
+Düz ikili kodda 31→32 geçişi altı biti birden çevirir ve uzay sunî
+olarak uçurumlu görünür.

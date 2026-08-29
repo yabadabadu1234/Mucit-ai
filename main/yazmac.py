@@ -176,9 +176,20 @@ class Yazmac:
         sol = self.A[bas:bas + 2 * m:2]        # (m, X, 2, X)
         sag = self.A[bas + 1:bas + 2 * m:2]    # (m, X, 2, X)
         # Θ[m, a, i, j, c] = Σ_b sol[m,a,i,b] sag[m,b,j,c]
-        T = np.einsum("maib,mbjc->maijc", sol, sag, optimize=True)
-        T = T.reshape(m, X, 4, X)
-        T = np.einsum("pq,maqc->mapc", G.astype(self.tip), T, optimize=True)
+        #
+        # **Hız kusuru, ölçüldü ve kaldırıldı (kütük H54, 5. borç).**
+        # Bu iki büzülme ``np.einsum(..., optimize=True)`` ile
+        # yazılmıştı. Profil çıkarıldı: 3 kübitlik minik bir koşuda
+        # ``einsum`` 0,420 sn tutuyor ve bunun **0,232 sn'si**
+        # ``einsum_path``, yani yol arama. Yani vaktin yarısı, 2×2'lik
+        # tensörler için en iyi büzülme sırasını aramaya gidiyordu.
+        # Sıra zaten sabittir ve bellidir; ikisi de yığın çarpımıdır:
+        #   sol(m,X,2,X) → (m, 2X, X) ,  sag(m,X,2,X) → (m, X, 2X)
+        #   çarpım (m, 2X, 2X) tam olarak Θ'nın kendisidir.
+        T = np.matmul(sol.reshape(m, X * 2, X),
+                      sag.reshape(m, X, 2 * X)).reshape(m, X, 4, X)
+        Gt = G.astype(self.tip)
+        T = np.matmul(T.transpose(0, 1, 3, 2), Gt.T).transpose(0, 1, 3, 2)
         # (m, X, 2, 2, X) → (m, X·2, 2·X): sol yuva | sağ yuva kesiti
         T = T.reshape(m, X, 2, 2, X).reshape(m, X * 2, 2 * X)
         U, s, Vt = np.linalg.svd(T.astype(np.float32), full_matrices=False)
@@ -226,8 +237,13 @@ class Yazmac:
         """
         i = int(i) % self.n
         Ai = self.A[i]
-        np.einsum("pq,aqb->apb", G.astype(self.tip), Ai.copy(),
-                  out=Ai, optimize=True)
+        # Yığın çarpımı: (2, X·X) üzerinde tek bir ``G @ ·``. Aynı hız
+        # kusuru burada da vardı (bkz. ``_cift_kapi_dilim``); tek kübitlik
+        # kapı akışta en çok çağrılan işlemdir, yol araması orada bilhassa
+        # israftır.
+        X = Ai.shape[0]
+        B = Ai.transpose(1, 0, 2).reshape(2, -1)
+        Ai[:] = (G.astype(self.tip) @ B).reshape(2, X, -1).transpose(1, 0, 2)
 
     def cift_kapi_yuva(self, i: int, G: np.ndarray) -> float:
         """``(i, i+1)`` komşu çiftine tek bir ``4×4`` kapı.

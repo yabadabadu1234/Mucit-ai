@@ -35,6 +35,21 @@ from .qyazmac import MAKAM_ADLARI, QAyar, QYazmac, donme
 __all__ = ["QNefs", "rapor", "bec_faz_kilidi"]
 
 
+#: Yoğuşmaya (kondensata) **giren** küllî alanlar. Kütük H54, 4. borç:
+#: BEC bütün küllî bloğa vurulunca sükûtu boğuyordu. Ölçüldü:
+#: ``sukut 0,7924 → 0,0626`` (12,7 kat düşüş), üstelik ``tenakuz
+#: 0,3305 → 0,5758`` ve ``P_Şek 0,1553 → 0,2561`` -- yani faz kilidi
+#: nefsi hem susamaz hem daha çelişkili kılıyordu.
+#:
+#: Sebep kavramîdir, sayısal değil. BEC **hükmün ittihadıdır**: bütün
+#: parçaların tek bir faza kilitlenmesi. Sükût bir hüküm DEĞİLDİR;
+#: tenakuz ve nakz da hüküm değil, hükmün ÖNÜNDEKİ engellerdir. Onları
+#: da aynı faza kilitlemek, "bilmiyorum" diyebilme kabiliyetini
+#: (kütük H10) faz kilidiyle susturmak demektir. Onun için yoğuşmaya
+#: yalnız hüküm taşıyan alanlar girer.
+YOGUSAN: Tuple[str, ...] = ("makam", "mizan", "tasdik", "kelam")
+
+
 def bec_faz_kilidi(q: QYazmac, tur: int = 6, g: float = 0.35) -> None:
     """Gross–Pitaevskii faz kilidi -- **yalnız tepede** (kütük H30).
 
@@ -48,15 +63,16 @@ def bec_faz_kilidi(q: QYazmac, tur: int = 6, g: float = 0.35) -> None:
     yaklaşığı). Gerçek doğrusalsızlık okuma isterdi; bu, onun üniter
     ve okumasız karşılığıdır ve öyle bildirilir.
     """
-    n_alan = len(q.ayar.kulli_alanlar)
+    alanlar = [(ad, kac) for ad, kac in q.ayar.kulli_alanlar
+               if ad in YOGUSAN]
     for t in range(tur):
         # kinetik terim: blok içi komşu bağları
-        for ad, kac in q.ayar.kulli_alanlar:
+        for ad, kac in alanlar:
             for j in range(kac - 1):
                 q.cift(q.kulli(ad, j), _kinetik(0.12))
         # ortalama alan: her kübite aynı faz -- ittihad
         faz = g / (1.0 + t)
-        for ad, kac in q.ayar.kulli_alanlar:
+        for ad, kac in alanlar:
             for j in range(kac):
                 q.tek(q.kulli(ad, j), donme(faz))
 
