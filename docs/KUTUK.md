@@ -783,3 +783,118 @@ tayin edilmeyecek. Her vasıf her kademede hesaplanıp, hangi
 **ölçülecek**. Sebebi: 22 kanalın 19'unun zararlı çıkması (H46) gibi bir
 sürpriz burada da olabilir ve ajanın tasnif sezgisi bir kere daha
 yanılabilir.
+
+## H62 — Çıktının **boyutu aklın işidir**, müşahedenin değil
+
+Kullanıcı hükmü, **üç defa** tekrarlanmıştır:
+
+> *"Bu dağarcıkla çözülecek bir şey değil, bizzat kuantum zihni o boyutun
+> neden öyle olduğuna karar vermeli. Müşahede o boyutu görür ve işi
+> biter; o boyutun neden öyle değiştiği aklın işidir."*
+> *"Çünkü boyut girdi çıktı arasında değişiyorsa bu kaideye göre
+> değişmiştir, aklın işidir, müşahedenin değil."*
+
+Bunun neticeleri:
+
+* `nefs/boyut.py`'deki 22 elle yazılmış kaide **mekanizma değildir**;
+  yalnızca bir **taban ölçümüdür** (H48: sınama kümesinde **+0,0**).
+  Ana yolda kullanılmaz.
+* Çıktı ağacı (H56) **bütün muhtemel boyutlarda** açılır; boyut da
+  ihtimal uzayının bir parçasıdır, dışarıdan verilen bir çerçeve değil.
+* Boyutu daraltan şey melekelerin çıktı ağacına vurduğu kapılardır:
+  şahitlerde görülen münasebet yanlış boyutları **söndürür**.
+* Müşahedenin boyutla tek işi vardır: girdinin ve şahit çıktılarının
+  boyutunu **görmek**. Tahmin etmek onun salahiyetinde değildir.
+
+## H58 — 𝒪₂ Hayal: **sabit değil, çok katmanlı ve destekli depo**
+
+Kullanıcı hükmü:
+
+> *"Hayal bir depodur evet ama sadece o ağaçların deposu mudur
+> bilmiyorum, ve bu depo sabit değildir; sabit tarafları da vardır,
+> anlık olanı vardır, sürekli olanı vardır, yenilenebileni vardır.
+> Bunlar zihnin diğer melekeleri ile irtibat halindedir; neyi tutacaklarına,
+> neyi yenileyeceklerine, anlık olarak ne depo açıp nereye aktaracaklarına
+> **kendi karar vermez, destek alır**."*
+
+Zabıt:
+
+1. Hayal **en az üç kademelidir**: *sabit* (görev boyunca değişmeyen —
+   şahit ağaçları), *sürekli* (yavaş yenilenen — çıkarılmış münasebetler),
+   *anlık* (tek bir kapı dizisi boyunca yaşayan — çalışma yazmacı).
+2. Depo **yalnız ağaç deposu değildir**; ucu açıktır (kaide, makam, nakz
+   izi de hayalde durabilir).
+3. **Tahsis kararı hayalin kendisinin değildir.** Neyin tutulacağı,
+   neyin yenileneceği, anlık deponun nereye aktarılacağı başka
+   melekelerin (𝒪₄ Tertip, 𝒪₅ Tecrit, 𝒪₂₉ Teyit) **desteğiyle** verilir.
+   Yani hayal bir *edilgen* uzuvdur; yazma yetkisi dışarıdadır.
+
+Mimarîye bağlanışı: hayal, ağaçların ve yardımcı kübitlerin **tahsis
+defteridir**. Anlık kademe, kapı dizisi bitince yardımcı kübitleri
+tersinir devreyle **temizler** (Grover usulü); sürekli kademe temizlenmez.
+
+## H59 — 𝒪₃ Muhayyile: **ikisi birden** — hem diriltir hem uzağı bağlar
+
+Muhayyile ne yalnız hafızadan sûret çağırmaktır, ne yalnız uzak
+münasebet kurmaktır; **ikisi birden**dir.
+
+* *Diriltme*: hayalde duran (sabit yahut sürekli) bir sûreti anlık
+  kademeye geri getirir — ağaç üzerinde bir **alt-ağacın** yeniden
+  açılması.
+* *Uzağı bağlama*: ağaçta birbirinden uzak iki yaprağı **tek yol**
+  üzerinden bağlar (`agac.yol`). Ağacın ``O(log N)`` mesafesi tam da bu
+  melekenin ucuzlamasıdır: zincirde 899 adım, ağaçta 20 (H53).
+
+## H60 — 𝒪₄ Tertip: **umumî tertiptir** ve UZAYLARLA çalışır
+
+Kullanıcı hükmü (dikkat: *morfizm* değil, **uzay** dedi):
+
+> *"Tertibin vazifesi umumi olarak bir şeyi tertip etmektir. Gayeyi de
+> tertip eder, stratejiyi de, sorduğu bir suali de, aldığı bir cevabı da.
+> Bunun için **sonsuz kategoriden türetilebilen çeşitli uzaylar** kullanır
+> — uzay diyorum dikkat et, morfizm falan demiyorum: **kapalı devir, açık
+> devir, boru hattı, ağaç, katmanlaştırma** ve daha çok **mütedahiliyet**;
+> ve bizim bilmediğimiz tertip usulleri daha keşfedebilir, **ucu
+> açıktır**."*
+
+Zabıt:
+
+1. Tertibin nesnesi **her şeydir**: gaye, strateji, sual, cevap, kapı
+   dizisi. Yalnız meleke sırası değildir.
+2. Kullandığı şey **uzaydır**, morfizm değil. Yani tertip bir ok dizisi
+   seçmez; içinde tertibin yaşadığı bir **şekil** seçer.
+3. Bilinen uzaylar en az şunlardır ve `nefs/mertebe.py`'deki 20 liften
+   türetilir: **kapalı devir** (geri besleme), **açık devir** (tek geçiş),
+   **boru hattı** (ardışık kademe), **ağaç** (dallanma), **katmanlaştırma**
+   (Postnikov kulesi), **mütedahiliyet** (iç içe geçme).
+4. **Ucu açıktır**: liste kapalı sayılmaz; tertip yeni bir uzay
+   keşfederse mimarî onu kabul etmek zorundadır. Bu yüzden tertip sabit
+   bir `AKIS` listesi olarak yazılamaz.
+
+Bu hüküm, mevcut `AKIS` sabit listesini **kusurlu** îlan eder: 41 meleke
+sabit sırayla koşuyorsa tertip diye bir meleke fiilen yoktur.
+
+## H61 — 𝒪₅ Tecrit: Mera'dan da dolaşıklık çözücüden de **fazlasıdır**
+
+Kullanıcı hükmü:
+
+> *"Tecrit ikisinden de fazlası olan bir şey. Şu an bilmiyorum ama ne
+> sadece Mera'dır, ne sadece dolanıklık çözücüdür; zihnin diğer
+> bölümleriyle etkileşimde olan bir şeydir."*
+
+Kullanıcının verdiği **altı kademeli** akış (biyolojik yola koşut) ve
+formülleri aynen zabıtlanır:
+
+| kademe | usul | formül |
+|---|---|---|
+| 1 | **Demet (sheaf)** — mahallî müşahedelerin uyuşması | ``Res_i(X_i) − Res_j(X_j) = 0`` |
+| 2 | **Funktor** — küresel hâlden mânâ çıkarma | ``S_ham = F(X_küresel) = W_fonksiyonel · X_küresel`` |
+| 3 | **Grassmann** — alâkalı alt uzaya izdüşüm | ``P_G = G_t(G_tᵀG_t)⁻¹G_tᵀ`` |
+| 4 | **Dikkat** — izdüşüm üstünde tartma | ``D_t = Softmax((P_G·S_ham·W_d)/√d_k)`` , ``S_t = D_t·S_ham`` |
+| 5 | **İlliyet (DAG)** — sebep ağı, çevrimsizlik şartı | ``A_neden = Sigmoid((S_t·W_neden·S_tᵀ)/√d_sem)`` , ``İz(exp(A∘A)) − Boyut = 0`` |
+| 6 | **Müdahale + terkip** | ``İllet_Müdahale = Σ_H P(S_hedef\|S_kaynak=z,H)·P(H)`` , ``İ_t = GELU(İllet_Müdahale·W_i + H_t·W_hi)`` |
+
+Devamı 𝒪₄'ün strateji manifoldu (Mutasarrıfa) ve program terkibi +
+tasdiktir. **Çevrimsizlik şartı** (``İz(exp(A∘A)) = Boyut``) dikkat
+çekicidir: ağacın çevrimsizliğiyle (H53) aynı kaidedir — tesadüf
+değildir, tecridin ağaç üstünde yaşamasının sebebidir.
