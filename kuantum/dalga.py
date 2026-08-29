@@ -54,11 +54,11 @@ from __future__ import annotations
 import math
 import time
 from dataclasses import dataclass
-from typing import Callable, Dict, List, Optional, Sequence, Tuple
+from typing import Callable, Dict, List, Optional, Tuple
 
 import numpy as np
 
-from .nqs import NQS, NQSAyar
+from .nqs import NQS
 
 __all__ = ["moment_kestir", "grover_katsayilari", "en_iyi_k",
            "grover_ikili", "DalgaEniyileyici"]

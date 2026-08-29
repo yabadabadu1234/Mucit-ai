@@ -20,9 +20,8 @@ from __future__ import annotations
 
 import math
 import time
-import traceback
 from dataclasses import dataclass
-from typing import Callable, Dict, List, Optional, Tuple
+from typing import Callable, Dict, List, Tuple
 
 import numpy as np
 

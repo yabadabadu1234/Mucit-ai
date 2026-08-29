@@ -36,7 +36,7 @@ mümkün olmasının şartı budur. Reel bir dalga ile Grover yapılamaz.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Callable, Dict, List, Optional, Sequence, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 

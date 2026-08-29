@@ -34,20 +34,19 @@ sıfır kalıyorsa o da bir hükümdür ve gizlenmez.
 """
 from __future__ import annotations
 
-import math
 import os
 import time
-from dataclasses import dataclass, field
-from typing import Callable, Dict, List, Optional, Sequence, Tuple
+from dataclasses import dataclass
+from typing import Dict, Optional, Sequence, Tuple
 
 import numpy as np
 
-from hesap.donanim import Donanim, donanim, parcala
-from kuantum.dalga import DalgaEniyileyici, en_iyi_k, grover_ikili
+from hesap.donanim import Donanim, donanim
+from kuantum.dalga import DalgaEniyileyici
 from kuantum.nqs import NQS, NQSAyar
 
 from .qakis import QNefs
-from .qegitim import degerlendir, mizan_cezasi, ornekler, uygunluk
+from .qegitim import degerlendir, ornekler, uygunluk
 from .qyazmac import QAyar
 
 __all__ = ["EgitimAyari", "KISA_CPU", "ORTA", "AZAMI_KAGGLE",
