@@ -737,3 +737,49 @@ almadı. Beşi de doğrudur ve dördü hâlâ ayaktadır; borç olarak zabıtlan
 5. **Python döngüsü hamallığı** -- 250 parametrenin 8 çevrimi 27 dakika;
    vektörize edilse saniyeler sürmeli.
    → **AÇIK BORÇ**.
+
+---
+
+# ÜÇÜNCÜ CERİDE — melekelerin mimariye tek tek bağlanması
+
+*Kullanıcı hükmü: "Kurduğum kuantum mimarisiyle melekeleri zaten hiç
+barıştırmadık; senin bana teker teker hangi melekenin ne formülü
+olacağını, mimariye nasıl entegre edileceğini tek tek sorman lazım."*
+Bu ceride o suallerin ve hükümlerin yeridir. Her meleke ayrı zabıttır.
+
+## H55 — 𝒪₁ Müşahede **iki kademelidir**
+
+* **Hissî müşahede (1. mertebe): KLASİK.** Hücre, renk, bitişiklik,
+  sınır. Göz bir ölçüm aletidir (CPTP kanalı); süperpozisyona girmez,
+  hüküm vermez, kanal üretir. `nefs/mubser.py` budur.
+* **Aklî müşahede (2. mertebe): ÜNİTER.** Nesneler arası emsal,
+  aykırılık, küllî nizam. Ağaç üzerinde kapı olarak koşar.
+
+İbnü'l-Heysem'in *Kitâbü'l-Menâzır*'daki **mücerred his** / **kıyas-ı
+hafî** ayrımına birebir oturur. Kıyas (𝒪₁₈) ise ancak hükmü bir
+nesneden ötekine **taşıdığında** başlar; emsali görmek hâlâ müşahededir.
+
+## H56 — **ÜÇ AĞAÇ**: her şahit + test girdisi + çıktı
+
+ARC'de 2-4 gösterim çifti vardır ve her biri bir **şahittir** (H6).
+Mimari şudur:
+
+    [şahit₁ girdi ağacı] [şahit₁ çıktı ağacı]   ← ikisi de KİLİTLİ
+    [şahit₂ girdi ağacı] [şahit₂ çıktı ağacı]   ← ikisi de KİLİTLİ
+    ...
+    [test girdi ağacı]   ← KİLİTLİ
+    [ÇIKTI ağacı]        ← bütün ihtimallerde AÇIK (süperpozisyon)
+
+Melekeler şahit ağaçlarından çıktı ağacına kapı vurur: şahitlerde
+müşahede edilen münasebet, çıktı ağacındaki ihtimalleri söndürür.
+Kıyas (𝒪₁₈) ve nakz (𝒪₂₃) ancak böyle fiilen işleyebilir -- tek ağaçta
+şahitlik diye bir şey olamaz.
+
+## H57 — Vasıf-kademe tasnifini **ölçüm koyar, ajan değil**
+
+Hangi mübser vasfın ağacın hangi kademesinde yaşayacağı elle
+tayin edilmeyecek. Her vasıf her kademede hesaplanıp, hangi
+``(vasıf, kademe)`` çiftinin ARC kaidesini en çok ayırt ettiği
+**ölçülecek**. Sebebi: 22 kanalın 19'unun zararlı çıkması (H46) gibi bir
+sürpriz burada da olabilir ve ajanın tasnif sezgisi bir kere daha
+yanılabilir.
