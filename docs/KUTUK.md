@@ -621,3 +621,61 @@ oranı 0,99). Doğru test: bir renkli dizi kesilip **aynı hizada** devam
 ediyorsa orada örtme vardır -- kesen ön, kesilen arka katmandır.
 Ayrıca şeffafiyet tek ızgarada değil **girdi-çıktı arasında** aranır:
 girdide örtülü olan çıktıda ortaya çıkıyorsa örtme çözülmüştür.
+
+## H51 — İhtimal uzayı kübitlerin **bizzat içidir**
+
+Kullanıcı hükmü: *"İhtimal uzayı o ızgaranın olabileceği tüm
+ihtimallerdir. 30×30=900, yani 10⁹⁰⁰ ihtimal var; 22 milyon kübitle
+2^22milyon olur. İhtimal uzayı bizzat o kübitlerin içidir."*
+
+Hesap doğrulandı (`nefs/ihtimal.py`):
+
+| ızgara | hücre | ihtimal | asgarî kübit | fiilî kübit (4/hücre) | 22M ile |
+|---|---|---|---|---|---|
+| 3×3 | 9 | 10⁹ | 30 | 36 | 611.111 ızgara |
+| 10×10 | 100 | 10¹⁰⁰ | 333 | 400 | 55.000 ızgara |
+| **30×30** | 900 | **10⁹⁰⁰** | **2.990** | **3.600** | **6.111 ızgara** |
+
+**Bu, el yazması kaide dağarcığının nakzıdır (H48).** Kaide yazılmaz,
+aranmaz bile: bütün ızgaralar zaten süperpozisyondadır; melekelerin işi
+kaideye uymayanları yıkıcı girişimle söndürmektir.
+
+Ayrıca kullanıcı ikinci kez şunu hükmetti: **boyut kaidesi dağarcıkla
+çözülmez.** Müşahede boyutu görür ve işi biter; o boyutun **neden** öyle
+değiştiği aklın işidir. `nefs/boyut.py` bir mekanizma değil, yalnız bir
+taban ölçümdür.
+
+## H52 — MPS, iki boyutlu ihtimal uzayı için **YANLIŞ HENDESEDİR**
+
+`nefs/ihtimal.py` kuruldu ve ölçüldü. Üç adım da çalışıyor:
+AÇ (18 kübit, 4⁹ = 262.144 ızgara, entropi 0, Schmidt 1 -- süperpozisyon
+bedava), SÖNDÜR (kısıt operatörleri üniter), OKU (POVM, çöküş yok).
+Kilitleme dört rengin dördünde de doğru (uç sırası kusuru bulunup
+düzeltildikten sonra).
+
+**Fakat kısıt uygulandıkça ``χ`` üssel şişiyor:**
+
+| ızgara | χ=16 | χ=64 | χ=256 |
+|---|---|---|---|
+| 3×3 | 3,41 | **2,75e-03** ✓ | — |
+| 4×4 | 10,0 | 8,68 | **1,17e-01** (44 sn) |
+| 5×5 | 19,3 | 19,8 | **20,7** ✗ (90 sn) |
+
+**Kanun bulundu ve rakamlar birebir tutuyor:**
+
+    χ_gerekli ≈ renk^w        (w = ızgara genişliği)
+
+4 renkle: 4³=64 → 3×3 tuttu; 4⁴=256 → 4×4 zar zor; 4⁵=1024 > 256 →
+5×5 çöktü. Üç ölçüm de tahmini doğruladı.
+
+**ARC için: 30×30, 10 renk → χ ≈ 10³⁰. İMKÂNSIZ.**
+
+Sebebi MPS'in alan kanunudur: tek boyutlu zincire serilen iki boyutlu
+bir kısıt ağı, kesitten geçen **kenar uzunluğu** kadar dolaşıklık
+taşır. `main/yazmac.py`'nin 6.000.000 kübitlik MPS temeli -- bütün
+ölçülmüş başarılarına rağmen -- **ARC için yanlış hendesedir**. Metin
+sıralı olduğu için MPS metinde doğrudur; ızgara iki boyutlu olduğu için
+ızgarada değildir.
+
+Bu, H26'nın (tensör treni yerine ağaç/MERA) ARC'ye tatbik edilmiş ve
+**rakamla ispatlanmış** hâlidir.
