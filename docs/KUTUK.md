@@ -565,3 +565,59 @@ olmalıdır, *dönüşüm* altında değil.
 
 **Aşırı iddia yasağı:** AUC 0,90 ARC'yi çözmek değildir. Görev kimliğini
 ayırt etmek, çıktı ızgarasını üretmek demek değildir.
+
+## H47 — Ölçüt İKİDİR ve ikisi de her raporda yan yana yazılır
+
+Kullanıcı hükmü. Ara ölçüt **çıktı boyutu isabeti**, nihai ölçüt **tam
+çözüm**. Ara ölçüt ilerlemeyi gösterir, nihai ölçüt hükmü verir. Ara
+ölçüt yükselirken tam çözüm sıfır kalıyorsa **bu da bir hükümdür ve
+gizlenmez**.
+
+Sebebi: ajan bir mesajda ölçütünü neticeye göre değiştirdi
+("yoğunlaşma" yanlış çıkınca "AUC" koydu ve yeni ölçüt onu memnun eden
+bir sayı verdi). Ölçütü ölçen koyarsa kendini kandırır; ölçütü **mucit
+koyar**.
+
+## H48 — El yazması kaide dağarcığı yabancı görevde **sıfır** getirdi
+
+`nefs/boyut.py`: 22 boyut kaidesi (aynı, devrik, dolu kutu, en büyük
+nesne, ×k, ÷k, nesne sayısı, sabit boyut…). Kaide, eğitim çiftlerinin
+**hepsini** sağlamazsa reddedilir (H6 nakz); hiçbiri sağlamazsa model
+**susar** (H10).
+
+Ölçülen:
+
+| | ahmak taban (hep "aynı boyut") | kaide dağarcığı | kazanç |
+|---|---|---|---|
+| eğitim (400 görev) | %68,3 | **%89,5** | **+21,2** |
+| **değerlendirme (120 görev)** | **%70,0** | **%70,0** | **+0,0** |
+
+Konuşunca isabet %96,6; sükût 33; yanlış 3.
+
+**Hüküm:** öğrenilmiş parametre yoktur, fakat **tasarım aşırı
+uydurulmuştur**. Eğitim kümesine bakıp ona göre kaide yazmak, o kümeye
+ezber yapmaktır; yabancı görevde ahmak tabana çöker. El yazması kaide
+dağarcığı ARC için bir yol değildir -- kaide **yazılmaz, çıkarılır**.
+
+Bu, kullanıcının koyduğu ölçüt sayesinde yakalandı. Ajan kendi ölçütünü
+koysaydı %89,5'i rapor edip ilerleme sanacaktı.
+
+## H49 — Şeklin hakiki tarifi yazıldı
+
+Evvelce şekil diye bir şey yoktu: yalnız "maskeler birebir eşit mi" vardı
+ve tek hücre farkı emsalliği düşürüyordu. `_sekil_tarifi` sekiz ölçü
+verir, hepsi ötelemeden bağımsız: delik sayısı (Betti₁), çevre, tıkızlık
+(`çevre²/alan`), doluluk, dihedral simetri mertebesi, ikinci merkezî
+momentler (`m20/m02/m11`).
+
+Bilinen şekillerde doğrulandı: dolu kare (delik 0, simetri 8), halka
+(delik 1, simetri 8), iki delikli (delik 2, simetri 4), yatay çizgi
+(m20=0, m02=0,4), dikey çizgi (m20=0,4, m02=0), L (simetri 2).
+
+## H50 — Şeffafiyet kavşakta değil **süreklilikte** aranır
+
+Kullanıcı hükmü. Kavşakta üçüncü renk araması kanalı öldürmüştü (sıfır
+oranı 0,99). Doğru test: bir renkli dizi kesilip **aynı hizada** devam
+ediyorsa orada örtme vardır -- kesen ön, kesilen arka katmandır.
+Ayrıca şeffafiyet tek ızgarada değil **girdi-çıktı arasında** aranır:
+girdide örtülü olan çıktıda ortaya çıkıyorsa örtme çözülmüştür.

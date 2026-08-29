@@ -81,6 +81,7 @@ class Nesne:
     merkez: Tuple[float, float]
     sekil: np.ndarray               # kutuya kırpılmış ikili maske
     tenasub: Tuple[float, float, float]   # (en/boy, yatay sim., dikey sim.)
+    tarif: Dict[str, float] = field(default_factory=dict)  # ŞEKLİN TARİFİ
 
 
 @dataclass
@@ -108,6 +109,8 @@ class Mesud:
     mukayese: np.ndarray            # (H, W) aykırılık alanı (Teşabüh DEĞİL)
     emsal: Dict[str, float]         # NESNELER arası Teşabüh(+)/İhtilaf(−)
     katman: Dict[str, float]        # kavşak / kesafet / şeffafiyet
+    sekil_ozeti: Dict[str, float]   # ŞEKLİN tarifi, ızam ağırlıklı
+    sureklilik: Dict[str, float]    # örtme hadiseleri (katman delili)
     husn: float
     kubh: float
 
@@ -314,7 +317,8 @@ def _bilesenler(g: np.ndarray, zemin: int = 0,
             kutu=(int(ust), int(sol), int(alt), int(sag)),
             merkez=(float(A[:, 0].mean()), float(A[:, 1].mean())),
             sekil=maske,
-            tenasub=_tenasub_maske(maske)))
+            tenasub=_tenasub_maske(maske),
+            tarif=_sekil_tarifi(maske)))
     out.sort(key=lambda n: (-n.izam, n.kutu))
     return out
 
@@ -366,6 +370,162 @@ def _bud(g: np.ndarray, nesneler: Sequence[Nesne]) -> np.ndarray:
 # =====================================================================
 #  Tabaka 3 — küllî vasıflar
 # =====================================================================
+def _sekil_tarifi(m: np.ndarray) -> Dict[str, float]:
+    """**Şeklin hakiki tarifi.** Evvelce şekil diye bir şey yoktu.
+
+    Şekil yalnız ``emsal_şekil`` içinde "maskeler birebir eşit mi" diye
+    geçiyordu; bu son derece kırılgandır -- **tek hücre farkı emsalliği
+    düşürür**. Ablasyonda 19 kanalın zararlı çıkmasının en kuvvetli
+    şüphelisi buydu ve tarif yazılmadan hüküm verilemezdi.
+
+    Yedi ölçü, hepsi ötelemeden bağımsız, çoğu ölçekten de:
+
+    * ``betti1``   -- delik sayısı. Şeklin topolojik cinsi; ARC'de
+      "içi dolu mu boş mu" bulmacalarının doğrudan cevabı.
+    * ``cevre``    -- dış sınır uzunluğu (dolu hücrenin boş komşusu).
+    * ``tıkızlık`` -- ``çevre²/alan``. Daire en tıkız, ince çizgi en
+      dağınıktır; ölçekten bağımsızdır.
+    * ``doluluk``  -- ``alan / kutu alanı``. Dikdörtgen 1, çapraz çizgi
+      ``1/n``dir.
+    * ``simetri``  -- 8 katlı dihedral grubun kaçı şekli sabit bırakıyor
+      (1 = hiç simetri yok, 8 = kare/daire gibi tam simetrik).
+    * ``m20/m02``  -- ikinci merkezî momentler, alana normalize. Şeklin
+      yatay mı dikey mi uzandığını **maskeye bakmadan** söyler.
+    * ``m11``      -- çapraz moment; eğik uzanımı verir.
+
+    Bunlar bir "gömme" (embedding) değildir; her biri **okunabilir bir
+    vasıftır** ve hangi ARC kaidesine dokunduğu söylenebilir.
+    """
+    h, w = m.shape
+    alan = float(m.sum())
+    if alan == 0:
+        return {"betti1": 0.0, "çevre": 0.0, "tıkızlık": 0.0,
+                "doluluk": 0.0, "simetri": 8.0,
+                "m20": 0.0, "m02": 0.0, "m11": 0.0}
+
+    # çevre: dolu hücrenin boş (yahut kutu dışı) komşu sayısı
+    P = np.pad(m, 1, constant_values=False)
+    cevre = 0.0
+    for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+        kaydir = P[1 + dr:1 + dr + h, 1 + dc:1 + dc + w]
+        cevre += float((m & ~kaydir).sum())
+
+    # betti1: kutu içindeki boş bölgelerden kenara ULAŞAMAYANLARIN sayısı.
+    # Kenara ulaşanlar dış boşluktur, delik değildir.
+    bos = ~m
+    gorulmus = np.zeros_like(bos)
+    yigin = []
+    for i in range(h):
+        for j in (0, w - 1):
+            if bos[i, j] and not gorulmus[i, j]:
+                gorulmus[i, j] = True
+                yigin.append((i, j))
+    for j in range(w):
+        for i in (0, h - 1):
+            if bos[i, j] and not gorulmus[i, j]:
+                gorulmus[i, j] = True
+                yigin.append((i, j))
+    while yigin:
+        i, j = yigin.pop()
+        for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+            a, b = i + dr, j + dc
+            if 0 <= a < h and 0 <= b < w and bos[a, b] and not gorulmus[a, b]:
+                gorulmus[a, b] = True
+                yigin.append((a, b))
+    ic_bos = bos & ~gorulmus
+    delik = 0
+    kalan = ic_bos.copy()
+    while kalan.any():
+        i, j = map(int, np.argwhere(kalan)[0])
+        delik += 1
+        y = [(i, j)]
+        kalan[i, j] = False
+        while y:
+            a, b = y.pop()
+            for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                p_, q_ = a + dr, b + dc
+                if 0 <= p_ < h and 0 <= q_ < w and kalan[p_, q_]:
+                    kalan[p_, q_] = False
+                    y.append((p_, q_))
+
+    # dihedral simetri: 8 dönüşümün kaçı şekli sabit bırakıyor
+    sim = 0
+    for k in range(4):
+        R = np.rot90(m, k)
+        if R.shape == m.shape and np.array_equal(R, m):
+            sim += 1
+        Y = R[:, ::-1]
+        if Y.shape == m.shape and np.array_equal(Y, m):
+            sim += 1
+
+    # merkezî momentler (alana normalize → ölçekten bağımsız)
+    idx = np.argwhere(m)
+    y0, x0 = idx.mean(0)
+    dy = idx[:, 0] - y0
+    dx = idx[:, 1] - x0
+    n2 = alan ** 2
+    return {"betti1": float(delik),
+            "çevre": cevre,
+            "tıkızlık": float(cevre * cevre / alan),
+            "doluluk": float(alan / (h * w)),
+            "simetri": float(sim),
+            "m20": float((dy * dy).sum() / n2),
+            "m02": float((dx * dx).sum() / n2),
+            "m11": float((dy * dx).sum() / n2)}
+
+
+def _sureklilik(g: np.ndarray) -> Dict[str, float]:
+    """**Şeffafiyet, kavşakta değil SÜREKLİLİKTE aranır** (kullanıcı hükmü).
+
+    Evvelce "kavşakta üçüncü renk var mı" diye arandı ve kanal öldü
+    (sıfır oranı 0,99). Doğru testi kullanıcı verdi: *"bir ızgara
+    çizgisinin renkli bir karenin içinden kesilmeden geçmesi"*.
+
+    Ölçü şudur: bir ``c`` renkli dizi, bir ``d`` rengiyle kesilip
+    öbür tarafta **aynı hizada** ``c`` ile devam ediyorsa, orada bir
+    **örtme hadisesi** vardır: ``c`` arkada, ``d`` öndedir. Bu, tek
+    ızgarada görülebilen hakiki bir katman delilidir.
+
+    * ``örtme``     -- kaç yerde böyle bir kesinti-devam var.
+    * ``ön_renk``   -- örten (öndeki) rengin çeşitliliği.
+    * ``arka_renk`` -- örtülen (arkadaki) rengin çeşitliliği.
+    """
+    H, W = g.shape
+    ortme = 0
+    on: Dict[int, int] = {}
+    arka: Dict[int, int] = {}
+
+    def tara(A: np.ndarray) -> None:
+        nonlocal ortme
+        h, w = A.shape
+        for i in range(h):
+            j = 0
+            while j < w:
+                c = A[i, j]
+                if c == 0:
+                    j += 1
+                    continue
+                k = j
+                while k < w and A[i, k] == c:
+                    k += 1
+                # dizi [j,k) ; kesinti ve devam var mı
+                t = k
+                while t < w and A[i, t] != c and A[i, t] != 0:
+                    t += 1
+                if k < t < w and A[i, t] == c and (t - k) <= 3:
+                    ortme += 1
+                    d = int(A[i, k])
+                    on[d] = on.get(d, 0) + 1
+                    arka[int(c)] = arka.get(int(c), 0) + 1
+                j = k
+
+    tara(g)
+    tara(g.T)
+    return {"örtme": float(ortme),
+            "ön_renk": float(len(on)),
+            "arka_renk": float(len(arka))}
+
+
 def _tenasub_maske(m: np.ndarray) -> Tuple[float, float, float]:
     """Tenasüb: (en/boy oranı, yatay simetri, dikey simetri)."""
     h, w = m.shape
@@ -546,6 +706,16 @@ def musahede_et(izgara: np.ndarray) -> Mesud:
     muk = _mukayese(g)
     ems = _emsal(nesneler)
     kat = _seffafiyet(g)
+    sur = _sureklilik(g)
+    if nesneler:
+        w_ = np.array([n.izam for n in nesneler], float)
+        w_ = w_ / w_.sum()
+        anahtarlar = list(nesneler[0].tarif.keys())
+        sek = {k: float(w_ @ np.array([n.tarif[k] for n in nesneler]))
+               for k in anahtarlar}
+    else:
+        sek = {k: 0.0 for k in ("betti1", "çevre", "tıkızlık", "doluluk",
+                                "simetri", "m20", "m02", "m11")}
     # Hüsn: intizam. Simetri yüksek, aykırılık düşük, oran dengeli ise
     # güzeldir. Türevdir; ayrı bir detektörü yoktur (mertebe 2).
     # Hüsn TÜREVDİR (mertebe 2): simetri × emsal-nizamı ÷ oran sapması.
@@ -568,6 +738,8 @@ def musahede_et(izgara: np.ndarray) -> Mesud:
         mukayese=muk,
         emsal=ems,
         katman=kat,
+        sekil_ozeti=sek,
+        sureklilik=sur,
         husn=husn,
         kubh=1.0 - husn)
 
@@ -608,4 +780,16 @@ def devinim_olc(a: Mesud, b: Mesud) -> Dict[str, float]:
         out["Δ" + k] = float(b.emsal[k] - a.emsal[k])
     for k in ("kavşak", "kesafet", "şeffafiyet"):
         out["Δ" + k] = float(b.katman[k] - a.katman[k])
+    # ŞEKLİN tarifi -- yeni ve asıl kanal
+    for k in a.sekil_ozeti:
+        out["Δş_" + k] = float(b.sekil_ozeti[k] - a.sekil_ozeti[k])
+    # ŞEFFAFİYET: kullanıcı hükmü gereği girdi-çıktı ARASINDA aranır.
+    # Girdide örtülü olan çıktıda ortaya çıkıyorsa, örtme çözülmüştür;
+    # tersi ise örtme kurulmuştur. Tek ızgarada görünmeyen budur.
+    for k in ("örtme", "ön_renk", "arka_renk"):
+        out["Δsür_" + k] = float(b.sureklilik[k] - a.sureklilik[k])
+    out["örtme_çözüldü"] = float(a.sureklilik["örtme"] > 0
+                                 and b.sureklilik["örtme"] == 0)
+    out["örtme_kuruldu"] = float(a.sureklilik["örtme"] == 0
+                                 and b.sureklilik["örtme"] > 0)
     return out
