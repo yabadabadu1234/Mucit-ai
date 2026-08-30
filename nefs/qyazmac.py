@@ -252,12 +252,125 @@ class QYazmac:
         self.iz.kesme += self.y.cift_kapi_yuva(i, G)
         self.iz.kapi += 1
 
-    def uzak_cift(self, i: int, j: int, G: np.ndarray) -> None:
-        """Uzak ``(i, j)`` çiftine kapı -- takas ağıyla, sonra iade.
+    # -- YIĞIN KAPILAR: melekelerin Python döngüsünü kaldıran arayüz ---
+    def tek_yigin(self, yuvalar: Sequence[int], G: np.ndarray) -> None:
+        """``m`` ayrık yuvaya ``m`` ayrı tek kübitlik kapı -- tek çağrı.
 
-        Tek bir uzak kapı için kullanılır. Çok sayıda uzak kapı varsa
-        ``supur`` kullanılmalıdır: o, hepsini tek geçişte halleder.
+        Melekeler ``for i: for j: q.tek(...)`` yazıyordu; ölçüldü, kapı
+        başına ~0,8 ms'nin neredeyse tamamı Python çağrı masrafıydı
+        (kütük H79). Burada hepsi tek yığın çarpımına iner. ``G`` ya
+        ``(2,2)`` (hepsine aynı) ya ``(m,2,2)``dir.
         """
+        yv = np.asarray(yuvalar, np.intp)
+        if yv.size == 0:
+            return
+        self.y.tek_kapi_yigin(yv, G)
+        self.iz.kapi += int(yv.size)
+
+    def cift_yigin(self, sol_yuvalar: Sequence[int], G: np.ndarray) -> float:
+        """Ayrık komşu çiftlerin **hepsine** tek yığın SVD'siyle kapı."""
+        yv = np.asarray(sol_yuvalar, np.intp)
+        if yv.size == 0:
+            return 0.0
+        k = float(self.y.cift_kapi_yigin(yv, G))
+        self.iz.kesme += k
+        self.iz.kapi += int(yv.size)
+        return k
+
+    # -- Uzak çift: iki yol, eşiği ÖLÇÜM koyar ------------------------
+    @property
+    def mpo_esigi(self) -> int:
+        """Bu mesafeden itibaren takas yerine MPO -- **ölçümden çıktı**.
+
+        `nefs/uzaklik_olcumu.py` ikisini aynı durumda koşturdu ve netice
+        **beklentimin tersi** çıktı; ikisi de zabıtlanır:
+
+        * **HIZ:** MPO takastan daha YAVAŞ. χ=32'de 2,8-3 kat yavaş,
+          χ=16'da ~1,1 kat yavaş; yalnız χ=8 ve mesafe ≥ 8'de biraz
+          hızlı (1,02-1,16 kat). Yani H41'in "MPO kazanır" hükmü hız
+          için **yanlıştır** ve öyle yazılır.
+        * **KESME:** MPO takası eziyor. χ=32, mesafe 5'te takas
+          ``5,30e-03``, MPO ``1,18e-30`` -- yirmi yedi mertebe fark.
+          χ=8, mesafe 5'te takas durumun **%65'ini** atıyor (6,48e-01);
+          bu kabul edilebilir değildir.
+
+        O hâlde eşik hıza göre değil **doğruluğa** göre konur: takasın
+        kesmesi ihmal edilebilir olduğu sürece takas (ucuz), kesme
+        başladığı anda MPO. Ölçümde takas kesmesinin patladığı mesafe
+        ``χ`` ile logaritmik büyüyor (χ=8→5, χ=16→5, χ=32→8), onun için:
+
+            eşik = max(4, ⌊log₂ χ⌋ + 2)
+
+        Hız uğruna doğruluk satılmaz; bu satır o hükmün kendisidir.
+        """
+        return max(4, int(np.log2(max(self.ayar.bag, 2))) + 2)
+
+    def _cift_carpanlari(self, G: np.ndarray
+                         ) -> Tuple[np.ndarray, np.ndarray]:
+        """``G = Σₖ Aₖ ⊗ Bₖ`` -- iki kübitlik kapının çarpan ayrışımı.
+
+        İndeks düzeni ``2i+j``dir (``i`` sol, ``j`` sağ), dolayısıyla
+        ``G[(i,j),(p,q)]`` yeniden dizilip ``(i,p)|(j,q)`` kesitinden
+        SVD alınır. Rütbe ``r ≤ 4``tür ve çarpım kapılarında ``r = 1``
+        çıkar -- o zaman kapı zaten iki tek kübitlik kapıdır ve MPO'ya
+        hiç gerek kalmaz.
+        """
+        M = np.asarray(G, float).reshape(2, 2, 2, 2)      # i,j,p,q
+        M = M.transpose(0, 2, 1, 3).reshape(4, 4)         # (i,p)|(j,q)
+        U, s, Vt = np.linalg.svd(M)
+        r = int(np.sum(s > 1e-12 * max(s[0], 1e-30)))
+        r = max(r, 1)
+        A = (U[:, :r] * s[:r]).T.reshape(r, 2, 2)
+        B = Vt[:r, :].reshape(r, 2, 2)
+        return A, B
+
+    def uzak_cift_mpo(self, i: int, j: int, G: np.ndarray) -> float:
+        """Uzak çifte kapı -- **kübit oynatmadan**, operatörü yayarak.
+
+        Kütük H41: *"takas ağı kapalı yoldur; MPO kazanır."* O hüküm
+        verilmişti fakat 13 meleke hâlâ takas kullanıyordu -- kendi
+        hükmümüze uymuyorduk. Burada MPO yolu kurulur:
+
+            W[i][0,·,·,k] = Aₖ ,  ara yuvalar = kimlik (bağ k taşınır),
+            W[j][k,·,·,0] = Bₖ
+
+        Bağ ``r = rank(G) ≤ 4``tür. Hiçbir kübit yer değiştirmez,
+        dolayısıyla hiçbir dolaşıklık sürüklenmez.
+        """
+        i, j = int(i), int(j)
+        if i > j:
+            # kapı simetrik değildir: indeks düzeni korunmalı
+            G = np.asarray(G, float).reshape(2, 2, 2, 2
+                                             ).transpose(1, 0, 3, 2
+                                                         ).reshape(4, 4)
+            i, j = j, i
+        A, B = self._cift_carpanlari(G)
+        r = A.shape[0]
+        Wi = np.zeros((r, 2, 2, r))
+        Wj = np.zeros((r, 2, 2, r))
+        for k in range(r):
+            Wi[0, :, :, k] = A[k]
+            Wj[k, :, :, 0] = B[k]
+        kesme = self.y.mpo_uygula({i: Wi, j: Wj}, D=r, bas=i, son=j + 1)
+        self.iz.kesme += float(kesme)
+        self.iz.kapi += 1
+        self.iz.supurme += 1
+        return float(kesme)
+
+    def uzak_cift(self, i: int, j: int, G: np.ndarray) -> None:
+        """Uzak ``(i, j)`` çiftine kapı -- **yolu ölçüm seçer**.
+
+        Mesafe ``mpo_esigi``nin altındaysa takas ağı (ucuz ve o mesafede
+        kesmesi ihmal edilebilir), üstündeyse MPO (pahalı fakat
+        dolaşıklığı sürüklemiyor). Eşik elle konmadı; bkz. ``mpo_esigi``.
+        """
+        if abs(int(j) - int(i)) >= self.mpo_esigi:
+            self.uzak_cift_mpo(i, j, G)
+            return
+        self._uzak_cift_takas(i, j, G)
+
+    def _uzak_cift_takas(self, i: int, j: int, G: np.ndarray) -> None:
+        """Takas ağıyla uzak çift -- kısa mesafenin ucuz yolu."""
         i, j = int(i), int(j)
         if i == j:
             raise ValueError("uzak çift için i ≠ j olmalı")

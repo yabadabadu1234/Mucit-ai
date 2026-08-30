@@ -205,18 +205,25 @@ class QMeleke:
         a = self.aci(p, 6, olcek)
         G = dik_iki_kubit(a)
         k = q.ayar.satir_kubiti
-        for i in range(q.n_satir):
-            for j in range(ofset, k - 1, 2):
-                q.cift(q.veri(i, j), G)
+        # **Y I Ğ I N.** Bütün fırça çiftleri birbirinden ayrıktır:
+        # bir satır içinde ``j`` ile ``j+2`` çakışmaz, satırlar arasında
+        # da yerel hüküm kübiti ayırıcı durur. O hâlde ``n·⌊k/2⌋`` ayrı
+        # çağrı yerine TEK yığın SVD'si yeter (kütük H79).
+        sol = [q.veri(i, j) for i in range(q.n_satir)
+               for j in range(ofset, k - 1, 2)]
+        q.cift_yigin(sol, G)
 
     def satir_donmesi(self, q: QYazmac, p: Parametreler,
                       olcek: float = 0.6) -> None:
         """Her satırın her veri kübitine kendi öğrenilen dönmesi."""
         k = q.ayar.satir_kubiti
         a = self.aci(p, k, olcek)          # sütun başına, satırdan bağımsız
-        for i in range(q.n_satir):
-            for j in range(k):
-                q.tek(q.veri(i, j), donme(float(a[j])))
+        # Kapılar sütuna bağlı olduğu için ``k`` ayrı dizey yeter;
+        # ``n·k`` yuvaya tek çağrıda yayılır.
+        Gk = np.stack([donme(float(t)) for t in a])
+        yuv = np.array([q.veri(i, j) for i in range(q.n_satir)
+                        for j in range(k)])
+        q.tek_yigin(yuv, np.tile(Gk, (q.n_satir, 1, 1)))
 
 
 # =====================================================================
@@ -254,8 +261,8 @@ class QHayal(QMeleke):
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.9)
         j = q.ayar.satir_kubiti - 1
-        for i in range(q.n_satir):
-            q.tek(q.veri(i, j), donme(0.25 * math.pi + float(a[i])))
+        q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)],
+                    np.stack([donme(0.25 * math.pi + float(t)) for t in a]))
 
 
 @qkaydet
@@ -291,8 +298,9 @@ class QTertip(QMeleke):
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.7)
         j = q.ayar.satir_kubiti - 1
-        for i in range(q.n_satir):
-            q.cift(q.veri(i, j), kontrollu_donme(float(a[i])))
+        # (veri son kübiti, yerel hüküm) çiftleri bitişik ve ayrıktır
+        q.cift_yigin([q.veri(i, j) for i in range(q.n_satir)],
+                     np.stack([kontrollu_donme(float(t)) for t in a]))
 
 
 @qkaydet
@@ -308,9 +316,8 @@ class QTecrit(QMeleke):
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
         k = q.ayar.satir_kubiti
-        for i in range(q.n_satir):
-            for j in range(1, k - 1, 2):
-                q.cift(q.veri(i, j), G.T)
+        q.cift_yigin([q.veri(i, j) for i in range(q.n_satir)
+                      for j in range(1, k - 1, 2)], G.T)
 
 
 @qkaydet
@@ -375,9 +382,7 @@ class QTezat(QMeleke):
     def uygula(self, q, p):
         Z = faz_z()
         k = q.ayar.satir_kubiti
-        for i in range(q.n_satir):
-            if i % 2 == 1:
-                q.tek(q.veri(i, k - 1), Z)
+        q.tek_yigin([q.veri(i, k - 1) for i in range(1, q.n_satir, 2)], Z)
 
 
 # =====================================================================
@@ -415,8 +420,8 @@ class QTenkit(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.4)
-        for i in range(q.n_satir):
-            q.tek(q.yerel(i), donme(-abs(float(a[i]))))
+        q.tek_yigin(q.yereller(),
+                    np.stack([donme(-abs(float(t))) for t in a]))
 
 
 @qkaydet
@@ -465,8 +470,9 @@ class QMerak(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
-        for j in range(2):
-            q.tek(q.kulli("nakz", j), donme(0.25 * math.pi + float(a[j])))
+        q.tek_yigin([q.kulli("nakz", j) for j in range(2)],
+                    np.stack([donme(0.25 * math.pi + float(t))
+                              for t in a[:2]]))
 
 
 @qkaydet
@@ -483,9 +489,10 @@ class QDenemeYanilma(QMeleke):
     def uygula(self, q, p):
         k = q.ayar.satir_kubiti
         a = self.aci(p, k, 0.3)
-        for i in range(q.n_satir):
-            for j in range(k):
-                q.tek(q.veri(i, j), donme(float(a[j])))
+        Gk = np.tile(np.stack([donme(float(t)) for t in a]),
+                     (q.n_satir, 1, 1))
+        q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)
+                     for j in range(k)], Gk)
 
 
 @qkaydet
@@ -501,8 +508,8 @@ class QIhtimal(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 4, 0.4)
-        for j in range(4):
-            q.tek(q.kulli("mizan", j), donme(float(a[j])))
+        q.tek_yigin([q.kulli("mizan", j) for j in range(4)],
+                    np.stack([donme(float(t)) for t in a[:4]]))
 
 
 @qkaydet
@@ -536,10 +543,10 @@ class QTemsil(QMeleke):
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.6))
         k = q.ayar.satir_kubiti
-        for i in range(q.n_satir):
-            q.cift(q.veri(i, 0), G)
-            if k >= 4:
-                q.cift(q.veri(i, 2), G)
+        sol = [q.veri(i, 0) for i in range(q.n_satir)]
+        if k >= 4:
+            sol += [q.veri(i, 2) for i in range(q.n_satir)]
+        q.cift_yigin(sol, G)
 
 
 @qkaydet
@@ -583,11 +590,24 @@ class QTefekkur(QMeleke):
         lifler = lifleri_kur(DINAMIK)
         a = self.aci(p, len(lifler), 1.0)
         k = q.ayar.satir_kubiti
+
+        # --- (1) Tek kübitlik kısım: her lif KENDİ eksenine dokunur.
+        # Aynı eksene düşen lifler (yuva % k aynı olanlar) aynı kübite
+        # ardışık dönme vurur; ``R(α)R(β) = R(α+β)`` olduğu için bunlar
+        # **toplanabilir** ve netice birebir aynıdır. Ayrı eksenler ayrı
+        # kalır -- H21 (mertebeler toplanmaz) bozulmaz: toplanan şey
+        # mertebeler değil, aynı eksendeki dönme açılarıdır.
+        eksen_acisi: Dict[int, float] = {}
         for lif in lifler:
             teta = lif.olcek * (1.0 + 0.3 * float(a[lif.yuva]))
-            j = lif.yuva % k                       # lifin dokunduğu eksen
+            eksen_acisi[lif.yuva % k] = eksen_acisi.get(lif.yuva % k, 0.0) + teta
+        yuv, Gl = [], []
+        for j, top in eksen_acisi.items():
+            R = donme(top)
             for i in range(q.n_satir):
-                q.tek(q.veri(i, j), donme(teta))
+                yuv.append(q.veri(i, j))
+                Gl.append(R)
+        q.tek_yigin(yuv, np.stack(Gl))
             # Uzak menzilli tutarlılık. **Ölçülen ve düzeltilen kusur
             # (kütük H54, 3. borç).** Mesafe evvelce SATIR cinsinden
             # alınıyor ve ``adim < n_satir`` şartına takılıyordu. Ölçüldü:
@@ -599,17 +619,39 @@ class QTefekkur(QMeleke):
             # 0,083 -- yani ayrık motorun seçtiği yüksek mertebe fiilen
             # hiçbir şey yapmıyordu.
             #
-            # Doğrusu, mesafeyi satırda değil **kübit zincirinde** ölçmek.
-            # Yazmaç zaten bir zincirdir; 6 satır × 12 kübit = 72 kübitlik
-            # bir zincirde 17 adımlık bir sıçrama pekâlâ tanımlıdır ve
-            # satır sayısından bağımsızdır.
-            bas = q.veri(0, j)
-            son = q.kulli("makam", 0)
+        # Doğrusu, mesafeyi satırda değil **kübit zincirinde** ölçmek.
+        # Yazmaç zaten bir zincirdir; 6 satır × 12 kübit = 72 kübitlik
+        # bir zincirde 17 adımlık bir sıçrama pekâlâ tanımlıdır ve
+        # satır sayısından bağımsızdır.
+        #
+        # --- (2) Uzak menzil: YİRMİ MPO YERİNE TEK MPO.
+        #
+        # Yirmi lif ayrı ayrı ``mpo_topla`` çağırıyordu ve profilde en
+        # pahalı tek kalem buydu (0,52 sn, koşunun %41'i). Halbuki
+        # ``mpo_topla``nın uyguladığı üniter ``U = exp((Σᵢ θᵢ nᵢ) ⊗ Y)``
+        # şeklindedir; ``nᵢ`` aynı tabanda köşegen ve ``Y`` sabit olduğu
+        # için iki çağrı **değişmeli**dir:
+        #
+        #     exp(A⊗Y)·exp(B⊗Y) = exp((A+B)⊗Y)
+        #
+        # Yani yirmi çağrının bileşkesi, durak açılarının toplandığı TEK
+        # çağrıya birebir eşittir. **H21 bozulmaz:** toplanan şey
+        # mertebeler değil, aynı durağa düşen dönme açılarıdır; her lif
+        # kendi ``adım``ıyla kendi duraklarını seçmeye devam eder.
+        son = q.kulli("makam", 0)
+        katki: Dict[int, float] = {}
+        for lif in lifler:
+            teta = lif.olcek * (1.0 + 0.3 * float(a[lif.yuva]))
+            bas = q.veri(0, lif.yuva % k)
             duraklar = list(range(bas, son, lif.adim))
-            if len(duraklar) >= 2:
-                q.mpo_topla("makam",
-                            [teta / len(duraklar)] * len(duraklar),
-                            duraklar=duraklar)
+            if len(duraklar) < 2:
+                continue
+            pay = teta / len(duraklar)
+            for d in duraklar:
+                katki[d] = katki.get(d, 0.0) + pay
+        if len(katki) >= 2:
+            dur = sorted(katki)
+            q.mpo_topla("makam", [katki[d] for d in dur], duraklar=dur)
 
 
 @qkaydet
@@ -694,8 +736,8 @@ class QTemkin(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.12)
-        for i in range(q.n_satir):
-            q.tek(q.yerel(i), donme(float(a[i])))
+        q.tek_yigin(q.yereller(),
+                    np.stack([donme(float(t)) for t in a]))
 
 
 @qkaydet
@@ -722,9 +764,10 @@ class QTashih(QMeleke):
         k = q.ayar.satir_kubiti
         tetkik = QTetkik().aci(p, k, 0.2)
         lam = float(np.tanh(self.aci(p, 1, 1.0)[0]))
-        for i in range(q.n_satir):
-            for j in range(k):
-                q.tek(q.veri(i, j), donme(-lam * float(tetkik[j])))
+        Gk = np.tile(np.stack([donme(-lam * float(t)) for t in tetkik]),
+                     (q.n_satir, 1, 1))
+        q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)
+                     for j in range(k)], Gk)
 
 
 @qkaydet
@@ -775,13 +818,18 @@ class QTedebbur(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.25))
-        k = q.ayar.satir_kubiti
-        for _ in range(self.UFUK):
-            for i in range(q.n_satir):
-                q.cift(q.veri(i, 0), G)
+        # **Cebrî sadeleştirme (kullanıcı hükmü: netice birebir aynı
+        # kaldığı ispatlanabildiği sürece serbest).** Aynı ``G`` aynı
+        # çifte ``UFUK`` kere vuruluyordu; dik dizeyler için
+        # ``G·G·G·G = G⁴`` ve tek kapıda uygulanır. Netice birebir
+        # aynıdır (``_sadelestirme_sinamasi`` ölçer), maliyet ``UFUK``
+        # katı ucuzdur. İz kaydı yine "UFUK=4" der: meleke ne yaptığını
+        # söylemeye devam eder, makine ucuz yoldan yapar.
+        GU = np.linalg.matrix_power(np.asarray(G, float), self.UFUK)
+        q.cift_yigin([q.veri(i, 0) for i in range(q.n_satir)], GU)
         a = self.aci(p, 2, 0.3)
-        for j in range(2):
-            q.tek(q.kulli("mizan", 2 + j), donme(float(a[j])))
+        q.tek_yigin([q.kulli("mizan", 2 + j) for j in range(2)],
+                    np.stack([donme(float(t)) for t in a[:2]]))
 
 
 @qkaydet
@@ -974,14 +1022,15 @@ class QSanat(QMeleke):
     def uygula(self, q, p):
         altin_aci = 2.0 * math.pi / (ALTIN ** 2)
         k = q.ayar.satir_kubiti
-        for i in range(q.n_satir):
-            for j in range(k):
-                q.tek(q.veri(i, j),
-                      donme((altin_aci * (i * k + j)) % (2 * math.pi)))
+        idx = np.arange(q.n_satir * k)
+        q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)
+                     for j in range(k)],
+                    np.stack([donme((altin_aci * t) % (2 * math.pi))
+                              for t in idx]))
         _, kk = q._alan["kelam"]
-        for j in range(kk):
-            q.tek(q.kulli("kelam", j),
-                  donme((altin_aci * (j + 1)) % (2 * math.pi)))
+        q.tek_yigin([q.kulli("kelam", j) for j in range(kk)],
+                    np.stack([donme((altin_aci * (j + 1)) % (2 * math.pi))
+                              for j in range(kk)]))
 
 
 @qkaydet

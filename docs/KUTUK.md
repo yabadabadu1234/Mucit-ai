@@ -1371,3 +1371,82 @@ henüz onu çağırmıyor**; asıl kazanç melekeler taşınınca ölçülecek
 "kötüleşti" göründü. Yalnız başına tekrar ölçüldü: **31,51 sn**.
 Makine o sırada sınama takımını da koşuyordu. Yüklü makinede alınan
 hız ölçümü hüküm veremez.
+
+## H80 — `nefs/qmeleke.py` taması: melekeler yığına taşındı
+
+**Kullanıcının verdiği dört karar:** (a) takas/MPO eşiğini **ölçüm**
+koysun; (b) cebrî sadeleştirme serbest, **birebir aynı ispatlanırsa**;
+(c) 𝒪₂₁'in yirmi MPO'su **tek MPO**da toplansın; (d) yığın yazmaç
+**iki eksenli** olsun (parametre × veri).
+
+### Takas mı MPO mu: ölçüm BENİM BEKLENTİMİ ÇÜRÜTTÜ
+
+`nefs/uzaklik_olcumu.py`. H41 *"takas ağı kapalı yoldur, MPO kazanır"*
+diyordu. Ölçüldü ve hüküm ikiye ayrıldı:
+
+| χ | mesafe | takas sn | MPO sn | takas kesme | MPO kesme |
+|---|---|---|---|---|---|
+| 8 | 5 | 0,00126 | 0,00179 | 6,48e-01 | 3,39e-01 |
+| 16 | 5 | 0,00320 | 0,00334 | 2,04e-01 | 7,17e-02 |
+| 32 | 5 | 0,00988 | 0,02506 | 5,30e-03 | **1,18e-30** |
+| 32 | 21 | 0,04829 | 0,13509 | 4,65e+00 | 1,42e-01 |
+
+* **HIZ:** MPO takastan **daha yavaş** -- χ=32'de 2,5-3 kat. H41'in
+  "MPO kazanır" hükmü **hız için yanlıştır** ve öyle zabıtlanır.
+* **KESME:** MPO takası eziyor -- χ=32, mesafe 5'te yirmi yedi mertebe
+  fark. χ=8, mesafe 5'te takas durumun **%65'ini** atıyor.
+
+O hâlde eşik hıza göre değil **doğruluğa** göre kondu:
+``eşik = max(4, ⌊log₂ χ⌋ + 2)`` (χ=8→5, χ=16→6, χ=32→7, χ=64→8).
+Mesafe eşiğin altındaysa takas (ucuz ve o mesafede kesmesi ihmal
+edilebilir), üstündeyse MPO. **Hız uğruna doğruluk satılmadı.**
+
+### Üç cebrî sadeleştirme ve ispatları
+
+| sadeleştirme | dayanağı | ölçülen ‖Δψ‖ |
+|---|---|---|
+| 𝒪₃₁ Tedebbür: ``G⁴`` tek kapıda | dik dizeyin kuvveti | **1,81e-07** |
+| 𝒪₂₁ Tefekkür: 20 MPO → 1 MPO | ``exp(A⊗Y)exp(B⊗Y)=exp((A+B)⊗Y)`` | **3,20e-07** |
+| aynı eksene düşen liflerin açıları toplanır | ``R(α)R(β)=R(α+β)`` | 1,11e-16 |
+
+Üçü de **float32'nin makine hassasiyeti** mertebesindedir (eps ≈ 1,2e-07).
+Yani sadeleştirmeler birebir aynıdır; kalan fark, kullanıcının seçtiği
+float32'nin yuvarlamasıdır ve bedeli budur.
+
+**H21 bozulmadı.** Toplanan şey mertebeler değil, aynı durağa düşen
+dönme açılarıdır; her lif kendi ``adım``ıyla kendi duraklarını seçmeye
+devam eder.
+
+### KENDİ ÖLÇÜM HATAM
+
+Sadeleştirmeleri önce MPS **tensörlerini** (``y.A``) karşılaştırarak
+sınadım; fark 1,08e+00, 1,92e+00, 1,89e+00 çıktı ve "sadeleştirme
+bozuk" diye okunacaktı. **Ölçü yanlıştı:** MPS ayarı (gauge) tekil
+değildir; aynı durum farklı tensörlerle yazılabilir. Doğru ölçü tam
+dalga vektörüdür. Onunla ölçülünce üçü de 1e-07 çıktı. Ayar-bağımlı
+bir büyüklükle hüküm vermek, ölçmeden hüküm vermekten farksızdır.
+
+### Yığına taşınan melekeler ve netice
+
+Onüç meleke (𝒪₁, 𝒪₂, 𝒪₄, 𝒪₅, 𝒪₈, 𝒪₉, 𝒪₁₀, 𝒪₁₂, 𝒪₁₅, 𝒪₁₆, 𝒪₁₇,
+𝒪₁₉, 𝒪₂₅, 𝒪₂₆, 𝒪₂₇, 𝒪₂₈, 𝒪₃₁, 𝒪₃₈, 𝒪₄₀) `tek_yigin`/`cift_yigin`
+kullanıyor. Fırça çiftlerinin ayrık olduğu ispatlandı: bir satır içinde
+``j`` ile ``j+2`` çakışmaz, satırlar arasında yerel hüküm kübiti
+ayırıcı durur.
+
+| yazmaç | başta | H79 sonrası | **şimdi** | toplam kat |
+|---|---|---|---|---|
+| 3 satır × 4 kübit, χ=16 | 0,658 sn | 0,435 sn | **0,300 sn** | **2,19** |
+| 4 satır × 6 kübit, χ=32 | 2,767 sn | 2,402 sn | **1,691 sn** | 1,64 |
+| 6 satır × 12 kübit, χ=64 | 36,33 sn | 31,51 sn | **26,96 sn** | 1,35 |
+| 8 satır × 12 kübit, χ=64 | 49,06 sn | -- | **33,22 sn** | 1,48 |
+
+Kapı sayısı da düştü (2181 → 1748), çünkü 𝒪₂₁ ve 𝒪₃₁ sadeleştirildi.
+41 sınama geçmeye devam ediyor.
+
+**Hedefe göre nerede duruyoruz.** Kullanıcının ölçütü **7 MB/sn**.
+Şu an 6 satırlık bir geçiş 26,96 sn; yani ~0,22 belirteç/sn. Hedefe
+**3,2×10⁷ kat** uzak. İki tamada alınan toplam 2,19 kat, bu mesafeyi
+kapatmaz ve kapatacağı iddia edilmiyor. Kapatabilecek tek yol, kararı
+verilen **iki eksenli yığın yazmaçtır** (parametre × veri): bir kayıp
+çağrısının tamamı tek yığında geçer.
