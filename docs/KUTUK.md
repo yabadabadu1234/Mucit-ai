@@ -1230,3 +1230,77 @@ farkeder (sınandı: ardışıklar arası bit farkı kümesi = {1}), dolayısıy
 Metropolis'in tek bit çevirmesi parametre uzayında küçük bir adımdır.
 Düz ikili kodda 31→32 geçişi altı biti birden çevirir ve uzay sunî
 olarak uçurumlu görünür.
+
+## H76 — Nefsin kaybında **AS-GEK, dalga motorunu YENDİ**
+
+Uçtan uca koşuldu (kısa-CPU ayarı, 250 nefs parametresi → 1500 kübit,
+4 veri örneği, 4 süreç):
+
+| motor | V_son | kayıp çağrısı | süre |
+|---|---|---|---|
+| **AS-GEK (eski)** | **2,3889** | 246 | 2065,5 sn |
+| DALGA (yeni) | 2,5194 | 144 | 1614,7 sn |
+
+V ilk 2,5860 idi; dalga onu 2,5194'e indirdi (fark 0,0666), AS-GEK ise
+2,3889'a. **Yani bu bütçede eski motor daha iyidir ve bu gizlenmez.**
+Vesikadaki *"klasik Adam/SGD döngüsü tamamen kaldırılmıştır"* hükmü
+kodda icra edildi, fakat **daha iyi netice verdiği ölçülmedi** --
+tersi ölçüldü.
+
+Teşhis, seyirden okunur: uydurma artığı çevrimlerle beraber
+0,0051 → 0,2082'ye **yükseliyor**. Yani ``β`` tavlaması sertleştikçe
+NQS hedef yüzeyi (``−(β/2)L``) temsil edemez oluyor. Kusur Grover'da
+değil **ansatz sığasında**dır: 1500 kübitlik bir uzayda son kat 288
+özellikle (48×6) uyduruyor. Sığayı büyütmek ayrı bir ölçüm ister.
+
+İkinci teşhis: 144 çağrı, 250 boyutlu bir uzay için zaten azdır
+(H54/2. borç ``10·d = 2 500`` diyordu). İki motor da o haddin çok
+altındadır; bu koşu ikisinin de hükmünü vermez, yalnız **bu bütçede**
+hangisinin önde olduğunu söyler.
+
+## H77 — İki ölçüm kusuru: biri boş ölçüt, biri iplik çakışması
+
+**1. Ölçüt boştu, sıfır değil.** Değerlendirmede üretilecek belirteç
+sayısına had konmuş, hadde takılan görev ``kesilen`` diye sayılıp yine
+de ``deneme``ye dâhil ediliyordu. Netice: 4 görevin **4'ü de** kesildi
+ve rapor *"tam çözülen 0/4"* dedi -- oysa hiçbir görev sonuna kadar
+denenmemişti. **Sıfır gibi görünen boş bir ölçüt, sıfırdan kötüdür.**
+Düzeltme: hadde sığmayan görev **hiç denenmez**, atlanır ve atlandığı
+ayrıca yazılır; ``azami`` artık "kaç görev taranır" değil "kaç görev
+fiilen denenir" demektir. Ölçüldü: doğrulama görevlerinin hedef
+uzunluğu ortanca **111** belirteç; ``≤32`` olan yalnız **18/100**.
+Yani had, ölçütü küçük ızgaralara **taraflı** kılar ve bu da yazılır.
+
+**2. Paralellik tek başına yetmiyor.** Kayıp 4 sürece bölünüyordu, fakat
+her süreç kendi BLAS'ını da çok iplikli açıyordu: 4 çekirdekli makinede
+4 süreç × 4 iplik = 16 iplik, çekirdekler birbirini bekliyor. Ölçüldü
+(16 kayıp çağrısı, 4 süreç):
+
+| | süre | çağrı başına |
+|---|---|---|
+| çok iplikli | 41,7 sn | 2,61 sn |
+| **tek iplikli** | **19,4 sn** | **1,22 sn** (2,14 kat) |
+
+Düzeltme: `hesap/donanim.tek_iplik_zorla()`, **numpy'dan önce** çağrılır
+ve fiilen tesir edip etmediğini döner -- sessizce "oldu" demez.
+
+**3. Mukayese eşit bütçeli değildi.** AS-GEK 246, dalga 144 kayıp
+çağırıyordu; o hâlde tablo hüküm veremez. Artık bütçe **kayıp çağrısı
+cinsinden** eşitlenir.
+
+## H78 — İleri geçişin maliyeti ölçüldü; darboğaz LAPACK çağrı masrafı
+
+Yazmaç ölçüsüne göre bir ileri geçiş (χ=16, satır kübiti 4):
+
+| pencere | kübit | kapı | süre |
+|---|---|---|---|
+| 3 satır | 32 | 675 | 0,535 sn |
+| 4 satır | 37 | 820 | 0,748 sn |
+| 8 satır | 57 | 1379 | 1,201 sn |
+
+Bir kayıp çağrısı 4 veri örneği demektir → ~4,7 sn (tek süreç, çok
+iplikli) yahut ~1,2 sn (4 süreç, tek iplikli). Geri kalan maliyet
+minik dizeylerde SVD/QR çağrı masrafıdır ve asıl çare ayrık çiftleri
+yığın hâlinde işlemektir; mevcut zincir düzeni (veri ile yerel hüküm
+kübitlerinin iç içe geçmesi) buna izin vermiyor. **Düzeni değiştirmek
+H40'ı nakzetmek olur ve sorulmadan yapılmayacaktır.**

@@ -249,10 +249,15 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
     ortalama hücre isabeti raporlanır; model hiçbir şey bilmiyorsa
     üçü de sıfır çıkar ve iddia edilecek bir şey kalmaz.
     """
-    cozulen = isabet = deneme = kesilen = 0
+    cozulen = isabet = deneme = atlanan = 0
     hucre: List[float] = []
     sukut_sayisi = 0
-    for g in gorevler[:azami]:
+    # ``azami`` artık "kaç görev TARANIR" değil "kaç görev fiilen
+    # DENENİR" demektir. Aksi hâlde had yüzünden atlanan görevler
+    # denemenin yerini yiyor ve tarama boşa gidiyordu.
+    for g in gorevler:
+        if deneme >= azami:
+            break
         try:
             dizi, hedef = arc.gorev_dizisi(g, hedef_indis=0)
         except Exception:
@@ -260,14 +265,23 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
         deneme += 1
         baglam = [int(x) % sozluk for x in dizi]
         h = [int(x) % sozluk for x in hedef]
+        # **Ölçülen ve düzeltilen kusur.** Evvelce had aşılınca görev
+        # kesilip ``kesilen`` diye sayılıyor, yine de ``deneme``ye dâhil
+        # ediliyordu. Ölçüldü ve KALDI: kısa koşuda 4 görevin 4'ü de
+        # kesiliyor, netice "tam çözülen 0/4" görünüyordu -- oysa hiçbir
+        # görev fiilen sonuna kadar denenmemişti. Yani ölçüt sıfır
+        # değil, **boş**tu; sıfır gibi görünmesi daha kötüsüdür.
+        #
+        # Doğrusu, hadde SIĞMAYAN görevi hiç denememektir: uzun hedefli
+        # görev atlanır ve atlandığı ayrıca yazılır. Böylece ``deneme``ye
+        # giren her görev sonuna kadar üretilmiş olur ve ``tam_çözülen``
+        # gerçekten bir orandır.
+        if 0 < azami_uret < len(h):
+            atlanan += 1
+            deneme -= 1
+            continue
         uretilen: List[int] = []
-        # Üretilecek belirteç sayısına HAD. Her belirteç tam bir kübit
-        # ileri geçişidir (ölçüldü: 0,53 sn); hedef 100 belirteçse tek
-        # görev 53 saniye eder ve "kısa CPU koşusu" iddiası yalan olur.
-        # Had konunca tam çözüm İMKÂNSIZ hâle gelir -- onun için had
-        # aşıldığında görev ``kesildi`` diye ayrı sayılır ve tam çözüm
-        # oranına dâhil EDİLMEZ; gizlenmez.
-        kac = len(h) if azami_uret <= 0 else min(len(h), azami_uret)
+        kac = len(h)
         for _ in range(kac):
             pen = baglam[-pencere:] if len(baglam) >= pencere else \
                 ([0] * (pencere - len(baglam)) + baglam)
@@ -280,14 +294,12 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
         n = min(len(h), len(uretilen))
         dogru = sum(1 for i in range(n) if h[i] == uretilen[i])
         hucre.append(dogru / max(n, 1))
-        if kac < len(h):
-            kesilen += 1
-        elif uretilen[:len(h)] == h:
+        if uretilen[:len(h)] == h:
             cozulen += 1
         if n and uretilen[0] == h[0]:
             isabet += 1
     return {"deneme": deneme, "tam_çözülen": cozulen,
-            "kesilen": kesilen,
+            "atlanan_uzun": atlanan,
             "ilk_belirteç_isabeti": isabet, "sükût": sukut_sayisi,
             "ortalama_hücre_isabeti":
                 float(np.mean(hucre)) if hucre else 0.0}

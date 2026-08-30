@@ -34,7 +34,39 @@ from typing import Callable, List, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["Donanim", "donanim", "parcala", "topla_paralel", "rapor"]
+__all__ = ["Donanim", "donanim", "parcala", "topla_paralel", "rapor",
+           "tek_iplik_zorla"]
+
+#: BLAS'ın süreç başına açacağı iplik sayısını **1**e sabitleyen değişkenler.
+_IPLIK_DEGISKENLERI = ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS",
+                       "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS",
+                       "VECLIB_MAXIMUM_THREADS")
+
+
+def tek_iplik_zorla() -> bool:
+    """Süreç başına BLAS ipliğini 1'e sabitle. **numpy'dan ÖNCE çağrılmalı.**
+
+    Sebebi ölçüldü ve mühimdir. Kaybı 4 sürece bölünce her süreç kendi
+    BLAS'ını da çok iplikli açıyor; 4 çekirdekli bir makinede 4 süreç ×
+    4 iplik = 16 iplik olur ve çekirdekler birbirini bekler. Ölçüm
+    (16 kayıp çağrısı, 4 süreç):
+
+        çok iplikli : 41,7 sn  →  2,61 sn/çağrı
+        tek iplikli : 19,4 sn  →  **1,22 sn/çağrı**   (2,14 kat)
+
+    Yani paralelliği açmak tek başına yetmiyor; **iplik çakışmasını
+    kapatmak** da lazım. Bu, "paralel yaptım" deyip geçilecek bir şey
+    değildi ve ölçülmeseydi görülmezdi.
+
+    ``True`` döner ancak ve ancak numpy henüz içe aktarılmamışsa -- yani
+    ayar fiilen tesir edecekse. Aksi hâlde ``False`` döner ve çağıran
+    yerin bunu bilmesi gerekir; sessizce "oldu" demez.
+    """
+    import sys as _sys
+    tesirli = "numpy" not in _sys.modules
+    for k in _IPLIK_DEGISKENLERI:
+        os.environ.setdefault(k, "1")
+    return tesirli
 
 
 def _torch():

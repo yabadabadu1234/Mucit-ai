@@ -96,7 +96,7 @@ class EgitimAyari:
     pencere: int = 8
     sozluk: int = 16
     degerlendirme_gorevi: int = 4
-    azami_uret: int = 24        # değerlendirmede üretilecek âzamî belirteç
+    azami_uret: int = 32        # bundan uzun hedefli görev ATLANIR
     # --- parametrenin kübite kodlanması
     bit: int = 6
     yaricap: float = 2.5
@@ -260,7 +260,7 @@ class KulliEgitim:
         return self.olcum
 
     # -----------------------------------------------------------------
-    def as_gek_mukayesesi(self, cevrim: int = 6, n_ornek: int = 8
+    def as_gek_mukayesesi(self, butce: int = 0, n_ornek: int = 8
                           ) -> Dict[str, float]:
         """Aynı bütçede **eski** AS-GEK motoru ne yapıyordu (kütük H54/2).
 
@@ -272,6 +272,14 @@ class KulliEgitim:
         from main.optimize import as_gek_adimi
         a = self.ayar
         p = self.p0.copy()
+        # **Eşit bütçe.** Evvelce çevrim sayısı elle veriliyordu ve iki
+        # motor farklı sayıda kayıp çağırıyordu (AS-GEK 246, dalga 144);
+        # o hâlde mukayese hükmü veremez. Bütçe kayıp ÇAĞRISI cinsinden
+        # eşitlenir: AS-GEK çevrim başına ``2·n_ornek + n_nokta + 1``
+        # çağırır (``n_nokta = max(24, 8r)``, burada r=2 → 24).
+        cevrim_maliyeti = 2 * n_ornek + 24 + 1
+        butce = butce or (a.cevrim * a.ornek)
+        cevrim = max(1, butce // cevrim_maliyeti)
 
         def f(q: np.ndarray) -> float:
             return float(uygunluk(self.nefs, self.veri, q, a.sozluk))
@@ -286,7 +294,8 @@ class KulliEgitim:
             if V_yeni < V:
                 p, V = p_yeni, V_yeni
         return {"V_son": V, "süre_sn": time.perf_counter() - t0,
-                "kayıp_çağrısı": float(cevrim * (2 * n_ornek + 24 + 1))}
+                "çevrim": float(cevrim),
+                "kayıp_çağrısı": float(cevrim * cevrim_maliyeti)}
 
 
 # =====================================================================
@@ -319,8 +328,8 @@ def rapor(ayar: EgitimAyari = KISA_CPU, mukayese: bool = True) -> str:
           % (d["ilk_belirteç_isabeti"], d["deneme"]),
           "  ortalama hücre isabeti: %.4f" % d["ortalama_hücre_isabeti"],
           "  sükût sayısı        : %d" % d["sükût"],
-          "  kesilen (had aşıldı): %d  ← tam çözüme SAYILMAZ"
-          % d["kesilen"]]
+          "  atlanan (hedef uzun): %d  ← hiç denenmedi, denemeye SAYILMAZ"
+          % d["atlanan_uzun"]]
 
     if mukayese:
         m = E.as_gek_mukayesesi()

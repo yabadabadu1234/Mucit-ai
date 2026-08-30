@@ -40,6 +40,12 @@ import sys
 import time
 from typing import Dict, Optional
 
+# **numpy'dan ÖNCE.** Süreç başına BLAS ipliği 1'e sabitlenmezse 4 süreç ×
+# 4 iplik çekirdekleri birbirine kırdırır; ölçüldü: 2,61 → 1,22 sn/çağrı.
+from hesap.donanim import tek_iplik_zorla
+
+_TEK_IPLIK = tek_iplik_zorla()
+
 import numpy as np
 
 __all__ = ["ayar_sec", "kos", "BASLANGIC_HUCRESI"]
@@ -68,6 +74,8 @@ def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
 
     ayar, dh = ayar_sec(zorla)
     print(donanim_raporu(dh), flush=True)
+    print("BLAS ipliği süreç başına 1'e sabitlendi: %s" % _TEK_IPLIK,
+          flush=True)
     print("seçilen ayar: %s  (satır kübiti=%d, χ=%d, çevrim=%d, örnek=%d)"
           % (ayar.ad, ayar.satir_kubiti, ayar.bag, ayar.cevrim, ayar.ornek),
           flush=True)
