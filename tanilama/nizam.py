@@ -52,12 +52,30 @@ def _modul_adi(yol: str) -> str:
     return bagil.replace(os.sep, ".")
 
 
+#: **VERİ dizinleri -- kod sayılmaz.** Kullanıcı hükmü: *"ARC veri
+#: dosyalarını zaten koddan sayman hata, onlar kalacak, senin onlarla
+#: işin yok."* Haklıdır: ``idrak/veri/soyutlamalar`` altındaki
+#: ``solution.py``ler ARC görevlerinin **tarifidir**, ana modelin
+#: uzvu değildir. Onları "beylik" diye saymak, 45 933 satırlık sahte
+#: bir borç göstermek olurdu.
+VERI_DIZINLERI: Tuple[str, ...] = (
+    os.path.join("idrak", "veri"),
+)
+
+
+def _veri_mi(yol: str) -> bool:
+    b = os.path.relpath(yol, KOK)
+    return any(b.startswith(v + os.sep) for v in VERI_DIZINLERI)
+
+
 def modulleri_tara(kok: str = KOK) -> Dict[str, str]:
-    """Bütün Python modülleri: ``ad → yol``."""
+    """Bütün Python modülleri: ``ad → yol``. **Veri dizinleri hariç.**"""
     out: Dict[str, str] = {}
     for dizin, altlar, dosyalar in os.walk(kok):
         altlar[:] = [d for d in altlar
                      if d not in (".git", "__pycache__", ".ipynb_checkpoints")]
+        if _veri_mi(os.path.join(dizin, "x")):
+            continue
         for d in dosyalar:
             if d.endswith(".py"):
                 y = os.path.join(dizin, d)
