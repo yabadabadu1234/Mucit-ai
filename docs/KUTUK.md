@@ -1450,3 +1450,77 @@ Kapı sayısı da düştü (2181 → 1748), çünkü 𝒪₂₁ ve 𝒪₃₁ sa
 kapatmaz ve kapatacağı iddia edilmiyor. Kapatabilecek tek yol, kararı
 verilen **iki eksenli yığın yazmaçtır** (parametre × veri): bir kayıp
 çağrısının tamamı tek yığında geçer.
+
+## H81 — Yazmaç yığına geçti; **beklenen kazanç GELMEDİ ve sebebi ölçüldü**
+
+**Kullanıcının verdiği üç karar:** (a) yığın ölçüsü ``P=256 × V=32``
+(GPU'yu doldur); (b) **her yığın üyesi kendi ölçümünü versin**;
+(c) uyarlanır ``χ`` **yok**, sabit ``χ`` öngörülebilirliktir.
+
+`A` şekli artık ``(B, N, χ, 2, χ)``; ``B = P·V``. Tek durum ``B=1``dir
+ve **ayrı bir kod yolu yoktur** (kullanıcı hükmü). Kapılar üç şekli de
+kabul eder: ``(2,2)`` bütün yığına aynı, ``(m,2,2)`` yuvaya göre,
+``(B,m,2,2)`` **yığın üyesine göre** -- parametre ekseni ancak
+üçüncüsüyle iş görür.
+
+Doğruluk: ``B=1`` ile ``B=4``, aynı devrede **birebir aynı**
+(0,00e+00, dört üyenin dördünde de). 41 sınama geçiyor.
+
+### Yığının kazancı 1,6 kat -- 8-16 değil. Sebep ölçüldü.
+
+Şüphelendim ve ölçtüm: **numpy'nin yığın SVD'si gerçek yığın değildir.**
+
+| m | d | SVD | QR | eigh | SVD/matris |
+|---|---|---|---|---|---|
+| 1 | 32 | 0,00041 | 0,00015 (2,7×) | 0,00028 | 4,08e-04 |
+| 8 | 32 | 0,00263 | 0,00039 (6,8×) | 0,00121 | 3,29e-04 |
+| 64 | 32 | 0,01520 | 0,00405 (3,8×) | 0,01024 | 2,38e-04 |
+| 256 | 32 | 0,06100 | 0,01547 (3,9×) | 0,03992 | 2,38e-04 |
+
+Matris başına maliyet ``4,08e-04``ten ancak ``2,38e-04``e iniyor
+(1,7 kat) ve ``m=64``ten sonra **düzleşiyor**. Yani yığına geçmek
+LAPACK çağrı masrafını kaldırmıyor; içeride yine matris başına çağrı
+var. Bu, "yığın = B kat hız" beklentisinin neden yanlış olduğunun
+cevabıdır ve GPU'da (torch) durumun farklı olması beklenir -- fakat
+**burada ölçülemez ve ölçüldüğü iddia edilmiyor**.
+
+### Aynı ölçümden çıkan yeni nesil formül: kesme yoksa QR
+
+Aynı tabloda **QR, SVD'den 3,8-6,8 kat hızlı**. Ve ``Θ``nın rütbesi
+``min(2·d_sol, 2·d_sağ)`` ile sınırlıdır; bu ``χ``yi aşmıyorsa budama
+diye bir şey yoktur ve ``Θ = QR`` **tam** bir bölmedir.
+
+Onun için ``bag_ust`` dizisi eklendi: her bağın **üst sınırı**, daima
+büyük tarafa çekilerek tutulur. ``kesme_gerekli_mi`` buna bakar; hayır
+derse QR yolu koşar ve ``kesme = 0`` döner.
+
+Bu **uyarlanır χ değildir** (kullanıcı sabit χ dedi): bellek yine sabit
+``χ``dir, yalnız hesap ucuzlar. Erken kapılarda durum çarpıma yakındır
+ve QR yolu koşar; dolaşıklık arttıkça SVD'ye geçilir.
+
+**Yapıp kırdığım ve düzelttiğim:** ham ``Θ``ya QR uyguladım ve kırıldı.
+QR'ın rütbesi matrisin **şeklinden** gelir (``2χ``), gerçek rütbesinden
+değil; sıfır satırlar ``Q``da yer kaplıyor ve netice ``χ``ye sığmıyordu.
+``Θ``yı gerçek bağ sınırlarına kırpınca rütbe ``min(2d_sol, 2d_sağ)``
+olur ve tanım gereği ``χ``yi aşmaz.
+
+### Uçtan uca netice
+
+| yazmaç | başta | H79 | H80 | **H81** | toplam |
+|---|---|---|---|---|---|
+| 3×4, χ=16 | 0,658 | 0,435 | 0,300 | **0,290** | **2,27** |
+| 4×6, χ=32 | 2,767 | 2,402 | 1,691 | **1,421** | **1,95** |
+| 6×12, χ=64 | 36,33 | 31,51 | 26,96 | **21,18** | **1,72** |
+| 8×12, χ=64 | 49,06 | -- | 28,37 | **28,37** | 1,73 |
+
+Yığın kazancı ayrıca ölçüldü: B=4/8/16'da **1,6 kat** (B kat değil).
+
+Sadeleştirmelerin birebirliği yığın geçişinden sonra da duruyor:
+G⁴ 2,28e-07, MPO birleştirmesi 3,73e-07, takas-MPO 1,14e-07 -- üçü de
+float32 eps'i (1,2e-07) mertebesinde.
+
+**Hedefe göre:** 7 MB/sn için hâlâ ~2,4×10⁷ kat uzağız. Üç tamada
+alınan toplam 1,7-2,3 kattır. CPU'da numpy ile bu mesafenin
+kapanmayacağı artık **ölçülmüş** bir hükümdür: darboğaz Python değil,
+LAPACK'in matris başına çağrısıdır ve onu ancak gerçek yığın çekirdeği
+(GPU) kaldırır.

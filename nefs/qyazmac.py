@@ -97,6 +97,8 @@ class QAyar:
     mera_kademe: int = 3
     tohum: int = 0
     obek: int = 150_000
+    #: Yığın büyüklüğü ``B = P·V`` (parametre × veri). 1 = tek durum.
+    yigin: int = 1
     #: Küllî hüküm bloğunun alanları ve kaç kübit tuttukları.
     kulli_alanlar: Tuple[Tuple[str, int], ...] = (
         ("makam", 2), ("mizan", 4), ("tenakuz", 2),
@@ -143,7 +145,8 @@ class QYazmac:
         self.n_satir = int(n_satir)
         self.oge = a.satir_kubiti + a.yerel_kubit        # satır başına kübit
         self.n = a.kubit_sayisi(self.n_satir)
-        self.y = Yazmac(self.n, bag=a.bag, tohum=a.tohum, obek=a.obek)
+        self.y = Yazmac(self.n, bag=a.bag, tohum=a.tohum, obek=a.obek,
+                        yigin=a.yigin)
         self.iz = QIz(kubit=self.n, satir=self.n_satir,
                       durum_bayt=self.y.bayt)
         # küllî bloğun alan adresleri (blok başına göre kayma)
@@ -187,14 +190,30 @@ class QYazmac:
         dönme sarmalanıp ayırt edilemez hâle gelmesin.
         """
         E = np.asarray(E, float)
-        n, d = E.shape
+        if E.ndim == 2:
+            E = E[None]                       # bütün yığına aynı girdi
+        B, n, d = E.shape
+        if B != self.y.B and B != 1:
+            raise ValueError("girdi yığını %d, yazmaç yığını %d"
+                             % (B, self.y.B))
         k = self.ayar.satir_kubiti
         sinir = np.array_split(np.arange(d), k)
-        for i in range(min(n, self.n_satir)):
-            for j, dil in enumerate(sinir):
-                v = float(np.mean(E[i, dil])) if len(dil) else 0.0
-                teta = 0.25 * math.pi * (1.0 + math.tanh(v))
-                self.tek(self.veri(i, j), donme(teta))
+        ns = min(n, self.n_satir)
+        # **Yığın hâlinde kodlama.** Evvelce ``n·k`` ayrı ``tek`` çağrısı
+        # vardı; hepsi tek çağrıya iner ve yığının her üyesi KENDİ
+        # girdisini alır (veri ekseni ancak böyle iş görür).
+        v = np.stack([E[:, :ns, dil].mean(axis=2) if len(dil)
+                      else np.zeros((E.shape[0], ns))
+                      for dil in sinir], axis=2)        # (B, ns, k)
+        teta = 0.25 * math.pi * (1.0 + np.tanh(v))
+        c, sn = np.cos(teta), np.sin(teta)
+        G = np.stack([np.stack([c, -sn], axis=-1),
+                      np.stack([sn, c], axis=-1)], axis=-2)   # (B,ns,k,2,2)
+        G = G.reshape(E.shape[0], ns * k, 2, 2)
+        if E.shape[0] == 1 and self.y.B > 1:
+            G = np.broadcast_to(G, (self.y.B, ns * k, 2, 2))
+        yuv = [self.veri(i, j) for i in range(ns) for j in range(k)]
+        self.tek_yigin(yuv, G)
 
     def superpozisyon(self, yalniz_veri: bool = True) -> None:
         """Hadamard: ``2^N`` taban durumu eşit genlikte.
@@ -535,8 +554,9 @@ class QYazmac:
         Dönen ``(k, 2)``: ``z = ρ₀₀−ρ₁₁`` (nüfus farkı), ``x = 2ρ₀₁``
         (uyum).
         """
-        R = self.y.yuva_yogunluklari(list(yuvalar))
-        return np.stack([R[:, 0, 0] - R[:, 1, 1], 2.0 * R[:, 0, 1]], axis=1)
+        R = self.y.yuva_yogunluklari(list(yuvalar))       # (B, k, 2, 2)
+        return np.stack([R[..., 0, 0] - R[..., 1, 1],
+                         2.0 * R[..., 0, 1]], axis=-1)
 
     def blok_dagilimi(self, bas: int, kac: int) -> np.ndarray:
         """``bas``tan itibaren ``kac`` kübitin **ortak** dağılımı -- tam.
@@ -560,41 +580,50 @@ class QYazmac:
         if kac < 1 or bas + kac > self.n:
             raise IndexError("blok zincirin dışına taşıyor")
         X = self.y.bag
-        A = self.y.A
+        A = self.y.A                                  # (B, n, X, 2, X)
+        Bn = self.y.B
 
-        # sol çevre: MPS ilk yuvanın 0. bağ indisinde başlar
-        L = np.zeros((X, X))
-        L[0, 0] = 1.0
+        # Yığın ekseni ``B`` bütün büzülmelerde taşınır: her üye kendi
+        # dağılımını verir (kullanıcı hükmü). ``einsum`` yol araması
+        # sıcak yolda israftı; çevre büzülmeleri açık ``matmul``dur.
+        L = np.zeros((Bn, X, X))
+        L[:, 0, 0] = 1.0
         for k in range(bas):
-            Ak = A[k].astype(np.float64)
-            L = np.einsum("ac,aib,cid->bd", L, Ak, Ak, optimize=True)
-        # sağ çevre: son yuvanın 0. bağ indisinde biter
-        R = np.zeros((X, X))
-        R[0, 0] = 1.0
+            Ak = A[:, k].astype(np.float64)           # (B,a,i,b)
+            # L[b,d] = Σ_{a,c,i} L[a,c] A[a,i,b] A[c,i,d]
+            t1 = np.matmul(L.transpose(0, 2, 1),
+                           Ak.reshape(Bn, X, 2 * X))  # (B,c,(i,b))
+            t1 = t1.reshape(Bn, X, 2, X).transpose(0, 2, 1, 3)
+            L = np.matmul(Ak.transpose(0, 2, 3, 1).reshape(Bn, 2, X, X
+                                                           ).transpose(0, 1, 3, 2),
+                          t1).sum(axis=1)
+        R = np.zeros((Bn, X, X))
+        R[:, 0, 0] = 1.0
         for k in range(self.n - 1, bas + kac - 1, -1):
-            Ak = A[k].astype(np.float64)
-            R = np.einsum("bd,aib,cid->ac", R, Ak, Ak, optimize=True)
+            Ak = A[:, k].astype(np.float64)
+            # R[a,c] = Σ_{b,d,i} R[b,d] A[a,i,b] A[c,i,d]
+            t1 = np.matmul(Ak.transpose(0, 2, 1, 3).reshape(Bn, 2 * X, X),
+                           R).reshape(Bn, 2, X, X)     # (B,i,a,d)
+            R = np.matmul(t1.transpose(0, 1, 2, 3),
+                          Ak.transpose(0, 2, 3, 1)).sum(axis=1)
 
-        # blok: L ile başlayıp fizikî indisleri açık tutarak ilerle
-        M = L                                        # (a, c)
+        M = L
         boyut = 1
         for k in range(bas, bas + kac):
-            Ak = A[k].astype(np.float64)
-            M = np.einsum("...ac,aib,cjd->...ijbd", M, Ak, Ak,
-                          optimize=True)
+            Ak = A[:, k].astype(np.float64)
+            M = np.einsum("z...ac,zaib,zcjd->z...ijbd", M, Ak, Ak,
+                          optimize=False)
             boyut *= 2
-            # (…, i, j, b, d) → fizikî indisleri toplu tut
-            sekil = M.shape
-            M = M.reshape(sekil[:-4] + (sekil[-4] * 1, sekil[-3] * 1,
-                                        sekil[-2], sekil[-1]))
-        rho = np.einsum("...bd,bd->...", M, R, optimize=True)
-        # rho'nun indisleri (i₁,j₁,i₂,j₂,…); köşegeni al
-        rho = rho.reshape([2] * (2 * kac))
-        eks = list(range(0, 2 * kac, 2)) + list(range(1, 2 * kac, 2))
-        rho = np.transpose(rho, eks).reshape(boyut, boyut)
-        P = np.clip(np.real(np.diag(rho)), 0.0, None)
-        t = float(P.sum())
-        return P / t if t > 1e-30 else np.full(boyut, 1.0 / boyut)
+        rho = np.einsum("z...bd,zbd->z...", M, R, optimize=False)
+        rho = rho.reshape([Bn] + [2] * (2 * kac))
+        eks = [0] + [1 + x for x in
+                     (list(range(0, 2 * kac, 2))
+                      + list(range(1, 2 * kac, 2)))]
+        rho = np.transpose(rho, eks).reshape(Bn, boyut, boyut)
+        P = np.clip(np.real(np.diagonal(rho, axis1=1, axis2=2)), 0.0, None)
+        t = P.sum(axis=1, keepdims=True)
+        P = np.where(t > 1e-30, P / np.maximum(t, 1e-30), 1.0 / boyut)
+        return P if Bn > 1 else P[0]
 
     def beyan(self, sozluk: int, satir: Optional[int] = None) -> np.ndarray:
         """Belirteç dağılımı: **kelam alanından** okunur.
@@ -624,13 +653,14 @@ class QYazmac:
         (``Σ E_x = I``); dalga diri kalır.
         """
         R = self.y.yuva_yogunluklari([self.kulli("makam", 0),
-                                      self.kulli("makam", 1)])
-        p0 = float(np.clip(R[0, 0, 0], 0.0, 1.0))
-        p1 = float(np.clip(R[1, 0, 0], 0.0, 1.0))
-        P = np.array([p0 * p1, p0 * (1 - p1), (1 - p0) * p1,
-                      (1 - p0) * (1 - p1)])
-        t = float(P.sum())
-        return P / t if t > 1e-12 else np.full(4, 0.25)
+                                      self.kulli("makam", 1)])   # (B,2,2,2)
+        p0 = np.clip(R[:, 0, 0, 0], 0.0, 1.0)
+        p1 = np.clip(R[:, 1, 0, 0], 0.0, 1.0)
+        P = np.stack([p0 * p1, p0 * (1 - p1), (1 - p0) * p1,
+                      (1 - p0) * (1 - p1)], axis=1)
+        t = P.sum(axis=1, keepdims=True)
+        P = np.where(t > 1e-12, P / np.maximum(t, 1e-12), 0.25)
+        return P if self.y.B > 1 else P[0]
 
     def alan_degeri(self, ad: str) -> float:
         """Bir küllî hüküm alanının ``[0,1]`` değeri -- zayıf okuma.
@@ -641,16 +671,34 @@ class QYazmac:
         """
         bas, kac = self._alan[ad]
         R = self.y.yuva_yogunluklari(list(range(bas, bas + kac)))
-        return float(np.mean(R[:, 1, 1]))
+        v = np.mean(R[..., 1, 1], axis=1)                # (B,)
+        return float(v[0]) if self.y.B == 1 else v
 
     def olcumler(self) -> Dict[str, float]:
-        """Bütün küllî hükümlerin zayıf okuması + dolaşıklık."""
-        d = {ad: self.alan_degeri(ad) for ad, _ in self.ayar.kulli_alanlar}
+        """Küllî hükümlerin zayıf okuması + dolaşıklık -- ``B=1`` için.
+
+        Yığın koşusunda ``olcumler_yigin`` kullanılır; **her üye kendi
+        ölçümünü verir** (kullanıcı hükmü). Burada skaler dönmesinin
+        sebebi ``B=1``in hâlâ en sık hâl olmasıdır; iki ayrı kod yolu
+        değil, aynı ölçümün iki sunumudur.
+        """
+        y = self.olcumler_yigin()
+        return {k: (float(v[0]) if isinstance(v, np.ndarray) else float(v))
+                for k, v in y.items()}
+
+    def olcumler_yigin(self) -> Dict[str, np.ndarray]:
+        """Bütün küllî hükümler, **yığın üyesi başına** ``(B,)``."""
+        Bn = self.y.B
+        d: Dict[str, np.ndarray] = {}
+        for ad, _ in self.ayar.kulli_alanlar:
+            v = self.alan_degeri(ad)
+            d[ad] = np.atleast_1d(np.asarray(v, float))
         e = self.y.dolasiklik_entropisi()
-        d["entropi"] = float(e["entropi"])
-        d["schmidt"] = float(e["schmidt"])
-        d["norm_hatası"] = float(self.y.norm_hatasi(ornek=32))
-        P = self.makam_dagilimi()
-        for ad, p in zip(MAKAM_ADLARI, P):
-            d["P_" + ad] = float(p)
+        d["entropi"] = np.asarray(e.get("entropi_yigin",
+                                        np.full(Bn, e["entropi"])), float)
+        d["schmidt"] = np.full(Bn, float(e["schmidt"]))
+        d["norm_hatası"] = np.full(Bn, float(self.y.norm_hatasi(ornek=32)))
+        P = np.atleast_2d(self.makam_dagilimi())
+        for i, ad in enumerate(MAKAM_ADLARI):
+            d["P_" + ad] = P[:, i]
         return d

@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import math
 import time
+from dataclasses import replace
 from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
@@ -99,10 +100,22 @@ class QNefs:
         self.s = qsicil()
 
     # -----------------------------------------------------------------
-    def idrak_et(self, E: np.ndarray, bec: bool = True) -> QYazmac:
-        """Ham duyudan nihaî hükme -- tek geçiş, hiç okuma yok."""
+    def idrak_et(self, E: np.ndarray, bec: bool = True,
+                 yigin: int = 0) -> QYazmac:
+        """Ham duyudan nihaî hükme -- tek geçiş, hiç okuma yok.
+
+        ``E`` ``(n, d)`` ise tek girdi; ``(B, n, d)`` ise **yığın**:
+        ``B`` ayrı girdi aynı anda idrak edilir ve her üye kendi hükmünü
+        verir. ``yigin`` açıkça verilirse yazmaç o büyüklükte kurulur
+        (aynı girdi ``B`` kere -- yalnız hız ölçümü için).
+        """
         E = np.asarray(E, float)
-        q = QYazmac(len(E), self.ayar)
+        B = E.shape[0] if E.ndim == 3 else max(1, int(yigin))
+        n_satir = E.shape[-2]
+        ayar = self.ayar
+        if B != ayar.yigin:
+            ayar = replace(ayar, yigin=B)
+        q = QYazmac(n_satir, ayar)
         q.kodla(E)
         q.superpozisyon()
         q.mera()
