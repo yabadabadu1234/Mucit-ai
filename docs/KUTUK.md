@@ -1304,3 +1304,70 @@ minik dizeylerde SVD/QR çağrı masrafıdır ve asıl çare ayrık çiftleri
 yığın hâlinde işlemektir; mevcut zincir düzeni (veri ile yerel hüküm
 kübitlerinin iç içe geçmesi) buna izin vermiyor. **Düzeni değiştirmek
 H40'ı nakzetmek olur ve sorulmadan yapılmayacaktır.**
+
+## H79 — `main/yazmac.py` taması: yığın kapılar kuruldu, kazanç ÖLÇÜLDÜ
+
+Kullanıcı hükmü: dosya dosya taranacak; her dosyada *"bütün hız
+baltalayıcıları düzelt → yeni nesil formüller yerleştir → algoritmayı
+tashih et → test et"*. Bu, birinci dosyanın zabtıdır.
+
+**Kullanıcının verdiği dört karar:** (a) hedef ölçüt **7 MB/sn**;
+(b) melekelerin gövdesi değiştirilebilir, kapılar yığınlansın;
+(c) **her yer float32**; (d) zincir düzeni için iki düzen birden dursun,
+**ölçüm karar versin**.
+
+**Kaldırılan yedi hız baltalayıcı:**
+
+1. `tek_kapi` içindeki `einsum(..., optimize=True)` → yığın çarpımı.
+2. `_cift_kapi_dilim`deki `T.astype(np.float32)` → tip zaten float32,
+   her kapıda tam bir kopya çıkarıyordu.
+3. `mpo_uygula`nın `astype(np.float64)` yükseltmesi → kalktı; MPO
+   bütün zinciri iki katı bellekle kopyalıyordu.
+4. `mpo_uygula`daki üç `einsum(optimize=True)` → yığın çarpımı.
+5. `mpo_uygula`nın geri yazmada yuva başına yeni dizi tahsisi → tek
+   tampon, yerinde sıfırlama.
+6. `yuva_yogunluklari`nin Python döngüsü + yuva başına einsum → tek
+   yığın çarpımı (ölçüm float64'e yükseltilir: durum f32, ölçüm f64).
+7. `_cift_kapi_dilim`in **stride-2 kısıtı** → `_cift_kapi_cekirdek`
+   keyfî ayrık çiftleri alır.
+
+**İki yeni yığın kapısı** (`tek_kapi_yigin`, `cift_kapi_yigin`).
+Doğruluk sınandı -- tek tek vurmakla **birebir aynı**:
+
+| sınama | âzamî fark |
+|---|---|
+| 100 tek kübitlik kapı, her yuvaya ayrı kapı | **0,000e+00** |
+| 50 iki kübitlik kapı, hepsine aynı kapı | **0,000e+00** |
+| 50 iki kübitlik kapı, her çifte ayrı kapı | **0,000e+00** |
+
+Not: yığın hâlinde dönen **kesme** ayrı bir şeydir. Tek tek vurulunca
+5 kapının oranları toplanır (1,95e-01); yığında atılan/toplam oranı
+**bir kere** hesaplanır (4,08e-02). İkisi aynı sayı değildir ve
+karıştırılmamalıdır.
+
+**Kazanç, ölçüldü ve BEKLENTİMİN ALTINDA:**
+
+| iş | tek tek | yığın | kat |
+|---|---|---|---|
+| 100 tek kübitlik kapı | 0,0008 sn | 0,0002 sn | **4,1** |
+| 50 iki kübitlik kapı | 0,0116 sn | 0,0075 sn | **1,5** |
+
+Uçtan uca ileri geçiş (aynı girdi, üç ölçümün ortancası):
+
+| yazmaç | başta | şimdi | kat |
+|---|---|---|---|
+| 3 satır × 4 kübit, χ=16 | 0,658 sn | **0,435 sn** | 1,51 |
+| 4 satır × 6 kübit, χ=32 | 2,767 sn | **2,402 sn** | 1,15 |
+| 6 satır × 12 kübit, χ=64 | 36,33 sn | **31,51 sn** | 1,15 |
+
+**Asıl hüküm buradan çıkıyor:** çağrı masrafını kaldırmak yalnız
+**küçük χ**de işe yarıyor. χ=64'te maliyet gerçek floptur (128×128 SVD),
+Python değil. Yani "kapıları yığınla" tek başına 100 kat vermez ve
+vereceğini iddia etmiyorum. Yığın arayüzü kuruldu fakat **melekeler
+henüz onu çağırmıyor**; asıl kazanç melekeler taşınınca ölçülecek
+(sıradaki dosya).
+
+**Bir ölçüm dersi:** 6 satırlık ölçüm önce 34,18 sn çıktı ve
+"kötüleşti" göründü. Yalnız başına tekrar ölçüldü: **31,51 sn**.
+Makine o sırada sınama takımını da koşuyordu. Yüklü makinede alınan
+hız ölçümü hüküm veremez.

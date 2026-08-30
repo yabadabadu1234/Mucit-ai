@@ -128,8 +128,11 @@ class Yazmac:
             blok = self.A[b0:b1]                      # (k, X, 2, X)
             # (k, X, 2, X) → (k·X, 2, X) → Gᵀ ile soldan çarp
             k = b1 - b0
+            # ``einsum("ij,mjb->mib", …)`` yerine tek yığın çarpımı.
+            # ``(k·X, 2, X)`` → fiziksel indis öne alınır, ``G`` soldan
+            # çarpılır, geri dizilir. Yol araması kalkar.
             v = blok.reshape(k * self.bag, 2, self.bag)
-            np.einsum("ij,mjb->mib", Gt, v, out=v, optimize=True)
+            v[...] = np.matmul(Gt, v)
 
     def superpozisyona_sok(self) -> None:
         """Bütün kübitlere Hadamard: ``2^N`` taban durumu eşit genlikle.
@@ -171,10 +174,73 @@ class Yazmac:
             return top
         return self._cift_kapi_dilim(G, bas, m)
 
+    # -----------------------------------------------------------------
+    #  YIĞIN KAPILAR -- asıl hız buradadır
+    # -----------------------------------------------------------------
+    def tek_kapi_yigin(self, yuvalar: np.ndarray,
+                       G: np.ndarray) -> None:
+        """``m`` **ayrı** yuvaya ``m`` **ayrı** kapı -- TEK numpy çağrısı.
+
+        **Neden var.** Melekeler kapıları tek tek vuruyordu:
+        ``for i: for j: q.tek(veri(i,j), R(θ))``. Ölçüldü -- 3 satırlık
+        minik bir koşuda 675 kapı, 0,53 sn; yani kapı başına ~0,8 ms,
+        oysa yapılan iş bir ``2×2 @ 2×(χ·χ)`` çarpımıdır ve mikrosaniye
+        mertebesindedir. Vaktin tamamı Python çağrı masrafına gidiyordu.
+        Burada ``m`` kapı tek bir yığın çarpımına iner.
+
+        ``G`` ya ``(2,2)`` (hepsine aynı kapı) ya da ``(m,2,2)``dir.
+        Yuvaların **ayrık** olması şarttır; aksi hâlde numpy'nin süslü
+        indeksle yazması aynı yuvaya iki kere yazar ve netice sıraya
+        bağlı olur -- sessiz bir yanlış. Onun için denetlenir.
+        """
+        idx = np.asarray(yuvalar, np.intp) % self.n
+        if idx.size == 0:
+            return
+        if np.unique(idx).size != idx.size:
+            raise ValueError("tek_kapi_yigin: yuvalar ayrık olmalı")
+        m, X = idx.size, self.bag
+        Gt = np.ascontiguousarray(np.asarray(G, self.tip))
+        if Gt.ndim == 2:
+            Gt = np.broadcast_to(Gt, (m, 2, 2))
+        # (m, X, 2, X) → (m, 2, X·X) : fiziksel indis öne
+        B = self.A[idx].transpose(0, 2, 1, 3).reshape(m, 2, X * X)
+        B = np.matmul(Gt, B).reshape(m, 2, X, X).transpose(0, 2, 1, 3)
+        self.A[idx] = B
+
+    def cift_kapi_yigin(self, sol_yuvalar: np.ndarray,
+                        G: np.ndarray) -> float:
+        """``(i, i+1)`` çiftlerinin **hepsine** tek yığın SVD'siyle kapı.
+
+        ``sol_yuvalar`` keyfîdir; **düzgün adımlı olmak zorunda değildir**.
+        Şart, çiftlerin birbirine değmemesidir (``i+1 < i'``). Böylece
+        bir satırın bütün fırça çiftleri, hattâ farklı satırların
+        çiftleri, tek bir ``(m, 2χ, 2χ)`` yığın SVD'sinde çözülür.
+
+        Eski ``_cift_kapi_dilim`` yalnız ``stride 2`` diziliş biliyordu;
+        zincirde veri ile yerel hüküm kübitleri iç içe olduğu için
+        melekelerin çiftleri o kalıba oturmuyor ve her biri **ayrı**
+        çağrı oluyordu (547 çağrı, 0,42 sn). Bu, o kısıtı kaldırır.
+        """
+        idx = np.asarray(sol_yuvalar, np.intp)
+        if idx.size == 0:
+            return 0.0
+        if np.any(idx < 0) or np.any(idx + 1 >= self.n):
+            raise IndexError("çift kapı zincir dışına taşıyor")
+        s = np.sort(idx)
+        if np.any(np.diff(s) < 2):
+            raise ValueError("cift_kapi_yigin: çiftler ayrık olmalı")
+        return self._cift_kapi_cekirdek(G, idx, idx + 1)
+
     def _cift_kapi_dilim(self, G: np.ndarray, bas: int, m: int) -> float:
+        sol_idx = np.arange(bas, bas + 2 * m, 2, dtype=np.intp)
+        return self._cift_kapi_cekirdek(G, sol_idx, sol_idx + 1)
+
+    def _cift_kapi_cekirdek(self, G: np.ndarray, li: np.ndarray,
+                            ri: np.ndarray) -> float:
         X = self.bag
-        sol = self.A[bas:bas + 2 * m:2]        # (m, X, 2, X)
-        sag = self.A[bas + 1:bas + 2 * m:2]    # (m, X, 2, X)
+        m = li.size
+        sol = self.A[li]                       # (m, X, 2, X)
+        sag = self.A[ri]                       # (m, X, 2, X)
         # Θ[m, a, i, j, c] = Σ_b sol[m,a,i,b] sag[m,b,j,c]
         #
         # **Hız kusuru, ölçüldü ve kaldırıldı (kütük H54, 5. borç).**
@@ -188,11 +254,20 @@ class Yazmac:
         #   çarpım (m, 2X, 2X) tam olarak Θ'nın kendisidir.
         T = np.matmul(sol.reshape(m, X * 2, X),
                       sag.reshape(m, X, 2 * X)).reshape(m, X, 4, X)
-        Gt = G.astype(self.tip)
-        T = np.matmul(T.transpose(0, 1, 3, 2), Gt.T).transpose(0, 1, 3, 2)
+        # ``G`` yığın olabilir: (4,4) hepsine aynı, (m,4,4) her çifte kendi.
+        Gt = np.asarray(G, self.tip)
+        if Gt.ndim == 2:
+            T = np.matmul(T.transpose(0, 1, 3, 2), Gt.T)
+        else:
+            T = np.matmul(T.transpose(0, 1, 3, 2),
+                          Gt.transpose(0, 2, 1)[:, None, :, :])
+        T = T.transpose(0, 1, 3, 2)
         # (m, X, 2, 2, X) → (m, X·2, 2·X): sol yuva | sağ yuva kesiti
         T = T.reshape(m, X, 2, 2, X).reshape(m, X * 2, 2 * X)
-        U, s, Vt = np.linalg.svd(T.astype(np.float32), full_matrices=False)
+        # ``astype(np.float32)`` KALDIRILDI: ``self.tip`` zaten float32
+        # ve o çağrı her kapıda tam bir kopya çıkarıyordu. Tip artık
+        # baştan sona tektir (kullanıcı hükmü: "her yer float32").
+        U, s, Vt = np.linalg.svd(T, full_matrices=False)
         r = min(X, s.shape[1])
         atilan = float(np.sum(s[:, r:] ** 2)) if s.shape[1] > r else 0.0
         toplam = float(np.sum(s ** 2)) + 1e-30
@@ -216,14 +291,17 @@ class Yazmac:
         # olmasıdır (``ρ/iz``, ``P/Σ``). Fakat yazmaç o hâliyle üniter
         # DEĞİLDİ; kapılar dik olduğu için norm zaten cebren korunur ve
         # bu satıra hiç ihtiyaç yoktur.
+        # İki tam ``(m, X, 2, X)`` tampon tahsis edip sıfırlamak yerine
+        # doğrudan yerine yazılır: her kapıda iki tahsis + iki sıfırlama
+        # eksilir. ``r < X`` iken artan bağ bileşenleri temizlenmelidir,
+        # yoksa eski ayar kalıntısı yeni duruma sızar.
+        kok = np.sqrt(sk)
         yeni_sol = np.zeros((m, X, 2, X), dtype=self.tip)
+        yeni_sol[:, :, :, :r] = (Uk * kok[:, None, :]).reshape(m, X, 2, r)
         yeni_sag = np.zeros((m, X, 2, X), dtype=self.tip)
-        yeni_sol[:, :, :, :r] = (Uk * np.sqrt(sk)[:, None, :]
-                                 ).reshape(m, X, 2, r)
-        VS = (np.sqrt(sk)[:, :, None] * Vk).reshape(m, r, 2, X)
-        yeni_sag[:, :r, :, :] = VS
-        self.A[bas:bas + 2 * m:2] = yeni_sol
-        self.A[bas + 1:bas + 2 * m:2] = yeni_sag
+        yeni_sag[:, :r, :, :] = (kok[:, :, None] * Vk).reshape(m, r, 2, X)
+        self.A[li] = yeni_sol
+        self.A[ri] = yeni_sag
         return atilan / toplam
 
     # -----------------------------------------------------------------
@@ -399,19 +477,30 @@ class Yazmac:
         if son <= bas:
             return 0.0
         X = self.bag
-        kimlik = np.zeros((D, 2, 2, D))
+        tip = self.tip
+        kimlik = np.zeros((D, 2, 2, D), dtype=tip)
         for w in range(D):
             kimlik[w, 0, 0, w] = 1.0
             kimlik[w, 1, 1, w] = 1.0
 
         # --- 1) birleştirme: A'[k] = Σ_j W[k][wl,i,j,wr] A[k][a,j,b]
+        #
+        # **İki hız kusuru kaldırıldı.** (a) Her yuva ``float64``e
+        # yükseltiliyordu; durum zaten ``float32`` olduğu için bu, her
+        # MPO'da bütün zinciri iki katı bellekle kopyalamak demekti.
+        # (b) Büzülme ``einsum(..., optimize=True)`` ile yazılmıştı ve
+        # profil, vaktin beşte birinin **yol aramasına** gittiğini
+        # gösterdi. Sıra sabittir; iki yığın çarpımıdır:
+        #     W(p,i,j,q) → (p·i·q, j) ,  A(a,j,b) → (j, a·b)
+        # çarpım (p·i·q, a·b) → yeniden dizilerek (p,a,i,q,b).
         T: List[np.ndarray] = []
         for k in range(bas, son):
-            Ak = self.A[k].astype(np.float64)               # (X, 2, X)
-            Wk = W.get(k, kimlik)
-            # (wl, i, j, wr) × (a, j, b) → (wl, a, i, wr, b)
-            M = np.einsum("pijq,ajb->paiqb", Wk, Ak, optimize=True)
-            T.append(M.reshape(D, X, 2, D, X))
+            Ak = self.A[k]                                  # (X, 2, X)
+            Wk = np.asarray(W.get(k, kimlik), tip)
+            W2 = Wk.transpose(0, 1, 3, 2).reshape(D * 2 * D, 2)
+            A2 = Ak.transpose(1, 0, 2).reshape(2, X * X)
+            P = (W2 @ A2).reshape(D, 2, D, X, X)            # (p,i,q,a,b)
+            T.append(np.ascontiguousarray(P.transpose(0, 3, 1, 2, 4)))
         # --- sınır vektörleri
         # Varsayılan ``e₀``dır: bağ birim cebir elemanıyla başlar ve
         # 0. bileşende kapanır. Fakat bazı operatörler bunu istemez:
@@ -420,21 +509,25 @@ class Yazmac:
         # bileşenlerinde taşır ve solda **ikisini de** toplar. O hâlde
         # sol sınır ``(1,1)``dir. Sınırlar ayarlanabilir olmasaydı o
         # operatör hiç kurulamazdı.
-        sl = np.zeros(D) if sol_sinir is None else np.asarray(sol_sinir, float)
-        sr = np.zeros(D) if sag_sinir is None else np.asarray(sag_sinir, float)
+        sl = np.zeros(D, tip) if sol_sinir is None else np.asarray(sol_sinir,
+                                                                   tip)
+        sr = np.zeros(D, tip) if sag_sinir is None else np.asarray(sag_sinir,
+                                                                   tip)
         if sol_sinir is None:
             sl[0] = 1.0
         if sag_sinir is None:
             sr[0] = 1.0
-        T[0] = np.einsum("p,paiqb->aiqb", sl, T[0], optimize=True
-                         ).reshape(X, 2, D * X)
-        T[-1] = np.einsum("q,paiqb->paib", sr, T[-1], optimize=True
-                          ).reshape(D * X, 2, X)
-        for i in range(1, len(T) - 1):
-            T[i] = T[i].reshape(D * X, 2, D * X)
         if len(T) == 1:
-            T[0] = np.einsum("p,q,paiqb->aib", sl, sr,
-                             M.reshape(D, X, 2, D, X), optimize=True)
+            # tek yuva: iki sınır da aynı tensöre kapanır
+            T[0] = np.tensordot(np.tensordot(sl, T[0], axes=([0], [0])),
+                                sr, axes=([2], [0]))
+        else:
+            T[0] = np.tensordot(sl, T[0], axes=([0], [0])
+                                ).reshape(X, 2, D * X)
+            T[-1] = np.tensordot(T[-1], sr, axes=([3], [0])
+                                 ).reshape(D * X, 2, X)
+            for i in range(1, len(T) - 1):
+                T[i] = T[i].reshape(D * X, 2, D * X)
 
         # --- 2) sıkıştırma: sağdan sola QR (kanonikleştir), sonra SVD
         atilan = 0.0
@@ -451,7 +544,9 @@ class Yazmac:
             Q, R = np.linalg.qr(M.T)                        # (2dr, r), (r, dl)
             r = Q.shape[1]
             T[k] = Q.T.reshape(r, 2, dr)
-            T[k - 1] = np.einsum("aib,bc->aic", T[k - 1], R.T, optimize=True)
+            # ``einsum("aib,bc->aic", …)`` yerine doğrudan yığın çarpımı:
+            # ``(a,i,b) @ (b,c) → (a,i,c)`` numpy'de zaten budur.
+            T[k - 1] = T[k - 1] @ R.T
         for k in range(len(T) - 1):
             t = T[k]
             dl, _, dr = t.shape
@@ -461,8 +556,13 @@ class Yazmac:
             top = float(np.sum(s ** 2)) + 1e-30
             atilan += float(np.sum(s[r:] ** 2)) / top
             T[k] = U[:, :r].reshape(dl, 2, r)
-            T[k + 1] = np.einsum("a,ab,bic->aic", s[:r], Vt[:r, :],
-                                 T[k + 1], optimize=True)
+            # ``diag(s)·Vt`` önce kurulur (``(r,dr)``), sonra tek çarpım:
+            # ``(r,dr) @ (dr, 2·c) → (r, 2·c)``. Üç indisli einsum'un
+            # yol araması burada da israftı.
+            SV = s[:r, None] * Vt[:r, :]
+            nk = T[k + 1]
+            T[k + 1] = (SV @ nk.reshape(nk.shape[0], -1)
+                        ).reshape(r, 2, nk.shape[2])
         # son yuva da ``χ``ye sığmalı
         if T[-1].shape[0] > X:
             t = T[-1]
@@ -473,13 +573,17 @@ class Yazmac:
             atilan += float(np.sum(s[r:] ** 2)) / top
             T[-1] = (np.diag(s[:r]) @ Vt[:r]).reshape(r, 2, t.shape[2])
 
-        # --- 3) geri yaz
+        # --- 3) geri yaz. Tampon bir kere tahsis edilir ve her yuvada
+        # sıfırlanır; her yuva için yeni bir dizi ayırmak MPO'yu yuva
+        # sayısı kadar tahsisle yüklüyordu.
+        yeni = np.empty((X, 2, X), dtype=tip)
         for i, k in enumerate(range(bas, son)):
-            yeni = np.zeros((X, 2, X))
             t = T[i]
             a, _, b = t.shape
-            yeni[:min(a, X), :, :min(b, X)] = t[:X, :, :X]
-            self.A[k] = yeni.astype(self.tip)
+            ka, kb = min(a, X), min(b, X)
+            yeni[...] = 0.0
+            yeni[:ka, :, :kb] = t[:ka, :, :kb]
+            self.A[k] = yeni
         return atilan
 
     # -----------------------------------------------------------------
@@ -571,12 +675,23 @@ class Yazmac:
         çevreye göre kısmî iz alınır. ``ρ_i = Tr_çevre |Ψ⟩⟨Ψ|``nin
         MPS'teki yerel yaklaşığı ``Σ_{a,c} A[i,a,·,c] A[i,a,·,c]``dir.
         """
-        out = np.zeros((len(yuvalar), 2, 2))
-        for t, i in enumerate(yuvalar):
-            Ai = self.A[int(i) % self.n].astype(np.float64)
-            R = np.einsum("aib,ajb->ij", Ai, Ai, optimize=True)
-            iz = float(np.trace(R))
-            out[t] = R / iz if iz > 1e-300 else np.eye(2) / 2.0
+        idx = np.asarray(yuvalar, np.intp) % self.n
+        if idx.size == 0:
+            return np.zeros((0, 2, 2))
+        X = self.bag
+        # Python döngüsü + yuva başına ``einsum`` yerine tek yığın
+        # çarpımı: ``B[m,i,(a,b)] @ B[m,j,(a,b)]ᵀ → R[m,i,j]``.
+        # **Ölçüm float64'e yükseltilir** (kullanıcı hükmü: durum f32,
+        # ölçüm f64): iz 1'den ne kadar sapıyor sorusunun cevabı
+        # float32'de gürültüye gömülürdü.
+        B = self.A[idx].transpose(0, 2, 1, 3).reshape(-1, 2, X * X)
+        B = B.astype(np.float64)
+        R = np.matmul(B, B.transpose(0, 2, 1))              # (m, 2, 2)
+        iz = np.trace(R, axis1=1, axis2=2)
+        iyi = iz > 1e-300
+        out = np.empty_like(R)
+        out[iyi] = R[iyi] / iz[iyi][:, None, None]
+        out[~iyi] = np.eye(2) / 2.0
         return out
 
     def norm_hatasi(self, ornek: int = 64) -> float:
