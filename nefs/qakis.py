@@ -31,6 +31,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 from .qmeleke import QAKIS, QParametre, qmelekeler, qsicil
+from .sadakat import sadakat_intaci, sadakat_kapisi
 from .qyazmac import MAKAM_ADLARI, QAyar, QYazmac, donme
 
 __all__ = ["QNefs", "rapor", "bec_faz_kilidi"]
@@ -93,11 +94,16 @@ class QNefs:
     """41 üniter melekeyi tek dalga üzerinde koşturan işletici."""
 
     def __init__(self, tohum: int = 0, ayar: Optional[QAyar] = None,
-                 sira: Sequence[int] = QAKIS) -> None:
+                 sira: Sequence[int] = QAKIS, sadakat: bool = True) -> None:
         self.p = QParametre(tohum)
         self.ayar = ayar or QAyar(tohum=tohum)
         self.sira = tuple(sira)
         self.s = qsicil()
+        #: Mantığa sadakat kapısı açık mı? Yalnız **ölçüm** için
+        #: kapatılır (haraplama: kalp söküldüğünde vücut ne olur?).
+        #: Akışta daima açıktır ve kapatılması bir hüküm değil, bir
+        #: teşrihtir.
+        self.sadakat = bool(sadakat)
 
     # -----------------------------------------------------------------
     def idrak_et(self, E: np.ndarray, bec: bool = True,
@@ -119,8 +125,21 @@ class QNefs:
         q.kodla(E)
         q.superpozisyon()
         q.mera()
+        # **MANTIĞA SADAKAT: her melekeden sonra, muafiyetsiz** (H102/H105).
+        # Bu bir meleke değildir, melekelerin tâbi olduğu şarttır -- yani
+        # bu mimarinin kalbidir. Kaldırıldığında hiçbir hüküm mantıklı
+        # kalmaz; H94'te *aranan* ve bulunamayan uzuv budur.
+        # Hiçbir şey OKUMAZ: şartı hesaplayıp karar vererek değil,
+        # dolaştırarak icra eder (kullanıcı hükmü: "kalp seçmez,
+        # dolaştırır").
         for no in self.sira:
             self.s[no].kosu(q, self.p)
+            if self.sadakat:
+                sadakat_kapisi(q, self.p)
+        if self.sadakat:
+            # İşaretlenen mantık dışı kollar burada SÖNER: faz farkı,
+            # yansıtmayla genlik farkına çevrilir (H98'de ölçülen usul).
+            sadakat_intaci(q)
         if bec:
             bec_faz_kilidi(q)
         # **Ölçümden evvel durum, durum olmalıdır.** Kesme her vuruşta

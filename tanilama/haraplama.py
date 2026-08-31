@@ -50,8 +50,9 @@ HUKUMLER = ("tasdik", "tenakuz", "nakz", "sukut", "mizan", "makam", "kelam")
 
 
 def _kos(sira: Sequence[int], E: np.ndarray, ayar: QAyar,
-         sozluk: int, tohum: int) -> Tuple[np.ndarray, Dict[str, float]]:
-    nefs = QNefs(tohum, ayar, sira=tuple(sira))
+         sozluk: int, tohum: int, kalp: bool = True
+         ) -> Tuple[np.ndarray, Dict[str, float]]:
+    nefs = QNefs(tohum, ayar, sira=tuple(sira), sadakat=kalp)
     q = nefs.idrak_et(E)
     return np.asarray(q.beyan(sozluk), float), q.olcumler()
 
@@ -96,6 +97,10 @@ def haraplama(tohum: int = 0, satir: int = 6, sozluk: int = 16,
     return satirlar
 
 
+def sozluk_varsayilan() -> int:
+    return 16
+
+
 def rapor(tohum: int = 0, satir: int = 6, esik: float = 1e-6) -> str:
     """Haraplama neticesi + **vücut hükmü**."""
     s = ["=== HARAPLAMA: her meleke çıkarılınca vücutta ne değişiyor? ===",
@@ -112,6 +117,19 @@ def rapor(tohum: int = 0, satir: int = 6, esik: float = 1e-6) -> str:
                  % (x["no"], x["ad"], x["kaç_kere"], x["beyan_tvd"],
                     x["hüküm_kayması"], x["makam_kayması"],
                     x["entropi_farkı"]))
+
+    # --- KALBİN KENDİ HARAPLAMASI.
+    # Bu âlet yalnız MELEKE söker; kalp ise meleke DEĞİLDİR (H103).
+    # Onun için kalbin lezyonu ayrıca ölçülür: sadakat kapısı kapatılıp
+    # aynı girdi koşulur. "Melekeler arasında kalp yok" hükmü, kalbin
+    # yokluğu demek değildir -- kalbin meleke olmadığı demektir.
+    ayar_k = QAyar(tohum=tohum)
+    rng_k = np.random.default_rng(tohum)
+    bel = [int(x) for x in rng_k.integers(0, sozluk_varsayilan(), size=satir)]
+    Ek = belirtecleri_kodla(bel, ayar_k.satir_kubiti, sozluk_varsayilan())
+    Pk, ok_ = _kos(QAKIS, Ek, ayar_k, sozluk_varsayilan(), tohum, kalp=True)
+    Ps, os_ = _kos(QAKIS, Ek, ayar_k, sozluk_varsayilan(), tohum, kalp=False)
+    kalp_tvd = _tvd(Pk, Ps)
 
     olu = [x for x in r if float(x["beyan_tvd"]) < esik
            and float(x["hüküm_kayması"]) < esik]
@@ -133,16 +151,27 @@ def rapor(tohum: int = 0, satir: int = 6, esik: float = 1e-6) -> str:
     # Kalp ölçütü: bozulduğunda bütün vücudu bozan bir uzuv var mı?
     pay = float(tvd[0]) / max(float(tvd.sum()), 1e-30)
     s += ["",
-          "KALP VAR MI? En tesirli melekenin toplam tesirdeki payı: %%%.1f"
-          % (100.0 * pay)]
+          "MELEKELER ARASINDA KALP VAR MI?",
+          "  en tesirli melekenin toplam tesirdeki payı: %%%.1f  (düz: %%%.1f)"
+          % (100.0 * pay, 100.0 / max(len(r), 1))]
     if pay < 0.10:
-        s += ["→ **KALP YOK.** Hiçbir melekenin çıkarılması vücudu",
-              "   belirgin biçimde bozmuyor; tesir 41'e yayılmış hâlde.",
-              "   Bu, H88'in niçin aylarca farkedilmediğini de izah eder:",
-              "   nabzı olmayan vücutta durma da farkedilmez."]
+        s += ["  → **YOK, ve olmaması DOĞRUDUR.** Kalp bir meleke değildir",
+              "     (kütük H103): melekeler arasında aranması yanlış sualdir."]
     else:
-        s += ["→ Bir merkez var: 𝒪%d %s. Bozulunca vücut bozuluyor."
-              % (r[0]["no"], r[0]["ad"])]
+        s += ["  → Bir merkez var: 𝒪%d %s." % (r[0]["no"], r[0]["ad"])]
+
+    s += ["",
+          "KALBİN KENDİ HARAPLAMASI (mantığa sadakat kapısı söküldü):",
+          "  beyan_tvd = %.3e" % kalp_tvd,
+          "  en tesirli MELEKE'ye nispeti = %.1f×"
+          % (kalp_tvd / max(float(tvd[0]), 1e-30))]
+    if kalp_tvd > float(tvd[0]):
+        s += ["  → Kalp, en tesirli melekeden DAHA tesirli. Aranan uzuv budur:",
+              "     bir uzuv değil, her uzvun tâbi olduğu şart."]
+    else:
+        s += ["  → Kalp, en tesirli melekeden daha az tesirli. Bu hâliyle",
+              "     'bozulunca bütün vücudu bozan' vasfını taşımıyor;",
+              "     iddia edilmez, olduğu gibi yazılır."]
     return "\n".join(s)
 
 

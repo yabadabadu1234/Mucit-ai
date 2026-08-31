@@ -79,6 +79,7 @@ from nefs.qakis import QNefs
 from nefs.qegitim import belirtecleri_kodla
 from nefs.qmeleke import QAKIS, qsicil
 from nefs.qyazmac import QAyar, QYazmac
+from nefs.sadakat import sadakat_intaci, sadakat_kapisi
 
 __all__ = ["sadakat_olcusu", "haritala", "rapor"]
 
@@ -159,7 +160,8 @@ def _kutleler(q: QYazmac) -> Dict[str, float]:
 
 # =====================================================================
 def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
-                   ayar: Optional[QAyar] = None) -> List[Dict[str, object]]:
+                   ayar: Optional[QAyar] = None, kalp: bool = True
+                   ) -> List[Dict[str, object]]:
     """Akışı meleke meleke koştur ve her adımda üç kütleyi ölç.
 
     Dönen listede her satır bir melekedir ve ``Δ`` sütunları o melekenin
@@ -170,7 +172,7 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
     belirtec = [int(x) for x in rng.integers(0, sozluk, size=satir)]
     E = belirtecleri_kodla(belirtec, ayar.satir_kubiti, sozluk)
 
-    nefs = QNefs(tohum, ayar)
+    nefs = QNefs(tohum, ayar, sadakat=kalp)
     q = QYazmac(satir, ayar)
     q.kodla(E)
     q.superpozisyon()
@@ -182,6 +184,8 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
     for adim, no in enumerate(QAKIS):
         t0 = time.perf_counter()
         sicil[no].kosu(q, nefs.p)
+        if kalp:
+            sadakat_kapisi(q, nefs.p)      # KALP: muafiyetsiz, her adımda
         simdi = _kutleler(q)
         satirlar.append({
             "adım": adim, "no": no, "ad": sicil[no].ad,
@@ -197,6 +201,20 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
             "süre_sn": time.perf_counter() - t0,
         })
         onceki = simdi
+    if kalp:
+        sadakat_intaci(q)                  # işaretler burada söner
+        son = _kutleler(q)
+        satirlar.append({"adım": len(satirlar), "no": 0, "ad": "«sadakat intâcı»",
+                         "tenakuz": son["tenakuz"], "ayniyet": son["ayniyet"],
+                         "kâfi_sebep": son["kâfi_sebep"],
+                         "Δtenakuz": son["tenakuz"] - onceki["tenakuz"],
+                         "Δayniyet": son["ayniyet"] - onceki["ayniyet"],
+                         "Δkâfi": son["kâfi_sebep"] - onceki["kâfi_sebep"],
+                         "Δtoplam": son["toplam"] - onceki["toplam"],
+                         "fazla": son["fazla"],
+                         "tenakuz_fazla": son["tenakuz_fazla"],
+                         "ayniyet_fazla": son["ayniyet_fazla"],
+                         "süre_sn": 0.0})
     return satirlar
 
 
@@ -221,7 +239,7 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
           "",
           "  %-3s %-22s %10s %10s %10s %11s"
           % ("𝒪", "ad", "tenakuz", "ayniyet", "kâfi", "Δtoplam")]
-    r = sadakat_olcusu(tohum=tohum, satir=satir)
+    r = sadakat_olcusu(tohum=tohum, satir=satir, kalp=True)
     for x in r:
         s.append("  %-3d %-22s %10.3e %10.3e %10.3e %+11.3e"
                  % (x["no"], x["ad"], x["tenakuz"], x["ayniyet"],
@@ -252,6 +270,26 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
               "Fazlalık sıfıra yakınsa mana şudur: küllî hüküm alanları",
               "mantıkî şartı ne çiğniyor ne gözetiyor -- YAPISIZLAR.",
               "Bu, H94'teki 'kalp yok' hükmünün ikinci bir delilidir."]
+    # --- KALPLİ / KALPSİZ MUKAYESESİ: kalp söküldüğünde ne oluyor?
+    ry = sadakat_olcusu(tohum=tohum, satir=satir, kalp=False)
+    sy, sk = ry[-1], r[-1]
+    s += ["", "=" * 62,
+          "KALP SÖKÜLÜNCE NE OLUYOR? (haraplama, sadakat kapısı kapalı)",
+          "",
+          "  %-22s %12s %12s %10s" % ("ölçü", "KALPSİZ", "KALPLİ", "kazanç"),
+          "  %-22s %12.4f %12.4f %9.1f×"
+          % ("tenakuz kütlesi", sy["tenakuz"], sk["tenakuz"],
+             sy["tenakuz"] / max(sk["tenakuz"], 1e-12)),
+          "  %-22s %12.4f %12.4f %9.1f×"
+          % ("ayniyet ihlâli", sy["ayniyet"], sk["ayniyet"],
+             sy["ayniyet"] / max(sk["ayniyet"], 1e-12)),
+          "  %-22s %+12.4f %+12.4f %10s"
+          % ("tenakuz FAZLASI", sy["tenakuz_fazla"], sk["tenakuz_fazla"], "-"),
+          "  %-22s %+12.4f %+12.4f %10s"
+          % ("ayniyet FAZLASI", sy["ayniyet_fazla"], sk["ayniyet_fazla"], "-"),
+          "",
+          "Kalp bir uzuvsa: söküldüğünde vücut BOZULMALI. Kazanç 1'e",
+          "yakınsa kapı bir şey yapmıyor demektir ve öyle yazılır."]
     return "\n".join(s)
 
 

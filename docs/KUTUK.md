@@ -2661,3 +2661,94 @@ yani sadık melekelerden.
 Sadakatin akış **içinde icrası** kurulmadı. Ölçen `tanilama/` altında
 hâricî bir âlettir (H31 çiğnenmiyor); icra üniter olmak zorundadır
 (tenakuzlu kolun faz sönümlemesi) ve henüz yoktur.
+
+## H106 — BORÇ: kullanıcıdan beklenen DÖRT DOSYA
+
+Kullanıcı hükmü: *"Sen bu 4 dosyanın da verilmesi gerektiğini hem hüküm
+ceridesine yaz hem de işin bitince çıktıda belirt unutmayayım diye; şu an
+elimde bunlar hazır değil, yazdırmam lazım."*
+
+Beklenen dosyalar (vesikanın kendi numaralandırmasıyla):
+
+1. **Dosya 3** -- Uzaylararası Tip Güvenli Tensör Çarpımı
+   (kanonik funktörler, Riesz izomorfizmi). *Niçin lâzım:* funktör
+   köprüsünün riyazî tarafı; seçilen uzaya **nasıl** götürüldüğü.
+2. **Dosya 7** -- Özerk Gaye Edinme ve Strateji Üretimi
+   (Landauer darboğazı). *Niçin lâzım:* H105'te hüküm alanlarının
+   yapısız çıkmasının sebebi gaye yokluğu olabilir; gayesi olmayan alan
+   neye göre yapılansın?
+3. **Dosya 8** -- Çoklu Uzaylarda Dinamik Tertip Mimarisi
+   (∞-operadlar, Grothendieck liflenmesi). *Niçin lâzım:* Tertip'in
+   uzayı **nasıl seçtiği**; ve 12 786 satırlık beyliğe
+   (`omega_kategori`, `omega_kategori_nbe`, `token_uzaylari`) yer yurt
+   verecek olan dosya budur.
+4. **Dosya 9** -- Nefs-i Müdrike Mimarisi (11 rüknün birleşik
+   formülasyonu). *Niçin lâzım:* melekeleri tek maksat etrafında toplama
+   işinin aslı burada.
+
+Bu dördü gelmeden **uydurulmayacaktır**.
+
+## H107 — MANTIĞA SADAKAT KAPISI KURULDU: kalp, meleke değil ŞART olarak
+
+H105'te ölçülmüştü: ``tasdik`` ile ``nakz`` arasında hiçbir mantıkî bağ
+yok; ikisi bir arada olamaz olduğu hâlde bunu **hiçbir meleke icra
+etmiyor**. `nefs/sadakat.py` bu boşluğu doldurur ve akışta **her
+melekeden sonra, muafiyetsiz** koşar (`nefs/qakis.py`).
+
+### ÖNCE ÖLÇÜLEN VE ÇÜRÜYEN TASARIM
+
+Kapı evvelâ kontrollü **dönme** ile kuruldu: *"nakz uyanıksa tasdiki
+sıfıra doğru çevir."* Ölçüldü ve **kötüleştirdi**: tenakuz kütlesi
+0,2944 → 0,3242.
+
+Sebep bir kodlama hatası değil, bir **imkânsızlıktır** ve kütüğe umumî
+kaide olarak geçer:
+
+> **Hiçbir sabit üniter kapı bir alt uzayı şartsız söndüremez.**
+> Üniterlik normu korur; genliği ancak *taşır*. Dönme monoton değildir:
+> ``R(−λ)`` ``|1⟩``e yakın kolu ``|0⟩``a çeker, ``|0⟩``a yakın kolu
+> ``|1⟩``e iter. Şartsız söndürmek bir izdüşümdür, izdüşüm üniter
+> değildir -- yani okumadır ve H31'i kırar.
+
+### DOĞRU TASARIM: bastırma değil, İŞARETLE + GİRİŞİM
+
+1. ``sadakat_kapisi`` -- mantık dışı kola ``π`` fazı (``CZ``, reel ve
+   tam). Marjinalleri hiç değiştirmez; tek başına ölçümde görünmez.
+2. ``sadakat_intaci`` -- akış sonunda küllî hüküm bloğunda
+   ``I − 2|0…0⟩⟨0…0|`` yansıtması (MPO bağ boyutu 2, ancillasız).
+   Faz farkını genlik farkına çevirir.
+
+Bu, H98'de fiilen ölçülmüş usulün aynısıdır.
+
+İşaretlenen üç hâl::
+
+    |tasdik=1, nakz=1⟩       hem mühürlü hem nakzedilmiş
+    |tasdik₀=1, tasdik₁=0⟩   hüküm kendi içinde bölük
+    |tasdik=1, mîzân₀=0⟩     delilsiz mühür
+
+### ÖLÇÜLEN NETİCE
+
+======================  ==========  ==========  ==============
+ölçü                    KALPSİZ     KALPLİ      kazanç
+======================  ==========  ==========  ==============
+tenakuz kütlesi         0,2944      **0,0977**  3,0×
+ayniyet ihlâli          0,5542      **0,1586**  3,5×
+ayniyet fazlası         +0,0571     **−0,0550** işaret döndü
+======================  ==========  ==========  ==============
+
+### İDDİA EDİLMEYEN -- ve bulunan yeni boşluk
+
+* **Kalbin ``beyan`` üzerindeki tesiri 0,198**; en tesirli melekeninki
+  0,322. Yani nispet **0,6×** -- kalp, ``beyan`` cihetinden en tesirli
+  melekeden **daha zayıf**. Sebep açıktır ve bir boşluktur:
+  ``beyan`` ``kelam`` alanından okunur, sadakat kapısı ise ``kelam``a
+  **hiç dokunmaz**. Kalp hükmü idare ediyor, **kelâmı henüz etmiyor.**
+  Bu, sıradaki işin ta kendisidir.
+* **Tenakuz fazlası** −0,0017 → +0,0042. Ham kütle üç kat düştü fakat
+  iki marjinal de düştüğü için taban da düştü; nispî hâl hâlâ tesadüf
+  civarındadır. Şart **tatbik ediliyor**, fakat alanlar arasında hakikî
+  bir mantıkî bağ hâlâ kurulmuş değil.
+* Şart **yumuşaktır**: işaretli kolun genliğini düşürür, sıfırlamaz.
+* `tanilama/haraplama.py` artık kalbin kendi lezyonunu da ölçüyor;
+  *"melekeler arasında kalp yok"* hükmü artık **doğru sual değildir**
+  diye şerh düşülmüş hâlde raporlanıyor (H103: kalp meleke değildir).

@@ -109,6 +109,18 @@ def faz_z() -> np.ndarray:
     return np.array([[1.0, 0.0], [0.0, -1.0]], dtype=np.float64)
 
 
+def degil_x() -> np.ndarray:
+    """``σ_x`` -- ``|0⟩ ↔ |1⟩``. Menfî kontrolü kurmak için sarmalayıcı.
+
+    Reel yazmaçta ``X`` bir **permütasyondur**; karmaşık faza ihtiyaç
+    duymaz ve olduğu gibi tatbik edilir (kütük H98). Menfî kontrollü bir
+    kapı, kontrol kübitini ``X`` ile sarmakla kurulur::
+
+        X_c · CU(c,t) · X_c   ≡   kontrol |0⟩ iken uygulanan kapı
+    """
+    return np.array([[0.0, 1.0], [1.0, 0.0]], dtype=np.float64)
+
+
 def kontrollu_donme(teta: float) -> np.ndarray:
     """``CR(θ)``: kontrol ``|1⟩`` iken hedefe ``R(θ)``.
 
