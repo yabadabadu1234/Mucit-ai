@@ -2543,3 +2543,121 @@ H60'ta ``𝒪₄ Tertip`` *"∞-kategoriden türeyen UZAYLARLA umumî tertip"*
 diye hükme bağlanmıştı (kapalı devre, açık devre, boru hattı, ağaç,
 katmanlama, mütedahiliyet, açık uçlu). Strateji seçimi bir tertip
 işidir; burada çelişki yoktur.
+
+## H103 — "KÂİDE KALP OLAMAZ" TENKİDİ KABUL; delili benim kendi ölçümümde
+
+Kullanıcının getirdiği vesika, kâidenin kalp olamayacağını üç sebeple
+gerekçelendiriyor. Üçünü de tenkit ettim (H100); **üçü de geçiyor**,
+ve üçüncüsünün delili bu projede **fiilen ölçülmüş** durumda:
+
+1. *Sentaktik kısırlık:* Bir kâideyi seçen, ona başkasını tercih eden,
+   gerektiğinde onu esneten şey kâidenin kendisi olamaz.
+2. *Kâide bir hüküm nesnesidir, hüküm veren değil.*
+3. *Mekanik körlük:* Merkeze "kâide bulma" konursa sistem sonsuz sayıda
+   **manasız totoloji** üretir.
+
+Üçüncü madde bir iddia değil, bende **ölçülmüş bir vakadır**: H98'de
+kâide orağının ilk doğru koşusunda tepe ``(0,0,0)`` çıktı -- yani
+``0 = p·h + q``, ebadı hiç söylemeyen kâide. Orak onu hakikî kâide
+kadar kuvvetle işaretledi. Vesikanın "mekanik körlük" dediği şey benim
+laboratuvarımda aynen gerçekleşmiştir.
+
+O hâlde H101'in nakzı yerindedir ve şu tarif kabul edilir:
+
+> **Kalp bir meleke değildir**; melekelerin akıp döküldüğü, parçalı
+> kesitleri tek bir idrakte toplayan tepe noktasıdır (kolimit) ve
+> *"bütün bu süreç ne içindir?"* sualinin cevabını tutan yerdir.
+
+## H104 — MANTIĞA SADAKAT'IN TARİFİ ALINDI; fakat şartı TASHİH EDİLDİ
+
+Vesikanın tarifi H102'nin açık borcunu kapatıyor ve **doğrudur**:
+mantığa sadakat bir hesap değil, hiçbir hesabın dışına taşamayacağı bir
+**kod uzayıdır** (stabilizer / gauge alt-uzayı).
+
+### TENKİT: vesikanın şartı fazla kuvvetli, model felç olur
+
+Vesika ``[𝒪_j , Ŝ] = 0`` yazıyor -- **merkezleyici** şartı. ``n``
+kübitte ``n`` bağımsız üreteçli bir stabilizer grubunun merkezleyicisi
+(fazlar hariç) grubun kendisidir; o hâlde melekeler grubun dışına hiç
+çıkamaz ve **hiçbir şey öğrenemez**.
+
+Doğrusu **normalleştirici** şartıdır::
+
+    U† Ŝ U ∈ ⟨Ŝ⟩          (kod uzayını kendine götürmek)
+
+Komütasyon bunun hususî ve kısır hâlidir. Normalleştirici Clifford tipi
+zenginliğe izin verir: meleke kod uzayının **içinde** serbestçe dolaşır,
+**dışına** taşamaz. Aranan tam olarak budur.
+
+### VESİKADA BULUNAN DÖRT KUSUR DAHA (H100 gereği)
+
+1. **"χ patlaması kesin olarak engellendi / tescillendi"** -- ölçülmemiş
+   iddia. Bu projede χ=16/32/64'te toplam kesmenin **~26'da kaldığı**
+   ölçüldü (H93 civarı). ``U†`` **çöpü** temizler; mantık kapılarının
+   kendi ürettiği dolaşıklığı temizlemez.
+2. **Vesika kendi içinde çelişiyor.** 9. bölüm *"Ölçüm yok!"* diyor;
+   BLOK 7'deki LCU devresi ise açıkça ``[ Ölçüm: 0 mı? ]`` post-seçimi
+   içeriyor. Post-seçim bir ölçümdür ve Zeno tuzağına düşer.
+3. **Barbara formülü yanlış.** ``|P ⊕ (S∧M)⟩`` yazılmış; bu **büyük
+   öncülü hiç kullanmıyor**. Doğrusu ``P = S ∧ p₂ ∧ p₁`` (üç kontrol).
+4. **Varlık şartı (existential import) eksik.** 19 tasımın dördü
+   (Darapti, Felapton, Bamalip, Fesapo) orta terim boşsa **geçersizdir**;
+   vesikada bu yok. Ve bu bizim için nazarî değil: aynı kusuru H98'de
+   ölçümle bulup şöyle yazmıştım -- *"her ispat, ispatladığı şeyin boş
+   olmadığını da ispatlamalıdır."* İki yoldan aynı kaideye varılmış.
+
+Ayrıca vesikanın bütün faz kurguları (``e^{iπ}``, ``CR_z(θ)``) karmaşık
+yazmaç varsayıyor; bizimki **reeldir** (H98). ``π`` fazı (``diag(1,−1)``)
+tatbik edilir, keyfî ``e^{iθ}`` edilemez.
+
+## H105 — SADAKAT ÖLÇÜLDÜ: alanlar şartı çiğnemiyor, ÇÜNKÜ YAPISIZLAR
+
+`tanilama/sadakat.py` kuruldu ve 41 meleke adım adım ölçüldü. Üç mantık
+şartı, H88'de düzeltilip tam dalgayla doğrulanmış ``blok_dagilimi`` ile
+küllî hüküm bloğundan okunur.
+
+### Ham sayılar (tek başına YANILTICI)
+
+    akış sonunda:  tenakuz = 0,2944   ayniyet = 0,5542   kâfi_sebep = 0,0202
+    şartı bozmayan meleke: 27 / 42
+
+Bunu böyle raporlamak kullanıcıyı yanıltmak olurdu ve **az kalsın
+yaptım**. İki bağımsız ve yansız kübit zaten ``P(ikisi de 1) = 0,25`` ve
+``P(ayrışık) = 0,50`` verir. Ölçütün tesadüf tabanı yoksa ölçüt yoktur.
+
+### Tesadüf tabanının üstündeki fazlalık -- ASIL HÜKÜM
+
+    tenakuz fazlası = −0,0017        (fiilen SIFIR)
+    ayniyet fazlası = +0,0571        (küçük ama hakikî)
+
+> **Hüküm:** Küllî hüküm alanları mantıkî şartı ne çiğniyor ne
+> gözetiyor. Tenakuz kütlesi tesadüf tabanının **altında**; yani
+> "tasdik" ile "nakz" arasında hiçbir mantıkî bağ **yok**. Alanlar
+> birbirinden bağımsız gürültü gibi davranıyor.
+
+Bu, H94'teki *"kalp yok"* hükmünün **ikinci ve müstakil bir delilidir**:
+haraplama tesir nispetini 1,4 bulmuştu; sadakat ölçümü de hüküm
+alanlarının birbirine bağlı olmadığını buluyor. İki ayrı âlet, aynı
+teşhis.
+
+### En çok bozanlar ve ibretlik olanı
+
+    𝒪₄₁ Münazara         Δ = +6,38e-02
+    𝒪₁₅ Merak ve Sual    Δ = +2,09e-02
+    𝒪₃₆ Tevil            Δ = +1,62e-02
+    𝒪₃₂ Şek-Zan-Yakîn    Δ = +1,44e-02
+    𝒪₁₃ Tasdik           Δ = +9,66e-03
+
+**İbret:** ``𝒪₁₃ Tasdik`` -- yani hükmü **mühürleyen** meleke -- en çok
+tenakuz üreten beştedir. Ve ``𝒪₁₁ Tenakuz Bulma`` da tenakuz kütlesini
+**artırıyor** (+2,87e-04). Adı vazifesinin tersini yapıyor. H94'teki
+*"isimler zihnin, cevher değil"* hükmünün üçüncü delili budur.
+
+Buna mukabil ``𝒪₂₃ Mantık Yürütme`` kütleyi **düşürüyor** (−8,89e-03),
+yani sadık melekelerden.
+
+### İDDİA EDİLMEYEN
+
+Sadakatin akış **içinde icrası** kurulmadı. Ölçen `tanilama/` altında
+hâricî bir âlettir (H31 çiğnenmiyor); icra üniter olmak zorundadır
+(tenakuzlu kolun faz sönümlemesi) ve henüz yoktur.
