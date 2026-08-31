@@ -3744,3 +3744,48 @@ makam beklentisi 30 görevde kıyaslandı::
 **Bağ yok.** Akışın makamı klasik yakîn hesabıyla alâkasız. Akış
 eğitilmemiştir ve bu borç açıkta yazılır; kodlama tashihi yapıyı
 düzeltti, muhtevayı değil.
+
+## H128 — 𝒪₂₉ TEYİT'in "ayrı kanal" tedbiri TARTILDI
+
+`fitrat/tevafuk.py` (3 070 satırlık `fitrat`ın tevâfuk motoru) ana
+akışa `nefs/sahitlik.py` ile bağlandı ve bağlanır bağlanmaz bir
+iddiayı sınadı.
+
+𝒪₂₉ şöyle diyordu: *"Bir satırın ilk kübiti ile son kübiti **ayrı
+kanallardır**… **bağımlı iki kanalın uyuşması yeni bilgi değildir**;
+kanallar satırın iki ucundan alınır ki mümkün olduğunca ayrı olsunlar."*
+
+Bu bir **tedbir**di ve hiç ölçülmemişti. Halbuki yanlışlanabilir: eğer
+kanallar bağımlıysa 𝒪₂₉ aynı delili iki kere sayıyor, yani tasdiki hak
+etmediği yerde yükseltiyor demektir.
+
+### Ölçülen (12 koşu, 96 satır delili)
+
+    çift uyuşması (Pearson) : +0,0324
+    ortalama ağırlık        :  0,6761
+    muteber şahit sayısı    :  1,68 / 2
+    fazla sayma oranı       :  1,1932
+
+Kıyas noktaları `fitrat`ın kendi şahit üretecinden: **bağımsız** üç
+şahitte fazla sayma 1,05; **ortak kaynaklı** üçte 2,55.
+
+### Hüküm — iki ölçüt ayrı düşüyor ve ikisi de yazılıyor
+
+Pearson bağıntı görmüyor (+0,03) fakat fazla sayma 1,19 -- yani
+**doğrusal olmayan** bir bağımlılık var. Yalnız Pearson'a bakıp
+"kanallar ayrı" demek, ikinci ölçütün gördüğünü örtmek olurdu.
+
+**Tedbir kısmen tutuyor.** Kanallar ortak kaynaklı değil (1,19 ≪ 2,55)
+fakat tam bağımsız da değil (1,19 > 1,05): muteber şahit sayısı 2
+değil **1,68**. 𝒪₂₉ delili yaklaşık **%19** şişiriyor. Kuvvetli bir
+kusur değildir; sıfır da değildir ve öyle yazılır.
+
+### Kendi kullanım hatam -- ölçülüp düzeltildi
+
+İlk kullanımda ``fazla_sayma``ya **sürekli** değerler verdim. Ölçüt hem
+aynı şahidi iki kere verince hem bağımsız iki şahit verince **1,0**
+döndü, yani hiç ayırt etmedi (içeride ``log`` ``nan`` üretiyordu). Kusur
+`fitrat/tevafuk.py`de değil bendeydi: o modül **ikili** şahitlikle
+çalışır. Kanal değerleri medyanına göre ikilileştirilince ölçüt
+çalıştı. Ayırt etmeyen bir sayıyı rapora koymuş olsaydım, ölçüyor gibi
+yapmış olurdum (H90).

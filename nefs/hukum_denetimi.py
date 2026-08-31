@@ -548,6 +548,21 @@ def _h125_cech_sukut() -> Tuple[bool, str]:
             acik["tıkanık_görev"], acik["görev"]))
 
 
+def _h128_teyit_kanallari() -> Tuple[bool, str]:
+    """𝒪₂₉ Teyit'in "ayrı kanal" tedbiri tutuyor mu (kütük H128)?
+
+    Şart, kanalların **kuvvetle bağımlı olmaması**dır: bağımlı iki
+    şahidin birbirini teyidi yeni delil değildir ve 𝒪₂₉ o hâlde aynı
+    delili iki kere sayardı.
+    """
+    from .sahitlik import kanal_bagimsizligi
+    r = kanal_bagimsizligi(n_kosu=6, n_satir=6)
+    fs = r["fazla_sayma"]
+    return (abs(r["uyuşma"]) < 0.7 and fs["fazla_sayma_oranı"] < 2.0), \
+        ("çift uyuşması %+.4f; fazla sayma oranı %.4f; muteber şahit %.2f/2"
+         % (r["uyuşma"], fs["fazla_sayma_oranı"], fs["muteber_şahit_sayısı"]))
+
+
 def _h127_makam_kodlamasi() -> Tuple[bool, str]:
     """Makam kodlaması epistemik komşuluğu koruyor mu (kütük H127)?
 
@@ -669,6 +684,8 @@ SAHITLER: List[Sahit] = [
           _h126_yoklama),
     Sahit("H127", "makam kodlaması epistemik komşuluğu koruyor",
           _h127_makam_kodlamasi),
+    Sahit("H128", "𝒪₂₉'un 'ayrı kanal' tedbiri tartıldı",
+          _h128_teyit_kanallari),
 ]
 
 #: Makine şahidi **kurulamayan** hükümler ve sebebi. Bunlar "geçti"

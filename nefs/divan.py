@@ -596,6 +596,7 @@ KADEME2: Tuple[str, ...] = (
     "idrak.sekil",             # nefs/operad.py    -- yamaların mahallî kâidesi
     "omega_kategori.turetimler",  # nefs/operad.py -- çekirdeğin boşluk kütüğü
     "mizan.munazara",          # nefs/mantik.py    -- yakîn mertebeleri, makam sırası
+    "fitrat.tevafuk",          # nefs/sahitlik.py  -- 𝒪₂₉'un bağımsızlık tartısı
 )
 
 
