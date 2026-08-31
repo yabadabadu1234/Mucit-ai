@@ -4042,3 +4042,30 @@ için yazıyorum:
 
 Darboğaz tek ve ölçülüdür: 120 görevin **103'ünde** "kaide bulunamadı".
 Yani mesele muhakeme çevriminde değil, **kaide cebrinin darlığında**dır.
+
+### H133 eki — aynı şekilli aileye dört kaide (12/120)
+
+Kaide bulunamayan 104 görev ölçüldü::
+
+    aynı şekil       76      çıktı küçülüyor   21      çıktı büyüyor  7
+
+Yani darboğazın **dörtte üçü** aynı şekilli ailede. O aileye ARC'de en
+sık görülen dört cihet eklendi -- kör genişletme değil, eksiği ölçüp
+seçmek:
+
+* **devrî desen onarımı** -- ızgara periyodik, bir bölge örtülü;
+  periyot bulunup delik oradan okunuyor
+* **gürültü silme** -- tek/iki hücrelik bileşenler arka plana
+* **ışın** -- tekil hücrelerden kenara doğru dört/sekiz yönde çizgi
+* **çift bağlama** -- aynı satır/sütundaki aynı renkli iki hücrenin
+  arası dolduruluyor
+
+    ARC-AGI-2 training (120)          tam çözülen   yanlış   isabet
+    eski çözücü (tek atom)                 5           0      %100
+    kaide cebri + terkip                   8           0      %100
+    + nesne + hücre + delil/hipotez        9           4       %69
+    + aynı şekilli dört aile              12           4       %75
+
+Sükût nizamı ayakta: 104 görevde susuldu, 100'ünde sebep "kaide
+bulunamadı". Darboğaz hâlâ **kaide cebrinin darlığı**dır ve bu iş
+birikimlidir.

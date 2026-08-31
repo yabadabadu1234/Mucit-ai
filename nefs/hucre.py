@@ -177,6 +177,126 @@ def _delik_doldur(g: Izgara, renk: int) -> Optional[Izgara]:
     return out
 
 
+# =====================================================================
+#  Aynı şekilli ailenin dört kaidesi -- ölçümle seçildi
+# =====================================================================
+#
+# Kaide bulunamayan 104 görevin **76'sı** aynı şekilli (ölçüldü).
+# Aşağıdakiler o ailenin ARC'de en sık görülen dört ciheti; kör bir
+# genişletme değil, eksik ölçülüp seçilmiş dört aile.
+
+def _periyot_bul(g: Izgara, delik: Optional[int]) -> Optional[Tuple[int, int]]:
+    """Izgaranın en küçük ``(py, px)`` periyodu -- delik hücreleri hariç."""
+    H, W = g.shape
+    m = np.ones((H, W), bool) if delik is None else (g != delik)
+
+    def uyar(p: int, eksen: int) -> bool:
+        if eksen == 0:
+            for i in range(H - p):
+                s = m[i] & m[i + p]
+                if not np.array_equal(g[i][s], g[i + p][s]):
+                    return False
+        else:
+            for j in range(W - p):
+                s = m[:, j] & m[:, j + p]
+                if not np.array_equal(g[:, j][s], g[:, j + p][s]):
+                    return False
+        return True
+
+    py = next((p for p in range(1, H) if uyar(p, 0)), H)
+    px = next((p for p in range(1, W) if uyar(p, 1)), W)
+    if py >= H and px >= W:
+        return None
+    return py, px
+
+
+def _desen_onar(g: Izgara, delik: int) -> Optional[Izgara]:
+    """Izgara devrî; ``delik`` rengiyle örtülü yeri periyottan oku."""
+    if not (g == delik).any():
+        return None
+    pq = _periyot_bul(g, delik)
+    if pq is None:
+        return None
+    py, px = pq
+    H, W = g.shape
+    out = g.copy()
+    for i in range(H):
+        for j in range(W):
+            if out[i, j] != delik:
+                continue
+            bulundu = False
+            for a in range(i % py, H, py):
+                for b in range(j % px, W, px):
+                    if g[a, b] != delik:
+                        out[i, j] = g[a, b]
+                        bulundu = True
+                        break
+                if bulundu:
+                    break
+            if not bulundu:
+                return None
+    return out
+
+
+def _gurultu_sil(g: Izgara, azami: int = 1) -> Optional[Izgara]:
+    """``azami`` hücreden küçük bileşenleri arka plana çevir."""
+    from idrak.cozucu import _bilesenler
+    b = _bilesenler(g, ARKA)
+    if not b:
+        return None
+    out = g.copy()
+    oldu = False
+    for _r, m, _k in b:
+        if int(m.sum()) <= azami:
+            out[m] = ARKA
+            oldu = True
+    return out if oldu else None
+
+
+def _isin(g: Izgara, capraz: bool) -> Optional[Izgara]:
+    """Her tekil hücreden kenara doğru ışın çiz."""
+    from idrak.cozucu import _bilesenler
+    b = _bilesenler(g, ARKA)
+    tekil = [(int(r), k) for r, m, k in b if int(m.sum()) == 1]
+    if not tekil:
+        return None
+    H, W = g.shape
+    out = g.copy()
+    yonler = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+    if capraz:
+        yonler += [(1, 1), (1, -1), (-1, 1), (-1, -1)]
+    for renk, (r0, _r1, c0, _c1) in tekil:
+        for dy, dx in yonler:
+            y, x = r0 + dy, c0 + dx
+            while 0 <= y < H and 0 <= x < W and out[y, x] == ARKA:
+                out[y, x] = renk
+                y += dy
+                x += dx
+    return out
+
+
+def _ciftleri_bagla(g: Izgara) -> Optional[Izgara]:
+    """Aynı satır/sütundaki aynı renkli iki hücrenin arasını doldur."""
+    H, W = g.shape
+    out = g.copy()
+    oldu = False
+    for i in range(H):
+        yer = [j for j in range(W) if g[i, j] != ARKA]
+        for a, b in zip(yer, yer[1:]):
+            if g[i, a] == g[i, b] and b - a > 1 and \
+                    all(g[i, j] == ARKA for j in range(a + 1, b)):
+                out[i, a + 1:b] = g[i, a]
+                oldu = True
+    for j in range(W):
+        yer = [i for i in range(H) if g[i, j] != ARKA]
+        for a, b in zip(yer, yer[1:]):
+            if g[a, j] == g[b, j] and b - a > 1 and \
+                    all(g[i, j] == ARKA for i in range(a + 1, b)):
+                out[a + 1:b, j] = g[a, j]
+                oldu = True
+    return out if oldu else None
+
+
 def hucre_kaideleri(ciftler: Sequence[Tuple[Izgara, Izgara]]
                     ) -> List[Kaide]:
     """Gösterimlerden **öğrenilen** hücre kaideleri.
@@ -210,4 +330,24 @@ def hucre_kaideleri(ciftler: Sequence[Tuple[Izgara, Izgara]]
     for r in sorted(renkler)[:4]:
         out.append(Kaide("delik_doldur:%d" % r,
                          lambda g, c=r: _delik_doldur(g, c)))
+
+    # --- devrî desen onarımı: delik rengi görevden çıkarılır
+    delikler = set()
+    for a, b in ciftler:
+        if a.shape == b.shape:
+            f = set(np.unique(a).tolist()) - set(np.unique(b).tolist())
+            if len(f) == 1:
+                delikler.add(int(next(iter(f))))
+    for d in sorted(delikler)[:3]:
+        out.append(Kaide("desen_onar:%d" % d,
+                         lambda g, c=d: _desen_onar(g, c)))
+
+    # --- gürültü silme, ışın, çift bağlama
+    for k in (1, 2):
+        out.append(Kaide("gürültü_sil:%d" % k,
+                         lambda g, m=k: _gurultu_sil(g, m)))
+    for cp in (False, True):
+        out.append(Kaide("ışın%s" % ("_çapraz" if cp else ""),
+                         lambda g, c=cp: _isin(g, c)))
+    out.append(Kaide("çift_bağla", _ciftleri_bagla))
     return out
