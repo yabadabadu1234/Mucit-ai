@@ -2403,3 +2403,143 @@ Kurulan **yalnız ebat rüknüdür** (``H_D``). İskelet (``H_S``), illet
 **ölçülmedi**. Ve hakikî ARC görevlerinde koşturulmadı.
 
 İki kalıcı sınama eklendi (46 sınama, hepsi geçiyor).
+
+## H99 — ÇALIŞMA ALGORİTMASI (güncellendi)
+
+Kullanıcı hükmü:
+
+> *"Dosyayı aç → soru sor → tashih yazılarını ve kodlarını yap → main
+> yani padişahın elini uzat → sıradaki dosyaya geç → bitinceye kadar
+> devam et."*
+
+H82'de ölçülen %82 beylik nispetini düşürecek olan **dördüncü adımdır**
+ve evvelki döngüde (H-Faz 3) yoktu: dosya düzeltiliyor fakat ana akışa
+bağlanmıyordu, dolayısıyla nizam ölçümü hiç kıpırdamıyordu (H93'te
+fiilen görüldü: `nefs/kaide.py` kuruldu, tebaa nispeti %18'de kaldı).
+
+Bundan böyle bir dosya, **ana akışa bağlanmadan** bitmiş sayılmaz.
+
+## H100 — HER SÖYLEDİĞİM DOĞRU DEĞİL: DAİMA TENKİT ET
+
+Kullanıcı hükmü:
+
+> *"Ben sana ne söylersem söyleyeyim her zaman tenkitçi olarak yaklaş,
+> hem emin ol hem de test et; her söylediğim doğru değil, kontrol et."*
+
+Bu hüküm, kullanıcının kendi otoritesini **kasten** sınırlamasıdır ve
+kütükteki en mühim usul hükümlerinden biridir. Fiilî karşılığı:
+
+1. Kullanıcının verdiği her teklif, koda geçmeden **kontrol edilir**;
+   doğru çıkan tarafı ve yanlış çıkan tarafı **ayrı ayrı** söylenir.
+2. *"Yanlış gözükmüyor"* diye başlanmaz; **nesi yanlış** aranır.
+3. Kullanıcı bir hükmünü nakzederse, nakz da tenkit edilir -- yeni hüküm
+   de eskisi kadar sınanır.
+
+Bu hükmün geriye dönük bir örneği vardır ve zarar da vermiştir: H91'de
+gelen devre şemasında ``■`` kontrolleri doğrudan rükün yazmaçlarından
+çıkıyordu; ben *"güzel"* deyip üstüne inşa ettim, kusuru üç mesaj sonra
+buldum. H95'te gelen ``exp(−iγδ²)`` teklifinin bu mimaride **hiç tatbik
+edilemeyeceğini** (yazmaç reeldir) ancak koda geçirirken gördüm. İkisi de
+bu hükmün konmasını gerektiren vakalardır.
+
+## H101 — NAKZ: "KÂİDEYİ KALP YAP" hükmü DÜŞTÜ
+
+Kullanıcı, bir evvelki oturumda *"Kâideyi KALP yap, melekeler ona
+bağlansın"* şıkkını seçmişti. Şimdi **nakzediyor**:
+
+> *"Kaideyi kalp yapmak bana garip geliyor; bir insanın zihnen kalbi bir
+> şeylerin kaidesini bulmak değildir."*
+
+Kütük kaidesi gereği (*içtihad içtihadı nakzetmez*) eski hüküm silinmez,
+**nakz olarak kaydedilir** ve gerekçesi yazılır.
+
+**Gerekçe doğrudur ve tenkidi geçer** (H100): kâide bulmak bir
+**melekenin** işidir. Kalp ise melekeler arasında bir meleke değildir;
+onları **birleştiren** şeydir. Bir uzvu kalp ilân etmek, hadis-i
+şerifteki ölçüyü de bozar -- orada kalp, bozulunca bütün vücudu bozan
+şeydir, yani her uzvun **tâbi olduğu** şeydir, uzuvlardan biri değil.
+
+`nefs/qkaide.py` **silinmez**: ölçüldü ve işliyor (H98, 17–22 kat).
+Yalnız mevkii değişir -- kalp değil, bir rükündür.
+
+## H102 — MANTIĞA SADAKAT ≠ MANTIK YÜRÜTME (kullanıcının koyduğu ayrım)
+
+Kullanıcı hükmü:
+
+> *"Mantık yürütme ameliyesi ile mantığa sadık kalma ameliyesi farklı
+> şeylerdir; benim sana vereceğim dosyalarda bu ayrım yok ama senden
+> istiyorum ki sen bu ayrımı yap."*
+
+### İki ayrı şey
+
+============================  ==========================================
+**mantığa sadakat**           **mantık yürütme**
+============================  ==========================================
+DAİMÎ                         ARADA SIRADA
+bütün melekelerin bütün       kalbin, ``𝒪₄ Tertip`` vasıtasıyla seçtiği
+adımlarında                   bir **strateji**
+melekelerden başka sistemde   seçilince: girdiler derlenir, uygun hâle
+ne varsa onlar da dâhil       getirilir, **funktorlarla uzaylara**
+                              götürülür
+bir **şart**tır               bir **ameliye**dir
+bozulursa her şey bozulur     yapılmasa da sistem çalışır
+============================  ==========================================
+
+**Mantık yürütmeden maksat** (kullanıcının tarifi): elde var olmayan bir
+bilgiyi ortaya çıkarmak, var olan bir şeyi çürütmek, yahut *"bu doğru
+mu"* diye kontrol etmek. Çıktı, girdiyle **aynı cinsten** olmalı fakat
+mantıkça sağlamlaştırılmış, belki üzerine bir şey ilâve edilmiş olmalı.
+
+### Bunun kalp meselesine bakan yüzü
+
+H94'te **kalbin olmadığı ölçüldü** (tesir nispeti 1,4; 39/41 meleke
+dolaşıklığa hiç dokunmuyor). Bu hüküm, kalbin ne olduğuna dair bir
+cevap veriyor ve kaydedilir:
+
+> **Kalp bir meleke değil, bir sadakat şartıdır.** Bütün melekelerin
+> bütün adımlarında ayakta durması gereken şey; bozulunca her uzvun
+> bozulmasının sebebi de tâbiiyetin kendisidir.
+
+### AÇIK BORÇ ve TENKİT (H100 gereği)
+
+*"Mantığa sadakat"* şu hâliyle **koda geçmez**: bir üniter kapının
+mantığa sadık olması ne demektir? Tarifi verilmedikçe H90'a göre
+**kırmızı yanamayan bir ölçüt** olur, yani ölçüt sayılmaz. Kullanıcıya
+soruldu; uydurulmayacaktır.
+
+### İKİNCİ TENKİT: "kalp seçsin" H31'i kırıyor
+
+*"Kalp bu stratejiyi tertip melekesi vasıtasıyla seçmelidir"* -- fakat
+duruma bakıp seçmek bir **okumadır** ve dalgayı çökertir (H31). Bu,
+`mizan`/`fitrat`ı bağlarken çarpılan duvarın aynısıdır.
+
+Çaresi vardır ve kullanıcının kendi maksadına daha uygundur:
+
+> **Kalp seçmez, DOLAŞTIRIR.** Bütün stratejiler süperpozisyonda beraber
+> koşar, her birinin bir genliği olur ve işe yaramayan **yıkıcı
+> girişimle kendiliğinden söner**. "Seçmek" klasik zihnin işidir;
+> kübit zihinde karşılığı, hepsini birden yaşayıp yanlışı söndürmektir.
+
+Bu, kullanıcının *"aynı anda 1 milyon belirteç"* hükmünün strateji
+kademesindeki karşılığıdır.
+
+### MÜSBET KONTROL: teklif iki büyük beyliğe yer yurt veriyor
+
+*"Funktorlarla uzaylara götürme"* tarifi, hâlihazırda **âtıl** duran
+şu modüllerin tam da kendisini istiyor:
+
+    omega_kategori        12 modül   4 693 satır   (funktor, denklik)
+    omega_kategori_nbe     3 modül   1 177 satır
+    token_uzaylari         8 modül   3 067 satır   (morfizm.py, manifold.py)
+    ─────────────────────────────────────────────
+    toplam                          12 786 satır   -- hepsi BEYLİK
+
+H96'nın (*"uzuv olmadıysa at değil, uzuv hâline getir"*) fiilî karşılığı
+budur ve teklifin lehine ciddi bir delildir.
+
+### MÜSBET KONTROL 2: Tertip'in strateji seçmesi H60 ile tutarlı
+
+H60'ta ``𝒪₄ Tertip`` *"∞-kategoriden türeyen UZAYLARLA umumî tertip"*
+diye hükme bağlanmıştı (kapalı devre, açık devre, boru hattı, ağaç,
+katmanlama, mütedahiliyet, açık uçlu). Strateji seçimi bir tertip
+işidir; burada çelişki yoktur.
