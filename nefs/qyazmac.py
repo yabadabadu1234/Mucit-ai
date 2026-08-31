@@ -47,7 +47,46 @@ import numpy as np
 from main.yazmac import Yazmac, dik_iki_kubit, hadamard
 
 __all__ = ["QAyar", "QYazmac", "donme", "faz_z", "kontrollu_donme",
-           "MAKAM_ADLARI"]
+           "donme_yigin", "kontrollu_donme_yigin", "devret", "MAKAM_ADLARI"]
+
+
+def devret(a: np.ndarray, hedef: int) -> np.ndarray:
+    """``a``nın **son eksenini** ``hedef`` uzunluğa devrederek uzat.
+
+    ``np.resize`` diziyi DÜZLEŞTİRİP tekrarlar; yığın ekseni varken
+    (``(B, n)``) bu, farklı yığın üyelerinin açılarını birbirine
+    karıştırır -- sessiz ve öldürücü bir hata. Burada yalnız son eksen
+    devreder, yığın ekseni el değmeden kalır.
+    """
+    a = np.asarray(a)
+    n = a.shape[-1]
+    if hedef <= 0 or n == 0:
+        return a[..., :0]
+    return a[..., np.arange(hedef) % n]
+
+
+def donme_yigin(teta: np.ndarray) -> np.ndarray:
+    """``(...,)`` açı → ``(..., 2, 2)`` dönme yığını.
+
+    Tek açı için ``donme`` ile birebir aynıdır; farkı, yığın ekseniyle
+    beraber çalışmasıdır. Melekeler ``np.stack([donme(float(t)) for t
+    in a])`` yazıyordu; o kalıp ``a`` iki boyutlu olunca (parametre
+    ekseni) kırılır ve Python döngüsü de cabasıdır.
+    """
+    t = np.asarray(teta, float)
+    c, s = np.cos(t), np.sin(t)
+    return np.stack([np.stack([c, -s], axis=-1),
+                     np.stack([s, c], axis=-1)], axis=-2)
+
+
+def kontrollu_donme_yigin(teta: np.ndarray) -> np.ndarray:
+    """``(...,)`` açı → ``(..., 4, 4)`` kontrollü dönme yığını."""
+    t = np.asarray(teta, float)
+    G = np.zeros(t.shape + (4, 4))
+    G[..., 0, 0] = 1.0
+    G[..., 1, 1] = 1.0
+    G[..., 2:, 2:] = donme_yigin(t)
+    return G
 
 #: Makam iki kübite kodlanır: 00=Şek, 01=Zan, 10=Yakîn, 11=Vehim.
 #: Sıra kasıtlıdır: Şek ve Vehim uçlardadır, Zan ile Yakîn ortadadır;
@@ -591,12 +630,24 @@ class QYazmac:
         for k in range(bas):
             Ak = A[:, k].astype(np.float64)           # (B,a,i,b)
             # L[b,d] = Σ_{a,c,i} L[a,c] A[a,i,b] A[c,i,d]
+            #
+            # **ÖLÇÜLEN VE DÜZELTİLEN HATA.** Bu büzülme iki adımdır:
+            #   1) t1[i,c,b] = Σ_a L[a,c] A[a,i,b]
+            #   2) L[b,d]    = Σ_{i,c} t1[i,c,b] A[c,i,d]
+            # Evvelki kod 2. adımda ``A``nın **çıkış** bağını (b) ``t1``in
+            # ``c``siyle büzüyordu; doğrusu **giriş** bağını (c) büzmektir.
+            # Yanlış bacak büzüldüğü için sol çevre bambaşka bir dizey
+            # çıkıyordu: tam dalgayla yüzleştirildi, fark 2,4–3,2 ölçüldü
+            # (sağ çevre ise 1e-16 ile zaten doğruydu). Neticesi küçük
+            # değildir: ``beyan`` bu ρ'dan okunur, yani modelin BÜTÜN
+            # belirteç dağılımı yanlış çevreden çıkıyordu -- köşegende
+            # negatif "olasılıklar" bile vardı. Düzeltme 20 halde tam
+            # dalgayla 1e-16'da örtüşür ve negatif köşegen kalmaz.
             t1 = np.matmul(L.transpose(0, 2, 1),
                            Ak.reshape(Bn, X, 2 * X))  # (B,c,(i,b))
-            t1 = t1.reshape(Bn, X, 2, X).transpose(0, 2, 1, 3)
-            L = np.matmul(Ak.transpose(0, 2, 3, 1).reshape(Bn, 2, X, X
-                                                           ).transpose(0, 1, 3, 2),
-                          t1).sum(axis=1)
+            t1 = t1.reshape(Bn, X, 2, X).transpose(0, 2, 1, 3)   # (B,i,c,b)
+            Ai = Ak.transpose(0, 2, 1, 3)                        # (B,i,c,d)
+            L = np.matmul(t1.transpose(0, 1, 3, 2), Ai).sum(axis=1)
         R = np.zeros((Bn, X, X))
         R[:, 0, 0] = 1.0
         for k in range(self.n - 1, bas + kac - 1, -1):

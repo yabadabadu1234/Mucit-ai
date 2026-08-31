@@ -1727,3 +1727,109 @@ Yani bu oturumun çıkış vekili (proxy) `api.kaggle.com`a bağlanmayı
 O hâlde ölçümler burada, CPU'da devam eder ve GPU'ya dair hiçbir şey
 iddia edilmez. Kaggle'da koşacak kod `main/kaggle.py` ve
 `docs/KAGGLE.md`de hazırdır; koşturmak kullanıcıya kalır.
+
+## H88 — `beyan` YANLIŞ ÇEVREDEN OKUYORDU: modelin bütün çıktısı gürültüymüş (ölçüldü ve düzeltildi)
+
+Bu, bu projede bulduğum **en ağır kusurdur** ve bulunma sebebi
+kullanıcının H86 hükmüdür: *"natural gradyan ile öğrenilsin, bakalım ne
+olacak?"* Natural gradyan işlemedi; **niçin** işlemediğini kovalarken
+kusur çıktı. Yani hüküm, kendi sorduğu şeyi değil, çok daha büyüğünü
+buldu.
+
+### Nasıl bulundu (adım adım, çünkü usul asıl derstir)
+
+1. **Natural gradyan hiçbir adımı kabul etmedi** (0/6); sıradan gradyan
+   6'da 1 kabul etti. Gradyan normu 1064 çıkıyordu.
+2. Kabahati yüzeye atmadan evvel `V(p)` **belirli mi** diye ölçüldü:
+   aynı `p`de iki koşu **0,000e+00** fark verdi. Yani tesadüf yok.
+3. Öyleyse `V` pürüzsüz mü? Yönlü türev `h` küçüldükçe **oturmadı**:
+   `−4e−01 → +1,07e+02 → −9,2e+01 → +6,7e+04`. Dahası `h=1e−4`lük bir
+   adım `V`yi **2,58'den 22,5'e** çıkarıyordu.
+4. `V` parçalarına ayrıldı: patlayan tek terim `−log P(hedef)` idi ve
+   sebebi `P(hedef)`in **tam olarak sıfır** çıkmasıydı; `−log(0+1e−12)`
+   sabit **27,6** duvarı demektir -- eğimi olmayan bir duvar.
+5. Kırpmadan (`np.clip(...,0,None)`) evvelki **ham köşegen** okundu:
+   değerler `~1e−16`, **on tanesi negatif**. Olasılık negatif olamaz.
+   Ayrıca `Tr ρ ≈ 1e−16` iken `⟨Ψ|Ψ⟩ = 2,05e−10` ölçüldü -- halbuki
+   ikisi **eşit olmak zorundadır**.
+6. İkisinden hangisi yanlış? Küçük bir yazmaçta (n=10) MPS açıkça
+   büzülüp **tam dalga** kuruldu: `ic_carpim` tam dalgayla `4e−16`da
+   örtüştü ve `Tr ρ = ⟨Ψ|Ψ⟩` özdeşliği doğrulandı. Demek ki kusur
+   `blok_dagilimi`dedir.
+7. Çevreler ayrı ayrı sınandı: **sağ çevre `1e−16` ile doğru**,
+   **sol çevre `2,4–3,2` ile yanlış**.
+
+### Kusurun kendisi
+
+Sol çevre iki adımlık bir büzülmedir:
+
+    L[b,d] = Σ_{a,c,i} L[a,c] A[a,i,b] A[c,i,d]
+    1) t1[i,c,b] = Σ_a L[a,c] A[a,i,b]
+    2) L[b,d]    = Σ_{i,c} t1[i,c,b] A[c,i,d]
+
+Kod 2. adımda `A`nın **çıkış** bağını (`b`) `t1`in `c`siyle büzüyordu;
+doğrusu **giriş** bağını (`c`) büzmektir. Tek bir `transpose` yanlıştı.
+
+### Neticesi ne kadar ağır
+
+`beyan` -- yani **modelin konuştuğu her belirteç** -- bu `ρ`dan okunur.
+Yanlış çevre + normalize edilmemiş durum (norm `2e−10`e düşmüştü) bir
+araya gelince, çıkan "dağılım" payı ve paydası yuvarlama gürültüsü olan
+bir sayıydı. Yani:
+
+> Bu projedeki **bütün eniyileme ölçümleri** -- dalga motoru, AS-GEK,
+> Postnikov, natural gradyan, sıradan gradyan -- gürültüyü eniyilemeye
+> çalışıyormuş. Hiçbiri işlemediği için değil, **işleyemeyeceği için**
+> işlemedi.
+
+Bu, geriye dönük olarak H69, H76 ve H86'daki "motor kazanamadı"
+ölçümlerinin hepsini şüpheli kılar; o hükümler **düşmez** (içtihad
+içtihadı nakzetmez) fakat üzerlerine bu şerh düşülür: *o ölçümler
+bozuk bir beyandan alınmıştır ve düzeltilmiş beyanla tekrarlanmalıdır.*
+
+### Yanında bulunan ikinci kusur: BOŞ ÖLÇÜT
+
+`norm_hatasi`, `yuva_yogunluklari`nin izinin 1'den sapmasına bakıyordu.
+Halbuki `yuva_yogunluklari` yoğunluğu **kendi izine bölerek** döndürür;
+izi tanım gereği 1'dir. Yani ölçüt ne olursa olsun `~1e−16` yazıyordu.
+Fiilen ölçüldü: **`norm_hatasi` 2,2e−16 derken hakikî `⟨Ψ|Ψ⟩` 2,05e−10
+idi.** Ölçüt tertemiz kâğıt verirken durum on mertebe kaymıştı.
+
+Bu, kullanıcının evvelce ikaz ettiği kusurun aynısıdır (H77'deki
+"boş ölçüt"). Demek ki bir kere düzeltmek yetmiyor; **her ölçütün
+kendisi de sınanmalıdır** -- "bu ölçüt hiç kırmızı yanabilir mi?"
+
+### Düzeltmeler ve doğrulamaları
+
+| düzeltme | yer | doğrulama |
+|---|---|---|
+| sol çevrenin doğru bacağı | `nefs/qyazmac.py::blok_dagilimi` | 20 halde tam dalgayla **≤3,1e−16**, negatif köşegen **0** |
+| `norm()` / `normalize()` | `main/yazmac.py` | `⟨Ψ|Ψ⟩ 2,05e−10 → 0,9999999` |
+| `norm_hatasi` hakikî ölçü | `main/yazmac.py` | artık `1,26e−07` (float32 eps) yazıyor, boş değil |
+| ölçümden evvel normalize | `nefs/qakis.py::idrak_et` | 41 sınamanın 41'i geçiyor |
+
+Kesme (unutma) **gizlenmiyor**: atılan ağırlık `iz.kesme`de ayrıca
+durur; normalize edilen yalnız durumun ölçeğidir.
+
+### Düzeltmeden sonra ölçülen
+
+| | evvel | sonra |
+|---|---|---|
+| `⟨Ψ\|Ψ⟩` | 2,05e−10 | 0,9999999 |
+| `P(hedef)` en az | **0,000e+00** | 2,40e−03 |
+| `V` menzili (rastgele) | 2,58 – 22,78 | 2,41 – 3,72 |
+| `V(p0+1e−4)` sıçraması | 2,58 → **22,49** | 3,09 → **3,11** |
+
+`−log P` artık düzgün dağılımın `log 16 = 2,77`si civarındadır; yani
+model **henüz hiçbir şey bilmiyor**, fakat artık *öğrenilebilir* bir
+yüzey var. Bu bir başarı iddiası değildir: iddia edilen tek şey,
+ölçülen yüzeyin nihayet manalı olduğudur.
+
+### Kalan pürüz -- ve kapatılmayan borç
+
+Düzeltmeden sonra bile yönlü türev `h→0`da tam oturmuyor (`h=1e−2`de
+2,9 iken `h=1e−4`te 1221). `V` bit birebir belirli olduğuna göre bu
+tesadüf değil, `p → Ψ` eşlemesinin **hakikî pürüzüdür**; en kuvvetli
+şüpheli SVD kesmesidir (χ yetmeyince hangi altuzayın atıldığı `p` ile
+**sıçrayarak** değişir). Bu hipotez χ=16/32/64'te ölçülmektedir ve
+neticesi **çıkınca yazılacaktır**; şimdiden bir şey iddia edilmiyor.

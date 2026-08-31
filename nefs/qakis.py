@@ -123,6 +123,12 @@ class QNefs:
             self.s[no].kosu(q, self.p)
         if bec:
             bec_faz_kilidi(q)
+        # **Ölçümden evvel durum, durum olmalıdır.** Kesme her vuruşta
+        # normu bir parça düşürür; kırk bir meleke boyunca birikince
+        # ``⟨Ψ|Ψ⟩`` 2e-10'a kadar indiği ÖLÇÜLDÜ. Atılan ağırlık
+        # ``q.iz.kesme``de ayrıca durur -- yani unutma gizlenmiyor --
+        # fakat dağılım artık normu 1 olan bir dalgadan okunur.
+        q.y.normalize()
         return q
 
     # -- eğitim arayüzü ------------------------------------------------

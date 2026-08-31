@@ -38,7 +38,8 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["Yazmac", "hadamard", "dik_iki_kubit", "MERAKademe"]
+__all__ = ["Yazmac", "hadamard", "dik_iki_kubit", "dik_iki_kubit_yigin",
+           "MERAKademe"]
 
 _H2 = np.array([[1.0, 1.0], [1.0, -1.0]], dtype=np.float32) / np.sqrt(2.0)
 
@@ -68,6 +69,25 @@ def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
     I = np.eye(4)
     Q = np.linalg.solve((I + A).T, (I - A).T).T
     return Q.astype(np.float32)
+
+
+def dik_iki_kubit_yigin(teta: np.ndarray) -> np.ndarray:
+    """``(..., 6)`` açı → ``(..., 4, 4)`` dik kapı yığını -- Cayley.
+
+    ``dik_iki_kubit``in yığın hâli. ``np.linalg.solve`` yığın eksenini
+    kendisi taşır, dolayısıyla Python döngüsü yoktur: 500 parametre
+    varyantının kapıları tek çağrıda kurulur.
+    """
+    t = np.asarray(teta, float)
+    yig = t.shape[:-1]
+    A = np.zeros(yig + (4, 4))
+    iu = np.triu_indices(4, 1)
+    A[..., iu[0], iu[1]] = t[..., :6]
+    A = A - np.swapaxes(A, -1, -2)
+    I = np.broadcast_to(np.eye(4), yig + (4, 4))
+    Q = np.linalg.solve(np.swapaxes(I + A, -1, -2),
+                        np.swapaxes(I - A, -1, -2))
+    return np.swapaxes(Q, -1, -2).astype(np.float32)
 
 
 @dataclass
@@ -784,13 +804,67 @@ class Yazmac:
         out[~iyi] = np.eye(2) / 2.0
         return out.reshape(self.B, idx.size, 2, 2)
 
-    def norm_hatasi(self, ornek: int = 64) -> float:
-        """Yuva yoğunluklarının izi 1'den ne kadar sapıyor?
+    def ic_carpim(self, oteki: "Yazmac") -> np.ndarray:
+        """``⟨ψ_bu | ψ_öteki⟩`` -- iki MPS'in **örtüşmesi**, yığın hâlinde.
 
-        Kapılar dikse ve bölme normu koruyorsa sıfıra yakın olmalıdır.
-        Tam norm ``⟨Ψ|Ψ⟩`` bütün zinciri taramayı ister; burada örneklem
-        alınır ve örneklem büyüklüğü raporlanır.
+        Neye yarar: iki durumun ne kadar aynı olduğunu ölçer. Natural
+        gradyanın (Fubini–Study metriğinin) tek malzemesi budur --
+        "parametreyi şu kadar oynatınca DURUM ne kadar değişti"
+        sorusunun cevabı bu sayıdadır.
+
+        Maliyet ``O(B·N·χ³)``; ``2^N`` hiçbir yerde açılmaz. Aktarım
+        dizeyi (transfer matrix) soldan sağa taşınır::
+
+            E ← Σ_i A[i]ᵀ E B[i]
+
+        Sol sınır ``e₀⊗e₀``, sağ sınır yine ``e₀``dır -- MPS'in kendi
+        sınır şartıyla aynı.
         """
-        idx = np.linspace(0, self.n - 1, min(ornek, self.n)).astype(int)
-        R = self.yuva_yogunluklari(idx)
-        return float(np.max(np.abs(np.trace(R, axis1=2, axis2=3) - 1.0)))
+        if oteki.n != self.n or oteki.bag != self.bag:
+            raise ValueError("iç çarpım için yazmaçlar aynı ölçüde olmalı")
+        Bn = max(self.B, oteki.B)
+        X = self.bag
+        E = np.zeros((Bn, X, X), dtype=np.float64)
+        E[:, 0, 0] = 1.0
+        for k in range(self.n):
+            A = np.broadcast_to(self.A[:, k], (Bn, X, 2, X)).astype(np.float64)
+            C = np.broadcast_to(oteki.A[:, k], (Bn, X, 2, X)).astype(np.float64)
+            T1 = np.einsum("zaic,zab->zicb", A, E, optimize=False)
+            E = np.einsum("zicb,zbid->zcd", T1, C, optimize=False)
+        return E[:, 0, 0]
+
+    def norm(self) -> np.ndarray:
+        """``⟨Ψ|Ψ⟩`` -- yığın üyesi başına, **tam**; ``2^N`` açılmaz."""
+        return np.asarray(self.ic_carpim(self), dtype=np.float64)
+
+    def normalize(self) -> np.ndarray:
+        """Durumu ``⟨Ψ|Ψ⟩ = 1``e getir; **kaybedilen normu döndür**.
+
+        Kesme (truncation) normu düşürür ve bu bir kayıptır; onun için
+        atılan ağırlık ``iz.kesme``de ayrıca durur ve burada gizlenmez.
+        Fakat durumun kendisi **durum olarak** kalmalıdır: normu 2e-10'a
+        düşmüş bir yazmaçtan okunan dağılım, payı da paydası da aynı
+        küçük sayı olduğu için nazarî olarak doğrudur, amma her ölçüm
+        yuvarlama gürültüsüne yaklaşır. Ölçek ``n`` yuvaya eşit
+        dağıtılır ki tek bir tensör şişmesin.
+        """
+        nrm = self.norm()
+        iyi = nrm > 1e-300
+        olcek = np.ones_like(nrm)
+        olcek[iyi] = nrm[iyi] ** (-0.5 / self.n)
+        self.A *= olcek.reshape(-1, 1, 1, 1, 1).astype(self.A.dtype)
+        return nrm
+
+    def norm_hatasi(self, ornek: int = 64) -> float:
+        """``|⟨Ψ|Ψ⟩ − 1|`` -- yığındaki en kötü üye.
+
+        **Ölçülen ve düzeltilen kusur.** Evvelki hâli ``yuva_yogunluklari``
+        izinin 1'den sapmasına bakıyordu; halbuki o usul yoğunluğu
+        **kendi izine bölerek** döndürür, yani izi tanım gereği 1'dir.
+        Ölçüt bu yüzden boştu: ne olursa olsun ~1e-16 yazıyordu. Fiilen
+        ölçüldü -- ``norm_hatasi`` 2,2e-16 derken hakikî ``⟨Ψ|Ψ⟩``
+        2,05e-10 idi, yani ölçüt tam temiz kâğıt verirken durum normunun
+        on mertebe altına düşmüştü. ``ornek`` artık kullanılmaz; norm
+        tam hesaplanır ve imza uyum için durur.
+        """
+        return float(np.max(np.abs(self.norm() - 1.0)))
