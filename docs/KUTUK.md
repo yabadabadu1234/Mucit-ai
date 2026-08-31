@@ -2752,3 +2752,163 @@ ayniyet fazlası         +0,0571     **−0,0550** işaret döndü
 * `tanilama/haraplama.py` artık kalbin kendi lezyonunu da ölçüyor;
   *"melekeler arasında kalp yok"* hükmü artık **doğru sual değildir**
   diye şerh düşülmüş hâlde raporlanıyor (H103: kalp meleke değildir).
+
+## H108 — KELÂM, SÜKÛT ve GAYE kalbe bağlandı (kendi bulduğum boşluk)
+
+H107'de kendi ölçümümle bulmuştum: kalbin ``beyan`` üzerindeki tesiri
+yalnız 0,6×, çünkü ``beyan`` ``kelam`` alanından okunur ve sadakat kapısı
+``kelam``a **hiç dokunmuyordu**. Dosya 7 de aynı yeri işaret ediyor
+(``α_kelam → 0`` şartı).
+
+Üç şart eklendi ve üçü de ``mizan`` diliyle tarif edildi:
+
+    |kelam₀=1, tasdik₀=0⟩   mühürlenmemiş hükümle konuşulmaz
+    |sukut=1,  tasdik₀=1⟩   susarken mühürlemek olmaz (H10)
+    |tasdik ⊕ gaye⟩         gaye ile hüküm ayrışamaz (Dosya 7)
+
+Ayrıca ``sadakat_intaci``ın yansıtması **bütün işaretlenen alanları**
+kapsayacak şekilde genişletildi. Evvelce yalnız mizan/tasdik/nakz'ı
+kapsıyordu; ``kelam``a işaret vurulup yansıtmaya alınmasaydı o işaret
+**hiçbir zaman genliğe dönmezdi** -- sessiz bir kusur olurdu.
+
+**Ölçülen:** kalbin ``beyan`` üzerindeki tesiri **0,198 → 0,2625**
+(%33 artış). Hâlâ en tesirli melekenin altında (0,5×); iddia edilmiyor.
+
+## H109 — TERTİP KURULDU: mizan artık BEYLİK DEĞİL, devrenin kaynağı
+
+Dosya 8'in *"16 mantık manifoldunu süperpozisyonda yöneten Router"*
+tarifi `nefs/tertip.py` olarak kuruldu ve ana akışa bağlandı.
+
+### Bağ zorlama değil: mizan devreyi FİİLEN sürüyor
+
+1. Usul, ``mizan.onerme`` ile bir **formül** olarak kurulur.
+2. Formülün doğruluk tablosu ``mizan.onerme.Tablo`` ile **tam** çıkarılır.
+3. Tablonun **yanlış** çıktığı değerlemeler kübit yazmacında işaretlenir.
+4. İşaret, ``tertip`` yazmacının o usule ait koluna **kontrollüdür**.
+
+Yani hangi hâlin yasak olduğunu **mizan söyler**, kübit tarafı yalnız
+icra eder. İkisi ayrı düşerse mizan haklıdır (H88'in dersi).
+
+Kurulan dört usul ve mizan'ın çıkardığı yasaklar::
+
+    tenakuzsuzluk  ¬(tasdik ∧ nakz)   →  {tasdik:1, nakz:1}
+    kâfi_sebep     tasdik → mizan     →  {tasdik:1, mizan:0}
+    kelâm_şartı    kelam → tasdik     →  {kelam:1, tasdik:0}
+    sükût_şartı    ¬(sukut ∧ tasdik)  →  {sukut:1, tasdik:1}
+
+### "Seçmek" değil "dolaştırmak" -- vesikanın kendi devresi de böyle
+
+Dosya 8'in metni *"Tertip uygun manifoldu SEÇER"* diyor; olduğu gibi
+alınsa H31'i kırardı (seçmek okumadır). Fakat vesikanın **kendi
+devresi** ``|Q_tertip⟩ ──[H]──●`` yazıyor, yani seçmiyor
+**süperpoze ediyor**. İcra edilen budur ve H102'deki kendi tenkidimle
+örtüşür.
+
+### YENİ ÂLET: çok-kontrollü işaret, bağ boyutu 2
+
+`nefs/isaret.py` -- her mantık kuralının temel taşı. ``C^k Z`` köşegen
+olduğu için MPO bağ boyutu **2**dir; ancilla yok, çöp yok, geri alma
+yok. Menfî kontrol bedavadır (aranan bit tensöre doğrudan yazılır,
+``X`` ile sarmaya gerek yok). Bu âlet bundan sonraki bütün mantık
+manifoldlarının taşıyıcısıdır.
+
+### ÖLÇÜLEN VE DÜZELTİLEN KUSUR
+
+``yasaklar()`` evvelce tabloyu **bütün** alanlar üzerinden kuruyordu;
+halbuki her formül ancak birkaçına bağlıdır. ``¬(tasdik ∧ nakz)`` tek
+örüntüdür, fakat beş değişken üzerinden sayılınca serbest üç değişkenin
+``2³ = 8`` bileşimi ayrı ayrı yazılıyordu: usul başına 8 MPO, toplam 32.
+``Onerme.degiskenler()`` ile asgarîye indirildi: usul başına **1** örüntü,
+işaret ``≤3`` kontrollü.
+
+## H110 — DÖRT VESİKANIN TENKİDİ (H100 gereği)
+
+### Alınanlar
+
+* **Dosya 8:** süperpoze yönlendirici (kuruldu, H109). ``U†`` disiplini.
+  Sorites'in ``O(1)`` yaşayan kübit fikri doğrudur.
+* **Dosya 7:** ``ε_durgun`` gürültü tabanı ve otomatik sükût fikri
+  doğrudur ve ``sukut`` alanına bağlandı. Gaye alanı eklendi.
+* **Dosya 3:** phantom type / tip güvenliği fikri doğrudur; funktör
+  köprüsü Riesz ile kurulmalıdır.
+* **Dosya 9:** Sağîr/Kebîr iki ölçek ayrımı doğrudur ve bu projedeki
+  yerel/küllî hüküm ayrımıyla birebir örtüşür.
+
+### Bulunan yanlışlar -- yedisi de somut
+
+1. **Dosya 9: "χ ≤ 64 sınırını ASLA aşmaz."** Bu projede ölçüldü ve
+   **yanlış**: χ=16/32/64'te toplam kesme ~26'da kaldı. Bugün de
+   ölçüldü: 66 kübitte kesme **15,3** (kalpsiz), ve χ büyütmek
+   **iyileştirmedi** (aşağıya bakınız).
+2. **Dosya 9, rükn 3:** ``H_t = exp(−W) ⊙ H_{t−1} + K_tᵀV_t``. Bu bir
+   **klasik özyineleme**dir (RWKV/linear-attention ailesi), üniter
+   değildir ve bir **hâl okumasıdır**. H31'i kırar.
+3. **Dosya 8: traced monoidal ile Teemmül.** Kuantumda iz almak
+   **kısmî izdir**, yani eş evreliliği yok eder (decoherence).
+   ``Tr`` üniter değildir; devridaim böyle kurulamaz.
+4. **Dosya 3:** ``D_t(X) = Softmax(P_G X W_d/√d_k)·X``. Ne ``Softmax``
+   ne de ``P_G`` (izdüşüm, ``P² = P``) üniterdir. Meleke kapısı olarak
+   tatbik edilemez; klasik taraftadır.
+5. **Dosya 7: "alanların yapısız çıkmasının YEGÂNE sebebi gaye
+   yokluğudur."** *Yegâne* fazladır. H105'te başka bir sebep de
+   ölçülmüştü: ``tasdik`` ile ``nakz`` arasındaki dışlamayı **hiçbir
+   meleke icra etmiyordu**. İkisi de sebeptir.
+6. **Dosya 7: ``α_kelam ≡ 0`` şartı** ``E_tenakuz``un **ölçülmesini**
+   ister -- bir okumadır. Üniter karşılığı, sükûtu tenakuzla
+   **dolaştırmaktır**; H108'de öyle kuruldu.
+7. **Bütün vesikalarda faz kurguları karmaşık yazmaç varsayıyor**
+   (``e^{iπ}``, ``CR_z(θ)``, ``exp(−iĤt)``). Bizim yazmacımız
+   **reeldir** (H98). ``π`` fazı tatbik edilir; keyfî ``e^{iθ}``
+   edilemez. Bu, vesikanın kusuru değil **bizim yazmacımızın şartıdır**
+   ve her tercümede hesaba katılmalıdır.
+
+## H111 — ÖLÇÜLDÜ: KESME BÜYÜK ve ``iz.kesme`` ŞÜPHELİ BİR ÖLÇÜT
+
+Yeni alanlarla yazmaç 47 → **66 kübite** çıktı. Ölçülen::
+
+    kalpsiz (tertip+sadakat kapalı)   kesme = 1,526e+01
+    kalpli                            kesme = 1,802e+01   (+%18)
+
+    χ=8    kesme = 1,802e+01
+    χ=16   kesme = 2,820e+01
+    χ=32   kesme = 3,062e+01
+
+İki hüküm, ikisi de dürüstçe:
+
+1. **Kesmenin ana kaynağı benim yeni işim değil, melekelerin
+   kendisidir** (15,3'ü onlardan; kalp yalnız 2,8 ekliyor).
+2. **``iz.kesme`` şüpheli bir ölçüttür ve öyle işaretlenir.** χ
+   büyüdükçe atılan ağırlığın **artması** manasızdır; azalması
+   beklenirdi. Demek ki bu sayı, kapı başına nispî atılanların
+   **toplamıdır** ve kapı sayısı/ölçüsü değiştikçe kıyas edilemez hâle
+   gelir. H90'a göre bu bir ölçüt değildir; **düzeltilmesi borç olarak
+   yazılır.** Doğrusu, atılan ağırlığı normalize edilmiş tek bir
+   sadakat (fidelity) ölçüsüne çevirmek olmalıdır.
+
+Norm hatası bütün hâllerde ``~5e-06`` (float32 eps) -- yani durum
+normalize kalıyor; kaybedilen bilgi gizlenmiyor, ``iz.kesme``de duruyor
+fakat o sayı **kıyas için kullanılamaz**.
+
+## H112 — NİZAM: 38 → 43 tebaa (%18 → %19)
+
+`mizan.onerme` ve `mizan.istikra` artık **tebaadır**: ana akış onları
+`nefs/tertip.py` ve `nefs/kaide.py` üzerinden fiilen çağırıyor.
+
+    toplam modül : 210   (74 614 satır)
+    TEBAA        : 43    (14 217 satır, %19)
+    BEYLİK       : 167   (60 397 satır, %81)
+
+Artış küçüktür ve **iddia edilmiyor**. Kalan büyük beylikler ve
+niçin henüz bağlanmadıkları:
+
+======================  ========  ==========================================
+beylik                  satır     bağlanması için gereken
+======================  ========  ==========================================
+``mucit_ai_esas``       14 373    kullanıcı hükmü: **en son** (fikir devşirme)
+``omega_kategori``       4 693    Dosya 8'in ∞-operad kompozisyonu kurulmalı
+``kuantum``              3 980    stabilizer/dalga/nqs -- sadakat kod uzayına
+``fitrat``               3 070    H93: üstündeki kademe boş dönüyor
+``token_uzaylari``       3 067    Dosya 3'ün funktör köprüsü kurulmalı
+``idrak`` / ``ogrenme``  4 813    ARC verisi ve eğitim -- kısmen tebaa
+``reel`` / ``akis``      3 022    eski reel hat; 41 sınama oradan geçiyor
+======================  ========  ==========================================

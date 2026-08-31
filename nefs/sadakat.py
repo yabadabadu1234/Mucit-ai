@@ -185,6 +185,35 @@ def sadakat_kapisi(q: QYazmac, p=None) -> None:
     q.uzak_cift(tas0, miz0, CZ)
     q.tek(miz0, degil_x())
 
+    # --- 4) KELÂM ŞARTI (kütük H108). **Kendi ölçümümle bulduğum boşluk.**
+    # H107'de ölçüldü: kalbin ``beyan`` üzerindeki tesiri yalnız 0,6×,
+    # çünkü ``beyan`` ``kelam`` alanından okunur ve kapı ``kelam``a hiç
+    # dokunmuyordu. Yani kalp hükmü idare ediyor, KELÂMI etmiyordu.
+    #
+    # Mantıkî şart: **mühürlenmemiş hükümle konuşulmaz.**
+    #     |kelam₀=1, tasdik₀=0⟩  →  işaretlenir
+    kel0 = q.kulli("kelam", 0)
+    q.tek(tas0, degil_x())
+    q.uzak_cift(kel0, tas0, CZ)
+    q.tek(tas0, degil_x())
+
+    # --- 5) SÜKÛT ŞARTI. Susarken mühürlemek olmaz; ikisi bir arada
+    # bulunamaz (kütük H10: sükût bir kusur değil fazilettir, fakat
+    # hükümle beraber olamaz).
+    #     |sukut=1, tasdik₀=1⟩  →  işaretlenir
+    q.uzak_cift(q.kulli("sukut", 0), tas0, CZ)
+
+    # --- 6) GAYE ŞARTI (Dosya 7). Gaye ile hüküm AYRIŞAMAZ: gaye
+    # istemediğini mühürlemek de, istediğini mühürlememek de mantık
+    # dışıdır. İki kol da işaretlenir (XOR).
+    gay0 = q.kulli("gaye", 0)
+    q.tek(gay0, degil_x())
+    q.uzak_cift(tas0, gay0, CZ)          # |tasdik=1, gaye=0⟩
+    q.tek(gay0, degil_x())
+    q.tek(tas0, degil_x())
+    q.uzak_cift(tas0, gay0, CZ)          # |tasdik=0, gaye=1⟩
+    q.tek(tas0, degil_x())
+
 
 def sadakat_intaci(q: QYazmac, tur: int = 1) -> float:
     """İşaretlenen kolları **söndür** -- küllî hüküm bloğunda girişim.
@@ -200,9 +229,15 @@ def sadakat_intaci(q: QYazmac, tur: int = 1) -> float:
     Bütün zincire vurmak, dalganın taşıdığı bütün suretleri de
     karıştırırdı.
     """
+    # **Yansıtma, işaretlenen bütün alanları kapsamalıdır.** Evvelce
+    # yalnız mizan/tasdik/nakz'ı kapsıyordu; ``kelam``a işaret vurulup
+    # yansıtmaya alınmazsa o işaret **hiçbir zaman genliğe dönmez**.
     yuv = [q.kulli("mizan", j) for j in range(q._alan["mizan"][1])]
     yuv += [q.kulli("tasdik", j) for j in range(q._alan["tasdik"][1])]
+    yuv += [q.kulli("sukut", j) for j in range(q._alan["sukut"][1])]
     yuv += [q.kulli("nakz", j) for j in range(q._alan["nakz"][1])]
+    yuv += [q.kulli("kelam", j) for j in range(q._alan["kelam"][1])]
+    yuv += [q.kulli("gaye", j) for j in range(q._alan["gaye"][1])]
     yuv = sorted(set(yuv))
     bas, son = min(yuv), max(yuv) + 1
     kesme = 0.0

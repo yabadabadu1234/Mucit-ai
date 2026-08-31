@@ -160,6 +160,17 @@ class QAyar:
         # yardımcı kübittir: şart sağlanan kolda hiç kımıldamaz,
         # sağlanmayan her kolda genlik sızdırır (bkz. nefs/qkaide.py).
         ("kaide", 12), ("orak", 1),
+        # --- kütük H108: GAYE alanı (Dosya 7).
+        # H105'te hüküm alanları YAPISIZ ölçüldü. Dosya 7'nin teşhisi:
+        # teleolojik çekici (gaye) olmadan serbest enerji gradyanı
+        # yönsüz kalır. Alan buraya konur ve hükümle DOLAŞTIRILIR;
+        # hiçbir yerde okunmaz.
+        ("gaye", 2),
+        # --- kütük H109: TERTİP yazmacı (Dosya 8).
+        # Her kübit bir mantık usulüne aittir ve SÜPERPOZİSYONDADIR:
+        # usul hem denenir hem denenmez, hangisinin işe yaradığını
+        # girişim tayin eder ("kalp seçmez, dolaştırır" -- H102).
+        ("tertip", 4),
     )
     #: ``kaide`` alanındaki her parametrenin bit sayısı (p, q, r).
     kaide_bit: int = 4

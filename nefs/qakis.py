@@ -32,6 +32,7 @@ import numpy as np
 
 from .qmeleke import QAKIS, QParametre, qmelekeler, qsicil
 from .sadakat import sadakat_intaci, sadakat_kapisi
+from .tertip import tertip_kos
 from .qyazmac import MAKAM_ADLARI, QAyar, QYazmac, donme
 
 __all__ = ["QNefs", "rapor", "bec_faz_kilidi"]
@@ -137,6 +138,10 @@ class QNefs:
             if self.sadakat:
                 sadakat_kapisi(q, self.p)
         if self.sadakat:
+            # TERTİP: mantık usulleri süperpozisyonda koşar ve `mizan`
+            # neyin yasak olduğunu söyler (H109). Ana akışa buradan
+            # bağlanır -- artık `mizan` beylik değil tebaadır.
+            q.iz.kesme += tertip_kos(q)
             # İşaretlenen mantık dışı kollar burada SÖNER: faz farkı,
             # yansıtmayla genlik farkına çevrilir (H98'de ölçülen usul).
             sadakat_intaci(q)
