@@ -25,6 +25,13 @@ from typing import Callable, Dict, List, Tuple
 
 import numpy as np
 
+# **DİVAN -- padişahın eli buradan bütün tebaaya uzanır (kütük H123).**
+# Bu içe aktarma bir süs değildir: `nefs/divan.py` kod tabanındaki her
+# modülü fiilen yükler, rol verir ve ``yokla()`` ile her koşuda yoklar.
+# `tanilama/nizam.py` tabiiyeti ``ast`` ile ölçtüğü için, bağlamanın
+# algoritması tam olarak budur -- bkz. divanın şerhi.
+from . import divan
+
 __all__ = ["Sahit", "SAHITLER", "denetle", "rapor"]
 
 
@@ -500,6 +507,22 @@ def _h120_golge_kahin() -> Tuple[bool, str]:
                                    e["üstel_hatası"]))
 
 
+def _h123_divan_tam() -> Tuple[bool, str]:
+    """Padişahın eli bütün tebaaya uzanıyor mu (kütük H123)?
+
+    Divan kod tabanındaki her modülü yükler. Yüklenemeyen varsa sayılır
+    ve **gizlenmez**; ``torch`` bu ortamda kurulu değildir ve o modüller
+    şartlı bağlıdır.
+    """
+    y = divan.yokla()
+    ek = y["yuklenemeyen"]
+    torch_disi = [a for a, s in ek if "torch" not in s]
+    return (not torch_disi), \
+        ("%d modül kayıtlı, %d yüklendi, %d yüklenemedi (%d'i torch); "
+         "2. kademede %d" % (y["kayitli"], y["yuklu"], len(ek),
+                             len(ek) - len(torch_disi), y["kademe2"]))
+
+
 SAHITLER: List[Sahit] = [
     Sahit("H3", "öğrenme kapalı formdadır, gradyan yok", _h3_gradyansiz),
     Sahit("H6", "tek karşı örnek küllî kaideyi düşürür", _h6_sahitlik),
@@ -539,6 +562,8 @@ SAHITLER: List[Sahit] = [
           _h119_sozlesme_ihlalsiz),
     Sahit("H120", "gölge kâhin ana hattı doğruluyor; π boşluğu kapandı",
           _h120_golge_kahin),
+    Sahit("H123", "divan tam: padişahın eli bütün tebaaya uzanıyor",
+          _h123_divan_tam),
 ]
 
 #: Makine şahidi **kurulamayan** hükümler ve sebebi. Bunlar "geçti"

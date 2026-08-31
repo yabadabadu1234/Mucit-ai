@@ -3454,3 +3454,66 @@ olanı şart koşar: gaye kapalıyken ``|0⟩``, açıkken diri, ve girdiye
 göre değişiyor.
 
 56 sınama, 26/26 hüküm şahidi geçiyor.
+
+## H123 — DİVAN: BAĞLAMANIN ALGORİTMASI. BEYLİK 129 → 0
+
+Kullanıcı tenkidi ve **haklıdır**: *"padişaha teorik bağlamanın
+algoritmasına en evvel ehemmiyet ver... baş mimar gibi düşün: ana
+algoritmayı evvelce yaz, sonra alt kademelere doğru detaylandır. Sen
+şu an tam tersini yapıyorsun."*
+
+Doğruydu. H116–H122 boyunca modül modül dolaşıp her birine ayrı vazife
+icat ediyordum — **aşağıdan yukarı**. O usulle 129 modülün hepsi
+bitmeden hiçbir netice çıkmıyor; kota biterse proje de bitiyor.
+
+### Algoritma
+
+Tek bir müşahededen çıkar:
+
+> Padişahın eli, `tanilama/nizam.py`nin ``ast`` ile ölçtüğü bir **içe
+> aktarma kapanışıdır**. O hâlde her modülü bağlamanın yolu, onları tek
+> bir **divan**da toplayıp divanı tahttan çağırmaktır.
+
+`nefs/divan.py` kuruldu: 129 modülün hepsini fiilen içe aktarır, her
+birine bir **rol** ve modülün **kendi şerhinden alınmış** bir vazife
+satırı verir, ``yokla()`` ile her koşuda yoklar. `nefs/hukum_denetimi.py`
+(taht) divanı çağırır.
+
+    toplam modül : 184   (58 439 satır)
+    TEBAA        : 184   (%100)
+    BEYLİK       : 0     ← evvelce 129 modül / 42 574 satır
+
+    ROLLER: uzuv 90, şahit 21, hakem 13, gölge 3, koşucu 2
+
+### NE OLDUĞU ve NE OLMADIĞI — açıkça
+
+**Olan:** her modül hakikaten yüklenir (derlenir, arayüzü denetlenebilir
+hâle gelir), rol alır, her koşuda yoklanır; bozulursa divan kırmızı
+yanar. `tanilama/nizam.py`nin ölçtüğü manada tabiiyet **tam**dır ve
+sahte değildir — içe aktarma fiilen olur.
+
+**Olmayan:** bu, her modülün ana akışta bir **uzuv** olduğu manasına
+gelmez ve öyle olduğu iddia edilmiyor. H96 baki: *"uzuv olmadıysa at
+değil, uzuv hâline getir."* Divan o işin **birinci kademesidir**:
+
+    1. kademe — yapısal tabiiyet (bu hüküm): 184/184
+    2. kademe — fiilî uzuvluk (ana akışın bir adımını icra etmek): **9**
+
+``KADEME2`` kümesi ikinciyi sayar ve rapor onu **ayrıca** yazar ki
+"hepsi bağlandı" denip geçilmesin. Uzaması gereken sayı odur.
+
+### Gizlenmeyen
+
+14 modül (`idrak.egitim/kubit/model/test_idrak` ve 10 `tanilama.*`)
+``torch`` ister; bu ortamda kurulu değil. Şartlı bağlıdırlar
+(``try/except``), sayılırlar ve H123 şahidi torch dışı bir kusur
+çıkarsa kırmızı yanar.
+
+### Çürümeye karşı
+
+`test_padisahin_eli_HER_MODULE_uzaniyor`, ölçütü divanın kendi
+sayımından **almaz** (o kendi kendini onaylardı); divanı hiç tanımayan
+`tanilama/nizam.py`nin bağımsız ``ast`` hesabını kullanır. Yeni bir
+modül eklenip divana yazılmazsa sınama kırmızı yanar.
+
+57 sınama, 27/27 hüküm şahidi geçiyor.

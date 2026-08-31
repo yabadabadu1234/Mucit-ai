@@ -743,6 +743,27 @@ def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
     assert abs(g1 + g0) < 1e-9, (g0, g1)          # işaret çevrilmiş
 
 
+def test_padisahin_eli_HER_MODULE_uzaniyor():
+    """Beylik kalmadı mı? (kütük H123)
+
+    Bu sınama divanın **çürümesini** engeller: yeni bir modül eklenip
+    divana yazılmazsa `tanilama/nizam.py` onu beylik sayar ve burası
+    kırmızı yanar. Yani divan bir kere doldurulup unutulacak bir liste
+    değil, **korunan** bir nizamdır.
+
+    Ölçüt divanın kendi sayımı DEĞİLDİR -- o kendi kendini onaylardı.
+    Ölçüt, divanı hiç tanımayan `tanilama/nizam.py`nin ``ast`` ile
+    yaptığı bağımsız erişilebilirlik hesabıdır.
+    """
+    from tanilama.nizam import (GIRISLER, modulleri_tara, padisahin_eli,
+                                tabiiyet)
+
+    tab = tabiiyet(modulleri_tara())
+    tebaa = padisahin_eli(GIRISLER, tab)
+    beylik = sorted(set(tab) - set(tebaa))
+    assert not beylik, ("padişaha bağlanmamış modül var: %s" % beylik[:20])
+
+
 def test_gaye_alani_ARTIK_YASIYOR_ve_sukutu_bastiriyor():
     """Dosya 4: `gaye` alanı yazılıyor ve sükût eşiği çalışıyor mu?
 
