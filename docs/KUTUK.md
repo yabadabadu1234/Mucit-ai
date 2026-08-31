@@ -3923,3 +3923,122 @@ edecektim.
     fitrat.ayrisma → nefs/illet.py   (sebep çizgesi, d-ayrışması)
 
 2. kademe 17 → **18**. 60/60 sınama, 31/31 hüküm şahidi.
+
+## H133 — PADİŞAHIN ÇIKARIMI BİR DİL MODELİYDİ; BAŞTAN YAZILDI
+
+### Evvelâ: kullanıcının tenkidi haklıydı ve iddiam içi boştu
+
+> *"Sadece içe aktarıp rapor verdirmek o kodları padişaha bağladığını
+> göstermez, beni kandırmaya çalışma."*
+
+H123'te 129 modülü `nefs/divan.py` ile içe aktarıp **"beylik 0"** ilan
+ettim. `tanilama/nizam.py` de doğruladı -- çünkü o da **içe aktarma**
+kapanışı ölçüyor. İkisi de yanlış şeyi ölçüyordu.
+
+`tanilama/tefti.py` kuruldu: ``sys.setprofile`` ile padişah koşarken
+**fiilen çağrılan** her ``(dosya, fonksiyon)``. Ölçüldü::
+
+    kod tabanındaki dosya : 193
+    KOŞAN dosya           :  17   (%8,8)
+    ÖLÜ dosya             : 176   (%91,2)  ← padişaha bağlı DEĞİL
+
+Bundan sonra "bağlı" kelimesi yalnız bunu ifade eder.
+
+### Kök sebep: çıkarım bir sonraki belirteci kestiriyordu
+
+`nefs/qegitim.py :: degerlendir` ARC'yi şöyle koşuyordu: görev düz bir
+belirteç dizisine çevriliyor, hedef ızgara ``argmax(beyan)`` ile
+**belirteç belirteç** üretiliyor -- **8 belirteçlik** bağlam
+penceresiyle, **16 sembollük** sözlükten.
+
+Yani padişah, tam da olmamaya yemin ettiği şeyi yapıyordu: bir dil
+modeli. Ve bu usulle ARC çözülemez, sebebi cebridir:
+
+* 30×30 ızgara 900 hücredir; model 8 belirtece bakıyor.
+* Tam eşleşme ~100–900 belirtecin **hepsini** ister. Belirteç başına
+  %95 isabetle bile ``0,95¹⁰⁰ ≈ 0,006``.
+* `idrak/cozucu.py` -- **ispatlı** çözücü, cevap verdiğinde isabeti
+  **%100** -- çıkarım yolunda **hiç çağrılmıyordu**.
+
+**Ve bu, evvelki bütün teşhisleri açıklıyor.** H105/H115/H121/H129'da
+"hüküm alanları yapısız" diye ölçtüğüm şey bir *netice*ydi: hüküm
+zaten cevaba **ulaşmıyordu**. Yalnız ``beyan``ın argmax'ı vardı.
+
+### Kurulan: MÜDRİKE ÇEVRİMİ
+
+Kullanıcının tarif ettiği iç muhakeme (*"acaba benden ne isteniyor…
+rastgele olsa ben nasıl cevap bulacağım… demek ki rastgele değil"*)
+bir üslûp değil **bir hüküm zinciridir** ve altı adımda icra edilir:
+
+    1. VAZİFE NEVİ  girdi–çıktı çifti var mı → bulmaca, yoksa kelâm
+    2. TESADÜF MÜ   renk yapısı + şekil bağı; yapı yoksa sükût
+    3. ÖRTÜ         Čech tıkanıklığı -- **ihtiyat**, veto değil (H132)
+    4. KÂİDE        atom + terkip, gösterimlerin hepsinde ispatlanır
+    5. YAKÎN        istikrâ × müphemlik × delil/hipotez × dalga hükmü
+    6. BEYAN        yalnız 5'ten geçerse; hükümsüz kelâm yasak
+
+**ARC'ye mahsus değildir**: 1. adım vazife nevini kendi tayin eder.
+Kullanıcının şartı buydu.
+
+**Dalga cevaba fiilen giriyor artık.** 41 meleke kaideyi bulmaz --
+onu kaide cebri bulur -- fakat **yakîni tartar** (𝒪₃₂ Şek-Zan-Yakîn,
+𝒪₃₃ Muhakeme). H92'nin paralel hat yasağı böyle korunur.
+
+### Ölçülen
+
+    ARC-AGI-2 training (ilk 120 görev)      tam çözülen
+    eski çözücü (tek atom)                        5
+    kaide cebri, terkip derinliği 2               8
+    + nesne + hücre kaideleri, müdrike ile        9
+
+Ve **sükût nizamı ayakta**: 107 görevde susuldu, sebebi yazılı
+(103 "kaide bulunamadı", 4 "yakîn eşiğin altında").
+
+## H134 — HÜCRE KAİDELERİ EZBERE KAÇTI; DELİL/HİPOTEZ ORANI KONDU
+
+Hücre kaideleri (çıktı hücresi = f(yerel desen)) eklendiğinde model
+7 görevden **16**'ya çıkıp konuştu -- fakat **8'i yanlış** oldu.
+Cevap verince isabet %85,7'den **%50**'ye düştü.
+
+Sebep ezberdir: üç gösterimden öğrenilen bir 3×3 desen tablosu
+gösterimleri tutar, sınamayı tutmaz. **Delilden büyük hipotez, istikrâ
+değil ezberdir.**
+
+Tedbir mimarîde zaten vardı, yalnız tatbik edilmemişti: ``Kaide``ye
+``hipotez`` (öğrenilen tablonun girdi sayısı) eklendi ve yakîne girdi::
+
+    kanıt = clip( delil / (4 · hipotez), 0,25, 1 )
+    yakîn = istikrâ × müphemlik × ihtiyat × kanıt
+
+Occam da iki eksene çıktı: **önce hipotezi küçük olan**, sonra kısa
+terkip. Tersi olsaydı üç gösterimden öğrenilmiş kocaman bir tablo,
+sabit bir döndürmenin önüne geçerdi.
+
+Netice: konuşan 16 → 13, **çözülen 8 → 9**, yanlış 8 → 4.
+
+## H135 — HEDEF HAKKINDA DÜRÜSTLÜK: %50 DÜNYA REKORUNUN ÜSTÜNDEDİR
+
+Kullanıcının ana planı: *"tüm soruların en az yarısının tam doğru
+şekilde çözülmesi."*
+
+Bunu **söylemem gereken şey var** ve söylemezsem kütüğün C maddesini
+(*"kibrine yenilip yaptım etme"*) çiğnemiş olurum:
+
+**ARC-AGI-2, mevcut en zor umumî muhakeme ölçütüdür ve %50 bugün
+hiçbir sistemin ulaşmadığı bir seviyedir.** Bu ölçütte cephe
+sistemleri tek haneli ilâ düşük çift haneli yüzdelerde durur. %50
+hedefi, bir hata düzeltme meselesi değil, **dünya rekorunu kırmak**
+demektir.
+
+Bunu hedefi küçültmek için değil, hedefin **cinsini** doğru koymak
+için yazıyorum:
+
+* Hedefe bu oturumda varılmayacaktır ve varıldığı iddia edilmeyecektir.
+* Fakat istikamet doğrudur ve ölçü gerçektir: 5 → 9, sıfır uydurma,
+  her sükûtun sebebi yazılı.
+* Asıl kazanç sayı değil **mimarîdir**: çıkarım artık bir dil modeli
+  değil, ispatlı bir muhakemedir. Sayı bundan sonra kaide uzayının
+  genişlemesiyle artar ve o iş **birikimlidir**.
+
+Darboğaz tek ve ölçülüdür: 120 görevin **103'ünde** "kaide bulunamadı".
+Yani mesele muhakeme çevriminde değil, **kaide cebrinin darlığında**dır.
