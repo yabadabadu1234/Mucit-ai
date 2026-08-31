@@ -56,6 +56,7 @@ from typing import (Callable, Dict, FrozenSet, List, Optional, Sequence,
 
 import numpy as np
 
+from fitrat.ayrisma import Cizge, arka_kapi_mi
 from mizan.istikra import (Nesne, ardisiklik_kaidesi, mill_ayrilik,
                            mill_birlesik, mill_uyusma, tam_istikra_mi,
                            temsil_hukmu)
@@ -294,6 +295,76 @@ def _teklik_ispati(kaide_adi: str, uyanlar: Sequence[str], kendi_tutuyor: bool
     return bool(tek), rakipler, delil
 
 
+def _illet_taninabilir(namzetler: Sequence[str], kaide_illeti: str
+                       ) -> List[str]:
+    """Mill'in verdiği illet namzetlerinden **tanınabilir** olanları ayır.
+
+    Kütük H92: ``fitrat`` buraya **uzuv** olarak girer, yedek olarak
+    değil. Onsuz bu ayrım yapılamaz ve model sahte illet kabul eder.
+
+    **Mill niçin yetmez.** Mill'in birleşik usulü "her müsbette var,
+    hiçbir menfîde yok" der ve orada durur. Halbuki ``şahit``in kendisi
+    **ortak sebeptir**: ``ebat_sabit`` ile kâidenin tutması birlikte
+    görünür, çünkü ikisini de görevin kendisi tayin eder. Ölçüldü: Mill
+    tek bir kâide için dört illet döndürüyordu, üçü şahidin vasfıydı.
+
+    **``ayrisma`` ne söyler.** Nedensellik çizgesi şudur::
+
+        kaide_illeti ─────────────→ tuttu
+                                      ↑
+        şahit(gizli) ──→ vasıf_i ─────┘
+              │
+              └───────────────────────→ tuttu
+
+    * ``kaide_illeti`` **kökte durur**: hangi illeti ileri sürdüğümüz
+      bizim seçimimizdir, yani bir **müdahaledir** (``do``). Ebeveyni
+      olmadığı için arka kapı boş kümeyle kapanır ⇒ **tanınabilir**.
+    * ``vasıf_i`` ise bir **müşahededir**: ``şahit`` hem onu hem
+      ``tuttu``yu doğurur, yani ikisi bir **çatal** paylaşır. Çatalı
+      kapatmak ``şahit``e şarta bağlanmayı ister; ``şahit``
+      **gözlenmez** (görev gizlidir) ve öteki vasıflar yolun üstünde
+      değildir, dolayısıyla hiçbir gözlenebilir küme kapıyı kapatmaz
+      ⇒ illet iddiası **ispatlanamaz**.
+
+    **Bu çizge bir kere yanlış kuruldu ve ölçüm yakaladı:** illet
+    ``izah``ın *çocuğu* yapılmıştı, yani illet sebep değil **etiket**
+    olmuştu; o zaman ``illet ← izah → tuttu`` çatalı açık kalıyor ve
+    doğru illet de eleniyordu (ölçüldü: ``yer_devrik`` eleniyor, Yakîn
+    kayboluyordu). İlletin sebep olması, çizgede **kökte durmasıyla**
+    ifade edilir.
+
+    Dönen liste, arka kapısı gözlenebilir bir kümeyle kapanan
+    namzetlerdir. Kapanmayan namzet *yanlış* diye atılmaz -- **hükmü
+    verilemez** diye atılır; aradaki fark, kütükteki sükût makamının ta
+    kendisidir (H10).
+    """
+    namzetler = list(dict.fromkeys(namzetler))
+    if not namzetler:
+        return []
+    gozlenen = [n for n in namzetler if n != kaide_illeti]
+    dugumler = ["şahit", "tuttu"] + namzetler
+    kenarlar: List[Tuple[str, str]] = [("şahit", "tuttu")]
+    for n in namzetler:
+        kenarlar.append((n, "tuttu"))        # her namzet, tuttu'nun sebebi
+        if n != kaide_illeti:
+            kenarlar.append(("şahit", n))    # ama şahit vasfını şahit doğurur
+    g = Cizge(tuple(dugumler), tuple(kenarlar))
+
+    tanınan: List[str] = []
+    for n in namzetler:
+        aday = [z for z in gozlenen if z != n]     # ``şahit`` GÖZLENMEZ
+        if any(arka_kapi_mi(g, n, "tuttu", Z)
+               for k in range(len(aday) + 1)
+               for Z in _altkumeler(aday, k)):
+            tanınan.append(n)
+    return tanınan
+
+
+def _altkumeler(ogeler: Sequence[str], k: int) -> List[Tuple[str, ...]]:
+    import itertools
+    return list(itertools.combinations(ogeler, k))
+
+
 def _illet_kesfi(sahitler: Sequence[Sahit], kaide: Kaide
                  ) -> Tuple[FrozenSet[str], bool]:
     """6. şart: illet ve delili -- Mill'in birleşik usulü.
@@ -352,7 +423,9 @@ def _illet_kesfi(sahitler: Sequence[Sahit], kaide: Kaide
                 tuttu = False
             vakalar.append((frozenset(v), tuttu))
 
-    illet = mill_birlesik(vakalar)
+    ham = mill_birlesik(vakalar)
+    # --- fitrat UZUV olarak devreye girer (kütük H92) ---------------
+    illet = frozenset(_illet_taninabilir(ham, kaide.renk.illet))
     # İzah ancak **bu kâidenin kendi illeti** ayırt edici çıkarsa kabul
     # edilir; başka bir vasfın ayırt etmesi bu kâideyi izah etmez.
     izah = kaide.renk.illet in illet

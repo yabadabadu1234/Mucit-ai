@@ -2036,3 +2036,68 @@ böylece bir temenni değil, mimarî bir zorunluluk olarak yerine oturur.
 **Bunun bedeli açıkça yazılır:** uzuv olarak bağlamak, yedeksiz
 bağlamaktır; ``fitrat`` kırılırsa kâide mîzânı kırılır. Kabul edilen
 budur -- kalbin de yedeği yoktur.
+
+## H93 — ÖLÇÜLDÜ: darboğaz mîzân değil, KÂİDE KÜTÜĞÜ (fitrat şimdilik âtıl)
+
+H92 gereği ``fitrat.ayrisma`` kâide mîzânının illet rüknüne bağlandı ve
+**uzuv mu yedek mi** olduğu ölçüldü. Netice, beklediğimin tersi çıktı
+ve olduğu gibi yazılıyor.
+
+### Bağlamanın kendisi doğru ve bir kusuru da yakaladı
+
+``ayrisma``nın söylediği şudur: **kâidenin illetini ileri sürmek bir
+müdahaledir (``do``), şahidin vasfını görmek ise bir müşahededir.**
+Müdahalenin arka kapısı yoktur; müşahedenin arka kapısını kapatacak
+gözlenebilir küme yoktur, çünkü ``şahit`` (görevin kendisi) gizlidir ve
+hem vasfı hem neticeyi doğurur. Yani şahit vasfının illet olduğu
+**ispatlanamaz** -- Mill'in veremeyeceği bir hükümdür.
+
+Çizge bir kere **yanlış** kuruldu: illet, ``izah``ın çocuğu yapılmıştı,
+yani sebep değil **etiket** olmuştu. O zaman ``illet ← izah → tuttu``
+çatalı açık kalıyor ve doğru illet de eleniyordu (ölçüldü:
+``yer_devrik`` eleniyor, Yakîn kayboluyordu). İlletin sebep olması,
+çizgede **kökte durmasıyla** ifade edilir. Düzeltildi.
+
+### Fakat ölçüm şunu söyledi: ayrisma hiçbir kararı değiştirmiyor
+
+150 hakikî eğitim görevi × 12 ebat kaidesi × 7 renk kaidesi tarandı:
+
+    bakılan illet kararı            : 0
+    ayrisma'nın değiştirdiği karar  : 0
+
+``bakılan = 0`` demek, ``mill_birlesik``in hakikî görevlerde **hiç**
+illet döndürmediği demektir. Sebebi basittir ve yukarıdadır: birleşik
+usul, "her müsbet vakada var" şartını arar; hakikî ARC görevlerinde
+hiçbir namzet kâide tutmadığı için **müsbet vaka yoktur**.
+
+### Asıl hüküm: darboğaz mîzân değil, KÜTÜK
+
+O hâlde şu ölçülmüştür ve H88'in dersiyle aynı cinstendir:
+
+> Kâide mîzânı (ispat, illet, teklik, makam) **doğru çalışıyor** --
+> bile bile kurulmuş görevde Yakîn'e çıkıyor, bozulunca düşüyor. Fakat
+> hakikî ARC'ta **hiç ateşlenmiyor**, çünkü 12 ebat × 7 renk = 84
+> namzetlik sonlu kütük hiçbir hakikî görevi tutmuyor (0/120 Yakîn,
+> 0/120 Zan).
+
+Yani sıradaki iş mîzânı zenginleştirmek değil, **kütüğü kaldırmaktır**
+-- ve bu tam olarak H91'in hükmüdür: kâide yazmacı sonlu bir listedeki
+*indisi* değil, kâidenin **parametresini** tutacaktır. `nefs/kaide.py`
+klasik hakikat kaynağı olarak kalır; genişleyecek olan namzet uzayıdır.
+
+### fitrat'ın hâli -- dürüst kayıt
+
+``fitrat.ayrisma`` şu an **âtıldır**: bağlıdır, doğrudur, fakat
+üstündeki kademe boş döndüğü için hiçbir kararı değiştirmemektedir.
+H92'nin *"yedek bağlama"* yasağına göre bu hâl kabul edilemez; fakat
+âtıl olmasının sebebi kendisi değil, **üstündeki kütük darboğazıdır**.
+
+Karar: **sökülmez, borç olarak yazılır.** H91'in parametre uzayı
+kurulduğunda müsbet vaka doğacak ve o zaman ``ayrisma``nın ısırıp
+ısırmadığı **yeniden ölçülecektir**. Isırmazsa o vakit sökülür. Bu
+hüküm, âtıl kodu meşrulaştırmak için değil, **ölçülmüş bir borcu**
+kütükte tutmak içindir.
+
+``fitrat.karsi_olgusal`` ve ``fitrat.serbest_enerji`` **henüz
+bağlanmadı**; H92'de gösterilen yerleri (``H_N`` aksinin imkânsızlığı ve
+Occam cezası) durmaktadır.
