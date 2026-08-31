@@ -1901,3 +1901,138 @@ yapılıp bırakılmayacak, **kalıcı sınama** olacaktır.
 Bu kaide geriye dönük olarak da işler: nizam toparlanırken her ölçütün
 kırmızı yanabildiği gösterilecek, gösterilemeyen ölçüt ya düzeltilecek
 ya kaldırılacaktır.
+
+## H91 — KÂİDE FAZ ORAĞI: kâide kübitleri bir İSPAT SENEDİ kodlar
+
+Kullanıcı hükmü (kendi devre tasarımıyla beraber):
+
+> *"Faz orağı olarak bağla ama 2^k şeklinde artmasın... |0⟩_ebat —[H]—
+> |Tecrit Funktoru (D)| —■— [Ebat İspatı] / |0⟩_iskelet —[H]—
+> |Mutasarrıfa & Tertip (R,T)| —■— [Konum İspatı] / |0⟩_illet —[H]—
+> |İllet Keşfi (BGCM φ)| —■— [Nedensellik İspatı] / |0⟩_münazara —[H]—
+> |Vâhime & Münazara Cerhi (Nakz)| —■— [Aksinin İmkânsızlığı] /
+> |0⟩_muhakeme —[H]— |Mahkeme-i Âkile (Burhân J)| —■— [Hükm-i Yakîn] /
+> |ancilla⟩ —|1⟩—[H]— [Faz Çevirimi U_T(−1)] — (Grover Difüzyon) →
+> |K*⟩ KÂİDE-İ ÂMME"*
+
+ve ayrıca: *"sen burayla hudutlu kalma, ilham al, biraz düşün, daha
+iyisini bul."*
+
+### Benim teklifim NİÇİN yanlıştı
+
+Ben *"k kübit = 2^k namzet kâide; mizan hepsini klasik denetleyip
+köşegen üniteri kursun"* demiştim. O köşegeni kurmak **2^k klasik
+denetim** ister; yani kübitin bütün kazancı orağın kurulmasında geri
+verilirdi. Kullanıcının *"asla 2^k kalmamalı"* itirazı yerindedir ve
+teklifimi düşürür.
+
+### Doğru olan: KÂİDE İNDİSİ DEĞİL, KÂİDE PARAMETRESİ
+
+Kâide yazmacı, sonlu bir kütükteki bir **indisi** tutmaz; kâidenin
+**parametresini** tutar. Misal, ebat rüknü için::
+
+    çıktı_h = (p·h + q) / r        p, q, r küçük tamsayı, süperpozisyonda
+
+``U_D`` de ``p·h + q − r·h_çıktı``yı hesaplayıp sıfır olduğunda bayrak
+kaldıran **tersinir aritmetik devredir**. Boyu şahit sayısında
+polinomdur, kâide sayısında değil. Böylece kâide uzayı sonlu bir liste
+olmaktan çıkar ve ``2^k`` klasik denetim ortadan kalkar.
+
+Bu, `nefs/kaide.py`deki ``EBAT_KUTUGU``nun (12 elemanlı sonlu liste)
+neden bir **iskele** olduğunu da söyler: klasik mîzân doğrudur ve
+hakikat kaynağıdır, fakat sonlu kütüğü kuantum tarafına taşınmaz;
+taşınacak olan parametre uzayıdır.
+
+### Devrede DÜZELTİLEN yer: bayrak okunmaz, HESAPLANIR
+
+Şemada ``■`` kontrolleri doğrudan rükün yazmaçlarından çıkıyor. Öyle
+olursa faz, yazmacın belli bir **taban durumuna** vurulur -- yani
+"işaretli durum" orağı olur, **ispat orağı olmaz**. İspat bayrağı
+hesaplanmalı, kullanılmalı ve **geri alınmalıdır**::
+
+    |rükün⟩  ──●─────────────●──        (değişmez)
+               │             │
+    |bayrak⟩ ─[U]──●────────[U†]        hesapla → kullan → GERİ AL
+                   │
+    |ancilla⟩ |1⟩[H][Z]                 faz geri tepmesi
+
+``U†`` şarttır: bayrak geri alınmazsa rükün yazmacı çöple dolaşık kalır
+ve **girişim ölür**; Grover hiçbir şeyi büyütmez. Bu projede tersinir
+ancilla temizliğinin çalıştığı zaten ölçülmüştü (3,3e-15).
+
+### Dört/beş rükün ve karşılıkları
+
+Kullanıcının vesikasındaki rükünler, kullanıcının kendi kâide
+tarifindeki (H85) şartlarla birebir örtüşür ve `nefs/kaide.py`de klasik
+karşılıkları **zaten kurulmuştur**:
+
+======================  ==================================  ====================
+rükün                   suali                               klasik karşılığı
+======================  ==================================  ====================
+``H_D`` ebat            "ebat kesin mi, aksi imkânsız mı"   ``_teklik_ispati``
+``H_S`` iskelet/support "hangi hücre dönüşür, hangisi zemin" (henüz yok)
+``H_C`` illet           "her rengi neden koydum"            ``_illet_kesfi``
+``H_N`` nakz            "yerine başkası niçin konamaz"      ``karsi_ornek``
+``H_J`` muhakeme        "hükm-i yakîn"                      ``_makam``
+======================  ==================================  ====================
+
+``H_S`` (varlık sahası / support) **eksiktir** ve kullanıcının
+vesikasının kod tabanına kattığı yeni şey odur: hangi hücrelerin
+dönüşeceği, hangilerinin zemin kalacağı ayrı bir rükündür ve
+`nefs/kaide.py`de karşılığı yoktur. Borç olarak yazıldı.
+
+### Hakikat kaynağı ayrımı (H90'ın gereği)
+
+Klasik `nefs/kaide.py` **hakikat kaynağıdır**; kuantum orak aynı
+yüklemi tutarlı (coherent) hesaplayan devredir. İkisi küçük hâlde
+**yüzleştirilecek** ve aynı hükmü vermedikleri yerde kuantum taraf
+yanlıştır. H88'in dersi budur: beyan tam dalgayla yüzleştirilmediği
+için aylarca gürültü okumuştu.
+
+### İDDİA EDİLMEYEN
+
+Tersinir aritmetik devreler dolaşıklığı hızla büyütür; ``χ``nın
+patlaması **muhtemeldir** ve ölçülmeden hiçbir şey iddia edilmiyor.
+Ölçüm, H89 gereği nizam kurulduktan sonra yapılacaktır.
+
+## H92 — fitrat YEDEK DEĞİL, UZUV olarak bağlanır
+
+Kullanıcı hükmü:
+
+> *"Şimdi bağla ama birilerine paralel, alternatif olacak şekilde
+> bağlama; o olmadığı zaman model zeki olamayacak, olduğu zaman da
+> müthiş olacak derecede -- tıpkı insan vücudunun özene bezene
+> yaratılması gibi sen de o şekilde icat et."*
+
+Bu hüküm, bu kod tabanının **asıl hastalığına** konmuş bir teşhistir.
+Nizam ölçümü (H82) %82 beylik diyor; beyliklerin çoğu da "aynı işi
+yapan ikinci bir hat"tır (`akis` / `nefs.akis` / `yaklasim.akislar`,
+`nefs.meleke` / `reel.meleke`, dört ayrı `main`). Yani buraya şimdiye
+kadar hep **paralel** eklendi ve paralel eklenen her şey öldü.
+
+O hâlde kaide: **bir modül ancak, olmadığında model bozulacaksa
+bağlanır.** Bağlandığı yerde bir yedeği, bir "alternatif yolu", bir
+"eski usul de dursun"u olmayacaktır. Yedeği olan uzuv, uzuv değildir.
+
+``fitrat``ın uzuv olacağı yer bellidir ve H91'in ``H_C`` rüknüdür:
+
+* ``fitrat.ayrisma`` -- d-ayrışması, arka/ön kapı: *"bu renk şu vasfın
+  ILLETİ mi, yoksa ortak bir sebebin gölgesi mi?"* Mill'in usulleri bu
+  ayrımı yapamaz; ``ayrisma`` yapar. İllet rüknü onsuz **yanlış**
+  illet bulur, yani model onsuz zeki olamaz -- hükmün şartı budur.
+* ``fitrat.karsi_olgusal`` -- abduction/action/prediction üç pası:
+  *"sarı yerine mavi olsaydı ne olurdu?"* Bu, ``H_N`` (aksinin
+  imkânsızlığı) rüknünün ta kendisidir ve `nefs/kaide.py`nin şimdiki
+  ``karsi_ornek``i bunun ancak kaba hâlidir.
+* ``fitrat.serbest_enerji`` -- ELBO: iki kâide de şahitleri açıklıyorsa
+  hangisi seçilir? Occam cezası buradan gelir ve **teklik ispatının**
+  (``H_D``, ``H_N``) sayısal yumuşak hâlidir.
+
+Bu üçü bağlandığında ``H_C`` ve ``H_N`` rükünleri hakikî motorlarına
+kavuşur; bağlanmazsa o rükünler bugünkü gibi Mill'in kaba usulleriyle
+kalır. Kullanıcının *"o olmadığı zaman model zeki olamayacak"* şartı
+böylece bir temenni değil, mimarî bir zorunluluk olarak yerine oturur.
+
+**Bunun bedeli açıkça yazılır:** uzuv olarak bağlamak, yedeksiz
+bağlamaktır; ``fitrat`` kırılırsa kâide mîzânı kırılır. Kabul edilen
+budur -- kalbin de yedeği yoktur.
