@@ -272,6 +272,7 @@ try:                                   # torch şartlı
 except Exception as _e:                # torch yoksa kayda geçer
     EKSIK['tanilama.referans_avi'] = str(_e)
 import tanilama.sadakat  # [hakem] MANTIĞA SADAKAT ÖLÇÜMÜ -- kütük H102'nin açık borcunun kapatılması
+import tanilama.tefti  # [hakem] TEFTİŞ -- padişahın **fiilen koşturduğu** her fonksiyon, dosyasıyla beraber
 try:                                   # torch şartlı
     import tanilama.sahip_avi  # [hakem] (şerhsiz)
 except Exception as _e:                # torch yoksa kayda geçer
@@ -536,6 +537,9 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '(şerhsiz)'),
     ('tanilama.sizinti_avi', 'hakem',
      '(şerhsiz)'),
+    ('tanilama.tefti', 'hakem',
+     'TEFTİŞ -- padişahın **fiilen koşturduğu** her fonksiyon, '
+     'dosyasıyla beraber'),
     ('tanilama.sizinti_gerileme_testi', 'hakem',
      '(şerhsiz)'),
     ('tanilama.umumi_profil', 'hakem',

@@ -266,6 +266,83 @@ def _tekrari_sil(g: Izgara, eksen: int) -> Optional[Izgara]:
     return g[:, tut]
 
 
+def ogrenilen_aileler(ciftler: Sequence[Tuple[Izgara, Izgara]]
+                      ) -> List[Kaide]:
+    """Veriden **öğrenilen** kaideler: nesne ve hücre aileleri.
+
+    Ayrı bir fonksiyon olması şart: çapraz sınama bunları **her katta
+    yeniden öğrenmek** zorundadır, yoksa ölçüm kendi cevabını görür.
+    """
+    # İçe aktarma **açıkça** yazılır, ``__import__`` ile değil: aksi
+    # hâlde `tanilama/nizam.py`nin ``ast`` taraması bu bağı göremez ve
+    # dosyalar beylik görünür. Fiilen koşuyor olmaları bunu düzeltmez --
+    # ölçüyü kör bırakan bir bağ, bağ sayılmamalıdır.
+    from .hucre import hucre_kaideleri
+    from .nesne import nesne_kaideleri
+    from .secici import carpim_kaideleri
+    from .tamamlama import tamamlama_kaideleri
+
+    out: List[Kaide] = []
+    for f in (nesne_kaideleri, hucre_kaideleri, tamamlama_kaideleri,
+              carpim_kaideleri):
+        try:
+            out += list(f(ciftler))
+        except Exception:                                # noqa: BLE001
+            pass
+    return out
+
+
+def capraz_gecerli(ciftler: Sequence[Tuple[Izgara, Izgara]]) -> Set[str]:
+    """**Bırak-birini istikrâsı**: hangi öğrenilen kaide adı genelliyor?
+
+    ===================================================================
+    NİÇİN: GÖSTERİMLERE TAM UYMAK DELİL DEĞİLDİR
+    ===================================================================
+
+    Ölçüldü (ARC-AGI-2 eğitim, ilk 120): ``0ca9ddb6`` ve ``025d127b``
+    görevlerinde ``hücre[3x3]`` kaidesi **bütün gösterimlere tam
+    uyuyor** -- hücre isabeti ``1.000`` -- fakat sınama girdisinde
+    ``None`` dönüyor. Sebebi basittir ve utanç verici değil, ölçülmüş
+    bir hakikattir: o kaide bir kaide değil, bir **arama tablosu**dur.
+    Bağlam sayısı hücre sayısı mertebesinde olduğu için tabloyu
+    ezberlemek gösterimleri tam açıklar ve hiçbir şey öğretmez.
+
+    Demek ki "bütün gösterimlere uyuyor" ölçütü, tablo büyüklüğü veriye
+    yaklaştıkça **boşalır**. `nefs/kaideler.py`nin ``hipotez`` cezası
+    bunu yumuşatıyordu fakat kesmiyordu; ölçüldü.
+
+    Doğru ölçüt `mizan/istikra.py`nin kendi hükmüdür: *eksik istikrâ
+    yakîn vermez.* Bir tümevarımın delili, **görmediği** bir ferde
+    doğru hükmetmesidir. Onun için:
+
+        her gösterim çifti sırayla dışarıda bırakılır,
+        kaide **kalanlardan yeniden öğrenilir**,
+        dışarıda bırakılana tam bilebiliyorsa geçer.
+
+    Bu, ezberi yapısal olarak eler: tablo, görmediği bağlamda ``None``
+    döner ve kat düşer. Aynı zamanda **aileyi genişletmeyi serbest
+    bırakır** -- yeni aile eklemek artık isabeti düşürme riski
+    taşımaz, çünkü ezberleyen aile bu kapıdan geçemez.
+
+    HUDUT: iki gösterimden az olan görevde kat kurulamaz; orada ölçüm
+    yapılamadığı için kaide **elenmez**, ``hipotez`` cezasına bırakılır.
+    Bu bir gevşeklik değil, ölçülemeyeni ölçtüm dememektir.
+    """
+    n = len(ciftler)
+    if n < 3:
+        return set()          # kat kurulamıyor: eleme yapma, karar yok
+    gecti: Dict[str, int] = {}
+    for i in range(n):
+        kalan = [c for j, c in enumerate(ciftler) if j != i]
+        a, b = ciftler[i]
+        b = np.asarray(b)
+        for k in ogrenilen_aileler(kalan):
+            o = k(a)
+            if o is not None and o.shape == b.shape and np.array_equal(o, b):
+                gecti[k.ad] = gecti.get(k.ad, 0) + 1
+    return {ad for ad, c in gecti.items() if c == n}
+
+
 def atomlar(ciftler: Sequence[Tuple[Izgara, Izgara]]) -> List[Kaide]:
     """Görevden **türetilen** atomik kaideler.
 
@@ -435,21 +512,22 @@ def kaide_ara(ciftler: Sequence[Tuple[Izgara, Izgara]], derinlik: int = 3,
     if not ciftler:
         return []
     A = atomlar(ciftler)
-    # **NESNE KAİDELERİ** -- bütün-ızgara cebri ARC'de yetmiyor (ölçüldü);
-    # nesne başına öğrenilen kaideler `nefs/nesne.py`den gelir ve aynı
-    # cebre atom olarak girer, yani terkibe de katılır.
-    try:
-        from .nesne import nesne_kaideleri
-        A = A + nesne_kaideleri(ciftler)
-    except Exception:                                    # noqa: BLE001
-        pass
-    # **HÜCRE KAİDELERİ** -- görevlerin %70'i aynı şekilli (ölçüldü);
-    # o aile ancak yerel desenden öğrenilerek yakalanır.
-    try:
-        from .hucre import hucre_kaideleri
-        A = A + hucre_kaideleri(ciftler)
-    except Exception:                                    # noqa: BLE001
-        pass
+    # **ÖĞRENİLEN AİLELER** -- nesne (`nefs/nesne.py`) ve hücre
+    # (`nefs/hucre.py`). Bütün-ızgara cebri ARC'de yetmiyor (ölçüldü);
+    # bunlar aynı cebre atom olarak girer, yani terkibe de katılır.
+    #
+    # **ÇAPRAZ SINAMA KAPISI.** Veriden öğrenilen her kaide, bırak-birini
+    # istikrâsından geçmek zorundadır (bkz. ``capraz_gecerli``). Geçmeyen
+    # kaide bir kaide değil bir tablodur ve **atılır**: gösterimlere tam
+    # uyması onu kurtarmaz. Ölçüt kör değildir -- eleme fiilen oluyor mu,
+    # ``elenen`` sayısı ile görülebilir.
+    ogrenilen = ogrenilen_aileler(ciftler)
+    if ogrenilen:
+        gecerli = capraz_gecerli(ciftler)
+        if gecerli or len(ciftler) >= 3:
+            ogrenilen = [k for k in ogrenilen
+                         if k.hipotez <= 0 or k.ad in gecerli]
+    A = A + ogrenilen
     girdiler = [a for a, _ in ciftler]
     hedefler = [b for _, b in ciftler]
 

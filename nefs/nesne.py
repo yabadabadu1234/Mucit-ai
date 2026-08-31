@@ -109,7 +109,38 @@ VASIFLAR: Dict[str, Callable[[Nesne, List[Nesne]], object]] = {
         {x.hucre for x in hepsi}, reverse=True).index(n.hucre),
     "aynı_boy_sayısı": lambda n, hepsi: sum(
         1 for x in hepsi if x.hucre == n.hucre),
+    # --- ölçümle eklenenler --------------------------------------
+    #
+    # ``nesne_sil[hücre]`` dört görevde 0,90-0,98 hücre isabetiyle
+    # **ıskalıyordu**: aile doğru, vasıf yanlış. Yani "hangi nesne
+    # silinir?" sorusunun cevabı büyüklük değil başka bir cihet. Aşağıdaki
+    # dört eksen o cihetlerdir ve her biri ARC'de sık görülen bir
+    # ayrımı taşır:
+    #
+    # * **şekil** -- nesnenin renkten soyut sûreti (normalleştirilmiş
+    #   maske). "Aynı şekilliler" bir sınıf teşkil eder.
+    # * **şekil_tekrarı** -- o sûretten ızgarada kaç tane var. Tekil
+    #   olan çoğu zaman istisnadır; ARC istisnayı sever.
+    # * **kenarda** -- nesne ızgaranın kenarına değiyor mu. Değen ile
+    #   değmeyen ayrımı topolojiktir, keyfî değil.
+    # * **renk_çokluğu** -- o rengin ızgaradaki nesne sayısı. "Yalnız
+    #   kalan rengi seç" bu eksende görülür.
+    "şekil": lambda n, hepsi: _suret(n),
+    "şekil_tekrarı": lambda n, hepsi: sum(
+        1 for x in hepsi if _suret(x) == _suret(n)),
+    "kenarda": lambda n, hepsi: int(n.kutu[0] == 0 or n.kutu[2] == 0),
+    "renk_çokluğu": lambda n, hepsi: sum(
+        1 for x in hepsi if x.renk == n.renk),
 }
+
+
+def _suret(n: "Nesne") -> Tuple[Tuple[int, ...], ...]:
+    """Nesnenin **renkten ve yerden soyut** sûreti: kutusuna kırpılmış
+    maske. İki nesne aynı sûretteyse aynı şeydir, nerede ve ne renk
+    olduğuna bakılmaz."""
+    r0, r1, c0, c1 = n.kutu
+    m = n.maske[r0:r1 + 1, c0:c1 + 1]
+    return tuple(tuple(int(v) for v in satir) for satir in m)
 
 
 def _renk_kaidesi_ogren(ciftler: Sequence[Tuple[Izgara, Izgara]],
@@ -142,7 +173,15 @@ def _renk_kaidesi_ogren(ciftler: Sequence[Tuple[Izgara, Izgara]],
     return f if gorulen else None
 
 
-def _boya(g: Izgara, vasif: str, f: Dict[object, int]) -> Optional[Izgara]:
+def _boya(g: Izgara, vasif: str, f: Dict[object, int],
+          aynen: bool = False) -> Optional[Izgara]:
+    """``aynen=True``: vasfını bilmediğim nesneye **dokunmam**.
+
+    İki sükût ayrımı için bkz. `nefs/hucre.py`nin ``_tatbik`` şerhi.
+    Kısaca: "bu nesneyi bilmiyorum" ile "bu vazifeyi reddediyorum"
+    aynı şey değildir; ikisini de ``None`` ile söylemek bırak-birini
+    kapısını kör eder, zira ``None`` ne doğrudur ne yanlış.
+    """
     ns = nesneleri_cikar(g)
     if not ns:
         return None
@@ -150,6 +189,8 @@ def _boya(g: Izgara, vasif: str, f: Dict[object, int]) -> Optional[Izgara]:
     for n in ns:
         anahtar = VASIFLAR[vasif](n, ns)
         if anahtar not in f:
+            if aynen:
+                continue
             return None               # görülmemiş vasıf: istikrâ yetmez
         out[n.maske] = f[anahtar]
     return out
@@ -237,6 +278,9 @@ def nesne_kaideleri(ciftler: Sequence[Tuple[Izgara, Izgara]]
         if f:
             out.append(Kaide("nesne_boya[%s]" % vasif,
                              lambda g, v=vasif, m=f: _boya(g, v, m),
+                             1, len(f)))
+            out.append(Kaide("nesne_boya[%s|aynen]" % vasif,
+                             lambda g, v=vasif, m=f: _boya(g, v, m, True),
                              1, len(f)))
         s = _sil_kaidesi_ogren(ciftler, vasif)
         if s:

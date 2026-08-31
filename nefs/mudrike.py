@@ -263,6 +263,31 @@ def mudrike(gorev, yakin_esigi: float = YAKIN_ESIGI,
                 "sebep": "kaide bulunamadı", "muhakeme": dusunce,
                 "yakîn": 0.0, "tesadüf": t}
 
+    # **SÖZ VEREBİLİR MİYİM?** Bir kaide gösterimleri tutup sınama
+    # girdisinde ``None`` dönebilir (görülmemiş bağlam). Evvelce ilk
+    # kaide alınır ve ``None`` cevap olarak **söylenirdi**; ölçüldü:
+    # ``0ca9ddb6`` ve ``025d127b`` böyle "konuşup boş" çıkıyordu. Susmak
+    # kabiliyettir, boş konuşmak değil. Onun için cevap üretebilen ilk
+    # kaide öne alınır; hiçbiri üretemiyorsa sükût **sebebiyle** edilir.
+    girdiler_on = [np.asarray(a, np.int64)
+                   for a, _ in getattr(gorev, "sinama", [])] or []
+    if girdiler_on:
+        konusabilen = [k for k in K
+                       if all(k(g) is not None for g in girdiler_on)]
+        if not konusabilen:
+            dusunce.append(
+                "%d kaide gösterimleri tutuyor fakat hiçbiri sınama "
+                "girdisinde cevap üretmiyor -- görmediğim bir hâl var. "
+                "Ezberlediğim tablo oraya uzanmıyor; susuyorum." % len(K))
+            return {"nev": "bulmaca", "cevap": None, "sükût": True,
+                    "sebep": "kaide sınamaya uzanmıyor",
+                    "muhakeme": dusunce, "yakîn": 0.0, "tesadüf": t}
+        if len(konusabilen) < len(K):
+            dusunce.append("%d kaidenin %d'i sınama girdisinde cevap "
+                           "üretebiliyor; yalnız onları tartıyorum."
+                           % (len(K), len(konusabilen)))
+        K = konusabilen
+
     # --- 5. YAKÎN
     n = len(ciftler)
     istikra = float(ardisiklik_kaidesi(n, n))

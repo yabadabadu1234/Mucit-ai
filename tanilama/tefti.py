@@ -138,8 +138,28 @@ def tefti_et(kisa: bool = True) -> Dict[str, object]:
     from nefs.kulli_egitim import KISA_CPU, KulliEgitim
 
     ayar = KISA_CPU
+    gor: Set[Tuple[str, str]] = set()
+    yollar: Dict[str, int] = {}
+
+    # 1) EĞİTİM yolu -- padişahın kendisi (`main/kaggle.py::kos` bunu çağırır).
     E = KulliEgitim(ayar)
-    _, gor = izle(E.kos)
+    _, g1 = izle(E.kos)
+    gor |= g1
+    yollar["eğitim"] = len(g1)
+
+    # 2) ÇIKARIM yolu -- **ayrıca** koşulur. Eğitimin içindeki
+    #    değerlendirme kısa tutulduğu için müdrike çevriminin bütün
+    #    dalları orada uyanmaz; burada ARC görevleriyle doğrudan
+    #    koşturulur. Şerh bunu vaat ediyordu, artık icra da ediyor.
+    try:
+        from nefs.qegitim import degerlendir
+        _, g2 = izle(degerlendir, E.nefs, E.dogrulama, azami=6,
+                     pencere=ayar.pencere, sozluk=ayar.sozluk)
+        gor |= g2
+        yollar["çıkarım"] = len(g2)
+    except Exception as e:                                   # noqa: BLE001
+        yollar["çıkarım_hatası"] = 0
+        print("ÇIKARIM yolu koşturulamadı: %s" % e, file=sys.stderr)
 
     tanimli = tanimli_fonksiyonlar()
     kosan_dosya = {d for d, _ in gor}
@@ -158,6 +178,7 @@ def tefti_et(kisa: bool = True) -> Dict[str, object]:
         "olu_dosya": olu,
         "atlanan_fonksiyon": atlanan,
         "toplam_dosya": len(butun_dosya),
+        "yollar": yollar,
     }
 
 
@@ -175,6 +196,8 @@ def rapor(kisa: bool = True) -> str:
          "  ÖLÜ dosya             : %d  (%%%.1f)  ← padişaha BAĞLI DEĞİL"
          % (od, 100.0 * od / max(r["toplam_dosya"], 1)),
          "  çağrılan fonksiyon    : %d" % len(r["kosan"]),
+         "  yol başına çağrı      : %s"
+         % ", ".join("%s=%d" % (k, v) for k, v in r["yollar"].items()),
          "",
          "ÖLÜ DOSYALAR (üst dizine göre):"]
     grup: Dict[str, List[str]] = {}

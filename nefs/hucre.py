@@ -90,11 +90,80 @@ def _baglam_3x3(P: Izgara, i: int, j: int) -> object:
     return tuple(int(v) for v in P[i:i + 3, j:j + 3].reshape(-1))
 
 
+# ===================================================================
+#  BAĞLAMI **KABALAŞTIRMAK** -- ölçülmüş bir zaruret
+# ===================================================================
+#
+# Ölçüldü (ARC-AGI-2 eğitim 120): yedi görevde ``hücre[3x3]`` ve
+# ``hücre[artı]`` bütün gösterimlere **tam** uyuyor (hücre isabeti
+# 1.000) fakat `nefs/kaideler.py`nin bırak-birini kapısından geçemiyor.
+# Sebebi teşhis edildi: bağlam fazla **has**tır. 3×3'lük ham yama on
+# renk üzerinden 10⁹ ihtimallidir; üç gösterimde görülen birkaç yüz
+# bağlam, dördüncüde görülmeyenle karşılaşır ve kaide ``None`` döner.
+#
+# Kapıyı gevşetmek yanlış cevabı geri getirirdi (ölçüldü: isabet
+# %100 → %75). Doğru hamle **hipotez uzayını daraltmak**tır: aynı
+# manaya gelen bağlamları tek bağlam saymak. Üç kabalaştırma, üçü de
+# manevî bir denkliğe dayanır ve keyfî değildir:
+#
+# * **D₄ denkliği** -- bir yamanın döndürülmüşü aynı yamadır. Yön
+#   taşıyan görevde yanlıştır, taşımayanda 8 kat daha az bağlam verir;
+#   hangisi olduğuna gösterimler karar verir, ikisi de sınanır.
+# * **Sayım denkliği** -- komşuların *hangi yönde* olduğu değil *kaç
+#   tane ve ne renk* olduğu. Dönmeye ve yansımaya baştan kapalıdır.
+# * **Renksiz denklik** -- "merkezle aynı / arka plan / başka". Renk
+#   adlarından soyutlar; renk değişse de kaide ayakta kalır.
+def _d4_asgari(y: np.ndarray) -> Tuple[int, ...]:
+    """Yamanın sekiz D₄ görüntüsünün **en küçüğü**: kanonik temsilci."""
+    en: Optional[Tuple[int, ...]] = None
+    for k in range(4):
+        d = np.rot90(y, k)
+        for z in (d, d[:, ::-1]):
+            t = tuple(int(v) for v in z.reshape(-1))
+            if en is None or t < en:
+                en = t
+    return en                                            # type: ignore
+
+
+def _baglam_3x3_d4(P: Izgara, i: int, j: int) -> object:
+    return _d4_asgari(P[i:i + 3, j:j + 3])
+
+
+def _baglam_sayim(P: Izgara, i: int, j: int) -> object:
+    """Merkez rengi + sekiz komşunun **renk sayımı** (yön atılır)."""
+    y = P[i:i + 3, j:j + 3]
+    merkez = int(y[1, 1])
+    komsu = [int(v) for v in y.reshape(-1)]
+    del komsu[4]
+    return (merkez, tuple(sorted(komsu)))
+
+
+def _baglam_renksiz(P: Izgara, i: int, j: int) -> object:
+    """Renk adlarından soyut 3×3: merkezle aynı / arka / dış / başka."""
+    y = P[i:i + 3, j:j + 3]
+    m = int(y[1, 1])
+
+    def sinif(v: int) -> int:
+        v = int(v)
+        if v < 0:
+            return 3                       # ızgara dışı
+        if v == m:
+            return 0
+        return 1 if v == ARKA else 2
+
+    return (m, tuple(sinif(v) for v in y.reshape(-1)))
+
+
 #: Bağlamlar **dardan genişe** sıralı: Occam bu sırayı takip eder.
+#: Kabalaştırılmışlar hamlardan **önce** gelir, zira daha az ezber
+#: taşırlar; ``hipotez`` cezası da onları zaten öne alır.
 BAGLAMLAR: Tuple[Tuple[str, Callable[[Izgara, int, int], object]], ...] = (
     ("renk", _baglam_renk),
     ("renk+dolu", _baglam_renk_dolu),
+    ("sayım", _baglam_sayim),
+    ("renksiz3x3", _baglam_renksiz),
     ("artı", _baglam_arti),
+    ("3x3|D4", _baglam_3x3_d4),
     ("3x3", _baglam_3x3),
 )
 
@@ -122,14 +191,38 @@ def _ogren(ciftler: Sequence[Tuple[Izgara, Izgara]],
 
 
 def _tatbik(g: Izgara, baglam: Callable[[Izgara, int, int], object],
-            f: Dict[object, int]) -> Optional[Izgara]:
+            f: Dict[object, int], aynen: bool = False) -> Optional[Izgara]:
+    """Öğrenilen eşlemeyi tatbik et.
+
+    ===================================================================
+    İKİ SÜKÛT BİRBİRİNE KARIŞTIRILMAMALI
+    ===================================================================
+
+    "Bu hücreyi bilmiyorum" ile "bu vazifeyi reddediyorum" **aynı şey
+    değildir** ve evvelce ikisi de ``None`` ile söyleniyordu. Karışmanın
+    bedeli ölçüldü: bırak-birini kapısı bütün öğrenilen kaideleri
+    eliyordu, zira her katta görülmemiş bir bağlam çıkıyor ve kaide
+    ``None`` dönüyordu. ``None`` ise ne doğru ne yanlıştır -- yani kapı
+    hiçbir şey ölçmüyordu; **daima elemek, ölçmek değildir.**
+
+    ``aynen=True`` ikinci bir meşru okumadır: *bildiğimi değiştiririm,
+    bilmediğime dokunmam.* Bu bir kaidedir ve sınanabilir: görmediği
+    çifte artık ``None`` değil bir **cevap** verir, o cevap da yanlışsa
+    kapıda düşer. Böylece kapı hakikaten ayırt eder: hakiki kaide
+    geçer, ezber tablosu düşer.
+
+    ``aynen=False`` eski, ihtiyatlı okumadır ve kaldırılmadı: ikisi de
+    üretilir, hangisinin tuttuğuna gösterimler karar verir.
+    """
     P = _pad(np.asarray(g, np.int64))
     H, W = g.shape
-    out = np.zeros((H, W), dtype=np.int64)
+    out = np.asarray(g, np.int64).copy()
     for i in range(H):
         for j in range(W):
             k = baglam(P, i, j)
             if k not in f:
+                if aynen:
+                    continue                 # bilmediğime dokunmam
                 return None                  # görülmemiş desen: sükût
             out[i, j] = f[k]
     return out
@@ -319,6 +412,11 @@ def hucre_kaideleri(ciftler: Sequence[Tuple[Izgara, Izgara]]
             continue
         out.append(Kaide("hücre[%s]" % ad,
                          lambda g, b=fn, m=f: _tatbik(g, b, m),
+                         1, len(f)))
+        # Aynı eşlemenin **aynen** okuması: bilinmeyen bağlama dokunmaz.
+        # Ayrı bir kaidedir, ayrı sınanır (bkz. ``_tatbik`` şerhi).
+        out.append(Kaide("hücre[%s|aynen]" % ad,
+                         lambda g, b=fn, m=f: _tatbik(g, b, m, True),
                          1, len(f)))
 
     # Kapalı bölge doldurma: renk çıktıdan alınır (kör değil)
