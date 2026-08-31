@@ -32,6 +32,7 @@ import numpy as np
 
 from .qmeleke import QAKIS, QParametre, qmelekeler, qsicil
 from .sadakat import sadakat_intaci, sadakat_kapisi
+from .gaye import gaye_kos
 from .tertip import tertip_kos
 from .qyazmac import MAKAM_ADLARI, QAyar, QYazmac, donme
 
@@ -95,11 +96,16 @@ class QNefs:
     """41 üniter melekeyi tek dalga üzerinde koşturan işletici."""
 
     def __init__(self, tohum: int = 0, ayar: Optional[QAyar] = None,
-                 sira: Sequence[int] = QAKIS, sadakat: bool = True) -> None:
+                 sira: Sequence[int] = QAKIS, sadakat: bool = True,
+                 gaye: bool = True) -> None:
         self.p = QParametre(tohum)
         self.ayar = ayar or QAyar(tohum=tohum)
         self.sira = tuple(sira)
         self.s = qsicil()
+        #: Gaye doğuşu açık mı (Dosya 4 / kütük H122)? Yalnız **ölçüm**
+        #: için kapatılır: kapatılamayan bir tedbirin faydası ölçülemez
+        #: (H90). Akışta daima açıktır.
+        self.gaye = bool(gaye)
         #: Mantığa sadakat kapısı açık mı? Yalnız **ölçüm** için
         #: kapatılır (haraplama: kalp söküldüğünde vücut ne olur?).
         #: Akışta daima açıktır ve kapatılması bir hüküm değil, bir
@@ -142,6 +148,15 @@ class QNefs:
             # neyin yasak olduğunu söyler (H109). Ana akışa buradan
             # bağlanır -- artık `mizan` beylik değil tebaadır.
             q.iz.kesme += tertip_kos(q)
+        if self.gaye:
+            # **GAYE DOĞUŞU (Dosya 4 / H122).** ``gaye`` alanı H108'den
+            # beri tahsisliydi fakat ÖLÇÜLDÜ ve tam ``|0⟩``daydı: hiçbir
+            # meleke ona dokunmuyordu. Burada hükümden **doğar**
+            # (tasdik kuvvetlendirir, tenakuz ve nakz zayıflatır), sonra
+            # mîzâna sirayet eder ve sükût eşiğini kurar. Üçü de MPO'dur;
+            # hiçbir yerde okuma yoktur.
+            q.iz.kesme += gaye_kos(q, self.p)
+        if self.sadakat:
             # İşaretlenen mantık dışı kollar burada SÖNER: faz farkı,
             # yansıtmayla genlik farkına çevrilir (H98'de ölçülen usul).
             sadakat_intaci(q)

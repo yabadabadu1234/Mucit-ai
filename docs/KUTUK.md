@@ -3380,3 +3380,77 @@ Bu iddia edilmiyor, olduğu gibi yazılıyor.
   şartı kondu; ölçülen %0,48.
 
 26/26 hüküm şahidi geçiyor (evvelce 20/23). Sınama sayısı 52 → **55**.
+
+## H122 — GAYE ALANI ÖLÜYDÜ; DİRİLTİLDİ, FAKAT İKİ BORÇ AÇIKTA
+
+### Nakz: H108'in "dolaştırılır" ibaresi bir niyetti, icra değil
+
+H108 *"gaye alanı buraya konur ve hükümle DOLAŞTIRILIR"* diyordu.
+**Ölçüldü ve doğru değildi.** Tam bir akıştan sonra küllî bloğun her
+alanı hakikî indirgenmiş yoğunlukla (H121'in tashihiyle) okundu::
+
+    makam 0,551  mizan 0,389  tenakuz 0,034  tasdik 0,532  sukut 0,427
+    nakz 0,329   kelam 0,446  tertip 0,500
+    kaide 0,000000   orak 0,000000   gaye 0,000000     ← hiç yazılmamış
+
+`gaye` tam olarak ``|0⟩``daydı. 30 kübitlik küllî bloğun **15 kübiti**
+(kaide 12 + orak 1 + gaye 2) ana akışta hiç yazılmıyordu. `kaide` ve
+`orak` ölü değil — `nefs/qkaide.py` onları kendi çözücüsünde kullanır,
+ana akışta değil; bu ayrı bir borçtur. Fakat `gaye` gerçekten ölüydü.
+
+### Kurulan (`nefs/gaye.py`)
+
+* **Doğuş** — `tasdik`, `tenakuz`, `nakz` MPO ile `gaye`ye toplanır.
+* **Tesir** — gaye `mizan`a geri dağıtılır (teleolojik çekici).
+* **ε_durgun** — gaye `sukut`u bastırır.
+* **Landauer defteri** — akıştaki tek tersinmez adım kesmedir; silinen
+  bit ``−log₂F``dir. Ölçüldü: ``F ≈ 6,9e-30``, yani **96,9 bit**,
+  kübit başına 1,47 bit.
+* **Serbest enerji** — `fitrat/serbest_enerji.py` ile ölçülür; ayrışım
+  kimliğinin sapması 2,2e-16, yani `fitrat`ın cebri bu sayılarda fiilen
+  tutuyor. `fitrat` böylece ana hatta bağlandı.
+
+Netice: `gaye` artık yazılıyor (0,000000 → ortalama ~0,10, girdiye göre
+0,0005 ile 0,347 arasında değişiyor).
+
+### Bulunan ve düzeltilen bir kusur
+
+ε_durgun kapısı ``j=1`` ile kuruluydu, yani **`gaye₁`e** kontrol
+ediyordu — halbuki doğuş yalnız `gaye₀`a yazıyor. Kontrolü ``|0⟩`` olan
+bir kontrollü dönme hiçbir şey yapmaz; eşik hiç ateşlenmiyordu. Sessiz
+bir kusurdu: 6 satırlık bir ölçümde korelasyon ``−0,63`` çıkıp
+"çalışıyor" görünüyordu. ``j=0`` yapıldı.
+
+### İKİ BORÇ — açıkta, ve örtülmüyor
+
+**1. "Nakz gayeyi zayıflatır" icra edilemedi.** İlk kurulumda
+işaretler ``[+1, +1, −1, −1]`` idi. Ölçüldü: 14 girdide gaye-nakz
+korelasyonu ``+0,871`` — tam tersi. Sebep, kendi kütüğümde yazılı bir
+imkânsızlık (**H107**): ``mpo_topla`` bir dönme uygular ve
+``P(1) = sin²θ`` **çift fonksiyondur**; menfî açı aynı nüfusu verir.
+
+Kalbin usulü denendi — `CZ` ile işaretle, `sadakat_intaci` ile söndür.
+**O da vermedi:** korelasyon ``+0,871 → +0,887``, yani hiç değişmedi.
+Sebep anlaşıldı: bu bir kol meselesi değil **inşa seviyesinde** bir
+bağımlılıktır — bütün açılar müsbet olduğu için gaye, tasdik+tenakuz+
+nakz **faaliyetinin toplamıyla** büyür, ve tek işaretli bir kolu 2¹⁵
+kol arasında tek turluk yansıtmayla söndürmek marjinali oynatmaz.
+
+Fiilen olan şudur ve böyle yazılır: **gaye, hükmün faaliyetinden
+doğar — hangi hüküm olduğuna bakmadan.**
+
+**2. ε_durgun kararlı değil.** ``j`` kusuru düzeltildikten sonra bile
+gaye-sükût korelasyonu satır sayısına göre zıplıyor::
+
+    5 satır: +0,627     6 satır: −0,885     8 satır: +0,465
+
+Yani tesir gürültünün üstünde değil. Sebebi muhtemelen `sukut`un
+𝒪₃₂, 𝒪₄₁, sadakat kapısı ve `sadakat_intaci` tarafından da sürülmesi;
+gayenin tek küçük dönmesi o gürültüde kayboluyor.
+
+**Bir tohumda menfî çıkanı seçip "ε_durgun çalışıyor" demek, ölçümü
+hükme uydurmak olurdu.** Daimî sınama bu yüzden yalnız ispatlanmış
+olanı şart koşar: gaye kapalıyken ``|0⟩``, açıkken diri, ve girdiye
+göre değişiyor.
+
+56 sınama, 26/26 hüküm şahidi geçiyor.

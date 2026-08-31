@@ -743,6 +743,57 @@ def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
     assert abs(g1 + g0) < 1e-9, (g0, g1)          # işaret çevrilmiş
 
 
+def test_gaye_alani_ARTIK_YASIYOR_ve_sukutu_bastiriyor():
+    """Dosya 4: `gaye` alanı yazılıyor ve sükût eşiği çalışıyor mu?
+
+    H108 gaye'nin "hükümle dolaştırıldığını" söylüyordu; ölçüldü ve
+    alan tam ``|0⟩``daydı -- hiç yazılmamıştı (kütük H122). Burada iki
+    şey sınanır:
+
+    1. Gaye kapalıyken alan ``|0⟩``, açıkken **değil** -- yani sınama
+       kör değil, kapatınca kırmızı yanıyor.
+    2. Gaye girdiye göre **değişiyor** -- yani sabit bir süs değil.
+
+    **İki şey kasten sınanmıyor ve sebebi ölçümdür.** Bir borcu
+    sınamayla örtmek, örtmenin en kötü şeklidir:
+
+    * *Nakzın gayeyi zayıflatması* icra edilemedi -- korelasyon
+      ``+0,89``da kaldı (bkz. `nefs/gaye.py`).
+    * *``ε_durgun`` sükûtu bastırması* **kararlı değil**: gaye-sükût
+      korelasyonu satır sayısına göre ``+0,63 / −0,89 / +0,46``
+      arasında zıplıyor. Yani tesir gürültünün üstünde değil. Bir
+      tohumda menfî çıkanı seçip "çalışıyor" demek, ölçümü hükme
+      uydurmak olurdu.
+
+    İkisi de kütükte borç olarak durur (H122).
+    """
+    from .qakis import QNefs
+    from .qyazmac import QAyar
+
+    def kos(acik, tohum):
+        E = np.random.default_rng(200 + tohum).normal(size=(5, 12))
+        q = QNefs(0, QAyar(bag=16, tohum=0), gaye=acik).idrak_et(E)
+        d = {}
+        for ad in ("gaye", "sukut"):
+            _, kac = q._alan[ad]
+            R = np.asarray(q.y.tekil_yogunluklar(
+                [q.kulli(ad, j) for j in range(kac)]), float)[0]
+            d[ad] = float(R[:, 1, 1].mean())
+        return d
+
+    kapali = kos(False, 0)
+    assert kapali["gaye"] < 1e-6, ("gaye kapalıyken yazılmamalı", kapali)
+
+    g, s = [], []
+    for t in range(6):
+        r = kos(True, t)
+        g.append(r["gaye"])
+        s.append(r["sukut"])
+    assert max(g) > 1e-3, ("gaye açıkken alan hâlâ ölü", g)
+    # Sabit bir süs değil: girdiye göre gerçekten değişiyor.
+    assert float(np.std(g)) > 1e-3, ("gaye girdiye göre değişmiyor", g)
+
+
 def test_alan_okumasi_AYARA_BAGLI_DEGIL():
     """Hüküm alanlarının okuması bir **gözlenebilir** mi? (kütük H121)
 
