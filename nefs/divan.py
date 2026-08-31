@@ -598,6 +598,7 @@ KADEME2: Tuple[str, ...] = (
     "mizan.munazara",          # nefs/mantik.py    -- yakîn mertebeleri, makam sırası
     "fitrat.tevafuk",          # nefs/sahitlik.py  -- 𝒪₂₉'un bağımsızlık tartısı
     "mizan.istikra",           # nefs/mantik.py    -- ARC'nin istikrâ mertebesi
+    "fitrat.ayrisma",          # nefs/illet.py     -- akışın sebep çizgesi, d-ayrışma
 )
 
 

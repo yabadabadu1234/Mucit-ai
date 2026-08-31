@@ -548,6 +548,26 @@ def _h125_cech_sukut() -> Tuple[bool, str]:
             acik["tıkanık_görev"], acik["görev"]))
 
 
+def _h130_sebep_cizgesi() -> Tuple[bool, str]:
+    """Akışın sebep çizgesi -- 𝒪₂₂'nin asiklik iddiası (kütük H130).
+
+    İki ayrı sual, ikisi de ölçülür: alan seviyesinde çevrim var mı
+    (var, ve olması normaldir), zaman açılımında var mı (yok, cebren).
+    Şahit, ikisinin **karıştırılmadığını** sabit tutar.
+    """
+    from .illet import alan_cizgesi, cevrimler, kelam_ayrismasi, zaman_cizgesi
+    dug, ken, kabul = alan_cizgesi()
+    ac = cevrimler(dug, ken)
+    zg, _ = zaman_cizgesi()
+    zc = cevrimler(zg.dugumler, zg.kenarlar)
+    ka = kelam_ayrismasi()
+    return (len(zc) == 0 and not kabul and len(ac) > 0
+            and ka.get("kurulabilir") and not ka["şartsız_ayrık"]), \
+        ("alan seviyesinde çevrim %d (Cizge reddetti: %s); zaman "
+         "açılımında çevrim %d; kelam hüküm şartıyla d-ayrık: %s"
+         % (len(ac), not kabul, len(zc), ka.get("hüküm_şartıyla_ayrık")))
+
+
 def _h128_teyit_kanallari() -> Tuple[bool, str]:
     """𝒪₂₉ Teyit'in "ayrı kanal" tedbiri tutuyor mu (kütük H128)?
 
@@ -686,6 +706,8 @@ SAHITLER: List[Sahit] = [
           _h127_makam_kodlamasi),
     Sahit("H128", "𝒪₂₉'un 'ayrı kanal' tedbiri tartıldı",
           _h128_teyit_kanallari),
+    Sahit("H130", "akışın sebep çizgesi kuruldu ve tartıldı",
+          _h130_sebep_cizgesi),
 ]
 
 #: Makine şahidi **kurulamayan** hükümler ve sebebi. Bunlar "geçti"

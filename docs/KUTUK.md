@@ -3861,3 +3861,65 @@ bir mertebeye düşmüyor.
     fitrat.tevafuk   → nefs/sahitlik.py  (𝒪₂₉'un bağımsızlık tartısı)
 
 2. kademe 14 → **17**. Sayı hâlâ küçüktür ve büyümesi gereken odur.
+
+## H130 — AKIŞIN SEBEP ÇİZGESİ KURULDU; 𝒪₂₂'nin asiklik iddiası ikiye ayrıldı
+
+`fitrat/ayrisma.py` (d-ayrışması, Bayes topları) `nefs/illet.py` ile
+2. kademeye çıktı. Çizge **uydurulmadı**: `nefs/sozlesme.py`nin
+ölçülmüş bölge ilanlarından (H119, 41 melekede sıfır ihlâl) ve
+``QAKIS`` sırasından kuruldu.
+
+### 𝒪₂₂ ne diyordu
+
+> *"Asiklik şartı **inşa gereği** sağlanır -- kapı hep soldan sağadır."*
+
+Bu **tek bir meleke için** doğrudur. Sorulmayan sual: bütün akışın
+sebep çizgesi asiklik mi? İki ayrı sual vardır ve birini ötekinin
+yerine koymak iddiayı ispatlanmış göstermek olurdu.
+
+    ALAN seviyesinde   : düğüm 9, kenar 54, **çevrim 27**
+    ZAMAN açılımında   : düğüm 387, kenar 460, çevrim 0
+
+Alan seviyesinde çevrim **var** ve olması normaldir: akış aynı alana
+defalarca döner. *"Akış asikliktir"* demek orada **yanlış** olurdu.
+Zaman açılımında asiklik **cebren** sağlanır (zaman ileri akar) --
+bu bir ispat değil bir tariftir ve öyle sayılır.
+
+**Makine teyidi:** `fitrat/ayrisma.py`nin ``Cizge`` tipi alan çizgesini
+**reddetti** (*"çizge çevrimli -- d-ayrışması tanımsız"*). Yani
+çevrimliliği ben iddia etmiyorum; beylik kod reddederek söylüyor.
+
+### d-Ayrışması: kelam veriden nasıl besleniyor
+
+Zaman açılımlı çizgede soruldu: ``veri@0`` ile ``kelam@42``, bütün
+hüküm alanlarına (301 düğüm) şart koşulduğunda d-ayrık mı?
+
+    hüküm şartıyla d-ayrık : False
+    şartsız d-ayrık        : False   (ölçütün kör olmadığının şahidi)
+
+Sebep tek tek izlenebilir: **𝒪₃₇ Fesâhat, 𝒪₃₈ Talâkat, 𝒪₄₀ Sanat**
+aynı ünitede hem ``veri``ye hem ``kelam``a dokunuyor.
+
+### KENDİ HÜKMÜMÜ DARALTTIM
+
+İlk yazdığım şerh *"mimarînin gerekçesi delinmiş"* diyordu.
+**Bu fazla söylemekti ve düzeltildi.** `nefs/qyazmac.py`nin kelam
+hakkındaki iddiası şudur: *"kelam ``|0⟩``dan başlayıp **yalnız beyan
+melekelerinin** yazdığı bir alandır"* — ve o iddia **doğrudur**;
+kelama yalnız 𝒪₃₇–𝒪₄₁ dokunuyor. Mimarî, "veriden kelama giden yol
+hükümden geçmelidir" diye bir şey **iddia etmemişti**; o şartı ben
+koydum.
+
+O hâlde ölçülen şey bir kusur değil bir **tasarım hakikatidir**:
+beyan, hükme uğramadan da veriden besleniyor. Bunun istenip
+istenmediği mimarî bir tercihtir ve **kullanıcının kararıdır**. Ölçüm
+onu görünür kılar; hükmü vermez.
+
+Bu daraltma kayda geçiyor çünkü az kalsın olmayan bir kusur ilan
+edecektim.
+
+### Bu turda 2. kademeye çıkanlar (devam)
+
+    fitrat.ayrisma → nefs/illet.py   (sebep çizgesi, d-ayrışması)
+
+2. kademe 17 → **18**. 60/60 sınama, 31/31 hüküm şahidi.
