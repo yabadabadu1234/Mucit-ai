@@ -83,6 +83,12 @@ from nefs.sadakat import sadakat_intaci, sadakat_kapisi
 
 __all__ = ["sadakat_olcusu", "haritala", "rapor"]
 
+# Bu âlet iki müstakil temsili de kullanır ve ikisi de EVVELCE BEYLİKTİ:
+#   * `nefs/kod_uzayi.py` → `kuantum/stabilizer.py` (hüküm bloğunun
+#     Clifford temsili; MPS'i denetleyen ikinci hakikat kaynağı)
+#   * `nefs/kopru.py`     → `token_uzaylari/morfizm.py` (kodlamanın
+#     funktör olarak sıhhati: tersinirlik ve izometri)
+
 
 # =====================================================================
 def _blok_bitleri(kac: int) -> np.ndarray:
@@ -256,6 +262,36 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
                      " kâfi %+.2e)"
                      % (x["no"], x["ad"], x["Δtoplam"], x["Δtenakuz"],
                         x["Δayniyet"], x["Δkâfi"]))
+    # --- İKİNCİ TEMSİLLE YÜZLEŞTİRME (H88'in dersi: karşılaştıracak
+    # ikinci bir temsil olmadığı için kusur aylarca görünmedi).
+    try:
+        from nefs.kod_uzayi import yuzlestir
+        from nefs.qakis import QNefs as _QN
+        from nefs.qegitim import belirtecleri_kodla as _bk
+        _ay = QAyar(tohum=tohum)
+        _E = _bk([1, 2, 3, 4, 5, 6], _ay.satir_kubiti, 16)
+        _q = _QN(tohum, _ay).idrak_et(_E)
+        yz = yuzlestir(_q)
+        s += ["", "STABİLİZER YÜZLEŞTİRMESİ (kuantum/stabilizer.py):",
+              "  hüküm bloğu %d kübit, MPS ile Clifford temsili arası"
+              " tvd = %.4f" % (yz["kübit"], yz["tvd"]),
+              "  kapsanan şart: %d   kapsanmayan: %s"
+              % (yz["kapsanan_şart"], yz["kapsanmayan"])]
+    except Exception as e:                       # pragma: no cover
+        s += ["", "STABİLİZER YÜZLEŞTİRMESİ kurulamadı: %s" % e]
+
+    # --- KODLAMANIN FUNKTÖR SIHHATİ
+    try:
+        from nefs.kopru import kodlamayi_olc
+        kk = kodlamayi_olc()
+        s += ["", "FUNKTÖR KÖPRÜSÜ (token_uzaylari/morfizm.py):",
+              "  tersinir=%s  çarpışma=%d  izometri=%s  mesafe kor.=%.4f"
+              % (kk["tersinir"], kk["çarpışma"], kk["izometri"],
+                 kk["mesafe_korelasyonu"]),
+              "  " + str(kk["hüküm"])]
+    except Exception as e:                       # pragma: no cover
+        s += ["", "FUNKTÖR KÖPRÜSÜ kurulamadı: %s" % e]
+
     son = r[-1] if r else None
     if son:
         s += ["",

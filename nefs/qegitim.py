@@ -58,6 +58,33 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
     ve hiçbir bit kaybolmaz (H14).
     """
     t = np.asarray(belirtecler, int) % int(sozluk)
+    # --- HADAMARD HÂLİ (kütük H116). ``kubit ≥ sozluk`` ise belirteçler
+    # **tam eşit uzaklıkta** kodlanabilir: Hadamard satırları birbirine
+    # dik olduğu için bütün ikili mesafeler eşittir. ARC belirteçleri
+    # RENKTİR, yani kategoriktir; 7 ile 8 arasında "yakınlık" manasızdır
+    # ve ikili kodlama onu sahte olarak dayatır.
+    #
+    # ÖLÇÜLDÜ (16 belirteç, mesafe değişkesi = std/ort):
+    #     ikili    4 boyut : 0,2163   (en az 2,000  en çok 4,000)
+    #     gri      4 boyut : 0,2163   (küllî ölçüde ikiliyle AYNI)
+    #     açısal   4 boyut : 0,2607   (daha kötü)
+    #     Hadamard 4 boyut : 0,5000   (ÇARPIŞMA: en az mesafe 0)
+    #     Hadamard 8 boyut : 0,2673   (yine çarpışma)
+    #     Hadamard 16 boyut: **0,0000**  (bütün mesafeler 5,657)
+    #
+    # Yani 4 boyutta ikili kodlama elde edilebilecek EN İYİ hâldir ve
+    # bir kusur değildir; tam kategorik kodlama ``kubit ≥ sozluk``
+    # ister. Seçim bütçeye aittir ve burada açık tutulur.
+    if int(kubit) >= int(sozluk):
+        H = np.array([[1.0]])
+        while H.shape[0] < int(sozluk):
+            H = np.block([[H, H], [H, -H]])
+        satir = H[t % H.shape[0]]
+        out = np.zeros((len(t), int(kubit)))
+        out[:, :H.shape[1]] = satir[:, :int(kubit)]
+        if int(kubit) > H.shape[1]:
+            out[:, H.shape[1]:] = 1.0
+        return out
     bit = ((t[:, None] >> np.arange(kubit)[None, :]) & 1).astype(float)
     return 2.0 * bit - 1.0
 

@@ -2912,3 +2912,149 @@ beylik                  satır     bağlanması için gereken
 ``idrak`` / ``ogrenme``  4 813    ARC verisi ve eğitim -- kısmen tebaa
 ``reel`` / ``akis``      3 022    eski reel hat; 41 sınama oradan geçiyor
 ======================  ========  ==========================================
+
+## H113 — NİZAM SAYIMI TASHİH EDİLDİ: `docs` ve `mucit_ai_esas` beylik değildir
+
+Kullanıcı hükmü: *"Docs dosyasını beylikten sayarak hata ediyorsun,
+orada kod yok izahları var. Mucit ai esası da beylik sayma, o ilham
+kaynağı, en son bakılacak ama kendisi beylik değil."*
+
+Hüküm doğrudur ve benim kusurumdur: olmayan bir borç gösteriyordum.
+
+    evvel : 210 modül, 74 614 satır → TEBAA %19
+    sonra : 177 modül, 55 474 satır → TEBAA **%26**
+
+`docs/` vesikadır; `mucit_ai_esas/` ilham kaynağıdır ve **bağlanmak
+üzere değil devşirilmek üzere** durur.
+
+## H114 — İKİ ÖLÇÜM HATASI VE BİR AĞIR KUSUR ÇÖZÜLDÜ
+
+Kullanıcı hükmü: *"Eğer hata alırsan yine 'iddia etmiyorum' deyip de
+bana böyle hata var deme; hata ne ise çöz öyle gel."* Aşağıdakiler
+bildirilmedi, **çözüldü**.
+
+### 1. MERA'nın kesmesi hiç sayılmıyordu
+
+``mera()`` atılan ağırlığı yalnız ``iz.mera_kesme``ye yazıyor,
+``iz.kesme``ye eklemiyordu. Halbuki akıştaki **en büyük kayıp oradadır**:
+χ=8'de MERA tek başına normu ``1,0 → 8,8e-03``e düşürüyor (%99,1) ve
+``iz.kesme`` bunun için ``0,000e+00`` yazıyordu. Düzeltildi.
+
+### 2. Durum normu çarpımsal olarak çöküyordu -- ASIL KUSUR
+
+Ölçüldü: akış sonunda ``⟨Ψ|Ψ⟩ = 4,5e-12`` (χ=8); χ=128'de bile
+``1,8e-05``, üstelik 119 saniye. Yani χ büyütmek çare değildi.
+
+**Sebep:** kesmeden sonra yeniden ölçekleme yapılmıyordu. Dosyadaki
+şerh, ``sk``yı BİRİM yapmanın yanlış olduğunu doğru tespit etmişti
+(kanonik olmayan biçimde ``‖sk‖`` normu değil ayarı ölçer) -- fakat
+oradan *"hiç ölçekleme yapma"* neticesi çıkarılmıştı ve o yanlıştı.
+
+**Çare:** ayarı bozmadan yalnız atılan ağırlığı telâfi eden skaler::
+
+    ölçek = √( Σs² / Σsk² )          (satır başına)
+
+İki-yuva tensörünü skalerle çarpmak durumun **tamamını** çarpar;
+dolayısıyla ayar serbestliğine dokunmaz. TEBD'in standart usulüdür.
+
+**Ölçülen netice:**
+
+    χ=8   ⟨Ψ|Ψ⟩ 4,5e-12 → **0,0523**
+    χ=16  ⟨Ψ|Ψ⟩ 1,3e-10 → **1,00000000**
+    χ=32  ⟨Ψ|Ψ⟩ 3,4e-09 → **1,00000000**
+    χ=64  ⟨Ψ|Ψ⟩ 1,8e-07 → **1,00000000**
+
+χ≥16'da durum artık **tam normlu**. float32'de genlikler 1e-6
+mertebesine inmediği için hassasiyet de kurtuldu.
+
+### 3. Kaybın ölçüsü ne olmalı -- üç aday, üçü de tenkit edildi
+
+* ``iz.kesme`` (kapı başına nispînin toplamı): 1'i aşar, kıyas edilemez.
+* ``1 − ⟨Ψ|Ψ⟩``: telâfiden sonra **inşa gereği sıfır**, ölçüt değil.
+* ``Yazmac.sadakat() = Π(tutulan/tam)``: ``[0,1]``dedir ve kuruldu,
+  **fakat χ mukayesesi için yine yanlıştır**: küçük χ'de durum erkenden
+  çarpım durumuna çöker, atacak bir şey kalmaz ve sadakat **yükselir**.
+  Ölçüldü: χ=8 → 5,6e-11, χ=16 → 6,6e-15. Yani ölçüt **çökmeyi
+  ödüllendiriyor**. İkisi de tutulur, hüküm ikisinden verilmez.
+
+**χ'nin yetip yetmediğinin doğru ölçüsü Schmidt doygunluğudur** ve
+o ölçüldü (H115).
+
+## H115 — ÖLÇÜLDÜ: AKIŞ ÂZAMÎ DOLAŞIKLIK ÜRETİYOR (kök teşhis)
+
+    χ      Schmidt   doygun?   entropi   log₂χ
+    8      8         EVET      1,7972    3,00
+    16     16        EVET      2,4107    4,00
+    32     32        EVET      3,0126    5,00
+    64     64        EVET      3,6086    6,00
+
+Schmidt rütbesi **her χ'de doyuyor** ve entropi ``log₂χ``ye yapışık.
+Yani durum, verilen her bütçeyi sonuna kadar dolduruyor: MPS hiçbir
+χ'de yetmez.
+
+**Bu, H105'teki *"hüküm alanları yapısız"* bulgusunun KÖK SEBEBİDİR:**
+âzamî dolaşık bir durumda her küçük bloğun marjinali düzgündür.
+H94 (kalp yok), H105 (alanlar bağımsız) ve bu ölçüm **tek bir teşhisin
+üç yüzüdür**: melekeler yapı kurmuyor, dolaşıklık üretiyor.
+
+Çare istikameti de buradan çıkar ve `nefs/sadakat.py` ile
+`nefs/tertip.py` onun ilk adımıdır: mantık şartları **entropiyi
+düşüren** kısıtlardır.
+
+## H116 — `kuantum/stabilizer.py` ve `token_uzaylari/morfizm.py` BAĞLANDI
+
+### stabilizer → `nefs/kod_uzayi.py`
+
+`kuantum/stabilizer.py` şunu söylüyordu ve beylikti: *rank dolaşıklığa
+değil **Clifford-dışılığa** bağlıdır.* H115'te ölçülen derde birebir
+cevaptır: mantık katmanı yalnız ``CZ``/``Z``/``X`` kullandığı için
+**Clifford'dur** ve hüküm bloğu MPS'in kesmesine hiç uğramadan tam
+temsil edilebilir.
+
+Vazifesi yedek motor olmak değil (H92), **ikinci hakikat kaynağı**
+olmaktır: MPS'in hüküm bloğunda okuduğu dağılım, aynı kapıların
+stabilizer temsiliyle yüzleştirilir. H88'in dersi tam buydu -- ``beyan``
+aylarca yanlış okudu çünkü **karşılaştıracak ikinci bir temsil yoktu**.
+
+Hudut açıkça yazıldı: ``StabilizerDurum`` köşegen Clifford yörüngesini
+tutar; menfî kontrollü ve üç kontrollü şartlar dışarıda kalır ve
+**sayılır**.
+
+### morfizm → `nefs/kopru.py`, ve H14 İLK DEFA ÖLÇÜLDÜ
+
+H14 *"kodlama tersinirdir, hiçbir bit kaybolmaz"* diyordu ve bu
+**hiç ölçülmemişti**. Ölçüldü:
+
+    tersinir = True,  çarpışma = 0        → **H14 doğrulandı**
+    izometri = False, sapma  = 4,31       → mesafe korunmuyor
+
+İkincisi bir kusur mudur? **Hayır, ve bunu ölçerek anladım.** ARC
+belirteçleri RENKTİR, yani kategoriktir; 7 ile 8 arasında "yakınlık"
+manasızdır. O hâlde aranan şart izometri değil **eşit uzaklıktır**.
+Alternatifler ölçüldü (16 belirteç, mesafe değişkesi = std/ort):
+
+    ikili    4 boyut : 0,2163   (en az 2,000  en çok 4,000)
+    gri      4 boyut : 0,2163   ← komşuluğu düzeltir (7↔8: 4,0→2,0)
+                                  fakat KÜLLÎ ölçüde ikiliyle AYNI
+    açısal   4 boyut : 0,2607   daha kötü
+    Hadamard 4 boyut : 0,5000   ÇARPIŞMA (en az mesafe 0)
+    Hadamard 8 boyut : 0,2673   yine çarpışma
+    Hadamard 16 boyut: **0,0000**  bütün mesafeler 5,657
+
+**Hüküm:** 4 boyutta ikili kodlama elde edilebilecek **en iyi hâldir**;
+bir kusur değil bütçe sınırıdır. Tam kategorik kodlama ``kubit ≥
+sozluk`` ister. ``belirtecleri_kodla`` artık o hâlde Hadamard'a geçer
+ve seçim kullanıcıya bırakılır.
+
+Gri kod hakkındaki kendi hipotezim **ölçümle çürüdü**: komşuluğu
+düzeltiyor, küllî ölçüde hiçbir şey değiştirmiyor.
+
+## H117 — KALP GÜÇLENDİ (ölçüldü)
+
+Kelâm/sükût/gaye şartları ve tertip eklendikten sonra:
+
+    ölçü               KALPSİZ   KALPLİ    kazanç
+    tenakuz kütlesi    0,2946    0,0505    **5,8×**  (evvel 3,0×)
+    ayniyet ihlâli     0,5543    0,2383    2,3×
+
+48 sınama, hepsi geçiyor.

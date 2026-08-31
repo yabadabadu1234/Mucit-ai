@@ -152,6 +152,18 @@ class QNefs:
         # ``⟨Ψ|Ψ⟩`` 2e-10'a kadar indiği ÖLÇÜLDÜ. Atılan ağırlık
         # ``q.iz.kesme``de ayrıca durur -- yani unutma gizlenmiyor --
         # fakat dağılım artık normu 1 olan bir dalgadan okunur.
+        # **HAKİKÎ kesme burada ölçülür.** Bütün kapılar diktir; normu
+        # düşüren tek şey kesmedir. O hâlde normalize etmeden EVVELKİ
+        # ``⟨Ψ|Ψ⟩``, atılan ağırlığın tam tamlamasıdır::
+        #
+        #     kesme_hakiki = 1 − ⟨Ψ|Ψ⟩        (``[0,1]``, kıyas edilebilir)
+        #
+        # ``iz.kesme`` (kapı başına nispî atılanların toplamı) H111'de
+        # ölçüldü ve **ölçüt olmadığı** görüldü: χ büyüdükçe artıyordu.
+        # Teşhis için duruyor; hüküm bu satırdan verilir.
+        # Telâfiden sonra norm kaybı göstermez; hakikî ölçü, kapı
+        # başına tutulan kesrin ÇARPIMIDIR (``Yazmac.sadakat``).
+        q.iz.kesme_hakiki = float(max(0.0, 1.0 - q.y.sadakat()))
         q.y.normalize()
         return q
 

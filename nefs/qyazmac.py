@@ -199,6 +199,15 @@ class QIz:
     kapi: int = 0
     takas: int = 0
     kesme: float = 0.0
+    #: **HAKİKÎ kesme** -- ``1 − ⟨Ψ|Ψ⟩``, yani atılan ağırlığın kendisi.
+    #: ``[0,1]`` aralığındadır ve kıyas edilebilir.
+    #:
+    #: ``kesme`` alanı, kapı başına NİSPÎ atılanların **toplamıdır**;
+    #: kapı sayısı ve ölçüsü değiştikçe kıyas edilemez hâle gelir ve
+    #: 1'i aşar. Ölçüldü (H111): χ 8→16→32 büyütülünce 18→28→31'e
+    #: ÇIKIYORDU, halbuki azalması gerekirdi. O sayı bir ölçüt değildir;
+    #: teşhis için tutulur, hüküm için **bu** kullanılır.
+    kesme_hakiki: float = 0.0
     supurme: int = 0
     gunluk: List[str] = field(default_factory=list)
 
@@ -324,7 +333,15 @@ class QYazmac:
         izler = self.y.mera_kur(kademe=kad, teta=teta)
         self.iz.mera_kademe += len(izler)
         self.iz.kapi += len(izler) * self.n      # MERA da kapıdır, sayılır
-        self.iz.mera_kesme += float(sum(k.kesme_hatasi for k in izler))
+        # **ÖLÇÜLEN VE DÜZELTİLEN MUHASEBE HATASI.** MERA'nın kesmesi
+        # yalnız ``mera_kesme``ye yazılıyor, ``kesme``ye eklenmiyordu.
+        # Halbuki bütün akıştaki en büyük kayıp oradadır: χ=8'de MERA tek
+        # başına normu 1,0'dan 8,8e-03'e düşürüyor (%99,1), ve
+        # ``iz.kesme`` bunun için ``0,000e+00`` yazıyordu. Yani ölçüt,
+        # en büyük kaybı hiç görmüyordu.
+        mk = float(sum(k.kesme_hatasi for k in izler))
+        self.iz.mera_kesme += mk
+        self.iz.kesme += mk
         e = self.y.dolasiklik_entropisi()
         self.iz.entropi_sonra = float(e["entropi"])
         self.iz.schmidt = int(e["schmidt"])

@@ -678,6 +678,71 @@ def test_qkaide_asikar_kaideyi_eliyor():
             assert P[i] < 0.5 * float(P[r["en_yüksek"]]), (_coz(i, 2), P[i])
 
 
+
+
+def test_kodlama_tersinir_ve_hadamard_esit_uzak():
+    """Kodlama funktörünün sıhhati -- `token_uzaylari/morfizm.py` ile.
+
+    H14 *"kodlama tersinirdir, hiçbir bit kaybolmaz"* diyordu ve bu
+    **hiç ölçülmemişti**. Burada iki ayrı ölçütle ölçülür:
+
+    1. **Tersinirlik** -- her belirteç geri çözülebilmeli, çarpışma
+       olmamalı. (H14'ün iddiası budur ve doğrudur.)
+    2. **Kategorik eşit uzaklık** -- ARC belirteçleri RENKTİR, yani
+       kategoriktir; 7 ile 8 arasında "yakınlık" manasızdır. 4 boyutta
+       bu sağlanamaz (ölçüldü: değişke 0,2163 ve bu, gri/açısal/Hadamard
+       alternatiflerinin hepsinden İYİ). ``kubit ≥ sozluk`` olunca
+       Hadamard tam eşit uzaklık verir (değişke 0).
+    """
+    from .kopru import kodlamayi_olc
+    from .qegitim import belirtecleri_kodla
+
+    r = kodlamayi_olc()
+    assert r["tersinir"] is True and r["çarpışma"] == 0, r
+
+    T = np.arange(16)
+    ust = np.triu_indices(16, 1)
+
+    def degisken(E):
+        D = np.linalg.norm(E[:, None, :] - E[None, :, :], axis=2)[ust]
+        return float(D.std() / D.mean()), float(D.min())
+
+    d4, en_az4 = degisken(belirtecleri_kodla(T, 4, 16))
+    d16, en_az16 = degisken(belirtecleri_kodla(T, 16, 16))
+    assert en_az4 > 0.0 and en_az16 > 0.0          # hiç çarpışma yok
+    assert d16 < 1e-9, d16                         # Hadamard: TAM eşit uzak
+    assert d4 > 0.2, d4                            # 4 boyutta imkânsız
+
+
+def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
+    """Hüküm bloğu, MPS'ten BAĞIMSIZ ikinci bir temsille denetlenebiliyor mu?
+
+    H88'in dersi: ``beyan`` aylarca yanlış çevreden okudu ve
+    **karşılaştıracak ikinci bir temsil olmadığı için** farkedilmedi.
+    `kuantum/stabilizer.py` o ikinci temsili verir: mantık katmanı
+    ``CZ``/``Z`` ile kurulduğu için Clifford'dur ve stabilizer
+    çerçevesinde **tam** temsil edilir -- kesme yok, ``2^n`` açılmıyor.
+    """
+    from .kod_uzayi import hukum_kod_uzayi, kod_uzayi_dagilimi
+
+    n = 4
+    duz = kod_uzayi_dagilimi(hukum_kod_uzayi(n, []))
+    assert np.allclose(duz, 1.0 / (1 << n), atol=1e-9), duz
+
+    # ``CZ`` bir FAZ kapısıdır: taban dağılımını DEĞİŞTİRMEZ. Bu, kütük
+    # H107'nin ölçülmüş dersinin müstakil bir teyididir -- işaret tek
+    # başına marjinali oynatmaz, sönme girişimden gelir.
+    isaretli = kod_uzayi_dagilimi(hukum_kod_uzayi(n, [(0, 1)]))
+    assert np.allclose(isaretli, duz, atol=1e-9)
+
+    # Fakat GENLİKTE fark vardır ve işaret oradadır.
+    from kuantum.stabilizer import StabilizerDurum
+    Y = np.array([[1, 1, 0, 0]], dtype=np.int64)
+    g0 = np.asarray(StabilizerDurum.arti(n).genlik(Y)).ravel()[0]
+    g1 = np.asarray(hukum_kod_uzayi(n, [(0, 1)]).genlik(Y)).ravel()[0]
+    assert abs(g1 + g0) < 1e-9, (g0, g1)          # işaret çevrilmiş
+
+
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
 # tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
 # koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.

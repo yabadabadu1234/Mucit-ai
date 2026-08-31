@@ -138,6 +138,15 @@ class Yazmac:
         # dayanağıdır ve daima ÜST SINIR olarak tutulur -- şüphede
         # ``bag``a çekilir, yani asla olduğundan küçük gösterilmez.
         self.bag_ust = np.ones(self.n + 1, dtype=np.int64)
+        # **SADAKAT KÜTÜĞÜ (kütük H114).** Kesme telâfisi durumu normlu
+        # tutar; o hâlde norm artık kaybı ölçmez. Kaybın hakikî ölçüsü,
+        # kapı başına TUTULAN kesrin çarpımıdır::
+        #
+        #     F = Π_kapı ( Σsk² / Σs² )
+        #
+        # ``[0,1]``dedir, çarpımsaldır ve kıyas edilebilir. Logaritması
+        # tutulur ki çarpım alt taşmasın.
+        self._sadakat_log = 0.0
 
     # -----------------------------------------------------------------
     @property
@@ -402,6 +411,39 @@ class Yazmac:
         # doğrudan yerine yazılır: her kapıda iki tahsis + iki sıfırlama
         # eksilir. ``r < X`` iken artan bağ bileşenleri temizlenmelidir,
         # yoksa eski ayar kalıntısı yeni duruma sızar.
+        # --- KESME TELÂFİSİ (kütük H114). Yukarıdaki şerh, ``sk``yı
+        # BİRİM yapmanın yanlış olduğunu doğru tespit ediyor: kanonik
+        # olmayan biçimde ``‖sk‖`` durumun normu değil ayarın
+        # büyüklüğüdür. Fakat oradan "hiç ölçekleme yapma" neticesi
+        # çıkarılmıştı ve o da yanlıştı.
+        #
+        # **Ölçüldü:** akış sonunda ``⟨Ψ|Ψ⟩ = 4,5e-12`` (χ=8), χ=128'de
+        # bile ``1,8e-05``. Yani durum normu çarpımsal olarak çöküyor;
+        # float32'de genlikler ``1e-6`` mertebesine inince hassasiyet de
+        # gidiyor.
+        #
+        # Doğrusu, ayarı bozmadan **yalnız atılan ağırlığı telâfi
+        # etmektir**::
+        #
+        #     ölçek = √( Σs²  /  Σsk² )          (satır başına)
+        #
+        # Bu bir skalerdir ve iki-yuva tensörünü skalerle çarpmak
+        # durumun TAMAMINI çarpar; dolayısıyla ayar serbestliğine
+        # dokunmaz, yalnız kesmenin açtığı gediği kapatır. Kesme
+        # nispeti (``atilan/toplam``) yine olduğu gibi raporlanır --
+        # unutma gizlenmiyor, yalnız durum durum olarak kalıyor.
+        # Bu, TEBD'in standart usulüdür.
+        kalan = np.sum(sk ** 2, axis=1)
+        tam = np.sum(s ** 2, axis=1)
+        olcek = np.sqrt(np.where(kalan > 1e-30, tam / np.maximum(kalan, 1e-30),
+                                 1.0))
+        sk = sk * olcek[:, None].astype(sk.dtype)
+        # Kayıp burada zabıtlanır: telâfi durumu normlu tuttuğu için
+        # norm artık kaybı GÖSTERMEZ; gösteren, tutulan kesrin çarpımıdır.
+        with np.errstate(divide="ignore", invalid="ignore"):
+            self._sadakat_log += float(np.sum(np.log(
+                np.clip(kalan / np.maximum(tam, 1e-30), 1e-300, 1.0))))
+
         kok = np.sqrt(sk)
         yeni_sol = np.zeros((Bm, X, 2, X), dtype=self.tip)
         yeni_sol[:, :, :, :r] = (Uk * kok[:, None, :]).reshape(Bm, X, 2, r)
@@ -832,6 +874,15 @@ class Yazmac:
             T1 = np.einsum("zaic,zab->zicb", A, E, optimize=False)
             E = np.einsum("zicb,zbid->zcd", T1, C, optimize=False)
         return E[:, 0, 0]
+
+    def sadakat(self) -> float:
+        """``F = Π_kapı (tutulan / tam)`` -- kesmenin HAKİKÎ ölçüsü.
+
+        ``[0,1]``dedir. ``1`` = hiç bilgi atılmadı; ``0`` = her şey
+        atıldı. Kesme telâfisinden (H114) sonra normun kaybı ölçmediği
+        için ölçüt budur ve **çarpımsaldır**, toplanabilir değil.
+        """
+        return float(np.exp(self._sadakat_log))
 
     def norm(self) -> np.ndarray:
         """``⟨Ψ|Ψ⟩`` -- yığın üyesi başına, **tam**; ``2^N`` açılmaz."""

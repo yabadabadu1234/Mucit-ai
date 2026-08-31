@@ -62,10 +62,25 @@ VERI_DIZINLERI: Tuple[str, ...] = (
     os.path.join("idrak", "veri"),
 )
 
+#: **KOD OLMAYAN yahut ANA MODELİN UZVU OLMAYAN dizinler** (kullanıcı
+#: hükmü H113). Bunları beylik saymak, olmayan bir borç göstermektir:
+#:
+#: * ``docs`` -- vesikalardır, kod değil. İçindeki ``.py``ler örnek ve
+#:   izahtır; ana akışın uzvu olmaları beklenmez.
+#: * ``mucit_ai_esas`` -- **ilham kaynağıdır**, uzuv değil. Kullanıcı
+#:   hükmü: *"o ilham kaynağı, en son bakılacak ama kendisi beylik
+#:   değil."* Ondan fikir devşirilecek, kendisi bağlanmayacak.
+HARİÇ_DIZINLER: Tuple[str, ...] = (
+    "docs",
+    "mucit_ai_esas",
+)
+
 
 def _veri_mi(yol: str) -> bool:
     b = os.path.relpath(yol, KOK)
-    return any(b.startswith(v + os.sep) for v in VERI_DIZINLERI)
+    return (any(b.startswith(v + os.sep) for v in VERI_DIZINLERI)
+            or any(b == d or b.startswith(d + os.sep)
+                   for d in HARİÇ_DIZINLER))
 
 
 def modulleri_tara(kok: str = KOK) -> Dict[str, str]:
