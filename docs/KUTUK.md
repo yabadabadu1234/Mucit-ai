@@ -1620,3 +1620,110 @@ karşılığıyla**, sonra riyazî tarifiyle yazıldı.
 Bundan sonraki suallerde: terim önce hayalî karşılığıyla verilecek;
 her şıkkın **ne kaybettireceği** de yazılacak, yalnız ne kazandıracağı
 değil.
+
+## H85 — KÂİDE bir cevap değil, bir **İSPAT YAPISI**dır
+
+Kullanıcı hükmü (benim iki teklifimi de reddederek):
+
+> *"Temel işlem dizisi asla. Hücre eşlemesi ondan daha mantıklı ama o da
+> nihayet değil, hatta bana son derece kötü gözüküyor. Kaide şu olmalı:
+> çıktı hücresi ne kadar ebatta olacak, benim söylediğim ebat kesin mi,
+> aksinin mümkün olmadığı ispatlandı mı? Tüm misaller için ebat
+> tahminlerim doğru mu, renklerim doğru mu? Her rengi neden koyduğumu
+> açıklayabiliyor muyum? Hangi rengin yerine başka bir şey koymanın
+> imkansızlığını açıklayabiliyor muyum? İşin sebebini illetini
+> delillerini ispatlarını biliyor muyum? Yani esasında aklıma şu geliyor
+> ki o bahsettiğim melekelerden destek almalıyız, nasıl olacağını
+> bilmemekle beraber."*
+
+**Bu, benim iki teklifimi de nakzeder ve daha derindir.** Ben kâideyi
+bir **üretici** olarak düşündüm (ne yapılacağını söyleyen bir tarif);
+kullanıcı onu bir **hüccet** olarak tarif ediyor (neden başka türlü
+olamayacağını gösteren bir delil yapısı).
+
+Kâidenin taşıması gereken yedi şey:
+
+1. **Ebat** -- çıktı ızgarası ne kadar olacak.
+2. **Ebadın kesinliği** -- aksinin mümkün olmadığı ispatlandı mı.
+3. **Misallerde tutarlılık** -- bütün şahitlerde ebat tahmini doğru mu.
+4. **Renklerin doğruluğu** -- bütün şahitlerde renkler tutuyor mu.
+5. **Her rengin gerekçesi** -- bu rengi neden koydum, açıklayabiliyor muyum.
+6. **Aksinin imkânsızlığı** -- bu rengin yerine başkasını koymanın niçin
+   mümkün olmadığını gösterebiliyor muyum.
+7. **İllet ve delil** -- işin sebebini, illetini, delillerini, ispatlarını
+   biliyor muyum.
+
+Yani model *"çıktı budur"* demeyecek; *"budur, çünkü şudur, ve aksi şu
+sebeple imkânsızdır"* diyecek. Cevabın kendisi değil, **cevabın
+zorunluluğu** aranacak.
+
+**Bunun mimarîdeki karşılığı doğrudan mizan/ ve fitrat/dır** ve
+kullanıcı bunu sezmiştir (*"melekelerden destek almalıyız"*):
+
+| kâidenin şartı | hangi meleke / paket |
+|---|---|
+| aksinin imkânsızlığı | `mizan/kiplik` (zorunluluk-imkân), 𝒪₂₃ Mantık |
+| bütün misallerde tutma | `mizan/istikra` (tümevarım), 𝒪₁₈ Kıyas |
+| tek karşı örneğin düşürmesi | 𝒪₂₃ nakz (H6) |
+| illet | `fitrat/karsi_olgusal`, `fitrat/ayrisma`, 𝒪₂₂ İllet |
+| delillerin birbirini teyidi | `fitrat/tevafuk`, 𝒪₂₉ Teyit |
+| ispatın kendisi | `mizan/cikarim` (Gentzen), 𝒪₂₄ İspat |
+| bilmediğini bilmek | 𝒪₃₂ makam + sükût (H10) |
+
+Bu yüzden *"mizan ve fitrat kübit hattına bağlansın"* hükmü (aynı
+oturumda verildi) bu hükmün **aynı meselenin öbür yüzüdür**: kâide bir
+ispat yapısıysa, ispat motorları ana akışa girmek zorundadır.
+
+**Açıkça kaydedilen borç:** kullanıcı *"nasıl olacağını bilmemekle
+beraber"* dedi. Ben de bilmiyorum. Bu hüküm bir **istikamet**tir,
+bir tarif değil; tarif ortak çalışmayla çıkarılacaktır ve
+uydurulmayacaktır.
+
+## H86 — H3'ün KISMÎ NAKZI: natural gradyan denenecek
+
+Kullanıcı hükmü:
+
+> *"Senin tarifine göre şu an melekeler rastgele deneme yanılmayla
+> öğreniliyormuş, bu kabul edilemez. Şu anki 250 parametre bir de
+> bildiğimiz natural gradyan ile öğrenilsin, bakalım ne olacak?
+> Sonrasında işe yaramazsa sileriz."*
+
+H3 *"ana döngüde gradyan ve kayıp yoktur"* diyordu. Bu hüküm o
+yasağı **kaldırmaz**, fakat bir istisna açar ve istisna ölçüme
+bağlıdır: natural gradyan kurulacak, mevcut motorlarla **aynı bütçede**
+karşılaştırılacak, işe yaramazsa silinecektir. Kütük kaidesi gereği
+(*içtihad içtihadı nakzetmez*) H3 düşmez; yanına bu istisna yazılır.
+
+**Natural gradyan nedir (hayalî karşılığıyla).** Sıradan gradyan
+"parametreyi hangi yöne oynatırsam kayıp azalır" der ve bütün
+parametreleri **eşit mesafeli** sayar. Halbuki bir açıyı 0,1 radyan
+oynatmakla bir başkasını 0,1 oynatmak, modelin **davranışında** çok
+farklı büyüklükte değişiklik yapabilir. Natural gradyan mesafeyi
+parametrede değil **modelin verdiği cevapta** ölçer: "cevabımı ne kadar
+değiştirdim" cinsinden bir adım atar. Kuantum durumlarında bunun adı
+*Stochastic Reconfiguration*tur ve Fubini–Study metriğiyle ölçer.
+
+**Neden mimarîye uygun:** bizim parametrelerimiz **açıdır**; açıların
+öklit mesafesi manasızdır (2π periyodik), fakat durumun değişimi
+manalıdır. Yani natural gradyan burada bir yama değil, doğru ölçüdür.
+
+## H87 — Kaggle bu ortamdan ERİŞİLEMİYOR (ölçüldü)
+
+Kullanıcı hükmü: *"Şu testleri kaggle'da yapabiliyorsan ve neticeleri
+okuyabiliyorsan artık orada GPU ile yap."*
+
+Denendi ve **olmuyor**; sebebi jeton değil ağ siyasetidir:
+
+```
+kaggle competitions list
+→ OSError: Tunnel connection failed: 403 Forbidden
+proxy kaydı: "gateway answered 403 to CONNECT ... host: api.kaggle.com:443"
+```
+
+Yani bu oturumun çıkış vekili (proxy) `api.kaggle.com`a bağlanmayı
+**siyaseten** reddediyor. Jeton `~/.kaggle/access_token`a kuruldu
+(koda **yazılmadı**) ve orada duruyor; ağ açılırsa hemen kullanılır.
+
+O hâlde ölçümler burada, CPU'da devam eder ve GPU'ya dair hiçbir şey
+iddia edilmez. Kaggle'da koşacak kod `main/kaggle.py` ve
+`docs/KAGGLE.md`de hazırdır; koşturmak kullanıcıya kalır.
