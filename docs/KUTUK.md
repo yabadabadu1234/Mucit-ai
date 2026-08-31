@@ -2237,3 +2237,83 @@ boş dönmesinin, o da sonlu kütüğün neticesidir (H93).
 Bu hüküm, `mucit_ai_esas/` (14 373 satır) ve öteki 165 beylik için de
 istikameti tayin eder: ölçüt *"bunu kullanıyor muyum"* değil,
 **"buna nerede yer yurt verebilirim"**dir.
+
+## H97 — qkaide KURULDU ve İŞLEMİYOR (ölçüldü); iki kusur teşhis edildi
+
+Kullanıcı hükmü: *"qkaide diye bir dosya yazarsın olur biter, ana akışa
+onu koyarsın."* `nefs/qkaide.py` yazıldı. **İşlemiyor** ve bu, iddia
+edilmeden önce ölçüldü.
+
+### Doğru çıkan taraf: ``2^k`` fiilen kalktı
+
+Ebat kâidesi bir indis değil bir denklemdir: ``r·h_çıktı = p·h + q``.
+``p, q, r`` kübitlere bit bit yazılınca sapma **bitlerde doğrusaldır**::
+
+    δ = Σ_m c_m b_m + d          (c_m klasik, şahitten çıkar)
+
+Doğrusal olduğu için ``δ``, bütün kâide adayları için aynı anda, kübit
+başına **bir** kontrollü kapıyla hesaplanır. Ölçüldü: ``k=6`` (4096
+aday değil, 64 aday) için **63 kapı**. ``2^k`` taban durumunu tek tek
+dolaşmak yok. Bu kısım H91'i doğruluyor.
+
+### DÜZELTİLEN BİR YANILGI: teklif reel yazmaçta tatbik edilemez
+
+Kullanıcının getirdiği teklif ``exp(−iγδ²)`` **diyagonal faz** işlemcisi
+öneriyordu. Bu mimaride doğrudan tatbik **edilemez**: yazmaç reeldir --
+``dik_iki_kubit`` ortogonaldir, ``A`` reel kayan noktadır, ``beyan``
+``np.real`` alır. Reel bir yazmaçta ``exp(iθZ)`` yoktur; olan yalnız
+``diag(1,−1)``dir. Bu, teklifin kusuru değil, **bizim yazmacımızın
+şartıdır** ve H95'e eklenen şerhtir.
+
+Onun yerine ``δ`` bir **açıya** yazıldı (orak kübiti ``γδ`` kadar
+döner). Fikir doğrudur; fakat aşağıdaki iki kusur yüzünden netice
+vermedi.
+
+### ÖLÇÜLEN: hiçbir yükselme yok
+
+Beş hâlde klasik hakikatle yüzleştirildi (``çıktı=girdi``,
+``2·girdi``, ``girdi/2``, ``girdi+1``, ve **çözümsüz** bir hâl):
+
+    kuantum tepe olasılığı  : 0,0156  =  1/64  (bütün hâllerde)
+    çözümlerin ağırlığı     : düz dağılımla AYNI (0,0625 / 0,0625)
+
+Yani dağılım **düpedüz düzgün**; orak hiçbir kolu yükseltmiyor.
+5 halin 4'ünde tepe, klasik çözüm kümesinde bile değil.
+
+### TEŞHİS -- ikisi de benim kusurum
+
+**1. ``difuzyon`` yanlış kuruldu.** Grover'ın yansıtması
+``D = 2|Ψ₀⟩⟨Ψ₀| − I``dır. Ben her kübite **ayrı ayrı** ``Z`` vurdum;
+o işlemci ``Π_j (−1)^{b_j}``dir, yani çarpanlarına ayrılır ve
+``|0…0⟩`` etrafında **hiçbir yansıtma yapmaz**. Doğrusu ``k`` katlı
+**kontrollü** ``Z``dir ve tek kübitlik ``Z``lerin çarpımı ona eşit
+değildir.
+
+**2. İşaretleme faz değil, sızıntı.** ``sart_yaz → Z → geri_al``
+dizisi kolun genliğini ``cos(2γδ)`` ile çarpar, ``sin(2γδ)`` kadarını
+da orak ``|1⟩``ine sızdırır. Orak izlenip atılınca ``cos² + sin² = 1``
+olduğu için **kâide marjinali hiç değişmez**. İşaretlemenin görülebilmesi
+için ya yüklemin (``δ=0``) bir kübite **hesaplanması** (tersinir
+aritmetik + ancilla) ya da tam genlik yükseltme yapısının
+(``Q = A·S₀·A†·S_iyi``) kurulması gerekir; ikisi de yapılmadı.
+
+Reel yazmacın buradaki asıl şartı şudur ve kütüğe geçer:
+
+> **Reel yazmaçta faz geri tepmesi ancak ``X`` ile olur** (``|−⟩``,
+> ``X``in −1 özdurumudur). ``R_y`` dönmelerinin özdurumları karmaşıktır,
+> dolayısıyla açı kodlamasıyla **temiz bir faz orağı kurulamaz**; açı
+> kodlaması genlik yükseltme (amplitude amplification) ister.
+
+### HÜKÜM
+
+`nefs/qkaide.py` **ana akışa konmadı** -- işlemeyen bir uzuv takılmaz.
+Dosya durur, kusurları kütükte yazılıdır, ve düzeltilecektir. Kullanıcı
+hükmü H96 gereği (*"uzuv olmadıysa at değil, uzuv hâline getir"*)
+sökülmez.
+
+Sıradaki iş, ikisinden birini seçmektir ve bu kullanıcıya sorulmuştur:
+(a) ``δ=0`` yüklemini tersinir aritmetikle bir kübite hesaplayıp ``X``
+ile temiz faz geri tepmesi kurmak (ancilla gerekir, çöp geri alınır),
+yahut (b) açı kodlamasını koruyup tam ``A·S₀·A†`` genlik yükseltme
+çevrimini kurmak (ancilla gerekmez, fakat ``k`` katlı kontrollü kapı
+gerekir).

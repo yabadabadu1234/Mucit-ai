@@ -142,7 +142,15 @@ class QAyar:
     kulli_alanlar: Tuple[Tuple[str, int], ...] = (
         ("makam", 2), ("mizan", 4), ("tenakuz", 2),
         ("tasdik", 2), ("sukut", 1), ("nakz", 2), ("kelam", 4),
+        # --- kütük H91: kâide yazmacı ve orak kübiti.
+        # ``kaide`` kâidenin İNDİSİNİ değil PARAMETRESİNİ tutar
+        # (p, q, r; her biri ``kaide_bit`` bit). ``orak`` tek bir
+        # yardımcı kübittir: şart sağlanan kolda hiç kımıldamaz,
+        # sağlanmayan her kolda genlik sızdırır (bkz. nefs/qkaide.py).
+        ("kaide", 12), ("orak", 1),
     )
+    #: ``kaide`` alanındaki her parametrenin bit sayısı (p, q, r).
+    kaide_bit: int = 4
 
     @property
     def kulli_kubit(self) -> int:
