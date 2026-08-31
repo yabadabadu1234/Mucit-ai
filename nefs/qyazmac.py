@@ -88,10 +88,30 @@ def kontrollu_donme_yigin(teta: np.ndarray) -> np.ndarray:
     G[..., 2:, 2:] = donme_yigin(t)
     return G
 
-#: Makam iki kübite kodlanır: 00=Şek, 01=Zan, 10=Yakîn, 11=Vehim.
-#: Sıra kasıtlıdır: Şek ve Vehim uçlardadır, Zan ile Yakîn ortadadır;
-#: tek kübitlik bir dönme Şek'ten Zan'a, Zan'dan Yakîn'e geçirir.
-MAKAM_ADLARI: Tuple[str, ...] = ("Şek", "Zan", "Yakîn", "Vehim")
+#: Makam iki kübite kodlanır: ``00=Vehim, 01=Şek, 10=Yakîn, 11=Zan``.
+#: İndeks ``2·b₀ + b₁``dir (bkz. ``makam_dagilimi``).
+#:
+#: **ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H127).** Evvelki sıra
+#: ``("Şek","Zan","Yakîn","Vehim")`` idi ve şerhi şöyle diyordu:
+#: *"tek kübitlik bir dönme Şek'ten Zan'a, Zan'dan Yakîn'e geçirir."*
+#: İddianın yarısı yanlıştı. Epistemik sıra ``Vehim < Şek < Zan <
+#: Yakîn``tir (`mizan/munazara.py`, ``MERTEBELER``) ve eski kodlamada
+#: komşular arası Hamming mesafesi::
+#:
+#:     Vehim → Şek    2   ✗      Şek → Zan    1  ✓      Zan → Yakîn  2  ✗
+#:
+#: Yani üç geçişin ikisi tek kübitle **yapılamıyordu**; 𝒪₃₂'nin tek
+#: kübitlik kontrollü dönmeleri Zan'dan Yakîn'e hiç geçiremiyordu.
+#:
+#: Daha kötüsü: eski sırada ``makam₀ = 1`` demek ``{Yakîn, Vehim}``
+#: demekti -- **en yüksek ile en düşük derece aynı kolda**. 𝒪₃₂'nin
+#: ``tasdik → makam₀`` müsbet dönmesi Yakîn'i kuvvetlendirirken Vehim'i
+#: de kuvvetlendiriyordu.
+#:
+#: Gray sırasında üç geçiş de Hamming 1'dir ve ``makam₀ = 1`` tam
+#: olarak ``{Zan, Yakîn}``, yani "müsbete meyilli" demektir. Sıra
+#: keyfî değil, `mizan/munazara.py`nin mertebe cetvelinden alınmıştır.
+MAKAM_ADLARI: Tuple[str, ...] = ("Vehim", "Şek", "Yakîn", "Zan")
 
 
 def donme(teta: float) -> np.ndarray:

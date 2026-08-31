@@ -3682,3 +3682,65 @@ koştu. İki kayıt ayrıca tutulur:
 
 En yavaş üçü: ``tanilama.haraplama`` 44,9 sn, ``yaklasim.akislar``
 38,8 sn, ``reel.meleke`` 7,6 sn.
+
+## H127 — MAKAM KODLAMASI KUSURLUYDU; `mizan/munazara` ile tashih edildi
+
+`mizan/` külliyatını (8 modül, 3 395 satır) 2. kademeye çıkarmaya
+başlarken, `mizan/munazara.py`nin **yakîn mertebeleri** cetveli akışın
+`makam` alanıyla yüzleştirildi. Üç şey çıktı.
+
+### Bulgu 1 — kodlama epistemik komşuluğu kırıyordu
+
+`nefs/qyazmac.py` şöyle diyordu: *"Sıra kasıtlıdır… tek kübitlik bir
+dönme Şek'ten Zan'a, Zan'dan Yakîn'e geçirir."* **İddianın yarısı
+yanlıştı.** Eski kodlama ``Şek=00, Zan=01, Yakîn=10, Vehim=11``, klasik
+epistemik sıra ise ``Vehim < Şek < Zan < Yakîn``::
+
+    Vehim → Şek    Hamming 2   ✗
+    Şek   → Zan    Hamming 1   ✓
+    Zan   → Yakîn  Hamming 2   ✗
+
+Üç geçişin **ikisi** tek kübitle yapılamıyordu. Bu bir şerh hatası
+değil fiilî kusurdur: 𝒪₃₂ makama **tek kübitlik** kontrollü dönmeler
+vuruyor ve Zan'dan Yakîn'e hiç geçiremiyordu.
+
+### Bulgu 2 — makam₀ en yükseği ile en düşüğü aynı kola koyuyordu
+
+Eski sırada ``makam₀ = 1`` demek ``{Yakîn, Vehim}`` demekti. 𝒪₃₂'nin
+``tasdik → makam₀`` **müsbet** dönmesi Yakîn'i kuvvetlendirirken
+**Vehim'i de** kuvvetlendiriyordu — bir hüküm melekesinin yapabileceği
+en ters şey.
+
+### Tashih — ve niçin keyfî değil
+
+``Vehim=00, Şek=01, Zan=11, Yakîn=10``. Üç geçiş de Hamming 1; ve
+``makam₀ = 1`` artık tam olarak ``{Zan, Yakîn}``, yani "müsbete
+meyilli". Sıra benim tercihimden değil, `mizan/munazara.py`nin
+``MERTEBELER`` cetvelinden çıkıyor.
+
+    ölçü                    ESKİ    GRAY (yürürlükte)
+    kırık geçiş             2       **0**
+    makam₀=1 kolu tutarlı   False   **True**
+
+Daimî sınama **eski sırayı da** ölçer ve kırmızı yandığını gösterir;
+yoksa yeşil olması bir şey ispat etmezdi.
+
+### Bulgu 3 — bir mertebe eksik ve bu bir bütçe sınırı
+
+Klasik mîzânda beş mertebe var (`MERTEBELER`): yakîn 1,00 · **zann-ı
+gālib 0,75** · zan 0,50 · şek 0,25 · vehim 0,00. Akışın makamı iki
+kübit, yani dört taban durumu — **zann-ı gālib yok**. Bu bir kusur
+değil bütçe sınırıdır; üç kübit beşini taşırdı. Eksikliğin sayılması,
+olmayan bir tamlık iddiasından iyidir.
+
+### Yakîn yüzleştirmesi — açık borç
+
+`yakin_gazali` (``min_i Yakîn(öncül_i) · 𝟙[şekil geçerli]``) ile akışın
+makam beklentisi 30 görevde kıyaslandı::
+
+    klasik yakîn ort. 0,9000    akış yakîni ort. 0,4972
+    korelasyon        +0,0719
+
+**Bağ yok.** Akışın makamı klasik yakîn hesabıyla alâkasız. Akış
+eğitilmemiştir ve bu borç açıkta yazılır; kodlama tashihi yapıyı
+düzeltti, muhtevayı değil.

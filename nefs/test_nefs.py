@@ -799,6 +799,34 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
         assert c["üçlü_tutarlı"], (gv, c)
 
 
+def test_makam_kodlamasi_epistemik_komsulugu_koruyor():
+    """Makam sırası tek kübitlik dönmeyle gezilebiliyor mu? (H127)
+
+    `mizan/munazara.py` epistemik sırayı veriyor: ``Vehim < Şek < Zan <
+    Yakîn``. Ardışık iki makam arasındaki Hamming mesafesi 1 olmalı,
+    yoksa 𝒪₃₂'nin tek kübitlik kontrollü dönmeleri o geçişi yapamaz.
+
+    **Ölçüt kör değildir:** eski (kusurlu) sıra da sınanır ve kırmızı
+    yandığı gösterilir.
+    """
+    from .mantik import ESKI_SIRA, GRAY_SIRA, eksik_mertebeler, \
+        komsuluk_denetimi
+    from .qyazmac import MAKAM_ADLARI
+
+    y = komsuluk_denetimi(tuple(MAKAM_ADLARI))
+    assert y["kırık_geçiş"] == 0, y
+    # ``makam₀ = 1`` en yüksek ile en düşük dereceyi aynı kola koymamalı
+    assert y["kol_tutarlı"], y
+    assert set(y["makam0_1_kolu"]) == {"Zan", "Yakîn"}, y
+
+    # Eski sıra kırmızı yanmalı -- yoksa sınama bir şey ispat etmez.
+    e = komsuluk_denetimi(ESKI_SIRA)
+    assert e["kırık_geçiş"] == 2 and not e["kol_tutarlı"], e
+
+    # Eksik mertebe SAYILIYOR: bütçe sınırı gizlenmiyor.
+    assert [ad for _, ad in eksik_mertebeler()] == ["zann-ı gālib"]
+
+
 def test_padisahin_eli_HER_MODULE_uzaniyor():
     """Beylik kalmadı mı? (kütük H123)
 

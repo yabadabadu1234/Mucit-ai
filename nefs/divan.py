@@ -595,6 +595,7 @@ KADEME2: Tuple[str, ...] = (
     "idrak.arc",               # nefs/iki_olcek.py -- ARC görevleri
     "idrak.sekil",             # nefs/operad.py    -- yamaların mahallî kâidesi
     "omega_kategori.turetimler",  # nefs/operad.py -- çekirdeğin boşluk kütüğü
+    "mizan.munazara",          # nefs/mantik.py    -- yakîn mertebeleri, makam sırası
 )
 
 

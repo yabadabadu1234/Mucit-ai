@@ -548,6 +548,29 @@ def _h125_cech_sukut() -> Tuple[bool, str]:
             acik["tıkanık_görev"], acik["görev"]))
 
 
+def _h127_makam_kodlamasi() -> Tuple[bool, str]:
+    """Makam kodlaması epistemik komşuluğu koruyor mu (kütük H127)?
+
+    Şart: yakîn derecesine göre ardışık iki makam arasındaki Hamming
+    mesafesi **1** olmalı; aksi hâlde 𝒪₃₂'nin tek kübitlik kontrollü
+    dönmeleri o geçişi hiç yapamaz. Ayrıca ``makam₀ = 1`` kolu tutarlı
+    olmalı -- en yüksek ile en düşük dereceyi aynı kola koymamalı.
+
+    Şahit **kör değildir**: eski (kusurlu) sıra da ölçülür ve kırmızı
+    yanması gösterilir.
+    """
+    from .mantik import ESKI_SIRA, komsuluk_denetimi
+    from .qyazmac import MAKAM_ADLARI
+    y = komsuluk_denetimi(tuple(MAKAM_ADLARI))
+    e = komsuluk_denetimi(ESKI_SIRA)
+    return (y["kırık_geçiş"] == 0 and y["kol_tutarlı"]
+            and e["kırık_geçiş"] > 0), \
+        ("yürürlükteki: kırık geçiş %d, makam₀ kolu %s (tutarlı %s); "
+         "eski sıra kırık geçiş %d -- ölçüt kör değil"
+         % (y["kırık_geçiş"], y["makam0_1_kolu"], y["kol_tutarlı"],
+            e["kırık_geçiş"]))
+
+
 def _h126_yoklama() -> Tuple[bool, str]:
     """1,5. KADEME: modüller yalnız yükleniyor mu, KOŞUYOR mu (H126)?
 
@@ -644,6 +667,8 @@ SAHITLER: List[Sahit] = [
           _h125_cech_sukut),
     Sahit("H126", "modüller yalnız yüklenmiyor, KOŞUYOR (1,5. kademe)",
           _h126_yoklama),
+    Sahit("H127", "makam kodlaması epistemik komşuluğu koruyor",
+          _h127_makam_kodlamasi),
 ]
 
 #: Makine şahidi **kurulamayan** hükümler ve sebebi. Bunlar "geçti"
