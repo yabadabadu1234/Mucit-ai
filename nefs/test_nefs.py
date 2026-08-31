@@ -743,6 +743,61 @@ def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
     assert abs(g1 + g0) < 1e-9, (g0, g1)          # işaret çevrilmiş
 
 
+def test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR():
+    """Dosya 2: her meleke ilan ettiği hududun içinde mi kalıyor?
+
+    İki şey birden sınanır ve ikincisi olmadan birincisi bir şey ifade
+    etmez (kullanıcı hükmü H90: *her ölçüt kırmızı yanabildiğini
+    ispatlasın*):
+
+    1. **Yeşil** -- 41 melekenin hiçbiri ilan etmediği (ve güzergâhında
+       olmayan) bir bölgeye dokunmuyor.
+    2. **Kırmızı** -- sözleşme kasten daraltıldığında ölçüm bunu
+       YAKALIYOR. Yakalamasaydı birinci maddenin yeşil olması yalnız
+       ölçümün kör olduğunu gösterirdi.
+    """
+    from . import sozlesme
+
+    for r in sozlesme.sozlesmeyi_olc(n_satir=3, chi=16):
+        assert not r["ihlâl"], r
+        assert not r["kullanılmayan"], r
+
+    # --- MUTASYON: 𝒪₁ Müşahede'nin ilanı boşaltılırsa yakalanmalı.
+    eski = sozlesme.SOZLESME[1]
+    sozlesme.SOZLESME[1] = (("sukut",), "kasten yanlış ilan")
+    try:
+        r = sozlesme.dokunulan_bolgeler(1, n_satir=3, chi=16)
+        assert "veri" in r["ihlâl"], r
+    finally:
+        sozlesme.SOZLESME[1] = eski
+
+
+def test_mera_kulli_hukum_blokuna_dokunmuyor():
+    """MERA küllî hüküm bloğunu karıştırmamalı (kütük H119).
+
+    ``superpozisyon`` küllî bloğa kasten dokunmaz ve sebebini yazar:
+    hüküm henüz verilmemiştir, ``|0⟩`` doğru başlangıçtır. MERA'nın
+    hemen ardından aynı bloğu karıştırması o hükmü fiilen iptal
+    ediyordu ve bu **sözleşme yüzleştirmesinde bulundu**, kimse iddia
+    etmiş değildi.
+    """
+    from .qyazmac import QAyar, QYazmac
+
+    def blok(kulli_dahil):
+        q = QYazmac(3, QAyar(bag=16, tohum=0))
+        q.kodla(np.random.default_rng(0).normal(size=(3, 12)))
+        q.superpozisyon()
+        q.mera(kulli_dahil=kulli_dahil)
+        yuv = list(range(q.kulli_bas, q.n))
+        return np.asarray(q.y.yuva_yogunluklari(yuv), float)[0]
+
+    R = blok(False)
+    # küllî blok hâlâ ``|0⟩``: ρ₀₀ = 1
+    assert np.allclose(R[:, 0, 0], 1.0, atol=1e-6), R[:, 0, 0]
+    # eski davranış geri verilince karışıyor -- yani sınama kör değil
+    assert not np.allclose(blok(True)[:, 0, 0], 1.0, atol=1e-6)
+
+
 def test_nizam_dolasiklik_doygunlugu_kiriyor():
     """Dosya 1'in χ cetveli, H115'in derdini fiilen çözüyor mu?
 

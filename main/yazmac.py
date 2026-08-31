@@ -218,7 +218,8 @@ class Yazmac:
     # -----------------------------------------------------------------
     #  İki kübitlik kapı -- fırça düzeninde, SVD ile bölerek
     # -----------------------------------------------------------------
-    def cift_kapi(self, G: np.ndarray, ofset: int = 0) -> float:
+    def cift_kapi(self, G: np.ndarray, ofset: int = 0,
+                  alt: int = 0, ust: Optional[int] = None) -> float:
         """``(2i+ofset, 2i+1+ofset)`` çiftlerinin hepsine aynı anda.
 
         Θ = A_k · A_{k+1} birleştirilir, ``4×4`` kapı fiziksel indekse
@@ -227,10 +228,19 @@ class Yazmac:
 
         Bütün çiftler tek bir yığın SVD'sinde çözülür; Python döngüsü
         yoktur.
+
+        ``alt``/``ust`` zinciri **daraltır**: kapılar yalnız
+        ``[alt, ust)`` aralığında vurulur. Sözleşme ölçümünde (kütük
+        H119) ölçüldü ki MERA bütün zincire vuruyor ve daha hiçbir delil
+        görülmeden küllî hüküm bloğunu karıştırıyordu -- halbuki
+        ``superpozisyon`` o bloğu kasten ``|0⟩``da bırakır. Aralık bu
+        yüzden vardır.
         """
         n, X = self.n, self.bag
-        bas = ofset
-        m = (n - bas) // 2
+        ust = n if ust is None else min(int(ust), n)
+        alt = max(0, int(alt))
+        bas = alt + ofset
+        m = (ust - bas) // 2
         if m <= 0:
             return 0.0
         # ÖBEKLEME. Bütün çiftleri tek seferde işlemek, ara tensörleri
@@ -748,7 +758,9 @@ class Yazmac:
     #  MERA
     # -----------------------------------------------------------------
     def mera_kur(self, kademe: Optional[int] = None,
-                 teta: Optional[np.ndarray] = None) -> List[MERAKademe]:
+                 teta: Optional[np.ndarray] = None,
+                 alt: int = 0, ust: Optional[int] = None
+                 ) -> List[MERAKademe]:
         """MERA: her kademede dolanıklık çözücü + izometri.
 
         Kademe ``s``de çiftler ``2^s`` uzaklıkta olmalıdır. MPS'te uzak
@@ -777,8 +789,8 @@ class Yazmac:
             else:
                 U = dik_iki_kubit(self.rng.normal(scale=0.6, size=6))
                 W = dik_iki_kubit(self.rng.normal(scale=0.6, size=6))
-            h1 = self.cift_kapi(U, ofset=0)      # dolanıklık çözücü
-            h2 = self.cift_kapi(W, ofset=1)      # izometri
+            h1 = self.cift_kapi(U, ofset=0, alt=alt, ust=ust)   # çözücü
+            h2 = self.cift_kapi(W, ofset=1, alt=alt, ust=ust)   # izometri
             self.iz.append(MERAKademe(kademe=s, yuva=self.n, bag=self.bag,
                                       kesme_hatasi=float(h1 + h2)))
         return self.iz

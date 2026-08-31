@@ -3094,6 +3094,11 @@ ve **ölçülebilir**. Kurulan budur.
     16   1,000  → 0,250          2,772 → 1,386  0,1878 → 0,2216  0,2226 → 0,4161
     32   1,000  → 0,125          3,461 → 1,385  0,1914 → 0,3766  0,1597 → 0,4298
 
+**(Bu tablo H119'dan EVVELKİ hâlin ölçümüdür ve öyle bırakılıyor.
+H119 MERA'nın kapsamını değiştirdiği için sayılar yenilendi; yeni
+tablo H119'un altındadır. Eskisi silinmez -- "içtihad içtihadı
+nakzetmez"; hangi ölçümün hangi kod hâline ait olduğu görünsün.)**
+
 **Doygunluk her χ'de kırıldı.** H115'ten beri ilk defa Schmidt rütbesi
 bütçeyi doyurmuyor; entropi `ln χ`ye yapışık olmaktan çıkıp ~1,386
 (= `ln 4`) sabitinde duruyor — yani nizamın koyduğu tavanda, bütçede
@@ -3125,3 +3130,103 @@ olduğu ayrıca zabıtlanır (H111'in `iz.kesme` hakkındaki hükmünün
 kardeşi).
 
 Sınama sayısı 48 → **50**; hepsi geçiyor.
+
+## H119 — SADAKAT SÖZLEŞMESİ İCRA EDİLEBİLİR KILINDI; MERA'NIN GİZLİ KUSURU BULUNDU
+
+Dosya 2 her meleke için "neyi soyar / neyi korur / çöküş şartı" istiyor.
+Bunu bir **nesir tablosu** olarak yazmayı reddettim ve sebebini
+yazıyorum: bir tabloya *"𝒪₁₃ Tasdik yalnız tasdik alanına dokunur"*
+yazmak kolaydır ve hiçbir şey ispat etmez. H88'in dersi tam buydu --
+`beyan` aylarca yanlış çevreden okudu, çünkü iddiayı denetleyen bir şey
+yoktu. **İddia denetlenmiyorsa iddia değildir.**
+
+`nefs/sozlesme.py` sözleşmeyi **icra edilebilir** kılar. Dayanağı bir
+cebir hakikatidir: ``S``ye etki eden üniter, ``S``ye ayrık her ``A``nın
+indirgenmiş yoğunluğunu aynen bırakır (iz döngüseldir). O hâlde meleke
+koştuktan sonra ``ρ_A`` değişmişse meleke ``A``ya **dokunmuştur** --
+şerhinden ve iddiasından bağımsız olarak. Ölçüm melekenin lafına değil
+dalganın kendisine bakar.
+
+### İlk yüzleştirme: 41 melekenin 16'sı ihlâl verdi
+
+Hepsinin sebebi **tekti** ve bunu ölçerek anladım: MPS bir zincirdir;
+uzak iki kübite dokunmanın iki yolu da aradan geçer -- takas ağı
+kübitleri fiilen yürütür, MPO ise ``bas``tan ``son``a bütün aralığı
+yeniden sıkıştırır. İkisi de cebren kimliktir, fakat **kesme üniter
+değildir**; aradaki kübitlerin yoğunluğu bir parça oynar.
+
+Bu bir kusur değil MPS'in tabiatıdır. O hâlde sözleşme iki şeyi ayırır:
+**hedef** (melekenin kastı) ve **güzergâh** (zincirin mecbur ettiği
+yol). Güzergâh **ilandan** türetilir, ölçümden değil -- ölçümden
+türetilseydi sözleşme kendi kendini onaylar ve hiçbir şey ispat etmezdi.
+
+Bu ayrımdan sonra 16 ihlâlin **15'i** izah edildi ve kapandı.
+
+### Kalan bir tanesi hakikî bir kusurdu: 𝒪₆ Tasavvur
+
+MERA bütün zincire vuruyordu. Yani 𝒪₆, daha hiçbir delil görülmeden
+`makam`, `mizan`, `tasdik`, `kelam`, `kâide`, `gaye` ve `tertip`
+alanlarını karıştırıyordu.
+
+Bu, **projenin kendi hükmüyle çelişiyordu**. `superpozisyon` küllî
+bloğa kasten dokunmaz ve sebebini yazar: *"hüküm henüz verilmemiştir,
+``|0⟩`` doğru başlangıçtır; hepsine vurmak, daha hiçbir delil
+görülmeden bütün hükümleri eşit ihtimalli ilan etmek olurdu."* MERA'nın
+hemen ardından aynı bloğu karıştırması o hükmü **fiilen iptal
+ediyordu**.
+
+Kimse bunu iddia etmiş değildi; kimse bakmadığı için görülmemişti.
+Sözleşme ölçümü bakmak için vardır ve ilk koşuşunda bunu buldu.
+
+**Tashih:** `Yazmac.cift_kapi` ve `mera_kur` artık ``alt``/``ust``
+aralığı alır; `QYazmac.mera` varsayılan olarak küllî bloğu **hariç
+tutar**. Eski davranış `kulli_dahil=True` ile durur ki sınama kör
+olmasın.
+
+Netice: **41 melekede 0 ihlâl, 0 kullanılmayan ilan.**
+
+### Ölçüm kendi körlüğünü de ölçtü
+
+Dört meleke (𝒪₃₂, 𝒪₃₃, 𝒪₃₄, 𝒪₃₉) ilan ettikleri küllî alanlara "hiç
+dokunmamış" göründü. Sebep melekeler değil **ölçümün kendisiydi**:
+akışın başında küllî blok ``|0⟩``dadır ve **kontrolü ``|0⟩`` olan bir
+kontrollü dönme hiçbir şey yapmaz**. Meleke atıl değildi; ölçüm onu hiç
+ateşlememişti. Sözleşme dayanağı (support) tarif eder, filanca koşudaki
+tesiri değil -- o yüzden ölçüm bloğu cüzî bir dönmeyle uyandırır.
+
+### H90 gereği: ölçüt kırmızı yanabiliyor
+
+`test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR` iki şeyi
+birden sınar: (1) 41 meleke temiz, (2) 𝒪₁'in ilanı kasten
+bozulduğunda ölçüm bunu **yakalıyor**. İkincisi olmadan birincisi
+yalnız ölçümün kör olduğunu gösterirdi.
+
+### H118'in sayıları YENİLENDİ (H119 MERA'yı değiştirdiği için)
+
+    χ    doygunluk        entropi        beyan sapması    girdi hassasiyeti
+         kapalı → açık    kapalı → açık  kapalı → açık    kapalı → açık
+    8    1,000 → 0,500    2,079 → 1,384  0,6158 → 0,4522  0,0951 → 0,4871
+    16   1,000 → 0,250    2,770 → 1,386  0,5555 → 0,4182  0,1678 → 0,5835
+    32   1,000 → 0,125    3,465 → 1,386  0,6369 → 0,5295  0,2389 → 0,6081
+
+İki şey değişti ve ikisi de dürüstçe yazılır:
+
+1. **MERA tashihi tek başına beyanı çok yapılandırdı** -- nizamsız
+   sapma 0,19–0,24'ten 0,56–0,64'e çıktı. Kelam artık başlangıçta
+   MERA tarafından karıştırılmıyor.
+2. **Fakat nizamsız hâlde girdi hassasiyeti DÜŞTÜ** (0,278 → 0,095,
+   χ=8'de). Yani dağılım keskinleşti ama girdiye daha az bağlı hâle
+   geldi: keskin fakat **sabit** bir cevap.
+
+Bu ikincisi, `beyan sapması`nın tek başına bir keyfiyet ölçüsü
+olmadığını ispatlar ve o hüküm ölçümden **evvel** yazılmıştı: tek bir
+duruma çökmüş bir dağılımın sapması ~1'dir ve hiçbir şey bilmez.
+Hakem girdi hassasiyetidir.
+
+O hakeme göre nizamın hükmü **açık ve lehtedir**: hassasiyet
+0,095→0,487, 0,168→0,584, 0,239→0,608 -- yani χ ne olursa olsun iki ilâ
+beş kat. Nizam açıkken beyan sapması bir miktar düşer (0,62→0,45) ve bu
+**zarar hanesine yazılır**, gizlenmez; fakat hakem ölçütünde kazanç
+kat kat daha büyüktür.
+
+Sınama sayısı 50 → **52**; hepsi geçiyor.

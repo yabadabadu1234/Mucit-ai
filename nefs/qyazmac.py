@@ -312,11 +312,29 @@ class QYazmac:
                 self.tek(self.veri(i, j), H)
 
     def mera(self, kademe: Optional[int] = None,
-             teta: Optional[np.ndarray] = None) -> None:
+             teta: Optional[np.ndarray] = None,
+             kulli_dahil: bool = False) -> None:
         """MERA: dolanıklık çözücü ``U`` + izometri ``W`` (kütük H24).
 
         Dolaşıklığı üreten budur; süperpozisyon tek başına dolaşıklık
         vermez ve bu ölçülür (``entropi_once`` → ``entropi_sonra``).
+
+        **Küllî hüküm bloğuna DOKUNMAZ** ve bu bir tashihtir (kütük
+        H119). Sözleşme yüzleştirmesinde ölçüldü: MERA bütün zincire
+        vuruyordu, yani 𝒪₆ Tasavvur daha hiçbir delil görülmeden
+        ``makam``, ``mizan``, ``tasdik``, ``kelam``, ``kâide``,
+        ``gaye`` ve ``tertip`` alanlarını karıştırıyordu.
+
+        Bu, projenin kendi hükmüyle çelişiyordu: ``superpozisyon``
+        küllî bloğa kasten dokunmaz ve sebebini yazar -- *"hüküm henüz
+        verilmemiştir, ``|0⟩`` doğru başlangıçtır; hepsine vurmak, daha
+        hiçbir delil görülmeden bütün hükümleri eşit ihtimalli ilan
+        etmek olurdu."* MERA'nın hemen ardından aynı bloğu karıştırması
+        o hükmü fiilen iptal ediyordu. İddia edilen bir şey değildi;
+        kimse bakmadığı için görülmemişti.
+
+        ``kulli_dahil=True`` eski davranışı geri verir -- kıyas
+        ölçümü yapılabilsin diye durur, akışta kullanılmaz.
         """
         a = self.ayar
         # ``entropi_once`` yalnız İLK MERA'da yazılır. Evvelce her
@@ -330,7 +348,8 @@ class QYazmac:
             self.iz.schmidt_once = int(
                 self.y.dolasiklik_entropisi()["schmidt"])
         kad = a.mera_kademe if kademe is None else int(kademe)
-        izler = self.y.mera_kur(kademe=kad, teta=teta)
+        ust = None if kulli_dahil else self.kulli_bas
+        izler = self.y.mera_kur(kademe=kad, teta=teta, ust=ust)
         self.iz.mera_kademe += len(izler)
         self.iz.kapi += len(izler) * self.n      # MERA da kapıdır, sayılır
         # **ÖLÇÜLEN VE DÜZELTİLEN MUHASEBE HATASI.** MERA'nın kesmesi
