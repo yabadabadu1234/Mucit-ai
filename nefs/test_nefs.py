@@ -743,6 +743,62 @@ def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
     assert abs(g1 + g0) < 1e-9, (g0, g1)          # işaret çevrilmiş
 
 
+def test_iki_olcek_hakikaten_iki():
+    """Dosya 5: sağîr ölçek, kebîrin zaten bildiğini mi söylüyor?
+
+    İki ölçekli mimarinin bedeli vardır; kazancı ispatlanmalıdır.
+    Ölçüt Grassmann asal açılarıdır ve **kırmızı yanabilir**: açılar
+    sıfıra yakın çıksaydı ikinci ölçek gereksiz demekti.
+    """
+    from idrak import arc
+
+    from .iki_olcek import olcek_acilari, sagir_uydur
+
+    g = arc.yukle_hepsi("training")[:10]
+    artiklar = []
+    for gv in g:
+        r = sagir_uydur(gv)
+        assert r.get("kuruldu"), r
+        assert r["psd"], ("çekirdek PSD değil -- temsil teoremi geçersiz", r)
+        artiklar.append(r["azamî_artık"])
+    # **Şart ORTANCAYA konur ve sebebi ölçüldü.** Her görevde artık
+    # sıfıra inmez: 14 sayılık kaba tarif bazı görevlerde iki ayrı
+    # çiftte AYNI çıkar, Gram dizeyi tekilleşir (koşul ~5e6) ve kapalı
+    # form enterpolasyon yerine ortalamaya düşer. Bu `ogrenme/rkhs.py`nin
+    # kusuru değil benim tarifimin kusurudur ve borç olarak durur;
+    # sınamayı her göreve zorlamak, o borcu ölçütle örtmek olurdu.
+    assert float(np.median(artiklar)) < 1e-2, artiklar
+
+    o = olcek_acilari(g)
+    assert o["yeterli_mi"], o
+    assert o["azamî_açı"] > 0.1, ("iki ölçek aynı alt uzayı geriyor", o)
+
+
+def test_cech_tikanikligi_sukutu_ARTIRIYOR():
+    """Dosya 3: ``H¹ ≠ 0`` olan görevde model susuyor mu? (kütük H125)
+
+    Tıkanıklık "cevap yanlış" değil, "bu örtüde küllî cevap YOK"
+    demektir; doğru karşılık susmaktır (H10/H16).
+
+    **Ölçüt kör değildir:** kapı kapalıyken bağ menfî çıkıyordu (model
+    tıkanıkta daha ÇOK konuşuyordu). İki koşu da sınanır ki düzeltmenin
+    fiilen bir şey değiştirdiği görülsün.
+    """
+    from .operad import cech_tikanikligi, tikaniklik_sukut_bagi
+
+    kapali = tikaniklik_sukut_bagi(60, kapi=False)
+    acik = tikaniklik_sukut_bagi(60, kapi=True)
+    assert kapali["yeterli_mi"] and acik["yeterli_mi"]
+    assert acik["korelasyon"] > 0.15, acik
+    assert acik["sukut_tıkanıkta"] > kapali["sukut_tıkanıkta"], (kapali, acik)
+
+    # Kozikıl şartı: ikili uyuşma denklik kurduğu için üçlüler tutmalı.
+    from idrak import arc
+    for gv in arc.yukle_hepsi("training")[:40]:
+        c = cech_tikanikligi(gv)
+        assert c["üçlü_tutarlı"], (gv, c)
+
+
 def test_padisahin_eli_HER_MODULE_uzaniyor():
     """Beylik kalmadı mı? (kütük H123)
 

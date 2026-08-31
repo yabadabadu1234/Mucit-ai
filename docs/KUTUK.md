@@ -3517,3 +3517,120 @@ sayımından **almaz** (o kendi kendini onaylardı); divanı hiç tanımayan
 modül eklenip divana yazılmazsa sınama kırmızı yanar.
 
 57 sınama, 27/27 hüküm şahidi geçiyor.
+
+## H124 — SAĞÎR ve KEBÎR: iki ölçek hakikaten İKİ (Dosya 5)
+
+ARC görevinde iki ilâ dört gösterim çifti vardır ve bu, tek ölçeği
+imkânsız kılar: **kebîr** (bütün görevlerde ortak 41 meleke açısı)
+genelleşir fakat üç örneğe ihtisas edemez; **sağîr** (yalnız o görevin
+çiftleri) ihtisas eder fakat üç noktadan genelleme çıkmaz.
+
+`nefs/iki_olcek.py` ikisini beraber tutar:
+
+* **Sağîr** — `ogrenme/rkhs.py` ile **kapalı formda** (H3: gradyan yok).
+  ``(K+λI)α = y`` Cholesky ile **çözülür**, ters alınmaz.
+* **Kebîr** — `QParametre`, akışın ortak açıları.
+
+H31 çiğnenmez: sağîr uydurma akışın **dışındadır** (eğitim/çözüm
+hattı). Yasak olan, melekenin dalgaya bakıp karar vermesiydi.
+
+### Ölçülen
+
+    24 görevin 24'ünde kapalı form kuruldu
+    24'ünde de çekirdek PSD (değilse temsil teoremi geçersizdi)
+    âzamî uydurma artığı (ortanca)  : 9,85e-05
+
+**İki ölçek aynı şeyi mi söylüyor?** Ölçüt Grassmann asal açılarıdır
+(`ogrenme/grassmann.py`) ve kırmızı yanabilir — açılar sıfıra yakın
+çıksaydı ikinci ölçek gereksiz demekti::
+
+    asal açılar (rad)  : [0,5838  1,1728  1,5411]
+    âzamî açı          : 1,5411   (π/2 = 1,5708 — tam dik)
+    Grassmann mesafesi : 2,0227
+
+Neredeyse dik. İki ölçek hakikaten ikidir.
+
+**İddia edilmeyen:** diklik tek başına *faydayı* ispatlamaz — yapısız
+(gürültü) bir kebîr ölçek de sağîre dik çıkardı. Diklik, "ikisi ayrı
+bilgi taşıyor"un şartıdır, "ikisi de doğru"nun değil.
+
+## H125 — ČECH TIKANIKLIĞI: kehanet evvelâ TERS çıktı, sonra icra edildi
+
+Dosya 3'ün üç fikrinden **Grothendieck fibrasyonu zaten kuruluydu**
+(`nefs/mertebe.py`, 20 lif); tekrar edilmedi. Kurulanlar:
+
+### ∞-operad terkibi
+42 adımlık `QAKIS` zinciri tam, ve `omega_kategori`nin kendi
+çekirdeğinin **bilinen 4 boşluğu** raporlanıyor (o modülün kütüğü
+sessiz kalmasın diye).
+
+### Čech tıkanıklığı
+Her gösterim çifti bir **yama**, mahallî kâidesi `idrak/sekil.py`den.
+Yamalar örtüşmede uyuşuyorsa küllî kesit var (``H¹ = 0``); uyuşmuyorsa
+**tıkanıklık** var — yani *"mahallî çözümler var, küllîsi yok."*
+
+    120 görevde:  H¹ = 0 → 103,  H¹ ≠ 0 → 17,  üçlü tutarlılığı bozan → 0
+
+### Kehanet ve ilk netice: TERS
+
+Dosya 3'ün kıymeti buradaki kehanettedir: ``H¹ ≠ 0`` olan görevlerde
+model **susmalıdır**, çünkü tıkanıklık "cevap yanlış" değil *"küllî
+cevap YOK"* demektir (H10/H16).
+
+Ölçüldü ve **ters çıktı**::
+
+    korelasyon           : −0,1316
+    sükût, tıkanık görevde: 0,1812
+    sükût, açık görevde   : 0,2551
+
+Yani model, küllî cevabı olmayan görevlerde **daha çok** konuşuyordu.
+Bu bir kusurdur ve gürültü değildir: 40 görevde de, 120 görevde de aynı
+işaret çıktı.
+
+### Çözüm — ve niçin okuma değil
+
+``H¹`` dalganın değil **girdinin** vasfıdır: görevin gösterim
+çiftlerinden, akış hiç koşmadan hesaplanır. Onu bir dönme açısına
+çevirmek, ham duyuyu kübitlere kodlayan ``kodla`` ile **aynı
+cinstendir**. H31 yasağı, melekenin dalgaya bakıp karar vermesineydi;
+bu, girdinin kendisidir.
+
+`tikaniklik_kapisi` ``sukut`` kübitine ``arctan``la sınırlanmış bir
+dönme vurur (sınır, H119'un birikim dersindendir: çok yamalı bir
+görevde çember sarıp tersine dönmesin).
+
+### Ölçülen netice
+
+    ölçü                    KAPI KAPALI   KAPI AÇIK
+    korelasyon              −0,1316       **+0,3424**
+    sükût, tıkanık görevde   0,1812       **0,4925**   (2,7×)
+    sükût, açık görevde      0,2551        0,2551      (değişmedi)
+
+İşaret döndü ve tıkanık görevlerdeki sükût 2,7 kat arttı; açık
+görevlerde hiç değişmedi — yani kapı **ayırt ediyor**, hepsini
+susturmuyor.
+
+### Hudut — açıkça
+
+Kurulan **tam Čech kohomolojisi değildir** ve öyle olduğu söylenmiyor:
+örtü sonlu, mahallî kâideler ayrık bir kümeden. O hâlde 1-kozikıl şartı
+ikili uyuşma + üçlü tutarlılığa iner. Gerçek ``H¹`` sonsuz boyutlu bir
+demet kohomolojisidir; bu onun **sonlu ve hesaplanabilir gölgesidir**.
+İsmi doğru kullanmak, tamamını kurmayı iddia etmeyi gerektirmez.
+
+### H124'e ek — kaba tarifin ölçülen haddi
+
+Sağîr ölçek her görevde enterpolasyon yapamıyor ve sebebi ölçüldü::
+
+    60 görevde: artık ortancası 1,33e-04;  artık < 1e-2 olan 47/60
+    tarifi ÇAKIŞAN görev: 8   (koşul sayısı ~5e6'ya fırlıyor)
+
+Sebep `ogrenme/rkhs.py`nin kusuru **değildir** -- o modül koşul
+sayısını raporlamakta ısrar ediyor ve haklı çıkıyor. Kusur benim 14
+sayılık **kaba tarifimdedir**: bazı görevlerde iki ayrı gösterim
+çiftinin tarifi birbirinin aynı çıkıyor, Gram dizeyinin iki satırı
+eşitleniyor ve kapalı form enterpolasyon yerine ortalamaya düşüyor.
+
+Daimî sınama bu yüzden **ortancaya** şart koyar. Her göreve zorlamak,
+borcu ölçütle örtmek olurdu. İnce tarif işi `idrak/cozucu.py`nindir ve
+borç orada durur.

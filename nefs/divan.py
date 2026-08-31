@@ -590,6 +590,11 @@ KADEME2: Tuple[str, ...] = (
     "reel.karmasik",           # nefs/golge.py     -- reel gömme sadakati
     "akis.lie",                # nefs/golge.py     -- SO(n) grup sadakati
     "omega_kategori_nbe",      # nefs/mertebe.py   -- 20 mertebe lifi
+    "ogrenme.rkhs",            # nefs/iki_olcek.py -- sağîr ölçek, kapalı form
+    "ogrenme.grassmann",       # nefs/iki_olcek.py -- iki ölçeğin asal açıları
+    "idrak.arc",               # nefs/iki_olcek.py -- ARC görevleri
+    "idrak.sekil",             # nefs/operad.py    -- yamaların mahallî kâidesi
+    "omega_kategori.turetimler",  # nefs/operad.py -- çekirdeğin boşluk kütüğü
 )
 
 

@@ -33,6 +33,7 @@ import numpy as np
 from .qmeleke import QAKIS, QParametre, qmelekeler, qsicil
 from .sadakat import sadakat_intaci, sadakat_kapisi
 from .gaye import gaye_kos
+from .operad import tikaniklik_kapisi
 from .tertip import tertip_kos
 from .qyazmac import MAKAM_ADLARI, QAyar, QYazmac, donme
 
@@ -114,7 +115,7 @@ class QNefs:
 
     # -----------------------------------------------------------------
     def idrak_et(self, E: np.ndarray, bec: bool = True,
-                 yigin: int = 0) -> QYazmac:
+                 yigin: int = 0, tikaniklik: float = 0.0) -> QYazmac:
         """Ham duyudan nihaî hükme -- tek geçiş, hiç okuma yok.
 
         ``E`` ``(n, d)`` ise tek girdi; ``(B, n, d)`` ise **yığın**:
@@ -130,6 +131,13 @@ class QNefs:
             ayar = replace(ayar, yigin=B)
         q = QYazmac(n_satir, ayar)
         q.kodla(E)
+        # **ČECH TIKANIKLIĞI (Dosya 3 / kütük H125).** ``H¹`` dalganın
+        # değil GİRDİNİN vasfıdır -- görevin gösterim çiftlerinden, akış
+        # hiç koşmadan hesaplanır. Onu bir kapıya çevirmek ``kodla`` ile
+        # aynı cinstendir; H31 yasağı melekenin dalgaya bakmasınaydı.
+        # Küllî cevabı olmayan bir suale verilecek karşılık susmaktır.
+        if tikaniklik:
+            tikaniklik_kapisi(q, float(tikaniklik))
         q.superpozisyon()
         q.mera()
         # **MANTIĞA SADAKAT: her melekeden sonra, muafiyetsiz** (H102/H105).

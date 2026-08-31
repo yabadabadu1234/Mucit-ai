@@ -507,6 +507,47 @@ def _h120_golge_kahin() -> Tuple[bool, str]:
                                    e["üstel_hatası"]))
 
 
+def _h124_iki_olcek() -> Tuple[bool, str]:
+    """Sağîr ve kebîr ölçekler hakikaten İKİ mi (Dosya 5 / kütük H124)?
+
+    İki ölçekli mimarinin bedeli vardır; kazancı ispatlanmalıdır.
+    Ölçüt Grassmann asal açılarıdır: sağîr ölçek kebîrin zaten
+    bildiğini söylüyorsa açılar sıfıra yakın çıkar ve ikinci ölçek
+    gereksizdir.
+    """
+    from idrak import arc
+    from .iki_olcek import olcek_acilari, sagir_uydur
+    g = arc.yukle_hepsi("training")[:12]
+    kurulan = sum(1 for x in g if sagir_uydur(x).get("kuruldu"))
+    o = olcek_acilari(g)
+    if not o.get("yeterli_mi"):
+        return False, "yeterli görev kurulamadı (%d)" % kurulan
+    return (kurulan == len(g) and o["azamî_açı"] > 0.1), \
+        ("%d/%d görevde kapalı form kuruldu; âzamî asal açı %.4f rad "
+         "(π/2 = 1,5708)" % (kurulan, len(g), o["azamî_açı"]))
+
+
+def _h125_cech_sukut() -> Tuple[bool, str]:
+    """Čech tıkanıklığı sükûtu ARTIRIYOR mu (Dosya 3 / kütük H125)?
+
+    ``H¹ ≠ 0`` = "bu örtüde küllî cevap YOK". O hâlde model susmalıdır.
+    Şahit iki koşuyu kıyaslar: kapı kapalıyken bağ **menfî** çıkıyordu
+    (model tıkanıkta daha çok konuşuyordu -- bir kusurdu); kapı açıkken
+    müsbet olmalı.
+    """
+    from .operad import tikaniklik_sukut_bagi
+    kapali = tikaniklik_sukut_bagi(60, kapi=False)
+    acik = tikaniklik_sukut_bagi(60, kapi=True)
+    if not (kapali.get("yeterli_mi") and acik.get("yeterli_mi")):
+        return False, "yeterli tıkanık görev bulunamadı"
+    return (acik["korelasyon"] > 0.15
+            and acik["sukut_tıkanıkta"] > kapali["sukut_tıkanıkta"]), \
+        ("korelasyon %+.4f → %+.4f; tıkanıkta sükût %.4f → %.4f (%d/%d görev)"
+         % (kapali["korelasyon"], acik["korelasyon"],
+            kapali["sukut_tıkanıkta"], acik["sukut_tıkanıkta"],
+            acik["tıkanık_görev"], acik["görev"]))
+
+
 def _h123_divan_tam() -> Tuple[bool, str]:
     """Padişahın eli bütün tebaaya uzanıyor mu (kütük H123)?
 
@@ -564,6 +605,10 @@ SAHITLER: List[Sahit] = [
           _h120_golge_kahin),
     Sahit("H123", "divan tam: padişahın eli bütün tebaaya uzanıyor",
           _h123_divan_tam),
+    Sahit("H124", "sağîr ve kebîr ölçekler hakikaten iki (Dosya 5)",
+          _h124_iki_olcek),
+    Sahit("H125", "Čech tıkanıklığı sükûtu artırıyor (Dosya 3)",
+          _h125_cech_sukut),
 ]
 
 #: Makine şahidi **kurulamayan** hükümler ve sebebi. Bunlar "geçti"
