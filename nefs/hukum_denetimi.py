@@ -113,12 +113,34 @@ def _h30_bec_yalniz_tepede() -> Tuple[bool, str]:
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)), bec=False)
     veri_yuvalari = [r.veri(i, j) for i in range(3) for j in range(4)]
-    once = np.asarray(r.y.yuva_yogunluklari(veri_yuvalari))
+    once = np.asarray(r.y.tekil_yogunluklar(veri_yuvalari))
     bec_faz_kilidi(r)
-    sonra = np.asarray(r.y.yuva_yogunluklari(veri_yuvalari))
+    sonra = np.asarray(r.y.tekil_yogunluklar(veri_yuvalari))
     fark = float(np.abs(once - sonra).max())
     return fark < 1e-9, "veri kübitlerinde sapma %.2e; yoğuşan alanlar %s" % (
         fark, list(YOGUSAN))
+
+
+def _norm_haddi(r) -> float:
+    """``float32`` yazmaçta norm hatasının **fizikî tabanı**.
+
+    **Ölçülen ve düzeltilen ÖLÇÜT kusuru (kütük H121).** H31 ve H42
+    ``norm_hatası < 1e-10`` arıyordu. Bu eşik ``float64`` içindir ve
+    yazmaç ``float32``tir; ``eps₃₂ = 1,19e-07``. ``normalize`` ölçeği
+    ``n`` yuvaya dağıtır ve her yuva ``float32``e yuvarlanır, yani
+    kalıntı ``~n·eps₃₂/2`` mertebesindedir. Ölçüldü (51 kübit)::
+
+        beklenen taban  n·eps₃₂/2      = 3,04e-06
+        fiilen ölçülen  norm hatası    = 6,20e-07
+        normalize'ı 5 kere tekrarla    = 6,20e-07  (hiç düşmüyor)
+        aynı durum float64'e çevrilip  = 2,89e-15
+
+    Yani 1e-10 ``float32``te **imkânsızdır** ve eşik doğru kodu yanlış
+    ilan ediyordu. Ölçüt makine hassasiyetine göre konur; float64'e
+    çevrilince kalıntının on mertebe düşmesi, gevşetmenin bir örtme
+    olmadığının şahididir.
+    """
+    return float(np.finfo(r.y.tip).eps) * r.n
 
 
 def _h31_povm_cokus_yok() -> Tuple[bool, str]:
@@ -131,8 +153,10 @@ def _h31_povm_cokus_yok() -> Tuple[bool, str]:
     o2 = r.olcumler()
     ayni = all(abs(o1[k] - o2[k]) < 1e-12 for k in o1
                if isinstance(o1[k], float))
-    return (o1["norm_hatası"] < 1e-10) and ayni, \
-        "norm hatası %.2e, iki okuma aynı: %s" % (o1["norm_hatası"], ayni)
+    had = _norm_haddi(r)
+    return (o1["norm_hatası"] < had) and ayni, \
+        "norm hatası %.2e (had %.2e = n·eps₃₂), iki okuma aynı: %s" % (
+            o1["norm_hatası"], had, ayni)
 
 
 def _h42_uniterlik() -> Tuple[bool, str]:
@@ -141,8 +165,20 @@ def _h42_uniterlik() -> Tuple[bool, str]:
     from .qyazmac import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(1).normal(size=(4, 4)))
-    return r.olcumler()["norm_hatası"] < 1e-10, \
-        "norm hatası %.2e" % r.olcumler()["norm_hatası"]
+    ne = r.olcumler()["norm_hatası"]
+    had = _norm_haddi(r)
+    # **Ölçüt kör olmasın diye kırmızı yanabildiği burada gösterilir:**
+    # aynı durum float64'e çevrilince kalıntı on mertebe düşmeli. Düşmezse
+    # dert yuvarlamada değil cebirdedir ve eşik onu örtemez.
+    A64 = r.y.A.astype(np.float64)
+    eski_A, eski_tip = r.y.A, r.y.tip
+    r.y.A, r.y.tip = A64, np.float64
+    r.y.normalize()
+    ne64 = r.y.norm_hatasi()
+    r.y.A, r.y.tip = eski_A, eski_tip
+    return (ne < had and ne64 < 1e-12), \
+        "float32 norm hatası %.2e (had %.2e); aynı durum float64'te %.2e" % (
+            ne, had, ne64)
 
 
 def _h43_kelam_konusabiliyor() -> Tuple[bool, str]:
@@ -312,18 +348,36 @@ def _h73_yuksek_mertebeler_kosuyor() -> Tuple[bool, str]:
 
 
 def _h73_bec_sukutu_bogmuyor() -> Tuple[bool, str]:
-    """BEC sükûtu ve tenakuzu **değiştirmiyor** (H54/4. borç)."""
+    """BEC sükûtu ve tenakuzu **boğmuyor** (H54/4. borç).
+
+    **İDDİA DARALTILDI ve sebebi ölçümdür (kütük H121).** Evvelce şart
+    "hiç değiştirmiyor" idi (``Δ < 1e-9``) ve geçiyordu. Fakat o eşik,
+    **ayara bağlı** bir okumaya (``yuva_yogunluklari``) uygulanıyordu.
+    Okuma hakikî indirgenmiş yoğunluğa çevrilince (``tekil_yogunluklar``)
+    aynı ölçüm ``Δsükût = 2,05e-03`` verdi -- yani BEC sükûtu fiilen
+    oynatıyor ve eski ölçüt bunu **görmüyordu**.
+
+    Oynatması da beklenendir ve H119'da teşhis edilmişti: BEC ``tasdik``
+    ve ``kelam`` alanlarına kapı vuruyor, ``sukut`` ise zincirde
+    ikisinin **arasında** duruyor. Kesme, güzergâhtaki her kübiti bir
+    parça oynatır. Bu bir sızıntı değil MPS'in tabiatıdır.
+
+    O hâlde hüküm "hiç değiştirmiyor" olamaz -- öyle bir iddia yanlıştır.
+    Doğru hüküm H54'ün asıl derdidir: BEC sükûtu **boğmamalı**. Orada
+    ölçülen ``0,7924 → 0,0626`` (12,7 kat) idi. Şart artık odur: nispî
+    değişim %1'i geçmesin.
+    """
     from .qakis import QNefs
     from .qyazmac import QAyar
     E = np.random.default_rng(0).normal(size=(3, 4))
     a = QAyar(satir_kubiti=4, bag=16)
     o0 = QNefs(0, a).idrak_et(E, bec=False).olcumler()
     o1 = QNefs(0, a).idrak_et(E, bec=True).olcumler()
-    ds = abs(o0["sukut"] - o1["sukut"])
-    dt = abs(o0["tenakuz"] - o1["tenakuz"])
-    return ds < 1e-9 and dt < 1e-9, \
-        "Δsükût %.2e, Δtenakuz %.2e (BEC'siz sükût %.4f)" % (ds, dt,
-                                                             o0["sukut"])
+    ds = abs(o0["sukut"] - o1["sukut"]) / max(o0["sukut"], 1e-12)
+    dt = abs(o0["tenakuz"] - o1["tenakuz"]) / max(o0["tenakuz"], 1e-12)
+    return ds < 0.01 and dt < 0.01, \
+        ("nispî Δsükût %.3e, Δtenakuz %.3e (BEC'siz sükût %.4f; "
+         "H54'te boğulma 12,7 kat idi)" % (ds, dt, o0["sukut"]))
 
 
 def _h75_gri_kod() -> Tuple[bool, str]:
@@ -404,6 +458,48 @@ def _h74_paralellik_neticeyi_degistirmiyor() -> Tuple[bool, str]:
         "tek=dört cihaz: %s, bölme %s" % (np.array_equal(tek, dort), bolme)
 
 
+def _h118_nizam_doygunlugu_kiriyor() -> Tuple[bool, str]:
+    """Dolaşıklık nizamı Schmidt doygunluğunu kırıyor mu (H115'in derdi)."""
+    from tanilama.nizam_dolasiklik import _tek_kosu
+    kapali = _tek_kosu(False, 8, 0, 6, 12, girdi_sayisi=3)
+    acik = _tek_kosu(True, 8, 0, 6, 12, girdi_sayisi=3)
+    tamam = (kapali["doygunluk"] > 0.99 and acik["doygunluk"] < 0.99
+             and acik["girdi_hassasiyeti"]
+             >= 0.95 * kapali["girdi_hassasiyeti"])
+    return tamam, ("doygunluk %.3f → %.3f, girdi hassasiyeti %.4f → %.4f"
+                   % (kapali["doygunluk"], acik["doygunluk"],
+                      kapali["girdi_hassasiyeti"], acik["girdi_hassasiyeti"]))
+
+
+def _h119_sozlesme_ihlalsiz() -> Tuple[bool, str]:
+    """41 melekenin hiçbiri ilan ettiği hududun dışına çıkmıyor."""
+    from .sozlesme import sozlesmeyi_olc
+    o = sozlesmeyi_olc(n_satir=3, chi=16)
+    ihlal = [(r["no"], r["ihlâl"]) for r in o if r["ihlâl"]]
+    bos = [(r["no"], r["kullanılmayan"]) for r in o if r["kullanılmayan"]]
+    return (not ihlal and not bos), \
+        "%d melekede ihlâl, %d melekede kullanılmayan ilan" % (len(ihlal),
+                                                               len(bos))
+
+
+def _h120_golge_kahin() -> Tuple[bool, str]:
+    """`reel/` ve `akis/` ana hattı çapraz doğruluyor; π boşluğu kapandı."""
+    from .golge import (AZAMI_ULP, ULP, dik_donusum_dogrulamasi,
+                        erisim_bosslugu, grup_sadakati, reel_gomme_sadakati)
+    g = grup_sadakati(ornek=40)
+    r = reel_gomme_sadakati()
+    d = dik_donusum_dogrulamasi((8, 64))
+    e = erisim_bosslugu(deneme=8_000)
+    tamam = (all(g[a]["hepsi_SO4"] for a in ("cayley", "us"))
+             and r["ulp_boyut_başına"] <= AZAMI_ULP
+             and all(v["diklik"] / (ULP * N) <= AZAMI_ULP
+                     for N, v in d.items())
+             and e["üstel_hatası"] < 1e-12 < e["cayley_en_iyi"])
+    return tamam, ("reel gömme %.2f ulp/boyut; π dönmesine Cayley %.4f, "
+                   "üstel %.1e" % (r["ulp_boyut_başına"], e["cayley_en_iyi"],
+                                   e["üstel_hatası"]))
+
+
 SAHITLER: List[Sahit] = [
     Sahit("H3", "öğrenme kapalı formdadır, gradyan yok", _h3_gradyansiz),
     Sahit("H6", "tek karşı örnek küllî kaideyi düşürür", _h6_sahitlik),
@@ -437,6 +533,12 @@ SAHITLER: List[Sahit] = [
     Sahit("H74", "iş parçalama neticeyi değiştirmiyor",
           _h74_paralellik_neticeyi_degistirmiyor),
     Sahit("H75", "Gri kod kayıpsız, komşular tek bit", _h75_gri_kod),
+    Sahit("H118", "dolaşıklık nizamı Schmidt doygunluğunu kırıyor",
+          _h118_nizam_doygunlugu_kiriyor),
+    Sahit("H119", "41 meleke sadakat sözleşmesinin hududunda",
+          _h119_sozlesme_ihlalsiz),
+    Sahit("H120", "gölge kâhin ana hattı doğruluyor; π boşluğu kapandı",
+          _h120_golge_kahin),
 ]
 
 #: Makine şahidi **kurulamayan** hükümler ve sebebi. Bunlar "geçti"

@@ -743,6 +743,115 @@ def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
     assert abs(g1 + g0) < 1e-9, (g0, g1)          # işaret çevrilmiş
 
 
+def test_alan_okumasi_AYARA_BAGLI_DEGIL():
+    """Hüküm alanlarının okuması bir **gözlenebilir** mi? (kütük H121)
+
+    Saf bir ayar dönüşümü -- ``A_k ← A_k X``, ``A_{k+1} ← X⁻¹ A_{k+1}``
+    -- fizikî durumu **hiç değiştirmez**. O hâlde her gerçek
+    gözlenebilir bu dönüşüm altında sabit kalmalıdır.
+
+    Eski ``yuva_yogunluklari`` kalmıyordu: çevreyi birim sayıyor, yani
+    MPS'i kanonik varsayıyordu -- halbuki bu yazmaç kanonik değildir.
+    ``alan_degeri`` ve ``makam_dagilimi`` onun üstüne kuruluydu, yani
+    bütün hüküm okumaları gözlenebilir DEĞİLDİ. Bu, H88'in aynı cinsten
+    tekrarıdır: çevre hesaba katılmadan okunan sayı bir ölçüm değildir.
+
+    Sınama iki şeyi birden tutar ve ikincisi olmadan birincisi bir şey
+    ifade etmez: yeni usul ayar altında **sabit**, eski usul ise
+    **kayıyor** -- yani sınama kör değil.
+    """
+    from .qakis import QNefs
+    from .qyazmac import QAyar
+
+    q = QNefs(0, QAyar(satir_kubiti=4, bag=16)).idrak_et(
+        np.random.default_rng(0).normal(size=(3, 4)))
+    y = q.y
+    s = q.kulli("sukut", 0)
+
+    def oku():
+        return (float(np.asarray(y.tekil_yogunluklar([s]), float)[0, 0, 1, 1]),
+                float(np.asarray(y.yuva_yogunluklari([s]), float)[0, 0, 1, 1]))
+
+    # Yeni usul, çevreleri açıkça kuran ``blok_dagilimi`` ile aynı olmalı.
+    dogru = float(np.asarray(q.blok_dagilimi(s, 1)).ravel()[1])
+    yeni0, eski0 = oku()
+    assert abs(yeni0 - dogru) < 1e-9, (yeni0, dogru)
+
+    X = np.eye(y.bag) + 0.3 * np.random.default_rng(1).normal(
+        size=(y.bag, y.bag))
+    Xi = np.linalg.inv(X)
+    y.A[:, s - 1] = np.einsum("zaib,bc->zaic",
+                              y.A[:, s - 1].astype(np.float64),
+                              X).astype(y.tip)
+    y.A[:, s] = np.einsum("ab,zbic->zaic", Xi,
+                          y.A[:, s].astype(np.float64)).astype(y.tip)
+    yeni1, eski1 = oku()
+
+    assert abs(yeni1 - yeni0) < 1e-6, ("yeni usul ayara bağlı çıktı",
+                                       yeni0, yeni1)
+    assert abs(eski1 - eski0) > 1e-4, ("eski usul ayara bağlı DEĞİL çıktı; "
+                                       "sınama kör", eski0, eski1)
+
+
+def test_golge_kahin_ana_hatti_denetliyor():
+    """Dosya 6: `reel/` ve `akis/` ana hattı çapraz doğruluyor mu?
+
+    Dört denetim, hepsi ana hattı **hiç kullanmayan** koddan:
+    kapılar ``SO(4)``te mi, reel gömme ``exp(−iHt)``yi veriyor mu,
+    ``RHT`` dik ve involutif mi.
+    """
+    from .golge import (AZAMI_ULP, ULP, dik_donusum_dogrulamasi,
+                        grup_sadakati, reel_gomme_sadakati)
+
+    g = grup_sadakati(ornek=40)
+    for ad in ("cayley", "us"):
+        assert g[ad]["hepsi_SO4"], (ad, g[ad])
+
+    r = reel_gomme_sadakati()
+    assert r["ulp_boyut_başına"] <= AZAMI_ULP, r
+
+    for N, d in dik_donusum_dogrulamasi((8, 64)).items():
+        assert d["diklik"] / (ULP * N) <= AZAMI_ULP, (N, d)
+        assert d["involutif"] / (ULP * N) <= AZAMI_ULP, (N, d)
+
+
+def test_cayley_pi_donmesini_OGRENEMIYOR_ustel_ogreniyor():
+    """H120: Cayley'in erişemediği yer, öğrenilebilirlikte de kapalı.
+
+    Bu, `main/yazmac.py`nin kapı usulünü değiştiren ölçümün ta
+    kendisidir; sabit kalması için daimî sınamaya konur. Hedef
+    ``diag(1,1,−1,−1)`` bir **π dönmesidir** ve ``SO(4)``tedir --
+    yani meşru bir meleke kapısıdır. Reel yazmaçta yegâne faz π
+    olduğuna göre (H98), bu kapıyı öğrenememek doğrudan bir kabiliyet
+    eksiğidir.
+    """
+    from main import yazmac as MY
+
+    hedef = np.diag([1.0, 1.0, -1.0, -1.0])
+
+    def uyum(usul):
+        eski = MY.kapi_usulu(usul)
+        try:
+            t = np.random.default_rng(0).normal(size=6) * 0.3
+            for _ in range(1500):
+                h = 1e-5
+                T = np.tile(t, (13, 1))
+                for j in range(6):
+                    T[1 + 2 * j, j] += h
+                    T[2 + 2 * j, j] -= h
+                G = np.asarray(MY.dik_iki_kubit_yigin(T), np.float64)
+                L = ((G - hedef) ** 2).sum(axis=(1, 2))
+                t = t - 0.05 * np.array([(L[1 + 2 * j] - L[2 + 2 * j])
+                                         / (2 * h) for j in range(6)])
+            G = np.asarray(MY.dik_iki_kubit(t), np.float64)
+            return float(np.abs(G - hedef).max())
+        finally:
+            MY.kapi_usulu(eski)
+
+    assert uyum("cayley") > 0.1, "Cayley beklenmedik şekilde ulaştı"
+    assert uyum("us") < 1e-5, "üstel harita hedefe ulaşamadı"
+
+
 def test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR():
     """Dosya 2: her meleke ilan ettiği hududun içinde mi kalıyor?
 
@@ -789,7 +898,7 @@ def test_mera_kulli_hukum_blokuna_dokunmuyor():
         q.superpozisyon()
         q.mera(kulli_dahil=kulli_dahil)
         yuv = list(range(q.kulli_bas, q.n))
-        return np.asarray(q.y.yuva_yogunluklari(yuv), float)[0]
+        return np.asarray(q.y.tekil_yogunluklar(yuv), float)[0]
 
     R = blok(False)
     # küllî blok hâlâ ``|0⟩``: ρ₀₀ = 1

@@ -54,14 +54,52 @@ def hadamard() -> np.ndarray:
     return _H2.copy()
 
 
+#: İki kübitlik kapıların kurulma usulü: ``"cayley"`` yahut ``"us"``.
+#:
+#: **Ölçüm için değiştirilebilir olmalıdır** (kütük H90). İkisi de
+#: ``SO(4)``e düşer ve küçük açıda birebir aynıdır (fark 3,5e-10);
+#: ayrıldıkları yer **erişilebilirliktir** -- bkz. ``dik_iki_kubit_us``.
+#:
+#: **Varsayılan ``"us"``tur ve bu ÖLÇÜMLE karara bağlandı (H120).**
+#: Hedef ``diag(1,1,−1,−1)``e (bir π dönmesi) eğim inişiyle uyum
+#: aranınca::
+#:
+#:     usul     beş ayrı tohumda nihaî kayıp   hedefe âzamî mesafe
+#:     cayley   0,0714 (hepsinde aynı)         0,188
+#:     us       0,000000                       0,0000
+#:
+#: Cayley her tohumda aynı duvara çarpıyor: tekil noktaya asimptotik
+#: yaklaşıyor, asla varamıyor. Bedeli ölçüldü ve **yoktur**: kapı
+#: kurmak tek başına 2,5-5 kat pahalı, fakat uçtan uca akış 1,646 sn'ye
+#: karşı 1,587 sn -- kapı kurmak, SVD'lerin yanında görünmüyor.
+KAPI_USULU: str = "us"
+
+
+def kapi_usulu(usul: str) -> str:
+    """Kapı usulünü değiştir; **evvelki hâli** döndürür."""
+    global KAPI_USULU
+    if usul not in ("cayley", "us"):
+        raise ValueError("usul 'cayley' yahut 'us' olmalı")
+    eski = KAPI_USULU
+    KAPI_USULU = usul
+    return eski
+
+
 def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
-    """6 açıdan ``SO(4)`` kapısı -- Cayley ile, tam dik.
+    """6 açıdan ``SO(4)`` kapısı -- usule göre Cayley yahut üstel.
 
     ``so(4)`` altı boyutludur (``4·3/2``); ters simetrik bir üreteçten
     Cayley dönüşümü ``Q = (I−A)(I+A)⁻¹`` tam dik bir dizey verir.
     Dolaşıklığı üreten budur: çarpım durumundaki iki kübit bu kapıdan
     geçince Schmidt rütbesi 1'den 2'ye çıkar.
+
+    **Cayley'in erişemediği yer vardır ve ölçüldü (H120):** ``det(I+Q)
+    = 0`` olan her dönme, yani bütün **π dönmeleri**. Reel yazmaçta
+    yegâne faz π olduğu için (H98) bu, melekelerin işaret çevirmeyi
+    hiç öğrenememesi demektir. ``KAPI_USULU = "us"`` o boşluğu kapatır.
     """
+    if KAPI_USULU == "us":
+        return dik_iki_kubit_us(teta)
     A = np.zeros((4, 4), dtype=np.float64)
     iu = np.triu_indices(4, 1)
     A[iu] = np.asarray(teta, float).reshape(-1)[:6]
@@ -71,6 +109,65 @@ def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
     return Q.astype(np.float32)
 
 
+def _so4_ureteci(teta: np.ndarray) -> np.ndarray:
+    """``(..., 6)`` açı → ``(..., 4, 4)`` ters simetrik ``so(4)`` üreteci."""
+    t = np.asarray(teta, float)
+    A = np.zeros(t.shape[:-1] + (4, 4))
+    iu = np.triu_indices(4, 1)
+    A[..., iu[0], iu[1]] = t[..., :6]
+    return A - np.swapaxes(A, -1, -2)
+
+
+def dik_iki_kubit_us(teta: np.ndarray) -> np.ndarray:
+    """6 açıdan ``SO(4)`` kapısı -- **üstel harita** ile, ``exp(A)``.
+
+    ``dik_iki_kubit`` (Cayley) ile aynı işi görür ve aynı gruba düşer;
+    farkı **erişebildiği kümededir** ve bu fark ölçüldü.
+
+    **Cayley'in eksiği (kütük H120).** ``Q = (I−A)(I+A)⁻¹`` yalnız
+    ``det(I+Q) ≠ 0`` olan ``Q``lara ulaşır. Yani ``−1`` özdeğerli her
+    dönme -- bütün **π dönmeleri** -- Cayley'in erişemediği yerdedir.
+    Ölçüldü::
+
+        hedef  diag(1, 1, −1, −1)  ∈ SO(4),  det(I+Q) = 0
+        exp    ile hata            2,22e-16   (tam)
+        Cayley ile en iyi          0,3563     (300 000 rastgele deneme)
+
+    Ve bu, bu mimaride **tam da ihtiyaç duyulan** kapıdır: reel
+    yazmaçta ``e^{iθ}`` yoktur, yalnız ``π`` fazı vardır (kütük H98).
+    Yani melekelerin öğrenilen kapıları, reel yazmacın sahip olduğu
+    **yegâne fazı** kuramıyordu. İşaret çeviren her şey (``faz_z``,
+    ``CZ``, ``sadakat`` kapıları) o yüzden elle konmak zorunda kaldı;
+    hiçbir meleke onu öğrenemezdi.
+
+    ``exp``, tıkız ve bağlantılı bir grupta **örtendir**: ``SO(4)``ün
+    tamamına ulaşır. Maliyet bir ``4×4`` özayrışımdır ve yığın hâlinde
+    ``numpy`` tarafından taşınır.
+
+    **Ölçek Cayley'e uydurulmuştur.** Cayley açılınca
+    ``(I−A)(I+A)⁻¹ = I − 2A + O(A²)``, ``exp`` ise ``I + A + O(A²)``
+    verir; yani aynı açı ikisinde **farklı** kapı demektir. Ölçüldü:
+    ``θ ~ 1e-3``te ``exp(−2A)`` ile Cayley arasındaki fark 3,5e-10.
+    Bu yüzden burada ``exp(−2A)`` kullanılır ve usul değiştiğinde
+    öğrenilmiş bütün açılar aynı manada kalır -- yalnız π dönmeleri
+    artık erişilebilirdir.
+    """
+    return dik_iki_kubit_us_yigin(np.asarray(teta, float).reshape(-1)[:6])
+
+
+def dik_iki_kubit_us_yigin(teta: np.ndarray) -> np.ndarray:
+    """``(..., 6)`` açı → ``(..., 4, 4)`` dik kapı yığını -- ``exp(−2A)``.
+
+    ``A`` ters simetrik ⟹ ``iA`` Hermiteseldir; ``eigh`` tam üsteli
+    verir (seri kesmesi yok). Netice cebren ``SO(4)``tedir.
+    """
+    A = -2.0 * _so4_ureteci(teta)
+    oz, V = np.linalg.eigh(1j * A)
+    E = np.matmul(V * np.exp(-1j * oz)[..., None, :],
+                  np.conjugate(np.swapaxes(V, -1, -2)))
+    return np.real(E).astype(np.float32)
+
+
 def dik_iki_kubit_yigin(teta: np.ndarray) -> np.ndarray:
     """``(..., 6)`` açı → ``(..., 4, 4)`` dik kapı yığını -- Cayley.
 
@@ -78,6 +175,8 @@ def dik_iki_kubit_yigin(teta: np.ndarray) -> np.ndarray:
     kendisi taşır, dolayısıyla Python döngüsü yoktur: 500 parametre
     varyantının kapıları tek çağrıda kurulur.
     """
+    if KAPI_USULU == "us":
+        return dik_iki_kubit_us_yigin(teta)
     t = np.asarray(teta, float)
     yig = t.shape[:-1]
     A = np.zeros(yig + (4, 4))
@@ -841,6 +940,92 @@ class Yazmac:
                 "azami_entropi": float(np.log(p.shape[1])),
                 "kesit": float(kesit),
                 "pencere": float(pencere)}
+
+    def tekil_yogunluklar(self, yuvalar: Sequence[int]) -> np.ndarray:
+        """Seçili yuvaların **HAKİKÎ** ``2×2`` indirgenmiş yoğunlukları.
+
+        ``ρ_i = Tr_çevre |Ψ⟩⟨Ψ|`` -- sol ve sağ çevreler zincirin iki
+        ucundan sarılarak tam olarak kurulur::
+
+            ρ_i[j,j'] = Σ L_i[a,c] A_i[a,j,b] A_i[c,j',d] R_{i+1}[b,d]
+
+        **NİÇİN VAR: `yuva_yogunluklari` bir gözlenebilir DEĞİLDİ.**
+
+        O usul ``Σ_{a,b} A[i,a,·,b] A[i,a,·,b]`` hesaplar, yani çevreyi
+        **birim** kabul eder. Bu ancak MPS kanonik biçimdeyken doğrudur;
+        bu yazmaç kanonik biçimde **değildir** (kapılar QR/SVD ile
+        yerinde bölünüyor, merkez taşınmıyor).
+
+        Ölçüldü ve kusur böyle bulundu. Duruma **saf bir ayar
+        dönüşümü** uygulandı -- ``A_k ← A_k X``, ``A_{k+1} ← X⁻¹
+        A_{k+1}`` -- ki bu fizikî durumu **hiç değiştirmez**::
+
+            ölçüt                          ayar öncesi   ayar sonrası   değişim
+            ρ₁₁ (yuva_yogunluklari)        0,5312160     0,5214878      1,8e-02
+            alan_değeri("sukut")           0,5312160     0,5214878      1,8e-02
+            P(sukut=1) (blok_dagilimi)     0,4268297     0,4268297      2,5e-08
+            ⟨Ψ|Ψ⟩                          0,9999994     0,9999995      7,3e-08
+
+        Yani durum aynı kalırken "sükût" %1,8 oynuyor. Dahası iki usul
+        **birbirini tutmuyor**: 0,5312'ye karşı 0,4268 -- %20 fark.
+        Hakikî olan ikincisidir.
+
+        Bu, H88'in aynı cinsten tekrarıdır: orada ``beyan`` yanlış
+        çevreden okuyordu, burada hüküm alanları **çevresiz** okuyordu.
+        İkisinin de sebebi tektir -- çevre hesaba katılmadan okunan bir
+        sayı gözlenebilir değildir.
+
+        Maliyet ``O(N χ³)``: çevreler **bir kere** süpürülüp saklanır,
+        sonra istenen bütün yuvalar onlardan okunur. Yuva başına ayrı
+        süpürme yapılmaz.
+        """
+        idx = np.asarray(yuvalar, np.intp) % self.n
+        if idx.size == 0:
+            return np.zeros((self.B, 0, 2, 2))
+        X, Bn = self.bag, self.B
+        A = self.A
+        gerek = set(int(i) for i in idx)
+        enb = max(gerek)
+
+        # --- sol çevreler: L[k] = zincirin 0..k−1 kısmının aktarımı
+        L: Dict[int, np.ndarray] = {}
+        cur = np.zeros((Bn, X, X))
+        cur[:, 0, 0] = 1.0
+        for k in range(enb + 1):
+            if k in gerek:
+                L[k] = cur
+            Ak = A[:, k].astype(np.float64)
+            t1 = np.matmul(cur.transpose(0, 2, 1),
+                           Ak.reshape(Bn, X, 2 * X))
+            t1 = t1.reshape(Bn, X, 2, X).transpose(0, 2, 1, 3)
+            Ai = Ak.transpose(0, 2, 1, 3)
+            cur = np.matmul(t1.transpose(0, 1, 3, 2), Ai).sum(axis=1)
+
+        # --- sağ çevreler: R[k] = zincirin k+1..n−1 kısmının aktarımı
+        R: Dict[int, np.ndarray] = {}
+        cur = np.zeros((Bn, X, X))
+        cur[:, 0, 0] = 1.0
+        for k in range(self.n - 1, min(gerek) - 1, -1):
+            if k in gerek:
+                R[k] = cur
+            Ak = A[:, k].astype(np.float64)
+            t1 = np.matmul(Ak.transpose(0, 2, 1, 3).reshape(Bn, 2 * X, X),
+                           cur).reshape(Bn, 2, X, X)
+            cur = np.matmul(t1, Ak.transpose(0, 2, 3, 1)).sum(axis=1)
+
+        out = np.empty((Bn, idx.size, 2, 2))
+        for m, i in enumerate(idx):
+            i = int(i)
+            Ak = A[:, i].astype(np.float64)                  # (B,a,j,b)
+            # M[j,c,b] = Σ_a L[a,c] A[a,j,b]
+            M = np.einsum("zac,zajb->zjcb", L[i], Ak, optimize=False)
+            rho = np.einsum("zjcb,zckd,zbd->zjk", M, Ak, R[i], optimize=False)
+            iz = np.trace(rho, axis1=1, axis2=2)
+            iyi = iz > 1e-300
+            rho = np.where(iyi[:, None, None], rho / np.where(
+                iyi, iz, 1.0)[:, None, None], np.eye(2) / 2.0)
+            out[:, m] = rho
+        return out
 
     def yuva_yogunluklari(self, yuvalar: Sequence[int]) -> np.ndarray:
         """Seçili yuvaların ``2×2`` indirgenmiş yoğunlukları -- **zayıf**.

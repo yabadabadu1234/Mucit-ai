@@ -3230,3 +3230,153 @@ beş kat. Nizam açıkken beyan sapması bir miktar düşer (0,62→0,45) ve bu
 kat kat daha büyüktür.
 
 Sınama sayısı 50 → **52**; hepsi geçiyor.
+
+## H120 — GÖLGE KÂHİN BAĞLANDI; CAYLEY'İN π BOŞLUĞU BULUNDU ve KAPATILDI
+
+Dosya 6 reel hat için üç kademe teklif ediyordu. **3. kademeyi
+reddediyorum ve sebebini yazıyorum:** *"icra yolundan çıkar"* şu an
+manasızdır, çünkü `reel/` ve `akis/` **zaten icra yolunda değil** —
+ikisi de beylik. Çıkarmak için evvelâ girmiş olması lazım.
+
+Asıl iş 1. ve 2. kademedir: **ana hattı, ana hattı hiç kullanmayan bir
+koddan denetlemek.** `nefs/golge.py` bunu yapar (kapılar için;
+`nefs/kod_uzayi.py` hüküm bloğu için zaten yapıyordu).
+
+### Bulunan: melekeler işaret çevirmeyi ÖĞRENEMİYORDU
+
+`main/yazmac.py` iki kübitlik kapıları **Cayley** ile kuruyordu:
+``Q = (I−A)(I+A)⁻¹``. Cayley yalnız ``det(I+Q) ≠ 0`` olan dönmelere
+ulaşır — yani **hiçbir π dönmesine** ulaşamaz.
+
+Ve reel yazmaçta yegâne faz π'dir (H98). Yani melekelerin öğrenilen
+kapıları, bu mimarinin sahip olduğu **tek fazı** kuramıyordu. İşaret
+çeviren her şey (`faz_z`, `CZ`, `sadakat` kapıları) o yüzden **elle**
+konmak zorunda kaldı; hiçbir meleke onu öğrenemezdi. Bu bir tercih
+değil, farkedilmemiş bir kısıttı.
+
+Hedef ``diag(1,1,−1,−1)`` — ``SO(4)``tedir, yani meşru bir meleke
+kapısıdır. Eğim inişiyle uyum arandı, beş ayrı tohumla::
+
+    usul     nihaî kayıp            hedefe âzamî mesafe
+    cayley   0,0714 (beş tohumda da aynı)   0,188
+    us       0,000000                        0,0000
+
+Cayley her tohumda **aynı duvara** çarpıyor: tekil noktaya asimptotik
+yaklaşıyor, asla varamıyor.
+
+**Tashih:** ``dik_iki_kubit_us`` (``exp(−2A)``, özayrışımla — seri
+kesmesi yok). Ölçek Cayley'e uyduruldu ki öğrenilmiş açılar aynı manada
+kalsın: küçük açıda fark 3,5e-10. ``KAPI_USULU`` varsayılanı ``"us"``
+yapıldı. Bedeli ölçüldü ve **yoktur**: kapı kurmak tek başına 2,5–5 kat
+pahalı, fakat uçtan uca akış 1,646 sn'ye karşı **1,587 sn** — kapı
+kurmak, SVD'lerin yanında görünmüyor.
+
+### Ölçüt tashihi: mutlak ε yanlış şekildedir
+
+Dosya 6 ``ε ≤ 1e-14`` istiyor. Bu eşik **ölçekten bağımsızdır ve
+yanlıştır**: makine epsilonu 2,22e-16'dır, yani 1e-14 yalnız 45 ulp'tur;
+yuvarlama hatası ise boyutla ve şartlılıkla büyür. ``RHT``in ``N=512``de
+diklik sapması 8,51e-14 — mutlak eşiğe göre "kalıyor", halbuki boyut
+başına **0,75 ulp**, yani kusursuz. **Bir ölçüt doğru koda kırmızı
+yakıyorsa ölçüt bozuktur.** Şart ulp cinsine çevrildi.
+
+Gevşetme olmadığının şahidi: `reel.karmasik`in sakladığı **yanlış
+işaret** (M28) aynı ölçütte ``1,6e+14`` ulp verir — eşiğin on üç
+mertebe üstünde.
+
+### Çapraz doğrulama neticesi
+
+    grup sadakati (akis.lie)      cayley ve us: hepsi SO(4)'te
+    reel gömme (reel.karmasik)    0,66 ulp/boyut
+    RHT (reel.hartley)            0,68–0,99 ulp/boyut
+    reel/ + akis/ kendi sınamaları  111 sınama, hepsi geçiyor
+
+Not: `pytest` bu ortamda kurulu değildi, yani `reel/` ve `akis/`
+sınamaları **hiç koşturulamıyordu**. Kuruldu; 111 sınamanın hepsi
+geçiyor.
+
+## H121 — HÜKÜM ALANLARININ OKUMASI GÖZLENEBİLİR DEĞİLDİ (H88'in tekrarı)
+
+Bu, bu turun en ağır bulgusudur ve H117'nin bir kısmını **nakzeder**.
+
+### Bulgu
+
+`Yazmac.yuva_yogunluklari` bir yuvanın yoğunluğunu
+``Σ_{a,b} A[i,a,·,b] A[i,a,·,b]`` diye hesaplıyordu — yani çevreyi
+**birim** sayarak. Bu ancak MPS **kanonik biçimdeyken** doğrudur; bu
+yazmaç kanonik değildir (kapılar QR/SVD ile yerinde bölünüyor, merkez
+taşınmıyor).
+
+Duruma **saf bir ayar dönüşümü** uygulandı — ``A_k ← A_k X``,
+``A_{k+1} ← X⁻¹ A_{k+1}`` — ki bu fizikî durumu **hiç değiştirmez**::
+
+    ölçüt                          ayar öncesi   ayar sonrası   değişim
+    ρ₁₁ (yuva_yogunluklari)        0,5312160     0,5214878      1,8e-02
+    alan_değeri("sukut")           0,5312160     0,5214878      1,8e-02
+    P(sukut=1) (blok_dagilimi)     0,4268297     0,4268297      2,5e-08
+    ⟨Ψ|Ψ⟩                          0,9999994     0,9999995      7,3e-08
+
+Durum aynı kalırken "sükût" %1,8 oynuyor. Dahası iki usul **birbirini
+tutmuyor**: 0,5312'ye karşı 0,4268 — **%20 fark**.
+
+`alan_degeri`, `makam_dagilimi` ve `povm` bunun üstüne kuruluydu. Yani
+**bütün küllî hüküm okumaları** — makam, mîzân, tenakuz, tasdik, sükût,
+nakz, gaye, tertip — gözlenebilir değildi.
+
+Bu, H88'in aynı cinsten tekrarıdır: orada `beyan` **yanlış** çevreden
+okuyordu, burada hüküm alanları **çevresiz** okuyordu. Sebep tektir:
+çevre hesaba katılmadan okunan bir sayı ölçüm değildir.
+
+**Tashih:** `Yazmac.tekil_yogunluklar` — sol ve sağ çevreler bir kere
+süpürülüp saklanır (``O(N χ³)``), her yuva onlardan okunur. Müstakil
+olarak doğrulanmış `blok_dagilimi` ile **2,2e-16**te örtüşüyor ve ayar
+altında **1e-8**de sabit (eskisi 1e-2 kayıyordu).
+
+### NAKZ — H117'nin tenakuz kazancı
+
+H117 şöyle yazmıştı: *"tenakuz kütlesi 0,2946 → 0,0505, **5,8×**"*.
+Doğru gözlenebilirle yeniden ölçüldü::
+
+    ölçü                KALPSİZ   KALPLİ    kazanç
+    tenakuz kütlesi     0,0000    0,9747    0,0×   ← İŞARET TERSİNE DÖNDÜ
+    ayniyet ihlâli      0,3198    0,0719    4,4×   ← duruyor, hattâ arttı
+
+Yani kalp tenakuzu **azaltmıyor, artırıyor**. H117'nin tenakuz kazancı
+ayara bağlı bir okumadan doğmuş bir **yanılsamaydı** ve burada
+nakzedilir. Ayniyet kazancı ise ayakta ve 2,3×ten 4,4×e çıktı.
+
+**H117 silinmiyor** ("içtihad içtihadı nakzetmez"); yalnız tenakuz satırı
+nakzedildi ve nakz burada zabıtlıdır.
+
+### H94 ve H105 yeniden TEYİT EDİLDİ
+
+Tesadüf tabanının üstündeki fazlalık, doğru gözlenebilirle de sıfır:
+``tenakuz fazlası +0,0000``, ``ayniyet fazlası −0,0003``. Yani küllî
+hüküm alanları mantıkî şartı ne çiğniyor ne gözetiyor — **hâlâ
+yapısızlar**. Kalbin kendi haraplaması da en tesirli melekenin
+**0,8×**ı; "bozulunca bütün vücudu bozan" vasfını taşımıyor.
+
+Bu iddia edilmiyor, olduğu gibi yazılıyor.
+
+### Ölçüt tashihleri (H31, H42, H73b)
+
+Üçü de kırmızıydı ve **üçü de ölçütün kusuruydu**, kodun değil:
+
+* **H31/H42** ``norm_hatası < 1e-10`` arıyordu. Bu bir ``float64``
+  eşiğidir; yazmaç ``float32``tir (``eps₃₂ = 1,19e-07``). ``normalize``
+  ölçeği ``n`` yuvaya dağıtır ve her yuva yuvarlanır, yani taban
+  ``~n·eps₃₂``dir. Ölçüldü (51 kübit): 6,20e-07, ve ``normalize`` beş
+  kere tekrarlanınca **hiç düşmüyor**; aynı durum float64'e çevrilince
+  **2,89e-15**. Yani 1e-10 float32'de imkânsızdır. Eşik ``n·eps₃₂``ye
+  çevrildi ve H42 artık float64 kıyasını da koşturuyor — gevşetmenin
+  bir örtme olmadığının şahidi.
+* **H73b** *"BEC sükûtu hiç değiştirmiyor"* (``Δ < 1e-9``) diyordu ve
+  geçiyordu — fakat **ayara bağlı** okumayla. Doğru okumayla
+  ``Δsükût = 2,05e-03`` çıktı: BEC sükûtu fiilen oynatıyor ve eski
+  ölçüt bunu **görmüyordu**. Oynatması da beklenendir (H119'un
+  güzergâh teşhisi: `sukut`, BEC'in dokunduğu `tasdik` ile `kelam`
+  arasında duruyor). İddia daraltıldı: "hiç değiştirmiyor" yanlıştır,
+  doğru hüküm H54'ün asıl derdidir — **boğmamalı**. Nispî değişim %1
+  şartı kondu; ölçülen %0,48.
+
+26/26 hüküm şahidi geçiyor (evvelce 20/23). Sınama sayısı 52 → **55**.

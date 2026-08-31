@@ -54,7 +54,7 @@ def okuma_vektoru(y: Yazmac, ornek: int = 256) -> np.ndarray:
     """
     n = y.n
     idx = np.linspace(0, n - 1, min(ornek, n)).astype(int)
-    R = y.yuva_yogunluklari(idx)                 # (k, 2, 2)
+    R = y.tekil_yogunluklar(idx)                 # (k, 2, 2)
     z = R[:, 0, 0] - R[:, 1, 1]
     x = 2.0 * R[:, 0, 1]
     return np.concatenate([z, x])

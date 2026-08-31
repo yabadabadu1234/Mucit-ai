@@ -660,7 +660,7 @@ class QYazmac:
         Dönen ``(k, 2)``: ``z = ρ₀₀−ρ₁₁`` (nüfus farkı), ``x = 2ρ₀₁``
         (uyum).
         """
-        R = self.y.yuva_yogunluklari(list(yuvalar))       # (B, k, 2, 2)
+        R = self.y.tekil_yogunluklar(list(yuvalar))       # (B, k, 2, 2)
         return np.stack([R[..., 0, 0] - R[..., 1, 1],
                          2.0 * R[..., 0, 1]], axis=-1)
 
@@ -770,7 +770,7 @@ class QYazmac:
         ``P(Şek), P(Zan), P(Yakîn), P(Vehim)``. Bu bir POVM'dir
         (``Σ E_x = I``); dalga diri kalır.
         """
-        R = self.y.yuva_yogunluklari([self.kulli("makam", 0),
+        R = self.y.tekil_yogunluklar([self.kulli("makam", 0),
                                       self.kulli("makam", 1)])   # (B,2,2,2)
         p0 = np.clip(R[:, 0, 0, 0], 0.0, 1.0)
         p1 = np.clip(R[:, 1, 0, 0], 0.0, 1.0)
@@ -788,7 +788,7 @@ class QYazmac:
         çağrılır; akış içinde hiçbir meleke bunu okumaz.
         """
         bas, kac = self._alan[ad]
-        R = self.y.yuva_yogunluklari(list(range(bas, bas + kac)))
+        R = self.y.tekil_yogunluklar(list(range(bas, bas + kac)))
         v = np.mean(R[..., 1, 1], axis=1)                # (B,)
         return float(v[0]) if self.y.B == 1 else v
 

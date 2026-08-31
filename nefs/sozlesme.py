@@ -184,7 +184,7 @@ def _guzergah(q: QYazmac, ilan: Sequence[str]) -> set:
 
 def _yogunluklar(q: QYazmac) -> np.ndarray:
     """Bütün kübitlerin ``2×2`` indirgenmiş yoğunlukları."""
-    return np.asarray(q.y.yuva_yogunluklari(list(range(q.n))), float)[0]
+    return np.asarray(q.y.tekil_yogunluklar(list(range(q.n))), float)[0]
 
 
 def _hazirla(n_satir: int, chi: int, tohum: int) -> Tuple[QYazmac, QParametre]:
