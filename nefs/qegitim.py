@@ -267,15 +267,95 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
 
 
 # =====================================================================
+def _degerlendir_mudrike(nefs, gorevler: Sequence, azami: int,
+                         derinlik: int) -> Dict[str, object]:
+    """Müdrike çevrimiyle değerlendirme -- padişahın hakikî çıkarımı.
+
+    Ölçü aynı ve sert kalır: hedef ızgara **tam** eşleşti mi. Fakat
+    cevap belirteç kestirimiyle değil, **ispatlı kaide** ile üretilir ve
+    yakîn eşiğini geçmeyen görevde model **susar**.
+    """
+    from .mudrike import mudrike as _mudrike
+
+    deneme = cozulen = konusan = yanlis = sukut = 0
+    hucre: List[float] = []
+    sebepler: Dict[str, int] = {}
+    for g in gorevler:
+        if deneme >= azami:
+            break
+        if not getattr(g, "sinama", None) or not getattr(g, "egitim", None):
+            continue
+        deneme += 1
+        r = _mudrike(g, derinlik=derinlik, dalga=True, nefs=nefs)
+        if r["sükût"]:
+            sukut += 1
+            sebepler[r["sebep"]] = sebepler.get(r["sebep"], 0) + 1
+            hucre.append(0.0)
+            continue
+        konusan += 1
+        tam = True
+        oran = []
+        for (a, b), c in zip(g.sinama, r["cevap"]):
+            if c is None or c.shape != b.shape:
+                tam = False
+                oran.append(0.0)
+                continue
+            e = float(np.mean(c == b))
+            oran.append(e)
+            if e < 1.0:
+                tam = False
+        hucre.append(float(np.mean(oran)) if oran else 0.0)
+        cozulen += tam
+        yanlis += (not tam)
+    return {"deneme": deneme, "tam_çözülen": cozulen,
+            "konuşan": konusan, "yanlış_cevap": yanlis,
+            "sükût": sukut, "atlanan_uzun": 0,
+            "sükût_sebepleri": sebepler,
+            "ilk_belirteç_isabeti": cozulen,
+            "isabet_konuşunca": (cozulen / konusan) if konusan else 0.0,
+            "ortalama_hücre_isabeti":
+                float(np.mean(hucre)) if hucre else 0.0}
+
+
 def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
                 pencere: int = 8, sozluk: int = 16,
-                azami_uret: int = 0) -> Dict[str, object]:
+                azami_uret: int = 0, mudrike_ile: bool = True,
+                derinlik: int = 2) -> Dict[str, object]:
     """Hiç görülmemiş bulmacalar: hedef ızgara **tam** çözüldü mü?
 
-    Ölçü serttir ve öyle olmalıdır. Ayrıca ilk belirteç isabeti ve
-    ortalama hücre isabeti raporlanır; model hiçbir şey bilmiyorsa
-    üçü de sıfır çıkar ve iddia edilecek bir şey kalmaz.
+    ===================================================================
+    KÖK SEBEP -- niçin bu fonksiyon baştan yazıldı (kütük H133)
+    ===================================================================
+
+    Bu değerlendirme evvelce ARC'yi **bir sonraki belirteci kestirme**
+    olarak koşuyordu: görev düz bir belirteç dizisine çevriliyor, sonra
+    hedef ızgara ``argmax(beyan)`` ile **belirteç belirteç** üretiliyordu
+    -- 8 belirteçlik bağlam penceresiyle, 16 sembollük sözlükten.
+
+    Yani padişah, tam da olmamaya yemin ettiği şeyi yapıyordu: bir dil
+    modeli. Ve bu usulle ARC çözülemez, sebebi cebridir:
+
+    * 30×30 bir ızgara 900 hücredir; model 8 belirtecine bakıyor.
+    * Tam eşleşme için ~100–900 belirtecin **hepsi** doğru olmalı.
+      Belirteç başına %95 isabetle bile ``0,95^100 ≈ 0,006``.
+    * Ve `idrak/cozucu.py` -- **ispatlı** ARC çözücüsü, cevap verdiğinde
+      isabeti %100 -- çıkarım yolunda **hiç çağrılmıyordu**.
+
+    Daha kötüsü: 41 melekenin kurduğu hüküm alanları (``tasdik``,
+    ``makam``, ``sukut``) cevaba hiç dokunmuyordu; yalnız ``beyan``ın
+    ``argmax``ı vardı. H115/H105/H129'da ölçülen "hüküm alanları
+    yapısız" neticesi bunun **sonucudur**: hüküm zaten cevaba
+    ulaşmıyordu.
+
+    Artık çıkarım `nefs/mudrike.py`nin **müdrike çevrimi**dir: vazife
+    nevi → tesadüf mü → örtü → kaide → yakîn → beyan. Dalga kaideyi
+    bulmaz, **yakîni tartar** (𝒪₃₂/𝒪₃₃); kaideyi kaide cebri bulur.
+
+    ``mudrike_ile=False`` eski (belirteç kestirimi) yolu geri verir --
+    kıyas ölçümü yapılabilsin diye durur, akışta kullanılmaz.
     """
+    if mudrike_ile:
+        return _degerlendir_mudrike(nefs, gorevler, azami, derinlik)
     cozulen = isabet = deneme = atlanan = 0
     hucre: List[float] = []
     sukut_sayisi = 0

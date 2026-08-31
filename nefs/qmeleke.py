@@ -37,7 +37,7 @@ import numpy as np
 from main.yazmac import dik_iki_kubit
 
 from .mertebe import DINAMIK, lifleri_kur
-from .qyazmac import QYazmac, donme, faz_z, kontrollu_donme
+from .qyazmac import (QYazmac, degil_x, donme, faz_z, kontrollu_donme)
 from .uzaylar import Parametreler
 
 __all__ = ["QMeleke", "qsicil", "qmelekeler", "QAKIS",
@@ -1058,12 +1058,29 @@ class QFesahat(QMeleke):
     SINIF, CHI = "koruyucu", 4   # fesâhat: MPO ile kelama akar
 
     def uygula(self, q, p):
+        # **BEYAN KAPISI (kullanıcı kat'î kararı / kütük H131).**
+        # Duraklar evvelce ``q.veri(i, 0)`` idi -- yani mana HAM VERİDEN
+        # akıyordu. Karar ilga etti: *"Beyan melekeleri ham veriden
+        # doğrudan BESLENEMEZ… mana yalnızca Muhakeme Meclisinden geçmiş,
+        # Tasdik mührü basılmış muhkem hüküm üzerinden akacaktır."*
+        #
+        # Yerel hüküm kübiti, o satır hakkında **verilmiş hükümdür**;
+        # ham duyu değildir. Mana artık oradan akıyor.
         _, kk = q._alan["kelam"]
         a = self.birikim(p, q.n_satir * kk, 1.2) * kk
-        duraklar = [q.veri(i, 0) for i in range(q.n_satir)]
+        duraklar = q.yereller()
         for j in range(kk):
             q.mpo_topla("kelam", a[j * q.n_satir:(j + 1) * q.n_satir],
                         duraklar=duraklar, j=j)
+        # TASDİK MÜHRÜ: mühür yoksa kelâm bastırılır. Menfî kontrol
+        # (``X`` sarmalı) ile: ``tasdik₀ = 0`` iken kelam sıfıra çevrilir.
+        b = self.aci(p, 2, 0.6)
+        tas = q.kulli("tasdik", 0)
+        q.tek(tas, degil_x())
+        for j in range(min(kk, 2)):
+            q.uzak_cift(tas, q.kulli("kelam", j),
+                        kontrollu_donme(-abs(float(b[j]))))
+        q.tek(tas, degil_x())
 
 
 @qkaydet
@@ -1077,11 +1094,20 @@ class QTalakat(QMeleke):
     SINIF, CHI = "koruyucu", 4   # talâkat: kelam içi komşu bağ
 
     def uygula(self, q, p):
+        # **BEYAN KAPISI (H131).** Son satır evvelce ``self.tugla(...)``
+        # idi, yani talâkat VERİ kübitlerine fırça atıyordu. Akıcılık
+        # kelamın kendi içinde olur; ham veriden akıcılık devşirmek,
+        # kararın ilga ettiği doğrudan beslenmenin ta kendisidir.
         _, kk = q._alan["kelam"]
         G = dik_iki_kubit(self.aci(p, 6, 0.4))
         for j in range(kk - 1):
             q.cift(q.kulli("kelam", j), G)
-        self.tugla(q, p, ofset=0, olcek=0.15)
+        # Akıcılık artık TASDİKten besleniyor: mühürlü hüküm ne kadar
+        # kuvvetliyse kelam o kadar akıcı.
+        a = self.aci(p, 2, 0.35)
+        for j in range(2):
+            q.uzak_cift(q.kulli("tasdik", j), q.kulli("kelam", j),
+                        kontrollu_donme(float(a[j])))
 
 
 @qkaydet
@@ -1103,8 +1129,13 @@ class QBelagat(QMeleke):
         for j in range(kk):
             q.uzak_cift(q.kulli("makam", j % 2), q.kulli("kelam", j),
                         kontrollu_donme(float(a[j])))
-        # ayrıca satırlara da iner: mücmel tafsile döner
-        q.mpo_dagit("makam", a[kk:], j=1)
+        # **BEYAN KAPISI (H131).** Evvelce ``mpo_dagit("makam", …)`` ile
+        # makam SATIRLARA (yerel hükümlere) iniyordu. Belâgat sözü
+        # makamına göre söylemektir; hükmü aşağı indirmek 𝒪₃₄ Tafsil'in
+        # işidir, beyanın değil. Sirayet artık tasdik üzerinden kelama.
+        for j in range(2):
+            q.uzak_cift(q.kulli("tasdik", j), q.kulli("kelam", j + 2),
+                        kontrollu_donme(float(a[kk + j])))
 
 
 @qkaydet
@@ -1119,14 +1150,16 @@ class QSanat(QMeleke):
     SINIF, CHI = "koruyucu", None   # sanat: yalnız tek kübitlik dönme, kesme yok
 
     def uygula(self, q, p):
+        # **BEYAN KAPISI (H131).** Altın açı evvelce VERİ kübitlerine de
+        # vuruluyordu. Sanat, keşfedilmiş hakikate elbise giydirmektir;
+        # ham duyuyu bükmek onun işi değildir. Artık yalnız kelam ve
+        # makam alanına dokunur.
         altin_aci = 2.0 * math.pi / (ALTIN ** 2)
-        k = q.ayar.satir_kubiti
-        idx = np.arange(q.n_satir * k)
-        q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)
-                     for j in range(k)],
-                    np.stack([donme((altin_aci * t) % (2 * math.pi))
-                              for t in idx]))
         _, kk = q._alan["kelam"]
+        mk = q._alan["makam"][1]
+        q.tek_yigin([q.kulli("makam", j) for j in range(mk)],
+                    np.stack([donme((altin_aci * (j + 1)) % (2 * math.pi))
+                              for j in range(mk)]))
         q.tek_yigin([q.kulli("kelam", j) for j in range(kk)],
                     np.stack([donme((altin_aci * (j + 1)) % (2 * math.pi))
                               for j in range(kk)]))

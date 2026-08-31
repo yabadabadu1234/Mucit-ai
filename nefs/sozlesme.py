@@ -125,10 +125,13 @@ SOZLESME: Dict[int, Tuple[Tuple[str, ...], str]] = {
     34: (("yerel", "makam"), "tafsil: makam yerellere dağılır"),
     35: (("veri",), "tefsir: siyak ve sibak"),
     36: (("tenakuz", "tasdik"), "te'vil: çelişki şartıyla"),
-    37: (("veri", "kelam"), "fesâhat: mana kelama akar"),
-    38: (("veri", "kelam"), "talâkat: kelam içi bağ + hafif fırça"),
-    39: (("makam", "kelam", "yerel"), "belâgat: makam kelama sirayet eder"),
-    40: (("veri", "kelam"), "sanat: altın açı"),
+    # --- BEYAN KAPISI (kullanıcı kat'î kararı / kütük H131):
+    # dördü de ham veriden KOPARILDI; mana yalnız hükümden akar.
+    37: (("yerel", "tasdik", "kelam"),
+         "fesâhat: mana YEREL HÜKÜMden kelama akar; tasdik mührü şart"),
+    38: (("tasdik", "kelam"), "talâkat: akıcılık tasdikten, veriden değil"),
+    39: (("makam", "tasdik", "kelam"), "belâgat: makam ve tasdik kelama"),
+    40: (("makam", "kelam"), "sanat: altın açı, yalnız hüküm ve kelamda"),
     41: (("mizan", "makam", "sukut", "kelam"), "münazara + sükût kapısı"),
 }
 
