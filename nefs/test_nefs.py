@@ -743,6 +743,53 @@ def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
     assert abs(g1 + g0) < 1e-9, (g0, g1)          # işaret çevrilmiş
 
 
+def test_nizam_dolasiklik_doygunlugu_kiriyor():
+    """Dosya 1'in χ cetveli, H115'in derdini fiilen çözüyor mu?
+
+    H115'te ölçüldü: Schmidt rütbesi **her** bütçede doyuyordu
+    (8→8, 16→16, 32→32), yani akış hacim kanunu dolaşıklığı üretiyor ve
+    hiçbir χ yetmiyor. Bu, H94 (kalp yok) ile H105'i (alanlar yapısız)
+    birden açıklıyordu: âzamî dolaşık durumda her küçük bloğun
+    marjinali düzgündür.
+
+    Nizam açıkken doygunluğun **kırılması** ve beyanın girdiye
+    duyarlılığını **kaybetmemesi** şarttır. İkincisi hakemdir: kesme,
+    girdiyi atarak da "yapılanmış" bir dağılım üretebilir; o zaman
+    kazanç sahtedir.
+    """
+    from tanilama.nizam_dolasiklik import _tek_kosu
+
+    kapali = _tek_kosu(False, 8, 0, 6, 12, girdi_sayisi=3)
+    acik = _tek_kosu(True, 8, 0, 6, 12, girdi_sayisi=3)
+
+    assert kapali["doygunluk"] > 0.99, kapali        # H115 hâlâ geçerli
+    assert acik["doygunluk"] < 0.99, acik            # nizam onu kırıyor
+    # Hakem: girdi hassasiyeti kaybedilmemeli.
+    assert acik["girdi_hassasiyeti"] >= 0.95 * kapali["girdi_hassasiyeti"], (
+        kapali["girdi_hassasiyeti"], acik["girdi_hassasiyeti"])
+
+
+def test_nizam_cetveli_tam_ve_tutarli():
+    """41 melekenin hepsinin sınıfı ve tavanı yazılı mı?
+
+    Cetvelin eksik kalması sessiz bir kusurdur: tavansız bir meleke
+    yazmacın tam ``bag``ıyla koşar ve nizamda delik açar. Ayrıca
+    sınıflar tutarlı olmalı -- bir "çözücü" bir "kurucu"dan geniş tavan
+    isteyemez.
+    """
+    from .qmeleke import nizam_cetveli
+
+    cetvel = nizam_cetveli()
+    assert len(cetvel) == 41, len(cetvel)
+    kurucu = [c for c in cetvel if c[2] == "kurucu"]
+    cozucu = [c for c in cetvel if c[2] == "çözücü"]
+    assert kurucu and cozucu
+    assert max(c[3] for c in cozucu) < min(c[3] for c in kurucu)
+    for no, ad, sinif, chi in cetvel:
+        assert sinif in ("kurucu", "koruyucu", "çözücü"), (no, sinif)
+        assert chi is None or chi >= 1, (no, chi)
+
+
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
 # tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
 # koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.

@@ -147,6 +147,16 @@ class Yazmac:
         # ``[0,1]``dedir, çarpımsaldır ve kıyas edilebilir. Logaritması
         # tutulur ki çarpım alt taşmasın.
         self._sadakat_log = 0.0
+        # **MELEKE BAŞINA χ TAVANI (kütük H118, Dosya 1).** ``bag`` ayrılan
+        # yerin üst sınırıdır; ``bag_tavan`` ise O ANDA izin verilen
+        # Schmidt rütbesidir. Her meleke kendi sınıfına göre bunu
+        # daraltır (çözücüler 1'e kadar), sonra iade eder.
+        #
+        # Bu bir ÜNİTER iddia değildir ve öyle olduğu iddia edilmiyor:
+        # sabit bir üniter kapı bir alt uzayı şartsız söndüremez (H107).
+        # Burada yapılan, KESME cetvelidir -- kesme zaten üniter değil,
+        # yaklaşıklığın kendisidir. Dosya 1'in tablosu böyle okunur.
+        self.bag_tavan = int(bag)
 
     # -----------------------------------------------------------------
     @property
@@ -384,7 +394,7 @@ class Yazmac:
         # ve o çağrı her kapıda tam bir kopya çıkarıyordu. Tip artık
         # baştan sona tektir (kullanıcı hükmü: "her yer float32").
         U, s, Vt = np.linalg.svd(T, full_matrices=False)
-        r = min(X, s.shape[1])
+        r = max(1, min(X, int(self.bag_tavan), s.shape[1]))
         atilan = float(np.sum(s[:, r:] ** 2)) if s.shape[1] > r else 0.0
         toplam = float(np.sum(s ** 2)) + 1e-30
         Uk = U[:, :, :r]                        # (m, 2X, r)
@@ -698,7 +708,7 @@ class Yazmac:
             dl, dr = t.shape[1], t.shape[3]
             U, sv, Vt = np.linalg.svd(t.reshape(Bn, dl * 2, dr),
                                       full_matrices=False)
-            r = min(X, sv.shape[1])
+            r = max(1, min(X, int(self.bag_tavan), sv.shape[1]))
             top = float(np.sum(sv ** 2)) + 1e-30
             atilan += float(np.sum(sv[:, r:] ** 2)) / top
             T[k] = U[:, :, :r].reshape(Bn, dl, 2, r)

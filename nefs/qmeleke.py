@@ -40,10 +40,25 @@ from .mertebe import DINAMIK, lifleri_kur
 from .qyazmac import QYazmac, donme, faz_z, kontrollu_donme
 from .uzaylar import Parametreler
 
-__all__ = ["QMeleke", "qsicil", "qmelekeler", "QAKIS"]
+__all__ = ["QMeleke", "qsicil", "qmelekeler", "QAKIS",
+           "NIZAM_ACIK", "nizami_ac", "nizam_cetveli"]
 
 #: Altın oran -- 𝒪₄₀ Sanat'ın kendi tarifinden gelen açı.
 ALTIN = (1.0 + math.sqrt(5.0)) / 2.0
+
+#: Dolaşıklık nizamı açık mı? **Ölçüm için kapatılabilir olmalıdır.**
+#: Kullanıcı hükmü (H90): her ölçüt kırmızı yanabildiğini ispatlasın.
+#: Nizamın işe yarayıp yaramadığı ancak açık/kapalı iki koşu
+#: kıyaslanarak söylenebilir; kapatılamayan bir tedbir ölçülemez.
+NIZAM_ACIK: bool = True
+
+
+def nizami_ac(acik: bool = True) -> bool:
+    """Dolaşıklık nizamını aç/kapa; **evvelki hâli** döndürür."""
+    global NIZAM_ACIK
+    eski = NIZAM_ACIK
+    NIZAM_ACIK = bool(acik)
+    return eski
 
 _QSICIL: Dict[int, "QMeleke"] = {}
 
@@ -62,6 +77,16 @@ def qsicil() -> Dict[int, "QMeleke"]:
 
 def qmelekeler() -> List["QMeleke"]:
     return [_QSICIL[i] for i in sorted(_QSICIL)]
+
+
+def nizam_cetveli() -> List[Tuple[int, str, str, Optional[int]]]:
+    """41 melekenin dolaşıklık sınıfı ve χ tavanı -- rapor için.
+
+    Cetvel koda gömülü değil, **okunabilirdir**: hangi melekenin hangi
+    sınıfta olduğu iddia edilmez, buradan okunur ve
+    `tanilama/nizam_dolasiklik.py` neticesini ölçer.
+    """
+    return [(m.no, m.ad, m.SINIF, m.CHI) for m in qmelekeler()]
 
 
 class QParametre:
@@ -133,6 +158,28 @@ class QMeleke:
     #: değişse de bu değişmez; açılar duraklara devrolur.
     BIRIKIM_ACI: int = 8
 
+    # =================================================================
+    #  DOLAŞIKLIK NİZAMI (Dosya 1 / kütük H118)
+    # =================================================================
+    #: Melekenin dolaşıklık sınıfı: ``"kurucu"``, ``"koruyucu"``,
+    #: ``"çözücü"``.
+    #:
+    #: **Tenkidim baştan yazılıdır ve saklanmıyor.** Dosya 1 "Tecrit
+    #: χ→1", "Tasdik χ=1 saf durum", "İspat mutlak çözücü" diyor. Sabit
+    #: bir ÜNİTER kapı Schmidt rütbesini şartsız düşüremez -- H107'de
+    #: ispatlandı (üniterlik normu korur, dönme monoton değildir). O
+    #: hâlde tablo bir üniter iddiası olarak okunursa **yanlıştır**.
+    #:
+    #: Doğru okunuşu **kesme cetveli**dir: kesme zaten üniter değildir,
+    #: yaklaşıklığın kendisidir. Bir melekeye χ tavanı vermek, o
+    #: melekenin kapılarından sonra bağın kaç Schmidt değeriyle
+    #: tutulacağını söylemektir. Bu tam olarak kurulabilir ve
+    #: ÖLÇÜLEBİLİR -- `tanilama/nizam_dolasiklik.py` ölçer.
+    SINIF: str = "koruyucu"
+    #: Bu meleke koşarken izin verilen âzamî Schmidt rütbesi.
+    #: ``None`` = tavan yok (yazmacın kendi ``bag``ı).
+    CHI: Optional[int] = None
+
     def aci(self, p, n: int, olcek: float = 0.6) -> np.ndarray:
         """Bu melekenin öğrenilen açıları -- düz vektördeki kendi dilimi."""
         # Anahtara UZUNLUK da girer. Girmediğinde ölçüldü ve kırıldı:
@@ -189,7 +236,19 @@ class QMeleke:
 
     def kosu(self, q: QYazmac, p: Parametreler) -> None:
         n0 = q.iz.kapi
-        self.uygula(q, p)
+        # --- χ TAVANI: meleke kendi sınıfının bütçesiyle koşar.
+        # Tavan koşudan SONRA iade edilir; aksi hâlde bir çözücünün
+        # daraltması bütün akışa sirayet eder ve sonraki kurucular
+        # dolaşıklık kuramaz -- yani nizam bir kere daralttığında bir
+        # daha açılmazdı. İade ``finally``dedir: meleke istisna atsa da
+        # tavan yerine döner.
+        eski = q.y.bag_tavan
+        if NIZAM_ACIK and self.CHI is not None:
+            q.y.bag_tavan = max(1, min(int(self.CHI), q.y.bag))
+        try:
+            self.uygula(q, p)
+        finally:
+            q.y.bag_tavan = eski
         q.iz.not_dus("𝒪%d %s" % (self.no, self.ad),
                      "%d kapı" % (q.iz.kapi - n0))
 
@@ -241,6 +300,7 @@ class QMusahede(QMeleke):
     yazmacı yapısı gereği çözer).
     """
     no, ad = 1, "Müşahede"
+    SINIF, CHI = "kurucu", 8   # öz-dikkat: fırça katmanı dolaşıklığı kurar
 
     def uygula(self, q, p):
         self.satir_donmesi(q, p, 0.7)
@@ -257,6 +317,7 @@ class QHayal(QMeleke):
     kapısı aralanır, fakat mevcut suret silinmez.
     """
     no, ad = 2, "Hayal"
+    SINIF, CHI = "kurucu", 8   # süperpozisyonu aralar
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.9)
@@ -274,6 +335,7 @@ class QMuhayyile(QMeleke):
     komşuluk değil, sıçrama.
     """
     no, ad = 3, "Muhayyile"
+    SINIF, CHI = "kurucu", 16   # atlamalı çift: uzak menzil kurar
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.8))
@@ -294,6 +356,7 @@ class QTertip(QMeleke):
     hiçbir yerde okunmaz; hüküm onunla **dolaşır**.
     """
     no, ad = 4, "Tertip"
+    SINIF, CHI = "koruyucu", 8   # satırı yerel hükme bağlar, menzil kısa
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.7)
@@ -312,6 +375,7 @@ class QTecrit(QMeleke):
     tersidir ve bilgi kaybetmez -- tecrit, atmak değil **ayırmaktır**.
     """
     no, ad = 5, "Tecrit"
+    SINIF, CHI = "çözücü", 1   # TECRİT: Dosya 1'de mutlak çözücü
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
@@ -328,6 +392,7 @@ class QTasavvur(QMeleke):
     kendi içindeki kapılar mahiyeti küllîleştirmez.
     """
     no, ad = 6, "Tasavvur"
+    SINIF, CHI = "kurucu", 16   # MERA kademesi: dolaşıklığı satırlar arasına taşır
 
     def uygula(self, q, p):
         q.mera(kademe=1, teta=self.aci(p, 24, 0.6))
@@ -341,6 +406,7 @@ class QMana(QMeleke):
     Kübit oynamaz, dolaşıklık sürüklenmez; bağ 2'dir.
     """
     no, ad = 7, "Mana"
+    SINIF, CHI = "koruyucu", 4   # MPO bağı zaten 2; birikim tek kübite akar
 
     def uygula(self, q, p):
         q.mpo_topla("tasdik", self.birikim(p, q.n_satir, 0.9))
@@ -354,6 +420,7 @@ class QTahlil(QMeleke):
     bu, tekil değer ayrışımının üniter karşılığıdır (dik dönmeler).
     """
     no, ad = 8, "Tahlil"
+    SINIF, CHI = "çözücü", 2   # tahlil: ortak hâli bileşenlerine ayırır
 
     def uygula(self, q, p):
         self.satir_donmesi(q, p, 0.8)
@@ -363,6 +430,7 @@ class QTahlil(QMeleke):
 class QTerkip(QMeleke):
     """𝒪₉ Terkip -- ayrılanı birleştirme: ters yönlü fırça katmanı."""
     no, ad = 9, "Terkip"
+    SINIF, CHI = "kurucu", 8   # terkip: ayrılanı birleştirir
 
     def uygula(self, q, p):
         self.tugla(q, p, ofset=1, olcek=0.7)
@@ -378,6 +446,7 @@ class QTezat(QMeleke):
     bu olmazdı; girişim ancak işaretli genlikte olur.
     """
     no, ad = 10, "Tezat"
+    SINIF, CHI = "koruyucu", 4   # işaret çevirme; bağ büyütmez
 
     def uygula(self, q, p):
         Z = faz_z()
@@ -400,6 +469,7 @@ class QTenakuz(QMeleke):
     kuvvetlenir. Ölçü hiçbir yerde çıkmaz; hüküm dalgada durur.
     """
     no, ad = 11, "Tenakuz Bulma"
+    SINIF, CHI = "koruyucu", 4   # MPO birikimi, bağ 2
 
     def uygula(self, q, p):
         a = self.birikim(p, q.n_satir, 1.1)
@@ -417,6 +487,7 @@ class QTenkit(QMeleke):
     kübiti sıfır yönüne döndürülür, bilgi silinmez, ağırlığı düşer.
     """
     no, ad = 12, "Tenkit"
+    SINIF, CHI = "çözücü", 2   # tenkit: zayıf şahidi bastırır
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.4)
@@ -433,6 +504,7 @@ class QTasdik(QMeleke):
     bağlayan bir kontrollü dönmedir: ikisi hemfikirse mühür tutar.
     """
     no, ad = 13, "Tasdik"
+    SINIF, CHI = "çözücü", 1   # TASDİK: Dosya 1'de saf durum (χ=1)
 
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
@@ -450,6 +522,7 @@ class QGaye(QMeleke):
     burada meşrudur ve ucuzdur.
     """
     no, ad = 14, "Gaye Belirleme"
+    SINIF, CHI = "koruyucu", 4   # tasdik→mîzân, küllî blok içinde kısa bağ
 
     def uygula(self, q, p):
         a = self.aci(p, 4, 0.5)
@@ -467,6 +540,7 @@ class QMerak(QMeleke):
     açan melekedir (kütük H29) -- ``Γ`` buradan yükselir.
     """
     no, ad = 15, "Merak ve Sual"
+    SINIF, CHI = "kurucu", 8   # merak: nakz alanını süperpozisyona sokar
 
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
@@ -485,6 +559,7 @@ class QDenemeYanilma(QMeleke):
     açıları öğrenilen parametrelerdir.
     """
     no, ad = 16, "Deneme-Yanılma"
+    SINIF, CHI = "kurucu", 8   # keşif hamleleri
 
     def uygula(self, q, p):
         k = q.ayar.satir_kubiti
@@ -505,6 +580,7 @@ class QIhtimal(QMeleke):
     (``R(α)R(β) = R(α+β)``) -- yani logaritmik toplama.
     """
     no, ad = 17, "İhtimal Hesabı"
+    SINIF, CHI = "koruyucu", 4   # önsel: tek kübitlik dönmeler
 
     def uygula(self, q, p):
         a = self.aci(p, 4, 0.4)
@@ -522,6 +598,7 @@ class QKiyas(QMeleke):
     mesafede takas meşrudur.
     """
     no, ad = 18, "Kıyas"
+    SINIF, CHI = "kurucu", 8   # kıyas: satırdan satıra dolaşıklık
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
@@ -539,6 +616,7 @@ class QTemsil(QMeleke):
     iddia değil, kapının tarifidir.
     """
     no, ad = 19, "Temsil"
+    SINIF, CHI = "koruyucu", 8   # temsil dik ve tersinir
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.6))
@@ -557,6 +635,7 @@ class QTesbih(QMeleke):
     kapıdan geçirip dolaştırmakla kurulur.
     """
     no, ad = 20, "Teşbih"
+    SINIF, CHI = "kurucu", 8   # teşbih: iki satırı dolaştırır
 
     def uygula(self, q, p):
         if q.n_satir < 2:
@@ -585,6 +664,7 @@ class QTefekkur(QMeleke):
     1000. mertebe 16 satır ötesine takas yapmadan dokunur.
     """
     no, ad = 21, "Tefekkür"
+    SINIF, CHI = "kurucu", 16   # tefekkür: 20 mertebe, uzak menzil
 
     def uygula(self, q, p):
         lifler = lifleri_kur(DINAMIK)
@@ -664,6 +744,7 @@ class QIllet(QMeleke):
     sağlanır -- kapı hep soldan sağadır.
     """
     no, ad = 22, "İllet Keşfi"
+    SINIF, CHI = "koruyucu", 8   # illet: yönlü ve seyrek
 
     def uygula(self, q, p):
         a = self.yay(p, 4, max(q.n_satir - 1, 1), 0.5)
@@ -682,6 +763,7 @@ class QMantik(QMeleke):
     girişimdir: nakzlar birbirini kuvvetlendirir, tasdikler söndürür.
     """
     no, ad = 23, "Mantık Yürütme"
+    SINIF, CHI = "koruyucu", 4   # MPO nakz birikimi, bağ 2
 
     def uygula(self, q, p):
         q.mpo_topla("nakz", -np.abs(self.birikim(p, q.n_satir, 0.8)))
@@ -697,6 +779,7 @@ class QIspat(QMeleke):
     temsil edilir: uzun zincir daha az döndürür.
     """
     no, ad = 24, "İspat"
+    SINIF, CHI = "çözücü", 1   # İSPAT: Dosya 1'de mutlak çözücü
 
     def uygula(self, q, p):
         a = self.yay(p, 4, max(q.n_satir - 1, 1), 0.5)
@@ -718,6 +801,7 @@ class QTeemmul(QMeleke):
     verir, yani devridaim bir dönmeye eşdeğerdir ve ıraksamaz.
     """
     no, ad = 25, "Teemmül"
+    SINIF, CHI = "koruyucu", 8   # devridaim; yeni menzil açmaz
     TUR = 3
 
     def uygula(self, q, p):
@@ -733,6 +817,7 @@ class QTemkin(QMeleke):
     ihmal değil melekenin tarifidir.
     """
     no, ad = 26, "Temkin"
+    SINIF, CHI = "koruyucu", 4   # temkin: küçük açı
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.12)
@@ -744,6 +829,7 @@ class QTemkin(QMeleke):
 class QTetkik(QMeleke):
     """𝒪₂₇ Tetkik -- kılcal inceleme: her kübite ayrı ince dönme."""
     no, ad = 27, "Tetkik"
+    SINIF, CHI = "koruyucu", 4   # tetkik: ince tek kübit dönmesi
 
     def uygula(self, q, p):
         self.satir_donmesi(q, p, 0.2)
@@ -759,6 +845,7 @@ class QTashih(QMeleke):
     geri alınacağını söyler.
     """
     no, ad = 28, "Tashih"
+    SINIF, CHI = "çözücü", 2   # tashih: tetkikin bir kısmını geri alır
 
     def uygula(self, q, p):
         k = q.ayar.satir_kubiti
@@ -780,6 +867,7 @@ class QTeyit(QMeleke):
     satırın iki ucundan alınır ki mümkün olduğunca ayrı olsunlar.
     """
     no, ad = 29, "Teyit"
+    SINIF, CHI = "koruyucu", 8   # teyit: satırın iki ucu
 
     def uygula(self, q, p):
         k = q.ayar.satir_kubiti
@@ -800,6 +888,7 @@ class QTahkik(QMeleke):
     geliyorsa taklittir. İki yol girişimle karşılaştırılır.
     """
     no, ad = 30, "Tahkik"
+    SINIF, CHI = "koruyucu", 4   # MPO tasdik birikimi, bağ 2
 
     def uygula(self, q, p):
         q.mpo_topla("tasdik", self.birikim(p, q.n_satir, 1.0), j=1)
@@ -814,6 +903,7 @@ class QTedebbur(QMeleke):
     ileri sarımın kendisi mîzâna bağlanır.
     """
     no, ad = 31, "Tedebbür"
+    SINIF, CHI = "kurucu", 8   # tedebbür: ileri sarım
     UFUK = 4
 
     def uygula(self, q, p):
@@ -850,6 +940,7 @@ class QSekZanYakin(QMeleke):
     "makam Zan'dır" diye sert bir hüküm hiç kurulmaz (H31).
     """
     no, ad = 32, "Şek-Zan-Yakîn"
+    SINIF, CHI = "çözücü", 2   # makam kararı: ihtimaller daralır
 
     def uygula(self, q, p):
         a = self.aci(p, 3, 0.6)
@@ -875,6 +966,7 @@ class QMuhakeme(QMeleke):
     Hiçbir yerde bölme yapılmaz, dolayısıyla sıfıra bölme derdi de yoktur.
     """
     no, ad = 33, "Muhakeme"
+    SINIF, CHI = "koruyucu", 4   # muhakeme: küllî blok içi bağlar
 
     def uygula(self, q, p):
         a = self.aci(p, 6, 0.5)
@@ -901,6 +993,7 @@ class QTafsil(QMeleke):
     üniterdir, tersi vardır.
     """
     no, ad = 34, "Tafsil"
+    SINIF, CHI = "koruyucu", 8   # tafsil: MPO dağıtımı, bağ 2
 
     def uygula(self, q, p):
         q.mpo_dagit("makam", self.birikim(p, q.n_satir, 0.7))
@@ -914,6 +1007,7 @@ class QTefsir(QMeleke):
     ortak dolaşıklığında durur.
     """
     no, ad = 35, "Tefsir"
+    SINIF, CHI = "koruyucu", 8   # tefsir: siyak-sibak, komşu satır
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.4))
@@ -932,6 +1026,7 @@ class QTevil(QMeleke):
     değil, kapının tarifidir.
     """
     no, ad = 36, "Tevil"
+    SINIF, CHI = "koruyucu", 4   # te'vil şartlıdır; çelişki yoksa hiç dönmez
 
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
@@ -960,6 +1055,7 @@ class QFesahat(QMeleke):
     yoğunlaşabilir.
     """
     no, ad = 37, "Fesâhat"
+    SINIF, CHI = "koruyucu", 4   # fesâhat: MPO ile kelama akar
 
     def uygula(self, q, p):
         _, kk = q._alan["kelam"]
@@ -978,6 +1074,7 @@ class QTalakat(QMeleke):
     kübitleri birbirine bağlanır; bunlar bitişiktir, kapı yereldir.
     """
     no, ad = 38, "Talâkat"
+    SINIF, CHI = "koruyucu", 4   # talâkat: kelam içi komşu bağ
 
     def uygula(self, q, p):
         _, kk = q._alan["kelam"]
@@ -996,6 +1093,7 @@ class QBelagat(QMeleke):
     makamında başka bükülür. Dağıtım MPO iledir.
     """
     no, ad = 39, "Belâgat"
+    SINIF, CHI = "koruyucu", 4   # belâgat: makam kelama sirayet eder
 
     def uygula(self, q, p):
         _, kk = q._alan["kelam"]
@@ -1018,6 +1116,7 @@ class QSanat(QMeleke):
     fazı vermez (en düzgün dağılım). Ahenk bir tercih değil, bir sayıdır.
     """
     no, ad = 40, "Sanat"
+    SINIF, CHI = "koruyucu", None   # sanat: yalnız tek kübitlik dönme, kesme yok
 
     def uygula(self, q, p):
         altin_aci = 2.0 * math.pi / (ALTIN ** 2)
@@ -1040,6 +1139,7 @@ class QMunazara(QMeleke):
     Mîzân ile makam son kere bağlanır; beyan bundan sonra okunur.
     """
     no, ad = 41, "Münazara"
+    SINIF, CHI = "çözücü", 2   # münazara: son bileşke, telîf daraltır
 
     def uygula(self, q, p):
         _, kk = q._alan["kelam"]

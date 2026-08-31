@@ -3058,3 +3058,70 @@ Kelâm/sükût/gaye şartları ve tertip eklendikten sonra:
     ayniyet ihlâli     0,5543    0,2383    2,3×
 
 48 sınama, hepsi geçiyor.
+
+## H118 — DOLAŞIKLIK NİZAMI KURULDU ve H115'İN DERDİ **ÖLÇÜLEREK KIRILDI**
+
+Dosya 1 (dolaşıklık nizamı) H115'in doğrudan çaresidir. **Tenkidim
+evvelâ yazılır ve saklanmaz:** dosya "Tecrit χ→1", "Tasdik χ=1 saf
+durum", "İspat mutlak çözücü" diyor. Sabit bir **üniter** kapı Schmidt
+rütbesini şartsız düşüremez — bu H107'de ispatlandı (üniterlik normu
+korur, dönme monoton değildir). Tablo bir üniter iddiası olarak
+okunursa **yanlıştır**.
+
+Fakat bu, tablonun yanlış olduğu manasına gelmez. Doğru okunuşu
+**kesme cetveli**dir: kesme zaten üniter değildir, yaklaşıklığın ta
+kendisidir. Her melekeye kendi χ tavanını vermek tam olarak kurulabilir
+ve **ölçülebilir**. Kurulan budur.
+
+### Kurulan
+
+* `main/yazmac.py` → `bag_tavan`: o anda izin verilen Schmidt rütbesi.
+  `bag` ayrılan **yerin** üst sınırıdır; `bag_tavan` **tutulacak**
+  rütbedir. `_cift_kapi_cekirdek` ve `mpo_uygula` ikisini de gözetir.
+* `nefs/qmeleke.py` → 41 melekenin her birine `SINIF` (kurucu /
+  koruyucu / çözücü) ve `CHI` tavanı. `kosu` tavanı kurar, `finally`
+  ile **iade eder** — aksi hâlde bir çözücünün daraltması bütün akışa
+  sirayet eder ve nizam bir kere daralttığında bir daha açılmazdı.
+* `NIZAM_ACIK` / `nizami_ac()` — nizam **kapatılabilir**. Kapatılamayan
+  bir tedbirin faydası ölçülemez (H90).
+* `tanilama/nizam_dolasiklik.py` — açık/kapalı iki koşuyu kıyaslar.
+
+### Ölçülen (aynı tohum, aynı girdi, aynı χ; 8 satır)
+
+    χ    doygunluk (Schmidt/χ)   entropi        beyan sapması   girdi hassasiyeti
+         kapalı → açık           kapalı → açık  kapalı → açık   kapalı → açık
+    8    1,000  → 0,500          2,079 → 1,386  0,2373 → 0,4916  0,2783 → 0,5758
+    16   1,000  → 0,250          2,772 → 1,386  0,1878 → 0,2216  0,2226 → 0,4161
+    32   1,000  → 0,125          3,461 → 1,385  0,1914 → 0,3766  0,1597 → 0,4298
+
+**Doygunluk her χ'de kırıldı.** H115'ten beri ilk defa Schmidt rütbesi
+bütçeyi doyurmuyor; entropi `ln χ`ye yapışık olmaktan çıkıp ~1,386
+(= `ln 4`) sabitinde duruyor — yani nizamın koyduğu tavanda, bütçede
+değil.
+
+### Hakem: girdi hassasiyeti
+
+Beyan sapmasının artması **tek başına delil değildir**: kesme, girdiyi
+atarak da "yapılanmış" bir dağılım üretebilir; o zaman model her
+girdiye aynı şeyi söyler ve kazanç sahtedir. Onun için dört ayrı girdi
+koşturulup beyanlarının birbirinden ortalama toplam değişinti mesafesi
+ölçüldü. **Hassasiyet her χ'de yaklaşık iki katına çıktı** (0,278→0,576;
+0,223→0,416; 0,160→0,430). Yapılanma sahte değildir.
+
+Ayrıca kendi başına dikkate değer: nizam **kapalıyken** hassasiyet χ
+büyüdükçe **düşüyor** (0,278 → 0,223 → 0,160). Yani daha büyük bütçe
+modeli daha **kör** yapıyordu — hacim kanunu patolojisinin doğrudan
+görüntüsü. Nizam açıkken bu tersine döner ve hassasiyet χ'den bağımsız
+hâle gelir.
+
+### Dürüstlük kaydı — tabloya KONMAYAN sayı
+
+`sadakat` (Π tutulan/tam) tabloya **konmadı**. Binlerce kapının çarpımı
+olduğu için nizam kapalıyken bile 1e-14–1e-20 mertebesindedir; açıkken
+1e-18–1e-40. İkisi de fiilen sıfırdır, yani ölçüt bu iki hâli **ayırt
+etmez**. Ayırt etmeyen bir sayıyı hüküm satırına koymak, ölçüyor gibi
+yapmak olurdu. Ölçüt olarak çarpımsal sadakatın bu ölçekte kullanışsız
+olduğu ayrıca zabıtlanır (H111'in `iz.kesme` hakkındaki hükmünün
+kardeşi).
+
+Sınama sayısı 48 → **50**; hepsi geçiyor.
