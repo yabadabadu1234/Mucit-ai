@@ -609,6 +609,75 @@ def test_kaide_eksik_istikra_yakin_vermez():
     assert en.nakz_delili is not None      # niçin tek olmadığının delili
 
 
+
+
+def test_qkaide_oragi_kaideyi_yukseltiyor():
+    """Kâide orağı, ebat kâidesini süperpozisyondan **çekip çıkarıyor mu**?
+
+    H97'de ölçüldü ki evvelki hâli hiçbir şey yükseltmiyordu (dağılım
+    düpedüz düzgün, 1/64). İki kusur düzeltildi: difüzyon ``k`` katlı
+    kontrollü ``Z`` oldu (tek kübitlik ``Z``lerin çarpımı DEĞİL), ve
+    işaretleme açı yerine MPO işaretine geçti.
+
+    H90 gereği ölçüt hem yeşil hem kırmızı yanabilmeli:
+
+    * **yeşil** -- çözümü olan hâlde doğru kâide tepeye çıkmalı ve
+      ağırlığı düz dağılımın kat kat üstünde olmalı;
+    * **kırmızı** -- çözümü OLMAYAN hâlde hiçbir kâide ağırlık
+      toplamamalı.
+    """
+    from .qkaide import coz_kaide
+
+    def klasik(sah, bit):
+        return [(p, q, r)
+                for p in range(1 << bit) for q in range(1 << bit)
+                for r in range(1, 1 << bit)
+                if all(r * ho == p * hi + q for hi, ho in sah)]
+
+    def indis(p, q, r, bit):
+        b = ([(p >> i) & 1 for i in range(bit)]
+             + [(q >> j) & 1 for j in range(bit)]
+             + [(r >> l) & 1 for l in range(bit)])
+        return sum(bi << i for i, bi in enumerate(b))
+
+    bit = 2
+    for sah in ([(3, 3), (2, 2), (5, 5)], [(2, 4), (3, 6), (1, 2)],
+                [(4, 2), (6, 3), (2, 1)], [(2, 3), (3, 4), (5, 6)]):
+        kl = klasik(sah, bit)
+        assert kl, sah
+        idx = {indis(*c, bit) for c in kl}
+        r = coz_kaide(sah, bit=bit, tur=2)
+        P = r["dağılım"]
+        agirlik = float(sum(P[i] for i in idx))
+        duz = len(idx) / len(P)
+        assert r["en_yüksek"] in idx, (sah, r["çözüm"], kl)
+        assert agirlik > 5.0 * duz, (sah, agirlik, duz)
+        assert r["kesme"] < 1e-12, r["kesme"]      # MPO fiilen tam
+
+    # --- KIRMIZI: çözümü olmayan hâlde ağırlık toplanmamalı
+    celiskili = [(2, 3), (2, 5)]
+    assert not klasik(celiskili, bit)
+    r = coz_kaide(celiskili, bit=bit, tur=2)
+    assert r["sahte_kok"], "sahte kök denetçisi kırmızı yanmadı"
+
+
+def test_qkaide_asikar_kaideyi_eliyor():
+    """``r = 0`` ebadı hiç söylemez; orak onu çözüm saymamalı.
+
+    Ölçüldü ve düzeltildi: elenmediğinde orağın tepesi ``(0,0,0)``
+    çıkıyordu -- yani "hiçbir şey söylemeyen kâide", hakikî kâide kadar
+    kuvvetle işaretleniyordu.
+    """
+    from .qkaide import coz_kaide, _coz
+
+    r = coz_kaide([(2, 4), (3, 6), (1, 2)], bit=2, tur=2)
+    assert r["çözüm"] == (2, 0, 1), r["çözüm"]
+    P = r["dağılım"]
+    for i in range(len(P)):
+        if _coz(i, 2)[2] == 0:                     # r = 0 olan bütün kollar
+            assert P[i] < 0.5 * float(P[r["en_yüksek"]]), (_coz(i, 2), P[i])
+
+
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
 # tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
 # koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.

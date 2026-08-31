@@ -2317,3 +2317,89 @@ ile temiz faz geri tepmesi kurmak (ancilla gerekir, çöp geri alınır),
 yahut (b) açı kodlamasını koruyup tam ``A·S₀·A†`` genlik yükseltme
 çevrimini kurmak (ancilla gerekmez, fakat ``k`` katlı kontrollü kapı
 gerekir).
+
+## H98 — KÂİDE ORAĞI İŞLİYOR: 17–22 kat yükseltme, kesme 1e-16 (ölçüldü)
+
+Kullanıcı hükmü: *"İkisini de kur, ÖLÇÜM karar versin."* Kuruldu,
+koşturuldu, ölçüm hükmünü verdi.
+
+### Ölçülen -- klasik hakikate karşı, beş hâlde
+
+``bit=2`` (64 kâide adayı), iki Grover turu, ``k=6`` kâide kübiti:
+
+=====================  =========  ==============  =========  =========
+hâl                    tepe       çözüm ağırlığı  düz dağ.   kesme
+=====================  =========  ==============  =========  =========
+çıktı = girdi          (2,0,2) ✓  **0,787**       0,047      1,8e-16
+çıktı = 2·girdi        (2,0,1) ✓  **0,344**       0,016      5,9e-16
+çıktı = girdi/2        (1,0,2) ✓  **0,344**       0,016      1,4e-15
+çıktı = girdi+1        (3,3,3) ✓  **0,787**       0,047      9,9e-17
+ÇELİŞKİLİ (çözümsüz)   —          **0,000** ✓     0,000      6,7e-17
+=====================  =========  ==============  =========  =========
+
+Yükseltme **17–22 kat**; kesme ``~1e-16``, yani işlem fiilen **tam**.
+Çözümü olmayan hâlde ağırlık **sıfır** -- yani ölçüt kırmızı da yanıyor
+(H90'ın şartı).
+
+### İki usul yarıştırıldı, biri silindi
+
+    usul          tepe doğru mu   çözüm ağırlığı (düz 0,047)
+    açı × 1            ✗               0,064      ← yükseltme YOK
+    işaret × 1         ✓               0,473
+    işaret × 2         ✓               0,787
+
+**Açı usulü silindi.** Niçin işlemediği H97'de teşhis edilmişti ve
+ölçüm teşhisi doğruladı: işaretleme kâide yazmacına faz değil, oraka
+**genlik** yazıyor; orak izlenip atılınca ``cos²+sin² = 1`` olduğu için
+kâide marjinali hiç değişmiyor.
+
+Buradan çıkan ve kütüğe geçen umumî kaide:
+
+> **Reel yazmaçta faz geri tepmesi ancak ``X`` ile olur** (``|−⟩``,
+> ``X``in −1 özdurumudur). ``R_y``nin özdurumları karmaşık olduğu için
+> açı kodlamasıyla temiz bir faz orağı **kurulamaz**.
+
+### Düzeltilen iki kusur (ikisi de H97'de ölçülmüştü)
+
+1. **Difüzyon.** ``k`` katlı kontrollü ``Z`` yerine her kübite ayrı
+   ``Z`` vurulmuştu; o işlemci çarpanlarına ayrılır ve hiçbir yansıtma
+   yapmaz. Doğrusu ``I − 2|0…0⟩⟨0…0|``dır ve köşegen olduğu için
+   **MPO bağ boyutu 2**dir -- ancilla gerekmez.
+2. **İşaretleme.** ``δ``nın koşan toplamı MPO'nun **bağ indisinde**
+   taşınır (``w_sağ = w_sol + c_m·b_m``), sağ sınır toplam sıfırsa
+   ``−1`` verir. Bağ boyutu ``δ``nın **menzili** kadardır -- ``2^k``
+   değil, katsayıların büyüklüğünde polinom.
+
+### Üçüncü kusur: ÂŞİKÂR KÂİDE
+
+Orağın ilk doğru koşusunda tepe ``(0,0,0)`` çıktı. ``r = 0`` demek
+``0 = p·h + q`` demektir; bu bir ebat kâidesi **değildir**, ebadı hiç
+söylemez. Yani orak, *"hiçbir şey söylemeyen kâide"*yi hakikî kâide
+kadar kuvvetle işaretliyordu.
+
+Düzeltildi: bağ indisi artık iki şey birden taşır -- koşan toplam **ve**
+*"r bitlerinde hiç 1 gördüm mü"* bayrağı. İşaret ancak ``δ=0`` **ve**
+bayrak kalkmışsa vurulur. Bağ boyutu ikiye katlanır, başka bedeli yok.
+
+Bu, kütükteki daha umumî bir kaidenin hususî hâlidir ve öyle kaydedilir:
+**her ispat, ispatladığı şeyin boş olmadığını da ispatlamalıdır.**
+``δ=0`` sağlanıyor diye kâide olmaz; kâidenin bir şey **söylüyor**
+olması ayrı bir şarttır.
+
+### Kabul edilen hudut -- gizlenmiyor
+
+Şahitler tek bir doğrusal biçimde (``Σ λ_s δ_s``) birleştirilir; bu,
+``δ_s``lerin **ayrı ayrı** sıfır olmasını garanti etmez. Doğurduğu
+**sahte kökler klasik olarak sayılır** (``sahte_kokler``) ve
+raporlanır -- çelişkili hâlde bir tane çıktı ve bildirildi. Tam AND,
+bağ indisinde bütün ``δ_s``leri birden taşımayı ister; bağ boyutu şahit
+sayısında üstel büyüdüğü için alınmadı.
+
+### Hâlâ İDDİA EDİLMEYEN
+
+Kurulan **yalnız ebat rüknüdür** (``H_D``). İskelet (``H_S``), illet
+(``H_C``), nakz (``H_N``) ve muhakeme (``H_J``) rükünleri kurulmadı.
+``bit=2`` ile ölçüldü; büyük ``bit``te ``χ``nin ne olacağı
+**ölçülmedi**. Ve hakikî ARC görevlerinde koşturulmadı.
+
+İki kalıcı sınama eklendi (46 sınama, hepsi geçiyor).

@@ -24,42 +24,64 @@ durumunu tek tek dolaşmaya hiç gerek yoktur. Benim evvelki teklifim
 tam da bu yüzden düşürüldü ve düşürülmesi doğrudur.
 
 ===================================================================
-2. NİÇİN FAZ DEĞİL AÇI -- yazmaç REELDİR
+2. NİÇİN AÇI DEĞİL İŞARET -- yazmaç REELDİR (ÖLÇÜLDÜ)
 ===================================================================
 
-Kullanıcının getirdiği teklif ``exp(−iγδ²)`` diyagonal faz işlemcisini
-öneriyordu. Fikir doğrudur (ancilla ve çöp ihtiyacını kaldırır) fakat
-**bu mimaride doğrudan tatbik edilemez**: bu projenin yazmacı reeldir --
-``dik_iki_kubit`` ortogonaldir, ``A`` reel kayan noktadır, ``beyan``
-``np.real`` alır. Reel bir yazmaçta ``exp(iθZ)`` yoktur; olan yalnız
-``diag(1,−1)`` yani ``π`` fazıdır.
+Kullanıcının getirdiği teklif ``exp(−iγδ²)`` **diyagonal faz**
+işlemcisi öneriyordu. Bu mimaride tatbik **edilemez**: yazmaç reeldir
+-- ``dik_iki_kubit`` ortogonaldir, ``A`` reel kayan noktadır, ``beyan``
+``np.real`` alır. Reel yazmaçta ``exp(iθZ)`` yoktur; olan ``diag(1,−1)``,
+yani ``π`` fazıdır.
 
-Reel karşılığı vardır ve daha ucuzdur: ``δ``yı bir **faza** değil bir
-**açıya** yazmak. Tek bir ``orak`` kübiti ``|0⟩``dan başlar ve her kâide
-kolunda o kolun ``δ``sı kadar döner::
+Evvelâ ``δ`` bir **açıya** yazıldı (orak kübiti ``γδ`` kadar döner).
+Kullanıcı hükmü *"ikisini de kur, ÖLÇÜM karar versin"* gereği iki usul
+yan yana koşturuldu ve ölçüm hükmünü verdi::
 
-    R(γδ)|0⟩ = cos(γδ)|0⟩ + sin(γδ)|1⟩
+    usul          tepe doğru mu     çözümlerin ağırlığı (düz: 0,047)
+    açı × 1            ✗                    0,064   ← yükseltme YOK
+    işaret × 1         ✓                    0,473
+    işaret × 2         ✓                    0,787   ← 17 kat
 
-``δ = 0`` olan kolda orak **hiç kımıldamaz**; ``δ ≠ 0`` olan her kol
-``|1⟩``e genlik **sızdırır**. Şahitler sırayla işlendiğinde (akışkan
-usul), yalnız **bütün şahitlerde** ``δ=0`` olan kol ``orak=|0⟩``da tam
-genliğiyle kalır. Yani:
+Açı usulü niçin işlemedi: işaretleme kâide yazmacına **faz** değil,
+oraka **genlik** yazıyor. Orak izlenip atılınca ``cos² + sin² = 1``
+olduğu için kâide marjinali hiç değişmiyor. Reel yazmaçta faz geri
+tepmesi ancak ``X`` ile olur (``|−⟩``, ``X``in −1 özdurumudur);
+``R_y``nin özdurumları karmaşık olduğu için açı kodlamasıyla temiz bir
+faz orağı **kurulamaz**. Açı usulü ölçümden sonra **silindi**.
 
-    **İSPAT, HİÇ SIZDIRMAMIŞ OLAN KOLDUR.**
+Kalan usul şudur: ``δ``nın koşan toplamı MPO'nun **bağ indisinde**
+taşınır ve sağ sınır, toplam sıfırsa ``−1`` verir::
 
-Bu, Grover'ın işaretleme adımının reel ve ancillasız karşılığıdır.
-``2^k`` yoktur, çöp yazmacı yoktur, geri alma derdi yoktur -- çünkü
-işaretleme zaten tek kübitte ve tersinirdir.
+    w_sağ = w_sol + c_m · b_m        (i'de köşegen)
+
+Bağ boyutu ``δ``nın **menzili** kadardır -- ``2^k`` değil, katsayıların
+büyüklüğünde polinom. Difüzyon da ``I − 2|0…0⟩⟨0…0|`` MPO'sudur
+(bağ boyutu 2); evvelce her kübite ayrı ``Z`` vurulmuştu ve o işlemci
+çarpanlarına ayrıldığı için **hiçbir şey yansıtmıyordu** (H97).
 
 ===================================================================
-3. MALİYET
+3. MALİYET ve ÖLÇÜLEN NETİCE
 ===================================================================
 
-``K`` şahit, ``k`` kâide kübiti için ``K·k`` iki-kübit kapısı. ``k=12``,
-``K=4`` için 48 kapı. Kâide adayı sayısı ``2^12 = 4096``tır ve hepsi
-**aynı anda** denetlenir. Nispet ``4096 / 48 ≈ 85``tir ve ``k``
-büyüdükçe üstel olarak açılır -- kullanıcının *"aynı anda 1 milyon
-belirteç"* hükmünün bu rükündeki fiilî karşılığı budur.
+``k = 6`` kâide kübiti (64 aday) için tek MPO; ölçülen kesme
+``~1e-16``, yani işlem fiilen **tam**. Beş hâlde klasik hakikatle
+yüzleştirildi::
+
+    çıktı = girdi     → (2,0,2) ✓    ağırlık 0,787  (düz 0,047)
+    çıktı = 2·girdi   → (2,0,1) ✓    ağırlık 0,344  (düz 0,016)
+    çıktı = girdi/2   → (1,0,2) ✓    ağırlık 0,344  (düz 0,016)
+    çıktı = girdi+1   → (3,3,3) ✓    ağırlık 0,787  (düz 0,047)
+    ÇELİŞKİLİ         → çözüm yok, ağırlık 0,000 ✓  (1 sahte kök bildirildi)
+
+Bütün adaylar **aynı anda** denetlenir; kullanıcının *"aynı anda 1
+milyon belirteç"* hükmünün bu rükündeki fiilî karşılığı budur.
+
+**Kabul edilen hudut.** Şahitler tek bir doğrusal biçimde
+(``Σ λ_s δ_s``) birleştirilir; bu, ``δ_s``lerin ayrı ayrı sıfır olmasını
+garanti etmez. Doğuracağı **sahte kökler klasik olarak sayılır**
+(``sahte_kokler``) ve gizlenmez -- çelişkili hâlde bir tane çıktı ve
+bildirildi. Tam AND, bağ indisinde bütün ``δ_s``leri birden taşımayı
+ister; bağ boyutu şahit sayısında üstel büyür ve o yüzden alınmadı.
 
 ===================================================================
 4. İDDİA EDİLMEYEN
@@ -85,9 +107,14 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .qyazmac import QYazmac, donme, faz_z, kontrollu_donme
+from .qyazmac import QYazmac, donme
 
 __all__ = ["EbatSarti", "sartlari_kur", "KaideOragi", "coz_kaide"]
+
+#: Şahitleri tek doğrusal biçimde birleştiren ağırlıklar. Asal ve
+#: birbirine yakın olmayan seçilir ki ``Σ λ_s δ_s = 0`` tesadüfen
+#: sağlanmasın; sahte kök doğurup doğurmadığı ayrıca **sınanır**.
+_LAMBDA: Tuple[int, ...] = (1, 3, 7, 13, 23, 41, 71, 113)
 
 
 # =====================================================================
@@ -130,11 +157,10 @@ def sartlari_kur(sahitler: Sequence[Tuple[int, int]], bit: int = 4
 
 # =====================================================================
 class KaideOragi:
-    """Kâide yazmacını süperpozisyona sokar ve şartı **açıya** yazar."""
+    """Kâide yazmacını süperpozisyona sokar ve şartı **işaretle** vurur."""
 
-    def __init__(self, q: QYazmac, gama: float = 0.35) -> None:
+    def __init__(self, q: QYazmac) -> None:
         self.q = q
-        self.gama = float(gama)
         _, self.k = q._alan["kaide"]
         self.orak = q.kulli("orak", 0)
 
@@ -152,80 +178,126 @@ class KaideOragi:
         self.q.tek_yigin(yuv, np.stack([donme(0.25 * math.pi)] * len(yuv)))
 
     # -----------------------------------------------------------------
-    def sart_yaz(self, sart: EbatSarti) -> None:
-        """Tek bir şahidin şartını orak kübitine yaz -- **akışkan usul**.
+    def sifir_yansitmasi(self) -> float:
+        """``R₀ = I − 2|0…0⟩⟨0…0|`` -- kâide bloğunda, **tam**, ancillasız.
 
-        Her kâide kübiti, kendi katsayısı kadar orak kübitini çevirir::
+        **ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H97).** Evvelce difüzyon,
+        her kübite ayrı ayrı ``Z`` vurularak yazılmıştı. O işlemci
+        ``Π_j (−1)^{b_j}``dir; **çarpanlarına ayrılır** ve ``|0…0⟩``
+        etrafında hiçbir yansıtma yapmaz. Ölçüldü: dağılım düpedüz
+        düzgün kalıyordu (1/64, beş halin hepsinde).
 
-            b_m = 1  →  orak ``γ·c_m`` kadar döner
-            b_m = 0  →  hiç dönmez
+        Doğrusu ``k`` katlı **kontrollü** ``Z``dir ve tek kübitlik
+        ``Z``lerin çarpımı ona eşit değildir. Ancilla ile kurmak
+        gerekmez: işlemci köşegen olduğu için **MPO bağ boyutu 2**dir::
 
-        Dönmeler bileşke olduğu için (``R(α)R(β) = R(α+β)``) orak, o kolun
-        ``γ·δ``sı kadar dönmüş olur. ``δ = 0`` ise orak yerinde durur.
+            w = 0 kanalı : birim (δ_ij)          katsayı  +1
+            w = 1 kanalı : |0⟩⟨0| (δ_i0 δ_j0)    katsayı  −2
 
-        **Neden şahitler tek tek işlenir.** Hepsinin ``δ``sı tek açıda
-        toplansaydı, ``δ₁ = +3`` ile ``δ₂ = −3`` birbirini götürür ve
-        hiçbirini sağlamayan bir kâide sağlıyor görünürdü. Şahit başına
-        ayrı yazıp ayrı işaretlemek bu iptali imkânsız kılar; kütük
-        H95'teki *akışkan geri alma* kaidesinin buradaki karşılığı budur.
+        Sol sınır ``(1, −2)``, sağ sınır ``(1, 1)``; bileşke tam olarak
+        ``I − 2|0…0⟩⟨0…0|``dır.
         """
         yuv = self.yuvalar()
-        if abs(sart.d) > 1e-12:
-            self.q.tek(self.orak, donme(self.gama * sart.d))
-        for m, cm in enumerate(sart.c):
-            teta = self.gama * float(cm)
-            if abs(teta) < 1e-12:
-                continue
-            self.q.uzak_cift(yuv[m], self.orak, kontrollu_donme(teta))
+        bas, son = min(yuv), max(yuv) + 1
+        W: Dict[int, np.ndarray] = {}
+        for j in yuv:
+            T = np.zeros((2, 2, 2, 2))
+            T[0, 0, 0, 0] = T[0, 1, 1, 0] = 1.0      # birim kanalı
+            T[1, 0, 0, 1] = 1.0                      # |0⟩⟨0| kanalı
+            W[j] = T
+        return self.q.y.mpo_uygula(
+            W, 2, bas=bas, son=son,
+            sol_sinir=np.array([1.0, -2.0]),
+            sag_sinir=np.array([1.0, 1.0]))
 
-    def sart_geri_al(self, sart: EbatSarti) -> None:
-        """``sart_yaz``ın tam tersi -- ters sırada ve ters açıyla."""
+    def difuzyon(self) -> float:
+        """Grover difüzyonu: ``|Ψ₀⟩`` etrafında yansıtma.
+
+        ``D = 2|Ψ₀⟩⟨Ψ₀| − I = −U R₀ U†``; ``U`` süperpozisyonu kuran
+        dönmedir. Genel işaret ölçülebilir hiçbir şeyi değiştirmez.
+        """
         yuv = self.yuvalar()
-        for m in range(len(sart.c) - 1, -1, -1):
-            teta = -self.gama * float(sart.c[m])
-            if abs(teta) < 1e-12:
-                continue
-            self.q.uzak_cift(yuv[m], self.orak, kontrollu_donme(teta))
-        if abs(sart.d) > 1e-12:
-            self.q.tek(self.orak, donme(-self.gama * sart.d))
+        self.q.tek_yigin(yuv, np.stack([donme(-0.25 * math.pi)] * len(yuv)))
+        k = self.sifir_yansitmasi()
+        self.q.tek_yigin(yuv, np.stack([donme(0.25 * math.pi)] * len(yuv)))
+        return k
 
     # -----------------------------------------------------------------
-    def isaretle(self, sartlar: Sequence[EbatSarti]) -> None:
-        """Bütün şahitleri sırayla işaretle.
+    def isaret_oragi(self, sartlar: Sequence[EbatSarti]) -> float:
+        """**ORAK A** -- tam işaret orağı, ancillasız, MPO ile.
 
-        Her şahit için: şartı yaz → orak kübitine ``Z`` vur → şartı geri
-        al. ``δ=0`` olan kolda orak hiç kımıldamadığı için ``Z`` ona
-        dokunmaz ve genliği tam kalır; ``δ≠0`` olan kolda ise orak
-        ``|1⟩``e sızmış olduğundan ``Z`` o kolu böler ve genliğini
-        ``cos(2γδ)`` nispetinde düşürür.
+        Şart ``δ = Σ c_m b_m + d = 0``dır ve ``c_m`` **tam sayıdır**.
+        O hâlde ``δ``nın koşan toplamı MPO'nun **bağ indisinde**
+        taşınabilir::
 
-        Bir kâide **bütün** şahitleri sağlamadıkça sızıntıdan kurtulamaz;
-        yani işaretleme, şartların **mantıkî çarpımıdır** (``⋀``) ve
-        bunun için ayrı bir çok-kontrollü kapıya ihtiyaç yoktur.
-        """
-        for s in sartlar:
-            self.sart_yaz(s)
-            self.q.tek(self.orak, faz_z())
-            self.sart_geri_al(s)
+            w_sağ = w_sol + c_m · b_m          (i'de köşegen)
 
-    def difuzyon(self) -> None:
-        """Grover difüzyonu -- ``|Ψ₀⟩`` etrafında yansıtma, kâide bloğunda.
+        Sol sınır ``d`` değerinde başlar; sağ sınır, toplam **sıfırsa**
+        ``−1``, değilse ``+1`` verir. Böylece işaret, şartı sağlayan
+        bütün kollara **aynı anda** ve **tam** vurulur.
 
-        ``D = 2|Ψ₀⟩⟨Ψ₀| − I``. Reel yazmaçta aynen kurulur: süperpozisyon
-        tabanına dön, ``|0…0⟩`` etrafında yansıt, geri dön.
+        Bağ boyutu ``δ``nın menzili kadardır -- yani ``2^k`` değil,
+        katsayıların büyüklüğünde **polinom**. H91'in *"indis değil
+        parametre"* hükmünün fiilî bedeli budur.
+
+        Birden çok şahit **tek bir doğrusal biçimde** birleştirilir
+        (``Σ_s λ_s δ_s``). Bu, ``δ_s``lerin hepsinin sıfır olmasını
+        gerektirmez -- iptal olabilir; onun için birleştirmenin sahte
+        kök doğurmadığı klasik olarak **sınanır** ve sınanmadan
+        kullanılmaz (bkz. ``coz_kaide``in ``sahte_kok`` alanı).
         """
         yuv = self.yuvalar()
-        H = np.stack([donme(-0.25 * math.pi)] * len(yuv))
-        self.q.tek_yigin(yuv, H)
-        for j in yuv:
-            self.q.tek(j, faz_z())
-        self.q.tek_yigin(yuv, np.stack([donme(0.25 * math.pi)] * len(yuv)))
+        bas, son = min(yuv), max(yuv) + 1
+        c = [0] * len(yuv)
+        d = 0
+        for s_i, s in enumerate(sartlar):
+            lam = _LAMBDA[s_i % len(_LAMBDA)]
+            for m in range(len(yuv)):
+                c[m] += int(round(lam * s.c[m]))
+            d += int(round(lam * s.d))
+
+        # ulaşılabilir kısmî toplamların menzili → bağ boyutu
+        alt = d + sum(min(0, x) for x in c)
+        ust = d + sum(max(0, x) for x in c)
+        D = int(ust - alt + 1)
+        kaydir = -alt                      # değeri indise taşı
+
+        # **Âşikâr kâide elenmeli.** ``r = 0`` demek ``0 = p·h + q``
+        # demektir; bu bir ebat kâidesi değildir, ebadı hiç söylemez.
+        # Ölçüldü ve düzeltildi: elenmediğinde orağın tepesi ``(0,0,0)``
+        # çıkıyordu -- yani orak "hiçbir şey söylemeyen kâide"yi hakikî
+        # kâide kadar kuvvetle işaretliyordu.
+        #
+        # Bunun için bağ indisi iki şey birden taşır: koşan toplam ``s``
+        # ve *"r bitlerinde hiç 1 gördüm mü"* bayrağı. İşaret ancak
+        # ``s = 0`` **ve** bayrak kalkmışsa vurulur. Bağ boyutu ikiye
+        # katlanır, başka bedeli yoktur.
+        bit = self.k // 3
+        r_bas = 2 * bit
+        Dt = 2 * D                       # w = bayrak·D + s
+        W: Dict[int, np.ndarray] = {}
+        for m, j in enumerate(yuv):
+            r_biti = m >= r_bas
+            T = np.zeros((Dt, 2, 2, Dt))
+            for f in (0, 1):
+                for s in range(D):
+                    w = f * D + s
+                    T[w, 0, 0, w] = 1.0                   # b=0: ikisi de sabit
+                    s2 = s + c[m]
+                    f2 = 1 if (r_biti or f) else 0        # b=1: r ise bayrak
+                    if 0 <= s2 < D:
+                        T[w, 1, 1, f2 * D + s2] = 1.0
+            W[j] = T
+        sl = np.zeros(Dt); sl[int(d + kaydir)] = 1.0      # bayrak=0'dan başla
+        sr = np.ones(Dt)
+        sr[D + int(kaydir)] = -1.0                        # δ=0 VE r≠0
+        return self.q.y.mpo_uygula(W, Dt, bas=bas, son=son,
+                                   sol_sinir=sl, sag_sinir=sr)
 
 
 # =====================================================================
 def coz_kaide(sahitler: Sequence[Tuple[int, int]], bit: int = 4,
-              tur: int = 1, gama: float = 0.35,
-              ayar=None) -> Dict[str, object]:
+              tur: int = 2, ayar=None) -> Dict[str, object]:
     """Ebat kâidesini kübit hattında ara -- **tek geçişte, hepsi birden**.
 
     Dönen sözlükte kâide bloğunun dağılımı ve en yüksek genlikli aday
@@ -246,18 +318,43 @@ def coz_kaide(sahitler: Sequence[Tuple[int, int]], bit: int = 4,
         ayar = _replace(ayar, kulli_alanlar=alanlar)
 
     q = QYazmac(1, ayar)
-    orak = KaideOragi(q, gama=gama)
+    orak = KaideOragi(q)
     orak.hazirla()
     sartlar = sartlari_kur(sahitler, bit)
+    kesme = 0.0
     for _ in range(max(1, int(tur))):
-        orak.isaretle(sartlar)
-        orak.difuzyon()
+        kesme += orak.isaret_oragi(sartlar)
+        kesme += orak.difuzyon()
 
     P = np.asarray(q.blok_dagilimi(q.kulli("kaide", 0), k), float).ravel()
     en = int(np.argmax(P))
     return {"dağılım": P, "en_yüksek": en, "olasılık": float(P[en]),
-            "çözüm": _coz(en, bit), "kesme": float(q.iz.kesme),
+            "çözüm": _coz(en, bit), "kesme": float(kesme),
+            "sahte_kok": sahte_kokler(sahitler, bit),
             "χ": int(q.y.bag), "kapı": int(q.iz.kapi)}
+
+
+def sahte_kokler(sahitler: Sequence[Tuple[int, int]], bit: int = 4
+                 ) -> List[Tuple[int, int, int]]:
+    """Birleştirilmiş doğrusal biçim **sahte kök** doğuruyor mu?
+
+    ``Σ_s λ_s δ_s = 0`` olup da ``δ_s``lerin hepsi sıfır olmayan bir
+    ``(p,q,r)`` varsa, işaret orağı onu da işaretler ve hüküm bozulur.
+    Bu, orağın **kırmızı yanabildiği** yerdir (kütük H90) ve iddia
+    edilmeden **sayılır**; boş dönmesi bir temenni değil bir ölçümdür.
+    """
+    sartlar = sartlari_kur(sahitler, bit)
+    lam = [_LAMBDA[i % len(_LAMBDA)] for i in range(len(sartlar))]
+    sahte: List[Tuple[int, int, int]] = []
+    for indis in range(1 << (3 * bit)):
+        b = [(indis >> i) & 1 for i in range(3 * bit)]
+        if not any(b[2 * bit:]):
+            continue                      # r=0 zaten elenir (âşikâr kâide)
+        tekil = [s.sapma(b) for s in sartlar]
+        birlesik = sum(l * t for l, t in zip(lam, tekil))
+        if abs(birlesik) < 1e-9 and any(abs(t) > 1e-9 for t in tekil):
+            sahte.append(_coz(indis, bit))
+    return sahte
 
 
 def _coz(indis: int, bit: int) -> Tuple[int, int, int]:
