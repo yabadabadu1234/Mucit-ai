@@ -3634,3 +3634,37 @@ eşitleniyor ve kapalı form enterpolasyon yerine ortalamaya düşüyor.
 Daimî sınama bu yüzden **ortancaya** şart koyar. Her göreve zorlamak,
 borcu ölçütle örtmek olurdu. İnce tarif işi `idrak/cozucu.py`nindir ve
 borç orada durur.
+
+## H126 — 1,5. KADEME: modüller yalnız YÜKLENMİYOR, KOŞUYOR
+
+H123 divanı kurdu ve beyliği sıfırladı; fakat orada da açıkça yazıldı:
+içe aktarma modülün **derlendiğini** gösterir, içindeki cebrin fiilen
+işlediğini değil. Bir modül bozulduğunda 1. kademe **sessiz kalır**.
+
+Aradaki boşluğu kapatmanın yolu, yine yukarıdan aşağı, tek bir
+müşahededen çıktı:
+
+> Modüllerin çoğu **kendi şahidini zaten taşıyor**. `rapor()` yahut
+> `_gosterim()` içinde kendi iddialarını ölçüyorlar -- yalnız hiç
+> çağrılmıyorlardı.
+
+`divan.yoklama()` onları çağırır. Sayım::
+
+    kendi gösterimi OLAN modül : 63
+    gösterimi olmayan          : 32
+    gösterimi kırık            : 0    (39'u fiilen koşturuldu, hepsi temiz)
+
+Kademeler artık ayrı ayrı sayılıyor ve rapor üçünü birden yazıyor::
+
+    1.   yüklendi, rol aldı            : 115
+    1,5  kendi gösterimi KOŞTU         : 63
+    2.   ana akışta fiilen iş görüyor  : 14
+
+**Dürüstlük kaydı.** Tam yoklama dakikalar sürüyor (bazı modüllerin
+gösterimi kıyas ölçümü yapıyor). O yüzden H126 şahidi **numune**
+koşturur -- her dizinden birer modül -- ve tamamı ``python -m
+nefs.divan`` iledir. "Hepsi her koşuda sınanıyor" denmiyor.
+
+**Gösterimi olmayan 32 modül** bir borçtur ve sayılır: onlar için
+1,5. kademe kurulamıyor, çünkü kendi şahitleri yok. Bu, o modüllerin
+bozuk olduğu manasına gelmez; denetlenemediği manasına gelir.

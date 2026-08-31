@@ -64,7 +64,7 @@ from __future__ import annotations
 
 from typing import Dict, List, Set, Tuple
 
-__all__ = ["EKSIK", "KAYIT", "KADEME2", "yokla", "rapor"]
+__all__ = ["EKSIK", "KAYIT", "KADEME2", "yokla", "yoklama", "rapor"]
 
 #: İçe aktarılamayan modüller: ``ad → sebep``. Boş olması **beklenmez**;
 #: ``torch`` bu ortamda kurulu değildir ve o modüller şartlı bağlanır.
@@ -598,6 +598,55 @@ KADEME2: Tuple[str, ...] = (
 )
 
 
+def yoklama(kos: bool = True, azami_sn: float = 0.0
+            ) -> Dict[str, object]:
+    """**1,5. KADEME:** modülü içe aktarmakla kalma, KENDİ gösterimini koştur.
+
+    Divanın 1. kademesi modülü yükler; bu, onu **çalıştırır**. Çoğu
+    modül kendi ``rapor()`` yahut ``_gosterim()`` fonksiyonunu taşır ve
+    orada kendi iddialarını ölçer -- yani modülün kendi şahidi
+    zaten yazılmıştır, yalnız hiç çağrılmıyordu.
+
+    Aradaki fark küçük değildir: içe aktarma yalnız modülün **derlendiğini**
+    gösterir; gösterimi koşturmak, içindeki cebrin fiilen işlediğini
+    gösterir. Bir modül bozulduğunda 1. kademe sessiz kalır, bu kalmaz.
+
+    ``şahit`` rolündekiler hariçtir: onlar `test_nefs.py` ve `pytest`
+    tarafından zaten koşturulur; burada ikinci defa koşmaları israftır.
+    """
+    import contextlib
+    import importlib
+    import io as _io
+    import time
+
+    kosan: List[Tuple[str, float]] = []
+    kirik: List[Tuple[str, str]] = []
+    gosterimsiz: List[str] = []
+    for ad, rol, _ in KAYIT:
+        if rol == "şahit":
+            continue
+        try:
+            m = importlib.import_module(ad)
+        except BaseException:
+            continue                       # ``yokla`` zaten sayıyor
+        f = getattr(m, "rapor", None) or getattr(m, "_gosterim", None)
+        if not callable(f):
+            gosterimsiz.append(ad)
+            continue
+        if not kos:
+            kosan.append((ad, 0.0))
+            continue
+        t0 = time.perf_counter()
+        try:
+            with contextlib.redirect_stdout(_io.StringIO()):
+                f()
+            kosan.append((ad, time.perf_counter() - t0))
+        except BaseException as e:                       # noqa: BLE001
+            kirik.append((ad, "%s: %s" % (type(e).__name__, str(e)[:70])))
+    return {"kosan": kosan, "kirik": kirik, "gosterimsiz": gosterimsiz,
+            "sure": float(sum(d for _, d in kosan))}
+
+
 def yokla() -> Dict[str, object]:
     """Divanı yokla: kim geldi, kim gelmedi, kim hangi kademede.
 
@@ -625,7 +674,7 @@ def yokla() -> Dict[str, object]:
     }
 
 
-def rapor() -> str:
+def rapor(kos: bool = True) -> str:
     y = yokla()
     s = ["=== DİVAN -- padişahın tebaası ===",
          "",
@@ -641,13 +690,24 @@ def rapor() -> str:
     s += ["", "  ROLLER:"]
     for r, n in sorted(y["roller"].items(), key=lambda x: -x[1]):
         s.append("      %-8s %d" % (r, n))
+    yk = yoklama(kos=kos)
     s += ["",
-          "  2. KADEMEDE (ana akışta fiilen iş gören): %d" % y["kademe2"],
-          "",
+          "  KADEMELER (kütük H123/H126):",
+          "    1.  yüklendi, rol aldı            : %d" % y["yuklu"],
+          "    1,5 kendi gösterimi KOŞTU         : %d%s"
+          % (len(yk["kosan"]), "" if kos else "  (koşturulmadı)"),
+          "        gösterimi olmayan             : %d" % len(yk["gosterimsiz"]),
+          "        gösterimi KIRIK               : %d" % len(yk["kirik"]),
+          "    2.  ana akışta fiilen iş görüyor  : %d" % y["kademe2"]]
+    for ad, sebep in yk["kirik"]:
+        s.append("        %-38s %s" % (ad, sebep))
+    if kos:
+        s.append("    (1,5 kademe koşu süresi: %.1f sn)" % yk["sure"])
+    s += ["",
           "AÇIKÇA: divana girmek YAPISAL tabiiyettir -- modül yüklenir,",
           "rol alır, her koşuda yoklanır. Bu, her modülün ana akışta bir",
-          "UZUV olduğu manasına GELMEZ (kütük H96). 2. kademe listesi",
-          "fiilen iş görenleri sayar ve uzaması gereken odur."]
+          "UZUV olduğu manasına GELMEZ (kütük H96). Kademeler o farkı",
+          "sayıyla tutar; uzaması gereken 2. kademedir."]
     return "\n".join(s)
 
 

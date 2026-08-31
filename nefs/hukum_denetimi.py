@@ -548,6 +548,39 @@ def _h125_cech_sukut() -> Tuple[bool, str]:
             acik["tıkanık_görev"], acik["görev"]))
 
 
+def _h126_yoklama() -> Tuple[bool, str]:
+    """1,5. KADEME: modüller yalnız yükleniyor mu, KOŞUYOR mu (H126)?
+
+    İçe aktarma modülün **derlendiğini** gösterir; kendi gösterimini
+    koşturmak, içindeki cebrin fiilen işlediğini gösterir. Bir modül
+    bozulduğunda birincisi sessiz kalır, ikincisi kalmaz.
+
+    Şahit **numune** koşturur (tamamı dakikalar sürüyor ve bu dürüstçe
+    yazılır); tam yoklama ``python -m nefs.divan`` iledir.
+    """
+    y = divan.yoklama(kos=False)
+    say = len(y["kosan"])
+    # Numune: her dizinden bir modül, fiilen koşturulur.
+    import contextlib
+    import importlib
+    import io as _io
+    numune = ["fitrat.tevafuk", "hesap.galois", "ogrenme.rkhs",
+              "kuantum.kapilar", "mizan.kiyas", "reel.hartley"]
+    kirik = []
+    for ad in numune:
+        try:
+            m = importlib.import_module(ad)
+            f = getattr(m, "rapor", None) or getattr(m, "_gosterim", None)
+            with contextlib.redirect_stdout(_io.StringIO()):
+                f()
+        except BaseException as e:                       # noqa: BLE001
+            kirik.append("%s (%s)" % (ad, type(e).__name__))
+    return (not kirik and say >= 60), \
+        ("%d modülde kendi gösterimi var, %d'inde yok; %d numune koştu, "
+         "kırık: %s" % (say, len(y["gosterimsiz"]), len(numune),
+                        kirik or "yok"))
+
+
 def _h123_divan_tam() -> Tuple[bool, str]:
     """Padişahın eli bütün tebaaya uzanıyor mu (kütük H123)?
 
@@ -609,6 +642,8 @@ SAHITLER: List[Sahit] = [
           _h124_iki_olcek),
     Sahit("H125", "Čech tıkanıklığı sükûtu artırıyor (Dosya 3)",
           _h125_cech_sukut),
+    Sahit("H126", "modüller yalnız yüklenmiyor, KOŞUYOR (1,5. kademe)",
+          _h126_yoklama),
 ]
 
 #: Makine şahidi **kurulamayan** hükümler ve sebebi. Bunlar "geçti"
