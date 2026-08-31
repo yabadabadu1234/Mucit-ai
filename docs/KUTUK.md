@@ -1833,3 +1833,71 @@ tesadüf değil, `p → Ψ` eşlemesinin **hakikî pürüzüdür**; en kuvvetli
 şüpheli SVD kesmesidir (χ yetmeyince hangi altuzayın atıldığı `p` ile
 **sıçrayarak** değişir). Bu hipotez χ=16/32/64'te ölçülmektedir ve
 neticesi **çıkınca yazılacaktır**; şimdiden bir şey iddia edilmiyor.
+
+## H89 — ÖLÇÜM NİHAYETE BIRAKILIR; evvelâ padişah idareyi alır
+
+Kullanıcı hükmü:
+
+> *"Birkaç saat sürecekse ya arka planda çalıştırıp işine devam et ya da
+> hiç çalıştırma. Bence padişahın idareyi ele almasına öncelik ver artık,
+> tüm kodları toparlayınca testlerin de doğru çalışır. Şimdi toparlamaya
+> çalışırken eminim ki başka gürültü kaynakları da bulacağız; derli toplu
+> bir kodumuz olmadan testte acele edip saatlerce beklemenin manası yok.
+> Dolayısıyla kodları toparlayıncaya kadar bekle, tüm testlerini nihayete
+> bırak, sadece bu testi değil, tüm testleri."*
+
+Bu hüküm benim işleyiş tarzımı doğrudan düzeltiyor ve haklıdır.
+H88'de görüldü ki tek bir `transpose` hatası bütün ölçümleri manasız
+kılıyordu. **Bozuk bir nizamda alınan ölçüm, ölçüm değildir.** Öyleyse
+sıralama şudur:
+
+1. Evvelâ **nizam**: padişahın eli bütün koda uzansın (H82: %90 beylik),
+   başıboş modüller ya tebaa olsun ya kalksın, gürültü kaynakları
+   toparlanırken bulunsun.
+2. **Sonra** bütün ölçümler bir arada, düzeltilmiş nizam üzerinde.
+
+Fiilen değişen: `nefs/tabii_gradyan.py` **silinmez**, hükmü **askıda**
+durur; H86'nın "işe yaramazsa sileriz" kararı, düzeltilmiş beyanla
+yeniden ölçülene kadar verilmez. Aynı şekilde H69 ve H76'nın motor
+mukayeseleri de **bütün kodlar düzeltildikten sonra** yeniden ölçülecek
+(kullanıcı hükmü: *"Hepsi yeniden ölçülecek ama tüm kodlar
+düzeltildikten sonra"*). O hükümler düşmez -- *içtihad içtihadı
+nakzetmez* -- fakat her birinin yanında şu şerh durur:
+
+> **ŞERH (H88/H89).** Bu ölçüm bozuk `beyan` üzerinde alınmıştır;
+> hükmü askıdadır ve nizam kurulduktan sonra yeniden ölçülecektir.
+
+Şerh düşülen hükümler: **H47, H69, H76, H86** ve eniyileme motorlarının
+kazanan/kaybeden mukayesesini içeren her ölçüm. `beyan`dan bağımsız
+ölçümler (kesme, MPO/takas, yığın hızı, ağaç MPO'sunun tamlığı,
+BGS seyrekleştirmesi, `ic_carpim`in tamlığı) bu şerhin dışındadır:
+onlar dağılımdan değil, doğrudan durumdan veya vakitten okunmuştur.
+
+## H90 — ÖLÇÜT KENDİSİ SINANIR: kırmızı yanabildiğini ispatlamayan ölçüt kabul edilmez
+
+Kullanıcı hükmü: *"Evet — her ölçüt kırmızı yanabildiğini ispatlasın."*
+
+H88'de `norm_hatasi` aylarca `~1e-16` yazdı; halbuki yazdığı sayı
+**yapısı gereği** o kadar çıkıyordu (yoğunluğu kendi izine bölüp sonra
+izin 1'den sapmasına bakıyordu). Ölçüt bozulduğunu haber veremezdi;
+yani ölçüt değildi, süstü.
+
+**Kaide.** Bu kod tabanında bir ölçüt (`*_hatasi`, `norm_*`, `kesme`,
+isabet oranları, `tam_çözülen`, sınama iddiaları) **ancak** şu iki şey
+beraber varsa kabul edilir:
+
+1. **Doğru halde yeşil yandığı** gösterilecek, ve
+2. **Bile bile bozulmuş bir halde KIRMIZI yandığı** gösterilecek.
+
+İkincisi yoksa ölçüt yoktur. Sınamada bunun adı *mutasyon sınamasıdır*:
+ölçülen şey kasten bozulur ve ölçütün bunu yakalaması beklenir.
+
+Buna bağlı ikinci bir kaide, aynı kusurun ikinci yüzü içindir:
+**`beyan` yolu daima tam dalgayla yüzleştirilir.** Küçük bir yazmaçta
+(`2^N` fiilen açılabilecek kadar) MPS büzülür ve okunan dağılım Born
+kaidesiyle karşılaştırılır. H88 bu yüzleştirmeyle bulundu; bir kere
+yapılıp bırakılmayacak, **kalıcı sınama** olacaktır.
+
+Bu kaide geriye dönük olarak da işler: nizam toparlanırken her ölçütün
+kırmızı yanabildiği gösterilecek, gösterilemeyen ölçüt ya düzeltilecek
+ya kaldırılacaktır.
