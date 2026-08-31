@@ -2101,3 +2101,139 @@ kütükte tutmak içindir.
 ``fitrat.karsi_olgusal`` ve ``fitrat.serbest_enerji`` **henüz
 bağlanmadı**; H92'de gösterilen yerleri (``H_N`` aksinin imkânsızlığı ve
 Occam cezası) durmaktadır.
+
+## H94 — HARAPLAMA ÖLÇÜMÜ: melekelerin KALBİ YOK (vücut değil, mütecânis kütle)
+
+Kullanıcı suali:
+
+> *"Sen bu melekeleri mimariye nasıl bağladın, bunlar arızasız bir vücut
+> teşkil ediyor mu? Kendisi sıhhatsiz olduğu zaman tüm vücut sıhhatsiz
+> olduğu organ olan kalp bizde de mühim mi o kadar? Bunları bilmediğim
+> için kararsız kalıyorum."*
+
+Bu suale zan ile cevap verilmedi. Biyolojideki usul tatbik edildi:
+**haraplama (lezyon)** -- organ çıkarılır, vücutta ne bozulduğuna
+bakılır. Âlet `tanilama/haraplama.py`dedir; 41 meleke tek tek akıştan
+çıkarılıp ``beyan`` dağılımının toplam değişinti mesafesi ölçülür.
+
+### Ölçülen
+
+============================================  ==============
+ölçü                                          netice
+============================================  ==============
+çıkarıldığında hiçbir şey değişmeyen meleke   **0 / 41**
+en tesirli (𝒪₆ Tasavvur)                      tvd 4,188e-01
+en tesirsiz (𝒪₂₇ Tetkik)                      tvd 1,767e-01
+**tesir nispeti (en çok / ortanca)**          **1,4**
+en tesirlinin toplam tesirdeki payı           **%3,4**
+============================================  ==============
+
+Düpedüz eşit dağılımda bu pay ``1/41 = %2,4`` olurdu. Yani en "mühim"
+meleke, yapısız bir kütledeki ortalamanın ancak kıl payı üstünde.
+
+**𝒪₂₄ İspat**ı çıkarmak 0,297; **𝒪₄₀ Sanat**ı çıkarmak 0,256. Burhânı
+sökmekle bir tırnağı sökmek neredeyse aynı şeyi yapıyor.
+
+### Daha keskin bulgu: 39 meleke dolaşıklığa HİÇ dokunmuyor
+
+``Δentropi`` sütununda 41 melekenin **39**'unun değeri ``~1e-15``, yani
+makine hassasiyetinde **sıfır**. Yalnız 𝒪₃₉ Belâgat (−8,3e-02) ve pek az
+𝒪₃₇ Fesâhat (−3,4e-07) dolaşıklığı fiilen değiştiriyor.
+
+Bunun manası tekniktir ve ağırdır: 41 melekenin 39'u **genlikleri
+karıştırıyor, yapı kurmuyor**. Hepsi aynı cinsten -- parametreli yerel
+dönme katmanı. Adları ayrı, cevherleri bir.
+
+### HÜKÜM
+
+> Bu bir vücut değildir, **mütecânis bir kütledir**: 41 uzuv değil,
+> 41 kere tekrarlanmış aynı uzuv. Hadis-i şerifteki ölçü konduğunda --
+> *bozulunca bütün vücudu bozan et parçası* -- öyle bir uzuv **yoktur**.
+> **Bu mimarinin kalbi yoktur.**
+
+Ve H88'in aylarca farkedilmemesinin sebebi budur: **nabzı olmayan
+vücutta durma da farkedilmez.** ``beyan`` yanlış çevreden okuyordu ve
+hiçbir meleke bundan rahatsız olmadı, çünkü hiçbirinin ``beyan``a
+hayatî bir bağı yoktu.
+
+**Bu benim kusurumdur.** Melekeleri "mimariye bağladım" derken yaptığım
+şey, 41 ayrı vazifeye 41 ayrı isim verip hepsine aynı cinsten
+parametreli bir kapı katmanı koymaktı (`nefs/qmeleke.py`de görülüyor:
+``QMantik``in "nakz"ı bir menfî MPO, ``QIllet``in "nedensellik"i bir
+kontrollü dönme). İsimler zihnin, cevher değil.
+
+### Bundan sonraki ölçüt
+
+Haraplama artık bu mimarinin **nabzıdır** ve her yapı değişikliğinden
+sonra koşulacaktır. Hedef, tesir nispetinin 1,4'ten yükselmesidir:
+uzuvlaşan bir mimaride bazı melekelerin çıkarılması vücudu **yıkmalı**,
+bazılarınınki incitmemelidir. Hepsinin eşit olması sıhhat değil,
+**yapısızlıktır**.
+
+## H95 — χ PATLAMASINA KARŞI ÜÇ TEDBİR: ikisi tam doğru, biri fazla iddialı
+
+Kullanıcı, H91'in tersinir aritmetik devrelerindeki dolaşıklık riskine
+karşı bir teklif getirdi ve *"doğru olup olmadığını kontrol ederek ilham
+al"* dedi. Kontrol edildi:
+
+======================================  ===================================
+teklif                                  hükmüm
+======================================  ===================================
+akışkan geri alma (pebble/streamed)     **DOĞRU.** Her şahit kendi
+                                        ancillasını derhal geri alırsa
+                                        Schmidt rütbesi ``K`` ile
+                                        katlanmaz, ``O(1)``de kalır.
+                                        Standart ve yerinde.
+RNS / Çin Kalan Teoremi                 **DOĞRU ve zekice.** Elde
+                                        zincirini fiilen kırar, tensör
+                                        ağı blok-ayrık kalır. Belirttiği
+                                        yalancı-kök riski gerçek, çaresi
+                                        de doğru: ``∏mᵢ > 2·max(ebat)``.
+diyagonal ``Z`` fazı                    **İstikamet doğru, iddia fazla.**
+                                        Ancillayı ve çöpü **tamamen**
+                                        kaldırır -- asıl kazanç budur.
+                                        Fakat *"χ patlamasını sıfıra
+                                        indirir"* YANLIŞTIR:
+                                        ``exp(iθ ZᵢZⱼ)`` köşegen olsa da
+                                        dolaşıklık üretir (QAOA maliyet
+                                        katmanı tam budur). Sıfırlanan χ
+                                        değil, **çöplüktür**.
+3-bitlik daraltma                       χ'yi gerçekten emniyete alır,
+                                        fakat **sonlu kütük derdini geri
+                                        getirir** (H93'te ölçülen
+                                        darboğaz). Emniyet freni olarak
+                                        tutulur, mimari olarak değil.
+======================================  ===================================
+
+Teklifin sunduğu doğrulama ölçütleri de yerindedir ve alınmıştır:
+çöp dolaşıklığının kalmadığının teyidi (``⟨çöp|çöp⟩``), parametre
+yazmacı ile şahit ancillaları arasındaki entropi haddi, ve MPS'te ``χ``
+tavanının hiç aşılmaması. Üçü de H90'ın *"ölçüt kırmızı yanabilmeli"*
+şartına uygundur.
+
+## H96 — "UZUV OLMADIYSA AT" DEĞİL, "UZUV HÂLİNE GETİR"
+
+Kullanıcı, H93'teki *"fitrat âtıl kaldı"* neticesine şöyle cevap verdi:
+
+> *"Benim mimaride olmadığı zaman bozulsun, tam bir uzuv olsun demem,
+> eğer uzuv olmamışsa at demek değil; adam gibi düşünüp onu uzuv hâline
+> getirmek demek. Yani sen Suriyeli muhacirler üst üste binince onları
+> ülke dışına mı attın, yoksa onları da ülkenin parçası hâline mi
+> getirdin, onlara işe yarar ve katma değer üretecek şekilde yer yurt mu
+> verdin -- bu mühim."*
+
+Bu, H92'nin **tashihidir** ve benim onu yanlış anladığımı gösteriyor.
+H92'yi *"işe yaramayan modülü sökerim"* diye okumuştum; hüküm o değil.
+Doğrusu:
+
+> Bir modül âtıl kalıyorsa **kabahat modülde değil, ona yer
+> bulamayan mimarîdedir.** Vazife, atmak değil **yer yurt vermektir**.
+
+Yani H93'teki *"ayrisma hiçbir kararı değiştirmiyor, sökülsün mü?"*
+sualinin cevabı: **hayır** -- ``ayrisma``ya, kararı fiilen değiştireceği
+bir mevki bulunacaktır. Âtıl kalması onun değil, ``mill_birlesik``in
+boş dönmesinin, o da sonlu kütüğün neticesidir (H93).
+
+Bu hüküm, `mucit_ai_esas/` (14 373 satır) ve öteki 165 beylik için de
+istikameti tayin eder: ölçüt *"bunu kullanıyor muyum"* değil,
+**"buna nerede yer yurt verebilirim"**dir.
