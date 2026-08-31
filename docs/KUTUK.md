@@ -3789,3 +3789,54 @@ döndü, yani hiç ayırt etmedi (içeride ``log`` ``nan`` üretiyordu). Kusur
 çalışır. Kanal değerleri medyanına göre ikilileştirilince ölçüt
 çalıştı. Ayırt etmeyen bir sayıyı rapora koymuş olsaydım, ölçüyor gibi
 yapmış olurdum (H90).
+
+## H129 — H127'nin BULGU 3'ü FAZLA MÜSAMAHAKÂRDI; ve makam dağılımı çarpım farzıyla okunuyordu
+
+### Nakz: eksik mertebe "zararsız bütçe sınırı" değil
+
+H127'de zann-ı gālib'in (0,75) akışta olmamasını *"bir kusur değil
+bütçe sınırıdır"* diye yazmıştım. **Kendime fazla müsamaha
+göstermişim.** `mizan/istikra.py` bağlanınca ölçüldü:
+
+    gösterim çifti   istikrâ yakîni   mertebe          tam istikrâ mı
+    n = 2            0,7500           zann-ı gālib     hayır
+    n = 3            0,8000           zann-ı gālib     hayır
+    n = 4            0,8333           zann-ı gālib     hayır
+    n = 6            0,8750           zann-ı gālib     hayır
+
+ARC training ilk 200 görevde gösterim çifti sayısı: ortalama **3,21**
+(dağılım: 2→36, 3→110, 4→38, 5→11, 6→3, 7→1). Ardışıklık kaidesinin
+verdiği yakîn ortalaması **0,8025** -- yani **zann-ı gālib**.
+
+**ARC'nin her görevi, akışın taşıyamadığı tam o mertebeye düşüyor.**
+`tam_istikra_mi` hepsinde ``False``: eksik istikrâ hiçbir sonlu ``n``
+için yakîn vermez. O hâlde makam, ARC'de doğru dereceyi hiç
+gösteremiyor -- ya Yakîn (1,0) deyip **fazla iddia** ediyor, ya Zan
+(0,5) deyip **eksik**. Bu bir bütçe sınırı değil, **yapısal bir
+yanlışlık**tır ve H127'nin o satırı burada nakzedilir.
+
+**Açık borç ve tam tarifi:** makam 2 kübitten 3'e çıkarılmalı; beş
+mertebe Gray komşuluğuyla ``000=Vehim, 001=Şek, 011=Zan,
+010=zann-ı gālib, 110=Yakîn`` (ardışık her çift Hamming 1). Kalan üç
+durum **isimsizdir** ve üzerlerindeki kütle ayrıca raporlanmalıdır --
+akış oraya kütle koyuyorsa bu da bir bulgudur. Tek bildirim yeri
+``QAyar.kulli_alanlar``dır; ``makam_dagilimi`` bu hüküm sayesinde
+artık kübit sayısından bağımsızdır, yani geçiş onu kırmaz.
+
+### Ayrı bir kusur: makam dağılımı ÇARPIM farzıyla okunuyordu
+
+``makam_dagilimi`` iki kübitin yoğunluklarından **çarpım** dağılımı
+kuruyordu -- yani ``makam₀ ⊥ makam₁`` farzıyla. Dolaşık bir durumda o
+farz yanlıştır. Ölçüldü::
+
+    çarpım farzı : [0,32034  0,25566  0,23580  0,18819]
+    hakikî ortak : [0,27381  0,30220  0,28233  0,14166]
+    toplam değişinti mesafesi = 0,0931
+
+Raporlardaki ``P_Şek``, ``P_Zan``, ``P_Yakîn``, ``P_Vehim`` sayıları
+yaklaşık **%9** yanlıştı. ``blok_dagilimi`` ile hakikî ortak dağılıma
+çevrildi ve usul kübit sayısından bağımsız kılındı.
+
+Bu, H121'in kardeşidir: orada çevre birim sayılıyordu, burada
+bağımsızlık farz ediliyordu. İkisi de **okumadan evvel yapılan bir
+kabul**dür ve ikisi de ölçülünce yanlış çıktı.

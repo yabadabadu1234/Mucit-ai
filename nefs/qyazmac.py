@@ -784,21 +784,29 @@ class QYazmac:
         return out / t if t > 1e-30 else np.full(sozluk, 1.0 / sozluk)
 
     def makam_dagilimi(self) -> np.ndarray:
-        """Makamın dört taban durumu üzerindeki dağılımı -- çöküşsüz.
+        """Makamın taban durumları üzerindeki **ortak** dağılımı -- çöküşsüz.
 
-        İki makam kübitinin yoğunluklarından çarpım dağılımı okunur:
-        ``P(Şek), P(Zan), P(Yakîn), P(Vehim)``. Bu bir POVM'dir
-        (``Σ E_x = I``); dalga diri kalır.
+        **ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H129).** Evvelce iki makam
+        kübitinin yoğunluklarından **çarpım** dağılımı kuruluyordu::
+
+            P = [p₀p₁, p₀(1−p₁), (1−p₀)p₁, (1−p₀)(1−p₁)]
+
+        Bu, ``makam₀`` ile ``makam₁``in **bağımsız** olduğunu farzeder.
+        Dolaşık bir durumda o farz yanlıştır ve ölçüldü: çarpım ile
+        hakikî ortak dağılım arasındaki toplam değişinti mesafesi
+        **0,0931** -- yani raporlardaki ``P_Şek``, ``P_Zan``,
+        ``P_Yakîn``, ``P_Vehim`` sayıları yaklaşık **%9** yanlıştı.
+
+        Doğrusu ``blok_dagilimi``dir: sol ve sağ çevreler kurulup
+        bloğun **ortak** indirgenmiş yoğunluğu alınır. Bu bir POVM'dir
+        (``Σ E_x = I``) ve **çöküş yoktur** (kütük H31).
+
+        Kübit sayısından bağımsızdır: makam iki kübitse dört, üç kübitse
+        sekiz taban durumu döner. Böylece mertebe sayısını artırmak
+        (H129'un açık borcu) bu usulü değiştirmez.
         """
-        R = self.y.tekil_yogunluklar([self.kulli("makam", 0),
-                                      self.kulli("makam", 1)])   # (B,2,2,2)
-        p0 = np.clip(R[:, 0, 0, 0], 0.0, 1.0)
-        p1 = np.clip(R[:, 1, 0, 0], 0.0, 1.0)
-        P = np.stack([p0 * p1, p0 * (1 - p1), (1 - p0) * p1,
-                      (1 - p0) * (1 - p1)], axis=1)
-        t = P.sum(axis=1, keepdims=True)
-        P = np.where(t > 1e-12, P / np.maximum(t, 1e-12), 0.25)
-        return P if self.y.B > 1 else P[0]
+        _, kac = self._alan["makam"]
+        return self.blok_dagilimi(self.kulli("makam", 0), kac)
 
     def alan_degeri(self, ad: str) -> float:
         """Bir küllî hüküm alanının ``[0,1]`` değeri -- zayıf okuma.
