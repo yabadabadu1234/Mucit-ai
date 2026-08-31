@@ -3668,3 +3668,17 @@ nefs.divan`` iledir. "Hepsi her koşuda sınanıyor" denmiyor.
 **Gösterimi olmayan 32 modül** bir borçtur ve sayılır: onlar için
 1,5. kademe kurulamıyor, çünkü kendi şahitleri yok. Bu, o modüllerin
 bozuk olduğu manasına gelmez; denetlenemediği manasına gelir.
+
+### Tam yoklamanın neticesi (hepsi ayrı süreçte, 90 sn hadle)
+
+**Kırık gösterim: SIFIR.** Gösterimi olan 63 modülün hepsi temiz
+koştu. İki kayıt ayrıca tutulur:
+
+* ``olcek.gercek`` 90 saniyelik haddi **aştı** -- bozuk değil, çok
+  yavaş. Tam yoklamanın niçin şahide konmadığının sebebi budur.
+* 10 ``tanilama.*`` modülü ``torch`` istiyor ve bu ortamda koşamıyor;
+  H123'te de aynı 14 modül şartlı bağlıydı. Aynı borç, iki kademede
+  birden görünüyor.
+
+En yavaş üçü: ``tanilama.haraplama`` 44,9 sn, ``yaklasim.akislar``
+38,8 sn, ``reel.meleke`` 7,6 sn.
