@@ -474,10 +474,6 @@ def main() -> int:
     return 1 if kalan else 0
 
 
-if __name__ == "__main__":
-    raise SystemExit(main())
-
-
 # =====================================================================
 #  KAN tabanı: RBF ile B-spline yan yana
 # =====================================================================
@@ -539,3 +535,82 @@ def test_kan_temelleri_kiyas() -> None:
     # ama ikisi de melekenin şartını sağlar.
     fark = float(np.max(np.abs(ciktilar["rbf"] - ciktilar["bspline"])))
     assert fark > 0.0, "iki taban birebir aynı çıktı verdi — kıyas boş"
+
+
+# =====================================================================
+#  D. KÂİDE MÎZÂNI -- H85'in icrası, H90'ın şartıyla
+# =====================================================================
+def test_kaide_mizani_yesil_de_kirmizi_da_yanabiliyor():
+    """H90: bir ölçüt, **kırmızı yanabildiğini** ispatlamadıkça ölçüt değildir.
+
+    Burada iki hâl birden kurulur ve ikisi de zorunludur:
+
+    * **Yeşil**: çıktının girdinin devriği olduğu, bile bile kurulmuş bir
+      görevde ``devrik/devrik`` kâidesi **Yakîn**e çıkmalı, illeti
+      ``yer_devrik`` olarak ayırt edilmeli, tekliği ispatlanmalı.
+    * **Kırmızı**: tek bir şahit kasten bozulunca aynı kâide Yakîn'den
+      **düşmeli** -- ``nakz``ın tarifi budur: tek karşı örnek küllî
+      hükmü düşürür (kütük H6).
+
+    Bu sınama evvelâ **yeşil yanamıyordu** ve kusur ölçütteydi: menfî
+    vaka şahitler arasında aranıyordu, halbuki kâide doğruysa öyle bir
+    şahit yoktur. Menfî vaka, aynı şahitte düşen **rakip kâidedir**.
+    """
+    from .kaide import namzetleri_ele
+
+    rng = np.random.default_rng(0)
+    sahit = []
+    for _ in range(4):
+        g = rng.integers(0, 5, size=(3, 4))
+        sahit.append((g, g.T.copy()))
+
+    hepsi = namzetleri_ele(sahit)
+    yakin = [i for i in hepsi if i.makam == "Yakîn"]
+    assert len(yakin) == 1, [i.satir() for i in hepsi[:3]]
+    e = yakin[0]
+    assert e.kaide_adi == "devrik/devrik", e.kaide_adi
+    assert e.derece == 1.0 and e.ebat_tek_mi and e.renk_tek_mi
+    assert "yer_devrik" in e.illet and e.illet_izah_edildi
+    assert e.nakz_sahidi is None          # düşüren şahit yok
+
+    # --- KIRMIZI: bir şahidi boz, Yakîn düşsün
+    bozuk = list(sahit)
+    bozuk[2] = (bozuk[2][0], rng.integers(0, 5, size=(4, 3)))
+    h2 = namzetleri_ele(bozuk)
+    assert not [i for i in h2 if i.makam == "Yakîn"], \
+        "bozuk şahitle hâlâ Yakîn çıkıyor — ölçüt kırmızı yanamıyor"
+    d = [i for i in h2 if i.kaide_adi == "devrik/devrik"][0]
+    assert d.nakz_sahidi == 2, d.nakz_sahidi   # nakzeden şahidi göstermeli
+
+
+def test_kaide_eksik_istikra_yakin_vermez():
+    """``tam_istikra_mi``nin hükmü mîzânda fiilen işliyor mu?
+
+    Rakibi elenmemiş bir kâide, BÜTÜN misallerde tutsa bile Yakîn'e
+    çıkmamalı; Zan'da kalmalı. Yakîn istikrâdan değil **tekliğin
+    ispatından** gelir. Burada girdi kare seçilir; o zaman ``aynı`` ile
+    ``devrik`` ebatta ayırt edilemez ve teklik ispatlanamaz.
+    """
+    from .kaide import namzetleri_ele
+    from mizan.istikra import tam_istikra_mi
+
+    assert not tam_istikra_mi(50, 50)       # eksik istikrâ 1 vermez
+
+    rng = np.random.default_rng(1)
+    sahit = []
+    for _ in range(4):
+        g = rng.integers(0, 5, size=(3, 3))   # KARE → ebat kaideleri eşleşir
+        sahit.append((g, g.copy()))
+    hepsi = namzetleri_ele(sahit)
+    en = hepsi[0]
+    assert all(en.ebat_dogru) and all(en.renk_dogru), en.satir()
+    assert not en.ebat_tek_mi, en.ebat_rakipleri   # rakip duruyor
+    assert en.makam == "Zan", en.satir()
+    assert en.nakz_delili is not None      # niçin tek olmadığının delili
+
+
+# Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
+# tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
+# koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.
+if __name__ == "__main__":
+    raise SystemExit(main())
