@@ -52,9 +52,31 @@ BULGU 3: bir mertebe EKSİK -- zann-ı gālib
 ===================================================================
 
 Klasik mîzânda beş mertebe var; akışın makamı iki kübit, yani dört
-taban durumu. **Zann-ı gālib (0,75) akışta yok.** Bu bir kusur değil
-bir **bütçe sınırıdır** ve öyle yazılır: üç kübit beş mertebeyi
-taşırdı. Eksikliğin sayılması, olmayan bir tamlık iddiasından iyidir.
+taban durumu. **Zann-ı gālib (0,75) akışta yok.**
+
+Bunu evvelâ *"bir kusur değil bütçe sınırıdır"* diye yazmıştım.
+**Kendime fazla müsamaha göstermişim ve `mizan/istikra.py` bağlanınca
+ölçümle nakzedildi (kütük H129).** Ardışıklık kaidesi, ``n`` gösterimin
+hepsi uyumluyken yakîni ``(n+1)/(n+2)`` verir::
+
+    n = 2 → 0,7500      n = 3 → 0,8000      n = 4 → 0,8333
+
+ARC training ilk 200 görevde gösterim çifti ortalaması **3,21**;
+istikrâ yakîni ortalaması **0,8025**. Hepsi tek bir mertebeye düşüyor:
+**zann-ı gālib** -- yani akışın taşıyamadığı tam o dereceye.
+``tam_istikra_mi`` hiçbirinde ``True`` değil; eksik istikrâ hiçbir
+sonlu ``n`` için yakîn vermez.
+
+O hâlde akış, ARC'de doğru dereceyi **hiç** gösteremiyor: ya Yakîn
+(1,0) deyip fazla iddia ediyor, ya Zan (0,5) deyip eksik. Bu bir bütçe
+sınırı değil **yapısal bir yanlışlıktır**.
+
+**Açık borç, tam tarifiyle:** makam 2 kübitten 3'e çıkarılmalı; beş
+mertebe Gray komşuluğuyla ``000=Vehim, 001=Şek, 011=Zan,
+010=zann-ı gālib, 110=Yakîn``. Kalan üç durum isimsizdir ve
+üzerlerindeki kütle ayrıca raporlanmalıdır. Tek bildirim yeri
+``QAyar.kulli_alanlar``dır ve ``makam_dagilimi`` artık kübit
+sayısından bağımsız olduğu için (H129) geçiş onu kırmaz.
 """
 from __future__ import annotations
 
@@ -62,10 +84,37 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
+from mizan.istikra import ardisiklik_kaidesi, tam_istikra_mi
 from mizan.munazara import MERTEBELER, mertebe_adi, yakin_gazali
 
 __all__ = ["MAKAM_MERTEBE", "GRAY_SIRA", "ESKI_SIRA", "komsuluk_denetimi",
-           "eksik_mertebeler", "yakin_yuzlestirmesi", "rapor"]
+           "eksik_mertebeler", "istikra_mertebesi", "yakin_yuzlestirmesi",
+           "rapor"]
+
+
+def istikra_mertebesi(n_gorev: int = 200) -> Dict[str, object]:
+    """ARC görevlerinin **istikrâ yakîni** hangi mertebeye düşüyor?
+
+    `mizan/istikra.py`nin ardışıklık kaidesi: ``k`` gösterimin hepsi
+    uyumluysa yakîn ``(k+α)/(n+α+β)``dir. ARC'de ``k = n`` (bütün
+    gösterimler görevin kendi kaidesine uyar), yani yakîn ``(n+1)/(n+2)``.
+
+    **Ölçülen netice ve niçin mühim (kütük H129).** Her ARC görevi
+    ``zann-ı gālib``e düşüyor -- akışın makamının **taşıyamadığı** tam o
+    mertebeye. ``tam_istikra_mi`` hepsinde ``False``: eksik istikrâ
+    hiçbir sonlu ``n`` için yakîn vermez.
+    """
+    from idrak import arc
+    g = arc.yukle_hepsi("training")[:int(n_gorev)]
+    k = np.array([len(x.egitim) for x in g], dtype=int)
+    y = np.array([ardisiklik_kaidesi(int(v), int(v)) for v in k], float)
+    adlar = sorted({mertebe_adi(float(v)) for v in y})
+    return {"görev": int(k.size), "çift_ortalama": float(k.mean()),
+            "yakîn_ortalama": float(y.mean()),
+            "mertebe_ortalama": mertebe_adi(float(y.mean())),
+            "düşülen_mertebeler": adlar,
+            "tam_istikrâ_olan": int(sum(tam_istikra_mi(int(v), int(v))
+                                        for v in k))}
 
 #: Akıştaki dört makamın `mizan/munazara.py`deki yakîn derecesi.
 MAKAM_MERTEBE: Dict[str, float] = {
@@ -171,8 +220,20 @@ def rapor(n_gorev: int = 30, tohum: int = 0) -> str:
     s += ["",
           "EKSİK MERTEBE (klasik mîzânda var, akışta yok):"]
     for d, ad in eksik_mertebeler():
-        s.append("  %.2f  %s   ← iki kübit dört durum taşır; bütçe sınırı"
-                 % (d, ad))
+        s.append("  %.2f  %s" % (d, ad))
+    i = istikra_mertebesi()
+    s += ["",
+          "  VE BU EKSİK ZARARSIZ DEĞİL (kütük H129):",
+          "    ARC %d görev, ortalama %.2f gösterim çifti"
+          % (i["görev"], i["çift_ortalama"]),
+          "    istikrâ yakîni ortalaması : %.4f  →  %s"
+          % (i["yakîn_ortalama"], i["mertebe_ortalama"]),
+          "    düşülen mertebeler        : %s" % ", ".join(i["düşülen_mertebeler"]),
+          "    tam istikrâ olan görev    : %d  (eksik istikrâ yakîn vermez)"
+          % i["tam_istikrâ_olan"],
+          "    → ARC'nin HER görevi, makamın taşıyamadığı mertebeye",
+          "      düşüyor. Akış ya Yakîn deyip fazla iddia ediyor, ya",
+          "      Zan deyip eksik. Bütçe sınırı değil, YAPISAL yanlışlık."]
 
     s += ["", "YAKÎN YÜZLEŞTİRMESİ (klasik hesap ↔ akışın makamı):"]
     gorevler = arc.yukle_hepsi("training")[:int(n_gorev)]

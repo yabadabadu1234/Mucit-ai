@@ -3840,3 +3840,24 @@ yaklaşık **%9** yanlıştı. ``blok_dagilimi`` ile hakikî ortak dağılıma
 Bu, H121'in kardeşidir: orada çevre birim sayılıyordu, burada
 bağımsızlık farz ediliyordu. İkisi de **okumadan evvel yapılan bir
 kabul**dür ve ikisi de ölçülünce yanlış çıktı.
+
+### H129 eki — `mizan/istikra.py` bağlandı, ölçüm buradan çıktı
+
+`nefs/mantik.py`ye ``istikra_mertebesi()`` eklendi ve ``mizan.istikra``
+2. kademeye çıktı. Ölçüm doğrudan ARC verisinden:
+
+    ARC 200 görev, ortalama 3,21 gösterim çifti
+    istikrâ yakîni ortalaması : 0,8025  →  zann-ı gālib
+    düşülen mertebeler        : yalnız zann-ı gālib
+    tam istikrâ olan görev    : 0 / 200
+
+Yani mesele istisnaî değil: **hiçbir** ARC görevi akışın gösterebildiği
+bir mertebeye düşmüyor.
+
+### Bu turda 2. kademeye çıkanlar
+
+    mizan.munazara   → nefs/mantik.py    (makam sırası, yakîn yüzleştirmesi)
+    mizan.istikra    → nefs/mantik.py    (ARC'nin istikrâ mertebesi)
+    fitrat.tevafuk   → nefs/sahitlik.py  (𝒪₂₉'un bağımsızlık tartısı)
+
+2. kademe 14 → **17**. Sayı hâlâ küçüktür ve büyümesi gereken odur.
