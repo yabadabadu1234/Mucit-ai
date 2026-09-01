@@ -131,8 +131,9 @@ class EgitimAyari:
 #: "kısa" hâl saatler sürerdi. Ölçü değişince bütçe de değişir;
 #: bütçeyi sabit tutup ölçüyü ağırlaştırmak, koşmayan bir ayar
 #: bırakmak olurdu.
-KISA_CPU = EgitimAyari(ad="kısa-CPU", cevrim=2, ornek=4,
-                       zincir=2, talim_tur=1)
+KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=2, cevrim=1,
+                       ornek=3, zincir=2, talim_tur=1,
+                       degerlendirme_gorevi=8)
 
 #: Orta hâl -- tek makinede saatler.
 ORTA = EgitimAyari(ad="orta", satir_kubiti=6, bag=32, gorev=120,
