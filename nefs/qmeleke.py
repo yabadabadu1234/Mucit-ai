@@ -46,11 +46,21 @@ __all__ = ["QMeleke", "qsicil", "qmelekeler", "QAKIS",
 #: Altın oran -- 𝒪₄₀ Sanat'ın kendi tarifinden gelen açı.
 ALTIN = (1.0 + math.sqrt(5.0)) / 2.0
 
-#: Dolaşıklık nizamı açık mı? **Ölçüm için kapatılabilir olmalıdır.**
-#: Kullanıcı hükmü (H90): her ölçüt kırmızı yanabildiğini ispatlasın.
-#: Nizamın işe yarayıp yaramadığı ancak açık/kapalı iki koşu
-#: kıyaslanarak söylenebilir; kapatılamayan bir tedbir ölçülemez.
-NIZAM_ACIK: bool = True
+#: χ tavanı **icra edilsin mi**? Varsayılan artık ``False``dır
+#: (kütük H149, H118'in nakzı) ve sebebi ölçülmüştür:
+#:
+#:     tavanlı  : log F = −60,50, akış sonu entropisi 1,3863 (ln 4, ÇAKILI)
+#:     tavansız : log F = −57,64, akış sonu entropisi 2,7708 (≈ ln 16)
+#:
+#: Tavan bir bütçe değil imhaydı: bir melekenin bağını kısmak, o
+#: melekenin yerini daraltmaz; **diğer melekelerin kurduğu dolaşıklığı
+#: siler**. Beyan melekelerine ulaşan dalganın entropisi yarıya iniyor
+#: ve akış sonu girdiden bağımsız sabit bir sayıya çivileniyordu.
+#:
+#: ``True`` yapılarak eski davranış geri alınabilir -- kapatılamayan
+#: bir tedbirin faydası ölçülemez (kütük H90) ve bu bayrak, nakzın
+#: kendisinin de sınanabilmesi için duruyor.
+NIZAM_ACIK: bool = False
 
 
 def nizami_ac(acik: bool = True) -> bool:
@@ -236,12 +246,41 @@ class QMeleke:
 
     def kosu(self, q: QYazmac, p: Parametreler) -> None:
         n0 = q.iz.kapi
-        # --- χ TAVANI: meleke kendi sınıfının bütçesiyle koşar.
-        # Tavan koşudan SONRA iade edilir; aksi hâlde bir çözücünün
-        # daraltması bütün akışa sirayet eder ve sonraki kurucular
-        # dolaşıklık kuramaz -- yani nizam bir kere daralttığında bir
-        # daha açılmazdı. İade ``finally``dedir: meleke istisna atsa da
-        # tavan yerine döner.
+        # =============================================================
+        # χ TAVANI **İCRADAN KALDIRILDI** (kütük H149, H118'in nakzı)
+        # =============================================================
+        #
+        # Evvelce her meleke kendi ``CHI`` bütçesiyle koşuyor, yani o
+        # meleke vurulurken yazmacın bağı zorla ``CHI``ye indiriliyordu.
+        # Fikir makuldü: kurucu çok bağ ister, çözücü az. Fakat icrası
+        # **yanlıştı** ve ölçüldü.
+        #
+        # Kusur şudur: bağ boyutu bir **kapının** değil, **bütün
+        # dalganın** vasfıdır. Bir melekeyi düşük tavanla koşturmak "bu
+        # meleke az yer kaplasın" demek değil, "**bu meleke, diğer
+        # melekelerin kurduğu dolaşıklığı silsin**" demektir. Yani tavan
+        # bir bütçe değil, bir imhadır.
+        #
+        # ÖLÇÜLDÜ (χ=16 yazmaç, 1814 kapı, tek geçiş):
+        #
+        #     tavanlı   : log F = −60,50   kapı başına 0,9672
+        #                 akış sonu entropisi 1,3863  (= ln 4, ÇAKILI)
+        #     TAVANSIZ  : log F = −57,64   kapı başına 0,9687
+        #                 akış sonu entropisi 2,7708  (≈ ln 16)
+        #
+        # Yani tavan, beyan melekelerine ulaşan dalganın dolaşıklığını
+        # **yarıya indiriyordu**; üstelik akış sonunu tam ``ln 4``e
+        # çiviliyordu -- girdiden bağımsız sabit bir sayı, ki bu bir
+        # ölçüm değil bir kelepçedir. Bedeli yalnız %11 süredir.
+        #
+        # ``CHI`` **kaldırılmadı**: sınıf ilanı (kurucu/koruyucu/çözücü)
+        # manalı bir taahhüttür ve ``nizam_yuzlestir()`` onu ölçümle
+        # yüzleştirir -- tıpkı `nefs/sozlesme.py`nin bölge ilanını
+        # yüzleştirdiği gibi. İlan artık **icra edilmiyor, sınanıyor**;
+        # aradaki fark, kelepçe ile sözleşme arasındaki farktır.
+        #
+        # ``NIZAM_ACIK`` ile eski davranış geri alınabilir; kapatılamayan
+        # bir tedbirin faydası ölçülemez (kütük H90).
         eski = q.y.bag_tavan
         if NIZAM_ACIK and self.CHI is not None:
             q.y.bag_tavan = max(1, min(int(self.CHI), q.y.bag))
@@ -375,7 +414,22 @@ class QTecrit(QMeleke):
     tersidir ve bilgi kaybetmez -- tecrit, atmak değil **ayırmaktır**.
     """
     no, ad = 5, "Tecrit"
-    SINIF, CHI = "çözücü", 1   # TECRİT: Dosya 1'de mutlak çözücü
+    #: **χ TAVANI KALDIRILDI (kütük H148, H118'in nakzı).** Evvelce
+    #: ``CHI = 1`` idi, yani bu meleke koşarken yazmacın bağı zorla 1'e
+    #: iniyor ve dalga **çarpım durumuna kesiliyordu**. Ölçüldü (χ=32):
+    #:
+    #:     tavan=1     : tutulan 6,6e-10   entropi 3,357 → 0,693
+    #:     tavan=yok   : tutulan 0,909     entropi 3,357 → 3,346
+    #:
+    #: İki netice çıktı. Birincisi: tavan bilgiyi **on milyar kat**
+    #: imha ediyordu. İkincisi ve daha mühimi: tavan kalkınca bu
+    #: melekenin daraltması **tamamen kayboluyor** -- demek ki Tecrit'in
+    #: çözücülüğü hiç kapısından gelmiyor, yalnız kesmeden geliyormuş.
+    #: Şerhi "fırça katmanının tersi (Gᵀ), bilgi kaybetmez" diyor fakat
+    #: kapı kurucununkinden **başka kübit çiftlerine** vuruyor; o hâlde
+    #: hakikaten ters değil. Bu bir borçtur ve gizlenmiyor: tecridin
+    #: manasını üniter olarak icra edecek kapı henüz yazılmadı.
+    SINIF, CHI = "çözücü", None
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
@@ -504,7 +558,12 @@ class QTasdik(QMeleke):
     bağlayan bir kontrollü dönmedir: ikisi hemfikirse mühür tutar.
     """
     no, ad = 13, "Tasdik"
-    SINIF, CHI = "çözücü", 1   # TASDİK: Dosya 1'de saf durum (χ=1)
+    #: Tavan **ölçüldü ve tesirsizdi**: ``CHI`` 1, 2, 4 yahut ``None``
+    #: iken tutulan kesir daima ``1,0000`` ve entropi hiç değişmiyor.
+    #: Yani bu meleke kesme gerektirecek bir dolaşıklık kurmuyor; ilan
+    #: edilen "saf durum (χ=1)" şartı bir şey icra etmiyordu. Yanıltıcı
+    #: olmasın diye kaldırıldı; davranış aynen aynıdır.
+    SINIF, CHI = "çözücü", None
 
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
@@ -779,7 +838,19 @@ class QIspat(QMeleke):
     temsil edilir: uzun zincir daha az döndürür.
     """
     no, ad = 24, "İspat"
-    SINIF, CHI = "çözücü", 1   # İSPAT: Dosya 1'de mutlak çözücü
+    #: **χ TAVANI KALDIRILDI (kütük H148, H118'in nakzı).** Ölçüldü (χ=32):
+    #:
+    #:     tavan=1     : tutulan 8,7e-12   entropi 3,357 → 1,386
+    #:     tavan=yok   : tutulan 0,548     entropi 3,357 → 1,383
+    #:
+    #: Yani "ispat daraltır" manası **kapının kendisinde** üniter olarak
+    #: zaten vardır: tavan kalkınca da entropi ~ln4'e iniyor. Tavan o
+    #: manayı üretmiyordu; üstüne 6×10¹⁰ kat genlik imha ediyordu.
+    #:
+    #: Bunun bedeli mimarîdedir: 𝒪₂₄ akışın 24. sırasındadır, yani
+    #: beyan melekeleri (𝒪₃₇–𝒪₄₀) amputte bir dalga üstünde çalışıyordu.
+    #: Kütük H133'ün ("hüküm cevaba ulaşmıyor") **fizikî sebebi** budur.
+    SINIF, CHI = "çözücü", None
 
     def uygula(self, q, p):
         a = self.yay(p, 4, max(q.n_satir - 1, 1), 0.5)

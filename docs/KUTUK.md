@@ -4294,3 +4294,89 @@ işaretler birbirini götürüyordu) → 0,020 (doymuş azamî) → **0,043**
 (yumuşak azamî + tutulan kesir). Hâlâ zayıftır ve zayıflığın sebebi
 yukarıdaki üç melekedir: onlar doymuş olduğu sürece en-kötü ölçüt
 onlara takılır.
+
+---
+
+## H148 — 𝒪₂₄ İSPAT'IN ÇÖKÜŞÜ: χ TAVANI = 1
+
+Kullanıcı sordu ve künhünü bilmediğini söyleyerek şu sezgiyi verdi:
+*"ispatla sabit bir değerin ne alakası var, bence hiç."* Sezgi tam
+isabetti ve ölçüm onu doğruladı.
+
+`nefs/qmeleke.py`de üç melekede `CHI = 1` ilan edilmişti — 𝒪₅ Tecrit,
+𝒪₁₃ Tasdik, 𝒪₂₄ İspat ("Dosya 1'de mutlak çözücü"). `CHI` meleke
+başına **χ tavanıdır** ve SVD kesmesinde `r = max(1, min(X, bag_tavan,
+…))` olarak işler. Yani `CHI = 1` demek, o meleke koşarken dalganın
+**çarpım durumuna kesilmesi** demektir.
+
+Ölçüldü (χ=32 yazmaç, tek meleke, taze durum):
+
+    𝒪₂₄ tavan=1    : tutulan 8,7e-12   entropi 3,357 → 1,3863
+    𝒪₂₄ tavan=yok  : tutulan 0,548     entropi 3,357 → 1,3827
+    𝒪₅  tavan=1    : tutulan 6,6e-10   entropi 3,357 → 0,693
+    𝒪₅  tavan=yok  : tutulan 0,909     entropi 3,357 → 3,346
+    𝒪₁₃ her hâlde  : tutulan 1,0000    entropi hiç değişmiyor
+
+Üç ayrı hüküm çıktı:
+
+1. **𝒪₂₄'te "ispat daraltır" manası kapının kendisinde, üniter olarak
+   zaten vardır** — tavan kalkınca da entropi ~ln4'e iniyor. Tavan o
+   manayı üretmiyordu; üstüne **6×10¹⁰ kat** genlik imha ediyordu.
+2. **𝒪₅'te daraltma tamamen tavandan geliyormuş**: tavan kalkınca
+   entropi 3,357→3,346, yani hiç daralmıyor. Şerhi "fırça katmanının
+   tersi (Gᵀ), bilgi kaybetmez" diyor fakat kapı kurucununkinden başka
+   kübit çiftlerine vuruyor; o hâlde hakikaten ters değil. **Açık
+   borç:** tecridin manasını üniter icra edecek kapı henüz yazılmadı.
+3. **𝒪₁₃'ün tavanı büsbütün ölüydü** — hiçbir tesiri yok.
+
+Bunun mimarî bedeli şudur: 𝒪₅ akışın 5., 𝒪₁₃ 13., 𝒪₂₄ 24. sırasındadır.
+Yani dalga beyandan evvel **üç kere** amputte ediliyor ve 𝒪₃₇–𝒪₄₀ beyan
+melekeleri çarpım durumu üstünde çalışıyordu. **Kütük H133'ün ("hüküm
+cevaba ulaşmıyor") fizikî sebebi budur.**
+
+## H149 — χ TAVANI KAVRAMI İCRADAN KALDIRILDI (H118'in nakzı)
+
+H118 melekeleri kurucu/koruyucu/çözücü diye sınıflayıp her birine bir χ
+bütçesi vermişti. Fikir makuldü, icrası yanlıştı.
+
+Kusur: **bağ boyutu bir kapının değil, bütün dalganın vasfıdır.** Bir
+melekeyi düşük tavanla koşturmak "bu meleke az yer kaplasın" demek
+değil, *"bu meleke, diğer melekelerin kurduğu dolaşıklığı silsin"*
+demektir. Tavan bir bütçe değil bir imhadır.
+
+Ölçüldü (χ=16 yazmaç, 1814 kapı, tam akış):
+
+    tavanlı   : log F = −60,50   kapı başına 0,9672
+                akış sonu entropisi 1,3863  (= ln 4, ÇAKILI)
+    TAVANSIZ  : log F = −57,64   kapı başına 0,9687
+                akış sonu entropisi 2,7708  (≈ ln 16)
+
+Tavan, beyana ulaşan dalganın dolaşıklığını yarıya indiriyor ve akış
+sonunu **girdiden bağımsız sabit bir sayıya** çiviliyordu. Bedeli
+yalnız %11 süredir. `NIZAM_ACIK` varsayılanı `False` yapıldı.
+
+`CHI` **kaldırılmadı**: sınıf ilanı manalı bir taahhüttür ve artık
+icra edilmiyor, **sınanıyor** — tıpkı `nefs/sozlesme.py`nin bölge
+ilanını yüzleştirdiği gibi. Kelepçe ile sözleşme arasındaki fark budur.
+
+## H150 — Tavan kalkınca LAPACK yakınsamadı; determinist yedek kondu
+
+Tavan kalkınca bağ büyüdü ve `gesdd` bazı dizeylerde `SVD did not
+converge` verdi. Yani tavan, imha ettiği bilginin yanında bir de
+sayısal kararlılığı ayakta tutuyormuş — bu bir fayda değil, **kusurun
+kusuru örtmesidir**.
+
+`main/yazmac.py::_kararli_svd` kondu. Yedek yol **jitter yahut rastgele
+kaydırma değildir** (ceride stokastiği yasaklar): Gram dizeyinin
+özayrışımıdır ve determinsttir — `MᵀM = V S² Vᵀ`. Küçük taraf seçilir
+ki maliyet `min(m,n)³` kalsın. Haddi açıkça yazıldı: Gram almak koşul
+sayısını kareler, o yüzden yalnız `gesdd` düştüğünde işler ve düştüğü
+`_SVD_YEDEK` sayacında sayılır.
+
+**Neticelerin toplamı — kayıp artık parametreye cevap veriyor:**
+
+    ortalama toplayıcı ile            yayılım 0,050 (işaretler götürüyordu)
+    doymuş yumuşak azamî ile          yayılım 0,028
+    tutulan kesir + yumuşak azamî ile yayılım 0,043
+    + χ tavanları kalkınca            yayılım 0,0595
+    𝒪₂₄'ün tuttuğu kesir              5,3e-07 → 0,0046  (8700 kat)

@@ -85,6 +85,71 @@ def kapi_usulu(usul: str) -> str:
     return eski
 
 
+#: ``gesdd`` düşüp Gram yedeğine geçilen kere sayısı -- gizlenmez.
+_SVD_YEDEK: int = 0
+
+
+def _kararli_svd(M: np.ndarray):
+    """``np.linalg.svd``in **determinist** ve yakınsaması garanti hâli.
+
+    ===================================================================
+    NİÇİN VAR: TAVAN KALKINCA LAPACK YAKINSAMIYOR
+    ===================================================================
+
+    χ tavanı icradan kaldırılınca (kütük H149) bağ boyutu büyüdü ve
+    LAPACK'in ``gesdd`` sürücüsü bazı dizeylerde ``SVD did not
+    converge`` hatası verdi. Yani tavan, imha ettiği bilginin yanında
+    bir de sayısal kararlılığı ayakta tutuyormuş; bu bir fayda değil,
+    **kusurun kusuru örtmesi**dir.
+
+    Yedek yol **jitter yahut rastgele kaydırma DEĞİLDİR**: ceride
+    stokastiği açıkça yasaklar (aynı girdi aynı çıktıyı vermelidir).
+    Onun yerine Gram dizeyinin özayrışımı kullanılır ve o determinist:
+
+        M = U S Vᵀ   ⟹   MᵀM = V S² Vᵀ   (yahut  MMᵀ = U S² Uᵀ)
+
+    ``eigh`` simetrik dizeylerde ``gesdd``den kat kat sağlamdır, zira
+    Jacobi/QL özyinelemesi simetriyi bozmaz. Küçük tarafın Gram'ı
+    alınır ki maliyet ``min(m,n)³`` kalsın.
+
+    HUDUT: Gram almak koşul sayısını **kareler** (κ → κ²), yani çok
+    kötü koşullu dizeylerde küçük tekil değerlerin hassasiyeti düşer.
+    Onun için bu yol yalnız ``gesdd`` düştüğünde işletilir, daima
+    değil; ve düştüğü ``_svd_yedek`` sayacında sayılır, gizlenmez.
+    """
+    M = np.asarray(M)
+    if not np.isfinite(M).all():
+        M = np.nan_to_num(M, nan=0.0, posinf=0.0, neginf=0.0)
+    try:
+        return np.linalg.svd(M, full_matrices=False)
+    except np.linalg.LinAlgError:
+        pass
+    global _SVD_YEDEK
+    _SVD_YEDEK += 1
+    m, n = M.shape[-2], M.shape[-1]
+    if n <= m:                       # MᵀM (n×n) daha küçük
+        G = np.swapaxes(M, -1, -2) @ M
+        w, V = np.linalg.eigh(G)
+        w = np.clip(w[..., ::-1], 0.0, None)
+        V = V[..., ::-1]
+        s = np.sqrt(w)
+        esik = np.maximum(s[..., :1], 1e-30) * 1e-6
+        olcek = np.where(s > esik, 1.0 / np.maximum(s, 1e-30), 0.0)
+        U = (M @ V) * olcek[..., None, :]
+        Vt = np.swapaxes(V, -1, -2)
+    else:                            # MMᵀ (m×m) daha küçük
+        G = M @ np.swapaxes(M, -1, -2)
+        w, U = np.linalg.eigh(G)
+        w = np.clip(w[..., ::-1], 0.0, None)
+        U = U[..., ::-1]
+        s = np.sqrt(w)
+        esik = np.maximum(s[..., :1], 1e-30) * 1e-6
+        olcek = np.where(s > esik, 1.0 / np.maximum(s, 1e-30), 0.0)
+        Vt = (np.swapaxes(U, -1, -2) @ M) * olcek[..., :, None]
+    tip = M.dtype
+    return U.astype(tip), s.astype(tip), Vt.astype(tip)
+
+
 def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
     """6 açıdan ``SO(4)`` kapısı -- usule göre Cayley yahut üstel.
 
@@ -502,7 +567,7 @@ class Yazmac:
         # ``astype(np.float32)`` KALDIRILDI: ``self.tip`` zaten float32
         # ve o çağrı her kapıda tam bir kopya çıkarıyordu. Tip artık
         # baştan sona tektir (kullanıcı hükmü: "her yer float32").
-        U, s, Vt = np.linalg.svd(T, full_matrices=False)
+        U, s, Vt = _kararli_svd(T)
         r = max(1, min(X, int(self.bag_tavan), s.shape[1]))
         atilan = float(np.sum(s[:, r:] ** 2)) if s.shape[1] > r else 0.0
         toplam = float(np.sum(s ** 2)) + 1e-30
@@ -815,8 +880,7 @@ class Yazmac:
         for k in range(len(T) - 1):
             t = T[k]
             dl, dr = t.shape[1], t.shape[3]
-            U, sv, Vt = np.linalg.svd(t.reshape(Bn, dl * 2, dr),
-                                      full_matrices=False)
+            U, sv, Vt = _kararli_svd(t.reshape(Bn, dl * 2, dr))
             r = max(1, min(X, int(self.bag_tavan), sv.shape[1]))
             top = float(np.sum(sv ** 2)) + 1e-30
             atilan += float(np.sum(sv[:, r:] ** 2)) / top
@@ -828,9 +892,8 @@ class Yazmac:
         # son yuva da ``χ``ye sığmalı
         if T[-1].shape[1] > X:
             t = T[-1]
-            U, sv, Vt = np.linalg.svd(
-                t.reshape(Bn, t.shape[1], 2 * t.shape[3]),
-                full_matrices=False)
+            U, sv, Vt = _kararli_svd(
+                t.reshape(Bn, t.shape[1], 2 * t.shape[3]))
             r = min(X, sv.shape[1])
             top = float(np.sum(sv ** 2)) + 1e-30
             atilan += float(np.sum(sv[:, r:] ** 2)) / top
