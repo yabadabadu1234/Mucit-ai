@@ -4524,3 +4524,57 @@ Yapısal gizlenmiyor: `yapısal_kayıp`, `yapısal_en_zayıf` ve
     + χ tavanları kalktı                     yayılım 0,0595
     + yığın yumuşak asgarîsi (B=4)           yayılım 0,0116
     + YAPISAL TERİM KAYIPTAN ÇIKTI           yayılım **0,2176**  (19 kat)
+
+## H155 — Boyut indirgemesi büsbütün kalktı: arama TAM UZAYDA
+
+H153'te determinist Walsh kesiti "etkin" altuzaydan iyi çıkmıştı.
+Fakat kesitin kendisi de sorgulandı ve ölçüldü (d=262, aynı bütçe,
+24 örnek, yarıçap 2,5):
+
+    V(p₀)                        0,5758
+    Walsh kesiti r=32   en iyi   0,4443   (kazanç 0,131)
+    TAM UZAY  d=262     en iyi   0,3215   (kazanç 0,254)
+
+Kesit, ulaşılabilir iyileşmenin **yarısını** yiyor. Sebebi basittir:
+iyileştiren yönler 262 boyuta yayılmış; herhangi bir 32 boyutluk kesit
+onların ancak bir izdüşümünü tutar. Boyut indirgemesi, ``d`` çok büyük
+olmadıkça bir kazanç değil bir **kayıptır**. Ceridenin 2. ilgası
+("lineer aktif alt uzay çalışmaz") sonuna kadar icra edilmiştir:
+``r = d``, kesit yok. Walsh kesiti yalnız kübit bütçesi ``d·bit``i
+aşarsa devreye girer.
+
+## H156 — KADEME ÖLÇÜLERİ DE KAYBI KÖR EDİYORDU (H154'ün tekrarı)
+
+Bütün tamirlerden sonra padişah hâlâ kımıldamıyordu (0,7943 → 0,7913).
+Sebep, H154'ün aynı hatasının başka yerde tekrarıydı.
+
+Altı kademe (`nefs/kademeler.py`) **dalga parametrelerine hiç bağlı
+değildir**: idrak nesne ayrıştırır, muhakeme `kaide_ara` koşturur,
+tasdik istikrâ hesaplar — hiçbiri melekelerin açılarını kullanmaz. O
+hâlde kademe ölçüleri her parametrede **aynı sayıdır**.
+
+Ölçüldü (5 parametre):
+
+    kademesiz : V(p₀)=0,5758   yayılım 0,2176
+    kademeli  : V(p₀)=0,7978   yayılım 0,0118   ← 18 kat seyreltme
+
+44 uzvun 24'ü sabitse kaybın yarısından fazlası kımıldamıyor demektir;
+yumuşak azamî de o sabit tabana oturup aramayı körleştiriyor.
+
+**Dürüst hüküm:** kademeleri kayba koymak onları **eğitmiyordu**,
+yalnız ölçütü kör ediyordu. Kademelerin eğitilebilmesi için kendi
+parametrelerinin olması ve o parametrelerin `nefs/talim.py`ye
+verilmesi gerekir — **henüz yok ve iddia edilmiyor.** Şimdilik ayrıca
+raporlanıyorlar (`kademe_kayıp`, `kademe_en_zayıf`) ki kaybolmasınlar.
+
+**PADİŞAH NİHAYET ÖĞRENİYOR — ölçülmüş seyir:**
+
+    evvelce (bütün terimler kayıpta)  : 0,7943 → 0,7913   kazanç 0,003
+    şimdi   (yalnız öğrenilebilir)    : 0,5395 → 0,4990   kazanç 0,077
+
+Aynı bütçede kazanç **25 kat**. Üç ayrı öğrenilemez terim kaybı
+kilitliyormuş ve üçü de ayrı ayrı ölçülerek bulundu:
+
+    1. χ tavanı (H148/H149)       -- mimarî kelepçesi
+    2. kesme/sadakat (H154)       -- yapısal, açıyla değişmez
+    3. kademe ölçüleri (H156)     -- göreve bağlı, parametreden bağımsız

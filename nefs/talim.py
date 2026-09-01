@@ -306,6 +306,27 @@ class Talim:
         # sırası), o hâlde "düşük frekans" burada hiçbir mana taşımaz.
         # Yönler tayfa **yayılınca** kesit genelleşiyor. Walsh tabanı
         # ayrıca ±1'dir: çarpımı ucuz ve tam.
+        # **KESİT BÜSBÜTÜN KALKABİLİR -- ve ölçüm onu emrediyor (H155).**
+        # Aynı bütçeyle (24 örnek, yarıçap 2,5) arama kalitesi::
+        #
+        #     V(p₀)                        0,5758
+        #     Walsh kesiti r=32   en iyi   0,4443   (kazanç 0,131)
+        #     TAM UZAY  d=262     en iyi   0,3215   (kazanç 0,254)
+        #
+        # Kesit, ulaşılabilir iyileşmenin **yarısını** yiyor. Sebebi
+        # basittir: iyileştiren yönler 262 boyuta yayılmış; herhangi bir
+        # 32 boyutluk kesit onların ancak bir izdüşümünü tutar. Boyut
+        # indirgemesi, ``d`` çok büyük olmadıkça bir kazanç değil bir
+        # kayıptır -- ceridenin 2. ilgası ("lineer aktif alt uzay
+        # çalışmaz") burada sonuna kadar icra edilmiştir.
+        #
+        # Kesit yalnız ``d`` kübit bütçesini aşarsa kurulur; o zaman da
+        # etkin altuzay değil determinist Walsh tabanı kullanılır
+        # (bkz. aşağıdaki ölçüm).
+        if r >= self.d:
+            self.gunluk.append({"uzuv": "altuzay", "r": self.d,
+                                "usul": "TAM UZAY (kesit yok)"})
+            return np.eye(self.d), None, None
         if int(self.ayar.altuzay_ornek) < 2 * r:
             Q = self._walsh_kesit(r)
             self.gunluk.append({"uzuv": "altuzay", "r": r,

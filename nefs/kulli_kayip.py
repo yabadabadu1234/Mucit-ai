@@ -308,8 +308,38 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     hepsi.append(Olcum(
         "kesme", float(q.y.sadakat_kapi_basina(max(q.iz.kapi, 1))),
         OlcuUzayi("kapı_başına_sadakat", 0.0, 1.0, True)))
+    # =================================================================
+    # KADEME ÖLÇÜLERİ DE KAYBA GİRMİYOR (kütük H156)
+    # =================================================================
+    #
+    # H154'ün aynı hatası başka yerde tekrarlanmıştı. Altı kademe
+    # (`nefs/kademeler.py`) **dalga parametrelerine hiç bağlı
+    # değildir**: idrak nesne ayrıştırır, muhakeme ``kaide_ara``
+    # koşturur, tasdik istikrâ hesaplar -- hiçbiri melekelerin
+    # açılarını kullanmaz. O hâlde kademe ölçüleri her parametrede
+    # **aynı sayıdır**.
+    #
+    # Ölçüldü (5 parametre, aynı kayıp):
+    #
+    #     kademesiz : V(p₀)=0,5758   yayılım 0,2176
+    #     kademeli  : V(p₀)=0,7978   yayılım 0,0118   ← 18 kat seyreltme
+    #
+    # 44 uzvun 24'ü sabitse, kaybın yarısından fazlası kımıldamıyor
+    # demektir; yumuşak azamî de o sabit tabana oturuyor ve arama
+    # körleşiyor.
+    #
+    # **Dürüst hüküm:** kademeleri kayba koymak onları eğitmiyordu,
+    # yalnız ölçütü kör ediyordu. Kademelerin eğitilebilmesi için kendi
+    # parametrelerinin olması ve o parametrelerin `nefs/talim.py`ye
+    # verilmesi gerekir -- **henüz yok, iddia da edilmiyor**. Şimdilik
+    # ayrıca raporlanıyorlar ki gözden kaybolmasınlar.
     if kademe_olcumleri:
-        hepsi += list(kademe_olcumleri)
+        kt = kulli_toplam(list(kademe_olcumleri))
+        _kademe_ozet = {"kademe_kayıp": kt["kayıp"],
+                        "kademe_en_zayıf": kt["en_zayıf"],
+                        "kademe_uzuv": kt["uzuv"]}
+    else:
+        _kademe_ozet = {}
 
     # =================================================================
     # ÖĞRENİLEBİLİR HATA ile YAPISAL KUSUR AYRILDI (kütük H154)
@@ -344,6 +374,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     yapisal = [o for o in hepsi if o.kaynak.endswith(".kesme")
                or o.kaynak == "kesme"]
     t = kulli_toplam(ogrenilebilir)
+    t.update(_kademe_ozet)
     if yapisal:
         yt = kulli_toplam(yapisal)
         t["yapısal_kayıp"] = yt["kayıp"]

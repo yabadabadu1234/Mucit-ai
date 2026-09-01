@@ -115,10 +115,17 @@ class EgitimAyari:
     #: uzvu budur, o yüzden ayarda durur ve gömülü değildir.
     altuzay_ornek: int = 24
     #: Kesit boyutu ``r``yi bağlayan kübit haddi (``r = azami_kubit /
-    #: bit``). **Ölçüldü** (d=262, aynı kayıp): "etkin" altuzay r=8'de
-    #: yayılım 0,0026; determinist Walsh kesiti r=32'de 0,0088. Dar
-    #: kesit, kaybın değişimini fiilen görmüyordu.
-    azami_kubit: int = 192
+    #: bit``). **Ölçüldü** (d=262, aynı bütçe, yarıçap 2,5)::
+    #:
+    #:     V(p₀)                       0,5758
+    #:     "etkin" altuzay r=8         yayılım 0,0026  (rastgeleden kötü)
+    #:     Walsh kesiti r=32  en iyi   0,4443
+    #:     TAM UZAY  d=262    en iyi   0,3215
+    #:
+    #: Kesit ulaşılabilir iyileşmenin yarısını yiyor. Had ``d·bit``i
+    #: aşacak kadar açıldı ki kesit kurulmasın ve arama tam uzayda
+    #: koşsun (ceridenin 2. ilgası: lineer aktif alt uzay çalışmaz).
+    azami_kubit: int = 4096
     # --- donanım
     surec: int = 0                   # 0 = donanımdan tayin et
     tohum: int = 0
@@ -354,7 +361,8 @@ class KulliEgitim:
         # kullanılır; istisna yoktur.
         from .talim import Talim, TalimAyari
         talim_ayari = TalimAyari(
-            ad=a.ad, r=max(2, self.d // 8), bit=a.bit,
+            # ``r = d``: kesit yok, arama TAM UZAYDA (kütük H155).
+            ad=a.ad, r=self.d, bit=a.bit,
             yaricap=a.yaricap, cevrim=a.cevrim, ornek=a.ornek,
             zincir=a.zincir, oran=a.oran, kademe=a.kademe, lam=a.lam,
             nqs_gizli=a.nqs_gizli, nqs_derece=a.nqs_derece,
