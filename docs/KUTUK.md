@@ -4459,3 +4459,68 @@ yığın ekseni onunla birleşiyor.
 
 `KISA_CPU` B=4'te bırakıldı: zaman başına işaret orada en yüksek
 (0,0116 / 3,09 sn). GPU tarafında ceride hükmü zaten azamîdir.
+
+## H153 — "Etkin altuzay" rastgeleden kötü çıktı (ceridenin 2. ilgası ölçüldü)
+
+Tâlim koşturuldu ve kayıp yine kımıldamadı. Aramanın **nereye baktığı**
+ölçüldü (d=262, aynı kayıp, 4 parametre):
+
+    tam uzay (d=262)              yayılım 0,0092
+    "etkin" altuzay (r=8)         yayılım 0,0026
+    rastgele geniş kesit (r=32)   yayılım 0,0146
+
+Yani `main/optimize.aktif_altuzay` etkin yönleri **bulamıyor**:
+rastgele bir kesit ondan 5,6 kat daha çok değişim görüyor. Sebep
+cebrîdir: `C = (1/N)Σ ∇f∇fᵀ` kovaryansı `altuzay_ornek` yönlü sonlu
+farktan kestiriliyor ve 6 ≪ 262 olduğu için kestirim **rütbe-6
+gürültüden** ibaret. Ceridenin 2. ilgası ("W₂ inaktif uzayı kör kalır")
+burada ölçümle doğrulanmıştır.
+
+Çare rastgele kesit **değildir** (ceride stokastiği yasaklar).
+Determinist tabanlar sınandı (r=32):
+
+    "etkin" altuzay          0,0026
+    DCT, ilk r kipi          0,0069
+    DCT, tayfa yayılmış      0,0084
+    WALSH, tayfa yayılmış    0,0088   ← seçildi
+
+DCT'nin **ilk** kipleri indis uzayında düzgün yönlerdir; hâlbuki
+parametre indis sırası keyfîdir (açıların tahsis sırası), o hâlde
+"düşük frekans" burada mana taşımaz. Yönler tayfa yayılınca kesit
+genelleşiyor. Walsh ayrıca ±1'dir: çarpımı ucuz ve tam.
+
+Kesit haddi de açıldı: `azami_kubit` 48 → 192, yani r = 8 → 32.
+
+## H154 — ÖĞRENİLEMEZ TERİM KAYBI KİLİTLİYORDU: yapısal/öğrenilebilir ayrımı
+
+Yukarıdaki tamirlerden sonra bile padişah koşunca kayıp kımıldamadı
+(0,8379 → 0,8376, 170 çağrı). Sebep arandı ve bulundu: yumuşak azamîyi
+ele geçiren uzuv `𝒪₂₄.kesme`ydi (tutulan kesir 0,0046 → eksik ~0,995).
+
+**Fakat bir kapının ne kadar kestiği, açı parametreleriyle değişmez.**
+Kesme; menzilin uzunluğundan, MPO'nun zinciri baştan sona
+sıkıştırmasından ve χ'den doğar — yani **mimarînin vasfıdır**,
+melekenin öğrenebileceği bir şey değil. Onu kayba koymak, öğrenciye
+çözemeyeceği bir soruyu sorup notunu ona bağlamaktır: not sabitlenir,
+öğrenme durur.
+
+Ölçüler ikiye ayrıldı:
+
+* **ÖĞRENİLEBİLİR** — hüküm alanlarının okumaları (tasdik, tenakuz,
+  nakz, makam, sükût, kelâm, mizan, gaye) ve kademe ölçüleri. Kayıp
+  bunlardır.
+* **YAPISAL** — kesme/sadakat. Kayba **girmez**; ayrıca raporlanır ve
+  tamiri tasarımladır (nitekim H148/H149'da χ tavanları kaldırılarak
+  𝒪₂₄'ün tuttuğu 5,3e-07'den 0,0046'ya çıkmıştı).
+
+Yapısal gizlenmiyor: `yapısal_kayıp`, `yapısal_en_zayıf` ve
+`yapısal_uzuv` anahtarlarında sayılıyor.
+
+**Ölçülen netice — kayıp nihayet cevap veriyor:**
+
+    ortalama toplayıcı                       yayılım 0,050 (işaretler götürüyordu)
+    doymuş yumuşak azamî                     yayılım 0,028
+    tutulan kesir + yumuşak azamî            yayılım 0,043
+    + χ tavanları kalktı                     yayılım 0,0595
+    + yığın yumuşak asgarîsi (B=4)           yayılım 0,0116
+    + YAPISAL TERİM KAYIPTAN ÇIKTI           yayılım **0,2176**  (19 kat)

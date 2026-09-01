@@ -114,6 +114,11 @@ class EgitimAyari:
     #: ``2·altuzay_ornek`` kayıp çağrısıdır -- tâlimin **en pahalı**
     #: uzvu budur, o yüzden ayarda durur ve gömülü değildir.
     altuzay_ornek: int = 24
+    #: Kesit boyutu ``r``yi bağlayan kübit haddi (``r = azami_kubit /
+    #: bit``). **Ölçüldü** (d=262, aynı kayıp): "etkin" altuzay r=8'de
+    #: yayılım 0,0026; determinist Walsh kesiti r=32'de 0,0088. Dar
+    #: kesit, kaybın değişimini fiilen görmüyordu.
+    azami_kubit: int = 192
     # --- donanım
     surec: int = 0                   # 0 = donanımdan tayin et
     tohum: int = 0
@@ -349,12 +354,12 @@ class KulliEgitim:
         # kullanılır; istisna yoktur.
         from .talim import Talim, TalimAyari
         talim_ayari = TalimAyari(
-            ad=a.ad, r=min(8, max(2, self.d // 8)), bit=a.bit,
+            ad=a.ad, r=max(2, self.d // 8), bit=a.bit,
             yaricap=a.yaricap, cevrim=a.cevrim, ornek=a.ornek,
             zincir=a.zincir, oran=a.oran, kademe=a.kademe, lam=a.lam,
             nqs_gizli=a.nqs_gizli, nqs_derece=a.nqs_derece,
             tur=a.talim_tur, altuzay_ornek=a.altuzay_ornek,
-            sesli=True, tohum=a.tohum)
+            azami_kubit=a.azami_kubit, sesli=True, tohum=a.tohum)
         try:
             t = Talim(self.kayip_p, self.p0, talim_ayari, dh=self.dh)
             r = t.kos()

@@ -310,7 +310,45 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
         OlcuUzayi("kapı_başına_sadakat", 0.0, 1.0, True)))
     if kademe_olcumleri:
         hepsi += list(kademe_olcumleri)
-    t = kulli_toplam(hepsi)
+
+    # =================================================================
+    # ÖĞRENİLEBİLİR HATA ile YAPISAL KUSUR AYRILDI (kütük H154)
+    # =================================================================
+    #
+    # Padişah koşturuldu ve kayıp yine kımıldamadı (0,8379 → 0,8376,
+    # 170 çağrı). Sebep arandı: yumuşak azamîyi ele geçiren uzuv
+    # ``𝒪₂₄.kesme``ydi (tutulan kesir 0,0046, yani eksik ~0,995).
+    #
+    # Fakat **bir kapının ne kadar kestiği, açı parametreleriyle
+    # değişmez.** Kesme; menzilin uzunluğundan, MPO'nun zinciri baştan
+    # sona sıkıştırmasından ve χ'den doğar -- yani **mimarînin
+    # vasfıdır**, melekenin öğrenebileceği bir şey değil. Onu kayba
+    # koymak, öğrenciye çözemeyeceği bir soruyu sorup notunu ona
+    # bağlamaktır: not sabitlenir, öğrenme durur.
+    #
+    # O hâlde ölçüler ikiye ayrılır:
+    #
+    #   ÖĞRENİLEBİLİR -- hüküm alanlarının okumaları (tasdik, tenakuz,
+    #       nakz, makam, sükût, kelâm, mizan, gaye) ve kademe ölçüleri.
+    #       Bunlar açı parametreleriyle fiilen değişir; kayıp bunlardır.
+    #
+    #   YAPISAL -- kesme/sadakat. Kayba **girmez**; ayrıca raporlanır
+    #       ve tamiri tasarımladır (nitekim H148/H149'da χ tavanları
+    #       kaldırılarak 𝒪₂₄'ün tuttuğu 5,3e-07'den 0,0046'ya çıktı).
+    #
+    # Yapısalı gizlemiyoruz -- ``yapısal`` anahtarında sayılıyor ve en
+    # kötüsü adıyla veriliyor. Gizleseydik, mimarî kusuru ölçüsüz
+    # bırakmış olurduk.
+    ogrenilebilir = [o for o in hepsi if not o.kaynak.endswith(".kesme")
+                     and o.kaynak != "kesme"]
+    yapisal = [o for o in hepsi if o.kaynak.endswith(".kesme")
+               or o.kaynak == "kesme"]
+    t = kulli_toplam(ogrenilebilir)
+    if yapisal:
+        yt = kulli_toplam(yapisal)
+        t["yapısal_kayıp"] = yt["kayıp"]
+        t["yapısal_en_zayıf"] = yt["en_zayıf"]
+        t["yapısal_uzuv"] = yt["uzuv"]
     t["meleke_sayısı"] = len({o.kaynak.split(".")[0] for o in hepsi
                               if o.kaynak.startswith("𝒪")})
     return t

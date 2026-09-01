@@ -233,6 +233,31 @@ class Talim:
             self.eksik["akis.tikiz"] = str(e)[:70]
             return float(self.ayar.yaricap)
 
+    def _walsh_kesit(self, r: int) -> np.ndarray:
+        """``d × r`` determinist ortogonal kesit -- Walsh fonksiyonları.
+
+        Walsh dizileri ``±1``dir ve indis üzerinde **bit paritesi** ile
+        tanımlıdır; tohuma, rastgeleliğe yahut veriye bağlı değildir.
+        Seçilen sıralar tayfa eşit aralıklı yayılır ki kesit husûsî
+        değil **genel** olsun (bkz. ``_altuzay`` şerhindeki ölçüm).
+        """
+        d = self.d
+        n = 1
+        while n < d:
+            n *= 2
+        siralar = np.round(np.linspace(1, n - 1, int(r))).astype(np.int64)
+        k = np.arange(n, dtype=np.int64)
+        W = np.empty((n, siralar.size), float)
+        bitler = int(np.log2(n)) + 1
+        for c, m in enumerate(siralar):
+            x = k & int(m)
+            par = np.zeros(n, np.int64)
+            for b in range(bitler):
+                par ^= (x >> b) & 1
+            W[:, c] = 1.0 - 2.0 * par
+        Q, _ = np.linalg.qr(W[:d])
+        return Q
+
     # -- 2. ALTUZAY: d → r -------------------------------------------
     def _altuzay(self, merkez: np.ndarray, tohum: int
                  ) -> Tuple[np.ndarray, Optional[np.ndarray],
@@ -241,6 +266,51 @@ class Talim:
         # büyüdüğü için had orada konmalı (bkz. ``azami_kubit`` şerhi).
         r = int(min(self.ayar.r, self.d,
                     max(1, self.ayar.azami_kubit // max(1, self.ayar.bit))))
+        # =============================================================
+        # ETKİN ALTUZAY **ÖLÇÜLDÜ VE RASTGELEDEN KÖTÜ ÇIKTI** (H153)
+        # =============================================================
+        #
+        # Ölçüldü (d=262, aynı kayıp, 4 rastgele parametre):
+        #
+        #     tam uzay  (d=262)          yayılım 0,0092
+        #     "etkin" altuzay (r=8)      yayılım 0,0026
+        #     rastgele geniş kesit (r=32) yayılım 0,0146
+        #
+        # Yani ``aktif_altuzay`` etkin yönleri **bulamıyor**: rastgele
+        # bir kesit ondan 5,6 kat daha çok değişim görüyor. Sebep
+        # cebrîdir: ``C = (1/N)Σ ∇f∇fᵀ`` kovaryansı ``altuzay_ornek``
+        # yönlü sonlu farktan kestiriliyor ve ``d`` boyutta o sayı
+        # ``d``den çok küçükse (6 ≪ 262) kestirim **rütbe-6 gürültüden**
+        # ibaret kalır. Ceridenin 2. ilgası ("W₂ inaktif uzayı kör
+        # kalır") tam budur ve burada ölçümle doğrulanmıştır.
+        #
+        # Çare rastgele kesit **değildir**: ceride stokastiği yasaklar
+        # (aynı girdi aynı çıktıyı vermeli). Onun yerine **determinist
+        # ortogonal kesit** alınır -- DCT-II tabanının ilk ``r`` kipi.
+        # Eşit dağılmıştır, tohuma bağlı değildir, ve tekrarlanabilir.
+        #
+        # Etkin altuzay yalnız örnek sayısı kestirimi manalı kılacak
+        # kadar çoksa (``altuzay_ornek ≥ 2r``) denenir; değilse
+        # doğrudan determinist kesite geçilir ve bu günlüğe yazılır --
+        # "etkin altuzay kullandım" demek, kullanmadığı hâlde, ölçümü
+        # yalan söyletmek olurdu.
+        # Determinist taban **hangi** taban olmalı? Ölçüldü (d=262, r=32):
+        #
+        #     "etkin" altuzay (rütbe-6 kestirim)  yayılım 0,0026
+        #     DCT, ilk r kipi                     yayılım 0,0069
+        #     DCT, tayfa yayılmış                 yayılım 0,0084
+        #     WALSH, tayfa yayılmış               yayılım 0,0088
+        #
+        # DCT'nin **ilk** kipleri indis uzayında düzgün yönlerdir;
+        # hâlbuki parametre indis sırası keyfîdir (açıların tahsis
+        # sırası), o hâlde "düşük frekans" burada hiçbir mana taşımaz.
+        # Yönler tayfa **yayılınca** kesit genelleşiyor. Walsh tabanı
+        # ayrıca ±1'dir: çarpımı ucuz ve tam.
+        if int(self.ayar.altuzay_ornek) < 2 * r:
+            Q = self._walsh_kesit(r)
+            self.gunluk.append({"uzuv": "altuzay", "r": r,
+                                "usul": "determinist Walsh kesiti"})
+            return Q, None, None
         try:
             from main.optimize import aktif_altuzay
             # **DÖNEN ŞEY:** ``(U, özdeğerler, gradyan örnekleri)``.
