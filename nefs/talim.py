@@ -120,6 +120,14 @@ class TalimAyari:
     tur: int = 3                 # dış tur: altuzay kaç kere yenilenir
     r: int = 4                   # etkin altuzay boyutu
     bit: int = 6                 # koordinat başına kübit
+    #: **Dalganın bütçesi kübit cinsindendir.** Ölçüldü: bir kayıp
+    #: çağrısı 3,66 sn ve dalganın çağrı sayısı ``r·bit`` kübitle
+    #: birlikte büyür (Metropolis süpürmesi kübit başınadır). O hâlde
+    #: ``r`` ile ``bit``i ayrı ayrı vermek bütçeyi **gizler**: ikisi de
+    #: makul görünüp çarpımları koşmaz hâle gelebilir -- nitekim
+    #: ``r=8, bit=6`` 48 kübit ediyor ve kısa hâl saatlere çıkıyordu.
+    #: Burada had açıkça kübit olarak konur ve ``r`` ona göre kırpılır.
+    azami_kubit: int = 48
     yaricap: float = 2.5
     # dalga
     cevrim: int = 6
@@ -137,6 +145,11 @@ class TalimAyari:
     denge: bool = True
     # altuzay örneklemesi
     altuzay_ornek: int = 24
+    #: Her uzuvdan sonra ilerlemeyi bas. Uzun koşan bir eğitim hiçbir
+    #: şey yazmıyorsa **ölçülemez**: bekleyen kişi ne kadar kaldığını
+    #: bilemez, tıkandı mı çalışıyor mu ayıramaz. Bu bir süs değil,
+    #: koşunun teftiş edilebilmesinin şartıdır.
+    sesli: bool = False
     tohum: int = 0
 
 
@@ -171,6 +184,9 @@ class Talim:
         self.ayar = ayar or TalimAyari()
         self.dh = dh
         self.cagri = 0
+        self._son_ses = 0
+        self._en_iyi = float("inf")
+        self._t0 = time.perf_counter()
         self.eksik: Dict[str, str] = {}
         self.gunluk: List[Dict[str, object]] = []
 
@@ -178,7 +194,14 @@ class Talim:
     def _f(self, P: np.ndarray) -> np.ndarray:
         P = np.atleast_2d(np.asarray(P, float))
         self.cagri += P.shape[0]
-        return np.asarray(self.kayip(P), float).reshape(-1)
+        out = np.asarray(self.kayip(P), float).reshape(-1)
+        if self.ayar.sesli and self.cagri - self._son_ses >= 10:
+            self._son_ses = self.cagri
+            print("    tâlim: %d kayıp çağrısı, %.0f sn, en iyi %.4f"
+                  % (self.cagri, time.perf_counter() - self._t0,
+                     min(self._en_iyi, float(np.min(out)))), flush=True)
+        self._en_iyi = min(self._en_iyi, float(np.min(out)))
+        return out
 
     def _f1(self, p: np.ndarray) -> float:
         return float(self._f(p.reshape(1, -1))[0])
@@ -214,7 +237,10 @@ class Talim:
     def _altuzay(self, merkez: np.ndarray, tohum: int
                  ) -> Tuple[np.ndarray, Optional[np.ndarray],
                             Optional[np.ndarray]]:
-        r = int(min(self.ayar.r, self.d))
+        # Kübit haddi ``r``yi kırpar: dalganın maliyeti ``r·bit``le
+        # büyüdüğü için had orada konmalı (bkz. ``azami_kubit`` şerhi).
+        r = int(min(self.ayar.r, self.d,
+                    max(1, self.ayar.azami_kubit // max(1, self.ayar.bit))))
         try:
             from main.optimize import aktif_altuzay
             # **DÖNEN ŞEY:** ``(U, özdeğerler, gradyan örnekleri)``.

@@ -1088,8 +1088,49 @@ class Yazmac:
         ``[0,1]``dedir. ``1`` = hiç bilgi atılmadı; ``0`` = her şey
         atıldı. Kesme telâfisinden (H114) sonra normun kaybı ölçmediği
         için ölçüt budur ve **çarpımsaldır**, toplanabilir değil.
+
+        **HUDUT -- ölçüldü ve gizlenmiyor.** 41 melekelik bir akışta
+        **1814 kapı** vuruluyor; kapı başına ortalama ``0,986`` tutulsa
+        bile çarpım ``0,986^1814 ≈ 4·10⁻¹²`` eder. Yani bu sayı, kapı
+        sayısı arttıkça **zorunlu olarak** sıfıra gider ve ``1 − F``
+        (kesme) ``1,0``a yapışır. Ölçüldü (χ=8/16/32/64)::
+
+            χ= 8  log F = −26,2   kapı başına 0,9857
+            χ=16  log F = −80,4   kapı başına 0,9566
+            χ=32  log F = −111,5  kapı başına 0,9404
+            χ=64  log F = −124,4  kapı başına 0,9337
+
+        Bu bir **alt taşma değildir** -- ilk teşhisimde öyle demiştim ve
+        yanlıştı: ``%.6f`` biçimi ``4e-12``yi ``0,000000`` gösterdiği
+        için "tam sıfır" sanmıştım. Sayı hakikaten o kadar küçüktür.
+
+        Neticesi şudur: ``sadakat()`` bir **eğitim ölçüsü olamaz**, zira
+        her parametrede ``1 − F ≈ 1`` çıkar ve ayırt etmez. Kıyas için
+        ``sadakat_log`` yahut ``sadakat_kapi_basina`` kullanılır.
+
+        İkinci ve daha mühim netice: kapı başına tutulan kesir χ
+        büyüdükçe **düşüyor** (0,986 → 0,934). Yani "χ'yi büyüt, daha az
+        bilgi at" doğru değildir; χ büyüdükçe durum hakikaten dolaşıyor
+        ve her kesmede atılan nispî ağırlık artıyor. Bu bir kusur değil
+        ölçülmüş bir hakikattir ve mimarî hakkında hüküm verilirken
+        hesaba katılmalıdır.
         """
         return float(np.exp(self._sadakat_log))
+
+    def sadakat_log(self) -> float:
+        """``log F`` -- alt taşmayan hâli. Daima ``≤ 0``."""
+        return float(self._sadakat_log)
+
+    def sadakat_kapi_basina(self, kapi: int) -> float:
+        """**Kapı başına** tutulan kesrin geometrik ortalaması.
+
+        ``exp(log F / kapı)`` ``[0,1]``dedir, alt taşmaz ve kapı sayısı
+        değişse de kıyas edilebilir kalır: "her kapıda ortalama ne kadarı
+        tutuldu" sorusunun cevabıdır. Çarpımın kendisi kapı sayısıyla
+        üstel çöktüğü için kıyasa elverişli olan budur.
+        """
+        k = max(int(kapi), 1)
+        return float(np.exp(self._sadakat_log / k))
 
     def norm(self) -> np.ndarray:
         """``⟨Ψ|Ψ⟩`` -- yığın üyesi başına, **tam**; ``2^N`` açılmaz."""

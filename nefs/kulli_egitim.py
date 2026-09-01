@@ -110,6 +110,10 @@ class EgitimAyari:
     #: Tâlimin dış tur sayısı (`nefs/talim.py`): altuzay kaç kere
     #: yenilenecek. Bütçenin en kaba kolu budur.
     talim_tur: int = 3
+    #: Etkin altuzay kaç yönlü sonlu farkla kurulacak. Maliyeti
+    #: ``2·altuzay_ornek`` kayıp çağrısıdır -- tâlimin **en pahalı**
+    #: uzvu budur, o yüzden ayarda durur ve gömülü değildir.
+    altuzay_ornek: int = 24
     # --- donanım
     surec: int = 0                   # 0 = donanımdan tayin et
     tohum: int = 0
@@ -133,7 +137,7 @@ class EgitimAyari:
 #: bırakmak olurdu.
 KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=2, cevrim=1,
                        ornek=3, zincir=2, talim_tur=1,
-                       degerlendirme_gorevi=8)
+                       altuzay_ornek=6, degerlendirme_gorevi=8)
 
 #: Orta hâl -- tek makinede saatler.
 ORTA = EgitimAyari(ad="orta", satir_kubiti=6, bag=32, gorev=120,
@@ -314,7 +318,8 @@ class KulliEgitim:
             yaricap=a.yaricap, cevrim=a.cevrim, ornek=a.ornek,
             zincir=a.zincir, oran=a.oran, kademe=a.kademe, lam=a.lam,
             nqs_gizli=a.nqs_gizli, nqs_derece=a.nqs_derece,
-            tur=a.talim_tur, tohum=a.tohum)
+            tur=a.talim_tur, altuzay_ornek=a.altuzay_ornek,
+            sesli=True, tohum=a.tohum)
         try:
             t = Talim(self.kayip_p, self.p0, talim_ayari, dh=self.dh)
             r = t.kos()

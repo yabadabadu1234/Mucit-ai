@@ -142,6 +142,8 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True):
 
     okumalar: Dict[int, Dict[str, float]] = {}
     for no in nefs.sira:
+        onceki_sadakat = (float(q.y.sadakat_log())
+                          if meleke_olcumu else 0.0)
         nefs.s[no].kosu(q, nefs.p)
         if nefs.sadakat:
             sadakat_kapisi(q, nefs.p)
@@ -149,9 +151,40 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True):
             ilan = SOZLESME.get(int(no), ((), ""))[0]
             d: Dict[str, float] = {}
             for ad in ilan:
+                if ad in ("veri", "yerel"):
+                    # **VERİ BİR HÜKÜM ALANI DEĞİLDİR.** Evvelce buranın
+                    # POVM ortalaması alınıp "büyüğü iyi" sayılıyordu ve
+                    # ÖLÇÜLDÜ: ``𝒪₁.veri`` her parametrede tam ``0,000``
+                    # çıkıyor, yani doymuş bir en-kötü uzuv olarak
+                    # yumuşak azamîyi tek başına ele geçiriyor ve kaybı
+                    # yine sabitliyordu. Kusur melekede değil benim
+                    # ölçümümdeydi: veri kübitleri girdiyi taşır, hüküm
+                    # taşımaz; onlara "büyüğü iyi" demek keyfîdir.
+                    #
+                    # Doğru ölçü melekenin **ne kadar bilgi attığı**dır:
+                    # kesme. Yönü tartışmasızdır (az atmak iyidir),
+                    # parametreye bağlıdır, ve her meleke için tanımlıdır.
+                    continue
                 v = bolge_degeri(q, ad)
                 if v is not None:
                     d[ad] = v
+            # Veri/yerel ilan eden melekeler **kesmeden** ölçülür: o
+            # geçişte sadakatin ne kadar düştüğü. Böylece 41 melekenin
+            # hepsi ölçülür ve hiçbiri doymuş bir sabit değildir.
+            # **LOG UZAYINDA**: ``sadakat()`` çarpımsaldır ve 1814
+            # kapıdan sonra ``4e-12``ye iner, yani oranı da manasızlaşır.
+            # Melekenin o geçişte attığı nispî ağırlık log farkındadır.
+            # Log farkını ``[0,1]``e **kırpmak** yanlıştı ve ölçüldü:
+            # düşüş çoğu melekede 1'i aştığı için kırpma doyuyor,
+            # ``𝒪₁.kesme`` sabit ``0`` çıkıyor ve yumuşak azamîyi yine
+            # tek başına ele geçiriyordu. Kırpma bir had değil, haddi
+            # olmayan bir sayıyı hadde zorlamaktır.
+            #
+            # Doğru hâl melekenin **kendi tuttuğu kesir**dir:
+            # ``exp(−düşüş) ∈ (0,1]``. Hiçbir keyfî üst sınır gerekmez,
+            # doymaz, ve yönü tartışmasızdır -- çok tutan iyidir.
+            dus = max(0.0, onceki_sadakat - float(q.y.sadakat_log()))
+            d["kesme"] = float(np.exp(-dus))
             # Aynı meleke sırada iki kere geçebilir (QAKIS'te 13 böyle);
             # son okuma değil **en kötüsü** tutulur: bir melekenin iki
             # geçişinden birinde bozması, bozmadığı manasına gelmez.
@@ -185,11 +218,13 @@ def meleke_olcumleri(okumalar: Dict[int, Dict[str, float]]
             continue
         w = 1.0 / float(len(d))
         for ad, v in sorted(d.items()):
-            S = UZAYLAR.get(ad)
+            # ``kesme`` artık **tutulan kesir**tir: büyüğü iyi.
+            if ad == "kesme":
+                S = OlcuUzayi("tutulan_kesir", 0.0, 1.0, True)
+            else:
+                S = UZAYLAR.get(ad)
             if S is None:
-                # ``veri``/``yerel``: hükmün taşıyıcısıdır, büyüğü iyi
-                # sayılır -- ölü bir bölge hüküm taşımıyor demektir.
-                S = OlcuUzayi(ad, 0.0, 1.0, True)
+                S = OlcuUzayi(ad, 0.0, 1.0, True, tahmini_ust=True)
             out.append(Olcum("𝒪%d.%s" % (no, ad), float(v), S, w))
     return out
 
@@ -240,8 +275,13 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
             if ad in o and ad in UZAYLAR:
                 hepsi.append(Olcum("alan.%s" % ad, float(o[ad]),
                                    UZAYLAR[ad]))
-        hepsi.append(Olcum("kesme", float(q.iz.kesme_hakiki),
-                           UZAYLAR["kesme_hakiki"]))
+        # **Kapı başına** tutulan kesir: ``kesme_hakiki`` (=1−F) 1814
+        # kapıdan sonra daima ``1,0``a yapışıyor ve ayırt etmiyordu
+        # (bkz. `main/yazmac.py::sadakat` şerhi). Kıyas edilebilir olan
+        # geometrik ortalamadır ve χ'ye göre fiilen değişir.
+        hepsi.append(Olcum(
+            "kesme", float(q.y.sadakat_kapi_basina(max(q.iz.kapi, 1))),
+            OlcuUzayi("kapı_başına_sadakat", 0.0, 1.0, True)))
     if kademe_olcumleri:
         hepsi += list(kademe_olcumleri)
     t = kulli_toplam(hepsi)

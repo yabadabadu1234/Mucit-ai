@@ -340,24 +340,83 @@ class Olcum:
         return self.agirlik * (1.0 - self.mertebe())
 
 
-def kulli_toplam(olcumler: Sequence[Olcum]) -> Dict[str, object]:
-    """Bütün ölçüleri müşterek uzayda topla.
+#: Yumuşak azamînin sertliği. ``β→0`` ortalama, ``β→∞`` azamî verir.
+BETA: float = 8.0
 
-    Toplam **ortalama** olarak da verilir: uzuv sayısı değiştikçe
-    kaybın ölçeği kaymasın, yoksa "daha çok meleke bağladım" demek
-    kaybı büyütmek olurdu ve mimarî kendini cezalandırırdı.
+
+def kulli_toplam(olcumler: Sequence[Olcum], beta: float = BETA
+                 ) -> Dict[str, object]:
+    """Bütün ölçüleri müşterek uzayda topla -- **ortalama ile değil**.
+
+    ===================================================================
+    ORTALAMA KAYBI KÖR EDİYORDU -- ölçüldü
+    ===================================================================
+
+    İlk hâlinde toplam bir **ortalamaydı** ve padişah koşturulunca
+    görüldü: 120 aday parametrede kayıp ``0,6422``de sabit kaldı,
+    hiç kımıldamadı. Sebep arandı ve bulundu -- kusur modüllerde
+    değil, bu fonksiyondaydı.
+
+    Ölçüldü (dört farklı parametrede, 80 ölçü):
+
+        tek tek ölçüler       : 75'i değişiyor; ``alan.nakz`` 0,95
+                                yayılıyor, ``𝒪₃₇.tasdik`` 0,79
+        ortalamaları (kayıp)  : 0,7044 … 0,7561  → yayılım **0,05**
+
+    Yani uzuvlar pekâlâ konuşuyordu; ortalama onları **susturuyordu**.
+    Sebep basit ve kaçınılmazdır: bağımsız değişen ``n`` sayının
+    ortalamasının yayılımı ``σ/√n``dir. ``n = 105`` uzuvla her ferdî
+    işaret ondan fazla kat küçülür. Yani "daha çok uzvu kayba soktum"
+    demek, ortalama ile birleştirildiğinde **her uzvun sesini
+    kısmak** demekti. Mimarînin kendini cezalandırması buydu.
+
+    ===================================================================
+    NİÇİN AZAMÎ -- ve niçin YUMUŞAK azamî
+    ===================================================================
+
+    Doğrusu bir hesap hilesi değil, klasik bir hükümdür: **bir
+    neticenin yakîni, en zayıf öncülünün yakînini geçemez.** Zincir en
+    zayıf halkası kadar sağlamdır; öncülleri ortalamak epistemik
+    olarak yanlıştır, zira bir öncül vehim mertebesindeyse neticenin
+    yakîn olması mümkün değildir -- diğerleri ne kadar sağlam olursa
+    olsun.
+
+    O hâlde toplam **azamî eksik**tir. Fakat sert azamî tek bir uzva
+    bakar ve gerisini büsbütün görmez; gradyansız arama için de
+    basamaklıdır. Onun için **yumuşak azamî** (log-sum-exp) alınır::
+
+        ℒ = (1/β)·[ log Σ exp(β·eksik_i) − log n ]
+
+    ``β → 0`` iken ortalamaya, ``β → ∞`` iken azamîye gider; arada
+    bütün uzuvlar sayılır fakat **en zayıflar hükmeder**. Toplayıcı
+    `fitrat/havuz.py`nin ``logsumexp``idir -- taşmaya karşı kaydırmalı
+    hâli orada zaten yazılıdır ve tekrar yazılmaz.
+
+    ``log n`` çıkarılması şarttır: çıkarılmazsa uzuv sayısı arttıkça
+    kayıp kendiliğinden büyür ve yine "daha çok uzuv bağlamak"
+    cezalandırılırdı.
     """
     if not olcumler:
         return {"kayıp": 0.0, "ortalama_mertebe": 1.0, "uzuv": 0,
                 "en_zayıf": None, "tahminî_hadli": 0}
     eksikler = [o.eksik() for o in olcumler]
-    agirlik = sum(o.agirlik for o in olcumler) or 1.0
     mert = [o.mertebe() for o in olcumler]
     en_zayif = min(olcumler, key=lambda o: o.mertebe())
-    return {"kayıp": float(sum(eksikler) / agirlik),
-            "toplam_eksik": float(sum(eksikler)),
+    n = len(eksikler)
+    b = float(max(beta, 1e-6))
+    try:
+        from fitrat.havuz import logsumexp
+        yumusak = (float(logsumexp([b * e for e in eksikler]))
+                   - float(np.log(n))) / b
+    except Exception:                                    # noqa: BLE001
+        z = b * np.asarray(eksikler, float)
+        yumusak = float(z.max() + np.log(np.exp(z - z.max()).sum())
+                        - np.log(n)) / b
+    return {"kayıp": float(np.clip(yumusak, 0.0, 1.0)),
+            "azamî_eksik": float(max(eksikler)),
+            "ortalama_eksik": float(np.mean(eksikler)),
             "ortalama_mertebe": float(np.mean(mert)),
-            "uzuv": len(olcumler),
+            "uzuv": n,
             "en_zayıf": (en_zayif.kaynak, float(en_zayif.mertebe())),
             "tahminî_hadli": sum(1 for o in olcumler if o.uzay.tahmini_ust)}
 

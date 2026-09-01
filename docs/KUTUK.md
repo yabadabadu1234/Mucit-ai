@@ -4217,3 +4217,80 @@ sürüyor (eski kayıp beş sayı okuyup geçiyordu). O hâlde "kısa CPU
 hâli"nin dalga bütçesi de küçültüldü (`cevrim` 6→2, `ornek` 24→4,
 `zincir` 8→2, `talim_tur` 1). Ölçü ağırlaşınca bütçeyi sabit tutmak,
 koşmayan bir ayar bırakmak olurdu.
+
+---
+
+## H145 — Ortalama, kaybı KÖR ediyordu (ölçüldü)
+
+Padişah koşturuldu ve görüldü: 120 aday parametrede kayıp `0,6422`de
+**hiç kımıldamadı**. Sebep arandı ve kusur modüllerde değil
+`nefs/olcu.py::kulli_toplam`da bulundu.
+
+Ölçüldü (dört parametre, 80 ölçü):
+
+    tek tek ölçüler : 75'i değişiyor -- `alan.nakz` 0,95 yayılıyor,
+                      `𝒪₃₇.tasdik` 0,79
+    ortalamaları    : 0,7044 … 0,7561  →  yayılım **0,05**
+
+Uzuvlar konuşuyordu; **ortalama onları susturuyordu**. Sebep
+kaçınılmazdır: bağımsız değişen `n` sayının ortalamasının yayılımı
+`σ/√n`dir; `n = 105` uzuvla her ferdî işaret on kat küçülür. Yani
+"daha çok uzvu kayba soktum" demek, ortalamayla birleştirildiğinde
+**her uzvun sesini kısmak** demekti.
+
+Hüküm: toplam **yumuşak azamî**dir (log-sum-exp, `fitrat/havuz`).
+Gerekçesi hesap değil klasik bir kaidedir: *bir neticenin yakîni en
+zayıf öncülünün yakînini geçemez.* Bir öncül vehim mertebesindeyse
+netice yakîn olamaz — diğerleri ne kadar sağlam olursa olsun.
+
+## H146 — `sadakat()` bir eğitim ölçüsü olamaz; ve χ büyüdükçe kapı başına DAHA ÇOK atılıyor
+
+41 melekelik akışta **1814 kapı** vuruluyor. Kapı başına ortalama
+`0,986` tutulsa bile çarpım `0,986^1814 ≈ 4·10⁻¹²` eder; yani
+`kesme_hakiki = 1 − F` her parametrede `1,0`a yapışır ve ayırt etmez.
+Yumuşak azamîde bu tek başına en-kötü uzuv olup kaybı yine sabitliyordu.
+
+**Kendi hatamın tashihi:** ilk teşhisimde buna "alt taşma" dedim ve
+yanlıştı — `%.6f` biçimi `4e-12`yi `0,000000` gösterdiği için "tam
+sıfır" sandım. Sayı hakikaten o kadar küçüktür, taşma yoktur.
+
+`sadakat_log` ve `sadakat_kapi_basina` eklendi. Ölçüldü:
+
+    χ= 8  log F = −26,2   kapı başına 0,9857
+    χ=16  log F = −80,4   kapı başına 0,9566
+    χ=32  log F = −111,5  kapı başına 0,9404
+    χ=64  log F = −124,4  kapı başına 0,9337
+
+İkinci ve daha mühim netice: kapı başına tutulan kesir **χ büyüdükçe
+düşüyor**. Yani *"χ'yi büyüt, daha az bilgi at"* doğru değildir; χ
+büyüdükçe durum hakikaten dolaşıyor ve her kesmede atılan nispî
+ağırlık artıyor. Mimarî hakkında hüküm verirken bu hesaba katılmalıdır.
+
+## H147 — Kesme felâketi ÜÇ MELEKEDE toplanıyor
+
+Meleke başına tutulan kesir ölçüldü (χ=16, tek geçiş):
+
+    𝒪₂₄ İspat        tutulan 5,3·10⁻⁷   ← amplitüdün %99,99995'i gidiyor
+    𝒪₅  Tecrit       tutulan 1,6·10⁻⁶
+    𝒪₂₂ İllet Keşfi  tutulan 7,8·10⁻⁵
+    𝒪₄₁ Münazara     tutulan 4,4·10⁻³
+    𝒪₁₈ Kıyas        tutulan 7,8·10⁻³
+    …
+    𝒪₃₉ Belâgat      tutulan 1,0000  (hiç atmıyor)
+
+    toplam log düşüş −77,3   medyan tutulan 0,52
+
+Üç meleke (𝒪₂₄, 𝒪₅, 𝒪₂₂) toplam log düşüşün **%48'inden** mesuldür.
+Yani kesme bütün akışa yayılmış bir yorgunluk değil, **üç yerde
+toplanmış bir yıkımdır** ve oralar tamir edilebilir.
+
+Bilhassa dikkat: en çok yıkan meleke **𝒪₂₄ İspat**tır — yani
+muhakemenin neticesini taşıması gereken meleke, dalgayı en çok
+söndüren melekedir. Bu, H133'ün (hükmün cevaba ulaşmaması) fizikî
+karşılığı olabilir ve ayrıca araştırılmalıdır.
+
+**Kayıp artık parametreye kör değil:** yayılım 0,050 (ortalama, fakat
+işaretler birbirini götürüyordu) → 0,020 (doymuş azamî) → **0,043**
+(yumuşak azamî + tutulan kesir). Hâlâ zayıftır ve zayıflığın sebebi
+yukarıdaki üç melekedir: onlar doymuş olduğu sürece en-kötü ölçüt
+onlara takılır.
