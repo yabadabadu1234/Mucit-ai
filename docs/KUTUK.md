@@ -4380,3 +4380,51 @@ sayısını kareler, o yüzden yalnız `gesdd` düştüğünde işler ve düşt�
     tutulan kesir + yumuşak azamî ile yayılım 0,043
     + χ tavanları kalkınca            yayılım 0,0595
     𝒪₂₄'ün tuttuğu kesir              5,3e-07 → 0,0046  (8700 kat)
+
+---
+
+## H151 — B (yığın) iki ayrı cihetten ölçüldü; ceride ile bu ortam ayrıldı
+
+Ceride B'nin azamîye çıkarılmasını emrediyor. Ölçüm, emrin **verim**
+cihetinden haklı, **işaret** cihetinden ise bu ortamda ters olduğunu
+gösterdi. İkisi de doğrudur ve karıştırılmamalıdır.
+
+**1. Verim cihetinde ceride haklı.** Yazmaç zaten yığın ekseni taşıyor
+(`main/yazmac.py`, `yigin`) fakat kayıp veriyi **tek tek** koşturuyordu.
+Yığına çevrildi. Ölçüldü (CPU, χ=16):
+
+    B= 1  yığın  1,01 sn   tek tek  1,01 sn   hızlanma 1,00×
+    B= 4  yığın  2,71 sn   tek tek  4,05 sn   hızlanma 1,49×
+    B=16  yığın 10,00 sn   tek tek 16,09 sn   hızlanma 1,61×
+    B=32  yığın 19,47 sn   tek tek 32,86 sn   hızlanma 1,69×
+
+Örnek başına maliyet 1,014 → 0,608 sn'ye iniyor; kapı kurulumu, MPO
+inşası ve süpürme yığın üyeleri arasında paylaşılıyor. Kayıp çağrısı
+6,9 → 1,87 sn (3,7×). **Kullanıcının "daha çok veri işleyince iş daha
+çabuk biter" hükmü ölçümle doğrulanmıştır.**
+
+**2. İşaret cihetinde bu ortamda ters.**
+
+     B    kayıp sn   parametre yayılımı   veri gürültüsü
+     2      1,73          0,0191               — (dejenere)
+     4      2,96          0,0066            0,0013
+     8      5,51          0,0045            0,0019
+    16     10,55          0,0058            0,0007
+    32     20,35          0,0051            0,0018
+
+B büyüdükçe parametre yayılımı **düşüyor**. Sebep H145'in aynısıdır,
+bir kademe yukarıda: yığın ortalaması organ ölçülerini σ/√B ile
+söndürüyor. B=4'ten sonra ölçülebilir kazanç yok, maliyet doğrusal.
+
+**Hüküm.** Kullanıcı GPU için ceride hükmünü mecburi kıldı, CPU için
+kararı delile bıraktı:
+
+* `AZAMI_KAGGLE` : **B = 2048 × bağlam 4096 = 8.388.608 belirteç/adım**
+  — ceride taksimatı aynen. *Bu ayar bu ortamda koşmamıştır ve koştuğu
+  iddia edilmiyor: burada GPU yok, o yığın belleğe sığmaz.*
+* `KISA_CPU`     : **B = 4** — yukarıdaki ölçüme dayanarak.
+
+**Açık borç:** yığın ortalamasının işareti söndürmesi, kayıp
+toplayıcısının yığın eksenini de yumuşak azamî ile birleştirmesiyle
+giderilebilir (şu an ortalama alıyor). Yapılmadı, ölçülmedi, iddia
+edilmiyor.

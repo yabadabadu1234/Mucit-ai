@@ -135,7 +135,27 @@ class EgitimAyari:
 #: "kısa" hâl saatler sürerdi. Ölçü değişince bütçe de değişir;
 #: bütçeyi sabit tutup ölçüyü ağırlaştırmak, koşmayan bir ayar
 #: bırakmak olurdu.
-KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=2, cevrim=1,
+#: **B (``ornek_sayisi``) BU ORTAM İÇİN ÖLÇÜLEREK SEÇİLDİ (kütük H151).**
+#: Ceride B'nin azamîye çıkarılmasını emrediyor ve verim cihetinden
+#: haklıdır: veri yığın hâlinde koşulunca örnek başına maliyet düşüyor
+#: (B=32'de 1,69× hızlanma, 1,014 → 0,608 sn/örnek). Fakat **işaret
+#: cihetinden** ölçüm başka söylüyor::
+#:
+#:      B    kayıp sn   parametre yayılımı   veri gürültüsü
+#:      2      1,73          0,0191               —
+#:      4      2,96          0,0066            0,0013
+#:      8      5,51          0,0045            0,0019
+#:     16     10,55          0,0058            0,0007
+#:     32     20,35          0,0051            0,0018
+#:
+#: B büyüdükçe parametre yayılımı **düşüyor**: yığın ortalaması, organ
+#: ölçülerini yine merkezî limitle (σ/√B) söndürüyor. B=4'ten sonra
+#: ölçülebilir bir kazanç yok, maliyet ise doğrusal artıyor.
+#:
+#: Kullanıcı hükmü CPU için kararı bana bıraktı ve "makul delillerle
+#: yavaşlatacağını düşünüyorsan yapma" dedi. Delil budur: **B=4**.
+#: GPU tarafında (``AZAMI_KAGGLE``) ceride hükmü aynen icra edildi.
+KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=4, cevrim=1,
                        ornek=3, zincir=2, talim_tur=1,
                        altuzay_ornek=6, degerlendirme_gorevi=8)
 
@@ -150,12 +170,27 @@ ORTA = EgitimAyari(ad="orta", satir_kubiti=6, bag=32, gorev=120,
 #: donanımın haddine göre konmuştur ve BURADA KOŞMAMIŞTIR; koştuğu da
 #: iddia edilmiyor. GPU'da hızlanan kısım NQS'in genlik hesabı ve
 #: örneklemesidir; kübit ileri geçişi süreçler arasında bölünür.
+#: **B VE BAĞLAM CERİDE HÜKMÜYLE AZAMÎ HADDE ÇEKİLDİ (kütük H151).**
+#: Ceridenin taksimatı aynen::
+#:
+#:     Veri yazmacı : B = 2048 dizi × L_bağlam = 4096 belirteç
+#:                  = 8.388.608 belirteç / adım  (8.388.608 kübit)
+#:
+#: Yığın ekseni yazmaçta zaten var (`main/yazmac.py`, ``yigin``) ve
+#: kayıp artık veriyi yığın hâlinde koşturuyor; o hâlde B'yi büyütmenin
+#: yolu açıktır ve burada ceride hükmü icra edilmiştir.
+#:
+#: **HUDUT -- açıkça:** bu ayar bu ortamda KOŞMAMIŞTIR ve koştuğu iddia
+#: edilmiyor. Burada GPU yoktur (yalnız CPU, 16 GB, ``torch`` kurulu
+#: değil); 8,4 milyon belirteçlik yığın bu makinenin belleğine sığmaz.
+#: Ayar, donanım geldiğinde icra edilmek üzere ve ceridenin emrettiği
+#: ölçülerle **kodda hazır** durmaktadır.
 AZAMI_KAGGLE = EgitimAyari(
     ad="azamî-Kaggle", satir_kubiti=12, yerel_kubit=1, bag=256,
-    mera_kademe=5, gorev=1000, ornek_sayisi=256, pencere=32, sozluk=16,
-    degerlendirme_gorevi=120, azami_uret=0, bit=10, yaricap=3.0,
-    nqs_gizli=(512, 256, 128), nqs_derece=8, cevrim=400, ornek=4096,
-    zincir=256, oran=0.10, kademe=0.4, lam=1e-3)
+    mera_kademe=5, gorev=1000, ornek_sayisi=2048, pencere=4096,
+    sozluk=16, degerlendirme_gorevi=120, azami_uret=0, bit=10,
+    yaricap=3.0, nqs_gizli=(512, 256, 128), nqs_derece=8, cevrim=400,
+    ornek=4096, zincir=256, oran=0.10, kademe=0.4, lam=1e-3)
 
 
 # =====================================================================
