@@ -4428,3 +4428,34 @@ kararı delile bıraktı:
 toplayıcısının yığın eksenini de yumuşak azamî ile birleştirmesiyle
 giderilebilir (şu an ortalama alıyor). Yapılmadı, ölçülmedi, iddia
 edilmiyor.
+
+## H152 — Yığın ekseni de yumuşak asgarî ile birleşti; B'nin önündeki engel kalktı
+
+H151'de bir borç kaydedilmişti: yığın ortalaması organ ölçülerini
+σ/√B ile söndürüyordu, yani B'yi büyütmek eniyilenen işareti
+öldürüyordu. Borç kapatıldı.
+
+Hüküm H145'in aynısıdır, bir kademe yukarıda: **bir yığında tek bir
+veride düşen parametre yakîn sayılamaz.** Üyeleri ortalamak, kötü üyeyi
+iyilerin arkasına saklamaktır. `nefs/olcu.py::yumusak_asgari` kondu ve
+yığın ekseni onunla birleşiyor.
+
+Ölçüldü (parametre yayılımı, 5 rastgele parametre):
+
+     B    yumuşak asgarî   ortalama   kazanç
+     2        0,0208        0,0191     +%9
+     4        0,0116        0,0066     +%76
+     8        0,0074        0,0045     +%64
+    16        0,0070        0,0058     +%21
+    32        0,0070        0,0051     +%37
+
+İki netice:
+
+1. Yumuşak asgarî **her B'de** işareti iyileştiriyor.
+2. Daha mühimi, **çöküşü durduruyor**: ortalamayla işaret 0,0191→0,0051
+   (3,7 kat) sönerken, yumuşak asgarîde 0,0208→0,0070 (3,0 kat) sönüp
+   **B=16'dan itibaren düzleşiyor**. Yani B artık işareti öldürmüyor;
+   ceridenin "B'yi azamîye çıkar" emrinin önündeki engel kalktı.
+
+`KISA_CPU` B=4'te bırakıldı: zaman başına işaret orada en yüksek
+(0,0116 / 3,09 sn). GPU tarafında ceride hükmü zaten azamîdir.

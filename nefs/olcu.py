@@ -118,7 +118,8 @@ import numpy as np
 
 __all__ = ["OlcuUzayi", "MERTEBE_UZAYI", "UZAYLAR", "funktor",
            "funktor_tersi", "morfizm_funktoru", "funktor_dogrula",
-           "mertebele", "Olcum", "kulli_toplam", "rapor"]
+           "mertebele", "Olcum", "kulli_toplam", "yumusak_asgari",
+           "rapor"]
 
 
 # =====================================================================
@@ -338,6 +339,41 @@ class Olcum:
     def eksik(self) -> float:
         """Yakînden uzaklık: müşterek uzaydaki **kayıp** payı."""
         return self.agirlik * (1.0 - self.mertebe())
+
+
+def yumusak_asgari(x, beta: float = 8.0) -> float:
+    """Yığın ekseninin **en zayıf üyesine** göre birleşimi.
+
+    ===================================================================
+    NİÇİN ORTALAMA DEĞİL
+    ===================================================================
+
+    Bir organ ölçüsü yığında ``B`` üye üzerinde okunur. Evvelce
+    ortalaması alınıyordu ve ölçüldü (kütük H151): ``B`` büyüdükçe
+    parametre yayılımı **düşüyor** -- yani yığını büyütmek, tam da
+    eniyilenen işareti söndürüyordu (σ/√B). Bu, kütük H145'in bir
+    kademe yukarısıdır: orada 105 uzuv ortalanıyordu, burada ``B`` veri.
+
+    Hüküm aynıdır ve manevîdir: **bir yığında tek bir veride düşen
+    parametre yakîn sayılamaz.** Netice en zayıf üyesi kadar sağlamdır;
+    üyeleri ortalamak, kötü üyeyi iyilerin arkasına saklamaktır.
+
+    Onun için yumuşak asgarî alınır (log-sum-exp'in asgarî hâli)::
+
+        m = −(1/β)·[ log Σ exp(−β·xᵢ) − log B ]
+
+    ``β → 0`` ortalamaya, ``β → ∞`` tam asgarîye gider. ``log B``
+    çıkarılır ki üye sayısı arttıkça netice kendiliğinden kaymasın.
+    """
+    a = np.asarray(x, float).reshape(-1)
+    if a.size == 0:
+        return 0.0
+    if a.size == 1:
+        return float(a[0])
+    b = float(max(beta, 1e-6))
+    z = -b * a
+    m = float(np.max(z))
+    return float(-(m + np.log(np.sum(np.exp(z - m))) - np.log(a.size)) / b)
 
 
 #: Yumuşak azamînin sertliği. ``β→0`` ortalama, ``β→∞`` azamî verir.

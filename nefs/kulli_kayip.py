@@ -72,7 +72,8 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .olcu import Olcum, OlcuUzayi, UZAYLAR, kulli_toplam, uzay
+from .olcu import (Olcum, OlcuUzayi, UZAYLAR, kulli_toplam, uzay,
+                   yumusak_asgari)
 from .sozlesme import SOZLESME
 
 __all__ = ["bolge_degeri", "olcumlu_idrak", "meleke_olcumleri",
@@ -99,17 +100,20 @@ def bolge_degeri(q, ad: str) -> Optional[float]:
     yüzden tek bir sayı ancak ortalamayla doğar ve bu açıkça yazılır.
     """
     try:
+        # Yığın ekseni **yumuşak asgarî** ile birleşir, ortalamayla
+        # değil (bkz. `nefs/olcu.py::yumusak_asgari`): bir yığında tek
+        # bir veride düşen parametre yakîn sayılamaz.
         if ad == "yerel":
             y = q.yereller()
             if not y:
                 return None
-            return float(np.mean(np.asarray(q.povm(y), float)))
+            return yumusak_asgari(q.povm(y))
         if ad == "veri":
             y = _veri_yuvalari(q)[:VERI_ORNEK]
             if not y:
                 return None
-            return float(np.mean(np.asarray(q.povm(y), float)))
-        return float(q.alan_degeri(ad))
+            return yumusak_asgari(q.povm(y))
+        return yumusak_asgari(q.alan_degeri(ad))
     except Exception:                                    # noqa: BLE001
         return None
 
@@ -299,8 +303,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     for ad, _kac in q.ayar.kulli_alanlar:
         if ad in o and ad in UZAYLAR:
             hepsi.append(Olcum("alan.%s" % ad,
-                               float(np.mean(np.asarray(o[ad], float))),
-                               UZAYLAR[ad]))
+                               yumusak_asgari(o[ad]), UZAYLAR[ad]))
     # **Kapı başına** tutulan kesir (bkz. `main/yazmac.py::sadakat`).
     hepsi.append(Olcum(
         "kesme", float(q.y.sadakat_kapi_basina(max(q.iz.kapi, 1))),
