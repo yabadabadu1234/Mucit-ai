@@ -536,6 +536,46 @@ def kaide_ara(ciftler: Sequence[Tuple[Izgara, Izgara]], derinlik: int = 3,
                    and np.array_equal(h, t)
                    for h, t in zip(hal, hedefler))
 
+    def yakinlik(hal: List[Optional[Izgara]]) -> float:
+        """Ara hâl hedefe **ne kadar yaklaştı**: en kötü çiftin isabeti.
+
+        ===================================================================
+        NİÇİN: KÖR BUDAMA ARAMAYI AÇ BIRAKIYORDU
+        ===================================================================
+
+        Arama, her kademede ``azami_dal`` kadar dal tutuyordu ve sıralama
+        ölçütü ``boy``du. Fakat bir kademedeki bütün dalların boyu
+        **aynıdır**; yani sıralama hiçbir şey söylemiyor, budama fiilen
+        **keyfî** oluyordu. Atom sayısı azken zararsızdı; seçici×
+        dönüştürücü çarpımı atomu 150'nin üstüne çıkarınca arama açlıktan
+        öldü.
+
+        Ölçüldü ve teşhis budur: çözülemeyen 79 aynı şekilli görevin
+        **48'inde** çarpım katmanının tek bir kaidesi hiç dokunmamaktan
+        iyi netice veriyor, fakat **hiçbirinde** tek adım tam uymuyor
+        (TAM UYAN = 0). Yani lazım olan şey daha çok kaide değil, o
+        kaidelerin **birleştirilmesi**dir -- ve birleştirmeyi yapacak
+        arama kör budama yüzünden o iyi dalları atıyordu.
+
+        Ölçüt: en kötü gösterimdeki hücre isabeti. **En kötü** olması
+        şarttır; ortalama alınsaydı bir gösterimi mükemmel, diğerini
+        berbat eden bir dal öne geçerdi. Hâlbuki aranan kaide
+        **hepsini** tutmalıdır, o hâlde ilerleme de en zayıf halkadan
+        ölçülür.
+
+        HUDUT: bu bir sezgidir (heuristic), ispat değil. Yanlış dalı öne
+        alabilir. Fakat **kabul ölçütü değişmedi**: kaide yine bütün
+        gösterimleri tam tutmak ve çapraz sınamadan geçmek zorundadır.
+        Yani sezgi yalnız **nereye bakılacağını** söyler, neyin doğru
+        olduğunu değil.
+        """
+        en_kotu = 1.0
+        for h, t in zip(hal, hedefler):
+            if h is None or h.shape != t.shape:
+                return -1.0
+            en_kotu = min(en_kotu, float(np.mean(h == t)))
+        return en_kotu
+
     bulunan: List[Kaide] = []
     # Kademe: (kaide, her gösterimdeki ara hâl)
     kademe: List[Tuple[Kaide, List[Izgara]]] = []
@@ -563,7 +603,13 @@ def kaide_ara(ciftler: Sequence[Tuple[Izgara, Izgara]], derinlik: int = 3,
                 yeni.append((k, sonra))
         if bulunan:
             break                     # Occam: en kısa kademede dur
-        kademe = sorted(yeni, key=lambda x: x[0].boy)[:azami_dal]
+        # **YÖNLENDİRİLMİŞ BUDAMA.** Sıralama ölçütü ``boy`` değil hedefe
+        # yakınlıktır (bkz. ``yakinlik`` şerhi): bir kademedeki dalların
+        # boyu zaten aynı olduğu için eski sıralama budamayı keyfî
+        # bırakıyordu. İlerlemeyen dal değil, **en çok ilerleyen** dal
+        # açılır. Beraberlikte kısa terkip önde: Occam bozulmaz.
+        kademe = sorted(yeni, key=lambda x: (-yakinlik(x[1]), x[0].boy)
+                        )[:azami_dal]
         if not kademe:
             break
     # **Occam iki eksende**: önce hipotezi küçük olan (az ezber), sonra

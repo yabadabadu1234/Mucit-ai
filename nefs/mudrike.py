@@ -251,17 +251,33 @@ def mudrike(gorev, yakin_esigi: float = YAKIN_ESIGI,
                        "bulursam örtü zaten kapanmış olur; fakat "
                        "ihtiyatlı olurum.")
 
-    # --- 4. KÂİDE
-    K = kaide_ara(ciftler, derinlik=derinlik)
-    dusunce.append("Kaide arıyorum (terkip derinliği %d): %d kaide "
-                   "gösterimlerin hepsini tutuyor." % (derinlik, len(K)))
+    # --- 4. KÂİDE -- artık **kademelerden** geliyor
+    #
+    # **MİMARÎ DEĞİŞİKLİĞİ.** Evvelce burada doğrudan ``kaide_ara``
+    # çağrılıyordu; yani çıkarım kendi boru hattını kuruyor, eğitim
+    # başka bir şey eniyiliyordu. İkisinin ayrı düşmesi, eğitimin
+    # öğrettiği şeyin çıkarımda kullanılmaması demektir.
+    #
+    # Şimdi ikisi de `nefs/kademeler.py`nin **aynı** altı kademesini
+    # koşturur: idrak → tasavvur → muhakeme → ispat → tasdik → beyan.
+    # Kademelerin ölçüleri `nefs/kulli_kayip.py` yoluyla eğitime de
+    # girer; yani bu boru hattı hem konuşur hem öğrenir.
+    from .kademeler import kademeleri_kos
+    kad = kademeleri_kos(gorev, derinlik=derinlik, esik=yakin_esigi)
+    dusunce += kad["günlük"]
+    K = list(kad["ispat"].kaideler)
+    kademe_olcumleri = kad["ölçümler"]
+    if kad["eksik"]:
+        dusunce.append("Kademelerde düşen uzuv: %s"
+                       % ", ".join(sorted(kad["eksik"])))
     if not K:
         dusunce.append("Hiçbir kaide bütün gösterimleri tutmuyor. "
                        "Tutmayan bir kaideyle cevap vermek, tam eşleşme "
                        "ölçütünü sahte kılardı.")
         return {"nev": "bulmaca", "cevap": None, "sükût": True,
                 "sebep": "kaide bulunamadı", "muhakeme": dusunce,
-                "yakîn": 0.0, "tesadüf": t}
+                "yakîn": 0.0, "tesadüf": t,
+                "ölçümler": kademe_olcumleri}
 
     # **SÖZ VEREBİLİR MİYİM?** Bir kaide gösterimleri tutup sınama
     # girdisinde ``None`` dönebilir (görülmemiş bağlam). Evvelce ilk
@@ -314,6 +330,38 @@ def mudrike(gorev, yakin_esigi: float = YAKIN_ESIGI,
     # Tıkanıklık **ihtiyat** olarak girer: sözü kesmez, yakîni düşürür.
     ihtiyat = 0.8 if c["H1"] else 1.0
     yakin = istikra * (0.5 if muphem else 1.0) * ihtiyat * kanit
+
+    # **MECLİS.** Kod tabanının bütün modülleri burada padişahın
+    # hükmüne fiilen girer (`nefs/meclis.py`). İki mertebe ayrı ayrı
+    # hesaplanır -- görevin verisiyle hesap yapan **uzuv**lar ve kendi
+    # varsayımını sınayan **hakem**ler -- ve neticeleri tek bir ihtiyat
+    # çarpanına iner. Bu, "içe aktardım" demenin değil, modülün hükmü
+    # **değiştirmesi**nin yeridir: bir modülün hesabı bozulursa buradan
+    # yakîn düşer ve padişah susar.
+    try:
+        from .meclis import meclis
+        mec = meclis(ciftler, girdiler)
+        yakin *= float(mec["ihtiyat"])
+        dusunce.append(
+            "Meclisi topluyorum: %d uzuv (rey %.3f), %d hakem (rey %.3f), "
+            "%d düşen → ihtiyat %.3f, yakînim %.3f."
+            % (len(mec["uzuv_rey"]), mec["uzuv"], len(mec["hakem_rey"]),
+               mec["hakem"], len(mec["eksik"]), mec["ihtiyat"], yakin))
+        # **Ölçü hükmü uzuvdan geliyor**: `nefs/boyut.py` çıktı ölçüsünü
+        # kestirdiyse ve kaidenin verdiği cevap ona uymuyorsa, iki
+        # müstakil hesap birbirini yalanlıyor demektir; yakîn düşer.
+        kes = mec["bilgi"].get("kestirilen_ölçü")
+        if kes is not None and girdiler:
+            deneme = K[0](np.asarray(girdiler[0], np.int64))
+            if deneme is not None and tuple(deneme.shape) != tuple(kes):
+                yakin *= 0.5
+                dusunce.append(
+                    "Fakat ölçü kestirimi %s diyor, kaidem %s veriyor -- "
+                    "iki müstakil hesap uyuşmuyor; yakînimi yarıya "
+                    "indiriyorum." % (tuple(kes), tuple(deneme.shape)))
+    except Exception as exc:                             # noqa: BLE001
+        dusunce.append("Meclis toplanamadı (%s); ihtiyatsız devam "
+                       "ediyorum." % type(exc).__name__)
     if hip > 0:
         dusunce.append("Bu kaide %d girdilik bir tablo öğrendi; "
                        "delilim %d hücre → delil/hipotez sağlamlığı %.3f."

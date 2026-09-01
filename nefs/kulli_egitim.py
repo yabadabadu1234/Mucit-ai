@@ -42,11 +42,9 @@ from typing import Dict, Optional, Sequence, Tuple
 import numpy as np
 
 from hesap.donanim import Donanim, donanim
-from kuantum.dalga import DalgaEniyileyici
-from kuantum.nqs import NQS, NQSAyar
 
 from .qakis import QNefs
-from .qegitim import degerlendir, ornekler, uygunluk
+from .qegitim import degerlendir, ornekler, uygunluk  # uygunluk: eski ölçüm yolu
 from .qyazmac import QAyar
 
 __all__ = ["EgitimAyari", "KISA_CPU", "ORTA", "AZAMI_KAGGLE",
@@ -109,6 +107,9 @@ class EgitimAyari:
     oran: float = 0.20
     kademe: float = 0.6
     lam: float = 1e-2
+    #: Tâlimin dış tur sayısı (`nefs/talim.py`): altuzay kaç kere
+    #: yenilenecek. Bütçenin en kaba kolu budur.
+    talim_tur: int = 3
     # --- donanım
     surec: int = 0                   # 0 = donanımdan tayin et
     tohum: int = 0
@@ -123,7 +124,15 @@ class EgitimAyari:
 #: eğitimin çok kısa hâli çalışabilmeli."* Ölçüldü: bu ayarla bir ileri
 #: geçiş 0,53 sn; aşağıdaki çevrim sayısıyla eğitim dakikalar mertebesinde
 #: biter.
-KISA_CPU = EgitimAyari(ad="kısa-CPU")
+#: **Bütçe ölçülerek konmuştur, tahminle değil.** Yeni kayıp
+#: (`nefs/kulli_kayip.py`) 41 melekeyi tek tek okuduğu için bir çağrı
+#: ~2 sn sürer; eski kayıp beş sayı okuyup geçiyordu. O hâlde "kısa
+#: CPU hâli"nin dalga bütçesi buna göre küçültülür -- aksi hâlde
+#: "kısa" hâl saatler sürerdi. Ölçü değişince bütçe de değişir;
+#: bütçeyi sabit tutup ölçüyü ağırlaştırmak, koşmayan bir ayar
+#: bırakmak olurdu.
+KISA_CPU = EgitimAyari(ad="kısa-CPU", cevrim=2, ornek=4,
+                       zincir=2, talim_tur=1)
 
 #: Orta hâl -- tek makinede saatler.
 ORTA = EgitimAyari(ad="orta", satir_kubiti=6, bag=32, gorev=120,
@@ -150,18 +159,26 @@ AZAMI_KAGGLE = EgitimAyari(
 _ISCI: Dict[str, object] = {}
 
 
-def _isci_kur(ayar: EgitimAyari, veri) -> None:
+def _isci_kur(ayar: EgitimAyari, veri, kademe=None) -> None:
     _ISCI["nefs"] = QNefs(ayar.tohum, ayar.qayar())
     _ISCI["veri"] = veri
     _ISCI["ayar"] = ayar
+    _ISCI["kademe"] = list(kademe or [])
     # yer tahsisi ilk koşuda olur; her işçide aynı sırayla olmalı
     _ISCI["nefs"].idrak_et(np.zeros((2, ayar.satir_kubiti)))
 
 
 def _isci_kayip(p: np.ndarray) -> float:
+    """Süreç havuzundaki işçi de **aynı** kaybı hesaplar.
+
+    Ayrı bir kayıp kullansaydı paralel koşu ile tek süreçli koşu farklı
+    şeyi eniyiler, mukayeseleri de manasız olurdu.
+    """
+    from .kulli_kayip import kulli_kayip
     a: EgitimAyari = _ISCI["ayar"]        # type: ignore[assignment]
-    return float(uygunluk(_ISCI["nefs"], _ISCI["veri"], p,  # type: ignore
-                          a.sozluk))
+    t = kulli_kayip(_ISCI["nefs"], _ISCI["veri"], p,  # type: ignore
+                    a.sozluk, kademe_olcumleri=_ISCI.get("kademe"))
+    return float(t["kayıp"])
 
 
 # =====================================================================
@@ -186,6 +203,27 @@ class KulliEgitim:
         self.p0 = self.nefs.vektor()
         self.havuz = None
         self.olcum: Dict[str, object] = {}
+        #: **Altı kademenin ölçüleri kayba girer** (`nefs/kademeler.py`).
+        #: Eğitim görevlerinden bir avuç üzerinde bir kere hesaplanır:
+        #: kademeler parametreye değil göreve bağlıdır, o yüzden her
+        #: kayıp çağrısında tekrar hesaplamak israf olurdu.
+        self.kademe_olcumleri = self._kademeleri_olc()
+
+    def _kademeleri_olc(self, kac: int = 4):
+        """Altı kademeyi birkaç görevde koştur ve ölçülerini topla.
+
+        Bu, kademeleri **eğitime sokan** bağdır: kademelerin hatası
+        kayba girmezse o kademeler eğitilmez, yalnız çıkarımda süs
+        olarak durur.
+        """
+        try:
+            from .kademeler import kademeleri_kos
+            out = []
+            for g in list(self.egitim_gorevleri)[:int(kac)]:
+                out += list(kademeleri_kos(g)["ölçümler"])
+            return out
+        except Exception:                                # noqa: BLE001
+            return []
 
     # -----------------------------------------------------------------
     def _coz(self, X: np.ndarray) -> np.ndarray:
@@ -203,18 +241,51 @@ class KulliEgitim:
 
     # -----------------------------------------------------------------
     def kayip(self, X: np.ndarray) -> np.ndarray:
-        """``ℒ_Nefs(Θ)`` yığın hâlinde -- süreçlere bölünerek.
+        """Eski arayüz: **kübit** dizisinden kayıp. Yerinde bırakıldı.
 
-        Kaybın kendisi ``qegitim.uygunluk``tur ve üçü de içindedir:
-        ARC potansiyeli, mîzân cezası (tenakuz + nakz + tasdik + sükût)
-        ve topolojik ceza (dolaşıklık ödülü). Yani vesikadaki
-        ``ℒ_Tenakuz + ℒ_Fıtrat + ℒ_Mizan`` toplamı buradadır.
+        `nefs/talim.py` kodlamayı kendi içinde yaptığı için ana yol
+        artık ``kayip_p``dir; bu, kübit uzayında kıyas isteyen ölçümler
+        için duruyor ve kaldırılmadı -- kaldırmak, eski ölçümleri
+        tekrarlanamaz kılardı.
         """
-        P = self._coz(np.atleast_2d(X))
-        if self.havuz is None:
-            return np.array([uygunluk(self.nefs, self.veri, p,
-                                      self.ayar.sozluk) for p in P])
-        return np.array(list(self.havuz.map(_isci_kayip, list(P))))
+        return self.kayip_p(self._coz(np.atleast_2d(X)))
+
+    def kayip_p(self, P: np.ndarray) -> np.ndarray:
+        """``ℒ(Θ)`` -- **parametre** uzayında, yığın hâlinde.
+
+        ===================================================================
+        KAYIP DEĞİŞTİ: 41 MELEKENİN HEPSİ SAYILIYOR
+        ===================================================================
+
+        Eskiden ``qegitim.uygunluk`` çağrılıyordu::
+
+            V = −log P(doğru belirteç) + 0,25·mîzân − 0,1·entropi
+
+        İki kusuru vardı ve ikisi de yapısaldı (bkz. `nefs/olcu.py` ve
+        `nefs/kulli_kayip.py` şerhleri):
+
+        1. Baştaki terim **belirteç kestirimi**ydi -- kütük H133'te
+           teşhis edilip çıkarımdan söküldüğü hâlde eğitimde duruyordu.
+           Yani model çıkarımda muhakeme ediyor, eğitimde sonraki
+           belirteci tahmin etmeyi öğreniyordu.
+        2. Ceza yalnız **beş** küllî alan okuyordu; otuz altı melekenin
+           eğitim sinyali fiilen sıfırdı.
+
+        Şimdi ``kulli_kayip`` çağrılır: 41 melekenin her biri kendi
+        sözleşmesine göre ölçülür, altı kademe kendi hatasını verir, ve
+        hepsi `nefs/olcu.py`nin funktörüyle **müşterek uzaya** çekilip
+        orada toplanır. Elle konmuş katsayı kalmamıştır.
+        """
+        from .kulli_kayip import kulli_kayip
+        P = np.atleast_2d(np.asarray(P, float))
+        if self.havuz is not None:
+            return np.array(list(self.havuz.map(_isci_kayip, list(P))))
+        out = np.empty(P.shape[0], float)
+        for i, p in enumerate(P):
+            t = kulli_kayip(self.nefs, self.veri, p, self.ayar.sozluk,
+                            kademe_olcumleri=self.kademe_olcumleri)
+            out[i] = float(t["kayıp"])
+        return out
 
     # -----------------------------------------------------------------
     def kos(self, paralel: bool = True) -> Dict[str, object]:
@@ -226,23 +297,35 @@ class KulliEgitim:
         if paralel and surec > 1:
             import multiprocessing as mp
             self.havuz = mp.get_context("fork").Pool(
-                surec, initializer=_isci_kur, initargs=(a, self.veri))
+                surec, initializer=_isci_kur,
+                initargs=(a, self.veri, self.kademe_olcumleri))
 
+        # **TEK TÂLİM USULÜ** (`nefs/talim.py`). Dalga (NQS + Grover)
+        # artık doğrudan çağrılmaz; usulün dokuz uzvundan **biri**dir.
+        # Yanına had ölçümü (`akis/tikiz`), etkin altuzay
+        # (`main/optimize`), vekil yüzey (`ogrenme/rkhs`), durgunluk
+        # (`ogrenme/grassmann`), tünelleme (`arama/bukum`) ve denge
+        # (`fitrat/denge`) girer. Bu usul **her** eğitim yerinde aynen
+        # kullanılır; istisna yoktur.
+        from .talim import Talim, TalimAyari
+        talim_ayari = TalimAyari(
+            ad=a.ad, r=min(8, max(2, self.d // 8)), bit=a.bit,
+            yaricap=a.yaricap, cevrim=a.cevrim, ornek=a.ornek,
+            zincir=a.zincir, oran=a.oran, kademe=a.kademe, lam=a.lam,
+            nqs_gizli=a.nqs_gizli, nqs_derece=a.nqs_derece,
+            tur=a.talim_tur, tohum=a.tohum)
         try:
-            nqs = NQS(NQSAyar(n=n_kubit, gizli=a.nqs_gizli,
-                              derece=a.nqs_derece, tohum=a.tohum), self.dh)
-            motor = DalgaEniyileyici(nqs, self.kayip, tohum=a.tohum)
-            r = motor.kos(cevrim=a.cevrim, ornek=a.ornek, zincir=a.zincir,
-                          oran=a.oran, lam=a.lam, kademe=a.kademe)
+            t = Talim(self.kayip_p, self.p0, talim_ayari, dh=self.dh)
+            r = t.kos()
         finally:
             if self.havuz is not None:
                 self.havuz.close()
                 self.havuz.join()
                 self.havuz = None
 
-        V_ilk = float(uygunluk(self.nefs, self.veri, self.p0, a.sozluk))
-        p_yildiz = self._coz(np.atleast_2d(motor.en_iyi_x))[0]
-        V_son = float(uygunluk(self.nefs, self.veri, p_yildiz, a.sozluk))
+        V_ilk = float(r["V_ilk"])
+        p_yildiz = np.asarray(r["p"], float)
+        V_son = float(r["V_son"])
         self.nefs.yukle(p_yildiz)
 
         deg = degerlendir(self.nefs, self.dogrulama,
@@ -254,8 +337,11 @@ class KulliEgitim:
             "veri": len(self.veri), "süreç": surec,
             "V_ilk": V_ilk, "V_son": V_son,
             "süre_sn": time.perf_counter() - t0,
-            "kayıp_çağrısı": a.cevrim * a.ornek,
-            "seyir": motor.seyir, "değerlendirme": deg,
+            "kayıp_çağrısı": int(r.get("kayıp_çağrısı", 0)),
+            "seyir": r["seyir"], "değerlendirme": deg,
+            "tâlim_günlüğü": r.get("günlük", []),
+            "düşen_uzuv": r.get("düşen_uzuv", {}),
+            "kademe_ölçüsü": len(self.kademe_olcumleri),
             "p": p_yildiz}
         return self.olcum
 
@@ -315,11 +401,15 @@ def rapor(ayar: EgitimAyari = KISA_CPU, mukayese: bool = True) -> str:
           "V(Θ):  ilk %.4f  →  son %.4f   (fark %.4f)"
           % (r["V_ilk"], r["V_son"], r["V_ilk"] - r["V_son"]),
           "",
-          "çevrim  eşik      μ      k  β_tavlama  en_iyi_L  kabul  artık"]
+          "TÂLİM SEYRİ (tek usul, dokuz uzuv):",
+         "  tur      V        yarıçap  durgunluk  deneme   çağrı"]
     for c in r["seyir"]:
-        s.append("  %-5d %-9.4f %-6.3f %-2d %-10.3f %-9.4f %-6.2f %.4f"
-                 % (c.no, c.esik, c.mu, c.k, c.beta_tavlama,
-                    c.en_iyi_L, c.kabul, c.artik))
+        s.append("  %-5d %-10.4f %-8.3f %-10.3e %-7d %d"
+                 % (int(c["tur"]), c["V"], c["R"], c["durgunluk"],
+                    int(c["deneme"]), int(c["çağrı"])))
+    if r.get("düşen_uzuv"):
+        s.append("  DÜŞEN UZUV: %s" % ", ".join(sorted(r["düşen_uzuv"])))
+    s.append("  kayba giren kademe ölçüsü: %d" % r.get("kademe_ölçüsü", 0))
 
     s += ["",
           "İKİ ÖLÇÜT BERABER (kütük H47):",
