@@ -4069,3 +4069,151 @@ seçmek:
 Sükût nizamı ayakta: 104 görevde susuldu, 100'ünde sebep "kaide
 bulunamadı". Darboğaz hâlâ **kaide cebrinin darlığı**dır ve bu iş
 birikimlidir.
+
+---
+
+## H136 — Gösterimlere tam uymak delil değildir (bırak-birini istikrâsı)
+
+Ölçüldü (ARC-AGI-2 eğitim, ilk 120): `0ca9ddb6` ve `025d127b`
+görevlerinde `hücre[3x3]` kaidesi **bütün gösterimlere tam uyuyor**
+(hücre isabeti 1,000) fakat sınama girdisinde `None` dönüyor. Sebep:
+o bir kaide değil bir **arama tablosu**dur. Bağlam sayısı hücre sayısı
+mertebesinde olunca tabloyu ezberlemek gösterimleri tam açıklar ve
+hiçbir şey öğretmez.
+
+Demek ki *"bütün gösterimlere uyuyor"* ölçütü, tablo büyüklüğü veriye
+yaklaştıkça **boşalır**. H134'ün `delil/hipotez` cezası bunu
+yumuşatıyordu fakat kesmiyordu.
+
+Hüküm: veriden öğrenen her kaide, her gösterimi sırayla dışarıda
+bırakıp kalanlardan **yeniden öğrenilerek** sınanır
+(`nefs/kaideler.capraz_gecerli`). Ölçülen netice:
+
+    öncesi : 12 tam çözüm, 4 yanlış, cevap verince isabet %75
+    sonrası: 12 tam çözüm, 0 yanlış, cevap verince isabet %100
+
+Çözüm kaybı yok, yanlış cevap sıfırlandı.
+
+**Kendi hatamın tashihi:** bu yedi görev için evvelce *"seçim
+hatası, kapı haksız yere eliyor"* demiştim. Ölçtüm: kapı haklıydı.
+O tablolar hakikaten genellemiyor; gösterimlere tam uymaları sahte
+bir delildi.
+
+## H137 — İki sükût birbirine karıştırılmamalı
+
+*"Bu hücreyi bilmiyorum"* ile *"bu vazifeyi reddediyorum"* aynı şey
+değildir ve ikisi de `None` ile söyleniyordu. Bedeli ölçüldü: bırak-
+birini kapısı bütün öğrenilen kaideleri eliyordu, zira her katta
+görülmemiş bir bağlam çıkıp kaide `None` dönüyordu — ve `None` ne
+doğru ne yanlıştır, yani kapı **hiçbir şey ölçmüyordu**. Daima elemek,
+ölçmek değildir.
+
+`|aynen` okuması eklendi: *bildiğimi değiştiririm, bilmediğime
+dokunmam.* Böylece kapı hakikaten ayırt eder.
+
+## H138 — Katalog kapalı bir kümedir; aritmetik tutmuyor
+
+Ölçülen ilerleme: eski çözücü 5 → terkip cebri 8 → nesne+hücre 9 →
+aynı şekilli dört aile 12 → tamamlama katmanı 13. Yani **her yeni aile
+ortalama bir görev**. 120'nin yarısı için ~50 aile daha gerekirdi; bu
+bir mimarî değil angaryadır ve ARC-AGI-2 tam olarak bunu boşa
+çıkarmak için tasarlanmıştır.
+
+Kaide *"şunlara şunu yap"* diye ikiye ayrıldı (`nefs/secici.py`):
+19 seçici × 12 dönüştürücü. **Ölçülen netice dürüstçe:** çözülemeyen
+79 aynı şekilli görevin **48'inde** çarpımın bir kaidesi hiç
+dokunmamaktan iyi netice veriyor, fakat **hiçbirinde** tek adım tam
+uymuyor (TAM UYAN = 0). Tam çözüm 13'te kaldı.
+
+Demek ki darboğaz kaide **sayısı** değil, o kaidelerin
+**birleştirilmesi**dir.
+
+## H139 — Kör budama aramayı açlıktan öldürüyordu
+
+`kaide_ara` her kademede `azami_dal` kadar dal tutuyor ve sıralama
+ölçütü `boy`du. Fakat bir kademedeki bütün dalların boyu **aynıdır**;
+yani sıralama hiçbir şey söylemiyor, budama fiilen **keyfî** oluyordu.
+Atom sayısı azken zararsızdı; çarpım katmanı atomu 150'nin üstüne
+çıkarınca arama açlıktan öldü. Sıralama hedefe yakınlığa çevrildi
+(en kötü gösterimdeki hücre isabeti); kabul ölçütü değişmedi.
+
+## H140 — MECLİS NAKZEDİLDİ: modülü yanına asmak uzuv yapmaz
+
+`nefs/meclis.py` yazılmıştı: her modül çağrılıyor, neticesi bir
+**rey**e çevriliyor, reyler padişahın yakînini çarpıyordu. 91 modül
+koşuyordu ve sayı doğruydu.
+
+Kullanıcı hükmü: *"Meclis yapma, uzuv yap tüm eksikleri… sadece girdi
+çıktı haritalarını münasebetlerini tayin etmeli."* Ve haklıdır: meclis
+modülleri ana akışın **yanına** astı, **içine** koymadı. Bir modülün
+çıktısı bir sonraki adımın girdisi değilse o modül uzuv değil süstür.
+
+`nefs/meclis.py` **kaldırıldı**. Yerine `nefs/kademeler.py`: altı
+kademe, ve kademe *k*'nın çıktısı kademe *k+1*'in girdisi.
+
+    Görev →1 İDRAK→ İdrak →2 TASAVVUR→ Hâl →3 MUHAKEME→ Namzet
+         →4 İSPAT→ İspat →5 TASDİK→ Yakîn →6 BEYAN→ Cevap
+
+## H141 — Ölçü funktoru; ve terkip kaidesinin delil olmadığı
+
+Kademelerin ve melekelerin ölçüleri **ayrı uzaylardadır**: `−logP`
+`[0,∞)`da küçüğü iyi, entropi `[0,logχ]`da büyüğü iyi, tenakuz
+`[0,1]`de küçüğü iyi. Bunları `0,25` ve `0,1` gibi elle konmuş
+katsayılarla toplamak metreyle kilogramı toplamaktı; katsayı bir ölçü
+değil, intibaksızlığın **örtüsü**dür.
+
+Funktör `F : 𝒮 → 𝔐` kuruldu; müşterek uzay `mizan/munazara.py`nin
+epistemik merdivenidir (vehim 0 … yakîn 1). Katsayılar **kalkmıştır**.
+
+**Kendi hatamın tashihi:** terkip kaidesine bir körlük sınaması
+koymuştum — *"monoton olmayan bir eşleme `F(g∘f)=F(g)∘F(f)`yi
+bozmalı"*. Ölçüldü: bozmuyor. Sebebi cebrîdir ve sınamanın değil benim
+hatamdı: `F_T⁻¹∘F_T` sadeleşir, yani terkip kaidesi `f` ve `g` ne
+olursa olsun sağlanır ve **hiçbir şey ispat etmez**. Yük taşıyan
+hususiyet **sıra korumasıdır**; sınama ona çevrildi ve orada körlük
+hakikîdir (cihet ters çevrilince kırmızı yanıyor).
+
+## H142 — Otuz altı meleke hiç eğitilmiyordu
+
+Eski `uygunluk` = `−log P(doğru belirteç) + 0,25·mîzân − 0,1·entropi`,
+ve `mizan_cezasi` yalnız **beş** sayı okuyordu. Kırk bir melekenin
+kendi hatası hiçbir yerde yoktu; otuz altı meleke için eğitim sinyali
+**fiilen sıfırdı**. Bir uzvun hatası kayba girmiyorsa o uzuv
+eğitilmiyor demektir — kaç kere çağrıldığı bunu değiştirmez.
+
+Ayrıca baştaki terim **belirteç kestirimi**ydi: H133'te teşhis edilip
+çıkarımdan söküldüğü hâlde **eğitimde duruyordu**. Yani model
+çıkarımda muhakeme ediyor, eğitimde sonraki belirteci tahmin etmeyi
+öğreniyordu.
+
+`nefs/kulli_kayip.py`: her meleke `nefs/sozlesme.py`de **kendi ilan
+ettiği** bölgeden ölçülür. Ölçüldü: **41 ayrı meleke**, 105–156 uzuv
+ölçüsü, haddi tahminî ölçü 0. En zayıf uzuv da adıyla çıkıyor
+(ilk ölçümde `𝒪₄.yerel = 0,000` — yani 𝒪₄ yerel alanı ölü bırakıyor).
+
+## H143 — Tek tâlim usulü; ve `aktif_altuzay`ı yanlış okumam
+
+Kod tabanında **üç ayrı** gradyansız eniyileme vardı ve birbirinden
+habersizdi (`kulli_egitim`, `qegitim.egit`, `main/optimize`). Üçü de
+aynı işi yapıyordu; ayrı olmalarının faydası yok, zararı vardı.
+
+`nefs/talim.py`: tek usul, dokuz uzuv — had (`akis/tikiz`), altuzay
+(`main/optimize`), vekil (`ogrenme/rkhs`), Gri kod, dalga
+(`kuantum/nqs`+`kuantum/dalga`), durgunluk (`ogrenme/grassmann`),
+tünel (`arama/bukum`), denge (`fitrat/denge`), bütçe (`olcek/hiz`,
+`yaklasim/kara_kutu`). Artık **her** eğitim yerinde bu çağrılır.
+
+**Kendi hatamın tashihi:** `aktif_altuzay` `(U, özdeğerler, gradyan
+örnekleri)` döndürüyor; ben `(U, kayıplar, noktalar)` sanmıştım. O
+yüzden vekile kayıp diye özdeğer veriliyordu ve **vekil ile denge
+uzuvları hiç ateşlenmiyordu** — dokuz uzuvdan ikisi ölüydü ve günlükte
+görülmeseydi fark edilmezdi. Düzeltildi; vekil kendi örneklerini
+çekiyor, dokuzu da koşuyor.
+
+## H144 — Kısa CPU ayarının bütçesi ölçülerek düşürüldü
+
+Yeni kayıp 41 melekeyi tek tek okuduğu için bir çağrı **6,9 sn**
+sürüyor (eski kayıp beş sayı okuyup geçiyordu). O hâlde "kısa CPU
+hâli"nin dalga bütçesi de küçültüldü (`cevrim` 6→2, `ornek` 24→4,
+`zincir` 8→2, `talim_tur` 1). Ölçü ağırlaşınca bütçeyi sabit tutmak,
+koşmayan bir ayar bırakmak olurdu.
