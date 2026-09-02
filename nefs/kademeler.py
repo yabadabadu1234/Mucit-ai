@@ -77,6 +77,54 @@ HUDUT
 * Kademelerin hatası ``[0,1]``de değil **kendi uzaylarında** doğar;
   toplanmadan evvel `nefs/olcu.py`nin funktörüyle mertebeye iner.
   Doğrudan toplamak, metreyle kilogramı toplamak olurdu.
+
+===================================================================
+KADEMELER NASIL EĞİTİLİR -- H156'nın kapanışı (kütük H160)
+===================================================================
+
+H156'da şöyle yazmıştım ve doğruydu: *"Kademeleri kayba koymak onları
+eğitmiyordu, yalnız ölçütü kör ediyordu. Kademelerin eğitilebilmesi
+için kendi parametrelerinin olması ve o parametrelerin
+`nefs/talim.py`ye verilmesi gerekir -- henüz yok ve iddia
+edilmiyor."* Burada o borç kapanıyor ve **iki** şey birden gerekiyordu;
+yalnız parametre koymak yetmezdi.
+
+**1. Parametre.** Kademelerin içinde elle konmuş sayılar vardı --
+beyan eşiği ``0,55``, müphemlik cezası ``0,5``, tevâfuk ``0,6``,
+muhakeme derinliği ``2``. Hepsi ``QParametre``nin **aynı düz
+vektöründen** alınır artık (``_par``), yani melekelerin açılarıyla
+aynı defterden. Böylece `nefs/talim.py` onları **hiçbir yeni tertibe
+lüzum kalmadan** eğitir -- kullanıcı hükmü buydu: *"öğrenilecek hangi
+parametre olursa olsun istisnası olmaksızın o mimariyi kullan."*
+
+**2. Ölçü.** Parametre koymak tek başına **kâfi değil, tehlikeliydi**.
+Eski ölçüler *faaliyet* ölçüsüydü::
+
+    kademe.muhakeme = 1 eğer bir namzet bulunduysa
+    kademe.beyan    = 1 eğer konuşulduysa
+
+Bunlar **oynanabilir**: eşiği düşür, her zaman konuş, ölçü 1 olsun.
+Yani eğitim, doğru cevap vermeyi değil **konuşmayı** öğrenirdi. Bu tam
+olarak H45'te ölçülmüş felâkettir: *"sükût 140 → 0; model susmamayı
+öğrendi, fakat bilmeden konuşmayı öğrendi."* H90'ın şartıyla: kırmızı
+yanamayan ölçüt, ölçüt değildir.
+
+O hâlde ölçüler **bırak-birini** (leave-one-out) üzerine kuruldu: son
+gösterim çifti saklanır, boru hattı kalanlardan koşar, ve saklanan
+çiftin çıktısı **hakikat** olarak kullanılır. Notlar epistemik
+merdivenden (`mizan/munazara.py`, ``MERTEBELER``) okunur, elle
+konmuş değildir::
+
+    doğru bildi   → 1,00  (yakîn)
+    sustu         → 0,25  (şek -- iki taraf müsâvî)
+    yanlış söyledi→ 0,00  (vehim -- mercûh taraf)
+
+Bu üçlü sıralama tam da matlup teşviki verir: eşiği düşürüp hep
+konuşmak, ancak **dörtte birden fazla** isabet ediyorsan kazandırır.
+Susmak yanlıştan iyidir, doğrudan kötüdür. Ve ``kademe.tasdik``
+artık bir faaliyet değil bir **ayar** (calibration) ölçüsüdür:
+ilan edilen yakîn ile fiilî isabetin farkı. Hem fazla iddiayı hem
+eksik iddiayı cezalandırır.
 """
 from __future__ import annotations
 
@@ -88,9 +136,50 @@ import numpy as np
 from .olcu import Olcum, OlcuUzayi, UZAYLAR
 
 __all__ = ["Idrak", "Hal", "Namzet", "Ispat", "Yakin", "Kademeler",
-           "kademeleri_kos", "rapor"]
+           "kademeleri_kos", "KADEME_VARSAYILAN", "MERTEBE_NOTU",
+           "kademe_parametreleri_ac", "rapor"]
 
 Izgara = np.ndarray
+
+#: Kademelerin öğrenilen sayıları ve **varsayılan** değerleri. Parametre
+#: sıfırken (``QParametre`` taze) ``_par`` tam olarak bu değerleri verir;
+#: yani eğitim başlamadan evvelki davranış, H156'dan evvelki davranışın
+#: **aynısıdır**. Bu kasıtlıdır: yeni bir tertip, eskisini sessizce
+#: değiştirerek işe başlamamalı -- değiştirdiği yer ölçülebilsin.
+KADEME_VARSAYILAN: Dict[str, Tuple[float, float, float]] = {
+    # anahtar                    (varsayılan, alt, üst)
+    "kademe.idrak.nesne":        (1.0,  1.0,  8.0),   # asgarî bileşen ebadı
+    "kademe.muhakeme.derinlik":  (2.0,  1.0,  4.0),   # terkip derinliği
+    "kademe.tasdik.müphem":      (0.5,  0.1,  1.0),   # müphemlik cezası
+    "kademe.tasdik.tevafuk":     (0.6,  0.2,  1.0),   # tek şahitli tevâfuk
+    "kademe.tasdik.taban":       (0.5,  0.1,  1.0),   # hüküm ağırlığı tabanı
+    "kademe.beyan.eşik":         (0.55, 0.05, 0.95),  # konuşma eşiği
+}
+
+def kademe_parametreleri_ac(p) -> int:
+    """Kademelerin yerlerini düz vektörde **peşinen** aç; sayısını döndür.
+
+    Zaruridir: ``QParametre.al`` bir anahtarı **ilk istendiğinde** tahsis
+    eder, yani kademe sayıları ancak ilk kademe koşusunda vektöre
+    girerdi. Eğitim motoru ise boyutu (``d``) baştan sabitler; boyut
+    ortada değişirse motor kendi öğrendiğini siler -- kütük H39'da
+    ölçülmüş kusurun ta kendisi. Onun için yerler eğitim başlamadan
+    açılır.
+    """
+    n = 0
+    for anahtar in KADEME_VARSAYILAN:
+        try:
+            p.al(anahtar, 1) if hasattr(p, "al") else p.v(anahtar, 1)
+            n += 1
+        except Exception:                                # noqa: BLE001
+            pass
+    return n
+
+
+#: Bırak-birini notları -- **elle konmamıştır**, `mizan/munazara.py`nin
+#: ``MERTEBELER`` cetvelinden okunur: yakîn 1,00 · şek 0,25 · vehim 0,00.
+MERTEBE_NOTU: Dict[str, float] = {"doğru": 1.0, "sükût": 0.25,
+                                  "yanlış": 0.0}
 
 #: Kademelerin ölçü uzayları. Hepsi ``[0,1]``de fakat **cihetleri**
 #: ayrıdır ve cihet funktörün şartıdır.
@@ -160,10 +249,39 @@ class Kademeler:
     yazar; o liste `nefs/kulli_kayip.py`ye verilir ve **eğitime girer**.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, p=None) -> None:
         self.olcumler: List[Olcum] = []
         self.eksik: Dict[str, str] = {}
         self.gunluk: List[str] = []
+        #: Melekelerin açılarıyla **aynı** düz vektör (``QParametre``).
+        #: ``None`` ise varsayılanlar kullanılır ve kademe eğitilmez.
+        self.p = p
+        #: 5. kademenin ilan ettiği yakîn; ``capraz_not`` onu hakikatle
+        #: yüzleştirip ayar (calibration) notunu koyar.
+        self.yakin_ilani: float = 0.0
+
+    # -- öğrenilen sayılar --------------------------------------------
+    def _par(self, anahtar: str) -> float:
+        """Öğrenilen bir kademe sayısı -- haddine sıkıştırılmış.
+
+        Ham parametre ``ℝ``dedir; ``tanh`` ile ``[-1,1]``e, oradan
+        ``[alt, üst]``a taşınır. **Sıfır ham değer tam olarak
+        varsayılanı verir**: ``tanh(0) = 0`` ve haritalama varsayılanın
+        etrafında kurulur. Yani eğitilmemiş bir model, H156'dan evvelki
+        modelin **birebir aynısıdır** -- yeni tertip, eskisini sessizce
+        değiştirerek işe başlamaz.
+        """
+        var, alt, ust = KADEME_VARSAYILAN[anahtar]
+        if self.p is None:
+            return float(var)
+        try:
+            ham = float(np.asarray(self.p.al(anahtar, 1), float).ravel()[0]) \
+                if hasattr(self.p, "al") else float(self.p.v(anahtar, 1)[0])
+        except Exception:                                # noqa: BLE001
+            return float(var)
+        t = float(np.tanh(ham))
+        # varsayılanın iki yanına ayrı ayrı esner ki sıfır = varsayılan
+        return float(var + t * ((ust - var) if t >= 0.0 else (var - alt)))
 
     def _olc(self, ad: str, deger: float) -> None:
         self.olcumler.append(Olcum("kademe.%s" % ad, float(deger),
@@ -195,10 +313,20 @@ class Kademeler:
             return I
         I.ayni_sekil = all(a.shape == b.shape for a, b in ciftler)
 
+        esik_nesne = int(round(self._par("kademe.idrak.nesne")))
+
         def _nesne():
             from idrak.cozucu import _bilesenler
             from .kaideler import ARKA
-            return [len(_bilesenler(a, ARKA)) for a, _ in ciftler]
+            # **Öğrenilen eşik:** ``esik_nesne`` hücreden küçük bileşen
+            # nesne sayılmaz. ARC'de tek hücrelik lekeler bazen gürültü,
+            # bazen asıl işarettir; hangisi olduğu göreve göre değişir ve
+            # elle konacak bir sayı değildir.
+            # ``_bilesenler`` ``(renk, maske, kutu)`` döndürür; bileşenin
+            # ebadı maskenin dolu hücre sayısıdır.
+            return [sum(1 for _renk, maske, _kutu in _bilesenler(a, ARKA)
+                        if int(maske.sum()) >= esik_nesne)
+                    for a, _ in ciftler]
         I.nesne_sayisi = self._dene("idrak.cozucu", _nesne) or []
 
         def _mubser():
@@ -295,28 +423,39 @@ class Kademeler:
         return H
 
     # -- 3. MUHAKEME: Hâl → Namzet -----------------------------------
-    def muhakeme(self, I: Idrak, H: Hal, derinlik: int = 2) -> Namzet:
+    def muhakeme(self, I: Idrak, H: Hal, derinlik: Optional[int] = None
+                 ) -> Namzet:
         """Hâlden **kaide adayları** üret ve sırala.
 
         Sıralama Occam'dır (hipotez küçüklüğü, sonra terkip kısalığı);
         `nefs/kaideler.py` onu zaten yapar. Buradaki kademe o aramayı
         **çağırır** ve neticesini 4. kademeye verir.
+
+        ``derinlik`` verilmezse **öğrenilir** (``kademe.muhakeme.derinlik``):
+        derin arama daha çok terkip bulur fakat hem pahalıdır hem de
+        ezbere yaklaşır; doğru derinlik göreve göre değişir ve elle
+        konacak bir sayı değildir.
         """
         N = Namzet()
         if not I.ciftler:
             self._olc("muhakeme", 0.0)
             return N
+        if derinlik is None:
+            derinlik = int(round(self._par("kademe.muhakeme.derinlik")))
 
         def _ara():
             from .kaideler import kaide_ara
-            return list(kaide_ara(I.ciftler, derinlik=derinlik))
+            return list(kaide_ara(I.ciftler, derinlik=int(derinlik)))
         N.kaideler = self._dene("nefs.kaideler", _ara) or []
         N.aranan = len(N.kaideler)
-        # Muhakemenin hatası: aday **bulunamaması**. Bir aday yeter;
-        # yüz aday bir adaydan daha iyi değildir (Occam zaten sıralar).
-        self._olc("muhakeme", 1.0 if N.kaideler else 0.0)
+        # **ÖLÇÜ DEĞİŞTİ (kütük H160).** Evvelce ``1 if N.kaideler``
+        # yazıyordu, yani bir *faaliyet* ölçüsüydü ve **oynanabilirdi**:
+        # aramayı genişlet, daima bir aday bul, ölçü 1 olsun. Ölçü artık
+        # 4. kademeye devredilmiştir; muhakemenin kendi notu, bulduğu
+        # adayların **ispattan sağ çıkma nispetidir** ve o nispet ancak
+        # ispat koştuktan sonra bilinir. Burada yalnız aday üretilir.
         self.gunluk.append("3. MUHAKEME: %d kaide bütün gösterimleri "
-                           "tutuyor" % N.aranan)
+                           "tutuyor (derinlik %d)" % (N.aranan, derinlik))
         return N
 
     # -- 4. İSPAT: Namzet → İspat ------------------------------------
@@ -356,10 +495,24 @@ class Kademeler:
             return bool(totoloji_mi(aksiyom1(deg("K"), deg("İ"))))
         self._dene("mizan.cikarim", _mantik)
 
-        self._olc("ispat", 1.0 if S.kaideler else 0.0)
-        self.gunluk.append("4. İSPAT: %d aday → %d ayakta (%s)"
+        # **ÖLÇÜ DEĞİŞTİ (kütük H160).** Evvelce ``1 if S.kaideler``
+        # idi; yine bir faaliyet ölçüsü ve yine oynanabilir. Şimdi
+        # ölçülen şey **arama ile ispatın uyuşmasıdır**:
+        #
+        #     muhakeme notu = ayakta kalan / aranan   (aramanın isabeti)
+        #     ispat    notu = ayakta kalan var mı     × o nispet
+        #
+        # Yani yüz aday üretip doksan dokuzu elenen bir arama, tek aday
+        # üretip onu ayakta tutan aramadan **kötüdür**. Occam'ın kayba
+        # giren hâli budur ve derinliği büyütmenin bedeli buradadır --
+        # aksi hâlde eğitim derinliği sonuna kadar açardı.
+        nispet = (float(len(S.kaideler)) / float(max(onceki, 1))
+                  if onceki else 0.0)
+        self._olc("muhakeme", nispet)
+        self._olc("ispat", nispet if S.kaideler else 0.0)
+        self.gunluk.append("4. İSPAT: %d aday → %d ayakta (%s), isabet %.2f"
                            % (onceki, len(S.kaideler),
-                              S.gerekce or "eleme yok"))
+                              S.gerekce or "eleme yok", nispet))
         return S
 
     # -- 5. TASDİK: İspat → Yakîn ------------------------------------
@@ -375,8 +528,10 @@ class Kademeler:
           (`nefs/boyut.py` ve `idrak/sekil.py`) birbirini tutuyor mu.
         """
         Y = Yakin()
+        self.yakin_ilani = 0.0
         if not S.kaideler:
-            self._olc("tasdik", 0.0)
+            # Not konmaz: ``tasdik`` artık bir ayar ölçüsüdür ve ayar
+            # ancak bir iddia varken ölçülebilir (bkz. ``capraz_not``).
             return Y
 
         def _istikra():
@@ -394,8 +549,9 @@ class Kademeler:
             Y.muphem = len(imzalar) > 1
 
         # İki müstakil ölçü şahidinin teyidi (1. kademeden gelir).
-        Y.tevafuk = 1.0 if (I.olcu is not None
-                            and I.sekil_kaidesi is not None) else 0.6
+        # Tek şahitle kalınca ne kadar güvenileceği **öğrenilir**.
+        tam_sahit = (I.olcu is not None and I.sekil_kaidesi is not None)
+        Y.tevafuk = 1.0 if tam_sahit else self._par("kademe.tasdik.tevafuk")
 
         def _murakabe():
             from .murakabe import hukum_agirligi, makam_tayin
@@ -403,11 +559,21 @@ class Kademeler:
             return float(hukum_agirligi(p, makam_tayin(p)))
         agirlik = self._dene("nefs.murakabe", _murakabe)
 
+        muphem_cezasi = self._par("kademe.tasdik.müphem")
+        taban = self._par("kademe.tasdik.taban")
         Y.deger = float(np.clip(
-            Y.istikra * (0.5 if Y.muphem else 1.0) * Y.tevafuk
-            * (1.0 if agirlik is None else float(np.clip(agirlik, 0.5, 1.0))),
+            Y.istikra * (muphem_cezasi if Y.muphem else 1.0) * Y.tevafuk
+            * (1.0 if agirlik is None
+               else float(np.clip(agirlik, taban, 1.0))),
             0.0, 1.0))
-        self._olc("tasdik", Y.deger)
+        # **ÖLÇÜ DEĞİŞTİ (kütük H160): tasdik bir AYAR ölçüsüdür.**
+        # Evvelce ``self._olc("tasdik", Y.deger)`` yazıyordu, yani
+        # *"yakînin yüksek olsun"* diyordu -- oynanabilir ve **yanlış**:
+        # bir modelin iyi olması yüksek yakîn ilan etmesi değil, ilan
+        # ettiği yakînin **hakikate uyması**dır. Fazla iddia da eksik
+        # iddia da kusurdur. Not ``beyan``da, bırak-birini hakikatiyle
+        # yüzleştikten sonra konur (bkz. ``capraz_not``).
+        self.yakin_ilani = float(Y.deger)
         self.gunluk.append(
             "5. TASDİK: istikrâ %.3f, %s, tevâfuk %.2f → yakîn %.3f"
             % (Y.istikra, "müphem" if Y.muphem else "müphem değil",
@@ -415,7 +581,8 @@ class Kademeler:
         return Y
 
     # -- 6. BEYAN: Yakîn → Cevap -------------------------------------
-    def beyan(self, I: Idrak, S: Ispat, Y: Yakin, esik: float = 0.55
+    def beyan(self, I: Idrak, S: Ispat, Y: Yakin,
+              esik: Optional[float] = None
               ) -> Optional[List[Optional[Izgara]]]:
         """Yakîn eşiği aşarsa **konuş**, aşmazsa sus.
 
@@ -425,9 +592,21 @@ class Kademeler:
         Cevabın ölçüsü 1. kademenin kestirdiği ölçüyle **yüzleştirilir**:
         iki müstakil hesap uyuşmuyorsa konuşulmaz. Bu, beyan kapısının
         (H131) kademeli hâlidir: kelâm ancak hükümden akar.
+
+        ``esik`` verilmezse **öğrenilir** (``kademe.beyan.eşik``). Eşiği
+        oynatmak notu tek başına yükseltemez: not, konuşup konuşmamaya
+        değil **bırak-birinide isabet edip etmemeye** bakar
+        (``capraz_not``).
         """
+        if esik is None:
+            esik = self._par("kademe.beyan.eşik")
         if not S.kaideler or Y.deger < esik:
-            self._olc("beyan", 0.0)
+            # **Not burada KONMAZ (kütük H160).** Evvelce ``0.0``
+            # yazılıyordu, yani susmak daima kusur sayılıyordu ve model
+            # susmamayı öğrenirdi -- H45'te tam olarak bu ölçüldü
+            # ("sükût 140 → 0; bilmeden konuşmayı öğrendi"). Sükût bir
+            # kabiliyettir (H10) ve notu ``capraz_not``ta, hakikatle
+            # yüzleştikten sonra konur: şek mertebesi (0,25).
             self.gunluk.append(
                 "6. BEYAN: sükût -- %s"
                 % ("kaide yok" if not S.kaideler
@@ -438,29 +617,108 @@ class Kademeler:
         if I.olcu is not None:
             for c in cevap:
                 if c is not None and tuple(c.shape) != tuple(I.olcu):
-                    self._olc("beyan", 0.0)
                     self.gunluk.append(
                         "6. BEYAN: sükût -- kaide %s veriyor, ölçü "
                         "kestirimi %s diyor; iki hesap uyuşmuyor"
                         % (tuple(c.shape), tuple(I.olcu)))
                     return None
-        self._olc("beyan", 1.0)
         self.gunluk.append("6. BEYAN: konuşuyorum -- kaide %s, yakîn %.3f"
                            % (getattr(k, "ad", "?"), Y.deger))
         return cevap
 
+    # -- BIRAK-BİRİNİ NOTU: beyan ve tasdik burada tartılır -----------
+    def capraz_not(self, gorev) -> None:
+        """Son gösterim çifti saklanıp **hakikatle** yüzleştirilir.
+
+        Bu, ``kademe.beyan`` ve ``kademe.tasdik`` notlarının **yegâne**
+        kaynağıdır ve sebebi H90'dır: bir ölçüt kırmızı yanabilmelidir.
+        *"Konuştum"* notu kırmızı yanamaz -- eşiği sıfıra çekmek onu
+        daima yeşil yapar. *"Sakladığım çifti bildim mi"* notu ise
+        oynanamaz: bilmek için hakikaten bilmek gerekir.
+
+        Notlar `mizan/munazara.py`nin mertebe cetvelinden okunur::
+
+            doğru bildi    → 1,00  yakîn
+            sustu          → 0,25  şek     (iki taraf müsâvî)
+            yanlış söyledi → 0,00  vehim   (mercûh taraf)
+
+        Sıralamanın teşviki tam da matluptur: eşiği düşürüp hep konuşmak
+        ancak **dörtte birden fazla** isabet ediyorsan kazandırır.
+
+        ``tasdik`` notu bir **ayar** ölçüsüdür: ``1 − |ilan edilen yakîn
+        − fiilî isabet|``. Yani yüksek yakîn ilan edip yanılmak da,
+        doğru bilip düşük yakîn ilan etmek de cezalanır. Modelin
+        *"bilmediğini bilmesi"* şartı (H10) burada sayıya döner.
+
+        Gösterim çifti ikiden azsa bırak-birini kurulamaz; o zaman not
+        **konmaz** (uydurulmuş bir not, notsuzluktan kötüdür).
+        """
+        ciftler = [(np.asarray(a), np.asarray(b))
+                   for a, b in getattr(gorev, "egitim", [])]
+        if len(ciftler) < 2:
+            self.gunluk.append(
+                "ÇAPRAZ: %d gösterim -- bırak-birini kurulamaz, not yok"
+                % len(ciftler))
+            return
+        sakli_g, sakli_c = ciftler[-1]
+
+        class _G:                      # saklanan çift olmadan aynı görev
+            ad = getattr(gorev, "ad", "?")
+            kaynak = getattr(gorev, "kaynak", "?")
+            egitim = ciftler[:-1]
+            sinama = [(sakli_g, sakli_c)]
+
+        # **Özyineleme kesilir:** iç koşu kendi çapraz notunu almaz.
+        ic = Kademeler(self.p)
+        I2 = ic.idrak(_G())
+        H2 = ic.tasavvur(I2)
+        N2 = ic.muhakeme(I2, H2)
+        S2 = ic.ispat(I2, N2)
+        Y2 = ic.tasdik(I2, S2)
+        C2 = ic.beyan(I2, S2, Y2)
+        ilan = float(getattr(ic, "yakin_ilani", 0.0))
+
+        if C2 is None or not C2 or C2[0] is None:
+            hâl, isabet = "sükût", 0.0
+        else:
+            c = np.asarray(C2[0])
+            if c.shape == sakli_c.shape and bool(np.array_equal(c, sakli_c)):
+                hâl, isabet = "doğru", 1.0
+            else:
+                hâl, isabet = "yanlış", 0.0
+        self._olc("beyan", MERTEBE_NOTU[hâl])
+        # Ayar: ilan edilen yakîn ile fiilî isabetin farkı. Sükûtta
+        # "isabet" tanımsızdır; o hâlde ayar da ölçülmez -- susan model
+        # bir iddiada bulunmamıştır, iddiasının tutup tutmadığı
+        # sorulamaz. Bu, notu uydurmamak içindir.
+        if hâl != "sükût":
+            self._olc("tasdik", 1.0 - abs(ilan - isabet))
+        self.gunluk.append(
+            "ÇAPRAZ: saklanan çift → %s (not %.2f), ilan edilen yakîn "
+            "%.3f" % (hâl, MERTEBE_NOTU[hâl], ilan))
+
 
 # =====================================================================
-def kademeleri_kos(gorev, derinlik: int = 2, esik: float = 0.55
-                   ) -> Dict[str, object]:
-    """Altı kademeyi **sırayla** koştur; her biri bir öncekini yer."""
-    K = Kademeler()
+def kademeleri_kos(gorev, derinlik: Optional[int] = None,
+                   esik: Optional[float] = None, p=None,
+                   capraz: bool = True) -> Dict[str, object]:
+    """Altı kademeyi **sırayla** koştur; her biri bir öncekini yer.
+
+    ``p`` verilirse kademelerin sayıları o düz vektörden **öğrenilir**
+    (melekelerin açılarıyla aynı defter). ``capraz=False`` bırak-birini
+    notunu kapatır -- pahalıdır (boru hattı bir kere daha koşar) ve
+    yalnız eğitim ölçütü için lâzımdır; kapatılamayan bir tedbirin
+    faydası ölçülemez (H90).
+    """
+    K = Kademeler(p)
     I = K.idrak(gorev)
     H = K.tasavvur(I)
     N = K.muhakeme(I, H, derinlik)
     S = K.ispat(I, N)
     Y = K.tasdik(I, S)
     C = K.beyan(I, S, Y, esik)
+    if capraz:
+        K.capraz_not(gorev)
     return {"idrak": I, "hal": H, "namzet": N, "ispat": S, "yakîn": Y,
             "cevap": C, "sükût": C is None, "ölçümler": K.olcumler,
             "günlük": K.gunluk, "eksik": K.eksik}

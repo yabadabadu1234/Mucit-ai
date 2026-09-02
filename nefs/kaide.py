@@ -63,14 +63,103 @@ from mizan.istikra import (Nesne, ardisiklik_kaidesi, mill_ayrilik,
 from mizan.onerme import deg, degil, gecerli_mi, ise, karsi_ornek, ve
 
 __all__ = ["EbatKaidesi", "EBAT_KUTUGU", "RenkKaidesi", "RENK_KUTUGU",
+           "IskeletKaidesi", "ISKELET_KUTUGU", "fiili_iskelet",
            "Kaide", "Ispat", "ispat_yapisi", "namzetleri_ele",
            "MAKAMLAR"]
 
 Izgara = np.ndarray
 Sahit = Tuple[Izgara, Izgara]
 
-#: Kütükteki dört makam; sırası ``qyazmac.MAKAM_ADLARI`` ile aynıdır.
-MAKAMLAR = ("Şek", "Zan", "Yakîn", "Vehim")
+#: Kütükteki makamlar; `nefs/murakabe.py`nin ``makam_tayin``ıyla aynı
+#: kümedir (kütük H158: ``zann-ı gālib`` beşinci mertebe olarak geldi).
+MAKAMLAR = ("Vehim", "Şek", "Zan", "Zann-ı gālib", "Yakîn")
+
+
+# =====================================================================
+#  H_S -- İSKELET (varlık sahası / support). Kütük H91'in AÇIK BORCU
+# =====================================================================
+#
+# H91 beş rükün saymıştı ve karşılıklarını yazmıştı::
+#
+#     H_D ebat            "ebat kesin mi"              _teklik_ispati   ✓
+#     H_S iskelet/support "hangi hücre dönüşür"        (henüz yok)      ✗
+#     H_C illet           "her rengi neden koydum"     _illet_kesfi     ✓
+#     H_N nakz            "yerine başkası niçin konamaz" karsi_ornek    ✓
+#     H_J muhakeme        "hükm-i yakîn"               _makam           ✓
+#
+# ``H_S`` **eksikti** ve H98'de de *"kurulan yalnız ebat rüknüdür"* diye
+# tekrar zabıtlanmıştı. Borç burada kapanıyor (kütük H161).
+#
+# **Niçin ayrı bir rükün.** ``RENK_KUTUGU``nun bütün kaideleri çıktının
+# **her** hücresini yeniden yazar. Halbuki ARC'de en sık görülen desen
+# şudur: *"şu hücreleri değiştir, ötekilere dokunma."* O desen mevcut
+# cebirle **ifade edilemiyordu** -- bir kâide ya her şeyi yeniden yazar
+# ya hiçbir şeyi. İskelet, kâidenin **nereye dokunduğunu** söyler ve
+# dokunmadığı yer girdiden aynen geçer.
+#
+# **Ölçüsü uydurma değildir:** aynı ebatlı bir şahitte fiilî iskelet
+# ``çıktı ≠ girdi`` hücrelerinin kümesidir ve doğrudan okunur
+# (``fiili_iskelet``). Yani iskelet iddiası **yanlışlanabilir**: kâide
+# "yalnız kırmızıları değiştiririm" diyorsa ve şahitte mavi de
+# değişmişse iddia düşer. H90'ın şartı budur.
+
+
+@dataclass(frozen=True)
+class IskeletKaidesi:
+    """Kâidenin **dokunduğu** hücreleri söyleyen kaide (``H_S``).
+
+    ``maske(g)`` girdiye bakıp ``bool`` bir ızgara döndürür: ``True``
+    olan hücreler dönüşür, ``False`` olanlar **zemindir** ve girdiden
+    aynen geçer.
+    """
+    ad: str
+    maske: Callable[[Izgara], np.ndarray]
+
+    def __call__(self, g: Izgara) -> np.ndarray:
+        m = np.asarray(self.maske(g), bool)
+        return m if m.shape == g.shape else np.ones(g.shape, bool)
+
+
+def _arka_renk(g: Izgara) -> int:
+    """En sık renk -- ARC'de zemin ekseriya odur, fakat daima değil."""
+    d = np.bincount(np.asarray(g).ravel(), minlength=10)
+    return int(np.argmax(d))
+
+
+def _sinir_maskesi(g: Izgara) -> np.ndarray:
+    m = np.zeros(g.shape, bool)
+    m[0, :] = m[-1, :] = True
+    m[:, 0] = m[:, -1] = True
+    return m
+
+
+#: İskelet namzetleri. Kütük **açık uçludur** (H60) ve genişlemesi
+#: hükmü **zayıflatır** (rakip artar, teklik zorlaşır) -- ``EBAT_KUTUGU``
+#: ile aynı dürüst istikamet.
+ISKELET_KUTUGU: Tuple[IskeletKaidesi, ...] = (
+    IskeletKaidesi("hepsi", lambda g: np.ones(g.shape, bool)),
+    IskeletKaidesi("hiçbiri", lambda g: np.zeros(g.shape, bool)),
+    IskeletKaidesi("arka_hariç", lambda g: np.asarray(g) != _arka_renk(g)),
+    IskeletKaidesi("yalnız_arka", lambda g: np.asarray(g) == _arka_renk(g)),
+    IskeletKaidesi("sıfır_hariç", lambda g: np.asarray(g) != 0),
+    IskeletKaidesi("yalnız_sıfır", lambda g: np.asarray(g) == 0),
+    IskeletKaidesi("sınır", _sinir_maskesi),
+    IskeletKaidesi("iç", lambda g: ~_sinir_maskesi(g)),
+)
+
+
+def fiili_iskelet(g: Izgara, c: Izgara) -> Optional[np.ndarray]:
+    """Şahidin **fiilî** iskeleti: hangi hücre gerçekten değişmiş.
+
+    Ebatlar ayrıysa ``None``: farklı ebatta "aynı hücre" diye bir şey
+    yoktur ve iskelet iddiası orada **tanımsızdır**. Tanımsızı sıfır
+    yahut bir saymak, ölçütü sessizce yeşile boyamak olurdu (H90).
+    """
+    g = np.asarray(g)
+    c = np.asarray(c)
+    if g.shape != c.shape:
+        return None
+    return g != c
 
 
 # =====================================================================
@@ -170,19 +259,45 @@ RENK_KUTUGU: Tuple[RenkKaidesi, ...] = (
 # =====================================================================
 @dataclass(frozen=True)
 class Kaide:
-    """Bir namzet kâide: ebadı **ve** rengi illetiyle söyleyen çift."""
+    """Bir namzet kâide: ebat (``H_D``), iskelet (``H_S``), renk (``H_C``).
+
+    Üç rükün üç ayrı suale cevap verir ve üçü de ayrı ayrı
+    **yanlışlanabilir**:
+
+    * ``ebat``    -- çıktı ne kadar olacak,
+    * ``iskelet`` -- hangi hücre dönüşecek, hangisi zemin kalacak,
+    * ``renk``    -- dönüşen hücreye ne konacak, ve **niçin** (illet).
+
+    İskelet ``None`` ise eski davranış aynen durur (her hücre yeniden
+    yazılır); yani ``H_S``in eklenmesi evvelki kâideleri **bozmaz**.
+    """
     ebat: EbatKaidesi
     renk: RenkKaidesi
+    iskelet: Optional[IskeletKaidesi] = None
 
     @property
     def ad(self) -> str:
-        return "%s/%s" % (self.ebat.ad, self.renk.ad)
+        if self.iskelet is None:
+            return "%s/%s" % (self.ebat.ad, self.renk.ad)
+        return "%s/%s/%s" % (self.ebat.ad, self.iskelet.ad, self.renk.ad)
 
     def uygula(self, g: Izgara) -> Izgara:
         h, w = self.ebat(int(g.shape[0]), int(g.shape[1]))
         h, w = max(1, min(int(h), 30)), max(1, min(int(w), 30))
-        return np.array([[self.renk(g, i, j) for j in range(w)]
-                         for i in range(h)], dtype=np.int64)
+        out = np.array([[self.renk(g, i, j) for j in range(w)]
+                        for i in range(h)], dtype=np.int64)
+        if self.iskelet is None:
+            return out
+        # **İSKELET (H_S): dokunulmayan yer girdiden AYNEN geçer.**
+        # Yalnız ebat aynıyken manalıdır; ebat değişince "aynı hücre"
+        # diye bir şey olmadığı için iskelet tatbik edilmez ve bu
+        # sessizce yapılmaz -- ``ispat_yapisi`` orada ``H_S``i
+        # **ölçmez**, tanımsız sayar.
+        g = np.asarray(g)
+        if out.shape != g.shape:
+            return out
+        m = self.iskelet(g)
+        return np.where(m, out, g).astype(np.int64)
 
 
 # =====================================================================
@@ -202,17 +317,38 @@ class Ispat:
     nakz_delili: Optional[Dict[str, bool]] = None
     derece: float = 0.0                    # 7. şart
     makam: str = "Şek"
+    #: ``H_S`` -- iskelet iddiası şahit başına tuttu mu. Ebat değişen
+    #: şahitte iskelet **tanımsızdır** ve o şahit buraya hiç girmez;
+    #: yani boş bir dizi "hepsi doğru" demek değil "hiç ölçülemedi"
+    #: demektir ve ``iskelet_olculdu`` onu ayırır.
+    iskelet_dogru: Tuple[bool, ...] = ()
+    iskelet_olculdu: bool = False
 
     @property
     def butun_misaller(self) -> bool:
         return bool(self.ebat_dogru) and all(self.ebat_dogru) \
             and all(self.renk_dogru)
 
+    @property
+    def iskelet_tuttu(self) -> bool:
+        """``H_S`` **ölçüldü ve tuttu** mu. Ölçülmediyse ``False``.
+
+        Ölçülmemişi "tuttu" saymak, olmayan bir ispat iddia etmek
+        olurdu; ölçülmemişi "düştü" saymak da ebat değiştiren bütün
+        görevleri haksız yere cezalandırırdı. Onun için iki alan ayrı
+        durur ve hükmü çağıran verir.
+        """
+        return bool(self.iskelet_olculdu) and bool(self.iskelet_dogru) \
+            and all(self.iskelet_dogru)
+
     def satir(self) -> str:
-        return ("%-26s ebat=%d/%d renk=%d/%d  teklik(ebat=%s renk=%s)  "
+        isk = ("iskelet=%d/%d" % (sum(self.iskelet_dogru),
+                                  len(self.iskelet_dogru))
+               if self.iskelet_olculdu else "iskelet=—")
+        return ("%-30s ebat=%d/%d %s renk=%d/%d  teklik(ebat=%s renk=%s)  "
                 "illet=%s  derece=%.3f  makam=%s"
                 % (self.kaide_adi, sum(self.ebat_dogru), len(self.ebat_dogru),
-                   sum(self.renk_dogru), len(self.renk_dogru),
+                   isk, sum(self.renk_dogru), len(self.renk_dogru),
                    self.ebat_tek_mi, self.renk_tek_mi,
                    ",".join(sorted(self.illet)) or "-",
                    self.derece, self.makam))
@@ -466,6 +602,15 @@ def _makam(ispat: Ispat) -> Tuple[float, str]:
     # tutturmayan kâide aynı makama (Vehim) düşüyordu ve aynı dereceyi
     # alıyordu. Halbuki ebadı bilmek, rengi bilmeye giden yolun yarısıdır
     # ve o bilgi kaybedilmemelidir.
+    # **H_S DÜŞMÜŞSE HÜKÜM YÜKSELEMEZ (kütük H161).** İskelet iddiası
+    # ölçülüp yanlış çıkmışsa kâide, dokunacağını söylediği yeri
+    # bilmiyor demektir; renkleri tesadüfen tutturmuş olsa bile o bir
+    # ispat değildir. Ölçülmemiş iskelet ise ne lehte ne aleyhtedir.
+    iskelet_dustu = bool(ispat.iskelet_olculdu) and not all(
+        ispat.iskelet_dogru)
+    if iskelet_dustu:
+        return derece, "Şek"
+
     if not ebat_hepsi and k == 0:
         return derece, "Vehim"          # ne ebat ne renk: asılsız iddia
     if ebat_hepsi and renk_hepsi:
@@ -473,6 +618,16 @@ def _makam(ispat: Ispat) -> Tuple[float, str]:
             # Teklik ispatlandı: istikrânın VEREMEYECEĞİ yakîni
             # (``tam_istikra_mi``) ancak ispat verir.
             return 1.0, "Yakîn"
+        # **ZANN-I GĀLİB (kütük H158/H161).** Beşinci mertebe geldiğinde
+        # burada da yeri açıldı ve keyfî değildir: bütün misaller tutuyor
+        # **ve** rükünlerin çoğu ispatlanmış fakat biri eksikse, bu
+        # "zan" değil "kuvvetli zan"dır. `mizan/munazara.py`nin eşiği
+        # 0,75'tir ve derece o eşiği aşıyorsa mertebe de odur.
+        rukun = sum((bool(ispat.ebat_tek_mi), bool(ispat.renk_tek_mi),
+                     bool(ispat.illet_izah_edildi),
+                     bool(ispat.iskelet_tuttu)))
+        if rukun >= 2 and derece >= 0.75:
+            return derece, "Zann-ı gālib"
         return derece, "Zan"
     return derece, "Şek"                # kısmî bilgi -- sükût makamı
 
@@ -495,6 +650,24 @@ def ispat_yapisi(kaide: Kaide, sahitler: Sequence[Sahit]) -> Ispat:
         if nakz_sahidi is None and not (e and r):
             nakz_sahidi = i          # tek karşı örnek küllîyi düşürür
 
+    # --- H_S: iskelet iddiası şahitlerin FİİLÎ iskeletiyle yüzleşir --
+    isk_ok: List[bool] = []
+    if kaide.iskelet is not None:
+        for g, c in sahitler:
+            fiili = fiili_iskelet(g, c)
+            if fiili is None:
+                continue                 # ebat değişti: H_S tanımsız
+            try:
+                iddia = np.asarray(kaide.iskelet(np.asarray(g)), bool)
+            except Exception:            # noqa: BLE001
+                isk_ok.append(False)
+                continue
+            # İddia, fiilen değişen her hücreyi **kapsamalı** ve
+            # dokunmadığını iddia ettiği yerde hiçbir şey değişmemiş
+            # olmalıdır. İkisi birden: ``iddia == fiili``.
+            isk_ok.append(bool(iddia.shape == fiili.shape
+                               and np.array_equal(iddia, fiili)))
+
     ebat_uyan = _ebat_uyan_kaideler(sahitler)
     renk_uyan = _renk_uyan_kaideler(sahitler, kaide.ebat)
     e_tek, e_rakip, e_delil = _teklik_ispati(
@@ -511,6 +684,8 @@ def ispat_yapisi(kaide: Kaide, sahitler: Sequence[Sahit]) -> Ispat:
         illet=illet, illet_izah_edildi=izah,
         nakz_sahidi=nakz_sahidi,
         nakz_delili=e_delil or r_delil,
+        iskelet_dogru=tuple(isk_ok),
+        iskelet_olculdu=bool(kaide.iskelet is not None and isk_ok),
     )
     ispat.derece, ispat.makam = _makam(ispat)
     return ispat
@@ -524,9 +699,24 @@ def namzetleri_ele(sahitler: Sequence[Sahit],
     çıkmıyorsa o da bir hükümdür ve sükût edilir (H10). Burada
     ``azami`` yalnız raporu kısaltır, eleme yapmaz.
     """
-    sira = {ad: i for i, ad in enumerate(("Yakîn", "Zan", "Şek", "Vehim"))}
+    sira = {ad: i for i, ad in enumerate(
+        ("Yakîn", "Zann-ı gālib", "Zan", "Şek", "Vehim"))}
     hepsi = [ispat_yapisi(Kaide(e, r), sahitler)
              for e in EBAT_KUTUGU for r in RENK_KUTUGU]
+    # --- H_S: iskeletli namzetler (kütük H161) ----------------------
+    # Yalnız ebat AYNI iken kurulur ve sebebi tanımdır: farklı ebatta
+    # "aynı hücre" diye bir şey yoktur, iskelet orada tanımsızdır.
+    # Şahitlerin hepsi aynı ebatlı değilse hiç kurulmaz -- kurulsaydı
+    # ölçülemeyen bir rükün için maliyet ödenmiş olurdu.
+    ayni_ebat = all(np.asarray(g).shape == np.asarray(c).shape
+                    for g, c in sahitler)
+    if ayni_ebat and sahitler:
+        ayni = next((e for e in EBAT_KUTUGU if e.ad == "aynı"), None)
+        if ayni is not None:
+            hepsi += [ispat_yapisi(Kaide(ayni, r, i), sahitler)
+                      for i in ISKELET_KUTUGU
+                      if i.ad not in ("hepsi",)   # "hepsi" iskeletsizle aynı
+                      for r in RENK_KUTUGU]
     # Makam, sonra EBAT isabeti, sonra derece. Ebadı bütün şahitlerde
     # tutturan kâide, hiçbir şey tutturmayanın üstünde durmalıdır.
     hepsi.sort(key=lambda x: (sira.get(x.makam, 9),

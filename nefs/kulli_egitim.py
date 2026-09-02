@@ -94,6 +94,10 @@ class EgitimAyari:
     pencere: int = 8
     sozluk: int = 16
     degerlendirme_gorevi: int = 4
+    #: Kaybın kademe ölçüsünü kaç görevde alacağı (kütük H160).
+    #: Kademeler artık parametreli olduğu için her kayıp
+    #: çağrısında koşarlar; sayı doğrudan maliyettir.
+    kademe_gorevi: int = 2
     azami_uret: int = 32        # bundan uzun hedefli görev ATLANIR
     # --- parametrenin kübite kodlanması
     bit: int = 6
@@ -229,7 +233,7 @@ def _isci_kayip(p: np.ndarray) -> float:
     from .kulli_kayip import kulli_kayip
     a: EgitimAyari = _ISCI["ayar"]        # type: ignore[assignment]
     t = kulli_kayip(_ISCI["nefs"], _ISCI["veri"], p,  # type: ignore
-                    a.sozluk, kademe_olcumleri=_ISCI.get("kademe"))
+                    a.sozluk, kademe_gorevleri=_ISCI.get("kademe"))
     return float(t["kayıp"])
 
 
@@ -251,28 +255,40 @@ class KulliEgitim:
                              tohum=ayar.tohum)
         self.nefs = QNefs(ayar.tohum, ayar.qayar())
         self.nefs.idrak_et(np.zeros((2, ayar.satir_kubiti)))
+        # **KADEME PARAMETRELERİ BURADA AÇILIR (kütük H160).** ``d``
+        # tespit edilmeden evvel olmak zorundadır: eğitim motoru boyutu
+        # baştan sabitler, boyut ortada değişirse motor kendi öğrendiğini
+        # siler (H39'da ölçülen kusur). Kademeler bu satırdan sonra
+        # melekelerle **aynı** düz vektörde yaşar, yani `nefs/talim.py`
+        # onları hiçbir yeni tertibe lüzum kalmadan eğitir.
+        from .kademeler import kademe_parametreleri_ac
+        self.kademe_parametresi = kademe_parametreleri_ac(self.nefs.p)
         self.d = len(self.nefs)
         self.p0 = self.nefs.vektor()
         self.havuz = None
         self.olcum: Dict[str, object] = {}
-        #: **Altı kademenin ölçüleri kayba girer** (`nefs/kademeler.py`).
-        #: Eğitim görevlerinden bir avuç üzerinde bir kere hesaplanır:
-        #: kademeler parametreye değil göreve bağlıdır, o yüzden her
-        #: kayıp çağrısında tekrar hesaplamak israf olurdu.
-        self.kademe_olcumleri = self._kademeleri_olc()
+        #: **Altı kademe kayba GÖREV olarak girer** (kütük H160).
+        #: Evvelce ölçüler bir kere hesaplanıp saklanıyordu ve şerhi
+        #: *"kademeler parametreye değil göreve bağlıdır"* diyordu --
+        #: o doğruydu ve tam da H156'nın derdiydi: parametreden bağımsız
+        #: bir ölçü kaybı **kör eder**. Artık kademelerin kendi
+        #: parametreleri var, o hâlde ölçüleri her kayıp çağrısında
+        #: yeniden koşmak **zaruridir**; sabit tutmak eski körlüğü geri
+        #: getirirdi.
+        self.kademe_gorevleri = list(
+            self.egitim_gorevleri)[:int(ayar.kademe_gorevi)]
 
     def _kademeleri_olc(self, kac: int = 4):
-        """Altı kademeyi birkaç görevde koştur ve ölçülerini topla.
+        """Kademeleri birkaç görevde koştur -- **yalnız rapor için**.
 
-        Bu, kademeleri **eğitime sokan** bağdır: kademelerin hatası
-        kayba girmezse o kademeler eğitilmez, yalnız çıkarımda süs
-        olarak durur.
+        Kayba giren yol bu değildir (bkz. ``kademe_gorevleri``); bu,
+        eğitim başlamadan evvelki hâli göstermek içindir.
         """
         try:
             from .kademeler import kademeleri_kos
             out = []
             for g in list(self.egitim_gorevleri)[:int(kac)]:
-                out += list(kademeleri_kos(g)["ölçümler"])
+                out += list(kademeleri_kos(g, p=self.nefs.p)["ölçümler"])
             return out
         except Exception:                                # noqa: BLE001
             return []
@@ -335,7 +351,7 @@ class KulliEgitim:
         out = np.empty(P.shape[0], float)
         for i, p in enumerate(P):
             t = kulli_kayip(self.nefs, self.veri, p, self.ayar.sozluk,
-                            kademe_olcumleri=self.kademe_olcumleri)
+                            kademe_gorevleri=self.kademe_gorevleri)
             out[i] = float(t["kayıp"])
         return out
 
@@ -350,7 +366,7 @@ class KulliEgitim:
             import multiprocessing as mp
             self.havuz = mp.get_context("fork").Pool(
                 surec, initializer=_isci_kur,
-                initargs=(a, self.veri, self.kademe_olcumleri))
+                initargs=(a, self.veri, self.kademe_gorevleri))
 
         # **TEK TÂLİM USULÜ** (`nefs/talim.py`). Dalga (NQS + Grover)
         # artık doğrudan çağrılmaz; usulün dokuz uzvundan **biri**dir.
@@ -395,7 +411,8 @@ class KulliEgitim:
             "seyir": r["seyir"], "değerlendirme": deg,
             "tâlim_günlüğü": r.get("günlük", []),
             "düşen_uzuv": r.get("düşen_uzuv", {}),
-            "kademe_ölçüsü": len(self.kademe_olcumleri),
+            "kademe_görevi": len(self.kademe_gorevleri),
+            "kademe_parametresi": self.kademe_parametresi,
             "p": p_yildiz}
         return self.olcum
 
@@ -463,7 +480,9 @@ def rapor(ayar: EgitimAyari = KISA_CPU, mukayese: bool = True) -> str:
                     int(c["deneme"]), int(c["çağrı"])))
     if r.get("düşen_uzuv"):
         s.append("  DÜŞEN UZUV: %s" % ", ".join(sorted(r["düşen_uzuv"])))
-    s.append("  kayba giren kademe ölçüsü: %d" % r.get("kademe_ölçüsü", 0))
+    s.append("  kayba giren kademe görevi: %d  (öğrenilen kademe "
+             "sayısı: %d)" % (r.get("kademe_görevi", 0),
+                              r.get("kademe_parametresi", 0)))
 
     s += ["",
           "İKİ ÖLÇÜT BERABER (kütük H47):",

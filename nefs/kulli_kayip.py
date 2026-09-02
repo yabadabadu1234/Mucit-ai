@@ -256,6 +256,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
                 p: Optional[np.ndarray] = None, sozluk: int = 16,
                 meleke_olcumu: bool = True,
                 kademe_olcumleri: Optional[Sequence[Olcum]] = None,
+                kademe_gorevleri: Optional[Sequence] = None,
                 azami_veri: int = 0) -> Dict[str, object]:
     """``ℒ`` -- bütün uzuvların hatası, funktörle müşterek uzayda.
 
@@ -362,13 +363,42 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     # demektir; yumuşak azamî de o sabit tabana oturuyor ve arama
     # körleşiyor.
     #
-    # **Dürüst hüküm:** kademeleri kayba koymak onları eğitmiyordu,
-    # yalnız ölçütü kör ediyordu. Kademelerin eğitilebilmesi için kendi
+    # =================================================================
+    # VE BU BORÇ KAPANDI (kütük H160): kademeler artık PARAMETRELİ
+    # =================================================================
+    #
+    # H156'nın hükmü şuydu: *"Kademelerin eğitilebilmesi için kendi
     # parametrelerinin olması ve o parametrelerin `nefs/talim.py`ye
-    # verilmesi gerekir -- **henüz yok, iddia da edilmiyor**. Şimdilik
-    # ayrıca raporlanıyorlar ki gözden kaybolmasınlar.
+    # verilmesi gerekir -- henüz yok ve iddia edilmiyor."*
+    #
+    # Artık var. `nefs/kademeler.py` altı kademenin elle konmuş
+    # sayılarını (beyan eşiği, müphemlik cezası, tevâfuk, muhakeme
+    # derinliği, nesne eşiği, hüküm tabanı) **melekelerin açılarıyla
+    # aynı düz vektörden** alıyor. O hâlde kademe ölçüleri artık
+    # parametrede sabit değildir ve öğrenilebilir kayba **girer**.
+    #
+    # ``kademe_gorevleri`` verilirse kademeler her kayıp çağrısında o
+    # görevlerde yeniden koşar (parametre değiştiği için mecburdur).
+    # ``kademe_olcumleri`` eski yoldur: bir kere hesaplanmış sabit
+    # ölçüler; onlar **yalnız raporlanır**, kayba girmez -- zira
+    # parametreden bağımsızdırlar ve H156'nın körlüğünü geri getirirler.
+    kademe_hepsi: List[Olcum] = []
+    if kademe_gorevleri:
+        from .kademeler import kademeleri_kos
+        for g in kademe_gorevleri:
+            try:
+                kademe_hepsi += list(
+                    kademeleri_kos(g, p=nefs.p)["ölçümler"])
+            except Exception:                            # noqa: BLE001
+                continue
+        hepsi += kademe_hepsi
     if kademe_olcumleri:
         kt = kulli_toplam(list(kademe_olcumleri))
+        _kademe_ozet = {"kademe_kayıp": kt["kayıp"],
+                        "kademe_en_zayıf": kt["en_zayıf"],
+                        "kademe_uzuv": kt["uzuv"]}
+    elif kademe_hepsi:
+        kt = kulli_toplam(list(kademe_hepsi))
         _kademe_ozet = {"kademe_kayıp": kt["kayıp"],
                         "kademe_en_zayıf": kt["en_zayıf"],
                         "kademe_uzuv": kt["uzuv"]}
