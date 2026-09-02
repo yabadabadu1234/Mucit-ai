@@ -6499,3 +6499,86 @@ Study ile eğitiyorum" demiyorum; ön-şartlıyorum, o kadar.
 
 GPU ölçümü **yapılamadı**: bu ortamda GPU yok. "4×L4 %100 doluluk"
 maddesi icra edilmemiştir ve edilmiş gibi gösterilmiyor.
+
+---
+
+## H199 -- KAPI CETVELİ: DALGA BİR GÖREVİ SIRF AĞIRLIKTAN ÇÖZDÜ
+
+Eşik seçimini varsayım olmaktan çıkarmak için aynı dalgalar altı ayrı
+eşikte tartıldı: "konuşsaydı kaçını TAM bilirdi?"
+
+### evaluation (120 görev, 299,0 sn)
+
+    eşik      konuştu      TAM   yanlış   isabet
+    1,00            0        0        0        —
+    0,98            0        0        0        —
+    0,95            4        0        4     0,0%
+    0,90           25        0       25     0,0%
+    0,80           42        0       42     0,0%
+    0,00           95        0       95     0,0%
+    ortalama hücre isabeti (95 görevde): 0,5938
+
+**Kapı suçlu değil.** Eşiği tamamen açıp 95 görevin hepsinde konuşsam
+da **sıfır** tam cevap çıkıyor. Yani sükût bir kabiliyeti saklamıyor;
+dalga o cevaplara sahip değil. Ölçmeseydim *"eşiği gevşetsek
+çözerdik"* diye bir mazeret üretebilirdim; ölçüm o kapıyı kapattı.
+
+### training (200 görev, 355,5 sn)
+
+    eşik      konuştu      TAM   yanlış   isabet
+    1,00            1        1        0   100,0%
+    0,98            7        4        3    57,1%
+    0,95           19        4       15    21,1%
+    0,90           47        4       43     8,5%
+    0,80           95        4       91     4,2%
+    0,00          182        5      177     2,7%
+    ortalama hücre isabeti (182 görevde): 0,6744
+
+### ÇÖZÜLEN GÖREV -- ``3618c87e``
+
+Müstakil olarak yeniden koşturulup teyit edildi::
+
+    TAM = True        hendese = H→H, W→W      D₄ = birim
+    ağırlık = 1000    dışarıda = 1,0000       güven = 0,944
+
+Cevap ızgarası hakikî çıktıyla **birebir** aynı. Bu cevap:
+
+* bir şablon kütüğünden **seçilmedi** (kütükler silindi),
+* bir ``bağlam → renk`` arama tablosundan **okunmadı** (tablo yok),
+* yalnız ``softmax(W·φ)`` ağırlıklarından okundu; ``W`` o görevin
+  şahitlerinden talimle çıkarıldı,
+* ve dalga o sınama ızgarasını **hiç görmemişti**.
+
+Ayrıca ``dışarıda = 1,0000``: kaide, kendisinden saklanan bir şahidi de
+tam bilmiştir. Yani bu bir ezber değil.
+
+### HADDİ AYNI CÜMLEDE SÖYLÜYORUM
+
+Bu görev **training kümesindendir**. Sınama ızgarası görülmemişti
+fakat görevin kendisi eğitim kümesinde duruyor. ARC-AGI-2
+**evaluation** kümesinde çözülen görev sayısı hâlâ **sıfırdır**.
+Kullanıcının nihaî gayesi (*"en az 1 görülmemiş soruyu sırf öğrendiği
+ağırlıklarla çözene kadar durma"*) sınama-ızgarası mânasında
+karşılanmıştır; evaluation-görevi mânasında **karşılanmamıştır** ve
+öyle sunulmuyor.
+
+### EŞİK BİR ÖLÇÜ KARARIDIR VE ÖLÇÜYÜ KULLANICI KOYAR (hüküm E)
+
+Cetvel iki ucu da gösteriyor ve tercihi bana bırakmıyorum:
+
+* **eşik 1,00** -- 1 cevap, isabet %100. Kütüğün sükût doktrini
+  (H10/H16) budur: az konuş, konuşursan bil.
+* **eşik 0,00** -- 182 cevap, 5 tam, isabet %2,7. ARC puanlamasında
+  yanlış cevabın cezası yoktur; saf puan için bu üstündür.
+
+İkisi aynı dalgadır; değişen yalnız susma haddidir.
+
+### MİMARÎ HÜKÜM
+
+Hücre başına **yerel** bir softmax dalgası ARC-AGI-2 evaluation'ını
+çözemiyor ve sebebi ölçülmüştür: evvelce 120 görevin 74'ünde hiçbir
+yerel kaide fonksiyonel bile değildi; şimdi ağırlıklı dalga aynı
+duvarı aynı yerde buluyor (hücre isabeti 0,59'da tıkanıyor). Cevabı
+5×5 pencerede yazmayan görevler nesne seviyesinde ve küresel akıl
+yürütme istiyor. Duran duvar budur; hız değil, kapı değil, talim
+değil.
