@@ -5498,3 +5498,183 @@ duramaz. Ceridenin haklı olduğu yer şudur ve küçümsenmiyor: *eğer*
 meleke dizeyleri fiilen Kronecker/TT yapılıysa ve durum çarpım
 durumuysa, hesap doğrudur. Bu iki şartın sağlandığı **gösterilmemiştir**
 -- ne ceridede, ne bu depoda.
+
+## H176 — CERİDENİN İKMÂL FIKRALARI YOKLANDI: biri zaten kapalı, üçü açıkmış
+
+Ceridenin "İkmâl ve İlhâk Fıkraları" dört madde koyar. Depo iddiayla
+değil ``dir()`` sayımıyla yoklandı:
+
+    İKMÂL I   RKHS: PSD + Cholesky + κ + Nyström hatası   ZATEN TAM
+    İKMÂL II  Alexandroff + alt-seviye + log-bariyer      VAR
+              …fakat Lions konsantrasyon-tıkızlığı        YOKTU
+    İKMÂL III Morse-Euler KATI eşitliği                   VAR
+              …fakat RCD(K,N) Bochner süzgeci             YOKTU
+    İKMÂL IV  Postnikov k-invaryantı + Cayley çekilmesi   YOKTU
+
+**İKMÂL I bir borç değildi ve öyle kaydedilir.** `ogrenme/rkhs.py`
+baştan sona okundu: ``psd_mi`` en küçük özdeğere bakıyor ve *"negatif
+özdeğer PSD OLMADIĞINI ispatlar; hiç görmemek PSD olduğunu
+ispatlamaz"* diye haddini de yazıyor; ``RKHS.uydur`` açık ters almıyor,
+Cholesky çözüyor ve tekilde ``ValueError`` fırlatıyor (ceridenin
+istediği fail-safe); ``kosul`` raporlanıyor; ``nystrom`` Frobenius
+bağıl hatasını döndürüyor. Ceridenin bu maddesi depoda **zaten
+yürürlükteydi**.
+
+Eksik üçü `akis/ikmal.py`de kuruldu. Hepsinin ölçüsü kırmızıya
+dönüyor ve bu **gösterildi**, iddia edilmedi::
+
+    Lions Q(t):  tek yığın → tıkız
+                 iki uzak yığın → İKİLENME      (kırmızı)
+                 yayılmış kütle → DAĞILMA       (kırmızı)
+
+    Bochner (f = ½‖x‖², n = 3):
+                 N = 3 → artık −3,08e-11  kabul   (Bochner burada KESKİN)
+                 N = 1 → artık −6,000     RED     (kırmızı)
+
+    Cayley (Stiefel 8×3):
+                 diklik hatası 7,7e-16;  ξ→0'da kimlik
+
+    Postnikov vekili:
+                 tıkanıksız Betti → sıçrama YOK
+                 tıkalı Betti     → mertebe 1, derece 1
+
+**Peşinen ilan edilen iki hadd (kullanıcı hükmü C).**
+
+1. ``postnikov_indisi`` hakikî ``[c] ∈ H^{n+1}(X; π_n(Y))`` sınıfını
+   hesaplamaz; homotopi gruplarını sonlu bir algoritmayla hesaplamak
+   umumiyetle mümkün değildir. Hesaplanan, Betti sayılarından okunan
+   bir **vekildir** ve dosyada da, burada da öyle adlandırılır.
+2. ``lions_konsantrasyonu``nun süpremumu bütün ``y ∈ ℝ^d`` üzerinde
+   değil, veri noktaları merkez alınarak aranır; yani **alttan
+   sınırdır**. Neticesi şudur ve mühimdir: "dağılma" hükmü kat'îdir
+   (yanlış kırmızı vermez), "tıkız" hükmü gevşek olabilir. Bir ölçünün
+   hangi cihette yanılabileceğini bilmeden ona hüküm bindirilemez.
+
+**Cayley'in bir haddi daha:** çekilmedir (retraction), jeodezik
+değildir. Üstel harita ile aynı işi görür ve özdeğer ayrışımı
+istemez -- ceridenin belirlenimcilik şartına bu yüzden daha uygundur --
+fakat ikinci mertebede jeodezikten sapar ve "jeodezik" diye anılamaz.
+
+## H177 — CERİDENİN ÜÇ KAPALI-FORM BABI KURULDU (ve biri ilkin YANLIŞ çıktı)
+
+Ceridenin sekiz sahih babından üçünün kodda karşılığı yoktu:
+**FCT kapalı formu**, **STA karşıt-adiyabatik sürüş**, **Fubini-Study
+bilgi geometrisi**. `kuantum/ceride.py`de kuruldu ve ölçüldü.
+
+### FCT -- ceride HAKLI, sayıyla
+
+Ceridenin İtiraz 3'teki iddiası: *"Gauss-Chebyshev-Lobatto
+düğümlerinde ``XᵀX = I`` kesin ve tamdır; ``κ = 1,0``dır ve hiçbir ters
+matris işlemi gerektirmez."* Ölçüldü::
+
+     M    ‖XᵀX − I‖      κ(XᵀX)     eş aralıkta κ
+     8    1,45e-15       1,000000   7,56e+01
+    16    5,20e-15       1,000000   5,49e+05
+    32    1,39e-14       1,000000   3,54e+14
+    64    3,82e-14       1,000000   5,71e+16
+
+Geri-çatma hatası ``1,39e-15`` ve **hiçbir ters matris alınmadı** --
+katsayılar yalnız ``Xᵀ`` çarpımından çıkıyor. Yanına konan kıyas
+ölçünün kırmızıya dönebildiğini gösteriyor: aynı derecede fakat eş
+aralıklı düğümlerde ``κ`` 5,7e+16'ya patlıyor (Runge olgusunun
+cebirsel yüzü). **Ceridenin bu hükmü tastamam doğrudur.**
+
+### STA -- ceride HAKLI; fakat ilk hesabım yanlıştı ve o da yazılır
+
+İlk yazdığım dinamik bozuktu: sadakat bütün ``τ``larda ve sürüşlü
+sürüşsüz **aynı 0,221453** çıkıyordu, yani ölçü hiçbir şey ölçmüyordu.
+Sebebi teşhis edildi: adiyabatik geçişin mekanizması ``e^{−i∫E dt}``
+dinamik fazıdır -- adiyabatiklik, o hızlı fazın adiyabatik olmayan
+bağlantıyı ortalayıp söndürmesidir. Ben reel yazmaç kaidesini buraya
+da taşıyıp fazı atmıştım; faz atılınca **olgunun kendisi** kayboluyor.
+
+*Ceridenin reel ``SO(2)`` hükmü dalga yazmacı içindir* (Grover'ın iki
+boyutlu reel alt-uzayı), iki seviyeli adiyabatik geçişin dinamik fazı
+için değil. Tam Schrödinger denklemi çözülünce netice şudur::
+
+        τ      STA'sız sadakat   STA'lı sadakat
+      40,0        0,999388         1,000000
+       8,0        0,741225         1,000000
+       2,0        0,315550         1,000000
+       0,5        0,268006         1,000000
+       0,2        0,265235         1,000000
+
+Sürüşsüz sadakat ``τ`` küçüldükçe **çöküyor** (0,999 → 0,265); sürüşle
+her ``τ``da tam ``1,000000``. Ceridenin İtiraz 4 ve 12'deki hükmü --
+*"yerel çukurda sıkışma teşhis edildiğinde ``Ĥ_CD`` bindirilir ve dalga
+paketi ``O(1)`` zamanda diğer havzaya aktarılır"* -- **doğrulanmıştır**.
+``Ĥ_CD(0) = Ĥ_CD(τ) = 0`` şartını da cetvel (smoothstep) sağlıyor, elle
+sıfırlama değil: ``θ̇`` uçlarda ``0,0e+00``.
+
+### Fubini-Study -- ceride HAKLI, ve izdüşüm terimi hayatî
+
+``g_ij = Re[⟨∂_iΨ|∂_jΨ⟩ − ⟨∂_iΨ|Ψ⟩⟨Ψ|∂_jΨ⟩]`` kuruldu. İki şart
+denetlendi: metrik PSD çıktı, ve **durumu yalnız ölçekleyen yönün
+Fubini uzunluğu 0,000e+00**. İkinci terim (izdüşüm) atılırsa aynı yön
+``0,250`` uzunluk kazanıyor -- yani metrik, fizikî olmayan norm yönünü
+bir mesafe sayıyor. Ceridenin formülündeki ikinci terim süs değildir.
+
+**Netice.** Bu üç babda ceride haklı çıktı ve hükmüne uyuldu. H175'te
+hız hükmünü nakzetmiş olmam, ceridenin her hükmünü nakzettiğim manasına
+gelmez ve gelmemelidir: nakz, delilin götürdüğü yere kadardır.
+
+## H178 — BU TURDA KAPANMAYAN BORÇLARIN AÇIK CETVELİ
+
+Kullanıcı hükmü *"tüm borçları kapat"*tır. Kapanmayanları saymak,
+kapananları saymak kadar borçtur; aksi hâlde kütük bir övünme
+defterine döner. Bu turun sonundaki hâl:
+
+**Ceridenin kurulmuş babları:** TT-KAN (H175), FCT, STA, Fubini-Study
+(H177), Lions, RCD Bochner, Cayley, Postnikov vekili (H176), Ĥ_Dimağ
+ve 22 milyonluk taksimat (H173), QROM blok-kodlaması ve QSVT
+(`kuantum/qsvt.py`, evvelden), Reel Chebyshev-KAN NQS
+(`kuantum/nqs.py`, evvelden), Çift Sayılar autodiff (H168), OGDA
+(H170), Stiefel/blok tâlimi (H166, H172).
+
+**Ceridenin kurulmamış babları -- açık borç:**
+
+1. **QSP faz açıları tablosu.** Ceride bunu kendi eki'nde *"gizli kalan
+   hakikat"* diye zikreder: ``kuantum/qsvt.py`` faz dizisini **girdi
+   olarak alır**, hesaplamaz. Haah (2019) yahut Dong vd. (2021) ile
+   çevrimdışı hesaplanmış bir açı tablosu kütüphanesi yoktur. GCL
+   düğümleri artık elimizde (H177) olduğu için bu borç ulaşılır
+   mesafededir; bu turda **başlanmadı** ve başlanmadığı yazılır.
+2. **FPAA'nın Yoder-Low-Chuang tekdüze yakınsaması.** `nefs/qkaide.py`
+   en iyi Grover turunu hesaplıyor (H165); sabit-nokta genlik
+   yükseltmesinin aşırı-dönmesiz (overshoot'suz) hâli yok.
+3. **BEC / Gross-Pitaevskii faz kilidi.** Fubini-Study kuruldu, faz
+   senkronizasyonu kurulmadı.
+4. **20 mertebe + dörtlü topolojik zırh** (Sheaf 𝒮_m, Homotopi W(γ)=1,
+   Betti-Hodge Π_betti, Kohomoloji Π_koho). Parçaları var
+   (`kuantum/tda.py`, `kuantum/topolojik.py`), **terkibi yok**.
+5. **Magnus integratörü ve resolvent hassasiyeti.** Yok.
+
+**Ceride dışı, evvelden açık borçlar:**
+
+* **H126** -- kendi gösterimi olmayan modüller. Bu turda ikisi kapandı
+  (`nefs/taksimat.py`, `nefs/ttkan.py` ve `akis/ikmal.py`,
+  `kuantum/ceride.py` gösterimle doğdu). Sayım yeniden yapıldı: 134
+  kayıtlı modülün 66'sında gösterim yok yahut modül yüklenmiyor.
+  Bunların **18'i ``test_*``** (şahidi zaten sınama takımıdır),
+  **6'sı paket ``__init__``i** (gösterecek cebri yoktur), **14'ü torch
+  isteyen ``tanilama.*``/``idrak.*``** (bu ortamda koşamaz -- H87 ile
+  aynı borç). Geriye **hakikî borç olarak ~23 modül** kalıyor ve
+  bunların listesi bu turda çıkarıldı: ``main.dimag``, ``main.zirh``,
+  ``nefs.akil``, ``nefs.beyan``, ``nefs.idrak``, ``nefs.ihtimal``,
+  ``nefs.kod_uzayi``, ``nefs.kopru``, ``nefs.kule``, ``nefs.meleke``,
+  ``nefs.murakabe``, ``nefs.qkaide``, ``nefs.qmain``,
+  ``nefs.tabii_gradyan``, ``local_run.*`` (2), ``omega_kategori.*`` (7).
+  **H126'nın sayısı böylece 32'den ~23'e indi ve borcun cinsi
+  ayrıştırıldı** -- kapanmadı.
+* **H167'nin doğurduğu borç:** yığın kapıları (H79/H80, 2 kat hız) ile
+  tek bir ortogonallik merkezi tutmak bağdaşmıyor. Açık.
+* **H111** (``sadakat_log`` ile resmî kapanış), **H93/H96**
+  (``fitrat.karsi_olgusal`` bağlanmamış), **H70** (MCMC karışımı),
+  **H71** (H kapısı için CH-formu), **H135/H138** (kâide cebrinin
+  darlığı: 105/120 görevde *"kaide bulunamadı"*). Hepsi açık.
+* **H65/H67** (𝒪₆/𝒪₇/𝒪₉ tarifleri), **H106** (dört dosya), **H87**
+  (Kaggle ağı) -- kullanıcı yahut ağ olmadan ilerletilemez.
+
+**Hüküm.** Bu turda ceridenin şeması eklemlendi, hız hükmü sayıldı,
+İkmâl Fıkralarının üç eksiği ve üç kapalı-form babı kuruldu; 65/65
+sınama geçiyor. *Bütün* borçlar kapanmadı ve kapandı denmiyor.

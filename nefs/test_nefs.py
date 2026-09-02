@@ -1277,6 +1277,107 @@ def test_ttkan_kendi_sahasinda_tam_yabanci_sahada_degil():
     assert ceride_flop(16, 4, 16) == 278_528
 
 
+def test_ikmal_fikralari_ucu_de_KIRMIZIYA_donebiliyor():
+    """Ceridenin İkmâl Fıkraları: her biri reddedebiliyor mu?
+
+    Bir emniyet kilidi hiçbir şeyi reddedemiyorsa kilit değildir.
+    Üçünün de kırmızıya döndüğü **fiilen** gösterilir.
+    """
+    import numpy as np
+    from akis.ikmal import (lions_konsantrasyonu, bochner_suzgeci,
+                            cayley_hatasi, cayley_cekilmesi,
+                            postnikov_indisi)
+    rng = np.random.default_rng(0)
+
+    # Lions: tek yığın tıkız, iki uzak yığın ikilenme, yayık dağılma
+    tek = rng.normal(size=(80, 2)) * 0.3
+    assert lions_konsantrasyonu(tek, np.ones(80))["hâl"] == "tıkız"
+    iki = np.vstack([rng.normal(size=(40, 2)) * 0.3,
+                     rng.normal(size=(40, 2)) * 0.3 + 40.0])
+    assert lions_konsantrasyonu(iki, np.ones(80))["hâl"] == "ikilenme"
+    yayik = rng.normal(size=(200, 2)) * 200.0
+    assert lions_konsantrasyonu(yayik, np.ones(200))["hâl"] == "dağılma"
+
+    # Bochner: f = ½‖x‖²'de N = n iken KESKİN (artık ≈ 0), N < n iken kırık
+    def kare(z):
+        z = np.asarray(z, float)
+        return 0.5 * float(z @ z)
+
+    x = np.array([0.7, -0.3, 0.5])
+    r = bochner_suzgeci(kare, x, N=None)
+    assert r["kabul"], r
+    assert abs(r["artık"]) < 1e-6, r          # Bochner burada eşitliktir
+    r1 = bochner_suzgeci(kare, x, N=1.0)
+    assert not r1["kabul"], r1                 # KIRMIZI
+
+    # Cayley: dikliği makine hassasiyetinde korumalı
+    X = np.linalg.qr(rng.normal(size=(8, 3)))[0]
+    xi = rng.normal(size=(8, 3))
+    xi = xi - X @ (X.T @ xi)
+    h = cayley_hatasi(X, xi)
+    assert h["diklik_hatası"] < 1e-12, h
+    # ...ve sıfır yönde kimlik olmalı
+    assert np.allclose(cayley_cekilmesi(X, np.zeros_like(X)), X, atol=1e-12)
+
+    # Postnikov vekili: tıkanıksızda sıçrama ÜRETMEMELİ
+    assert postnikov_indisi([[1, 0, 0]] * 3)["tıkanık"] is False
+    t = postnikov_indisi([[1, 0, 0], [1, 2, 0], [1, 0, 0]])
+    assert (t["mertebe"], t["derece"]) == (1, 1), t
+
+
+def test_ceride_uc_kapali_form_babi():
+    """FCT κ = 1,0, STA sadakati, Fubini ölçek yönünü yok ediyor mu?
+
+    Üçü de ceridenin **kendi iddiasıdır** ve üçü de burada sayıyla
+    denetlenir; her birinin yanında kırmızıya dönen bir kıyas durur.
+    """
+    import math
+    import numpy as np
+    from kuantum.ceride import (fct_tasarimi, fct_katsayilari,
+                                fct_degerlendir, gcl_dugumleri,
+                                esaralikli_tasarim, sta_kosusu,
+                                fubini_study, fubini_dogrulamasi)
+
+    # --- FCT: XᵀX = I TAM, κ = 1,0; eş aralıkta κ patlar (kırmızı)
+    for M in (8, 32):
+        X, w, d = fct_tasarimi(M)
+        G = X.T @ X
+        assert np.linalg.norm(G - np.eye(M + 1)) < 1e-12, M
+        assert abs(np.linalg.cond(G) - 1.0) < 1e-9, M
+    assert np.linalg.cond(esaralikli_tasarim(32).T
+                          @ esaralikli_tasarim(32)) > 1e6
+    M = 24
+    x = gcl_dugumleri(M)
+    f = np.exp(-3.0 * x ** 2) * np.cos(4.0 * x)
+    assert np.max(np.abs(fct_degerlendir(fct_katsayilari(f, M), x, M)
+                         - f)) < 1e-12
+
+    # --- STA: sürüşsüz sadakat τ ile ÇÖKMELİ, sürüşle 1'de kalmalı
+    yavas = sta_kosusu(40.0, sta=False)["sadakat"]
+    hizli = sta_kosusu(0.5, sta=False)["sadakat"]
+    assert yavas > 0.99, yavas          # adiyabatik hadde doğru
+    assert hizli < 0.5, hizli           # hızlı geçişte çöküyor (kırmızı)
+    for tau in (40.0, 2.0, 0.5):
+        r = sta_kosusu(tau, sta=True)
+        assert r["sadakat"] > 0.999, (tau, r)
+        assert r["θ̇_uçta"] == 0.0, r    # Ĥ_CD(0) = Ĥ_CD(τ) = 0
+
+    # --- Fubini-Study: PSD, ve ölçek yönünü YOK ETMELİ
+    def dalga(th):
+        a, b = float(th[0]), float(th[1])
+        return np.array([math.cos(a) * math.cos(b),
+                         math.cos(a) * math.sin(b), math.sin(a), 0.0])
+
+    r = fubini_dogrulamasi(dalga, np.array([0.4, 0.9]))
+    assert r["psd"], r
+
+    def olcekli(th):
+        return (1.0 + 0.5 * float(th[2])) * dalga(th[:2])
+
+    g3 = fubini_study(olcekli, np.array([0.4, 0.9, 0.0]))
+    assert abs(float(g3[2, 2])) < 1e-8, g3   # izdüşüm terimi çalışıyor
+
+
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
 # tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
 # koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.

@@ -76,6 +76,7 @@ EKSIK: Dict[str, str] = {}
 # ------------------------------------------------------------------
 import akis.hacim  # [gölge] Hacim — ortalama eğrilik akışı ve yoğunluk akışları
 import akis.test_akis  # [şahit] akis test takımı
+import akis.ikmal  # [gölge] Ceridenin İkmâl Fıkraları -- Lions, Bochner, Cayley, Postnikov
 import akis.tikiz  # [gölge] Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus
 
 # ------------------------------------------------------------------
@@ -137,6 +138,7 @@ import idrak.test_sekil  # [şahit] ``idrak.sekil`` sınamaları — ispatlı ş
 import kuantum.devre  # [uzuv] Devre — durum vektörü simülatörü ve spektral işleçler
 import kuantum.eniyileme  # [uzuv] Adiyabatik geçiş, QAOA ve parametre-kaydırma kuralı
 import kuantum.kapilar  # [uzuv] Kapılar — tek ve çok kübitli üniter operatörler
+import kuantum.ceride  # [gölge] Ceridenin üç kapalı-form babı: FCT, STA, Fubini-Study
 import kuantum.qsvt  # [uzuv] QSVT — blok kodlama, kuantum sinyal işleme ve tekil değer dönüşümü
 import kuantum.surekli  # [uzuv] Sürekli değişkenli (CV) fotonik operatörler — kesilmiş Fock uzayında
 import kuantum.tda  # [uzuv] TDA — kombinatoryal Laplasyen, Betti sayıları ve kalıcı homoloji
@@ -325,6 +327,9 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Hacim — ortalama eğrilik akışı ve yoğunluk akışları'),
     ('akis.test_akis', 'şahit',
      'akis test takımı'),
+    ('akis.ikmal', 'gölge',
+     'Ceridenin İkmâl Fıkraları -- Lions konsantrasyonu, RCD(K,N) Bochner, '
+     'Cayley çekilmesi, Postnikov tıkanıklık vekili'),
     ('akis.tikiz', 'gölge',
      'Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus'),
     ('arama', 'uzuv',
@@ -383,6 +388,8 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Adiyabatik geçiş, QAOA ve parametre-kaydırma kuralı'),
     ('kuantum.kapilar', 'uzuv',
      'Kapılar — tek ve çok kübitli üniter operatörler'),
+    ('kuantum.ceride', 'gölge',
+     'Ceridenin üç kapalı-form babı: FCT (κ=1,0), STA karşıt-adiyabatik sürüş, Fubini-Study bilgi geometrisi'),
     ('kuantum.qsvt', 'uzuv',
      'QSVT — blok kodlama, kuantum sinyal işleme ve tekil değer dönüşümü'),
     ('kuantum.surekli', 'uzuv',
