@@ -195,7 +195,6 @@ import nefs.zirh  # [uzuv] Dörtlü topolojik zırh -- gaye: çelişkisiz mana m
 import nefs.ogda  # [hakem] OGDA -- kaybın min-max olduğunun farkedilmesi ve doğru çözücüsü
 import nefs.taksimat  # [uzuv] 22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir
 import nefs.ttkan  # [hakem] TT-KAN -- ceridenin hız hükmünün fiilî hesabı
-import nefs.kaide  # [uzuv] KÂİDE = İSPAT YAPISI -- H85'in fiilî karşılığı, ``mizan`` ve ``fitrat``ın
 import nefs.kod_uzayi  # [uzuv] MANTIK KOD UZAYI -- hüküm bloğunun **stabilizer** temsili
 import nefs.kopru  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
 import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
@@ -480,8 +479,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir; eklem ölçüsü'),
     ('nefs.ttkan', 'hakem',
      'TT-KAN -- ceridenin 154 MB/sn hükmünün fiilen sayılmış FLOP hesabı'),
-    ('nefs.kaide', 'uzuv',
-     "KÂİDE = İSPAT YAPISI -- H85'in fiilî karşılığı, ``mizan`` ve ``fitrat``ın"),
     ('nefs.kod_uzayi', 'uzuv',
      'MANTIK KOD UZAYI -- hüküm bloğunun **stabilizer** temsili'),
     ('nefs.kopru', 'uzuv',

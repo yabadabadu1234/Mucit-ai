@@ -569,31 +569,36 @@ def test_kaide_mizani_yesil_de_kirmizi_da_yanabiliyor():
     vaka şahitler arasında aranıyordu, halbuki kâide doğruysa öyle bir
     şahit yoktur. Menfî vaka, aynı şahitte düşen **rakip kâidedir**.
     """
-    from .kaide import namzetleri_ele
+    from main.main import padisah
+
+    class _Gorev:
+        def __init__(self, egitim, sinama):
+            self.ad = "sınama"
+            self.egitim = egitim
+            self.sinama = sinama
 
     rng = np.random.default_rng(0)
     sahit = []
     for _ in range(4):
         g = rng.integers(0, 5, size=(3, 4))
         sahit.append((g, g.T.copy()))
+    sin_g = rng.integers(0, 5, size=(3, 4))
 
-    hepsi = namzetleri_ele(sahit)
-    yakin = [i for i in hepsi if i.makam == "Yakîn"]
-    assert len(yakin) == 1, [i.satir() for i in hepsi[:3]]
-    e = yakin[0]
-    assert e.kaide_adi == "devrik/devrik", e.kaide_adi
-    assert e.derece == 1.0 and e.ebat_tek_mi and e.renk_tek_mi
-    assert "yer_devrik" in e.illet and e.illet_izah_edildi
-    assert e.nakz_sahidi is None          # düşüren şahit yok
+    # --- YEŞİL: devrik görevi, ŞABLON OLMADAN çözülmeli
+    r = padisah(_Gorev(sahit, [(sin_g, sin_g.T.copy())]), devir=200)
+    assert not r["sükût"], r.get("sebep")
+    assert np.array_equal(r["cevap"][0], sin_g.T), r["cevap"][0]
+    assert r["d4"] == "devrik", r["d4"]
+    assert r["şahit_isabeti"] == 1.0, r["şahit_isabeti"]
+    # cevap bir tablodan değil AĞIRLIKTAN geldi
+    assert r["ağırlık"] > 0
 
-    # --- KIRMIZI: bir şahidi boz, Yakîn düşsün
+    # --- KIRMIZI: bir şahidi boz, padişah SUSMALI
     bozuk = list(sahit)
     bozuk[2] = (bozuk[2][0], rng.integers(0, 5, size=(4, 3)))
-    h2 = namzetleri_ele(bozuk)
-    assert not [i for i in h2 if i.makam == "Yakîn"], \
-        "bozuk şahitle hâlâ Yakîn çıkıyor — ölçüt kırmızı yanamıyor"
-    d = [i for i in h2 if i.kaide_adi == "devrik/devrik"][0]
-    assert d.nakz_sahidi == 2, d.nakz_sahidi   # nakzeden şahidi göstermeli
+    r2 = padisah(_Gorev(bozuk, [(sin_g, sin_g.T.copy())]), devir=200)
+    assert r2["sükût"], \
+        "bozuk şahitle hâlâ konuşuyor — ölçüt kırmızı yanamıyor"
 
 
 def test_kaide_eksik_istikra_yakin_vermez():
@@ -616,30 +621,34 @@ def test_kaide_eksik_istikra_yakin_vermez():
     altında** ve ``Şek``in **üstünde** olduğu ayrıca sınanır, yani
     aralık iki taraftan da kapalıdır.
     """
-    from .kaide import namzetleri_ele
-    from .murakabe import ZANN_I_GALIB_ESIGI
+    from main.main import hendese_adaylari
     from mizan.istikra import tam_istikra_mi
 
     assert not tam_istikra_mi(50, 50)       # eksik istikrâ 1 vermez
 
     rng = np.random.default_rng(1)
-    sahit = []
+    kare = []
     for _ in range(4):
-        g = rng.integers(0, 5, size=(3, 3))   # KARE → ebat kaideleri eşleşir
-        sahit.append((g, g.copy()))
-    hepsi = namzetleri_ele(sahit)
-    en = hepsi[0]
-    assert all(en.ebat_dogru) and all(en.renk_dogru), en.satir()
-    assert not en.ebat_tek_mi, en.ebat_rakipleri   # rakip duruyor
-    # ASIL ŞART: teklik ispatlanmadan Yakîn olmaz.
-    assert en.makam != "Yakîn", en.satir()
-    assert en.derece < 1.0, en.satir()
-    # ...ve iki taraftan kapalı: bütün misaller tuttuğu için Şek'in de
-    # üstünde olmalı. Yalnız "Yakîn değil" denseydi, hiçbir şey
-    # tutturmayan bir kâide de sınamayı geçerdi.
-    assert en.makam in ("Zan", "Zann-ı gālib"), en.satir()
-    assert en.derece >= ZANN_I_GALIB_ESIGI or en.makam == "Zan", en.satir()
-    assert en.nakz_delili is not None      # niçin tek olmadığının delili
+        g = rng.integers(0, 5, size=(3, 3))   # KARE → ebat kanunu belirsiz
+        kare.append((g, g.copy()))
+    adaylar = hendese_adaylari(kare)
+    # ASIL ŞART: şahitler kanunu TAYİN ETMİYORSA teklik iddia edilemez.
+    # Kare girdide ``H→H``, ``H→W`` ve ``H→3`` şahitlerde ayırt edilemez.
+    assert len(adaylar) > 1, [str(h) for h in adaylar]
+    for h in adaylar:                       # hepsi şahitleri TAM tutuyor
+        for g, c in kare:
+            assert h.ebat(g.shape) == c.shape, (str(h), g.shape)
+
+    # ...ve iki taraftan kapalı: ebat DEĞİŞEN şahitler kanunu tayin
+    # edince rakip kalmamalı. Yalnız "birden çok aday var" denseydi,
+    # ölçü hiçbir zaman yeşil yanamazdı.
+    ayrik = []
+    for h, w in ((2, 5), (3, 4), (6, 2)):
+        g = rng.integers(0, 5, size=(h, w))
+        ayrik.append((g, g.copy()))
+    tek = hendese_adaylari(ayrik)
+    assert len(tek) == 1, [str(x) for x in tek]
+    assert str(tek[0]) == "H→H, W→W", str(tek[0])
 
 
 

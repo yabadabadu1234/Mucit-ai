@@ -317,7 +317,10 @@ class Kademeler:
 
         def _nesne():
             from idrak.cozucu import _bilesenler
-            from .kaideler import ARKA
+            # Arka plan rengi. Evvelce `nefs/kaideler.py`den geliyordu;
+            # o dosya padişahın fermanıyla **silinmiştir** ve sabit
+            # burada durur -- ARC'de arka plan ezici çoğunlukla 0'dır.
+            ARKA = 0
             # **Öğrenilen eşik:** ``esik_nesne`` hücreden küçük bileşen
             # nesne sayılmaz. ARC'de tek hücrelik lekeler bazen gürültü,
             # bazen asıl işarettir; hangisi olduğu göreve göre değişir ve
@@ -425,16 +428,20 @@ class Kademeler:
     # -- 3. MUHAKEME: Hâl → Namzet -----------------------------------
     def muhakeme(self, I: Idrak, H: Hal, derinlik: Optional[int] = None
                  ) -> Namzet:
-        """Hâlden **kaide adayları** üret ve sırala.
+        """Hâlden **namzet** üret -- artık şablon taramasıyla değil, dalgayla.
 
-        Sıralama Occam'dır (hipotez küçüklüğü, sonra terkip kısalığı);
-        `nefs/kaideler.py` onu zaten yapar. Buradaki kademe o aramayı
-        **çağırır** ve neticesini 4. kademeye verir.
+        **MİMARÎ DEĞİŞİKLİĞİ (padişahın TEK-ANA-KOD fermanı).** Evvelce
+        burada `nefs/kaideler.py`nin ``kaide_ara``sı çağrılıyordu: elle
+        yazılmış atomların ``|A|^d`` terkibinde arama. O dosya ve ona
+        hizmet eden aileler **silinmiştir**.
 
-        ``derinlik`` verilmezse **öğrenilir** (``kademe.muhakeme.derinlik``):
-        derin arama daha çok terkip bulur fakat hem pahalıdır hem de
-        ezbere yaklaşır; doğru derinlik göreve göre değişir ve elle
-        konacak bir sayı değildir.
+        Yerine `main/main.py`in dalgası geçer: ebat kanunu şahitlerden
+        çözülür, renk ise ``softmax(W·φ)`` ağırlıklarından okunur.
+        Namzet listesi bu sebeple ya boştur ya **tek** unsurludur --
+        dalga bir tanedir, kütükten seçilen bir liste değil.
+
+        ``derinlik`` artık aramanın derinliği değil **talim devridir**;
+        ismi kademe cetvelinde durduğu için korunmuştur ve öğrenilir.
         """
         N = Namzet()
         if not I.ciftler:
@@ -444,9 +451,30 @@ class Kademeler:
             derinlik = int(round(self._par("kademe.muhakeme.derinlik")))
 
         def _ara():
-            from .kaideler import kaide_ara
-            return list(kaide_ara(I.ciftler, derinlik=int(derinlik)))
-        N.kaideler = self._dene("nefs.kaideler", _ara) or []
+            from main.main import dalga_kur
+
+            d = dalga_kur(I.ciftler, devir=max(40, 40 * int(derinlik)))
+            if d is None:
+                return []
+
+            class _DalgaKaidesi:
+                """Dalgayı kademe hattının beklediği yüze büründürür.
+
+                ``hipotez`` ağırlık sayısıdır: dalga da serbest bilgi
+                taşır ve H134'ün delil/hipotez tartısı ona da işler.
+                Bunu sıfır yazmak, dalgayı ezber cezasından muaf
+                tutmak olurdu.
+                """
+                ad = "dalga/%s/%s" % (d.hendese, d.d4)
+                boy = 1
+                hipotez = int(d.W.size)
+
+                def __call__(self, g):
+                    r = d.oku(g)
+                    return None if r is None else r[0]
+
+            return [_DalgaKaidesi()]
+        N.kaideler = self._dene("main.main", _ara) or []
         N.aranan = len(N.kaideler)
         # **ÖLÇÜ DEĞİŞTİ (kütük H160).** Evvelce ``1 if N.kaideler``
         # yazıyordu, yani bir *faaliyet* ölçüsüydü ve **oynanabilirdi**:

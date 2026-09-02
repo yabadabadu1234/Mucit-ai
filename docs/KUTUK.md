@@ -6398,3 +6398,104 @@ alınmadı, tekrardan alındı.
 **susuyor** ve sustuğu için yavaşlığı da anlamsız. Duran duvar hız
 değil, **kâide cebrinin darlığı**dır (H135/H138) -- ve o duvar bu
 turda da yerinde duruyor.
+
+---
+
+## H198 -- KAİDE DOSYALARI İLGÂ EDİLDİ, TEK ANA KOD KURULDU
+
+**Padişahın fermanı:** *"Yeni dosya üretmeyi bırak artık… Padişah olarak
+bir ana kod seçeceksin… main klasörünü tamamen bu algoritmaya bağlamak.
+Kaideler denilen dosyaları da sileceksin."*
+
+### İcra
+
+Silinenler: `nefs/kaide.py`, `nefs/kaideler.py` ve **yalnız onlara**
+hizmet eden aileler `nefs/hucre.py`, `nefs/iskelet.py`, `nefs/nesne.py`,
+`nefs/secici.py`, `nefs/tamamlama.py`. Bu beşinin başka müşterisi yoktu
+(AST taramasıyla teyit edildi); `kaideler` gidince öksüz kalacaklardı.
+Ayrıca bir evvelki turda benim ürettiğim `nefs/nakis.py` de silindi ve
+kullanılan parçaları ana koda alındı -- "yeni dosya üretme" emri
+evvelâ **bana** işler.
+
+Ana kod: **`main/main.py`**. Şemanın sekiz babı tek akışta.
+
+### EVVELÂ BİR TASHİH -- KENDİ İTHAMIMI ÇÜRÜTTÜM
+
+Bir evvelki turda `nefs/kaide.py`nin 705. satırını (`for e in
+EBAT_KUTUGU for r in RENK_KUTUGU`) *"tasdik edilmiş itham"* diye
+sunmuştum. **Yanlıştı.** AST taramasıyla ölçüldü: `nefs/kaide.py`yi
+içe aktaran yalnız iki yer var -- sınama dosyası ve modül sicili
+(`divan.py`). O dosya **cevap hattında hiç yoktu**. Cevabı üreten
+`nefs/kaideler.py`nin terkip aramasıydı.
+
+Satırın varlığını doğrulamış, fakat **hattın üstünde olup olmadığını
+ölçmemiştim**. Şablonun varlığı ile şablonun hükmü ayrı şeylerdir;
+ikincisini ölçmeden birincisiyle hüküm verdim.
+
+### SİLİNENİN ÖLÇÜLMÜŞ HÜKMÜ (silmeden evvel alındı)
+
+Eski mimarî, `evaluation` (120 görev), müdrike çevrimi::
+
+    konuştu      : 1
+    TAM ÇÖZDÜ    : 0   (%0,0)
+    yanlış cevap : 1
+    sustu        : 119
+    sükût sebebi : "kaide bulunamadı" 117
+
+Yani silinen hat görülmemiş kümede **sıfır** çözüyordu. Silmek bir
+kabiliyeti feda etmek değildi.
+
+### YERİNE KONAN: AĞIRLIKTAN OKUNAN CEVAP
+
+`P(c | φ, θ) = softmax(W·φ)`. Tablo yok: görülmemiş bir bağlam da bir
+renge gider, zira öğrenilen **eşleşme değil ağırlıktır**.
+
+* **Hendese** şablondan seçilmez, çözülür: `H_out = p·H + q·W + c`
+  (altı kesir, şahitlerden). `aynı`, `devrik`, `üç kat`, `sabit 3×3`,
+  `H+2` ayrı maddeler değil aynı kanunun katsayılarıdır.
+* **Taşıyıcı** `D₄` -- karenin kendi izometri grubu, sekiz öğe.
+* **Yarıçap** sabit değil, aramaya girer.
+* **Kapı**: hem şahit isabeti 1,0 hem *bırak-birini* isabeti 1,0.
+
+### BU TURDA ÖLÇÜM BENİ ÜÇ KERE ÇÜRÜTTÜ
+
+1. **Hendese sabit-oran sanmıştım.** İlk hâl `H_out = a·H_in` idi;
+   evaluation'ın 102/120'sinde düştü, zira ARC'de ekseriya sabit
+   **ebat** vardır, sabit oran değil. Doğrusu doğrusal kanun.
+2. **Eksik belirlenmiş kanunda "en dar olanı" seçmiştim.** Bütün
+   şahitler aynı ebatta ise `aynı` ile `sabit 9` ayırt edilemez; sabiti
+   seçince 9×9'dan öğrenilen kanun 11×11 sınamada 9×9 dedi ve **kurulu
+   bir görevi bile kaçırdı**. Teklik yoksa teklik iddia edilmez: bütün
+   uyanlar rakip olarak durur.
+3. **Yarıçap 2'yi sabitlemiştim -- yanlış ölçüyle.** Dört tertibi
+   *şahit isabetiyle* kıyaslayıp yarıçap 2'yi seçmiştim (0,9328). Şahit
+   isabeti **ezberle de** yükselir. Aynı görevde *bırak-birini* ölçüsü
+   neticeyi tersine çevirdi::
+
+       yarıçap 0 ( 12 boyut)   dışarıda 1,0000
+       yarıçap 1 (100 boyut)   dışarıda 1,0000
+       yarıçap 2 (276 boyut)   dışarıda 0,9375   ← sabitlediğim
+
+   Fazla bağlam **zarar veriyor**. Yarıçap artık ölçümle seçilir.
+
+### İKİ KUSUR DAHA, İKİSİ DE BENİM
+
+* **Zırh ölçüsü kördü.** `_zirh_kaybi` blok sayısını `9` diye sabit
+  yazmıştım. Yarıçap 2'ye çıkınca `W` 25 bloklu oldu ve ölçü
+  **sessizce yalnız ilk 9 bloğu** tarttı; yarıçap 0'da çöktü. Sabit
+  sayı ölçüyü kör etmişti; blok sayısı artık `W`nin şeklinden okunur.
+* **Talim 4100× yavaştı.** `np.linalg.solve` döngü içinde
+  çağrılıyordu, hâlbuki `G` devirler boyunca sabit. 72×100'lük bir
+  mesele için 60 devir **11,96 sn** sürüyordu; ters bir kere
+  Cholesky'den kurulunca **0,0029 sn** oldu. Görev başına 110 sn'den
+  ~1,2 sn'ye indi.
+
+### İLÂN EDİLEN HAD
+
+Tabiî gradyan, Fubini-Study metriğinin **öznitelik çarpanıyla**
+ön-şartlanır; tam metrik değildir. `fubini_kiyasi` bunu ölçer ve
+**kırmızı yanar**: bağıl fark **0,5927**. Ölçmediğim bir şeye "Fubini-
+Study ile eğitiyorum" demiyorum; ön-şartlıyorum, o kadar.
+
+GPU ölçümü **yapılamadı**: bu ortamda GPU yok. "4×L4 %100 doluluk"
+maddesi icra edilmemiştir ve edilmiş gibi gösterilmiyor.

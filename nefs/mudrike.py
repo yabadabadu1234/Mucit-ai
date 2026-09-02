@@ -194,7 +194,6 @@ def mudrike(gorev, yakin_esigi: float = YAKIN_ESIGI,
     ne düşündüğü, adım adım. Cevap verilmediğinde de doludur; susmanın
     sebebi orada yazar.
     """
-    from .kaideler import kaide_ara
     from .operad import cech_tikanikligi
 
     dusunce: List[str] = []
@@ -250,6 +249,58 @@ def mudrike(gorev, yakin_esigi: float = YAKIN_ESIGI,
                        "susturmaz -- bütün gösterimleri tutan bir kaide "
                        "bulursam örtü zaten kapanmış olur; fakat "
                        "ihtiyatlı olurum.")
+
+    # --- 4a. ÖĞRENİLEN NAKIŞ -- şablondan ÖNCE (ferman: şablon ilgā)
+    #
+    # **Niçin şablondan önce.** Padişahın fermanı şuydu: *"kaide.py
+    # içindeki sabit kütükler ilgā edilmiştir; Python for döngüleriyle
+    # şablon tarama ilkelliği yasaklanmıştır."* İtham doğruydu:
+    # ``kaide.py``nin 705. satırı ``for e in EBAT_KUTUGU for r in
+    # RENK_KUTUGU`` idi, yani 11×7 el yazması ihtimalin taranması.
+    #
+    # `nefs/nakis.py` o kütüğün yerine geçer ve hiçbir şablon taşımaz:
+    # ebat kanunu ``aH·H+bH`` şahitlerden **çözülür**, renk ise izafî
+    # komşuluk bağlamından **öğrenilir**. Şablon sayısı sabit 77 idi;
+    # öğrenilen bağlam sayısı görevden göreve değişir.
+    #
+    # **ÖLÇÜLDÜ, İDDİA EDİLMİYOR.** Nakış tek başına training'de 400
+    # görevin 6'sını TAM çözer, evaluation'da 0'ını. Evaluation'da
+    # 120 görevin 74'ünde hiçbir soyutlama kademesi fonksiyonel
+    # değildir: cevap yerel pencerenin dışına bağlıdır. Bu bir arıza
+    # değil, yerel nakşın **ilân edilmiş haddi**dir -- ve şablon
+    # kütüğünün oradaki hâli de sükûttur.
+    try:
+        from main.main import padisah as _padisah
+        dw = _padisah(gorev)
+    except Exception as exc:                             # noqa: BLE001
+        dw = {"sükût": True, "sebep": "dalga hatası: %s" % type(exc).__name__}
+    if not dw.get("sükût"):
+        n = len(ciftler)
+        yakin = float(ardisiklik_kaidesi(n, n))
+        if c["H1"]:
+            yakin *= 0.8
+        # **Güven yakîne fiilen giriyor.** Dalga her hücrede bir olasılık
+        # verir; ortalama en yüksek olasılık düşükse dalga kararsızdır ve
+        # bu saklanmaz. Süs bir alan değil, hükmü değiştiren bir çarpandır.
+        yakin *= float(np.clip(dw.get("güven", 1.0), 0.3, 1.0))
+        dusunce.append(
+            "Hiçbir şablona bakmadan, şahitlerden bir dalga öğrendim: "
+            "ebat kanunu %s, taşıyıcı D₄=%s, %d ağırlık; şahit isabeti "
+            "%.4f, sınamada güven %.4f, zırh cezası %.4f."
+            % (dw["hendese"], dw["d4"], dw["ağırlık"],
+               dw["şahit_isabeti"], dw["güven"], dw["zırh"]))
+        if yakin >= yakin_esigi:
+            dusunce.append("Yakînim %s; öğrendiğim ağırlıklardan "
+                           "konuşuyorum." % mertebe_adi(yakin))
+            return {"nev": "bulmaca", "cevap": list(dw["cevap"]),
+                    "sükût": False, "sebep": None, "muhakeme": dusunce,
+                    "yakîn": yakin, "kaide": "dalga/%s" % dw["d4"],
+                    "kaide_sayısı": 1, "müphem": False, "tesadüf": t,
+                    "kaynak": "dalga"}
+        dusunce.append("Dalga kuruldu fakat yakînim (%.3f) eşiğin altında; "
+                       "kademelere devam ediyorum." % yakin)
+    else:
+        dusunce.append("Dalga tutmadı: %s." % dw.get("sebep"))
 
     # --- 4. KÂİDE -- artık **kademelerden** geliyor
     #
