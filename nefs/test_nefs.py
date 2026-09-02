@@ -1537,8 +1537,11 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
     for no, m in KANONIK_CETVEL.items():
         assert cet[no] == m, (no, cet[no], m)
     # cetvelde 39 meleke var; eksik ikisi AYRICA işaretli durmalı
-    assert len(KANONIK_CETVEL) == 39
-    assert set(EKSIK_MELEKELER) == {9, 21}
+    # divan 09-KÜLLÎ-TEŞKİLAT celsesinde borcu kapattı: cetvel 44 tam
+    assert len(KANONIK_CETVEL) == MELEKE_SAYISI == 44
+    assert EKSIK_MELEKELER == {}, EKSIK_MELEKELER
+    assert cet[9] == 4 and cet[21] == 12          # tasdik edilen ikisi
+    assert cet[42] == cet[43] == cet[44] == 19    # umum, talim, tahsil
     for m in range(MERTEBE_SAYISI):
         assert any(v == m for v in cet.values()), m
 

@@ -51,8 +51,11 @@ __all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
            "bgcm_kaybi", "muvazene_matrisi", "zirh_projektorleri",
            "H_toplam", "DimagAyari"]
 
-#: Melekelerin adedi -- 𝒪₁ … 𝒪₄₁.
-MELEKE_SAYISI: int = 41
+#: Melekelerin adedi -- 𝒪₁ … 𝒪₄₄ (divanın 09-KÜLLÎ-TEŞKİLAT celsesi).
+#: 41 aslî melekeye üç müstakil uzuv ilâve edildi: 𝒪₄₂ Umumileştirme,
+#: 𝒪₄₃ Talim, 𝒪₄₄ Tahsil. Bunlar soyut isim değil, ``nefs/teskilat.py``de
+#: formülleriyle duran operatörlerdir.
+MELEKE_SAYISI: int = 44
 #: Mertebe adedi -- 10 sabit zemin + 10 dinamik lif (`nefs/mertebe.py`).
 MERTEBE_SAYISI: int = 20
 
@@ -70,7 +73,7 @@ KANONIK_CETVEL: Dict[int, int] = {
     4: 1, 34: 1,               # k=1 Sentaks ve tertip
     6: 2, 2: 2, 3: 2,          # k=2 Tasavvur ve iç seyir
     7: 3, 35: 3,               # k=3 Mana ve intikal
-    8: 4,                      # k=4 Tahlil ve ayrıştırma
+    8: 4, 9: 4,                # k=4 Tahlil VE TERKİP (zıt çift, tasdik edildi)
     5: 5,                      # k=5 Tecrit ve soyutlama
     10: 6,                     # k=6 Tezat ve dinamik polarite
     23: 7, 18: 7,              # k=7 Mantık ve dedüksiyon
@@ -79,40 +82,25 @@ KANONIK_CETVEL: Dict[int, int] = {
     # --- DİNAMİK LİFLER (akıl yürütme, keşif, hüküm manifoldu)
     22: 10, 16: 10,            # d₁ İllet ve nedensellik (DAG)
     15: 11, 14: 11,            # d₂ Merak ve teleoloji (gaye)
-    25: 12, 26: 12,            # d₃ Teemmül ve mekânet (vakar)
+    21: 12, 25: 12, 26: 12,    # d₃ Tefekkür, Teemmül, Temkin (tasdik edildi)
     27: 13, 28: 13,            # d₄ Tetkik ve kılcal muayene
     24: 14, 29: 14,            # d₅ İspat ve burhân
     30: 15, 36: 15,            # d₆ Tahkik ve asla ircâ (tevil)
     33: 16, 31: 16,            # d₇ Küllî muhakeme ve adalet
     19: 17, 20: 17,            # d₈ Temsil ve teşbih köprüsü
     17: 18, 41: 18,            # d₉ İhtimaliyat ve münazara
-    40: 19, 39: 19,            # d₁₀ Küllî hikmet, sanat ve tahsil
+    40: 19, 39: 19, 42: 19, 43: 19, 44: 19,   # d₁₀ Sanat, Belâgat,
+                               # Umumileştirme, Talim, Tahsil
 }
 
-#: **CETVELDE BULUNMAYAN İKİ MELEKE -- açık borç, gizlenmiyor.**
-#:
-#: Divanın cetveli *"istisnasız ve boşluksuz"* diye tescil edilmiştir;
-#: fakat sayıldı ve **39 meleke** çıktı. Depodaki sicilde bulunan
-#: ``𝒪₉ Terkip`` ile ``𝒪₂₁ Tefekkür`` cetvelde geçmiyor. Cetvelin
-#: ``d₁₀`` satırındaki ``𝒪_umum``, ``𝒪_talim``, ``𝒪_tahsil`` ise
-#: sicilde numaralı birer meleke değildir (sicil tam 41'dir ve
-#: ``nefs.meleke.rapor`` onu sayar).
-#:
-#: Boş bırakmak, o iki melekeyi hiçbir zırhın altına koymamak demektir
-#: -- ``Ĥ_m``leri sıfır olur ve fiilen susturulurlar. Onun için
-#: **gerekçeli** bir yer verildi ve gerekçe burada durur:
-#:
-#: * ``𝒪₉ Terkip`` → ``k = 4``. Terkip, ``𝒪₈ Tahlil``in tam karşıtıdır
-#:   (sökmek/kurmak); aynı mertebede olmaları, ``Π_b^(4)``ün
-#:   *"kayıpsız temsil şartını (istisâ) korur"* vazifesiyle birebir
-#:   örtüşür -- söken ile kuran aynı süzgecin altında olmalıdır.
-#: * ``𝒪₂₁ Tefekkür`` → ``d₃ (12)``. Tefekkür ile ``𝒪₂₅ Teemmül``
-#:   aynı ailedendir (derin düşünme, acele etmeme) ve ``d₃``ün zırhı
-#:   RCD(K,N) Bochner süzgecidir: *"aceleciliği keser"*.
-#:
-#: Bu iki satır **padişahın tasdikine tâbidir** ve tasdik gelene kadar
-#: ``EKSIK_MELEKELER``de ayrıca işaretli durur.
-EKSIK_MELEKELER: Dict[int, int] = {9: 4, 21: 12}
+#: **BORÇ KAPANDI.** Evvelki turda ``𝒪₉ Terkip`` ile ``𝒪₂₁ Tefekkür``
+#: cetvelde yoktu; gerekçeyle yerleştirilip padişahın tasdikine
+#: sunulmuştu. Divan 09-KÜLLÎ-TEŞKİLAT celsesinde **ikisini de
+#: onayladı** (𝒪₉ → k=4 Tahlil'in zıt çifti, 𝒪₂₁ → d₃ Tefekkür) ve
+#: ayrıca ``𝒪₄₂ Umumileştirme``, ``𝒪₄₃ Talim``, ``𝒪₄₄ Tahsil``
+#: melekelerini ``d₁₀``a tescil etti. Cetvel artık **44 tamdır** ve
+#: bu sözlük boştur -- boş kalması, borcun kapandığının şahididir.
+EKSIK_MELEKELER: Dict[int, int] = {}
 
 
 def meleke_mertebeleri(cetvel: Optional[Dict[int, int]] = None

@@ -207,8 +207,8 @@ def dyadic_katla(bloklar: Sequence[Sequence[np.ndarray]], chi: int
 # adedinden **bağımsız** hâle gelir.
 
 
-def _yigin_kirp(C: List[np.ndarray], chi: int) -> Tuple[List[np.ndarray],
-                                                        np.ndarray]:
+def _yigin_kirp(C: List[np.ndarray], chi: int, usul: str = "svd"
+                ) -> Tuple[List[np.ndarray], np.ndarray]:
     """Yığın hâlinde kanonik kırpma. ``C[j]`` şekli ``(N, rl, 2, rr)``.
 
     Sağdan sola QR, soldan sağa SVD -- ``mps_kirp`` ile aynı cebir,
@@ -234,8 +234,26 @@ def _yigin_kirp(C: List[np.ndarray], chi: int) -> Tuple[List[np.ndarray],
     for k in range(n - 1):
         t = C[k]
         _, dl, _, dr = t.shape
-        U, sv, Vt = np.linalg.svd(t.reshape(N, dl * 2, dr),
-                                  full_matrices=False)
+        M = t.reshape(N, dl * 2, dr)
+        if usul == "gram":
+            # **CPU ÇARESİ (padişahın 3. emri).** LAPACK ``gesdd``
+            # yerine Gram dizeyinin ``eigh``i: ``MᵀM = V Λ Vᵀ`` ve
+            # ``σ = √Λ``. Gram ``dr×dr``dir, ``M`` ise ``2dl×dr``;
+            # yani ayrışım daha küçük bir dizeyde koşar.
+            #
+            # **Bedeli peşinen ilan edilir:** kare almak koşul sayısını
+            # KARELER (``κ → κ²``). Küçük ``χ``de ve iyi koşullu
+            # çekirdeklerde ölçülebilir; ölçülmeden varsayılan
+            # yapılmaz -- ``usul`` açıkça istenmedikçe SVD koşar.
+            G = np.matmul(M.transpose(0, 2, 1), M)
+            lam, V = np.linalg.eigh((G + G.transpose(0, 2, 1)) / 2.0)
+            lam = lam[:, ::-1]
+            V = V[:, :, ::-1]
+            sv = np.sqrt(np.maximum(lam, 0.0))
+            Vt = V.transpose(0, 2, 1)
+            U = np.matmul(M, V) / np.maximum(sv[:, None, :], 1e-30)
+        else:
+            U, sv, Vt = np.linalg.svd(M, full_matrices=False)
         if top is None:
             top = np.sum(sv ** 2, axis=1) + 1e-30
         r = max(1, min(int(chi), sv.shape[1]))
@@ -249,7 +267,7 @@ def _yigin_kirp(C: List[np.ndarray], chi: int) -> Tuple[List[np.ndarray],
 
 
 def dyadic_katla_yigin(bloklar: Sequence[Sequence[np.ndarray]], chi: int,
-                       hedef_blok: int = 1
+                       hedef_blok: int = 1, usul: str = "svd"
                        ) -> Tuple[List[np.ndarray], float, int]:
     """``dyadic_katla``ın yığın hâli -- **aynı cebir, tek çağrı**.
 
@@ -300,7 +318,7 @@ def dyadic_katla_yigin(bloklar: Sequence[Sequence[np.ndarray]], chi: int,
                 c[:, :al, :, :ar] = a
                 c[:, al:, :, ar:] = b
             yeni.append(c)
-        yeni, h = _yigin_kirp(yeni, int(chi))
+        yeni, h = _yigin_kirp(yeni, int(chi), usul=usul)
         hata = math.hypot(hata, float(np.sqrt(np.mean(h ** 2))))
         sayac += M
         if tek is not None:
@@ -335,7 +353,8 @@ def _hizala(a: np.ndarray, b: np.ndarray) -> np.ndarray:
 
 
 def hdtf_yigin(diziler: np.ndarray, sozluk: Sequence[Sequence[np.ndarray]],
-               chi: int = 8) -> Tuple[List[np.ndarray], float, int]:
+               chi: int = 8, usul: str = "svd"
+               ) -> Tuple[List[np.ndarray], float, int]:
     """``B`` diziyi **aynı anda** katla -- yığın ekseni hiç küçülmez.
 
     ``diziler`` ``(B, L)`` belirteç indisleridir. ``B·L`` blok tek
@@ -355,7 +374,8 @@ def hdtf_yigin(diziler: np.ndarray, sozluk: Sequence[Sequence[np.ndarray]],
     B, L = A.shape
     duz = A.ravel()
     bloklar = [token_cekirdegi(sozluk, int(t)) for t in duz]
-    return dyadic_katla_yigin(bloklar, int(chi), hedef_blok=int(B))
+    return dyadic_katla_yigin(bloklar, int(chi), hedef_blok=int(B),
+                              usul=usul)
 
 
 def sozluk_qtt(E: np.ndarray, chi: int = 8

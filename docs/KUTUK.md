@@ -6144,3 +6144,125 @@ FLOP'ta değil, **çok sayıda küçük SVD**dedir. ``numpy`` yığın SVD'si
 GPU'da toplu ``cuSOLVER`` (batched gesvdj) bu rejimin tam kendisi
 içindir -- fakat **bu makinede GPU yok ve ölçemiyorum**; ölçemediğim
 şeyi de iddia etmeyeceğim.
+
+## H191 — 44 MELEKE TAM; BORÇ KAPANDI
+
+Divan 09-KÜLLÎ-TEŞKİLAT celsesinde 𝒪₉ Terkip'in ``k=4``e, 𝒪₂₁
+Tefekkür'ün ``d₃``e konmasını **tasdik etti** ve üç yeni melekeyi
+tescil etti: 𝒪₄₂ Umumileştirme, 𝒪₄₃ Talim, 𝒪₄₄ Tahsil.
+
+Cetvel artık **44 tamdır**, ``EKSIK_MELEKELER`` **boştur** ve boş
+kalması borcun kapandığının şahididir. ``mertebe 4 = [8, 9]``
+(Tahlil–Terkip zıt çifti), ``mertebe 12 = [21, 25, 26]``,
+``mertebe 19 = [39, 40, 42, 43, 44]``.
+
+Üçü `nefs/teskilat.py`de **formülleriyle** kuruldu ve üçünün de ölçüsü
+kırmızıya döndü::
+
+    𝒪₄₂ Umumileştirme (Kan uzantısı / kesişim kanunu)
+        tutarlı 4 numune : artık 9,25e-16, bulunan A hakikîye 1,08e-15
+        biri çelişkili   : artık 0,5427, umumîleşmedi        KIRMIZI
+
+    𝒪₄₃ Talim (usul düzenleyici; entropi kademe kademe azalmalı)
+        τ azalan : entropi 1,5555 → 0,4767   sahih
+        τ ARTAN  : entropi 0,4767 → 1,5555   sahih DEĞİL      KIRMIZI
+
+    𝒪₄₄ Tahsil (θ ∘ exp(−ηĤ) + γI)
+        mutedil     : sönüm 0,9049  değişim 0,1338
+        η çok büyük : sönüm 0,0000  değişim 1,0000  SİLİNDİ    KIRMIZI
+        η sıfır     : sönüm 1,0000  değişim 0,0000  ÖĞRENMEDİ  KIRMIZI
+
+## H192 — 2D İZAFÎ MEVKİ KURULDU: mutlak koordinat yasaklandı
+
+Padişahın hükmü: *"Mevki bilgisi sayısal bir şey olursa bunu
+hudutlaman gerekir, bu da iyi olmaz; sembolik, izafî tarifler
+olmalı."* `nefs/lisan.py` kuruldu.
+
+Öteleme üreteçleri **çevrimseldir** ve bu kasıtlıdır: uçta durmak bir
+hudut koymaktır. Ölçüldü::
+
+    sağ    Δ=(+1, 0)   ‖DᵀD − I‖ = 0,00e+00
+    sol    Δ=(−1, 0)   ‖DᵀD − I‖ = 0,00e+00
+    yukarı Δ=( 0,+1)   ‖DᵀD − I‖ = 0,00e+00
+    aşağı  Δ=( 0,−1)   ‖DᵀD − I‖ = 0,00e+00
+    sağ ∘ sol = I      0,00e+00
+
+**Asıl sınama öteleme değişmezliğidir** ve geçti: aynı örüntü (yan yana
+iki renk) ızgaranın sol üstünde ve sağ altında **birebir aynı**
+kodlanıyor (``(3,5,0,0,0,0,0,0,0)``). Mutlak koordinat olsaydı
+olmazdı; kural bir yerde öğrenilip başka yerde tanınamazdı.
+
+Izgara ile metin **aynı sözlükte, aynı akışta** yürüyor; ayrı iki
+dünya yok.
+
+**Bu ortamın haddi açıkça yazılır:** ``tiktoken`` kuruldu fakat
+``cl100k_base`` tablosu ağdan çekilemedi (vekil 403 -- H87'nin aynı
+duvarı). Kod hakikî tiktoken'i **evvelâ dener**, olmazsa belirlenimci
+bayt yedeğine düşer ve ``kaynak = "bayt"`` diye **söyler**. Buradaki
+bütün sayılar bayt yedeğiyledir; Kaggle'da hakikî tablo yüklenecektir.
+
+## H193 — "SANAL BAĞIN KUANTİKLEŞTİRİLMESİ": hafıza hükmü DOĞRU, serbestlik hükmü YANLIŞ
+
+Divan, bağ indisini ``k = log₂χ`` mikro-kübite açıp mikro-rank ``r=2``
+ile hafızayı ``O(N log χ)`` yapmayı ve böylece ``χ = 2²⁰`` (bir
+milyonluk efektif bağ) elde etmeyi emretti. `main/ic_bag.py` kuruldu
+ve iddia **iki parçaya ayrılarak** ölçüldü.
+
+**Hafıza hükmü doğrudur** -- divanın cetveliyle örtüşür::
+
+    N = 88 M kübit, float16
+    χ = 64      açık 1,442e+03 GB   mikro 18,30 GB
+    χ = 1024    açık 3,691e+05 GB   mikro 29,57 GB
+    χ = 65536   açık 1,512e+09 GB   mikro 46,46 GB
+    χ = 2²⁰     açık 3,870e+11 GB   mikro 57,73 GB
+
+**Fakat serbestlik hükmü yanlıştır** ve divanın cetvelinde bu sütun
+**yoktu**::
+
+    χ           k    açık sayı/çekirdek   mikro sayı   serbestlik nispeti
+    64          6                 8.192          104        7,877e+01 kat
+    1024       10             2.097.152          168        1,248e+04 kat
+    65536      16         8.589.934.592          264        3,254e+07 kat
+    1.048.576  20     2.199.023.255.552          328        6,704e+09 kat
+
+Yani ``χ = 2²⁰`` demek, **2,2 trilyon sayı yerine 328 sayı** koymaktır.
+Bu bir yeniden yazım (reparametrisation) değil, uzayın
+**daraltılmasıdır**: mikro-zincirin erişebildiği çekirdekler, bütün
+``χ×2×χ`` çekirdeklerin ölçüsü sıfır olan bir alt kümesidir. Hafıza
+kazancı hakikîdir; "aynı bağ boyutu" iddiası değildir.
+
+Küçük ölçekte fiilen de ölçüldü (χ=4, açık parametre 32)::
+
+    r=2, bütçe  40 | mikro hata 0,5964 | düz χ'=4 hata 0,0000
+    r=4, bütçe 160 | mikro hata 0,0587 | düz χ'=4 hata 0,0000
+
+Mikro-zincir, **daha büyük bütçeyle bile** açık çekirdeği tutturamadı.
+
+**İki haddi peşinen ilan ediyorum (kullanıcı hükmü C).** (1) Uydurma
+usulüm kaba bir sonlu-fark inişidir; daha iyi bir eniyileyici mikro
+hatayı düşürebilir, dolayısıyla o sayı bir **üst sınırdır**. (2)
+Asıl kıyas büyük ``χ``dedir (mikro 328 sayı v düz ``χ'≈12``, 288
+sayı) ve onu bu makinede ölçemedim. Ölçmediğim şeyi iddia etmiyorum.
+
+Bu yapı faydasız değildir -- hiyerarşik Tucker ve QTT-in-TT literatürü
+tam budur ve *yapılı* verilerde işe yarar. Fakat "``χ = 10⁶`` ile
+çalışıyoruz" cümlesi, ``χ = 10⁶``lık bir MPS'in yapabildiklerini
+vaat eder ve bu vaat yanlıştır.
+
+## H194 — CPU ÇARESİ: Gram-eigh kuruldu, 1,2 kat, sadakat aynı
+
+Padişahın 3. emri: *"CPU'da LAPACK SVD yasaktır."* ``_yigin_kirp``a
+``usul="gram"`` yolu eklendi: ``MᵀM``in ``eigh``i, ``σ = √Λ``. Gram
+``dr×dr``dir, ``M`` ise ``2dl×dr`` -- ayrışım daha küçük dizeyde koşar.
+
+Ölçüldü (χ=16, metin benzeri dizi)::
+
+      L    SVD sn   Gram sn   hızlanma |   F_svd     F_gram
+     64    0,0141    0,0120     1,17×  | 0,999920   0,999920
+    128    0,0247    0,0199     1,24×  | 0,999610   0,999610
+    256    0,0448    0,0373     1,20×  | 0,998674   0,998674
+
+**Sadakat birebir aynı** (altı hane), hız %20 arttı. Fakat bu, SVD
+darboğazını *kırmaz*; 96,4 MB/sn'yi 116 MB/sn yapar. Onun için
+varsayılan **hâlâ SVD'dir**: kare almak koşul sayısını kareler ve o
+risk, %20 için alınmaz. ``usul="gram"`` açıkça istendiğinde koşar.

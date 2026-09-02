@@ -76,6 +76,9 @@ EKSIK: Dict[str, str] = {}
 # ------------------------------------------------------------------
 import akis.hacim  # [gölge] Hacim — ortalama eğrilik akışı ve yoğunluk akışları
 import akis.test_akis  # [şahit] akis test takımı
+import main.ic_bag  # [hakem] Sanal bağın kuantikleştirilmesi -- O(log χ) iddiasının ölçüsü
+import nefs.teskilat  # [uzuv] 𝒪₄₂ Umumileştirme, 𝒪₄₃ Talim, 𝒪₄₄ Tahsil -- formülleriyle uzuv
+import nefs.lisan  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri
 import main.katlama  # [uzuv] HDTF -- hiyerarşik ikili ağaç katlaması, belirlenimci QTT inşası
 import akis.ikmal  # [gölge] Ceridenin İkmâl Fıkraları -- Lions, Bochner, Cayley, Postnikov
 import akis.tikiz  # [gölge] Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus
@@ -332,6 +335,12 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Hacim — ortalama eğrilik akışı ve yoğunluk akışları'),
     ('akis.test_akis', 'şahit',
      'akis test takımı'),
+    ('main.ic_bag', 'hakem',
+     'Sanal bağın kuantikleştirilmesi -- hafıza O(log χ) düşüyor fakat SERBESTLİK de düşüyor; iddia ölçülür'),
+    ('nefs.teskilat', 'uzuv',
+     '𝒪₄₂ Umumileştirme (Kan uzantısı), 𝒪₄₃ Talim (usul düzenleyici), 𝒪₄₄ Tahsil (ağırlığı zâtî mülk kılma) -- üçü de formüllü'),
+    ('nefs.lisan', 'uzuv',
+     'Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri; mutlak koordinat YASAK, izafî tarif esastır'),
     ('main.katlama', 'uzuv',
      'HDTF -- hiyerarşik ikili ağaç katlaması; 2^n genlik hiç açılmadan, zar atılmadan QTT inşası'),
     ('akis.ikmal', 'gölge',
