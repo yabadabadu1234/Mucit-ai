@@ -5849,3 +5849,77 @@ paritesi karışıktır ve **tek diziyle temsil edilemez**. Tablo Gibbs'in
 **çift kısmını** (``e^{−β/2}cosh(βx/2)``) verir. Tam Gibbs için iki
 tablo (çift + tek) ve bir birleştirme lâzımdır; bu **yapılmadı** ve
 gizlenmiyor.
+
+## H184 — H126'DAN ALTI MODÜL KAPANDI; ÜÇÜ KENDİ İDDİASINI ÇÜRÜTTÜ
+
+Kendi gösterimi olmayan ~23 modülden **altısı** kapandı:
+``nefs.meleke``, ``nefs.kopru``, ``nefs.qmain``, ``nefs.kule``,
+``nefs.kod_uzayi``, ``main.zirh``. Gösterim yazmak bir tezyin değildir;
+üçünde **evvelce iddia edilmiş bir şeyin yanlış olduğu** çıktı.
+
+### 1. ``nefs.kopru`` -- H14 yarım doğruymuş
+
+H14 *"kodlama tersinirdir ve hiçbir bit kaybolmaz"* diyordu. Ölçüldü::
+
+    sözlük  kübit  tersinir  çarpışma  izometri  mesafe korelasyonu
+      4       2      True       0       False        +0,3162
+      8       3      True       0       False        +0,3560
+     16       4      True       0       False        +0,3703
+     16       3      False      8       False        −0,0825
+     32       4      False     16       False        −0,0099
+
+**Tersinirlik doğru** (kübit yettiği sürece). **Fakat kodlama hiçbir
+hâlde izometri değildir** ve mesafe korelasyonu en iyi hâlde 0,37'dir.
+Yani sözlükte komşu iki belirteç açı uzayında komşu olmayabiliyor;
+"yakın belirteç" mefhumu bu geçişte **korunmuyor**. H14 yalnız
+tersinirliği iddia ediyordu ve o kadarı doğrudur; genelleme için
+lâzım olan ikinci şart hiç ölçülmemişti ve **sağlanmıyor**.
+
+### 2. ``nefs.kule`` -- uzun pencerenin bedeli %99'a çıkıyor
+
+Kule'nin kendi dürüstlük şartı *"kayıp gizlenmez, ölçülür"*ti. Ölçüldü
+(tavan 64)::
+
+    satır   kademe  kaba satır  kayıp    n² kazancı
+      64      0        64       0,0000       1 kat
+     256      2        64       0,8639      16 kat
+    1024      4        64       0,9685     256 kat
+    4096      6        64       0,9921    4096 kat
+
+Yani 4096 satırda karesel maliyet 4096 kat düşüyor **fakat kaba
+görüşün ince eksene geri yayılımı ham veriden %99,2 sapıyor**. Kule bir
+izometri değildir ve norm da korunmuyor (16 satırda ‖X‖ 8,85 → 2,31).
+Bu bir kusur ilanı değil bir **fiyat etiketidir**; fiyat şimdiye kadar
+yazılmamıştı.
+
+### 3. ``nefs.qmain`` -- MPO/takas kıyası SAHTE SIFIR okuyordu
+
+``mpo_raporu`` entropiyi ``dolasiklik_entropisi()`` varsayılanıyla
+ölçüyordu ve H174'te teşhis edilen aynı kusura düşüyordu: küçük
+``n_satir``da her iki usul için de ``S = 0,000`` yazıyordu. Adı olan
+kesitten (``veri|hukum``, pencere zincirin başına açık) ölçülünce::
+
+    χ     MPO                        TAKAS AĞI
+    8     kesme 3,23e-02  S=2,079    kesme 3,92e+00  S=1,975  (150 takas)
+    16    kesme 3,56e-02  S=2,773    kesme 2,15e+00  S=1,912  (150 takas)
+
+MPO'nun hükmü **doğrulanıyor**: takas ağı kesmeyi iki mertebe
+büyütüyor ve dolaşıklığı sürükleyip düşürüyor (2,773 → 1,912). Fakat
+bu, ölçü düzeltilene kadar **görünmüyordu**.
+
+### Diğer üçü
+
+* ``nefs.meleke`` -- sicil 41/41 dolu, sözleşmesi boş meleke yok; ve
+  sözleşme kasten ihlâl edilerek **fiilen reddettiği** gösterildi.
+* ``nefs.kod_uzayi`` -- Clifford devresinde ``Σ P = 1,000000000000000``,
+  hiçbir kesme yok (n = 4, 6, 8'de). MPS ile TVD 0,9375 = 15/16 çıkıyor
+  ve sebebi teşhis edildi: melekeler koşmadan hüküm bloğu ``|0000⟩``dir,
+  stabilizer ise düzgündür; iki temsil aynı devreyi taşımıyor.
+* ``main.zirh`` -- dört süzgecin **dördü de ısırıyor**: kopuk okumada
+  β₀ = 2 ve ceza 0,7788; menfî okumada işaret çevriliyor; önceki okumaya
+  dik yönde tıkanıklık 0,9200, aynı yönde 0,0003.
+
+**Kalan borç: ~17 modül.** ``local_run.*`` (2 giriş betiği) ve
+``omega_kategori.*`` (7) ile ``nefs.akil``, ``nefs.beyan``,
+``nefs.idrak``, ``nefs.ihtimal``, ``nefs.murakabe``, ``nefs.qkaide``,
+``nefs.tabii_gradyan``, ``main.dimag``.

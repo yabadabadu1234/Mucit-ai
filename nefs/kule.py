@@ -101,3 +101,48 @@ def ince(Y: np.ndarray, n: int, kademe: int) -> np.ndarray:
     if len(G) < n:                       # tek sayı taşmaları
         G = np.vstack([G, np.repeat(Y[-1:], n - len(G), axis=0)])
     return G / (np.sqrt(2.0) ** kademe)
+
+
+def rapor() -> str:                                     # pragma: no cover
+    """Kendi kendini gösterme (H126): **kazanç ve kayıp yan yana**.
+
+    Kule'nin iddiası ikilidir ve ikisi birden ölçülmezse yalan olur:
+    (a) karesel maliyet doğrusala iner, (b) bedeli kaba tanelemenin
+    sildiği farktır. İkincisi gizlenirse "uzun pencere tutuyoruz"
+    iddiası boş kalır (dosyanın kendi dürüstlük şartı).
+    """
+    import time
+
+    rng = np.random.default_rng(0)
+    s = ["KULE -- hiyerarşik taşıyıcı: kazanç ve kayıp", ""]
+    s.append("  %-8s %-8s %-10s %-12s %-12s %s"
+             % ("satır", "kademe", "kaba satır", "kayıp", "kule sn",
+                "n² kıyas"))
+    for n in (64, 256, 1024, 4096):
+        X = rng.normal(size=(n, 12))
+        t0 = time.perf_counter()
+        Y, k, kayip = kaba(X, tavan=64)
+        t1 = time.perf_counter() - t0
+        # karesel melekenin göreceği iş: kaba görüşte n_kaba², ham n²
+        s.append("  %-8d %-8d %-10d %-12.4f %-12.4f %d kat"
+                 % (n, k, len(Y), kayip, t1,
+                    (n * n) // max(len(Y) * len(Y), 1)))
+    s.append("")
+    s.append("  Kayıp SIFIR DEĞİLDİR ve olmamalıdır: ortalama, iki satır")
+    s.append("  arasındaki farkı o kademede siler. Sıfır çıksaydı ya kule")
+    s.append("  hiç çalışmıyor ya da ölçü kör olurdu.")
+    s.append("")
+    s.append("  Kule DİK mi? (norm korunuyor mu -- toplam kanadında)")
+    X = rng.normal(size=(16, 5))
+    kad = kule_kur(X)
+    s.append("    ham ‖X‖ = %.6f" % float(np.linalg.norm(X)))
+    for i, k in enumerate(kad[:4]):
+        s.append("    kademe %d: %2d satır, ‖·‖ = %.6f"
+                 % (i, len(k), float(np.linalg.norm(k))))
+    s.append("    (norm düşüyor; düşen kısım ATILAN FARK kanadıdır --")
+    s.append("     kule izometri değildir ve öyle iddia edilmiyor.)")
+    return "\n".join(s)
+
+
+if __name__ == "__main__":   # pragma: no cover
+    print(rapor())

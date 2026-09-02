@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import sys
 import time
-from typing import List
+from typing import List, Sequence
 
 import numpy as np
 
@@ -22,7 +22,8 @@ from .qakis import QNefs
 from .qegitim import degerlendir, egit, ornekler
 
 
-def mpo_raporu(n_satir: int = 20) -> str:
+def mpo_raporu(n_satir: int = 20,
+               baglar: Sequence[int] = (8, 16, 32, 64)) -> str:
     """MPO ile takas ağı: aynı üniter, iki usul, ölçülen fark."""
     rng = np.random.default_rng(0)
     E = rng.normal(size=(n_satir, 12))
@@ -32,13 +33,17 @@ def mpo_raporu(n_satir: int = 20) -> str:
          "",
          "%-5s %-30s %-30s" % ("χ", "MPO", "TAKAS AĞI")]
     s.append("-" * 70)
-    for bag in (8, 16, 32, 64):
+    for bag in baglar:
         a = QYazmac(n_satir, QAyar(bag=bag))
         a.kodla(E); a.superpozisyon(); a.mera()
         t = time.perf_counter()
         ka = a.mpo_topla("makam", [0.15] * n_satir)
         ta = time.perf_counter() - t
-        Sa = a.y.dolasiklik_entropisi()["entropi"]
+        # **Kesit adı olan yerden alınır** (kütük H174): varsayılan
+        # ``n//2`` zincirin uzunluğuna bağlıdır, ölçülmek istenene
+        # değil, ve pencere iç kesitlerde sahte sıfır verir.
+        kes = a.taksimat.kesitler().get("veri|hukum", a.n // 2)
+        Sa = a.y.dolasiklik_entropisi(kesit=kes, pencere=kes)["entropi"]
 
         b = QYazmac(n_satir, QAyar(bag=bag))
         b.kodla(E); b.superpozisyon(); b.mera()
@@ -46,7 +51,7 @@ def mpo_raporu(n_satir: int = 20) -> str:
         t = time.perf_counter()
         rb = b.supur("makam", lambda h, y: kontrollu_donme(0.15))
         tb = time.perf_counter() - t
-        Sb = b.y.dolasiklik_entropisi()["entropi"]
+        Sb = b.y.dolasiklik_entropisi(kesit=kes, pencere=kes)["entropi"]
         s.append("%-5d kesme=%.2e S=%.3f %.2fsn  kesme=%.2e S=%.3f %d takas %.2fsn"
                  % (bag, ka, Sa, ta, rb["kesme"], Sb, rb["takas"], tb))
         s.append("      (MERA sonrası dolaşıklık S=%.3f idi)" % S0)
@@ -80,6 +85,17 @@ def egitim_kos(cevrim: int = 4, ornek: int = 6, pencere: int = 8) -> str:
     d1 = degerlendir(n, dgr, azami=6, pencere=pencere)
     s.append("  eğitim SONRASI: %s" % d1)
     return "\n".join(s)
+
+
+def rapor() -> str:                                     # pragma: no cover
+    """Kendi kendini gösterme (H126) -- **ucuz** hâliyle.
+
+    ``mpo_raporu`` χ = 64'e kadar çıkar ve dakikalar sürer; 1,5. kademe
+    yoklaması her modül için koşulduğundan burada küçük bir kesit
+    alınır. Tam kıyas ``python -m nefs.qmain mpo`` iledir ve o hâlâ
+    durur -- ölçü küçültüldü, kaldırılmadı.
+    """
+    return mpo_raporu(n_satir=6, baglar=(8, 16))
 
 
 if __name__ == "__main__":   # pragma: no cover

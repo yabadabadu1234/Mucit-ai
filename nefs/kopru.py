@@ -101,3 +101,30 @@ def kodlamayi_olc(sozluk: int = 16, kubit: int = 4) -> Dict[str, object]:
                   if tersinir else
                   "H14 YANLIŞ: kodlama tersinir değil."),
     }
+
+
+def rapor() -> str:                                     # pragma: no cover
+    """Kendi kendini gösterme (H126): H14'ün iki ölçütü, yan yana.
+
+    Tersinirlik ile izometri **ayrı** sayılardır ve ikisi birden yazılır
+    (H47). Bir kodlama tersinir olduğu hâlde mesafeyi paramparça
+    edebilir; o zaman "yakın belirteç" mefhumu kaybolur.
+    """
+    s = ["FUNKTÖR KÖPRÜSÜ -- belirteç → açı geçişinin sıhhati", ""]
+    s.append("  %-8s %-10s %-10s %-12s %-14s %s"
+             % ("sözlük", "kübit", "tersinir", "çarpışma",
+                "izometri", "mesafe kor."))
+    for sozluk, kubit in ((4, 2), (8, 3), (16, 4), (16, 3), (32, 4)):
+        r = kodlamayi_olc(sozluk, kubit)
+        s.append("  %-8d %-10d %-10s %-12d %-14s %+.4f"
+                 % (sozluk, kubit, r["tersinir"], r["çarpışma"],
+                    r["izometri"], r["mesafe_korelasyonu"]))
+    s.append("")
+    s.append("  Son iki satır mühimdir: sözlük kübit sayısının taşıyabildiği")
+    s.append("  adedi aşınca çarpışma başlar ve tersinirlik KIRILIR --")
+    s.append("  yani ölçü kırmızıya dönebiliyor, H14 her hâlde doğru değil.")
+    return "\n".join(s)
+
+
+if __name__ == "__main__":   # pragma: no cover
+    print(rapor())

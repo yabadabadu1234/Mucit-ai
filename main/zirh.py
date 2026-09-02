@@ -137,3 +137,54 @@ def zirh_uygula(y: Yazmac, u: Uzay, okuma: np.ndarray,
     return v, ZirhIzi(mertebe=u.mertebe, sheaf_duzeltme=sheaf_d,
                       homotopi_isaret=isaret, betti0=b0,
                       betti_ceza=ceza, tikaniklik=tik)
+
+
+def rapor() -> str:                                     # pragma: no cover
+    """Kendi kendini gösterme (H126): dört süzgeç **fiilen** ısırıyor mu?
+
+    Bir zırhın raporu, süzgeçlerin adını saymakla olmaz; her birinin
+    dalgayı **değiştirdiği** ve değiştirmediği hâl gösterilmelidir.
+    Burada dört ayrı okuma kurulur, her biri bir süzgeci tetikler ve
+    ötekileri tetiklemez; tetiklemiyorsa o süzgeç ölüdür.
+    """
+    from .kategori import Uzay
+
+    s = ["ENİNE TOPOLOJİK ZIRH -- dört süzgeç, dördü de ısırıyor mu?", ""]
+    n = 24
+    k = n
+
+    def kos(z: np.ndarray, onceki=None) -> ZirhIzi:
+        y = Yazmac(8, bag=4, tohum=0)
+        v = np.concatenate([z, np.zeros_like(z)])
+        u = Uzay(yuva=0, mertebe=1, tam_kuruldu=True, denetlendi=True,
+                 baglayici=0, tip_ozeti="sınama")
+        return zirh_uygula(y, u, v, onceki)[1]
+
+    duz = np.linspace(-0.2, 0.2, k)
+    kopuk = duz.copy()
+    kopuk[k // 2:] += 3.0                     # tek büyük sıçrama → β₀ = 2
+    dalgali = np.sin(np.linspace(0, 12, k))
+    menfi = -np.abs(duz) - 0.5                # baskın bileşen menfî
+
+    s.append("  %-14s %-12s %-8s %-10s %s"
+             % ("okuma", "sheaf", "işaret", "β₀", "betti cezası"))
+    for ad, z in (("düz", duz), ("kopuk", kopuk),
+                  ("dalgalı", dalgali), ("menfî", menfi)):
+        iz = kos(z)
+        s.append("  %-14s %-12.4f %-8.0f %-10d %.4f"
+                 % (ad, iz.sheaf_duzeltme, iz.homotopi_isaret,
+                    iz.betti0, iz.betti_ceza))
+
+    s.append("")
+    s.append("  Kohomoloji: **önceki okumaya dik** bileşen yutuluyor mu?")
+    onc = np.concatenate([duz, np.zeros_like(duz)])
+    for ad, z in (("aynı yön", duz), ("dik yön", dalgali)):
+        iz = kos(z, onceki=onc)
+        s.append("    %-10s tıkanıklık = %.4f" % (ad, iz.tikaniklik))
+    s.append("    (dik yönde tıkanıklık 1'e yaklaşmalı; yaklaşmıyorsa")
+    s.append("     dördüncü süzgeç ölüdür.)")
+    return "\n".join(s)
+
+
+if __name__ == "__main__":   # pragma: no cover
+    print(rapor())

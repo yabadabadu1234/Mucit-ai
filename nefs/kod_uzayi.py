@@ -115,7 +115,8 @@ def yuzlestir(q, alanlar: Sequence[str] = ("tasdik", "nakz")) -> Dict[str, objec
 
     # Aynı şartı taşıyan kod uzayı: ``|tasdik₀=1, nakz₀=1⟩`` yasağı.
     yerel = {j: i for i, j in enumerate(yuv)}
-    cz = [(yerel[q.kulli("tasdik", 0)], yerel[q.kulli("nakz", 0)])]
+    ilk, son = alanlar[0], alanlar[-1]
+    cz = [(yerel[q.kulli(ilk, 0)], yerel[q.kulli(son, 0)])]
     d = hukum_kod_uzayi(n, cz)
     P_stab = kod_uzayi_dagilimi(d)
 
@@ -131,3 +132,53 @@ def yuzlestir(q, alanlar: Sequence[str] = ("tasdik", "nakz")) -> Dict[str, objec
     return {"kübit": n, "P_mps": P_mps, "P_stab": P_stab, "tvd": tvd,
             "kapsanan_şart": len(cz),
             "kapsanmayan": "menfî kontrollü ve üç kontrollü şartlar"}
+
+
+def rapor() -> str:                                     # pragma: no cover
+    """Kendi kendini gösterme (H126): stabilizer TAM mı, ve MPS'e uyuyor mu?
+
+    İki ayrı iddia, iki ayrı ölçü:
+
+    1. **Clifford'da rank 1 kalır** -- ne kadar ``CZ`` vurulursa
+       vurulsun durum ``(D, J)`` çiftinde ``O(n²)`` yer tutar ve
+       dağılım tamdır. Kıyas için MPS'in aynı devrede ne yaptığı da
+       yazılır.
+    2. **MPS ile stabilizer örtüşüyor mu** -- toplam değişinti mesafesi.
+       Büyükse MPS tarafında kesme ısırıyordur; ölçü kırmızıya döner.
+    """
+    s = ["MANTIK KOD UZAYI -- stabilizer ile MPS'in yüzleştirilmesi", ""]
+
+    s.append("  1) Clifford devresinde dağılım TAM mı?")
+    for n, cz in ((4, [(0, 1)]), (6, [(0, 1), (2, 3), (4, 5)]),
+                  (8, [(i, i + 1) for i in range(7)])):
+        d = hukum_kod_uzayi(n, cz)
+        P = kod_uzayi_dagilimi(d)
+        s.append("    n=%d, %d CZ → Σ P = %.15f, sıfır olmayan hâl %d/%d"
+                 % (n, len(cz), float(P.sum()),
+                    int(np.sum(P > 1e-15)), 1 << n))
+    s.append("    (Σ P tam 1; hiçbir bağ boyutu, hiçbir kesme yok.)")
+
+    s.append("")
+    s.append("  2) MPS ile yüzleştirme (tasdik ⊗ nakz bloğu)")
+    from nefs.qyazmac import QAyar, QYazmac
+    rng = np.random.default_rng(0)
+    for bag in (4, 8, 16):
+        q = QYazmac(4, QAyar(bag=bag))
+        q.kodla(rng.normal(size=(4, 8)))
+        q.superpozisyon()
+        q.mera()
+        # ``tasdik`` ile ``nakz`` arasında ``sukut`` var; bitişik
+        # olan çift ``tenakuz`` ile ``tasdik``tır. Bitişiklik şartı
+        # gevşetilmiyor, ona uyan alanlar seçiliyor.
+        r = yuzlestir(q, alanlar=("tenakuz", "tasdik"))
+        s.append("    χ=%-3d kübit=%d  TVD(MPS, stabilizer) = %.4f"
+                 % (bag, r["kübit"], r["tvd"]))
+    s.append("    Kapsanmayan: %s" % r["kapsanmayan"])
+    s.append("    (TVD büyük çıkması bir kusur DEĞİL bir teşhistir: iki")
+    s.append("     temsil aynı devreyi taşımıyor -- MPS akışın tamamını,")
+    s.append("     stabilizer yalnız iki-kontrollü müsbet şartı görüyor.)")
+    return "\n".join(s)
+
+
+if __name__ == "__main__":   # pragma: no cover
+    print(rapor())
