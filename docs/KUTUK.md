@@ -6266,3 +6266,72 @@ Padişahın 3. emri: *"CPU'da LAPACK SVD yasaktır."* ``_yigin_kirp``a
 darboğazını *kırmaz*; 96,4 MB/sn'yi 116 MB/sn yapar. Onun için
 varsayılan **hâlâ SVD'dir**: kare almak koşul sayısını kareler ve o
 risk, %20 için alınmaz. ``usul="gram"`` açıkça istendiğinde koşar.
+
+## H195 — H193 NAKZEDİLDİ: kusur bendeydi, üç yerde birden
+
+Divan H193'ü üç sebeple reddetti. **Üçü de haklı çıktı ve üçüncüsünü
+divan söylemeden ben buldum.** Kaide gereği H193 silinmiyor; burada
+nakzediliyor ve sebebi yazılıyor.
+
+**Kusur 1 -- rastgele çekirdekle denemiştim.** Rastgele bir dizeyi
+hiçbir tensör ağı sıkıştıramaz; bu bir teoremdir, mikro-zincirin
+kusuru değil. Onu rastgele çekirdekle sınamak, JPEG'i beyaz gürültüyle
+sınayıp *"sıkıştırmıyor"* demeye benzer.
+
+**Kusur 2 -- kaba sonlu-fark inişiyle uydurmuştum.** Doğrusu kapalı
+formdur: çekirdeği bit kiplerine açıp ardışık SVD (TT-SVD); her bağda
+Eckart-Young manasında en iyi, zarsız.
+
+**Kusur 3 -- bit sıralamam yanlıştı.** Bitleri ``μ₁…μ_k, σ, ν₁…ν_k``
+diye **ayrı** dizmiştim. Oseledets'in QTT-matris formatı
+**serpiştirilmiş** sıradır: ``(μ₁ν₁)(μ₂ν₂)…``. Bir öteleme yahut
+bantlı dizeyde ``i−j`` küçüktür, yani bağıntı **aynı ölçektedir**;
+ayrı sırada o bağıntı zincirin bir ucundan öbür ucuna gitmek zorunda
+kalır ve bağ patlar. Serpiştirilmiş sırada aynı yuvada kapanır.
+
+Üçü de düzeltilince netice **tersine döndü** (χ = 32; açık çekirdek
+2048 sayı)::
+
+    çekirdek           r   parametre  bağ | QTT hata    | düz χ' hata
+    ────────────────────────────────────────────────────────────────
+    öteleme  T̂         4      132      3  | 3,965e-16   | χ'=8  0,866
+    bantlı e^{−|i−j|}  4      134      3  | 1,515e-15   | χ'=8  0,599
+    Laplasyen          4      134      3  | 1,814e-15   | χ'=8  0,631
+    ────────────────────────────────────────────────────────────────
+    rastgele          16     1876     16  | 4,479e-01   | χ'=30 0,101
+
+**Bizim fiilen kullandığımız operatörlerin hepsi ilk üç satırdadır:**
+izafî öteleme (`nefs/lisan.py`nin Lie üreteçleri), bantlı yerel
+etkileşim, Laplasyen. Üçü de **132 sayıyla makine hassasiyetinde**
+taşınıyor; aynı bütçedeki düz kırpma %60-87 hata veriyor. Rastgele
+çekirdek hâlâ taşınmıyor ve taşınmaması doğrudur -- ölçü kırmızıya
+dönebiliyor.
+
+**Hükmün doğru hâli (ve sayımın hâlâ ayakta kalan kısmı):** mikro-QTT
+*χ boyutlu keyfî bir çekirdeği* taşımaz -- 6,7 milyar katlık serbestlik
+farkı gerçektir. Fakat **düşük QTT-rütbeli operatörler manifoldunu**
+tam taşır ve bizim bütün operatörlerimiz oradadır. O hâlde
+*"χ = 2²⁰ efektif kapasite"* ifadesi **bu şartla** doğrudur ve şart
+yazılmadan kullanılmamalıdır.
+
+**Kendi hatam hakkında bir not.** H193'te *"iki haddimi peşinen ilan
+ediyorum: usulüm kaba, asıl kıyası ölçemedim"* demiştim. O ihtiyat
+doğruydu fakat **yetmedi**: haddi ilan etmek, yanlış hükmü vermeyi
+mübah kılmıyor. Ölçemediğim bir şeyde hüküm vermemeliydim.
+
+## H196 — TİKTOKEN YEREL TABLODAN KOŞUYOR
+
+Padişah ``o200k_base.tiktoken`` tablosunu depo köküne koydu (199.998
+birleşme kuralı). `nefs/lisan.py` artık ağa hiç çıkmadan yerel
+dosyadan yüklüyor::
+
+    kaynak      : o200k_yerel
+    taban sözlük: 199.998   (+19 özel belirteç → 200.017)
+
+    "kırmızı kare sağa kayar"      →  8 belirteç, gidiş-dönüş TAM
+    "def solve(g): return g[::-1]" →  9 belirteç, gidiş-dönüş TAM
+    "the red square moves right"   →  5 belirteç, gidiş-dönüş TAM
+
+Türkçe, İngilizce ve Python kodu aynı sözlükten geçiyor; ARC
+ızgarasının özel belirteçleri de aynı sözlüğün üstünde duruyor. H192'de
+*"buradaki bütün sayılar bayt yedeğiyledir"* diye konan kayıt **kalktı**.

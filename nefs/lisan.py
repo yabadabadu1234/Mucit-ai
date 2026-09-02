@@ -35,21 +35,22 @@ hükmünün fiilî karşılığıdır::
     ızgara  : Δ ∈ {−1,0,+1}²              Moore komşuluğu
 
 ===================================================================
-TİKTOKEN VE BU ORTAMIN HADDİ (kullanıcı hükmü C)
+TİKTOKEN -- padişah tabloyu depoya koydu, ağa ihtiyaç kalmadı
 ===================================================================
 
-``tiktoken`` kurulu fakat ``cl100k_base`` tablosu **ağdan
-çekilemiyor** (bu ortamda vekil sunucu 403 veriyor -- H87 ile aynı
-duvar). Onun için:
+``tiktoken`` kurulu fakat tablo indirmesi bu ortamda ağdan geçmiyordu
+(vekil 403 -- H87'nin duvarı). Padişah ``o200k_base.tiktoken``
+dosyasını **depo köküne koydu**; artık tablo yerel dosyadan okunur ve
+hiçbir ağ çağrısı yapılmaz.
 
-* ``kodlayici()`` evvelâ hakikî ``tiktoken``i dener; başarırsa onu
-  kullanır ve ``kaynak = "tiktoken"`` der.
-* Başaramazsa **belirlenimci bayt seviyesi** bir yedeğe düşer
-  (``kaynak = "bayt"``) ve bunu **saklamaz**. Yedek bir BPE değildir;
-  bayt kimliğidir, dolayısıyla sözlüğü 256'dır ve dizileri uzatır.
+``kodlayici()`` üç kademeli davranır ve hangisine düştüğünü **saklamaz**:
 
-Kaggle'da ağ olduğu için orada hakikî tablo yüklenecektir; burada
-ölçtüğüm her sayı **bayt yedeğiyle**dir ve öyle etiketlenir.
+1. Depodaki ``o200k_base.tiktoken`` → ``kaynak = "o200k_yerel"``
+2. Ağdan ``tiktoken.get_encoding`` → ``kaynak = "tiktoken"``
+3. İkisi de olmazsa belirlenimci bayt kimliği → ``kaynak = "bayt"``
+
+Yedek bir BPE değildir; bayt kimliğidir, sözlüğü 256'dır ve dizileri
+uzatır. Rapor hangisinin koştuğunu daima yazar.
 """
 from __future__ import annotations
 
@@ -59,7 +60,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["OZEL_BELIRTECLER", "YON_ADLARI", "Kodlayici", "kodlayici",
+__all__ = ["OZEL_BELIRTECLER", "TABLO_ADLARI", "YON_ADLARI", "Kodlayici", "kodlayici",
            "yon_indisi", "oteleme_ureteci", "izafi_operator",
            "izgara_kodla", "metin_kodla", "IzafiMevki"]
 
@@ -118,8 +119,53 @@ class Kodlayici:
             "utf-8", errors="replace")
 
 
-def kodlayici(tercih: str = "cl100k_base") -> Kodlayici:
-    """Hakikî ``tiktoken``i dene; olmazsa bayt yedeğine düş ve söyle."""
+#: Depoya konan BPE tablosunun aranacağı yerler (kök ve ``veri/``).
+TABLO_ADLARI: Tuple[str, ...] = ("o200k_base.tiktoken",
+                                 "veri/o200k_base.tiktoken",
+                                 "data/o200k_base.tiktoken")
+
+#: o200k_base'in kendi ayırma deseni (OpenAI'nin tescilli deseni).
+_O200K_DESEN = (
+    r"""[^\r\n\p{L}\p{N}]?[\p{Lu}\p{Lt}\p{Lm}\p{Lo}\p{M}]*"""
+    r"""[\p{Ll}\p{Lm}\p{Lo}\p{M}]+(?i:'s|'t|'re|'ve|'m|'ll|'d)?|"""
+    r"""[^\r\n\p{L}\p{N}]?[\p{Lu}\p{Lt}\p{Lm}\p{Lo}\p{M}]+"""
+    r"""[\p{Ll}\p{Lm}\p{Lo}\p{M}]*(?i:'s|'t|'re|'ve|'m|'ll|'d)?|"""
+    r"""\p{N}{1,3}| ?[^\s\p{L}\p{N}]+[\r\n/]*|\s*[\r\n]+|\s+(?!\S)|\s+"""
+)
+
+
+def _yerel_tablo() -> Optional[str]:
+    import os
+    kok = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for ad in TABLO_ADLARI:
+        yol = os.path.join(kok, ad)
+        if os.path.exists(yol):
+            return yol
+    return None
+
+
+def kodlayici(tercih: str = "o200k_base") -> Kodlayici:
+    """Yerel tabloyu, sonra ağı, sonra bayt yedeğini dene -- ve söyle."""
+    yol = _yerel_tablo()
+    if yol is not None:
+        try:
+            import base64
+            import tiktoken                   # type: ignore
+            ranks: Dict[bytes, int] = {}
+            with open(yol, "r", encoding="utf-8") as f:
+                for satir in f:
+                    if not satir.strip():
+                        continue
+                    tok, rank = satir.split()
+                    ranks[base64.b64decode(tok)] = int(rank)
+            enc = tiktoken.Encoding(name="o200k_yerel", pat_str=_O200K_DESEN,
+                                    mergeable_ranks=ranks,
+                                    special_tokens={})
+            return Kodlayici(kaynak="o200k_yerel",
+                             taban_sozluk=int(max(ranks.values()) + 1),
+                             _enc=enc)
+        except Exception:
+            pass
     try:
         import tiktoken                       # type: ignore
         enc = tiktoken.get_encoding(tercih)

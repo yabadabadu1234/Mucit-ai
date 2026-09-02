@@ -12,32 +12,53 @@ Divanın hükmü (İCAD-OPT-2026/09 zeyli):
 Bu dosya o yapıyı **kurar** ve iddiayı **ölçer**. İkisi ayrı şeydir.
 
 ===================================================================
-PEŞİNEN İLAN EDİLEN TENKİD -- sayı saymakla başlar
+İLK HÜKMÜM (H193) NAKZEDİLDİ -- kusur bendeydi, sıralamadaydı
 ===================================================================
 
-``χ × 2 × χ`` bir çekirdekte ``2χ²`` müstakil sayı vardır. Yerine
-konan mikro-zincirde ise ``2k`` mikro-çekirdek × ``2r²`` sayı, yani
-``4·r²·log₂χ`` sayı vardır. ``χ = 2²⁰`` ve ``r = 2`` için::
+Evvelâ şöyle hüküm vermiştim: *"χ×2×χ bir çekirdekte 2χ² sayı vardır,
+mikro-zincirde 4r²log₂χ; aradaki 6,7 milyar katlık fark cebren
+kapatılamaz."* **Sayım doğruydu; hüküm yanlıştı.**
 
-    açık çekirdek : 2 · (2²⁰)²      = 2.199.023.255.552 sayı
-    mikro-zincir  : 4 · 4 · 20      =            320 sayı
+Divanın iki tenkidi de yerinde çıktı ve ölçümle sabit oldu:
 
-Aradaki nispet ``6,9 × 10⁹``dur. **Bir dizeyin serbestlik derecesini
-altı buçuk milyar kat azaltıp "aynı bağ boyutu" demek, cebren
-mümkün değildir.** Yapılan şey bir yeniden yazım (reparametrisation)
-değil, uzayın **daraltılmasıdır**: mikro-zincirin erişebildiği
-çekirdekler, bütün ``χ×2×χ`` çekirdeklerin ölçüsü sıfır olan bir alt
-kümesidir.
+1. **Rastgele çekirdekle denemiştim.** Rastgele bir dizeyi hiçbir
+   tensör ağı sıkıştıramaz -- bu bir teoremdir, mikro-zincirin kusuru
+   değil. Onu rastgele çekirdekle denemek, JPEG'i beyaz gürültüyle
+   sınayıp *"sıkıştırmıyor"* demeye benzer.
+2. **Kaba sonlu-fark inişiyle uydurmuştum.** Doğrusu kapalı formdur:
+   çekirdeği bit kiplerine açıp ardışık SVD (TT-SVD). Her bağda
+   Eckart-Young manasında en iyidir ve zar atılmaz.
 
-Bu, yapının faydasız olduğu manasına **gelmez**; hiyerarşik Tucker ve
-QTT-in-TT literatürü tam bunu yapar ve *yapılı* verilerde işe yarar.
-Fakat doğru sual şudur ve bu dosya onu ölçer:
+**Ve üçüncü kusur benimdi, divan onu söylemedi bile:** bitleri
+``μ₁…μ_k, σ, ν₁…ν_k`` diye **ayrı** sıralamıştım. Oseledets'in
+QTT-matris formatı **serpiştirilmiş** sıradır -- ``(μ₁ν₁)(μ₂ν₂)…``:
+aynı ölçek mertebesindeki satır ve sütun biti aynı yuvada birleşir.
+Bir öteleme yahut bantlı dizeyde ``i−j`` küçüktür, yani bağıntı **aynı
+ölçektedir**; ayrı sırada o bağıntı zincirin bir ucundan öbür ucuna
+gitmek zorunda kalır ve bağ patlar.
 
-    **Aynı parametre bütçesinde**, mikro-zincirle "χ = 2²⁰" demek mi
-    daha iyi netice verir, yoksa o bütçeyi düz bir küçük ``χ``ye
-    harcamak mı?
+Doğru sıra ve kapalı formla ölçüm **tersine döndü** (χ = 32, açık
+çekirdek 2048 sayı)::
 
-Cevap iddiadan değil ``etkin_chi_kiyasi``ndan çıkar.
+    çekirdek cinsi   r   parametre  bağ | QTT hata   | düz χ' hata
+    ─────────────────────────────────────────────────────────────
+    öteleme (T̂)      4      132      3  | 3,965e-16  | χ'=8  0,866
+    bantlı (e^-|i-j|) 4      134      3  | 1,515e-15  | χ'=8  0,599
+    Laplasyen         4      134      3  | 1,814e-15  | χ'=8  0,631
+    ─────────────────────────────────────────────────────────────
+    rastgele         16     1876     16  | 4,479e-01  | χ'=30 0,101
+
+Yani **bizim fiilen kullandığımız operatörler** -- izafî öteleme
+(`nefs/lisan.py`), bantlı yerel etkileşim, Laplasyen -- 132 sayıyla
+**makine hassasiyetinde** taşınıyor; aynı bütçedeki düz kırpma ise
+%60-87 hata veriyor. Rastgele çekirdek hâlâ sıkışmıyor ve sıkışmaması
+da doğrudur.
+
+**Hükmün doğru hâli budur:** mikro-QTT, *χ boyutlu keyfî bir
+çekirdeği* taşımaz -- bu, sayımın hâlâ doğru olan kısmıdır. Fakat
+**düşük QTT-rütbeli operatörler manifoldunu** taşır ve bizim bütün
+operatörlerimiz oradadır. "χ = 2²⁰ efektif kapasite" ifadesi bu şartla
+doğrudur ve şart yazılmadan kullanılmamalıdır.
 """
 from __future__ import annotations
 
@@ -48,7 +69,9 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = ["IcBag", "ic_bag_parametresi", "acik_parametre", "ic_bag_kur",
-           "ic_bag_ac", "etkin_chi_kiyasi", "vram_cetveli"]
+           "ic_bag_ac", "etkin_chi_kiyasi", "vram_cetveli",
+           "qtt_cekirdek_ayristir", "qtt_cekirdek_ac", "qtt_parametre",
+           "kapali_form_kiyasi"]
 
 
 def acik_parametre(chi: int, fiziksel: int = 2) -> int:
@@ -132,6 +155,133 @@ def ic_bag_ac(g: IcBag) -> np.ndarray:
     out = np.einsum("apq,qsu,buv,vp->asb", SOL, g.orta, SAG,
                     np.eye(g.r), optimize=True)
     return out[:, :d, :][:, :, :chi] if chi <= g.chi else out
+
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  TASHİH: KAPALI FORM AYRIŞTIRMA (divanın 10-H193-TASHİH hükmü)
+# ══════════════════════════════════════════════════════════════════════
+#
+# Divanın tenkidi iki noktada **yerindedir** ve kabul edilmiştir:
+#
+#   1. *"Rastgele çekirdek safsatası."* Tamamen rastgele bir dizeyi
+#      hiçbir tensör ağı sıkıştıramaz; bu bir teoremdir. Yukarıdaki ilk
+#      ölçümüm rastgele çekirdekle yapıldı ve o, mikro-zinciri kendi
+#      sahasında değil yabancı sahada denemekti.
+#   2. *"Kaba sonlu-fark inişi."* Mikro-çekirdekleri rastgele
+#      ilklendirip sonlu farkla aramak, çorak platoya çarpar. Doğrusu
+#      **kapalı form**dur: çekirdeği bit kiplerine açıp ardışık SVD
+#      (TT-SVD) uygulamak. Her bağda Eckart-Young manasında en iyidir
+#      ve hiçbir zar atılmaz.
+#
+# Aşağısı o iki tashihin icrasıdır.
+
+
+def qtt_cekirdek_ayristir(G: np.ndarray, r: int = 8, sira: str = "serpistir"
+                          ) -> Tuple[List[np.ndarray], float, List[int]]:
+    """``(χ,d,χ)`` çekirdeği bit kiplerine açıp TT-SVD ile ayır.
+
+    ``α`` ve ``β`` indisleri ``k = log₂χ`` bite açılır. **Sıra
+    hayatîdir ve ilk denemem yanlıştı.**
+
+    * ``sira="ayri"``      : ``μ₁…μ_k, σ, ν₁…ν_k``. Benim ilk seçimim.
+    * ``sira="serpistir"`` : ``(μ₁ν₁), (μ₂ν₂), …, (μ_kν_k), σ``. Oseledets'in
+      **QTT-matris** formatı: aynı ölçek mertebesindeki satır ve sütun
+      bitleri **aynı yuvada** birleştirilir (fizikî boyut 4 olur).
+
+    Fark cebridir: bir öteleme yahut bantlı dizeyde ``i`` ile ``j``
+    arasındaki bağıntı **aynı ölçekte**dir (``i−j`` küçüktür). Ayrı
+    sırada o bağıntı zincirin bir ucundan öbür ucuna gitmek zorunda
+    kalır ve bağ patlar; serpiştirilmiş sırada aynı yuvada kapanır.
+    Varsayılan bu yüzden ``serpistir``dir.
+
+    Döner ``(çekirdekler, bağıl hata, bağ profili)``. Kesme
+    **belirlenimcidir** (LAPACK SVD, tohum yok) ve her bağda en iyidir.
+    """
+    G = np.asarray(G, float)
+    chi, d, chi2 = G.shape
+    if chi != chi2:
+        raise ValueError("çekirdek (χ,d,χ) olmalı")
+    k = int(math.ceil(math.log2(max(chi, 2))))
+    if (1 << k) != chi:
+        raise ValueError("χ ikinin kuvveti olmalı: %d" % chi)
+    if str(sira) == "serpistir":
+        # (μ₁…μ_k, σ, ν₁…ν_k) → (μ₁,ν₁), (μ₂,ν₂), …, (μ_k,ν_k), σ
+        T0 = G.reshape([2] * k + [d] + [2] * k)
+        eks = []
+        for j in range(k):
+            eks += [j, k + 1 + j]
+        eks += [k]
+        T = np.transpose(T0, eks).reshape([4] * k + [d])
+        kip = [4] * k + [d]
+    else:
+        T = G.reshape([2] * k + [d] + [2] * k)
+        kip = [2] * k + [d] + [2] * k
+    M = T.reshape(1, -1)
+    cek: List[np.ndarray] = []
+    bag: List[int] = []
+    atilan = 0.0
+    top = float(np.sum(G * G)) + 1e-300
+    for i in range(len(kip) - 1):
+        r0 = M.shape[0]
+        M = M.reshape(r0 * kip[i], -1)
+        U, sv, Vt = np.linalg.svd(M, full_matrices=False)
+        etkin = int(np.sum(sv > 1e-13 * max(float(sv[0]), 1e-30)))
+        r1 = max(1, min(int(r), int(sv.size), etkin))
+        atilan += float(np.sum(sv[r1:] ** 2))
+        cek.append(U[:, :r1].reshape(r0, kip[i], r1))
+        M = sv[:r1, None] * Vt[:r1, :]
+        bag.append(r1)
+    cek.append(M.reshape(-1, kip[-1], 1))
+    return cek, math.sqrt(max(atilan, 0.0) / top), bag
+
+
+def qtt_cekirdek_ac(cek: Sequence[np.ndarray], chi: int, d: int,
+                    sira: str = "serpistir") -> np.ndarray:
+    """``qtt_cekirdek_ayristir``ın tersi -- açık ``(χ,d,χ)`` çekirdek."""
+    T = np.asarray(cek[0], float)[0]
+    for c in cek[1:]:
+        T = np.tensordot(T, np.asarray(c, float), axes=([-1], [0]))
+    T = T[..., 0]
+    k = int(math.ceil(math.log2(max(chi, 2))))
+    if str(sira) == "serpistir":
+        T = T.reshape([2, 2] * k + [d])
+        eks = [2 * j for j in range(k)] + [2 * k] \
+            + [2 * j + 1 for j in range(k)]
+        return np.transpose(T, eks).reshape(chi, d, chi)
+    return T.reshape(chi, d, chi)
+
+
+def qtt_parametre(cek: Sequence[np.ndarray]) -> int:
+    return int(sum(np.asarray(c).size for c in cek))
+
+
+def kapali_form_kiyasi(G: np.ndarray, rler: Sequence[int] = (2, 4, 8, 16),
+                       sira: str = "serpistir") -> Dict[str, object]:
+    """**Aynı bütçede** mikro-QTT mi, düz kırpma mı? -- kapalı formla.
+
+    Her ``r`` için mikro-QTT'nin hatası ve parametresi ölçülür; sonra
+    **aynı parametreye sığan** düz bağ ``χ'`` bulunup onun hatası
+    ölçülür. İkisi yan yana yazılır (H47) ve hüküm oradan çıkar.
+    """
+    G = np.asarray(G, float)
+    chi, d, _ = G.shape
+    nrm = math.sqrt(float(np.sum(G * G))) + 1e-300
+    out: List[Dict[str, object]] = []
+    M = G.reshape(chi * d, chi)
+    U, sv, Vt = np.linalg.svd(M, full_matrices=False)
+    for r in rler:
+        cek, hata, bag = qtt_cekirdek_ayristir(G, r=int(r), sira=sira)
+        par = qtt_parametre(cek)
+        duz = max(1, min(chi, int(math.floor(math.sqrt(par / max(d, 1))))))
+        K = (U[:, :duz] * sv[:duz]) @ Vt[:duz, :]
+        hata_duz = float(np.linalg.norm(K - M) / nrm)
+        out.append({"r": int(r), "parametre": par, "hata_qtt": float(hata),
+                    "azamî_bağ": int(max(bag)),
+                    "düz_χ": int(duz), "hata_düz": hata_duz,
+                    "qtt_daha_iyi": bool(hata < hata_duz - 1e-12)})
+    return {"χ": int(chi), "d": int(d),
+            "açık_parametre": acik_parametre(chi, d), "cetvel": out}
 
 
 def etkin_chi_kiyasi(hedef: np.ndarray, r: Sequence[int] = (2, 4, 8),

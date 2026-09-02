@@ -1602,6 +1602,87 @@ def test_gomme_qtt_cekirdegi_chi8_ve_muhurlenen_ayrisim():
     assert par1 == 24 and sad1 < sad, (par1, sad1, sad)
 
 
+def test_ic_bag_serpistirilmis_QTT_izafi_operatorleri_TAM_tasiyor():
+    """H193'ün nakzı: doğru sırayla mikro-QTT bizim operatörlerimizi taşır.
+
+    Üç şart birden denetlenir:
+      1. Gidiş-dönüş **tam** (sıralama tersinir).
+      2. Bizim fiilen kullandığımız operatörler (öteleme, bantlı,
+         Laplasyen) küçük ``r`` ile makine hassasiyetinde taşınıyor ve
+         aynı bütçedeki düz kırpmadan **açıkça iyi**.
+      3. Rastgele çekirdek **taşınmıyor** -- kırmızı hâlâ mümkün.
+    """
+    import math
+    import numpy as np
+    from main.ic_bag import (qtt_cekirdek_ayristir, qtt_cekirdek_ac,
+                             kapali_form_kiyasi, acik_parametre)
+
+    chi = 32
+    T = np.zeros((chi, chi))
+    for i in range(chi):
+        T[(i + 1) % chi, i] = 1.0
+    oteleme = np.stack([T, T.T], axis=1)
+
+    # 1) gidiş-dönüş tam
+    cek, _, _ = qtt_cekirdek_ayristir(oteleme, r=64)
+    assert np.allclose(qtt_cekirdek_ac(cek, chi, 2), oteleme, atol=1e-10)
+
+    # 2) izafî öteleme küçük r ile TAM; düz kırpma aynı bütçede çuvallıyor
+    r = kapali_form_kiyasi(oteleme, rler=(4,))
+    c = r["cetvel"][0]
+    assert c["hata_qtt"] < 1e-12, c
+    assert c["hata_düz"] > 0.5, c
+    assert c["qtt_daha_iyi"], c
+    assert c["parametre"] * 10 < acik_parametre(chi, 2), c   # 10 kat sıkı
+
+    # bantlı ve Laplasyen de aynı
+    A = np.zeros((chi, chi))
+    for i in range(chi):
+        for j in range(max(0, i - 2), min(chi, i + 3)):
+            A[i, j] = math.exp(-abs(i - j))
+    for G in (np.stack([A, A.T], axis=1),
+              np.stack([np.diag(np.full(chi, 2.0))
+                        + np.diag(np.full(chi - 1, -1.0), 1)
+                        + np.diag(np.full(chi - 1, -1.0), -1)] * 2, axis=1)):
+        c = kapali_form_kiyasi(G, rler=(4,))["cetvel"][0]
+        assert c["hata_qtt"] < 1e-12 and c["qtt_daha_iyi"], c
+
+    # 3) rastgele çekirdek TAŞINMIYOR -- ölçü kırmızıya dönebiliyor
+    rng = np.random.default_rng(0)
+    c = kapali_form_kiyasi(rng.normal(size=(chi, 2, chi)),
+                           rler=(16,))["cetvel"][0]
+    assert c["hata_qtt"] > 0.3 and not c["qtt_daha_iyi"], c
+
+
+def test_lisan_tiktoken_yerel_tablodan_ve_izafi_mevki():
+    """tiktoken depodaki tablodan okunuyor mu, izafî mevki öteleme-değişmez mi?"""
+    import numpy as np
+    from nefs.lisan import (kodlayici, izafi_operator, izgara_kodla,
+                            OZEL_BELIRTECLER)
+
+    k = kodlayici()
+    assert k.kaynak in ("o200k_yerel", "tiktoken", "bayt"), k.kaynak
+    if k.kaynak == "o200k_yerel":
+        assert k.taban_sozluk > 190_000, k.taban_sozluk
+        for m in ("kırmızı kare sağa kayar", "def solve(g): return g[::-1]"):
+            assert k.coz(k.kodla(m)) == m, m
+    assert k.sozluk == k.taban_sozluk + len(OZEL_BELIRTECLER)
+
+    # izafî operatörler TAM ortogonal ve tersi kendi eşleniği
+    nx, ny = 5, 4
+    D = izafi_operator(nx, ny, 1, 0)
+    assert np.allclose(D.T @ D, np.eye(nx * ny), atol=1e-12)
+    assert np.allclose(D @ izafi_operator(nx, ny, -1, 0),
+                       np.eye(nx * ny), atol=1e-12)
+
+    # aynı örüntü ızgaranın HER YERİNDE aynı kodlanmalı
+    A = np.zeros((6, 6), int); A[1, 1] = 3; A[1, 2] = 5
+    B = np.zeros((6, 6), int); B[4, 3] = 3; B[4, 4] = 5
+    ka = [x.kod() for x in izgara_kodla(A)["izafi"] if x.merkez == 3][0]
+    kb = [x.kod() for x in izgara_kodla(B)["izafi"] if x.merkez == 3][0]
+    assert ka == kb, (ka, kb)
+
+
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
 # tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
 # koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.
