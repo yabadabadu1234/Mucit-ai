@@ -5316,3 +5316,28 @@ bir aile eklendi (iskelet) ve bir görev getirdi; H138'in aritmetiği
 ve o aritmetik **hedefin yolu değildir**.
 
 Sükût nizamı ayakta: 106 görevde susuldu, 105'inde sebep yazılı.
+
+## H172 — BLOK TÂLİMİ ÖLÇÜLDÜ: tam uzay hiçbir şey bulamıyor, blok bulur
+
+H166'da ceridenin blok blok eğitim hükmü kuruldu. Ölçüldü (``d = 60``,
+altı tabiî blok, **aynı** dış tur sayısı):
+
+    usul        V             kazanç    kayıp çağrısı   süre
+    TAM UZAY    48,68 → 48,68  0,0000      141 543      86,2 sn
+    BLOK BLOK   48,68 → 43,61  **5,0787**   25 095       3,6 sn
+
+Yani tam uzay arayışı **hiçbir şey bulamadı** ve bunu 5,6 kat daha çok
+kayıp çağrısı harcayarak yapamadı. Blok tâlimi altıda bir bütçeyle
+hakikî bir iyileşme getirdi.
+
+**Bu H155'i nakzetmez ve karıştırılmamalıdır.** H155 *boyut
+indirgemesini* kaldırmıştı: sabit bir kesitte aramak, iyileştiren
+yönlerin yarısını kaybettiriyordu. Blok tâlimi bir kesit **değildir**:
+dondurulan koordinat atılmaz, sırayla ziyaret edilir ve turlar boyunca
+hepsine dokunulur (yukarıdaki koşuda 6/6 bloğun hepsine dokunuldu).
+
+**HUDUT -- ve bu mühimdir:** yukarıdaki yüzey **ikinci dereceden ve
+ayrışabilirdir** (``Σ(p−hedef)²``), yani blok-koordinat inişinin en
+elverişli olduğu hâldir. Hakikî kayıpta da kazanıp kazanmadığı **ayrıca
+ölçülmelidir**; sentetik bir kazancı hakikî bir kazanç diye sunmak,
+tam da bu kütüğün yasakladığı şeydir.
