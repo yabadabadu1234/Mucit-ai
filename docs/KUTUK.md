@@ -6065,3 +6065,82 @@ veride hiçbir ``χ`` yetmiyor (bu bir teoremdir, kusur değildir).
 
 ``χ = 1`` (rank-1) yasağı da doğrulandı: düzgün veride bile sadakat
 ``0,6101``de kalıyor ve yalnız 24 parametre bırakıyor.
+
+## H189 — HDTF KURULDU; ve χ ≈ 2√L KANUNU ÖLÇÜLDÜ
+
+Divanın 2. hükmü icra edildi: `main/katlama.py`. İki blok, yeni bir
+mevki kübitiyle MPS toplamı olarak katlanır::
+
+    |yeni⟩ = |0⟩ ⊗ |A⟩ + |1⟩ ⊗ |B⟩
+    çekirdek 0    : kontrol (1,2,2)
+    çekirdek 1…n−1: köşegen blok diag(A_j, B_j)
+    çekirdek n    : dikey ek [A_n ; B_n]
+
+**Cebir tamdır ve ölçüldü:** birleştirme hatası ``0,000e+00``; χ=4'e
+kırpınca ``1,404e-15``. ``2^n`` genlik hiçbir yerde açılmıyor, hiçbir
+yerde zar atılmıyor. Sözlük **bir kere** yığın hâlinde sıkıştırılıyor
+(``V·q`` çağrı yerine ``q`` çağrı; 2,3 kat).
+
+**Fakat ceridenin χ ≤ 16 hükmü, dizi uzunluğuyla ÇÖKÜYOR.** Tam
+dalgayla yüzleştirildi (D=32, V=256, metin benzeri dizi)::
+
+    dizi cinsi        L      χ=8      χ=16     χ=32
+    ─────────────────────────────────────────────────
+    rastgele         64   0,977918  0,999411  1,000000
+    rastgele       1024   0,544989  0,829132  0,971274
+    zipf           1024   0,586129  0,878404  0,983913
+    tekrarlı(metin) 1024   0,600495  0,879352  0,991984
+    tam düzenli    1024   1,000000  1,000000  1,000000
+
+Ve ``F ≥ 0,99`` için lâzım olan ``χ`` ölçüldü::
+
+        L      lâzım χ    χ/√L
+       16          4      1,00
+       32          8      1,41
+       64          8      1,00
+      128         16      1,41
+      256         16      1,00
+      512         32      1,41
+     1024         64      2,00
+
+Yani **χ ≈ (1…2)·√L**. Bu bir kusur değil bir **kanundur**: mevki
+kesitindeki Schmidt rütbesi, iki yanda görünen farklı token sayısıyla
+sınırlıdır. Yalnız *tam tekrarlı* dizi (aynı token) ``χ = 1``de kalır;
+onun da manası "hiç bilgi yok"tur.
+
+**Neticesi ceride için ağırdır:** ``L = 4096`` için ``χ ≈ 128``,
+``B·L = 8,4 M`` token için ``χ ≈ 2900``. Ceridenin ``χ ≤ 16``
+hükmü ancak veri *neredeyse sabit* ise doğrudur.
+
+## H190 — 700 MB/sn HEDEFİ: ULAŞILAMADI, en iyi ölçüm 96,4 MB/sn
+
+Yığın katlama kuruldu (``hdtf_yigin``): ``B`` dizi aynı anda katlanır,
+yığın ekseni en dip seviyede bile ``B`` kalır. Ölçüldü (bu makine
+167,0 GFLOPS; 4×L4'e nispet ×3768)::
+
+      B      L    χ  |   süre sn    token/sn   MB/sn (4×L4)
+      1    128   16  |    0,0236        5418        81,6
+     64    128   16  |    1,2813        6394        96,4
+    256    128   16  |    5,2493        6242        94,1
+      1    256   32  |    1,3633         188         2,8
+     64    256   32  |   86,9855         188         2,8
+    256    256   32  |  210,7785         311         4,7
+
+**Üç hüküm, üçü de sayıdan:**
+
+1. **Yığınlama az kazandırdı** (5418 → 6394, %18). Demek ki darboğaz
+   çağrı adedi **değil**; χ=16'da zaten yeterince büyük yığınlar var.
+2. **χ = 16 → 32 geçişi 20 kat kaybettiriyor** (96,4 → 4,7 MB/sn).
+   ``χ³`` yalnız 8 kat öngörür; fark, çok sayıda **küçük** SVD'nin
+   LAPACK çağrı başına ödediği masraftır.
+3. **Hedef 700 MB/sn'ye ULAŞILAMADI.** En iyi ölçüm ``96,4 MB/sn``dir
+   ve o da ``L = 128`` gibi kısa dizide, ``χ = 16``da. H189'un kanunu
+   gereği ``L`` büyüyünce ``χ`` büyümek zorunda ve hız düşüyor.
+
+**Bu bir yenilgi ilanı değil, bir teşhistir ve teşhis şudur:** maliyet
+FLOP'ta değil, **çok sayıda küçük SVD**dedir. ``numpy`` yığın SVD'si
+``N`` dizeyi C içinde tek tek LAPACK'e verir; ``N = 16.384`` adet
+``128×64`` dizeyde bu, tepe gücün binde biriyle koşmak demektir.
+GPU'da toplu ``cuSOLVER`` (batched gesvdj) bu rejimin tam kendisi
+içindir -- fakat **bu makinede GPU yok ve ölçemiyorum**; ölçemediğim
+şeyi de iddia etmeyeceğim.

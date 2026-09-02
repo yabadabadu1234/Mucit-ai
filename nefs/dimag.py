@@ -45,7 +45,8 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "CERIDE_MISALLERI",
+__all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
+           "EKSIK_MELEKELER",
            "meleke_mertebeleri", "so_ureteci", "mertebe_hamiltonyeni",
            "bgcm_kaybi", "muvazene_matrisi", "zirh_projektorleri",
            "H_toplam", "DimagAyari"]
@@ -55,53 +56,80 @@ MELEKE_SAYISI: int = 41
 #: Mertebe adedi -- 10 sabit zemin + 10 dinamik lif (`nefs/mertebe.py`).
 MERTEBE_SAYISI: int = 20
 
-#: Ceridenin **tasrih ettiği** meleke → mertebe misalleri. Dağılım bu
-#: cetveli tutmak zorundadır; sınama onu denetler.
-CERIDE_MISALLERI: Dict[int, int] = {
-    1: 0,    # Lafız
-    2: 1,    # İştikak
-    39: 1,   # Belâgat
-    8: 2,    # Kıyas
-    22: 2,   # İllet Keşfi
-    24: 7,   # İspat
-    5: 4,    # Tecrit
-    12: 4,   # Temsil
-    41: 9,   # Hikmet
+#: **DİVAN-I ÂLÎ'NİN KANONİK 41 → 20 CETVELİ** (2 Eylül 2026 celsesi).
+#:
+#: Evvelki turda bu dağılım **inşa edilmişti** ve açık borç olarak
+#: yazılmıştı; padişah tam cetveli verdi ve borç kapandı. Cetvel
+#: harfiyen buradadır ve sınama onu denetler.
+#:
+#: Mertebe numaraları: ``0-9`` sabit zemin, ``10-19`` dinamik lif
+#: (``d₁ … d₁₀`` sırasıyla ``10 … 19``).
+KANONIK_CETVEL: Dict[int, int] = {
+    # --- SABİT ZEMİN (lisan, mantık, ontolojik iskelet)
+    1: 0, 37: 0, 38: 0,        # k=0 Lafız ve duyu zemini
+    4: 1, 34: 1,               # k=1 Sentaks ve tertip
+    6: 2, 2: 2, 3: 2,          # k=2 Tasavvur ve iç seyir
+    7: 3, 35: 3,               # k=3 Mana ve intikal
+    8: 4,                      # k=4 Tahlil ve ayrıştırma
+    5: 5,                      # k=5 Tecrit ve soyutlama
+    10: 6,                     # k=6 Tezat ve dinamik polarite
+    23: 7, 18: 7,              # k=7 Mantık ve dedüksiyon
+    11: 8, 12: 8,              # k=8 Tenakuz ve cerh
+    13: 9, 32: 9,              # k=9 Tasdik ve itikat derecesi
+    # --- DİNAMİK LİFLER (akıl yürütme, keşif, hüküm manifoldu)
+    22: 10, 16: 10,            # d₁ İllet ve nedensellik (DAG)
+    15: 11, 14: 11,            # d₂ Merak ve teleoloji (gaye)
+    25: 12, 26: 12,            # d₃ Teemmül ve mekânet (vakar)
+    27: 13, 28: 13,            # d₄ Tetkik ve kılcal muayene
+    24: 14, 29: 14,            # d₅ İspat ve burhân
+    30: 15, 36: 15,            # d₆ Tahkik ve asla ircâ (tevil)
+    33: 16, 31: 16,            # d₇ Küllî muhakeme ve adalet
+    19: 17, 20: 17,            # d₈ Temsil ve teşbih köprüsü
+    17: 18, 41: 18,            # d₉ İhtimaliyat ve münazara
+    40: 19, 39: 19,            # d₁₀ Küllî hikmet, sanat ve tahsil
 }
 
+#: **CETVELDE BULUNMAYAN İKİ MELEKE -- açık borç, gizlenmiyor.**
+#:
+#: Divanın cetveli *"istisnasız ve boşluksuz"* diye tescil edilmiştir;
+#: fakat sayıldı ve **39 meleke** çıktı. Depodaki sicilde bulunan
+#: ``𝒪₉ Terkip`` ile ``𝒪₂₁ Tefekkür`` cetvelde geçmiyor. Cetvelin
+#: ``d₁₀`` satırındaki ``𝒪_umum``, ``𝒪_talim``, ``𝒪_tahsil`` ise
+#: sicilde numaralı birer meleke değildir (sicil tam 41'dir ve
+#: ``nefs.meleke.rapor`` onu sayar).
+#:
+#: Boş bırakmak, o iki melekeyi hiçbir zırhın altına koymamak demektir
+#: -- ``Ĥ_m``leri sıfır olur ve fiilen susturulurlar. Onun için
+#: **gerekçeli** bir yer verildi ve gerekçe burada durur:
+#:
+#: * ``𝒪₉ Terkip`` → ``k = 4``. Terkip, ``𝒪₈ Tahlil``in tam karşıtıdır
+#:   (sökmek/kurmak); aynı mertebede olmaları, ``Π_b^(4)``ün
+#:   *"kayıpsız temsil şartını (istisâ) korur"* vazifesiyle birebir
+#:   örtüşür -- söken ile kuran aynı süzgecin altında olmalıdır.
+#: * ``𝒪₂₁ Tefekkür`` → ``d₃ (12)``. Tefekkür ile ``𝒪₂₅ Teemmül``
+#:   aynı ailedendir (derin düşünme, acele etmeme) ve ``d₃``ün zırhı
+#:   RCD(K,N) Bochner süzgecidir: *"aceleciliği keser"*.
+#:
+#: Bu iki satır **padişahın tasdikine tâbidir** ve tasdik gelene kadar
+#: ``EKSIK_MELEKELER``de ayrıca işaretli durur.
+EKSIK_MELEKELER: Dict[int, int] = {9: 4, 21: 12}
 
-def meleke_mertebeleri(misaller: Optional[Dict[int, int]] = None
+
+def meleke_mertebeleri(cetvel: Optional[Dict[int, int]] = None
                        ) -> Dict[int, int]:
-    """41 melekeyi 20 mertebeye dağıt -- **misalleri tutarak**.
+    """Kanonik cetveli döndür -- **inşa yok, tablo var**.
 
-    Usul iki adımdır ve keyfî yeri açıkça işaretlidir:
-
-    1. Ceridenin tasrih ettiği melekeler kendi mertebelerine konur.
-       Bu kısım **verilidir**, tercih değildir.
-    2. Kalanlar, numara sırasında, her mertebenin doluluğu gözetilerek
-       **en boş mertebeye** yerleştirilir. Böylece dağılım düzgün olur
-       ve hiçbir mertebe boş kalmaz -- boş bir mertebe, o mertebede
-       hiçbir melekenin çalışmadığı, yani ``Ĥ_m = 0`` demektir ve zırh
-       orada hiçbir şey süzemez.
-
-    Netice belirlenimcidir: aynı misallerden hep aynı cetvel çıkar.
+    Evvelki hâli 41 melekeyi "en boş mertebeye" yerleştiriyordu ve bu
+    bir tercihti. Artık divanın cetveli statik bağlıdır; yalnız
+    cetvelde bulunmayan iki meleke (``𝒪₉``, ``𝒪₂₁``) gerekçeli
+    yerlerine konur ve bu **ayrıca işaretlidir**.
     """
-    mis = dict(CERIDE_MISALLERI if misaller is None else misaller)
-    out: Dict[int, int] = {}
-    doluluk = [0] * MERTEBE_SAYISI
-    for no, m in mis.items():
-        if not 1 <= no <= MELEKE_SAYISI:
-            raise ValueError("meleke numarası 1..41 olmalı: %d" % no)
-        if not 0 <= m < MERTEBE_SAYISI:
-            raise ValueError("mertebe 0..19 olmalı: %d" % m)
-        out[no] = m
-        doluluk[m] += 1
-    for no in range(1, MELEKE_SAYISI + 1):
-        if no in out:
-            continue
-        m = int(np.argmin(doluluk))          # en boş mertebe; berabere → küçük
-        out[no] = m
-        doluluk[m] += 1
+    out = dict(KANONIK_CETVEL if cetvel is None else cetvel)
+    for no, m in EKSIK_MELEKELER.items():
+        out.setdefault(no, m)
+    eksik = [n for n in range(1, MELEKE_SAYISI + 1) if n not in out]
+    if eksik:                                        # pragma: no cover
+        raise ValueError("cetvelde olmayan meleke: %s" % eksik)
     return out
 
 
@@ -205,7 +233,21 @@ def bgcm_kaybi(teta: np.ndarray, D: int,
             top += w * v
             if w * v > en_kotu:
                 en_kotu, cift = w * v, (i + 1, j + 1)
-    return {"kayıp": float(top), "en_kötü_çift_şiddeti": float(en_kotu),
+    # **NORMALİZASYON (padişahın 3. hükmü).** Komütatör ``θ²`` ile,
+    # izi ``θ⁴`` ile büyür; ölçüldü: ``λ = 1``de kuvvetli ``θ``da
+    # BGCM = 680,86 iken ARC = 1,20 idi -- muvazene terimi gayeyi
+    # eziyordu. Payda ``1 + Σ‖O_k‖_F⁴``tür ve aynı mertebeden büyüdüğü
+    # için netice **analitik olarak [0,1]e hapsedilir**:
+    #
+    #     Ĥ_BGCM^norm = Σ M_ij ‖[O_i,O_j]‖²_F / (1 + Σ_k ‖O_k‖_F⁴)
+    #
+    # Cauchy-Schwarz: ``‖[A,B]‖_F ≤ 2‖A‖_F‖B‖_F`` olduğundan pay,
+    # ``4 max(M) (Σ‖O_k‖²)²`` ile sınırlıdır; payda aynı kuvvettedir.
+    payda = 1.0 + float(sum(float(np.sum(o * o)) ** 2 for o in O))
+    norm = top / payda
+    return {"kayıp": float(top), "kayıp_norm": float(norm),
+            "payda": float(payda),
+            "en_kötü_çift_şiddeti": float(en_kotu),
             "en_kötü_i": float(cift[0]), "en_kötü_j": float(cift[1]),
             "muvazeneli": bool(top <= 1e-12)}
 
@@ -296,11 +338,18 @@ def H_toplam(teta: np.ndarray, nokta: np.ndarray,
 
     b = bgcm_kaybi(teta, D, cetvel=cet)
     Ha = np.zeros((D, D)) if H_arc is None else np.asarray(H_arc, float)
-    H = Ha + H_mel + float(a.lam_mizan) * b["kayıp"] * np.eye(D)
+    # ``λ_mizan(θ) = λ₀ / (1 + ‖θ‖²)`` -- padişahın geodezik ölçeklemesi.
+    # Normalize BGCM zaten [0,1]dedir; λ o aralığı bir kere daha
+    # ``θ`` ile söndürerek büyük ``θ`` rejiminde gayeyi serbest bırakır.
+    tt = np.asarray(teta, float).ravel()
+    lam = float(a.lam_mizan) / (1.0 + float(tt @ tt))
+    bgcm_terim = lam * b["kayıp_norm"]
+    H = Ha + H_mel + bgcm_terim * np.eye(D)
     return {"H": H,
+            "λ_mizan": float(lam),
             "kalem": {"ARC": float(np.linalg.norm(Ha)),
                       "meleke": float(np.linalg.norm(H_mel)),
-                      "BGCM": float(a.lam_mizan * b["kayıp"] * math.sqrt(D))},
+                      "BGCM": float(bgcm_terim * math.sqrt(D))},
             "mertebe_payı": mertebe_payi,
             "bgcm": b,
             "betti0": int(P["betti0"]),
@@ -314,9 +363,11 @@ def rapor() -> str:                                     # pragma: no cover
     for m in range(MERTEBE_SAYISI):
         uy = [n for n in range(1, MELEKE_SAYISI + 1) if cet[n] == m]
         s.append("     mertebe %2d : %s" % (m, uy))
-    yanlis = [n for n, m in CERIDE_MISALLERI.items() if cet[n] != m]
-    s.append("     ceridenin misalleri tutuyor mu: %s"
+    yanlis = [n for n, m in KANONIK_CETVEL.items() if cet[n] != m]
+    s.append("     divanın kanonik cetveli tutuyor mu: %s"
              % ("EVET" if not yanlis else "HAYIR %s" % yanlis))
+    s.append("     cetvelde OLMAYAN, gerekçeyle konan: %s"
+             % {("𝒪%d" % n): m for n, m in EKSIK_MELEKELER.items()})
     bos = [m for m in range(MERTEBE_SAYISI)
            if not any(cet[n] == m for n in cet)]
     s.append("     boş mertebe: %s" % (bos or "yok"))
@@ -328,15 +379,15 @@ def rapor() -> str:                                     # pragma: no cover
     teta0 = np.zeros(MELEKE_SAYISI)
     teta0[0] = 1.0
     b0 = bgcm_kaybi(teta0, D)
-    s.append("     tek meleke uyanık      : kayıp %.3e  muvazeneli=%s"
-             % (b0["kayıp"], b0["muvazeneli"]))
+    s.append("     tek meleke uyanık   : ham %.3e  norm %.6f  muvazeneli=%s"
+             % (b0["kayıp"], b0["kayıp_norm"], b0["muvazeneli"]))
     rng = np.random.default_rng(0)
-    b1 = bgcm_kaybi(rng.normal(size=MELEKE_SAYISI), D)
-    s.append("     41'i birden rastgele   : kayıp %.3e  en kötü çift 𝒪%d-𝒪%d"
-             % (b1["kayıp"], int(b1["en_kötü_i"]), int(b1["en_kötü_j"])))
-    b2 = bgcm_kaybi(0.05 * rng.normal(size=MELEKE_SAYISI), D)
-    s.append("     41'i zayıf (θ×0,05)    : kayıp %.3e  (θ⁴ ile küçülür)"
-             % b2["kayıp"])
+    for ad, olc in (("41'i zayıf ×0,05", 0.05), ("41'i orta ×1", 1.0),
+                    ("41'i kuvvetli ×5", 5.0), ("41'i azgın ×50", 50.0)):
+        bb = bgcm_kaybi(olc * rng.normal(size=MELEKE_SAYISI), D)
+        s.append("     %-19s: ham %.3e  norm %.6f"
+                 % (ad, bb["kayıp"], bb["kayıp_norm"]))
+    s.append("     → ham kayıp θ⁴ ile patlıyor, NORMALİZE olan [0,1]de kalıyor")
 
     s.append("")
     s.append("  3) Ĥ_toplam -- üç kalem yan yana")

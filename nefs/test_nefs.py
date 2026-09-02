@@ -1525,16 +1525,20 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
     eksenleridir."* Üç şart denetlenir.
     """
     import numpy as np
-    from nefs.dimag import (MELEKE_SAYISI, MERTEBE_SAYISI, CERIDE_MISALLERI,
+    from nefs.dimag import (MELEKE_SAYISI, MERTEBE_SAYISI, KANONIK_CETVEL,
+                            EKSIK_MELEKELER,
                             meleke_mertebeleri, so_ureteci,
                             mertebe_hamiltonyeni, bgcm_kaybi, H_toplam,
                             DimagAyari)
 
-    # 1) dağılım ceridenin misallerini TUTMALI ve boş mertebe bırakmamalı
+    # 1) divanın KANONİK cetveli harfiyen tutmalı, boş mertebe olmamalı
     cet = meleke_mertebeleri()
     assert len(cet) == MELEKE_SAYISI
-    for no, m in CERIDE_MISALLERI.items():
+    for no, m in KANONIK_CETVEL.items():
         assert cet[no] == m, (no, cet[no], m)
+    # cetvelde 39 meleke var; eksik ikisi AYRICA işaretli durmalı
+    assert len(KANONIK_CETVEL) == 39
+    assert set(EKSIK_MELEKELER) == {9, 21}
     for m in range(MERTEBE_SAYISI):
         assert any(v == m for v in cet.values()), m
 
@@ -1545,9 +1549,9 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
         assert abs(np.trace(T)) < 1e-12
 
     # bir mertebenin Hamiltonyeni TEK dizeydir, katman yığını değil
-    H, uy = mertebe_hamiltonyeni(2, np.ones(MELEKE_SAYISI), 12, cet)
+    H, uy = mertebe_hamiltonyeni(7, np.ones(MELEKE_SAYISI), 12, cet)
     assert H.shape == (12, 12) and np.allclose(H, -H.T)
-    assert sorted(uy) == [8, 22]
+    assert sorted(uy) == [18, 23]        # k=7 mantık ve dedüksiyon
 
     # 3) BGCM: tek meleke uyanıkken TAM sıfır, 41'i birden büyük
     t0 = np.zeros(MELEKE_SAYISI)
@@ -1557,6 +1561,10 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
     rng = np.random.default_rng(0)
     b1 = bgcm_kaybi(rng.normal(size=MELEKE_SAYISI), 12)
     assert b1["kayıp"] > 1.0 and not b1["muvazeneli"]      # KIRMIZI
+    # **NORMALİZE hâli [0,1]de kalmalı** -- θ ne kadar azarsa azsın
+    for olc in (0.05, 1.0, 5.0, 50.0, 500.0):
+        bb = bgcm_kaybi(olc * rng.normal(size=MELEKE_SAYISI), 12)
+        assert 0.0 <= bb["kayıp_norm"] <= 1.0, (olc, bb["kayıp_norm"])
 
     # Ĥ_toplam üç kalemi ayrı ayrı raporlamalı; hiçbiri gizlenmemeli
     r = H_toplam(0.05 * rng.normal(size=MELEKE_SAYISI),

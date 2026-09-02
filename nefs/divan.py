@@ -76,6 +76,7 @@ EKSIK: Dict[str, str] = {}
 # ------------------------------------------------------------------
 import akis.hacim  # [gölge] Hacim — ortalama eğrilik akışı ve yoğunluk akışları
 import akis.test_akis  # [şahit] akis test takımı
+import main.katlama  # [uzuv] HDTF -- hiyerarşik ikili ağaç katlaması, belirlenimci QTT inşası
 import akis.ikmal  # [gölge] Ceridenin İkmâl Fıkraları -- Lions, Bochner, Cayley, Postnikov
 import akis.tikiz  # [gölge] Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus
 
@@ -331,6 +332,8 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Hacim — ortalama eğrilik akışı ve yoğunluk akışları'),
     ('akis.test_akis', 'şahit',
      'akis test takımı'),
+    ('main.katlama', 'uzuv',
+     'HDTF -- hiyerarşik ikili ağaç katlaması; 2^n genlik hiç açılmadan, zar atılmadan QTT inşası'),
     ('akis.ikmal', 'gölge',
      'Ceridenin İkmâl Fıkraları -- Lions konsantrasyonu, RCD(K,N) Bochner, '
      'Cayley çekilmesi, Postnikov tıkanıklık vekili'),
