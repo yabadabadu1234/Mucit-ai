@@ -4718,3 +4718,61 @@ yakîne katılmış olurdu), ``beyan.py``de icâz tarafına eklenir.
 **Nakz kaidesi DEĞİŞTİRİLMEDİ:** nakz varken makam hâlâ ``Zan``a
 düşürülür, ``zann-ı gālib``e değil. Hakikî bir karşı örnek varken
 "kuvvetli zan" demek fazla iddiadır; H6'nın hükmü yerinde durur.
+
+## H159 — H122'NİN İKİ BORCU KAPANDI: MESELE İŞARETTE DEĞİL ÇALIŞMA NOKTASINDAYMIŞ
+
+H122'de şöyle yazmıştım ve **fazla genelleştirilmiş bir hükümdü**:
+
+> *"Sebep bir kodlama hatası değil, kendi kütüğümde yazılı bir
+> imkânsızlıktır (H107): ``mpo_topla`` bir DÖNME uygular ve
+> ``P(1) = sin²θ`` **çift fonksiyondur**. Menfî açı, kolu ters yöne
+> çevirir fakat aynı nüfusu verir. **İşaretle bastırma olmaz.**"*
+
+Teşhisin yarısı doğruydu, hükmü yanlıştı. ``sin²`` ``θ = 0``**da**
+çifttir; her yerde değil. ``θ₀ = π/4``te::
+
+    sin²(π/4 + x) = (1 + sin 2x)/2
+
+— türev âzamî, fonksiyon ``x``te **tek**. Yani işaretle bastırma
+``|0⟩``da olmaz, ``π/4``te **olur**. Bir kübiti çalışma noktasına
+çevirmek bir okuma değildir: sabit bir tek kübitlik dönmedir, veriye
+bakmaz (H31 yerinde durur).
+
+**İki kusur daha, ancak MÜDAHALELİ ölçümle görüldü.**
+
+Korelasyon bu soruyu cevaplayamaz: tasdik, tenakuz ve nakz girdiler
+arasında birbiriyle oynuyor, yani ölçüm *confounded*. "Hangisi
+gayeyi hangi yöne itiyor" sorusu ancak **öbürleri sabitken** tek
+kaynağı ``|0⟩ → |1⟩`` çevirerek sorulur. Öyle sorulunca:
+
+1. **Sınıfın işaretini, öğrenilen sayının işareti yiyordu.** ``_aci``
+   müsbet değil işaretli döner; ``tanh(ham)`` menfî çıkınca
+   ``+1 × menfî`` oluyor ve **tasdik gayeyi düşürüyordu** (tohum 0'da
+   ``−0,000991``). Cihet **yapısaldır** (sınıftan gelir), şiddet
+   **öğrenilir** (parametreden); ikisi karıştırılmaz. ``abs`` kondu.
+2. **Aynı çift-fonksiyon kusuru sükût ucunda da vardı.** Gaye kapısı
+   düzeldikten sonra ölçüldü: gaye **düştükçe** sükût da düşüyordu --
+   taahhüdün tam tersi. ``sukut`` da küçük bir açıda duruyordu.
+   Ona da ``π/4`` çalışma noktası kondu.
+
+**Kapanış ölçümü (müdahaleli, her şey sabit):**
+
+    tasdik   açılınca gaye₀ : 0,5000 → 0,5403   (+0,0403)  ✓
+    tenakuz  açılınca gaye₀ : 0,5000 → 0,4079   (−0,0921)  ✓
+    nakz     açılınca gaye₀ : 0,5000 → 0,4836   (−0,0164)  ✓
+
+    tenakuz+nakz açık : gaye₀=0,3918  sükût=0,3465
+    tasdik       açık : gaye₀=0,5403  sükût=0,2884
+
+Gaye zayıfken sükût yüksek, gaye kuvvetliyken sükût düşük: ``ε_durgun``
+nihayet **taahhüt ettiği yönde** çalışıyor. Korelasyonla bakıldığında
+``kor(gaye,nakz)`` da ``+0,871``den ``−0,578``e döndü.
+
+**Açıkça kalan iki şey, iddia edilmiyor:**
+
+* ``gaye₁`` hâlâ ``|0⟩``dadır: doğuş yalnız ``j=0``a yazıyor. Ölü bir
+  kübittir ve öyle kaydediliyor.
+* ``gaye_kos`` 41 melekeden **sonra** koşuyor, 𝒪₄₁ Münazara'nın kelam
+  kapısı ise ondan **evvel**. O hâlde gayenin uyandırdığı sükût, bu
+  geçişte kelamı fiilen susturmuyor; yalnız ölçüye giriyor. Şerhin
+  *"sükût uyanır ve beyan susar"* iddiası bu sıra için **fazladır**.

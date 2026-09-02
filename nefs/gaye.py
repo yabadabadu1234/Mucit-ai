@@ -48,11 +48,24 @@ buradaki sıra kasıtlıdır ve tersi yapılmaz:
    isteyeceğim" sorusunun cevabı "şu ana kadar neye kanaat getirdim"den
    çıkar.
 
-   **Fiilen olan bu kadarıdır ve fazlası iddia edilmiyor.** Niyet
-   "tasdik doğursun, nakz zayıflatsın" idi; ölçüldü, olmadı (aşağıda
-   ``gaye_kos``un şerhinde sayılarıyla). Şu an gaye, hükmün
-   **faaliyetinden** doğar -- hangi hüküm olduğuna bakmadan. Bu bir
-   borçtur ve kütükte H122'de öyle kayıtlıdır.
+   **BU BORÇ KAPANDI (H122 → H159).** Uzun zaman şöyle yazıyordu:
+   *"Niyet 'tasdik doğursun, nakz zayıflatsın' idi; ölçüldü, olmadı…
+   şu an gaye hükmün faaliyetinden doğar, hangi hüküm olduğuna
+   bakmadan."* Sebebini yanlış teşhis etmişim: kolun işaretinde değil,
+   **çalışma noktasında** imiş. ``gaye`` ``|0⟩``da duruyordu ve
+   ``sin²`` orada çift; ``π/4``e çevrilince tek oluyor ve işaret iş
+   görüyor.
+
+   Müdahaleli ölçüm (her şey sabit, tek kaynak ``|0⟩ → |1⟩``)::
+
+       tasdik   açılınca gaye₀ : 0,5000 → 0,5403   (+0,0403)  ✓
+       tenakuz  açılınca gaye₀ : 0,5000 → 0,4079   (−0,0921)  ✓
+       nakz     açılınca gaye₀ : 0,5000 → 0,4836   (−0,0164)  ✓
+
+   Korelasyonla değil **müdahaleyle** ölçüldü ve sebebi budur: üç
+   kaynak girdiler arasında birbiriyle oynadığı için korelasyon
+   confounded'dır; "hangisi hangisini oynatıyor" sorusunun cevabı
+   ancak öbürleri sabitken alınır.
 2. **Tesir.** Doğan gaye ``mizan``a geri dağıtılır: gaye, tartının
    yönünü büker. Teleolojik çekici tam olarak budur.
 3. **Sükût eşiği (``ε_durgun``).** Gaye zayıfsa -- yani takip etmeye
@@ -88,7 +101,7 @@ from typing import Dict, List, Sequence
 
 import numpy as np
 
-from .qyazmac import QYazmac
+from .qyazmac import QYazmac, donme
 
 __all__ = ["EPSILON_DURGUN", "gaye_kos", "landauer_defteri",
            "serbest_enerji_olcumu", "rapor"]
@@ -117,23 +130,59 @@ def gaye_kos(q: QYazmac, p) -> float:
     # blokta ``gaye`` zaten tasdik/tenakuz/nakz'ın sağındadır.
     kaynaklar = [q.kulli("tasdik", 0), q.kulli("tasdik", 1),
                  q.kulli("tenakuz", 0), q.kulli("nakz", 0)]
-    # **ÖLÇÜLEN VE DÜZELTİLEN TASARIM HATASI -- H107'nin tekrarı.**
+    # --- 1a) ÇALIŞMA NOKTASI: gaye evvelâ ``π/4``e çevrilir.
     #
-    # Bu satır evvelce ``işaret = [+1, +1, −1, −1]`` taşıyordu: niyet
-    # "tasdik gayeyi doğursun, tenakuz ve nakz zayıflatsın" idi.
-    # Ölçüldü ve **çalışmadı** -- 14 ayrı girdide gaye ile nakz
-    # arasındaki korelasyon ``+0,871`` çıktı, yani tam tersi.
+    # **H122'NİN KÜNHÜ BURADAYDI VE EVVELCE BULAMAMIŞTIM.** Aşağıdaki
+    # şerh "işaretle bastırma olmaz, zira ``P(1) = sin²θ`` çifttir"
+    # diyor. Teşhis doğru, fakat **eksikti**: mesele işaretin değil,
+    # **çalışma noktasının** meselesiymiş.
     #
-    # Sebep bir kodlama hatası değil, kendi kütüğümde yazılı bir
-    # imkânsızlıktır (H107): ``mpo_topla`` bir DÖNME uygular ve
-    # ``P(1) = sin²θ`` **çift fonksiyondur**. Menfî açı, kolu ters yöne
-    # çevirir fakat aynı nüfusu verir. İşaretle bastırma olmaz.
+    # ``gaye`` ``|0⟩``da, yani ``θ = 0``da duruyordu. Orada ``sin²``in
+    # türevi **sıfır** ve fonksiyon çifttir; ``−θ`` ile ``+θ`` aynı
+    # nüfusu verir. Yani nakz tek başına geldiğinde gayeyi
+    # **yükseltiyordu** -- ölçülen ``+0,871`` tam olarak budur.
     #
-    # Doğrusu, kalbin zaten kullandığı usuldür: **işaretle, sonra
-    # girişimle söndür.** Doğuş burada mutlak açıyla yapılır (hüküm ne
-    # kadar faalse gaye o kadar doğar), yasak terkip ise aşağıda ``CZ``
-    # ile işaretlenip ``sadakat_intaci``ye bırakılır.
-    a = np.abs(np.asarray(_aci(p, "gaye.dogus", 4, 0.8), float))
+    # ``θ₀ = π/4``te ise ``sin²(π/4 + x) = (1 + sin 2x)/2``: türev
+    # âzamî, fonksiyon x'te **tek**, yani müsbet açı yükseltir, menfî
+    # açı **düşürür**. Aynı MPO, aynı işaretler; yalnız kolun
+    # duracağı yer değişti.
+    #
+    # Bu bir okuma değildir: sabit bir tek kübitlik dönmedir, veriye
+    # bakmaz (H31 yerinde durur).
+    q.tek(q.kulli("gaye", 0), donme(0.25 * math.pi))
+    # --- EVVELKİ ŞERH, NAKZEDİLMİŞ HÂLİYLE DURUYOR (silinmiyor):
+    #
+    #   > "Bu satır evvelce ``işaret = [+1,+1,−1,−1]`` taşıyordu…
+    #   >  ölçüldü ve çalışmadı -- korelasyon ``+0,871``. Sebep bir
+    #   >  kodlama hatası değil, kendi kütüğümde yazılı bir
+    #   >  imkânsızlıktır (H107): ``P(1) = sin²θ`` çift fonksiyondur…
+    #   >  **İşaretle bastırma olmaz.**"
+    #
+    # Son cümle **fazla genelleştirilmiş bir hükümdü ve nakzedildi**
+    # (H159). İşaretle bastırma ``θ = 0``da olmaz; ``θ = π/4``te
+    # **olur**. O zaman "mutlak açı al, sönmeyi girişime bırak" diye
+    # kurduğum çare de gereksizdi: derdi çözmüyordu (ölçüldü, +0,887)
+    # çünkü dert kolda değil çalışma noktasındaydı.
+    #
+    # İşaretler artık İŞ GÖRÜYOR (yukarıdaki çalışma noktası sayesinde):
+    # tasdik gayeyi doğurur, tenakuz ve nakz **zayıflatır**.
+    #
+    # Açılar ``(π/16)·tanh`` ile sınırlanır ve sebebi cebridir: dört
+    # kaynak var, her biri en çok ``π/16`` katkı verirse toplam ``π/4``i
+    # aşamaz ve kol ``[0, π/2]`` penceresinden **çıkmaz**. Çıksaydı
+    # ``sin²`` sarılır, tek olmaktan çıkar ve az evvel kurulan işaret
+    # duyarlılığı geri kaybolurdu -- yani had bir ihtiyat değil,
+    # tashihin şartıdır.
+    # ``abs`` ŞARTTIR ve müdahaleli ölçümle bulundu: ``_aci`` müsbet
+    # değil, **işaretli** bir parametre döndürür. ``tanh``ın işareti
+    # sınıfın işaretini yiyordu -- tohum 0'da tasdik açıları menfî
+    # çıkmış ve tasdik gayeyi ``−0,000991`` kadar **düşürmüştü**.
+    # Yani sınıf taahhüdü, öğrenilen sayının rastgele işaretine
+    # tâbiydi. Cihet **yapısaldır** (sınıftan gelir), şiddet
+    # **öğrenilir** (parametreden); ikisi karıştırılmaz.
+    isaret = np.array([+1.0, +1.0, -1.0, -1.0])
+    ham = np.asarray(_aci(p, "gaye.dogus", 4, 0.8), float)
+    a = isaret * (math.pi / 16.0) * np.abs(np.tanh(ham))
     kesme += q.mpo_topla("gaye", a, duraklar=kaynaklar, j=0)
 
     # --- 1b) YASAK TERKİPLER: nakzedilmiş yahut çelişkili bir hükümden
@@ -182,6 +231,19 @@ def gaye_kos(q: QYazmac, p) -> float:
     # ateşlenmiyordu. Sessizdi: 6 satırlık bir ölçümde korelasyon
     # ``−0,63`` çıkıp "çalışıyor" görünüyordu, 5 satırda ``+0,77``ye
     # dönüyordu -- yani gördüğüm şey eşik değil gürültüydü.
+    #
+    # **VE AYNI KUSUR SÜKÛT UCUNDA DA VARDI (H159, müdahaleli ölçüm).**
+    # Kapı düzeltildikten sonra ölçüldü::
+    #
+    #     tenakuz+nakz açık : gaye₀=0,3918  sükût=0,0741
+    #     tasdik açık       : gaye₀=0,4990  sükût=0,0944
+    #
+    # Yani gaye **düşünce** sükût da düşüyordu -- taahhüdün tam tersi.
+    # Sebep gayedeki ile aynı: ``sukut`` küçük bir açıda duruyor,
+    # ``sin²`` orada çift, ve ``R(−ε)`` nüfusu düşürmek yerine
+    # yükseltebiliyor. Çare de aynı: sükûtu evvelâ ``π/4``e çevir,
+    # kapıyı **oradan** vur.
+    q.tek(q.kulli("sukut", 0), donme(0.25 * math.pi))
     kesme += q.mpo_dagit("gaye", [-abs(EPSILON_DURGUN)],
                          duraklar=[q.kulli("sukut", 0)], j=0)
     return float(kesme)
