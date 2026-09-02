@@ -62,13 +62,36 @@ Izgara = np.ndarray
 
 @dataclass
 class Nesne:
+    """Bir bağlı bileşen: rengi, maskesi, sınır kutusu.
+
+    ===================================================================
+    VASIFLAR ÖNBELLEKLİDİR (kütük H197)
+    ===================================================================
+
+    Profil çıkarıldı: tek bir ARC görevinde ``hucre`` özelliği **17
+    milyon kere** çağrılıyor ve her çağrıda ``maske.sum()`` bütün
+    ızgarayı tarıyordu -- 48,2 saniye. Halbuki nesne kurulduktan sonra
+    maskesi **değişmez**; hücre sayısı da değişmez.
+
+    Onun için ``hucre`` ve ``_suret`` ilk erişimde hesaplanıp nesnede
+    saklanır. Bu bir eniyileme hilesi değil, **vasfın tabiatının**
+    koda yazılmasıdır: değişmeyen şey bir kere hesaplanır.
+
+    ``maske`` dışarıdan değiştirilirse önbellek yalanlar; onun için
+    maskeye **yazılmaz**, yalnız okunur (``_bilesenler``in hafızası da
+    aynı şartla paylaşır).
+    """
     renk: int
     maske: np.ndarray
     kutu: Tuple[int, int, int, int]
 
     @property
     def hucre(self) -> int:
-        return int(self.maske.sum())
+        ob = self.__dict__.get("_hucre_onbellek")
+        if ob is None:
+            ob = int(self.maske.sum())
+            self.__dict__["_hucre_onbellek"] = ob
+        return ob
 
     @property
     def en(self) -> int:
@@ -127,20 +150,48 @@ VASIFLAR: Dict[str, Callable[[Nesne, List[Nesne]], object]] = {
     #   kalan rengi seç" bu eksende görülür.
     "şekil": lambda n, hepsi: _suret(n),
     "şekil_tekrarı": lambda n, hepsi: sum(
-        1 for x in hepsi if _suret(x) == _suret(n)),
+        1 for x in hepsi if _suret(x) == _suret(n)),  # sûret önbellekli
     "kenarda": lambda n, hepsi: int(n.kutu[0] == 0 or n.kutu[2] == 0),
     "renk_çokluğu": lambda n, hepsi: sum(
         1 for x in hepsi if x.renk == n.renk),
 }
 
 
-def _suret(n: "Nesne") -> Tuple[Tuple[int, ...], ...]:
+def _suret(n: "Nesne") -> Tuple[int, int, bytes]:
     """Nesnenin **renkten ve yerden soyut** sûreti: kutusuna kırpılmış
     maske. İki nesne aynı sûretteyse aynı şeydir, nerede ve ne renk
-    olduğuna bakılmaz."""
+    olduğuna bakılmaz.
+
+    ===================================================================
+    ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H197)
+    ===================================================================
+
+    Profil: tek görevde **8,5 milyon** çağrı, 37,8 saniye. İki sebebi
+    vardı ve ikisi de düzeltildi:
+
+    1. Netice iç içe ``tuple(tuple(int(v) …))`` diye kuruluyordu; her
+       hücre için bir Python nesnesi. Yerine ``(boy, en, baytlar)``
+       kondu -- aynı ayırt ediciliği taşır, kıyası ``bytes``
+       kıyasıdır ve C'dedir.
+    2. ``nesne.py``deki ``aynı_sûretten`` vasfı ``sum(1 for x in hepsi
+       if _suret(x) == _suret(n))`` yazıyordu: ``k`` nesne için ``k²``
+       çağrı. Artık sûret nesne başına **bir kere** hesaplanıp
+       ``Nesne._suret_onbellek``te durur.
+
+    Sûret **değişmez** bir vasıftır; maskeye dokunulmadığı sürece
+    önbellek yalanlamaz.
+    """
+    ob = getattr(n, "_suret_onbellek", None)
+    if ob is not None:
+        return ob
     r0, r1, c0, c1 = n.kutu
-    m = n.maske[r0:r1 + 1, c0:c1 + 1]
-    return tuple(tuple(int(v) for v in satir) for satir in m)
+    m = np.ascontiguousarray(n.maske[r0:r1 + 1, c0:c1 + 1], dtype=np.uint8)
+    ob = (int(m.shape[0]), int(m.shape[1]), m.tobytes())
+    try:
+        object.__setattr__(n, "_suret_onbellek", ob)
+    except Exception:                                  # pragma: no cover
+        pass
+    return ob
 
 
 def _renk_kaidesi_ogren(ciftler: Sequence[Tuple[Izgara, Izgara]],

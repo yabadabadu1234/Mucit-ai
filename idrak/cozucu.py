@@ -125,9 +125,38 @@ def _kirpma_bul(ciftler: Sequence[Tuple[np.ndarray, np.ndarray]]
 # Aşağıdaki kaideler bu ölçüme göre seçildi; kör bir genişletme değil.
 
 
+#: ``_bilesenler`` için hafıza. Anahtar ızgaranın **baytları**dır;
+#: ızgara değişmediği sürece netice de değişmez, zira fonksiyon saftır.
+_BILESEN_HAFIZA: Dict[bytes, List[Tuple[int, np.ndarray,
+                                        Tuple[int, int, int, int]]]] = {}
+#: Hafızanın haddi -- sınırsız büyürse bellek yer. En eski atılır.
+_HAFIZA_HADDI: int = 4096
+
+
 def _bilesenler(g: np.ndarray, arka: int = 0
                 ) -> List[Tuple[int, np.ndarray, Tuple[int, int, int, int]]]:
-    """4-komşulukta bağlı bileşenler: ``(renk, maske, kutu)``."""
+    """4-komşulukta bağlı bileşenler: ``(renk, maske, kutu)``.
+
+    ===================================================================
+    ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H197)
+    ===================================================================
+
+    Profil çıkarıldı: **tek bir ARC görevinde bu fonksiyon 21.976 kere
+    çağrılıyor** ve 65,8 saniye yiyordu (görev başına 246,9 saniyenin
+    dörtte biri). Halbuki fonksiyon **saftır**: aynı ızgara ve aynı
+    arka renk için neticesi hep aynıdır. Kâide arayışı aynı birkaç
+    ızgarayı binlerce kere tarıyordu.
+
+    Çare hafızadır (memoization). Anahtar ızgaranın baytlarıdır;
+    netice **kopyalanmadan** paylaşılır -- maskeler okunur, yazılmaz.
+    Mana hiç değişmez, yalnız tekrar hesap kalkar.
+    """
+    anah = arka.to_bytes(2, "little") + g.shape[0].to_bytes(2, "little") \
+        + g.shape[1].to_bytes(2, "little") \
+        + np.ascontiguousarray(g, dtype=np.int16).tobytes()
+    onbellek = _BILESEN_HAFIZA.get(anah)
+    if onbellek is not None:
+        return onbellek
     H, W = g.shape
     gor = np.zeros((H, W), bool)
     out = []
@@ -154,6 +183,9 @@ def _bilesenler(g: np.ndarray, arka: int = 0
             for y, x in hucre:
                 m[y, x] = True
             out.append((renk, m, (min(ys), max(ys), min(xs), max(xs))))
+    if len(_BILESEN_HAFIZA) >= _HAFIZA_HADDI:
+        _BILESEN_HAFIZA.pop(next(iter(_BILESEN_HAFIZA)))
+    _BILESEN_HAFIZA[anah] = out
     return out
 
 

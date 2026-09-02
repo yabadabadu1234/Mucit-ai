@@ -31,6 +31,15 @@ Yerel hükümler küllî bloğa **tek süpürmeyle** akıtılır
 için ``2kD`` takas, süpürmede ``~2D``. Blok yerine iade edilir; edilmezse
 yerellik gider ve takas dolaşıklığı sürükleyip ``χ``yi zorlar.
 
+**MPO'lar ``mpo_uygula_hizli`` ile koşar (kütük H197).** Padişahın
+ihtarı yerindeydi: ``main/yazmac.py``e uyarlanabilir zip-up yolunu
+kurmuştum fakat **akışa bağlamamıştım**; ana model hâlâ iki geçişli
+yavaş yolu çağırıyordu. Bir ``idrak_et`` çağrısında 219 süpürme var ve
+her biri o yoldan geçiyordu. Artık üçü de -- ``uzak_cift_mpo``,
+``mpo_topla``, ``mpo_dagit`` -- kesmeye bakıp usul seçen hızlı yolu
+çağırır; kesme ısırırsa kendiliğinden iki geçişliye döner, yani
+doğruluktan taviz yok.
+
 **Hiçbir yerde çöküş yoktur.** Hüküm melekeleri de üniterdir: makam
 ``|Şek⟩,|Zan⟩,|Yakîn⟩,|Vehim⟩`` taban durumlarına kodlanır ve bir dönme
 ile çevrilir. Hükmün sayısı ancak en sonda, POVM zayıf ölçümüyle okunur
@@ -734,7 +743,8 @@ class QYazmac:
         for k in range(r):
             Wi[0, :, :, k] = A[k]
             Wj[k, :, :, 0] = B[k]
-        kesme = self.y.mpo_uygula({i: Wi, j: Wj}, D=r, bas=i, son=j + 1)
+        kesme = self.y.mpo_uygula_hizli({i: Wi, j: Wj}, D=r,
+                                        bas=i, son=j + 1)
         self.iz.kesme += float(kesme)
         self.iz.kapi += 1
         self.iz.supurme += 1
@@ -822,7 +832,8 @@ class QYazmac:
         Wh[1, :, :, 0] = np.array([[0.0, -1.0], [1.0, 0.0]])   # bileşen J
         W[hedef] = Wh
 
-        kesme = self.y.mpo_uygula(W, D=2, bas=min(dur), son=hedef + 1)
+        kesme = self.y.mpo_uygula_hizli(W, D=2, bas=min(dur),
+                                        son=hedef + 1)
         self.iz.kesme += float(kesme)
         self.iz.kapi += len(dur) + 1
         self.iz.supurme += 1
@@ -867,9 +878,10 @@ class QYazmac:
         Wk[1, 1, 1, 0] = 1.0                            # |1⟩⟨1| → dal 1
         W[kaynak] = Wk
 
-        kesme = self.y.mpo_uygula(W, D=2, bas=min(dur), son=kaynak + 1,
-                                  sol_sinir=np.array([1.0, 1.0]),
-                                  sag_sinir=np.array([1.0, 0.0]))
+        kesme = self.y.mpo_uygula_hizli(W, D=2, bas=min(dur),
+                                        son=kaynak + 1,
+                                        sol_sinir=np.array([1.0, 1.0]),
+                                        sag_sinir=np.array([1.0, 0.0]))
         self.iz.kesme += float(kesme)
         self.iz.kapi += len(dur) + 1
         self.iz.supurme += 1

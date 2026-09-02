@@ -550,6 +550,35 @@ def _tenasub_kulli(g: np.ndarray, nesneler: Sequence[Nesne]
     return (float(w @ T[:, 0]), float(w @ T[:, 1]), float(w @ T[:, 2]))
 
 
+def _dihedral_kanonik(sekil: np.ndarray) -> Tuple[Tuple[int, int], bytes]:
+    """Şeklin **dihedral kanonik sûreti** -- 8 katlı grubun en küçüğü.
+
+    Dört dönme ve onların yansımaları alınır; ``(şekil, baytlar)``
+    ikililerinin **en küçüğü** kanonik sayılır. İki şekil dihedral
+    denk ise kanonikleri **eşittir**; dolayısıyla denklik kıyası
+    çift başına ``O(1)``dir.
+
+    ===================================================================
+    ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H197)
+    ===================================================================
+
+    ``_emsal``in çift döngüsü her çift için ``np.rot90``ı yeniden
+    çağırıyordu: profilde **2.374.338 çağrı, 23,5 saniye**. Halbuki
+    dönmeler nesnenin kendi vasfıdır, çiftin değil. Kanonik sûret
+    nesne başına **bir kere** hesaplanır; ``m`` nesne için ``4m``
+    dönme, ``m²/2`` değil.
+    """
+    en_kucuk: Optional[Tuple[Tuple[int, int], bytes]] = None
+    for k in range(4):
+        R = np.rot90(sekil, k)
+        for V in (R, R[:, ::-1]):
+            A = np.ascontiguousarray(V)
+            aday = ((int(A.shape[0]), int(A.shape[1])), A.tobytes())
+            if en_kucuk is None or aday < en_kucuk:
+                en_kucuk = aday
+    return en_kucuk                                    # type: ignore[return-value]
+
+
 def _emsal(nesneler: Sequence[Nesne]) -> Dict[str, float]:
     """**İkinci mertebe müşahede**: Teşabüh(+) / İhtilaf(−), NESNELER arası.
 
@@ -569,6 +598,10 @@ def _emsal(nesneler: Sequence[Nesne]) -> Dict[str, float]:
                 "emsal_dönük": 0.0, "ihtilaf": 0.0, "sınıf": float(m)}
     ayni_sekil = ayni_izam = ayni_renk = donuk = 0
     cift = 0
+    # Vasıflar çift döngüsünün DIŞINDA, nesne başına bir kere.
+    ham = [(n.sekil.shape, np.ascontiguousarray(n.sekil).tobytes())
+           for n in nesneler]
+    kan = [_dihedral_kanonik(n.sekil) for n in nesneler]
     for i in range(m):
         for j in range(i + 1, m):
             cift += 1
@@ -577,18 +610,11 @@ def _emsal(nesneler: Sequence[Nesne]) -> Dict[str, float]:
                 ayni_izam += 1
             if a.renk == b.renk:
                 ayni_renk += 1
-            if a.sekil.shape == b.sekil.shape and np.array_equal(a.sekil,
-                                                                 b.sekil):
+            if ham[i] == ham[j]:
                 ayni_sekil += 1
-            else:
-                # dönme ve yansımayla emsal mi (8 katlı dihedral grup)
-                for k in range(4):
-                    R = np.rot90(b.sekil, k)
-                    if R.shape == a.sekil.shape and (
-                            np.array_equal(a.sekil, R)
-                            or np.array_equal(a.sekil, R[:, ::-1])):
-                        donuk += 1
-                        break
+            elif kan[i] == kan[j]:
+                # dönme yahut yansımayla emsal (8 katlı dihedral grup)
+                donuk += 1
     # şekil kümesi sayısı: kaç ayrı "cins" var
     imza = set()
     for n in nesneler:

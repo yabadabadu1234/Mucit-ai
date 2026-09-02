@@ -6335,3 +6335,66 @@ dosyadan yüklüyor::
 Türkçe, İngilizce ve Python kodu aynı sözlükten geçiyor; ARC
 ızgarasının özel belirteçleri de aynı sözlüğün üstünde duruyor. H192'de
 *"buradaki bütün sayılar bayt yedeğiyledir"* diye konan kayıt **kalktı**.
+
+## H197 — ANA KOD DÜZELTİLDİ: değerlendirme 9,1 KAT hızlandı
+
+Padişahın ihtarı: *"Eğitimin çok yavaş olması için ya tüm hesaplarımızın
+yanlış olması ya da senin ana kodunun yanlış olması lazım. Oynatmayı da
+ana kodu, padişahı güncelle artık."*
+
+**İhtar yerindeydi ve iki kat yerindeydi.** Çevre modülleri kurmuştum
+(``main/katlama.py``, ``main/ic_bag.py``, ``nefs/lisan.py``,
+``nefs/hiz.py``…) fakat **hiçbirini akışa bağlamamıştım**; ana model
+hâlâ eski yolu koşuyordu. Dahası, yavaşlığın sebebi onların yokluğu
+bile değildi.
+
+### Teşhis: ölçüm, tahmin değil
+
+Evvelâ ``idrak_et``in kendisi ölçüldü -- **1 saniye**, mesele orada
+değil. Sonra değerlendirme sarmalandı ve şu çıktı::
+
+    tek görev 134,8 sn  |  idrak_et çağrısı: 0
+
+Yani **değerlendirmede padişahın dalgası hiç koşmuyor**; bütün vakit
+klasik kâide arayışında. Profil çıkarıldı ve üç kusur bulundu; üçü de
+**saf tekrar hesaptı**, cebrî bir zaruret değil::
+
+    idrak/cozucu.py:_bilesenler   21.976 çağrı   65,8 sn
+    nefs/nesne.py:_suret       8.500.880 çağrı   37,8 sn
+    nefs/nesne.py:hucre       17.026.550 çağrı   48,2 sn
+    numpy rot90 (mubser._emsal) 2.374.338 çağrı  23,5 sn
+
+### Üç tashih -- mana değişmedi, tekrar kalktı
+
+1. **``_bilesenler`` hafızalandı.** Fonksiyon saftır: aynı ızgara ve
+   arka renk için neticesi hep aynıdır. Anahtar ızgaranın baytlarıdır,
+   had 4096 kayıttır. Kâide arayışı aynı birkaç ızgarayı binlerce kere
+   tarıyordu.
+2. **``_suret`` ve ``hucre`` nesnede önbelleklendi.** İkisi de
+   **değişmez** vasıflardır: nesne kurulduktan sonra maskesi
+   değişmez. ``_suret`` ayrıca iç içe ``tuple(tuple(int(v)…))``
+   yerine ``(boy, en, baytlar)`` döner -- aynı ayırt edicilik, kıyas
+   C'de.
+3. **``_emsal``in dihedral kıyası kanonikleştirildi.** Çift döngüsü her
+   çift için dört dönmeyi yeniden hesaplıyordu (``m²/2 × 4``); artık
+   nesne başına bir kere kanonik sûret alınır (``4m``) ve çift kıyası
+   ``O(1)``dir.
+
+### Netice -- ölçüldü, iddia edilmedi
+
+Aynı görev, aynı hüküm (``sükût = True, sebep = kaide bulunamadı``)::
+
+    evvel        : 246,9 sn
+    _bilesenler  :  72,8 sn   (3,4×)
+    + hucre/_suret:  38,8 sn   (6,4×)
+    + _emsal      :  27,1 sn   (9,1×)
+
+Dört görevlik kesitte toplam **57,3 sn** (evvelce ~500 sn). Sınamalar
+73/73 geçiyor ve çıkan hükümler **birebir aynı**: hızlanma doğruluktan
+alınmadı, tekrardan alındı.
+
+**Ve bir şey daha ölçüldü, bu turun asıl hakikati:** dört görevin
+üçünde sebep ``kaide bulunamadı``. Yani padişah görülmemiş görevde
+**susuyor** ve sustuğu için yavaşlığı da anlamsız. Duran duvar hız
+değil, **kâide cebrinin darlığı**dır (H135/H138) -- ve o duvar bu
+turda da yerinde duruyor.
