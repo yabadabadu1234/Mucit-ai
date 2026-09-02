@@ -5341,3 +5341,160 @@ ayrışabilirdir** (``Σ(p−hedef)²``), yani blok-koordinat inişinin en
 elverişli olduğu hâldir. Hakikî kayıpta da kazanıp kazanmadığı **ayrıca
 ölçülmelidir**; sentetik bir kazancı hakikî bir kazanç diye sunmak,
 tam da bu kütüğün yasakladığı şeydir.
+
+## H173 — CERİDENİN 22 MİLYONLUK TAKSİMATI EKLEMLENDİ (paralel değil)
+
+Kullanıcı hükmü: *"Padişahın içindeki mevcut modelle bu modeli
+eklemleyecek ve tek ve paralel olmayan, yek vücut çok uzuvlu bir model
+ortaya çıkartacaksın."*
+
+Ceridenin şeması ``|Ψ⟩ = |x⟩ ⊗ |D⟩ ⊗ |m⟩ ⊗ |a⟩``dır (parametre 2²¹,
+veri 2²³, meleke 2¹⁹, ancilla 10.989.952; toplam 22.000.000). Bu şema
+`nefs/taksimat.py`de **ayrı bir model olarak değil, aynı MPS zincirinin
+bölgeleri olarak** kuruldu; ``nefs.qyazmac.QAyar.bolge_ac`` varsayılan
+olarak açıktır ve zincir şu hâle geldi (n_satır = 5)::
+
+    veri 25 | hüküm 37 | meleke 2 | parametre 6 | ancilla 33   → n = 103
+    (bölgeler kapalıyken n = 62)
+
+**Şemaya ilk tenkidim.** Dört bölgenin üçü tam ikinin kuvvetidir,
+dördüncüsü değildir: ``10.989.952 = 22.000.000 − 2²¹ − 2²³ − 2¹⁹``.
+Ancilla bir hesabın neticesi değil, yuvarlak 22 milyona tamamlayan
+**artıktır**. Şemanın keyfî yeri ancilla değil 22 milyon sayısıdır.
+Bu bir kusur değildir fakat kayda geçer (``ANCILLA_ARTIK``, sınama
+denetler).
+
+**Ölçü: eklem var mı?** Dört bölge dört ayrı model olsaydı sınırlarda
+entropi tam sıfır olurdu. ``eklem_olcusu`` tam bunu ölçer ve
+**kırmızıya döndüğü görüldü** (H90'ın şartı)::
+
+    sınır                 dimağ ÖNCE   dimağ SONRA
+    veri|hukum               0,0000       2,0794
+    hukum|meleke             0,0000       2,0794
+    meleke|parametre         0,0000       2,0794
+    parametre|ancilla        0,0000       2,0794
+    eklemli:                  False   →     True
+
+Dimağ operatörü (``QYazmac.dimag``) ceridenin
+``Ĥ_Dimağ(θ) = Σ_m 𝒮_m [Σ_a θ_m^a T^a] 𝒮_m†`` formülünün iki indisini
+iki bölge diye okur: ``m`` meleke kübiti, ``a`` parametre kübiti. Dört
+bağ kurar: veri→meleke, meleke→parametre, parametre→hüküm,
+parametre→ancilla. Hepsi reel kontrollü dönmedir; hiçbiri okumaz.
+
+**Bedeli ölçüldü, gizlenmiyor.** Aynı akış, aynı girdi::
+
+    n_satır  bölgesiz             bölgeli            fark
+    20       249,0 token/sn       230,0 token/sn     −%7,6
+
+Yani 41 kübit eklendi ve akış %7,6 yavaşladı. Zincir uzunluğunda
+maliyet doğrusal olduğu için bu beklenendir ve kabul edilmiştir.
+
+## H174 — ÖLÇÜ ALETİ İKİ YERDE BOZUKMUŞ: pencere ve kesit
+
+Bu turda kod değil **ölçü** iki defa yalan söyledi; ikisi de aynı
+sebepten.
+
+**(1) Sahte sıfır.** ``eklem_olcusu`` ilk hâlinde ``pencere=24`` ile
+çağrılıyordu. ``dolasiklik_entropisi`` pencerenin ilk yuvasını zincirin
+sol ucuymuş gibi alır; bu ancak pencere zincirin başından başlarsa
+doğrudur. İç kesitlerde okuma bozuluyordu ve ``hukum|meleke`` sınırı
+**0,0000** görünüyordu -- halbuki o sınırı kesen kapı fiilen vardı.
+Pencere kesite kadar açıldı; sayı 2,0794 çıktı. *Ölü eklem ile
+ölçülemeyen eklem aynı şey değildir.*
+
+**(2) Sahte doygunluk.** `tanilama/nizam_dolasiklik.py` entropiyi
+``kesit = n//2, pencere = 24`` varsayılanıyla ölçüyordu. İkisi de
+zincirin **uzunluğuna** bağlıdır, ölçülmek istenen şeye değil. Bölgeler
+eklenip zincir 67'den 116'ya çıkınca pencere tamamen hüküm bloğunun
+içine düştü ve aynı fizikî durum için nizam açıkken **0,0802**
+(bölgesiz) ve **2,0393** (bölgeli) okundu. Sınama bu yüzden kırıldı.
+
+Adı olan kesitte (``veri|hukum``), pencere zincirin başına kadar açık::
+
+    nizam kapalı : S = 2,0794 = ln 8   (schmidt 8, doygunluk 1,00)
+    nizam açık   : S = 1,3863 = ln 4   (schmidt 4, doygunluk 0,50)
+
+ve bu iki sayı **bölge açık/kapalı birebir aynıdır**. Yani H115'in
+hükmü zayıflamadı, keskinleşti: nizam doygunluğu tam ``ln 8 → ln 4``
+kırıyor. Sınama düzeltilerek geçirilmedi; **alet** düzeltildi ve hüküm
+kuvvetlendi.
+
+**Üçüncüsü: doyan ölçü.** Dimağ açısı dört değerde (0,05–0,785), üç
+bağda koşuldu::
+
+    χ=8  : S her açıda tam ln 8   ; kesme 0,087 → 2,158
+    χ=16 : S her açıda tam ln 16  ; kesme 0,184 → 2,620
+    χ=32 : S 1,384 → 3,083        ; kesme 0,258 → 1,987
+
+χ ≤ 16'da entropi tavanda olduğu için ölçü açıyı **hiç görmüyor**;
+büyük açı ölçülebilir hiçbir eklem kazancı vermeden kesmeyi 25 kat
+artırıyor. Bu yüzden (a) varsayılan açı en küçüğüdür (0,05), (b)
+``eklem_olcusu`` artık ``doymus`` ve ``kuvvet_okunur`` da döner:
+**doymuş bir okumadan eklemin kuvveti devşirilemez.** ``eklemli``
+(sıfır mı değil mi) her χ'de geçerlidir; "ne kadar kuvvetli" değildir.
+
+## H175 — CERİDENİN 154 MB/sn HÜKMÜ: kısmen nakzedildi, sebebi sayıldı
+
+Kullanıcı hükmü: *"ya ceridemin hükmünü çürüteceksin ya da itaat edip
+ne diyorsa onu yapacaksın"*. TT-KAN `nefs/ttkan.py`de **fiilen
+kuruldu** (itaat), ve aynı kodun FLOP'u sayıldı (muhakeme).
+
+**Evvelâ TT'nin hakkı.** TT yabancı sahada denenmedi. Kronecker
+çarpımı ``A₁⊗A₂⊗A₃`` tam TT'dir ve TT onu makine hassasiyetinde taşıdı:
+hata **1,58e-15**, bağ (1,1,1,1). Hafızada sıkıştırma da hakikîdir:
+262.144 eleman → **5.120** (51 kat). Ceridenin sıkıştırma iddiası bu
+cihetten **doğrudur**.
+
+**Sonra haddi.** Ceridenin ``2×(16³+16⁴+16⁴+16³) = 278.528 FLOP``
+hesabı `ceride_flop`ta birebir yeniden üretildi. Fakat bu sayı
+çekirdeklerin **eleman sayısıdır**; matris-vektör çarpımının FLOP'u
+ancak çarpılan vektörün TT bağı **1** ise buna eşittir. Yoğun (ya da
+ceridenin kendi dediği gibi χ=16'lık QTT) vektörde orta çekirdeklerde
+masraf ``2·n^{d+1}·r²``dir. Sayaç kodun içindedir, tahmin değildir ve
+cebirle birebir örtüşür::
+
+    16⁴ ölçeğinde meleke başına FLOP
+      ceride (çekirdek eleman sayısı, χ_v = 1) :        278.528
+      hakikî TT-MVM (yoğun/dolaşık vektör)     :  1.140.850.688
+      yoğun D×D                                :     33.554.432
+
+Yani TT-MVM yoğun çarpmadan **34 kat pahalıdır**, 120,4 kat ucuz
+değil; ceridenin "120,4 kat" nispeti ``yoğun FLOP ÷ TT eleman sayısı``
+oranıdır (33.554.432 / 278.528 = 120,45), yani **hesap ile hafızayı
+kıyaslar**.
+
+**Şemanın kendi içinde çelişkisi.** Ceride aynı anda iki şey der:
+
+* *"Veri yazmacı 2²³ kübitlik süperpozisyondadır, QTT bağı χ ≤ 16'dır"*
+* *"Meleke çarpımı token başına 278.528 FLOP'tur"* (χ_v = 1 demektir)
+
+χ_v = 1 ise süperpozisyon yoktur; süperpozisyon varsa 278.528
+yanlıştır. İkisi birden doğru olamaz. Ceridenin kendi χ'siyle cetvel
+şöyle olur::
+
+    REJİM                            MFLOP/tok      token/sn      MB/sn
+    ceride TT-KAN (χ_v = 1)             14,000      44.943.987     179,78
+    hakikî TT-MVM (yoğun vektör)     46.777,458          13.451       0,05
+    yoğun D×D                       352.189,898           1.787       0,01
+
+**Ceridenin aritmetiği kendi içinde tutarlıdır ve bu da yazılır.**
+629,2/14,0 = 44,9 M token/sn çıkar; ceridenin 38,5 M'i QSVT'nin 19,6
+TFLOP'unu da saydığı içindir. Hesapta hata yoktur; hatalı olan
+``278.528``in ne olduğudur.
+
+**Padişahın fiilî hızı -- ölçüldü, iddia edilmedi.** Bu makinenin
+ölçülen gücü ``169,84 GFLOPS`` (float64 dgemm). Padişahın fiilî akışı::
+
+    n_satır 20, χ=8 : 249,0 token/sn  →  0,00100 MB/sn
+
+629,2 TFLOPS'a donanım nispetiyle (×3705) taşınırsa **≈ 3,7 MB/sn**
+eder. Ceridenin ajana biçtiği ``1,67 MB/sn`` ile aynı mertebededir
+(2,2 kat üstünde); ilan ettiği ``154 MB/sn``den **42 kat** aşağıdadır.
+
+**Hüküm.** Ceridenin sıkıştırma hükmü (TT ile 51 kat az parametre)
+kabul edilir ve kuruldu. Hız hükmü (154 MB/sn) **nakzedilir**: dayandığı
+``278.528`` sayısı, ceridenin kendi süperpozisyon şartıyla bir arada
+duramaz. Ceridenin haklı olduğu yer şudur ve küçümsenmiyor: *eğer*
+meleke dizeyleri fiilen Kronecker/TT yapılıysa ve durum çarpım
+durumuysa, hesap doğrudur. Bu iki şartın sağlandığı **gösterilmemiştir**
+-- ne ceridede, ne bu depoda.

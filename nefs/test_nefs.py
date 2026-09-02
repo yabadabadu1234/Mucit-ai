@@ -1202,6 +1202,81 @@ def test_nizam_cetveli_tam_ve_tutarli():
     assert sinif_ihlali("çözücü", -0.01) < sinif_ihlali("çözücü", 0.0), c
 
 
+def test_taksimat_ceridenin_kendi_sayisini_veriyor():
+    """22 milyonluk şema, kendi toplamında **birebir** çıkıyor mu?
+
+    Bir nispet cetveli en azından kendi sayısını yeniden üretmelidir;
+    üretemiyorsa ölçekten bağımsız olduğu iddiası boştur. Ayrıca
+    ancillanın bir **artık** olduğu burada ispatlanır: ceride onu
+    müstakil bir hükümle vermez, üç ikinin kuvvetinden geriye kalandır.
+    """
+    from nefs.taksimat import (CERIDE_TAKSIMAT, CERIDE_TOPLAM,
+                               ANCILLA_ARTIK, taksim)
+    assert sum(CERIDE_TAKSIMAT.values()) == CERIDE_TOPLAM
+    assert ANCILLA_ARTIK() == CERIDE_TAKSIMAT["ancilla"]
+    t = taksim(CERIDE_TOPLAM)
+    for ad, kac in CERIDE_TAKSIMAT.items():
+        assert t[ad] == kac, (ad, t[ad], kac)
+    # küçük ölçekte de nispet korunur ve toplam tutar
+    k = taksim(1000)
+    assert sum(v for a, v in k.items() if a != "hukum") == 1000
+    assert k["ancilla"] > k["veri"] > k["parametre"] > k["meleke"]
+
+
+def test_eklem_paralel_degil_ve_KIRMIZIYA_donebiliyor():
+    """*"Tek ve paralel olmayan, yek vücut çok uzuvlu"* -- ölçülüyor mu?
+
+    Dört bölge dört ayrı model olsaydı aralarındaki kesitte entropi
+    **tam sıfır** olurdu. Bu sınama iki şeyi birden ister (H90):
+
+    1. Dimağ operatörü tatbik edilmeden ölçü **KIRMIZI** yanmalı --
+       yanmıyorsa ölçü bir şey ölçmüyor demektir.
+    2. Tatbik edildikten sonra dört sınırın dördü de dirilmeli.
+    """
+    import numpy as np
+    from nefs.qyazmac import QAyar, QYazmac
+
+    q = QYazmac(5, QAyar(bolge_ac=True))
+    assert q.bolge_var("meleke") and q.bolge_var("parametre")
+    q.kodla(np.random.default_rng(0).normal(size=(5, 8)))
+    q.superpozisyon()
+    q.mera()
+    once = q.eklem_olcusu()
+    assert len(once["kesit"]) == 4, once["kesit"]
+    assert not once["eklemli"], once            # KIRMIZI olabiliyor
+    q.dimag()
+    sonra = q.eklem_olcusu()
+    assert sonra["eklemli"], sonra
+    assert sonra["kopuk"] == [], sonra
+
+    # ...ve bölgeler kapatılınca şema uygulanmamış olur; ölçü bunu görür.
+    q2 = QYazmac(5, QAyar(bolge_ac=False))
+    assert len(q2.eklem_olcusu()["kesit"]) == 1
+
+
+def test_ttkan_kendi_sahasinda_tam_yabanci_sahada_degil():
+    """TT-KAN'ın hakkı da haddi de ölçülüyor mu?
+
+    * **Hakkı:** Kronecker çarpımı tam TT'dir; hata makine
+      hassasiyetinde olmalıdır. Olmuyorsa kusur ceridede değil bizim
+      kodumuzdadır ve TT'yi yabancı sahada denemiş oluruz.
+    * **Haddi:** ceridenin ``278.528 FLOP`` hesabı çekirdek eleman
+      sayısıdır; yoğun (ya da dolaşık) vektöre hakikî TT-MVM bundan çok
+      daha pahalıdır ve ``16⁴`` ölçeğinde yoğun çarpmayı bile geçer.
+    """
+    from nefs.ttkan import (kiyas, tt_flop, yogun_flop, ceride_flop)
+    r = kiyas(n=8, d=3, rank=8)
+    assert r["hata_kronecker"] < 1e-10, r["hata_kronecker"]
+    assert r["bag_kronecker"] == (1, 1, 1, 1), r["bag_kronecker"]
+    # sıkıştırma HAFIZADA hakikîdir
+    assert r["eleman_tt"] * 10 < r["eleman_yogun"], r
+    # ...fakat HESAPTA değil: 16⁴'te TT-MVM yoğunu geçer.
+    assert tt_flop(16, 4, 16) > yogun_flop(4096), (tt_flop(16, 4, 16),
+                                                   yogun_flop(4096))
+    # ceridenin sayısı yeniden üretiliyor (iddia doğru anlaşılmış mı)
+    assert ceride_flop(16, 4, 16) == 278_528
+
+
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
 # tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
 # koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.

@@ -276,13 +276,46 @@ class QAyar:
     )
     #: ``kaide`` alanındaki her parametrenin bit sayısı (p, q, r).
     kaide_bit: int = 4
+    #: --- ceride taksimatı (H173). Zincire ``meleke``, ``parametre`` ve
+    #: ``ancilla`` bölgeleri **eklenir**; ayrı bir model kurulmaz.
+    #: Ölçüleri ``nefs.taksimat.CERIDE_TAKSIMAT`` nispetlerinden, veri
+    #: bölgesine oranla çıkar. Kapatmak bir seçenektir fakat kapalıyken
+    #: model ceridenin şemasına uymaz ve ``eklem_olcusu`` bunu görür.
+    bolge_ac: bool = True
+    #: Her bölgeye düşecek asgari kübit (nispet sıfıra yuvarlanmasın).
+    bolge_asgari: int = 1
 
     @property
     def kulli_kubit(self) -> int:
         return sum(n for _, n in self.kulli_alanlar)
 
+    def veri_kubiti(self, n_satir: int) -> int:
+        return n_satir * (self.satir_kubiti + self.yerel_kubit)
+
+    def bolge_olculeri(self, n_satir: int) -> Dict[str, int]:
+        """Ceride nispetiyle bölge ölçüleri -- veri bölgesine oranla.
+
+        Ceride ``veri = 2²³``, ``parametre = 2²¹``, ``meleke = 2¹⁹``,
+        ``ancilla = 22.000.000 − ötekiler`` der. Nispetler veri'ye
+        bölünerek ölçekten arındırılır: parametre veri'nin ¼'ü, meleke
+        1/16'sı, ancilla 1,31 katıdır. Sayılar burada **hesaplanır**,
+        elle yazılmaz.
+        """
+        from nefs.taksimat import CERIDE_TAKSIMAT
+        v = self.veri_kubiti(n_satir)
+        out: Dict[str, int] = {"veri": v, "hukum": self.kulli_kubit}
+        if not self.bolge_ac:
+            for ad in ("meleke", "parametre", "ancilla"):
+                out[ad] = 0
+            return out
+        taban = CERIDE_TAKSIMAT["veri"]
+        for ad in ("meleke", "parametre", "ancilla"):
+            oran = CERIDE_TAKSIMAT[ad] / taban
+            out[ad] = max(int(self.bolge_asgari), int(round(oran * v)))
+        return out
+
     def kubit_sayisi(self, n_satir: int) -> int:
-        return n_satir * (self.satir_kubiti + self.yerel_kubit) + self.kulli_kubit
+        return sum(self.bolge_olculeri(n_satir).values())
 
 
 @dataclass
@@ -337,6 +370,14 @@ class QYazmac:
         for ad, kac in a.kulli_alanlar:
             self._alan[ad] = (self.kulli_bas + k, kac)
             k += kac
+        # --- ceride taksimatı (H173): meleke / parametre / ancilla
+        # bölgeleri **aynı zincirin** devamıdır. Ayrı bir yazmaç, ayrı
+        # bir durum, ayrı bir model YOKTUR; ``self.y`` tektir.
+        from nefs.taksimat import Taksimat
+        self.taksimat = Taksimat.kur(a.bolge_olculeri(self.n_satir))
+        if self.taksimat.n != self.n:                     # sessiz kayma freni
+            raise AssertionError("taksimat %d, zincir %d"
+                                 % (self.taksimat.n, self.n))
 
     # -----------------------------------------------------------------
     #  Adresler
@@ -356,6 +397,121 @@ class QYazmac:
 
     def yereller(self) -> List[int]:
         return [self.yerel(i) for i in range(self.n_satir)]
+
+    # -- ceride bölgeleri (H173): |x⟩ parametre, |m⟩ meleke, |a⟩ ancilla
+    def parametre(self, j: int = 0) -> int:
+        """``|x⟩`` bölgesinin ``j``inci kübiti -- model ağırlığı θ."""
+        return self.taksimat.yer("parametre", j)
+
+    def meleke_kubiti(self, j: int = 0) -> int:
+        """``|m⟩`` bölgesinin ``j``inci kübiti -- hangi uzuv uyanık."""
+        return self.taksimat.yer("meleke", j)
+
+    def ancilla(self, j: int = 0) -> int:
+        """``|a⟩`` bölgesinin ``j``inci kübiti -- QSVT/FPAA iş alanı."""
+        return self.taksimat.yer("ancilla", j)
+
+    def bolge_var(self, ad: str) -> bool:
+        return self.taksimat.bolge.get(ad, (0, 0))[1] > 0
+
+    def eklem_olcusu(self, pencere: Optional[int] = None) -> Dict[str, object]:
+        """Bölge sınırlarındaki dolaşıklık -- **eklem var mı**.
+
+        Kullanıcı hükmü: *"tek ve paralel olmayan, yek vücut çok uzuvlu
+        bir model"*. Bu ölçü onu denetler ve kırmızıya döner: bir
+        sınırda entropi sıfırsa o iki uzuv **iki ayrı modeldir**.
+        """
+        from nefs.taksimat import eklem_olcusu as _eo
+        return _eo(self.y, self.taksimat, pencere=pencere)
+
+    # -----------------------------------------------------------------
+    #  Ĥ_Dimağ -- bölgeleri birbirine EKLEMLEYEN operatör
+    # -----------------------------------------------------------------
+    def dimag(self, teta: Optional[np.ndarray] = None,
+              olcek: float = 0.05) -> Dict[str, float]:
+        """Ceridenin dimağ operatörünü zincire tatbik et.
+
+        Ceride şöyle yazar::
+
+            Ĥ_Dimağ(θ) = Σ_m Π_koho Π_betti 𝒮_m [Σ_a θ_m^a T^a]
+                          𝒮_m† Π_betti Π_koho
+
+        Buradaki iki indis, iki bölgedir: ``m`` **meleke** yazmacının
+        kübiti (hangi uzuv uyanık), ``a`` **parametre** yazmacının
+        kübiti (o uzvun ağırlığı). ``T^a`` üreteci hükme dokunur.
+        Dolayısıyla operatör dört bölgeyi bir zincirde birbirine bağlar
+        ve **eklem** tam budur:
+
+            veri → meleke   : hangi satır hangi uzvu uyandırıyor
+            meleke → parametre : θ_m^a bağı (m ile a burada buluşur)
+            parametre → hüküm  : Σ_a θ^a T^a, üreteç hükme vurur
+            parametre → ancilla: iş alanı genliği taşır
+
+        Dört bağın dördü de kontrollü **reel** dönmedir; hiçbiri okumaz,
+        hiçbiri çökertmez. Bölgeler kapalıysa (``bolge_ac=False``) bu
+        usul sessizce hiçbir şey yapmaz -- ve ``eklem_olcusu`` o zaman
+        kırmızı yanar; ikisi birbirini denetler.
+
+        ``teta`` verilmezse açılar sabit ``olcek``tir; öğrenilen θ ile
+        çağrılması matluptur (``kulli_egitim`` oradan besler).
+
+        **``olcek`` varsayılanı ölçümle kondu, elle değil.** Dört açı
+        (0,05 / 0,15 / 0,35 / 0,785) üç bağda (χ = 8/16/32) koşuldu::
+
+            χ=8   : S her açıda tam ln 8;  kesme 0,087 → 2,158
+            χ=16  : S her açıda tam ln 16; kesme 0,184 → 2,620
+            χ=32  : S 1,384 → 3,083;       kesme 0,258 → 1,987
+
+        Yani χ ≤ 16'da büyük açı **ölçülebilir hiçbir eklem kazancı
+        vermiyor** (entropi zaten tavanda), fakat kesmeyi 25 kat
+        artırıyor. Bedava olmayan bir şey karşılığında hiçbir şey almak
+        israftır; onun için en küçük açı varsayılandır.
+        """
+        r: Dict[str, float] = {"kapı": 0.0, "kesme": 0.0}
+        if not (self.bolge_var("meleke") and self.bolge_var("parametre")):
+            return r
+        nm = self.taksimat.bolge["meleke"][1]
+        npar = self.taksimat.bolge["parametre"][1]
+        t = (np.full(nm * npar, float(olcek)) if teta is None
+             else devret(np.asarray(teta, float).ravel(), nm * npar))
+        k0 = self.iz.kesme
+
+        # (0) Parametre yazmacı SÜPERPOZİSYONDA olmalıdır. Bu bir süs
+        #     değil, ceridenin bütün iddiasının şartıdır: "2²¹ parametre
+        #     kübiti" bir θ değerini değil, **bütün θ'ların üst üste
+        #     binmiş hâlini" taşır; QSVT Gibbs süzgeci o süperpozisyon
+        #     üzerinde çalışır. |0⟩'da bırakılırsa kontrollü dönmelerin
+        #     hepsi kimlik olur ve bölge ölü doğar -- eklem ölçüsü de
+        #     bunu kırmızı gösterirdi.
+        H = hadamard().astype(np.float64)
+        self.tek_yigin([self.parametre(a) for a in range(npar)], H)
+        # (1) veri → meleke: satırın yerel hükmü uzvu uyandırır.
+        for i in range(self.n_satir):
+            self.uzak_cift(self.yerel(i), self.meleke_kubiti(i),
+                           kontrollu_donme(float(t[i % t.size])))
+        # (2) meleke → parametre: θ_m^a. İki indis burada buluşur.
+        for m in range(nm):
+            for a in range(npar):
+                self.uzak_cift(self.meleke_kubiti(m), self.parametre(a),
+                               kontrollu_donme(float(t[m * npar + a])))
+        # (3) parametre → hüküm: Σ_a θ^a T^a hükme vurur. Hüküm bloğu
+        #     parametrenin SOLUNDA olduğu için kontrol sağdadır; kapı
+        #     simetrik olmadığından ``uzak_cift`` düzeni kendi korur.
+        for a in range(npar):
+            self.uzak_cift(self.parametre(a),
+                           self.kulli("mizan", a),
+                           kontrollu_donme(float(t[a % t.size])))
+        # (4) parametre → ancilla: iş alanı. Yoksa atlanır.
+        if self.bolge_var("ancilla"):
+            na = self.taksimat.bolge["ancilla"][1]
+            for a in range(min(npar, na)):
+                self.uzak_cift(self.parametre(a), self.ancilla(a),
+                               kontrollu_donme(float(t[a % t.size])))
+        r["kesme"] = float(self.iz.kesme - k0)
+        r["kapı"] = float(self.n_satir + nm * npar + npar
+                          + (min(npar, self.taksimat.bolge["ancilla"][1])
+                             if self.bolge_var("ancilla") else 0))
+        return r
 
     # -----------------------------------------------------------------
     #  Kodlama

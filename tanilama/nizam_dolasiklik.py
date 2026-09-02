@@ -92,7 +92,26 @@ def _tek_kosu(acik: bool, chi: int, tohum: int, n: int, d_in: int,
         E = rng.normal(size=(n, d_in))
         nefs = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum))
         q = nefs.idrak_et(E)
-        e = q.y.dolasiklik_entropisi()
+        # **ÖLÇÜ ALETİ DÜZELTİLDİ (kütük H173).** Evvelce burada
+        # ``dolasiklik_entropisi()`` varsayılanıyla çağrılıyordu: kesit
+        # ``n//2``, pencere 24. İkisi de zincirin UZUNLUĞUNA bağlıdır,
+        # ölçülmek istenen şeye değil. Ceride bölgeleri eklenip zincir
+        # 67'den 116'ya çıkınca kesit 33'ten 58'e kaydı, pencere de
+        # tamamen hüküm bloğunun içine düştü -- ve ``dolasiklik_entropisi``
+        # pencerenin ilk yuvasını sol uçmuş gibi aldığı için okuma
+        # **sahte** oldu: aynı fizikî durum için nizam açıkken 0,0802
+        # (bölgesiz) ve 2,0393 (bölgeli) okundu.
+        #
+        # Doğrusu adı olan bir kesitte, pencereyi zincirin başına kadar
+        # açarak ölçmektir. Netice o zaman bölgelerden bağımsız ve
+        # **daha keskin** çıkar; H115'in hükmü zayıflamaz, kuvvetlenir::
+        #
+        #     nizam kapalı : S = 2,0794 = ln 8  (schmidt 8, doygun)
+        #     nizam açık   : S = 1,3863 = ln 4  (schmidt 4, doygunluk ½)
+        #
+        # ve bu iki sayı bölge açık/kapalı **birebir aynıdır**.
+        kesit = q.taksimat.kesitler().get("veri|hukum", q.n // 2)
+        e = q.y.dolasiklik_entropisi(kesit=int(kesit), pencere=int(kesit))
         P = _beyan(q)
 
         # --- GİRDİ HASSASİYETİ -- bu ölçütün hakemi budur.
