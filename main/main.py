@@ -129,7 +129,8 @@ def baglam_cikar(g: np.ndarray, yaricap: int = 1) -> np.ndarray:
     return np.stack(kat, axis=2)
 
 
-def _eksen_adaylari(noktalar: Sequence[Tuple[int, int, int]]
+def _eksen_adaylari(noktalar: Sequence[Tuple[int, int, int]],
+                    kendi: str = "H"
                     ) -> List[Tuple[Fraction, Fraction, Fraction]]:
     """Tek eksende ``y = p·H + q·W + c`` kanununun **bütün** uyan çözümleri.
 
@@ -156,15 +157,33 @@ def _eksen_adaylari(noktalar: Sequence[Tuple[int, int, int]]
     Ws = [int(w) for _h, w, _y in noktalar]
     ys = [int(y) for _h, _w, y in noktalar]
     sifir = Fraction(0)
-    adaylar: List[Tuple[Fraction, Fraction, Fraction]] = []
+    kendi_once: List[Tuple[Fraction, Fraction, Fraction]] = []
+    capraz: List[Tuple[Fraction, Fraction, Fraction]] = []
+    sabitler: List[Tuple[Fraction, Fraction, Fraction]] = []
     oh = {Fraction(y, h) for h, y in zip(Hs, ys) if h}
     if len(oh) == 1:
-        adaylar.append((next(iter(oh)), sifir, sifir))
+        (kendi_once if kendi == "H" else capraz).append(
+            (next(iter(oh)), sifir, sifir))
     ow = {Fraction(y, w) for w, y in zip(Ws, ys) if w}
     if len(ow) == 1:
-        adaylar.append((sifir, next(iter(ow)), sifir))
+        (kendi_once if kendi == "W" else capraz).append(
+            (sifir, next(iter(ow)), sifir))
     if len(set(ys)) == 1:
-        adaylar.append((sifir, sifir, Fraction(ys[0])))
+        sabitler.append((sifir, sifir, Fraction(ys[0])))
+    # **SIRA KEYFÎ DEĞİL, İDDİANIN KUVVETİNE GÖRE (ölçülerek düzeltildi).**
+    # Evvelce her iki eksende de önce ``p·H`` deneniyordu; yani genişlik
+    # kanunu için ``W→H`` öne geçiyordu. Kare şahitlerde bütün adaylar
+    # ayırt edilemez olduğu için ilk bulunan alınıyordu ve ölçüldü:
+    # ``3dc255db``de doğru kanun ``(12,13)`` adaylar arasında DURDUĞU
+    # HÂLDE ``W→H`` seçilip ``(12,12)`` denmişti.
+    #
+    # Doğru sıra şudur: bir eksenin kanunu **evvelâ kendi ekseninden**
+    # aranır; çapraz bağ (devrik) eksenlerin yer değiştirdiğini iddia
+    # eder ve bu daha kuvvetli bir iddiadır. Sabit ise en kuvvetlisidir:
+    # *"girdinin ebadı alâkasızdır"* der. Alâkasızlık iddiası delil
+    # ister; delilsiz hâlde en zayıf iddia öne alınır.
+    adaylar: List[Tuple[Fraction, Fraction, Fraction]] = \
+        kendi_once + capraz + sabitler
     for i in range(len(Hs)):
         for j in range(i + 1, len(Hs)):
             if Hs[i] == Hs[j]:
@@ -244,8 +263,8 @@ def hendese_adaylari(ciftler: Sequence[Tuple[np.ndarray, np.ndarray]]
         sh.append((H, W, int(c.shape[0])))
         sw.append((H, W, int(c.shape[1])))
     return [Hendese(ph, qh, ch, pw, qw, cw)
-            for ph, qh, ch in _eksen_adaylari(sh)
-            for pw, qw, cw in _eksen_adaylari(sw)]
+            for ph, qh, ch in _eksen_adaylari(sh, "H")
+            for pw, qw, cw in _eksen_adaylari(sw, "W")]
 
 
 def _d4(g: np.ndarray, ad: str) -> np.ndarray:
