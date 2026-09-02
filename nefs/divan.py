@@ -181,6 +181,8 @@ import nefs.akit  # [uzuv] Kademe 1 -- **envanter ve arayüz akdi**
 import nefs.beyan  # [uzuv] 𝒪₃₇–𝒪₄₁: beyan -- hükmün dışarıya çıkışı
 import nefs.idrak  # [uzuv] 𝒪₁–𝒪₁₀: duyudan mahiyete. Ham sinyalin suret, soyutlama ve mana kazandığı
 import nefs.ihtimal  # [uzuv] İhtimal uzayı: **çıktı ızgarasının bütün muhtemel hâlleri, süperpozisyonda**
+import nefs.ikiz  # [hakem] İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil
+import nefs.ogda  # [hakem] OGDA -- kaybın min-max olduğunun farkedilmesi ve doğru çözücüsü
 import nefs.kaide  # [uzuv] KÂİDE = İSPAT YAPISI -- H85'in fiilî karşılığı, ``mizan`` ve ``fitrat``ın
 import nefs.kod_uzayi  # [uzuv] MANTIK KOD UZAYI -- hüküm bloğunun **stabilizer** temsili
 import nefs.kopru  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
@@ -435,6 +437,10 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '𝒪₁–𝒪₁₀: duyudan mahiyete. Ham sinyalin suret, soyutlama ve mana kazandığı'),
     ('nefs.ihtimal', 'uzuv',
      'İhtimal uzayı: **çıktı ızgarasının bütün muhtemel hâlleri, süperpozisyonda**'),
+    ('nefs.ikiz', 'hakem',
+     'İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil'),
+    ('nefs.ogda', 'hakem',
+     'OGDA -- kaybın min-max olduğunun farkedilmesi ve doğru çözücüsü'),
     ('nefs.kaide', 'uzuv',
      "KÂİDE = İSPAT YAPISI -- H85'in fiilî karşılığı, ``mizan`` ve ``fitrat``ın"),
     ('nefs.kod_uzayi', 'uzuv',

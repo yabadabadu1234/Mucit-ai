@@ -5246,3 +5246,73 @@ istikamet gösterir, kat'î hüküm vermez.
 **Usul kaydı:** ceride bir hükmü emrettiğinde onu **kurmak**
 mecburidir; **varsayılan yapmak** ise ölçüme bağlıdır. İkisini
 karıştırmak, emri yerine getirmek değil emre sığınmak olurdu.
+
+## H170 — OGDA: KAYIP BAŞTAN BERİ BİR OYUNMUŞ (ceridenin hükmü; teşhis alındı, çözücü alınmadı)
+
+Ceride OGDA / varyasyonel eşitsizlik emrediyor. İlk bakışta bu mimaride
+min-max **yok** görünür ve zorla icat etmek H92'nin yasakladığı
+*"yedeğe bağlamak"* olurdu. Fakat var, ve kütüğün kendi içindeydi.
+
+H145'te toplam ortalamadan yumuşak azamîye çevrilmişti. Bunun **tam
+olarak** şu oyunun değeri olduğu bir Fenchel özdeşliğidir::
+
+    ℒ(p) = (1/β)·log Σ exp(β·e_i(p))
+         = max_{w∈Δ} [ ⟨w, e(p)⟩ + H(w)/β ]
+
+    ⇒  padişahın eğitimi  =  min_p max_w [ ⟨w,e(p)⟩ + H(w)/β ]
+
+**Sayısal olarak sınandı: iki taraf arasındaki fark ``0,000e+00``.**
+Yani bu bir benzetme değil, bir özdeşlik. Eğitim baştan beri bir
+min-max oyunuymuş ve ben onu tek taraflı bir asgarîleme sanıyordum.
+
+``β``nın manası da değişiyor: bir kalibrasyon sabiti değil,
+**düşmanın ne kadar düzenlendiği**. H164/H169'da ona ``√n`` diye bir
+sezgi koymuştum ve ölçüm çürütmüştü; oyun görüşü o suali sezgiden
+çıkarıp nazariyeye taşıyor.
+
+### ÇÖZÜCÜ OLARAK FAYDASI ÖLÇÜLDÜ VE ÇIKMADI
+
+    hareketli hedefte 60 tur
+    ilk 10 turun sapması : 0,0888
+    son 10 turun sapması : 0,1616      ← BÜYÜYOR
+    iyimserlik kaldırılınca (sıradan GDA) : 0,1641
+    nispet : 1,016  → iyimserliğin kazancı **%1,6**, yani fiilen yok
+
+Sebep bellidir ve kusur değildir: ``w`` tarafının en iyisi zaten
+**kapalı formda** biliniyor (yukarıdaki özdeşlik). Kapalı formu olan
+bir problemi yürüyerek çözmenin kazanacağı bir şey yoktur.
+
+**O hâlde ceridenin OGDA hükmünden alınan şey çözücü değil TEŞHİStir**
+ve alınan da odur. OGDA'nın hakikaten lâzım olacağı yer ``w`` ile
+``p``nin **beraber** yürütüldüğü hâldir -- orada ``w``nin kapalı formu
+``p`` değiştikçe geçersizleşir. O hâl henüz kurulmadı ve kurulduğu
+iddia edilmiyor.
+
+**İddia edilmeyen:** OGDA'nın yakınsama teoremi dışbükey-içbükey
+oyunlar içindir; burada ``e(p)`` ``p``de dışbükey **değildir**. Teorem
+yalnız ``w`` tarafına tatbik edilir, oyunun tamamına değil.
+
+## H171 — ARC ÖLÇÜMÜ: 12 → 13 TAM ÇÖZÜM, fakat İSABET %100 → %92,9
+
+Bu turun bütün tashihlerinden sonra ARC-AGI-2 training'in ilk 120
+görevi yeniden ölçüldü. **İki ölçüt yan yana** (kütük H47):
+
+    ölçü                    H136'da    ŞİMDİ
+    TAM ÇÖZDÜ               12         **13**  (%10,8)
+    yanlış cevap             0         **1**
+    cevap verince isabet   %100        %92,9
+    sustu                  104         106
+
+**Kazanç da kayıp da gerçektir ve ikisi de yazılıyor.** ``H_S``
+iskelet ailesi (H161) bir görev kazandırdı; fakat bir yanlış cevap da
+belirdi, yani bırak-birini kapısı (H136) bir ezberi geçirdi. Yalnız
+"13 oldu" demek, ikinci ölçütün gördüğünü örtmek olurdu.
+
+Darboğaz **değişmedi ve ölçüsü aynı**: 120 görevin **105**'inde hâlâ
+*"kaide bulunamadı"*. H135'in hükmü yerinde duruyor -- mesele muhakeme
+çevriminde değil, **kaide cebrinin darlığında**dır. Bu turda o cebre
+bir aile eklendi (iskelet) ve bir görev getirdi; H138'in aritmetiği
+(*"her yeni aile ortalama bir görev"*) bir kere daha doğrulanmış oldu
+ve o aritmetik **hedefin yolu değildir**.
+
+Sükût nizamı ayakta: 106 görevde susuldu, 105'inde sebep yazılı.
