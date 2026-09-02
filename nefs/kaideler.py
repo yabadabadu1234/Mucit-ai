@@ -278,13 +278,19 @@ def ogrenilen_aileler(ciftler: Sequence[Tuple[Izgara, Izgara]]
     # dosyalar beylik görünür. Fiilen koşuyor olmaları bunu düzeltmez --
     # ölçüyü kör bırakan bir bağ, bağ sayılmamalıdır.
     from .hucre import hucre_kaideleri
+    from .iskelet import iskelet_kaideleri
     from .nesne import nesne_kaideleri
     from .secici import carpim_kaideleri
     from .tamamlama import tamamlama_kaideleri
 
     out: List[Kaide] = []
+    # ``iskelet_kaideleri`` -- kütük H91'in ``H_S`` rüknü (H161).
+    # *"Şu hücreleri değiştir, ötekilere dokunma"* cümlesi bu cebirde
+    # kurulamıyordu: bütün atomlar ızgaranın TAMAMINA etki ediyordu.
+    # Burada atom olarak girdiği için **terkibe de katılır** -- asıl
+    # kıymeti odur (tek başına 2/120, terkiple ölçülecek).
     for f in (nesne_kaideleri, hucre_kaideleri, tamamlama_kaideleri,
-              carpim_kaideleri):
+              carpim_kaideleri, iskelet_kaideleri):
         try:
             out += list(f(ciftler))
         except Exception:                                # noqa: BLE001

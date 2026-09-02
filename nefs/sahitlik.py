@@ -59,17 +59,22 @@ __all__ = ["kanal_degerleri", "kanal_bagimsizligi", "rapor"]
 
 
 def kanal_degerleri(q) -> Tuple[np.ndarray, np.ndarray]:
-    """𝒪₂₉'un iki "kanalı": her satırın ilk ve son veri kübiti.
+    """𝒪₂₉'un iki "kanalı": her satırın **ham duyusu** ve **hükmü**.
 
     Değerler **hakikî** indirgenmiş yoğunluktan okunur (H121). Eski
     ``yuva_yogunluklari`` ayara bağlıydı; onunla ölçülen bir bağıntı
     fizikî bir şey söylemezdi.
+
+    **KANAL ÇİFTİ DEĞİŞTİ (kütük H162).** Evvelce satırın ilk ve son
+    **veri** kübitiydi; ölçüldü ve %19 fazla saydırıyordu (H128).
+    Beş aday yarıştırıldı ve ``veri_vs_yerel`` iki ölçütte birden
+    kazandı. Bu fonksiyon 𝒪₂₉'un fiilen kullandığı çifti okur; ayrı
+    düşerlerse ölçüm melekeyi değil kendini ölçmüş olurdu.
     """
-    k = q.ayar.satir_kubiti
     ilk = [q.veri(i, 0) for i in range(q.n_satir)]
-    son = [q.veri(i, k - 1) for i in range(q.n_satir)]
+    hukum = [q.yerel(i) for i in range(q.n_satir)]
     R1 = np.asarray(q.y.tekil_yogunluklar(ilk), float)[0][:, 1, 1]
-    R2 = np.asarray(q.y.tekil_yogunluklar(son), float)[0][:, 1, 1]
+    R2 = np.asarray(q.y.tekil_yogunluklar(hukum), float)[0][:, 1, 1]
     return R1, R2
 
 

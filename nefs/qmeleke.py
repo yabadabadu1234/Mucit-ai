@@ -932,21 +932,56 @@ class QTashih(QMeleke):
 class QTeyit(QMeleke):
     """𝒪₂₉ Teyit -- **bağımsız** ikinci kanal.
 
-    Bir satırın ilk kübiti ile son kübiti ayrı kanallardır. İkisi
-    dolaştırılınca uyuşma yapıcı, uyuşmazlık yıkıcı girişim verir.
-    Bağımlı iki kanalın uyuşması yeni bilgi değildir; burada kanallar
-    satırın iki ucundan alınır ki mümkün olduğunca ayrı olsunlar.
+    İki kanal dolaştırılınca uyuşma yapıcı, uyuşmazlık yıkıcı girişim
+    verir. Bağımlı iki kanalın uyuşması **yeni bilgi değildir**; o
+    hâlde kanalların mümkün olduğunca ayrı olması şarttır.
+
+    **KANAL ÇİFTİ ELLE DEĞİL ÖLÇÜMLE SEÇİLDİ (kütük H162, H128'in
+    borcu).** Evvelce *"satırın iki ucu"* alınıyordu ve bu bir
+    **tedbir**di, ölçülmemişti. H128'de ölçüldü: fazla sayma oranı
+    ``1,2091``, muteber şahit sayısı 2 değil **1,65** -- yani 𝒪₂₉
+    delili yaklaşık **%19 şişiriyordu**. Kusur küçüktü fakat sıfır
+    değildi ve borç olarak yazılmıştı.
+
+    Beş aday çift aynı ölçüyle yarıştırıldı (12 koşu, 8 satır)::
+
+        usul              Pearson    fazla sayma   muteber şahit
+        satır_iki_ucu     +0,1643      1,2091          1,6541   ← evvelki
+        veri_vs_yerel     +0,0826      1,1675          1,7130   ← seçilen
+        çapraz_satır      +0,2177      1,1315          1,7675
+        yerel_vs_yerel    −0,0916      1,2302          1,6257
+        veri_ortası       −0,0300      1,1883          1,6830
+
+    ``veri_vs_yerel`` seçildi ve sebebi **iki ölçütte birden**
+    üstünlüğüdür: fazla saymada da (1,2091 → 1,1675) Pearson'da da
+    (0,164 → 0,083) yürürlükteki çifti yeniyor. ``çapraz_satır`` fazla
+    saymada daha iyidir fakat Pearson'da **kötüdür**; onu seçmek,
+    hükmü destekleyen ölçütü seçmek olurdu ve kütük H47 tam olarak
+    bunu yasaklar (*"ölçütü ölçen koyarsa kendini kandırır"*).
+
+    Kazanç mütevazıdır ve büyütülmüyor: fazla sayma %19'dan **%17**'ye
+    iniyor. Kanallar hâlâ tam bağımsız değildir (bağımsız üç şahitte
+    kıyas tabanı 1,05) ve bu **açıkça** duruyor.
+
+    Manası da evvelkinden sağlamdır: ham duyu (veri kübiti) ile o satır
+    hakkında **verilmiş hüküm** (yerel kübit) iki ayrı cinstendir; aynı
+    satırın iki ucu ise aynı cinsten iki noktadır.
     """
     no, ad = 29, "Teyit"
-    SINIF, CHI = "koruyucu", 8   # teyit: satırın iki ucu
+    SINIF, CHI = "koruyucu", 8   # teyit: veri ile yerel hüküm
 
     def uygula(self, q, p):
         k = q.ayar.satir_kubiti
         if k < 2:
             return
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
+        # Kanal 1: satırın ilk veri kübiti (ham duyu).
+        # Kanal 2: o satırın yerel hüküm kübiti (verilmiş hüküm).
+        # İkisi zincirde bitişik değildir (aralarında ``k−1`` kübit
+        # vardır), o yüzden ``uzak_cift`` yolu seçer -- takas mı MPO mu,
+        # kararı ``mpo_esigi`` verir (H80: eşiği ölçüm koydu).
         for i in range(q.n_satir):
-            q.uzak_cift(q.veri(i, 0), q.veri(i, k - 1), G)
+            q.uzak_cift(q.veri(i, 0), q.yerel(i), G)
 
 
 @qkaydet

@@ -4800,3 +4800,160 @@ müdahale ister. Bu, kütüğe bir usul kaidesi olarak yazılıyor.
 H122'de işaret 5 ve 6 satır arasında ``+0,77``/``−0,63`` diye
 takla atıyordu; şimdi ikisinde de menfî (``−0,026``, ``−0,095``).
 Küçüktür ve büyük olduğu iddia edilmiyor -- fakat **işareti kararlı**.
+
+## H160 — H156'NIN BORCU KAPANDI: KADEMELER ARTIK PARAMETRELİ (fakat kayba girmesi AYRI bir mesele)
+
+H156'da şöyle yazmıştım: *"Kademelerin eğitilebilmesi için kendi
+parametrelerinin olması ve o parametrelerin `nefs/talim.py`ye verilmesi
+gerekir -- henüz yok ve iddia edilmiyor."*
+
+**İki şey birden gerekiyormuş; yalnız parametre koymak yetmezdi.**
+
+### 1. Parametre
+
+Kademelerin içindeki elle konmuş sayılar -- beyan eşiği ``0,55``,
+müphemlik cezası ``0,5``, tevâfuk ``0,6``, muhakeme derinliği ``2``,
+nesne eşiği, hüküm ağırlığı tabanı -- artık ``QParametre``nin
+**melekelerin açılarıyla aynı düz vektöründen** alınıyor. Böylece
+`nefs/talim.py` onları hiçbir yeni tertibe lüzum kalmadan eğitir;
+kullanıcı hükmü buydu: *"öğrenilecek hangi parametre olursa olsun
+istisnası olmaksızın o mimariyi kullan."*
+
+Ham parametre sıfırken ``tanh(0) = 0`` ve haritalama **tam olarak
+varsayılanı** verir: eğitilmemiş model, H156'dan evvelki modelin
+birebir aynısıdır. Yeni tertip, eskisini sessizce değiştirerek işe
+başlamaz.
+
+### 2. Ölçü -- ve niçin parametre TEK BAŞINA TEHLİKELİYDİ
+
+Eski kademe ölçüleri **faaliyet** ölçüsüydü::
+
+    kademe.muhakeme = 1 eğer bir namzet bulunduysa
+    kademe.beyan    = 1 eğer konuşulduysa
+    kademe.tasdik   = ilan edilen yakîn
+
+Üçü de **oynanabilir**. Parametre verilseydi eğitim şunu öğrenirdi:
+*eşiği sıfıra çek, daima konuş, yakîni yüksek ilan et.* Bu tam olarak
+H45'te ölçülmüş felâkettir: *"sükût 140 → 0; model susmamayı öğrendi,
+fakat bilmeden konuşmayı öğrendi."* H90'ın şartıyla: kırmızı yanamayan
+ölçüt, ölçüt değildir.
+
+Ölçüler **bırak-birini** üzerine kuruldu: son gösterim çifti saklanır,
+boru hattı kalanlardan koşar, saklanan çiftin çıktısı hakikat sayılır.
+Notlar `mizan/munazara.py`nin mertebe cetvelinden okunur, elle
+konmamıştır::
+
+    doğru bildi    → 1,00  yakîn
+    sustu          → 0,25  şek     (iki taraf müsâvî)
+    yanlış söyledi → 0,00  vehim   (mercûh taraf)
+
+Sıralamanın teşviki tam da matluptur: eşiği düşürüp hep konuşmak,
+ancak **dörtte birden fazla** isabet ediyorsan kazandırır. Susmak
+yanlıştan iyidir, doğrudan kötüdür.
+
+``kademe.tasdik`` artık bir **ayar** (calibration) ölçüsüdür:
+``1 − |ilan edilen yakîn − fiilî isabet|``. Hem fazla iddiayı hem eksik
+iddiayı cezalandırır; modelin *"bilmediğini bilmesi"* şartı (H10)
+burada sayıya dönüyor. ``kademe.muhakeme``/``kademe.ispat`` ise
+**aramanın isabetine** çevrildi (ayakta kalan / aranan): yüz aday üretip
+doksan dokuzu elenen arama, tek aday üretip onu ayakta tutandan
+kötüdür. Derinliği sonuna kadar açmanın bedeli buradadır.
+
+### ÖLÇÜLDÜ -- ve borcun harfi kapandı, ruhu KAPANMADI
+
+    p=None (varsayılan)  : kademe ölçüleri SABİT (H156'daki hâl)
+    p ile, 4 tohum       : 0,6239 / 0,7463 / 0,7463 / 0,6240
+                           → yayılım 0,12   ← artık parametreye CEVAP VERİYOR
+
+Yani H156'nın *"kademe ölçüleri her parametrede aynı sayıdır"* teşhisi
+**artık geçerli değil**. Fakat kademeleri küllî kayba koymak yine de
+işaret kaybettiriyor ve bu **gizlenmiyor**:
+
+    kademesiz : yayılım 0,0712    bir kayıp çağrısı ~2 sn
+    kademeli  : yayılım 0,0420    bir kayıp çağrısı **71 sn**
+
+İki bedel birden: işaret **%41 düşüyor**, maliyet **35 kat** artıyor.
+Sebep H154/H156'nın aynı deseninin üçüncü tekrarıdır -- yumuşak azamî,
+**en zayıf** uzva oturur; kademe ölçüleri (çoğu görevde ``sükût`` =
+0,25) neredeyse sabit bir taban kuruyor ve aramayı yine körleştiriyor.
+
+**Dürüst hüküm:** parametre borcu kapandı, **kayba sokma** kararı
+ölçüme bağlıdır ve ölçüm şu an aleyhtedir. ``kademe_gorevleri``
+verilmezse kademeler kayba girmez ve varsayılan yol budur; verilince
+girer ve bedeli yukarıdadır. Kapatılamayan bir tedbirin faydası
+ölçülemez (H90) -- burada tedbir **açılabilir** olduğu için bedeli de
+ölçülebildi.
+
+## H161 — H91'İN `H_S` RÜKNÜ KURULDU: kâide artık NEREYE dokunduğunu da söylüyor
+
+H91 beş rükün saymış, dördünün karşılığını göstermiş, ``H_S``
+(iskelet / varlık sahası) için *"eksiktir, borç olarak yazıldı"*
+demişti. H98 tekrar zabıtlamıştı: *"Kurulan yalnız ebat rüknüdür."*
+
+**Niçin mühim -- ölçülmüş darboğaz.** H135: 120 görevin 103'ünde
+"kaide bulunamadı". H138: çözülemeyen 79 aynı şekilli görevin 48'inde
+bir kaide hiç dokunmamaktan iyi netice veriyor, fakat **hiçbirinde tam
+uymuyor**. Sebep, `nefs/kaideler.py`nin cebrinde **ifade edilemeyen**
+bir desen sınıfıdır: oradaki bütün atomlar ızgaranın **tamamına** etki
+eder. ARC'nin en sık cümlesi ise şudur ve kurulamıyordu:
+
+> *"Şu hücreleri değiştir, ötekilere dokunma."*
+
+### Kurulan iki taraf
+
+* **Klasik mîzân** (`nefs/kaide.py`): ``IskeletKaidesi`` +
+  ``ISKELET_KUTUGU``; ``Kaide`` artık üç rükünlü (ebat/iskelet/renk) ve
+  iskeletin dokunmadığı yer girdiden **aynen** geçiyor.
+* **Çıkarım hattı** (`nefs/iskelet.py`): maske katalogdan seçilir,
+  ``çıktı ≠ girdi`` ile **tam** yüzleşir, sonra o iskelete ne konduğu
+  öğrenilir (sabit renk yahut renk eşlemesi). ``ogrenilen_aileler``e
+  girdiği için hem bırak-birini kapısından geçer hem **terkibe katılır**.
+
+### Ölçütün kırmızı ve yeşil yandığı GÖSTERİLDİ (H90)
+
+    KIRMIZI: yalnız (0,0) değişen bir şahitte 8 iskeletin 8'i de düştü
+    YEŞİL  : "her şey sıfır olsun" görevinde YALNIZ ``sıfır_hariç``
+             tuttu ve makamı **Zann-ı gālib**e çıkardı
+
+İkincisi ayrıca H158'in beşinci mertebesinin **ilk fiilî işidir**:
+bütün misaller tutuyor, rükünlerin ikisi ispatlanmış, biri eksik --
+bu "zan" değil "kuvvetli zan"dır.
+
+### Tek başına ölçüldü: dar fakat KESİN
+
+    ARC-AGI-2 training 120 görev
+    kâide ÜRETEN görev       : 2
+    sınamayı TAM çözen görev : 2      ← ürettiğinin hepsi doğru
+
+Yani aile **isabetlidir**, fakat dardır. Asıl kıymeti terkiptedir ve
+o ayrıca ölçülüyor; şimdiden bir şey iddia edilmiyor.
+
+## H162 — 𝒪₂₉'UN KANAL ÇİFTİ ELLE DEĞİL ÖLÇÜMLE SEÇİLDİ (H128'in borcu)
+
+H128'de ölçülmüştü: 𝒪₂₉ Teyit'in *"satırın iki ucu ayrı kanaldır"*
+tedbiri **kısmen** tutuyor -- fazla sayma oranı ``1,2091``, muteber
+şahit sayısı 2 değil **1,65**; yani delil yaklaşık **%19 şişiyor**.
+Kusur küçüktü fakat sıfır değildi ve borç yazılmıştı.
+
+Beş aday çift aynı ölçüyle yarıştırıldı (12 koşu, 8 satır)::
+
+    usul              Pearson    fazla sayma   muteber şahit
+    satır_iki_ucu     +0,1643      1,2091          1,6541   ← evvelki
+    veri_vs_yerel     +0,0826      1,1675          1,7130   ← SEÇİLEN
+    çapraz_satır      +0,2177      1,1315          1,7675
+    yerel_vs_yerel    −0,0916      1,2302          1,6257
+    veri_ortası       −0,0300      1,1883          1,6830
+
+``veri_vs_yerel`` seçildi çünkü **iki ölçütte birden** yürürlükteki
+çifti yeniyor. ``çapraz_satır`` fazla saymada en iyidir fakat
+Pearson'da **kötüdür**; onu seçmek, hükmü destekleyen ölçütü seçmek
+olurdu ve H47 tam olarak bunu yasaklar: *"ölçütü ölçen koyarsa kendini
+kandırır."*
+
+Manası da evvelkinden sağlamdır: **ham duyu** (veri kübiti) ile o satır
+hakkında **verilmiş hüküm** (yerel kübit) iki ayrı cinstendir; aynı
+satırın iki ucu ise aynı cinsten iki noktadır.
+
+**Kazanç mütevazıdır ve büyütülmüyor:** fazla sayma %19'dan %17'ye
+iniyor. Kanallar hâlâ tam bağımsız değildir (bağımsız üç şahitte kıyas
+tabanı 1,05) ve bu açıkça duruyor.
