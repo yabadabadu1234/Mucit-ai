@@ -94,10 +94,37 @@ def nizami_ac(acik: bool = True) -> bool:
 #: kazanç **zincir uzadıkça büyüyor** -- nazariyenin dediği tam budur:
 #: zincir uzadıkça çevre diklikten daha çok sapar.
 #:
-#: Bedeli ölçüldü ve gizlenmiyor: süre ~2 kat. Meleke başına bir kere
-#: çağrılır (kapı başına değil), o yüzden akıştaki fiilî bedel daha
-#: azdır ve ayrıca ölçülür.
-KANONIK_ACIK: bool = True
+#: **VE BU ÖLÇÜM YANILTICIYDI -- VARSAYILAN ``False``** (kütük H167).
+#:
+#: Yukarıdaki tablo ``sadakat_log`` ile alınmıştı ve o sayı **ayara
+#: (gauge) bağlıdır**. Kanonik hâlde manası değişir: merkezden **uzak**
+#: bir bağda iki sol-izometrik tensörün kurduğu ``Θ``nın bütün tekil
+#: değerleri **eşittir** (``ΘᵀΘ = I``). O hâlde:
+#:
+#: * ``kalan/tam`` oranı ayarın değil **şeklin** hükmüne düşer, yani
+#:   ölçü kıyas edilemez hâle gelir;
+#: * daha kötüsü, orada kesmek fizikî olarak **en kötü** kesmedir --
+#:   Schmidt tayfı merkezde durur, merkez dışında her yön eşit
+#:   ağırlıklı görünür ve budama körlemesine olur.
+#:
+#: Akışta ölçüldü ve felâket: 𝒪₂₀ Teşbih'te durum normu
+#: ``4,411 → 1,888e-64``, ``log F = −inf``.
+#:
+#: **Bu, H80'in kendi dersinin tekrarıdır** ve benim hatamdır:
+#: *"Ayar-bağımlı bir büyüklükle hüküm vermek, ölçmeden hüküm
+#: vermekten farksızdır."* Aynı tuzağa ikinci defa düştüm.
+#:
+#: Kanoniklik **yanlış değildir**; yanlış olan onu merkezden uzakta
+#: kesmeyle beraber kullanmaktır. Doğrusu TEBD'in usulüdür: dikgenlik
+#: merkezi **kapıyla beraber yürür**. Bu yazmaçta kapılar yığın hâlinde
+#: (aynı anda birçok bağda) vurulduğu için -- ki o yığın 2 kat hız
+#: kazandırmıştı (H79/H80) -- tek bir merkez tutulamaz. İki tasarım
+#: birbiriyle çelişiyor ve bu **açık bir borçtur**, örtülmüyor.
+#:
+#: ``kanonikle`` ve ``kanonik_hata`` `main/yazmac.py`de **durmaya devam
+#: eder**: ölçüm âleti olarak doğrudur (H121'in iddiasını sayıyla
+#: gösterir) ve merkez takibi kurulduğunda hazırdır.
+KANONIK_ACIK: bool = False
 
 
 def kanoniklestir(acik: bool = True) -> bool:

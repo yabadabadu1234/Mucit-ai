@@ -302,6 +302,12 @@ class Yazmac:
         # dayanağıdır ve daima ÜST SINIR olarak tutulur -- şüphede
         # ``bag``a çekilir, yani asla olduğundan küçük gösterilmez.
         self.bag_ust = np.ones(self.n + 1, dtype=np.int64)
+        #: Kesme sınırındaki **en dar** nispî boşluk ve kaç kere kesildiği
+        #: (bkz. ``_cift_kapi_cekirdek``, kütük H168). Sıfıra yakın bir
+        #: boşluk, kayıp yüzeyinin orada türevlenemediğinin delilidir.
+        self._kesme_bosluk = float("inf")
+        self._kesme_buyukluk = float("inf")
+        self._kesme_sayisi = 0
         # **SADAKAT KÜTÜĞÜ (kütük H114).** Kesme telâfisi durumu normlu
         # tutar; o hâlde norm artık kaybı ölçmez. Kaybın hakikî ölçüsü,
         # kapı başına TUTULAN kesrin çarpımıdır::
@@ -569,6 +575,27 @@ class Yazmac:
         # baştan sona tektir (kullanıcı hükmü: "her yer float32").
         U, s, Vt = _kararli_svd(T)
         r = max(1, min(X, int(self.bag_tavan), s.shape[1]))
+        # **KESME SINIRINDAKİ BOŞLUK -- türevlenebilirliğin ölçüsü.**
+        # Budama bir SIRALAMADIR: ``s[r−1]`` ile ``s[r]`` kesiştiğinde
+        # tutulan altuzay sıçrar ve kayıp yüzeyi orada türevlenemez.
+        # Kütük H88 pürüzün şüphelisini SVD kesmesi diye bırakmış fakat
+        # ölçememişti; ölçülemeyişinin sebebi buydu -- boşluk yalnız
+        # kesme ANINDA görünür, kesildikten sonra tayfta yeri kalmaz.
+        # Sayı burada zabıtlanır ve `nefs/ikiz.py` onu okur.
+        if s.shape[1] > r:
+            ust = s[:, r - 1]
+            alt = s[:, r]
+            # **YALANCI YEŞİL TUZAĞI.** ``ust`` ve ``alt`` ikisi de
+            # sıfırsa boşluk ``0/1e-30 = 0`` çıkar ve "dejenere" gibi
+            # görünür -- hâlbuki orada kesilecek bir şey yoktur.
+            # Ölçüye ancak **fiilen atılan** bir ağırlık varken girer.
+            gecerli = ust > 1e-12 * (ust.max() + 1e-30)
+            if bool(np.any(gecerli)):
+                b = np.min(((ust - alt) / (ust + alt + 1e-30))[gecerli])
+                self._kesme_bosluk = min(self._kesme_bosluk, float(b))
+                self._kesme_buyukluk = min(
+                    self._kesme_buyukluk, float(np.min(ust[gecerli])))
+                self._kesme_sayisi += 1
         atilan = float(np.sum(s[:, r:] ** 2)) if s.shape[1] > r else 0.0
         toplam = float(np.sum(s ** 2)) + 1e-30
         Uk = U[:, :, :r]                        # (m, 2X, r)
@@ -1125,6 +1152,12 @@ class Yazmac:
                     axis=1)
         return {"entropi": float(H.mean()),
                 "entropi_yigin": H,
+                # Schmidt **değerleri** de dönülür: kesme bir sıralamadır
+                # ve o sıralamanın sınırındaki boşluk (``s[r−1] − s[r]``)
+                # yüzeyin türevlenebilirliğini tayin eder (bkz.
+                # `nefs/ikiz.py`). Yalnız sayısını dönmek o boşluğu
+                # görünmez kılıyordu.
+                "schmidt_degerleri": sv,
                 "schmidt": float(nz.sum(axis=1).mean()),
                 "azami_entropi": float(np.log(p.shape[1])),
                 "kesit": float(kesit),

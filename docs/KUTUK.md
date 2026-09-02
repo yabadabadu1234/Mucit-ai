@@ -5102,3 +5102,116 @@ ise dokunulmayan yön ebediyen dokunulmazdı. Fark, *"az bakmak"* ile
 Dokunulmayan blok **sayılır** (``dokunulmayan_blok``): tur sayısı blok
 sayısından azsa bazı bloklara hiç dokunulmaz ve bu sessizce
 geçilmez.
+
+## H167 — H163'ÜN NAKZI: KANONİKLEŞTİRMEYİ AYARA BAĞLI BİR ÖLÇÜYLE HÜKME BAĞLADIM
+
+H163'te Stiefel izometrisini kurup şöyle yazdım: *"24 kübitte
+``e^{10,9} ≈ 54 000`` kat daha çok genlik tutuluyor."* **O hüküm
+yanlıştır ve burada nakzediliyor.**
+
+### Kusur: ölçü ``sadakat_log``du ve o AYARA BAĞLIDIR
+
+Kanonik hâlde merkezden **uzak** bir bağda iki sol-izometrik tensörün
+kurduğu ``Θ``nın bütün tekil değerleri **eşittir** (``ΘᵀΘ = I``). O
+hâlde:
+
+* ``kalan/tam`` oranı ayarın değil **şeklin** hükmüne düşer -- iki hâl
+  arasında kıyas edilemez hâle gelir;
+* daha kötüsü, orada kesmek fizikî olarak **en kötü** kesmedir:
+  Schmidt tayfı merkezde durur, merkez dışında her yön eşit ağırlıklı
+  görünür ve budama körlemesine olur.
+
+Akışta ölçüldü ve felâket: 𝒪₂₀ Teşbih'te durum normu
+``4,411 → 1,888e-64``, ``log F = −inf``.
+
+### HAKEM ÖLÇÜ: tam (kesmesiz) dalgaya örtüşme
+
+Ayardan bağımsız tek ölçü, aynı devrenin kesmesiz koşusuyla
+yüzleştirmektir::
+
+    n=12, 30 kapı        örtüşme (kesmesiz dalgaya)     norm
+    χ=4   kanonik kapalı      0,044032                 5,99
+    χ=4   kanonik AÇIK        0,091987                 1,14
+    χ=8   kanonik kapalı      0,172728                 4,50
+    χ=8   kanonik AÇIK        0,124064                 1,06
+    χ=16  kanonik kapalı      0,245135                 2,52
+    χ=16  kanonik AÇIK        0,167706                 1,05
+
+**Netice karışıktır ve olduğu gibi yazılıyor:** χ=4'te kanoniklik
+iyileştiriyor (0,044 → 0,092), χ=8 ve χ=16'da **kötüleştiriyor**
+(0,173 → 0,124; 0,245 → 0,168). Norm sütunu da ayrı bir şey söylüyor:
+kanoniksiz koşuda norm şişiyor (5,99!), yani kesme telâfisi fazla
+ölçekliyor; kanonikle norm ~1,05'te kalıyor. Yani kanoniklik **defteri
+düzeltiyor, kesmeyi bozuyor**.
+
+### Künh ve borç
+
+Kanoniklik yanlış değildir; yanlış olan onu **merkezden uzakta kesmeyle
+beraber** kullanmaktır. Doğrusu TEBD'in usulüdür: dikgenlik merkezi
+kapıyla **beraber yürür**. Bu yazmaçta kapılar yığın hâlinde (aynı anda
+birçok bağda) vuruluyor -- ki o yığın 2 kat hız kazandırmıştı
+(H79/H80) -- ve tek bir merkez tutulamıyor. **İki tasarım birbiriyle
+çelişiyor ve bu açık bir borçtur.**
+
+``KANONIK_ACIK`` varsayılanı ``False`` yapıldı. ``kanonikle`` ve
+``kanonik_hata`` `main/yazmac.py`de **durmaya devam eder**: ölçüm âleti
+olarak doğrudur (H121'in iddiasını sayıyla gösteriyor: kanoniklik
+hatası kanonikleşmeden evvel ``1,689``, sonra ``7,1e-08``) ve merkez
+takibi kurulduğunda hazırdır.
+
+**Bu, H80'in kendi dersinin tekrarıdır ve benim hatamdır:** *"Ayar-
+bağımlı bir büyüklükle hüküm vermek, ölçmeden hüküm vermekten farksızdır."*
+Aynı tuzağa ikinci defa düştüm ve bu sefer hükmü **yayınladıktan sonra**
+yakaladım. Ders: yeni bir ölçü ile hüküm vermeden evvel o ölçünün
+ayardan bağımsız olup olmadığı sorulmalıdır.
+
+## H168 — H88'İN PÜRÜZ SUALİ NİHAYET CEVAPLANDI (ceridenin İkiz Sayılar hükmü)
+
+H88 şöyle bırakmıştı: *"yönlü türev h→0'da tam oturmuyor… en kuvvetli
+şüpheli SVD kesmesidir. Bu hipotez ölçülmektedir ve neticesi çıkınca
+yazılacaktır."* **Netice hiç yazılmadı** -- ve sebebi âletti: sonlu
+farkla ölçülen bir pürüz, pürüzün mü sonlu farkın mı olduğunu
+**ayıramaz**; ikisi de aynı belirtiyi verir.
+
+`nefs/ikiz.py` ikiz sayıları (dual numbers) kurdu: ``x = a + b·ε``,
+``ε² = 0``. Türev yaklaştırılmaz, **hesaplanır**; hiçbir ``h`` yok.
+
+### 1. kademe -- KAPI KURULUMU: pürüz orada DEĞİL (kesin)
+
+    tam türev (ikiz sayı)   : +0,79830183
+    sonlu farkın en iyisi   : h = 1e−06, fark 7,509e−11
+    → yüzey orada PÜRÜZSÜZ
+
+Yani ``exp(−2A)`` ile kurulan ``SO(4)`` kapısı açıya göre
+türevlenebilir ve sonlu fark orada tam türeve makine hassasiyetinde
+yaklaşıyor. H88'in gördüğü pürüz **kapıdan gelmiyor**.
+
+### 2. kademe -- KESME SINIRI: şüpheli destekleniyor
+
+Kesme bir **sıralamadır**: ``s[χ−1]`` ile ``s[χ]`` kesiştiğinde
+tutulan altuzay sıçrar ve fonksiyon türevlenemez. O boşluk yalnız
+**kesme anında** görünür (kesildikten sonra tayfta yeri kalmaz), o
+yüzden ölçü ``_cift_kapi_cekirdek``in içine kondu.
+
+    41 noktalık tarama, 41'inde de ölçüldü
+    en dar nispî boşluk   : 5,285e−03   (%0,5)
+    sınırdaki tekil değer : 6,119e−02   ← gürültü DEĞİL
+
+### YALANCI YEŞİL TUZAĞI -- ve nasıl kapandığı
+
+İlk ölçümde boşluk tam ``0,000e+00`` çıktı ve "dejenere" diye
+okunacaktı. **Yanlış olurdu:** ``s[χ−1]`` ile ``s[χ]``nın ikisi de
+sıfırsa oran da sıfır çıkar -- orada kesilecek bir şey yoktur.
+Sınırdaki tekil değerin **büyüklüğü** de ölçüye kondu; gürültü
+mertebesindeyse hüküm verilmiyor. Fren konunca hakikî boşluk %0,5–2,3
+çıktı: küçüktür fakat sıfır değildir.
+
+**Hüküm, haddiyle:** H88'in şüphelisi **ölçümle destekleniyor**.
+%0,5'lik bir boşluk küçük bir parametre değişikliğiyle kolayca aşılır
+ve aşıldığında tutulan altuzay yer değiştirir. Bu bir **ispat değil
+kuvvetli bir delildir**; "ispatlandı" denmiyor.
+
+**Ve bu, H163'ün nakzıyla (H167) birleşince mimarî bir hüküm veriyor:**
+kesme hem *en iyi değil* (kanonik olmadığı için) hem *türevlenemez*
+(sıralama sıçradığı için). Gradyansız aramanın (H3) bu mimaride bir
+tercih değil bir **zaruret** olduğunun sebebi budur.
