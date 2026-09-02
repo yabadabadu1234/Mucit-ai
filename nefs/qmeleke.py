@@ -997,16 +997,39 @@ class QTedebbur(QMeleke):
 class QSekZanYakin(QMeleke):
     """𝒪₃₂ Şek-Zan-Yakîn -- **makam bir faza kodlanır** (kullanıcı hükmü).
 
-    Makam iki kübittir: ``00=Şek, 01=Zan, 10=Yakîn, 11=Vehim``. Hiçbir
-    yerde okunmaz; **çevrilir**:
+    Makam **üç** kübitlik bir merdivendir (kütük H129'un kapanan
+    borcu): sekiz basamak, Gray sırasında, beş mertebeyi taşır. Hiçbir
+    yerde okunmaz; **çevrilir**.
 
-    * ``nakz`` uyanıksa makam Yakîn'den geri döndürülür -- tek karşı
-      örnek küllî önermeyi düşürür (H6). Kontrollü dönme bunu cebren
-      yapar: nakz ``|1⟩`` iken makam kübiti ters yöne döner.
-    * ``tenakuz`` uyanıksa makam Şek'e çekilir.
-    * ``tasdik`` uyanıksa makam Yakîn'e çekilir.
+    **Hangi kübit ne demek -- iddia değil, hesap.** Merdiven Gray
+    olduğu için her kübitin manası ``makam_kubit_manasi()`` ile fiilen
+    hesaplanır ve şu çıkar (sınama denetler)::
 
-    Üçü de kontrollü dönmedir, üçü de küllî blok içindedir. Makamın
+        makam₀ = 1  ⟺  üst yarı        (Zan ve üstü)  → hükmün CİHETİ
+        makam₁ = 1  ⟺  orta dörtlü     (Şek–Zan)      → KARARSIZLIK kuşağı
+        makam₂ = 1  ⟺  ara basamaklar                 → İNCE ayar
+
+    Kapılar buna göre yöneltilir:
+
+    * ``tasdik`` uyanıksa ``makam₀`` müsbet döner -- hüküm üst yarıya,
+      Zan ve üstüne çekilir.
+    * ``nakz`` uyanıksa ``makam₀`` menfî döner: tek karşı örnek küllî
+      önermeyi düşürür (H6), yani hükmü alt yarıya iter.
+    * ``tenakuz`` uyanıksa ``makam₁`` **müsbet** döner. Bu bir
+      tashihtir: evvelce menfî dönüyordu, yani çelişki makamı aşağı
+      itiyordu. Çelişkinin işi hükmü düşürmek değil **kararsızlaştırmak**
+      -- Şek–Zan kuşağına, kararın verilemediği yere çekmektir.
+    * ``tasdik₁`` (tahkikin ikinci yolu) ``makam₂``ye ince ayar verir:
+      iki müstakil yol aynı hükmü veriyorsa makam bir basamak yukarı
+      kayabilsin. ``zann-ı gālib`` ile ``yakîn`` arasındaki fark tam
+      olarak bu ince basamaktır; iki kübitle temsil edilemiyordu.
+
+    Sükût kapısı da ``makam₁``e taşındı: susmak, hükmün **düşük**
+    olmasından değil **kararsız** olmasından doğar. Evvelce ``makam₀``a
+    bağlıydı, yani model "hükmüm menfî" ile "hükmüm yok"u
+    ayıramıyordu.
+
+    Hepsi kontrollü dönmedir, hepsi küllî blok içindedir. Makamın
     sayısı ancak nihaî POVM'de doğar ve o da bir **dağılımdır** --
     "makam Zan'dır" diye sert bir hüküm hiç kurulmaz (H31).
     """
@@ -1014,16 +1037,26 @@ class QSekZanYakin(QMeleke):
     SINIF, CHI = "çözücü", 2   # makam kararı: ihtimaller daralır
 
     def uygula(self, q, p):
-        a = self.aci(p, 3, 0.6)
-        q.uzak_cift(q.kulli("nakz", 0), q.kulli("makam", 0),
-                    kontrollu_donme(-abs(float(a[0]))))
-        q.uzak_cift(q.kulli("tenakuz", 0), q.kulli("makam", 1),
-                    kontrollu_donme(-abs(float(a[1]))))
+        a = self.aci(p, 5, 0.6)
+        mk = q._alan["makam"][1]
+        # cihet: tasdik yukarı, nakz aşağı -- ikisi de EN ANLAMLI kübite
         q.uzak_cift(q.kulli("tasdik", 0), q.kulli("makam", 0),
-                    kontrollu_donme(abs(float(a[2]))))
-        # Sükût kapısı: makam Şek'e yakınsa sükût kübiti uyanır.
-        q.uzak_cift(q.kulli("makam", 0), q.kulli("sukut", 0),
-                    kontrollu_donme(-abs(float(a[0]))))
+                    kontrollu_donme(abs(float(a[0]))))
+        q.uzak_cift(q.kulli("nakz", 0), q.kulli("makam", 0),
+                    kontrollu_donme(-abs(float(a[1]))))
+        # kararsızlık: çelişki makamı orta kuşağa çeker
+        if mk >= 2:
+            q.uzak_cift(q.kulli("tenakuz", 0), q.kulli("makam", 1),
+                        kontrollu_donme(abs(float(a[2]))))
+        # ince ayar: tahkikin ikinci yolu (tasdik₁) zann-ı gālib ile
+        # yakîn arasındaki basamağı oynatır -- iki kübitte YOK olan yer.
+        if mk >= 3:
+            q.uzak_cift(q.kulli("tasdik", 1), q.kulli("makam", 2),
+                        kontrollu_donme(float(a[3])))
+        # Sükût kapısı: makam KARARSIZ kuşaktaysa sükût kübiti uyanır.
+        q.uzak_cift(q.kulli("makam", 1 if mk >= 2 else 0),
+                    q.kulli("sukut", 0),
+                    kontrollu_donme(abs(float(a[4]))))
 
 
 @qkaydet
@@ -1196,9 +1229,13 @@ class QBelagat(QMeleke):
         _, kk = q._alan["kelam"]
         a = np.concatenate([self.aci(p, kk, 0.45),
                             self.birikim(p, q.n_satir, 0.7)])
-        # makam kelama sirayet eder: küllî blok içinde, kısa mesafe
+        # makam kelama sirayet eder: küllî blok içinde, kısa mesafe.
+        # Bölen ``2`` değil alanın **kendi genişliğidir**: makam 3
+        # kübite çıkınca (H129) sabit 2 üçüncü kübiti hiç kullanmaz ve
+        # sirayet, merdivenin ince basamağını görmezden gelirdi.
+        mk = q._alan["makam"][1]
         for j in range(kk):
-            q.uzak_cift(q.kulli("makam", j % 2), q.kulli("kelam", j),
+            q.uzak_cift(q.kulli("makam", j % mk), q.kulli("kelam", j),
                         kontrollu_donme(float(a[j])))
         # **BEYAN KAPISI (H131).** Evvelce ``mpo_dagit("makam", …)`` ile
         # makam SATIRLARA (yerel hükümlere) iniyordu. Belâgat sözü

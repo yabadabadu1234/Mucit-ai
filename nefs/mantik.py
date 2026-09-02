@@ -71,12 +71,27 @@ O hâlde akış, ARC'de doğru dereceyi **hiç** gösteremiyor: ya Yakîn
 (1,0) deyip fazla iddia ediyor, ya Zan (0,5) deyip eksik. Bu bir bütçe
 sınırı değil **yapısal bir yanlışlıktır**.
 
-**Açık borç, tam tarifiyle:** makam 2 kübitten 3'e çıkarılmalı; beş
-mertebe Gray komşuluğuyla ``000=Vehim, 001=Şek, 011=Zan,
-010=zann-ı gālib, 110=Yakîn``. Kalan üç durum isimsizdir ve
-üzerlerindeki kütle ayrıca raporlanmalıdır. Tek bildirim yeri
-``QAyar.kulli_alanlar``dır ve ``makam_dagilimi`` artık kübit
-sayısından bağımsız olduğu için (H129) geçiş onu kırmaz.
+**BU BORÇ KAPANDI (kütük H158).** Makam artık 3 kübittir
+(``QAyar.kulli_alanlar``); ``zann-ı gālib`` temsil ediliyor ve
+``eksik_mertebeler()`` boş dönüyor.
+
+**Fakat icra, yukarıdaki tarifin AYNISI DEĞİL** ve fark saklanmıyor.
+Tarif şöyleydi: *"beş mertebe ``000=Vehim, 001=Şek, 011=Zan,
+010=zann-ı gālib, 110=Yakîn``; kalan üç durum isimsizdir ve
+üzerlerindeki kütle ayrıca raporlanmalıdır."* İcra edilmedi, zira
+yazarken görülmeyen bir kusuru vardı:
+
+* İsimsiz üç durum bir **genlik kuyusudur**: mertebe dağılımı 1'e
+  toplanmaz, kütlenin bir kısmı manasız yerde birikir.
+* Daha kötüsü, Gray sırasında ``100`` (8. basamak) tam da
+  ``110``ın (Yakîn) komşusudur. Yani makamı "bir basamak yukarı"
+  itmek Yakîn'den **isimsizliğe** düşürürdü.
+
+Yerine geçen icra: sekiz basamağın **hepsinin** bir derecesi var
+(``derece(k) = k/7``) ve mertebe o dereceye mîzânın kendi
+eşiklerinden düşüyor -- Vehim 2, Şek 2, Zan 2, zann-ı gālib 1,
+Yakîn 1 basamak. Dağılım eşit değil ve **eşitlenmedi**: eşikler
+cetvelden geliyor, cetvel icraya uydurulmuyor.
 """
 from __future__ import annotations
 
@@ -116,50 +131,120 @@ def istikra_mertebesi(n_gorev: int = 200) -> Dict[str, object]:
             "tam_istikrâ_olan": int(sum(tam_istikra_mi(int(v), int(v))
                                         for v in k))}
 
-#: Akıştaki dört makamın `mizan/munazara.py`deki yakîn derecesi.
+#: Akıştaki makamların `mizan/munazara.py`deki yakîn derecesi.
+#: Cetvelin **tamamı** buradadır; evvelce dördü vardı ve eksik olan
+#: ``zann-ı gālib``ti (kütük H129 → H158).
 MAKAM_MERTEBE: Dict[str, float] = {
-    "Vehim": 0.0, "Şek": 0.25, "Zan": 0.5, "Yakîn": 1.0,
+    "Vehim": 0.0, "Şek": 0.25, "Zan": 0.5,
+    "Zann-ı gālib": 0.75, "Yakîn": 1.0,
 }
 
 #: Kusurlu (evvelki) kodlama -- kıyas için saklanır, silinmez.
+#: İki kübitlik yazmaçta beş mertebe zaten sığmaz; bu sıra dörttür ve
+#: ``komsuluk_denetimi`` onu **kırmızı** yakar.
 ESKI_SIRA: Tuple[str, ...] = ("Şek", "Zan", "Yakîn", "Vehim")
 
-#: Tashih edilmiş kodlama: ``00=Vehim, 01=Şek, 10=Yakîn, 11=Zan``.
-#: İndeks ``2·b₀ + b₁``dir (bkz. ``QYazmac.makam_dagilimi``).
+#: İki kübitlik tashih edilmiş kodlama (H127). Komşulukları sağlamdı
+#: fakat ``zann-ı gālib``i taşıyamıyordu; tarih olarak duruyor.
 GRAY_SIRA: Tuple[str, ...] = ("Vehim", "Şek", "Yakîn", "Zan")
 
 
-def _kod(sira: Sequence[str]) -> Dict[str, Tuple[int, int]]:
-    return {ad: (i >> 1, i & 1) for i, ad in enumerate(sira)}
+def _kod(sira: Sequence[str], bit: int) -> Dict[str, Tuple[int, ...]]:
+    """Sıradaki her adı, **taban durumu indeksinin** bitlerine eşle.
+
+    ``sira``nın ``i``inci ögesi ``i`` numaralı taban durumunun adıdır;
+    kod, ``i``nin ikilik yazılışıdır (ilk kübit en anlamlı). Burada
+    Gray'e çevirmek **hata olurdu**: Gray sırası bu listelerde zaten
+    ad dizilişinin içine gömülüdür (``GRAY_SIRA`` tam da odur), tekrar
+    çevirmek onu bozar.
+    """
+    return {ad: tuple((i >> (bit - 1 - b)) & 1 for b in range(bit))
+            for i, ad in enumerate(sira)}
 
 
-def komsuluk_denetimi(sira: Sequence[str]) -> Dict[str, object]:
+def komsuluk_denetimi(sira: Optional[Sequence[str]] = None,
+                      bit: Optional[int] = None) -> Dict[str, object]:
     """Epistemik komşular tek kübitlik dönmeyle geçilebiliyor mu?
 
-    Şart: yakîn derecesine göre ardışık iki makam arasındaki Hamming
-    mesafesi **1** olmalı. Aksi hâlde 𝒪₃₂'nin tek kübitlik kontrollü
-    dönmeleri o geçişi hiç yapamaz.
+    ``sira`` verilirse **o kodlama** (elle yazılmış bir sıra, meselâ
+    ``ESKI_SIRA``) denetlenir; verilmezse yazmacın **yürürlükteki**
+    makam alanı okunur ve merdiveni denetlenir.
+
+    İki şart aranır:
+
+    1. Derecesi ardışık iki basamak arasındaki Hamming mesafesi **1**
+       olmalı; aksi hâlde 𝒪₃₂'nin tek kübitlik kontrollü dönmeleri o
+       geçişi hiç yapamaz.
+    2. ``makam₀ = 1`` kolu **üst yarı** olmalı: en yüksek ile en düşük
+       derece aynı kola düşerse, tasdikin makamı yukarı iten dönmesi
+       vehmi de kuvvetlendirir.
+
+    Ayrıca merdivenin mertebe dizisi **monoton** olmalıdır: yukarı
+    gitmek mertebeyi asla düşürmemeli.
     """
-    kod = _kod(sira)
-    duzen = sorted(MAKAM_MERTEBE, key=lambda a: MAKAM_MERTEBE[a])
+    from .qyazmac import (MAKAM_ADLARI, QAyar, makam_derecesi,
+                          makam_kubit_manasi, makam_merdiveni,
+                          makam_mertebeleri)
+
+    if sira is None:
+        kac = int(bit if bit is not None
+                  else dict(QAyar().kulli_alanlar)["makam"])
+        merd = makam_merdiveni(kac)
+        adlar = list(makam_mertebeleri(kac))
+        derece = list(makam_derecesi(kac))
+        ust_kolu = sorted({adlar[k] for k in makam_kubit_manasi(kac)[0]})
+        ad_kod = None
+    else:
+        adlar = list(sira)
+        kac = int(bit if bit is not None
+                  else max(1, (len(adlar) - 1).bit_length()))
+        ad_kod = _kod(adlar, kac)
+        # elle verilen sırada basamak dereceleri cetvelden okunur
+        duzen = sorted((a for a in adlar if a in MAKAM_MERTEBE),
+                       key=lambda a: MAKAM_MERTEBE[a])
+        adlar = duzen
+        derece = [MAKAM_MERTEBE[a] for a in duzen]
+        merd = [int("".join(str(x) for x in ad_kod[a]), 2) for a in duzen]
+        ust_kolu = sorted(a for a in ad_kod if ad_kod[a][0] == 1)
+
     gecis = []
-    for a, b in zip(duzen, duzen[1:]):
-        h = sum(x != y for x, y in zip(kod[a], kod[b]))
-        gecis.append((a, b, h))
-    # ``makam₀ = 1`` hangi makamları topluyor?
-    ust = sorted(a for a in kod if kod[a][0] == 1)
+    for i in range(len(merd) - 1):
+        h = bin(int(merd[i]) ^ int(merd[i + 1])).count("1")
+        gecis.append((adlar[i], adlar[i + 1], h))
+    ust_derece = [d for k, d in enumerate(derece)
+                  if (sira is None and k in makam_kubit_manasi(kac)[0])
+                  or (sira is not None and ad_kod[adlar[k]][0] == 1)]
+    monoton = all(derece[i] <= derece[i + 1] + 1e-12
+                  for i in range(len(derece) - 1))
     return {
         "geçişler": gecis,
         "kırık_geçiş": sum(1 for _, _, h in gecis if h != 1),
-        "makam0_1_kolu": ust,
-        "kol_tutarlı": bool(
-            set(ust) in ({"Zan", "Yakîn"}, {"Vehim", "Şek"})),
+        "makam0_1_kolu": ust_kolu,
+        # üst kol tutarlıdır ⟺ derecelerin ÜST yarısını topluyor
+        "kol_tutarlı": bool(ust_derece) and bool(
+            min(ust_derece) > min(derece) + 1e-12),
+        "monoton": bool(monoton),
+        "basamak": len(merd),
+        "mertebe_sayısı": len(set(adlar)),
     }
 
 
-def eksik_mertebeler() -> List[Tuple[float, str]]:
-    """Klasik mîzânda olup akışın makamında **olmayan** mertebeler."""
-    var = {a.lower() for a in MAKAM_MERTEBE}
+def eksik_mertebeler(bit: Optional[int] = None) -> List[Tuple[float, str]]:
+    """Klasik mîzânda olup akışın makam **yazmacında** olmayan mertebeler.
+
+    Evvelce ``MAKAM_MERTEBE`` sözlüğüne bakıyordu, yani bir **listeye**;
+    liste ile yazmacın fiilî genişliği ayrı düşebilir ve o zaman ölçüt
+    yalan söyler. Şimdi yazmacın kendi ``makam`` alanı okunur: hangi
+    mertebe fiilen bir basamağa düşüyorsa o vardır.
+
+    ``bit`` ile başka bir genişlik sınanabilir; iki kübitte ``zann-ı
+    gālib`` yine eksik çıkar ve ölçütün kör olmadığı böyle gösterilir.
+    """
+    from .qyazmac import QAyar, makam_mertebeleri
+
+    kac = int(bit if bit is not None
+              else dict(QAyar().kulli_alanlar)["makam"])
+    var = {a.lower() for a in makam_mertebeleri(kac)}
     return [(d, ad) for d, ad in MERTEBELER if ad.lower() not in var]
 
 
@@ -197,8 +282,10 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
     q = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum)).idrak_et(
         E, tikaniklik=float(c["H1"]))
     P = np.atleast_1d(np.asarray(q.makam_dagilimi(), float)).ravel()
-    akis = float(sum(P[i] * MAKAM_MERTEBE[ad]
-                     for i, ad in enumerate(MAKAM_ADLARI)))
+    # ``MAKAM_ADLARI``yı taban durumu indeksi sanmak bir hataydı: Gray
+    # sırasında basamak ile indeks aynı değildir ve makam artık 3
+    # kübittir. Beklenen derece yazmacın kendi derece vektöründen alınır.
+    akis = float(P @ q.makam_derece_vektoru())
     return {"klasik_yakin": klasik, "akis_yakin": akis,
             "klasik_ad": mertebe_adi(klasik), "H1": float(c["H1"])}
 
@@ -209,18 +296,25 @@ def rapor(n_gorev: int = 30, tohum: int = 0) -> str:
 
     s = ["=== MANTIK -- mizan/ ana akışa bağlanıyor ===", ""]
     s.append("MAKAM KODLAMASI (epistemik komşuluk tek kübitle geçilmeli):")
-    for ad, sira in (("ESKİ (kusurlu)", ESKI_SIRA),
-                     ("GRAY (tashih)", GRAY_SIRA),
-                     ("YÜRÜRLÜKTEKİ", tuple(MAKAM_ADLARI))):
-        d = komsuluk_denetimi(sira)
+    for ad, sira, bit in (("ESKİ (kusurlu)", ESKI_SIRA, 2),
+                          ("GRAY 2 kübit", GRAY_SIRA, 2),
+                          ("YÜRÜRLÜKTEKİ", None, None)):
+        d = komsuluk_denetimi(sira, bit)
         g = "  ".join("%s→%s:%d" % (a, b, h) for a, b, h in d["geçişler"])
-        s.append("  %-15s kırık geçiş=%d   %s" % (ad, d["kırık_geçiş"], g))
+        s.append("  %-15s kırık geçiş=%d  basamak=%d  monoton=%s"
+                 % (ad, d["kırık_geçiş"], d["basamak"], d["monoton"]))
+        s.append("  %-15s %s" % ("", g))
         s.append("  %-15s makam₀=1 kolu: %s  (tutarlı: %s)"
                  % ("", ", ".join(d["makam0_1_kolu"]), d["kol_tutarlı"]))
     s += ["",
-          "EKSİK MERTEBE (klasik mîzânda var, akışta yok):"]
-    for d, ad in eksik_mertebeler():
+          "EKSİK MERTEBE (klasik mîzânda var, akışın yazmacında yok):"]
+    eks = eksik_mertebeler()
+    for d, ad in eks:
         s.append("  %.2f  %s" % (d, ad))
+    if not eks:
+        s.append("  (yok -- H129'un borcu kapandı, makam 3 kübit)")
+        s.append("  Kör değil: 2 kübitte hâlâ eksik çıkıyor → %s"
+                 % ", ".join(a for _, a in eksik_mertebeler(2)))
     i = istikra_mertebesi()
     s += ["",
           "  VE BU EKSİK ZARARSIZ DEĞİL (kütük H129):",

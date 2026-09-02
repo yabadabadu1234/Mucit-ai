@@ -193,7 +193,12 @@ class Belagat(Meleke):
         isabet = kosinus(belig @ p.W("belâgat.tesir", (ds, ds)), d.G_kebir)
 
         # icâz/itnâb: muhatabın idrak makamına göre
-        kip = "İcâz" if d.makam in ("Yakîn", "Zan") else "İtnâb"
+        # ``Zann-ı gālib`` de icâz tarafındadır: kuvvetli zan sahibi
+        # sözü uzatmaz. Mertebe H158'de açıldı; buraya eklenmeseydi
+        # ARC'nin HER görevi (istikrâ yakîni ~0,80) sessizce
+        # itnâba düşerdi -- yani yeni mertebe beyanı bozardı.
+        kip = "İcâz" if d.makam in ("Yakîn", "Zann-ı gālib", "Zan") \
+            else "İtnâb"
         d.N = kat_norm(belig) * float(np.clip(skor, 0.05, 1.0))
         d.olcum.koy("belâgat.uyum", uyum)
         d.olcum.koy("belâgat.skor", skor)

@@ -4634,3 +4634,87 @@ göstermiyordu.
 gereği). Dar χ tavanı çözücülük değil sakatlamadır. Yerine geçen şart
 ölçülebilir olandır: sınıfın bir cihet karşılığı olmalı ve ölçü kör
 olmamalı — bilhassa `ΔS = 0` hiçbir sınıfı kurtarmamalı.
+
+## H158 — H129'UN BORCU KAPANDI: MAKAM ÜÇ KÜBİT, MERTEBE BEŞ
+
+H129'un açık borcu şuydu: mîzânın cetvelinde (`mizan/munazara.py`,
+`MERTEBELER`) **beş** mertebe var —
+
+    vehim 0,00   şek 0,25   zan 0,50   zann-ı gālib 0,75   yakîn 1,00
+
+— fakat makam yazmacı **iki** kübitti, yani dört taban durumu. Eksik
+olan ``zann-ı gālib``ti ve eksiklik zararsız değildi: ARC training'in
+ilk 200 görevinde istikrâ yakîni ortalaması **0,8025**, yani **her
+görev** tam o mertebeye düşüyor. Model ya "Yakîn" deyip fazla iddia
+ediyor, ya "Zan" deyip eksik.
+
+**İcra.** ``QAyar.kulli_alanlar``da ``makam`` 2 → 3 kübit. Sekiz
+basamaklı bir merdiven, **Gray sırasında**:
+
+    basamak  0     1     2    3    4    5    6            7
+    kod      000   001   011  010  110  111  101          100
+    derece   ,000  ,143  ,286 ,429 ,571 ,714 ,857        1,000
+    mertebe  Vehim Vehim Şek  Şek  Zan  Zan  Zann-ı gālib Yakîn
+
+Bütün komşuluklar Hamming 1 (ölçüldü, sınanıyor): 𝒪₃₂'nin tek
+kübitlik kontrollü dönmeleri merdiveni baştan sona gezebiliyor.
+
+**Kübitlerin manası iddia edilmedi, HESAPLANDI** (``makam_kubit_manasi``):
+
+    makam₀ = 1  ⟺  basamak 4,5,6,7  = üst yarı      → hükmün CİHETİ
+    makam₁ = 1  ⟺  basamak 2,3,4,5  = orta dörtlü   → KARARSIZLIK kuşağı
+    makam₂ = 1  ⟺  basamak 1,2,5,6  = ara basamaklar → İNCE ayar
+
+𝒪₃₂ buna göre yeniden yöneltildi ve iki şey **tashih edildi**:
+
+* ``tenakuz`` evvelce makamı **aşağı** itiyordu; şimdi ``makam₁``i
+  müsbet çeviriyor. Çelişkinin işi hükmü düşürmek değil
+  **kararsızlaştırmaktır**.
+* Sükût kapısı ``makam₀``dan ``makam₁``e taşındı: susmak, hükmün
+  düşük olmasından değil **kararsız** olmasından doğar. Evvelce model
+  "hükmüm menfî" ile "hükmüm yok"u ayıramıyordu.
+
+``tasdik₁`` (tahkikin ikinci yolu) ``makam₂``ye bağlandı: iki müstakil
+yol aynı hükmü veriyorsa makam bir ince basamak yukarı kayabiliyor —
+``zann-ı gālib`` ile ``yakîn`` arasındaki fark tam olarak odur ve iki
+kübitte **yeri yoktu**.
+
+**KENDİ TARİFİMDEN AYRILDIM, SAKLAMIYORUM.** `nefs/mantik.py`de borcun
+tarifi şöyleydi: *"beş mertebe ``000=Vehim, 001=Şek, 011=Zan,
+010=zann-ı gālib, 110=Yakîn``; kalan üç durum isimsizdir ve
+üzerlerindeki kütle ayrıca raporlanmalıdır."* İcra edilmedi, zira
+yazarken görmediğim iki kusuru vardı:
+
+1. İsimsiz üç durum bir **genlik kuyusudur**: mertebe dağılımı 1'e
+   toplanmaz, kütle manasız yerde birikir.
+2. Gray sırasında ``100`` (8. basamak) tam da ``110``ın (Yakîn)
+   komşusudur. Yani makamı "bir basamak yukarı" itmek, Yakîn'den
+   **isimsizliğe** düşürürdü — kapının manası tersine dönerdi.
+
+Yerine: her basamağın bir derecesi var ve mertebe o dereceye
+**cetvelin kendi eşiklerinden** düşüyor. Dağılım eşit değil
+(Vehim 2, Şek 2, Zan 2, zann-ı gālib 1, Yakîn 1) ve **eşitlenmedi**:
+eşikler cetvelden gelir, cetvel icraya uydurulmaz. ``Yakîn``in tek
+basamağı olması cetvelin hükmüdür — *"kat'î; aksi muhal"*.
+
+**Ölçülen netice** (χ=8, 3 satır, tek geçiş):
+
+    P_Vehim 0,6866   P_Şek 0,1881   P_Zan 0,0701
+    P_Zann-ı gālib 0,0343   P_Yakîn 0,0209      Σ = 1,000000
+    makam_derece = 0,2554
+
+``zann-ı gālib`` artık fiilen kütle taşıyor — evvelce **temsil
+edilemeyen** bir mertebe.
+
+**REEL MODELDE DE AYNI KUSUR VARMIŞ.** `nefs/murakabe.py`nin
+``makam_tayin``i dört makam veriyordu ve ``0,5+ε``–``1−ε`` arasının
+tamamı ``Zan``dı. Bu, kübit yazmacındakiyle **aynı** kusurun reel
+taraftaki eşidir; H129'da kaydedilmemişti, burada kaydediliyor ve
+kapatılıyor: eşik ``0,75`` (``ZANN_I_GALIB_ESIGI``) cetvelden alınır,
+``hukum_agirligi``de ``zann-ı gālib`` ``P`` ile tartılır (``1``e
+yuvarlanmaz; yuvarlansaydı ayırmak için açtığımız mertebe hemen
+yakîne katılmış olurdu), ``beyan.py``de icâz tarafına eklenir.
+
+**Nakz kaidesi DEĞİŞTİRİLMEDİ:** nakz varken makam hâlâ ``Zan``a
+düşürülür, ``zann-ı gālib``e değil. Hakikî bir karşı örnek varken
+"kuvvetli zan" demek fazla iddiadır; H6'nın hükmü yerinde durur.

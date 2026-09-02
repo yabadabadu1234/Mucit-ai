@@ -47,7 +47,9 @@ import numpy as np
 from main.yazmac import Yazmac, dik_iki_kubit, hadamard
 
 __all__ = ["QAyar", "QYazmac", "donme", "faz_z", "kontrollu_donme",
-           "donme_yigin", "kontrollu_donme_yigin", "devret", "MAKAM_ADLARI"]
+           "donme_yigin", "kontrollu_donme_yigin", "devret", "MAKAM_ADLARI",
+           "MAKAM_ESIKLERI", "makam_merdiveni", "makam_derecesi",
+           "makam_mertebeleri", "makam_kubit_manasi"]
 
 
 def devret(a: np.ndarray, hedef: int) -> np.ndarray:
@@ -88,30 +90,107 @@ def kontrollu_donme_yigin(teta: np.ndarray) -> np.ndarray:
     G[..., 2:, 2:] = donme_yigin(t)
     return G
 
-#: Makam iki kübite kodlanır: ``00=Vehim, 01=Şek, 10=Yakîn, 11=Zan``.
-#: İndeks ``2·b₀ + b₁``dir (bkz. ``makam_dagilimi``).
+#: Bilgi mertebeleri, **artan** sırada. Kaynağı `mizan/munazara.py`nin
+#: ``MERTEBELER`` cetvelidir ve keyfî değildir.
 #:
-#: **ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H127).** Evvelki sıra
-#: ``("Şek","Zan","Yakîn","Vehim")`` idi ve şerhi şöyle diyordu:
-#: *"tek kübitlik bir dönme Şek'ten Zan'a, Zan'dan Yakîn'e geçirir."*
-#: İddianın yarısı yanlıştı. Epistemik sıra ``Vehim < Şek < Zan <
-#: Yakîn``tir (`mizan/munazara.py`, ``MERTEBELER``) ve eski kodlamada
-#: komşular arası Hamming mesafesi::
+#: **KÜTÜK H129'UN AÇIK BORCU BURADA KAPANDI.** Makam evvelce **iki**
+#: kübitti, yani dört taban durumu, yani dört mertebe -- ve mîzânın
+#: cetvelinde **beş** mertebe vardır. Eksik olan ``zann-ı gālib``ti:
+#: kuvvetli zan ile kat'î yakîn arasındaki fark, modelin makam
+#: yazmacında **temsil edilemiyordu**. "Neredeyse eminim" ile "eminim"
+#: aynı taban durumuna düşüyordu.
 #:
-#:     Vehim → Şek    2   ✗      Şek → Zan    1  ✓      Zan → Yakîn  2  ✗
-#:
-#: Yani üç geçişin ikisi tek kübitle **yapılamıyordu**; 𝒪₃₂'nin tek
-#: kübitlik kontrollü dönmeleri Zan'dan Yakîn'e hiç geçiremiyordu.
-#:
-#: Daha kötüsü: eski sırada ``makam₀ = 1`` demek ``{Yakîn, Vehim}``
-#: demekti -- **en yüksek ile en düşük derece aynı kolda**. 𝒪₃₂'nin
-#: ``tasdik → makam₀`` müsbet dönmesi Yakîn'i kuvvetlendirirken Vehim'i
-#: de kuvvetlendiriyordu.
-#:
-#: Gray sırasında üç geçiş de Hamming 1'dir ve ``makam₀ = 1`` tam
-#: olarak ``{Zan, Yakîn}``, yani "müsbete meyilli" demektir. Sıra
-#: keyfî değil, `mizan/munazara.py`nin mertebe cetvelinden alınmıştır.
-MAKAM_ADLARI: Tuple[str, ...] = ("Vehim", "Şek", "Yakîn", "Zan")
+#: Şimdi makam **üç** kübittir: sekiz konumlu bir merdiven. Beş mertebe
+#: bu merdivene eşiklerle oturur (bkz. ``makam_mertebeleri``); merdiven
+#: mertebelerden daha ince olduğu için ``zann-ı gālib`` de, iki
+#: mertebe arasındaki geçiş de temsil edilebilir.
+MAKAM_ADLARI: Tuple[str, ...] = ("Vehim", "Şek", "Zan", "Zann-ı gālib",
+                                 "Yakîn")
+
+#: Mertebenin alt eşiği (``mizan.munazara.MERTEBELER`` ile aynı sayılar,
+#: fakat artan sırada ve görünen adla). Eşik **dâhildir**.
+MAKAM_ESIKLERI: Tuple[float, ...] = (0.00, 0.25, 0.50, 0.75, 1.00)
+
+
+def makam_merdiveni(kac: int) -> Tuple[int, ...]:
+    """Makam yazmacının ``2^kac`` taban durumu, **epistemik sırada**.
+
+    Dönen dizinin ``k``ıncı ögesi, merdivenin ``k``ıncı basamağındaki
+    taban durumunun **indeksi**dir (``blok_dagilimi``in indeks düzeni:
+    ilk kübit en anlamlı). Sıra **Gray koddur**: ``g(k) = k ⊕ (k≫1)``.
+
+    **Niçin Gray (kütük H127).** Melekelerin elindeki tek alet tek
+    kübitlik (kontrollü) dönmedir. Merdivende komşu iki basamak arasında
+    tek kübit farkı yoksa, meleke o geçişi **yapamaz**. Evvelki
+    ``("Şek","Zan","Yakîn","Vehim")`` sırasında üç geçişin ikisi Hamming
+    2 idi; 𝒪₃₂ Zan'dan Yakîn'e hiç geçiremiyordu. Gray kodda **her**
+    komşuluk Hamming 1'dir ve bu, sınamayla denetlenir.
+
+    Üç kübitte merdiven ``000 001 011 010 110 111 101 100``tür ve
+    kübitlerin manası ölçülebilir hâle gelir (bkz. ``makam_kubit_manasi``).
+    """
+    n = 1 << int(kac)
+    return tuple(k ^ (k >> 1) for k in range(n))
+
+
+def makam_derecesi(kac: int) -> np.ndarray:
+    """Merdivenin her **basamağına** düşen yakîn derecesi, ``[0,1]``de.
+
+    ``derece(k) = k / (2^kac − 1)``: en alt basamak 0 (vehm-i mutlak),
+    en üst 1 (yakîn-i kat'î), arası düzgün bölünmüş. Basamak sayısı
+    mertebe sayısından çok olabilir; olması da matluptur, zira mertebe
+    bir **eşiktir**, bir nokta değil.
+    """
+    n = 1 << int(kac)
+    return np.arange(n, dtype=float) / max(n - 1, 1)
+
+
+def makam_mertebeleri(kac: int) -> Tuple[str, ...]:
+    """Her basamağın hangi mertebeye düştüğü -- eşiklerden okunur.
+
+    Eşik **alt sınırdır ve dâhildir** (`mizan/munazara.py` ile aynı
+    kaide): derecesi ``d`` olan basamak, ``d``yi aşmayan en yüksek
+    eşiğin mertebesindedir. Üç kübitte netice::
+
+        basamak  0    1    2    3    4    5    6      7
+        derece   .000 .143 .286 .429 .571 .714 .857  1.000
+        mertebe  Vehim Vehim Şek  Şek  Zan  Zan  Zann-ı g.  Yakîn
+
+    Dağılım eşit değildir ve **eşitlenmemiştir**: eşikler mîzânın
+    cetvelinden gelir, oraya uydurulmaz. ``Yakîn``in yalnız tek
+    basamağı olması cetvelin kendi hükmüdür -- *"kat'î; aksi muhal"*.
+    """
+    d = makam_derecesi(kac)
+    out: List[str] = []
+    for x in d:
+        i = 0
+        for j, e in enumerate(MAKAM_ESIKLERI):
+            if x + 1e-12 >= e:
+                i = j
+        out.append(MAKAM_ADLARI[i])
+    return tuple(out)
+
+
+def makam_kubit_manasi(kac: int) -> Dict[int, Tuple[int, ...]]:
+    """Her makam kübiti ``|1⟩`` iken merdivenin hangi basamakları açık.
+
+    **İddia edilmez, hesaplanır.** Üç kübitte netice şudur ve manası
+    şerhte değil burada durur::
+
+        kübit 0 → basamak 4,5,6,7   = üst yarı  (Zan ve üstü)
+        kübit 1 → basamak 2,3,4,5   = orta dörtlü (kararsızlık kuşağı)
+        kübit 2 → basamak 1,2,5,6   = ara basamaklar (ince ayar)
+
+    Yani ``makam₀`` hükmün **cihetidir**, ``makam₁`` kararsızlık
+    kuşağıdır, ``makam₂`` ince ayardır. 𝒪₃₂ açılarını buna göre
+    yöneltir; sınama bu tabloyu fiilen denetler.
+    """
+    merd = makam_merdiveni(kac)
+    out: Dict[int, Tuple[int, ...]] = {}
+    for b in range(int(kac)):
+        vurgu = 1 << (int(kac) - 1 - b)          # ilk kübit en anlamlı
+        out[b] = tuple(k for k, idx in enumerate(merd) if idx & vurgu)
+    return out
 
 
 def donme(teta: float) -> np.ndarray:
@@ -172,7 +251,10 @@ class QAyar:
     yigin: int = 1
     #: Küllî hüküm bloğunun alanları ve kaç kübit tuttukları.
     kulli_alanlar: Tuple[Tuple[str, int], ...] = (
-        ("makam", 2), ("mizan", 4), ("tenakuz", 2),
+        # ``makam`` 2 değil **3** kübittir (kütük H129'un kapanan borcu):
+        # mîzânın cetvelinde beş mertebe var, dört taban durumu onları
+        # taşıyamıyordu ve ``zann-ı gālib`` temsil edilemiyordu.
+        ("makam", 3), ("mizan", 4), ("tenakuz", 2),
         ("tasdik", 2), ("sukut", 1), ("nakz", 2), ("kelam", 4),
         # --- kütük H91: kâide yazmacı ve orak kübiti.
         # ``kaide`` kâidenin İNDİSİNİ değil PARAMETRESİNİ tutar
@@ -845,6 +927,50 @@ class QYazmac:
         d["schmidt"] = np.full(Bn, float(e["schmidt"]))
         d["norm_hatası"] = np.full(Bn, float(self.y.norm_hatasi(ornek=32)))
         P = np.atleast_2d(self.makam_dagilimi())
-        for i, ad in enumerate(MAKAM_ADLARI):
-            d["P_" + ad] = P[:, i]
+        for ad, v in self.makam_mertebe_dagilimi(P).items():
+            d["P_" + ad] = v
+        d["makam_derece"] = P @ self.makam_derece_vektoru()
         return d
+
+    def makam_derece_vektoru(self) -> np.ndarray:
+        """Her **taban durumuna** düşen yakîn derecesi, ``[0,1]``de.
+
+        ``makam_derecesi`` merdiven **basamağına** göre sıralıdır;
+        ``makam_dagilimi`` ise **taban durumu** indeksine göre. İkisini
+        karıştırmak sessiz bir hatadır -- Gray sırasında basamak 4'ün
+        indeksi 6'dır, 4 değil. Çevirme burada bir kere yapılır.
+        """
+        kac = self._alan["makam"][1]
+        v = np.zeros(1 << kac)
+        for basamak, idx in enumerate(makam_merdiveni(kac)):
+            v[idx] = makam_derecesi(kac)[basamak]
+        return v
+
+    def makam_mertebe_dagilimi(self, P: Optional[np.ndarray] = None
+                               ) -> Dict[str, np.ndarray]:
+        """Taban durumu dağılımını **mertebe** dağılımına indir.
+
+        Merdiven mertebeden incedir (üç kübitte 8 basamak, 5 mertebe),
+        onun için bir mertebenin ihtimali, o mertebeye düşen bütün
+        basamakların **toplamıdır**. Toplamak burada meşrudur: aynı
+        mertebenin basamakları birbirinin alternatifidir, ayrı eksen
+        değil (kıyas: H21'de mertebeler toplanmıyordu, zira onlar ayrı
+        eksenlerdi).
+
+        Adlar ``MAKAM_ADLARI``dan gelir; bir mertebeye hiç basamak
+        düşmezse anahtar yine üretilir ve ``0`` olur -- rapor eksik
+        anahtardan değil, sıfırdan bahsetsin.
+        """
+        kac = self._alan["makam"][1]
+        if P is None:
+            P = self.makam_dagilimi()
+        P = np.atleast_2d(np.asarray(P, float))
+        mert = makam_mertebeleri(kac)
+        merd = makam_merdiveni(kac)
+        out: Dict[str, np.ndarray] = {
+            ad: np.zeros(P.shape[0]) for ad in MAKAM_ADLARI}
+        # ``basamak`` merdiven sırası, ``merd[basamak]`` taban durumunun
+        # indeksi. Gray sırasında ikisi aynı DEĞİLDİR.
+        for basamak, ad in enumerate(mert):
+            out[ad] = out[ad] + P[:, merd[basamak]]
+        return out

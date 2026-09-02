@@ -68,7 +68,7 @@ def test_ucdan_uca_kosuyor():
     assert d.X is not None and d.S is not None and d.N is not None
     assert d.S.shape[1] == d.d_sem
     assert np.all(np.isfinite(d.S)) and np.all(np.isfinite(d.N))
-    assert d.makam in ("Yakîn", "Zan", "Şek", "Vehim")
+    assert d.makam in ("Yakîn", "Zann-ı gālib", "Zan", "Şek", "Vehim")
     assert 0.0 <= d.T <= 1.0 and 0.0 <= d.P_idrak <= 1.0
 
 
@@ -227,18 +227,31 @@ def test_tenakuz_kendisiyle_celismiyor():
 
 
 def test_makam_parcalanisi_tam_ve_ayrik():
-    """Dört makam ``[0,1]``i TAM ve AYRIK örter."""
+    """**Beş** makam ``[0,1]``i TAM ve AYRIK örter (H158).
+
+    Evvelce dörttü ve ``0,5+ε``–``1−ε`` arasının tamamı ``Zan``dı;
+    mîzânın cetvelindeki ``zann-ı gālib`` (0,75) yoktu. Eksik zararsız
+    değildi: ARC'nin istikrâ yakîni ortalaması 0,8025, yani **her
+    görev** tam o mertebeye düşüyor ve model hepsine "Zan" diyerek
+    kendi delilinin kuvvetini eksik beyan ediyordu.
+    """
+    beklenen = {"Yakîn", "Zann-ı gālib", "Zan", "Şek", "Vehim"}
     gorulen = set()
     for P in np.linspace(0.0, 1.0, 20001):
         m = murakabe.makam_tayin(float(P))
-        assert m in ("Yakîn", "Zan", "Şek", "Vehim"), (P, m)
+        assert m in beklenen, (P, m)
         gorulen.add(m)
-    assert gorulen == {"Yakîn", "Zan", "Şek", "Vehim"}
+    assert gorulen == beklenen, gorulen
     # sınırlar: monotonluk (P büyüdükçe makam gerilemez)
-    duzen = {"Vehim": 0, "Şek": 1, "Zan": 2, "Yakîn": 3}
+    duzen = {"Vehim": 0, "Şek": 1, "Zan": 2, "Zann-ı gālib": 3, "Yakîn": 4}
     dizi = [duzen[murakabe.makam_tayin(float(P))]
             for P in np.linspace(0, 1, 5001)]
     assert all(dizi[i] <= dizi[i + 1] for i in range(len(dizi) - 1))
+    # Eşik mîzânın cetvelinden gelmeli, elle konmuş olmamalı.
+    from mizan.munazara import MERTEBELER
+    assert murakabe.ZANN_I_GALIB_ESIGI in [e for e, _ in MERTEBELER]
+    # Ve ARC'nin fiilen düştüğü derece artık kendi adını alıyor.
+    assert murakabe.makam_tayin(0.8025) == "Zann-ı gālib"
 
 
 def test_hukum_agirligi():
@@ -800,31 +813,53 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
 
 
 def test_makam_kodlamasi_epistemik_komsulugu_koruyor():
-    """Makam sırası tek kübitlik dönmeyle gezilebiliyor mu? (H127)
+    """Makam merdiveni tek kübitlik dönmeyle gezilebiliyor mu? (H127/H158)
 
-    `mizan/munazara.py` epistemik sırayı veriyor: ``Vehim < Şek < Zan <
-    Yakîn``. Ardışık iki makam arasındaki Hamming mesafesi 1 olmalı,
-    yoksa 𝒪₃₂'nin tek kübitlik kontrollü dönmeleri o geçişi yapamaz.
+    `mizan/munazara.py` epistemik sırayı veriyor: ``vehim < şek < zan <
+    zann-ı gālib < yakîn``. İki şart:
 
-    **Ölçüt kör değildir:** eski (kusurlu) sıra da sınanır ve kırmızı
-    yandığı gösterilir.
+    1. Ardışık iki basamak arasındaki Hamming mesafesi 1 olmalı, yoksa
+       𝒪₃₂'nin tek kübitlik kontrollü dönmeleri o geçişi yapamaz.
+    2. Beş mertebenin **hepsi** bir basamağa düşmeli. İki kübitte
+       düşmüyordu: ``zann-ı gālib`` temsil edilemiyordu (H129).
+
+    **Ölçüt kör değildir:** eski sıra da, iki kübitlik yazmaç da
+    sınanır ve ikisinin de kırmızı yandığı gösterilir.
     """
     from .mantik import ESKI_SIRA, GRAY_SIRA, eksik_mertebeler, \
         komsuluk_denetimi
-    from .qyazmac import MAKAM_ADLARI
+    from .qyazmac import MAKAM_ADLARI, makam_kubit_manasi, makam_merdiveni
 
-    y = komsuluk_denetimi(tuple(MAKAM_ADLARI))
+    y = komsuluk_denetimi()                     # yürürlükteki yazmaç
     assert y["kırık_geçiş"] == 0, y
-    # ``makam₀ = 1`` en yüksek ile en düşük dereceyi aynı kola koymamalı
-    assert y["kol_tutarlı"], y
-    assert set(y["makam0_1_kolu"]) == {"Zan", "Yakîn"}, y
+    assert y["monoton"], y                      # yukarı çıkmak düşürmemeli
+    assert y["kol_tutarlı"], y                  # makam₀=1 → üst yarı
+    assert y["mertebe_sayısı"] == len(MAKAM_ADLARI) == 5, y
+    assert y["basamak"] == 8, y
 
     # Eski sıra kırmızı yanmalı -- yoksa sınama bir şey ispat etmez.
-    e = komsuluk_denetimi(ESKI_SIRA)
+    e = komsuluk_denetimi(ESKI_SIRA, 2)
     assert e["kırık_geçiş"] == 2 and not e["kol_tutarlı"], e
+    # H127'nin iki kübitlik tashihi komşuluğu düzeltmişti ama beşinci
+    # mertebeyi getirememişti; ikisi ayrı kusurdur ve ayrı sınanır.
+    g = komsuluk_denetimi(GRAY_SIRA, 2)
+    assert g["kırık_geçiş"] == 0 and g["kol_tutarlı"], g
+    assert g["mertebe_sayısı"] == 4, g
 
-    # Eksik mertebe SAYILIYOR: bütçe sınırı gizlenmiyor.
-    assert [ad for _, ad in eksik_mertebeler()] == ["zann-ı gālib"]
+    # H129'un borcu KAPANDI: yürürlükteki yazmaçta eksik mertebe yok.
+    assert eksik_mertebeler() == [], eksik_mertebeler()
+    # ...ve ölçüt kör değil: iki kübitte hâlâ eksik çıkıyor.
+    assert [ad for _, ad in eksik_mertebeler(2)] == ["zann-ı gālib"]
+
+    # Kübitlerin manası ŞERHTE DEĞİL, hesapta: makam₀ üst yarı,
+    # makam₁ orta dörtlü, makam₂ ara basamaklar.
+    man = makam_kubit_manasi(3)
+    assert man[0] == (4, 5, 6, 7), man
+    assert man[1] == (2, 3, 4, 5), man
+    assert man[2] == (1, 2, 5, 6), man
+    m = makam_merdiveni(3)
+    assert all(bin(m[i] ^ m[i + 1]).count("1") == 1
+               for i in range(len(m) - 1)), m
 
 
 def test_padisahin_eli_HER_MODULE_uzaniyor():

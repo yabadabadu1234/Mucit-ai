@@ -594,11 +594,34 @@ class SekZanYakin(Meleke):
                   % (d.P_idrak, d.makam, "  (sükût)" if d.sukut else ""))
 
 
+#: ``zan`` ile ``zann-ı gālib``i ayıran eşik. Elle konmuş bir sayı
+#: değildir: `mizan/munazara.py`nin ``MERTEBELER`` cetvelinden gelir.
+ZANN_I_GALIB_ESIGI: float = 0.75
+
+
 def makam_tayin(P: float, eps_sek: float = 0.05,
                 eps_yakin: float = 0.05) -> str:
-    """Dört makam; **tam ve ayrık** parçalanış."""
+    """**Beş** makam; tam ve ayrık parçalanış.
+
+    **ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H158; H129'un reel modeldeki
+    eşi).** Evvelce dört makam vardı ve ``0,5+ε`` ile ``1−ε`` arasının
+    tamamı ``Zan``dı. Halbuki mîzânın cetvelinde ``0,75``te bir mertebe
+    daha var: ``zann-ı gālib`` (kuvvetli zan).
+
+    Bu eksik zararsız değildi ve ölçüldü (`nefs/mantik.py`,
+    ``istikra_mertebesi``): ARC training'in ilk 200 görevinde istikrâ
+    yakîni ortalaması **0,8025**, yani **her görev** zann-ı gālibe
+    düşüyor -- makamın taşıyamadığı tam o mertebeye. Model hepsine
+    "Zan" diyordu, yani kendi delilinin kuvvetini **eksik** beyan
+    ediyordu.
+
+    Parçalanış hâlâ tam ve ayrıktır; sınama ``[0,1]``i tarayarak
+    denetler ve monotonluğu da arar.
+    """
     if P >= 1 - eps_yakin:
         return "Yakîn"
+    if P >= ZANN_I_GALIB_ESIGI:
+        return "Zann-ı gālib"
     if P > 0.5 + eps_sek:
         return "Zan"
     if P >= 0.5 - eps_sek:
@@ -613,8 +636,14 @@ def ikili_entropi(P: float) -> float:
 
 
 def hukum_agirligi(P: float, makam: str) -> float:
-    """``Hüküm = 1·𝕀_yakîn + P·𝕀_zan + 0.5·𝕀_şek`` (+ Vehim için ``P``)."""
-    return {"Yakîn": 1.0, "Zan": P, "Şek": 0.5, "Vehim": P}[makam]
+    """``Hüküm = 1·𝕀_yakîn + P·𝕀_zan + 0.5·𝕀_şek`` (+ Vehim için ``P``).
+
+    ``Zann-ı gālib`` de ``P``dir: kuvvetli zan, zannın kendi
+    kuvvetiyle tartılır; ``1``e yuvarlanmaz. Yuvarlansaydı, ayırt
+    etmek için açtığımız mertebe hemen yakîne katılmış olurdu.
+    """
+    return {"Yakîn": 1.0, "Zann-ı gālib": P, "Zan": P,
+            "Şek": 0.5, "Vehim": P}[makam]
 
 
 # =====================================================================
