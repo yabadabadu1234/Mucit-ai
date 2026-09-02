@@ -639,6 +639,132 @@ class Yazmac:
         return atilan / toplam
 
     # -----------------------------------------------------------------
+    #  STIEFEL İZOMETRİSİ -- kanonik hâl (ceridenin 1. müdahalesi)
+    # -----------------------------------------------------------------
+    def kanonikle(self, merkez: Optional[int] = None) -> Dict[str, float]:
+        """MPS'i **karışık kanonik** hâle getir; kesmeyi en iyi kıl.
+
+        ===================================================================
+        NİÇİN: KESME EN İYİ DEĞİLDİ ve bu kütükte YAZILIYDI
+        ===================================================================
+
+        `Yazmac.tekil_yogunluklar`ın şerhi şöyle diyor: *"bu yazmaç
+        kanonik biçimde **değildir** (kapılar QR/SVD ile yerinde
+        bölünüyor, merkez taşınmıyor)."* Kütük H121 de aynı yerde
+        durur.
+
+        Bunun bedeli teknik fakat ağırdır. İki yuvalık ``Θ``nın SVD'si
+        **en iyi kesmeyi ancak çevre dik ise** verir. Çevre dik
+        değilse tekil değerler, atılan durumların hakikî ağırlığını
+        **temsil etmez**: küçük bir tekil değer büyük bir fizikî
+        genliğe karşılık gelebilir. Yani her kapıda "en az zararlı
+        olanı attım" diyoruz fakat ispatı yok.
+
+        Bu, kütükte ölçülmüş iki büyük kaybın (H146: kapı başına 0,93;
+        H147: üç melekede yıkım) **arkasındaki ihtimaldir** ve şimdiye
+        kadar hiç sınanmamıştı.
+
+        ===================================================================
+        USUL -- Stiefel manifoldunda iki süpürme
+        ===================================================================
+
+        Bir MPS tensörü ``A[k] ∈ ℝ^{χ×2×χ}``, ``(χ·2, χ)`` dizeyi olarak
+        okunduğunda **Stiefel manifoldunda** bir noktadır: sütunları dik
+        ve birim ise ``Aᵀ A = I``. QR ayrışımı tam olarak o manifolda
+        izdüşümdür ve **tersinirdir** -- atılan hiçbir şey yoktur, ``R``
+        komşuya devredilir.
+
+            sol süpürme  (0 → merkez)  : A[k] = Q ,  A[k+1] ← R·A[k+1]
+            sağ süpürme  (n−1 → merkez): A[k] = Qᵀ,  A[k−1] ← A[k−1]·L
+
+        Netice: merkezin solundaki her tensör **sol-izometrik**,
+        sağındaki her tensör **sağ-izometriktir**; merkezde duran
+        tensörün tekil değerleri artık **hakikî Schmidt katsayılarıdır**
+        ve kesme ispatlı olarak en iyidir (Eckart–Young).
+
+        ===================================================================
+        HUDUT -- açıkça
+        ===================================================================
+
+        * Maliyet ``O(n·χ³)``dir ve **her kapıda yapılamaz**; akışta
+          meleke başına bir kere çağrılır (bkz. `nefs/qmeleke.py`).
+          Faydası bu maliyete değiyor mu, **ölçülür**, iddia edilmez.
+        * Kanoniklik yalnız çağrıldığı **anda** doğrudur; sonraki her
+          kapı onu bir parça bozar. O yüzden ``kanonik_hata`` ile ne
+          kadar bozulduğu ölçülebilir ve bu fonksiyon kendi iddiasını
+          denetleyebilir hâle gelir (H90).
+        * Durumu **hiç değiştirmez**: QR tersinirdir, ``R`` atılmaz.
+          Sınama bunu ölçer -- değiştirseydi kanoniklik uğruna fizik
+          bozulmuş olurdu.
+        """
+        n, X, B = self.n, self.bag, self.B
+        if n < 2:
+            return {"sol": 0, "sağ": 0}
+        c = int(n // 2 if merkez is None else np.clip(merkez, 0, n - 1))
+        A = self.A
+        # --- sol süpürme: 0 → c-1 sol-izometrik olsun
+        for k in range(c):
+            M = A[:, k].reshape(B, X * 2, X).astype(np.float64)
+            Q, R = np.linalg.qr(M)                 # (B, X·2, r), (B, r, X)
+            r = Q.shape[2]
+            yeni = np.zeros((B, X, 2, X), dtype=self.tip)
+            yeni[:, :, :, :r] = Q.reshape(B, X, 2, r).astype(self.tip)
+            A[:, k] = yeni
+            nx = np.zeros((B, X, 2, X), dtype=self.tip)
+            # R·A[k+1]: (B,r,X) @ (B,X,2X) → (B,r,2X)
+            t = np.matmul(R, A[:, k + 1].reshape(B, X, 2 * X).astype(
+                np.float64))
+            nx[:, :r] = t.reshape(B, r, 2, X).astype(self.tip)
+            A[:, k + 1] = nx
+            self.bag_ust[k + 1] = min(int(self.bag_ust[k + 1]), max(r, 1))
+        # --- sağ süpürme: n-1 → c+1 sağ-izometrik olsun
+        for k in range(n - 1, c, -1):
+            M = A[:, k].reshape(B, X, 2 * X).astype(np.float64)
+            # LQ ayrışımı = (QR of Mᵀ)ᵀ
+            Q, R = np.linalg.qr(M.transpose(0, 2, 1))   # (B,2X,r),(B,r,X)
+            r = Q.shape[2]
+            yeni = np.zeros((B, X, 2, X), dtype=self.tip)
+            yeni[:, :r] = Q.transpose(0, 2, 1).reshape(
+                B, r, 2, X).astype(self.tip)
+            A[:, k] = yeni
+            L = R.transpose(0, 2, 1)                    # (B, X, r)
+            nx = np.zeros((B, X, 2, X), dtype=self.tip)
+            # A[k-1]·L: (B, X·2, X) @ (B, X, r) → (B, X·2, r)
+            t = np.matmul(A[:, k - 1].reshape(B, X * 2, X).astype(np.float64),
+                          L)
+            nx[:, :, :, :r] = t.reshape(B, X, 2, r).astype(self.tip)
+            A[:, k - 1] = nx
+            self.bag_ust[k] = min(int(self.bag_ust[k]), max(r, 1))
+        return {"merkez": float(c), "sol": float(c), "sağ": float(n - 1 - c)}
+
+    def kanonik_hata(self, merkez: Optional[int] = None) -> float:
+        """Kanoniklikten **âzamî sapma** -- ölçüt kendini denetlesin.
+
+        Sol taraf için ``‖Aᵀ A − I‖_∞``, sağ taraf için ``‖A Aᵀ − I‖_∞``.
+        ``kanonikle`` çağrıldıktan hemen sonra makine hassasiyetinde
+        olmalı; kapılar vurdukça büyümeli. Büyümüyorsa ölçüt kördür.
+        """
+        n, X, B = self.n, self.bag, self.B
+        if n < 2:
+            return 0.0
+        c = int(n // 2 if merkez is None else np.clip(merkez, 0, n - 1))
+        en = 0.0
+        for k in range(c):
+            M = self.A[:, k].reshape(B, X * 2, X).astype(np.float64)
+            g = np.matmul(M.transpose(0, 2, 1), M)
+            # yalnız fiilen kullanılan bağ bloğuna bakılır
+            d = max(1, int(self.bag_ust[min(k + 1, self.n)]))
+            g = g[:, :d, :d]
+            en = max(en, float(np.max(np.abs(g - np.eye(d)[None]))))
+        for k in range(n - 1, c, -1):
+            M = self.A[:, k].reshape(B, X, 2 * X).astype(np.float64)
+            g = np.matmul(M, M.transpose(0, 2, 1))
+            d = max(1, int(self.bag_ust[min(k, self.n)]))
+            g = g[:, :d, :d]
+            en = max(en, float(np.max(np.abs(g - np.eye(d)[None]))))
+        return en
+
+    # -----------------------------------------------------------------
     #  Yuvaya mahsus kapılar, takas ve **tek süpürme**
     # -----------------------------------------------------------------
     def tek_kapi_yuva(self, i: int, G: np.ndarray) -> None:

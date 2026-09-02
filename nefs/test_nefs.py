@@ -599,12 +599,25 @@ def test_kaide_mizani_yesil_de_kirmizi_da_yanabiliyor():
 def test_kaide_eksik_istikra_yakin_vermez():
     """``tam_istikra_mi``nin hükmü mîzânda fiilen işliyor mu?
 
-    Rakibi elenmemiş bir kâide, BÜTÜN misallerde tutsa bile Yakîn'e
-    çıkmamalı; Zan'da kalmalı. Yakîn istikrâdan değil **tekliğin
-    ispatından** gelir. Burada girdi kare seçilir; o zaman ``aynı`` ile
-    ``devrik`` ebatta ayırt edilemez ve teklik ispatlanamaz.
+    Rakibi elenmemiş bir kâide, BÜTÜN misallerde tutsa bile **Yakîn'e
+    çıkmamalı**. Yakîn istikrâdan değil **tekliğin ispatından** gelir.
+    Burada girdi kare seçilir; o zaman ``aynı`` ile ``devrik`` ebatta
+    ayırt edilemez ve teklik ispatlanamaz.
+
+    **ŞART DARALTILDI, GEVŞETİLMEDİ (kütük H161).** Evvelce
+    ``makam == "Zan"`` yazıyordu; H161'de beşinci mertebe (``zann-ı
+    gālib``) makama girince bu hâl oraya çıktı -- derece 0,833 ve
+    rükünlerin ikisi ispatlanmış. Sınamanın **maksadı** o değildi:
+    maksat *"eksik istikrâ Yakîn vermez"*tir ve o şart aynen duruyor.
+    Belli bir mertebe adını şart koşmak, sınanan hükmü değil onun bir
+    tesadüfünü şart koşmak olurdu.
+
+    Gevşetme olmadığının şahidi aşağıdadır: mertebenin **Yakîn'in
+    altında** ve ``Şek``in **üstünde** olduğu ayrıca sınanır, yani
+    aralık iki taraftan da kapalıdır.
     """
     from .kaide import namzetleri_ele
+    from .murakabe import ZANN_I_GALIB_ESIGI
     from mizan.istikra import tam_istikra_mi
 
     assert not tam_istikra_mi(50, 50)       # eksik istikrâ 1 vermez
@@ -618,7 +631,14 @@ def test_kaide_eksik_istikra_yakin_vermez():
     en = hepsi[0]
     assert all(en.ebat_dogru) and all(en.renk_dogru), en.satir()
     assert not en.ebat_tek_mi, en.ebat_rakipleri   # rakip duruyor
-    assert en.makam == "Zan", en.satir()
+    # ASIL ŞART: teklik ispatlanmadan Yakîn olmaz.
+    assert en.makam != "Yakîn", en.satir()
+    assert en.derece < 1.0, en.satir()
+    # ...ve iki taraftan kapalı: bütün misaller tuttuğu için Şek'in de
+    # üstünde olmalı. Yalnız "Yakîn değil" denseydi, hiçbir şey
+    # tutturmayan bir kâide de sınamayı geçerdi.
+    assert en.makam in ("Zan", "Zann-ı gālib"), en.satir()
+    assert en.derece >= ZANN_I_GALIB_ESIGI or en.makam == "Zan", en.satir()
     assert en.nakz_delili is not None      # niçin tek olmadığının delili
 
 

@@ -296,13 +296,95 @@ class KaideOragi:
 
 
 # =====================================================================
+def cozum_sayisi(sahitler: Sequence[Tuple[int, int]], bit: int = 4) -> int:
+    """Orağın işaretlediği kol sayısı -- **klasik ve tam** sayım.
+
+    ``isaret_oragi``ın vurduğu şart ``Σ λ_s δ_s = 0`` **ve** ``r ≠ 0``
+    idi; burada aynı şart bit bit taranır. Maliyet ``2^{3·bit}``tir ve
+    bu **kabul edilmiş bir bedeldir**: sayı, tur adedini tayin etmek
+    için lâzımdır ve tur adedi yanlışsa bütün genlik yükseltme boşa
+    gider (aşağıya bakınız). ``sahte_kokler`` zaten aynı taramayı
+    yapıyor; burada tekrar bir tarama değil, aynı taramanın öbür
+    sayımıdır.
+    """
+    sartlar = sartlari_kur(sahitler, bit)
+    lam = [_LAMBDA[i % len(_LAMBDA)] for i in range(len(sartlar))]
+    say = 0
+    for indis in range(1 << (3 * bit)):
+        b = [(indis >> i) & 1 for i in range(3 * bit)]
+        if not any(b[2 * bit:]):
+            continue                      # âşikâr kâide (r=0) elenir
+        birlesik = sum(l * s.sapma(b) for l, s in zip(lam, sartlar))
+        if abs(birlesik) < 1e-9:
+            say += 1
+    return int(say)
+
+
+def en_iyi_tur(cozum: int, kol: int) -> int:
+    """Grover'ın **en iyi** tur sayısı -- kapalı form, tahmin değil.
+
+    ===================================================================
+    NİÇİN: ``tur = 2`` ELLE KONMUŞ BİR SAYIYDI
+    ===================================================================
+
+    ``coz_kaide`` iki tur koşuyordu ve o iki, hiçbir yerden gelmiyordu.
+    Halbuki Grover'ın genlik yükseltmesi bir **dönmedir** ve fazla
+    döndürmek çözümün genliğini geri **düşürür**::
+
+        sin θ = √μ ,   μ = çözüm / kol
+        k tur sonra çözüm genliği ∝ sin((2k+1)·θ)
+        ⇒ en iyi k* = round( (π/2 − θ) / (2θ) )
+
+    Yani ``tur``, çözüm nispetinden **hesaplanır**; seçilmez. ``μ``
+    büyükse ``k* = 0`` bile çıkabilir (arama zaten kolay) ve fazladan
+    her tur zarar verir.
+
+    ``k*`` en az 1 tutulmaz: sıfır çıkması manalıdır ve "hiç
+    döndürme" demektir. Sıfıra zorla 1 demek, kapalı formu bulup sonra
+    ondan vazgeçmek olurdu.
+
+    ===================================================================
+    CERİDENİN **FPAA** HÜKMÜ -- alınan ve alınamayan
+    ===================================================================
+
+    Ceride sabit noktalı genlik yükseltmeyi (fixed-point amplitude
+    amplification, Yoder–Low–Chuang) emrediyor. Onun tam hâli ``μ``
+    bilinmeden de **monoton** yakınsar ve fazla döndürmeyi yapısal
+    olarak imkânsız kılar.
+
+    **Fakat bu yazmaçta kurulamaz ve sebebi kütükte yazılıdır** (H98,
+    H110/7): FPAA genelleştirilmiş fazlar ister (``e^{iφ}``,
+    ``φ ≠ π``); bu yazmaç **reeldir** ve elindeki yegâne faz
+    ``diag(1,−1)``, yani ``π``dir. ``R_y`` dönmelerinin özdurumları
+    karmaşıktır, dolayısıyla açı kodlamasıyla temiz bir faz orağı
+    kurulamaz -- bu, H98'de **ölçülerek** tespit edilmiş bir hudut.
+
+    O hâlde FPAA'nın **maksadı** başka yoldan icra edilir: fazla
+    döndürmemek. Burada ``μ`` klasik olarak tam bilindiği için
+    (``cozum_sayisi``) en iyi tur **kapalı formda** hesaplanır ve
+    aşılmaz. FPAA'nın kazanacağı şey ``μ`` bilinmediğinde
+    sağlamlıktı; burada ``μ`` biliniyor, o hâlde ihtiyaç da yok.
+    """
+    N = int(max(kol, 1))
+    M = int(max(cozum, 0))
+    if M <= 0 or M >= N:
+        return 0
+    teta = float(np.arcsin(np.sqrt(M / N)))
+    if teta <= 1e-12:
+        return 0
+    return int(max(0, round((0.5 * np.pi - teta) / (2.0 * teta))))
+
+
 def coz_kaide(sahitler: Sequence[Tuple[int, int]], bit: int = 4,
-              tur: int = 2, ayar=None) -> Dict[str, object]:
+              tur: Optional[int] = None, ayar=None) -> Dict[str, object]:
     """Ebat kâidesini kübit hattında ara -- **tek geçişte, hepsi birden**.
 
     Dönen sözlükte kâide bloğunun dağılımı ve en yüksek genlikli aday
     vardır. Bu bir cevap değil bir **mîzândır**: hiçbir aday öne
     çıkmıyorsa o da bir hükümdür ve sükût edilir (H10).
+
+    ``tur`` verilmezse **hesaplanır** (``en_iyi_tur``): elle konmuş
+    ``2`` kalktı, yerine Grover'ın kapalı formu geldi.
     """
     from dataclasses import replace as _replace
 
@@ -321,8 +403,10 @@ def coz_kaide(sahitler: Sequence[Tuple[int, int]], bit: int = 4,
     orak = KaideOragi(q)
     orak.hazirla()
     sartlar = sartlari_kur(sahitler, bit)
+    M = cozum_sayisi(sahitler, bit)
+    tur_h = en_iyi_tur(M, 1 << k) if tur is None else int(tur)
     kesme = 0.0
-    for _ in range(max(1, int(tur))):
+    for _ in range(max(0, int(tur_h))):
         kesme += orak.isaret_oragi(sartlar)
         kesme += orak.difuzyon()
 
@@ -331,6 +415,7 @@ def coz_kaide(sahitler: Sequence[Tuple[int, int]], bit: int = 4,
     return {"dağılım": P, "en_yüksek": en, "olasılık": float(P[en]),
             "çözüm": _coz(en, bit), "kesme": float(kesme),
             "sahte_kok": sahte_kokler(sahitler, bit),
+            "çözüm_sayısı": M, "tur": int(tur_h),
             "χ": int(q.y.bag), "kapı": int(q.iz.kapi)}
 
 

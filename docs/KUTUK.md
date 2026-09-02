@@ -4957,3 +4957,148 @@ satırın iki ucu ise aynı cinsten iki noktadır.
 **Kazanç mütevazıdır ve büyütülmüyor:** fazla sayma %19'dan %17'ye
 iniyor. Kanallar hâlâ tam bağımsız değildir (bağımsız üç şahitte kıyas
 tabanı 1,05) ve bu açıkça duruyor.
+
+## H163 — STIEFEL İZOMETRİSİ: KESME EN İYİ DEĞİLMİŞ (ceridenin 1. mecburi müdahalesi)
+
+Kütük H121 ve `Yazmac.tekil_yogunluklar`ın şerhi şunu **zaten
+yazıyordu**: *"bu yazmaç kanonik biçimde değildir (kapılar QR/SVD ile
+yerinde bölünüyor, merkez taşınmıyor)."*
+
+**Bedeli hiç ölçülmemişti ve ağırmış.**
+
+### Künh -- niçin mühim
+
+İki yuvalık ``Θ``nın SVD'si **en iyi kesmeyi ancak çevre dik ise**
+verir (Eckart–Young). Çevre dik değilse tekil değerler atılan
+durumların hakikî ağırlığını **temsil etmez**: küçük bir tekil değer
+büyük bir fizikî genliğe karşılık gelebilir. Yani her kapıda "en az
+zararlı olanı attım" diyorduk fakat **ispatı yoktu**.
+
+Bir MPS tensörü ``(χ·2, χ)`` dizeyi olarak **Stiefel manifoldunda**
+bir noktadır; QR ayrışımı o manifolda izdüşümdür ve **tersinirdir**
+(``R`` komşuya devredilir, hiçbir şey atılmaz).
+
+### ÖLÇÜLDÜ -- 40 iki-kübitlik kapı, kanonikleştirme periyodu değişken
+
+    kübit  χ    periyot    log F     kapı başına   kanoniklik hatası
+    16     8    yok       −17,1737     0,650937      2,87e+00
+    16     8    8         −15,7903     0,673843      7,06e-08   (+1,38)
+    16     8    4         −14,5302     0,695409      6,55e-08   (+2,64)
+    16     8    1         −10,9681     0,760178      5,58e-08   (+6,21)
+
+    16    16    yok       −11,9643     0,741479      4,26e+00
+    16    16    1          −7,1792     0,835704      6,19e-08   (+4,79)
+
+    24    16    yok       −25,7224     0,525681      4,61e+00
+    24    16    1         −14,8177     0,690428      6,81e-08  (+10,90)
+
+24 kübitte ``e^{10,9} ≈ 54 000`` kat daha çok genlik tutuluyor. Ve
+kazanç **zincir uzadıkça büyüyor** -- nazariyenin dediği tam budur:
+zincir uzadıkça çevre diklikten daha çok sapar. Bedeli ~2 kat süredir.
+
+Bu, H146 (*kapı başına 0,93 tutuluyor*) ve H147 (*kesme felâketi üç
+melekede toplanıyor*) ölçümlerinin **arkasındaki sebeplerden biriydi**
+ve şimdiye kadar hiç sınanmamıştı.
+
+### Ölçüt kendini denetliyor (H90)
+
+* **Durum değişmiyor:** kanonikleştirmeden evvelki ve sonraki tam
+  dalgaların örtüşmesi ``1,000000000000``, norm birebir aynı. QR
+  tersinirdir; kanoniklik uğruna fizik bozulmuyor.
+* **Ölçüt kör değil:** ``kanonik_hata`` kanonikleştirmeden evvel
+  ``1,689``, sonra ``7,1e-08``, ve **her kapıdan sonra tekrar
+  büyüyor** (bir kapı sonrası 0,917). Yani sayı hâli hakikaten takip
+  ediyor, süs değil.
+
+### Akışa bağlanışı ve haddi
+
+`nefs/qmeleke.py::QMeleke.kosu` her melekeden **evvel** bir kere
+kanonikleştirir (``KANONIK_ACIK``, kapatılabilir -- H90). Kapı başına
+çağırmak en iyi neticeyi veriyor fakat maliyeti akışta ölçülmelidir;
+meleke başına çağırmak kazancın çoğunu maliyetin küçük kısmıyla alır.
+Bu bir tercih değil, **ölçülen iki ucun arasıdır**.
+
+## H164 — DİNAMİK ``β``: yumuşak azamînin sertliği ölçünün kendisinden doğsun (ceridenin 3. müdahalesi)
+
+``kulli_toplam`` sabit ``β = 8`` kullanıyordu. Cebri şudur: bir uzuv
+``e_max``ta çakılıysa
+
+    ℒ ≈ e_max + (1/β)·log(1 + Σ_{j≠max} e^{β(e_j − e_max)})
+
+yani **yalnız ``1/β`` mesafesindeki uzuvlar görünür**. ``β = 8``de o
+mesafe ``0,125``tir.
+
+Ve bu tam olarak **üç kere ölçülmüş** felâkettir:
+
+    H154  𝒪₂₄.kesme    yapısal, açıyla değişmez → kayıp kilitli
+    H156  kademeler    parametreden bağımsız    → kayıp kilitli
+    H160  kademe notu  çoğu görevde sabit       → işaret %41 düştü
+
+Üçünde de çare "o terimi çıkarmak" oldu; fakat bu bir **çare değil
+kaçınmadır** -- her yeni doymuş uzuv aynı derdi geri getirir.
+
+**Çare:** ``β`` doğrudan seçilmez, **katılan uzuv sayısı** hedeflenir
+ve ``β`` ona göre ikili aramayla çözülür. Katılan uzuv sayısı,
+yumuşak azamî ağırlıklarının perpleksitesidir (``exp H(w)``).
+
+Hedef ``√n`` ve **keyfî değildir**: kütükte ölçülmüş iki felâketin log
+ortasıdır. ``n`` uzuv katılırsa toplam ortalamadır ve H145'te ölçüldü
+(``σ/√n`` işareti söndürüyor); ``1`` uzuv katılırsa sert azamîdir ve
+H154/H156/H160'ta ölçüldü (doymuş uzuv kaybı kilitliyor). İkisi de
+ölçülmüş kusurdur; ``√n`` logaritmik ölçekte tam ortalarıdır.
+
+### Üç körlük sınaması da geçti (H90)
+
+    MONOTONLUK      bütün uzuvlar kötüleşince kayıp arttı: 0,6096 →
+                    0,6535 → 0,6986 → 0,7457 → 0,7956   ✓
+    SIRA BAĞIMSIZ   uzuvlar karıştırıldı, fark 0,00e+00  ✓
+    β OYNUYOR MU    yayılım 0,02 → β=256; 0,90 → β=25,3;
+                    katılan uzuv her hâlde √40 = 6,3'e oturuyor  ✓
+
+Sentetik doymuş-uzuv sınamasında yayılım ``0,01899 → 0,03909``
+(**2,06 kat**).
+
+**Hudut:** ``β`` haddi 256'dır; uzuvlar birbirine çok yakınsa had
+bağlar ve katılan sayı hedefin üstünde kalır. O hâlde ölçüt orada
+tam çalışmaz -- fakat uzuvlar zaten eşitken hangisinin seçildiği de
+manasızdır.
+
+## H165 — GROVER'IN TUR SAYISI ELLE KONMUŞTU; kapalı forma çevrildi (ceridenin FPAA hükmü)
+
+``coz_kaide`` ``tur = 2`` koşuyordu ve o **iki hiçbir yerden
+gelmiyordu**. Halbuki genlik yükseltme bir dönmedir ve fazla döndürmek
+çözümün genliğini **geri düşürür**::
+
+    sin θ = √μ,  μ = çözüm/kol      k* = round((π/2 − θ)/(2θ))
+
+``cozum_sayisi`` orağın işaretlediği kolu klasik ve **tam** sayar
+(``sahte_kokler``in zaten yaptığı taramanın öbür sayımı); ``en_iyi_tur``
+kapalı formu verir. ``k* = 0`` çıkması manalıdır ve zorla 1 yapılmaz --
+kapalı formu bulup ondan vazgeçmek olurdu.
+
+**Ceridenin FPAA'sı bu yazmaçta KURULAMAZ ve sebebi kütükte yazılı**
+(H98, H110/7): sabit noktalı genlik yükseltme genelleştirilmiş fazlar
+ister (``e^{iφ}``, ``φ ≠ π``); bu yazmaç **reeldir** ve elindeki yegâne
+faz ``diag(1,−1)``dir. FPAA'nın kazandıracağı şey ``μ``
+bilinmediğinde sağlamlıktı; burada ``μ`` klasik olarak **tam
+biliniyor**, o hâlde ihtiyaç da yok. Maksat (fazla döndürmemek) icra
+edildi, vasıta değişti ve değişme sebebi ölçülmüş bir hudut.
+
+## H166 — BLOK BLOK TÂLİM (ceridenin 2. mecburi müdahalesi) -- ve H155'i NAKZETMEDİĞİ
+
+`nefs/talim.py` artık blok blok koşabiliyor: her turda **bir blok**
+serbest, kalanı donuk. Bloklar ``QParametre.defter()``ten gelir, yani
+*"𝒪₂₁ Tefekkür'ün açıları"* bir blok olur -- bölme keyfî değildir.
+
+**H155 ile karıştırılmamalıdır ve karıştırmak kolaydır.** H155 *boyut
+indirgemesini* kaldırdı: sabit ``r`` boyutlu bir kesitte aramak
+iyileştiren yönlerin yarısını kaybettiriyordu (kazanç 0,254'e karşı
+0,131). Blok tâlimi bir kesit **değildir**: hiçbir yön atılmaz, yalnız
+**sırayla** ziyaret edilir; dondurulan koordinat atılmaz, ``p_sabit``ten
+aynen taşınır. Turlar boyunca bütün koordinatlara dokunulur, kesitte
+ise dokunulmayan yön ebediyen dokunulmazdı. Fark, *"az bakmak"* ile
+*"sırayla bakmak"* arasındaki farktır.
+
+Dokunulmayan blok **sayılır** (``dokunulmayan_blok``): tur sayısı blok
+sayısından azsa bazı bloklara hiç dokunulmaz ve bu sessizce
+geçilmez.

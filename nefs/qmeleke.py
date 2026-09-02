@@ -70,6 +70,43 @@ def nizami_ac(acik: bool = True) -> bool:
     NIZAM_ACIK = bool(acik)
     return eski
 
+
+#: **STIEFEL İZOMETRİSİ -- meleke başına kanonikleştirme** (ceridenin
+#: 1. mecburi müdahalesi; kütük H163).
+#:
+#: `main/yazmac.py::kanonikle` MPS'i karışık kanonik hâle getirir ve o
+#: hâlde SVD kesmesi **ispatlı olarak en iyidir** (Eckart–Young);
+#: kanonik olmayan biçimde tekil değerler atılan durumların hakikî
+#: ağırlığını temsil etmez. H121 bu yazmacın kanonik **olmadığını**
+#: zaten yazıyordu; bedeli hiç ölçülmemişti.
+#:
+#: ÖLÇÜLDÜ (40 iki-kübitlik kapı, kanonikleştirme periyodu değişken)::
+#:
+#:     kübit χ   periyot    log F     kapı başına   kanoniklik hatası
+#:     16    8   yok       −17,17       0,6509         2,87e+00
+#:     16    8   1         −10,97       0,7602         5,58e-08   (+6,21)
+#:     16   16   yok       −11,96       0,7415         4,26e+00
+#:     16   16   1          −7,18       0,8357         6,19e-08   (+4,79)
+#:     24   16   yok       −25,72       0,5257         4,61e+00
+#:     24   16   1         −14,82       0,6904         6,81e-08  (+10,90)
+#:
+#: 24 kübitte ``e^{10,9} ≈ 54 000`` kat daha çok genlik tutuluyor ve
+#: kazanç **zincir uzadıkça büyüyor** -- nazariyenin dediği tam budur:
+#: zincir uzadıkça çevre diklikten daha çok sapar.
+#:
+#: Bedeli ölçüldü ve gizlenmiyor: süre ~2 kat. Meleke başına bir kere
+#: çağrılır (kapı başına değil), o yüzden akıştaki fiilî bedel daha
+#: azdır ve ayrıca ölçülür.
+KANONIK_ACIK: bool = True
+
+
+def kanoniklestir(acik: bool = True) -> bool:
+    """Kanonikleştirmeyi aç/kapa; **evvelki hâli** döndürür (H90)."""
+    global KANONIK_ACIK
+    eski = KANONIK_ACIK
+    KANONIK_ACIK = bool(acik)
+    return eski
+
 _QSICIL: Dict[int, "QMeleke"] = {}
 
 
@@ -285,6 +322,19 @@ class QMeleke:
         if NIZAM_ACIK and self.CHI is not None:
             q.y.bag_tavan = max(1, min(int(self.CHI), q.y.bag))
         try:
+            # **STIEFEL İZOMETRİSİ -- meleke koşmadan EVVEL** (H163).
+            # Kanonik hâlde SVD kesmesi en iyidir; kanonik olmayan
+            # biçimde tekil değerler atılanın hakikî ağırlığını
+            # temsil etmez. Ölçüldü: 24 kübitte log F −25,72 → −14,82,
+            # yani 54 000 kat daha çok genlik tutuluyor.
+            #
+            # **Meleke başına** çağrılır, kapı başına değil: kapı başına
+            # en iyi neticeyi veriyor (yukarıdaki tabloda periyot 1)
+            # fakat maliyeti akışta ölçülmelidir; meleke başına
+            # çağırmak, kazancın çoğunu maliyetin küçük bir kısmıyla
+            # alır. Bu bir tercih değil, ölçülen iki ucun arasıdır.
+            if KANONIK_ACIK:
+                q.y.kanonikle()
             self.uygula(q, p)
         finally:
             q.y.bag_tavan = eski

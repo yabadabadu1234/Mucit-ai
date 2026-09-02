@@ -119,6 +119,7 @@ import numpy as np
 __all__ = ["OlcuUzayi", "MERTEBE_UZAYI", "UZAYLAR", "funktor",
            "funktor_tersi", "morfizm_funktoru", "funktor_dogrula",
            "mertebele", "Olcum", "kulli_toplam", "yumusak_asgari",
+           "dinamik_beta", "BETA", "HEDEF_USSU",
            "rapor"]
 
 
@@ -377,10 +378,116 @@ def yumusak_asgari(x, beta: float = 8.0) -> float:
 
 
 #: Yumuşak azamînin sertliği. ``β→0`` ortalama, ``β→∞`` azamî verir.
+#: **Artık varsayılan değil bir yedektir**: ``kulli_toplam`` ``beta``
+#: verilmezse ``dinamik_beta`` ile kendi sertliğini tayin eder (aşağıya
+#: bakınız). Sabit değer, dinamik yol kapatılmak istenirse duruyor --
+#: kapatılamayan bir tedbirin faydası ölçülemez (kütük H90).
 BETA: float = 8.0
 
+#: Dinamik ``β``nın hedefi: kaç uzuv **fiilen** hükme katılsın.
+#: ``√n`` seçildi ve keyfî değildir -- iki ölçülmüş felâketin log
+#: ortasıdır (bkz. ``dinamik_beta``).
+HEDEF_USSU: float = 0.5
 
-def kulli_toplam(olcumler: Sequence[Olcum], beta: float = BETA
+
+def _katilan_uzuv(eksikler: np.ndarray, beta: float) -> float:
+    """Yumuşak azamîde **fiilen hükmeden** uzuv sayısı (perpleksite).
+
+    Ağırlıklar ``w_i ∝ exp(β·eksik_i)``; katılan uzuv sayısı o
+    dağılımın perpleksitesidir, ``exp(H(w))``. ``β→0`` iken ``n``,
+    ``β→∞`` iken ``1`` verir; yani doğrudan "kaç uzuv konuşuyor"
+    sorusunun cevabıdır.
+    """
+    z = beta * eksikler
+    z = z - float(np.max(z))
+    w = np.exp(z)
+    t = float(np.sum(w))
+    if t <= 0.0:
+        return float(eksikler.size)
+    w = w / t
+    nz = w > 0.0
+    H = float(-np.sum(w[nz] * np.log(w[nz])))
+    return float(np.exp(H))
+
+
+def dinamik_beta(eksikler: Sequence[float], hedef_ussu: float = HEDEF_USSU,
+                 alt: float = 0.05, ust: float = 256.0) -> float:
+    """``β``yı ölçünün kendi dağılımından tayin et (ceride hükmü).
+
+    ===================================================================
+    NİÇİN SABİT ``β`` YETMİYOR -- üç ayrı koşuda ölçüldü
+    ===================================================================
+
+    Yumuşak azamî ``ℒ = (1/β)·log(1/n Σ e^{β·eᵢ})`` şudur: bir uzuv
+    ``e_max``ta çakılıysa
+
+        ℒ ≈ e_max + (1/β)·log(1 + Σ_{j≠max} e^{β(e_j − e_max)})
+
+    yani **yalnız ``1/β`` mesafesindeki uzuvlar görünür**. ``β = 8``de
+    bu mesafe ``0,125``tir: en kötüden 0,125'ten uzak her uzuv kaybı
+    hiç oynatmaz.
+
+    Ve bu tam olarak üç kere ölçülmüş felâkettir::
+
+        H154  𝒪₂₄.kesme    doymuş, yapısal, açıyla değişmez → kayıp kilitli
+        H156  kademeler    parametreden bağımsız sabit      → kayıp kilitli
+        H160  kademe notu  çoğu görevde ``sükût`` = sabit   → işaret %41 düştü
+
+    Üçünde de çare "o terimi çıkarmak" oldu; fakat bu bir **çare değil
+    kaçınmadır** -- her yeni doymuş uzuv aynı derdi geri getirir.
+
+    ===================================================================
+    ÇARE: ``β``yı KAÇ UZVUN KONUŞTUĞUNA göre kur
+    ===================================================================
+
+    ``β`` doğrudan seçilmez; **katılan uzuv sayısı** hedeflenir ve ``β``
+    ona göre çözülür (ikili arama, monoton olduğu için tektir):
+
+        hedef = n^{hedef_ussu} = √n        (``hedef_ussu = 0,5``)
+
+    ``√n`` **keyfî değildir**: kütükte ölçülmüş iki felâketin log
+    ortasıdır.
+
+    * ``n`` uzuv katılırsa toplam **ortalamadır** ve H145'te ölçüldü:
+      ``σ/√n`` işareti söndürüyor (yayılım 0,05'e düşüyor).
+    * ``1`` uzuv katılırsa toplam **sert azamîdir** ve H154/H156/H160'ta
+      ölçüldü: doymuş tek uzuv kaybı kilitliyor.
+
+    İkisi de ölçülmüş kusurdur; ``√n`` ikisinin arasında, logaritmik
+    ölçekte tam ortadadır. Yani sayı bir tercih değil, iki ölçülmüş
+    hududun ortasıdır.
+
+    **Epistemik manası da bozulmuyor:** hüküm hâlâ en zayıf öncüllere
+    ağırlık verir (H145'in klasik kaidesi), yalnız "en zayıf" tek bir
+    uzuv değil, en zayıf **kanat** olur. Bir zincirin en zayıf halkası
+    tekse ``β`` kendiliğinden büyür; birçok halka aynı zayıflıktaysa
+    küçülür. Yani sertlik ölçünün kendisinden doğar.
+    """
+    e = np.asarray(eksikler, float).reshape(-1)
+    n = e.size
+    if n <= 1:
+        return float(BETA)
+    if float(np.ptp(e)) < 1e-12:
+        # Bütün uzuvlar eşit: ``β``nın hiçbir tesiri yok, en ucuzu.
+        return float(alt)
+    hedef = float(n) ** float(np.clip(hedef_ussu, 0.0, 1.0))
+    hedef = float(np.clip(hedef, 1.0 + 1e-9, n - 1e-9))
+    lo, hi = float(alt), float(ust)
+    # ``_katilan_uzuv`` ``β``da azalandır; ikili arama tektir.
+    if _katilan_uzuv(e, lo) <= hedef:
+        return lo
+    if _katilan_uzuv(e, hi) >= hedef:
+        return hi
+    for _ in range(48):
+        orta = 0.5 * (lo + hi)
+        if _katilan_uzuv(e, orta) > hedef:
+            lo = orta
+        else:
+            hi = orta
+    return 0.5 * (lo + hi)
+
+
+def kulli_toplam(olcumler: Sequence[Olcum], beta: Optional[float] = None
                  ) -> Dict[str, object]:
     """Bütün ölçüleri müşterek uzayda topla -- **ortalama ile değil**.
 
@@ -439,7 +546,10 @@ def kulli_toplam(olcumler: Sequence[Olcum], beta: float = BETA
     mert = [o.mertebe() for o in olcumler]
     en_zayif = min(olcumler, key=lambda o: o.mertebe())
     n = len(eksikler)
-    b = float(max(beta, 1e-6))
+    # **DİNAMİK β (ceride hükmü).** ``beta`` verilmezse ölçünün kendi
+    # dağılımından tayin edilir; sabit ``β`` verilirse eski davranış
+    # aynen durur ve kıyas edilebilir (H90).
+    b = float(max(dinamik_beta(eksikler) if beta is None else beta, 1e-6))
     try:
         from fitrat.havuz import logsumexp
         yumusak = (float(logsumexp([b * e for e in eksikler]))
@@ -449,6 +559,8 @@ def kulli_toplam(olcumler: Sequence[Olcum], beta: float = BETA
         yumusak = float(z.max() + np.log(np.exp(z - z.max()).sum())
                         - np.log(n)) / b
     return {"kayıp": float(np.clip(yumusak, 0.0, 1.0)),
+            "β": b,
+            "katılan_uzuv": _katilan_uzuv(np.asarray(eksikler, float), b),
             "azamî_eksik": float(max(eksikler)),
             "ortalama_eksik": float(np.mean(eksikler)),
             "ortalama_mertebe": float(np.mean(mert)),

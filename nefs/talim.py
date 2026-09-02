@@ -151,6 +151,25 @@ class TalimAyari:
     #: koşunun teftiş edilebilmesinin şartıdır.
     sesli: bool = False
     tohum: int = 0
+    #: **BLOK BLOK TÂLİM (ceridenin 2. mecburi müdahalesi).** Sıfırsa
+    #: kapalıdır ve bütün parametre bir arada aranır (evvelki hâl);
+    #: müsbetse her turda **yalnız o kadar bloğa** dokunulur, kalanı
+    #: dondurulur. Bloklar ``blok_defteri`` ile verilir; verilmezse
+    #: parametre eşit dilimlere bölünür.
+    #:
+    #: **H155'İ NAKZETMEZ ve karıştırılmamalıdır.** H155 *boyut
+    #: indirgemesini* kaldırdı: sabit bir ``r`` boyutlu kesitte aramak,
+    #: iyileştiren yönlerin yarısını kaybettiriyordu (0,254 kazanca
+    #: karşı 0,131). Blok tâlimi bir kesit **değildir**: hiçbir yön
+    #: atılmaz, yalnız **sırayla** ziyaret edilir. Turlar boyunca
+    #: bütün koordinatlar dokunulur; kesitte ise dokunulmayan yön
+    #: ebediyen dokunulmazdı. Aradaki fark, "az bakmak" ile "sırayla
+    #: bakmak" arasındaki farktır.
+    blok: int = 0
+    #: ``{ad: (başlangıç, uzunluk)}`` -- ``QParametre.defter()`` bunu
+    #: zaten veriyor. Bloklar **melekenin kendi dilimidir**, keyfî bir
+    #: bölme değil; yani "𝒪₂₁ Tefekkür'ün açıları" bir blok olur.
+    blok_defteri: Optional[Dict[str, Tuple[int, int]]] = None
 
 
 def _gri_kodla(k: np.ndarray, bit: int) -> np.ndarray:
@@ -539,8 +558,102 @@ class Talim:
         return d
 
     # ================================================================
+    # -- BLOK TÂLİMİ (ceridenin 2. mecburi müdahalesi) ---------------
+    def _bloklar(self) -> List[np.ndarray]:
+        """Parametreyi **melekelerin kendi dilimlerine** böl.
+
+        Defter verilirse bloklar oradan gelir -- yani "𝒪₂₁ Tefekkür'ün
+        açıları" bir blok olur ve bölme keyfî olmaz. Verilmezse eşit
+        dilimlere bölünür ve bu **kayda geçer**: keyfî bir bölme,
+        keyfî olduğu bilinerek kullanılmalıdır.
+        """
+        a = self.ayar
+        if a.blok_defteri:
+            bl = []
+            for _ad, (bas, kac) in sorted(a.blok_defteri.items(),
+                                          key=lambda kv: kv[1][0]):
+                idx = np.arange(int(bas), min(int(bas) + int(kac), self.d))
+                if idx.size:
+                    bl.append(idx)
+            if bl:
+                return bl
+            self.eksik["blok_defteri"] = "defter boş; eşit dilime düşüldü"
+        n = max(1, int(a.blok))
+        return [np.asarray(x, np.intp)
+                for x in np.array_split(np.arange(self.d), n) if len(x)]
+
+    def _blok_kayip(self, p_sabit: np.ndarray, idx: np.ndarray) -> Kayip:
+        """Yalnız ``idx`` koordinatlarını serbest bırakan kayıp.
+
+        Dondurulan koordinatlar **atılmaz**, ``p_sabit``ten aynen
+        taşınır. Kesitten farkı budur ve H155'in nakzedilmemesinin
+        sebebi de budur.
+        """
+        def f(Q: np.ndarray) -> np.ndarray:
+            Q = np.atleast_2d(np.asarray(Q, float))
+            P = np.repeat(p_sabit[None, :], Q.shape[0], axis=0)
+            P[:, idx] = Q
+            return np.asarray(self.kayip(P), float).reshape(-1)
+        return f
+
     def kos(self) -> Dict[str, object]:
         """Dokuz uzvu sırayla koştur; en iyi parametreyi döndür."""
+        a = self.ayar
+        if int(a.blok) > 0 or a.blok_defteri:
+            return self._kos_blok()
+        return self._kos_tam()
+
+    def _kos_blok(self) -> Dict[str, object]:
+        """Blok blok tâlim: her turda **bir blok** serbest, kalanı donuk.
+
+        Bloklar tur tur **dönüşümlü** ziyaret edilir; ``tur`` sayısı
+        blok sayısından azsa bazı bloklara hiç dokunulmaz ve bu
+        ``dokunulmayan_blok`` diye **sayılır** -- sessizce atlanmaz.
+        """
+        a = self.ayar
+        t0 = time.perf_counter()
+        bloklar = self._bloklar()
+        p_iyi = self.p0.copy()
+        V_ilk = self._f1(p_iyi)
+        V_iyi = V_ilk
+        seyir: List[Dict[str, float]] = []
+        dokunulan: set = set()
+        for tur in range(int(a.tur)):
+            i = tur % len(bloklar)
+            idx = bloklar[i]
+            dokunulan.add(i)
+            ic = TalimAyari(**{**a.__dict__, "tur": 1, "blok": 0,
+                               "blok_defteri": None,
+                               "r": int(min(a.r, idx.size))})
+            alt = Talim(self._blok_kayip(p_iyi, idx), p_iyi[idx], ic, self.dh)
+            r = alt.kos()
+            self.cagri += int(alt.cagri)
+            self.eksik.update(alt.eksik)
+            if float(r["V_son"]) < V_iyi:
+                p_iyi = p_iyi.copy()
+                p_iyi[idx] = np.asarray(r["p"], float)
+                V_iyi = float(r["V_son"])
+            seyir.append({"tur": float(tur), "V": V_iyi,
+                          "blok": float(i), "blok_boyu": float(idx.size),
+                          "R": float(r["seyir"][-1]["R"]) if r["seyir"] else 0.0,
+                          "durgunluk": (float(r["seyir"][-1]["durgunluk"])
+                                        if r["seyir"] else 0.0),
+                          "deneme": 1.0, "çağrı": float(self.cagri)})
+        out: Dict[str, object] = {
+            "p": p_iyi, "V_ilk": V_ilk, "V_son": V_iyi,
+            "kazanç": V_ilk - V_iyi,
+            "süre_sn": time.perf_counter() - t0,
+            "seyir": seyir, "günlük": self.gunluk,
+            "düşen_uzuv": dict(self.eksik),
+            "boyut": self.d, "altuzay": self.d,
+            "blok": len(bloklar),
+            "dokunulan_blok": len(dokunulan),
+            "dokunulmayan_blok": len(bloklar) - len(dokunulan),
+        }
+        out.update(self._butce())
+        return out
+
+    def _kos_tam(self) -> Dict[str, object]:
         a = self.ayar
         t0 = time.perf_counter()
         p_iyi = self.p0.copy()
