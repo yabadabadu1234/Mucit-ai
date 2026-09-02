@@ -1517,6 +1517,80 @@ def test_qsp_faz_tablosu_CEVRIMDISI_ve_dogru():
     assert art < 1e-9, art
 
 
+def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
+    """41 meleke katman değil üreteç mi, ve muvazene ölçüsü ısırıyor mu?
+
+    Padişahın küllî esası: *"41 Meleke, arka arkaya dizilen 41 klasik
+    gizli katman DEĞİLDİR; tek bir Hamiltonyenin paralel koordinat
+    eksenleridir."* Üç şart denetlenir.
+    """
+    import numpy as np
+    from nefs.dimag import (MELEKE_SAYISI, MERTEBE_SAYISI, CERIDE_MISALLERI,
+                            meleke_mertebeleri, so_ureteci,
+                            mertebe_hamiltonyeni, bgcm_kaybi, H_toplam,
+                            DimagAyari)
+
+    # 1) dağılım ceridenin misallerini TUTMALI ve boş mertebe bırakmamalı
+    cet = meleke_mertebeleri()
+    assert len(cet) == MELEKE_SAYISI
+    for no, m in CERIDE_MISALLERI.items():
+        assert cet[no] == m, (no, cet[no], m)
+    for m in range(MERTEBE_SAYISI):
+        assert any(v == m for v in cet.values()), m
+
+    # 2) üreteçler ANTİSİMETRİK: exp(θT) tam ortogonal olsun
+    for a in (0, 5, 40):
+        T = so_ureteci(12, a)
+        assert np.allclose(T, -T.T)
+        assert abs(np.trace(T)) < 1e-12
+
+    # bir mertebenin Hamiltonyeni TEK dizeydir, katman yığını değil
+    H, uy = mertebe_hamiltonyeni(2, np.ones(MELEKE_SAYISI), 12, cet)
+    assert H.shape == (12, 12) and np.allclose(H, -H.T)
+    assert sorted(uy) == [8, 22]
+
+    # 3) BGCM: tek meleke uyanıkken TAM sıfır, 41'i birden büyük
+    t0 = np.zeros(MELEKE_SAYISI)
+    t0[0] = 1.0
+    b0 = bgcm_kaybi(t0, 12)
+    assert b0["kayıp"] == 0.0 and b0["muvazeneli"]
+    rng = np.random.default_rng(0)
+    b1 = bgcm_kaybi(rng.normal(size=MELEKE_SAYISI), 12)
+    assert b1["kayıp"] > 1.0 and not b1["muvazeneli"]      # KIRMIZI
+
+    # Ĥ_toplam üç kalemi ayrı ayrı raporlamalı; hiçbiri gizlenmemeli
+    r = H_toplam(0.05 * rng.normal(size=MELEKE_SAYISI),
+                 rng.normal(size=(16, 3)), H_arc=np.eye(16) * 0.3,
+                 ayar=DimagAyari(D=16))
+    assert set(r["kalem"]) == {"ARC", "meleke", "BGCM"}
+    assert r["kalem"]["ARC"] > 0 and r["kalem"]["meleke"] > 0
+    assert r["dolu_mertebe"] == MERTEBE_SAYISI
+    assert r["H"].shape == (16, 16)
+
+
+def test_gomme_qtt_cekirdegi_chi8_ve_muhurlenen_ayrisim():
+    """Emir 2 ve 3: χ=8 QTT çekirdeği, n=2 d=12 mühürlü mü?"""
+    import numpy as np
+    from nefs.gomme import (QTT_TABAN, QTT_KADEME, QTT_BAG,
+                            qtt_parametre_sayisi, qtt_gomme,
+                            qtt_sadakat_cetveli)
+    assert (QTT_TABAN, QTT_KADEME, QTT_BAG) == (2, 12, 8)
+    assert QTT_TABAN ** QTT_KADEME == 4096
+    assert qtt_parametre_sayisi() == 1536
+
+    rng = np.random.default_rng(0)
+    # yapılı veride χ=8 TAM temsil eder; rastgelede ETMEZ (kırmızı)
+    duz = np.sin(np.linspace(0, 6, 4096)) * np.exp(-np.linspace(0, 3, 4096))
+    _, sad, par = qtt_gomme(duz, chi=8)
+    assert sad > 0.999999, sad
+    assert par < 4096, par                      # sıkıştırma hakikî
+    _, sad_r, _ = qtt_gomme(rng.normal(size=4096), chi=8)
+    assert sad_r < 0.3, sad_r                   # KIRMIZI olabiliyor
+    # χ = 1 (rank-1) yasaklandı: yapılı veride bile yetmiyor
+    _, sad1, par1 = qtt_gomme(duz, chi=1)
+    assert par1 == 24 and sad1 < sad, (par1, sad1, sad)
+
+
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
 # tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
 # koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.

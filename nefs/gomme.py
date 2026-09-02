@@ -37,7 +37,80 @@ import numpy as np
 
 __all__ = ["kubit_sayisi", "genlik_gom", "genlik_coz", "mps_kur",
            "qtt_bag_ihtiyaci", "gomme_hatasi", "veri_yazmaci",
-           "YazmacOlcusu", "bellek_cetveli"]
+           "YazmacOlcusu", "bellek_cetveli",
+           "QTT_TABAN", "QTT_KADEME", "QTT_BAG", "qtt_parametre_sayisi",
+           "qtt_gomme", "qtt_sadakat_cetveli"]
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  MÜHÜRLENEN AYRIŞIM (padişahın 3. kat'î emri)
+# ══════════════════════════════════════════════════════════════════════
+#
+#     "KESİNLİKLE n=2, d=12 (İkili Quantics) SEÇİLECEKTİR."
+#
+# Gerekçesi üç kalemdir ve keyfî değildir:
+#   1. Kübit birebir eşlemesi -- ``n = 2`` tabanı 12 sanal kübitin
+#      iki boyutlu durumlarıyla örtüşür; ara modülo dönüşümü yok.
+#   2. QSP ve FCT ikili dyadic ızgarada çalışır.
+#   3. Token başına 3,430 MFLOP ile en ucuz ayrışım budur (H180).
+#
+#: Quantics tabanı -- **değiştirilmez**.
+QTT_TABAN: int = 2
+#: Çekirdek sayısı: ``2^12 = 4096``.
+QTT_KADEME: int = 12
+#: Gömme çekirdeklerinin bağ boyutu (padişahın 2. emri: χ = 8).
+QTT_BAG: int = 8
+
+
+def qtt_parametre_sayisi(kademe: int = QTT_KADEME, chi: int = QTT_BAG,
+                         taban: int = QTT_TABAN) -> int:
+    """``kademe × (taban·χ·χ)`` -- gömmenin serbest sayı adedi.
+
+    Padişahın hükmü: *"4096 sayıyı düz dizi olarak tutma; 12 adet
+    2×8×8'lik tensör çekirdeği öğren."* Netice ``12 × 128 = 1536``tır.
+    Uç çekirdeklerin bağı bir yanda 1 olduğu için hakikî adet biraz
+    daha azdır; burada **üst sınır** verilir ve alt sınır
+    ``qtt_gomme``nin kendi çekirdeklerinden sayılır -- iddia değil,
+    sayım.
+    """
+    return int(kademe) * int(taban) * int(chi) * int(chi)
+
+
+def qtt_gomme(v: np.ndarray, chi: int = QTT_BAG
+              ) -> Tuple[List[np.ndarray], float, int]:
+    """4096 boyutlu vektörü **12 QTT çekirdeğine** indir (χ bağıyla).
+
+    Döner ``(çekirdekler, sadakat, parametre)``. ``sadakat``
+    ``1 − bağıl hata``dır; ``parametre`` çekirdeklerdeki hakikî sayı
+    adedidir (uç çekirdeklerin daralması dâhil).
+
+    **Rank-1 DEĞİLDİR ve olmamalıdır** (padişahın 2. emri): ``χ = 1``
+    12 kademede yalnız 24 parametre bırakır ve ölçüldüğüne göre dili
+    temsil edemez. ``χ = 4`` ve ``χ = 8`` cetveli
+    ``qtt_sadakat_cetveli``dedir.
+    """
+    psi, _ = genlik_gom(v)
+    k = kubit_sayisi(np.asarray(v).size)
+    cek, bag, hata = mps_kur(psi, k, chi=int(chi))
+    par = int(sum(c.size for c in cek))
+    return cek, float(1.0 - hata), par
+
+
+def qtt_sadakat_cetveli(v: np.ndarray,
+                        chiler: Sequence[int] = (1, 2, 4, 8, 16, 32)
+                        ) -> List[Dict[str, float]]:
+    """χ ile sadakat ve parametre adedi -- **yan yana** (H47).
+
+    Ceridenin iddiası ``χ = 4`` → %99,2 ve ``χ = 8`` → %99,98'dir. Bu
+    bir iddiadır; burada ölçülür ve verinin cinsine göre değişir.
+    """
+    out: List[Dict[str, float]] = []
+    for c in chiler:
+        _, sad, par = qtt_gomme(v, chi=int(c))
+        out.append({"χ": int(c), "sadakat": float(sad),
+                    "parametre": int(par),
+                    "sıkıştırma": float(np.asarray(v).size) / max(par, 1)})
+    return out
 
 
 def kubit_sayisi(D: int) -> int:

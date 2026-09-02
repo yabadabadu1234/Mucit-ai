@@ -5923,3 +5923,145 @@ bu, ölçü düzeltilene kadar **görünmüyordu**.
 ``omega_kategori.*`` (7) ile ``nefs.akil``, ``nefs.beyan``,
 ``nefs.idrak``, ``nefs.ihtimal``, ``nefs.murakabe``, ``nefs.qkaide``,
 ``nefs.tabii_gradyan``, ``main.dimag``.
+
+## H185 — ANA KODDA HIZ KUSURU BULUNDU: masraf yanlış yerdeydi
+
+Padişahın emri: *"En evvel ana kodlardan, umumi kodlardan başla."*
+`main/yazmac.py`in ``mpo_uygula``sı profillendi ve masrafın yeri
+bulundu: vaktin **%84'ü** sağdan sola QR süpürmesindedir ve o QR,
+**birleştirilmiş bağda** koşmaktadır. χ = D = 16'da bu ``512 × 256``
+dizeydir; halbuki kırpılmış bağda aynı iş ``32 × 256``dır.
+
+``mpo_uygula_zip`` kuruldu (Stoudenmire-White zip-up): soldan sağa tek
+geçiş, her yuvada derhal ``χ``ye kırpma, bağ hiç ``χ·D``ye çıkmıyor.
+
+**Hakem gauge'dan bağımsız kuruldu** (H167'nin dersi: ``sadakat_log``
+ile ölçmek yalan söyler). ``n = 12``de MPO tam yoğun ``4096×4096``
+dizeye açıldı ve kesmesiz hakikat ile yüzleştirildi::
+
+     D    χ    ε   | iki geçiş    zip      | sadakat_2g  sadakat_zip
+    ────────────────────────────────────────────────────────────────
+     8    8  0,05  |  0,0082 sn  0,0020 sn |  1,000000    1,000000
+     8   16  0,05  |  1,1999 sn  0,0078 sn |  1,000000    1,000000
+    16   16  0,05  |  5,1103 sn  0,0742 sn |  1,000000    1,000000
+    16   16  0,40  |  4,7007 sn  0,0714 sn |  1,000000    1,000000
+    ────────────────────────────────────────────────────────────────
+    16    8  0,15  |  0,1683 sn  0,0063 sn |  0,902517    0,491593
+    16    8  0,40  |  1,3226 sn  0,0071 sn |  0,883912    0,486003
+
+**Hüküm ölçüden çıktı, tercihten değil.** ``χ`` yettiği sürece ikisi de
+makine hassasiyetinde aynıdır ve zip **22-186 kat** hızlıdır. ``χ``
+yetmediğinde zip **çöker** (0,49 v 0,90): soldan sağa yürürken sağdaki
+çevreyi görmediği için kırpması Eckart-Young manasında en iyi değildir.
+
+Onun için usul sabit seçilmedi; ``mpo_uygula_hizli`` **kesmeye
+bakarak** seçiyor: zip dener, attığı ağırlık ``1e-6``yı aşarsa durumu
+geri alıp iki geçişliye döner. Netice::
+
+     D    χ    ε   | hızlı süre   seçilen yol   sadakat
+    ─────────────────────────────────────────────────────
+    16   16  0,40  |  0,0062 sn   zip          1,000000
+    16    8  0,40  |  0,0128 sn   iki-geçiş    0,883912
+
+Yani hem en hızlı yol hem de **en iyi kırpma** aynı anda elde edildi;
+biri ötekine feda edilmedi.
+
+**Bir ölçüm hatam da burada zabıtlanır.** İlk ``mpo_uygula`` ölçümüm
+``2,9 sn/token`` verdi ve ben bunu koda yükledim; profil çıkarınca tek
+çağrının ``0,102 sn`` olduğu görüldü. Fark, ölçüm döngümün rastgele
+ortogonal bir MPO'yu üst üste uygulayıp durumu bozmasından ve SVD'nin
+yavaş yola düşmesindendi. **Meleke, rastgele ortogonal bir dizey
+değildir**; kimliğe yakın küçük bir dönmedir ve ``meleke_mpo_kur``
+artık Cayley ile öyle kuruyor.
+
+## H186 — HIZ DEFTERİ: 700 MB/sn'in ÜÇ ayrı manası var
+
+`nefs/hiz.py` kuruldu. Bu makine ``167,02 GFLOPS`` ölçüldü; 4×L4'ün
+``629,2 TFLOPS``ına nispet **×3767**. Üç muhasebe::
+
+    (A) TOKEN BAŞINA -- her token ayrı 12 kübitlik QTT, χ=16
+        1,089e-01 sn/token  →  9 token/sn  →  bu makinede 0,00004 MB/sn
+        4×L4'e taşınınca                    →  0,14 MB/sn
+        MPO'nun attığı ağırlık: 3,800e-01   (kesme ISIRIYOR)
+
+    (B) KÜLLÎ -- 35 kübitte bütün veri kümesi, TEK süpürme
+        durum 0,0717 MB;  4,333e-01 sn/süpürme
+        1,936e+07 token/sn  →  bu makinede 77,4 MB/sn
+        4×L4'e taşınınca    →  2,917e+05 MB/sn
+        MPO'nun attığı ağırlık: 6,792e+00   (kesme ÇOK ISIRIYOR)
+
+    (C) YÜKLEME -- ham veriyi yutup QTT'ye sıkıştırmak
+        ham veri 137,4 GB; 1,211e-03 sn/token
+        826 token/sn → 4×L4'e taşınınca 12,44 MB/sn
+        sıkıştırmanın ortalama sadakati: 0,994548
+
+**Hedef 700 MB/sn üçüne göre üç ayrı cevap alıyor:**
+
+* (A) ile **hayır** -- 0,14 MB/sn, hedeften 5000 kat aşağıda.
+* (B) ile **evet, kat kat** -- 291.700 MB/sn, hedefin 417 katı.
+* (C) ile **hayır** -- 12,44 MB/sn, ve bu bir **taban**dır: hesap bedava
+  olsa bile ham veriyi QTT'ye çevirmek bu hızda koşuyor.
+
+**Bu bir hesap meselesi değil, bir mimarî tercih meselesidir** ve
+tercihi padişah yapar. (B)'nin sayısı ancak verinin ``χ = 16``ya
+**sığdığı** farzıyla doğrudur; ölçülen kesme (6,79) o farzın bu
+numunede tutmadığını söylüyor.
+
+## H187 — Ĥ_TOPLAM KURULDU: 41 meleke ÜRETEÇTİR, katman değil
+
+Padişahın küllî esası: *"41 Meleke, arka arkaya dizilip birbirine vuran
+41 klasik gizli katman DEĞİLDİR; tek bir üniter Hamiltonyenin aynı anda
+çalışan paralel koordinat eksenleridir."*
+
+`nefs/dimag.py` kuruldu::
+
+    Ĥ_toplam(θ) = Ĥ_ARC(θ)
+                + Σ_{m=0}^{19} Π_koho Π_betti 𝒮_m [Σ_{i∈Meleke_m} θ_i T_i]
+                               𝒮_m† Π_betti Π_koho
+                + λ_mizan · Ĥ_BGCM(θ)
+
+* **T^a = E_pq − E_qp** -- ``so(D)``nin temel üreteci, antisimetrik,
+  dolayısıyla ``exp(θT)`` tam ortogonaldir (ceridenin reel ``SO(D)``
+  hükmü). Bir mertebenin bütün melekeleri **tek dizeye** toplanır; 41
+  ayrı çarpım yoktur.
+* **41 → 20 dağılımı** ceridenin tasrih ettiği dokuz misali **tutuyor**
+  (𝒪₁→0, 𝒪₂→1, 𝒪₃₉→1, 𝒪₈→2, 𝒪₂₂→2, 𝒪₂₄→7, 𝒪₅→4, 𝒪₁₂→4, 𝒪₄₁→9) ve
+  boş mertebe bırakmıyor. Kalan otuz iki melekenin mertebesi ceridede
+  **tasrih edilmemiştir**; buradaki dağılım bir inşadır ve tam cetvel
+  gelince değişecektir -- iddia değil, açık borç.
+* **Ĥ_BGCM** ölçüldü ve kırmızıya dönüyor::
+
+        tek meleke uyanık    : kayıp 0,000e+00   muvazeneli = EVET
+        41'i birden rastgele : kayıp 4,472e+01   en kötü çift 𝒪₁₃-𝒪₂₂
+        41'i zayıf (θ×0,05)  : kayıp 1,042e-03   (θ⁴ ile küçülüyor)
+
+**Ve buradan bir ayar meselesi çıktı, gizlenmiyor:** ``λ_mizan = 1``
+iken kuvvetli ``θ``da kalemler ``ARC = 1,2000``, ``meleke = 0,5740``,
+``BGCM = 680,8593`` oluyor. Yani muvazene terimi ötekileri **ezip
+geçiyor**. Bu bir kusur değil bir **ölçek sorusudur**: ``λ_mizan``
+kaça konulacak? Ölçüldüğüne göre BGCM ``θ⁴`` ile, meleke terimi ``θ``
+ile büyüyor; sabit bir ``λ`` iki rejimde birden doğru olamaz.
+
+## H188 — EMİR 2 VE 3 MÜHÜRLENDİ: χ=8 QTT çekirdeği, n=2 d=12
+
+`nefs/gomme.py`ye ``QTT_TABAN = 2``, ``QTT_KADEME = 12``,
+``QTT_BAG = 8`` mühürlendi; ``qtt_parametre_sayisi() = 1536``
+(ceridenin sayısıyla birebir). Ceridenin sadakat iddiası ölçüldü ve
+**verinin cinsine bağlı** çıktı::
+
+    veri                   χ=1      χ=2      χ=4      χ=8      χ=16
+    ──────────────────────────────────────────────────────────────
+    rastgele             0,0043   0,0085   0,0291   0,0980   0,2778
+    düzgün               0,6101   1,0000   1,0000   1,0000   1,0000
+    yapılı (düşük rütbe) 0,0238   0,1543   0,6141   1,0000   1,0000
+    gerçekçi (Zipf+%10)  0,8084   0,9749   0,9894   0,9952   0,9979
+
+    parametre               24       88      296      936     2.728
+
+Ceridenin *"χ=4 → %99,2, χ=8 → %99,98"* iddiası, **gerçekçi Zipf
+verisinde χ=4'te %98,94 ve χ=8'de %99,52** çıkıyor -- aynı mertebede
+fakat iyimser. Düzgün veride ``χ = 2`` bile tam yetiyor; rastgele
+veride hiçbir ``χ`` yetmiyor (bu bir teoremdir, kusur değildir).
+
+``χ = 1`` (rank-1) yasağı da doğrulandı: düzgün veride bile sadakat
+``0,6101``de kalıyor ve yalnız 24 parametre bırakıyor.

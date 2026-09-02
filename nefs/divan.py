@@ -184,6 +184,8 @@ import nefs.beyan  # [uzuv] 𝒪₃₇–𝒪₄₁: beyan -- hükmün dışarı
 import nefs.idrak  # [uzuv] 𝒪₁–𝒪₁₀: duyudan mahiyete. Ham sinyalin suret, soyutlama ve mana kazandığı
 import nefs.ihtimal  # [uzuv] İhtimal uzayı: **çıktı ızgarasının bütün muhtemel hâlleri, süperpozisyonda**
 import nefs.ikiz  # [hakem] İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil
+import nefs.dimag  # [uzuv] Küllî Dimağ Hamiltonyeni -- 41 meleke Lie üreteci, 20 mertebe, 4 zırh, 1 gaye
+import nefs.hiz  # [hakem] Hız defteri -- 700 MB/sn hedefinin üç ayrı muhasebesi
 import nefs.gomme  # [uzuv] Genlik gömmesi -- 4096 boyut 12 kübitte, 35 kübitlik adres yazmacı
 import nefs.zirh  # [uzuv] Dörtlü topolojik zırh -- gaye: çelişkisiz mana manifoldu
 import nefs.ogda  # [hakem] OGDA -- kaybın min-max olduğunun farkedilmesi ve doğru çözücüsü
@@ -450,6 +452,10 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'İhtimal uzayı: **çıktı ızgarasının bütün muhtemel hâlleri, süperpozisyonda**'),
     ('nefs.ikiz', 'hakem',
      'İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil'),
+    ('nefs.dimag', 'uzuv',
+     'Küllî Dimağ Hamiltonyeni -- 41 meleke Lie ÜRETECİDİR (katman değil), 20 mertebe, dörtlü zırh ve BGCM muvazenesi tek dizeyde'),
+    ('nefs.hiz', 'hakem',
+     'Hız defteri -- token başına / küllî süperpozisyon / yükleme: üç muhasebe yan yana'),
     ('nefs.gomme', 'uzuv',
      'Genlik gömmesi -- tokenın 4096 boyutu 12 kübitin GENLİĞİdir; '
      '35 kübitlik adres yazmacı (yığın|yer|mana)'),

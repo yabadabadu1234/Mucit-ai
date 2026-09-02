@@ -925,6 +925,156 @@ class Yazmac:
     # -----------------------------------------------------------------
     #  MPO: kübitleri oynatmadan bütün zincire aynı anda etki et
     # -----------------------------------------------------------------
+    def mpo_uygula_hizli(self, W: Dict[int, np.ndarray], D: int,
+                         bas: int = 0, son: Optional[int] = None,
+                         sol_sinir: Optional[np.ndarray] = None,
+                         sag_sinir: Optional[np.ndarray] = None,
+                         esik: float = 1e-6) -> float:
+        """Zip-up ile dene; **kesme ısırırsa** iki geçişliye geri dön.
+
+        ===================================================================
+        BU KANUN ÖLÇÜMDEN ÇIKTI, TERCİHTEN DEĞİL
+        ===================================================================
+
+        İki usul, ``n = 12``de **tam yoğun dalgayla** (kesmesiz hakikat)
+        yüzleştirildi. Sadakat, gauge'dan bağımsız tek hakemdir --
+        ``sadakat_log`` ile ölçmenin ne getirdiğini kütük H167 yazıyor.
+
+            D    χ    ε    | iki geçiş   zip      | sadakat_2g  sadakat_zip
+            ─────────────────────────────────────────────────────────────
+             8    8  0,05  |  0,0082 s  0,0020 s  |  1,000000   1,000000
+             8   16  0,05  |  1,1999 s  0,0078 s  |  1,000000   1,000000
+            16   16  0,05  |  5,1103 s  0,0742 s  |  1,000000   1,000000
+            16   16  0,40  |  4,7007 s  0,0714 s  |  1,000000   1,000000
+            ─────────────────────────────────────────────────────────────
+            16    8  0,15  |  0,1683 s  0,0063 s  |  0,902517   0,491593
+            16    8  0,40  |  1,3226 s  0,0071 s  |  0,883912   0,486003
+
+        **Hüküm:** ``χ`` yettiği sürece ikisi de makine hassasiyetinde
+        aynıdır ve zip **22-186 kat** hızlıdır. ``χ`` yetmediğinde zip
+        çöker (0,49 v 0,90), zira soldan sağa yürürken sağdaki çevreyi
+        görmemiştir ve kırpması Eckart-Young manasında en iyi değildir.
+
+        O hâlde usul sabit seçilmez, **kesmeye bakılarak** seçilir: zip
+        denenir, attığı ağırlık ``esik``i aşarsa durum geri alınır ve
+        iki geçişli usul koşar. Yedek yol pahalıdır fakat yalnız
+        kesmenin fiilen ısırdığı hâllerde koşar -- ve o hâllerde zaten
+        hızdan evvel doğruluk lâzımdır.
+        """
+        yedek = self.A.copy()
+        ust = self.bag_ust.copy()
+        atilan = self.mpo_uygula_zip(W, D, bas=bas, son=son,
+                                     sol_sinir=sol_sinir,
+                                     sag_sinir=sag_sinir)
+        if atilan <= float(esik):
+            return atilan
+        # kesme ısırdı: durumu geri al, en iyi kırpmayı yapan usule geç
+        self.A = yedek
+        self.bag_ust = ust
+        return self.mpo_uygula(W, D, bas=bas, son=son,
+                               sol_sinir=sol_sinir, sag_sinir=sag_sinir)
+
+    def mpo_uygula_zip(self, W: Dict[int, np.ndarray], D: int,
+                       bas: int = 0, son: Optional[int] = None,
+                       sol_sinir: Optional[np.ndarray] = None,
+                       sag_sinir: Optional[np.ndarray] = None) -> float:
+        """MPO'yu **tek geçişte** uygula: bağ hiç ``χ·D``ye çıkmadan kırpılır.
+
+        ===================================================================
+        NİÇİN VAR: ``mpo_uygula``NIN MASRAFI YANLIŞ YERDE
+        ===================================================================
+
+        ``mpo_uygula`` iki geçişlidir: evvelâ bütün zincirde bağ ``χ·D``ye
+        **çıkarılır**, sonra sağdan sola QR ile kanonikleştirilip soldan
+        sağa SVD ile ``χ``ye indirilir. Profil çıkarıldı ve masrafın
+        yeri bulundu: vaktin **%84'ü** o QR süpürmesindedir ve QR,
+        birleştirilmiş bağda, yani ``(2χD) × (χD)`` dizeylerde
+        koşmaktadır. χ = D = 16'da bu ``512 × 256``dır ve yuva başına
+        ``6,7e7`` FLOP eder; halbuki kırpılmış bağda aynı iş
+        ``(2χ) × (χD)``, yani ``32 × 256``dır.
+
+        Zip-up usulü (Stoudenmire-White) bağı hiç şişirmez: soldan sağa
+        yürünür, her yuvada MPO ile MPS büzülür, **derhal** SVD ile
+        ``χ``ye kırpılır ve artan kısım bir sonraki yuvaya taşınır::
+
+            Θ[r,i,q,b] = Σ_{p,a} taşınan[r,p,a] · T[p,a,i,q,b]
+            (r·2, D·X) → SVD → r' ≤ χ
+            yeni çekirdek = U ,  taşınan = S·Vᵀ
+
+        Böylece hiçbir yerde ``χ·D`` bağlı bir tensör kanonikleştirilmez.
+
+        **Bedeli vardır ve gizlenmez:** iki geçişli usul, kırpmadan evvel
+        zinciri kanonikleştirdiği için Eckart-Young manasında **en iyi**
+        kırpmayı yapar; zip-up ise soldan sağa yürürken sağdaki çevreyi
+        henüz görmemiştir, dolayısıyla kırpması en iyi **değildir**.
+        Fark ölçülür (`nefs/hiz.py`) ve hangi usulün kullanılacağı
+        ölçüye bakılarak seçilir, iddiaya değil.
+        """
+        son = self.n if son is None else int(son)
+        bas = max(0, int(bas))
+        if son <= bas:
+            return 0.0
+        X = self.bag
+        tip = self.tip
+        Bn = self.B
+        kimlik = np.zeros((D, 2, 2, D), dtype=tip)
+        for w in range(D):
+            kimlik[w, 0, 0, w] = 1.0
+            kimlik[w, 1, 1, w] = 1.0
+
+        sl = np.zeros(D, tip) if sol_sinir is None else np.asarray(sol_sinir,
+                                                                   tip)
+        sr = np.zeros(D, tip) if sag_sinir is None else np.asarray(sag_sinir,
+                                                                   tip)
+        if sol_sinir is None:
+            sl[0] = 1.0
+        if sag_sinir is None:
+            sr[0] = 1.0
+
+        # ``tasinan[B, r, p, a]`` -- soldan gelen kalıntı. Başlangıçta
+        # ``r = 1``dir ve MPS'in sol ucu 0. bağ indisinde durur.
+        tas = np.zeros((Bn, 1, D, X), dtype=tip)
+        tas[:, 0, :, 0] = sl[None, :]
+
+        cekirdek: List[np.ndarray] = []
+        atilan = 0.0
+        for k in range(bas, son):
+            Ak = self.A[:, k]                            # (B, X, 2, X)
+            Wk = np.asarray(W.get(k, kimlik), tip)       # (D, 2, 2, D)
+            # T[B, p, a, i, q, b] = Σ_j W[p,i,j,q] A[a,j,b]
+            W2 = Wk.transpose(0, 1, 3, 2).reshape(D * 2 * D, 2)
+            A2 = Ak.transpose(2, 0, 1, 3).reshape(2, Bn * X * X)
+            P = (W2 @ A2).reshape(D, 2, D, Bn, X, X)     # (p,i,q,B,a,b)
+            T = P.transpose(3, 0, 4, 1, 2, 5)            # (B,p,a,i,q,b)
+            r = tas.shape[1]
+            # Θ[B, r, i, q, b] = Σ_{p,a} tas[B,r,p,a] T[B,p,a,i,q,b]
+            Th = np.matmul(tas.reshape(Bn, r, D * X),
+                           T.reshape(Bn, D * X, 2 * D * X)
+                           ).reshape(Bn, r, 2, D, X)
+            M = Th.reshape(Bn, r * 2, D * X)
+            U, sv, Vt = _kararli_svd(M)
+            rk = max(1, min(X, int(self.bag_tavan), sv.shape[1]))
+            top = float(np.sum(sv ** 2)) + 1e-30
+            atilan += float(np.sum(sv[:, rk:] ** 2)) / top
+            cekirdek.append(U[:, :, :rk].reshape(Bn, r, 2, rk))
+            tas = (sv[:, :rk, None] * Vt[:, :rk, :]).reshape(Bn, rk, D, X)
+
+        # sağ sınır: kalıntının MPO bacağı ``sr`` ile kapanır
+        son_c = np.tensordot(tas, sr, axes=([2], [0]))    # (B, rk, X)
+        cekirdek[-1] = np.matmul(
+            cekirdek[-1].reshape(Bn, -1, cekirdek[-1].shape[3]),
+            son_c).reshape(Bn, cekirdek[-1].shape[1], 2, X)
+
+        self.bag_ust[bas + 1:son] = X
+        yeni = np.empty((Bn, X, 2, X), dtype=tip)
+        for i, k in enumerate(range(bas, son)):
+            t = cekirdek[i]
+            ka, kb = min(t.shape[1], X), min(t.shape[3], X)
+            yeni[...] = 0.0
+            yeni[:, :ka, :, :kb] = t[:, :ka, :, :kb]
+            self.A[:, k] = yeni
+        return atilan
+
     def mpo_uygula(self, W: Dict[int, np.ndarray], D: int,
                    bas: int = 0, son: Optional[int] = None,
                    sol_sinir: Optional[np.ndarray] = None,
