@@ -119,7 +119,7 @@ import numpy as np
 __all__ = ["OlcuUzayi", "MERTEBE_UZAYI", "UZAYLAR", "funktor",
            "funktor_tersi", "morfizm_funktoru", "funktor_dogrula",
            "mertebele", "Olcum", "kulli_toplam", "yumusak_asgari",
-           "dinamik_beta", "BETA", "HEDEF_USSU",
+           "dinamik_beta", "BETA", "HEDEF_USSU", "DINAMIK_BETA",
            "rapor"]
 
 
@@ -378,11 +378,36 @@ def yumusak_asgari(x, beta: float = 8.0) -> float:
 
 
 #: Yumuşak azamînin sertliği. ``β→0`` ortalama, ``β→∞`` azamî verir.
-#: **Artık varsayılan değil bir yedektir**: ``kulli_toplam`` ``beta``
-#: verilmezse ``dinamik_beta`` ile kendi sertliğini tayin eder (aşağıya
-#: bakınız). Sabit değer, dinamik yol kapatılmak istenirse duruyor --
-#: kapatılamayan bir tedbirin faydası ölçülemez (kütük H90).
 BETA: float = 8.0
+
+#: Dinamik ``β`` **varsayılan mı** (ceride hükmü, kütük H169).
+#:
+#: Ceride dinamik LogSumExp'i emrediyor ve `dinamik_beta` onu kurdu.
+#: Fakat varsayılan yapılıp yapılmayacağı **ölçüme** bırakıldı ve
+#: ölçüm ikiye bölündü:
+#:
+#: * **Doymuş uzuv varken dinamik KAZANIYOR.** Sentetik sınama (bir
+#:   uzuv 0,01'de çakılı, 40 uzuv oynuyor): yayılım ``0,01899 →
+#:   0,03909``, yani **2,06 kat**.
+#: * **Hakikî kayıpta dinamik KAYBEDİYOR.** 5 parametre, aynı akış::
+#:
+#:       sabit  β=8    yayılım 0,1271
+#:       dinamik β≈6,4–7,3  yayılım 0,0954   ← %25 daha az
+#:
+#: Sebep anlaşıldı ve tersi yönde işliyor: hakikî kayıpta artık doymuş
+#: bir uzuv **yok** (H154/H156/H160 onları tek tek çıkardı), o hâlde
+#: ``√n`` hedefi ``β``yı 8'in **altına** çekiyor ve fazla ortalama
+#: alıyor. Yani dinamik ``β``, çare olduğu derdi bulamayınca zarar
+#: veriyor.
+#:
+#: **Hüküm ölçüme uyuyor:** varsayılan ``False``, yani sabit ``β``.
+#: Dinamik yol **duruyor** ve tek satırla açılır; doymuş bir uzuv geri
+#: geldiğinde (``katılan_uzuv`` 1'e çökerse) açılması gerekir ve o
+#: alâmet ``kulli_toplam``ın çıktısında **ölçülebilir** hâldedir.
+#:
+#: Hudut açıkça: mukayese 5 parametre üzerinden; %25'lik fark
+#: istikamet gösterir, kat'î hüküm vermez.
+DINAMIK_BETA: bool = False
 
 #: Dinamik ``β``nın hedefi: kaç uzuv **fiilen** hükme katılsın.
 #: ``√n`` seçildi ve keyfî değildir -- iki ölçülmüş felâketin log
@@ -549,7 +574,9 @@ def kulli_toplam(olcumler: Sequence[Olcum], beta: Optional[float] = None
     # **DİNAMİK β (ceride hükmü).** ``beta`` verilmezse ölçünün kendi
     # dağılımından tayin edilir; sabit ``β`` verilirse eski davranış
     # aynen durur ve kıyas edilebilir (H90).
-    b = float(max(dinamik_beta(eksikler) if beta is None else beta, 1e-6))
+    if beta is None:
+        beta = dinamik_beta(eksikler) if DINAMIK_BETA else BETA
+    b = float(max(beta, 1e-6))
     try:
         from fitrat.havuz import logsumexp
         yumusak = (float(logsumexp([b * e for e in eksikler]))

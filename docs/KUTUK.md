@@ -5215,3 +5215,34 @@ kuvvetli bir delildir**; "ispatlandı" denmiyor.
 kesme hem *en iyi değil* (kanonik olmadığı için) hem *türevlenemez*
 (sıralama sıçradığı için). Gradyansız aramanın (H3) bu mimaride bir
 tercih değil bir **zaruret** olduğunun sebebi budur.
+
+## H169 — DİNAMİK ``β`` KURULDU FAKAT VARSAYILAN OLMADI: ölçüm ikiye böldü
+
+H164'te ceridenin dinamik LogSumExp hükmü icra edildi ve sentetik
+sınamada kazandı. **Hakikî kayıpta ölçülünce kaybetti** ve hüküm
+ölçüme uyduruldu, ölçüm hükme değil.
+
+    doymuş uzuv VARKEN (sentetik, 1 uzuv 0,01'de çakılı + 40 uzuv):
+        sabit  β=8         yayılım 0,01899
+        dinamik            yayılım 0,03909    ← 2,06 kat KAZANIYOR
+
+    HAKİKÎ KAYIPTA (5 parametre, aynı akış):
+        sabit  β=8         yayılım 0,1271
+        dinamik β≈6,4–7,3  yayılım 0,0954     ← %25 KAYBEDİYOR
+
+Sebep anlaşıldı ve ters yönde işliyor: hakikî kayıpta artık doymuş bir
+uzuv **yok** -- H154, H156 ve H160 onları tek tek çıkardı. O hâlde
+``√n`` hedefi ``β``yı 8'in **altına** çekiyor ve fazla ortalama alıyor.
+Dinamik ``β``, çare olduğu derdi bulamayınca zarar veriyor.
+
+``DINAMIK_BETA`` varsayılanı ``False``. Dinamik yol **duruyor** ve tek
+satırla açılır; açılması gereken alâmet de ölçülebilir hâldedir:
+``kulli_toplam`` artık ``katılan_uzuv`` döndürüyor ve o sayı 1'e
+çökerse doymuş bir uzuv geri gelmiş demektir.
+
+**Hudut açıkça:** mukayese 5 parametre üzerinden. %25'lik fark
+istikamet gösterir, kat'î hüküm vermez.
+
+**Usul kaydı:** ceride bir hükmü emrettiğinde onu **kurmak**
+mecburidir; **varsayılan yapmak** ise ölçüme bağlıdır. İkisini
+karıştırmak, emri yerine getirmek değil emre sığınmak olurdu.
