@@ -836,7 +836,10 @@ def padisah_raporu(kume: str = "evaluation", n: int = 120,
                  str(r.get("sebep"))[:44] if r.get("sükût")
                  else "KONUŞTU güven=%.3f" % r["güven"]), flush=True)
         if r.get("sükût"):
-            k = str(r.get("sebep", "?")).split(" (isabet")[0]
+            # Sebep, içindeki **rakamla beraber** anahtar yapılırsa her
+            # görev kendi kovasına düşer ve döküm hiçbir şey söylemez;
+            # ilk koşuda öyle oldu. Rakam ayıklanır, sebep gruplanır.
+            k = str(r.get("sebep", "?")).split(" (")[0]
             sebep[k] = sebep.get(k, 0) + 1
             continue
         konustu += 1
