@@ -4776,3 +4776,27 @@ nihayet **taahhüt ettiği yönde** çalışıyor. Korelasyonla bakıldığında
   kapısı ise ondan **evvel**. O hâlde gayenin uyandırdığı sükût, bu
   geçişte kelamı fiilen susturmuyor; yalnız ölçüye giriyor. Şerhin
   *"sükût uyanır ve beyan susar"* iddiası bu sıra için **fazladır**.
+
+### H159 zeyli — ÖLÇÜ ALETİNİN KENDİSİ SAĞLAM DEĞİLMİŞ
+
+H122'nin ``+0,871``i ve ``+0,887``si **korelasyonla** ölçülmüştü.
+Kapanış koşusunda aynı alet tekrar çalıştırıldı ve satır sayısına göre
+işaret **değiştirdi**::
+
+    n_satır=5 : kor(gaye,tasdik) = +0,5349   kor(gaye,nakz) = +0,4480
+    n_satır=6 : kor(gaye,tasdik) = −0,1070   kor(gaye,nakz) = +0,0763
+
+Halbuki müdahaleli ölçüm ikisinde de aynı ve kat'îdir (tasdik ``+``,
+nakz ``−``). Aradaki fark confounding'dir: üç kaynak girdiler arasında
+birbiriyle oynuyor ve en zayıf tesirli olan (nakz, ``−0,016``)
+korelasyonda tamamen öbürlerinin gölgesinde kalıyor.
+
+**Dürüst hüküm:** H122'nin *"nakz gayeyi zayıflatmıyor"* teşhisi,
+teşhisi koyan aletin kendisi bu soruyu cevaplayamadığı için de
+şüpheliydi. Bir tesir iddiası korelasyonla ne ispat ne nakzedilir;
+müdahale ister. Bu, kütüğe bir usul kaidesi olarak yazılıyor.
+
+``ε_durgun``un ikinci borcu (kararsızlık) da bu ölçüde kapanıyor:
+H122'de işaret 5 ve 6 satır arasında ``+0,77``/``−0,63`` diye
+takla atıyordu; şimdi ikisinde de menfî (``−0,026``, ``−0,095``).
+Küçüktür ve büyük olduğu iddia edilmiyor -- fakat **işareti kararlı**.
