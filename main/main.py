@@ -517,13 +517,29 @@ def dalga_talimi(F: np.ndarray, y: np.ndarray, hendese: Hendese,
 #  PADİŞAH -- tek akış, tek karar
 # =====================================================================
 def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
-              devir: int = 120, lam: float = 1e-2) -> Optional[Dalga]:
-    """Şahitlerden **en iyi dalgayı** kur: hendese × D₄ × ağırlık.
+              devir: int = 120, lam: float = 1e-2,
+              azami_aday: int = 12,
+              loo_devir: int = 40) -> Optional[Dalga]:
+    """Şahitlerden **en iyi dalgayı** kur: hendese × D₄ × yarıçap.
 
     Hendese (ebat kanunu) ve ``D₄`` taşıyıcısı şahitlerden çözülür;
     renk ise öğrenilen ağırlıklardan okunur. Hiçbir şablon kütüğü,
-    hiçbir arama tablosu yoktur. Şahitleri tam bilen ilk dalgada
-    durulur -- aramayı uzatmak ezberi arttırmaktan başka işe yaramaz.
+    hiçbir arama tablosu yoktur.
+
+    **ARAMA BÜTÇELİDİR VE BÜTÇE İLÂN EDİLİR.** Bütçesiz hâli ölçüldü:
+    120 görevlik evaluation kümesi 86 CPU-dakikada bitmedi. Sebep
+    ``hendese × D₄ × yarıçap × (n+1)`` talimin hepsinin körlemesine
+    koşulmasıydı. İki şey yapılır:
+
+    * Adaylar **tuval uyuşmasına** göre sıralanır: tuvalin hedefle
+      hücre hücre örtüşme nispeti. Bu bir kabul ölçütü **değildir**
+      (dalga zaten yeniden boyayacak), yalnız **nereye önce bakılacağını**
+      söyleyen bir sezgidir; kabul ölçütü değişmedi.
+    * En iyi ``azami_aday`` tanesi denenir. Bu bir haddir ve sayısı
+      burada yazılıdır; sessizce kırpılmıyor.
+
+    Bırak-birini turları ``loo_devir`` ile daha kısa koşar; nihaî talim
+    tam ``devir`` iledir. Eleme ile nihaî ağırlık ayrı işlerdir.
     """
     cift = [(np.atleast_2d(np.asarray(a, int)),
              np.atleast_2d(np.asarray(b, int))) for a, b in cift]
@@ -533,9 +549,10 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
     if not hendeseler:
         return None
 
-    en_iyi: Optional[Dalga] = None
-    en_iyi_not: Tuple[float, float] = (-1.0, -np.inf)
-    for hen in hendeseler:
+    # --- adayları kur ve TUVAL UYUŞMASINA göre sırala
+    adaylar: List[Tuple[float, int, Hendese, str,
+                        List[np.ndarray], List[np.ndarray]]] = []
+    for hi, hen in enumerate(hendeseler):
         for d4 in D4_ADLARI:
             tuvaller: List[np.ndarray] = []
             hedef: List[np.ndarray] = []
@@ -549,6 +566,17 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
                 hedef.append(np.asarray(c, int).reshape(-1))
             if not olur:
                 continue
+            uyum = float(np.mean([np.mean(t.reshape(-1) == h)
+                                  for t, h in zip(tuvaller, hedef)]))
+            adaylar.append((-uyum, hi, hen, d4, tuvaller, hedef))
+    if not adaylar:
+        return None
+    adaylar.sort(key=lambda x: (x[0], x[1]))
+    adaylar = adaylar[:max(1, int(azami_aday))]
+
+    en_iyi: Optional[Dalga] = None
+    en_iyi_not: Tuple[float, float] = (-1.0, -np.inf)
+    for _u, _hi, hen, d4, tuvaller, hedef in adaylar:
             # Yarıçap sabit değil: dardan genişe denenir ve
             # **görmediğini bilme** ölçüsüyle seçilir.
             for yaricap in YARICAPLAR:
@@ -573,8 +601,8 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
                                              if j != i], axis=0)
                         yk = np.concatenate([v for j, v in enumerate(ys)
                                              if j != i], axis=0)
-                        d_i = dalga_talimi(Fk, yk, hen, d4, devir=devir,
-                                           lam=lam)
+                        d_i = dalga_talimi(Fk, yk, hen, d4,
+                                           devir=int(loo_devir), lam=lam)
                         P = d_i.olasilik(Fs[i])
                         disarida.append(
                             float(np.mean(np.argmax(P, axis=1) == ys[i])))
@@ -796,8 +824,17 @@ def padisah_raporu(kume: str = "evaluation", n: int = 120,
     sebep: Dict[str, int] = {}
     cozulen: List[str] = []
     t0 = time.perf_counter()
-    for gv in g:
+    for i, gv in enumerate(g):
+        tg = time.perf_counter()
         r = padisah(gv, devir=devir)
+        # **İlerleme görünür olacak.** Bütçesiz ilk koşu 86 CPU-dakika
+        # boyunca **tek satır** basmadı; hangi görevde takıldığı
+        # bilinemedi. Sessiz bir hesap, ölçülemeyen bir hesaptır.
+        print("  [%3d/%3d] %-10s %6.2fs %s"
+              % (i + 1, len(g), str(getattr(gv, "ad", "?"))[:10],
+                 time.perf_counter() - tg,
+                 str(r.get("sebep"))[:44] if r.get("sükût")
+                 else "KONUŞTU güven=%.3f" % r["güven"]), flush=True)
         if r.get("sükût"):
             k = str(r.get("sebep", "?")).split(" (isabet")[0]
             sebep[k] = sebep.get(k, 0) + 1
