@@ -118,14 +118,19 @@ def bolge_degeri(q, ad: str) -> Optional[float]:
         return None
 
 
-def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True):
+def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
+                  sinif_olcumu: bool = True):
     """Akışı koştur ve **her melekeden sonra** onun alanını oku.
 
     ``QNefs.idrak_et``in aynısını yapar; farkı, melekeler arasında
     eğitim ölçütü için zayıf okuma almasıdır. Akışın kendisi bundan
     haberdar değildir ve kararları değişmez (H31 yerinde durur).
 
-    Dönen: ``(q, okumalar)`` -- ``okumalar[no][bölge] = değer``.
+    Dönen: ``(q, okumalar, dS)``:
+
+    * ``okumalar[no][bölge]`` -- melekenin ilan ettiği alanın okuması,
+    * ``dS[no]`` -- melekenin dolaşıklığa tesiri (`nefs/nizam.py`),
+      sınıf taahhüdünün yüzleştirildiği ölçü.
     """
     from .gaye import gaye_kos
     from .qakis import bec_faz_kilidi
@@ -144,13 +149,27 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True):
     q.superpozisyon()
     q.mera()
 
+    def _entropi() -> float:
+        try:
+            return float(np.mean(np.asarray(q.olcumler()["entropi"], float)))
+        except Exception:                                # noqa: BLE001
+            return float("nan")
+
     okumalar: Dict[int, Dict[str, float]] = {}
+    #: ``ΔS`` -- melekenin dolaşıklığa tesiri (`nefs/nizam.py`).
+    dS: Dict[int, float] = {}
     for no in nefs.sira:
         onceki_sadakat = (float(q.y.sadakat_log())
                           if meleke_olcumu else 0.0)
+        S_once = _entropi() if sinif_olcumu else 0.0
         nefs.s[no].kosu(q, nefs.p)
         if nefs.sadakat:
             sadakat_kapisi(q, nefs.p)
+        if sinif_olcumu:
+            fark = _entropi() - S_once
+            # Aynı meleke sırada iki kere geçebilir; tesirleri toplanır.
+            dS[int(no)] = dS.get(int(no), 0.0) + (
+                0.0 if fark != fark else fark)
         if meleke_olcumu:
             ilan = SOZLESME.get(int(no), ((), ""))[0]
             d: Dict[str, float] = {}
@@ -204,7 +223,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True):
     bec_faz_kilidi(q)
     q.iz.kesme_hakiki = float(max(0.0, 1.0 - q.y.sadakat()))
     q.y.normalize()
-    return q, okumalar
+    return q, okumalar, dS
 
 
 def meleke_olcumleri(okumalar: Dict[int, Dict[str, float]]
@@ -296,9 +315,24 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     hepsi: List[Olcum] = []
     E_yigin = np.stack([belirtecleri_kodla(b, nefs.ayar.satir_kubiti,
                                            sozluk) for b, _h in veri])
-    q, okumalar = olcumlu_idrak(nefs, E_yigin, meleke_olcumu)
+    q, okumalar, dS = olcumlu_idrak(nefs, E_yigin, meleke_olcumu)
     if meleke_olcumu:
         hepsi += meleke_olcumleri(okumalar)
+    # **SINIF TAAHHÜDÜ ÖĞRENİLEBİLİR KAYBA GİRER** (`nefs/nizam.py`).
+    # Meleke "çözücüyüm" dediği için değil, FİİLEN çözdüğü için
+    # çözücü olmalıdır. ΔS açılarla değişir, yani bu ölçü hakikaten
+    # öğrenilebilir -- kesme gibi yapısal değil.
+    if dS:
+        from .nizam import sinif_ihlali
+        from .qmeleke import qsicil
+        sic = qsicil()
+        for no, d in sorted(dS.items()):
+            m = sic.get(int(no))
+            if m is None:
+                continue
+            hepsi.append(Olcum(
+                "𝒪%d.nizam" % no, 1.0 - sinif_ihlali(m.SINIF, d),
+                OlcuUzayi("nizam_uyumu", 0.0, 1.0, True)))
     o = q.olcumler()
     for ad, _kac in q.ayar.kulli_alanlar:
         if ad in o and ad in UZAYLAR:

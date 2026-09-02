@@ -1090,13 +1090,34 @@ def test_nizam_dolasiklik_doygunlugu_kiriyor():
 
 
 def test_nizam_cetveli_tam_ve_tutarli():
-    """41 melekenin hepsinin sınıfı ve tavanı yazılı mı?
+    """41 melekenin hepsinin sınıfı yazılı mı, ve sınıf **ölçülüyor** mu?
 
-    Cetvelin eksik kalması sessiz bir kusurdur: tavansız bir meleke
-    yazmacın tam ``bag``ıyla koşar ve nizamda delik açar. Ayrıca
-    sınıflar tutarlı olmalı -- bir "çözücü" bir "kurucu"dan geniş tavan
-    isteyemez.
+    Bu sınamanın evvelki hâli şunu iddia ediyordu::
+
+        max(çözücü tavanı) < min(kurucu tavanı)
+
+    yani "çözücülük dar bir χ tavanıyla temin edilir". **H149'da bu
+    nakzedildi:** ölçüldü ki 𝒪₂₄'ün tavanı 1'di ve dalganın
+    ``8,7e-12``sini bırakıyordu; tavan kalkınca ``0,548`` kalıyor ve
+    entropi yine ``ln 4``e düşüyordu. Yani daralmanın manası **kapının
+    kendisinde**, üniter olarak vardı; tavan yalnız genliği yok
+    ediyordu. Dar tavan çözücülük değil, sakatlamaymış.
+
+    O hâlde tavan sırası bir taahhüt olamaz. Yerine geçen taahhüt
+    (H149 + `nefs/nizam.py`) **ölçülebilir** olandır: sınıf, melekenin
+    dolaşıklığa tesirinin **cihetini** taahhüt eder ve bu ``ΔS`` ile
+    yüzleştirilir. Burada denetlenen üç şeydir:
+
+    1. cetvel tam ve sınıflar mâlûm kümeden;
+    2. ilân edilen her sınıfın bir cihet karşılığı var (yoksa taahhüt
+       ölçüsüz kalır, tam da H88'in kusuru);
+    3. ölçü **kör değil**: taahhüt edilen bölgede sıfır, dışında
+       müsbet -- ve bilhassa ``ΔS = 0`` hiçbir sınıfı kurtarmaz. Bu
+       son şart H157'nin dersidir: ilk yazdığımda ölçüt yalnız
+       *işarete* bakıyordu, sıfır da hiçbir cihete ters düşmediği için
+       hiç çözmeyen 𝒪₅ Tecrit tam not alıyordu.
     """
+    from .nizam import NIZAM_BANDI, SINIF_CIHETI, sinif_ihlali
     from .qmeleke import nizam_cetveli
 
     cetvel = nizam_cetveli()
@@ -1104,10 +1125,26 @@ def test_nizam_cetveli_tam_ve_tutarli():
     kurucu = [c for c in cetvel if c[2] == "kurucu"]
     cozucu = [c for c in cetvel if c[2] == "çözücü"]
     assert kurucu and cozucu
-    assert max(c[3] for c in cozucu) < min(c[3] for c in kurucu)
     for no, ad, sinif, chi in cetvel:
         assert sinif in ("kurucu", "koruyucu", "çözücü"), (no, sinif)
+        assert sinif in SINIF_CIHETI, (no, sinif)   # taahhüt ölçülebilir
         assert chi is None or chi >= 1, (no, chi)
+
+    # Bölgenin içi sıfır, dışı müsbet.
+    assert sinif_ihlali("kurucu", +0.7) == 0.0
+    assert sinif_ihlali("kurucu", -0.7) > 0.1
+    assert sinif_ihlali("çözücü", -0.7) == 0.0
+    assert sinif_ihlali("çözücü", +0.7) > 0.1
+    assert sinif_ihlali("koruyucu", 0.5 * NIZAM_BANDI) == 0.0
+    assert sinif_ihlali("koruyucu", 20.0 * NIZAM_BANDI) > 0.1
+    # H157'nin asıl şartı: hiçbir şey yapmamak da ihlâldir.
+    for sinif in ("kurucu", "çözücü"):
+        assert sinif_ihlali(sinif, 0.0) > 0.0, sinif
+        assert sinif_ihlali(sinif, -0.0) > 0.0, sinif
+    # ...ve eksiklik ölçüsü sıfırda **düz değil**, eğimlidir: eğitim
+    # ona yol bulabilsin. (İşaret ölçüsü tam burada düzdü.)
+    c = SINIF_CIHETI["çözücü"]
+    assert sinif_ihlali("çözücü", -0.01) < sinif_ihlali("çözücü", 0.0), c
 
 
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra

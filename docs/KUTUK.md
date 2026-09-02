@@ -4578,3 +4578,59 @@ kilitliyormuş ve üçü de ayrı ayrı ölçülerek bulundu:
     1. χ tavanı (H148/H149)       -- mimarî kelepçesi
     2. kesme/sadakat (H154)       -- yapısal, açıyla değişmez
     3. kademe ölçüleri (H156)     -- göreve bağlı, parametreden bağımsız
+
+## H157 — 𝒪₅'İN BORCU ÖLÇÜNÜN KÖRLÜĞÜNDE SAKLIYMIŞ
+
+H148'de 𝒪₅ Tecrit'in şerhi yalanlandı: `G`, 𝒪₅'in **kendi**
+açılarından kuruluyordu (`q5.Tecrit/6`), 𝒪₁'inkinden değil; ve 𝒪₁ iki
+fırça katmanı vururken 𝒪₅ yalnız birine dokunuyordu. Yani "fırçanın
+tersi" değildi. H149'da χ tavanı kalkınca 𝒪₅'in entropiyi 3,357'den
+yalnız 3,346'ya indirdiği ölçüldü: **hiç çözmüyor.**
+
+Orada şöyle yazmıştım: *"`CHI` kaldırılmadı: sınıf ilanı manalı bir
+taahhüttür ve `nizam_yuzlestir()` onu ölçümle yüzleştirir."* **O
+fonksiyonu hiç yazmamıştım.** Şerhte adı geçip kodda olmayan bir
+denetim, H88'in dersinin tekrarıdır.
+
+**Künh.** 𝒪₅'i "hakikî ters" yapmak da doğru cevap değildir:
+parametresi sabit bir üniter, keyfî bir durumun dolaşıklığını
+azaltamaz — çözmek duruma bağlıdır, melekeler ise durumu okuyamaz
+(H31). MERA'nın çözücüsü işe yarar çünkü **eniyilenmiştir**. O hâlde
+𝒪₅ ancak *eğitilerek* çözücü olur.
+
+`nefs/nizam.py` bunu kurdu: her melekenin sınıf ilanı `ΔS` ile
+yüzleştirilir ve ihlâl **öğrenilebilir kayba** girer (`𝒪ᵢ.nizam`).
+
+**Kendi ölçümün körlüğü — ilk koşuda yakalandı.** İlk yazdığım ölçüt
+yalnız *işarete* bakıyordu: "cihete ters düşmüyorsa ihlâl yok". Koşu:
+
+    32/41 meleke "ilanına uyuyor" çıktı — fakat 𝒪₅ Tecrit'in
+    ölçülen ΔS'i −0,0000 idi ve **tam not aldı.**
+
+Yani hiç çözmeyen bir "çözücü", ölçünün körlüğü sayesinde borcunu
+kapatmış görünüyordu. Sıfır hiçbir cihete ters düşmediği için 41
+melekenin yarıdan fazlası (hepsi ``±0,0000``) bedava geçiyordu.
+
+**Tashih:** taahhüt bir **bölge**dir, işaret değil::
+
+    kurucu   ΔS ≥ +B     çözücü   ΔS ≤ −B     koruyucu  |ΔS| ≤ B
+    ihlâl = tanh(max(0, bölgeye eksiklik)),   B = 0,05
+
+İşi yapmamak da ihlâldir; ve eksiklik ölçüsü sıfırda **düz değil
+eğimlidir**, işaret ölçüsü ise tam orada düzdü — yani eğitime hiç yol
+göstermiyordu.
+
+**Aynı koşuda çıkan iki ölçüm daha:**
+
+* **𝒪₇ Mana: `koruyucu` ilan ediyor, ölçülen ΔS = +1,4366.** Akıştaki
+  en büyük dolaşıklık **kurucusu**, kendini "ne kurar ne bozar" diye
+  ilan ediyormuş. Bugüne kadar kimse bakmamıştı.
+* **𝒪₂₄ İspat: χ tavanı olmadan ΔS = −0,2473.** H149 doğrulanıyor:
+  daralmanın manası kapının kendisinde, üniter olarak vardır; tavan
+  yalnız genliği yok ediyordu.
+
+**Nakz:** `test_nizam_cetveli_tam_ve_tutarli`in
+`max(çözücü χ) < min(kurucu χ)` şartı **nakzedilmiştir** (H149'un
+gereği). Dar χ tavanı çözücülük değil sakatlamadır. Yerine geçen şart
+ölçülebilir olandır: sınıfın bir cihet karşılığı olmalı ve ölçü kör
+olmamalı — bilhassa `ΔS = 0` hiçbir sınıfı kurtarmamalı.
