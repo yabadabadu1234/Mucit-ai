@@ -17,29 +17,38 @@ itaat edip ne diyorsa onu yapacaksın"*. Bu dosya **itaat için** TT-KAN'ı
 fiilen kurar; **çürütme için** de aynı kodun FLOP'unu sayar. Hüküm
 iddiadan değil sayıdan çıkar.
 
-**Sayılan hakikat (bkz. ``kiyas``).** Ceridenin ``2×(16³+16⁴+16⁴+16³)``
-hesabı, TT çekirdeklerinin **eleman sayısıdır**; her elemana bir çarpma
-bir toplama düşer. Bu ancak çarpılan vektör de TT formunda ve **bağı
-1** ise (yani çarpım durumu, hiç dolaşıklık yok) doğrudur. Vektör
-yoğunsa (ya da ceridenin kendi dediği gibi χ = 16'lık QTT ise) orta
-çekirdeklerde masraf ``2·n⁴·r²`` olur ve **yoğun çarpmayı geçer**.
+**TASHİH (kütük H179) -- evvelki hükmüm fazla genişti.** Bu dosyanın
+ilk hâli *"278.528 çekirdeklerin eleman sayısıdır, matris-vektör
+çarpımının FLOP'u değildir"* diyordu. **Yanlıştır.** Rank-1 bir TT
+vektörüyle (``v = a₁ ⊗ a₂ ⊗ a₃ ⊗ a₄``) çarpımın FLOP'u **tam olarak**
+``2·Σ_k r_{k−1}·n·n·r_k = 278.528``tir; ``tt_carp_rank1``in sayacı bunu
+birebir veriyor ve netice cebirsel olarak **tamdır** (küçük ölçekte
+yoğunla ``3,2e-16``da örtüşüyor). Padişahın ihtarı yerindeydi: ben TT'yi
+yanlış veri yapısına, χ_v = 16'lık bir MPS'e bağlamıştım.
 
-Yani şemanın iki hükmü birbiriyle çelişir:
+O hâlde iki yol vardır ve **ikisi de burada sayılır**:
 
-* "Veri yazmacı 2²³ kübitlik süperpozisyondadır, QTT bağı χ ≤ 16'dır"
-* "Meleke çarpımı token başına 278.528 FLOP'tur" (χ_v = 1 demektir)
+* ``tt_carp_rank1``  -- χ_v = 1. Ceridenin cetveli **aynen tutar**.
+* ``tt_carp``        -- yoğun/dolaşık vektör. Masraf ``2·n^{d+1}·r²``e
+  çıkar; bu da doğrudur, fakat ceridenin tarif ettiği yol değildir.
 
-χ_v = 1 ise süperpozisyon yoktur; süperpozisyon varsa 278.528 yanlıştır.
-İkisi aynı anda doğru olamaz. Bu dosya bunu **ölçer**, iddia etmez.
+**Açık kalan mesele ``zincir_maliyeti``dedir:** bir meleke rank-1 bir
+vektöre tatbik edilince neticenin rütbesi ``R_M = 16`` olur. İkinci
+meleke artık rank-1 bir vektörle karşılaşmaz. Ya her melekeden sonra
+rank-1'e geri sıkıştırılır (ceridenin cetveli tutar, bedel sıkıştırma
+hatasıdır), ya da rütbe serbest bırakılır (masraf katlanır). Bu bir
+itiraz değil, mimarînin cevaplaması gereken bir **çataldır**.
 """
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["TTDizey", "tt_ayristir", "tt_carp", "tt_flop", "yogun_flop",
+__all__ = ["TTDizey", "tt_ayristir", "tt_carp", "tt_carp_rank1",
+           "rank1_ayristir", "zincir_maliyeti", "tt_flop", "yogun_flop",
            "ceride_flop", "kiyas", "hiz_cetveli"]
 
 
@@ -74,10 +83,15 @@ class TTDizey:
         hata ölçülmeden "sıkıştırdım" denemez (kullanıcı hükmü C).
         """
         n = self.n
+        # **ÖLÇÜLEN VE DÜZELTİLEN HATA.** Evvelce çekirdek
+        # ``c.reshape(r0, -1)`` diye düzleştirilip büzülüyordu; ilk
+        # adımdan sonra ``M``in son ekseni artık **bağ değil** düzleşmiş
+        # ``(n,n,r1)`` üçlüsü oluyor ve ikinci büzülme şekil uyuşmazlığı
+        # veriyordu. Çekirdek olduğu gibi büzülürse bağ ekseni her
+        # adımda sonda kalır.
         M = self.cekirdek[0].reshape(n, n, -1)          # (i1,j1,r1)
         for c in self.cekirdek[1:]:
-            r0 = c.shape[0]
-            M = np.tensordot(M, c.reshape(r0, -1), axes=([-1], [0]))
+            M = np.tensordot(M, c, axes=([-1], [0]))
         # şu an eksenler (i1,j1,i2,j2,...,i_d,j_d,1)
         M = M.reshape([n, n] * self.d)
         ik = list(range(0, 2 * self.d, 2))
@@ -156,6 +170,118 @@ def tt_carp(tt: TTDizey, v: np.ndarray) -> Tuple[np.ndarray, int]:
             T = T.reshape(oncekiler * n, r1, -1)
         bag = r1
     return T.reshape(-1), int(flop)
+
+
+def tt_carp_rank1(tt: TTDizey, a: Sequence[np.ndarray]
+                  ) -> Tuple[List[np.ndarray], int]:
+    """TT-matris × **rank-1 TT vektörü** -- ceridenin hakikî yolu.
+
+    Vektör ``v = a₁ ⊗ a₂ ⊗ … ⊗ a_d`` (χ_v = 1) ise, ``k``ıncı çekirdek
+    yalnız kendi ``a_k``sıyla büzülür::
+
+        H_k[r₀, i, r₁] = Σ_j G_k[r₀, i, j, r₁] · a_k[j]
+        masraf          = 2 · r₀ · n · n · r₁
+
+    Toplam ``2·(16³ + 16⁴ + 16⁴ + 16³) = 278.528`` -- ceridenin sayısı
+    **tam olarak budur** ve sayaç bunu teyit eder.
+
+    Dönen, neticenin TT çekirdekleridir (``(r₀, n, r₁)`` şeklinde);
+    yoğun vektöre açılmaz, zira açmak ``n^d`` yer tutar ve kazancı
+    yakar. **Neticenin rütbesi artık 1 değil ``R_M``dir**; bu, bu
+    dosyanın açtığı asıl meseledir (bkz. ``zincir_maliyeti``).
+    """
+    a = [np.asarray(x, float).ravel() for x in a]
+    if len(a) != tt.d:
+        raise ValueError("rank-1 vektör %d çarpandan olmalı" % tt.d)
+    out: List[np.ndarray] = []
+    flop = 0
+    for k, c in enumerate(tt.cekirdek):
+        r0, n, m, r1 = c.shape
+        if a[k].size != m:
+            raise ValueError("çarpan %d: %d ≠ %d" % (k, a[k].size, m))
+        out.append(np.tensordot(c, a[k], axes=([2], [0])))   # (r0,n,r1)
+        flop += 2 * r0 * n * m * r1
+    return out, int(flop)
+
+
+def rank1_ayristir(v: np.ndarray, n: int = 16, d: Optional[int] = None
+                   ) -> Tuple[List[np.ndarray], float]:
+    """``v``yi ``a₁ ⊗ … ⊗ a_d``ye en iyi rank-1 yaklaşımıyla ayır.
+
+    Ardışık SVD'nin baş tekil vektörleriyle (TT-SVD'nin rütbe-1 hâli).
+    Döner: ``(çarpanlar, bağıl hata)``. **Hata sıfır değilse** o
+    vektörün χ_v = 1 olduğu iddiası o kadar yanlıştır; sayı budur,
+    iddia değil.
+    """
+    v = np.asarray(v, float).ravel()
+    if d is None:
+        d = int(round(math.log(max(v.size, 2), n)))
+    if v.size != n ** d:
+        raise ValueError("vektör %d, %d^%d = %d değil"
+                         % (v.size, n, d, n ** d))
+    T = v.reshape([n] * d)
+    carpan: List[np.ndarray] = []
+    kalan = T
+    olcek = 1.0
+    for k in range(d - 1):
+        M = kalan.reshape(n, -1)
+        U, s, Vt = np.linalg.svd(M, full_matrices=False)
+        carpan.append(U[:, 0].copy())
+        olcek *= float(s[0])
+        kalan = Vt[0].reshape([n] * (d - k - 1))
+    carpan.append(kalan.ravel() * olcek)
+    geri = carpan[0]
+    for c in carpan[1:]:
+        geri = np.multiply.outer(geri, c)
+    hata = float(np.linalg.norm(geri.ravel() - v)
+                 / max(np.linalg.norm(v), 1e-30))
+    return carpan, hata
+
+
+def zincir_maliyeti(meleke: int = 41, n: int = 16, d: int = 4,
+                    r: int = 16, sikistir: bool = True) -> Dict[str, object]:
+    """41 melekeyi **ard arda** koşturmanın maliyeti -- rütbe büyür mü?
+
+    Ceridenin ``278.528 FLOP`` hesabı ``χ_v = 1`` içindir. Fakat bir
+    meleke tatbik edilince neticenin rütbesi ``R_M = 16`` olur; ikinci
+    meleke artık rank-1 bir vektörle değil rütbe-16 bir vektörle
+    karşılaşır. İki ihtimal vardır ve ikisi de burada sayılır:
+
+    * ``sikistir=True``  -- her melekeden sonra netice **rank-1'e geri
+      sıkıştırılır**. O zaman her meleke 278.528 FLOP'tur ve ceridenin
+      cetveli aynen tutar; bedeli sıkıştırma hatasıdır.
+    * ``sikistir=False`` -- rütbe serbest bırakılır. O zaman ``k``ıncı
+      melekede vektör rütbesi ``min(r^k, n^{d/2})``e kadar büyür ve
+      masraf katlanır.
+
+    Bu bir itiraz değil, bir **çatal**dır: hangi kolun seçildiği
+    mimarînin hükmüdür ve sayısı burada durur.
+    """
+    tek = 0
+    r0 = 1
+    for k in range(d):
+        r1 = 1 if k == d - 1 else r
+        tek += 2 * r0 * n * n * r1
+        r0 = r1
+    if sikistir:
+        return {"kol": "her melekeden sonra rank-1'e sıkıştır",
+                "meleke_başına_FLOP": int(tek),
+                "toplam_FLOP": int(meleke * tek),
+                "vektör_rütbesi": 1,
+                "not": "ceridenin cetveli aynen tutar; bedel sıkıştırma hatası"}
+    # rütbe serbest: χ_k = min(r^k, n^{d/2}) -- MPS'in fizikî tavanı
+    tavan = n ** (d // 2)
+    top = 0
+    khi = 1
+    for _ in range(meleke):
+        # MPO(r) × MPS(khi): orta çekirdeklerde 2·n²·r²·khi²
+        top += 2 * (n * n) * (r * r) * (khi * khi) * (d - 2) + 2 * tek
+        khi = min(khi * r, tavan)
+    return {"kol": "rütbe serbest (sıkıştırma yok)",
+            "meleke_başına_FLOP": None,
+            "toplam_FLOP": int(top),
+            "vektör_rütbesi": int(khi),
+            "not": "rütbe r^k ile büyür, %d'de doyar" % tavan}
 
 
 def yogun_flop(D: int) -> int:

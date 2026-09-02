@@ -1378,6 +1378,145 @@ def test_ceride_uc_kapali_form_babi():
     assert abs(float(g3[2, 2])) < 1e-8, g3   # izdüşüm terimi çalışıyor
 
 
+def test_gomme_genlik_kodlamasi_ve_35_kubit():
+    """4096 boyut 12 kübitte mi, ve χ≤16 iddiası ölçülüyor mu?"""
+    import numpy as np
+    from nefs.gomme import (kubit_sayisi, genlik_gom, genlik_coz,
+                            qtt_bag_ihtiyaci, gomme_hatasi, YazmacOlcusu)
+    assert kubit_sayisi(4096) == 12
+    o = YazmacOlcusu()
+    assert (o.kubit_yigin, o.kubit_yer, o.kubit_mana) == (11, 12, 12)
+    assert o.kubit == 35 and o.token == 8_388_608
+    rng = np.random.default_rng(0)
+    v = rng.normal(size=4096)
+    psi, nrm = genlik_gom(v)
+    assert abs(float(psi @ psi) - 1.0) < 1e-12
+    assert np.allclose(genlik_coz(psi, nrm), v, atol=1e-9)
+    # χ = 16 iddiası VERİYE BAĞLI: düzgünde tutuyor, rastgelede tutmuyor
+    duz, _ = genlik_gom(np.sin(np.linspace(0, 6, 4096))
+                        * np.exp(-np.linspace(0, 3, 4096)))
+    assert gomme_hatasi(duz, 12, 16) < 1e-9
+    assert gomme_hatasi(psi, 12, 16) > 0.5      # KIRMIZI olabiliyor
+    assert max(qtt_bag_ihtiyaci(psi, 12)) == 64
+
+
+def test_zirh_dordu_de_KIRMIZIYA_donebiliyor():
+    """Gaye ölçüsü: dördü de sıfırken L=0, biri bozukken L büyük."""
+    import math
+    import numpy as np
+    from kuantum.tda import vietoris_rips
+    from nefs.zirh import (betti_kaybi, koho_kaybi, sheaf_uyumsuzlugu,
+                           homotopi_kaybi, zirh_kaybi, sheaf_izdusumu)
+    from nefs.qyazmac import donme
+
+    aci = np.linspace(0, 2 * math.pi, 8, endpoint=False)
+    cember = np.stack([np.cos(aci), np.sin(aci)], axis=1)
+    Dc = np.sqrt(((cember[:, None] - cember[None]) ** 2).sum(2))
+    assert betti_kaybi(vietoris_rips(Dc, 0.9, azami_boyut=2), 1)["kayıp"] == 1.0
+
+    rng = np.random.default_rng(0)
+    iki = np.vstack([rng.normal(size=(6, 2)) * 0.2,
+                     rng.normal(size=(6, 2)) * 0.2 + 10.0])
+    Di = np.sqrt(((iki[:, None] - iki[None]) ** 2).sum(2))
+    assert koho_kaybi(vietoris_rips(Di, 0.8, azami_boyut=1), 0)["kayıp"] == 1.0
+    assert koho_kaybi(vietoris_rips(Di, 16.0, azami_boyut=1), 0)["kayıp"] == 0.0
+
+    a = np.array([1.0, 2.0, 3.0])
+    assert sheaf_uyumsuzlugu(a, a) == 0.0
+    assert sheaf_uyumsuzlugu(a, a + 0.5) > 0.0
+    # uyum tamken izdüşüm KİMLİĞE gitmeli (hiçbir şey söndürmemeli)
+    assert np.allclose(sheaf_izdusumu(a, a), np.eye(3), atol=1e-6)
+
+    assert homotopi_kaybi([donme(0.4), donme(-0.4)])["kayıp"] < 1e-12
+    assert homotopi_kaybi([donme(0.4), donme(0.1)])["kayıp"] > 0.1
+
+    # Küllî kayıp: dördü sıfırken TAM sıfır (kaydırma doğru mu)
+    assert abs(zirh_kaybi()["kayıp"]) < 1e-12
+    assert zirh_kaybi()["çelişkisiz"]
+    # ...ve tek bir ihlâl düz ortalamadan (0,25) ÇOK daha ağır cezalanmalı
+    tek = zirh_kaybi(betti=1.0)["kayıp"]
+    assert tek > 0.5, tek
+    assert not zirh_kaybi(betti=1.0)["çelişkisiz"]
+
+
+def test_ttkan_rank1_ceridenin_sayisini_TAM_veriyor():
+    """χ_v = 1 yolunda ceridenin 278.528'i birebir çıkıyor mu?
+
+    H175'te TT'yi χ_v = 16'lık bir MPS vektörüne bağlamıştım; padişahın
+    ihtarı üzerine rank-1 yolu kuruldu. Bu sınama o tashihi kilitler.
+    """
+    import numpy as np
+    from nefs.ttkan import (TTDizey, tt_carp_rank1, ceride_flop,
+                            rank1_ayristir)
+    rng = np.random.default_rng(0)
+    n, d, r = 16, 4, 16
+    cek, r0 = [], 1
+    for k in range(d):
+        r1 = 1 if k == d - 1 else r
+        cek.append(rng.normal(size=(r0, n, n, r1)))
+        r0 = r1
+    tt = TTDizey(cekirdek=cek, n=n, D=n ** d)
+    _, f = tt_carp_rank1(tt, [rng.normal(size=n) for _ in range(d)])
+    assert f == ceride_flop(16, 4, 16) == 278_528, f
+
+    # rank-1 yol CEBİRSEL OLARAK TAM: küçük ölçekte yoğunla örtüşmeli
+    n2, d2 = 4, 4
+    cek2, r0 = [], 1
+    for k in range(d2):
+        r1 = 1 if k == d2 - 1 else 4
+        cek2.append(rng.normal(size=(r0, n2, n2, r1)))
+        r0 = r1
+    tt2 = TTDizey(cekirdek=cek2, n=n2, D=n2 ** d2)
+    M = tt2.yogun()
+    a = [rng.normal(size=n2) for _ in range(d2)]
+    h, _ = tt_carp_rank1(tt2, a)
+    Y = h[0]
+    for c in h[1:]:
+        Y = np.tensordot(Y, c, axes=([-1], [0]))
+    v = a[0]
+    for x in a[1:]:
+        v = np.multiply.outer(v, x)
+    assert np.allclose(Y.ravel(), M @ v.ravel(), atol=1e-10)
+
+    # ...fakat rastgele bir vektör rank-1 DEĞİLDİR; sayı bunu söylüyor
+    _, hata = rank1_ayristir(rng.normal(size=4096), n=16, d=3)
+    assert hata > 0.9, hata
+
+
+def test_qsp_faz_tablosu_CEVRIMDISI_ve_dogru():
+    """FAZ 0: faz açıları koşumda aranmıyor, tablodan çekiliyor mu?
+
+    Padişahın 2. kat'î kuralı: *"QSP açısını runtime'da arama."*
+    Üç şey birden denetlenir: (a) tablo var ve doğru, (b) tabloda
+    olmayan β **hata veriyor** (sessizce aramıyor), (c) artık yalnız
+    uydurma düğümlerinde değil, ızgarada da küçük.
+    """
+    import math
+    import numpy as np
+    from kuantum.ceride import (GIBBS_FAZ_TABLOSU, GIBBS_DERECE,
+                                gibbs_fazlari, gibbs_cift, qsp_degeri,
+                                qsp_faz_bul)
+    assert GIBBS_DERECE == 32
+    assert sorted(GIBBS_FAZ_TABLOSU) == [1.0, 2.0, 4.0, 8.0]
+    izgara = np.linspace(-1.0, 1.0, 201)
+    for b, ph in GIBBS_FAZ_TABLOSU.items():
+        assert len(ph) == (GIBBS_DERECE + 2) // 2, (b, len(ph))
+        f = gibbs_cift(b)
+        artik = max(abs(qsp_degeri(ph, GIBBS_DERECE, t) - f(t))
+                    for t in izgara)
+        assert artik < 1e-10, (b, artik)     # ızgarada da, düğümde değil
+    # tabloda olmayan β: sessizce arama YOK, hata var
+    try:
+        gibbs_fazlari(3.0)
+        assert False, "tabloda olmayan β hata vermeliydi"
+    except KeyError:
+        pass
+    # bulucu kendisi de doğru: T_d tam temsil edilebilir
+    T = np.polynomial.chebyshev.Chebyshev.basis(4)
+    _, art, _ = qsp_faz_bul(lambda t: float(T(t)), 4)
+    assert art < 1e-9, art
+
+
 # Koşturucu dosyanın SONUNDA durur: aksi hâlde kendisinden sonra
 # tarif edilen sınamalar `globals()` taramasına girmez ve sessizce
 # koşulmaz. Ölçüldü: kâide sınamaları eklendiği hâlde sayı 41 kalmıştı.

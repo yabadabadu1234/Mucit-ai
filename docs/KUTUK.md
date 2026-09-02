@@ -5678,3 +5678,174 @@ ve 22 milyonluk taksimat (H173), QROM blok-kodlaması ve QSVT
 **Hüküm.** Bu turda ceridenin şeması eklemlendi, hız hükmü sayıldı,
 İkmâl Fıkralarının üç eksiği ve üç kapalı-form babı kuruldu; 65/65
 sınama geçiyor. *Bütün* borçlar kapanmadı ve kapandı denmiyor.
+
+## H179 — H175'İN NAKZI: ceridenin 278.528'i DOĞRUYMUŞ, ben TT'yi yanlış yere bağlamışım
+
+**"İçtihad içtihadı nakzetmez" kaidesi gereği H175 silinmiyor; burada
+nakzediliyor ve sebebi yazılıyor.**
+
+H175'te şöyle hüküm vermiştim: *"278.528 çekirdeklerin eleman
+sayısıdır; matris-vektör çarpımının FLOP'u değildir… TT-MVM yoğun
+çarpmadan 34 kat pahalıdır."* Padişahın ihtarı: *"ajan, tensör trenini
+yanlış veri yapısına bağlayarak gereksiz yere rank patlaması
+yaşatmıştır."*
+
+**İhtar yerindedir ve ölçüldü.** `nefs/ttkan.tt_carp_rank1` kuruldu:
+vektör ``v = a₁ ⊗ a₂ ⊗ a₃ ⊗ a₄`` (χ_v = 1) iken her çekirdek yalnız
+kendi çarpanıyla büzülür::
+
+    sayaç FLOP  = 278.528
+    ceride      = 278.528        BİREBİR
+    doğruluk    = 3,240e-16      (n=4,d=4'te yoğunla örtüşüyor)
+
+Yani ceridenin hesabı **kendi tarif ettiği veri yapısında tamdır**.
+Benim 1.140.850.688 sayım da doğrudur, fakat o **başka bir sorunun**
+cevabıdır: χ_v = 16'lık dolaşık bir MPS vektörüne MPO uygulamanın
+maliyeti. Ceride tokenı öyle taşımıyor.
+
+**Nerede haklı kaldığım, açıkça:** rank-1'lik vektörün kendi
+hassasiyeti değil, **seçilen çarpanlara ayırmaya nispetledir** ve
+bedava değildir. Ölçüldü (4096 boyutlu vektörde rank-1 yaklaşımın
+bağıl hatası)::
+
+    vektör          n=2,d=12  n=4,d=6  n=8,d=4  n=16,d=3
+    rastgele          0,998     0,997    0,994    0,990
+    düzgün/yapılı     0,390     0,375    0,230    0,120
+    tek-sıcak         0,000     0,000    0,000    0,000
+    inşa edilmiş ⊗    0,760     0,640    0,000    0,410
+
+Son satır mühimdir: sekizli çarpanlardan **inşa edilmiş** bir vektör
+yalnız kendi ayrıştırmasında (n=8) rank-1'dir, başkasında değil.
+Yani "token rank-1'dir" bir keşif değil, bir **inşa kararıdır**.
+
+## H180 — CERİDENİN ARİTMETİĞİNDE BİR KAYMA: 16⁴ = 65.536, 4096 DEĞİL
+
+Ceride ``D = 4096`` der ve aynı cümlede ``16 × 16 × 16 × 16``, "4
+çekirdek" yazar. Fakat ``16⁴ = 65.536``tır; ``4096 = 16³``.
+
+Bu bir kusur değil bir **fırsattır**, zira ceridenin aleyhine değil
+lehine sonuç veriyor. ``D = 4096``in gerçek çarpanlara ayrılışları ve
+41 meleke için token başına yük (``+2,58 MFLOP`` RHT+KAN+Hodge dâhil,
+ceridenin kendi kalemi)::
+
+    n     d    FLOP/meleke   41 meleke MFLOP   token MFLOP
+    2    12         20.736             0,850         3,430
+    4     6         33.792             1,385         3,965
+    8     4         69.632             2,855         5,435
+   16     3        147.456             6,046         8,626
+   ────────────────────────────────────────────────────────
+   ceridenin yazdığı (16⁴, D=65.536)                14,000
+
+Yani ceride **kendi hızını olduğundan düşük göstermiş**. Hakikî
+quantics ayrışımıyla (``n = 2, d = 12`` -- "Quantics"in kendi manası
+budur) token başına **3,430 MFLOP** eder ve 629,2 TFLOPS'ta::
+
+    629,2e12 / 3,43e6 = 183,4 M token/sn  →  733,6 MB/sn
+
+QSVT'nin 19,6 TFLOP'luk payı düşülünce dahi ceridenin ilan ettiği
+``154 MB/sn``in **çok üstündedir**. Ceridenin hız hükmü, kendi
+şemasının hakkı verildiğinde muhafazakâr kalıyor.
+
+## H181 — TOKENIN GÖMÜLMESİ: 4096 boyut 12 kübitin GENLİĞİDİR
+
+Padişahın tashihi: *"Her token'ın 4096 boyutlu float vektörü v,
+12-kübitlik durumun genliğidir. Asla her sayıyı ayrı kübit yapma!"*
+
+`nefs/gomme.py` kuruldu. Ceridenin adres yazmacı::
+
+    yığın |j⟩  B=2048   → 11 kübit
+    yer   |t⟩  L=4096   → 12 kübit
+    mana  |k⟩  D=4096   → 12 kübit
+    ─────────────────────────────
+    TOPLAM               35 kübit    (8.388.608 token)
+
+Klasik karşılığı **137,4 GB**tır. 35 kübit ile 22 milyon arasındaki
+fark da kayda geçer ve karıştırılmaz: **35 kübit verinin adresidir**
+(logaritmik indeksleme, modeli eğitmez); **22 milyon kübit parametre
+arama uzayı ve iş alanıdır** (131.072 parametre × 16 bit = 2.097.152).
+
+**Ceridenin χ ≤ 16 iddiası ölçüldü ve VERİYE BAĞLI çıktı**::
+
+    tek token, 12 kübit      hakikî âzamî bağ   χ=16'da hata
+    rastgele                        64             0,7222
+    düzgün/yapılı                    2             0,0000
+    tek-sıcak                        1             0,0000
+
+    küllî yazmaç (B=8,L=16,D=64 numunesi; kesmesiz âzamî bağ 64)
+       χ =  2 → hata 0,9951      χ = 16 → hata 0,8301
+       χ =  8 → hata 0,9467      χ = 32 → hata 0,5513
+
+Yani ``χ ≤ 16`` **yapılı veride bedavadır, rastgele veride imkânsızdır**
+(rastgele bir durumun bağı ``2^{n/2}``dir, bu bir teoremdir). Gömme
+melekelerinin ürettiği temsil yapılı ise ceride haklıdır; bu **gerçek
+gömmeler üzerinde ölçülmelidir** ve o veri elimizde yoktur (H87).
+
+## H182 — GAYE TASHİH EDİLDİ: sonraki token değil, ÇELİŞKİSİZLİK
+
+Padişahın hükmü: *"Bu mimaride asla bir sonraki token tahmini
+(Cross-Entropy) yapılmaz. Minimize edilecek şey: L_Kohomoloji (çelişki)
++ L_Betti (ezber boşluğu) + L_Sheaf (ek yeri hatası)."*
+
+`nefs/zirh.py` kuruldu; dördü de ölçülüyor ve dördü de kırmızıya
+dönüyor::
+
+    Betti (delik)      çember       b₁=1  boşluk 0,5858  kayıp 1,0  KIRMIZI
+                       dolu disk    b₁=0  boşluk 4,9369  kayıp 0,0
+    Kohomoloji (ada)   iki kopuk    b₀=2                 kayıp 1,0  KIRMIZI
+                       bağlanmış    b₀=1                 kayıp 0,0
+    Sheaf (ek yeri)    uyumlu       ‖ΔRes‖² = 0,000e+00
+                       uyumsuz      ‖ΔRes‖² = 0,340                 KIRMIZI
+    Homotopi (yol)     kapanan      |W−I| = 2,129e-17
+                       kapanmayan   |W−I| = 0,4948                  KIRMIZI
+
+    küllî kayıp (yumuşak âzamî, τ=4)
+       dördü sıfır   L = 0,000e+00   ("çelişkisiz" bayrağı yanar)
+       biri bozuk    L = 0,6668      (düz ortalama 0,2500 olurdu)
+       dördü bozuk   L = 1,0000
+
+**İki cebrî tashih, ceridenin metnine karşı.**
+
+1. **Betti ile Kohomoloji aynı derecede ölçülemez.** Hodge teoremi
+   gereği ``dim H_k = dim H^k = dim ker Δ_k``tır; aynı ``k``da ikisini
+   ayrı kalem yazmak **bir kaybı iki kere cezalandırmaktır**. Onun için
+   ``L_betti`` ``k = 1``de (çevrim delikleri), ``L_koho`` ``k = 0``da
+   (birbirine bağlanmamış mana adaları) ölçülür.
+2. **Burada yumuşak âzamî kullanılır, yumuşak asgarî değil** -- ve bu,
+   padişahın 4. kaidesiyle çelişmez, onu tamamlar. `nefs/olcu.py`nin
+   yumuşak asgarîsi uzuvların **kabiliyeti** içindir ("en zayıf öncül
+   yakîni belirler"). Zırhta ölçülen kabiliyet değil **ihlâldir**;
+   dördü birden sıfır olmalıdır, dolayısıyla hükmü **en kötü ihlâl**
+   verir. Düz toplam alsaydık, üç süzgeç temizken dördüncüsünün
+   berbatlığı dörtte bire seyrelirdi (0,25 v 0,67 -- yukarıdaki cetvel).
+
+## H183 — FAZ 0 KAPANDI: QSP faz tablosu çevrimdışı hesaplandı ve GÖMÜLDÜ
+
+H178'de *"QSP faz açıları tablosu… bu turda başlanmadı"* diye açık borç
+yazılmıştı. Padişahın 2. kat'î kuralı: *"QSP açısını runtime'da arama;
+faz dizisi kodun başına statik gömülecek."*
+
+`kuantum/ceride.py`de kuruldu:
+
+* ``qsp_faz_bul`` -- Gauss-Newton, sönümlemeli adım, **belirlenimci**
+  (rastgele tohum yok; başlangıç ``φ = (π/4, 0, …, 0)``, Dong vd.
+  2021'in kendi başlangıcı). Düğümler ``(0,1)``de Chebyshev.
+* ``GIBBS_FAZ_TABLOSU`` -- ``d = 32`` için dört ``β``da **gömülü**
+  17'şer yarım faz. Koşumda arama yoktur; tabloda olmayan ``β``
+  **hata verir**, sessizce aramaz.
+
+Doğruluk, uydurma düğümlerinde **değil**, 401 noktalı ızgarada::
+
+    β = 1,0   ızgara artığı 2,887e-15
+    β = 2,0   ızgara artığı 2,109e-15
+    β = 4,0   ızgara artığı 1,332e-15
+    β = 8,0   ızgara artığı 1,166e-15
+
+Bulucunun kendisi de denetlendi: ``T_d`` hedefleri (d = 2,3,4,8) için
+artık ``5e-13``. Yani tablo, tesadüfen uyan bir eğri değil.
+
+**Peşinen ilan edilen eksik (kullanıcı hükmü C).** Tek bir simetrik QSP
+dizisinin ürettiği polinomun paritesi ``d mod 2``dir; ``e^{−βx}``in
+paritesi karışıktır ve **tek diziyle temsil edilemez**. Tablo Gibbs'in
+**çift kısmını** (``e^{−β/2}cosh(βx/2)``) verir. Tam Gibbs için iki
+tablo (çift + tek) ve bir birleştirme lâzımdır; bu **yapılmadı** ve
+gizlenmiyor.

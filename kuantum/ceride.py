@@ -27,7 +27,9 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["gcl_dugumleri", "fct_tasarimi", "fct_katsayilari",
+__all__ = ["qsp_faz_bul", "qsp_degeri", "gibbs_cift", "gibbs_fazlari",
+           "GIBBS_FAZ_TABLOSU", "GIBBS_DERECE",
+           "gcl_dugumleri", "fct_tasarimi", "fct_katsayilari",
            "fct_degerlendir", "esaralikli_tasarim",
            "J", "sta_acisi", "sta_surusu", "sta_kosusu",
            "fubini_study", "fubini_dogrulamasi"]
@@ -282,6 +284,156 @@ def fubini_dogrulamasi(psi: Callable[[np.ndarray], np.ndarray],
     return {"g": g, "en_küçük_özdeğer": float(oz.min()),
             "psd": bool(oz.min() > -1e-8 * olcek),
             "iz": float(np.trace(g))}
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  FAZ 0: QSP faz açıları -- ÇEVRİMDIŞI hesaplanır, tabloya yazılır
+# ══════════════════════════════════════════════════════════════════════
+#
+# Ceridenin kendi eki bunu *"gizli kalan hakikat"* diye zikreder:
+#
+#     d_qsp = 64 dereceli bir filtre için bu faz açılarını bulmak
+#     optimizasyon esnasında yapılmaz; klasik işlemcide Haah (2019)
+#     veya Dong vd. (2021) algoritmalarıyla eğitime başlamadan evvel
+#     BİR DEFAYA MAHSUS hesaplanıp tabloya yazılır.
+#
+# ve padişahın 2. kat'î kuralı: *"QSP açısını runtime'da arama."*
+# Aşağıdaki tablo ``_faz_tablosu_uret`` ile bir kere hesaplandı ve
+# buraya **gömüldü**; koşum sırasında arama yapılmaz.
+
+
+def _qsp_tam_faz(yari: Sequence[float], d: int) -> List[float]:
+    """Simetrik yarım diziden ``d+1`` fazlık tam diziye.
+
+    Simetri ``φ_j = φ_{d−j}``dir; simetrik QSP'nin ürettiği polinom
+    o zaman **reeldir** ve paritesi ``d mod 2``dir. Yarım dizinin
+    uzunluğu ``⌈(d+1)/2⌉``dir.
+    """
+    y = list(yari)
+    return y + (y[-2::-1] if d % 2 == 0 else y[::-1])
+
+
+def qsp_degeri(yari: Sequence[float], d: int, x: float) -> float:
+    """``Re⟨0|U_φ(x)|0⟩`` -- simetrik yarım fazlarla."""
+    from kuantum.qsvt import qsp_polinomu
+    return float(np.real(qsp_polinomu(_qsp_tam_faz(yari, d), float(x))))
+
+
+def qsp_faz_bul(hedef: Callable[[float], float], d: int,
+                tur: int = 120, tol: float = 1e-12
+                ) -> Tuple[np.ndarray, float, int]:
+    """``Re⟨0|U_φ(x)|0⟩ ≈ hedef(x)`` olacak simetrik fazları bul.
+
+    Gauss-Newton, sönümlemeli adım, **belirlenimci** (rastgele tohum
+    yok, başlangıç ``φ = (π/4, 0, …, 0)`` -- Dong vd. 2021'in kendi
+    başlangıcı). Düğümler ``(0,1)`` aralığında Chebyshev'dir; parite
+    ``d mod 2`` olduğu için yarım aralık yeterlidir.
+
+    Döner ``(yarım_fazlar, düğümdeki_âzamî_artık, tur)``. **Artık
+    yalnız düğümlerde ölçülürse aşırı uyum gizlenir**; onun için
+    ``_rapor`` ayrıca 401 noktalı ızgarada da ölçer ve iki sayıyı yan
+    yana yazar (H47).
+    """
+    m = (int(d) + 2) // 2
+    j = np.arange(m)
+    x = np.cos((2 * j + 1) * math.pi / (4 * m))
+    y = np.array([float(hedef(float(t))) for t in x])
+    phi = np.zeros(m)
+    phi[0] = math.pi / 4.0
+    h = 1e-6
+    it = 0
+    for it in range(int(tur)):
+        r = np.array([qsp_degeri(phi, d, t) for t in x]) - y
+        if float(np.max(np.abs(r))) < float(tol):
+            break
+        J = np.empty((m, m))
+        for k in range(m):
+            e = np.zeros(m)
+            e[k] = h
+            J[:, k] = (np.array([qsp_degeri(phi + e, d, t) for t in x])
+                       - np.array([qsp_degeri(phi - e, d, t) for t in x])
+                       ) / (2.0 * h)
+        try:
+            dp = np.linalg.lstsq(J, -r, rcond=None)[0]
+        except np.linalg.LinAlgError:      # pragma: no cover
+            break
+        adim, f0 = 1.0, float(r @ r)
+        for _ in range(30):
+            yeni = phi + adim * dp
+            rn = np.array([qsp_degeri(yeni, d, t) for t in x]) - y
+            if float(rn @ rn) < f0:
+                phi = yeni
+                break
+            adim *= 0.5
+        else:
+            break
+    r = np.array([qsp_degeri(phi, d, t) for t in x]) - y
+    return phi, float(np.max(np.abs(r))), int(it)
+
+
+def gibbs_cift(beta: float) -> Callable[[float], float]:
+    """``½[e^{−β(1+x)/2} + e^{−β(1−x)/2}] = e^{−β/2}\cosh(βx/2)``.
+
+    **Niçin çift kısmı?** Tek bir simetrik QSP dizisinin ürettiği
+    polinomun paritesi ``d mod 2``dir; parite karışık bir fonksiyon
+    (``e^{−βx}``) tek diziyle temsil edilemez. Tam Gibbs için **iki
+    tablo** (çift ve tek) ve bir birleştirme lâzımdır; bu dosya çift
+    kısmı verir ve eksiği burada **açıkça yazar**, gizlemez.
+    """
+    b = float(beta)
+    return lambda x: math.exp(-b / 2.0) * math.cosh(b * float(x) / 2.0)
+
+
+GIBBS_DERECE: int = 32
+GIBBS_FAZ_TABLOSU: Dict[float, Tuple[float, ...]] = {
+    # β = 1.0  → ızgara artığı 2.89e-15
+    1.0: (
+        +7.85398163397448279e-01, +1.63940632205149596e-17, +5.16886774438653229e-17, -7.42228639824735648e-17,
+        -1.78959009067879251e-16, +2.43774003034245568e-17, +3.46628346790352021e-17, -1.90752850243131835e-16,
+        +2.72806398458374440e-16, -6.77086910096930828e-17, -1.51383139296484263e-16, -2.10235018858699831e-13,
+        -3.02955504369563769e-10, -2.71991350421989660e-07, -1.31027313928002494e-04, -2.53646482751288573e-02,
+        -7.02157454800921177e-01,
+    ),
+    # β = 2.0  → ızgara artığı 2.11e-15
+    2.0: (
+        +7.85398163397448279e-01, +5.69133184655856333e-17, -8.61026697426553020e-18, -1.06580180354355742e-16,
+        -7.63182589175589310e-17, -4.46379274833280657e-18, -5.82497741028148363e-17, -1.14861919624991408e-16,
+        +8.39837578115053448e-17, -2.06191412338938709e-16, -2.17096272043578891e-13, -1.15036763237282908e-10,
+        -4.16244100453748546e-08, -9.39872303490259219e-06, -1.14419045654967459e-03, -5.67262228926020060e-02,
+        -4.87910287357570138e-01,
+    ),
+    # β = 4.0  → ızgara artığı 1.33e-15
+    4.0: (
+        +7.85398163397448279e-01, +8.24018175080909381e-17, +6.68820616977939718e-17, -1.86516227769924546e-17,
+        -5.94989362044357636e-17, +6.57536224442314508e-17, -5.61691229266047795e-17, -6.76094563499206992e-17,
+        -7.31872002775397961e-15, -1.76604970340671767e-12, -3.24745616798840518e-10, -4.34704492824641589e-08,
+        -3.99203765865601524e-06, -2.30717742717413823e-04, -7.32114712567225479e-03, -9.93827742304900924e-02,
+        -3.20328643099665911e-01,
+    ),
+    # β = 8.0  → ızgara artığı 1.11e-15
+    8.0: (
+        +7.85398163397448279e-01, -6.26142592128008973e-17, +2.98965961285311724e-17, +2.50534840308875792e-17,
+        +3.75628885686290800e-17, -1.38674542313115019e-16, -9.95690998011589187e-15, -9.62625370637811406e-13,
+        -7.54662349904791803e-11, -4.67017104398569605e-09, -2.21213213665520287e-07, -7.70813102813456669e-06,
+        -1.87413032714672377e-04, -2.95512823225523242e-03, -2.71677618330386055e-02, -1.23406109662883609e-01,
+        -2.16343772164458575e-01,
+    ),
+}
+
+
+def gibbs_fazlari(beta: float) -> Tuple[float, ...]:
+    """Tablodan çek; tabloda yoksa **hata ver** -- runtime'da arama yok.
+
+    Padişahın 2. kat'î kuralı budur. Yeni bir ``β`` lâzımsa tablo
+    çevrimdışı genişletilir (``qsp_faz_bul`` ile), koşum sırasında
+    değil.
+    """
+    b = float(beta)
+    if b not in GIBBS_FAZ_TABLOSU:
+        raise KeyError("β = %g tabloda yok; çevrimdışı hesaplayıp "
+                       "GIBBS_FAZ_TABLOSU'na ekleyin (runtime arama yasak)"
+                       % b)
+    return GIBBS_FAZ_TABLOSU[b]
 
 
 # ══════════════════════════════════════════════════════════════════════

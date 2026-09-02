@@ -1,0 +1,242 @@
+"""Tokenın kuantum yazmacına gömülmesi -- **genlik kodlaması**.
+
+Kullanıcı hükmü (bu turun tashihi):
+
+    Her token'ın 4096 boyutlu float vektörü v, 12-kübitlik durumun
+    genliğidir: |token⟩ = Σ_k v_k |k⟩. Asla her sayıyı ayrı kübit yapma!
+
+ve küllî veri kümesi üç yazmaca tensörlenir::
+
+    |D⟩ = (1/√(BL)) Σ_j Σ_t Σ_k v_k^{(j,t)} |j⟩₁₁ ⊗ |t⟩₁₂ ⊗ |k⟩₁₂
+
+    j : yığın indisi   (B = 2048 → 11 kübit)
+    t : bağlam yeri    (L = 4096 → 12 kübit)
+    k : mana lifi      (D = 4096 → 12 kübit)
+                                     ───────
+                                      35 kübit
+
+**35 kübit ile 22 milyonun farkı budur ve karıştırılmamalıdır:** 35
+kübit verinin **adresidir** (logaritmik indeksleme); 22 milyon kübit
+parametre arama uzayı ve iş alanıdır. Adres yazmacı modeli eğitmez,
+yalnız veriyi taşır.
+
+**Bu dosyanın ölçtüğü asıl şey: χ ≤ 16 bu veriyi taşıyabiliyor mu?**
+Ceride *"QTT, 35 kübit arasındaki bağ boyutunu χ ≤ 16'da tutarak 8,38
+milyon tokenı 30-50 MB'da saklar"* der. Bu bir iddiadır ve burada
+**sayılır**: ``qtt_bag_ihtiyaci`` gerçek bağ ihtiyacını, ``gomme_hatasi``
+χ = 16'da atılan ağırlığı ölçer. Ölçü kırmızıya dönebilir ve dönmesi de
+matluptur -- dönmüyorsa bir şey ölçmüyordur.
+"""
+from __future__ import annotations
+
+import math
+from dataclasses import dataclass
+from typing import Dict, List, Optional, Sequence, Tuple
+
+import numpy as np
+
+__all__ = ["kubit_sayisi", "genlik_gom", "genlik_coz", "mps_kur",
+           "qtt_bag_ihtiyaci", "gomme_hatasi", "veri_yazmaci",
+           "YazmacOlcusu", "bellek_cetveli"]
+
+
+def kubit_sayisi(D: int) -> int:
+    """``⌈log₂ D⌉`` -- ``D`` boyutlu vektörü taşıyan kübit adedi.
+
+    ``D = 4096`` için **12**'dir; ``4096 × 16`` bit (65.536 kübit)
+    değil. Fark, genlik kodlamasının bütün kazancıdır.
+    """
+    D = int(D)
+    if D < 1:
+        raise ValueError("D ≥ 1 olmalı")
+    return int(math.ceil(math.log2(D)))
+
+
+def genlik_gom(v: np.ndarray) -> Tuple[np.ndarray, float]:
+    """``v`` → birim normlu genlik vektörü. Döner: ``(ψ, norm)``.
+
+    Genlik kodlaması normu **atar** (durum projektiftir); atılan norm
+    ayrıca döndürülür ki kaybolmasın. Kaba sıfırlama yasağı (H14) burada
+    da geçerlidir: ``v``nin uzunluğu ``2^k``ya tamamlanmaz, **sıfırla
+    doldurulur** ve doldurulan yer raporlanır.
+    """
+    v = np.asarray(v, float).ravel()
+    k = kubit_sayisi(v.size)
+    tam = 1 << k
+    if v.size < tam:
+        u = np.zeros(tam)
+        u[:v.size] = v
+        v = u
+    nrm = float(np.linalg.norm(v))
+    if nrm <= 1e-300:
+        return np.full(tam, 1.0 / math.sqrt(tam)), 0.0
+    return v / nrm, nrm
+
+
+def genlik_coz(psi: np.ndarray, norm: float, D: Optional[int] = None
+               ) -> np.ndarray:
+    """Genlikten klasik vektöre dön -- ``genlik_gom``un tersi."""
+    psi = np.asarray(psi, float).ravel()
+    v = psi * float(norm)
+    return v if D is None else v[:int(D)]
+
+
+def mps_kur(psi: np.ndarray, kubit: int, chi: Optional[int] = None
+            ) -> Tuple[List[np.ndarray], List[int], float]:
+    """Genlik vektörünü MPS'e ayır. Döner: ``(çekirdekler, bağlar, hata)``.
+
+    Ardışık SVD; ``chi`` verilirse her bağda kesilir ve **atılan ağırlık
+    biriktirilerek** bağıl hata döndürülür. ``chi=None`` iken kesme yok,
+    dönen bağlar **hakikî** bağ ihtiyacıdır.
+    """
+    psi = np.asarray(psi, float).ravel()
+    n = int(kubit)
+    if psi.size != (1 << n):
+        raise ValueError("genlik %d, 2^%d = %d değil" % (psi.size, n, 1 << n))
+    cek: List[np.ndarray] = []
+    bag: List[int] = []
+    M = psi.reshape(1, -1)
+    atilan = 0.0
+    for k in range(n - 1):
+        r0 = M.shape[0]
+        M = M.reshape(r0 * 2, -1)
+        U, s, Vt = np.linalg.svd(M, full_matrices=False)
+        etkin = int(np.sum(s > 1e-12 * max(float(s[0]), 1e-30)))
+        r1 = max(1, etkin if chi is None else min(int(chi), etkin))
+        atilan += float(np.sum(s[r1:] ** 2))
+        cek.append(U[:, :r1].reshape(r0, 2, r1))
+        M = s[:r1, None] * Vt[:r1, :]
+        bag.append(r1)
+    cek.append(M.reshape(-1, 2, 1))
+    top = float(np.sum(psi ** 2))
+    hata = math.sqrt(max(atilan, 0.0) / max(top, 1e-300))
+    return cek, bag, hata
+
+
+def qtt_bag_ihtiyaci(psi: np.ndarray, kubit: int) -> List[int]:
+    """Kesmesiz hakikî bağ profili -- *"χ ≤ 16 yeter mi"* sorusunun cevabı."""
+    return mps_kur(psi, kubit, chi=None)[1]
+
+
+def gomme_hatasi(psi: np.ndarray, kubit: int, chi: int = 16) -> float:
+    """``chi``de kesince atılan ağırlığın bağıl normu."""
+    return mps_kur(psi, kubit, chi=int(chi))[2]
+
+
+@dataclass
+class YazmacOlcusu:
+    """35 kübitlik veri yazmacının taksimatı -- ceridenin cetveli."""
+    B: int = 2048
+    L: int = 4096
+    D: int = 4096
+
+    @property
+    def kubit_yigin(self) -> int:
+        return kubit_sayisi(self.B)
+
+    @property
+    def kubit_yer(self) -> int:
+        return kubit_sayisi(self.L)
+
+    @property
+    def kubit_mana(self) -> int:
+        return kubit_sayisi(self.D)
+
+    @property
+    def kubit(self) -> int:
+        return self.kubit_yigin + self.kubit_yer + self.kubit_mana
+
+    @property
+    def token(self) -> int:
+        return int(self.B) * int(self.L)
+
+    def cetvel(self) -> str:
+        return ("  yığın |j⟩  B=%-7d → %2d kübit\n"
+                "  yer   |t⟩  L=%-7d → %2d kübit\n"
+                "  mana  |k⟩  D=%-7d → %2d kübit\n"
+                "  ───────────────────────────────\n"
+                "  TOPLAM                 %2d kübit   (%d token)"
+                % (self.B, self.kubit_yigin, self.L, self.kubit_yer,
+                   self.D, self.kubit_mana, self.kubit, self.token))
+
+
+def veri_yazmaci(V: np.ndarray) -> Tuple[np.ndarray, YazmacOlcusu]:
+    """``(B, L, D)`` klasik veriyi tek genlik vektörüne gömer.
+
+    Netice ``2^(kübit)`` uzunluktadır ve birim normludur. **Bu bir
+    tanımdır, bir sıkıştırma değildir**: sıkıştırma MPS'e ayrılınca ve
+    bağ kesilince olur (bkz. ``bellek_cetveli``).
+    """
+    V = np.asarray(V, float)
+    if V.ndim != 3:
+        raise ValueError("V (B, L, D) olmalı")
+    B, L, D = V.shape
+    o = YazmacOlcusu(B=B, L=L, D=D)
+    T = np.zeros((1 << o.kubit_yigin, 1 << o.kubit_yer, 1 << o.kubit_mana))
+    T[:B, :L, :D] = V
+    psi = T.ravel()
+    nrm = float(np.linalg.norm(psi))
+    return (psi / nrm if nrm > 1e-300 else psi), o
+
+
+def bellek_cetveli(V: np.ndarray, chi: Sequence[int] = (2, 4, 8, 16, 32)
+                   ) -> Dict[str, object]:
+    """χ cetveli: **bağ ihtiyacı, hata ve bellek** -- üçü yan yana.
+
+    Ceridenin iddiası ``χ ≤ 16``dır. Burada üçü birden ölçülür ve
+    hiçbiri tek başına okunmaz (kullanıcı hükmü H47: iki ölçü daima yan
+    yana). Bellek, MPS çekirdeklerinin eleman sayısıdır (float32).
+    """
+    psi, o = veri_yazmaci(V)
+    hakiki = qtt_bag_ihtiyaci(psi, o.kubit)
+    out: List[Dict[str, float]] = []
+    for c in chi:
+        cek, bag, hata = mps_kur(psi, o.kubit, chi=int(c))
+        eleman = int(sum(x.size for x in cek))
+        out.append({"χ": int(c), "hata": float(hata),
+                    "eleman": eleman, "MB": eleman * 4 / 1e6,
+                    "azamî_bağ": int(max(bag)) if bag else 1})
+    return {"ölçü": o, "hakikî_bağ": hakiki,
+            "hakikî_âzamî_bağ": int(max(hakiki)) if hakiki else 1,
+            "klasik_MB": float(np.asarray(V).size * 4 / 1e6),
+            "cetvel": out}
+
+
+def rapor() -> str:                                     # pragma: no cover
+    s: List[str] = ["TOKENIN KUANTUM YAZMACINA GÖMÜLMESİ", ""]
+    s.append("=== Ceridenin 35 kübitlik adres yazmacı ===")
+    s.append(YazmacOlcusu().cetvel())
+    s.append("  (klasik: %d token × %d boyut × 4 bayt = %.1f GB)"
+             % (YazmacOlcusu().token, 4096,
+                YazmacOlcusu().token * 4096 * 4 / 1e9))
+
+    s.append("")
+    s.append("=== Tek tokenın genlik gömmesi ===")
+    rng = np.random.default_rng(0)
+    for ad, v in (("rastgele", rng.normal(size=4096)),
+                  ("düzgün", np.sin(np.linspace(0, 6, 4096))
+                   * np.exp(-np.linspace(0, 3, 4096))),
+                  ("tek-sıcak", np.eye(1, 4096, 1234).ravel())):
+        psi, nrm = genlik_gom(v)
+        bag = qtt_bag_ihtiyaci(psi, 12)
+        s.append("  %-10s hakikî âzamî bağ %3d   χ=16'da hata %.4f"
+                 % (ad, max(bag), gomme_hatasi(psi, 12, 16)))
+
+    s.append("")
+    s.append("=== Küllî veri yazmacı: χ ≤ 16 yetiyor mu? ===")
+    B, L, D = 8, 16, 64
+    V = rng.normal(size=(B, L, D))
+    r = bellek_cetveli(V)
+    o = r["ölçü"]
+    s.append("  numune: B=%d L=%d D=%d → %d kübit   (klasik %.4f MB)"
+             % (B, L, D, o.kubit, r["klasik_MB"]))
+    s.append("  kesmesiz hakikî âzamî bağ: %d" % r["hakikî_âzamî_bağ"])
+    s.append("     χ      hata        MB     âzamî bağ")
+    for c in r["cetvel"]:
+        s.append("  %4d   %.4f   %8.5f    %4d"
+                 % (c["χ"], c["hata"], c["MB"], c["azamî_bağ"]))
+    return "\n".join(s)
+
+
+if __name__ == "__main__":   # pragma: no cover
+    print(rapor())
