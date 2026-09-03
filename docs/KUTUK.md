@@ -7057,3 +7057,66 @@ Fonksiyonun varsayılan giriş noktaları hâlâ `main.kaggle` (bu oturumda
 `ogrenme.kaggle_donanim`a taşındı) ve `nefs.kulli_egitim` (bu oturumda
 silindi) diyordu. Bu ayrı bir kusur; bu turda düzeltilmedi, kayda
 geçti.
+
+## H207 — Doğru ölçüt "klasör teması" değil, "main-4'e fiilî erişim"dir
+
+Kullanıcı hükmü: *"Mucit_ai_esas istisnası dışında tüm kodların ya 4
+main'e bağlanması ya da olmaması gerekiyor. Şu an bağlı olmaması da
+silinmesi lazım manasına gelmiyor."* Önceki bir cevapta yanlış bir
+ölçütle ("klasör içeriği temayla uyumlu mu") "sorun yok" denmişti —
+bu, sığ ve yanlış bir teşhisti.
+
+**Doğru ölçüm** (`tanilama.nizam.padisahin_eli`, GİRİŞLER yalnız dört
+resmî `main/` dosyası — `nefs.qakis`/`nefs.hukum_denetimi` bu ölçüme
+katılmadı, çünkü kullanıcı hükmü yalnız "4 main" diyor):
+
+```
+toplam modül : 214
+main-4'e erişilen (tebaa) : 89
+main-4'e erişilemeyen (beylik) : 125   (104'ü test-dışı, 30 491 satır)
+```
+
+Bu, önceki (6 giriş noktalı) ölçümün gösterdiğinden çok daha vahim.
+`tanilama/` (teftiş heyeti) ve `local_run/` (koşucu kabuğu) kullanıcı
+tarafından `docs`/`mucit_ai_esas` ile aynı gerekçeyle **muaf**
+tutuldu — main'in uzvu olmaları beklenmiyor. Geri kalan ~85 test-dışı
+beylik modülün tek tek "sil mi, bağla mı" kararı **açık, bu oturumda
+tamamlanmadı.**
+
+## H208 — `idrak/egitim.py` silindi: H3 ihlali, main zaten daha iyisini yapıyor
+
+H206'daki ERTELENEN kararı bu oturumda tekrar ele alındı; bu sefer
+`torch` olmadan da AST ile doğrulanabilecek gerekçe bulundu:
+
+* Dosya `torch.optim.AdamW` + `kayip.backward()` +
+  `clip_grad_norm_` ile **H3'ün ("ana döngüde gradyan ve kayıp
+  yoktur") doğrudan ihlalini** çalıştırıyor — terk edilmiş bir
+  paradigma, "cevher" değil.
+* İçindeki "şekil başı" fikri zaten `main/cikarim.py`nin `Hendese`
+  sınıfında (cebirsel ebat kanunu `H_out=pH·H+qH·W+cH`) daha güçlü
+  bir biçimde var; "kapsam tablosu" ise idrak'a özgü sabit-uzunluk
+  token dizisi sorunudur, dalga hattına (öznitelik vektörü kullanır)
+  uygulanamaz. Aktarılacak bir şey yoktu.
+* AST bağımlılık taraması: `idrak.egitim`i yalnız `idrak.model`,
+  `idrak.kubit`, `idrak.kategori` ve `idrak.test_idrak` çağırıyordu;
+  main-4'ten erişilen hiçbir modül ona bağlı değildi.
+
+**Kullanıcı açık talimatı**: yalnız `idrak/egitim.py` silinsin,
+`idrak/model.py`, `idrak/kubit.py`, `idrak/kategori.py` ve onların
+testleri KALSIN (klasik-PyTorch alt-hattının geri kalanı hakkında
+henüz karar verilmedi). Buna göre:
+
+* `idrak/egitim.py` silindi (`git rm`).
+* `idrak/test_idrak.py`de yalnız `idrak.egitim`e bağımlı 5 test
+  fonksiyonu çıkarıldı (`test_uzunluk_siniri_kapsami_olculuyor`,
+  `test_sekil_basi_ogreniliyor`, `test_toplu_maskesi_yalniz_hedefte`,
+  `test_degerlendirme_tam_izgara_esmesi_sayiyor`,
+  `test_bir_adim_kaybi_dusuruyor`); `idrak.model`/`idrak.kubit`
+  testlerinin tamamı dokunulmadan kaldı.
+* `tanilama/divan.py`nin sicilinden `idrak.egitim` girdisi (hem
+  `try/import` bloğu hem KAYIT tablosu) çıkarıldı — yoksa sicil
+  var olmayan bir dosyayı içe aktarmaya çalışıp `EKSIK`e düşerdi.
+
+`idrak/model.py`, `idrak/kubit.py`, `idrak/kategori.py`nin main-4'e
+bağlanıp bağlanmayacağı (yoksa onlar da mı H3 ihlali gerekçesiyle
+tasfiye mi olacak) **açık, ayrı bir karar bekliyor.**

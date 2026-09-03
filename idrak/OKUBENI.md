@@ -4,10 +4,9 @@ Bu paket, risalelerdeki parçaların **birbirine bağlandığı** ve gerçek
 bir görev üzerinde ölçüldüğü yerdir.
 
 ```
-python3 -m pytest idrak -q                    # 51 sınama
+python3 -m pytest idrak -q
 python3 -m idrak.arc ; python3 -m idrak.kubit
 python3 -m idrak.model ; python3 -m idrak.cozucu
-python3 -m idrak.egitim --D 128 --adim 9000 --baglam 2048 --hedef 640
 ```
 
 ## Veri
@@ -122,12 +121,10 @@ Kaide bütün gösterim çiftlerinde tutmazsa `None` döner — çözücüdeki
 dönülür. **Sızıntı yok:** kaide, `gorev_dizisi`'nin bağlamı kurarken
 yaptığının aynısıyla hedef çift dışarıda bırakılarak çıkarılıyor.
 
-## Eğitim (`egitim.py`)
+## Eğitim (`egitim.py`) — SİLİNDİ (kütük H208)
 
-Ölçüt **tam ızgara eşleşmesidir**, hücre doğruluğu değil: boş bir
-ızgarada hücrelerin çoğu zaten siyahtır. Değerlendirmede öğretmen
-zorlaması **yoktur** — açgözlü üretim yapılır.
-
-**Ölçümün yakaladığı hız kusuru.** `uret` her belirteçte bağlamı
-yeniden kodluyordu; 20 görevlik değerlendirme 100 sn'yi aşıyordu.
-Bağlam bir kere kodlanınca **2.1 sn**'ye indi.
+Bu klasik PyTorch/AdamW eğitim döngüsü, H3'ün ("ana döngüde gradyan
+ve kayıp yoktur") doğrudan ihlali olduğu ve `main/cikarim.py`nin
+`Hendese` (cebirsel ebat kanunu) zaten aynı sorunu (ızgara ebadının
+doğru çıkması) daha güçlü çözdüğü için tasfiye edildi. `model.py`,
+`kubit.py`, `kategori.py` ayrı bir karara kadar yerinde duruyor.

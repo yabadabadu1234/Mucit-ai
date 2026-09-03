@@ -90,21 +90,6 @@ def test_sozlu_algoritma_120_gorevin_hepsinde_var():
 
 
 @veri_gerek
-def test_uzunluk_siniri_kapsami_olculuyor():
-    """Sınırların kapsamı kayıt altında: 768/320 kümenin %2'sini alıyor."""
-    from idrak.egitim import _ornekler
-    dar = Ayar(D=32, azami_baglam=768, azami_hedef=320,
-               azami_baglam_ornek=3)
-    genis = Ayar(D=32, azami_baglam=2048, azami_hedef=640,
-                 azami_baglam_ornek=2)
-    d = arc.yukle_hepsi("evaluation")
-    assert len(_ornekler(d, dar, True)) < 10          # ~3
-    assert len(_ornekler(d, genis, True)) > 60        # ~87
-    e = arc.yukle_hepsi("training")
-    assert len(_ornekler(e, genis)) > len(_ornekler(e, dar))
-
-
-@veri_gerek
 def test_istatistik_makul():
     i = arc.istatistik(arc.yukle_hepsi("evaluation"))
     assert i["görev"] == 120
@@ -264,25 +249,6 @@ def test_sekil_basi_kisitli_uretimi_zorluyor():
     assert 1 <= sr2 <= m.azami_kenar and 1 <= st2 <= m.azami_kenar
 
 
-def test_sekil_basi_ogreniliyor():
-    """Şekil ayrı ve KOLAY öğrenilen bir alt problem."""
-    from idrak.egitim import _kayip, _ornekler, toplu_hazirla
-    torch.manual_seed(0)
-    ayar = Ayar(D=32, kodlayici=1, cozucu=1, bas=2, azami_baglam=2048,
-                azami_hedef=640, azami_baglam_ornek=2)
-    m = NefsModeli(ayar)
-    c = _ornekler(arc.yukle_hepsi("training")[:60], ayar)[:2]
-    t = toplu_hazirla(c, ayar)
-    assert int(t.satir.min()) >= 1 and int(t.sutun.min()) >= 1
-    opt = torch.optim.AdamW(m.parameters(), lr=3e-3)
-    for _ in range(40):
-        k, _o, _s = _kayip(m, t)
-        opt.zero_grad(); k.backward(); opt.step()
-    _k, oran, sekil = _kayip(m, t)
-    assert sekil == 1.0                            # şekil TAM öğrenildi
-    assert oran > 0.9
-
-
 def test_model_cikti_sekli_ve_parametre():
     torch.manual_seed(0)
     ayar = Ayar(D=HIZLI_BOYUT)
@@ -291,64 +257,6 @@ def test_model_cikti_sekli_ve_parametre():
     assert 1e6 < p["toplam"] < 5e6
     c = m(torch.randint(0, 10, (2, 64)), torch.randint(0, 10, (2, 20)))
     assert c.shape == (2, 20, arc.SOZLUK)
-
-
-# ══════════════════════════════════════════════════════════════════════
-#  4. Eğitim mekaniği
-# ══════════════════════════════════════════════════════════════════════
-
-@veri_gerek
-def test_toplu_maskesi_yalniz_hedefte():
-    from idrak.egitim import _ornekler, toplu_hazirla
-    ayar = Ayar(D=32)
-    c = _ornekler(arc.yukle_hepsi("training")[:40], ayar)[:4]
-    t = toplu_hazirla(c, ayar)
-    for i, (b, h) in enumerate(c):
-        assert float(t.maske[i, :len(h)].min()) == 1.0
-        assert float(t.maske[i, len(h):].sum()) == 0.0
-        # öğretmen zorlaması: giriş bir kaydırılmış hedef
-        assert int(t.hedef[i, 0]) == h[0]
-        if len(h) > 1:
-            assert int(t.giris[i, 1]) == h[0]
-
-
-@veri_gerek
-def test_degerlendirme_tam_izgara_esmesi_sayiyor():
-    """Ölçüt hücre değil IZGARA — eğitilmemiş model 0 vermeli."""
-    from idrak.egitim import degerlendir
-    torch.manual_seed(0)
-    # Eğitimdeki gerçek sınırlar kullanılıyor. 768/320 sınırında resmî
-    # değerlendirme kümesinin ancak %2'si sığıyor (ölçüldü: 120'nin 3'ü),
-    # dolayısıyla o ayarla bu sınama boş küme üzerinde koşardı.
-    ayar = Ayar(D=32, kodlayici=1, cozucu=1, bas=2, azami_baglam=2048,
-                azami_hedef=640, azami_baglam_ornek=2)
-    m = NefsModeli(ayar)
-    # 40 görev, kısıtlı çözümlemeyle ~87 örnek × 640 belirteç eder ve
-    # sınama dakikalarca sürer. Mekanizmayı tartmak için 12 yeter.
-    d = degerlendir(m, arc.yukle_hepsi("evaluation")[:12], ayar, 12)
-    assert 0.0 <= d["ızgara"] <= 1.0
-    assert 0.0 <= d["şekil"] <= 1.0
-    assert d["ızgara_toplam"] > 0
-    assert d["çözülen_sayı"] == len(d["çözülen_görev"])
-
-
-@veri_gerek
-def test_bir_adim_kaybi_dusuruyor():
-    """Öğrenme fiilen oluyor mu? — aynı yığında 30 adım."""
-    from idrak.egitim import _kayip, _ornekler, toplu_hazirla
-    torch.manual_seed(0)
-    ayar = Ayar(D=32, kodlayici=2, cozucu=2, bas=2)
-    m = NefsModeli(ayar)
-    c = _ornekler(arc.yukle_hepsi("training")[:40], ayar)[:2]
-    t = toplu_hazirla(c, ayar)
-    opt = torch.optim.AdamW(m.parameters(), lr=3e-3)
-    ilk, _o0, _s0 = _kayip(m, t)
-    for _ in range(30):
-        k, _o, _s = _kayip(m, t)
-        opt.zero_grad(); k.backward(); opt.step()
-    son, oran, _sd = _kayip(m, t)
-    assert float(son) < float(ilk) * 0.7
-    assert oran > 0.5
 
 
 # ══════════════════════════════════════════════════════════════════════

@@ -117,10 +117,6 @@ import hesap.test_palmer  # [şahit] ``hesap.palmer`` sınamaları — dört iti
 # ------------------------------------------------------------------
 import idrak.cozucu  # [uzuv] Doğrulanabilir ARC çözücüsü: dik dönüşüm DSL'i üzerinde arama
 try:                                   # torch şartlı
-    import idrak.egitim  # [uzuv] ARC-AGI-2 eğitimi — CPU'da, arka planda koşabilir
-except Exception as _e:                # torch yoksa kayda geçer
-    EKSIK['idrak.egitim'] = str(_e)
-try:                                   # torch şartlı
     import idrak.kubit  # [uzuv] Kübit kaydı: reel dik kapılarla öğrenilebilir bir kuantum yazmacı
 except Exception as _e:                # torch yoksa kayda geçer
     EKSIK['idrak.kubit'] = str(_e)
@@ -384,8 +380,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '``hesap.palmer`` sınamaları — dört itirazın tartılması ve geri almalar'),
     ('idrak.cozucu', 'uzuv',
      "Doğrulanabilir ARC çözücüsü: dik dönüşüm DSL'i üzerinde arama"),
-    ('idrak.egitim', 'uzuv',
-     "ARC-AGI-2 eğitimi — CPU'da, arka planda koşabilir"),
     ('idrak.kubit', 'uzuv',
      'Kübit kaydı: reel dik kapılarla öğrenilebilir bir kuantum yazmacı'),
     ('idrak.model', 'uzuv',
