@@ -453,7 +453,20 @@ class Kademeler:
         def _ara():
             from main.cikarim import dalga_kur
 
-            d = dalga_kur(I.ciftler, devir=max(40, 40 * int(derinlik)))
+            # **ÖLÇÜLEN VE DÜZELTİLEN KUSUR -- kendi açtığım kusur.**
+            # Buraya tam ``dalga_kur`` aramasını bağlamıştım: hendese ×
+            # D₄ × yarıçap, üstelik her aday için bırak-birini turları.
+            # Halbuki bu kademe **kayıp içinde** koşar ve kayıp da
+            # eniyileyici tarafından yüzlerce kere çağrılır. Ölçüldü:
+            # ``main.egitim kısa`` imtihanı 17 CPU-dakikada tek satır
+            # basamadı; kayıp çağrısı başına ~18 sn.
+            #
+            # Kademenin ihtiyacı **bir namzet**tir, en iyi namzet değil.
+            # Onun için burada aramanın bütçesi kısılır: az aday, kısa
+            # devir. Nihaî hüküm zaten `main/cikarim.py`de tam bütçeyle
+            # verilir; buradaki ucuz hâl yalnız kademeye rey verir.
+            d = dalga_kur(I.ciftler, devir=40, azami_aday=2,
+                          loo_devir=20)
             if d is None:
                 return []
 

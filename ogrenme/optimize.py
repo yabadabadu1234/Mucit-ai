@@ -411,8 +411,30 @@ class KulliOptimizer:
         k = int(np.argmin(v))
         return P[k], float(v[k])
 
+    def butce_kestirimi(self) -> Dict[str, int]:
+        """Koşmadan **evvel** kaç kayıp çağrısı harcanacağını söyle.
+
+        **Niçin var.** Bu motor çağrı-açtır: ``tur × yön × M``. ``d``
+        büyükse ve ``yon_sayisi`` sıfır bırakılmışsa (yani "hepsi")
+        bütçe sessizce patlar. Bu turda aynı kusurun bir başka hâli
+        ölçüldü: bütçesiz bir arama 86 CPU-dakika boyunca **tek satır**
+        basmadan koştu. Bütçe peşinen ilan edilirse o hâl tekrarlamaz.
+        """
+        yon = int(self.ayar.yon_sayisi) or self.d
+        if self.ayar.blok or self.ayar.blok_defteri:
+            bl = self._bloklar()
+            yon = min(yon, max(len(x) for x in bl)) if bl else yon
+        M = int(self.ayar.gcl_nokta_sayisi)
+        return {"tur": int(self.ayar.tur), "yön": int(yon), "düğüm": M,
+                "beklenen_çağrı": int(self.ayar.tur) * int(yon) * M + 1}
+
     def kos(self) -> Dict[str, object]:
         """Motoru koştur; ``p*`` ve tam telemetriyi döndür."""
+        kes = self.butce_kestirimi()
+        if self.ayar.sesli:
+            print("  [BÜTÇE] tur=%d × yön=%d × düğüm=%d → beklenen çağrı "
+                  "≈ %d" % (kes["tur"], kes["yön"], kes["düğüm"],
+                            kes["beklenen_çağrı"]), flush=True)
         p = self.p0.copy()
         v_ilk = self._f1(p)
         v = v_ilk
@@ -445,7 +467,7 @@ class KulliOptimizer:
                       % (tur + 1, v, R, durgun, self.cagri), flush=True)
 
         return {"p": p, "V_ilk": v_ilk, "V_son": v,
-                "kazanç": v_ilk - v,
+                "kazanç": v_ilk - v, "bütçe_kestirimi": kes,
                 "süre_sn": time.perf_counter() - self.t0,
                 "kayıp_çağrısı": int(self.cagri),
                 "seyir": seyir, "günlük": self.gunluk,
