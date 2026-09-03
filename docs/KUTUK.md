@@ -7120,3 +7120,38 @@ henüz karar verilmedi). Buna göre:
 `idrak/model.py`, `idrak/kubit.py`, `idrak/kategori.py`nin main-4'e
 bağlanıp bağlanmayacağı (yoksa onlar da mı H3 ihlali gerekçesiyle
 tasfiye mi olacak) **açık, ayrı bir karar bekliyor.**
+
+## H209 — `ogrenme/hoca.py`: tek tâlim kapısı, ama ölçülen sınırla
+
+Kullanıcı hükmü: bir "hoca" modülü yazılsın, eğitilecek her şey
+oradan geçsin. Önceki turdaki çürütme (H207/H208'in devamı: bir
+gradyansız yön-taramalı motora milyonlarca parametreli bir ağı
+bağlamak `~28 gün` sürer) **iptal edilmedi** — `hoca.py` bu sınırı
+gizlemeden, `boyut_guvenlik_siniri()` ile açıkça uygular: `d, tur,
+düğüm` sayısından beklenen çağrı sayısını `KulliOptimizer`nin kendi
+bütçe formülüyle (`tur×d×(düğüm+1)`) kestirir, saati aşarsa
+`RuntimeError` verir — sessizce günler süren bir hesap başlatmaz.
+
+`ogrenme/hoca.py`, `ogrenme/optimize.py::KulliOptimizer`yi **yeniden
+yazmadan** miras alıp iki gerçek uzuv ekliyor:
+
+* **TÜNEL** — `ogrenme.sta.karsit_adiyabatik_surus` (main/egitim.py'de
+  zaten gerçek parametre vektörleri üstünde kullanılan, H29 çift-şart
+  desenini genelleştirerek: durgunluk düşük VE HAD zorlayıcı değilse).
+* **VEKİL** — `ogrenme.rkhs.RKHS`, tünelleme sonrası birden çok aday
+  arasından ucuza sıralama yapar; karar daima gerçek kayıptan alınır.
+
+**Bilerek bağlanmayanlar** (dosyanın kendi docstring'inde gerekçeli):
+`kuantum.nqs` (ayrık `{0,1}^N` temsili, sürekli parametrelerle
+uyuşmuyor — `idrak/model.py`deki aynı hata sınıfı), `arama.grover`
+(bilinmeyen-K ayrık arama, sürekli asgarî bulma değil), `fitrat.denge`
+(çok faillili denge — skaler kayıp tek faillidir).
+
+Sınandı: `d=12` kuadratik yüzeyde `V: 3448.80→16.79` (gerçek düşüş);
+`d=2.340.000` (idrak/model.py ölçeği) için `boyut_guvenlik_siniri`
+`RuntimeError` ile reddetti (~663 saat kestirimiyle, önceki turun elle
+hesabıyla birebir). Tünel yolu, HAD'ın zorlayıcı bulmadığı sentetik
+bir yüzeyde fiilen tetiklendi ve hatasız tamamlandı.
+
+`main/egitim.py::kulli_kayip_talimi`nin `eniyile`den `hoca_egit`e
+geçirilip geçirilmeyeceği **ayrı bir karar** — henüz yapılmadı.
