@@ -7418,3 +7418,51 @@ Parametre sayısı 264'ten **278**e çıktı: 𝒪₄₂/𝒪₄₃/𝒪₄₄'�
 hüküm denetliyor. Silmek, denetlenen hükümlerin şahidini de silmek
 olurdu; hangi hükümlerin şahitsiz kalacağı ölçülmeden silinmez.
 Sınama: 493/493.
+
+## H216 — H21'in şahidi kuantum hattına taşındı; ve bir tashih
+
+**Evvelâ kendi ölçümümü tashih ediyorum.** Bir evvelki turda *"33 hüküm
+şahidinden 5'i klasik dünyaya bağlı"* demiştim. **Yanlıştı.** Tarayıcım
+modül adlarını son parçasına göre eşleştiriyordu ve `from idrak import
+arc` (ARC **veri** paketi, `idrak/arc.py`) ile `nefs/idrak.py`yi aynı
+şey sanıyordu. Ayrı süreçlerde tek tek koşturunca hakikat çıktı:
+
+| şahit | iddia edilen bağ | hakikat |
+|---|---|---|
+| H6 | `nefs/sahit.py` | klasik değil (sahit.py yalnız numpy) |
+| H14 | `nefs/idrak.py` | **`idrak/arc.py`** — yanlış eşleşme |
+| H47 | `nefs/idrak.py` | **`idrak/arc.py`** — yanlış eşleşme |
+| H124 | `nefs/idrak.py` | **`idrak/arc.py`** — yanlış eşleşme |
+| H21 | `nefs/uzaylar.py` | **doğru** |
+
+Yani klasik `Durum` dünyasına bağlı olan şahit **beş değil, bir**di.
+
+**H21'in şahidi taşındı.** Evvelce klasik `mertebe_gecisi` üzerinde
+ölçülüyordu; o hat `main/`dan fiilen erişilmiyor. Şahidin koşmayan bir
+hattı denetlemesi, hükmü denetlemek değil **denetliyor görünmek**tir.
+Ölçü artık fiilen koşan hatta: 𝒪₂₁ Tefekkür'ün yirmi lifi ters
+sırayla koşturulur ve durum değişmelidir.
+
+Kaçamak bir ölçü olmadığı ayrıca ölçüldü: 𝒪₂₁'in tek-kübitlik kısmı
+aynı eksene düşen açıları **toplar** (`R(α)R(β) = R(α+β)`) ve o kısım
+sıradan bağımsızdır; fark ayrı eksenlerden ve uzak menzilli MPO'dan
+gelir. Ölçülen: **bağıl fark 1,678**, ve küllî hükümler de oynuyor
+(tasdik 0,5530 → 0,6304). Şahit geçiyor.
+
+**Netice: hiçbir hüküm şahidi artık klasik `Durum` dünyasına muhtaç
+değil.** Onu yükleyen tek şey `tanilama/divan.py`nin sicilidir ve
+divanın işi zaten her modülü yüklemektir -- fonksiyonel bağ değildir.
+
+**Klasik dünya yine SİLİNMEDİ ve sebebi bu sefer bir kayıttır.**
+`nefs/qakis.py`nin kendi şerhinde duran kullanıcı hükmü şudur:
+*"yerinde kalsın, kübit akışı yanına kurulsun, sonra devralınsın."*
+Devralma şartı ölçüldü ve sağlanmış görünüyor (44 meleke koşuyor,
+main-4'ten erişilen tek hat o, gerçek tâlim koşusu klasik dünyadan tek
+modül yüklemiyor). Fakat *"sonra devralınsın"* hükmünü kapatmak
+kullanıcının sözüdür; bir ölçüm neticesinden ben çıkaramam. Ayrıca
+silmeden evvel cevaplanması gereken ölçülebilir bir sual daha var:
+klasik hattaki analitik formüller (HSIC, Procrustes, NOTEARS, Gazâlî
+mîzânı, Wilson holonomisi) kuantum hattında **var mı**, yoksa silmek
+onları da götürür mü? Bu ölçülmeden silinmez.
+
+Sınama: 157/157 (nefs + mizan).

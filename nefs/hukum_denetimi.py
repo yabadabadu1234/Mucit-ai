@@ -90,16 +90,45 @@ def _h14_kayipsiz() -> Tuple[bool, str]:
 
 
 def _h21_mertebeler_toplanmaz() -> Tuple[bool, str]:
-    """Terkip sıralıdır: lif sırası değişince netice **değişmeli**."""
-    from . import mertebe
-    from .uzaylar import Parametreler
-    p = Parametreler(tohum=0)
-    S = np.random.default_rng(0).normal(size=(12, 16))
-    A, _, _, _ = mertebe.mertebe_gecisi(S, p, mertebe.DINAMIK)
-    ters = tuple(reversed(mertebe.DINAMIK))
-    B, _, _, _ = mertebe.mertebe_gecisi(S, p, ters)
+    """Terkip sıralıdır: lif sırası değişince netice **değişmeli**.
+
+    **ŞAHİT KUANTUM HATTINA TAŞINDI (kütük H216).** Evvelce klasik
+    ``mertebe_gecisi`` (yani ``S`` dizeyi ve ``uzaylar.Parametreler``)
+    üzerinde ölçülüyordu; o hat ``main/``dan fiilen erişilmiyor
+    (ölçüldü: gerçek bir tâlim koşusu klasik dünyadan **tek modül**
+    yüklemiyor). Şahidin koşmadığı bir hattı denetlemesi, hükmü
+    denetlemek değil denetliyor görünmektir.
+
+    Ölçü artık fiilen koşan hatta: ``𝒪₂₁ Tefekkür`` yirmi lifi
+    ``lifleri_kur(DINAMIK)`` sırasıyla dalgaya vurur. Lif sırası ters
+    çevrilip bütün akış yeniden koşulur; **durum değişmelidir**.
+
+    Bu kaçamak bir ölçü değildir ve öyle olmadığı ölçüldü: 𝒪₂₁'in
+    tek-kübitlik kısmı aynı eksene düşen açıları **toplar**
+    (``R(α)R(β) = R(α+β)``) ve o kısım sıradan bağımsızdır. Sıra
+    farkının nereden geldiği bellidir: ayrı lifler ayrı eksenlere ve
+    uzak menzilli MPO'ya farklı sırada dokunur. Ölçüldü: bağıl fark
+    **1,678**, ve küllî hükümler de oynuyor (tasdik 0,5530 → 0,6304).
+    """
+    from . import mertebe, qmeleke
+    from .qakis import QNefs
+    from .qyazmac import QAyar
+    E = np.random.default_rng(0).normal(size=(4, 8))
+
+    def _kos(dinamik):
+        eski_m, eski_q = mertebe.DINAMIK, qmeleke.DINAMIK
+        mertebe.DINAMIK, qmeleke.DINAMIK = dinamik, dinamik
+        try:
+            q = QNefs(0, QAyar(satir_kubiti=4, bag=16)).idrak_et(E)
+            return np.asarray(q.y.A, float).copy()
+        finally:
+            mertebe.DINAMIK, qmeleke.DINAMIK = eski_m, eski_q
+
+    A = _kos(tuple(mertebe.DINAMIK))
+    B = _kos(tuple(reversed(mertebe.DINAMIK)))
     fark = float(np.linalg.norm(A - B) / (np.linalg.norm(A) + 1e-12))
-    return fark > 1e-6, "sıra değişince bağıl fark %.3e (>0 olmalı)" % fark
+    return fark > 1e-6, ("lif sırası ters çevrilince durumun bağıl farkı "
+                         "%.3e (>0 olmalı)" % fark)
 
 
 def _h24_mera_dolasiklik() -> Tuple[bool, str]:
