@@ -149,7 +149,7 @@ def kebir_ozellik(gorev, tohum: int = 0, chi: int = 8) -> np.ndarray:
     ölçülecek olan da odur.
     """
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
 
     X, Y = gorev_ozellikleri(gorev)
     if len(X) == 0:

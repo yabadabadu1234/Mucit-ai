@@ -78,7 +78,7 @@ import numpy as np
 from nefs.melekeler import QNefs
 from nefs.qegitim import belirtecleri_kodla
 from nefs.melekeler import QAKIS, qsicil
-from nefs.qyazmac import QAyar, QYazmac
+from nefs.zihin_durumu import QAyar, QYazmac
 from nefs.sadakat import sadakat_intaci, sadakat_kapisi
 
 __all__ = ["sadakat_olcusu", "haritala", "rapor"]
@@ -109,7 +109,7 @@ def _duzeni_dogrula() -> bool:
     ``bas`` kübiti ``|1⟩``, gerisi ``|0⟩`` olan bir durumda ağırlık,
     ilk kübitin en anlamlı bit olduğu indiste toplanmalıdır.
     """
-    from nefs.qyazmac import donme
+    from nefs.zihin_durumu import donme
 
     ayar = QAyar(bag=4)
     q = QYazmac(1, ayar)

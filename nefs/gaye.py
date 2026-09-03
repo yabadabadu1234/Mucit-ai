@@ -101,7 +101,7 @@ from typing import Dict, List, Sequence
 
 import numpy as np
 
-from .qyazmac import QYazmac, donme
+from .zihin_durumu import QYazmac, donme
 
 __all__ = ["EPSILON_DURGUN", "gaye_kos", "landauer_defteri",
            "serbest_enerji_olcumu", "rapor"]
@@ -333,7 +333,7 @@ def serbest_enerji_olcumu(q: QYazmac) -> Dict[str, float]:
 def rapor(tohum: int = 0, n: int = 6, d_in: int = 12) -> str:
     """Gaye açık ve kapalı: alan yaşıyor mu, ne değişiyor?"""
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
 
     E = np.random.default_rng(tohum).normal(size=(n, d_in))
     s = ["=== GAYE (Dosya 4) -- muhtar gaye, Landauer, sükût eşiği ===",

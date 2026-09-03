@@ -287,7 +287,7 @@ class QAyar:
     kaide_bit: int = 4
     #: --- ceride taksimatı (H173). Zincire ``meleke``, ``parametre`` ve
     #: ``ancilla`` bölgeleri **eklenir**; ayrı bir model kurulmaz.
-    #: Ölçüleri ``nefs.taksimat.CERIDE_TAKSIMAT`` nispetlerinden, veri
+    #: Ölçüleri ``kuantum.kubit_taksimati.CERIDE_TAKSIMAT`` nispetlerinden, veri
     #: bölgesine oranla çıkar. Kapatmak bir seçenektir fakat kapalıyken
     #: model ceridenin şemasına uymaz ve ``eklem_olcusu`` bunu görür.
     bolge_ac: bool = True
@@ -310,7 +310,7 @@ class QAyar:
         1/16'sı, ancilla 1,31 katıdır. Sayılar burada **hesaplanır**,
         elle yazılmaz.
         """
-        from nefs.taksimat import CERIDE_TAKSIMAT
+        from kuantum.kubit_taksimati import CERIDE_TAKSIMAT
         v = self.veri_kubiti(n_satir)
         out: Dict[str, int] = {"veri": v, "hukum": self.kulli_kubit}
         if not self.bolge_ac:
@@ -382,7 +382,7 @@ class QYazmac:
         # --- ceride taksimatı (H173): meleke / parametre / ancilla
         # bölgeleri **aynı zincirin** devamıdır. Ayrı bir yazmaç, ayrı
         # bir durum, ayrı bir model YOKTUR; ``self.y`` tektir.
-        from nefs.taksimat import Taksimat
+        from kuantum.kubit_taksimati import Taksimat
         self.taksimat = Taksimat.kur(a.bolge_olculeri(self.n_satir))
         if self.taksimat.n != self.n:                     # sessiz kayma freni
             raise AssertionError("taksimat %d, zincir %d"
@@ -430,7 +430,7 @@ class QYazmac:
         bir model"*. Bu ölçü onu denetler ve kırmızıya döner: bir
         sınırda entropi sıfırsa o iki uzuv **iki ayrı modeldir**.
         """
-        from nefs.taksimat import eklem_olcusu as _eo
+        from kuantum.kubit_taksimati import eklem_olcusu as _eo
         return _eo(self.y, self.taksimat, pencere=pencere)
 
     # -----------------------------------------------------------------

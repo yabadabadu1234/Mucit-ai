@@ -248,7 +248,7 @@ def _rapor() -> str:                                    # pragma: no cover
            "",
            "AYNI NİSPET, KÜÇÜK ÖLÇEKTE (padişahın fiilî zinciri):",
            ]
-    from nefs.qyazmac import QAyar, QYazmac
+    from nefs.zihin_durumu import QAyar, QYazmac
     q = QYazmac(5, QAyar(bolge_ac=True))
     sat.append(q.taksimat.cetvel())
     v = np.random.default_rng(0).normal(size=(5, 8))

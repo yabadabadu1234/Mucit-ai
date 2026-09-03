@@ -1558,7 +1558,7 @@ Kullanıcının teşhisi doğrudur ve rakamı budur.
 | akış | `akis`, `nefs.akis`, `nefs.qakis`, `yaklasim.akislar` |
 | eğitim | `idrak.egitim`, `main.egitim`, `nefs.qegitim`, `nefs.kulli_egitim` |
 | meleke | `nefs.meleke`, `nefs.qmeleke`, `reel.meleke` |
-| yazmaç | `main.yazmac`, `nefs.qyazmac` |
+| yazmaç | `main.yazmac`, `nefs.zihin_durumu` |
 | ana | `main.main`, `mucit_ai_esas.…main_egitim_dongusu` |
 | ARC | `idrak.arc`, `harici_llm.arc*` (4 modül) |
 
@@ -1803,7 +1803,7 @@ kendisi de sınanmalıdır** -- "bu ölçüt hiç kırmızı yanabilir mi?"
 
 | düzeltme | yer | doğrulama |
 |---|---|---|
-| sol çevrenin doğru bacağı | `nefs/qyazmac.py::blok_dagilimi` | 20 halde tam dalgayla **≤3,1e−16**, negatif köşegen **0** |
+| sol çevrenin doğru bacağı | `nefs/zihin_durumu.py::blok_dagilimi` | 20 halde tam dalgayla **≤3,1e−16**, negatif köşegen **0** |
 | `norm()` / `normalize()` | `kuantum/yazmac.py` | `⟨Ψ|Ψ⟩ 2,05e−10 → 0,9999999` |
 | `norm_hatasi` hakikî ölçü | `kuantum/yazmac.py` | artık `1,26e−07` (float32 eps) yazıyor, boş değil |
 | ölçümden evvel normalize | `nefs/qakis.py::idrak_et` | 41 sınamanın 41'i geçiyor |
@@ -3691,7 +3691,7 @@ başlarken, `mizan/munazara.py`nin **yakîn mertebeleri** cetveli akışın
 
 ### Bulgu 1 — kodlama epistemik komşuluğu kırıyordu
 
-`nefs/qyazmac.py` şöyle diyordu: *"Sıra kasıtlıdır… tek kübitlik bir
+`nefs/zihin_durumu.py` şöyle diyordu: *"Sıra kasıtlıdır… tek kübitlik bir
 dönme Şek'ten Zan'a, Zan'dan Yakîn'e geçirir."* **İddianın yarısı
 yanlıştı.** Eski kodlama ``Şek=00, Zan=01, Yakîn=10, Vehim=11``, klasik
 epistemik sıra ise ``Vehim < Şek < Zan < Yakîn``::
@@ -3903,7 +3903,7 @@ aynı ünitede hem ``veri``ye hem ``kelam``a dokunuyor.
 ### KENDİ HÜKMÜMÜ DARALTTIM
 
 İlk yazdığım şerh *"mimarînin gerekçesi delinmiş"* diyordu.
-**Bu fazla söylemekti ve düzeltildi.** `nefs/qyazmac.py`nin kelam
+**Bu fazla söylemekti ve düzeltildi.** `nefs/zihin_durumu.py`nin kelam
 hakkındaki iddiası şudur: *"kelam ``|0⟩``dan başlayıp **yalnız beyan
 melekelerinin** yazdığı bir alandır"* — ve o iddia **doğrudur**;
 kelama yalnız 𝒪₃₇–𝒪₄₁ dokunuyor. Mimarî, "veriden kelama giden yol
@@ -5350,8 +5350,8 @@ ortaya çıkartacaksın."*
 
 Ceridenin şeması ``|Ψ⟩ = |x⟩ ⊗ |D⟩ ⊗ |m⟩ ⊗ |a⟩``dır (parametre 2²¹,
 veri 2²³, meleke 2¹⁹, ancilla 10.989.952; toplam 22.000.000). Bu şema
-`nefs/taksimat.py`de **ayrı bir model olarak değil, aynı MPS zincirinin
-bölgeleri olarak** kuruldu; ``nefs.qyazmac.QAyar.bolge_ac`` varsayılan
+`kuantum/kubit_taksimati.py`de **ayrı bir model olarak değil, aynı MPS zincirinin
+bölgeleri olarak** kuruldu; ``nefs.zihin_durumu.QAyar.bolge_ac`` varsayılan
 olarak açıktır ve zincir şu hâle geldi (n_satır = 5)::
 
     veri 25 | hüküm 37 | meleke 2 | parametre 6 | ancilla 33   → n = 103
@@ -5652,7 +5652,7 @@ ve 22 milyonluk taksimat (H173), QROM blok-kodlaması ve QSVT
 **Ceride dışı, evvelden açık borçlar:**
 
 * **H126** -- kendi gösterimi olmayan modüller. Bu turda ikisi kapandı
-  (`nefs/taksimat.py`, `nefs/ttkan.py` ve `akis/ikmal.py`,
+  (`kuantum/kubit_taksimati.py`, `nefs/ttkan.py` ve `akis/ikmal.py`,
   `kuantum/ceride.py` gösterimle doğdu). Sayım yeniden yapıldı: 134
   kayıtlı modülün 66'sında gösterim yok yahut modül yüklenmiyor.
   Bunların **18'i ``test_*``** (şahidi zaten sınama takımıdır),
@@ -7161,7 +7161,7 @@ geçirilip geçirilmeyeceği **ayrı bir karar** — henüz yapılmadı.
 Kullanıcı zabıtı (`02a89956-zab_t_9.md`), depoyu 7 kümeye ayırıp her
 kümeden "tek cevher" çıkarmayı emrediyor. KÜME 1 (Kuantum Durum
 Temsili & Tensör Yazmacı) 9 dosyayı (`kuantum/yazmac.py`,
-`nefs/qyazmac.py`, `nefs/taksimat.py`, `nefs/agac.py`,
+`nefs/zihin_durumu.py`, `kuantum/kubit_taksimati.py`, `nefs/agac.py`,
 `nefs/ucagac.py`, `nefs/ihtimal.py`, `kuantum/ptr.py`,
 `kuantum/ic_bag.py`, `kuantum/katlama.py`) `kuantum/yazmac.py`da
 birleştirmeyi hedefliyor.
@@ -7185,8 +7185,8 @@ icra edilmez). Bu turda yalnız **bir** gerçek, sınanmış köprü kuruldu:
   `Yazmac.norm()` ile kıyasladım: fark `1.4e-07` (3×13) ve `0.0`
   (1×1). `kuantum/test_kuantum.py`nin 151 testi hâlâ geçiyor.
 
-**Ne YAPILMADI, açıkça:** `nefs/qyazmac.py`nin Gray-kod makam
-merdiveni, `nefs/taksimat.py`nin 4-bölgeli adresleyicisi,
+**Ne YAPILMADI, açıkça:** `nefs/zihin_durumu.py`nin Gray-kod makam
+merdiveni, `kuantum/kubit_taksimati.py`nin 4-bölgeli adresleyicisi,
 `nefs/agac.py` (2D TTN), `nefs/ucagac.py` (3-ağaç), `nefs/ihtimal.py`,
 `kuantum/ptr.py`, `kuantum/ic_bag.py` — bunların hiçbiri bu turda
 `Yazmac`a taşınmadı. KÜME 1 tevhidi **tamamlanmadı**; bu, zabıtın 9
@@ -7231,14 +7231,14 @@ karakter dokunulmadı; `kuantum/yazmac.py` 1573 → 3799 satır.
    kilitlenen hücre `argmax = 2` okuyor.
 
 2. **`blok_dagilimi` üç nüshaydı.** Saf `Yazmac` cebri olduğu hâlde
-   `nefs/qyazmac.py` ve `nefs/ihtimal.py`de ayrı ayrı duruyordu ve
+   `nefs/zihin_durumu.py` ve `nefs/ihtimal.py`de ayrı ayrı duruyordu ve
    biri bozuktu. Gövde `Yazmac.blok_dagilimi`a alındı; ikisinin
    birebir aynı sayıyı verdiği yığınlı (B=3) ve yığınsız hâlde,
    trivial olmayan bloklarda ölçüldü: **âzamî fark `0.0`**.
 
 ### Zabıtın cetvelinde KABUL EDİLMEYEN iki madde
 
-* **`nefs/qyazmac.py` "gereksiz ikinci sarmalayıcı katman" DEĞİLDİR.**
+* **`nefs/zihin_durumu.py` "gereksiz ikinci sarmalayıcı katman" DEĞİLDİR.**
   Okundu: küllî hüküm alanları (makam/mîzân/tenakuz/tasdik/sükût/nakz/
   kelam/kâide/orak/gaye/tertip), Ĥ_Dimağ eklem operatörü, `mpo_topla`/
   `mpo_dagit`, Gray-kod makam merdiveni — bunlar `nefs` semantiğidir,
@@ -7306,7 +7306,7 @@ durur, buradaki hâlleri **kapı**dır (hiçbiri okumaz, H31):
   sınanır; `sahih` yalanlanırsa meleke **hiç dönmez** (karıştırmayı
   talim diye icra etmektense susmak, H10).
 * **𝒪₄₄ Tahsil** — `exp(−ηĤ)` mîzân-kontrollü sönüm + `γI` kimlik
-  payı, `nefs/taksimat.py`nin **parametre** bölgesine.
+  payı, `kuantum/kubit_taksimati.py`nin **parametre** bölgesine.
 
 ### Ölçünün benim ilanımı yalanladığı yer
 
@@ -7509,3 +7509,75 @@ koşuyor, kuantum `QNefs` 44 melekeyle koşuyor (1564 kapı).
 melekenin bağımsız ikinci temsilidir; kütük H88'in dersi (``beyan``
 aylarca yanlış çevreden okudu, çünkü karşılaştıracak ikinci temsil
 yoktu) tam bunun içindir.
+
+## H218 — İki adlandırma: soğuk donanım terimi kalktı
+
+Kullanıcı hükmü: *"'Yazmaç' (register) kelimesi soğuk bir donanım
+terimidir; 'hüküm' kelimesi ise dosyanın içindeki duyu girişlerini,
+şüphe derecelerini ve konuşma hazırlıklarını anlatmaya yetmez."*
+
+* `nefs/taksimat.py` → **`kuantum/kubit_taksimati.py`**. 22 milyon
+  kübitin bölge haritası; `nefs` semantiği taşımaz, saf adresleme
+  cebridir -- yeri `kuantum/`dur.
+* `nefs/qyazmac.py` → **`nefs/zihin_durumu.py`**. Dosyanın kendi ilk
+  cümlesi zaten şudur: *"Nefsin bir andaki bütün hâli tek bir kuantum
+  durumudur."*
+
+29 dosyada çağrı yeri yönlendirildi. Sınama: 311/311.
+
+## H219 — D-QTTN fermanının teşhisi ÖLÇÜLDÜ ve TUTMADI
+
+Ferman şöyle diyor: *"1D MPS zincirinde 30×30 bir 2D ızgarayı
+serdiğinizde dikey komşular arasındaki mesafe zincirde W=30 birim
+uzar... 120 evaluation bulmacasındaki 5×5 pencere miyopluğu ebediyen
+kalkacak."* İki halka da ölçüldü ve **ikisi de kopuk**:
+
+**1. Halka -- `zihin_durumu`da hücre başına kübit YOKTUR.**
+`satir_kubiti = 4`: bir ARC **satırının tamamı** dört kübite kodlanır.
+Dolayısıyla dikey komşu 30 adım değil, `oge = 5` adım uzaktadır ve
+ölçüldü:
+
+| komşuluk | 1D zincir | D-QTTN ağaç |
+|---|---|---|
+| yatay (i,0)-(i,1) | 1 | — |
+| dikey (0,0)-(1,0) | **5** | **5** |
+
+Yani bu kodlamada ağacın **kazancı sıfırdır**; ikisi de 5 adım.
+Üstelik `mpo_esigi = 5` olduğu için o mesafe zaten takas değil
+**MPO** ile geçiliyor (kübit hiç oynamıyor).
+
+**2. Halka -- 5×5 pencere MPS topolojisinden gelmiyor.**
+O pencere `main/cikarim.py:93`teki `YARICAPLAR = (0, 1, 2)`dir: numpy
+dalga motorunun **öznitelik bağlam yarıçapı**. Tensör ağıyla hiçbir
+alâkası yoktur. Dahası dosyanın kendi şerhi, yarıçapın **ölçümle**
+seçildiğini yazıyor: *"yarıçap 2 (276 boyut) dışarıda 0,9375 ←
+sabitlediğim / Fazla bağlam zarar veriyor."* Yani pencereyi büyütmek
+denendi ve **genellemeyi düşürdü**.
+
+**Fermanın verdiği sınıf da eksik.** `DQTTNYazmaci.cift_kapi_agac`
+kapıyı `A ⊗ B`ye ayırıp yolu buluyor, fakat `A` ile `B`yi **hiçbir
+yere vurmuyor**; son satırı yalnız bir kesme sayısı döndürüyor. Gerçek
+ağaç-MPO ise depoda **zaten var**: Küme 1'de `kuantum/yazmac.py`ye
+taşınan `AgacYazmaci.cift_kapi` (satır 3054), yol boyunca `δ` yayılımı
+ve iki `_sup` süpürmesiyle tam uygulanıyor ve tam hesapla
+`‖Δψ‖/‖ψ‖ = 2,9e-15`te örtüştüğü ölçülmüş durumda.
+
+### Fakat 1D cezası HAKİKATEN var -- yalnız başka yerde
+
+Hücre başına kübit ayıran temsilde (`IhtimalYazmaci`) ceza gerçektir
+ve ölçüldü:
+
+| ızgara | 1D dikey | ağaç dikey | 1D köşe | ağaç köşe |
+|---|---|---|---|---|
+| 3×3 | 6 | 5 | 16 | 6 |
+| 5×5 | 10 | 4 | 48 | 10 |
+| 10×10 | **20** | **4** | **198** | **14** |
+
+Ve bedeli sayıyla: 5×5, χ=8'de **yatay** komşu bağlamanın kesmesi
+`0,000e+00` (tam), **dikey** komşununki `3,938e-02`. Yani durumun
+%3,9'u tek bir dikey bağda atılıyor -- sebebi takas ağının
+dolaşıklığı sürüklemesi.
+
+**Hüküm:** D-QTTN'e geçilecek yer `zihin_durumu` değil, **hücre
+başına kübit ayıran temsildir**; orada kazanç ölçülmüştür ve motor
+zaten yazılıdır.

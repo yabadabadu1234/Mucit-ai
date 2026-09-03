@@ -134,7 +134,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
     """
     from .gaye import gaye_kos
     from .melekeler import bec_faz_kilidi
-    from .qyazmac import QYazmac
+    from .zihin_durumu import QYazmac
     from .sadakat import sadakat_intaci, sadakat_kapisi
     from .tertip import tertip_kos
 

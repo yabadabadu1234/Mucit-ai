@@ -233,7 +233,7 @@ def test_ihtimal_kubit_hesabi_ceridenin_sayilariyla_tutuyor():
 
 def test_blok_dagilimi_TEK_NUSHA_ve_qyazmac_ayni_sayiyi_veriyor():
     """Üç nüsha vardı; biri çöküyordu. Şimdi tek nüsha, aynı sayı."""
-    from nefs.qyazmac import QAyar, QYazmac
+    from nefs.zihin_durumu import QAyar, QYazmac
     q = QYazmac(4, QAyar(bag=8, bolge_ac=True))
     rng = np.random.default_rng(1)
     q.kodla(rng.normal(size=(4, 6)))

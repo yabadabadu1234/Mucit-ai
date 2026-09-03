@@ -164,7 +164,7 @@ def dalga_hukmu(gorev, nefs=None, chi: int = 8,
         from .iki_olcek import gorev_ozellikleri
         from .operad import cech_tikanikligi
         from .melekeler import QNefs
-        from .qyazmac import MAKAM_ADLARI, QAyar
+        from .zihin_durumu import MAKAM_ADLARI, QAyar
 
         X, Y = gorev_ozellikleri(gorev)
         if len(X) == 0:

@@ -9,7 +9,7 @@ ve hepsi 1. kademedeydi (yükleniyor, iş görmüyor). Burada ikisi
 BULGU 1: makam kodlaması epistemik komşuluğu KIRIYOR
 ===================================================================
 
-`nefs/qyazmac.py` şöyle diyordu:
+`nefs/zihin_durumu.py` şöyle diyordu:
 
 > *"Sıra kasıtlıdır: Şek ve Vehim uçlardadır, Zan ile Yakîn ortadadır;
 > tek kübitlik bir dönme Şek'ten Zan'a, Zan'dan Yakîn'e geçirir."*
@@ -182,7 +182,7 @@ def komsuluk_denetimi(sira: Optional[Sequence[str]] = None,
     Ayrıca merdivenin mertebe dizisi **monoton** olmalıdır: yukarı
     gitmek mertebeyi asla düşürmemeli.
     """
-    from .qyazmac import (MAKAM_ADLARI, QAyar, makam_derecesi,
+    from .zihin_durumu import (MAKAM_ADLARI, QAyar, makam_derecesi,
                           makam_kubit_manasi, makam_merdiveni,
                           makam_mertebeleri)
 
@@ -240,7 +240,7 @@ def eksik_mertebeler(bit: Optional[int] = None) -> List[Tuple[float, str]]:
     ``bit`` ile başka bir genişlik sınanabilir; iki kübitte ``zann-ı
     gālib`` yine eksik çıkar ve ölçütün kör olmadığı böyle gösterilir.
     """
-    from .qyazmac import QAyar, makam_mertebeleri
+    from .zihin_durumu import QAyar, makam_mertebeleri
 
     kac = int(bit if bit is not None
               else dict(QAyar().kulli_alanlar)["makam"])
@@ -270,7 +270,7 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
     from .operad import cech_tikanikligi, yamalar
     from .iki_olcek import gorev_ozellikleri
     from .melekeler import QNefs
-    from .qyazmac import MAKAM_ADLARI, QAyar
+    from .zihin_durumu import MAKAM_ADLARI, QAyar
 
     c = cech_tikanikligi(gorev)
     Y = yamalar(gorev)
@@ -292,7 +292,7 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
 
 def rapor(n_gorev: int = 30, tohum: int = 0) -> str:
     from idrak import arc
-    from .qyazmac import MAKAM_ADLARI
+    from .zihin_durumu import MAKAM_ADLARI
 
     s = ["=== MANTIK -- mizan/ ana akışa bağlanıyor ===", ""]
     s.append("MAKAM KODLAMASI (epistemik komşuluk tek kübitle geçilmeli):")

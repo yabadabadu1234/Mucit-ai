@@ -68,7 +68,7 @@ import numpy as np
 from mizan.onerme import Onerme, Tablo, deg, degil, ise, ve, veya
 
 from .isaret import cok_kontrollu_isaret
-from .qyazmac import QYazmac, donme
+from .zihin_durumu import QYazmac, donme
 
 __all__ = ["Usul", "USULLER", "usul_yasaklari", "tertip_kos"]
 

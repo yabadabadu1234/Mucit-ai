@@ -103,7 +103,7 @@ from typing import Optional, Tuple
 
 import numpy as np
 
-from .qyazmac import QYazmac, degil_x, donme, kontrollu_donme
+from .zihin_durumu import QYazmac, degil_x, donme, kontrollu_donme
 
 __all__ = ["SADAKAT_SIDDETI", "sadakat_kapisi", "sadakat_intaci",
            "sadakat_acilari"]

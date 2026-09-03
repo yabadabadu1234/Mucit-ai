@@ -48,7 +48,7 @@ Zaman açılımlı çizgede mimarî bir şart sınanabilir:
 
 **Ve burada kendi hükmümü daraltmam gerekti.** Ölçüm "hükmü atlayan
 yol var" dedi ve ilk yazdığım şerh *"mimarînin gerekçesi delinmiş"*
-diyordu. **Bu fazla söylemekti.** `nefs/qyazmac.py`nin kelam hakkındaki
+diyordu. **Bu fazla söylemekti.** `nefs/zihin_durumu.py`nin kelam hakkındaki
 iddiası şudur: *"kelam ``|0⟩``dan başlayıp yalnız beyan melekelerinin
 yazdığı bir alandır"* -- ve o iddia **doğrudur** (kelama yalnız
 𝒪₃₇–𝒪₄₁ dokunuyor). Mimarî, "veriden kelama giden yol hükümden

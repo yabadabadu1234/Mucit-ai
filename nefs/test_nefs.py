@@ -860,7 +860,7 @@ def test_makam_kodlamasi_epistemik_komsulugu_koruyor():
     """
     from .mantik import ESKI_SIRA, GRAY_SIRA, eksik_mertebeler, \
         komsuluk_denetimi
-    from .qyazmac import MAKAM_ADLARI, makam_kubit_manasi, makam_merdiveni
+    from .zihin_durumu import MAKAM_ADLARI, makam_kubit_manasi, makam_merdiveni
 
     y = komsuluk_denetimi()                     # yürürlükteki yazmaç
     assert y["kırık_geçiş"] == 0, y
@@ -940,7 +940,7 @@ def test_gaye_alani_ARTIK_YASIYOR_ve_sukutu_bastiriyor():
     İkisi de kütükte borç olarak durur (H122).
     """
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
 
     def kos(acik, tohum):
         E = np.random.default_rng(200 + tohum).normal(size=(5, 12))
@@ -984,7 +984,7 @@ def test_alan_okumasi_AYARA_BAGLI_DEGIL():
     **kayıyor** -- yani sınama kör değil.
     """
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
 
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16)).idrak_et(
         np.random.default_rng(0).normal(size=(3, 4)))
@@ -1113,7 +1113,7 @@ def test_mera_kulli_hukum_blokuna_dokunmuyor():
     ediyordu ve bu **sözleşme yüzleştirmesinde bulundu**, kimse iddia
     etmiş değildi.
     """
-    from .qyazmac import QAyar, QYazmac
+    from .zihin_durumu import QAyar, QYazmac
 
     def blok(kulli_dahil):
         q = QYazmac(3, QAyar(bag=16, tohum=0))
@@ -1225,7 +1225,7 @@ def test_taksimat_ceridenin_kendi_sayisini_veriyor():
     ancillanın bir **artık** olduğu burada ispatlanır: ceride onu
     müstakil bir hükümle vermez, üç ikinin kuvvetinden geriye kalandır.
     """
-    from nefs.taksimat import (CERIDE_TAKSIMAT, CERIDE_TOPLAM,
+    from kuantum.kubit_taksimati import (CERIDE_TAKSIMAT, CERIDE_TOPLAM,
                                ANCILLA_ARTIK, taksim)
     assert sum(CERIDE_TAKSIMAT.values()) == CERIDE_TOPLAM
     assert ANCILLA_ARTIK() == CERIDE_TAKSIMAT["ancilla"]
@@ -1249,7 +1249,7 @@ def test_eklem_paralel_degil_ve_KIRMIZIYA_donebiliyor():
     2. Tatbik edildikten sonra dört sınırın dördü de dirilmeli.
     """
     import numpy as np
-    from nefs.qyazmac import QAyar, QYazmac
+    from nefs.zihin_durumu import QAyar, QYazmac
 
     q = QYazmac(5, QAyar(bolge_ac=True))
     assert q.bolge_var("meleke") and q.bolge_var("parametre")
@@ -1422,7 +1422,7 @@ def test_zirh_dordu_de_KIRMIZIYA_donebiliyor():
     from kuantum.tda import vietoris_rips
     from nefs.zirh import (betti_kaybi, koho_kaybi, sheaf_uyumsuzlugu,
                            homotopi_kaybi, zirh_kaybi, sheaf_izdusumu)
-    from nefs.qyazmac import donme
+    from nefs.zihin_durumu import donme
 
     aci = np.linspace(0, 2 * math.pi, 8, endpoint=False)
     cember = np.stack([np.cos(aci), np.sin(aci)], axis=1)

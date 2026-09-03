@@ -61,7 +61,7 @@ import numpy as np
 
 from nefs import melekeler as qmeleke
 from nefs.melekeler import QNefs
-from nefs.qyazmac import QAyar
+from nefs.zihin_durumu import QAyar
 
 __all__ = ["nizam_olcumu", "rapor"]
 

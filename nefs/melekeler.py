@@ -79,7 +79,7 @@ from omega_kategori_nbe.denetleyici import Baglam, denetle_t
 from .gaye import gaye_kos
 from .kule import ince, kaba
 from .operad import tikaniklik_kapisi
-from .qyazmac import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
+from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
                       kontrollu_donme)
 from .sadakat import sadakat_intaci, sadakat_kapisi
 from .sahit import (artiklar, bolutle, capraz_kovaryans, delil_dizileri,
@@ -5496,7 +5496,7 @@ class QTahsil(QMeleke):
     şekline girmesin diye.
 
     **Üniter karşılığı ve NEDEN ORAYA VURULDUĞU.** Bu meleke ötekiler
-    gibi hükme değil, **parametre bölgesine** dokunur: `nefs/taksimat.py`
+    gibi hükme değil, **parametre bölgesine** dokunur: `kuantum/kubit_taksimati.py`
     zincirde ``|x⟩`` diye bir bölge ayırır ve ceride onu "model
     ağırlıkları" diye tarif eder. Tahsil tam orada iş görür:
 

@@ -206,7 +206,7 @@ class EgitimAyari:
     azami_talim_saati: float = 1.0
 
     def qayar(self):
-        from nefs.qyazmac import QAyar
+        from nefs.zihin_durumu import QAyar
         return QAyar(satir_kubiti=self.satir_kubiti,
                      yerel_kubit=self.yerel_kubit, bag=self.bag,
                      mera_kademe=self.mera_kademe, tohum=self.tohum)

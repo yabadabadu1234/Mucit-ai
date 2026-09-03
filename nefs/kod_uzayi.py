@@ -160,7 +160,7 @@ def rapor() -> str:                                     # pragma: no cover
 
     s.append("")
     s.append("  2) MPS ile yüzleştirme (tasdik ⊗ nakz bloğu)")
-    from nefs.qyazmac import QAyar, QYazmac
+    from nefs.zihin_durumu import QAyar, QYazmac
     rng = np.random.default_rng(0)
     for bag in (4, 8, 16):
         q = QYazmac(4, QAyar(bag=bag))

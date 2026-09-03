@@ -113,7 +113,7 @@ def _h21_mertebeler_toplanmaz() -> Tuple[bool, str]:
     from . import melekeler as mertebe
     from . import melekeler as qmeleke
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     E = np.random.default_rng(0).normal(size=(4, 8))
 
     def _kos(dinamik):
@@ -135,7 +135,7 @@ def _h21_mertebeler_toplanmaz() -> Tuple[bool, str]:
 def _h24_mera_dolasiklik() -> Tuple[bool, str]:
     """Süperpozisyon tek başına dolaşıklık vermez; MERA verir."""
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)))
     return (r.iz.entropi_once < 1e-6 and r.iz.entropi_sonra > 1e-3), \
@@ -146,7 +146,7 @@ def _h24_mera_dolasiklik() -> Tuple[bool, str]:
 def _h30_bec_yalniz_tepede() -> Tuple[bool, str]:
     """BEC veri kübitlerine **dokunmaz**; yalnız hüküm alanlarına vurur."""
     from .melekeler import QNefs, YOGUSAN, bec_faz_kilidi
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)), bec=False)
     veri_yuvalari = [r.veri(i, j) for i in range(3) for j in range(4)]
@@ -183,7 +183,7 @@ def _norm_haddi(r) -> float:
 def _h31_povm_cokus_yok() -> Tuple[bool, str]:
     """Zayıf ölçüm normu bozmaz -- çöküş yoktur."""
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)))
     o1 = r.olcumler()
@@ -199,7 +199,7 @@ def _h31_povm_cokus_yok() -> Tuple[bool, str]:
 def _h42_uniterlik() -> Tuple[bool, str]:
     """Yazmaç üniterdir: tam akış sonunda norm hatası makine mertebesinde."""
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(1).normal(size=(4, 4)))
     ne = r.olcumler()["norm_hatası"]
@@ -221,7 +221,7 @@ def _h42_uniterlik() -> Tuple[bool, str]:
 def _h43_kelam_konusabiliyor() -> Tuple[bool, str]:
     """Kelam alanı düzgün DEĞİL -- model konuşabiliyor."""
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)))
     P = r.beyan(16)
@@ -233,7 +233,7 @@ def _h43_kelam_konusabiliyor() -> Tuple[bool, str]:
 def _h44_uzunluktan_bagimsiz() -> Tuple[bool, str]:
     """Parametre sayısı girdi uzunluğuna bağlı değildir."""
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     a = QAyar(satir_kubiti=4, bag=16)
     q = QNefs(0, a)
     q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)))
@@ -363,7 +363,7 @@ def _h73_yuksek_mertebeler_kosuyor() -> Tuple[bool, str]:
     """20 lifin **hepsi** uzak menzilli MPO vuruyor mu (H54/3. borç)."""
     from .melekeler import DINAMIK, lifleri_kur
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     lifler = lifleri_kur(DINAMIK)
     azami_adim = max(l.adim for l in lifler)
 
@@ -405,7 +405,7 @@ def _h73_bec_sukutu_bogmuyor() -> Tuple[bool, str]:
     değişim %1'i geçmesin.
     """
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     E = np.random.default_rng(0).normal(size=(3, 4))
     a = QAyar(satir_kubiti=4, bag=16)
     o0 = QNefs(0, a).idrak_et(E, bec=False).olcumler()
@@ -653,7 +653,7 @@ def _h127_makam_kodlamasi() -> Tuple[bool, str]:
     yanması gösterilir.
     """
     from .mantik import ESKI_SIRA, komsuluk_denetimi
-    from .qyazmac import MAKAM_ADLARI
+    from .zihin_durumu import MAKAM_ADLARI
     y = komsuluk_denetimi(tuple(MAKAM_ADLARI))
     e = komsuluk_denetimi(ESKI_SIRA)
     return (y["kırık_geçiş"] == 0 and y["kol_tutarlı"]

@@ -85,7 +85,7 @@ def tikaniklik_kapisi(q, h1: float, olcek: float = 0.9) -> None:
     çemberi sarıp tersine dönmesin (H119'un birikim dersi).
     """
     import math
-    from .qyazmac import donme
+    from .zihin_durumu import donme
     if h1 <= 0:
         return
     teta = float(olcek * math.atan(float(h1)))
@@ -190,7 +190,7 @@ def tikaniklik_sukut_bagi(n_gorev: int = 40, tohum: int = 0,
     modelin susması tıkanıklıkla alâkasız demektir ve öyle yazılır.
     """
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
     from .iki_olcek import gorev_ozellikleri
 
     gorevler = arc.yukle_hepsi("training")[:int(n_gorev)]

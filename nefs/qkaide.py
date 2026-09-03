@@ -107,7 +107,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .qyazmac import QYazmac, donme
+from .zihin_durumu import QYazmac, donme
 
 __all__ = ["EbatSarti", "sartlari_kur", "KaideOragi", "coz_kaide"]
 
@@ -388,7 +388,7 @@ def coz_kaide(sahitler: Sequence[Tuple[int, int]], bit: int = 4,
     """
     from dataclasses import replace as _replace
 
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
 
     ayar = ayar or QAyar()
     if ayar.kaide_bit != bit:

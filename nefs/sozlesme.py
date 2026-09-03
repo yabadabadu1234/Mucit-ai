@@ -58,7 +58,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 from .melekeler import QParametre, qmelekeler, qsicil
-from .qyazmac import QAyar, QYazmac, donme
+from .zihin_durumu import QAyar, QYazmac, donme
 
 __all__ = ["BOLGELER", "SOZLESME", "dokunulan_bolgeler", "sozlesmeyi_olc",
            "rapor"]

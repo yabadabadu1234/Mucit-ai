@@ -1341,7 +1341,7 @@ class Yazmac:
         aslında saf ``Yazmac`` cebriydi -- ne ``nefs`` semantiği, ne
         ızgara bilgisi kullanıyorlardı:
 
-        * ``nefs/qyazmac.py::QYazmac.blok_dagilimi`` -- yığın eksenli,
+        * ``nefs/zihin_durumu.py::QYazmac.blok_dagilimi`` -- yığın eksenli,
           doğru hâli (sol çevrenin **giriş** bacağını büzer; şerhinde
           anlatılan ölçülmüş hata düzeltilmiş hâli).
         * ``nefs/ihtimal.py::IhtimalYazmaci.hucre_dagilimi`` -- yığınsız
@@ -1379,7 +1379,7 @@ class Yazmac:
             Ak = A[:, k].astype(np.float64)           # (B,a,i,b)
             # L[b,d] = Σ_{a,c,i} L[a,c] A[a,i,b] A[c,i,d]
             #
-            # **ÖLÇÜLEN VE DÜZELTİLEN HATA** (nefs/qyazmac.py'den taşındı):
+            # **ÖLÇÜLEN VE DÜZELTİLEN HATA** (nefs/zihin_durumu.py'den taşındı):
             # evvelki hâl 2. adımda ``A``nın **çıkış** bağını büzüyordu;
             # doğrusu **giriş** bağıdır. Yanlış bacak büzülünce sol çevre
             # bambaşka bir dizey çıkıyor, tam dalgayla fark 2,4-3,2
@@ -1668,7 +1668,7 @@ class Yazmac:
 
         **HUDUT.** Bu yalnız HDTF'nin **son** (katlanmış) çıktısını
         yazmaça bağlar; katlama sürecinin ara kademeleri, ``nefs/
-        taksimat.py``nin 4 bölgeli adresleyicisi ve ``nefs/qyazmac.py``
+        taksimat.py``nin 4 bölgeli adresleyicisi ve ``nefs/zihin_durumu.py``
         nin Gray-kod makam merdiveni bu köprüde YOKTUR -- onlar Küme
         1'in henüz tevhid edilmemiş parçalarıdır (bkz. docs/KUTUK.md
         H210).
@@ -1707,7 +1707,7 @@ class Yazmac:
 class KulliYazmac(Yazmac):
     """22M/88M sanal kübitlik küllî yazmaç -- ``Yazmac``ın ferman yüzü.
 
-    Taksimat `nefs/taksimat.py`den okunur: dört bölge **tek zincirde**
+    Taksimat `kuantum/kubit_taksimati.py`den okunur: dört bölge **tek zincirde**
     durur, paralel iki yazmaç değildir. Eklem ölçüsü o dosyada ve
     kırmızı yanabiliyor.
     """

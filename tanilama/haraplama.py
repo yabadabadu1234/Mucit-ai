@@ -41,7 +41,7 @@ import numpy as np
 from nefs.melekeler import QNefs
 from nefs.qegitim import belirtecleri_kodla
 from nefs.melekeler import QAKIS, qsicil
-from nefs.qyazmac import MAKAM_ADLARI, QAyar
+from nefs.zihin_durumu import MAKAM_ADLARI, QAyar
 
 __all__ = ["haraplama", "rapor"]
 

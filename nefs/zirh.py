@@ -282,7 +282,7 @@ def rapor() -> str:                                     # pragma: no cover
              % sheaf_uyumsuzlugu(a, a))
     s.append("  uyumsuz ek yeri : ‖ΔRes‖² = %.3f   ← KIRMIZI"
              % sheaf_uyumsuzlugu(a, a + np.array([0.0, 0.5, -0.3])))
-    from nefs.qyazmac import donme
+    from nefs.zihin_durumu import donme
     kapali = [donme(0.4), donme(-0.4)]
     acik = [donme(0.4), donme(0.1)]
     s.append("  kapanan çevrim  : |W−I| = %.3e"

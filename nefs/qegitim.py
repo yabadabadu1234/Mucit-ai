@@ -41,7 +41,7 @@ from ogrenme.optimize import as_gek_adimi, postnikov_adresi, tersine_tavlama
 
 from . import melekeler as mertebe
 from .melekeler import QNefs
-from .qyazmac import QAyar, QYazmac
+from .zihin_durumu import QAyar, QYazmac
 
 __all__ = ["ornekler", "belirtecleri_kodla", "uygunluk", "hedef_cezasi",
            "egit", "degerlendir"]

@@ -88,7 +88,7 @@ def kanal_bagimsizligi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
     verir.
     """
     from .melekeler import QNefs
-    from .qyazmac import QAyar
+    from .zihin_durumu import QAyar
 
     A, B = [], []
     for t in range(int(n_kosu)):
