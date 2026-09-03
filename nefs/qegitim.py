@@ -20,7 +20,7 @@ meleke okumaz):
 * ``sukut`` yüksekken cevap isteniyorsa ceza -- susmak, cevabı bilmemek
   hâlinde fazilettir (H10); cevabın bilindiği yerde kusurdur.
 
-Motor ``main/optimize.py``dedir ve **aynen** kullanılır (H32'nin
+Motor ``ogrenme/optimize.py``dedir ve **aynen** kullanılır (H32'nin
 mimarisi ana modele geçti): Active Subspaces ``d→r`` → Nyström AS-GEK
 vekil yüzeyi → hedef bilgisi sızdırma → sanal zamanlı **dalga yayılımı**.
 Ayrık motor (Postnikov + tersine tavlama) burada dinamik mertebeleri
@@ -37,7 +37,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 from idrak import arc
-from main.optimize import as_gek_adimi, postnikov_adresi, tersine_tavlama
+from ogrenme.optimize import as_gek_adimi, postnikov_adresi, tersine_tavlama
 
 from . import mertebe
 from .qakis import QNefs

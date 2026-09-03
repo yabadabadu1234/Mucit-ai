@@ -569,7 +569,7 @@ def test_kaide_mizani_yesil_de_kirmizi_da_yanabiliyor():
     vaka şahitler arasında aranıyordu, halbuki kâide doğruysa öyle bir
     şahit yoktur. Menfî vaka, aynı şahitte düşen **rakip kâidedir**.
     """
-    from main.main import padisah
+    from main.cikarim import padisah
 
     class _Gorev:
         def __init__(self, egitim, sinama):
@@ -621,7 +621,7 @@ def test_kaide_eksik_istikra_yakin_vermez():
     altında** ve ``Şek``in **üstünde** olduğu ayrıca sınanır, yani
     aralık iki taraftan da kapalıdır.
     """
-    from main.main import hendese_adaylari
+    from main.cikarim import hendese_adaylari
     from mizan.istikra import tam_istikra_mi
 
     assert not tam_istikra_mi(50, 50)       # eksik istikrâ 1 vermez
@@ -1038,14 +1038,14 @@ def test_golge_kahin_ana_hatti_denetliyor():
 def test_cayley_pi_donmesini_OGRENEMIYOR_ustel_ogreniyor():
     """H120: Cayley'in erişemediği yer, öğrenilebilirlikte de kapalı.
 
-    Bu, `main/yazmac.py`nin kapı usulünü değiştiren ölçümün ta
+    Bu, `kuantum/yazmac.py`nin kapı usulünü değiştiren ölçümün ta
     kendisidir; sabit kalması için daimî sınamaya konur. Hedef
     ``diag(1,1,−1,−1)`` bir **π dönmesidir** ve ``SO(4)``tedir --
     yani meşru bir meleke kapısıdır. Reel yazmaçta yegâne faz π
     olduğuna göre (H98), bu kapıyı öğrenememek doğrudan bir kabiliyet
     eksiğidir.
     """
-    from main import yazmac as MY
+    from kuantum import yazmac as MY
 
     hedef = np.diag([1.0, 1.0, -1.0, -1.0])
 
@@ -1623,7 +1623,7 @@ def test_ic_bag_serpistirilmis_QTT_izafi_operatorleri_TAM_tasiyor():
     """
     import math
     import numpy as np
-    from main.ic_bag import (qtt_cekirdek_ayristir, qtt_cekirdek_ac,
+    from kuantum.ic_bag import (qtt_cekirdek_ayristir, qtt_cekirdek_ac,
                              kapali_form_kiyasi, acik_parametre)
 
     chi = 32

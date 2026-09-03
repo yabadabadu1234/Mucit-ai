@@ -24,7 +24,7 @@ from typing import Dict, List, Tuple
 
 import numpy as np
 
-from main.yazmac import dik_iki_kubit
+from kuantum.yazmac import dik_iki_kubit
 from .qyazmac import QAyar, QYazmac
 
 __all__ = ["olc", "rapor"]

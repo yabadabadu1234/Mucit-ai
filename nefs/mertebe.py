@@ -11,7 +11,7 @@ hükmüdür**:
     **terkiptir**: ``S ← F₁₉ᵀ U₁₉ F₁₉ ⋯ F₀ᵀ U₀ F₀ S``.
 
 Yirmi lif ``omega_kategori_nbe`` ile **fiilen kurulur** ve makine tip
-denetiminden geçer -- ``main/kategori.py`` ile aynı usul, fakat oradan
+denetiminden geçer -- ``idrak/kategori.py`` ile aynı usul, fakat oradan
 ithal edilmez: iki model birbirine bağlanmaz, ikisi de aynı kategori
 kütüphanesini çağırır. Bağlanan şey kütüphanedir, model değil.
 

@@ -270,7 +270,7 @@ def mudrike(gorev, yakin_esigi: float = YAKIN_ESIGI,
     # değil, yerel nakşın **ilân edilmiş haddi**dir -- ve şablon
     # kütüğünün oradaki hâli de sükûttur.
     try:
-        from main.main import padisah as _padisah
+        from main.cikarim import padisah as _padisah
         dw = _padisah(gorev)
     except Exception as exc:                             # noqa: BLE001
         dw = {"sükût": True, "sebep": "dalga hatası: %s" % type(exc).__name__}

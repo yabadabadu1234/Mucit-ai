@@ -28,8 +28,8 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .kategori import Uzay
-from .yazmac import Yazmac
+from idrak.kategori import Uzay
+from kuantum.yazmac import Yazmac
 
 __all__ = ["ZirhIzi", "zirh_uygula", "okuma_vektoru"]
 
@@ -147,7 +147,7 @@ def rapor() -> str:                                     # pragma: no cover
     Burada dört ayrı okuma kurulur, her biri bir süzgeci tetikler ve
     ötekileri tetiklemez; tetiklemiyorsa o süzgeç ölüdür.
     """
-    from .kategori import Uzay
+    from idrak.kategori import Uzay
 
     s = ["ENİNE TOPOLOJİK ZIRH -- dört süzgeç, dördü de ısırıyor mu?", ""]
     n = 24

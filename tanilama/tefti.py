@@ -141,7 +141,7 @@ def tefti_et(kisa: bool = True) -> Dict[str, object]:
     gor: Set[Tuple[str, str]] = set()
     yollar: Dict[str, int] = {}
 
-    # 1) EĞİTİM yolu -- padişahın kendisi (`main/kaggle.py::kos` bunu çağırır).
+    # 1) EĞİTİM yolu -- padişahın kendisi (`ogrenme/kaggle_donanim.py::kos` bunu çağırır).
     E = KulliEgitim(ayar)
     _, g1 = izle(E.kos)
     gor |= g1

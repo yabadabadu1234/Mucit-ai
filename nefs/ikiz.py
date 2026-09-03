@@ -261,7 +261,7 @@ def purzu_yerini_bul(tohum: int = 0, n: int = 8, chi: int = 4
     Burada 1. kademe fiilen ölçülür; 2. kademe için sıralamanın kaç
     kere değiştiği sayılır -- sıçrama sayısı doğrudan pürüzün ölçüsüdür.
     """
-    from main.yazmac import _so4_ureteci
+    from kuantum.yazmac import _so4_ureteci
 
     rng = np.random.default_rng(tohum)
     t0 = rng.normal(size=6)
@@ -305,7 +305,7 @@ def purzu_yerini_bul(tohum: int = 0, n: int = 8, chi: int = 4
     # yer değiştirdiğinde tutulan altuzay **sıçrar** ve fonksiyon
     # türevlenemez hâle gelir. Yani aranan şey ``s[r−1] − s[r]``
     # boşluğunun sıfıra ne kadar yaklaştığıdır.
-    from main.yazmac import Yazmac, dik_iki_kubit
+    from kuantum.yazmac import Yazmac, dik_iki_kubit
     bosluklar = []
     buyuk = []
     kesme_say = 0

@@ -155,7 +155,7 @@ Dağınık vaziyetteki tüm optimizasyon ve talim dosyaları iptal edilmiş; sis
 |                  9 UZUVLU TÂLİM DEVLET TEŞKİLÂTI MODÜL HARİTASI                                                         |
 +-------------------------------------------------------------------------------------------------------------------------+
 | 1. HAD        (`akis/tikiz.py`)         : Dinamik Güven Kutusu [-R_t, R_t]^d; sonsuza kaçışı engeller.                 |
-| 2. ALTUZAY    (`main/optimize.py`)      : Cayley Dinamik Kesiti ile d ──► r boyut indirgeme (d=250 için hayatî).        |
+| 2. ALTUZAY    (`ogrenme/optimize.py`)      : Cayley Dinamik Kesiti ile d ──► r boyut indirgeme (d=250 için hayatî).        |
 | 3. VEKİL      (`ogrenme/rkhs.py`)       : Grassmann İzdüşümlü RKHS Çekirdek Sırt Regresyonu (Cholesky kapalı form).    |
 | 4. KODLAMA    (Nedensel Ayrıklaştırma)  : Gri kod ve Metropolis iptal; Causal KAN ile O(N) deterministik ağaç kodlama.  |
 | 5. DALGA      (`kuantum/nqs.py, dalga`) : Reel Chebyshev-KAN NQS + QSVT Gibbs Soğutması + FPAA Monotonik Difüzyon.    |

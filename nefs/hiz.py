@@ -122,7 +122,7 @@ def token_muhasebesi(chi: int = 16, mpo_bag: int = 16,
     Bir tokenın kendi 12 çekirdeğine birleşik MPO uygulanır ve χ'ye
     kanonik kırpılır (padişahın 1. emri: ne 1'e ez, ne 256'ya bırak).
     """
-    from main.yazmac import Yazmac
+    from kuantum.yazmac import Yazmac
     from nefs.gomme import QTT_KADEME
 
     y = Yazmac(int(QTT_KADEME), bag=int(chi), tohum=0)
@@ -151,7 +151,7 @@ def kulli_muhasebesi(kubit: int = 35, token: int = 8_388_608,
     taşıyamıyorsa bu sayı bir yalandır. Onun için ``hiz_defteri``
     sadakati ayrıca ölçer ve yanına koyar.
     """
-    from main.yazmac import Yazmac
+    from kuantum.yazmac import Yazmac
 
     y = Yazmac(int(kubit), bag=int(chi), tohum=0)
     W = meleke_mpo_kur(int(kubit), bag=int(mpo_bag))

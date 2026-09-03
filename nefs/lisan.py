@@ -320,3 +320,63 @@ def rapor() -> str:                                     # pragma: no cover
 
 if __name__ == "__main__":   # pragma: no cover
     print(rapor())
+
+
+# =====================================================================
+#  FERMAN ADIYLA: 2D İZAFÎ MEVKİ VE tiktoken KÖPRÜSÜ
+# =====================================================================
+class IzafiMevki2D:
+    """2D izafî (öteleme değişmez) mevki -- **mutlak koordinat YOK**.
+
+    Bir hücrenin yeri ``(i, j)`` diye değil, komşularına göre
+    ``sağında / solunda / üstünde`` diye taşınır. Öteleme üreteçleri
+    çevrimsel ve ortogonaldir (``oteleme_ureteci``), yani bu bir Lie
+    akışıdır, bir tablo değil.
+    """
+
+    def __init__(self, yaricap: int = 1) -> None:
+        self.yaricap = int(yaricap)
+        self._kod = None
+
+    # -- bağlam ---------------------------------------------------------
+    def izgara_donustur(self, g) -> "np.ndarray":
+        """Izgarayı izafî bağlam vektörlerine çevir: ``(H·W, 1+komşu)``."""
+        from main.cikarim import baglam_cikar
+        B = baglam_cikar(g, self.yaricap)
+        return B.reshape(-1, B.shape[2]).astype(float)
+
+    def durum_vektoru_kur(self, g) -> "np.ndarray":
+        """Izgaradan **tek** dalga vektörü: genlikler normalize."""
+        v = self.izgara_donustur(g).reshape(-1)
+        n = np.linalg.norm(v)
+        return v / n if n > 0 else v
+
+    def ebat_kanunu_coz(self, g):
+        """Çıktı ebadını **kanundan** okur; şablon listesi yoktur.
+
+        Tek ızgaradan kanun çözülemez (şahit lazımdır); o hâlde girdi
+        ebadı döner ve bu bir varsayım olarak **ilan edilir**.
+        """
+        import numpy as _np
+        a = _np.atleast_2d(_np.asarray(g, int))
+        return (int(a.shape[0]), int(a.shape[1]))
+
+
+def tiktoken_2d_kodla(metin: str, k=None):
+    """Metni ``o200k_base`` ile kodla -- kaynağı daima raporlanır."""
+    r = metin_kodla(str(metin), k)
+    import numpy as _np
+    return _np.asarray(r.get("belirtec", r.get("kod", [])), dtype=float)
+
+
+def tiktoken_2d_coz(kodlar, k=None) -> str:
+    """Belirteçlerden metne dön; çözülemeyen belirteç **saklanmaz**."""
+    kod = k or kodlayici()
+    enc = getattr(kod, "_enc", None)
+    dizi = [int(x) for x in np.asarray(kodlar).reshape(-1)]
+    if enc is None:
+        return " ".join(str(x) for x in dizi)
+    try:
+        return enc.decode(dizi)
+    except Exception:                                    # noqa: BLE001
+        return " ".join(str(x) for x in dizi)

@@ -336,7 +336,7 @@ etrafını gösterir. Bu kütükteki bütün hükümler, tam okunmamış metinde
 
 ## H36 — 6 milyon kübit **ölçüldü**, iddia edilmedi
 
-`main/yazmac.py`, tek çekirdek, `χ = 8`, `float32`:
+`kuantum/yazmac.py`, tek çekirdek, `χ = 8`, `float32`:
 
 | iş | ölçüm |
 |---|---|
@@ -672,7 +672,7 @@ düzeltildikten sonra).
 
 Sebebi MPS'in alan kanunudur: tek boyutlu zincire serilen iki boyutlu
 bir kısıt ağı, kesitten geçen **kenar uzunluğu** kadar dolaşıklık
-taşır. `main/yazmac.py`'nin 6.000.000 kübitlik MPS temeli -- bütün
+taşır. `kuantum/yazmac.py`'nin 6.000.000 kübitlik MPS temeli -- bütün
 ölçülmüş başarılarına rağmen -- **ARC için yanlış hendesedir**. Metin
 sıralı olduğu için MPS metinde doğrudur; ızgara iki boyutlu olduğu için
 ızgarada değildir.
@@ -1200,7 +1200,7 @@ Dalga motorunda örnekler **birikir** (tampon); AS-GEK ise her çevrimde
 
 ## H74 — Kaggle: iş bölünür, ağırlık bölünmez
 
-`main/kaggle.py`, `hesap/donanim.py`, `docs/KAGGLE.md`.
+`ogrenme/kaggle_donanim.py`, `hesap/donanim.py`, `docs/KAGGLE.md`.
 
 Gradyan olmadığı için (H3) cihazlar arası ``all_reduce`` **yoktur**.
 Bölünen şey iştir: kübit ileri geçişi süreçlere, NQS genlik ve
@@ -1305,7 +1305,7 @@ yığın hâlinde işlemektir; mevcut zincir düzeni (veri ile yerel hüküm
 kübitlerinin iç içe geçmesi) buna izin vermiyor. **Düzeni değiştirmek
 H40'ı nakzetmek olur ve sorulmadan yapılmayacaktır.**
 
-## H79 — `main/yazmac.py` taması: yığın kapılar kuruldu, kazanç ÖLÇÜLDÜ
+## H79 — `kuantum/yazmac.py` taması: yığın kapılar kuruldu, kazanç ÖLÇÜLDÜ
 
 Kullanıcı hükmü: dosya dosya taranacak; her dosyada *"bütün hız
 baltalayıcıları düzelt → yeni nesil formüller yerleştir → algoritmayı
@@ -1725,7 +1725,7 @@ Yani bu oturumun çıkış vekili (proxy) `api.kaggle.com`a bağlanmayı
 (koda **yazılmadı**) ve orada duruyor; ağ açılırsa hemen kullanılır.
 
 O hâlde ölçümler burada, CPU'da devam eder ve GPU'ya dair hiçbir şey
-iddia edilmez. Kaggle'da koşacak kod `main/kaggle.py` ve
+iddia edilmez. Kaggle'da koşacak kod `ogrenme/kaggle_donanim.py` ve
 `docs/KAGGLE.md`de hazırdır; koşturmak kullanıcıya kalır.
 
 ## H88 — `beyan` YANLIŞ ÇEVREDEN OKUYORDU: modelin bütün çıktısı gürültüymüş (ölçüldü ve düzeltildi)
@@ -1804,8 +1804,8 @@ kendisi de sınanmalıdır** -- "bu ölçüt hiç kırmızı yanabilir mi?"
 | düzeltme | yer | doğrulama |
 |---|---|---|
 | sol çevrenin doğru bacağı | `nefs/qyazmac.py::blok_dagilimi` | 20 halde tam dalgayla **≤3,1e−16**, negatif köşegen **0** |
-| `norm()` / `normalize()` | `main/yazmac.py` | `⟨Ψ|Ψ⟩ 2,05e−10 → 0,9999999` |
-| `norm_hatasi` hakikî ölçü | `main/yazmac.py` | artık `1,26e−07` (float32 eps) yazıyor, boş değil |
+| `norm()` / `normalize()` | `kuantum/yazmac.py` | `⟨Ψ|Ψ⟩ 2,05e−10 → 0,9999999` |
+| `norm_hatasi` hakikî ölçü | `kuantum/yazmac.py` | artık `1,26e−07` (float32 eps) yazıyor, boş değil |
 | ölçümden evvel normalize | `nefs/qakis.py::idrak_et` | 41 sınamanın 41'i geçiyor |
 
 Kesme (unutma) **gizlenmiyor**: atılan ağırlık `iz.kesme`de ayrıca
@@ -3075,7 +3075,7 @@ ve **ölçülebilir**. Kurulan budur.
 
 ### Kurulan
 
-* `main/yazmac.py` → `bag_tavan`: o anda izin verilen Schmidt rütbesi.
+* `kuantum/yazmac.py` → `bag_tavan`: o anda izin verilen Schmidt rütbesi.
   `bag` ayrılan **yerin** üst sınırıdır; `bag_tavan` **tutulacak**
   rütbedir. `_cift_kapi_cekirdek` ve `mpo_uygula` ikisini de gözetir.
 * `nefs/qmeleke.py` → 41 melekenin her birine `SINIF` (kurucu /
@@ -3244,7 +3244,7 @@ koddan denetlemek.** `nefs/golge.py` bunu yapar (kapılar için;
 
 ### Bulunan: melekeler işaret çevirmeyi ÖĞRENEMİYORDU
 
-`main/yazmac.py` iki kübitlik kapıları **Cayley** ile kuruyordu:
+`kuantum/yazmac.py` iki kübitlik kapıları **Cayley** ile kuruyordu:
 ``Q = (I−A)(I+A)⁻¹``. Cayley yalnız ``det(I+Q) ≠ 0`` olan dönmelere
 ulaşır — yani **hiçbir π dönmesine** ulaşamaz.
 
@@ -4366,7 +4366,7 @@ converge` verdi. Yani tavan, imha ettiği bilginin yanında bir de
 sayısal kararlılığı ayakta tutuyormuş — bu bir fayda değil, **kusurun
 kusuru örtmesidir**.
 
-`main/yazmac.py::_kararli_svd` kondu. Yedek yol **jitter yahut rastgele
+`kuantum/yazmac.py::_kararli_svd` kondu. Yedek yol **jitter yahut rastgele
 kaydırma değildir** (ceride stokastiği yasaklar): Gram dizeyinin
 özayrışımıdır ve determinsttir — `MᵀM = V S² Vᵀ`. Küçük taraf seçilir
 ki maliyet `min(m,n)³` kalsın. Haddi açıkça yazıldı: Gram almak koşul
@@ -4390,7 +4390,7 @@ cihetinden haklı, **işaret** cihetinden ise bu ortamda ters olduğunu
 gösterdi. İkisi de doğrudur ve karıştırılmamalıdır.
 
 **1. Verim cihetinde ceride haklı.** Yazmaç zaten yığın ekseni taşıyor
-(`main/yazmac.py`, `yigin`) fakat kayıp veriyi **tek tek** koşturuyordu.
+(`kuantum/yazmac.py`, `yigin`) fakat kayıp veriyi **tek tek** koşturuyordu.
 Yığına çevrildi. Ölçüldü (CPU, χ=16):
 
     B= 1  yığın  1,01 sn   tek tek  1,01 sn   hızlanma 1,00×
@@ -5154,7 +5154,7 @@ birçok bağda) vuruluyor -- ki o yığın 2 kat hız kazandırmıştı
 çelişiyor ve bu açık bir borçtur.**
 
 ``KANONIK_ACIK`` varsayılanı ``False`` yapıldı. ``kanonikle`` ve
-``kanonik_hata`` `main/yazmac.py`de **durmaya devam eder**: ölçüm âleti
+``kanonik_hata`` `kuantum/yazmac.py`de **durmaya devam eder**: ölçüm âleti
 olarak doğrudur (H121'in iddiasını sayıyla gösteriyor: kanoniklik
 hatası kanonikleşmeden evvel ``1,689``, sonra ``7,1e-08``) ve merkez
 takibi kurulduğunda hazırdır.
@@ -5927,7 +5927,7 @@ bu, ölçü düzeltilene kadar **görünmüyordu**.
 ## H185 — ANA KODDA HIZ KUSURU BULUNDU: masraf yanlış yerdeydi
 
 Padişahın emri: *"En evvel ana kodlardan, umumi kodlardan başla."*
-`main/yazmac.py`in ``mpo_uygula``sı profillendi ve masrafın yeri
+`kuantum/yazmac.py`in ``mpo_uygula``sı profillendi ve masrafın yeri
 bulundu: vaktin **%84'ü** sağdan sola QR süpürmesindedir ve o QR,
 **birleştirilmiş bağda** koşmaktadır. χ = D = 16'da bu ``512 × 256``
 dizeydir; halbuki kırpılmış bağda aynı iş ``32 × 256``dır.
@@ -6068,7 +6068,7 @@ veride hiçbir ``χ`` yetmiyor (bu bir teoremdir, kusur değildir).
 
 ## H189 — HDTF KURULDU; ve χ ≈ 2√L KANUNU ÖLÇÜLDÜ
 
-Divanın 2. hükmü icra edildi: `main/katlama.py`. İki blok, yeni bir
+Divanın 2. hükmü icra edildi: `kuantum/katlama.py`. İki blok, yeni bir
 mevki kübitiyle MPS toplamı olarak katlanır::
 
     |yeni⟩ = |0⟩ ⊗ |A⟩ + |1⟩ ⊗ |B⟩
@@ -6205,7 +6205,7 @@ bütün sayılar bayt yedeğiyledir; Kaggle'da hakikî tablo yüklenecektir.
 
 Divan, bağ indisini ``k = log₂χ`` mikro-kübite açıp mikro-rank ``r=2``
 ile hafızayı ``O(N log χ)`` yapmayı ve böylece ``χ = 2²⁰`` (bir
-milyonluk efektif bağ) elde etmeyi emretti. `main/ic_bag.py` kuruldu
+milyonluk efektif bağ) elde etmeyi emretti. `kuantum/ic_bag.py` kuruldu
 ve iddia **iki parçaya ayrılarak** ölçüldü.
 
 **Hafıza hükmü doğrudur** -- divanın cetveliyle örtüşür::
@@ -6343,7 +6343,7 @@ yanlış olması ya da senin ana kodunun yanlış olması lazım. Oynatmayı da
 ana kodu, padişahı güncelle artık."*
 
 **İhtar yerindeydi ve iki kat yerindeydi.** Çevre modülleri kurmuştum
-(``main/katlama.py``, ``main/ic_bag.py``, ``nefs/lisan.py``,
+(``kuantum/katlama.py``, ``kuantum/ic_bag.py``, ``nefs/lisan.py``,
 ``nefs/hiz.py``…) fakat **hiçbirini akışa bağlamamıştım**; ana model
 hâlâ eski yolu koşuyordu. Dahası, yavaşlığın sebebi onların yokluğu
 bile değildi.
@@ -6417,7 +6417,7 @@ Ayrıca bir evvelki turda benim ürettiğim `nefs/nakis.py` de silindi ve
 kullanılan parçaları ana koda alındı -- "yeni dosya üretme" emri
 evvelâ **bana** işler.
 
-Ana kod: **`main/main.py`**. Şemanın sekiz babı tek akışta.
+Ana kod: **`main/cikarim.py`**. Şemanın sekiz babı tek akışta.
 
 ### EVVELÂ BİR TASHİH -- KENDİ İTHAMIMI ÇÜRÜTTÜM
 
@@ -6582,3 +6582,103 @@ duvarı aynı yerde buluyor (hücre isabeti 0,59'da tıkanıyor). Cevabı
 5×5 pencerede yazmayan görevler nesne seviyesinde ve küresel akıl
 yürütme istiyor. Duran duvar budur; hız değil, kapı değil, talim
 değil.
+
+---
+
+## H200 -- `main/` TANZİM EDİLDİ: DÖRT NİZAMÎ DOSYA
+
+**Padişahın fermanı:** *"main klasörü projenin çöplüğü veya ara
+deneylerin deposu değildir. Orası yalnız kumanda merkezi olmalıdır."*
+
+### NAKİLLER
+
+    main/yazmac.py       → kuantum/yazmac.py       (+ KulliYazmac)
+    main/katlama.py      → kuantum/katlama.py      (+ HDTF girişi)
+    main/ic_bag.py       → kuantum/ic_bag.py
+    main/zirh.py         → ogrenme/zirh_mizan.py
+    main/optimize.py     → ogrenme/optimize.py
+    main/kaggle.py       → ogrenme/kaggle_donanim.py
+    main/hamiltonyen.py  → nefs/hamiltonyen.py
+    main/dimag.py        → nefs/dimag_kulli.py
+    main/kategori.py     → idrak/kategori.py
+    main/main.py         → SİLİNDİ (yerine cikarim.py + egitim.py)
+
+`main/`de kalan **yalnız dört dosya**: `egitim.py`, `cikarim.py`,
+`kaggle_egitim.py`, `kaggle_cikarim.py`.
+
+### FERMANIN ADLANDIRDIĞI UZUVLAR KURULDU -- KABUK DEĞİL, MOTOR
+
+Ferman `kuantum/qsvt`, `kuantum/bec`, `kuantum/fubini`, `ogrenme/fct`,
+`ogrenme/sta`, `ogrenme/zirh`, `ogrenme/morse`, `nefs/melekeler`
+diye uzuvlar adlandırdı. Hiçbiri boş kabuk değildir; her biri koşar ve
+**ölçüsü kırmızı yanabilir**::
+
+    ogrenme/fct     κ(GCL) = 1,000000   κ(eşaralıklı) = 4,863e+15
+    ogrenme/sta     sürüşlü 1,000000    sürüşsüz 0,264739 (τ=0,05)
+    ogrenme/zirh    rastgele/birim/tam-bağlı üç ayrı satır veriyor
+    kuantum/bec     tur=0 → T=0,0296    tur≥1 → T=1,000000
+    kuantum/qsvt    Gibbs doğrulaması bağıl fark 1,96e-15
+    kuantum/fubini  belirlenimci (3 tekrar aynı), bağıl fark 0,5888
+    ogrenme/morse   dolu ✓  delikli ✓  kasten bozuk ✗
+    nefs/melekeler  44 meleke, 20 mertebe, boş mertebe YOK
+
+### BU TURDA ÖLÇÜM BENİ DÖRT KERE ÇÜRÜTTÜ
+
+1. **BEC faz kilidi hiç kilitlemiyordu.** ``dt`` sabit ``0,05`` idi ve
+   ızgaranın kip aralığına göre hiç ısırmıyordu: 12 turda faz uyumu
+   ``0,0296 → 0,0601``de kaldı. ``dt`` artık ızgaradan seçilir.
+2. **BEC'in kırmızı kontrolü yanlıştı.** Kontrolü ``g`` yapmıştım;
+   halbuki ``V=0, g=0``da hayalî zaman zaten düzgün taban duruma gider
+   ve o da faz-kilitlidir -- yani ``g=0`` da yeşil yanardı, ölçü hiçbir
+   şey ayırt etmezdi. Kontrol artık tur sayısıdır.
+3. **Morse indisini komşuluk halkasından okuyordum.** Dolu bir 5×6
+   dikdörtgende ``Σ(−1)^k M_k = 12`` çıkıyordu, ``χ = 1`` iken. Halka
+   bağ değildir: bağ ``f``ye göre **alt** kısma daraltılmalı ve küpsel
+   komplekste çapraz komşu ancak yüz varsa bağa girmelidir.
+4. **Düzenli noktaları eyer sayıyordum.** Düzeltmeden sonra bile
+   ``M₁ = 29`` çıktı; sebep ``M₁ += 1 − i_v`` yazmamdı. ``i_v = 0``
+   olan nokta **kritik değildir**, katkısı sıfırdır. Doğrusu
+   ``M₁ += −i_v`` ve yalnız ``i_v < 0`` iken. Şimdi kimlik tam
+   sağlanıyor.
+
+Ayrıca iki bağlama kusuru ölçülüp düzeltildi: HDTF yığın katlaması
+bütün blokların aynı şekilde olmasını ister (ARC ızgaraları ayrı
+ebatta geldiği için düşüyordu; **kırpmak değil doldurmak** seçildi,
+zira kırpma kayıplıdır) ve MPS sınır şartı (ilk/son çekirdeğin bağı
+``1``) ihmal edilmişti. FCT'de bir derece kayması vardı: ``M``
+derecedir, düğüm sayısı ``M+1``.
+
+### İKİ TÂLİM AYRI ŞEYDİR VE KARIŞTIRILMIYOR
+
+* **Küllî tâlim** (`main/egitim.py`): bütün veriyi HDTF ile tek dalgaya
+  katlar, 44 meleke parametresini QSVT-Gibbs + STA + FCT ile eğitir,
+  diske mühürler. Uçtan uca koşuyor (30 parça, kademe 29, kesme
+  8,60e-01 -- **kesme saklanmıyor**).
+* **Görev tâlimi** (`main/cikarim.py`): bir ARC görevinin
+  şahitlerinden o göreve mahsus ``W``yi çıkarır.
+
+**Ölçülmüş hakikat:** ARC'de fiilen çözen **ikincisidir**. Küllî
+tâlimin ARC çözümüne katkısı **ölçülmemiştir** ve ölçülmüş gibi
+gösterilmiyor. Küllî tâlimde zırh kaybı üç çevrimde ``104,653426``da
+sabit kaldı -- yani o hat şu anda **öğrenmiyor** ve bu raporda duruyor.
+
+### YARIŞMA HÜKMÜ İLE KÜTÜK HÜKMÜ ÇELİŞİYOR -- ÇELİŞKİ GİZLENMİYOR
+
+`main/kaggle_cikarim.py` teslimat kipinde eşiği ``0,0``da tutar (hiçbir
+görev boş bırakılmaz); `main/cikarim.py` kütük kipinde ``1,0``da tutar
+(bilmiyorsan sus). Cetvel ikisini de haklı çıkarıyor::
+
+    training  eşik 1,00 →   1 cevap,  1 TAM (%100,0)
+              eşik 0,00 → 182 cevap,  5 TAM (%2,7)
+
+Teslimatta boş bırakmamak daha çok TAM getiriyor. Bu H10'u nakzetmez;
+ayrı gayeye ayrı ölçü koyar ve ikisi yan yana durur. Ayrıca teslimatta
+"dalga kurulamayan" görevler **ayrı sayılır**: girdi aynen teslim
+edilir ve o bir çözüm sayılmaz.
+
+### GPU
+
+Bu ortamda GPU ve ``torch`` **yoktur**. `main/kaggle_egitim.py` çökmez,
+tek süreç CPU yedeğine düşer ve bunu satır satır yazar; "4×L4 %100
+doluluk" diye bir rakam **uydurmaz**. Sentetik şarjörle koşulduğunda
+her satırda ``[SENTETİK]`` damgası bulunur.

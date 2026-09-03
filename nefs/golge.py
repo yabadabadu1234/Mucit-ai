@@ -26,7 +26,7 @@ NE DENETLENİYOR
 ===================================================================
 
 1. **Grup sadakati** -- ``akis.lie.so_n_mi`` ile: melekelerin kurduğu
-   her iki kübitlik kapı hakikaten ``SO(4)``te mi? ``main/yazmac.py``
+   her iki kübitlik kapı hakikaten ``SO(4)``te mi? ``kuantum/yazmac.py``
    bunu Cayley'in cebrinden **iddia ediyor**; burada ölçülüyor.
 
 2. **Erişilebilirlik boşluğu** -- Cayley ``det(I+Q) = 0`` olan hiçbir
@@ -53,7 +53,7 @@ projeyi doğrudan ilgilendirir: gömme **tek** sistemde çarpımsaldır,
 **birleşik** sistemde değildir (``dim_ℝ(ℂ^m ⊗ ℂ^n) = 2mn`` iken
 ``ℝ^{2m} ⊗ ℝ^{2n} = 4mn``).
 
-Bu, ana hattı çürütmez ve çürüttüğü söylenmemelidir: `main/yazmac.py`
+Bu, ana hattı çürütmez ve çürüttüğü söylenmemelidir: `kuantum/yazmac.py`
 karmaşık kuramın reel bir **gömmesi** değildir, doğrudan **reel** bir
 kuantum kuramıdır (reel genlik, dik kapı). Fakat neticesi şudur ve
 saklanmaz: reel yazmaç karmaşık olandan **daha dar**dır. Kazanılan
@@ -66,7 +66,7 @@ from typing import Dict, List
 import numpy as np
 
 from akis.lie import en_yakin_dik, so_izdusumu, so_n_mi, uslu_harita
-from main.yazmac import (dik_iki_kubit, dik_iki_kubit_us,
+from kuantum.yazmac import (dik_iki_kubit, dik_iki_kubit_us,
                          dik_iki_kubit_us_yigin, dik_iki_kubit_yigin)
 from reel.hartley import rht, rht_dizeyi
 from reel.karmasik import (hermitesel_mi, reel_evrim, reel_goem,
@@ -292,7 +292,7 @@ def rapor(deneme: int = 200_000) -> str:
     s += ["",
           "HUDUT: reel.karmasik'in kendi uyarısı bu projeyi ilgilendirir --",
           "gömme TEK sistemde çarpımsaldır, BİRLEŞİK sistemde değildir.",
-          "Bu ana hattı çürütmez (main/yazmac.py karmaşık kuramın gömmesi",
+          "Bu ana hattı çürütmez (kuantum/yazmac.py karmaşık kuramın gömmesi",
           "değil, doğrudan reel bir kuantum kuramıdır) fakat neticesi",
           "saklanmaz: reel yazmaç karmaşık olandan DAHA DARDIR."]
     return "\n".join(s)

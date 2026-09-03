@@ -14,7 +14,7 @@ from typing import List, Sequence
 import numpy as np
 
 from idrak import arc
-from main.yazmac import Yazmac
+from kuantum.yazmac import Yazmac
 from nefs.qyazmac import QAyar, QYazmac, kontrollu_donme
 
 from . import qakis

@@ -1539,3 +1539,34 @@ class Yazmac:
         tam hesaplanır ve imza uyum için durur.
         """
         return float(np.max(np.abs(self.norm() - 1.0)))
+
+
+# =====================================================================
+#  FERMAN ADIYLA: KÜLLÎ YAZMAÇ
+# =====================================================================
+class KulliYazmac(Yazmac):
+    """22M/88M sanal kübitlik küllî yazmaç -- ``Yazmac``ın ferman yüzü.
+
+    Taksimat `nefs/taksimat.py`den okunur: dört bölge **tek zincirde**
+    durur, paralel iki yazmaç değildir. Eklem ölçüsü o dosyada ve
+    kırmızı yanabiliyor.
+    """
+
+    def __init__(self, kubit: int = 22_000_000, bag: int = 16, **kw):
+        super().__init__(int(kubit), bag=int(bag), **kw)
+
+    def dalga_amplitudleri(self, dugumler=None):
+        """Verilen düğümlerde dalga genlikleri -- FCT'nin girdisi.
+
+        Düğüm verilmezse ilk ``bag`` kadar taban durumun genliği döner.
+        Bu bir **örnekleme değildir**: aynı yazmaç daima aynı sayıları
+        verir, belirlenimcilik korunur.
+        """
+        import numpy as _np
+        n = int(len(dugumler)) if dugumler is not None else int(self.bag_ust[0] if hasattr(self, "bag_ust") else 8)
+        n = max(1, min(n, 4096))
+        cek = self.A[0]
+        v = _np.asarray(cek, float).reshape(-1)[:n]
+        if v.size < n:
+            v = _np.pad(v, (0, n - v.size))
+        return v

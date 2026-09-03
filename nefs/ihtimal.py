@@ -44,7 +44,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from main.yazmac import Yazmac, dik_iki_kubit, hadamard
+from kuantum.yazmac import Yazmac, dik_iki_kubit, hadamard
 
 __all__ = ["IhtimalYazmaci", "kubit_hesabi"]
 

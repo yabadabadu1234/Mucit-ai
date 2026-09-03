@@ -511,3 +511,82 @@ def rapor() -> str:                                     # pragma: no cover
 
 if __name__ == "__main__":   # pragma: no cover
     print(rapor())
+
+
+# =====================================================================
+#  FERMAN ADIYLA GİRİŞ: HİYERARŞİK İKİLİ AĞAÇ KATLAMASI (HDTF)
+# =====================================================================
+def hiyerarsik_ikili_agac_katlama(diziler, bag_boyutu: int = 16,
+                                  sanal_kubit: int = 22_000_000,
+                                  usul: str = "svd"):
+    """Veri parçalarını **tek** QTT süperpozisyonuna katla.
+
+    ``|yeni⟩ = |0⟩⊗A + |1⟩⊗B`` ikili ağacı; her kademede MPS toplamı
+    alınıp ``χ`` bağına kırpılır. Dönen: ``(çekirdekler, kesme, kademe)``.
+
+    **Ölçülmüş had (kütük H189/H190).** Sadakat ``L`` büyüdükçe sabit
+    ``χ``de düşer; ``χ ≈ 2√L`` kaidesi ölçülmüştür. ``χ = 16``,
+    ``L = 4096`` için **yetmez** ve bu gizlenmiyor: dönen ``kesme``
+    değeri o kaybın kendisidir.
+    """
+    import numpy as _np
+
+    # **ORTAK UZUNLUK VE SABİT BAĞ ŞARTTIR.** Yığın katlaması bütün
+    # blokların aynı çekirdek şeklinde olmasını ister; ARC ızgaraları
+    # ayrı ebatlarda geldiği için ilk hâl ``all input arrays must have
+    # the same shape`` diye düştü. Kısaltmak veri kaybettirirdi; onun
+    # yerine hepsi **en uzun** parçanın iki-kuvvetine sıfırla doldurulur
+    # ve her kademede bağ ``χ``ye sıfırla tamamlanır. Doldurma kayıpsız,
+    # kırpma kayıplıdır -- kayıplı olanı seçmek ölçüyü sessizce bozardı.
+    ham = [_np.asarray(d, dtype=float).reshape(-1) for d in diziler]
+    ham = [v for v in ham if v.size]
+    if not ham:
+        raise ValueError("katlanacak veri yok")
+    enb = max(int(v.size) for v in ham)
+    n = int(2 ** int(_np.ceil(_np.log2(max(enb, 2)))))
+    k = int(_np.log2(n))
+    r = int(bag_boyutu)
+
+    bloklar = []
+    for v in ham:
+        u = _np.zeros(n)
+        u[:v.size] = v
+        nrm = _np.linalg.norm(u)
+        if nrm > 0:
+            u = u / nrm
+        cek = []
+        kalan = u.reshape(1, -1)
+        for _s in range(k):
+            kalan = kalan.reshape(kalan.shape[0] * 2, -1)
+            U, S, Vt = _np.linalg.svd(kalan, full_matrices=False)
+            rr = min(r, int(S.size))
+            cekirdek = _np.zeros((kalan.shape[0] // 2, 2, r))
+            blok = U[:, :rr].reshape(-1, 2, rr)
+            # sol bağ da ``r``ye tamamlanır ki bütün kademeler aynı olsun
+            sol = min(blok.shape[0], r)
+            cekirdek[:sol, :, :rr] = blok[:sol]
+            cek.append(cekirdek[:r] if cekirdek.shape[0] > r else cekirdek)
+            kalan = (_np.diag(S[:rr]) @ Vt[:rr])
+        son = cek[-1]
+        art = _np.zeros(son.shape[2])
+        m = min(son.shape[2], kalan.size)
+        art[:m] = kalan.reshape(-1)[:m]
+        cek[-1] = son * art.reshape(1, 1, -1)
+        # Çekirdekleri tek düze şekle oturt. **MPS sınır şartı**: ilk
+        # çekirdeğin sol bağı ve son çekirdeğin sağ bağı ``1``dir; onu
+        # da ``r`` yapmak zinciri açık uçlu bırakır ve yığın katlaması
+        # ``(15,16,2,16) → (15,16,2,1)`` diye düşer.
+        duz = []
+        for t_i, c in enumerate(cek):
+            sol = 1 if t_i == 0 else r
+            sag = 1 if t_i == len(cek) - 1 else r
+            t = _np.zeros((sol, 2, sag))
+            a, b = min(c.shape[0], sol), min(c.shape[2], sag)
+            t[:a, :, :b] = c[:a, :, :b]
+            duz.append(t)
+        bloklar.append(duz)
+    if not bloklar:
+        raise ValueError("katlanacak veri yok")
+    if len(bloklar) == 1:
+        return bloklar[0], 0.0, 1
+    return dyadic_katla_yigin(bloklar, int(bag_boyutu), usul=usul)

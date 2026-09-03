@@ -6,14 +6,14 @@ Küllî Dimağ -- ``tecrit.md`` mimarisinin fiilî inşası.
 Akış -- metnin nihai şemasının bire bir karşılığı:
 
     ham girdi (sözlük indisleri)
-      → KÜBİT YAZMACI: N kübit, MPS temsili                (main/yazmac.py)
+      → KÜBİT YAZMACI: N kübit, MPS temsili                (kuantum/yazmac.py)
       → Hadamard: SÜPERPOZİSYON (2^N taban durumu)
       → MERA: dolanıklık çözücü U + izometri W, log₂N kademe
-      → 20 ∞-KATEGORİ UZAYINA fırlatım F_m                (main/kategori.py)
+      → 20 ∞-KATEGORİ UZAYINA fırlatım F_m                (idrak/kategori.py)
            uzaylar omega_kategori_nbe ile kurulup MAKİNEYLE denetlendi
-      → her uzayda kendi Hamiltonyeni  U_m = e^{−ηH_m}    (main/hamiltonyen.py)
+      → her uzayda kendi Hamiltonyeni  U_m = e^{−ηH_m}    (nefs/hamiltonyen.py)
            H_m = Σ E_m(σ)|σ⟩⟨σ| + Σ J_m(σ,τ)(|σ⟩⟨τ|+|τ⟩⟨σ|)
-      → her uzayda kendi 4'lü zırhı                        (main/zirh.py)
+      → her uzayda kendi 4'lü zırhı                        (ogrenme/zirh_mizan.py)
            Sheaf · Homotopi · Betti · Kohomoloji
       → tünelleme vanası Γ (tıkanmada açılır)
       → esas uzaya geri mühürleme F_m†
@@ -35,9 +35,9 @@ import numpy as np
 
 from .hamiltonyen import (UzayHamiltonyeni, evrim_uygula, hamiltonyenleri_kur,
                           parametre_sayisi, tunelleme_uygula)
-from .kategori import SABIT, Uzay, uzaylari_kur
-from .yazmac import Yazmac, dik_iki_kubit
-from .zirh import ZirhIzi, okuma_vektoru, zirh_uygula
+from idrak.kategori import SABIT, Uzay, uzaylari_kur
+from kuantum.yazmac import Yazmac, dik_iki_kubit
+from ogrenme.zirh_mizan import ZirhIzi, okuma_vektoru, zirh_uygula
 
 __all__ = ["Ayar", "Dimag", "Iz"]
 

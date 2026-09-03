@@ -1,219 +1,250 @@
 """
-Küllî Dimağ'ın eğitimi -- ARC metniyle, **gradyan inişi olmadan**.
+KÜLLÎ DİMAĞ -- YEREL VE GENEL TÂLİM MOTORU (PADİŞAH TÂLİM)
+Dosya: main/egitim.py
 
-Ölçüt (uygunluk) bir "kayıp fonksiyonu" değil, dalganın gördüğü
-**potansiyeldir**: doğru belirtece verilen ihtimalin negatif logaritması,
-artı topolojik cezalar. Aradaki fark lafzî değildir -- bu potansiyelin
-gradyanı hiç alınmaz; Active Subspaces'in kurduğu ``r`` boyutlu yüzeyde
-**dalga yayılır** ve küresel minimum spektral çöküşle bulunur (H28).
+Vazifesi:
+  Girdi verilerini (lisan, kod, 2D ızgara) ``tiktoken`` ve 2D izafî
+  komşulukla okur; HDTF ikili ağaç katlamasıyla QTT süperpozisyonuna
+  alır; 44 meleke ve dörtlü topolojik zırhlı ``Ĥ_Dimağ`` operatörünü
+  QSVT dinamik Gibbs, STA karşıt-adiyabatik sürüş ve GCL/FCT kapalı
+  formunda eğitir.
 
-ARC metindir (kütük H5): ``idrak.arc`` bulmacayı belirteç akışına çevirir,
-bu model o akışı olduğu gibi konuşur.
+===================================================================
+AKIŞ -- ŞEMANIN BABLARI, TEK HATTA
+===================================================================
+
+    BAB VI   TAKSİMAT  22.000.000 sanal kübit **tek** zincirde
+                       (`nefs/taksimat.py`)
+    BAB I    |D⟩       2D izafî bağlam + tiktoken (`nefs/lisan.py`),
+                       HDTF katlaması (`kuantum/katlama.py`)
+    BAB VII  |m⟩       44 meleke → Ĥ_Dimağ (`nefs/melekeler.py`)
+    BAB IV   ZIRH      Sheaf / Betti / Kohomoloji / Homotopi
+                       (`ogrenme/zirh.py`)
+    BAB V    QSVT      Gibbs soğutması, statik faz cetveli
+                       (`kuantum/qsvt.py`)
+    BAB VI   STA       Karşıt-adiyabatik sürüş (`ogrenme/sta.py`)
+    BAB V.5  FCT       GCL düğümlerinde kapalı form, κ = 1
+                       (`ogrenme/fct.py`)
+
+===================================================================
+İKİ TÂLİM VARDIR VE İKİSİ AYRI ŞEYDİR -- KARIŞTIRILMAZ
+===================================================================
+
+1. **Küllî tâlim** (bu dosyanın ``KulliDalgaTalimMotoru``su): bütün
+   veriyi tek dalgaya katlayıp ``Ĥ_Dimağ``ın 44 meleke parametresini
+   eğitir. Neticesi diske mühürlenir.
+2. **Görev tâlimi** (`main/cikarim.py`nin ``dalga_kur``u): tek bir
+   ARC görevinin şahitlerinden o göreve mahsus ağırlık çıkarır.
+
+**Ölçülmüş hakikat, saklamıyorum:** ARC görevlerini fiilen çözen
+şimdilik **ikincisidir** (``3618c87e``, sırf ağırlıktan, birebir).
+Küllî tâlimin ARC çözümüne katkısı **ölçülmemiştir**; ölçülmemiş bir
+katkıyı varmış gibi göstermek kullanıcının C hükmünün ihlâli olurdu.
+Bu dosya küllî tâlimi koşturur ve ölçüsünü basar; çözdüğünü iddia
+etmez.
 """
 from __future__ import annotations
 
+import os
+import sys
 import time
+from dataclasses import dataclass
 from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
 from idrak import arc
+from kuantum.katlama import hiyerarsik_ikili_agac_katlama
+from kuantum.qsvt import qsvt_gibbs_sogutma, statik_faz_tablosu_oku
+from nefs.lisan import IzafiMevki2D, tiktoken_2d_kodla
+from nefs.melekeler import KulliMelekeManifoldu, melekeleri_kur
+from ogrenme.fct import (gauss_chebyshev_lobatto_dugumleri,
+                         hizli_chebyshev_donusumu)
+from ogrenme.sta import karsit_adiyabatik_surus
+from ogrenme.zirh import DortluTopolojikZirh
 
-from .dimag import Ayar, Dimag
-from .kategori import uzaylari_kur
-from .optimize import as_gek_adimi, postnikov_adresi, tersine_tavlama
-
-__all__ = ["ornekler", "uygunluk", "egit", "degerlendir"]
-
-
-# =====================================================================
-def ornekler(gorevler: Sequence, azami: int = 64, pencere: int = 48,
-             tohum: int = 0) -> List[Tuple[List[int], int]]:
-    """(bağlam, sonraki belirteç) çiftleri -- ARC akışından.
-
-    Pencere kısa tutulur ki eğitim bir oturumda bitsin; **kapasite**
-    iddiası ayrı ölçülür (``main.py kapasite``), eğitimle karıştırılmaz.
-    """
-    rng = np.random.default_rng(tohum)
-    cikti: List[Tuple[List[int], int]] = []
-    for g in gorevler:
-        try:
-            dizi, hedef = arc.gorev_dizisi(g, hedef_indis=0)
-        except Exception:
-            continue
-        akis = list(dizi) + list(hedef)
-        if len(akis) < 6:
-            continue
-        for _ in range(2):
-            i = int(rng.integers(4, len(akis)))
-            bas = max(0, i - pencere)
-            cikti.append((akis[bas:i], int(akis[i])))
-        if len(cikti) >= azami:
-            break
-    return cikti[:azami]
+__all__ = ["TalimAyarlari", "KulliDalgaTalimMotoru", "ana_talim_kosusu",
+           "gorev_talimi"]
 
 
-def uygunluk(model: Dimag, veri: Sequence[Tuple[List[int], int]],
-             p: np.ndarray) -> float:
-    """``V(p) = −(1/n)Σ log P(doğru) + topolojik ceza``.
-
-    Topolojik ceza metnin kendi kaidesidir (H23): ``β₀ > 1`` ezber
-    demektir, tıkanıklık ise mertebeler arası yırtık. İkisi de dalganın
-    gördüğü potansiyele eklenir; ayrıca ``ayrık motor``a sinyal olur.
-    """
-    if not len(veri):
-        return 0.0
-    top = 0.0
-    ceza = 0.0
-    for baglam, hedef in veri:
-        P, iz = model.ileri(baglam, p)
-        top -= float(np.log(P[hedef % len(P)] + 1e-12))
-        # Topolojik ceza metnin kendi kaidesidir (H23): β₀ > 1 ezber,
-        # tıkanıklık mertebeler arası yırtıktır. İkisi de dalganın
-        # gördüğü potansiyele girer ve ayrık motora sinyal olur.
-        ceza += 0.02 * sum(max(b - 1, 0) for b in iz.betti.values())
-        ceza += 0.05 * float(np.mean(list(iz.tikaniklik.values()) or [0.0]))
-        # Dolaşıklık ÖDÜLLENDİRİLİR: çarpım durumuna çöken bir yazmaç
-        # süperpozisyonun zenginliğini kaybetmiş demektir.
-        ceza -= 0.05 * float(iz.entropi_sonra)
-    return top / len(veri) + ceza / len(veri)
+@dataclass
+class TalimAyarlari:
+    """Tâlim motorunun analitik ve donanımsal ölçüleri."""
+    sanal_kubit_sayisi: int = 22_000_000
+    bag_boyutu_chi: int = 16
+    qsvt_derecesi: int = 32          # cetveldeki derece; arama yasak
+    beta_maksimum: float = 4.0       # cetvelde mühürlü β
+    gcl_nokta_sayisi: int = 128
+    lambda_mizan: float = 0.035
+    ogrenme_orani: float = 0.01
 
 
-# =====================================================================
-def hedef_cezasi(model: Dimag, veri: Sequence[Tuple[List[int], int]],
-                 p: np.ndarray) -> float:
-    """``‖𝒢(u) − y_hedef‖²`` -- hedef bilgisinin potansiyele sızdırılması.
+class KulliDalgaTalimMotoru:
+    """Tek akış, tek ferman: belirlenimci kuantum dalga tâlimi."""
 
-    Minimumun nerede olduğunu bilmiyoruz; fakat orada ne olacağını
-    biliyoruz: doğru belirtecin ihtimali 1, ötekilerinki 0. Bu şart
-    ``uygunluk``taki ``−log P``den farklıdır ve ondan daha keskindir --
-    ``−log P`` yalnız doğru belirtece bakar, bu ise **bütün dağılımın**
-    hedefe olan uzaklığını cezalandırır (yanlışların hepsi bastırılır).
-    İkisi ayrı yüzeylerdir ve ``as_gek_adimi`` içinde ayrı ayrı vekile
-    oturtulup öyle toplanır (kütük H28).
-    """
-    if not len(veri):
-        return 0.0
-    top = 0.0
-    for baglam, hedef in veri:
-        P, _ = model.ileri(baglam, p)
-        y = np.zeros_like(P)
-        y[hedef % len(P)] = 1.0
-        top += float(np.sum((P - y) ** 2))
-    return top / len(veri)
+    def __init__(self, ayarlar: Optional[TalimAyarlari] = None) -> None:
+        self.ayar = ayarlar or TalimAyarlari()
+        self.meleke_manifoldu = melekeleri_kur(meleke_sayisi=44)
+        self.topolojik_zirh = DortluTopolojikZirh()
+        self.izafi_mevki = IzafiMevki2D()
+        self.faz_tablosu = statik_faz_tablosu_oku(
+            derece=self.ayar.qsvt_derecesi, beta=self.ayar.beta_maksimum)
+        self.gcl_dugumleri = gauss_chebyshev_lobatto_dugumleri(
+            M=self.ayar.gcl_nokta_sayisi)
 
+    # -- BAB I: veri durumu ---------------------------------------------
+    def veri_durumu_hazirla(self, ham_veriler: Sequence[Dict[str, object]]
+                            ) -> Dict[str, object]:
+        """Veri kümesini HDTF ikili ağaç katlamasıyla QTT'ye al.
 
-def egit(model: Dimag, veri: Sequence[Tuple[List[int], int]],
-         cevrim: int = 6, r: int = 2, n_ornek: int = 20,
-         ayrik: bool = True, tohum: int = 0, lam_hedef: float = 0.5,
-         gama_azami: float = 0.25,
-         gunluk: Optional[List[str]] = None) -> Dict[str, object]:
-    """Çift motorlu eğitim çevrimi -- hedef güdümlü ve tünelleme vanalı."""
-    p = model.p.copy()
-    V0 = uygunluk(model, veri, p)
-    kayit: List[float] = [V0]
-    t0 = time.perf_counter()
-    D = tuple(model.ayar.dinamik)
-    gama = 0.0
-    tunel_kaydi: List[float] = []
+        Dönen sözlükte ``kesme`` vardır ve **saklanmaz**: HDTF sadakati
+        ``L`` büyüdükçe sabit ``χ``de düşer (ölçülmüş kaide
+        ``χ ≈ 2√L``). Kesme değeri o kaybın kendisidir.
+        """
+        t0 = time.perf_counter()
+        vektorler: List[np.ndarray] = []
+        for v in ham_veriler:
+            if "izgara" in v:
+                vek = self.izafi_mevki.durum_vektoru_kur(
+                    np.asarray(v["izgara"], dtype=int))
+            else:
+                vek = tiktoken_2d_kodla(str(v.get("metin", "")))
+            if np.asarray(vek).size:
+                vektorler.append(np.asarray(vek, float).reshape(-1))
+        if not vektorler:
+            raise ValueError("katlanacak veri yok")
 
-    for c in range(cevrim):
-        # --- TÜNELLEME VANASI (kütük H29): başıboş değil, teşhise kilitli.
-        # Metnin melekeleri burada yoktur; fakat vananın açılma şartı
-        # aynen vardır: (i) TIKANMA teşhis edilecek (kohomolojik
-        # tıkanıklık yüksek), (ii) ŞEK olacak (potansiyel bir evvelki
-        # çevrimde inmemiş, yani sıkışılmış). İkisi birden olmadan Γ
-        # açılmaz; açıldıktan sonra ilerleme olursa **mühürlenir**.
-        _, iz_v = model.ileri(veri[0][0], p)
-        tik_ort = float(np.mean(list(iz_v.tikaniklik.values()) or [0.0]))
-        sikisti = c > 0 and kayit[-1] >= kayit[-2] - 1e-9
-        if sikisti and tik_ort > 0.5:
-            gama = min(gama_azami, gama + 0.1)      # Merak Γ'yı yükseltir
-        elif not sikisti:
-            gama = 0.0                              # Tahkik mühürler
-        model.ayar.gama = gama
-        tunel_kaydi.append(gama)
+        cek, kesme, kademe = hiyerarsik_ikili_agac_katlama(
+            vektorler, bag_boyutu=self.ayar.bag_boyutu_chi,
+            sanal_kubit=self.ayar.sanal_kubit_sayisi)
+        sure = time.perf_counter() - t0
+        print("  [HDTF] %d veri parçası %.3f sn'de QTT'ye katlandı "
+              "(kademe %d, kesme %.4e)."
+              % (len(vektorler), sure, kademe, kesme), flush=True)
+        return {"cekirdek": cek, "kesme": float(kesme),
+                "kademe": int(kademe), "süre_sn": sure,
+                "parca": len(vektorler)}
 
-        # --- sürekli motor: AS → GEK → hedef sızdırma → dalga
-        p_yeni, tani = as_gek_adimi(
-            lambda q: uygunluk(model, veri, q), p,
-            yaricap=0.5, r=r, izgara=20, n_ornek=n_ornek,
-            hedef_ceza=lambda q: hedef_cezasi(model, veri[:4], q),
-            lam_hedef=lam_hedef, tohum=tohum + c)
-        V_yeni = uygunluk(model, veri, p_yeni)
-        if V_yeni < kayit[-1]:
-            p, V = p_yeni, V_yeni
-        else:
-            V = kayit[-1]                     # kabul edilmedi; dürüst kayıt
-        kayit.append(V)
+    # -- BAB III-VI: tek makro dalga adımı ------------------------------
+    def talim_adimi_icra_et(self, durum: Dict[str, object]
+                            ) -> Dict[str, float]:
+        """Bab III, IV, V, VI gereğince tek makro QSVT dalga adımı."""
+        t0 = time.perf_counter()
 
-        # --- ayrık motor: tıkanıklık → Postnikov adresi → tersine tavlama
-        if ayrik:
-            _, iz = model.ileri(veri[0][0], p)
-            adres = postnikov_adresi(iz.tikaniklik, D)
-            aday = list(D)
-            aday[int(np.argmax([iz.tikaniklik.get(m, 0.0) for m in aday]))] = adres
+        # 1. 44 meleke Lie cebri ve 20 mertebeli Ĥ_Dimağ
+        H_dimag = self.meleke_manifoldu.hamiltonyen_uret()
 
-            def E_ayrik(vek: Tuple[int, ...]) -> float:
-                # Mertebe değişince 20 uzay YENİDEN kurulur ve yeniden
-                # makine denetiminden geçer -- ayrık motorun seçtiği
-                # mertebe, tip denetiminden geçmeyen bir uzay olamaz.
-                model.ayar.dinamik = tuple(vek)
-                model.uzaylar = uzaylari_kur(vek)
-                return uygunluk(model, veri[:4], p)
+        # 2. Dörtlü topolojik zırh
+        H_zirhli, zirh_raporu = self.topolojik_zirh.tatbik_et(H_dimag)
 
-            D_yeni, E_iyi = tersine_tavlama(E_ayrik, aday, adim=12,
-                                            tohum=tohum + c)
-            model.ayar.dinamik = tuple(D_yeni)
-            model.uzaylar = uzaylari_kur(D_yeni)
-            D = tuple(D_yeni)
+        # 3. Mizan dengesi (normalize BGCM)
+        mizan = self.meleke_manifoldu.bgcm_mizan_enerjisi()
+        H_toplam = H_zirhli + self.ayar.lambda_mizan * mizan * np.eye(
+            H_zirhli.shape[0])
 
-        if gunluk is not None:
-            gunluk.append("çevrim %d: V=%.4f  aktif_özdeğer=%.3f  D=%s"
-                          % (c, V, tani["özdeğer_oranı"], list(D)[:4]))
+        # 4. QSVT dinamik Gibbs soğutması
+        cek = durum["cekirdek"]
+        v = np.asarray(cek[0], float).reshape(-1)
+        v = v[:H_toplam.shape[0]] if v.size >= H_toplam.shape[0] else \
+            np.pad(v, (0, H_toplam.shape[0] - v.size))
+        sogutulmus = qsvt_gibbs_sogutma(v, H_toplam, self.faz_tablosu,
+                                        beta_maks=self.ayar.beta_maksimum)
 
-    model.p = p
-    return {"V_ilk": V0, "V_son": kayit[-1], "seyir": kayit,
-            "süre_sn": time.perf_counter() - t0, "dinamik": D,
-            "parametre": len(model), "tünel": tunel_kaydi,
-            "tünel_açıldı": float(sum(1 for g in tunel_kaydi if g > 0.0))}
+        # 5. Tıkanma varsa STA karşıt-adiyabatik sürüşü
+        surus = False
+        if float(zirh_raporu.get("kohomoloji_tikaniklik", 0.0)) > 0.4:
+            sogutulmus = karsit_adiyabatik_surus(sogutulmus, H_toplam,
+                                                 sure_tau=1.0)
+            surus = True
+            print("  [STA] Kohomolojik tıkanıklık teşhis edildi; bariyer "
+                  "O(1) zamanda tünellendi.", flush=True)
+
+        # 6. GCL düğümlerinde FCT kapalı form katsayı intâcı (κ ≡ 1)
+        ornek = np.interp(self.gcl_dugumleri,
+                          np.linspace(-1.0, 1.0, len(sogutulmus)),
+                          np.asarray(sogutulmus, float).reshape(-1))
+        katsayi = hizli_chebyshev_donusumu(ornek)
+        self.meleke_manifoldu.katsayilari_guncelle(
+            katsayi, oran=self.ayar.ogrenme_orani)
+
+        return {"adim_suresi_sn": time.perf_counter() - t0,
+                "topolojik_kayip": float(zirh_raporu.get("toplam_kayip", 0.0)),
+                "sheaf": float(zirh_raporu.get("sheaf_uyumsuzluk", 0.0)),
+                "betti_delik": float(zirh_raporu.get("betti_delik_sayisi", 0.0)),
+                "kohomoloji_hata": float(
+                    zirh_raporu.get("kohomoloji_tikaniklik", 0.0)),
+                "homotopi": float(zirh_raporu.get("homotopi_burulma", 0.0)),
+                "bgcm_mizan": float(mizan),
+                "sta_surusu": float(surus),
+                "hdtf_kesme": float(durum.get("kesme", 0.0))}
+
+    def agirliklari_kaydet(self, dosya_yolu: str) -> None:
+        """Öğrenilen meleke Lie parametrelerini diske mühürle."""
+        dizin = os.path.dirname(dosya_yolu)
+        if dizin:
+            os.makedirs(dizin, exist_ok=True)
+        np.save(dosya_yolu, self.meleke_manifoldu.parametreler_vektoru())
+        print("  [MÜHÜR] 44 meleke ağırlığı kaydedildi: %s"
+              % dosya_yolu, flush=True)
 
 
 # =====================================================================
-def degerlendir(model: Dimag, gorevler: Sequence,
-                azami: int = 20) -> Dict[str, object]:
-    """Değerlendirme: bir bulmacanın hedef ızgarası **tam** çözüldü mü?
+#  GÖREV TÂLİMİ -- ARC görevini fiilen çözen hat
+# =====================================================================
+def gorev_talimi(gorev, devir: int = 120):
+    """Tek bir görevin şahitlerinden o göreve mahsus dalgayı çıkar.
 
-    Ölçü serttir ve öyle olmalıdır: ızgaranın her hücresi doğru olacak.
-    Ayrıca ``ilk_belirteç_isabeti`` raporlanır -- model hiç doğru
-    bilmiyorsa bu da sıfır çıkar ve iddia edilecek bir şey kalmaz.
+    Küllî tâlimden **ayrı** bir iştir ve ayrı olduğu söyleniyor: küllî
+    tâlim 44 meleke parametresini eğitir, bu ise o görevin ``W``sini.
+    ARC'de fiilen ölçülmüş çözüm bu hattan gelmiştir.
     """
-    cozulen = 0
-    isabet_top = 0
-    deneme = 0
-    hucre_isabet: List[float] = []
-    for g in gorevler[:azami]:
-        try:
-            dizi, hedef = arc.gorev_dizisi(g, hedef_indis=0)
-        except Exception:
-            continue
-        deneme += 1
-        baglam = list(dizi)
-        uretilen: List[int] = []
-        for _ in range(len(hedef)):
-            P, _ = model.ileri(baglam[-48:])
-            t = int(np.argmax(P))
-            uretilen.append(t)
-            baglam.append(t)
-        h = list(hedef)
-        n = min(len(h), len(uretilen))
-        dogru = sum(1 for i in range(n) if h[i] == uretilen[i])
-        hucre_isabet.append(dogru / max(len(h), 1))
-        if uretilen[:len(h)] == h:
-            cozulen += 1
-        if n and uretilen[0] == h[0]:
-            isabet_top += 1
-    return {"deneme": deneme, "tam_çözülen": cozulen,
-            "ilk_belirteç_isabeti": isabet_top,
-            "ortalama_hücre_isabeti":
-                float(np.mean(hucre_isabet)) if hucre_isabet else 0.0}
+    from main.cikarim import dalga_kur
+    cift = [(np.asarray(a, int), np.asarray(b, int))
+            for a, b in getattr(gorev, "egitim", [])]
+    return dalga_kur(cift, devir=int(devir))
+
+
+def ana_talim_kosusu(model_cikis_yolu: str = "depo/kulli_dimag_agirlik.npy",
+                     kume: str = "training", ornek: int = 30,
+                     cevrim: int = 3) -> str:
+    """Küllî tâlimi koştur ve **ölçüsünü** bas."""
+    print("=== KÜLLÎ DİMAĞ: BELİRLENİMCİ DALGA TÂLİMİ ===", flush=True)
+    motor = KulliDalgaTalimMotoru()
+
+    gorevler = arc.yukle_hepsi(kume)[:int(ornek)]
+    ham = [{"izgara": g.egitim[0][0]} for g in gorevler if g.egitim]
+    durum = motor.veri_durumu_hazirla(ham)
+
+    satir = []
+    for c in range(int(cevrim)):
+        n = motor.talim_adimi_icra_et(durum)
+        satir.append(n)
+        print("  [ÇEVRİM %d] %.4f sn | zırh %.6f | sheaf %.4f | betti %.0f "
+              "| koho %.4f | mizan %.6f"
+              % (c + 1, n["adim_suresi_sn"], n["topolojik_kayip"],
+                 n["sheaf"], n["betti_delik"], n["kohomoloji_hata"],
+                 n["bgcm_mizan"]), flush=True)
+    motor.agirliklari_kaydet(model_cikis_yolu)
+
+    ilk, son = satir[0], satir[-1]
+    s = ["", "=== KÜLLÎ TÂLİM NETİCESİ ===", "",
+         "  veri parçası    : %d" % durum["parca"],
+         "  HDTF kademe     : %d" % durum["kademe"],
+         "  HDTF kesme      : %.4e  (χ=%d'de kayıp -- saklanmıyor)"
+         % (durum["kesme"], motor.ayar.bag_boyutu_chi),
+         "  zırh kaybı      : %.6f → %.6f"
+         % (ilk["topolojik_kayip"], son["topolojik_kayip"]),
+         "  BGCM mizanı     : %.6f → %.6f"
+         % (ilk["bgcm_mizan"], son["bgcm_mizan"]),
+         "  STA sürüşü      : %d çevrimde tetiklendi"
+         % int(sum(x["sta_surusu"] for x in satir)),
+         "",
+         "  HAD: küllî tâlimin ARC çözümüne katkısı ÖLÇÜLMEMİŞTİR.",
+         "  Fiilen çözen hat `gorev_talimi`dir (bkz. main/cikarim.py)."]
+    return "\n".join(s)
+
+
+if __name__ == "__main__":                               # pragma: no cover
+    cikis = sys.argv[1] if len(sys.argv) > 1 else \
+        "depo/kulli_dimag_agirlik.npy"
+    print(ana_talim_kosusu(cikis))

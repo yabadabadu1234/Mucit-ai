@@ -18,7 +18,7 @@ habersizdi:
 
 * `nefs/kulli_egitim.py`  -- Gri kod + NQS + Grover (dalga),
 * `nefs/qegitim.py::egit` -- Active Subspace + AS-GEK vekil yüzeyi,
-* `main/optimize.py`      -- ikisinin parçaları, ayrıca.
+* `ogrenme/optimize.py`      -- ikisinin parçaları, ayrıca.
 
 Üçü de aynı işi yapıyordu: **gradyansız bir kayıp yüzeyinin asgarîsini
 bulmak.** Ayrı olmalarının hiçbir sebebi yoktu; olan zararı vardı --
@@ -44,7 +44,7 @@ niçin orada olduğunun bir cevabı vardır:
    yarıçapı **bağlanmalıdır**. Bu bir tedbir değil, aramanın iyi
    konulmuş olmasının şartıdır. Sorulmazsa arama boşluğa koşar.
 
-2. **ALTUZAY** (`main/optimize.py`) -- ``d → r`` etkin altuzay. Kayıp
+2. **ALTUZAY** (`ogrenme/optimize.py`) -- ``d → r`` etkin altuzay. Kayıp
    ``d`` boyutta değişse de fiilen birkaç yönde değişir; dalga o
    ``r`` yönde ``r·bit`` kübitle arar. Kübit sayısını düşüren şey
    budur ve ``d = 250`` iken fark hayatîdir.
@@ -352,7 +352,7 @@ class Talim:
                                 "usul": "determinist Walsh kesiti"})
             return Q, None, None
         try:
-            from main.optimize import aktif_altuzay
+            from ogrenme.optimize import aktif_altuzay
             # **DÖNEN ŞEY:** ``(U, özdeğerler, gradyan örnekleri)``.
             # Evvelce bunu ``(U, kayıplar, noktalar)`` sanmıştım ve
             # ölçüldü: vekil ile denge uzuvları hiç ateşlenmiyordu,

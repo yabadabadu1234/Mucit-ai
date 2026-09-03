@@ -192,7 +192,7 @@ ORTA = EgitimAyari(ad="orta", satir_kubiti=6, bag=32, gorev=120,
 #:     Veri yazmacı : B = 2048 dizi × L_bağlam = 4096 belirteç
 #:                  = 8.388.608 belirteç / adım  (8.388.608 kübit)
 #:
-#: Yığın ekseni yazmaçta zaten var (`main/yazmac.py`, ``yigin``) ve
+#: Yığın ekseni yazmaçta zaten var (`kuantum/yazmac.py`, ``yigin``) ve
 #: kayıp artık veriyi yığın hâlinde koşturuyor; o hâlde B'yi büyütmenin
 #: yolu açıktır ve burada ceride hükmü icra edilmiştir.
 #:
@@ -426,7 +426,7 @@ class KulliEgitim:
         **aynı kayıp bütçesiyle** karşılaştırılır; hangisinin daha iyi
         olduğu iddia değil ölçüm meselesidir.
         """
-        from main.optimize import as_gek_adimi
+        from ogrenme.optimize import as_gek_adimi
         a = self.ayar
         p = self.p0.copy()
         # **Eşit bütçe.** Evvelce çevrim sayısı elle veriliyordu ve iki

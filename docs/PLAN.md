@@ -26,7 +26,7 @@ kelimesi yalnız bunu ifade eder.
 ## 1. PADİŞAH KİM?
 
 ```
-main/kaggle.py :: kos()
+ogrenme/kaggle_donanim.py :: kos()
     └── nefs/kulli_egitim.py :: KulliEgitim.kos()
             ├── EĞİTİM   → parametreler Θ
             └── ÇIKARIM  → değerlendirme: tam_çözülen / deneme

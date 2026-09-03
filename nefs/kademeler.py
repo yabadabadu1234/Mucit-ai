@@ -435,7 +435,7 @@ class Kademeler:
         yazılmış atomların ``|A|^d`` terkibinde arama. O dosya ve ona
         hizmet eden aileler **silinmiştir**.
 
-        Yerine `main/main.py`in dalgası geçer: ebat kanunu şahitlerden
+        Yerine `main/cikarim.py`in dalgası geçer: ebat kanunu şahitlerden
         çözülür, renk ise ``softmax(W·φ)`` ağırlıklarından okunur.
         Namzet listesi bu sebeple ya boştur ya **tek** unsurludur --
         dalga bir tanedir, kütükten seçilen bir liste değil.
@@ -451,7 +451,7 @@ class Kademeler:
             derinlik = int(round(self._par("kademe.muhakeme.derinlik")))
 
         def _ara():
-            from main.main import dalga_kur
+            from main.cikarim import dalga_kur
 
             d = dalga_kur(I.ciftler, devir=max(40, 40 * int(derinlik)))
             if d is None:

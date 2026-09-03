@@ -76,10 +76,10 @@ EKSIK: Dict[str, str] = {}
 # ------------------------------------------------------------------
 import akis.hacim  # [gölge] Hacim — ortalama eğrilik akışı ve yoğunluk akışları
 import akis.test_akis  # [şahit] akis test takımı
-import main.ic_bag  # [hakem] Sanal bağın kuantikleştirilmesi -- O(log χ) iddiasının ölçüsü
+import kuantum.ic_bag  # [hakem] Sanal bağın kuantikleştirilmesi -- O(log χ) iddiasının ölçüsü
 import nefs.teskilat  # [uzuv] 𝒪₄₂ Umumileştirme, 𝒪₄₃ Talim, 𝒪₄₄ Tahsil -- formülleriyle uzuv
 import nefs.lisan  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri
-import main.katlama  # [uzuv] HDTF -- hiyerarşik ikili ağaç katlaması, belirlenimci QTT inşası
+import kuantum.katlama  # [uzuv] HDTF -- hiyerarşik ikili ağaç katlaması, belirlenimci QTT inşası
 import akis.ikmal  # [gölge] Ceridenin İkmâl Fıkraları -- Lions, Bochner, Cayley, Postnikov
 import akis.tikiz  # [gölge] Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus
 
@@ -159,12 +159,12 @@ import local_run.entry  # [koşucu] (şerhsiz)
 # ------------------------------------------------------------------
 #  main
 # ------------------------------------------------------------------
-import main.dimag  # [uzuv] Küllî Dimağ -- ``tecrit.md`` mimarisinin fiilî inşası
+import nefs.dimag_kulli  # [uzuv] Küllî Dimağ -- ``tecrit.md`` mimarisinin fiilî inşası
 import main.egitim  # [uzuv] Küllî Dimağ'ın eğitimi -- ARC metniyle, **gradyan inişi olmadan**
-import main.hamiltonyen  # [uzuv] Uzaya mahsus Hamiltonyenler ve kuantum evrimi
-import main.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur
+import nefs.hamiltonyen  # [uzuv] Uzaya mahsus Hamiltonyenler ve kuantum evrimi
+import idrak.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur
 import main.main  # [uzuv] Küllî Dimağ giriş noktası -- iddialar burada **ölçülür**
-import main.zirh  # [uzuv] Enine topolojik zırh -- **her uzaya mahsus**, katman değil kesit (kütük H23)
+import ogrenme.zirh_mizan  # [uzuv] Enine topolojik zırh -- **her uzaya mahsus**, katman değil kesit (kütük H23)
 
 # ------------------------------------------------------------------
 #  mizan

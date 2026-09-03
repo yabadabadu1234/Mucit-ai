@@ -292,7 +292,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     # =================================================================
     #
     # Evvelce veri örnekleri tek tek döngüyle akıştan geçiriliyordu.
-    # Hâlbuki `main/yazmac.py` yazmacı zaten **yığın** taşıyor
+    # Hâlbuki `kuantum/yazmac.py` yazmacı zaten **yığın** taşıyor
     # (``yigin`` ekseni) ve ``QNefs.idrak_et`` ``(B, n, d)`` şeklinde
     # girdi kabul ediyor. Ölçüldü (CPU, χ=16, aynı donanım):
     #
@@ -339,7 +339,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
         if ad in o and ad in UZAYLAR:
             hepsi.append(Olcum("alan.%s" % ad,
                                yumusak_asgari(o[ad]), UZAYLAR[ad]))
-    # **Kapı başına** tutulan kesir (bkz. `main/yazmac.py::sadakat`).
+    # **Kapı başına** tutulan kesir (bkz. `kuantum/yazmac.py::sadakat`).
     hepsi.append(Olcum(
         "kesme", float(q.y.sadakat_kapi_basina(max(q.iz.kapi, 1))),
         OlcuUzayi("kapı_başına_sadakat", 0.0, 1.0, True)))

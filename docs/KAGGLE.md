@@ -29,7 +29,7 @@ assert os.path.isdir(os.path.join(KOK, "idrak/veri/arc_agi_2")), \
 from hesap.donanim import rapor
 print(rapor())
 
-from main.kaggle import kos
+from ogrenme.kaggle_donanim import kos
 netice = kos(zorla=None,                       # donanıma göre kendi seçer
              cikti="/kaggle/working/nefs_dalga",
              mukayese=True)

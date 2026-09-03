@@ -141,7 +141,7 @@ print(rapor())
 
 # ── EĞİTİM ──────────────────────────────────────────────────────────
 # zorla=None  → donanıma göre kendi seçer  ("kısa" / "orta" / "azamî")
-from main.kaggle import kos
+from ogrenme.kaggle_donanim import kos
 netice = kos(zorla=None,
              cikti="/kaggle/working/nefs_dalga",
              mukayese=True)

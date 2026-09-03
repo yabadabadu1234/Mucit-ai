@@ -15,7 +15,7 @@
 sistemde ``Ĥ_CD = (θ̇/2)·σ_y``dir ve ``σ_y`` karmaşıktır. Fakat
 ``i·σ_y = [[0,1],[−1,0]] = J`` **reeldir ve antisimetriktir** -- yani
 ``SO(2)`` dönmesinin ta kendisinin üretecidir. Bu depo zaten reel
-cebirle çalıştığı için (``main/yazmac.py``, ``nefs/qyazmac.donme``),
+cebirle çalıştığı için (``kuantum/yazmac.py``, ``nefs/qyazmac.donme``),
 STA sürüşü buraya zorlanarak değil **tabiî olarak** oturur. Ceridenin
 "reel ``SO(2)`` genel kapıları kısıtlamaz" hükmü (İtiraz 1) bu babda
 fiilen işe yarıyor.

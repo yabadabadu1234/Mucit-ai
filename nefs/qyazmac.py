@@ -32,7 +32,7 @@ için ``2kD`` takas, süpürmede ``~2D``. Blok yerine iade edilir; edilmezse
 yerellik gider ve takas dolaşıklığı sürükleyip ``χ``yi zorlar.
 
 **MPO'lar ``mpo_uygula_hizli`` ile koşar (kütük H197).** Padişahın
-ihtarı yerindeydi: ``main/yazmac.py``e uyarlanabilir zip-up yolunu
+ihtarı yerindeydi: ``kuantum/yazmac.py``e uyarlanabilir zip-up yolunu
 kurmuştum fakat **akışa bağlamamıştım**; ana model hâlâ iki geçişli
 yavaş yolu çağırıyordu. Bir ``idrak_et`` çağrısında 219 süpürme var ve
 her biri o yoldan geçiyordu. Artık üçü de -- ``uzak_cift_mpo``,
@@ -53,7 +53,7 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from main.yazmac import Yazmac, dik_iki_kubit, hadamard
+from kuantum.yazmac import Yazmac, dik_iki_kubit, hadamard
 
 __all__ = ["QAyar", "QYazmac", "donme", "faz_z", "kontrollu_donme",
            "donme_yigin", "kontrollu_donme_yigin", "devret", "MAKAM_ADLARI",
@@ -205,7 +205,7 @@ def makam_kubit_manasi(kac: int) -> Dict[int, Tuple[int, ...]]:
 def donme(teta: float) -> np.ndarray:
     """``R(θ) = [[cos,−sin],[sin,cos]]`` -- reel tek kübitlik dönme.
 
-    Reel cebirde faz işarettir (bkz. ``main/yazmac.py``); ``e^{iθ}``
+    Reel cebirde faz işarettir (bkz. ``kuantum/yazmac.py``); ``e^{iθ}``
     yerine ``SO(2)`` dönmesi taşınır. Dik olduğu için normu korur.
     """
     c, s = math.cos(float(teta)), math.sin(float(teta))

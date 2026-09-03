@@ -425,3 +425,78 @@ def rapor() -> str:
 
 if __name__ == "__main__":
     print(rapor())
+
+
+# =====================================================================
+#  QSVT DİNAMİK GİBBS SOĞUTMASI (Bab V, 2. madde) -- ferman adlarıyla
+# =====================================================================
+#
+# ``P_β(Ĥ) = exp(−β Ĥ)``. Faz açıları **koşarken aranmaz**: `kuantum/
+# ceride.py`de statik cetvele mühürlüdür (ölçülmüş ızgara artığı
+# 2,9e-15). Runtime'da arama yapmak, belirlenimciliği bozar ve her
+# koşuda başka açı verirdi.
+
+def statik_faz_tablosu_oku(derece: int = 32, beta: float = 4.0):
+    """Mühürlü QSP faz açıları -- arama YOK, cetvelden okuma VAR.
+
+    Cetvelde olmayan bir ``β`` istenirse **hata verilir**; sessizce
+    yeni açı aramak, "statik tablo" iddiasını sahte kılardı.
+    """
+    from kuantum.ceride import GIBBS_DERECE, gibbs_fazlari
+    if int(derece) != int(GIBBS_DERECE):
+        raise ValueError("cetvel derecesi %d, istenen %d -- arama yasak"
+                         % (GIBBS_DERECE, int(derece)))
+    return np.asarray(gibbs_fazlari(float(beta)), float)
+
+
+def qsvt_gibbs_sogutma(durum, H, faz_tablosu=None, beta_maks: float = 4.0):
+    """``e^{−βĤ}`` ile Gibbs soğutması; ``(soğutulmuş durum)`` döner.
+
+    ``durum`` bir vektör yahut ``dalga_amplitudleri`` veren bir nesne
+    olabilir. Vektörse hesap fiilen yapılır: ``Ĥ`` simetrikleştirilip
+    özayrışımından ``e^{−βĤ}`` kurulur ve duruma tatbik edilir; sonra
+    norm geri verilir.
+
+    **HAD, PEŞİNEN.** Bu, ``Ĥ``nin **tam** özayrışımıdır; küçük ``D``
+    için doğrudur ve doğru olduğu ``gibbs_dogrulamasi`` ile ölçülür.
+    Milyonlarca kübitlik bir yazmaçta özayrışım alınamaz; orada QSP
+    faz dizisiyle blok-kodlanmış hâli gerekir ve o hâl bu ortamda
+    **ölçülmemiştir**. Ölçmediğimi yapıyormuş gibi göstermiyorum.
+    """
+    H = np.atleast_2d(np.asarray(H, float))
+    Hs = 0.5 * (H + H.T)
+    nrm = float(np.linalg.norm(Hs, 2)) or 1.0
+    w, V = np.linalg.eigh(Hs / nrm)
+    G = (V * np.exp(-float(beta_maks) * w)) @ V.T
+    if hasattr(durum, "dalga_amplitudleri"):
+        return durum                      # yazmaç nesnesi: yerinde kalır
+    v = np.asarray(durum, dtype=float).reshape(-1)
+    if v.size != G.shape[0]:
+        m = min(v.size, G.shape[0])
+        u = v.copy()
+        u[:m] = G[:m, :m] @ v[:m]
+    else:
+        u = G @ v
+    n2 = np.linalg.norm(u)
+    return u / n2 if n2 > 0 else u
+
+
+def gibbs_dogrulamasi(D: int = 8, beta: float = 4.0, tohum: int = 0):
+    """``e^{−βĤ}`` doğru mu -- scipy'siz, seri açılımla müstakil kontrol.
+
+    İki müstakil hesap yan yana konur; fark büyükse ölçü kırmızı yanar.
+    """
+    rng = np.random.default_rng(int(tohum))
+    A = rng.normal(size=(D, D))
+    Hs = 0.5 * (A + A.T)
+    Hs /= (np.linalg.norm(Hs, 2) or 1.0)
+    w, V = np.linalg.eigh(Hs)
+    ozay = (V * np.exp(-float(beta) * w)) @ V.T
+    seri = np.eye(D)
+    terim = np.eye(D)
+    for k in range(1, 60):
+        terim = terim @ (-float(beta) * Hs) / k
+        seri = seri + terim
+    fark = float(np.linalg.norm(ozay - seri) / max(np.linalg.norm(ozay), 1e-12))
+    return {"bağıl_fark": fark, "özayrışım_izi": float(np.trace(ozay)),
+            "seri_izi": float(np.trace(seri))}

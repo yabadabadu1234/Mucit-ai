@@ -34,7 +34,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from main.yazmac import dik_iki_kubit
+from kuantum.yazmac import dik_iki_kubit
 
 from .mertebe import DINAMIK, lifleri_kur
 from .qyazmac import (QYazmac, degil_x, donme, faz_z, kontrollu_donme)
@@ -74,7 +74,7 @@ def nizami_ac(acik: bool = True) -> bool:
 #: **STIEFEL İZOMETRİSİ -- meleke başına kanonikleştirme** (ceridenin
 #: 1. mecburi müdahalesi; kütük H163).
 #:
-#: `main/yazmac.py::kanonikle` MPS'i karışık kanonik hâle getirir ve o
+#: `kuantum/yazmac.py::kanonikle` MPS'i karışık kanonik hâle getirir ve o
 #: hâlde SVD kesmesi **ispatlı olarak en iyidir** (Eckart–Young);
 #: kanonik olmayan biçimde tekil değerler atılan durumların hakikî
 #: ağırlığını temsil etmez. H121 bu yazmacın kanonik **olmadığını**
@@ -121,7 +121,7 @@ def nizami_ac(acik: bool = True) -> bool:
 #: kazandırmıştı (H79/H80) -- tek bir merkez tutulamaz. İki tasarım
 #: birbiriyle çelişiyor ve bu **açık bir borçtur**, örtülmüyor.
 #:
-#: ``kanonikle`` ve ``kanonik_hata`` `main/yazmac.py`de **durmaya devam
+#: ``kanonikle`` ve ``kanonik_hata`` `kuantum/yazmac.py`de **durmaya devam
 #: eder**: ölçüm âleti olarak doğrudur (H121'in iddiasını sayıyla
 #: gösterir) ve merkez takibi kurulduğunda hazırdır.
 KANONIK_ACIK: bool = False

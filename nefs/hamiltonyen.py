@@ -45,8 +45,8 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .kategori import Uzay
-from .yazmac import Yazmac
+from idrak.kategori import Uzay
+from kuantum.yazmac import Yazmac
 
 __all__ = ["UzayHamiltonyeni", "hamiltonyenleri_kur", "evrim_uygula",
            "tunelleme_uygula"]

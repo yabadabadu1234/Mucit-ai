@@ -43,7 +43,7 @@ koyar ve genliği o matrislerin çarpımından üretir:
 
     genlik(i₁i₂…i_N) = A₁[i₁] · A₂[i₂] · … · A_N[i_N]
 
-Hafıza `N·χ²` olur, `2^N` değil. Kod'da `main/yazmac.py`.
+Hafıza `N·χ²` olur, `2^N` değil. Kod'da `kuantum/yazmac.py`.
 
 ### χ (chi) — "bağ boyutu"
 O küçük matrislerin kenar uzunluğu. **Ne kadar dolaşıklık

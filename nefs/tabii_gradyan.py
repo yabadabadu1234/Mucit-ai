@@ -27,7 +27,7 @@ olur ve kurulması ``4d² ≈ 250 000`` iç çarpım ister; her iç çarpım bir
 ileri geçiş demek olduğu için bu imkânsızdır. Onun için ``r`` boyutlu
 bir alt uzay seçilir (``r ≈ 8``), tam Fubini–Study orada kurulur
 (``4r² = 256`` iç çarpım, **16** ileri geçiş) ve adım geri izdüşürülür.
-Bu, `main/optimize.py`deki Active Subspaces fikrinin tabiî gradyanla
+Bu, `ogrenme/optimize.py`deki Active Subspaces fikrinin tabiî gradyanla
 birleşmiş hâlidir; ikisi de aynı zarureti kabul eder.
 
 **Parametre-kaydırma neden kullanılmadı.** `kuantum/eniyileme.py`
