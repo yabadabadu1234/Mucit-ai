@@ -30,7 +30,7 @@ import numpy as np
 # modülü fiilen yükler, rol verir ve ``yokla()`` ile her koşuda yoklar.
 # `tanilama/nizam.py` tabiiyeti ``ast`` ile ölçtüğü için, bağlamanın
 # algoritması tam olarak budur -- bkz. divanın şerhi.
-from . import divan
+from tanilama import divan
 
 __all__ = ["Sahit", "SAHITLER", "denetle", "rapor"]
 

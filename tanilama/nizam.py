@@ -35,9 +35,16 @@ KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #: Ana giriş noktaları -- padişahın tahtı. Buradan erişilemeyen her şey
 #: beyliktir. Liste kasten KISADIR: model tektir, girişi de tek olmalıdır.
+#:
+#: **ÖLÇÜLEN VE DÜZELTİLEN BAYATLIK (kütük H206).** ``main.kaggle`` bu
+#: oturumda ``ogrenme.kaggle_donanim``a taşındı ve ``nefs.kulli_egitim``
+#: silindi; varsayılan hâlâ eskiyi gösteriyordu. Bayat bir giriş
+#: noktası, o noktadan erişilen her şeyi sessizce beylik sayardı.
 GIRISLER: Tuple[str, ...] = (
-    "main.kaggle",           # Kaggle koşucusu
-    "nefs.kulli_egitim",     # küllî eğitim
+    "main.egitim",           # yerel/genel tâlim motoru
+    "main.cikarim",          # yerel/genel çıkarım ve hüküm motoru
+    "main.kaggle_egitim",    # Kaggle tâlim nazırı
+    "main.kaggle_cikarim",   # Kaggle teslimat nazırı
     "nefs.qakis",            # 41 üniter meleke, kübit akışı
     "nefs.hukum_denetimi",   # hükümlerin makine şahitleri
 )

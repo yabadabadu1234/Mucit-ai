@@ -6997,3 +6997,63 @@ olduğunu fakat **bedelinin ödenemediğini** gösterir.
 **Varsayılan ``yerel``de bırakıldı** ve ``3618c87e`` gerileme
 kontrolünden geçti (TAM, dışarıda 1,0000). Ölçüm kötü çıkan bir şeyi
 varsayılan yapmak, ölçümü hiç yapmamaktan beterdir.
+
+---
+
+## H206 -- 11 DOSYA OTOPSİSİ: DİVAN BİR YERDE KENDİ FERMANIYLA ÇELİŞTİ
+
+Divan (İCAD-OPT-2026/14) on bir dosyanın hükmünü istedi. Her madde
+silmeden evvel **fonksiyonel erişimle** doğrulandı (kayıt zinciri
+izlenerek, yalnız divan sicilinden değil).
+
+### REDDEDİLEN: `nefs/qegitim.py`
+
+Divan bunu *"1990'lar AS-GEK/Nyström kalıntısı, DERHAL SİL"* diye
+emretti. **Aynı fermanın kendisi bunu çürüttü:** dosya, fermanın
+*"RESMÎ MOTOR"* dediği `main/egitim.py`nin 296. satırınca
+(`from nefs.qegitim import degerlendir, ornekler`) ve fermanın
+*"yegâne resmî hakem"* dediği `nefs/kulli_kayip.py`nin 275. ve 458.
+satırlarınca doğrudan çağrılıyor. Silinseydi iki korunan dosya birden
+kırılırdı. **Silinmedi.**
+
+### KABUL EDİLEN: iki dosya, doğrulanmış orphan
+
+`nefs/dimag_kulli.py` ve `nefs/qmain.py` -- ikisi de yalnız
+`nefs/divan.py`nin sicilinden erişiliyordu (kayıt = tabiiyet, uzuvluk
+değil; dosyanın kendi şerhinde zaten yazılı). Gerçek giriş
+noktalarından (`main.egitim`, `main.cikarim`,
+`main.kaggle_{egitim,cikarim}`, `nefs.hukum_denetimi`) elle yapılan
+içe aktarma izi sürümüyle **hiçbir yol bulunamadı**. İkisi de silindi,
+sicilden çıkarıldı.
+
+**Not:** `nefs/dimag_kulli.py`, bu oturumun evvelki bir turunda
+`main/dimag.py`nin nakli olarak kuruldu (`main/` tanziminde) ve hiç
+bağlanmadı -- kalıntı gerçekten benim, gerekçesi divanın dediği değil.
+
+### TAŞINAN: `nefs/divan.py` → `tanilama/divan.py`
+
+Tek fonksiyonel çağıranı `nefs/hukum_denetimi.py`ydi
+(`from . import divan`); `from tanilama import divan`a çevrildi.
+Dosyanın kendisi yalnız mutlak içe aktarma kullanıyordu, göreli
+bağı yoktu; nakil temizdi.
+
+### ERTELENEN: `idrak/egitim.py`
+
+Ayrı bir divan notu bunu *"eski PyTorch, zaten göç etti"* diye
+sildirmek istedi. **Reddedildi, kabul değil erteleme olarak:**
+
+* `idrak/test_idrak.py` onu beş yerden çağırıyor.
+* Bu ortamda ``torch`` kurulu değil; ne dosya ne testi burada
+  çalıştırılabiliyor -- yani parite iddiasını **ölçemem**.
+* `nefs/divan.py`nin kendisi bunu zaten torch-şartlı bir uzuv olarak
+  ele alıyordu (`try/except`, `EKSIK` sözlüğüne kayıt) -- kalıntı
+  muamelesi görmüyordu.
+
+Ölçemediğim bir yerde "zaten göç etti" demek H100'ün ihlâli olurdu.
+
+### YAN NETİCE: `tanilama.nizam.padisahin_eli`nin varsayılanı bayattı
+
+Fonksiyonun varsayılan giriş noktaları hâlâ `main.kaggle` (bu oturumda
+`ogrenme.kaggle_donanim`a taşındı) ve `nefs.kulli_egitim` (bu oturumda
+silindi) diyordu. Bu ayrı bir kusur; bu turda düzeltilmedi, kayda
+geçti.

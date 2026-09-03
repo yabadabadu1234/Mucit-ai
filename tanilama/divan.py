@@ -159,7 +159,6 @@ import local_run.entry  # [koşucu] (şerhsiz)
 # ------------------------------------------------------------------
 #  main
 # ------------------------------------------------------------------
-import nefs.dimag_kulli  # [uzuv] Küllî Dimağ -- ``tecrit.md`` mimarisinin fiilî inşası
 import main.egitim  # [uzuv] Küllî Dimağ'ın eğitimi -- ARC metniyle, **gradyan inişi olmadan**
 import nefs.hamiltonyen  # [uzuv] Uzaya mahsus Hamiltonyenler ve kuantum evrimi
 import idrak.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur
@@ -204,7 +203,6 @@ import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun penc
 import nefs.meleke  # [uzuv] Meleke (faculty) sözleşmesi ve sicili
 import nefs.murakabe  # [uzuv] 𝒪₂₅–𝒪₃₆: murâkabe -- nefsin kendi hükmünü denetlediği mertebe
 import nefs.qkaide  # [uzuv] KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta
-import nefs.qmain  # [uzuv] Kübit-yerli ana modelin giriş noktası -- iddialar burada **ölçülür**
 import nefs.tabii_gradyan  # [uzuv] TABİÎ GRADYAN (natural gradient) -- kullanıcı hükmü H86
 import nefs.tesir  # [uzuv] Kademe 5 -- **icra izi, hassasiyet ve hata izolasyonu**
 import nefs.test_nefs  # [şahit] nefs sınamaları
@@ -424,8 +422,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '(şerhsiz)'),
     ('local_run.entry', 'koşucu',
      '(şerhsiz)'),
-    ('nefs.dimag_kulli', 'uzuv',
-     'Küllî Dimağ -- ``tecrit.md`` mimarisinin fiilî inşası'),
     ('main.egitim', 'uzuv',
      "Küllî Dimağ'ın eğitimi -- ARC metniyle, **gradyan inişi olmadan**"),
     ('nefs.hamiltonyen', 'uzuv',
@@ -503,8 +499,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '𝒪₂₅–𝒪₃₆: murâkabe -- nefsin kendi hükmünü denetlediği mertebe'),
     ('nefs.qkaide', 'uzuv',
      "KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta"),
-    ('nefs.qmain', 'uzuv',
-     'Kübit-yerli ana modelin giriş noktası -- iddialar burada **ölçülür**'),
     ('nefs.tabii_gradyan', 'uzuv',
      'TABİÎ GRADYAN (natural gradient) -- kullanıcı hükmü H86'),
     ('nefs.tesir', 'uzuv',
