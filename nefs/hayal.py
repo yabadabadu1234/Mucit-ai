@@ -38,7 +38,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .agac import AgacYazmaci
+from kuantum.yazmac import AgacYazmaci
 
 __all__ = ["KADEMELER", "Kayit", "Hayal"]
 
@@ -159,8 +159,8 @@ class Hayal:
 
 # =====================================================================
 def _gosterim() -> str:
-    from .agac import AgacAyar
-    from .ucagac import iki_kademeli_donme
+    from kuantum.yazmac import AgacAyar
+    from kuantum.yazmac import iki_kademeli_donme
 
     rng = np.random.default_rng(0)
     s = ["=== 𝒪₂ HAYAL: üç kademeli depo + tersinir temizlik (H58) ==="]

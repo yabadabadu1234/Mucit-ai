@@ -1623,7 +1623,7 @@ def test_ic_bag_serpistirilmis_QTT_izafi_operatorleri_TAM_tasiyor():
     """
     import math
     import numpy as np
-    from kuantum.ic_bag import (qtt_cekirdek_ayristir, qtt_cekirdek_ac,
+    from kuantum.yazmac import (qtt_cekirdek_ayristir, qtt_cekirdek_ac,
                              kapali_form_kiyasi, acik_parametre)
 
     chi = 32

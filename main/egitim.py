@@ -98,12 +98,13 @@ from typing import Dict, List, Optional, Sequence, Tuple  # noqa: E402
 import numpy as np                                       # noqa: E402
 
 from idrak import arc                                    # noqa: E402
-from kuantum.katlama import hiyerarsik_ikili_agac_katlama  # noqa: E402
+from kuantum.yazmac import hiyerarsik_ikili_agac_katlama  # noqa: E402
 from kuantum.qsvt import (qsvt_gibbs_sogutma,            # noqa: E402
                           statik_faz_tablosu_oku)
 from nefs.lisan import IzafiMevki2D, tiktoken_2d_kodla   # noqa: E402
 from nefs.melekeler import melekeleri_kur                # noqa: E402
-from ogrenme.optimize import OptimizeAyari, eniyile      # noqa: E402
+from ogrenme.optimize import OptimizeAyari               # noqa: E402
+from ogrenme.hoca import HocaAyari, hoca_egit            # noqa: E402
 from ogrenme.fct import (gauss_chebyshev_lobatto_dugumleri,  # noqa: E402
                          hizli_chebyshev_donusumu)
 from ogrenme.sta import karsit_adiyabatik_surus          # noqa: E402
@@ -193,6 +194,16 @@ class EgitimAyari:
     # --- donanım
     surec: int = 0                   # 0 = donanımdan tayin et
     tohum: int = 0
+    #: **TÂLİM SAAT HADDİ (kütük H212).** ``ogrenme/hoca.py``nin bütçe
+    #: freni bu haddi okur: ``tur × d × düğüm`` çağrısının kestirilen
+    #: süresi bunu aşarsa koşu **başlamaz**, ``RuntimeError`` verir.
+    #:
+    #: Sessiz bir sabit değil, profilde **ilan edilen** bir ölçüdür ve
+    #: sebebi ölçümdür: aynı fren ``AZAMI_KAGGLE``ı 1 saatlik varsayılan
+    #: hadde reddediyordu (d=264, tur=3, düğüm=4097 → 3,24 milyon çağrı
+    #: ≈ 18 saat). O profil zaten kasten uzun koşudur; haddi profilin
+    #: kendisi söylemelidir, fren değil.
+    azami_talim_saati: float = 1.0
 
     def qayar(self):
         from nefs.qyazmac import QAyar
@@ -224,7 +235,8 @@ ORTA = EgitimAyari(ad="orta", satir_kubiti=6, bag=32, gorev=120,
                    ornek_sayisi=24, degerlendirme_gorevi=40,
                    azami_uret=120, dogrulama_sayisi=100,
                    nqs_gizli=(96, 64), nqs_derece=6, cevrim=40,
-                   ornek=128, zincir=32, bit=8)
+                   ornek=128, zincir=32, bit=8,
+                   azami_talim_saati=6.0)
 
 #: **Kaggle azamî hâli.** 4 cihaz, ~84 GB VRAM. Ceridenin taksimatı::
 #:
@@ -241,7 +253,7 @@ AZAMI_KAGGLE = EgitimAyari(
     azami_uret=0, bit=10, yaricap=3.0, nqs_gizli=(512, 256, 128),
     nqs_derece=8, cevrim=400, ornek=4096, zincir=256, oran=0.10,
     kademe=0.4, lam=1e-3, sanal_kubit_sayisi=88_000_000,
-    qsvt_derecesi=32, beta_maksimum=4.0)
+    qsvt_derecesi=32, beta_maksimum=4.0, azami_talim_saati=24.0)
 
 #: Ayar adından profile -- komut satırı için.
 PROFILLER: Dict[str, EgitimAyari] = {
@@ -348,8 +360,19 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         gcl_nokta_sayisi=max(8, int(ayar.ornek)),
         yon_sayisi=int(ayar.altuzay_ornek), blok=int(ayar.blok),
         sesli=True, tohum=ayar.tohum)
+    # **HOCA (kütük H212).** Motor yine `ogrenme/optimize.py`dir; `hoca`
+    # onun üstüne üç uzuv koyar ve o uzuvların üçü de bu hatta lâzımdır:
+    #   TÜNEL  -- durgunluk düşüp HAD zorlayıcı bulamadığında STA
+    #             karşıt-adiyabatik sürüşü (H29'un çift şartı).
+    #   VEKİL  -- kapalı (varsayılan): küllî kayıp çağrısı pahalıdır,
+    #             RKHS yüzeyi ancak aday çoğaldığında değer.
+    #   BÜTÇE  -- ``d`` büyürse koşu SESSİZCE günlere yayılmasın diye
+    #             peşinen reddeder (idrak/model.py dersi, H209).
+    hoca_ayar = HocaAyari(temel=opt, tunel_acik=True, vekil_acik=False,
+                          bütçe_denetimi=True,
+                          azami_saniye=float(ayar.azami_talim_saati) * 3600.0)
     try:
-        r = eniyile(kayip_p, p0, opt)
+        r = hoca_egit(kayip_p, p0, hoca_ayar)
     finally:
         if havuz is not None:
             havuz.close()

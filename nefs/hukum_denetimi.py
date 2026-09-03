@@ -215,7 +215,7 @@ def _h44_uzunluktan_bagimsiz() -> Tuple[bool, str]:
 
 def _h53_agac_tam_buzulme() -> Tuple[bool, str]:
     """Ağaçta çevrim yok → büzülme TAM."""
-    from .agac import AgacAyar, AgacYazmaci
+    from kuantum.yazmac import AgacAyar, AgacYazmaci
     for h, w in ((2, 2), (2, 3), (3, 3)):
         ag = AgacYazmaci(AgacAyar(h=h, w=w, renk=2, bag=8))
         psi = ag.buz()
@@ -227,7 +227,7 @@ def _h53_agac_tam_buzulme() -> Tuple[bool, str]:
 
 def _h64_agac_mpo() -> Tuple[bool, str]:
     """Ağaç MPO kapısı, χ yeterken TAM hesapla aynı."""
-    from .agac import _kapi_sinamasi
+    from kuantum.yazmac import _kapi_sinamasi
     r = _kapi_sinamasi(3, 3, 2, 64, 10)
     return r["hata"] < 1e-12, "‖Δψ‖/‖ψ‖ = %.3e, norm %.9f" % (r["hata"],
                                                               r["norm"])
@@ -235,7 +235,7 @@ def _h64_agac_mpo() -> Tuple[bool, str]:
 
 def _h65_boyut_ihtimalde() -> Tuple[bool, str]:
     """Çıktı ağacı açıkken bütün boyutlar askıda: ``P(dolu)=renk/(renk+1)``."""
-    from .ucagac import UcAgac
+    from kuantum.yazmac import UcAgac
     g = np.array([[1, 2], [3, 0]])
     u = UcAgac([(g, g)], g, renk=4, bag=8)
     M = u.doluluk_haritasi()
@@ -246,7 +246,7 @@ def _h65_boyut_ihtimalde() -> Tuple[bool, str]:
 
 def _h66_hayal_tersinir() -> Tuple[bool, str]:
     """Anlık kademe tersinir devreyle temizlenir; destekçisiz tahsis reddedilir."""
-    from .agac import AgacAyar, AgacYazmaci
+    from kuantum.yazmac import AgacAyar, AgacYazmaci
     from .hayal import Hayal
     ag = AgacYazmaci(AgacAyar(h=4, w=4, renk=2, bag=32))
     h = Hayal(ag)
@@ -316,7 +316,7 @@ def _h71_bgs_haddi() -> Tuple[bool, str]:
 
 def _h72_ptr_buzulme() -> Tuple[bool, str]:
     """Halkanın yığın büzülmesi elle çarpımla birebir aynı."""
-    from kuantum.ptr import TensorHalka
+    from kuantum.yazmac import TensorHalka
     H = TensorHalka(5, d=2, chi=3, tohum=2)
     X = np.random.default_rng(0).integers(0, 2, size=(7, 5))
     elle = []

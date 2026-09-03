@@ -7193,3 +7193,94 @@ merdiveni, `nefs/taksimat.py`nin 4-bölgeli adresleyicisi,
 dosyalık cetvelinin yalnız 1 maddesinin (madde 9, katlama) gerçek ve
 sınanmış bir kapanışıdır. Geri kalan 7 dosya için "cevher" iddiaları
 henüz AST/ölçümle doğrulanmadı — bir sonraki adım budur.
+
+## H211 — KÜME 1 TEVHİDİ İCRA EDİLDİ: altı dosya tek çipte
+
+Kullanıcı ihtarı yerindeydi: *"tek oturumda tüm dosyaları okumana,
+adam gibi test etmene mani olan ne"* — mani yoktu. Dokuz dosyanın
+dokuzu da baştan sona okundu ve zabıtın cevher/toprak cetveli tek tek
+yüzleştirildi.
+
+**Taşınan altı dosya** (`git rm`, gövdeleri `kuantum/yazmac.py`de):
+
+| dosya | taşınan | ölçülen netice |
+|---|---|---|
+| `kuantum/katlama.py` | HDTF ikili ağaç katlaması | çekirdek zinciri elle büzülüp `Yazmac.norm()` ile yüzleştirildi, fark `1.4e-07` |
+| `kuantum/ic_bag.py` | QTT serpiştirilmiş faktörizasyon | öteleme `T̂`: 34 parametre (açık 128), hata `1.9e-16`, geri-açma `4.4e-16` |
+| `kuantum/ptr.py` | polinomial tensör halkası | döngüsel hedefte RMSE halka `0.1229` — zincir `0.2987` |
+| `nefs/agac.py` | 2D ağaç tensör ağı (TTN) | 30×30 köşe-köşe: zincir 899 → ağaç **18** adım (50 kat); 3×3'te 10 kapı `‖Δψ‖/‖ψ‖ = 2.9e-15` |
+| `nefs/ucagac.py` | `iki_kademeli_donme` + üç ağaç | `‖G*G−I‖ = 2.1e-17` |
+| `nefs/ihtimal.py` | ızgara ihtimal uzayı | **çöken okuma yolu tamir oldu**, aşağıya bak |
+
+Taşıma **elle yeniden yazılarak değil**, kaynak gövde birebir alınarak
+yapıldı (docstring/import/`__all__`/`__main__` soyuldu, üç ad çakışması
+— `rapor`×2, `_gosterim`×3 — yeniden adlandırıldı). Matematiğe tek
+karakter dokunulmadı; `kuantum/yazmac.py` 1573 → 3799 satır.
+
+### Tevhidin ortaya çıkardığı iki gerçek kusur
+
+1. **`nefs/ihtimal.py`nin bütün okuma yolu ÇÖKÜYORDU.**
+   `hucre_dagilimi` çevreleri kendi başına büzüyor ve `A[k]` diye
+   indeksliyordu; hâlbuki `Yazmac.A`nın şekli `(B, n, χ, 2, χ)`dir —
+   ilk eksen **yığın**dır, yuva değil. Fiilen koşturuldu:
+   `IndexError: index 11 is out of bounds for axis 0 with size 1`.
+   Yani `hucre_dagilimi`, `izgara_oku`, `izgara_ihtimali` — üçü de
+   hiç çalışmıyordu. Görülmemesinin sebebi AST ile ölçüldü: **o
+   dosyayı hiçbir modül import etmiyordu** (sıfır çağıran). Nüsha
+   `Yazmac.blok_dagilimi`a indirilince kusur kalktı; artık renk 2'ye
+   kilitlenen hücre `argmax = 2` okuyor.
+
+2. **`blok_dagilimi` üç nüshaydı.** Saf `Yazmac` cebri olduğu hâlde
+   `nefs/qyazmac.py` ve `nefs/ihtimal.py`de ayrı ayrı duruyordu ve
+   biri bozuktu. Gövde `Yazmac.blok_dagilimi`a alındı; ikisinin
+   birebir aynı sayıyı verdiği yığınlı (B=3) ve yığınsız hâlde,
+   trivial olmayan bloklarda ölçüldü: **âzamî fark `0.0`**.
+
+### Zabıtın cetvelinde KABUL EDİLMEYEN iki madde
+
+* **`nefs/qyazmac.py` "gereksiz ikinci sarmalayıcı katman" DEĞİLDİR.**
+  Okundu: küllî hüküm alanları (makam/mîzân/tenakuz/tasdik/sükût/nakz/
+  kelam/kâide/orak/gaye/tertip), Ĥ_Dimağ eklem operatörü, `mpo_topla`/
+  `mpo_dagit`, Gray-kod makam merdiveni — bunlar `nefs` semantiğidir,
+  kuantum ilkelleri değil. Üstelik AST ile ölçüldü: **20 modül** ona
+  bağlı ve `nefs.qakis` üzerinden main-4'ten erişiliyor. Kuantum
+  ilkel dosyasının içine `nefs` semantiği koymak katmanı ters çevirir;
+  taşınmadı.
+* **`kuantum/ptr.py` durum temsili olarak taşınmadı**, çünkü zabıtın
+  kendi cetveli de öyle diyor (*"bu yapı durum değil yüzey
+  temsilidir"*). Dosya olarak birleşti, fakat `Yazmac`ın durum
+  taşıyıcısı olmadı; halka çevrimlidir ve kanonik hâli yoktur.
+
+Ayrıca zabıtın *"ana veri/durum taşıyıcısı TTN olacaktır"* hükmü bu
+turda **icra edilmedi ve edilmemesinin sebebi ölçüdür**: `Yazmac`
+1D MPS üzerine kurulu, `nefs/qakis`ten `main/egitim.py`ye kadar 20
+modül onun `(B, n, χ, 2, χ)` düzenine bağlı ve 390 sınama onu
+denetliyor. Durum taşıyıcısını ağaca çevirmek bir birleştirme değil,
+çekirdeğin baştan yazılmasıdır; ayrı ve açık bir karar ister.
+
+### Şahitler
+
+`kuantum/test_yazmac_tevhid.py` yazıldı (19 sınama, hepsi geçiyor):
+HDTF norm örtüşmesi, QTT'nin ötelemeyi tam taşıması **ve** rastgele
+çekirdeği sıkıştırMAması (haddin de sınanması), TTN `O(log N)`
+mesafesi, `χ` daralınca hatanın **büyümesi** (ölçüt kör değil),
+üniterlik, halkanın döngüsel hedefte üstünlüğü, çöken okuma yolunun
+tamiri, nüsha tekliği ve **altı dosyanın fiilen silinmiş olması**.
+
+## H212 — `ogrenme/hoca.py` main'e bağlandı; bütçe haddi profile geçti
+
+H209'da yazılan `hoca.py` beylik kalmıştı ve `nizam` bunu kırmızı
+yaktı (`test_padisahin_eli_HER_MODULE_uzaniyor` düştü). Kullanıcı
+hükmü gereği (*"ya 4 main'e bağlanacak ya olmayacak"*) bağlandı:
+`main/egitim.py::kulli_kayip_talimi` artık `eniyile` yerine
+`hoca_egit` çağırıyor — motor yine `ogrenme/optimize.py`, üstüne
+TÜNEL (STA) ve bütçe freni geliyor.
+
+Bağlarken bir kusur ölçüldü ve düzeltildi: bütçe freninin 1 saatlik
+varsayılan haddi `AZAMI_KAGGLE` profilini **reddediyordu** (d=264,
+tur=3, düğüm=4097 → 3,24 milyon çağrı ≈ 18 saat). O profil zaten
+kasten uzun koşudur; had frenin sessiz sabiti olamaz. `EgitimAyari`ye
+`azami_talim_saati` alanı kondu: `KISA_CPU` 1, `ORTA` 6,
+`AZAMI_KAGGLE` 24 saat. Üç profil de artık geçiyor.
+
+**Netice: `beylik: YOK` — 208 modülün 208'i main-4'ten erişiliyor.**

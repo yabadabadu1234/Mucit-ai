@@ -937,81 +937,19 @@ class QYazmac:
     def blok_dagilimi(self, bas: int, kac: int) -> np.ndarray:
         """``bas``tan itibaren ``kac`` kübitin **ortak** dağılımı -- tam.
 
-        Tek yuva yoğunlukları (``yuva_yogunluklari``) bağımsızlık varsayar
-        ve dolaşık bir durumda yanıltır; belirteç ise ``kac`` kübite
-        birden kodlanmıştır. Onun için burada gerçek indirgenmiş yoğunluk
-        kurulur: sol çevre ``E_L`` zincirin başından, sağ çevre ``E_R``
-        sonundan sarılır, blok ikisinin arasına yerleştirilir::
+        **Nüsha tekleşti (kütük H211).** Bu büzülme saf ``Yazmac``
+        cebridir -- ``nefs`` semantiğinden hiçbir şey kullanmaz -- ve
+        aynısının bir başka nüshası ``nefs/ihtimal.py``de duruyordu.
+        Gövde ``kuantum.yazmac.Yazmac.blok_dagilimi``a taşındı; burası
+        artık ona delege eder. İkisinin birebir aynı sayıyı verdiği
+        (yığınlı ve yığınsız, trivial olmayan bloklarda) ölçüldü:
+        âzamî fark ``0.0``.
 
-            ρ_blok = Tr_çevre |Ψ⟩⟨Ψ|,   P(x) = ⟨x|ρ_blok|x⟩
-
-        Bu bir POVM'dir (``Σ E_x = I``) ve **çöküş yoktur** (kütük H31):
-        dalga okunduktan sonra da diridir, hiçbir yere çökertilmez.
-
-        Maliyet ``O(N χ³ + 4^kac χ²)``; ``kac`` küçük tutulmalıdır
-        (belirteç başına kübit sayısı kadar, varsayılan 4 → 16 durum).
+        Tek yuva yoğunlukları (``yuva_yogunluklari``) bağımsızlık
+        varsayar ve dolaşık bir durumda yanıltır; belirteç ise ``kac``
+        kübite birden kodlanmıştır -- onun için ortak dağılım şarttır.
         """
-        bas = int(bas)
-        kac = int(kac)
-        if kac < 1 or bas + kac > self.n:
-            raise IndexError("blok zincirin dışına taşıyor")
-        X = self.y.bag
-        A = self.y.A                                  # (B, n, X, 2, X)
-        Bn = self.y.B
-
-        # Yığın ekseni ``B`` bütün büzülmelerde taşınır: her üye kendi
-        # dağılımını verir (kullanıcı hükmü). ``einsum`` yol araması
-        # sıcak yolda israftı; çevre büzülmeleri açık ``matmul``dur.
-        L = np.zeros((Bn, X, X))
-        L[:, 0, 0] = 1.0
-        for k in range(bas):
-            Ak = A[:, k].astype(np.float64)           # (B,a,i,b)
-            # L[b,d] = Σ_{a,c,i} L[a,c] A[a,i,b] A[c,i,d]
-            #
-            # **ÖLÇÜLEN VE DÜZELTİLEN HATA.** Bu büzülme iki adımdır:
-            #   1) t1[i,c,b] = Σ_a L[a,c] A[a,i,b]
-            #   2) L[b,d]    = Σ_{i,c} t1[i,c,b] A[c,i,d]
-            # Evvelki kod 2. adımda ``A``nın **çıkış** bağını (b) ``t1``in
-            # ``c``siyle büzüyordu; doğrusu **giriş** bağını (c) büzmektir.
-            # Yanlış bacak büzüldüğü için sol çevre bambaşka bir dizey
-            # çıkıyordu: tam dalgayla yüzleştirildi, fark 2,4–3,2 ölçüldü
-            # (sağ çevre ise 1e-16 ile zaten doğruydu). Neticesi küçük
-            # değildir: ``beyan`` bu ρ'dan okunur, yani modelin BÜTÜN
-            # belirteç dağılımı yanlış çevreden çıkıyordu -- köşegende
-            # negatif "olasılıklar" bile vardı. Düzeltme 20 halde tam
-            # dalgayla 1e-16'da örtüşür ve negatif köşegen kalmaz.
-            t1 = np.matmul(L.transpose(0, 2, 1),
-                           Ak.reshape(Bn, X, 2 * X))  # (B,c,(i,b))
-            t1 = t1.reshape(Bn, X, 2, X).transpose(0, 2, 1, 3)   # (B,i,c,b)
-            Ai = Ak.transpose(0, 2, 1, 3)                        # (B,i,c,d)
-            L = np.matmul(t1.transpose(0, 1, 3, 2), Ai).sum(axis=1)
-        R = np.zeros((Bn, X, X))
-        R[:, 0, 0] = 1.0
-        for k in range(self.n - 1, bas + kac - 1, -1):
-            Ak = A[:, k].astype(np.float64)
-            # R[a,c] = Σ_{b,d,i} R[b,d] A[a,i,b] A[c,i,d]
-            t1 = np.matmul(Ak.transpose(0, 2, 1, 3).reshape(Bn, 2 * X, X),
-                           R).reshape(Bn, 2, X, X)     # (B,i,a,d)
-            R = np.matmul(t1.transpose(0, 1, 2, 3),
-                          Ak.transpose(0, 2, 3, 1)).sum(axis=1)
-
-        M = L
-        boyut = 1
-        for k in range(bas, bas + kac):
-            Ak = A[:, k].astype(np.float64)
-            M = np.einsum("z...ac,zaib,zcjd->z...ijbd", M, Ak, Ak,
-                          optimize=False)
-            boyut *= 2
-        rho = np.einsum("z...bd,zbd->z...", M, R, optimize=False)
-        rho = rho.reshape([Bn] + [2] * (2 * kac))
-        eks = [0] + [1 + x for x in
-                     (list(range(0, 2 * kac, 2))
-                      + list(range(1, 2 * kac, 2)))]
-        rho = np.transpose(rho, eks).reshape(Bn, boyut, boyut)
-        P = np.clip(np.real(np.diagonal(rho, axis1=1, axis2=2)), 0.0, None)
-        t = P.sum(axis=1, keepdims=True)
-        P = np.where(t > 1e-30, P / np.maximum(t, 1e-30), 1.0 / boyut)
-        return P if Bn > 1 else P[0]
+        return self.y.blok_dagilimi(bas, kac)
 
     def beyan(self, sozluk: int, satir: Optional[int] = None) -> np.ndarray:
         """Belirteç dağılımı: **kelam alanından** okunur.

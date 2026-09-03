@@ -76,10 +76,8 @@ EKSIK: Dict[str, str] = {}
 # ------------------------------------------------------------------
 import akis.hacim  # [gölge] Hacim — ortalama eğrilik akışı ve yoğunluk akışları
 import akis.test_akis  # [şahit] akis test takımı
-import kuantum.ic_bag  # [hakem] Sanal bağın kuantikleştirilmesi -- O(log χ) iddiasının ölçüsü
 import nefs.teskilat  # [uzuv] 𝒪₄₂ Umumileştirme, 𝒪₄₃ Talim, 𝒪₄₄ Tahsil -- formülleriyle uzuv
 import nefs.lisan  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri
-import kuantum.katlama  # [uzuv] HDTF -- hiyerarşik ikili ağaç katlaması, belirlenimci QTT inşası
 import akis.ikmal  # [gölge] Ceridenin İkmâl Fıkraları -- Lions, Bochner, Cayley, Postnikov
 import akis.tikiz  # [gölge] Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus
 
@@ -144,6 +142,7 @@ import kuantum.surekli  # [uzuv] Sürekli değişkenli (CV) fotonik operatörler
 import kuantum.tda  # [uzuv] TDA — kombinatoryal Laplasyen, Betti sayıları ve kalıcı homoloji
 import kuantum.test_kuantum  # [şahit] kuantum test takımı
 import kuantum.test_kuantum_ileri  # [şahit] ``kuantum.surekli``, ``kuantum.topolojik``, ``kuantum.eniyileme`` sınamaları
+import kuantum.test_yazmac_tevhid  # [şahit] KÜME 1 tevhidinin şahitleri -- altı dosya tek çipte, ölçüyle
 import kuantum.topolojik  # [uzuv] Topolojik anyon örgüsü ve hata düzeltme (QEC) kapıları
 
 # ------------------------------------------------------------------
@@ -184,7 +183,6 @@ import nefs.akis  # [uzuv] Küllî ittisâl: 41 melekenin akışı
 import nefs.akit  # [uzuv] Kademe 1 -- **envanter ve arayüz akdi**
 import nefs.beyan  # [uzuv] 𝒪₃₇–𝒪₄₁: beyan -- hükmün dışarıya çıkışı
 import nefs.idrak  # [uzuv] 𝒪₁–𝒪₁₀: duyudan mahiyete. Ham sinyalin suret, soyutlama ve mana kazandığı
-import nefs.ihtimal  # [uzuv] İhtimal uzayı: **çıktı ızgarasının bütün muhtemel hâlleri, süperpozisyonda**
 import nefs.ikiz  # [hakem] İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil
 import nefs.dimag  # [uzuv] Küllî Dimağ Hamiltonyeni -- 41 meleke Lie üreteci, 20 mertebe, 4 zırh, 1 gaye
 import nefs.hiz  # [hakem] Hız defteri -- 700 MB/sn hedefinin üç ayrı muhasebesi
@@ -331,14 +329,10 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Hacim — ortalama eğrilik akışı ve yoğunluk akışları'),
     ('akis.test_akis', 'şahit',
      'akis test takımı'),
-    ('kuantum.ic_bag', 'hakem',
-     'Sanal bağın kuantikleştirilmesi -- hafıza O(log χ) düşüyor fakat SERBESTLİK de düşüyor; iddia ölçülür'),
     ('nefs.teskilat', 'uzuv',
      '𝒪₄₂ Umumileştirme (Kan uzantısı), 𝒪₄₃ Talim (usul düzenleyici), 𝒪₄₄ Tahsil (ağırlığı zâtî mülk kılma) -- üçü de formüllü'),
     ('nefs.lisan', 'uzuv',
      'Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri; mutlak koordinat YASAK, izafî tarif esastır'),
-    ('kuantum.katlama', 'uzuv',
-     'HDTF -- hiyerarşik ikili ağaç katlaması; 2^n genlik hiç açılmadan, zar atılmadan QTT inşası'),
     ('akis.ikmal', 'gölge',
      'Ceridenin İkmâl Fıkraları -- Lions konsantrasyonu, RCD(K,N) Bochner, '
      'Cayley çekilmesi, Postnikov tıkanıklık vekili'),
@@ -410,6 +404,8 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'kuantum test takımı'),
     ('kuantum.test_kuantum_ileri', 'şahit',
      '``kuantum.surekli``, ``kuantum.topolojik``, ``kuantum.eniyileme`` sınamaları'),
+    ('kuantum.test_yazmac_tevhid', 'şahit',
+     'KÜME 1 tevhidinin şahitleri -- altı dosya tek çipte, ölçüyle'),
     ('kuantum.topolojik', 'uzuv',
      'Topolojik anyon örgüsü ve hata düzeltme (QEC) kapıları'),
     ('local_run.ddp_entry', 'koşucu',
@@ -461,8 +457,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '𝒪₃₇–𝒪₄₁: beyan -- hükmün dışarıya çıkışı'),
     ('nefs.idrak', 'uzuv',
      '𝒪₁–𝒪₁₀: duyudan mahiyete. Ham sinyalin suret, soyutlama ve mana kazandığı'),
-    ('nefs.ihtimal', 'uzuv',
-     'İhtimal uzayı: **çıktı ızgarasının bütün muhtemel hâlleri, süperpozisyonda**'),
     ('nefs.ikiz', 'hakem',
      'İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil'),
     ('nefs.dimag', 'uzuv',
