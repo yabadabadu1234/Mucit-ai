@@ -182,3 +182,96 @@ def rapor() -> str:                                      # pragma: no cover
 
 if __name__ == "__main__":                               # pragma: no cover
     print(rapor())
+
+
+# =====================================================================
+#  TAM FUBINI-STUDY / FISHER METRİĞİ -- kestirme YOK
+# =====================================================================
+#
+# Padişahın fermanı (İCAD-OPT/14): ``G = ΦᵀΦ ⊗ I`` kestirmesi ilga.
+# **İtham doğrudur.** ``ψ = √P`` alındığında hakikî metrik şudur ve
+# türetilebilir:
+#
+#     ψ_kc = √(P_kc / N),   ⟨ψ|ψ⟩ = 1
+#     ∂ψ_kc = ∂P_kc / (2√(N P_kc))
+#     ⟨ψ|∂ψ⟩ = (1/2N) Σ_kc ∂P_kc = 0        (Σ_c P_kc ≡ 1 olduğundan)
+#
+# O hâlde ikinci terim **düşer** ve
+#
+#     g_ij = (1/4N) Σ_k Σ_c (1/P_kc) ∂_i P_kc ∂_j P_kc
+#
+# Softmax'ta ``z = Wᵀφ``, ``θ = vec(W)``, ``∂P_c/∂W_ab = φ_a P_c(δ_cb − P_b)``:
+#
+#     g[(a,b),(a',b')] = (1/4N) Σ_k φ_ka φ_ka' · [diag(P_k) − P_k P_kᵀ]_bb'
+#     g = (1/4N) Σ_k (φ_k φ_kᵀ) ⊗ Cov(P_k)
+#
+# **Kestirmenin niçin %59 saptığı buradan görünür:** ``Cov(P_k)``
+# yerine ``I`` koymak, renk uzayının eğriliğini tamamen atmaktır.
+# ``C = 10`` iken o blok 10×10'dur; atmanın hiçbir mazereti yoktu.
+
+
+def olasilik_kovaryansi(P: np.ndarray) -> np.ndarray:
+    """``Cov(P_k) = diag(P_k) − P_k P_kᵀ`` -- ``(N, C, C)``.
+
+    Bu matris **tekildir** (satır toplamları sıfır, ``P`` sağ sıfır
+    uzayında): olasılıklar ``Σ_c P_c = 1`` kısıtına tâbidir, yani
+    metriğin bir yönü ölçülemez. Tersini alırken sözde-ters yahut
+    sırt lazımdır ve bu bir kusur değil, kısıtın kendisidir.
+    """
+    P = np.atleast_2d(np.asarray(P, float))
+    return (np.einsum("kc,cd->kcd", P, np.eye(P.shape[1]))
+            - np.einsum("kb,kc->kbc", P, P))
+
+
+def fisher_metrigi_tam(F: np.ndarray, P: np.ndarray) -> np.ndarray:
+    """**Tam** Fubini-Study/Fisher metriği: ``(d·C, d·C)``.
+
+    ``g = (1/4N) Σ_k (φ_k φ_kᵀ) ⊗ Cov(P_k)``
+
+    Endeks düzeni ``θ = W.reshape(-1)`` ile birebir: satır-öncelikli,
+    yani ``(a, b) → a·C + b``. Düzen tutmazsa metrik doğru olsa bile
+    yanlış yere tatbik edilir.
+
+    **Maliyet açıkça:** ``d²C²`` gerçel sayı. ``d = 276, C = 10`` için
+    7,6 milyon hücre ≈ 61 MB. ``C = 10`` iken kovaryans bloğunu atmanın
+    mazereti yoktu; fakat ``d`` büyürse maliyet ``d²`` ile büyür ve o
+    zaman blok-köşegen yaklaşım ayrıca **ölçülerek** gerekçelendirilmeli.
+    """
+    F = np.atleast_2d(np.asarray(F, float))
+    P = np.atleast_2d(np.asarray(P, float))
+    N, d = F.shape
+    C = int(P.shape[1])
+    Cov = olasilik_kovaryansi(P)
+    g4 = np.einsum("ka,kA,kbB->abAB", F, F, Cov, optimize=True)
+    return g4.reshape(d * C, d * C) / (4.0 * max(N, 1))
+
+
+def fubini_tam_dogrulama(n: int = 40, d: int = 6, C: int = 3,
+                         tohum: int = 0, h: float = 1e-5
+                         ) -> Dict[str, float]:
+    """Kapalı form metrik, **sayısal** Fubini-Study ile örtüşüyor mu?
+
+    Bu ölçü **yeşile dönmelidir**: iddia artık "çarpan" değil
+    **eşitlik**tir. Örtüşmezse kapalı form yanlıştır.
+    """
+    rng = np.random.default_rng(int(tohum))
+    F = rng.normal(size=(n, d))
+    w0 = rng.normal(scale=0.3, size=d * C)
+
+    def _P(teta):
+        z = F @ np.asarray(teta, float).reshape(d, C)
+        z = z - z.max(axis=1, keepdims=True)
+        e = np.exp(z)
+        return e / e.sum(axis=1, keepdims=True)
+
+    def psi(teta: np.ndarray) -> np.ndarray:
+        v = np.sqrt(np.clip(_P(teta), 0, None)).reshape(-1)
+        return v / np.linalg.norm(v)
+
+    g_say = np.asarray(fubini_study(psi, w0, h=h), float)
+    g_tam = fisher_metrigi_tam(F, _P(w0))
+    pay = float(np.linalg.norm(g_say - g_tam))
+    payda = max(float(np.linalg.norm(g_say)), 1e-12)
+    return {"bağıl_fark": pay / payda,
+            "iz_sayısal": float(np.trace(g_say)),
+            "iz_kapalı": float(np.trace(g_tam))}

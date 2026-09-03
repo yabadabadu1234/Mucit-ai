@@ -128,6 +128,169 @@ def ozellik(tuval: np.ndarray, yaricap: int = 1) -> np.ndarray:
     return F
 
 
+
+# =====================================================================
+#  KÜLLÎ ÖZNİTELİK -- 5×5 PENCERE KÖRLÜĞÜNÜN KALDIRILMASI
+# =====================================================================
+#
+# **İtham doğrudur ve ölçülmüştür.** Yerel pencere ``r ≤ 2`` iken bir
+# hücrenin cevabı en fazla 5×5'lik bir delikten okunuyordu; halbuki
+# evaluation'ın 120 görevinin **74'ünde** hiçbir yerel kaide fonksiyonel
+# bile değildi -- yani cevap pencerenin DIŞINDA yazıyordu. Hücre
+# isabeti 0,59'da tıkanmasının sebebi budur.
+#
+# Üç katman birleşir ve **hiçbirinde mutlak koordinat yoktur**:
+#
+#   (a) YEREL      -- kendi rengi + komşular (izafî öteleme).
+#   (b) KÜRESEL    -- bütün ızgaranın vasıfları: renk histogramı, D₄
+#                     simetri örtüşmeleri, bileşen sayısı, arka plan
+#                     baskınlığı. Izgara başına sabittir; hücreleri
+#                     ayırmaz fakat **hangi ızgarada olduğumuzu**
+#                     söyler ve kendi rengiyle çarpımı üstünden
+#                     hücreye iner.
+#   (c) NESNE      -- hücrenin kendi bileşeninin ebadı, sınırda mı,
+#                     en yakın **başka** nesneye izafî yön ve mesafe.
+#                     Bu katman pencereden bağımsızdır: ızgaranın öbür
+#                     ucundaki bir nesne buradan görünür.
+#
+# Katman (c) asıl tashihtir: ``Δsatır, Δsütun`` **izafîdir** (nesneden
+# nesneye), mutlak yer değil.
+
+_ARKA: int = 0
+
+
+def _bilesen_haritasi(t: np.ndarray) -> Tuple[np.ndarray, List[Dict]]:
+    """4-komşulukta bağlantılı bileşenler -- ``(etiket, bilgi)``.
+
+    Arka plan (``0``) bileşen sayılmaz. Etiket ``-1`` arka plandır.
+    """
+    t = np.atleast_2d(np.asarray(t, int))
+    H, W = t.shape
+    etiket = np.full((H, W), -1, dtype=int)
+    bilgi: List[Dict] = []
+    for i in range(H):
+        for j in range(W):
+            if t[i, j] == _ARKA or etiket[i, j] >= 0:
+                continue
+            k = len(bilgi)
+            yigin = [(i, j)]
+            etiket[i, j] = k
+            hucreler = []
+            while yigin:
+                y, x = yigin.pop()
+                hucreler.append((y, x))
+                for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                    a, b = y + dy, x + dx
+                    if 0 <= a < H and 0 <= b < W and etiket[a, b] < 0 \
+                            and t[a, b] == t[i, j]:
+                        etiket[a, b] = k
+                        yigin.append((a, b))
+            ar = np.asarray(hucreler, float)
+            bilgi.append({"renk": int(t[i, j]), "ebat": len(hucreler),
+                          "merkez": (float(ar[:, 0].mean()),
+                                     float(ar[:, 1].mean()))})
+    return etiket, bilgi
+
+
+def kuresel_ozellikler(t: np.ndarray) -> np.ndarray:
+    """Izgaranın **bütününden** okunan vasıflar -- pencere yok.
+
+    Simetri örtüşmeleri ``D₄``ün her öğesi için ``ızgara == d(ızgara)``
+    oranıdır; ızgaranın kendi simetri grubuna ne kadar uyduğunu söyler
+    ve bu bilgi hiçbir yerel pencereden okunamaz.
+    """
+    t = np.atleast_2d(np.asarray(t, int))
+    H, W = t.shape
+    top = max(H * W, 1)
+    hist = np.bincount(np.clip(t.reshape(-1), 0, RENK_SAYISI - 1),
+                       minlength=RENK_SAYISI).astype(float) / top
+    sim = []
+    for ad in D4_ADLARI:
+        d = _d4(t, ad)
+        sim.append(float(np.mean(d == t)) if d.shape == t.shape else 0.0)
+    _et, bilgi = _bilesen_haritasi(t)
+    n_bil = len(bilgi)
+    ebatlar = [b["ebat"] for b in bilgi] or [0]
+    return np.concatenate([
+        hist,                                   # renk histogramı (10)
+        np.asarray(sim, float),                 # D₄ örtüşmeleri (8)
+        [float(np.mean(t == _ARKA)),            # arka plan baskınlığı
+         float(len(np.unique(t))) / RENK_SAYISI,
+         min(n_bil, 30) / 30.0,                 # bileşen sayısı
+         float(np.mean(ebatlar)) / top,
+         float(np.max(ebatlar)) / top,
+         float(H) / 30.0, float(W) / 30.0,
+         1.0 if H == W else 0.0]])
+
+
+def nesne_ozellikleri(t: np.ndarray) -> np.ndarray:
+    """Hücre başına **nesne** vasıfları -- ``(H·W, k)``, pencereden bağımsız.
+
+    ``Δsatır, Δsütun`` daima **izafîdir** (hücreden nesneye), mutlak
+    yer değil. Izgaranın öbür ucundaki bir nesne buradan görünür; asıl
+    tashih budur.
+    """
+    t = np.atleast_2d(np.asarray(t, int))
+    H, W = t.shape
+    et, bilgi = _bilesen_haritasi(t)
+    top = max(H * W, 1)
+    merkezler = [b["merkez"] for b in bilgi]
+    out = np.zeros((H * W, 9), float)
+    for i in range(H):
+        for j in range(W):
+            k = i * W + j
+            e = int(et[i, j])
+            if e >= 0:
+                b = bilgi[e]
+                out[k, 0] = 1.0
+                out[k, 1] = b["ebat"] / top
+                cy, cx = b["merkez"]
+                out[k, 2] = (i - cy) / max(H, 1)
+                out[k, 3] = (j - cx) / max(W, 1)
+                sinir = any(not (0 <= i + dy < H and 0 <= j + dx < W)
+                            or int(et[i + dy, j + dx]) != e
+                            for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1)))
+                out[k, 4] = 1.0 if sinir else 0.0
+            # en yakın BAŞKA nesnenin merkezine izafî yön/mesafe
+            en = None
+            for m, (cy, cx) in enumerate(merkezler):
+                if m == e:
+                    continue
+                dd = abs(i - cy) + abs(j - cx)
+                if en is None or dd < en[0]:
+                    en = (dd, cy, cx)
+            if en is not None:
+                dd, cy, cx = en
+                out[k, 5] = dd / float(H + W)
+                out[k, 6] = np.sign(cy - i)
+                out[k, 7] = np.sign(cx - j)
+                out[k, 8] = 1.0
+    return out
+
+
+def kulli_ozellik(tuval: np.ndarray, yaricap: int = 1,
+                  kuresel: bool = True, nesne: bool = True) -> np.ndarray:
+    """Üç katmanı birleştir: yerel + küresel + nesne.
+
+    ``kuresel``/``nesne`` kapatılabilir olması **ölçüm şartıdır** (H90):
+    katmanların bir şey yaptığı ancak kapatıp açarak gösterilebilir.
+    """
+    t = np.atleast_2d(np.asarray(tuval, int))
+    F = ozellik(t, int(yaricap))
+    parca = [F]
+    if kuresel:
+        kg = kuresel_ozellikler(t)
+        parca.append(np.repeat(kg[None, :], F.shape[0], axis=0))
+        # küresel vasıf ızgara başına sabittir; hücreyi ayırması için
+        # kendi rengiyle çarpımı alınır (merkez bloğu ilk 11 sütundur)
+        merkez = F[:, :RENK_SAYISI + 1]
+        parca.append((merkez[:, :, None] * kg[None, None, :]
+                      ).reshape(F.shape[0], -1))
+    if nesne:
+        parca.append(nesne_ozellikleri(t))
+    return np.concatenate(parca, axis=1)
+
+
 # =====================================================================
 #  HENDESE -- ebat şablondan seçilmez, ÇÖZÜLÜR
 # =====================================================================
@@ -287,6 +450,8 @@ class Dalga:
     hendese: Hendese
     d4: str = "birim"
     yaricap: int = 1
+    #: Küllî öznitelik açık mı (yerel + küresel + nesne).
+    kulli: bool = False
     devir: int = 0
     sahit_kaybi: float = float("inf")
     sahit_isabeti: float = 0.0
@@ -318,7 +483,8 @@ class Dalga:
         t = _tuval(g, self.hendese, self.d4)
         if t is None:
             return None
-        F = ozellik(t, self.yaricap)
+        F = (kulli_ozellik(t, self.yaricap) if self.kulli
+             else ozellik(t, self.yaricap))
         if fubini:
             try:
                 from kuantum.fubini import fubini_study_agac_cozumu
@@ -355,7 +521,8 @@ def _zirh_kaybi(W: np.ndarray) -> float:
 
 def dalga_talimi(F: np.ndarray, y: np.ndarray, hendese: Hendese,
                  d4: str = "birim", devir: int = 120, lam: float = 1e-2,
-                 beta_son: float = 8.0, tohum: int = 0) -> Dalga:
+                 beta_son: float = 8.0, tohum: int = 0,
+                 tam_fisher: bool = False) -> Dalga:
     """Şahitlerden **ağırlık** öğren -- QSVT-Gibbs + STA + tabiî gradyan.
 
     * **QSVT-Gibbs.** ``β`` sıfırdan ``beta_son``a çıkar;
@@ -375,6 +542,32 @@ def dalga_talimi(F: np.ndarray, y: np.ndarray, hendese: Hendese,
     rng = np.random.default_rng(int(tohum))
     W = rng.normal(0.0, 1e-3, size=(d, C))
 
+    # **İKİ ÖN-ŞART, İKİSİ DE ÖLÇÜLEBİLİR (H90).**
+    #
+    # ``tam_fisher=False``: ``G = ΦᵀΦ/N + λI`` -- metriğin yalnız
+    #   öznitelik çarpanı. Ucuz (``d×d``) fakat renk uzayının
+    #   eğriliğini atar; ölçüldü, hakikî metrikten **0,5888** sapıyor.
+    # ``tam_fisher=True``: ``g = (1/4N) Σ_k (φφᵀ) ⊗ Cov(P_k)`` -- tam
+    #   Fubini-Study. Sayısal metrikle örtüşmesi ölçüldü: **2,691e-11**.
+    #   Maliyeti ``(dC)³``; ``d=276, C=10`` için 2760×2760 ters.
+    #
+    # Tam metrik ``P``ye bağlı olduğu için devir boyunca değişir;
+    # burada **başlangıçtaki** ``P`` ile bir kere kurulur ve ön-şart
+    # olarak sabit tutulur. Bu bir kısaltmadır ve söyleniyor: her
+    # devirde yeniden kurmak ``devir × (dC)³`` eder.
+    tam_g = None
+    if tam_fisher:
+        try:
+            from kuantum.fubini import fisher_metrigi_tam
+            z0 = F @ W
+            z0 -= z0.max(axis=1, keepdims=True)
+            e0 = np.exp(z0)
+            P0 = e0 / e0.sum(axis=1, keepdims=True)
+            g = fisher_metrigi_tam(F, P0)
+            g = g + float(lam) * np.eye(g.shape[0])
+            tam_g = np.linalg.inv(g)
+        except Exception:                                # noqa: BLE001
+            tam_g = None
     G = (F.T @ F) / max(N, 1) + float(lam) * np.eye(d)
     try:
         Gc = np.linalg.cholesky(G)
@@ -395,7 +588,11 @@ def dalga_talimi(F: np.ndarray, y: np.ndarray, hendese: Hendese,
         z -= z.max(axis=1, keepdims=True)
         e = np.exp(z)
         P = e / e.sum(axis=1, keepdims=True)
-        W -= Gi @ (beta * (F.T @ (P - Y)) / max(N, 1))
+        Gr = beta * (F.T @ (P - Y)) / max(N, 1)
+        if tam_g is not None:
+            W -= (tam_g @ Gr.reshape(-1)).reshape(d, C)
+        else:
+            W -= Gi @ Gr
 
     z = F @ W
     z -= z.max(axis=1, keepdims=True)
@@ -410,7 +607,8 @@ def dalga_talimi(F: np.ndarray, y: np.ndarray, hendese: Hendese,
 
 def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
               devir: int = 120, lam: float = 1e-2,
-              azami_aday: int = 12, loo_devir: int = 40
+              azami_aday: int = 12, loo_devir: int = 40,
+              kulli: bool = True, tam_fisher: bool = False
               ) -> Optional[Dalga]:
     """Hendese × D₄ × yarıçap araması -- **bütçeli** ve bütçesi ilan.
 
@@ -454,7 +652,8 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
     en_iyi_not: Tuple[float, float] = (-1.0, -np.inf)
     for _u, _hi, hen, d4, tuvaller, hedef in adaylar:
         for yaricap in YARICAPLAR:
-            Fs = [ozellik(t, yaricap) for t in tuvaller]
+            Fs = [(kulli_ozellik(t, yaricap) if kulli
+                   else ozellik(t, yaricap)) for t in tuvaller]
             ys = list(hedef)
             # **BIRAK-BİRİNİ İSTİKRÂSI -- şart, süs değil.** Şahitleri
             # tutmak delil değildir: zengin bağlam küçük ızgarada
@@ -469,7 +668,8 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
                     yk = np.concatenate([v for j, v in enumerate(ys)
                                          if j != i], axis=0)
                     d_i = dalga_talimi(Fk, yk, hen, d4,
-                                       devir=int(loo_devir), lam=lam)
+                                       devir=int(loo_devir), lam=lam,
+                                       tam_fisher=tam_fisher)
                     P = d_i.olasilik(Fs[i])
                     disarida.append(
                         float(np.mean(np.argmax(P, axis=1) == ys[i])))
@@ -477,9 +677,11 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
 
             F = np.concatenate(Fs, axis=0)
             yv = np.concatenate(ys, axis=0)
-            dalga = dalga_talimi(F, yv, hen, d4, devir=devir, lam=lam)
+            dalga = dalga_talimi(F, yv, hen, d4, devir=devir, lam=lam,
+                                 tam_fisher=tam_fisher)
             dalga.disarida_isabet = dis_not
             dalga.yaricap = int(yaricap)
+            dalga.kulli = bool(kulli)
             simdi = (dis_not, dalga.sahit_isabeti)
             if simdi > en_iyi_not:
                 en_iyi_not = simdi

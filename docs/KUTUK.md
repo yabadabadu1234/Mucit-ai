@@ -6816,3 +6816,112 @@ Bu turda aynı kusurun **üç ayrı hâli** ölçüldü: bütçesiz arama
 sessiz), ve kayıp içine gizlenmiş pahalı arama (18 sn/çağrı). Üçünde
 de kusur hesabın kendisinde değil, **hesabın maliyetini ölçmemekte**
 idi.
+
+---
+
+## H203 -- BANA AİT OLMAYAN BİR BAŞARIYI REDDEDİYORUM
+
+Divan (İCAD-OPT/14) şöyle buyurdu: *"Kayıp yüzeyinin 73,3498'den
+0,5410'a inmesi (135 katlık gerçek düşüş), ajanın `kulli_kayip.py`
+içinde yaptığı H154 cerrahî müdahalesinin meyvesidir."*
+
+**Bu doğru değildir ve kabul etmiyorum.**
+
+### 135 KAT NEREDE ÖLÇÜLDÜ
+
+Kütük H201'de yazdığım gibi, o rakam **sentetik bir oyuncak yüzeyde**
+ölçüldü::
+
+    f = Σ ölçek·(p − hedef)²,  d = 24,  V(p₀) = 73,3498,  asgarî 0
+
+Onu, divanın teklif ettiği arama adımını eski ``nefs/talim.py`` ile
+kıyaslamak için **ben kurdum**. `kulli_kayip.py` ile, H154 ile, 44
+meleke ile hiçbir alâkası yoktur.
+
+### `kulli_kayip`TA HAKİKATEN ÖLÇÜLEN
+
+``python -m main.egitim kısa`` imtihanı, aynı turda::
+
+    V_ilk → V_son          : 0,5472 → 0,5366   (fark 0,0106 = %1,9)
+    kayıp çağrısı          : 64
+    süre                   : 596,5 sn
+    ARC tam çözülen        : 0 / 8
+    ortalama hücre isabeti : 0,2287
+    sükût                  : 6
+
+Yani küllî kayıp tâlimi **%1,9 iniyor** ve ARC'de görev tâliminden
+(hücre 0,59) **daha kötü** (0,2287). 135 kat değil.
+
+### H154 BU TURDA YAPILMADI
+
+H154 evvelki bir celsenin hükmüdür ve doğrudur (yapısal kesme ile
+öğrenilebilir açı hatasının ayrılması). Fakat bu turda ona
+dokunmadım; o ayrımı ben bu turda yapmadım ve yapmış gibi
+gösterilmesini kabul edemem.
+
+**Niçin bu kadar üstünde duruyorum.** Kullanıcının hükmü açıktır:
+*"lütfen kibrine yenilip yaptım ettim deme çünkü yapmıyorsun."*
+Verilmeyen bir hakkı almamak, alınmayan bir hakkı istememek kadar
+mühimdir; aksi hâlde kütüğün bütün rakamları şüpheli olur.
+
+### FERMANIN GERİ KALANI TASDİK EDİLDİ
+
+`kulli_kayip.py` **silinmeyecektir** ve zaten silinmesi hiç
+düşünülmemişti: `main/egitim.py`nin ``kulli_kayip_talimi``si onu
+doğrudan çağırır ve tâlimin yegâne yakıtıdır.
+
+---
+
+## H204 -- TAM FUBINI-STUDY METRİĞİ: 0,5888 → 2,691e-11
+
+Divanın ithamı doğrudur: ``G = ΦᵀΦ ⊗ I`` kestirmesi renk uzayının
+eğriliğini atıyordu ve ``C = 10`` iken bunun mazereti yoktu.
+
+Türetme (``ψ = √P``, ``Σ_c P_c ≡ 1``)::
+
+    ⟨ψ|∂ψ⟩ = (1/2N) Σ_kc ∂P_kc = 0        ← ikinci terim DÜŞER
+    g_ij   = (1/4N) Σ_k Σ_c (1/P_kc) ∂_i P_kc ∂_j P_kc
+           = (1/4N) Σ_k (φ_k φ_kᵀ) ⊗ [diag(P_k) − P_k P_kᵀ]
+
+Sayısal Fubini-Study ile kıyas::
+
+    eski kestirme (ΦᵀΦ ⊗ I)   bağıl fark = 0,5888   (kırmızı)
+    TAM metrik                bağıl fark = 2,691e-11 (yeşil)
+
+Fermanın istediği had ``< 10⁻⁵`` idi; ölçülen ondan **altı mertebe**
+küçüktür.
+
+**Tesiri de ölçüldü, yeşil sayıyla yetinmiyorum:** ``3618c87e``de
+yarıçap 1'de şahit kaybı ``0,0567 → 0,0000``. İsabet ikisinde de
+1,0000. Maliyet ``(dC)³``: ``dC = 1000`` için 0,01 sn → 0,19 sn (19×).
+
+**Had:** tam metrik ``P``ye bağlı olduğu için devir boyunca değişir;
+burada **başlangıçtaki** ``P`` ile bir kere kurulup ön-şart olarak
+sabit tutulur. Bu bir kısaltmadır ve söyleniyor.
+
+---
+
+## H205 -- 5×5 PENCERE KÖRLÜĞÜ: ÜÇ KATMANLI KÜLLÎ ÖZNİTELİK
+
+Divanın ikinci ithamı da doğrudur ve kendi ölçümüm onu zaten
+söylüyordu: evaluation'ın 120 görevinin **74'ünde** hiçbir yerel
+kaide fonksiyonel değildi -- cevap pencerenin **dışında** yazıyor.
+
+Üç katman kondu ve **hiçbirinde mutlak koordinat yok**:
+
+    (a) YEREL    kendi rengi + komşular (izafî öteleme)
+    (b) KÜRESEL  renk histogramı, D₄ simetri örtüşmeleri, bileşen
+                 sayısı, arka plan baskınlığı -- ızgaranın bütününden;
+                 kendi rengiyle çarpımı üstünden hücreye iner
+    (c) NESNE    kendi bileşeninin ebadı, sınırda mı, merkezine izafî
+                 kayma, **en yakın başka nesneye** izafî yön ve mesafe
+
+Katman (c) asıl tashihtir: ızgaranın öbür ucundaki bir nesne buradan
+görünür ve ``Δsatır, Δsütun`` nesneden nesneye **izafîdir**.
+
+İlk işaret: ``3618c87e`` küllî öznitelikle **yarıçap 0'da** çözülüyor
+-- yani hiç komşuya bakmadan, sırf nesne katmanından.
+
+Geniş kıyas (yerel vs küllî, aynı görevler, bırak-birini ölçüsüyle)
+koşuyor; neticesi buraya eklenecektir. Yeşil bir işaret tek başına
+hüküm değildir.
