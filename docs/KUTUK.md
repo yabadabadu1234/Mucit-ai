@@ -6966,8 +6966,34 @@ görmediğini bilemez. Küresel görüş **işaret** ekliyor fakat
 
 ### AYIRT EDİCİ ÖLÇÜM
 
-Çapraz çarpım terimi 421 boyutun 286'sını yiyor. Katmanları ayırıp
-dördü ayrı ayrı ölçülüyor (100 / 109 / 126 / 421 boyut) ki hangisinin
-işaret, hangisinin şişkinlik olduğu görülsün. Bir işaret vardır:
-``3618c87e`` küllî öznitelikle **yarıçap 0'da** çözülüyor -- yani nesne
-katmanı hakikaten bilgi taşıyor. Mesele o bilgiyi **ucuza** almaktır.
+Katmanlar ayrılıp dördü ayrı ayrı ölçüldü (aynı 40 görev, bırak-birini)::
+
+    tertip    boyut   dalga  dışarıda   hücre      sn
+    yerel       100      38    0,7464  0,7264   103,0
+    nesne       109      38    0,7291  0,6979   106,7
+    küresel     126      38    0,7375  0,6958   111,6
+    küllî       421      38    0,7265  0,6885   298,9
+
+**Netice tektir ve tektonik:** boyut arttıkça genelleme **tekdüze**
+düşüyor. Dokuz boyutluk nesne katmanı bile zarar veriyor
+(0,7464 → 0,7291). Yani mesele çapraz çarpımın şişkinliği değil;
+**her ilâve serbestlik** zarar veriyor.
+
+O hâlde çare "işareti ucuza almak" da değildir. Ölçümün söylediği
+şudur: **darboğaz görüş menzili değil, şahit verimliliğidir.** Bir ARC
+görevinde üç-beş gösterim vardır; serbest doğrusal ağırlık eklemek --
+işaret taşısa bile -- o şahitlerle ödenemez.
+
+Doğru istikamet, öznitelik eklemek değil **serbestliği kısıtlamaktır**:
+``D₄`` simetrisini öznitelik olarak vermek yerine ağırlığa
+**eşdeğişkenlik** olarak dayatmak, yani parametreyi paylaştırmak. Bu
+ölçülmemiştir ve bir sonraki turun işidir; burada iddia edilmiyor.
+
+Bir istisna kayda geçer: ``3618c87e`` küllî öznitelikle **yarıçap 0'da**
+çözülüyor, yani nesne katmanı o görevde hakikaten bilgi taşıyor.
+Ortalama zarar verirken bir görevde fayda vermesi, işaretin var
+olduğunu fakat **bedelinin ödenemediğini** gösterir.
+
+**Varsayılan ``yerel``de bırakıldı** ve ``3618c87e`` gerileme
+kontrolünden geçti (TAM, dışarıda 1,0000). Ölçüm kötü çıkan bir şeyi
+varsayılan yapmak, ölçümü hiç yapmamaktan beterdir.
