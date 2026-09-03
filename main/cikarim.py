@@ -269,7 +269,8 @@ def nesne_ozellikleri(t: np.ndarray) -> np.ndarray:
 
 
 def kulli_ozellik(tuval: np.ndarray, yaricap: int = 1,
-                  kuresel: bool = True, nesne: bool = True) -> np.ndarray:
+                  kuresel: bool = True, nesne: bool = True,
+                  capraz: bool = True) -> np.ndarray:
     """Üç katmanı birleştir: yerel + küresel + nesne.
 
     ``kuresel``/``nesne`` kapatılabilir olması **ölçüm şartıdır** (H90):
@@ -283,9 +284,10 @@ def kulli_ozellik(tuval: np.ndarray, yaricap: int = 1,
         parca.append(np.repeat(kg[None, :], F.shape[0], axis=0))
         # küresel vasıf ızgara başına sabittir; hücreyi ayırması için
         # kendi rengiyle çarpımı alınır (merkez bloğu ilk 11 sütundur)
-        merkez = F[:, :RENK_SAYISI + 1]
-        parca.append((merkez[:, :, None] * kg[None, None, :]
-                      ).reshape(F.shape[0], -1))
+        if capraz:
+            merkez = F[:, :RENK_SAYISI + 1]
+            parca.append((merkez[:, :, None] * kg[None, None, :]
+                          ).reshape(F.shape[0], -1))
     if nesne:
         parca.append(nesne_ozellikleri(t))
     return np.concatenate(parca, axis=1)
@@ -450,8 +452,8 @@ class Dalga:
     hendese: Hendese
     d4: str = "birim"
     yaricap: int = 1
-    #: Küllî öznitelik açık mı (yerel + küresel + nesne).
-    kulli: bool = False
+    #: Öznitelik tertibi: ``"yerel"``, ``"nesne"``, ``"küllî"``.
+    kulli: object = "yerel"
     devir: int = 0
     sahit_kaybi: float = float("inf")
     sahit_isabeti: float = 0.0
@@ -483,8 +485,7 @@ class Dalga:
         t = _tuval(g, self.hendese, self.d4)
         if t is None:
             return None
-        F = (kulli_ozellik(t, self.yaricap) if self.kulli
-             else ozellik(t, self.yaricap))
+        F = _oznitelik(t, self.yaricap, self.kulli)
         if fubini:
             try:
                 from kuantum.fubini import fubini_study_agac_cozumu
@@ -605,10 +606,31 @@ def dalga_talimi(F: np.ndarray, y: np.ndarray, hendese: Hendese,
                  zirh=_zirh_kaybi(W))
 
 
+def _oznitelik(t: np.ndarray, yaricap: int, tertip) -> np.ndarray:
+    """Öznitelik tertibini adıyla seç -- üçü de ölçülebilsin diye.
+
+    **Bu bir ölçüm kapısıdır (H90).** Katmanların bir şey yaptığı ancak
+    kapatıp açarak gösterilebilir; ölçüldü ve netice beklenenin
+    tersi çıktı (bkz. ``kulli_ozellik`` şerhi).
+    """
+    if tertip in (False, "yerel", None):
+        return ozellik(t, int(yaricap))
+    if tertip in (True, "küllî", "kulli"):
+        return kulli_ozellik(t, int(yaricap), kuresel=True, nesne=True,
+                             capraz=True)
+    if tertip == "nesne":
+        return kulli_ozellik(t, int(yaricap), kuresel=False, nesne=True,
+                             capraz=False)
+    if tertip == "küresel":
+        return kulli_ozellik(t, int(yaricap), kuresel=True, nesne=False,
+                             capraz=False)
+    raise ValueError("bilinmeyen öznitelik tertibi: %r" % (tertip,))
+
+
 def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
               devir: int = 120, lam: float = 1e-2,
               azami_aday: int = 12, loo_devir: int = 40,
-              kulli: bool = True, tam_fisher: bool = False
+              kulli=  "yerel", tam_fisher: bool = False
               ) -> Optional[Dalga]:
     """Hendese × D₄ × yarıçap araması -- **bütçeli** ve bütçesi ilan.
 
@@ -652,8 +674,7 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
     en_iyi_not: Tuple[float, float] = (-1.0, -np.inf)
     for _u, _hi, hen, d4, tuvaller, hedef in adaylar:
         for yaricap in YARICAPLAR:
-            Fs = [(kulli_ozellik(t, yaricap) if kulli
-                   else ozellik(t, yaricap)) for t in tuvaller]
+            Fs = [_oznitelik(t, yaricap, kulli) for t in tuvaller]
             ys = list(hedef)
             # **BIRAK-BİRİNİ İSTİKRÂSI -- şart, süs değil.** Şahitleri
             # tutmak delil değildir: zengin bağlam küçük ızgarada
@@ -681,7 +702,7 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
                                  tam_fisher=tam_fisher)
             dalga.disarida_isabet = dis_not
             dalga.yaricap = int(yaricap)
-            dalga.kulli = bool(kulli)
+            dalga.kulli = kulli
             simdi = (dis_not, dalga.sahit_isabeti)
             if simdi > en_iyi_not:
                 en_iyi_not = simdi

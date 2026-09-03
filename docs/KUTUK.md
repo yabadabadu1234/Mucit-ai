@@ -6925,3 +6925,49 @@ görünür ve ``Δsatır, Δsütun`` nesneden nesneye **izafîdir**.
 Geniş kıyas (yerel vs küllî, aynı görevler, bırak-birini ölçüsüyle)
 koşuyor; neticesi buraya eklenecektir. Yeşil bir işaret tek başına
 hüküm değildir.
+
+### H205 -- İLK GENİŞ ÖLÇÜM: KÜLLÎ ÖZNİTELİK **DAHA KÖTÜ**
+
+Yerel ile küllî öznitelik aynı 40 eğitim görevinde, bırak-birini
+ölçüsüyle yan yana koşturuldu::
+
+            dalga  dışarıda   hücre  konuştu  TAM      sn
+    YEREL      38    0,7464  0,7264       0    0    97,0
+    KÜLLÎ      38    0,7265  0,6885       0    0   320,5
+
+**Küresel görüş faydalı olmadı, zarar verdi.** Genelleme düştü
+(0,7464 → 0,7265), hücre isabeti düştü (0,7264 → 0,6885), maliyet
+3,3 kat arttı.
+
+### TEŞHİS DOĞRU, ÇARE YANLIŞ -- ARADAKİ FARK
+
+Fermanın **teşhisi** doğrudur ve zaten benim kendi ölçümümdü:
+evaluation'ın 120 görevinin 74'ünde cevap yerel pencerenin dışında
+yazıyor. Fakat teklif edilen **çare** ölçümde çürüdü.
+
+Sebep, bu turda üçüncü kere karşılaştığım aynı kaidedir:
+
+    Şahit verisi sabitken kabiliyeti arttırmak genellemeyi DÜŞÜRÜR.
+
+Aynı kaide evvelce iki kere ölçülmüştü::
+
+    yarıçap 0 ( 12 boyut)   dışarıda 1,0000
+    yarıçap 1 (100 boyut)   dışarıda 1,0000
+    yarıçap 2 (276 boyut)   dışarıda 0,9375
+    merkez×komşu çaprazı (1068 boyut)  şahit isabeti 0,8874 (en pahalı, en kötü)
+
+Şimdi üçüncü kere: 100 → 421 boyut, dışarıda 0,7464 → 0,7265.
+
+**O hâlde duvar "model yeterince uzağı göremiyor" değildir.** Duvar
+şudur: *gördüğünü ne yapacağını öğretecek kadar şahit yok.* Bir ARC
+görevinde üç-beş gösterim çifti vardır; 421 serbestlik onları ezberler,
+görmediğini bilemez. Küresel görüş **işaret** ekliyor fakat
+**parametreyi daha hızlı** ekliyor.
+
+### AYIRT EDİCİ ÖLÇÜM
+
+Çapraz çarpım terimi 421 boyutun 286'sını yiyor. Katmanları ayırıp
+dördü ayrı ayrı ölçülüyor (100 / 109 / 126 / 421 boyut) ki hangisinin
+işaret, hangisinin şişkinlik olduğu görülsün. Bir işaret vardır:
+``3618c87e`` küllî öznitelikle **yarıçap 0'da** çözülüyor -- yani nesne
+katmanı hakikaten bilgi taşıyor. Mesele o bilgiyi **ucuza** almaktır.
