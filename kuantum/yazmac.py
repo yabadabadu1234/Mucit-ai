@@ -1540,6 +1540,63 @@ class Yazmac:
         """
         return float(np.max(np.abs(self.norm() - 1.0)))
 
+    # -----------------------------------------------------------------
+    #  HDTF KÖPRÜSÜ -- Küme 1 tevhidinin ilk adımı (kütük H210)
+    # -----------------------------------------------------------------
+    @classmethod
+    def hdtf_ile_kur(cls, diziler, bag_boyutu: int = 16,
+                     sanal_kubit: int = 22_000_000, usul: str = "svd",
+                     tip=np.float32) -> Tuple["Yazmac", Dict[str, float]]:
+        """``kuantum.katlama.hiyerarsik_ikili_agac_katlama``nın çıktısını
+        doğrudan bir ``Yazmac``a bağla.
+
+        **Neden var.** Katlama şimdiye kadar ham bir ``List[ndarray]``
+        döndürüyordu ve ``Yazmac``a hiç bağlanmıyordu (bkz. zabıt,
+        KÜME 1 cevher/toprak cetveli, satır 9: *"Çıktı olarak Yazmac
+        değil ham List[ndarray] döndürmesi"*). Burada o köprü kurulur:
+        her ``(χ_sol, 2, χ_sağ)`` çekirdeği doğrudan ``Yazmac.A``nın
+        kendi ``(χ, 2, χ)`` yuva biçimine (sıfırla doldurularak) yazılır
+        -- ne yeniden hesap, ne SVD; **birebir aktarım**.
+
+        Dönen ``Yazmac``nın ``norm()``u, ham çekirdek zincirinin elle
+        büzülmüş ``⟨Ψ|Ψ⟩``sıyla makine hassasiyetinde örtüşür -- bu
+        köprünün kendi doğrulama testidir (``kuantum/test_kuantum*.py``).
+
+        **HUDUT.** Bu yalnız HDTF'nin **son** (katlanmış) çıktısını
+        yazmaça bağlar; katlama sürecinin ara kademeleri, ``nefs/
+        taksimat.py``nin 4 bölgeli adresleyicisi ve ``nefs/qyazmac.py``
+        nin Gray-kod makam merdiveni bu köprüde YOKTUR -- onlar Küme
+        1'in henüz tevhid edilmemiş parçalarıdır (bkz. docs/KUTUK.md
+        H210).
+        """
+        from kuantum.katlama import hiyerarsik_ikili_agac_katlama
+        cekirdekler, kesme, kademe = hiyerarsik_ikili_agac_katlama(
+            diziler, bag_boyutu=bag_boyutu, sanal_kubit=sanal_kubit,
+            usul=usul)
+        n = len(cekirdekler)
+        if n == 0:
+            raise ValueError("hdtf_ile_kur: boş çekirdek zinciri")
+        bag = max(int(bag_boyutu),
+                  max(int(c.shape[0]) for c in cekirdekler),
+                  max(int(c.shape[2]) for c in cekirdekler))
+        yz = cls(max(n, 2), bag=bag, tip=tip, yigin=1)
+        yz.A[:] = 0.0
+        bag_ust = np.ones(len(cekirdekler) + 1, dtype=np.int64)
+        for i, c in enumerate(cekirdekler):
+            c = np.asarray(c, float)
+            cl, iki, cr = c.shape
+            if iki != 2:
+                raise ValueError("hdtf_ile_kur: çekirdek fiziksel boyutu 2 değil")
+            yz.A[0, i, :cl, :, :cr] = c.astype(tip)
+            bag_ust[i] = cl
+        bag_ust[len(cekirdekler)] = (
+            cekirdekler[-1].shape[2] if cekirdekler else 1)
+        yz.bag_ust[:len(bag_ust)] = bag_ust
+        if n < 2:                          # Yazmac n≥2 ister; kimlikle uzat
+            yz.A[0, n, 0, 0, 0] = 1.0
+        return yz, {"kesme": float(kesme), "kademe": int(kademe),
+                    "çekirdek_sayısı": int(n)}
+
 
 # =====================================================================
 #  FERMAN ADIYLA: KÜLLÎ YAZMAÇ

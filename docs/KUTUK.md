@@ -7155,3 +7155,41 @@ bir yüzeyde fiilen tetiklendi ve hatasız tamamlandı.
 
 `main/egitim.py::kulli_kayip_talimi`nin `eniyile`den `hoca_egit`e
 geçirilip geçirilmeyeceği **ayrı bir karar** — henüz yapılmadı.
+
+## H210 — KÜME 1 tevhidi: HDTF↔Yazmac köprüsü (ilk gerçek adım, tamamı DEĞİL)
+
+Kullanıcı zabıtı (`02a89956-zab_t_9.md`), depoyu 7 kümeye ayırıp her
+kümeden "tek cevher" çıkarmayı emrediyor. KÜME 1 (Kuantum Durum
+Temsili & Tensör Yazmacı) 9 dosyayı (`kuantum/yazmac.py`,
+`nefs/qyazmac.py`, `nefs/taksimat.py`, `nefs/agac.py`,
+`nefs/ucagac.py`, `nefs/ihtimal.py`, `kuantum/ptr.py`,
+`kuantum/ic_bag.py`, `kuantum/katlama.py`) `kuantum/yazmac.py`da
+birleştirmeyi hedefliyor.
+
+**Dürüst kapsam.** 9 dosyanın tamamını bir oturumda, sınamadan, tek
+hamlede birleştirmek bu oturumun geri kalanında yapılan her şeye
+aykırı olurdu (bkz. H207-H209: her iddia AST/ölçümle doğrulanmadan
+icra edilmez). Bu turda yalnız **bir** gerçek, sınanmış köprü kuruldu:
+
+* Zabıt'ın kendi cetveli `kuantum/katlama.py` için "toprağı" doğru
+  teşhis etmiş: `hiyerarsik_ikili_agac_katlama` ham bir
+  `List[ndarray]` döndürüyordu, `Yazmac`a hiç bağlı değildi (dosyayı
+  okuyup doğrulandı: fonksiyon gerçekten `(çekirdekler, kesme,
+  kademe)` üçlüsü döndürüyor, `Yazmac` sınıfına dokunmuyordu).
+* `Yazmac.hdtf_ile_kur(...)` classmethod'u eklendi: HDTF'nin çıktı
+  zincirini doğrudan `Yazmac.A`nın kendi `(χ,2,χ)` yuva biçimine
+  yazıyor (yeniden hesap yok, birebir aktarım).
+* **Sınandı, uydurulmadı:** rastgele 3×13 ve 1×1 (sınır durumu)
+  girdilerle HDTF'nin ham çekirdek zincirini elle (bağımsız bir
+  `einsum` transfer-matrisi döngüsüyle) büzüp `⟨Ψ|Ψ⟩` hesapladım,
+  `Yazmac.norm()` ile kıyasladım: fark `1.4e-07` (3×13) ve `0.0`
+  (1×1). `kuantum/test_kuantum.py`nin 151 testi hâlâ geçiyor.
+
+**Ne YAPILMADI, açıkça:** `nefs/qyazmac.py`nin Gray-kod makam
+merdiveni, `nefs/taksimat.py`nin 4-bölgeli adresleyicisi,
+`nefs/agac.py` (2D TTN), `nefs/ucagac.py` (3-ağaç), `nefs/ihtimal.py`,
+`kuantum/ptr.py`, `kuantum/ic_bag.py` — bunların hiçbiri bu turda
+`Yazmac`a taşınmadı. KÜME 1 tevhidi **tamamlanmadı**; bu, zabıtın 9
+dosyalık cetvelinin yalnız 1 maddesinin (madde 9, katlama) gerçek ve
+sınanmış bir kapanışıdır. Geri kalan 7 dosya için "cevher" iddiaları
+henüz AST/ölçümle doğrulanmadı — bir sonraki adım budur.
