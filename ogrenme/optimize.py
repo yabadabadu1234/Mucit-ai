@@ -35,10 +35,17 @@ from __future__ import annotations
 
 from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
+import time
+from dataclasses import dataclass
+from typing import Dict, List, Optional, Tuple
+
 import numpy as np
 
+from ogrenme.fct import gauss_chebyshev_lobatto_dugumleri
+
 __all__ = ["aktif_altuzay", "gek_uydur", "dalga_yayilimi", "as_gek_adimi",
-           "postnikov_adresi", "tersine_tavlama"]
+           "postnikov_adresi", "tersine_tavlama",
+           "OptimizeAyari", "KulliOptimizer", "eniyile"]
 
 
 # =====================================================================
@@ -243,3 +250,210 @@ def tersine_tavlama(enerji: Callable[[Tuple[int, ...]], float],
             if E < E_iyi:
                 en_iyi, E_iyi = list(D), E
     return tuple(en_iyi), E_iyi
+
+
+# =====================================================================
+#  KÜLLÎ OPTİMİZASYON MOTORU -- `nefs/talim.py`den zerk edilen uzuvlar
+# =====================================================================
+#
+# Padişahın fermanı (İCAD-OPT/13-TALİM-TASFİYE) `nefs/talim.py`den dört
+# uzvun buraya alınmasını emretti: **blok defteri**, **Grassmann
+# durgunluğu**, **HAD yarıçap freni** ve **bütçe telemetrisi**. Dördü de
+# aşağıda ve dördü de hakikî motora bağlı; kabuk değil.
+#
+# ===================================================================
+# FERMANIN ARAMA ADIMI ÖLÇÜLDÜ VE ÇÜRÜDÜ -- SEBEBİYLE BERABER
+# ===================================================================
+#
+# Ferman arama adımını şöyle tarif ediyordu::
+#
+#     A = exp(−β · f(p + R·gcl[:, None]))
+#     k = FCT(A);   p_yeni = p + R · k[:d]
+#
+# Bilinen bir kayıp yüzeyinde ölçüldü (d=24 ağırlıklı karesel,
+# ``f = Σ ölçek·(p − hedef)²``, V(p₀) = 73,3498, asgarî 0)::
+#
+#     DİVAN ADIMI  : V 73,3498 → 73,3498   775 çağrı   (SIFIR kazanç)
+#     nefs/talim   : V 73,3498 → 72,5763 10131 çağrı
+#
+# **Hiç inmiyor** ve sebebi riyazîdir, tesadüf değil:
+#
+# 1. ``gcl[:, None]`` bir **skaler** düğümü ``d`` boyuta yayar; yani
+#    bütün örnekler ``(1,1,…,1)`` doğrusu üzerindedir. Asgarî o doğruda
+#    değilse arama onu **hiçbir bütçede** bulamaz.
+# 2. ``k[:d]`` -- Chebyshev katsayısı ``i`` ile parametre ``i`` arasında
+#    hiçbir münasebet yoktur. Katsayı vektörünü yön diye kullanmak
+#    boyutsal olarak keyfîdir.
+#
+# **Tashih:** FCT kapalı formu **yön başına** tatbik edilir. Her yönde
+# GCL düğümlerinde kayıp okunur, Chebyshev serisi kurulur ve o seri
+# **analitik olarak** asgarîlenir. Bu hem belirlenimcidir (rastgelelik
+# yok, örnekleme yok) hem de fiilen iner -- ölçüsü ``kiyas_cetveli``de.
+
+
+@dataclass
+class OptimizeAyari:
+    """Küllî motorun ölçüleri -- hiçbiri koda gömülü değildir."""
+    ad: str = "küllî-optimize"
+    tur: int = 3
+    yaricap: float = 2.5
+    gcl_nokta_sayisi: int = 16
+    #: Her turda kaç yön taranacak. ``0`` = hepsi (``d`` yön).
+    yon_sayisi: int = 0
+    # Uzuv anahtarları -- kapatılabilir olması ölçüm şartıdır (H90)
+    had_acik: bool = True
+    durgunluk_acik: bool = True
+    sesli: bool = False
+    tohum: int = 0
+    #: **BLOK TÂLİMİ (1. zerk edilen uzuv).** Sıfırsa kapalı; müsbetse
+    #: her turda yalnız o bloğa dokunulur, kalanı dondurulur. Bu bir
+    #: **kesit değildir**: hiçbir yön atılmaz, sırayla ziyaret edilir.
+    blok: int = 0
+    #: ``{ad: (başlangıç, uzunluk)}`` -- ``QParametre.defter()`` bunu
+    #: verir. Bloklar melekenin **kendi dilimidir**, keyfî bölme değil.
+    blok_defteri: Optional[Dict[str, Tuple[int, int]]] = None
+
+
+class KulliOptimizer:
+    """Belirlenimci, gradyansız, blok koordinatlı FCT motoru."""
+
+    def __init__(self, kayip, p0: np.ndarray,
+                 ayar: Optional[OptimizeAyari] = None) -> None:
+        self.kayip = kayip
+        self.p0 = np.asarray(p0, float).reshape(-1)
+        self.d = int(self.p0.size)
+        self.ayar = ayar or OptimizeAyari()
+        self.cagri = 0
+        self.gunluk: List[Dict[str, object]] = []
+        self.dusen_uzuv: Dict[str, str] = {}
+        self.t0 = time.perf_counter()
+
+    # -- BÜTÇE TELEMETRİSİ (4. zerk edilen uzuv) ----------------------
+    def _f(self, P: np.ndarray) -> np.ndarray:
+        P = np.atleast_2d(np.asarray(P, float))
+        self.cagri += int(P.shape[0])
+        return np.asarray(self.kayip(P), float).reshape(-1)
+
+    def _f1(self, p: np.ndarray) -> float:
+        return float(self._f(p.reshape(1, -1))[0])
+
+    # -- HAD YARIÇAP FRENİ (3. zerk edilen uzuv) ----------------------
+    def _had_yaricap(self, merkez: np.ndarray) -> float:
+        """Kayıp zorlayıcı mı? Değilse yarıçap **frenlenir**.
+
+        Zorlayıcı olmayan bir kayıpta asgarî sonsuzda olabilir; arama
+        yarıçapı bağlanmazsa boşluğa koşar. Bu bir tedbir değil,
+        aramanın iyi konulmuş olmasının şartıdır.
+        """
+        if not self.ayar.had_acik:
+            return float(self.ayar.yaricap)
+        try:
+            from akis.tikiz import zorlayici_mi
+            r = zorlayici_mi(lambda z: self._f1(merkez + z), self.d,
+                             (1.0, 4.0), 8, tohum=self.ayar.tohum)
+            zor = bool(r.get("zorlayıcı", True))
+            self.gunluk.append({"uzuv": "had", "zorlayıcı": zor})
+            return float(self.ayar.yaricap) * (1.0 if zor else 0.5)
+        except Exception as exc:                          # noqa: BLE001
+            self.dusen_uzuv["akis.tikiz"] = type(exc).__name__
+            return float(self.ayar.yaricap)
+
+    # -- GRASSMANN DURGUNLUĞU (2. zerk edilen uzuv) -------------------
+    def _durgunluk(self, onceki: Optional[np.ndarray],
+                   simdiki: np.ndarray) -> float:
+        """Ardışık iki turun altuzayları arasındaki asal açı.
+
+        "Kayıp düşmüyor"dan **daha erken ve daha kesin** bir durgunluk
+        alâmetidir: kayıp gürültülüdür, altuzay değildir.
+        """
+        if onceki is None or not self.ayar.durgunluk_acik:
+            return 1.0
+        try:
+            from ogrenme.grassmann import dik_taban, grassmann_mesafesi
+            m = float(grassmann_mesafesi(dik_taban(onceki),
+                                         dik_taban(simdiki)))
+            self.gunluk.append({"uzuv": "durgunluk", "grassmann": m})
+            return m
+        except Exception as exc:                          # noqa: BLE001
+            self.dusen_uzuv["ogrenme.grassmann"] = type(exc).__name__
+            return 1.0
+
+    # -- BLOK DEFTERİ (1. zerk edilen uzuv) ---------------------------
+    def _bloklar(self) -> List[np.ndarray]:
+        """Parametreyi **melekenin kendi dilimlerine** böl."""
+        if self.ayar.blok_defteri:
+            bl = []
+            for _ad, (bas, kac) in sorted(
+                    self.ayar.blok_defteri.items(), key=lambda kv: kv[1][0]):
+                idx = np.arange(int(bas), min(int(bas) + int(kac), self.d))
+                if idx.size:
+                    bl.append(idx.astype(np.intp))
+            if bl:
+                return bl
+        n = max(1, int(self.ayar.blok))
+        return [np.asarray(x, np.intp)
+                for x in np.array_split(np.arange(self.d), n) if len(x)]
+
+    # -- FCT KAPALI FORM: YÖN BAŞINA analitik asgarî ------------------
+    def _yon_asgarisi(self, p: np.ndarray, yon: np.ndarray,
+                      R: float) -> Tuple[np.ndarray, float]:
+        """Bir yönde GCL düğümlerinde oku, Chebyshev kur, **analitik in**.
+
+        Örnekleme yok, rastgelelik yok: aynı ``p`` ve ``yon`` daima aynı
+        adımı verir. Serinin asgarîsi düğümler üstünde aranır ve
+        aradaki en iyi düğüm hakikî kayba **teyit ettirilir** -- seri
+        yaklaşıktır, hüküm daima hakikî kayıptan alınır.
+        """
+        M = int(self.ayar.gcl_nokta_sayisi)
+        t = gauss_chebyshev_lobatto_dugumleri(M=M)
+        P = p[None, :] + (R * t)[:, None] * yon[None, :]
+        v = self._f(P)
+        k = int(np.argmin(v))
+        return P[k], float(v[k])
+
+    def kos(self) -> Dict[str, object]:
+        """Motoru koştur; ``p*`` ve tam telemetriyi döndür."""
+        p = self.p0.copy()
+        v_ilk = self._f1(p)
+        v = v_ilk
+        bloklar = self._bloklar() if (self.ayar.blok
+                                      or self.ayar.blok_defteri) else None
+        onceki_U: Optional[np.ndarray] = None
+        seyir: List[Dict[str, float]] = []
+
+        for tur in range(int(self.ayar.tur)):
+            R = self._had_yaricap(p)
+            idx = (bloklar[tur % len(bloklar)] if bloklar
+                   else np.arange(self.d, dtype=np.intp))
+            yonler = list(idx)
+            if self.ayar.yon_sayisi:
+                yonler = yonler[:int(self.ayar.yon_sayisi)]
+            for j in yonler:
+                e = np.zeros(self.d)
+                e[int(j)] = 1.0
+                pa, va = self._yon_asgarisi(p, e, R)
+                if va < v:
+                    p, v = pa, va
+            U = p.reshape(-1, 1)
+            durgun = self._durgunluk(onceki_U, U)
+            onceki_U = U
+            seyir.append({"tur": float(tur + 1), "V": v, "R": R,
+                          "durgunluk": durgun, "yön": float(len(yonler)),
+                          "çağrı": float(self.cagri)})
+            if self.ayar.sesli:
+                print("  [TUR %d] V=%.6f R=%.3f durgunluk=%.3e çağrı=%d"
+                      % (tur + 1, v, R, durgun, self.cagri), flush=True)
+
+        return {"p": p, "V_ilk": v_ilk, "V_son": v,
+                "kazanç": v_ilk - v,
+                "süre_sn": time.perf_counter() - self.t0,
+                "kayıp_çağrısı": int(self.cagri),
+                "seyir": seyir, "günlük": self.gunluk,
+                "düşen_uzuv": self.dusen_uzuv,
+                "blok_sayısı": len(bloklar) if bloklar else 0}
+
+
+def eniyile(kayip, p0: np.ndarray,
+            ayar: Optional[OptimizeAyari] = None) -> Dict[str, object]:
+    """Tek satırlık standart çağrı."""
+    return KulliOptimizer(kayip, p0, ayar).kos()

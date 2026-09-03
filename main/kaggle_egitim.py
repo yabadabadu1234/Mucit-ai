@@ -42,7 +42,8 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from main.egitim import KulliDalgaTalimMotoru, TalimAyarlari
+from main.egitim import (AZAMI_KAGGLE, EgitimAyari,
+                         KulliDalgaTalimMotoru, tek_iplik_zorla)
 
 __all__ = ["torch_var_mi", "sarjorleri_bul", "sarjor_oku",
            "kaggle_sarjor_egitici_surec", "kaggle_talimini_baslat"]
@@ -114,8 +115,10 @@ def kaggle_sarjor_egitici_surec(rank: int, dunya_boyutu: int,
             print("  [İHTAR] Dağıtık hat kurulamadı (%s); tek süreç CPU "
                   "yedeğiyle devam." % type(exc).__name__, flush=True)
 
-    ayar = TalimAyarlari(sanal_kubit_sayisi=88_000_000, bag_boyutu_chi=36,
-                         qsvt_derecesi=32, beta_maksimum=4.0)
+    # **Ayar profili `main/egitim.py`den gelir** -- ikinci bir yerde
+    # tekrar tanımlamak, iki başlılığın ta kendisi olurdu.
+    tek_iplik_zorla()
+    ayar = AZAMI_KAGGLE
     motor = KulliDalgaTalimMotoru(ayar)
 
     if rank == 0:
@@ -137,7 +140,7 @@ def kaggle_sarjor_egitici_surec(rank: int, dunya_boyutu: int,
             import torch
             import torch.distributed as dist
             # Yalnız SINIR VAGONU: χ×χ, yarım hassasiyet.
-            sinir = torch.zeros((ayar.bag_boyutu_chi, ayar.bag_boyutu_chi),
+            sinir = torch.zeros((ayar.bag, ayar.bag),
                                 dtype=torch.float16, device="cuda:%d" % rank)
             dist.all_reduce(sinir, op=dist.ReduceOp.SUM)
 
@@ -154,8 +157,9 @@ def kaggle_sarjor_egitici_surec(rank: int, dunya_boyutu: int,
 
     if rank == 0:
         os.makedirs(model_depo, exist_ok=True)
-        motor.agirliklari_kaydet(
-            os.path.join(model_depo, "kulli_dimag_kaggle_final.npy"))
+        motor.kaydet(os.path.join(model_depo, "kulli_dimag_kaggle_final"),
+                     {"ayar": ayar.ad, "şarjör": len(sarjor_listesi),
+                      "seyir": motor.seyir})
         print("=== KAGGLE TÂLİMİ TAMAMLANDI VE MÜHÜRLENDİ ===", flush=True)
 
     if dagitik:

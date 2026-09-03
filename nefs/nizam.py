@@ -158,7 +158,7 @@ def yuzlestir(nefs=None, E: Optional[np.ndarray] = None,
     if nefs is None:
         from idrak import arc
 
-        from .kulli_egitim import KISA_CPU
+        from main.egitim import KISA_CPU
         from .qakis import QNefs
         from .qegitim import belirtecleri_kodla, ornekler
         a = ayar or KISA_CPU

@@ -6682,3 +6682,80 @@ Bu ortamda GPU ve ``torch`` **yoktur**. `main/kaggle_egitim.py` çökmez,
 tek süreç CPU yedeğine düşer ve bunu satır satır yazar; "4×L4 %100
 doluluk" diye bir rakam **uydurmaz**. Sentetik şarjörle koşulduğunda
 her satırda ``[SENTETİK]`` damgası bulunur.
+
+---
+
+## H201 -- `kulli_egitim.py` ve `talim.py` İLGA EDİLDİ; TEK MOTOR
+
+Padişahın iki fermanı (İCAD-OPT/11-TEVHİD-İ TÂLİM ve 13-TALİM-TASFİYE)
+üç ayrı eğitim/eniyileme kapısının teke indirilmesini emretti.
+
+### İNTİKAL TABLOSU -- ne alındı, ne alınmadı
+
+    kaynak                          yeni mevkii
+    ------------------------------  ---------------------------------
+    EgitimAyari + 3 profil          main/egitim.py (ölçülmüş şerhle)
+    arc.bol imtihan bölümü          main/egitim.py
+    V_ilk/V_son/seyir telemetrisi   main/egitim.py
+    süreç havuzu (_isci_kur)        main/egitim.py
+    kulli_kayip hattı               main/egitim.py  ← ASIL UZUV
+    blok defteri                    ogrenme/optimize.py
+    Grassmann durgunluğu            ogrenme/optimize.py
+    HAD yarıçap freni               ogrenme/optimize.py
+    bütçe telemetrisi               ogrenme/optimize.py
+    gri_kodla / gri_coz             nefs/hukum_denetimi.py (H75 için)
+
+    İLGA: as_gek_mukayesesi, uygunluk (belirteç kestirimli kayıp),
+          NQS+Grover+Metropolis dalga arayışı, kübit kodlaması
+
+### DİVANIN TABLOSUNDA DÖRT YANLIŞ -- ölçtüm, kabul etmedim
+
+1. *"tek_iplik_zorla zerk edildi."* `kulli_egitim.py`de **yoktu**;
+   tarandı. Fikir doğru, buraya **yeni** kondu -- gerekçesi de bu
+   turda ölçüldü (BLAS iş parçacığı, 11,96 sn → 0,0029 sn).
+2. *"Metropolis MCMC zincirleri ilga edildi."* O dosyada Metropolis
+   **yoktu**; ``zincir``/``ornek`` orada birer tam sayıydı. Hakikî
+   Metropolis `nefs/talim.py`deydi ve o ayrı fermanla gitti.
+3. *"Parametre mühürleme oradan alındı."* Mühürleme
+   `ogrenme/kaggle_donanim.py`de zaten vardı; `kulli_egitim.py`de
+   ne ``json`` ne ``np.save`` geçiyordu.
+4. *"Gri kod MCMC kalıntısıdır, silinsin."* Gri kod parametrenin
+   kübite kodlanmasıdır ve **H75'in denetimi onu kullanır**. Silmek,
+   kayıtlı bir hükmü açık nakz olmadan düşürmek olurdu. Silinmedi,
+   son kullanıcısına nakledildi; H75 hâlâ yeşil.
+
+### FERMANIN ARAMA ADIMI ÇÜRÜDÜ -- rakamla
+
+Divan yeni motorun arama adımını şöyle tarif etti::
+
+    A = exp(−β·f(p + R·gcl[:, None]));  k = FCT(A);  p ← p + R·k[:d]
+
+Bilinen bir yüzeyde ölçüldü (d=24 ağırlıklı karesel,
+``f = Σ ölçek·(p−hedef)²``, V(p₀)=73,3498, asgarî 0)::
+
+    divanın taslak adımı   73,3498 → 73,3498    775 çağrı   SIFIR kazanç
+    eski nefs/talim        73,3498 → 72,5763  10131 çağrı   %1 kazanç
+    yeni ogrenme/optimize  73,3498 →  0,5410  34696 çağrı   135× iniş
+
+Taslak **hiç inmiyor** ve sebebi riyazîdir:
+
+* ``gcl[:, None]`` skaler düğümü ``d`` boyuta yayar; bütün örnekler
+  ``(1,1,…,1)`` doğrusundadır. Asgarî o doğruda değilse hiçbir bütçede
+  bulunamaz.
+* ``k[:d]`` -- Chebyshev katsayısı ``i`` ile parametre ``i`` arasında
+  münasebet yoktur; katsayıyı yön saymak boyutsal olarak keyfîdir.
+
+**Tashih:** FCT kapalı formu **yön başına** tatbik edilir; her yönde
+GCL düğümlerinde okunup analitik asgarî alınır. Hem belirlenimci
+(örnekleme yok) hem fiilen iniyor.
+
+### HÜKÜM
+
+Kod tabanında artık **tek** eniyileme kapısı var:
+`ogrenme/optimize.py`. Eğitim hattı: `main/egitim.py` (yerel),
+`main/kaggle_egitim.py` (Kaggle). Silinen: `nefs/kulli_egitim.py`,
+`nefs/talim.py`.
+
+**Değişmeyen had:** ARC'de fiilen çözen hat hâlâ bu ikisi değil,
+`main/cikarim.py`nin görev tâlimidir. Şema dalgasının zırh kaybı
+``104,653426``da sabit -- o hat öğrenmiyor ve bu raporda duruyor.

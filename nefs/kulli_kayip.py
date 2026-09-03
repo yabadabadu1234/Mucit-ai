@@ -453,7 +453,7 @@ def rapor(n: int = 2) -> str:
     """Kaybın **fiilen** kaç uzvu saydığını göster -- iddia değil sayım."""
     from idrak import arc
 
-    from .kulli_egitim import KISA_CPU
+    from main.egitim import KISA_CPU
     from .qakis import QNefs
     from .qegitim import ornekler
 

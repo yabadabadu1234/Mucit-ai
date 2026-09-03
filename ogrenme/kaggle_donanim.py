@@ -54,7 +54,7 @@ __all__ = ["ayar_sec", "kos", "BASLANGIC_HUCRESI"]
 def ayar_sec(zorla: Optional[str] = None):
     """Donanımı yokla, ayarı **ölçüme göre** seç -- tahminle değil."""
     from hesap.donanim import donanim
-    from nefs.kulli_egitim import AZAMI_KAGGLE, KISA_CPU, ORTA
+    from main.egitim import AZAMI_KAGGLE, KISA_CPU, ORTA
 
     tablo = {"kısa": KISA_CPU, "orta": ORTA, "azamî": AZAMI_KAGGLE}
     if zorla:
@@ -70,7 +70,7 @@ def ayar_sec(zorla: Optional[str] = None):
 def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
         mukayese: bool = False) -> Dict[str, object]:
     from hesap.donanim import rapor as donanim_raporu
-    from nefs.kulli_egitim import KulliEgitim
+    from main.egitim import kulli_kayip_talimi
 
     ayar, dh = ayar_sec(zorla)
     print(donanim_raporu(dh), flush=True)
@@ -81,8 +81,9 @@ def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
           flush=True)
 
     t0 = time.perf_counter()
-    E = KulliEgitim(ayar, dh=dh)
-    r = E.kos()
+    # `nefs/kulli_egitim.py` ilga edildi; küllî kayıp hattı artık
+    # `main/egitim.py`dedir ve **aynı** sözlüğü döndürür.
+    r = kulli_kayip_talimi(ayar)
     d = r["değerlendirme"]
 
     print("", flush=True)
@@ -96,9 +97,11 @@ def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
           flush=True)
 
     if mukayese:
-        m = E.as_gek_mukayesesi()
-        print("AS-GEK (eski motor) V_son=%.4f  %.1f sn"
-              % (m["V_son"], m["süre_sn"]), flush=True)
+        # **AS-GEK mukayesesi ilga edilmiştir** (divanın hükmü; ve o
+        # hüküm doğrudur -- vekil yüzey 250 boyutta asgarî 10·d
+        # değerlendirme isterken 8 çevrim koşuyordu).
+        print("AS-GEK mukayesesi İLGA EDİLDİ; mukayese koşulmadı.",
+              flush=True)
 
     if cikti:
         os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)

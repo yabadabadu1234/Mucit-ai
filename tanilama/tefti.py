@@ -129,21 +129,20 @@ def tefti_et(kisa: bool = True) -> Dict[str, object]:
 
     İki yol da koşturulur ve birleştirilir:
 
-    * **eğitim** -- `nefs/kulli_egitim.py`, en kısa ayarla,
+    * **eğitim** -- `main/egitim.py`, en kısa ayarla,
     * **çıkarım** -- aynı motorun değerlendirme yolu (ARC görevleri).
 
     ``kisa=True`` iken ayar ``KISA_CPU``dur; maksat kapsamı görmek,
     netice almak değil.
     """
-    from nefs.kulli_egitim import KISA_CPU, KulliEgitim
+    from main.egitim import KISA_CPU, kulli_kayip_talimi
 
     ayar = KISA_CPU
     gor: Set[Tuple[str, str]] = set()
     yollar: Dict[str, int] = {}
 
     # 1) EĞİTİM yolu -- padişahın kendisi (`ogrenme/kaggle_donanim.py::kos` bunu çağırır).
-    E = KulliEgitim(ayar)
-    _, g1 = izle(E.kos)
+    _, g1 = izle(lambda: kulli_kayip_talimi(ayar))
     gor |= g1
     yollar["eğitim"] = len(g1)
 

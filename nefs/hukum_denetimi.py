@@ -387,9 +387,37 @@ def _h73_bec_sukutu_bogmuyor() -> Tuple[bool, str]:
          "H54'te boğulma 12,7 kat idi)" % (ds, dt, o0["sukut"]))
 
 
+# =====================================================================
+#  GRİ KOD -- son mevkii burasıdır (H75'in denetimi onu kullanır)
+# =====================================================================
+#
+# `nefs/kulli_egitim.py` → `nefs/talim.py` → buraya. İki dosya da ilga
+# edildi; fonksiyonlar **silinmedi**, tek kalan kullanıcısına taşındı.
+# Silmek H75'i sessizce düşürürdü ve kütükte *"içtihad içtihadı
+# nakzetmez"* hükmü vardır: kayıtlı bir hüküm ancak açık nakzla düşer.
+# Eğitim hattında artık kullanılmıyor -- yeni motor (`ogrenme/optimize`)
+# sürekli uzayda çalışır, parametreyi kübite açmaz.
+
+
+def gri_kodla(k: np.ndarray, bit: int) -> np.ndarray:
+    """Tam sayı → Gri kod bitleri. ``(B, d)`` → ``(B, d·bit)``."""
+    k = np.asarray(k, np.int64)
+    g = k ^ (k >> 1)
+    kaydir = np.arange(bit - 1, -1, -1)
+    return ((g[..., None] >> kaydir) & 1).astype(
+        np.int64).reshape(k.shape[0], -1)
+
+
+def gri_coz(X: np.ndarray, d: int, bit: int) -> np.ndarray:
+    """Gri kod bitleri → tam sayı. ``(B, d·bit)`` → ``(B, d)``."""
+    B = np.asarray(X, np.int64).reshape(-1, d, bit)
+    ikili = np.cumsum(B, axis=-1) % 2
+    agirlik = (1 << np.arange(bit - 1, -1, -1)).astype(np.int64)
+    return (ikili * agirlik).sum(-1)
+
+
 def _h75_gri_kod() -> Tuple[bool, str]:
     """Gri kod: gidiş-dönüş kayıpsız ve komşular tek bit farkeder."""
-    from .kulli_egitim import gri_kodla, gri_coz
     rng = np.random.default_rng(0)
     for bit in (3, 6, 10):
         k = rng.integers(0, 1 << bit, size=(200, 7))

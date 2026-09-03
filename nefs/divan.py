@@ -163,7 +163,6 @@ import nefs.dimag_kulli  # [uzuv] Küllî Dimağ -- ``tecrit.md`` mimarisinin fi
 import main.egitim  # [uzuv] Küllî Dimağ'ın eğitimi -- ARC metniyle, **gradyan inişi olmadan**
 import nefs.hamiltonyen  # [uzuv] Uzaya mahsus Hamiltonyenler ve kuantum evrimi
 import idrak.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur
-import main.main  # [uzuv] Küllî Dimağ giriş noktası -- iddialar burada **ölçülür**
 import ogrenme.zirh_mizan  # [uzuv] Enine topolojik zırh -- **her uzaya mahsus**, katman değil kesit (kütük H23)
 
 # ------------------------------------------------------------------
@@ -429,8 +428,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Uzaya mahsus Hamiltonyenler ve kuantum evrimi'),
     ('main.kategori', 'uzuv',
      '20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur'),
-    ('main.main', 'uzuv',
-     'Küllî Dimağ giriş noktası -- iddialar burada **ölçülür**'),
     ('main.zirh', 'uzuv',
      'Enine topolojik zırh -- **her uzaya mahsus**, katman değil kesit (kütük H23)'),
     ('mizan.altyapisal', 'uzuv',
