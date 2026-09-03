@@ -168,6 +168,10 @@ import ogrenme.zirh_mizan  # [uzuv] Enine topolojik zırh -- **her uzaya mahsus*
 # ------------------------------------------------------------------
 #  mizan
 # ------------------------------------------------------------------
+import kuantum.fubini  # [uzuv] Fubini-Study deterministik ağaç okuması
+import main.kaggle_cikarim  # [uzuv] Kaggle teslimat nazırı
+import main.kaggle_egitim  # [uzuv] Kaggle çoklu GPU tâlim nazırı
+import ogrenme.kaggle_donanim  # [uzuv] Kaggle donanım tespiti
 import mizan.altyapisal  # [uzuv] Yapısal-altı mantıklar (doğrusal, affine, sıkı), relevans ve kuantum
 import mizan.cikarim  # [uzuv] Çıkarım hesapları: Hilbert, Gentzen ardışık hesabı (LK) ve sezgisel (G4ip)
 import mizan.cokdegerli  # [uzuv] Çok değerli, bulanık ve paratutarlı mantıklar
@@ -333,13 +337,13 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Hacim — ortalama eğrilik akışı ve yoğunluk akışları'),
     ('akis.test_akis', 'şahit',
      'akis test takımı'),
-    ('main.ic_bag', 'hakem',
+    ('kuantum.ic_bag', 'hakem',
      'Sanal bağın kuantikleştirilmesi -- hafıza O(log χ) düşüyor fakat SERBESTLİK de düşüyor; iddia ölçülür'),
     ('nefs.teskilat', 'uzuv',
      '𝒪₄₂ Umumileştirme (Kan uzantısı), 𝒪₄₃ Talim (usul düzenleyici), 𝒪₄₄ Tahsil (ağırlığı zâtî mülk kılma) -- üçü de formüllü'),
     ('nefs.lisan', 'uzuv',
      'Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri; mutlak koordinat YASAK, izafî tarif esastır'),
-    ('main.katlama', 'uzuv',
+    ('kuantum.katlama', 'uzuv',
      'HDTF -- hiyerarşik ikili ağaç katlaması; 2^n genlik hiç açılmadan, zar atılmadan QTT inşası'),
     ('akis.ikmal', 'gölge',
      'Ceridenin İkmâl Fıkraları -- Lions konsantrasyonu, RCD(K,N) Bochner, '
@@ -420,16 +424,27 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '(şerhsiz)'),
     ('local_run.entry', 'koşucu',
      '(şerhsiz)'),
-    ('main.dimag', 'uzuv',
+    ('nefs.dimag_kulli', 'uzuv',
      'Küllî Dimağ -- ``tecrit.md`` mimarisinin fiilî inşası'),
     ('main.egitim', 'uzuv',
      "Küllî Dimağ'ın eğitimi -- ARC metniyle, **gradyan inişi olmadan**"),
-    ('main.hamiltonyen', 'uzuv',
+    ('nefs.hamiltonyen', 'uzuv',
      'Uzaya mahsus Hamiltonyenler ve kuantum evrimi'),
-    ('main.kategori', 'uzuv',
+    ('idrak.kategori', 'uzuv',
      '20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur'),
-    ('main.zirh', 'uzuv',
+    ('ogrenme.zirh_mizan', 'uzuv',
      'Enine topolojik zırh -- **her uzaya mahsus**, katman değil kesit (kütük H23)'),
+    ('kuantum.fubini', 'uzuv',
+     'Fubini-Study güdümlü DETERMİNİSTİK ağaç okuması -- x* = argmax g⁺·∇log P; '
+     'metrik hakikaten kurulur, kısaltma olduğu ``fubini_tam_kiyas`` ile ölçülür'),
+    ('main.kaggle_egitim', 'uzuv',
+     'Kaggle çoklu GPU tâlim nazırı -- 4×L4, sınır vagonu P2P; GPU yokken CPU '
+     'yedeğine düşer ve ölçüm yapılmadığını YAZAR'),
+    ('main.kaggle_cikarim', 'uzuv',
+     'Kaggle teslimat nazırı -- submission.json; "dalga kurulamayan" satır '
+     'ayrı sayılır, çözüm sayılmaz'),
+    ('ogrenme.kaggle_donanim', 'uzuv',
+     'Kaggle donanım tespiti ve ayar seçimi -- BLAS ipliği, profil, mühürleme'),
     ('mizan.altyapisal', 'uzuv',
      'Yapısal-altı mantıklar (doğrusal, affine, sıkı), relevans ve kuantum'),
     ('mizan.cikarim', 'uzuv',

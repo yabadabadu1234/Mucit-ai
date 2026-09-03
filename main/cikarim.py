@@ -302,12 +302,32 @@ class Dalga:
         e = np.exp(z)
         return e / e.sum(axis=1, keepdims=True)
 
-    def oku(self, g: np.ndarray) -> Optional[Tuple[np.ndarray, float]]:
-        """Fubini-Study deterministik ağaç okuması: ``argmax_c``."""
+    def oku(self, g: np.ndarray, fubini: bool = True
+            ) -> Optional[Tuple[np.ndarray, float]]:
+        """**Fubini-Study güdümlü deterministik ağaç okuması.**
+
+        ``x*_k = argmax_c [ g_Fubini⁺ · ∇_θ log P(x_k = c | x_<k*) ]``
+
+        `kuantum/fubini.py`ye bağlıdır ve o dosya metriği hakikaten
+        kuruyor. ``fubini=False`` iken düz ``argmax`` alınır; ikisi
+        **yan yana ölçülebilsin** diye anahtar duruyor (H90) --
+        Fubini'nin bir şey değiştirdiği ancak böyle gösterilebilir.
+
+        Rastgelelik yoktur: aynı dalga daima aynı ızgarayı verir.
+        """
         t = _tuval(g, self.hendese, self.d4)
         if t is None:
             return None
-        P = self.olasilik(ozellik(t, self.yaricap))
+        F = ozellik(t, self.yaricap)
+        if fubini:
+            try:
+                from kuantum.fubini import fubini_study_agac_cozumu
+                out, guven = fubini_study_agac_cozumu(
+                    self.W, F, t.shape, renk_sayisi=RENK_SAYISI)
+                return np.asarray(out, int), float(guven)
+            except Exception:                            # noqa: BLE001
+                pass
+        P = self.olasilik(F)
         out = np.argmax(P, axis=1).reshape(t.shape)
         return out.astype(int), float(np.mean(P.max(axis=1)))
 
