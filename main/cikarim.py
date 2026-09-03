@@ -62,7 +62,7 @@ import numpy as np
 __all__ = ["DIS", "RENK_SAYISI", "D4_ADLARI", "YARICAPLAR",
            "baglam_cikar", "ozellik", "Hendese", "hendese_adaylari",
            "Dalga", "dalga_talimi", "dalga_kur", "KulliHukumMotoru",
-           "padisah", "degerlendirme_kosusu"]
+           "sahit_cogalt", "padisah", "degerlendirme_kosusu"]
 
 
 # =====================================================================
@@ -406,6 +406,52 @@ def hendese_adaylari(ciftler: Sequence[Tuple[np.ndarray, np.ndarray]]
             for pw, qw, cw in _eksen_adaylari(sw, "W")]
 
 
+
+def sahit_cogalt(cift: Sequence[Tuple[np.ndarray, np.ndarray]]
+                 ) -> List[Tuple[np.ndarray, np.ndarray]]:
+    """``D₄`` ile şahit çoğalt -- **parametre eklemeden veri eklemek**.
+
+    ===================================================================
+    NİÇİN: ÖLÇÜM DARBOĞAZI ŞAHİT SAYISI DİYE GÖSTERDİ
+    ===================================================================
+
+    Bu turda üç kere ölçüldü: şahit verisi sabitken kabiliyet arttırınca
+    genelleme **düşüyor** (yarıçap 2, nesne katmanı, küresel katman,
+    küllî -- dördü de yerelden kötü çıktı). O hâlde çare kabiliyeti
+    arttırmak değil, **şahidi** arttırmaktır.
+
+    Bir kaide ``f`` ve bir izometri ``d ∈ D₄`` için, eğer kaide o
+    izometriyle **sıra değiştiriyorsa** (``f∘d = d∘f``), o zaman
+    ``(d(girdi), d(çıktı))`` da o kaidenin geçerli bir şahididir --
+    yeni bilgi değil, aynı bilginin başka yüzü. Üç şahit sekiz katına
+    çıkar.
+
+    **Sıra değiştirme VARSAYILMAZ, ÖLÇÜLÜR.** Bir ``d`` yalnız
+    şahitlerin **hepsinde** ebat kanununu bozmuyorsa kabul edilir;
+    bozuyorsa o izometri bu görevin kaidesiyle sıra değiştirmiyordur
+    ve çoğaltmaya girmez. Körlemesine sekiz katına çıkarmak, yanlış
+    şahit uydurmak olurdu.
+    """
+    cift = [(np.atleast_2d(np.asarray(a, int)),
+             np.atleast_2d(np.asarray(b, int))) for a, b in cift]
+    if not cift:
+        return []
+    taban = hendese_adaylari(cift)
+    if not taban:
+        return list(cift)
+    out = list(cift)
+    for ad in D4_ADLARI:
+        if ad == "birim":
+            continue
+        yeni_cift = [(np.ascontiguousarray(_d4(a, ad)),
+                      np.ascontiguousarray(_d4(b, ad))) for a, b in cift]
+        # Aynı ebat kanunu bu dönüşümde de ayakta mı?
+        if not hendese_adaylari(list(cift) + yeni_cift):
+            continue
+        out += yeni_cift
+    return out
+
+
 def _d4(g: np.ndarray, ad: str) -> np.ndarray:
     if ad == "birim":
         return g
@@ -630,8 +676,8 @@ def _oznitelik(t: np.ndarray, yaricap: int, tertip) -> np.ndarray:
 def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
               devir: int = 120, lam: float = 1e-2,
               azami_aday: int = 12, loo_devir: int = 40,
-              kulli=  "yerel", tam_fisher: bool = False
-              ) -> Optional[Dalga]:
+              kulli="yerel", tam_fisher: bool = False,
+              cogalt: bool = False) -> Optional[Dalga]:
     """Hendese × D₄ × yarıçap araması -- **bütçeli** ve bütçesi ilan.
 
     Bütçesiz hâli ölçüldü: 120 görevlik evaluation kümesi 86
@@ -643,6 +689,8 @@ def dalga_kur(cift: Sequence[Tuple[np.ndarray, np.ndarray]],
              np.atleast_2d(np.asarray(b, int))) for a, b in cift]
     if not cift:
         return None
+    if cogalt:
+        cift = sahit_cogalt(cift)
     hendeseler = hendese_adaylari(cift)
     if not hendeseler:
         return None
