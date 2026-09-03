@@ -6759,3 +6759,60 @@ Kod tabanında artık **tek** eniyileme kapısı var:
 **Değişmeyen had:** ARC'de fiilen çözen hat hâlâ bu ikisi değil,
 `main/cikarim.py`nin görev tâlimidir. Şema dalgasının zırh kaybı
 ``104,653426``da sabit -- o hat öğrenmiyor ve bu raporda duruyor.
+
+---
+
+## H202 -- BÜTÇESİ OLMAYAN BÜTÇE: HAD UZVU 87.294 ÇAĞRI İSTİYORMUŞ
+
+H201'de yeni eniyileme motorunu kurdum ve bütçesini "peşinen ilan
+ediyor" diye yazdım. **İlan ettiğim bütçe yanlıştı** ve bunu ancak
+imtihan 31 CPU-dakika sessiz kalınca fark ettim.
+
+### KUSUR
+
+HAD uzvunu doğrudan ``akis.tikiz.zorlayici_mi``ye bağlamıştım. Ölçüldü::
+
+    d = 270 iken tek çağrısı  →  87.294 kayıp değerlendirmesi
+    küllî kayıpta bir değerlendirme = 9,44 sn
+    ⇒  229 saat
+
+Üstelik ``butce_kestirimi`` HAD çağrılarını **hiç saymıyordu**; yani
+ilan ettiğim "49 çağrı" hem eksik hem yanıltıcıydı. Ölçmediğim bir
+bütçeyi ilan etmek, bütçesizlikten daha kötüdür: sessizliğe bir de
+yanlış rakam eklenir.
+
+### TASHİH
+
+1. **Sınırlı zorlayıcılık yoklaması.** ``had_yon`` rastgele yönde,
+   ``had_yaricaplar`` ölçeğinde kayıp okunur; yarıçap büyüdükçe kayıp
+   büyüyor mu diye bakılır. Maliyeti **tam olarak**
+   ``had_yon × len(had_yaricaplar)``tır. Bu, ``akis.tikiz``in tam
+   testi **değildir** ve öyle sunulmuyor -- sonlu bir örnekten okunan
+   bir işarettir.
+2. **HAD çağrıları bütçeye girdi.**
+3. **GCL derecesi düzeltildi**: ``M`` derecedir, düğüm ``M+1``dir.
+   Kestirim 1180 derken gerçek 1252 çıkıyordu; fark tam olarak yön
+   başına bir düğümdü. Şimdi::
+
+       kestirim 1252   gerçek 1252   → BİREBİR
+
+4. **İlerleme yön başına basılıyor.** Tur başına basmak yetmiyordu:
+   tek turluk bir koşu 31 CPU-dakika boyunca tek satır çıkarmadı.
+
+### İKİNCİ KUSUR -- kayıp içindeki dalga araması
+
+`nefs/kademeler.py`nin muhakemesini tam ``dalga_kur`` aramasına
+bağlamıştım; halbuki o kademe **kayıp içinde** koşar ve kayıp
+eniyileyici tarafından yüzlerce kere çağrılır. Ölçüldü: çağrı başına
+~18 sn. Bütçe kısıldıktan sonra (``azami_aday=2``, ``devir=40``,
+``loo_devir=20``) çağrı başına **9,44 sn**. Kademenin ihtiyacı *bir*
+namzettir, en iyi namzet değil; nihaî hüküm zaten
+`main/cikarim.py`de tam bütçeyle verilir.
+
+### DERS
+
+Bu turda aynı kusurun **üç ayrı hâli** ölçüldü: bütçesiz arama
+(86 CPU-dakika sessiz), bütçesi yanlış sayılan arama (31 CPU-dakika
+sessiz), ve kayıp içine gizlenmiş pahalı arama (18 sn/çağrı). Üçünde
+de kusur hesabın kendisinde değil, **hesabın maliyetini ölçmemekte**
+idi.

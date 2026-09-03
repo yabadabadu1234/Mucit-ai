@@ -302,6 +302,10 @@ class OptimizeAyari:
     yon_sayisi: int = 0
     # Uzuv anahtarları -- kapatılabilir olması ölçüm şartıdır (H90)
     had_acik: bool = True
+    #: HAD yoklamasının **tam** maliyeti: ``had_yon × len(had_yaricaplar)``
+    #: kayıp çağrısı. Sabit ve bütçeye girer.
+    had_yon: int = 3
+    had_yaricaplar: Tuple[float, ...] = (1.0, 2.0, 4.0)
     durgunluk_acik: bool = True
     sesli: bool = False
     tohum: int = 0
@@ -344,19 +348,39 @@ class KulliOptimizer:
         Zorlayıcı olmayan bir kayıpta asgarî sonsuzda olabilir; arama
         yarıçapı bağlanmazsa boşluğa koşar. Bu bir tedbir değil,
         aramanın iyi konulmuş olmasının şartıdır.
+
+        ===================================================================
+        `akis.tikiz.zorlayici_mi` BU HATTA KULLANILAMAZ -- ÖLÇÜLDÜ
+        ===================================================================
+
+        Evvelâ HAD'i doğrudan ``akis.tikiz.zorlayici_mi``ye bağlamıştım.
+        Ölçüldü: ``d = 270`` iken **tek çağrısı 87.294 kayıp
+        değerlendirmesi** istiyor. Küllî kayıpta bir değerlendirme
+        9,44 sn olduğuna göre bu **229 saattir**. Üstelik bütçe
+        kestirimim onu hiç saymıyordu; yani ilan ettiğim "49 çağrı"
+        yanlıştı ve imtihan 31 CPU-dakika sessiz kaldı.
+
+        Yerine **sınırlı bir zorlayıcılık yoklaması** kondu ve haddi
+        açıkça yazılıdır: ``had_yon`` rastgele yönde, ``had_yaricaplar``
+        ölçeğinde kayıp okunur ve **artıyor mu** diye bakılır.
+        ``akis.tikiz``in tam testi değildir ve öyle sunulmuyor; sonlu
+        bir örnekten okunan bir işarettir. Maliyeti tam olarak
+        ``had_yon × len(had_yaricaplar)`` çağrıdır ve bütçeye girer.
         """
         if not self.ayar.had_acik:
             return float(self.ayar.yaricap)
-        try:
-            from akis.tikiz import zorlayici_mi
-            r = zorlayici_mi(lambda z: self._f1(merkez + z), self.d,
-                             (1.0, 4.0), 8, tohum=self.ayar.tohum)
-            zor = bool(r.get("zorlayıcı", True))
-            self.gunluk.append({"uzuv": "had", "zorlayıcı": zor})
-            return float(self.ayar.yaricap) * (1.0 if zor else 0.5)
-        except Exception as exc:                          # noqa: BLE001
-            self.dusen_uzuv["akis.tikiz"] = type(exc).__name__
-            return float(self.ayar.yaricap)
+        rng = np.random.default_rng(int(self.ayar.tohum))
+        yarilar = tuple(self.ayar.had_yaricaplar)
+        ort = []
+        for R in yarilar:
+            Z = rng.normal(size=(int(self.ayar.had_yon), self.d))
+            Z /= np.maximum(np.linalg.norm(Z, axis=1, keepdims=True), 1e-12)
+            ort.append(float(np.mean(self._f(merkez[None, :] + R * Z))))
+        # Zorlayıcı: yarıçap büyüdükçe kayıp da büyümeli.
+        zor = all(ort[i + 1] >= ort[i] for i in range(len(ort) - 1))
+        self.gunluk.append({"uzuv": "had", "zorlayıcı": bool(zor),
+                            "kayıp_ortalamaları": ort})
+        return float(self.ayar.yaricap) * (1.0 if zor else 0.5)
 
     # -- GRASSMANN DURGUNLUĞU (2. zerk edilen uzuv) -------------------
     def _durgunluk(self, onceki: Optional[np.ndarray],
@@ -424,17 +448,29 @@ class KulliOptimizer:
         if self.ayar.blok or self.ayar.blok_defteri:
             bl = self._bloklar()
             yon = min(yon, max(len(x) for x in bl)) if bl else yon
-        M = int(self.ayar.gcl_nokta_sayisi)
+        # GCL ``M`` **derecedir**; düğüm sayısı ``M+1``dir. Evvelce
+        # ``M`` sayılıyordu ve kestirim 1180 derken gerçek 1252
+        # çıkıyordu -- fark tam olarak yön başına bir düğümdü.
+        M = int(len(gauss_chebyshev_lobatto_dugumleri(
+            M=int(self.ayar.gcl_nokta_sayisi))))
+        # **HAD çağrıları da sayılır.** Evvelce sayılmıyordu ve ilan
+        # edilen bütçe yanlış çıkıyordu; ölçülmeyen bir bütçe bütçe
+        # değildir.
+        had = (int(self.ayar.had_yon) * len(self.ayar.had_yaricaplar)
+               if self.ayar.had_acik else 0)
         return {"tur": int(self.ayar.tur), "yön": int(yon), "düğüm": M,
-                "beklenen_çağrı": int(self.ayar.tur) * int(yon) * M + 1}
+                "had_çağrısı": int(self.ayar.tur) * had,
+                "beklenen_çağrı": int(self.ayar.tur) * (int(yon) * M + had) + 1}
 
     def kos(self) -> Dict[str, object]:
         """Motoru koştur; ``p*`` ve tam telemetriyi döndür."""
         kes = self.butce_kestirimi()
         if self.ayar.sesli:
-            print("  [BÜTÇE] tur=%d × yön=%d × düğüm=%d → beklenen çağrı "
-                  "≈ %d" % (kes["tur"], kes["yön"], kes["düğüm"],
-                            kes["beklenen_çağrı"]), flush=True)
+            print("  [BÜTÇE] tur=%d × (yön=%d × düğüm=%d + HAD=%d) → "
+                  "beklenen çağrı ≈ %d"
+                  % (kes["tur"], kes["yön"], kes["düğüm"],
+                     kes["had_çağrısı"] // max(kes["tur"], 1),
+                     kes["beklenen_çağrı"]), flush=True)
         p = self.p0.copy()
         v_ilk = self._f1(p)
         v = v_ilk
@@ -456,6 +492,13 @@ class KulliOptimizer:
                 pa, va = self._yon_asgarisi(p, e, R)
                 if va < v:
                     p, v = pa, va
+                # **Yön başına ilerleme basılır.** Tur başına basmak
+                # yetmiyordu: tek turluk bir koşu 31 CPU-dakika boyunca
+                # tek satır çıkarmadı. Sessiz hesap ölçülemeyen hesaptır.
+                if self.ayar.sesli:
+                    print("    [yön %3d/%3d] V=%.6f çağrı=%d"
+                          % (yonler.index(j) + 1, len(yonler), v,
+                             self.cagri), flush=True)
             U = p.reshape(-1, 1)
             durgun = self._durgunluk(onceki_U, U)
             onceki_U = U
