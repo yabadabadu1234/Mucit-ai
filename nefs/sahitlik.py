@@ -87,7 +87,7 @@ def kanal_bagimsizligi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
     ``fazla_sayma`` bağımsızlık farzının ne kadar fazla saydırdığını
     verir.
     """
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
 
     A, B = [], []

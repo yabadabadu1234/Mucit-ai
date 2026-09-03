@@ -163,7 +163,7 @@ def terkip_iyi_tipli_mi() -> Dict[str, object]:
     (``bosluklar``) sessiz kalmasın diye.
     """
     from omega_kategori import turetimler
-    from .qmeleke import QAKIS, qsicil
+    from .melekeler import QAKIS, qsicil
 
     s = qsicil()
     # Terkip zinciri: her adımın çıktısı bir sonrakinin girdisi.
@@ -189,7 +189,7 @@ def tikaniklik_sukut_bagi(n_gorev: int = 40, tohum: int = 0,
     Bu bir iddia değildir ve kırmızı yanabilir: bağ sıfır çıkarsa,
     modelin susması tıkanıklıkla alâkasız demektir ve öyle yazılır.
     """
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     from .iki_olcek import gorev_ozellikleri
 

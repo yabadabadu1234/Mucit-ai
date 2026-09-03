@@ -251,7 +251,7 @@ def gaye_kos(q: QYazmac, p) -> float:
 
 def _aci(p, anahtar: str, n: int, olcek: float) -> np.ndarray:
     """Öğrenilen açı dilimi -- melekelerinkiyle aynı defterden."""
-    from .qmeleke import QParametre
+    from .melekeler import QParametre
     if isinstance(p, QParametre):
         return olcek * p.al(anahtar, n)
     return olcek * p.v(anahtar, n)
@@ -332,7 +332,7 @@ def serbest_enerji_olcumu(q: QYazmac) -> Dict[str, float]:
 
 def rapor(tohum: int = 0, n: int = 6, d_in: int = 12) -> str:
     """Gaye açık ve kapalı: alan yaşıyor mu, ne değişiyor?"""
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
 
     E = np.random.default_rng(tohum).normal(size=(n, d_in))

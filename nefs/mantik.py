@@ -269,7 +269,7 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
     """
     from .operad import cech_tikanikligi, yamalar
     from .iki_olcek import gorev_ozellikleri
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import MAKAM_ADLARI, QAyar
 
     c = cech_tikanikligi(gorev)

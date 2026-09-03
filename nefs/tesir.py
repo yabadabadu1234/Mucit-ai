@@ -34,9 +34,9 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .akis import AKIS, Nefs
-from .meleke import melekeler
-from .uzaylar import Durum
+from .melekeler import AKIS, Nefs
+from .melekeler import melekeler
+from .melekeler import Durum
 
 __all__ = ["Iz", "Tesir", "icra_izi", "netice_ozeti", "tesir_olc",
            "tesir_tablosu", "rapor"]

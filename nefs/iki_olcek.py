@@ -148,7 +148,7 @@ def kebir_ozellik(gorev, tohum: int = 0, chi: int = 8) -> np.ndarray:
     görevlerde ortak** parametrelerle üretilir -- ihtisas yoktur, ve
     ölçülecek olan da odur.
     """
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
 
     X, Y = gorev_ozellikleri(gorev)

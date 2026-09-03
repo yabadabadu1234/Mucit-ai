@@ -28,8 +28,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Set, Tuple
 
-from . import akil, beyan, idrak, murakabe  # noqa: F401  (sicili doldurur)
-from .meleke import Meleke, melekeler, sicil
+from . import melekeler as akil  # noqa: F401  (sicili doldurur)
+from . import melekeler as beyan
+from . import melekeler as idrak
+from . import melekeler as murakabe
+from .melekeler import Meleke, melekeler, sicil
 
 __all__ = ["Uzuv", "UZUV_SOFRASI", "envanter", "akdi_denetle", "rapor",
            "vekil_kalanlar", "yazmayanlar"]
@@ -56,46 +59,46 @@ class Uzuv:
 #  Uzuv sofrası: 𝒪ₙ → uzuv
 # ---------------------------------------------------------------------
 UZUV_SOFRASI: Dict[int, Uzuv] = {
-    1:  Uzuv("nefs.idrak", "FNO spektral ön-süzgeç + odak çekirdeği"),
-    2:  Uzuv("nefs.idrak", "hissî suret kodlaması"),
-    3:  Uzuv("nefs.idrak", "muhayyile serbestliği"),
+    1:  Uzuv("nefs.melekeler", "FNO spektral ön-süzgeç + odak çekirdeği"),
+    2:  Uzuv("nefs.melekeler", "hissî suret kodlaması"),
+    3:  Uzuv("nefs.melekeler", "muhayyile serbestliği"),
     4:  Uzuv("nefs.sahit", "şahit bölütlemesi (kopma ölçüsü, MAD eşiği)"),
-    5:  Uzuv("nefs.idrak", "Grassmann kesiti ``w ∈ ℳ`` + Betti sayıları"),
-    6:  Uzuv("nefs.idrak", "tasavvur: mana uzayına geçiş"),
-    7:  Uzuv("nefs.idrak", "vâhime çekirdeği"),
-    8:  Uzuv("nefs.idrak", "SVD tahlili"),
-    9:  Uzuv("nefs.idrak", "terkip"),
-    10: Uzuv("nefs.idrak", "tezat kutbu → 𝒪₁₁ çelişki çekirdeği"),
-    11: Uzuv("nefs.uzaylar", "çelişki çekirdeği ``C = −S(AᵀA)Sᵀ`` + ıslah"),
-    12: Uzuv("nefs.akil", "üç başlıklı maliyet ve eleme"),
-    13: Uzuv("nefs.akil", "tasdik mührü → ``d.hukum`` kaydı"),
-    14: Uzuv("nefs.akil", "gaye"),
-    15: Uzuv("nefs.akil", "sual"),
-    16: Uzuv("nefs.akil", "taban çıkarmalı REINFORCE → Mutasarrıfa R_t (𝒪₂₁)"),
-    17: Uzuv("nefs.akil", "Bayes ardılı → 𝒪₂₅ Teemmül önseli"),
+    5:  Uzuv("nefs.melekeler", "Grassmann kesiti ``w ∈ ℳ`` + Betti sayıları"),
+    6:  Uzuv("nefs.melekeler", "tasavvur: mana uzayına geçiş"),
+    7:  Uzuv("nefs.melekeler", "vâhime çekirdeği"),
+    8:  Uzuv("nefs.melekeler", "SVD tahlili"),
+    9:  Uzuv("nefs.melekeler", "terkip"),
+    10: Uzuv("nefs.melekeler", "tezat kutbu → 𝒪₁₁ çelişki çekirdeği"),
+    11: Uzuv("nefs.melekeler", "çelişki çekirdeği ``C = −S(AᵀA)Sᵀ`` + ıslah"),
+    12: Uzuv("nefs.melekeler", "üç başlıklı maliyet ve eleme"),
+    13: Uzuv("nefs.melekeler", "tasdik mührü → ``d.hukum`` kaydı"),
+    14: Uzuv("nefs.melekeler", "gaye"),
+    15: Uzuv("nefs.melekeler", "sual"),
+    16: Uzuv("nefs.melekeler", "taban çıkarmalı REINFORCE → Mutasarrıfa R_t (𝒪₂₁)"),
+    17: Uzuv("nefs.melekeler", "Bayes ardılı → 𝒪₂₅ Teemmül önseli"),
     18: Uzuv("nefs.sahit", "şahit başına dik Procrustes kaidesi (kapalı form)"),
-    19: Uzuv("nefs.akil", "sözde ters ile somut temsil → 𝒪₂₇ kusur ölçüsü"),
-    20: Uzuv("nefs.akil", "vech-i şebeh → 𝒪₃₉ Belâgat"),
-    21: Uzuv("nefs.akil", "tefekkür devri"),
-    22: Uzuv("nefs.akil", "NOTEARS asiklik + arka kapı"),
+    19: Uzuv("nefs.melekeler", "sözde ters ile somut temsil → 𝒪₂₇ kusur ölçüsü"),
+    20: Uzuv("nefs.melekeler", "vech-i şebeh → 𝒪₃₉ Belâgat"),
+    21: Uzuv("nefs.melekeler", "tefekkür devri"),
+    22: Uzuv("nefs.melekeler", "NOTEARS asiklik + arka kapı"),
     23: Uzuv("mizan.munazara", "nakz sınaması + Gazâlî yakîni (``min``)"),
-    24: Uzuv("nefs.akil", "burhân zinciri"),
-    25: Uzuv("nefs.murakabe", "büzücü devridaim + durma ölçütü"),
-    26: Uzuv("nefs.murakabe", "asgarî arama + vakarla harman (S yazar)"),
-    27: Uzuv("nefs.murakabe", "kusur haritası → 𝒪₂₈ Tashih"),
-    28: Uzuv("nefs.murakabe", "şartlı tashih (ölçerek kabul)"),
+    24: Uzuv("nefs.melekeler", "burhân zinciri"),
+    25: Uzuv("nefs.melekeler", "büzücü devridaim + durma ölçütü"),
+    26: Uzuv("nefs.melekeler", "asgarî arama + vakarla harman (S yazar)"),
+    27: Uzuv("nefs.melekeler", "kusur haritası → 𝒪₂₈ Tashih"),
+    28: Uzuv("nefs.melekeler", "şartlı tashih (ölçerek kabul)"),
     29: Uzuv("fitrat.tevafuk", "tevafuk ölçüsü + fazla sayma → müteber şahit"),
     30: Uzuv("nefs.sahit", "küllî kaide (nakzedilmiş şahit hariç) + taklit ayırımı"),
-    31: Uzuv("nefs.murakabe", "Monte Carlo âkıbet riski → 𝒪₃₃ mîzân"),
+    31: Uzuv("nefs.melekeler", "Monte Carlo âkıbet riski → 𝒪₃₃ mîzân"),
     32: Uzuv("mizan.istikra", "ardışıklık kaidesi ``(k+α)/(n+α+β)`` → makam, sükût"),
-    33: Uzuv("nefs.murakabe", "mizan ve rejim değişimi"),
-    34: Uzuv("nefs.murakabe", "tafsil dalları → 𝒪₃₇ Fesâhat"),
-    35: Uzuv("nefs.murakabe", "siyak-sibak muradı → 𝒪₃₉ Belâgat"),
-    36: Uzuv("nefs.murakabe", "şartlı te'vil (iki şart)"),
-    37: Uzuv("nefs.beyan", "fesâhat + **sükût kapısı**"),
-    38: Uzuv("nefs.beyan", "talâkat düzleştirmesi"),
-    39: Uzuv("nefs.beyan", "muktezâ-yı hâl"),
-    40: Uzuv("nefs.beyan", "simetrik harmoni + altın oran → kelam ölçeği (𝒪₄₁)"),
+    33: Uzuv("nefs.melekeler", "mizan ve rejim değişimi"),
+    34: Uzuv("nefs.melekeler", "tafsil dalları → 𝒪₃₇ Fesâhat"),
+    35: Uzuv("nefs.melekeler", "siyak-sibak muradı → 𝒪₃₉ Belâgat"),
+    36: Uzuv("nefs.melekeler", "şartlı te'vil (iki şart)"),
+    37: Uzuv("nefs.melekeler", "fesâhat + **sükût kapısı**"),
+    38: Uzuv("nefs.melekeler", "talâkat düzleştirmesi"),
+    39: Uzuv("nefs.melekeler", "muktezâ-yı hâl"),
+    40: Uzuv("nefs.melekeler", "simetrik harmoni + altın oran → kelam ölçeği (𝒪₄₁)"),
     41: Uzuv("mizan.munazara", "``yakin_zinciri`` ile burhân kuvveti"),
 }
 

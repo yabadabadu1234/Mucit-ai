@@ -76,7 +76,7 @@ EKSIK: Dict[str, str] = {}
 # ------------------------------------------------------------------
 import akis.hacim  # [gölge] Hacim — ortalama eğrilik akışı ve yoğunluk akışları
 import akis.test_akis  # [şahit] akis test takımı
-import nefs.teskilat  # [uzuv] 𝒪₄₂ Umumileştirme, 𝒪₄₃ Talim, 𝒪₄₄ Tahsil -- formülleriyle uzuv
+import nefs.melekeler  # [uzuv] KÜLLÎ MELEKE ÇİPİ -- 44 meleke, 20 mertebe, iki hat, tek dosya
 import nefs.lisan  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri
 import akis.ikmal  # [gölge] Ceridenin İkmâl Fıkraları -- Lions, Bochner, Cayley, Postnikov
 import akis.tikiz  # [gölge] Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus
@@ -178,13 +178,8 @@ import mizan.test_mizan  # [şahit] mizan test takımı
 # ------------------------------------------------------------------
 #  nefs
 # ------------------------------------------------------------------
-import nefs.akil  # [uzuv] 𝒪₁₁–𝒪₂₄: hüküm, gaye ve burhân. Mananın tartıldığı, sebebin arandığı ve
-import nefs.akis  # [uzuv] Küllî ittisâl: 41 melekenin akışı
 import nefs.akit  # [uzuv] Kademe 1 -- **envanter ve arayüz akdi**
-import nefs.beyan  # [uzuv] 𝒪₃₇–𝒪₄₁: beyan -- hükmün dışarıya çıkışı
-import nefs.idrak  # [uzuv] 𝒪₁–𝒪₁₀: duyudan mahiyete. Ham sinyalin suret, soyutlama ve mana kazandığı
 import nefs.ikiz  # [hakem] İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil
-import nefs.dimag  # [uzuv] Küllî Dimağ Hamiltonyeni -- 41 meleke Lie üreteci, 20 mertebe, 4 zırh, 1 gaye
 import nefs.hiz  # [hakem] Hız defteri -- 700 MB/sn hedefinin üç ayrı muhasebesi
 import nefs.gomme  # [uzuv] Genlik gömmesi -- 4096 boyut 12 kübitte, 35 kübitlik adres yazmacı
 import nefs.zirh  # [uzuv] Dörtlü topolojik zırh -- gaye: çelişkisiz mana manifoldu
@@ -194,8 +189,6 @@ import nefs.ttkan  # [hakem] TT-KAN -- ceridenin hız hükmünün fiilî hesabı
 import nefs.kod_uzayi  # [uzuv] MANTIK KOD UZAYI -- hüküm bloğunun **stabilizer** temsili
 import nefs.kopru  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
 import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
-import nefs.meleke  # [uzuv] Meleke (faculty) sözleşmesi ve sicili
-import nefs.murakabe  # [uzuv] 𝒪₂₅–𝒪₃₆: murâkabe -- nefsin kendi hükmünü denetlediği mertebe
 import nefs.qkaide  # [uzuv] KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta
 import nefs.tabii_gradyan  # [uzuv] TABİÎ GRADYAN (natural gradient) -- kullanıcı hükmü H86
 import nefs.tesir  # [uzuv] Kademe 5 -- **icra izi, hassasiyet ve hata izolasyonu**
@@ -329,8 +322,8 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Hacim — ortalama eğrilik akışı ve yoğunluk akışları'),
     ('akis.test_akis', 'şahit',
      'akis test takımı'),
-    ('nefs.teskilat', 'uzuv',
-     '𝒪₄₂ Umumileştirme (Kan uzantısı), 𝒪₄₃ Talim (usul düzenleyici), 𝒪₄₄ Tahsil (ağırlığı zâtî mülk kılma) -- üçü de formüllü'),
+    ('nefs.melekeler', 'uzuv',
+     'KÜLLÎ MELEKE ÇİPİ -- 44 meleke, 20 mertebe, iki hat, tek dosya'),
     ('nefs.lisan', 'uzuv',
      'Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri; mutlak koordinat YASAK, izafî tarif esastır'),
     ('akis.ikmal', 'gölge',
@@ -447,20 +440,10 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      "Münâzara — âdâbü'l-bahs kaideleri ve yakîn derecesinin hesabı"),
     ('mizan.test_mizan', 'şahit',
      'mizan test takımı'),
-    ('nefs.akil', 'uzuv',
-     '𝒪₁₁–𝒪₂₄: hüküm, gaye ve burhân. Mananın tartıldığı, sebebin arandığı ve'),
-    ('nefs.akis', 'uzuv',
-     'Küllî ittisâl: 41 melekenin akışı'),
     ('nefs.akit', 'uzuv',
      'Kademe 1 -- **envanter ve arayüz akdi**'),
-    ('nefs.beyan', 'uzuv',
-     '𝒪₃₇–𝒪₄₁: beyan -- hükmün dışarıya çıkışı'),
-    ('nefs.idrak', 'uzuv',
-     '𝒪₁–𝒪₁₀: duyudan mahiyete. Ham sinyalin suret, soyutlama ve mana kazandığı'),
     ('nefs.ikiz', 'hakem',
      'İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil'),
-    ('nefs.dimag', 'uzuv',
-     'Küllî Dimağ Hamiltonyeni -- 41 meleke Lie ÜRETECİDİR (katman değil), 20 mertebe, dörtlü zırh ve BGCM muvazenesi tek dizeyde'),
     ('nefs.hiz', 'hakem',
      'Hız defteri -- token başına / küllî süperpozisyon / yükleme: üç muhasebe yan yana'),
     ('nefs.gomme', 'uzuv',
@@ -481,10 +464,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati'),
     ('nefs.kule', 'uzuv',
      'Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması'),
-    ('nefs.meleke', 'uzuv',
-     'Meleke (faculty) sözleşmesi ve sicili'),
-    ('nefs.murakabe', 'uzuv',
-     '𝒪₂₅–𝒪₃₆: murâkabe -- nefsin kendi hükmünü denetlediği mertebe'),
     ('nefs.qkaide', 'uzuv',
      "KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta"),
     ('nefs.tabii_gradyan', 'uzuv',

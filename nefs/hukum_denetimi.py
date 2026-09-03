@@ -110,8 +110,9 @@ def _h21_mertebeler_toplanmaz() -> Tuple[bool, str]:
     uzak menzilli MPO'ya farklı sırada dokunur. Ölçüldü: bağıl fark
     **1,678**, ve küllî hükümler de oynuyor (tasdik 0,5530 → 0,6304).
     """
-    from . import mertebe, qmeleke
-    from .qakis import QNefs
+    from . import melekeler as mertebe
+    from . import melekeler as qmeleke
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     E = np.random.default_rng(0).normal(size=(4, 8))
 
@@ -133,7 +134,7 @@ def _h21_mertebeler_toplanmaz() -> Tuple[bool, str]:
 
 def _h24_mera_dolasiklik() -> Tuple[bool, str]:
     """Süperpozisyon tek başına dolaşıklık vermez; MERA verir."""
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)))
@@ -144,7 +145,7 @@ def _h24_mera_dolasiklik() -> Tuple[bool, str]:
 
 def _h30_bec_yalniz_tepede() -> Tuple[bool, str]:
     """BEC veri kübitlerine **dokunmaz**; yalnız hüküm alanlarına vurur."""
-    from .qakis import QNefs, YOGUSAN, bec_faz_kilidi
+    from .melekeler import QNefs, YOGUSAN, bec_faz_kilidi
     from .qyazmac import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)), bec=False)
@@ -181,7 +182,7 @@ def _norm_haddi(r) -> float:
 
 def _h31_povm_cokus_yok() -> Tuple[bool, str]:
     """Zayıf ölçüm normu bozmaz -- çöküş yoktur."""
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)))
@@ -197,7 +198,7 @@ def _h31_povm_cokus_yok() -> Tuple[bool, str]:
 
 def _h42_uniterlik() -> Tuple[bool, str]:
     """Yazmaç üniterdir: tam akış sonunda norm hatası makine mertebesinde."""
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(1).normal(size=(4, 4)))
@@ -219,7 +220,7 @@ def _h42_uniterlik() -> Tuple[bool, str]:
 
 def _h43_kelam_konusabiliyor() -> Tuple[bool, str]:
     """Kelam alanı düzgün DEĞİL -- model konuşabiliyor."""
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16))
     r = q.idrak_et(np.random.default_rng(0).normal(size=(3, 4)))
@@ -231,7 +232,7 @@ def _h43_kelam_konusabiliyor() -> Tuple[bool, str]:
 
 def _h44_uzunluktan_bagimsiz() -> Tuple[bool, str]:
     """Parametre sayısı girdi uzunluğuna bağlı değildir."""
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     a = QAyar(satir_kubiti=4, bag=16)
     q = QNefs(0, a)
@@ -360,8 +361,8 @@ def _h72_ptr_buzulme() -> Tuple[bool, str]:
 
 def _h73_yuksek_mertebeler_kosuyor() -> Tuple[bool, str]:
     """20 lifin **hepsi** uzak menzilli MPO vuruyor mu (H54/3. borç)."""
-    from .mertebe import DINAMIK, lifleri_kur
-    from .qakis import QNefs
+    from .melekeler import DINAMIK, lifleri_kur
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     lifler = lifleri_kur(DINAMIK)
     azami_adim = max(l.adim for l in lifler)
@@ -403,7 +404,7 @@ def _h73_bec_sukutu_bogmuyor() -> Tuple[bool, str]:
     ölçülen ``0,7924 → 0,0626`` (12,7 kat) idi. Şart artık odur: nispî
     değişim %1'i geçmesin.
     """
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
     E = np.random.default_rng(0).normal(size=(3, 4))
     a = QAyar(satir_kubiti=4, bag=16)

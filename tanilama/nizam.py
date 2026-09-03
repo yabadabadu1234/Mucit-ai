@@ -45,7 +45,7 @@ GIRISLER: Tuple[str, ...] = (
     "main.cikarim",          # yerel/genel çıkarım ve hüküm motoru
     "main.kaggle_egitim",    # Kaggle tâlim nazırı
     "main.kaggle_cikarim",   # Kaggle teslimat nazırı
-    "nefs.qakis",            # 41 üniter meleke, kübit akışı
+    "nefs.melekeler",        # 44 üniter meleke + klasik hat (KÜME 2 çipi)
     "nefs.hukum_denetimi",   # hükümlerin makine şahitleri
 )
 

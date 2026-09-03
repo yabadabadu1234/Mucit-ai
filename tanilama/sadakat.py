@@ -75,9 +75,9 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from nefs.qakis import QNefs
+from nefs.melekeler import QNefs
 from nefs.qegitim import belirtecleri_kodla
-from nefs.qmeleke import QAKIS, qsicil
+from nefs.melekeler import QAKIS, qsicil
 from nefs.qyazmac import QAyar, QYazmac
 from nefs.sadakat import sadakat_intaci, sadakat_kapisi
 
@@ -266,7 +266,7 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
     # ikinci bir temsil olmadığı için kusur aylarca görünmedi).
     try:
         from nefs.kod_uzayi import yuzlestir
-        from nefs.qakis import QNefs as _QN
+        from nefs.melekeler import QNefs as _QN
         from nefs.qegitim import belirtecleri_kodla as _bk
         _ay = QAyar(tohum=tohum)
         _E = _bk([1, 2, 3, 4, 5, 6], _ay.satir_kubiti, 16)

@@ -153,13 +153,13 @@ def yuzlestir(nefs=None, E: Optional[np.ndarray] = None,
     Dönen her satır: ``no, ad, sınıf, ΔS, ihlâl, uydu_mu``.
     """
     from .kulli_kayip import olcumlu_idrak
-    from .qmeleke import qsicil
+    from .melekeler import qsicil
 
     if nefs is None:
         from idrak import arc
 
         from main.egitim import KISA_CPU
-        from .qakis import QNefs
+        from .melekeler import QNefs
         from .qegitim import belirtecleri_kodla, ornekler
         a = ayar or KISA_CPU
         nefs = QNefs(a.tohum, a.qayar())

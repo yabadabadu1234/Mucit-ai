@@ -28,10 +28,13 @@ from typing import Callable, List
 
 import numpy as np
 
-from . import akil, beyan, idrak, murakabe
-from .akis import AKIS, KULLI_SIRA, Nefs, sira_gecerli_mi
-from .meleke import melekeler, sicil
-from .uzaylar import Durum, Parametreler, kat_norm, softmax
+from . import melekeler as akil
+from . import melekeler as beyan
+from . import melekeler as idrak
+from . import melekeler as murakabe
+from .melekeler import AKIS, KULLI_SIRA, Nefs, sira_gecerli_mi
+from .melekeler import melekeler, sicil
+from .melekeler import Durum, Parametreler, kat_norm, softmax
 
 
 def _E(tohum: int = 0, n: int = 20, d: int = 12) -> np.ndarray:
@@ -100,7 +103,7 @@ def test_surecler_arasi_tekrarlanabilir():
     """
     import subprocess, sys, json
     kod = ("import numpy as np;"
-           "from nefs.akis import Nefs;"
+           "from nefs.melekeler import Nefs;"
            "d=Nefs(0).idrak_et(np.random.default_rng(0).normal(size=(20,12)));"
            "print(repr(float(np.sum(d.S))), repr(float(d.T)))")
     ciktilar = set()
@@ -498,7 +501,7 @@ def test_kan_temelleri_kiyas() -> None:
     Gauss RBF kullanıyordu.  İkisi de tek değişkenli taban verir, fakat
     B-spline üç şeyi garanti eder ki RBF etmez.  Burada o üçü tartılır.
     """
-    from nefs.idrak import kan_temeli
+    from nefs.melekeler import kan_temeli
 
     rng = np.random.default_rng(0)
     v = rng.normal(0.0, 1.0, (200, 6))
@@ -528,7 +531,7 @@ def test_kan_temelleri_kiyas() -> None:
     assert np.min(B_spl) > -1e-12 and np.min(B_rbf) >= 0.0
 
     # 4) İkisi de gerçek melekede koşabilmeli ve SONLU çıktı vermeli.
-    import nefs.idrak as idrak
+    import nefs.melekeler as idrak
     eski = idrak.KAN_TEMELI
     ciktilar = {}
     try:
@@ -936,7 +939,7 @@ def test_gaye_alani_ARTIK_YASIYOR_ve_sukutu_bastiriyor():
 
     İkisi de kütükte borç olarak durur (H122).
     """
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
 
     def kos(acik, tohum):
@@ -980,7 +983,7 @@ def test_alan_okumasi_AYARA_BAGLI_DEGIL():
     ifade etmez: yeni usul ayar altında **sabit**, eski usul ise
     **kayıyor** -- yani sınama kör değil.
     """
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qyazmac import QAyar
 
     q = QNefs(0, QAyar(satir_kubiti=4, bag=16)).idrak_et(
@@ -1182,7 +1185,7 @@ def test_nizam_cetveli_tam_ve_tutarli():
        hiç çözmeyen 𝒪₅ Tecrit tam not alıyordu.
     """
     from .nizam import NIZAM_BANDI, SINIF_CIHETI, sinif_ihlali
-    from .qmeleke import nizam_cetveli
+    from .melekeler import nizam_cetveli
 
     cetvel = nizam_cetveli()
     # **41 → 44 (kütük H213).** `nefs/dimag.py` ``MELEKE_SAYISI = 44``
@@ -1537,7 +1540,7 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
     eksenleridir."* Üç şart denetlenir.
     """
     import numpy as np
-    from nefs.dimag import (MELEKE_SAYISI, MERTEBE_SAYISI, KANONIK_CETVEL,
+    from nefs.melekeler import (MELEKE_SAYISI, MERTEBE_SAYISI, KANONIK_CETVEL,
                             EKSIK_MELEKELER,
                             meleke_mertebeleri, so_ureteci,
                             mertebe_hamiltonyeni, bgcm_kaybi, H_toplam,

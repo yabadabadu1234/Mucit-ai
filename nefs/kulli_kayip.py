@@ -133,7 +133,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
       sınıf taahhüdünün yüzleştirildiği ölçü.
     """
     from .gaye import gaye_kos
-    from .qakis import bec_faz_kilidi
+    from .melekeler import bec_faz_kilidi
     from .qyazmac import QYazmac
     from .sadakat import sadakat_intaci, sadakat_kapisi
     from .tertip import tertip_kos
@@ -325,7 +325,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     # öğrenilebilir -- kesme gibi yapısal değil.
     if dS:
         from .nizam import sinif_ihlali
-        from .qmeleke import qsicil
+        from .melekeler import qsicil
         sic = qsicil()
         for no, d in sorted(dS.items()):
             m = sic.get(int(no))
@@ -454,7 +454,7 @@ def rapor(n: int = 2) -> str:
     from idrak import arc
 
     from main.egitim import KISA_CPU
-    from .qakis import QNefs
+    from .melekeler import QNefs
     from .qegitim import ornekler
 
     ayar = KISA_CPU

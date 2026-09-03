@@ -59,8 +59,8 @@ from typing import Dict, List, Optional
 
 import numpy as np
 
-from nefs import qmeleke
-from nefs.qakis import QNefs
+from nefs import melekeler as qmeleke
+from nefs.melekeler import QNefs
 from nefs.qyazmac import QAyar
 
 __all__ = ["nizam_olcumu", "rapor"]

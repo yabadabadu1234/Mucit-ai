@@ -268,7 +268,7 @@ _ISCI: Dict[str, object] = {}
 
 
 def _isci_kur(ayar: EgitimAyari, veri, kademe=None) -> None:
-    from nefs.qakis import QNefs
+    from nefs.melekeler import QNefs
     tek_iplik_zorla()
     _ISCI["nefs"] = QNefs(ayar.tohum, ayar.qayar())
     _ISCI["veri"] = veri
@@ -304,7 +304,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     """
     from nefs.kademeler import kademe_parametreleri_ac
     from nefs.kulli_kayip import kulli_kayip
-    from nefs.qakis import QNefs
+    from nefs.melekeler import QNefs
     from nefs.qegitim import degerlendir, ornekler
 
     t0 = time.perf_counter()

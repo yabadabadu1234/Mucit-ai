@@ -83,7 +83,7 @@ HUKUM_ALANLARI: Tuple[str, ...] = (
 
 def _melekelerin_bolgeleri() -> List[Tuple[int, Tuple[str, ...]]]:
     """``QAKIS`` sırasında her adımın dokunduğu bölgeler -- sözleşmeden."""
-    from .qmeleke import QAKIS
+    from .melekeler import QAKIS
     from .sozlesme import SOZLESME
     return [(no, SOZLESME[no][0]) for no in QAKIS]
 
@@ -206,7 +206,7 @@ def kelam_ayrismasi() -> Dict[str, object]:
     ayrik_sartsiz = bool(d_ayrik_mi(g, [yer["veri"][0]],
                                     [yer["kelam"][T]], []))
     # Doğrudan yolu açan melekeler: aynı ilanda hem ``veri`` hem ``kelam``.
-    from .qmeleke import QAKIS, qsicil
+    from .melekeler import QAKIS, qsicil
     from .sozlesme import SOZLESME
     sic = qsicil()
     dogrudan = [(no, sic[no].ad) for no in dict.fromkeys(QAKIS)

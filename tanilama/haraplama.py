@@ -38,9 +38,9 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from nefs.qakis import QNefs
+from nefs.melekeler import QNefs
 from nefs.qegitim import belirtecleri_kodla
-from nefs.qmeleke import QAKIS, qsicil
+from nefs.melekeler import QAKIS, qsicil
 from nefs.qyazmac import MAKAM_ADLARI, QAyar
 
 __all__ = ["haraplama", "rapor"]

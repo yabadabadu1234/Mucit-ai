@@ -7466,3 +7466,46 @@ mîzânı, Wilson holonomisi) kuantum hattında **var mı**, yoksa silmek
 onları da götürür mü? Bu ölçülmeden silinmez.
 
 Sınama: 157/157 (nefs + mizan).
+
+## H217 — KÜME 2 TEVHİDİ: on üç dosya tek çipte, CEVHER SEÇİLMEDİ
+
+Kullanıcı ihtarı yerindeydi ve çerçevem yanlıştı: *"kafana göre cevher
+seçip geri kalanını imha değil"*. Evvelki turda meseleyi *"klasik
+dünyayı sil, HSIC ile çelişki cebri kaybolur"* diye kurmuştum; bu,
+zabıtın dediğinin **tersi**dir. Doğrusu: bütün cevher tek dosyada
+toplanır, sonra kabuk kalkar.
+
+`nefs/melekeler.py` artık **5860 satır**, 116 ad, on üç gövde:
+
+| gövde | kaynak (ilga edildi) |
+|---|---|
+| Temel uzaylar, çelişki cebri, Durum | `nefs/uzaylar.py` |
+| Meleke sözleşmesi ve sicili | `nefs/meleke.py` |
+| Ĥ_Dimağ, so(D), BGCM | `nefs/dimag.py` |
+| 𝒪₄₂/𝒪₄₃/𝒪₄₄ ölçüleri | `nefs/teskilat.py` |
+| 20 ∞-kategori lifi | `nefs/mertebe.py` |
+| 𝒪₁–𝒪₁₀ İdrak (klasik) | `nefs/idrak.py` |
+| 𝒪₁₁–𝒪₂₄ Akıl (klasik) | `nefs/akil.py` |
+| 𝒪₂₅–𝒪₃₆ Murâkabe (klasik) | `nefs/murakabe.py` |
+| 𝒪₃₇–𝒪₄₁ Beyan (klasik) | `nefs/beyan.py` |
+| Klasik küllî akış | `nefs/akis.py` |
+| 44 melekenin üniter hâli | `nefs/qmeleke.py` |
+| Kübit-yerli küllî akış | `nefs/qakis.py` |
+| Ĥ_Dimağ'ın manifold yüzü | eski `melekeler.py` |
+
+Taşıma Küme 1'deki usulle: kaynak gövde **birebir**, hiçbir formül elle
+yeniden yazılmadı. Tek ad çakışması (`rapor`, 7 dosya) yeniden
+adlandırıldı. `__all__`ı olmayan yedi dosyanın 79 açık adı da tek tek
+toplandı -- hiçbir kabiliyet düşmedi.
+
+**Korunduğu fiilen ölçülen cevherler:** `hsic(x,y) = 0.00443821`,
+`celiski_dizeyi(S,A).shape = (6,6)`, klasik `Nefs` akışı 41 melekeyle
+koşuyor, kuantum `QNefs` 44 melekeyle koşuyor (1564 kapı).
+
+29 çağrı yeri yönlendirildi; `tanilama/nizam.py`nin `GIRISLER`i
+`nefs.qakis` → `nefs.melekeler` oldu. **beylik: YOK.** Sınama: 523/523.
+
+**İki hat da duruyor ve sebebi kayıtlıdır:** klasik hat aynı 41
+melekenin bağımsız ikinci temsilidir; kütük H88'in dersi (``beyan``
+aylarca yanlış çevreden okudu, çünkü karşılaştıracak ikinci temsil
+yoktu) tam bunun içindir.

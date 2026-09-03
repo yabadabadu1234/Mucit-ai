@@ -39,8 +39,8 @@ import numpy as np
 from idrak import arc
 from ogrenme.optimize import as_gek_adimi, postnikov_adresi, tersine_tavlama
 
-from . import mertebe
-from .qakis import QNefs
+from . import melekeler as mertebe
+from .melekeler import QNefs
 from .qyazmac import QAyar, QYazmac
 
 __all__ = ["ornekler", "belirtecleri_kodla", "uygunluk", "hedef_cezasi",
