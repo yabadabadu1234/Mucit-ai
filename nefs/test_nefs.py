@@ -34,7 +34,7 @@ from . import melekeler as idrak
 from . import melekeler as murakabe
 from .melekeler import AKIS, KULLI_SIRA, Nefs, sira_gecerli_mi
 from .melekeler import melekeler, sicil
-from .melekeler import Durum, Parametreler, kat_norm, softmax
+from .melekeler import Durum, Parametreler, ehlilestir, tevafuk, devirler
 
 
 def _E(tohum: int = 0, n: int = 20, d: int = 12) -> np.ndarray:
@@ -134,16 +134,16 @@ def test_betti_bilinen_cizgelerde():
             M[i, j] = M[j, i] = 1.0
         return M
 
-    assert idrak.betti_1iskelet(A(4, [])) == (4, 0)                    # 4 nokta
-    assert idrak.betti_1iskelet(A(4, [(0, 1), (1, 2), (2, 3)])) == (1, 0)   # yol
-    assert idrak.betti_1iskelet(A(4, [(0, 1), (1, 2), (2, 3), (3, 0)])) == (1, 1)  # çevrim
-    assert idrak.betti_1iskelet(A(6, [(0, 1), (1, 2), (2, 0),
+    assert devirler("betti", A(4, [])) == (4, 0)                    # 4 nokta
+    assert devirler("betti", A(4, [(0, 1), (1, 2), (2, 3)])) == (1, 0)   # yol
+    assert devirler("betti", A(4, [(0, 1), (1, 2), (2, 3), (3, 0)])) == (1, 1)  # çevrim
+    assert devirler("betti", A(6, [(0, 1), (1, 2), (2, 0),
                                       (3, 4), (4, 5), (5, 3)])) == (2, 2)  # iki üçgen
 
 
 def test_normalize_laplasyen():
     A = np.array([[0., 1., 0.], [1., 0., 1.], [0., 1., 0.]])
-    L = idrak.normalize_laplasyen(A)
+    L = devirler("laplasyen", A)
     assert np.allclose(np.diag(L), 1.0)
     oz = np.linalg.eigvalsh(L)
     assert oz.min() > -1e-9 and oz.max() < 2 + 1e-9   # spektrum [0,2]
@@ -153,16 +153,16 @@ def test_normalize_laplasyen():
 def test_asiklik_olcutu():
     """``h(A) = Tr(exp(A∘A)) − d``: DAG'da tam 0, devirde pozitif."""
     dag = np.array([[0., .8, .5], [0., 0., .7], [0., 0., 0.]])
-    assert abs(akil.asiklik_ihlali(dag)) < 1e-12
+    assert abs(devirler("ihlâl", dag)) < 1e-12
     devir = dag.copy()
     devir[2, 0] = 0.6
-    assert akil.asiklik_ihlali(devir) > 1e-6
+    assert devirler("ihlâl", devir) > 1e-6
 
 
 def test_illet_kesfi_dag_uretiyor():
     d = Nefs(0).idrak_et(_E(0))
     assert d.A_neden is not None
-    assert abs(akil.asiklik_ihlali(d.A_neden)) < 1e-9
+    assert abs(devirler("ihlâl", d.A_neden)) < 1e-9
     assert abs(d.olcum.al("illet.asiklik_ihlali")) < 1e-9
 
 
@@ -216,8 +216,8 @@ def test_hsic_bagimsizlikta_sifira_yakin():
     x = rng.normal(size=n)
     bagimsiz = rng.normal(size=n)
     bagimli = np.sin(3 * x) + 0.1 * rng.normal(size=n)
-    h0 = idrak.hsic(x, bagimsiz)
-    h1 = idrak.hsic(x, bagimli)
+    h0 = tevafuk("çekirdek", x, bagimsiz)
+    h1 = tevafuk("çekirdek", x, bagimli)
     assert h0 < 0.002, h0
     assert h1 > 5 * h0, (h0, h1)
 
@@ -271,12 +271,12 @@ def test_altin_oran_ve_harmoni():
     A = rng.normal(size=(8, 8))
     simetrik = A + A.T
     ters_simetrik = A - A.T
-    assert abs(beyan.simetrik_harmoni(simetrik) - 1.0) < 1e-12
-    assert abs(beyan.simetrik_harmoni(ters_simetrik) - 0.0) < 1e-12
-    h = beyan.simetrik_harmoni(A)
+    assert abs(tevafuk("ayna", simetrik) - 1.0) < 1e-12
+    assert abs(tevafuk("ayna", ters_simetrik) - 0.0) < 1e-12
+    h = tevafuk("ayna", A)
     assert 0.0 <= h <= 1.0
     # ölçek değişmezliği
-    assert abs(beyan.simetrik_harmoni(1000 * A) - h) < 1e-9
+    assert abs(tevafuk("ayna", 1000 * A) - h) < 1e-9
 
 
 def test_tertip_permutasyon_ve_softmax_normlari():
@@ -1542,12 +1542,11 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
     import numpy as np
     from nefs.melekeler import (MELEKE_SAYISI, MERTEBE_SAYISI, KANONIK_CETVEL,
                             EKSIK_MELEKELER,
-                            meleke_mertebeleri, so_ureteci,
-                            mertebe_hamiltonyeni, bgcm_kaybi, H_toplam,
+                            melekelerin_dondurucusu, H_toplam,
                             DimagAyari)
 
     # 1) divanın KANONİK cetveli harfiyen tutmalı, boş mertebe olmamalı
-    cet = meleke_mertebeleri()
+    cet = melekelerin_dondurucusu(np.zeros(MELEKE_SAYISI), 12)["cetvel"]
     assert len(cet) == MELEKE_SAYISI
     for no, m in KANONIK_CETVEL.items():
         assert cet[no] == m, (no, cet[no], m)
@@ -1561,27 +1560,29 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
         assert any(v == m for v in cet.values()), m
 
     # 2) üreteçler ANTİSİMETRİK: exp(θT) tam ortogonal olsun
+    bir = melekelerin_dondurucusu(np.ones(MELEKE_SAYISI), 12)
     for a in (0, 5, 40):
-        T = so_ureteci(12, a)
+        T = bir["üreteç"][a]             # θ=1 iken üretecin kendisi
         assert np.allclose(T, -T.T)
         assert abs(np.trace(T)) < 1e-12
 
     # bir mertebenin Hamiltonyeni TEK dizeydir, katman yığını değil
-    H, uy = mertebe_hamiltonyeni(7, np.ones(MELEKE_SAYISI), 12, cet)
+    H, uy = bir["Ĥ"][7], bir["üyeler"][7]
     assert H.shape == (12, 12) and np.allclose(H, -H.T)
     assert sorted(uy) == [18, 23]        # k=7 mantık ve dedüksiyon
 
     # 3) BGCM: tek meleke uyanıkken TAM sıfır, 41'i birden büyük
     t0 = np.zeros(MELEKE_SAYISI)
     t0[0] = 1.0
-    b0 = bgcm_kaybi(t0, 12)
+    b0 = melekelerin_dondurucusu(t0, 12)["bgcm"]
     assert b0["kayıp"] == 0.0 and b0["muvazeneli"]
     rng = np.random.default_rng(0)
-    b1 = bgcm_kaybi(rng.normal(size=MELEKE_SAYISI), 12)
+    b1 = melekelerin_dondurucusu(rng.normal(size=MELEKE_SAYISI), 12)["bgcm"]
     assert b1["kayıp"] > 1.0 and not b1["muvazeneli"]      # KIRMIZI
     # **NORMALİZE hâli [0,1]de kalmalı** -- θ ne kadar azarsa azsın
     for olc in (0.05, 1.0, 5.0, 50.0, 500.0):
-        bb = bgcm_kaybi(olc * rng.normal(size=MELEKE_SAYISI), 12)
+        bb = melekelerin_dondurucusu(
+            olc * rng.normal(size=MELEKE_SAYISI), 12)["bgcm"]
         assert 0.0 <= bb["kayıp_norm"] <= 1.0, (olc, bb["kayıp_norm"])
 
     # Ĥ_toplam üç kalemi ayrı ayrı raporlamalı; hiçbiri gizlenmemeli

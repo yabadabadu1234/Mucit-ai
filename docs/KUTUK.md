@@ -7581,3 +7581,78 @@ dolaşıklığı sürüklemesi.
 **Hüküm:** D-QTTN'e geçilecek yer `zihin_durumu` değil, **hücre
 başına kübit ayıran temsildir**; orada kazanç ölçülmüştür ve motor
 zaten yazılıdır.
+
+---
+
+## H221 -- Usulün tatbiki: dört terkip, on altı fonksiyon eridi
+
+Padişahın tarif ettiği usul (maden ayıklama usulü) `nefs/melekeler.py`ye
+tatbik edildi: **her dosyayı ayrı ele al → her sınıfı ayrı ele al → her
+fonksiyonu ayrı ele al → fonksiyonları kümele → kümeye mahiyetinin halkça
+ismini ver → o ismi bir fonksiyona ver → o fonksiyonun içinde kümenin
+BÜTÜN cevherlerini bir terkibe getir → kümeyi tek fonksiyona yükselt.**
+
+Yığmak değil terkip: hiçbir cevher seçilip atılmadı, artakalan asıllar
+`yedek/melekeler_fazlalik.py`de şahit olarak durur.
+
+### Bu turda dört küme terkip edildi
+
+| küme (halkça mahiyeti) | eriyen asıllar | terkip |
+|---|---|---|
+| çelişki tartısı | `celiski_dizeyi, celiski_esigi, celiski_skoru, celiski_gradyani` | `celiski_tartisi` |
+| ölçüyü ehlîleştirme | `softmax, sigmoid, gelu, kat_norm, nicele, guvenli_bol, _sik` | `ehlilestir` |
+| iki şahidin birbirini tutması | `kosinus, pearson, pearson_cok, hsic, simetrik_harmoni` | `tevafuk` |
+| çizgenin delikleri | `normalize_laplasyen, betti_1iskelet, _betti0, asiklik_ihlali` | `devirler` |
+| melekeleri tek döndürücüde toplamak | `meleke_mertebeleri, so_ureteci, mertebe_hamiltonyeni, muvazene_matrisi, bgcm_kaybi` | `melekelerin_dondurucusu` |
+
+Yirmi bir fonksiyon **beş** fonksiyona indi.
+
+### Terkip benzetme değil, ÖZDEŞLİK -- ve ölçüldü
+
+Terkibin şartı, kümenin her cevherinin tek formülden **birebir** çıkmasıdır.
+Ölçüm (asıllara karşı, azamî mutlak fark):
+
+| cevher | fark | cevher | fark |
+|---|---|---|---|
+| softmax | 0.0 | kosinus (`ham`) | 6,9e-18 |
+| sigmoid | 0.0 | pearson (`merkezli`) | 0.0 |
+| **gelu** | **2,2e-16** | pearson_cok (`merkezli`) | 0.0 |
+| kat_norm | 0.0 | hsic (`çekirdek`) | 0.0 |
+| nicele | 0.0 | **simetrik_harmoni (`ayna`)** | **0.0** |
+| guvenli_bol | 0.0 | normalize_laplasyen | 0.0 |
+| _sik | 0.0 | betti / _betti0 / ihlâl | 0.0 |
+| cetvel / muvazene / Ĥ_m / üreteç / bgcm (6 kalem) | hepsi 0.0 | | |
+
+İki özdeşlik ayrıca kaydedilmeye değer, zira ikisi de terkibi "benzer
+işleri bir kutuya doldurmak"tan ayırır:
+
+* **GELU çekirdeğin kendisidir.** `½(1+tanh u) = sigmoid(2u)` olduğundan
+  tanh-yaklaşık GELU ayrı bir işlev değil, korunmuş paydalı bölmenin `x`
+  ile çarpılmışıdır. Fark tek ulp (2,2e-16).
+* **Simetrik harmoni bir tevafuktur.** `‖Y−Yᵀ‖² = 2‖Y‖²(1−c)`,
+  `c = ⟨Y,Yᵀ⟩/‖Y‖²` olduğundan
+  `1 − ‖Y−Yᵀ‖/(2‖Y‖) = 1 − √((1−c)/2)`: harmoni, `Y`nin **kendi
+  devriğiyle kosinüsü**nün monoton kılığıdır. Fark tam **0.0**.
+
+### Kazanç (ölçüldü, kırmızıya dönebilir)
+
+* `celiski_tartisi`: `M = AᵀA` turda 4 kere kuruluyordu, 1'e indi --
+  𝒪₁₁ Tenakuz, n=200 d=64: **1,06 ms → 0,45 ms (2,34×)**.
+* `melekelerin_dondurucusu`: `T^a` üç ayrı yerde yeniden kuruluyordu
+  (`MERTEBE_SAYISI×41 + 41` inşa); bir kereye indi -- **6,2 ms → 5,5 ms
+  (1,11×)**.
+* `devirler("ihlâl")`: eski `asiklik_ihlali`de ölçekli seri **iki kere**
+  kuruluyor, ilki kullanılmadan üzerine yazılıyordu. Terkipte o ölü kol
+  yok; netice birebir aynı.
+* `tevafuk("merkezli")`: `pearson` ile `pearson_cok` arasındaki tek fark
+  `ravel`dı -- iki fonksiyon TEK tarzda eridi.
+* Sağlamlık: eşik ile skorun **aynı** çekirdekten geldiği, `Ĥ_m` ile
+  BGCM'in **aynı** `θ`dan geldiği artık cebren garantidir; evvelce
+  çağıran taraf ikisine ayrı veri verebilirdi.
+
+### Usulün gereği: irtibat en sonda kurulur
+
+Padişahın hükmü: *"Diğer dosyalarla irtibat kopsun zaten... bir kez en
+son yaparsın bağlantıları."* Çağrılar `tokenize` ile -- metin ve yorum
+içine **dokunmadan** -- yeniden bağlandı: `nefs/melekeler.py` içinde 93
+çağrı, ayrıca `nefs/test_nefs.py` ve `docs/kaynak/test_tashih_kuantum.py`.

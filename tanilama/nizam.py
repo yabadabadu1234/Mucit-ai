@@ -77,9 +77,14 @@ VERI_DIZINLERI: Tuple[str, ...] = (
 #: * ``mucit_ai_esas`` -- **ilham kaynağıdır**, uzuv değil. Kullanıcı
 #:   hükmü: *"o ilham kaynağı, en son bakılacak ama kendisi beylik
 #:   değil."* Ondan fikir devşirilecek, kendisi bağlanmayacak.
+#: * ``yedek`` -- **terkibin şahididir**, uzuv değil. Usul gereği bir
+#:   küme tek fonksiyona yükseltilirken artakalan asıllar imha
+#:   edilmez, buraya konur (kütük H221) ki terkibin neyi yuttuğu elle
+#:   görülebilsin. Çalıştırılmaz, çağrılmaz; bağlanması beklenmez.
 HARİÇ_DIZINLER: Tuple[str, ...] = (
     "docs",
     "mucit_ai_esas",
+    "yedek",
 )
 
 

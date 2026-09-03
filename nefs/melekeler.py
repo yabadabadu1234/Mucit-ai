@@ -87,31 +87,32 @@ from .sahit import (artiklar, bolutle, capraz_kovaryans, delil_dizileri,
 from .tertip import tertip_kos
 
 __all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
-           "EKSIK_MELEKELER", "meleke_mertebeleri", "so_ureteci",
-           "mertebe_hamiltonyeni", "bgcm_kaybi", "muvazene_matrisi",
+           "EKSIK_MELEKELER", 
+           
            "zirh_projektorleri", "H_toplam", "DimagAyari", "UMUM",
            "TALIM", "TAHSIL", "umumilestir", "talim_kademesi",
            "tahsil_et", "Lif", "lifleri_kur", "mertebe_gecisi", "SABIT",
            "DINAMIK", "AZAMI_TAM_MERTEBE", "rapor_mertebe", "QMeleke",
            "qsicil", "qmelekeler", "QAKIS", "NIZAM_ACIK", "nizami_ac",
            "nizam_cetveli", "QNefs", "rapor_qakis", "bec_faz_kilidi",
-           "KulliMelekeManifoldu", "melekeleri_kur", "softmax",
-           "sigmoid", "gelu", "kat_norm", "kosinus", "dikkat", "nicele",
-           "guvenli_bol", "celiski_dizeyi", "celiski_gradyani",
-           "celiski_esigi", "celiski_skoru", "Parametreler", "Olcumler",
+           "KulliMelekeManifoldu", "melekeleri_kur", 
+           "dikkat", 
+           "ehlilestir", "tevafuk", "devirler",
+           "melekelerin_dondurucusu",
+           "celiski_tartisi", "Parametreler", "Olcumler",
            "Durum", "Meleke", "kaydet", "sicil", "melekeler",
            "rapor_meleke", "Musahede", "Hayal", "KAN_TEMELI",
            "kan_temeli", "Muhayyile", "Tertip", "Tecrit",
-           "normalize_laplasyen", "betti_1iskelet", "Tasavvur", "Mana",
-           "Tahlil", "hsic", "Terkip", "Tezat", "Tenakuz", "Tenkit",
+           "Tasavvur", "Mana",
+           "Tahlil", "Terkip", "Tezat", "Tenakuz", "Tenkit",
            "Tasdik", "Gaye", "Merak", "DenemeYanilma", "Ihtimal",
-           "Kiyas", "kiyas_ogren", "Temsil", "Tesbih", "pearson",
-           "Tefekkur", "IlletKesfi", "asiklik_ihlali", "arka_kapi",
+           "Kiyas", "kiyas_ogren", "Temsil", "Tesbih", 
+           "Tefekkur", "IlletKesfi", "arka_kapi",
            "Mantik", "ima", "modus_ponens", "Ispat", "Teemmul", "Temkin",
-           "Tetkik", "Tashih", "Teyit", "pearson_cok", "Tahkik",
+           "Tetkik", "Tashih", "Teyit", "Tahkik",
            "Tedebbur", "SekZanYakin", "Muhakeme", "Tafsil", "Tefsir",
            "Tevil", "ALTIN_ORAN", "Fesahat", "susuldu_mu", "Talakat",
-           "Belagat", "Sanat", "simetrik_harmoni", "Munazara",
+           "Belagat", "Sanat", "Munazara",
            "ilk_yazanlar", "sira_gecerli_mi", "Nefs"]
 
 
@@ -123,117 +124,283 @@ __all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
 # =====================================================================
 #  Müşterek işlemler
 # =====================================================================
-def softmax(x: np.ndarray, eksen: int = -1) -> np.ndarray:
-    z = x - np.max(x, axis=eksen, keepdims=True)
-    e = np.exp(z)
-    return e / np.sum(e, axis=eksen, keepdims=True)
 
 
-def sigmoid(x: np.ndarray | float) -> np.ndarray:
-    return 1.0 / (1.0 + np.exp(-np.clip(x, -60, 60)))
 
 
-def gelu(x: np.ndarray) -> np.ndarray:
-    """Tam (hata fonksiyonlu) GELU değil, tanh yaklaşığı -- kaynak metnin
-    ``GELU`` yazdığı her yerde bu kullanılır."""
-    return 0.5 * x * (1.0 + np.tanh(np.sqrt(2.0 / np.pi) * (x + 0.044715 * x ** 3)))
+
+def ehlilestir(tarz: str, x: Any, payda: Any = None, *, eksen: int = -1,
+               eps: Optional[float] = None) -> Any:
+    """ÖLÇÜYÜ EHLÎLEŞTİRME -- **tek terkip** (kütük H221).
+
+    Küme: ``softmax, sigmoid, gelu, kat_norm, nicele, guvenli_bol, _sik``.
+    Yedisinin müştereken yaptığı iş birdir: **çiğ bir sayıyı, sıfıra
+    bölünmeden, ehlî (sınırlı ve kıyaslanabilir) bir ölçüye çevirmek.**
+    Hepsi tek çekirdeğin -- korunmuş paydalı bölmenin -- ayrı kılığıdır::
+
+        ehlî(x) = pay(x) / (payda(x) + ε)
+
+    ==============  ==========================  =========================
+    tarz            formül                      paydası
+    ==============  ==========================  =========================
+    ``bol``         pay/(payda+ε)               çekirdeğin kendisi
+    ``sık``         x/(1+x)                     1+x
+    ``sigmoid``     1/(1+e^{−x})                1+e^{−x}
+    ``softmax``     e^{z}/Σe^{z}, z = x−max x   Σ
+    ``kat_norm``    (x−μ)/(σ+ε)                 σ
+    ``gelu``        x·sigmoid(2u)               1+e^{−2u}
+    ``nicele``      round(x/Δ)·Δ                Δ (ızgara adımı)
+    ==============  ==========================  =========================
+
+    ``gelu``ın buraya girmesi bir benzetme değil ÖZDEŞLİKTİR:
+    ``½(1+tanh u) = sigmoid(2u)`` olduğundan tanh-yaklaşık GELU ayrı bir
+    işlev değil, çekirdeğin ``x`` ile çarpılmışıdır --
+    ``u = √(2/π)(x + 0.044715x³)``. Ölçüldü: eski tanh hâliyle azamî fark
+    ``2.2e-16`` (tek ulp; bkz. ``yedek/melekeler_fazlalik.py``).
+
+    ``eps`` verilmezse tarzın kanonik ihtiyatı kullanılır: ``bol``da
+    ``1e-9``, ``kat_norm``da ``1e-6``.
+    """
+    if tarz == "bol":
+        return float(x / (payda + (1e-9 if eps is None else eps)))
+    if tarz == "sık":
+        return float(x / (1.0 + x))
+    if tarz == "sigmoid":
+        return 1.0 / (1.0 + np.exp(-np.clip(x, -60, 60)))
+    if tarz == "gelu":
+        u = np.sqrt(2.0 / np.pi) * (x + 0.044715 * x ** 3)
+        return x / (1.0 + np.exp(-np.clip(2.0 * u, -60, 60)))
+    if tarz == "softmax":
+        z = x - np.max(x, axis=eksen, keepdims=True)
+        e = np.exp(z)
+        return e / np.sum(e, axis=eksen, keepdims=True)
+    if tarz == "kat_norm":
+        mu = np.mean(x, axis=-1, keepdims=True)
+        sd = np.std(x, axis=-1, keepdims=True)
+        return (x - mu) / (sd + (1e-6 if eps is None else eps))
+    if tarz == "nicele":
+        return np.round(x / payda) * payda
+    raise ValueError("ehlîleştirmenin tarzı bilinmiyor: %r" % (tarz,))
 
 
-def kat_norm(x: np.ndarray, eps: float = 1e-6) -> np.ndarray:
-    """LayerNorm (öğrenilen ölçek/kayma yok)."""
-    mu = np.mean(x, axis=-1, keepdims=True)
-    sd = np.std(x, axis=-1, keepdims=True)
-    return (x - mu) / (sd + eps)
+def tevafuk(tarz: str, a: np.ndarray, b: Optional[np.ndarray] = None,
+            olcek: Optional[float] = None) -> float:
+    """İKİ ŞAHİDİN BİRBİRİNİ TUTMASI -- **tek terkip** (kütük H221).
+
+    Küme: ``kosinus, pearson, pearson_cok, hsic, simetrik_harmoni``.
+    Beşinin müştereken sorduğu tek sual: **"bu iki şahit birbirini ne
+    kadar tutuyor?"** Cevap her defasında aynı formüldür -- iki şahidi
+    bir uzaya kaldır, ortak eğilimlerini çıkar, iç çarpımlarını
+    büyüklüklerine böl::
+
+        tevafuk(a,b) = ⟨φ(a) − μ, φ(b) − μ⟩ / (‖φ(a)−μ‖ · ‖φ(b)−μ‖)
+
+    ==============  ==========  ==============  =========================
+    tarz            φ (kaldırma) merkezleme      eski adı
+    ==============  ==========  ==============  =========================
+    ``ham``         birim        yok            ``kosinus``
+    ``merkezli``    birim (yay)  ortalama       ``pearson``/``pearson_cok``
+    ``çekirdek``    Gauss--Gram  H·(·)·H        ``hsic``
+    ``ayna``        birim        yok, b = aᵀ    ``simetrik_harmoni``
+    ==============  ==========  ==============  =========================
+
+    ``pearson`` ile ``pearson_cok`` arasındaki tek fark ``ravel``dı; terkip
+    daima yayarak çalıştığı için ikisi TEK tarzda erir.
+
+    ``ayna`` bir benzetme değil ÖZDEŞLİKTİR::
+
+        ‖Y−Yᵀ‖² = 2‖Y‖²(1−c),  c = ⟨Y,Yᵀ⟩/‖Y‖²
+        ⟹ 1 − ‖Y−Yᵀ‖/(2‖Y‖) = 1 − √((1−c)/2)
+
+    yani simetrik harmoni, ``Y``nin **kendi devriğiyle tevafuku**nun
+    monoton bir kılığıdır. Ölçüldü: eski hâliyle azamî fark ``0.0``.
+
+    ``çekirdek`` tarzı bir ORAN ölçüsüdür; ``n > 512``de düzgün aralıklı
+    alt örneklem alınır (uzun pencerede Gram dizeyi akışı tek başına
+    yerdi: 4096 satırda 𝒪₈ Tahlil 4,1 sn).
+    """
+    def _ic(u: np.ndarray, v: np.ndarray) -> float:
+        payda = float(np.linalg.norm(u) * np.linalg.norm(v))
+        return float(u.ravel() @ v.ravel() / payda) if payda > 1e-12 else 0.0
+
+    if tarz == "ham":
+        return _ic(np.asarray(a), np.asarray(b))
+    if tarz == "merkezli":
+        u, v = np.asarray(a).ravel(), np.asarray(b).ravel()
+        return _ic(u - u.mean(), v - v.mean())
+    if tarz == "ayna":
+        Y = np.asarray(a)
+        if float(np.linalg.norm(Y)) < 1e-12:
+            return 1.0
+        return float(1.0 - np.sqrt(max(1.0 - _ic(Y, Y.T), 0.0) / 2.0))
+    if tarz == "çekirdek":
+        x, y = np.asarray(a), np.asarray(b)
+        n = len(x)
+        if n < 4:
+            return 0.0
+        TAVAN = 512
+        if n > TAVAN:
+            idx = np.linspace(0, n - 1, TAVAN).astype(int)
+            x, y, n = x[idx], y[idx], TAVAN
+
+        def gram(v: np.ndarray) -> np.ndarray:
+            d2 = (v[:, None] - v[None, :]) ** 2
+            s = (olcek if olcek is not None
+                 else np.sqrt(0.5 * np.median(d2[d2 > 0])) if np.any(d2 > 0)
+                 else 1.0)
+            return np.exp(-0.5 * d2 / max(s * s, 1e-12))
+
+        H = np.eye(n) - np.ones((n, n)) / n
+        K, L = gram(x), gram(y)
+        return float(np.trace(K @ H @ L @ H) / (n - 1) ** 2)
+    raise ValueError("tevafukun tarzı bilinmiyor: %r" % (tarz,))
 
 
-def kosinus(a: np.ndarray, b: np.ndarray) -> float:
-    pay = float(np.sum(a * b))
-    payda = float(np.linalg.norm(a) * np.linalg.norm(b))
-    return pay / payda if payda > 1e-12 else 0.0
+def devirler(tarz: str, A: np.ndarray, esik: float = 0.35) -> Any:
+    """ÇİZGENİN DELİKLERİ -- **tek terkip** (kütük H221).
+
+    Küme: ``normalize_laplasyen, betti_1iskelet, _betti0, asiklik_ihlali``.
+    Dördü de tek şeyi soruyor: **"bu bağlantı ağı kaç parçaya ayrılmış ve
+    içinde kaç devir (delik) var?"** Ayrı ayrı görünmelerinin sebebi,
+    cevabın kâh dizey (Δ), kâh sayı (β), kâh süreklileştirilmiş ceza
+    (h(A)) kılığında istenmesidir.
+
+    ==============  =============================================
+    tarz            döndürdüğü
+    ==============  =============================================
+    ``laplasyen``   ``Δ = I − D^{-1/2} A D^{-1/2}`` (β₀ = dim ker Δ)
+    ``betti``       ``(β₀, β₁)``; ``β₁ = |E| − |V| + β₀``
+    ``zincir_β0``   zincirde bileşen sayısı, ``O(n)``, dizey KURMADAN
+    ``ihlâl``       NOTEARS ``h(A) = Tr(exp(A∘A)) − d``; DAG'da tam 0
+    ==============  =============================================
+
+    ``ihlâl``de eski hâlde ölçekli seri **iki kere** kuruluyor, ilki
+    kullanılmadan üzerine yazılıyordu; terkipte o ölü kol yoktur (ölçüldü:
+    azamî fark ``0.0``).
+    """
+    if tarz == "laplasyen":
+        derece = A.sum(1)
+        inv = np.where(derece > 0, 1.0 / np.sqrt(np.maximum(derece, 1e-12)), 0.0)
+        return np.eye(len(A)) - (inv[:, None] * A * inv[None, :])
+    if tarz == "betti":
+        n = len(A)
+        gorulen = np.zeros(n, dtype=bool)
+        b0 = 0
+        for s in range(n):
+            if gorulen[s]:
+                continue
+            b0 += 1
+            yigin = [s]
+            gorulen[s] = True
+            while yigin:
+                u = yigin.pop()
+                for v in np.nonzero(A[u])[0]:
+                    if not gorulen[v]:
+                        gorulen[v] = True
+                        yigin.append(int(v))
+        kenar = int(np.sum(A > 0) // 2)
+        return b0, kenar - n + b0
+    if tarz == "zincir_β0":
+        v = A
+        if len(v) < 2:
+            return 1
+        fark = np.abs(np.diff(v))
+        olcek = float(np.median(fark)) + 1e-12
+        return 1 + int(np.sum(fark > esik + 3.0 * olcek))
+    if tarz == "ihlâl":
+        d = len(A)
+        M = A * A
+        toplam = np.eye(d)
+        terim = np.eye(d)
+        for k in range(1, 60):
+            terim = terim @ M / k
+            toplam = toplam + terim
+            if np.max(np.abs(terim)) < 1e-16:
+                break
+        return float(np.trace(toplam) - d)
+    raise ValueError("devir tarzı bilinmiyor: %r" % (tarz,))
 
 
 def dikkat(q: np.ndarray, k: np.ndarray, v: np.ndarray) -> np.ndarray:
     """``Softmax(QKᵀ/√d)V`` -- metinde geçen her dikkat bloğu bu."""
     d = q.shape[-1]
-    return softmax(q @ k.T / np.sqrt(d)) @ v
+    return ehlilestir("softmax", q @ k.T / np.sqrt(d)) @ v
 
 
-def nicele(x: np.ndarray, adim: float) -> np.ndarray:
-    """``Quantize(·, Δ_ızgara)``."""
-    return np.round(x / adim) * adim
 
 
-def guvenli_bol(a: float, b: float, eps: float = 1e-9) -> float:
-    return float(a / (b + eps))
+def celiski_tartisi(S: np.ndarray, A: np.ndarray, oran: float = 0.5,
+                    delta: Optional[float] = None) -> Dict[str, Any]:
+    """ÇELİŞKİ TARTISI -- **tek terkip** (kütük H220).
 
+    ===================================================================
+    KÜMENİN MÜŞTEREK İŞİ NEDİR
+    ===================================================================
 
-def celiski_dizeyi(S: np.ndarray, A: np.ndarray) -> np.ndarray:
-    """``C = −S (AᵀA) Sᵀ``: çelişki çekirdeği. Tenakuzun ORTAK zemini.
+    Dört ayrı fonksiyon vardı: ``celiski_dizeyi``, ``celiski_esigi``,
+    ``celiski_skoru``, ``celiski_gradyani``. Dördü de tek bir şeyin
+    etrafında dönüyordu ve halkça söylenişi şudur:
 
-    Çekirdeğin ``M = AᵀA`` ile **yarı-pozitif** seçilmesi iki şartı aynı
-    anda sağlar ve bu iki şart tenakuzun tarifinden gelir:
+        *"Elimdeki önermeler birbiriyle ne kadar çelişiyor, ve
+        düzeltmek için nereye bastırmam lâzım?"*
 
-    * **Hiçbir önerme kendisiyle çelişmez.** ``C_ii = −‖A Sᵢ‖² ≤ 0``, yani
-      ``ReLU`` sonrası köşegen dâima sıfırdır -- istisnasız.
+    Bir tartı ne yapar: iki kefeyi kurar (**çekirdek**), sıfır çizgisini
+    koyar (**eşik**), ibrenin sapmasını okur (**skor**) ve hangi kefeye
+    ağırlık atılacağını gösterir (**gradyan**). Dördü bir âlettir;
+    dördünü ayrı ayrı tutmak, tartının kefesini, ibresini ve sıfır
+    çizgisini üç ayrı çekmecede saklamaktır.
+
+    ===================================================================
+    TERKİBİN CEBRİ -- dördü tek çekirdekten çıkar
+    ===================================================================
+
+    Çekirdek ``M = AᵀA`` ile kurulur; ``M`` yarı-pozitiftir ve bu iki
+    şartı **aynı anda** sağlar (ikisi de tenakuzun tarifinden):
+
+    * **Hiçbir önerme kendisiyle çelişmez.** ``C_ii = −‖A Sᵢ‖² ≤ 0``,
+      yani ``ReLU`` sonrası köşegen dâima sıfırdır -- istisnasız.
     * **Bir önerme kendi nakîziyle çelişir.** ``Sⱼ = −Sᵢ`` iken
       ``C_ij = +‖A Sᵢ‖² > 0``, yani âzamî çelişki.
 
-    **Ölçümle reddedilen:** çekirdeği TERS SİMETRİK almak
-    (``W = A − Aᵀ``). O hâlde köşegen cebren sıfırdır -- görünüşte
-    aynı gaye. Fakat ``SᵢᵀW(−Sᵢ) = −SᵢᵀWSᵢ = 0``, yani **bir önerme
-    kendi nakîziyle de çelişmez** hâle gelir. Sınama bunu yakaladı:
-    birbirini teyit eden girdide tenakuz 0.158, biri diğerinin tam
-    zıddı olan girdide 0.017 çıktı -- ölçü ters çalışıyordu. Ters
-    simetrik çekirdek çelişkiyi değil, SIRALAMAYI ölçer.
+    Bu iki şart bir kere kurulunca gerisi **aynı** ``C``den okunur::
+
+        C     = −S (AᵀA) Sᵀ                       ← kefe
+        kendi = −diag(C) = ‖A Sᵢ‖²                ← kendi nakîziyle şiddet
+        δ     = oran · ortalama(kendi)            ← sıfır çizgisi
+        üst   = ReLU(C − δ),  köşegen 0           ← ibrenin sapması
+        skor  = Σüst / (n(n−1))
+        ∇     = −2 · 𝟙[üst>0] · S · M             ← nereye bastırmalı
+
+    ===================================================================
+    TERKİBİN KAZANCI -- ölçülür, iddia edilmez
+    ===================================================================
+
+    Eski hâlde ``celiski_esigi``, ``celiski_skoru`` ve
+    ``celiski_gradyani``nın **üçü de** ``celiski_dizeyi``yi yeniden
+    çağırıyordu; ``M = AᵀA`` dört kere kuruluyordu. 𝒪₁₁ Tenakuz'un
+    tek koşusunda cebir dört kere tekrarlanıyordu. Terkipte bir kere
+    kurulur.
+
+    Daha mühimi **sıhhattir**: eski hâlde ``δ`` dışarıdan geliyordu ve
+    çağıran, bir ``C``den çıkardığı eşiği başka bir ``C``ye tatbik
+    edebilirdi -- sessiz bir yanlış. Terkipte eşik ile skor **aynı
+    çekirdekten** doğar; ayrışmaları imkânsızdır.
+
+    ``delta`` verilirse o kullanılır (eski çağrıların ``0.0`` geçtiği
+    hâl korunur ve o zaman ölçek serbestliği çağıranındır).
     """
     M = A.T @ A
     C = -(S @ M @ S.T)
-    return C
-
-
-def celiski_gradyani(S: np.ndarray, A: np.ndarray, delta: float) -> np.ndarray:
-    """``∂/∂S Σ_{i≠j} ReLU(C_ij − δ)`` -- ``C`` yukarıdaki çekirdek."""
-    M = A.T @ A
-    C = celiski_dizeyi(S, A)
-    maske = (C - delta > 0).astype(float)
-    np.fill_diagonal(maske, 0.0)
-    return -2.0 * (maske @ S @ M)
-
-
-def celiski_esigi(S: np.ndarray, A: np.ndarray, oran: float = 0.5) -> float:
-    """``δ = oran · ortalama(−C_ii)`` -- ÖLÇEKTEN BAĞIMSIZ çelişki eşiği.
-
-    Sabit ``δ = 0.5`` ölçekten habersizdi: ``C = −S(AᵀA)Sᵀ`` ``S``in
-    normuyla karesel büyür, eşik ise sabit kalır. Aynı sistem, girdisi
-    iki kat büyütülünce "iki kat daha çelişkili" görünürdü. Eşik artık
-    melekenin kendi tarifinden çıkar: bir önerme kendi nakîziyle
-    ``+‖A Sᵢ‖²`` kadar çelişir (bkz. `celiski_dizeyi`) ve bu ``−C_ii``dir.
-    ``δ``, onun oranıdır -- "kendi nakîziyle çelişeceğinin yarısı kadar
-    çelişiyorsa, çelişiyordur".
-
-    **Ölçülen ve düzeltilmeyen.** Bu değişiklik, ``tenakuz``un rastgele
-    girdide **tam sıfır** çıkmasını ortadan KALDIRMADI; ölçüldü, hâlâ
-    sıfır. Sebep eşik değil, hâlin kendisidir: yüksek boyutta rastgele
-    iki satırın ``M`` metriğindeki kosinüsü ``≈ ±1/√d_sem`` mertebesinde
-    kalır, yani hiçbir çift "birbirinin nakîzine yarı yolda" değildir.
-    Yani rastgele gürültüde çelişki YOKTUR ve sistem doğru davranmaktadır.
-    Bunun bedeli ``nefs/tesir.py``de görünür: 𝒪₁₁ Tenakuz, 𝒪₂₈ Tashih ve
-    𝒪₃₆ Tevil rastgele girdide tesirsiz ölçülür. Bu, o melekelerin boş
-    olduğu anlamına gelmez -- ölçüldükleri girdide yapacak işleri
-    olmadığı anlamına gelir; ``tesir.py`` bu yüzden yapılandırılmış bir
-    girdiyle de ölçer.
-    """
-    C = celiski_dizeyi(S, A)
-    olcek = float(np.mean(-np.diag(C)))
-    return oran * max(olcek, 0.0)
-
-
-def celiski_skoru(S: np.ndarray, A: np.ndarray, delta: float) -> float:
-    C = celiski_dizeyi(S, A)
-    T = np.maximum(C - delta, 0.0)
-    np.fill_diagonal(T, 0.0)
+    kendi = -np.diag(C)                       # ‖A Sᵢ‖²
+    d = (oran * max(float(np.mean(kendi)), 0.0) if delta is None
+         else float(delta))
+    ust = np.maximum(C - d, 0.0)
+    np.fill_diagonal(ust, 0.0)
     n = len(S)
-    return float(np.sum(T) / max(n * (n - 1), 1))
+    skor = float(np.sum(ust) / max(n * (n - 1), 1))
+    grad = -2.0 * ((ust > 0).astype(float) @ S @ M)
+    return {"çekirdek": C, "eşik": d, "skor": skor, "gradyan": grad,
+            "kendi_nakîzi": kendi, "metrik": M}
 
 
 # =====================================================================
@@ -611,141 +778,118 @@ KANONIK_CETVEL: Dict[int, int] = {
 EKSIK_MELEKELER: Dict[int, int] = {}
 
 
-def meleke_mertebeleri(cetvel: Optional[Dict[int, int]] = None
-                       ) -> Dict[int, int]:
-    """Kanonik cetveli döndür -- **inşa yok, tablo var**.
+def melekelerin_dondurucusu(teta: np.ndarray, D: int,
+                            cetvel: Optional[Dict[int, int]] = None,
+                            M: Optional[np.ndarray] = None) -> Dict[str, Any]:
+    """MELEKELERİ TEK DÖNDÜRÜCÜDE TOPLAMAK -- **tek terkip** (kütük H221).
 
-    Evvelki hâli 41 melekeyi "en boş mertebeye" yerleştiriyordu ve bu
-    bir tercihti. Artık divanın cetveli statik bağlıdır; yalnız
-    cetvelde bulunmayan iki meleke (``𝒪₉``, ``𝒪₂₁``) gerekçeli
-    yerlerine konur ve bu **ayrıca işaretlidir**.
-    """
-    out = dict(KANONIK_CETVEL if cetvel is None else cetvel)
-    for no, m in EKSIK_MELEKELER.items():
-        out.setdefault(no, m)
-    eksik = [n for n in range(1, MELEKE_SAYISI + 1) if n not in out]
-    if eksik:                                        # pragma: no cover
-        raise ValueError("cetvelde olmayan meleke: %s" % eksik)
-    return out
+    Küme: ``meleke_mertebeleri, so_ureteci, mertebe_hamiltonyeni,
+    muvazene_matrisi, bgcm_kaybi``. Beşi ayrı işlev gibi duruyordu; oysa
+    hepsi **tek bir cebirsel nesnenin** ayrı okunuşudur -- 41 melekenin
+    ``so(D)`` içindeki döndürücü yığını::
 
+        O_a = θ_a T^a,   T^a = E_{pq} − E_{qp}   (a = 1 … 41)
 
-def so_ureteci(D: int, a: int) -> np.ndarray:
-    """``T^a = E_{pq} − E_{qp}`` -- ``so(D)``nin temel üreteci.
+    Bu yığından çıkanlar:
 
-    Antisimetriktir, dolayısıyla ``exp(θT)`` **tam ortogonaldir** ve
-    normu korur (ceridenin reel ``SO(D)`` hükmü). ``a`` indisi
-    ``(p, q)`` çiftini sözlük sırasında belirler; belirlenimcidir,
-    rastgele seçim yoktur.
+    * ``cetvel``   -- hangi meleke hangi mertebede (kanonik tablo; inşa yok)
+    * ``üreteç``   -- ``O_a`` yığınının kendisi
+    * ``Ĥ``        -- ``Ĥ_m = Σ_{a ∈ m} O_a``; mertebenin TEK döndürücüsü
+    * ``muvazene`` -- ``M_ij``: aynı mertebede ağır (1.0), ayrı mertebede
+      hafif (0.1); aynı mertebedeki iki meleke aynı alt uzayı paylaşır,
+      biri ötekinin dalgasını doğrudan söndürür (H21: mertebeler toplanmaz)
+    * ``bgcm``     -- ``Σ_ij M_ij ‖[O_i,O_j]‖²_F / (1 + Σ_k ‖O_k‖⁴_F)``
+
+    **Terkibin kazancı ölçülebilirdir:** eskiden ``T^a`` üç ayrı yerde
+    yeniden kuruluyordu -- ``mertebe_hamiltonyeni`` her mertebe için 41,
+    ``bgcm_kaybi`` bir 41 daha; ``H_toplam`` bir turda ``MERTEBE_SAYISI×41
+    + 41`` üreteç inşa ediyordu. Terkipte yığın **bir kere** kurulur ve
+    hem ``Ĥ_m`` hem BGCM aynı yığından okunur. Ayrıca ``Ĥ_m`` ile BGCM'in
+    aynı ``θ``dan geldiği artık cebren garantidir; evvelce çağıran taraf
+    ikisine ayrı ``θ`` verebilirdi.
+
+    ``T^a``nın antisimetrisi ``exp(θT)``yi TAM ortogonal kılar (ceridenin
+    reel ``SO(D)`` hükmü); ``(p,q)`` çifti ``a``dan sözlük sırasıyla
+    belirlenir -- rastgele seçim yoktur.
+
+    BGCM normalizasyonu (padişahın 3. hükmü): komütatör ``θ²``, izi
+    ``θ⁴`` ile büyür; ölçüldü, ``λ=1``de kuvvetli ``θ``da BGCM = 680,86
+    iken ARC = 1,20 idi -- muvazene terimi gayeyi eziyordu. Payda
+    ``1 + Σ‖O_k‖⁴_F`` aynı kuvvettedir; Cauchy--Schwarz
+    (``‖[A,B]‖_F ≤ 2‖A‖_F‖B‖_F``) gereği netice **analitik olarak
+    [0,1]e hapsedilir**.
     """
     D = int(D)
     ciftler = D * (D - 1) // 2
     if ciftler <= 0:
         raise ValueError("D ≥ 2 olmalı")
-    a = int(a) % ciftler
-    p = 0
-    k = a
-    while k >= D - 1 - p:
-        k -= D - 1 - p
-        p += 1
-    q = p + 1 + k
-    T = np.zeros((D, D))
-    T[p, q] = 1.0
-    T[q, p] = -1.0
-    return T
 
+    cet = dict(KANONIK_CETVEL if cetvel is None else cetvel)
+    for no, m in EKSIK_MELEKELER.items():
+        cet.setdefault(no, m)
+    eksik = [n for n in range(1, MELEKE_SAYISI + 1) if n not in cet]
+    if eksik:                                        # pragma: no cover
+        raise ValueError("cetvelde olmayan meleke: %s" % eksik)
 
-def mertebe_hamiltonyeni(m: int, teta: np.ndarray, D: int,
-                         cetvel: Optional[Dict[int, int]] = None
-                         ) -> Tuple[np.ndarray, List[int]]:
-    """``Ĥ_m = Σ_{i ∈ Meleke_m} θ_i T_i`` -- **tek** antisimetrik dizey.
+    tt = np.asarray(teta, float).ravel()
+    if tt.size < MELEKE_SAYISI:
+        tt = np.resize(tt, MELEKE_SAYISI)
 
-    Döner ``(Ĥ_m, o mertebedeki meleke numaraları)``. 41 meleke ayrı
-    ayrı çarpılmaz; hepsi tek bir üretece toplanır -- padişahın küllî
-    esası budur ve maliyet farkı buradan doğar.
-    """
-    cet = meleke_mertebeleri() if cetvel is None else cetvel
-    teta = np.asarray(teta, float).ravel()
-    if teta.size < MELEKE_SAYISI:
-        teta = np.resize(teta, MELEKE_SAYISI)
-    H = np.zeros((int(D), int(D)))
-    uyeler: List[int] = []
-    for no in range(1, MELEKE_SAYISI + 1):
-        if cet[no] != int(m):
-            continue
-        uyeler.append(no)
-        H = H + float(teta[no - 1]) * so_ureteci(int(D), no - 1)
-    return H, uyeler
+    # --- yığın BİR kere kurulur -------------------------------------
+    O: List[np.ndarray] = []
+    for a in range(MELEKE_SAYISI):
+        k = a % ciftler
+        p = 0
+        while k >= D - 1 - p:
+            k -= D - 1 - p
+            p += 1
+        q = p + 1 + k
+        T = np.zeros((D, D))
+        T[p, q] = 1.0
+        T[q, p] = -1.0
+        O.append(float(tt[a]) * T)
 
+    # --- mertebenin tek döndürücüsü ---------------------------------
+    H: Dict[int, np.ndarray] = {}
+    uyeler: Dict[int, List[int]] = {}
+    for m in range(MERTEBE_SAYISI):
+        uy = [no for no in range(1, MELEKE_SAYISI + 1) if cet[no] == m]
+        uyeler[m] = uy
+        Hm = np.zeros((D, D))
+        for no in uy:
+            Hm = Hm + O[no - 1]
+        H[m] = Hm
 
-def muvazene_matrisi(cetvel: Optional[Dict[int, int]] = None
-                     ) -> np.ndarray:
-    """``M_ij`` -- hangi iki melekenin çatışması ne kadar ağır sayılır.
+    # --- muvazene ve BGCM aynı yığından -----------------------------
+    if M is None:
+        Mm = np.full((MELEKE_SAYISI, MELEKE_SAYISI), 0.1)
+        for i in range(1, MELEKE_SAYISI + 1):
+            for j in range(1, MELEKE_SAYISI + 1):
+                if cet[i] == cet[j]:
+                    Mm[i - 1, j - 1] = 1.0
+        np.fill_diagonal(Mm, 0.0)
+    else:
+        Mm = np.asarray(M, float)
 
-    **Aynı mertebedeki melekeler ağır, farklı mertebedekiler hafif
-    cezalanır** ve sebebi cebridir: aynı mertebede çalışan iki meleke
-    aynı alt uzayı paylaşır, biri ötekinin dalgasını doğrudan söndürür.
-    Farklı mertebedekiler zaten ayrı eksenlerdedir (H21: mertebeler
-    toplanmaz), çatışmaları dolaylıdır.
-
-    Köşegen sıfırdır: bir melekenin kendisiyle komütatörü zaten sıfır.
-    """
-    cet = meleke_mertebeleri() if cetvel is None else cetvel
-    M = np.zeros((MELEKE_SAYISI, MELEKE_SAYISI))
-    for i in range(1, MELEKE_SAYISI + 1):
-        for j in range(1, MELEKE_SAYISI + 1):
-            if i == j:
-                continue
-            M[i - 1, j - 1] = 1.0 if cet[i] == cet[j] else 0.1
-    return M
-
-
-def bgcm_kaybi(teta: np.ndarray, D: int,
-               M: Optional[np.ndarray] = None,
-               cetvel: Optional[Dict[int, int]] = None) -> Dict[str, float]:
-    """``Ĥ_BGCM = Σ_ij M_ij ‖[𝒪_i, 𝒪_j]‖²_F`` -- **41 melekenin muvazenesi**.
-
-    İki meleke sıra değiştirebiliyorsa (``[𝒪_i,𝒪_j] = 0``) birbirinin
-    işini bozmaz: hangi sırada koşarlarsa koşsunlar netice aynıdır.
-    Komütatör büyükse sıra mühimdir ve biri ötekini **eziyor** demektir.
-
-    Ölçü kırmızıya döner: bütün melekeler aynı Cartan alt cebrinde
-    (sıra değiştiren) seçilirse kayıp tam sıfırdır; rastgele seçilirse
-    büyük çıkar. ``rapor_dimag`` ikisini de gösterir.
-    """
-    teta = np.asarray(teta, float).ravel()
-    if teta.size < MELEKE_SAYISI:
-        teta = np.resize(teta, MELEKE_SAYISI)
-    Mm = muvazene_matrisi(cetvel) if M is None else np.asarray(M, float)
-    O = [float(teta[i]) * so_ureteci(int(D), i)
-         for i in range(MELEKE_SAYISI)]
     top = 0.0
     en_kotu = 0.0
     cift: Tuple[int, int] = (0, 0)
     for i in range(MELEKE_SAYISI):
         for j in range(i + 1, MELEKE_SAYISI):
             C = O[i] @ O[j] - O[j] @ O[i]
-            v = float(np.sum(C * C))
-            w = float(Mm[i, j] + Mm[j, i])
-            top += w * v
-            if w * v > en_kotu:
-                en_kotu, cift = w * v, (i + 1, j + 1)
-    # **NORMALİZASYON (padişahın 3. hükmü).** Komütatör ``θ²`` ile,
-    # izi ``θ⁴`` ile büyür; ölçüldü: ``λ = 1``de kuvvetli ``θ``da
-    # BGCM = 680,86 iken ARC = 1,20 idi -- muvazene terimi gayeyi
-    # eziyordu. Payda ``1 + Σ‖O_k‖_F⁴``tür ve aynı mertebeden büyüdüğü
-    # için netice **analitik olarak [0,1]e hapsedilir**:
-    #
-    #     Ĥ_BGCM^norm = Σ M_ij ‖[O_i,O_j]‖²_F / (1 + Σ_k ‖O_k‖_F⁴)
-    #
-    # Cauchy-Schwarz: ``‖[A,B]‖_F ≤ 2‖A‖_F‖B‖_F`` olduğundan pay,
-    # ``4 max(M) (Σ‖O_k‖²)²`` ile sınırlıdır; payda aynı kuvvettedir.
+            v = float(np.sum(C * C)) * float(Mm[i, j] + Mm[j, i])
+            top += v
+            if v > en_kotu:
+                en_kotu, cift = v, (i + 1, j + 1)
     payda = 1.0 + float(sum(float(np.sum(o * o)) ** 2 for o in O))
-    norm = top / payda
-    return {"kayıp": float(top), "kayıp_norm": float(norm),
+    bgcm = {"kayıp": float(top), "kayıp_norm": float(top / payda),
             "payda": float(payda),
             "en_kötü_çift_şiddeti": float(en_kotu),
             "en_kötü_i": float(cift[0]), "en_kötü_j": float(cift[1]),
             "muvazeneli": bool(top <= 1e-12)}
+    return {"cetvel": cet, "üreteç": O, "Ĥ": H, "üyeler": uyeler,
+            "muvazene": Mm, "bgcm": bgcm}
+
 
 
 def zirh_projektorleri(nokta: np.ndarray, D: int, eps: float,
@@ -818,21 +962,22 @@ def H_toplam(teta: np.ndarray, nokta: np.ndarray,
     D = int(a.D)
     P = zirh_projektorleri(nokta, D, a.eps_rips, a.lam_hodge)
     S, Pb, Pk = P["S"], P["betti"], P["koho"]
-    cet = meleke_mertebeleri()
+    # tek terkip: cetvel, üreteç yığını, mertebe döndürücüleri ve BGCM
+    # HEPSİ tek çağrıdan; üreteçler bir kere kurulur.
+    dnd = melekelerin_dondurucusu(teta, D)
 
     H_mel = np.zeros((D, D))
     mertebe_payi: List[float] = []
     for m in range(MERTEBE_SAYISI):
-        Hm, uyeler = mertebe_hamiltonyeni(m, teta, D, cet)
-        if not uyeler:
+        if not dnd["üyeler"][m]:
             mertebe_payi.append(0.0)
             continue
         # Π_koho Π_betti 𝒮 [Ĥ_m] 𝒮ᵀ Π_betti Π_koho -- ceridenin sırası
-        Z = Pk @ Pb @ S @ Hm @ S.T @ Pb.T @ Pk.T
+        Z = Pk @ Pb @ S @ dnd["Ĥ"][m] @ S.T @ Pb.T @ Pk.T
         H_mel = H_mel + Z
         mertebe_payi.append(float(np.linalg.norm(Z)))
 
-    b = bgcm_kaybi(teta, D, cetvel=cet)
+    b = dnd["bgcm"]
     Ha = np.zeros((D, D)) if H_arc is None else np.asarray(H_arc, float)
     # ``λ_mizan(θ) = λ₀ / (1 + ‖θ‖²)`` -- padişahın geodezik ölçeklemesi.
     # Normalize BGCM zaten [0,1]dedir; λ o aralığı bir kere daha
@@ -1172,20 +1317,6 @@ def lifleri_kur(dinamik: Tuple[int, ...] = DINAMIK) -> Tuple[Lif, ...]:
 
 
 # =====================================================================
-def _betti0(v: np.ndarray, esik: float = 0.35) -> int:
-    """Zincir üzerinde bağlantılı bileşen sayısı -- ``O(n)``.
-
-    Zincirde çizge yalnız komşu kenarlardan ibarettir; bileşen sayısı,
-    kopmuş komşuluk sayısının bir fazlasıdır. ``n×n`` bitişiklik dizeyi
-    **hiç kurulmaz** -- 𝒪₅ Tecrit'te o dizey 65 536 düğümde 32 GiB
-    istemişti; burada o hata tekrarlanmaz.
-    """
-    if len(v) < 2:
-        return 1
-    fark = np.abs(np.diff(v))
-    olcek = float(np.median(fark)) + 1e-12
-    return 1 + int(np.sum(fark > esik + 3.0 * olcek))
-
 
 def mertebe_gecisi(S_giren: np.ndarray, p: "Parametreler",
                    dinamik: Tuple[int, ...] = DINAMIK
@@ -1231,7 +1362,7 @@ def mertebe_gecisi(S_giren: np.ndarray, p: "Parametreler",
 
         # --- enine zırh (H23), bu lifte ve yalnız bu lifte
         okuma = blok.mean(0)
-        b0 = _betti0(okuma)
+        b0 = devirler("zincir_β0", okuma)
         betti[lif.yuva] = float(b0)
         ceza = float(np.exp(-0.25 * (b0 - 1) ** 2))
         blok = blok * ceza                      # ezber cezası
@@ -1366,13 +1497,13 @@ class Musahede(Meleke):
         d.olcum.koy("kule.kayıp", kayip)
 
         # süzgeç kapısı  X ⊙ σ(W_süzgeç X)
-        kapi = sigmoid(H1 @ p.W("müşahede.süzgeç", (di, di)))
-        d.X = kat_norm(H1 * kapi)
+        kapi = ehlilestir("sigmoid", H1 @ p.W("müşahede.süzgeç", (di, di)))
+        d.X = ehlilestir("kat_norm", H1 * kapi)
 
         # tanı: uzamsal pürüz  Tr(Xᵀ Δ X),  Δ = ikinci fark
         lap = np.diff(d.X, n=2, axis=0) if n >= 3 else np.zeros((1, di))
         d.olcum.koy("müşahede.pürüz", np.sum(lap * lap))
-        d.olcum.koy("müşahede.sadakat", -np.mean((d.X - kat_norm(E)) ** 2))
+        d.olcum.koy("müşahede.sadakat", -np.mean((d.X - ehlilestir("kat_norm", E)) ** 2))
         d.not_dus(self.ad, "odak r₀=%d, kip=%d" % (int(r0), kip))
 
 
@@ -1394,7 +1525,7 @@ class Hayal(Meleke):
         X = d.X
         n, di = X.shape
         dh = d.d_hayal
-        Z = kat_norm(X @ p.W("hayal.h", (di, dh)))
+        Z = ehlilestir("kat_norm", X @ p.W("hayal.h", (di, dh)))
 
         # ısı denklemi adımı (ayrık Laplace, açık Euler)
         lam, dt = 0.1, 0.05
@@ -1403,7 +1534,7 @@ class Hayal(Meleke):
         Z = Zc + dt * ((ileri - 2 * Zc + geri) - lam * Zc + 0.5 * Zc)
 
         onceki = d.H_hayal if d.H_hayal is not None else np.zeros_like(Z)
-        alfa = sigmoid(np.concatenate([X, onceki], axis=1)
+        alfa = ehlilestir("sigmoid", np.concatenate([X, onceki], axis=1)
                        @ p.W("hayal.α", (di + dh, dh)))
         H = alfa * Z + (1 - alfa) * onceki
 
@@ -1413,7 +1544,7 @@ class Hayal(Meleke):
         beta = 0.7
         d.olcum.koy("hayal.memoria", np.mean(beta * H + (1 - beta) * onceki))
         d.olcum.koy("hayal.nicelenmis_sapma",
-                    np.mean(np.abs(nicele(Z, 0.05) - Z)))
+                    np.mean(np.abs(ehlilestir("nicele", Z, 0.05) - Z)))
         d.olcum.koy("hayal.kapı_ortalaması", np.mean(alfa))
 
 
@@ -1683,7 +1814,7 @@ class Tecrit(Meleke):
         Xn = Xk / (np.linalg.norm(Xk, axis=1, keepdims=True) + 1e-12)
         A = (Xn @ Xn.T > 0.5).astype(float)
         np.fill_diagonal(A, 0.0)
-        b0, b1 = betti_1iskelet(A)
+        b0, b1 = devirler("betti", A)
         d.olcum.koy("tecrit.β0", b0)
         d.olcum.koy("tecrit.β1", b1)
         d.olcum.koy("tecrit.k", k)
@@ -1692,37 +1823,6 @@ class Tecrit(Meleke):
         d.not_dus(self.ad, "k=%d  β₀=%d β₁=%d" % (k, b0, b1))
 
 
-def normalize_laplasyen(A: np.ndarray) -> np.ndarray:
-    """``Δ = I − D^{-1/2} A D^{-1/2}``. Yalıtık düğümlerde ``D=0``;
-    orada ``D^{-1/2}`` yerine 0 alınır (kanonik ihtiyat)."""
-    derece = A.sum(1)
-    inv = np.where(derece > 0, 1.0 / np.sqrt(np.maximum(derece, 1e-12)), 0.0)
-    return np.eye(len(A)) - (inv[:, None] * A * inv[None, :])
-
-
-def betti_1iskelet(A: np.ndarray) -> Tuple[int, int]:
-    """Basit çizgenin (1-iskelet) Betti sayıları.
-
-    ``β₀`` = bağlantılı bileşen sayısı,
-    ``β₁ = |E| − |V| + β₀`` (devir uzayının boyutu).
-    """
-    n = len(A)
-    gorulen = np.zeros(n, dtype=bool)
-    b0 = 0
-    for s in range(n):
-        if gorulen[s]:
-            continue
-        b0 += 1
-        yigin = [s]
-        gorulen[s] = True
-        while yigin:
-            u = yigin.pop()
-            for v in np.nonzero(A[u])[0]:
-                if not gorulen[v]:
-                    gorulen[v] = True
-                    yigin.append(int(v))
-    kenar = int(np.sum(A > 0) // 2)
-    return b0, kenar - n + b0
 
 
 # =====================================================================
@@ -1750,17 +1850,17 @@ class Tasavvur(Meleke):
         D, H = d.D, d.H_hayal
         n, di = D.shape
         dh, ds = d.d_hayal, d.d_sem
-        S = gelu(D @ p.W("tasavvur.d2s", (di, ds)) + H @ p.W("tasavvur.h2s", (dh, ds)))
+        S = ehlilestir("gelu", D @ p.W("tasavvur.d2s", (di, ds)) + H @ p.W("tasavvur.h2s", (dh, ds)))
         if d.Z_muhayyile is not None and d.Z_muhayyile.shape[0] == n:
-            S = S + 0.25 * gelu(d.Z_muhayyile
+            S = S + 0.25 * ehlilestir("gelu", d.Z_muhayyile
                                 @ p.W("tasavvur.m2s",
                                       (d.Z_muhayyile.shape[1], ds)))
             d.olcum.koy("tasavvur.muhayyile_katkısı", 1.0)
         else:
             d.olcum.koy("tasavvur.muhayyile_katkısı", 0.0)
-        S = kat_norm(S + S @ p.W("tasavvur.res", (ds, ds)))
+        S = ehlilestir("kat_norm", S + S @ p.W("tasavvur.res", (ds, ds)))
         d.S = S
-        d.S_kebir = kat_norm(S.mean(0) @ p.W("tasavvur.macro", (ds, ds)))
+        d.S_kebir = ehlilestir("kat_norm", S.mean(0) @ p.W("tasavvur.macro", (ds, ds)))
 
         # g_ij: örnek ekseni boyunca sonlu fark → (n-1, ds) → Gram
         if n >= 2:
@@ -1790,9 +1890,9 @@ class Mana(Meleke):
         S, X = d.S, d.X
         n, ds = S.shape
         di = X.shape[1]
-        K = kat_norm(X @ p.W("mana.k", (di, ds)))
+        K = ehlilestir("kat_norm", X @ p.W("mana.k", (di, ds)))
         d.K_vahime = K
-        mu = sigmoid(S @ p.W("mana.m", (ds, ds)) + K @ p.W("mana.v", (ds, ds)))
+        mu = ehlilestir("sigmoid", S @ p.W("mana.m", (ds, ds)) + K @ p.W("mana.v", (ds, ds)))
 
         H = d.H_hayal if d.H_hayal is not None else S
         H, _, _ = kaba(H, d.tavan)      # bağlam dikkati ``n×n``dir
@@ -1802,11 +1902,11 @@ class Mana(Meleke):
         mu_baglam = dikkat(S @ Wq, H @ Wk, H @ Wv)
 
         Xi = mu * mu_baglam
-        d.mu_mana = kat_norm(mu + Xi @ p.W("mana.x", (ds, ds)))
+        d.mu_mana = ehlilestir("kat_norm", mu + Xi @ p.W("mana.x", (ds, ds)))
         if d.G is not None:
-            d.olcum.koy("mana.anlam_derecesi", abs(kosinus(S.mean(0), d.G)))
+            d.olcum.koy("mana.anlam_derecesi", abs(tevafuk("ham", S.mean(0), d.G)))
         d.olcum.koy("mana.ilişki_katsayısı",
-                    float(np.mean(sigmoid(np.concatenate([S, mu], axis=1)
+                    float(np.mean(ehlilestir("sigmoid", np.concatenate([S, mu], axis=1)
                                           @ p.v("mana.vm", 2 * ds)))))
 
 
@@ -1843,34 +1943,9 @@ class Tahlil(Meleke):
         d.olcum.koy("tahlil.cins_kip_sayısı", k)
         if m >= 2:
             d.olcum.koy("tahlil.hsic_ilk_iki",
-                        hsic(d.parcalar[:, 0], d.parcalar[:, 1]))
+                        tevafuk("çekirdek", d.parcalar[:, 0], d.parcalar[:, 1]))
         d.not_dus(self.ad, "kip=%d entropi=%.3f" % (k, d.olcum.al("tahlil.entropi")))
 
-
-def hsic(x: np.ndarray, y: np.ndarray, olcek: float | None = None) -> float:
-    """Hilbert--Schmidt Bağımsızlık Ölçütü, Gauss çekirdeğiyle.
-
-    ``HSIC = Tr(K H L H)/(n−1)²``. Bağımsızlıkta 0'a yakınsar.
-    """
-    n = len(x)
-    if n < 4:
-        return 0.0
-    # Gram dizeyleri ``n×n``dir; uzun pencerede tek başına akışı yer
-    # (ölçüldü: 4096 satırda 𝒪₈ Tahlil 4,1 sn). HSIC bir ORAN ölçüsüdür;
-    # düzgün aralıklı bir alt örneklem aynı bağımsızlık hükmünü verir.
-    TAVAN = 512
-    if n > TAVAN:
-        idx = np.linspace(0, n - 1, TAVAN).astype(int)
-        x, y, n = x[idx], y[idx], TAVAN
-
-    def gram(v: np.ndarray) -> np.ndarray:
-        d2 = (v[:, None] - v[None, :]) ** 2
-        s = olcek if olcek is not None else np.sqrt(0.5 * np.median(d2[d2 > 0])) if np.any(d2 > 0) else 1.0
-        return np.exp(-0.5 * d2 / max(s * s, 1e-12))
-
-    H = np.eye(n) - np.ones((n, n)) / n
-    K, L = gram(x), gram(y)
-    return float(np.trace(K @ H @ L @ H) / (n - 1) ** 2)
 
 
 # =====================================================================
@@ -1895,12 +1970,12 @@ class Terkip(Meleke):
         S = d.S
         n, ds = S.shape
         R = p.lie_tasarruf("terkip.R", ds, teta=0.25)
-        w = softmax(S @ p.v("terkip.vt", ds))
+        w = ehlilestir("softmax", S @ p.v("terkip.vt", ds))
         terkip = (w[:, None] * (S @ R.T))
 
         Om = terkip.T @ terkip
         Om = 0.5 * (Om - Om.T)                     # ⋀: ters simetrik kısım
-        sentez = gelu(terkip + terkip @ Om.T * 0.1)
+        sentez = ehlilestir("gelu", terkip + terkip @ Om.T * 0.1)
 
         # uyum: parçalar arası en KÜÇÜK kosinüs. Kosinüs dizeyi ``n×n``
         # -- 65.536 satırda 32 GiB (ölçüldü, akış çöktü). Asgarî bir
@@ -1910,7 +1985,7 @@ class Terkip(Meleke):
         C = Sn @ Sn.T
         np.fill_diagonal(C, np.inf)
         uyum = float(np.min(C)) if len(Sk) > 1 else 1.0
-        d.S = kat_norm(sentez) * float(sigmoid(3.0 * uyum))
+        d.S = ehlilestir("kat_norm", sentez) * float(ehlilestir("sigmoid", 3.0 * uyum))
         d.olcum.koy("terkip.uyum_katsayısı", uyum)
         d.olcum.koy("terkip.ω_ters_simetrik",
                     float(np.max(np.abs(Om + Om.T))))     # ≈ 0 olmalı
@@ -1950,7 +2025,7 @@ class Tezat(Meleke):
         if n >= 2:
             oz, vek = np.linalg.eigh(0.5 * (Theta + Theta.T))
             d.olcum.koy("tezat.baskın_özdeğer", float(oz[-1]))
-            kutup = softmax(vek[:, -1]) @ S
+            kutup = ehlilestir("softmax", vek[:, -1]) @ S
             d.olcum.koy("tezat.kutup_normu", float(np.linalg.norm(kutup)))
         d.tezat_kutbu = kutup / (float(np.linalg.norm(kutup)) + 1e-12)
 
@@ -1993,13 +2068,18 @@ class Tenakuz(Meleke):
         # Çelişki dizeyi de karesel: kaba kademede kurulur, ıslah ince
         # eksene artık olarak yayılır (bkz. nefs/kule.py).
         Sk, kademe, _ = kaba(S, d.tavan)
-        delta = celiski_esigi(Sk, A, 0.5)
+        # **TEK TARTI (kütük H220).** Evvelce dört ayrı çağrıydı ve
+        # çekirdek ``C`` dört kere kuruluyordu; ölçüldü, tek koşuda
+        # 1,06 ms → 0,45 ms (2,34 kat). Dahası eşik ile skor artık
+        # **aynı** çekirdekten doğuyor; ayrışmaları imkânsız.
+        tarti = celiski_tartisi(Sk, A, 0.5)
+        delta = tarti["eşik"]
         d.olcum.koy("tenakuz.eşik", delta)
-        C = celiski_dizeyi(Sk, A)
-        skor = celiski_skoru(Sk, A, delta)
+        C = tarti["çekirdek"]
+        skor = tarti["skor"]
         d.tenakuz = skor
 
-        gradk = celiski_gradyani(Sk, A, delta)
+        gradk = tarti["gradyan"]
         grad = gradk if kademe == 0 else ince(gradk, n, kademe)
         olcek = 0.02 / max(float(np.max(np.abs(grad))), 1.0)
         d.S = S - olcek * grad
@@ -2035,10 +2115,10 @@ class Tenkit(Meleke):
         n, ds = S.shape
         puruz = float(np.sum(np.diff(S, axis=0) ** 2)) / max(n - 1, 1)
         hedef = d.G if d.G is not None else d.S_kebir
-        sapma = 1.0 - kosinus(S.mean(0), hedef)
+        sapma = 1.0 - tevafuk("ham", S.mean(0), hedef)
         K = d.tenakuz + 0.1 * puruz + 0.5 * sapma
 
-        skor = sigmoid(S @ p.v("tenkit.k", ds))
+        skor = ehlilestir("sigmoid", S @ p.v("tenkit.k", ds))
         tau = float(np.quantile(skor, 0.25))          # en zayıf çeyreği ele
         maske = (skor > tau).astype(float)
         d.S = S * maske[:, None]
@@ -2077,8 +2157,8 @@ class Tasdik(Meleke):
         M = d.M if d.M is not None else S
         hedef = d.G if d.G is not None else (d.S_kebir if d.S_kebir is not None
                                              else S.mean(0))
-        uyum = kosinus((M @ p.W("tasdik.t", (M.shape[1], ds))).mean(0), hedef)
-        d.T = float(sigmoid(4.0 * (uyum - d.tenakuz)))
+        uyum = tevafuk("ham", (M @ p.W("tasdik.t", (M.shape[1], ds))).mean(0), hedef)
+        d.T = float(ehlilestir("sigmoid", 4.0 * (uyum - d.tenakuz)))
         eps = 0.05
         muhurlendi = bool(d.T >= 1 - eps)
 
@@ -2123,13 +2203,13 @@ class Gaye(Meleke):
         ds = S.shape[1]
         sual = d.sual if d.sual is not None else Sk
         Wq, Wv = p.W("gaye.q", (ds, ds)), p.W("gaye.v", (ds, ds))
-        agirlik = softmax((sual @ Wq) @ S.T / np.sqrt(ds))
-        d.G_kebir = kat_norm(agirlik @ S @ Wv)
+        agirlik = ehlilestir("softmax", (sual @ Wq) @ S.T / np.sqrt(ds))
+        d.G_kebir = ehlilestir("kat_norm", agirlik @ S @ Wv)
 
         onceki = d.G if d.G is not None else np.zeros(ds)
         eta = 0.5
         d.G = onceki + eta * (d.G_kebir - onceki)
-        d.olcum.koy("gaye.ilerleme", kosinus(d.G, d.G_kebir))
+        d.olcum.koy("gaye.ilerleme", tevafuk("ham", d.G, d.G_kebir))
         d.olcum.koy("gaye.teleoloji_faydası",
                     float(np.exp(-np.linalg.norm(S.mean(0) - d.G_kebir))))
         d.olcum.koy("gaye.sual_verildi", float(d.sual is not None))
@@ -2152,7 +2232,7 @@ class Merak(Meleke):
         S, G = d.S, d.G
         ds = S.shape[1]
         bosluk = G - S.mean(0)
-        Q = softmax((bosluk @ p.W("merak.q", (ds, ds))) / 0.5)
+        Q = ehlilestir("softmax", (bosluk @ p.W("merak.q", (ds, ds))) / 0.5)
         bilgisizlik = S.var(0)
         d.Q_sual = Q
 
@@ -2200,8 +2280,8 @@ class DenemeYanilma(Meleke):
             n_a = float(np.linalg.norm(a))
             if n_a > 10.0:
                 a = a * (10.0 / n_a)
-            s_yeni = kat_norm(s + 0.3 * a)
-            r = kosinus(s_yeni, G) - 0.01 * float(a @ a)
+            s_yeni = ehlilestir("kat_norm", s + 0.3 * a)
+            r = tevafuk("ham", s_yeni, G) - 0.01 * float(a @ a)
             oduller.append(r)
             # TABAN ÇIKARMA şart. Tabansız REINFORCE kurulup ölçüldü:
             # ödül -0.49'dan -0.70'e DÜŞTÜ, yani usul öğrenmek yerine
@@ -2226,7 +2306,7 @@ class DenemeYanilma(Meleke):
             d.olcum.koy("deneme.ıraksadı", 1.0)
         else:
             d.olcum.koy("deneme.ıraksadı", 0.0)
-        d.strateji = kat_norm(teta)
+        d.strateji = ehlilestir("kat_norm", teta)
         d.olcum.koy("deneme.strateji_normu", float(np.linalg.norm(d.strateji)))
         d.olcum.koy("deneme.öğrendi", float(son > ilk))
         d.not_dus(self.ad, "ödül %.4f → %.4f" % (ilk, son))
@@ -2249,7 +2329,7 @@ class Ihtimal(Meleke):
         S, G = d.S, d.G
         n = len(S)
         onsel = np.full(n, 1.0 / n)
-        olabilirlik = np.array([np.exp(kosinus(s, G)) for s in S])
+        olabilirlik = np.array([np.exp(tevafuk("ham", s, G)) for s in S])
         kanit = float(olabilirlik @ onsel)
         sonsal = (olabilirlik * onsel) / max(kanit, 1e-300)
         d.sonsal = sonsal          # 𝒪₂₅ Teemmül bunu önsel olarak okur
@@ -2260,7 +2340,7 @@ class Ihtimal(Meleke):
         nz = pr > 0
         d.olcum.koy("ihtimal.entropi", -float(np.sum(pr[nz] * np.log(pr[nz]))))
         d.olcum.koy("ihtimal.beklenen_uyum", float(sonsal @ np.array(
-            [kosinus(s, G) for s in S]) / n))
+            [tevafuk("ham", s, G) for s in S]) / n))
 
 
 # =====================================================================
@@ -2326,7 +2406,7 @@ class Kiyas(Meleke):
         yari = n // 2
         S1, S2 = S[:yari], S[yari:2 * yari]
         d.olcum.koy("kıyas.geçerlilik",
-                    float(sigmoid(np.trace(kiyas_ogren(S1, S2)) / ds)))
+                    float(ehlilestir("sigmoid", np.trace(kiyas_ogren(S1, S2)) / ds)))
         d.olcum.koy("kıyas.hata",
                     float(np.linalg.norm(S1 @ kiyas_ogren(S1, S2).T - S2)
                           / max(np.linalg.norm(S2), 1e-12)))
@@ -2356,13 +2436,13 @@ class Temsil(Meleke):
         S = d.S
         ds, dh = S.shape[1], d.d_hayal
         W = p.W("temsil.dec", (ds, dh))
-        somut = gelu(S @ W)
+        somut = ehlilestir("gelu", S @ W)
         d.somut = somut            # 𝒪₂₇ Tetkik kusuru buna göre ölçer
         geri = somut @ np.linalg.pinv(W)
         d.olcum.koy("temsil.devir_hatası",
                     float(np.linalg.norm(geri - S) / max(np.linalg.norm(S), 1e-12)))
-        d.olcum.koy("temsil.hassasiyet", kosinus(geri.ravel(), S.ravel()))
-        d.olcum.koy("temsil.netlik", guvenli_bol(1.0, float(np.var(somut))))
+        d.olcum.koy("temsil.hassasiyet", tevafuk("ham", geri.ravel(), S.ravel()))
+        d.olcum.koy("temsil.netlik", ehlilestir("bol", 1.0, float(np.var(somut))))
 
 
 # =====================================================================
@@ -2385,19 +2465,14 @@ class Tesbih(Meleke):
             d.vech = S[0] if n else np.zeros(S.shape[1])
             return
         A, B = S[0], S[min(1, n - 1)]
-        d.olcum.koy("teşbih.ρ", pearson(A, B))
+        d.olcum.koy("teşbih.ρ", tevafuk("merkezli", A, B))
         vech = A * B * p.v("teşbih.ortak", len(A))
         d.vech = vech              # 𝒪₃₉ Belâgat teşbihi kelama katar
         d.olcum.koy("teşbih.oran",
-                    guvenli_bol(float(np.linalg.norm(vech)),
+                    ehlilestir("bol", float(np.linalg.norm(vech)),
                                 float(np.linalg.norm(A) + np.linalg.norm(B))))
-        d.olcum.koy("teşbih.kendine_ρ", pearson(A, A))     # 1.0 olmalı
+        d.olcum.koy("teşbih.kendine_ρ", tevafuk("merkezli", A, A))     # 1.0 olmalı
 
-
-def pearson(a: np.ndarray, b: np.ndarray) -> float:
-    a0, b0 = a - a.mean(), b - b.mean()
-    payda = float(np.linalg.norm(a0) * np.linalg.norm(b0))
-    return float(a0 @ b0 / payda) if payda > 1e-12 else 0.0
 
 
 # =====================================================================
@@ -2450,7 +2525,7 @@ class Tefekkur(Meleke):
         def V(M: np.ndarray) -> float:
             Mk = kaba(M, d.tavan)[0]
             return (0.5 * float(np.sum((M - G) ** 2))
-                    + lam * celiski_skoru(Mk, A, 0.0))
+                    + lam * celiski_tartisi(Mk, A, delta=0.0)["skor"])
 
         ilk = V(S)
         # **Mutasarrıfa strateji operatörü** (kütük H15): 𝒪₁₆'nın
@@ -2470,10 +2545,11 @@ class Tefekkur(Meleke):
         for _ in range(adim):
             if kademe_f:
                 Sk = kaba(S, d.tavan)[0]
-                gk = ince(celiski_gradyani(Sk, A, 0.0)
+                gk = ince(celiski_tartisi(Sk, A, delta=0.0)["gradyan"]
                           / max(len(Sk), 1) ** 2, len(S), kademe_f)
             else:
-                gk = celiski_gradyani(S, A, 0.0) / max(len(S), 1) ** 2
+                gk = (celiski_tartisi(S, A, delta=0.0)["gradyan"]
+                      / max(len(S), 1) ** 2)
             grad = (S - G) + lam * gk
             if R is not None:
                 grad = grad + 0.25 * (S @ R - S)
@@ -2528,7 +2604,7 @@ class IlletKesfi(Meleke):
         # 𝒪₂₈ Tashih boyut uyuşmasını zaten denetliyor.
         S, _, _ = kaba(d.S, d.tavan)
         n, ds = S.shape
-        skor = sigmoid(S @ p.v("illet.dag", ds))
+        skor = ehlilestir("sigmoid", S @ p.v("illet.dag", ds))
         sira = np.argsort(-skor)                       # yüksek skor önce = sebep
         rutbe = np.empty(n, dtype=int)
         rutbe[sira] = np.arange(n)
@@ -2538,37 +2614,11 @@ class IlletKesfi(Meleke):
         A = np.where(rutbe[:, None] < rutbe[None, :], kuvvet, 0.0)
         A = A * (A > np.quantile(A[A > 0], 0.7) if np.any(A > 0) else 0.0)
         d.A_neden = A
-        d.olcum.koy("illet.asiklik_ihlali", asiklik_ihlali(A))
+        d.olcum.koy("illet.asiklik_ihlali", devirler("ihlâl", A))
         d.olcum.koy("illet.kenar_sayısı", float(np.sum(A > 0)))
         d.olcum.koy("illet.nedensel_karmaşıklık",
                     float(np.trace(A) - np.linalg.slogdet(np.eye(n) + A)[1]))
 
-
-def asiklik_ihlali(A: np.ndarray) -> float:
-    """NOTEARS ölçütü ``h(A) = Tr(exp(A∘A)) − d``.
-
-    ``A`` bir DAG'ın ağırlık dizeyi ise **tam olarak 0**'dır; herhangi bir
-    devir varsa kesin pozitiftir.
-    """
-    d = len(A)
-    M = A * A
-    # matris üsteli (Taylor; M ≥ 0 ve küçük normlu tutulur)
-    olcek = max(float(np.max(np.sum(M, axis=1))), 1.0)
-    Mn = M / olcek
-    toplam = np.eye(d)
-    terim = np.eye(d)
-    for k in range(1, 40):
-        terim = terim @ Mn / k
-        toplam = toplam + terim
-    # exp(M) = exp(Mn)^olcek  --  iz için doğrudan seri kullan
-    toplam = np.eye(d)
-    terim = np.eye(d)
-    for k in range(1, 60):
-        terim = terim @ M / k
-        toplam = toplam + terim
-        if np.max(np.abs(terim)) < 1e-16:
-            break
-    return float(np.trace(toplam) - d)
 
 
 def arka_kapi(x: np.ndarray, z: np.ndarray, y: np.ndarray) -> float:
@@ -2702,7 +2752,7 @@ class Ispat(Meleke):
         zincir = [S[i] for i in range(len(S))]
         d.burhan = zincir
         gecerlilikler = [
-            float(sigmoid(4.0 * kosinus(zincir[k - 1], zincir[k])))
+            float(ehlilestir("sigmoid", 4.0 * tevafuk("ham", zincir[k - 1], zincir[k])))
             for k in range(1, len(zincir))
         ]
         T = float(np.prod(gecerlilikler)) if gecerlilikler else 1.0
@@ -2710,7 +2760,7 @@ class Ispat(Meleke):
         d.olcum.koy("ispat.T", T)
         d.olcum.koy("ispat.zincir_uzunluğu", float(n))
         d.olcum.koy("ispat.QED", float(T >= 1 - 1e-9))
-        d.olcum.koy("ispat.sarsılmazlık", guvenli_bol(T, 1.0 + 0.1 * n))
+        d.olcum.koy("ispat.sarsılmazlık", ehlilestir("bol", T, 1.0 + 0.1 * n))
         d.olcum.koy("ispat.boşluk",
                     float(np.sum([np.sum((zincir[k] - zincir[k - 1]) ** 2)
                                   for k in range(1, len(zincir))])))
@@ -2789,7 +2839,7 @@ class Teemmul(Meleke):
         else:
             agirlik = 1.0
             d.olcum.koy("teemmül.sonsal_var", 0.0)
-        M = kat_norm(S.copy() * agirlik)
+        M = ehlilestir("kat_norm", S.copy() * agirlik)
         farklar: List[float] = []
         tau_durma = K
         for t in range(1, K + 1):
@@ -2800,7 +2850,7 @@ class Teemmul(Meleke):
             # dışbükey harmandır; dikkat çıktısı ``H``nin dışbükey
             # örtüsünde kaldığı için harman büzücüdür ve yakınsar.
             kappa = 0.4
-            M_yeni = kat_norm((1 - kappa) * M + kappa * Y)
+            M_yeni = ehlilestir("kat_norm", (1 - kappa) * M + kappa * Y)
             fark = float(np.linalg.norm(M_yeni - M))
             farklar.append(fark)
             M = M_yeni
@@ -2840,12 +2890,12 @@ class Temkin(Meleke):
         rng = np.random.default_rng(p.tohum + 26)
         eps = 0.1 * float(np.linalg.norm(S)) / max(np.sqrt(S.size), 1.0)
 
-        temel = kosinus(M.mean(0), hedef)
+        temel = tevafuk("ham", M.mean(0), hedef)
         en_kotu = temel
         for _ in range(ornek):
             delta = rng.normal(size=S.shape)
             delta *= eps / max(float(np.linalg.norm(delta)), 1e-12)
-            en_kotu = min(en_kotu, kosinus((M + delta).mean(0), hedef))
+            en_kotu = min(en_kotu, tevafuk("ham", (M + delta).mean(0), hedef))
 
         vakar = 1.0 / (1.0 + float(np.sum(np.diff(S, axis=0) ** 2)))
         d.olcum.koy("temkin.vakar", vakar)
@@ -2855,7 +2905,7 @@ class Temkin(Meleke):
         # hâlihazırdaki ile öncekinin vakarla ağırlıklı harmanıdır" der;
         # evvelce yalnız ölçülüyordu. Vakar yüksekse (akış pürüzsüzse)
         # hâl korunur; düşükse teemmül belleğine yaslanılır.
-        d.S = kat_norm(vakar * S + (1.0 - vakar) * M)
+        d.S = ehlilestir("kat_norm", vakar * S + (1.0 - vakar) * M)
         d.olcum.koy("temkin.harman", float(np.linalg.norm(d.S - S)))
         d.olcum.koy("temkin.emin", float(temel - en_kotu < 0.05))
 
@@ -2878,7 +2928,7 @@ class Tetkik(Meleke):
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S = d.S
         n, ds = S.shape
-        maske = sigmoid(S @ p.W("tetkik.mikro", (ds, ds)))
+        maske = ehlilestir("sigmoid", S @ p.W("tetkik.mikro", (ds, ds)))
         kilcal = S * maske
 
         # ideal: ilk yarı tekil kiple yeniden kurulan pürüzsüz hâl
@@ -2925,14 +2975,15 @@ class Tashih(Meleke):
         hedef = d.G if d.G is not None else S.mean(0)
 
         def tasdik(M: np.ndarray) -> float:
-            return kosinus(M.mean(0), hedef)
+            return tevafuk("ham", M.mean(0), hedef)
 
         eski = tasdik(S)
         A = p.W("tashih.A", (ds, ds))
         Sk, kademe_t, _ = kaba(S, d.tavan)   # çelişki dizeyi ``n×n``
-        esik = celiski_esigi(Sk, A, 0.5)
+        tarti = celiski_tartisi(Sk, A, 0.5)
+        esik = tarti["eşik"]
         d.olcum.koy("tashih.eşik", esik)
-        grad = celiski_gradyani(Sk, A, esik)
+        grad = tarti["gradyan"]
         if kademe_t:
             grad = ince(grad, len(S), kademe_t)
         # **Düzeltme illetin bulunduğu yerde yapılır.** 𝒪₂₂ İllet Keşfi
@@ -3002,9 +3053,9 @@ class Teyit(Meleke):
         S, X = d.S, d.X
         ds = S.shape[1]
         # ikinci kanal: ham duyudan doğrudan türetilen bağımsız okuma
-        E2 = kat_norm(X @ p.W("teyit.kanal2", (X.shape[1], ds)))
-        guven = kosinus(S.mean(0), E2.mean(0))
-        bagimsizlik = 1.0 - abs(pearson_cok(S, E2))
+        E2 = ehlilestir("kat_norm", X @ p.W("teyit.kanal2", (X.shape[1], ds)))
+        guven = tevafuk("ham", S.mean(0), E2.mean(0))
+        bagimsizlik = 1.0 - abs(tevafuk("merkezli", S, E2))
         net = guven * bagimsizlik
         eski = d.T
         d.T = float(min(1.0, eski + 0.2 * max(net, 0.0)))
@@ -3061,12 +3112,6 @@ class Teyit(Meleke):
                   % (m, d.muteber_sahit, d.tevafuk))
 
 
-def pearson_cok(A: np.ndarray, B: np.ndarray) -> float:
-    a, b = A.ravel(), B.ravel()
-    a0, b0 = a - a.mean(), b - b.mean()
-    payda = float(np.linalg.norm(a0) * np.linalg.norm(b0))
-    return float(a0 @ b0 / payda) if payda > 1e-12 else 0.0
-
 
 # =====================================================================
 @kaydet
@@ -3098,15 +3143,15 @@ class Tahkik(Meleke):
     def uygula(self, d: Durum, p: Parametreler) -> None:
         S, X = d.S, d.X
         ds = S.shape[1]
-        koken = kat_norm(X @ p.W("tahkik.köken", (X.shape[1], ds))).mean(0)
+        koken = ehlilestir("kat_norm", X @ p.W("tahkik.köken", (X.shape[1], ds))).mean(0)
 
         # şöhret: mananın baskın bileşeni -- "herkesin söylediği".
         U, sv, Vt = np.linalg.svd(S - S.mean(0), full_matrices=False)
         sohret = Vt[0] * float(np.linalg.norm(S.mean(0)))
 
-        kokenle_bag = kosinus(S.mean(0), koken)
+        kokenle_bag = tevafuk("ham", S.mean(0), koken)
         taklit = float(np.exp(-0.5 * float(np.sum((S.mean(0) - sohret) ** 2))))
-        T_tahkik = float(sigmoid(4.0 * (kokenle_bag - taklit)))
+        T_tahkik = float(ehlilestir("sigmoid", 4.0 * (kokenle_bag - taklit)))
         d.olcum.koy("tahkik.kökenle_bağ", kokenle_bag)
         d.olcum.koy("tahkik.taklit_derecesi", taklit)
         d.olcum.koy("tahkik.T", T_tahkik)
@@ -3164,7 +3209,7 @@ class Tedebbur(Meleke):
             s = M.mean(0).copy()
             V = 0.0
             for k in range(1, H + 1):
-                s = kat_norm(s @ A.T + 0.1 * rng.normal(size=ds))
+                s = ehlilestir("kat_norm", s @ A.T + 0.1 * rng.normal(size=ds))
                 V += (beta ** k) * float(np.exp(-np.linalg.norm(s - G)))
             degerler.append(V)
             if float(np.exp(-np.linalg.norm(s - G))) < tehlike + 1e-3:
@@ -3253,7 +3298,7 @@ class SekZanYakin(Meleke):
         else:
             ozellik = np.concatenate([S.mean(0), np.full(ds, d.tenakuz),
                                       np.full(ds, d.T)])
-            d.P_idrak = float(sigmoid(ozellik @ p.v("idrak.p", 3 * ds)))
+            d.P_idrak = float(ehlilestir("sigmoid", ozellik @ p.v("idrak.p", 3 * ds)))
             d.makam = makam_tayin(d.P_idrak, self.EPS_SEK, self.EPS_YAKIN)
             d.olcum.koy("idrak.vekil_formül", 1.0)
 
@@ -3325,8 +3370,8 @@ class Muhakeme(Meleke):
 
     def uygula(self, d: Durum, p: Parametreler) -> None:
         ds = d.S_kebir.shape[0]
-        guncel = kat_norm(d.S.mean(0) @ p.W("muhakeme.macro", (ds, ds)))
-        d.S_kebir = kat_norm(0.5 * d.S_kebir + 0.5 * guncel)
+        guncel = ehlilestir("kat_norm", d.S.mean(0) @ p.W("muhakeme.macro", (ds, ds)))
+        d.S_kebir = ehlilestir("kat_norm", 0.5 * d.S_kebir + 0.5 * guncel)
         d.olcum.koy("muhakeme.mikro_katkısı",
                     float(np.linalg.norm(guncel)))
         # **Küllî kaide burada tatbik edilir.** 𝒪₃₀ Tahkik'in mühürlediği
@@ -3342,7 +3387,7 @@ class Muhakeme(Meleke):
             d.olcum.koy("muhakeme.kaide_tatbik", 0.0)
         S_yeni = R @ d.S_kebir
 
-        lehte = max(kosinus(S_yeni, d.G_kebir), 0.0) + max(d.T, 0.0)
+        lehte = max(tevafuk("ham", S_yeni, d.G_kebir), 0.0) + max(d.T, 0.0)
         aleyhte = (max(d.tenakuz, 0.0)
                    + max(d.olcum.al("tenkit.sapma", 0.0), 0.0)
                    + max(d.akibet, 0.0))     # 𝒪₃₁'in ölçtüğü âkıbet riski
@@ -3394,14 +3439,14 @@ class Muhakeme(Meleke):
             aleyhte += ezber
             d.olcum.koy("muhakeme.mertebe_ezber", ezber)
 
-        mizan = guvenli_bol(aleyhte, lehte)
+        mizan = ehlilestir("bol", aleyhte, lehte)
         tau = 1.0
         gecti = mizan < tau
 
-        program = gelu(S_yeni @ p.W("muhakeme.p1", (ds, ds))) @ p.W("muhakeme.p2", (ds, ds))
+        program = ehlilestir("gelu", S_yeni @ p.W("muhakeme.p1", (ds, ds))) @ p.W("muhakeme.p2", (ds, ds))
         nakz_orani = (len(d.nakz or []) / max(len(d.sahitler or []), 1)
                       if d.sahitler else 0.0)
-        T_kebir = float(sigmoid(4.0 * (kosinus(S_yeni, d.G_kebir)
+        T_kebir = float(ehlilestir("sigmoid", 4.0 * (tevafuk("ham", S_yeni, d.G_kebir)
                                        - d.tenakuz - nakz_orani)))
         # **Karar geçmezse program tatbik EDİLMEZ.** Evvelce mîzân
         # hesaplanıyor, ``karar_geçti`` ölçüme yazılıyor ve program yine
@@ -3410,9 +3455,9 @@ class Muhakeme(Meleke):
         # de olmalıdır: karar geçmediyse meclis dağılır, makro mana
         # olduğu gibi kalır.
         if gecti:
-            d.S_kebir = kat_norm(T_kebir * program + (1 - T_kebir) * d.S_kebir)
+            d.S_kebir = ehlilestir("kat_norm", T_kebir * program + (1 - T_kebir) * d.S_kebir)
         else:
-            d.S_kebir = kat_norm(d.S_kebir)
+            d.S_kebir = ehlilestir("kat_norm", d.S_kebir)
         d.olcum.koy("muhakeme.mizan", mizan)
         d.olcum.koy("muhakeme.karar_geçti", float(gecti))
         d.olcum.koy("muhakeme.T_kebîr", T_kebir)
@@ -3439,9 +3484,9 @@ class Tafsil(Meleke):
     def uygula(self, d: Durum, p: Parametreler, K: int = 5) -> None:
         mucmel = d.S_kebir
         ds = len(mucmel)
-        dallar = np.stack([gelu(mucmel @ p.W("tafsil.dal%d" % k, (ds, ds)))
+        dallar = np.stack([ehlilestir("gelu", mucmel @ p.W("tafsil.dal%d" % k, (ds, ds)))
                            for k in range(K)])
-        w = softmax(dallar @ p.v("tafsil.vd", ds))
+        w = ehlilestir("softmax", dallar @ p.v("tafsil.vd", ds))
         birlesik = w @ dallar
 
         # sadakat: birleştirilmiş dalları mücmele en iyi afin uydurma
@@ -3452,7 +3497,7 @@ class Tafsil(Meleke):
         d.olcum.koy("tafsil.dallanma", float(K))
         d.olcum.koy("tafsil.sadakat_hatası", hata)
         d.olcum.koy("tafsil.netlik",
-                    guvenli_bol(float(np.sum(np.linalg.norm(dallar, axis=1))),
+                    ehlilestir("bol", float(np.sum(np.linalg.norm(dallar, axis=1))),
                                 float(np.linalg.norm(mucmel))))
         d.olcum.koy("tafsil.ağırlık_toplamı", float(w.sum()))
 
@@ -3478,7 +3523,7 @@ class Tefsir(Meleke):
         sibak = np.roll(S, -1, axis=0)              # sonraki bağlam
         baglam = np.concatenate([siyak, sibak], axis=0)
         W = p.W("tefsir.W", (ds, ds))
-        agirlik = softmax((S @ W) @ baglam.T / np.sqrt(ds))
+        agirlik = ehlilestir("softmax", (S @ W) @ baglam.T / np.sqrt(ds))
         murad = agirlik @ baglam @ p.W("tefsir.v", (ds, ds))
 
         d.murad = np.asarray(murad.mean(0), float)   # 𝒪₃₉ Belâgat murada uyar
@@ -3512,15 +3557,16 @@ class Tevil(Meleke):
         A = p.W("tevil.A", (ds, ds))
 
         Sk, kademe_v, _ = kaba(S, d.tavan)   # çelişki dizeyi ``n×n``
-        esik = celiski_esigi(Sk, A, 0.5)
+        tarti = celiski_tartisi(Sk, A, 0.5)
+        esik = tarti["eşik"]
         d.olcum.koy("tevil.eşik", esik)
 
         def celiski(M: np.ndarray) -> float:
             Mk, _, _ = kaba(M, d.tavan)
-            return celiski_skoru(Mk, A, esik)
+            return celiski_tartisi(Mk, A, delta=esik)["skor"]
 
         zahir = celiski(S)
-        illet = celiski_gradyani(Sk, A, esik)
+        illet = tarti["gradyan"]
         if kademe_v:
             illet = ince(illet, len(S), kademe_v)
         illet = illet / max(float(np.max(np.abs(illet))), 1.0)
@@ -3586,17 +3632,17 @@ class Fesahat(Meleke):
         # evvelce dallar hesaplanıp atılıyordu.
         taban = d.S_kebir
         if d.dallar is not None and len(d.dallar) == ds:
-            taban = kat_norm(0.5 * d.S_kebir + 0.5 * d.dallar)
+            taban = ehlilestir("kat_norm", 0.5 * d.S_kebir + 0.5 * d.dallar)
             d.olcum.koy("fesâhat.dallar_var", 1.0)
         else:
             d.olcum.koy("fesâhat.dallar_var", 0.0)
-        N = kat_norm(gelu(taban @ p.W("fesâhat.dec", (ds, ds))))
+        N = ehlilestir("kat_norm", ehlilestir("gelu", taban @ p.W("fesâhat.dec", (ds, ds))))
         d.N = N
 
-        tenafur = _sik(float(np.mean(np.abs(np.diff(N)))))
-        pr = softmax(np.abs(N))
-        garabet = _sik(-float(np.mean(np.log(pr + 1e-12))) / max(np.log(ds), 1e-12))
-        takid = _sik(float(np.linalg.norm(np.diff(N, n=2))) / max(np.sqrt(ds), 1.0))
+        tenafur = ehlilestir("sık", float(np.mean(np.abs(np.diff(N)))))
+        pr = ehlilestir("softmax", np.abs(N))
+        garabet = ehlilestir("sık", -float(np.mean(np.log(pr + 1e-12))) / max(np.log(ds), 1e-12))
+        takid = ehlilestir("sık", float(np.linalg.norm(np.diff(N, n=2))) / max(np.sqrt(ds), 1.0))
 
         skor = 1.0 - (0.4 * tenafur + 0.3 * garabet + 0.3 * takid)
         d.olcum.koy("fesâhat.tenâfür", tenafur)
@@ -3618,10 +3664,6 @@ def susuldu_mu(d: Durum, meleke: "Meleke") -> bool:
     d.olcum.koy("%s.sükût" % meleke.ad.lower(), 1.0)
     return True
 
-
-def _sik(x: float) -> float:
-    """``[0,∞) → [0,1)``; ``x/(1+x)``. Monoton ve tersinir."""
-    return float(x / (1.0 + x))
 
 
 # =====================================================================
@@ -3698,20 +3740,20 @@ class Belagat(Meleke):
         makam_muhatap = d.G_kebir
         katki = 0
         if d.murad is not None and len(d.murad) == ds:
-            makam_muhatap = makam_muhatap + 0.3 * kat_norm(d.murad)
+            makam_muhatap = makam_muhatap + 0.3 * ehlilestir("kat_norm", d.murad)
             katki += 1
         if d.vech is not None and len(d.vech) == ds:
-            makam_muhatap = makam_muhatap + 0.2 * kat_norm(d.vech)
+            makam_muhatap = makam_muhatap + 0.2 * ehlilestir("kat_norm", d.vech)
             katki += 2
         d.olcum.koy("belâgat.murad_vech", float(katki))
         R = p.lie_tasarruf("belâgat.R", ds, teta=0.2)
         belig = R @ (N * makam_muhatap)
 
-        uyum = kosinus(N @ p.W("belâgat.ifade", (ds, ds)),
+        uyum = tevafuk("ham", N @ p.W("belâgat.ifade", (ds, ds)),
                        makam_muhatap @ p.W("belâgat.makam", (ds, ds)))
         fesahat = d.olcum.al("fesâhat.skor", 0.5)
         skor = fesahat * uyum
-        isabet = kosinus(belig @ p.W("belâgat.tesir", (ds, ds)), d.G_kebir)
+        isabet = tevafuk("ham", belig @ p.W("belâgat.tesir", (ds, ds)), d.G_kebir)
 
         # icâz/itnâb: muhatabın idrak makamına göre
         # ``Zann-ı gālib`` de icâz tarafındadır: kuvvetli zan sahibi
@@ -3720,7 +3762,7 @@ class Belagat(Meleke):
         # itnâba düşerdi -- yani yeni mertebe beyanı bozardı.
         kip = "İcâz" if d.makam in ("Yakîn", "Zann-ı gālib", "Zan") \
             else "İtnâb"
-        d.N = kat_norm(belig) * float(np.clip(skor, 0.05, 1.0))
+        d.N = ehlilestir("kat_norm", belig) * float(np.clip(skor, 0.05, 1.0))
         d.olcum.koy("belâgat.uyum", uyum)
         d.olcum.koy("belâgat.skor", skor)
         d.olcum.koy("belâgat.isabet", isabet)
@@ -3754,7 +3796,7 @@ class Sanat(Meleke):
         Y = np.outer(N, H.mean(0) @ p.W("sanat.h", (H.shape[1], ds)))
         Om = p.W("sanat.ahenk", (ds, ds))
 
-        harmoni = simetrik_harmoni(Y)
+        harmoni = tevafuk("ayna", Y)
         gelenek = np.eye(ds) * ALTIN_ORAN
         yenilik = float(np.linalg.norm(Om - gelenek) / max(np.sqrt(Om.size), 1.0))
         estetik = harmoni + 0.3 * yenilik
@@ -3768,26 +3810,6 @@ class Sanat(Meleke):
         d.olcum.koy("sanat.φ_özdeşliği",
                     float(abs(ALTIN_ORAN ** 2 - ALTIN_ORAN - 1.0)))
 
-
-def simetrik_harmoni(Y: np.ndarray) -> float:
-    """``1 − ‖Y − Yᵀ‖_F / (2‖Y‖_F)``.
-
-    Metindeki hâl ``1 − ‖Y − Yᵀ‖_F``dir; iki düzeltme yapıldı ve ikisi de
-    ölçümden çıktı:
-
-    * **Payda**: paydasız ölçü ``Y``nin BÜYÜKLÜĞÜNE bağlı olur, oysa
-      harmoni bir orandır -- aynı şekilli iki dizeden büyük olanı "daha
-      ahenksiz" görünürdü.
-    * **2 katsayısı**: ``‖Y−Yᵀ‖² = 2‖Y‖² − 2⟨Y,Yᵀ⟩ ≤ 4‖Y‖²`` olduğundan
-      yalnız ``‖Y‖``a bölmek ölçüyü ``[1−2, 1]``e taşır. Nitekim ölçüldü:
-      harmoni −0.351 çıktı, yani "ahenk" negatif oldu. ``2‖Y‖`` ile
-      bölünce ölçü ``[0,1]``dedir; ters simetrik dizede tam 0, simetrik
-      dizede tam 1.
-    """
-    payda = float(np.linalg.norm(Y))
-    if payda < 1e-12:
-        return 1.0
-    return float(1.0 - np.linalg.norm(Y - Y.T) / (2.0 * payda))
 
 
 # =====================================================================
@@ -3851,11 +3873,11 @@ class Munazara(Meleke):
                         float(np.clip(burhan, 0.0, 1.0))), 0)))
 
         def cerh(S: np.ndarray, kuvvet: float) -> float:
-            return max(0.0, -kosinus(S, aksiyom)) + (1.0 - kuvvet)
+            return max(0.0, -tevafuk("ham", S, aksiyom)) + (1.0 - kuvvet)
 
         c_tez = cerh(tez, burhan)
         c_anti = cerh(antitez, 1.0 - burhan)
-        T = float(sigmoid(4.0 * (c_anti - c_tez)))
+        T = float(ehlilestir("sigmoid", 4.0 * (c_anti - c_tez)))
 
         alfa = 0.5
         sentez = alfa * tez + (1 - alfa) * antitez
@@ -3867,7 +3889,7 @@ class Munazara(Meleke):
             zincir = float(np.clip(len(d.burhan) / (len(d.burhan) + 4.0), 0, 1))
             burhan = max(burhan, zincir * burhan + (1 - zincir) * 0.5 * burhan)
             d.olcum.koy("münazara.burhân_halkası", float(len(d.burhan)))
-        d.N = kat_norm(galip * d.N) * d.ahenk
+        d.N = ehlilestir("kat_norm", galip * d.N) * d.ahenk
         d.olcum.koy("münazara.cerh_tez", c_tez)
         d.olcum.koy("münazara.cerh_antitez", c_anti)
         d.olcum.koy("münazara.T", T)

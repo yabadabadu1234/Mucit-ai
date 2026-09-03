@@ -495,12 +495,12 @@ def test_faz_cekirdegi_psd_degil():
 
 def test_tikhonov_cekirdegi_yok_eder():
     """``L+εI``'nin çekirdeği BOŞTUR; β₀ oradan okunamaz."""
-    from nefs.melekeler import normalize_laplasyen
+    from nefs.melekeler import devirler
     # İki ayrık üçgen: β₀ = 2
     A = np.zeros((6, 6))
     for i, j in ((0, 1), (1, 2), (0, 2), (3, 4), (4, 5), (3, 5)):
         A[i, j] = A[j, i] = 1.0
-    L = normalize_laplasyen(A)
+    L = devirler("laplasyen", A)
     oz = np.linalg.eigvalsh(L)
     beta0 = int(np.sum(np.abs(oz) < 1e-9))
     assert beta0 == 2, oz
