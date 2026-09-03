@@ -599,33 +599,61 @@ class SekZanYakin(Meleke):
 ZANN_I_GALIB_ESIGI: float = 0.75
 
 
-def makam_tayin(P: float, eps_sek: float = 0.05,
-                eps_yakin: float = 0.05) -> str:
-    """**Beş** makam; tam ve ayrık parçalanış.
+#: Görünen adlar -- `mizan/munazara.py`nin küçük harfli mertebe
+#: adlarının bu dosyadaki yazımı. Eşikler oradan gelir, adlar burada
+#: sunulur; iki ayrı cetvel DEĞİLDİR.
+_MAKAM_ADI: Dict[str, str] = {
+    "yakîn": "Yakîn", "zann-ı gālib": "Zann-ı gālib", "zan": "Zan",
+    "şek": "Şek", "vehim": "Vehim",
+}
 
-    **ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H158; H129'un reel modeldeki
-    eşi).** Evvelce dört makam vardı ve ``0,5+ε`` ile ``1−ε`` arasının
-    tamamı ``Zan``dı. Halbuki mîzânın cetvelinde ``0,75``te bir mertebe
-    daha var: ``zann-ı gālib`` (kuvvetli zan).
 
-    Bu eksik zararsız değildi ve ölçüldü (`nefs/mantik.py`,
-    ``istikra_mertebesi``): ARC training'in ilk 200 görevinde istikrâ
-    yakîni ortalaması **0,8025**, yani **her görev** zann-ı gālibe
-    düşüyor -- makamın taşıyamadığı tam o mertebeye. Model hepsine
-    "Zan" diyordu, yani kendi delilinin kuvvetini **eksik** beyan
-    ediyordu.
+def makam_tayin(P: float, eps_sek: float = 0.0,
+                eps_yakin: float = 0.0) -> str:
+    """**Beş** makam; eşikler **mîzânın cetvelinden**, elden değil.
 
-    Parçalanış hâlâ tam ve ayrıktır; sınama ``[0,1]``i tarayarak
-    denetler ve monotonluğu da arar.
+    **ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H214).** Bu fonksiyon
+    eşiklerinin *"elle konmuş bir sayı değil, `mizan/munazara.py`nin
+    ``MERTEBELER`` cetvelinden"* geldiğini söylüyordu; ``0,75`` için
+    doğruydu, gerisi için **değildi**. Kaynakla yüzleştirildi
+    (``mertebe_adi`` ile aynı ``P``lerde):
+
+    ========  ================  ==============  ==============
+    ``P``     kaynak (mîzân)    bu fonksiyon    doğru mu
+    ========  ================  ==============  ==============
+    0,25      şek               Vehim           **HAYIR**
+    0,40      şek               Vehim           **HAYIR**
+    0,50      zan               Şek             **HAYIR**
+    0,55      zan               Şek             **HAYIR**
+    0,95      zann-ı gālib      Yakîn           **HAYIR**
+    0,99      zann-ı gālib      Yakîn           **HAYIR**
+    ========  ================  ==============  ==============
+
+    Kaynaktan sapma **7/13**ti. Aynı beş mertebeyi kuran ikinci nüsha
+    (`nefs/qyazmac.py`nin Gray merdiveni) ise **0/13** sapıyordu; yani
+    yanlış olan buydu.
+
+    Zararı nazarî değildi: `nefs/kademeler.py` tasdik ağırlığını
+    (``hukum_agirligi(p, makam_tayin(p))``) buradan alır ve o hat
+    ``main/egitim.py``den fiilen erişilir. İki uçta birden yanlıştı --
+    ``0,95``te **fazla** iddia (zann-ı gālibe "Yakîn" demek, H10/H100'ün
+    tam aksi), ``0,25-0,40``ta **eksik** iddia (şek'e "Vehim" demek).
+
+    ``eps_*`` payları **varsayılan olarak sıfırdır**: cetvelde öyle bir
+    bant yoktur. Sıfırdan büyük verilirse ``şek``in tabanı aşağı,
+    ``yakîn``in tabanı yukarı kaydırılır ve bu artık cetvelin değil
+    çağıranın hükmüdür.
     """
-    if P >= 1 - eps_yakin:
-        return "Yakîn"
-    if P >= ZANN_I_GALIB_ESIGI:
-        return "Zann-ı gālib"
-    if P > 0.5 + eps_sek:
-        return "Zan"
-    if P >= 0.5 - eps_sek:
-        return "Şek"
+    from mizan.munazara import MERTEBELER
+    e_sek, e_yakin = float(eps_sek), float(eps_yakin)
+    for esik, ad in MERTEBELER:                  # cetvel azalan sırada
+        e = float(esik)
+        if ad == "yakîn":
+            e -= e_yakin                         # yakîn tabanını gevşet
+        elif ad == "şek":
+            e -= e_sek                           # şek tabanını gevşet
+        if P >= e:
+            return _MAKAM_ADI[ad]
     return "Vehim"
 
 

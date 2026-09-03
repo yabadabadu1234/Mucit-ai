@@ -1185,7 +1185,10 @@ def test_nizam_cetveli_tam_ve_tutarli():
     from .qmeleke import nizam_cetveli
 
     cetvel = nizam_cetveli()
-    assert len(cetvel) == 41, len(cetvel)
+    # **41 → 44 (kütük H213).** `nefs/dimag.py` ``MELEKE_SAYISI = 44``
+    # diyor ve ``KANONIK_CETVEL`` 𝒪₄₂/𝒪₄₃/𝒪₄₄'ü ``d₁₀``a tescil
+    # ediyordu; akış ise 41'de bitiyordu. Üçü ``QAKIS``a girdi.
+    assert len(cetvel) == 44, len(cetvel)
     kurucu = [c for c in cetvel if c[2] == "kurucu"]
     cozucu = [c for c in cetvel if c[2] == "çözücü"]
     assert kurucu and cozucu

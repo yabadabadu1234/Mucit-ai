@@ -9,7 +9,7 @@ sayısı ancak en sonda, tek bir zayıf ölçümle okunur (kütük H31).
 
 Bunun bedeli açıktır ve saklanmaz: bir meleke kendi girdisine bakıp
 "şuna göre şu kadar dönderelim" diyemez. Açılar ya **parametreden**
-gelir (öğrenilir; ``Parametreler`` tohumludur ve tekrarlanabilir) ya da
+gelir (öğrenilir; ``QParametre`` tohumludur ve tekrarlanabilir) ya da
 melekenin kendi tarifinden (altın oran, ∞-kategori mertebesi). Bilginin
 kendisi açıya değil, **dolaşıklığa** girer: kontrollü dönme, veriyi
 hükümle dolaştırır; hangi hükmün uyandığı veriye bağlıdır, fakat bu
@@ -38,7 +38,6 @@ from kuantum.yazmac import dik_iki_kubit
 
 from .mertebe import DINAMIK, lifleri_kur
 from .qyazmac import (QYazmac, degil_x, donme, faz_z, kontrollu_donme)
-from .uzaylar import Parametreler
 
 __all__ = ["QMeleke", "qsicil", "qmelekeler", "QAKIS",
            "NIZAM_ACIK", "nizami_ac", "nizam_cetveli"]
@@ -305,10 +304,10 @@ class QMeleke:
         """
         return self.yay(p, self.BIRIKIM_ACI, n, olcek) / max(float(n), 1.0)
 
-    def uygula(self, q: QYazmac, p: Parametreler) -> None:  # pragma: no cover
+    def uygula(self, q: QYazmac, p: "QParametre") -> None:  # pragma: no cover
         raise NotImplementedError
 
-    def kosu(self, q: QYazmac, p: Parametreler) -> None:
+    def kosu(self, q: QYazmac, p: "QParametre") -> None:
         n0 = q.iz.kapi
         # =============================================================
         # χ TAVANI **İCRADAN KALDIRILDI** (kütük H149, H118'in nakzı)
@@ -369,7 +368,7 @@ class QMeleke:
                      "%d kapı" % (q.iz.kapi - n0))
 
     # -- müşterek desenler -------------------------------------------
-    def tugla(self, q: QYazmac, p: Parametreler, ofset: int = 0,
+    def tugla(self, q: QYazmac, p: "QParametre", ofset: int = 0,
               olcek: float = 0.5) -> None:
         """Veri kübitleri üzerinde fırça (brick) düzeninde ``SO(4)`` katmanı.
 
@@ -388,7 +387,7 @@ class QMeleke:
                for j in range(ofset, k - 1, 2)]
         q.cift_yigin(sol, G)
 
-    def satir_donmesi(self, q: QYazmac, p: Parametreler,
+    def satir_donmesi(self, q: QYazmac, p: "QParametre",
                       olcek: float = 0.6) -> None:
         """Her satırın her veri kübitine kendi öğrenilen dönmesi."""
         k = q.ayar.satir_kubiti
@@ -1409,7 +1408,171 @@ class QMunazara(QMeleke):
         q.tek(q.kulli("sukut", 0), donme(float(a[2]) * 0.5))
 
 
-#: Akış sırası -- reel modelin ``AKIS``ıyla birebir aynı (𝒪₁₃ iki kere).
+# =====================================================================
+#  𝒪₄₂–𝒪₄₄  TEŞKİLÂT -- üç uzuv NİHAYET akışa girdi (kütük H213)
+# =====================================================================
+#
+# **ÖLÇÜLEN VE KAPATILAN ÇELİŞKİ.** `nefs/dimag.py` ``MELEKE_SAYISI =
+# 44`` diyor ve ``KANONIK_CETVEL`` 𝒪₄₂/𝒪₄₃/𝒪₄₄'ü ``d₁₀``a tescil
+# ediyordu; fakat ``QAKIS`` 41'de bitiyordu. Yani Lie manifoldu 44
+# üreteç sayarken akış 41 kapı vuruyordu -- üç meleke cetvelde vardı,
+# icrada yoktu. `nefs/teskilat.py` de AST ile ölçüldü: **sıfır gerçek
+# çağıran**, yalnız divanın sicilinde duruyordu.
+#
+# Aşağıdaki üç sınıf o boşluğu kapatır. Formüller `nefs/teskilat.py`den
+# alınmıştır; oradaki klasik hâlleri **ölçü** (sözleşme denetçisi)
+# olarak yerinde durur, buradaki hâlleri **kapı**dır. İkisi ayrı
+# şeydir ve karıştırılmaz: kapı hiçbir şey okumaz (H31).
+
+
+@qkaydet
+class QUmumilestirme(QMeleke):
+    """𝒪₄₂ Umumileştirme -- numunelerin **kesişimindeki** kanun.
+
+    `nefs/teskilat.py`nin formülü::
+
+        𝒪_umum(S) = Π_inv · [ ⊗_j 𝒮_j(X_in^(j) → Y_out^(j)) ]
+
+    Manası: birkaç numunede görülen dönüşümlerin kesişimindeki
+    **değişmez** kısmı süzmek; bir numuneye mahsus araz kesişimde
+    kalmaz, kanun kalır.
+
+    **Üniter karşılığı budur ve uydurma değildir.** Numuneler burada
+    satırların yerel hüküm kübitleridir. ``mpo_topla`` bütün durakları
+    **aynı** açıyla küllî alana akıtır::
+
+        U = exp( (Σ_i θ n_i) ⊗ Y )
+
+    Açı her durakta aynı olduğu için, uyanık olan duraklar birbirini
+    **pekiştirir**, uyuşmayanlar katkı vermez -- yani biriken dönme
+    tam olarak durakların **ortak** (kesişimdeki) kısmını taşır.
+    Π_inv'in kübit üzerindeki karşılığı budur: ayrı ayrı açı vermek
+    her numuneye kendi arazını taşıtırdı, aynı açı yalnız kanunu
+    taşır.
+
+    Bir numunenin arazı için ayrıca ``tenakuz``a zayıf bir sızıntı
+    açılır: kesişim dışında kalan, çelişki alanında birikir.
+    """
+    no, ad = 42, "Umumileştirme"
+    # Ölçüldü (``nefs/nizam.yuzlestir``): ΔS = +0,0080 -- koruyucu
+    # bandının (|ΔS| ≤ 0,05) içinde. Sınıf iddia değil, ölçüdür.
+    # CHI, emsali MPO birikimlerininkiyle aynı (bağ zaten 2).
+    SINIF, CHI = "koruyucu", 4
+
+    def uygula(self, q, p):
+        n = max(1, q.n_satir)
+        a = self.aci(p, 2, 0.5)
+        # Π_inv: BÜTÜN duraklar AYNI açıyla -- kesişim böyle süzülür.
+        ortak = np.full(n, float(a[0]) / float(n))
+        q.iz.kesme += q.mpo_topla("mizan", ortak)
+        # kesişim dışında kalan araz: zayıf, ters işaretli sızıntı
+        q.iz.kesme += q.mpo_topla("tenakuz", -0.25 * ortak)
+
+
+@qkaydet
+class QTalim(QMeleke):
+    """𝒪₄₃ Talim -- hükmü kademe kademe **keskinleştirmek**.
+
+    `nefs/teskilat.py`nin formülü::
+
+        𝒪_talim(S, τ) = Π_l softmax(S·W_l / τ_l) · Π_fesahat
+        şart: τ₁ > τ₂ > … > τ_L  (yayvandan keskine, tersi olmaz)
+
+    **Üniter karşılığı.** Sıcaklığı düşürmek dağılımı keskinleştirir;
+    kübitte bunun karşılığı, kelam alanının genliğini kademe kademe
+    **daha büyük** açıyla tek yöne toplamaktır: ``θ_l ∝ 1/τ_l``. τ
+    monoton azaldığı için θ monoton **artar** ve beyan yayvandan
+    keskine gider.
+
+    **Kademe cetveli uydurulmaz, sözleşmeden gelir.** ``τ`` merdiveni
+    `teskilat.talim_kademesi` ile fiilen sınanır: sabit ve
+    belirlenimci bir hüküm vektöründe entropinin monoton azaldığı
+    denetlenir. ``sahih`` yalanlanırsa merdiven kurulmaz ve meleke
+    **hiç dönmez** -- karıştırmayı talim diye icra etmektense
+    susmak yeğdir (H10).
+    """
+    no, ad = 43, "Talim"
+    # Ölçüldü: ΔS = +0,0195 -- koruyucu bandının içinde. Yalnız tek
+    # kübitlik dönmeler vurur, bağ büyütmez.
+    SINIF, CHI = "koruyucu", 4
+    #: Yayvandan keskine; ``talim_kademesi`` bunun monotonluğunu ölçer.
+    TAU: Tuple[float, ...] = (4.0, 2.0, 1.0, 0.5)
+    #: Merdivenin sınandığı sabit hüküm vektörü -- girdiden bağımsız,
+    #: belirlenimci. Dalgadan OKUNMAZ; melekenin kendi tarifidir.
+    OLCU: Tuple[float, ...] = (3.0, 1.0, 0.5, -1.0, 2.0)
+
+    def uygula(self, q, p):
+        from .teskilat import talim_kademesi
+        r = talim_kademesi(np.asarray(self.OLCU, float), self.TAU)
+        if not r["sahih"]:                       # pragma: no cover
+            return                               # karıştırma yapmaktansa sus
+        _, kk = q._alan["kelam"]
+        a = self.aci(p, len(self.TAU), 0.4)
+        for l, tau in enumerate(self.TAU):
+            # θ_l ∝ 1/τ_l : τ düştükçe dönme büyür, beyan keskinleşir
+            teta = float(a[l]) / float(tau)
+            q.tek_yigin([q.kulli("kelam", j) for j in range(kk)],
+                        np.stack([donme(teta) for _ in range(kk)]))
+
+
+@qkaydet
+class QTahsil(QMeleke):
+    """𝒪₄₄ Tahsil -- ağırlığı emanet olmaktan çıkarıp **zâtî mülk** kılmak.
+
+    `nefs/teskilat.py`nin formülü::
+
+        𝒪_tahsil(θ) = θ ∘ exp(−η · Ĥ_Dimağ(θ)) + γ · I_meleke
+
+    ``exp(−ηĤ)`` bir Gibbs sönümüdür (çelişkili yönler bastırılır);
+    ``γI`` melekenin kendi kimliğini korur -- tamamen dışarının
+    şekline girmesin diye.
+
+    **Üniter karşılığı ve NEDEN ORAYA VURULDUĞU.** Bu meleke ötekiler
+    gibi hükme değil, **parametre bölgesine** dokunur: `nefs/taksimat.py`
+    zincirde ``|x⟩`` diye bir bölge ayırır ve ceride onu "model
+    ağırlıkları" diye tarif eder. Tahsil tam orada iş görür:
+
+    * Gibbs sönümü ``exp(−ηĤ)`` → parametre kübitlerine, mîzân
+      (çelişki enerjisi) **kontrollü** bir dönme: mîzân uyanıksa
+      parametre söner. Çelişkili yön bastırılır.
+    * ``γ·I`` → parametre kübitlerine küçük, kontrolsüz bir kimlik
+      dönmesi: kaynak ne derse desin meleke kendi kimliğinden bir
+      pay saklar.
+
+    Bölge kapalıysa (``bolge_ac=False``) meleke sessizce hiçbir şey
+    yapmaz; ``eklem_olcusu`` o zaman zaten kırmızı yanar.
+    """
+    no, ad = 44, "Tahsil"
+    # **SINIFIM YANLIŞTI VE ÖLÇÜM YALANLADI (kütük H213).** Evvelâ
+    # ``koruyucu`` yazmıştım; ``nefs/nizam.yuzlestir`` ΔS = **−0,5541**
+    # ölçtü, yani ihlâl 0,4654. Hâlbuki melekenin kendi tarifi zaten
+    # *"yüksek enerjili, yani çelişkili yönler bastırılır"* diyor --
+    # bu bir **çözücü**nün tarifidir. İlan ölçüye uyduruldu, ölçü
+    # ilana değil. CHI emsali çözücülerinkiyle aynı (tashih, tenkit).
+    SINIF, CHI = "çözücü", 2
+    #: Gibbs sönüm şiddeti ve kimlik payı -- melekenin kendi tarifi.
+    ETA: float = 0.1
+    GAMA: float = 0.05
+
+    def uygula(self, q, p):
+        if not q.bolge_var("parametre"):
+            return
+        npar = q.taksimat.bolge["parametre"][1]
+        kac = min(int(npar), 8)                  # bütçe: ilk 8 kübit
+        a = self.aci(p, 2, 0.5)
+        # exp(−ηĤ): mîzân uyanıksa parametre söner (kontrollü dönme)
+        for j in range(kac):
+            q.uzak_cift(q.kulli("mizan", j % 4), q.parametre(j),
+                        kontrollu_donme(-abs(float(a[0])) * float(self.ETA)))
+        # γ·I: kimlik payı -- kontrolsüz, küçük, daima
+        q.tek_yigin([q.parametre(j) for j in range(kac)],
+                    np.stack([donme(float(self.GAMA) * float(a[1]))
+                              for _ in range(kac)]))
+
+
+#: Akış sırası -- reel modelin ``AKIS``ıyla birebir aynı (𝒪₁₃ iki kere),
+#: **artık 44 melekelik** (kütük H213): 𝒪₄₂/𝒪₄₃/𝒪₄₄ beyanın ardından
+#: koşar, zira teşkilât hükmün değil hükmü **sahiplenmenin** işidir.
 QAKIS: Tuple[int, ...] = (
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
     11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -1418,4 +1581,5 @@ QAKIS: Tuple[int, ...] = (
     33, 13,
     34, 35, 36,
     37, 38, 39, 40, 41,
+    42, 43, 44,
 )

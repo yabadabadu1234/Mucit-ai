@@ -7284,3 +7284,98 @@ kasten uzun koşudur; had frenin sessiz sabiti olamaz. `EgitimAyari`ye
 `AZAMI_KAGGLE` 24 saat. Üç profil de artık geçiyor.
 
 **Netice: `beylik: YOK` — 208 modülün 208'i main-4'ten erişiliyor.**
+
+## H213 — KÜME 2, birinci kısım: akış 41'den 44'e çıktı
+
+Küme 2'nin 13 dosyası baştan sona okundu. Zabıtın en somut iddiası
+ölçüldü ve **doğru çıktı**: `nefs/dimag.py` `MELEKE_SAYISI = 44` diyor,
+`KANONIK_CETVEL` 𝒪₄₂/𝒪₄₃/𝒪₄₄'ü `d₁₀`a tescil ediyor — fakat `QAKIS`
+41'de bitiyordu. Lie manifoldu 44 üreteç sayarken akış 41 kapı
+vuruyordu. `nefs/teskilat.py` de AST ile ölçüldü: **sıfır gerçek
+çağıran**, yalnız divanın sicilinde duruyordu.
+
+Üçü `QMeleke` olarak yazılıp `QAKIS`a girdi. Formüller
+`nefs/teskilat.py`den; oradaki klasik hâlleri **ölçü** olarak yerinde
+durur, buradaki hâlleri **kapı**dır (hiçbiri okumaz, H31):
+
+* **𝒪₄₂ Umumileştirme** — Π_inv'in üniter karşılığı: `mpo_topla`
+  bütün durakları **aynı** açıyla mîzâna akıtır, böylece biriken dönme
+  yalnız durakların **kesişimindeki** kısmı taşır; araz tenakuza
+  sızar.
+* **𝒪₄₃ Talim** — τ merdiveni (4→2→1→0,5) `talim_kademesi` ile fiilen
+  sınanır; `sahih` yalanlanırsa meleke **hiç dönmez** (karıştırmayı
+  talim diye icra etmektense susmak, H10).
+* **𝒪₄₄ Tahsil** — `exp(−ηĤ)` mîzân-kontrollü sönüm + `γI` kimlik
+  payı, `nefs/taksimat.py`nin **parametre** bölgesine.
+
+### Ölçünün benim ilanımı yalanladığı yer
+
+𝒪₄₄'e evvelâ `koruyucu` yazmıştım. `nefs/nizam.yuzlestir` ölçtü:
+**ΔS = −0,5541**, ihlâl 0,4654. Hâlbuki melekenin kendi tarifi
+*"çelişkili yönler bastırılır"* diyor — bu bir **çözücü**nün tarifidir.
+İlan ölçüye uyduruldu, ölçü ilana değil. 𝒪₄₂ (+0,0080) ve 𝒪₄₃
+(+0,0195) koruyucu bandının içinde çıktı, ilanları doğruydu.
+
+Üçüne de evvelâ `CHI = None` vermiştim; bu, nizamın (χ cetveli)
+kazancını **yok ediyordu** ve `test_nizam_dolasiklik_doygunlugu_kiriyor`
+haklı olarak kırmızı yandı. Ölçüldü:
+
+| | doygunluk | girdi hassasiyeti |
+|---|---|---|
+| 41 meleke, nizam açık | 0,5000 | 0,4715 |
+| 44 meleke, `CHI=None` (yanlış) | **1,0000** | 0,5791 |
+| 44 meleke, ölçülmüş CHI | **0,5000** | **0,5827** |
+
+Yani doğru sınıf/CHI ile doygunluk kırılmış kalıyor **ve** girdi
+hassasiyeti 0,4715'ten 0,5827'ye çıkıyor (%23,6 kazanç).
+
+### Sözleşmenin kör noktası
+
+`nefs/sozlesme.py`nin `BOLGELER` listesinde ceride taksimat bölgeleri
+(`meleke`, `parametre`, `ancilla`) **yoktu**; yani 𝒪₄₄'ün dokunduğu
+yeri sözleşme ölçüsü göremiyordu. Üçü listeye ve `_bolge_yuvalari`ya
+eklendi. 44 melekenin sözleşme yüzleştirmesi: **0 ihlâl**.
+
+## H214 — `makam_tayin` kaynağından 7/13 sapıyordu; canlı hattaydı
+
+Beş epistemik mertebe (Vehim/Şek/Zan/Zann-ı gālib/Yakîn) kod tabanında
+**iki yerde** kuruluydu ve ikisi de kaynak olarak `mizan/munazara.py`nin
+`MERTEBELER` cetvelini gösteriyordu. Kaynakla yüzleştirildi:
+
+| `P` | kaynak (mîzân) | `murakabe.makam_tayin` | `qyazmac` merdiveni |
+|---|---|---|---|
+| 0,25 | şek | **Vehim** | Şek |
+| 0,40 | şek | **Vehim** | Şek |
+| 0,50 | zan | **Şek** | Zan |
+| 0,55 | zan | **Şek** | Zan |
+| 0,95 | zann-ı gālib | **Yakîn** | Zann-ı gālib |
+| 0,99 | zann-ı gālib | **Yakîn** | Zann-ı gālib |
+
+Sapma: `murakabe` **7/13**, `qyazmac` **0/13**. Sebep, eşiklerin
+cetvelden değil elle konmuş `eps` bantlarından gelmesiydi — hâlbuki
+fonksiyonun kendi şerhi *"elle konmuş bir sayı değildir"* diyordu.
+
+**Zararı nazarî değildi:** `nefs/kademeler.py` tasdik ağırlığını
+(`hukum_agirligi(p, makam_tayin(p))`) buradan alır ve o hat
+`main/egitim.py`den fiilen erişilir. İki uçta birden yanlıştı: `0,95`te
+**fazla** iddia (zann-ı gālibe "Yakîn" demek — H10/H100'ün tam aksi,
+ağırlık `1,0000`), `0,25-0,40`ta **eksik** iddia.
+
+Eşikler cetvelin kendisinden okunur hâle getirildi; `eps` payları
+varsayılan **sıfır**. 2001 noktada kaynaktan sapma artık **0**, ve
+`0,8025 → "Zann-ı gālib"` şartı korunuyor. Ağırlık `P=0,95`te
+`1,0000 → 0,9500`e indi: model artık zann-ı gālibe kesin yakîn
+demiyor.
+
+### Üçüncü nüsha: `qmeleke`nin yalancı tip notu
+
+`nefs/qmeleke.py` `from .uzaylar import Parametreler` yapıp bütün
+meleke imzalarını `p: Parametreler` diye ilan ediyordu. Koşturarak
+ölçüldü: `isinstance(nefs.p, Parametreler)` **False**; fiilen geçen
+daima `QParametre`. Yani 41 melekenin imzası okuyanı yanıltıyordu ve
+klasik dünyaya (`nefs/uzaylar.py`) yalnız bu **yanlış anotasyon**
+yüzünden bağ vardı. Düzeltildi.
+
+**Küme 2'nin geri kalanı (12 dosyanın tek çipte birleşmesi) HENÜZ
+YAPILMADI.** Bu turda yapılan, cetvel ile icra arasındaki çelişkinin
+kapatılması ve üç ölçülmüş kusurun düzeltilmesidir. Sınama: 493/493.

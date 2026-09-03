@@ -78,6 +78,10 @@ ESIK: float = 1e-6
 BOLGELER: Tuple[str, ...] = (
     "veri", "yerel", "makam", "mizan", "tenakuz", "tasdik", "sukut",
     "nakz", "kelam", "kaide", "orak", "gaye", "tertip",
+    # --- ceride taksimatı (kütük H213). 𝒪₄₄ Tahsil ``parametre``
+    # bölgesine dokunur; bu üçü listede olmadığı sürece sözleşme
+    # ölçüsü oraya **kör**dü: meleke yazıyor, ölçü görmüyordu.
+    "meleke_b", "parametre", "ancilla",
 )
 
 
@@ -133,6 +137,16 @@ SOZLESME: Dict[int, Tuple[Tuple[str, ...], str]] = {
     39: (("makam", "tasdik", "kelam"), "belâgat: makam ve tasdik kelama"),
     40: (("makam", "kelam"), "sanat: altın açı, yalnız hüküm ve kelamda"),
     41: (("mizan", "makam", "sukut", "kelam"), "münazara + sükût kapısı"),
+    # --- 𝒪₄₂–𝒪₄₄ TEŞKİLÂT (kütük H213). Üçü de akışa yeni girdi;
+    # sözleşmeleri kendi tariflerinden çıkarıldı, ölçümden değil.
+    42: (("yerel", "mizan", "tenakuz"),
+         "umumileştirme: bütün duraklardan AYNI açıyla mîzâna (kesişim), "
+         "araz tenakuza"),
+    43: (("kelam",),
+         "talim: kelamı kademe kademe keskinleştirir (τ monoton azalan)"),
+    44: (("mizan", "parametre"),
+         "tahsil: mîzân kontrollü Gibbs sönümü + γ kimlik payı, "
+         "parametre bölgesine"),
 }
 
 
@@ -145,6 +159,12 @@ def _bolge_yuvalari(q: QYazmac) -> Dict[str, List[int]]:
     }
     for ad, kac in q.ayar.kulli_alanlar:
         d[ad] = [q.kulli(ad, j) for j in range(kac)]
+    # ceride taksimatı: bölge açıksa yuvaları da ölçüye girer.
+    for ad, anahtar in (("meleke", "meleke_b"), ("parametre", "parametre"),
+                        ("ancilla", "ancilla")):
+        if q.bolge_var(ad):
+            bas, kac = q.taksimat.bolge[ad]
+            d[anahtar] = list(range(bas, bas + kac))
     return d
 
 
