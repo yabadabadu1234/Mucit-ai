@@ -40,7 +40,8 @@ import math
 import sys
 from dataclasses import dataclass
 from functools import lru_cache
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import (TYPE_CHECKING, Dict, List, Optional, Sequence,
+                    Tuple)
 
 import numpy as np
 
@@ -49,7 +50,16 @@ from omega_kategori_nbe import sozdizim as S
 from omega_kategori_nbe import turetimler as T
 from omega_kategori_nbe.denetleyici import Baglam, denetle_t
 
-from .uzaylar import Parametreler
+# **``Parametreler`` yalnız TİP için lâzım (kütük H215).**
+# ``mertebe_gecisi`` ``p.lie_tasarruf(...)`` çağırır; o usul yalnız
+# klasik ``nefs/uzaylar.Parametreler``dedir (``QParametre``de YOKTUR --
+# ölçüldü). Yani buradaki anotasyon, `nefs/qmeleke.py`dekinin aksine
+# **doğrudur**. Fakat bağ çalışma anında lâzımdır, modül yüklenirken
+# değil: modül seviyesinde tutulunca kuantum hattı (``qegitim`` yalnız
+# ``DINAMIK``i, ``qmeleke`` yalnız ``lifleri_kur``u alır) bütün klasik
+# dünyayı beraberinde sürüklüyordu.
+if TYPE_CHECKING:                                    # pragma: no cover
+    from .uzaylar import Parametreler
 
 __all__ = ["Lif", "lifleri_kur", "mertebe_gecisi", "SABIT", "DINAMIK",
            "AZAMI_TAM_MERTEBE", "rapor"]
@@ -171,7 +181,7 @@ def _betti0(v: np.ndarray, esik: float = 0.35) -> int:
     return 1 + int(np.sum(fark > esik + 3.0 * olcek))
 
 
-def mertebe_gecisi(S_giren: np.ndarray, p: Parametreler,
+def mertebe_gecisi(S_giren: np.ndarray, p: "Parametreler",
                    dinamik: Tuple[int, ...] = DINAMIK
                    ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, float]:
     """``S`` yirmi mertebeden geçip esas uzaya geri mühürlenir.
@@ -270,6 +280,7 @@ def rapor(dinamik: Tuple[int, ...] = DINAMIK, n: int = 24,
 
     rng = np.random.default_rng(tohum)
     A = rng.normal(size=(n, ds))
+    from .uzaylar import Parametreler
     p = Parametreler(tohum)
     B, tik, b0, buz = mertebe_gecisi(A, p, tuple(dinamik))
     s += ["",

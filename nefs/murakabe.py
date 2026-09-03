@@ -16,6 +16,12 @@ import numpy as np
 
 from fitrat.tevafuk import fazla_sayma, tevafuk_olcusu
 from mizan.istikra import ardisiklik_kaidesi, tam_istikra_mi
+# **Beş mertebe ve ondan türeyen hüküm ağırlığı buraya AİT DEĞİLDİR**
+# (kütük H215): cetvel `mizan/munazara.py`dedir ve türevleri de orada
+# durur. Evvelce burada ayrı bir nüsha vardı ve kaynaktan 7/13
+# sapıyordu (H214); nüsha kalktı, sapma imkânı da kalktı.
+from mizan.munazara import (ZANN_I_GALIB_ESIGI, hukum_agirligi,
+                            ikili_entropi, makam_tayin)
 
 from .meleke import Meleke, kaydet
 from .kule import ince, kaba
@@ -592,86 +598,6 @@ class SekZanYakin(Meleke):
         d.olcum.koy("idrak.sükût", float(d.sukut))
         d.not_dus(self.ad, "P=%.4f → %s%s"
                   % (d.P_idrak, d.makam, "  (sükût)" if d.sukut else ""))
-
-
-#: ``zan`` ile ``zann-ı gālib``i ayıran eşik. Elle konmuş bir sayı
-#: değildir: `mizan/munazara.py`nin ``MERTEBELER`` cetvelinden gelir.
-ZANN_I_GALIB_ESIGI: float = 0.75
-
-
-#: Görünen adlar -- `mizan/munazara.py`nin küçük harfli mertebe
-#: adlarının bu dosyadaki yazımı. Eşikler oradan gelir, adlar burada
-#: sunulur; iki ayrı cetvel DEĞİLDİR.
-_MAKAM_ADI: Dict[str, str] = {
-    "yakîn": "Yakîn", "zann-ı gālib": "Zann-ı gālib", "zan": "Zan",
-    "şek": "Şek", "vehim": "Vehim",
-}
-
-
-def makam_tayin(P: float, eps_sek: float = 0.0,
-                eps_yakin: float = 0.0) -> str:
-    """**Beş** makam; eşikler **mîzânın cetvelinden**, elden değil.
-
-    **ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H214).** Bu fonksiyon
-    eşiklerinin *"elle konmuş bir sayı değil, `mizan/munazara.py`nin
-    ``MERTEBELER`` cetvelinden"* geldiğini söylüyordu; ``0,75`` için
-    doğruydu, gerisi için **değildi**. Kaynakla yüzleştirildi
-    (``mertebe_adi`` ile aynı ``P``lerde):
-
-    ========  ================  ==============  ==============
-    ``P``     kaynak (mîzân)    bu fonksiyon    doğru mu
-    ========  ================  ==============  ==============
-    0,25      şek               Vehim           **HAYIR**
-    0,40      şek               Vehim           **HAYIR**
-    0,50      zan               Şek             **HAYIR**
-    0,55      zan               Şek             **HAYIR**
-    0,95      zann-ı gālib      Yakîn           **HAYIR**
-    0,99      zann-ı gālib      Yakîn           **HAYIR**
-    ========  ================  ==============  ==============
-
-    Kaynaktan sapma **7/13**ti. Aynı beş mertebeyi kuran ikinci nüsha
-    (`nefs/qyazmac.py`nin Gray merdiveni) ise **0/13** sapıyordu; yani
-    yanlış olan buydu.
-
-    Zararı nazarî değildi: `nefs/kademeler.py` tasdik ağırlığını
-    (``hukum_agirligi(p, makam_tayin(p))``) buradan alır ve o hat
-    ``main/egitim.py``den fiilen erişilir. İki uçta birden yanlıştı --
-    ``0,95``te **fazla** iddia (zann-ı gālibe "Yakîn" demek, H10/H100'ün
-    tam aksi), ``0,25-0,40``ta **eksik** iddia (şek'e "Vehim" demek).
-
-    ``eps_*`` payları **varsayılan olarak sıfırdır**: cetvelde öyle bir
-    bant yoktur. Sıfırdan büyük verilirse ``şek``in tabanı aşağı,
-    ``yakîn``in tabanı yukarı kaydırılır ve bu artık cetvelin değil
-    çağıranın hükmüdür.
-    """
-    from mizan.munazara import MERTEBELER
-    e_sek, e_yakin = float(eps_sek), float(eps_yakin)
-    for esik, ad in MERTEBELER:                  # cetvel azalan sırada
-        e = float(esik)
-        if ad == "yakîn":
-            e -= e_yakin                         # yakîn tabanını gevşet
-        elif ad == "şek":
-            e -= e_sek                           # şek tabanını gevşet
-        if P >= e:
-            return _MAKAM_ADI[ad]
-    return "Vehim"
-
-
-def ikili_entropi(P: float) -> float:
-    if P <= 0.0 or P >= 1.0:
-        return 0.0
-    return float(-P * np.log(P) - (1 - P) * np.log(1 - P))
-
-
-def hukum_agirligi(P: float, makam: str) -> float:
-    """``Hüküm = 1·𝕀_yakîn + P·𝕀_zan + 0.5·𝕀_şek`` (+ Vehim için ``P``).
-
-    ``Zann-ı gālib`` de ``P``dir: kuvvetli zan, zannın kendi
-    kuvvetiyle tartılır; ``1``e yuvarlanmaz. Yuvarlansaydı, ayırt
-    etmek için açtığımız mertebe hemen yakîne katılmış olurdu.
-    """
-    return {"Yakîn": 1.0, "Zann-ı gālib": P, "Zan": P,
-            "Şek": 0.5, "Vehim": P}[makam]
 
 
 # =====================================================================

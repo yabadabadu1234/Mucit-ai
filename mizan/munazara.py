@@ -30,6 +30,7 @@ iki kere saymak neticeyi zayıflatmaz.
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional, Sequence, Set, Tuple
@@ -39,6 +40,8 @@ from .onerme import Onerme, deg, degil, gecerli_mi, karsi_ornek
 
 __all__ = [
     "yakin_gazali", "yakin_zinciri", "MERTEBELER", "mertebe_adi",
+    "ZANN_I_GALIB_ESIGI", "MAKAM_ADI", "makam_tayin",
+    "ikili_entropi", "hukum_agirligi",
     "ItirazNevi", "Hamle", "Munazara",
     "men_mesru_mu", "nakz_gecerli_mi", "muaraza_gecerli_mi",
 ]
@@ -66,6 +69,69 @@ def mertebe_adi(y: float) -> str:
         if y >= esik:
             return ad
     return "vehim"
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  1b. Mertebenin GÖRÜNEN adı, hüküm ağırlığı ve ikili entropi
+#      (evvelce `nefs/murakabe.py`deydi -- kütük H215)
+# ══════════════════════════════════════════════════════════════════════
+#
+# **Niçin buraya taşındı.** Bu üçü ``MERTEBELER``in doğrudan
+# türevleridir; cetvelden ayrı bir dosyada durdukları müddetçe
+# cetvelden **sapabiliyorlardı** ve nitekim saptılar: H214'te ölçüldü,
+# `nefs/murakabe.py`deki hâlleri kaynaktan **7/13** ayrışıyordu ve o
+# sapan nüsha `nefs/kademeler.py` üzerinden `main/egitim.py`ye bağlıydı.
+# Cetvel ile ondan türeyen hüküm aynı dosyada durursa sapma imkânsız
+# hâle gelir.
+
+#: ``zan`` ile ``zann-ı gālib``i ayıran eşik -- cetvelin kendisinden.
+ZANN_I_GALIB_ESIGI: float = 0.75
+
+#: Mertebenin **görünen** (büyük harfli) adı. Ayrı bir cetvel DEĞİLDİR;
+#: ``MERTEBELER``in adlarının sunum yazımıdır.
+MAKAM_ADI: Dict[str, str] = {
+    "yakîn": "Yakîn", "zann-ı gālib": "Zann-ı gālib", "zan": "Zan",
+    "şek": "Şek", "vehim": "Vehim",
+}
+
+
+def makam_tayin(P: float, eps_sek: float = 0.0,
+                eps_yakin: float = 0.0) -> str:
+    """``mertebe_adi``nın **görünen adla** dönen hâli -- aynı cetvel.
+
+    ``eps_*`` payları **varsayılan olarak sıfırdır**: cetvelde öyle bir
+    bant yoktur. Sıfırdan büyük verilirse ``şek``in tabanı aşağı,
+    ``yakîn``in tabanı yukarı kaydırılır ve bu artık cetvelin değil
+    **çağıranın** hükmüdür; öyle de raporlanır.
+    """
+    e_sek, e_yakin = float(eps_sek), float(eps_yakin)
+    for esik, ad in MERTEBELER:                  # cetvel azalan sırada
+        e = float(esik)
+        if ad == "yakîn":
+            e -= e_yakin
+        elif ad == "şek":
+            e -= e_sek
+        if P >= e:
+            return MAKAM_ADI[ad]
+    return "Vehim"
+
+
+def ikili_entropi(P: float) -> float:
+    """``−P log P − (1−P) log(1−P)`` -- yakînin belirsizliği."""
+    if P <= 0.0 or P >= 1.0:
+        return 0.0
+    return float(-P * math.log(P) - (1 - P) * math.log(1 - P))
+
+
+def hukum_agirligi(P: float, makam: str) -> float:
+    """``Hüküm = 1·𝕀_yakîn + P·𝕀_zan + 0.5·𝕀_şek`` (+ Vehim için ``P``).
+
+    ``Zann-ı gālib`` de ``P``dir: kuvvetli zan, zannın kendi
+    kuvvetiyle tartılır; ``1``e yuvarlanmaz. Yuvarlansaydı, ayırt
+    etmek için açtığımız mertebe hemen yakîne katılmış olurdu.
+    """
+    return {"Yakîn": 1.0, "Zann-ı gālib": P, "Zan": P,
+            "Şek": 0.5, "Vehim": P}[makam]
 
 
 def yakin_gazali(oncul_yakinleri: Sequence[float],

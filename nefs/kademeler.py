@@ -594,11 +594,16 @@ class Kademeler:
         tam_sahit = (I.olcu is not None and I.sekil_kaidesi is not None)
         Y.tevafuk = 1.0 if tam_sahit else self._par("kademe.tasdik.tevafuk")
 
-        def _murakabe():
-            from .murakabe import hukum_agirligi, makam_tayin
+        def _makam():
+            # **Kaynak `mizan/munazara.py`dir (kütük H215).** Evvelce
+            # `nefs/murakabe.py`den alınıyordu ve o nüsha cetvelden
+            # 7/13 sapıyordu (H214): 0,95'te "Yakîn" diyip ağırlığı
+            # 1,0000 veriyor, yani model kesin olmadığı yerde kesinlik
+            # iddia ediyordu. Artık cetvelin kendisinden okunur.
+            from mizan.munazara import hukum_agirligi, makam_tayin
             p = float(Y.istikra)
             return float(hukum_agirligi(p, makam_tayin(p)))
-        agirlik = self._dene("nefs.murakabe", _murakabe)
+        agirlik = self._dene("mizan.munazara", _makam)
 
         muphem_cezasi = self._par("kademe.tasdik.müphem")
         taban = self._par("kademe.tasdik.taban")

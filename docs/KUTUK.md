@@ -7379,3 +7379,42 @@ yüzünden bağ vardı. Düzeltildi.
 **Küme 2'nin geri kalanı (12 dosyanın tek çipte birleşmesi) HENÜZ
 YAPILMADI.** Bu turda yapılan, cetvel ile icra arasındaki çelişkinin
 kapatılması ve üç ölçülmüş kusurun düzeltilmesidir. Sınama: 493/493.
+
+## H215 — Beş mertebe kanonik evine taşındı; klasik dünya canlı hattan düştü
+
+H214'te ölçülen sapmanın **sebebi** şuydu: cetvel (`mizan/munazara.py`
+`MERTEBELER`) bir dosyada, ondan türeyen hüküm (`makam_tayin`,
+`hukum_agirligi`, `ikili_entropi`, `ZANN_I_GALIB_ESIGI`) başka bir
+dosyadaydı (`nefs/murakabe.py`). Ayrı durdukları müddetçe
+sapabiliyorlardı ve saptılar. Dördü de cetvelin yanına taşındı;
+`nefs/murakabe.py` ile `nefs/kademeler.py` artık oradan alır. Sapma
+imkânı **yapı gereği** kalktı.
+
+### Neticesi: klasik paralel evren canlı hattan düştü
+
+Zabıtın 5. maddesi *"`Durum` (S, X, H_hayal) adında klasik bir paralel
+evren yaşatması"* diyordu. Ölçüldü ve doğru çıktı; şimdi o evrenin
+main'e tutunduğu **iki** bağ da koptu:
+
+1. `kademeler → murakabe` (tasdik ağırlığı) — kanonik eve bağlandı.
+2. `mertebe → uzaylar` — `mertebe_gecisi` `p.lie_tasarruf(...)` çağırır
+   ve o usul yalnız klasik `Parametreler`dedir (`QParametre`de **yok**,
+   ölçüldü). Yani buradaki anotasyon `qmeleke`dekinin aksine
+   **doğruydu**; fakat bağ çalışma anında lâzımdı, modül yüklenirken
+   değil. `TYPE_CHECKING`e indirildi.
+
+**Ölçü, AST değil fiilî koşudur.** `main/egitim.py::kulli_kayip_talimi`
+gerçek bir tâlim koştu (30 görev, `KISA_CPU`, `V 0,539098 → 0,536642`,
+64 kayıp çağrısı, 278 parametre) ve koşu boyunca `sys.modules`e giren
+klasik modül sayısı: **sıfır**. `uzaylar`, `meleke`, `murakabe`,
+`akis`, `idrak`, `akil`, `beyan`, `akit`, `tesir` — dokuzu da
+yüklenmedi; yüklenen 26 `nefs` modülünün hepsi kuantum hattındandı.
+
+Parametre sayısı 264'ten **278**e çıktı: 𝒪₄₂/𝒪₄₃/𝒪₄₄'ün açıları.
+
+**Klasik dünya bu turda SİLİNMEDİ.** Sebebi ölçülmüş bir bedeldir:
+`nefs/hukum_denetimi.py` (kütükteki hükümlerin makine şahitleri, ve
+`tanilama/nizam.py`nin giriş noktalarından biri) o dünyayı kullanarak
+hüküm denetliyor. Silmek, denetlenen hükümlerin şahidini de silmek
+olurdu; hangi hükümlerin şahitsiz kalacağı ölçülmeden silinmez.
+Sınama: 493/493.
