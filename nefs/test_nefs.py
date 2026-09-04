@@ -1088,7 +1088,7 @@ def test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR():
        YAKALIYOR. Yakalamasaydı birinci maddenin yeşil olması yalnız
        ölçümün kör olduğunu gösterirdi.
     """
-    from . import sozlesme
+    from . import kulli_kayip as sozlesme
 
     for r in sozlesme.taahhude_dokundu_mu(n_satir=3, chi=16, ne="hepsi"):
         assert not r["ihlâl"], r
@@ -1348,8 +1348,13 @@ def test_ceride_uc_kapali_form_babi():
     """
     import math
     import numpy as np
-    from ogrenme.optimize import (chebyshev_tasarimi, kestirmeden_sur,
-                                fubini_study)
+    from ogrenme.optimize import (bilgi_metrigi, chebyshev_tasarimi,
+                                  kestirmeden_sur)
+
+    def fubini_study(psi, teta, h=1e-5, ne="sayısal"):
+        # KÜME 4 tevhidinde (H223) fubini_study `bilgi_metrigi`nin
+        # `sayısal`/`doğrulama` kiplerine eridi.
+        return bilgi_metrigi(ne=ne, psi=psi, teta=teta, h=h)
 
     # --- FCT: XᵀX = I TAM, κ = 1,0; eş aralıkta κ patlar (kırmızı)
     for M in (8, 32):

@@ -615,7 +615,6 @@ def statik_faz_tablosu_oku(derece: int = 32, beta: float = 4.0):
     Cetvelde olmayan bir ``β`` istenirse **hata verilir**; sessizce
     yeni açı aramak, "statik tablo" iddiasını sahte kılardı.
     """
-    from kuantum.ceride import GIBBS_DERECE, gibbs_fazlari
     if int(derece) != int(GIBBS_DERECE):
         raise ValueError("cetvel derecesi %d, istenen %d -- arama yasak"
                          % (GIBBS_DERECE, int(derece)))
@@ -996,7 +995,6 @@ def qsp_fazlarini_bul(hedef=None, d: int = 0, tur: int = 120,
         return yy + (yy[-2::-1] if int(dd) % 2 == 0 else yy[::-1])
 
     def deger(y, dd, xx):
-        from kuantum.qsvt import faz_dizisinin_polinomu, KIP_WX
         return float(np.real(faz_dizisinin_polinomu(
             tam(y, dd), float(xx), KIP_WX)))
 
