@@ -802,8 +802,8 @@ class Kademeler:
             I.olcu, I.olcu_sebebi = r
 
         def _sekil():
-            from .musahede import kesirli_sekil_kaidesi
-            k = kesirli_sekil_kaidesi(ciftler)
+            from .musahede import cikti_ne_kadar
+            k = cikti_ne_kadar(ciftler, ne="şekil")
             return None if k is None else str(k)
         I.sekil_kaidesi = self._dene("idrak.sekil", _sekil)
 

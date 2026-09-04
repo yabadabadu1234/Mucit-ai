@@ -31,8 +31,7 @@ ve ikisi birbiriyle konuşmuyordu.
    (medyan + 3·MAD kopmalarından, ayıraç aramadan), ``kaideyi_coz``
    (``R̄ = polar(Σ A_k)``), ``nakz_bul`` (LOO), ``iki_sahit_ayri_mi``.
 5. **Şekil/ebat indüksiyonu ve Čech tıkanıklığı** --
-   ``kesirli_sekil_kaidesi`` (``Fraction`` ile tam), ``cikti_ne_kadar``
-   (kaide cetveli), ``ortu_kapaniyor_mu`` (H¹ ve sükût kapısı).
+   ``cikti_ne_kadar`` (kesirli kaide **ve** cetvel, tek kapıda), ``ortu_kapaniyor_mu`` (H¹ ve sükût kapısı).
 6. **ARC verisi ve sızıntısız akış** -- ``gorevleri_getir``,
    ``izgara_belirtecle``/``belirtec_izgara``, ``gorev_dizisi``.
 """
@@ -1401,7 +1400,14 @@ def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
     ``bul``         **hepsini** sağlayan ilk kaide (kesir → cetvel)
     ``tahmin``      ``(boyut, kaide_adı)``; bulunamazsa ``(None, sükût)``
     ``ölç``         görev kümesinde kaide isabetinin dökümü
+    ``kapsam``      kaide ne kadar **kapsıyor**, kapsayınca ne kadar
+                    **doğru** -- sınama çiftlerinde, hiç görmediği çiftte
     ==============  ==================================================
+
+    ``ölç`` ile ``kapsam`` **ayrı iki ölçüdür** ve ikisi de tutulur:
+    ``ölç`` görev başına tek sınama çiftinde isabet/yanlış/sükût sayar,
+    ``kapsam`` bütün sınama çiftlerinde kaidenin **erimini** ölçer. Biri
+    "konuşunca doğru mu", öteki "kaç yerde konuşabiliyor" sualidir.
 
     **Hepsini sağlaması şarttır**: tek karşı örnek küllî kaideyi düşürür
     (kütük H6 -- nakz). Bir kaide dokuz çiftin sekizinde tutuyorsa
@@ -1534,6 +1540,30 @@ def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
             t_ = k.kestir(gg, azami_kenar)
             return (t_, "kesir:%s" % k.ad) if t_ is not None else (None, "sükût")
         return kaide(k, gg, musahede_et(gg)), k
+
+    if ne == "kapsam":
+        kapsanan = dogru = toplam = 0
+        kip_sayaci: Dict[str, int] = {}
+        for gv in gorevler:
+            k = cikti_ne_kadar(gv.egitim, ne="bul")
+            for a, b in gv.sinama:
+                toplam += 1
+                if k is None:
+                    continue
+                if isinstance(k, SekilKaidesi):
+                    tahmin, kad = k.kestir(a, azami_kenar), "kesir:" + k.ad
+                else:
+                    tahmin, kad = kaide(k, a, musahede_et(a)), k
+                if tahmin is None:
+                    continue
+                kapsanan += 1
+                kip_sayaci[kad] = kip_sayaci.get(kad, 0) + 1
+                if tuple(tahmin) == (int(b.shape[0]), int(b.shape[1])):
+                    dogru += 1
+        return {"sınama_çifti": toplam, "kapsanan": kapsanan, "doğru": dogru,
+                "kapsam": kapsanan / max(toplam, 1),
+                "isabet_kapsayınca": dogru / max(kapsanan, 1),
+                "kip": dict(sorted(kip_sayaci.items(), key=lambda x: -x[1]))}
 
     if ne != "ölç":
         raise ValueError("boyut kipi bilinmiyor: %r" % (ne,))
@@ -2602,10 +2632,10 @@ def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
         return
 
     if ne == "yama":
-        return [kesirli_sekil_kaidesi([(a, b)]) for a, b in gorev.egitim]
+        return [cikti_ne_kadar([(a, b)], ne="şekil") for a, b in gorev.egitim]
 
     if ne == "tıkanıklık":
-        K = [kesirli_sekil_kaidesi([(a, b)]) for a, b in gorev.egitim]
+        K = [cikti_ne_kadar([(a, b)], ne="şekil") for a, b in gorev.egitim]
         n = len(K)
         if n == 0:
             return {"yama": 0, "H1": 0, "kurulabilir": False}
@@ -2645,9 +2675,8 @@ def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
         raise ValueError("örtü kipi bilinmiyor: %r" % (ne,))
     from .melekeler import QNefs
     from .zihin_durumu import QAyar
-    from .iki_olcek import iki_olcegin_acisi
 
-    gorevler = arc.gorevleri_getir("training")[:int(n_gorev)]
+    gorevler = gorevleri_getir("training")[:int(n_gorev)]
     H1, S = [], []
     for gv in gorevler:
         c = ortu_kapaniyor_mu(gv)
@@ -2782,11 +2811,11 @@ def rapor() -> str:                                     # pragma: no cover
         s.append("     taşımıyor mu?")
         nx, ny = 5, 4
         for ad, dx, dy in YON_ADLARI[1:5]:
-            D = izafi_oteleme(ne="operator", h=nx, w=ny, dx=dx, dy=dy)
+            D = izafi_oteleme(nx=nx, ny=ny, dx=dx, dy=dy)
             dik = float(np.linalg.norm(D.T @ D - np.eye(nx * ny)))
             s.append("     %-10s Δ=(%+d,%+d)  ‖DᵀD−I‖ = %.2e" % (ad, dx, dy, dik))
-        Dr = izafi_oteleme(ne="operator", h=nx, w=ny, dx=1, dy=0)
-        Dl = izafi_oteleme(ne="operator", h=nx, w=ny, dx=-1, dy=0)
+        Dr = izafi_oteleme(nx=nx, ny=ny, dx=1, dy=0)
+        Dl = izafi_oteleme(nx=nx, ny=ny, dx=-1, dy=0)
         s.append("     sağ ∘ sol = I : %.2e"
                  % float(np.linalg.norm(Dr @ Dl - np.eye(nx * ny))))
 
@@ -2826,11 +2855,11 @@ def rapor() -> str:                                     # pragma: no cover
         s += ["=== Şekil kaidesi: ispatlı kestirim, yoksa sükût ==="]
         for kume in ("training", "evaluation"):
             try:
-                g = arc.gorevleri_getir(kume)
+                g = gorevleri_getir(kume)
             except Exception as e:
                 s.append("  %s yüklenemedi: %s" % (kume, e))
                 continue
-            d = cikti_ne_kadar(ne="ölç", gorevler=g)
+            d = cikti_ne_kadar(ne="kapsam", gorevler=g)
             s.append("  %-10s  görev=%4d  sınama çifti=%4d" % (kume, len(g),
                                                                d["sınama_çifti"]))
             s.append("    kapsam=%.3f   kapsayınca isabet=%.3f   (doğru %d)"
@@ -2998,7 +3027,7 @@ def rapor() -> str:                                     # pragma: no cover
         n_gorev = 24
         tohum = 0
         chi = 8
-        gorevler = arc.gorevleri_getir("training")[:int(n_gorev)]
+        gorevler = gorevleri_getir("training")[:int(n_gorev)]
         s += ["=== SAĞÎR ve KEBÎR -- iki ölçekli mimari (Dosya 5) ===",
              "",
              "KEBÎR: 41 melekenin bütün görevlerde ORTAK açıları.",
@@ -3057,7 +3086,7 @@ def rapor() -> str:                                     # pragma: no cover
         n_gorev = 40
         tohum = 0
         chi = 8
-        gorevler = arc.gorevleri_getir("training")[:int(n_gorev)]
+        gorevler = gorevleri_getir("training")[:int(n_gorev)]
         s += ["=== ÖRTÜ, TERKİP, TIKANIKLIK (Dosya 3) ===",
              "",
              "Grothendieck fibrasyonu ZATEN kurulu (nefs/mertebe.py, 20 lif).",
