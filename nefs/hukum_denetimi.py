@@ -460,18 +460,18 @@ def _h75_gri_kod() -> Tuple[bool, str]:
 
 def _h69_grover_kapali_form() -> Tuple[bool, str]:
     """Grover özyinelemesi ``k+1`` sayı üzerinde; ``k*`` kapalı formda."""
-    from kuantum.dalga import en_iyi_k, grover_ikili
+    from kuantum.dalga import oragin_donusu
     kotu = []
     for mu in (0.5, 0.2, 0.05, 0.01, 0.002):
         teta = math.asin(math.sqrt(mu))
         for k in range(0, 6):
-            al, be = grover_ikili(mu, k)
+            al, be = oragin_donusu("ikili", mu=mu, k=k)
             p = mu * al * al / (mu * al * al + (1 - mu) * be * be)
             # Grover'ın kapalı formu: P(iyi) = sin²((2k+1)θ)
             bek = math.sin((2 * k + 1) * teta) ** 2
             if abs(p - bek) > 1e-9:
                 kotu.append(("sin² tutmadı", mu, k, p, bek))
-        k = en_iyi_k(mu)
+        k = oragin_donusu("en_iyi_k", mu=mu)
         p = math.sin((2 * k + 1) * teta) ** 2
         # ``k*``, ``(2k+1)θ``yı ``π/2``ye EN YAKIN getiren tam sayıdır.
         #

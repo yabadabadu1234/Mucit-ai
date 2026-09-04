@@ -19,10 +19,10 @@ from typing import Dict
 
 import numpy as np
 
-from kuantum.ceride import sta_acisi, sta_kosusu, sta_surusu
+from kuantum.ceride import kestirmeden_sur
 
-__all__ = ["karsit_adiyabatik_surus", "sta_acisi", "sta_surusu",
-           "sta_kosusu", "surus_cetveli"]
+__all__ = ["karsit_adiyabatik_surus", "kestirmeden_sur",
+           "surus_cetveli"]
 
 
 def karsit_adiyabatik_surus(durum, hamiltonyen=None, sure_tau: float = 1.0,
@@ -37,7 +37,7 @@ def karsit_adiyabatik_surus(durum, hamiltonyen=None, sure_tau: float = 1.0,
     küllî bir çözüm değil. Ölçüsü ``sta_kosusu``dur ve o ölçü iki
     seviyede tamdır; büyük yazmaçta aynı tamlık **iddia edilmiyor**.
     """
-    r = sta_kosusu(float(sure_tau), n=int(adim), sta=True)
+    r = kestirmeden_sur(float(sure_tau), n=int(adim), sta=True)
     kazanc = float(r.get("sadakat", 1.0))
     if hasattr(durum, "dalga_amplitudleri") or not hasattr(durum, "__len__"):
         return durum                      # yazmaç nesnesi: yerinde kalır
@@ -57,8 +57,8 @@ def surus_cetveli(tauler=(0.05, 0.2, 1.0, 5.0)) -> Dict[str, object]:
     """
     satir = []
     for t in tauler:
-        ile = sta_kosusu(float(t), sta=True)
-        siz = sta_kosusu(float(t), sta=False)
+        ile = kestirmeden_sur(float(t), sta=True)
+        siz = kestirmeden_sur(float(t), sta=False)
         satir.append({"tau": float(t),
                       "sürüşlü": float(ile.get("sadakat", 0.0)),
                       "sürüşsüz": float(siz.get("sadakat", 0.0))})

@@ -546,24 +546,24 @@ def test_blok_kodlama_uniter_ve_geri_okunuyor():
     for n in (1, 2, 3, 5):
         A = rng.normal(size=(n, n)) + 1j * rng.normal(size=(n, n))
         A = A / (np.linalg.norm(A, 2) * 1.2)
-        U = qs.blok_kodla(A)
+        U = qs.blok_kodlama(A)
         assert U.shape == (2 * n, 2 * n)
         assert kp.uniter_mi(U), n
-        assert np.max(np.abs(qs.blok_coz(U, n) - A)) < 1e-12
+        assert np.max(np.abs(qs.blok_kodlama(U, qs.KIP_COZ, n) - A)) < 1e-12
 
 
 def test_blok_kodlama_normu_asani_reddediyor():
     with pytest.raises(ValueError):
-        qs.blok_kodla(2.0 * np.eye(2))
+        qs.blok_kodlama(2.0 * np.eye(2))
     with pytest.raises(ValueError):
-        qs.blok_kodla(np.zeros((2, 3)))
+        qs.blok_kodlama(np.zeros((2, 3)))
 
 
 def test_kare_kok_psd_olmayani_reddediyor():
     with pytest.raises(ValueError):
-        qs.kare_kok_matris(np.diag([1.0, -1.0]))
+        qs.blok_kodlama(np.diag([1.0, -1.0]), "karekök")
     M = np.diag([4.0, 9.0])
-    assert np.allclose(qs.kare_kok_matris(M), np.diag([2.0, 3.0]))
+    assert np.allclose(qs.blok_kodlama(M, "karekök"), np.diag([2.0, 3.0]))
 
 
 @pytest.mark.parametrize("d", [0, 1, 2, 3, 5, 8, 12])
@@ -571,8 +571,8 @@ def test_qsp_wx_sifir_fazda_chebyshev(d):
     """Wx konvansiyonunun mihenk taşı."""
     fazlar = [0.0] * (d + 1)
     for x in np.linspace(-1, 1, 101):
-        p = qs.qsp_polinomu(fazlar, float(x))
-        assert abs(p.real - qs.chebyshev(d, float(x))) < 1e-13, (d, x)
+        p = qs.faz_dizisinin_polinomu(fazlar, float(x, qs.KIP_WX))
+        assert abs(p.real - qs.faz_dizisinin_polinomu(x=float(x), ne=qs.KIP_CHEB, d=d)) < 1e-13, (d, x)
         assert abs(p.imag) < 1e-13, (d, x)
 
 
@@ -581,8 +581,8 @@ def test_qsp_yansima_orta_pi_yari_chebyshev(d):
     """Yansıma konvansiyonunun mihenk taşı: |P| = |T_d|."""
     f = [0.0] + [np.pi / 2] * (d - 1) + [0.0]
     for x in np.linspace(-0.99, 0.99, 101):
-        p = qs.qsp_yansima_polinomu(f, float(x))
-        assert abs(abs(p) - abs(qs.chebyshev(d, float(x)))) < 1e-13, (d, x)
+        p = qs.faz_dizisinin_polinomu(f, float(x, qs.KIP_YANSIMA))
+        assert abs(abs(p) - abs(qs.faz_dizisinin_polinomu(x=float(x), ne=qs.KIP_CHEB, d=d))) < 1e-13, (d, x)
 
 
 def test_iki_konvansiyon_ayni_fazla_ayni_polinomu_vermiyor():
@@ -590,8 +590,8 @@ def test_iki_konvansiyon_ayni_fazla_ayni_polinomu_vermiyor():
     rng = np.random.default_rng(1)
     d = 3
     f = list(rng.uniform(-np.pi, np.pi, d + 1))
-    fark = max(abs(qs.qsp_yansima_polinomu(f, float(x))
-                   - qs.qsp_polinomu(f, float(x)))
+    fark = max(abs(qs.faz_dizisinin_polinomu(f, float(x, qs.KIP_YANSIMA))
+                   - qs.faz_dizisinin_polinomu(f, float(x, qs.KIP_WX)))
                for x in np.linspace(-0.9, 0.9, 41))
     assert fark > 0.01, fark
 
@@ -602,9 +602,9 @@ def test_qsp_uniter_ve_sinirli():
         d = int(rng.integers(1, 9))
         fazlar = list(rng.uniform(-np.pi, np.pi, d + 1))
         for x in np.linspace(-1, 1, 41):
-            U = qs.qsp_uniteri(fazlar, float(x))
+            U = qs.faz_dizisinin_polinomu(fazlar, float(x, qs.KIP_UNITER))
             assert kp.uniter_mi(U)
-            assert abs(qs.qsp_polinomu(fazlar, float(x))) <= 1.0 + 1e-12
+            assert abs(qs.faz_dizisinin_polinomu(fazlar, float(x, qs.KIP_WX))) <= 1.0 + 1e-12
 
 
 @pytest.mark.parametrize("d", [2, 3, 4, 5, 6, 7])
@@ -613,30 +613,30 @@ def test_qsp_paritesi(d):
     rng = np.random.default_rng(d)
     fazlar = list(rng.uniform(-np.pi, np.pi, d + 1))
     for x in np.linspace(0.05, 0.95, 21):
-        a = qs.qsp_polinomu(fazlar, float(x))
-        b = qs.qsp_polinomu(fazlar, float(-x))
+        a = qs.faz_dizisinin_polinomu(fazlar, float(x, qs.KIP_WX))
+        b = qs.faz_dizisinin_polinomu(fazlar, float(-x, qs.KIP_WX))
         assert abs(a - (-1) ** d * b) < 1e-12, (d, x)
 
 
 def test_qsp_gecersiz_girdi():
     with pytest.raises(ValueError):
-        qs.qsp_uniteri([], 0.5)
+        qs.faz_dizisinin_polinomu([], 0.5, qs.KIP_UNITER)
     with pytest.raises(ValueError):
-        qs.qsp_uniteri([0.0, 0.0], 1.5)
+        qs.faz_dizisinin_polinomu([0.0, 0.0], 1.5, qs.KIP_UNITER)
     with pytest.raises(ValueError):
-        qs.chebyshev(-1, 0.5)
+        qs.faz_dizisinin_polinomu(x=0.5, ne=qs.KIP_CHEB, d=-1)
 
 
 def test_chebyshev_bilinen_degerler():
-    assert qs.chebyshev(0, 0.7) == pytest.approx(1.0)
-    assert qs.chebyshev(1, 0.7) == pytest.approx(0.7)
-    assert qs.chebyshev(2, 0.7) == pytest.approx(2 * 0.49 - 1)
+    assert qs.faz_dizisinin_polinomu(x=0.7, ne=qs.KIP_CHEB, d=0) == pytest.approx(1.0)
+    assert qs.faz_dizisinin_polinomu(x=0.7, ne=qs.KIP_CHEB, d=1) == pytest.approx(0.7)
+    assert qs.faz_dizisinin_polinomu(x=0.7, ne=qs.KIP_CHEB, d=2) == pytest.approx(2 * 0.49 - 1)
     for d in range(1, 12):
-        assert qs.chebyshev(d, 1.0) == pytest.approx(1.0)
-        assert qs.chebyshev(d, -1.0) == pytest.approx((-1.0) ** d)
+        assert qs.faz_dizisinin_polinomu(x=1.0, ne=qs.KIP_CHEB, d=d) == pytest.approx(1.0)
+        assert qs.faz_dizisinin_polinomu(x=-1.0, ne=qs.KIP_CHEB, d=d) == pytest.approx((-1.0) ** d)
         # cos(d·arccos x) ile uyum:
         for x in (0.3, -0.6, 0.95):
-            assert qs.chebyshev(d, x) == pytest.approx(
+            assert qs.faz_dizisinin_polinomu(x=x, ne=qs.KIP_CHEB, d=d) == pytest.approx(
                 math.cos(d * math.acos(x)), abs=1e-10)
 
 

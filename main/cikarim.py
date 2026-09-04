@@ -534,8 +534,8 @@ class Dalga:
         F = _oznitelik(t, self.yaricap, self.kulli)
         if fubini:
             try:
-                from kuantum.fubini import fubini_study_agac_cozumu
-                out, guven = fubini_study_agac_cozumu(
+                from kuantum.fubini import izgarayi_oku
+                out, guven = izgarayi_oku(
                     self.W, F, t.shape, renk_sayisi=RENK_SAYISI)
                 return np.asarray(out, int), float(guven)
             except Exception:                            # noqa: BLE001
@@ -605,12 +605,12 @@ def dalga_talimi(F: np.ndarray, y: np.ndarray, hendese: Hendese,
     tam_g = None
     if tam_fisher:
         try:
-            from kuantum.fubini import fisher_metrigi_tam
+            from kuantum.fubini import bilgi_metrigi
             z0 = F @ W
             z0 -= z0.max(axis=1, keepdims=True)
             e0 = np.exp(z0)
             P0 = e0 / e0.sum(axis=1, keepdims=True)
-            g = fisher_metrigi_tam(F, P0)
+            g = bilgi_metrigi(F, P0, ne="tam")
             g = g + float(lam) * np.eye(g.shape[0])
             tam_g = np.linalg.inv(g)
         except Exception:                                # noqa: BLE001
@@ -808,8 +808,8 @@ class KulliHukumMotoru:
         # BEC faz kilidi: ağırlık matrisinin fazı tek makroskobik faza
         # kilitlenir; ``T`` raporlanır ve hükmün mertebesine girer.
         try:
-            from kuantum.bec import bose_einstein_faz_kilidi
-            _v, T = bose_einstein_faz_kilidi(d.W.reshape(-1).astype(complex))
+            from kuantum.bec import fazlari_kilitle
+            _v, T = fazlari_kilitle(d.W.reshape(-1).astype(complex))
             d.faz_uyumu = float(T)
         except Exception:                                # noqa: BLE001
             d.faz_uyumu = 0.0

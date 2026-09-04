@@ -137,37 +137,37 @@ class OgdaTarti:
         self.tur += 1
         return self.w
 
-    def deger(self, eksikler: Sequence[float]) -> float:
-        """Oyunun o andaki değeri: ``⟨w,e⟩ + H(w)/β``.
+def oyun_degeri(eksikler: Sequence[float], beta: float = 8.0,
+                w: Optional[np.ndarray] = None) -> float:
+    """OYUNUN DEĞERİ -- **tek terkip** (kütük H223).
 
-        ``β → ∞``da bu, ``w``nin çöktüğü uzvun eksiğidir (sert azamî);
-        ``β → 0``da ortalamadır. Yani sabit ``β``lı yumuşak azamî bu
-        değerin **kapalı formda çözülmüş** hâlidir; OGDA aynı değeri
-        **yürüyerek** bulur ve yolda hafıza taşır.
-        """
-        e = np.asarray(eksikler, float).reshape(-1)
-        w = self.w[:e.size] if self.w.size >= e.size else np.full(
-            e.size, 1.0 / e.size)
-        w = w / max(float(w.sum()), 1e-300)
-        nz = w > 0
-        H = float(-np.sum(w[nz] * np.log(w[nz])))
-        return float(np.dot(w, e) + H / max(self.beta, 1e-9))
-
-
-def oyun_degeri(eksikler: Sequence[float], beta: float = 8.0) -> float:
-    """Oyunun **kapalı formdaki** değeri -- yumuşak azamînin ta kendisi.
-
-    Bu fonksiyon bir özdeşliğin şahididir::
+    Küme: ``oyun_degeri`` + ``OgdaTarti.deger``. İkisi **aynı sayının**
+    iki okunuşuydu ve ayrı durdukları için aralarındaki özdeşlik
+    görünmüyordu; ``rapor()`` onları yüzleştirmek için üçüncü bir yerde
+    tekrar hesaplıyordu. Terkipte tek gövde, tek formül::
 
         max_{w∈Δ} [⟨w,e⟩ + H(w)/β]  =  (1/β)·log Σ exp(β·e_i)
 
-    ``rapor()`` iki tarafı sayısal olarak yüzleştirir; tutmazsa
-    yukarıdaki bütün şerh **yanlış** demektir ve öyle görünür.
+    * ``w`` verilmezse **kapalı form** -- yumuşak azamînin ta kendisi.
+    * ``w`` verilirse o ağırlıkta oyunun değeri ``⟨w,e⟩ + H(w)/β``.
+
+    ``β → ∞``da bu, ``w``nin çöktüğü uzvun eksiğidir (sert azamî);
+    ``β → 0``da ortalamadır. Yani sabit ``β``lı yumuşak azamî bu değerin
+    **kapalı formda çözülmüş** hâlidir; OGDA aynı değeri **yürüyerek**
+    bulur ve yolda hafıza taşır. İki taraf tutmazsa bu dosyadaki bütün
+    şerh **yanlış** demektir ve ölçüm onu gösterir.
     """
     e = np.asarray(eksikler, float).reshape(-1)
     b = float(max(beta, 1e-9))
-    m = float(np.max(b * e))
-    return float((m + np.log(np.sum(np.exp(b * e - m)))) / b)
+    if w is None:
+        m = float(np.max(b * e))
+        return float((m + np.log(np.sum(np.exp(b * e - m)))) / b)
+    ww = np.asarray(w, float).reshape(-1)
+    ww = ww[:e.size] if ww.size >= e.size else np.full(e.size, 1.0 / e.size)
+    ww = ww / max(float(ww.sum()), 1e-300)
+    nz = ww > 0
+    H = float(-np.sum(ww[nz] * np.log(ww[nz])))
+    return float(np.dot(ww, e) + H / b)
 
 
 # =====================================================================
@@ -182,8 +182,7 @@ def rapor(n: int = 40, tur: int = 60, tohum: int = 0) -> str:
     # en iyi w kapalı formda: softmax(β·e)
     z = b * e - np.max(b * e)
     w = np.exp(z) / np.sum(np.exp(z))
-    H = float(-np.sum(w * np.log(np.maximum(w, 1e-300))))
-    oyun = float(np.dot(w, e) + H / b)
+    oyun = oyun_degeri(e, b, w)
     ozdeslik = abs(kapali - oyun)
 
     # --- 2) OGDA yürüyor mu: hareketli bir hedefte
@@ -192,7 +191,7 @@ def rapor(n: int = 40, tur: int = 60, tohum: int = 0) -> str:
     for k in range(tur):
         ek = e + 0.15 * np.sin(0.3 * k + np.arange(n))
         t.guncelle(ek)
-        sapma.append(abs(t.deger(ek) - oyun_degeri(ek, b)))
+        sapma.append(abs(oyun_degeri(ek, b, t.w) - oyun_degeri(ek, b)))
     son = float(np.mean(sapma[-10:]))
     ilk = float(np.mean(sapma[:10]))
 
@@ -203,7 +202,7 @@ def rapor(n: int = 40, tur: int = 60, tohum: int = 0) -> str:
         ek = e + 0.15 * np.sin(0.3 * k + np.arange(n))
         t2.g_onceki = np.asarray(ek, float)      # 2g−g = g → sıradan GDA
         t2.guncelle(ek)
-        sapma2.append(abs(t2.deger(ek) - oyun_degeri(ek, b)))
+        sapma2.append(abs(oyun_degeri(ek, b, t2.w) - oyun_degeri(ek, b)))
     son2 = float(np.mean(sapma2[-10:]))
 
     s = ["=== OGDA -- kaybın min-max olduğunun farkedilmesi ===", "",

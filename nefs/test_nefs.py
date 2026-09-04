@@ -1348,32 +1348,32 @@ def test_ceride_uc_kapali_form_babi():
     """
     import math
     import numpy as np
-    from kuantum.ceride import (fct_tasarimi, fct_katsayilari,
-                                fct_degerlendir, gcl_dugumleri,
-                                esaralikli_tasarim, sta_kosusu,
-                                fubini_study, fubini_dogrulamasi)
+    from kuantum.ceride import (chebyshev_tasarimi, kestirmeden_sur,
+                                fubini_study)
 
     # --- FCT: XᵀX = I TAM, κ = 1,0; eş aralıkta κ patlar (kırmızı)
     for M in (8, 32):
-        X, w, d = fct_tasarimi(M)
+        X, w, d = chebyshev_tasarimi(M, "tasarım")
         G = X.T @ X
         assert np.linalg.norm(G - np.eye(M + 1)) < 1e-12, M
         assert abs(np.linalg.cond(G) - 1.0) < 1e-9, M
-    assert np.linalg.cond(esaralikli_tasarim(32).T
-                          @ esaralikli_tasarim(32)) > 1e6
+    assert np.linalg.cond(chebyshev_tasarimi(32, "eşaralıklı").T
+                          @ chebyshev_tasarimi(32, "eşaralıklı")) > 1e6
     M = 24
-    x = gcl_dugumleri(M)
+    x = chebyshev_tasarimi(M, "düğüm")
     f = np.exp(-3.0 * x ** 2) * np.cos(4.0 * x)
-    assert np.max(np.abs(fct_degerlendir(fct_katsayilari(f, M), x, M)
+    assert np.max(np.abs(chebyshev_tasarimi(M, "değer",
+                                          a=chebyshev_tasarimi(M, "katsayı", f=f),
+                                          x=x)
                          - f)) < 1e-12
 
     # --- STA: sürüşsüz sadakat τ ile ÇÖKMELİ, sürüşle 1'de kalmalı
-    yavas = sta_kosusu(40.0, sta=False)["sadakat"]
-    hizli = sta_kosusu(0.5, sta=False)["sadakat"]
+    yavas = kestirmeden_sur(40.0, sta=False)["sadakat"]
+    hizli = kestirmeden_sur(0.5, sta=False)["sadakat"]
     assert yavas > 0.99, yavas          # adiyabatik hadde doğru
     assert hizli < 0.5, hizli           # hızlı geçişte çöküyor (kırmızı)
     for tau in (40.0, 2.0, 0.5):
-        r = sta_kosusu(tau, sta=True)
+        r = kestirmeden_sur(tau, sta=True)
         assert r["sadakat"] > 0.999, (tau, r)
         assert r["θ̇_uçta"] == 0.0, r    # Ĥ_CD(0) = Ĥ_CD(τ) = 0
 
@@ -1383,7 +1383,7 @@ def test_ceride_uc_kapali_form_babi():
         return np.array([math.cos(a) * math.cos(b),
                          math.cos(a) * math.sin(b), math.sin(a), 0.0])
 
-    r = fubini_dogrulamasi(dalga, np.array([0.4, 0.9]))
+    r = fubini_study(dalga, np.array([0.4, 0.9]), ne="doğrulama")
     assert r["psd"], r
 
     def olcekli(th):
@@ -1508,15 +1508,15 @@ def test_qsp_faz_tablosu_CEVRIMDISI_ve_dogru():
     import math
     import numpy as np
     from kuantum.ceride import (GIBBS_FAZ_TABLOSU, GIBBS_DERECE,
-                                gibbs_fazlari, gibbs_cift, qsp_degeri,
-                                qsp_faz_bul)
+                                gibbs_fazlari, qsp_fazlarini_bul)
     assert GIBBS_DERECE == 32
     assert sorted(GIBBS_FAZ_TABLOSU) == [1.0, 2.0, 4.0, 8.0]
     izgara = np.linspace(-1.0, 1.0, 201)
     for b, ph in GIBBS_FAZ_TABLOSU.items():
         assert len(ph) == (GIBBS_DERECE + 2) // 2, (b, len(ph))
-        f = gibbs_cift(b)
-        artik = max(abs(qsp_degeri(ph, GIBBS_DERECE, t) - f(t))
+        f = qsp_fazlarini_bul(ne="gibbs", beta=b)
+        artik = max(abs(qsp_fazlarini_bul(ne="değer", yari=ph,
+                                          d=GIBBS_DERECE, x=t) - f(t))
                     for t in izgara)
         assert artik < 1e-10, (b, artik)     # ızgarada da, düğümde değil
     # tabloda olmayan β: sessizce arama YOK, hata var
@@ -1527,7 +1527,7 @@ def test_qsp_faz_tablosu_CEVRIMDISI_ve_dogru():
         pass
     # bulucu kendisi de doğru: T_d tam temsil edilebilir
     T = np.polynomial.chebyshev.Chebyshev.basis(4)
-    _, art, _ = qsp_faz_bul(lambda t: float(T(t)), 4)
+    _, art, _ = qsp_fazlarini_bul(lambda t: float(T(t)), 4)
     assert art < 1e-9, art
 
 

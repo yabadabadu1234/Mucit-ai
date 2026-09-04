@@ -16,17 +16,16 @@ from typing import Tuple
 
 import numpy as np
 
-from kuantum.ceride import (esaralikli_tasarim, fct_degerlendir,
-                            fct_katsayilari, fct_tasarimi, gcl_dugumleri)
+from kuantum.ceride import chebyshev_tasarimi
 
 __all__ = ["gauss_chebyshev_lobatto_dugumleri", "hizli_chebyshev_donusumu",
-           "chebyshev_degerlendir", "fct_tasarimi", "esaralikli_tasarim",
+           "chebyshev_degerlendir", "chebyshev_tasarimi",
            "kappa_olc"]
 
 
 def gauss_chebyshev_lobatto_dugumleri(M: int) -> np.ndarray:
     """``M`` adet GCL düğümü: ``x_k = cos(kπ/(M−1))``."""
-    return gcl_dugumleri(int(M))
+    return chebyshev_tasarimi(int(M), "düğüm")
 
 
 def hizli_chebyshev_donusumu(f: np.ndarray, M: int = 0) -> np.ndarray:
@@ -41,14 +40,16 @@ def hizli_chebyshev_donusumu(f: np.ndarray, M: int = 0) -> np.ndarray:
     ``f.size − 1``dir.
     """
     f = np.asarray(f, float).reshape(-1)
-    return fct_katsayilari(f, int(M) if M else int(f.size) - 1)
+    return chebyshev_tasarimi(int(M) if M else int(f.size) - 1,
+                              "katsayı", f=f)
 
 
 def chebyshev_degerlendir(a: np.ndarray, x: np.ndarray,
                           M: int = 0) -> np.ndarray:
     """Katsayılardan değer -- ``hizli_chebyshev_donusumu``un tersi."""
     a = np.asarray(a, float).reshape(-1)
-    return fct_degerlendir(a, np.asarray(x, float), int(M) if M else int(a.size))
+    return chebyshev_tasarimi(int(M) if M else int(a.size), "değer",
+                              a=a, x=np.asarray(x, float))
 
 
 def kappa_olc(M: int = 64) -> Tuple[float, float]:
@@ -58,9 +59,9 @@ def kappa_olc(M: int = 64) -> Tuple[float, float]:
     Birincisi 1'e oturmalı, ikincisi patlamalıdır; ikisi de yeşil
     çıkarsa ölçü bozuktur.
     """
-    X, _w, _n = fct_tasarimi(int(M))
+    X, _w, _n = chebyshev_tasarimi(int(M), "tasarım")
     kappa_gcl = float(np.linalg.cond(X))
-    Xe = esaralikli_tasarim(int(M))
+    Xe = chebyshev_tasarimi(int(M), "eşaralıklı")
     kappa_esit = float(np.linalg.cond(Xe))
     return kappa_gcl, kappa_esit
 

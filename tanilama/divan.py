@@ -408,7 +408,7 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur'),
     ('kuantum.fubini', 'uzuv',
      'Fubini-Study güdümlü DETERMİNİSTİK ağaç okuması -- x* = argmax g⁺·∇log P; '
-     'metrik hakikaten kurulur, kısaltma olduğu ``fubini_tam_kiyas`` ile ölçülür'),
+     'metrik hakikaten kurulur, kısaltma olduğu ``bilgi_metrigi(ne="kıyas")`` ile ölçülür'),
     ('main.kaggle_egitim', 'uzuv',
      'Kaggle çoklu GPU tâlim nazırı -- 4×L4, sınır vagonu P2P; GPU yokken CPU '
      'yedeğine düşer ve ölçüm yapılmadığını YAZAR'),

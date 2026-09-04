@@ -60,8 +60,8 @@ import numpy as np
 
 from .nqs import NQS
 
-__all__ = ["moment_kestir", "grover_katsayilari", "en_iyi_k",
-           "grover_ikili", "DalgaEniyileyici"]
+__all__ = ["oragin_donusu", "tartinin_dayandigi_nokta",
+           "DalgaEniyileyici"]
 
 Kayip = Callable[[np.ndarray], np.ndarray]      # (B,n) → (B,)
 
@@ -69,103 +69,138 @@ Kayip = Callable[[np.ndarray], np.ndarray]      # (B,n) → (B,)
 # =====================================================================
 #  1. Sürekli faz orağı: momentler ve polinom özyinelemesi
 # =====================================================================
-def moment_kestir(z: np.ndarray, k: int) -> np.ndarray:
-    """``m_j = 𝔼[z^j]``, ``j = 0..k``. ``m₀ = 1`` **tam olarak**."""
-    m = np.empty(k + 1, complex)
-    kuvvet = np.ones_like(z)
-    for j in range(k + 1):
-        m[j] = 1.0 + 0j if j == 0 else kuvvet.mean()
-        kuvvet = kuvvet * z
-    return m
+def oragin_donusu(ne: str = "en_iyi_k", mu: float = 0.0, k: int = 0,
+                  z=None, m=None, a=None):
+    """ORAĞIN KAÇ KERE DÖNMESİ LÂZIM -- **tek terkip** (kütük H223).
 
+    Küme: ``moment_kestir`` + ``grover_katsayilari`` + ``_polinom`` +
+    ``grover_ikili`` + ``en_iyi_k``. Beşi tek bir sualin parçalarıydı:
+    genlik yükseltmesi kaç dönüşte en iyiye varır ve o dönüşler genliği
+    ne yapar. İlk üçü sürekli faz orağının polinomunu, son ikisi ikili
+    (eşik) orağın kapalı formunu kurar; ikisi de **aynı** Grover
+    özyinelemesidir.
 
-def grover_katsayilari(m: np.ndarray, k: int) -> np.ndarray:
-    """``P_k``ın katsayıları: ``a ← 2(Σ_j a_j m_j) e₀ − shift(a)``."""
-    a = np.zeros(1, complex)
-    a[0] = 1.0
-    for _ in range(k):
-        ap = np.concatenate([[0.0 + 0j], a])          # z ile çarp
-        s = complex(np.dot(ap, m[:len(ap)]))
-        yeni = -ap
-        yeni[0] += 2.0 * s
-        a = yeni
-    return a
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``momentler``   ``m_j = 𝔼[z^j]``, ``j = 0..k``; ``m₀ = 1`` **tam**
+    ``katsayılar``  ``P_k``ın katsayıları
+    ``polinom``     ``P(z)`` -- Horner ile
+    ``ikili``       ``(α_k, β_k)`` iyi/kötü genlik çarpanları
+    ``en_iyi_k``    ``k* = round((π/2 − θ)/(2θ))``, ``θ = arcsin √μ``
+    ==============  ==================================================
 
-
-def _polinom(a: np.ndarray, z: np.ndarray) -> np.ndarray:
-    y = np.zeros_like(z)
-    for c in a[::-1]:
-        y = y * z + c
-    return y
-
-
-# =====================================================================
-#  2. İkili (eşik) orak: Grover'ın TAM hâli, iki boyutta kapalı form
-# =====================================================================
-def grover_ikili(mu: float, k: int) -> Tuple[float, float]:
-    """``(α_k, β_k)``: iyi ve kötü hâllerin genlik çarpanları.
-
-    ``α₀ = β₀ = 1``. Her adımda ``U_L`` iyilerin işaretini çevirir,
-    ``D`` ise ortalamaya göre yansıtır::
+    **İkili orak.** ``α₀ = β₀ = 1``. Her adımda ``U_L`` iyilerin
+    işaretini çevirir, ``D`` ise ortalamaya göre yansıtır::
 
         s = −μ α + (1−μ) β ,   α ← 2s + α ,   β ← 2s − β
 
-    Sabit noktası yoktur; ``sin((2k+1)θ)`` ile salınır (``sin θ = √μ``).
-    Bu yüzden ``k``yı büyütmek daima iyileştirmez -- **fazla dönmek
-    geri götürür**. ``en_iyi_k`` bunu hesaba katar.
+    Sabit noktası yoktur; ``sin((2k+1)θ)`` ile salınır. Bu yüzden
+    ``k``yı büyütmek daima iyileştirmez -- **fazla dönmek geri
+    götürür**; ``en_iyi_k`` bunu hesaba katar.
+
+    Vesikadaki ``(π/4)√(2^N/M)`` ``k*``ın ``μ → 0`` haddidir; küçük
+    uzayda o yaklaşım fazla döndürür, tam formül döndürmez.
+
+    Katsayı özyinelemesi: ``a ← 2(Σ_j a_j m_j) e₀ − shift(a)``.
     """
-    al = be = 1.0
-    for _ in range(max(int(k), 0)):
-        s = -mu * al + (1.0 - mu) * be
-        al, be = 2.0 * s + al, 2.0 * s - be
-    return al, be
+    if ne == "momentler":
+        zz = np.asarray(z)
+        out = np.empty(int(k) + 1, complex)
+        kuvvet = np.ones_like(zz)
+        for j in range(int(k) + 1):
+            out[j] = 1.0 + 0j if j == 0 else kuvvet.mean()
+            kuvvet = kuvvet * zz
+        return out
+    if ne == "katsayılar":
+        mm = np.asarray(m)
+        c = np.zeros(1, complex)
+        c[0] = 1.0
+        for _ in range(int(k)):
+            ap = np.concatenate([[0.0 + 0j], c])          # z ile çarp
+            sm = complex(np.dot(ap, mm[:len(ap)]))
+            yeni = -ap
+            yeni[0] += 2.0 * sm
+            c = yeni
+        return c
+    if ne == "polinom":
+        zz = np.asarray(z)
+        y = np.zeros_like(zz)
+        for c in np.asarray(a)[::-1]:
+            y = y * zz + c
+        return y
+    if ne == "ikili":
+        al = be = 1.0
+        for _ in range(max(int(k), 0)):
+            sm = -mu * al + (1.0 - mu) * be
+            al, be = 2.0 * sm + al, 2.0 * sm - be
+        return al, be
+    if ne == "en_iyi_k":
+        u = float(min(max(mu, 1e-12), 1.0))
+        teta = math.asin(math.sqrt(u))
+        if teta <= 1e-9:
+            return 0
+        return max(0, int(round((math.pi / 2 - teta) / (2 * teta))))
+    raise ValueError("orak dönüşünün kipi bilinmiyor: %r" % (ne,))
 
 
-def en_iyi_k(mu: float) -> int:
-    """``k* = round( (π/2 − θ) / (2θ) )``, ``θ = arcsin √μ``.
+def tartinin_dayandigi_nokta(L: np.ndarray, beta: float,
+                             taban_ess: float = 0.25,
+                             ne: str = "tartı") -> np.ndarray:
+    """TARTI KAÇ NOKTAYA DAYANIYOR -- **tek terkip** (kütük H223).
 
-    Vesikadaki ``(π/4)√(2^N/M)`` bunun ``μ → 0`` haddidir; küçük uzayda
-    o yaklaşım fazla döndürür, tam formül döndürmez.
-    """
-    mu = float(min(max(mu, 1e-12), 1.0))
-    teta = math.asin(math.sqrt(mu))
-    if teta <= 1e-9:
-        return 0
-    return max(0, int(round((math.pi / 2 - teta) / (2 * teta))))
+    Küme: ``_ess`` + ``_tartili``. İkincisi birincisini kırk kere
+    çağırıyordu; ayrı isim taşımaları, ölçü ile ölçünün şartını iki şey
+    gibi göstermekti. ``ne="ess"`` yalnız müessir örnek sayısını
+    (``(Σw)²/Σw²``) verir, ``ne="tartı"`` şartı sağlayan tartıyı.
 
-
-def _ess(w: np.ndarray) -> float:
-    """Müessir örnek sayısı: ``(Σw)² / Σw²``."""
-    s1 = float(w.sum())
-    s2 = float((w * w).sum())
-    return (s1 * s1 / s2) if s2 > 0 else 0.0
-
-
-def _tartili(L: np.ndarray, beta: float, taban_ess: float = 0.25
-             ) -> np.ndarray:
-    """``w ∝ exp(−sβ(L−L_min))``; ``s``, **müessir örnek sayısı** tabanı
+    ``w ∝ exp(−sβ(L−L_min))``; ``s``, **müessir örnek sayısı** tabanı
     tutacak en büyük değer olarak ikiye bölerek bulunur.
 
-    Ham ``s=1`` kuruldu ve ölçüldü: Rastrigin'de ``β·ΔL ≈ 67`` olduğu
+    Ham ``s = 1`` kuruldu ve ölçüldü: Rastrigin'de ``β·ΔL ≈ 67`` olduğu
     için tartı bir avuç noktaya çöküyor, uydurma o birkaç noktayı
     ezberliyor ve netice bozuluyordu (48,6; tartısız 43,8; rastgele
     35,4). Yani ne tartısız ne de tam tartılı doğrudur; doğru olan,
     tartının **kaç noktayı fiilen kullandığını** şart koşmaktır.
     """
+    def ess(w: np.ndarray) -> float:
+        s1 = float(w.sum())
+        s2 = float((w * w).sum())
+        return (s1 * s1 / s2) if s2 > 0 else 0.0
+
+    if ne == "ess":
+        return ess(np.asarray(L, float))
     d = np.asarray(L, float) - float(np.min(L))
     n = len(d)
     hedef = taban_ess * n
-    if _ess(np.exp(np.clip(-beta * d, -700, 0))) >= hedef:
-        return np.exp(np.clip(-beta * d, -700, 0))
+    ham = np.exp(np.clip(-beta * d, -700, 0))
+    if ess(ham) >= hedef:
+        return ham
     alt, ust = 0.0, 1.0
     for _ in range(40):
-        s = 0.5 * (alt + ust)
-        w = np.exp(np.clip(-s * beta * d, -700, 0))
-        if _ess(w) >= hedef:
-            alt = s
+        sm = 0.5 * (alt + ust)
+        w = np.exp(np.clip(-sm * beta * d, -700, 0))
+        if ess(w) >= hedef:
+            alt = sm
         else:
-            ust = s
+            ust = sm
     return np.exp(np.clip(-alt * beta * d, -700, 0))
+
+
+
+
+
+
+
+# =====================================================================
+#  2. İkili (eşik) orak: Grover'ın TAM hâli, iki boyutta kapalı form
+# =====================================================================
+
+
+
+
+
+
 
 
 # =====================================================================
@@ -271,8 +306,8 @@ class DalgaEniyileyici:
             mu = max(float(iyi.mean()), 1.0 / len(Ld))
         esik = self.esik
 
-        k = en_iyi_k(mu)
-        al, be = grover_ikili(mu, k)
+        k = oragin_donusu("en_iyi_k", mu=mu)
+        al, be = oragin_donusu("ikili", mu=mu, k=k)
 
         p_once = mu
         p_sonra = float((mu * al * al) / (mu * al * al
@@ -321,7 +356,7 @@ class DalgaEniyileyici:
         # --- hedef: ``log|ψ| = −(β/2)·L`` -- KAPALI FORM, gradyan yok
         merkez = float(self.tampon_L.mean())
         hedef = -0.5 * self.beta_tavlama * (self.tampon_L - merkez)
-        w = _tartili(self.tampon_L, self.beta_tavlama, taban_ess=0.25)
+        w = tartinin_dayandigi_nokta(self.tampon_L, self.beta_tavlama, taban_ess=0.25)
         artik = self._son_kat_oturt(self.tampon_X, hedef, lam=lam,
                                     agirlik=w)
 
@@ -341,7 +376,7 @@ class DalgaEniyileyici:
         # (yani ``exp(−βL)`` tartısıyla) bit başına ortalama. Elitin
         # düz ortalaması alınırsa dağılım bir noktaya çöker ve bağımsız
         # teklif de tek havzaya kilitlenir -- tartı bunu önler.
-        wt = _tartili(self.tampon_L, self.beta_tavlama, taban_ess=0.10)
+        wt = tartinin_dayandigi_nokta(self.tampon_L, self.beta_tavlama, taban_ess=0.10)
         wt = wt / (wt.sum() + 1e-300)
         self.kenar = (self.tampon_X * wt[:, None]).sum(0)
 
@@ -373,9 +408,9 @@ class DalgaEniyileyici:
         X, _ = self.nqs.ornekle(ornek, tohum=self.tohum + 7)
         Ld = np.asarray(self.L(X), float)
         z = np.exp(-1j * gama * (Ld - Ld.min()))
-        m = moment_kestir(z, k)
-        a = grover_katsayilari(m, k)
-        P = _polinom(a, z)
+        m = oragin_donusu("momentler", z=z, k=k)
+        a = oragin_donusu("katsayılar", m=m, k=k)
+        P = oragin_donusu("polinom", a=a, z=z)
         w = np.abs(P) ** 2
         w = w / (w.sum() + 1e-300)
         duz = np.ones(len(Ld)) / len(Ld)

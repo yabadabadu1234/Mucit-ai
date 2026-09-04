@@ -27,99 +27,99 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["qsp_faz_bul", "qsp_degeri", "gibbs_cift", "gibbs_fazlari",
+__all__ = ["qsp_fazlarini_bul", "gibbs_fazlari",
            "GIBBS_FAZ_TABLOSU", "GIBBS_DERECE",
-           "gcl_dugumleri", "fct_tasarimi", "fct_katsayilari",
-           "fct_degerlendir", "esaralikli_tasarim",
-           "J", "sta_acisi", "sta_surusu", "sta_kosusu",
-           "fubini_study", "fubini_dogrulamasi"]
+           "chebyshev_tasarimi", "J", "kestirmeden_sur", "fubini_study"]
 
 
 # ══════════════════════════════════════════════════════════════════════
 #  BAB: FCT -- Gauss-Chebyshev-Lobatto kapalı formu, κ = 1,0
 # ══════════════════════════════════════════════════════════════════════
 
-def gcl_dugumleri(M: int) -> np.ndarray:
-    """``x_j = cos(jπ/M)``, ``j = 0…M`` -- ``M+1`` GCL düğümü.
+def chebyshev_tasarimi(M: int, ne: str = "tasarım", f=None, a=None, x=None):
+    """DÜĞÜMLERDEN POLİNOM ÇIKARMAK -- **tek terkip** (kütük H223).
 
-    Sıra azalandır (``+1``den ``−1``e); Chebyshev literatürünün kendi
-    sırasıdır ve değiştirilmez, zira ayrık ortogonallik bağıntısı bu
-    sırada yazılıdır.
-    """
-    M = int(M)
-    if M < 1:
-        raise ValueError("M ≥ 1 olmalı")
-    return np.cos(np.arange(M + 1) * math.pi / M)
+    Küme: ``gcl_dugumleri`` + ``fct_tasarimi`` + ``fct_katsayilari`` +
+    ``fct_degerlendir`` + ``esaralikli_tasarim``. Beşi tek zincirin
+    halkalarıydı; son üçü her çağrıda ``fct_tasarimi``yi baştan kurup
+    ``T`` dizeyini yeniden hesaplıyordu.
 
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``düğüm``       ``x_j = cos(jπ/M)``, ``j = 0…M`` -- ``M+1`` GCL düğümü
+    ``tasarım``     ``(X, w, d)`` -- ``XᵀX = I``yi **tam** yapan
+    ``katsayı``     ``a = Xᵀ f̃`` -- ters YOK, yalnız bir çarpım
+    ``değer``       katsayılardan keyfî ``x``te değer
+    ``eşaralıklı``  kıyas için: eş aralıklı düğümlerde tasarım
+    ==============  ==================================================
 
-def fct_tasarimi(M: int) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """``(X, w, d)`` -- ``XᵀX = I``yi **tam** yapan tasarım dizeyi.
-
-    Ayrık ortogonallik bağıntısı (ceridenin İtiraz 3'te zikrettiği)::
+    Düğüm sırası azalandır (``+1``den ``−1``e); Chebyshev
+    literatürünün kendi sırasıdır ve değiştirilmez, zira ayrık
+    ortogonallik bağıntısı bu sırada yazılıdır::
 
         Σ_j'' T_p(x_j) T_q(x_j) = 0            (p ≠ q)
                                 = M            (p = q ∈ {0, M})
                                 = M/2          (0 < p = q < M)
 
-    burada ``''`` uç terimlerin yarımlanmasıdır: ``w_j = ½`` (j = 0, M),
-    aksi hâlde ``1``. O hâlde
+    ``''`` uç terimlerin yarımlanmasıdır: ``w_j = ½`` (j = 0, M), aksi
+    hâlde ``1``. O hâlde
 
     .. math::  X_{jp} = \\sqrt{w_j}\\, T_p(x_j) / \\sqrt{d_p}
 
     kurulunca ``XᵀX = I`` **analitik olarak** sağlanır. Koşul sayısı
-    ``1,0``dır ve hiçbir ters matris alınmaz: katsayılar ``Xᵀ`` ile bir
-    çarpımdan çıkar.
+    ``1,0``dır ve hiçbir ters matris alınmaz: en küçük kareler çözümü
+    ``a = Xᵀ f̃``tir; normal denklem kurulmaz, Cholesky bile gerekmez.
+
+    ``eşaralıklı`` ölçünün **kırmızıya dönebildiğini** gösterir: GCL
+    yerine eş aralık seçmek ``XᵀX``i birim olmaktan çıkarır ve koşul
+    sayısını patlatır (Runge olgusunun cebirsel yüzü).
+
+    **GCL düğüm sayısı kuralı:** ``M`` derece ise düğüm sayısı
+    **M+1**dir. ``M`` ile ``M+1`` karıştırılmamalıdır.
     """
     M = int(M)
-    x = gcl_dugumleri(M)
-    p = np.arange(M + 1)
+    if M < 1:
+        raise ValueError("M ≥ 1 olmalı")
+    dugum = np.cos(np.arange(M + 1) * math.pi / M)
+    if ne == "düğüm":
+        return dugum
+    if ne == "eşaralıklı":
+        fi = np.arccos(np.clip(np.linspace(-1.0, 1.0, M + 1), -1.0, 1.0))
+        return np.cos(np.outer(fi, np.arange(M + 1)))
+
     # T_p(cos φ) = cos(pφ);  x_j = cos(jπ/M)  →  T_p(x_j) = cos(pjπ/M)
-    T = np.cos(np.outer(np.arange(M + 1), p) * math.pi / M)
+    p_ = np.arange(M + 1)
+    T = np.cos(np.outer(np.arange(M + 1), p_) * math.pi / M)
     w = np.ones(M + 1)
     w[0] = w[-1] = 0.5
     d = np.full(M + 1, M / 2.0)
     d[0] = d[-1] = float(M)
     X = (np.sqrt(w)[:, None] * T) / np.sqrt(d)[None, :]
-    return X, w, d
+
+    if ne == "tasarım":
+        return X, w, d
+    if ne == "katsayı":
+        fv = np.asarray(f, float).ravel()
+        if fv.size != M + 1:
+            raise ValueError("f, M+1 = %d düğümde verilmeli" % (M + 1))
+        return X.T @ (np.sqrt(w) * fv)
+    if ne == "değer":
+        # katsayıları ham Chebyshev tabanına çevir, Clenshaw ile kararlı
+        c = np.asarray(a, float).ravel() / np.sqrt(d)
+        fi = np.arccos(np.clip(np.atleast_1d(np.asarray(x, float)),
+                               -1.0, 1.0))
+        return np.cos(np.outer(fi, np.arange(M + 1))) @ c
+    raise ValueError("chebyshev tasarımının kipi bilinmiyor: %r" % (ne,))
 
 
-def fct_katsayilari(f: np.ndarray, M: int) -> np.ndarray:
-    """Chebyshev katsayıları -- **ters yok**, yalnız ``Xᵀ`` çarpımı.
-
-    ``f`` GCL düğümlerindeki değerlerdir. ``XᵀX = I`` olduğu için en
-    küçük kareler çözümü ``a = Xᵀ f̃``tir; normal denklem kurulmaz,
-    Cholesky bile gerekmez.
-    """
-    X, w, d = fct_tasarimi(M)
-    f = np.asarray(f, float).ravel()
-    if f.size != M + 1:
-        raise ValueError("f, M+1 = %d düğümde verilmeli" % (M + 1))
-    return X.T @ (np.sqrt(w) * f)
 
 
-def fct_degerlendir(a: np.ndarray, x: np.ndarray, M: int) -> np.ndarray:
-    """Katsayılardan keyfî ``x``te değer -- Clenshaw ile, kararlı."""
-    X, w, d = fct_tasarimi(M)
-    a = np.asarray(a, float).ravel()
-    x = np.atleast_1d(np.asarray(x, float))
-    # katsayıları ham Chebyshev tabanına çevir
-    c = a / np.sqrt(d)
-    fi = np.arccos(np.clip(x, -1.0, 1.0))
-    T = np.cos(np.outer(fi, np.arange(M + 1)))
-    return T @ c
 
 
-def esaralikli_tasarim(M: int) -> np.ndarray:
-    """Aynı derecede fakat **eş aralıklı** düğümlerde tasarım dizeyi.
 
-    Kıyas içindir ve ölçünün kırmızıya dönebildiğini gösterir: GCL
-    yerine eş aralık seçmek ``XᵀX``i birim olmaktan çıkarır ve koşul
-    sayısını patlatır (Runge olgusunun cebirsel yüzü).
-    """
-    M = int(M)
-    x = np.linspace(-1.0, 1.0, M + 1)
-    fi = np.arccos(np.clip(x, -1.0, 1.0))
-    return np.cos(np.outer(fi, np.arange(M + 1)))
+
+
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -127,55 +127,23 @@ def esaralikli_tasarim(M: int) -> np.ndarray:
 # ══════════════════════════════════════════════════════════════════════
 
 #: ``i·σ_y``nin reel hâli: ``SO(2)`` dönmesinin üreteci.
+KIP_GIBBS = "gibbs"
+KIP_TAM = "tam"
+KIP_DEGERI = "değer"
+KIP_ACI = "açı"
+KIP_SURUS = "sürüş"
+KIP_DOGRULAMA = "doğrulama"
+KIP_DUGUM = "düğüm"
+KIP_TASARIM = "tasarım"
+KIP_KATSAYI = "katsayı"
+KIP_DEGER = "değer"
+KIP_ESARALIK = "eşaralıklı"
+
 J: np.ndarray = np.array([[0.0, 1.0], [-1.0, 0.0]])
 
 
-def sta_acisi(delta: np.ndarray, omega: np.ndarray) -> np.ndarray:
-    """Karışım açısı ``θ(t) = arctan2(Ω, Δ)`` -- taban durumun yönü."""
-    return np.arctan2(np.asarray(omega, float), np.asarray(delta, float))
-
-
-def sta_surusu(teta: np.ndarray, t: np.ndarray) -> np.ndarray:
-    """``Ĥ_CD(t) = (θ̇/2)·J`` -- sürüşün **katsayısı** ``θ̇/2``.
-
-    Ceridenin İtiraz 4'teki şartı ``Ĥ_CD(0) = Ĥ_CD(τ) = 0``dır. Bu bir
-    temenni değil, **cetvelin şartıdır**: ``θ̇`` uçlarda sıfır olan bir
-    cetvel (meselâ ``smoothstep``) seçilmelidir. Burada uç noktalarda
-    tek yanlı fark yerine sıfır konur -- fakat bu bir kandırmaca
-    olmasın diye ``sta_kosusu`` cetvelin uçtaki eğimini ayrıca ölçer ve
-    raporlar.
-    """
-    teta = np.asarray(teta, float)
-    t = np.asarray(t, float)
-    dteta = np.gradient(teta, t, edge_order=2)
-    dteta[0] = 0.0
-    dteta[-1] = 0.0
-    return 0.5 * dteta
-
-
-#: Pauli dizeyleri -- yalnız bu babın iki seviyeli tanılaması için.
-_SZ = np.array([[1.0, 0.0], [0.0, -1.0]])
-_SX = np.array([[0.0, 1.0], [1.0, 0.0]])
-_SY = np.array([[0.0, -1.0j], [1.0j, 0.0]])
-
-
-def _adim(H: np.ndarray, psi: np.ndarray, dt: float) -> np.ndarray:
-    """``ψ ← exp(−i·H·dt)·ψ`` -- 2×2'de **kapalı form**, ayrışım yok.
-
-    ``H = ½(n·σ)`` için ``exp(−iHdt) = cos(|n|dt/2)·I − i sin(|n|dt/2)
-    (n̂·σ)``. Bu kapalı formdur; ceridenin belirlenimcilik şartına
-    (Bab VIII) uyar ve özdeğer ayrışımı gerektirmez.
-
-    **Karmaşık sayı burada meşrudur ve sebebi yazılır.** Ceridenin reel
-    ``SO(2)`` hükmü **dalga yazmacı** içindir (Grover'ın iki boyutlu
-    reel alt-uzayı). Adiyabatik geçişte ise ``e^{−i∫E dt}`` dinamik
-    fazı asıl mekanizmadır: adiyabatiklik, o hızlı fazın adiyabatik
-    olmayan bağlantıyı ortalayıp söndürmesidir. Fazı atarsak
-    adiyabatiklik olgusunun kendisi kaybolur -- **ve ilk yazdığımda
-    tam bu oldu:** sadakat bütün ``τ``larda aynı ``0,221453`` çıktı,
-    yani ölçü hiçbir şey ölçmüyordu. Yanlış hesabı düzeltmeden
-    yayınlamamak için burada tam Schrödinger denklemi çözülür.
-    """
+def _adimla(H: np.ndarray, psi: np.ndarray, dt: float) -> np.ndarray:
+    """``ψ ← exp(−i·H·dt)·ψ`` -- 2×2 kapalı form (şerhi terkiptedir)."""
     n = np.array([H[0, 0].real - H[1, 1].real,
                   2.0 * H[0, 1].real, -2.0 * H[0, 1].imag])
     r = float(np.linalg.norm(n))
@@ -188,31 +156,79 @@ def _adim(H: np.ndarray, psi: np.ndarray, dt: float) -> np.ndarray:
     return U @ psi
 
 
-def sta_kosusu(tau: float, n: int = 4000, sta: bool = True
-               ) -> Dict[str, float]:
-    """Hızlı bir geçişi STA ile ve STA'sız koştur -- **sadakat ölçülür**.
+def kestirmeden_sur(tau: float = 1.0, n: int = 4000, sta: bool = True,
+                    ne: str = "koşu", delta=None, omega=None, teta=None,
+                    t=None, H=None, psi=None, dt: float = 0.0):
+    """ADİYABATİĞİN KESTİRMESİNDEN SÜRMEK -- **tek terkip** (H223).
 
-    Cetvel ``smoothstep``tır (``s = 3u² − 2u³``): türevi iki uçta da
-    sıfırdır, dolayısıyla ceridenin ``Ĥ_CD(0) = Ĥ_CD(τ) = 0`` şartını
-    **cetvelin kendisi** sağlar, elle sıfırlanarak değil.
+    Küme: ``sta_acisi`` + ``sta_surusu`` + ``_adim`` + ``sta_kosusu``.
+    Dördü tek amelin parçalarıydı: taban durumun yönünü bul, o yönün
+    dönme hızını sürüş katsayısı yap, o katsayıyla Schrödinger'i adımla,
+    ve neticeyi STA'sız hâlle yüzleştir.
 
-    Sistem::
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``açı``         ``θ(t) = arctan2(Ω, Δ)`` -- taban durumun yönü
+    ``sürüş``       ``Ĥ_CD(t) = (θ̇/2)·J`` katsayısı ``θ̇/2``
+    ``adım``        ``ψ ← exp(−i·H·dt)·ψ`` -- 2×2'de **kapalı form**
+    ``koşu``        hızlı geçişi STA ile ve STA'sız koştur, sadakati ölç
+    ==============  ==================================================
+
+    **Sürüşün uç şartı.** Ceridenin İtiraz 4'teki şartı
+    ``Ĥ_CD(0) = Ĥ_CD(τ) = 0``dır. Bu bir temenni değil, **cetvelin
+    şartıdır**: ``θ̇`` uçlarda sıfır olan bir cetvel (meselâ
+    ``smoothstep``) seçilmelidir. Uç noktalarda tek yanlı fark yerine
+    sıfır konur -- fakat bu bir kandırmaca olmasın diye ``koşu`` cetvelin
+    uçtaki eğimini ayrıca ölçer ve raporlar.
+
+    **Adımda karmaşık sayı meşrudur ve sebebi yazılır.** ``H = ½(n·σ)``
+    için ``exp(−iHdt) = cos(|n|dt/2)·I − i sin(|n|dt/2)(n̂·σ)`` -- kapalı
+    form, özdeğer ayrışımı gerektirmez. Ceridenin reel ``SO(2)`` hükmü
+    **dalga yazmacı** içindir (Grover'ın iki boyutlu reel alt-uzayı).
+    Adiyabatik geçişte ise ``e^{−i∫E dt}`` dinamik fazı asıl
+    mekanizmadır: adiyabatiklik, o hızlı fazın adiyabatik olmayan
+    bağlantıyı ortalayıp söndürmesidir. Fazı atarsak adiyabatiklik
+    olgusunun kendisi kaybolur -- **ve ilk yazdığımda tam bu oldu:**
+    sadakat bütün ``τ``larda aynı ``0,221453`` çıktı, yani ölçü hiçbir
+    şey ölçmüyordu. Yanlış hesabı düzeltmeden yayınlamamak için burada
+    tam Schrödinger denklemi çözülür.
+
+    **Koşunun sistemi.** Cetvel ``smoothstep``tır (``s = 3u² − 2u³``):
+    türevi iki uçta da sıfırdır, dolayısıyla uç şartını **cetvelin
+    kendisi** sağlar, elle sıfırlanarak değil::
 
         H(t)     = ½[Δ(t)·σ_z + Ω(t)·σ_x]
         Ĥ_CD(t)  = (θ̇/2)·σ_y ,   θ = arctan2(Ω, Δ)
 
     Dönen ``sadakat``, nihaî durumun anlık taban durumuyla örtüşmesinin
-    karesidir. ``τ`` küçüldükçe STA'sız sadakat **düşmelidir**; düşmüyorsa
-    ölçü bozuktur ve hüküm verilemez.
+    karesidir. ``τ`` küçüldükçe STA'sız sadakat **düşmelidir**;
+    düşmüyorsa ölçü bozuktur ve hüküm verilemez.
     """
+    if ne == "açı":
+        return np.arctan2(np.asarray(omega, float), np.asarray(delta, float))
+    if ne == "sürüş":
+        th = np.asarray(teta, float)
+        dteta = np.gradient(th, np.asarray(t, float), edge_order=2)
+        dteta[0] = 0.0
+        dteta[-1] = 0.0
+        return 0.5 * dteta
+    if ne == "adım":
+        return _adimla(H, psi, dt)
+    if ne != "koşu":
+        raise ValueError("STA sürüşünün kipi bilinmiyor: %r" % (ne,))
+
     tau = float(tau)
     t = np.linspace(0.0, tau, int(n) + 1)
     u = t / tau
-    s = 3.0 * u ** 2 - 2.0 * u ** 3           # smoothstep: s'(0)=s'(τ)=0
-    delta = 1.0 - 2.0 * s                      # +1 → −1
+    sm = 3.0 * u ** 2 - 2.0 * u ** 3          # smoothstep: s'(0)=s'(τ)=0
+    delta = 1.0 - 2.0 * sm                     # +1 → −1
     omega = np.full_like(t, 0.6)
-    teta = sta_acisi(delta, omega)
-    kat = sta_surusu(teta, t)                  # θ̇/2, uçlarda sıfır
+    teta = np.arctan2(omega, delta)
+    dteta = np.gradient(teta, t, edge_order=2)
+    dteta[0] = 0.0
+    dteta[-1] = 0.0
+    kat = 0.5 * dteta                          # θ̇/2, uçlarda sıfır
 
     def taban(k: int) -> np.ndarray:
         """``H(t_k)``ın alt özdurumu -- kapalı form, ayrışım yok."""
@@ -222,30 +238,39 @@ def sta_kosusu(tau: float, n: int = 4000, sta: bool = True
 
     psi = taban(0)
     for k in range(len(t) - 1):
-        dt = float(t[k + 1] - t[k])
-        tk = k                                 # sol uç (birinci mertebe)
-        H = 0.5 * (delta[tk] * _SZ + omega[tk] * _SX)
+        Hk = 0.5 * (delta[k] * _SZ + omega[k] * _SX)   # sol uç, 1. mertebe
         if sta:
-            H = H + kat[tk] * _SY
-        psi = _adim(H, psi, dt)
+            Hk = Hk + kat[k] * _SY
+        psi = _adimla(Hk, psi, float(t[k + 1] - t[k]))
     ort = complex(np.vdot(taban(len(t) - 1), psi))
     return {"τ": tau, "sta": bool(sta), "sadakat": float(abs(ort) ** 2),
             "θ̇_uçta": float(abs(kat[0]) + abs(kat[-1]))}
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  BAB: Fubini-Study bilgi geometrisi
-# ══════════════════════════════════════════════════════════════════════
-
 def fubini_study(psi: Callable[[np.ndarray], np.ndarray],
-                 teta: np.ndarray, h: float = 1e-5) -> np.ndarray:
-    """``g_ij = Re[⟨∂_iΨ|∂_jΨ⟩ − ⟨∂_iΨ|Ψ⟩⟨Ψ|∂_jΨ⟩]`` -- reel hâl.
+                 teta: np.ndarray, h: float = 1e-5,
+                 ne: str = "metrik"):
+    """DURUM UZAYININ METRİĞİ -- **tek terkip** (kütük H223).
+
+    Küme: ``fubini_study`` + ``fubini_dogrulamasi``. İkincisi birincisini
+    çağırıp özdeğerlerine bakıyordu; ölçü ile ölçünün şartını iki ayrı
+    isim gibi göstermekti.
+
+    .. math::  g_{ij} = \\mathrm{Re}\\big[\\langle\\partial_i\\Psi|
+               \\partial_j\\Psi\\rangle - \\langle\\partial_i\\Psi|\\Psi\\rangle
+               \\langle\\Psi|\\partial_j\\Psi\\rangle\\big]
 
     İkinci terim **izdüşümdür** ve atlanamaz: onsuz dizey, durumun
     normunu değiştiren (fizikî olmayan) yönü de bir uzunluk sayar.
-    ``fubini_dogrulamasi`` tam bunu sınar.
-
     Durum her çağrıda normalize edilir; ``psi`` normsuz dönebilir.
+
+    ``ne="doğrulama"`` iki şartı sınar:
+
+    1. ``g`` pozitif yarı-belirli olmalı (bir metriktir).
+    2. Durumu yalnız **ölçekleyen** bir yön ``g``nin sıfır uzayında
+       olmalı: Fubini--Study projektif uzayın metriğidir, normun değil.
+       İzdüşüm terimi atılırsa bu şart **kırılır** ve ölçü kırmızıya
+       döner.
     """
     teta = np.asarray(teta, float).ravel()
     n = teta.size
@@ -260,30 +285,38 @@ def fubini_study(psi: Callable[[np.ndarray], np.ndarray],
         e = np.zeros(n)
         e[k] = h
         d[k] = (bir(teta + e) - bir(teta - e)) / (2.0 * h)
-    G = d @ d.T
     v = d @ p0
-    return G - np.outer(v, v)
-
-
-def fubini_dogrulamasi(psi: Callable[[np.ndarray], np.ndarray],
-                       teta: np.ndarray, h: float = 1e-5
-                       ) -> Dict[str, object]:
-    """Metrik PSD mi, ve **ölçek yönünü yok ediyor mu**?
-
-    İki şart:
-
-    1. ``g`` pozitif yarı-belirli olmalı (bir metriktir).
-    2. Durumu yalnız **ölçekleyen** bir yön ``g``nin sıfır uzayında
-       olmalı: Fubini-Study projektif uzayın metriğidir, normun değil.
-       İzdüşüm terimi atılırsa bu şart **kırılır** ve ölçü kırmızıya
-       döner (gösterimde fiilen döndürülür).
-    """
-    g = fubini_study(psi, teta, h=h)
+    g = (d @ d.T) - np.outer(v, v)
+    if ne == "metrik":
+        return g
+    if ne != "doğrulama":
+        raise ValueError("Fubini-Study kipi bilinmiyor: %r" % (ne,))
     oz = np.linalg.eigvalsh((g + g.T) / 2.0)
     olcek = max(float(abs(oz).max()), 1e-30)
     return {"g": g, "en_küçük_özdeğer": float(oz.min()),
             "psd": bool(oz.min() > -1e-8 * olcek),
             "iz": float(np.trace(g))}
+
+
+
+
+
+#: Pauli dizeyleri -- yalnız bu babın iki seviyeli tanılaması için.
+_SZ = np.array([[1.0, 0.0], [0.0, -1.0]])
+_SX = np.array([[0.0, 1.0], [1.0, 0.0]])
+_SY = np.array([[0.0, -1.0j], [1.0j, 0.0]])
+
+
+
+
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  BAB: Fubini-Study bilgi geometrisi
+# ══════════════════════════════════════════════════════════════════════
+
+
+
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -302,86 +335,112 @@ def fubini_dogrulamasi(psi: Callable[[np.ndarray], np.ndarray],
 # buraya **gömüldü**; koşum sırasında arama yapılmaz.
 
 
-def _qsp_tam_faz(yari: Sequence[float], d: int) -> List[float]:
-    """Simetrik yarım diziden ``d+1`` fazlık tam diziye.
+def qsp_fazlarini_bul(hedef=None, d: int = 0, tur: int = 120,
+                      tol: float = 1e-12, ne: str = "bul",
+                      yari=None, x: float = 0.0, beta: float = 4.0):
+    """FAZ AÇILARINI ÇEVRİMDIŞI BULMAK -- **tek terkip** (kütük H223).
 
-    Simetri ``φ_j = φ_{d−j}``dir; simetrik QSP'nin ürettiği polinom
-    o zaman **reeldir** ve paritesi ``d mod 2``dir. Yarım dizinin
-    uzunluğu ``⌈(d+1)/2⌉``dir.
+    Küme: ``_qsp_tam_faz`` + ``qsp_degeri`` + ``qsp_faz_bul`` +
+    ``gibbs_cift``. Dördü tek zincirin halkalarıydı: simetrik yarım
+    diziyi tam diziye aç, o dizinin çizdiği polinomu oku, hedefe
+    oturacak diziyi Gauss--Newton ile ara, ve hedefi (Gibbs'in çift
+    kısmını) kur.
+
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``tam``         simetrik yarım diziden ``d+1`` fazlık tam dizi
+    ``değer``       ``Re⟨0|U_φ(x)|0⟩`` -- simetrik yarım fazlarla
+    ``bul``         ``(yarım_fazlar, düğümdeki_âzamî_artık, tur)``
+    ``gibbs``       hedef fonksiyon ``e^{−β/2}cosh(βx/2)``
+    ==============  ==================================================
+
+    Simetri ``φ_j = φ_{d−j}``dir; simetrik QSP'nin ürettiği polinom o
+    zaman **reeldir** ve paritesi ``d mod 2``dir. Yarım dizinin uzunluğu
+    ``⌈(d+1)/2⌉``dir.
+
+    Arama Gauss--Newton, sönümlemeli adım, **belirlenimci** (rastgele
+    tohum yok, başlangıç ``φ = (π/4, 0, …, 0)`` -- Dong vd. 2021'in
+    kendi başlangıcı). Düğümler ``(0,1)`` aralığında Chebyshev'dir;
+    parite ``d mod 2`` olduğu için yarım aralık yeterlidir.
+
+    **Artık yalnız düğümlerde ölçülürse aşırı uyum gizlenir**; onun için
+    rapor ayrıca 401 noktalı ızgarada da ölçer ve iki sayıyı yan yana
+    yazar (H47).
+
+    **Niçin Gibbs'in yalnız çift kısmı?** Tek bir simetrik QSP dizisinin
+    ürettiği polinomun paritesi ``d mod 2``dir; parite karışık bir
+    fonksiyon (``e^{−βx}``) tek diziyle temsil edilemez. Tam Gibbs için
+    **iki tablo** (çift ve tek) ve bir birleştirme lâzımdır; bu terkip
+    çift kısmı verir ve eksiği **açıkça yazar**, gizlemez::
+
+        ½[e^{−β(1+x)/2} + e^{−β(1−x)/2}] = e^{−β/2}·cosh(βx/2)
+
+    **QSP faz arama yasağı (padişahın 2. kat'î emri):** faz açıları
+    çalışma anında ARANMAZ; ``GIBBS_FAZ_TABLOSU``ndan çekilir. Bu
+    fonksiyon tabloyu **çevrimdışı** doldurmak içindir.
     """
-    y = list(yari)
-    return y + (y[-2::-1] if d % 2 == 0 else y[::-1])
+    def tam(y, dd):
+        yy = list(y)
+        return yy + (yy[-2::-1] if int(dd) % 2 == 0 else yy[::-1])
 
+    def deger(y, dd, xx):
+        from kuantum.qsvt import faz_dizisinin_polinomu, KIP_WX
+        return float(np.real(faz_dizisinin_polinomu(
+            tam(y, dd), float(xx), KIP_WX)))
 
-def qsp_degeri(yari: Sequence[float], d: int, x: float) -> float:
-    """``Re⟨0|U_φ(x)|0⟩`` -- simetrik yarım fazlarla."""
-    from kuantum.qsvt import qsp_polinomu
-    return float(np.real(qsp_polinomu(_qsp_tam_faz(yari, d), float(x))))
+    if ne == "gibbs":
+        b = float(beta)
+        return lambda t: math.exp(-b / 2.0) * math.cosh(b * float(t) / 2.0)
+    if ne == "tam":
+        return tam(yari, d)
+    if ne == "değer":
+        return deger(yari, d, x)
+    if ne != "bul":
+        raise ValueError("faz aramanın kipi bilinmiyor: %r" % (ne,))
 
-
-def qsp_faz_bul(hedef: Callable[[float], float], d: int,
-                tur: int = 120, tol: float = 1e-12
-                ) -> Tuple[np.ndarray, float, int]:
-    """``Re⟨0|U_φ(x)|0⟩ ≈ hedef(x)`` olacak simetrik fazları bul.
-
-    Gauss-Newton, sönümlemeli adım, **belirlenimci** (rastgele tohum
-    yok, başlangıç ``φ = (π/4, 0, …, 0)`` -- Dong vd. 2021'in kendi
-    başlangıcı). Düğümler ``(0,1)`` aralığında Chebyshev'dir; parite
-    ``d mod 2`` olduğu için yarım aralık yeterlidir.
-
-    Döner ``(yarım_fazlar, düğümdeki_âzamî_artık, tur)``. **Artık
-    yalnız düğümlerde ölçülürse aşırı uyum gizlenir**; onun için
-    ``_rapor`` ayrıca 401 noktalı ızgarada da ölçer ve iki sayıyı yan
-    yana yazar (H47).
-    """
     m = (int(d) + 2) // 2
     j = np.arange(m)
-    x = np.cos((2 * j + 1) * math.pi / (4 * m))
-    y = np.array([float(hedef(float(t))) for t in x])
+    xn = np.cos((2 * j + 1) * math.pi / (4 * m))
+    y = np.array([float(hedef(float(t))) for t in xn])
     phi = np.zeros(m)
     phi[0] = math.pi / 4.0
     h = 1e-6
     it = 0
     for it in range(int(tur)):
-        r = np.array([qsp_degeri(phi, d, t) for t in x]) - y
+        r = np.array([deger(phi, d, t) for t in xn]) - y
         if float(np.max(np.abs(r))) < float(tol):
             break
-        J = np.empty((m, m))
+        Jm = np.empty((m, m))
         for k in range(m):
             e = np.zeros(m)
             e[k] = h
-            J[:, k] = (np.array([qsp_degeri(phi + e, d, t) for t in x])
-                       - np.array([qsp_degeri(phi - e, d, t) for t in x])
-                       ) / (2.0 * h)
+            Jm[:, k] = (np.array([deger(phi + e, d, t) for t in xn])
+                        - np.array([deger(phi - e, d, t) for t in xn])
+                        ) / (2.0 * h)
         try:
-            dp = np.linalg.lstsq(J, -r, rcond=None)[0]
+            dp = np.linalg.lstsq(Jm, -r, rcond=None)[0]
         except np.linalg.LinAlgError:      # pragma: no cover
             break
         adim, f0 = 1.0, float(r @ r)
         for _ in range(30):
             yeni = phi + adim * dp
-            rn = np.array([qsp_degeri(yeni, d, t) for t in x]) - y
+            rn = np.array([deger(yeni, d, t) for t in xn]) - y
             if float(rn @ rn) < f0:
                 phi = yeni
                 break
             adim *= 0.5
         else:
             break
-    r = np.array([qsp_degeri(phi, d, t) for t in x]) - y
+    r = np.array([deger(phi, d, t) for t in xn]) - y
     return phi, float(np.max(np.abs(r))), int(it)
 
 
-def gibbs_cift(beta: float) -> Callable[[float], float]:
-    """``½[e^{−β(1+x)/2} + e^{−β(1−x)/2}] = e^{−β/2}\cosh(βx/2)``.
 
-    **Niçin çift kısmı?** Tek bir simetrik QSP dizisinin ürettiği
-    polinomun paritesi ``d mod 2``dir; parite karışık bir fonksiyon
-    (``e^{−βx}``) tek diziyle temsil edilemez. Tam Gibbs için **iki
-    tablo** (çift ve tek) ve bir birleştirme lâzımdır; bu dosya çift
-    kısmı verir ve eksiği burada **açıkça yazar**, gizlemez.
-    """
-    b = float(beta)
-    return lambda x: math.exp(-b / 2.0) * math.cosh(b * float(x) / 2.0)
+
+
+
+
 
 
 GIBBS_DERECE: int = 32
@@ -446,19 +505,19 @@ def rapor() -> str:                                     # pragma: no cover
     s.append("=== BAB: FCT -- GCL düğümlerinde XᵀX = I, κ = 1,0 ===")
     s.append("   M    ‖XᵀX − I‖        κ(XᵀX)      eş aralıkta κ")
     for M in (8, 16, 32, 64):
-        X, w, d = fct_tasarimi(M)
+        X, w, d = chebyshev_tasarimi(M, KIP_TASARIM)
         G = X.T @ X
-        E = esaralikli_tasarim(M)
+        E = chebyshev_tasarimi(M, KIP_ESARALIK)
         Ge = E.T @ E
         s.append("  %3d   %.3e     %.6f     %.3e"
                  % (M, np.linalg.norm(G - np.eye(M + 1)),
                     np.linalg.cond(G), np.linalg.cond(Ge)))
     s.append("  → GCL'de κ tam 1,0; eş aralıkta patlıyor (kırmızı).")
     M = 24
-    x = gcl_dugumleri(M)
+    x = chebyshev_tasarimi(M, KIP_DUGUM)
     f = np.exp(-3.0 * x ** 2) * np.cos(4.0 * x)
-    a = fct_katsayilari(f, M)
-    geri = fct_degerlendir(a, x, M)
+    a = chebyshev_tasarimi(M, KIP_KATSAYI, f=f)
+    geri = chebyshev_tasarimi(M, KIP_DEGER, a=a, x=x)
     s.append("  düğümlerde geri-çatma hatası: %.3e   (ters matris YOK)"
              % float(np.max(np.abs(geri - f))))
 
@@ -466,8 +525,8 @@ def rapor() -> str:                                     # pragma: no cover
     s.append("=== BAB: STA -- karşıt-adiyabatik sürüş ===")
     s.append("      τ     STA'sız sadakat   STA'lı sadakat   θ̇ uçta")
     for tau in (40.0, 8.0, 2.0, 0.5):
-        a0 = sta_kosusu(tau, sta=False)
-        a1 = sta_kosusu(tau, sta=True)
+        a0 = kestirmeden_sur(tau, sta=False)
+        a1 = kestirmeden_sur(tau, sta=True)
         s.append("  %6.1f      %10.6f      %10.6f     %.1e"
                  % (tau, a0["sadakat"], a1["sadakat"], a1["θ̇_uçta"]))
     s.append("  → τ küçüldükçe STA'sız sadakat düşüyor; sürüş tutuyor.")
@@ -484,7 +543,7 @@ def rapor() -> str:                                     # pragma: no cover
                          math.sin(a), 0.0])
 
     th = np.array([0.4, 0.9])
-    r = fubini_dogrulamasi(dalga, th)
+    r = fubini_study(dalga, th, ne=KIP_DOGRULAMA)
     s.append("  g =\n%s" % np.array2string(r["g"], precision=6))
     s.append("  en küçük özdeğer %.3e   PSD: %s" %
              (r["en_küçük_özdeğer"], r["psd"]))
