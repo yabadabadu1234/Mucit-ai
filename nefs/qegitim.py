@@ -36,7 +36,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .musahede import gorevleri_getir
+from .musahede import gorev_dizisi, gorevleri_getir
 from ogrenme.optimize import as_gek_adimi, ayrik_mertebede_sicra
 
 from . import melekeler as mertebe

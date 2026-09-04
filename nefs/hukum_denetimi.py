@@ -75,7 +75,8 @@ def _h6_sahitlik() -> Tuple[bool, str]:
 
 def _h14_kayipsiz() -> Tuple[bool, str]:
     """Belirteçleme gidiş-dönüşü kayıpsız."""
-    from .musahede import gorevleri_getir
+    from .musahede import (belirtec_izgara, gorevleri_getir,
+                           izgara_belirtecle)
     g = gorevleri_getir("training")[:40]
     hata = 0
     n = 0
@@ -497,9 +498,9 @@ def _h69_grover_kapali_form() -> Tuple[bool, str]:
 
 def _h47_iki_olcut() -> Tuple[bool, str]:
     """Ölçüt İKİdir ve ikisi de ayrı raporlanır."""
-    from .musahede import olc
-    from .musahede import gorevleri_getir
-    r = olc(gorevleri_getir("evaluation")[:40])
+    from .musahede import cikti_ne_kadar, gorevleri_getir
+    r = cikti_ne_kadar(ne="ölç",
+                       gorevler=gorevleri_getir("evaluation")[:40])
     var = all(k in r for k in ("isabet_oranı", "konuşunca_isabet",
                                "sükût", "yanlış"))
     return var, "kapsama %.3f, konuşunca isabet %.3f, sükût %d" % (

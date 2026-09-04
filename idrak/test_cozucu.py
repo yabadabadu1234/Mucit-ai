@@ -7,7 +7,7 @@ import os
 import numpy as np
 import pytest
 
-from nefs.musahede import ARC, gorevleri_getir
+from nefs.musahede import ARC, Gorev, gorevleri_getir
 from idrak import cozucu as cz
 
 VERI_VAR = os.path.isdir(os.path.join(ARC, "training"))

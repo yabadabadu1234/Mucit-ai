@@ -1259,7 +1259,6 @@ def rapor() -> str:                                     # pragma: no cover
     s.append("=" * 70)
     s.append("  DÖRTLÜ TOPOLOJİK SÜZGEÇ -- gayenin kendisi")
     s.append("=" * 70)
-    from kuantum.tda import vietoris_rips
     s += ["DÖRTLÜ TOPOLOJİK ZIRH -- gayenin kendisi", ""]
 
     s.append("=== Betti: delik VAR mı? (kırmızı/yeşil) ===")
@@ -1352,7 +1351,7 @@ def rapor() -> str:                                     # pragma: no cover
         v = np.concatenate([z, np.zeros_like(z)])
         u = Uzay(yuva=0, mertebe=1, tam_kuruldu=True, denetlendi=True,
                  baglayici=0, tip_ozeti="sınama")
-        s.append(str(zirh_giydir(y, u=u, okuma=v, onceki=onceki)[1]))
+        return zirh_giydir(y, u=u, okuma=v, onceki=onceki)[1]
 
     duz = np.linspace(-0.2, 0.2, k)
     kopuk = duz.copy()

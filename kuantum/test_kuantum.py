@@ -571,7 +571,7 @@ def test_qsp_wx_sifir_fazda_chebyshev(d):
     """Wx konvansiyonunun mihenk taşı."""
     fazlar = [0.0] * (d + 1)
     for x in np.linspace(-1, 1, 101):
-        p = qs.faz_dizisinin_polinomu(fazlar, float(x, qs.KIP_WX))
+        p = qs.faz_dizisinin_polinomu(fazlar, float(x), qs.KIP_WX)
         assert abs(p.real - qs.faz_dizisinin_polinomu(x=float(x), ne=qs.KIP_CHEB, d=d)) < 1e-13, (d, x)
         assert abs(p.imag) < 1e-13, (d, x)
 
@@ -581,7 +581,7 @@ def test_qsp_yansima_orta_pi_yari_chebyshev(d):
     """Yansıma konvansiyonunun mihenk taşı: |P| = |T_d|."""
     f = [0.0] + [np.pi / 2] * (d - 1) + [0.0]
     for x in np.linspace(-0.99, 0.99, 101):
-        p = qs.faz_dizisinin_polinomu(f, float(x, qs.KIP_YANSIMA))
+        p = qs.faz_dizisinin_polinomu(f, float(x), qs.KIP_YANSIMA)
         assert abs(abs(p) - abs(qs.faz_dizisinin_polinomu(x=float(x), ne=qs.KIP_CHEB, d=d))) < 1e-13, (d, x)
 
 
@@ -590,8 +590,8 @@ def test_iki_konvansiyon_ayni_fazla_ayni_polinomu_vermiyor():
     rng = np.random.default_rng(1)
     d = 3
     f = list(rng.uniform(-np.pi, np.pi, d + 1))
-    fark = max(abs(qs.faz_dizisinin_polinomu(f, float(x, qs.KIP_YANSIMA))
-                   - qs.faz_dizisinin_polinomu(f, float(x, qs.KIP_WX)))
+    fark = max(abs(qs.faz_dizisinin_polinomu(f, float(x), qs.KIP_YANSIMA)
+                   - qs.faz_dizisinin_polinomu(f, float(x), qs.KIP_WX))
                for x in np.linspace(-0.9, 0.9, 41))
     assert fark > 0.01, fark
 
@@ -602,9 +602,9 @@ def test_qsp_uniter_ve_sinirli():
         d = int(rng.integers(1, 9))
         fazlar = list(rng.uniform(-np.pi, np.pi, d + 1))
         for x in np.linspace(-1, 1, 41):
-            U = qs.faz_dizisinin_polinomu(fazlar, float(x, qs.KIP_UNITER))
+            U = qs.faz_dizisinin_polinomu(fazlar, float(x), qs.KIP_UNITER)
             assert kp.uniter_mi(U)
-            assert abs(qs.faz_dizisinin_polinomu(fazlar, float(x, qs.KIP_WX))) <= 1.0 + 1e-12
+            assert abs(qs.faz_dizisinin_polinomu(fazlar, float(x), qs.KIP_WX)) <= 1.0 + 1e-12
 
 
 @pytest.mark.parametrize("d", [2, 3, 4, 5, 6, 7])
@@ -613,8 +613,8 @@ def test_qsp_paritesi(d):
     rng = np.random.default_rng(d)
     fazlar = list(rng.uniform(-np.pi, np.pi, d + 1))
     for x in np.linspace(0.05, 0.95, 21):
-        a = qs.faz_dizisinin_polinomu(fazlar, float(x, qs.KIP_WX))
-        b = qs.faz_dizisinin_polinomu(fazlar, float(-x, qs.KIP_WX))
+        a = qs.faz_dizisinin_polinomu(fazlar, float(x), qs.KIP_WX)
+        b = qs.faz_dizisinin_polinomu(fazlar, float(-x), qs.KIP_WX)
         assert abs(a - (-1) ** d * b) < 1e-12, (d, x)
 
 

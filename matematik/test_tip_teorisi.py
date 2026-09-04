@@ -15,8 +15,7 @@ from matematik import tip_teorisi as Dk
 from matematik import tip_teorisi as L
 from matematik import tip_teorisi as S
 from matematik import tip_teorisi as TR
-from matematik.tip_teorisi import (Baglam, DenetimHatasi,
-                                   denetle_t as denetle, sentezle)
+from matematik.tip_teorisi import Baglam, DenetimHatasi, denetle, sentezle
 
 U = S.Evren(0)
 U1 = S.Evren(1)
@@ -217,7 +216,7 @@ def test_dongu_tersi_genel_tersle_ayni_sarim():
 # =====================================================================
 def test_turetimler():
     from matematik import tip_teorisi as T
-    r = T.dogrula_hepsi()
+    r = T.dogrula_hepsi_turetimler()
     hatalar = [n for n in r if n["netice"] != "GEÇTİ"]
     assert not hatalar, hatalar
     assert len(r) >= 30
@@ -225,14 +224,14 @@ def test_turetimler():
 
 def test_geometri():
     from matematik import tip_teorisi as G
-    r = G.dogrula_hepsi()
+    r = G.dogrula_hepsi_geometri()
     assert not [n for n in r if n["netice"] != "GEÇTİ"]
     assert len(r) >= 20
 
 
 def test_iliskiler():
     from matematik import tip_teorisi as I
-    r = I.dogrula_hepsi()
+    r = I.dogrula_hepsi_iliskiler()
     assert not [n for n in r if n["netice"] != "GEÇTİ"]
     assert len(r) >= 20
 
