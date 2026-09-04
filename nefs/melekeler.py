@@ -65,16 +65,14 @@ from typing import (TYPE_CHECKING, Any, Callable, Dict, List, Optional,
 
 import numpy as np
 
-from fitrat.tevafuk import fazla_sayma, tevafuk_olcusu
+from matematik.fitrat import fazla_sayma, tevafuk_olcusu
 from kuantum.yazmac import dik_iki_kubit
-from mizan.istikra import ardisiklik_kaidesi, tam_istikra_mi
-from mizan.munazara import (MERTEBELER, ZANN_I_GALIB_ESIGI, hukum_agirligi,
+from matematik.mizan import ardisiklik_kaidesi, tam_istikra_mi
+from matematik.mizan import (MERTEBELER, ZANN_I_GALIB_ESIGI, hukum_agirligi,
                             ikili_entropi, makam_tayin, mertebe_adi,
                             yakin_gazali, yakin_zinciri)
-from omega_kategori_nbe import kutuphane as L
-from omega_kategori_nbe import sozdizim as S
-from omega_kategori_nbe import turetimler as T
-from omega_kategori_nbe.denetleyici import Baglam, denetle_t
+from matematik.tip_teorisi import (Baglam, Cember, Deg, Evren, Taban,
+                                   denetle_t, dongu_uzayi_n, morfizm_tipi)
 
 
 from .kule import ince, kaba
@@ -1232,8 +1230,8 @@ DINAMIK: Tuple[int, ...] = (13, 17, 19, 20, 30, 55, 1000, 1009, 58383, 60000)
 #: n=60 000 imkânsızdır.
 AZAMI_TAM_MERTEBE = 20
 
-_U = S.Evren(0)
-_D = S.Deg
+_U = Evren(0)
+_D = Deg
 
 
 @dataclass(frozen=True)
@@ -1273,7 +1271,7 @@ class Lif:
 
 # =====================================================================
 def _tam_kur(m: int) -> Tuple[object, str]:
-    return T.morfizm_tipi(_D("A"), m), "morfizm_tipi(A, %d)" % m
+    return morfizm_tipi(_D("A"), m), "morfizm_tipi(A, %d)" % m
 
 
 def _temsilci_kur(m: int) -> Tuple[object, str]:
@@ -1283,7 +1281,7 @@ def _temsilci_kur(m: int) -> Tuple[object, str]:
     bir katıdır, fakat ``m``inci katı değildir. Rapor bunu böyle söyler.
     """
     n = 1 + (m % AZAMI_TAM_MERTEBE)
-    return (L.dongu_uzayi_n(S.Cember(), S.Taban(), n),
+    return (dongu_uzayi_n(Cember(), Taban(), n),
             "Ω^%d(S¹)  [mertebe %d için temsilci]" % (n, m))
 
 
@@ -1583,7 +1581,7 @@ def kan_temeli(v: np.ndarray, nb: int, tur: Optional[str] = None
         h = (dugum[1] - dugum[0]) * 1.5
         return np.exp(-0.5 * ((v[:, :, None] - dugum) / h) ** 2)
     if tur == "bspline":
-        from token_uzaylari.kan_spline import bspline_temeli, dugum_dizisi
+        from matematik.geometri import bspline_temeli, dugum_dizisi
         k = 3
         G = nb - k                      # temel sayısı G+k = nb olsun
         if G < 1:

@@ -8,9 +8,9 @@ from fractions import Fraction
 import numpy as np
 import pytest
 
-from hesap import galois as ga
-from hesap import padic as pa
-from hesap import saklama as sa
+from matematik import geometri as ga
+from matematik import geometri as pa
+from matematik import geometri as sa
 
 
 # ══════════════════════════════════════════════════════════════════════

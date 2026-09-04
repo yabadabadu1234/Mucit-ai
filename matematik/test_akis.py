@@ -14,9 +14,9 @@ import math
 import numpy as np
 import pytest
 
-from akis import hacim as hc
-from akis import lie as li
-from akis import tikiz as tk
+from matematik import geometri as hc
+from matematik import geometri as li
+from matematik import geometri as tk
 
 
 def _cember(n, r):

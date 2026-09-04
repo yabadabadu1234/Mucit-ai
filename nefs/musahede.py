@@ -48,11 +48,11 @@ from typing import (Any, Callable, Dict, Iterable, Iterator, List, Optional,
 
 import numpy as np
 
-from fitrat.tevafuk import cift_uyusmasi, fazla_sayma, tevafuk_olcusu
+from matematik.fitrat import cift_uyusmasi, fazla_sayma, tevafuk_olcusu
 from ogrenme.grassmann import asal_acilar, dik_taban, grassmann_mesafesi
 from ogrenme.rkhs import RKHS, gauss_cekirdegi, medyan_genislik, psd_mi
-from token_uzaylari.manifold import Metrik, hazir_metrik
-from token_uzaylari.morfizm import Morfizm, izometri_mi, jakobi
+from matematik.geometri import Metrik, hazir_metrik
+from matematik.geometri import Morfizm, izometri_mi, jakobi
 
 
 
@@ -2560,11 +2560,11 @@ def terkip_iyi_tipli_mi() -> Dict[str, object]:
     bıraktığı yazmaç üzerinde tanımlı olmalı ve ilan ettiği bölgenin
     dışına çıkmamalıdır (`nefs/sozlesme.py` bunu zaten ölçüyor).
 
-    Ayrıca ``omega_kategori``nin **kendi** tip denetleyicisi çağrılır ve
+    Ayrıca ``matematik.tip_teorisi``nin **kendi** tip denetleyicisi çağrılır ve
     çekirdeğin bilinen eksikleri raporlanır -- o modülün kendi kütüğü
     (``bosluklar``) sessiz kalmasın diye.
     """
-    from omega_kategori import turetimler
+    from matematik.tip_teorisi import bosluklar
     from .melekeler import QAKIS, qsicil
 
     s = qsicil()
@@ -2573,9 +2573,9 @@ def terkip_iyi_tipli_mi() -> Dict[str, object]:
     return {
         "adım": len(QAKIS),
         "zincir_tam": bool(zincir_tam),
-        "çekirdek_boşlukları": len(turetimler.bosluklar()),
+        "çekirdek_boşlukları": len(bosluklar()),
         "boşluk_başlıkları": [b.get("ad", b.get("başlık", "?"))
-                              for b in turetimler.bosluklar()][:6],
+                              for b in bosluklar()][:6],
     }
 
 

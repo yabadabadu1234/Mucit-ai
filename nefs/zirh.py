@@ -67,7 +67,7 @@ import numpy as np
 from idrak.kategori import Uzay
 from kuantum.stabilizer import StabilizerDurum
 from kuantum.yazmac import Yazmac
-from mizan.onerme import Onerme, Tablo, deg, degil, ise, ve
+from matematik.mizan import Onerme, Tablo, deg, degil, ise, ve
 from nefs.zihin_durumu import QYazmac, degil_x, donme
 
 __all__ = [

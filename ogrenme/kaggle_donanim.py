@@ -42,7 +42,7 @@ from typing import Dict, Optional
 
 # **numpy'dan ÖNCE.** Süreç başına BLAS ipliği 1'e sabitlenmezse 4 süreç ×
 # 4 iplik çekirdekleri birbirine kırdırır; ölçüldü: 2,61 → 1,22 sn/çağrı.
-from hesap.donanim import tek_iplik_zorla
+from matematik.geometri import tek_iplik_zorla
 
 _TEK_IPLIK = tek_iplik_zorla()
 
@@ -53,7 +53,7 @@ __all__ = ["ayar_sec", "kos", "BASLANGIC_HUCRESI"]
 
 def ayar_sec(zorla: Optional[str] = None):
     """Donanımı yokla, ayarı **ölçüme göre** seç -- tahminle değil."""
-    from hesap.donanim import donanim
+    from matematik.geometri import donanim
     from main.egitim import AZAMI_KAGGLE, KISA_CPU, ORTA
 
     tablo = {"kısa": KISA_CPU, "orta": ORTA, "azamî": AZAMI_KAGGLE}
@@ -69,7 +69,7 @@ def ayar_sec(zorla: Optional[str] = None):
 
 def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
         mukayese: bool = False) -> Dict[str, object]:
-    from hesap.donanim import rapor as donanim_raporu
+    from matematik.geometri import rapor as donanim_raporu
     from main.egitim import kulli_kayip_talimi
 
     ayar, dh = ayar_sec(zorla)
@@ -139,7 +139,7 @@ assert os.path.isdir(os.path.join(KOK, "idrak/veri/arc_agi_2")), \
     "ARC verisi bulunamadı: idrak/veri/arc_agi_2"
 
 # Donanımı yokla ve raporla (torch yoksa numpy yoluna düşer, yine koşar)
-from hesap.donanim import rapor
+from matematik.geometri import rapor
 print(rapor())
 
 # ── EĞİTİM ──────────────────────────────────────────────────────────

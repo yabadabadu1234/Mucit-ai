@@ -7,9 +7,9 @@ import math
 import numpy as np
 import pytest
 
-from reel import hartley as ha
-from reel import karmasik as km
-from reel import meleke as me
+from matematik import geometri as ha
+from matematik import geometri as km
+from matematik import geometri as me
 
 
 # ══════════════════════════════════════════════════════════════════════

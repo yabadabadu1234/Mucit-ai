@@ -8,8 +8,8 @@ import math
 import numpy as np
 import pytest
 
-from fitrat import karsi_olgusal as ko
-from fitrat.ayrisma import Cizge
+from matematik import fitrat as ko
+from matematik.fitrat import Cizge
 
 
 def _model():

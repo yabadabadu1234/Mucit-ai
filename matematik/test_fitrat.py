@@ -20,7 +20,8 @@ import random
 import numpy as np
 import pytest
 
-from fitrat import ayrisma, denge, havuz, serbest_enerji, tevafuk
+from matematik import fitrat
+ayrisma = denge = havuz = serbest_enerji = tevafuk = fitrat
 
 
 # ══════════════════════════════════════════════════════════════════════

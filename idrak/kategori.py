@@ -40,18 +40,17 @@ import sys
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Sequence, Tuple
 
-from omega_kategori_nbe import iliskiler as I
-from omega_kategori_nbe import kutuphane as L
-from omega_kategori_nbe import sozdizim as S
-from omega_kategori_nbe import turetimler as T
-from omega_kategori_nbe.denetleyici import Baglam, denetle_t, denetle_tip
-from omega_kategori_nbe.sozdizim import Terim
+from matematik.tip_teorisi import (Baglam, Cember, Deg, Dugum, Evren, Lam,
+                                   Pi, Sigma, Taban, Terim, YolLam,
+                                   denetle_t, denetle_tip, dongu_uzayi_n,
+                                   evrensel_demet, kesit_tipi, morfizm_tipi,
+                                   ok, tikanma_postulati)
 
 __all__ = ["Uzay", "SABIT", "uzaylari_kur", "rapor", "AZAMI_TAM_MERTEBE"]
 
-U = S.Evren(0)
-U1 = S.Evren(1)
-D = S.Deg
+U = Evren(0)
+U1 = Evren(1)
+D = Deg
 
 # ``morfizm_tipi(A, 20)`` ağacı derindir; denetleyici özyinelemeli iner.
 # Varsayılan sınır (1000) n=8'de aşılıyordu -- ölçüldü.
@@ -127,22 +126,22 @@ def _baglayici_say(t: Terim) -> int:
     yigin: List[object] = [t]
     while yigin:
         d = yigin.pop()
-        if not isinstance(d, S.Dugum):
+        if not isinstance(d, Dugum):
             continue
-        if isinstance(d, (S.Pi, S.Sigma, S.Lam, S.YolLam)):
+        if isinstance(d, (Pi, Sigma, Lam, YolLam)):
             n += 1
         for alan in d._alanlar():
-            if isinstance(alan, S.Dugum):
+            if isinstance(alan, Dugum):
                 yigin.append(alan)
             elif isinstance(alan, tuple):
-                yigin.extend(a for a in alan if isinstance(a, S.Dugum))
+                yigin.extend(a for a in alan if isinstance(a, Dugum))
     return n
 
 
 def _tam_kur(mertebe: int) -> Tuple[Terim, str]:
     """``morfizm_tipi(A, m)`` -- mertebenin **fiilî** tipi."""
     A = D("A")
-    return T.morfizm_tipi(A, mertebe), "morfizm_tipi(A, %d)" % mertebe
+    return morfizm_tipi(A, mertebe), "morfizm_tipi(A, %d)" % mertebe
 
 
 def _temsilci_kur(mertebe: int) -> Tuple[Terim, str]:
@@ -154,7 +153,7 @@ def _temsilci_kur(mertebe: int) -> Tuple[Terim, str]:
     ``m``inci katı değildir. Rapor bunu ``temsilci`` diye işaretler.
     """
     n = 1 + (mertebe % AZAMI_TAM_MERTEBE)
-    return (L.dongu_uzayi_n(S.Cember(), S.Taban(), n),
+    return (dongu_uzayi_n(Cember(), Taban(), n),
             "Ω^%d(S¹)  [mertebe %d için temsilci]" % (n, mertebe))
 
 
@@ -198,7 +197,7 @@ def tikanma_tipi() -> Terim:
     sakinleri aksiyomdur. Ayrık motor bu tipin **sayısal** karşılığını
     (dalga artıkları) kullanır; ikisi karıştırılmaz.
     """
-    return I.tikanma_postulati(D("X")).tip
+    return tikanma_postulati(D("X")).tip
 
 
 def kesit_tipi_ile_agirlik() -> Tuple[Terim, Terim]:
@@ -208,19 +207,19 @@ def kesit_tipi_ile_agirlik() -> Tuple[Terim, Terim]:
     evrensel demettir.
     """
     M, Fw = D("M"), D("Fw")
-    return I.kesit_tipi(M, Fw), I.evrensel_demet(M, Fw)
+    return kesit_tipi(M, Fw), evrensel_demet(M, Fw)
 
 
 def akit_denetle() -> List[Dict[str, object]]:
     """Modülün fiilen çağrıldığının makine ile ispatı."""
-    g = Baglam.terimlerden({"M": U, "Fw": S.ok(D("M"), U), "X": U})
+    g = Baglam.terimlerden({"M": U, "Fw": ok(D("M"), U), "X": U})
     isler = [
         ("tıkanma (Postnikov) tipi iyi teşkil",
          lambda: denetle_tip(tikanma_tipi(), g)),
         ("kesit tipi Π(w:M). F w : U",
-         lambda: denetle_t(I.kesit_tipi(D("M"), D("Fw")), U, g)),
+         lambda: denetle_t(kesit_tipi(D("M"), D("Fw")), U, g)),
         ("evrensel demet Σ(w:M). F w : U",
-         lambda: denetle_t(I.evrensel_demet(D("M"), D("Fw")), U, g)),
+         lambda: denetle_t(evrensel_demet(D("M"), D("Fw")), U, g)),
     ]
     out: List[Dict[str, object]] = []
     for ad, fn in isler:

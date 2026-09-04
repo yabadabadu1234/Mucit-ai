@@ -99,8 +99,8 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from mizan.istikra import ardisiklik_kaidesi, tam_istikra_mi
-from mizan.munazara import MERTEBELER, mertebe_adi, yakin_gazali
+from matematik.mizan import ardisiklik_kaidesi, tam_istikra_mi
+from matematik.mizan import MERTEBELER, mertebe_adi, yakin_gazali
 
 __all__ = ["MAKAM_MERTEBE", "GRAY_SIRA", "ESKI_SIRA", "komsuluk_denetimi",
            "eksik_mertebeler", "istikra_mertebesi", "yakin_yuzlestirmesi",

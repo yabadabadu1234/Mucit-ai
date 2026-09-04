@@ -61,7 +61,7 @@ from typing import (Callable, Dict, Iterable, List, Optional, Sequence,
 
 import numpy as np
 
-from hesap.donanim import Donanim, donanim, topla_paralel
+from matematik.geometri import Donanim, donanim, topla_paralel
 from kuantum.kapilar import Z, chebyshev, uniter_mi
 from nefs.zihin_durumu import QYazmac, donme
 from ogrenme.rkhs import RKHS, gauss_cekirdegi, medyan_genislik
@@ -2600,7 +2600,7 @@ def odenen_bedel(q: QYazmac, ne: str = "landauer") -> Dict[str, float]:
         }
     if ne != "serbest":
         raise ValueError("bedel kipi bilinmiyor: %r" % (ne,))
-    from fitrat.serbest_enerji import AyrikModel, kl, serbest_enerji_ayrisimi
+    from matematik.fitrat import AyrikModel, kl, serbest_enerji_ayrisimi
 
     def marjinal(ad: str) -> np.ndarray:
         _, kac = q._alan[ad]

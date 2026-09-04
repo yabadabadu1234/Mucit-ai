@@ -65,11 +65,11 @@ from typing import Dict, List
 
 import numpy as np
 
-from akis.lie import en_yakin_dik, so_izdusumu, so_n_mi, uslu_harita
+from matematik.geometri import en_yakin_dik, so_izdusumu, so_n_mi, uslu_harita
 from kuantum.yazmac import (dik_iki_kubit, dik_iki_kubit_us,
                          dik_iki_kubit_us_yigin, dik_iki_kubit_yigin)
-from reel.hartley import hartley
-from reel.karmasik import (hermitesel_mi, reel_evrim, reel_goem,
+from matematik.geometri import hartley
+from matematik.geometri import (hermitesel_mi, reel_evrim, reel_goem,
                            karmasik_coz, so_2n_mi)
 
 __all__ = ["grup_sadakati", "erisim_bosslugu", "reel_gomme_sadakati",
@@ -204,7 +204,7 @@ def _yanlis_isaretle_kiyas(n: int = 4, tohum: int = 0) -> float:
     gevşetme olmadığı ancak böyle gösterilebilir: doğru kod boyut başına
     ~1 ulp verirken, yanlış kod ``1e16`` ulp verir.
     """
-    from reel.karmasik import kaynak_isaretiyle_evrim
+    from matematik.geometri import kaynak_isaretiyle_evrim
     rng = np.random.default_rng(tohum)
     A = rng.normal(size=(n, n)); A = A + A.T
     B = rng.normal(size=(n, n)); B = B - B.T

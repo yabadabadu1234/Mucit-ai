@@ -53,7 +53,7 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from token_uzaylari.kan_spline import (bspline_temeli, bspline_turev_temeli,
+from matematik.geometri import (bspline_temeli, bspline_turev_temeli,
                                        dugum_dizisi)
 
 __all__ = [

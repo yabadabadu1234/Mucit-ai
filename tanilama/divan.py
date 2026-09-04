@@ -74,12 +74,22 @@ EKSIK: Dict[str, str] = {}
 # ------------------------------------------------------------------
 #  akis
 # ------------------------------------------------------------------
-import akis.hacim  # [gölge] Hacim — ortalama eğrilik akışı ve yoğunluk akışları
-import akis.test_akis  # [şahit] akis test takımı
+import matematik  # [uzuv] matematik -- sistemin bastığı değişmez analitik zemin (KÜME 7)
+import matematik.tip_teorisi  # [uzuv] Tip teorisi çipi: kübik tip teorisi, NbE, HoTT, SDG
+import matematik.mizan  # [uzuv] Mîzân çipi: mantık, kıyas, kiplik, cedel ve epistemik hüküm
+import matematik.fitrat  # [uzuv] Fıtrat çipi: illiyet, karşıolgusal hesap, serbest enerji, denge
+import matematik.geometri  # [uzuv] Hendese çipi: Riemann manifoldu, Lie cebri, akışlar, tam aritmetik
+import matematik.test_tip_teorisi  # [şahit] tip teorisi çipi sınamaları
+import matematik.test_mizan  # [şahit] mîzân çipi sınamaları
+import matematik.test_fitrat  # [şahit] fıtrat çipi sınamaları
+import matematik.test_karsi_olgusal  # [şahit] karşıolgusal sınamalar -- Darboğaz 45-48
+import matematik.test_token_uzaylari  # [şahit] token uzayları sınamaları
+import matematik.test_akis  # [şahit] akış sınamaları
+import matematik.test_reel  # [şahit] reel gömme sınamaları -- M9-M16, M28-M30
+import matematik.test_hesap  # [şahit] tam aritmetik sınamaları -- M23-M27
+import matematik.test_palmer  # [şahit] Palmer sınamaları
 import nefs.melekeler  # [uzuv] KÜLLÎ MELEKE ÇİPİ -- 44 meleke, 20 mertebe, iki hat, tek dosya
 import nefs.musahede  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri
-import akis.ikmal  # [gölge] Ceridenin İkmâl Fıkraları -- Lions, Bochner, Cayley, Postnikov
-import akis.tikiz  # [gölge] Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus
 
 # ------------------------------------------------------------------
 #  arama
@@ -92,23 +102,10 @@ import arama.test_arama  # [şahit] ``arama`` paketi sınamaları — M18, M19, 
 # ------------------------------------------------------------------
 #  fitrat
 # ------------------------------------------------------------------
-import fitrat.ayrisma  # [uzuv] Ayrışma — yönlü çizgelerde d-ayrışması ve arka kapı ölçütü
-import fitrat.denge  # [uzuv] Denge — çok failli iktisadî muvazenenin (BGCM) çözümü ve hassasiyeti
-import fitrat.havuz  # [uzuv] Havuz — şüphe uzayının açılması, karantina ve hüküm
-import fitrat.karsi_olgusal  # [uzuv] Karşıolgusal 3-pas, DAG öğrenmesi ve denge lokusu
-import fitrat.test_fitrat  # [şahit] fitrat test takımı
-import fitrat.test_karsi_olgusal  # [şahit] ``fitrat.karsi_olgusal`` sınamaları — Darboğaz 45-48
-import fitrat.tevafuk  # [uzuv] Tevâfuk — bağımsız şahitlerin birbirini teyidinin ölçülmesi
 
 # ------------------------------------------------------------------
 #  hesap
 # ------------------------------------------------------------------
-import hesap.galois  # [uzuv] Tam (yuvarlamasız) kuantum aritmetiği: ``ℤ[ζ₈][1/√2]`` halkası
-import hesap.padic  # [uzuv] ``p``-adik norm, ultrametrik ve 'irrasyonelliğin ilgası' iddiası
-import hesap.palmer  # [uzuv] Palmer'ın Rasyonel Kuantum Mekaniği (RaQM): ne diyor, ne demiyor
-import hesap.saklama  # [uzuv] Kuantum durumunu saklamanın gerçek maliyeti: keyfî vs YAPILI
-import hesap.test_hesap  # [şahit] ``hesap`` paketi sınamaları — M23, M24, M25/M26, M27
-import hesap.test_palmer  # [şahit] ``hesap.palmer`` sınamaları — dört itirazın tartılması ve geri almalar
 
 # ------------------------------------------------------------------
 #  idrak
@@ -161,14 +158,6 @@ import idrak.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe``
 import main.kaggle_cikarim  # [uzuv] Kaggle teslimat nazırı
 import main.kaggle_egitim  # [uzuv] Kaggle çoklu GPU tâlim nazırı
 import ogrenme.kaggle_donanim  # [uzuv] Kaggle donanım tespiti
-import mizan.altyapisal  # [uzuv] Yapısal-altı mantıklar (doğrusal, affine, sıkı), relevans ve kuantum
-import mizan.cikarim  # [uzuv] Çıkarım hesapları: Hilbert, Gentzen ardışık hesabı (LK) ve sezgisel (G4ip)
-import mizan.cokdegerli  # [uzuv] Çok değerli, bulanık ve paratutarlı mantıklar
-import mizan.istikra  # [uzuv] İstikrâ — tümevarım, temsil (analoji) ve tam-olmayan çıkarım kipleri
-import mizan.kiplik  # [uzuv] Kiplik mantıkları: Kripke semantiği, çerçeve karşılıkları, deontik ve zaman
-import mizan.kiyas  # [uzuv] Kıyas-ı iktiranî: dört şekil, yirmi dört mûteber darb
-import mizan.munazara  # [uzuv] Münâzara — âdâbü'l-bahs kaideleri ve yakîn derecesinin hesabı
-import mizan.test_mizan  # [şahit] mizan test takımı
 
 # ------------------------------------------------------------------
 #  nefs
@@ -207,31 +196,14 @@ import olcek.test_olcek  # [şahit] ``olcek.hiz`` sınamaları — M31, M32, M33
 # ------------------------------------------------------------------
 #  omega_kategori
 # ------------------------------------------------------------------
-import omega_kategori  # [uzuv] omega_kategori -- (∞,∞)-kategori / kübik tip teorisi çekirdeği
-import omega_kategori.aralik  # [uzuv] Aralık (I) cebri ve yüz (face / kofibrasyon) kafesi
-import omega_kategori.cekirdek  # [uzuv] Kübik çekirdek: ikame, zayıf-baş normal form ve Kan işlemleri
-import omega_kategori.denetleyici  # [uzuv] İki yönlü (bidirectional) tip denetleyici
-import omega_kategori.denklik  # [uzuv] Glue tipleri için Kan hesabı -- tümel değişmezliğin HESAPLANAN zemini
-import omega_kategori.geometri  # [uzuv] Teğet yapısı, tensörler ve monoid nesneleri -- uzayla BERABER gelen paket
-import omega_kategori.iliskiler  # [uzuv] Uzaylar arası münasebetler, ayrık uzaylar, uç haller ve parametrik demetler
-import omega_kategori.kutuphane  # [uzuv] Nesne dilinde yazılmış temel kütüphane
-import omega_kategori.sozdizim  # [uzuv] Kübik tip teorisinin sözdizimi (terimler)
-import omega_kategori.test_omega_kategori  # [şahit] omega_kategori sınama takımı
-import omega_kategori.turetimler  # [uzuv] Uzayların çekirdekten türetilmesi + AÇIK aksiyom/boşluk kütüğü
-import omega_kategori.yazdir  # [uzuv] Terimleri okunur biçimde yazdırma
 
 # ------------------------------------------------------------------
 #  omega_kategori_nbe
 # ------------------------------------------------------------------
-import omega_kategori_nbe.geometri  # [uzuv] Teğet yapısı, tensörler ve monoid nesneleri -- uzayla BERABER gelen paket
-import omega_kategori_nbe.iliskiler  # [uzuv] Uzaylar arası münasebetler, ayrık uzaylar, uç haller ve parametrik demetler
-import omega_kategori_nbe.test_omega_kategori_nbe  # [şahit] omega_kategori_nbe sınama takımı
 
 # ------------------------------------------------------------------
 #  reel
 # ------------------------------------------------------------------
-import reel.meleke  # [gölge] 41 idrak melekesinin reel dik kapı kaydı
-import reel.test_reel  # [şahit] ``reel`` paketi sınamaları — M9-M16, M28-M30
 
 # ------------------------------------------------------------------
 #  tanilama
@@ -284,14 +256,6 @@ except Exception as _e:                # torch yoksa kayda geçer
 # ------------------------------------------------------------------
 #  token_uzaylari
 # ------------------------------------------------------------------
-import token_uzaylari  # [uzuv] token_uzaylari — token manifoldları, morfizmler, operatörler ve Glue
-import token_uzaylari.fno  # [uzuv] FNO — Fourier Nöral Operatörü ve ızgaradan bağımsızlık
-import token_uzaylari.kan  # [uzuv] Kan genişlemeleri — ``Lan`` ve ``Ran``, sonlu kategorilerde hesaplanır
-import token_uzaylari.kan_spline  # [uzuv] KAN — B-spline temelli Kolmogorov–Arnold ağı
-import token_uzaylari.manifold  # [uzuv] Manifold — metrik, bağlantı, eğrilik ve Laplace–Beltrami
-import token_uzaylari.morfizm  # [uzuv] Morfizm — token uzayları arasındaki eşlemeler ve funktoryel yapı
-import token_uzaylari.test_token_uzaylari  # [şahit] token_uzaylari test takımı
-import token_uzaylari.yapistir  # [uzuv] Yapıştır — token uzayı denkliklerinin Glue tipine köprüsü
 
 # ------------------------------------------------------------------
 #  yaklasim

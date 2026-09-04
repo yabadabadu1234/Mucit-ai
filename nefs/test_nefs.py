@@ -251,7 +251,7 @@ def test_makam_parcalanisi_tam_ve_ayrik():
             for P in np.linspace(0, 1, 5001)]
     assert all(dizi[i] <= dizi[i + 1] for i in range(len(dizi) - 1))
     # Eşik mîzânın cetvelinden gelmeli, elle konmuş olmamalı.
-    from mizan.munazara import MERTEBELER
+    from matematik.mizan import MERTEBELER
     assert murakabe.ZANN_I_GALIB_ESIGI in [e for e, _ in MERTEBELER]
     # Ve ARC'nin fiilen düştüğü derece artık kendi adını alıyor.
     assert murakabe.makam_tayin(0.8025) == "Zann-ı gālib"
@@ -625,7 +625,7 @@ def test_kaide_eksik_istikra_yakin_vermez():
     aralık iki taraftan da kapalıdır.
     """
     from main.cikarim import hendese_adaylari
-    from mizan.istikra import tam_istikra_mi
+    from matematik.mizan import tam_istikra_mi
 
     assert not tam_istikra_mi(50, 50)       # eksik istikrâ 1 vermez
 
@@ -1299,7 +1299,7 @@ def test_ikmal_fikralari_ucu_de_KIRMIZIYA_donebiliyor():
     Üçünün de kırmızıya döndüğü **fiilen** gösterilir.
     """
     import numpy as np
-    from akis.ikmal import (lions_konsantrasyonu, bochner_suzgeci,
+    from matematik.geometri import (lions_konsantrasyonu, bochner_suzgeci,
                             cayley_hatasi, cayley_cekilmesi,
                             postnikov_indisi)
     rng = np.random.default_rng(0)

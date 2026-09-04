@@ -508,7 +508,7 @@ def _h47_iki_olcut() -> Tuple[bool, str]:
 
 def _h74_paralellik_neticeyi_degistirmiyor() -> Tuple[bool, str]:
     """İş parçalama davranışı **değiştirmez**, yalnız hızı."""
-    from hesap.donanim import Donanim, parcala, topla_paralel
+    from matematik.geometri import Donanim, parcala, topla_paralel
     X = np.arange(37.0).reshape(37, 1)
 
     def f(P, cihaz):

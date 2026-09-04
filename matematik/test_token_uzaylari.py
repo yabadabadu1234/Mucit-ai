@@ -20,9 +20,9 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from token_uzaylari import kan_spline as ks
-from token_uzaylari import manifold as mf
-from token_uzaylari import morfizm as mo
+from matematik import geometri as ks
+from matematik import geometri as mf
+from matematik import geometri as mo
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -413,9 +413,9 @@ def test_rapor_uretiliyor(modul):
 #  5. FNO — ızgaradan bağımsızlık
 # ══════════════════════════════════════════════════════════════════════
 
-from token_uzaylari import fno as fn
-from token_uzaylari import kan as kn
-from token_uzaylari import yapistir as yp
+from matematik import geometri as fn
+from matematik import geometri as kn
+from matematik import geometri as yp
 
 
 @pytest.mark.parametrize("N", [16, 17, 63, 64, 128, 257])
@@ -614,8 +614,8 @@ def test_lan_yanlis_tipte_funktoru_reddediyor(ok_kat, F_ok):
 # ══════════════════════════════════════════════════════════════════════
 
 def test_ua_sinirda_cokuyor():
-    from omega_kategori_nbe import kutuphane as L
-    from omega_kategori_nbe import sozdizim as S
+    from matematik import tip_teorisi as L
+    from matematik import tip_teorisi as S
     Z = S.Tamsayi()
     for e in (L.ozdeslik_denkligi(Z), L.ardil_denkligi()):
         r = yp.ua_sinirda_cokuyor_mu(Z, Z, e)

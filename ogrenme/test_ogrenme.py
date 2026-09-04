@@ -398,7 +398,7 @@ def test_dusuk_derecede_bukulme_sifir(k):
 
 def test_bukulme_dogrusallari_cezalandirmiyor():
     """``S``nin çekirdeği tam olarak sabit ve doğrusal fonksiyonlar."""
-    from token_uzaylari.kan_spline import bspline_temeli, dugum_dizisi
+    from matematik.geometri import bspline_temeli, dugum_dizisi
     G, k = 8, 3
     S = iz.bukulme_dizeyi(G, k)
     d = dugum_dizisi(G, k)
@@ -427,7 +427,7 @@ def test_duzenleme_asiri_uydurmayi_engelliyor():
     yr = 1.0 / (1.0 + 25 * xr ** 2) + 0.08 * rng.normal(size=30)
     xt = np.linspace(-1, 1, 500)
     yt = 1.0 / (1.0 + 25 * xt ** 2)
-    from token_uzaylari.kan_spline import bspline_temeli, dugum_dizisi
+    from matematik.geometri import bspline_temeli, dugum_dizisi
     Bt = bspline_temeli(xt, dugum_dizisi(28, 3), 3)
     hatalar = {}
     for lam in (0.0, 1e-4, 1.0):

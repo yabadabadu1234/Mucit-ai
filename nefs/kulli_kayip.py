@@ -49,8 +49,8 @@ from typing import (Any, Callable, Dict, Iterable, List, Optional,
 
 import numpy as np
 
-from mizan.istikra import ardisiklik_kaidesi
-from mizan.munazara import mertebe_adi
+from matematik.mizan import ardisiklik_kaidesi
+from matematik.mizan import mertebe_adi
 from .melekeler import (AKIS, Durum, Nefs, QParametre, melekeler,
                         qmelekeler, qsicil)
 from .zihin_durumu import QAyar, QYazmac, donme
@@ -94,7 +94,7 @@ def _mertebeler() -> Dict[str, float]:
         # -- eşik önce, ad sonra. Ters çevirip ``ad → eşik`` veriyoruz;
         # ``dict(MERTEBELER)`` doğrudan alınsaydı anahtar sayı, değer
         # dizgi olurdu ve karşılaştırmalar sessizce ters dönerdi.
-        from mizan.munazara import MERTEBELER
+        from matematik.mizan import MERTEBELER
         return {str(ad): float(esik) for esik, ad in MERTEBELER}
     except Exception:                                    # noqa: BLE001
         return {"vehim": 0.0, "şek": 0.25, "zan": 0.5,
@@ -378,7 +378,7 @@ def zayif_halkaya_gore_topla(x=None, beta=None, ne: str = "asgarî",
         beta = zayif_halkaya_gore_topla(eksikler, ne="beta") if DINAMIK_BETA else BETA
     b = float(max(beta, 1e-6))
     try:
-        from fitrat.havuz import logsumexp
+        from matematik.fitrat import logsumexp
         yumusak = (float(logsumexp([b * e for e in eksikler]))
                    - float(np.log(n))) / b
     except Exception:                                    # noqa: BLE001
@@ -861,7 +861,7 @@ class Kademeler:
         H.spektral_rutbe = self._dene("ogrenme.operator", _rutbe) or 0
 
         def _tayf():
-            from token_uzaylari.fno import spektral_enerji
+            from matematik.geometri import spektral_enerji
             return np.asarray(spektral_enerji(
                 np.asarray(A, float).reshape(-1)[:64]), float).reshape(-1)
         tayf = self._dene("token_uzaylari.fno", _tayf)
@@ -985,9 +985,10 @@ class Kademeler:
         def _mantik():
             # Hüküm cebri: "kaide var VE ispatı var" bir çıkarımdır ve
             # `mizan` onu **totoloji olarak** tasdik etmelidir.
-            from mizan.cikarim import aksiyom1
-            from mizan.onerme import deg, totoloji_mi
-            return bool(totoloji_mi(aksiyom1(deg("K"), deg("İ"))))
+            from matematik.mizan import (deg, hilbert_aksiyomu,
+                                         tabloda_ne_yaziyor)
+            return bool(tabloda_ne_yaziyor(
+                hilbert_aksiyomu(deg("K"), deg("İ"), no=1), ne="totoloji"))
         self._dene("mizan.cikarim", _mantik)
 
         # **ÖLÇÜ DEĞİŞTİ (kütük H160).** Evvelce ``1 if S.kaideler``
@@ -1030,7 +1031,7 @@ class Kademeler:
             return Y
 
         def _istikra():
-            from mizan.istikra import ardisiklik_kaidesi
+            from matematik.mizan import ardisiklik_kaidesi
             n = len(I.ciftler)
             return float(ardisiklik_kaidesi(n, n))
         Y.istikra = self._dene("mizan.istikra", _istikra) or 0.5
@@ -1054,7 +1055,7 @@ class Kademeler:
             # 7/13 sapıyordu (H214): 0,95'te "Yakîn" diyip ağırlığı
             # 1,0000 veriyor, yani model kesin olmadığı yerde kesinlik
             # iddia ediyordu. Artık cetvelin kendisinden okunur.
-            from mizan.munazara import hukum_agirligi, makam_tayin
+            from matematik.mizan import hukum_agirligi, makam_tayin
             p = float(Y.istikra)
             return float(hukum_agirligi(p, makam_tayin(p)))
         agirlik = self._dene("mizan.munazara", _makam)

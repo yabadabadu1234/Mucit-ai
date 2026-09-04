@@ -8,7 +8,7 @@ from fractions import Fraction
 import numpy as np
 import pytest
 
-from hesap import palmer as pa
+from matematik import geometri as pa
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ def test_reel_gomme_tek_sistemde_carpimsal_birlesikte_degil():
 
 def test_reel_karmasik_modulu_tek_sistemde_dogru():
     """``reel.karmasik`` hükmü tek sistemde geçerli kalıyor."""
-    from reel.karmasik import reel_hamiltonyen, reel_evrim
+    from matematik.geometri import reel_hamiltonyen, reel_evrim
     r = np.random.default_rng(0)
     A = r.normal(size=(3, 3)); A = A + A.T
     B = r.normal(size=(3, 3)); B = B - B.T

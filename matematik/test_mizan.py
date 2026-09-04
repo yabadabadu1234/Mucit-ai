@@ -19,9 +19,10 @@ import random
 
 import pytest
 
-from mizan import altyapisal as alt
-from mizan import cikarim, cokdegerli, istikra, kiplik, kiyas, munazara
-from mizan.onerme import (Tablo, deg, degil, denk_mi, dogru, gecerli_mi, ise,
+from matematik import mizan as alt
+from matematik import mizan
+cikarim = cokdegerli = istikra = kiplik = kiyas = munazara = mizan
+from matematik.mizan import (Tablo, deg, degil, denk_mi, dogru, gecerli_mi, ise,
                           karsi_ornek, tablo_boyu, totoloji_mi, tutarli_mi, ve,
                           veya, xor, yanlis, ancak)
 
