@@ -516,8 +516,8 @@ def test_mill_usulleri():
 
 def test_mill_esdegisim_sabit_degiskende_sifir():
     assert istikra.mill_usulu(ne="eş_değişim", olcumler=[(1, 5), (2, 5), (3, 5)]) == 0.0
-    assert istikra.mill_esdegisim([(1, 2), (2, 4), (3, 6)]) == pytest.approx(1.0)
-    assert istikra.mill_esdegisim([(1, -2), (2, -4), (3, -6)]) == pytest.approx(-1.0)
+    assert istikra.mill_usulu(ne="eş_değişim", olcumler=[(1, 2), (2, 4), (3, 6)]) == pytest.approx(1.0)
+    assert istikra.mill_usulu(ne="eş_değişim", olcumler=[(1, -2), (2, -4), (3, -6)]) == pytest.approx(-1.0)
 
 
 # ══════════════════════════════════════════════════════════════════════

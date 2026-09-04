@@ -236,8 +236,10 @@ def tesir_kapali_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
                     dolaşarak. Üstel zamanlıdır ve yalnız Bayes
                     toplarının **sağlaması** için vardır; ikisi her
                     çizgede uyuşmak zorundadır.
-    ``arka_kapı``   ``Z`` ``(X,Y)`` için arka kapı ölçütünü sağlıyor mu
-    ``ön_kapı``     ``M`` ``(X,Y)`` için ön kapı ölçütünü sağlıyor mu
+    ``arka_kapı``   verilen küme ``(X,Y)`` için arka kapı ölçütünü
+                    sağlıyor mu (orada ona **şart kümesi** ``Z`` denir)
+    ``ön_kapı``     verilen küme ``(X,Y)`` için ön kapı ölçütünü
+                    sağlıyor mu (orada ona **aracı kümesi** ``M`` denir)
     ``b``           ``X ⫫ Y | Z`` **bütün** ortamlarda -- ``cizgeler``
     ==============  ==================================================
 
@@ -269,6 +271,10 @@ def tesir_kapali_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
             return False
         return tesir_kapali_mi(_oku_cikarilmis(g, {X}), [X], [Y], Zs)
     if ne == "ön_kapı":
+        # Dördüncü argüman **verilen kümedir**: arka kapıda ona şart
+        # kümesi (``Z``), ön kapıda aracı kümesi (``M``) denir. Terkipte
+        # ikisi aynı yerdedir; ``M`` boşsa ``Z``den okunur.
+        M = M or Z
         Ms = set(M)
         if X in Ms or Y in Ms:
             return False

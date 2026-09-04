@@ -140,20 +140,20 @@ def test_uc_temel_yapi():
     zincir = ayrisma.Cizge(("A", "B", "C"), (("A", "B"), ("B", "C")))
     catal = ayrisma.Cizge(("A", "B", "C"), (("B", "A"), ("B", "C")))
     carpis = ayrisma.Cizge(("A", "B", "C"), (("A", "B"), ("C", "B")))
-    assert ayrisma.d_ayrik_mi(zincir, ["A"], ["C"]) is False
-    assert ayrisma.d_ayrik_mi(zincir, ["A"], ["C"], ["B"]) is True
-    assert ayrisma.d_ayrik_mi(catal, ["A"], ["C"]) is False
-    assert ayrisma.d_ayrik_mi(catal, ["A"], ["C"], ["B"]) is True
+    assert ayrisma.tesir_kapali_mi(zincir, ["A"], ["C"]) is False
+    assert ayrisma.tesir_kapali_mi(zincir, ["A"], ["C"], ["B"]) is True
+    assert ayrisma.tesir_kapali_mi(catal, ["A"], ["C"]) is False
+    assert ayrisma.tesir_kapali_mi(catal, ["A"], ["C"], ["B"]) is True
     # Çarpışma tersine: şarta bağlamak AÇIYOR.
-    assert ayrisma.d_ayrik_mi(carpis, ["A"], ["C"]) is True
-    assert ayrisma.d_ayrik_mi(carpis, ["A"], ["C"], ["B"]) is False
+    assert ayrisma.tesir_kapali_mi(carpis, ["A"], ["C"]) is True
+    assert ayrisma.tesir_kapali_mi(carpis, ["A"], ["C"], ["B"]) is False
 
 
 def test_carpismanin_nesli_de_acar():
     g = ayrisma.Cizge(("A", "B", "C", "D"),
                       (("A", "B"), ("C", "B"), ("B", "D")))
-    assert ayrisma.d_ayrik_mi(g, ["A"], ["C"]) is True
-    assert ayrisma.d_ayrik_mi(g, ["A"], ["C"], ["D"]) is False
+    assert ayrisma.tesir_kapali_mi(g, ["A"], ["C"]) is True
+    assert ayrisma.tesir_kapali_mi(g, ["A"], ["C"], ["D"]) is False
 
 
 def test_iki_usul_rastgele_cizgelerde_uyusuyor():
@@ -169,8 +169,8 @@ def test_iki_usul_rastgele_cizgelerde_uyusuyor():
         x, y = r.sample(adlar, 2)
         kalan = [d for d in adlar if d not in (x, y)]
         Z = r.sample(kalan, r.randint(0, len(kalan)))
-        assert (ayrisma.d_ayrik_mi(g, [x], [y], Z)
-                is ayrisma.d_ayrik_yollarla(g, [x], [y], Z)), (kenar, x, y, Z)
+        assert (ayrisma.tesir_kapali_mi(g, [x], [y], Z)
+                is ayrisma.tesir_kapali_mi(g, [x], [y], Z, ne="d_yol")), (kenar, x, y, Z)
 
 
 def test_bitisik_dugumler_hicbir_sartla_ayrilmaz():
@@ -187,7 +187,7 @@ def test_bitisik_dugumler_hicbir_sartla_ayrilmaz():
         a, b = kenar[0]
         kalan = [d for d in adlar if d not in (a, b)]
         Z = r.sample(kalan, r.randint(0, len(kalan)))
-        assert ayrisma.d_ayrik_mi(g, [a], [b], Z) is False
+        assert ayrisma.tesir_kapali_mi(g, [a], [b], Z) is False
 
 
 def test_cevrimli_cizge_reddediliyor():
@@ -198,29 +198,29 @@ def test_cevrimli_cizge_reddediliyor():
 def test_ortusen_kumeler_reddediliyor():
     g = ayrisma.Cizge(("A", "B", "C"), (("A", "B"),))
     with pytest.raises(ValueError):
-        ayrisma.d_ayrik_mi(g, ["A"], ["B"], ["A"])
+        ayrisma.tesir_kapali_mi(g, ["A"], ["B"], ["A"])
     with pytest.raises(ValueError):
-        ayrisma.d_ayrik_mi(g, ["A"], ["A"])
+        ayrisma.tesir_kapali_mi(g, ["A"], ["A"])
 
 
 def test_arka_kapi_karistiriciyi_buluyor():
     g = ayrisma.Cizge(("X", "Y", "Z"), (("Z", "X"), ("Z", "Y"), ("X", "Y")))
-    assert ayrisma.arka_kapi_mi(g, "X", "Y", ["Z"]) is True
-    assert ayrisma.arka_kapi_mi(g, "X", "Y", []) is False
+    assert ayrisma.tesir_kapali_mi(g, "X", "Y", ["Z"], ne="arka_kapı") is True
+    assert ayrisma.tesir_kapali_mi(g, "X", "Y", [], ne="arka_kapı") is False
     assert ayrisma.arka_kapi_kumeleri(g, "X", "Y") == [frozenset({"Z"})]
 
 
 def test_arka_kapi_ardila_baglanmayi_reddediyor():
     g = ayrisma.Cizge(("X", "M", "Y"), (("X", "M"), ("M", "Y")))
-    assert ayrisma.arka_kapi_mi(g, "X", "Y", ["M"]) is False
+    assert ayrisma.tesir_kapali_mi(g, "X", "Y", ["M"], ne="arka_kapı") is False
     # Karıştırıcı yoksa boş küme doğru cevaptır:
-    assert ayrisma.arka_kapi_mi(g, "X", "Y", []) is True
+    assert ayrisma.tesir_kapali_mi(g, "X", "Y", [], ne="arka_kapı") is True
 
 
 def test_on_kapi_gozlenmemis_karistiricida_calisiyor():
     g = ayrisma.Cizge(("U", "X", "M", "Y"),
                       (("U", "X"), ("U", "Y"), ("X", "M"), ("M", "Y")))
-    assert ayrisma.on_kapi_mi(g, "X", "Y", ["M"]) is True
+    assert ayrisma.tesir_kapali_mi(g, "X", "Y", ["M"], ne="ön_kapı") is True
     gozlenen = [z for z in ayrisma.arka_kapi_kumeleri(g, "X", "Y")
                 if "U" not in z]
     assert gozlenen == [], "U gözlenmeden arka kapı kapanmamalı"
@@ -230,15 +230,16 @@ def test_on_kapi_yonlu_yol_kesilmiyorsa_reddediyor():
     # X → Y doğrudan da gidiyor; M bütün yolları kesmiyor.
     g = ayrisma.Cizge(("X", "M", "Y"),
                       (("X", "M"), ("M", "Y"), ("X", "Y")))
-    assert ayrisma.on_kapi_mi(g, "X", "Y", ["M"]) is False
+    assert ayrisma.tesir_kapali_mi(g, "X", "Y", ["M"], ne="ön_kapı") is False
 
 
 def test_b_ayrisma_tek_ortamda_tutani_kabul_etmiyor():
     o1 = ayrisma.Cizge(("X", "Y", "Z"), (("Z", "X"), ("X", "Y"), ("Z", "Y")))
     o2 = ayrisma.Cizge(("X", "Y", "Z"), (("Z", "X"), ("X", "Y")))
-    assert ayrisma.d_ayrik_mi(o2, ["Z"], ["Y"], ["X"]) is True
-    assert ayrisma.d_ayrik_mi(o1, ["Z"], ["Y"], ["X"]) is False
-    assert ayrisma.b_ayrik_mi([o1, o2], ["Z"], ["Y"], ["X"]) is False
+    assert ayrisma.tesir_kapali_mi(o2, ["Z"], ["Y"], ["X"]) is True
+    assert ayrisma.tesir_kapali_mi(o1, ["Z"], ["Y"], ["X"]) is False
+    assert ayrisma.tesir_kapali_mi(cizgeler=[o1, o2], X=["Z"], Y=["Y"],
+                            Z=["X"], ne="b") is False
 
 
 def test_ortak_ayrismalar_kesisim():
