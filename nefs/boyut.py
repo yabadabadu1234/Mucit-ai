@@ -26,187 +26,149 @@ import numpy as np
 
 from .mubser import Mesud, musahede_et
 
-__all__ = ["KAIDELER", "boyut_kaidesi_bul", "boyut_tahmin", "olc"]
+__all__ = ["KAIDE_ADLARI", "cikti_ne_kadar"]
 
 Boyut = Tuple[int, int]
 
 
 # =====================================================================
-#  Kaide dağarcığı -- her biri (girdi, müşahede) → boyut yahut None
+#  Kaide dağarcığı -- adları; gövdeleri tek terkiptedir
 # =====================================================================
-def _ayni(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    """Çıktı girdiyle aynı boyutta."""
-    return (g.shape[0], g.shape[1])
+#: Sıra mühimdir: **ilk** tutan kaide kabul edilir, o yüzden hususî
+#: olanlar umumîlerden evvel denenmez -- umumî olan (``ayni``) en
+#: başta durur ki tesadüfî bir hususî kaide onu gölgelemesin.
+KAIDE_ADLARI: Tuple[str, ...] = (
+    "aynı", "devrik", "dolu_kutu", "en_büyük_nesne", "en_küçük_nesne",
+    "tek_nesne", "nesne_sayısı_kare", "renk_sayısı_kare", "nesne_katı",
+    "×2", "÷2", "×3", "÷3", "×4", "÷4", "×2 yatay", "×2 dikey",
+)
 
 
-def _devrik(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    return (g.shape[1], g.shape[0])
+def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
+                   ad: str = "", g=None, m=None, kh: int = 1, kw: int = 1,
+                   gorevler=None):
+    """ÇIKTI KAÇ SATIR KAÇ SÜTUN OLACAK -- **tek terkip** (kütük H225).
 
+    Küme: on bir aday kaide (``_ayni, _devrik, _dolu_kutu,
+    _en_buyuk_nesne, _en_kucuk_nesne, _tek_nesne, _nesne_sayisi_kare,
+    _renk_sayisi_kare, _olcekli, _bolunmus, _nesne_katı``) +
+    ``boyut_kaidesi_bul`` + ``boyut_tahmin`` + ``olc``. On üçü tek
+    sualin parçalarıydı ve on biri yalnız bir cetvele girmek için
+    ayrı isim taşıyordu.
 
-def _dolu_kutu(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    """Zemin olmayan bölgenin sınırlayıcı kutusu -- kırpma kaidesi."""
-    idx = np.argwhere(g != 0)
-    if not len(idx):
-        return None
-    a, b = idx.min(0)
-    c, d = idx.max(0)
-    return (int(c - a + 1), int(d - b + 1))
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``kaide``       adı verilen kaidenin bu ızgarada verdiği boyut
+    ``bul``         eğitim çiftlerinin **hepsini** sağlayan ilk kaide
+    ``tahmin``      ``(boyut, kaide_adı)``; bulunamazsa ``(None, sükût)``
+    ``ölç``         görev kümesinde kaide isabetinin dökümü
+    ==============  ==================================================
 
-
-def _en_buyuk_nesne(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    if not m.nesneler:
-        return None
-    n = m.nesneler[0]              # ızama göre sıralı
-    return (n.sekil.shape[0], n.sekil.shape[1])
-
-
-def _en_kucuk_nesne(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    if not m.nesneler:
-        return None
-    n = m.nesneler[-1]
-    return (n.sekil.shape[0], n.sekil.shape[1])
-
-
-def _tek_nesne(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    """Ötekilerden farklı olan (tek başına kalan) nesnenin kutusu.
-
-    ARC'nin en sık kaidelerinden biri: "aykırı olanı bul ve onu ver".
-    Aykırılık şekil imzasının **tekliğinden** okunur; ayrı bir sinyal
-    aranmaz.
-    """
-    if len(m.nesneler) < 3:
-        return None
-    imza: Dict[bytes, List[int]] = {}
-    for i, n in enumerate(m.nesneler):
-        k = np.asarray(n.sekil, np.uint8).tobytes() + bytes(n.sekil.shape)
-        imza.setdefault(k, []).append(i)
-    tekler = [v[0] for v in imza.values() if len(v) == 1]
-    if len(tekler) != 1:
-        return None
-    n = m.nesneler[tekler[0]]
-    return (n.sekil.shape[0], n.sekil.shape[1])
-
-
-def _nesne_sayisi_kare(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    k = len(m.nesneler)
-    return (k, k) if k else None
-
-
-def _renk_sayisi_kare(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    k = len(m.adet)
-    return (k, k) if k else None
-
-
-def _olcekli(kh: int, kw: int) -> Callable[[np.ndarray, Mesud], Optional[Boyut]]:
-    def f(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-        return (g.shape[0] * kh, g.shape[1] * kw)
-    return f
-
-
-def _bolunmus(kh: int, kw: int) -> Callable[[np.ndarray, Mesud], Optional[Boyut]]:
-    def f(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-        if g.shape[0] % kh or g.shape[1] % kw:
-            return None
-        return (g.shape[0] // kh, g.shape[1] // kw)
-    return f
-
-
-def _nesne_katı(g: np.ndarray, m: Mesud) -> Optional[Boyut]:
-    """Girdi boyutunun nesne sayısı katı -- 'her nesne için bir kopya'."""
-    k = len(m.nesneler)
-    if k < 1 or k > 6:
-        return None
-    return (g.shape[0] * k, g.shape[1] * k)
-
-
-#: Kaide dağarcığı. Sıra mühimdir: en dar kaide en başta denenir ki
-#: "aynı boyut" gibi geniş bir kaide daha keskin olanı gölgelemesin.
-KAIDELER: List[Tuple[str, Callable[[np.ndarray, Mesud], Optional[Boyut]]]] = [
-    ("aynı", _ayni),
-    ("devrik", _devrik),
-    ("dolu_kutu", _dolu_kutu),
-    ("en_büyük_nesne", _en_buyuk_nesne),
-    ("en_küçük_nesne", _en_kucuk_nesne),
-    ("tek_nesne", _tek_nesne),
-    ("nesne_sayısı_kare", _nesne_sayisi_kare),
-    ("renk_sayısı_kare", _renk_sayisi_kare),
-    ("nesne_katı", _nesne_katı),
-]
-for _kh in (2, 3, 4):
-    KAIDELER.append(("×%d" % _kh, _olcekli(_kh, _kh)))
-    KAIDELER.append(("÷%d" % _kh, _bolunmus(_kh, _kh)))
-KAIDELER.append(("×2 yatay", _olcekli(1, 2)))
-KAIDELER.append(("×2 dikey", _olcekli(2, 1)))
-
-
-# =====================================================================
-def boyut_kaidesi_bul(ciftler: Sequence[Tuple[np.ndarray, np.ndarray]]
-                      ) -> Optional[Tuple[str, Callable]]:
-    """Eğitim çiftlerinin **hepsini** sağlayan ilk kaide.
-
-    Hepsini sağlaması şarttır: tek karşı örnek küllî kaideyi düşürür
+    **Hepsini sağlaması şarttır**: tek karşı örnek küllî kaideyi düşürür
     (kütük H6 -- nakz). Bir kaide dokuz çiftin sekizinde tutuyorsa
     **kabul edilmez**; o, kaide değil tesadüftür.
 
     Sabit boyut kaidesi ayrıca denenir: bütün çıktılar aynı boyutta ise
     o boyut ezberlenebilir. Bu bir kaide değil **ezberdir** ve öyle
-    işaretlenir; yine de ARC'de meşru bir kaidedir (bazı görevlerde çıktı
-    hep 3×3'tür).
-    """
-    if not ciftler:
-        return None
-    mesudlar = [musahede_et(a) for a, _ in ciftler]
-
-    for ad, f in KAIDELER:
-        tamam = True
-        for (a, b), m in zip(ciftler, mesudlar):
-            t = f(np.asarray(a), m)
-            if t is None or t != (b.shape[0], b.shape[1]):
-                tamam = False
-                break
-        if tamam:
-            return ad, f
-
-    # sabit boyut (ezber)
-    boyutlar = {(b.shape[0], b.shape[1]) for _, b in ciftler}
-    if len(boyutlar) == 1:
-        sabit = boyutlar.pop()
-
-        def g_(g: np.ndarray, m: Mesud, s=sabit) -> Optional[Boyut]:
-            return s
-        return "sabit%s" % (sabit,), g_
-    return None
-
-
-def boyut_tahmin(ciftler: Sequence[Tuple[np.ndarray, np.ndarray]],
-                 girdi: np.ndarray) -> Tuple[Optional[Boyut], str]:
-    """Kaideyi eğitimden çıkar, test girdisine tatbik et.
+    işaretlenir; yine de ARC'de meşru bir kaidedir (bazı görevlerde
+    çıktı hep 3×3'tür).
 
     Kaide bulunamazsa ``(None, "sükût")`` döner -- model **susar**.
     Uydurma bir boyut vermek, bilmediğini söylememekten kötüdür (H10).
+
+    ``_tek_nesne`` ARC'nin en sık kaidelerinden biridir: *"aykırı olanı
+    bul ve onu ver"*. Aykırılık şekil imzasının **tekliğinden** okunur;
+    ayrı bir sinyal aranmaz.
     """
-    k = boyut_kaidesi_bul(ciftler)
-    if k is None:
-        return None, "sükût"
-    ad, f = k
-    t = f(np.asarray(girdi), musahede_et(np.asarray(girdi)))
-    return (t, ad) if t is not None else (None, "sükût")
+    def kaide(k: str, gg, mm):
+        gg = np.asarray(gg)
+        if k == "aynı":
+            return (gg.shape[0], gg.shape[1])
+        if k == "devrik":
+            return (gg.shape[1], gg.shape[0])
+        if k == "dolu_kutu":
+            # zemin olmayan bölgenin sınırlayıcı kutusu -- kırpma
+            idx = np.argwhere(gg != 0)
+            if not len(idx):
+                return None
+            a, b = idx.min(0)
+            c, d = idx.max(0)
+            return (int(c - a + 1), int(d - b + 1))
+        if k in ("en_büyük_nesne", "en_küçük_nesne"):
+            if not mm.nesneler:
+                return None
+            n = mm.nesneler[0 if k == "en_büyük_nesne" else -1]
+            return (n.sekil.shape[0], n.sekil.shape[1])
+        if k == "tek_nesne":
+            if len(mm.nesneler) < 3:
+                return None
+            imza = {}
+            for i, n in enumerate(mm.nesneler):
+                anah = (np.asarray(n.sekil, np.uint8).tobytes()
+                        + bytes(n.sekil.shape))
+                imza.setdefault(anah, []).append(i)
+            tekler = [v[0] for v in imza.values() if len(v) == 1]
+            if len(tekler) != 1:
+                return None
+            n = mm.nesneler[tekler[0]]
+            return (n.sekil.shape[0], n.sekil.shape[1])
+        if k == "nesne_sayısı_kare":
+            n = len(mm.nesneler)
+            return (n, n) if n else None
+        if k == "renk_sayısı_kare":
+            n = len(mm.adet)
+            return (n, n) if n else None
+        if k == "×2 yatay":
+            return (gg.shape[0], gg.shape[1] * 2)
+        if k == "×2 dikey":
+            return (gg.shape[0] * 2, gg.shape[1])
+        if k.startswith("×"):
+            a = int(k[1:])
+            return (gg.shape[0] * a, gg.shape[1] * a)
+        if k.startswith("÷"):
+            a = int(k[1:])
+            if gg.shape[0] % a or gg.shape[1] % a:
+                return None
+            return (gg.shape[0] // a, gg.shape[1] // a)
+        if k == "nesne_katı":
+            n = len(mm.nesneler)
+            return (gg.shape[0] * n, gg.shape[1] * n) if n else None
+        if k.startswith("sabit"):
+            return tuple(int(x) for x in k[6:-1].split(", "))
+        raise ValueError("boyut kaidesi bilinmiyor: %r" % (k,))
 
+    if ne == "kaide":
+        return kaide(ad, g, m)
 
-def olc(gorevler: Sequence, azami: int = 400,
-        azami_hucre: int = 1600) -> Dict[str, object]:
-    """**Ara ölçüt**: kaç görevde çıktı boyutu doğru tahmin edildi.
+    if ne == "bul":
+        if not ciftler:
+            return None
+        mesudlar = [musahede_et(a) for a, _ in ciftler]
+        for k in KAIDE_ADLARI:
+            tamam = True
+            for (a, b), mm in zip(ciftler, mesudlar):
+                t_ = kaide(k, a, mm)
+                if t_ is None or t_ != (b.shape[0], b.shape[1]):
+                    tamam = False
+                    break
+            if tamam:
+                return k
+        boyutlar = {(b.shape[0], b.shape[1]) for _, b in ciftler}
+        if len(boyutlar) == 1:
+            sb = boyutlar.pop()
+            return "sabit%s" % (sb,)
+        return None
 
-    Üç sayı ayrı ayrı raporlanır ve karıştırılmaz:
+    if ne == "tahmin":
+        k = cikti_ne_kadar(ciftler, ne="bul")
+        if k is None:
+            return None, "sükût"
+        gg = np.asarray(girdi)
+        return kaide(k, gg, musahede_et(gg)), k
 
-    * ``isabet``     -- doğru tahmin sayısı.
-    * ``yanlış``     -- kaide bulundu fakat tahmin tuttu**ma**dı.
-    * ``sükût``      -- hiçbir kaide bütün eğitim çiftlerini sağlamadı.
-
-    Sükût bir başarısızlık değildir; **cehli îlan etmektir** ve yanlış
-    tahminden ayrı sayılır (H10). Fakat sükût oranı yüksekse dağarcığın
-    dar olduğunu söyler ve bu da bir hükümdür.
-    """
+    if ne != "ölç":
+        raise ValueError("boyut kipi bilinmiyor: %r" % (ne,))
     isabet = yanlis = sukut = deneme = 0
     kaide_say: Dict[str, int] = {}
     kaide_isabet: Dict[str, int] = {}
@@ -221,7 +183,7 @@ def olc(gorevler: Sequence, azami: int = 400,
             continue
         deneme += 1
         gi, co = sin[0]
-        t, ad = boyut_tahmin(egt, gi)
+        t, ad = cikti_ne_kadar(egt, gi)
         kaide_say[ad] = kaide_say.get(ad, 0) + 1
         if t is None:
             sukut += 1
@@ -237,3 +199,4 @@ def olc(gorevler: Sequence, azami: int = 400,
             "kaide_dağılımı": dict(sorted(kaide_say.items(),
                                           key=lambda x: -x[1])),
             "kaide_isabeti": kaide_isabet}
+

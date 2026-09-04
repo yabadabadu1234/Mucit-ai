@@ -61,7 +61,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 from idrak import arc
-from idrak.sekil import kesirli_sekil_kaidesi
+from idrak.sekil import sekil_kaidesi
 
 __all__ = ["yamalar", "cech_tikanikligi", "terkip_iyi_tipli_mi",
            "tikaniklik_kapisi", "tikaniklik_sukut_bagi", "rapor"]
@@ -99,7 +99,7 @@ def yamalar(gorev) -> List[Optional[object]]:
     boyu girdiden nasıl çıkıyor). Kâide bulunamayan yama ``None``dır ve
     bu da bir bilgidir -- o yamada mahallî çözüm bile yok demektir.
     """
-    return [kesirli_sekil_kaidesi([(a, b)]) for a, b in gorev.egitim]
+    return [sekil_kaidesi([(a, b)]) for a, b in gorev.egitim]
 
 
 def cech_tikanikligi(gorev) -> Dict[str, object]:

@@ -793,8 +793,8 @@ class Kademeler:
         self._dene("nefs.mubser", _mubser)
 
         def _boyut():
-            from .boyut import boyut_tahmin
-            b, sebep = boyut_tahmin(ciftler, girdiler[0] if girdiler
+            from .boyut import cikti_ne_kadar
+            b, sebep = cikti_ne_kadar(ciftler, girdiler[0] if girdiler
                                     else ciftler[0][0])
             return (None if b is None else tuple(int(x) for x in b)), sebep
         r = self._dene("nefs.boyut", _boyut)
@@ -802,8 +802,8 @@ class Kademeler:
             I.olcu, I.olcu_sebebi = r
 
         def _sekil():
-            from idrak.sekil import sekil_kaidesi
-            k = sekil_kaidesi(ciftler)
+            from idrak.sekil import kesirli_sekil_kaidesi
+            k = kesirli_sekil_kaidesi(ciftler)
             return None if k is None else str(k)
         I.sekil_kaidesi = self._dene("idrak.sekil", _sekil)
 
@@ -1471,7 +1471,6 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     # koşturur: idrak → tasavvur → muhakeme → ispat → tasdik → beyan.
     # Kademelerin ölçüleri `nefs/kulli_kayip.py` yoluyla eğitime de
     # girer; yani bu boru hattı hem konuşur hem öğrenir.
-    from .kademeler import kademeleri_kos
     kad = kademeleri_kos(gorev, derinlik=derinlik, esik=yakin_esigi)
     dusunce += kad["günlük"]
     K = list(kad["ispat"].kaideler)
@@ -2101,7 +2100,6 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     # parametreden bağımsızdırlar ve H156'nın körlüğünü geri getirirler.
     kademe_hepsi: List[Olcum] = []
     if kademe_gorevleri:
-        from .kademeler import kademeleri_kos
         for g in kademe_gorevleri:
             try:
                 kademe_hepsi += list(
