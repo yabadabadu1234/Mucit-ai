@@ -332,9 +332,9 @@ def test_koherens_normalizasyonu():
 
 def test_hlevel_sirasi():
     """hLevel 0 = büzülebilir, 1 = önerme, 2 = küme (Voevodsky)."""
-    from omega_kategori_nbe import cekirdek as C
-    from omega_kategori_nbe import kutuphane as L
-    from omega_kategori_nbe import sozdizim as S
+    from matematik import tip_teorisi as C
+    from matematik import tip_teorisi as L
+    from matematik import tip_teorisi as S
     Z = S.Tamsayi()                        # kapalı, somut bir tip
     a, b, c = (C.nf(L.iz_butun(Z)), C.nf(L.iz_onerme(Z)),
                C.nf(L.iz_kume(Z)))
@@ -351,7 +351,7 @@ def test_hlevel_sirasi():
 
 def test_bspline_temel_sayisi():
     """``G`` aralık, ``p`` derece → ``G+p`` temel. ``G`` ile kesilirse bozulur."""
-    from token_uzaylari.kan_spline import bspline_temeli, dugum_dizisi
+    from matematik.geometri import bspline_temeli, dugum_dizisi
     for G, p in ((5, 3), (10, 2), (8, 4)):
         d = dugum_dizisi(G, p)
         t = np.linspace(-1, 1, 401)
@@ -366,7 +366,7 @@ def test_bspline_temel_sayisi():
 
 def test_cox_de_boor_sifir_payda():
     """Tekrarlı düğümde payda sıfırlanır; terim DÜŞMELİ, nan olmamalı."""
-    from token_uzaylari.kan_spline import bspline_temeli
+    from matematik.geometri import bspline_temeli
     # Uçlarda tekrarlı (clamped) düğüm dizisi:
     d = np.array([0.0, 0.0, 0.0, 0.0, 0.5, 1.0, 1.0, 1.0, 1.0])
     t = np.linspace(0.0, 1.0, 101)
@@ -382,7 +382,7 @@ def test_cox_de_boor_sifir_payda():
 
 def test_kesme_kipi_bagil_esikle():
     """Mutlak eşik ölçekle kayar; bağıl eşik kaymaz."""
-    from token_uzaylari.fno import kesme_kipi, spektral_enerji
+    from matematik.geometri import kesme_kipi, spektral_enerji
     x = np.linspace(0, 1, 256, endpoint=False)
     # Kademeli spektrum: kesme yerinin ölçekle kayması burada görünür.
     v = sum(np.cos(2 * np.pi * k * x) / k ** 2
@@ -415,7 +415,7 @@ def test_kesme_kipi_bagil_esikle():
 
 def test_serbest_enerji_alt_siniri():
     """Sürekli yoğunlukta ``F ≥ 0`` BOZULUR; ``F ≥ −ln p(X)`` bozulmaz."""
-    from fitrat.serbest_enerji import gauss_serbest_enerji
+    from matematik.fitrat import gauss_serbest_enerji
     # Dar bir gözlem gürültüsü ⟹ p(x) > 1 ⟹ −ln p(x) < 0
     g = gauss_serbest_enerji(x=0.0, m_q=0.0, s_q=0.02,
                              m_p=0.0, s_p=0.05, s_g=0.02)
@@ -426,7 +426,7 @@ def test_serbest_enerji_alt_siniri():
     assert g["F"] < 0.0, g
 
     # Ayrık hâlde ``F ≥ 0`` doğrudur (p ≤ 1); yani iddia şartlıdır.
-    from fitrat.serbest_enerji import AyrikModel, serbest_enerji, ardil
+    from matematik.fitrat import AyrikModel, serbest_enerji, ardil
     m = AyrikModel(np.array([0.2, 0.5, 0.3]),
                    np.array([[0.7, 0.2, 0.1], [0.1, 0.6, 0.3],
                              [0.3, 0.3, 0.4]]))
@@ -597,16 +597,29 @@ def test_hcomp_isset_ile_indirgenmez():
     # İddia: değerlendirici, "tip bir kümedir" bilgisine dayanarak
     # hcomp'u u₀'a İNDİRGEMİYOR. Sağlaması, indirgeme kurallarının
     # yazılı olduğu yerde böyle bir kuralın BULUNMAMASIDIR.
-    for dosya in ("denklik.py", "cekirdek.py"):
-        kaynak = open(os.path.join(kok, "omega_kategori_nbe", dosya),
-                      encoding="utf-8").read()
-        assert "isSet" not in kaynak and "iz_kume" not in kaynak, (
+    # KÜME 7 tevhidinden sonra (kütük H226) indirgeme kuralları
+    # ``matematik/tip_teorisi.py``dedir; ölçüt değişmedi, yalnız
+    # bakılacak yer değişti. Dosya içindeki bölüm başlıkları
+    # kullanılarak İNDİRGEYİCİ bölgeleri kesilir -- kütüphane
+    # tarafındaki ``kac_mertebeden`` (eski ``iz_kume``) burada
+    # aranmamalıdır, zira o bir indirgeme kuralı değil bir tiptir.
+    metin = open(os.path.join(kok, "matematik", "tip_teorisi.py"),
+                 encoding="utf-8").read()
+
+    def bolum(ad):
+        bas = metin.index("#  omega_kategori_nbe/%s.py" % ad)
+        son = metin.find("#  omega_kategori_nbe/", bas + 10)
+        return metin[bas:son if son > 0 else len(metin)]
+
+    for dosya in ("denklik", "cekirdek"):
+        kaynak = bolum(dosya)
+        assert ("isSet" not in kaynak and "iz_kume" not in kaynak
+                and "kac_mertebeden" not in kaynak), (
             dosya, "isSet'e dayalı bir indirgeme kuralı bulundu — "
                    "tashihin gerekçesi yeniden tartılmalı")
     # Ve hcomp'un fiilen indirgendiği tek hâl, bir yüzün ⊤ olmasıdır;
     # bu kural tipin küme olup olmamasına bakmıyor:
-    denklik = open(os.path.join(kok, "omega_kategori_nbe", "denklik.py"),
-                   encoding="utf-8").read()
+    denklik = bolum("denklik")
     assert "ÇÖKER" in denklik or "çöker" in denklik
 
 
@@ -740,8 +753,8 @@ def test_iz_olcutu_yanlis_log_u_yakalamiyor():
 
 def test_dogrusal_olmayan_gurultude_tekil():
     """K37: abduction toplamsal gürültüde tekil DEĞİL, u²'de tekil."""
-    from fitrat import karsi_olgusal as ko
-    from fitrat.ayrisma import Cizge
+    from matematik import fitrat as ko
+    from matematik.fitrat import Cizge
 
     g = Cizge(("A", "B"), (("A", "B"),))
     toplamsal = ko.YapisalModel(g, {"A": lambda pa, u: u,
@@ -762,7 +775,7 @@ def test_duzeltmesiz_tegetin_locustan_kaydigi():
     """K38: Formül 48.3 tek başına yetmiyor — kayma birikiyor."""
     import math
 
-    from fitrat import karsi_olgusal as ko
+    from matematik import fitrat as ko
 
     def phi(x):
         return np.array([float(x @ x) - 1.0])

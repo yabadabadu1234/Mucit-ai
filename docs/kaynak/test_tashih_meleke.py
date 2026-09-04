@@ -116,12 +116,12 @@ def test_meleke_ve_hudutsuzluk_zaten_derleniyordu():
 
 def test_householder_butun_durumu_negatiflemiyor():
     """M9/M10: yansıma yalnız ``v`` bileşenini negatifler."""
-    from reel.meleke import householder, izdusum_sifirlama
+    from matematik.geometri import kapi_kur
 
     r = np.random.default_rng(0)
     d = 8
     v = r.normal(size=d); v /= np.linalg.norm(v)
-    U = householder(v)
+    U = kapi_kur("yansıma", v=v)
     psi = r.normal(size=d); psi /= np.linalg.norm(psi)
     # ESKİ HÂL: "UΨ = −Ψ" — yanlış
     assert np.linalg.norm(U(psi) + psi) > 0.5
@@ -132,7 +132,7 @@ def test_householder_butun_durumu_negatiflemiyor():
     # sadece paralel hâlde −Ψ
     assert np.linalg.norm(U(v) + v) < 1e-13
     # gerçekten silmek için izdüşüm gerekir ve o üniter DEĞİL
-    P = izdusum_sifirlama(v)
+    P = kapi_kur("silme", v=v)
     assert abs(v @ P(psi)) < 1e-13
     assert np.linalg.norm(P(psi)) < 1.0
 
@@ -156,8 +156,8 @@ def test_sek_zan_yakin_uniter_degil():
     M[0, 1] = math.sin(th)
     assert np.abs(M.conj().T @ M - np.eye(2)).max() > 0.5
     # tashihli hâl (SO(2)) üniter
-    from reel.meleke import so2_dondurme
-    G = so2_dondurme(th, 2).dizey()
+    from matematik.geometri import kapi_kur
+    G = kapi_kur("so2", theta=th, D=2).dizey()
     assert np.abs(G.T @ G - np.eye(2)).max() < 1e-14
 
 
@@ -167,7 +167,7 @@ def test_sek_zan_yakin_uniter_degil():
 
 def test_grup_komutatoru_cebirde_degil():
     """M14/M15: iki dik dizeyin komütatörü ``so(n)``de değil."""
-    from reel.meleke import grup_komutatoru_cebirde_mi
+    from matematik.geometri import grup_komutatoru_cebirde_mi
 
     for D in (6, 16):
         g = grup_komutatoru_cebirde_mi(D)
@@ -177,7 +177,7 @@ def test_grup_komutatoru_cebirde_degil():
 
 def test_carpim_usteli_ancak_komut_edende_esit():
     """M16: ``T exp(∫ΣH) = ΠU`` ancak sıra değiştirirse."""
-    from reel.meleke import carpim_trotter_farki
+    from matematik.geometri import carpim_trotter_farki
 
     c = carpim_trotter_farki()
     assert c["genel_fark"] > 0.1
@@ -308,7 +308,7 @@ def test_p_adik_toplam_normalizasyon_degil():
     """M23: ``Σ|c|_p² = 1`` ne Born'dur ne üniter altında korunur."""
     from fractions import Fraction
 
-    from hesap.padic import (arsimet_toplam, p_adik_toplam,
+    from matematik.geometri import (arsimet_toplam, p_adik_toplam,
                              uniter_altinda_korunuyor_mu)
 
     c = [Fraction(1, 2)] * 4
@@ -324,21 +324,21 @@ def test_p_adik_toplam_normalizasyon_degil():
 
 def test_float_hatasi_rasyonelde_de_var():
     """M24: teşhis 'irrasyonellik' değil, sonlu mantissa."""
-    from hesap.padic import float_hatasi_rasyonelde
+    from matematik.geometri import float_hatasi_rasyonelde
 
     f = float_hatasi_rasyonelde()
     assert f["0.1+0.2==0.3"] is False
     assert f["on_kere_bir_mi"] is False
     assert f["tam_aritmetikte"] == 1.0
     # ve tam aritmetikte gerçekten sıfır hata (Galois halkası)
-    from hesap.galois import BIR, tam_devre
+    from matematik.geometri import BIR, tam_devre
     t = tam_devre(["H"] * 20 + ["T"] * 20)
     assert t["norm_kare"] == BIR
 
 
 def test_yapili_durumlar_400_kubitin_otesinde():
     """M27: itiraz keyfî durum için doğru, yapılı sınıfta değil."""
-    from hesap.saklama import (Kararlayici, keyfi_durum_maliyeti,
+    from matematik.geometri import (Kararlayici, keyfi_durum_maliyeti,
                                kararlayici_maliyeti, mps_maliyeti)
 
     # keyfî: itiraz DOĞRU
@@ -362,7 +362,7 @@ def test_yapili_durumlar_400_kubitin_otesinde():
 
 def test_reel_schrodinger_isareti():
     """M28: ``+J·H_ℝ`` zamanı tersine çeviriyor."""
-    from reel.karmasik import (kaynak_isaretiyle_evrim, karmasik_coz,
+    from matematik.geometri import (kaynak_isaretiyle_evrim, karmasik_coz,
                                reel_evrim, reel_goem)
 
     r = np.random.default_rng(0)
@@ -384,7 +384,7 @@ def test_reel_schrodinger_isareti():
 
 def test_hartley_kosegen_evrisim_degil():
     """M29: RHT'de köşegen çarpan ancak çift simetride evrişim."""
-    from reel.hartley import (cift_simetrik_yap, dolasimli_hata, evrisim,
+    from matematik.geometri import (cift_simetrik_yap, dolasimli_hata, evrisim,
                               hartley_carpim_naif, hartley_evrisim,
                               rht, rht_dizeyi)
 

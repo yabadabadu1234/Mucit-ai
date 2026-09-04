@@ -21,10 +21,31 @@ import pytest
 
 from matematik import mizan as alt
 from matematik import mizan
+from matematik.mizan import tabloda_ne_yaziyor
+
+
+def totoloji_mi(a):
+    return tabloda_ne_yaziyor(a, ne="totoloji")
+
+
+def tutarli_mi(a):
+    return tabloda_ne_yaziyor(a, ne="tutarlı")
+
+
+def gecerli_mi(oncul, netice):
+    return tabloda_ne_yaziyor(oncüller=oncul, netice=netice)
+
+
+def denk_mi(a, b):
+    return tabloda_ne_yaziyor(a, b, ne="denk")
+
+
+def karsi_ornek(oncul, netice):
+    return tabloda_ne_yaziyor(oncüller=oncul, netice=netice,
+                              ne="karşı_örnek")
 cikarim = cokdegerli = istikra = kiplik = kiyas = munazara = mizan
-from matematik.mizan import (Tablo, deg, degil, denk_mi, dogru, gecerli_mi, ise,
-                          karsi_ornek, tablo_boyu, totoloji_mi, tutarli_mi, ve,
-                          veya, xor, yanlis, ancak)
+from matematik.mizan import (Tablo, deg, degil, dogru, ise, tablo_boyu, ve,
+                             veya, xor, yanlis, ancak)
 
 A, B, C, D = deg("A"), deg("B"), deg("C"), deg("D")
 
@@ -114,14 +135,14 @@ def test_yirmi_dort_darbin_hepsinin_adi_var():
 
 
 def test_barbara_gecerli_varlik_faraziyesi_istemez():
-    assert kiyas.gecerli_mi(1, "AAA")
+    assert kiyas.kiyas_gecerli_mi(1, "AAA")
     assert kiyas.asgari_varlik_faraziyesi(1, "AAA") == frozenset()
 
 
 def test_bamalip_P_terimini_ister():
     """T79'un tashihi: Bamalip'in ihtiyacı S veya M değil, **P**'dir."""
-    assert not kiyas.gecerli_mi(4, "AAI")
-    assert kiyas.gecerli_mi(4, "AAI", bos_olmayan=(kiyas.P,))
+    assert not kiyas.kiyas_gecerli_mi(4, "AAI")
+    assert kiyas.kiyas_gecerli_mi(4, "AAI", bos_olmayan=(kiyas.P,))
     assert kiyas.asgari_varlik_faraziyesi(4, "AAI") == frozenset({kiyas.P})
 
 
@@ -132,7 +153,7 @@ def test_darapti_M_ister_barbari_S_ister():
 
 def test_gecersiz_darbin_karsi_modeli_vardir():
     for sekil, darb in kiyas.butun_darblar():
-        if not kiyas.gecerli_mi(sekil, darb):
+        if not kiyas.kiyas_gecerli_mi(sekil, darb):
             assert kiyas.karsi_model(sekil, darb) is not None
 
 
@@ -255,15 +276,15 @@ def test_ltl_ozdeslikleri():
 # ══════════════════════════════════════════════════════════════════════
 
 TNORMLAR = {
-    "Łukasiewicz": cokdegerli.t_lukasiewicz,
-    "Gödel": cokdegerli.t_godel,
-    "çarpım": cokdegerli.t_carpim,
-    "nilpotent-min": cokdegerli.t_nilpotent_minimum,
-    "Schweizer–Sklar p=2": cokdegerli.t_schweizer_sklar(2.0),
-    "Schweizer–Sklar p=-1": cokdegerli.t_schweizer_sklar(-1.0),
-    "Yager p=2": cokdegerli.t_yager(2.0),
-    "Dombi p=1": cokdegerli.t_dombi(1.0),
-    "zayıf (drastic)": cokdegerli.t_zayif,
+    "Łukasiewicz": cokdegerli.ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[0],
+    "Gödel": cokdegerli.ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[0],
+    "çarpım": cokdegerli.ikisi_birden_ne_kadar(ne="çarpım", tur="çekirdek")[0],
+    "nilpotent-min": cokdegerli.ikisi_birden_ne_kadar(ne="nilpotent min", tur="çekirdek")[0],
+    "Schweizer–Sklar p=2": cokdegerli.ikisi_birden_ne_kadar(ne="Schweizer-Sklar", p=2.0, tur="çekirdek")[0],
+    "Schweizer–Sklar p=-1": cokdegerli.ikisi_birden_ne_kadar(ne="Schweizer-Sklar", p=-1.0, tur="çekirdek")[0],
+    "Yager p=2": cokdegerli.ikisi_birden_ne_kadar(ne="Yager", p=2.0, tur="çekirdek")[0],
+    "Dombi p=1": cokdegerli.ikisi_birden_ne_kadar(ne="Dombi", p=1.0, tur="çekirdek")[0],
+    "zayıf (drastic)": cokdegerli.ikisi_birden_ne_kadar(ne="en zayıf", tur="çekirdek")[0],
 }
 
 
@@ -277,11 +298,11 @@ def test_tnorm_aksiyomlari(ad):
 
 
 @pytest.mark.parametrize("ad,T,I", [
-    ("Łukasiewicz", cokdegerli.t_lukasiewicz, cokdegerli.i_lukasiewicz),
-    ("Gödel", cokdegerli.t_godel, cokdegerli.i_godel),
-    ("çarpım", cokdegerli.t_carpim, cokdegerli.i_carpim),
-    ("nilpotent-min", cokdegerli.t_nilpotent_minimum,
-     cokdegerli.i_nilpotent_minimum),
+    ("Łukasiewicz", cokdegerli.ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[0], cokdegerli.ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[1]),
+    ("Gödel", cokdegerli.ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[0], cokdegerli.ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[1]),
+    ("çarpım", cokdegerli.ikisi_birden_ne_kadar(ne="çarpım", tur="çekirdek")[0], cokdegerli.ikisi_birden_ne_kadar(ne="çarpım", tur="çekirdek")[1]),
+    ("nilpotent-min", cokdegerli.ikisi_birden_ne_kadar(ne="nilpotent min", tur="çekirdek")[0],
+     cokdegerli.ikisi_birden_ne_kadar(ne="nilpotent min", tur="çekirdek")[1]),
 ])
 def test_kalinti_ozdesligi(ad, T, I):
     """``a⊗b ≤ c ⟺ a ≤ (b→c)`` — t-norm ile imâ aynı cebirden mi?"""
@@ -488,13 +509,13 @@ def test_mill_usulleri():
         (frozenset({"b", "d", "f"}), False),
         (frozenset({"c", "e", "f"}), False),
     ]
-    assert istikra.mill_uyusma(vakalar) == frozenset({"a"})
-    assert istikra.mill_ayrilik(vakalar) == frozenset({"a"})
-    assert istikra.mill_birlesik(vakalar) == frozenset({"a"})
+    assert istikra.mill_usulu(vakalar) == frozenset({"a"})
+    assert istikra.mill_usulu(vakalar, "ayrılık") == frozenset({"a"})
+    assert istikra.mill_usulu(vakalar, "birleşik") == frozenset({"a"})
 
 
 def test_mill_esdegisim_sabit_degiskende_sifir():
-    assert istikra.mill_esdegisim([(1, 5), (2, 5), (3, 5)]) == 0.0
+    assert istikra.mill_usulu(ne="eş_değişim", olcumler=[(1, 5), (2, 5), (3, 5)]) == 0.0
     assert istikra.mill_esdegisim([(1, 2), (2, 4), (3, 6)]) == pytest.approx(1.0)
     assert istikra.mill_esdegisim([(1, -2), (2, -4), (3, -6)]) == pytest.approx(-1.0)
 

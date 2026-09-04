@@ -7935,3 +7935,145 @@ yazılıyor -- kesirli kol kazandığında ad `kesir:oran|oran` biçimindedir.
 Ayrıca dokuz `rapor()` tek **kendini gösterme**de birleşti; her bölüm
 H223'te ölçülen isim-ezme kusuru tekrarlanmasın diye kendi kapanışında
 koşar.
+
+---
+
+## H226 — KÜME 7: dört analitik karargâh, dokuz paket tasfiye
+
+Padişahın yedinci ve son terkip emri. Sistemin bastığı **değişmez**
+zemin -- tip teorisi, mantık, illiyet, hendese ve tam aritmetik --
+dokuz pakette dağınıktı. Üç adımlı usul aynen tatbik edildi:
+(a) her dosya kendi içinde, (b) birleştirme, (c) birleşik gövdede
+bir daha.
+
+### Adım (a) — dosya içi terkip
+
+Hakikî küme bulunan dokuz dosyada terkip yapıldı:
+
+| dosya | küme | tek isim |
+|---|---|---|
+| `mizan/cokdegerli.py` | 12 → 1 | `ikisi_birden_ne_kadar` |
+| `mizan/kiyas.py` | 4 → 1 | `bu_hukum_bu_modelde_tutuyor_mu` |
+| `mizan/kiplik.py` | 6 → 2 | `borc_mu_caiz_mi_yasak_mi`, `bundan_sonra` |
+| `mizan/cikarim.py` | 7 → 1 | `hilbert_aksiyomu` |
+| `mizan/istikra.py` | 4 → 1 | `mill_usulu` |
+| `reel/meleke.py` | 8 → 1 | `kapi_kur` |
+| `reel/hartley.py` | 6 → 2 | `hartley`, `hartley_evrisim(naif=)` |
+| `hesap/galois.py` | 5 → 1 | `kapi` |
+| `token_uzaylari/manifold.py` | 4 → 1 | `hazir_metrik` |
+| `akis/tikiz.py` | 2 → 1 | `kure_izdusumu(ters=)` |
+
+Açığa çıkan özdeşlikler:
+
+* **A/E/I/O tek bit ameli.** Dört önerme biçimi iki eksenin
+  çarpımıdır: **kemiyet** yokluk mu varlık mı sorar, **keyfiyet**
+  yüklemin tümleneceğini söyler, ve ikisi `XOR` ile kenetlidir --
+  `tümlenmiş = (küllî ≠ olumsuz)`. Sebep cebrîdir: bir varlık
+  önermesini değillemek keyfiyeti çevirir. Aristo'nun karşıtlık
+  murabbaı ayrı yazıldıklarında görünmüyordu.
+* **`Fφ ≡ ⊤ U φ`, `Gφ ≡ ¬(⊤ U ¬φ)`.** Üç LTL işlecinden ikisi
+  üçüncüsünün tanımıdır; geriye tek geriye-tarama kaldı.
+* **`I − α·vvᵀ`.** Householder (α=2, dik) ile izdüşüm (α=1, üniter
+  DEĞİL) tek çekirdektir; diklik tam o katsayıda kaybolur. Aynı
+  şekilde `diag(d)`: tezat (±1, dik) ile ölçüm işleci (√P, üniter
+  değil).
+* **`irht == rht`.** RHT involutiftir; ayrı bir ters dönüşüm yoktur
+  ve ayrı isim taşıması varmış gibi gösteriyordu.
+* **Konformal aile.** Dört hazır metriğin üçü aynı `g = e^{2φ}δ`
+  ailesindendir (düz φ≡0, hiperbolik e^{2φ}=y⁻², konformal φ
+  serbest); yalnız küre dışarıdadır.
+* **Şema ile eşleyici bir olmalı.** `hilbert_aksiyomu`da şema **bir
+  kere** yazılır ve eşleme ondan **birleştirme** ile türetilir. Elle
+  yazılmış üç eşleyicinin şemadan sessizce sapabilmesi imkânsızlaştı.
+
+TERKİP EDİLMEYENLER, uydurulmadı: `mizan/onerme.py`nin on bir
+kurucusu zâten tek `_kur`un körlenmiş hâlleridir -- nesne dilinin
+kendisi, terkip edilecek bir küme yok. `mizan/munazara.py`nin
+men'/nakz/muâraza gövdeleri alâkasızdır (usulî meşruiyet, karşı örnek
+arama, karşı delilin geçerliliği); birleştirmek tabela olurdu.
+
+### Adım (b) — birleştirme ve açığa çıkan beş çakışma
+
+    matematik/tip_teorisi.py  <- omega_kategori_nbe/  11 dosya
+    matematik/mizan.py        <- mizan/                8 dosya
+    matematik/fitrat.py       <- fitrat/               6 dosya
+    matematik/geometri.py     <- reel/ hesap/ token_uzaylari/ akis/  18 dosya
+
+Birleştirme, ayrı dosyalarda saklanan **beş sessiz hatayı** açığa
+çıkardı:
+
+1. `gecerli_mi` hem önerme mantığında (`P ⊨ Q`) hem kıyasta (darb
+   geçerli mi) tanımlıydı. Birleşince kıyasınki ötekini gölgeledi ve
+   istikrâ raporu `unhashable type: list` ile patladı. Kıyasınki
+   `kiyas_gecerli_mi` oldu.
+2. `EPS` -- serbest enerjide `1e-300` (logaritma tabanı), dengede
+   makine hassasiyeti. İki bambaşka sabit tek isimdeydi:
+   `EPS_LOG` ve `EPS_MAKINE`.
+3. `BIR`/`SIFIR` -- aralık cebrinin birim/sıfırı ile `ℤ[ζ₈]`
+   halkasınınki. Z8'inki ötekini gölgeledi ve Glue sınır sınaması
+   `'Z8' object has no attribute 'yerine_koy'` ile düştü.
+   Aralığınkiler `ARALIK_BIR`/`ARALIK_SIFIR` oldu.
+4. `denetle` -- üç modül `denetle_t as denetle` diye ithal ediyordu;
+   düz ad alanında `denetle` başka bir fonksiyondur. Takma adlar
+   asıllarına çevrilmeseydi bütün tip denetimleri sessizce yanlış
+   fonksiyona giderdi.
+5. `morse_indisi` ve `_H` -- `akis/hacim.py` ile `akis/tikiz.py`,
+   `manifold.py` ile `morfizm.py` bunları **birebir aynı** yazmıştı.
+   Tek tanım kaldı.
+
+Ayrıca her dosyanın `rapor()` sarmalayıcısı `_gosterim()` ile aynı ada
+eriyip onu gölgeliyordu (H223'te ölçülen kusurun aynısı);
+sarmalayıcılar atıldı.
+
+**terim seviyesi / değer seviyesi.** `terimler.py` ile `cekirdek.py`
+yedi ismi (`uygula, transp, hkomp, komp, dolgu, yol_uygula, taze`)
+**aynı** yazıyordu; ayrı modüllerde durdukları için bu görünmüyordu.
+İkisi aynı işlemin iki seviyesidir: terim seviyesi ikame ile ağaç
+kopyalar, değer seviyesi kapanışlarla çalışır. NbE'nin bütün iddiası
+ikincisinin birincinin yerini almasıdır. Ön ek (`terim_*`) o iddiayı
+isimde görünür kıldı.
+
+### Adım (c) — birleşik gövdede üç terkip
+
+* `matematik/mizan.py` 5 → 1 **`tabloda_ne_yaziyor`**. Totoloji,
+  tutarlılık, denklik, geçerlilik ve karşı örnek: hepsi tek bit-paralel
+  tabloda bir maske okumasıdır. `geçerli` ile `karşı_örnek` **aynı**
+  `kötü = (⋀öncül) ∧ ¬netice` maskesinin iki okunuşudur -- biri sıfır
+  mı diye bakar, öteki ilk tanığı çıkarır. Ayrı yazıldıklarında o
+  maske iki kere kurulup birbirinden sapabilirdi.
+* `matematik/fitrat.py` 5 → 1 **`tesir_kapali_mi`**. d-ayrışma, yol
+  sayımıyla bağımsız şahidi, arka kapı, ön kapı, B-ayrışma: beşi de
+  "bu küme tesirin yolunu kapatıyor mu" suâlinin ölçütleridir; arka ve
+  ön kapı zâten d-ayrışmanın üstüne kuruludur. Bir hesap ile onun
+  bağımsız şahidini aynı kapıya koymak kasıtlıdır.
+* `matematik/tip_teorisi.py` 5 → 1 **`kac_mertebeden`**. h-seviyeleri
+  tek merdivendir ve merdiven zâten `n_mertebe`nin içinde yazılıydı:
+  `h_n(X) = Π(x y : X). h_{n−1}(Path X x y)`. Özyinelemenin `−1`de
+  durması -- `h_{−1}`de `h_{−2}`ye inilmemesi, yoksa her önerme
+  büzülebilir çıkardı -- ayrı isimlerde görünmeyen **durak**tı.
+
+### Ölçüm
+
+Terkipten evvel dokuz paketin **43 modülünün** raporu alındı
+(`yedek/kume7_asillari/` asıllarından). Terkipten sonra dört çipin
+**34 bölümünün** raporu tekrar alındı ve satır satır kıyaslandı:
+
+> **Zamanlama satırları dışında HEPSİNDE FARK YOK.**
+
+`π₁(S¹) ≅ ℤ` sarım sayısı, 256 monadik model, 15/24 geçerli darb,
+512 Kripke çerçevesi, NOTEARS gradyanı, Bochner eğriliği, Galois norm
+korunumu, `F ≥ −ln p(x)` sınırı: hepsi aynı sayıları veriyor.
+
+### Tasfiye edilmeyen iki paket -- ve sebebi
+
+Emirde `yaklasim/` ve `olcek/` de "eski mükerrer paketler" arasında
+sayılmıştı. **Ölçüldü: mükerrer değiller.** `yaklasim/`ın 54 açık
+isminden çiplerde bulunanlar yalnız üç tanedir (`lan`, `ran`,
+`zorlayici_mi`); `olcek/`in on altı isminden **hiçbiri** çiplerde
+yoktur -- o paket performans muhasebesidir (FLOP/token, çatı modeli,
+boyut denetimi) ve hiçbir çipin konusu değildir.
+
+Mükerrer olmayan bir paketi "tasfiye" etmek terkip değil imhadır.
+İkisi de yerinde bırakıldı. Kaidenin öncülü ölçüldüğünde tutmadı;
+tek karşı örnek küllî hükmü düşürür (H6) -- bu kaide de bundan
+müstesna değildir.
