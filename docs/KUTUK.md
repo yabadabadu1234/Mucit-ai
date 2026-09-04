@@ -8077,3 +8077,50 @@ Mükerrer olmayan bir paketi "tasfiye" etmek terkip değil imhadır.
 İkisi de yerinde bırakıldı. Kaidenin öncülü ölçüldüğünde tutmadı;
 tek karşı örnek küllî hükmü düşürür (H6) -- bu kaide de bundan
 müstesna değildir.
+
+### Bağlantı geçişinin açığa çıkardığı yedi sessiz kusur
+
+Terkip bittikten sonra **tam sınama takımı** koşturuldu (padişahın
+emri: testler en son, toplu). Yedi kusur çıktı ve hepsi önceki
+kümelerin bağlantı geçişinden kalmıştı -- yâni Küme 7 terkibinin
+kendisinden değil, ondan evvelki tevhidlerin artığından:
+
+1. **`nefs/qegitim.py` -- yutulan NameError.** `gorev_dizisi` hiç
+   ithal edilmemişti; çağrısı `except Exception: continue` içinde
+   olduğu için hata yutuluyor ve `ornekler()` **sessizce boş liste**
+   döndürüyordu. Zırhın taahhüt yüzleştirmesi bu yüzden
+   "need at least one array to stack" ile düşüyordu. Geniş bir
+   `except`in bir ithal hatasını nasıl sakladığının tam misali.
+2. **`nefs/hukum_denetimi.py`** -- `izgara_belirtecle`/`belirtec_izgara`
+   ithal edilmemişti; `olc` ise artık `cikti_ne_kadar(ne="ölç")`.
+3. **`nefs/zirh.py`** -- rapor gövdesindeki iç `kos()` fonksiyonunun
+   `return`ü `s.append(str(...))`e dönüşmüştü (H223'te ölçülen
+   dönüşüm kusurunun bir kalıntısı); fonksiyon `None` döndürüyordu.
+   Asıldan doğrulanıp geri kondu.
+4. **`nefs/zirh.py`, `ogrenme/optimize.py`** -- üç ölü ithal
+   (`kuantum.tda`, `kuantum.qsvt`, `kuantum.ceride`); üçü de zâten
+   aynı çipin içinde.
+5. **`kuantum/test_kuantum.py`** -- `float(x, qs.KIP_WX)` biçiminde
+   yirmi iki çağrı; kip sabiti parantezin içine kaymıştı.
+6. **`matematik/test_tip_teorisi.py`** -- `denetle` ile `denetle_t`
+   ayrı fonksiyonlardır ve test yanlışlıkla ikincisine bağlanmıştı.
+7. **`tesir_kapali_mi`de bir tuzak.** Dördüncü argüman **verilen
+   kümedir**; arka kapıda ona şart kümesi (`Z`), ön kapıda aracı
+   kümesi (`M`) denir. İkisi aynı yerdedir ve `M` boşsa artık
+   `Z`den okunur -- terkibin asıl söylediği de budur.
+
+### Nihaî ölçüm
+
+    matematik/                                470 geçti, 0 düştü
+    nefs/ idrak/ kuantum/ ogrenme/ yaklasim/
+    olcek/ main/ arama/ tanilama/ docs/       603 geçti, 0 düştü
+    ────────────────────────────────────────────────────────────
+    TOPLAM                                   1073 geçti, 0 düştü
+
+(`idrak/test_idrak.py` ve `mucit_ai_esas/` toplanamıyor: `torch`
+kurulu değil. Bu terkipten evvel de böyleydi ve onunla alâkası
+yoktur.)
+
+Kuantum akış Küme 7 öncesiyle **birebir aynı**:
+`kapı=3693  takas=534  MPO=289  toplam kesme=4,321e+01`
+(`e0e19e3` işlemesindeki ağaçla yüzleştirildi).
