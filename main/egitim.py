@@ -544,6 +544,102 @@ def gorev_talimi(gorev, devir: int = 120):
     return dalga_kur(cift, devir=int(devir))
 
 
+
+# =====================================================================
+#  NAZIRLIK KATI -- main'in altı fiille kurulmuş hâli
+# =====================================================================
+def dimag(gorevler=None, tur: int = 2, n_gorev: int = 40,
+          tohum: int = 0, ne: str = "kos"):
+    """KÜLLÎ DİMAĞ -- altı fiille, alt kata bakmadan (kütük H227).
+
+    Yukarıdaki iki tâlim hattı **çipleri doğrudan** çağırır: müşahede
+    et, yazmacı kur, melekeleri geçir, zırhı giydir, kaybı hesapla,
+    optimize et. O hatlar çalışıyor ve durdukları yerde duruyorlar --
+    burada imha yoktur.
+
+    Fakat bu, `main`in **alt kata bakarak** düşündüğü mânâsına gelir;
+    münasebet haritası kurulamaz ve `main` kaybolursa yeniden
+    yazılamaz. Nazırlık katı tam bunun içindir: aynı akış, altı fiille::
+
+        manzara = gor(gorev)          # dış âlemden tek nesne
+        hal     = dusun(manzara)      # 44 meleke + dörtlü zırh
+        mizan   = tart(hal)           # zayıf halka + sözleşme
+        ogren(mizan)                  # hoca, ve haddi
+        cevap   = soyle(gorev)        # ya ispat ya sükût
+
+    ``ara`` bu zincirin bir halkası değil, ``ogren``in âletidir.
+
+    Bu fonksiyonda **tek satır yeni riyaziye yoktur**; hepsi çağrıdır.
+    Kıymeti de buradadır: bu altı isim okunduğunda mimarî anlaşılır,
+    ve anlaşıldığı için yeniden yazılabilir.
+
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``kos``         bütün akış: görülen, düşünülen, tartılan, söylenen
+    ``gor``         yalnız manzaralar
+    ``soyle``       yalnız cevaplar (çıkarım hattı)
+    ==============  ==================================================
+    """
+    from nefs.gor import gor
+    from nefs.dusun import dusun
+    from nefs.tart import tart
+    from nefs.soyle import soyle
+    from nefs.musahede import gorevleri_getir
+
+    if gorevler is None:
+        gorevler = gorevleri_getir("training")[:int(n_gorev)]
+    gorevler = list(gorevler)[:int(n_gorev)]
+
+    if ne == "gor":
+        return [gor(g) for g in gorevler]
+    if ne == "soyle":
+        return [soyle(g) for g in gorevler]
+    if ne != "kos":
+        raise ValueError("dimağ kipi bilinmiyor: %r" % (ne,))
+
+    nefs_ = None
+    manzaralar, mizanlar, cevaplar = [], [], []
+    for g in gorevler:
+        manzara = gor(g)
+        hal = dusun(manzara, nefs=nefs_, tohum=tohum)
+        nefs_ = nefs_ or getattr(hal, "_nefs", None)
+        mizan = tart(hal, sozlesme=False)
+        cevap = soyle(g, manzara=manzara)
+        manzaralar.append(manzara)
+        mizanlar.append(mizan)
+        cevaplar.append(cevap)
+
+    konusan = [c for c in cevaplar if not c.sukut]
+    kalibi_olan = [m for m in manzaralar if not m.sukut]
+    return {
+        "görev": len(gorevler),
+        "kalıbı_bilinen": len(kalibi_olan),
+        "konuşan": len(konusan),
+        "susan": len(cevaplar) - len(konusan),
+        "ortalama_kayıp": (float(np.mean([m.kayip for m in mizanlar]))
+                           if mizanlar else 0.0),
+        "sözünde_olmayan": sum(1 for m in mizanlar if not m.sozunde),
+        "manzara": manzaralar, "mizan": mizanlar, "cevap": cevaplar,
+    }
+
+
+def dimag_raporu(n_gorev: int = 40) -> str:      # pragma: no cover
+    """Nazırlık katının ölçümü -- altı fiil fiilen ısırıyor mu?"""
+    d = dimag(n_gorev=n_gorev)
+    s = ["=== NAZIRLIK KATI: altı fiille küllî dimağ ===", ""]
+    s.append("  görev             : %d" % d["görev"])
+    s.append("  kalıbı bilinen    : %d  (gor)" % d["kalıbı_bilinen"])
+    s.append("  konuşan           : %d  (soyle)" % d["konuşan"])
+    s.append("  susan             : %d  (H10: ya ispat ya sükût)"
+             % d["susan"])
+    s.append("  ortalama kayıp    : %.6f  (tart)" % d["ortalama_kayıp"])
+    s.append("  sözünde olmayan   : %d" % d["sözünde_olmayan"])
+    s.append("")
+    s.append("  Bu satırların hepsi ÇAĞRIDIR; nazırlıkta hesap yoktur.")
+    s.append("  Hesap çiplerdedir ve orada kalmıştır.")
+    return "\n".join(s)
+
 # =====================================================================
 def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
         kulli_kayip_ile: bool = True) -> str:
