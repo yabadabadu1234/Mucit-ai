@@ -797,12 +797,12 @@ def test_iki_olcek_hakikaten_iki():
     """
     from idrak import arc
 
-    from .iki_olcek import olcek_acilari, sagir_uydur
+    from .iki_olcek import iki_olcegin_acisi
 
     g = arc.yukle_hepsi("training")[:10]
     artiklar = []
     for gv in g:
-        r = sagir_uydur(gv)
+        r = iki_olcegin_acisi(gv, ne="sağîr")
         assert r.get("kuruldu"), r
         assert r["psd"], ("çekirdek PSD değil -- temsil teoremi geçersiz", r)
         artiklar.append(r["azamî_artık"])
@@ -814,7 +814,7 @@ def test_iki_olcek_hakikaten_iki():
     # sınamayı her göreve zorlamak, o borcu ölçütle örtmek olurdu.
     assert float(np.median(artiklar)) < 1e-2, artiklar
 
-    o = olcek_acilari(g)
+    o = iki_olcegin_acisi(gorevler=g)
     assert o["yeterli_mi"], o
     assert o["azamî_açı"] > 0.1, ("iki ölçek aynı alt uzayı geriyor", o)
 
@@ -1396,23 +1396,22 @@ def test_ceride_uc_kapali_form_babi():
 def test_gomme_genlik_kodlamasi_ve_35_kubit():
     """4096 boyut 12 kübitte mi, ve χ≤16 iddiası ölçülüyor mu?"""
     import numpy as np
-    from nefs.gomme import (kubit_sayisi, genlik_gom, genlik_coz,
-                            qtt_bag_ihtiyaci, gomme_hatasi, YazmacOlcusu)
-    assert kubit_sayisi(4096) == 12
+    from nefs.gomme import genlige_gom, YazmacOlcusu
+    assert genlige_gom(D=4096, ne="kübit") == 12
     o = YazmacOlcusu()
     assert (o.kubit_yigin, o.kubit_yer, o.kubit_mana) == (11, 12, 12)
     assert o.kubit == 35 and o.token == 8_388_608
     rng = np.random.default_rng(0)
     v = rng.normal(size=4096)
-    psi, nrm = genlik_gom(v)
+    psi, nrm = genlige_gom(v)
     assert abs(float(psi @ psi) - 1.0) < 1e-12
-    assert np.allclose(genlik_coz(psi, nrm), v, atol=1e-9)
+    assert np.allclose(genlige_gom(psi=psi, norm=nrm, ne="çöz"), v, atol=1e-9)
     # χ = 16 iddiası VERİYE BAĞLI: düzgünde tutuyor, rastgelede tutmuyor
-    duz, _ = genlik_gom(np.sin(np.linspace(0, 6, 4096))
+    duz, _ = genlige_gom(np.sin(np.linspace(0, 6, 4096))
                         * np.exp(-np.linspace(0, 3, 4096)))
-    assert gomme_hatasi(duz, 12, 16) < 1e-9
-    assert gomme_hatasi(psi, 12, 16) > 0.5      # KIRMIZI olabiliyor
-    assert max(qtt_bag_ihtiyaci(psi, 12)) == 64
+    assert genlige_gom(psi=duz, kubit=12, chi=16, ne="hata") < 1e-9
+    assert genlige_gom(psi=psi, kubit=12, chi=16, ne="hata") > 0.5      # KIRMIZI olabiliyor
+    assert max(genlige_gom(psi=psi, kubit=12, ne="bağ")) == 64
 
 
 def test_zirh_dordu_de_KIRMIZIYA_donebiliyor():

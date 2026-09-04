@@ -35,8 +35,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["kubit_sayisi", "genlik_gom", "genlik_coz", "mps_kur",
-           "qtt_bag_ihtiyaci", "gomme_hatasi", "veri_yazmaci",
+__all__ = ["genlige_gom", "veri_yazmaci",
            "YazmacOlcusu", "bellek_cetveli",
            "QTT_TABAN", "QTT_KADEME", "QTT_BAG", "qtt_parametre_sayisi",
            "qtt_gomme", "qtt_sadakat_cetveli"]
@@ -89,9 +88,9 @@ def qtt_gomme(v: np.ndarray, chi: int = QTT_BAG
     temsil edemez. ``χ = 4`` ve ``χ = 8`` cetveli
     ``qtt_sadakat_cetveli``dedir.
     """
-    psi, _ = genlik_gom(v)
+    psi, _ = genlige_gom(v)
     k = kubit_sayisi(np.asarray(v).size)
-    cek, bag, hata = mps_kur(psi, k, chi=int(chi))
+    cek, bag, hata = genlige_gom(psi=psi, kubit=k, chi=int(chi), ne="mps")
     par = int(sum(c.size for c in cek))
     return cek, float(1.0 - hata), par
 
@@ -113,55 +112,65 @@ def qtt_sadakat_cetveli(v: np.ndarray,
     return out
 
 
-def kubit_sayisi(D: int) -> int:
-    """``⌈log₂ D⌉`` -- ``D`` boyutlu vektörü taşıyan kübit adedi.
+def genlige_gom(v=None, psi=None, kubit: int = 0, chi=None,
+                norm: float = 1.0, D=None, ne: str = "gom"):
+    """VEKTÖRÜ GENLİĞE GÖMMEK -- **tek terkip** (kütük H225).
 
-    ``D = 4096`` için **12**'dir; ``4096 × 16`` bit (65.536 kübit)
+    Küme: ``kubit_sayisi`` + ``genlik_gom`` + ``genlik_coz`` +
+    ``mps_kur`` + ``qtt_bag_ihtiyaci`` + ``gomme_hatasi``. Altısı tek
+    zincirin halkalarıydı ve son ikisi yalnız ``mps_kur``un iki ayrı
+    çıktısını almak için vardı.
+
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``kübit``       ``⌈log₂ D⌉`` -- ``D`` boyutu taşıyan kübit adedi
+    ``gom``         ``(ψ, norm)`` -- birim normlu genlik vektörü
+    ``çöz``         genlikten klasik vektöre dönüş
+    ``mps``         ``(çekirdekler, bağlar, hata)``
+    ``bağ``         kesmesiz **hakikî** bağ profili
+    ``hata``        ``chi``de kesince atılan ağırlığın bağıl normu
+    ==============  ==================================================
+
+    ``D = 4096`` için kübit **12**'dir; ``4096 × 16`` bit (65.536 kübit)
     değil. Fark, genlik kodlamasının bütün kazancıdır.
-    """
-    D = int(D)
-    if D < 1:
-        raise ValueError("D ≥ 1 olmalı")
-    return int(math.ceil(math.log2(D)))
-
-
-def genlik_gom(v: np.ndarray) -> Tuple[np.ndarray, float]:
-    """``v`` → birim normlu genlik vektörü. Döner: ``(ψ, norm)``.
 
     Genlik kodlaması normu **atar** (durum projektiftir); atılan norm
-    ayrıca döndürülür ki kaybolmasın. Kaba sıfırlama yasağı (H14) burada
-    da geçerlidir: ``v``nin uzunluğu ``2^k``ya tamamlanmaz, **sıfırla
-    doldurulur** ve doldurulan yer raporlanır.
+    ayrıca döndürülür ki kaybolmasın. **Kaba sıfırlama yasağı (H14)**
+    burada da geçerlidir: ``v``nin uzunluğu ``2^k``ya tamamlanmaz,
+    **sıfırla doldurulur** ve doldurulan yer raporlanır.
+
+    MPS ayrışımı ardışık SVD'dir; ``chi`` verilirse her bağda kesilir ve
+    **atılan ağırlık biriktirilerek** bağıl hata döndürülür.
+    ``chi=None`` iken kesme yoktur ve dönen bağlar **hakikî** bağ
+    ihtiyacıdır -- *"χ ≤ 16 yeter mi"* sualinin cevabı odur.
     """
-    v = np.asarray(v, float).ravel()
-    k = kubit_sayisi(v.size)
-    tam = 1 << k
-    if v.size < tam:
-        u = np.zeros(tam)
-        u[:v.size] = v
-        v = u
-    nrm = float(np.linalg.norm(v))
-    if nrm <= 1e-300:
-        return np.full(tam, 1.0 / math.sqrt(tam)), 0.0
-    return v / nrm, nrm
+    if ne == "kübit":
+        d = int(D if D is not None else v)
+        if d < 1:
+            raise ValueError("D ≥ 1 olmalı")
+        return int(math.ceil(math.log2(d)))
 
+    if ne == "gom":
+        vv = np.asarray(v, float).ravel()
+        k = genlige_gom(D=vv.size, ne="kübit")
+        tam = 1 << k
+        if vv.size < tam:
+            u = np.zeros(tam)
+            u[:vv.size] = vv
+            vv = u
+        nrm = float(np.linalg.norm(vv))
+        if nrm <= 1e-300:
+            return np.full(tam, 1.0 / math.sqrt(tam)), 0.0
+        return vv / nrm, nrm
 
-def genlik_coz(psi: np.ndarray, norm: float, D: Optional[int] = None
-               ) -> np.ndarray:
-    """Genlikten klasik vektöre dön -- ``genlik_gom``un tersi."""
-    psi = np.asarray(psi, float).ravel()
-    v = psi * float(norm)
-    return v if D is None else v[:int(D)]
+    if ne == "çöz":
+        pp = np.asarray(psi, float).ravel() * float(norm)
+        return pp if D is None else pp[:int(D)]
 
-
-def mps_kur(psi: np.ndarray, kubit: int, chi: Optional[int] = None
-            ) -> Tuple[List[np.ndarray], List[int], float]:
-    """Genlik vektörünü MPS'e ayır. Döner: ``(çekirdekler, bağlar, hata)``.
-
-    Ardışık SVD; ``chi`` verilirse her bağda kesilir ve **atılan ağırlık
-    biriktirilerek** bağıl hata döndürülür. ``chi=None`` iken kesme yok,
-    dönen bağlar **hakikî** bağ ihtiyacıdır.
-    """
+    if ne not in ("mps", "bağ", "hata"):
+        raise ValueError("gömme kipi bilinmiyor: %r" % (ne,))
+    cc = None if ne == "bağ" else chi
     psi = np.asarray(psi, float).ravel()
     n = int(kubit)
     if psi.size != (1 << n):
@@ -175,7 +184,7 @@ def mps_kur(psi: np.ndarray, kubit: int, chi: Optional[int] = None
         M = M.reshape(r0 * 2, -1)
         U, s, Vt = np.linalg.svd(M, full_matrices=False)
         etkin = int(np.sum(s > 1e-12 * max(float(s[0]), 1e-30)))
-        r1 = max(1, etkin if chi is None else min(int(chi), etkin))
+        r1 = max(1, etkin if cc is None else min(int(cc), etkin))
         atilan += float(np.sum(s[r1:] ** 2))
         cek.append(U[:, :r1].reshape(r0, 2, r1))
         M = s[:r1, None] * Vt[:r1, :]
@@ -183,17 +192,11 @@ def mps_kur(psi: np.ndarray, kubit: int, chi: Optional[int] = None
     cek.append(M.reshape(-1, 2, 1))
     top = float(np.sum(psi ** 2))
     hata = math.sqrt(max(atilan, 0.0) / max(top, 1e-300))
+    if ne == "bağ":
+        return bag
+    if ne == "hata":
+        return hata
     return cek, bag, hata
-
-
-def qtt_bag_ihtiyaci(psi: np.ndarray, kubit: int) -> List[int]:
-    """Kesmesiz hakikî bağ profili -- *"χ ≤ 16 yeter mi"* sorusunun cevabı."""
-    return mps_kur(psi, kubit, chi=None)[1]
-
-
-def gomme_hatasi(psi: np.ndarray, kubit: int, chi: int = 16) -> float:
-    """``chi``de kesince atılan ağırlığın bağıl normu."""
-    return mps_kur(psi, kubit, chi=int(chi))[2]
 
 
 @dataclass
@@ -205,15 +208,15 @@ class YazmacOlcusu:
 
     @property
     def kubit_yigin(self) -> int:
-        return kubit_sayisi(self.B)
+        return genlige_gom(D=self.B, ne="kübit")
 
     @property
     def kubit_yer(self) -> int:
-        return kubit_sayisi(self.L)
+        return genlige_gom(D=self.L, ne="kübit")
 
     @property
     def kubit_mana(self) -> int:
-        return kubit_sayisi(self.D)
+        return genlige_gom(D=self.D, ne="kübit")
 
     @property
     def kubit(self) -> int:
@@ -261,10 +264,10 @@ def bellek_cetveli(V: np.ndarray, chi: Sequence[int] = (2, 4, 8, 16, 32)
     yana). Bellek, MPS çekirdeklerinin eleman sayısıdır (float32).
     """
     psi, o = veri_yazmaci(V)
-    hakiki = qtt_bag_ihtiyaci(psi, o.kubit)
+    hakiki = genlige_gom(psi=psi, kubit=o.kubit, ne="bağ")
     out: List[Dict[str, float]] = []
     for c in chi:
-        cek, bag, hata = mps_kur(psi, o.kubit, chi=int(c))
+        cek, bag, hata = genlige_gom(psi=psi, kubit=o.kubit, chi=int(c), ne="mps")
         eleman = int(sum(x.size for x in cek))
         out.append({"χ": int(c), "hata": float(hata),
                     "eleman": eleman, "MB": eleman * 4 / 1e6,
@@ -290,10 +293,10 @@ def rapor() -> str:                                     # pragma: no cover
                   ("düzgün", np.sin(np.linspace(0, 6, 4096))
                    * np.exp(-np.linspace(0, 3, 4096))),
                   ("tek-sıcak", np.eye(1, 4096, 1234).ravel())):
-        psi, nrm = genlik_gom(v)
-        bag = qtt_bag_ihtiyaci(psi, 12)
+        psi, nrm = genlige_gom(v)
+        bag = genlige_gom(psi=psi, kubit=12, ne="bağ")
         s.append("  %-10s hakikî âzamî bağ %3d   χ=16'da hata %.4f"
-                 % (ad, max(bag), gomme_hatasi(psi, 12, 16)))
+                 % (ad, max(bag), genlige_gom(psi=psi, kubit=12, chi=16, ne="hata")))
 
     s.append("")
     s.append("=== Küllî veri yazmacı: χ ≤ 16 yetiyor mu? ===")

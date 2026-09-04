@@ -62,13 +62,13 @@ def _h3_gradyansiz() -> Tuple[bool, str]:
 
 def _h6_sahitlik() -> Tuple[bool, str]:
     """Tek karşı örnek küllî kaideyi düşürür."""
-    from .sahit import _akis_kur, bolutle, kaide_uydur, nakz_bul
+    from .sahit import _akis_kur, kaideyi_coz, nakz_bul, sahitleri_ayir
     temiz = _akis_kur(m=5, ds=8, t=6)
     bozuk = _akis_kur(m=5, ds=8, t=6, bozuk=2)
     r = []
     for S in (temiz, bozuk):
-        b = bolutle(S)
-        K = [kaide_uydur(S, x) for x in b.sahitler]
+        b = sahitleri_ayir(S)
+        K = [kaideyi_coz(S, x, ne="tek") for x in b.sahitler]
         r.append(nakz_bul(S, b.sahitler, K)["nakz"])
     return (not r[0]) and bool(r[1]), "temiz nakz=%s, bozuk nakz=%s" % tuple(r)
 
@@ -573,10 +573,10 @@ def _h124_iki_olcek() -> Tuple[bool, str]:
     gereksizdir.
     """
     from idrak import arc
-    from .iki_olcek import olcek_acilari, sagir_uydur
+    from .iki_olcek import iki_olcegin_acisi
     g = arc.yukle_hepsi("training")[:12]
-    kurulan = sum(1 for x in g if sagir_uydur(x).get("kuruldu"))
-    o = olcek_acilari(g)
+    kurulan = sum(1 for x in g if iki_olcegin_acisi(x, ne="sağîr").get("kuruldu"))
+    o = iki_olcegin_acisi(gorevler=g)
     if not o.get("yeterli_mi"):
         return False, "yeterli görev kurulamadı (%d)" % kurulan
     return (kurulan == len(g) and o["azamî_açı"] > 0.1), \

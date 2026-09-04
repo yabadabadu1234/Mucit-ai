@@ -82,8 +82,8 @@ from .operad import ortu_kapaniyor_mu
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
                       kontrollu_donme)
 from .zirh import mantigi_tek_supurmede_isaretle
-from .sahit import (artiklar, bolutle, capraz_kovaryans, delil_dizileri,
-                    kaide_uydur, kulli_kaide, nakz_bul)
+from .sahit import (artiklar, delil_dizileri, kaideyi_coz,
+                    nakz_bul, sahitleri_ayir)
 
 
 __all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
@@ -1738,7 +1738,7 @@ class Tertip(Meleke):
         # aramak, delili işlemden sonra aramaya benzer.
         verildi = d.sahitler is not None
         if not verildi:
-            b = bolutle(d.E)
+            b = sahitleri_ayir(d.E)
             d.sahitler = b.sahitler
             d.olcum.koy("tertip.kopma_eşiği", b.esik)
             d.olcum.koy("tertip.bölütleme_yeterli", float(b.yeterli))
@@ -2388,7 +2388,7 @@ class Kiyas(Meleke):
 
         sahitler = d.sahitler or []
         E = d.E
-        d.kaideler = [kaide_uydur(E, s) for s in sahitler]
+        d.kaideler = [kaideyi_coz(E, s, ne="tek") for s in sahitler]
         d.olcum.koy("kıyas.kaide_sayısı", float(len(d.kaideler)))
         if d.kaideler:
             oz = [float(np.mean(artiklar(E, s, R)))
@@ -3125,7 +3125,7 @@ class Tahkik(Meleke):
     yakınlığı değil **kökenle bağı** arar.
 
     **Küllî kaide burada mühürlenir** (kütük H6). Kaide, şahitlerin
-    çapraz kovaryanslarının kutupsal toplamıdır (`sahit.kulli_kaide`) --
+    çapraz kovaryanslarının kutupsal toplamıdır (`sahit.kaideyi_coz(ne="küllî")`) --
     fakat **nakzedilmiş şahitler dışarıda bırakılır**: kökeni bozuk
     şahitten alınan kaide taklittir, tahkik değildir.
 
@@ -3164,7 +3164,7 @@ class Tahkik(Meleke):
         temiz = [s for i, s in enumerate(sahitler) if i not in nakz]
         if temiz:
             # kaide ham duyu uzayında yaşar (bkz. 𝒪₁₈ Kıyas)
-            d.kaide = kulli_kaide([capraz_kovaryans(d.E, s) for s in temiz])
+            d.kaide = kaideyi_coz(sahitler=[kaideyi_coz(d.E, s, ne="kovaryans") for s in temiz], ne="küllî")
             kalan = [float(np.mean(artiklar(d.E, s, d.kaide)))
                      for s in temiz if artiklar(d.E, s, d.kaide).size]
             d.olcum.koy("tahkik.kaide_artığı",

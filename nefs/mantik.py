@@ -268,7 +268,7 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
     Ölçülen şey **aynı yöne bakıp bakmadıklarıdır**.
     """
     from .operad import ortu_kapaniyor_mu
-    from .iki_olcek import gorev_ozellikleri
+    from .iki_olcek import iki_olcegin_acisi
     from .melekeler import QNefs
     from .zihin_durumu import MAKAM_ADLARI, QAyar
 
@@ -277,7 +277,7 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
     oncul = [1.0 if k is not None else 0.0 for k in Y]
     klasik = float(yakin_gazali(oncul, bool(c["kurulabilir"])))
 
-    X, Yz = gorev_ozellikleri(gorev)
+    X, Yz = iki_olcegin_acisi(gorev, ne="öznitelik")
     E = np.concatenate([X, Yz], axis=1)
     q = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum)).idrak_et(
         E, tikaniklik=float(c["H1"]))

@@ -11,11 +11,11 @@ Burada yapılan başkadır:
      ölçülür. Ayıraç sembolü aranmaz; ardışık satırlar arasındaki
      mesafenin medyan+MAD eşiğini aştığı yerler bölüt sınırıdır. Yani
      "burada yeni bir örnek başlıyor" hükmü **duyudan** çıkar.
-  2. **Şahit başına kaide** (`kaide_uydur`): her bölüt kendi içinde
+  2. **Şahit başına kaide** (`kaideyi_coz(ne="tek")`): her bölüt kendi içinde
      girdi/çıktı diye ikiye ayrılır (en büyük iç kopma) ve aradaki
      dönüşüm **dik Procrustes** ile kapalı formda çözülür. Gradyan yok,
      adım yok: ``R = UVᵀ``, ``UΣVᵀ = SVD(ÇᵀG)``.
-  3. **Küllî kaide** (`kulli_kaide`): şahitlerin kaideleri kutupsal
+  3. **Küllî kaide** (`kaideyi_coz(ne="küllî")`): şahitlerin kaideleri kutupsal
      ortalama ile birleştirilir -- ``R̄ = polar(Σ Rₖ)``. Dik dizeylerin
      Öklit ortalaması dik değildir; kutupsal izdüşüm onu Stiefel'e geri
      indirir.
@@ -36,7 +36,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["Sahit", "Bolutleme", "bolutle", "kaide_uydur", "kulli_kaide",
+__all__ = ["Sahit", "Bolutleme", "sahitleri_ayir", "kaideyi_coz",
            "artiklar", "nakz_bul", "delil_dizileri"]
 
 
@@ -84,40 +84,66 @@ class Bolutleme:
         return len(self.sahitler)
 
 
-def _kopma_olcusu(Z: np.ndarray) -> np.ndarray:
-    """Ardışık satırlar arasındaki normalize mesafe; uzunluk ``n-1``."""
-    if len(Z) < 2:
-        return np.zeros(0)
-    fark = np.linalg.norm(np.diff(Z, axis=0), axis=1)
-    olcek = float(np.median(fark)) if fark.size else 0.0
-    return fark / (olcek + 1e-12)
+def sahitleri_ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
+                   ne: str = "bölütle", v=None, kopma=None,
+                   bas: int = 0, son: int = 0):
+    """DUYU AKIŞINI ŞAHİTLERE AYIRMAK -- **tek terkip** (kütük H225).
 
+    Küme: ``_kopma_olcusu`` + ``_mad_esigi`` + ``bolutle`` +
+    ``_ic_kesim``. Dördü tek amelin durakları idi: ardışık satırlar
+    arasındaki kopmayı ölç, medyan+MAD ile eşiği kur, akışı şahitlere
+    böl, ve her bölütün içindeki girdi/çıktı sınırını bul.
 
-def _mad_esigi(x: np.ndarray, kat: float = 3.0) -> float:
-    """Medyan + kat·MAD. Ortalama+std yerine bu seçildi: sınırların
-    kendisi uç değerdir, ortalamayı kendileri şişirir."""
-    if x.size == 0:
-        return float("inf")
-    med = float(np.median(x))
-    mad = float(np.median(np.abs(x - med)))
-    return med + kat * (mad if mad > 1e-12 else float(np.std(x)) + 1e-12)
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``kopma``       ardışık satırlar arasındaki normalize mesafe
+    ``eşik``        medyan + kat·MAD
+    ``bölütle``     ``Bolutleme`` -- şahitler ve denetlenebilir ölçüler
+    ``iç_kesim``    bölütün içindeki en büyük kopma
+    ==============  ==================================================
 
-
-def bolutle(Z: np.ndarray, asgari_uzunluk: int = 4,
-            kat: float = 3.0) -> Bolutleme:
-    """Duyu akışını şahitlere böl -- ayıraç sembolü **aramadan**.
-
-    ``asgari_uzunluk``: bir şahit hem girdi hem çıktı barındıracağı için
-    en az 4 satır olmalıdır (2+2). Daha kısa bölütler komşusuna katılır.
+    Ayıraç sembolü **aranmaz**: sınır, ham duyudaki kopmadan okunur.
+    Medyan + kat·MAD, ortalama+std yerine seçildi: sınırlar kendileri
+    aykırı değerlerdir ve ortalamayı yukarı çeker, yani eşik kendi
+    aradığı şeyden bozulurdu.
     """
+    if ne == "kopma":
+        Z = np.asarray(Z, float)
+        if len(Z) < 2:
+            return np.zeros(0)
+        fark = np.linalg.norm(np.diff(Z, axis=0), axis=1)
+        olcek = float(np.median(fark)) if fark.size else 0.0
+        return fark / (olcek + 1e-12)
+
+    if ne == "eşik":
+        x = np.asarray(v, float)
+        if x.size == 0:
+            return float("inf")
+        med = float(np.median(x))
+        mad = float(np.median(np.abs(x - med)))
+        return med + kat * (mad if mad > 1e-12 else float(np.std(x)) + 1e-12)
+
+    if ne == "iç_kesim":
+        ic = range(bas + 1, son)
+        aday = [(kopma[i - 1], i) for i in ic if 0 <= i - 1 < len(kopma)]
+        if not aday:
+            return bas + max(1, (son - bas) // 2)
+        return max(aday)[1]
+
+    if ne != "bölütle":
+        raise ValueError("bölütleme kipi bilinmiyor: %r" % (ne,))
+    # ``asgari_uzunluk``: bir şahit hem girdi hem çıktı barındıracağı
+    # için en az 4 satır olmalıdır (2+2). Daha kısa bölütler komşusuna
+    # katılır.
     n = len(Z)
     if n < 2 * asgari_uzunluk:
         return Bolutleme(sahitler=[], esik=float("nan"),
-                         kopmalar=_kopma_olcusu(Z), yeterli=False,
+                         kopmalar=sahitleri_ayir(Z, ne="kopma"), yeterli=False,
                          sebep="akış iki şahide bölünemeyecek kadar kısa")
 
-    kopma = _kopma_olcusu(Z)
-    esik = _mad_esigi(kopma, kat)
+    kopma = sahitleri_ayir(Z, ne="kopma")
+    esik = sahitleri_ayir(v=kopma, kat=kat, ne="eşik")
     aday = [i + 1 for i, v in enumerate(kopma) if v > esik]
 
     # İKİ MERTEBELİ AYIRAÇ. Bir bulmaca akışında iki tür kopma vardır:
@@ -145,24 +171,11 @@ def bolutle(Z: np.ndarray, asgari_uzunluk: int = 4,
 
     sahitler: List[Sahit] = []
     for no, (b, s) in enumerate(zip(sinirlar[:-1], sinirlar[1:])):
-        kesim = _ic_kesim(kopma, b, s)
+        kesim = sahitleri_ayir(kopma=kopma, bas=b, son=s, ne="iç_kesim")
         sahitler.append(Sahit(no=no, bas=b, kesim=kesim, son=s))
     return Bolutleme(sahitler=sahitler, esik=esik, kopmalar=kopma,
                      yeterli=len(sahitler) >= 2,
                      sebep="" if len(sahitler) >= 2 else "tek şahit")
-
-
-def _ic_kesim(kopma: np.ndarray, bas: int, son: int) -> int:
-    """Bölütün içindeki en büyük kopma = girdi/çıktı sınırı.
-
-    Uçlara yapışmasın diye en az birer satır bırakılır; aksi hâlde
-    girdi ya da çıktı boş kalır ve Procrustes tanımsızlaşır.
-    """
-    ic = range(bas + 1, son)
-    aday = [(kopma[i - 1], i) for i in ic if 0 <= i - 1 < len(kopma)]
-    if not aday:
-        return bas + max(1, (son - bas) // 2)
-    return max(aday)[1]
 
 
 # =====================================================================
@@ -198,61 +211,55 @@ def _cerceve(S: np.ndarray, sahit: Sahit
     return G, C
 
 
-def capraz_kovaryans(S: np.ndarray, sahit: Sahit) -> np.ndarray:
-    """``Aₖ = Çₖᵀ Gₖ`` -- şahidin kaide hakkındaki **ham şehadeti**.
+def kaideyi_coz(S=None, sahit=None, ne: str = "küllî", sahitler=None,
+                A=None):
+    """ŞAHİTLERDEN KÜLLÎ KAİDEYİ ÇÖZMEK -- **tek terkip** (kütük H225).
 
-    Bu, kaidenin kendisi değil ona dair delildir. Delillerin toplanabilir
-    olması burada mühimdir: ``argmin_R Σₖ ‖R Gₖ − Çₖ‖²`` çözümü
-    ``polar(Σₖ Aₖ)``dir. Yani şahitler **verilerini** birleştirir,
-    hükümlerini ortalamaz.
+    Küme: ``capraz_kovaryans`` + ``_polar`` + ``kaideyi_coz(ne="tek")`` +
+    ``kaideyi_coz(ne="küllî")``. Dördü tek formülün halkalarıydı::
+
+        A_k = Ç_kᵀ G_k                (şahidin ham şehadeti)
+        polar(A) = U Vᵀ               (en yakın dik dizey)
+        R_k = polar(A_k)              (tek şahidin kaidesi)
+        R̄  = polar(Σ_k A_k)          (şahitlerin MÜŞTEREK kaidesi)
+
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``kovaryans``   ``A_k = Ç_kᵀ G_k``
+    ``polar``       ``polar(A) = UVᵀ`` -- Frobenius'ta en yakın dik
+    ``tek``         ``R = argmin_{RᵀR=I} ‖R G − Ç‖_F``
+    ``küllî``       ``R̄ = polar(Σ_k A_k)``
+    ==============  ==================================================
+
+    **Çoklu şahit toplama kaidesi:** şahit kaideleri tek tek bulunup
+    ortalanmaz; çapraz kovaryanslar **toplanıp** tek bir kutupsal
+    izdüşüm alınır. Ortalama, dik dizeyler manifoldunda kalmaz.
     """
-    G, C = _cerceve(S, sahit)
-    if len(G) == 0:
-        return np.zeros((S.shape[1], S.shape[1]))
-    return C.T @ G
+    def polar(Am):
+        U, _, Vt = np.linalg.svd(np.asarray(Am, float))
+        return U @ Vt
 
+    if ne == "polar":
+        return polar(A)
+    if ne == "kovaryans":
+        G, C = _cerceve(S, sahit)
+        if len(G) == 0:
+            return np.zeros((S.shape[1], S.shape[1]))
+        return C.T @ G
 
-def _polar(A: np.ndarray) -> np.ndarray:
-    """``polar(A) = UVᵀ`` -- Frobenius mânâsında en yakın dik dizey."""
-    U, _, Vt = np.linalg.svd(A)
-    return U @ Vt
+    if ne == "tek":
+        G, _ = _cerceve(S, sahit)
+        if len(G) == 0:
+            return np.eye(S.shape[1])
+        return polar(kaideyi_coz(S, sahit, ne="kovaryans"))
 
-
-def kaide_uydur(S: np.ndarray, sahit: Sahit) -> np.ndarray:
-    """``R = argmin_{RᵀR=I} ‖R G − Ç‖_F`` -- dik Procrustes, kapalı form.
-
-    ``G``/``Ç``, ``_cerceve`` ile merkezlenip ölçeklenmiş girdi/çıktı
-    satırlarıdır. Satır sayıları eşit değilse kısası kadarı alınır; bu
-    bir yaklaşımdır ve ``artiklar`` ile ölçülür, gizlenmez.
-
-    Çözüm kapalı formdur: ``UΣVᵀ = SVD(ÇᵀG)`` ⟹ ``R = UVᵀ``. Ne adım
-    boyu vardır, ne yakınsama şartı, ne de gradyan.
-    """
-    G, _ = _cerceve(S, sahit)
-    if len(G) == 0:
-        return np.eye(S.shape[1])
-    return _polar(capraz_kovaryans(S, sahit))
-
-
-def kulli_kaide(caprazlar: Sequence[np.ndarray]) -> np.ndarray:
-    """``R̄ = polar(Σₖ Aₖ)`` -- şahitlerin **müşterek** kaidesi.
-
-    Girdi, şahit başına kaide değil şahit başına **çapraz kovaryanstır**
-    (`capraz_kovaryans`). Bunun sebebi ölçümle çıktı ve mühimdir:
-
-    Tek bir şahitte eşleşen satır sayısı ``t``, mana boyutundan (``d_sem``)
-    küçükse ``Aₖ``ın rütbesi eksiktir ve ``polar(Aₖ)``ın boş uzaydaki
-    kısmı **keyfîdir**. Kaideleri (yani ``polar(Aₖ)``ları) ortalamak, o
-    keyfî kısımları da ortalar; ölçüldü: aynı kurala tâbi beş şahitte
-    dışarıda-bırak artığı 0.42–1.04 çıkıyor, nakz 5/5 düşürüyordu.
-    Çapraz kovaryanslar toplanınca rütbe birikir ve kaide belirlenir --
-    ki şahitliğin mânâsı zaten budur: bir şahit tek başına yetmez,
-    beraberce yeter.
-    """
-    if not caprazlar:
+    if ne != "küllî":
+        raise ValueError("kaide kipi bilinmiyor: %r" % (ne,))
+    if not sahitler:
         raise ValueError("şehadet yok")
-    return _polar(np.sum(np.stack([np.asarray(a, float) for a in caprazlar]),
-                         axis=0))
+    return polar(np.sum(np.stack([np.asarray(a, float) for a in sahitler]),
+                        axis=0))
 
 
 # =====================================================================
@@ -296,7 +303,9 @@ def _tolerans(S: np.ndarray, sahitler: Sequence[Sahit],
     """
     if not sahitler:
         return float("inf")
-    R_hep = kulli_kaide([capraz_kovaryans(S, s) for s in sahitler])
+    R_hep = kaideyi_coz(
+        sahitler=[kaideyi_coz(S, s, ne="kovaryans") for s in sahitler],
+        ne="küllî")
     R_bos = _bos_kaide(S.shape[1], tohum=len(sahitler) * 1000 + S.shape[1])
     kendi = [float(np.mean(a)) for a in
              (artiklar(S, s, R_hep) for s in sahitler) if a.size]
@@ -333,12 +342,12 @@ def delil_dizileri(S: np.ndarray, sahitler: Sequence[Sahit],
     """
     if tol is None:
         tol = _tolerans(S, sahitler, kaideler)
-    caprazlar = [capraz_kovaryans(S, s) for s in sahitler]
+    caprazlar = [kaideyi_coz(S, s, ne="kovaryans") for s in sahitler]
     deliller: List[np.ndarray] = []
     for k in range(len(sahitler)):
         satir = []
         for i in range(len(sahitler)):
-            R = _polar(caprazlar[k] + caprazlar[i])
+            R = kaideyi_coz(ne="polar", A=caprazlar[k] + caprazlar[i])
             a = artiklar(S, sahitler[i], R)
             satir.append(float(np.mean(a) <= tol) if a.size else 0.0)
         deliller.append(np.array(satir))
@@ -375,7 +384,7 @@ def nakz_bul(S: np.ndarray, sahitler: Sequence[Sahit],
                 "kalan": list(range(m)), "sebep": "en az iki şahit lazım"}
     if tol is None:
         tol = _tolerans(S, sahitler, kaideler)
-    caprazlar = [capraz_kovaryans(S, s) for s in sahitler]
+    caprazlar = [kaideyi_coz(S, s, ne="kovaryans") for s in sahitler]
     kalan = list(range(m))
     nakz: List[int] = []
     artik = [float("nan")] * m
@@ -383,7 +392,7 @@ def nakz_bul(S: np.ndarray, sahitler: Sequence[Sahit],
         tur: List[Tuple[float, int]] = []
         for j in kalan:
             digerleri = [caprazlar[k] for k in kalan if k != j]
-            R_eksik = kulli_kaide(digerleri) if digerleri else caprazlar[j]
+            R_eksik = kaideyi_coz(sahitler=digerleri, ne="küllî") if digerleri else caprazlar[j]
             a = artiklar(S, sahitler[j], R_eksik)
             ort = float(np.mean(a)) if a.size else float("inf")
             tur.append((ort, j))
@@ -393,7 +402,7 @@ def nakz_bul(S: np.ndarray, sahitler: Sequence[Sahit],
             break
         nakz.append(j)
         kalan.remove(j)
-    R_kulli = kulli_kaide([caprazlar[k] for k in kalan] or caprazlar)
+    R_kulli = kaideyi_coz(sahitler=[caprazlar[k] for k in kalan] or caprazlar, ne="küllî")
     return {"nakz": sorted(nakz), "artık": artik, "tolerans": float(tol),
             "kaide": R_kulli, "kalan": kalan, "sebep": ""}
 
@@ -417,14 +426,14 @@ def _akis_kur(m: int, ds: int, t: int, bozuk: Optional[int] = None,
 
 
 def _bir_deneme(baslik: str, S: np.ndarray) -> List[str]:
-    b = bolutle(S)
+    b = sahitleri_ayir(S)
     s = ["%s" % baslik,
          "  bulunan şahit: %d   eşik=%.3f   yeterli=%s"
          % (len(b), b.esik, b.yeterli)]
     for x in b.sahitler:
         s.append("    şahit %d: [%2d,%2d) kesim=%2d" % (x.no, x.bas, x.son, x.kesim))
     if b.yeterli:
-        K = [kaide_uydur(S, x) for x in b.sahitler]
+        K = [kaideyi_coz(S, x, ne="tek") for x in b.sahitler]
         n = nakz_bul(S, b.sahitler, K)
         s.append("  tolerans=%.4f   nakz=%s" % (n["tolerans"], n["nakz"]))
         s.append("  dışarıda-bırak artıkları: %s"

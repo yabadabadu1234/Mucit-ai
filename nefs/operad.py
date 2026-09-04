@@ -163,7 +163,7 @@ def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
         raise ValueError("örtü kipi bilinmiyor: %r" % (ne,))
     from .melekeler import QNefs
     from .zihin_durumu import QAyar
-    from .iki_olcek import gorev_ozellikleri
+    from .iki_olcek import iki_olcegin_acisi
 
     gorevler = arc.yukle_hepsi("training")[:int(n_gorev)]
     H1, S = [], []
@@ -171,7 +171,7 @@ def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
         c = ortu_kapaniyor_mu(gv)
         if c["yama"] < 2:
             continue
-        X, Y = gorev_ozellikleri(gv)
+        X, Y = iki_olcegin_acisi(gv, ne="öznitelik")
         if len(X) == 0:
             continue
         E = np.concatenate([X, Y], axis=1)

@@ -836,7 +836,7 @@ class Kademeler:
         A = I.ciftler[0][0]
 
         def _iki_olcek():
-            from .iki_olcek import gorev_ozellikleri
+            from .iki_olcek import iki_olcegin_acisi
 
             class _G:
                 ad, kaynak = "kademe", "kademe"
@@ -1326,12 +1326,12 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
 
     if ne == "dalga":
         try:
-            from .iki_olcek import gorev_ozellikleri
+            from .iki_olcek import iki_olcegin_acisi
             from .operad import ortu_kapaniyor_mu
             from .melekeler import QNefs
             from .zihin_durumu import MAKAM_ADLARI, QAyar
 
-            X, Y = gorev_ozellikleri(gorev)
+            X, Y = iki_olcegin_acisi(gorev, ne="öznitelik")
             if len(X) == 0:
                 return None
             E = np.concatenate([X, Y], axis=1)
