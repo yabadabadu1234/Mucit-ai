@@ -384,9 +384,8 @@ def test_reel_schrodinger_isareti():
 
 def test_hartley_kosegen_evrisim_degil():
     """M29: RHT'de köşegen çarpan ancak çift simetride evrişim."""
-    from matematik.geometri import (cift_simetrik_yap, dolasimli_hata, evrisim,
-                              hartley_carpim_naif, hartley_evrisim,
-                              rht, rht_dizeyi)
+    from matematik.geometri import (cift_simetrik_yap, dolasimli_hata,
+                                    evrisim, hartley, hartley_evrisim)
 
     N = 8
     H = hartley(N=N, ne="dizey")
@@ -401,7 +400,7 @@ def test_hartley_kosegen_evrisim_degil():
     f, g = rr.normal(size=N), rr.normal(size=N)
     sol = hartley(evrisim(f, g))
     Ff, Gg = hartley(f), hartley(g)
-    assert np.abs(sol - hartley_carpim_naif(Ff, Gg)).max() > 1.0
+    assert np.abs(sol - hartley_evrisim(Ff, Gg, naif=True)).max() > 1.0
     assert np.abs(sol - hartley_evrisim(Ff, Gg)).max() < 1e-11
 
 

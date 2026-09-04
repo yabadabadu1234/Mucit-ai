@@ -19,7 +19,7 @@ from matematik import geometri as me
 @pytest.mark.parametrize("N", [4, 8, 16, 64, 256])
 def test_rht_dik_simetrik_involutif(N):
     """Kaynak DOĞRU: RHT dik, simetrik ve kendi tersi."""
-    H = ha.rht_dizeyi(N)
+    H = ha.hartley(N=N, ne="dizey")
     assert np.abs(H.T @ H - np.eye(N)).max() < 1e-12
     assert np.abs(H @ H - np.eye(N)).max() < 1e-12
     assert np.abs(H - H.T).max() < 1e-12
@@ -28,13 +28,13 @@ def test_rht_dik_simetrik_involutif(N):
 @pytest.mark.parametrize("N", [8, 64, 512, 1024])
 def test_hizli_rht_dizeyle_ayni(N):
     x = np.random.default_rng(0).normal(size=N)
-    assert np.abs(ha.rht_dizeyi(N) @ x - ha.rht(x)).max() < 1e-10
+    assert np.abs(ha.hartley(N=N, ne="dizey") @ x - ha.hartley(x)).max() < 1e-10
 
 
 @pytest.mark.parametrize("N", [16, 64])
 def test_rht_kendi_tersi(N):
     x = np.random.default_rng(1).normal(size=N)
-    assert np.abs(ha.irht(ha.rht(x)) - x).max() < 1e-11
+    assert np.abs(ha.hartley(ha.hartley(x)) - x).max() < 1e-11
 
 
 @pytest.mark.parametrize("N", [8, 16, 64])
@@ -42,8 +42,8 @@ def test_hartley_evrisim_kaidesi_dogru(N):
     """M29: doğru kaide çarpım değildir."""
     r = np.random.default_rng(2)
     f, g = r.normal(size=N), r.normal(size=N)
-    sol = ha.rht(ha.evrisim(f, g))
-    F, G = ha.rht(f), ha.rht(g)
+    sol = ha.hartley(ha.evrisim(f, g))
+    F, G = ha.hartley(f), ha.hartley(g)
     assert np.abs(sol - ha.hartley_evrisim(F, G)).max() < 1e-10
 
 
@@ -52,15 +52,15 @@ def test_naif_carpim_kaidesi_YANLIS(N):
     """M29 şahidi: naif çarpım gerçekten tutmuyor."""
     r = np.random.default_rng(2)
     f, g = r.normal(size=N), r.normal(size=N)
-    sol = ha.rht(ha.evrisim(f, g))
-    F, G = ha.rht(f), ha.rht(g)
-    assert np.abs(sol - ha.hartley_carpim_naif(F, G)).max() > 1.0
+    sol = ha.hartley(ha.evrisim(f, g))
+    F, G = ha.hartley(f), ha.hartley(g)
+    assert np.abs(sol - ha.hartley_evrisim(F, G, naif=True)).max() > 1.0
 
 
 def test_kosegen_suzgec_ancak_cift_simetrikse_evrisim():
     """M29: RHT'de köşegen çarpan tek başına evrişim değildir."""
     N = 8
-    H = ha.rht_dizeyi(N)
+    H = ha.hartley(N=N, ne="dizey")
     r = np.random.default_rng(1).normal(size=N)
     assert ha.dolasimli_hata(H.T @ np.diag(r) @ H) > 0.1
     rc = ha.cift_simetrik_yap(r)
@@ -204,7 +204,7 @@ def test_M9_householder_butun_durumu_negatiflemiyor(tohum):
     r = np.random.default_rng(tohum)
     d = 8
     v = r.normal(size=d); v /= np.linalg.norm(v)
-    U = me.householder(v)
+    U = me.kapi_kur("yansıma", v=v)
     psi = r.normal(size=d); psi /= np.linalg.norm(psi)
     assert np.linalg.norm(U(psi) + psi) > 0.5          # −Ψ DEĞİL
     assert np.linalg.norm(U(psi)) == pytest.approx(1.0)  # norm korunuyor
@@ -217,7 +217,7 @@ def test_M9_genlik_ancak_izdusumle_siliniyor():
     d = 8
     v = r.normal(size=d); v /= np.linalg.norm(v)
     psi = r.normal(size=d); psi /= np.linalg.norm(psi)
-    U, P = me.householder(v), me.izdusum_sifirlama(v)
+    U, P = me.kapi_kur("yansıma", v=v), me.kapi_kur("silme", v=v)
     assert abs(v @ U(psi)) > 1e-6                 # yansımada bileşen KALIYOR
     assert abs(v @ P(psi)) < 1e-12                # izdüşümde siliniyor
     assert np.linalg.norm(P(psi)) < 1.0           # ama norm düşüyor (üniter değil)
@@ -226,7 +226,7 @@ def test_M9_genlik_ancak_izdusumle_siliniyor():
 
 def test_M11_kok_p_kosegeni_uniter_degil():
     P = np.array([0.4, 0.3, 0.2, 0.1])
-    M = me.olcum_isleci_kok_p(P)
+    M = me.kapi_kur("ölçüm", P=P)
     A = M.dizey()
     assert M.dik is False
     assert np.abs(A.T @ A - np.eye(4)).max() > 0.5
@@ -235,11 +235,11 @@ def test_M11_kok_p_kosegeni_uniter_degil():
 
 def test_M13_so2_uniter_ve_uc_aralik():
     for th in (0.02, 0.5, math.pi / 4):
-        G = me.so2_dondurme(th, 2).dizey()
+        G = me.kapi_kur("so2", theta=th, D=2).dizey()
         assert np.abs(G.T @ G - np.eye(2)).max() < 1e-14
-    sek = me.so2_dondurme(math.pi / 4, 2).dizey() @ np.array([1.0, 0.0])
+    sek = me.kapi_kur("so2", theta=math.pi / 4, D=2).dizey() @ np.array([1.0, 0.0])
     assert sek[0] ** 2 == pytest.approx(0.5)
-    yakin = me.so2_dondurme(0.02, 2).dizey() @ np.array([1.0, 0.0])
+    yakin = me.kapi_kur("so2", theta=0.02, D=2).dizey() @ np.array([1.0, 0.0])
     assert yakin[0] ** 2 > 0.999
 
 
@@ -265,8 +265,8 @@ def test_M30_genel_isaret_olculemez():
 def test_permutasyon_ve_kosegen_dik():
     D = 16
     r = np.random.default_rng(0)
-    for k in (me.permutasyon(r.permutation(D)),
-              me.kosegen_isaret(r.choice([-1.0, 1.0], size=D))):
+    for k in (me.kapi_kur("permütasyon", perm=r.permutation(D)),
+              me.kapi_kur("işaret", isaret=r.choice([-1.0, 1.0], size=D))):
         M = k.dizey()
         assert np.abs(M.T @ M - np.eye(D)).max() < 1e-14
 
@@ -275,13 +275,13 @@ def test_givens_zinciri_dik():
     D = 12
     r = np.random.default_rng(1)
     ciftler = [(0, 1), (2, 3), (1, 4), (5, 9)]
-    G = me.givens_zinciri(r.uniform(0, 6, 4), ciftler, D)
+    G = me.kapi_kur("givens", aci=r.uniform(0, 6, 4), ciftler=ciftler, D=D)
     M = G.dizey()
     assert np.abs(M.T @ M - np.eye(D)).max() < 1e-13
 
 
 def test_hartley_kapisi_involutif():
     D = 32
-    K = me.hartley_kapisi(D)
+    K = me.kapi_kur("hartley", D=D)
     x = np.random.default_rng(0).normal(size=D)
     assert np.abs(K(K(x)) - x).max() < 1e-11

@@ -336,12 +336,15 @@ def test_hlevel_sirasi():
     from matematik import tip_teorisi as L
     from matematik import tip_teorisi as S
     Z = S.Tamsayi()                        # kapalı, somut bir tip
-    a, b, c = (C.nf(L.iz_butun(Z)), C.nf(L.iz_onerme(Z)),
-               C.nf(L.iz_kume(Z)))
+    # KÜME 7 tevhidinden sonra (H226) üç mertebe tek merdivendedir:
+    # ``kac_mertebeden(X, n)``; n = -2 büzülebilir, -1 önerme, 0 küme.
+    buz, one, kum = (L.kac_mertebeden(Z, -2), L.kac_mertebeden(Z, -1),
+                     L.kac_mertebeden(Z, 0))
+    a, b, c = C.nf(buz), C.nf(one), C.nf(kum)
     # Üç mertebe ÜÇ AYRI terim; aynı olsalardı hLevel ayrımı kalmazdı.
-    assert not C.esdeger_mi(L.iz_butun(Z), L.iz_onerme(Z))
-    assert not C.esdeger_mi(L.iz_onerme(Z), L.iz_kume(Z))
-    assert not C.esdeger_mi(L.iz_butun(Z), L.iz_kume(Z))
+    assert not C.esdeger_mi(buz, one)
+    assert not C.esdeger_mi(one, kum)
+    assert not C.esdeger_mi(buz, kum)
     assert a is not None and b is not None and c is not None
 
 
