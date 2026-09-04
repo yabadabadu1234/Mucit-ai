@@ -149,17 +149,6 @@ KALINTILAR: Dict[str, Tuple[TNorm, Kalinti]] = {
 
 
 
-TNORMLAR: Dict[str, TNorm] = {
-    "Łukasiewicz": ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[0],
-    "Gödel (min)": ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[0],
-    "çarpım": ikisi_birden_ne_kadar(ne="çarpım", tur="çekirdek")[0],
-    "nilpotent min": ikisi_birden_ne_kadar(ne="nilpotent min", tur="çekirdek")[0],
-    "Schweizer-Sklar p=2": ikisi_birden_ne_kadar(ne="Schweizer-Sklar", p=2.0, tur="çekirdek")[0],
-    "Schweizer-Sklar p=0.5": ikisi_birden_ne_kadar(ne="Schweizer-Sklar", p=0.5, tur="çekirdek")[0],
-    "Yager p=2": ikisi_birden_ne_kadar(ne="Yager", p=2.0, tur="çekirdek")[0],
-    "Dombi p=2": ikisi_birden_ne_kadar(ne="Dombi", p=2.0, tur="çekirdek")[0],
-    "en zayıf (drastic)": ikisi_birden_ne_kadar(ne="en zayıf", tur="çekirdek")[0],
-}
 
 
 

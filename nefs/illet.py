@@ -68,7 +68,7 @@ from __future__ import annotations
 
 from typing import Dict, List, Optional, Sequence, Set, Tuple
 
-from fitrat.ayrisma import Cizge, d_ayrik_mi
+from matematik.fitrat import Cizge, tesir_kapali_mi
 
 __all__ = ["alan_cizgesi", "zaman_cizgesi", "cevrimler", "kelam_ayrismasi",
            "rapor"]
@@ -200,10 +200,10 @@ def kelam_ayrismasi() -> Dict[str, object]:
     Z: List[str] = []
     for a in HUKUM_ALANLARI:
         Z += yer.get(a, [])
-    ayrik = bool(d_ayrik_mi(g, [yer["veri"][0]], [yer["kelam"][T]], Z))
+    ayrik = bool(tesir_kapali_mi(g, [yer["veri"][0]], [yer["kelam"][T]], Z))
     # Şartsız hâl: hüküm alanlarına şart koşulmazsa elbette bağlıdır;
     # bu, ölçütün kör olmadığının şahididir.
-    ayrik_sartsiz = bool(d_ayrik_mi(g, [yer["veri"][0]],
+    ayrik_sartsiz = bool(tesir_kapali_mi(g, [yer["veri"][0]],
                                     [yer["kelam"][T]], []))
     # Doğrudan yolu açan melekeler: aynı ilanda hem ``veri`` hem ``kelam``.
     from .melekeler import QAKIS, qsicil
