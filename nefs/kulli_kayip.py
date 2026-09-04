@@ -135,8 +135,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
     from .gaye import gaye_kos
     from .melekeler import bec_faz_kilidi
     from .zihin_durumu import QYazmac
-    from .sadakat import sadakat_intaci, sadakat_kapisi
-    from .tertip import tertip_kos
+    from .zirh import mantigi_tek_supurmede_isaretle
 
     E = np.asarray(E, float)
     B = E.shape[0] if E.ndim == 3 else 1
@@ -164,7 +163,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
         S_once = _entropi() if sinif_olcumu else 0.0
         nefs.s[no].kosu(q, nefs.p)
         if nefs.sadakat:
-            sadakat_kapisi(q, nefs.p)
+            mantigi_tek_supurmede_isaretle(q, nefs.p, ne="işaret")
         if sinif_olcumu:
             fark = _entropi() - S_once
             # Aynı meleke sırada iki kere geçebilir; tesirleri toplanır.
@@ -215,11 +214,11 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
             okumalar[int(no)] = d if eski is None else {
                 k: min(v, eski.get(k, v)) for k, v in d.items()}
     if nefs.sadakat:
-        q.iz.kesme += tertip_kos(q)
+        q.iz.kesme += mantigi_tek_supurmede_isaretle(q, ne="usul")
     if nefs.gaye:
         q.iz.kesme += gaye_kos(q, nefs.p)
     if nefs.sadakat:
-        sadakat_intaci(q)
+        mantigi_tek_supurmede_isaretle(q, ne="intaç")
     bec_faz_kilidi(q)
     q.iz.kesme_hakiki = float(max(0.0, 1.0 - q.y.sadakat()))
     q.y.normalize()
@@ -324,7 +323,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     # çözücü olmalıdır. ΔS açılarla değişir, yani bu ölçü hakikaten
     # öğrenilebilir -- kesme gibi yapısal değil.
     if dS:
-        from .nizam import sinif_ihlali
+        from .zirh import taahhude_yuzlestir
         from .melekeler import qsicil
         sic = qsicil()
         for no, d in sorted(dS.items()):
@@ -332,7 +331,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
             if m is None:
                 continue
             hepsi.append(Olcum(
-                "𝒪%d.nizam" % no, 1.0 - sinif_ihlali(m.SINIF, d),
+                "𝒪%d.nizam" % no, 1.0 - taahhude_yuzlestir(m.SINIF, d),
                 OlcuUzayi("nizam_uyumu", 0.0, 1.0, True)))
     o = q.olcumler()
     for ad, _kac in q.ayar.kulli_alanlar:

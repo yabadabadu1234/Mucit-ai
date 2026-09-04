@@ -108,7 +108,7 @@ from ogrenme.hoca import HocaAyari, hoca_egit            # noqa: E402
 from ogrenme.fct import (gauss_chebyshev_lobatto_dugumleri,  # noqa: E402
                          hizli_chebyshev_donusumu)
 from ogrenme.sta import karsit_adiyabatik_surus          # noqa: E402
-from ogrenme.zirh import DortluTopolojikZirh             # noqa: E402
+from nefs.zirh import zirh_giydir                        # noqa: E402
 
 __all__ = ["EgitimAyari", "KISA_CPU", "ORTA", "AZAMI_KAGGLE",
            "tek_iplik_zorla", "KulliDalgaTalimMotoru",
@@ -406,7 +406,6 @@ class KulliDalgaTalimMotoru:
     def __init__(self, ayar: Optional[EgitimAyari] = None) -> None:
         self.ayar = ayar or KISA_CPU
         self.meleke_manifoldu = melekeleri_kur(meleke_sayisi=44)
-        self.topolojik_zirh = DortluTopolojikZirh()
         self.izafi_mevki = IzafiMevki2D()
         self.faz_tablosu = statik_faz_tablosu_oku(
             derece=self.ayar.qsvt_derecesi, beta=self.ayar.beta_maksimum)
@@ -451,7 +450,7 @@ class KulliDalgaTalimMotoru:
         """Bab III, IV, V, VI gereğince tek makro QSVT dalga adımı."""
         t0 = time.perf_counter()
         H_dimag = self.meleke_manifoldu.hamiltonyen_uret()
-        H_zirhli, zirh = self.topolojik_zirh.tatbik_et(H_dimag)
+        H_zirhli, zirh = zirh_giydir(H_dimag)
         mizan = self.meleke_manifoldu.bgcm_mizan_enerjisi()
         H_toplam = H_zirhli + self.ayar.lambda_mizan * mizan * np.eye(
             H_zirhli.shape[0])

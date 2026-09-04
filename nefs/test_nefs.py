@@ -768,23 +768,23 @@ def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
     ``CZ``/``Z`` ile kurulduğu için Clifford'dur ve stabilizer
     çerçevesinde **tam** temsil edilir -- kesme yok, ``2^n`` açılmıyor.
     """
-    from .kod_uzayi import hukum_kod_uzayi, kod_uzayi_dagilimi
+    from .zirh import muhru_stabilizerle_yuzlestir as _muhur
 
     n = 4
-    duz = kod_uzayi_dagilimi(hukum_kod_uzayi(n, []))
+    duz = _muhur(None, n=n, cz_ciftleri=[])["P_stab"]
     assert np.allclose(duz, 1.0 / (1 << n), atol=1e-9), duz
 
     # ``CZ`` bir FAZ kapısıdır: taban dağılımını DEĞİŞTİRMEZ. Bu, kütük
     # H107'nin ölçülmüş dersinin müstakil bir teyididir -- işaret tek
     # başına marjinali oynatmaz, sönme girişimden gelir.
-    isaretli = kod_uzayi_dagilimi(hukum_kod_uzayi(n, [(0, 1)]))
+    isaretli = _muhur(None, n=n, cz_ciftleri=[(0, 1)])["P_stab"]
     assert np.allclose(isaretli, duz, atol=1e-9)
 
     # Fakat GENLİKTE fark vardır ve işaret oradadır.
     from kuantum.stabilizer import StabilizerDurum
     Y = np.array([[1, 1, 0, 0]], dtype=np.int64)
     g0 = np.asarray(StabilizerDurum.arti(n).genlik(Y)).ravel()[0]
-    g1 = np.asarray(hukum_kod_uzayi(n, [(0, 1)]).genlik(Y)).ravel()[0]
+    g1 = np.asarray(_muhur(None, n=n, cz_ciftleri=[(0, 1)])["kod"].genlik(Y)).ravel()[0]
     assert abs(g1 + g0) < 1e-9, (g0, g1)          # işaret çevrilmiş
 
 
@@ -1184,7 +1184,7 @@ def test_nizam_cetveli_tam_ve_tutarli():
        *işarete* bakıyordu, sıfır da hiçbir cihete ters düşmediği için
        hiç çözmeyen 𝒪₅ Tecrit tam not alıyordu.
     """
-    from .nizam import NIZAM_BANDI, SINIF_CIHETI, sinif_ihlali
+    from .zirh import NIZAM_BANDI, SINIF_CIHETI, taahhude_yuzlestir
     from .melekeler import nizam_cetveli
 
     cetvel = nizam_cetveli()
@@ -1201,20 +1201,20 @@ def test_nizam_cetveli_tam_ve_tutarli():
         assert chi is None or chi >= 1, (no, chi)
 
     # Bölgenin içi sıfır, dışı müsbet.
-    assert sinif_ihlali("kurucu", +0.7) == 0.0
-    assert sinif_ihlali("kurucu", -0.7) > 0.1
-    assert sinif_ihlali("çözücü", -0.7) == 0.0
-    assert sinif_ihlali("çözücü", +0.7) > 0.1
-    assert sinif_ihlali("koruyucu", 0.5 * NIZAM_BANDI) == 0.0
-    assert sinif_ihlali("koruyucu", 20.0 * NIZAM_BANDI) > 0.1
+    assert taahhude_yuzlestir("kurucu", +0.7) == 0.0
+    assert taahhude_yuzlestir("kurucu", -0.7) > 0.1
+    assert taahhude_yuzlestir("çözücü", -0.7) == 0.0
+    assert taahhude_yuzlestir("çözücü", +0.7) > 0.1
+    assert taahhude_yuzlestir("koruyucu", 0.5 * NIZAM_BANDI) == 0.0
+    assert taahhude_yuzlestir("koruyucu", 20.0 * NIZAM_BANDI) > 0.1
     # H157'nin asıl şartı: hiçbir şey yapmamak da ihlâldir.
     for sinif in ("kurucu", "çözücü"):
-        assert sinif_ihlali(sinif, 0.0) > 0.0, sinif
-        assert sinif_ihlali(sinif, -0.0) > 0.0, sinif
+        assert taahhude_yuzlestir(sinif, 0.0) > 0.0, sinif
+        assert taahhude_yuzlestir(sinif, -0.0) > 0.0, sinif
     # ...ve eksiklik ölçüsü sıfırda **düz değil**, eğimlidir: eğitim
     # ona yol bulabilsin. (İşaret ölçüsü tam burada düzdü.)
     c = SINIF_CIHETI["çözücü"]
-    assert sinif_ihlali("çözücü", -0.01) < sinif_ihlali("çözücü", 0.0), c
+    assert taahhude_yuzlestir("çözücü", -0.01) < taahhude_yuzlestir("çözücü", 0.0), c
 
 
 def test_taksimat_ceridenin_kendi_sayisini_veriyor():
@@ -1419,31 +1419,30 @@ def test_zirh_dordu_de_KIRMIZIYA_donebiliyor():
     """Gaye ölçüsü: dördü de sıfırken L=0, biri bozukken L büyük."""
     import math
     import numpy as np
-    from kuantum.tda import vietoris_rips
-    from nefs.zirh import (betti_kaybi, koho_kaybi, sheaf_uyumsuzlugu,
-                           homotopi_kaybi, zirh_kaybi, sheaf_izdusumu)
+    from nefs.zirh import (vietoris_rips, delikleri_say, yolun_farki,
+                           ek_yeri_tutuyor_mu, zirh_kaybi)
     from nefs.zihin_durumu import donme
 
     aci = np.linspace(0, 2 * math.pi, 8, endpoint=False)
     cember = np.stack([np.cos(aci), np.sin(aci)], axis=1)
     Dc = np.sqrt(((cember[:, None] - cember[None]) ** 2).sum(2))
-    assert betti_kaybi(vietoris_rips(Dc, 0.9, azami_boyut=2), 1)["kayıp"] == 1.0
+    assert delikleri_say(vietoris_rips(Dc, 0.9, azami_boyut=2), 1)["kayıp"] == 1.0
 
     rng = np.random.default_rng(0)
     iki = np.vstack([rng.normal(size=(6, 2)) * 0.2,
                      rng.normal(size=(6, 2)) * 0.2 + 10.0])
     Di = np.sqrt(((iki[:, None] - iki[None]) ** 2).sum(2))
-    assert koho_kaybi(vietoris_rips(Di, 0.8, azami_boyut=1), 0)["kayıp"] == 1.0
-    assert koho_kaybi(vietoris_rips(Di, 16.0, azami_boyut=1), 0)["kayıp"] == 0.0
+    assert delikleri_say(vietoris_rips(Di, 0.8, azami_boyut=1), 0)["kayıp"] == 1.0
+    assert delikleri_say(vietoris_rips(Di, 16.0, azami_boyut=1), 0)["kayıp"] == 0.0
 
     a = np.array([1.0, 2.0, 3.0])
-    assert sheaf_uyumsuzlugu(a, a) == 0.0
-    assert sheaf_uyumsuzlugu(a, a + 0.5) > 0.0
+    assert ek_yeri_tutuyor_mu(a, a)["uyumsuzluk"] == 0.0
+    assert ek_yeri_tutuyor_mu(a, a + 0.5)["uyumsuzluk"] > 0.0
     # uyum tamken izdüşüm KİMLİĞE gitmeli (hiçbir şey söndürmemeli)
-    assert np.allclose(sheaf_izdusumu(a, a), np.eye(3), atol=1e-6)
+    assert np.allclose(ek_yeri_tutuyor_mu(a, a)["izdüşüm"], np.eye(3), atol=1e-6)
 
-    assert homotopi_kaybi([donme(0.4), donme(-0.4)])["kayıp"] < 1e-12
-    assert homotopi_kaybi([donme(0.4), donme(0.1)])["kayıp"] > 0.1
+    assert yolun_farki([donme(0.4), donme(-0.4)])["sapma"] < 1e-12
+    assert yolun_farki([donme(0.4), donme(0.1)])["sapma"] > 0.1
 
     # Küllî kayıp: dördü sıfırken TAM sıfır (kaydırma doğru mu)
     assert abs(zirh_kaybi()["kayıp"]) < 1e-12

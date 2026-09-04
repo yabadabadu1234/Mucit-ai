@@ -139,7 +139,6 @@ import kuantum.kapilar  # [uzuv] Kapılar — tek ve çok kübitli üniter opera
 import kuantum.ceride  # [gölge] Ceridenin üç kapalı-form babı: FCT, STA, Fubini-Study
 import kuantum.qsvt  # [uzuv] QSVT — blok kodlama, kuantum sinyal işleme ve tekil değer dönüşümü
 import kuantum.surekli  # [uzuv] Sürekli değişkenli (CV) fotonik operatörler — kesilmiş Fock uzayında
-import kuantum.tda  # [uzuv] TDA — kombinatoryal Laplasyen, Betti sayıları ve kalıcı homoloji
 import kuantum.test_kuantum  # [şahit] kuantum test takımı
 import kuantum.test_kuantum_ileri  # [şahit] ``kuantum.surekli``, ``kuantum.topolojik``, ``kuantum.eniyileme`` sınamaları
 import kuantum.test_yazmac_tevhid  # [şahit] KÜME 1 tevhidinin şahitleri -- altı dosya tek çipte, ölçüyle
@@ -157,7 +156,6 @@ import local_run.entry  # [koşucu] (şerhsiz)
 import main.egitim  # [uzuv] Küllî Dimağ'ın eğitimi -- ARC metniyle, **gradyan inişi olmadan**
 import nefs.hamiltonyen  # [uzuv] Uzaya mahsus Hamiltonyenler ve kuantum evrimi
 import idrak.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur
-import ogrenme.zirh_mizan  # [uzuv] Enine topolojik zırh -- **her uzaya mahsus**, katman değil kesit (kütük H23)
 
 # ------------------------------------------------------------------
 #  mizan
@@ -186,7 +184,6 @@ import nefs.zirh  # [uzuv] Dörtlü topolojik zırh -- gaye: çelişkisiz mana m
 import nefs.ogda  # [hakem] OGDA -- kaybın min-max olduğunun farkedilmesi ve doğru çözücüsü
 import kuantum.kubit_taksimati  # [uzuv] 22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir
 import nefs.ttkan  # [hakem] TT-KAN -- ceridenin hız hükmünün fiilî hesabı
-import nefs.kod_uzayi  # [uzuv] MANTIK KOD UZAYI -- hüküm bloğunun **stabilizer** temsili
 import nefs.kopru  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
 import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
 import nefs.qkaide  # [uzuv] KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta
@@ -391,8 +388,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'QSVT — blok kodlama, kuantum sinyal işleme ve tekil değer dönüşümü'),
     ('kuantum.surekli', 'uzuv',
      'Sürekli değişkenli (CV) fotonik operatörler — kesilmiş Fock uzayında'),
-    ('kuantum.tda', 'uzuv',
-     'TDA — kombinatoryal Laplasyen, Betti sayıları ve kalıcı homoloji'),
     ('kuantum.test_kuantum', 'şahit',
      'kuantum test takımı'),
     ('kuantum.test_kuantum_ileri', 'şahit',
@@ -411,8 +406,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Uzaya mahsus Hamiltonyenler ve kuantum evrimi'),
     ('idrak.kategori', 'uzuv',
      '20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur'),
-    ('ogrenme.zirh_mizan', 'uzuv',
-     'Enine topolojik zırh -- **her uzaya mahsus**, katman değil kesit (kütük H23)'),
     ('kuantum.fubini', 'uzuv',
      'Fubini-Study güdümlü DETERMİNİSTİK ağaç okuması -- x* = argmax g⁺·∇log P; '
      'metrik hakikaten kurulur, kısaltma olduğu ``fubini_tam_kiyas`` ile ölçülür'),
@@ -458,8 +451,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir; eklem ölçüsü'),
     ('nefs.ttkan', 'hakem',
      'TT-KAN -- ceridenin 154 MB/sn hükmünün fiilen sayılmış FLOP hesabı'),
-    ('nefs.kod_uzayi', 'uzuv',
-     'MANTIK KOD UZAYI -- hüküm bloğunun **stabilizer** temsili'),
     ('nefs.kopru', 'uzuv',
      'FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati'),
     ('nefs.kule', 'uzuv',

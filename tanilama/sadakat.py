@@ -79,7 +79,7 @@ from nefs.melekeler import QNefs
 from nefs.qegitim import belirtecleri_kodla
 from nefs.melekeler import QAKIS, qsicil
 from nefs.zihin_durumu import QAyar, QYazmac
-from nefs.sadakat import sadakat_intaci, sadakat_kapisi
+from nefs.zirh import mantigi_tek_supurmede_isaretle
 
 __all__ = ["sadakat_olcusu", "haritala", "rapor"]
 
@@ -191,7 +191,7 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
         t0 = time.perf_counter()
         sicil[no].kosu(q, nefs.p)
         if kalp:
-            sadakat_kapisi(q, nefs.p)      # KALP: muafiyetsiz, her adımda
+            mantigi_tek_supurmede_isaretle(q, nefs.p, ne="işaret")      # KALP: muafiyetsiz, her adımda
         simdi = _kutleler(q)
         satirlar.append({
             "adım": adim, "no": no, "ad": sicil[no].ad,
@@ -208,7 +208,7 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
         })
         onceki = simdi
     if kalp:
-        sadakat_intaci(q)                  # işaretler burada söner
+        mantigi_tek_supurmede_isaretle(q, ne="intaç")                  # işaretler burada söner
         son = _kutleler(q)
         satirlar.append({"adım": len(satirlar), "no": 0, "ad": "«sadakat intâcı»",
                          "tenakuz": son["tenakuz"], "ayniyet": son["ayniyet"],
@@ -265,13 +265,13 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
     # --- İKİNCİ TEMSİLLE YÜZLEŞTİRME (H88'in dersi: karşılaştıracak
     # ikinci bir temsil olmadığı için kusur aylarca görünmedi).
     try:
-        from nefs.kod_uzayi import yuzlestir
+        from nefs.zirh import muhru_stabilizerle_yuzlestir
         from nefs.melekeler import QNefs as _QN
         from nefs.qegitim import belirtecleri_kodla as _bk
         _ay = QAyar(tohum=tohum)
         _E = _bk([1, 2, 3, 4, 5, 6], _ay.satir_kubiti, 16)
         _q = _QN(tohum, _ay).idrak_et(_E)
-        yz = yuzlestir(_q)
+        yz = muhru_stabilizerle_yuzlestir(_q)
         s += ["", "STABİLİZER YÜZLEŞTİRMESİ (kuantum/stabilizer.py):",
               "  hüküm bloğu %d kübit, MPS ile Clifford temsili arası"
               " tvd = %.4f" % (yz["kübit"], yz["tvd"]),

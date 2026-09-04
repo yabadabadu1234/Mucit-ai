@@ -20,7 +20,7 @@ import pytest
 
 from kuantum import devre as dv
 from kuantum import kapilar as kp
-from kuantum import tda
+from nefs import zirh as tda
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -388,8 +388,8 @@ def test_sinir_operatoru_kare_sifir():
         P = np.random.default_rng(tohum).normal(size=(9, 3))
         K = tda.vietoris_rips(_mesafe(P), 2.4, azami_boyut=3)
         for k in (1, 2, 3):
-            B1 = tda.sinir_operatoru(K, k)
-            B2 = tda.sinir_operatoru(K, k + 1)
+            B1 = tda.delikleri_say(K, k, "sınır")
+            B2 = tda.delikleri_say(K, k + 1, "sınır")
             if B1.size and B2.size:
                 assert np.max(np.abs(B1 @ B2)) < 1e-12, (tohum, k)
 
@@ -398,7 +398,7 @@ def test_laplasyen_simetrik_ve_psd():
     P = np.random.default_rng(1).normal(size=(8, 2))
     K = tda.vietoris_rips(_mesafe(P), 1.6, azami_boyut=2)
     for k in (0, 1):
-        D = tda.kombinatoryal_laplasyen(K, k)
+        D = tda.delikleri_say(K, k, "laplasyen")
         if D.size == 0:
             continue
         assert np.max(np.abs(D - D.T)) < 1e-12
@@ -414,15 +414,15 @@ def test_laplasyen_simetrik_ve_psd():
 ])
 def test_bilinen_sekillerde_betti(ad, P, eps, b0, b1):
     K = tda.vietoris_rips(_mesafe(P), eps, azami_boyut=2)
-    assert tda.betti(K, 0) == b0, (ad, "β₀")
-    assert tda.betti(K, 1) == b1, (ad, "β₁")
+    assert tda.delikleri_say(K, 0, "betti") == b0, (ad, "β₀")
+    assert tda.delikleri_say(K, 1, "betti") == b1, (ad, "β₁")
 
 
 def test_iki_ayri_cember():
     P = np.vstack([_cember(12), _cember(12) + np.array([10.0, 0.0])])
     K = tda.vietoris_rips(_mesafe(P), 0.6, azami_boyut=2)
-    assert tda.betti(K, 0) == 2
-    assert tda.betti(K, 1) == 2
+    assert tda.delikleri_say(K, 0, "betti") == 2
+    assert tda.delikleri_say(K, 1, "betti") == 2
 
 
 def test_euler_karakteristigi_betti_ile_uyusuyor():
@@ -431,15 +431,15 @@ def test_euler_karakteristigi_betti_ile_uyusuyor():
                    (np.array([[0., 0.], [1., 0.], [0.5, 0.87]]), 1.5),
                    (np.random.default_rng(2).normal(size=(8, 2)), 1.5)):
         K = tda.vietoris_rips(_mesafe(P), eps, azami_boyut=2)
-        chi_sayim = tda.euler_karakteristigi(K)
-        chi_betti = sum((-1) ** k * tda.betti(K, k) for k in (0, 1, 2))
+        chi_sayim = tda.delikleri_say(K, 0, "euler")
+        chi_betti = sum((-1) ** k * tda.delikleri_say(K, k, "betti") for k in (0, 1, 2))
         assert chi_sayim == chi_betti, (chi_sayim, chi_betti)
 
 
 def test_tikhonov_cekirdegi_yok_ediyor():
     """K25: ``Δ+εI``in çekirdeği boştur; β eşikli sayımla okunur."""
     K = tda.vietoris_rips(_mesafe(_cember(16)), 0.5, azami_boyut=2)
-    D = tda.kombinatoryal_laplasyen(K, 0)
+    D = tda.delikleri_say(K, 0, "laplasyen")
     oz = np.linalg.eigvalsh(D)
     assert int(np.sum(np.abs(oz) < 1e-9)) == 1        # β₀ = 1
     for eps in (1e-9, 1e-6, 1e-3):
@@ -456,27 +456,27 @@ def test_vietoris_rips_gecersiz_girdi():
 def test_barkod_ve_kalicilik_suzgeci():
     P = _cember(24) + 0.03 * np.random.default_rng(3).normal(size=(24, 2))
     esikler = np.linspace(0.05, 2.2, 40)
-    c0 = tda.barkod(_mesafe(P), esikler, k=0)
-    c1 = tda.barkod(_mesafe(P), esikler, k=1)
+    c0 = tda.dogum_olum_cetveli(_mesafe(P), esikler, k=0)["çubuklar"]
+    c1 = tda.dogum_olum_cetveli(_mesafe(P), esikler, k=1)["çubuklar"]
     assert len(c0) == 24                        # her nokta bir bileşen
     assert len(c1) >= 1                         # çemberin deliği
     # Uzun süzgeç kısa çubukları eliyor:
-    assert len(tda.kalicilik_suzgeci(c0, 0.5)) < len(c0)
+    assert len([x for x in c0 if x[1]-x[0] >= 0.5]) < len(c0)
     # Hakiki delik süzgeçten geçiyor:
-    assert len(tda.kalicilik_suzgeci(c1, 0.5)) >= 1
+    assert len([x for x in c1 if x[1]-x[0] >= 0.5]) >= 1
     assert max(d - b for b, d in c1) > 1.0
 
 
 def test_bottleneck_bilinen_haller():
     A = [(0.0, 1.0), (0.2, 0.9)]
-    assert tda.bottleneck(A, A) == pytest.approx(0.0)
-    assert tda.bottleneck([], []) == pytest.approx(0.0)
+    assert tda.cetveller_arasi_mesafe(A, A) == pytest.approx(0.0)
+    assert tda.cetveller_arasi_mesafe([], []) == pytest.approx(0.0)
     # Boş barkodla: en uzun çubuğun yarısı
-    assert tda.bottleneck(A, []) == pytest.approx(0.5)
+    assert tda.cetveller_arasi_mesafe(A, []) == pytest.approx(0.5)
     # Bir çubuk uzatıldı:
-    assert tda.bottleneck(A, [(0.0, 1.3), (0.2, 0.9)]) == pytest.approx(0.3)
+    assert tda.cetveller_arasi_mesafe(A, [(0.0, 1.3), (0.2, 0.9)]) == pytest.approx(0.3)
     # Köşegene yakın bir çubuk eklendi:
-    assert tda.bottleneck(A, A + [(0.5, 0.52)]) == pytest.approx(0.01)
+    assert tda.cetveller_arasi_mesafe(A, A + [(0.5, 0.52)]) == pytest.approx(0.01)
 
 
 def test_bottleneck_metrik_aksiyomlari():
@@ -491,9 +491,9 @@ def test_bottleneck_metrik_aksiyomlari():
         A = rastgele_barkod(int(rng.integers(1, 5)))
         B = rastgele_barkod(int(rng.integers(1, 5)))
         C = rastgele_barkod(int(rng.integers(1, 5)))
-        ab = tda.bottleneck(A, B)
-        assert ab == pytest.approx(tda.bottleneck(B, A))     # simetri
-        ac, cb = tda.bottleneck(A, C), tda.bottleneck(C, B)
+        ab = tda.cetveller_arasi_mesafe(A, B)
+        assert ab == pytest.approx(tda.cetveller_arasi_mesafe(B, A))     # simetri
+        ac, cb = tda.cetveller_arasi_mesafe(A, C), tda.cetveller_arasi_mesafe(C, B)
         assert ab <= ac + cb + 1e-9, (ab, ac, cb)            # üçgen
 
 

@@ -7656,3 +7656,85 @@ Padişahın hükmü: *"Diğer dosyalarla irtibat kopsun zaten... bir kez en
 son yaparsın bağlantıları."* Çağrılar `tokenize` ile -- metin ve yorum
 içine **dokunmadan** -- yeniden bağlandı: `nefs/melekeler.py` içinde 93
 çağrı, ayrıca `nefs/test_nefs.py` ve `docs/kaynak/test_tashih_kuantum.py`.
+
+---
+
+## H222 -- KÜME 3 tevhidi: dokuz dosya tek zırh çipinde
+
+Padişahın kat'î usulüyle icra edildi: **(a) evvelâ her dosya kendi
+içinde terkip, (b) sonra dosyaların birleştirilmesi, (c) sonra birleşik
+gövdede bir daha terkip.** Ve kat'î isim kaidesi: her terkibe mahiyetinin
+**halkça ifade edilmiş ismi** verildi.
+
+Asıllar `yedek/kume3_asillari/` altında şahit olarak durur; hiçbir cevher
+seçilip imha edilmedi.
+
+### Adım (a) -- dosya-içi terkip
+
+| dosya | eriyen asıllar | terkip |
+|---|---|---|
+| `nefs/zirh.py` | `sheaf_uyumsuzlugu, sheaf_izdusumu` | `ek_yeri_tutuyor_mu` |
+| | `hodge_laplasyeni, hodge_bettisi, betti_kaybi, koho_kaybi` | `delikleri_say` |
+| | `wilson_cevrimi, homotopi_kaybi` | `yolun_farki` |
+| `ogrenme/zirh.py` | `_kompleks_kur, DortluTopolojikZirh.tatbik_et, zirh_kaybi_hesapla` | `operatore_zirh_giydir` |
+| `ogrenme/zirh_mizan.py` | `_betti0, zirh_uygula` | `dalgaya_zirh_giydir` |
+| `kuantum/tda.py` | `sinir_operatoru, kombinatoryal_laplasyen, betti, euler_karakteristigi` | `komplekti_oku` |
+| | `betti_egrisi, barkod, kalicilik_suzgeci` | `dogum_olum_cetveli` |
+| | `_kupsuz_mesafe, _kosegene, bottleneck, _eslesme_var_mi, wasserstein_p` | `cetveller_arasi_mesafe` |
+| `nefs/isaret.py` | `cok_kontrollu_isaret, sifir_yansitmasi` | `isaret_vur` |
+| `nefs/sadakat.py` | `sadakat_acilari, _kontrollu_z, sadakat_kapisi, sadakat_intaci` | `yalani_isaretle_ve_sondur` |
+| `nefs/tertip.py` | `_degiskenler, Usul.yasaklar, usul_yasaklari, tertip_kos` | `yasaklari_isaretle` |
+| `nefs/nizam.py` | `sinif_ihlali, yuzlestir` | `taahhude_yuzlestir` |
+| `nefs/kod_uzayi.py` | `hukum_kod_uzayi, kod_uzayi_dagilimi, yuzlestir` | `muhru_stabilizerle_yuzlestir` |
+
+39 fonksiyon → 15.
+
+### Adım (c) -- birleşik gövdede tekrar terkip
+
+| küme (halkça mahiyeti) | eriyen | terkip |
+|---|---|---|
+| **şekilde kaç delik var** | `komplekti_oku` + `delikleri_say` (iki dosyanın Hodge okuması) | `delikleri_say` |
+| **zırh giydirmek** | `zirh_uygula` + `operatore_zirh_giydir` + `dalgaya_zirh_giydir` | `zirh_giydir` |
+| **mantık dışı kolu işaretleyip söndürmek** | `isaret_vur` + `yasaklari_isaretle` + `yalani_isaretle_ve_sondur` (9 asıl isim) | `mantigi_tek_supurmede_isaretle` |
+| **kendini gösterme** | 7 ayrı `rapor()` + `_gosterim` | `rapor` |
+| **küllî zırh kaybı** | `zirh_kaybi` + nizamın kayba giden ucu + mühür ucu | `zirh_kaybi` |
+
+Nihaî çip: **21 üst seviye isim**, `nefs/zirh.py`. Dokuz dosya 2023
+satırdan tek dosyada 1537 satıra indi.
+
+### Zabıttaki üç çelişki de kapandı
+
+1. **Topolojik süzgeç ikiliği.** Analitik projektörler (soyut Ĥ) ile MPS
+   dalga süzgeçleri iki ayrı dosyada, iki ayrı kod yolundaydı. Artık tek
+   kapı: `zirh_giydir(hedef)` -- `hedef` dizeyse projektör, yazmaçsa
+   O(N) enine kapı. Hangi veçhe olduğunu **hedef** tayin eder, çağıran
+   değil.
+2. **Sadakat/tertip MPO israfı.** Üç dosyada üç ayrı D=2 MPO kurulumu
+   vardı ve **intaç hangi alanları kapsayacağını çağıran taraftan
+   öğreniyordu** -- yanlış kurulunca vurulan işaret hiçbir zaman genliğe
+   dönmüyordu. Terkipte işaretlenen ve yansıtılan alanlar **aynı
+   listeden** (`HUKUM_ALANLARI`) çıkar; cebren ayrışamazlar. Ayrıca
+   usullerin yasak cetveli artık **bir kere** kurulur: doğruluk tablosu
+   `θ`ya bağlı değildir, her koşuda yeniden sayılması saf israftı.
+3. **Nizam ve mühür dilsizliği.** Melekelerin ΔS taahhüdü ve Clifford
+   kod uzayı doğrulaması ana akışın dışında ayrı teftişlerdi. Artık
+   nizam ihlâli **beşinci ihlâl olarak** τ-yumuşak-âzamîye girer
+   (`w_nizam`), stabilizer TVD ise `mühür_tvd` anahtarında raporlanır --
+   kayba **girmez**, zira yapısal bir ölçüdür (H154).
+
+### Ölü kod ve mükerrerlikler, ölçülerek atıldı
+
+* `homotopi_kaybi` aynı sayıyı `W_sapması` ve `kayıp` diye iki anahtarda
+  döndürüyordu.
+* `_betti0` zincir-bileşen sayımının **üçüncü** kopyasıydı; artık
+  H221'de terkip edilen `devirler("zincir_β0", ·)` çağrılır.
+* Zırh tarafı her delik sayımında `kuantum.tda`ya inip `∂`yı kurduruyor,
+  sonra **kendi** özdeğer ayrışımını bir kere daha yapıyordu.
+* `zirh_kaybi_hesapla` gövdeyi kurup atan bir sarmalayıcıydı;
+  `DortluTopolojikZirh` tek alandan başka hâl tutmayan bir sınıftı.
+
+### İlga edilen sekiz dosya
+
+`ogrenme/zirh.py`, `ogrenme/zirh_mizan.py`, `kuantum/tda.py`,
+`nefs/sadakat.py`, `nefs/tertip.py`, `nefs/isaret.py`, `nefs/nizam.py`,
+`nefs/kod_uzayi.py`.

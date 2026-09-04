@@ -81,10 +81,10 @@ from .kule import ince, kaba
 from .operad import tikaniklik_kapisi
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
                       kontrollu_donme)
-from .sadakat import sadakat_intaci, sadakat_kapisi
+from .zirh import mantigi_tek_supurmede_isaretle
 from .sahit import (artiklar, bolutle, capraz_kovaryans, delil_dizileri,
                     kaide_uydur, kulli_kaide, nakz_bul)
-from .tertip import tertip_kos
+
 
 __all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
            "EKSIK_MELEKELER", 
@@ -903,8 +903,8 @@ def zirh_projektorleri(nokta: np.ndarray, D: int, eps: float,
       o, "her şey tek parça" yönüdür ve silinirse durum tamamen yok
       olurdu -- silinmesi gereken FAZLA bileşenlerdir.
     """
-    from kuantum.tda import vietoris_rips
-    from nefs.zirh import hodge_laplasyeni, sheaf_izdusumu
+    from nefs.zirh import (delikleri_say, ek_yeri_tutuyor_mu,
+                           vietoris_rips)
 
     X = np.atleast_2d(np.asarray(nokta, float))
     if X.shape[0] != int(D):
@@ -912,7 +912,7 @@ def zirh_projektorleri(nokta: np.ndarray, D: int, eps: float,
     Dm = np.sqrt(np.maximum(
         np.sum((X[:, None, :] - X[None, :, :]) ** 2, axis=2), 0.0))
     K = vietoris_rips(Dm, float(eps), azami_boyut=1)
-    L = hodge_laplasyeni(K, 0)
+    L = delikleri_say(K, 0, "laplasyen")
     if L.shape[0] != int(D):                       # tekil düğüm eksikse
         Z = np.zeros((int(D), int(D)))
         n = min(L.shape[0], int(D))
@@ -932,7 +932,8 @@ def zirh_projektorleri(nokta: np.ndarray, D: int, eps: float,
         Pk = np.eye(int(D)) - c @ c.T
     else:
         Pk = np.eye(int(D))
-    S = sheaf_izdusumu(X[:, 0], X[:, -1]) if X.shape[1] > 1 else np.eye(D)
+    S = (ek_yeri_tutuyor_mu(X[:, 0], X[:, -1])["izdüşüm"]
+         if X.shape[1] > 1 else np.eye(D))
     if S.shape[0] != int(D):                       # pragma: no cover
         S = np.eye(int(D))
     return {"S": S, "betti": Pb, "koho": Pk,
@@ -5689,12 +5690,12 @@ class QNefs:
         for no in self.sira:
             self.s[no].kosu(q, self.p)
             if self.sadakat:
-                sadakat_kapisi(q, self.p)
+                mantigi_tek_supurmede_isaretle(q, self.p, ne="işaret")
         if self.sadakat:
             # TERTİP: mantık usulleri süperpozisyonda koşar ve `mizan`
             # neyin yasak olduğunu söyler (H109). Ana akışa buradan
             # bağlanır -- artık `mizan` beylik değil tebaadır.
-            q.iz.kesme += tertip_kos(q)
+            q.iz.kesme += mantigi_tek_supurmede_isaretle(q, ne="usul")
         if self.gaye:
             # **GAYE DOĞUŞU (Dosya 4 / H122).** ``gaye`` alanı H108'den
             # beri tahsisliydi fakat ÖLÇÜLDÜ ve tam ``|0⟩``daydı: hiçbir
@@ -5706,7 +5707,7 @@ class QNefs:
         if self.sadakat:
             # İşaretlenen mantık dışı kollar burada SÖNER: faz farkı,
             # yansıtmayla genlik farkına çevrilir (H98'de ölçülen usul).
-            sadakat_intaci(q)
+            mantigi_tek_supurmede_isaretle(q, ne="intaç")
         if bec:
             bec_faz_kilidi(q)
         # **Ölçümden evvel durum, durum olmalıdır.** Kesme her vuruşta
