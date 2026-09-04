@@ -204,19 +204,33 @@ def dual_ozdeslikleri(n: int = 3) -> Dict[str, bool]:
 # =====================================================================
 # T86'nın tashihi burada YAPISAL olarak uygulanır: izin işlemcisi ``Pm``
 # adını taşır ve önerme değişkenleriyle çakışmaz.
-def O_(a: Onerme) -> Onerme:
-    """``Oφ`` -- ödev. Deontik ``□``."""
-    return kutu(a)
+def borc_mu_caiz_mi_yasak_mi(a: Onerme, ne: str = "ödev") -> Onerme:
+    """BORÇ MU, CAİZ Mİ, YASAK MI -- tek terkip (kütük H226).
 
+    Küme: ``O_``, ``Pm``, ``F_``. Üç isim, ``□``nun etrafına iki değil
+    işaretinin **nereye** konduğundan ibaretti:
 
-def Pm(a: Onerme) -> Onerme:
-    """``Pmφ ≡ ¬O¬φ`` -- caiz."""
-    return degil(kutu(degil(a)))
+    ==============  ====================  ==========================
+    ``ne``          formül                halkça
+    ==============  ====================  ==========================
+    ``ödev``        ``□φ``                yapılması gereken
+    ``caiz``        ``¬□¬φ``              yapılması yasak olmayan
+    ``yasak``       ``□¬φ``               yapılmaması gereken
+    ==============  ====================  ==========================
 
-
-def F_(a: Onerme) -> Onerme:
-    """``Fφ ≡ O¬φ`` -- yasak."""
-    return kutu(degil(a))
+    Deontik ``□`` alethik ``□``dan **seriliği** ile ayrılır (D:
+    ``□φ → ◇φ``); refleksiflik (T: ``□φ → φ``) deontik mantıkta
+    **istenmez**, zira "ödev olan hep yapılmış olurdu". Serilik şartının
+    ihmali bu üç kipin tutarlılığını çökertir ve
+    ``deontik_tutarlilik`` bunu ölçer.
+    """
+    if ne == "ödev":
+        return kutu(a)
+    if ne == "caiz":
+        return degil(kutu(degil(a)))
+    if ne == "yasak":
+        return kutu(degil(a))
+    raise ValueError("deontik kip bilinmiyor: %r" % (ne,))
 
 
 def deontik_tutarlilik(n: int = 3) -> Dict[str, object]:
@@ -227,7 +241,8 @@ def deontik_tutarlilik(n: int = 3) -> Dict[str, object]:
     ölçülür.
     """
     A = deg("p")
-    celiski = ve(O_(A), O_(degil(A)))
+    celiski = ve(borc_mu_caiz_mi_yasak_mi(A),
+                    borc_mu_caiz_mi_yasak_mi(degil(A)))
     seri, seri_disi = 0, 0
     for c in butun_cerceveler(n):
         # çelişkili ödev SAĞLANABİLİR mi? (bir değerleme ve dünya bul)
@@ -246,7 +261,9 @@ def deontik_tutarlilik(n: int = 3) -> Dict[str, object]:
         "seri_olmayanda_çelişkili_ödev": seri_disi,      # > 0 olmalı
         "D_çelişkili_ödevi_engelliyor": seri == 0,
         "Pm_ve_F_dualleri": all(
-            cerceve_gecerli_mi(ancak(Pm(A), degil(F_(A))), c)
+            cerceve_gecerli_mi(
+                ancak(borc_mu_caiz_mi_yasak_mi(A, "caiz"),
+                      degil(borc_mu_caiz_mi_yasak_mi(A, "yasak"))), c)
             for c in butun_cerceveler(n)),
     }
 
@@ -293,46 +310,48 @@ def ltl_dogruluk(f: Onerme, iz: Iz, isim: str = "") -> int:
     return a ^ b
 
 
-def G(mask: int, L: int) -> int:
-    """``Gφ``: ``t``den itibaren DAİMA. ``t ∈ Gφ ⟺ [t,L) ⊆ φ``."""
-    sonuc = 0
-    devam = True
-    for t in range(L - 1, -1, -1):
-        devam = ((mask >> t) & 1) and (devam if t < L - 1 else True)
-        if t == L - 1:
-            devam = bool((mask >> t) & 1)
-        if devam:
-            sonuc |= 1 << t
-    return sonuc
+def bundan_sonra(a: int, b: int = -1, L: int = 0,
+                 ne: str = "kadar") -> int:
+    """BUNDAN SONRA NE OLACAK -- tek terkip (kütük H226).
 
+    Küme: ``G`` (daima), ``F`` (bir an), ``U`` (-e kadar). Üçü ayrı
+    yazılmıştı; hâlbuki ikisi üçüncüsünün **tanımıdır**:
 
-def F(mask: int, L: int) -> int:
-    """``Fφ``: ``t``den itibaren BİR AN. ``t ∈ Fφ ⟺ [t,L) ∩ φ ≠ ∅``."""
-    sonuc = 0
-    gorulen = False
-    for t in range(L - 1, -1, -1):
-        gorulen = gorulen or bool((mask >> t) & 1)
-        if gorulen:
-            sonuc |= 1 << t
-    return sonuc
+        ``Fφ ≡ ⊤ U φ``          ``Gφ ≡ ¬(⊤ U ¬φ)``
 
+    Geriye tek çekirdek kalır ve o da **tek geriye doğru taramadır**:
 
-def U(a: int, b: int, L: int) -> int:
-    """``φ U ψ`` -- **T88'in tashihli hâli**: alt sınır ŞİMDİDİR.
+        ``t ∈ φUψ  ⟺  ψ(t) ∨ (φ(t) ∧ t+1 ∈ φUψ)``
 
-    ``t ∈ φUψ  ⟺  ∃ s ≥ t : ψ(s) ∧ ∀ r ∈ [t, s) : φ(r)``
+    Sonlu iz üstünde bu özyineleme ``L−1``den ``0``a bir taşımayla
+    okunur; ``O(L)``dur ve maskeler bit paralel tutulur.
 
-    Kaynak metinde alt sınır yoktu (``∀t' < t``), yani sonsuz geçmişte de
-    ``φ``nin sağlanması isteniyordu; "-e kadar" ise şimdiden başlar.
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``kadar``       ``a U b``
+    ``daima``       ``G a``
+    ``biran``       ``F a``
+    ==============  ==================================================
+
+    **T88'in tashihli hâli**: "-e kadar"ın alt sınırı **şimdidir**.
+    Kaynak metinde alt sınır yoktu (``∀t' < t``), yani sonsuz geçmişte
+    de ``φ``nin sağlanması isteniyordu; oysa "-e kadar" şimdiden başlar.
     """
+    tum = (1 << L) - 1
+    if ne == "daima":
+        a, b = tum, (~a) & tum          # G a = ¬(⊤ U ¬a)
+    elif ne == "biran":
+        a, b = tum, a                   # F a = ⊤ U a
+    elif ne != "kadar":
+        raise ValueError("zaman kipi bilinmiyor: %r" % (ne,))
     sonuc = 0
     tasima = False
     for t in range(L - 1, -1, -1):
-        # ψ(t)  ya da  φ(t) ∧ (t+1 ∈ φUψ)
         tasima = bool((b >> t) & 1) or (bool((a >> t) & 1) and tasima)
         if tasima:
             sonuc |= 1 << t
-    return sonuc
+    return (~sonuc) & tum if ne == "daima" else sonuc
 
 
 def ltl_ozdeslikleri(L: int = 6, deneme: int = 400,
@@ -353,13 +372,15 @@ def ltl_ozdeslikleri(L: int = 6, deneme: int = 400,
     }
     for _ in range(deneme):
         a, b = rng.randrange(1 << L), rng.randrange(1 << L)
-        if G(a, L) != (~F(~a & tum, L) & tum):
+        if bundan_sonra(a, L=L, ne="daima") != (~bundan_sonra(~a & tum, L=L, ne="biran") & tum):
             ozdeslik["Gφ ≡ ¬F¬φ"] = False
-        if F(b, L) != U(tum, b, L):
+        if bundan_sonra(b, L=L, ne="biran") != bundan_sonra(tum, b, L):
             ozdeslik["Fφ ≡ ⊤ U φ"] = False
-        if U(a, b, L) & ~F(b, L) & tum:
+        if bundan_sonra(a, b, L) & ~bundan_sonra(b, L=L, ne="biran") & tum:
             ozdeslik["φUψ ⟹ Fψ"] = False
-        if G(a & b, L) != (G(a, L) & G(b, L)):
+        if (bundan_sonra(a & b, L=L, ne="daima")
+                != bundan_sonra(a, L=L, ne="daima")
+                & bundan_sonra(b, L=L, ne="daima")):
             ozdeslik["G(φ∧ψ) ≡ Gφ ∧ Gψ"] = False
     return ozdeslik
 

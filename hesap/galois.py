@@ -47,8 +47,8 @@ import numpy as np
 
 __all__ = [
     "Z8", "SIFIR", "BIR", "ZETA", "I_BIRIMI", "KOK2",
-    "z8_dizey_carp", "z8_kayan", "kapi_H", "kapi_T", "kapi_S",
-    "kapi_X", "kapi_Z", "tam_devre", "kayan_devre",
+    "z8_dizey_carp", "z8_kayan", "kapi", "KAPI_ADLARI",
+    "tam_devre", "kayan_devre",
     "bit_uzunlugu", "genlik_karesi",
 ]
 
@@ -178,28 +178,43 @@ def bit_uzunlugu(M) -> int:
 #  Clifford + T kapıları — halkada KAPALI
 # ══════════════════════════════════════════════════════════════════════
 
-def kapi_H() -> List[List[Z8]]:
-    """``H = (1/√2)[[1,1],[1,−1]]`` — tam."""
-    u = Z8(1, 0, 0, 0, 1)
-    return [[u, u], [u, -u]]
+def kapi(ad: str = "H") -> List[List[Z8]]:
+    """HANGİ KAPI, TAM ARİTMETİKTE -- tek terkip (kütük H226).
+
+    Küme: ``kapi("H")``, ``kapi("T")``, ``kapi("S")``, ``kapi("X")``, ``kapi("Z")``.
+    Beş isim, tek bir cetvelin satırları idi ve hepsi aynı şeyi yapar:
+    Clifford+T üreteçlerinden birini ``ℤ[ζ₈][1/√2]`` halkasında **tam**
+    kurmak.
+
+    ==========  ================================  ====================
+    ``ad``      dizey                             halkada
+    ==========  ================================  ====================
+    ``H``       ``(1/√2)[[1,1],[1,−1]]``          ``1/√2`` üssüyle tam
+    ``T``       ``diag(1, ζ₈)``                   ``ζ₈`` tam
+    ``S``       ``diag(1, i) = diag(1, ζ₈²)``     ``i`` tam
+    ``X``       ``[[0,1],[1,0]]``                 tam
+    ``Z``       ``diag(1, −1)``                   tam
+    ==========  ================================  ====================
+
+    Hepsinin bu halkada tam yazılabilmesi, Clifford+T devrelerinin
+    **sıfır yuvarlama hatasıyla** çarpılabildiği anlamına gelir; kayan
+    noktaya yalnız rapor ânında inilir (``z8_kayan``).
+    """
+    if ad == "H":
+        u = Z8(1, 0, 0, 0, 1)
+        return [[u, u], [u, -u]]
+    if ad == "T":
+        return [[BIR, SIFIR], [SIFIR, ZETA]]
+    if ad == "S":
+        return [[BIR, SIFIR], [SIFIR, I_BIRIMI]]
+    if ad == "X":
+        return [[SIFIR, BIR], [BIR, SIFIR]]
+    if ad == "Z":
+        return [[BIR, SIFIR], [SIFIR, -BIR]]
+    raise ValueError("kapı bilinmiyor: %r" % (ad,))
 
 
-def kapi_T() -> List[List[Z8]]:
-    """``T = diag(1, ζ₈)`` — tam."""
-    return [[BIR, SIFIR], [SIFIR, ZETA]]
-
-
-def kapi_S() -> List[List[Z8]]:
-    """``S = diag(1, i) = diag(1, ζ²)`` — tam."""
-    return [[BIR, SIFIR], [SIFIR, I_BIRIMI]]
-
-
-def kapi_X() -> List[List[Z8]]:
-    return [[SIFIR, BIR], [BIR, SIFIR]]
-
-
-def kapi_Z() -> List[List[Z8]]:
-    return [[BIR, SIFIR], [SIFIR, -BIR]]
+KAPI_ADLARI: Tuple[str, ...] = ("H", "T", "S", "X", "Z")
 
 
 def z8_dizey_carp(A, B):
@@ -224,8 +239,8 @@ def _mv(A, v):
 
 def tam_devre(dizi: Sequence[str]) -> Dict[str, object]:
     """``|0⟩``a ``dizi`` kapılarını **tam** uygula; hiç yuvarlama yok."""
-    G = {"H": kapi_H(), "T": kapi_T(), "S": kapi_S(),
-         "X": kapi_X(), "Z": kapi_Z()}
+    G = {"H": kapi("H"), "T": kapi("T"), "S": kapi("S"),
+         "X": kapi("X"), "Z": kapi("Z")}
     v = [BIR, SIFIR]
     bitler = []
     for g in dizi:

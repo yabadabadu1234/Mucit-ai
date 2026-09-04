@@ -52,23 +52,44 @@ MASKE = (_terim_maskesi(S), _terim_maskesi(M), _terim_maskesi(P))
 
 
 # --- önerme biçimleri --------------------------------------------------
-def _A(m: int, x: int, y: int) -> bool:
-    return (m & MASKE[x] & ~MASKE[y]) == 0
+def bu_hukum_bu_modelde_tutuyor_mu(m: int, x: int, y: int, bicim: str,
+                                   maskeli: bool = False) -> bool:
+    """BU HÜKÜM BU MODELDE TUTUYOR MU -- tek terkip (kütük H226).
+
+    Küme: ``_A``, ``_E``, ``_I``, ``_O``. Dört isim, **tek** bit
+    ameliydi ve o amel şudur:
+
+        ``var = (m & S(x) & (P(y) yahut ~P(y))) != 0``
+
+    * **kemiyet** (küllî A,E / cüz'î I,O) neyin sorulduğunu söyler:
+      küllî böyle bir şeyin **yokluğunu** ister (``== 0``), cüz'î
+      **varlığını** (``!= 0``).
+    * **keyfiyet** (olumlu A,I / olumsuz E,O) yüklemin **tümleneceğini**
+      söyler -- ve iki eksen ``XOR`` ile kenetlenir:
+      ``tümlenmiş = (küllî ≠ olumsuz)``. Sebep cebrîdir: bir varlık
+      önermesini değillemek keyfiyeti çevirir, zira
+      ``¬∃(S ∧ ¬P)`` "her S P'dir" (A), ``¬∃(S ∧ P)`` ise
+      "hiçbir S P değildir" (E)dir.
+
+    Yâni dört biçim, iki ikili tercihin çarpımıdır ve Aristo'nun
+    karşıtlık murabbaı tam bu iki eksendir. Ayrı ayrı yazıldıklarında
+    ne murabba ne de o ``XOR`` görünüyordu.
+
+    ``maskeli=True`` iken ``x`` ve ``y`` terim indisi değil **doğrudan
+    maskedir**; aks-i nakîz (``¬P, ¬S``) böyle kurulur ve dört biçim
+    orada da ikinci kere yazılmaz.
+    """
+    if bicim not in ("A", "E", "I", "O"):
+        raise ValueError("önerme biçimi bilinmiyor: %r" % (bicim,))
+    kulli = bicim in ("A", "E")           # kemiyet: yokluk mu istenir
+    olumsuz = bicim in ("E", "O")         # keyfiyet
+    mx = x if maskeli else MASKE[x]
+    my = y if maskeli else MASKE[y]
+    var = (m & mx & (~my if kulli != olumsuz else my)) != 0
+    return (not var) if kulli else var
 
 
-def _E(m: int, x: int, y: int) -> bool:
-    return (m & MASKE[x] & MASKE[y]) == 0
-
-
-def _I(m: int, x: int, y: int) -> bool:
-    return (m & MASKE[x] & MASKE[y]) != 0
-
-
-def _O(m: int, x: int, y: int) -> bool:
-    return (m & MASKE[x] & ~MASKE[y]) != 0
-
-
-BICIM = {"A": _A, "E": _E, "I": _I, "O": _O}
+BICIMLER: Tuple[str, ...] = ("A", "E", "I", "O")
 
 BICIM_ADI = {
     "A": "Mûcebe-i Külliyye",
@@ -145,7 +166,8 @@ def gecerli_mi(sekil: int, darb: str,
                bos_olmayan: Iterable[int] = ()) -> bool:
     """``darb`` (üç harf: büyük öncül, küçük öncül, netice) geçerli mi?"""
     (bx, by), (kx, ky) = SEKIL[sekil]
-    fb, fk, fn = BICIM[darb[0]], BICIM[darb[1]], BICIM[darb[2]]
+    B = bu_hukum_bu_modelde_tutuyor_mu
+    fb, fk, fn = (lambda m, x, y, c=c: B(m, x, y, c) for c in darb[:3])
     for m in _modeller(frozenset(bos_olmayan)):
         if fb(m, bx, by) and fk(m, kx, ky) and not fn(m, S, P):
             return False
@@ -156,7 +178,8 @@ def karsi_model(sekil: int, darb: str,
                 bos_olmayan: Iterable[int] = ()) -> Optional[int]:
     """Geçersizse öncülleri doğrulayıp neticeyi yalanlayan bir model."""
     (bx, by), (kx, ky) = SEKIL[sekil]
-    fb, fk, fn = BICIM[darb[0]], BICIM[darb[1]], BICIM[darb[2]]
+    B = bu_hukum_bu_modelde_tutuyor_mu
+    fb, fk, fn = (lambda m, x, y, c=c: B(m, x, y, c) for c in darb[:3])
     for m in _modeller(frozenset(bos_olmayan)):
         if fb(m, bx, by) and fk(m, kx, ky) and not fn(m, S, P):
             return m
@@ -218,7 +241,9 @@ def aks_gecerli_mi(kaynak: str, hedef: str, ters: bool = True,
     ``ters=True`` ise hedefin terimleri ÇEVRİLİR (``P,S``); aks-i müstevî
     budur. ``ters=False`` iken hedef ``(S,P)`` üzerindedir.
     """
-    fk, fh = BICIM[kaynak], BICIM[hedef]
+    B = bu_hukum_bu_modelde_tutuyor_mu
+    def fk(m, x, y): return B(m, x, y, kaynak)
+    def fh(m, x, y): return B(m, x, y, hedef)
     x, y = (P, S) if ters else (S, P)
     for m in _modeller(frozenset(bos_olmayan)):
         if fk(m, S, P) and not fh(m, x, y):
@@ -232,21 +257,11 @@ def aks_nakiz_gecerli_mi(kaynak: str, hedef: str) -> bool:
     Değillenmiş terimler için maskeler tümleyendir; bit işlemleri aynı
     kalır, yalnız maske değişir.
     """
-    fk = BICIM[kaynak]
-    fh_ad = hedef
-
-    def uygula(m: int) -> bool:
-        mx, my = ~MASKE[P] & TUM, ~MASKE[S] & TUM
-        if fh_ad == "A":
-            return (m & mx & ~my) == 0
-        if fh_ad == "E":
-            return (m & mx & my) == 0
-        if fh_ad == "I":
-            return (m & mx & my) != 0
-        return (m & mx & ~my) != 0
+    B = bu_hukum_bu_modelde_tutuyor_mu
+    mx, my = ~MASKE[P] & TUM, ~MASKE[S] & TUM
 
     for m in range(256):
-        if fk(m, S, P) and not uygula(m):
+        if B(m, S, P, kaynak) and not B(m, mx, my, hedef, maskeli=True):
             return False
     return True
 

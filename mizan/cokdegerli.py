@@ -33,117 +33,134 @@ def _izgara(n: int = 21) -> List[float]:
 # =====================================================================
 #  T-normları ve kalıntıları
 # =====================================================================
-def t_lukasiewicz(a: float, b: float) -> float:
-    """``a ⊗ b = max(0, a+b−1)`` -- KUVVETLİ ve."""
-    return max(0.0, a + b - 1.0)
+def ikisi_birden_ne_kadar(a=None, b=None, ne: str = "Łukasiewicz",
+                          tur: str = "ve", p: float = 2.0):
+    """İKİSİ BİRDEN NE KADAR DOĞRU -- **tek terkip** (kütük H226).
 
+    Küme: sekiz t-normu (``t_lukasiewicz, t_godel, t_carpim, t_zayif,
+    t_nilpotent_minimum, t_schweizer_sklar, t_yager, t_dombi``) ve dört
+    kalıntısı (``i_lukasiewicz, i_godel, i_carpim,
+    i_nilpotent_minimum``). On iki isim, **tek** amelin durakları idi:
+    iki dereceli doğruluğu birleştirmek, yahut o birleştirmenin
+    **eşleniğini** (kalıntı) almak.
 
-def i_lukasiewicz(a: float, b: float) -> float:
-    """``a → b = min(1, 1−a+b)``."""
-    return min(1.0, 1.0 - a + b)
+    ==============  ==================================================
+    ``tur``         döndürdüğü
+    ==============  ==================================================
+    ``ve``          ``a ⊗ b`` -- iki önerme birden ne kadar doğru
+    ``ise``         ``a → b`` -- kalıntı (Galois eşleniği)
+    ``çekirdek``    ``(⊗, →)`` çifti; kalıntısı yoksa ``(⊗, None)``
+    ==============  ==================================================
 
+    Adlar: ``Łukasiewicz``, ``Gödel``, ``çarpım``, ``nilpotent min``,
+    ``en zayıf``, ``Schweizer-Sklar``, ``Yager``, ``Dombi``. Son üçü
+    ``p`` parametresi alır.
 
-def t_godel(a: float, b: float) -> float:
-    return min(a, b)
+    **T89 -- kalıntı eşlenikliği.** ``a → b = min(1, 1−a+b)``
+    alındığında eşlenik t-norm ``min(a,b)`` **değildir**; kuvvetli ve
+    ``a ⊗ b = max(0, a+b−1)``dir. Bu, kalıntı bağıntısının
+    ``a ⊗ b ≤ c ⟺ a ≤ (b → c)`` tek satırından çıkar ve
+    ``lukasiewicz_min_ile_bozulur`` bunu karşı örnekle mühürler.
+    ``min`` ile eşlenen kalıntı Gödel gerektirmesidir, Łukasiewicz'inki
+    değil.
 
-
-def i_godel(a: float, b: float) -> float:
-    return 1.0 if a <= b else b
-
-
-def t_carpim(a: float, b: float) -> float:
-    return a * b
-
-
-def i_carpim(a: float, b: float) -> float:
-    """``a → b``. **T90'ın tashihli hâli**: ``a = 0`` iken ``1``.
-
-    Kaynak metindeki ``min(1, b/a)`` ``a = 0``da tanımsızdır; kalıntı
-    biçiminde yazılınca hem tanım kümesi tamamlanır hem ``min``
-    gereksizleşir.
-    """
-    if a <= b:
-        return 1.0
-    return b / a                      # burada a > b ≥ 0, dolayısıyla a > 0
-
-
-def t_zayif(a: float, b: float) -> float:
-    """En zayıf t-normu (drastic product)."""
-    if a == 1.0:
-        return b
-    if b == 1.0:
-        return a
-    return 0.0
-
-
-def t_nilpotent_minimum(a: float, b: float) -> float:
-    """``a+b > 1`` ise ``min(a,b)``, değilse ``0``."""
-    return min(a, b) if a + b > 1.0 else 0.0
-
-
-def i_nilpotent_minimum(a: float, b: float) -> float:
-    return 1.0 if a <= b else max(1.0 - a, b)
-
-
-def t_schweizer_sklar(p: float) -> TNorm:
-    """**T95'in tashihli hâli**: ``max(0,·)`` biçimi yalnız ``p > 0`` için.
-
-    ``p < 0`` iken ``a^p + b^p − 1 > 0`` dâima sağlanır ve kesme yanlış
-    dala yönlendirir; negatif kol ayrı yazılır.
+    **T90 (çarpım kalıntısı):** ``min(1, b/a)`` ``a = 0``da tanımsızdır;
+    kalıntı biçiminde yazılınca hem tanım kümesi tamamlanır hem ``min``
+    gereksizleşir. **T94 (Dombi):** ``a = 0``da ``(1−a)/a`` patlar,
+    ``T(0,b) = 0`` dalı açıkça yazılır. **T95 (Schweizer-Sklar):**
+    ``max(0,·)`` kesmesi yalnız ``p > 0`` içindir; ``p < 0`` iken
+    ``a^p + b^p − 1 > 0`` dâima sağlanır ve kesme yanlış dala götürür.
     """
     def T(a: float, b: float) -> float:
-        if p > 0:
+        if ne == "Łukasiewicz":
+            return max(0.0, a + b - 1.0)          # KUVVETLİ ve
+        if ne == "Gödel":
+            return min(a, b)
+        if ne == "çarpım":
+            return a * b
+        if ne == "nilpotent min":
+            return min(a, b) if a + b > 1.0 else 0.0
+        if ne == "en zayıf":                      # drastic product
+            if a == 1.0:
+                return b
+            if b == 1.0:
+                return a
+            return 0.0
+        if ne == "Schweizer-Sklar":
             if a == 0.0 or b == 0.0:
                 return 0.0
-            return max(0.0, a ** p + b ** p - 1.0) ** (1.0 / p)
-        if a == 0.0 or b == 0.0:
-            return 0.0
-        return (a ** p + b ** p - 1.0) ** (1.0 / p)
-    return T
+            u = a ** p + b ** p - 1.0
+            return (max(0.0, u) if p > 0 else u) ** (1.0 / p)
+        if ne == "Yager":
+            return 1.0 - min(1.0, ((1 - a) ** p + (1 - b) ** p) ** (1.0 / p))
+        if ne == "Dombi":
+            if a <= 0.0 or b <= 0.0:
+                return 0.0
+            if a >= 1.0:
+                return b
+            if b >= 1.0:
+                return a
+            u = ((1 - a) / a) ** p + ((1 - b) / b) ** p
+            return 1.0 / (1.0 + u ** (1.0 / p))
+        raise ValueError("t-normu bilinmiyor: %r" % (ne,))
+
+    def I(a: float, b: float) -> float:
+        if ne == "Łukasiewicz":
+            return min(1.0, 1.0 - a + b)
+        if ne == "Gödel":
+            return 1.0 if a <= b else b
+        if ne == "çarpım":
+            return 1.0 if a <= b else b / a       # a > b ≥ 0 ⇒ a > 0
+        if ne == "nilpotent min":
+            return 1.0 if a <= b else max(1.0 - a, b)
+        raise ValueError("bu t-normunun kapalı kalıntısı yazılmadı: %r"
+                         % (ne,))
+
+    if tur == "çekirdek":
+        return T, (I if ne in KALINTILI else None)
+    if tur == "ve":
+        return T(float(a), float(b))
+    if tur == "ise":
+        return I(float(a), float(b))
+    raise ValueError("kip bilinmiyor: %r" % (tur,))
 
 
-def t_yager(p: float) -> TNorm:
-    def T(a: float, b: float) -> float:
-        return 1.0 - min(1.0, ((1 - a) ** p + (1 - b) ** p) ** (1.0 / p))
-    return T
+KALINTILI: Tuple[str, ...] = ("Łukasiewicz", "Gödel", "çarpım",
+                              "nilpotent min")
 
+TNORM_ADLARI: Tuple[Tuple[str, str, float], ...] = (
+    ("Łukasiewicz", "Łukasiewicz", 0.0),
+    ("Gödel (min)", "Gödel", 0.0),
+    ("çarpım", "çarpım", 0.0),
+    ("nilpotent min", "nilpotent min", 0.0),
+    ("Schweizer-Sklar p=2", "Schweizer-Sklar", 2.0),
+    ("Schweizer-Sklar p=0.5", "Schweizer-Sklar", 0.5),
+    ("Yager p=2", "Yager", 2.0),
+    ("Dombi p=2", "Dombi", 2.0),
+    ("en zayıf (drastic)", "en zayıf", 0.0),
+)
 
-def t_dombi(p: float) -> TNorm:
-    """**T94'ün tashihli hâli**: ``a=0`` yahut ``b=0`` sınır dalı açık.
+TNORMLAR: Dict[str, TNorm] = {
+    baslik: ikisi_birden_ne_kadar(ne=k, p=pp, tur="çekirdek")[0]
+    for baslik, k, pp in TNORM_ADLARI}
 
-    ``(1−a)/a`` ``a = 0``da tanımsızdır; oysa t-normu olmanın şartı
-    ``T(0,b) = 0``dır ve o dal açıkça yazılmalıdır.
-    """
-    def T(a: float, b: float) -> float:
-        if a <= 0.0 or b <= 0.0:
-            return 0.0
-        if a >= 1.0:
-            return b
-        if b >= 1.0:
-            return a
-        u = ((1 - a) / a) ** p + ((1 - b) / b) ** p
-        return 1.0 / (1.0 + u ** (1.0 / p))
-    return T
+KALINTILAR: Dict[str, Tuple[TNorm, Kalinti]] = {
+    k: ikisi_birden_ne_kadar(ne=k, tur="çekirdek") for k in KALINTILI}
+
 
 
 TNORMLAR: Dict[str, TNorm] = {
-    "Łukasiewicz": t_lukasiewicz,
-    "Gödel (min)": t_godel,
-    "çarpım": t_carpim,
-    "nilpotent min": t_nilpotent_minimum,
-    "Schweizer-Sklar p=2": t_schweizer_sklar(2.0),
-    "Schweizer-Sklar p=0.5": t_schweizer_sklar(0.5),
-    "Yager p=2": t_yager(2.0),
-    "Dombi p=2": t_dombi(2.0),
-    "en zayıf (drastic)": t_zayif,
+    "Łukasiewicz": ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[0],
+    "Gödel (min)": ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[0],
+    "çarpım": ikisi_birden_ne_kadar(ne="çarpım", tur="çekirdek")[0],
+    "nilpotent min": ikisi_birden_ne_kadar(ne="nilpotent min", tur="çekirdek")[0],
+    "Schweizer-Sklar p=2": ikisi_birden_ne_kadar(ne="Schweizer-Sklar", p=2.0, tur="çekirdek")[0],
+    "Schweizer-Sklar p=0.5": ikisi_birden_ne_kadar(ne="Schweizer-Sklar", p=0.5, tur="çekirdek")[0],
+    "Yager p=2": ikisi_birden_ne_kadar(ne="Yager", p=2.0, tur="çekirdek")[0],
+    "Dombi p=2": ikisi_birden_ne_kadar(ne="Dombi", p=2.0, tur="çekirdek")[0],
+    "en zayıf (drastic)": ikisi_birden_ne_kadar(ne="en zayıf", tur="çekirdek")[0],
 }
 
-KALINTILAR: Dict[str, Tuple[TNorm, Kalinti]] = {
-    "Łukasiewicz": (t_lukasiewicz, i_lukasiewicz),
-    "Gödel": (t_godel, i_godel),
-    "çarpım": (t_carpim, i_carpim),
-    "nilpotent min": (t_nilpotent_minimum, i_nilpotent_minimum),
-}
 
 
 # =====================================================================
@@ -211,8 +228,8 @@ def lukasiewicz_min_ile_bozulur(n: int = 21) -> Dict[str, object]:
     Łukasiewicz gerektirmesi ``min`` ile eşlenik DEĞİLDİR; bağıntının
     bozulduğu somut bir üçlü gösterilir.
     """
-    dogru = kalinti_saglaniyor_mu(t_lukasiewicz, i_lukasiewicz, n)
-    yanlis = kalinti_saglaniyor_mu(t_godel, i_lukasiewicz, n)
+    dogru = kalinti_saglaniyor_mu(ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[0], ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[1], n)
+    yanlis = kalinti_saglaniyor_mu(ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[0], ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[1], n)
     return {
         "⊗ = max(0,a+b−1) ile kalıntı sağlanıyor": dogru["sağlanıyor"],
         "⊗ = min ile kalıntı sağlanıyor": yanlis["sağlanıyor"],

@@ -44,7 +44,7 @@ __all__ = [
     "Nesne", "benzerlik", "temsil_gucu", "temsil_hukmu",
     "NyayaCikarim", "nyaya_degerlendir",
     "ANAPODEIKTOI", "anapodeiktos_dogrula", "butun_anapodeiktoslari_dogrula",
-    "mill_uyusma", "mill_ayrilik", "mill_birlesik", "mill_esdegisim",
+    "mill_usulu",
 ]
 
 
@@ -338,56 +338,70 @@ def butun_anapodeiktoslari_dogrula() -> List[Tuple[str, bool]]:
 Vaka = Tuple[FrozenSet[str], bool]   # (mevcut âmiller, netice oldu mu)
 
 
-def mill_uyusma(vakalar: Sequence[Vaka]) -> FrozenSet[str]:
-    """Uyuşma usulü: neticenin olduğu BÜTÜN vakalarda ortak olan âmiller."""
-    musbet = [a for a, n in vakalar if n]
-    if not musbet:
-        return frozenset()
-    ortak = set(musbet[0])
-    for a in musbet[1:]:
-        ortak &= a
-    return frozenset(ortak)
+USUL_AYRILIK, USUL_BIRLESIK = "ayrılık", "birleşik"
+USUL_ESDEGISIM = "eş_değişim"
 
 
-def mill_ayrilik(vakalar: Sequence[Vaka]) -> FrozenSet[str]:
-    """Ayrılık usulü: neticenin OLMADIĞI hiçbir vakada bulunmayan âmiller.
+def mill_usulu(vakalar=None, ne: str = "uyuşma", olcumler=None):
+    """MİLL'İN İSTİKRÂ USULLERİ -- tek terkip (kütük H226).
 
-    Uyuşmadan farkı: burada eleme menfî vakalarla yapılır.  Netice
-    yokken de bulunan bir âmil illet olamaz.
+    Küme: ``mill_uyusma``, ``mill_ayrilik``, ``mill_birlesik``,
+    ``mill_esdegisim``. Dört isim, tek sualin dört yolu idi: *bu
+    neticenin illeti hangi âmildir?* İlk üçü aynı iki kümenin
+    cebridir ve ayrı yazıldıklarında bu cebir görünmüyordu:
+
+        ``K = ∩{a : netice var}``   (her müsbette bulunan)
+        ``M = ∪{a : netice yok}``   (bir menfîde bulunan)
+        ``B = ∪{a : netice var}``   (bir müsbette bulunan)
+
+    ==================  ==============================================
+    ``ne``              döndürdüğü
+    ==================  ==============================================
+    ``uyuşma``          ``K`` -- neticenin olduğu BÜTÜN vakalarda ortak
+    ``ayrılık``         ``B − M`` -- neticenin olmadığı hiçbir vakada
+                        bulunmayan
+    ``birleşik``        ``K ∩ (B − M)`` -- hem her müsbette var, hem
+                        hiçbir menfîde yok
+    ``eş_değişim``      Pearson bağıntı katsayısı (``olcumler``den)
+    ==================  ==============================================
+
+    Uyuşma ile ayrılığın farkı elemenin **nereden** geldiğidir: uyuşma
+    müsbet vakaları keser, ayrılık menfî vakalarla eler. Netice yokken
+    de bulunan bir âmil illet olamaz; bu, ayrılığın tek satırıdır.
+
+    Eş değişim usulünde değişkenlerden biri sabitse ``0`` döner --
+    "birlikte değişme yok" hükmü, uydurma bir sayı değil (H10).
     """
-    menfi_birlesim: Set[str] = set()
+    if ne == "eş_değişim":
+        n = len(olcumler)
+        if n < 2:
+            return 0.0
+        mx = sum(x for x, _ in olcumler) / n
+        my = sum(y for _, y in olcumler) / n
+        sxy = sum((x - mx) * (y - my) for x, y in olcumler)
+        sxx = sum((x - mx) ** 2 for x, _ in olcumler)
+        syy = sum((y - my) ** 2 for _, y in olcumler)
+        if sxx < 1e-15 or syy < 1e-15:
+            return 0.0
+        return sxy / math.sqrt(sxx * syy)
+
+    if ne not in ("uyuşma", "ayrılık", "birleşik"):
+        raise ValueError("istikrâ usulü bilinmiyor: %r" % (ne,))
+
+    musbet = [set(a) for a, n in vakalar if n]
+    K: Set[str] = set()
+    if musbet:
+        K = set(musbet[0])
+        for a in musbet[1:]:
+            K &= a
+    if ne == "uyuşma":
+        return frozenset(K)
+    M: Set[str] = set()
+    B: Set[str] = set()
     for a, n in vakalar:
-        if not n:
-            menfi_birlesim |= a
-    musbet_birlesim: Set[str] = set()
-    for a, n in vakalar:
-        if n:
-            musbet_birlesim |= a
-    return frozenset(musbet_birlesim - menfi_birlesim)
-
-
-def mill_birlesik(vakalar: Sequence[Vaka]) -> FrozenSet[str]:
-    """Birleşik usul: hem her müsbette var, hem hiçbir menfîde yok."""
-    return mill_uyusma(vakalar) & mill_ayrilik(vakalar)
-
-
-def mill_esdegisim(olcumler: Sequence[Tuple[float, float]]) -> float:
-    """Eş değişim usulü: Pearson bağıntı katsayısı.
-
-    Sıfıra bölünmeyi önlemek için değişkenlerden biri sabitse 0 döner —
-    "birlikte değişme yok" hükmü, uydurma bir sayı değil.
-    """
-    n = len(olcumler)
-    if n < 2:
-        return 0.0
-    mx = sum(x for x, _ in olcumler) / n
-    my = sum(y for _, y in olcumler) / n
-    sxy = sum((x - mx) * (y - my) for x, y in olcumler)
-    sxx = sum((x - mx) ** 2 for x, _ in olcumler)
-    syy = sum((y - my) ** 2 for _, y in olcumler)
-    if sxx < 1e-15 or syy < 1e-15:
-        return 0.0
-    return sxy / math.sqrt(sxx * syy)
+        (B if n else M).update(a)
+    ayrilik = B - M
+    return frozenset(ayrilik if ne == "ayrılık" else K & ayrilik)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -456,13 +470,13 @@ def _gosterim() -> str:
         (frozenset({"b", "d", "f"}), False),
         (frozenset({"c", "e", "f"}), False),
     ]
-    s.append(f"  uyuşma  = {sorted(mill_uyusma(vakalar))}")
-    s.append(f"  ayrılık = {sorted(mill_ayrilik(vakalar))}")
-    s.append(f"  birleşik= {sorted(mill_birlesik(vakalar))}")
+    s.append(f"  uyuşma  = {sorted(mill_usulu(vakalar))}")
+    s.append(f"  ayrılık = {sorted(mill_usulu(vakalar, USUL_AYRILIK))}")
+    s.append(f"  birleşik= {sorted(mill_usulu(vakalar, USUL_BIRLESIK))}")
     s.append("  eş değişim r = "
-             f"{mill_esdegisim([(1,2),(2,4),(3,6),(4,8)]):.3f}"
+             f"{mill_usulu(ne=USUL_ESDEGISIM, olcumler=[(1,2),(2,4),(3,6),(4,8)]):.3f}"
              "  (sabit değişkende) "
-             f"{mill_esdegisim([(1,5),(2,5),(3,5)]):.3f}")
+             f"{mill_usulu(ne=USUL_ESDEGISIM, olcumler=[(1,5),(2,5),(3,5)]):.3f}")
     return "\n".join(s)
 
 

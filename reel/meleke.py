@@ -42,13 +42,11 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .hartley import rht, spektral_suzgec
+from .hartley import hartley, spektral_suzgec
 
 __all__ = [
     "VARSAYILAN_BOYUT", "HIZLI_BOYUT", "MELEKE_ADLARI",
-    "Kapi", "householder", "givens_zinciri", "kosegen_isaret",
-    "permutasyon", "hartley_kapisi", "so2_dondurme",
-    "olcum_isleci_kok_p", "izdusum_sifirlama",
+    "Kapi", "kapi_kur",
     "meleke_kapilari", "kapi_dizeyi", "zincir_uygula",
     "diklik_raporu", "grup_komutatoru_cebirde_mi",
     "carpim_trotter_farki", "genel_isaret_olculemez",
@@ -96,104 +94,115 @@ class Kapi:
         return self.uygula(x)
 
 
-def householder(v: np.ndarray, ad: str = "Householder") -> Kapi:
-    """``I − 2vvᵀ`` (``‖v‖=1``) — ``O(D)``, dizey kurulmaz.
+def kapi_kur(ne: str = "yansıma", v=None, aci=None, ciftler=None,
+             D: int = 0, isaret=None, perm=None, P=None,
+             theta: float = 0.0, i: int = 0, j: int = 1,
+             ad: str = "") -> Kapi:
+    """HANGİ KAPIYI KURACAĞIZ -- tek terkip (kütük H226).
 
-    **M9:** yalnız ``v`` bileşenini negatifler, bütün durumu değil.
+    Küme: ``householder``, ``izdusum_sifirlama``, ``givens_zinciri``,
+    ``kosegen_isaret``, ``permutasyon``, ``hartley_kapisi``,
+    ``so2_dondurme``, ``olcum_isleci_kok_p``. Sekiz isim, üç
+    çekirdeğin durakları idi ve birleştirilince iki **özdeşlik** açığa
+    çıktı:
+
+    1. **Bir yönü bastırmak** -- ``I − α·vvᵀ``. ``α = 2`` yansımadır
+       (Householder, dik, involutif); ``α = 1`` izdüşümdür (genliği
+       gerçekten siler, **üniter değildir**). İkisi ayrı yazıldığında
+       "genlik sıfırlanır" ile "genlik yansıtılır" bambaşka iki şey
+       gibi duruyordu; hâlbuki aralarındaki tek fark bir katsayıdır ve
+       diklik tam o katsayıda kaybolur.
+    2. **Her ekseni ölçeklemek** -- ``diag(d)``. ``d = ±1`` tezattır
+       (dik, involutif); ``d = √P`` ölçüm işlecidir (``AᵀA = diag(P)
+       ≠ I``, üniter **değil**). Yine tek çekirdek, yine diklik farkı
+       yalnız ``d``dedir.
+
+    Kalan üçü ayrı çekirdeklerdir ve öyle kalır: Givens dönmeleri
+    çarpımı (``so2_dondurme`` onun tek açılı hâlidir), permütasyon
+    (indis toplaması) ve RHT.
+
+    ==================  ==============================================
+    ``ne``              kurduğu
+    ==================  ==============================================
+    ``yansıma``         ``I − 2vvᵀ`` -- Householder (M9: yalnız ``v``
+                        bileşenini negatifler, bütün durumu değil)
+    ``silme``           ``I − vvᵀ`` -- izdüşüm; ÜNİTER DEĞİL
+    ``givens``          Givens dönmeleri çarpımı, ``O(kD)``
+    ``so2``             tek açılı Givens (M13: şek/zan/yakîn aynı
+                        ``SO(2)`` açısının üç aralığıdır)
+    ``işaret``          ``diag(±1)`` -- §9 Tezat
+    ``ölçüm``           ``diag(√P)`` -- M11/M12, kapı DEĞİL
+    ``permütasyon``     indis toplaması -- dik, ``O(D)``
+    ``hartley``         RHT -- dik, involutif, ``O(D log D)``
+    ==================  ==============================================
+
+    Hiçbirinde tam dizey kurulmaz; ``Kapi`` bir ``x ↦ f(x)`` taşır ve
+    ``dizey()`` yalnız denetim için açılır.
     """
-    v = np.asarray(v, float)
-    v = v / np.linalg.norm(v)
-    D = v.shape[0]
+    if ne in ("yansıma", "silme"):
+        alfa = 2.0 if ne == "yansıma" else 1.0
+        v = np.asarray(v, float)
+        v = v / np.linalg.norm(v)
+        D = v.shape[0]
 
-    def f(x):
-        x = np.asarray(x, float)
-        return x - 2.0 * np.multiply.outer(v, v @ x)
+        def f(x, v=v, alfa=alfa):
+            x = np.asarray(x, float)
+            return x - alfa * np.multiply.outer(v, v @ x)
 
-    return Kapi(ad, f, D, True,
-                "yansıma: yalnız v bileşeni işaret değiştirir (M9)")
+        if ne == "yansıma":
+            return Kapi(ad or "Householder", f, D, True,
+                        "yansıma: yalnız v bileşeni işaret değiştirir (M9)")
+        return Kapi(ad or "İzdüşüm", f, D, False,
+                    "izdüşüm: genliği gerçekten siler ama ÜNİTER DEĞİL")
 
+    if ne in ("işaret", "ölçüm"):
+        if ne == "işaret":
+            d = np.asarray(isaret, float)
+        else:
+            d = np.sqrt(np.clip(np.asarray(P, float), 0.0, None))
+        D = d.shape[0]
 
-def izdusum_sifirlama(v: np.ndarray, ad: str = "İzdüşüm") -> Kapi:
-    """``I − vvᵀ`` — ``v`` bileşenini **gerçekten siler**; dik DEĞİLDİR.
+        def g(x, d=d):
+            return d[:, None] * x if np.ndim(x) > 1 else d * np.asarray(x)
 
-    Risalenin "genlik sıfırlanır" dediği şey budur; ama bu üniter
-    olmayan bir işlemdir (norm küçülür) ve bir kuantum kapısı değil,
-    bir ölçüm/süzme adımıdır.  Fark :func:`diklik_raporu` ile ölçülüyor.
-    """
-    v = np.asarray(v, float)
-    v = v / np.linalg.norm(v)
-    D = v.shape[0]
+        if ne == "işaret":
+            return Kapi(ad or "Tezat", g, D, True, "köşegen ±1")
+        return Kapi(ad or "İhtimal (ÖLÇÜM)", g, D, False,
+                    "diag(√P): AᵀA = diag(P) ≠ I -- kapı değil")
 
-    def f(x):
-        x = np.asarray(x, float)
-        return x - np.multiply.outer(v, v @ x)
+    if ne == "so2":
+        return kapi_kur("givens", aci=[theta], ciftler=[(i, j)], D=D,
+                        ad=ad or "Şek-Zan-Yakîn")
 
-    return Kapi(ad, f, D, False,
-                "izdüşüm: genliği gerçekten siler ama ÜNİTER DEĞİL")
+    if ne == "givens":
+        aci = np.asarray(aci, float)
+        ciftler = [(int(a), int(b)) for a, b in ciftler]
 
+        def h(x, aci=aci, ciftler=ciftler):
+            y = np.array(x, float, copy=True)
+            for (a, b), th in zip(ciftler, aci):
+                c, sn = math.cos(th), math.sin(th)
+                ya, yb = y[a].copy(), y[b].copy()
+                y[a] = c * ya - sn * yb
+                y[b] = sn * ya + c * yb
+            return y
 
-def givens_zinciri(aci: Sequence[float], ciftler: Sequence[Tuple[int, int]],
-                   D: int, ad: str = "Givens") -> Kapi:
-    """Givens dönmeleri çarpımı — ``O(kD)``, dizey kurulmaz (§14 Tahlil)."""
-    aci = np.asarray(aci, float)
-    ciftler = [(int(i), int(j)) for i, j in ciftler]
+        return Kapi(ad or "Givens", h, D, True, "Givens dönmeleri çarpımı")
 
-    def f(x):
-        y = np.array(x, float, copy=True)
-        for (i, j), th in zip(ciftler, aci):
-            c, s = math.cos(th), math.sin(th)
-            yi, yj = y[i].copy(), y[j].copy()
-            y[i] = c * yi - s * yj
-            y[j] = s * yi + c * yj
-        return y
+    if ne == "permütasyon":
+        perm = np.asarray(perm, int)
+        return Kapi(ad or "Tertip", lambda x: np.asarray(x)[perm],
+                    perm.shape[0], True, "permütasyon")
 
-    return Kapi(ad, f, D, True, "Givens dönmeleri çarpımı")
+    if ne == "hartley":
+        def r(x):
+            x = np.asarray(x, float)
+            return hartley(x.T).T if np.ndim(x) > 1 else hartley(x)
 
+        return Kapi(ad or "Tasavvur", r, D, True, "reel Hartley dönüşümü")
 
-def kosegen_isaret(isaret: np.ndarray, ad: str = "Tezat") -> Kapi:
-    """``diag(±1)`` — §9 Tezat.  Dik ve involutif."""
-    isaret = np.asarray(isaret, float)
-    D = isaret.shape[0]
-    return Kapi(ad, lambda x: isaret[:, None] * x if np.ndim(x) > 1
-                else isaret * x, D, True, "köşegen ±1")
+    raise ValueError("kapı nev'i bilinmiyor: %r" % (ne,))
 
-
-def permutasyon(perm: Sequence[int], ad: str = "Tertip") -> Kapi:
-    """Permütasyon kapısı — dik, ``O(D)``."""
-    perm = np.asarray(perm, int)
-    D = perm.shape[0]
-    return Kapi(ad, lambda x: np.asarray(x)[perm], D, True, "permütasyon")
-
-
-def hartley_kapisi(D: int, ad: str = "Tasavvur") -> Kapi:
-    """RHT — dik, involutif, ``O(D log D)`` (§6)."""
-    def f(x):
-        x = np.asarray(x, float)
-        return rht(x.T).T if np.ndim(x) > 1 else rht(x)
-    return Kapi(ad, f, D, True, "reel Hartley dönüşümü")
-
-
-def so2_dondurme(theta: float, D: int, i: int = 0, j: int = 1,
-                 ad: str = "Şek-Zan-Yakîn") -> Kapi:
-    """**M13:** şek/zan/yakîn tek bir ``SO(2)`` açısının üç aralığıdır.
-
-    ``θ = π/4`` şek (tam kararsızlık), ``θ ∈ (0, π/4)`` zan,
-    ``θ → 0`` yakîn.  Kaynağın yazdığı üç terimli işleç üniter değildi.
-    """
-    return givens_zinciri([theta], [(i, j)], D, ad)
-
-
-def olcum_isleci_kok_p(P: np.ndarray, ad: str = "İhtimal (ÖLÇÜM)") -> Kapi:
-    """**M11/M12:** ``diag(√P)`` — üniter DEĞİL, Kraus/ölçüm işleci.
-
-    ``AᵀA = diag(P) ≠ I``.  Kapı listesinde tutulmaz; adı ve ``dik``
-    alanı bunu açıkça söyler.
-    """
-    P = np.asarray(P, float)
-    k = np.sqrt(np.clip(P, 0.0, None))
-    D = P.shape[0]
-    return Kapi(ad, lambda x: k[:, None] * x if np.ndim(x) > 1 else k * x,
-                D, False, "diag(√P): AᵀA = diag(P) ≠ I — kapı değil")
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -214,19 +223,20 @@ def meleke_kapilari(D: int = VARSAYILAN_BOYUT, tohum: int = 0
         tur = k % 5
         if tur == 0:
             v = r.normal(size=D)
-            K.append(householder(v, ad))
+            K.append(kapi_kur("yansıma", v=v, ad=ad))
         elif tur == 1:
             m = max(4, D // 8)
             ciftler = [(int(a), int(b)) for a, b in
                        r.integers(0, D, size=(m, 2)) if a != b]
-            K.append(givens_zinciri(r.uniform(0, 2 * math.pi, len(ciftler)),
-                                    ciftler, D, ad))
+            K.append(kapi_kur("givens",
+                              aci=r.uniform(0, 2 * math.pi, len(ciftler)),
+                              ciftler=ciftler, D=D, ad=ad))
         elif tur == 2:
-            K.append(kosegen_isaret(r.choice([-1.0, 1.0], size=D), ad))
+            K.append(kapi_kur("işaret", isaret=r.choice([-1.0, 1.0], size=D), ad=ad))
         elif tur == 3:
-            K.append(permutasyon(r.permutation(D), ad))
+            K.append(kapi_kur("permütasyon", perm=r.permutation(D), ad=ad))
         else:
-            K.append(hartley_kapisi(D, ad))
+            K.append(kapi_kur("hartley", D=D, ad=ad))
     assert len(K) == 41
     return K
 
@@ -333,7 +343,7 @@ def genel_isaret_olculemez(D: int = 8, tohum: int = 0) -> Dict[str, float]:
     rho = np.outer(psi, psi)
     genel = np.outer(-psi, -psi)
     v = r.normal(size=D); v /= np.linalg.norm(v)
-    yerel = householder(v)(psi)
+    yerel = kapi_kur("yansıma", v=v)(psi)
     return {"genel_işaret_farkı": float(np.abs(rho - genel).max()),
             "alt_uzay_işareti_farkı":
                 float(np.abs(rho - np.outer(yerel, yerel)).max())}
@@ -381,8 +391,8 @@ def _gosterim(D: int = VARSAYILAN_BOYUT) -> str:
     r = np.random.default_rng(0)
     d = 8
     v = r.normal(size=d); v /= np.linalg.norm(v)
-    U = householder(v)
-    Pj = izdusum_sifirlama(v)
+    U = kapi_kur("yansıma", v=v)
+    Pj = kapi_kur("silme", v=v)
     for ad, psi in (("rastgele Ψ", r.normal(size=d)),
                     ("Ψ = v (paralel)", v.copy())):
         psi = psi / np.linalg.norm(psi)
@@ -399,7 +409,7 @@ def _gosterim(D: int = VARSAYILAN_BOYUT) -> str:
 
     s.append("\n=== M11/M12: ihtimal işleci üniter değil ===")
     P = r.random(6); P /= P.sum()
-    M = olcum_isleci_kok_p(P)
+    M = kapi_kur("ölçüm", P=P)
     A = M.dizey()
     s.append("  diag(√P): ‖AᵀA − I‖ = %.4f   (kapı sayılamaz)"
              % float(np.abs(A.T @ A - np.eye(6)).max()))
@@ -409,7 +419,7 @@ def _gosterim(D: int = VARSAYILAN_BOYUT) -> str:
 
     s.append("\n=== M13: şek/zan/yakîn tek bir SO(2) açısı ===")
     for ad, th in (("yakîn", 0.02), ("zan", 0.5), ("şek", math.pi / 4)):
-        G = so2_dondurme(th, 2).dizey()
+        G = kapi_kur("so2", theta=th, D=2).dizey()
         e0 = np.array([1.0, 0.0])
         y = G @ e0
         s.append("  %-6s θ=%.4f   |⟨0|y⟩|²=%.4f  |⟨1|y⟩|²=%.4f   "

@@ -51,7 +51,7 @@ import numpy as np
 from fitrat.tevafuk import cift_uyusmasi, fazla_sayma, tevafuk_olcusu
 from ogrenme.grassmann import asal_acilar, dik_taban, grassmann_mesafesi
 from ogrenme.rkhs import RKHS, gauss_cekirdegi, medyan_genislik, psd_mi
-from token_uzaylari.manifold import Metrik, duz_metrik
+from token_uzaylari.manifold import Metrik, hazir_metrik
 from token_uzaylari.morfizm import Morfizm, izometri_mi, jakobi
 
 
@@ -1875,8 +1875,8 @@ def belirtecten_aciya(sozluk: int = 16, kubit: int = 4,
     # --- 2) İZOMETRİ: mesafe korunuyor mu?
     # ``token_uzaylari.morfizm`` ile ölçülür; hedef metrik birimdir.
     m = Morfizm(1, kubit, phi, ad="belirteç→açı")
-    g = duz_metrik(1)                    # kaynak: sözlük ekseni
-    h = duz_metrik(kubit)                # hedef: açı uzayı
+    g = hazir_metrik("düz", n=1)                    # kaynak: sözlük ekseni
+    h = hazir_metrik("düz", n=kubit)                # hedef: açı uzayı
     noktalar = [[float(x)] for x in np.linspace(0.3, sozluk - 0.7, 24)]
     izo = izometri_mi(m, g, h, noktalar, tol=1e-6)
 

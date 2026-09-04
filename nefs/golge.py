@@ -68,7 +68,7 @@ import numpy as np
 from akis.lie import en_yakin_dik, so_izdusumu, so_n_mi, uslu_harita
 from kuantum.yazmac import (dik_iki_kubit, dik_iki_kubit_us,
                          dik_iki_kubit_us_yigin, dik_iki_kubit_yigin)
-from reel.hartley import rht, rht_dizeyi
+from reel.hartley import hartley
 from reel.karmasik import (hermitesel_mi, reel_evrim, reel_goem,
                            karmasik_coz, so_2n_mi)
 
@@ -221,13 +221,13 @@ def dik_donusum_dogrulamasi(boyutlar=(8, 64, 512)) -> Dict[int, Dict[str, float]
     """``RHT``: dik, simetrik, involutif mi? -- müstakil bir dik dönüşüm."""
     o: Dict[int, Dict[str, float]] = {}
     for N in boyutlar:
-        Hm = rht_dizeyi(N)
+        Hm = hartley(N=N, ne="dizey")
         x = np.random.default_rng(N).normal(size=N)
         o[N] = {
             "diklik": float(np.abs(Hm.T @ Hm - np.eye(N)).max()),
             "involutif": float(np.abs(Hm @ Hm - np.eye(N)).max()),
             "simetri": float(np.abs(Hm - Hm.T).max()),
-            "hızlı_ile_fark": float(np.abs(Hm @ x - rht(x)).max()),
+            "hızlı_ile_fark": float(np.abs(Hm @ x - hartley(x)).max()),
         }
     return o
 

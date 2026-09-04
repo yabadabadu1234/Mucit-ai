@@ -44,7 +44,7 @@ from omega_kategori_nbe import kutuphane as L
 from omega_kategori_nbe import sozdizim as S
 from omega_kategori_nbe.aralik import BIR, SIFIR, YANLIS, Aralik
 
-from .manifold import Metrik, duz_metrik
+from .manifold import Metrik, hazir_metrik
 from .morfizm import Morfizm, izometri_mi
 
 __all__ = [
@@ -201,8 +201,8 @@ def kayipsizlik_karnesi(d: TokenDenkligi,
     * **Hacim**: ``|det|``.  ``1`` ise hacim korunur.
     """
     gd = d.gidis_donus(noktalar)
-    duz = duz_metrik(d.ileri.n)
-    izo = izometri_mi(d.ileri, duz, duz_metrik(d.ileri.m), noktalar)
+    duz = hazir_metrik("düz", n=d.ileri.n)
+    izo = izometri_mi(d.ileri, duz, hazir_metrik("düz", n=d.ileri.m), noktalar)
     J = d.ileri.dphi(noktalar[0])
     detmi = (abs(float(np.linalg.det(J))) if J.shape[0] == J.shape[1]
              else float("nan"))

@@ -38,7 +38,7 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = [
-    "Metrik", "duz_metrik", "kure_metrigi", "hiperbolik_metrik",
+    "Metrik", "duz_metrik", "hazir_metrik", "hiperbolik_metrik",
     "konformal_metrik", "riemann_simetrileri",
 ]
 
@@ -226,38 +226,64 @@ class Metrik:
 #  Bilinen manifoldlar — sağlama için
 # ══════════════════════════════════════════════════════════════════════
 
-def duz_metrik(n: int) -> Metrik:
-    """Öklid: ``g = I``.  Bütün eğrilik sıfır olmalı."""
-    I = np.eye(n)
-    return Metrik(n, lambda x: I.copy(), "düz")
+KIP_DUZ, KIP_KURE = "düz", "küre"
+KIP_HIP, KIP_KONF = "hiperbolik", "konformal"
 
 
-def kure_metrigi(r: float = 1.0) -> Metrik:
-    """``r`` yarıçaplı 2-küre, ``(θ, φ)`` koordinatlarında.
+def hazir_metrik(ne: str = "düz", n: int = 2, r: float = 1.0,
+                 olcek=None) -> Metrik:
+    """HAZIR METRİKLER -- tek terkip (kütük H226).
 
-    ``g = diag(r², r² sin²θ)``.  Beklenen: ``K = 1/r²``, ``R = 2/r²``.
-    Kutuplarda (``sinθ = 0``) koordinat tekilliği vardır; metrik orada
-    dejenere olur ve hesap yapılmaz — tekillik gizlenmez.
+    Küme: ``duz_metrik``, ``hazir_metrik``, ``hiperbolik_metrik``,
+    ``konformal_metrik``. Dört isim ayrı ayrı dururken görünmeyen
+    özdeşlik şudur: **dördünün üçü aynı konformal ailedendir.**
+
+        ``g = e^{2φ(x)} δ``
+
+    * ``düz``        -- ``φ ≡ 0``
+    * ``hiperbolik`` -- ``e^{2φ} = y⁻²`` (Poincaré üst yarı düzlemi)
+    * ``konformal``  -- ``φ`` serbest
+
+    Yalnız ``küre`` bu ailenin dışındadır: ``g = diag(r², r² sin²θ)``
+    köşegendir ama konformal değildir, zira iki eksenin ölçeği
+    birbirinden farklıdır.
+
+    ==================  ==============================================
+    ``ne``              beklenen eğrilik
+    ==================  ==============================================
+    ``düz``             hepsi sıfır
+    ``küre``            ``K = 1/r²``, ``R = 2/r²``
+    ``hiperbolik``      ``K = −1``
+    ``konformal``       ``olcek``e göre
+    ==================  ==============================================
+
+    Kürede kutuplarda (``sinθ = 0``) koordinat tekilliği vardır;
+    metrik orada dejenere olur ve hesap yapılmaz -- tekillik
+    gizlenmez.
     """
+    if ne == "küre":
+        def gk(x: np.ndarray) -> np.ndarray:
+            t = float(x[0])
+            return np.diag([r * r, r * r * np.sin(t) ** 2])
+        return Metrik(2, gk, "küre(r=%s)" % (r,))
+
+    # Konformal aile: ``carpan(x) = e^{2φ(x)}``. Çarpan **doğrudan**
+    # yazılır; ``exp(2·log(...))`` gidip gelmesi düz kapalı biçimden
+    # sayısal olarak daha kötüdür ve gereksizdir.
+    if ne == "düz":
+        carpan, adi = (lambda x: 1.0), "düz"
+    elif ne == "hiperbolik":
+        n, adi = 2, "hiperbolik"
+        carpan = lambda x: 1.0 / (float(x[1]) * float(x[1]))
+    elif ne == "konformal":
+        carpan, adi = (lambda x: np.exp(2.0 * float(olcek(x)))), "konformal"
+    else:
+        raise ValueError("metrik bilinmiyor: %r" % (ne,))
+
     def g(x: np.ndarray) -> np.ndarray:
-        t = float(x[0])
-        return np.diag([r * r, r * r * np.sin(t) ** 2])
-    return Metrik(2, g, f"küre(r={r})")
+        return float(carpan(x)) * np.eye(n)
 
-
-def hiperbolik_metrik() -> Metrik:
-    """Poincaré üst yarı düzlemi: ``g = y^{-2} I``.  Beklenen ``K = −1``."""
-    def g(x: np.ndarray) -> np.ndarray:
-        y = float(x[1])
-        return np.eye(2) / (y * y)
-    return Metrik(2, g, "hiperbolik")
-
-
-def konformal_metrik(n: int, olcek: Callable[[np.ndarray], float]) -> Metrik:
-    """``g = e^{2φ(x)} δ`` — konformal düz metrik."""
-    def g(x: np.ndarray) -> np.ndarray:
-        return np.exp(2.0 * float(olcek(x))) * np.eye(n)
-    return Metrik(n, g, "konformal")
+    return Metrik(n, g, adi)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -292,7 +318,7 @@ def _gosterim() -> str:
     s: List[str] = []
 
     s.append("=== Düz uzay: bütün eğrilik sıfır olmalı ===")
-    d = duz_metrik(3)
+    d = hazir_metrik(KIP_DUZ, n=3)
     x = np.array([0.3, -0.7, 1.1])
     s.append(f"  ‖Γ‖∞      = {np.max(np.abs(d.christoffel(x))):.3e}")
     s.append(f"  ‖Riemann‖∞ = {np.max(np.abs(d.riemann(x))):.3e}")
@@ -300,7 +326,7 @@ def _gosterim() -> str:
 
     s.append("\n=== 2-küre: K = 1/r², R = 2/r² ===")
     for r in (1.0, 2.0, 0.5):
-        k = kure_metrigi(r)
+        k = hazir_metrik(KIP_KURE, r=r)
         p = np.array([1.0, 0.4])          # kutuptan uzak bir nokta
         K = k.kesit_egriligi(p, [1.0, 0.0], [0.0, 1.0])
         R = k.skaler_egrilik(p)
@@ -308,15 +334,15 @@ def _gosterim() -> str:
                  f"   R={R:.10f} (beklenen {2/r**2:.10f})")
 
     s.append("\n=== Hiperbolik düzlem: K = −1 ===")
-    h = hiperbolik_metrik()
+    h = hazir_metrik(KIP_HIP)
     for p in ([0.0, 1.0], [2.0, 0.5], [-1.0, 3.0]):
         K = h.kesit_egriligi(np.array(p), [1.0, 0.0], [0.0, 1.0])
         s.append(f"  nokta {str(p):12s} K = {K:.10f}"
                  f"   R = {h.skaler_egrilik(np.array(p)):.10f}")
 
     s.append("\n=== Riemann simetrileri (bağıl ihlal) ===")
-    for ad, m, p in (("küre", kure_metrigi(1.0), [1.0, 0.4]),
-                     ("hiperbolik", hiperbolik_metrik(), [0.5, 1.3])):
+    for ad, m, p in (("küre", hazir_metrik(KIP_KURE, r=1.0), [1.0, 0.4]),
+                     ("hiperbolik", hazir_metrik(KIP_HIP), [0.5, 1.3])):
         r = riemann_simetrileri(m, p)
         s.append(f"  {ad:11s} antisim {r['ilk_çift_antisimetri']:.2e}/"
                  f"{r['son_çift_antisimetri']:.2e}"
@@ -326,9 +352,9 @@ def _gosterim() -> str:
 
     s.append("\n=== Laplace–Beltrami: iki yol aynı sayıyı mı veriyor? ===")
     f = lambda z: float(np.sin(z[0]) * np.exp(0.3 * z[1]))
-    for ad, m, p in (("düz(2)", duz_metrik(2), [0.4, 0.9]),
-                     ("küre", kure_metrigi(1.0), [1.0, 0.4]),
-                     ("hiperbolik", hiperbolik_metrik(), [0.5, 1.3])):
+    for ad, m, p in (("düz(2)", hazir_metrik(KIP_DUZ, n=2), [0.4, 0.9]),
+                     ("küre", hazir_metrik(KIP_KURE, r=1.0), [1.0, 0.4]),
+                     ("hiperbolik", hazir_metrik(KIP_HIP), [0.5, 1.3])):
         a = m.laplace_beltrami(f, np.array(p))
         b = m.laplace_beltrami_christoffel(f, np.array(p))
         s.append(f"  {ad:11s} diverjans={a:+.8f}  Christoffel={b:+.8f}"
@@ -338,11 +364,11 @@ def _gosterim() -> str:
     p = np.array([0.4, 0.9])
     tam = -np.sin(p[0]) * np.exp(0.3 * p[1]) \
         + 0.09 * np.sin(p[0]) * np.exp(0.3 * p[1])
-    s.append(f"    sayısal={duz_metrik(2).laplace_beltrami(f, p):+.8f}"
+    s.append(f"    sayısal={hazir_metrik(KIP_DUZ, n=2).laplace_beltrami(f, p):+.8f}"
              f"   kapalı={tam:+.8f}")
 
     s.append("\n=== Koordinat tekilliği gizlenmiyor ===")
-    k = kure_metrigi(1.0)
+    k = hazir_metrik(KIP_KURE, r=1.0)
     try:
         k.denetle([0.0, 0.0])          # kutup: sin θ = 0
         s.append("  kutupta metrik kabul edildi (BEKLENMEZ)")

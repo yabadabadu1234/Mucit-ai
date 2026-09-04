@@ -218,7 +218,7 @@ def konformal_mi(phi: Morfizm, kaynak: Metrik, hedef: Metrik,
 # ══════════════════════════════════════════════════════════════════════
 
 def _gosterim() -> str:
-    from .manifold import duz_metrik, konformal_metrik
+    from .manifold import hazir_metrik
     s: List[str] = []
 
     phi = Morfizm(2, 3, lambda x: np.array([x[0] ** 2 + x[1],
@@ -251,7 +251,7 @@ def _gosterim() -> str:
         s.append(f"    yanlış boyda ko-vektör reddedildi: {e}")
 
     s.append("\n=== Metrik çekme ===")
-    duz3 = duz_metrik(3)
+    duz3 = hazir_metrik("düz", n=3)
     G = phi.metrik_cek(duz3, x)
     J = phi.dphi(x)
     s.append(f"  φ^*δ = JᵀJ mi? sapma = {np.max(np.abs(G - J.T @ J)):.3e}")
@@ -267,7 +267,7 @@ def _gosterim() -> str:
         np.sin(0.7) * z[0] + np.cos(0.7) * z[1]]), "dönme")
     olcekleme = Morfizm(2, 2, lambda z: 2.5 * z, "×2.5")
     egri = Morfizm(2, 2, lambda z: np.array([z[0] ** 2, z[1]]), "eğri")
-    duz2 = duz_metrik(2)
+    duz2 = hazir_metrik("düz", n=2)
     for ad, m in (("dönme", donme), ("×2.5", olcekleme), ("eğri", egri)):
         i = izometri_mi(m, duz2, duz2, noktalar)
         k = konformal_mi(m, duz2, duz2, noktalar)

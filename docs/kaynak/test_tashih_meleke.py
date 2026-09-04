@@ -389,7 +389,7 @@ def test_hartley_kosegen_evrisim_degil():
                               rht, rht_dizeyi)
 
     N = 8
-    H = rht_dizeyi(N)
+    H = hartley(N=N, ne="dizey")
     r = np.random.default_rng(1).normal(size=N)
     assert dolasimli_hata(H.T @ np.diag(r) @ H) > 0.1        # evrişim DEĞİL
     assert dolasimli_hata(
@@ -399,8 +399,8 @@ def test_hartley_kosegen_evrisim_degil():
     # evrişim kaidesi: naif çarpım yanlış, doğru kaide tutuyor
     rr = np.random.default_rng(2)
     f, g = rr.normal(size=N), rr.normal(size=N)
-    sol = rht(evrisim(f, g))
-    Ff, Gg = rht(f), rht(g)
+    sol = hartley(evrisim(f, g))
+    Ff, Gg = hartley(f), hartley(g)
     assert np.abs(sol - hartley_carpim_naif(Ff, Gg)).max() > 1.0
     assert np.abs(sol - hartley_evrisim(Ff, Gg)).max() < 1e-11
 

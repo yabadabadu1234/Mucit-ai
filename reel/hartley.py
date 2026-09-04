@@ -43,9 +43,9 @@ from typing import Dict, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = [
-    "cas", "rht_dizeyi", "rht", "irht", "rht_hizli",
+    "cas", "hartley",
     "cift_tek_parca", "hartley_evrisim", "evrisim",
-    "hartley_carpim_naif", "spektral_suzgec", "dolasimli_hata",
+    "spektral_suzgec", "dolasimli_hata",
     "cift_simetrik_yap",
 ]
 
@@ -59,33 +59,42 @@ def cas(theta: np.ndarray) -> np.ndarray:
 #  1. Dönüşüm
 # ══════════════════════════════════════════════════════════════════════
 
-def rht_dizeyi(N: int) -> np.ndarray:
-    """``RHT_N`` — simetrik, dik ve involutif (``RHT² = I``)."""
-    j = np.arange(N)
-    return cas(2.0 * math.pi * np.outer(j, j) / N) / math.sqrt(N)
+def hartley(x=None, N: int = 0, ne: str = "dönüştür") -> np.ndarray:
+    """HARTLEY DÖNÜŞÜMÜ -- tek terkip (kütük H226).
 
+    Küme: ``rht_dizeyi``, ``rht``, ``irht``, ``rht_hizli``. Dört isim,
+    **tek** dönüşümdü ve aralarındaki fark yalnız şuydu:
 
-def rht(x: np.ndarray) -> np.ndarray:
-    """Ayrık Hartley dönüşümü — ``rfft`` üzerinden ``O(N log N)``.
+    * ``irht`` ``rht``in **aynısıdır** -- RHT involutiftir
+      (``RHT² = I``), dolayısıyla kendi tersidir. Ayrı bir ters
+      dönüşüm yoktur ve ayrı isim taşıması sanki varmış gibi
+      gösteriyordu.
+    * ``rht_hizli`` da ``rht``in aynısıydı; ``rht`` zâten ``fft``
+      üzerinden ``O(N log N)`` koşuyor.
+    * ``rht_dizeyi`` aynı dönüşümün ``O(N²)`` dizey hâlidir ve
+      yalnız **denetim** içindir.
+
+    ==================  ==============================================
+    ``ne``              döndürdüğü
+    ==================  ==============================================
+    ``dönüştür``        ``H[k] = Re F[k] − Im F[k]``, ``O(N log N)``
+    ``ters``            aynısı -- involutif olduğu için
+    ``dizey``           ``RHT_N`` -- simetrik, dik, involutif
+    ==================  ==============================================
 
     ``cas(θ) = cos θ + sin θ`` ve ``F[k] = Σ x_j e^{−2πijk/N}``
-    olduğundan ``H[k] = Re F[k] − Im F[k]``.  Tam dizeyle aynı sonucu
-    verir; fark ölçülüyor.
+    olduğundan ``H = Re F − Im F``. Tam dizeyle aynı neticeyi verir;
+    fark ``_gosterim``de ölçülür.
     """
+    if ne == "dizey":
+        j = np.arange(N)
+        return cas(2.0 * math.pi * np.outer(j, j) / N) / math.sqrt(N)
+    if ne not in ("dönüştür", "ters"):
+        raise ValueError("Hartley kipi bilinmiyor: %r" % (ne,))
     x = np.asarray(x, float)
-    N = x.shape[-1]
+    n = x.shape[-1]
     F = np.fft.fft(x, axis=-1)
-    return (F.real - F.imag) / math.sqrt(N)
-
-
-def irht(X: np.ndarray) -> np.ndarray:
-    """Ters dönüşüm — RHT kendi tersi olduğundan :func:`rht` ile aynı."""
-    return rht(X)
-
-
-def rht_hizli(x: np.ndarray) -> np.ndarray:
-    """:func:`rht` ile aynı; adı vurgulamak için ayrı tutuldu."""
-    return rht(x)
+    return (F.real - F.imag) / math.sqrt(n)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -107,16 +116,29 @@ def evrisim(f: np.ndarray, g: np.ndarray) -> np.ndarray:
     return np.real(np.fft.ifft(np.fft.fft(f) * np.fft.fft(g)))
 
 
-def hartley_evrisim(F: np.ndarray, G: np.ndarray) -> np.ndarray:
-    """``H(f*g) = √N (F·G_ç + F[−k]·G_t)`` — **doğru** Hartley kaidesi."""
+def hartley_evrisim(F: np.ndarray, G: np.ndarray,
+                    naif: bool = False) -> np.ndarray:
+    """HARTLEY'DE EVRİŞİM NASIL ÇARPILIR -- tek terkip (kütük H226).
+
+    Küme: ``hartley_evrisim`` (doğru kaide) ve ``hartley_carpim_naif``
+    (kaynağın örtük olarak varsaydığı yanlış kaide). İkisi bir arada
+    durmalıdır, zira **M29 tam bu ikisinin farkıdır** ve fark ancak
+    yan yana ölçülünce görünür:
+
+        doğru:  ``ℋ(f*g) = √N (F·G_ç + F[−k]·G_t)``
+        naif :  ``√N F·G``
+
+    ``G_ç`` ve ``G_t`` ``G``nin çift ve tek parçalarıdır. Fourier'de
+    evrişim nokta çarpımına döner; **Hartley'de dönmez**, zira ``cas``
+    çekirdeği karmaşık üstel gibi çarpımsal değildir. Simetri
+    parçalanması mecburîdir; ``naif=True`` yalnız o mecburiyeti
+    ölçmek için durur ve ``dolasimli_hata`` ikisini kıyaslar.
+    """
     N = F.shape[-1]
+    if naif:
+        return math.sqrt(N) * F * G
     Gc, Gt = cift_tek_parca(G)
     return math.sqrt(N) * (F * Gc + F[..., _ters_indis(N)] * Gt)
-
-
-def hartley_carpim_naif(F: np.ndarray, G: np.ndarray) -> np.ndarray:
-    """``√N F·G`` — kaynağın örtük olarak varsaydığı **yanlış** kaide."""
-    return math.sqrt(F.shape[-1]) * F * G
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -137,7 +159,7 @@ def spektral_suzgec(x: np.ndarray, r: np.ndarray,
     üniter değil ama **simetrik** bir işleçtir, evrişim değildir.
     """
     r = cift_simetrik_yap(r) if cift_zorla else np.asarray(r, float)
-    return rht(r * rht(x))
+    return hartley(r * hartley(x))
 
 
 def dolasimli_hata(M: np.ndarray) -> float:
@@ -157,17 +179,17 @@ def _gosterim() -> str:
     s = []
     s.append("=== RHT dik, simetrik ve involutif (kaynak DOĞRU) ===")
     for N in (8, 64, 512):
-        H = rht_dizeyi(N)
+        H = hartley(N=N, ne="dizey")
         s.append("  N=%4d  ‖HᵀH−I‖=%.2e  ‖H²−I‖=%.2e  ‖H−Hᵀ‖=%.2e"
                  % (N, float(np.abs(H.T @ H - np.eye(N)).max()),
                     float(np.abs(H @ H - np.eye(N)).max()),
                     float(np.abs(H - H.T).max())))
 
     s.append("\n=== Hızlı RHT (fft) tam dizeyle aynı mı? ===")
-    rht(np.zeros(8))                      # ısıtma: ilk fft çağrısı yanıltır
+    hartley(np.zeros(8))                      # ısıtma: ilk fft çağrısı yanıltır
     for N in (256, 1024, 4096, 16384):
         x = np.random.default_rng(0).normal(size=N)
-        H = rht_dizeyi(N) if N <= 4096 else None
+        H = hartley(N=N, ne="dizey") if N <= 4096 else None
         tekrar = max(1, 2_000_000 // (N * N) if H is not None else 1)
         if H is not None:
             t0 = time.perf_counter()
@@ -176,7 +198,7 @@ def _gosterim() -> str:
             t1 = (time.perf_counter() - t0) / tekrar
         t2 = time.perf_counter()
         for _ in range(20):
-            b = rht(x)
+            b = hartley(x)
         t3 = (time.perf_counter() - t2) / 20
         if H is None:
             s.append("  N=%5d  dizey kurulmadı (%.2f GB tutardı)   "
@@ -191,16 +213,16 @@ def _gosterim() -> str:
     r = np.random.default_rng(1)
     for N in (16, 64):
         f, g = r.normal(size=N), r.normal(size=N)
-        sol = rht(evrisim(f, g))
-        F, G = rht(f), rht(g)
+        sol = hartley(evrisim(f, g))
+        F, G = hartley(f), hartley(g)
         s.append("  N=%3d  naif çarpım hatası=%8.4f    doğru kaide "
                  "hatası=%.2e"
-                 % (N, float(np.abs(sol - hartley_carpim_naif(F, G)).max()),
+                 % (N, float(np.abs(sol - hartley_evrisim(F, G, naif=True)).max()),
                     float(np.abs(sol - hartley_evrisim(F, G)).max())))
 
     s.append("\n=== M29: köşegen süzgeç ne zaman evrişim? ===")
     N = 8
-    H = rht_dizeyi(N)
+    H = hartley(N=N, ne="dizey")
     rr = r.normal(size=N)
     M = H.T @ np.diag(rr) @ H
     F = np.fft.fft(np.eye(N), axis=0) / math.sqrt(N)

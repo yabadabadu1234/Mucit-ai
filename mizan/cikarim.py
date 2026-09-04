@@ -36,22 +36,75 @@ from .onerme import (ANCAK, DEG, DEGIL, DOGRU, ISE, Onerme, VE, VEYA, XOR,
 # Üç aksiyom şeması + tek çıkarım kuralı (modus ponens).
 
 
-def aksiyom1(A: Onerme, B: Onerme) -> Onerme:
-    """``A → (B → A)`` -- zayıflatma."""
-    return ise(A, ise(B, A))
+def hilbert_aksiyomu(A: Onerme = None, B: Onerme = None,
+                     C: Onerme = None, no: int = 1,
+                     ne: str = "kur"):
+    """HANGİ AKSİYOM ŞEMASI -- tek terkip (kütük H226).
+
+    Küme: ``aksiyom1/2/3`` (şemayı **kuran** üç isim) ve
+    ``_esle_aks1/2/3`` + ``_aksiyom_ornegi_mi`` (aynı üç şemayı elle
+    **eşleyen** dört isim). Yedi isim, tek amelin iki yönü idi ve
+    ikisi birbirinden **kopuktu**: şema değişse eşleyicinin de elle
+    değişmesi gerekiyordu; ikisinin ayrı yazılması sessiz bir kayma
+    kapısıydı.
+
+    Terkipte şema **bir kere** yazılır, eşleme ondan **türetilir**:
+    şema taze meta-değişkenlerle kurulur ve formül ona
+    **birleştirme** (unification) ile eşlenir. Böylece eşleyicinin
+    şemadan sapması cebren imkânsızdır.
+
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``kur``         ``no``lu şemanın ``A,B,C`` ile örneği
+    ``örnek_mi``    ``A`` formülü **herhangi** bir şemanın örneği mi
+    ``şema``        ``no``lu şema, meta-değişkenlerle
+    ==============  ==================================================
+
+    Şemalar (Łukasiewicz'in klasik üçlüsü):
+
+    1. ``A → (B → A)``                       -- zayıflatma
+    2. ``(A → (B → C)) → ((A → B) → (A → C))`` -- dağılma
+    3. ``(¬B → ¬A) → (A → B)``               -- transpozisyon (KLASİK)
+
+    Üçüncüsü sezgiselci hesapta **yoktur**; onunla ``¬¬A → A``
+    türetilir ve hesap klasikleşir. ``sezgisel_ispatlanabilir``
+    (Dyckhoff G4ip) bu farkı ölçer.
+    """
+    _MD = (deg("#A"), deg("#B"), deg("#C"))
+
+    def sema(k: int, a: Onerme, b: Onerme, c: Onerme) -> Onerme:
+        if k == 1:
+            return ise(a, ise(b, a))
+        if k == 2:
+            return ise(ise(a, ise(b, c)), ise(ise(a, b), ise(a, c)))
+        if k == 3:
+            return ise(ise(degil(b), degil(a)), ise(a, b))
+        raise ValueError("aksiyom şeması bilinmiyor: %r" % (k,))
+
+    def birlestir(kalip: Onerme, f: Onerme, bag: dict) -> bool:
+        """Kalıptaki meta-değişkenler formülün alt ağaçlarına oturuyor mu?"""
+        if kalip in _MD:
+            onceki = bag.get(kalip)
+            if onceki is None:
+                bag[kalip] = f
+                return True
+            return onceki is f
+        if kalip.etiket != f.etiket or len(kalip.altlar) != len(f.altlar):
+            return False
+        return all(birlestir(u, v, bag)
+                   for u, v in zip(kalip.altlar, f.altlar))
+
+    if ne == "şema":
+        return sema(no, *_MD)
+    if ne == "kur":
+        return sema(no, A, B, C)
+    if ne == "örnek_mi":
+        return any(birlestir(sema(k, *_MD), A, {}) for k in (1, 2, 3))
+    raise ValueError("aksiyom kipi bilinmiyor: %r" % (ne,))
 
 
-def aksiyom2(A: Onerme, B: Onerme, C: Onerme) -> Onerme:
-    """``(A → (B → C)) → ((A → B) → (A → C))`` -- dağılma."""
-    return ise(ise(A, ise(B, C)), ise(ise(A, B), ise(A, C)))
-
-
-def aksiyom3(A: Onerme, B: Onerme) -> Onerme:
-    """``(¬B → ¬A) → (A → B)`` -- transpozisyon (KLASİK)."""
-    return ise(ise(degil(B), degil(A)), ise(A, B))
-
-
-AKSIYOMLAR = (aksiyom1, aksiyom2, aksiyom3)
+AKSIYOM_NOLARI: Tuple[int, ...] = (1, 2, 3)
 
 
 class HilbertHatasi(Exception):
@@ -74,7 +127,7 @@ def hilbert_denetle(adimlar: Sequence[Tuple[str, object]]) -> Onerme:
             f = adim[1]
             if not isinstance(f, Onerme):
                 raise HilbertHatasi("%d. satır: formül bekleniyordu" % k)
-            if not _aksiyom_ornegi_mi(f):
+            if not hilbert_aksiyomu(f, ne="örnek_mi"):
                 raise HilbertHatasi("%d. satır aksiyom şeması değil: %s" % (k, f))
             satirlar.append(f)
         elif adim[0] == "mp":
@@ -91,50 +144,8 @@ def hilbert_denetle(adimlar: Sequence[Tuple[str, object]]) -> Onerme:
     return satirlar[-1]
 
 
-def _aksiyom_ornegi_mi(f: Onerme) -> bool:
-    """Formül, üç şemadan birinin örneği mi? (birleştirme ile)"""
-    return (_esle_aks1(f) or _esle_aks2(f) or _esle_aks3(f))
 
 
-def _esle_aks1(f: Onerme) -> bool:
-    # A → (B → A)
-    if f.etiket != ISE:
-        return False
-    A, sag = f.altlar
-    if sag.etiket != ISE:
-        return False
-    _B, A2 = sag.altlar
-    return A2 is A
-
-
-def _esle_aks2(f: Onerme) -> bool:
-    # (A → (B → C)) → ((A → B) → (A → C))
-    if f.etiket != ISE:
-        return False
-    sol, sag = f.altlar
-    if sol.etiket != ISE or sag.etiket != ISE:
-        return False
-    A, BC = sol.altlar
-    if BC.etiket != ISE:
-        return False
-    B, C = BC.altlar
-    AB, AC = sag.altlar
-    return (AB.etiket == ISE and AC.etiket == ISE
-            and AB.altlar[0] is A and AB.altlar[1] is B
-            and AC.altlar[0] is A and AC.altlar[1] is C)
-
-
-def _esle_aks3(f: Onerme) -> bool:
-    # (¬B → ¬A) → (A → B)
-    if f.etiket != ISE:
-        return False
-    sol, sag = f.altlar
-    if sol.etiket != ISE or sag.etiket != ISE:
-        return False
-    nB, nA = sol.altlar
-    A, B = sag.altlar
-    return (nB.etiket == DEGIL and nA.etiket == DEGIL
-            and nB.altlar[0] is B and nA.altlar[0] is A)
 
 
 def ozdeslik_turetimi(A: Onerme) -> List[Tuple[str, object]]:
@@ -145,10 +156,10 @@ def ozdeslik_turetimi(A: Onerme) -> List[Tuple[str, object]]:
     """
     AA = ise(A, A)
     return [
-        ("aks", aksiyom2(A, AA, A)),                       # 0
-        ("aks", aksiyom1(A, AA)),                          # 1
+        ("aks", hilbert_aksiyomu(A, AA, A, no=2)),                       # 0
+        ("aks", hilbert_aksiyomu(A, AA, no=1)),                          # 1
         ("mp", 1, 0),                                      # 2: (A→(A→A))→(A→A)
-        ("aks", aksiyom1(A, A)),                           # 3: A→(A→A)
+        ("aks", hilbert_aksiyomu(A, A, no=1)),                           # 3: A→(A→A)
         ("mp", 3, 2),                                      # 4: A→A
     ]
 
