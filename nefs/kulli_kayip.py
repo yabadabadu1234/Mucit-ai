@@ -787,13 +787,13 @@ class Kademeler:
         I.nesne_sayisi = self._dene("idrak.cozucu", _nesne) or []
 
         def _mubser():
-            from .mubser import devinim_olc, musahede_et
+            from .musahede import devinim_olc, musahede_et
             return devinim_olc(musahede_et(ciftler[0][0]),
                                musahede_et(ciftler[0][1]))
         self._dene("nefs.mubser", _mubser)
 
         def _boyut():
-            from .boyut import cikti_ne_kadar
+            from .musahede import cikti_ne_kadar
             b, sebep = cikti_ne_kadar(ciftler, girdiler[0] if girdiler
                                     else ciftler[0][0])
             return (None if b is None else tuple(int(x) for x in b)), sebep
@@ -802,7 +802,7 @@ class Kademeler:
             I.olcu, I.olcu_sebebi = r
 
         def _sekil():
-            from idrak.sekil import kesirli_sekil_kaidesi
+            from .musahede import kesirli_sekil_kaidesi
             k = kesirli_sekil_kaidesi(ciftler)
             return None if k is None else str(k)
         I.sekil_kaidesi = self._dene("idrak.sekil", _sekil)
@@ -836,7 +836,7 @@ class Kademeler:
         A = I.ciftler[0][0]
 
         def _iki_olcek():
-            from .iki_olcek import iki_olcegin_acisi
+            from .musahede import iki_olcegin_acisi
 
             class _G:
                 ad, kaynak = "kademe", "kademe"
@@ -1326,8 +1326,8 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
 
     if ne == "dalga":
         try:
-            from .iki_olcek import iki_olcegin_acisi
-            from .operad import ortu_kapaniyor_mu
+            from .musahede import iki_olcegin_acisi
+            from .musahede import ortu_kapaniyor_mu
             from .melekeler import QNefs
             from .zihin_durumu import MAKAM_ADLARI, QAyar
 
@@ -1352,7 +1352,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     if ne != "çevrim":
         raise ValueError("müdrike kipi bilinmiyor: %r" % (ne,))
 
-    from .operad import ortu_kapaniyor_mu
+    from .musahede import ortu_kapaniyor_mu
 
     dusunce: List[str] = []
 
@@ -2265,10 +2265,10 @@ def rapor() -> str:                                     # pragma: no cover
         s: List[str] = []
         kume = "training"
         n = 3
-        from idrak import arc
+        from .musahede import gorevleri_getir
 
         s += ["=== ALTI KADEME -- girdi/çıktı zinciri ===", ""]
-        for g in arc.gorevleri_getir(kume)[:int(n)]:
+        for g in gorevleri_getir(kume)[:int(n)]:
             r = kademeleri_kos(g)
             t = zayif_halkaya_gore_topla(olcumler=r["ölçümler"], ne="azamî")
             s.append("--- %s ---" % g.ad)
@@ -2296,9 +2296,9 @@ def rapor() -> str:                                     # pragma: no cover
         n = 120
         derinlik = 2
         dalga = False
-        from idrak import arc
+        from .musahede import gorevleri_getir
 
-        g = arc.gorevleri_getir(kume)[:int(n)]
+        g = gorevleri_getir(kume)[:int(n)]
         coz = cevap = yanlis = 0
         sebepler: Dict[str, int] = {}
         ornek_muhakeme: List[str] = []
@@ -2428,7 +2428,7 @@ def rapor() -> str:                                     # pragma: no cover
     def _rapor_nefs_kulli_kayip() -> List[str]:
         s: List[str] = []
         n = 2
-        from idrak import arc
+        from .musahede import gorevleri_getir
 
         from main.egitim import KISA_CPU
         from .melekeler import QNefs
@@ -2437,7 +2437,7 @@ def rapor() -> str:                                     # pragma: no cover
         ayar = KISA_CPU
         nefs = QNefs(ayar.tohum, ayar.qayar())
         nefs.idrak_et(np.zeros((2, ayar.satir_kubiti)))
-        veri = ornekler(arc.gorevleri_getir("training")[:6], azami=int(n),
+        veri = ornekler(gorevleri_getir("training")[:6], azami=int(n),
                         pencere=ayar.pencere, sozluk=ayar.sozluk)
         t = kulli_kayip(nefs, veri, sozluk=ayar.sozluk)
         s += ["=== KÜLLÎ KAYIP -- 41 melekenin hepsi sayılıyor mu? ===",

@@ -77,7 +77,7 @@ EKSIK: Dict[str, str] = {}
 import akis.hacim  # [gölge] Hacim — ortalama eğrilik akışı ve yoğunluk akışları
 import akis.test_akis  # [şahit] akis test takımı
 import nefs.melekeler  # [uzuv] KÜLLÎ MELEKE ÇİPİ -- 44 meleke, 20 mertebe, iki hat, tek dosya
-import nefs.lisan  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri
+import nefs.musahede  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri
 import akis.ikmal  # [gölge] Ceridenin İkmâl Fıkraları -- Lions, Bochner, Cayley, Postnikov
 import akis.tikiz  # [gölge] Tıkız — Alexandroff tıkızlaştırması, barriyerler ve kritik lokus
 
@@ -122,7 +122,7 @@ try:                                   # torch şartlı
     import idrak.model  # [uzuv] Nefs-i Müdrike ARC modeli — risalelerin mimarisinin fiilî hâli
 except Exception as _e:                # torch yoksa kayda geçer
     EKSIK['idrak.model'] = str(_e)
-import idrak.sekil  # [uzuv] Çıktı ızgarasının şeklini **gösterimlerden çıkarmak**
+import nefs.musahede  # [uzuv] Çıktı ızgarasının şeklini **gösterimlerden çıkarmak**
 import idrak.test_cozucu  # [şahit] ``idrak.cozucu`` sınamaları — ispatlı çözüm ya da sükût
 try:                                   # torch şartlı
     import idrak.test_idrak  # [şahit] ``idrak`` paketi sınamaları — veri, kübit, model, eğitim
@@ -175,11 +175,11 @@ import mizan.test_mizan  # [şahit] mizan test takımı
 # ------------------------------------------------------------------
 import nefs.akit  # [uzuv] Kademe 1 -- **envanter ve arayüz akdi**
 import nefs.hiz  # [hakem] Hız defteri -- 700 MB/sn hedefinin üç ayrı muhasebesi
-import nefs.gomme  # [uzuv] Genlik gömmesi -- 4096 boyut 12 kübitte, 35 kübitlik adres yazmacı
+import nefs.musahede  # [uzuv] Genlik gömmesi -- 4096 boyut 12 kübitte, 35 kübitlik adres yazmacı
 import nefs.zirh  # [uzuv] Dörtlü topolojik zırh -- gaye: çelişkisiz mana manifoldu
 import kuantum.kubit_taksimati  # [uzuv] 22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir
 import nefs.ttkan  # [hakem] TT-KAN -- ceridenin hız hükmünün fiilî hesabı
-import nefs.kopru  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
+import nefs.musahede  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
 import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
 import nefs.qkaide  # [uzuv] KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta
 import nefs.test_nefs  # [şahit] nefs sınamaları
@@ -314,8 +314,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'akis test takımı'),
     ('nefs.melekeler', 'uzuv',
      'KÜLLÎ MELEKE ÇİPİ -- 44 meleke, 20 mertebe, iki hat, tek dosya'),
-    ('nefs.lisan', 'uzuv',
-     'Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri; mutlak koordinat YASAK, izafî tarif esastır'),
     ('akis.ikmal', 'gölge',
      'Ceridenin İkmâl Fıkraları -- Lions konsantrasyonu, RCD(K,N) Bochner, '
      'Cayley çekilmesi, Postnikov tıkanıklık vekili'),
@@ -361,8 +359,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Kübit kaydı: reel dik kapılarla öğrenilebilir bir kuantum yazmacı'),
     ('idrak.model', 'uzuv',
      'Nefs-i Müdrike ARC modeli — risalelerin mimarisinin fiilî hâli'),
-    ('idrak.sekil', 'uzuv',
-     'Çıktı ızgarasının şeklini **gösterimlerden çıkarmak**'),
     ('idrak.test_cozucu', 'şahit',
      '``idrak.cozucu`` sınamaları — ispatlı çözüm ya da sükût'),
     ('idrak.test_idrak', 'şahit',
@@ -423,9 +419,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Kademe 1 -- **envanter ve arayüz akdi**'),
     ('nefs.hiz', 'hakem',
      'Hız defteri -- token başına / küllî süperpozisyon / yükleme: üç muhasebe yan yana'),
-    ('nefs.gomme', 'uzuv',
-     'Genlik gömmesi -- tokenın 4096 boyutu 12 kübitin GENLİĞİdir; '
-     '35 kübitlik adres yazmacı (yığın|yer|mana)'),
     ('nefs.zirh', 'uzuv',
      'Dörtlü topolojik zırh -- Sheaf/Betti/Kohomoloji/Homotopi; '
      'gaye sonraki token değil ÇELİŞKİSİZLİKtir'),
@@ -433,8 +426,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      '22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir; eklem ölçüsü'),
     ('nefs.ttkan', 'hakem',
      'TT-KAN -- ceridenin 154 MB/sn hükmünün fiilen sayılmış FLOP hesabı'),
-    ('nefs.kopru', 'uzuv',
-     'FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati'),
     ('nefs.kule', 'uzuv',
      'Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması'),
     ('nefs.qkaide', 'uzuv',

@@ -7867,3 +7867,71 @@ ve asıl imzasındaki varsayılanlar kapanışın başına konur.
    parametresi `x`tir. Bağlandı.
 3. Bir çağrı `np.asarray(eksikler, float, ne="katılan")` hâline
    gelmişti -- `ne` yanlış fonksiyona düşmüştü.
+
+---
+
+## H225 -- KÜME 6 tevhidi: on bir dosya tek müşahede çipinde
+
+Padişahın kat'î usulüyle, üç adımda. Asıllar `yedek/kume6_asillari/`
+altında şahittir.
+
+### Adım (a) -- dosya-içi terkip
+
+| dosya | eriyen asıllar | terkip |
+|---|---|---|
+| `nefs/boyut.py` | on bir aday kaide + `boyut_kaidesi_bul` + `boyut_tahmin` + `olc` | `cikti_ne_kadar` |
+| `idrak/sekil.py` | `EksenKaidesi` + `eksen_kaidesi` + `sekil_kaidesi` + `kume_olc` | `kesirli_sekil_kaidesi` |
+| `nefs/kopru.py` | `belirtec_morfizmi` + `kodlamayi_olc` | `belirtecten_aciya` |
+| `nefs/operad.py` | `yamalar` + `cech_tikanikligi` + `tikaniklik_kapisi` + `tikaniklik_sukut_bagi` | `ortu_kapaniyor_mu` |
+| `nefs/sahitlik.py` | `kanal_degerleri` + `kanal_bagimsizligi` | `iki_sahit_ayri_mi` |
+| `nefs/gomme.py` | `kubit_sayisi` + `genlik_gom` + `genlik_coz` + `mps_kur` + `qtt_bag_ihtiyaci` + `gomme_hatasi` | `genlige_gom` |
+| `nefs/iki_olcek.py` | `_izgara_tarifi` + `gorev_ozellikleri` + `sagir_uydur` + `kebir_ozellik` + `olcek_acilari` | `iki_olcegin_acisi` |
+| `nefs/sahit.py` | `_kopma_olcusu` + `_mad_esigi` + `bolutle` + `_ic_kesim` | `sahitleri_ayir` |
+| | `capraz_kovaryans` + `_polar` + `kaide_uydur` + `kulli_kaide` | `kaideyi_coz` |
+| `nefs/lisan.py` | `yon_indisi` + `oteleme_ureteci` + `izafi_operator` + `IzafiMevki.kod` + `izgara_kodla` + `metin_kodla` | `izafi_oteleme` |
+| `idrak/arc.py` | `_cift` + `yukle` + `yukle_hepsi` + `bol` | `gorevleri_getir` |
+| `nefs/mubser.py` | `_tenasub_maske` + `_tenasub_kulli` | `_tenasub` |
+| | `_dihedral_kanonik` + `_emsal` | `_emsal` |
+
+**`nefs/mubser.py`nin 15 kanalı birleştirilmedi ve zorlanmadı**: her
+biri AYRI bir müşahede ölçüsüdür (ışık, levn, doku, bu'd, süreklilik…),
+aralarında mükerrerlik yoktur; ayrıca `_bilesenler`in `idrak/cozucu.py`de
+hakikî bir çağıranı vardır. `nefs/kademeler.py`de olduğu gibi burada da
+yazıldı: **olmayan bir kümeyi uydurmak terkip değil tabeladır.**
+
+### Adım (b) -- birleştirme
+
+On bir dosya `nefs/musahede.py`de birleşti (3623 satır → 3134).
+ARC verisi `idrak/veri` altında **kaldı** ve `KOK` oraya bağlandı: veri
+deponun bir uzvu değil, dışarıdan gelen ham müşahededir; çipin yanına
+taşınması onu koda karıştırmak olurdu.
+
+### Adım (c) -- İKİ BOYUT SİSTEMİ BİRLEŞTİ, VE ÖLÇÜ İYİLEŞTİ
+
+Zabıttaki birinci kök problem buydu: `nefs/boyut.py` on yedi adaylı bir
+**kaide cetveliyle**, `idrak/sekil.py` eksen başına **kesirli oranla**
+(`Fraction` ile tam) çalışıyordu; ikisi birbiriyle hiç konuşmuyordu.
+Terkipte ikisi tek kapıdan geçer ve sıraları cebren bellidir:
+
+1. **Kesirli kaide evvel** -- bulunabiliyorsa **genelleyen** cevap odur.
+2. **Cetvel sonra** -- kesirle ifade edilemeyenler (dolu_kutu,
+   en_büyük_nesne, tek_nesne, nesne_sayısı_kare…).
+3. **İkisi de tutmazsa sükût** -- uydurma bir boyut vermek,
+   bilmediğini söylememekten kötüdür (H10).
+
+**Ölçüldü (200 eğitim görevi):**
+
+| ölçü | boyut cetveli (evvel) | kesirli (evvel) | birleşik (sonra) |
+|---|---|---|---|
+| isabet | 182 | 190/216 çift | **183** |
+| sükût | 18 | 26 çift | **17** |
+| isabet oranı | 0.910 | 0.880 kapsam | **0.915** |
+| konuşunca isabet | 1.000 | 1.000 | **1.000** |
+
+Yani terkip bir tabela değil: birleşme **bir görevi daha kazandırdı** ve
+model hiç yanlış konuşmadı. Kaide adları da değişti ve bu açıkça
+yazılıyor -- kesirli kol kazandığında ad `kesir:oran|oran` biçimindedir.
+
+Ayrıca dokuz `rapor()` tek **kendini gösterme**de birleşti; her bölüm
+H223'te ölçülen isim-ezme kusuru tekrarlanmasın diye kendi kapanışında
+koşar.

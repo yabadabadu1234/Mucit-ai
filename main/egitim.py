@@ -97,11 +97,11 @@ from typing import Dict, List, Optional, Sequence, Tuple  # noqa: E402
 
 import numpy as np                                       # noqa: E402
 
-from idrak import arc                                    # noqa: E402
+from nefs.musahede import gorevleri_getir                                    # noqa: E402
 from kuantum.yazmac import hiyerarsik_ikili_agac_katlama  # noqa: E402
 from ogrenme.optimize import (qsvt_gibbs_sogutma,        # noqa: E402
                           statik_faz_tablosu_oku)
-from nefs.lisan import IzafiMevki2D, tiktoken_2d_kodla   # noqa: E402
+from nefs.musahede import IzafiMevki2D, tiktoken_2d_kodla   # noqa: E402
 from nefs.melekeler import melekeleri_kur                # noqa: E402
 from ogrenme.optimize import OptimizeAyari               # noqa: E402
 from ogrenme.optimize import hoca_egit                   # noqa: E402
@@ -308,9 +308,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
 
     t0 = time.perf_counter()
     hepsi = list(gorevler) if gorevler is not None else \
-        arc.gorevleri_getir("training")
+        gorevleri_getir("training")
     # **İMTİHAN BÖLÜMLEMESİ** -- ezberi ve sızıntıyı engeller.
-    egitim_gorevleri, dogrulama = arc.gorevleri_getir(ne="böl", gorevler=
+    egitim_gorevleri, dogrulama = gorevleri_getir(ne="böl", gorevler=
         hepsi, dogrulama=int(ayar.dogrulama_sayisi), tohum=ayar.tohum)
     veri = ornekler(egitim_gorevleri, azami=ayar.ornek_sayisi,
                     pencere=ayar.pencere, sozluk=ayar.sozluk,
@@ -509,8 +509,8 @@ def dalga_talimi_kos(ayar: EgitimAyari = KISA_CPU,
                      kume: str = "training") -> Dict[str, object]:
     """Şemanın dalga hattını koştur ve telemetrisini döndür."""
     motor = KulliDalgaTalimMotoru(ayar)
-    hepsi = arc.gorevleri_getir(kume)
-    egitim_gorevleri, _dog = arc.gorevleri_getir(ne="böl", gorevler=
+    hepsi = gorevleri_getir(kume)
+    egitim_gorevleri, _dog = gorevleri_getir(ne="böl", gorevler=
         hepsi, dogrulama=int(ayar.dogrulama_sayisi), tohum=ayar.tohum)
     durum = motor.veri_durumu_hazirla(
         list(egitim_gorevleri)[:int(ayar.gorev)])

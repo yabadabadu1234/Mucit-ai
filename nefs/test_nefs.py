@@ -739,7 +739,7 @@ def test_kodlama_tersinir_ve_hadamard_esit_uzak():
        alternatiflerinin hepsinden İYİ). ``kubit ≥ sozluk`` olunca
        Hadamard tam eşit uzaklık verir (değişke 0).
     """
-    from .kopru import belirtecten_aciya
+    from .musahede import belirtecten_aciya
     from .qegitim import belirtecleri_kodla
 
     r = belirtecten_aciya()
@@ -795,11 +795,11 @@ def test_iki_olcek_hakikaten_iki():
     Ölçüt Grassmann asal açılarıdır ve **kırmızı yanabilir**: açılar
     sıfıra yakın çıksaydı ikinci ölçek gereksiz demekti.
     """
-    from idrak import arc
+    from .musahede import gorevleri_getir
 
-    from .iki_olcek import iki_olcegin_acisi
+    from .musahede import iki_olcegin_acisi
 
-    g = arc.gorevleri_getir("training")[:10]
+    g = gorevleri_getir("training")[:10]
     artiklar = []
     for gv in g:
         r = iki_olcegin_acisi(gv, ne="sağîr")
@@ -829,7 +829,7 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
     tıkanıkta daha ÇOK konuşuyordu). İki koşu da sınanır ki düzeltmenin
     fiilen bir şey değiştirdiği görülsün.
     """
-    from .operad import ortu_kapaniyor_mu
+    from .musahede import ortu_kapaniyor_mu
 
     kapali = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=False)
     acik = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=True)
@@ -838,8 +838,8 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
     assert acik["sukut_tıkanıkta"] > kapali["sukut_tıkanıkta"], (kapali, acik)
 
     # Kozikıl şartı: ikili uyuşma denklik kurduğu için üçlüler tutmalı.
-    from idrak import arc
-    for gv in arc.gorevleri_getir("training")[:40]:
+    from .musahede import gorevleri_getir
+    for gv in gorevleri_getir("training")[:40]:
         c = ortu_kapaniyor_mu(gv)
         assert c["üçlü_tutarlı"], (gv, c)
 
@@ -1396,7 +1396,7 @@ def test_ceride_uc_kapali_form_babi():
 def test_gomme_genlik_kodlamasi_ve_35_kubit():
     """4096 boyut 12 kübitte mi, ve χ≤16 iddiası ölçülüyor mu?"""
     import numpy as np
-    from nefs.gomme import genlige_gom, YazmacOlcusu
+    from nefs.musahede import genlige_gom, YazmacOlcusu
     assert genlige_gom(D=4096, ne="kübit") == 12
     o = YazmacOlcusu()
     assert (o.kubit_yigin, o.kubit_yer, o.kubit_mana) == (11, 12, 12)
@@ -1596,7 +1596,7 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
 def test_gomme_qtt_cekirdegi_chi8_ve_muhurlenen_ayrisim():
     """Emir 2 ve 3: χ=8 QTT çekirdeği, n=2 d=12 mühürlü mü?"""
     import numpy as np
-    from nefs.gomme import (QTT_TABAN, QTT_KADEME, QTT_BAG,
+    from nefs.musahede import (QTT_TABAN, QTT_KADEME, QTT_BAG,
                             qtt_parametre_sayisi, qtt_gomme,
                             qtt_sadakat_cetveli)
     assert (QTT_TABAN, QTT_KADEME, QTT_BAG) == (2, 12, 8)
@@ -1671,7 +1671,7 @@ def test_ic_bag_serpistirilmis_QTT_izafi_operatorleri_TAM_tasiyor():
 def test_lisan_tiktoken_yerel_tablodan_ve_izafi_mevki():
     """tiktoken depodaki tablodan okunuyor mu, izafî mevki öteleme-değişmez mi?"""
     import numpy as np
-    from nefs.lisan import (kodlayici, izafi_oteleme,
+    from nefs.musahede import (kodlayici, izafi_oteleme,
                             OZEL_BELIRTECLER)
 
     k = kodlayici()

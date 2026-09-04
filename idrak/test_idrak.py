@@ -9,14 +9,14 @@ import numpy as np
 import pytest
 import torch
 
-from idrak import arc
+from nefs.musahede import ARC, gorevleri_getir
 from idrak.kubit import (KubitKaydi, diklik_hatasi, kontrollu_donme,
                          norm_hatasi, tek_kubit_donme)
 from idrak.model import (Ayar, DikKarisim, HartleySuzgec, HIZLI_BOYUT,
                          NefsModeli, VARSAYILAN_BOYUT, nedensellik_hatasi,
                          parametre_sayisi)
 
-VERI_VAR = os.path.isdir(os.path.join(arc.ARC, "training"))
+VERI_VAR = os.path.isdir(os.path.join(ARC, "training"))
 veri_gerek = pytest.mark.skipif(not VERI_VAR, reason="ARC verisi yok")
 
 
@@ -26,57 +26,57 @@ veri_gerek = pytest.mark.skipif(not VERI_VAR, reason="ARC verisi yok")
 
 @veri_gerek
 def test_resmi_bolme_sayilari():
-    e = arc.gorevleri_getir("training")
-    d = arc.gorevleri_getir("evaluation")
+    e = gorevleri_getir("training")
+    d = gorevleri_getir("evaluation")
     assert len(e) == 1000 and len(d) == 120
-    egt, dog = arc.gorevleri_getir(ne="böl", gorevler=e, dogrulama=100)
+    egt, dog = gorevleri_getir(ne="böl", gorevler=e, dogrulama=100)
     assert len(egt) == 900 and len(dog) == 100
     assert not (set(g.ad for g in egt) & set(g.ad for g in dog))
 
 
 @veri_gerek
 def test_bolme_tohumla_tekrarlaniyor():
-    e = arc.gorevleri_getir("training")
-    a1, b1 = arc.gorevleri_getir(ne="böl", gorevler=e, 100, tohum=7)
-    a2, b2 = arc.gorevleri_getir(ne="böl", gorevler=e, 100, tohum=7)
+    e = gorevleri_getir("training")
+    a1, b1 = gorevleri_getir(ne="böl", gorevler=e, dogrulama=100, tohum=7)
+    a2, b2 = gorevleri_getir(ne="böl", gorevler=e, dogrulama=100, tohum=7)
     assert [g.ad for g in b1] == [g.ad for g in b2]
 
 
 @veri_gerek
 def test_sinama_kumesi_egitimde_hic_gecmiyor():
-    e = {g.ad for g in arc.gorevleri_getir("training")}
-    d = {g.ad for g in arc.gorevleri_getir("evaluation")}
+    e = {g.ad for g in gorevleri_getir("training")}
+    d = {g.ad for g in gorevleri_getir("evaluation")}
     assert not (e & d)
 
 
 @veri_gerek
 def test_belirtecleme_gidis_donusu_kayipsiz():
     hata = 0
-    for g in arc.gorevleri_getir("training")[:150]:
+    for g in gorevleri_getir("training")[:150]:
         for a, b in g.egitim:
             for x in (a, b):
-                if not np.array_equal(arc.belirtec_izgara(
-                        arc.izgara_belirtecle(x)), x):
+                if not np.array_equal(belirtec_izgara(
+                        izgara_belirtecle(x)), x):
                     hata += 1
     assert hata == 0
 
 
 def test_bozuk_dizi_sessizce_onarilmiyor():
-    assert arc.belirtec_izgara([1, 2, arc.SATIR_SONU, 3,
-                                arc.SATIR_SONU]) is None   # eşit olmayan
-    assert arc.belirtec_izgara([arc.SATIR_SONU]) is None   # hücre yok
-    assert arc.belirtec_izgara([1, 99, arc.SATIR_SONU]) is None
-    assert arc.belirtec_izgara([]) is None
+    assert belirtec_izgara([1, 2, SATIR_SONU, 3,
+                                SATIR_SONU]) is None   # eşit olmayan
+    assert belirtec_izgara([SATIR_SONU]) is None   # hücre yok
+    assert belirtec_izgara([1, 99, SATIR_SONU]) is None
+    assert belirtec_izgara([]) is None
 
 
 @veri_gerek
 def test_hedef_ornek_baglamdan_cikariliyor():
     """Sızıntı denetimi: hedef örnek bağlamda olmamalı."""
-    g = [x for x in arc.gorevleri_getir("training")[:80] if len(x.egitim) >= 3][0]
+    g = [x for x in gorevleri_getir("training")[:80] if len(x.egitim) >= 3][0]
     for j in range(len(g.egitim)):
-        b, h = arc.gorev_dizisi(g, j)
-        cikti = arc.izgara_belirtecle(g.egitim[j][1])
-        girdi = arc.izgara_belirtecle(g.egitim[j][0])
+        b, h = gorev_dizisi(g, j)
+        cikti = izgara_belirtecle(g.egitim[j][1])
+        girdi = izgara_belirtecle(g.egitim[j][0])
         # girdi bağlamda OLMALI (soru), çıktı OLMAMALI (cevap)
         assert any(b[i:i + len(girdi)] == girdi
                    for i in range(len(b) - len(girdi) + 1))
@@ -84,14 +84,14 @@ def test_hedef_ornek_baglamdan_cikariliyor():
 
 @veri_gerek
 def test_sozlu_algoritma_120_gorevin_hepsinde_var():
-    d = arc.gorevleri_getir("evaluation")
-    var = sum(arc.soyutlama_oku(g.ad) is not None for g in d)
+    d = gorevleri_getir("evaluation")
+    var = sum(soyutlama_oku(g.ad) is not None for g in d)
     assert var == 120
 
 
 @veri_gerek
 def test_istatistik_makul():
-    i = arc.istatistik(arc.gorevleri_getir("evaluation"))
+    i = istatistik(gorevleri_getir("evaluation"))
     assert i["görev"] == 120
     assert 1 <= i["azamî_kenar_en_büyük"] <= 30      # ARC ızgara sınırı
     assert 0.0 < i["şekli_sabit_oran"] < 1.0
@@ -216,7 +216,7 @@ def test_uret_forward_ile_ayni_sonucu_veriyor():
     baglam = torch.randint(0, 10, (1, 40))
     with torch.no_grad():
         hizli = m.uret(baglam, 6)
-        y = torch.full((1, 1), arc.DOLGU, dtype=torch.long)
+        y = torch.full((1, 1), DOLGU, dtype=torch.long)
         for _ in range(6):
             y = torch.cat([y, m(baglam, y)[:, -1].argmax(-1, keepdim=True)],
                           dim=1)
@@ -232,19 +232,19 @@ def test_sekil_basi_kisitli_uretimi_zorluyor():
     b = torch.randint(0, 10, (1, 60))
     for h, w in ((1, 1), (4, 5), (7, 2), (12, 9)):
         y, sr, st = m.uret_kisitli(b, satir=h, sutun=w)
-        g = arc.belirtec_izgara(y[0].tolist())
+        g = belirtec_izgara(y[0].tolist())
         assert g is not None                      # HER ZAMAN iyi biçimli
         assert g.shape == (h, w)                  # HER ZAMAN istenen şekil
         assert (sr, st) == (h, w)
     # Bütçeyi aşan şekil KIRPILIR, patlamaz (30×30 = 931 belirteç ister)
     y, sr, st = m.uret_kisitli(b, satir=30, sutun=30)
-    g = arc.belirtec_izgara(y[0].tolist())
+    g = belirtec_izgara(y[0].tolist())
     assert g is not None and g.shape == (sr, st)
     assert sr * (st + 1) <= m.ayar.azami_hedef - 2
     assert sr < 30 and st == 30                   # satır kırpıldı
     # şekil verilmezse baştan okunuyor ve yine tutuyor
     y2, sr2, st2 = m.uret_kisitli(b)
-    g2 = arc.belirtec_izgara(y2[0].tolist())
+    g2 = belirtec_izgara(y2[0].tolist())
     assert g2 is not None and g2.shape == (sr2, st2)
     assert 1 <= sr2 <= m.azami_kenar and 1 <= st2 <= m.azami_kenar
 
@@ -256,7 +256,7 @@ def test_model_cikti_sekli_ve_parametre():
     p = parametre_sayisi(m)
     assert 1e6 < p["toplam"] < 5e6
     c = m(torch.randint(0, 10, (2, 64)), torch.randint(0, 10, (2, 20)))
-    assert c.shape == (2, 20, arc.SOZLUK)
+    assert c.shape == (2, 20, SOZLUK)
 
 
 # ══════════════════════════════════════════════════════════════════════

@@ -35,7 +35,7 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from . import arc
+from nefs import musahede as arc
 
 __all__ = [
     "D4", "d4_uygula", "Aday", "adaylar", "gorev_coz", "kume_coz",

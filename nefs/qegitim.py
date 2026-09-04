@@ -36,7 +36,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from idrak import arc
+from .musahede import gorevleri_getir
 from ogrenme.optimize import as_gek_adimi, ayrik_mertebede_sicra
 
 from . import melekeler as mertebe
@@ -102,7 +102,7 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
     cikti: List[Tuple[List[int], int]] = []
     for g in gorevler:
         try:
-            dizi, hedef = arc.gorev_dizisi(g, hedef_indis=0)
+            dizi, hedef = gorev_dizisi(g, hedef_indis=0)
         except Exception:
             continue
         akis = [int(x) % sozluk for x in list(dizi) + list(hedef)]
@@ -390,7 +390,7 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
         if deneme >= azami:
             break
         try:
-            dizi, hedef = arc.gorev_dizisi(g, hedef_indis=0)
+            dizi, hedef = gorev_dizisi(g, hedef_indis=0)
         except Exception:
             continue
         deneme += 1

@@ -1130,7 +1130,7 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
     from .melekeler import qsicil
 
     if nefs is None:
-        from idrak import arc
+        from .musahede import gorevleri_getir
 
         from main.egitim import KISA_CPU
         from .melekeler import QNefs
@@ -1138,7 +1138,7 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
         a = ayar or KISA_CPU
         nefs = QNefs(a.tohum, a.qayar())
         nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
-        veri = ornekler(arc.gorevleri_getir("training")[:6], azami=2,
+        veri = ornekler(gorevleri_getir("training")[:6], azami=2,
                         pencere=a.pencere, sozluk=a.sozluk)
         E = np.stack([belirtecleri_kodla(b, a.satir_kubiti, a.sozluk)
                       for b, _ in veri])

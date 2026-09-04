@@ -78,11 +78,11 @@ from omega_kategori_nbe.denetleyici import Baglam, denetle_t
 
 
 from .kule import ince, kaba
-from .operad import ortu_kapaniyor_mu
+from .musahede import ortu_kapaniyor_mu
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
                       kontrollu_donme)
 from .zirh import mantigi_tek_supurmede_isaretle
-from .sahit import (artiklar, delil_dizileri, kaideyi_coz,
+from .musahede import (artiklar, delil_dizileri, kaideyi_coz,
                     nakz_bul, sahitleri_ayir)
 
 

@@ -119,8 +119,8 @@ def istikra_mertebesi(n_gorev: int = 200) -> Dict[str, object]:
     mertebeye. ``tam_istikra_mi`` hepsinde ``False``: eksik istikrâ
     hiçbir sonlu ``n`` için yakîn vermez.
     """
-    from idrak import arc
-    g = arc.gorevleri_getir("training")[:int(n_gorev)]
+    from .musahede import gorevleri_getir
+    g = gorevleri_getir("training")[:int(n_gorev)]
     k = np.array([len(x.egitim) for x in g], dtype=int)
     y = np.array([ardisiklik_kaidesi(int(v), int(v)) for v in k], float)
     adlar = sorted({mertebe_adi(float(v)) for v in y})
@@ -267,8 +267,8 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
     İkisi ayrı düşerse bu bir kusur DEĞİLDİR -- akış eğitilmemiştir.
     Ölçülen şey **aynı yöne bakıp bakmadıklarıdır**.
     """
-    from .operad import ortu_kapaniyor_mu
-    from .iki_olcek import iki_olcegin_acisi
+    from .musahede import ortu_kapaniyor_mu
+    from .musahede import iki_olcegin_acisi
     from .melekeler import QNefs
     from .zihin_durumu import MAKAM_ADLARI, QAyar
 
@@ -291,7 +291,7 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
 
 
 def rapor(n_gorev: int = 30, tohum: int = 0) -> str:
-    from idrak import arc
+    from .musahede import gorevleri_getir
     from .zihin_durumu import MAKAM_ADLARI
 
     s = ["=== MANTIK -- mizan/ ana akışa bağlanıyor ===", ""]
@@ -330,7 +330,7 @@ def rapor(n_gorev: int = 30, tohum: int = 0) -> str:
           "      Zan deyip eksik. Bütçe sınırı değil, YAPISAL yanlışlık."]
 
     s += ["", "YAKÎN YÜZLEŞTİRMESİ (klasik hesap ↔ akışın makamı):"]
-    gorevler = arc.gorevleri_getir("training")[:int(n_gorev)]
+    gorevler = gorevleri_getir("training")[:int(n_gorev)]
     K, A = [], []
     for gv in gorevler:
         try:

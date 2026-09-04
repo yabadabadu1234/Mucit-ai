@@ -7,10 +7,10 @@ import os
 import numpy as np
 import pytest
 
-from idrak import arc
+from nefs.musahede import ARC, gorevleri_getir
 from idrak import cozucu as cz
 
-VERI_VAR = os.path.isdir(os.path.join(arc.ARC, "training"))
+VERI_VAR = os.path.isdir(os.path.join(ARC, "training"))
 veri_gerek = pytest.mark.skipif(not VERI_VAR, reason="ARC verisi yok")
 
 
@@ -102,7 +102,7 @@ def test_aday_istisna_atsa_bile_cokmuyor():
 
 def _gorev(ad, kural, girdiler):
     ciftler = [(g, kural(g)) for g in girdiler]
-    return arc.Gorev(ad, ciftler[:-1], ciftler[-1:])
+    return Gorev(ad, ciftler[:-1], ciftler[-1:])
 
 
 def test_dondurme_gorevini_cozuyor():
@@ -128,7 +128,7 @@ def test_cozulemeyen_gorevde_SUSUYOR():
     r = np.random.default_rng(2)
     ciftler = [(r.integers(0, 10, (4, 4)), r.integers(0, 10, (4, 4)))
                for _ in range(4)]
-    g = arc.Gorev("gürültü", ciftler[:-1], ciftler[-1:])
+    g = Gorev("gürültü", ciftler[:-1], ciftler[-1:])
     d = cz.gorev_coz(g)
     assert d["cevap_verildi"] is False
     assert d["kural"] is None
@@ -142,7 +142,7 @@ def test_cozulemeyen_gorevde_SUSUYOR():
 @veri_gerek
 def test_egitim_kumesinde_en_az_bir_gorev_TAM_cozuluyor():
     """Kullanıcının şartı: en az bir görev %100 doğru."""
-    r = cz.kume_coz(arc.gorevleri_getir("training"))
+    r = cz.kume_coz(gorevleri_getir("training"))
     assert r["tam_çözülen"] >= 1
     assert r["tam_çözülen"] == len(r["tam_çözülen_ad"])
 
@@ -150,8 +150,8 @@ def test_egitim_kumesinde_en_az_bir_gorev_TAM_cozuluyor():
 @veri_gerek
 def test_dogrulama_bolmesinde_de_tam_cozum_var():
     """Sinir ağının HİÇ görmediği bölmede de tam çözüm."""
-    e = arc.gorevleri_getir("training")
-    _egt, dog = arc.gorevleri_getir(ne="böl", gorevler=e, 100, tohum=0)
+    e = gorevleri_getir("training")
+    _egt, dog = gorevleri_getir(ne="böl", gorevler=e, dogrulama=100, tohum=0)
     r = cz.kume_coz(dog)
     assert r["tam_çözülen"] >= 1
 
@@ -159,7 +159,7 @@ def test_dogrulama_bolmesinde_de_tam_cozum_var():
 @veri_gerek
 def test_cevap_verince_isabet_yuksek():
     """Susma ölçütü işe yarıyor mu? — cevap verince isabet yüksek olmalı."""
-    r = cz.kume_coz(arc.gorevleri_getir("training"))
+    r = cz.kume_coz(gorevleri_getir("training"))
     assert r["cevap_verilen"] > 0
     assert r["isabet_cevap_verince"] > 0.8
     assert r["susulan"] > r["cevap_verilen"]        # çoğunlukla susuyor
@@ -168,7 +168,7 @@ def test_cevap_verince_isabet_yuksek():
 @veri_gerek
 def test_cozulen_gorevler_gercekten_dogrulaniyor():
     """Bağımsız teyit: çözülen her görev elle yeniden sınanıyor."""
-    e = arc.gorevleri_getir("training")
+    e = gorevleri_getir("training")
     r = cz.kume_coz(e)
     adlar = set(r["tam_çözülen_ad"])
     assert adlar
@@ -186,6 +186,6 @@ def test_cozulen_gorevler_gercekten_dogrulaniyor():
 @veri_gerek
 def test_degerlendirme_kumesi_bu_DSL_ile_cozulmuyor():
     """Dürüst başarısızlık: ARC-AGI-2 eval tam bunu yenmek için kuruldu."""
-    r = cz.kume_coz(arc.gorevleri_getir("evaluation"))
+    r = cz.kume_coz(gorevleri_getir("evaluation"))
     assert r["tam_çözülen"] == 0
     assert r["görev"] == 120

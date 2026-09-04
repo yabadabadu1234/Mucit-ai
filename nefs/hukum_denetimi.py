@@ -62,7 +62,7 @@ def _h3_gradyansiz() -> Tuple[bool, str]:
 
 def _h6_sahitlik() -> Tuple[bool, str]:
     """Tek karşı örnek küllî kaideyi düşürür."""
-    from .sahit import _akis_kur, kaideyi_coz, nakz_bul, sahitleri_ayir
+    from .musahede import _akis_kur, kaideyi_coz, nakz_bul, sahitleri_ayir
     temiz = _akis_kur(m=5, ds=8, t=6)
     bozuk = _akis_kur(m=5, ds=8, t=6, bozuk=2)
     r = []
@@ -75,15 +75,15 @@ def _h6_sahitlik() -> Tuple[bool, str]:
 
 def _h14_kayipsiz() -> Tuple[bool, str]:
     """Belirteçleme gidiş-dönüşü kayıpsız."""
-    from idrak import arc
-    g = arc.gorevleri_getir("training")[:40]
+    from .musahede import gorevleri_getir
+    g = gorevleri_getir("training")[:40]
     hata = 0
     n = 0
     for gv in g:
         for a, b in gv.egitim:
             n += 1
-            if not np.array_equal(arc.belirtec_izgara(
-                    arc.izgara_belirtecle(a)), a):
+            if not np.array_equal(belirtec_izgara(
+                    izgara_belirtecle(a)), a):
                 hata += 1
     return hata == 0, "%d ızgarada %d hata" % (n, hata)
 
@@ -497,9 +497,9 @@ def _h69_grover_kapali_form() -> Tuple[bool, str]:
 
 def _h47_iki_olcut() -> Tuple[bool, str]:
     """Ölçüt İKİdir ve ikisi de ayrı raporlanır."""
-    from .boyut import olc
-    from idrak import arc
-    r = olc(arc.gorevleri_getir("evaluation")[:40])
+    from .musahede import olc
+    from .musahede import gorevleri_getir
+    r = olc(gorevleri_getir("evaluation")[:40])
     var = all(k in r for k in ("isabet_oranı", "konuşunca_isabet",
                                "sükût", "yanlış"))
     return var, "kapsama %.3f, konuşunca isabet %.3f, sükût %d" % (
@@ -572,9 +572,9 @@ def _h124_iki_olcek() -> Tuple[bool, str]:
     bildiğini söylüyorsa açılar sıfıra yakın çıkar ve ikinci ölçek
     gereksizdir.
     """
-    from idrak import arc
-    from .iki_olcek import iki_olcegin_acisi
-    g = arc.gorevleri_getir("training")[:12]
+    from .musahede import gorevleri_getir
+    from .musahede import iki_olcegin_acisi
+    g = gorevleri_getir("training")[:12]
     kurulan = sum(1 for x in g if iki_olcegin_acisi(x, ne="sağîr").get("kuruldu"))
     o = iki_olcegin_acisi(gorevler=g)
     if not o.get("yeterli_mi"):
@@ -592,7 +592,7 @@ def _h125_cech_sukut() -> Tuple[bool, str]:
     (model tıkanıkta daha çok konuşuyordu -- bir kusurdu); kapı açıkken
     müsbet olmalı.
     """
-    from .operad import ortu_kapaniyor_mu
+    from .musahede import ortu_kapaniyor_mu
     kapali = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=False)
     acik = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=True)
     if not (kapali.get("yeterli_mi") and acik.get("yeterli_mi")):
@@ -632,7 +632,7 @@ def _h128_teyit_kanallari() -> Tuple[bool, str]:
     şahidin birbirini teyidi yeni delil değildir ve 𝒪₂₉ o hâlde aynı
     delili iki kere sayardı.
     """
-    from .sahitlik import iki_sahit_ayri_mi
+    from .musahede import iki_sahit_ayri_mi
     r = iki_sahit_ayri_mi(n_kosu=6, n_satir=6)
     fs = r["fazla_sayma"]
     return (abs(r["uyuşma"]) < 0.7 and fs["fazla_sayma_oranı"] < 2.0), \

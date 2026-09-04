@@ -123,7 +123,7 @@ def token_muhasebesi(chi: int = 16, mpo_bag: int = 16,
     kanonik kırpılır (padişahın 1. emri: ne 1'e ez, ne 256'ya bırak).
     """
     from kuantum.yazmac import Yazmac
-    from nefs.gomme import QTT_KADEME
+    from nefs.musahede import QTT_KADEME
 
     y = Yazmac(int(QTT_KADEME), bag=int(chi), tohum=0)
     W = meleke_mpo_kur(int(QTT_KADEME), bag=int(mpo_bag))
@@ -177,7 +177,7 @@ def yukleme_muhasebesi(B: int = 2048, L: int = 4096, D: int = 4096,
     zorundadır. Burada küçük bir numuneyle **token başına sıkıştırma
     süresi** ölçülür ve tam ölçeğe taşınır.
     """
-    from nefs.gomme import qtt_gomme
+    from nefs.musahede import qtt_gomme
 
     rng = np.random.default_rng(0)
     V = (1.0 / np.arange(1, int(D) + 1))[None, :] * (
