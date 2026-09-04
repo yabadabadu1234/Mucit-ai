@@ -43,7 +43,7 @@ import numpy as np
 
 # PTR bölümünün Chebyshev tabanı. ``kuantum.nqs`` bu dosyayı
 # import ETMEZ (ölçüldü), dolayısıyla döngü yoktur.
-from kuantum.nqs import chebyshev
+from kuantum.kapilar import chebyshev
 
 __all__ = ["Yazmac", "hadamard", "dik_iki_kubit", "dik_iki_kubit_yigin",
            "MERAKademe", "mps_birlestir", "mps_kirp", "mps_norm",

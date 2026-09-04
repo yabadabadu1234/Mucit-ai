@@ -136,8 +136,6 @@ import idrak.test_sekil  # [şahit] ``idrak.sekil`` sınamaları — ispatlı ş
 import kuantum.devre  # [uzuv] Devre — durum vektörü simülatörü ve spektral işleçler
 import kuantum.eniyileme  # [uzuv] Adiyabatik geçiş, QAOA ve parametre-kaydırma kuralı
 import kuantum.kapilar  # [uzuv] Kapılar — tek ve çok kübitli üniter operatörler
-import kuantum.ceride  # [gölge] Ceridenin üç kapalı-form babı: FCT, STA, Fubini-Study
-import kuantum.qsvt  # [uzuv] QSVT — blok kodlama, kuantum sinyal işleme ve tekil değer dönüşümü
 import kuantum.surekli  # [uzuv] Sürekli değişkenli (CV) fotonik operatörler — kesilmiş Fock uzayında
 import kuantum.test_kuantum  # [şahit] kuantum test takımı
 import kuantum.test_kuantum_ileri  # [şahit] ``kuantum.surekli``, ``kuantum.topolojik``, ``kuantum.eniyileme`` sınamaları
@@ -160,7 +158,6 @@ import idrak.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe``
 # ------------------------------------------------------------------
 #  mizan
 # ------------------------------------------------------------------
-import kuantum.fubini  # [uzuv] Fubini-Study deterministik ağaç okuması
 import main.kaggle_cikarim  # [uzuv] Kaggle teslimat nazırı
 import main.kaggle_egitim  # [uzuv] Kaggle çoklu GPU tâlim nazırı
 import ogrenme.kaggle_donanim  # [uzuv] Kaggle donanım tespiti
@@ -177,17 +174,14 @@ import mizan.test_mizan  # [şahit] mizan test takımı
 #  nefs
 # ------------------------------------------------------------------
 import nefs.akit  # [uzuv] Kademe 1 -- **envanter ve arayüz akdi**
-import nefs.ikiz  # [hakem] İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil
 import nefs.hiz  # [hakem] Hız defteri -- 700 MB/sn hedefinin üç ayrı muhasebesi
 import nefs.gomme  # [uzuv] Genlik gömmesi -- 4096 boyut 12 kübitte, 35 kübitlik adres yazmacı
 import nefs.zirh  # [uzuv] Dörtlü topolojik zırh -- gaye: çelişkisiz mana manifoldu
-import nefs.ogda  # [hakem] OGDA -- kaybın min-max olduğunun farkedilmesi ve doğru çözücüsü
 import kuantum.kubit_taksimati  # [uzuv] 22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir
 import nefs.ttkan  # [hakem] TT-KAN -- ceridenin hız hükmünün fiilî hesabı
 import nefs.kopru  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
 import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
 import nefs.qkaide  # [uzuv] KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta
-import nefs.tabii_gradyan  # [uzuv] TABİÎ GRADYAN (natural gradient) -- kullanıcı hükmü H86
 import nefs.tesir  # [uzuv] Kademe 5 -- **icra izi, hassasiyet ve hata izolasyonu**
 import nefs.test_nefs  # [şahit] nefs sınamaları
 import nefs.uzaklik_olcumu  # [uzuv] Uzak çift kapısı: **takas ağı mı, MPO mu?** -- eşiği ölçüm koyar
@@ -382,10 +376,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Adiyabatik geçiş, QAOA ve parametre-kaydırma kuralı'),
     ('kuantum.kapilar', 'uzuv',
      'Kapılar — tek ve çok kübitli üniter operatörler'),
-    ('kuantum.ceride', 'gölge',
-     'Ceridenin üç kapalı-form babı: FCT (κ=1,0), STA karşıt-adiyabatik sürüş, Fubini-Study bilgi geometrisi'),
-    ('kuantum.qsvt', 'uzuv',
-     'QSVT — blok kodlama, kuantum sinyal işleme ve tekil değer dönüşümü'),
     ('kuantum.surekli', 'uzuv',
      'Sürekli değişkenli (CV) fotonik operatörler — kesilmiş Fock uzayında'),
     ('kuantum.test_kuantum', 'şahit',
@@ -406,9 +396,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Uzaya mahsus Hamiltonyenler ve kuantum evrimi'),
     ('idrak.kategori', 'uzuv',
      '20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur'),
-    ('kuantum.fubini', 'uzuv',
-     'Fubini-Study güdümlü DETERMİNİSTİK ağaç okuması -- x* = argmax g⁺·∇log P; '
-     'metrik hakikaten kurulur, kısaltma olduğu ``bilgi_metrigi(ne="kıyas")`` ile ölçülür'),
     ('main.kaggle_egitim', 'uzuv',
      'Kaggle çoklu GPU tâlim nazırı -- 4×L4, sınır vagonu P2P; GPU yokken CPU '
      'yedeğine düşer ve ölçüm yapılmadığını YAZAR'),
@@ -435,8 +422,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'mizan test takımı'),
     ('nefs.akit', 'uzuv',
      'Kademe 1 -- **envanter ve arayüz akdi**'),
-    ('nefs.ikiz', 'hakem',
-     'İKİZ SAYILAR (dual numbers) -- türevin tam hâli, sonlu farkın değil'),
     ('nefs.hiz', 'hakem',
      'Hız defteri -- token başına / küllî süperpozisyon / yükleme: üç muhasebe yan yana'),
     ('nefs.gomme', 'uzuv',
@@ -445,8 +430,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
     ('nefs.zirh', 'uzuv',
      'Dörtlü topolojik zırh -- Sheaf/Betti/Kohomoloji/Homotopi; '
      'gaye sonraki token değil ÇELİŞKİSİZLİKtir'),
-    ('nefs.ogda', 'hakem',
-     'OGDA -- kaybın min-max olduğunun farkedilmesi ve doğru çözücüsü'),
     ('kuantum.kubit_taksimati', 'uzuv',
      '22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir; eklem ölçüsü'),
     ('nefs.ttkan', 'hakem',
@@ -457,8 +440,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması'),
     ('nefs.qkaide', 'uzuv',
      "KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta"),
-    ('nefs.tabii_gradyan', 'uzuv',
-     'TABİÎ GRADYAN (natural gradient) -- kullanıcı hükmü H86'),
     ('nefs.tesir', 'uzuv',
      'Kademe 5 -- **icra izi, hassasiyet ve hata izolasyonu**'),
     ('nefs.test_nefs', 'şahit',

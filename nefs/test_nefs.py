@@ -1348,7 +1348,7 @@ def test_ceride_uc_kapali_form_babi():
     """
     import math
     import numpy as np
-    from kuantum.ceride import (chebyshev_tasarimi, kestirmeden_sur,
+    from ogrenme.optimize import (chebyshev_tasarimi, kestirmeden_sur,
                                 fubini_study)
 
     # --- FCT: XᵀX = I TAM, κ = 1,0; eş aralıkta κ patlar (kırmızı)
@@ -1507,7 +1507,7 @@ def test_qsp_faz_tablosu_CEVRIMDISI_ve_dogru():
     """
     import math
     import numpy as np
-    from kuantum.ceride import (GIBBS_FAZ_TABLOSU, GIBBS_DERECE,
+    from ogrenme.optimize import (GIBBS_FAZ_TABLOSU, GIBBS_DERECE,
                                 gibbs_fazlari, qsp_fazlarini_bul)
     assert GIBBS_DERECE == 32
     assert sorted(GIBBS_FAZ_TABLOSU) == [1.0, 2.0, 4.0, 8.0]

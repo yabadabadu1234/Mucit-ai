@@ -35,7 +35,7 @@ __all__ = [
     "Rx", "Ry", "Rz", "U1", "U2", "U3", "faz",
     "CNOT", "CZ", "SWAP", "iSWAP", "CRx", "CRz", "kontrollu",
     "RXX", "RYY", "RZZ", "TOFFOLI", "FREDKIN", "molmer_sorensen",
-    "uniter_mi", "esdeger_mi", "yerlestir", "kron",
+    "uniter_mi", "esdeger_mi", "yerlestir", "kron", "chebyshev",
     "PAULI", "komutator", "antikomutator",
 ]
 
@@ -385,6 +385,38 @@ def _gosterim() -> str:
     s.append("  çiftleri aynı anda bağladığı için netice n'in paritesine")
     s.append("  bağlıdır.")
     return "\n".join(s)
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  Chebyshev tabanı -- KÜME 4 terkibinin tensör katmanına bıraktığı uzuv
+# ══════════════════════════════════════════════════════════════════════
+
+def chebyshev(x, derece: int):
+    """``T_0..T_d(x)`` -- yineleme ile, ``[-1,1]`` üzerinde kararlı.
+
+    KÜME 4 tevhidinde (kütük H223) iki ayrı ``chebyshev`` bulundu:
+    ``kuantum/nqs.py``daki **yığın** hâli (``T_0..T_d`` hepsini döndürür)
+    ve ``kuantum/qsvt.py``deki **skaler** hâli (yalnız ``T_d``). İkisi
+    aynı özyinelemedir; ayrı durmalarının tek sebebi ayrı dosyalarda
+    olmalarıydı. Yığın hâli buraya -- tensör katmanının yaprak
+    modülüne -- konuldu, zira ``kuantum/yazmac.py`` onu çağırır ve
+    tâlim çipine bağlanmak orada bir çevrim doğururdu. Skaler hâl,
+    tâlim çipinde ``faz_dizisinin_polinomu(ne="chebyshev")`` içinde
+    aynı özyinelemeyle durur; iki gövde de ``T[..., d]``nin son
+    terimidir.
+
+    ``cos(d·arccos x)`` kapalı formu ``|x| = 1``de türev tekilliği verir
+    ve yığın hesabında ``nan`` üretir; yineleme
+    ``T_{d+1} = 2xT_d − T_{d−1}`` hem kararlı hem ucuzdur.
+    """
+    x = np.clip(np.asarray(x, float), -1.0, 1.0)
+    T = np.empty(x.shape + (int(derece) + 1,), float)
+    T[..., 0] = 1.0
+    if int(derece) >= 1:
+        T[..., 1] = x
+    for d in range(2, int(derece) + 1):
+        T[..., d] = 2.0 * x * T[..., d - 1] - T[..., d - 2]
+    return T
 
 
 def rapor() -> str:

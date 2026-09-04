@@ -43,7 +43,7 @@ from . import melekeler as mertebe
 from .melekeler import QNefs
 from .zihin_durumu import QAyar, QYazmac
 
-__all__ = ["ornekler", "belirtecleri_kodla", "adayin_tuttugu",
+__all__ = ["ornekler", "belirtecleri_kodla", "uygunluk", "hedef_cezasi",
            "egit", "degerlendir"]
 
 
@@ -117,94 +117,70 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
 
 
 # =====================================================================
-def adayin_tuttugu(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
-                   p: Optional[np.ndarray] = None, sozluk: int = 16,
-                   lam_mizan: float = 0.25, lam_top: float = 0.1,
-                   ne: str = "uygunluk", o=None,
-                   cevap_isteniyor: bool = True, baglam=None):
-    """BU ADAY NE KADAR TUTUYOR -- **tek terkip** (kütük H223).
+def _kos(nefs: QNefs, baglam: Sequence[int], sozluk: int
+         ) -> Tuple[np.ndarray, Dict[str, float]]:
+    E = belirtecleri_kodla(baglam, nefs.ayar.satir_kubiti, sozluk)
+    q = nefs.idrak_et(E)
+    return q.beyan(sozluk), q.olcumler()
 
-    Küme: ``_kos`` + ``mizan_cezasi`` + ``uygunluk`` + ``hedef_cezasi``.
-    Dördü tek sualin parçalarıydı: adayı koştur, nefsin kendi hükmünün
-    cezasını çıkar, hedefe uzaklığı ölç. Son ikisi ``_kos``u veri
-    başına **ayrı ayrı** çağırıyordu; ikisi birden istendiğinde bütün
-    akış iki kere koşuyordu.
 
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``koş``         ``(P, ölçüler)`` -- tek bağlam için akış
-    ``mizan``       nefsin kendi hükmünün cezası
-    ``uygunluk``    ``V(p)`` -- dalganın gördüğü potansiyel
-    ``hedef``       ``‖𝒢(u) − y_hedef‖²`` -- hedef bilgisinin sızdırılması
-    ``ikisi``       ``(V, hedef_cezası)`` -- **tek** akış geçişinde
-    ==============  ==================================================
+def mizan_cezasi(o: Dict[str, float], cevap_isteniyor: bool = True) -> float:
+    """Nefsin kendi hükmünün cezası -- eğitim ölçütünün ikinci yarısı."""
+    ceza = 0.0
+    ceza += 1.0 * float(o.get("tenakuz", 0.0))
+    ceza += 1.0 * float(o.get("nakz", 0.0))
+    ceza += 1.0 * (1.0 - float(o.get("tasdik", 0.0)))
+    if cevap_isteniyor:
+        ceza += 0.5 * float(o.get("sukut", 0.0))
+    # Şek'te kalmak da bir kusurdur: delil varken hüküm verilmemiştir.
+    ceza += 0.5 * float(o.get("P_Şek", 0.0))
+    return ceza
 
-    ``V(p)`` bir **kayıp fonksiyonu değildir** ve aradaki fark lafzî
-    değildir: bu potansiyelin gradyanı hiç alınmaz. Active Subspaces'in
-    kurduğu ``r`` boyutlu yüzeyde dalga yayılır ve küresel minimum
-    spektral çöküşle bulunur (H28).
 
-    Mizan cezası: tenakuz + nakz + (1 − tasdik), cevap isteniyorsa
-    sükûtun yarısı, ve **Şek'te kalmanın** yarısı -- delil varken hüküm
-    verilmemesi de bir kusurdur.
+def uygunluk(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
+             p: Optional[np.ndarray] = None, sozluk: int = 16,
+             lam_mizan: float = 0.25, lam_top: float = 0.1) -> float:
+    """``V(p)`` -- dalganın gördüğü potansiyel; **kayıp fonksiyonu değil**.
 
-    Topolojik terim ``−λ_top·entropi``dir: dolaşıklık **ödüllendirilir**,
-    zira çarpım durumuna çöken bir yazmaç süperpozisyonun zenginliğini
-    kaybetmiştir.
-
-    ``hedef`` cezasının ``−log P``den farkı: ``−log P`` yalnız doğru
-    belirtece bakar; bu ise bütün dağılımın hedefe uzaklığını
-    cezalandırır ve yanlışların hepsini bastırır. Minimumun **nerede**
-    olduğunu bilmiyoruz; orada **ne olacağını** biliyoruz.
+    Aradaki fark lafzî değildir: bu potansiyelin gradyanı hiç alınmaz.
+    Active Subspaces'in kurduğu ``r`` boyutlu yüzeyde dalga yayılır ve
+    küresel minimum spektral çöküşle bulunur (H28).
     """
-    def kos(bag):
-        E = belirtecleri_kodla(bag, nefs.ayar.satir_kubiti, sozluk)
-        q = nefs.idrak_et(E)
-        return q.beyan(sozluk), q.olcumler()
-
-    def mizan(olc, ister=True):
-        ceza = 0.0
-        ceza += 1.0 * float(olc.get("tenakuz", 0.0))
-        ceza += 1.0 * float(olc.get("nakz", 0.0))
-        ceza += 1.0 * (1.0 - float(olc.get("tasdik", 0.0)))
-        if ister:
-            ceza += 0.5 * float(olc.get("sukut", 0.0))
-        # Şek'te kalmak da bir kusurdur: delil varken hüküm verilmemiştir.
-        ceza += 0.5 * float(olc.get("P_Şek", 0.0))
-        return ceza
-
-    if ne == "koş":
-        return kos(baglam)
-    if ne == "mizan":
-        return mizan(o, cevap_isteniyor)
-    if ne not in ("uygunluk", "hedef", "ikisi"):
-        raise ValueError("aday ölçüsünün kipi bilinmiyor: %r" % (ne,))
-
     if p is not None:
         nefs.yukle(p)
     if not len(veri):
-        return (0.0, 0.0) if ne == "ikisi" else 0.0
-
+        return 0.0
     top = 0.0
     ceza = 0.0
-    hedef_top = 0.0
-    for bag, hedef in veri:
-        P, olc = kos(bag)
+    for baglam, hedef in veri:
+        P, o = _kos(nefs, baglam, sozluk)
         top -= float(np.log(P[hedef % len(P)] + 1e-12))
-        ceza += lam_mizan * mizan(olc)
-        ceza -= lam_top * float(olc.get("entropi", 0.0))
+        ceza += lam_mizan * mizan_cezasi(o)
+        # topolojik ceza: dolaşıklık ÖDÜLLENDİRİLİR (çarpım durumuna
+        # çöken bir yazmaç süperpozisyonun zenginliğini kaybetmiştir)
+        ceza -= lam_top * float(o.get("entropi", 0.0))
+    return (top + ceza) / len(veri)
+
+
+def hedef_cezasi(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
+                 p: Optional[np.ndarray] = None, sozluk: int = 16) -> float:
+    """``‖𝒢(u) − y_hedef‖²`` -- hedef bilgisinin potansiyele sızdırılması.
+
+    Minimumun nerede olduğunu bilmiyoruz; orada ne olacağını biliyoruz.
+    ``−log P`` yalnız doğru belirtece bakar; bu ise bütün dağılımın
+    hedefe uzaklığını cezalandırır ve yanlışların hepsini bastırır.
+    """
+    if p is not None:
+        nefs.yukle(p)
+    if not len(veri):
+        return 0.0
+    top = 0.0
+    for baglam, hedef in veri:
+        P, _ = _kos(nefs, baglam, sozluk)
         y = np.zeros_like(P)
         y[hedef % len(P)] = 1.0
-        hedef_top += float(np.sum((P - y) ** 2))
-    V = (top + ceza) / len(veri)
-    H = hedef_top / len(veri)
-    if ne == "uygunluk":
-        return V
-    if ne == "hedef":
-        return H
-    return V, H
-
+        top += float(np.sum((P - y) ** 2))
+    return top / len(veri)
 
 
 # =====================================================================
@@ -215,9 +191,9 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
          gunluk: Optional[List[str]] = None) -> Dict[str, object]:
     """Çift motorlu eğitim -- sürekli (AS-GEK + dalga) ve ayrık (Postnikov)."""
     # yer tahsisi ilk koşuda olur; vektör ondan sonra bilinir
-    adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=[0] * 4)
+    _kos(nefs, [0] * 4, sozluk)
     p = nefs.vektor()
-    V0 = adayin_tuttugu(nefs, veri, p, sozluk)
+    V0 = uygunluk(nefs, veri, p, sozluk)
     kayit: List[float] = [V0]
     t0 = time.perf_counter()
     D = tuple(mertebe.DINAMIK)
@@ -226,7 +202,7 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
 
     for c in range(cevrim):
         # --- TÜNELLEME VANASI (H29): teşhise kilitli, başıboş değil
-        _, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=veri[0][0])
+        _, o = _kos(nefs, veri[0][0], sozluk)
         tikanik = float(o.get("tenakuz", 0.0))
         sikisti = c > 0 and kayit[-1] >= kayit[-2] - 1e-9
         if sikisti and tikanik > 0.5:
@@ -242,11 +218,11 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
 
         # --- SÜREKLİ MOTOR: AS → GEK → hedef sızdırma → dalga
         p_yeni, tani = as_gek_adimi(
-            lambda q: adayin_tuttugu(nefs, veri, q, sozluk), p,
+            lambda q: uygunluk(nefs, veri, q, sozluk), p,
             yaricap=0.5, r=r, izgara=izgara, n_ornek=n_ornek,
-            hedef_ceza=lambda q: adayin_tuttugu(nefs, veri[:3], q, sozluk, ne="hedef"),
+            hedef_ceza=lambda q: hedef_cezasi(nefs, veri[:3], q, sozluk),
             lam_hedef=lam_hedef, tohum=tohum + c)
-        V_yeni = adayin_tuttugu(nefs, veri, p_yeni, sozluk)
+        V_yeni = uygunluk(nefs, veri, p_yeni, sozluk)
         if V_yeni < kayit[-1]:
             p, V = p_yeni, V_yeni
         else:
@@ -256,7 +232,7 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
 
         # --- AYRIK MOTOR: Postnikov adresi + tersine tavlama
         if ayrik:
-            _, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=veri[0][0])
+            _, o = _kos(nefs, veri[0][0], sozluk)
             tik = {m: float(o.get("tenakuz", 0.0)) * (1.0 + i * 0.05)
                    for i, m in enumerate(D)}
             adres = ayrik_mertebede_sicra(tikaniklik=tik, mevcut=D, ne="adres")
@@ -269,7 +245,7 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
                 # motorun seçtiği mertebe, tip denetiminden geçmeyen bir
                 # lif olamaz.
                 mertebe.DINAMIK = tuple(vek)
-                return adayin_tuttugu(nefs, veri[:2], p, sozluk)
+                return uygunluk(nefs, veri[:2], p, sozluk)
 
             D_yeni, _ = ayrik_mertebede_sicra(enerji=E_ayrik, D0=aday, adim=6,
                                         tohum=tohum + c)
@@ -416,7 +392,7 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
         for _ in range(kac):
             pen = baglam[-pencere:] if len(baglam) >= pencere else \
                 ([0] * (pencere - len(baglam)) + baglam)
-            P, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=pen)
+            P, o = _kos(nefs, pen, sozluk)
             if o.get("sukut", 0.0) > 0.8:
                 sukut_sayisi += 1
             t = int(np.argmax(P))

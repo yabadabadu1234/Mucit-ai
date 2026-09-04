@@ -99,14 +99,15 @@ import numpy as np                                       # noqa: E402
 
 from idrak import arc                                    # noqa: E402
 from kuantum.yazmac import hiyerarsik_ikili_agac_katlama  # noqa: E402
-from ogrenme.optimize import (qsvt_gibbs_sogutma,        # noqa: E402
+from kuantum.qsvt import (qsvt_gibbs_sogutma,            # noqa: E402
                           statik_faz_tablosu_oku)
 from nefs.lisan import IzafiMevki2D, tiktoken_2d_kodla   # noqa: E402
 from nefs.melekeler import melekeleri_kur                # noqa: E402
 from ogrenme.optimize import OptimizeAyari               # noqa: E402
-from ogrenme.optimize import hoca_egit                   # noqa: E402
-from ogrenme.optimize import (chebyshev_tasarimi,        # noqa: E402
-                              kestirmeden_sur)
+from ogrenme.hoca import HocaAyari, hoca_egit            # noqa: E402
+from ogrenme.fct import (gauss_chebyshev_lobatto_dugumleri,  # noqa: E402
+                         hizli_chebyshev_donusumu)
+from ogrenme.sta import karsit_adiyabatik_surus          # noqa: E402
 from nefs.zirh import zirh_giydir                        # noqa: E402
 
 __all__ = ["EgitimAyari", "KISA_CPU", "ORTA", "AZAMI_KAGGLE",
@@ -359,20 +360,19 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         gcl_nokta_sayisi=max(8, int(ayar.ornek)),
         yon_sayisi=int(ayar.altuzay_ornek), blok=int(ayar.blok),
         sesli=True, tohum=ayar.tohum)
-    # **HOCA (kütük H212, H223'te motora eridi).** Üç uzuv da bu hatta
-    # lâzımdır ve artık motorun kendi ayarındadır:
+    # **HOCA (kütük H212).** Motor yine `ogrenme/optimize.py`dir; `hoca`
+    # onun üstüne üç uzuv koyar ve o uzuvların üçü de bu hatta lâzımdır:
     #   TÜNEL  -- durgunluk düşüp HAD zorlayıcı bulamadığında STA
     #             karşıt-adiyabatik sürüşü (H29'un çift şartı).
     #   VEKİL  -- kapalı (varsayılan): küllî kayıp çağrısı pahalıdır,
     #             RKHS yüzeyi ancak aday çoğaldığında değer.
     #   BÜTÇE  -- ``d`` büyürse koşu SESSİZCE günlere yayılmasın diye
     #             peşinen reddeder (idrak/model.py dersi, H209).
-    opt.tunel_acik = True
-    opt.vekil_acik = False
-    opt.bütçe_denetimi = True
-    opt.azami_saniye = float(ayar.azami_talim_saati) * 3600.0
+    hoca_ayar = HocaAyari(temel=opt, tunel_acik=True, vekil_acik=False,
+                          bütçe_denetimi=True,
+                          azami_saniye=float(ayar.azami_talim_saati) * 3600.0)
     try:
-        r = hoca_egit(kayip_p, p0, opt)
+        r = hoca_egit(kayip_p, p0, hoca_ayar)
     finally:
         if havuz is not None:
             havuz.close()
@@ -409,8 +409,8 @@ class KulliDalgaTalimMotoru:
         self.izafi_mevki = IzafiMevki2D()
         self.faz_tablosu = statik_faz_tablosu_oku(
             derece=self.ayar.qsvt_derecesi, beta=self.ayar.beta_maksimum)
-        self.gcl_dugumleri = chebyshev_tasarimi(
-            self.ayar.gcl_nokta_sayisi, "düğüm")
+        self.gcl_dugumleri = gauss_chebyshev_lobatto_dugumleri(
+            M=self.ayar.gcl_nokta_sayisi)
         self.seyir: List[Dict[str, float]] = []
 
     def veri_durumu_hazirla(self, ham_veriler: Sequence
@@ -464,9 +464,7 @@ class KulliDalgaTalimMotoru:
 
         surus = False
         if float(zirh.get("kohomoloji_tikaniklik", 0.0)) > 0.35:
-            sogutulmus = kestirmeden_sur(ne="sürüş_uygula",
-                                         durum=sogutulmus,
-                                         hamiltonyen=H_toplam,
+            sogutulmus = karsit_adiyabatik_surus(sogutulmus, H_toplam,
                                                  sure_tau=1.0)
             surus = True
 
@@ -474,8 +472,7 @@ class KulliDalgaTalimMotoru:
                           np.linspace(-1.0, 1.0, len(sogutulmus)),
                           np.asarray(sogutulmus, float).reshape(-1))
         self.meleke_manifoldu.katsayilari_guncelle(
-            chebyshev_tasarimi(int(np.size(ornek)) - 1, "katsayı", f=ornek),
-            oran=self.ayar.ogrenme_orani)
+            hizli_chebyshev_donusumu(ornek), oran=self.ayar.ogrenme_orani)
 
         kayit = {"adim_suresi_sn": time.perf_counter() - t0,
                  "topolojik_kayip": float(zirh.get("toplam_kayip", 0.0)),

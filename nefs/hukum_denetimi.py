@@ -47,8 +47,7 @@ class Sahit:
 # =====================================================================
 def _h3_gradyansiz() -> Tuple[bool, str]:
     """Öğrenme kapalı formdadır: son kat tek bir ``solve`` ile oturur."""
-    from kuantum.dalga import DalgaEniyileyici
-    from kuantum.nqs import NQS, NQSAyar
+    from ogrenme.optimize import DalgaEniyileyici, NQS, NQSAyar
     nq = NQS(NQSAyar(n=12, gizli=(8,), derece=3, tohum=0))
     X = np.random.default_rng(0).integers(0, 2, size=(64, 12))
     y = np.random.default_rng(1).normal(size=64)
@@ -460,7 +459,7 @@ def _h75_gri_kod() -> Tuple[bool, str]:
 
 def _h69_grover_kapali_form() -> Tuple[bool, str]:
     """Grover özyinelemesi ``k+1`` sayı üzerinde; ``k*`` kapalı formda."""
-    from kuantum.dalga import oragin_donusu
+    from ogrenme.optimize import oragin_donusu
     kotu = []
     for mu in (0.5, 0.2, 0.05, 0.01, 0.002):
         teta = math.asin(math.sqrt(mu))

@@ -73,8 +73,7 @@ from typing import Callable, Dict, Optional, Sequence, Tuple, Union
 
 import numpy as np
 
-__all__ = ["Ikiz", "ikiz", "deger", "turev", "yonlu_turev",
-           "sonlu_fark_kiyasi", "rapor"]
+__all__ = ["Ikiz", "ikiz", "tam_turev", "rapor"]
 
 Sayi = Union[float, int, np.ndarray, "Ikiz"]
 
@@ -184,67 +183,79 @@ def ikiz(a, b=0.0) -> Ikiz:
     return Ikiz(a, b)
 
 
-def deger(x: Sayi) -> np.ndarray:
-    return x.a if isinstance(x, Ikiz) else np.asarray(x, float)
+def tam_turev(f=None, p=None, yon=None, ne: str = "yönlü", x=None,
+              f_duz=None,
+              adimlar: Sequence[float] = (1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6)):
+    """PÜRÜZSÜZ TÜREVİ TEK GEÇİŞTE ALMAK -- **tek terkip** (kütük H223).
 
+    Küme: ``deger`` + ``turev`` + ``yonlu_turev`` + ``sonlu_fark_kiyasi``.
+    Dördü tek amelin parçalarıydı: ikiz sayının reel kısmını oku, ``ε``
+    kısmını oku, ikisini bir ileri geçişte al, ve o türevi sonlu farkla
+    yüzleştir.
 
-def turev(x: Sayi) -> np.ndarray:
-    return x.b if isinstance(x, Ikiz) else np.zeros_like(
-        np.asarray(x, float))
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``değer``       ``x``in reel kısmı
+    ``türev``       ``x``in ``ε`` kısmı (ikiz değilse sıfır)
+    ``yönlü``       ``(değer, türev)`` -- tek ileri geçişte, ``h`` YOK
+    ``kıyas``       tam türevi sonlu farkla yüzleştir
+    ==============  ==================================================
 
-
-# =====================================================================
-def yonlu_turev(f: Callable[[Ikiz], Sayi], p: np.ndarray,
-                yon: np.ndarray) -> Tuple[float, float]:
-    """``f``in ``p`` noktasında ``yon`` boyunca **tam** yönlü türevi.
-
-    Tek bir ileri geçişle hem değer hem türev döner; hiçbir ``h`` yoktur.
-    """
-    p = np.asarray(p, float)
-    v = np.asarray(yon, float)
-    r = f(Ikiz(p, v))
-    return float(np.ravel(deger(r))[0]), float(np.ravel(turev(r))[0])
-
-
-def sonlu_fark_kiyasi(f_ikiz: Callable[[Ikiz], Sayi],
-                      f_duz: Callable[[np.ndarray], float],
-                      p: np.ndarray, yon: np.ndarray,
-                      adimlar: Sequence[float] = (1e-1, 1e-2, 1e-3,
-                                                  1e-4, 1e-5, 1e-6)
-                      ) -> Dict[str, object]:
-    """Tam türevi sonlu farkla **yüzleştir** -- pürüz kimin?
-
-    ===================================================================
-    OKUNUŞU -- iki hâl ve nasıl ayrıldıkları
-    ===================================================================
+    **Sonlu fark kıyasının okunuşu -- iki hâl ve nasıl ayrıldıkları.**
 
     * **Yüzey pürüzsüz, alet gürültülü.** Sonlu fark, ``h`` büyükken
       kesme hatasıyla, küçükken ``ε/h`` yuvarlamasıyla sapar; arada bir
       ``h``da tam türeve **yaklaşır**. Yani ``|fark − tam|`` bir ``U``
       çizer ve dibi makine hassasiyeti mertebesindedir.
-    * **Yüzey pürüzlü.** Sonlu fark hiçbir ``h``da tam türeve
-      yaklaşmaz; ``U``nun dibi yoktur ve fark ``h`` küçüldükçe
-      **artmaya devam eder**.
+    * **Yüzey pürüzlü.** Sonlu fark hiçbir ``h``da tam türeve yaklaşmaz;
+      ``U``nun dibi yoktur ve fark ``h`` küçüldükçe **artmaya devam
+      eder**.
 
     H88'in bıraktığı sual tam olarak budur ve ancak bu yüzleştirmeyle
     cevaplanır.
     """
-    tam_v, tam_d = yonlu_turev(f_ikiz, p, yon)
-    p = np.asarray(p, float)
-    v = np.asarray(yon, float)
+    def dg(z):
+        return z.a if isinstance(z, Ikiz) else np.asarray(z, float)
+
+    def tr(z):
+        return (z.b if isinstance(z, Ikiz)
+                else np.zeros_like(np.asarray(z, float)))
+
+    if ne == "değer":
+        return dg(x)
+    if ne == "türev":
+        return tr(x)
+
+    pv = np.asarray(p, float)
+    vv = np.asarray(yon, float)
+    r = f(Ikiz(pv, vv))
+    tam_v = float(np.ravel(dg(r))[0])
+    tam_d = float(np.ravel(tr(r))[0])
+    if ne == "yönlü":
+        return tam_v, tam_d
+    if ne != "kıyas":
+        raise ValueError("türev kipi bilinmiyor: %r" % (ne,))
+
     satir = []
     for h in adimlar:
-        ileri = float(f_duz(p + h * v))
-        geri = float(f_duz(p - h * v))
-        mer = (ileri - geri) / (2.0 * h)
+        mer = (float(f_duz(pv + h * vv)) - float(f_duz(pv - h * vv))) / (2.0 * h)
         satir.append({"h": float(h), "merkezî_fark": mer,
                       "fark": abs(mer - tam_d)})
-    en_iyi = min(satir, key=lambda s: s["fark"])
+    en_iyi = min(satir, key=lambda z: z["fark"])
     return {"tam_değer": tam_v, "tam_türev": tam_d,
             "satır": satir, "en_yakın": en_iyi,
             # Dip makine hassasiyeti mertebesindeyse yüzey pürüzsüzdür.
             "pürüzsüz_mü": bool(en_iyi["fark"]
                                 <= 1e-5 * max(abs(tam_d), 1.0))}
+
+
+
+
+
+# =====================================================================
+
+
 
 
 # =====================================================================
@@ -291,7 +302,7 @@ def purzu_yerini_bul(tohum: int = 0, n: int = 8, chi: int = 4
             M = M + T
         return float(np.trace(M))
 
-    k1 = sonlu_fark_kiyasi(lambda z: kapi_izi(z), kapi_izi_duz, t0, yon)
+    k1 = tam_turev(lambda z: kapi_izi(z), t0, yon, "kıyas", f_duz=kapi_izi_duz)
 
     # --- 2. kademe: kesme sınırında tekil değerler KESİŞİYOR mu
     #
@@ -341,7 +352,7 @@ def _ureteci_ikiz(teta: Ikiz) -> Ikiz:
     z = Ikiz(np.zeros(()), np.zeros(()))
     A_a = np.zeros((4, 4))
     A_b = np.zeros((4, 4))
-    t_a, t_b = deger(teta), turev(teta)
+    t_a, t_b = tam_turev(ne="değer", x=teta), tam_turev(ne="türev", x=teta)
     ind = [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]
     for k, (i, j) in enumerate(ind):
         A_a[i, j] += t_a[k]

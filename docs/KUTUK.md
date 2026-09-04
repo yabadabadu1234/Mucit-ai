@@ -7738,3 +7738,82 @@ satırdan tek dosyada 1537 satıra indi.
 `ogrenme/zirh.py`, `ogrenme/zirh_mizan.py`, `kuantum/tda.py`,
 `nefs/sadakat.py`, `nefs/tertip.py`, `nefs/isaret.py`, `nefs/nizam.py`,
 `nefs/kod_uzayi.py`.
+
+---
+
+## H223 -- KÜME 4 tevhidi: on altı dosya, iki karargâh
+
+Padişahın kat'î usulüyle, üç adımda: **(a)** evvelâ her dosya kendi
+içinde terkip, **(b)** sonra birleştirme, **(c)** sonra birleşik
+gövdede tekrar terkip. Her terkibe mahiyetinin **halkça** ismi verildi.
+Asıllar `yedek/kume4_asillari/` altında şahittir.
+
+### Adım (a) -- dosya-içi terkip
+
+| dosya | eriyen asıllar | terkip |
+|---|---|---|
+| `kuantum/bec.py` | `faz_uyumu, bose_einstein_faz_kilidi, faz_cetveli` | `fazlari_kilitle` |
+| `kuantum/dalga.py` | `moment_kestir, grover_katsayilari, _polinom, grover_ikili, en_iyi_k` | `oragin_donusu` |
+| | `_ess, _tartili` | `tartinin_dayandigi_nokta` |
+| `kuantum/fubini.py` | `fubini_metrigi, olasilik_kovaryansi, fisher_metrigi_tam, fubini_tam_kiyas, fubini_tam_dogrulama` | `bilgi_metrigi` |
+| | `fubini_study_agac_cozumu, belirlenimci_mi` | `izgarayi_oku` |
+| `kuantum/qsvt.py` | `kare_kok_matris, blok_kodla, blok_coz` | `blok_kodlama` |
+| | `_W, _eiZ, qsp_uniteri, qsp_polinomu, qsp_yansima_polinomu, chebyshev` | `faz_dizisinin_polinomu` |
+| `kuantum/ceride.py` | `gcl_dugumleri, fct_tasarimi, fct_katsayilari, fct_degerlendir, esaralikli_tasarim` | `chebyshev_tasarimi` |
+| | `sta_acisi, sta_surusu, _adim, sta_kosusu` | `kestirmeden_sur` |
+| | `fubini_study, fubini_dogrulamasi` | `fubini_study` |
+| | `_qsp_tam_faz, qsp_degeri, qsp_faz_bul, gibbs_cift` | `qsp_fazlarini_bul` |
+| `nefs/ogda.py` | `oyun_degeri, OgdaTarti.deger` | `oyun_degeri` |
+| `nefs/gaye.py` | `landauer_defteri, serbest_enerji_olcumu` | `odenen_bedel` |
+| `nefs/ikiz.py` | `deger, turev, yonlu_turev, sonlu_fark_kiyasi` | `tam_turev` |
+| `ogrenme/optimize.py` | `aktif_altuzay, _durgunluk` | `hareketin_altuzayi` |
+| | `postnikov_adresi, tersine_tavlama` | `ayrik_mertebede_sicra` |
+| `nefs/qegitim.py` | `_kos, mizan_cezasi, uygunluk, hedef_cezasi` | `adayin_tuttugu` |
+
+### Adım (b) -- birleştirme
+
+On dört dosya **`ogrenme/optimize.py`**de birleşti (5625 satır → 3742).
+`main/egitim.py` karargâh olarak kaldı; `nefs/qegitim.py` kendi iki
+cevheriyle (`belirtecleri_kodla`, `ornekler`) nefs katmanında durur --
+`main`e taşınsaydı `nefs → main → nefs` çevrimi doğardı.
+
+### Adım (c) -- birleşik gövdede tekrar terkip
+
+| küme (halkça mahiyeti) | eriyen | terkip |
+|---|---|---|
+| **hangi yön ne kadar pahalı** | `bilgi_metrigi` + `fubini_study` + `TabiiGradyan._fisher` | `bilgi_metrigi` |
+| **düğümlerden polinom** | `chebyshev_tasarimi` + `gauss_chebyshev_lobatto_dugumleri` + `hizli_chebyshev_donusumu` + `chebyshev_degerlendir` | `chebyshev_tasarimi` |
+| **kestirmeden sürmek** | `kestirmeden_sur` + `karsit_adiyabatik_surus` + `surus_cetveli` | `kestirmeden_sur` |
+| **motoru koşturmak** | `KulliOptimizer` + `Hoca` + `HocaAyari` + `boyut_guvenlik_siniri` + `eniyile` + `hoca_egit` | `KulliOptimizer` + `eniyile`/`hoca_egit` |
+| **kendini gösterme** | 9 ayrı `rapor()` + `_gosterim` | `rapor` |
+
+Aynı metrik **üç ayrı dosyada üç ayrı gövdeyle** hesaplanıyordu --
+`fubini.py` kapalı formda, `ceride.py` sayısal merkezî farkla,
+`tabii_gradyan.py` MPS iç çarpımlarıyla. Formül üçünde de birdir:
+`g_ij = Re[⟨∂_iΨ|∂_jΨ⟩ − ⟨∂_iΨ|Ψ⟩⟨Ψ|∂_jΨ⟩]`.
+
+**`Hoca` kalıtımı bir cevher değil topraktı.** Motoru yeniden
+yazmıyordu ama tur döngüsünün TAMAMINI kopyalıyordu, sırf turlar arasına
+TÜNEL kararını sokabilmek için. O karar artık döngünün kendisindedir ve
+`ayar.tunel_acik` ile kapatılabilir (H90: kapatılabilirlik ölçüm
+şartıdır). `HocaAyari`nin üç anahtarı `OptimizeAyari`ye taşındı; eski
+kılıkta çağıranlar için `hoca_egit` onları hâlâ kabul eder.
+
+### Birleşmenin doğurduğu iki hakikî kusur -- ölçülerek yakalandı
+
+1. **`Cevrim` sınıfı iki kere tanımlıydı.** `kuantum/dalga.py`nin
+   çevrim kaydı ile `nefs/tabii_gradyan.py`ninki aynı isimdeydi;
+   birleşince ikincisi birincisini **sessizce gölgeliyordu**. Ayrıldı:
+   `DalgaCevrimi` ve `TabiiCevrim`.
+2. **Rapor bölümleri aynı yerel isim uzayını paylaşıyordu.** Dokuz
+   `rapor()` tek gövdeye alınınca `n`, `tur`, `tohum` birbirini ezdi ve
+   ölçüm **fiilen değişti**: gaye bölümünde sadakat `3,309e-15` yerine
+   `3,338e-11`, silinen bit `48,1` yerine `34,8` çıktı. Her bölüm kendi
+   kapanışına alındı ve asıl imzalarındaki ölçüler geri kondu.
+
+### Ölçüm: birleşik rapor asıllarıyla birebir
+
+Dokuz aslın raporu ile tek terkibin raporu satır satır yüzleştirildi:
+**bütün sayılar aynı**, tek fark eklenen dokuz bölüm başlığı.
+Kuantum akış da değişmedi: `kesme = 7,863871e+00`,
+`sadakat = 0,003430` -- Küme 3 öncesiyle birebir.

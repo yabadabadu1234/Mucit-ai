@@ -132,7 +132,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
     * ``dS[no]`` -- melekenin dolaşıklığa tesiri (`nefs/nizam.py`),
       sınıf taahhüdünün yüzleştirildiği ölçü.
     """
-    from .gaye import gaye_kos
+    from ogrenme.optimize import gaye_kos
     from .melekeler import bec_faz_kilidi
     from .zihin_durumu import QYazmac
     from .zirh import mantigi_tek_supurmede_isaretle

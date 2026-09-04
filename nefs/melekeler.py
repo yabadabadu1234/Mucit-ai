@@ -76,7 +76,7 @@ from omega_kategori_nbe import sozdizim as S
 from omega_kategori_nbe import turetimler as T
 from omega_kategori_nbe.denetleyici import Baglam, denetle_t
 
-from .gaye import gaye_kos
+
 from .kule import ince, kaba
 from .operad import tikaniklik_kapisi
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
@@ -5703,6 +5703,7 @@ class QNefs:
             # (tasdik kuvvetlendirir, tenakuz ve nakz zayıflatır), sonra
             # mîzâna sirayet eder ve sükût eşiğini kurar. Üçü de MPO'dur;
             # hiçbir yerde okuma yoktur.
+            from ogrenme.optimize import gaye_kos
             q.iz.kesme += gaye_kos(q, self.p)
         if self.sadakat:
             # İşaretlenen mantık dışı kollar burada SÖNER: faz farkı,

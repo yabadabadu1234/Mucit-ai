@@ -103,8 +103,7 @@ import numpy as np
 
 from .zihin_durumu import QYazmac, donme
 
-__all__ = ["EPSILON_DURGUN", "gaye_kos", "landauer_defteri",
-           "serbest_enerji_olcumu", "rapor"]
+__all__ = ["EPSILON_DURGUN", "gaye_kos", "odenen_bedel", "rapor"]
 
 
 #: Sükût eşiği ``ε_durgun`` -- gaye bu kuvvetin altındaysa sükût uyanır.
@@ -260,41 +259,51 @@ def _aci(p, anahtar: str, n: int, olcek: float) -> np.ndarray:
 # =====================================================================
 #  ÖLÇÜM -- akışın dışında
 # =====================================================================
-def landauer_defteri(q: QYazmac) -> Dict[str, float]:
-    """Akışta **silinen bilgi** ve Landauer bedeli.
+def odenen_bedel(q: QYazmac, ne: str = "landauer") -> Dict[str, float]:
+    """AKIŞTA NE ÖDENDİ -- **tek terkip** (kütük H223).
 
-    Bütün kapılar dik, yani tersinirdir; tek tersinmez adım kesmedir.
-    ``F = Π (tutulan/tam)`` olduğuna göre silinen bit ``−log₂F``dir.
-    ``kT ln2`` bir birim seçimidir; burada ``kT = 1`` alınır ve sayı
-    **nat** cinsinden de verilir ki birim tartışması hükmü değiştirmesin.
-    """
-    F = float(q.y.sadakat())
-    bit = -math.log2(max(F, 1e-300))
-    return {
-        "sadakat": F,
-        "silinen_bit": bit,
-        "landauer_nat": bit * math.log(2.0),      # kT=1 iken enerji
-        "kübit": float(q.n),
-        "kübit_başına_bit": bit / max(q.n, 1),
-    }
+    Küme: ``landauer_defteri`` + ``serbest_enerji_olcumu``. İkisi de tek
+    suali soruyor: **bu akış neye mal oldu?** Biri bedeli termodinamik
+    (silinen bit, Landauer), öteki bilgi-geometrik (serbest enerji)
+    cinsten okur; ikisi de ``q``nun aynı marjinallerinden çıkar.
 
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``landauer``    silinen bit ve ``kT ln2`` bedeli
+    ``serbest``     ``F = kesinsizlik + karmaşıklık`` ayrışımı
+    ==============  ==================================================
 
-def serbest_enerji_olcumu(q: QYazmac) -> Dict[str, float]:
-    """Gaye alanının serbest enerjisi -- `fitrat/serbest_enerji.py` ile.
+    **Landauer.** Bütün kapılar dik, yani tersinirdir; tek tersinmez
+    adım kesmedir. ``F = Π (tutulan/tam)`` olduğuna göre silinen bit
+    ``−log₂F``dir. ``kT ln2`` bir birim seçimidir; burada ``kT = 1``
+    alınır ve sayı **nat** cinsinden de verilir ki birim tartışması
+    hükmü değiştirmesin.
 
-    Gayeyi bir gizli değişken ``z``, hükmü gözlem ``x`` sayarız::
+    **Serbest enerji.** Gayeyi bir gizli değişken ``z``, hükmü gözlem
+    ``x`` sayarız::
 
-        p(z)   = gaye alanının marjinali
-        q(z)   = tasdik alanının marjinali   (hükmün "istediği")
+        p(z) = gaye alanının marjinali
+        q(z) = tasdik alanının marjinali   (hükmün "istediği")
 
-    ``F = kesinsizlik + karmaşıklık`` ayrışımı `fitrat`ın kendi
-    koduyla hesaplanır -- yani bu ölçüm ana hattı **beylik bir
-    kütüphaneyle** denetler, tıpkı `nefs/golge.py` gibi.
-
-    **Bu bir hüküm değil bir ölçüdür.** "Gaye serbest enerjiyi
+    Ayrışım `fitrat`ın kendi koduyla hesaplanır -- yani bu ölçüm ana
+    hattı **beylik bir kütüphaneyle** denetler, tıpkı `nefs/golge.py`
+    gibi. **Bu bir hüküm değil bir ölçüdür**: "gaye serbest enerjiyi
     düşürüyor" diye bir iddia burada YOKTUR; sayı çıkar, hüküm
     `tanilama` tarafında iki koşu kıyaslanarak verilir.
     """
+    if ne == "landauer":
+        F = float(q.y.sadakat())
+        bit = -math.log2(max(F, 1e-300))
+        return {
+            "sadakat": F,
+            "silinen_bit": bit,
+            "landauer_nat": bit * math.log(2.0),      # kT=1 iken enerji
+            "kübit": float(q.n),
+            "kübit_başına_bit": bit / max(q.n, 1),
+        }
+    if ne != "serbest":
+        raise ValueError("bedel kipi bilinmiyor: %r" % (ne,))
     from fitrat.serbest_enerji import AyrikModel, kl, serbest_enerji_ayrisimi
 
     def marjinal(ad: str) -> np.ndarray:
@@ -350,8 +359,8 @@ def rapor(tohum: int = 0, n: int = 6, d_in: int = 12) -> str:
             yuv = [q.kulli(ad, j) for j in range(kac)]
             R = np.asarray(q.y.tekil_yogunluklar(yuv), float)[0]
             alanlar[ad] = float(R[:, 1, 1].mean())
-        satirlar.append((acik, alanlar, landauer_defteri(q),
-                         serbest_enerji_olcumu(q)))
+        satirlar.append((acik, alanlar, odenen_bedel(q, "landauer"),
+                         odenen_bedel(q, "serbest")))
 
     adlar = [ad for ad, _ in satirlar[0][1].items()]
     s.append("  %-10s %12s %12s" % ("alan", "gaye KAPALI", "gaye AÇIK"))

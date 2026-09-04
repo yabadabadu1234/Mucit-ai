@@ -538,7 +538,7 @@ def test_rapor_uretiliyor(modul):
 #  4. QSVT
 # ══════════════════════════════════════════════════════════════════════
 
-from kuantum import qsvt as qs
+from ogrenme import optimize as qs
 
 
 def test_blok_kodlama_uniter_ve_geri_okunuyor():
