@@ -62,7 +62,8 @@ import numpy as np
 
 __all__ = [
     "FLOP_KATSAYISI", "L4_TEPE_TFLOPS", "L4_VERIM", "L4_BANT_GBS",
-    "cati",
+    "flop_token", "net_guc", "throughput", "l4_cetveli",
+    "aritmetik_yogunluk", "cati_modeli", "yigin_esigi",
     "esdegers_hiz_boyut_denetimi", "log_aritmetigi",
     "yerel_olcum",
 ]
@@ -74,86 +75,73 @@ L4_BANT_GBS = 300.0          # GPU başına ~300 GB/sn HBM
 BAYT_TOKEN = 4               # UTF-8
 
 
-def cati(D: int = 4096, B: int = 1, ne: str = "çatı",
-         katsayi: int = FLOP_KATSAYISI, bayt_agirlik: int = 2,
-         bant_GBs: float = L4_BANT_GBS,
-         tepe_tflops: float = L4_TEPE_TFLOPS, verim: float = L4_VERIM,
-         gpu: int = 4, boyutlar=(4096, 2048, 1024, 512, 128)):
-    """ÇATI -- **tek terkip** (kütük H227).
+def flop_token(D: int, katsayi: int = FLOP_KATSAYISI) -> float:
+    """``katsayı · D²`` FLOP — raporun modeli."""
+    return float(katsayi) * D * D
 
-    Küme: ``flop_token``, ``net_guc``, ``throughput``, ``l4_cetveli``,
-    ``aritmetik_yogunluk``, ``cati_modeli``, ``yigin_esigi``. Yedi
-    isim **tek eğrinin** ayrı okunuşlarıydı -- roofline:
 
-        apsis   = aritmetik yoğunluk (FLOP / okunan bayt)
-        tavan   = ``min(bant × yoğunluk,  tepe FLOP)``
-        dirsek  = yığın eşiği: bellek-bağlıdan FLOP-bağlıya geçiş
-        nokta   = throughput: eğri üstünde bulunduğun yer
+def net_guc(tepe_tflops: float = L4_TEPE_TFLOPS,
+            verim: float = L4_VERIM) -> float:
+    """Kullanılabilir FLOP/sn."""
+    return tepe_tflops * 1e12 * verim
 
-    Ayrı isimler taşırken bu tek eğri görünmüyordu; hangi sayının
-    eğrinin neresi olduğu ancak şerhten anlaşılıyordu.
 
-    ==================  ==============================================
-    ``ne``              döndürdüğü
-    ==================  ==============================================
-    ``flop``            ``katsayı·D²`` -- token başına FLOP
-    ``güç``             kullanılabilir FLOP/sn (tepe × verim)
-    ``hız``             token/sn, ham metin MB/sn, tensör GB/sn
-    ``cetvel``          birkaç ``D`` için hız dökümü
-    ``yoğunluk``        FLOP / okunan bayt
-    ``çatı``            iş FLOP-bağlı mı bellek-bağlı mı
-    ``eşik``            dirsek: hangi yığında FLOP-bağlıya geçilir
-    ==================  ==============================================
+def throughput(D: int, tepe_tflops: float = L4_TEPE_TFLOPS,
+               verim: float = L4_VERIM) -> Dict[str, float]:
+    """Token/sn, ham metin MB/sn, tensör GB/sn."""
+    fl = flop_token(D)
+    tok = net_guc(tepe_tflops, verim) / fl
+    return {"D": D, "flop_token": fl, "token_sn": tok,
+            "metin_MB_sn": tok * BAYT_TOKEN / 1e6,
+            "tensör_GB_sn": tok * D * 2 / 1e9}
 
-    **M34:** ``B = 1``de yoğunluk birdir ve iş **bellek bağlıdır**;
-    büyük yığında FLOP bağlı olur. Ağırlıklar yığın başına bir kere
-    okunur, aktivasyon her token için; dirsek tam bu iki maliyetin
-    eşitlendiği yerdedir.
+
+def l4_cetveli(boyutlar: Sequence[int] = (4096, 2048, 1024, 512, 128)
+               ) -> List[Dict[str, float]]:
+    return [throughput(D) for D in boyutlar]
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  M34: çatı modeli
+# ══════════════════════════════════════════════════════════════════════
+
+def aritmetik_yogunluk(D: int, B: int, bayt_agirlik: int = 2,
+                       katsayi: int = FLOP_KATSAYISI) -> float:
+    """``FLOP / okunan bayt`` — ``B`` token'lık yığın için.
+
+    Ağırlıklar yığın başına bir kere okunur (``katsayı·D²/2`` ağırlık,
+    her biri ``bayt_agirlik``); aktivasyon giriş+çıkış ``2·B·D``.
     """
-    if ne == "flop":
-        return float(katsayi) * D * D
+    flop = katsayi * D * D * B
+    bayt = (katsayi / 2.0) * D * D * bayt_agirlik + 2.0 * B * D * bayt_agirlik
+    return flop / bayt
 
-    if ne == "güç":
-        return tepe_tflops * 1e12 * verim
 
-    if ne == "hız":
-        fl = cati(D=D, ne="flop", katsayi=katsayi)
-        tok = cati(ne="güç", tepe_tflops=tepe_tflops, verim=verim) / fl
-        return {"D": D, "flop_token": fl, "token_sn": tok,
-                "metin_MB_sn": tok * BAYT_TOKEN / 1e6,
-                "tensör_GB_sn": tok * D * 2 / 1e9}
+def cati_modeli(D: int, B: int, bant_GBs: float = L4_BANT_GBS,
+                tepe_tflops: float = L4_TEPE_TFLOPS,
+                verim: float = L4_VERIM, gpu: int = 4) -> Dict[str, object]:
+    """Çatı (roofline): iş FLOP-bağlı mı bellek-bağlı mı?"""
+    yog = aritmetik_yogunluk(D, B)
+    bellek_cati = bant_GBs * 1e9 * yog
+    flop_cati = net_guc(tepe_tflops, verim) / gpu
+    return {"D": D, "B": B, "yoğunluk": yog,
+            "bellek_çatısı": bellek_cati, "flop_çatısı": flop_cati,
+            "ulaşılabilir": min(bellek_cati, flop_cati),
+            "bellek_bağlı_mı": bellek_cati < flop_cati,
+            "tepe_gücün_kaçta_biri": flop_cati / max(bellek_cati, 1e-30)}
 
-    if ne == "cetvel":
-        return [cati(D=x, ne="hız", tepe_tflops=tepe_tflops, verim=verim)
-                for x in boyutlar]
 
-    if ne == "yoğunluk":
-        flop = katsayi * D * D * B
-        bayt = (katsayi / 2.0) * D * D * bayt_agirlik + 2.0 * B * D * bayt_agirlik
-        return flop / bayt
-
-    if ne == "çatı":
-        yog = cati(D=D, B=B, ne="yoğunluk", katsayi=katsayi,
-                    bayt_agirlik=bayt_agirlik)
-        bellek_cati = bant_GBs * 1e9 * yog
-        flop_cati = cati(ne="güç", tepe_tflops=tepe_tflops, verim=verim) / gpu
-        return {"D": D, "B": B, "yoğunluk": yog,
-                "bellek_çatısı": bellek_cati, "flop_çatısı": flop_cati,
-                "ulaşılabilir": min(bellek_cati, flop_cati),
-                "bellek_bağlı_mı": bellek_cati < flop_cati,
-                "tepe_gücün_kaçta_biri": flop_cati / max(bellek_cati, 1e-30)}
-
-    if ne == "eşik":
-        B = 1
-        while B <= 1 << 22:
-            if not cati(D=D, B=B, bant_GBs=bant_GBs,
-                        tepe_tflops=tepe_tflops, verim=verim,
-                        gpu=gpu)["bellek_bağlı_mı"]:
-                return B
-            B *= 2
-        return -1
-
-    raise ValueError("çatı kipi bilinmiyor: %r" % (ne,))
+def yigin_esigi(D: int, bant_GBs: float = L4_BANT_GBS,
+                tepe_tflops: float = L4_TEPE_TFLOPS,
+                verim: float = L4_VERIM, gpu: int = 4) -> int:
+    """FLOP-bağlı olmak için gereken en küçük yığın ``B``."""
+    B = 1
+    while B <= 1 << 22:
+        if not cati_modeli(D, B, bant_GBs, tepe_tflops, verim,
+                           gpu)["bellek_bağlı_mı"]:
+            return B
+        B *= 2
+    return -1
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -179,8 +167,8 @@ def esdegers_hiz_boyut_denetimi(fiziki_bayt_sn: float = 1.2e12,
     hesabın gerçek donanımdaki karşılığı da veriliyor.
     """
     carpim = fiziki_bayt_sn * K
-    gercek_512 = cati(D=512, ne="hız")["metin_MB_sn"] * 1e6
-    gercek_4096 = cati(D=4096, ne="hız")["metin_MB_sn"] * 1e6
+    gercek_512 = throughput(512)["metin_MB_sn"] * 1e6
+    gercek_4096 = throughput(4096)["metin_MB_sn"] * 1e6
     return {
         "fizikî_bayt_sn": fiziki_bayt_sn,
         "K": K,
@@ -234,11 +222,11 @@ def _gosterim() -> str:
     s = []
     s.append("=== L4 raporunun aritmetiği yeniden hesaplandı ===")
     s.append("  net güç = %.1f TFLOPS  (4×242 × %.2f)"
-             % (cati(ne="güç") / 1e12, L4_VERIM))
+             % (net_guc() / 1e12, L4_VERIM))
     s.append("      D   FLOP/token    token/sn    metin MB/sn   tensör GB/sn"
              "   rapor MB/sn")
     rapor = {4096: 1.67, 2048: 6.67, 1024: 26.68, 512: 106.72}
-    for t in cati(ne="cetvel"):
+    for t in l4_cetveli():
         r = rapor.get(int(t["D"]))
         s.append("  %5d   %.3e   %.4e   %10.2f   %11.2f   %s"
                  % (t["D"], t["flop_token"], t["token_sn"],
@@ -251,14 +239,14 @@ def _gosterim() -> str:
     s.append("      D      B   yoğunluk(FLOP/bayt)   çatı(FLOP/sn)   durum")
     for D in (512, 4096):
         for B in (1, 8, 64, 512, 4096):
-            c = cati(D=D, B=B)
+            c = cati_modeli(D, B)
             s.append("  %5d  %5d   %16.1f   %.3e   %s"
                      % (D, B, c["yoğunluk"], c["ulaşılabilir"],
                         "bellek-bağlı" if c["bellek_bağlı_mı"]
                         else "FLOP-bağlı"))
     for D in (512, 4096):
-        e = cati(D=D, ne="eşik")
-        c1 = cati(D=D, B=1)
+        e = yigin_esigi(D)
+        c1 = cati_modeli(D, 1)
         s.append("  D=%d: FLOP-bağlı olmak için B ≥ %d;  B=1'de tepe gücün "
                  "1/%.0f'i" % (D, e, c1["tepe_gücün_kaçta_biri"]))
     s.append("  Yani rapordaki rakamlar BÜYÜK YIĞIN varsayar. Tek")

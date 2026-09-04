@@ -35,7 +35,9 @@ import numpy as np
 
 __all__ = [
     "esit_superpozisyon", "faz_kehaneti", "esik_kehaneti",
-    "difuzyon", "grover_turu", "en_iyiyi_ara", "tayf_araligi_asgari",
+    "difuzyon", "grover_turu", "grover_basari_egrisi",
+    "en_iyi_tur", "durr_hoyer", "sabit_m_ile_arama",
+    "adiyabatik_asgari", "tayf_araligi_asgari",
 ]
 
 
@@ -67,131 +69,82 @@ def grover_turu(psi: np.ndarray, isaret: np.ndarray) -> np.ndarray:
     return difuzyon(isaret * psi)
 
 
-def en_iyiyi_ara(f=None, ne: str = "dürr", esik: float = 0.0,
-                 m: int = 0, N: int = 0, K: int = 1, azami_tur: int = 0,
-                 T: float = 20.0, adim: int = 300, tohum: int = 0,
-                 lam: float = 6.0 / 5.0, azami_sorgu: int = 10000):
-    """EN İYİYİ ARAMAK -- **tek terkip** (kütük H227).
+def grover_basari_egrisi(N: int, K: int, azami_tur: int,
+                         tohum: int = 0) -> np.ndarray:
+    """``m = 0…azami_tur`` için işaretli kümenin toplam olasılığı."""
+    isaretli = np.zeros(N, dtype=bool)
+    isaretli[:K] = True
+    isaret = np.where(isaretli, -1.0, 1.0)
+    psi = esit_superpozisyon(N)
+    egri = [float((np.abs(psi[isaretli]) ** 2).sum())]
+    for _ in range(azami_tur):
+        psi = grover_turu(psi, isaret)
+        egri.append(float((np.abs(psi[isaretli]) ** 2).sum()))
+    return np.array(egri)
 
-    Küme: ``grover_basari_egrisi``, ``en_iyi_tur``, ``sabit_m_ile_arama``,
-    ``durr_hoyer``, ``adiyabatik_asgari``. Beşi tek suâlin üç cevabıydı:
-    **``N`` aday içinden asgarîyi nasıl buluruz?**
 
-    ==================  ====================  ========================
-    yol                 maliyet               ne bilmek gerekir
-    ==================  ====================  ========================
-    kaba kuvvet         ``O(N)``              hiçbir şey
-    Grover              ``O(√(N/K))``         işaretli sayısı ``K``
-    Dürr--Høyer         ``O(√N)``             **hiçbir şey**
-    adiyabatik          ``T`` süresi          tayf aralığı
-    ==================  ====================  ========================
+def en_iyi_tur(N: int, K: int) -> int:
+    """``m_opt = round((π/4)√(N/K))`` — ``K`` **biliniyorsa**."""
+    return int(round(math.pi / 4.0 * math.sqrt(N / max(K, 1))))
 
-    ==================  ==============================================
-    ``ne``              döndürdüğü
-    ==================  ==============================================
-    ``eğri``            ``m = 0…azami_tur`` için işaretli olasılık
-    ``tur``             ``m_opt = round((π/4)√(N/K))`` -- ``K`` biliniyorsa
-    ``grover``          ``m`` turu sabit koş ve ölç
-    ``dürr``            Dürr--Høyer: ``K`` **bilinmeden** asgarîyi bul
-    ``adiyabatik``      ``H(t)`` ile taşı, asgarî duruma örtüşme
-    ==================  ==============================================
 
-    **M18 -- fazla dönmek zarar.** Grover'da başarı ``m``de tek tepelidir
-    ve tepeden sonra **düşer**; ``K`` yanlış varsayılırsa ``m_opt``
-    kayar ve başarı iner. "Daha çok tur daha iyi" sezgisi burada
-    yanlıştır ve ``eğri`` kipi bunu görünür kılar. Dürr--Høyer'in
-    kıymeti tam buradadır: ``K``yı bilmez, dolayısıyla yanlış
-    varsayamaz.
+def sabit_m_ile_arama(f: np.ndarray, esik: float, m: int,
+                      tohum: int = 0) -> Dict[str, object]:
+    """``m`` turu sabit koş ve ölç — ``m`` yanlışsa ne oluyor görülsün."""
+    N = f.shape[0]
+    isaret = esik_kehaneti(f, esik)
+    isaretli = isaret < 0
+    psi = esit_superpozisyon(N)
+    for _ in range(m):
+        psi = grover_turu(psi, isaret)
+    p = np.abs(psi) ** 2
+    p = p / p.sum()
+    x = int(np.random.default_rng(tohum).choice(N, p=p))
+    return {"m": m, "başarı_olasılığı": float(p[isaretli].sum()),
+            "ölçülen_x": x, "isabet": bool(isaretli[x]),
+            "K": int(isaretli.sum())}
 
-    **M19 -- sonlu ``T``de başarı tam 1 değildir.** Adiyabatik teorem
-    ``T → ∞`` limitindedir; sonlu sürede daima bir sızıntı kalır ve
-    burada ölçülür, gizlenmez.
+
+def durr_hoyer(f: np.ndarray, tohum: int = 0, lam: float = 6.0 / 5.0,
+               azami_sorgu: int = 10000) -> Dict[str, object]:
+    """Dürr--Høyer asgarî arama — ``K`` **bilinmeden** (M18).
+
+    Tur sayısı ``m``, ``[0, ⌈λ^j⌉)`` aralığından rastgele çekilir;
+    ``j`` her turda büyür.  Böylece ``K``yı bilmek gerekmez ve beklenen
+    sorgu ``O(√N)`` kalır.  Toplam kehanet çağrısı **sayılıyor**;
+    "karmaşıklık iyi" iddiası sayıyla tartılıyor.
     """
-    if ne == "eğri":
-        isaretli = np.zeros(N, dtype=bool)
-        isaretli[:K] = True
-        isaret = np.where(isaretli, -1.0, 1.0)
-        psi = esit_superpozisyon(N)
-        egri = [float((np.abs(psi[isaretli]) ** 2).sum())]
-        for _ in range(azami_tur):
-            psi = grover_turu(psi, isaret)
-            egri.append(float((np.abs(psi[isaretli]) ** 2).sum()))
-        return np.array(egri)
-
-    if ne == "tur":
-        return int(round(math.pi / 4.0 * math.sqrt(N / max(K, 1))))
-
-    if ne == "grover":
-        N = f.shape[0]
-        isaret = esik_kehaneti(f, esik)
-        isaretli = isaret < 0
+    r = np.random.default_rng(tohum)
+    N = f.shape[0]
+    y = int(r.integers(0, N))
+    sorgu = 0
+    j = 0.0
+    seyir = [(0, y, float(f[y]))]
+    while sorgu < azami_sorgu:
+        ust = max(1, int(math.ceil(lam ** j)))
+        m = int(r.integers(0, min(ust, int(3 * math.sqrt(N)) + 1)))
+        isaret = esik_kehaneti(f, f[y])
+        if not (isaret < 0).any():
+            break                                # y zaten asgarî
         psi = esit_superpozisyon(N)
         for _ in range(m):
             psi = grover_turu(psi, isaret)
+        sorgu += m + 1
         p = np.abs(psi) ** 2
         p = p / p.sum()
-        x = int(np.random.default_rng(tohum).choice(N, p=p))
-        return {"m": m, "başarı_olasılığı": float(p[isaretli].sum()),
-                "ölçülen_x": x, "isabet": bool(isaretli[x]),
-                "K": int(isaretli.sum())}
-
-    if ne == "dürr":
-        r = np.random.default_rng(tohum)
-        N = f.shape[0]
-        y = int(r.integers(0, N))
-        sorgu = 0
-        j = 0.0
-        seyir = [(0, y, float(f[y]))]
-        while sorgu < azami_sorgu:
-            ust = max(1, int(math.ceil(lam ** j)))
-            m = int(r.integers(0, min(ust, int(3 * math.sqrt(N)) + 1)))
-            isaret = esik_kehaneti(f, f[y])
-            if not (isaret < 0).any():
-                break                                # y zaten asgarî
-            psi = esit_superpozisyon(N)
-            for _ in range(m):
-                psi = grover_turu(psi, isaret)
-            sorgu += m + 1
-            p = np.abs(psi) ** 2
-            p = p / p.sum()
-            x = int(r.choice(N, p=p))
-            if f[x] < f[y]:
-                y = x
-                seyir.append((sorgu, y, float(f[y])))
-                j = 0.0
-            else:
-                j += 1.0
-            if f[y] == f.min():
-                break
-        return {"x": y, "f": float(f[y]), "asgarî": float(f.min()),
-                "bulundu_mu": bool(f[y] == f.min()), "sorgu": sorgu,
-                "sqrt_N": math.sqrt(N), "sorgu_bölü_sqrtN": sorgu / math.sqrt(N),
-                "seyir": seyir}
-
-    if ne == "adiyabatik":
-        N = f.shape[0]
-        n = int(round(math.log2(N)))
-        H0 = _baslangic_H(n)
-        H1 = np.diag(np.asarray(f, float))
-        e0, V0 = np.linalg.eigh(H0)
-        psi = V0[:, 0].astype(complex)
-        dt = T / adim
-        for k in range(adim):
-            s = (k + 0.5) / adim
-            lam, V = np.linalg.eigh((1 - s) * H0 + s * H1)
-            psi = (V * np.exp(-1j * lam * dt)) @ (V.conj().T @ psi)
-        en_kucuk = float(np.min(f))
-        hedef = np.isclose(f, en_kucuk)
-        p = float((np.abs(psi[hedef]) ** 2).sum())
-        return {"T": T, "başarı": p, "tam_1_mi": p == 1.0,
-                "1_e_uzaklık": 1.0 - p,
-                "asgarî_katlılık": int(hedef.sum())}
-
-    raise ValueError("arama yolu bilinmiyor: %r" % (ne,))
-
-
-
-
+        x = int(r.choice(N, p=p))
+        if f[x] < f[y]:
+            y = x
+            seyir.append((sorgu, y, float(f[y])))
+            j = 0.0
+        else:
+            j += 1.0
+        if f[y] == f.min():
+            break
+    return {"x": y, "f": float(f[y]), "asgarî": float(f.min()),
+            "bulundu_mu": bool(f[y] == f.min()), "sorgu": sorgu,
+            "sqrt_N": math.sqrt(N), "sorgu_bölü_sqrtN": sorgu / math.sqrt(N),
+            "seyir": seyir}
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -228,6 +181,30 @@ def tayf_araligi_asgari(f: np.ndarray, ornek: int = 101,
             "s_min": float(ss[i]), "uç": float(g[-1])}
 
 
+def adiyabatik_asgari(f: np.ndarray, T: float, adim: int = 300
+                      ) -> Dict[str, object]:
+    """``H(t)`` ile taşı; **asgarî** duruma örtüşme.
+
+    Dilim başına tam üstel kullanılıyor: ölçülen hata gerçekten
+    adiyabatik hatadır, üstel yaklaşımı değil.
+    """
+    N = f.shape[0]
+    n = int(round(math.log2(N)))
+    H0 = _baslangic_H(n)
+    H1 = np.diag(np.asarray(f, float))
+    e0, V0 = np.linalg.eigh(H0)
+    psi = V0[:, 0].astype(complex)
+    dt = T / adim
+    for k in range(adim):
+        s = (k + 0.5) / adim
+        lam, V = np.linalg.eigh((1 - s) * H0 + s * H1)
+        psi = (V * np.exp(-1j * lam * dt)) @ (V.conj().T @ psi)
+    en_kucuk = float(np.min(f))
+    hedef = np.isclose(f, en_kucuk)
+    p = float((np.abs(psi[hedef]) ** 2).sum())
+    return {"T": T, "başarı": p, "tam_1_mi": p == 1.0,
+            "1_e_uzaklık": 1.0 - p,
+            "asgarî_katlılık": int(hedef.sum())}
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -240,8 +217,8 @@ def _gosterim() -> str:
     s.append("=== Grover eğrisi: fazla dönmek ZARARDIR ===")
     s.append("     K   m_opt   P(m_opt)   P(2·m_opt)   P(3·m_opt)")
     for K in (1, 4, 16, 64):
-        m = en_iyiyi_ara(ne="tur", N=N, K=K)
-        e = en_iyiyi_ara(ne="eğri", N=N, K=K, azami_tur=3 * m + 1)
+        m = en_iyi_tur(N, K)
+        e = grover_basari_egrisi(N, K, 3 * m + 1)
         s.append("  %4d   %5d   %8.4f   %10.4f   %10.4f"
                  % (K, m, e[m], e[min(2 * m, len(e) - 1)],
                     e[min(3 * m, len(e) - 1)]))
@@ -254,8 +231,8 @@ def _gosterim() -> str:
     esik = np.sort(f)[K_gercek]
     for varsayim, ad in ((1, "K=1 varsayıldı (YANLIŞ)"),
                          (K_gercek, "K=64 biliniyor (İMKÂNSIZ)")):
-        m = en_iyiyi_ara(ne="tur", N=N, K=varsayim)
-        d = en_iyiyi_ara(f, ne="grover", esik=esik, m=m)
+        m = en_iyi_tur(N, varsayim)
+        d = sabit_m_ile_arama(f, esik, m)
         s.append("  %-28s m=%3d → başarı = %.4f"
                  % (ad, m, d["başarı_olasılığı"]))
     s.append("  'K biliniyor' hâli gerçekte kurulamaz: K, aramanın")
@@ -268,7 +245,7 @@ def _gosterim() -> str:
         basari, sorgular = 0, []
         for t in range(20):
             ff = np.random.default_rng(100 + t).random(Nn)
-            d = en_iyiyi_ara(ff, ne="dürr", tohum=t)
+            d = durr_hoyer(ff, tohum=t)
             basari += d["bulundu_mu"]
             sorgular.append(d["sorgu"])
         s.append("  %5d      %2d/20     %6.1f   %7.2f"
@@ -285,7 +262,7 @@ def _gosterim() -> str:
              % (t["g_min"], t["s_min"], t["uç"]))
     s.append("       T     başarı        1 − başarı    tam 1 mi?")
     for T in (1.0, 4.0, 16.0, 64.0, 256.0):
-        a = en_iyiyi_ara(ff, ne="adiyabatik", T=T)
+        a = adiyabatik_asgari(ff, T)
         s.append("  %6.1f   %.10f   %.3e     %s"
                  % (T, a["başarı"], a["1_e_uzaklık"], a["tam_1_mi"]))
     s.append("  T büyüdükçe 1'e YAKLAŞIYOR ama hiçbir sonlu T'de")
