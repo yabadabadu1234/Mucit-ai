@@ -55,38 +55,61 @@ import numpy as np
 
 from fitrat.tevafuk import cift_uyusmasi, fazla_sayma, tevafuk_olcusu
 
-__all__ = ["kanal_degerleri", "kanal_bagimsizligi", "rapor"]
+__all__ = ["iki_sahit_ayri_mi", "rapor"]
 
 
-def kanal_degerleri(q) -> Tuple[np.ndarray, np.ndarray]:
-    """𝒪₂₉'un iki "kanalı": her satırın **ham duyusu** ve **hükmü**.
+def iki_sahit_ayri_mi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
+                      tohum: int = 0, ne: str = "bağımsızlık", q=None):
+    """İKİ ŞAHİT HAKİKATEN AYRI MI -- **tek terkip** (kütük H225).
+
+    Küme: ``kanal_degerleri`` + ``kanal_bagimsizligi``. İkincisi
+    birincisini koşu koşu çağırıyordu; ayrı isim taşımaları, kanalı
+    okumakla kanalların ayrılığını tartmayı iki şey gibi gösteriyordu.
+
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``kanal``       ``(ham duyu, hüküm)`` -- satır satır yoğunluktan
+    ``bağımsızlık`` uyuşma ve fazla sayma -- `fitrat/tevafuk.py` ile
+    ==============  ==================================================
 
     Değerler **hakikî** indirgenmiş yoğunluktan okunur (H121). Eski
     ``yuva_yogunluklari`` ayara bağlıydı; onunla ölçülen bir bağıntı
     fizikî bir şey söylemezdi.
 
     **KANAL ÇİFTİ DEĞİŞTİ (kütük H162).** Evvelce satırın ilk ve son
-    **veri** kübitiydi; ölçüldü ve %19 fazla saydırıyordu (H128).
-    Beş aday yarıştırıldı ve ``veri_vs_yerel`` iki ölçütte birden
-    kazandı. Bu fonksiyon 𝒪₂₉'un fiilen kullandığı çifti okur; ayrı
-    düşerlerse ölçüm melekeyi değil kendini ölçmüş olurdu.
-    """
-    ilk = [q.veri(i, 0) for i in range(q.n_satir)]
-    hukum = [q.yerel(i) for i in range(q.n_satir)]
-    R1 = np.asarray(q.y.tekil_yogunluklar(ilk), float)[0][:, 1, 1]
-    R2 = np.asarray(q.y.tekil_yogunluklar(hukum), float)[0][:, 1, 1]
-    return R1, R2
-
-
-def kanal_bagimsizligi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
-                       tohum: int = 0) -> Dict[str, object]:
-    """İki kanal hakikaten ayrı mı? -- `fitrat/tevafuk.py` ile tartılır.
+    **veri** kübitiydi; ölçüldü ve %19 fazla saydırıyordu (H128). Beş
+    aday yarıştırıldı ve ``veri_vs_yerel`` iki ölçütte birden kazandı.
+    Bu terkip 𝒪₂₉'un fiilen kullandığı çifti okur; ayrı düşerlerse ölçüm
+    melekeyi değil kendini ölçmüş olurdu.
 
     Her koşu bir "vaka"dır; kanal değerleri o vakadaki delildir.
-    ``cift_uyusmasi`` ikisinin aynı yöne işaret edip etmediğini,
+    ``uyuşma`` ikisinin aynı yöne işaret edip etmediğini,
     ``fazla_sayma`` bağımsızlık farzının ne kadar fazla saydırdığını
     verir.
+
+    **``fazla_sayma`` İKİLİ delil ister ve bu ölçülerek anlaşıldı.**
+    İlk kullanımda sürekli değerler verildi; ölçüt hem aynı şahidi iki
+    kere verince hem bağımsız iki şahit verince **1,0** döndü, yani hiç
+    ayırt etmedi (``log`` içeride ``nan`` üretiyordu). Kusur
+    `fitrat/tevafuk.py`de değil kullanımdaydı: o modül ikili şahitlikle
+    çalışır ve öyle beslendiğinde mükemmel ayırır -- bağımsız üç şahitte
+    fazla sayma 1,05, ortak kaynaklıda 2,55. O hâlde kanal değerleri
+    **medyanına göre ikilileştirilir**: delil "bu satır tipik olandan
+    yukarıda mı" der; hipotez de aynı usulle ikisinin ortalamasından
+    kurulur.
     """
+    def kanal(qq):
+        ilk = [qq.veri(i, 0) for i in range(qq.n_satir)]
+        hukum = [qq.yerel(i) for i in range(qq.n_satir)]
+        R1 = np.asarray(qq.y.tekil_yogunluklar(ilk), float)[0][:, 1, 1]
+        R2 = np.asarray(qq.y.tekil_yogunluklar(hukum), float)[0][:, 1, 1]
+        return R1, R2
+
+    if ne == "kanal":
+        return kanal(q)
+    if ne != "bağımsızlık":
+        raise ValueError("şahitlik kipi bilinmiyor: %r" % (ne,))
     from .melekeler import QNefs
     from .zihin_durumu import QAyar
 
@@ -94,7 +117,7 @@ def kanal_bagimsizligi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
     for t in range(int(n_kosu)):
         E = np.random.default_rng(500 + t).normal(size=(n_satir, 12))
         q = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum)).idrak_et(E)
-        a, b = kanal_degerleri(q)
+        a, b = kanal(q)
         A.append(a)                       # satır satır -- koşu ortalaması DEĞİL
         B.append(b)
     d1 = np.concatenate(A)
@@ -123,7 +146,7 @@ def kanal_bagimsizligi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
 
 
 def rapor(n_kosu: int = 12, n_satir: int = 8, chi: int = 8) -> str:
-    r = kanal_bagimsizligi(n_kosu, n_satir, chi)
+    r = iki_sahit_ayri_mi(n_kosu, n_satir, chi)
     u = r["uyuşma"]
     s = ["=== ŞAHİTLİK -- 𝒪₂₉ Teyit'in bağımsızlık iddiası ===",
          "",

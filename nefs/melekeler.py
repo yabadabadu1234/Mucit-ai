@@ -78,7 +78,7 @@ from omega_kategori_nbe.denetleyici import Baglam, denetle_t
 
 
 from .kule import ince, kaba
-from .operad import tikaniklik_kapisi
+from .operad import ortu_kapaniyor_mu
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
                       kontrollu_donme)
 from .zirh import mantigi_tek_supurmede_isaretle
@@ -5677,7 +5677,7 @@ class QNefs:
         # aynı cinstendir; H31 yasağı melekenin dalgaya bakmasınaydı.
         # Küllî cevabı olmayan bir suale verilecek karşılık susmaktır.
         if tikaniklik:
-            tikaniklik_kapisi(q, float(tikaniklik))
+            ortu_kapaniyor_mu(ne="kapı", q=q, h1=float(tikaniklik))
         q.superpozisyon()
         q.mera()
         # **MANTIĞA SADAKAT: her melekeden sonra, muafiyetsiz** (H102/H105).

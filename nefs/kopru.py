@@ -41,16 +41,34 @@ import numpy as np
 from token_uzaylari.manifold import Metrik, duz_metrik
 from token_uzaylari.morfizm import Morfizm, izometri_mi, jakobi
 
-__all__ = ["belirtec_morfizmi", "kodlamayi_olc"]
+__all__ = ["belirtecten_aciya"]
 
 
-def belirtec_morfizmi(sozluk: int = 16, kubit: int = 4) -> Morfizm:
-    """``φ: t ↦ (±1 bitleri)`` -- belirteçten açı uzayına geçiş.
+def belirtecten_aciya(sozluk: int = 16, kubit: int = 4,
+                      ne: str = "ölç"):
+    """BELİRTEÇTEN AÇIYA GEÇİŞ SAĞLAM MI -- tek terkip (kütük H225).
+
+    Küme: ``belirtec_morfizmi`` + ``kodlamayi_olc``. İkincisi birincisini
+    kurup iki ölçütle sınıyordu; ayrı isim taşımaları, morfizm ile
+    morfizmin sıhhatini iki ayrı şey gibi gösteriyordu.
+
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``morfizm``     ``φ: t ↦ (±1 bitleri)`` -- sürekli uzantısıyla
+    ``ölç``         H14'ün iddiası: tersinirlik **ve** izometri
+    ==============  ==================================================
 
     ``Morfizm`` sürekli bir eşleme bekler; belirteç ayrık olduğu için
     **sürekli uzantısı** kullanılır: ``t`` reel alınır ve bitler
-    ``2·frac(t/2^i) − 1``in pürüzsüz karşılığıyla yazılır. Jakobi böylece
-    tanımlıdır ve ``token_uzaylari`` olduğu gibi çalışır.
+    ``2·frac(t/2^i) − 1``in pürüzsüz karşılığıyla yazılır (her bit kendi
+    ölçeğinde bir üçgen dalgadır). Jakobi böylece tanımlıdır ve
+    ``token_uzaylari`` olduğu gibi çalışır.
+
+    **Tersinirlik ile izometri AYRI sayılardır** ve ikisi birden döner
+    (H47): bir kodlama tersinir olduğu hâlde mesafeyi paramparça
+    edebilir; o zaman "yakın belirteç" mefhumu kaybolur. Çarpışma sayısı
+    da açıkça sayılır -- izometri bozulduğunda sessiz kalınmaz.
     """
     def phi(x: np.ndarray) -> np.ndarray:
         t = np.asarray(x, float).reshape(-1)[0]
@@ -62,11 +80,10 @@ def belirtec_morfizmi(sozluk: int = 16, kubit: int = 4) -> Morfizm:
             out.append(2.0 * (1.0 - abs(u - 1.0)) - 1.0)
         return np.asarray(out, float)
 
-    return Morfizm(1, kubit, phi, ad="belirteç→açı")
-
-
-def kodlamayi_olc(sozluk: int = 16, kubit: int = 4) -> Dict[str, object]:
-    """H14'ün iddiasını **iki ölçütle** sına: tersinirlik ve izometri."""
+    if ne == "morfizm":
+        return Morfizm(1, kubit, phi, ad="belirteç→açı")
+    if ne != "ölç":
+        raise ValueError("köprü kipi bilinmiyor: %r" % (ne,))
     from nefs.qegitim import belirtecleri_kodla
 
     # --- 1) TERSİNİRLİK: her belirteç geri çözülüyor mu?
@@ -79,7 +96,7 @@ def kodlamayi_olc(sozluk: int = 16, kubit: int = 4) -> Dict[str, object]:
 
     # --- 2) İZOMETRİ: mesafe korunuyor mu?
     # ``token_uzaylari.morfizm`` ile ölçülür; hedef metrik birimdir.
-    m = belirtec_morfizmi(sozluk, kubit)
+    m = Morfizm(1, kubit, phi, ad="belirteç→açı")
     g = duz_metrik(1)                    # kaynak: sözlük ekseni
     h = duz_metrik(kubit)                # hedef: açı uzayı
     noktalar = [[float(x)] for x in np.linspace(0.3, sozluk - 0.7, 24)]
@@ -115,7 +132,7 @@ def rapor() -> str:                                     # pragma: no cover
              % ("sözlük", "kübit", "tersinir", "çarpışma",
                 "izometri", "mesafe kor."))
     for sozluk, kubit in ((4, 2), (8, 3), (16, 4), (16, 3), (32, 4)):
-        r = kodlamayi_olc(sozluk, kubit)
+        r = belirtecten_aciya(sozluk, kubit)
         s.append("  %-8d %-10d %-10s %-12d %-14s %+.4f"
                  % (sozluk, kubit, r["tersinir"], r["çarpışma"],
                     r["izometri"], r["mesafe_korelasyonu"]))

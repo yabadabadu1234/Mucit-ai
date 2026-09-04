@@ -739,10 +739,10 @@ def test_kodlama_tersinir_ve_hadamard_esit_uzak():
        alternatiflerinin hepsinden İYİ). ``kubit ≥ sozluk`` olunca
        Hadamard tam eşit uzaklık verir (değişke 0).
     """
-    from .kopru import kodlamayi_olc
+    from .kopru import belirtecten_aciya
     from .qegitim import belirtecleri_kodla
 
-    r = kodlamayi_olc()
+    r = belirtecten_aciya()
     assert r["tersinir"] is True and r["çarpışma"] == 0, r
 
     T = np.arange(16)
@@ -829,10 +829,10 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
     tıkanıkta daha ÇOK konuşuyordu). İki koşu da sınanır ki düzeltmenin
     fiilen bir şey değiştirdiği görülsün.
     """
-    from .operad import cech_tikanikligi, tikaniklik_sukut_bagi
+    from .operad import ortu_kapaniyor_mu
 
-    kapali = tikaniklik_sukut_bagi(60, kapi=False)
-    acik = tikaniklik_sukut_bagi(60, kapi=True)
+    kapali = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=False)
+    acik = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=True)
     assert kapali["yeterli_mi"] and acik["yeterli_mi"]
     assert acik["korelasyon"] > 0.15, acik
     assert acik["sukut_tıkanıkta"] > kapali["sukut_tıkanıkta"], (kapali, acik)
@@ -840,7 +840,7 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
     # Kozikıl şartı: ikili uyuşma denklik kurduğu için üçlüler tutmalı.
     from idrak import arc
     for gv in arc.yukle_hepsi("training")[:40]:
-        c = cech_tikanikligi(gv)
+        c = ortu_kapaniyor_mu(gv)
         assert c["üçlü_tutarlı"], (gv, c)
 
 

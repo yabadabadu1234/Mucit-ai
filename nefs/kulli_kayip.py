@@ -1327,7 +1327,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     if ne == "dalga":
         try:
             from .iki_olcek import gorev_ozellikleri
-            from .operad import cech_tikanikligi
+            from .operad import ortu_kapaniyor_mu
             from .melekeler import QNefs
             from .zihin_durumu import MAKAM_ADLARI, QAyar
 
@@ -1335,7 +1335,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
             if len(X) == 0:
                 return None
             E = np.concatenate([X, Y], axis=1)
-            c = cech_tikanikligi(gorev)
+            c = ortu_kapaniyor_mu(gorev)
             q = (nefs or QNefs(tohum, QAyar(bag=int(chi), tohum=tohum))
                  ).idrak_et(E, tikaniklik=float(c["H1"]))
             _, ks = q._alan["sukut"]
@@ -1352,7 +1352,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     if ne != "çevrim":
         raise ValueError("müdrike kipi bilinmiyor: %r" % (ne,))
 
-    from .operad import cech_tikanikligi
+    from .operad import ortu_kapaniyor_mu
 
     dusunce: List[str] = []
 
@@ -1398,7 +1398,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     # kaide bulmak, örtünün kapandığının kendisidir** -- küllî kesit
     # fiilen elde edilmiştir. O hâlde tıkanıklık bir veto değil, bir
     # **ihtiyat işareti**dir: yakîni düşürür, sözü kesmez.
-    c = cech_tikanikligi(gorev)
+    c = ortu_kapaniyor_mu(gorev)
     dusunce.append("Bütün örnekler aynı kaideye mi bakıyor? "
                    "yama %d, uyuşmayan çift %d (H¹=%d)."
                    % (c["yama"], c.get("uyuşmayan_çift", 0), c["H1"]))

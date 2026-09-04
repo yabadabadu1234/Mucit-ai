@@ -282,8 +282,8 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
 
     # --- KODLAMANIN FUNKTÖR SIHHATİ
     try:
-        from nefs.kopru import kodlamayi_olc
-        kk = kodlamayi_olc()
+        from nefs.kopru import belirtecten_aciya
+        kk = belirtecten_aciya()
         s += ["", "FUNKTÖR KÖPRÜSÜ (token_uzaylari/morfizm.py):",
               "  tersinir=%s  çarpışma=%d  izometri=%s  mesafe kor.=%.4f"
               % (kk["tersinir"], kk["çarpışma"], kk["izometri"],

@@ -592,9 +592,9 @@ def _h125_cech_sukut() -> Tuple[bool, str]:
     (model tıkanıkta daha çok konuşuyordu -- bir kusurdu); kapı açıkken
     müsbet olmalı.
     """
-    from .operad import tikaniklik_sukut_bagi
-    kapali = tikaniklik_sukut_bagi(60, kapi=False)
-    acik = tikaniklik_sukut_bagi(60, kapi=True)
+    from .operad import ortu_kapaniyor_mu
+    kapali = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=False)
+    acik = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=True)
     if not (kapali.get("yeterli_mi") and acik.get("yeterli_mi")):
         return False, "yeterli tıkanık görev bulunamadı"
     return (acik["korelasyon"] > 0.15
@@ -632,8 +632,8 @@ def _h128_teyit_kanallari() -> Tuple[bool, str]:
     şahidin birbirini teyidi yeni delil değildir ve 𝒪₂₉ o hâlde aynı
     delili iki kere sayardı.
     """
-    from .sahitlik import kanal_bagimsizligi
-    r = kanal_bagimsizligi(n_kosu=6, n_satir=6)
+    from .sahitlik import iki_sahit_ayri_mi
+    r = iki_sahit_ayri_mi(n_kosu=6, n_satir=6)
     fs = r["fazla_sayma"]
     return (abs(r["uyuşma"]) < 0.7 and fs["fazla_sayma_oranı"] < 2.0), \
         ("çift uyuşması %+.4f; fazla sayma oranı %.4f; muteber şahit %.2f/2"
