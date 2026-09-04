@@ -4982,6 +4982,12 @@ def alt_seviye_tikiz_mi(f: Callable[[np.ndarray], float], r: float,
     rng = np.random.default_rng(tohum)
     V = rng.normal(size=(128, boyut))
     V = V / np.linalg.norm(V, axis=1, keepdims=True)
+    # KÜME 8 tevhidi (H227): ``_kurede_asgari`` ile aynı muhafaza --
+    # koordinat eksenleri yön kümesine ZORLA katılır. Sınırsız alt
+    # seviye kümeleri ekseriya eksen boyunca uzanır ve rastgele bir
+    # yön eksene tam oturmaz; ölçüldü, ``x₀² `` bu muhafaza olmadan
+    # "sınırlı" görünüyordu.
+    V = np.concatenate([np.eye(boyut), -np.eye(boyut), V], axis=0)
     en_buyuk = 0.0
     for v in V:
         R = 1.0
@@ -4991,7 +4997,17 @@ def alt_seviye_tikiz_mi(f: Callable[[np.ndarray], float], r: float,
             return {"sınırlı": False, "sınırsız_yön": v,
                     "azamî_yarıçap": azami_yaricap,
                     "nokta_bulundu": _kumede_nokta_ara(f, r, boyut, rng)}
-        en_buyuk = max(en_buyuk, R)
+        # İkiye katlama yalnız bir KUŞAK verir (``R/2 < hakikî ≤ R``);
+        # kuşatan yarıçap ikili aramayla daraltılır, yoksa raporlanan
+        # sayı "ikinin bir kuvveti" olur ve mânâsı kalmaz (H227).
+        alt, ust = R / 2.0, R
+        for _ in range(40):
+            orta = 0.5 * (alt + ust)
+            if f(orta * v) <= r:
+                alt = orta
+            else:
+                ust = orta
+        en_buyuk = max(en_buyuk, ust)
     return {"sınırlı": True, "kuşatan_yarıçap": en_buyuk,
             "nokta_bulundu": _kumede_nokta_ara(f, r, boyut, rng)}
 

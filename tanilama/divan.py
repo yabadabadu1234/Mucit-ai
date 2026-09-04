@@ -94,10 +94,15 @@ import nefs.musahede  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie ötele
 # ------------------------------------------------------------------
 #  arama
 # ------------------------------------------------------------------
-import arama  # [uzuv] arama — kuantum asgarî arama ve dalga bükümü
-import arama.bukum  # [uzuv] Dalga bükümü: WKB tünelleme, GRAPE optimal kontrol, Wilson holonomisi
-import arama.grover  # [uzuv] Kuantum asgarî arama: Grover, Dürr--Høyer ve adiyabatik çöküş
-import arama.test_arama  # [şahit] ``arama`` paketi sınamaları — M18, M19, M20, M21, M22
+import nefs.gor  # [nazır] GÖRMEK -- manzara = gor(gorev)
+import nefs.dusun  # [nazır] DÜŞÜNMEK -- hal = dusun(manzara)
+import nefs.ara  # [nazır] ARAMAK -- Grover, Dürr--Høyer, adiyabatik, kuyudan çıkış
+import nefs.tart  # [nazır] TARTMAK -- mizan = tart(hal)
+import nefs.ogren  # [nazır] ÖĞRENMEK -- hoca, ve haddi
+import nefs.soyle  # [nazır] SÖYLEMEK -- ya ispat ya sükût
+import ogrenme.test_yaklasim  # [şahit] Küme 8: akış, had, asgarî, ezber, simgesel
+import ogrenme.test_arama  # [şahit] Küme 8: Grover, Dürr--Høyer, WKB, GRAPE, holonomi
+import nefs.test_olcek  # [şahit] Küme 8: çatı modeli -- M31, M32, M33, M34
 
 # ------------------------------------------------------------------
 #  fitrat
@@ -188,10 +193,6 @@ import ogrenme.test_ogrenme  # [şahit] ogrenme test takımı
 # ------------------------------------------------------------------
 #  olcek
 # ------------------------------------------------------------------
-import olcek  # [uzuv] olcek — performans muhasebesi: FLOP/token, çatı modeli, boyut denetimi
-import olcek.gercek  # [uzuv] Bu makinede GERÇEK sürekli ölçüm: 30 sn ve 60 sn pencerelerde GB/sn
-import olcek.hiz  # [uzuv] Performans muhasebesi: FLOP/token, çatı modeli ve 'eşdeğer hız'
-import olcek.test_olcek  # [şahit] ``olcek.hiz`` sınamaları — M31, M32, M33, M34
 
 # ------------------------------------------------------------------
 #  omega_kategori
@@ -260,15 +261,6 @@ except Exception as _e:                # torch yoksa kayda geçer
 # ------------------------------------------------------------------
 #  yaklasim
 # ------------------------------------------------------------------
-import yaklasim  # [uzuv] yaklasim -- fonksiyon yaklaşımı ve eniyileme usulleri
-import yaklasim.akislar  # [uzuv] Gradyanın akış olarak okunuşu
-import yaklasim.genisletme  # [uzuv] Aradeğerleme: Kan genişletmesi ve onun ezber zaafı
-import yaklasim.kara_kutu  # [uzuv] Kara kutu eniyilemenin sınırları
-import yaklasim.modern  # [uzuv] Modern yaklaşım mimarileri, sadeleştirilmiş fakat SAHİCİ hâlleriyle
-import yaklasim.nedensel  # [uzuv] do-hesabı: bağlanım ile müdahalenin ayrımı
-import yaklasim.simgesel  # [uzuv] Simgesel bağlanım: kapalı biçimli bir ifade ARAMAK
-import yaklasim.test_yaklasim  # [şahit] yaklasim sınamaları
-import yaklasim.tikizlik  # [uzuv] Varlık: tıkızlık, zorlayıcılık ve tıkızlaştırmanın sınırı
 
 #: Her modülün rolü ve vazifesi -- vazife modülün KENDİ şerhinden.
 KAYIT: Tuple[Tuple[str, str, str], ...] = (

@@ -59,6 +59,8 @@ from dataclasses import dataclass, field
 from typing import (Callable, Dict, Iterable, List, Optional, Sequence,
                     Tuple, Union)
 
+from itertools import permutations, product
+
 import numpy as np
 
 from matematik.geometri import Donanim, donanim, topla_paralel

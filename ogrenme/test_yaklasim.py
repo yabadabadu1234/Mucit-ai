@@ -14,7 +14,12 @@ from typing import Callable, Dict, List
 
 import numpy as np
 
-from . import akislar, genisletme, kara_kutu, modern, nedensel, simgesel
+from ogrenme import optimize as akislar          # kuyudan_cik, had
+from ogrenme import optimize as kara_kutu
+from ogrenme import izgara as simgesel             # simgesel bağlanım
+from nefs import kulli_kayip as genisletme         # ezber_mi
+from matematik import geometri as modern           # KAN/FNO/DeepONet
+from matematik import fitrat as nedensel
 
 
 # =====================================================================
@@ -22,57 +27,57 @@ from . import akislar, genisletme, kara_kutu, modern, nedensel, simgesel
 # =====================================================================
 def test_nfl_tam_sayim():
     for m, n in ((3, 3), (4, 2)):
-        r = kara_kutu.nfl_tam_sayim(m, n)
+        r = kara_kutu.had(ne="nfl", m=m, n=n)
         assert r["iz_dagilimlari_ayni"], (m, n)
         assert r["ortalamalar_ayni"], (m, n)
 
 
 def test_nfl_kacamagi():
-    r = kara_kutu.nfl_kacamagi()
+    r = kara_kutu.had(ne="kaçamak")
     assert r["yapili_usul_daha_iyi"], r
 
 
 def test_sifir_zinciri():
-    r = kara_kutu.sifir_zinciri_sinamasi(k=8, adim=5)
+    r = kara_kutu.had(ne="zincir", k=8, adim=5)
     assert r["destek_dizisi"] == [1, 2, 3, 4, 5], r
     assert r["destek_adimla_sinirli"], r
 
 
 def test_nesterov_alt_siniri():
-    r = kara_kutu.alt_sinir_ihlal_var_mi()
+    r = kara_kutu.had(ne="alt_sınır")
     assert r["ihlal_yok"], r["ihlal"]
 
 
 # =====================================================================
 #  tikizlik
 # =====================================================================
-from . import tikizlik
+from matematik import geometri as tikizlik
 
 
 def test_zorlayicilik_ayirt_ediliyor():
-    z = tikizlik.zorlayici_mi(tikizlik.kare, 3)
-    zn = tikizlik.zorlayici_mi(tikizlik.zorlayici_olmayan, 3)
-    assert z["delil_artiyor"], z
-    assert not zn["delil_artiyor"], zn
+    z = tikizlik.asgari_var_mi(tikizlik.kare, 3, ne="zorlayıcı")
+    zn = tikizlik.asgari_var_mi(tikizlik.zorlayici_olmayan, 3, ne="zorlayıcı")
+    assert z["zorlayıcı_görünüyor"], z
+    assert not zn["zorlayıcı_görünüyor"], zn
 
 
 def test_alt_seviye_kumeleri():
-    a = tikizlik.alt_seviye_sinirli_mi(tikizlik.kare, 3, c=4.0)
-    b = tikizlik.alt_seviye_sinirli_mi(tikizlik.zorlayici_olmayan, 3, c=4.0)
-    assert a["sinirli_gorunuyor"], a
-    assert not b["sinirli_gorunuyor"], b
-    assert abs(a["azami_norm"] - 2.0) < 0.05, a
+    a = tikizlik.asgari_var_mi(tikizlik.kare, 3, ne="seviye", c=4.0)
+    b = tikizlik.asgari_var_mi(tikizlik.zorlayici_olmayan, 3, ne="seviye", c=4.0)
+    assert a["sınırlı"], a
+    assert not b["sınırlı"], b
+    assert abs(a["kuşatan_yarıçap"] - 2.0) < 0.05, a
 
 
 def test_ulasilmayan_infimum():
-    r = tikizlik.ulasilmayan_infimum()
+    r = tikizlik.asgari_var_mi(ne="kaçış")
     assert r["kaciyor"] and r["asgari_ulasilmadi"], r
 
 
 def test_tikizlastirilamayanlar():
-    p = tikizlik.sin_bir_bolu_x()
+    p = tikizlik.asgari_var_mi(ne="süreksiz")
     assert p["iki_dizi_de_sifira_gidiyor"] and p["limitler_ayrisiyor"], p
-    q = tikizlik.yon_bagimli_limit()
+    q = tikizlik.asgari_var_mi(ne="yönlü")
     assert q["cos2theta_ile_uyusuyor"] and q["limit_yok"], q
 
 
@@ -80,30 +85,41 @@ def test_tikizlastirilamayanlar():
 #  akislar
 # =====================================================================
 def test_vektor_akisi_yerel_tuzakta_kaliyor():
-    r = akislar.yerel_tuzak()
+    r = akislar.kuyudan_cik(ne="tuzak")
     assert r["sig_cukurda_kaldi"], r
 
 
 def test_topluluk_tuzaktan_kaciyor():
-    r = akislar.tuzaktan_kacis()
+    r = akislar.kuyudan_cik(ne="kaçış")
     assert r["topluluk_kacti"], r
     assert not r["vektor_akisi_kacti"], r
 
 
 def test_langevin_gibbs_ile_uyusuyor():
-    r = akislar.gibbs_ile_kiyas()
+    r = akislar.kuyudan_cik(ne="gibbs")
     assert r["gibbs_ile_uyusuyor"], r
     assert r["kutle_uyusuyor"], r
 
 
 def test_serbest_enerji_azaliyor():
-    r = akislar.serbest_enerji_azaliyor_mu()
+    r = akislar.kuyudan_cik(ne="serbest_enerji")
     assert r["azaldi"] and r["kayda_deger_artis_yok"], r
 
 
 def test_egri_kisaltma_kanunu():
-    r = akislar.egri_kisaltma()
-    assert r["kanunla_uyusuyor"], r
+    # KÜME 8 tevhidi (H227): ``yaklasim/akislar.egri_kisaltma`` SABİT
+    # ``dt`` kullanıyordu; ``geometri.mcf_kos`` her adımda ``dt``yi
+    # yeniden seçer. Ölçüldü: sabit ``dt`` ile T=0.45'te %36 hata,
+    # uyarlamalı ile 1e-3 mertebesi. Mühür daha iyi motora taşındı.
+    e = modern.Egri(np.stack([np.cos(np.linspace(0, 2 * np.pi, 400,
+                                                 endpoint=False)),
+                              np.sin(np.linspace(0, 2 * np.pi, 400,
+                                                 endpoint=False))], axis=1))
+    T = 0.2
+    r = modern.mcf_kos(e, T)
+    r_kuram = float(np.sqrt(max(1.0 - 2.0 * T, 0.0)))
+    r_say = float(np.mean(np.linalg.norm(r["egri"].x, axis=1)))
+    assert abs(r_say - r_kuram) / r_kuram < 5e-3, (r_say, r_kuram)
 
 
 # =====================================================================
@@ -117,7 +133,7 @@ def test_kan_genisletmesi_evrensel():
 
 
 def test_kan_ezberi_ve_duzenlileme():
-    r = genisletme.ezber_kiyasi()
+    r = genisletme.ezber_mi(ne="kıyas")
     assert r["kan_tam_oturuyor"], r
     assert r["gurultu_lipschitzi_patlatti"], r
     assert r["ezber_gorunuyor"], r
@@ -126,7 +142,7 @@ def test_kan_ezberi_ve_duzenlileme():
 
 
 def test_sobolev_turevi_iyilestiriyor():
-    r = genisletme.sobolev_kiyasi()
+    r = genisletme.ezber_mi(ne="sobolev")
     assert r["turev_iyilesti"], r
     assert r["sobolev__turev_hatasi"] < 0.2 * r["yalniz_deger__turev_hatasi"], r
 

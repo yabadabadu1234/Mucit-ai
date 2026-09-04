@@ -7,8 +7,10 @@ import math
 import numpy as np
 import pytest
 
-from arama import bukum as bu
-from arama import grover as gr
+from nefs import zirh as bu        # holonomi (Wilson ilmeği)
+from nefs import melekeler as gp   # GRAPE optimal kontrol
+from ogrenme import optimize as tn # WKB tünel
+from ogrenme import optimize as gr
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -46,8 +48,8 @@ def test_difuzyon_uniter_ve_ortalama_yansimasi():
 @pytest.mark.parametrize("K", [1, 4, 16, 64])
 def test_grover_optimum_turda_yuksek_basari(K):
     N = 1024
-    m = gr.en_iyi_tur(N, K)
-    e = gr.grover_basari_egrisi(N, K, m)
+    m = gr.en_iyiyi_ara(ne="tur", N=N, K=K)
+    e = gr.en_iyiyi_ara(ne="eğri", N=N, K=K, azami_tur=m)
     assert e[m] > 0.95
     assert e[0] == pytest.approx(K / N, rel=1e-9)
 
@@ -56,8 +58,8 @@ def test_grover_optimum_turda_yuksek_basari(K):
 def test_M18_fazla_donmek_zarar(K):
     """Şahit: başarı m ile tekdüze artmıyor."""
     N = 1024
-    m = gr.en_iyi_tur(N, K)
-    e = gr.grover_basari_egrisi(N, K, 2 * m)
+    m = gr.en_iyiyi_ara(ne="tur", N=N, K=K)
+    e = gr.en_iyiyi_ara(ne="eğri", N=N, K=K, azami_tur=2 * m)
     assert e[2 * m] < 0.1                # iki katı turda ÇÖKÜYOR
     assert e[m] > 0.95
 
@@ -67,8 +69,8 @@ def test_M18_yanlis_K_varsayimi_basariyi_dusuruyor():
     N = 1024
     f = np.random.default_rng(0).random(N)
     esik = np.sort(f)[64]
-    kotu = gr.sabit_m_ile_arama(f, esik, gr.en_iyi_tur(N, 1))
-    iyi = gr.sabit_m_ile_arama(f, esik, gr.en_iyi_tur(N, 64))
+    kotu = gr.en_iyiyi_ara(f, ne="grover", esik=esik, m=gr.en_iyiyi_ara(ne="tur", N=N, K=1))
+    iyi = gr.en_iyiyi_ara(f, ne="grover", esik=esik, m=gr.en_iyiyi_ara(ne="tur", N=N, K=64))
     assert kotu["K"] == 64
     assert kotu["başarı_olasılığı"] < 0.2
     assert iyi["başarı_olasılığı"] > 0.9
@@ -81,7 +83,7 @@ def test_durr_hoyer_K_bilinmeden_asgariyi_buluyor(n):
     sorgular = []
     for t in range(10):
         f = np.random.default_rng(100 + t).random(N)
-        d = gr.durr_hoyer(f, tohum=t)
+        d = gr.en_iyiyi_ara(f, ne="dürr", tohum=t)
         basari += d["bulundu_mu"]
         sorgular.append(d["sorgu"])
     assert basari == 10
@@ -90,7 +92,7 @@ def test_durr_hoyer_K_bilinmeden_asgariyi_buluyor(n):
 
 def test_durr_hoyer_seyri_tekduze_iniyor():
     f = np.random.default_rng(3).random(512)
-    d = gr.durr_hoyer(f, tohum=1)
+    d = gr.en_iyiyi_ara(f, ne="dürr", tohum=1)
     degerler = [x[2] for x in d["seyir"]]
     assert degerler == sorted(degerler, reverse=True)
     assert d["f"] == pytest.approx(d["asgarî"])
@@ -109,14 +111,14 @@ def _tek_asgari(n=4, tohum=5):
 def test_M19_sonlu_T_de_basari_tam_1_degil():
     f = _tek_asgari()
     for T in (1.0, 16.0, 256.0):
-        a = gr.adiyabatik_asgari(f, T)
+        a = gr.en_iyiyi_ara(f, ne="adiyabatik", T=T)
         assert a["tam_1_mi"] is False
         assert a["1_e_uzaklık"] > 0
 
 
 def test_adiyabatik_basari_T_ile_artiyor():
     f = _tek_asgari()
-    b = [gr.adiyabatik_asgari(f, T)["başarı"] for T in (1, 4, 16, 64, 256)]
+    b = [gr.en_iyiyi_ara(f, ne="adiyabatik", T=T)["başarı"] for T in (1, 4, 16, 64, 256)]
     assert b == sorted(b)
     assert b[-1] > 0.99
     assert b[0] < 0.3
@@ -144,12 +146,13 @@ def test_baslangic_hamiltonyeninin_temel_durumu_arti():
 def test_wkb_kapali_formla_uyusuyor():
     """Sabit engel: ``γ = (2/ħ)L√(2m(V−E))``."""
     V0, E, L, m = 1.0, 0.2, 3.0, 1.0
-    g = bu.wkb_gamma(lambda x: np.full_like(x, V0), E, 0.0, L, m)
+    g = tn.kuyudan_cik(ne="tünel", V=lambda x: np.full_like(x, V0),
+                       E=E, x1=0.0, x2=L, m=m)["γ"]
     assert g == pytest.approx(2.0 * L * math.sqrt(2 * m * (V0 - E)), rel=1e-9)
 
 
 def test_M20_gecirgenlik_ussel_kucuk_deneme_ussel_buyuk():
-    c = bu.tunel_maliyet_cetveli((1, 2, 4, 8))
+    c = tn.kuyudan_cik(ne="bedel", genislikler=(1, 2, 4, 8))
     T = [d["T"] for d in c]
     deneme = [d["beklenen_deneme"] for d in c]
     assert T == sorted(T, reverse=True)          # tekdüze azalıyor
@@ -161,9 +164,10 @@ def test_M20_gecirgenlik_ussel_kucuk_deneme_ussel_buyuk():
 
 def test_engel_altinda_gamma_sifir():
     """``V < E`` bölgesinde katkı yok."""
-    g = bu.wkb_gamma(lambda x: np.full_like(x, 0.1), 0.5, 0.0, 5.0)
+    g = tn.kuyudan_cik(ne="tünel", V=lambda x: np.full_like(x, 0.1),
+                       E=0.5, x1=0.0, x2=5.0)["γ"]
     assert g == pytest.approx(0.0, abs=1e-12)
-    assert bu.wkb_gecirgenlik(g) == pytest.approx(1.0)
+    assert math.exp(-(g)) == pytest.approx(1.0)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -218,8 +222,8 @@ def test_tam_frechet_gradyani_sonlu_farkla_uyusuyor(M):
     H0, Hk, psi0, hedef = _sistem()
     om = [np.full(M, 0.3), np.full(M, -0.2)]
     j, k = M // 3, 0
-    sf = bu.sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
-    tam = bu.tam_gradyan(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+    sf = gp.sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+    tam = gp.tam_gradyan(H0, Hk, om, psi0, hedef, 1.0)[k][j]
     assert tam == pytest.approx(sf, abs=1e-8)
 
 
@@ -230,8 +234,8 @@ def test_M22_grape_gradyani_yaklasik_ve_hata_dt_kare():
     for M in (10, 20, 40, 80, 160):
         om = [np.full(M, 0.3), np.full(M, -0.2)]
         j, k = M // 3, 0
-        sf = bu.sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
-        g = bu.grape_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+        sf = gp.sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+        g = gp.grape_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
         oran.append(abs(g - sf) / (1.0 / M) ** 2)
         if M == 10:
             assert abs(g - sf) > 1e-3            # yaklaşım, eşitlik değil
@@ -244,13 +248,13 @@ def test_genel_expm_ozayrisimla_uyusuyor():
     M = r.normal(size=(5, 5)) + 1j * r.normal(size=(5, 5))
     M = M + M.conj().T
     lam, V = np.linalg.eigh(M)
-    assert np.abs(bu._genel_expm(M) - (V * np.exp(lam)) @ V.conj().T).max() \
+    assert np.abs(gp._genel_expm(M) - (V * np.exp(lam)) @ V.conj().T).max() \
         < 1e-9
 
 
 def test_grape_sadakati_yukseltiyor():
     H0, Hk, psi0, hedef = _sistem()
-    d = bu.grape_kos(H0, Hk, psi0, hedef, 1.0, M=40, tur=200)
+    d = gp.grape_kos(H0, Hk, psi0, hedef, 1.0, M=40, tur=200)
     assert d["sadakat"] > 0.99
     assert d["tekdüze_mi"]
     assert d["seyir"][0] < 0.1
@@ -261,5 +265,5 @@ def test_sadakat_0_ve_1_arasinda():
     r = np.random.default_rng(0)
     for _ in range(5):
         om = [r.normal(size=20), r.normal(size=20)]
-        F = bu.sadakat(H0, Hk, om, psi0, hedef, 1.0)
+        F = gp.sadakat(H0, Hk, om, psi0, hedef, 1.0)
         assert 0.0 <= F <= 1.0
