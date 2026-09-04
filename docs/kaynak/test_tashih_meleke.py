@@ -215,35 +215,36 @@ def test_yerel_uniter_uzak_indirgenmisi_degistirmiyor():
 
 def test_grover_yanlis_m_ile_basari_dusuyor():
     """M18: ``K`` bilinmeden ``m`` seçilemez."""
-    from arama.grover import (en_iyi_tur, grover_basari_egrisi,
-                              sabit_m_ile_arama)
+    from ogrenme.optimize import en_iyiyi_ara
 
     N = 1024
     f = np.random.default_rng(0).random(N)
     esik = np.sort(f)[64]
-    kotu = sabit_m_ile_arama(f, esik, en_iyi_tur(N, 1))
-    iyi = sabit_m_ile_arama(f, esik, en_iyi_tur(N, 64))
+    kotu = en_iyiyi_ara(f, ne="grover", esik=esik,
+                            m=en_iyiyi_ara(ne="tur", N=N, K=1))
+    iyi = en_iyiyi_ara(f, ne="grover", esik=esik,
+                            m=en_iyiyi_ara(ne="tur", N=N, K=64))
     assert kotu["başarı_olasılığı"] < 0.2
     assert iyi["başarı_olasılığı"] > 0.9
     # fazla dönmek zarar: 2·m_opt'ta çöküyor
-    m = en_iyi_tur(N, 1)
-    e = grover_basari_egrisi(N, 1, 2 * m)
+    m = en_iyiyi_ara(ne="tur", N=N, K=1)
+    e = en_iyiyi_ara(ne="eğri", N=N, K=1, azami_tur=2 * m)
     assert e[m] > 0.99 and e[2 * m] < 0.01
 
 
 def test_adiyabatik_sonlu_T_de_tam_degil():
     """M19: hiçbir sonlu ``T``de başarı tam 1 değil."""
-    from arama.grover import adiyabatik_asgari
+    from ogrenme.optimize import en_iyiyi_ara
 
     f = np.random.default_rng(5).random(16)
     f[3] = -1.0
     for T in (1.0, 16.0, 256.0):
-        a = adiyabatik_asgari(f, T)
+        a = en_iyiyi_ara(f, ne="adiyabatik", T=T)
         assert a["tam_1_mi"] is False
         assert a["1_e_uzaklık"] > 0.0
     # ama T ile 1'e yaklaşıyor
-    assert (adiyabatik_asgari(f, 256.0)["başarı"]
-            > adiyabatik_asgari(f, 1.0)["başarı"])
+    assert (en_iyiyi_ara(f, ne="adiyabatik", T=256.0)["başarı"]
+            > en_iyiyi_ara(f, ne="adiyabatik", T=1.0)["başarı"])
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -252,9 +253,9 @@ def test_adiyabatik_sonlu_T_de_tam_degil():
 
 def test_tunelleme_ussel_pahali():
     """M20: ``O(1)`` değil; beklenen deneme üstel."""
-    from arama.bukum import tunel_maliyet_cetveli
+    from ogrenme.optimize import kuyudan_cik
 
-    c = tunel_maliyet_cetveli((1, 2, 4, 8))
+    c = kuyudan_cik(ne="bedel", genislikler=(1, 2, 4, 8))
     assert c[-1]["beklenen_deneme"] / c[0]["beklenen_deneme"] > 1e6
     for d in c:
         assert d["T"] == pytest.approx(math.exp(-d["γ"]))
@@ -262,7 +263,7 @@ def test_tunelleme_ussel_pahali():
 
 def test_duz_baglanti_trivial_holonomi_vermiyor():
     """M21: Aharonov–Bohm."""
-    from arama.bukum import aharonov_bohm
+    from nefs.zirh import aharonov_bohm
 
     d = aharonov_bohm(8, 0.37)
     assert d["F_yerel_sıfır_mı"]
@@ -274,8 +275,8 @@ def test_duz_baglanti_trivial_holonomi_vermiyor():
 
 def test_grape_gradyani_dt_kare_yaklasimi():
     """M22: eşitlik değil, ``O(Δt²)`` yaklaşımı."""
-    from arama.bukum import (grape_gradyani, sonlu_fark_gradyani,
-                             tam_gradyan)
+    from nefs.melekeler import (grape_gradyani, sonlu_fark_gradyani,
+                                tam_gradyan)
 
     n = 4
 
@@ -410,7 +411,7 @@ def test_hartley_kosegen_evrisim_degil():
 
 def test_veri_akis_logaritma_aritmetigi():
     """M31: ``log₂²(10¹²) ≈ 1589``, 400 değil."""
-    from olcek.hiz import log_aritmetigi
+    from nefs.hiz import log_aritmetigi
 
     a = log_aritmetigi(1e12)
     assert a["log2_kare"] == pytest.approx(1589.1, rel=1e-3)
@@ -420,7 +421,7 @@ def test_veri_akis_logaritma_aritmetigi():
 
 def test_veri_akis_sikistirma_orani():
     """M32: ``N³/log²N = 6.29e32``, 1e28 değil."""
-    from olcek.hiz import log_aritmetigi
+    from nefs.hiz import log_aritmetigi
 
     a = log_aritmetigi(1e12)
     assert a["N3_bolu_log2kare"] == pytest.approx(6.293e32, rel=1e-3)
@@ -429,26 +430,26 @@ def test_veri_akis_sikistirma_orani():
 
 def test_bant_genisligi_carpimi_boyutsuz_degil():
     """M33: aynı külliyattaki iki belge mertebelerce çelişiyor."""
-    from olcek.hiz import esdegers_hiz_boyut_denetimi, throughput
+    from nefs.hiz import cati, esdegers_hiz_boyut_denetimi
 
     d = esdegers_hiz_boyut_denetimi()
     assert d["mertebe_farkı_D512"] == pytest.approx(37.0, abs=1.0)
     risale = 1e18 * 1e9
-    assert math.log10(risale / (throughput(512)["metin_MB_sn"] * 1e6)) \
+    assert math.log10(risale / (cati(D=512, ne="hız")["metin_MB_sn"] * 1e6)) \
         == pytest.approx(19.0, abs=0.5)
 
 
 def test_aritmetik_yogunluk_yigina_bagli():
     """M34: raporun aritmetiği doğru, şartı yazılmamış."""
-    from olcek.hiz import cati_modeli, throughput, yigin_esigi
+    from nefs.hiz import cati
 
     # rapor DOĞRU
     for D, mb in ((4096, 1.67), (512, 106.72)):
-        assert throughput(D)["metin_MB_sn"] == pytest.approx(mb, rel=2e-3)
+        assert cati(D=D, ne="hız")["metin_MB_sn"] == pytest.approx(mb, rel=2e-3)
     # ama B=1'de bellek bağlı
     for D in (512, 4096):
-        c = cati_modeli(D, 1)
+        c = cati(D=D, B=1)
         assert c["yoğunluk"] == pytest.approx(1.0, rel=0.05)
         assert c["bellek_bağlı_mı"]
         assert c["tepe_gücün_kaçta_biri"] == pytest.approx(524.0, rel=0.1)
-        assert yigin_esigi(D) >= 1024
+        assert cati(D=D, ne="eşik") >= 1024

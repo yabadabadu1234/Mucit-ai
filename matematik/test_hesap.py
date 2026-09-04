@@ -78,8 +78,8 @@ def test_float32_hatasi_float64ten_buyuk():
 
 
 def test_kapilar_uniter():
-    for K in (ga.kapi("H"), ga.kapi("T"), ga.kapi("S"), ga.kapi("X"),
-              ga.kapi("Z")):
+    for K in (ga.z8_kapi("H"), ga.z8_kapi("T"), ga.z8_kapi("S"), ga.z8_kapi("X"),
+              ga.z8_kapi("Z")):
         M = ga.z8_kayan(K)
         assert np.abs(M.conj().T @ M - np.eye(2)).max() < 1e-14
 

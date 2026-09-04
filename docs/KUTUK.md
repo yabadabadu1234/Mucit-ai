@@ -8279,3 +8279,20 @@ Bir mühür daha iyi motora taşındı: `egri_kisaltma` **sabit** `dt`
 kullanıyordu, `geometri.mcf_kos` her adımda `dt`yi yeniden seçer
 (ölçüldü: sabitle `T = 0,45`te %36 hata, uyarlamalıyla 10⁻³ mertebesi).
 Mühür taşındı, atılmadı.
+
+### VII. Nihaî ölçüm
+
+    nefs/ idrak/ kuantum/ ogrenme/ main/
+    tanilama/ docs/ matematik/          1073 geçti, 0 düştü
+
+(`idrak/test_idrak.py` ve `mucit_ai_esas/` toplanamıyor: `torch` kurulu
+değil. Bu terkipten evvel de böyleydi.)
+
+Küme 7'den sonra da 1073 sınama geçiyordu; Küme 8 üç klasörün 95
+mührünü **taşıdı**, yerine kendi sınamalarını koymadı. Sayının aynı
+kalması bunun içindir: mühürler ne arttı ne azaldı, yalnız yer
+değiştirdi ve terkip adlarına bağlandı.
+
+Beş ölü bağ tashih edildi: `arama.grover`, `arama.bukum`, `olcek.hiz`
+`docs/kaynak/test_tashih_meleke.py`den; `ga.kapi` artık `ga.z8_kapi`
+(``kapi`` isim ıslahatında melekelerin kapısına geçti).
