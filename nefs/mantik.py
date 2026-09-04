@@ -120,7 +120,7 @@ def istikra_mertebesi(n_gorev: int = 200) -> Dict[str, object]:
     hiçbir sonlu ``n`` için yakîn vermez.
     """
     from idrak import arc
-    g = arc.yukle_hepsi("training")[:int(n_gorev)]
+    g = arc.gorevleri_getir("training")[:int(n_gorev)]
     k = np.array([len(x.egitim) for x in g], dtype=int)
     y = np.array([ardisiklik_kaidesi(int(v), int(v)) for v in k], float)
     adlar = sorted({mertebe_adi(float(v)) for v in y})
@@ -330,7 +330,7 @@ def rapor(n_gorev: int = 30, tohum: int = 0) -> str:
           "      Zan deyip eksik. Bütçe sınırı değil, YAPISAL yanlışlık."]
 
     s += ["", "YAKÎN YÜZLEŞTİRMESİ (klasik hesap ↔ akışın makamı):"]
-    gorevler = arc.yukle_hepsi("training")[:int(n_gorev)]
+    gorevler = arc.gorevleri_getir("training")[:int(n_gorev)]
     K, A = [], []
     for gv in gorevler:
         try:

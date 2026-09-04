@@ -308,9 +308,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
 
     t0 = time.perf_counter()
     hepsi = list(gorevler) if gorevler is not None else \
-        arc.yukle_hepsi("training")
+        arc.gorevleri_getir("training")
     # **İMTİHAN BÖLÜMLEMESİ** -- ezberi ve sızıntıyı engeller.
-    egitim_gorevleri, dogrulama = arc.bol(
+    egitim_gorevleri, dogrulama = arc.gorevleri_getir(ne="böl", gorevler=
         hepsi, dogrulama=int(ayar.dogrulama_sayisi), tohum=ayar.tohum)
     veri = ornekler(egitim_gorevleri, azami=ayar.ornek_sayisi,
                     pencere=ayar.pencere, sozluk=ayar.sozluk,
@@ -509,8 +509,8 @@ def dalga_talimi_kos(ayar: EgitimAyari = KISA_CPU,
                      kume: str = "training") -> Dict[str, object]:
     """Şemanın dalga hattını koştur ve telemetrisini döndür."""
     motor = KulliDalgaTalimMotoru(ayar)
-    hepsi = arc.yukle_hepsi(kume)
-    egitim_gorevleri, _dog = arc.bol(
+    hepsi = arc.gorevleri_getir(kume)
+    egitim_gorevleri, _dog = arc.gorevleri_getir(ne="böl", gorevler=
         hepsi, dogrulama=int(ayar.dogrulama_sayisi), tohum=ayar.tohum)
     durum = motor.veri_durumu_hazirla(
         list(egitim_gorevleri)[:int(ayar.gorev)])

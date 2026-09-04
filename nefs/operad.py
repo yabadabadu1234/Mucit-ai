@@ -165,7 +165,7 @@ def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
     from .zihin_durumu import QAyar
     from .iki_olcek import iki_olcegin_acisi
 
-    gorevler = arc.yukle_hepsi("training")[:int(n_gorev)]
+    gorevler = arc.gorevleri_getir("training")[:int(n_gorev)]
     H1, S = [], []
     for gv in gorevler:
         c = ortu_kapaniyor_mu(gv)
@@ -198,7 +198,7 @@ def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
 
 
 def rapor(n_gorev: int = 40, tohum: int = 0, chi: int = 8) -> str:
-    gorevler = arc.yukle_hepsi("training")[:int(n_gorev)]
+    gorevler = arc.gorevleri_getir("training")[:int(n_gorev)]
     s = ["=== ÖRTÜ, TERKİP, TIKANIKLIK (Dosya 3) ===",
          "",
          "Grothendieck fibrasyonu ZATEN kurulu (nefs/mertebe.py, 20 lif).",

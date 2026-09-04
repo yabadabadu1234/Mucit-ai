@@ -2268,7 +2268,7 @@ def rapor() -> str:                                     # pragma: no cover
         from idrak import arc
 
         s += ["=== ALTI KADEME -- girdi/çıktı zinciri ===", ""]
-        for g in arc.yukle_hepsi(kume)[:int(n)]:
+        for g in arc.gorevleri_getir(kume)[:int(n)]:
             r = kademeleri_kos(g)
             t = zayif_halkaya_gore_topla(olcumler=r["ölçümler"], ne="azamî")
             s.append("--- %s ---" % g.ad)
@@ -2298,7 +2298,7 @@ def rapor() -> str:                                     # pragma: no cover
         dalga = False
         from idrak import arc
 
-        g = arc.yukle_hepsi(kume)[:int(n)]
+        g = arc.gorevleri_getir(kume)[:int(n)]
         coz = cevap = yanlis = 0
         sebepler: Dict[str, int] = {}
         ornek_muhakeme: List[str] = []
@@ -2437,7 +2437,7 @@ def rapor() -> str:                                     # pragma: no cover
         ayar = KISA_CPU
         nefs = QNefs(ayar.tohum, ayar.qayar())
         nefs.idrak_et(np.zeros((2, ayar.satir_kubiti)))
-        veri = ornekler(arc.yukle_hepsi("training")[:6], azami=int(n),
+        veri = ornekler(arc.gorevleri_getir("training")[:6], azami=int(n),
                         pencere=ayar.pencere, sozluk=ayar.sozluk)
         t = kulli_kayip(nefs, veri, sozluk=ayar.sozluk)
         s += ["=== KÜLLÎ KAYIP -- 41 melekenin hepsi sayılıyor mu? ===",

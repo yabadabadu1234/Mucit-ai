@@ -3481,7 +3481,7 @@ def _gosterim_ucagac() -> str:
 
     s = ["=== ÜÇ AĞAÇ (H56) + boyut ihtimal uzayında (H62) ==="]
 
-    gorevler = arc.yukle_hepsi("training")
+    gorevler = arc.gorevleri_getir("training")
     secilen = None
     for g in gorevler:
         if (len(g.egitim) >= 2 and g.azami_kenar() <= 5

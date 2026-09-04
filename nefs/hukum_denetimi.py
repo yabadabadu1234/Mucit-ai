@@ -76,7 +76,7 @@ def _h6_sahitlik() -> Tuple[bool, str]:
 def _h14_kayipsiz() -> Tuple[bool, str]:
     """Belirteçleme gidiş-dönüşü kayıpsız."""
     from idrak import arc
-    g = arc.yukle_hepsi("training")[:40]
+    g = arc.gorevleri_getir("training")[:40]
     hata = 0
     n = 0
     for gv in g:
@@ -499,7 +499,7 @@ def _h47_iki_olcut() -> Tuple[bool, str]:
     """Ölçüt İKİdir ve ikisi de ayrı raporlanır."""
     from .boyut import olc
     from idrak import arc
-    r = olc(arc.yukle_hepsi("evaluation")[:40])
+    r = olc(arc.gorevleri_getir("evaluation")[:40])
     var = all(k in r for k in ("isabet_oranı", "konuşunca_isabet",
                                "sükût", "yanlış"))
     return var, "kapsama %.3f, konuşunca isabet %.3f, sükût %d" % (
@@ -574,7 +574,7 @@ def _h124_iki_olcek() -> Tuple[bool, str]:
     """
     from idrak import arc
     from .iki_olcek import iki_olcegin_acisi
-    g = arc.yukle_hepsi("training")[:12]
+    g = arc.gorevleri_getir("training")[:12]
     kurulan = sum(1 for x in g if iki_olcegin_acisi(x, ne="sağîr").get("kuruldu"))
     o = iki_olcegin_acisi(gorevler=g)
     if not o.get("yeterli_mi"):

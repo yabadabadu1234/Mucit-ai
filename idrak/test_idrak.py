@@ -26,33 +26,33 @@ veri_gerek = pytest.mark.skipif(not VERI_VAR, reason="ARC verisi yok")
 
 @veri_gerek
 def test_resmi_bolme_sayilari():
-    e = arc.yukle_hepsi("training")
-    d = arc.yukle_hepsi("evaluation")
+    e = arc.gorevleri_getir("training")
+    d = arc.gorevleri_getir("evaluation")
     assert len(e) == 1000 and len(d) == 120
-    egt, dog = arc.bol(e, dogrulama=100)
+    egt, dog = arc.gorevleri_getir(ne="böl", gorevler=e, dogrulama=100)
     assert len(egt) == 900 and len(dog) == 100
     assert not (set(g.ad for g in egt) & set(g.ad for g in dog))
 
 
 @veri_gerek
 def test_bolme_tohumla_tekrarlaniyor():
-    e = arc.yukle_hepsi("training")
-    a1, b1 = arc.bol(e, 100, tohum=7)
-    a2, b2 = arc.bol(e, 100, tohum=7)
+    e = arc.gorevleri_getir("training")
+    a1, b1 = arc.gorevleri_getir(ne="böl", gorevler=e, 100, tohum=7)
+    a2, b2 = arc.gorevleri_getir(ne="böl", gorevler=e, 100, tohum=7)
     assert [g.ad for g in b1] == [g.ad for g in b2]
 
 
 @veri_gerek
 def test_sinama_kumesi_egitimde_hic_gecmiyor():
-    e = {g.ad for g in arc.yukle_hepsi("training")}
-    d = {g.ad for g in arc.yukle_hepsi("evaluation")}
+    e = {g.ad for g in arc.gorevleri_getir("training")}
+    d = {g.ad for g in arc.gorevleri_getir("evaluation")}
     assert not (e & d)
 
 
 @veri_gerek
 def test_belirtecleme_gidis_donusu_kayipsiz():
     hata = 0
-    for g in arc.yukle_hepsi("training")[:150]:
+    for g in arc.gorevleri_getir("training")[:150]:
         for a, b in g.egitim:
             for x in (a, b):
                 if not np.array_equal(arc.belirtec_izgara(
@@ -72,7 +72,7 @@ def test_bozuk_dizi_sessizce_onarilmiyor():
 @veri_gerek
 def test_hedef_ornek_baglamdan_cikariliyor():
     """Sızıntı denetimi: hedef örnek bağlamda olmamalı."""
-    g = [x for x in arc.yukle_hepsi("training")[:80] if len(x.egitim) >= 3][0]
+    g = [x for x in arc.gorevleri_getir("training")[:80] if len(x.egitim) >= 3][0]
     for j in range(len(g.egitim)):
         b, h = arc.gorev_dizisi(g, j)
         cikti = arc.izgara_belirtecle(g.egitim[j][1])
@@ -84,14 +84,14 @@ def test_hedef_ornek_baglamdan_cikariliyor():
 
 @veri_gerek
 def test_sozlu_algoritma_120_gorevin_hepsinde_var():
-    d = arc.yukle_hepsi("evaluation")
+    d = arc.gorevleri_getir("evaluation")
     var = sum(arc.soyutlama_oku(g.ad) is not None for g in d)
     assert var == 120
 
 
 @veri_gerek
 def test_istatistik_makul():
-    i = arc.istatistik(arc.yukle_hepsi("evaluation"))
+    i = arc.istatistik(arc.gorevleri_getir("evaluation"))
     assert i["görev"] == 120
     assert 1 <= i["azamî_kenar_en_büyük"] <= 30      # ARC ızgara sınırı
     assert 0.0 < i["şekli_sabit_oran"] < 1.0

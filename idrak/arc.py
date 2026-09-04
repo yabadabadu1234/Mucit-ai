@@ -65,7 +65,7 @@ import numpy as np
 __all__ = [
     "KOK", "RENK", "SATIR_SONU", "IZGARA_SONU", "AYIRAC", "DOLGU",
     "ORNEK_AYIRAC", "SOZLUK",
-    "Gorev", "yukle", "yukle_hepsi", "bol",
+    "Gorev", "gorevleri_getir",
     "izgara_belirtecle", "belirtec_izgara", "gorev_dizisi",
     "toplu_uret", "istatistik", "soyutlama_oku",
 ]
@@ -102,41 +102,56 @@ class Gorev:
         return all(a.shape == b.shape for a, b in self.egitim + self.sinama)
 
 
-def _cift(d) -> Tuple[np.ndarray, np.ndarray]:
-    return (np.array(d["input"], dtype=np.int64),
-            np.array(d["output"], dtype=np.int64))
+def gorevleri_getir(kume: str = "training", ne: str = "hepsi",
+                    yol: str = "", gorevler=None, dogrulama: int = 100,
+                    tohum: int = 0):
+    """ARC GÖREVLERİNİ DİSKTEN GETİRMEK -- tek terkip (kütük H225).
 
+    Küme: ``_cift`` + ``yukle`` + ``yukle_hepsi`` + ``bol``. Dördü tek
+    amelin durakları idi: bir çifti diziye çevir, bir görev dosyasını
+    oku, bir kümenin hepsini oku, ve resmî eğitim kümesini
+    eğitim/doğrulama diye ayır.
 
-def yukle(yol: str) -> Gorev:
-    with open(yol, encoding="utf-8") as f:
-        d = json.load(f)
-    ad = os.path.splitext(os.path.basename(yol))[0]
-    return Gorev(ad, [_cift(x) for x in d["train"]],
-                 [_cift(x) for x in d["test"]],
-                 os.path.basename(os.path.dirname(yol)))
-
-
-def yukle_hepsi(kume: str = "training") -> List[Gorev]:
-    """``training`` (1000) veya ``evaluation`` (120)."""
-    dizin = os.path.join(ARC, kume)
-    if not os.path.isdir(dizin):
-        raise FileNotFoundError(
-            "ARC verisi yok: %s  (idrak/veri/arc_agi_2 bekleniyor)" % dizin)
-    return [yukle(os.path.join(dizin, ad))
-            for ad in sorted(os.listdir(dizin)) if ad.endswith(".json")]
-
-
-def bol(gorevler: Sequence[Gorev], dogrulama: int = 100, tohum: int = 0
-        ) -> Tuple[List[Gorev], List[Gorev]]:
-    """Resmî eğitim kümesini eğitim/doğrulama diye ayır.
+    ==============  ==================================================
+    ``ne``          döndürdüğü
+    ==============  ==================================================
+    ``tek``         ``yol``daki tek görev
+    ``hepsi``       ``training`` (1000) yahut ``evaluation`` (120)
+    ``böl``         ``(eğitim, doğrulama)``
+    ==============  ==================================================
 
     Karıştırma **sabit tohumludur**: aynı bölme her koşuda tekrarlanır,
-    yoksa "doğrulama iyileşti" hükmü ölçülemez olur.
+    yoksa *"doğrulama iyileşti"* hükmü ölçülemez olur.
     """
+    def cift(d):
+        return (np.array(d["input"], dtype=np.int64),
+                np.array(d["output"], dtype=np.int64))
+
+    def bir(y):
+        with open(y, encoding="utf-8") as f:
+            d = json.load(f)
+        return Gorev(os.path.splitext(os.path.basename(y))[0],
+                     [cift(x) for x in d["train"]],
+                     [cift(x) for x in d["test"]],
+                     os.path.basename(os.path.dirname(y)))
+
+    if ne == "tek":
+        return bir(yol)
+    if ne == "hepsi":
+        dizin = os.path.join(ARC, kume)
+        if not os.path.isdir(dizin):
+            raise FileNotFoundError(
+                "ARC verisi yok: %s  (idrak/veri/arc_agi_2 bekleniyor)"
+                % dizin)
+        return [bir(os.path.join(dizin, a))
+                for a in sorted(os.listdir(dizin)) if a.endswith(".json")]
+    if ne != "böl":
+        raise ValueError("görev getirme kipi bilinmiyor: %r" % (ne,))
     idx = np.random.default_rng(tohum).permutation(len(gorevler))
     d = [gorevler[int(i)] for i in idx[:dogrulama]]
     e = [gorevler[int(i)] for i in idx[dogrulama:]]
     return e, d
+
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -283,12 +298,12 @@ def soyutlama_oku(ad: str) -> Optional[str]:
 
 def _gosterim() -> str:
     s = []
-    egt = yukle_hepsi("training")
-    dgr = yukle_hepsi("evaluation")
+    egt = gorevleri_getir("training")
+    dgr = gorevleri_getir("evaluation")
     s.append("=== ARC-AGI-2 verisi ===")
     s.append("  resmî eğitim: %d görev   resmî değerlendirme: %d görev"
              % (len(egt), len(dgr)))
-    e, d = bol(egt)
+    e, d = gorevleri_getir(ne="böl", gorevler=egt)
     s.append("  bölme: eğitim %d / doğrulama %d / sınama %d  "
              "(%.0f%% / %.0f%% / %.0f%%)"
              % (len(e), len(d), len(dgr),

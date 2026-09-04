@@ -184,7 +184,7 @@ def _gosterim() -> str:                        # pragma: no cover
     s = ["=== Şekil kaidesi: ispatlı kestirim, yoksa sükût ==="]
     for kume in ("training", "evaluation"):
         try:
-            g = arc.yukle_hepsi(kume)
+            g = arc.gorevleri_getir(kume)
         except Exception as e:
             s.append("  %s yüklenemedi: %s" % (kume, e))
             continue

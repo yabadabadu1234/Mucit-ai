@@ -799,7 +799,7 @@ def test_iki_olcek_hakikaten_iki():
 
     from .iki_olcek import iki_olcegin_acisi
 
-    g = arc.yukle_hepsi("training")[:10]
+    g = arc.gorevleri_getir("training")[:10]
     artiklar = []
     for gv in g:
         r = iki_olcegin_acisi(gv, ne="sağîr")
@@ -839,7 +839,7 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
 
     # Kozikıl şartı: ikili uyuşma denklik kurduğu için üçlüler tutmalı.
     from idrak import arc
-    for gv in arc.yukle_hepsi("training")[:40]:
+    for gv in arc.gorevleri_getir("training")[:40]:
         c = ortu_kapaniyor_mu(gv)
         assert c["üçlü_tutarlı"], (gv, c)
 
@@ -1671,7 +1671,7 @@ def test_ic_bag_serpistirilmis_QTT_izafi_operatorleri_TAM_tasiyor():
 def test_lisan_tiktoken_yerel_tablodan_ve_izafi_mevki():
     """tiktoken depodaki tablodan okunuyor mu, izafî mevki öteleme-değişmez mi?"""
     import numpy as np
-    from nefs.lisan import (kodlayici, izafi_operator, izgara_kodla,
+    from nefs.lisan import (kodlayici, izafi_oteleme,
                             OZEL_BELIRTECLER)
 
     k = kodlayici()
@@ -1684,16 +1684,16 @@ def test_lisan_tiktoken_yerel_tablodan_ve_izafi_mevki():
 
     # izafî operatörler TAM ortogonal ve tersi kendi eşleniği
     nx, ny = 5, 4
-    D = izafi_operator(nx, ny, 1, 0)
+    D = izafi_oteleme(nx=nx, ny=ny, dx=1, dy=0)
     assert np.allclose(D.T @ D, np.eye(nx * ny), atol=1e-12)
-    assert np.allclose(D @ izafi_operator(nx, ny, -1, 0),
+    assert np.allclose(D @ izafi_oteleme(nx=nx, ny=ny, dx=-1, dy=0),
                        np.eye(nx * ny), atol=1e-12)
 
     # aynı örüntü ızgaranın HER YERİNDE aynı kodlanmalı
     A = np.zeros((6, 6), int); A[1, 1] = 3; A[1, 2] = 5
     B = np.zeros((6, 6), int); B[4, 3] = 3; B[4, 4] = 5
-    ka = [x.kod() for x in izgara_kodla(A)["izafi"] if x.merkez == 3][0]
-    kb = [x.kod() for x in izgara_kodla(B)["izafi"] if x.merkez == 3][0]
+    ka = [x.kod() for x in izafi_oteleme(ne="ızgara", g=A)["izafi"] if x.merkez == 3][0]
+    kb = [x.kod() for x in izafi_oteleme(ne="ızgara", g=B)["izafi"] if x.merkez == 3][0]
     assert ka == kb, (ka, kb)
 
 

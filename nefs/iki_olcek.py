@@ -221,7 +221,7 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
 
 
 def rapor(n_gorev: int = 24, tohum: int = 0, chi: int = 8) -> str:
-    gorevler = arc.yukle_hepsi("training")[:int(n_gorev)]
+    gorevler = arc.gorevleri_getir("training")[:int(n_gorev)]
     s = ["=== SAĞÎR ve KEBÎR -- iki ölçekli mimari (Dosya 5) ===",
          "",
          "KEBÎR: 41 melekenin bütün görevlerde ORTAK açıları.",

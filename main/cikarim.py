@@ -868,7 +868,7 @@ def degerlendirme_kosusu(agirlik_yolu: Optional[str] = None,
                          asgari_disarida: float = 1.0) -> str:
     """Kümede ne yapıyoruz -- ölçüm, iddia değil."""
     from idrak import arc
-    gorevler = arc.yukle_hepsi(kume)[:int(limit)]
+    gorevler = arc.gorevleri_getir(kume)[:int(limit)]
     motor = KulliHukumMotoru(agirlik_yolu, asgari_disarida=asgari_disarida)
 
     konustu = tam = yanlis = 0

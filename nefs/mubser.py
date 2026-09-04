@@ -317,7 +317,7 @@ def _bilesenler(g: np.ndarray, zemin: int = 0,
             kutu=(int(ust), int(sol), int(alt), int(sag)),
             merkez=(float(A[:, 0].mean()), float(A[:, 1].mean())),
             sekil=maske,
-            tenasub=_tenasub_maske(maske),
+            tenasub=_tenasub(g=maske, ne="maske"),
             tarif=_sekil_tarifi(maske)))
     out.sort(key=lambda n: (-n.izam, n.kutu))
     return out
@@ -526,72 +526,60 @@ def _sureklilik(g: np.ndarray) -> Dict[str, float]:
             "arka_renk": float(len(arka))}
 
 
-def _tenasub_maske(m: np.ndarray) -> Tuple[float, float, float]:
-    """Tenasüb: (en/boy oranı, yatay simetri, dikey simetri)."""
-    h, w = m.shape
-    oran = w / max(h, 1)
-    yatay = float((m == m[:, ::-1]).mean())
-    dikey = float((m == m[::-1, :]).mean())
-    return (float(oran), yatay, dikey)
+def _tenasub(g=None, nesneler=None, ne: str = "maske"):
+    """TENASÜB: ORAN VE SİMETRİ -- tek terkip (kütük H225).
 
+    Küme: ``_tenasub_maske`` + ``_tenasub_kulli``. İkincisi birincisini
+    nesne nesne çağırıyordu; aynı ölçünün iki mikyasıdır -- biri tek
+    maskede, öteki bütün nesnelerde.
 
-def _tenasub_kulli(g: np.ndarray, nesneler: Sequence[Nesne]
-                   ) -> Tuple[float, float, float]:
-    """Küllî tenasüb: nesnelerin oran ve simetrilerinin ızam ağırlıklı ortası.
-
-    Nesne yoksa ızgaranın kendi oranına düşülür ve bu **işaretlenir**
-    (boş ızgarada tenasüb ızgaranındır, uydurma değildir).
+    ``ne="maske"``: ``(en/boy oranı, yatay simetri, dikey simetri)``.
+    ``ne="küllî"``: nesnelerin oran ve simetrilerinin **ortalaması**.
     """
+    if ne == "maske":
+        m = g
+        h, w = m.shape
+        oran = w / max(h, 1)
+        yatay = float((m == m[:, ::-1]).mean())
+        dikey = float((m == m[::-1, :]).mean())
+        return (float(oran), yatay, dikey)
+
+    if ne != "küllî":
+        raise ValueError("tenasüb kipi bilinmiyor: %r" % (ne,))
     if not nesneler:
-        return _tenasub_maske(g != 0)
+        return _tenasub(g=g != 0, ne="maske")
     w = np.array([n.izam for n in nesneler], float)
     w = w / w.sum()
     T = np.array([n.tenasub for n in nesneler], float)
     return (float(w @ T[:, 0]), float(w @ T[:, 1]), float(w @ T[:, 2]))
 
 
-def _dihedral_kanonik(sekil: np.ndarray) -> Tuple[Tuple[int, int], bytes]:
-    """Şeklin **dihedral kanonik sûreti** -- 8 katlı grubun en küçüğü.
+def _emsal(nesneler=None, sekil=None, ne: str = "emsal"):
+    """EMSAL: ŞEKİL BENZERLİĞİ -- tek terkip (kütük H225).
 
-    Dört dönme ve onların yansımaları alınır; ``(şekil, baytlar)``
-    ikililerinin **en küçüğü** kanonik sayılır. İki şekil dihedral
-    denk ise kanonikleri **eşittir**; dolayısıyla denklik kıyası
-    çift başına ``O(1)``dir.
+    Küme: ``_dihedral_kanonik`` + ``_emsal``. İkincisi birincisini nesne
+    başına **bir kere** çağırıp hash ile kıyaslar; ayrı isim taşımaları,
+    kanonik sûret ile onun kullanımını iki şey gibi gösteriyordu.
 
-    ===================================================================
-    ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H197)
-    ===================================================================
-
-    ``_emsal``in çift döngüsü her çift için ``np.rot90``ı yeniden
-    çağırıyordu: profilde **2.374.338 çağrı, 23,5 saniye**. Halbuki
-    dönmeler nesnenin kendi vasfıdır, çiftin değil. Kanonik sûret
-    nesne başına **bir kere** hesaplanır; ``m`` nesne için ``4m``
-    dönme, ``m²/2`` değil.
+    ``ne="kanonik"``: şeklin **dihedral kanonik sûreti** -- 8 katlı
+    grubun (``D₄``) yörüngesinden sözlük sırasında en küçüğü. Her nesne
+    için **bir kere** çıkarılır ve hash ile ``O(1)`` kıyaslanır; çift
+    döngüsünün içinde sekiz dönüşümü tekrar tekrar hesaplamak
+    ``O(n²·8)`` olurdu.
     """
-    en_kucuk: Optional[Tuple[Tuple[int, int], bytes]] = None
-    for k in range(4):
-        R = np.rot90(sekil, k)
-        for V in (R, R[:, ::-1]):
-            A = np.ascontiguousarray(V)
-            aday = ((int(A.shape[0]), int(A.shape[1])), A.tobytes())
-            if en_kucuk is None or aday < en_kucuk:
-                en_kucuk = aday
-    return en_kucuk                                    # type: ignore[return-value]
+    if ne == "kanonik":
+        en_kucuk: Optional[Tuple[Tuple[int, int], bytes]] = None
+        for k in range(4):
+            R = np.rot90(sekil, k)
+            for V in (R, R[:, ::-1]):
+                A = np.ascontiguousarray(V)
+                aday = ((int(A.shape[0]), int(A.shape[1])), A.tobytes())
+                if en_kucuk is None or aday < en_kucuk:
+                    en_kucuk = aday
+        return en_kucuk                                    # type: ignore[return-value]
 
-
-def _emsal(nesneler: Sequence[Nesne]) -> Dict[str, float]:
-    """**İkinci mertebe müşahede**: Teşabüh(+) / İhtilaf(−), NESNELER arası.
-
-    Kullanıcı hükmü: *"İki nesnenin şekilce benzediğini görmek hâlâ
-    müşahededir (gözün emsal tespiti); lakin kuralı birinden ötekine
-    aktarmak Kıyas'tır."* Sınır buradadır ve aşılmaz: bu fonksiyon
-    hangi nesnelerin emsal olduğunu **söyler**, aralarında hüküm
-    **taşımaz**.
-
-    Evvelce Teşabüh hücre komşuluğunda hesaplanıyor ve ``doku`` ile
-    ``bağlantı``dan türetildiği için onları **çift sayıyordu** (ölçüldü:
-    86/174 çiftte baskın, bağımsız değil). Yeri burasıdır.
-    """
+    if ne != "emsal":
+        raise ValueError("emsal kipi bilinmiyor: %r" % (ne,))
     m = len(nesneler)
     if m < 2:
         return {"emsal_şekil": 0.0, "emsal_ızam": 0.0, "emsal_renk": 0.0,
@@ -601,7 +589,7 @@ def _emsal(nesneler: Sequence[Nesne]) -> Dict[str, float]:
     # Vasıflar çift döngüsünün DIŞINDA, nesne başına bir kere.
     ham = [(n.sekil.shape, np.ascontiguousarray(n.sekil).tobytes())
            for n in nesneler]
-    kan = [_dihedral_kanonik(n.sekil) for n in nesneler]
+    kan = [_emsal(sekil=n.sekil, ne="kanonik") for n in nesneler]
     for i in range(m):
         for j in range(i + 1, m):
             cift += 1
@@ -728,7 +716,7 @@ def musahede_et(izgara: np.ndarray) -> Mesud:
     # ızgara şekli sabit kalınca ``Δen_boy`` cebren sıfır çıkıyordu
     # (ölçüldü: ortalama 0.0000, sıfır olma oranı 1.00 -- kanal ÖLÜYDÜ).
     # Tenasüb bir **nesnenin** vasfıdır; nesneler üzerinden toplanır.
-    ten = _tenasub_kulli(g, nesneler)
+    ten = _tenasub(g=g, nesneler=nesneler, ne="küllî")
     muk = _mukayese(g)
     ems = _emsal(nesneler)
     kat = _seffafiyet(g)

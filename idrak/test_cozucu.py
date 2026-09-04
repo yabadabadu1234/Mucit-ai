@@ -142,7 +142,7 @@ def test_cozulemeyen_gorevde_SUSUYOR():
 @veri_gerek
 def test_egitim_kumesinde_en_az_bir_gorev_TAM_cozuluyor():
     """Kullanıcının şartı: en az bir görev %100 doğru."""
-    r = cz.kume_coz(arc.yukle_hepsi("training"))
+    r = cz.kume_coz(arc.gorevleri_getir("training"))
     assert r["tam_çözülen"] >= 1
     assert r["tam_çözülen"] == len(r["tam_çözülen_ad"])
 
@@ -150,8 +150,8 @@ def test_egitim_kumesinde_en_az_bir_gorev_TAM_cozuluyor():
 @veri_gerek
 def test_dogrulama_bolmesinde_de_tam_cozum_var():
     """Sinir ağının HİÇ görmediği bölmede de tam çözüm."""
-    e = arc.yukle_hepsi("training")
-    _egt, dog = arc.bol(e, 100, tohum=0)
+    e = arc.gorevleri_getir("training")
+    _egt, dog = arc.gorevleri_getir(ne="böl", gorevler=e, 100, tohum=0)
     r = cz.kume_coz(dog)
     assert r["tam_çözülen"] >= 1
 
@@ -159,7 +159,7 @@ def test_dogrulama_bolmesinde_de_tam_cozum_var():
 @veri_gerek
 def test_cevap_verince_isabet_yuksek():
     """Susma ölçütü işe yarıyor mu? — cevap verince isabet yüksek olmalı."""
-    r = cz.kume_coz(arc.yukle_hepsi("training"))
+    r = cz.kume_coz(arc.gorevleri_getir("training"))
     assert r["cevap_verilen"] > 0
     assert r["isabet_cevap_verince"] > 0.8
     assert r["susulan"] > r["cevap_verilen"]        # çoğunlukla susuyor
@@ -168,7 +168,7 @@ def test_cevap_verince_isabet_yuksek():
 @veri_gerek
 def test_cozulen_gorevler_gercekten_dogrulaniyor():
     """Bağımsız teyit: çözülen her görev elle yeniden sınanıyor."""
-    e = arc.yukle_hepsi("training")
+    e = arc.gorevleri_getir("training")
     r = cz.kume_coz(e)
     adlar = set(r["tam_çözülen_ad"])
     assert adlar
@@ -186,6 +186,6 @@ def test_cozulen_gorevler_gercekten_dogrulaniyor():
 @veri_gerek
 def test_degerlendirme_kumesi_bu_DSL_ile_cozulmuyor():
     """Dürüst başarısızlık: ARC-AGI-2 eval tam bunu yenmek için kuruldu."""
-    r = cz.kume_coz(arc.yukle_hepsi("evaluation"))
+    r = cz.kume_coz(arc.gorevleri_getir("evaluation"))
     assert r["tam_çözülen"] == 0
     assert r["görev"] == 120

@@ -101,7 +101,7 @@ def test_kayan_nokta_yuvarlamasi_sahte_kaide_uretmiyor():
 
 @veri_gerek
 def test_egitim_kumesinde_kapsam_ve_isabet():
-    d = sk.kesirli_sekil_kaidesi(ne="ölç", gorevler=arc.yukle_hepsi("training"))
+    d = sk.kesirli_sekil_kaidesi(ne="ölç", gorevler=arc.gorevleri_getir("training"))
     assert d["kapsam"] > 0.80
     assert d["isabet_kapsayınca"] > 0.99
 
@@ -109,7 +109,7 @@ def test_egitim_kumesinde_kapsam_ve_isabet():
 @veri_gerek
 def test_degerlendirme_kumesinde_de_tutuyor():
     """Çözücünün yenildiği kümede bile ŞEKİL kaidesi ayakta."""
-    d = sk.kesirli_sekil_kaidesi(ne="ölç", gorevler=arc.yukle_hepsi("evaluation"))
+    d = sk.kesirli_sekil_kaidesi(ne="ölç", gorevler=arc.gorevleri_getir("evaluation"))
     assert d["kapsam"] > 0.65
     assert d["isabet_kapsayınca"] > 0.95
 
@@ -117,6 +117,6 @@ def test_degerlendirme_kumesinde_de_tutuyor():
 @veri_gerek
 def test_kaide_sinir_aginin_sekil_basindan_kat_kat_iyi():
     """Ölçülen kıyas: şekil başı doğrulamada 0.027 idi."""
-    d = sk.kesirli_sekil_kaidesi(ne="ölç", gorevler=arc.yukle_hepsi("evaluation"))
+    d = sk.kesirli_sekil_kaidesi(ne="ölç", gorevler=arc.gorevleri_getir("evaluation"))
     isabet = d["kapsam"] * d["isabet_kapsayınca"]     # sükût = yanlış say
     assert isabet > 0.6

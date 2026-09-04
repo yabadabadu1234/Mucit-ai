@@ -459,8 +459,8 @@ def kume_coz(gorevler: Sequence[arc.Gorev]) -> Dict[str, object]:
 
 def _gosterim() -> str:
     s = []
-    egt = arc.yukle_hepsi("training")
-    dgr = arc.yukle_hepsi("evaluation")
+    egt = arc.gorevleri_getir("training")
+    dgr = arc.gorevleri_getir("evaluation")
 
     s.append("=== Doğrulanabilir çözücü: ya ispat ya sükût ===")
     for ad, kume in (("resmî eğitim (1000)", egt),
