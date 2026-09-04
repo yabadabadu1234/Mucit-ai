@@ -7817,3 +7817,53 @@ Dokuz aslın raporu ile tek terkibin raporu satır satır yüzleştirildi:
 **bütün sayılar aynı**, tek fark eklenen dokuz bölüm başlığı.
 Kuantum akış da değişmedi: `kesme = 7,863871e+00`,
 `sadakat = 0,003430` -- Küme 3 öncesiyle birebir.
+
+---
+
+## H224 -- KÜME 5 tevhidi: altı dosya tek küllî kayıp çipinde
+
+Padişahın kat'î usulüyle, üç adımda: **(a)** her dosya kendi içinde
+terkip, **(b)** birleştirme, **(c)** birleşik gövdede tekrar terkip.
+Her terkibe mahiyetinin **halkça** ismi verildi. Asıllar
+`yedek/kume5_asillari/` altında şahittir.
+
+### Adım (a) -- dosya-içi terkip
+
+| dosya | eriyen asıllar | terkip |
+|---|---|---|
+| `nefs/olcu.py` | `uzay, funktor, funktor_tersi, morfizm_funktoru, funktor_dogrula, mertebele` | `mertebeye_cevir` |
+| | `yumusak_asgari, _katilan_uzuv, dinamik_beta, kulli_toplam` | `zayif_halkaya_gore_topla` |
+| `nefs/sozlesme.py` | `_bolge_yuvalari, _guzergah, _yogunluklar, _hazirla, dokunulan_bolgeler, sozlesmeyi_olc` | `taahhude_dokundu_mu` |
+| `nefs/tesir.py` | `icra_izi, netice_ozeti, tesir_olc, tesir_tablosu, yapili_girdi` | `bu_meleke_dusse` |
+| `nefs/mudrike.py` | `vazife_nevi, tesaduf_olcusu, dalga_hukmu, mudrike` | `icinden_gecir` |
+| `nefs/kulli_kayip.py` | `_veri_yuvalari, bolge_degeri` | `bolge_degeri` |
+
+**`zayif_halkaya_gore_topla` hakikî bir terkiptir**, tabela değil:
+dört asıl **tek çekirdeğin** -- kaydırmalı log-sum-exp'in -- ayrı
+okunuşudur; işaret ve kaydırma değişir, formül değişmez:
+`yumuşak(x; ±β) = ±(1/β)·[log Σ exp(±β·xᵢ) − log n]`.
+
+`nefs/kademeler.py`de dosya-içi bir küme **bulunamadı** ve zorlanmadı:
+altı kademe bir zincirdir, `_par/_olc/_dene` ise altısının müşterek
+yardımcılarıdır. Olmayan bir kümeyi uydurmak terkip değil tabeladır.
+
+### Adım (b) -- birleştirme
+
+Altı dosya `nefs/kulli_kayip.py`de birleşti (3034 satır → 2467).
+
+### Adım (c) -- birleşik gövdede tekrar terkip
+
+Altı `rapor()` tek **kendini gösterme**de birleşti. H223'te ölçülmüş
+kusur (bölümlerin aynı yerel isim uzayını paylaşıp `n`/`tur`/`tohum`u
+ezmesi) burada **baştan engellendi**: her bölüm kendi kapanışında koşar
+ve asıl imzasındaki varsayılanlar kapanışın başına konur.
+
+### Birleşmenin doğurduğu üç kusur -- ölçülerek yakalandı
+
+1. `kademeler` içindeki `from .olcu import …` birleşmeden sonra
+   var olmayan bir modüle bakıyordu.
+2. `zayif_halkaya_gore_topla`nın `katılan` ve `beta` kipleri, aslî
+   imzalarındaki `eksikler` adına bakıyordu; terkipte ilk konum
+   parametresi `x`tir. Bağlandı.
+3. Bir çağrı `np.asarray(eksikler, float, ne="katılan")` hâline
+   gelmişti -- `ne` yanlış fonksiyona düşmüştü.

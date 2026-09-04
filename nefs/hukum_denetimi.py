@@ -537,8 +537,8 @@ def _h118_nizam_doygunlugu_kiriyor() -> Tuple[bool, str]:
 
 def _h119_sozlesme_ihlalsiz() -> Tuple[bool, str]:
     """41 melekenin hiçbiri ilan ettiği hududun dışına çıkmıyor."""
-    from .sozlesme import sozlesmeyi_olc
-    o = sozlesmeyi_olc(n_satir=3, chi=16)
+    from .kulli_kayip import taahhude_dokundu_mu
+    o = taahhude_dokundu_mu(n_satir=3, chi=16, ne="hepsi")
     ihlal = [(r["no"], r["ihlâl"]) for r in o if r["ihlâl"]]
     bos = [(r["no"], r["kullanılmayan"]) for r in o if r["kullanılmayan"]]
     return (not ihlal and not bos), \

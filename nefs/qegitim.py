@@ -299,7 +299,7 @@ def _degerlendir_mudrike(nefs, gorevler: Sequence, azami: int,
     cevap belirteç kestirimiyle değil, **ispatlı kaide** ile üretilir ve
     yakîn eşiğini geçmeyen görevde model **susar**.
     """
-    from .mudrike import mudrike as _mudrike
+    from .kulli_kayip import icinden_gecir as _mudrike
 
     deneme = cozulen = konusan = yanlis = sukut = 0
     hucre: List[float] = []

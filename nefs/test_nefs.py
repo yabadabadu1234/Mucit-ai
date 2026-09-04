@@ -1090,7 +1090,7 @@ def test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR():
     """
     from . import sozlesme
 
-    for r in sozlesme.sozlesmeyi_olc(n_satir=3, chi=16):
+    for r in sozlesme.taahhude_dokundu_mu(n_satir=3, chi=16, ne="hepsi"):
         assert not r["ihlâl"], r
         assert not r["kullanılmayan"], r
 
@@ -1098,7 +1098,7 @@ def test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR():
     eski = sozlesme.SOZLESME[1]
     sozlesme.SOZLESME[1] = (("sukut",), "kasten yanlış ilan")
     try:
-        r = sozlesme.dokunulan_bolgeler(1, n_satir=3, chi=16)
+        r = sozlesme.taahhude_dokundu_mu(1, n_satir=3, chi=16)
         assert "veri" in r["ihlâl"], r
     finally:
         sozlesme.SOZLESME[1] = eski

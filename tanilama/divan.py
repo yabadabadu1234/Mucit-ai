@@ -182,7 +182,6 @@ import nefs.ttkan  # [hakem] TT-KAN -- ceridenin hız hükmünün fiilî hesabı
 import nefs.kopru  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
 import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
 import nefs.qkaide  # [uzuv] KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta
-import nefs.tesir  # [uzuv] Kademe 5 -- **icra izi, hassasiyet ve hata izolasyonu**
 import nefs.test_nefs  # [şahit] nefs sınamaları
 import nefs.uzaklik_olcumu  # [uzuv] Uzak çift kapısı: **takas ağı mı, MPO mu?** -- eşiği ölçüm koyar
 
@@ -440,8 +439,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması'),
     ('nefs.qkaide', 'uzuv',
      "KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta"),
-    ('nefs.tesir', 'uzuv',
-     'Kademe 5 -- **icra izi, hassasiyet ve hata izolasyonu**'),
     ('nefs.test_nefs', 'şahit',
      'nefs sınamaları'),
     ('nefs.uzaklik_olcumu', 'uzuv',

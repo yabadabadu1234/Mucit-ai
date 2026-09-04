@@ -301,7 +301,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     Adam/SGD yoktur: ``Talim`` dokuz uzuvlu usuldür (dalga, had
     ölçümü, vekil yüzey, durgunluk, tünelleme, denge...).
     """
-    from nefs.kademeler import kademe_parametreleri_ac
+    from nefs.kulli_kayip import kademe_parametreleri_ac
     from nefs.kulli_kayip import kulli_kayip
     from nefs.melekeler import QNefs
     from nefs.qegitim import degerlendir, ornekler
