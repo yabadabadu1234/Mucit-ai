@@ -1018,13 +1018,14 @@ def rapor_dimag() -> str:                                     # pragma: no cover
     # (a) hepsi sıra değiştiren: aynı Cartan alt cebri → kayıp SIFIR
     teta0 = np.zeros(MELEKE_SAYISI)
     teta0[0] = 1.0
-    b0 = bgcm_kaybi(teta0, D)
+    b0 = melekelerin_dondurucusu(teta0, D)["bgcm"]
     s.append("     tek meleke uyanık   : ham %.3e  norm %.6f  muvazeneli=%s"
              % (b0["kayıp"], b0["kayıp_norm"], b0["muvazeneli"]))
     rng = np.random.default_rng(0)
     for ad, olc in (("41'i zayıf ×0,05", 0.05), ("41'i orta ×1", 1.0),
                     ("41'i kuvvetli ×5", 5.0), ("41'i azgın ×50", 50.0)):
-        bb = bgcm_kaybi(olc * rng.normal(size=MELEKE_SAYISI), D)
+        bb = melekelerin_dondurucusu(
+            olc * rng.normal(size=MELEKE_SAYISI), D)["bgcm"]
         s.append("     %-19s: ham %.3e  norm %.6f"
                  % (ad, bb["kayıp"], bb["kayıp_norm"]))
     s.append("     → ham kayıp θ⁴ ile patlıyor, NORMALİZE olan [0,1]de kalıyor")
@@ -5841,7 +5842,8 @@ class KulliMelekeManifoldu:
 
     def bgcm_mizan_enerjisi(self) -> float:
         """Normalize BGCM: ``[0,1]``de bir sayı, ``λ_mizan``ın çarpanı."""
-        r = bgcm_kaybi(self.teta, int(self.D), cetvel=KANONIK_CETVEL)
+        r = melekelerin_dondurucusu(self.teta, int(self.D),
+                                    cetvel=KANONIK_CETVEL)["bgcm"]
         return float(r.get("kayıp_norm", r.get("kayıp", 0.0)))
 
     def mertebe_dagilimi(self) -> Dict[int, int]:
