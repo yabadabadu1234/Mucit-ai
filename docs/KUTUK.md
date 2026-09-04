@@ -8124,3 +8124,158 @@ yoktur.)
 Kuantum akış Küme 7 öncesiyle **birebir aynı**:
 `kapı=3693  takas=534  MPO=289  toplam kesme=4,321e+01`
 (`e0e19e3` işlemesindeki ağaçla yüzleştirildi).
+
+---
+
+## H227 — KÜME 8, İSİM ISLAHATI ve NAZIRLIK KATI
+
+Üç öksüz klasör (`yaklasim/`, `olcek/`, `arama/`; 3 309 satır, on-on
+bir gündür dokunulmamış, **hiçbir faal dosya çağırmıyor**) dağıtıldı;
+verdiğim uzun isimler ıslah edildi; ve `main`e geçmeden evvel altı
+fiillik bir ara kat kuruldu.
+
+### I. Plânda düzelttiğim bir hüküm
+
+Plânda *"`arama/` dağıtılmayacak, nazırlık olacak"* demiştim. Nakil
+sırasında ölçtüm ve **kendi plânım yanlış çıktı**: aramanın parçaları
+gidecekleri yeri kendileri söylüyordu -- Grover/Dürr--Høyer/adiyabatik
+ve WKB **asgarî arama**dır, yâni `ogrenme/optimize.py`nin ta kendi
+mevzuu; GRAPE kapı kontrolüdür (`melekeler`); holonomi zırhın Wilson
+ilmeğidir (`zirh`). "Kategori olarak farklı" dediğim şey, bakınca üç
+faal dosyanın tam ortasındaydı. Nazırlık `nefs/ara.py` olarak kaldı
+fakat **ince** kaldı: içinde hesap yok, çağrı var.
+
+### II. Adım (a) — altı iç terkip
+
+| dosya | küme | tek isim |
+|---|---|---|
+| `akislar.py` | 9 → 1 | `kuyudan_cik` |
+| `kara_kutu.py` | 4 → 1 | `had` |
+| `tikizlik.py` | 5 → 1 | `asgari_var_mi` |
+| `genisletme.py` | 4 → 1 | `ezber_mi` |
+| `olcek/hiz.py` | 7 → 1 | `cati` |
+| `grover.py` | 5 → 1 | `en_iyiyi_ara` |
+
+Açığa çıkan özdeşlikler:
+
+* **Kuyudan çıkışın üç kanunu tek eksende.** Belirlenimci akış hiç
+  çıkamaz; ısıl topluluk `e^{−ΔE/T}` ile çıkar; kuantum tüneli `e^{−γ}`
+  ile geçer. İkisi de üsteldir fakat **üsleri farklı şeyi sayar**:
+  ısıl kaçış bariyerin *yüksekliğine*, tünel *altındaki alana* bakar.
+  Alçak ama çok geniş bir bariyer ısıla kolay, tünele imkânsız gelir;
+  iğne gibi ince ve yüksek bariyer bunun tam tersidir. `optimize`in
+  tavlama kapısı hangi kanunu kullandığını **söylemiyordu**.
+* **Weierstrass'ın hipotezleri ve nakızları.** Beş isim tek teoremdi:
+  zorlayıcı + alt seviye tıkız ⇒ asgarî vardır; `e^{−x}` zorlayıcı
+  değil, `sin(1/x)` sürekli değil, `(x²−y²)/(x²+y²)` yönden bağımsız
+  değil. Eniyilemenin bu hâllerdeki başarısızlığı **usulün kusuru
+  değildir**: çözüm kümesi boştur.
+* **Ezberin tamamı tek sayıda.** `λ → 0` eğitimde sıfır hata sınamada
+  patlama; `λ` büyük tersi. Küllî kaybın bilmesi gereken buydu.
+* **Roofline tek eğridir.** Yedi isim onun ayrı okunuşlarıydı: apsis
+  yoğunluk, tavan `min(bant·yoğunluk, tepe)`, dirsek yığın eşiği,
+  nokta throughput.
+* **Bilmediğini bilmek yanlış bilmekten hızlıdır.** Grover
+  `O(√(N/K))`dır ama `K`yı bilmek ister; `K` yanlışsa en iyi tur kayar
+  ve başarı **düşer** (M18). Dürr--Høyer `O(√N)`dir ve hiçbir şey
+  bilmez, dolayısıyla yanlış varsayamaz.
+
+**Üç sessiz kusur yakalandı** ve üçü de aynı cinstendi -- kip
+varsayılanlarının çakışması (H223'te ölçülen kusurun aynısı):
+`akış` kolu `adim=20000` yerine `60000` ile koşuyor ve Gibbs uzaklığı
+`0.0284 → 0.0278` diye **sessizce** kayıyordu; `sobolev` kolu kendi
+varsayılanları yerine `kıyas`ınkilerle koşuyor ve türev hatası `2.93`
+yerine `5746.66` çıkıyordu.
+
+### III. Adım (b)+(c) — nakil, ve iki muhafazanın birleşmesi
+
+Cevher sekiz faal dosyaya dağıldı. Birleştirme üç çakışma açığa
+çıkardı: `Kayip` (optimize'da **iki ayrı tip takma adı** aynı isimde,
+Küme 4'ten kalma), `_iz` (dizey izi ile arama izi), `BAYT_TOKEN`.
+
+**En güzel terkip burada çıktı.** İki dosya, aynı tuzağa (`x₀²`nin
+zorlayıcı görünmesi) karşı **birbirinden habersiz iki ayrı muhafaza**
+geliştirmişti:
+
+* `geometri` küre üstünde **inişle** arıyordu,
+* `tikizlik` koordinat eksenlerini yön kümesine **zorla katıyordu**.
+
+İkisi de tutuldu ve birlik ikisinden de güçlü çıktı: dejenere yön
+artık `8,2·10⁻¹⁴` diye yaklaşık değil **tam sıfır** bulunuyor. Aynı
+muhafaza alt seviye koluna da kondu; ölçüldü, onsuz `x₀²`in alt seviye
+kümesi "sınırlı" görünüyordu. Ve kuşatan yarıçap ikili aramayla
+daraltıldı -- ikiye katlama yalnız bir kuşak veriyor, raporlanan sayı
+"ikinin bir kuvveti" oluyordu:
+
+    {f ≤ +3.0}  4.0 → 2.4    (kuram √6 = 2,449)
+    {f ≤  0.0}  2.0 → 1.7    (kuram √3 = 1,732)
+    {f ≤ −2.9}  1.0 → 0.3    (kuram √0,1 = 0,316)
+    {f ≤ −3.5}  1.0 → 0.0    (küme BOŞ; sıfır doğru cevaptır)
+
+### IV. İSİM ISLAHATI — üç şart, üç kat
+
+Padişahın hükmü: *"uzunluk halkçalık değildir; isim yapılan işi en az
+kelimeyle en çok yönden kapsamalı ve projede alacağı rolü doğrudan
+tarif etmelidir."* Verdiğim isimler mekanizma anlatıyordu, rol değil.
+
+**Üç şart.** (1) Rol söyler, mekanizma söylemez. (2) Asıl olan tek
+kelimedir; uzun isim, ismin işini yapamadığının itirafıdır. (3) Main
+kaybolsa isimlerden yeniden yazdırsın.
+
+**Üç kat** -- ve bu ayrım şartlar kadar mühimdir:
+
+| kat | dizin | isim nev'i |
+|---|---|---|
+| alt -- âlet | `matematik/`, `kuantum/` | **hakikî riyazî isim**; kütüphane herkesin malıdır, `christoffel`e "dimağın eğrisi" demek terkip değil zorlamadır |
+| orta -- uzuv | `nefs/`, `ogrenme/`, `idrak/` | **rol ismi** |
+| üst -- nazırlık | `nefs/` (yeni altı dosya) | **fiil** |
+
+Otuz iki isim, yirmi dokuz dosya: `vicdan` (yasağı söylenmeden bilir),
+`kalip` (çıktı hangi kalıba dökülecek), `bak` (on beş kanallı duyu),
+`yokus` (hangi yön yokuş), `zayif_halka` (zincir en zayıf halkası
+kadar -- atasözü zaten formülün kendisi), `sozunde_mi`, `eksilt`,
+`suz`, `zirhla`, `delik`, `yama`, `iz`, `otele`, `kopru`, `ayir`,
+`kaide`, `ortu`, `mertebe`; ve alt katta yalnız kırpma: `hukum`,
+`odev`, `sonra`, `derece`, `aksiyom`, `illet_ara`, `gecer_mi`,
+`tutuyor_mu`, `kapi`, `metrik`, `z8_kapi`.
+
+Eski ad **bırakılmadı, taşındı**. İki isim yaşatmak ayrı gayrılığın ta
+kendisidir. Çarpışmalar evvelden ölçüldü ve mahallî adlar serbest
+bırakıldı (`zirh`te `delik`/`iz`, `musahede`de `kalip` içindeki
+`kaide` → `cetvel`).
+
+### V. NAZIRLIK KATI — altı fiil
+
+    nefs/gor.py     GÖRMEK    manzara = gor(gorev)
+    nefs/dusun.py   DÜŞÜNMEK  hal     = dusun(manzara)
+    nefs/ara.py     ARAMAK    aday    = ara(f)
+    nefs/tart.py    TARTMAK   mizan   = tart(hal)
+    nefs/ogren.py   ÖĞRENMEK  ogren(kayip, p0)
+    nefs/soyle.py   SÖYLEMEK  cevap   = soyle(gorev)
+
+**Altı dosyanın hiçbirinde tek satır yeni riyaziye yoktur**; hepsi
+çağrıdır. Kaide şudur: *içinde tek yeni formül olan nazırlık, nazırlık
+değil çiptir.* Sembolleşme budur -- alt kat açık formül, orta kat
+sembol, üst kat cümle; `main` artık alt kata bakmadan düşünür.
+
+Dört taşıyıcı: `Manzara` (görülen), `Hal` (zihnin hâli), `Mizan`
+(tartının dökümü), `Cevap` (söylenen yahut susulan). Her nazırlık kendi
+ürününün sahibidir.
+
+`main/egitim.py`ye `dimag()` eklendi; iki mevcut tâlim hattı **durduğu
+yerde duruyor** -- imha yok. Ölçüldü (12 görev): kalıbı bilinen 12,
+konuşan 1, susan 11, ortalama kayıp 0,068452, sözünde olmayan 0.
+Nazırlık kurulurken zırhın `Uzay` verilmeden **sessizce atlandığı**
+ortaya çıktı; verilince fiilen ısırıyor (sheaf 0,1452, β₀ = 1,
+homotopi 1,0).
+
+### VI. Tasfiye — ve taşınan mühürler
+
+Üç klasör silindi. **Doksan beş sınamanın hiçbiri silinmedi**;
+`ogrenme/test_yaklasim.py`, `ogrenme/test_arama.py`,
+`nefs/test_olcek.py` olarak taşındı ve terkip adlarına bağlandı.
+
+Bir mühür daha iyi motora taşındı: `egri_kisaltma` **sabit** `dt`
+kullanıyordu, `geometri.mcf_kos` her adımda `dt`yi yeniden seçer
+(ölçüldü: sabitle `T = 0,45`te %36 hata, uyarlamalıyla 10⁻³ mertebesi).
+Mühür taşındı, atılmadı.

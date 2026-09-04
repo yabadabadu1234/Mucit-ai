@@ -1492,7 +1492,7 @@ def rapor() -> str:                                     # pragma: no cover
     onc = np.concatenate([duz, np.zeros_like(duz)])
     for ad, z in (("aynı yön", duz), ("dik yön", dalgali)):
         zi = kos(z, onceki=onc)
-        s.append("    %-10s tıkanıklık = %.4f" % (ad, iz.tikaniklik))
+        s.append("    %-10s tıkanıklık = %.4f" % (ad, zi.tikaniklik))
     s.append("    (dik yönde tıkanıklık 1'e yaklaşmalı; yaklaşmıyorsa")
     s.append("     dördüncü süzgeç ölüdür.)")
     s.append("")

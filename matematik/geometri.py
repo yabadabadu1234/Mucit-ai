@@ -5000,7 +5000,10 @@ def alt_seviye_tikiz_mi(f: Callable[[np.ndarray], float], r: float,
         # İkiye katlama yalnız bir KUŞAK verir (``R/2 < hakikî ≤ R``);
         # kuşatan yarıçap ikili aramayla daraltılır, yoksa raporlanan
         # sayı "ikinin bir kuvveti" olur ve mânâsı kalmaz (H227).
-        alt, ust = R / 2.0, R
+        # İkiye katlama hiç koşmadıysa (daha ``R = 1``de aşılmış)
+        # hakikî sınır ``[0, 1]``dedir; kuşak ``R/2`` alınırsa yanlış
+        # olur. Boş kümede sınır sıfıra iner ve bu doğru cevaptır.
+        alt, ust = (R / 2.0 if R > 1.0 else 0.0), R
         for _ in range(40):
             orta = 0.5 * (alt + ust)
             if f(orta * v) <= r:
