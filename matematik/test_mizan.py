@@ -21,27 +21,27 @@ import pytest
 
 from matematik import mizan as alt
 from matematik import mizan
-from matematik.mizan import tabloda_ne_yaziyor
+from matematik.mizan import hukum
 
 
 def totoloji_mi(a):
-    return tabloda_ne_yaziyor(a, ne="totoloji")
+    return hukum(a, ne="totoloji")
 
 
 def tutarli_mi(a):
-    return tabloda_ne_yaziyor(a, ne="tutarlı")
+    return hukum(a, ne="tutarlı")
 
 
 def gecerli_mi(oncul, netice):
-    return tabloda_ne_yaziyor(oncüller=oncul, netice=netice)
+    return hukum(oncüller=oncul, netice=netice)
 
 
 def denk_mi(a, b):
-    return tabloda_ne_yaziyor(a, b, ne="denk")
+    return hukum(a, b, ne="denk")
 
 
 def karsi_ornek(oncul, netice):
-    return tabloda_ne_yaziyor(oncüller=oncul, netice=netice,
+    return hukum(oncüller=oncul, netice=netice,
                               ne="karşı_örnek")
 cikarim = cokdegerli = istikra = kiplik = kiyas = munazara = mizan
 from matematik.mizan import (Tablo, deg, degil, dogru, ise, tablo_boyu, ve,
@@ -276,15 +276,15 @@ def test_ltl_ozdeslikleri():
 # ══════════════════════════════════════════════════════════════════════
 
 TNORMLAR = {
-    "Łukasiewicz": cokdegerli.ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[0],
-    "Gödel": cokdegerli.ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[0],
-    "çarpım": cokdegerli.ikisi_birden_ne_kadar(ne="çarpım", tur="çekirdek")[0],
-    "nilpotent-min": cokdegerli.ikisi_birden_ne_kadar(ne="nilpotent min", tur="çekirdek")[0],
-    "Schweizer–Sklar p=2": cokdegerli.ikisi_birden_ne_kadar(ne="Schweizer-Sklar", p=2.0, tur="çekirdek")[0],
-    "Schweizer–Sklar p=-1": cokdegerli.ikisi_birden_ne_kadar(ne="Schweizer-Sklar", p=-1.0, tur="çekirdek")[0],
-    "Yager p=2": cokdegerli.ikisi_birden_ne_kadar(ne="Yager", p=2.0, tur="çekirdek")[0],
-    "Dombi p=1": cokdegerli.ikisi_birden_ne_kadar(ne="Dombi", p=1.0, tur="çekirdek")[0],
-    "zayıf (drastic)": cokdegerli.ikisi_birden_ne_kadar(ne="en zayıf", tur="çekirdek")[0],
+    "Łukasiewicz": cokdegerli.derece(ne="Łukasiewicz", tur="çekirdek")[0],
+    "Gödel": cokdegerli.derece(ne="Gödel", tur="çekirdek")[0],
+    "çarpım": cokdegerli.derece(ne="çarpım", tur="çekirdek")[0],
+    "nilpotent-min": cokdegerli.derece(ne="nilpotent min", tur="çekirdek")[0],
+    "Schweizer–Sklar p=2": cokdegerli.derece(ne="Schweizer-Sklar", p=2.0, tur="çekirdek")[0],
+    "Schweizer–Sklar p=-1": cokdegerli.derece(ne="Schweizer-Sklar", p=-1.0, tur="çekirdek")[0],
+    "Yager p=2": cokdegerli.derece(ne="Yager", p=2.0, tur="çekirdek")[0],
+    "Dombi p=1": cokdegerli.derece(ne="Dombi", p=1.0, tur="çekirdek")[0],
+    "zayıf (drastic)": cokdegerli.derece(ne="en zayıf", tur="çekirdek")[0],
 }
 
 
@@ -298,11 +298,11 @@ def test_tnorm_aksiyomlari(ad):
 
 
 @pytest.mark.parametrize("ad,T,I", [
-    ("Łukasiewicz", cokdegerli.ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[0], cokdegerli.ikisi_birden_ne_kadar(ne="Łukasiewicz", tur="çekirdek")[1]),
-    ("Gödel", cokdegerli.ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[0], cokdegerli.ikisi_birden_ne_kadar(ne="Gödel", tur="çekirdek")[1]),
-    ("çarpım", cokdegerli.ikisi_birden_ne_kadar(ne="çarpım", tur="çekirdek")[0], cokdegerli.ikisi_birden_ne_kadar(ne="çarpım", tur="çekirdek")[1]),
-    ("nilpotent-min", cokdegerli.ikisi_birden_ne_kadar(ne="nilpotent min", tur="çekirdek")[0],
-     cokdegerli.ikisi_birden_ne_kadar(ne="nilpotent min", tur="çekirdek")[1]),
+    ("Łukasiewicz", cokdegerli.derece(ne="Łukasiewicz", tur="çekirdek")[0], cokdegerli.derece(ne="Łukasiewicz", tur="çekirdek")[1]),
+    ("Gödel", cokdegerli.derece(ne="Gödel", tur="çekirdek")[0], cokdegerli.derece(ne="Gödel", tur="çekirdek")[1]),
+    ("çarpım", cokdegerli.derece(ne="çarpım", tur="çekirdek")[0], cokdegerli.derece(ne="çarpım", tur="çekirdek")[1]),
+    ("nilpotent-min", cokdegerli.derece(ne="nilpotent min", tur="çekirdek")[0],
+     cokdegerli.derece(ne="nilpotent min", tur="çekirdek")[1]),
 ])
 def test_kalinti_ozdesligi(ad, T, I):
     """``a⊗b ≤ c ⟺ a ≤ (b→c)`` — t-norm ile imâ aynı cebirden mi?"""
@@ -509,15 +509,15 @@ def test_mill_usulleri():
         (frozenset({"b", "d", "f"}), False),
         (frozenset({"c", "e", "f"}), False),
     ]
-    assert istikra.mill_usulu(vakalar) == frozenset({"a"})
-    assert istikra.mill_usulu(vakalar, "ayrılık") == frozenset({"a"})
-    assert istikra.mill_usulu(vakalar, "birleşik") == frozenset({"a"})
+    assert istikra.illet_ara(vakalar) == frozenset({"a"})
+    assert istikra.illet_ara(vakalar, "ayrılık") == frozenset({"a"})
+    assert istikra.illet_ara(vakalar, "birleşik") == frozenset({"a"})
 
 
 def test_mill_esdegisim_sabit_degiskende_sifir():
-    assert istikra.mill_usulu(ne="eş_değişim", olcumler=[(1, 5), (2, 5), (3, 5)]) == 0.0
-    assert istikra.mill_usulu(ne="eş_değişim", olcumler=[(1, 2), (2, 4), (3, 6)]) == pytest.approx(1.0)
-    assert istikra.mill_usulu(ne="eş_değişim", olcumler=[(1, -2), (2, -4), (3, -6)]) == pytest.approx(-1.0)
+    assert istikra.illet_ara(ne="eş_değişim", olcumler=[(1, 5), (2, 5), (3, 5)]) == 0.0
+    assert istikra.illet_ara(ne="eş_değişim", olcumler=[(1, 2), (2, 4), (3, 6)]) == pytest.approx(1.0)
+    assert istikra.illet_ara(ne="eş_değişim", olcumler=[(1, -2), (2, -4), (3, -6)]) == pytest.approx(-1.0)
 
 
 # ══════════════════════════════════════════════════════════════════════

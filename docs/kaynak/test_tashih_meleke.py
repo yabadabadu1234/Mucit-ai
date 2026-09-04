@@ -116,12 +116,12 @@ def test_meleke_ve_hudutsuzluk_zaten_derleniyordu():
 
 def test_householder_butun_durumu_negatiflemiyor():
     """M9/M10: yansıma yalnız ``v`` bileşenini negatifler."""
-    from matematik.geometri import kapi_kur
+    from matematik.geometri import kapi
 
     r = np.random.default_rng(0)
     d = 8
     v = r.normal(size=d); v /= np.linalg.norm(v)
-    U = kapi_kur("yansıma", v=v)
+    U = kapi("yansıma", v=v)
     psi = r.normal(size=d); psi /= np.linalg.norm(psi)
     # ESKİ HÂL: "UΨ = −Ψ" — yanlış
     assert np.linalg.norm(U(psi) + psi) > 0.5
@@ -132,7 +132,7 @@ def test_householder_butun_durumu_negatiflemiyor():
     # sadece paralel hâlde −Ψ
     assert np.linalg.norm(U(v) + v) < 1e-13
     # gerçekten silmek için izdüşüm gerekir ve o üniter DEĞİL
-    P = kapi_kur("silme", v=v)
+    P = kapi("silme", v=v)
     assert abs(v @ P(psi)) < 1e-13
     assert np.linalg.norm(P(psi)) < 1.0
 
@@ -156,8 +156,8 @@ def test_sek_zan_yakin_uniter_degil():
     M[0, 1] = math.sin(th)
     assert np.abs(M.conj().T @ M - np.eye(2)).max() > 0.5
     # tashihli hâl (SO(2)) üniter
-    from matematik.geometri import kapi_kur
-    G = kapi_kur("so2", theta=th, D=2).dizey()
+    from matematik.geometri import kapi
+    G = kapi("so2", theta=th, D=2).dizey()
     assert np.abs(G.T @ G - np.eye(2)).max() < 1e-14
 
 

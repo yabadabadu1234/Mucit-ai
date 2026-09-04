@@ -267,13 +267,13 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
     İkisi ayrı düşerse bu bir kusur DEĞİLDİR -- akış eğitilmemiştir.
     Ölçülen şey **aynı yöne bakıp bakmadıklarıdır**.
     """
-    from .musahede import ortu_kapaniyor_mu
+    from .musahede import ortu
     from .musahede import iki_olcegin_acisi
     from .melekeler import QNefs
     from .zihin_durumu import MAKAM_ADLARI, QAyar
 
-    c = ortu_kapaniyor_mu(gorev)
-    Y = ortu_kapaniyor_mu(gorev, ne="yama")
+    c = ortu(gorev)
+    Y = ortu(gorev, ne="yama")
     oncul = [1.0 if k is not None else 0.0 for k in Y]
     klasik = float(yakin_gazali(oncul, bool(c["kurulabilir"])))
 

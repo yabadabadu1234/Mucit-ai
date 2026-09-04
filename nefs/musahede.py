@@ -19,19 +19,19 @@ ve ikisi birbiriyle konuşmuyordu.
 **Çipin altı odası.**
 
 1. **Lisan ve gömme** -- ``Kodlayici`` (yerel ``o200k_base`` + 19 özel
-   belirteç + bayt yedeği), ``genlige_gom`` (QTT/MPS), ``belirtecten_aciya``
+   belirteç + bayt yedeği), ``genlige_gom`` (QTT/MPS), ``kopru``
    (belirteç → açı morfizminin tersinirlik ve izometri sınaması).
-2. **2D izafî hendese** -- ``izafi_oteleme``: çevrimsel ortogonal
+2. **2D izafî hendese** -- ``otele``: çevrimsel ortogonal
    öteleme üreteçleri ve ``𝒟(Δx,Δy) = T̂_x^{Δx} ⊗ T̂_y^{Δy}``. Mutlak
    koordinat taşınmaz; hüküm komşuluk örüntüsünden çıkar.
-3. **İbnü'l-Heysem tabakalı müşahede** -- ``musahede_et``: ışık, levn,
+3. **İbnü'l-Heysem tabakalı müşahede** -- ``bak``: ışık, levn,
    geçirgenlik, mekân, bağlantı, doku, nesneler, bu'd, süreklilik,
    tenasüb, emsal, şeffafiyet, aykırılık; ``devinim_olc`` ile hareket.
-4. **Otonom şahit bölütlemesi ve Procrustes** -- ``sahitleri_ayir``
-   (medyan + 3·MAD kopmalarından, ayıraç aramadan), ``kaideyi_coz``
+4. **Otonom şahit bölütlemesi ve Procrustes** -- ``ayir``
+   (medyan + 3·MAD kopmalarından, ayıraç aramadan), ``kaide``
    (``R̄ = polar(Σ A_k)``), ``nakz_bul`` (LOO), ``iki_sahit_ayri_mi``.
 5. **Şekil/ebat indüksiyonu ve Čech tıkanıklığı** --
-   ``cikti_ne_kadar`` (kesirli kaide **ve** cetvel, tek kapıda), ``ortu_kapaniyor_mu`` (H¹ ve sükût kapısı).
+   ``kalip`` (kesirli kaide **ve** cetvel, tek kapıda), ``ortu`` (H¹ ve sükût kapısı).
 6. **ARC verisi ve sızıntısız akış** -- ``gorevleri_getir``,
    ``izgara_belirtecle``/``belirtec_izgara``, ``gorev_dizisi``.
 """
@@ -51,7 +51,7 @@ import numpy as np
 from matematik.fitrat import cift_uyusmasi, fazla_sayma, tevafuk_olcusu
 from ogrenme.grassmann import asal_acilar, dik_taban, grassmann_mesafesi
 from ogrenme.rkhs import RKHS, gauss_cekirdegi, medyan_genislik, psd_mi
-from matematik.geometri import Metrik, hazir_metrik
+from matematik.geometri import Metrik, metrik
 from matematik.geometri import Morfizm, izometri_mi, jakobi
 
 
@@ -421,7 +421,7 @@ class IzafiMevki:
         return (int(self.merkez),) + tuple(int(k) for k in self.komsu)
 
 
-def izafi_oteleme(nx: int = 0, ny: int = 0, dx: int = 0, dy: int = 0,
+def otele(nx: int = 0, ny: int = 0, dx: int = 0, dy: int = 0,
                   ne: str = "operator", n: int = 0, adim: int = 1,
                   yon: Tuple[int, int] = (0, 0), g=None, k=None,
                   dolgu: int = -1, metin: str = ""):
@@ -464,9 +464,9 @@ def izafi_oteleme(nx: int = 0, ny: int = 0, dx: int = 0, dy: int = 0,
 
     if ne == "operator":
         Tx = np.linalg.matrix_power(
-            izafi_oteleme(n=nx, adim=+1, ne="üreteç"), int(dx) % int(nx))
+            otele(n=nx, adim=+1, ne="üreteç"), int(dx) % int(nx))
         Ty = np.linalg.matrix_power(
-            izafi_oteleme(n=ny, adim=+1, ne="üreteç"), int(dy) % int(ny))
+            otele(n=ny, adim=+1, ne="üreteç"), int(dy) % int(ny))
         return np.kron(Tx, Ty)
 
     if ne == "ızgara":
@@ -539,7 +539,7 @@ class IzafiMevki2D:
 
 def tiktoken_2d_kodla(metin: str, k=None):
     """Metni ``o200k_base`` ile kodla -- kaynağı daima raporlanır."""
-    r = izafi_oteleme(ne="metin", metin=str(metin), k=k)
+    r = otele(ne="metin", metin=str(metin), k=k)
     import numpy as _np
     return _np.asarray(r.get("belirtec", r.get("kod", [])), dtype=float)
 
@@ -1174,7 +1174,7 @@ def _pencere_ortalamasi(A: np.ndarray, k: int) -> np.ndarray:
     return out / (k * k)
 
 
-def musahede_et(izgara: np.ndarray) -> Mesud:
+def bak(izgara: np.ndarray) -> Mesud:
     """Bir ızgarayı 15 kanallı tabakalı müşahedeye çevir.
 
     Hiçbir yerde öğrenilen ağırlık yoktur: bunlar **fıtrî** kanallardır,
@@ -1366,7 +1366,7 @@ QTT_KADEME: int = 12
 QTT_BAG: int = 8
 
 
-def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
+def kalip(ciftler=None, girdi=None, ne: str = "tahmin",
                    ad: str = "", g=None, m=None, gorevler=None,
                    azami: int = 400, azami_hucre: int = 1600,
                    eksen: int = 0, azami_kenar: int = 30):
@@ -1437,13 +1437,13 @@ def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
         return None
 
     if ne == "şekil":
-        sa = cikti_ne_kadar(ciftler, eksen=0, ne="kesir")
-        su = cikti_ne_kadar(ciftler, eksen=1, ne="kesir")
+        sa = kalip(ciftler, eksen=0, ne="kesir")
+        su = kalip(ciftler, eksen=1, ne="kesir")
         if sa is None or su is None:
             return None
         return SekilKaidesi(sa, su)
 
-    def kaide(k: str, gg, mm):
+    def cetvel(k: str, gg, mm):
         gg = np.asarray(gg)
         if k == "aynı":
             return (gg.shape[0], gg.shape[1])
@@ -1500,14 +1500,14 @@ def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
             return tuple(int(x) for x in k[6:-1].split(", "))
         raise ValueError("boyut kaidesi bilinmiyor: %r" % (k,))
 
-    if ne == "kaide":
-        return kaide(ad, g, m)
+    if ne == "cetvel":
+        return cetvel(ad, g, m)
 
     if ne == "bul":
         if not ciftler:
             return None
-        # 1) kesirli kaide -- genelleyen olan odur
-        k = cikti_ne_kadar(ciftler, ne="şekil")
+        # 1) kesirli cetvel -- genelleyen olan odur
+        k = kalip(ciftler, ne="şekil")
         if k is not None:
             hepsi = all(k.kestir(a, azami_kenar)
                         == (int(b.shape[0]), int(b.shape[1]))
@@ -1515,11 +1515,11 @@ def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
             if hepsi:
                 return k
         # 2) cetvel kaideleri
-        mesudlar = [musahede_et(a) for a, _ in ciftler]
+        mesudlar = [bak(a) for a, _ in ciftler]
         for k2 in KAIDE_ADLARI:
             tamam = True
             for (a, b), mm in zip(ciftler, mesudlar):
-                t_ = kaide(k2, a, mm)
+                t_ = cetvel(k2, a, mm)
                 if t_ is None or t_ != (b.shape[0], b.shape[1]):
                     tamam = False
                     break
@@ -1532,20 +1532,20 @@ def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
         return None
 
     if ne == "tahmin":
-        k = cikti_ne_kadar(ciftler, ne="bul")
+        k = kalip(ciftler, ne="bul")
         if k is None:
             return None, "sükût"
         gg = np.asarray(girdi)
         if isinstance(k, SekilKaidesi):
             t_ = k.kestir(gg, azami_kenar)
             return (t_, "kesir:%s" % k.ad) if t_ is not None else (None, "sükût")
-        return kaide(k, gg, musahede_et(gg)), k
+        return cetvel(k, gg, bak(gg)), k
 
     if ne == "kapsam":
         kapsanan = dogru = toplam = 0
         kip_sayaci: Dict[str, int] = {}
         for gv in gorevler:
-            k = cikti_ne_kadar(gv.egitim, ne="bul")
+            k = kalip(gv.egitim, ne="bul")
             for a, b in gv.sinama:
                 toplam += 1
                 if k is None:
@@ -1553,7 +1553,7 @@ def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
                 if isinstance(k, SekilKaidesi):
                     tahmin, kad = k.kestir(a, azami_kenar), "kesir:" + k.ad
                 else:
-                    tahmin, kad = kaide(k, a, musahede_et(a)), k
+                    tahmin, kad = cetvel(k, a, bak(a)), k
                 if tahmin is None:
                     continue
                 kapsanan += 1
@@ -1581,7 +1581,7 @@ def cikti_ne_kadar(ciftler=None, girdi=None, ne: str = "tahmin",
             continue
         deneme += 1
         gi, co = sin[0]
-        t, ad = cikti_ne_kadar(egt, gi)
+        t, ad = kalip(egt, gi)
         kaide_say[ad] = kaide_say.get(ad, 0) + 1
         if t is None:
             sukut += 1
@@ -1822,7 +1822,7 @@ def bellek_cetveli(V: np.ndarray, chi: Sequence[int] = (2, 4, 8, 16, 32)
 #  nefs/kopru.py
 # ════════════════════════════════════════════════════════════════════
 
-def belirtecten_aciya(sozluk: int = 16, kubit: int = 4,
+def kopru(sozluk: int = 16, kubit: int = 4,
                       ne: str = "ölç"):
     """BELİRTEÇTEN AÇIYA GEÇİŞ SAĞLAM MI -- tek terkip (kütük H225).
 
@@ -1875,8 +1875,8 @@ def belirtecten_aciya(sozluk: int = 16, kubit: int = 4,
     # --- 2) İZOMETRİ: mesafe korunuyor mu?
     # ``token_uzaylari.morfizm`` ile ölçülür; hedef metrik birimdir.
     m = Morfizm(1, kubit, phi, ad="belirteç→açı")
-    g = hazir_metrik("düz", n=1)                    # kaynak: sözlük ekseni
-    h = hazir_metrik("düz", n=kubit)                # hedef: açı uzayı
+    g = metrik("düz", n=1)                    # kaynak: sözlük ekseni
+    h = metrik("düz", n=kubit)                # hedef: açı uzayı
     noktalar = [[float(x)] for x in np.linspace(0.3, sozluk - 0.7, 24)]
     izo = izometri_mi(m, g, h, noktalar, tol=1e-6)
 
@@ -1945,7 +1945,7 @@ class Bolutleme:
         return len(self.sahitler)
 
 
-def sahitleri_ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
+def ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
                    ne: str = "bölütle", v=None, kopma=None,
                    bas: int = 0, son: int = 0):
     """DUYU AKIŞINI ŞAHİTLERE AYIRMAK -- **tek terkip** (kütük H225).
@@ -2000,11 +2000,11 @@ def sahitleri_ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
     n = len(Z)
     if n < 2 * asgari_uzunluk:
         return Bolutleme(sahitler=[], esik=float("nan"),
-                         kopmalar=sahitleri_ayir(Z, ne="kopma"), yeterli=False,
+                         kopmalar=ayir(Z, ne="kopma"), yeterli=False,
                          sebep="akış iki şahide bölünemeyecek kadar kısa")
 
-    kopma = sahitleri_ayir(Z, ne="kopma")
-    esik = sahitleri_ayir(v=kopma, kat=kat, ne="eşik")
+    kopma = ayir(Z, ne="kopma")
+    esik = ayir(v=kopma, kat=kat, ne="eşik")
     aday = [i + 1 for i, v in enumerate(kopma) if v > esik]
 
     # İKİ MERTEBELİ AYIRAÇ. Bir bulmaca akışında iki tür kopma vardır:
@@ -2032,7 +2032,7 @@ def sahitleri_ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
 
     sahitler: List[Sahit] = []
     for no, (b, s) in enumerate(zip(sinirlar[:-1], sinirlar[1:])):
-        kesim = sahitleri_ayir(kopma=kopma, bas=b, son=s, ne="iç_kesim")
+        kesim = ayir(kopma=kopma, bas=b, son=s, ne="iç_kesim")
         sahitler.append(Sahit(no=no, bas=b, kesim=kesim, son=s))
     return Bolutleme(sahitler=sahitler, esik=esik, kopmalar=kopma,
                      yeterli=len(sahitler) >= 2,
@@ -2069,12 +2069,12 @@ def _cerceve(S: np.ndarray, sahit: Sahit
     return G, C
 
 
-def kaideyi_coz(S=None, sahit=None, ne: str = "küllî", sahitler=None,
+def kaide(S=None, sahit=None, ne: str = "küllî", sahitler=None,
                 A=None):
     """ŞAHİTLERDEN KÜLLÎ KAİDEYİ ÇÖZMEK -- **tek terkip** (kütük H225).
 
-    Küme: ``capraz_kovaryans`` + ``_polar`` + ``kaideyi_coz(ne="tek")`` +
-    ``kaideyi_coz(ne="küllî")``. Dördü tek formülün halkalarıydı::
+    Küme: ``capraz_kovaryans`` + ``_polar`` + ``kaide(ne="tek")`` +
+    ``kaide(ne="küllî")``. Dördü tek formülün halkalarıydı::
 
         A_k = Ç_kᵀ G_k                (şahidin ham şehadeti)
         polar(A) = U Vᵀ               (en yakın dik dizey)
@@ -2110,7 +2110,7 @@ def kaideyi_coz(S=None, sahit=None, ne: str = "küllî", sahitler=None,
         G, _ = _cerceve(S, sahit)
         if len(G) == 0:
             return np.eye(S.shape[1])
-        return polar(kaideyi_coz(S, sahit, ne="kovaryans"))
+        return polar(kaide(S, sahit, ne="kovaryans"))
 
     if ne != "küllî":
         raise ValueError("kaide kipi bilinmiyor: %r" % (ne,))
@@ -2158,8 +2158,8 @@ def _tolerans(S: np.ndarray, sahitler: Sequence[Sahit],
     """
     if not sahitler:
         return float("inf")
-    R_hep = kaideyi_coz(
-        sahitler=[kaideyi_coz(S, s, ne="kovaryans") for s in sahitler],
+    R_hep = kaide(
+        sahitler=[kaide(S, s, ne="kovaryans") for s in sahitler],
         ne="küllî")
     R_bos = _bos_kaide(S.shape[1], tohum=len(sahitler) * 1000 + S.shape[1])
     kendi = [float(np.mean(a)) for a in
@@ -2197,12 +2197,12 @@ def delil_dizileri(S: np.ndarray, sahitler: Sequence[Sahit],
     """
     if tol is None:
         tol = _tolerans(S, sahitler, kaideler)
-    caprazlar = [kaideyi_coz(S, s, ne="kovaryans") for s in sahitler]
+    caprazlar = [kaide(S, s, ne="kovaryans") for s in sahitler]
     deliller: List[np.ndarray] = []
     for k in range(len(sahitler)):
         satir = []
         for i in range(len(sahitler)):
-            R = kaideyi_coz(ne="polar", A=caprazlar[k] + caprazlar[i])
+            R = kaide(ne="polar", A=caprazlar[k] + caprazlar[i])
             a = artiklar(S, sahitler[i], R)
             satir.append(float(np.mean(a) <= tol) if a.size else 0.0)
         deliller.append(np.array(satir))
@@ -2239,7 +2239,7 @@ def nakz_bul(S: np.ndarray, sahitler: Sequence[Sahit],
                 "kalan": list(range(m)), "sebep": "en az iki şahit lazım"}
     if tol is None:
         tol = _tolerans(S, sahitler, kaideler)
-    caprazlar = [kaideyi_coz(S, s, ne="kovaryans") for s in sahitler]
+    caprazlar = [kaide(S, s, ne="kovaryans") for s in sahitler]
     kalan = list(range(m))
     nakz: List[int] = []
     artik = [float("nan")] * m
@@ -2247,7 +2247,7 @@ def nakz_bul(S: np.ndarray, sahitler: Sequence[Sahit],
         tur: List[Tuple[float, int]] = []
         for j in kalan:
             digerleri = [caprazlar[k] for k in kalan if k != j]
-            R_eksik = kaideyi_coz(sahitler=digerleri, ne="küllî") if digerleri else caprazlar[j]
+            R_eksik = kaide(sahitler=digerleri, ne="küllî") if digerleri else caprazlar[j]
             a = artiklar(S, sahitler[j], R_eksik)
             ort = float(np.mean(a)) if a.size else float("inf")
             tur.append((ort, j))
@@ -2257,7 +2257,7 @@ def nakz_bul(S: np.ndarray, sahitler: Sequence[Sahit],
             break
         nakz.append(j)
         kalan.remove(j)
-    R_kulli = kaideyi_coz(sahitler=[caprazlar[k] for k in kalan] or caprazlar, ne="küllî")
+    R_kulli = kaide(sahitler=[caprazlar[k] for k in kalan] or caprazlar, ne="küllî")
     return {"nakz": sorted(nakz), "artık": artik, "tolerans": float(tol),
             "kaide": R_kulli, "kalan": kalan, "sebep": ""}
 
@@ -2280,14 +2280,14 @@ def _akis_kur(m: int, ds: int, t: int, bozuk: Optional[int] = None,
 
 
 def _bir_deneme(baslik: str, S: np.ndarray) -> List[str]:
-    b = sahitleri_ayir(S)
+    b = ayir(S)
     s = ["%s" % baslik,
          "  bulunan şahit: %d   eşik=%.3f   yeterli=%s"
          % (len(b), b.esik, b.yeterli)]
     for x in b.sahitler:
         s.append("    şahit %d: [%2d,%2d) kesim=%2d" % (x.no, x.bas, x.son, x.kesim))
     if b.yeterli:
-        K = [kaideyi_coz(S, x, ne="tek") for x in b.sahitler]
+        K = [kaide(S, x, ne="tek") for x in b.sahitler]
         n = nakz_bul(S, b.sahitler, K)
         s.append("  tolerans=%.4f   nakz=%s" % (n["tolerans"], n["nakz"]))
         s.append("  dışarıda-bırak artıkları: %s"
@@ -2552,7 +2552,7 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
 #  nefs/operad.py
 # ════════════════════════════════════════════════════════════════════
 
-def terkip_iyi_tipli_mi() -> Dict[str, object]:
+def terkip_saglam_mi() -> Dict[str, object]:
     """41 melekenin terkibi **iyi tipli** mi -- makine denetimi.
 
     Operadın şartı, terkibin tanımlı olmasıdır. Burada bunun somut
@@ -2579,7 +2579,7 @@ def terkip_iyi_tipli_mi() -> Dict[str, object]:
     }
 
 
-def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
+def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
                       h1: float = 0.0, olcek: float = 0.9,
                       n_gorev: int = 40, tohum: int = 0, chi: int = 8,
                       kapi: bool = True):
@@ -2632,10 +2632,10 @@ def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
         return
 
     if ne == "yama":
-        return [cikti_ne_kadar([(a, b)], ne="şekil") for a, b in gorev.egitim]
+        return [kalip([(a, b)], ne="şekil") for a, b in gorev.egitim]
 
     if ne == "tıkanıklık":
-        K = [cikti_ne_kadar([(a, b)], ne="şekil") for a, b in gorev.egitim]
+        K = [kalip([(a, b)], ne="şekil") for a, b in gorev.egitim]
         n = len(K)
         if n == 0:
             return {"yama": 0, "H1": 0, "kurulabilir": False}
@@ -2679,7 +2679,7 @@ def ortu_kapaniyor_mu(gorev=None, ne: str = "tıkanıklık", q=None,
     gorevler = gorevleri_getir("training")[:int(n_gorev)]
     H1, S = [], []
     for gv in gorevler:
-        c = ortu_kapaniyor_mu(gv)
+        c = ortu(gv)
         if c["yama"] < 2:
             continue
         X, Y = iki_olcegin_acisi(gv, ne="öznitelik")
@@ -2811,11 +2811,11 @@ def rapor() -> str:                                     # pragma: no cover
         s.append("     taşımıyor mu?")
         nx, ny = 5, 4
         for ad, dx, dy in YON_ADLARI[1:5]:
-            D = izafi_oteleme(nx=nx, ny=ny, dx=dx, dy=dy)
+            D = otele(nx=nx, ny=ny, dx=dx, dy=dy)
             dik = float(np.linalg.norm(D.T @ D - np.eye(nx * ny)))
             s.append("     %-10s Δ=(%+d,%+d)  ‖DᵀD−I‖ = %.2e" % (ad, dx, dy, dik))
-        Dr = izafi_oteleme(nx=nx, ny=ny, dx=1, dy=0)
-        Dl = izafi_oteleme(nx=nx, ny=ny, dx=-1, dy=0)
+        Dr = otele(nx=nx, ny=ny, dx=1, dy=0)
+        Dl = otele(nx=nx, ny=ny, dx=-1, dy=0)
         s.append("     sağ ∘ sol = I : %.2e"
                  % float(np.linalg.norm(Dr @ Dl - np.eye(nx * ny))))
 
@@ -2825,8 +2825,8 @@ def rapor() -> str:                                     # pragma: no cover
         A[1, 1] = 3; A[1, 2] = 5
         B = np.zeros((6, 6), int)
         B[4, 3] = 3; B[4, 4] = 5
-        ra = izafi_oteleme(ne="ızgara", g=A)["izafi"]
-        rb = izafi_oteleme(ne="ızgara", g=B)["izafi"]
+        ra = otele(ne="ızgara", g=A)["izafi"]
+        rb = otele(ne="ızgara", g=B)["izafi"]
         ka = [x.kod() for x in ra if x.merkez == 3][0]
         kb = [x.kod() for x in rb if x.merkez == 3][0]
         s.append("     sol üstteki örüntü : %s" % (ka,))
@@ -2836,8 +2836,8 @@ def rapor() -> str:                                     # pragma: no cover
 
         s.append("")
         s.append("  3) Izgara ve metin AYNI akışta")
-        g = izafi_oteleme(ne="ızgara", g=np.array([[1, 2], [3, 4]]))
-        m = izafi_oteleme(ne="metin", metin="kırmızı kare sağa kayar")
+        g = otele(ne="ızgara", g=np.array([[1, 2], [3, 4]]))
+        m = otele(ne="metin", metin="kırmızı kare sağa kayar")
         s.append("     ızgara dizisi  : %s" % g["dizi"])
         s.append("     metin dizisi   : %d belirteç (%s)"
                  % (len(m["dizi"]), m["kodlayıcı"]))
@@ -2859,7 +2859,7 @@ def rapor() -> str:                                     # pragma: no cover
             except Exception as e:
                 s.append("  %s yüklenemedi: %s" % (kume, e))
                 continue
-            d = cikti_ne_kadar(ne="kapsam", gorevler=g)
+            d = kalip(ne="kapsam", gorevler=g)
             s.append("  %-10s  görev=%4d  sınama çifti=%4d" % (kume, len(g),
                                                                d["sınama_çifti"]))
             s.append("    kapsam=%.3f   kapsayınca isabet=%.3f   (doğru %d)"
@@ -2925,7 +2925,7 @@ def rapor() -> str:                                     # pragma: no cover
                  % ("sözlük", "kübit", "tersinir", "çarpışma",
                     "izometri", "mesafe kor."))
         for sozluk, kubit in ((4, 2), (8, 3), (16, 4), (16, 3), (32, 4)):
-            r = belirtecten_aciya(sozluk, kubit)
+            r = kopru(sozluk, kubit)
             s.append("  %-8d %-10d %-10s %-12d %-14s %+.4f"
                      % (sozluk, kubit, r["tersinir"], r["çarpışma"],
                         r["izometri"], r["mesafe_korelasyonu"]))
@@ -3093,7 +3093,7 @@ def rapor() -> str:                                     # pragma: no cover
              "Burada kurulan: ∞-operad terkibinin tipi ve ÇEch tıkanıklığı.",
              ""]
 
-        t = terkip_iyi_tipli_mi()
+        t = terkip_saglam_mi()
         s += ["TERKİP (∞-operad):",
               "  akış adımı        : %d" % t["adım"],
               "  zincir tam mı     : %s" % t["zincir_tam"],
@@ -3104,7 +3104,7 @@ def rapor() -> str:                                     # pragma: no cover
         say = {"kurulabilir": 0, "tıkanık": 0, "kâidesiz": 0}
         ucsuz = 0
         for gv in gorevler:
-            c = ortu_kapaniyor_mu(gv)
+            c = ortu(gv)
             if c["yama"] < 2:
                 continue
             if c["kâidesiz_yama"]:
@@ -3123,7 +3123,7 @@ def rapor() -> str:                                     # pragma: no cover
               % ucsuz,
               ""]
 
-        b = ortu_kapaniyor_mu(ne="bağ", n_gorev=n_gorev, tohum=tohum, chi=chi)
+        b = ortu(ne="bağ", n_gorev=n_gorev, tohum=tohum, chi=chi)
         s.append("TIKANIKLIK → SÜKÛT (asıl ölçüm):")
         if not b.get("yeterli_mi"):
             s.append("  yeterli çeşitlilik yok (%d görev)" % b.get("görev", 0))

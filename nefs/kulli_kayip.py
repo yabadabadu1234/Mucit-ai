@@ -18,25 +18,25 @@ meşrudur.
 
 **Çipin beş bölümü.**
 
-1. **Ölçü funktörü ve mertebe köprüsü** -- ``mertebeye_cevir``:
+1. **Ölçü funktörü ve mertebe köprüsü** -- ``mertebe``:
    ``[alt, üst]`` ve ``buyugu_iyi`` cihetiyle ``[0,1]``e dönüşüm
    (1 = yakîn, 0 = vehim), morfizm eşlemesi ve funktör kaidelerinin
    **sayısal sınaması**.
 2. **44 meleke hatası ve sözleşme muhasebesi** -- ``olcumlu_idrak``,
-   ``bolge_degeri``, ``taahhude_dokundu_mu``. Öğrenilebilir hata kayba
+   ``bolge_degeri``, ``sozunde_mi``. Öğrenilebilir hata kayba
    girer; **yapısal kusur (MPO kesmesi) girmez**, ayrı raporlanır
    (H154).
 3. **Altı kademeli zihinsel hiyerarşi** -- ``Kademeler``: İdrak →
    Tasavvur → Muhakeme → İspat → Tasdik → Beyan, ve **Bırak-Birini
    (LOO)** notlandırması (Doğru 1.00 / Sükût 0.25 / Yanlış 0.00).
    Faaliyet notu yasaktır (H45): "çalıştım/konuştum"a puan verilmez.
-4. **Müdrike iç muhakemesi** -- ``icinden_gecir``: vazife nevi →
+4. **Müdrike iç muhakemesi** -- ``suz``: vazife nevi →
    tesadüf mü → örtü kapanıyor mu → kâide/dalga → yakîn → beyan yahut
    **sebebi yazılı** sükût.
-5. **Dinamik LogSumExp küllî toplayıcı** -- ``zayif_halkaya_gore_topla``:
+5. **Dinamik LogSumExp küllî toplayıcı** -- ``zayif_halka``:
    zayıf halka prensibi ve ``√n`` aktif uzuv hedefleyen dinamik ``β``.
 
-Ayrıca **tesir teşhisi** (``bu_meleke_dusse``): bir meleke düşünce
+Ayrıca **tesir teşhisi** (``eksilt``): bir meleke düşünce
 neticede ne değişir -- yapısal zaruret / tesirli / tesirsiz ayrımı.
 """
 from __future__ import annotations
@@ -122,7 +122,7 @@ UZAYLAR: Dict[str, OlcuUzayi] = {
 }
 
 
-def mertebeye_cevir(x=None, S=None, ne: str = "ileri", m: float = 0.0,
+def mertebe(x=None, S=None, ne: str = "ileri", m: float = 0.0,
                     f=None, T=None, tohum: int = 0, n: int = 64,
                     ad: str = "", ust=None):
     """HER ÖLÇÜYÜ AYNI MERDİVENE ÇEVİRMEK -- **tek terkip** (kütük H224).
@@ -196,7 +196,7 @@ def mertebeye_cevir(x=None, S=None, ne: str = "ileri", m: float = 0.0,
     m = rng.uniform(0.0, 1.0, size=n)
 
     # 1) birim kaidesi
-    birim = mertebeye_cevir(ne="morfizm", f=lambda x: x, S=S, T=S)
+    birim = mertebe(ne="morfizm", f=lambda x: x, S=S, T=S)
     hata_birim = float(np.max(np.abs([birim(v) - v for v in m])))
 
     # 2) terkip kaidesi -- iki monoton eşleme
@@ -206,9 +206,9 @@ def mertebeye_cevir(x=None, S=None, ne: str = "ileri", m: float = 0.0,
     def g(x: float) -> float:            # T → U, artan
         return 1.0 + 8.0 * x / 3.0
 
-    sol = mertebeye_cevir(ne="morfizm", f=lambda x: g(f(x)), S=S, T=U)
-    sag_f = mertebeye_cevir(ne="morfizm", f=f, S=S, T=T)
-    sag_g = mertebeye_cevir(ne="morfizm", f=g, S=T, T=U)
+    sol = mertebe(ne="morfizm", f=lambda x: g(f(x)), S=S, T=U)
+    sag_f = mertebe(ne="morfizm", f=f, S=S, T=T)
+    sag_g = mertebe(ne="morfizm", f=g, S=T, T=U)
     hata_terkip = float(np.max(np.abs(
         [sol(v) - sag_g(sag_f(v)) for v in m])))
 
@@ -230,11 +230,11 @@ def mertebeye_cevir(x=None, S=None, ne: str = "ileri", m: float = 0.0,
     # bağlıdır. Sınanan da odur ve burada körlük hakikîdir: cihet ters
     # çevrilirse sıra bozulur ve kırmızı yanar.
     x = np.sort(rng.uniform(S.alt, S.ust, size=n))
-    mert = np.asarray([mertebeye_cevir(v, S) for v in x])
+    mert = np.asarray([mertebe(v, S) for v in x])
     sira_korunuyor = bool(np.all(np.diff(mert) >= -1e-12))
 
     S_ters = OlcuUzayi("S_ters", S.alt, S.ust, not S.buyugu_iyi)
-    mert_ters = np.asarray([mertebeye_cevir(v, S_ters) for v in x])
+    mert_ters = np.asarray([mertebe(v, S_ters) for v in x])
     sira_bozuluyor = bool(np.all(np.diff(mert_ters) <= 1e-12)
                           and np.ptp(mert_ters) > 1e-6)
 
@@ -261,7 +261,7 @@ class Olcum:
     agirlik: float = 1.0
 
     def mertebe(self) -> float:
-        return mertebeye_cevir(self.deger, self.uzay)
+        return mertebe(self.deger, self.uzay)
 
     def eksik(self) -> float:
         """Yakînden uzaklık: müşterek uzaydaki **kayıp** payı."""
@@ -277,7 +277,7 @@ DINAMIK_BETA: bool = False
 HEDEF_USSU: float = 0.5
 
 
-def zayif_halkaya_gore_topla(x=None, beta=None, ne: str = "asgarî",
+def zayif_halka(x=None, beta=None, ne: str = "asgarî",
                              olcumler=None, hedef_us=None):
     """ZAYIF HALKAYA GÖRE TOPLAMAK -- **tek terkip** (kütük H224).
 
@@ -350,13 +350,13 @@ def zayif_halkaya_gore_topla(x=None, beta=None, ne: str = "asgarî",
         hedef = float(np.clip(hedef, 1.0 + 1e-9, n - 1e-9))
         lo, hi = float(alt), float(ust)
         # ``_katilan_uzuv`` ``β``da azalandır; ikili arama tektir.
-        if zayif_halkaya_gore_topla(e, lo, ne="katılan") <= hedef:
+        if zayif_halka(e, lo, ne="katılan") <= hedef:
             return lo
-        if zayif_halkaya_gore_topla(e, hi, ne="katılan") >= hedef:
+        if zayif_halka(e, hi, ne="katılan") >= hedef:
             return hi
         for _ in range(48):
             orta = 0.5 * (lo + hi)
-            if zayif_halkaya_gore_topla(e, orta, ne="katılan") > hedef:
+            if zayif_halka(e, orta, ne="katılan") > hedef:
                 lo = orta
             else:
                 hi = orta
@@ -375,7 +375,7 @@ def zayif_halkaya_gore_topla(x=None, beta=None, ne: str = "asgarî",
     # dağılımından tayin edilir; sabit ``β`` verilirse eski davranış
     # aynen durur ve kıyas edilebilir (H90).
     if beta is None:
-        beta = zayif_halkaya_gore_topla(eksikler, ne="beta") if DINAMIK_BETA else BETA
+        beta = zayif_halka(eksikler, ne="beta") if DINAMIK_BETA else BETA
     b = float(max(beta, 1e-6))
     try:
         from matematik.fitrat import logsumexp
@@ -387,7 +387,7 @@ def zayif_halkaya_gore_topla(x=None, beta=None, ne: str = "asgarî",
                         - np.log(n)) / b
     return {"kayıp": float(np.clip(yumusak, 0.0, 1.0)),
             "β": b,
-            "katılan_uzuv": zayif_halkaya_gore_topla(
+            "katılan_uzuv": zayif_halka(
                 np.asarray(eksikler, float), b, ne="katılan"),
             "azamî_eksik": float(max(eksikler)),
             "ortalama_eksik": float(np.mean(eksikler)),
@@ -476,7 +476,7 @@ SOZLESME: Dict[int, Tuple[Tuple[str, ...], str]] = {
 }
 
 
-def taahhude_dokundu_mu(no: int = 0, n_satir: int = 4, chi: int = 32,
+def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
                         tohum: int = 0, esik: float = ESIK,
                         ne: str = "dokundu") -> object:
     """TAAHHÜT EDİLEN BÖLGEYE Mİ DOKUNDU -- **tek terkip** (kütük H224).
@@ -524,7 +524,7 @@ def taahhude_dokundu_mu(no: int = 0, n_satir: int = 4, chi: int = 32,
     davranışını değiştirmez -- yalnız ölçüm burada yapılır.
     """
     if ne == "hepsi":
-        return [taahhude_dokundu_mu(m.no, n_satir, chi, tohum, esik)
+        return [sozunde_mi(m.no, n_satir, chi, tohum, esik)
                 for m in qmelekeler()]
     if ne != "dokundu":
         raise ValueError("sözleşme ölçüsünün kipi bilinmiyor: %r" % (ne,))
@@ -787,14 +787,14 @@ class Kademeler:
         I.nesne_sayisi = self._dene("idrak.cozucu", _nesne) or []
 
         def _mubser():
-            from .musahede import devinim_olc, musahede_et
-            return devinim_olc(musahede_et(ciftler[0][0]),
-                               musahede_et(ciftler[0][1]))
+            from .musahede import devinim_olc, bak
+            return devinim_olc(bak(ciftler[0][0]),
+                               bak(ciftler[0][1]))
         self._dene("nefs.mubser", _mubser)
 
         def _boyut():
-            from .musahede import cikti_ne_kadar
-            b, sebep = cikti_ne_kadar(ciftler, girdiler[0] if girdiler
+            from .musahede import kalip
+            b, sebep = kalip(ciftler, girdiler[0] if girdiler
                                     else ciftler[0][0])
             return (None if b is None else tuple(int(x) for x in b)), sebep
         r = self._dene("nefs.boyut", _boyut)
@@ -802,8 +802,8 @@ class Kademeler:
             I.olcu, I.olcu_sebebi = r
 
         def _sekil():
-            from .musahede import cikti_ne_kadar
-            k = cikti_ne_kadar(ciftler, ne="şekil")
+            from .musahede import kalip
+            k = kalip(ciftler, ne="şekil")
             return None if k is None else str(k)
         I.sekil_kaidesi = self._dene("idrak.sekil", _sekil)
 
@@ -985,10 +985,10 @@ class Kademeler:
         def _mantik():
             # Hüküm cebri: "kaide var VE ispatı var" bir çıkarımdır ve
             # `mizan` onu **totoloji olarak** tasdik etmelidir.
-            from matematik.mizan import (deg, hilbert_aksiyomu,
-                                         tabloda_ne_yaziyor)
-            return bool(tabloda_ne_yaziyor(
-                hilbert_aksiyomu(deg("K"), deg("İ"), no=1), ne="totoloji"))
+            from matematik.mizan import (deg, aksiyom,
+                                         hukum)
+            return bool(hukum(
+                aksiyom(deg("K"), deg("İ"), no=1), ne="totoloji"))
         self._dene("mizan.cikarim", _mantik)
 
         # **ÖLÇÜ DEĞİŞTİ (kütük H160).** Evvelce ``1 if S.kaideler``
@@ -1236,7 +1236,7 @@ VAZIFE_NEVILERI: Tuple[str, ...] = ("bulmaca", "kelâm", "boş")
 YAKIN_ESIGI: float = 0.5
 
 
-def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
+def suz(gorev, yakin_esigi: float = YAKIN_ESIGI,
                   derinlik: int = 2, dalga: bool = False, nefs=None,
                   ne: str = "çevrim", ciftler=None, chi: int = 8,
                   tohum: int = 0) -> Dict[str, object]:
@@ -1328,7 +1328,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     if ne == "dalga":
         try:
             from .musahede import iki_olcegin_acisi
-            from .musahede import ortu_kapaniyor_mu
+            from .musahede import ortu
             from .melekeler import QNefs
             from .zihin_durumu import MAKAM_ADLARI, QAyar
 
@@ -1336,7 +1336,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
             if len(X) == 0:
                 return None
             E = np.concatenate([X, Y], axis=1)
-            c = ortu_kapaniyor_mu(gorev)
+            c = ortu(gorev)
             q = (nefs or QNefs(tohum, QAyar(bag=int(chi), tohum=tohum))
                  ).idrak_et(E, tikaniklik=float(c["H1"]))
             _, ks = q._alan["sukut"]
@@ -1353,12 +1353,12 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     if ne != "çevrim":
         raise ValueError("müdrike kipi bilinmiyor: %r" % (ne,))
 
-    from .musahede import ortu_kapaniyor_mu
+    from .musahede import ortu
 
     dusunce: List[str] = []
 
     # --- 1. VAZİFE NEVİ
-    v = icinden_gecir(gorev, ne="vazife")
+    v = suz(gorev, ne="vazife")
     dusunce.append("Benden ne isteniyor? %s → bu bir %s."
                    % (v["gerekçe"], v["nev"]))
     if v["nev"] != "bulmaca":
@@ -1369,7 +1369,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     ciftler = list(gorev.egitim)
 
     # --- 2. TESADÜF MÜ?
-    t = icinden_gecir(gorev, ne="tesadüf", ciftler=ciftler)
+    t = suz(gorev, ne="tesadüf", ciftler=ciftler)
     dusunce.append("Renkler rastgele dizilmiş gibi mi? renk yapısı %.3f, "
                    "şekil bağı %.3f → yapı %.3f."
                    % (t["renk_yapısı"], t["şekil_bağı"], t["yapı"]))
@@ -1399,7 +1399,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     # kaide bulmak, örtünün kapandığının kendisidir** -- küllî kesit
     # fiilen elde edilmiştir. O hâlde tıkanıklık bir veto değil, bir
     # **ihtiyat işareti**dir: yakîni düşürür, sözü kesmez.
-    c = ortu_kapaniyor_mu(gorev)
+    c = ortu(gorev)
     dusunce.append("Bütün örnekler aynı kaideye mi bakıyor? "
                    "yama %d, uyuşmayan çift %d (H¹=%d)."
                    % (c["yama"], c.get("uyuşmayan_çift", 0), c["H1"]))
@@ -1579,7 +1579,7 @@ def icinden_gecir(gorev, yakin_esigi: float = YAKIN_ESIGI,
     # (𝒪₃₂ Şek-Zan-Yakîn, 𝒪₃₃ Muhakeme). Akış susmaya meyilliyse yakîn
     # düşer. Bu, dalganın cevaba FİİLEN girdiği yerdir; evvelce hiç
     # girmiyordu ve o bir paralel hat kusuruydu (H92).
-    dh = (icinden_gecir(gorev, ne="dalga", nefs=nefs)
+    dh = (suz(gorev, ne="dalga", nefs=nefs)
           if dalga else None)
     if dh is not None:
         yakin *= float(np.clip(1.0 - 0.5 * dh["sukut"], 0.3, 1.0))
@@ -1629,7 +1629,7 @@ class Iz:
 
 
 def _parmak_izi(d: Durum, alan: str) -> Any:
-    """Bir alanın karşılaştırılabilir özeti (şerhi ``bu_meleke_dusse``de)."""
+    """Bir alanın karşılaştırılabilir özeti (şerhi ``eksilt``de)."""
     v = getattr(d, alan, None)
     if v is None:
         return None
@@ -1653,7 +1653,7 @@ _IZLENEN = ("X", "Z_hayal", "H_hayal", "Z_muhayyile", "sira", "U_k", "D",
             "tezat_kutbu", "w_kesit")
 
 
-def bu_meleke_dusse(E=None, tohum: int = 0, sira: Sequence[int] = AKIS,
+def eksilt(E=None, tohum: int = 0, sira: Sequence[int] = AKIS,
                     ne: str = "tesir", d: "Durum" = None,
                     sonuc: Sequence["Tesir"] = (), m: int = 4, t: int = 6,
                     d_in: int = 12, bozuk: Optional[int] = None):
@@ -1824,14 +1824,14 @@ def bolge_degeri(q, ad: str) -> Optional[float]:
             y = q.yereller()
             if not y:
                 return None
-            return zayif_halkaya_gore_topla(q.povm(y))
+            return zayif_halka(q.povm(y))
         if ad == "veri":
             y = [q.veri(i, j) for i in range(q.n_satir)
                  for j in range(q.ayar.satir_kubiti)][:VERI_ORNEK]
             if not y:
                 return None
-            return zayif_halkaya_gore_topla(q.povm(y))
-        return zayif_halkaya_gore_topla(q.alan_degeri(ad))
+            return zayif_halka(q.povm(y))
+        return zayif_halka(q.alan_degeri(ad))
     except Exception:                                    # noqa: BLE001
         return None
 
@@ -1853,7 +1853,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
     from ogrenme.optimize import gaye_kos
     from .melekeler import bec_faz_kilidi
     from .zihin_durumu import QYazmac
-    from .zirh import mantigi_tek_supurmede_isaretle
+    from .zirh import vicdan
 
     E = np.asarray(E, float)
     B = E.shape[0] if E.ndim == 3 else 1
@@ -1881,7 +1881,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
         S_once = _entropi() if sinif_olcumu else 0.0
         nefs.s[no].kosu(q, nefs.p)
         if nefs.sadakat:
-            mantigi_tek_supurmede_isaretle(q, nefs.p, ne="işaret")
+            vicdan(q, nefs.p, ne="işaret")
         if sinif_olcumu:
             fark = _entropi() - S_once
             # Aynı meleke sırada iki kere geçebilir; tesirleri toplanır.
@@ -1932,11 +1932,11 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
             okumalar[int(no)] = d if eski is None else {
                 k: min(v, eski.get(k, v)) for k, v in d.items()}
     if nefs.sadakat:
-        q.iz.kesme += mantigi_tek_supurmede_isaretle(q, ne="usul")
+        q.iz.kesme += vicdan(q, ne="usul")
     if nefs.gaye:
         q.iz.kesme += gaye_kos(q, nefs.p)
     if nefs.sadakat:
-        mantigi_tek_supurmede_isaretle(q, ne="intaç")
+        vicdan(q, ne="intaç")
     bec_faz_kilidi(q)
     q.iz.kesme_hakiki = float(max(0.0, 1.0 - q.y.sadakat()))
     q.y.normalize()
@@ -2055,7 +2055,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     for ad, _kac in q.ayar.kulli_alanlar:
         if ad in o and ad in UZAYLAR:
             hepsi.append(Olcum("alan.%s" % ad,
-                               zayif_halkaya_gore_topla(o[ad]), UZAYLAR[ad]))
+                               zayif_halka(o[ad]), UZAYLAR[ad]))
     # **Kapı başına** tutulan kesir (bkz. `kuantum/yazmac.py::sadakat`).
     hepsi.append(Olcum(
         "kesme", float(q.y.sadakat_kapi_basina(max(q.iz.kapi, 1))),
@@ -2109,12 +2109,12 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
                 continue
         hepsi += kademe_hepsi
     if kademe_olcumleri:
-        kt = zayif_halkaya_gore_topla(olcumler=list(kademe_olcumleri), ne="azamî")
+        kt = zayif_halka(olcumler=list(kademe_olcumleri), ne="azamî")
         _kademe_ozet = {"kademe_kayıp": kt["kayıp"],
                         "kademe_en_zayıf": kt["en_zayıf"],
                         "kademe_uzuv": kt["uzuv"]}
     elif kademe_hepsi:
-        kt = zayif_halkaya_gore_topla(olcumler=list(kademe_hepsi), ne="azamî")
+        kt = zayif_halka(olcumler=list(kademe_hepsi), ne="azamî")
         _kademe_ozet = {"kademe_kayıp": kt["kayıp"],
                         "kademe_en_zayıf": kt["en_zayıf"],
                         "kademe_uzuv": kt["uzuv"]}
@@ -2153,10 +2153,10 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
                      and o.kaynak != "kesme"]
     yapisal = [o for o in hepsi if o.kaynak.endswith(".kesme")
                or o.kaynak == "kesme"]
-    t = zayif_halkaya_gore_topla(olcumler=ogrenilebilir, ne="azamî")
+    t = zayif_halka(olcumler=ogrenilebilir, ne="azamî")
     t.update(_kademe_ozet)
     if yapisal:
-        yt = zayif_halkaya_gore_topla(olcumler=yapisal, ne="azamî")
+        yt = zayif_halka(olcumler=yapisal, ne="azamî")
         t["yapısal_kayıp"] = yt["kayıp"]
         t["yapısal_en_zayıf"] = yt["en_zayıf"]
         t["yapısal_uzuv"] = yt["uzuv"]
@@ -2164,6 +2164,221 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
                               if o.kaynak.startswith("𝒪")})
     return t
 
+
+
+# ====================================================================
+#  KÜME 8: ezber mi, öğrenme mi
+# ====================================================================
+
+def lan(x: np.ndarray, xs: np.ndarray, ys: np.ndarray, L: float) -> np.ndarray:
+    """Sol Kan genişletmesi: ``supᵢ [yᵢ − L|x−xᵢ|]``."""
+    return np.max(ys[None, :] - L * np.abs(x[:, None] - xs[None, :]), axis=1)
+
+
+def ran(x: np.ndarray, xs: np.ndarray, ys: np.ndarray, L: float) -> np.ndarray:
+    """Sağ Kan genişletmesi: ``infᵢ [yᵢ + L|x−xᵢ|]``."""
+    return np.min(ys[None, :] + L * np.abs(x[:, None] - xs[None, :]), axis=1)
+
+
+def kan_ozellikleri(
+    n: int = 12, L: float = 3.0, tohum: int = 0
+) -> Dict[str, object]:
+    """Üç iddia sınanır:
+
+    1. ``Lan f`` ve ``Ran f`` örnek noktalarında ``f`` ile aynıdır (birim eş).
+    2. İkisi de ``L``-Lipschitz'tir.
+    3. Her ``L``-Lipschitz genişleme ikisinin ARASINDADIR (evrensel hususiyet).
+    """
+    rng = np.random.default_rng(tohum)
+    xs = np.sort(rng.uniform(0, 1, n))
+    hedef = lambda t: np.sin(2 * np.pi * t)          # Lipschitz sabiti 2π
+    L = max(L, 2 * np.pi)
+    ys = hedef(xs)
+
+    izgara = np.linspace(0, 1, 1001)
+    a, b = lan(izgara, xs, ys, L), ran(izgara, xs, ys, L)
+
+    # 1. örnek noktalarda tam oturma
+    oturma = float(
+        max(np.max(np.abs(lan(xs, xs, ys, L) - ys)), np.max(np.abs(ran(xs, xs, ys, L) - ys)))
+    )
+    # 2. Lipschitz sabiti (ayrık)
+    h = izgara[1] - izgara[0]
+    lip = float(max(np.max(np.abs(np.diff(a))), np.max(np.abs(np.diff(b)))) / h)
+    # 3. arada olma: hedefin kendisi L-Lipschitz bir genişlemedir
+    g = hedef(izgara)
+    arada = bool(np.all(a <= g + 1e-9) and np.all(g <= b + 1e-9))
+    return {
+        "L": L,
+        "ornekte_tam_oturma_hatasi": oturma,
+        "olculen_lipschitz": lip,
+        "lipschitz_asilmadi": bool(lip <= L * (1 + 1e-6)),
+        "hedef_arada": arada,
+        "lan_ran_araligi_ortalama": float(np.mean(b - a)),
+    }
+
+
+def ezber_mi(xs=None, ys=None, t=None, ne: str = "kıyas",
+             olcek: float = 0.03, lam: float = 1e-8, n: int = 40,
+             gurultu: float = 0.25, tohum: int = 0):
+    """EZBER Mİ, ÖĞRENME Mİ -- **tek terkip** (kütük H227).
+
+    Küme: ``rbf_gram``, ``cekirdek_sirt``, ``ezber_kiyasi``,
+    ``sobolev_kiyasi``. Dördü tek suâlin parçalarıydı: **model
+    ezberliyor mu, yoksa genelliyor mu?** Ve cevabın tamamı tek
+    sayıdadır -- düzenlileme katsayısı ``λ``:
+
+        ``λ → 0``   eğitimde sıfır hata, sınamada patlama  → **EZBER**
+        ``λ`` büyük eğitimde daha kötü, sınamada daha iyi  → **ÖĞRENME**
+
+    Küllî kaybın bilmesi gereken şey tam olarak budur ve şimdiye kadar
+    bilmiyordu.
+
+    ==================  ==============================================
+    ``ne``              döndürdüğü
+    ==================  ==============================================
+    ``gram``            RBF Gram dizeyi ``exp(−‖x−z‖²/2σ²)``
+    ``uydur``           ``min_g Σ(g(xᵢ)−yᵢ)² + λ‖g‖²_H`` çözümü (fonksiyon)
+    ``kıyas``           ``λ=10⁻⁸`` ile ``λ=10⁻¹``: ezber ile öğrenme
+                        yan yana; koşul sayısı da raporlanır
+    ``sobolev``         değer+türev uydurmak türev hatasını düşürüyor mu
+    ==================  ==============================================
+
+    İki ihtiyat kaydı -- ikisi de ölçüm sırasında ortaya çıktı:
+
+    * **``λ = 0`` sayısal olarak ERİŞİLEBİLİR DEĞİLDİR.** Gram dizeyinin
+      koşul sayısı burada ~10⁸--10¹⁷. Bu yüzden "tam aradeğerleme"
+      yerine ``λ = 10⁻⁸`` alınır ve koşul sayısı **raporlanır** --
+      erişilemeyen bir hâl erişilmiş gibi sunulmaz.
+    * **Gürültü, gereken Lipschitz sabitini patlatır.** Kan
+      genişletmesinin veriye tam oturması için ``L``, VERİNİN Lipschitz
+      sabitinden küçük olmamalı; gürültülü veri hedefin ``2π``sini
+      fazlasıyla aşar (burada ~4,5·10³). Yâni "tam oturma" bedava
+      değildir: genişletme dikenleşir. Ezberin sebebi tam budur.
+    """
+    if ne == "gram":
+        d2 = (np.asarray(xs, float)[:, None] - np.asarray(ys, float)[None, :]) ** 2
+        return np.exp(-0.5 * d2 / (olcek * olcek))
+
+    if ne == "uydur":
+        xs_, ys_ = xs, ys
+        K = ezber_mi(xs_, xs_, olcek=olcek, ne="gram")
+        A = K + lam * np.eye(len(xs_))
+        alfa = np.linalg.solve(A, ys_)
+        return lambda t: ezber_mi(t, xs_, olcek=olcek, ne="gram") @ alfa
+
+    if ne == "kıyas":
+        rng = np.random.default_rng(tohum)
+        hedef = lambda t: np.sin(2 * np.pi * t)
+        xs = np.sort(rng.uniform(0, 1, n))
+        ys = hedef(xs) + gurultu * rng.normal(size=n)
+        xt = np.linspace(0.02, 0.98, 500)
+        yt = hedef(xt)
+
+        L_veri = float(np.max(np.abs(np.diff(ys) / np.diff(xs))))
+        kan_orta = 0.5 * (lan(xt, xs, ys, L_veri) + ran(xt, xs, ys, L_veri))
+        kan_egitim = 0.5 * (lan(xs, xs, ys, L_veri) + ran(xs, xs, ys, L_veri))
+
+        g0 = ezber_mi(xs, ys, olcek=olcek, lam=1e-8, ne="uydur")
+        g1 = ezber_mi(xs, ys, olcek=olcek, lam=1e-1, ne="uydur")
+
+        def hata(tahmin: np.ndarray, dogru: np.ndarray) -> float:
+            return float(np.sqrt(np.mean((tahmin - dogru) ** 2)))
+
+        kayit = {
+            "gurultu_seviyesi": gurultu,
+            "verinin_lipschitz_sabiti": L_veri,
+            "hedefin_lipschitz_sabiti": 2 * np.pi,
+            "gram_kosul_sayisi": float(np.linalg.cond(ezber_mi(xs, xs, olcek=olcek, ne="gram"))),
+            "kan_egitim_hatasi": hata(kan_egitim, ys),
+            "kan_sinama_hatasi": hata(kan_orta, yt),
+            "cekirdek_lam0_egitim": hata(g0(xs), ys),
+            "cekirdek_lam0_sinama": hata(g0(xt), yt),
+            "cekirdek_sirt_egitim": hata(g1(xs), ys),
+            "cekirdek_sirt_sinama": hata(g1(xt), yt),
+        }
+        kayit["kan_tam_oturuyor"] = bool(kayit["kan_egitim_hatasi"] < 1e-9)
+        kayit["gurultu_lipschitzi_patlatti"] = bool(L_veri > 100 * 2 * np.pi)
+        # ezber: eğitimde gürültüden çok daha iyi, sınamada çok daha kötü
+        kayit["ezber_gorunuyor"] = bool(
+            kayit["cekirdek_lam0_egitim"] < 0.5 * gurultu
+            and kayit["cekirdek_lam0_sinama"] > 4.0 * gurultu
+        )
+        kayit["duzenlileme_sinamayi_iyilestirdi"] = bool(
+            kayit["cekirdek_sirt_sinama"] < kayit["cekirdek_lam0_sinama"]
+            and kayit["cekirdek_sirt_sinama"] < kayit["kan_sinama_hatasi"]
+        )
+        kayit["duzenlileme_egitimi_kotulestirdi"] = bool(
+            kayit["cekirdek_sirt_egitim"] > kayit["cekirdek_lam0_egitim"]
+        )
+        return kayit
+
+    if ne == "sobolev":
+        # Aslının imzası AYRI varsayılanlar taşıyordu; tek kapıya
+        # girerken onlar geri konur -- yoksa ölçüm sessizce değişir
+        # (H223'te ölçülen kusurun aynısı).
+        if (n, gurultu, olcek, lam, tohum) == (40, 0.25, 0.03, 1e-8, 0):
+            n, gurultu, olcek, lam, tohum = 14, 0.05, 0.25, 1e-6, 3
+        rng = np.random.default_rng(tohum)
+        hedef = lambda t: np.sin(2 * np.pi * t)
+        turev = lambda t: 2 * np.pi * np.cos(2 * np.pi * t)
+        xs = np.sort(rng.uniform(0, 1, n))
+        ys = hedef(xs) + gurultu * rng.normal(size=n)
+        ds = turev(xs) + gurultu * rng.normal(size=n)
+
+        def dK(x: np.ndarray, z: np.ndarray) -> np.ndarray:
+            """``∂/∂x k(x,z)``."""
+            return -(x[:, None] - z[None, :]) / (olcek * olcek) * ezber_mi(x, z, olcek=olcek, ne="gram")
+
+        K = ezber_mi(xs, xs, olcek=olcek, ne="gram")
+        # (a) yalnız değer
+        a_deger = np.linalg.solve(K + lam * np.eye(n), ys)
+        # (b) değer + türev (en küçük kareler)
+        A = np.vstack([K, dK(xs, xs)])
+        b = np.concatenate([ys, ds])
+        a_sob = np.linalg.lstsq(A.T @ A + lam * np.eye(n), A.T @ b, rcond=None)[0]
+
+        xt = np.linspace(0.05, 0.95, 400)
+        def hata(v, d):
+            return float(np.sqrt(np.mean((v - d) ** 2)))
+
+        deger_h = hata(ezber_mi(xt, xs, olcek=olcek, ne="gram") @ a_deger, hedef(xt))
+        deger_t = hata(dK(xt, xs) @ a_deger, turev(xt))
+        sob_h = hata(ezber_mi(xt, xs, olcek=olcek, ne="gram") @ a_sob, hedef(xt))
+        sob_t = hata(dK(xt, xs) @ a_sob, turev(xt))
+        return {
+            "yalniz_deger__deger_hatasi": deger_h,
+            "yalniz_deger__turev_hatasi": deger_t,
+            "sobolev__deger_hatasi": sob_h,
+            "sobolev__turev_hatasi": sob_t,
+            "turev_iyilesti": bool(sob_t < deger_t),
+        }
+
+    raise ValueError("ezber suâlinin kipi bilinmiyor: %r" % (ne,))
+
+
+def _rapor_ezber() -> str:
+    s = ["=== genisletme ==="]
+    k = kan_ozellikleri()
+    s.append("Kan gen.  oturma hatası=%.2e  ölçülen Lip=%.3f ≤ L=%.3f → %s  hedef arada=%s"
+             % (k["ornekte_tam_oturma_hatasi"], k["olculen_lipschitz"], k["L"],
+                k["lipschitz_asilmadi"], k["hedef_arada"]))
+    e = ezber_mi(ne="kıyas")
+    s.append("ezber     Kan: eğitim=%.2e sınama=%.4f | λ=1e-8: eğitim=%.4f sınama=%.4g | sırt: eğitim=%.4f sınama=%.4f"
+             % (e["kan_egitim_hatasi"], e["kan_sinama_hatasi"],
+                e["cekirdek_lam0_egitim"], e["cekirdek_lam0_sinama"],
+                e["cekirdek_sirt_egitim"], e["cekirdek_sirt_sinama"]))
+    s.append("          gürültü=%.2f  verinin Lip=%.3g (hedefinki %.3g)  Gram koşul=%.2e"
+             % (e["gurultu_seviyesi"], e["verinin_lipschitz_sabiti"],
+                e["hedefin_lipschitz_sabiti"], e["gram_kosul_sayisi"]))
+    s.append("          Kan tam oturuyor=%s  ezber görünüyor=%s  düzenlileme sınamayı iyileştirdi=%s"
+             % (e["kan_tam_oturuyor"], e["ezber_gorunuyor"],
+                e["duzenlileme_sinamayi_iyilestirdi"]))
+    b = ezber_mi(ne="sobolev")
+    s.append("Sobolev   yalnız değer: f=%.4f f'=%.4f | Sobolev: f=%.4f f'=%.4f | türev iyileşti=%s"
+             % (b["yalniz_deger__deger_hatasi"], b["yalniz_deger__turev_hatasi"],
+                b["sobolev__deger_hatasi"], b["sobolev__turev_hatasi"], b["turev_iyilesti"]))
+    return "\n".join(s)
 
 def rapor() -> str:                                     # pragma: no cover
     """KENDİNİ GÖSTERME -- **tek terkip** (kütük H224).
@@ -2177,7 +2392,7 @@ def rapor() -> str:                                     # pragma: no cover
 
     def _rapor_nefs_olcu() -> List[str]:
         s: List[str] = []
-        d = mertebeye_cevir(ne="doğrula")
+        d = mertebe(ne="doğrula")
         s += ["=== ÖLÇÜ FUNKTORU -- ayrı uzaylardan müşterek uzaya ===",
              "",
              "Müşterek uzay `mizan/munazara.py`nin merdivenidir:",
@@ -2223,7 +2438,7 @@ def rapor() -> str:                                     # pragma: no cover
         n_satir = 4
         chi = 32
         tohum = 0
-        o = taahhude_dokundu_mu(n_satir=n_satir, chi=chi, tohum=tohum, ne="hepsi")
+        o = sozunde_mi(n_satir=n_satir, chi=chi, tohum=tohum, ne="hepsi")
         s += ["=== SADAKAT SÖZLEŞMESİ (Dosya 2) -- yüzleştirme ===",
              "",
              "Her meleke dokunacağı bölgeleri İLAN eder; ölçüm dalganın",
@@ -2271,12 +2486,12 @@ def rapor() -> str:                                     # pragma: no cover
         s += ["=== ALTI KADEME -- girdi/çıktı zinciri ===", ""]
         for g in gorevleri_getir(kume)[:int(n)]:
             r = kademeleri_kos(g)
-            t = zayif_halkaya_gore_topla(olcumler=r["ölçümler"], ne="azamî")
+            t = zayif_halka(olcumler=r["ölçümler"], ne="azamî")
             s.append("--- %s ---" % g.ad)
             s += ["  " + x for x in r["günlük"]]
             s.append("  kademe kaybı %.4f  (ortalama mertebe %.3f = %s)"
                      % (t["kayıp"], t["ortalama_mertebe"],
-                        mertebeye_cevir(ne="adlandır", m=t["ortalama_mertebe"])))
+                        mertebe(ne="adlandır", m=t["ortalama_mertebe"])))
             if r["eksik"]:
                 s.append("  DÜŞEN UZUV: %s" % ", ".join(sorted(r["eksik"])))
             s.append("")
@@ -2304,7 +2519,7 @@ def rapor() -> str:                                     # pragma: no cover
         sebepler: Dict[str, int] = {}
         ornek_muhakeme: List[str] = []
         for gv in g:
-            r = icinden_gecir(gv, derinlik=derinlik, dalga=dalga)
+            r = suz(gv, derinlik=derinlik, dalga=dalga)
             if r["sükût"]:
                 sebepler[r["sebep"]] = sebepler.get(r["sebep"], 0) + 1
                 if not ornek_muhakeme and r["sebep"] == "kaide bulunamadı":
@@ -2358,9 +2573,9 @@ def rapor() -> str:                                     # pragma: no cover
         # o girdideki "tesirsiz" sayısı sükûtun gölgesidir, melekelerin
         # hâli değil. Rastgele girdi yine de raporlanır, fakat ikinci
         # sırada ve bu kayıtla.
-        E = bu_meleke_dusse(ne="girdi", tohum=tohum)
+        E = eksilt(ne="girdi", tohum=tohum)
 
-        d, izler = bu_meleke_dusse(E, tohum, ne="iz")
+        d, izler = eksilt(E, tohum, ne="iz")
         satir = ["=== Kademe 5: icra izi ===",
                  "adım: %d   şahit: %d   makam: %s   sükût: %s"
                  % (len(izler), len(d.sahitler or []), d.makam, d.sukut)]
@@ -2377,8 +2592,8 @@ def rapor() -> str:                                     # pragma: no cover
                                                    - set(iz.yazdigi)))
                                      for iz in gizli]))
 
-        temel, sonuc = bu_meleke_dusse(E, tohum)
-        t = bu_meleke_dusse(ne="tablo", sonuc=sonuc)
+        temel, sonuc = eksilt(E, tohum)
+        t = eksilt(ne="tablo", sonuc=sonuc)
         satir += ["", "=== Kademe 5: hassasiyet (bir meleke düşerse) ===",
                   "temel: ‖N‖=%.6f  makam=%s  sükût=%s  P=%.4f"
                   % (float(np.linalg.norm(temel["N"])), temel["makam"],
@@ -2403,13 +2618,13 @@ def rapor() -> str:                                     # pragma: no cover
                                 hukumler if not x.kirildi else x.sebep))
 
         # --- ikinci ölçümler
-        ikinciler = [("bir şahit bozuk", bu_meleke_dusse(ne="girdi", bozuk=2, tohum=tohum)),
+        ikinciler = [("bir şahit bozuk", eksilt(ne="girdi", bozuk=2, tohum=tohum)),
                      ("rastgele gürültü (model susar; ölçü ayırt etmez)",
                       np.random.default_rng(tohum).normal(size=(n, d_in)))]
         for etiket, E2 in ikinciler:
             d2 = Nefs(tohum).idrak_et(E2)
-            temel2, sonuc2 = bu_meleke_dusse(E2, tohum)
-            t2 = bu_meleke_dusse(ne="tablo", sonuc=sonuc2)
+            temel2, sonuc2 = eksilt(E2, tohum)
+            t2 = eksilt(ne="tablo", sonuc=sonuc2)
             satir += ["", "=== yapılandırılmış girdi: %s ===" % etiket,
                       "şahit=%d  nakz=%s  müteber=%.2f  P=%.4f  makam=%s  sükût=%s"
                       % (len(d2.sahitler or []), d2.nakz, d2.muteber_sahit,

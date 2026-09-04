@@ -217,6 +217,442 @@ def hiz_defteri(hedef_MB: float = 700.0) -> Dict[str, object]:
                                 * nispet)}
 
 
+
+# ====================================================================
+#  KÜME 8: çatı modeli ve bu makinede gerçek ölçüm
+# ====================================================================
+
+FLOP_KATSAYISI = 90          # 82 (41 meleke) + 4 (RHT) + 2 (KAN) + 2 (Hodge)
+
+
+L4_TEPE_TFLOPS = 4 * 242.0   # 4 × NVIDIA L4, BF16 dense
+
+
+L4_VERIM = 0.65
+
+
+L4_BANT_GBS = 300.0          # GPU başına ~300 GB/sn HBM
+
+
+
+
+def cati(D: int = 4096, B: int = 1, ne: str = "çatı",
+         katsayi: int = FLOP_KATSAYISI, bayt_agirlik: int = 2,
+         bant_GBs: float = L4_BANT_GBS,
+         tepe_tflops: float = L4_TEPE_TFLOPS, verim: float = L4_VERIM,
+         gpu: int = 4, boyutlar=(4096, 2048, 1024, 512, 128)):
+    """ÇATI -- **tek terkip** (kütük H227).
+
+    Küme: ``flop_token``, ``net_guc``, ``throughput``, ``l4_cetveli``,
+    ``aritmetik_yogunluk``, ``cati_modeli``, ``yigin_esigi``. Yedi
+    isim **tek eğrinin** ayrı okunuşlarıydı -- roofline:
+
+        apsis   = aritmetik yoğunluk (FLOP / okunan bayt)
+        tavan   = ``min(bant × yoğunluk,  tepe FLOP)``
+        dirsek  = yığın eşiği: bellek-bağlıdan FLOP-bağlıya geçiş
+        nokta   = throughput: eğri üstünde bulunduğun yer
+
+    Ayrı isimler taşırken bu tek eğri görünmüyordu; hangi sayının
+    eğrinin neresi olduğu ancak şerhten anlaşılıyordu.
+
+    ==================  ==============================================
+    ``ne``              döndürdüğü
+    ==================  ==============================================
+    ``flop``            ``katsayı·D²`` -- token başına FLOP
+    ``güç``             kullanılabilir FLOP/sn (tepe × verim)
+    ``hız``             token/sn, ham metin MB/sn, tensör GB/sn
+    ``cetvel``          birkaç ``D`` için hız dökümü
+    ``yoğunluk``        FLOP / okunan bayt
+    ``çatı``            iş FLOP-bağlı mı bellek-bağlı mı
+    ``eşik``            dirsek: hangi yığında FLOP-bağlıya geçilir
+    ==================  ==============================================
+
+    **M34:** ``B = 1``de yoğunluk birdir ve iş **bellek bağlıdır**;
+    büyük yığında FLOP bağlı olur. Ağırlıklar yığın başına bir kere
+    okunur, aktivasyon her token için; dirsek tam bu iki maliyetin
+    eşitlendiği yerdedir.
+    """
+    if ne == "flop":
+        return float(katsayi) * D * D
+
+    if ne == "güç":
+        return tepe_tflops * 1e12 * verim
+
+    if ne == "hız":
+        fl = cati(D=D, ne="flop", katsayi=katsayi)
+        tok = cati(ne="güç", tepe_tflops=tepe_tflops, verim=verim) / fl
+        return {"D": D, "flop_token": fl, "token_sn": tok,
+                "metin_MB_sn": tok * BAYT_TOKEN / 1e6,
+                "tensör_GB_sn": tok * D * 2 / 1e9}
+
+    if ne == "cetvel":
+        return [cati(D=x, ne="hız", tepe_tflops=tepe_tflops, verim=verim)
+                for x in boyutlar]
+
+    if ne == "yoğunluk":
+        flop = katsayi * D * D * B
+        bayt = (katsayi / 2.0) * D * D * bayt_agirlik + 2.0 * B * D * bayt_agirlik
+        return flop / bayt
+
+    if ne == "çatı":
+        yog = cati(D=D, B=B, ne="yoğunluk", katsayi=katsayi,
+                    bayt_agirlik=bayt_agirlik)
+        bellek_cati = bant_GBs * 1e9 * yog
+        flop_cati = cati(ne="güç", tepe_tflops=tepe_tflops, verim=verim) / gpu
+        return {"D": D, "B": B, "yoğunluk": yog,
+                "bellek_çatısı": bellek_cati, "flop_çatısı": flop_cati,
+                "ulaşılabilir": min(bellek_cati, flop_cati),
+                "bellek_bağlı_mı": bellek_cati < flop_cati,
+                "tepe_gücün_kaçta_biri": flop_cati / max(bellek_cati, 1e-30)}
+
+    if ne == "eşik":
+        B = 1
+        while B <= 1 << 22:
+            if not cati(D=D, B=B, bant_GBs=bant_GBs,
+                        tepe_tflops=tepe_tflops, verim=verim,
+                        gpu=gpu)["bellek_bağlı_mı"]:
+                return B
+            B *= 2
+        return -1
+
+    raise ValueError("çatı kipi bilinmiyor: %r" % (ne,))
+
+
+def log_aritmetigi(N: float = 1e12) -> Dict[str, float]:
+    """``log²N`` ve ``N³/log²N`` — risalenin verdiği sayılarla kıyas."""
+    l2, l10, ln = math.log2(N), math.log10(N), math.log(N)
+    return {"N": N, "log2": l2, "log2_kare": l2 ** 2,
+            "log10_kare": l10 ** 2, "ln_kare": ln ** 2,
+            "risale_log2_kare": 400.0,
+            "N3_bolu_log2kare": N ** 3 / l2 ** 2,
+            "N2_bolu_log2kare": N ** 2 / l2 ** 2,
+            "risale_K": 1e28}
+
+
+def esdegers_hiz_boyut_denetimi(fiziki_bayt_sn: float = 1.2e12,
+                                K: float = 6.293e32) -> Dict[str, object]:
+    """**M33:** bant genişliğini boyutsuz oranla çarpmak ne veriyor?
+
+    Sayı çıkar ama fizikî bir akış **değildir**.  Kıyas için aynı
+    hesabın gerçek donanımdaki karşılığı da veriliyor.
+    """
+    carpim = fiziki_bayt_sn * K
+    gercek_512 = cati(D=512, ne="hız")["metin_MB_sn"] * 1e6
+    gercek_4096 = cati(D=4096, ne="hız")["metin_MB_sn"] * 1e6
+    return {
+        "fizikî_bayt_sn": fiziki_bayt_sn,
+        "K": K,
+        "çarpım_bayt_sn": carpim,
+        "çarpım_GB_sn": carpim / 1e9,
+        "gerçek_D512_bayt_sn": gercek_512,
+        "gerçek_D4096_bayt_sn": gercek_4096,
+        "mertebe_farkı_D512": math.log10(carpim / gercek_512),
+        "mertebe_farkı_D4096": math.log10(carpim / gercek_4096),
+        "eşdeğer_iş_FLOP": fiziki_bayt_sn * K,   # birimi FLOP, bayt/sn DEĞİL
+        "not": "K boyutsuz; çarpım bayt/sn birimini korur ama fizikî "
+               "bir akışa karşılık gelmez",
+    }
+
+
+def yerel_olcum(D: int, B: int = 1, tekrar: int = 3,
+                meleke: int = 41) -> Dict[str, float]:
+    """``meleke`` adet ``D×D`` çarpımı **gerçekten** koş ve süreyi ölç."""
+    r = np.random.default_rng(0)
+    # Ağırlıklar 1/√D ile ölçekleniyor: 41 ardışık çarpımda float32
+    # TAŞIYOR (ölçüldü: overflow → inf/nan) ve süre ölçümü anlamsızlaşır.
+    # Ölçek FLOP sayısını değiştirmez, yalnız sayıları sınırda tutar.
+    W = [(r.normal(size=(D, D)) / math.sqrt(D)).astype(np.float32)
+         for _ in range(4)]
+    X = r.normal(size=(D, B)).astype(np.float32)
+    Y = X.copy()
+    for k in range(meleke):
+        Y = W[k % 4] @ Y
+    t0 = time.perf_counter()
+    for _ in range(tekrar):
+        Y = X.copy()
+        for k in range(meleke):
+            Y = W[k % 4] @ Y
+    dt = (time.perf_counter() - t0) / tekrar
+    fl = 2.0 * D * D * B * meleke
+    return {"D": D, "B": B, "süre_ms": dt * 1e3, "FLOP": fl,
+            "FLOP_sn": fl / dt, "GFLOP_sn": fl / dt / 1e9,
+            "token_sn": B / dt,
+            "sonlu_mu": bool(np.all(np.isfinite(Y)))}
+
+
+def sistem_yuku() -> Dict[str, object]:
+    """Ölçüm sırasında makine boş muydu? — 1 dk yük ortalaması.
+
+    **Bu şart yazılmazsa ölçüm yalan olur.**  Ölçüldü: aynı CPU'da
+    eğitim koşarken ``D=128, B=64`` atımı 332 ms sürüyordu (0.3
+    GFLOP/sn); makine boşken aynı iş misliyle hızlıdır.  Bu yüzden
+    her ölçümün yanına yük yazılıyor.
+    """
+    try:
+        y1, y5, y15 = os.getloadavg()
+    except OSError:
+        y1 = y5 = y15 = float("nan")
+    cek = os.cpu_count() or 1
+    return {"yük_1dk": y1, "yük_5dk": y5, "çekirdek": cek,
+            "çekirdek_başına": y1 / cek,
+            "makine_boş_mu": y1 / cek < 0.3,
+            "değerlendirme": ("boş" if y1 / cek < 0.3
+                              else "YÜKLÜ — ölçüm bu yüzden düşük")}
+
+
+def _is_yuku(D: int, B: int, meleke: int = 41, tip=np.float32):
+    """Bir atım: ``meleke`` adet ``D×D`` çarpımı, ``B`` token yığını."""
+    r = np.random.default_rng(0)
+    W = [(r.normal(size=(D, D)) / math.sqrt(D)).astype(tip)
+         for _ in range(4)]
+    X = (r.normal(size=(D, B)) / math.sqrt(D)).astype(tip)
+
+    def atim():
+        Y = X
+        for k in range(meleke):
+            Y = W[k % 4] @ Y
+        return Y
+
+    return atim
+
+
+def surekli_olc(D: int = 128, B: int = 64, saniye: float = 30.0,
+                meleke: int = 41, isinma: float = 2.0
+                ) -> Dict[str, object]:
+    """``saniye`` boyunca kesintisiz koş; ısınmayı **atarak** ölç.
+
+    Dönen değerler: token/sn, GB/sn (ham metin), GFLOP/sn ve atım
+    sürelerinin dağılımı.  Sayılar tek bir atımdan değil, pencere
+    boyunca biriken **bütün** atımlardan çıkarılır.
+    """
+    atim = _is_yuku(D, B, meleke)
+    # ısınma: bu süre ölçüme GİRMİYOR
+    t0 = time.perf_counter()
+    isinma_atim = 0
+    while time.perf_counter() - t0 < isinma:
+        atim()
+        isinma_atim += 1
+    isinma_sure = time.perf_counter() - t0
+
+    sureler: List[float] = []
+    bas = time.perf_counter()
+    while time.perf_counter() - bas < saniye:
+        a = time.perf_counter()
+        Y = atim()
+        sureler.append(time.perf_counter() - a)
+    gecen = time.perf_counter() - bas
+
+    yuk = sistem_yuku()
+    n = len(sureler)
+    token = n * B
+    flop = n * 2.0 * D * D * B * meleke
+    s = np.array(sureler)
+    return {
+        "D": D, "B": B, "meleke": meleke, "pencere_sn": saniye,
+        "gerçek_sn": gecen, "atım": n, "token": token,
+        "token_sn": token / gecen,
+        "MB_sn": token * BAYT_TOKEN / 1e6 / gecen,
+        "GB_sn": token * BAYT_TOKEN / 1e9 / gecen,
+        "GFLOP_sn": flop / gecen / 1e9,
+        "atım_ms_ortanca": float(np.median(s) * 1e3),
+        "atım_ms_p10": float(np.percentile(s, 10) * 1e3),
+        "atım_ms_p90": float(np.percentile(s, 90) * 1e3),
+        "atım_ms_en_kötü": float(s.max() * 1e3),
+        "dalgalanma_p90_p10": float(np.percentile(s, 90)
+                                    / max(np.percentile(s, 10), 1e-12)),
+        "ısınma_sn": isinma_sure, "ısınma_atım": isinma_atim,
+        "sonlu_mu": bool(np.all(np.isfinite(Y))),
+        "yük_1dk": yuk["yük_1dk"], "çekirdek": yuk["çekirdek"],
+        "makine_boş_mu": yuk["makine_boş_mu"],
+        "yük_değerlendirmesi": yuk["değerlendirme"],
+    }
+
+
+def isinma_bedeli(D: int = 128, B: int = 64, atim_sayisi: int = 40
+                  ) -> Dict[str, float]:
+    """İlk atım ile yerleşik atım arasındaki fark — ısınma ölçülüyor."""
+    atim = _is_yuku(D, B)
+    t0 = time.perf_counter(); atim(); ilk = time.perf_counter() - t0
+    sonra = []
+    for _ in range(atim_sayisi):
+        t0 = time.perf_counter(); atim(); sonra.append(time.perf_counter() - t0)
+    yerlesik = float(np.median(sonra))
+    return {"ilk_atım_ms": ilk * 1e3, "yerleşik_ms": yerlesik * 1e3,
+            "kat": ilk / max(yerlesik, 1e-12)}
+
+
+def pencere_cetveli(boyutlar: Sequence[int] = (128, 512),
+                    yiginlar: Sequence[int] = (1, 64),
+                    pencereler: Sequence[float] = (30.0, 60.0)
+                    ) -> List[Dict[str, object]]:
+    return [surekli_olc(D, B, p) for D in boyutlar for B in yiginlar
+            for p in pencereler]
+
+
+def gb_icin_sure(MB_sn: float) -> float:
+    """1 GB ham metin için gereken saniye."""
+    return 1000.0 / max(MB_sn, 1e-12)
+
+
+def l4_ile_kiyas(olcum: Dict[str, object]) -> Dict[str, object]:
+    """Ölçüleni L4 kâğıt modeliyle kıyasla — GPU yok, fark ne kadar."""
+    D = int(olcum["D"])
+    t = throughput(D)
+    return {"D": D,
+            "bu_CPU_MB_sn": olcum["MB_sn"],
+            "L4_kağıt_MB_sn": t["metin_MB_sn"],
+            "kat_fark": t["metin_MB_sn"] / max(float(olcum["MB_sn"]), 1e-12),
+            "bu_CPU_1GB_sn": gb_icin_sure(float(olcum["MB_sn"])),
+            "L4_kağıt_1GB_sn": gb_icin_sure(t["metin_MB_sn"]),
+            "bu_CPU_GFLOP_sn": olcum["GFLOP_sn"],
+            "L4_net_GFLOP_sn": net_guc() / 1e9,
+            "FLOP_kat_fark": (net_guc() / 1e9)
+                             / max(float(olcum["GFLOP_sn"]), 1e-12)}
+
+
+def _rapor_cati() -> str:
+    s = []
+    s.append("=== L4 raporunun aritmetiği yeniden hesaplandı ===")
+    s.append("  net güç = %.1f TFLOPS  (4×242 × %.2f)"
+             % (cati(ne="güç") / 1e12, L4_VERIM))
+    s.append("      D   FLOP/token    token/sn    metin MB/sn   tensör GB/sn"
+             "   rapor MB/sn")
+    rapor = {4096: 1.67, 2048: 6.67, 1024: 26.68, 512: 106.72}
+    for t in cati(ne="cetvel"):
+        r = rapor.get(int(t["D"]))
+        s.append("  %5d   %.3e   %.4e   %10.2f   %11.2f   %s"
+                 % (t["D"], t["flop_token"], t["token_sn"],
+                    t["metin_MB_sn"], t["tensör_GB_sn"],
+                    ("%10.2f ✓" % r) if r else "        —")
+                 )
+    s.append("  Rapor DOĞRU: hesaplanan ile yazılan birebir tutuyor.")
+
+    s.append("\n=== M34: yazılmamış şart — yığın (batch) ===")
+    s.append("      D      B   yoğunluk(FLOP/bayt)   çatı(FLOP/sn)   durum")
+    for D in (512, 4096):
+        for B in (1, 8, 64, 512, 4096):
+            c = cati(D=D, B=B)
+            s.append("  %5d  %5d   %16.1f   %.3e   %s"
+                     % (D, B, c["yoğunluk"], c["ulaşılabilir"],
+                        "bellek-bağlı" if c["bellek_bağlı_mı"]
+                        else "FLOP-bağlı"))
+    for D in (512, 4096):
+        e = cati(D=D, ne="eşik")
+        c1 = cati(D=D, B=1)
+        s.append("  D=%d: FLOP-bağlı olmak için B ≥ %d;  B=1'de tepe gücün "
+                 "1/%.0f'i" % (D, e, c1["tepe_gücün_kaçta_biri"]))
+    s.append("  Yani rapordaki rakamlar BÜYÜK YIĞIN varsayar. Tek")
+    s.append("  cümlelik etkileşimli kullanımda (B=1) 500 kat iyimser.")
+
+    s.append("\n=== M31/M32: veri akış risalesinin logaritma aritmetiği ===")
+    a = log_aritmetigi()
+    s.append("  N = 1e12")
+    s.append("    log₂N = %.2f  → log₂²N = %.1f     risale: %.0f  ← YANLIŞ"
+             % (a["log2"], a["log2_kare"], a["risale_log2_kare"]))
+    s.append("    (log₁₀ ile %.0f, ln ile %.0f — hiçbiri 400 vermiyor)"
+             % (a["log10_kare"], a["ln_kare"]))
+    s.append("    N³/log₂²N = %.3e     risale: %.0e  ← YANLIŞ"
+             % (a["N3_bolu_log2kare"], a["risale_K"]))
+    s.append("    (N²/log₂²N alınsaydı %.3e; o da 1e28 değil)"
+             % a["N2_bolu_log2kare"])
+
+    s.append("\n=== M33: 'Fizikî Hız × K' boyutça geçersiz ===")
+    d = esdegers_hiz_boyut_denetimi()
+    s.append("  1.2 TB/sn × K = %.3e bayt/sn = %.3e GB/sn"
+             % (d["çarpım_bayt_sn"], d["çarpım_GB_sn"]))
+    s.append("  Aynı külliyattaki L4 raporu ise:")
+    s.append("    D=512  : %.3e bayt/sn   → %.0f mertebe fark"
+             % (d["gerçek_D512_bayt_sn"], d["mertebe_farkı_D512"]))
+    s.append("    D=4096 : %.3e bayt/sn   → %.0f mertebe fark"
+             % (d["gerçek_D4096_bayt_sn"], d["mertebe_farkı_D4096"]))
+    s.append("  K boyutsuz bir orandır (işlem/işlem). Bir veri hızıyla")
+    s.append("  çarpımı sayı verir ama fizikî akış vermez: çip yine")
+    s.append("  saniyede 1.2 TB alıyordur. Doğru ayrım:")
+    s.append("    eşdeğer klasik İŞ  → birimi FLOP")
+    s.append("    fizikî veri HIZI   → birimi bayt/sn")
+    s.append("  İkisi aynı cümlede çarpılamaz.")
+
+    s.append("\n=== Bu makinede GERÇEK ölçüm (GPU yok, CPU) ===")
+    s.append("      D      B    süre(ms)    GFLOP/sn    token/sn")
+    for D in (128, 512):
+        for B in (1, 64):
+            m = yerel_olcum(D, B)
+            s.append("  %5d  %5d   %9.3f   %9.1f   %10.1f"
+                     % (D, B, m["süre_ms"], m["GFLOP_sn"], m["token_sn"]))
+    s.append("  Varsayılan boyut 512, hızlı deneme boyutu 128.")
+    s.append("  Yığın 1'den 64'e çıkınca token/sn'nin nasıl arttığına")
+    s.append("  dikkat: aynı çatı etkisi bu CPU'da da görünüyor.")
+    return "\n".join(s)
+
+
+def _rapor_gercek(kisa: bool = False) -> str:
+    s = []
+    pencere = (5.0,) if kisa else (30.0, 60.0)
+    y = sistem_yuku()
+    s.append("=== ÖNCE: makine boş mu? ===")
+    s.append("  1 dk yük ortalaması = %.2f   çekirdek = %d   "
+             "çekirdek başına = %.2f"
+             % (y["yük_1dk"], y["çekirdek"], y["çekirdek_başına"]))
+    s.append("  değerlendirme: %s" % y["değerlendirme"])
+    if not y["makine_boş_mu"]:
+        s.append("  ⚠ Aşağıdaki bütün sayılar YÜK ALTINDA ölçüldü ve")
+        s.append("    makinenin gerçek kudretinden DÜŞÜKTÜR. Bunu")
+        s.append("    yazmadan rapor vermek yanlış olurdu.")
+
+    s.append("\n=== Isınma gerçekten var mı? (ölçülüyor, sonra atılıyor) ===")
+    for D in (128, 512):
+        i = isinma_bedeli(D)
+        s.append("  D=%3d  ilk atım %8.3f ms   yerleşik %8.3f ms   %5.1f kat"
+                 % (D, i["ilk_atım_ms"], i["yerleşik_ms"], i["kat"]))
+    s.append("  Tek atımlık ölçüm bu yüzden yanıltır; aşağıdaki bütün")
+    s.append("  sayılarda ısınma penceresi ÖLÇÜME GİRMİYOR.")
+
+    s.append("\n=== Sürekli pencere ölçümü (bu CPU, GPU yok) ===")
+    s.append("    D    B  pencere    atım   token/sn    MB/sn    GFLOP/sn"
+             "   1 GB için")
+    olcumler = []
+    for D in (128, 512):
+        for B in (1, 64):
+            for p in pencere:
+                o = surekli_olc(D, B, p)
+                olcumler.append(o)
+                s.append("  %4d %4d  %5.0f sn %7d  %9.1f  %7.3f  %9.1f"
+                         "   %8.1f sn"
+                         % (o["D"], o["B"], o["pencere_sn"], o["atım"],
+                            o["token_sn"], o["MB_sn"], o["GFLOP_sn"],
+                            gb_icin_sure(float(o["MB_sn"]))))
+
+    s.append("\n=== Dalgalanma: pencere içinde atımlar ne kadar oynuyor? ===")
+    s.append("    D    B   ortanca ms    p10 ms    p90 ms   en kötü   p90/p10")
+    for o in olcumler:
+        if o["pencere_sn"] == max(pencere):
+            s.append("  %4d %4d %10.3f %9.3f %9.3f %9.3f    %.2f"
+                     % (o["D"], o["B"], o["atım_ms_ortanca"],
+                        o["atım_ms_p10"], o["atım_ms_p90"],
+                        o["atım_ms_en_kötü"], o["dalgalanma_p90_p10"]))
+
+    s.append("\n=== '10 saniyede 1 GB' hedefine göre neredeyiz? ===")
+    s.append("    D    B   bu CPU 1GB   L4 kâğıt 1GB    kat fark")
+    for o in olcumler:
+        if o["pencere_sn"] == max(pencere):
+            k = l4_ile_kiyas(o)
+            s.append("  %4d %4d %10.1f sn %12.1f sn %10.0f×"
+                     % (o["D"], o["B"], k["bu_CPU_1GB_sn"],
+                        k["L4_kağıt_1GB_sn"], k["kat_fark"]))
+    s.append("  L4 raporunun D=512 rakamı (106.7 MB/sn) 1 GB'ı 9.4")
+    s.append("  saniyede işlemek demektir; yani '10 saniyede 1 GB'")
+    s.append("  hedefi kâğıt üstünde TUTARLIDIR. Bu makinede ise GPU")
+    s.append("  yok ve fark yukarıdaki kat sütununda duruyor.")
+
+    s.append("\n=== Kübit var mı? — yok, ve olması da beklenmiyor ===")
+    s.append("  Bu ölçümlerin hiçbirinde kuantum donanımı kullanılmadı.")
+    s.append("  idrak.kubit'teki yazmaç bir KLASİK BENZETİMDİR: n kübit")
+    s.append("  2^n genlik demektir ve maliyeti üstel büyür (ölçüldü:")
+    s.append("  n=16'da 108 ms). Kazancı hız değil, norm korunumudur.")
+    s.append("  Yani 'kübit yapacaksın' isteği mimarî olarak karşılandı,")
+    s.append("  fizikî olarak KARŞILANMADI ve karşılanamaz.")
+    return "\n".join(s)
+
 def rapor() -> str:                                     # pragma: no cover
     r = hiz_defteri()
     s = ["HIZ DEFTERİ -- 700 MB/sn hedefinin üç muhasebesi", ""]

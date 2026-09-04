@@ -76,12 +76,12 @@ from matematik.tip_teorisi import (Baglam, Cember, Deg, Evren, Taban,
 
 
 from .kule import ince, kaba
-from .musahede import ortu_kapaniyor_mu
+from .musahede import ortu
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
                       kontrollu_donme)
-from .zirh import mantigi_tek_supurmede_isaretle
-from .musahede import (artiklar, delil_dizileri, kaideyi_coz,
-                    nakz_bul, sahitleri_ayir)
+from .zirh import vicdan
+from .musahede import (artiklar, delil_dizileri, kaide,
+                    nakz_bul, ayir)
 
 
 __all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
@@ -901,7 +901,7 @@ def zirh_projektorleri(nokta: np.ndarray, D: int, eps: float,
       o, "her şey tek parça" yönüdür ve silinirse durum tamamen yok
       olurdu -- silinmesi gereken FAZLA bileşenlerdir.
     """
-    from nefs.zirh import (delikleri_say, ek_yeri_tutuyor_mu,
+    from nefs.zirh import (delik, yama,
                            vietoris_rips)
 
     X = np.atleast_2d(np.asarray(nokta, float))
@@ -910,7 +910,7 @@ def zirh_projektorleri(nokta: np.ndarray, D: int, eps: float,
     Dm = np.sqrt(np.maximum(
         np.sum((X[:, None, :] - X[None, :, :]) ** 2, axis=2), 0.0))
     K = vietoris_rips(Dm, float(eps), azami_boyut=1)
-    L = delikleri_say(K, 0, "laplasyen")
+    L = delik(K, 0, "laplasyen")
     if L.shape[0] != int(D):                       # tekil düğüm eksikse
         Z = np.zeros((int(D), int(D)))
         n = min(L.shape[0], int(D))
@@ -930,7 +930,7 @@ def zirh_projektorleri(nokta: np.ndarray, D: int, eps: float,
         Pk = np.eye(int(D)) - c @ c.T
     else:
         Pk = np.eye(int(D))
-    S = (ek_yeri_tutuyor_mu(X[:, 0], X[:, -1])["izdüşüm"]
+    S = (yama(X[:, 0], X[:, -1])["izdüşüm"]
          if X.shape[1] > 1 else np.eye(D))
     if S.shape[0] != int(D):                       # pragma: no cover
         S = np.eye(int(D))
@@ -1736,7 +1736,7 @@ class Tertip(Meleke):
         # aramak, delili işlemden sonra aramaya benzer.
         verildi = d.sahitler is not None
         if not verildi:
-            b = sahitleri_ayir(d.E)
+            b = ayir(d.E)
             d.sahitler = b.sahitler
             d.olcum.koy("tertip.kopma_eşiği", b.esik)
             d.olcum.koy("tertip.bölütleme_yeterli", float(b.yeterli))
@@ -2386,7 +2386,7 @@ class Kiyas(Meleke):
 
         sahitler = d.sahitler or []
         E = d.E
-        d.kaideler = [kaideyi_coz(E, s, ne="tek") for s in sahitler]
+        d.kaideler = [kaide(E, s, ne="tek") for s in sahitler]
         d.olcum.koy("kıyas.kaide_sayısı", float(len(d.kaideler)))
         if d.kaideler:
             oz = [float(np.mean(artiklar(E, s, R)))
@@ -3123,7 +3123,7 @@ class Tahkik(Meleke):
     yakınlığı değil **kökenle bağı** arar.
 
     **Küllî kaide burada mühürlenir** (kütük H6). Kaide, şahitlerin
-    çapraz kovaryanslarının kutupsal toplamıdır (`sahit.kaideyi_coz(ne="küllî")`) --
+    çapraz kovaryanslarının kutupsal toplamıdır (`sahit.kaide(ne="küllî")`) --
     fakat **nakzedilmiş şahitler dışarıda bırakılır**: kökeni bozuk
     şahitten alınan kaide taklittir, tahkik değildir.
 
@@ -3162,7 +3162,7 @@ class Tahkik(Meleke):
         temiz = [s for i, s in enumerate(sahitler) if i not in nakz]
         if temiz:
             # kaide ham duyu uzayında yaşar (bkz. 𝒪₁₈ Kıyas)
-            d.kaide = kaideyi_coz(sahitler=[kaideyi_coz(d.E, s, ne="kovaryans") for s in temiz], ne="küllî")
+            d.kaide = kaide(sahitler=[kaide(d.E, s, ne="kovaryans") for s in temiz], ne="küllî")
             kalan = [float(np.mean(artiklar(d.E, s, d.kaide)))
                      for s in temiz if artiklar(d.E, s, d.kaide).size]
             d.olcum.koy("tahkik.kaide_artığı",
@@ -5675,7 +5675,7 @@ class QNefs:
         # aynı cinstendir; H31 yasağı melekenin dalgaya bakmasınaydı.
         # Küllî cevabı olmayan bir suale verilecek karşılık susmaktır.
         if tikaniklik:
-            ortu_kapaniyor_mu(ne="kapı", q=q, h1=float(tikaniklik))
+            ortu(ne="kapı", q=q, h1=float(tikaniklik))
         q.superpozisyon()
         q.mera()
         # **MANTIĞA SADAKAT: her melekeden sonra, muafiyetsiz** (H102/H105).
@@ -5688,12 +5688,12 @@ class QNefs:
         for no in self.sira:
             self.s[no].kosu(q, self.p)
             if self.sadakat:
-                mantigi_tek_supurmede_isaretle(q, self.p, ne="işaret")
+                vicdan(q, self.p, ne="işaret")
         if self.sadakat:
             # TERTİP: mantık usulleri süperpozisyonda koşar ve `mizan`
             # neyin yasak olduğunu söyler (H109). Ana akışa buradan
             # bağlanır -- artık `mizan` beylik değil tebaadır.
-            q.iz.kesme += mantigi_tek_supurmede_isaretle(q, ne="usul")
+            q.iz.kesme += vicdan(q, ne="usul")
         if self.gaye:
             # **GAYE DOĞUŞU (Dosya 4 / H122).** ``gaye`` alanı H108'den
             # beri tahsisliydi fakat ÖLÇÜLDÜ ve tam ``|0⟩``daydı: hiçbir
@@ -5706,7 +5706,7 @@ class QNefs:
         if self.sadakat:
             # İşaretlenen mantık dışı kollar burada SÖNER: faz farkı,
             # yansıtmayla genlik farkına çevrilir (H98'de ölçülen usul).
-            mantigi_tek_supurmede_isaretle(q, ne="intaç")
+            vicdan(q, ne="intaç")
         if bec:
             bec_faz_kilidi(q)
         # **Ölçümden evvel durum, durum olmalıdır.** Kesme her vuruşta
@@ -5880,3 +5880,159 @@ def rapor_manifold() -> str:                                      # pragma: no c
          "  BGCM mizanı   : %.6f  (normalize, [0,1])"
          % m.bgcm_mizan_enerjisi()]
     return "\n".join(s)
+
+
+# ====================================================================
+#  KÜME 8: GRAPE -- kapı darbelerinin optimal kontrolü
+# ====================================================================
+
+def _uexp(H: np.ndarray, t: float) -> np.ndarray:
+    lam, V = np.linalg.eigh(H)
+    return (V * np.exp(-1j * lam * t)) @ V.conj().T
+
+
+def _genel_expm(M: np.ndarray, tur: int = 60) -> np.ndarray:
+    """Genel ``exp(M)`` — ölçekle-kare-al + Taylor.
+
+    Fréchet blok dizeyi ``[[A,E],[0,A]]`` **dejenere özdeğerlidir**
+    (``A``nın tayfı iki kere geçer), bu yüzden özayrışım yolu orada
+    sayısal olarak çöker.  Ölçüldü: ``eig`` ile kurulan tam gradyan
+    sonlu farktan 1.9e-01…4.5e-01 sapıyordu; ölçekle-kare-al ile
+    1e-10 mertebesine iniyor.
+    """
+    M = np.asarray(M, complex)
+    nrm = float(np.abs(M).sum(axis=1).max())
+    k = max(0, int(math.ceil(math.log2(max(nrm, 1e-300)))) + 2)
+    A = M / (2.0 ** k)
+    S = np.eye(A.shape[0], dtype=complex)
+    T = np.eye(A.shape[0], dtype=complex)
+    for i in range(1, tur):
+        T = T @ A / i
+        S = S + T
+        if np.abs(T).max() < 1e-18:
+            break
+    for _ in range(k):
+        S = S @ S
+    return S
+
+
+def sadakat(H0: np.ndarray, Hk: Sequence[np.ndarray],
+            om: Sequence[np.ndarray], psi0: np.ndarray,
+            hedef: np.ndarray, T: float) -> float:
+    """``F = |⟨hedef|U(T)|ψ₀⟩|²``."""
+    M = len(om[0])
+    dt = T / M
+    p = np.asarray(psi0, complex).copy()
+    for j in range(M):
+        H = H0 + sum(om[k][j] * Hk[k] for k in range(len(Hk)))
+        p = _uexp(H, dt) @ p
+    return float(abs(np.vdot(hedef, p)) ** 2)
+
+
+def _ileri_geri(H0, Hk, om, psi0, hedef, T):
+    M = len(om[0])
+    dt = T / M
+    Us, ileri = [], [np.asarray(psi0, complex).copy()]
+    p = ileri[0]
+    for j in range(M):
+        H = H0 + sum(om[k][j] * Hk[k] for k in range(len(Hk)))
+        U = _uexp(H, dt)
+        Us.append(U)
+        p = U @ p
+        ileri.append(p.copy())
+    geri = [None] * (M + 1)
+    lam = np.asarray(hedef, complex).copy()
+    geri[M] = lam.copy()
+    for j in range(M - 1, -1, -1):
+        lam = Us[j].conj().T @ lam
+        geri[j] = lam.copy()
+    return Us, ileri, geri, dt
+
+
+def grape_gradyani(H0, Hk, om, psi0, hedef, T) -> List[np.ndarray]:
+    """Kaynağın (birinci mertebe) GRAPE gradyanı — ``O(Δt²)`` hatalı."""
+    Us, ileri, geri, dt = _ileri_geri(H0, Hk, om, psi0, hedef, T)
+    M = len(om[0])
+    G = [np.zeros(M) for _ in Hk]
+    for k in range(len(Hk)):
+        for j in range(M):
+            P, PSI = geri[j + 1], ileri[j + 1]
+            G[k][j] = 2.0 * np.real(np.vdot(P, PSI)
+                                    * np.vdot(PSI, (1j * dt * Hk[k]) @ P))
+    return G
+
+
+def tam_gradyan(H0, Hk, om, psi0, hedef, T) -> List[np.ndarray]:
+    """**Tam** gradyan — üstelin Fréchet türeviyle.
+
+    ``d/dθ exp(A(θ))`` için genişletilmiş dizey kaidesi:
+    ``exp([[A, E],[0, A]]) = [[e^A, dexp],[0, e^A]]``.  Bu, ``Δt``de
+    yaklaşım **değildir**; ölçülüyor.
+
+    Blok dizey dejenere özdeğerlidir; üstel :func:`_genel_expm` ile
+    (ölçekle-kare-al) alınır.  Özayrışım kullanmak burada **çöker** --
+    ilk hâlde öyle yazmıştım, ölçüm yakaladı.
+    """
+    M = len(om[0])
+    dt = T / M
+    n = H0.shape[0]
+    Us, ileri, geri, _ = _ileri_geri(H0, Hk, om, psi0, hedef, T)
+    G = [np.zeros(M) for _ in Hk]
+    for k in range(len(Hk)):
+        for j in range(M):
+            H = H0 + sum(om[q][j] * Hk[q] for q in range(len(Hk)))
+            A = -1j * dt * H
+            E = -1j * dt * Hk[k]
+            B = np.zeros((2 * n, 2 * n), dtype=complex)
+            B[:n, :n] = A
+            B[n:, n:] = A
+            B[:n, n:] = E
+            EB = _genel_expm(B)
+            dU = EB[:n, n:]
+            P, PSI = geri[j + 1], ileri[j]
+            # F = |⟨hedef|U_M…U_1|ψ₀⟩|²; ∂F/∂θ = 2Re[⟨c⟩* · ⟨P|dU|ψ_j⟩]
+            c = np.vdot(geri[0], ileri[0])
+            G[k][j] = 2.0 * np.real(np.conj(c) * np.vdot(P, dU @ PSI))
+    return G
+
+
+def sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, T, h: float = 1e-6
+                        ) -> List[np.ndarray]:
+    """Merkezî sonlu fark — hakem."""
+    M = len(om[0])
+    G = [np.zeros(M) for _ in Hk]
+    for k in range(len(Hk)):
+        for j in range(M):
+            o1 = [x.copy() for x in om]; o1[k][j] += h
+            o2 = [x.copy() for x in om]; o2[k][j] -= h
+            G[k][j] = (sadakat(H0, Hk, o1, psi0, hedef, T)
+                       - sadakat(H0, Hk, o2, psi0, hedef, T)) / (2 * h)
+    return G
+
+
+def grape_kos(H0, Hk, psi0, hedef, T: float, M: int = 40,
+              tur: int = 200, adim: float = 0.5, tohum: int = 0
+              ) -> Dict[str, object]:
+    """GRAPE ile sadakati yükselt — yaklaşık gradyanla."""
+    r = np.random.default_rng(tohum)
+    om = [r.normal(size=M) * 0.2 for _ in Hk]
+    F = sadakat(H0, Hk, om, psi0, hedef, T)
+    seyir = [F]
+    t = adim
+    for _ in range(tur):
+        G = grape_gradyani(H0, Hk, om, psi0, hedef, T)
+        n = math.sqrt(sum(float(np.sum(g * g)) for g in G))
+        if n < 1e-14:
+            break
+        yeni = [om[k] + t * G[k] / n for k in range(len(Hk))]
+        Fy = sadakat(H0, Hk, yeni, psi0, hedef, T)
+        if Fy > F:
+            om, F = yeni, Fy
+        else:
+            t *= 0.5
+            if t < 1e-10:
+                break
+        seyir.append(F)
+    return {"kontrol": om, "sadakat": F, "seyir": seyir,
+            "tekdüze_mi": all(seyir[i] <= seyir[i + 1] + 1e-12
+                              for i in range(len(seyir) - 1))}

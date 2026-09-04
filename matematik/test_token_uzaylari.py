@@ -31,7 +31,7 @@ from matematik import geometri as mo
 
 @pytest.mark.parametrize("n", [1, 2, 3, 4])
 def test_duz_uzayda_her_sey_sifir(n):
-    d = mf.hazir_metrik("düz", n=n)
+    d = mf.metrik("düz", n=n)
     x = np.linspace(0.2, 1.4, n)
     assert np.max(np.abs(d.christoffel(x))) < 1e-12
     assert np.max(np.abs(d.riemann(x))) < 1e-12
@@ -40,7 +40,7 @@ def test_duz_uzayda_her_sey_sifir(n):
 
 @pytest.mark.parametrize("r", [0.5, 1.0, 2.0, 3.0])
 def test_kurede_K_bir_bolu_r_kare(r):
-    k = mf.hazir_metrik("küre", r=r)
+    k = mf.metrik("küre", r=r)
     for p in ([1.0, 0.4], [0.8, 2.0], [2.0, 1.1]):
         K = k.kesit_egriligi(np.array(p), [1.0, 0.0], [0.0, 1.0])
         assert K == pytest.approx(1.0 / r ** 2, rel=1e-5), p
@@ -49,7 +49,7 @@ def test_kurede_K_bir_bolu_r_kare(r):
 
 
 def test_hiperbolik_duzlemde_K_eksi_bir():
-    h = mf.hazir_metrik("hiperbolik")
+    h = mf.metrik("hiperbolik")
     for p in ([0.0, 1.0], [2.0, 0.5], [-1.0, 3.0], [0.5, 1.3]):
         K = h.kesit_egriligi(np.array(p), [1.0, 0.0], [0.0, 1.0])
         assert K == pytest.approx(-1.0, rel=1e-5), p
@@ -58,24 +58,24 @@ def test_hiperbolik_duzlemde_K_eksi_bir():
 
 def test_kesit_egriligi_isaret_konvansiyonu_sabit():
     """Kürede POZİTİF, hiperbolikte NEGATİF — ikisi aynı formülle."""
-    kK = mf.hazir_metrik("küre", r=1.0).kesit_egriligi(np.array([1.0, 0.4]),
+    kK = mf.metrik("küre", r=1.0).kesit_egriligi(np.array([1.0, 0.4]),
                                              [1.0, 0.0], [0.0, 1.0])
-    hK = mf.hazir_metrik("hiperbolik").kesit_egriligi(np.array([0.5, 1.3]),
+    hK = mf.metrik("hiperbolik").kesit_egriligi(np.array([0.5, 1.3]),
                                                [1.0, 0.0], [0.0, 1.0])
     assert kK > 0 and hK < 0
 
 
 def test_paralel_vektorlerde_kesit_tanimsiz():
-    k = mf.hazir_metrik("küre", r=1.0)
+    k = mf.metrik("küre", r=1.0)
     K = k.kesit_egriligi(np.array([1.0, 0.4]), [1.0, 0.0], [2.0, 0.0])
     assert np.isnan(K)
 
 
 @pytest.mark.parametrize("ad,m,p", [
-    ("küre", mf.hazir_metrik("küre", r=1.0), [1.0, 0.4]),
-    ("küre-r2", mf.hazir_metrik("küre", r=2.0), [0.8, 1.7]),
-    ("hiperbolik", mf.hazir_metrik("hiperbolik"), [0.5, 1.3]),
-    ("düz", mf.hazir_metrik("düz", n=3), [0.2, -0.4, 1.0]),
+    ("küre", mf.metrik("küre", r=1.0), [1.0, 0.4]),
+    ("küre-r2", mf.metrik("küre", r=2.0), [0.8, 1.7]),
+    ("hiperbolik", mf.metrik("hiperbolik"), [0.5, 1.3]),
+    ("düz", mf.metrik("düz", n=3), [0.2, -0.4, 1.0]),
 ])
 def test_riemann_simetrileri(ad, m, p):
     r = mf.riemann_simetrileri(m, p, tol=1e-5)
@@ -84,15 +84,15 @@ def test_riemann_simetrileri(ad, m, p):
 
 def test_christoffel_alt_indislerde_simetrik():
     """Levi-Civita burulmasızdır: ``Γ^k_{ij} = Γ^k_{ji}``."""
-    for m, p in ((mf.hazir_metrik("küre", r=1.0), [1.0, 0.4]),
-                 (mf.hazir_metrik("hiperbolik"), [0.5, 1.3])):
+    for m, p in ((mf.metrik("küre", r=1.0), [1.0, 0.4]),
+                 (mf.metrik("hiperbolik"), [0.5, 1.3])):
         G = m.christoffel(np.array(p))
         assert np.max(np.abs(G - np.transpose(G, (0, 2, 1)))) < 1e-9
 
 
 def test_ricci_simetrik():
-    for m, p in ((mf.hazir_metrik("küre", r=1.0), [1.0, 0.4]),
-                 (mf.hazir_metrik("hiperbolik"), [0.5, 1.3])):
+    for m, p in ((mf.metrik("küre", r=1.0), [1.0, 0.4]),
+                 (mf.metrik("hiperbolik"), [0.5, 1.3])):
         R = m.ricci(np.array(p))
         olcek = max(float(np.max(np.abs(R))), 1e-30)
         assert np.max(np.abs(R - R.T)) / olcek < 1e-6
@@ -100,9 +100,9 @@ def test_ricci_simetrik():
 
 def test_laplace_beltrami_iki_yol_uyusuyor():
     f = lambda z: float(np.sin(z[0]) * np.exp(0.3 * z[1]))
-    for m, p in ((mf.hazir_metrik("düz", n=2), [0.4, 0.9]),
-                 (mf.hazir_metrik("küre", r=1.0), [1.0, 0.4]),
-                 (mf.hazir_metrik("hiperbolik"), [0.5, 1.3])):
+    for m, p in ((mf.metrik("düz", n=2), [0.4, 0.9]),
+                 (mf.metrik("küre", r=1.0), [1.0, 0.4]),
+                 (mf.metrik("hiperbolik"), [0.5, 1.3])):
         a = m.laplace_beltrami(f, np.array(p))
         b = m.laplace_beltrami_christoffel(f, np.array(p))
         assert abs(a - b) < 1e-4, (m.ad, a, b)
@@ -112,13 +112,13 @@ def test_duz_uzayda_laplace_beltrami_alelade_laplasyene_iniyor():
     f = lambda z: float(np.sin(z[0]) * np.exp(0.3 * z[1]))
     p = np.array([0.4, 0.9])
     tam = (-np.sin(p[0]) + 0.09 * np.sin(p[0])) * np.exp(0.3 * p[1])
-    assert mf.hazir_metrik("düz", n=2).laplace_beltrami(f, p) == pytest.approx(
+    assert mf.metrik("düz", n=2).laplace_beltrami(f, p) == pytest.approx(
         tam, abs=1e-5)
 
 
 def test_sabit_fonksiyonun_laplasyeni_sifir():
-    for m, p in ((mf.hazir_metrik("küre", r=1.0), [1.0, 0.4]),
-                 (mf.hazir_metrik("hiperbolik"), [0.5, 1.3])):
+    for m, p in ((mf.metrik("küre", r=1.0), [1.0, 0.4]),
+                 (mf.metrik("hiperbolik"), [0.5, 1.3])):
         assert abs(m.laplace_beltrami(lambda z: 3.7, np.array(p))) < 1e-6
 
 
@@ -131,12 +131,12 @@ def test_bozuk_metrik_reddediliyor():
         negatif.denetle([0.0, 0.0])
     # Küre kutupta dejenere:
     with pytest.raises(ValueError):
-        mf.hazir_metrik("küre", r=1.0).denetle([0.0, 0.0])
+        mf.metrik("küre", r=1.0).denetle([0.0, 0.0])
 
 
 def test_konformal_metrik_duzle_ayni_esik():
     """``φ ≡ 0`` iken konformal metrik düz metriğe inmeli."""
-    k = mf.hazir_metrik("konformal", n=2, olcek=lambda x: 0.0)
+    k = mf.metrik("konformal", n=2, olcek=lambda x: 0.0)
     p = np.array([0.3, -0.5])
     assert np.max(np.abs(k.G(p) - np.eye(2))) < 1e-14
     assert abs(k.skaler_egrilik(p)) < 1e-8
@@ -191,7 +191,7 @@ def test_bileske_boyut_denetimi(ikili):
 def test_cekilmis_metrik_JtJ(ikili):
     phi, _ = ikili
     x = [0.7, -0.4]
-    G = phi.metrik_cek(mf.hazir_metrik("düz", n=3), x)
+    G = phi.metrik_cek(mf.metrik("düz", n=3), x)
     J = phi.dphi(x)
     assert np.max(np.abs(G - J.T @ J)) < 1e-12
     assert np.max(np.abs(G - G.T)) < 1e-12
@@ -199,7 +199,7 @@ def test_cekilmis_metrik_JtJ(ikili):
 
 
 def test_izometri_ve_konformallik_ayirt_ediliyor():
-    duz2 = mf.hazir_metrik("düz", n=2)
+    duz2 = mf.metrik("düz", n=2)
     noktalar = [[0.3, 0.5], [-0.8, 1.2], [1.5, -0.3]]
     donme = mo.Morfizm(2, 2, lambda z: np.array([
         np.cos(0.7) * z[0] - np.sin(0.7) * z[1],
@@ -234,7 +234,7 @@ def test_carpim_morfizminin_jakobisi_blok_kosegen():
 
 def test_cekilmis_metrik_ile_egrilik_hesaplanabiliyor():
     """Kürenin çekilmiş metriği yine kürenin eğriliğini vermeli."""
-    kure = mf.hazir_metrik("küre", r=1.0)
+    kure = mf.metrik("küre", r=1.0)
     ozdes = mo.Morfizm(2, 2, lambda z: z.copy(), "id")
     cekilmis = ozdes.cekilmis_metrik(kure)
     p = np.array([1.0, 0.4])

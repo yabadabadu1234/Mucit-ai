@@ -20,7 +20,7 @@ tekti, isimler çoktu.
    ``hartley`` (RHT, involutif) ve ``hartley_evrisim``; **M29**:
    ``ℋ(f*g) = √N (F·G_ç + F[−k]·G_t)`` simetri parçalanması
    mecburîdir, naif nokta çarpımı değildir.
-2. **Meleke kapıları** -- ``kapi_kur``: ``I − α·vvᵀ`` (α=2 yansıma
+2. **Meleke kapıları** -- ``kapi``: ``I − α·vvᵀ`` (α=2 yansıma
    dik, α=1 izdüşüm üniter değil), ``diag(d)`` (±1 dik, √P değil),
    Givens, permütasyon, RHT. Hiçbirinde tam dizey kurulmaz.
 3. **Tam aritmetik** -- ``Z8``: ``ℤ[ζ₈][1/√2]`` halkasında Clifford+T
@@ -30,7 +30,7 @@ tekti, isimler çoktu.
    saklama maliyetleri.
 4. **Riemann hendesesi** -- ``Metrik``: ``g_ij``, Christoffel ``Γ``,
    Riemann tensörü, Ricci, skaler eğrilik, kesit eğriliği,
-   Laplace–Beltrami; ``hazir_metrik`` (düz/küre/hiperbolik/konformal,
+   Laplace–Beltrami; ``metrik`` (düz/küre/hiperbolik/konformal,
    üçü tek konformal aileden); ``Morfizm``: itme ``dφ``, çekme
    ``φ*``, metrik çekme, izometri ve konformal denetim.
 5. **Kan uzantıları ve yaklaşım** -- sonlu kategorilerde Lan/Ran
@@ -496,7 +496,7 @@ class Kapi:
         return self.uygula(x)
 
 
-def kapi_kur(ne: str = "yansıma", v=None, aci=None, ciftler=None,
+def kapi(ne: str = "yansıma", v=None, aci=None, ciftler=None,
              D: int = 0, isaret=None, perm=None, P=None,
              theta: float = 0.0, i: int = 0, j: int = 1,
              ad: str = "") -> Kapi:
@@ -573,7 +573,7 @@ def kapi_kur(ne: str = "yansıma", v=None, aci=None, ciftler=None,
                     "diag(√P): AᵀA = diag(P) ≠ I -- kapı değil")
 
     if ne == "so2":
-        return kapi_kur("givens", aci=[theta], ciftler=[(i, j)], D=D,
+        return kapi("givens", aci=[theta], ciftler=[(i, j)], D=D,
                         ad=ad or "Şek-Zan-Yakîn")
 
     if ne == "givens":
@@ -620,20 +620,20 @@ def meleke_kapilari(D: int = VARSAYILAN_BOYUT, tohum: int = 0
         tur = k % 5
         if tur == 0:
             v = r.normal(size=D)
-            K.append(kapi_kur("yansıma", v=v, ad=ad))
+            K.append(kapi("yansıma", v=v, ad=ad))
         elif tur == 1:
             m = max(4, D // 8)
             ciftler = [(int(a), int(b)) for a, b in
                        r.integers(0, D, size=(m, 2)) if a != b]
-            K.append(kapi_kur("givens",
+            K.append(kapi("givens",
                               aci=r.uniform(0, 2 * math.pi, len(ciftler)),
                               ciftler=ciftler, D=D, ad=ad))
         elif tur == 2:
-            K.append(kapi_kur("işaret", isaret=r.choice([-1.0, 1.0], size=D), ad=ad))
+            K.append(kapi("işaret", isaret=r.choice([-1.0, 1.0], size=D), ad=ad))
         elif tur == 3:
-            K.append(kapi_kur("permütasyon", perm=r.permutation(D), ad=ad))
+            K.append(kapi("permütasyon", perm=r.permutation(D), ad=ad))
         else:
-            K.append(kapi_kur("hartley", D=D, ad=ad))
+            K.append(kapi("hartley", D=D, ad=ad))
     assert len(K) == 41
     return K
 
@@ -736,7 +736,7 @@ def genel_isaret_olculemez(D: int = 8, tohum: int = 0) -> Dict[str, float]:
     rho = np.outer(psi, psi)
     genel = np.outer(-psi, -psi)
     v = r.normal(size=D); v /= np.linalg.norm(v)
-    yerel = kapi_kur("yansıma", v=v)(psi)
+    yerel = kapi("yansıma", v=v)(psi)
     return {"genel_işaret_farkı": float(np.abs(rho - genel).max()),
             "alt_uzay_işareti_farkı":
                 float(np.abs(rho - np.outer(yerel, yerel)).max())}
@@ -780,8 +780,8 @@ def _rapor_reel_meleke(D: int = VARSAYILAN_BOYUT) -> str:
     r = np.random.default_rng(0)
     d = 8
     v = r.normal(size=d); v /= np.linalg.norm(v)
-    U = kapi_kur("yansıma", v=v)
-    Pj = kapi_kur("silme", v=v)
+    U = kapi("yansıma", v=v)
+    Pj = kapi("silme", v=v)
     for ad, psi in (("rastgele Ψ", r.normal(size=d)),
                     ("Ψ = v (paralel)", v.copy())):
         psi = psi / np.linalg.norm(psi)
@@ -798,7 +798,7 @@ def _rapor_reel_meleke(D: int = VARSAYILAN_BOYUT) -> str:
 
     s.append("\n=== M11/M12: ihtimal işleci üniter değil ===")
     P = r.random(6); P /= P.sum()
-    M = kapi_kur("ölçüm", P=P)
+    M = kapi("ölçüm", P=P)
     A = M.dizey()
     s.append("  diag(√P): ‖AᵀA − I‖ = %.4f   (kapı sayılamaz)"
              % float(np.abs(A.T @ A - np.eye(6)).max()))
@@ -808,7 +808,7 @@ def _rapor_reel_meleke(D: int = VARSAYILAN_BOYUT) -> str:
 
     s.append("\n=== M13: şek/zan/yakîn tek bir SO(2) açısı ===")
     for ad, th in (("yakîn", 0.02), ("zan", 0.5), ("şek", math.pi / 4)):
-        G = kapi_kur("so2", theta=th, D=2).dizey()
+        G = kapi("so2", theta=th, D=2).dizey()
         e0 = np.array([1.0, 0.0])
         y = G @ e0
         s.append("  %-6s θ=%.4f   |⟨0|y⟩|²=%.4f  |⟨1|y⟩|²=%.4f   "
@@ -974,10 +974,10 @@ def bit_uzunlugu(M) -> int:
     return max(int(z.bit()) for z in A)
 
 
-def kapi(ad: str = "H") -> List[List[Z8]]:
+def z8_kapi(ad: str = "H") -> List[List[Z8]]:
     """HANGİ KAPI, TAM ARİTMETİKTE -- tek terkip (kütük H226).
 
-    Küme: ``kapi("H")``, ``kapi("T")``, ``kapi("S")``, ``kapi("X")``, ``kapi("Z")``.
+    Küme: ``z8_kapi("H")``, ``z8_kapi("T")``, ``z8_kapi("S")``, ``z8_kapi("X")``, ``z8_kapi("Z")``.
     Beş isim, tek bir cetvelin satırları idi ve hepsi aynı şeyi yapar:
     Clifford+T üreteçlerinden birini ``ℤ[ζ₈][1/√2]`` halkasında **tam**
     kurmak.
@@ -1035,8 +1035,8 @@ def _mv(A, v):
 
 def tam_devre(dizi: Sequence[str]) -> Dict[str, object]:
     """``|0⟩``a ``dizi`` kapılarını **tam** uygula; hiç yuvarlama yok."""
-    G = {"H": kapi("H"), "T": kapi("T"), "S": kapi("S"),
-         "X": kapi("X"), "Z": kapi("Z")}
+    G = {"H": z8_kapi("H"), "T": z8_kapi("T"), "S": z8_kapi("S"),
+         "X": z8_kapi("X"), "Z": z8_kapi("Z")}
     v = [BIR, SIFIR]
     bitler = []
     for g in dizi:
@@ -2343,11 +2343,11 @@ KIP_DUZ, KIP_KURE = "düz", "küre"
 KIP_HIP, KIP_KONF = "hiperbolik", "konformal"
 
 
-def hazir_metrik(ne: str = "düz", n: int = 2, r: float = 1.0,
+def metrik(ne: str = "düz", n: int = 2, r: float = 1.0,
                  olcek=None) -> Metrik:
     """HAZIR METRİKLER -- tek terkip (kütük H226).
 
-    Küme: ``duz_metrik``, ``hazir_metrik``, ``hiperbolik_metrik``,
+    Küme: ``duz_metrik``, ``metrik``, ``hiperbolik_metrik``,
     ``konformal_metrik``. Dört isim ayrı ayrı dururken görünmeyen
     özdeşlik şudur: **dördünün üçü aynı konformal ailedendir.**
 
@@ -2423,7 +2423,7 @@ def _rapor_token_uzaylari_manifold() -> str:
     s: List[str] = []
 
     s.append("=== Düz uzay: bütün eğrilik sıfır olmalı ===")
-    d = hazir_metrik(KIP_DUZ, n=3)
+    d = metrik(KIP_DUZ, n=3)
     x = np.array([0.3, -0.7, 1.1])
     s.append(f"  ‖Γ‖∞      = {np.max(np.abs(d.christoffel(x))):.3e}")
     s.append(f"  ‖Riemann‖∞ = {np.max(np.abs(d.riemann(x))):.3e}")
@@ -2431,7 +2431,7 @@ def _rapor_token_uzaylari_manifold() -> str:
 
     s.append("\n=== 2-küre: K = 1/r², R = 2/r² ===")
     for r in (1.0, 2.0, 0.5):
-        k = hazir_metrik(KIP_KURE, r=r)
+        k = metrik(KIP_KURE, r=r)
         p = np.array([1.0, 0.4])          # kutuptan uzak bir nokta
         K = k.kesit_egriligi(p, [1.0, 0.0], [0.0, 1.0])
         R = k.skaler_egrilik(p)
@@ -2439,15 +2439,15 @@ def _rapor_token_uzaylari_manifold() -> str:
                  f"   R={R:.10f} (beklenen {2/r**2:.10f})")
 
     s.append("\n=== Hiperbolik düzlem: K = −1 ===")
-    h = hazir_metrik(KIP_HIP)
+    h = metrik(KIP_HIP)
     for p in ([0.0, 1.0], [2.0, 0.5], [-1.0, 3.0]):
         K = h.kesit_egriligi(np.array(p), [1.0, 0.0], [0.0, 1.0])
         s.append(f"  nokta {str(p):12s} K = {K:.10f}"
                  f"   R = {h.skaler_egrilik(np.array(p)):.10f}")
 
     s.append("\n=== Riemann simetrileri (bağıl ihlal) ===")
-    for ad, m, p in (("küre", hazir_metrik(KIP_KURE, r=1.0), [1.0, 0.4]),
-                     ("hiperbolik", hazir_metrik(KIP_HIP), [0.5, 1.3])):
+    for ad, m, p in (("küre", metrik(KIP_KURE, r=1.0), [1.0, 0.4]),
+                     ("hiperbolik", metrik(KIP_HIP), [0.5, 1.3])):
         r = riemann_simetrileri(m, p)
         s.append(f"  {ad:11s} antisim {r['ilk_çift_antisimetri']:.2e}/"
                  f"{r['son_çift_antisimetri']:.2e}"
@@ -2457,9 +2457,9 @@ def _rapor_token_uzaylari_manifold() -> str:
 
     s.append("\n=== Laplace–Beltrami: iki yol aynı sayıyı mı veriyor? ===")
     f = lambda z: float(np.sin(z[0]) * np.exp(0.3 * z[1]))
-    for ad, m, p in (("düz(2)", hazir_metrik(KIP_DUZ, n=2), [0.4, 0.9]),
-                     ("küre", hazir_metrik(KIP_KURE, r=1.0), [1.0, 0.4]),
-                     ("hiperbolik", hazir_metrik(KIP_HIP), [0.5, 1.3])):
+    for ad, m, p in (("düz(2)", metrik(KIP_DUZ, n=2), [0.4, 0.9]),
+                     ("küre", metrik(KIP_KURE, r=1.0), [1.0, 0.4]),
+                     ("hiperbolik", metrik(KIP_HIP), [0.5, 1.3])):
         a = m.laplace_beltrami(f, np.array(p))
         b = m.laplace_beltrami_christoffel(f, np.array(p))
         s.append(f"  {ad:11s} diverjans={a:+.8f}  Christoffel={b:+.8f}"
@@ -2469,11 +2469,11 @@ def _rapor_token_uzaylari_manifold() -> str:
     p = np.array([0.4, 0.9])
     tam = -np.sin(p[0]) * np.exp(0.3 * p[1]) \
         + 0.09 * np.sin(p[0]) * np.exp(0.3 * p[1])
-    s.append(f"    sayısal={hazir_metrik(KIP_DUZ, n=2).laplace_beltrami(f, p):+.8f}"
+    s.append(f"    sayısal={metrik(KIP_DUZ, n=2).laplace_beltrami(f, p):+.8f}"
              f"   kapalı={tam:+.8f}")
 
     s.append("\n=== Koordinat tekilliği gizlenmiyor ===")
-    k = hazir_metrik(KIP_KURE, r=1.0)
+    k = metrik(KIP_KURE, r=1.0)
     try:
         k.denetle([0.0, 0.0])          # kutup: sin θ = 0
         s.append("  kutupta metrik kabul edildi (BEKLENMEZ)")
@@ -2689,7 +2689,7 @@ def _rapor_token_uzaylari_morfizm() -> str:
         s.append(f"    yanlış boyda ko-vektör reddedildi: {e}")
 
     s.append("\n=== Metrik çekme ===")
-    duz3 = hazir_metrik("düz", n=3)
+    duz3 = metrik("düz", n=3)
     G = phi.metrik_cek(duz3, x)
     J = phi.dphi(x)
     s.append(f"  φ^*δ = JᵀJ mi? sapma = {np.max(np.abs(G - J.T @ J)):.3e}")
@@ -2705,7 +2705,7 @@ def _rapor_token_uzaylari_morfizm() -> str:
         np.sin(0.7) * z[0] + np.cos(0.7) * z[1]]), "dönme")
     olcekleme = Morfizm(2, 2, lambda z: 2.5 * z, "×2.5")
     egri = Morfizm(2, 2, lambda z: np.array([z[0] ** 2, z[1]]), "eğri")
-    duz2 = hazir_metrik("düz", n=2)
+    duz2 = metrik("düz", n=2)
     for ad, m in (("dönme", donme), ("×2.5", olcekleme), ("eğri", egri)):
         i = izometri_mi(m, duz2, duz2, noktalar)
         k = konformal_mi(m, duz2, duz2, noktalar)
@@ -2874,8 +2874,8 @@ def kayipsizlik_karnesi(d: TokenDenkligi,
     * **Hacim**: ``|det|``.  ``1`` ise hacim korunur.
     """
     gd = d.gidis_donus(noktalar)
-    duz = hazir_metrik("düz", n=d.ileri.n)
-    izo = izometri_mi(d.ileri, duz, hazir_metrik("düz", n=d.ileri.m), noktalar)
+    duz = metrik("düz", n=d.ileri.n)
+    izo = izometri_mi(d.ileri, duz, metrik("düz", n=d.ileri.m), noktalar)
     J = d.ileri.dphi(noktalar[0])
     detmi = (abs(float(np.linalg.det(J))) if J.shape[0] == J.shape[1]
              else float("nan"))
@@ -4879,6 +4879,12 @@ def _kurede_asgari(f: Callable[[np.ndarray], float], R: float,
     izdüşümlü iniş yapmak bu dejenere yönü **bulur**.
     """
     d = V.shape[1]
+    # KÜME 8 tevhidi (H227): iki dosya aynı tuzağa KARŞI İKİ AYRI
+    # muhafaza geliştirmişti -- burada iniş, ``yaklasim/tikizlik.py``de
+    # ise koordinat eksenlerini yön kümesine zorla katmak. İkisi de
+    # tutulur: kaçış koridorları çoğu zaman eksenlerdedir ve iniş
+    # oraya her zaman inemez.
+    V = np.concatenate([np.eye(d), -np.eye(d), np.asarray(V, float)], axis=0)
     deg = np.array([float(f(R * v)) for v in V])
     en_iyi = float(deg.min())
     h = 1e-4
@@ -5591,6 +5597,519 @@ def _rapor_akis_ikmal() -> str:                                     # pragma: no
              % (t["mertebe"], t["derece"]))
     return "\n".join(s)
 
+
+
+# ====================================================================
+#  KÜME 8: asgarî var mı, ve modern yaklaşım mimarîlerinin tâlimi
+# ====================================================================
+
+def asgari_var_mi(f=None, boyut: int = 2, ne: str = "hüküm",
+                  c: float = 0.0,
+                  yaricaplar=(1.0, 10.0, 100.0, 1000.0),
+                  yon_sayisi: int = 200, azami_yaricap: float = 1e4,
+                  ornek: int = 5000, adim: int = 30,
+                  yaklasim_sayisi: int = 40, tohum: int = 0):
+    """ASGARÎ VAR MI -- **tek terkip** (kütük H227).
+
+    Küme: ``zorlayici_mi``, ``alt_seviye_sinirli_mi``,
+    ``ulasilmayan_infimum``, ``sin_bir_bolu_x``, ``yon_bagimli_limit``.
+    Beş isim **tek teoremin hipotezleri ve nakızlarıydı** -- Weierstrass:
+
+        ``f`` sürekli **ve** alt seviye kümesi tıkız  ⇒  asgarî **vardır**
+
+    Ve her hipotezin şart olduğu birer karşı örnekle mühürlenir:
+
+    ==================  ==============================================
+    ``ne``              ne ölçer / neyi düşürür
+    ==================  ==============================================
+    ``zorlayıcı``       küre üstündeki asgarî yarıçapla artıyor mu
+    ``seviye``          ``{f ≤ c}`` sınırlı görünüyor mu
+    ``hüküm``           ikisi birden -- asgarînin **varlık delili**
+    ``kaçış``           ``e^{−x}``: inf var, asgarî YOK (zorlayıcı değil)
+    ``süreksiz``        ``sin(1/x)``: limit yok (sürekli değil)
+    ``yönlü``           ``(x²−y²)/(x²+y²)``: limit yöne bağlı
+    ==================  ==============================================
+
+    **Bu bir ispat değil delildir** ve sınırı açıkça yazılıdır: yön
+    sayısı sonludur, dolayısıyla dar bir "kaçış koridoru" gözden
+    kaçabilir. Bu tuzağa yazarken bizzat düşüldü -- yalnız rastgele
+    yönlerle ``f(x) = Σ_{i≥1} xᵢ²`` (``x₀`` ekseni boyunca sabit sıfır)
+    ZORLAYICI göründü, çünkü rastgele bir yön eksene tam oturmaz. Bu
+    yüzden **koordinat eksenleri her zaman yön kümesine katılır**;
+    kaçış koridorları çoğu zaman eksenlerdedir.
+
+    Eniyilemenin ``kaçış`` hâlindeki başarısızlığı **usulün kusuru
+    değildir**: çözüm kümesi boştur. Hoca suçlu değil, suâl yanlıştır.
+    """
+    if ne == "zorlayıcı":
+        # Bu kol artık ``zorlayici_mi``ı çağırır: o hesap küre üstünde
+        # İNİŞLE arar ve dejenere yönü oran ölçüsüyle yakalar; buradaki
+        # eski örnekleme onun içine (eksen katma olarak) erimiştir.
+        return zorlayici_mi(f, boyut, tuple(yaricaplar), yon_sayisi, tohum)
+    if False:
+        rng = np.random.default_rng(tohum)
+        eksenler = np.concatenate([np.eye(boyut), -np.eye(boyut)], axis=0)
+        yonler = rng.normal(size=(yon_sayisi, boyut))
+        yonler /= np.linalg.norm(yonler, axis=1, keepdims=True)
+        yonler = np.concatenate([eksenler, yonler], axis=0)
+        asgariler = []
+        for R in yaricaplar:
+            degerler = [f(R * u) for u in yonler]
+            asgariler.append(float(min(degerler)))
+        artiyor = all(asgariler[i] < asgariler[i + 1] for i in range(len(asgariler) - 1))
+        return {
+            "yaricaplar": list(yaricaplar),
+            "kure_asgarileri": asgariler,
+            "delil_artiyor": artiyor,
+            "kayit": "sonlu yön örneklemesi; ispat değil delil",
+        }
+
+    if ne == "seviye":
+        return alt_seviye_tikiz_mi(f, c, boyut, azami_yaricap, tohum)
+    if False:
+        rng = np.random.default_rng(tohum)
+        # logaritmik yarıçap taraması: uzakta hâlâ c'nin altına inen var mı?
+        R = np.exp(rng.uniform(np.log(1e-2), np.log(azami_yaricap), size=ornek))
+        U = rng.normal(size=(ornek, boyut))
+        U /= np.linalg.norm(U, axis=1, keepdims=True)
+        eksenler = np.concatenate([np.eye(boyut), -np.eye(boyut)], axis=0)
+        U[: len(eksenler)] = eksenler
+        R[: len(eksenler)] = azami_yaricap
+        X = R[:, None] * U
+        icinde = np.array([f(x) <= c for x in X])
+        if not icinde.any():
+            return {"c": c, "nokta_yok": True, "azami_norm": 0.0, "sinirli_gorunuyor": True}
+        azami = float(np.max(np.linalg.norm(X[icinde], axis=1)))
+        return {
+            "c": c,
+            "nokta_yok": False,
+            "azami_norm": azami,
+            "sinirli_gorunuyor": bool(azami < azami_yaricap * 0.5),
+        }
+
+    if ne == "hüküm":
+        z = asgari_var_mi(f, boyut, "zorlayıcı", yaricaplar=yaricaplar,
+                          yon_sayisi=yon_sayisi, tohum=tohum)
+        s_ = asgari_var_mi(f, boyut, "seviye", c=c,
+                           azami_yaricap=azami_yaricap, ornek=ornek,
+                           tohum=tohum)
+        return {"zorlayıcı": z, "seviye": s_,
+                "asgarî_var_delili": bool(z["zorlayıcı_görünüyor"]
+                                          and s_["sınırlı"]),
+                "kayıt": "Weierstrass şartının sayısal delili; ispat değil"}
+
+    if ne == "kaçış":
+        x = 0.0
+        yol = []
+        for _ in range(adim):
+            # f' = -e^{-x};  büyük adım ölçekli iniş
+            x = x - 10.0 * (-np.exp(-x))
+            yol.append((x, float(np.exp(-x))))
+        return {
+            "son_x": yol[-1][0],
+            "son_f": yol[-1][1],
+            "infimum": 0.0,
+            "kaciyor": yol[-1][0] > yol[0][0] * 10 or yol[-1][0] > 10.0,
+            "asgari_ulasilmadi": yol[-1][1] > 0.0,
+        }
+
+    if ne == "süreksiz":
+        k = np.arange(1, yaklasim_sayisi + 1)
+        x_arti = 1.0 / (2 * np.pi * k + np.pi / 2)     # sin(1/x) = +1
+        x_eksi = 1.0 / (2 * np.pi * k - np.pi / 2)     # sin(1/x) = -1
+        f_arti = np.sin(1.0 / x_arti)
+        f_eksi = np.sin(1.0 / x_eksi)
+        return {
+            "x_arti_son": float(x_arti[-1]),
+            "x_eksi_son": float(x_eksi[-1]),
+            "limit_arti": float(np.max(np.abs(f_arti - 1.0))),
+            "limit_eksi": float(np.max(np.abs(f_eksi + 1.0))),
+            "iki_dizi_de_sifira_gidiyor": bool(x_arti[-1] < 1e-2 and x_eksi[-1] < 1e-2),
+            "limitler_ayrisiyor": bool(
+                np.allclose(f_arti, 1.0, atol=1e-12) and np.allclose(f_eksi, -1.0, atol=1e-12)
+            ),
+        }
+
+    if ne == "yönlü":
+        yaklasim_sayisi = min(yaklasim_sayisi, 12)
+        r = 10.0 ** (-np.arange(1, yaklasim_sayisi + 1, dtype=float))
+        aciler = [0.0, np.pi / 4, np.pi / 2, np.pi / 3]
+        izler = {}
+        for th in aciler:
+            x, y = r * np.cos(th), r * np.sin(th)
+            izler[round(th, 6)] = float(((x * x - y * y) / (x * x + y * y))[-1])
+        degerler = list(izler.values())
+        return {
+            "yarıcap_son": float(r[-1]),
+            "yone_gore_limitler": izler,
+            "cos2theta_ile_uyusuyor": all(
+                abs(izler[round(th, 6)] - np.cos(2 * th)) < 1e-12 for th in aciler
+            ),
+            "limit_yok": bool(max(degerler) - min(degerler) > 0.5),
+        }
+
+    raise ValueError("asgarî suâlinin kipi bilinmiyor: %r" % (ne,))
+
+
+def kare(x: np.ndarray) -> float:
+    return float(np.sum(x * x))
+
+
+def rosenbrock(x: np.ndarray) -> float:
+    return float(np.sum(100.0 * (x[1:] - x[:-1] ** 2) ** 2 + (1 - x[:-1]) ** 2))
+
+
+def zorlayici_olmayan(x: np.ndarray) -> float:
+    """``x₀`` ekseni boyunca sabit: alt seviye kümesi sınırsız."""
+    return float(np.sum(x[1:] ** 2))
+
+
+def _rbf(x: np.ndarray, dugum: np.ndarray, h: float) -> np.ndarray:
+    return np.exp(-0.5 * ((x[:, None] - dugum[None, :]) / h) ** 2)
+
+
+def _drbf(x: np.ndarray, dugum: np.ndarray, h: float) -> np.ndarray:
+    return -((x[:, None] - dugum[None, :]) / (h * h)) * _rbf(x, dugum, h)
+
+
+class KAN211:
+    """``[2,1,1]`` KAN: ``f(x,y) = Φ( φ₁(x) + φ₂(y) )``.
+
+    Hedef ``exp(sin(πx) + y²)`` tam olarak bu biçimdedir; dolayısıyla
+    sınanabilir bir iddia doğar: eğitimden sonra ``φ₁`` ``sin(πx)`` ile,
+    ``φ₂`` ``y²`` ile -- bir afin yeniden ölçeklemeye kadar -- uyuşmalıdır.
+
+    Kenar fonksiyonları RBF tabanındadır (FastKAN'ın yaptığı gibi; B-spline
+    yerine Gauss tabanı, kurgusu aynıdır). Dış ızgara ``s``in fiilî
+    aralığına göre periyodik olarak YENİLENİR -- yenilenmezse ``s`` sabit
+    ızgaranın dışına çıkar ve model çöker (bu, ölçüm sırasında görüldü:
+    kalıntı 0.58'den 0.99'a, yani hiç öğrenmemeye çıktı).
+    """
+
+    def __init__(self, ic_dugum: int = 32, dis_dugum: int = 32, tohum: int = 0) -> None:
+        rng = np.random.default_rng(tohum)
+        self.gx = np.linspace(-1, 1, ic_dugum)
+        self.hx = (self.gx[1] - self.gx[0]) * 1.5
+        self.c1 = rng.normal(scale=0.8, size=ic_dugum)
+        self.c2 = rng.normal(scale=0.8, size=ic_dugum)
+        self.K = dis_dugum
+        self.gs = np.linspace(-1, 1, dis_dugum)
+        self.hs = (self.gs[1] - self.gs[0]) * 1.5
+        self.c3 = np.zeros(dis_dugum)
+
+    def kenar(self, t: np.ndarray, hangi: int) -> np.ndarray:
+        return _rbf(t, self.gx, self.hx) @ (self.c1 if hangi == 1 else self.c2)
+
+    def ic(self, x: np.ndarray, y: np.ndarray) -> np.ndarray:
+        return self.kenar(x, 1) + self.kenar(y, 2)
+
+    def __call__(self, x: np.ndarray, y: np.ndarray) -> np.ndarray:
+        return _rbf(self.ic(x, y), self.gs, self.hs) @ self.c3
+
+    def _izgara_yenile(self, s: np.ndarray, hedef: np.ndarray, lam: float) -> None:
+        lo, hi = float(s.min()), float(s.max())
+        pay = 0.15 * (hi - lo) + 1e-6
+        self.gs = np.linspace(lo - pay, hi + pay, self.K)
+        self.hs = (self.gs[1] - self.gs[0]) * 1.5
+        B = _rbf(s, self.gs, self.hs)
+        self.c3 = np.linalg.solve(B.T @ B + lam * np.eye(self.K), B.T @ hedef)
+
+    def egit(
+        self, x: np.ndarray, y: np.ndarray, hedef: np.ndarray,
+        tur: int = 8000, eta0: float = 0.01, lam: float = 1e-6,
+    ) -> float:
+        """Adam ile ortak eğitim; her 200 turda dış ızgara yenilenir.
+
+        Gradyanda dikkat edilecek yer: ``∂s/∂c₁`` kenar tabanının KENDİSİDİR
+        (``_rbf``), TÜREVİ (``_drbf``) değil. Türev yalnız ``∂f/∂s``de geçer.
+        Bu ikisi yazarken karıştırıldı ve model hiç öğrenmedi; ölçüm
+        gösterdi.
+        """
+        m1x, m1y = _rbf(x, self.gx, self.hx), _rbf(y, self.gx, self.hx)
+        n = len(x)
+        P = [self.c1, self.c2, self.c3]
+        M = [np.zeros_like(p) for p in P]
+        V = [np.zeros_like(p) for p in P]
+        art = np.zeros(n)
+        for t in range(1, tur + 1):
+            s = m1x @ P[0] + m1y @ P[1]
+            if t % 200 == 1:
+                self._izgara_yenile(s, hedef, lam)
+                P[2] = self.c3
+                M[2] = np.zeros_like(P[2])
+                V[2] = np.zeros_like(P[2])
+            B = _rbf(s, self.gs, self.hs)
+            art = B @ P[2] - hedef
+            ds = _drbf(s, self.gs, self.hs) @ P[2]
+            g = (2.0 / n) * (art * ds)
+            G = [m1x.T @ g, m1y.T @ g, (2.0 / n) * (B.T @ art)]
+            eta = eta0 * (1 - t / tur) + 1e-5
+            for i in range(3):
+                M[i] *= 0.9
+                M[i] += 0.1 * G[i]
+                V[i] *= 0.999
+                V[i] += 0.001 * G[i] ** 2
+                P[i] -= eta * (M[i] / (1 - 0.9 ** t)) / (np.sqrt(V[i] / (1 - 0.999 ** t)) + 1e-8)
+        self.c1, self.c2, self.c3 = P
+        return float(np.sqrt(np.mean(art ** 2)))
+
+
+def _afin_uyum(a: np.ndarray, b: np.ndarray) -> float:
+    """``a``yı ``b``ye afin uydurduktan sonra kalan bağıl hata.
+
+    Afin serbestlik ZORUNLUDUR: ``φ₁ + φ₂`` ayrışması ancak bir sabit
+    kayma ve ortak ölçekleme belirsizliğine kadar tektir.
+    """
+    A = np.stack([a, np.ones_like(a)], axis=1)
+    kat, *_ = np.linalg.lstsq(A, b, rcond=None)
+    return float(np.sqrt(np.mean((A @ kat - b) ** 2)) / (np.std(b) + 1e-12))
+
+
+def kan_sinamasi(n: int = 2000, restart: int = 6, tohum: int = 0) -> Dict[str, object]:
+    """KAN'ın iki yüzü birlikte ölçülür: okunabilirlik VE dışbükey olmayışı.
+
+    Aynı hedefte birkaç ayrı rastgele başlangıç koşulur. Bir kısmı ``φ₁``in
+    monoton kaldığı yerel bir çukura düşer ve kalıntı orada takılır; iyi
+    havzaya düşenler kalıntıyı ~0.005'e indirir VE kenar fonksiyonlarını
+    ``sin(πx)``, ``y²`` olarak geri verir.
+
+    Yani "KAN okunabilir" iddiası ŞARTLIDIR: okunabilirlik ancak doğru
+    havzada doğar, ve hangi havzada olduğun ancak EĞİTİM kalıntısından
+    anlaşılır.
+    """
+    rng = np.random.default_rng(tohum)
+    hedef = lambda x, y: np.exp(np.sin(np.pi * x) + y * y)
+    x = rng.uniform(-1, 1, n)
+    y = rng.uniform(-1, 1, n)
+    z = hedef(x, y)
+    mu, sd = float(z.mean()), float(z.std())
+    zn = (z - mu) / sd
+
+    xt, yt = rng.uniform(-1, 1, 800), rng.uniform(-1, 1, 800)
+    zt = (hedef(xt, yt) - mu) / sd
+
+    izgara = np.linspace(-1, 1, 300)
+    denemeler = []
+    en_iyi = None
+    for tekrar in range(restart):
+        ag = KAN211(tohum=100 + tekrar)
+        kalinti = ag.egit(x, y, zn)
+        d = {
+            "kalinti": kalinti,
+            "sinama": float(np.sqrt(np.mean((ag(xt, yt) - zt) ** 2))),
+            "u1": _afin_uyum(ag.kenar(izgara, 1), np.sin(np.pi * izgara)),
+            "u2": _afin_uyum(ag.kenar(izgara, 2), izgara ** 2),
+        }
+        denemeler.append(d)
+        if en_iyi is None or d["kalinti"] < en_iyi["kalinti"]:
+            en_iyi = d
+
+    basarili = [d for d in denemeler if d["kalinti"] < 0.05]
+    return {
+        "restart": restart,
+        "en_iyi_egitim_kalintisi": en_iyi["kalinti"],
+        "en_iyi_bagil_sinama_hatasi": en_iyi["sinama"],
+        "iyi_uyduruyor": bool(en_iyi["sinama"] < 0.05),
+        "phi1_sin_ile_uyum_hatasi": en_iyi["u1"],
+        "phi2_kare_ile_uyum_hatasi": en_iyi["u2"],
+        "kenarlar_okunabilir": bool(en_iyi["u1"] < 0.05 and en_iyi["u2"] < 0.05),
+        "basarili_restart_sayisi": len(basarili),
+        "cukura_dusen_var": bool(len(basarili) < restart),
+        "kalintilar": [round(d["kalinti"], 4) for d in denemeler],
+    }
+
+
+def poisson_ornekleri(
+    n: int, N: int, azami_kip: int = 8, tohum: int = 0
+) -> Tuple[np.ndarray, np.ndarray]:
+    """``−u'' = a`` (periyodik, ortalama sıfır). Çözüm Fourier'de ``û_k = â_k/k²``."""
+    rng = np.random.default_rng(tohum)
+    k = np.fft.rfftfreq(N, d=1.0 / N)
+    a_hat = np.zeros((n, len(k)), dtype=complex)
+    kip = np.arange(1, azami_kip + 1)
+    a_hat[:, kip] = (rng.normal(size=(n, azami_kip)) + 1j * rng.normal(size=(n, azami_kip))) / kip
+    a = np.fft.irfft(a_hat, n=N) * N
+    u_hat = np.zeros_like(a_hat)
+    u_hat[:, 1:] = a_hat[:, 1:] / (k[1:] ** 2)
+    u = np.fft.irfft(u_hat, n=N) * N
+    return a, u
+
+
+class FourierIslemci:
+    """Tek katmanlı spektral işlemci: her kip için bir karmaşık çarpan."""
+
+    def __init__(self, kip_sayisi: int = 16) -> None:
+        self.kip_sayisi = kip_sayisi
+        self.R = np.zeros(kip_sayisi, dtype=complex)
+
+    def egit(self, a: np.ndarray, u: np.ndarray) -> None:
+        N = a.shape[1]
+        A = np.fft.rfft(a, axis=1)
+        U = np.fft.rfft(u, axis=1)
+        for j in range(self.kip_sayisi):
+            pay = np.vdot(A[:, j], U[:, j])
+            payda = np.vdot(A[:, j], A[:, j])
+            self.R[j] = pay / payda if abs(payda) > 1e-12 else 0.0
+
+    def __call__(self, a: np.ndarray) -> np.ndarray:
+        """**Çözünürlükten bağımsız**: ağırlıklar KİPLERDE yaşar, ızgarada değil."""
+        N = a.shape[1]
+        A = np.fft.rfft(a, axis=1)
+        U = np.zeros_like(A)
+        j = min(self.kip_sayisi, A.shape[1])
+        U[:, :j] = A[:, :j] * self.R[:j]
+        return np.fft.irfft(U, n=N)
+
+
+def _bagil(v: np.ndarray, d: np.ndarray) -> float:
+    return float(np.linalg.norm(v - d) / np.linalg.norm(d))
+
+
+def fno_sinamasi() -> Dict[str, object]:
+    a, u = poisson_ornekleri(400, 64, azami_kip=8, tohum=0)
+    f = FourierIslemci(kip_sayisi=16)
+    f.egit(a, u)
+
+    a1, u1 = poisson_ornekleri(200, 64, azami_kip=8, tohum=1)
+    ayni = _bagil(f(a1), u1)
+
+    # ÇÖZÜNÜRLÜK AKTARIMI: N=64'te öğrenildi, N=256'da sınanıyor
+    a2, u2 = poisson_ornekleri(200, 256, azami_kip=8, tohum=2)
+    baska = _bagil(f(a2), u2)
+
+    # ZAAF: eğitimde görülmemiş yüksek kipler
+    a3, u3 = poisson_ornekleri(200, 256, azami_kip=24, tohum=3)
+    yuksek = _bagil(f(a3), u3)
+    return {
+        "ayni_cozunurluk_hatasi": ayni,
+        "farkli_cozunurluk_hatasi": baska,
+        "cozunurluk_aktarimi_calisiyor": bool(baska < 0.02),
+        "yuksek_kip_hatasi": yuksek,
+        "yuksek_kipte_bozuluyor": bool(yuksek > 10 * max(baska, 1e-12)),
+    }
+
+
+class DeepONet:
+    """``G(a)(y) ≈ Σ_k b_k(a)·t_k(y)``; dal SABİT duyu ızgarasında okur."""
+
+    def __init__(self, duyu: int = 64, taban: int = 32) -> None:
+        self.duyu = duyu
+        self.taban = taban
+        self.W = np.zeros((taban, duyu))
+
+    def _govde(self, y: np.ndarray) -> np.ndarray:
+        k = np.arange(1, self.taban // 2 + 1)
+        return np.concatenate(
+            [np.cos(2 * np.pi * k[None, :] * y[:, None]),
+             np.sin(2 * np.pi * k[None, :] * y[:, None])], axis=1
+        )
+
+    def egit(self, a: np.ndarray, u: np.ndarray, lam: float = 1e-8) -> None:
+        y = np.arange(a.shape[1]) / a.shape[1]
+        T = self._govde(y)                       # (N, taban)
+        # u ≈ T @ W @ aᵀ  ⇒  her örnek için katsayı hedefi
+        C = np.linalg.lstsq(T, u.T, rcond=None)[0].T          # (n, taban)
+        self.W = np.linalg.solve(
+            a.T @ a + lam * np.eye(self.duyu), a.T @ C
+        ).T                                                   # (taban, duyu)
+
+    def __call__(self, a: np.ndarray, N: int | None = None) -> np.ndarray:
+        N = N or a.shape[1]
+        y = np.arange(N) / N
+        return (self._govde(y) @ (self.W @ a.T)).T
+
+
+def deeponet_sinamasi() -> Dict[str, object]:
+    a, u = poisson_ornekleri(400, 64, azami_kip=8, tohum=0)
+    d = DeepONet(duyu=64, taban=32)
+    d.egit(a, u)
+
+    a1, u1 = poisson_ornekleri(200, 64, azami_kip=8, tohum=1)
+    ayni = _bagil(d(a1), u1)
+
+    # aynı işlemci, ama girdi N=256 ızgarasında: dal artık uymuyor
+    a2, u2 = poisson_ornekleri(200, 256, azami_kip=8, tohum=2)
+    try:
+        _ = d(a2)
+        aktarilabilir = True
+        aktarim_hatasi = _bagil(d(a2), u2)
+    except ValueError:
+        aktarilabilir = False
+        aktarim_hatasi = float("inf")
+
+    # dürüst kıyas: a2 duyu ızgarasına örneklenirse çıktı N=256'da alınabilir
+    a2_duyu = a2[:, :: a2.shape[1] // 64]
+    ornekli = _bagil(d(a2_duyu, N=256), u2)
+
+    f = FourierIslemci(kip_sayisi=16)
+    f.egit(a, u)
+    fno_aktarim = _bagil(f(a2), u2)
+    return {
+        "ayni_cozunurluk_hatasi": ayni,
+        "iyi_ogreniyor": bool(ayni < 0.02),
+        "ham_aktarim_mumkun": aktarilabilir,
+        "ham_aktarim_hatasi": aktarim_hatasi,
+        "yeniden_ornekleyerek_hata": ornekli,
+        "fno_ayni_iste_hatasi": fno_aktarim,
+        # ÖLÇÜLDÜ: yeniden örnekledikten sonra ikisi de aynı hatayı verir.
+        # "FNO daha doğru" diye bir iddia bu ölçümde DESTEKLENMEDİ; fark
+        # doğrulukta değil, girdiyi olduğu gibi kabul edebilmektedir.
+        "yeniden_ornekleyince_denk": bool(abs(ornekli - fno_aktarim) < 0.01),
+        "fark_dogrulukta_degil_arayuzde": bool(
+            (not aktarilabilir) and abs(ornekli - fno_aktarim) < 0.01
+        ),
+    }
+
+
+def _rapor_asgari() -> str:
+    s = ["=== tikizlik ==="]
+    z = asgari_var_mi(kare, 3, ne="zorlayıcı")
+    s.append("zorlayıcı(‖x‖²)  küre asgarileri=%s  artıyor=%s"
+             % ([round(v, 3) for v in z["kure_asgarileri"]], z["delil_artiyor"]))
+    zn = asgari_var_mi(zorlayici_olmayan, 3, ne="zorlayıcı")
+    s.append("zorlayıcı değil    küre asgarileri=%s  artıyor=%s"
+             % ([round(v, 6) for v in zn["kure_asgarileri"]], zn["delil_artiyor"]))
+    a = asgari_var_mi(kare, 3, c=4.0, ne="seviye")
+    b = asgari_var_mi(zorlayici_olmayan, 3, c=4.0, ne="seviye")
+    s.append("alt seviye {f≤4}  ‖x‖²: azami norm=%.3g sınırlı=%s   |   sınırsız hâl: azami norm=%.3g sınırlı=%s"
+             % (a["azami_norm"], a["sinirli_gorunuyor"], b["azami_norm"], b["sinirli_gorunuyor"]))
+    u = asgari_var_mi(ne="kaçış")
+    s.append("ulaşılmayan inf   son f=%.3g > inf=0 → %s (x kaçıyor=%s)"
+             % (u["son_f"], u["asgari_ulasilmadi"], u["kaciyor"]))
+    p = asgari_var_mi(ne="süreksiz")
+    s.append("sin(1/x)          iki dizi 0'a gidiyor=%s, limitler ±1'e ayrışıyor=%s"
+             % (p["iki_dizi_de_sifira_gidiyor"], p["limitler_ayrisiyor"]))
+    q = asgari_var_mi(ne="yönlü")
+    s.append("(x²−y²)/(x²+y²)   cos2θ ile uyuşuyor=%s, limit yok=%s"
+             % (q["cos2theta_ile_uyusuyor"], q["limit_yok"]))
+    return "\n".join(s)
+
+
+def _rapor_modern() -> str:
+    s = ["=== modern ==="]
+    k = kan_sinamasi()
+    s.append("KAN       en iyi: eğitim kalıntısı=%.4f  bağıl sınama=%.4f (iyi=%s)"
+             % (k["en_iyi_egitim_kalintisi"], k["en_iyi_bagil_sinama_hatasi"],
+                k["iyi_uyduruyor"]))
+    s.append("          okunabilirlik: φ₁~sin(πx) hata=%.4f, φ₂~y² hata=%.4f → %s"
+             % (k["phi1_sin_ile_uyum_hatasi"], k["phi2_kare_ile_uyum_hatasi"],
+                k["kenarlar_okunabilir"]))
+    s.append("          %d/%d başlangıç iyi havzaya düştü; kalıntılar=%s"
+             % (k["basarili_restart_sayisi"], k["restart"], k["kalintilar"]))
+    f = fno_sinamasi()
+    s.append("FNO       N=64 hata=%.2e | N=256'ya aktarım=%.2e (çalışıyor=%s)"
+             % (f["ayni_cozunurluk_hatasi"], f["farkli_cozunurluk_hatasi"],
+                f["cozunurluk_aktarimi_calisiyor"]))
+    s.append("          zaaf: görülmemiş yüksek kipte hata=%.4f (bozuluyor=%s)"
+             % (f["yuksek_kip_hatasi"], f["yuksek_kipte_bozuluyor"]))
+    d = deeponet_sinamasi()
+    s.append("DeepONet  N=64 hata=%.2e (iyi=%s) | ham aktarım mümkün=%s"
+             % (d["ayni_cozunurluk_hatasi"], d["iyi_ogreniyor"], d["ham_aktarim_mumkun"]))
+    s.append("          yeniden örnekleyerek=%.2e  vs  FNO aynı işte=%.2e → denk=%s"
+             % (d["yeniden_ornekleyerek_hata"], d["fno_ayni_iste_hatasi"],
+                d["yeniden_ornekleyince_denk"]))
+    s.append("          fark doğrulukta değil arayüzde=%s" % d["fark_dogrulukta_degil_arayuzde"])
+    return "\n".join(s)
 
 # ====================================================================
 #  Çipin toplu raporu

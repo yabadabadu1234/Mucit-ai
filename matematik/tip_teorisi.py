@@ -2204,7 +2204,7 @@ def yol_tumevarimi(A: Terim, a: Terim, C: Terim, d: Terim,
     return Transp(i, cizgi, YANLIS, d)
 
 
-def kac_mertebeden(X: Terim, n: int = -2) -> Terim:
+def mertebe(X: Terim, n: int = -2) -> Terim:
     """BU TİP KAÇ MERTEBEDEN -- **tek terkip** (kütük H226).
 
     Küme: ``iz_butun``, ``iz_onerme``, ``iz_kume``, ``iz_grupoid``,
@@ -2234,7 +2234,7 @@ def kac_mertebeden(X: Terim, n: int = -2) -> Terim:
         return Sigma(x, X, Pi(y, X, yol(X, _t(x), _t(y))))
     x, y = terim_taze("x"), terim_taze("y")
     ic = yol(X, _t(x), _t(y))
-    return Pi(x, X, Pi(y, X, ic if n == -1 else kac_mertebeden(ic, n - 1)))
+    return Pi(x, X, Pi(y, X, ic if n == -1 else mertebe(ic, n - 1)))
 
 
 def dongu_uzayi(A: Terim, a: Terim) -> Terim:
@@ -2269,7 +2269,7 @@ def lif(A: Terim, B: Terim, f: Terim, b: Terim) -> Terim:
 def iz_denklik(A: Terim, B: Terim, f: Terim) -> Terim:
     """``isEquiv f = Π (b:B). isContr (fiber f b)``"""
     b = terim_taze("b")
-    return Pi(b, B, kac_mertebeden(lif(A, B, f, _t(b)), -2))
+    return Pi(b, B, mertebe(lif(A, B, f, _t(b)), -2))
 
 
 def denklik_tipi(A: Terim, B: Terim) -> Terim:
@@ -3106,25 +3106,25 @@ def koherens_tipi(A: Terim, n: int) -> Terim:
 def kume_tipi() -> Terim:
     """``Küme = Σ (X : U). isSet X`` -- klasik küme kavramı buradan doğar."""
     X = terim_taze("X")
-    return Sigma(X, U, kac_mertebeden(D(X), 0))
+    return Sigma(X, U, mertebe(D(X), 0))
 
 
 def onerme_tipi() -> Terim:
     """``Önerme = Σ (X : U). isProp X``"""
     X = terim_taze("X")
-    return Sigma(X, U, kac_mertebeden(D(X), -1))
+    return Sigma(X, U, mertebe(D(X), -1))
 
 
 def grupoid_tipi() -> Terim:
     """``Grupoid = Σ (X : U). isGroupoid X``"""
     X = terim_taze("X")
-    return Sigma(X, U, kac_mertebeden(D(X), 1))
+    return Sigma(X, U, mertebe(D(X), 1))
 
 
 def n_tip_tipi(n: int) -> Terim:
     """``n``-tiplerin tipi: ``Σ (X:U). n-mertebe X``."""
     X = terim_taze("X")
-    return Sigma(X, U, kac_mertebeden(D(X), n))
+    return Sigma(X, U, mertebe(D(X), n))
 
 
 def monoid_tipi() -> Terim:
@@ -3137,7 +3137,7 @@ def monoid_tipi() -> Terim:
     sag_birim = Pi("x", X, yol(X, _ikili(m, x, EksikKural), x))
     return sigma_hepsi([
         ("X", U),
-        ("kume", kac_mertebeden(X, 0)),
+        ("kume", mertebe(X, 0)),
         ("EksikKural", X),
         ("m", ok(X, ok(X, X))),
         ("birlesme", birlesme),
@@ -3162,7 +3162,7 @@ def grup_tipi() -> Terim:
     sag_ters = Pi("x", X, yol(X, _ikili(m, x, Uygula(iv, x)), EksikKural))
     return sigma_hepsi([
         ("X", U),
-        ("kume", kac_mertebeden(X, 0)),
+        ("kume", mertebe(X, 0)),
         ("EksikKural", X),
         ("m", ok(X, ok(X, X))),
         ("iv", ok(X, X)),
@@ -3184,7 +3184,7 @@ def halka_tipi() -> Terim:
     P2 = lambda govde: Pi("x", X, Pi("y", X, govde))
     return sigma_hepsi([
         ("X", U),
-        ("kume", kac_mertebeden(X, 0)),
+        ("kume", mertebe(X, 0)),
         ("sifir", X), ("bir", X),
         ("top", ok(X, ok(X, X))),
         ("carp", ok(X, ok(X, X))),
@@ -3210,7 +3210,7 @@ def kategori_tipi() -> Terim:
     B = lambda u, v, w, f, g: Uygula(Uygula(
         Uygula(Uygula(Uygula(bil, u), v), w), f), g)
     Pab = lambda govde: Pi("a", Ob, Pi("b", Ob, govde))
-    hom_kume = Pab(kac_mertebeden(H(a, b), 0))
+    hom_kume = Pab(mertebe(H(a, b), 0))
     birim_tip = Pi("a", Ob, H(a, a))
     bil_tip = Pi("a", Ob, Pi("b", Ob, Pi("c", Ob,
         ok(H(a, b), ok(H(b, c), H(a, c))))))
@@ -3309,7 +3309,7 @@ def sdg_postulatlari() -> List[Postulat]:
     kl_govde = Pi("d", Dtip, yol(R, Uygula(ff, d),
         _ikili(top, aa, _ikili(carp, bb, Birinci(d)))))
     kl = Pi("f", ok(Dtip, R),
-              kac_mertebeden(sigma_hepsi([("a", R), ("b", R)], kl_govde), -2))
+              mertebe(sigma_hepsi([("a", R), ("b", R)], kl_govde), -2))
 
     # Sonsuz küçük şekil kipi (infinitesimal shape modality) ℑ
     im = D("Im")
@@ -3604,7 +3604,7 @@ def modul_tipi() -> Terim:
     P = lambda ad, tip, govde: Pi(ad, tip, govde)
     return sigma_hepsi([
         ("V", U),
-        ("kume", kac_mertebeden(V, 0)),
+        ("kume", mertebe(V, 0)),
         ("top", ok(V, ok(V, V))),
         ("sf", V),
         ("eks", ok(V, V)),
@@ -3741,7 +3741,7 @@ def cebir_tipi() -> Terim:
     P = Pi
     return sigma_hepsi([
         ("A", U),
-        ("kume", kac_mertebeden(A, 0)),
+        ("kume", mertebe(A, 0)),
         ("top", ok(A, ok(A, A))),
         ("sf", A),
         ("eks", ok(A, A)),
@@ -3777,7 +3777,7 @@ def lie_tipi() -> Terim:
         yol(V, Ad(Ad(B(B(x, y), z), B(B(y, z), x)), B(B(z, x), y)), sf))))
     return sigma_hepsi([
         ("V", U),
-        ("kume", kac_mertebeden(V, 0)),
+        ("kume", mertebe(V, 0)),
         ("top", ok(V, ok(V, V))),
         ("sf", V),
         ("eks", ok(V, V)),
@@ -4051,7 +4051,7 @@ def teget_zincir_ispati(X: Terim, Z: Terim, f: Terim, g: Terim) -> Terim:
 
 def ayrik_mi(X: Terim) -> Terim:
     """Ayrıklık ölçütü: ``isSet X`` (0-kesilmişlik)."""
-    return kac_mertebeden(X, 0)
+    return mertebe(X, 0)
 
 
 def yuksek_morfizmler_onemsiz_tipi(X: Terim) -> Terim:
@@ -4061,8 +4061,8 @@ def yuksek_morfizmler_onemsiz_tipi(X: Terim) -> Terim:
     ifadesi budur.
     """
     x = terim_taze("x")
-    return ok(kac_mertebeden(X, 0),
-                Pi(x, X, kac_mertebeden(dongu_uzayi(X, D(x)), -2)))
+    return ok(mertebe(X, 0),
+                Pi(x, X, mertebe(dongu_uzayi(X, D(x)), -2)))
 
 
 def yuksek_morfizmler_onemsiz_ispati(X: Terim) -> Terim:
@@ -4093,7 +4093,7 @@ def ayrik_postulatlari() -> List[Postulat]:
     return [
         Postulat("Pi0", ok(U, U),
                    "Π₀ : bağlantılı bileşenler / küme-kesmesi (0-truncation)."),
-        Postulat("Pi0_kume", Pi("X", U, kac_mertebeden(terim_uygula(p0, X), 0)),
+        Postulat("Pi0_kume", Pi("X", U, mertebe(terim_uygula(p0, X), 0)),
                    "Π₀X daima bir kümedir (0-kesilmiştir)."),
         Postulat("Pi0_birim", Pi("X", U, ok(X, terim_uygula(p0, X))),
                    "Birim dönüşüm X → Π₀X."),

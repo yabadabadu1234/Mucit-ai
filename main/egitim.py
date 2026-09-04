@@ -107,7 +107,7 @@ from ogrenme.optimize import OptimizeAyari               # noqa: E402
 from ogrenme.optimize import hoca_egit                   # noqa: E402
 from ogrenme.optimize import (chebyshev_tasarimi,        # noqa: E402
                               kestirmeden_sur)
-from nefs.zirh import zirh_giydir                        # noqa: E402
+from nefs.zirh import zirhla                        # noqa: E402
 
 __all__ = ["EgitimAyari", "KISA_CPU", "ORTA", "AZAMI_KAGGLE",
            "tek_iplik_zorla", "KulliDalgaTalimMotoru",
@@ -450,7 +450,7 @@ class KulliDalgaTalimMotoru:
         """Bab III, IV, V, VI gereğince tek makro QSVT dalga adımı."""
         t0 = time.perf_counter()
         H_dimag = self.meleke_manifoldu.hamiltonyen_uret()
-        H_zirhli, zirh = zirh_giydir(H_dimag)
+        H_zirhli, zirh = zirhla(H_dimag)
         mizan = self.meleke_manifoldu.bgcm_mizan_enerjisi()
         H_toplam = H_zirhli + self.ayar.lambda_mizan * mizan * np.eye(
             H_zirhli.shape[0])

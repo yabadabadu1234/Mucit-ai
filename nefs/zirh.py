@@ -44,11 +44,11 @@ Homotopi     çevrim boyunca faz dönüyor mu?  ``W(γ) = 1``, yol bağımsız
 
 **Çipin dört odası.**
 
-1. **Analitik topolojik süzgeçler** -- ``ek_yeri_tutuyor_mu``,
-   ``delikleri_say``, ``yolun_farki``; Ĥ matrisine projektör olarak.
-2. **Yazmaç enine süzgeçleri** -- ``zirh_giydir`` MPS dalgasına O(N)
+1. **Analitik topolojik süzgeçler** -- ``yama``,
+   ``delik``, ``iz``; Ĥ matrisine projektör olarak.
+2. **Yazmaç enine süzgeçleri** -- ``zirhla`` MPS dalgasına O(N)
    yerel kapılarla vurur; aynı dört süzgeç, başka veçhe.
-3. **Birleşik mantık sadakati** -- ``mantigi_tek_supurmede_isaretle``:
+3. **Birleşik mantık sadakati** -- ``vicdan``:
    ``mizan.onerme``den türeyen yasaklar, epistemik sadakat şartları ve
    ``R₀`` intacı **tek** süpürmede.
 4. **Nizam, stabilizer ve zırh kaybı** -- ``taahhude_yuzlestir``,
@@ -72,14 +72,14 @@ from nefs.zihin_durumu import QYazmac, degil_x, donme
 
 __all__ = [
     # 1. analitik süzgeçler
-    "ek_yeri_tutuyor_mu", "delikleri_say", "yolun_farki",
+    "yama", "delik", "iz",
     "vietoris_rips", "dogum_olum_cetveli", "cetveller_arasi_mesafe",
     "kahan_toplam",
     # 2. zırh giydirme (matris ve dalga)
-    "ZirhAyari", "ZirhIzi", "zirh_giydir", "dalgayi_yokla",
+    "ZirhAyari", "ZirhIzi", "zirhla", "dalgayi_yokla",
     # 3. mantık sadakati
     "Usul", "USULLER", "ALANLAR", "isaret_vur",
-    "mantigi_tek_supurmede_isaretle",
+    "vicdan",
     # 4. nizam, mühür, kayıp
     "SINIF_CIHETI", "NIZAM_BANDI", "SADAKAT_SIDDETI",
     "taahhude_yuzlestir", "muhru_stabilizerle_yuzlestir",
@@ -92,7 +92,7 @@ __all__ = [
 #  nefs/zirh.py
 # ════════════════════════════════════════════════════════════════════
 
-def ek_yeri_tutuyor_mu(res_a: np.ndarray, res_b: np.ndarray,
+def yama(res_a: np.ndarray, res_b: np.ndarray,
                        eps: float = 1e-9) -> Dict[str, object]:
     """EK YERİ TUTUYOR MU -- **tek terkip** (kütük H222).
 
@@ -125,7 +125,7 @@ def ek_yeri_tutuyor_mu(res_a: np.ndarray, res_b: np.ndarray,
             "fark": d}
 
 
-def delikleri_say(K: Dict[int, List[Tuple[int, ...]]], k: int = 1,
+def delik(K: Dict[int, List[Tuple[int, ...]]], k: int = 1,
                   ne: str = "delik", esik: Optional[float] = None):
     """ŞEKİLDE KAÇ DELİK VAR -- **tek terkip** (kütük H222, birleşik tur).
 
@@ -225,14 +225,14 @@ def delikleri_say(K: Dict[int, List[Tuple[int, ...]]], k: int = 1,
     kalan = oz[~sifir]
     b = int(sifir.sum())
     bosluk = float(kalan.min()) if kalan.size else 0.0
-    delik = float(b)                       # k = 1 okuması
+    delik_sayisi = float(b)                # k = 1 okuması
     ada = float(max(b - 1, 0))              # k = 0 okuması
     return {"betti": float(b), "betti0": float(b), "boşluk": bosluk,
-            "delik_cezası": delik, "ada_cezası": ada,
-            "kayıp": ada if int(k) == 0 else delik}
+            "delik_cezası": delik_sayisi, "ada_cezası": ada,
+            "kayıp": ada if int(k) == 0 else delik_sayisi}
 
 
-def yolun_farki(baglanti: Sequence[np.ndarray]) -> Dict[str, object]:
+def iz(baglanti: Sequence[np.ndarray]) -> Dict[str, object]:
     """AYNI YERE İKİ YOLDAN GİDİNCE FARK EDER Mİ -- **tek terkip** (H222).
 
     Küme: ``wilson_cevrimi`` + ``homotopi_kaybi``. İkincisi birincisini
@@ -258,7 +258,7 @@ def yolun_farki(baglanti: Sequence[np.ndarray]) -> Dict[str, object]:
     return {"W": W, "sapma": sapma, "kayıp": sapma}
 
 
-def zirh_giydir(hedef, ayar: Optional[ZirhAyari] = None,
+def zirhla(hedef, ayar: Optional[ZirhAyari] = None,
                 esik: float = 1e-9, S: Optional[np.ndarray] = None,
                 Pi_betti: Optional[np.ndarray] = None,
                 Pi_koho: Optional[np.ndarray] = None,
@@ -327,7 +327,7 @@ def zirh_giydir(hedef, ayar: Optional[ZirhAyari] = None,
         # (1) Sheaf: üst/alt üçgen iki yama
         ust = np.triu(H)
         alt = np.tril(H).T
-        ek = ek_yeri_tutuyor_mu(ust, alt)
+        ek = yama(ust, alt)
         s_hata = float(ek["uyumsuzluk"])
         S = ek["izdüşüm"]
 
@@ -336,8 +336,8 @@ def zirh_giydir(hedef, ayar: Optional[ZirhAyari] = None,
         K = {0: [(i,) for i in range(n)],
              1: [(i, j) for i in range(n) for j in range(i + 1, n)
                  if A[i, j] > esik or A[j, i] > esik]}
-        b1 = delikleri_say(K, k=1)
-        b0 = delikleri_say(K, k=0)
+        b1 = delik(K, k=1)
+        b0 = delik(K, k=0)
 
         # (4) Homotopi: kapalı yolda Wilson çevrimi
         adim = max(2, min(8, n))
@@ -349,7 +349,7 @@ def zirh_giydir(hedef, ayar: Optional[ZirhAyari] = None,
             if blok.shape != (m, m):
                 blok = np.zeros((m, m))
             baglanti.append(np.eye(m) + 1e-3 * blok)
-        h = yolun_farki(baglanti)
+        h = iz(baglanti)
 
         toplam = zirh_kaybi(sheaf=s_hata, betti=float(b1["delik_cezası"]),
                             koho=float(b0["ada_cezası"]),
@@ -608,7 +608,7 @@ def dogum_olum_cetveli(D: np.ndarray, esikler: Sequence[float],
     tanımlıdır. Bu sınırlama açıkça yazıldı: daha fazlası iddia
     edilmiyor.
     """
-    egri = [delikleri_say(vietoris_rips(D, e, azami_boyut), k, "betti")
+    egri = [delik(vietoris_rips(D, e, azami_boyut), k, "betti")
             for e in esikler]
     dogumlar: List[float] = []
     cubuklar: List[Tuple[float, float]] = []
@@ -903,7 +903,7 @@ def _yasak_cetveli() -> Dict[str, List[Dict[str, int]]]:
     return _YASAK_CETVELI
 
 
-def mantigi_tek_supurmede_isaretle(q=None, p=None, usuller=None, tur: int = 1,
+def vicdan(q=None, p=None, usuller=None, tur: int = 1,
                                    ne: str = "hepsi", orutu=None):
     """MANTIK DIŞI KOLU İŞARETLEYİP SÖNDÜRMEK -- tek terkip (H222, birleşik).
 
@@ -1243,6 +1243,125 @@ def muhru_stabilizerle_yuzlestir(q, alanlar: Sequence[str] = ("tasdik", "nakz"),
             "kapsanmayan": "menfî kontrollü ve üç kontrollü şartlar"}
 
 
+
+# ====================================================================
+#  KÜME 8: Wilson holonomisi -- homotopi zırhının bağımsız şahidi
+# ====================================================================
+
+def holonomi(kenar_fazlari: Sequence[float]) -> complex:
+    """``W(γ) = exp(i Σ a_e)`` — kapalı çevrim boyunca ``U(1)`` holonomisi."""
+    return complex(np.exp(1j * float(np.sum(kenar_fazlari))))
+
+
+def cevrim_egriligi(kenar_fazlari: Sequence[float],
+                    yuz_var_mi: bool = False) -> Dict[str, object]:
+    """Yerel eğrilik ve holonomi yan yana.
+
+    Halkada (``yuz_var_mi=False``) çevrimin sınırladığı bir yüz yoktur;
+    ``F`` her yerde sıfır olsa bile Stokes uygulanamaz.
+    """
+    W = holonomi(kenar_fazlari)
+    return {"F_yerel_sıfır_mı": True, "yüz_var_mı": yuz_var_mi,
+            "holonomi": W, "holonomi_trivial_mi": bool(abs(W - 1) < 1e-12),
+            "faz": float(np.angle(W)),
+            "toplam_akı_bölü_2pi": float(np.sum(kenar_fazlari)
+                                         / (2 * math.pi))}
+
+
+def duz_mu(kenar_fazlari: Sequence[float]) -> bool:
+    """Bağlantı **yerel olarak** düz mü? — her yüzde eğrilik sıfır mı.
+
+    Halkada hiç yüz yoktur, dolayısıyla cevap her zaman ``True``dur;
+    mesele tam da budur.
+    """
+    return True
+
+
+def aharonov_bohm(N: int = 8, aki_bolu_2pi: float = 0.37
+                  ) -> Dict[str, object]:
+    """Halka üzerinde düz bağlantı, trivial olmayan holonomi.
+
+    Toplam akı ``N`` kenara eşit dağıtılır; her kenarın kendi
+    komşuluğunda bağlantı düzdür (yüz yok), fakat çevrim holonomisi
+    ``e^{2πi·akı}``dır.
+    """
+    a = np.full(N, 2 * math.pi * aki_bolu_2pi / N)
+    d = cevrim_egriligi(a, yuz_var_mi=False)
+    # kıyas: aynı akı bir DİSKTE olsaydı, Stokes uygulanır ve F ≠ 0 olurdu
+    d["disk_olsaydı_F"] = 2 * math.pi * aki_bolu_2pi
+    d["|W−1|"] = float(abs(d["holonomi"] - 1))
+    return d
+
+
+def _rapor_bukum() -> str:
+    s = []
+    s.append("=== M20: tünelleme O(1) DEĞİL, üstel pahalı ===")
+    s.append("  genişlik      γ          T = e^{−γ}     beklenen deneme")
+    for d in tunel_maliyet_cetveli((1, 2, 4, 8, 16)):
+        s.append("  %8.0f   %8.4f      %.3e      %.3e"
+                 % (d["genişlik"], d["γ"], d["T"], d["beklenen_deneme"]))
+    s.append("  Risalenin kendi formülü T = e^{−γ} diyor; aynı sayfada")
+    s.append("  'O(1) mertebesinde geçilir' demek onunla çelişiyor.")
+    s.append("  Doğru kazanç: klasikte SIFIR olan olasılık POZİTİF oluyor.")
+
+    s.append("\n=== M21: düz bağlantı, trivial OLMAYAN holonomi ===")
+    for aki in (0.0, 0.25, 0.37, 0.5, 1.0):
+        d = aharonov_bohm(8, aki)
+        s.append("  akı/2π=%.2f   yerel F=0 mı? %s   yüz var mı? %s   "
+                 "W=%+.4f%+.4fi   |W−1|=%.4f   trivial mi? %s"
+                 % (aki, d["F_yerel_sıfır_mı"], d["yüz_var_mı"],
+                    d["holonomi"].real, d["holonomi"].imag, d["|W−1|"],
+                    d["holonomi_trivial_mi"]))
+    s.append("  akı tam sayı olduğunda holonomi trivial oluyor; arada")
+    s.append("  DEĞİL. F her hâlde sıfır. Yani 'F=0 ⟹ ΔΦ=0' yanlış;")
+    s.append("  doğru ölçüt W(γ)=1'dir. (Aharonov–Bohm.)")
+
+    s.append("\n=== M22: GRAPE gradyanı O(Δt²) yaklaşımı ===")
+    r = np.random.default_rng(1)
+    n = 4
+
+    def herm(sd):
+        A = (np.random.default_rng(sd).normal(size=(n, n))
+             + 1j * np.random.default_rng(sd + 99).normal(size=(n, n)))
+        return A + A.conj().T
+
+    H0, Hk = herm(1), [herm(2), herm(3)]
+    psi0 = np.zeros(n, complex); psi0[0] = 1
+    hedef = np.zeros(n, complex); hedef[n - 1] = 1
+    s.append("     M      Δt      sonlu fark      GRAPE        fark      "
+             "fark/Δt²")
+    for M in (10, 20, 40, 80, 160):
+        om = [np.full(M, 0.3), np.full(M, -0.2)]
+        dt = 1.0 / M
+        j, k = M // 3, 0
+        sf = sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+        g = grape_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+        s.append("  %5d  %.5f  %+.8f  %+.8f  %.2e  %.4f"
+                 % (M, dt, sf, g, abs(g - sf), abs(g - sf) / dt ** 2))
+    s.append("  'fark/Δt²' sütunu sabitleniyor: hata tam olarak O(Δt²).")
+    s.append("  Kaynak bunu EŞİTLİK olarak yazıyor; yaklaşımdır.")
+
+    s.append("\n=== Tam (Fréchet) gradyan sonlu farkla uyuşuyor mu? ===")
+    for M in (10, 20, 40):
+        om = [np.full(M, 0.3), np.full(M, -0.2)]
+        j, k = M // 3, 0
+        sf = sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+        tam = tam_gradyan(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+        yak = grape_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
+        s.append("  M=%3d  sonlu fark=%+.10f   tam=%+.10f (fark %.2e)   "
+                 "GRAPE=%+.10f (fark %.2e)"
+                 % (M, sf, tam, abs(tam - sf), yak, abs(yak - sf)))
+
+    s.append("\n=== GRAPE gerçekten çalışıyor mu? ===")
+    d = grape_kos(H0, Hk, psi0, hedef, 1.0, M=40, tur=300)
+    s.append("  başlangıç sadakat = %.6f   son sadakat = %.6f"
+             % (d["seyir"][0], d["sadakat"]))
+    s.append("  tekdüze artıyor mu? %s   (tur sayısı %d)"
+             % (d["tekdüze_mi"], len(d["seyir"])))
+    s.append("  Yaklaşık gradyan eniyilemeyi bozmuyor: adım kabul ölçütü")
+    s.append("  sadakati doğrudan sınadığı için yanlış yöne gidilmiyor.")
+    return "\n".join(s)
+
 def rapor() -> str:                                     # pragma: no cover
     """KENDİNİ GÖSTERME -- **tek terkip** (kütük H222, birleşik tur).
 
@@ -1267,7 +1386,7 @@ def rapor() -> str:                                     # pragma: no cover
     cember = np.stack([np.cos(aci), np.sin(aci)], axis=1)
     Dc = np.sqrt(((cember[:, None] - cember[None]) ** 2).sum(2))
     Kc = vietoris_rips(Dc, 0.9, azami_boyut=2)
-    r1 = delikleri_say(Kc, 1)
+    r1 = delik(Kc, 1)
     s.append("  çember (delik)  : b₁=%.0f  boşluk=%.4f  kayıp=%.1f"
              % (r1["betti"], r1["boşluk"], r1["kayıp"]))
     # Dolu disk: delik yok → b₁ = 0 (YEŞİL)
@@ -1277,7 +1396,7 @@ def rapor() -> str:                                     # pragma: no cover
     disk = disk * rng.uniform(0, 1, (14, 1)) ** 0.5
     Dd = np.sqrt(((disk[:, None] - disk[None]) ** 2).sum(2))
     Kd = vietoris_rips(Dd, 1.2, azami_boyut=2)
-    r2 = delikleri_say(Kd, 1)
+    r2 = delik(Kd, 1)
     s.append("  dolu disk       : b₁=%.0f  boşluk=%.4f  kayıp=%.1f"
              % (r2["betti"], r2["boşluk"], r2["kayıp"]))
 
@@ -1287,11 +1406,11 @@ def rapor() -> str:                                     # pragma: no cover
                      rng.normal(size=(6, 2)) * 0.2 + 10.0])
     Di = np.sqrt(((iki[:, None] - iki[None]) ** 2).sum(2))
     Ki = vietoris_rips(Di, 0.8, azami_boyut=1)
-    k1 = delikleri_say(Ki, 0)
+    k1 = delik(Ki, 0)
     s.append("  iki kopuk ada   : b₀=%.0f  kayıp=%.1f   ← KIRMIZI"
              % (k1["betti0"], k1["kayıp"]))
     Kb = vietoris_rips(Di, 16.0, azami_boyut=1)
-    k2 = delikleri_say(Kb, 0)
+    k2 = delik(Kb, 0)
     s.append("  bağlanmış       : b₀=%.0f  kayıp=%.1f"
              % (k2["betti0"], k2["kayıp"]))
 
@@ -1299,16 +1418,16 @@ def rapor() -> str:                                     # pragma: no cover
     s.append("=== Sheaf ve Homotopi ===")
     a = np.array([1.0, 2.0, 3.0])
     s.append("  uyumlu ek yeri  : ‖ΔRes‖² = %.3e"
-             % ek_yeri_tutuyor_mu(a, a)["uyumsuzluk"])
+             % yama(a, a)["uyumsuzluk"])
     s.append("  uyumsuz ek yeri : ‖ΔRes‖² = %.3f   ← KIRMIZI"
-             % ek_yeri_tutuyor_mu(a, a + np.array([0.0, 0.5, -0.3]))["uyumsuzluk"])
+             % yama(a, a + np.array([0.0, 0.5, -0.3]))["uyumsuzluk"])
     from nefs.zihin_durumu import donme
     kapali = [donme(0.4), donme(-0.4)]
     acik = [donme(0.4), donme(0.1)]
     s.append("  kapanan çevrim  : |W−I| = %.3e"
-             % yolun_farki(kapali)["sapma"])
+             % iz(kapali)["sapma"])
     s.append("  kapanmayan      : |W−I| = %.4f   ← KIRMIZI"
-             % yolun_farki(acik)["sapma"])
+             % iz(acik)["sapma"])
 
     s.append("")
     s.append("=== Küllî zırh kaybı (yumuşak âzamî) ===")
@@ -1327,7 +1446,7 @@ def rapor() -> str:                                     # pragma: no cover
     for ad, H in (("rastgele", rng.normal(size=(12, 12))),
                   ("birim (temiz)", np.eye(12)),
                   ("tam bağlı", np.ones((12, 12)))):
-        _Hz, r = zirh_giydir(H)
+        _Hz, r = zirhla(H)
         s.append("  %-14s sheaf=%.4f betti=%.0f koho=%.4f homotopi=%.4f "
                  "toplam=%.4f"
                  % (ad, r["sheaf_uyumsuzluk"], r["betti_delik_sayisi"],
@@ -1351,7 +1470,7 @@ def rapor() -> str:                                     # pragma: no cover
         v = np.concatenate([z, np.zeros_like(z)])
         u = Uzay(yuva=0, mertebe=1, tam_kuruldu=True, denetlendi=True,
                  baglayici=0, tip_ozeti="sınama")
-        return zirh_giydir(y, u=u, okuma=v, onceki=onceki)[1]
+        return zirhla(y, u=u, okuma=v, onceki=onceki)[1]
 
     duz = np.linspace(-0.2, 0.2, k)
     kopuk = duz.copy()
@@ -1363,16 +1482,16 @@ def rapor() -> str:                                     # pragma: no cover
              % ("okuma", "sheaf", "işaret", "β₀", "betti cezası"))
     for ad, z in (("düz", duz), ("kopuk", kopuk),
                   ("dalgalı", dalgali), ("menfî", menfi)):
-        iz = kos(z)
+        zi = kos(z)
         s.append("  %-14s %-12.4f %-8.0f %-10d %.4f"
-                 % (ad, iz.sheaf_duzeltme, iz.homotopi_isaret,
-                    iz.betti0, iz.betti_ceza))
+                 % (ad, zi.sheaf_duzeltme, zi.homotopi_isaret,
+                    zi.betti0, zi.betti_ceza))
 
     s.append("")
     s.append("  Kohomoloji: **önceki okumaya dik** bileşen yutuluyor mu?")
     onc = np.concatenate([duz, np.zeros_like(duz)])
     for ad, z in (("aynı yön", duz), ("dik yön", dalgali)):
-        iz = kos(z, onceki=onc)
+        zi = kos(z, onceki=onc)
         s.append("    %-10s tıkanıklık = %.4f" % (ad, iz.tikaniklik))
     s.append("    (dik yönde tıkanıklık 1'e yaklaşmalı; yaklaşmıyorsa")
     s.append("     dördüncü süzgeç ölüdür.)")
@@ -1390,8 +1509,8 @@ def rapor() -> str:                                     # pragma: no cover
     s.append("  simpleks sayıları: "
              + ", ".join(f"|C_{k}|={len(v)}" for k, v in sorted(K.items())))
     for k in (1, 2, 3):
-        B1 = delikleri_say(K, k, "sınır")
-        B2 = delikleri_say(K, k + 1, "sınır")
+        B1 = delik(K, k, "sınır")
+        B2 = delik(K, k + 1, "sınır")
         if B1.size and B2.size:
             s.append(f"  ‖∂_{k}∘∂_{k+1}‖∞ = "
                      f"{np.max(np.abs(B1 @ B2)):.2e}")
@@ -1407,14 +1526,14 @@ def rapor() -> str:                                     # pragma: no cover
     ]
     for ad, P_, eps, (b0, b1) in ornekler:
         Kx = vietoris_rips(_mesafe(P_), eps, azami_boyut=2)
-        o0, o1 = delikleri_say(Kx, 0, "betti"), delikleri_say(Kx, 1, "betti")
+        o0, o1 = delik(Kx, 0, "betti"), delik(Kx, 1, "betti")
         s.append(f"  {ad:20s} ε={eps:.2f}  β₀={o0} (bekl. {b0})"
                  f"   β₁={o1} (bekl. {b1})"
-                 f"   χ={delikleri_say(Kx, 0, chr(101)+chr(117)+chr(108)+chr(101)+chr(114))}")
+                 f"   χ={delik(Kx, 0, chr(101)+chr(117)+chr(108)+chr(101)+chr(114))}")
 
     s.append("\n=== K25: Tikhonov çekirdeği yok ediyor ===")
     Kc = vietoris_rips(_mesafe(_cember(16)), 0.5, azami_boyut=2)
-    D0 = delikleri_say(Kc, 0, "laplasyen")
+    D0 = delik(Kc, 0, "laplasyen")
     oz = np.linalg.eigvalsh(D0)
     s.append(f"  ker Δ₀ boyutu = {int(np.sum(np.abs(oz) < 1e-9))}  (β₀)")
     for eps in (1e-6, 1e-3):

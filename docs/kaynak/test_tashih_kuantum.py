@@ -337,9 +337,9 @@ def test_hlevel_sirasi():
     from matematik import tip_teorisi as S
     Z = S.Tamsayi()                        # kapalı, somut bir tip
     # KÜME 7 tevhidinden sonra (H226) üç mertebe tek merdivendedir:
-    # ``kac_mertebeden(X, n)``; n = -2 büzülebilir, -1 önerme, 0 küme.
-    buz, one, kum = (L.kac_mertebeden(Z, -2), L.kac_mertebeden(Z, -1),
-                     L.kac_mertebeden(Z, 0))
+    # ``mertebe(X, n)``; n = -2 büzülebilir, -1 önerme, 0 küme.
+    buz, one, kum = (L.mertebe(Z, -2), L.mertebe(Z, -1),
+                     L.mertebe(Z, 0))
     a, b, c = C.nf(buz), C.nf(one), C.nf(kum)
     # Üç mertebe ÜÇ AYRI terim; aynı olsalardı hLevel ayrımı kalmazdı.
     assert not C.esdeger_mi(buz, one)
@@ -604,7 +604,7 @@ def test_hcomp_isset_ile_indirgenmez():
     # ``matematik/tip_teorisi.py``dedir; ölçüt değişmedi, yalnız
     # bakılacak yer değişti. Dosya içindeki bölüm başlıkları
     # kullanılarak İNDİRGEYİCİ bölgeleri kesilir -- kütüphane
-    # tarafındaki ``kac_mertebeden`` (eski ``iz_kume``) burada
+    # tarafındaki ``mertebe`` (eski ``iz_kume``) burada
     # aranmamalıdır, zira o bir indirgeme kuralı değil bir tiptir.
     metin = open(os.path.join(kok, "matematik", "tip_teorisi.py"),
                  encoding="utf-8").read()
@@ -617,7 +617,7 @@ def test_hcomp_isset_ile_indirgenmez():
     for dosya in ("denklik", "cekirdek"):
         kaynak = bolum(dosya)
         assert ("isSet" not in kaynak and "iz_kume" not in kaynak
-                and "kac_mertebeden" not in kaynak), (
+                and "mertebe" not in kaynak), (
             dosya, "isSet'e dayalı bir indirgeme kuralı bulundu — "
                    "tashihin gerekçesi yeniden tartılmalı")
     # Ve hcomp'un fiilen indirgendiği tek hâl, bir yüzün ⊤ olmasıdır;

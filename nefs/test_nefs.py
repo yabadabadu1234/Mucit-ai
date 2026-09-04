@@ -739,10 +739,10 @@ def test_kodlama_tersinir_ve_hadamard_esit_uzak():
        alternatiflerinin hepsinden İYİ). ``kubit ≥ sozluk`` olunca
        Hadamard tam eşit uzaklık verir (değişke 0).
     """
-    from .musahede import belirtecten_aciya
+    from .musahede import kopru
     from .qegitim import belirtecleri_kodla
 
-    r = belirtecten_aciya()
+    r = kopru()
     assert r["tersinir"] is True and r["çarpışma"] == 0, r
 
     T = np.arange(16)
@@ -829,10 +829,10 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
     tıkanıkta daha ÇOK konuşuyordu). İki koşu da sınanır ki düzeltmenin
     fiilen bir şey değiştirdiği görülsün.
     """
-    from .musahede import ortu_kapaniyor_mu
+    from .musahede import ortu
 
-    kapali = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=False)
-    acik = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=True)
+    kapali = ortu(ne="bağ", n_gorev=60, kapi=False)
+    acik = ortu(ne="bağ", n_gorev=60, kapi=True)
     assert kapali["yeterli_mi"] and acik["yeterli_mi"]
     assert acik["korelasyon"] > 0.15, acik
     assert acik["sukut_tıkanıkta"] > kapali["sukut_tıkanıkta"], (kapali, acik)
@@ -840,7 +840,7 @@ def test_cech_tikanikligi_sukutu_ARTIRIYOR():
     # Kozikıl şartı: ikili uyuşma denklik kurduğu için üçlüler tutmalı.
     from .musahede import gorevleri_getir
     for gv in gorevleri_getir("training")[:40]:
-        c = ortu_kapaniyor_mu(gv)
+        c = ortu(gv)
         assert c["üçlü_tutarlı"], (gv, c)
 
 
@@ -1090,7 +1090,7 @@ def test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR():
     """
     from . import kulli_kayip as sozlesme
 
-    for r in sozlesme.taahhude_dokundu_mu(n_satir=3, chi=16, ne="hepsi"):
+    for r in sozlesme.sozunde_mi(n_satir=3, chi=16, ne="hepsi"):
         assert not r["ihlâl"], r
         assert not r["kullanılmayan"], r
 
@@ -1098,7 +1098,7 @@ def test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR():
     eski = sozlesme.SOZLESME[1]
     sozlesme.SOZLESME[1] = (("sukut",), "kasten yanlış ilan")
     try:
-        r = sozlesme.taahhude_dokundu_mu(1, n_satir=3, chi=16)
+        r = sozlesme.sozunde_mi(1, n_satir=3, chi=16)
         assert "veri" in r["ihlâl"], r
     finally:
         sozlesme.SOZLESME[1] = eski
@@ -1348,13 +1348,13 @@ def test_ceride_uc_kapali_form_babi():
     """
     import math
     import numpy as np
-    from ogrenme.optimize import (bilgi_metrigi, chebyshev_tasarimi,
+    from ogrenme.optimize import (yokus, chebyshev_tasarimi,
                                   kestirmeden_sur)
 
     def fubini_study(psi, teta, h=1e-5, ne="sayısal"):
-        # KÜME 4 tevhidinde (H223) fubini_study `bilgi_metrigi`nin
+        # KÜME 4 tevhidinde (H223) fubini_study `yokus`nin
         # `sayısal`/`doğrulama` kiplerine eridi.
-        return bilgi_metrigi(ne=ne, psi=psi, teta=teta, h=h)
+        return yokus(ne=ne, psi=psi, teta=teta, h=h)
 
     # --- FCT: XᵀX = I TAM, κ = 1,0; eş aralıkta κ patlar (kırmızı)
     for M in (8, 32):
@@ -1423,30 +1423,30 @@ def test_zirh_dordu_de_KIRMIZIYA_donebiliyor():
     """Gaye ölçüsü: dördü de sıfırken L=0, biri bozukken L büyük."""
     import math
     import numpy as np
-    from nefs.zirh import (vietoris_rips, delikleri_say, yolun_farki,
-                           ek_yeri_tutuyor_mu, zirh_kaybi)
+    from nefs.zirh import (vietoris_rips, delik, iz,
+                           yama, zirh_kaybi)
     from nefs.zihin_durumu import donme
 
     aci = np.linspace(0, 2 * math.pi, 8, endpoint=False)
     cember = np.stack([np.cos(aci), np.sin(aci)], axis=1)
     Dc = np.sqrt(((cember[:, None] - cember[None]) ** 2).sum(2))
-    assert delikleri_say(vietoris_rips(Dc, 0.9, azami_boyut=2), 1)["kayıp"] == 1.0
+    assert delik(vietoris_rips(Dc, 0.9, azami_boyut=2), 1)["kayıp"] == 1.0
 
     rng = np.random.default_rng(0)
     iki = np.vstack([rng.normal(size=(6, 2)) * 0.2,
                      rng.normal(size=(6, 2)) * 0.2 + 10.0])
     Di = np.sqrt(((iki[:, None] - iki[None]) ** 2).sum(2))
-    assert delikleri_say(vietoris_rips(Di, 0.8, azami_boyut=1), 0)["kayıp"] == 1.0
-    assert delikleri_say(vietoris_rips(Di, 16.0, azami_boyut=1), 0)["kayıp"] == 0.0
+    assert delik(vietoris_rips(Di, 0.8, azami_boyut=1), 0)["kayıp"] == 1.0
+    assert delik(vietoris_rips(Di, 16.0, azami_boyut=1), 0)["kayıp"] == 0.0
 
     a = np.array([1.0, 2.0, 3.0])
-    assert ek_yeri_tutuyor_mu(a, a)["uyumsuzluk"] == 0.0
-    assert ek_yeri_tutuyor_mu(a, a + 0.5)["uyumsuzluk"] > 0.0
+    assert yama(a, a)["uyumsuzluk"] == 0.0
+    assert yama(a, a + 0.5)["uyumsuzluk"] > 0.0
     # uyum tamken izdüşüm KİMLİĞE gitmeli (hiçbir şey söndürmemeli)
-    assert np.allclose(ek_yeri_tutuyor_mu(a, a)["izdüşüm"], np.eye(3), atol=1e-6)
+    assert np.allclose(yama(a, a)["izdüşüm"], np.eye(3), atol=1e-6)
 
-    assert yolun_farki([donme(0.4), donme(-0.4)])["sapma"] < 1e-12
-    assert yolun_farki([donme(0.4), donme(0.1)])["sapma"] > 0.1
+    assert iz([donme(0.4), donme(-0.4)])["sapma"] < 1e-12
+    assert iz([donme(0.4), donme(0.1)])["sapma"] > 0.1
 
     # Küllî kayıp: dördü sıfırken TAM sıfır (kaydırma doğru mu)
     assert abs(zirh_kaybi()["kayıp"]) < 1e-12
@@ -1676,7 +1676,7 @@ def test_ic_bag_serpistirilmis_QTT_izafi_operatorleri_TAM_tasiyor():
 def test_lisan_tiktoken_yerel_tablodan_ve_izafi_mevki():
     """tiktoken depodaki tablodan okunuyor mu, izafî mevki öteleme-değişmez mi?"""
     import numpy as np
-    from nefs.musahede import (kodlayici, izafi_oteleme,
+    from nefs.musahede import (kodlayici, otele,
                             OZEL_BELIRTECLER)
 
     k = kodlayici()
@@ -1689,16 +1689,16 @@ def test_lisan_tiktoken_yerel_tablodan_ve_izafi_mevki():
 
     # izafî operatörler TAM ortogonal ve tersi kendi eşleniği
     nx, ny = 5, 4
-    D = izafi_oteleme(nx=nx, ny=ny, dx=1, dy=0)
+    D = otele(nx=nx, ny=ny, dx=1, dy=0)
     assert np.allclose(D.T @ D, np.eye(nx * ny), atol=1e-12)
-    assert np.allclose(D @ izafi_oteleme(nx=nx, ny=ny, dx=-1, dy=0),
+    assert np.allclose(D @ otele(nx=nx, ny=ny, dx=-1, dy=0),
                        np.eye(nx * ny), atol=1e-12)
 
     # aynı örüntü ızgaranın HER YERİNDE aynı kodlanmalı
     A = np.zeros((6, 6), int); A[1, 1] = 3; A[1, 2] = 5
     B = np.zeros((6, 6), int); B[4, 3] = 3; B[4, 4] = 5
-    ka = [x.kod() for x in izafi_oteleme(ne="ızgara", g=A)["izafi"] if x.merkez == 3][0]
-    kb = [x.kod() for x in izafi_oteleme(ne="ızgara", g=B)["izafi"] if x.merkez == 3][0]
+    ka = [x.kod() for x in otele(ne="ızgara", g=A)["izafi"] if x.merkez == 3][0]
+    kb = [x.kod() for x in otele(ne="ızgara", g=B)["izafi"] if x.merkez == 3][0]
     assert ka == kb, (ka, kb)
 
 

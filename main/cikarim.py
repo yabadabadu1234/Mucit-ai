@@ -605,12 +605,12 @@ def dalga_talimi(F: np.ndarray, y: np.ndarray, hendese: Hendese,
     tam_g = None
     if tam_fisher:
         try:
-            from ogrenme.optimize import bilgi_metrigi
+            from ogrenme.optimize import yokus
             z0 = F @ W
             z0 -= z0.max(axis=1, keepdims=True)
             e0 = np.exp(z0)
             P0 = e0 / e0.sum(axis=1, keepdims=True)
-            g = bilgi_metrigi(F, P0, ne="tam")
+            g = yokus(F, P0, ne="tam")
             g = g + float(lam) * np.eye(g.shape[0])
             tam_g = np.linalg.inv(g)
         except Exception:                                # noqa: BLE001

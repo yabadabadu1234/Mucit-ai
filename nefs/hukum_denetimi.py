@@ -62,13 +62,13 @@ def _h3_gradyansiz() -> Tuple[bool, str]:
 
 def _h6_sahitlik() -> Tuple[bool, str]:
     """Tek karşı örnek küllî kaideyi düşürür."""
-    from .musahede import _akis_kur, kaideyi_coz, nakz_bul, sahitleri_ayir
+    from .musahede import _akis_kur, kaide, nakz_bul, ayir
     temiz = _akis_kur(m=5, ds=8, t=6)
     bozuk = _akis_kur(m=5, ds=8, t=6, bozuk=2)
     r = []
     for S in (temiz, bozuk):
-        b = sahitleri_ayir(S)
-        K = [kaideyi_coz(S, x, ne="tek") for x in b.sahitler]
+        b = ayir(S)
+        K = [kaide(S, x, ne="tek") for x in b.sahitler]
         r.append(nakz_bul(S, b.sahitler, K)["nakz"])
     return (not r[0]) and bool(r[1]), "temiz nakz=%s, bozuk nakz=%s" % tuple(r)
 
@@ -498,8 +498,8 @@ def _h69_grover_kapali_form() -> Tuple[bool, str]:
 
 def _h47_iki_olcut() -> Tuple[bool, str]:
     """Ölçüt İKİdir ve ikisi de ayrı raporlanır."""
-    from .musahede import cikti_ne_kadar, gorevleri_getir
-    r = cikti_ne_kadar(ne="ölç",
+    from .musahede import kalip, gorevleri_getir
+    r = kalip(ne="ölç",
                        gorevler=gorevleri_getir("evaluation")[:40])
     var = all(k in r for k in ("isabet_oranı", "konuşunca_isabet",
                                "sükût", "yanlış"))
@@ -538,8 +538,8 @@ def _h118_nizam_doygunlugu_kiriyor() -> Tuple[bool, str]:
 
 def _h119_sozlesme_ihlalsiz() -> Tuple[bool, str]:
     """41 melekenin hiçbiri ilan ettiği hududun dışına çıkmıyor."""
-    from .kulli_kayip import taahhude_dokundu_mu
-    o = taahhude_dokundu_mu(n_satir=3, chi=16, ne="hepsi")
+    from .kulli_kayip import sozunde_mi
+    o = sozunde_mi(n_satir=3, chi=16, ne="hepsi")
     ihlal = [(r["no"], r["ihlâl"]) for r in o if r["ihlâl"]]
     bos = [(r["no"], r["kullanılmayan"]) for r in o if r["kullanılmayan"]]
     return (not ihlal and not bos), \
@@ -593,9 +593,9 @@ def _h125_cech_sukut() -> Tuple[bool, str]:
     (model tıkanıkta daha çok konuşuyordu -- bir kusurdu); kapı açıkken
     müsbet olmalı.
     """
-    from .musahede import ortu_kapaniyor_mu
-    kapali = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=False)
-    acik = ortu_kapaniyor_mu(ne="bağ", n_gorev=60, kapi=True)
+    from .musahede import ortu
+    kapali = ortu(ne="bağ", n_gorev=60, kapi=False)
+    acik = ortu(ne="bağ", n_gorev=60, kapi=True)
     if not (kapali.get("yeterli_mi") and acik.get("yeterli_mi")):
         return False, "yeterli tıkanık görev bulunamadı"
     return (acik["korelasyon"] > 0.15

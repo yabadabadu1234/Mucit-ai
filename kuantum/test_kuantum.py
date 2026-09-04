@@ -388,8 +388,8 @@ def test_sinir_operatoru_kare_sifir():
         P = np.random.default_rng(tohum).normal(size=(9, 3))
         K = tda.vietoris_rips(_mesafe(P), 2.4, azami_boyut=3)
         for k in (1, 2, 3):
-            B1 = tda.delikleri_say(K, k, "sınır")
-            B2 = tda.delikleri_say(K, k + 1, "sınır")
+            B1 = tda.delik(K, k, "sınır")
+            B2 = tda.delik(K, k + 1, "sınır")
             if B1.size and B2.size:
                 assert np.max(np.abs(B1 @ B2)) < 1e-12, (tohum, k)
 
@@ -398,7 +398,7 @@ def test_laplasyen_simetrik_ve_psd():
     P = np.random.default_rng(1).normal(size=(8, 2))
     K = tda.vietoris_rips(_mesafe(P), 1.6, azami_boyut=2)
     for k in (0, 1):
-        D = tda.delikleri_say(K, k, "laplasyen")
+        D = tda.delik(K, k, "laplasyen")
         if D.size == 0:
             continue
         assert np.max(np.abs(D - D.T)) < 1e-12
@@ -414,15 +414,15 @@ def test_laplasyen_simetrik_ve_psd():
 ])
 def test_bilinen_sekillerde_betti(ad, P, eps, b0, b1):
     K = tda.vietoris_rips(_mesafe(P), eps, azami_boyut=2)
-    assert tda.delikleri_say(K, 0, "betti") == b0, (ad, "β₀")
-    assert tda.delikleri_say(K, 1, "betti") == b1, (ad, "β₁")
+    assert tda.delik(K, 0, "betti") == b0, (ad, "β₀")
+    assert tda.delik(K, 1, "betti") == b1, (ad, "β₁")
 
 
 def test_iki_ayri_cember():
     P = np.vstack([_cember(12), _cember(12) + np.array([10.0, 0.0])])
     K = tda.vietoris_rips(_mesafe(P), 0.6, azami_boyut=2)
-    assert tda.delikleri_say(K, 0, "betti") == 2
-    assert tda.delikleri_say(K, 1, "betti") == 2
+    assert tda.delik(K, 0, "betti") == 2
+    assert tda.delik(K, 1, "betti") == 2
 
 
 def test_euler_karakteristigi_betti_ile_uyusuyor():
@@ -431,15 +431,15 @@ def test_euler_karakteristigi_betti_ile_uyusuyor():
                    (np.array([[0., 0.], [1., 0.], [0.5, 0.87]]), 1.5),
                    (np.random.default_rng(2).normal(size=(8, 2)), 1.5)):
         K = tda.vietoris_rips(_mesafe(P), eps, azami_boyut=2)
-        chi_sayim = tda.delikleri_say(K, 0, "euler")
-        chi_betti = sum((-1) ** k * tda.delikleri_say(K, k, "betti") for k in (0, 1, 2))
+        chi_sayim = tda.delik(K, 0, "euler")
+        chi_betti = sum((-1) ** k * tda.delik(K, k, "betti") for k in (0, 1, 2))
         assert chi_sayim == chi_betti, (chi_sayim, chi_betti)
 
 
 def test_tikhonov_cekirdegi_yok_ediyor():
     """K25: ``Δ+εI``in çekirdeği boştur; β eşikli sayımla okunur."""
     K = tda.vietoris_rips(_mesafe(_cember(16)), 0.5, azami_boyut=2)
-    D = tda.delikleri_say(K, 0, "laplasyen")
+    D = tda.delik(K, 0, "laplasyen")
     oz = np.linalg.eigvalsh(D)
     assert int(np.sum(np.abs(oz) < 1e-9)) == 1        # β₀ = 1
     for eps in (1e-9, 1e-6, 1e-3):

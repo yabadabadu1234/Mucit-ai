@@ -217,7 +217,7 @@ KIP_DYOL, KIP_ARKA = "d_yol", "arka_kapı"
 KIP_ON, KIP_B = "ön_kapı", "b"
 
 
-def tesir_kapali_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
+def gecer_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
                     M: Iterable[str] = (), cizgeler=None,
                     ne: str = "d") -> bool:
     """TESİR BURADAN GEÇEBİLİR Mİ -- **tek terkip** (kütük H226).
@@ -269,7 +269,7 @@ def tesir_kapali_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
             return False
         if X in Zs or Y in Zs:
             return False
-        return tesir_kapali_mi(_oku_cikarilmis(g, {X}), [X], [Y], Zs)
+        return gecer_mi(_oku_cikarilmis(g, {X}), [X], [Y], Zs)
     if ne == "ön_kapı":
         # Dördüncü argüman **verilen kümedir**: arka kapıda ona şart
         # kümesi (``Z``), ön kapıda aracı kümesi (``M``) denir. Terkipte
@@ -282,16 +282,16 @@ def tesir_kapali_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
         if not _yonlu_yollar_kesiliyor_mu(g, X, Y, Ms):
             return False
         # 2: X → M arka kapısı yok (boş kümeyle kapanıyor).
-        if not all(tesir_kapali_mi(_oku_cikarilmis(g, {X}), [X], [m])
+        if not all(gecer_mi(_oku_cikarilmis(g, {X}), [X], [m])
                    for m in Ms):
             return False
         # 3: M → Y arka kapıları X ile kapanıyor.
         for m in Ms:
-            if not tesir_kapali_mi(_oku_cikarilmis(g, {m}), [m], [Y], {X}):
+            if not gecer_mi(_oku_cikarilmis(g, {m}), [m], [Y], {X}):
                 return False
         return True
     if ne == "b":
-        return all(tesir_kapali_mi(g, X, Y, Z) for g in cizgeler)
+        return all(gecer_mi(g, X, Y, Z) for g in cizgeler)
     raise ValueError("ayrışma ölçütü bilinmiyor: %r" % (ne,))
 
 
@@ -303,7 +303,7 @@ def butun_ayrismalar(g: Cizge, azami_z: int = 2
         kalan = [d for d in g.dugumler if d not in (x, y)]
         for k in range(azami_z + 1):
             for Z in itertools.combinations(kalan, k):
-                if tesir_kapali_mi(g, [x], [y], Z):
+                if gecer_mi(g, [x], [y], Z):
                     sonuc.append((x, y, frozenset(Z)))
     return sonuc
 
@@ -333,7 +333,7 @@ def arka_kapi_kumeleri(g: Cizge, X: str, Y: str, azami: int = 3
     sonuc = []
     for k in range(azami + 1):
         for Z in itertools.combinations(adaylar, k):
-            if tesir_kapali_mi(g, X, Y, Z, ne=KIP_ARKA):
+            if gecer_mi(g, X, Y, Z, ne=KIP_ARKA):
                 sonuc.append(frozenset(Z))
     return sonuc
 
@@ -379,16 +379,16 @@ def _rapor_fitrat_ayrisma() -> str:
     carpis = Cizge(("A", "B", "C"), (("A", "B"), ("C", "B")))
     for ad, g in (("zincir A→B→C", zincir), ("çatal  A←B→C", catal),
                   ("çarpışma A→B←C", carpis)):
-        bos = tesir_kapali_mi(g, ["A"], ["C"])
-        sart = tesir_kapali_mi(g, ["A"], ["C"], ["B"])
+        bos = gecer_mi(g, ["A"], ["C"])
+        sart = gecer_mi(g, ["A"], ["C"], ["B"])
         s.append(f"  {ad:16s} A⫫C = {str(bos):5s}   A⫫C|B = {sart}")
     s.append("  dikkat: çarpışmada şarta bağlamak bağımsızlığı BOZUYOR —")
     s.append("  diğer ikisinde kuruyor. İşaret tersine dönüyor.")
 
     s.append("\n=== Çarpışmanın nesli de açar ===")
     g2 = Cizge(("A", "B", "C", "D"), (("A", "B"), ("C", "B"), ("B", "D")))
-    s.append(f"  A⫫C     = {tesir_kapali_mi(g2, ['A'], ['C'])}")
-    s.append(f"  A⫫C | D = {tesir_kapali_mi(g2, ['A'], ['C'], ['D'])}"
+    s.append(f"  A⫫C     = {gecer_mi(g2, ['A'], ['C'])}")
+    s.append(f"  A⫫C | D = {gecer_mi(g2, ['A'], ['C'], ['D'])}"
              "   (D, B'nin çocuğu — yine de açıyor)")
 
     s.append("\n=== İki usul birbirini sağlıyor mu? ===")
@@ -408,7 +408,7 @@ def _rapor_fitrat_ayrisma() -> str:
         k = rast.randint(0, len(kalan))
         Z = rast.sample(kalan, k)
         deneme += 1
-        if tesir_kapali_mi(g, [x], [y], Z) != tesir_kapali_mi(g, [x], [y], Z, ne=KIP_DYOL):
+        if gecer_mi(g, [x], [y], Z) != gecer_mi(g, [x], [y], Z, ne=KIP_DYOL):
             uyusmazlik += 1
     s.append(f"  {deneme} rastgele sorgu — Bayes topları ile yol sayımı"
              f" arasında uyuşmazlık: {uyusmazlik}")
@@ -416,21 +416,21 @@ def _rapor_fitrat_ayrisma() -> str:
     s.append("\n=== Arka kapı ===")
     # X ← Z → Y, X → Y : Z karıştırıcı
     g3 = Cizge(("X", "Y", "Z"), (("Z", "X"), ("Z", "Y"), ("X", "Y")))
-    s.append(f"  karıştırıcılı çizgede Z uygun mu? {tesir_kapali_mi(g3, 'X', 'Y', ['Z'], ne=KIP_ARKA)}")
-    s.append(f"  hiçbir şeye bağlanmamak?          {tesir_kapali_mi(g3, 'X', 'Y', [], ne=KIP_ARKA)}")
+    s.append(f"  karıştırıcılı çizgede Z uygun mu? {gecer_mi(g3, 'X', 'Y', ['Z'], ne=KIP_ARKA)}")
+    s.append(f"  hiçbir şeye bağlanmamak?          {gecer_mi(g3, 'X', 'Y', [], ne=KIP_ARKA)}")
     s.append(f"  bütün uygun kümeler: "
              + ", ".join("{" + ",".join(sorted(z)) + "}" if z else "∅"
                          for z in arka_kapi_kumeleri(g3, "X", "Y")))
     # X → M → Y, Z ardıl (X'in nesli): şarta bağlanmamalı
     g4 = Cizge(("X", "M", "Y"), (("X", "M"), ("M", "Y")))
-    s.append(f"  ardıla (M) bağlanmak uygun mu? {tesir_kapali_mi(g4, 'X', 'Y', ['M'], ne=KIP_ARKA)}"
+    s.append(f"  ardıla (M) bağlanmak uygun mu? {gecer_mi(g4, 'X', 'Y', ['M'], ne=KIP_ARKA)}"
              "   (hayır — X'in nesli)")
 
     s.append("\n=== Ön kapı (gözlenmemiş karıştırıcı varken) ===")
     # U gözlenmemiş: U→X, U→Y, X→M→Y
     g5 = Cizge(("U", "X", "M", "Y"),
                (("U", "X"), ("U", "Y"), ("X", "M"), ("M", "Y")))
-    s.append(f"  M ön kapıyı sağlıyor mu? {tesir_kapali_mi(g5, 'X', 'Y', M=['M'], ne=KIP_ON)}")
+    s.append(f"  M ön kapıyı sağlıyor mu? {gecer_mi(g5, 'X', 'Y', M=['M'], ne=KIP_ON)}")
     gozlenen = [z for z in arka_kapi_kumeleri(g5, "X", "Y") if "U" not in z]
     s.append(f"  U'suz arka kapı kümesi var mı? "
              f"{'evet: ' + str(gozlenen) if gozlenen else 'yok'}")
@@ -441,19 +441,19 @@ def _rapor_fitrat_ayrisma() -> str:
     o1 = Cizge(("X", "Y", "Z"), (("Z", "X"), ("X", "Y"), ("Z", "Y")))
     o2 = Cizge(("X", "Y", "Z"), (("Z", "X"), ("X", "Y")))
     s.append("  omurga Z→X→Y ikisinde de var; ortam-1'de fazladan Z→Y var.")
-    s.append(f"  ortam-1'de Z⫫Y|X = {tesir_kapali_mi(o1, ['Z'], ['Y'], ['X'])}"
+    s.append(f"  ortam-1'de Z⫫Y|X = {gecer_mi(o1, ['Z'], ['Y'], ['X'])}"
              "   (fazla kenar yüzünden kapanmıyor)")
-    s.append(f"  ortam-2'de Z⫫Y|X = {tesir_kapali_mi(o2, ['Z'], ['Y'], ['X'])}")
+    s.append(f"  ortam-2'de Z⫫Y|X = {gecer_mi(o2, ['Z'], ['Y'], ['X'])}")
     s.append(f"  B-ayrık mı (ikisinde birden)? "
-             f"{tesir_kapali_mi(cizgeler=[o1, o2], X=['Z'], Y=['Y'], Z=['X'], ne=KIP_B)}"
+             f"{gecer_mi(cizgeler=[o1, o2], X=['Z'], Y=['Y'], Z=['X'], ne=KIP_B)}"
              "   → tek ortamda tutan ayrışma hüküm doğurmaz")
     o3 = Cizge(("X", "Y", "Z", "W"),
                (("Z", "X"), ("X", "Y"), ("W", "Y")))
     o4 = Cizge(("X", "Y", "Z", "W"),
                (("Z", "X"), ("X", "Y"), ("W", "Y"), ("W", "X")))
-    s.append(f"  Z⫫W (iki ayrı ortamda): {tesir_kapali_mi(o3, ['Z'], ['W'])},"
-             f" {tesir_kapali_mi(o4, ['Z'], ['W'])}"
-             f" → B-ayrık={tesir_kapali_mi(cizgeler=[o3, o4], X=['Z'], Y=['W'], ne=KIP_B)}")
+    s.append(f"  Z⫫W (iki ayrı ortamda): {gecer_mi(o3, ['Z'], ['W'])},"
+             f" {gecer_mi(o4, ['Z'], ['W'])}"
+             f" → B-ayrık={gecer_mi(cizgeler=[o3, o4], X=['Z'], Y=['W'], ne=KIP_B)}")
     ortak = ortak_ayrismalar([o3, o4])
     s.append(f"  son iki ortamın ortak ayrışmaları: "
              + (", ".join(f"{x}⫫{y}|{{{','.join(sorted(z)) or '∅'}}}"
@@ -1912,6 +1912,133 @@ def _rapor_fitrat_havuz() -> str:
     return "\n".join(s)
 
 
+
+
+# ====================================================================
+#  KÜME 8: bağlanım ile müdahalenin ölçülen farkı
+# ====================================================================
+
+A_ZX, B_XY, C_ZY = 1.5, 0.8, -2.0
+
+
+def uret(n: int, tohum: int = 0, mudahale: float | None = None) -> Tuple[np.ndarray, ...]:
+    rng = np.random.default_rng(tohum)
+    z = rng.normal(size=n)
+    if mudahale is None:
+        x = A_ZX * z + rng.normal(size=n) * 0.5
+    else:
+        # do(X): X artık Z'den gelmiyor, dışarıdan atanıyor
+        x = rng.normal(size=n) * mudahale
+    y = B_XY * x + C_ZY * z + rng.normal(size=n) * 0.5
+    return z, x, y
+
+
+def _egim(x: np.ndarray, y: np.ndarray) -> float:
+    A = np.stack([x, np.ones_like(x)], axis=1)
+    return float(np.linalg.lstsq(A, y, rcond=None)[0][0])
+
+
+def _kismi_egim(x: np.ndarray, z: np.ndarray, y: np.ndarray) -> float:
+    A = np.stack([x, z, np.ones_like(x)], axis=1)
+    return float(np.linalg.lstsq(A, y, rcond=None)[0][0])
+
+
+def baglanim_mudahale_ayrimi(n: int = 200000, tohum: int = 0) -> Dict[str, object]:
+    """Üç tahmin, bilinen doğru cevap ``b = 0.8`` ile kıyaslanır."""
+    z, x, y = uret(n, tohum)
+    ham = _egim(x, y)                              # E[Y|X]: yanlı
+    duzeltilmis = _kismi_egim(x, z, y)             # arka kapı: doğru
+
+    _, xi, yi = uret(n, tohum + 1, mudahale=1.0)   # fiilî do(X)
+    deneysel = _egim(xi, yi)
+
+    return {
+        "dogru_etki_b": B_XY,
+        "ham_baglanim": ham,
+        "arka_kapi": duzeltilmis,
+        "deneysel_mudahale": deneysel,
+        "ham_yanli": bool(abs(ham - B_XY) > 0.1),
+        "arka_kapi_dogru": bool(abs(duzeltilmis - B_XY) < 0.02),
+        "deneysel_dogru": bool(abs(deneysel - B_XY) < 0.02),
+        "arka_kapi_deneyselle_uyusuyor": bool(abs(duzeltilmis - deneysel) < 0.02),
+    }
+
+
+def olculmemis_karistirici(n: int = 200000, tohum: int = 0) -> Dict[str, object]:
+    """**Zaaf.** Z gözlenmiyorsa arka kapı düzeltmesi kurulamaz.
+
+    Burada ikinci, GİZLİ bir karıştırıcı U eklenir; Z ölçülür, U ölçülmez.
+    Z ile düzeltmek yetmez: tahmin hâlâ yanlıdır. do-hesabı bir hesap
+    usulüdür, karıştırıcı üretmez -- neyin ölçüldüğü bir VERİ meselesidir.
+    """
+    rng = np.random.default_rng(tohum)
+    z = rng.normal(size=n)
+    u = rng.normal(size=n)                       # gizli
+    x = A_ZX * z + 1.2 * u + 0.5 * rng.normal(size=n)
+    y = B_XY * x + C_ZY * z + 1.7 * u + 0.5 * rng.normal(size=n)
+
+    z_ile = _kismi_egim(x, z, y)
+    A = np.stack([x, z, u, np.ones_like(x)], axis=1)
+    hepsi_ile = float(np.linalg.lstsq(A, y, rcond=None)[0][0])
+    return {
+        "dogru_etki_b": B_XY,
+        "yalniz_z_ile_duzeltme": z_ile,
+        "z_ve_u_ile_duzeltme": hepsi_ile,
+        "z_ile_hala_yanli": bool(abs(z_ile - B_XY) > 0.1),
+        "u_gorulunce_duzeliyor": bool(abs(hepsi_ile - B_XY) < 0.02),
+    }
+
+
+def catal_ve_carpisma(n: int = 200000, tohum: int = 0) -> Dict[str, object]:
+    """Hangi değişkene şart koşulacağı, grafiğin YÖNÜNE bağlıdır.
+
+    * **Çatal** ``X ← Z → Y``: Z'ye şart koşmak sahte ilişkiyi KALDIRIR.
+    * **Çarpışma** ``X → C ← Y``: C'ye şart koşmak, bağımsız X ve Y
+      arasında sahte ilişki YARATIR (Berkson yanlılığı).
+
+    Yani "ne kadar çok değişken katarsan o kadar iyi" YANLIŞTIR.
+    """
+    rng = np.random.default_rng(tohum)
+    # çatal
+    z = rng.normal(size=n)
+    x1 = z + 0.5 * rng.normal(size=n)
+    y1 = z + 0.5 * rng.normal(size=n)          # X'in Y'ye doğrudan etkisi YOK
+    catal_ham = _egim(x1, y1)
+    catal_z_ile = _kismi_egim(x1, z, y1)
+
+    # çarpışma
+    x2 = rng.normal(size=n)
+    y2 = rng.normal(size=n)                    # gerçekten bağımsız
+    c = x2 + y2 + 0.5 * rng.normal(size=n)
+    carp_ham = _egim(x2, y2)
+    carp_c_ile = _kismi_egim(x2, c, y2)
+    return {
+        "catal_ham": catal_ham,
+        "catal_z_ile": catal_z_ile,
+        "catal_sart_kosmak_duzeltti": bool(abs(catal_ham) > 0.5 and abs(catal_z_ile) < 0.02),
+        "carpisma_ham": carp_ham,
+        "carpisma_c_ile": carp_c_ile,
+        "carpisma_sart_kosmak_bozdu": bool(abs(carp_ham) < 0.02 and abs(carp_c_ile) > 0.2),
+    }
+
+
+def _rapor_nedensel() -> str:
+    s = ["=== nedensel ==="]
+    a = baglanim_mudahale_ayrimi()
+    s.append("do-ayrımı  doğru b=%.2f | ham bağlanım=%.4f (yanlı=%s) | arka kapı=%.4f | deneysel=%.4f"
+             % (a["dogru_etki_b"], a["ham_baglanim"], a["ham_yanli"],
+                a["arka_kapi"], a["deneysel_mudahale"]))
+    s.append("           arka kapı deneyselle uyuşuyor=%s" % a["arka_kapi_deneyselle_uyusuyor"])
+    b = olculmemis_karistirici()
+    s.append("zaaf       gizli U varken: yalnız Z ile=%.4f (hâlâ yanlı=%s) | Z+U ile=%.4f (düzeliyor=%s)"
+             % (b["yalniz_z_ile_duzeltme"], b["z_ile_hala_yanli"],
+                b["z_ve_u_ile_duzeltme"], b["u_gorulunce_duzeliyor"]))
+    c = catal_ve_carpisma()
+    s.append("çatal      ham=%.4f → Z ile=%.4f  (şart koşmak düzeltti=%s)"
+             % (c["catal_ham"], c["catal_z_ile"], c["catal_sart_kosmak_duzeltti"]))
+    s.append("çarpışma   ham=%.4f → C ile=%.4f  (şart koşmak BOZDU=%s)"
+             % (c["carpisma_ham"], c["carpisma_c_ile"], c["carpisma_sart_kosmak_bozdu"]))
+    return "\n".join(s)
 
 # ====================================================================
 #  Çipin toplu raporu

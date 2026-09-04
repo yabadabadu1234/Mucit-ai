@@ -79,7 +79,7 @@ from nefs.melekeler import QNefs
 from nefs.qegitim import belirtecleri_kodla
 from nefs.melekeler import QAKIS, qsicil
 from nefs.zihin_durumu import QAyar, QYazmac
-from nefs.zirh import mantigi_tek_supurmede_isaretle
+from nefs.zirh import vicdan
 
 __all__ = ["sadakat_olcusu", "haritala", "rapor"]
 
@@ -191,7 +191,7 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
         t0 = time.perf_counter()
         sicil[no].kosu(q, nefs.p)
         if kalp:
-            mantigi_tek_supurmede_isaretle(q, nefs.p, ne="işaret")      # KALP: muafiyetsiz, her adımda
+            vicdan(q, nefs.p, ne="işaret")      # KALP: muafiyetsiz, her adımda
         simdi = _kutleler(q)
         satirlar.append({
             "adım": adim, "no": no, "ad": sicil[no].ad,
@@ -208,7 +208,7 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
         })
         onceki = simdi
     if kalp:
-        mantigi_tek_supurmede_isaretle(q, ne="intaç")                  # işaretler burada söner
+        vicdan(q, ne="intaç")                  # işaretler burada söner
         son = _kutleler(q)
         satirlar.append({"adım": len(satirlar), "no": 0, "ad": "«sadakat intâcı»",
                          "tenakuz": son["tenakuz"], "ayniyet": son["ayniyet"],
@@ -282,8 +282,8 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
 
     # --- KODLAMANIN FUNKTÖR SIHHATİ
     try:
-        from nefs.musahede import belirtecten_aciya
-        kk = belirtecten_aciya()
+        from nefs.musahede import kopru
+        kk = kopru()
         s += ["", "FUNKTÖR KÖPRÜSÜ (token_uzaylari/morfizm.py):",
               "  tersinir=%s  çarpışma=%d  izometri=%s  mesafe kor.=%.4f"
               % (kk["tersinir"], kk["çarpışma"], kk["izometri"],
