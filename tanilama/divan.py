@@ -273,6 +273,14 @@ try:
 except Exception as _e:  # noqa: BLE001
     EKSIK['nefs.qyazmac'] = str(_e)
 try:
+    import nefs.hafiza  # [uzuv] Kuantum asosiyatif hafıza -- ağırlık hafıza değildir.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.hafiza'] = str(_e)
+try:
+    import nefs.kulli_mizan  # [uzuv] MÎZÂN-I KÜLLÎ -- modelin minimize ettiği yegâne şey.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.kulli_mizan'] = str(_e)
+try:
     import nefs.ayna  # [uzuv] Yarı yansıtıcı ayna -- boş porttan gelen vakumla yaratıcılık.
 except Exception as _e:  # noqa: BLE001
     EKSIK['nefs.ayna'] = str(_e)
@@ -507,6 +515,12 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'QUDİT -- dimağın yeni çekirdeği: SVD yok, MPS yok, ikili kübit yok.'),
     ('nefs.qyazmac', 'uzuv',
      'QYAZMAÇ -- qudit yazmacı: MPS\'in yerine geçen durum kabı.'),
+    ('nefs.hafiza', 'uzuv',
+     'Kuantum asosiyatif hafıza (ρ_Hafıza): tecrübe edilen safsatalar ve '
+     'meşru teemmüller. Ağırlık fıtrattır, hafıza hadisedir; ikisi ayrıdır.'),
+    ('nefs.kulli_mizan', 'uzuv',
+     'MÎZÂN-I KÜLLÎ: ℒ_Rezonans (Uhlmann) + λ₁ℒ_Çevrim (Wilson holonomisi) '
+     '+ λ₂ℒ_Monogami (CKW) + λ₃ℒ_Hodge. Modelin minimize ettiği yegâne şey.'),
     ('nefs.ayna', 'uzuv',
      'Yarı yansıtıcı ayna -- ışın bölücü, vakum uyarılması, sıkıştırılmış '
      'vakum, CV (μ,σ) temsili ve Coherent Ising Machine. Kör sıcaklığı '

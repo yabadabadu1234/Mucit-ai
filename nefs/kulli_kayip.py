@@ -2752,188 +2752,32 @@ MIZAN_AGIRLIK: Dict[str, float] = {"uzay": 1.0, "kategori": 1.0,
                                    "tip": 1.0}
 
 
-def tabakali_mizan(psi=None, hedef=None, delta=None, morfizm=None,
-                   agirlik: Optional[Dict[str, float]] = None,
-                   ne: str = "toplam") -> Dict[str, float]:
-    """DÖRT MERTEBELİ MİZAN -- ``ℒ = ℒ_nokta + αℒ_uzay + βℒ_kategori + γℒ_tip``
+# ══════════════════════════════════════════════════════════════════
+#  ``tabakali_mizan`` VE ``mizan_raporu`` İMHA EDİLDİ
+# ══════════════════════════════════════════════════════════════════
+#
+# **PADİŞAHIN HÜKMÜ:** *"Hata fonksiyonunu belirledik ama kuantum
+# ilhamlı olmadı, çok avantajlı bir fonksiyon olmadı."*
+#
+# Tabakalı mizan dört terimliydi (nokta + uzay + kategori + tip) ve
+# kör NLL'den iyiydi; fakat kuantumun kendi hadiselerinden mülhem
+# değildi:
+#
+#   * ``ℒ_nokta``    hâlâ bir Born olasılığının logaritmasıydı.
+#   * ``ℒ_uzay``     Fubini-Study'ydi ama tek bir hedefe kilitliydi.
+#   * ``ℒ_kategori`` funktör şartıydı; morfizmi DIŞARIDAN istiyordu.
+#   * ``ℒ_tip``      Hodge'du -- yalnız bu terim ayakta kaldı.
+#
+# Yerine gelen **MÎZÂN-I KÜLLÎ**'dir (``nefs/kulli_mizan.py``):
+#
+#     ℒ_Küllî = ℒ_Rezonans + λ₁ℒ_Çevrim + λ₂ℒ_Monogami + λ₃ℒ_Hodge
+#
+# Farkı tabela değil kimliktir: Çevrim terimi morfizmi dışarıdan
+# istemez, **kendi holonomisini** kurar ve manayı bilmeden tenakuz
+# bulur; Monogami terimi kuantumun klasikte karşılığı olmayan bir
+# kanunudur (CKW); Rezonans terimi Uhlmann sadakatidir, log-olasılık
+# değil.
+#
+# **USUL FERMANI GEREĞİ ANINDA SİLİNDİ** -- "iptal ettiklerimizi anında,
+# bağlı oldukları şeyleri bozmak pahasına sil."
 
-    ===================================================================
-    NİÇİN KÖR NLL YASAK
-    ===================================================================
-
-    Qudit durumundan yalnız hedef belirtecin köşegen genliğini alıp
-    ``−ln P`` demek üç felaket doğurur ve zabıt üçünü de sayar:
-
-    1. **Faz katliamı.** Kuantum koheransı köşegen-DIŞI elemanlarda
-       (``ρ_ij = c_i c_j*``) yaşar. Born kuralı kare aldığı an faz
-       buharlaşır: ``θ = 0`` ile ``θ = π`` ayırt edilemez olur. Lie
-       cebri dönmeleri ve holonomi terbiye edilemez.
-    2. **Mertebelerin çöküşü.** Hedef, sıfırıncı mertebeden ibaret kuru
-       bir kelime indisidir. Tepe durumunu doğrudan ona bağlarsanız
-       Kategori ve Uzay mertebeleri gürültüye terk edilir; model
-       kavramın altındaki geometriyi değil, o kutunun genliğini itmenin
-       en ucuz kestirmesini ezberler.
-    3. **Pahalı softmax taklidi.** Gaye yalnız bir sonraki kelimenin
-       log-olasılığıysa qudit simüle etmenin manası kalmaz.
-
-    ===================================================================
-    DÖRT TERİM
-    ===================================================================
-
-    ``ℒ_uzay = 1 − |⟨Φ_hedef|Ψ⟩|²`` -- Fubini-Study. Hedef kör bir
-    tamsayı değil, anlamsal uzayda **sürekli bir koordinattır**; fark
-    olasılık logaritmasıyla değil manifold metriğiyle ölçülür. Fazı ve
-    açıyı hedef manifolda kilitler.
-
-    ``ℒ_kategori = ‖M_{g∘f} − M_g·M_f‖²_F`` -- funktör korunumu.
-    Kategori teorisinin temel şartı kompozisyondur. **Dışarıdan etiket
-    istemez**: sistemin kendi iç mantığının kendini denetlemesidir.
-
-    ``ℒ_tip = ⟨Ψ|Δ_Hodge|Ψ⟩`` -- tenakuzsuzluk. Çelişkiler Hodge
-    Laplasyeninin sıfır olmayan özdeğerlerinde yaşar; harmonik formda
-    bu terim sıfırdır. Model saçmalamaktan men edilir.
-
-    ``ℒ_nokta = −ln Tr(P_hedef ρ)`` -- kısmî Born. **Son basamaktır**,
-    tek başına değil: üstteki üç zırh kilitlendikten sonra devreye
-    girer.
-
-    ===================================================================
-    ``ne`` KİPLERİ
-    ===================================================================
-
-    ``toplam``  -- dördü ve ağırlıklı toplamı
-    ``döküm``   -- her terim ayrı ayrı (hangi mertebe kırmızı, görünür)
-    ``nokta``   -- **İMHA EDİLDİ.** Çağrılırsa hata verir; yasağı
-                   çağrılabilir bırakmak yasağı kaldırmamaktır.
-    """
-    a = dict(MIZAN_AGIRLIK)
-    a.update(agirlik or {})
-    out: Dict[str, float] = {}
-
-    # --- 0. NOKTA: kısmî Born. ρ kurulmaz; ⟨x|Ψ⟩ yeter (Tr(P ρ) = |⟨x|Ψ⟩|²)
-    if psi is not None and hedef is not None:
-        p = np.asarray(psi).reshape(-1)
-        if np.isscalar(hedef) or (np.ndim(hedef) == 0):
-            i = int(hedef) % p.size
-            pr = float(np.abs(p[i]) ** 2)
-        else:
-            h = np.asarray(hedef).reshape(-1)
-            pr = float(np.abs(np.vdot(h, p)) ** 2)
-        out["nokta"] = -float(np.log(max(pr, 1e-12)))
-    else:
-        out["nokta"] = 0.0
-
-    if ne == "nokta":
-        # **KÖR NLL KİPİ İMHA EDİLDİ.** Evvelce burası yalnız
-        # ``ℒ_nokta``yı döndürüyordu ve şerhi onu "kıyas ucu" diye
-        # savunuyordu. Ferman: *"yasaklanan ne kadar usul varsa
-        # hepsini imha edeceksin."* Bir yasağı çağrılabilir hâlde
-        # tutmak, yasağı fiilen kaldırmamaktır -- birileri (ben dâhil)
-        # er geç onu çağırır.
-        raise ValueError(
-            "kör NLL kipi İMHA EDİLDİ (ferman). Zabıt: tek başına NLL "
-            "faz katliamı yapar, mertebeleri çökertir ve quditi pahalı "
-            "bir softmax taklidine çevirir. Tabakalı mizan kullanın: "
-            "ne='toplam' yahut ne='döküm'.")
-
-    # --- 1. UZAY: Fubini-Study. Faz burada YAŞAR, kare alınmaz-atılmaz.
-    if psi is not None and hedef is not None and np.ndim(hedef) > 0:
-        p = np.asarray(psi).reshape(-1)
-        h = np.asarray(hedef).reshape(-1)
-        n1 = float(np.linalg.norm(p)) or 1.0
-        n2 = float(np.linalg.norm(h)) or 1.0
-        ort = float(np.abs(np.vdot(h, p)) / (n1 * n2))
-        out["uzay"] = 1.0 - ort ** 2
-    else:
-        out["uzay"] = 0.0
-
-    # --- 2. KATEGORİ: funktör korunumu, ETİKETSİZ
-    if morfizm:
-        f = np.asarray(morfizm.get("f"))
-        g = np.asarray(morfizm.get("g"))
-        gf = morfizm.get("gf")
-        gf = (g @ f) if gf is None else np.asarray(gf)
-        out["kategori"] = float(np.sum(np.abs(gf - g @ f) ** 2))
-    else:
-        out["kategori"] = 0.0
-
-    # --- 3. TİP: Hodge tenakuzsuzluğu ⟨Ψ|Δ|Ψ⟩
-    if delta is not None and psi is not None:
-        p = np.asarray(psi).reshape(-1)
-        dv = delta(p) if callable(delta) else np.asarray(delta) @ p
-        out["tip"] = float(np.real(np.vdot(p, dv)))
-    else:
-        out["tip"] = 0.0
-
-    out["toplam"] = (out["nokta"] + a["uzay"] * out["uzay"]
-                     + a["kategori"] * out["kategori"]
-                     + a["tip"] * out["tip"])
-    if ne == "döküm":
-        out["ağırlık"] = a                               # type: ignore[assignment]
-        return out
-    if ne != "toplam":
-        raise ValueError("mizan kipi bilinmiyor: %r" % (ne,))
-    return out
-
-
-def mizan_raporu() -> str:                               # pragma: no cover
-    """Tabakalı mizan kör NLL'den **fiilen** farklı mı? Ölç."""
-    r = np.random.default_rng(0)
-    d = 32
-    hedef = r.normal(size=d) + 1j * r.normal(size=d)
-    hedef /= np.linalg.norm(hedef)
-    # Aynı Born olasılığını veren FAKAT fazı farklı iki durum
-    psi_a = hedef.copy()
-    faz = np.exp(1j * r.uniform(0, 2 * np.pi, size=d))
-    # Genlikler BİREBİR aynı, yalnız fazlar farklı.
-    psi_b = np.abs(hedef) * faz
-    psi_b /= np.linalg.norm(psi_b)
-    # **HODGE LAPLASYENİ POZİTİF YARI-BELİRLİ OLMAK ZORUNDA.**
-    # Evvelce ``r.normal`` ile kurmuştum; negatif kenar ağırlıkları
-    # ``Δ``yı PSD olmaktan çıkarıyor ve ``⟨Ψ|Δ|Ψ⟩`` NEGATİF çıkıyordu
-    # (ölçüldü: −0,254). Tenakuz cezası negatif olamaz -- o hâlde
-    # ceza değil ödül olurdu. Kenar ağırlıkları negatif olmayan
-    # olmalı; çizge Laplasyeni ancak öyle PSD'dir.
-    W = r.random((d, d)); W = (W + W.T) * 0.5
-    np.fill_diagonal(W, 0.0)
-    D = np.diag(W.sum(axis=1)) - W
-    D = D / np.max(np.abs(D))
-    f = r.normal(size=(4, 4)); g = r.normal(size=(4, 4))
-    s = ["=== TABAKALI MİZAN -- kör NLL'in iptali ===", "",
-         "  İKİ DURUM: genlikleri AYNI, fazları FARKLI.",
-         "  Kör NLL ikisini ayırt edemezse zabıtın teşhisi doğrudur.", ""]
-    # **KÖR NLL İNDİS HEDEFİ KULLANIR.** Evvelce buraya vektör hedef
-    # veriyordum ve o hâlde ``ne="nokta"`` bile ``|⟨h|ψ⟩|²`` hesaplayıp
-    # fazı GÖRÜYORDU -- yâni gösterim, göstermek istediği körlüğü hiç
-    # göstermiyordu. Hakikî kör NLL sıfırıncı mertebeden bir indistir:
-    # ``−ln|ψ_i|²``. Genlikler aynı, fazlar farklıysa o sayı da aynıdır.
-    idx = int(np.argmax(np.abs(hedef)))
-    for ad, p in (("hedefin kendisi", psi_a), ("faz bozulmuş", psi_b)):
-        # ``ne="nokta"`` İMHA EDİLDİ ve bu rapor onu hâlâ çağırıyordu:
-        # yâni yasağı ölçen raporun kendisi yasağı çiğniyordu. Kör
-        # NLL'in **sayısı** yine lâzım (kıyas onun içindir), fakat
-        # kipten değil dökümün ``nokta`` teriminden okunur.
-        kor = tabakali_mizan(p, idx, ne="döküm")["nokta"]
-        tam = tabakali_mizan(p, hedef, delta=D,
-                             morfizm={"f": f, "g": g, "gf": g @ f + 0.1},
-                             ne="döküm")
-        s.append("  %-16s kör_NLL=%.6f   tabakalı=%.6f"
-                 % (ad, kor, tam["toplam"]))
-        s.append("      nokta=%.6f uzay=%.6f kategori=%.6f tip=%.6f"
-                 % (tam["nokta"], tam["uzay"], tam["kategori"], tam["tip"]))
-    ka = tabakali_mizan(psi_a, idx, ne="döküm")["nokta"]
-    kb = tabakali_mizan(psi_b, idx, ne="döküm")["nokta"]
-    ta = tabakali_mizan(psi_a, hedef, delta=D, ne="döküm")["toplam"]
-    tb = tabakali_mizan(psi_b, hedef, delta=D, ne="döküm")["toplam"]
-    s += ["",
-          "  FAZ AYRIMI (iki durum arasındaki fark):",
-          "    kör NLL   : %.6f   %s" % (abs(ka - kb),
-                                         "KÖR" if abs(ka - kb) < 1e-6
-                                         else "ayırdı"),
-          "    tabakalı  : %.6f   %s" % (abs(ta - tb),
-                                         "KÖR" if abs(ta - tb) < 1e-6
-                                         else "AYIRDI"),
-          "",
-          "  (Kör NLL yalnız |⟨x|Ψ⟩|²'ye bakar; faz kare alınırken",
-          "   buharlaşır. Fubini-Study terimi ise fazı görür.)"]
-    return "\n".join(s)

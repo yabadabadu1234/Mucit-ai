@@ -112,6 +112,13 @@ from ogrenme.optimize import (chebyshev_tasarimi,        # noqa: E402
                               kestirmeden_sur)
 from nefs.zirh import zirhla                        # noqa: E402
 from main import hazine                             # noqa: E402
+# ── MÎZÂN-I KÜLLÎ VE KUANTUM HAFIZASI ──────────────────────────────
+# **USUL FERMANI (docs/zabit/USUL_UMUMIDEN_HUSUSIYE.md):** bu iki satır
+# modüller HENÜZ YOKKEN yazıldı. Çağrı evvel yazılır, uzuv sonra; böylece
+# bağlanmamış bir dosya yazmak imkânsız olur.
+from nefs.kulli_mizan import (MizanAyari, kulli_mizan,   # noqa: E402
+                              mizan_cetveli, rust)
+from nefs.hafiza import Hafiza                           # noqa: E402
 
 #: Ağırlıkların yattığı dizin. ``main/cikarim.py`` buradan okur.
 HAZINE_DIZINI = os.environ.get("MUCIT_HAZINE", "depo/hazine")
@@ -208,6 +215,42 @@ class EgitimAyari:
     gcl_nokta_sayisi: int = 128
     lambda_mizan: float = 0.035
     ogrenme_orani: float = 0.01
+    # --- MÎZÂN-I KÜLLÎ (nefs/kulli_mizan.py) -- dört kefenin ağırlıkları
+    #: ``ℒ_Küllî = ℒ_Rezonans + λ₁ℒ_Çevrim + λ₂ℒ_Monogami + λ₃ℒ_Hodge``
+    #:
+    #: **KÖR NLL BURADA YOKTUR VE OLMAYACAKTIR.** Padişahın hükmü:
+    #: *"loss = CrossEntropyLoss() satırı modelin katilidir."* Veriye
+    #: bağlanma tek yerdedir ve o da kör değildir: Uhlmann kuantum
+    #: sadakati (``ℒ_Rezonans``). Veri bir kural değil, dışarıdan gelen
+    #: **zayıf bir uyarımdır**; modelden verinin faz gürültüsünü taklit
+    #: etmesi değil, ana frekansıyla rezonansa girmesi istenir.
+    lam_cevrim: float = 1.0        # λ₁ Wilson holonomisi (tenakuz)
+    lam_monogami: float = 0.5      # λ₂ CKW dolanıklık monogamisi
+    lam_hodge: float = 0.75        # λ₃ Hodge tenakuzsuzluğu
+    #: Muhakeme çevrimi kaç adımlıdır (``X → Y → Z → X``).
+    cevrim_boyu: int = 3
+    #: Taranacak azamî kapalı çevrim sayısı.
+    cevrim_sayisi: int = 8
+    # --- RÜŞT ÇİZELGESİ (Tabula Rasa zabıtı)
+    #: ``α(t) = σ((t − t₀)/τ)``. ``α → 0`` bebeklik: hata doğrudan
+    #: **fıtrata** (ağırlıklara) akar, terazi kalibre edilir.
+    #: ``α → 1`` rüşt: fıtrat kilitlenir, hata **hafızaya** fatura edilir.
+    #: Kör terazide hüküm verilemez; onun için bu bir aç-kapa anahtarı
+    #: değil, adyabatik bir faz geçişidir.
+    rust_t0: float = 0.5           # geçişin ortası (tur nispetiyle)
+    rust_tau: float = 0.15         # geçişin genişliği
+    # --- KUANTUM ASOSİYATİF HAFIZA (nefs/hafiza.py)
+    #: **AĞIRLIK HAFIZA DEĞİLDİR.** Ağırlık fıtrattır, gramerdir,
+    #: reflekstir. Tecrübe edilen safsatalar ve meşru teemmüller ayrı
+    #: bir yoğunluk operatöründe (``ρ_Hafıza``) saklanır.
+    hafiza_kapasitesi: int = 256
+    #: Kraus yazma oranı ``ε``: ``ρ ← (1−ε)ρ + ε|Φ⟩⟨Φ|``.
+    hafiza_yazma: float = 0.05
+    #: Liouville sönümü ``γ``: delilsiz kuru zan zamanla buharlaşır.
+    hafiza_sonumu: float = 0.02
+    #: Zeno budaması eşiği: hafızada cerhedilmiş bir yolla örtüşme bunu
+    #: aşarsa döngü **tamamlanmadan** kesilir.
+    zeno_esigi: float = 0.35
     # --- donanım
     surec: int = 0                   # 0 = donanımdan tayin et
     tohum: int = 0
@@ -410,12 +453,26 @@ def _isci_kur(ayar: EgitimAyari, veri, kademe=None) -> None:
 
 
 def _isci_kayip(p: np.ndarray) -> float:
-    """İşçi de **aynı** kaybı hesaplar; ayrı kayıp mukayeseyi bozardı."""
-    from nefs.kulli_kayip import kulli_kayip
+    """İşçi de **aynı** mizanı hesaplar; ayrı kayıp mukayeseyi bozardı."""
     a: EgitimAyari = _ISCI["ayar"]        # type: ignore[assignment]
-    t = kulli_kayip(_ISCI["nefs"], _ISCI["veri"], p,   # type: ignore
-                    a.sozluk, kademe_gorevleri=_ISCI.get("kademe"))
+    t = kulli_mizan(_ISCI["nefs"], _ISCI["veri"], p,   # type: ignore
+                    a.sozluk, ayar=mizan_ayari(a),
+                    hafiza=_ISCI.get("hafıza"),
+                    kademe_gorevleri=_ISCI.get("kademe"))
     return float(t["kayıp"])
+
+
+def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
+    """Tâlim ayarından mizan ayarı -- **tek kaynak**, iki nüsha değil."""
+    return MizanAyari(
+        lam_cevrim=float(a.lam_cevrim), lam_monogami=float(a.lam_monogami),
+        lam_hodge=float(a.lam_hodge), cevrim_boyu=int(a.cevrim_boyu),
+        cevrim_sayisi=int(a.cevrim_sayisi), rust_t0=float(a.rust_t0),
+        rust_tau=float(a.rust_tau), zeno_esigi=float(a.zeno_esigi),
+        # Rüşt çizelgesinin paydası tâlimin kendi bütçesidir; elle
+        # yazılmış bir sabit değildir. Bütçe değişince geçiş de kayar.
+        toplam_adim=max(1, int(a.talim_tur) * max(1, int(a.altuzay_ornek))),
+        tohum=int(a.tohum))
 
 
 # =====================================================================
@@ -435,7 +492,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     ölçümü, vekil yüzey, durgunluk, tünelleme, denge...).
     """
     from nefs.kulli_kayip import kademe_parametreleri_ac
-    from nefs.kulli_kayip import kulli_kayip
     from nefs.melekeler import QNefs
     from nefs.qegitim import degerlendir, ornekler
 
@@ -468,6 +524,23 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         havuz = mp.get_context("fork").Pool(
             surec, initializer=_isci_kur,
             initargs=(ayar, veri, kademe_gorevleri))
+        _ISCI["hafıza"] = None      # her işçi kendi hafızasını kurar
+
+    # **HATA FONKSİYONU MÎZÂN-I KÜLLÎ'DİR** (nefs/kulli_mizan.py).
+    #
+    #     ℒ_Küllî = ℒ_Rezonans + λ₁ℒ_Çevrim + λ₂ℒ_Monogami + λ₃ℒ_Hodge
+    #
+    # Dördü de kuantumun kendi hadiselerinden mülhemdir ve hiçbiri
+    # veriye kör teslimiyet değildir:
+    #   Rezonans  -- Uhlmann sadakati (kör NLL DEĞİL)
+    #   Çevrim    -- Wilson holonomisi; manayı bilmeden tenakuz bulur
+    #   Monogami  -- CKW eşitsizliği; sahte illetleri budar
+    #   Hodge     -- Δ|Ψ⟩ = 0; harmonik hüküm
+    mzn = mizan_ayari(ayar)
+    hafiza = Hafiza(kapasite=int(ayar.hafiza_kapasitesi),
+                    yazma=float(ayar.hafiza_yazma),
+                    sonum=float(ayar.hafiza_sonumu), tohum=int(ayar.tohum))
+    _sayac = {"çağrı": 0}
 
     def kayip_p(P: np.ndarray) -> np.ndarray:
         P = np.atleast_2d(np.asarray(P, float))
@@ -475,7 +548,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             return np.array(list(havuz.map(_isci_kayip, list(P))))
         out = np.empty(P.shape[0], float)
         for i, p in enumerate(P):
-            t = kulli_kayip(nefs, veri, p, ayar.sozluk,
+            _sayac["çağrı"] += 1
+            t = kulli_mizan(nefs, veri, p, ayar.sozluk, ayar=mzn,
+                            hafiza=hafiza, adim=_sayac["çağrı"],
                             kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
         return out
@@ -532,19 +607,40 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
              "bağıntı": 0.0, "artık": 0.0, "bükülme": 0.0,
              "toplam_düşüş": float(r["V_ilk"] - r["V_son"])})
 
+    # --- MİZANIN DÖRT KEFESİ AYRI AYRI (hangisi kırmızı, görünsün)
+    kefeler = kulli_mizan(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn,
+                          hafiza=hafiza, adim=_sayac["çağrı"],
+                          kademe_gorevleri=kademe_gorevleri, ne="döküm")
+    # --- VERİ KENDİ KENDİNİ DÖRDE AYIRDI MI? (zabıt V. fasıl)
+    #     Hakikat / Yanlış / Şüpheli / Kuru gürültü -- etiketsiz.
+    cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
+
     # --- HAZİNE: ağırlıklar safetensors olarak kaydedilir (main/hazine.py)
+    # **FITRAT İLE HADİSE AYNI DOSYADA, AYRI TENSÖRLERDE.** ``p``
+    # ağırlıktır (fıtrat); ``hafıza$*`` tecrübedir (hadise). İkisini
+    # ayrı tensörlerde tutmak, ayrı şeyler olduklarını dosyanın
+    # kendisinde görünür kılar.
     kayit = hazine.koy(
         os.path.join(HAZINE_DIZINI, "dimag_%s" % ayar.ad),
-        {"p": p_yildiz},
+        dict({"p": p_yildiz}, **hafiza.hazineye()),
         {"ayar": ayar.ad, "parametre": d, "V_ilk": float(r["V_ilk"]),
          "V_son": float(r["V_son"]), "satır_kübiti": int(ayar.satir_kubiti),
          "sözlük": int(ayar.sozluk), "pencere": int(ayar.pencere),
          "yerel_kübit": int(ayar.yerel_kubit), "bağ": int(ayar.bag),
          "mera_kademe": int(ayar.mera_kademe), "tohum": int(ayar.tohum),
-         "öğreniyor": bool(ders["öğreniyor"])})
+         "öğreniyor": bool(ders["öğreniyor"]),
+         "mizan": {k: v for k, v in kefeler.items()
+                   if isinstance(v, (int, float))},
+         "veri_cetveli": cetvel,
+         "hafıza_kapasitesi": int(ayar.hafiza_kapasitesi),
+         "hafıza_yazma": float(ayar.hafiza_yazma),
+         "hafıza_sönümü": float(ayar.hafiza_sonumu),
+         "zeno_eşiği": float(ayar.zeno_esigi)})
 
     return {"ayar": ayar.ad, "parametre": d,
             "geçit": kapi, "ders": ders, "hazine": kayit,
+            "mizan": kefeler, "veri_cetveli": cetvel,
+            "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
             "veri": len(veri), "süreç": surec,
             "V_ilk": float(r["V_ilk"]), "V_son": float(r["V_son"]),
             "süre_sn": time.perf_counter() - t0,
@@ -1051,6 +1147,33 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
               "      ortalama hücre isabeti: %.4f"
               % d["ortalama_hücre_isabeti"],
               "      sükût                 : %d" % d["sükût"]]
+        m = kulli["mizan"]
+        s += ["", "    MÎZÂN-I KÜLLÎ (nefs/kulli_mizan.py) -- DÖRT KEFE:",
+              "      ℒ_Rezonans (Uhlmann) : %.6f" % m["rezonans"],
+              "      ℒ_Çevrim   (Wilson)  : %.6f   "
+              "(meşru %d / kısır %d / tenakuz %d)"
+              % (m["çevrim"], m["meşru"], m["kısır"], m["tenakuz"]),
+              "      ℒ_Monogami (CKW)     : %.6f   ihlâl: %d"
+              % (m["monogami"], m["ihlâl"]),
+              "      ℒ_Hodge    (Δ|Ψ⟩=0)  : %.6f" % m["hodge"],
+              "      ─────────────────────────────────",
+              "      ℒ_Küllî              : %.6f" % m["kayıp"],
+              "      rüşt α               : %.4f   (0=bebeklik → "
+              "fıtrat terbiye; 1=rüşt → hafızaya fatura)" % kulli["rüşt"],
+              "",
+              "    VERİ KENDİNİ DÖRDE AYIRDI MI? (etiketsiz, zabıt V):",
+              "      hakikat %d | tenakuz %d | şüpheli %d | gürültü %d"
+              % (kulli["veri_cetveli"]["hakikat"],
+                 kulli["veri_cetveli"]["tenakuz"],
+                 kulli["veri_cetveli"]["şüpheli"],
+                 kulli["veri_cetveli"]["gürültü"]),
+              "",
+              "    KUANTUM ASOSİYATİF HAFIZA (nefs/hafiza.py):",
+              "      kayıt %d | tasdik %d | tevakkuf %d | cerh %d | "
+              "Zeno budaması %d"
+              % (kulli["hafıza"]["kayıt"], kulli["hafıza"]["tasdik"],
+                 kulli["hafıza"]["tevakkuf"], kulli["hafıza"]["cerh"],
+                 kulli["hafıza"]["budama"])]
         ders = kulli["ders"]
         s += ["",
               "    ÖĞRENİYOR MU (ogrenme/izgara.py, düzenli uydurma):",
@@ -1091,7 +1214,7 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
 #: ``main.kaggle_cikarim``) ve ``tanilama/nizam.py:GIRISLER`` dördünü de
 #: "giriş" sayıyordu; bu, o dört ağaçtan erişilen her şeyi **sessizce**
 #: tebaa gösteriyor, yetimliği ölçüden gizliyordu.
-KIPLER: Tuple[str, ...] = ("tâlim", "kaggle", "teftiş", "veri")
+KIPLER: Tuple[str, ...] = ("tâlim", "mizan", "kaggle", "teftiş", "veri")
 
 
 def taht(ne: str = "tâlim", *arg: str) -> str:
@@ -1100,6 +1223,9 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
     ``ne`` kipi:
 
     * ``"tâlim"``  -- ``kos``: iki hattın tek hatta terkibi (H230).
+    * ``"mizan"``  -- ``nefs/kulli_mizan.py``: hata fonksiyonunun kendisi.
+      Dört kefe (Rezonans, Çevrim, Monogami, Hodge) ayrı ayrı ölçülür ve
+      verinin etiketsiz dört kampa ayrılması gösterilir. **Kök budur.**
     * ``"kaggle"`` -- ``main/kaggle_egitim.py`` + ``main/kaggle_cikarim.py``.
       Bunlar ayrı birer taht DEĞİL, tahtın koşum kipidir.
     * ``"veri"``   -- ``main/veri.py``: belirteçleri 500 MB'lık,
@@ -1127,6 +1253,13 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
         return ("=== KAGGLE KİPİ ===\n  donanım profili: %r\n"
                 "  tâlim: %r\n  teslimat: %s"
                 % (prof, t, kaggle_teslimat_dosyasi_uret.__name__))
+    if ne == "mizan":
+        # Mîzân-ı Küllî'yi **tâlim koşturmadan** ölç: dört kefe ayrı ayrı,
+        # ve verinin kendini dörde ayırması (hakikat/tenakuz/şüpheli/
+        # gürültü). Kök burasıdır; kök tutmadan ağacı büyütmenin manası
+        # yoktur.
+        from nefs.kulli_mizan import rapor as mizan_raporu
+        return mizan_raporu(arg[0] if arg else "kısa")
     if ne == "veri":
         # Veri dönüştürücü: hem Kaggle hem burası. Ayrı bir taht
         # değil, tahtın kipi.

@@ -56,8 +56,35 @@ from typing import Dict, List, Optional, Sequence        # noqa: E402
 import numpy as np                                       # noqa: E402
 
 from nefs.musahede import gorevleri_getir                # noqa: E402
+# **USUL FERMANI:** bu satır ``nefs/hafiza.py`` HENÜZ YOKKEN yazıldı.
+# Çağrı evvel, uzuv sonra (docs/zabit/USUL_UMUMIDEN_HUSUSIYE.md).
+from nefs.hafiza import Hafiza                           # noqa: E402
 
-__all__ = ["padisah", "degerlendirme_kosusu", "hazineden_yukle", "kos"]
+__all__ = ["padisah", "degerlendirme_kosusu", "hazineden_yukle",
+           "hafizayi_yukle", "kos"]
+
+
+def hafizayi_yukle(ayar, dizin: Optional[str] = None) -> "Hafiza":
+    """TÂLİMDE BİRİKEN KUANTUM HAFIZASINI GERİ ÇAĞIR (``nefs/hafiza.py``).
+
+    **AĞIRLIK HAFIZA DEĞİLDİR.** Ağırlıklar fıtrattır: gramer, refleks,
+    mantık terazisi. Tâlim boyunca cerhedilen safsatalar ve tasdik edilen
+    meşru teemmüller ise ayrı bir yoğunluk operatöründe (``ρ_Hafıza``)
+    birikir ve hazineye ``hafıza$*`` tensörleri olarak yazılır.
+
+    Çıkarımda bu hafıza **Zeno budaması** için lâzımdır: model daha evvel
+    cerhedilmiş bir mantık koluna girmeye başladığı an, döngüyü
+    tamamlamadan o kol kesilir. Hafızasız çıkarım, aynı safsataya her
+    seferinde yeniden düşmektir.
+    """
+    from main import hazine
+    from main.egitim import HAZINE_DIZINI
+    d = dizin or HAZINE_DIZINI
+    yol = os.path.join(d, "dimag_%s" % ayar.ad)
+    agirlik, ust = hazine.al(yol)
+    h = Hafiza.hazineden(agirlik, ust)
+    assert h is not None, "hafıza kurulamadı -- boş bir şey dönemez"
+    return h
 
 
 def hazineden_yukle(nefs, ayar, dizin: Optional[str] = None,
@@ -98,9 +125,10 @@ def hazineden_yukle(nefs, ayar, dizin: Optional[str] = None,
 
 
 def _motor(ayar=None, ham: bool = False):
-    """Tâlim motorunu kur ve **hazineyi yerine koy**.
+    """Tâlim motorunu kur, **hazineyi ve hafızayı** yerine koy.
 
-    Tek yerde; iki kapı aynı nefsi ve aynı ağırlığı kullansın.
+    Tek yerde; iki kapı aynı nefsi, aynı ağırlığı, aynı hafızayı
+    kullansın.
     """
     from main.egitim import KISA_CPU
     from nefs.melekeler import QNefs
@@ -108,7 +136,12 @@ def _motor(ayar=None, ham: bool = False):
     nefs = QNefs(a.tohum, a.qayar())
     nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
     yuk = hazineden_yukle(nefs, a, ham=ham)
-    return nefs, a, yuk
+    # Fıtrat (ağırlık) ile hadise (hafıza) AYRI iki şeydir; ikisi ayrı
+    # yüklenir. Ham kipte ikisi de yoktur ve bu açıkça söylenir.
+    haf = None if ham else hafizayi_yukle(a)
+    if haf is not None:
+        yuk["hafıza"] = haf.beyan()
+    return nefs, a, yuk, haf
 
 
 def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
@@ -120,15 +153,22 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
     yutar ve **yuttuğunu söyler**.
     """
     from nefs.soyle import soyle
+    hafiza = kw.pop("hafiza", None)
     if nefs is None:
-        nefs, ayar, _ = _motor(ayar)
-    c = soyle(gorev, nefs=nefs, sozluk=(ayar.sozluk if ayar else 16), **{})
+        nefs, ayar, _, hafiza = _motor(ayar)
+    # **ZENO BUDAMASI ÇIKARIMDA İŞ GÖRÜR.** Üretim sırasında model daha
+    # evvel cerhedilmiş (``T=0``) bir mantık koluna girerse, o kol daha
+    # döngü tamamlanmadan kesilir. Hafıza verilmezse budama yoktur ve
+    # ölçü bunu görür -- kapatılabilen bir tesirdir (H90).
+    c = soyle(gorev, nefs=nefs, sozluk=(ayar.sozluk if ayar else 16),
+              hafiza=hafiza)
     return {"görev": getattr(gorev, "ad", ""),
             "sükût": bool(c.sukut),
             "sebep": c.sebep,
             "kural": c.kural,
             "belirteç": c.belirtec,
             "güven": float(c.guven),
+            "budanan": int(getattr(c, "budanan", 0)),
             "yutulan_ayar": sorted(kw) or None}
 
 
@@ -140,18 +180,19 @@ def degerlendirme_kosusu(kume: str = "training", azami: int = 24,
     anında kıyaslanır. Gösterildiği an ölçü yalan olur.
     """
     from nefs.musahede import gorev_dizisi
-    nefs, a, yuk = _motor(ayar, ham=ham)
+    nefs, a, yuk, hafiza = _motor(ayar, ham=ham)
     gorevler = list(gorevleri_getir(kume))[:int(azami)]
     assert gorevler, "değerlendirilecek görev BOŞ -- ölçü bir şey ölçmüyor"
-    deneme = cozulen = konusan = 0
+    deneme = cozulen = konusan = budanan = 0
     hucre: List[float] = []
     t0 = time.perf_counter()
     for g in gorevler:
-        r = padisah(g, nefs=nefs, ayar=a)
+        r = padisah(g, nefs=nefs, ayar=a, hafiza=hafiza)
         deneme += 1
         if r["sükût"]:
             continue
         konusan += 1
+        budanan += int(r.get("budanan", 0))
         # ``except`` KALDIRILDI (ferman): hedef dizisi kurulamıyorsa
         # o görev sessizce ölçüden düşüyordu, yâni ölçü kendi
         # paydasını gizlice küçültüyordu.
@@ -165,7 +206,7 @@ def degerlendirme_kosusu(kume: str = "training", azami: int = 24,
         if u[:len(h)] == h:
             cozulen += 1
     return {"küme": kume, "deneme": deneme, "konuşan": konusan,
-            "hazine": yuk,
+            "hazine": yuk, "budanan": budanan,
             "susan": deneme - konusan, "tam_çözülen": cozulen,
             "ortalama_hücre_isabeti":
                 float(np.mean(hucre)) if hucre else 0.0,
@@ -185,6 +226,9 @@ def kos(kume: str = "training", azami: int = 24,
         "  süre            : %.1f sn" % d["süre_sn"],
         "  ağırlık         : %s" % (d["hazine"].get("yol")
                                     or "YOK (ham kip -- eğitilmemiş motor)"),
+        "  hafıza (ρ)      : %s" % (d["hazine"].get("hafıza")
+                                    or "YOK (Zeno budaması kapalı)"),
+        "  Zeno budaması   : %d kol kesildi" % d["budanan"],
         "",
         "  Elle kurulmuş hiçbir ARC kâidesi kullanılmadı; eski dalga",
         "  öğrenicisi İMHA EDİLDİ (yedek dizini de silindi).",

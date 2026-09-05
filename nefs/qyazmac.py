@@ -454,7 +454,7 @@ class QuditYazmac:
 
         Sektör ``sozluk`` parçaya bölünür ve her parçanın ağırlığı o
         belirtecin olasılığıdır. Born kuralı burada da geçerlidir;
-        fakat faz **atılmaz**: ``tabakali_mizan`` onu ayrıca görür.
+        fakat faz **atılmaz**: ``kulli_mizan`` onu ayrıca görür.
         """
         i, j = self.sektor("kelam")
         p = np.abs(self.psi[:, i:j]) ** 2
@@ -749,7 +749,7 @@ class QuditYazmac:
 
         **Faz burada yaşar.** Eski hatta ``argmax(beyan)`` fazı kare
         alıp atıyordu; burada da Born kuralı olasılığı verir, fakat
-        durumun kendisi fazıyla duruyor ve ``tabakali_mizan`` onu
+        durumun kendisi fazıyla duruyor ve ``kulli_mizan`` onu
         görebiliyor.
         """
         bag = list(np.asarray(baglam, int).reshape(-1) % int(sozluk))

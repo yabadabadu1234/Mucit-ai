@@ -59,6 +59,42 @@ class Cevap:
     tikaniklik: Optional[float] = None
     belirtec: Optional[List[int]] = None
     guven: float = 0.0
+    #: Kuantum Zeno budamasıyla kesilen mantık kolu sayısı. Hafıza
+    #: verilmezse **tam sıfırdır**; yâni tesir kapatılabilir ve ölçü
+    #: kırmızı yanabilir (H90).
+    budanan: int = 0
+
+
+def _buda(P: np.ndarray, hafiza) -> tuple:
+    """KUANTUM ZENO BUDAMASI -- cerhedilmiş kola girilirse kes.
+
+    Zabıt (`Ham Veriden Kuantum Hafızasına`, V. fasıl):
+
+        𝒦 = Tr( ρ_Hafıza · |ψ⟩⟨ψ| )
+
+    Bu iç çarpım ``O(1)``dir; model 10.000 adımı geriye taramaz. Eğer
+    örtüşen kayıt **cerh** (``T=0``) damgalı ise, o mantık kolu daha
+    döngü tamamlanmadan kesilir: ilgili belirteçlerin genliği sıfırlanır.
+
+    ``hafiza`` verilmezse hiçbir şey olmaz ve ``P`` **birebir** aynen
+    döner. Tesir kapatılabilir olmalıdır, yoksa ölçülemez (H90).
+    """
+    if hafiza is None:
+        return P, 0
+    # Belirteç lifi üstündeki genlik: ``√P``. Hafıza kayıtları da bu
+    # tabanda tutulur, o yüzden iç çarpım doğrudan alınır.
+    maske = hafiza.zeno(np.sqrt(np.asarray(P, float)))
+    if maske is None:
+        return P, 0
+    kesik = int(np.count_nonzero(~maske))
+    if kesik == 0 or kesik >= P.size:
+        # Hepsini kesmek sükût değil, çöküştür: o hâlde budama yapılmaz
+        # ve bu gizlenmez -- sayı sıfır döner.
+        return P, 0
+    Q = np.where(maske, P, 0.0)
+    top = float(Q.sum())
+    assert top > 0.0, "Zeno budaması dağılımı tamamen söndürdü"
+    return Q / top, kesik
 
 
 def _sec(P: np.ndarray, ayna=None) -> int:
@@ -96,7 +132,7 @@ def _sec(P: np.ndarray, ayna=None) -> int:
 
 
 def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
-                teta=None, d: int = 256, ayna=None) -> tuple:
+                teta=None, d: int = 256, ayna=None, hafiza=None) -> tuple:
     """QUDİT hattı: ``nefs/qyazmac.py`` -- **SVD yok, MPS yok**.
 
     Eski hat 126 kübitlik bir MPS zinciriydi ve her kapı bir SVD
@@ -113,6 +149,7 @@ def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
     bag = list(baglam)
     cikti: List[int] = []
     bedel = 0.0
+    budanan = 0
     sukutlar: List[float] = []
     for _ in range(n):
         pen = (bag[-pencere:] if len(bag) >= pencere
@@ -122,15 +159,19 @@ def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
         P = P / P.sum()
         # Sükût quditte de MOTORDAN gelir: sükût sektörünün ağırlığı.
         sukutlar.append(float(np.ravel(q.alan_degeri("sukut"))[0]))
+        # KUANTUM ZENO BUDAMASI -- hafızada cerhedilmiş bir yola
+        # girilmişse, döngü **tamamlanmadan** o kol kesilir.
+        P, kesik = _buda(P, hafiza)
+        budanan += kesik
         t = _sec(P, ayna)
         bedel -= float(np.log(P[t]))
         cikti.append(t)
         bag.append(t)
-    return cikti, bedel, sukutlar
+    return cikti, bedel, sukutlar, budanan
 
 
 def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
-          ayna=None) -> tuple:
+          ayna=None, hafiza=None) -> tuple:
     """Bir dizi üret; ``(belirteçler, toplam −log P, sükûtlar)`` döndür.
 
     ``ayna`` verilirse dağılım evvela yarı yansıtıcı aynadan geçirilir
@@ -141,6 +182,7 @@ def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
     bag = list(baglam)
     cikti: List[int] = []
     bedel = 0.0
+    budanan = 0
     sukutlar: List[float] = []
     for _ in range(n):
         pen = (bag[-pencere:] if len(bag) >= pencere
@@ -151,11 +193,13 @@ def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
         P = np.clip(P, 1e-12, None)
         P = P / P.sum()
         sukutlar.append(float(o.get("sukut", 0.0)))
+        P, kesik = _buda(P, hafiza)
+        budanan += kesik
         t = _sec(P, ayna)
         bedel -= float(np.log(P[t]))
         cikti.append(t)
         bag.append(t)
-    return cikti, bedel, sukutlar
+    return cikti, bedel, sukutlar, budanan
 
 
 def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
@@ -163,7 +207,7 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           azami_uret: int = 0, sukut_esigi: float = 0.8,
           usul: str = "açgözlü", aday: int = 8, tohum: int = 0,
           motor: str = "mps", qudit_d: int = 256, teta=None,
-          ne: str = "cevap") -> Any:
+          hafiza=None, ne: str = "cevap") -> Any:
     """SÖYLEMEK -- görevden ``Cevap``, yahut sükût. **Motorla.**
 
     İki kapı vardır ve her biri susturabilir:
@@ -230,13 +274,15 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
     def _cek(ayna=None):
         if motor == "qudit":
             return _uret_qudit(baglam, len(h), pencere, sozluk,
-                               teta=teta, d=int(qudit_d), ayna=ayna)
-        return _uret(nefs, baglam, len(h), pencere, sozluk, ayna=ayna)
+                               teta=teta, d=int(qudit_d), ayna=ayna,
+                               hafiza=hafiza)
+        return _uret(nefs, baglam, len(h), pencere, sozluk, ayna=ayna,
+                     hafiza=hafiza)
 
     if usul == "açgözlü":
         # Açgözlü çözme: her adımda argmax. Yerel olarak en iyidir,
         # dizi olarak DEĞİL.
-        uretilen, bedel, sukutlar = _cek()
+        uretilen, bedel, sukutlar, budanan = _cek()
     elif usul == "ara":
         # =============================================================
         # ARAMA NAZIRLIĞI BURADA İŞ GÖRÜR (nefs/ara.py)
@@ -275,7 +321,7 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
                 [bedeller, np.full(tam - n_ad, bedeller.max() + 1e3)])
         j = int(ara(bedeller, ne="en_iyi", yol="dürr")["x"])
         assert 0 <= j < len(bedeller), "arama aralık dışı indis verdi: %d" % j
-        uretilen, bedel, sukutlar = adaylar[j if j < n_ad else 0]
+        uretilen, bedel, sukutlar, budanan = adaylar[j if j < n_ad else 0]
     else:
         raise ValueError("çözme usulü bilinmiyor: %r" % (usul,))
 
@@ -289,6 +335,7 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         return _bitir(Cevap(
             gorev=gorev.ad, sukut=True, tikaniklik=tik,
             belirtec=uretilen, guven=float(np.mean(guvenler or [0.0])),
+            budanan=int(budanan),
             sebep="motorun sükût alanı %.3f > %.3f"
                   % (ort_sukut, float(sukut_esigi))))
 
@@ -298,4 +345,5 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         izgara=[np.asarray(uretilen, int)],
         belirtec=uretilen,
         guven=float(np.mean(guvenler or [0.0])),
+        budanan=int(budanan),
         aday_sayisi=0, tikaniklik=tik))
