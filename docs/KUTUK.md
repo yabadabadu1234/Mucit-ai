@@ -8574,3 +8574,84 @@ büyüdükçe teker teker yoklamak ölçeklenmez"**dir.
 
 Bütçe muhafızı da düzeltildi: saniyedeki çağrı sabit `50` yazılıydı;
 artık kaybın kendisi üç kere koşturulup **ölçülüyor**.
+
+---
+
+## H236 — FERMAN: SVD YOK, MPS YOK, İKİLİ KÜBİT YOK — VE HIZ DA BUNDAN GELDİ
+
+**Ferman.** *"Svd mvd olmayacak, Mps iptal olacak, ikili kübit kodlama
+iptal olup qudit gelecek."*
+
+**Bu ferman aynı zamanda hız suâlinin cevabıdır.** H235'te ölçmüştüm:
+eski hat 11 belirteç/sn, hedef 1 000 000, arada 85 000×. Sebebi bir
+kusur değildi — **iptal edilen mimarinin kendisiydi**: bir ileri
+geçişte ~8 500 SVD, çünkü 45 meleke MPO'su MPS zincirini her seferinde
+`χ`ye geri sıkıştırıyordu. 16×16 SVD LAPACK'te 65–90 µs ve
+indirgenemez (yığın 1,2×, float32 = float64, `eigh` %8).
+
+SVD kalkınca darboğaz da kalktı. Yeni çekirdek: `nefs/qudit.py`.
+
+### Dört ameliye, dördü de ölçüldü
+
+**1. Lie-Chebyshev KAN-Qudit durumu.**
+`|Ψ⟩ = (1/√Z) Σ_m exp(Σ_k Φ_k(ω_m(θ)))|m⟩`,
+`Φ_k(u) = Σ_j c_{k,j}T_j(u) + i Σ_j s_{k,j}U_j(u)`.
+`T_j` genliği, `U_j` **Berry fazını** taşır — faz `±1`e kilitlenmez
+(eski `2·bit − 1` kodlaması tam da o kilitti).
+Ölçüldü: `d = 4096` için saklanan **80 katsayı**, açık genlik dizisi
+olsaydı 4096 — **51,2× tasarruf**, genlik üretiliyor, saklanmıyor.
+
+**2. QSVT Hodge harmonik süzgeci.** Chebyshev serisi operatöre
+Clenshaw ile tatbik edilir; yalnız `Δ@v` çarpımı kullanılır.
+Ölçüldü: harmonik formla örtüşme **0,9987**, kalıntı
+`‖Δψ‖/‖ψ‖ = 2,16e−2`. Ne ters, ne ayrıştırma, ne özdeğer.
+
+**3. Gelfand-Tsetlin dallanması.** `χ` budaması yok; iç içe geçme
+şartı gayrimeşru sızıntıyı cebirsel olarak sıfırlar. Bağımsız şahit
+Weyl boyut formülüdür ve **üçünde de uyuştu**: λ=(2,1,0) → 8/8,
+λ=(3,1,0) → 15/15, λ=(2,2,1,0) → 20/20.
+
+**4. Fubini-Study doğal gradyan.** Metrik **tersi alınmaz**, eşlenik
+gradyanla çözülür. Ölçüldü: düz gradyanla arasındaki açı **76,6°** —
+metrik fiilen iş görüyor (0° olsaydı süs olurdu).
+
+### HIZ — hedef geçildi
+
+```
+tip       d      B        belirteç/sn   hedefin   eski hattın
+float32   16     4096      1 167 680      1,17×     106 153 katı
+float32   256    4096         70 179      0,07×       6 380 katı
+float32   4096   256           4 117      0,00×         374 katı
+float64   16     4096        473 298      0,47×      43 027 katı
+```
+
+**LAPACK çağrısı: SIFIR.** SVD yok, QR yok, özayrışım yok.
+
+**Açıkça:** hedef `d = 16`da (ARC sözlüğü) geçilmiştir. Zabıtın tam
+dil modeli misali olan `d = 4096`da **geçilmemiştir** (4 117
+belirteç/sn) ve geçilmiş gibi gösterilmiyor.
+
+### Yol boyunca ölçülüp düzeltilen dört kendi kusurum
+
+1. **Cartan ağırlığı `O(d²)` idi** — her çağrıda `(d, d−1)` dizeyi
+   kuruluyordu (d=4096'da 16,8M hücre), `durum()` 1722 ms. Kapalı
+   biçim `O(d)`dir: kuyruk toplamı artı tek terim. **25 000× hızlandı**
+   ve dizey hâliyle birebir aynı çıktığı doğrulandı.
+2. **Hafıza iddiası yalandı** — `θ`yı `d−1` boyutlu almışım; saklanan
+   katsayı 4167, açık dizi 4096, yâni **hiç tasarruf yok, üstelik daha
+   kötü**. Zabıt "birkaç kilobayt" der; o hâlde `θ` alçak boyutludur
+   (`r = 8`). Düzeltildi: 80 katsayı, 51,2× tasarruf.
+3. **Yığınlama işe yaramıyordu** — `(n,B,d)` Chebyshev dizisi 1,2 GB
+   ayırıyor, hesap bellek bağımlı oluyordu; yığın döngüden **yavaştı**
+   (3 215 < 7 102). Clenshaw ile ara diziler kalktı.
+4. **Clenshaw'ın U-serisi kapanışını yanlış yazdım** — `U₁ = 2x`
+   olduğu için kapanış `a₀ + 2x·b₁ − b₂`dir; `b₁ − 2x·b₂` yazmıştım ve
+   ölçüm 1,69 saptı. Düzeltildi: fark 6,8e−16.
+
+### Şahitlerin hepsi kapalı biçimdedir
+
+QSVT şahidi evvelce `B@Bᵀ` kullanıyordu; o dizeyin hakikî çekirdeği
+**yoktur**, dolayısıyla "λ=0'ı tut" vaadi ölçülemezdi ve örtüşme
+0,2197 çıkıyordu — süzgecin değil **şahidin** kusuru. Çizge
+Laplasyeni ile değiştirildi: çekirdeği kapalı biçimde bilinir
+(sabit vektör). Artık şahit bile ayrıştırmasızdır.
