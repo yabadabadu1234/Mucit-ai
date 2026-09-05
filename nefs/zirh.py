@@ -332,12 +332,37 @@ def zirhla(hedef, ayar: Optional[ZirhAyari] = None,
         S = ek["izdüşüm"]
 
         # (2)(3) Betti ve kohomoloji: kompleksin gölgesi
+        #
+        # ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H229). Eşik MUTLAK
+        # (``1e-9``) alınıyordu; ``H``in kendi medyanı ``2,8e-4``
+        # olduğu için bu, ölçeğin dört milyonda biriydi ve graf
+        # **dâima tam graf** çıkıyordu. Netice: ``β₁ = C(n,2) − n + 1``
+        # -- ``n = 16`` için sabit **105**, ve ``H``in DEĞERLERİNE hiç
+        # bakmıyordu. Eşik artık ``H``in kendi ölçeğinden okunur:
+        # medyan-üstü bağlantılar kenar sayılır, altındakiler sayılmaz.
+        # Böylece kompleks nihayet dalganın şeklini görür.
         A = np.abs(H)
+        # Ölçek **âzamîden** okunur, medyandan değil: medyan eşiği
+        # tanım gereği kenarların yarısını tutar ve β₁ yine sabit
+        # kalır (ölçüldü: 105 yerine 45, ama hâlâ kıpırdamıyor).
+        # Âzamîye göre eşik, kütlesi birkaç bağa toplanmış bir dalgada
+        # SEYREK, yayılmış bir dalgada YOĞUN graf verir -- yâni artık
+        # dalganın şeklini görür.
+        dis = A[~np.eye(n, dtype=bool)]
+        olcek = float(dis.max()) if dis.size else 0.0
+        e_kompleks = max(float(esik), a.betti_kat * olcek)
         K = {0: [(i,) for i in range(n)],
              1: [(i, j) for i in range(n) for j in range(i + 1, n)
-                 if A[i, j] > esik or A[j, i] > esik]}
+                 if A[i, j] > e_kompleks or A[j, i] > e_kompleks]}
         b1 = delik(K, k=1)
         b0 = delik(K, k=0)
+        # Ve ceza NORMALİZE edilir. Ham sayım ``[0, C(n,2)−n+1]``de
+        # yaşıyordu; öteki dört ihlâl ``[0,1]``de. Yumuşak âzamîde bir
+        # SAYIM ile bir KESİR yarışınca sayım dâima kazanır ve ötekiler
+        # görünmez olur -- kayıp 104,597641'de çakılıp kalmasının
+        # sebebi buydu. (Aynı ders BGCM'de ``kayıp_norm`` ile zaten
+        # öğrenilmişti; zırha uygulanmamıştı.)
+        azami_b1 = max(1, n * (n - 1) // 2 - n + 1)
 
         # (4) Homotopi: kapalı yolda Wilson çevrimi
         adim = max(2, min(8, n))
@@ -351,8 +376,9 @@ def zirhla(hedef, ayar: Optional[ZirhAyari] = None,
             baglanti.append(np.eye(m) + 1e-3 * blok)
         h = iz(baglanti)
 
-        toplam = zirh_kaybi(sheaf=s_hata, betti=float(b1["delik_cezası"]),
-                            koho=float(b0["ada_cezası"]),
+        toplam = zirh_kaybi(sheaf=s_hata,
+                            betti=float(b1["delik_cezası"]) / azami_b1,
+                            koho=float(b0["ada_cezası"]) / max(n, 1),
                             homotopi=float(h["sapma"]), ayar=a)
 
         # Projektör ancak ``H`` ile aynı ebatta ise vurulur; sheaf
@@ -445,6 +471,14 @@ class ZirhAyari:
     #: ihlâl** verir. Kaybın yumuşak-asgarîsi (`nefs/olcu.py`) uzuvların
     #: *kabiliyeti* içindir; burada ölçülen kabiliyet değil ihlâldir.
     tau: float = 4.0
+    #: Betti kompleksinin eşiği, ``|H|``in **medyanının katı** olarak.
+    #: Mutlak eşik (evvelce ``1e-9``) ölçekten bağımsızdır ve dizeyin
+    #: medyanı ondan büyükse graf dâima tam çıkar; β₁ o zaman ``H``in
+    #: değerlerine değil yalnız EBADINA bakan bir sabit olur (H229).
+    #: ``0.3`` = ``|H|``in âzamîsinin onda üçü; büyütmek kompleksi
+    #: seyreltir. Medyan denendi ve reddedildi: medyan eşiği kenarların
+    #: hep yarısını tutar, β₁ yine sabit kalır.
+    betti_kat: float = 0.3
 
 
 def zirh_kaybi(sheaf: float = 0.0, betti: float = 0.0, koho: float = 0.0,
