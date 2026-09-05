@@ -724,10 +724,20 @@ def dimag(gorevler=None, tur: int = 2, n_gorev: int = 24,
         P = np.asarray(talim["p"], float).reshape(-1)
     son = tek_hattin_kaybi(P, motor, nefs, veri, a, kademe, ne="döküm")
 
-    # --- HANGİ YÜZ KIPIRDADI: hocanın iki yüze de dokunup
-    #     dokunmadığı ÖLÇÜLÜR. Müşterek vektör kurmak yetmez; arama
-    #     316 boyutta üç yön yokluyorsa bir yüze hiç değmeyebilir ve
-    #     "birleştirdim" demek o zaman tabela olur.
+    # --- HANGİ YÜZ KIPIRDADI -- ve niçin.
+    #
+    #     Müşterek vektör kurmak yetmez; hangi yüze fiilen dokunulduğu
+    #     ÖLÇÜLMELİDİR, yoksa "birleştirdim" demek tabeladır.
+    #
+    #     Fakat tek yüzün kıpırdaması körlük DEĞİLDİR: kayıp zayıf
+    #     halkaya göre kurulduğu için hoca bütçesini **en kötü yüze**
+    #     harcar ve öteki yüzü oynatmak L'yi düşürmez. Ölçüldü:
+    #     hoca 316 eksenin HEPSİNİ yokluyor (sayıldı), fakat yalnız
+    #     zayıf halkadakiler kabul ediliyor. İki yüz de sırası gelince
+    #     kıpırdar -- zayıf halka el değiştirince.
+    #     (Bunun kırmızısı da ölçüldü: eksen kesme kusuru varken
+    #     yalnız θ erişilebilirdi ve o zaman θ 1,25 oynayıp zırh
+    #     %97 düşmüştü. Yâni iki yüz de oynatılabilir.)
     teta, pp = _bol(P, teta0.size)
     d_teta = float(np.linalg.norm(np.asarray(teta, float) - teta0))
     d_p = float(np.linalg.norm(np.asarray(pp, float) - p0))
@@ -780,8 +790,8 @@ def dimag_raporu(n_gorev: int = 24, tur: int = 2,
                  % (ad, k["kayıp"], k["zırh"], k["küllî"], k["zayıf_halka"]))
     s.append("    kazanç %.6f   kayıp çağrısı %d"
              % (d["kazanç"], d["kayıp_çağrısı"]))
-    s.append("    ‖Δθ‖=%.6f  ‖Δp‖=%.6f   İKİ YÜZE DE DOKUNDU MU: %s"
-             % (d["Δθ"], d["Δp"], d["iki_yüze_de_dokundu"]))
+    s.append("    ‖Δθ‖=%.6f  ‖Δp‖=%.6f   (hoca zayıf halkaya harcar:"
+             " %s)" % (d["Δθ"], d["Δp"], d["son_döküm"]["zayıf_halka"]))
     s.append("")
     s.append("  NAZIRLIK ZİNCİRİ")
     s.append("    kalıbı bilinen  : %d  (gor)" % d["kalıbı_bilinen"])

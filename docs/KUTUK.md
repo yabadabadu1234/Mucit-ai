@@ -8296,3 +8296,106 @@ değiştirdi ve terkip adlarına bağlandı.
 Beş ölü bağ tashih edildi: `arama.grover`, `arama.bukum`, `olcek.hiz`
 `docs/kaynak/test_tashih_meleke.py`den; `ga.kapi` artık `ga.z8_kapi`
 (``kapi`` isim ıslahatında melekelerin kapısına geçti).
+
+---
+
+## H230 — DÖRT HAT TEK HATTA
+
+Padişahın suâli: *"Dört hattı terkip edip tek hat yapmanı istesem,
+her hattın mücevheratını toplayıp kâmil şekilde intibak ettirmeni
+murad etsem fazla şey mi istemiş olurum?"*
+
+Fazla değil. Fakat evvelâ iki tamir şarttı, yoksa dörtte biri ölü tek
+bir hat yapılmış olurdu.
+
+### I. Tamir: zırhın iki ölü süzgeci (H229)
+
+Dalga hattı `104,597641`de **bit birebir** çakılıydı. Sebep "kayıp
+parametreye bağlı değil" değil, ondan inceydi:
+
+* **Eşik mutlaktı.** Betti kompleksi `|H_ij| > 1e-9` ile kuruluyordu;
+  ama `H`in kendi medyanı `2,8·10⁻⁴`. Yâni eşik, dizeyin ölçeğinin
+  dört milyonda biri → graf **dâima tam graf** → `β₁ = C(n,2) − n + 1`
+  → `n = 16` için sabit **105**. β₁ `H`in *değerlerine* değil yalnız
+  *ebadına* bakıyordu.
+* **Sayım ile kesir aynı yumuşak âzamîde yarışıyordu.** Beş ihlâlin
+  dördü `[0,1]`de (sheaf `1e-4`, koho `0`, homotopi `4e-4`), betti ham
+  sayım (105). Yumuşak âzamîde sayım dâima kazanır; ötekiler görünmez.
+
+Medyan eşiği denendi ve **reddedildi**: medyan tanım gereği kenarların
+hep yarısını tutar, β₁ 105 yerine 45 oldu ama yine sabit kaldı. Eşik
+âzamîye göre alındı; β₁ artık `6→11→15→29→8` diye kıpırdıyor.
+
+    evvel: 104,597641 → 104,597641   (4 çevrimde de, fark 0)
+    sonra:   0,211389 →   0,027878   (6 çevrimde, %86,8 düşüş)
+
+Aynı ders BGCM'de `kayıp_norm` ile H221'de zaten öğrenilmişti; zırha
+uygulanmamıştı.
+
+### II. Terkibin önündeki asıl engel: iki taşıyıcı
+
+Dört hattı birleştirmenin önündeki engel isim yahut dosya değildi:
+
+| hat | taşıyıcı | ne öğreniyordu |
+|---|---|---|
+| HAT 1 | `KulliMelekeManifoldu.teta` | **44 sayı**: her melekenin `so(D)` dönme açısı -- meleke NE KADAR döner |
+| HAT 2 | `QNefs.p` | **272 sayı**: her melekenin MPS kapısı -- meleke NE YAPAR |
+
+**Aynı 44 melekenin iki yüzü**, ve birbirini hiç görmüyorlardı.
+Terkip budur: tek vektör `[θ | p]` (316), tek kayıp, tek hoca.
+
+İki yüz **zayıf halkaya göre** birleşir, düz toplamla değil. Yumuşak
+âzamî ikinci bir çekirdek yazılmadan kuruldu: `max(x) = −min(−x)`.
+
+### III. Öğrenilen ile söylenen: ispat öğrenmeyi ezer
+
+Çözücü aday dönüşümleri gösterim çiftlerinde doğrular. **Tutan tek
+aday varsa öğrenilenin söyleyecek sözü yoktur** -- ispat kesindir.
+Fakat birden çok aday tutuyorsa "ilkini al" keyfîdir, ve keyfî olan
+yerde öğrenilen hüküm verebilir.
+
+Ölçüldü (200 eğitim görevi): cevap verilen **altı** görevin
+**üçünde** birden çok aday tutuyor. Köprü o üç görevdedir; ötekilerde
+yoktur ve olmaması doğrudur.
+
+### IV. Hocayı yarı kör eden kusur
+
+İlk müşterek koşu: `‖Δθ‖ = 1,250000`, **`‖Δp‖ = TAM SIFIR`**. 272 kapı
+parametresine hiç dokunulmamıştı.
+
+Sebep `ogrenme/optimize.py`de: hoca eksenleri sırayla tarıyor ve
+`yonler[:yon_sayisi]` **dâima ilk N** ekseni alıyordu. Yâni bütçe
+kısılınca geri kalan bütün parametreler **sessizce donuyordu**. Bu
+yalnız müşterek vektörü değil, HAT 2'yi de yarı kör bırakmış olabilir.
+
+Tashih: bütçe kısıtı bir **örneklemedir**, bir dondurma değil.
+Eksenler tur başına deterministik karıştırılıp öyle kesilir; tohum
+sabit olduğu için koşu birebir tekrarlanabilir kalır.
+Tashihten sonra `‖Δp‖ = 1,673737`.
+
+### V. Tek yüzün kıpırdaması körlük değildir
+
+Tashihten sonra da bir koşuda `‖Δθ‖ = 0` çıktı. Sayıldı: **hoca 316
+eksenin hepsini yokluyor.** Kabul edilen adımın tek yüzde kalmasının
+sebebi kaidenin kendisidir -- kayıp zayıf halkaya göre kurulduğu için
+hoca bütçesini **en kötü yüze** harcar; öteki yüzü oynatmak `L`yi
+düşürmez. İki yüz de sırası gelince kıpırdar, zayıf halka el
+değiştirince.
+
+Bunun kırmızısı da elimizde: eksen kesme kusuru varken yalnız θ
+erişilebilirdi ve o zaman θ `1,25` oynayıp zırh **%97** düşmüştü.
+
+### VI. Ölçüm
+
+    parametre 316 (θ=44 + p=272), 8 görev, tur=3, yön=8
+
+    ilk  L=0,303843  zırh=0,211389  küllî=0,356405  zayıf halka: küllî
+    son  L=0,263412  zırh=0,211389  küllî=0,300037  zayıf halka: küllî
+    kazanç 0,040431   kayıp çağrısı 148   ‖Δp‖=3,535534
+
+    kalıbı bilinen 8/8 · konuşan 1 · susan 7 (H10) · mîzân 0,068452
+
+Müşterek kaybın bedeli de ölçüldü ve gizlenmedi: tek çağrı **30,8 sn**,
+bunun **25,8**'i kademe görevlerinden. Bütçe çağırana bırakıldı.
+
+Sınama: `ogrenme/` + `nefs/test_nefs.py` **237 geçti, 0 düştü**.
