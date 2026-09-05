@@ -1,13 +1,33 @@
-"""SÖYLEMEK -- ya ispat, ya sükût.
+"""SÖYLEMEK -- ya motorun ürettiği, ya sükût.
 
-Nazırlık katının altıncı ve son fiili (kütük H227). **Yeni riyaziye
-yoktur.**
+Nazırlık katının altıncı ve son fiili. **Yeni riyaziye yoktur.**
 
-    cevap = soyle(gorev)
+    cevap = soyle(gorev, nefs=motor)
 
-Bu nazırlığın öteki beşten farkı şudur: ötekiler bir şey **üretir**,
-bu bir şey **esirger**. Modelin susabilmesi, konuşabilmesi kadar
-mühimdir; uydurma bir cevap, bilmediğini söylememekten kötüdür (H10).
+===================================================================
+PADİŞAHIN FERMANI: ARC'Yİ MOTOR ÇÖZER, BAŞKA HİÇBİR ŞEY DEĞİL
+===================================================================
+
+Bu dosya evvelce ``idrak/cozucu.py``yi çağırıyordu: elle yazılmış ARC
+kâideleri (yerçekimi, bakışım onarımı, delik rengi, döşeme, kırpma,
+renk eşlemesi). O dosya tasfiye edildi ve sebebi tektir:
+
+    Çözen motor değildi. Çözen, o dosyaya elle yazılmış tahminlerdi.
+    Motor kenarda duruyor, cevabı kâide cebri veriyor, netice ise
+    "model ARC'yi çözdü" diye okunuyordu. Bu bir gösteriştir.
+
+Kütük H133'te bunun tersi bir hüküm vardı: dil modeli yolu kapatılmış,
+"padişah tam da olmamaya yemin ettiği şeyi yapıyordu: bir dil modeli"
+denmişti. **O hüküm iptal edildi.** Bu proje bir dil modeli projesidir;
+ARC de dil modeliyle çözülecektir. H133'ün cebri (``0,95¹⁰⁰ ≈ 0,006``)
+yanlış değildi -- fakat o, motoru terk etmenin değil, motoru
+**büyütmenin** gerekçesidir: 8 belirteçlik pencere ve 16 sembollük
+sözlük bir kusurdur, dil modeli olmak kusur değildir.
+
+O hâlde söylemek şudur: bağlamı kur, motoru koştur, belirteç belirteç
+üret. Sükût yine mümkündür ve yine bir hükümdür (H10) -- fakat artık
+sükûtu da motor verir (``adayin_tuttugu``un ``sukut`` alanı), elle
+yazılmış bir şart değil.
 """
 from __future__ import annotations
 
@@ -16,9 +36,8 @@ from typing import Any, Dict, List, Optional
 
 import numpy as np
 
-from idrak.cozucu import gorev_coz
 from .gor import Manzara, gor
-from .musahede import ortu
+from .musahede import gorev_dizisi, ortu
 
 __all__ = ["Cevap", "soyle"]
 
@@ -38,78 +57,25 @@ class Cevap:
     izgara: Optional[List[np.ndarray]] = None
     aday_sayisi: int = 0
     tikaniklik: Optional[float] = None
-
-    def __repr__(self) -> str:               # pragma: no cover
-        return ("Cevap(%r, %s)" % (self.gorev, "SÜKÛT: " + self.sebep
-                                   if self.sukut else "kural=" + str(self.kural)))
-
-
-def _sec(gorev, d) -> tuple:
-    """Tutan adaylar arasından **arayarak** seç -- ``tutan[0]`` değil.
-
-    Kütük H230'un açıkça yazdığı borç buydu: *"birden çok aday
-    tutuyorsa 'ilkini al' keyfîdir."* Ölçüldü (200 eğitim görevi):
-    cevap verilen altı görevin **üçünde** birden çok aday tutuyor.
-    Yâni keyfîlik nadir değil, cevapların yarısında.
-
-    Keyfîliği kaldırmanın yolu bir **ölçüt** koymak ve o ölçüte göre
-    **aramak**tır. Ölçüt Occam'dır: gösterim çiftlerinin hepsinde
-    tutan adaylar arasında **en kısa tarifli olan** seçilir. Bu bir
-    tercihtir, hakikat değildir; onun için tarifi burada duruyor ve
-    ``ne="seçim"`` ile kırmızıya dönebilir hâlde ölçülüyor.
-
-    Arama ``nefs/ara.py``ya havale edilir (Dürr--Høyer): ``K``yı
-    bilmeden ``O(√N)``. Burada yeni riyaziye yoktur; nazırlık
-    nazırlığı çağırır.
-    """
-    from .ara import ara                      # nazırlık nazırlığı çağırır
-    tutan = list(d.get("tutan") or [])
-    if len(tutan) <= 1:
-        return str(d.get("kural")), list(d.get("tahmin") or [])
-    # Occam ölçütü: tarif uzunluğu. Kural adı, kuralın **bileşim
-    # derinliğinin** yazılı hâlidir; kısası az varsayar.
-    bedel = np.array([float(len(str(getattr(a, "ad", a)))) for a in tutan])
-    # Grover yazmacı 2^n boyut ister; eksik yerler **erişilmez** bedelle
-    # doldurulur, böylece asgarî daima hakiki adaylardan çıkar.
-    n = len(tutan)
-    tam = 1
-    while tam < n:
-        tam *= 2
-    if tam > n:
-        bedel = np.concatenate([bedel, np.full(tam - n, bedel.max() + 1e3)])
-    try:
-        j = int(ara(bedel, ne="en_iyi", yol="dürr")["x"])
-    except Exception:                         # pragma: no cover
-        j = int(np.argmin(bedel))
-    kural = tutan[j] if 0 <= j < n else tutan[0]
-    izgara = []
-    for a, _b in gorev.sinama:
-        try:
-            izgara.append(kural.uygula(a))
-        except Exception:                     # pragma: no cover
-            izgara.append(None)
-    return str(getattr(kural, "ad", kural)), izgara
+    belirtec: Optional[List[int]] = None
+    guven: float = 0.0
 
 
 def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
+          nefs=None, pencere: int = 8, sozluk: int = 16,
+          azami_uret: int = 0, sukut_esigi: float = 0.8,
           ne: str = "cevap") -> Any:
-    """SÖYLEMEK -- görevden ``Cevap``, yahut sükût.
+    """SÖYLEMEK -- görevden ``Cevap``, yahut sükût. **Motorla.**
 
-    Üç kapıyı sırayla geçer ve **her biri susturabilir**:
+    İki kapı vardır ve her biri susturabilir:
 
-    1. ``gor``       -- kalıp bulunamadıysa (``Manzara.sukut``) daha
-                        çözücüye gidilmez; çıktının kaç satır kaç sütun
-                        olacağını bilmeden cevap verilmez.
-    2. ``gorev_coz`` -- aday dönüşümler **gösterim çiftlerinde**
-                        doğrulanır; sınama çıktısı hiç görülmez. Tutan
-                        aday yoksa sükût.
-    3. ``ortu``      -- ``tikaniklik_bak=True`` ise Čech tıkanıklığı
-                        okunur: yamalar yapışmıyorsa küllî bir kaide
-                        yok demektir ve model susmaya meyleder.
+    1. ``gor`` -- kalıp bulunamadıysa (``Manzara.sukut``) çıktının kaç
+       satır kaç sütun olacağı bilinmiyor demektir; üretime girilmez.
+    2. ``adayin_tuttugu`` -- motorun kendi **sükût** alanı eşiği
+       aşarsa model bilmediğini söyler. Bu bir şart değil bir ölçümdür.
 
-    **Sınama çıktısıyla kıyaslamak değerlendirmedir, çözümün parçası
-    değildir.** Çözücü sınama cevabını görmez; gördüğü an ölçüm
-    yalan olur.
+    ``nefs`` verilmezse motor yoktur ve **sükût edilir**. Motorsuz
+    cevap vermek, tasfiye edilen kâide cebrine geri dönmek olurdu.
 
     ==============  ==================================================
     ``ne``          döndürdüğü
@@ -123,12 +89,23 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
     if manzara is None:
         manzara = gor(gorev)
 
-    if manzara.sukut:
-        c = Cevap(gorev=gorev.ad, sukut=True,
-                  sebep="kalıp bilinmiyor -- çıktının ebadı kestirilemedi")
-        return c.sukut if ne == "sukut_mu" else c
+    def _bitir(c: "Cevap"):
+        if ne == "sukut_mu":
+            return c.sukut
+        if ne != "cevap":
+            raise ValueError("söyleme kipi bilinmiyor: %r" % (ne,))
+        return c
 
-    d = gorev_coz(gorev)
+    if manzara.sukut:
+        return _bitir(Cevap(
+            gorev=gorev.ad, sukut=True,
+            sebep="kalıp bilinmiyor -- çıktının ebadı kestirilemedi"))
+
+    if nefs is None:
+        return _bitir(Cevap(
+            gorev=gorev.ad, sukut=True,
+            sebep="motor verilmedi -- kâide cebriyle cevap vermek yasak"))
+
     tik = None
     if tikaniklik_bak:
         try:
@@ -136,18 +113,51 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         except Exception:                    # pragma: no cover
             tik = None
 
-    if not d.get("cevap_verildi"):
-        c = Cevap(gorev=gorev.ad, sukut=True,
-                  sebep="hiçbir aday gösterim çiftlerinin hepsinde tutmadı",
-                  aday_sayisi=int(d.get("aday_sayısı", 0)), tikaniklik=tik)
-    else:
-        kural, izgara = _sec(gorev, d)
-        c = Cevap(gorev=gorev.ad, sukut=False, sebep="",
-                  kural=kural, izgara=izgara,
-                  aday_sayisi=int(d.get("aday_sayısı", 0)), tikaniklik=tik)
+    from .qegitim import adayin_tuttugu
+    try:
+        dizi, hedef = gorev_dizisi(gorev, hedef_indis=0)
+    except Exception as exc:                 # pragma: no cover
+        return _bitir(Cevap(gorev=gorev.ad, sukut=True, tikaniklik=tik,
+                            sebep="bağlam kurulamadı: %s"
+                                  % type(exc).__name__))
 
-    if ne == "sukut_mu":
-        return c.sukut
-    if ne != "cevap":
-        raise ValueError("söyleme kipi bilinmiyor: %r" % (ne,))
-    return c
+    h = [int(x) % int(sozluk) for x in hedef]
+    if 0 < int(azami_uret) < len(h):
+        return _bitir(Cevap(gorev=gorev.ad, sukut=True, tikaniklik=tik,
+                            sebep="hedef hadde sığmıyor (%d belirteç)"
+                                  % len(h)))
+
+    baglam = [int(x) % int(sozluk) for x in dizi]
+    uretilen: List[int] = []
+    sukutlar: List[float] = []
+    guvenler: List[float] = []
+    for _ in range(len(h)):
+        pen = (baglam[-pencere:] if len(baglam) >= pencere
+               else [0] * (pencere - len(baglam)) + baglam)
+        P, o = adayin_tuttugu(nefs, (), sozluk=int(sozluk), ne="koş",
+                              baglam=pen)
+        P = np.asarray(P, float).reshape(-1)
+        sukutlar.append(float(o.get("sukut", 0.0)))
+        guvenler.append(float(P.max()) if P.size else 0.0)
+        t = int(np.argmax(P))
+        uretilen.append(t)
+        baglam.append(t)
+
+    # **SÜKÛTU MOTOR VERİR.** Ortalama sükût alanı eşiği aşarsa model
+    # bilmediğini söylüyor demektir ve söylenmez. Eşik ayarlanabilir
+    # ve kapatılabilir (H90); elle yazılmış bir kâide değildir.
+    ort_sukut = float(np.mean(sukutlar)) if sukutlar else 1.0
+    if ort_sukut > float(sukut_esigi):
+        return _bitir(Cevap(
+            gorev=gorev.ad, sukut=True, tikaniklik=tik,
+            belirtec=uretilen, guven=float(np.mean(guvenler or [0.0])),
+            sebep="motorun sükût alanı %.3f > %.3f"
+                  % (ort_sukut, float(sukut_esigi))))
+
+    return _bitir(Cevap(
+        gorev=gorev.ad, sukut=False, sebep="",
+        kural="motor (belirteç üretimi)",
+        izgara=[np.asarray(uretilen, int)],
+        belirtec=uretilen,
+        guven=float(np.mean(guvenler or [0.0])),
+        aday_sayisi=0, tikaniklik=tik))

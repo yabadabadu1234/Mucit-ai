@@ -3160,3 +3160,87 @@ def rapor() -> str:                                     # pragma: no cover
 
 if __name__ == "__main__":                              # pragma: no cover
     print(rapor())
+
+
+# ══════════════════════════════════════════════════════════════════
+#  BAĞLI BİLEŞENLER -- `idrak/cozucu.py`den kurtarılan cevher
+# ══════════════════════════════════════════════════════════════════
+#
+#  `idrak/cozucu.py` padişahın fermanıyla tasfiye edildi: elle yazılmış
+#  ARC kâideleri (yerçekimi, bakışım onarımı, delik rengi, döşeme…)
+#  ARC'yi motorun çözdüğü izlenimini veriyordu; halbuki çözen motor
+#  değil, o dosyaya elle yazılmış tahminlerdi.
+#
+#  Fakat ``_bilesenler`` bir ARC kâidesi DEĞİLDİR: 4-komşulukta bağlı
+#  bileşen bulmak umumî bir görme işidir ve müşahedenin kendi işidir.
+#  Hafıza (memoization) cevheri de beraber gelir -- ölçülmüştü: tek bir
+#  görevde 21.976 çağrı, 65,8 saniye.
+#
+#  İMHA YOK, CEVHER TOPLAMA VAR.
+
+_BILESEN_HAFIZA: Dict[bytes, List[Tuple[int, np.ndarray,
+                                        Tuple[int, int, int, int]]]] = {}
+
+_HAFIZA_HADDI: int = 4096
+
+def bilesen_kutulari(g: np.ndarray, arka: int = 0
+                     ) -> List[Tuple[int, np.ndarray, Tuple[int, int, int, int]]]:
+    """4-komşulukta bağlı bileşenler: ``(renk, maske, kutu)``.
+
+    **ADI ÇARPIŞMADAN KURTARILDI.** Bu dosyada zaten bir ``_bilesenler``
+    vardı (satır 743) ve o ``.renk`` alanı olan **nesneler** döndürür;
+    bu ise ``(renk, maske, kutu)`` **demeti** döndürür. İkisi aynı adı
+    taşıyınca ikincisi birincisini sessizce gölgeledi ve ``bak``
+    ``'tuple' object has no attribute 'renk'`` ile düştü. Demet dönen
+    bu sürüm ``bilesen_kutulari`` adını alır; kutusu asıl cevheridir.
+
+    ===================================================================
+    ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H197)
+    ===================================================================
+
+    Profil çıkarıldı: **tek bir ARC görevinde bu fonksiyon 21.976 kere
+    çağrılıyor** ve 65,8 saniye yiyordu (görev başına 246,9 saniyenin
+    dörtte biri). Halbuki fonksiyon **saftır**: aynı ızgara ve aynı
+    arka renk için neticesi hep aynıdır. Kâide arayışı aynı birkaç
+    ızgarayı binlerce kere tarıyordu.
+
+    Çare hafızadır (memoization). Anahtar ızgaranın baytlarıdır;
+    netice **kopyalanmadan** paylaşılır -- maskeler okunur, yazılmaz.
+    Mana hiç değişmez, yalnız tekrar hesap kalkar.
+    """
+    anah = arka.to_bytes(2, "little") + g.shape[0].to_bytes(2, "little") \
+        + g.shape[1].to_bytes(2, "little") \
+        + np.ascontiguousarray(g, dtype=np.int16).tobytes()
+    onbellek = _BILESEN_HAFIZA.get(anah)
+    if onbellek is not None:
+        return onbellek
+    H, W = g.shape
+    gor = np.zeros((H, W), bool)
+    out = []
+    for i in range(H):
+        for j in range(W):
+            if gor[i, j] or g[i, j] == arka:
+                continue
+            renk = int(g[i, j])
+            yigin = [(i, j)]
+            gor[i, j] = True
+            hucre = []
+            while yigin:
+                y, x = yigin.pop()
+                hucre.append((y, x))
+                for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    a, b = y + dy, x + dx
+                    if (0 <= a < H and 0 <= b < W and not gor[a, b]
+                            and g[a, b] == renk):
+                        gor[a, b] = True
+                        yigin.append((a, b))
+            ys = [y for y, _ in hucre]
+            xs = [x for _, x in hucre]
+            m = np.zeros((H, W), bool)
+            for y, x in hucre:
+                m[y, x] = True
+            out.append((renk, m, (min(ys), max(ys), min(xs), max(xs))))
+    if len(_BILESEN_HAFIZA) >= _HAFIZA_HADDI:
+        _BILESEN_HAFIZA.pop(next(iter(_BILESEN_HAFIZA)))
+    _BILESEN_HAFIZA[anah] = out
+    return out

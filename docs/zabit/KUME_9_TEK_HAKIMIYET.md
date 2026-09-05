@@ -179,3 +179,82 @@ Bütün terkipler bitmeden hiçbir test koşturulmaz.
 2. Merhale B (SPSA + izgara + hiz) — ölçülür
 3. Merhale C (lif tensörü) — ölçülür
 4. Toplu sınama, kütük, commit
+
+---
+
+# PADİŞAHIN FERMANI — PLANIN TASHİHİ (KÜME 9/D, E, F)
+
+Ferman üç maddedir ve üçü de yukarıdaki planı **değiştirir**:
+
+> *"Arc ile normal llm'i ayırt etmeyi kes artık... bu proje bir llm
+> projesidir, çömezlerin projesi değildir! ... lif.py dosyasında
+> yazdığın notlar çok üzücü, ben bu zabıtları hamaseten yazmadım,
+> ciddiye alınıp uygulanması için yazdım... omega kategori ve omega
+> nbe kategori namlı iki adet kapı gibi klasörümüz var, okumaya
+> tenezzül etmiyorsun. Nbe ve normal olanın da terkip edilmesi lazım...
+> ARC yalnız llm motoruyla çözülecek, başka herhangi bir şeyle değil."*
+
+## MERHALE D — ARC HİLELERİNİN TASFİYESİ
+
+**Yapıldı:**
+
+* `idrak/cozucu.py` (527 s.) **silindi.** İçinde elle yazılmış ARC
+  tahminleri vardı: `_yercekimi`, `_bakisim_onar`, `_delik_rengi`,
+  `_dosemeyi_bul`, `_kirpma_bul`, `renk_eslemesi_bul`, `_nesne_sec`.
+  Bunlar cevabı **motorun dışında** üretiyor, netice ise "model ARC'yi
+  çözdü" diye okunuyordu.
+* `nefs/qkaide.py` (451 s.) **silindi** -- kâide orağı.
+* `idrak/test_cozucu.py` ve `test_nefs.py`nin iki qkaide sınaması.
+* `nefs/soyle.py` **yeniden yazıldı**: cevabı artık motor üretir
+  (`adayin_tuttugu` ile belirteç belirteç). Motor verilmezse **susar**;
+  motorsuz cevap vermek kâide cebrine dönmek olurdu.
+* `degerlendir(mudrike_ile=...)` varsayılanı **False** oldu: değerlendirme
+  de dil modelidir.
+* **Cevher kurtarıldı:** `_bilesenler` (bağlı bileşenler + hafıza
+  cevheri, ölçülmüş: 21.976 çağrı / 65,8 sn) `nefs/musahede.py`ye
+  `bilesen_kutulari` adıyla taşındı. İmha yok, cevher toplama var.
+
+**Sıradaki (yapılmadı, açıkça borç):** `main/cikarim.py` (927 s.) --
+görev başına elle kurulmuş öznitelikler üstünde dalga/ridge öğrenicisi
+(`hendese_adaylari`, `sahit_cogalt`, `_d4`, `_tuval`, `nesne_ozellikleri`).
+Bu da "yalnız llm motoru" fermanına aykırıdır. Fakat bu dosya
+`nefs/kulli_kayip.py`nin **kayıp fonksiyonuna** dokunmuş durumdadır
+(satır 908 `dalga_kur`, 1432 `padisah`) ve aynı nefeste sökülürse kayıp
+bozulur. Ayrı ve dikkatli bir merhale olarak yapılacak.
+
+## MERHALE E — OMEGA KATEGORİ TERKİBİ (benim hatamın tashihi)
+
+KÜME 7'de `matematik/tip_teorisi.py`yi kurarken şunu yazmışım:
+
+> *"Terkipte **yalnız NbE sürümü** alındı; eski sürüm tasfiye edildi."*
+
+**Bu imhaydı ve kaidenin ihlaliydi.** `yedek/kume7_asillari/` altında
+duruyorlar:
+
+    omega_kategori/       4 693 satır   (12 dosya)
+    omega_kategori_nbe/   5 026 satır   (14 dosya)
+
+Yapılacak: ikisi **karşılaştırılacak**, NbE'de olmayan cevher
+(`geometri`, `iliskiler`, `kutuphane`, `denklik`, `turetimler`
+dosyalarındaki farklar) çıkarılacak ve `matematik/tip_teorisi.py`ye
+terkip edilecek. "NbE üstündür" hükmü doğru olabilir; fakat üstün
+olmak, ötekinin cevherini atmayı meşru kılmaz.
+
+## MERHALE F — LİF ZABITI CİDDİYE ALIYOR
+
+`nefs/lif.py`de şu satırları yazmışım:
+
+> *"Ne iddia edilmiyor: bu dosya HoTT'un univalence'ını ispatlamıyor,
+> ∞-kategori kurmuyor."*
+
+Bu bir tevazu değil, **kaçamaktı**: kod tabanında tam da o iş için
+yazılmış iki kapı gibi klasör dururken, onları okumadan sorumluluğu
+şerhle savuşturmak. Zabıt hamaseten yazılmadı; tatbik edilmek için
+yazıldı.
+
+Yapılacak: `lif.py` `matematik/tip_teorisi.py`nin **fiilî** kübik tip
+teorisi çekirdeğini (Kan işlemleri, Glue, univalence, NbE
+değerlendirmesi) kullanacak; `Lif.ac` bir sözlük gezintisi değil
+**funktör tatbiki** olacak, `Unfold_{t→c}` gerçek bir lif açılımı.
+Şerhten çıkarılacak cümle: "iddia edilmiyor". İddia edilecek ve
+**ölçülecek**.

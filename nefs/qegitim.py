@@ -49,14 +49,70 @@ __all__ = ["ornekler", "belirtecleri_kodla", "adayin_tuttugu",
 
 # =====================================================================
 def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
-                       sozluk: int = 16) -> np.ndarray:
+                       sozluk: int = 16, usul: str = "kategorik"
+                       ) -> np.ndarray:
     """Belirteç akışını ham duyu dizeyine çevir: satır başına bir belirteç.
 
     Her belirteç ``kubit`` bitine açılır ve her bit ``±1`` olarak bir
     sütuna yazılır. ``QYazmac.kodla`` bu sütunları açıya çevirir; ``+1``
     ile ``−1`` ayrı açılar verir, dolayısıyla kodlama **tersinirdir**
     ve hiçbir bit kaybolmaz (H14).
+
+    ==================================================================
+    ZABITIN HÜKMÜ VE BU HATTIN ÖLÇÜLEN HÂLİ (KÜME 9/C)
+    ==================================================================
+
+    Padişahın zabıtı düz ikili kodlamayı **yasaklar** (Tuzak A/B). Bu
+    hattı yasağa göre ölçtüm; netice iki başlıdır ve ikisi de yazılıyor:
+
+    **1) ARC RENKLERİNDE yasak İŞLEMEZ -- çünkü tahrip edilecek bir
+    geometri yoktur.** Renk kategoriktir; 7 ile 8 arasında "yakınlık"
+    manasızdır. Ölçüldü (10 belirteç, mesafe değişkesi = std/ort)::
+
+        kubit= 4, sozluk=16 : en az 2,000  en çok 4,000  değişke 0,2224
+        kubit=16, sozluk=16 : en az 5,657  en çok 5,657  değişke 0,0000
+
+    ``kubit ≥ sozluk`` dalı (Hadamard) fiilen **tam bir qudit
+    tabanıdır**: bütün ikili mesafeler eşit. Zabıt bunu yasaklamaz,
+    ister. İkili dal 4 boyutta elde edilebilecek en iyi hâldir; 16
+    belirteci 4 boyutta eşit uzaklıkta dizmek imkânsızdır.
+
+    **2) SÜREKLİ NİCELİKTE yasak TAM İŞLER -- ve hat kırmızıdır.**
+    Mevki, gömme, açı gibi Öklid manası olan bir niceliği önce
+    tamsayıya kırpıp sonra ``±1`` bitlere açmak geometriyi öldürür.
+    Ölçüldü (14 nokta, ℝ⁴, giriş mesafeleri ↔ kodlanmış mesafeler,
+    sıra bağıntısı)::
+
+        mevcut hat (±1 bit)   ρ = +0,2685      ← Tuzak A/B
+        lif: tutarlı          ρ = +1,0000
+        lif: mps  D=8         ρ = +1,0000
+
+    O hâlde hüküm: **kategorik girdi ikili kalır, sürekli girdi
+    ``nefs/lif.py``ye gider.** ``usul`` bunu açıkça seçtirir ve
+    varsayılan, girdinin kendisine bakılarak konur -- tamsayı değilse
+    ikili dal zaten yanlıştır.
+
+    ==============  ==================================================
+    ``usul``        ne yapar
+    ==============  ==================================================
+    ``kategorik``   mevcut hat: Hadamard (``kubit ≥ sozluk``) yahut
+                    ikili. Renk/belirteç için doğrudur.
+    ``sürekli``     ``nefs/lif.py:kodla(ne="tutarlı")`` -- koherent
+                    durum; Öklid metriği birebir korunur.
+    ``mps``         ``nefs/lif.py:kodla(ne="mps")`` -- tensör treni.
+    ==============  ==================================================
     """
+    if usul in ("sürekli", "mps"):
+        from .lif import kodla, KIP_TUTARLI, KIP_MPS
+        ne = KIP_TUTARLI if usul == "sürekli" else KIP_MPS
+        X = np.atleast_2d(np.asarray(belirtecler, float))
+        cikti = [np.asarray(kodla(x, ne=ne, boyut=int(sozluk))).reshape(-1)
+                 for x in X]
+        g = max(c.size for c in cikti)
+        return np.stack([np.pad(np.real(c), (0, g - c.size)) for c in cikti])
+    if usul != "kategorik":
+        raise ValueError("kodlama usulü bilinmiyor: %r" % (usul,))
+
     t = np.asarray(belirtecler, int) % int(sozluk)
     # --- HADAMARD HÂLİ (kütük H116). ``kubit ≥ sozluk`` ise belirteçler
     # **tam eşit uzaklıkta** kodlanabilir: Hadamard satırları birbirine
@@ -343,7 +399,7 @@ def _degerlendir_mudrike(nefs, gorevler: Sequence, azami: int,
 
 def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
                 pencere: int = 8, sozluk: int = 16,
-                azami_uret: int = 0, mudrike_ile: bool = True,
+                azami_uret: int = 0, mudrike_ile: bool = False,
                 derinlik: int = 2) -> Dict[str, object]:
     """Hiç görülmemiş bulmacalar: hedef ızgara **tam** çözüldü mü?
 
@@ -375,8 +431,26 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
     nevi → tesadüf mü → örtü → kaide → yakîn → beyan. Dalga kaideyi
     bulmaz, **yakîni tartar** (𝒪₃₂/𝒪₃₃); kaideyi kaide cebri bulur.
 
-    ``mudrike_ile=False`` eski (belirteç kestirimi) yolu geri verir --
-    kıyas ölçümü yapılabilsin diye durur, akışta kullanılmaz.
+    ===================================================================
+    PADİŞAHIN FERMANIYLA BU HÜKÜM **İPTAL EDİLDİ** (KÜME 9)
+    ===================================================================
+
+    Yukarıdaki gerekçe -- *"padişah tam da olmamaya yemin ettiği şeyi
+    yapıyordu: bir dil modeli"* -- yanlıştı. Ferman sarihtir:
+
+        *"Bu proje bir llm projesidir... ARC yalnız llm motoruyla
+        çözülecek, başka herhangi bir şeyle değil."*
+
+    ``0,95¹⁰⁰ ≈ 0,006`` cebri doğrudur; fakat o, motoru **terk
+    etmenin** değil **büyütmenin** gerekçesidir. Kusur dil modeli
+    olmakta değil, 8 belirteçlik pencerede ve 16 sembollük sözlüktedir.
+    Ve ``idrak/cozucu.py`` -- "cevap verdiğinde isabeti %100" diye
+    övülen ispatlı çözücü -- elle yazılmış ARC tahminlerinden ibaretti;
+    tasfiye edildi.
+
+    O hâlde varsayılan **belirteç üretimidir**. ``mudrike_ile=True``
+    müdrike çevrimini hâlâ koşturabilir; kıyas ölçüsü olarak durur,
+    akışın kendisi değildir.
     """
     if mudrike_ile:
         return _degerlendir_mudrike(nefs, gorevler, azami, derinlik)

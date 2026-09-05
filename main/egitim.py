@@ -651,7 +651,7 @@ def dimag(gorevler=None, tur: int = 2, n_gorev: int = 24,
         hal     = dusun(manzara)          # 44 meleke + dörtlü zırh
         mizan   = tart(hal)               # zayıf halka + sözleşme
         ogren(tek_hattin_kaybi, [θ|p])    # HAT 1 + HAT 2, TEK vektör
-        cevap   = soyle(gorev, hal)       # HAT 3 -- ispat, yoksa sükût
+        cevap   = soyle(gorev, nefs=nefs) # HAT 3 -- MOTOR üretir
 
     **Öğrenilen ile söylenen nasıl bağlanır.** Bu, hattın en ince
     yeridir ve kaidesi şudur: **ispat öğrenmeyi ezer.** Çözücü aday
@@ -689,7 +689,10 @@ def dimag(gorevler=None, tur: int = 2, n_gorev: int = 24,
     if ne == "gor":
         return [gor(g) for g in gorevler]
     if ne == "soyle":
-        return [soyle(g) for g in gorevler]
+        # Motorsuz söylemek yasak: kâide cebri tasfiye edildi.
+        nefs = QNefs(a.tohum, a.qayar())
+        nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
+        return [soyle(g, nefs=nefs) for g in gorevler]
 
     # --- tek taşıyıcı: iki yüz tek vektörde ----------------------
     motor = KulliDalgaTalimMotoru(a)
@@ -754,7 +757,8 @@ def dimag(gorevler=None, tur: int = 2, n_gorev: int = 24,
         manzara = gor(g)
         hal = dusun(manzara, nefs=nefs)
         mizanlar.append(tart(hal, sozlesme=False))
-        cevaplar.append(soyle(g, manzara=manzara))
+        cevaplar.append(soyle(g, manzara=manzara, nefs=nefs,
+                              sozluk=a.sozluk))
         manzaralar.append(manzara)
 
     konusan = [c for c in cevaplar if not c.sukut]

@@ -115,7 +115,6 @@ import nefs.test_olcek  # [şahit] Küme 8: çatı modeli -- M31, M32, M33, M34
 # ------------------------------------------------------------------
 #  idrak
 # ------------------------------------------------------------------
-import idrak.cozucu  # [uzuv] Doğrulanabilir ARC çözücüsü: dik dönüşüm DSL'i üzerinde arama
 try:                                   # torch şartlı
     import idrak.kubit  # [uzuv] Kübit kaydı: reel dik kapılarla öğrenilebilir bir kuantum yazmacı
 except Exception as _e:                # torch yoksa kayda geçer
@@ -125,7 +124,6 @@ try:                                   # torch şartlı
 except Exception as _e:                # torch yoksa kayda geçer
     EKSIK['idrak.model'] = str(_e)
 import nefs.musahede  # [uzuv] Çıktı ızgarasının şeklini **gösterimlerden çıkarmak**
-import idrak.test_cozucu  # [şahit] ``idrak.cozucu`` sınamaları — ispatlı çözüm ya da sükût
 try:                                   # torch şartlı
     import idrak.test_idrak  # [şahit] ``idrak`` paketi sınamaları — veri, kübit, model, eğitim
 except Exception as _e:                # torch yoksa kayda geçer
@@ -175,7 +173,6 @@ import kuantum.kubit_taksimati  # [uzuv] 22 MİLYON KÜBİTİN TAKSİMATI -- dö
 import nefs.ttkan  # [hakem] TT-KAN -- ceridenin hız hükmünün fiilî hesabı
 import nefs.musahede  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
 import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
-import nefs.qkaide  # [uzuv] KÂİDE ORAĞI -- H91'in icrası, **reel** yazmaçta
 import nefs.test_nefs  # [şahit] nefs sınamaları
 import nefs.uzaklik_olcumu  # [uzuv] Uzak çift kapısı: **takas ağı mı, MPO mu?** -- eşiği ölçüm koyar
 
@@ -282,8 +279,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Kübit kaydı: reel dik kapılarla öğrenilebilir bir kuantum yazmacı.'),
     ('idrak.model', 'uzuv',
      'Nefs-i Müdrike ARC modeli — risalelerin mimarisinin fiilî hâli.'),
-    ('idrak.test_cozucu', 'şahit',
-     '``idrak.cozucu`` sınamaları — ispatlı çözüm ya da sükût.'),
     ('idrak.test_idrak', 'şahit',
      '``idrak`` paketi sınamaları — veri, kübit, model, eğitim.'),
     ('idrak.test_sekil', 'şahit',

@@ -770,7 +770,7 @@ class Kademeler:
         esik_nesne = int(round(self._par("kademe.idrak.nesne")))
 
         def _nesne():
-            from idrak.cozucu import _bilesenler
+            from .musahede import bilesen_kutulari
             # Arka plan rengi. Evvelce `nefs/kaideler.py`den geliyordu;
             # o dosya padişahın fermanıyla **silinmiştir** ve sabit
             # burada durur -- ARC'de arka plan ezici çoğunlukla 0'dır.
@@ -781,10 +781,10 @@ class Kademeler:
             # elle konacak bir sayı değildir.
             # ``_bilesenler`` ``(renk, maske, kutu)`` döndürür; bileşenin
             # ebadı maskenin dolu hücre sayısıdır.
-            return [sum(1 for _renk, maske, _kutu in _bilesenler(a, ARKA)
+            return [sum(1 for _renk, maske, _kutu in bilesen_kutulari(a, ARKA)
                         if int(maske.sum()) >= esik_nesne)
                     for a, _ in ciftler]
-        I.nesne_sayisi = self._dene("idrak.cozucu", _nesne) or []
+        I.nesne_sayisi = self._dene("nefs.musahede", _nesne) or []
 
         def _mubser():
             from .musahede import devinim_olc, bak
