@@ -8448,6 +8448,15 @@ bedelidir ve onu asgarîye indirmek bir aramadır — kehanet modelin
 **kendi** dağılımıdır, elle yazılmış bir kâide değil.
 `soyle(usul="ara")` Dürr--Høyer ile `O(√N)`.
 
+**ÖLÇÜLDÜ VE KAZANÇ ÇIKMADI — öyle yazılıyor.** Eğitilmemiş motorda,
+3 görevde, 4 aday ile: açgözlü ve `ara` **birebir aynı** neticeyi
+verdi (güven 0,3076 / 0,2984, ikisinde de eşit). Sebebi açıktır:
+eğitilmemiş modelin dağılımı neredeyse düzdür, düz bir dağılımdan
+örneklenen adaylar `argmax`ı geçemez. Yâni **arama doğru yere
+takıldı fakat henüz iş görmüyor**; iş görüp görmediği motor
+eğitildikten sonra tekrar ölçülecektir. "Arama çözmeyi iyileştirdi"
+denmiyor, çünkü ölçü öyle demiyor (H100).
+
 **Açık borç (yapılmadı, gizlenmiyor):** `main/cikarim.py` (927 satır)
 görev başına elle kurulmuş öznitelikler üstünde dalga/ridge
 öğrenicisidir (`hendese_adaylari`, `sahit_cogalt`, `_d4`, `_tuval`,
