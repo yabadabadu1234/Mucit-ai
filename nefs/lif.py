@@ -115,7 +115,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = ["Lif", "kodla", "ortusme", "mesafe", "sadakat", "rapor",
-           "KIP_IKILI", "KIP_QUDIT", "KIP_TUTARLI", "KIP_MPS"]
+           "KIP_IKILI", "KIP_QUDIT", "KIP_TUTARLI", "KIP_MPS", "KIP_LIE"]
 
 #: Kodlama usulleri. ``ikili`` **yasaklıdır** ve adı bunu söyler;
 #: silinmedi çünkü yasağı gizlemek değil, görünür kılmak lâzım -- ve
@@ -123,7 +123,12 @@ __all__ = ["Lif", "kodla", "ortusme", "mesafe", "sadakat", "rapor",
 KIP_IKILI = "ikili (TUZAK A -- yasak, yalnız kıyas için)"
 KIP_QUDIT = "qudit"
 KIP_TUTARLI = "tutarlı"
-KIP_MPS = "mps"
+#: **MPS FERMANLA İPTAL EDİLDİ** ("Mps iptal olacak"). Adı yasağı
+#: söylüyor ve silinmedi: kıyas ucu olarak durur, tıpkı ikili gibi.
+#: Yerine ``KIP_LIE`` gelir -- Lie-Chebyshev KAN-Qudit durumu.
+KIP_MPS = "mps (İPTAL -- fermanla kaldırıldı, yalnız kıyas için)"
+#: Fermanın getirdiği asıl usul: ``nefs/qudit.py``.
+KIP_LIE = "lie-chebyshev qudit"
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -187,6 +192,22 @@ def kodla(x, ne: str = KIP_TUTARLI, boyut: int = 16,
         tt = tt_ayristir(M, n=n, d=4, rank=int(bag))
         return tt.yogun()[:, 0]
 
+    if ne == KIP_LIE:
+        # ==========================================================
+        # FERMANIN ASIL USULÜ (docs/zabit/kudret/..._Qudite_Tahvili)
+        # ==========================================================
+        # Genlik SAKLANMAZ, Cartan ağırlıkları üzerinde Chebyshev ile
+        # ÜRETİLİR. SVD yok, MPS yok, ikili yok. ``v`` doğrudan Cartan
+        # açılarıdır (``θ``); alçak boyutludur ve hafıza ``d``den
+        # bağımsızdır.
+        from .qudit import QuditAyari, durum
+        a = QuditAyari(d=int(boyut), yon=max(1, min(v.size, int(boyut) - 1)))
+        n_k, n_d = 4, 8
+        # Katsayılar ``v``den belirlenimci olarak türetilir: aynı girdi
+        # daima aynı durumu verir (ceride: stokastiklik yasak).
+        g = np.resize(v, n_k * (n_d + 1)).reshape(n_k, n_d + 1)
+        return durum(g, np.roll(g, 1, axis=1), v[:a.yon], ayar=a)
+
     if ne == KIP_IKILI:
         t = int(v[0]) if v.size else 0
         k = max(1, int(np.ceil(np.log2(max(int(boyut), 2)))))
@@ -211,7 +232,10 @@ def mesafe(a: np.ndarray, b: np.ndarray, ne: str) -> float:
 
     Bu bir kolaylık değil, her usulün **kendi** vaadinin ölçüsüdür.
     """
-    if ne == KIP_TUTARLI:
+    if ne in (KIP_TUTARLI, KIP_LIE, KIP_QUDIT):
+        # Durum bir DALGADIR; metriği örtüşmesidir. Qudit için de
+        # öyledir: zabıt "kelimelerin benzerliği doğrudan Hilbert iç
+        # çarpımıdır" der, harici bir kosinüs yahut softmax zarı değil.
         return -float(np.log(max(ortusme(a, b), 1e-300)))
     a = np.asarray(a).reshape(-1)
     b = np.asarray(b).reshape(-1)
@@ -436,8 +460,23 @@ def rapor(tohum: int = 0) -> str:            # pragma: no cover
     X = r.normal(size=(12, 4)) * 0.6
     s = ["=== LİF -- zabıtların ölçüsü ===", "",
          "  KODLAMA SADAKATİ (giriş mesafeleri ↔ kodlanmış mesafeler)",
-         "  1,0 = geometri tam korundu.", ""]
-    for ne in (KIP_TUTARLI, KIP_QUDIT, KIP_MPS, KIP_IKILI):
+         "  1,0 = geometri tam korundu.",
+         "",
+         "  NE ÖLÇÜLDÜĞÜ AÇIKÇA: bu tablo GİRDİ KODLAMASINI ölçer,",
+         "  yâni 'kelime → durum' işini. ``lie-chebyshev qudit`` bu işi",
+         "  yapmak için yazılmadı: o, MODELİN KENDİ durumunu az sayıda",
+         "  katsayıdan üretir (hafıza ve hız iddiası; ölçüsü",
+         "  ``nefs/qudit.py:rapor``dadır). Buradaki ρ'su benim keyfî",
+         "  ``v → θ`` eşlememi ölçer, zabıtın kuruluşunu değil --",
+         "  onun için düşük çıkması bir nakz değildir ve öyle",
+         "  sayılmıyor. Girdi kodlaması işi ``tutarlı``nındır.",
+         "",
+         "  ``mps`` 1,0 veriyor fakat FERMANLA İPTAL: ferman bu küçük",
+         "  ölçekli sadakati değil, SVD bedelini (ileri geçiş başına",
+         "  ~8500 SVD) ve hacim kanununda çökmesini gerekçe gösterir.",
+         "  Yâni ölçü ile ferman çelişmiyor; ayrı şeyleri söylüyorlar.",
+         ""]
+    for ne in (KIP_LIE, KIP_TUTARLI, KIP_QUDIT, KIP_MPS, KIP_IKILI):
         try:
             d = sadakat(X, ne=ne)
             s.append("    %-42s ρ = %s"
