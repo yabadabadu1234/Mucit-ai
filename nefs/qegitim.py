@@ -143,10 +143,11 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
     rng = np.random.default_rng(tohum)
     cikti: List[Tuple[List[int], int]] = []
     for g in gorevler:
-        try:
-            dizi, hedef = gorev_dizisi(g, hedef_indis=0)
-        except Exception:
-            continue
+        # ``except: continue`` KALDIRILDI (ferman). Bir görev dizisi
+        # kurulamıyorsa o görev sessizce örneklemden düşüyordu; yâni
+        # veri kümesi kendi kendini, sebebi söylenmeden küçültüyordu.
+        dizi, hedef = gorev_dizisi(g, hedef_indis=0)
+        assert len(dizi) > 0, "görev %r BOŞ dizi verdi" % getattr(g, "ad", "")
         akis = [int(x) % sozluk for x in list(dizi) + list(hedef)]
         if len(akis) < pencere + 2:
             continue
@@ -449,10 +450,10 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
     for g in gorevler:
         if deneme >= azami:
             break
-        try:
-            dizi, hedef = gorev_dizisi(g, hedef_indis=0)
-        except Exception:
-            continue
+        # ``except: continue`` KALDIRILDI: ölçünün paydası (``deneme``)
+        # gizlice küçülüyordu ve isabet oranı olduğundan yüksek çıkıyordu.
+        dizi, hedef = gorev_dizisi(g, hedef_indis=0)
+        assert len(hedef) > 0, "görev %r BOŞ hedef verdi" % getattr(g, "ad", "")
         deneme += 1
         baglam = [int(x) % sozluk for x in dizi]
         h = [int(x) % sozluk for x in hedef]

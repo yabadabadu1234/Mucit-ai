@@ -81,16 +81,16 @@ UZUV_SOFRASI: Dict[int, Uzuv] = {
     20: Uzuv("nefs.melekeler", "vech-i şebeh → 𝒪₃₉ Belâgat"),
     21: Uzuv("nefs.melekeler", "tefekkür devri"),
     22: Uzuv("nefs.melekeler", "NOTEARS asiklik + arka kapı"),
-    23: Uzuv("mizan.munazara", "nakz sınaması + Gazâlî yakîni (``min``)"),
+    23: Uzuv("matematik.mizan", "nakz sınaması + Gazâlî yakîni (``min``)"),
     24: Uzuv("nefs.melekeler", "burhân zinciri"),
     25: Uzuv("nefs.melekeler", "büzücü devridaim + durma ölçütü"),
     26: Uzuv("nefs.melekeler", "asgarî arama + vakarla harman (S yazar)"),
     27: Uzuv("nefs.melekeler", "kusur haritası → 𝒪₂₈ Tashih"),
     28: Uzuv("nefs.melekeler", "şartlı tashih (ölçerek kabul)"),
-    29: Uzuv("fitrat.tevafuk", "tevafuk ölçüsü + fazla sayma → müteber şahit"),
+    29: Uzuv("matematik.fitrat", "tevafuk ölçüsü + fazla sayma → müteber şahit"),
     30: Uzuv("nefs.sahit", "küllî kaide (nakzedilmiş şahit hariç) + taklit ayırımı"),
     31: Uzuv("nefs.melekeler", "Monte Carlo âkıbet riski → 𝒪₃₃ mîzân"),
-    32: Uzuv("mizan.istikra", "ardışıklık kaidesi ``(k+α)/(n+α+β)`` → makam, sükût"),
+    32: Uzuv("matematik.mizan", "ardışıklık kaidesi ``(k+α)/(n+α+β)`` → makam, sükût"),
     33: Uzuv("nefs.melekeler", "mizan ve rejim değişimi"),
     34: Uzuv("nefs.melekeler", "tafsil dalları → 𝒪₃₇ Fesâhat"),
     35: Uzuv("nefs.melekeler", "siyak-sibak muradı → 𝒪₃₉ Belâgat"),
@@ -99,14 +99,23 @@ UZUV_SOFRASI: Dict[int, Uzuv] = {
     38: Uzuv("nefs.melekeler", "talâkat düzleştirmesi"),
     39: Uzuv("nefs.melekeler", "muktezâ-yı hâl"),
     40: Uzuv("nefs.melekeler", "simetrik harmoni + altın oran → kelam ölçeği (𝒪₄₁)"),
-    41: Uzuv("mizan.munazara", "``yakin_zinciri`` ile burhân kuvveti"),
+    41: Uzuv("matematik.mizan", "``yakin_zinciri`` ile burhân kuvveti"),
 }
 
 # Sofrada geçen harici modüllerin, ``nefs/`` içinde fiilen ithal edilmesi
 # beklenir. ``nefs.*`` kendi içindedir; denetim onları aramaz.
-_HARICI = ("fitrat.", "mizan.", "ogrenme.", "akis.", "hesap.", "kuantum.",
-           "arama.", "yaklasim.", "olcek.", "omega_kategori_nbe.",
-           "token_uzaylari.", "reel.")
+#: **BAYAT ADLAR DÜZELTİLDİ (ferman turu).** Sofra dört satırda
+#: ``mizan.munazara``, ``mizan.istikra`` ve ``fitrat.tevafuk`` diyordu;
+#: o paketler ``matematik/`` altına taşınalı çok olmuştu ve denetim
+#: haklı olarak "bildiriyor fakat ithal edilmiyor" diye şikâyet
+#: ediyordu. Şikâyet doğruydu, **kod değil sofra bayattı**: ilgili
+#: kabiliyetler ``nefs/mantik.py`` (``matematik.mizan``) ve
+#: ``nefs/musahede.py`` (``matematik.fitrat``) içinde fiilen ithal
+#: ediliyor. Şikâyeti susturmak için denetimi gevşetmek yerine tabloyu
+#: hakikate uydurdum.
+_HARICI = ("matematik.", "fitrat.", "mizan.", "ogrenme.", "akis.",
+           "hesap.", "kuantum.", "arama.", "yaklasim.", "olcek.",
+           "omega_kategori_nbe.", "token_uzaylari.", "reel.")
 
 
 # =====================================================================

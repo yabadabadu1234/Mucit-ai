@@ -101,10 +101,6 @@ try:
 except Exception as _e:  # noqa: BLE001
     EKSIK['kuantum.kapilar'] = str(_e)
 try:
-    import kuantum.kubit_taksimati  # [uzuv] 22 milyon kübitin Hilbert yazmaç taksimatı -- **tek zincirde**.
-except Exception as _e:  # noqa: BLE001
-    EKSIK['kuantum.kubit_taksimati'] = str(_e)
-try:
     import kuantum.stabilizer  # [uzuv] Stabilizer rank ayrışımı (Bravyi–Gosset–Smith) -- Clifford çerçevesi +
 except Exception as _e:  # noqa: BLE001
     EKSIK['kuantum.stabilizer'] = str(_e)
@@ -144,6 +140,10 @@ try:
     import main.kaggle_egitim  # [taht] KÜLLÎ DİMAĞ -- KAGGLE ÇOKLU GPU TÂLİM NAZIRI
 except Exception as _e:  # noqa: BLE001
     EKSIK['main.kaggle_egitim'] = str(_e)
+try:
+    import main.hazine  # [uzuv] HAZİNE -- tâlimin ağırlıklarını safetensors olarak saklar.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['main.hazine'] = str(_e)
 try:
     import main.veri  # [taht] VERİ -- belirteçleri diske dizen ve Kaggle'a gönderen tek kapı.
 except Exception as _e:  # noqa: BLE001
@@ -272,6 +272,10 @@ try:
     import nefs.qyazmac  # [uzuv] QYAZMAÇ -- qudit yazmacı: MPS'in yerine geçen durum kabı.
 except Exception as _e:  # noqa: BLE001
     EKSIK['nefs.qyazmac'] = str(_e)
+try:
+    import nefs.ayna  # [uzuv] Yarı yansıtıcı ayna -- boş porttan gelen vakumla yaratıcılık.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.ayna'] = str(_e)
 try:
     import nefs.soyle  # [uzuv] SÖYLEMEK -- ya motorun ürettiği, ya sükût.
 except Exception as _e:  # noqa: BLE001
@@ -416,8 +420,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Adiyabatik geçiş, QAOA ve parametre-kaydırma kuralı.'),
     ('kuantum.kapilar', 'uzuv',
      'Kapılar — tek ve çok kübitli üniter operatörler.'),
-    ('kuantum.kubit_taksimati', 'uzuv',
-     '22 milyon kübitin Hilbert yazmaç taksimatı -- **tek zincirde**.'),
     ('kuantum.stabilizer', 'uzuv',
      'Stabilizer rank ayrışımı (Bravyi–Gosset–Smith) -- Clifford çerçevesi + T.'),
     ('kuantum.surekli', 'uzuv',
@@ -438,6 +440,9 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'KÜLLÎ DİMAĞ -- KAGGLE ÇIKARIM VE TESLİMAT NAZIRI'),
     ('main.kaggle_egitim', 'taht',
      'KÜLLÎ DİMAĞ -- KAGGLE ÇOKLU GPU TÂLİM NAZIRI'),
+    ('main.hazine', 'uzuv',
+     'HAZİNE -- tâlimin kazandığı ağırlıkları safetensors biçiminde '
+     'saklar ve geri verir; gövde sha256 ile tahkik edilir.'),
     ('main.veri', 'taht',
      'VERİ -- belirteçleri diske dizen ve Kaggle\'a gönderen tek kapı.'),
     ('matematik', 'uzuv',
@@ -502,6 +507,10 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'QUDİT -- dimağın yeni çekirdeği: SVD yok, MPS yok, ikili kübit yok.'),
     ('nefs.qyazmac', 'uzuv',
      'QYAZMAÇ -- qudit yazmacı: MPS\'in yerine geçen durum kabı.'),
+    ('nefs.ayna', 'uzuv',
+     'Yarı yansıtıcı ayna -- ışın bölücü, vakum uyarılması, sıkıştırılmış '
+     'vakum, CV (μ,σ) temsili ve Coherent Ising Machine. Kör sıcaklığı '
+     'iptal eder.'),
     ('nefs.soyle', 'uzuv',
      'SÖYLEMEK -- ya motorun ürettiği, ya sükût.'),
     ('nefs.tart', 'uzuv',

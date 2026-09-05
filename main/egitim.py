@@ -111,10 +111,15 @@ from ogrenme.optimize import hoca_egit                   # noqa: E402
 from ogrenme.optimize import (chebyshev_tasarimi,        # noqa: E402
                               kestirmeden_sur)
 from nefs.zirh import zirhla                        # noqa: E402
+from main import hazine                             # noqa: E402
+
+#: Ağırlıkların yattığı dizin. ``main/cikarim.py`` buradan okur.
+HAZINE_DIZINI = os.environ.get("MUCIT_HAZINE", "depo/hazine")
 
 __all__ = ["EgitimAyari", "KISA_CPU", "ORTA", "AZAMI_KAGGLE",
-           "tek_iplik_zorla", "KulliDalgaTalimMotoru",
-           "kulli_kayip_talimi", "gorev_talimi", "kos"]
+           "tek_iplik_zorla", "KulliDalgaTalimMotoru", "gecit",
+           "ogreniyor_mu", "kulli_kayip_talimi", "gorev_talimi", "kos",
+           "HAZINE_DIZINI"]
 
 
 def tek_iplik_zorla() -> Dict[str, str]:
@@ -274,6 +279,121 @@ PROFILLER: Dict[str, EgitimAyari] = {
 
 
 # =====================================================================
+#  TÂLİM GEÇİDİ -- koşmadan EVVEL dimağın akdi ve illeti denetlenir
+# =====================================================================
+def gecit(sert: bool = True) -> Dict[str, object]:
+    """TÂLİME GİRMEDEN EVVEL İKİ ŞART -- akit ve illet.
+
+    Bir tâlim koşusu saatler sürer. Koşunun sonunda "sebep çizgesinde
+    çevrim varmış" yahut "sözleşmedeki meleke kodda yokmuş" demek,
+    saatleri çöpe atmak demektir. Bu geçit ikisini de **koşudan evvel**
+    ve **saniyeler içinde** ölçer:
+
+    1. ``nefs/akit.py`` -- SÖZLEŞME İLE KOD UYUŞUYOR MU?
+       Uzuv sofrasında yazan her melekenin kodda karşılığı var mı,
+       hangileri hâlâ vekil formülle çalışıyor, hangileri veri yoluna
+       hiçbir şey **yazmıyor** (koşar, hesaplar, tesirsizdir).
+
+    2. ``nefs/illet.py`` -- SEBEP ÇİZGESİ SAĞLAM MI?
+
+       (a) **ZAMAN AÇILIMLI** çizge çevrimsiz olmalı. Alan seviyesindeki
+           çizgede çevrim beklenir ve kusur değildir (``makam`` ile
+           ``mizan`` birbirini besler; akış devridaimlidir) -- ölçüldü:
+           10 alan, 58 kenar, 6 çevrim. Orada çevrim aramak yanlış
+           soruydu. Doğru soru zaman açılımındadır: ``alan@t`` bir
+           **sonraki** adımı etkiler, o hâlde orada çevrim çıkarsa bir
+           adım kendi geleceğine bağlı demektir ve bu imkânsızdır.
+       (b) ``kelam``, ``veri``den **yalnız hüküm üzerinden** beslenmeli.
+           Ölçünün adı ``hüküm_şartıyla_ayrık``tır. ``şartsız_ayrık``
+           DEĞİLDİR ve olmamalıdır: kelamın veriden hiç etkilenmemesi
+           modelin girdiyi hiç görmemesi demek olurdu.
+
+    ``sert`` doğruysa ihlâl ``assert`` ile koşuyu **durdurur**. Yumuşak
+    kipte yalnız raporlanır; o kip ölçüyü görmek içindir, geçmek için
+    değil.
+    """
+    from nefs.akit import akdi_denetle, vekil_kalanlar, yazmayanlar
+    from nefs.illet import (alan_cizgesi, cevrimler, kelam_ayrismasi,
+                            zaman_cizgesi)
+
+    uydu, sikayet = akdi_denetle()
+    vekil = vekil_kalanlar()
+    sessiz = yazmayanlar()
+
+    dug, ken, kabul = alan_cizgesi()
+    assert dug, "sebep çizgesi BOŞ -- illet ölçüsü bir şey ölçmüyor"
+    alan_cevrimi = cevrimler(dug, ken)
+    zg, _yer = zaman_cizgesi()
+    zaman_cevrimi = cevrimler(list(zg.dugumler), list(zg.kenarlar))
+    ayrisma = kelam_ayrismasi()
+
+    o: Dict[str, object] = {
+        "akit_uydu": bool(uydu), "akit_şikâyeti": list(sikayet),
+        "vekil_meleke": len(vekil), "yazmayan_meleke": len(sessiz),
+        "alan": len(dug), "kenar": len(ken),
+        "alan_çevrimi": len(alan_cevrimi),
+        "zaman_düğümü": len(zg.dugumler),
+        "zaman_çevrimi": [list(c) for c in zaman_cevrimi],
+        "kelam_ayrıştı": bool(ayrisma.get("hüküm_şartıyla_ayrık", False)),
+        "kelam_dökümü": ayrisma,
+    }
+    if sert:
+        assert uydu, ("AKİT TUTMUYOR -- sözleşme ile kod uyuşmuyor:\n  %s"
+                      % "\n  ".join(sikayet[:8]))
+        assert not zaman_cevrimi, (
+            "ZAMAN AÇILIMLI SEBEP ÇİZGESİNDE ÇEVRİM VAR -- bir adım "
+            "kendi geleceğine bağlı: %r" % (zaman_cevrimi[:3],))
+        assert ayrisma.get("kurulabilir", False), (
+            "zaman çizgesi kurulamadı -- illet ölçüsü boş: %r" % (ayrisma,))
+        assert ayrisma.get("hüküm_şartıyla_ayrık", False), (
+            "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
+            "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
+    return o
+
+
+def ogreniyor_mu(seyir: Sequence[float], lam: float = 1e-3
+                 ) -> Dict[str, object]:
+    """SEYİR EĞRİSİ DÜŞÜYOR MU -- gürültüye bakmadan (``ogrenme/izgara.py``).
+
+    Kaybın son iki adımına bakıp "düştü" demek gürültüyü hüküm
+    sanmaktır. Doğru soru eğrinin **eğilimidir** ve eğilim, gürültülü
+    bir örneklemden ancak düzenlenmiş bir uydurmayla çıkarılır::
+
+        min_c ‖Bc − y‖² + λ·cᵀSc
+
+    ``S`` bükülme dizeyidir (``∫B''B''``); ``λ`` eğriyi yumuşatır. Bu
+    tam olarak ``ogrenme/izgara.py``nin ``duzenli_uydur``udur ve
+    burada süs değil hükümdür: ``eğim ≥ 0`` ise **tâlim öğrenmiyor**
+    ve netice öyle yazılır.
+
+    Bağıntı ölçütü (``bagintili_olcut``) ikinci şahittir: sabit bir
+    eğri hiçbir zaman kazanamaz (payda sıfırsa 0 döner).
+    """
+    y = np.asarray(list(seyir), float).reshape(-1)
+    assert y.size >= 2, "seyir eğrisi için en az iki nokta lâzım"
+    assert np.all(np.isfinite(y)), "seyirde NaN/Inf var"
+    from ogrenme.izgara import bagintili_olcut, duzenli_uydur
+
+    t = np.linspace(-1.0, 1.0, y.size)
+    G = max(2, min(8, y.size // 3))
+    k = 3 if y.size > 5 else 1
+    u = duzenli_uydur(t, y, G, k, lam=float(lam))
+    tahmin = np.asarray(u["B"], float) @ np.asarray(u["c"], float)
+    n = max(2, y.size // 4)
+    egim = float((tahmin[-1] - tahmin[-1 - n]) / (t[-1] - t[-1 - n]))
+    bag = float(bagintili_olcut(t, y))
+    # İKİ ŞAHİT BİRDEN. Yalnız eğime bakmak yetmez: sabit bir seyirde
+    # eğim ``−2,5e−16`` çıkıyor (ölçüldü) ve kayan nokta gürültüsünü
+    # "öğreniyor" diye okumak tam da örtmek olurdu. ``bagintili_olcut``
+    # sabit eğride paydası sıfır olduğu için **tam 0** döner ve o kapıyı
+    # kapatır.
+    return {"eğim": egim, "artık": float(u["artık"]),
+            "bükülme": float(u["bükülme"]), "bağıntı": bag,
+            "öğreniyor": bool(egim < 0.0 and bag < 0.0),
+            "toplam_düşüş": float(y[0] - y[-1])}
+
+
+# =====================================================================
 #  SÜREÇ HAVUZU -- kübit ileri geçişi paraleldir
 # =====================================================================
 _ISCI: Dict[str, object] = {}
@@ -320,6 +440,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     from nefs.qegitim import degerlendir, ornekler
 
     t0 = time.perf_counter()
+    # **GEÇİT KOŞUDAN EVVEL.** Saatler süren bir tâlimin sonunda
+    # "akit tutmuyormuş" demek saatleri çöpe atmaktır.
+    kapi = gecit(sert=True)
     hepsi = list(gorevler) if gorevler is not None else \
         gorevleri_getir("training")
     # **İMTİHAN BÖLÜMLEMESİ** -- ezberi ve sızıntıyı engeller.
@@ -392,11 +515,36 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             havuz.join()
 
     p_yildiz = np.asarray(r["p"], float)
+    assert p_yildiz.size == d, (
+        "tâlim %d parametre aldı, %d döndürdü" % (d, p_yildiz.size))
+    assert np.all(np.isfinite(p_yildiz)), "tâlim NaN/Inf parametre döndürdü"
     nefs.yukle(p_yildiz)
     deg = degerlendir(nefs, dogrulama, azami=ayar.degerlendirme_gorevi,
                       pencere=ayar.pencere, sozluk=ayar.sozluk,
                       azami_uret=ayar.azami_uret)
+
+    # --- ÖĞRENİYOR MU? (ogrenme/izgara.py -- düzenli uydurma)
+    ham_seyir = [float(x["V"]) for x in (r.get("seyir") or [])
+                 if isinstance(x, dict) and "V" in x]
+    ders = (ogreniyor_mu([float(r["V_ilk"])] + ham_seyir)
+            if ham_seyir else
+            {"öğreniyor": bool(r["V_son"] < r["V_ilk"]), "eğim": 0.0,
+             "bağıntı": 0.0, "artık": 0.0, "bükülme": 0.0,
+             "toplam_düşüş": float(r["V_ilk"] - r["V_son"])})
+
+    # --- HAZİNE: ağırlıklar safetensors olarak kaydedilir (main/hazine.py)
+    kayit = hazine.koy(
+        os.path.join(HAZINE_DIZINI, "dimag_%s" % ayar.ad),
+        {"p": p_yildiz},
+        {"ayar": ayar.ad, "parametre": d, "V_ilk": float(r["V_ilk"]),
+         "V_son": float(r["V_son"]), "satır_kübiti": int(ayar.satir_kubiti),
+         "sözlük": int(ayar.sozluk), "pencere": int(ayar.pencere),
+         "yerel_kübit": int(ayar.yerel_kubit), "bağ": int(ayar.bag),
+         "mera_kademe": int(ayar.mera_kademe), "tohum": int(ayar.tohum),
+         "öğreniyor": bool(ders["öğreniyor"])})
+
     return {"ayar": ayar.ad, "parametre": d,
+            "geçit": kapi, "ders": ders, "hazine": kayit,
             "veri": len(veri), "süreç": surec,
             "V_ilk": float(r["V_ilk"]), "V_son": float(r["V_son"]),
             "süre_sn": time.perf_counter() - t0,
@@ -779,10 +927,13 @@ def dimag(gorevler=None, tur: int = 2, n_gorev: int = 24,
 
     # --- öğrenileni yazmaca yükle: söylenen artık onu görebilsin --
     motor.meleke_manifoldu.teta = np.asarray(teta, float).copy()
-    try:
-        nefs.p.vektorden(np.asarray(pp, float))
-    except Exception:                        # pragma: no cover
-        pass
+    # ``except pass`` KALDIRILDI (ferman). Burası tâlimin öğrendiğini
+    # yazmaca **yükleyen** satırdı; düşerse söylenen eski parametreyi
+    # görürdü ve netice "öğrenmedi" diye okunurdu. Sessizce geçilecek
+    # bir yer değil, hattın can damarıdır.
+    assert hasattr(nefs.p, "vektorden"), (
+        "parametre taşıyıcısında ``vektorden`` yok: %r" % type(nefs.p))
+    nefs.p.vektorden(np.asarray(pp, float))
 
     manzaralar, mizanlar, cevaplar = [], [], []
     for g in gorevler:
@@ -857,11 +1008,13 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
         print("", flush=True)
         print("--- 2. HAT: KÜLLÎ KAYIP TÂLİMİ (41 meleke + Talim) ---",
               flush=True)
-        try:
-            kulli = kulli_kayip_talimi(ayar)
-        except Exception as exc:                         # noqa: BLE001
-            print("  [DÜŞTÜ] küllî kayıp hattı: %s: %s"
-                  % (type(exc).__name__, str(exc)[:120]), flush=True)
+        # ``except`` KALDIRILDI (ferman). Evvelce bu hat düşerse
+        # bir satır basılıp koşu devam ediyordu: yâni tâlimin ASIL
+        # hattı çökmüşken netice yine de basılıyordu. Bir hattın
+        # çöküşünü rapora "başarı" diye yazdıran şey buydu.
+        kulli = kulli_kayip_talimi(ayar)
+        assert kulli and kulli.get("hazine"), (
+            "küllî kayıp hattı BOŞ döndü -- hazineye bir şey yazılmadı")
 
     if cikti:
         netice = dict(dalga)
@@ -898,6 +1051,31 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
               "      ortalama hücre isabeti: %.4f"
               % d["ortalama_hücre_isabeti"],
               "      sükût                 : %d" % d["sükût"]]
+        ders = kulli["ders"]
+        s += ["",
+              "    ÖĞRENİYOR MU (ogrenme/izgara.py, düzenli uydurma):",
+              "      eğim      : %+.6f   %s" % (
+                  ders["eğim"],
+                  "DÜŞÜYOR" if ders["öğreniyor"] else "⚠ ÖĞRENMİYOR"),
+              "      bağıntı   : %+.4f   (sabit eğride tam 0)"
+              % ders["bağıntı"],
+              "      artık     : %.6f  bükülme: %.6f"
+              % (ders["artık"], ders["bükülme"]),
+              "",
+              "    HAZİNE (main/hazine.py -- safetensors):",
+              "      %s  (%d bayt, sha256 %s…)"
+              % (kulli["hazine"]["yol"], kulli["hazine"]["bayt"],
+                 kulli["hazine"]["sha256"][:16]),
+              "",
+              "    GEÇİT (nefs/akit.py + nefs/illet.py):",
+              "      akit uydu : %s   vekil meleke: %d   yazmayan: %d"
+              % (kulli["geçit"]["akit_uydu"],
+                 kulli["geçit"]["vekil_meleke"],
+                 kulli["geçit"]["yazmayan_meleke"]),
+              "      zaman çizgesi: %d düğüm, %d çevrim   kelam ayrıştı: %s"
+              % (kulli["geçit"]["zaman_düğümü"],
+                 len(kulli["geçit"]["zaman_çevrimi"]),
+                 kulli["geçit"]["kelam_ayrıştı"])]
         if kulli.get("düşen_uzuv"):
             s.append("    DÜŞEN UZUV: %s"
                      % ", ".join(sorted(kulli["düşen_uzuv"])))

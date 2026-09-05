@@ -89,16 +89,19 @@ def _mertebeler() -> Dict[str, float]:
     Tekrar yazılsaydı iki nüsha olurdu ve biri değişince diğeri sessizce
     yalan söylerdi.
     """
-    try:
-        # `mizan/munazara.py` merdiveni ``((eşik, ad), …)`` olarak tutar
-        # -- eşik önce, ad sonra. Ters çevirip ``ad → eşik`` veriyoruz;
-        # ``dict(MERTEBELER)`` doğrudan alınsaydı anahtar sayı, değer
-        # dizgi olurdu ve karşılaştırmalar sessizce ters dönerdi.
-        from matematik.mizan import MERTEBELER
-        return {str(ad): float(esik) for esik, ad in MERTEBELER}
-    except Exception:                                    # noqa: BLE001
-        return {"vehim": 0.0, "şek": 0.25, "zan": 0.5,
-                "zann-ı gālib": 0.75, "yakîn": 1.0}
+    # `mizan/munazara.py` merdiveni ``((eşik, ad), …)`` olarak tutar
+    # -- eşik önce, ad sonra. Ters çevirip ``ad → eşik`` veriyoruz;
+    # ``dict(MERTEBELER)`` doğrudan alınsaydı anahtar sayı, değer
+    # dizgi olurdu ve karşılaştırmalar sessizce ters dönerdi.
+    # ``except`` KALDIRILDI VE SEBEBİ ŞERHİN KENDİSİNDEYDİ: üstte
+    # "merdiven **mizan**dan alınır, burada tekrar yazılmaz" yazıyor,
+    # üç satır aşağıda merdiven elle bir daha yazılıyordu. Yakalayıcı
+    # düşerse ikinci nüsha sessizce devreye giriyor ve iki merdiven
+    # ayrışırsa fark hiç görülmüyordu.
+    from matematik.mizan import MERTEBELER
+    m = {str(ad): float(esik) for esik, ad in MERTEBELER}
+    assert m, "mertebe merdiveni BOŞ geldi -- mizan bozuk"
+    return m
 
 
 UZAYLAR: Dict[str, OlcuUzayi] = {
@@ -377,14 +380,13 @@ def zayif_halka(x=None, beta=None, ne: str = "asgarî",
     if beta is None:
         beta = zayif_halka(eksikler, ne="beta") if DINAMIK_BETA else BETA
     b = float(max(beta, 1e-6))
-    try:
-        from matematik.fitrat import logsumexp
-        yumusak = (float(logsumexp([b * e for e in eksikler]))
-                   - float(np.log(n))) / b
-    except Exception:                                    # noqa: BLE001
-        z = b * np.asarray(eksikler, float)
-        yumusak = float(z.max() + np.log(np.exp(z - z.max()).sum())
-                        - np.log(n)) / b
+    # İkinci nüsha (elle logsumexp) KALDIRILDI: iki ayrı formül aynı
+    # sayıyı hesaplarsa hangisinin koştuğu bilinmez ve ayrışırlarsa
+    # fark görünmez. Tek kaynak ``matematik/fitrat.py``dir.
+    from matematik.fitrat import logsumexp
+    yumusak = (float(logsumexp([b * e for e in eksikler]))
+               - float(np.log(n))) / b
+    assert np.isfinite(yumusak), "yumusak asgari sonlu degil"
     return {"kayıp": float(np.clip(yumusak, 0.0, 1.0)),
             "β": b,
             "katılan_uzuv": zayif_halka(
@@ -627,13 +629,17 @@ def kademe_parametreleri_ac(p) -> int:
     ölçülmüş kusurun ta kendisi. Onun için yerler eğitim başlamadan
     açılır.
     """
+    # ``except pass`` KALDIRILDI. Bir kademe parametresi açılamıyorsa
+    # sayaç onu sessizce atlıyordu: ``d`` olduğundan küçük çıkıyor ve
+    # tâlim o yönleri hiç aramıyordu (H39'un ta kendisi).
+    assert hasattr(p, "al") or hasattr(p, "v"), (
+        "parametre taşıyıcısında ne ``al`` ne ``v`` var: %r" % type(p))
     n = 0
     for anahtar in KADEME_VARSAYILAN:
-        try:
-            p.al(anahtar, 1) if hasattr(p, "al") else p.v(anahtar, 1)
-            n += 1
-        except Exception:                                # noqa: BLE001
-            pass
+        v = p.al(anahtar, 1) if hasattr(p, "al") else p.v(anahtar, 1)
+        assert v is not None and np.size(v) > 0, (
+            "kademe parametresi BOŞ açıldı: %r" % anahtar)
+        n += 1
     return n
 
 
@@ -728,11 +734,13 @@ class Kademeler:
         var, alt, ust = KADEME_VARSAYILAN[anahtar]
         if self.p is None:
             return float(var)
-        try:
-            ham = float(np.asarray(self.p.al(anahtar, 1), float).ravel()[0]) \
-                if hasattr(self.p, "al") else float(self.p.v(anahtar, 1)[0])
-        except Exception:                                # noqa: BLE001
-            return float(var)
+        # ``except → varsayılan`` KALDIRILDI: parametre okunamayınca
+        # sessizce varsayılana dönüyordu, yâni tâlim o kademeyi
+        # oynatsa da kayıp hiç değişmiyordu ve sebebi görünmüyordu.
+        ham = (float(np.asarray(self.p.al(anahtar, 1), float).ravel()[0])
+               if hasattr(self.p, "al")
+               else float(self.p.v(anahtar, 1)[0]))
+        assert np.isfinite(ham), "kademe ham degeri sonlu degil: %r" % anahtar
         t = float(np.tanh(ham))
         # varsayılanın iki yanına ayrı ayrı esner ki sıfır = varsayılan
         return float(var + t * ((ust - var) if t >= 0.0 else (var - alt)))
@@ -1322,29 +1330,26 @@ def suz(gorev, yakin_esigi: float = YAKIN_ESIGI,
                 "yapı": float(0.5 * renk + 0.5 * sekil)}
 
     if ne == "dalga":
-        try:
-            from .musahede import iki_olcegin_acisi
-            from .musahede import ortu
-            from .melekeler import QNefs
-            from .zihin_durumu import MAKAM_ADLARI, QAyar
+        from .musahede import iki_olcegin_acisi
+        from .musahede import ortu
+        from .melekeler import QNefs
+        from .zihin_durumu import MAKAM_ADLARI, QAyar
 
-            X, Y = iki_olcegin_acisi(gorev, ne="öznitelik")
-            if len(X) == 0:
-                return None
-            E = np.concatenate([X, Y], axis=1)
-            c = ortu(gorev)
-            q = (nefs or QNefs(tohum, QAyar(bag=int(chi), tohum=tohum))
-                 ).idrak_et(E, tikaniklik=float(c["H1"]))
-            _, ks = q._alan["sukut"]
-            sk = float(np.asarray(q.y.tekil_yogunluklar(
-                [q.kulli("sukut", j) for j in range(ks)]), float)[0][:, 1, 1].mean())
-            from .mantik import MAKAM_MERTEBE
-            P = np.atleast_1d(np.asarray(q.makam_dagilimi(), float)).ravel()
-            mk = float(sum(P[i] * MAKAM_MERTEBE[ad]
-                           for i, ad in enumerate(MAKAM_ADLARI)))
-            return {"sukut": sk, "makam_yakini": mk}
-        except Exception:                                    # noqa: BLE001
+        X, Y = iki_olcegin_acisi(gorev, ne="öznitelik")
+        if len(X) == 0:
             return None
+        E = np.concatenate([X, Y], axis=1)
+        c = ortu(gorev)
+        q = (nefs or QNefs(tohum, QAyar(bag=int(chi), tohum=tohum))
+             ).idrak_et(E, tikaniklik=float(c["H1"]))
+        _, ks = q._alan["sukut"]
+        sk = float(np.asarray(q.y.tekil_yogunluklar(
+            [q.kulli("sukut", j) for j in range(ks)]), float)[0][:, 1, 1].mean())
+        from .mantik import MAKAM_MERTEBE
+        P = np.atleast_1d(np.asarray(q.makam_dagilimi(), float)).ravel()
+        mk = float(sum(P[i] * MAKAM_MERTEBE[ad]
+                       for i, ad in enumerate(MAKAM_ADLARI)))
+        return {"sukut": sk, "makam_yakini": mk}
 
     if ne != "çevrim":
         raise ValueError("müdrike kipi bilinmiyor: %r" % (ne,))
@@ -1547,30 +1552,28 @@ def suz(gorev, yakin_esigi: float = YAKIN_ESIGI,
     # çarpanına iner. Bu, "içe aktardım" demenin değil, modülün hükmü
     # **değiştirmesi**nin yeridir: bir modülün hesabı bozulursa buradan
     # yakîn düşer ve padişah susar.
-    try:
-        from .meclis import meclis
-        mec = meclis(ciftler, girdiler)
-        yakin *= float(mec["ihtiyat"])
-        dusunce.append(
-            "Meclisi topluyorum: %d uzuv (rey %.3f), %d hakem (rey %.3f), "
-            "%d düşen → ihtiyat %.3f, yakînim %.3f."
-            % (len(mec["uzuv_rey"]), mec["uzuv"], len(mec["hakem_rey"]),
-               mec["hakem"], len(mec["eksik"]), mec["ihtiyat"], yakin))
-        # **Ölçü hükmü uzuvdan geliyor**: `nefs/boyut.py` çıktı ölçüsünü
-        # kestirdiyse ve kaidenin verdiği cevap ona uymuyorsa, iki
-        # müstakil hesap birbirini yalanlıyor demektir; yakîn düşer.
-        kes = mec["bilgi"].get("kestirilen_ölçü")
-        if kes is not None and girdiler:
-            deneme = K[0](np.asarray(girdiler[0], np.int64))
-            if deneme is not None and tuple(deneme.shape) != tuple(kes):
-                yakin *= 0.5
-                dusunce.append(
-                    "Fakat ölçü kestirimi %s diyor, kaidem %s veriyor -- "
-                    "iki müstakil hesap uyuşmuyor; yakînimi yarıya "
-                    "indiriyorum." % (tuple(kes), tuple(deneme.shape)))
-    except Exception as exc:                             # noqa: BLE001
-        dusunce.append("Meclis toplanamadı (%s); ihtiyatsız devam "
-                       "ediyorum." % type(exc).__name__)
+    from .meclis import meclis
+    mec = meclis(ciftler, girdiler)
+    yakin *= float(mec["ihtiyat"])
+    dusunce.append(
+        "Meclisi topluyorum: %d uzuv (rey %.3f), %d hakem (rey %.3f), "
+        "%d düşen → ihtiyat %.3f, yakînim %.3f."
+        % (len(mec["uzuv_rey"]), mec["uzuv"], len(mec["hakem_rey"]),
+           mec["hakem"], len(mec["eksik"]), mec["ihtiyat"], yakin))
+    # **Ölçü hükmü uzuvdan geliyor**: `nefs/boyut.py` çıktı ölçüsünü
+    # kestirdiyse ve kaidenin verdiği cevap ona uymuyorsa, iki
+    # müstakil hesap birbirini yalanlıyor demektir; yakîn düşer.
+    kes = mec["bilgi"].get("kestirilen_ölçü")
+    if kes is not None and girdiler:
+        deneme = K[0](np.asarray(girdiler[0], np.int64))
+        if deneme is not None and tuple(deneme.shape) != tuple(kes):
+            yakin *= 0.5
+            dusunce.append(
+                "Fakat ölçü kestirimi %s diyor, kaidem %s veriyor -- "
+                "iki müstakil hesap uyuşmuyor; yakînimi yarıya "
+                "indiriyorum." % (tuple(kes), tuple(deneme.shape)))
+    # ``except`` KALDIRILDI: "meclis toplanamadı, ihtiyatsız devam
+    # ediyorum" demek, hükmün dayanağı çökmüşken hükmü yine vermekti.
     if hip > 0:
         dusunce.append("Bu kaide %d girdilik bir tablo öğrendi; "
                        "delilim %d hücre → delil/hipotez sağlamlığı %.3f."
@@ -1803,6 +1806,11 @@ class Tesir:
 
 VERI_ORNEK: int = 8
 
+#: İMHA EDİLEN ``kuantum/kubit_taksimati.py``nin bölge adları. Meleke
+#: sözleşmesi hâlâ bunları ilan ediyor; quditte karşılıkları yoktur ve
+#: ilan edenler **kesmeden** ölçülür (bkz. ``olcumlu_idrak``).
+_TAKSIMAT_ARTIGI: Tuple[str, ...] = ("parametre", "meleke", "ancilla")
+
 
 def bolge_degeri(q, ad: str) -> Optional[float]:
     """BİR BÖLGEDEN NE OKUNUYOR -- **tek terkip** (kütük H224).
@@ -1819,21 +1827,21 @@ def bolge_degeri(q, ad: str) -> Optional[float]:
     Yığın ekseni **yumuşak asgarî** ile birleşir, ortalamayla değil:
     bir yığında tek bir veride düşen parametre yakîn sayılamaz.
     """
-    try:
-        if ad == "yerel":
-            y = q.yereller()
-            if not y:
-                return None
-            return zayif_halka(q.povm(y))
-        if ad == "veri":
-            y = [q.veri(i, j) for i in range(q.n_satir)
-                 for j in range(q.ayar.satir_kubiti)][:VERI_ORNEK]
-            if not y:
-                return None
-            return zayif_halka(q.povm(y))
-        return zayif_halka(q.alan_degeri(ad))
-    except Exception:                                    # noqa: BLE001
-        return None
+    if ad == "yerel":
+        y = q.yereller()
+        assert y, "yerel kübit yok -- ``yerel`` bölgesi BOŞ"
+        return zayif_halka(q.povm(y))
+    if ad == "veri":
+        y = [q.veri(i, j) for i in range(q.n_satir)
+             for j in range(q.ayar.satir_kubiti)][:VERI_ORNEK]
+        assert y, "veri yuvası yok -- ``veri`` bölgesi BOŞ"
+        return zayif_halka(q.povm(y))
+    assert ad not in _TAKSIMAT_ARTIGI, (
+        "``%s`` imha edilen kübit taksimatının bölgesiydi; quditte yoktur. "
+        "Çağıran onu kesmeden ölçmeli." % ad)
+    v = zayif_halka(q.alan_degeri(ad))
+    assert v is not None, "bölge %r BOŞ okundu" % ad
+    return v
 
 
 def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
@@ -1881,19 +1889,16 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
         ``dolasiklik_entropisi`` doğrudan çağrılır. Dönen sayı
         birebir aynıdır: ``olcumler_yigin`` da onu okuyordu.
         """
-        try:
-            # ``olcumler()`` yığının **ilk üyesini** verir (``float(v[0])``);
-            # bütün yığının ortalamasını DEĞİL. Burada da öyle okunur --
-            # yoksa B>1'de sayı kayar. (Ölçüldü: ortalama alınca kayıp
-            # 0,414573544417 → 0,414415282390 oynuyordu. Hızlanma
-            # uğruna kaymış bir sayı, hızlanma değil hiledir.)
-            e = q.y.dolasiklik_entropisi()
-            v = e.get("entropi_yigin", None)
-            if v is None:
-                return float(e["entropi"])
-            return float(np.asarray(v, float).reshape(-1)[0])
-        except Exception:                                # noqa: BLE001
-            return float("nan")
+        # ``olcumler()`` yığının **ilk üyesini** verir (``float(v[0])``);
+        # bütün yığının ortalamasını DEĞİL. Burada da öyle okunur --
+        # yoksa B>1'de sayı kayar. (Ölçüldü: ortalama alınca kayıp
+        # 0,414573544417 → 0,414415282390 oynuyordu. Hızlanma
+        # uğruna kaymış bir sayı, hızlanma değil hiledir.)
+        e = q.y.dolasiklik_entropisi()
+        v = e.get("entropi_yigin", None)
+        if v is None:
+            return float(e["entropi"])
+        return float(np.asarray(v, float).reshape(-1)[0])
 
     okumalar: Dict[int, Dict[str, float]] = {}
     #: ``ΔS`` -- melekenin dolaşıklığa tesiri (`nefs/nizam.py`).
@@ -1921,6 +1926,25 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
             ilan = SOZLESME.get(int(no), ((), ""))[0]
             d: Dict[str, float] = {}
             for ad in ilan:
+                if ad in _TAKSIMAT_ARTIGI:
+                    # **İMHA EDİLEN TAKSİMATIN ARTIĞI (bu tur ölçüldü).**
+                    # Bu adlar ``kuantum/kubit_taksimati.py``nin dört
+                    # bölgesiydi (veri / parametre / meleke / ancilla)
+                    # ve MPS zincirinin kübitlerini bölüyorlardı. Zincir
+                    # de taksimat da fermanla imha edildi; quditte böyle
+                    # bir bölge YOKTUR.
+                    #
+                    # Bunu ``bolge_degeri``deki ``except → None`` örtüyordu:
+                    # olmayan bölge sessizce "ölçülemedi" oluyor, meleke
+                    # de sessizce ölçüsüz kalıyordu. ``except`` kalkınca
+                    # ``ValueError: küllî alan bilinmiyor: 'parametre'``
+                    # diye ortaya çıktı -- yâni yasak, bir yakalayıcının
+                    # ardında yaşamaya devam ediyormuş.
+                    #
+                    # Bu melekeler ölçüsüz BIRAKILMIYOR: aşağıdaki
+                    # **kesme** yolundan ölçülüyorlar (veri/yerel ile
+                    # aynı usul), yâni geçişte ne kadar bilgi attıkları.
+                    continue
                 if ad in ("veri", "yerel"):
                     # **VERİ BİR HÜKÜM ALANI DEĞİLDİR.** Evvelce buranın
                     # POVM ortalaması alınıp "büyüğü iyi" sayılıyordu ve
@@ -1935,9 +1959,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
                     # kesme. Yönü tartışmasızdır (az atmak iyidir),
                     # parametreye bağlıdır, ve her meleke için tanımlıdır.
                     continue
-                v = bolge_degeri(q, ad)
-                if v is not None:
-                    d[ad] = v
+                d[ad] = bolge_degeri(q, ad)
             # Veri/yerel ilan eden melekeler **kesmeden** ölçülür: o
             # geçişte sadakatin ne kadar düştüğü. Böylece 41 melekenin
             # hepsi ölçülür ve hiçbiri doymuş bir sabit değildir.
@@ -2887,16 +2909,20 @@ def mizan_raporu() -> str:                               # pragma: no cover
     # ``−ln|ψ_i|²``. Genlikler aynı, fazlar farklıysa o sayı da aynıdır.
     idx = int(np.argmax(np.abs(hedef)))
     for ad, p in (("hedefin kendisi", psi_a), ("faz bozulmuş", psi_b)):
-        kor = tabakali_mizan(p, idx, ne="nokta")
+        # ``ne="nokta"`` İMHA EDİLDİ ve bu rapor onu hâlâ çağırıyordu:
+        # yâni yasağı ölçen raporun kendisi yasağı çiğniyordu. Kör
+        # NLL'in **sayısı** yine lâzım (kıyas onun içindir), fakat
+        # kipten değil dökümün ``nokta`` teriminden okunur.
+        kor = tabakali_mizan(p, idx, ne="döküm")["nokta"]
         tam = tabakali_mizan(p, hedef, delta=D,
                              morfizm={"f": f, "g": g, "gf": g @ f + 0.1},
                              ne="döküm")
         s.append("  %-16s kör_NLL=%.6f   tabakalı=%.6f"
-                 % (ad, kor["toplam"], tam["toplam"]))
+                 % (ad, kor, tam["toplam"]))
         s.append("      nokta=%.6f uzay=%.6f kategori=%.6f tip=%.6f"
                  % (tam["nokta"], tam["uzay"], tam["kategori"], tam["tip"]))
-    ka = tabakali_mizan(psi_a, idx, ne="nokta")["toplam"]
-    kb = tabakali_mizan(psi_b, idx, ne="nokta")["toplam"]
+    ka = tabakali_mizan(psi_a, idx, ne="döküm")["nokta"]
+    kb = tabakali_mizan(psi_b, idx, ne="döküm")["nokta"]
     ta = tabakali_mizan(psi_a, hedef, delta=D, ne="döküm")["toplam"]
     tb = tabakali_mizan(psi_b, hedef, delta=D, ne="döküm")["toplam"]
     s += ["",

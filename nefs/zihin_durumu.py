@@ -50,7 +50,18 @@ __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI", "donme",
 class QAyar:
     """Zihin durumunun ölçüleri. Alan adları eski hâliyle **aynı**."""
 
-    satir_kubiti: int = 4
+    #: **ARTIK KÜBİT SAYISI DEĞİL, SEVİYE SAYISIDIR.** Ad eski hâliyle
+    #: duruyor (bütün çağrı yerleri onu kullanıyor) fakat mânâsı ikili
+    #: kodlamayla beraber değişti: veri lifi ``ℂ^satir_kubiti``dir.
+    #:
+    #: **ÖLÇÜLEN HATA (bu tur).** Burada ``sozluk = 1 << satir_kubiti``
+    #: yazıyordu -- imha edilen ikili kodlamadan kalma. ``EgitimAyari``
+    #: bu alanı 4'ten 16'ya çıkarınca (16 belirteç 16 seviyeye dizilsin
+    #: diye) formül ``1 << 16 = 65 536`` verdi ve ``mera`` 65536²'lik
+    #: bir dizey istedi: **32 GiB**, tâlim daha ilk adımda düştü. Yâni
+    #: yasağın kaldığı tek yer buydu ve ancak fiilen koşturunca ortaya
+    #: çıktı. Formül kaldırıldı: seviye sayısı doğrudan okunuyor.
+    satir_kubiti: int = 16
     yerel_kubit: int = 1
     #: Eski ``χ`` bağ boyutu. **Quditte bağ YOKTUR**; alan yalnız
     #: uyum için duruyor ve okunduğunda hiçbir şeyi kısmaz.
@@ -124,7 +135,9 @@ class QYazmac:
         #
         # ``n_satir`` artık lif sayısı değil, **kaç belirteç faza
         # katıldığıdır**.
-        sozluk = 1 << int(a.satir_kubiti)
+        sozluk = int(a.satir_kubiti)
+        assert sozluk >= 2, (
+            "veri lifi en az iki seviyeli olmalı: satir_kubiti=%d" % sozluk)
         lif = (sozluk, int(a.hukum_lifi))
         d = int(np.prod(lif))
         self.y = QuditYazmac(
@@ -251,7 +264,7 @@ class QYazmac:
         E = np.asarray(E, float)
         if E.ndim == 2:
             E = E[None]
-        sozluk = 1 << int(self.ayar.satir_kubiti)
+        sozluk = int(self.ayar.satir_kubiti)
         B = self.y.B
         n_sat = E.shape[1]
         T = np.zeros((B, sozluk, int(self.ayar.hukum_lifi)), complex)
