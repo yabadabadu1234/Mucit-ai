@@ -239,7 +239,7 @@ def durum(c: np.ndarray, s: np.ndarray, teta: Optional[np.ndarray] = None,
 
 def durum_yigin(c: np.ndarray, s: np.ndarray, TETA: np.ndarray,
                 d: int = 0, ayar: Optional[QuditAyari] = None,
-                tip=None) -> np.ndarray:
+                tip=None, cekirdek: str = "numpy") -> np.ndarray:
     """``B`` belirtecin durumu **aynı anda** -- döngüsüz, ayrıştırmasız.
 
     Eski hatta yığınlama işe yaramıyordu, çünkü darboğaz LAPACK'in
@@ -252,6 +252,19 @@ def durum_yigin(c: np.ndarray, s: np.ndarray, TETA: np.ndarray,
     """
     a = ayar or QuditAyari()
     d = int(d or a.d)
+    if cekirdek != "numpy":
+        # **GPU YOLU: ``nefs/hizli.py``ye havale.** Kaynaşık CuPy
+        # çekirdeği ve Torch yolu orada tam yazılıdır; burada kopyası
+        # tutulmaz (kopya olsaydı biri bozulunca öteki sessizce
+        # ayrışırdı). ``hizli.cekirdek`` fiilen hangi yolun koştuğunu
+        # döndürür ve GPU yoksa "GPU'da koştu" demez.
+        from .hizli import cekirdek as _fused
+        from .hizli import _bicimle                       # noqa: F401
+        W = np.atleast_2d(np.asarray(TETA, np.float32))
+        Wg = np.stack([agirlik(d, W[i]) for i in range(W.shape[0])])
+        cs = np.asarray(c, float).sum(axis=0)
+        ss = np.asarray(s, float).sum(axis=0)
+        return _fused(Wg, cs, ss, ne=cekirdek)["psi"]
     # **TİP BİR AYARDIR, GİZLİ BİR TERCİH DEĞİL.** ``float32`` bellek
     # bant genişliğini yarıya indirir ve bu hesap bellek bağımlıdır;
     # ölçüldü (d=16, B=4096): 516 637 → 1 169 166 belirteç/sn, yâni

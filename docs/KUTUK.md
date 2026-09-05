@@ -8655,3 +8655,109 @@ QSVT şahidi evvelce `B@Bᵀ` kullanıyordu; o dizeyin hakikî çekirdeği
 0,2197 çıkıyordu — süzgecin değil **şahidin** kusuru. Çizge
 Laplasyeni ile değiştirildi: çekirdeği kapalı biçimde bilinir
 (sabit vektör). Artık şahit bile ayrıştırmasızdır.
+
+---
+
+## H237 — İKİ BORÇ KAPANDI: ELLE KURULMUŞ ARC HATTI TASFİYE
+
+`main/cikarim.py` **927 → 133 satır**. Tasfiye edilen: `baglam_cikar`,
+`ozellik`, `nesne_ozellikleri`, `kuresel_ozellikler`,
+`hendese_adaylari`, `sahit_cogalt`, `_d4`, `_tuval`, `Dalga`,
+`dalga_talimi`, `dalga_kur`, `KulliHukumMotoru` — görev başına elle
+kurulmuş öznitelikler üstünde ayrı bir ridge/dalga öğrenicisi.
+
+Kütük onu *"ARC görevlerini fiilen çözen hat"* diye gösteriyordu.
+**Öğrenilmiş olması meşru kılmıyordu:** öznitelikler elle ve ARC'ye
+mahsus kuruluyordu, yâni çözen motor değil benim ARC hakkındaki
+tahminlerimdi. Aslı `yedek/kume9_arc_hileleri/cikarim_dalga.py`de.
+
+**Kayıp fonksiyonundaki iki çağrı yeri** dikkatle söküldü:
+`kademeler/muhakeme` (namzet artık motordan; motor susarsa kademe de
+susar) ve `kademeler/nakış` (motoru kaybın içinden çağırmak kısır
+döngü olurdu — burası susar ve sustuğunu söyler).
+
+**Cevher kurtarıldı:** `baglam_cikar` bir ARC kâidesi değil, umumî bir
+görme işidir — `nefs/musahede.py`ye `_komsuluk` adıyla alındı.
+
+**Mandal iş gördü:** tasfiye `ogrenme.morse`u yetim bıraktı, sınama
+yakaladı, borç defterine **sebebiyle** yazıldı.
+
+## H238 — BOYUT PATLAMASININ DÖRT TEDBİRİ (GPU DAHİL)
+
+`nefs/hizli.py`. Zabıt: `Qudit_Boyut_Patlamasini_Onleme_ve_Hizlandirma`.
+
+```
+1. Kronecker lif ayrışımı (d = 16·16·16)
+     yoğunla fark      2,349e−13   (birebir aynı mana)
+     duvar saati       289× hızlı
+     FLOP              33 554 432 → 393 216   (85,3×)
+     operatör belleği  67,1 MB → 3,1 KB
+2. Blok-diyagonal süperseçim
+     blok / yoğun eleman  6 815 744 / 16 777 216   → %59,4 tasarruf
+3. Cartan köşegeni -- noktasal faz
+     O(d²) = 16 777 216  →  O(d) = 4 096          (4096×)
+4. Kaynaşık çekirdek (SRAM)
+     fiilen koşan: numpy       GPU: HAYIR
+```
+
+**ZABITLA ARAMDAKİ FARKI SESSİZ GEÇMEDİM.** Zabıt Kronecker kazancını
+`170×` yazar; ben `85,3×` ölçtüm. Sebep sayım usulüdür: zabıt yoğun
+tarafı `2·4096²` (çarpma **ve** toplama), lifli tarafı `3·16⁴` (yalnız
+çarpma) sayıyor. İki taraf aynı usulle sayılınca nispet her hâlde
+85,3× çıkıyor. Kazanç hakikîdir, **170× değildir**.
+
+**GPU — padişahın emri gereği TAM yazıldı, ve koşmadığı söyleniyor.**
+CuPy ham çekirdeği (`_FUSED_KAYNAK`: durum `extern __shared__`
+SRAM'e bir kere çekilir, Clenshaw fazı orada biter, yalnız netice
+global belleğe yazılır) ve Torch yolu koddadır. Bu makinede `cupy` ve
+`torch` **kurulu değildir**; o hâlde GPU yolları **derlenmedi ve
+koşmadı**. "Çalışıyor" denmiyor — "yazıldı, denenmedi" deniyor (H100).
+Bütün çekirdekler tek `xp` dizi modülüne karşı yazılmıştır; GPU yolu
+ayrı bir kod kopyası **değildir** (kopya olsaydı biri bozulunca öteki
+sessizce ayrışırdı). `nefs/qudit.py:durum_yigin(cekirdek="oto")` oraya
+havale eder; iki yol 5,4e−7'de uyuşuyor (float32 hassasiyeti).
+
+## H239 — TABAKALI MİZAN: KÖR NLL'İN İPTALİ
+
+Zabıt: `Quditte_Negatif_Olabilirlik_Yanilgisi_ve_Tabakali_Mizan`.
+*"SAKIN HA! ... sistemi tekrar klasik bir Transformer logits
+katmanına indirgemiş olursunuz."*
+
+`nefs/kulli_kayip.py:tabakali_mizan` — **hata fonksiyonunun içine**
+terkip edildi, paralel devlet olarak değil:
+
+```
+ℒ = ℒ_nokta + α ℒ_uzay + β ℒ_kategori + γ ℒ_tip
+
+ℒ_uzay     = 1 − |⟨Φ_hedef|Ψ⟩|²        Fubini-Study, fazı görür
+ℒ_kategori = ‖M_{g∘f} − M_g·M_f‖²_F    funktör korunumu, ETİKETSİZ
+ℒ_tip      = ⟨Ψ|Δ_Hodge|Ψ⟩             tenakuzsuzluk
+ℒ_nokta    = −ln Tr(P_hedef ρ)         kısmî Born, SON basamak
+```
+
+**Kırmızıya dönebilen gösterim (H90).** Genlikleri birebir aynı,
+fazları farklı iki durum kuruldu:
+
+```
+                    kör NLL      tabakalı
+hedefin kendisi    2,279627      1,012565
+faz bozulmuş       2,279627      7,504874
+FARK               0,000000      6,492309
+                   ← KÖR         ← AYIRDI
+```
+
+Kör NLL iki durumu **hiç** ayırt edemiyor: fark tam sıfır. Zabıtın
+"faz katliamı" teşhisi ölçüldü ve doğrulandı.
+
+**Gösterimimdeki iki kusuru da düzelttim, sessiz geçmedim:**
+1. Kör NLL'e vektör hedef veriyordum; o hâlde `ne="nokta"` bile
+   `|⟨h|ψ⟩|²` hesaplayıp **fazı görüyordu** — yâni gösterim, göstermek
+   istediği körlüğü hiç göstermiyordu. Hakikî kör NLL sıfırıncı
+   mertebeden bir **indistir**.
+2. Hodge Laplasyenini `r.normal` ile kurmuştum; negatif kenar
+   ağırlıkları `Δ`yı PSD olmaktan çıkarıyor ve `⟨Ψ|Δ|Ψ⟩` **negatif**
+   çıkıyordu (−0,254). Tenakuz cezası negatif olamaz; olsaydı ceza
+   değil ödül olurdu. Kenar ağırlıkları negatif olmayan yapıldı.
+
+Kör NLL `ne="nokta"` kipiyle **ölçülebilir bırakıldı**: zabıtın
+yasakladığı hâl budur ve gizlenmesin diye kırmızı ucu duruyor.
