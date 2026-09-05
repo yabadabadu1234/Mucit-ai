@@ -1867,14 +1867,44 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
     q.mera()
 
     def _entropi() -> float:
+        """Dolaşıklık entropisi -- **yalnız o**.
+
+        ÖLÇÜLEN VE DÜZELTİLEN İSRAF. Evvelce burada ``q.olcumler()``
+        çağrılıp içinden ``["entropi"]`` alınıyordu. ``olcumler`` ise
+        **on bir küllî alanın** yoğunluklarını, ``norm_hatasi(ornek=32)``
+        iç çarpımını ve makam dağılımlarını da hesaplar -- hepsi
+        atılmak üzere. Tek sayı için bütün divan toplanıyordu.
+
+        Profil (tek kayıp çağrısı): ``_entropi`` 90 çağrıda 2,56 sn;
+        bunun içinde ``norm_hatasi`` tek başına 1,07 sn.
+
+        ``dolasiklik_entropisi`` doğrudan çağrılır. Dönen sayı
+        birebir aynıdır: ``olcumler_yigin`` da onu okuyordu.
+        """
         try:
-            return float(np.mean(np.asarray(q.olcumler()["entropi"], float)))
+            # ``olcumler()`` yığının **ilk üyesini** verir (``float(v[0])``);
+            # bütün yığının ortalamasını DEĞİL. Burada da öyle okunur --
+            # yoksa B>1'de sayı kayar. (Ölçüldü: ortalama alınca kayıp
+            # 0,414573544417 → 0,414415282390 oynuyordu. Hızlanma
+            # uğruna kaymış bir sayı, hızlanma değil hiledir.)
+            e = q.y.dolasiklik_entropisi()
+            v = e.get("entropi_yigin", None)
+            if v is None:
+                return float(e["entropi"])
+            return float(np.asarray(v, float).reshape(-1)[0])
         except Exception:                                # noqa: BLE001
             return float("nan")
 
     okumalar: Dict[int, Dict[str, float]] = {}
     #: ``ΔS`` -- melekenin dolaşıklığa tesiri (`nefs/nizam.py`).
     dS: Dict[int, float] = {}
+    # **DENENDİ VE REDDEDİLDİ -- entropiyi taşımak.** "Bir melekenin
+    # sonrası, bir sonrakinin öncesidir" diye ölçümü yarıya indirmeyi
+    # denedim (90 → 46). ÖLÇTÜM: kayıp 0,414573544417'den
+    # 0,414415282390'a KAYDI. Sebebi şudur -- aradaki ``meleke_olcumu``
+    # bloğu POVM okumaları yapar ve durumu **değiştirir**; yâni iki
+    # nokta aynı durum değildir. Hızlanma hakikî fakat mana bozuluyordu;
+    # mana bozan hızlanma hile olur. Geri alındı.
     for no in nefs.sira:
         onceki_sadakat = (float(q.y.sadakat_log())
                           if meleke_olcumu else 0.0)

@@ -1021,11 +1021,44 @@ class QYazmac:
                 for k, v in y.items()}
 
     def olcumler_yigin(self) -> Dict[str, np.ndarray]:
-        """Bütün küllî hükümler, **yığın üyesi başına** ``(B,)``."""
+        """Bütün küllî hükümler, **yığın üyesi başına** ``(B,)``.
+
+        ================================================================
+        ÖLÇÜLEN VE DÜZELTİLEN KUSUR -- ZİNCİR ON BİR KERE SÜPÜRÜLÜYORDU
+        ================================================================
+
+        Evvelce burada her alan için ayrı ayrı ``alan_degeri(ad)``
+        çağrılıyordu. ``alan_degeri`` ise ``tekil_yogunluklar``a gider
+        ve **o, çevreleri zincirin iki ucundan baştan sona süpürür**
+        (``O(N χ³)``). Yâni on bir alan için zincir **on bir kere**
+        süpürülüyordu -- halbuki ``tekil_yogunluklar`` tam da bunun
+        için yuva **listesi** alır ve kendi şerhinde şöyle der:
+        *"çevreler bir kere süpürülüp saklanır, sonra istenen bütün
+        yuvalar onlardan okunur."* Çağıran, çağırdığı şeyin
+        eniyilemesini kendi eliyle bozuyordu.
+
+        Profil (tek kayıp çağrısı, 833966f4): ``tekil_yogunluklar``
+        **1042 kere** çağrılıyor ve 2,90 sn yiyordu; ``olcumler``in
+        kendisi 91 çağrıda 4,66 sn -- toplam 7,66 sn'nin %61'i.
+
+        Şimdi bütün alanların yuvaları **tek listede** toplanıp zincir
+        **bir kere** süpürülüyor, sonra her alan kendi diliminden
+        okunuyor. Mana birebir aynıdır: aynı ``ρ₁₁`` ortalamaları,
+        aynı sayılar.
+        """
         Bn = self.y.B
         d: Dict[str, np.ndarray] = {}
+        # --- bütün alanların yuvaları TEK listede: zincir bir kere süpürülür
+        yuvalar: List[int] = []
+        dilim: Dict[str, Tuple[int, int]] = {}
         for ad, _ in self.ayar.kulli_alanlar:
-            v = self.alan_degeri(ad)
+            bas, kac = self._alan[ad]
+            dilim[ad] = (len(yuvalar), int(kac))
+            yuvalar.extend(range(bas, bas + kac))
+        R = self.y.tekil_yogunluklar(yuvalar)            # (B, Σkac, 2, 2)
+        for ad, _ in self.ayar.kulli_alanlar:
+            i0, kac = dilim[ad]
+            v = np.mean(R[:, i0:i0 + kac, 1, 1], axis=1)  # (B,)
             d[ad] = np.atleast_1d(np.asarray(v, float))
         e = self.y.dolasiklik_entropisi()
         d["entropi"] = np.asarray(e.get("entropi_yigin",
