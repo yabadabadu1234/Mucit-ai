@@ -419,6 +419,10 @@ def gorev_coz(gorev: arc.Gorev) -> Dict[str, object]:
         return {"görev": gorev.ad, "cevap_verildi": False,
                 "kural": None, "aday_sayısı": len(ad_listesi),
                 "tam_mı": False}
+    # ``tutan[0]`` KEYFÎDİR ve öyle kalır: bu dosya alt kattır, seçme
+    # hükmünü veremez. Tutan adayların **kendileri** yukarı verilir ki
+    # nazırlık katı (``nefs/soyle.py``) ``ara`` ile aralarından seçsin.
+    # Alt kat üst katı çağırmaz; üst kata malzeme verir.
     kural = tutan[0]
     tahminler, dogru = [], True
     for a, b in gorev.sinama:
@@ -430,6 +434,7 @@ def gorev_coz(gorev: arc.Gorev) -> Dict[str, object]:
         if c is None or c.shape != b.shape or not np.array_equal(c, b):
             dogru = False
     return {"görev": gorev.ad, "cevap_verildi": True, "kural": kural.ad,
+            "tutan": tutan,
             "tutan_aday": [a.ad for a in tutan],
             "aday_sayısı": len(ad_listesi),
             "tahmin": tahminler, "tam_mı": dogru}

@@ -40,13 +40,16 @@ KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #: oturumda ``ogrenme.kaggle_donanim``a taşındı ve ``nefs.kulli_egitim``
 #: silindi; varsayılan hâlâ eskiyi gösteriyordu. Bayat bir giriş
 #: noktası, o noktadan erişilen her şeyi sessizce beylik sayardı.
+#: **KÜME 9 -- ALTI TAHT BİRE İNDİ.** Buraya kadar liste altı girişliydi
+#: ve bu, ölçüyü **kendi lehine** bozuyordu: ``main.kaggle_*``,
+#: ``nefs.melekeler`` ve ``nefs.hukum_denetimi`` ayrı birer giriş
+#: sayıldığı için, yalnız o ağaçlardan erişilen modüller de "tebaa"
+#: görünüyordu. Padişahın hükmü sarihtir: **main tek hâkim.** O hâlde
+#: giriş de ``main/`` olmalıdır; kaggle koşumu ve hüküm denetimi artık
+#: ``main/egitim.py:taht`` kipleridir, ayrı taht değil.
 GIRISLER: Tuple[str, ...] = (
-    "main.egitim",           # yerel/genel tâlim motoru
-    "main.cikarim",          # yerel/genel çıkarım ve hüküm motoru
-    "main.kaggle_egitim",    # Kaggle tâlim nazırı
-    "main.kaggle_cikarim",   # Kaggle teslimat nazırı
-    "nefs.melekeler",        # 44 üniter meleke + klasik hat (KÜME 2 çipi)
-    "nefs.hukum_denetimi",   # hükümlerin makine şahitleri
+    "main.egitim",           # taht: tâlim / kaggle / teftiş kipleri
+    "main.cikarim",          # taht: çıkarım ve hüküm motoru
 )
 
 
@@ -159,9 +162,24 @@ def tabiiyet(moduller: Optional[Dict[str, str]] = None
 
 
 def padisahin_eli(girisler: Sequence[str] = GIRISLER,
-                  tab: Optional[Dict[str, Set[str]]] = None) -> Set[str]:
-    """Giriş noktalarından **fiilen erişilen** modüller (geçişli kapanış)."""
+                  tab: Optional[Dict[str, Set[str]]] = None,
+                  gecilmez: Sequence[str] = ()) -> Set[str]:
+    """Giriş noktalarından **fiilen erişilen** modüller (geçişli kapanış).
+
+    ``gecilmez``: bu önekteki modüller kapanışa **girer ama üzerinden
+    geçilmez**. Niçin lâzım (KÜME 9'da ölçülen tuzak): ``tanilama/``
+    hekimdir ve ``divan.py`` bütün tebaayı içe aktarır. Taht hekimi
+    çağırır çağırmaz, hekimin ithal ettiği HER modül "tahttan erişilir"
+    görünür ve ölçü 94'te 91 der -- yani hiçbir şey demez. Muayene
+    edilmek, ana akışta iş görmek değildir. O hâlde hekim bir **yaprak**
+    sayılır: kendisi tebaadır, tanıdıkları değil.
+    """
     tab = tab or tabiiyet()
+    gecilmez = tuple(gecilmez)
+
+    def durak(x: str) -> bool:
+        return any(x == g or x.startswith(g + ".") for g in gecilmez)
+
     goruldu: Set[str] = set()
     yigin = [g for g in girisler if g in tab]
     while yigin:
@@ -169,6 +187,8 @@ def padisahin_eli(girisler: Sequence[str] = GIRISLER,
         if x in goruldu:
             continue
         goruldu.add(x)
+        if durak(x):
+            continue
         yigin.extend(tab.get(x, set()) - goruldu)
     return goruldu
 

@@ -871,7 +871,57 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
     return "\n".join(s)
 
 
+#: ``taht`` kipleri. Padişahın **tek** girişi budur; yanında ikinci bir
+#: ``__main__`` bırakmak paralel devlettir. KÜME 9'a kadar dört ayrı taht
+#: vardı (``main.egitim``, ``main.cikarim``, ``main.kaggle_egitim``,
+#: ``main.kaggle_cikarim``) ve ``tanilama/nizam.py:GIRISLER`` dördünü de
+#: "giriş" sayıyordu; bu, o dört ağaçtan erişilen her şeyi **sessizce**
+#: tebaa gösteriyor, yetimliği ölçüden gizliyordu.
+KIPLER: Tuple[str, ...] = ("tâlim", "kaggle", "teftiş")
+
+
+def taht(ne: str = "tâlim", *arg: str) -> str:
+    """Tek hâkimin tek kapısı: bütün icra buradan dağıtılır.
+
+    ``ne`` kipi:
+
+    * ``"tâlim"``  -- ``kos``: iki hattın tek hatta terkibi (H230).
+    * ``"kaggle"`` -- ``main/kaggle_egitim.py`` + ``main/kaggle_cikarim.py``.
+      Bunlar ayrı birer taht DEĞİL, tahtın koşum kipidir.
+    * ``"teftiş"`` -- ``tanilama/divan.py``: dimağı **muayene eden**
+      hekim. Hekim uzuv değildir; ama yetim de değildir -- padişah onu
+      çağırır, o padişahı değil.
+
+    Buradaki hiçbir dal yeni matematik yazmaz; hepsi mevcut uzuvların
+    çağrısıdır. Yeni bir formül yazarsa bu kapı nazırlık olmaktan çıkar,
+    çip olur.
+    """
+    ne = str(ne)
+    if ne == "kaggle":
+        from main.kaggle_egitim import kaggle_talimini_baslat
+        from main.kaggle_cikarim import kaggle_teslimat_dosyasi_uret
+        from ogrenme.kaggle_donanim import ayar_sec
+        veri = arg[0] if arg else "/kaggle/input"
+        # Profil elle yazılmaz: **donanımdan okunur.** ``ayar_sec``
+        # bu oturuma kadar hiçbir yerden çağrılmıyordu (yetim ölçüldü),
+        # dolayısıyla 84 GB'lık makinede de "kısa" profil koşuyordu.
+        prof = ayar_sec()
+        t = kaggle_talimini_baslat(veri)
+        return ("=== KAGGLE KİPİ ===\n  donanım profili: %r\n"
+                "  tâlim: %r\n  teslimat: %s"
+                % (prof, t, kaggle_teslimat_dosyasi_uret.__name__))
+    if ne == "teftiş":
+        from tanilama.divan import rapor as divan_raporu
+        return divan_raporu(kos=bool(arg and arg[0] == "koş"))
+    if ne == "tâlim":
+        ad = arg[0] if arg else "kısa"
+        yol = arg[1] if len(arg) > 1 else "depo/kulli_dimag_talim"
+        return kos(ad, yol)
+    raise ValueError("bilinmeyen kip %r; kipler: %s" % (ne, ", ".join(KIPLER)))
+
+
 if __name__ == "__main__":                               # pragma: no cover
-    ad = sys.argv[1] if len(sys.argv) > 1 else "kısa"
-    yol = sys.argv[2] if len(sys.argv) > 2 else "depo/kulli_dimag_talim"
-    print(kos(ad, yol))
+    if len(sys.argv) > 1 and sys.argv[1] in KIPLER:
+        print(taht(sys.argv[1], *sys.argv[2:]))
+    else:
+        print(taht("tâlim", *sys.argv[1:]))
