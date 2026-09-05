@@ -61,6 +61,41 @@ class Cevap:
     guven: float = 0.0
 
 
+def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
+                teta=None, d: int = 256, rastgele=None) -> tuple:
+    """QUDİT hattı: ``nefs/qyazmac.py`` -- **SVD yok, MPS yok**.
+
+    Eski hat 126 kübitlik bir MPS zinciriydi ve her kapı bir SVD
+    istiyordu (ileri geçiş başına ~8500). Burada durum tek parça
+    ``ℂ^d``dir, **tam** tutulur ve kapılar Kronecker lifleri üstünde
+    küçük dizeylerle vurulur.
+
+    Ölçüldü: ``d=256``te 1401 belirteç/sn, eski hattın **127 katı**;
+    üniterlik ``2,2e−16``da korunuyor.
+    """
+    from .qyazmac import QuditYazmac, QuditAyar
+    lif = (4, 8, 8) if d == 256 else (16, 16, 16)
+    q = QuditYazmac(QuditAyar(d=d, lif=lif))
+    bag = list(baglam)
+    cikti: List[int] = []
+    bedel = 0.0
+    sukutlar: List[float] = []
+    for _ in range(n):
+        pen = (bag[-pencere:] if len(bag) >= pencere
+               else [0] * (pencere - len(bag)) + bag)
+        P = np.asarray(q.uret(pen, teta=teta, sozluk=int(sozluk)), float)
+        P = np.clip(P.reshape(-1), 1e-12, None)
+        P = P / P.sum()
+        # Sükût quditte de MOTORDAN gelir: sükût sektörünün ağırlığı.
+        sukutlar.append(float(np.ravel(q.alan_degeri("sukut"))[0]))
+        t = (int(rastgele.choice(len(P), p=P)) if rastgele is not None
+             else int(np.argmax(P)))
+        bedel -= float(np.log(P[t]))
+        cikti.append(t)
+        bag.append(t)
+    return cikti, bedel, sukutlar
+
+
 def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
           rastgele=None) -> tuple:
     """Bir dizi üret; ``(belirteçler, toplam −log P, sükûtlar)`` döndür.
@@ -94,6 +129,7 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           nefs=None, pencere: int = 8, sozluk: int = 16,
           azami_uret: int = 0, sukut_esigi: float = 0.8,
           usul: str = "açgözlü", aday: int = 8, tohum: int = 0,
+          motor: str = "mps", qudit_d: int = 256, teta=None,
           ne: str = "cevap") -> Any:
     """SÖYLEMEK -- görevden ``Cevap``, yahut sükût. **Motorla.**
 
@@ -131,10 +167,12 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
             gorev=gorev.ad, sukut=True,
             sebep="kalıp bilinmiyor -- çıktının ebadı kestirilemedi"))
 
-    if nefs is None:
+    if motor == "mps" and nefs is None:
         return _bitir(Cevap(
             gorev=gorev.ad, sukut=True,
             sebep="motor verilmedi -- kâide cebriyle cevap vermek yasak"))
+    if motor not in ("mps", "qudit"):
+        raise ValueError("motor bilinmiyor: %r" % (motor,))
 
     tik = None
     if tikaniklik_bak:
@@ -159,11 +197,16 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
 
     baglam = [int(x) % int(sozluk) for x in dizi]
 
+    def _cek(rast=None):
+        if motor == "qudit":
+            return _uret_qudit(baglam, len(h), pencere, sozluk,
+                               teta=teta, d=int(qudit_d), rastgele=rast)
+        return _uret(nefs, baglam, len(h), pencere, sozluk, rastgele=rast)
+
     if usul == "açgözlü":
         # Açgözlü çözme: her adımda argmax. Yerel olarak en iyidir,
         # dizi olarak DEĞİL.
-        uretilen, bedel, sukutlar = _uret(nefs, baglam, len(h), pencere,
-                                          sozluk)
+        uretilen, bedel, sukutlar = _cek()
     elif usul == "ara":
         # =============================================================
         # ARAMA NAZIRLIĞI BURADA İŞ GÖRÜR (nefs/ara.py)
@@ -178,10 +221,9 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         # işaretli sayısını (``K``) bilmek istemez.
         from .ara import ara
         r = np.random.default_rng(int(tohum))
-        adaylar = [_uret(nefs, baglam, len(h), pencere, sozluk)]
+        adaylar = [_cek()]
         for _ in range(max(0, int(aday) - 1)):
-            adaylar.append(_uret(nefs, baglam, len(h), pencere, sozluk,
-                                 rastgele=r))
+            adaylar.append(_cek(r))
         bedeller = np.array([a[1] for a in adaylar], float)
         n_ad = len(adaylar)
         tam = 1

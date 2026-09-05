@@ -8824,3 +8824,83 @@ yâni yasak sessizce kalkarsa yakalanır.
 `lif.py`de `KIP_MPS`ten `raise`e kadar sildim; o aralıkta **`KIP_LIE`
 dalı da vardı** ve onunla beraber gitti. `nefs.qudit` bir anda yetim
 düştü, yetim mandalı yakaladı. Geri kondu.
+
+---
+
+## H241 — DEVİR: MPS ZİNCİRİNDEN QUDİT YAZMACINA
+
+**Ferman.** *"O devri yap."*
+
+### Devrin hakikî meselesi — ölçüldü, saklanmıyor
+
+Eski yazmaç **126 kübitlik bir zincirdi** ve durumu MPS ile `χ = 8`e
+sıkıştırarak taşıyordu:
+
+```
+yuva (n)              : 126
+bağ (χ)               : 8
+küllî hüküm kübiti    : 37   (11 alan)
+ileri geçiş başına SVD: ~8 500
+```
+
+**MPS'i kaldırıp `n`i 126'da bırakmak riyazî olarak imkânsızdır.**
+`2¹²⁶` genlik hiçbir bellekte durmaz; MPS orada bir süs değil, o uzayı
+sonlu bellekte taşıyan şeydi. Yâni *"SVD'yi çıkar, gerisi aynı kalsın"*
+diye bir devir **yoktur** — olsaydı MPS zaten gereksiz olurdu.
+
+O hâlde devir bir yer değiştirme değil, **kapasite yeniden
+tasarımıdır** — ve zabıtın kendi cevabı tam da budur:
+
+> 126 dolanık kübit → belirteç başına **tek d-seviyeli qudit**
+
+### `nefs/qyazmac.py` — kurulan ve ölçülen
+
+Durum `ℂ^d`de **tam** tutulur (d=4096 → 64 KB). Kesme yok, bağ yok,
+**SVD yok**. Hüküm alanları qubit yuvası değil **süperseçim
+sektörüdür**.
+
+```
+kodla → beyan turu        : 16/16 TAM
+belirteç mesafeleri       : hepsi 690,776 (tam eşit, çarpışma YOK)
+3 lif kapısı + faz sonrası: norm hatası 2,220e−16
+üretim, d=256             : 1401 belirteç/sn   ← eski hattın 127 katı
+üretim, d=4096            :  589 belirteç/sn
+```
+
+Mesafe **Hilbert iç çarpımıdır**, Hamming değil — Tuzak A'nın tam
+karşıtı.
+
+### Ne devredildi, ne devredilemedi
+
+| eski (MPS) | yeni (qudit) |
+| :--- | :--- |
+| `alan_degeri(ad)` | sektör ağırlığı `‖Π_C ψ‖²` |
+| `kulli(ad, j)` | sektör dilimi |
+| `tek(i, G)` | lif operatörü (Kronecker) |
+| `dolasiklik_entropisi` | lif kesitinde von Neumann (`eigvalsh`, SVD değil) |
+| `beyan` | kelâm sektöründen okuma |
+| `sadakat_log` | **daima 0** — kesme olmadığı için |
+
+**Devredilemeyen:** `uzak_cift(i, j, G)` — *"3. ile 97. kübit"* diye
+bir adres qudite çevrilemez, çünkü o adres **eski kapasitenin**
+adresidir. Quditte 126 yuva yok, 3 lif var. Bunu "çevirdim" demek
+yalan olurdu.
+
+### Devrin fiilen tamamlanan kısmı
+
+**Çıkarım hattı devredildi.** `nefs/soyle.py` artık `motor="qudit"`
+kabul ediyor ve o kipte hiçbir SVD çağrılmıyor; sükût da quditten
+gelir (sükût sektörünün ağırlığı), elle yazılmış bir şart değil.
+
+### Devrin KALAN kısmı — açık borç
+
+**45 melekenin qudit sektörlerine yeniden ifadesi.** `nefs/melekeler.py`
+(5 800+ satır) hâlâ 126 yuvalık kübit adresine göre yazılıdır: `tek`,
+`cift`, `uzak_cift`, `kulli` (84 çağrı), `mpo_topla`/`mpo_dagit`.
+Kayıp hattı (`kulli_kayip`) bu melekelere bağlı olduğu için hâlâ eski
+motoru kullanıyor.
+
+Bu, "yapılacaklar" listesine yazılmış bir niyet değil, **ölçülmüş bir
+kapasite meselesidir**: melekeler yuva adresiyle değil sektör
+adresiyle konuşmaya başlayana kadar eski motor kalkamaz. Kalktığını
+söylemek yalan olurdu.
