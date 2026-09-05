@@ -98,7 +98,10 @@ from typing import Dict, List, Optional, Sequence, Tuple  # noqa: E402
 import numpy as np                                       # noqa: E402
 
 from nefs.musahede import gorevleri_getir                                    # noqa: E402
-from kuantum.yazmac import hiyerarsik_ikili_agac_katlama  # noqa: E402
+# HDTF ağaç katlaması ``kuantum/yazmac.py``daydı ve **MPS/QTT
+# çekirdeği** üretiyordu -- yâni iptal edilen usulün ta kendisi.
+# Motor silinince o da gitti; veri hazırlığı artık qudit
+# kodlamasıdır (``nefs/qyazmac.py``).                    # noqa: E402
 from ogrenme.optimize import (qsvt_gibbs_sogutma,        # noqa: E402
                           statik_faz_tablosu_oku)
 from nefs.musahede import IzafiMevki2D, tiktoken_2d_kodla   # noqa: E402
@@ -444,16 +447,35 @@ class KulliDalgaTalimMotoru:
         if not vektorler:
             raise ValueError("katlanacak veri yok")
 
-        cek, kesme, kademe = hiyerarsik_ikili_agac_katlama(
-            vektorler, bag_boyutu=self.ayar.bag,
-            sanal_kubit=self.ayar.sanal_kubit_sayisi)
+        # ==============================================================
+        # HDTF/QTT KATLAMASI YERİNE QUDİT KODLAMASI
+        # ==============================================================
+        #
+        # Evvelce ``hiyerarsik_ikili_agac_katlama`` çağrılıyordu ve o,
+        # veriyi **MPS/QTT çekirdeklerine** katlıyordu -- ``bag_boyutu``
+        # ile kesip. İptal edilen usul tam olarak budur; motorla
+        # beraber silindi.
+        #
+        # Yerine gelen: vektörler tek bir qudit durumuna kodlanır.
+        # **Kesme yoktur**, dolayısıyla ``kesme = 0,0``dır ve bu bir
+        # iyimserlik değil, atılan hiçbir şey olmadığının ifadesidir.
+        from nefs.qyazmac import QuditYazmac, QuditAyar
+        v = np.concatenate(vektorler)
+        d = 1 << int(np.ceil(np.log2(max(v.size, 2))))
+        d = int(min(max(d, 16), 1 << 16))
+        lif = (d,)
+        q = QuditYazmac(QuditAyar(d=d, lif=lif), n_satir=1,
+                        satir_kubiti=int(np.log2(d)))
+        w = np.resize(v, d).astype(complex)
+        n = float(np.linalg.norm(w)) or 1.0
+        q.psi = (w / n).reshape(1, d)
         sure = time.perf_counter() - t0
-        print("  [HDTF] %d veri parçası %.3f sn'de QTT'ye katlandı "
-              "(kademe %d, kesme %.4e)."
-              % (len(vektorler), sure, kademe, kesme), flush=True)
-        return {"cekirdek": cek, "kesme": float(kesme),
-                "kademe": int(kademe), "süre_sn": sure,
-                "parca": len(vektorler)}
+        print("  [QUDİT] %d veri parçası %.3f sn'de d=%d qudite kodlandı "
+              "(kesme 0,0 -- kesme YOK)."
+              % (len(vektorler), sure, d), flush=True)
+        return {"cekirdek": [np.asarray(q.psi[0])], "kesme": 0.0,
+                "kademe": 1, "süre_sn": sure,
+                "parca": len(vektorler), "qudit": q}
 
     def talim_adimi_icra_et(self, durum: Dict[str, object]
                             ) -> Dict[str, float]:

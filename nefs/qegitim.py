@@ -110,52 +110,24 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
     if usul != "kategorik":
         raise ValueError("kodlama usulü bilinmiyor: %r" % (usul,))
 
-    t = np.asarray(belirtecler, int) % int(sozluk)
-    # --- HADAMARD/QUDIT TABANI (kütük H116). ``kubit ≥ sozluk`` ise
-    # belirteçler **tam eşit uzaklıkta** kodlanır: Hadamard satırları
-    # birbirine dik olduğu için bütün ikili mesafeler eşittir. ARC
-    # belirteçleri RENKTİR, yâni kategoriktir; 7 ile 8 arasında
-    # "yakınlık" manasızdır ve eşit uzaklık tam da doğru olandır.
-    #
-    # ÖLÇÜLDÜ (16 belirteç, mesafe değişkesi = std/ort):
-    #     Hadamard  4 boyut : 0,5000   (ÇARPIŞMA: en az mesafe 0)
-    #     Hadamard  8 boyut : 0,2673   (yine çarpışma)
-    #     Hadamard 16 boyut: **0,0000**  (bütün mesafeler 5,657)
-    #
-    # Yâni tam kategorik kodlama ``kubit ≥ sozluk`` ister ve bu bir
-    # tercih değil **şarttır**.
     # ==============================================================
-    # İKİLİ DAL **İMHA EDİLDİ** (padişahın fermanı)
+    # QUDİT TABANI -- bit yok, seviye var
     # ==============================================================
     #
-    # Evvelce ``kubit < sozluk`` hâlinde ``2·bit − 1`` düz ikili
-    # kodlaması koşuyordu ve şerhi "4 boyutta elde edilebilecek EN İYİ
-    # hâl" diye onu savunuyordu. Ferman sarihtir: *"ikili kübit kodlama
-    # iptal olup qudit gelecek"*, ve *"yasaklanan ne kadar usul varsa
-    # hepsini imha edeceksin."* O hâlde dal kaldırıldı; "bütçe kipi"
-    # diye tutulmuyor.
+    # MPS yazmacı silindiği için "belirteci ``kubit`` bite aç" diye bir
+    # iş kalmadı: yeni yazmaçta satır bir ``ℂ^sozluk`` lifidir ve
+    # belirteç onun bir **taban durumudur**. Taban durumları dik olduğu
+    # için bütün ikili mesafeler kendiliğinden eşittir -- ne Hadamard
+    # kurmak gerekir, ne ``2·bit − 1``.
     #
-    # Geriye kalan Hadamard dalı fiilen bir **qudit tabanıdır**:
-    # bütün ikili mesafeler eşittir (ölçüldü: 5,657; değişke 0,0000).
-    # Zabıt bunu yasaklamaz, ister.
+    # ``kubit`` artık kodlamayı DEĞİL, yalnız çıktının genişliğini
+    # ilgilendirir ve o da ``sozluk``tur. İmza uyum için duruyor.
     #
-    # ``kubit < sozluk`` artık bir HATADIR, sessiz bir kırpma değil:
-    # 16 belirteci 4 boyutta eşit uzaklıkta dizmek imkânsızdır ve o
-    # imkânsızlığı ikili kodlamayla örtmek tam da yasaklanan şeydi.
-    if int(kubit) < int(sozluk):
-        raise ValueError(
-            "kubit=%d < sozluk=%d: düz ikili kodlama İMHA EDİLDİ "
-            "(ferman). Kategorik kodlama kubit ≥ sozluk ister; "
-            "sürekli girdi için usul='sürekli' yahut 'lie' kullanın."
-            % (int(kubit), int(sozluk)))
-    H = np.array([[1.0]])
-    while H.shape[0] < int(sozluk):
-        H = np.block([[H, H], [H, -H]])
-    satir = H[t % H.shape[0]]
-    out = np.zeros((len(t), int(kubit)))
-    out[:, :H.shape[1]] = satir[:, :int(kubit)]
-    if int(kubit) > H.shape[1]:
-        out[:, H.shape[1]:] = 1.0
+    # ÖLÇÜLDÜ: 16 belirteç, bütün ikili mesafeler ``√2`` (tam eşit),
+    # çarpışma sıfır, değişke 0,0000.
+    t = np.asarray(belirtecler, int).reshape(-1) % int(sozluk)
+    out = np.zeros((t.size, int(sozluk)))
+    out[np.arange(t.size), t] = 1.0
     return out
 
 

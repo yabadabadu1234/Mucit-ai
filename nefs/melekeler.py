@@ -66,7 +66,7 @@ from typing import (TYPE_CHECKING, Any, Callable, Dict, List, Optional,
 import numpy as np
 
 from matematik.fitrat import fazla_sayma, tevafuk_olcusu
-from kuantum.yazmac import dik_iki_kubit
+from kuantum.kapilar import dik_iki_kubit
 from matematik.mizan import ardisiklik_kaidesi, tam_istikra_mi
 from matematik.mizan import (MERTEBELER, ZANN_I_GALIB_ESIGI, hukum_agirligi,
                             ikili_entropi, makam_tayin, mertebe_adi,

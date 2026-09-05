@@ -66,7 +66,9 @@ import numpy as np
 
 from idrak.kategori import Uzay
 from kuantum.stabilizer import StabilizerDurum
-from kuantum.yazmac import Yazmac
+# MPS ``Yazmac`` fermanla imha edildi; zırh artık qudit
+# yazmacını kullanır (aynı ölçüler, SVD yok).
+from nefs.qyazmac import QuditYazmac as Yazmac
 from matematik.mizan import Onerme, Tablo, deg, degil, ise, ve
 from nefs.zihin_durumu import QYazmac, degil_x, donme
 

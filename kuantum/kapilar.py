@@ -425,3 +425,96 @@ def rapor() -> str:
 
 if __name__ == "__main__":
     print(rapor())
+
+
+# ══════════════════════════════════════════════════════════════════
+#  SİLİNEN MPS MOTORUNDAN KURTARILAN KAPI ÜRETEÇLERİ
+# ══════════════════════════════════════════════════════════════════
+#
+#  ``kuantum/yazmac.py`` fermanla imha edildi (MPS). Fakat bu iki
+#  üreteç MPS'e ait DEĞİLDİR: biri iki kübitlik dik kapı kuruyor,
+#  öteki ``so(4)`` üretecini veriyor. Yasaklı usul olmadıkları için
+#  imha edilmediler, kapıların kendi dosyasına alındılar.
+
+KAPI_USULU: str = "us"
+
+def _so4_ureteci(teta: np.ndarray) -> np.ndarray:
+    """``(..., 6)`` açı → ``(..., 4, 4)`` ters simetrik ``so(4)`` üreteci."""
+    t = np.asarray(teta, float)
+    A = np.zeros(t.shape[:-1] + (4, 4))
+    iu = np.triu_indices(4, 1)
+    A[..., iu[0], iu[1]] = t[..., :6]
+    return A - np.swapaxes(A, -1, -2)
+
+def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
+    """6 açıdan ``SO(4)`` kapısı -- usule göre Cayley yahut üstel.
+
+    ``so(4)`` altı boyutludur (``4·3/2``); ters simetrik bir üreteçten
+    Cayley dönüşümü ``Q = (I−A)(I+A)⁻¹`` tam dik bir dizey verir.
+    Dolaşıklığı üreten budur: çarpım durumundaki iki kübit bu kapıdan
+    geçince Schmidt rütbesi 1'den 2'ye çıkar.
+
+    **Cayley'in erişemediği yer vardır ve ölçüldü (H120):** ``det(I+Q)
+    = 0`` olan her dönme, yani bütün **π dönmeleri**. Reel yazmaçta
+    yegâne faz π olduğu için (H98) bu, melekelerin işaret çevirmeyi
+    hiç öğrenememesi demektir. ``KAPI_USULU = "us"`` o boşluğu kapatır.
+    """
+    if KAPI_USULU == "us":
+        return dik_iki_kubit_us(teta)
+    A = np.zeros((4, 4), dtype=np.float64)
+    iu = np.triu_indices(4, 1)
+    A[iu] = np.asarray(teta, float).reshape(-1)[:6]
+    A = A - A.T
+    I = np.eye(4)
+    Q = np.linalg.solve((I + A).T, (I - A).T).T
+    return Q.astype(np.float32)
+
+KAPI_USULU: str = "us"
+
+def dik_iki_kubit_us_yigin(teta: np.ndarray) -> np.ndarray:
+    """``(..., 6)`` açı → ``(..., 4, 4)`` dik kapı yığını -- ``exp(−2A)``.
+
+    ``A`` ters simetrik ⟹ ``iA`` Hermiteseldir; ``eigh`` tam üsteli
+    verir (seri kesmesi yok). Netice cebren ``SO(4)``tedir.
+    """
+    A = -2.0 * _so4_ureteci(teta)
+    oz, V = np.linalg.eigh(1j * A)
+    E = np.matmul(V * np.exp(-1j * oz)[..., None, :],
+                  np.conjugate(np.swapaxes(V, -1, -2)))
+    return np.real(E).astype(np.float32)
+
+def dik_iki_kubit_us(teta: np.ndarray) -> np.ndarray:
+    """6 açıdan ``SO(4)`` kapısı -- **üstel harita** ile, ``exp(A)``.
+
+    ``dik_iki_kubit`` (Cayley) ile aynı işi görür ve aynı gruba düşer;
+    farkı **erişebildiği kümededir** ve bu fark ölçüldü.
+
+    **Cayley'in eksiği (kütük H120).** ``Q = (I−A)(I+A)⁻¹`` yalnız
+    ``det(I+Q) ≠ 0`` olan ``Q``lara ulaşır. Yani ``−1`` özdeğerli her
+    dönme -- bütün **π dönmeleri** -- Cayley'in erişemediği yerdedir.
+    Ölçüldü::
+
+        hedef  diag(1, 1, −1, −1)  ∈ SO(4),  det(I+Q) = 0
+        exp    ile hata            2,22e-16   (tam)
+        Cayley ile en iyi          0,3563     (300 000 rastgele deneme)
+
+    Ve bu, bu mimaride **tam da ihtiyaç duyulan** kapıdır: reel
+    yazmaçta ``e^{iθ}`` yoktur, yalnız ``π`` fazı vardır (kütük H98).
+    Yani melekelerin öğrenilen kapıları, reel yazmacın sahip olduğu
+    **yegâne fazı** kuramıyordu. İşaret çeviren her şey (``faz_z``,
+    ``CZ``, ``sadakat`` kapıları) o yüzden elle konmak zorunda kaldı;
+    hiçbir meleke onu öğrenemezdi.
+
+    ``exp``, tıkız ve bağlantılı bir grupta **örtendir**: ``SO(4)``ün
+    tamamına ulaşır. Maliyet bir ``4×4`` özayrışımdır ve yığın hâlinde
+    ``numpy`` tarafından taşınır.
+
+    **Ölçek Cayley'e uydurulmuştur.** Cayley açılınca
+    ``(I−A)(I+A)⁻¹ = I − 2A + O(A²)``, ``exp`` ise ``I + A + O(A²)``
+    verir; yani aynı açı ikisinde **farklı** kapı demektir. Ölçüldü:
+    ``θ ~ 1e-3``te ``exp(−2A)`` ile Cayley arasındaki fark 3,5e-10.
+    Bu yüzden burada ``exp(−2A)`` kullanılır ve usul değiştiğinde
+    öğrenilmiş bütün açılar aynı manada kalır -- yalnız π dönmeleri
+    artık erişilebilirdir.
+    """
+    return dik_iki_kubit_us_yigin(np.asarray(teta, float).reshape(-1)[:6])
