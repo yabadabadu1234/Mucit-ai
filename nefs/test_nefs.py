@@ -831,25 +831,60 @@ def test_makam_kodlamasi_epistemik_komsulugu_koruyor():
                for i in range(len(m) - 1)), m
 
 
+#: **AÇIK BORÇ DEFTERİ.** Tahttan erişilemeyen uzuvlar. Liste
+#: yalnız KISALABİLİR: bir modül buradan çıkarsa sınama yeşil kalır,
+#: yeni bir modül düşerse KIRMIZI yanar. Yani sayı bir hedef değil,
+#: bir mandaldır (ratchet).
+#:
+#: NİÇİN VAR: bu sınama evvelce yeşildi, fakat sahte yeşildi.
+#: ``tanilama/nizam.py:GIRISLER`` ALTI giriş sayıyordu -- main.egitim,
+#: main.cikarim, main.kaggle_egitim, main.kaggle_cikarim,
+#: nefs.melekeler, nefs.hukum_denetimi. Dört sahte taht, yalnız o
+#: ağaçlardan erişilen modülleri de "tebaa" gösteriyordu. KÜME 9'da
+#: giriş ikiye indi (main tek hâkim) ve gizlenen 15 yetim ortaya çıktı.
+#: Sınamayı yeşile boyamak için tahtları geri koymak, ölçüyü kendi
+#: lehine bozmak olurdu.
+YETIM_BORCU = frozenset({
+    "idrak.kubit", "idrak.model",
+    "kuantum.devre", "kuantum.eniyileme", "kuantum.topolojik",
+    "nefs.akit", "nefs.golge", "nefs.hamiltonyen", "nefs.hayal",
+    "nefs.hiz", "nefs.hukum_denetimi", "nefs.illet",
+    "nefs.uzaklik_olcumu", "ogrenme.izgara",
+})
+
+
 def test_padisahin_eli_HER_MODULE_uzaniyor():
-    """Beylik kalmadı mı? (kütük H123)
+    """Beylik kalmadı mı? (kütük H123, KÜME 9'da mandala çevrildi)
 
     Bu sınama divanın **çürümesini** engeller: yeni bir modül eklenip
-    divana yazılmazsa `tanilama/nizam.py` onu beylik sayar ve burası
-    kırmızı yanar. Yani divan bir kere doldurulup unutulacak bir liste
-    değil, **korunan** bir nizamdır.
+    ana akışa bağlanmazsa `tanilama/nizam.py` onu beylik sayar ve
+    burası kırmızı yanar.
 
     Ölçüt divanın kendi sayımı DEĞİLDİR -- o kendi kendini onaylardı.
     Ölçüt, divanı hiç tanımayan `tanilama/nizam.py`nin ``ast`` ile
-    yaptığı bağımsız erişilebilirlik hesabıdır.
+    yaptığı bağımsız erişilebilirlik hesabıdır. Hekimin (``tanilama``)
+    üzerinden GEÇİLMEZ: divan bütün tebaayı ithal ettiği için, taht
+    divanı çağırınca herkes "erişilir" görünürdü; muayene edilmek iş
+    görmek değildir.
     """
     from tanilama.nizam import (GIRISLER, modulleri_tara, padisahin_eli,
                                 tabiiyet)
 
     tab = tabiiyet(modulleri_tara())
-    tebaa = padisahin_eli(GIRISLER, tab)
-    beylik = sorted(set(tab) - set(tebaa))
-    assert not beylik, ("padişaha bağlanmamış modül var: %s" % beylik[:20])
+    tebaa = padisahin_eli(GIRISLER, tab, gecilmez=("tanilama",))
+    beylik = {m for m in set(tab) - set(tebaa)
+              if not m.startswith("tanilama")
+              and not m.startswith("local_run")
+              and not m.rsplit(".", 1)[-1].startswith("test_")}
+    yeni = sorted(beylik - YETIM_BORCU)
+    assert not yeni, ("YENİ beylik modül -- borç defterine yazılmadı: %s"
+                      % yeni[:20])
+    # Mandal: borç kapandıysa defterden de düşsün, yoksa defter yalan
+    # söylemeye başlar ("hâlâ yetim" der, halbuki bağlanmıştır).
+    kapanan = sorted(YETIM_BORCU - beylik)
+    assert not kapanan, (
+        "bu modüller artık ana akışta -- YETIM_BORCU'ndan silin: %s"
+        % kapanan)
 
 
 def test_gaye_alani_ARTIK_YASIYOR_ve_sukutu_bastiriyor():

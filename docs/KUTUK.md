@@ -8399,3 +8399,169 @@ Müşterek kaybın bedeli de ölçüldü ve gizlenmedi: tek çağrı **30,8 sn**
 bunun **25,8**'i kademe görevlerinden. Bütçe çağırana bırakıldı.
 
 Sınama: `ogrenme/` + `nefs/test_nefs.py` **237 geçti, 0 düştü**.
+
+---
+
+## H231 — PADİŞAHIN FERMANI: ARC'Yİ MOTOR ÇÖZER
+
+**Ferman.** *"Arc ile normal llm'i ayırt etmeyi kes artık... bu proje
+bir llm projesidir, çömezlerin projesi değildir! ... ARC yalnız llm
+motoruyla çözülecek, başka herhangi bir şeyle değil."*
+
+**H133 İPTAL EDİLDİ.** O hükümde dil modeli yolu **kasten** kapatılmış
+ve gerekçesi şöyle yazılmıştı: *"padişah tam da olmamaya yemin ettiği
+şeyi yapıyordu: bir dil modeli."* Cebri doğruydu (`0,95¹⁰⁰ ≈ 0,006`),
+neticesi yanlıştı: o hesap motoru **terk etmenin** değil **büyütmenin**
+gerekçesidir. Kusur dil modeli olmakta değil, 8 belirteçlik pencerede
+ve 16 sembollük sözlüktedir.
+
+**Tasfiye edilenler (978 satır):**
+
+| dosya | ne yapıyordu |
+| :--- | :--- |
+| `idrak/cozucu.py` (527) | elle yazılmış ARC tahminleri: `_yercekimi`, `_bakisim_onar`, `_delik_rengi`, `_dosemeyi_bul`, `_kirpma_bul`, `renk_eslemesi_bul` |
+| `nefs/qkaide.py` (451) | kâide orağı |
+
+Bunlar cevabı **motorun dışında** üretiyordu; netice ise "model ARC'yi
+çözdü" diye okunuyordu. `nefs/soyle.py` yeniden yazıldı: cevabı artık
+motor üretir, sükûtu da motor verir (`adayin_tuttugu`un `sukut` alanı),
+elle yazılmış bir şart değil. Motor verilmezse **susar**.
+
+**Ölçüldü (8 eğitim görevi, eğitilmemiş motor):** hattın tamamı uçtan
+uca koşuyor — 8 görevin 8'inde motor konuştu, güven 0,315–0,336.
+Belirteçler eğitilmemiş olduğu için manasızdır ve manalı olduğu
+söylenmiyor; ölçülen şey **yolun açık olduğudur**, isabet değil.
+
+**Cevher kurtarıldı.** `_bilesenler` (bağlı bileşenler + hafıza
+cevheri; ölçülmüştü: tek görevde 21.976 çağrı / 65,8 sn)
+`nefs/musahede.py`ye `bilesen_kutulari` adıyla taşındı. Ad çarpışması
+yakalandı: musahede'de `.renk` alanı olan nesneler döndüren bir
+`_bilesenler` zaten vardı ve demet dönen yenisi onu sessizce gölgeledi;
+`bak()` düştü.
+
+**Arama nazırlığının hakikî yeri bulundu.** `nefs/ara.py` evvelce hiçbir
+yerden çağrılmıyordu; bu oturumda önce tasfiye edilen çözücüye
+bağlanmış (yâni yanlış yere), sonra o gidince tekrar yetim kalmıştı.
+Hakikî yeri **çözmedir**: açgözlü `argmax` her adımda en iyisini seçer,
+**dizi** olarak en iyisini seçmez. Doğru ölçüt dizinin toplam `−log P`
+bedelidir ve onu asgarîye indirmek bir aramadır — kehanet modelin
+**kendi** dağılımıdır, elle yazılmış bir kâide değil.
+`soyle(usul="ara")` Dürr--Høyer ile `O(√N)`.
+
+**Açık borç (yapılmadı, gizlenmiyor):** `main/cikarim.py` (927 satır)
+görev başına elle kurulmuş öznitelikler üstünde dalga/ridge
+öğrenicisidir (`hendese_adaylari`, `sahit_cogalt`, `_d4`, `_tuval`,
+`nesne_ozellikleri`) ve o da fermana aykırıdır. Fakat
+`nefs/kulli_kayip.py`nin **kayıp fonksiyonuna** dokunmuştur (satır 908
+`dalga_kur`, 1432 `padisah`); aynı nefeste sökülürse kayıp bozulur.
+Ayrı ve dikkatli bir merhale olarak yapılacaktır.
+
+## H232 — KÜME 7'DEKİ İMHAMIN TASHİHİ (omega terkibi)
+
+KÜME 7'de şöyle yazmışım: *"Terkipte yalnız NbE sürümü alındı; eski
+sürüm tasfiye edildi."* **Bu imhaydı** ve "imha yok, cevher toplama
+var" kaidesinin ihlaliydi. İki sürüm ölçüldü (9 719 satır, 10 dosya):
+
+* 10 dosyanın **8'i birebir aynı**.
+* Eskide olup NbE'de olmayan **34 ad**. Çoğu terim seviyesi
+  normalleştirmedir (`whnf`, `_nf_hesapla`, `kanonik`, `_eta_esit`) ve
+  NbE onları **kasten** kaldırır — eta burada bedavaya gelir
+  (`_eta_pi`, `_eta_yol`). İki yönlü denetleyici de kayıp değil, ad
+  değiştirmiş: `sentez`/`tipini_ver` → `sentezle`/`denetle`;
+  `buzukten_tamamla` → `denklikle_tamamla`.
+* **Geriye iki hakikî cevher kaldı** ve ancak ölçtükten sonra görüldü:
+  * `serbest` — terimdeki serbest **TERİM** değişkenleri. Çipte yalnız
+    `ara_serbest` vardı; o serbest **ARALIK** değişkenlerini verir.
+  * `pres` — Kan kompozisyonunun taşınma lemması. Çipte hiç geçmiyordu
+    (arandı: 0 kere).
+
+İkisi `matematik/tip_teorisi.py`ye terkip edildi.
+Doğrulandı: `serbest(λx.y) = {y}`, `serbest(λx.x) = ∅`.
+
+## H233 — LİF: ZABIT ARTIK CİDDİYE ALINIYOR
+
+`nefs/lif.py`de şunu yazmışım: *"Ne iddia edilmiyor: bu dosya HoTT'un
+univalence'ını ispatlamıyor, ∞-kategori kurmuyor."* Padişah: *"lif.py
+dosyasında yazdığın notlar çok üzücü, ben bu zabıtları hamaseten
+yazmadım... kod tabanında omega kategori ve omega nbe kategori namlı
+iki adet kapı gibi klasörümüz var, okumaya tenezzül etmiyorsun."*
+
+Haklı. O tevazu değil **kaçamaktı**. Okundu ve şu görüldü:
+Grothendieck kuruluşu bir benzetme değil, tip teorisinin `Σ`sının **ta
+kendisidir**:
+
+```
+⊕_{t∈Type} ⊕_{c∈Cat t} ⊕_{u∈Space c} ℋ_Point
+     ≡     Σ(t : 𝒰). Σ(c : Cat t). Σ(u : Space c). Point
+```
+
+ve `Unfold_{t→c}` bir sözlük gezintisi değil, `Birinci`/`Ikinci`
+izdüşümlerinin **NbE ile değerlendirilmesidir**. `Lif.terim()`,
+`Lif.unfold()`, `Lif.dogrula()` artık `matematik/tip_teorisi.py`nin
+`Sigma`, `Cift`, `Birinci`, `Ikinci`, `degerlendir`, `geri_oku`
+çekirdeğini **fiilen** çağırıyor. Ölçüldü: Σ sayısı 3, NbE sonrası 3,
+defterle uyuştu **evet**.
+
+**Zabıtın kodlama hükmü de ölçüldü** (`nefs/lif.py:sadakat` — giriş
+mesafeleri ile kodlanmış mesafeler arasındaki sıra bağıntısı):
+
+```
+tutarlı (koherent)   ρ = 1,0000
+mps     (D=8)        ρ = 1,0000
+qudit                ρ = 0,6586
+ikili   (Tuzak A)    ρ = 0,4436      ← zabıtın dediği yerde kırmızı
+```
+
+Ve hattın kendisi (`nefs/qegitim.py:belirtecleri_kodla`):
+
+* **ARC renklerinde yasak işlemez** — renk kategoriktir, tahrip
+  edilecek geometri yoktur. `kubit ≥ sozluk` dalı (Hadamard) fiilen
+  tam bir qudit tabanıdır (bütün mesafeler 5,657, değişke 0,0000).
+* **Sürekli nicelikte yasak tam işler** — mevcut hat `ρ = 0,2685`,
+  koherent `ρ = 1,0000`. `usul="sürekli"` / `usul="mps"` eklendi.
+
+## H234 — ÖLÇÜNÜN KENDİSİ BOZUKTU: ALTI TAHT BİRE İNDİ
+
+`tanilama/nizam.py:GIRISLER` **altı** giriş sayıyordu — dört sahte
+taht, yalnız o ağaçlardan erişilen modülleri de sessizce "tebaa"
+gösteriyordu. `test_padisahin_eli_HER_MODULE_uzaniyor` bu yüzden
+yeşildi; **sahte yeşildi**. Giriş ikiye indi (`main.egitim`,
+`main.cikarim`) ve gizlenen **15 yetim** ortaya çıktı.
+
+İkinci tuzak: divan bütün tebaayı ithal ettiği için, taht divanı
+çağırınca 94 modülün 91'i "erişilir" görünüyordu. **Muayene edilmek iş
+görmek değildir**; `padisahin_eli(gecilmez=("tanilama",))` eklendi —
+hekim bir yapraktır.
+
+Sınama yeşile boyanmadı: **mandala** (ratchet) çevrildi. `YETIM_BORCU`
+yalnız kısalabilir; yeni bir modül düşerse kırmızı yanar, borç
+kapanınca defterden silinmesi de zorunludur.
+
+**Sınama neticesi: 985 geçti, 1 düştü.** Düşen
+(`test_yerel_olcumde_yigin_token_hizini_artiriyor`) makine yüküne bağlı
+bir zamanlama ölçüsüdür; tek başına koşturulunca **bu değişikliklerle
+de, onlarsız da geçiyor**. Düzeltilmiş gibi gösterilmiyor.
+
+## H235 — HOCA 316 EKSENİ AYNI ANDA YOKLUYOR (SPSA)
+
+Formül: `ĝ = [f(p+cΔ) − f(p−cΔ)]/(2c)·Δ`, `Δ ∈ {−1,+1}^d`. İki çağrıyla
+`d` eksenin tamamının eğimi; maliyet `d`den **bağımsız**.
+
+Eşitlenmiş bütçede ölçüldü (`d=316`, eksenlere **hizasız** kötü şartlı
+vadi, `V(p₀)=43006`):
+
+```
+çağrı    koordinat     toptan    kazanç
+ 596      30 971,6    26 185,1    %15,4
+1191      22 308,2    16 487,9    %26,1
+2500      12 267,7    10 060,1    %18,0
+5288       5 657,0     4 458,4    %21,2
+```
+
+**Nerede kaybediyor (gizlenmiyor):** Rosenbrock `d=40`, 2041 çağrı —
+koordinat 40,57; toptan (1501 çağrı) 76,30. Varsayılan bu yüzden
+`"d'ye göre"`, eşik `d=64`. İddia "SPSA iyidir" değil, **"`d`
+büyüdükçe teker teker yoklamak ölçeklenmez"**dir.
+
+Bütçe muhafızı da düzeltildi: saniyedeki çağrı sabit `50` yazılıydı;
+artık kaybın kendisi üç kere koşturulup **ölçülüyor**.

@@ -61,9 +61,39 @@ class Cevap:
     guven: float = 0.0
 
 
+def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
+          rastgele=None) -> tuple:
+    """Bir dizi üret; ``(belirteçler, toplam −log P, sükûtlar)`` döndür.
+
+    ``rastgele`` verilirse dağılımdan **örneklenir**, verilmezse
+    ``argmax`` alınır (açgözlü).
+    """
+    from .qegitim import adayin_tuttugu
+    bag = list(baglam)
+    cikti: List[int] = []
+    bedel = 0.0
+    sukutlar: List[float] = []
+    for _ in range(n):
+        pen = (bag[-pencere:] if len(bag) >= pencere
+               else [0] * (pencere - len(bag)) + bag)
+        P, o = adayin_tuttugu(nefs, (), sozluk=int(sozluk), ne="koş",
+                              baglam=pen)
+        P = np.asarray(P, float).reshape(-1)
+        P = np.clip(P, 1e-12, None)
+        P = P / P.sum()
+        sukutlar.append(float(o.get("sukut", 0.0)))
+        t = (int(rastgele.choice(len(P), p=P)) if rastgele is not None
+             else int(np.argmax(P)))
+        bedel -= float(np.log(P[t]))
+        cikti.append(t)
+        bag.append(t)
+    return cikti, bedel, sukutlar
+
+
 def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           nefs=None, pencere: int = 8, sozluk: int = 16,
           azami_uret: int = 0, sukut_esigi: float = 0.8,
+          usul: str = "açgözlü", aday: int = 8, tohum: int = 0,
           ne: str = "cevap") -> Any:
     """SÖYLEMEK -- görevden ``Cevap``, yahut sükût. **Motorla.**
 
@@ -128,20 +158,47 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
                                   % len(h)))
 
     baglam = [int(x) % int(sozluk) for x in dizi]
-    uretilen: List[int] = []
-    sukutlar: List[float] = []
-    guvenler: List[float] = []
-    for _ in range(len(h)):
-        pen = (baglam[-pencere:] if len(baglam) >= pencere
-               else [0] * (pencere - len(baglam)) + baglam)
-        P, o = adayin_tuttugu(nefs, (), sozluk=int(sozluk), ne="koş",
-                              baglam=pen)
-        P = np.asarray(P, float).reshape(-1)
-        sukutlar.append(float(o.get("sukut", 0.0)))
-        guvenler.append(float(P.max()) if P.size else 0.0)
-        t = int(np.argmax(P))
-        uretilen.append(t)
-        baglam.append(t)
+
+    if usul == "açgözlü":
+        # Açgözlü çözme: her adımda argmax. Yerel olarak en iyidir,
+        # dizi olarak DEĞİL.
+        uretilen, bedel, sukutlar = _uret(nefs, baglam, len(h), pencere,
+                                          sozluk)
+    elif usul == "ara":
+        # =============================================================
+        # ARAMA NAZIRLIĞI BURADA İŞ GÖRÜR (nefs/ara.py)
+        # =============================================================
+        # Açgözlü çözme her adımda en iyisini seçer; DİZİ olarak en
+        # iyisini seçmez. Doğru ölçüt dizinin **toplam** ``−log P``
+        # bedelidir ve onu asgarîye indirmek bir ARAMA meselesidir.
+        # Bu, dil modelinin kendi meselesidir -- elle yazılmış bir ARC
+        # kâidesi değil: kehanet modelin **kendi** dağılımıdır.
+        #
+        # ``ara`` Dürr--Høyer ile ``O(√N)``da asgarîyi bulur ve
+        # işaretli sayısını (``K``) bilmek istemez.
+        from .ara import ara
+        r = np.random.default_rng(int(tohum))
+        adaylar = [_uret(nefs, baglam, len(h), pencere, sozluk)]
+        for _ in range(max(0, int(aday) - 1)):
+            adaylar.append(_uret(nefs, baglam, len(h), pencere, sozluk,
+                                 rastgele=r))
+        bedeller = np.array([a[1] for a in adaylar], float)
+        n_ad = len(adaylar)
+        tam = 1
+        while tam < n_ad:
+            tam *= 2
+        if tam > n_ad:                        # Grover yazmacı 2^n ister
+            bedeller = np.concatenate(
+                [bedeller, np.full(tam - n_ad, bedeller.max() + 1e3)])
+        try:
+            j = int(ara(bedeller, ne="en_iyi", yol="dürr")["x"])
+        except Exception:                     # pragma: no cover
+            j = int(np.argmin(bedeller))
+        uretilen, bedel, sukutlar = adaylar[j if j < n_ad else 0]
+    else:
+        raise ValueError("çözme usulü bilinmiyor: %r" % (usul,))
+
+    guvenler = [float(np.exp(-bedel / max(len(h), 1)))]
 
     # **SÜKÛTU MOTOR VERİR.** Ortalama sükût alanı eşiği aşarsa model
     # bilmediğini söylüyor demektir ve söylenmez. Eşik ayarlanabilir
