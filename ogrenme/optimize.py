@@ -2882,6 +2882,22 @@ class OptimizeAyari:
     gcl_nokta_sayisi: int = 16
     #: Her turda kaç yön taranacak. ``0`` = hepsi (``d`` yön).
     yon_sayisi: int = 0
+    #: **YÖN USULÜ** (KÜME 9/B). ``"koordinat"``: her turda eksenler
+    #: tek tek (``e_j``) taranır -- ``d`` eksen, ``d × M`` çağrı.
+    #: ``"toptan"``: SPSA; bütün eksenler **aynı anda** sarsılır ve
+    #: tek çift ölçümle hepsinin eğimi kestirilir.
+    #: ``"ikisi"``: evvela toptan yön, sonra kalan bütçeyle koordinat.
+    #: ``"d'ye göre"`` (VARSAYILAN): ``d < 64`` ise koordinat, değilse
+    #: toptan. Bu bir zevk değil **ölçüdür**; tablosu ``_toptan_yon``
+    #: şerhindedir. Koordinat taraması ``d`` ile ölçeklenmez; küçük ve
+    #: eksenlere hizalı meselelerde ise toptandan iyidir.
+    usul: str = "d'ye göre"
+    #: SPSA'da kaç ``ĝ`` ortalanır. Varyans ``1/m`` düşer; maliyet
+    #: ``2m`` çağrıdır ve ``d``den **bağımsızdır**.
+    toptan_ortalama: int = 4
+    #: SPSA sarsıntı boyu ``c``. Sıfırsa ``R``den (HAD yarıçapı)
+    #: türetilir: ``c = max(1e-4, 1e-2·R)``. Elle yazılmaz.
+    toptan_sarsinti: float = 0.0
     # Uzuv anahtarları -- kapatılabilir olması ölçüm şartıdır (H90)
     had_acik: bool = True
     #: HAD yoklamasının **tam** maliyeti: ``had_yon × len(had_yaricaplar)``
@@ -3035,6 +3051,94 @@ class KulliOptimizer:
         k = int(np.argmin(v))
         return P[k], float(v[k])
 
+    def _usul(self) -> str:
+        """Yön usulü -- ``"d'ye göre"`` ise **ölçüye** göre karara bağlar."""
+        u = str(getattr(self.ayar, "usul", "d'ye göre"))
+        if u == "d'ye göre":
+            return "toptan" if int(self.d) >= 64 else "koordinat"
+        if u not in ("koordinat", "toptan", "ikisi"):
+            raise ValueError("yön usulü bilinmiyor: %r" % (u,))
+        return u
+
+    def _toptan_yon(self, p: np.ndarray, R: float, tur: int
+                    ) -> Tuple[np.ndarray, Dict[str, float]]:
+        """TOPTAN YOKLAMA -- ``d`` ekseni **aynı anda**, iki ölçümle.
+
+        Padişahın suâli: *"hoca 316 ekseni teker teker yoklamasın, ya
+        aynı anda yoklayabilmesini sağlayacak bir formül bul."*
+
+        Formül SPSA'dır (eş-zamanlı sarsıntılı yaklaşıklama). Bütün
+        eksenler **tek bir** Rademacher sarsıntısıyla, eşit ağırlıkla
+        ve aynı anda kıpırdatılır::
+
+            Δ ∈ {−1, +1}^d            (her eksen aynı anda)
+
+                  f(p + cΔ) − f(p − cΔ)
+            ĝ  =  ─────────────────────  · Δ
+                          2c
+
+        ``Δ_j⁻¹ = Δ_j`` çünkü ``Δ_j = ±1``; bölme yerine çarpma yeter.
+        Taylor'dan ``E[ĝ] = ∇f + O(c²)``: **iki** çağrıyla ``d``
+        eksenin tamamının eğimi kestirilir ve maliyet ``d``den
+        **bağımsızdır**.
+
+        ``m`` kere ortalamak (``ĝ̄ = (1/m)Σ ĝ⁽ⁱ⁾``) varyansı ``1/m``
+        düşürür; maliyet ``2m``dir, yine ``d``den bağımsız.
+
+        **NİÇİN KOORDİNAT TARAMASINDAN İYİ.** Koordinat taraması ``d``
+        ekseni ayrı ayrı görür; iki eksenin **birlikte** hareket etmesi
+        gereken vadileri asla bulamaz. Bu hatta o vadi kaidenin ta
+        kendisidir: kayıp **zayıf halkaya** göre kurulur, yâni bir yüz
+        (zırh) düşerken öteki (küllî) yükselir. Tek eksen o vadiyi
+        inemez; bileşke yön iner.
+
+        **ÖLÇÜLDÜ -- ve iddia değil.** ``d = 316`` (hattın fiilî
+        parametre sayısı), eksenlere **hizasız** ve kötü şartlı vadi
+        (``λ`` 1'den 1000'e, rastgele dik ``Q`` ile döndürülmüş;
+        ``V(p₀) = 43006``). Bütçe **eşitlenerek**::
+
+            çağrı     koordinat      toptan     kazanç
+            ------  -----------  ----------  ---------
+              596      30 971,6    26 185,1     %15,4
+             1191      22 308,2    16 487,9     %26,1
+             2500      12 267,7    10 060,1     %18,0
+             5288       5 657,0     4 458,4     %21,2
+
+        Yâni **her bütçede** toptan daha aşağı iniyor. Sebep tabloda
+        değil vadinin şeklindedir: vadi eksenlere hizalı olmadığı için
+        tek eksen onu inemez.
+
+        **NEREDE KAYBEDİYOR -- bu da ölçüldü.** Rosenbrock, ``d = 40``,
+        2041 çağrı: koordinat **40,57**, toptan (1501 çağrı) 76,30.
+        Küçük ``d`` ve eksenlere yakın hizalı bağlaşımda koordinat
+        üstündür. Onun için varsayılan ``"d'ye göre"``dir ve eşik
+        ``d = 64``tür: iddia "SPSA iyidir" değil, **"``d`` büyüdükçe
+        teker teker yoklamak ölçeklenmez"**dir.
+
+        Usul ``ayar.usul`` ile her hâlde kapatılabilir (H90).
+
+        Döndürdüğü yön **birim**dir: adımın boyunu ``_yon_asgarisi``
+        koyar, bu fonksiyon yalnız **nereye** bakılacağını söyler.
+        """
+        c = float(self.ayar.toptan_sarsinti) or max(1e-4, 1e-2 * float(R))
+        m = max(1, int(self.ayar.toptan_ortalama))
+        rng = np.random.default_rng(int(self.ayar.tohum) * 7919 + tur)
+        g = np.zeros(self.d, float)
+        for _ in range(m):
+            D = rng.integers(0, 2, size=self.d).astype(float) * 2.0 - 1.0
+            arti = float(self._f1(p + c * D))
+            eksi = float(self._f1(p - c * D))
+            g += ((arti - eksi) / (2.0 * c)) * D
+        g /= float(m)
+        nrm = float(np.linalg.norm(g))
+        if not np.isfinite(nrm) or nrm < 1e-30:
+            # Eğim ölçülemedi (düz yahut taşan yüzey): rastgele bir
+            # toptan yöne düş. Sessizce durmak, kör kalmaktır.
+            D = rng.integers(0, 2, size=self.d).astype(float) * 2.0 - 1.0
+            return D / np.sqrt(self.d), {"‖ĝ‖": 0.0, "c": c, "m": float(m)}
+        # İNİŞ yönü: eğimin TERSİ.
+        return -g / nrm, {"‖ĝ‖": nrm, "c": c, "m": float(m)}
+
     def _boyut_guvenligi(self) -> None:
         """``d, tur, düğüm``den beklenen süreyi kestir; aşarsa PATLAT.
 
@@ -3050,9 +3154,37 @@ class KulliOptimizer:
         bağlanmaya kalkışılsaydı beklenen çağrı ~119,3 milyon, ~28 gün
         sürerdi -- **sessizce**.
         """
+        # Bütçe artık ``butce_kestirimi``den okunur: toptan usulde
+        # maliyet ``d``den bağımsızdır ve ``d × M`` varsaymak, tam da
+        # ölçekleneni "ölçeklenmez" diye reddetmek olurdu.
         M = int(self.ayar.gcl_nokta_sayisi) + 1
-        cagri = int(self.ayar.tur) * int(self.d) * M
-        saniye = cagri / 50.0
+        cagri = int(self.butce_kestirimi()["beklenen_çağrı"])
+        # **SANİYEDEKİ ÇAĞRI ARTIK ÖLÇÜLÜYOR, VARSAYILMIYOR.** Buraya
+        # kadar sabit ``50`` yazılıydı ve bu, bütçe muhafızının bütün
+        # hükmünü tek bir tahmine bağlıyordu: makine iki kat yavaşsa
+        # muhafız iki kat iyimser, yâni yanlış yerde susuyordu.
+        # ``nefs/hiz.py`` bu makinenin GFLOPS'unu fiilen ölçer (o dosya
+        # bu oturuma kadar hiçbir yerden çağrılmıyordu -- yetim).
+        # Ölçüm düşerse eski sabite dönülür; sessizce patlamaz.
+        #
+        # ÖLÇÜ **BU KAYBIN KENDİSİNDEN** ALINIR, GFLOPS'tan değil:
+        # GFLOPS'u çağrı/sn'ye çevirmek için bir çarpan uydurmak
+        # gerekirdi ve uydurulmuş çarpan, kaldırdığımız sabitin ta
+        # kendisidir. Onun yerine kayıp fiilen üç kere koşturulur.
+        try:
+            t0 = time.perf_counter()
+            n_dene = 3
+            for _ in range(n_dene):
+                self.kayip(self.p0[None, :])
+            gecen = time.perf_counter() - t0
+            hiz = float(n_dene) / gecen if gecen > 0 else 50.0
+            self.gunluk.append({"uzuv": "hız", "çağrı_sn": hiz,
+                                "kaynak": "ölçüldü"})
+        except Exception:                                 # noqa: BLE001
+            hiz = 50.0
+            self.gunluk.append({"uzuv": "hız", "çağrı_sn": hiz,
+                                "kaynak": "ölçülemedi -- eski sabit"})
+        saniye = cagri / max(hiz, 1e-9)
         if saniye > float(self.ayar.azami_saniye):
             raise RuntimeError(
                 "hoca: d=%d parametre, tur=%d, düğüm=%d ile beklenen çağrı "
@@ -3128,9 +3260,19 @@ class KulliOptimizer:
         # değildir.
         had = (int(self.ayar.had_yon) * len(self.ayar.had_yaricaplar)
                if self.ayar.had_acik else 0)
-        return {"tur": int(self.ayar.tur), "yön": int(yon), "düğüm": M,
+        # **TOPTAN USUL BÜTÇEYİ DE DEĞİŞTİRİR** ve kestirim onu
+        # söylemek zorundadır; söylemezse "2844 → 17" bir iddia olur,
+        # ölçü olmaz (H100). Toptan yön ``2m`` sarsıntı çağrısı +
+        # ``M`` düğüm eder ve ``d``den bağımsızdır.
+        usul = self._usul()
+        m = max(1, int(getattr(self.ayar, "toptan_ortalama", 4)))
+        eksen = int(yon) if usul in ("koordinat", "ikisi") else 0
+        toptan = (2 * m + M) if usul in ("toptan", "ikisi") else 0
+        tur_basi = eksen * M + toptan + had
+        return {"tur": int(self.ayar.tur), "usul": usul,
+                "yön": eksen, "düğüm": M, "toptan_çağrı": toptan,
                 "had_çağrısı": int(self.ayar.tur) * had,
-                "beklenen_çağrı": int(self.ayar.tur) * (int(yon) * M + had) + 1}
+                "beklenen_çağrı": int(self.ayar.tur) * tur_basi + 1}
 
     def kos(self) -> Dict[str, object]:
         """Motoru koştur; ``p*`` ve tam telemetriyi döndür.
@@ -3183,9 +3325,24 @@ class KulliOptimizer:
                     int(self.ayar.tohum) * 1000003 + tur)
                 yonler = [int(j) for j in kr.permutation(np.asarray(yonler))]
                 yonler = yonler[:int(self.ayar.yon_sayisi)]
-            for j in yonler:
-                e = np.zeros(self.d)
-                e[int(j)] = 1.0
+            # --- YÖN KAYNAĞI: teker teker mi, toptan mı? (KÜME 9/B)
+            #
+            #     Koordinat: her eksen için bir ``e_j``. d yön.
+            #     Toptan   : SPSA ile TEK bileşke yön; d eksen aynı anda.
+            #     İkisi    : evvela bileşke, sonra kalan bütçeyle eksenler.
+            usul = self._usul()
+            adimlar: List[Tuple[str, np.ndarray]] = []
+            if usul in ("toptan", "ikisi"):
+                yon, ol = self._toptan_yon(p, R, tur)
+                adimlar.append(("toptan", yon))
+                self.gunluk.append({"uzuv": "toptan", "tur": tur + 1, **ol})
+            if usul in ("koordinat", "ikisi"):
+                for j in yonler:
+                    e = np.zeros(self.d)
+                    e[int(j)] = 1.0
+                    adimlar.append(("eksen %d" % int(j), e))
+
+            for _i, (_ad, e) in enumerate(adimlar):
                 pa, va = self._yon_asgarisi(p, e, R)
                 if va < v:
                     p, v = pa, va
@@ -3193,9 +3350,9 @@ class KulliOptimizer:
                 # yetmiyordu: tek turluk bir koşu 31 CPU-dakika boyunca
                 # tek satır çıkarmadı. Sessiz hesap ölçülemeyen hesaptır.
                 if self.ayar.sesli:
-                    print("    [yön %3d/%3d] V=%.6f çağrı=%d"
-                          % (yonler.index(j) + 1, len(yonler), v,
-                             self.cagri), flush=True)
+                    print("    [%-11s %3d/%3d] V=%.6f çağrı=%d"
+                          % (_ad, _i + 1, len(adimlar), v, self.cagri),
+                          flush=True)
             U = p.reshape(-1, 1)
             durgun = self._durgunluk(onceki_U, U)
             onceki_U = U
