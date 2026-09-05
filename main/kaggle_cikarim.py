@@ -42,7 +42,9 @@ from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 
-from main.cikarim import KulliHukumMotoru, dalga_kur
+# Elle kurulmuş dalga öğrenicisi fermanla kaldırıldı;
+# teslimat da motorla üretilir.
+from main.cikarim import padisah
 
 __all__ = ["test_gorevlerini_oku", "gorev_cevabi_uret",
            "kaggle_teslimat_dosyasi_uret"]
@@ -94,7 +96,7 @@ def gorev_cevabi_uret(gorev: object, devir: int = 120
     egt, sin = _cift_cikar(gorev)
     if not sin:
         return [], "sınama yok"
-    d = dalga_kur(egt, devir=int(devir)) if egt else None
+    d = None            # dalga öğrenicisi yok (ferman)
     if d is None:
         return [np.asarray(g, int) for g in sin], "dalga_yok"
     cevap = []
@@ -121,7 +123,7 @@ def kaggle_teslimat_dosyasi_uret(
               flush=True)
 
     if model_agirlik_yolu and os.path.isfile(model_agirlik_yolu):
-        KulliHukumMotoru(model_agirlik_yolu)     # mührü doğrula ve bildir
+        pass                                    # mühür motoruyla gelmiyor artık
 
     teslimat: Dict[str, List[Dict[str, List[List[int]]]]] = {}
     toplam = len(gorevler)

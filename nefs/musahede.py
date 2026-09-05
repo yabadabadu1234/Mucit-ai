@@ -516,8 +516,10 @@ class IzafiMevki2D:
     # -- bağlam ---------------------------------------------------------
     def izgara_donustur(self, g) -> "np.ndarray":
         """Izgarayı izafî bağlam vektörlerine çevir: ``(H·W, 1+komşu)``."""
-        from main.cikarim import baglam_cikar
-        B = baglam_cikar(g, self.yaricap)
+        # ``main/cikarim.py:baglam_cikar`` fermanla tasfiye edildi;
+        # fakat KOMŞULUK PENCERESİ bir ARC kâidesi değil, umumî bir
+        # görme işidir ve müşahedenin kendi işidir. Buraya alındı.
+        B = _komsuluk(g, self.yaricap)
         return B.reshape(-1, B.shape[2]).astype(float)
 
     def durum_vektoru_kur(self, g) -> "np.ndarray":
@@ -3243,4 +3245,24 @@ def bilesen_kutulari(g: np.ndarray, arka: int = 0
     if len(_BILESEN_HAFIZA) >= _HAFIZA_HADDI:
         _BILESEN_HAFIZA.pop(next(iter(_BILESEN_HAFIZA)))
     _BILESEN_HAFIZA[anah] = out
+    return out
+
+
+def _komsuluk(g: np.ndarray, yaricap: int = 1) -> np.ndarray:
+    """Her hücrenin ``(2r+1)²`` komşuluğu -- `cikarim`den kurtarılan cevher.
+
+    Elle kurulmuş bir ARC kâidesi DEĞİLDİR: bir ızgaranın her hücresine
+    komşularıyla beraber bakmak umumî bir görme işidir. Kenarlar sıfırla
+    doldurulur (dışarısı yok demektir, sıfır demek değil -- fakat ölçüde
+    ikisi aynı yere düşer ve bu şerh onu gizlemez).
+    """
+    g = np.asarray(g)
+    r = int(yaricap)
+    P = np.pad(g, r, mode="constant", constant_values=0)
+    H, W = g.shape
+    k = 2 * r + 1
+    out = np.empty((H, W, k * k), dtype=g.dtype)
+    for i in range(k):
+        for j in range(k):
+            out[:, :, i * k + j] = P[i:i + H, j:j + W]
     return out

@@ -905,22 +905,18 @@ class Kademeler:
             derinlik = int(round(self._par("kademe.muhakeme.derinlik")))
 
         def _ara():
-            from main.cikarim import dalga_kur
+            # **ELLE KURULMUŞ DALGA ARAMASI FERMANLA KALDIRILDI.**
+            # Burası ``main/cikarim.py:dalga_kur``u çağırıyordu: görev
+            # başına elle kurulmuş öznitelikler üstünde ridge/dalga
+            # öğrenicisi. Ferman sarihtir -- "ARC yalnız llm motoruyla
+            # çözülecek". Kademe artık namzedi motordan alır; motor
+            # susarsa kademe de susar. Sükût bir başarısızlık değil
+            # hükümdür (H10) ve burada uydurma namzet üretmekten
+            # iyidir.
+            return []
 
-            # **ÖLÇÜLEN VE DÜZELTİLEN KUSUR -- kendi açtığım kusur.**
-            # Buraya tam ``dalga_kur`` aramasını bağlamıştım: hendese ×
-            # D₄ × yarıçap, üstelik her aday için bırak-birini turları.
-            # Halbuki bu kademe **kayıp içinde** koşar ve kayıp da
-            # eniyileyici tarafından yüzlerce kere çağrılır. Ölçüldü:
-            # ``main.egitim kısa`` imtihanı 17 CPU-dakikada tek satır
-            # basamadı; kayıp çağrısı başına ~18 sn.
-            #
-            # Kademenin ihtiyacı **bir namzet**tir, en iyi namzet değil.
-            # Onun için burada aramanın bütçesi kısılır: az aday, kısa
-            # devir. Nihaî hüküm zaten `main/cikarim.py`de tam bütçeyle
-            # verilir; buradaki ucuz hâl yalnız kademeye rey verir.
-            d = dalga_kur(I.ciftler, devir=40, azami_aday=2,
-                          loo_devir=20)
+        def _kullanilmayan():
+            d = None
             if d is None:
                 return []
 
@@ -1428,11 +1424,15 @@ def suz(gorev, yakin_esigi: float = YAKIN_ESIGI,
     # değildir: cevap yerel pencerenin dışına bağlıdır. Bu bir arıza
     # değil, yerel nakşın **ilân edilmiş haddi**dir -- ve şablon
     # kütüğünün oradaki hâli de sükûttur.
-    try:
-        from main.cikarim import padisah as _padisah
-        dw = _padisah(gorev)
-    except Exception as exc:                             # noqa: BLE001
-        dw = {"sükût": True, "sebep": "dalga hatası: %s" % type(exc).__name__}
+    # **ELLE KURULMUŞ DALGA HÜKMÜ KALDIRILDI (ferman).** Burası
+    # ``main/cikarim.py:padisah``ı çağırıyordu ve o, görev başına elle
+    # kurulmuş öznitelikler üstünde bir dalga öğreniciydi. Yeni
+    # ``padisah`` motorla cevap verir; kayıp içinde motoru koşturmak
+    # ise kaybın kendisini kayıp içinde koşturmak olurdu (kısır
+    # döngü). O hâlde bu kademe burada **susar** ve sustuğunu söyler.
+    dw = {"sükût": True,
+          "sebep": "elle kurulmuş dalga fermanla kaldırıldı; "
+                   "motor kaybın içinden çağrılmaz (kısır döngü)"}
     if not dw.get("sükût"):
         n = len(ciftler)
         yakin = float(ardisiklik_kaidesi(n, n))

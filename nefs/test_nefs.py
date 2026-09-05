@@ -556,102 +556,8 @@ def test_kan_temelleri_kiyas() -> None:
 # =====================================================================
 #  D. KÂİDE MÎZÂNI -- H85'in icrası, H90'ın şartıyla
 # =====================================================================
-def test_kaide_mizani_yesil_de_kirmizi_da_yanabiliyor():
-    """H90: bir ölçüt, **kırmızı yanabildiğini** ispatlamadıkça ölçüt değildir.
-
-    Burada iki hâl birden kurulur ve ikisi de zorunludur:
-
-    * **Yeşil**: çıktının girdinin devriği olduğu, bile bile kurulmuş bir
-      görevde ``devrik/devrik`` kâidesi **Yakîn**e çıkmalı, illeti
-      ``yer_devrik`` olarak ayırt edilmeli, tekliği ispatlanmalı.
-    * **Kırmızı**: tek bir şahit kasten bozulunca aynı kâide Yakîn'den
-      **düşmeli** -- ``nakz``ın tarifi budur: tek karşı örnek küllî
-      hükmü düşürür (kütük H6).
-
-    Bu sınama evvelâ **yeşil yanamıyordu** ve kusur ölçütteydi: menfî
-    vaka şahitler arasında aranıyordu, halbuki kâide doğruysa öyle bir
-    şahit yoktur. Menfî vaka, aynı şahitte düşen **rakip kâidedir**.
-    """
-    from main.cikarim import padisah
-
-    class _Gorev:
-        def __init__(self, egitim, sinama):
-            self.ad = "sınama"
-            self.egitim = egitim
-            self.sinama = sinama
-
-    rng = np.random.default_rng(0)
-    sahit = []
-    for _ in range(4):
-        g = rng.integers(0, 5, size=(3, 4))
-        sahit.append((g, g.T.copy()))
-    sin_g = rng.integers(0, 5, size=(3, 4))
-
-    # --- YEŞİL: devrik görevi, ŞABLON OLMADAN çözülmeli
-    r = padisah(_Gorev(sahit, [(sin_g, sin_g.T.copy())]), devir=200)
-    assert not r["sükût"], r.get("sebep")
-    assert np.array_equal(r["cevap"][0], sin_g.T), r["cevap"][0]
-    assert r["d4"] == "devrik", r["d4"]
-    assert r["şahit_isabeti"] == 1.0, r["şahit_isabeti"]
-    # cevap bir tablodan değil AĞIRLIKTAN geldi
-    assert r["ağırlık"] > 0
-
-    # --- KIRMIZI: bir şahidi boz, padişah SUSMALI
-    bozuk = list(sahit)
-    bozuk[2] = (bozuk[2][0], rng.integers(0, 5, size=(4, 3)))
-    r2 = padisah(_Gorev(bozuk, [(sin_g, sin_g.T.copy())]), devir=200)
-    assert r2["sükût"], \
-        "bozuk şahitle hâlâ konuşuyor — ölçüt kırmızı yanamıyor"
 
 
-def test_kaide_eksik_istikra_yakin_vermez():
-    """``tam_istikra_mi``nin hükmü mîzânda fiilen işliyor mu?
-
-    Rakibi elenmemiş bir kâide, BÜTÜN misallerde tutsa bile **Yakîn'e
-    çıkmamalı**. Yakîn istikrâdan değil **tekliğin ispatından** gelir.
-    Burada girdi kare seçilir; o zaman ``aynı`` ile ``devrik`` ebatta
-    ayırt edilemez ve teklik ispatlanamaz.
-
-    **ŞART DARALTILDI, GEVŞETİLMEDİ (kütük H161).** Evvelce
-    ``makam == "Zan"`` yazıyordu; H161'de beşinci mertebe (``zann-ı
-    gālib``) makama girince bu hâl oraya çıktı -- derece 0,833 ve
-    rükünlerin ikisi ispatlanmış. Sınamanın **maksadı** o değildi:
-    maksat *"eksik istikrâ Yakîn vermez"*tir ve o şart aynen duruyor.
-    Belli bir mertebe adını şart koşmak, sınanan hükmü değil onun bir
-    tesadüfünü şart koşmak olurdu.
-
-    Gevşetme olmadığının şahidi aşağıdadır: mertebenin **Yakîn'in
-    altında** ve ``Şek``in **üstünde** olduğu ayrıca sınanır, yani
-    aralık iki taraftan da kapalıdır.
-    """
-    from main.cikarim import hendese_adaylari
-    from matematik.mizan import tam_istikra_mi
-
-    assert not tam_istikra_mi(50, 50)       # eksik istikrâ 1 vermez
-
-    rng = np.random.default_rng(1)
-    kare = []
-    for _ in range(4):
-        g = rng.integers(0, 5, size=(3, 3))   # KARE → ebat kanunu belirsiz
-        kare.append((g, g.copy()))
-    adaylar = hendese_adaylari(kare)
-    # ASIL ŞART: şahitler kanunu TAYİN ETMİYORSA teklik iddia edilemez.
-    # Kare girdide ``H→H``, ``H→W`` ve ``H→3`` şahitlerde ayırt edilemez.
-    assert len(adaylar) > 1, [str(h) for h in adaylar]
-    for h in adaylar:                       # hepsi şahitleri TAM tutuyor
-        for g, c in kare:
-            assert h.ebat(g.shape) == c.shape, (str(h), g.shape)
-
-    # ...ve iki taraftan kapalı: ebat DEĞİŞEN şahitler kanunu tayin
-    # edince rakip kalmamalı. Yalnız "birden çok aday var" denseydi,
-    # ölçü hiçbir zaman yeşil yanamazdı.
-    ayrik = []
-    for h, w in ((2, 5), (3, 4), (6, 2)):
-        g = rng.integers(0, 5, size=(h, w))
-        ayrik.append((g, g.copy()))
-    tek = hendese_adaylari(ayrik)
-    assert len(tek) == 1, [str(x) for x in tek]
-    assert str(tek[0]) == "H→H, W→W", str(tek[0])
 
 
 
@@ -850,6 +756,10 @@ YETIM_BORCU = frozenset({
     "nefs.akit", "nefs.golge", "nefs.hamiltonyen", "nefs.hayal",
     "nefs.hiz", "nefs.hukum_denetimi", "nefs.illet",
     "nefs.uzaklik_olcumu", "ogrenme.izgara",
+    # KÜME 9/D-2'de düştü: main/cikarim.py'nin elle kurulmuş dalga
+    # öğrenicisi fermanla tasfiye edilince onun üzerinden erişilen
+    # ``ogrenme.morse`` yetim kaldı. Gizlenmiyor, yazılıyor.
+    "ogrenme.morse",
 })
 
 
