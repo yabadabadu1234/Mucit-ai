@@ -71,195 +71,339 @@ __all__ = ["EKSIK", "KAYIT", "KADEME2", "yokla", "yoklama", "rapor"]
 #: Gizlenmez, sayılır ve raporlanır.
 EKSIK: Dict[str, str] = {}
 
-# ------------------------------------------------------------------
-#  akis
-# ------------------------------------------------------------------
-import matematik  # [uzuv] matematik -- sistemin bastığı değişmez analitik zemin (KÜME 7)
-import matematik.tip_teorisi  # [uzuv] Tip teorisi çipi: kübik tip teorisi, NbE, HoTT, SDG
-import matematik.mizan  # [uzuv] Mîzân çipi: mantık, kıyas, kiplik, cedel ve epistemik hüküm
-import matematik.fitrat  # [uzuv] Fıtrat çipi: illiyet, karşıolgusal hesap, serbest enerji, denge
-import matematik.geometri  # [uzuv] Hendese çipi: Riemann manifoldu, Lie cebri, akışlar, tam aritmetik
-import matematik.test_tip_teorisi  # [şahit] tip teorisi çipi sınamaları
-import matematik.test_mizan  # [şahit] mîzân çipi sınamaları
-import matematik.test_fitrat  # [şahit] fıtrat çipi sınamaları
-import matematik.test_karsi_olgusal  # [şahit] karşıolgusal sınamalar -- Darboğaz 45-48
-import matematik.test_token_uzaylari  # [şahit] token uzayları sınamaları
-import matematik.test_akis  # [şahit] akış sınamaları
-import matematik.test_reel  # [şahit] reel gömme sınamaları -- M9-M16, M28-M30
-import matematik.test_hesap  # [şahit] tam aritmetik sınamaları -- M23-M27
-import matematik.test_palmer  # [şahit] Palmer sınamaları
-import nefs.melekeler  # [uzuv] KÜLLÎ MELEKE ÇİPİ -- 44 meleke, 20 mertebe, iki hat, tek dosya
-import nefs.musahede  # [uzuv] Lisan ve 2D izafî mevki -- tiktoken + Lie öteleme üreteçleri
-
-# ------------------------------------------------------------------
-#  arama
-# ------------------------------------------------------------------
-import nefs.gor  # [nazır] GÖRMEK -- manzara = gor(gorev)
-import nefs.dusun  # [nazır] DÜŞÜNMEK -- hal = dusun(manzara)
-import nefs.ara  # [nazır] ARAMAK -- Grover, Dürr--Høyer, adiyabatik, kuyudan çıkış
-import nefs.tart  # [nazır] TARTMAK -- mizan = tart(hal)
-import nefs.ogren  # [nazır] ÖĞRENMEK -- hoca, ve haddi
-import nefs.soyle  # [nazır] SÖYLEMEK -- ya ispat ya sükût
-import ogrenme.test_yaklasim  # [şahit] Küme 8: akış, had, asgarî, ezber, simgesel
-import ogrenme.test_arama  # [şahit] Küme 8: Grover, Dürr--Høyer, WKB, GRAPE, holonomi
-import nefs.test_olcek  # [şahit] Küme 8: çatı modeli -- M31, M32, M33, M34
-
-# ------------------------------------------------------------------
-#  fitrat
-# ------------------------------------------------------------------
-
-# ------------------------------------------------------------------
-#  hesap
-# ------------------------------------------------------------------
-
-# ------------------------------------------------------------------
-#  idrak
-# ------------------------------------------------------------------
-import nefs.musahede  # [uzuv] Çıktı ızgarasının şeklini **gösterimlerden çıkarmak**
-import idrak.test_sekil  # [şahit] ``idrak.sekil`` sınamaları — ispatlı şekil kestirimi ya da sükût
-
-# ------------------------------------------------------------------
-#  kuantum
-# ------------------------------------------------------------------
-import kuantum.devre  # [uzuv] Devre — durum vektörü simülatörü ve spektral işleçler
-import kuantum.eniyileme  # [uzuv] Adiyabatik geçiş, QAOA ve parametre-kaydırma kuralı
-import kuantum.kapilar  # [uzuv] Kapılar — tek ve çok kübitli üniter operatörler
-import kuantum.surekli  # [uzuv] Sürekli değişkenli (CV) fotonik operatörler — kesilmiş Fock uzayında
-import kuantum.test_kuantum  # [şahit] kuantum test takımı
-import kuantum.test_kuantum_ileri  # [şahit] ``kuantum.surekli``, ``kuantum.topolojik``, ``kuantum.eniyileme`` sınamaları
-import kuantum.test_yazmac_tevhid  # [şahit] KÜME 1 tevhidinin şahitleri -- altı dosya tek çipte, ölçüyle
-import kuantum.topolojik  # [uzuv] Topolojik anyon örgüsü ve hata düzeltme (QEC) kapıları
-
-# ------------------------------------------------------------------
-#  local_run
-# ------------------------------------------------------------------
-import local_run.ddp_entry  # [koşucu] (şerhsiz)
-import local_run.entry  # [koşucu] (şerhsiz)
-
-# ------------------------------------------------------------------
-#  main
-# ------------------------------------------------------------------
-import main.egitim  # [uzuv] Küllî Dimağ'ın eğitimi -- ARC metniyle, **gradyan inişi olmadan**
-import nefs.hamiltonyen  # [uzuv] Uzaya mahsus Hamiltonyenler ve kuantum evrimi
-import idrak.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur
-
-# ------------------------------------------------------------------
-#  mizan
-# ------------------------------------------------------------------
-import main.kaggle_cikarim  # [uzuv] Kaggle teslimat nazırı
-import main.kaggle_egitim  # [uzuv] Kaggle çoklu GPU tâlim nazırı
-import ogrenme.kaggle_donanim  # [uzuv] Kaggle donanım tespiti
-
-# ------------------------------------------------------------------
-#  nefs
-# ------------------------------------------------------------------
-import nefs.akit  # [uzuv] Kademe 1 -- **envanter ve arayüz akdi**
-import nefs.hiz  # [hakem] Hız defteri -- 700 MB/sn hedefinin üç ayrı muhasebesi
-import nefs.musahede  # [uzuv] Genlik gömmesi -- 4096 boyut 12 kübitte, 35 kübitlik adres yazmacı
-import nefs.zirh  # [uzuv] Dörtlü topolojik zırh -- gaye: çelişkisiz mana manifoldu
-import kuantum.kubit_taksimati  # [uzuv] 22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir
-import nefs.musahede  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
-import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
-import nefs.test_nefs  # [şahit] nefs sınamaları
-import nefs.uzaklik_olcumu  # [uzuv] Uzak çift kapısı: **takas ağı mı, MPO mu?** -- eşiği ölçüm koyar
-
-# ------------------------------------------------------------------
-#  ogrenme
-# ------------------------------------------------------------------
-import ogrenme  # [uzuv] ogrenme — operatör öğrenmesi: RKHS, DeepONet/FINO, ızgara, Grassmann
-import ogrenme.grassmann  # [uzuv] Grassmann manifoldu: izdüşüm, asal açılar, geodezik Exp/Log
-import ogrenme.izgara  # [uzuv] Izgara — adaptif B-spline düğümleri ve sembolik regresyon kapanışı
-import ogrenme.operator  # [uzuv] Operatör — DeepONet, FINO ve ızgaradan bağımsız operatör öğrenmesi
-import ogrenme.rkhs  # [uzuv] RKHS — yeniden üreten çekirdek Hilbert uzayı ve kapalı form çözüm
-import ogrenme.test_grassmann  # [şahit] ``ogrenme.grassmann`` sınamaları — K25 ve K26 tashihlerinin tartılması
-import ogrenme.test_ogrenme  # [şahit] ogrenme test takımı
-
-# ------------------------------------------------------------------
-#  olcek
-# ------------------------------------------------------------------
-
-# ------------------------------------------------------------------
-#  omega_kategori
-# ------------------------------------------------------------------
-
-# ------------------------------------------------------------------
-#  omega_kategori_nbe
-# ------------------------------------------------------------------
-
-# ------------------------------------------------------------------
-#  reel
-# ------------------------------------------------------------------
-
-# ------------------------------------------------------------------
-#  tanilama
-# ------------------------------------------------------------------
-try:                                   # torch şartlı
+# ══ TEBAA -- ağaçtan ÜRETİLDİ, elle tutulmuyor ══
+try:
+    import idrak  # [uzuv] idrak — külliyatın mimarisinin fiilî hâli: ARC-AGI-2 üzerinde çalışan 
+except Exception as _e:  # noqa: BLE001
+    EKSIK['idrak'] = str(_e)
+try:
+    import idrak.kategori  # [uzuv] 20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['idrak.kategori'] = str(_e)
+try:
+    import idrak.test_sekil  # [şahit] ``idrak.sekil`` sınamaları — ispatlı şekil kestirimi ya da sükût.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['idrak.test_sekil'] = str(_e)
+try:
+    import kuantum  # [uzuv] kuantum — kapılar, devreler, spektral işleçler ve topolojik mizan.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum'] = str(_e)
+try:
+    import kuantum.devre  # [uzuv] Devre — durum vektörü simülatörü ve spektral işleçler.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.devre'] = str(_e)
+try:
+    import kuantum.eniyileme  # [uzuv] Adiyabatik geçiş, QAOA ve parametre-kaydırma kuralı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.eniyileme'] = str(_e)
+try:
+    import kuantum.kapilar  # [uzuv] Kapılar — tek ve çok kübitli üniter operatörler.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.kapilar'] = str(_e)
+try:
+    import kuantum.kubit_taksimati  # [uzuv] 22 milyon kübitin Hilbert yazmaç taksimatı -- **tek zincirde**.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.kubit_taksimati'] = str(_e)
+try:
+    import kuantum.stabilizer  # [uzuv] Stabilizer rank ayrışımı (Bravyi–Gosset–Smith) -- Clifford çerçevesi +
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.stabilizer'] = str(_e)
+try:
+    import kuantum.surekli  # [uzuv] Sürekli değişkenli (CV) fotonik operatörler — kesilmiş Fock uzayında.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.surekli'] = str(_e)
+try:
+    import kuantum.test_kuantum  # [şahit] kuantum test takımı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.test_kuantum'] = str(_e)
+try:
+    import kuantum.test_kuantum_ileri  # [şahit] ``kuantum.surekli``, ``kuantum.topolojik``, ``kuantum.eniyileme`` sına
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.test_kuantum_ileri'] = str(_e)
+try:
+    import kuantum.topolojik  # [uzuv] Topolojik anyon örgüsü ve hata düzeltme (QEC) kapıları.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['kuantum.topolojik'] = str(_e)
+try:
+    import main  # [uzuv] Küllî Dimağ -- tecrit mimarisinin müstakil modeli (kütük H32).
+except Exception as _e:  # noqa: BLE001
+    EKSIK['main'] = str(_e)
+try:
+    import main.cikarim  # [taht] ÇIKARIM -- tahtın ikinci kapısı: **cevabı motor verir.**
+except Exception as _e:  # noqa: BLE001
+    EKSIK['main.cikarim'] = str(_e)
+try:
+    import main.egitim  # [taht] KÜLLÎ DİMAĞ -- YEREL VE GENEL TÂLİM MOTORU (PADİŞAH TÂLİM)
+except Exception as _e:  # noqa: BLE001
+    EKSIK['main.egitim'] = str(_e)
+try:
+    import main.kaggle_cikarim  # [taht] KÜLLÎ DİMAĞ -- KAGGLE ÇIKARIM VE TESLİMAT NAZIRI
+except Exception as _e:  # noqa: BLE001
+    EKSIK['main.kaggle_cikarim'] = str(_e)
+try:
+    import main.kaggle_egitim  # [taht] KÜLLÎ DİMAĞ -- KAGGLE ÇOKLU GPU TÂLİM NAZIRI
+except Exception as _e:  # noqa: BLE001
+    EKSIK['main.kaggle_egitim'] = str(_e)
+try:
+    import main.veri  # [taht] VERİ -- belirteçleri diske dizen ve Kaggle'a gönderen tek kapı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['main.veri'] = str(_e)
+try:
+    import matematik  # [uzuv] matematik -- sistemin bastığı değişmez analitik zemin.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik'] = str(_e)
+try:
+    import matematik.fitrat  # [uzuv] FITRAT ÇİPİ -- nedensellik, illiyet ve oyun dengesi.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.fitrat'] = str(_e)
+try:
+    import matematik.geometri  # [uzuv] HENDESE ÇİPİ -- Riemann manifoldu, Lie cebri, akışlar ve tam aritmetik
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.geometri'] = str(_e)
+try:
+    import matematik.mizan  # [uzuv] MÎZÂN ÇİPİ -- mantık, cedel ve epistemik hüküm.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.mizan'] = str(_e)
+try:
+    import matematik.test_akis  # [şahit] akis test takımı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_akis'] = str(_e)
+try:
+    import matematik.test_fitrat  # [şahit] fitrat test takımı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_fitrat'] = str(_e)
+try:
+    import matematik.test_hesap  # [şahit] ``hesap`` paketi sınamaları — M23, M24, M25/M26, M27.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_hesap'] = str(_e)
+try:
+    import matematik.test_karsi_olgusal  # [şahit] ``fitrat.karsi_olgusal`` sınamaları — Darboğaz 45-48.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_karsi_olgusal'] = str(_e)
+try:
+    import matematik.test_mizan  # [şahit] mizan test takımı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_mizan'] = str(_e)
+try:
+    import matematik.test_palmer  # [şahit] ``hesap.palmer`` sınamaları — dört itirazın tartılması ve geri almalar
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_palmer'] = str(_e)
+try:
+    import matematik.test_reel  # [şahit] ``reel`` paketi sınamaları — M9-M16, M28-M30.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_reel'] = str(_e)
+try:
+    import matematik.test_tip_teorisi  # [şahit] omega_kategori_nbe sınama takımı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_tip_teorisi'] = str(_e)
+try:
+    import matematik.test_token_uzaylari  # [şahit] token_uzaylari test takımı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.test_token_uzaylari'] = str(_e)
+try:
+    import matematik.tip_teorisi  # [uzuv] TİP TEORİSİ ÇİPİ -- kübik tip teorisi, NbE ve HoTT.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['matematik.tip_teorisi'] = str(_e)
+try:
+    import nefs  # [uzuv] nefs -- Nefs-i Müdrike mimarisi: 41 idrak melekesinin koşabilir hâli.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs'] = str(_e)
+try:
+    import nefs.akit  # [uzuv] Kademe 1 -- **envanter ve arayüz akdi**.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.akit'] = str(_e)
+try:
+    import nefs.ara  # [uzuv] ARAMAK -- en iyiyi bulmak, kuyuya düşersen çıkmak.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.ara'] = str(_e)
+try:
+    import nefs.dusun  # [uzuv] DÜŞÜNMEK -- manzarayı yazmaca alıp melekelerden geçirmek.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.dusun'] = str(_e)
+try:
+    import nefs.gor  # [uzuv] GÖRMEK -- dış âlemden tek nesne.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.gor'] = str(_e)
+try:
+    import nefs.hizli  # [uzuv] HIZLI -- boyut patlamasının dört tedbiri, GPU dahil.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.hizli'] = str(_e)
+try:
+    import nefs.illet  # [uzuv] İLLET -- akışın **sebep çizgesi** kurulur ve `fitrat/ayrisma.py` ile t
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.illet'] = str(_e)
+try:
+    import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.kule'] = str(_e)
+try:
+    import nefs.kulli_kayip  # [uzuv] KÜLLÎ KAYIP ÇİPİ -- ölçü funktörü, kademe hiyerarşisi ve küllî kayıp.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.kulli_kayip'] = str(_e)
+try:
+    import nefs.lif  # [uzuv] LİF -- kelimenin nereye takıldığı: tip → kategori → uzay → nokta.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.lif'] = str(_e)
+try:
+    import nefs.mantik  # [uzuv] MANTIK -- `mizan/` külliyatının ana akışa **uzuv** olarak bağlanması.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.mantik'] = str(_e)
+try:
+    import nefs.melekeler  # [uzuv] KÜLLÎ MELEKE ÇİPİ -- 44 meleke, 20 mertebe, iki hat, tek dosya (KÜME 2
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.melekeler'] = str(_e)
+try:
+    import nefs.musahede  # [uzuv] MÜŞAHEDE ÇİPİ -- izafî lisan, mübser duyu, şahitlik ve ARC verisi.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.musahede'] = str(_e)
+try:
+    import nefs.ogren  # [uzuv] ÖĞRENMEK -- mîzâna göre düzelt, ve haddini bil.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.ogren'] = str(_e)
+try:
+    import nefs.qegitim  # [uzuv] Ana modelin eğitimi -- **gradyan inişi yoktur** (kütük H3/H28).
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.qegitim'] = str(_e)
+try:
+    import nefs.qudit  # [uzuv] QUDİT -- dimağın yeni çekirdeği: SVD yok, MPS yok, ikili kübit yok.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.qudit'] = str(_e)
+try:
+    import nefs.qyazmac  # [uzuv] QYAZMAÇ -- qudit yazmacı: MPS'in yerine geçen durum kabı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.qyazmac'] = str(_e)
+try:
+    import nefs.soyle  # [uzuv] SÖYLEMEK -- ya motorun ürettiği, ya sükût.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.soyle'] = str(_e)
+try:
+    import nefs.tart  # [uzuv] TARTMAK -- hâl ne kadar doğru, kim sözünde durmadı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.tart'] = str(_e)
+try:
+    import nefs.test_nefs  # [şahit] nefs sınamaları.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.test_nefs'] = str(_e)
+try:
+    import nefs.zihin_durumu  # [uzuv] ZİHİN DURUMU -- qudit yazmacı üstünde. **MPS SİLİNDİ.**
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.zihin_durumu'] = str(_e)
+try:
+    import nefs.zirh  # [uzuv] ZIRH ÇİPİ -- dörtlü topolojik zırh, mantık sadakati ve MPO işareti.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['nefs.zirh'] = str(_e)
+try:
+    import ogrenme  # [uzuv] ogrenme — operatör öğrenmesi: RKHS, DeepONet/FINO, ızgara, Grassmann.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme'] = str(_e)
+try:
+    import ogrenme.grassmann  # [uzuv] Grassmann manifoldu: izdüşüm, asal açılar, geodezik Exp/Log.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.grassmann'] = str(_e)
+try:
+    import ogrenme.izgara  # [uzuv] Izgara — adaptif B-spline düğümleri ve sembolik regresyon kapanışı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.izgara'] = str(_e)
+try:
+    import ogrenme.kaggle_donanim  # [koşucu] Kaggle koşucusu: tek hücrelik başlangıç, çok cihazlı eğitim.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.kaggle_donanim'] = str(_e)
+try:
+    import ogrenme.morse  # [uzuv] MORSE-EULER TOPOLOJİK MUHASEBE (K27 katı sağlaması)
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.morse'] = str(_e)
+try:
+    import ogrenme.operator  # [uzuv] Operatör — DeepONet, FINO ve ızgaradan bağımsız operatör öğrenmesi.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.operator'] = str(_e)
+try:
+    import ogrenme.optimize  # [uzuv] TÂLİM VE ENİYİLEME ÇİPİ -- deterministik dalga tâliminin icra çekirdeğ
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.optimize'] = str(_e)
+try:
+    import ogrenme.rkhs  # [uzuv] RKHS — yeniden üreten çekirdek Hilbert uzayı ve kapalı form çözüm.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.rkhs'] = str(_e)
+try:
+    import ogrenme.test_arama  # [şahit] ``arama`` paketi sınamaları — M18, M19, M20, M21, M22.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.test_arama'] = str(_e)
+try:
+    import ogrenme.test_grassmann  # [şahit] ``ogrenme.grassmann`` sınamaları — K25 ve K26 tashihlerinin tartılması
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.test_grassmann'] = str(_e)
+try:
+    import ogrenme.test_ogrenme  # [şahit] ogrenme test takımı.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.test_ogrenme'] = str(_e)
+try:
+    import ogrenme.test_yaklasim  # [şahit] yaklasim sınamaları.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['ogrenme.test_yaklasim'] = str(_e)
+try:
     import tanilama.dogrula_pareto  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.dogrula_pareto'] = str(_e)
-try:                                   # torch şartlı
+try:
     import tanilama.graf_capasi  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.graf_capasi'] = str(_e)
-import tanilama.haraplama  # [hakem] HARAPLAMA (lezyon) ÇALIŞMASI -- 'melekeler ârızasız bir vücut mü?'
-try:                                   # torch şartlı
+try:
+    import tanilama.haraplama  # [hakem] HARAPLAMA (lezyon) ÇALIŞMASI -- "melekeler ârızasız bir vücut mü?"
+except Exception as _e:  # noqa: BLE001
+    EKSIK['tanilama.haraplama'] = str(_e)
+try:
     import tanilama.kok_avi  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.kok_avi'] = str(_e)
-try:                                   # torch şartlı
+try:
     import tanilama.kok_avi2  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.kok_avi2'] = str(_e)
-import tanilama.nizam  # [hakem] NİZAM -- kod tabanının **padişah bakışı**: kime kimin eli uzanıyor
-try:                                   # torch şartlı
+try:
+    import tanilama.nizam  # [hakem] NİZAM -- kod tabanının **padişah bakışı**: kime kimin eli uzanıyor.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['tanilama.nizam'] = str(_e)
+try:
+    import tanilama.nizam_dolasiklik  # [hakem] DOLAŞIKLIK NİZAMI -- Dosya 1'in hükmü **ölçülür**, iddia edilmez.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['tanilama.nizam_dolasiklik'] = str(_e)
+try:
     import tanilama.ram_repro  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.ram_repro'] = str(_e)
-try:                                   # torch şartlı
+try:
     import tanilama.referans_avi  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.referans_avi'] = str(_e)
-import tanilama.sadakat  # [hakem] MANTIĞA SADAKAT ÖLÇÜMÜ -- kütük H102'nin açık borcunun kapatılması
-import tanilama.tefti  # [hakem] TEFTİŞ -- padişahın **fiilen koşturduğu** her fonksiyon, dosyasıyla beraber
-try:                                   # torch şartlı
+try:
+    import tanilama.sadakat  # [hakem] MANTIĞA SADAKAT ÖLÇÜMÜ -- kütük H102'nin açık borcunun kapatılması.
+except Exception as _e:  # noqa: BLE001
+    EKSIK['tanilama.sadakat'] = str(_e)
+try:
     import tanilama.sahip_avi  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.sahip_avi'] = str(_e)
-try:                                   # torch şartlı
+try:
     import tanilama.sizinti_avi  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.sizinti_avi'] = str(_e)
-try:                                   # torch şartlı
+try:
     import tanilama.sizinti_gerileme_testi  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.sizinti_gerileme_testi'] = str(_e)
-try:                                   # torch şartlı
+try:
+    import tanilama.tefti  # [hakem] TEFTİŞ -- padişahın **fiilen koşturduğu** her fonksiyon, dosyasıyla be
+except Exception as _e:  # noqa: BLE001
+    EKSIK['tanilama.tefti'] = str(_e)
+try:
     import tanilama.umumi_profil  # [hakem] (şerhsiz)
-except Exception as _e:                # torch yoksa kayda geçer
+except Exception as _e:  # noqa: BLE001
     EKSIK['tanilama.umumi_profil'] = str(_e)
 
-# ------------------------------------------------------------------
-#  token_uzaylari
-# ------------------------------------------------------------------
-
-# ------------------------------------------------------------------
-#  yaklasim
-# ------------------------------------------------------------------
-
-#: Her modülün rolü ve vazifesi -- vazife modülün KENDİ şerhinden.
-#: **KÜME 9'DA TERKİP EDİLDİ.** Bu liste elle tutuluyordu ve KÜME 7/8
-#: dağıtmaları sonrası **bayatlamıştı**: 249 satırın 156'sı artık var
-#: olmayan paketleri (``omega_kategori``, ``token_uzaylari``,
-#: ``yaklasim``, ``olcek``, ``reel``, ``mizan``, ``fitrat``, ``akis``)
-#: gösteriyordu. Yani divan, hiç yüklenemeyecek bir tebaayı yokluyordu.
-#: Artık ``tanilama/nizam.py:modulleri_tara`` ile **ölçülen** ağaçtan
-#: türetilir; vazife satırı yine her modülün kendi şerhinin ilk
-#: satırıdır, uydurulmaz.
 KAYIT: Tuple[Tuple[str, str, str], ...] = (
     ('idrak', 'uzuv',
      'idrak — külliyatın mimarisinin fiilî hâli: ARC-AGI-2 üzerinde çalışan model.'),
-    ('idrak.cozucu', 'uzuv',
-     'Doğrulanabilir ARC çözücüsü: dik dönüşüm DSL\'i üzerinde arama.'),
     ('idrak.kategori', 'uzuv',
      '20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur.'),
     ('idrak.test_sekil', 'şahit',
@@ -282,22 +426,20 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'kuantum test takımı.'),
     ('kuantum.test_kuantum_ileri', 'şahit',
      '``kuantum.surekli``, ``kuantum.topolojik``, ``kuantum.eniyileme`` sınamaları.'),
-    ('kuantum.test_yazmac_tevhid', 'şahit',
-     'KÜME 1 TEVHİDİNİN ŞAHİTLERİ -- altı dosya tek çipte, ölçüyle.'),
     ('kuantum.topolojik', 'uzuv',
      'Topolojik anyon örgüsü ve hata düzeltme (QEC) kapıları.'),
-    ('kuantum.yazmac', 'uzuv',
-     'Kübit yazmacı: milyonlarca kübit, MERA, süperpozisyon ve **ölçülen** dolaşıklık.'),
     ('main', 'uzuv',
      'Küllî Dimağ -- tecrit mimarisinin müstakil modeli (kütük H32).'),
     ('main.cikarim', 'taht',
-     'KÜLLÎ DİMAĞ -- YEREL VE GENEL ÇIKARIM VE HÜKÜM MOTORU (PADİŞAH HÜKÜM)'),
+     'ÇIKARIM -- tahtın ikinci kapısı: **cevabı motor verir.**'),
     ('main.egitim', 'taht',
      'KÜLLÎ DİMAĞ -- YEREL VE GENEL TÂLİM MOTORU (PADİŞAH TÂLİM)'),
     ('main.kaggle_cikarim', 'taht',
      'KÜLLÎ DİMAĞ -- KAGGLE ÇIKARIM VE TESLİMAT NAZIRI'),
     ('main.kaggle_egitim', 'taht',
      'KÜLLÎ DİMAĞ -- KAGGLE ÇOKLU GPU TÂLİM NAZIRI'),
+    ('main.veri', 'taht',
+     'VERİ -- belirteçleri diske dizen ve Kaggle\'a gönderen tek kapı.'),
     ('matematik', 'uzuv',
      'matematik -- sistemin bastığı değişmez analitik zemin.'),
     ('matematik.fitrat', 'uzuv',
@@ -334,24 +476,18 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'ARAMAK -- en iyiyi bulmak, kuyuya düşersen çıkmak.'),
     ('nefs.dusun', 'uzuv',
      'DÜŞÜNMEK -- manzarayı yazmaca alıp melekelerden geçirmek.'),
-    ('nefs.golge', 'gölge',
-     'GÖLGE KÂHİN -- `reel/` ve `akis/` ana hattı **denetleyen** ikinci kaynak.'),
     ('nefs.gor', 'uzuv',
      'GÖRMEK -- dış âlemden tek nesne.'),
-    ('nefs.hamiltonyen', 'uzuv',
-     'Uzaya mahsus Hamiltonyenler ve kuantum evrimi.'),
-    ('nefs.hayal', 'uzuv',
-     '𝒪₂ HAYAL -- **sabit değil, çok kademeli ve destekli depo** (kütük H58).'),
-    ('nefs.hiz', 'uzuv',
-     'HIZ DEFTERİ -- 700 MB/sn hedefinin **iki ayrı muhasebesi**.'),
-    ('nefs.hukum_denetimi', 'uzuv',
-     'HÜKÜM DENETİMİ -- kütükteki her hükmün kodda **fiilen** koşup koşmadığı.'),
+    ('nefs.hizli', 'uzuv',
+     'HIZLI -- boyut patlamasının dört tedbiri, GPU dahil.'),
     ('nefs.illet', 'uzuv',
      'İLLET -- akışın **sebep çizgesi** kurulur ve `fitrat/ayrisma.py` ile tartılır.'),
     ('nefs.kule', 'uzuv',
      'Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması.'),
     ('nefs.kulli_kayip', 'uzuv',
      'KÜLLÎ KAYIP ÇİPİ -- ölçü funktörü, kademe hiyerarşisi ve küllî kayıp.'),
+    ('nefs.lif', 'uzuv',
+     'LİF -- kelimenin nereye takıldığı: tip → kategori → uzay → nokta.'),
     ('nefs.mantik', 'uzuv',
      'MANTIK -- `mizan/` külliyatının ana akışa **uzuv** olarak bağlanması.'),
     ('nefs.melekeler', 'uzuv',
@@ -362,20 +498,18 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'ÖĞRENMEK -- mîzâna göre düzelt, ve haddini bil.'),
     ('nefs.qegitim', 'uzuv',
      'Ana modelin eğitimi -- **gradyan inişi yoktur** (kütük H3/H28).'),
-    ('nefs.qkaide', 'uzuv',
-     'KÂİDE ORAĞI -- H91\'in icrası, **reel** yazmaçta.'),
+    ('nefs.qudit', 'uzuv',
+     'QUDİT -- dimağın yeni çekirdeği: SVD yok, MPS yok, ikili kübit yok.'),
+    ('nefs.qyazmac', 'uzuv',
+     'QYAZMAÇ -- qudit yazmacı: MPS\'in yerine geçen durum kabı.'),
     ('nefs.soyle', 'uzuv',
-     'SÖYLEMEK -- ya ispat, ya sükût.'),
+     'SÖYLEMEK -- ya motorun ürettiği, ya sükût.'),
     ('nefs.tart', 'uzuv',
      'TARTMAK -- hâl ne kadar doğru, kim sözünde durmadı.'),
     ('nefs.test_nefs', 'şahit',
      'nefs sınamaları.'),
-    ('nefs.test_olcek', 'şahit',
-     '``olcek.hiz`` sınamaları — M31, M32, M33, M34.'),
-    ('nefs.uzaklik_olcumu', 'uzuv',
-     'Uzak çift kapısı: **takas ağı mı, MPO mu?** -- eşiği ölçüm koyar.'),
     ('nefs.zihin_durumu', 'uzuv',
-     'Ana modelin kübit yazmacı -- ``S`` diye ayrı bir reel hâl YOKTUR.'),
+     'ZİHİN DURUMU -- qudit yazmacı üstünde. **MPS SİLİNDİ.**'),
     ('nefs.zirh', 'uzuv',
      'ZIRH ÇİPİ -- dörtlü topolojik zırh, mantık sadakati ve MPO işareti.'),
     ('ogrenme', 'uzuv',
@@ -433,7 +567,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
     ('tanilama.umumi_profil', 'hakem',
      '(şerhsiz)'),
 )
-
 
 def kademe2(girisler=None):
     """**2. KADEME ARTIK ÖLÇÜLÜR, ELLE YAZILMAZ.**

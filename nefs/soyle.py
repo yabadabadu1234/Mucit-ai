@@ -61,8 +61,42 @@ class Cevap:
     guven: float = 0.0
 
 
+def _sec(P: np.ndarray, ayna=None) -> int:
+    """BİR BELİRTEÇ SEÇ -- **zar atmadan**.
+
+    ===================================================================
+    KÖR SICAKLIK İMHA EDİLDİ (zabıt: yarı yansıtıcı ayna, IV.1)
+    ===================================================================
+
+    Burada evvelce şu vardı::
+
+        t = int(rastgele.choice(len(P), p=P))    # ← İMHA EDİLDİ
+
+    Yâni klasik LLM'lerin ``temperature`` kumarı: softmax çıktısına
+    dışarıdan bir zar. Zabıtın hükmü açıktır -- *"bu işlem kör bir
+    kumar zarından ibarettir; sıcaklığı artırdığınız an model saçmalar
+    ve halüsinasyona boğulur."*
+
+    Yerine gelen şey gürültü **eklemez**, durumu bir ışın bölücüden
+    geçirir: bir porta modelin o anki mana durumu, öteki porta
+    matematiksel vakum konur. Çıkan kıvılcım durumun **kendi faz
+    uzayından** doğar, dışarıdan serpiştirilmez. Sonra yine ``argmax``
+    alınır -- yâni seçim belirlenimcidir ve aynı girdi aynı çıktıyı
+    verir.
+
+    ``ayna`` yoksa hiçbir şey olmaz ve ``argmax(P)`` döner: ölçü
+    kapatılabilir, dolayısıyla kırmızı yanabilir (H90).
+    """
+    if ayna is None:
+        return int(np.argmax(P))
+    from .ayna import kivilcim
+    Q = kivilcim(P, ayna)
+    assert Q.size == P.size and np.all(np.isfinite(Q)), "kıvılcım bozuk"
+    return int(np.argmax(Q))
+
+
 def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
-                teta=None, d: int = 256, rastgele=None) -> tuple:
+                teta=None, d: int = 256, ayna=None) -> tuple:
     """QUDİT hattı: ``nefs/qyazmac.py`` -- **SVD yok, MPS yok**.
 
     Eski hat 126 kübitlik bir MPS zinciriydi ve her kapı bir SVD
@@ -88,8 +122,7 @@ def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
         P = P / P.sum()
         # Sükût quditte de MOTORDAN gelir: sükût sektörünün ağırlığı.
         sukutlar.append(float(np.ravel(q.alan_degeri("sukut"))[0]))
-        t = (int(rastgele.choice(len(P), p=P)) if rastgele is not None
-             else int(np.argmax(P)))
+        t = _sec(P, ayna)
         bedel -= float(np.log(P[t]))
         cikti.append(t)
         bag.append(t)
@@ -97,11 +130,12 @@ def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
 
 
 def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
-          rastgele=None) -> tuple:
+          ayna=None) -> tuple:
     """Bir dizi üret; ``(belirteçler, toplam −log P, sükûtlar)`` döndür.
 
-    ``rastgele`` verilirse dağılımdan **örneklenir**, verilmezse
-    ``argmax`` alınır (açgözlü).
+    ``ayna`` verilirse dağılım evvela yarı yansıtıcı aynadan geçirilir
+    (``nefs/ayna.py``), verilmezse doğrudan ``argmax`` alınır. **Zar
+    atılmaz** -- bkz. ``_sec``.
     """
     from .qegitim import adayin_tuttugu
     bag = list(baglam)
@@ -117,8 +151,7 @@ def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
         P = np.clip(P, 1e-12, None)
         P = P / P.sum()
         sukutlar.append(float(o.get("sukut", 0.0)))
-        t = (int(rastgele.choice(len(P), p=P)) if rastgele is not None
-             else int(np.argmax(P)))
+        t = _sec(P, ayna)
         bedel -= float(np.log(P[t]))
         cikti.append(t)
         bag.append(t)
@@ -176,18 +209,15 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
 
     tik = None
     if tikaniklik_bak:
-        try:
-            tik = float(ortu(gorev, ne="tıkanıklık")["H1"])
-        except Exception:                    # pragma: no cover
-            tik = None
+        # ``except`` kaldırıldı (ferman): tıkanıklık ölçülemiyorsa bu
+        # sessizce ``None``a düşecek bir şey değil, ölçünün kendisinin
+        # kırılmasıdır ve görülmelidir.
+        tik = float(ortu(gorev, ne="tıkanıklık")["H1"])
+        assert np.isfinite(tik), "tıkanıklık ölçüsü sonlu değil"
 
-    from .qegitim import adayin_tuttugu
-    try:
-        dizi, hedef = gorev_dizisi(gorev, hedef_indis=0)
-    except Exception as exc:                 # pragma: no cover
-        return _bitir(Cevap(gorev=gorev.ad, sukut=True, tikaniklik=tik,
-                            sebep="bağlam kurulamadı: %s"
-                                  % type(exc).__name__))
+    dizi, hedef = gorev_dizisi(gorev, hedef_indis=0)
+    assert len(dizi) > 0 and len(hedef) > 0, (
+        "bağlam yahut hedef BOŞ döndü -- boş bir şeyle üretime girilmez")
 
     h = [int(x) % int(sozluk) for x in hedef]
     if 0 < int(azami_uret) < len(h):
@@ -197,11 +227,11 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
 
     baglam = [int(x) % int(sozluk) for x in dizi]
 
-    def _cek(rast=None):
+    def _cek(ayna=None):
         if motor == "qudit":
             return _uret_qudit(baglam, len(h), pencere, sozluk,
-                               teta=teta, d=int(qudit_d), rastgele=rast)
-        return _uret(nefs, baglam, len(h), pencere, sozluk, rastgele=rast)
+                               teta=teta, d=int(qudit_d), ayna=ayna)
+        return _uret(nefs, baglam, len(h), pencere, sozluk, ayna=ayna)
 
     if usul == "açgözlü":
         # Açgözlü çözme: her adımda argmax. Yerel olarak en iyidir,
@@ -220,10 +250,21 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         # ``ara`` Dürr--Høyer ile ``O(√N)``da asgarîyi bulur ve
         # işaretli sayısını (``K``) bilmek istemez.
         from .ara import ara
-        r = np.random.default_rng(int(tohum))
+        from .ayna import AynaAyari
+        # ADAY ÇEŞİTLİLİĞİ ZARDAN DEĞİL, AYNA AÇISINDAN GELİR.
+        # Evvelce her aday ``rastgele.choice`` ile çekiliyordu: aynı
+        # tohumla bile aday sırası zarın hâline bağlıydı ve iki koşu
+        # arasındaki farkın sebebi ölçülemezdi. Şimdi ``k``ıncı aday
+        # ``θ_k`` açısıyla aynadan geçirilmiş durumun argmaxıdır --
+        # belirlenimci, tekrarlanabilir ve **niçin farklı olduğu
+        # söylenebilir**: kıvılcım o kadar açıldı.
+        n_ad_istenen = max(1, int(aday))
         adaylar = [_cek()]
-        for _ in range(max(0, int(aday) - 1)):
-            adaylar.append(_cek(r))
+        for k in range(1, n_ad_istenen):
+            adaylar.append(_cek(AynaAyari(
+                teta=(np.pi / 4) * k / n_ad_istenen,
+                sikma_fazi=2.0 * np.pi * k / n_ad_istenen,
+                tohum=int(tohum) + k)))
         bedeller = np.array([a[1] for a in adaylar], float)
         n_ad = len(adaylar)
         tam = 1
@@ -232,10 +273,8 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         if tam > n_ad:                        # Grover yazmacı 2^n ister
             bedeller = np.concatenate(
                 [bedeller, np.full(tam - n_ad, bedeller.max() + 1e3)])
-        try:
-            j = int(ara(bedeller, ne="en_iyi", yol="dürr")["x"])
-        except Exception:                     # pragma: no cover
-            j = int(np.argmin(bedeller))
+        j = int(ara(bedeller, ne="en_iyi", yol="dürr")["x"])
+        assert 0 <= j < len(bedeller), "arama aralık dışı indis verdi: %d" % j
         uretilen, bedel, sukutlar = adaylar[j if j < n_ad else 0]
     else:
         raise ValueError("çözme usulü bilinmiyor: %r" % (usul,))

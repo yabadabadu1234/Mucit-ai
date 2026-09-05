@@ -132,7 +132,21 @@ class QuditYazmac:
     """
 
     def __init__(self, ayar: Optional[QuditAyar] = None,
-                 n_satir: int = 2, satir_kubiti: int = 4) -> None:
+                 n_satir: int = 2, satir_kubiti: int = 4,
+                 n: Optional[int] = None, bag: Optional[int] = None,
+                 tohum: int = 0, tip=None, obek: Optional[int] = None,
+                 yigin: Optional[int] = None) -> None:
+        """Eski ``Yazmac(n, bag, tohum, tip, obek, yigin)`` imzası da
+        kabul edilir: MPS motoru silindi fakat onu çağıran yerler
+        (``nefs/zirh.py``, ``ogrenme/optimize.py``) duruyor.
+        ``bag`` **yok sayılır** -- quditte bağ yoktur; yok sayıldığı
+        burada yazıyor ki "χ'yi ayarladım" sanılmasın."""
+        if ayar is None and n is not None:
+            k = int(np.ceil(np.log2(max(int(n), 2))))
+            k = int(min(max(k, 1), 20))
+            ayar = QuditAyar(d=1 << k, lif=(1 << k,), tohum=int(tohum),
+                             yigin=int(yigin or 1))
+            n_satir, satir_kubiti = 1, k
         self.ayar = ayar or QuditAyar()
         a = self.ayar
         self._n_satir = int(n_satir)
@@ -214,6 +228,12 @@ class QuditYazmac:
             out[:, m, 1, 0] = c.conj()
         iz = out[:, :, 0, 0] + out[:, :, 1, 1]
         return out / np.maximum(iz[:, :, None, None].real, 1e-300)
+
+    def yuva_yogunluklari(self, yuvalar=None) -> np.ndarray:
+        """``tekil_yogunluklar``ın eski adı. Aynı hesap."""
+        if yuvalar is None:
+            yuvalar = list(range(min(8, self.d)))
+        return self.tekil_yogunluklar(yuvalar)
 
     def blok_dagilimi(self, bas: int, kac: int) -> np.ndarray:
         """``bas``tan ``kac`` yuvanın ortak dağılımı -- lif üstünde tam."""

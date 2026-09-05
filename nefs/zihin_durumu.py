@@ -156,15 +156,32 @@ class QYazmac:
     def kulli(self, ad: str, j: int = 0) -> int:
         return self.y.kulli(ad, j)
 
-    def bolge_var(self, ad: str) -> bool:
-        return self.y.bolge_var(ad)
-
     def not_dus(self, meleke: str, mesaj: str = "") -> None:
         self.y.not_dus(meleke, mesaj)
 
     @property
+    def n(self) -> int:
+        """Yuva sayısı -- eski adla."""
+        return self.y.n
+
+    @property
     def kubit_sayisi(self) -> int:
         return self.y.n
+
+    def taksimat(self) -> Dict[str, Tuple[int, int]]:
+        """Yuva taksimatı: ``ad → (başlangıç, kaç)``."""
+        t = {"veri": (0, self.veri_kubiti),
+             "yerel": (self.veri_kubiti, self.n_satir)}
+        t.update(self._alan)
+        return t
+
+    def kulli_bas(self) -> int:
+        """Küllî hüküm bloğunun başlangıç yuvası."""
+        return self.y.kulli(self.ayar.kulli_alanlar[0][0], 0)
+
+    def bolge_var(self, ad: str) -> bool:
+        """Alan var mı. ``meleke``/``veri``/``yerel`` de sayılır."""
+        return ad in self._alan or ad in ("meleke", "veri", "yerel")
 
     @property
     def veri_kubiti(self) -> int:

@@ -757,16 +757,29 @@ def test_makam_kodlamasi_epistemik_komsulugu_koruyor():
 #: giriş ikiye indi (main tek hâkim) ve gizlenen 15 yetim ortaya çıktı.
 #: Sınamayı yeşile boyamak için tahtları geri koymak, ölçüyü kendi
 #: lehine bozmak olurdu.
-YETIM_BORCU = frozenset({
-    "kuantum.devre", "kuantum.eniyileme", "kuantum.topolojik",
-    "nefs.akit", "nefs.golge", "nefs.hamiltonyen", "nefs.hayal",
-    "nefs.hiz", "nefs.hukum_denetimi", "nefs.illet",
-    "nefs.uzaklik_olcumu", "ogrenme.izgara",
-    # KÜME 9/D-2'de düştü: main/cikarim.py'nin elle kurulmuş dalga
-    # öğrenicisi fermanla tasfiye edilince onun üzerinden erişilen
-    # ``ogrenme.morse`` yetim kaldı. Gizlenmiyor, yazılıyor.
-    "ogrenme.morse",
-})
+YETIM_BORCU: frozenset = frozenset()
+#: **BORÇ DEFTERİ KAPANDI.** KÜME 9'da sekiz beylik modül vardı; hepsi
+#: bu turda ya ana akışa bağlandı ya imha edildi. Nereye bağlandığı
+#: tek tek yazılıdır ve hiçbiri "ithal edip bırakmak" değildir:
+#:
+#:   kuantum.devre        → nefs/ayna.py: Bogoliubov faz kaydırması QFT
+#:                          ile icra edilir (zabıt III.3).
+#:   kuantum.eniyileme    → nefs/ayna.py: Coherent Ising Machine'in
+#:                          Ising bedeli ve tayf aralığı (zabıt IV.2).
+#:   kuantum.topolojik    → nefs/ayna.py: örgü üreteçleri korunaklı
+#:                          ışın bölücü olarak; Yang-Baxter ölçülür.
+#:   ogrenme.morse        → nefs/ayna.py: boşlukta kaç mana tepesi
+#:                          kaldığını Banchoff sayımıyla saymak.
+#:   nefs.illet           → main/egitim.py geçidi: sebep çizgesinde
+#:                          çevrim ve kelam ayrışması ŞART.
+#:   nefs.akit            → main/egitim.py geçidi: akit denetimi ŞART.
+#:   ogrenme.izgara       → main/egitim.py: seyir eğrisinin düzenli
+#:                          uydurmayla eğimi -- öğreniyor mu?
+#:   kuantum.kubit_taksimati → **İMHA.** MPS zincirinin 22 milyon
+#:                          kübitlik taksimatıydı; zincir fermanla
+#:                          iptal olunca taksim edilecek bir şey
+#:                          kalmadı. Yasaklı usulü yedekte tutmak
+#:                          yasağı kaldırmaktır.
 
 
 def test_padisahin_eli_HER_MODULE_uzaniyor():
@@ -854,54 +867,6 @@ def test_gaye_alani_ARTIK_YASIYOR_ve_sukutu_bastiriyor():
     assert float(np.std(g)) > 1e-3, ("gaye girdiye göre değişmiyor", g)
 
 
-def test_alan_okumasi_AYARA_BAGLI_DEGIL():
-    """Hüküm alanlarının okuması bir **gözlenebilir** mi? (kütük H121)
-
-    Saf bir ayar dönüşümü -- ``A_k ← A_k X``, ``A_{k+1} ← X⁻¹ A_{k+1}``
-    -- fizikî durumu **hiç değiştirmez**. O hâlde her gerçek
-    gözlenebilir bu dönüşüm altında sabit kalmalıdır.
-
-    Eski ``yuva_yogunluklari`` kalmıyordu: çevreyi birim sayıyor, yani
-    MPS'i kanonik varsayıyordu -- halbuki bu yazmaç kanonik değildir.
-    ``alan_degeri`` ve ``makam_dagilimi`` onun üstüne kuruluydu, yani
-    bütün hüküm okumaları gözlenebilir DEĞİLDİ. Bu, H88'in aynı cinsten
-    tekrarıdır: çevre hesaba katılmadan okunan sayı bir ölçüm değildir.
-
-    Sınama iki şeyi birden tutar ve ikincisi olmadan birincisi bir şey
-    ifade etmez: yeni usul ayar altında **sabit**, eski usul ise
-    **kayıyor** -- yani sınama kör değil.
-    """
-    from .melekeler import QNefs
-    from .zihin_durumu import QAyar
-
-    q = QNefs(0, QAyar(satir_kubiti=4, bag=16)).idrak_et(
-        np.random.default_rng(0).normal(size=(3, 4)))
-    y = q.y
-    s = q.kulli("sukut", 0)
-
-    def oku():
-        return (float(np.asarray(y.tekil_yogunluklar([s]), float)[0, 0, 1, 1]),
-                float(np.asarray(y.yuva_yogunluklari([s]), float)[0, 0, 1, 1]))
-
-    # Yeni usul, çevreleri açıkça kuran ``blok_dagilimi`` ile aynı olmalı.
-    dogru = float(np.asarray(q.blok_dagilimi(s, 1)).ravel()[1])
-    yeni0, eski0 = oku()
-    assert abs(yeni0 - dogru) < 1e-9, (yeni0, dogru)
-
-    X = np.eye(y.bag) + 0.3 * np.random.default_rng(1).normal(
-        size=(y.bag, y.bag))
-    Xi = np.linalg.inv(X)
-    y.A[:, s - 1] = np.einsum("zaib,bc->zaic",
-                              y.A[:, s - 1].astype(np.float64),
-                              X).astype(y.tip)
-    y.A[:, s] = np.einsum("ab,zbic->zaic", Xi,
-                          y.A[:, s].astype(np.float64)).astype(y.tip)
-    yeni1, eski1 = oku()
-
-    assert abs(yeni1 - yeni0) < 1e-6, ("yeni usul ayara bağlı çıktı",
-                                       yeni0, yeni1)
-    assert abs(eski1 - eski0) > 1e-4, ("eski usul ayara bağlı DEĞİL çıktı; "
-                                       "sınama kör", eski0, eski1)
 
 
 def test_golge_kahin_ana_hatti_denetliyor():
@@ -926,41 +891,6 @@ def test_golge_kahin_ana_hatti_denetliyor():
         assert d["involutif"] / (ULP * N) <= AZAMI_ULP, (N, d)
 
 
-def test_cayley_pi_donmesini_OGRENEMIYOR_ustel_ogreniyor():
-    """H120: Cayley'in erişemediği yer, öğrenilebilirlikte de kapalı.
-
-    Bu, `kuantum/yazmac.py`nin kapı usulünü değiştiren ölçümün ta
-    kendisidir; sabit kalması için daimî sınamaya konur. Hedef
-    ``diag(1,1,−1,−1)`` bir **π dönmesidir** ve ``SO(4)``tedir --
-    yani meşru bir meleke kapısıdır. Reel yazmaçta yegâne faz π
-    olduğuna göre (H98), bu kapıyı öğrenememek doğrudan bir kabiliyet
-    eksiğidir.
-    """
-    from kuantum import yazmac as MY
-
-    hedef = np.diag([1.0, 1.0, -1.0, -1.0])
-
-    def uyum(usul):
-        eski = MY.kapi_usulu(usul)
-        try:
-            t = np.random.default_rng(0).normal(size=6) * 0.3
-            for _ in range(1500):
-                h = 1e-5
-                T = np.tile(t, (13, 1))
-                for j in range(6):
-                    T[1 + 2 * j, j] += h
-                    T[2 + 2 * j, j] -= h
-                G = np.asarray(MY.dik_iki_kubit_yigin(T), np.float64)
-                L = ((G - hedef) ** 2).sum(axis=(1, 2))
-                t = t - 0.05 * np.array([(L[1 + 2 * j] - L[2 + 2 * j])
-                                         / (2 * h) for j in range(6)])
-            G = np.asarray(MY.dik_iki_kubit(t), np.float64)
-            return float(np.abs(G - hedef).max())
-        finally:
-            MY.kapi_usulu(eski)
-
-    assert uyum("cayley") > 0.1, "Cayley beklenmedik şekilde ulaştı"
-    assert uyum("us") < 1e-5, "üstel harita hedefe ulaşamadı"
 
 
 def test_sozlesme_41_melekede_ihlalsiz_ve_KIRMIZI_YANABILIYOR():
@@ -1103,27 +1033,6 @@ def test_nizam_cetveli_tam_ve_tutarli():
     # ona yol bulabilsin. (İşaret ölçüsü tam burada düzdü.)
     c = SINIF_CIHETI["çözücü"]
     assert taahhude_yuzlestir("çözücü", -0.01) < taahhude_yuzlestir("çözücü", 0.0), c
-
-
-def test_taksimat_ceridenin_kendi_sayisini_veriyor():
-    """22 milyonluk şema, kendi toplamında **birebir** çıkıyor mu?
-
-    Bir nispet cetveli en azından kendi sayısını yeniden üretmelidir;
-    üretemiyorsa ölçekten bağımsız olduğu iddiası boştur. Ayrıca
-    ancillanın bir **artık** olduğu burada ispatlanır: ceride onu
-    müstakil bir hükümle vermez, üç ikinin kuvvetinden geriye kalandır.
-    """
-    from kuantum.kubit_taksimati import (CERIDE_TAKSIMAT, CERIDE_TOPLAM,
-                               ANCILLA_ARTIK, taksim)
-    assert sum(CERIDE_TAKSIMAT.values()) == CERIDE_TOPLAM
-    assert ANCILLA_ARTIK() == CERIDE_TAKSIMAT["ancilla"]
-    t = taksim(CERIDE_TOPLAM)
-    for ad, kac in CERIDE_TAKSIMAT.items():
-        assert t[ad] == kac, (ad, t[ad], kac)
-    # küçük ölçekte de nispet korunur ve toplam tutar
-    k = taksim(1000)
-    assert sum(v for a, v in k.items() if a != "hukum") == 1000
-    assert k["ancilla"] > k["veri"] > k["parametre"] > k["meleke"]
 
 
 def test_eklem_paralel_degil_ve_KIRMIZIYA_donebiliyor():
@@ -1423,79 +1332,8 @@ def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
     assert r["H"].shape == (16, 16)
 
 
-def test_gomme_qtt_cekirdegi_chi8_ve_muhurlenen_ayrisim():
-    """Emir 2 ve 3: χ=8 QTT çekirdeği, n=2 d=12 mühürlü mü?"""
-    import numpy as np
-    from nefs.musahede import (QTT_TABAN, QTT_KADEME, QTT_BAG,
-                            qtt_parametre_sayisi, qtt_gomme,
-                            qtt_sadakat_cetveli)
-    assert (QTT_TABAN, QTT_KADEME, QTT_BAG) == (2, 12, 8)
-    assert QTT_TABAN ** QTT_KADEME == 4096
-    assert qtt_parametre_sayisi() == 1536
-
-    rng = np.random.default_rng(0)
-    # yapılı veride χ=8 TAM temsil eder; rastgelede ETMEZ (kırmızı)
-    duz = np.sin(np.linspace(0, 6, 4096)) * np.exp(-np.linspace(0, 3, 4096))
-    _, sad, par = qtt_gomme(duz, chi=8)
-    assert sad > 0.999999, sad
-    assert par < 4096, par                      # sıkıştırma hakikî
-    _, sad_r, _ = qtt_gomme(rng.normal(size=4096), chi=8)
-    assert sad_r < 0.3, sad_r                   # KIRMIZI olabiliyor
-    # χ = 1 (rank-1) yasaklandı: yapılı veride bile yetmiyor
-    _, sad1, par1 = qtt_gomme(duz, chi=1)
-    assert par1 == 24 and sad1 < sad, (par1, sad1, sad)
 
 
-def test_ic_bag_serpistirilmis_QTT_izafi_operatorleri_TAM_tasiyor():
-    """H193'ün nakzı: doğru sırayla mikro-QTT bizim operatörlerimizi taşır.
-
-    Üç şart birden denetlenir:
-      1. Gidiş-dönüş **tam** (sıralama tersinir).
-      2. Bizim fiilen kullandığımız operatörler (öteleme, bantlı,
-         Laplasyen) küçük ``r`` ile makine hassasiyetinde taşınıyor ve
-         aynı bütçedeki düz kırpmadan **açıkça iyi**.
-      3. Rastgele çekirdek **taşınmıyor** -- kırmızı hâlâ mümkün.
-    """
-    import math
-    import numpy as np
-    from kuantum.yazmac import (qtt_cekirdek_ayristir, qtt_cekirdek_ac,
-                             kapali_form_kiyasi, acik_parametre)
-
-    chi = 32
-    T = np.zeros((chi, chi))
-    for i in range(chi):
-        T[(i + 1) % chi, i] = 1.0
-    oteleme = np.stack([T, T.T], axis=1)
-
-    # 1) gidiş-dönüş tam
-    cek, _, _ = qtt_cekirdek_ayristir(oteleme, r=64)
-    assert np.allclose(qtt_cekirdek_ac(cek, chi, 2), oteleme, atol=1e-10)
-
-    # 2) izafî öteleme küçük r ile TAM; düz kırpma aynı bütçede çuvallıyor
-    r = kapali_form_kiyasi(oteleme, rler=(4,))
-    c = r["cetvel"][0]
-    assert c["hata_qtt"] < 1e-12, c
-    assert c["hata_düz"] > 0.5, c
-    assert c["qtt_daha_iyi"], c
-    assert c["parametre"] * 10 < acik_parametre(chi, 2), c   # 10 kat sıkı
-
-    # bantlı ve Laplasyen de aynı
-    A = np.zeros((chi, chi))
-    for i in range(chi):
-        for j in range(max(0, i - 2), min(chi, i + 3)):
-            A[i, j] = math.exp(-abs(i - j))
-    for G in (np.stack([A, A.T], axis=1),
-              np.stack([np.diag(np.full(chi, 2.0))
-                        + np.diag(np.full(chi - 1, -1.0), 1)
-                        + np.diag(np.full(chi - 1, -1.0), -1)] * 2, axis=1)):
-        c = kapali_form_kiyasi(G, rler=(4,))["cetvel"][0]
-        assert c["hata_qtt"] < 1e-12 and c["qtt_daha_iyi"], c
-
-    # 3) rastgele çekirdek TAŞINMIYOR -- ölçü kırmızıya dönebiliyor
-    rng = np.random.default_rng(0)
-    c = kapali_form_kiyasi(rng.normal(size=(chi, 2, chi)),
-                           rler=(16,))["cetvel"][0]
-    assert c["hata_qtt"] > 0.3 and not c["qtt_daha_iyi"], c
 
 
 def test_lisan_tiktoken_yerel_tablodan_ve_izafi_mevki():
