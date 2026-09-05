@@ -4394,3 +4394,156 @@ def rapor() -> str:                            # pragma: no cover
 
 if __name__ == "__main__":                     # pragma: no cover
     print(rapor())
+
+
+# ══════════════════════════════════════════════════════════════════
+#  KÜME 9/E -- `omega_kategori/` (NbE ÖNCESİ SÜRÜM) CEVHERİ
+# ══════════════════════════════════════════════════════════════════
+#
+#  KÜME 7'de bu çip kurulurken şöyle yazmışım:
+#
+#      "Terkipte YALNIZ NbE sürümü alındı; eski sürüm tasfiye edildi."
+#
+#  Bu imhaydı ve kaidenin ihlaliydi ("imha yok, cevher toplama var").
+#  İki sürüm ölçüldü (9 719 satır, 10 dosya):
+#
+#      * 8 dosya BİREBİR AYNI (aralik, geometri, iliskiler,
+#        kutuphane, sozdizim, turetimler, yazdir…).
+#      * Eskide olup NbE'de olmayan 34 ad çıktı. Çoğu terim seviyesi
+#        normalleştirmedir (`whnf`, `_nf_hesapla`, `kanonik`,
+#        `_eta_esit`) ve NbE onları KASTEN kaldırır -- eta burada
+#        bedavaya gelir (`_eta_pi`, `_eta_yol`). İki yönlü
+#        denetleyici de kayıp değil, ad değiştirmiş
+#        (`sentez`/`tipini_ver` → `sentezle`/`denetle`);
+#        `buzukten_tamamla` → `denklikle_tamamla`.
+#
+#  GERİYE İKİ HAKİKÎ CEVHER KALDI ve ancak ÖLÇTÜKTEN sonra görüldü;
+#  ikisi de bu çipte hiç yoktu:
+#
+#      serbest  -- terimdeki serbest TERİM değişkenleri. Çipte yalnız
+#                  `ara_serbest` vardı; o serbest ARALIK
+#                  değişkenlerini verir. İkisi ayrı şeydir.
+#      pres     -- Kan kompozisyonunun taşınma lemması. Çipte hiç
+#                  geçmiyordu (arandı: 0 kere).
+
+def _alt_terimler(t: Terim) -> List[Terim]:
+    """Bağlayıcı yapısını umursamadan doğrudan alt terimler."""
+    if isinstance(t, Pi) or isinstance(t, Sigma):
+        return [t.alan, t.hedef]
+    if isinstance(t, Lam):
+        return [t.govde]
+    if isinstance(t, Uygula):
+        return [t.fonk, t.arg]
+    if isinstance(t, Cift):
+        return [t.bir, t.iki]
+    if isinstance(t, (Birinci, Ikinci)):
+        return [t.cift]
+    if isinstance(t, (Ard, Poz, NegArd)):
+        return [t.alt]
+    if isinstance(t, DogalInd):
+        return [t.hedef, t.sfr_dali, t.ard_dali, t.sayi]
+    if isinstance(t, TamsayiInd):
+        return [t.hedef, t.poz_dali, t.neg_dali, t.sayi]
+    if isinstance(t, CemberInd):
+        return [t.hedef, t.taban_dali, t.dongu_dali, t.nokta]
+    return []
+
+def serbest(t: Terim) -> Set[str]:
+    """Terimdeki serbest TERİM değişkenleri."""
+    g: Set[str] = set()
+
+    def yur(t: Terim, bagli: Set[str]) -> None:
+        if isinstance(t, Deg):
+            if t.ad not in bagli:
+                g.add(t.ad)
+            return
+        if isinstance(t, (Pi, Sigma)):
+            yur(t.alan, bagli)
+            yur(t.hedef, bagli | {t.ad})
+            return
+        if isinstance(t, Lam):
+            yur(t.govde, bagli | {t.ad})
+            return
+        if isinstance(t, DogalInd):
+            yur(t.hedef, bagli | {t.ad})
+            yur(t.sfr_dali, bagli)
+            yur(t.ard_dali, bagli | {t.n_ad, t.rec_ad})
+            yur(t.sayi, bagli)
+            return
+        if isinstance(t, TamsayiInd):
+            yur(t.hedef, bagli | {t.ad})
+            yur(t.poz_dali, bagli | {t.poz_ad})
+            yur(t.neg_dali, bagli | {t.neg_ad})
+            yur(t.sayi, bagli)
+            return
+        if isinstance(t, CemberInd):
+            yur(t.hedef, bagli | {t.ad})
+            yur(t.taban_dali, bagli)
+            yur(t.dongu_dali, bagli)
+            yur(t.nokta, bagli)
+            return
+        if isinstance(t, YolP):
+            yur(t.cizgi, bagli)
+            yur(t.sol, bagli)
+            yur(t.sag, bagli)
+            return
+        if isinstance(t, YolLam):
+            yur(t.govde, bagli)
+            return
+        if isinstance(t, YolUygula):
+            yur(t.yol, bagli)
+            return
+        if isinstance(t, Transp):
+            yur(t.cizgi, bagli)
+            yur(t.u0, bagli)
+            return
+        if isinstance(t, Komp):
+            yur(t.cizgi, bagli)
+            for (_, govde) in t.dallar:
+                yur(govde, bagli)
+            yur(t.u0, bagli)
+            return
+        if isinstance(t, HKomp):
+            yur(t.tip, bagli)
+            for (_, govde) in t.dallar:
+                yur(govde, bagli)
+            yur(t.u0, bagli)
+            return
+        if isinstance(t, Yapistir):
+            yur(t.taban, bagli)
+            for (_, T, e) in t.dallar:
+                yur(T, bagli)
+                yur(e, bagli)
+            return
+        if isinstance(t, YapistirTerim):
+            yur(t.taban_terim, bagli)
+            for (_, govde) in t.dallar:
+                yur(govde, bagli)
+            return
+        if isinstance(t, Coz):
+            yur(t.taban, bagli)
+            for (_, T, e) in t.dallar:
+                yur(T, bagli)
+                yur(e, bagli)
+            yur(t.govde, bagli)
+            return
+        for alt in _alt_terimler(t):
+            yur(alt, bagli)
+
+    yur(t, set())
+    return g
+
+def _yuz_i_den_bagimsiz(y: Yuz, ad: str) -> bool:
+    return all(a != ad for (a, _) in y)
+
+def pres(i: str, A_cizgi: Terim, T_cizgi: Terim, f_i: Terim, f_0: Terim,
+         psi_dallar: Sequence[Tuple[Yuz, Terim]], u0: Terim) -> Terim:
+    """``ω : Path A(1) (f(1) (comp^i T [ψ↦u] u0)) (comp^i A [ψ↦ f i (u i)] (f(0) u0))``
+
+    ``ω = <j> comp^i A [ψ ↦ f i (u i), (j=1) ↦ f i (fill^i T [ψ↦u] u0)] (f(0) u0)``
+    """
+    j = K.taze("j")
+    tfill = K.dolgu(i, T_cizgi, psi_dallar, u0)
+    dallar = [(y, K.uygula(f_i, govde)) for (y, govde) in psi_dallar]
+    dallar.append((S.yuz(**{j: 1}), K.uygula(f_i, tfill)))
+    return YolLam(j, K.komp(i, A_cizgi, dallar, K.uygula(f_0, u0)))

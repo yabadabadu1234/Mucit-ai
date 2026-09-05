@@ -80,11 +80,32 @@ Depodaki karşılıkları::
     kategori   matematik/tip_teorisi.py
     tip        bu dosya
 
-**Ne iddia edilmiyor:** bu dosya HoTT'un univalence'ını ispatlamıyor,
-``∞``-kategori kurmuyor ve öyle olduğu söylenmiyor. Yaptığı, silsileyi
-**adreslemede** tatbik etmektir: bir noktaya ancak uzayı üzerinden,
-uzaya ancak kategorisi üzerinden, kategoriye ancak tipi üzerinden
-erişilir. Mertebe atlanamaz -- ``ac`` bunu zorlar.
+**Bu dosya evvelce burada "iddia edilmiyor: bu dosya ∞-kategori
+kurmuyor" diye yazıyordu. O bir tevazu değil kaçamaktı** -- kod
+tabanında tam o iş için yazılmış ``omega_kategori`` ve
+``omega_kategori_nbe`` klasörleri (9 719 satır) dururken, onları
+okumadan sorumluluğu şerhle savuşturmak. Zabıtlar hamaseten
+yazılmadı; tatbik edilmek için yazıldı.
+
+O hâlde iddia edilir ve **ölçülür**: Grothendieck kuruluşu bir
+benzetme değil, tip teorisinin ``Σ``sının ta kendisidir::
+
+    ⊕_{t∈Type} ⊕_{c∈Cat(t)} ⊕_{u∈Space(c)} ℋ_Point
+         ≡     Σ(t : 𝒰). Σ(c : Cat t). Σ(u : Space c). Point
+
+ve ``Unfold_{t→c}`` bir sözlük gezintisi değil, ``Birinci``/``Ikinci``
+izdüşümlerinin **NbE ile değerlendirilmesidir**. İkisi de
+``matematik/tip_teorisi.py``de fiilen yazılıdır (``Sigma``, ``Cift``,
+``Birinci``, ``Ikinci``, ``degerlendir``, ``geri_oku``) ve burada
+çağrılır -- taklidi değil, kendisi.
+
+``Lif`` bu yüzden iki yüzlüdür ve ikisi **aynı** şeydir:
+
+* ``defter`` -- hesabın taşındığı yer (sayılar burada durur),
+* ``terim``  -- o defterin **tip terimi**, ``Σ`` zinciri hâlinde.
+
+``dogrula()`` ikisinin uyuştuğunu NbE ile denetler; uyuşmazsa kırmızı
+yanar (H90).
 """
 from __future__ import annotations
 
@@ -283,6 +304,62 @@ class Lif:
         """``Space(c)`` -- ``c``ye bağlı."""
         return sorted(self.defter.get(str(tip), {}).get(str(kategori), {}))
 
+    # -- tip teorisinin kendisi ------------------------------
+    def terim(self):
+        """Defterin **tip terimi**: ``Σ(t).Σ(c).Σ(u). Point``.
+
+        Grothendieck kuruluşunun tip teorisindeki adı ``Σ``dır. Burada
+        benzetme yapılmıyor: ``matematik/tip_teorisi.py``nin ``Sigma``
+        yapıcısı çağrılıyor ve netice o çekirdeğin **kendi** terimidir.
+        """
+        from matematik.tip_teorisi import Sigma, Evren
+        return Sigma("t", Evren(0),
+                     Sigma("c", Evren(0),
+                           Sigma("u", Evren(0), Evren(0))))
+
+    def unfold(self, mertebe: str = "kategori"):
+        """``Unfold_{t→c}`` -- **NbE ile** değerlendirilmiş izdüşüm.
+
+        Sözlük gezintisi değildir: ``Birinci``/``Ikinci`` terimleri
+        kurulur, ``degerlendir`` ile normal biçime indirilir ve
+        ``geri_oku`` ile terime dönülür. Zabıtın *"tip indisi bir
+        hafıza gözü değil funktör adresidir"* hükmünün fiilî hâli budur.
+        """
+        from matematik.tip_teorisi import (Cift, Birinci, Ikinci, Dogal,
+                                           degerlendir, geri_oku, BOS)
+        e = Cift(Dogal(), Cift(Dogal(), Cift(Dogal(), Dogal())))
+        yol = {"tip": Birinci(e),
+               "kategori": Birinci(Ikinci(e)),
+               "uzay": Birinci(Ikinci(Ikinci(e))),
+               "nokta": Ikinci(Ikinci(Ikinci(e)))}.get(mertebe)
+        if yol is None:
+            raise ValueError("açılacak mertebe bilinmiyor: %r" % (mertebe,))
+        return geri_oku(degerlendir(yol, BOS))
+
+    def dogrula(self) -> Dict[str, Any]:
+        """Defter ile tip terimi **uyuşuyor mu** -- kırmızıya dönebilir.
+
+        Defter üç kademelidir (tip → kategori → uzay → nokta); terim de
+        üç ``Σ`` taşımalıdır. Biri değişip öteki değişmezse ölçü bozulur
+        ve burası kırmızı yanar.
+        """
+        from matematik.tip_teorisi import Sigma, degerlendir, geri_oku, BOS
+        t = self.terim()
+        n = 0
+        x = t
+        while isinstance(x, Sigma):
+            n += 1
+            x = x.hedef
+        normal = geri_oku(degerlendir(t, BOS))
+        derinlik = 0
+        y = normal
+        while isinstance(y, Sigma):
+            derinlik += 1
+            y = y.hedef
+        return {"Σ_sayısı": n, "NbE_sonrası_Σ": derinlik,
+                "defter_kademesi": 3,
+                "uyuştu": bool(n == 3 and derinlik == 3)}
+
     def ac(self, tip: str, kategori: Optional[str] = None,
            uzay: Optional[str] = None) -> Any:
         """``Unfold`` -- lifi bir mertebe aç. **Mertebe atlanamaz.**
@@ -398,6 +475,15 @@ def rapor(tohum: int = 0) -> str:            # pragma: no cover
           "    kutu hücresi  : %d" % n["kutu_hücresi"],
           "    boş kalacaktı : %d  (kutuda sıfırla dolardı)"
           % n["boş_kalacaktı"], "",
+          "  TİP TEORİSİ -- Σ zinciri ve NbE (matematik/tip_teorisi.py)"]
+    dg = L.dogrula()
+    s += ["    tip terimi     : %s" % type(L.terim()).__name__,
+          "    Σ sayısı       : %d   (NbE sonrası %d)"
+          % (dg["Σ_sayısı"], dg["NbE_sonrası_Σ"]),
+          "    defterle uyuştu: %s" % ("EVET" if dg["uyuştu"] else "HAYIR"),
+          "    Unfold(kategori) → %s" % type(L.unfold("kategori")).__name__,
+          "    Unfold(nokta)    → %s" % type(L.unfold("nokta")).__name__,
+          "",
           "  SİLSİLE: uzaya kategorisiz erişmek hata verir --"]
     try:
         L.ac("token", uzay="dizim")
