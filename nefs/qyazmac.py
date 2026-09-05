@@ -151,6 +151,19 @@ class QuditYazmac:
         a = self.ayar
         self._n_satir = int(n_satir)
         self._satir_kubiti = int(satir_kubiti)
+        # ── ÖNBELLEKLER (hız teftişinin ölçtüğü Python yükü) ──────
+        self._yuva_onbellek: Dict[int, Tuple[int, int]] = {}
+        #: Bütün lifler ikinin kuvveti mi? Bit düzlemi yolu buna bakar
+        #: ve evvelce her ``uzak_cift`` çağrısında yeniden hesaplanıyordu
+        #: (profilde 922 857 üreteç çağrısı).
+        self._ikinin_kuvveti = all(
+            (int(x) & (int(x) - 1)) == 0 for x in tuple(self.ayar.lif))
+        #: ``lif[k]``ın önü ve ardındaki çarpımlar -- eksen bölmek için.
+        self._bolum_onbellek: Dict[int, Tuple[int, int]] = {}
+        #: Yuva yazmaçta fiilen var mı? (önbellek)
+        self._gecerli_onbellek: Dict[int, bool] = {}
+        #: Düşen kapı sayacı -- **saklanmıyor**, ``beyan``da görünür.
+        self._dusen_kapi = 0
         r = np.random.default_rng(int(a.tohum))
         self.B = int(a.yigin)
         self.d = int(a.d)
@@ -371,6 +384,67 @@ class QuditYazmac:
         self.psi = np.moveaxis(T, -1, k + 1).reshape(self.B, self.d)
         self._kapi += 1
 
+    def bit_kapisi(self, k: int, alt: int, G: np.ndarray) -> None:
+        """``k``ıncı lifin ``alt``ıncı BİT DÜZLEMİNE ``2×2`` kapı.
+
+        ``O(B·d)``, **hiçbir matris tahsis edilmez**.
+
+        ===============================================================
+        NİÇİN VAR: ÖLÇÜLEN DARBOĞAZ (hız teftişi)
+        ===============================================================
+
+        ``tanilama/hiz_teftisi.py`` ölçtü: bir ileri geçiş **4,61 sn**
+        sürüyor ve profilde suçlu tekti::
+
+            lif_kapisi   15 031 çağrı   2,45 sn
+            numpy.zeros  30 449 çağrı   1,48 sn
+            numpy.eye    16 024 çağrı   1,65 sn
+
+        Sebep: bir kübit kapısı ``_gomulu`` ile ``n×n`` bir dizeye
+        gömülüyor (``np.eye(n)`` + ``n/2`` adımlık Python döngüsü),
+        sonra ``lif_kapisi`` onu bütün durumla çarpıyordu:
+        ``O(B·d·n)``. ``n = 256`` için bu, gerekenin **256 katı**.
+
+        Halbuki ``2×2`` bir kapı yalnız **iki taban durumunu**
+        karıştırır. Lif boyu ikinin kuvvetiyse (``16`` ve ``256``,
+        ikisi de öyle) düz indis serbestçe üçe bölünür::
+
+            i_k = üst·(2b) + bit·b + alt_kısım        (b = 2^alt)
+
+        Eksen bölmek **bedava bir reshape**tir (durum C-bitişiktir,
+        ``moveaxis`` bile gerekmez). Kapı o ``2``lik eksene doğrudan
+        vurulur:
+
+            T[…,0,…] ← G₀₀·T[…,0,…] + G₀₁·T[…,1,…]
+            T[…,1,…] ← G₁₀·T[…,0,…] + G₁₁·T[…,1,…]
+
+        Netice ``lif_kapisi``ninkiyle **birebir** aynıdır (sınamada
+        ölçülür); yalnız ``n`` kat ucuzdur ve tahsis yapmaz.
+        """
+        lif = tuple(self.ayar.lif)
+        if not 0 <= int(k) < len(lif):
+            raise ValueError("lif %d yok; %d lif var" % (k, len(lif)))
+        nk = int(lif[k])
+        assert nk & (nk - 1) == 0, (
+            "bit düzlemi kapısı ikinin kuvveti olan lif ister: lif[%d]=%d"
+            % (k, nk))
+        b = 1 << int(alt)
+        if b >= nk:
+            return                                   # o düzlem yok
+        G = np.asarray(G, complex).reshape(2, 2)
+        on, ard = self._bolum(int(k))
+        # Eksen bölme: hepsi bedava reshape (kopya yok).
+        T = self.psi.reshape(self.B, on, nk // (2 * b), 2, b, ard)
+        # **TEK KOPYA YETER.** Evvelce iki dilim de kopyalanıyordu
+        # (profilde 447 ``copy`` çağrısı, 0,345 sn). Halbuki ``a1``
+        # ikinci satıra kadar **yazılmaz**, o hâlde görünüm olarak
+        # kalabilir ve hâlâ eski değeri taşır. Netice birebir aynıdır.
+        a0 = T[:, :, :, 0, :, :].copy()
+        a1 = T[:, :, :, 1, :, :]
+        T[:, :, :, 0, :, :] = G[0, 0] * a0 + G[0, 1] * a1
+        T[:, :, :, 1, :, :] = G[1, 0] * a0 + G[1, 1] * a1
+        self._kapi += 1
+
     def faz(self, teta) -> None:
         """Cartan köşegeni: ``|Ψ⟩ ← e^{−iθ·h} ⊙ |Ψ⟩``. ``O(d)``.
 
@@ -517,18 +591,67 @@ class QuditYazmac:
     #  kodlamaya da lüzum kalmaz.
 
     def _lif_no(self, yuva: int) -> Tuple[int, int]:
-        """Eski yuva indisini ``(lif, alt)`` adresine çevir.
+        """Eski yuva indisini ``(lif, alt)`` adresine çevir -- **önbellekli**.
 
         Eski zincirde ``veri(i,j)``, ``yerel(i)``, ``kulli(ad,j)`` hep
         tek bir tam sayı yuvaydı. Quditte satırlar ayrı liflerdir,
         hüküm alanları ise **hüküm lifinin sektörleridir**.
+
+        **ÖNBELLEK NİÇİN.** Profil ölçtü: tek ileri geçişte bu fonksiyon
+        **1 029 599 kere** çağrılıyor ve 0,523 sn yiyor. Hesabın kendisi
+        iki bölme; pahalı olan Python çağrısının kendisidir. Sonuç
+        yuvaya göre **sabittir** (ayar koşu boyunca değişmez), o hâlde
+        bir kere hesaplanıp saklanır. Bu bir yaklaşıklık değil,
+        aynı hesabın hatırlanmasıdır.
         """
         y = int(yuva)
+        c = self._yuva_onbellek.get(y)
+        if c is not None:
+            return c
         ns, sk = self._n_satir, self._satir_kubiti
         satir_yuva = sk + int(self.ayar.yerel_kubit)
         if y < ns * satir_yuva:
-            return (y // satir_yuva, y % satir_yuva)
-        return (ns, y - ns * satir_yuva)                 # hüküm lifi
+            c = (y // satir_yuva, y % satir_yuva)
+        else:
+            c = (ns, y - ns * satir_yuva)                # hüküm lifi
+        self._yuva_onbellek[y] = c
+        return c
+
+    def gecerli(self, yuva: int) -> bool:
+        """Bu yuva yazmaçta FİİLEN var mı? -- önbellekli, ``O(1)``.
+
+        ===============================================================
+        ÖLÇÜLEN VE SAKLANMAYAN HAKİKAT
+        ===============================================================
+
+        Hız teftişi tek bir ileri geçişte **89 341 kapı çağrısı** saydı
+        ve bunların yalnız **159'unun** (%0,2) fiilen iş yaptığını
+        gösterdi. Geri kalan %99,8'i ``1 << alt >= lif[k]`` şartına
+        takılıp derhal geri dönüyordu -- yâni yazmacın **haddini aşan**
+        yuvalara kapı vuruluyordu.
+
+        İki ayrı mesele vardır ve ikisi de yazılıdır:
+
+        1. **HIZ.** O 89 bin çağrı boş dönse de her biri bir Python
+           çağrısı, bir ``_lif_no``, bir ``asarray``dır: ölçüldü, tek
+           geçişin **tamamı** (0,90 sn) buradan geliyordu. Bu fonksiyon
+           o çağrıları bir sözlük aramasına indirir.
+
+        2. **HÜKÜM.** Melekelerin yazmacın haddini aşan yuvalara
+           yazması bir **borçtur** ve bu düzeltme onu gizlemez: düşen
+           kapılar ``_dusen_kapi``de sayılır ve ``beyan``da görünür.
+           Davranış birebir aynıdır (evvelce de düşüyorlardı); değişen
+           yalnız düşme maliyetidir.
+        """
+        y = int(yuva)
+        c = self._gecerli_onbellek.get(y)
+        if c is not None:
+            return c
+        k, alt = self._lif_no(y)
+        lif = tuple(self.ayar.lif)
+        c = bool(0 <= k < len(lif) and (1 << int(alt)) < int(lif[k]))
+        self._gecerli_onbellek[y] = c
+        return c
 
     def veri(self, i: int, j: int) -> int:
         return int(i) * (self._satir_kubiti + int(self.ayar.yerel_kubit)) + int(j)
@@ -585,28 +708,140 @@ class QuditYazmac:
         return M
 
     def tek(self, yuva: int, G: np.ndarray) -> None:
-        """Tek yuvaya ``2×2`` kapı -- lif içine gömülerek."""
+        """Tek yuvaya ``2×2`` kapı -- bit düzlemine doğrudan, ``O(B·d)``."""
+        if not self.gecerli(yuva):
+            self._dusen_kapi += 1
+            return
         k, alt = self._lif_no(yuva)
-        n = self.ayar.lif[k]
-        self.lif_kapisi(k, self._gomulu(n, alt, G))
+        self.bit_kapisi(k, alt, G)
 
     def tek_yigin(self, yuvalar: Sequence[int], G) -> None:
-        """``m`` yuvaya ``m`` kapı. Aynı life düşenler **bileşir**."""
+        """``m`` yuvaya ``m`` kapı -- aynı BİT DÜZLEMİNE düşenler bileşir.
+
+        Evvelce bileşme lif seviyesindeydi: aynı life düşen kapılar
+        ``n×n`` dizeylerde çarpılıyordu (``n³`` işlem, ``n=256`` için
+        16 milyon). Şimdi bileşme ``2×2``dedir ve yalnız **aynı bit
+        düzlemine** düşenler bileşir; farklı düzlemler zaten sıralı
+        vurulur ve netice birebir aynıdır (sıra korunur).
+        """
         G = np.asarray(G)
         if G.ndim == 2:
             G = np.broadcast_to(G, (len(yuvalar), 2, 2))
-        birik: Dict[int, np.ndarray] = {}
+        sira: List[Tuple[int, int]] = []
+        birik: Dict[Tuple[int, int], np.ndarray] = {}
         for y, g in zip(yuvalar, G):
+            if not self.gecerli(int(y)):
+                self._dusen_kapi += 1
+                continue
             k, alt = self._lif_no(int(y))
-            n = self.ayar.lif[k]
-            M = self._gomulu(n, alt, g)
-            birik[k] = M if k not in birik else M @ birik[k]
-        for k, M in birik.items():
-            self.lif_kapisi(k, M)
+            anahtar = (int(k), int(alt))
+            g2 = np.asarray(g, complex).reshape(2, 2)
+            if anahtar in birik:
+                birik[anahtar] = g2 @ birik[anahtar]
+            else:
+                birik[anahtar] = g2
+                sira.append(anahtar)
+        for anahtar in sira:
+            self.bit_kapisi(anahtar[0], anahtar[1], birik[anahtar])
 
     def cift(self, yuva: int, G: np.ndarray) -> None:
         """Komşu çifte ``4×4`` kapı."""
         self.uzak_cift(int(yuva), int(yuva) + 1, G)
+
+    def _bolum(self, k: int) -> Tuple[int, int]:
+        """``lif[k]``ın önündeki ve ardındaki çarpımlar -- **önbellekli**."""
+        c = self._bolum_onbellek.get(int(k))
+        if c is not None:
+            return c
+        lif = tuple(self.ayar.lif)
+        on = 1
+        for x in lif[:k]:
+            on *= int(x)
+        ard = 1
+        for x in lif[k + 1:]:
+            ard *= int(x)
+        c = (on, ard)
+        self._bolum_onbellek[int(k)] = c
+        return c
+
+    def cift_bit_kapisi(self, ki: int, ai: int, kj: int, aj: int,
+                        G: np.ndarray) -> None:
+        """İki BİT DÜZLEMİNE ``4×4`` kapı -- **tek einsum**, ``O(B·d)``.
+
+        ===============================================================
+        NİÇİN VAR: İKİNCİ ÖLÇÜLEN DARBOĞAZ
+        ===============================================================
+
+        ``bit_kapisi`` tek kübitlik darboğazı kaldırdıktan sonra profil
+        yeni suçluyu gösterdi::
+
+            uzak_cift    5 095 çağrı   0,308 sn
+            numpy.stack 30 830 çağrı   0,204 sn
+
+        Sebep: iki ayrı life düşen kapı, ``ni/2 × nj/2 = 1024``
+        adımlık bir **Python döngüsüyle** dört dilim toplayıp
+        ``np.stack`` ediyordu. Aynı lifteki dal ise ``np.eye(n)``
+        kurup ``n``ye kadar sayıyordu.
+
+        Halbuki ``4×4`` bir kapı da yalnız iki bit düzlemini karıştırır.
+        Her iki lif ekseni de ``(üst, 2, alt)`` diye bölünür (bedava
+        reshape) ve kapı ``(2,2,2,2)`` olarak **tek einsum** ile vurulur.
+        Döngü de tahsis de kalkar.
+
+        Kübit sırası korunur: ``G``nin birinci kübiti ``i`` yuvası,
+        ikincisi ``j`` yuvasıdır -- eski ``idx = [x, x|bj, x|bi,
+        x|bi|bj]`` sıralamasıyla birebir aynı.
+        """
+        lif = tuple(self.ayar.lif)
+        G4 = np.asarray(G, complex).reshape(2, 2, 2, 2)
+        bi, bj = 1 << int(ai), 1 << int(aj)
+        ni, nj = int(lif[ki]), int(lif[kj])
+        if bi >= ni or bj >= nj:
+            return
+        if ki == kj:
+            if bi == bj:
+                return
+            n_k = ni
+            assert n_k & (n_k - 1) == 0, "bit düzlemi ikinin kuvvetini ister"
+            i_yuksek = bi > bj
+            bh, bl = (bi, bj) if i_yuksek else (bj, bi)
+            on, ard = self._bolum(int(ki))
+            T = self.psi.reshape(self.B, on, n_k // (2 * bh), 2,
+                                 bh // (2 * bl), 2, bl, ard)
+            if i_yuksek:
+                out = np.einsum('pqrs,zaArBsCe->zaApBqCe', G4, T,
+                                optimize=True)
+            else:
+                out = np.einsum('pqrs,zaAsBrCe->zaAqBpCe', G4, T,
+                                optimize=True)
+            self.psi = np.ascontiguousarray(out).reshape(self.B, self.d)
+            self._kapi += 1
+            self.iz.kapi += 1
+            return
+        # İki ayrı lif.
+        k1, k2 = (ki, kj) if ki < kj else (kj, ki)
+        n1 = int(lif[k1])
+        n2 = int(lif[k2])
+        b1 = bi if ki < kj else bj
+        b2 = bj if ki < kj else bi
+        assert n1 & (n1 - 1) == 0 and n2 & (n2 - 1) == 0, (
+            "bit düzlemi kapısı ikinin kuvveti olan lif ister")
+        on, _ = self._bolum(k1)
+        orta = 1
+        for x in lif[k1 + 1:k2]:
+            orta *= int(x)
+        _, ard = self._bolum(k2)
+        T = self.psi.reshape(self.B, on, n1 // (2 * b1), 2, b1, orta,
+                             n2 // (2 * b2), 2, b2, ard)
+        if ki < kj:
+            out = np.einsum('pqrs,zaArBmCsDe->zaApBmCqDe', G4, T,
+                            optimize=True)
+        else:
+            out = np.einsum('pqrs,zaAsBmCrDe->zaAqBmCpDe', G4, T,
+                            optimize=True)
+        self.psi = np.ascontiguousarray(out).reshape(self.B, self.d)
+        self._kapi += 1
+        self.iz.kapi += 1
 
     def uzak_cift(self, i: int, j: int, G: np.ndarray) -> None:
         """İki yuvaya ``4×4`` kapı -- **takas yok, MPO yok, SVD yok**.
@@ -618,10 +853,19 @@ class QuditYazmac:
         birleştirilip **tek** einsum ile vurulur. İkisinde de kesme
         yoktur, dolayısıyla sadakat kaybı **sıfırdır**.
         """
+        if not (self.gecerli(i) and self.gecerli(j)):
+            self._dusen_kapi += 1
+            return
         G = np.asarray(G, complex).reshape(4, 4)
         ki, ai = self._lif_no(int(i))
         kj, aj = self._lif_no(int(j))
         lif = tuple(self.ayar.lif)
+        # **BİT DÜZLEMİ YOLU** -- lifler ikinin kuvvetiyse (bizim
+        # hâlimizde 16 ve 256, ikisi de öyle) döngüsüz yol geçerlidir
+        # ve neticesi aşağıdaki yoğun yolla birebir aynıdır (sınandı).
+        if self._ikinin_kuvveti:
+            self.cift_bit_kapisi(ki, ai, kj, aj, G)
+            return
         if ki == kj:
             n = lif[ki]
             bi, bj = 1 << ai, 1 << aj
@@ -680,6 +924,8 @@ class QuditYazmac:
         if not isinstance(W, dict) or not W:
             return 0.0
         lif = tuple(self.ayar.lif)
+        sira: List[Tuple[int, int]] = []
+        birik: Dict[Tuple[int, int], np.ndarray] = {}
         for yuva, Wk in W.items():
             Wk = np.asarray(Wk)
             k, alt = self._lif_no(int(yuva))
@@ -692,10 +938,32 @@ class QuditYazmac:
                 G = Wk
             else:
                 continue
-            iz = np.trace(np.asarray(G, complex))
-            if abs(iz) < 1e-30 and not np.any(G):
+            # ``np.trace`` KALDIRILDI: profilde **71 995 çağrı**
+            # (0,185 sn) yalnız "bu kapı boş mu" diye soruyordu.
+            # ``np.any`` zaten onu söyler ve ucuzdur.
+            if not self.gecerli(int(yuva)):
+                self._dusen_kapi += 1
                 continue
-            self.lif_kapisi(k, self._gomulu(n, alt, G))
+            G = np.asarray(G, complex).reshape(2, 2)
+            if not np.any(G):
+                continue
+            # **KİMLİK KAPISI HİÇ VURULMAZ.** MPO zincirinin çoğu yuvası
+            # kimlik dolgusudur; kimliği duruma vurmak durumu hiç
+            # değiştirmez, yalnız ``O(B·d)`` yakar.
+            if (abs(G[0, 0] - 1.0) < 1e-12 and abs(G[1, 1] - 1.0) < 1e-12
+                    and abs(G[0, 1]) < 1e-12 and abs(G[1, 0]) < 1e-12):
+                continue
+            # **BİLEŞTİR, TEK TEK VURMA.** Aynı bit düzlemine düşen
+            # kapılar ``2×2``de çarpılır; durum bir kere dolaşılır.
+            anahtar = (int(k), int(alt))
+            g2 = np.asarray(G, complex).reshape(2, 2)
+            if anahtar in birik:
+                birik[anahtar] = g2 @ birik[anahtar]
+            else:
+                birik[anahtar] = g2
+                sira.append(anahtar)
+        for anahtar in sira:
+            self.bit_kapisi(anahtar[0], anahtar[1], birik[anahtar])
         self.normalize()
         return 0.0
 

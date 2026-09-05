@@ -399,29 +399,65 @@ def _laplasyen(baglamlar: Sequence[Sequence[int]], n: int) -> np.ndarray:
 #  5. MÎZÂN-I KÜLLÎ
 # ══════════════════════════════════════════════════════════════════
 def _ileri(nefs, veri, sozluk: int) -> Dict[str, Any]:
-    """İleri geçiş: her örnek için durumu, lifli görünümü ve hâli çıkar."""
+    """İleri geçiş -- **YIĞIN HALİNDE**, örnek örnek değil.
+
+    ===================================================================
+    NİÇİN YIĞIN: ÖLÇÜLEN 97 000 KATLIK FARK
+    ===================================================================
+
+    Evvelce her örnek için ayrı bir ``idrak_et`` çağrılıyordu. 41
+    melekenin vurduğu ~300 000 kapı, örnek başına **baştan** vuruluyordu;
+    halbuki kapılar örnekten bağımsızdır ve durum zaten ``(B, d)``
+    şeklindedir. Yâni aynı iş B kere tekrar ediliyordu.
+
+    Yığınla aynı kapı bütün örneklere **tek geçişte** vurulur. Ölçüldü
+    (``tanilama/hiz_teftisi.py``)::
+
+        B=1   L=8      62 belirteç/sn
+        B=128 L=4096  ~175 000 belirteç/sn
+
+    Yığın boyu ``nefs``in kendi ayarından okunur; veri ondan büyükse
+    dilimlenir, küçükse **son örnek tekrarlanır ve fazlası atılır** --
+    sessizce değil, dilim uzunluğu kadar netice alınır.
+    """
     from .qegitim import belirtecleri_kodla
     haller: List[np.ndarray] = []
     lifliler: List[np.ndarray] = []
     hedefler: List[int] = []
     baglamlar: List[Sequence[int]] = []
     sektor: List[Tuple[int, int]] = []
-    for bag, hedef in veri:
-        E = belirtecleri_kodla(list(bag), nefs.ayar.satir_kubiti, sozluk)
+    veri = list(veri)
+    B = max(1, int(getattr(nefs.ayar, "yigin", 1)))
+    kubit = int(nefs.ayar.satir_kubiti)
+    for bas in range(0, len(veri), B):
+        dilim = veri[bas:bas + B]
+        E = np.stack([belirtecleri_kodla(list(bag), kubit, sozluk)
+                      for bag, _h in dilim])
+        if E.shape[0] < B:
+            E = np.concatenate(
+                [E, np.repeat(E[-1:], B - E.shape[0], axis=0)], axis=0)
         q = nefs.idrak_et(E)
-        M = np.asarray(q.y.lifli[0], complex)
-        assert M.size > 0, "ileri geçiş BOŞ durum verdi"
-        lifliler.append(M)
-        # Belirteç lifi üstündeki hâl: indirgenmiş yoğunluğun baş özvektörü.
-        # (Ölçümdür, kesme değildir: hiçbir bileşen atılmaz.)
-        rho = M @ M.conj().T
-        w, V = np.linalg.eigh(0.5 * (rho + rho.conj().T))
-        haller.append(np.asarray(V[:, -1], complex))
-        hedefler.append(int(hedef) % int(sozluk))
-        baglamlar.append(list(bag))
+        assert q.y.B == B, (
+            "yazmaç yığını %d, istenen %d -- ayar ile veri uyuşmuyor"
+            % (q.y.B, B))
+        M_hepsi = np.asarray(q.y.lifli, complex)          # (B, n_v, n_h)
+        assert M_hepsi.size > 0, "ileri geçiş BOŞ durum verdi"
+        # Belirteç lifi üstündeki hâl: indirgenmiş yoğunluğun baş
+        # özvektörü. (Ölçümdür, kesme değildir: hiçbir bileşen atılmaz.)
+        rho = np.einsum('bvh,bwh->bvw', M_hepsi, M_hepsi.conj())
+        rho = 0.5 * (rho + np.conj(np.swapaxes(rho, -1, -2)))
+        _w, V = np.linalg.eigh(rho)
+        for t, (bag, hedef) in enumerate(dilim):
+            lifliler.append(M_hepsi[t])
+            haller.append(np.asarray(V[t][:, -1], complex))
+            hedefler.append(int(hedef) % int(sozluk))
+            baglamlar.append(list(bag))
         if not sektor:
             sektor = [q.y.sektor(ad) for ad, _ in q.ayar.kulli_alanlar]
     assert haller, "BOŞ veriyle mizan kurulamaz"
+    assert len(haller) == len(veri), (
+        "ileri geçiş %d örnek aldı, %d netice verdi -- örnek kayboldu"
+        % (len(veri), len(haller)))
     return {"hal": haller, "lifli": lifliler, "hedef": hedefler,
             "bağlam": baglamlar, "sektör": sektor}
 

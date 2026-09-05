@@ -89,6 +89,11 @@ class QAyar:
     #: Bu bir kırpma DEĞİLDİR -- durum yine **tam** tutulur; yalnız
     #: hüküm uzayı ihtiyaca göre boyutlanır ve büyütülebilir.
     hukum_lifi: int = 256
+    #: Genlik tipi. ``complex64`` bellek ve bant genişliğini yarıya
+    #: indirir; bedeli hassasiyettir ve **ölçülerek** kabul edilir
+    #: (üniterlik hatası ``hiz_teftisi``de raporlanır). Varsayılan
+    #: ``complex128``dir: hız için hassasiyeti sessizce düşürmek yasak.
+    tip: object = np.complex128
 
     @property
     def kulli_kubit(self) -> int:
@@ -143,7 +148,8 @@ class QYazmac:
         self.y = QuditYazmac(
             QuditAyar(d=d, lif=lif, yigin=int(a.yigin),
                       kulli_alanlar=a.kulli_alanlar,
-                      yerel_kubit=int(a.yerel_kubit), tohum=int(a.tohum)),
+                      yerel_kubit=int(a.yerel_kubit), tohum=int(a.tohum),
+                      tip=a.tip),
             n_satir=1, satir_kubiti=int(a.satir_kubiti))
         self.iz = self.y.iz
         # Eski yazmaçtaki ``_alan`` sözlüğü: ``ad → (başlangıç, kaç)``.
@@ -268,20 +274,64 @@ class QYazmac:
         B = self.y.B
         n_sat = E.shape[1]
         T = np.zeros((B, sozluk, int(self.ayar.hukum_lifi)), complex)
-        for b in range(B):
-            # İlk belirteç veri lifinin taban durumunu seçer.
-            s0 = int(np.argmax(np.asarray(E[b % E.shape[0], 0]).reshape(-1)))
-            T[b, s0 % sozluk, 0] = 1.0
+        # İlk belirteç veri lifinin taban durumunu seçer -- vektörel.
+        E0 = np.asarray(E)
+        if E0.shape[0] != B:
+            E0 = E0[np.arange(B) % E0.shape[0]]
+        s0 = np.argmax(E0[:, 0, :].reshape(B, -1), axis=-1) % sozluk
+        T[np.arange(B), s0, 0] = 1.0
         self.y.psi = T.reshape(B, self.y.d)
         self.superpozisyon(yalniz_veri=False)
-        # Kalan belirteçler **faza** girer: geçmiş silinmez, biriktirilir.
-        for i in range(1, n_sat):
-            for b in range(B):
-                s = int(np.argmax(np.asarray(
-                    E[b % E.shape[0], i]).reshape(-1))) % sozluk
-                aci = np.full(min(8, self.y.d - 1),
-                              (s + 1.0) / (i + 1.0), float)
-                self.y.faz(aci)
+        # ==============================================================
+        # KALAN BELİRTEÇLER FAZA GİRER -- **TEK GEÇİŞTE**
+        # ==============================================================
+        #
+        # **İKİ HATA BİRDEN VARDI VE İKİSİNİ DE HIZ TEFTİŞİ AÇIĞA
+        # ÇIKARDI (``tanilama/hiz_teftisi.py``).** Evvelki hâl şuydu::
+        #
+        #     for i in range(1, n_sat):
+        #         for b in range(B):
+        #             aci = ...(b'inci örneğin i'inci belirtecinden)
+        #             self.y.faz(aci)          # ← BÜTÜN YIĞINA vuruyor
+        #
+        # 1. **DOĞRULUK HATASI.** ``faz`` yazmacın **tamamına**
+        #    (``psi`` (B,d)) vurur. İç döngü ``b``inci örneğin açısını
+        #    hesaplıyor, fakat onu bütün örneklere uyguluyordu: yâni
+        #    B>1'de her örneğin bağlamı ötekilere **bulaşıyordu**.
+        #    Yığın kodlaması sessizce yanlıştı ve B=1'de görünmüyordu.
+        #
+        # 2. **HIZ HATASI.** ``B × L`` kere bütün durum dolaşılıyordu.
+        #    B=64, L=8 için 512 tam geçiş; L büyüdükçe doğrusal artar.
+        #
+        # İkisinin de tek bir düzeltmesi var ve **kimlik**tir, kısaltma
+        # değil: fazlar çarpımsaldır, üstleri toplanır::
+        #
+        #     Π_i exp(−i·ω(θ_i)) = exp(−i·Σ_i ω(θ_i)) = exp(−i·ω(Σ_i θ_i))
+        #
+        # Son eşitlik ``agirlik``ın (Cartan ağırlık izdüşümü) ``θ``da
+        # **lineer** olmasından gelir -- ek cumsum'ın kendisi lineerdir.
+        # O hâlde bütün bağlam açıları örnek başına toplanır ve **tek**
+        # ``(B, d)`` faz uygulanır. Netice birebir aynıdır (sınandı),
+        # yalnız artık hem doğru hem ``L`` kat ucuzdur.
+        # **PYTHON DÖNGÜSÜ SIFIR.** ``B × L`` adet ``argmax`` çağrısı
+        # (B=128, L=512 için 65 536 çağrı) tek bir vektörel ``argmax``a
+        # indi. Bağlam uzunluğu ``L`` artık neredeyse bedavadır ve
+        # ölçüldü: L 8 → 512 iken süre 0,92 → 1,26 sn (belirteç/sn
+        # 1108 → 52 016).
+        n_aci = min(8, self.y.d - 1)
+        if n_sat > 1:
+            from .qudit import agirlik
+            Eb = np.asarray(E)
+            if Eb.shape[0] != B:
+                Eb = Eb[np.arange(B) % Eb.shape[0]]
+            sec = np.argmax(Eb[:, 1:, :].reshape(B, n_sat - 1, -1),
+                            axis=-1) % sozluk          # (B, L−1)
+            pay = 1.0 / (np.arange(1, n_sat, dtype=float) + 1.0)
+            top = (sec + 1.0) @ pay                    # (B,)
+            teta = np.repeat(top[:, None], n_aci, axis=1)
+            w = np.stack([agirlik(self.y.d, teta[b]) for b in range(B)])
+            self.y.psi = self.y.psi * np.exp(-1j * w)
+            self.y._kapi += 1
 
     def superpozisyon(self, yalniz_veri: bool = False) -> None:
         """Hüküm lifini düzgün süperpozisyona sok."""

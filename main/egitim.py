@@ -267,9 +267,13 @@ class EgitimAyari:
 
     def qayar(self):
         from nefs.zihin_durumu import QAyar
+        # **YIĞIN YAZMACA GEÇER.** Evvelce geçmiyordu ve yazmaç daima
+        # ``B=1`` kuruluyordu: 41 melekenin 300 000 kapısı her örnek
+        # için baştan vuruluyordu. Hız teftişi bunu ölçtü.
         return QAyar(satir_kubiti=self.satir_kubiti,
                      yerel_kubit=self.yerel_kubit, bag=self.bag,
-                     mera_kademe=self.mera_kademe, tohum=self.tohum)
+                     mera_kademe=self.mera_kademe, tohum=self.tohum,
+                     yigin=int(self.ornek_sayisi))
 
 
 #: **CPU'da koşan kısa hâl.** ``B = ornek_sayisi`` bu ortam için
@@ -284,8 +288,22 @@ class EgitimAyari:
 #:
 #: B büyüdükçe parametre yayılımı **düşüyor** (σ/√B). B=4'ten sonra
 #: ölçülebilir kazanç yok, maliyet doğrusal artıyor. Delil budur: B=4.
-KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=4, cevrim=1,
-                       ornek=3, zincir=2, talim_tur=1,
+#: **ÖLÇÜLEREK DEĞİŞTİ (hız teftişi).** ``ornek_sayisi`` artık yazmacın
+#: **yığın boyudur** ve 4 değil 64'tür; ``pencere`` 8 değil 512'dir.
+#: Sebebi ölçümdür -- aynı kayıp, aynı netice, farklı hız::
+#:
+#:      B    L      belirteç/sn
+#:      4    8            215
+#:     64  512         43 859
+#:    128  512         61 660      ← seçilen (tavan)
+#:    256  512         58 248
+#:    512  512         32 646      (bellek doyumu)
+#:
+#: Kayıp değişti çünkü veri değişti (daha uzun bağlam, daha çok örnek),
+#: hesabın kendisi değil: B=4/L=8'de iki hat **birebir** aynı sayıyı
+#: veriyor (2,888511).
+KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=128, pencere=512,
+                       cevrim=1, ornek=3, zincir=2, talim_tur=1,
                        altuzay_ornek=6, degerlendirme_gorevi=8,
                        dogrulama_sayisi=20,
                        sanal_kubit_sayisi=1_000_000, bag=8)
@@ -324,7 +342,7 @@ PROFILLER: Dict[str, EgitimAyari] = {
 # =====================================================================
 #  TÂLİM GEÇİDİ -- koşmadan EVVEL dimağın akdi ve illeti denetlenir
 # =====================================================================
-def gecit(sert: bool = True) -> Dict[str, object]:
+def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
     """TÂLİME GİRMEDEN EVVEL İKİ ŞART -- akit ve illet.
 
     Bir tâlim koşusu saatler sürer. Koşunun sonunda "sebep çizgesinde
@@ -350,6 +368,12 @@ def gecit(sert: bool = True) -> Dict[str, object]:
            Ölçünün adı ``hüküm_şartıyla_ayrık``tır. ``şartsız_ayrık``
            DEĞİLDİR ve olmamalıdır: kelamın veriden hiç etkilenmemesi
            modelin girdiyi hiç görmemesi demek olurdu.
+
+    3. ``tanilama/hiz_teftisi.py`` -- **BELİRTEÇ/SN HADDİ TUTUYOR MU?**
+       Ferman: *"hız konusunda garanti elde etmeden umumi eğitim
+       başlatma."* Bir tâlim koşusunun ne kadar süreceği, koşmadan
+       evvel tek bir kayıp çağrısı ölçülerek bilinir. Had
+       ``tanilama/hiz_teftisi.py:HAD``dır ve orada yazılıdır.
 
     ``sert`` doğruysa ihlâl ``assert`` ile koşuyu **durdurur**. Yumuşak
     kipte yalnız raporlanır; o kip ölçüyü görmek içindir, geçmek için
@@ -380,6 +404,15 @@ def gecit(sert: bool = True) -> Dict[str, object]:
         "kelam_ayrıştı": bool(ayrisma.get("hüküm_şartıyla_ayrık", False)),
         "kelam_dökümü": ayrisma,
     }
+    if hiz_ayari is not None:
+        from tanilama.hiz_teftisi import AZAMI_SANIYE, HAD, olc
+        h = olc(hiz_ayari)
+        o["belirteç_sn"] = float(h["belirteç_sn"])
+        o["hız_haddi"] = float(HAD)
+        o["hız_geçti"] = bool(h["belirteç_sn"] >= HAD)
+        o["kayıp_süresi"] = float(h["kayıp_süresi"])
+        o["en_pahalı_uzuv"] = (h["tek_meleke"][0][0]
+                               if h["tek_meleke"] else "?")
     if sert:
         assert uydu, ("AKİT TUTMUYOR -- sözleşme ile kod uyuşmuyor:\n  %s"
                       % "\n  ".join(sikayet[:8]))
@@ -391,6 +424,17 @@ def gecit(sert: bool = True) -> Dict[str, object]:
         assert ayrisma.get("hüküm_şartıyla_ayrık", False), (
             "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
             "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
+        if "belirteç_sn" in o:
+            from tanilama.hiz_teftisi import HAD
+            assert o["hız_geçti"], (
+                "HIZ HADDİ TUTMUYOR -- TÂLİM BAŞLAMAZ.\n"
+                "  ölçülen : %.1f belirteç/sn\n"
+                "  had     : %.0f belirteç/sn  (%.0f kat eksik)\n"
+                "  bir kayıp çağrısı: %.4f sn   en pahalı uzuv: %s\n"
+                "  Ferman: hız garantisi elde etmeden umumi tâlim "
+                "başlatılmaz." % (o["belirteç_sn"], HAD,
+                                  HAD / max(1e-9, o["belirteç_sn"]),
+                                  o["kayıp_süresi"], o["en_pahalı_uzuv"]))
     return o
 
 
@@ -498,7 +542,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     t0 = time.perf_counter()
     # **GEÇİT KOŞUDAN EVVEL.** Saatler süren bir tâlimin sonunda
     # "akit tutmuyormuş" demek saatleri çöpe atmaktır.
-    kapi = gecit(sert=True)
+    kapi = gecit(sert=True, hiz_ayari=ayar)
     hepsi = list(gorevler) if gorevler is not None else \
         gorevleri_getir("training")
     # **İMTİHAN BÖLÜMLEMESİ** -- ezberi ve sızıntıyı engeller.
