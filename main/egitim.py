@@ -141,7 +141,17 @@ class EgitimAyari:
     """
     ad: str = "kısa"
     # --- yazmaç (nefsin kendisi)
-    satir_kubiti: int = 4
+    #: **FERMANLA DEĞİŞTİ: 4 → 16.** İkili kodlama dalı imha edilince
+    #: (``nefs/qegitim.py``) kategorik kodlama ``kubit ≥ sozluk``
+    #: ŞARTINA bağlandı: 16 belirteci 4 boyutta eşit uzaklıkta dizmek
+    #: imkânsızdır ve o imkânsızlığı ikili kodlamayla örtmek tam da
+    #: yasaklanan şeydi. 16'da bütün ikili mesafeler eşittir (5,657;
+    #: değişke 0,0000) -- yâni fiilen bir qudit tabanı.
+    #:
+    #: **BEDELİ SAKLANMIYOR:** yazmaç genişler ve eski MPS motoru
+    #: yavaşlar. O motor zaten fermanla iptaldir; bedel onun tasfiyesini
+    #: geciktirmenin bedelidir, bu şartın değil.
+    satir_kubiti: int = 16
     yerel_kubit: int = 1
     bag: int = 16                    # χ
     mera_kademe: int = 3

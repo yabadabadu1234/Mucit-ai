@@ -115,19 +115,7 @@ import nefs.test_olcek  # [şahit] Küme 8: çatı modeli -- M31, M32, M33, M34
 # ------------------------------------------------------------------
 #  idrak
 # ------------------------------------------------------------------
-try:                                   # torch şartlı
-    import idrak.kubit  # [uzuv] Kübit kaydı: reel dik kapılarla öğrenilebilir bir kuantum yazmacı
-except Exception as _e:                # torch yoksa kayda geçer
-    EKSIK['idrak.kubit'] = str(_e)
-try:                                   # torch şartlı
-    import idrak.model  # [uzuv] Nefs-i Müdrike ARC modeli — risalelerin mimarisinin fiilî hâli
-except Exception as _e:                # torch yoksa kayda geçer
-    EKSIK['idrak.model'] = str(_e)
 import nefs.musahede  # [uzuv] Çıktı ızgarasının şeklini **gösterimlerden çıkarmak**
-try:                                   # torch şartlı
-    import idrak.test_idrak  # [şahit] ``idrak`` paketi sınamaları — veri, kübit, model, eğitim
-except Exception as _e:                # torch yoksa kayda geçer
-    EKSIK['idrak.test_idrak'] = str(_e)
 import idrak.test_sekil  # [şahit] ``idrak.sekil`` sınamaları — ispatlı şekil kestirimi ya da sükût
 
 # ------------------------------------------------------------------
@@ -170,7 +158,6 @@ import nefs.hiz  # [hakem] Hız defteri -- 700 MB/sn hedefinin üç ayrı muhase
 import nefs.musahede  # [uzuv] Genlik gömmesi -- 4096 boyut 12 kübitte, 35 kübitlik adres yazmacı
 import nefs.zirh  # [uzuv] Dörtlü topolojik zırh -- gaye: çelişkisiz mana manifoldu
 import kuantum.kubit_taksimati  # [uzuv] 22 MİLYON KÜBİTİN TAKSİMATI -- dört bölge, TEK zincir
-import nefs.ttkan  # [hakem] TT-KAN -- ceridenin hız hükmünün fiilî hesabı
 import nefs.musahede  # [uzuv] FUNKTÖR KÖPRÜSÜ -- uzaylar arası geçişin **ölçülen** sıhhati
 import nefs.kule  # [uzuv] Kule: ana modelin (``nefs/``) kendi kendine uzun pencere tutması
 import nefs.test_nefs  # [şahit] nefs sınamaları
@@ -275,12 +262,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'Doğrulanabilir ARC çözücüsü: dik dönüşüm DSL\'i üzerinde arama.'),
     ('idrak.kategori', 'uzuv',
      '20 ∞-kategori uzayı -- ``omega_kategori_nbe`` ile **fiilen** kurulur.'),
-    ('idrak.kubit', 'uzuv',
-     'Kübit kaydı: reel dik kapılarla öğrenilebilir bir kuantum yazmacı.'),
-    ('idrak.model', 'uzuv',
-     'Nefs-i Müdrike ARC modeli — risalelerin mimarisinin fiilî hâli.'),
-    ('idrak.test_idrak', 'şahit',
-     '``idrak`` paketi sınamaları — veri, kübit, model, eğitim.'),
     ('idrak.test_sekil', 'şahit',
      '``idrak.sekil`` sınamaları — ispatlı şekil kestirimi ya da sükût.'),
     ('kuantum', 'uzuv',
@@ -391,8 +372,6 @@ KAYIT: Tuple[Tuple[str, str, str], ...] = (
      'nefs sınamaları.'),
     ('nefs.test_olcek', 'şahit',
      '``olcek.hiz`` sınamaları — M31, M32, M33, M34.'),
-    ('nefs.ttkan', 'uzuv',
-     'TT-KAN: meleke dizeylerinin Tensör Treni sıkıştırması -- ve HESABI.'),
     ('nefs.uzaklik_olcumu', 'uzuv',
      'Uzak çift kapısı: **takas ağı mı, MPO mu?** -- eşiği ölçüm koyar.'),
     ('nefs.zihin_durumu', 'uzuv',

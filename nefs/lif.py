@@ -23,12 +23,14 @@ iki tuzağı yasaklar:
 
 Kabul edilen iki usul::
 
-    Kabul 1  MPS / Tensör Treni     h_{j₁…j_k} = A₁^{(j₁)} ⋯ A_k^{(j_k)}
+    Kabul 1  MPS / Tensör Treni     — SONRADAN İPTAL, kodu İMHA
     Kabul 2  Qudit ℂ^d / Koherent   |x⟩ = D(x)|0⟩
 
-**İkisinin de kodu bu depoda vardı:** ``nefs/ttkan.py`` (TT-SVD, sanal
-bağ ``r``) ve ``kuantum/surekli.py`` (``yer_degistirme``,
-``tutarli_durum``). İkisi de hiçbir yerden çağrılmıyordu.
+**Kabul 1 (MPS) SONRADAN FERMANLA İPTAL EDİLDİ** ve kodu
+(``nefs/ttkan.py``) **imha edildi** -- ``χ`` budaması hacim kanununda
+çöküyor ve her sıkıştırma bir SVD istiyordu. Yerine
+``nefs/qudit.py``in Lie-Chebyshev durumu geldi. Kabul 2'nin kodu
+``kuantum/surekli.py``dedir ve buradan çağrılır.
 
 ===================================================================
 2. KARTEZYEN KUTUNUN İPTALİ -- ve cevheri takma tarzının değişmesi
@@ -115,18 +117,22 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = ["Lif", "kodla", "ortusme", "mesafe", "sadakat", "rapor",
-           "KIP_IKILI", "KIP_QUDIT", "KIP_TUTARLI", "KIP_MPS", "KIP_LIE"]
+           "KIP_QUDIT", "KIP_TUTARLI", "KIP_LIE"]
 
-#: Kodlama usulleri. ``ikili`` **yasaklıdır** ve adı bunu söyler;
-#: silinmedi çünkü yasağı gizlemek değil, görünür kılmak lâzım -- ve
-#: kıyas için bir kırmızı uç gerekiyor (H90).
-KIP_IKILI = "ikili (TUZAK A -- yasak, yalnız kıyas için)"
+#: Kodlama usulleri. **Yasaklananlar burada YOKTUR ve kıyas ucu olarak
+#: da tutulmaz** -- padişahın fermanı: *"Yasakladığım şeyleri kod
+#: tabanında yedekte tutmaktan vazgeç... yasaklanan ne kadar usul
+#: varsa hepsini imha edeceksin."*
+#:
+#: İMHA EDİLENLER (evvelce burada "kıyas için" diye duruyorlardı):
+#:   ``ikili`` -- düz ikili/taban kodlaması (Tuzak A/B). Kelimeleri
+#:                birbirine dik yapar, Hamming safsatası uydurur.
+#:   ``mps``   -- tensör treni, ``χ`` budaması. Hacim kanununda çöker,
+#:                her sıkıştırma bir SVD ister.
+#: İkisi de kodda **hiç yoktur**; yasağı görünür kılmak için yasaklı
+#: kodu saklamak, yasağı fiilen saklamamak demekti.
 KIP_QUDIT = "qudit"
 KIP_TUTARLI = "tutarlı"
-#: **MPS FERMANLA İPTAL EDİLDİ** ("Mps iptal olacak"). Adı yasağı
-#: söylüyor ve silinmedi: kıyas ucu olarak durur, tıpkı ikili gibi.
-#: Yerine ``KIP_LIE`` gelir -- Lie-Chebyshev KAN-Qudit durumu.
-KIP_MPS = "mps (İPTAL -- fermanla kaldırıldı, yalnız kıyas için)"
 #: Fermanın getirdiği asıl usul: ``nefs/qudit.py``.
 KIP_LIE = "lie-chebyshev qudit"
 
@@ -148,14 +154,14 @@ def kodla(x, ne: str = KIP_TUTARLI, boyut: int = 16,
     ``qudit``       ``|ψ⟩ ∈ ℂ^d``, tek hücre, bit parçalanması sıfır.
                     Vektörün kendisi normalize edilir; taban vektörü
                     DEĞİLDİR (taban vektörü Tuzak A'ya geri döner).
-    ``mps``         Tensör treni: ``h = A₁^{(j₁)}⋯A_k^{(j_k)}``,
-                    sanal bağ ``bag``. Geometri bağ boyutunda taşınır.
-    ``ikili``       **YASAK.** ``2·bit − 1``. Kıyas ucu olarak durur.
     ==============  ==================================================
 
-    Koherent kodlama ``kuantum/surekli.py``ye, MPS ``nefs/ttkan.py``ye
-    havale edilir. Burada yeni riyaziye yoktur; iki yetim uzuv nihayet
-    çağrılır.
+    **Yasaklı usuller burada yoktur.** ``ikili`` (Tuzak A/B) ve ``mps``
+    (tensör treni + ``χ`` budaması) fermanla imha edildi; "kıyas ucu"
+    diye bile tutulmuyor.
+
+    Koherent kodlama ``kuantum/surekli.py``ye, Lie-Chebyshev
+    ``nefs/qudit.py``ye havale edilir. Burada yeni riyaziye yoktur.
     """
     v = np.asarray(x, float).reshape(-1)
 
@@ -174,24 +180,6 @@ def kodla(x, ne: str = KIP_TUTARLI, boyut: int = 16,
         n = np.linalg.norm(u)
         return (u / n) if n > 1e-300 else u
 
-    if ne == KIP_MPS:
-        from nefs.ttkan import tt_ayristir
-        # **ÇEKİRDEKLER DOĞRUDAN KIYASLANMAZ.** TT-SVD çekirdekleri
-        # bir ayar (gauge) serbestliği taşır: aynı durumu veren sonsuz
-        # çekirdek takımı vardır. Çekirdek dizilerinin Öklid mesafesi
-        # bu yüzden **mânâsızdır** (ölçüldü: ρ = −0,18). Zabıt zaten
-        # örtüşmenin ``Tr(𝔼₁⋯𝔼_k)`` büzülmesi olduğunu söylüyor; o
-        # hâlde geri büzülmüş hâl döndürülür ve kıyas onun üstünden
-        # yapılır. Sanal bağ ``bag`` düştükçe geometri bozulur ve
-        # zabıtın "D bağı ile yüksek korunum" iddiası ölçülebilir olur.
-        n = 2
-        D = n ** 4
-        w = v[:D] if v.size >= D else np.pad(v, (0, D - v.size))
-        M = np.zeros((D, D))
-        M[:, 0] = w                          # durum ilk sütunda; işaret korunur
-        tt = tt_ayristir(M, n=n, d=4, rank=int(bag))
-        return tt.yogun()[:, 0]
-
     if ne == KIP_LIE:
         # ==========================================================
         # FERMANIN ASIL USULÜ (docs/zabit/kudret/..._Qudite_Tahvili)
@@ -207,12 +195,6 @@ def kodla(x, ne: str = KIP_TUTARLI, boyut: int = 16,
         # daima aynı durumu verir (ceride: stokastiklik yasak).
         g = np.resize(v, n_k * (n_d + 1)).reshape(n_k, n_d + 1)
         return durum(g, np.roll(g, 1, axis=1), v[:a.yon], ayar=a)
-
-    if ne == KIP_IKILI:
-        t = int(v[0]) if v.size else 0
-        k = max(1, int(np.ceil(np.log2(max(int(boyut), 2)))))
-        bit = ((t >> np.arange(k)) & 1).astype(float)
-        return 2.0 * bit - 1.0
 
     raise ValueError("kodlama usulü bilinmiyor: %r" % (ne,))
 
@@ -471,12 +453,8 @@ def rapor(tohum: int = 0) -> str:            # pragma: no cover
          "  onun için düşük çıkması bir nakz değildir ve öyle",
          "  sayılmıyor. Girdi kodlaması işi ``tutarlı``nındır.",
          "",
-         "  ``mps`` 1,0 veriyor fakat FERMANLA İPTAL: ferman bu küçük",
-         "  ölçekli sadakati değil, SVD bedelini (ileri geçiş başına",
-         "  ~8500 SVD) ve hacim kanununda çökmesini gerekçe gösterir.",
-         "  Yâni ölçü ile ferman çelişmiyor; ayrı şeyleri söylüyorlar.",
          ""]
-    for ne in (KIP_LIE, KIP_TUTARLI, KIP_QUDIT, KIP_MPS, KIP_IKILI):
+    for ne in (KIP_LIE, KIP_TUTARLI, KIP_QUDIT):
         try:
             d = sadakat(X, ne=ne)
             s.append("    %-42s ρ = %s"
@@ -484,22 +462,6 @@ def rapor(tohum: int = 0) -> str:            # pragma: no cover
                         if d["sadakat"] == d["sadakat"] else "TANIMSIZ"))
         except Exception as e:                            # noqa: BLE001
             s.append("    %-42s DÜŞTÜ: %s" % (ne, type(e).__name__))
-
-    s += ["", "  SANAL BAĞ ``D`` GEOMETRİYİ TAŞIYOR MU? (Kabul 1'in iddiası)"]
-    for b in (1, 2, 4, 8, 16):
-        d = sadakat(X, ne=KIP_MPS, boyut=16)
-        try:
-            kd = [kodla(x, ne=KIP_MPS, bag=b) for x in X]
-            ham, gom = [], []
-            for i in range(len(X)):
-                for j in range(i + 1, len(X)):
-                    ham.append(float(np.linalg.norm(X[i] - X[j])))
-                    gom.append(mesafe(kd[i], kd[j], KIP_MPS))
-            sr = np.argsort(np.argsort(ham)).astype(float)
-            sg = np.argsort(np.argsort(gom)).astype(float)
-            s.append("    bağ D=%-3d ρ = %+.4f" % (b, np.corrcoef(sr, sg)[0, 1]))
-        except Exception as e:                            # noqa: BLE001
-            s.append("    bağ D=%-3d DÜŞTÜ: %s" % (b, type(e).__name__))
 
     L = Lif()
     L.tak("token", "sentaks", "dizim", np.arange(4.0))

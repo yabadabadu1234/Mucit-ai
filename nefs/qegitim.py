@@ -83,28 +83,25 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
     Ölçüldü (14 nokta, ℝ⁴, giriş mesafeleri ↔ kodlanmış mesafeler,
     sıra bağıntısı)::
 
-        mevcut hat (±1 bit)   ρ = +0,2685      ← Tuzak A/B
+        mevcut hat (±1 bit)   ρ = +0,2685      ← Tuzak A/B, İMHA EDİLDİ
         lif: tutarlı          ρ = +1,0000
-        lif: mps  D=8         ρ = +1,0000
 
-    O hâlde hüküm: **kategorik girdi ikili kalır, sürekli girdi
-    ``nefs/lif.py``ye gider.** ``usul`` bunu açıkça seçtirir ve
-    varsayılan, girdinin kendisine bakılarak konur -- tamsayı değilse
-    ikili dal zaten yanlıştır.
+    O hâlde hüküm: **kategorik girdi Hadamard/qudit tabanına, sürekli
+    girdi ``nefs/lif.py``ye gider. İkili dal imha edildi.** ``usul`` bunu açıkça seçtirir.
 
     ==============  ==================================================
     ``usul``        ne yapar
     ==============  ==================================================
-    ``kategorik``   mevcut hat: Hadamard (``kubit ≥ sozluk``) yahut
-                    ikili. Renk/belirteç için doğrudur.
+    ``kategorik``   Hadamard/qudit tabanı. ``kubit ≥ sozluk`` ŞARTTIR;
+                    ikili dal imha edildi.
     ``sürekli``     ``nefs/lif.py:kodla(ne="tutarlı")`` -- koherent
                     durum; Öklid metriği birebir korunur.
-    ``mps``         ``nefs/lif.py:kodla(ne="mps")`` -- tensör treni.
+    ``lie``         ``nefs/lif.py:kodla(ne="lie-chebyshev qudit")``.
     ==============  ==================================================
     """
-    if usul in ("sürekli", "mps"):
-        from .lif import kodla, KIP_TUTARLI, KIP_MPS
-        ne = KIP_TUTARLI if usul == "sürekli" else KIP_MPS
+    if usul in ("sürekli", "lie"):
+        from .lif import kodla, KIP_TUTARLI, KIP_LIE
+        ne = KIP_TUTARLI if usul == "sürekli" else KIP_LIE
         X = np.atleast_2d(np.asarray(belirtecler, float))
         cikti = [np.asarray(kodla(x, ne=ne, boyut=int(sozluk))).reshape(-1)
                  for x in X]
@@ -114,35 +111,52 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
         raise ValueError("kodlama usulü bilinmiyor: %r" % (usul,))
 
     t = np.asarray(belirtecler, int) % int(sozluk)
-    # --- HADAMARD HÂLİ (kütük H116). ``kubit ≥ sozluk`` ise belirteçler
-    # **tam eşit uzaklıkta** kodlanabilir: Hadamard satırları birbirine
-    # dik olduğu için bütün ikili mesafeler eşittir. ARC belirteçleri
-    # RENKTİR, yani kategoriktir; 7 ile 8 arasında "yakınlık" manasızdır
-    # ve ikili kodlama onu sahte olarak dayatır.
+    # --- HADAMARD/QUDIT TABANI (kütük H116). ``kubit ≥ sozluk`` ise
+    # belirteçler **tam eşit uzaklıkta** kodlanır: Hadamard satırları
+    # birbirine dik olduğu için bütün ikili mesafeler eşittir. ARC
+    # belirteçleri RENKTİR, yâni kategoriktir; 7 ile 8 arasında
+    # "yakınlık" manasızdır ve eşit uzaklık tam da doğru olandır.
     #
     # ÖLÇÜLDÜ (16 belirteç, mesafe değişkesi = std/ort):
-    #     ikili    4 boyut : 0,2163   (en az 2,000  en çok 4,000)
-    #     gri      4 boyut : 0,2163   (küllî ölçüde ikiliyle AYNI)
-    #     açısal   4 boyut : 0,2607   (daha kötü)
-    #     Hadamard 4 boyut : 0,5000   (ÇARPIŞMA: en az mesafe 0)
-    #     Hadamard 8 boyut : 0,2673   (yine çarpışma)
+    #     Hadamard  4 boyut : 0,5000   (ÇARPIŞMA: en az mesafe 0)
+    #     Hadamard  8 boyut : 0,2673   (yine çarpışma)
     #     Hadamard 16 boyut: **0,0000**  (bütün mesafeler 5,657)
     #
-    # Yani 4 boyutta ikili kodlama elde edilebilecek EN İYİ hâldir ve
-    # bir kusur değildir; tam kategorik kodlama ``kubit ≥ sozluk``
-    # ister. Seçim bütçeye aittir ve burada açık tutulur.
-    if int(kubit) >= int(sozluk):
-        H = np.array([[1.0]])
-        while H.shape[0] < int(sozluk):
-            H = np.block([[H, H], [H, -H]])
-        satir = H[t % H.shape[0]]
-        out = np.zeros((len(t), int(kubit)))
-        out[:, :H.shape[1]] = satir[:, :int(kubit)]
-        if int(kubit) > H.shape[1]:
-            out[:, H.shape[1]:] = 1.0
-        return out
-    bit = ((t[:, None] >> np.arange(kubit)[None, :]) & 1).astype(float)
-    return 2.0 * bit - 1.0
+    # Yâni tam kategorik kodlama ``kubit ≥ sozluk`` ister ve bu bir
+    # tercih değil **şarttır**.
+    # ==============================================================
+    # İKİLİ DAL **İMHA EDİLDİ** (padişahın fermanı)
+    # ==============================================================
+    #
+    # Evvelce ``kubit < sozluk`` hâlinde ``2·bit − 1`` düz ikili
+    # kodlaması koşuyordu ve şerhi "4 boyutta elde edilebilecek EN İYİ
+    # hâl" diye onu savunuyordu. Ferman sarihtir: *"ikili kübit kodlama
+    # iptal olup qudit gelecek"*, ve *"yasaklanan ne kadar usul varsa
+    # hepsini imha edeceksin."* O hâlde dal kaldırıldı; "bütçe kipi"
+    # diye tutulmuyor.
+    #
+    # Geriye kalan Hadamard dalı fiilen bir **qudit tabanıdır**:
+    # bütün ikili mesafeler eşittir (ölçüldü: 5,657; değişke 0,0000).
+    # Zabıt bunu yasaklamaz, ister.
+    #
+    # ``kubit < sozluk`` artık bir HATADIR, sessiz bir kırpma değil:
+    # 16 belirteci 4 boyutta eşit uzaklıkta dizmek imkânsızdır ve o
+    # imkânsızlığı ikili kodlamayla örtmek tam da yasaklanan şeydi.
+    if int(kubit) < int(sozluk):
+        raise ValueError(
+            "kubit=%d < sozluk=%d: düz ikili kodlama İMHA EDİLDİ "
+            "(ferman). Kategorik kodlama kubit ≥ sozluk ister; "
+            "sürekli girdi için usul='sürekli' yahut 'lie' kullanın."
+            % (int(kubit), int(sozluk)))
+    H = np.array([[1.0]])
+    while H.shape[0] < int(sozluk):
+        H = np.block([[H, H], [H, -H]])
+    satir = H[t % H.shape[0]]
+    out = np.zeros((len(t), int(kubit)))
+    out[:, :H.shape[1]] = satir[:, :int(kubit)]
+    if int(kubit) > H.shape[1]:
+        out[:, H.shape[1]:] = 1.0
+    return out
 
 
 def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,

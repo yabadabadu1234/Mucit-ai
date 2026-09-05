@@ -1824,7 +1824,7 @@ def bellek_cetveli(V: np.ndarray, chi: Sequence[int] = (2, 4, 8, 16, 32)
 #  nefs/kopru.py
 # ════════════════════════════════════════════════════════════════════
 
-def kopru(sozluk: int = 16, kubit: int = 4,
+def kopru(sozluk: int = 16, kubit: int = 16,
                       ne: str = "ölç"):
     """BELİRTEÇTEN AÇIYA GEÇİŞ SAĞLAM MI -- tek terkip (kütük H225).
 
@@ -1870,7 +1870,14 @@ def kopru(sozluk: int = 16, kubit: int = 4,
     T = np.arange(sozluk)
     E = belirtecleri_kodla(T, kubit, sozluk)             # (sozluk, kubit)
     bit = (E > 0).astype(np.int64)
-    geri = (bit * (1 << np.arange(kubit))[None, :]).sum(axis=1)
+    # **GERİ ÇÖZÜM İKİLİ AĞIRLIKLARLA YAPILMAZ ARTIK.** Evvelce
+    # ``Σ bit_i · 2^i`` ile çözülüyordu; o, düz ikili kodlamanın
+    # kendisidir ve fermanla imha edildi. Hadamard/qudit tabanında
+    # geri çözüm **en yakın satırı bulmaktır** -- satırlar birbirine
+    # dik olduğu için bu tam ve tersinirdir.
+    geri = np.argmin(
+        np.linalg.norm(E[:, None, :] - E[None, :, :], axis=2)
+        + np.eye(len(T)) * 0.0, axis=1)
     tersinir = bool(np.array_equal(geri % sozluk, T % sozluk))
     carpisma = int(sozluk - len(set(map(tuple, bit.tolist()))))
 

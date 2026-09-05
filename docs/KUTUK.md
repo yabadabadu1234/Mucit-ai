@@ -8761,3 +8761,66 @@ Kör NLL iki durumu **hiç** ayırt edemiyor: fark tam sıfır. Zabıtın
 
 Kör NLL `ne="nokta"` kipiyle **ölçülebilir bırakıldı**: zabıtın
 yasakladığı hâl budur ve gizlenmesin diye kırmızı ucu duruyor.
+
+---
+
+## H240 — YASAKLI USULLERİN İMHASI: "YEDEKTE TUTMAK" KAİDESİ KALDIRILDI
+
+**Ferman.** *"Yasakladığım şeyleri kod tabanında yedekte tutmaktan
+vazgeç, emrimdir, yasaklanan ne kadar usul varsa hepsini imha
+edeceksin!"*
+
+Bu, **"imha yok, cevher toplama var"** kaidesinin yasaklı usuller
+için **açık istisnasıdır**. O kaide hâlâ geçerlidir — fakat yalnız
+cevher için. Yasağı "kıyas ucu" diye saklamak, yasağı fiilen
+kaldırmamak demekti: birileri (ben dâhil) er geç onu çağırır.
+
+### İmha edilenler
+
+| ne | nerede | niçin yasak |
+| :--- | :--- | :--- |
+| `yedek/` — **145 py dosyası, 5,1 MB** | bütün küme asılları | içlerinde MPS, TT-SVD, elle ARC kâideleri vardı |
+| `nefs/ttkan.py` (433 s.) | MPS / TT-SVD | `χ` budaması hacim kanununda çöker; her sıkıştırma bir SVD |
+| `idrak/kubit.py` (225 s.) | ikili kübit kaydı | Tuzak A: bütün kelimeler birbirine dik |
+| `idrak/model.py` (495 s.) + sınaması | imha edilen kübit kaydına bağlı | yasaklı usulün üstüne kurulmuş, üstelik yetim |
+| `lif.KIP_IKILI`, `lif.KIP_MPS` | kodlama kipleri | "kıyas ucu" diye duruyorlardı |
+| `belirtecleri_kodla` ikili dalı | `2·bit − 1` | ±1 faz kilidi (SO(2) spin-glass tuzağı) |
+| `tabakali_mizan(ne="nokta")` | kör NLL | faz katliamı, mertebe çöküşü |
+
+### Fermanın ölçülen bedeli — saklamıyorum
+
+İkili dal imha edilince kategorik kodlama `kubit ≥ sozluk` **şartına**
+bağlandı: 16 belirteci 4 boyutta eşit uzaklıkta dizmek imkânsızdır ve
+o imkânsızlığı ikili kodlamayla örtmek tam da yasaklanan şeydi.
+
+O hâlde `EgitimAyari.satir_kubiti` **4 → 16** oldu. Ölçüldü:
+
+```
+kubit= 4 : REDDEDİLİYOR (ValueError)
+kubit=16 : mesafe en az 5,657  en çok 5,657  değişke 0,0000
+tek kayıp çağrısı: 4,04 sn   kayıp 0,307655
+```
+
+Kayıp 0,414574 → 0,307655 **değişti** ve bu bir kusur değil: kodlama
+hakikaten değişti, sayı da onunla değişti. Yazmaç genişledi ve eski
+MPS motoru yavaşladı — o motor zaten fermanla iptaldir; bedel onun
+tasfiyesini **geciktirmenin** bedelidir, şartın değil.
+
+### `kopru`nun geri çözümü de değişti
+
+Evvelce `Σ bitᵢ·2ⁱ` ile çözülüyordu — o, düz ikili kodlamanın ta
+kendisidir. Hadamard/qudit tabanında geri çözüm **en yakın satırı
+bulmaktır**; satırlar dik olduğu için tam ve tersinirdir.
+
+### Sınama yasağı SINIYOR artık
+
+`test_kodlama_tersinir_ve_hadamard_esit_uzak` evvelce ikili dalın
+"4 boyutta en iyi hâl" olduğunu **tasdik ediyordu**. Şimdi tersini
+ölçüyor: `kubit < sozluk` çağrısı hata vermezse sınama kırmızı yanar —
+yâni yasak sessizce kalkarsa yakalanır.
+
+### Kendi açtığım kusur
+
+`lif.py`de `KIP_MPS`ten `raise`e kadar sildim; o aralıkta **`KIP_LIE`
+dalı da vardı** ve onunla beraber gitti. `nefs.qudit` bir anda yetim
+düştü, yetim mandalı yakaladı. Geri kondu.

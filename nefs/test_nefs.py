@@ -569,18 +569,21 @@ def test_kan_temelleri_kiyas() -> None:
 
 
 def test_kodlama_tersinir_ve_hadamard_esit_uzak():
-    """Kodlama funktörünün sıhhati -- `token_uzaylari/morfizm.py` ile.
+    """Kodlama funktörünün sıhhati -- ve **ikili dalın imhası**.
 
-    H14 *"kodlama tersinirdir, hiçbir bit kaybolmaz"* diyordu ve bu
-    **hiç ölçülmemişti**. Burada iki ayrı ölçütle ölçülür:
+    Bu sınama evvelce ``belirtecleri_kodla(T, 4, 16)`` çağırıp düz
+    ikili kodlamanın "4 boyutta elde edilebilecek en iyi hâl" olduğunu
+    tasdik ediyordu. Padişahın fermanıyla o dal **imha edildi**:
+    *"ikili kübit kodlama iptal olup qudit gelecek"*, *"yasaklanan ne
+    kadar usul varsa hepsini imha edeceksin."*
 
-    1. **Tersinirlik** -- her belirteç geri çözülebilmeli, çarpışma
-       olmamalı. (H14'ün iddiası budur ve doğrudur.)
-    2. **Kategorik eşit uzaklık** -- ARC belirteçleri RENKTİR, yani
-       kategoriktir; 7 ile 8 arasında "yakınlık" manasızdır. 4 boyutta
-       bu sağlanamaz (ölçüldü: değişke 0,2163 ve bu, gri/açısal/Hadamard
-       alternatiflerinin hepsinden İYİ). ``kubit ≥ sozluk`` olunca
-       Hadamard tam eşit uzaklık verir (değişke 0).
+    O hâlde sınama artık yasağın **fiilen** durduğunu ölçer:
+
+    1. **Tersinirlik** -- her belirteç geri çözülebilmeli (H14).
+    2. **Yasak duruyor mu** -- ``kubit < sozluk`` çağrısı HATA vermeli.
+       Sessizce ikiliye düşerse yasak fiilen kalkmış olur.
+    3. **Kategorik eşit uzaklık** -- ``kubit ≥ sozluk``ta Hadamard
+       tam eşit uzaklık verir (değişke 0), yâni fiilen qudit tabanı.
     """
     from .musahede import kopru
     from .qegitim import belirtecleri_kodla
@@ -588,19 +591,23 @@ def test_kodlama_tersinir_ve_hadamard_esit_uzak():
     r = kopru()
     assert r["tersinir"] is True and r["çarpışma"] == 0, r
 
+    # --- 2. YASAK FİİLEN DURUYOR MU
+    try:
+        belirtecleri_kodla(np.arange(16), 4, 16)
+    except ValueError as e:
+        assert "İMHA" in str(e), str(e)
+    else:                                            # pragma: no cover
+        raise AssertionError(
+            "kubit=4 < sozluk=16 geçti: düz ikili kodlama HÂLÂ "
+            "koşuyor demektir, yâni ferman fiilen tatbik edilmemiş.")
+
+    # --- 3. Hadamard/qudit tabanı: TAM eşit uzaklık
     T = np.arange(16)
     ust = np.triu_indices(16, 1)
-
-    def degisken(E):
-        D = np.linalg.norm(E[:, None, :] - E[None, :, :], axis=2)[ust]
-        return float(D.std() / D.mean()), float(D.min())
-
-    d4, en_az4 = degisken(belirtecleri_kodla(T, 4, 16))
-    d16, en_az16 = degisken(belirtecleri_kodla(T, 16, 16))
-    assert en_az4 > 0.0 and en_az16 > 0.0          # hiç çarpışma yok
-    assert d16 < 1e-9, d16                         # Hadamard: TAM eşit uzak
-    assert d4 > 0.2, d4                            # 4 boyutta imkânsız
-
+    E = belirtecleri_kodla(T, 16, 16)
+    D = np.linalg.norm(E[:, None, :] - E[None, :, :], axis=2)[ust]
+    assert float(D.min()) > 0.0                      # çarpışma yok
+    assert float(D.std() / D.mean()) < 1e-9          # TAM eşit uzak
 
 def test_kod_uzayi_stabilizer_ile_yuzlesiyor():
     """Hüküm bloğu, MPS'ten BAĞIMSIZ ikinci bir temsille denetlenebiliyor mu?
@@ -751,7 +758,6 @@ def test_makam_kodlamasi_epistemik_komsulugu_koruyor():
 #: Sınamayı yeşile boyamak için tahtları geri koymak, ölçüyü kendi
 #: lehine bozmak olurdu.
 YETIM_BORCU = frozenset({
-    "idrak.kubit", "idrak.model",
     "kuantum.devre", "kuantum.eniyileme", "kuantum.topolojik",
     "nefs.akit", "nefs.golge", "nefs.hamiltonyen", "nefs.hayal",
     "nefs.hiz", "nefs.hukum_denetimi", "nefs.illet",
@@ -1151,27 +1157,6 @@ def test_eklem_paralel_degil_ve_KIRMIZIYA_donebiliyor():
     assert len(q2.eklem_olcusu()["kesit"]) == 1
 
 
-def test_ttkan_kendi_sahasinda_tam_yabanci_sahada_degil():
-    """TT-KAN'ın hakkı da haddi de ölçülüyor mu?
-
-    * **Hakkı:** Kronecker çarpımı tam TT'dir; hata makine
-      hassasiyetinde olmalıdır. Olmuyorsa kusur ceridede değil bizim
-      kodumuzdadır ve TT'yi yabancı sahada denemiş oluruz.
-    * **Haddi:** ceridenin ``278.528 FLOP`` hesabı çekirdek eleman
-      sayısıdır; yoğun (ya da dolaşık) vektöre hakikî TT-MVM bundan çok
-      daha pahalıdır ve ``16⁴`` ölçeğinde yoğun çarpmayı bile geçer.
-    """
-    from nefs.ttkan import (kiyas, tt_flop, yogun_flop, ceride_flop)
-    r = kiyas(n=8, d=3, rank=8)
-    assert r["hata_kronecker"] < 1e-10, r["hata_kronecker"]
-    assert r["bag_kronecker"] == (1, 1, 1, 1), r["bag_kronecker"]
-    # sıkıştırma HAFIZADA hakikîdir
-    assert r["eleman_tt"] * 10 < r["eleman_yogun"], r
-    # ...fakat HESAPTA değil: 16⁴'te TT-MVM yoğunu geçer.
-    assert tt_flop(16, 4, 16) > yogun_flop(4096), (tt_flop(16, 4, 16),
-                                                   yogun_flop(4096))
-    # ceridenin sayısı yeniden üretiliyor (iddia doğru anlaşılmış mı)
-    assert ceride_flop(16, 4, 16) == 278_528
 
 
 def test_ikmal_fikralari_ucu_de_KIRMIZIYA_donebiliyor():
@@ -1339,48 +1324,6 @@ def test_zirh_dordu_de_KIRMIZIYA_donebiliyor():
     assert not zirh_kaybi(betti=1.0)["çelişkisiz"]
 
 
-def test_ttkan_rank1_ceridenin_sayisini_TAM_veriyor():
-    """χ_v = 1 yolunda ceridenin 278.528'i birebir çıkıyor mu?
-
-    H175'te TT'yi χ_v = 16'lık bir MPS vektörüne bağlamıştım; padişahın
-    ihtarı üzerine rank-1 yolu kuruldu. Bu sınama o tashihi kilitler.
-    """
-    import numpy as np
-    from nefs.ttkan import (TTDizey, tt_carp_rank1, ceride_flop,
-                            rank1_ayristir)
-    rng = np.random.default_rng(0)
-    n, d, r = 16, 4, 16
-    cek, r0 = [], 1
-    for k in range(d):
-        r1 = 1 if k == d - 1 else r
-        cek.append(rng.normal(size=(r0, n, n, r1)))
-        r0 = r1
-    tt = TTDizey(cekirdek=cek, n=n, D=n ** d)
-    _, f = tt_carp_rank1(tt, [rng.normal(size=n) for _ in range(d)])
-    assert f == ceride_flop(16, 4, 16) == 278_528, f
-
-    # rank-1 yol CEBİRSEL OLARAK TAM: küçük ölçekte yoğunla örtüşmeli
-    n2, d2 = 4, 4
-    cek2, r0 = [], 1
-    for k in range(d2):
-        r1 = 1 if k == d2 - 1 else 4
-        cek2.append(rng.normal(size=(r0, n2, n2, r1)))
-        r0 = r1
-    tt2 = TTDizey(cekirdek=cek2, n=n2, D=n2 ** d2)
-    M = tt2.yogun()
-    a = [rng.normal(size=n2) for _ in range(d2)]
-    h, _ = tt_carp_rank1(tt2, a)
-    Y = h[0]
-    for c in h[1:]:
-        Y = np.tensordot(Y, c, axes=([-1], [0]))
-    v = a[0]
-    for x in a[1:]:
-        v = np.multiply.outer(v, x)
-    assert np.allclose(Y.ravel(), M @ v.ravel(), atol=1e-10)
-
-    # ...fakat rastgele bir vektör rank-1 DEĞİLDİR; sayı bunu söylüyor
-    _, hata = rank1_ayristir(rng.normal(size=4096), n=16, d=3)
-    assert hata > 0.9, hata
 
 
 def test_qsp_faz_tablosu_CEVRIMDISI_ve_dogru():

@@ -2781,9 +2781,8 @@ def tabakali_mizan(psi=None, hedef=None, delta=None, morfizm=None,
 
     ``toplam``  -- dördü ve ağırlıklı toplamı
     ``döküm``   -- her terim ayrı ayrı (hangi mertebe kırmızı, görünür)
-    ``nokta``   -- yalnız kör NLL. **Kıyas ucu olarak durur**; zabıtın
-                   yasakladığı hâl budur ve gizlenmesin diye ölçülebilir
-                   bırakılmıştır (H90).
+    ``nokta``   -- **İMHA EDİLDİ.** Çağrılırsa hata verir; yasağı
+                   çağrılabilir bırakmak yasağı kaldırmamaktır.
     """
     a = dict(MIZAN_AGIRLIK)
     a.update(agirlik or {})
@@ -2803,11 +2802,17 @@ def tabakali_mizan(psi=None, hedef=None, delta=None, morfizm=None,
         out["nokta"] = 0.0
 
     if ne == "nokta":
-        # Zabıtın YASAKLADIĞI hâl. Ölçülebilir bırakıldı ki
-        # "tabakalı mizan iş görüyor mu" suâli kırmızıya dönebilsin.
-        out["toplam"] = out["nokta"]
-        out["usul"] = "kör NLL -- ZABITLA YASAK, yalnız kıyas için"
-        return out
+        # **KÖR NLL KİPİ İMHA EDİLDİ.** Evvelce burası yalnız
+        # ``ℒ_nokta``yı döndürüyordu ve şerhi onu "kıyas ucu" diye
+        # savunuyordu. Ferman: *"yasaklanan ne kadar usul varsa
+        # hepsini imha edeceksin."* Bir yasağı çağrılabilir hâlde
+        # tutmak, yasağı fiilen kaldırmamaktır -- birileri (ben dâhil)
+        # er geç onu çağırır.
+        raise ValueError(
+            "kör NLL kipi İMHA EDİLDİ (ferman). Zabıt: tek başına NLL "
+            "faz katliamı yapar, mertebeleri çökertir ve quditi pahalı "
+            "bir softmax taklidine çevirir. Tabakalı mizan kullanın: "
+            "ne='toplam' yahut ne='döküm'.")
 
     # --- 1. UZAY: Fubini-Study. Faz burada YAŞAR, kare alınmaz-atılmaz.
     if psi is not None and hedef is not None and np.ndim(hedef) > 0:

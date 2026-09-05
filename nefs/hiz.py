@@ -646,7 +646,7 @@ def _rapor_gercek(kisa: bool = False) -> str:
 
     s.append("\n=== Kübit var mı? — yok, ve olması da beklenmiyor ===")
     s.append("  Bu ölçümlerin hiçbirinde kuantum donanımı kullanılmadı.")
-    s.append("  idrak.kubit'teki yazmaç bir KLASİK BENZETİMDİR: n kübit")
+    s.append("  Eski ikili yazmaç bir KLASİK BENZETİMDİ: n kübit")
     s.append("  2^n genlik demektir ve maliyeti üstel büyür (ölçüldü:")
     s.append("  n=16'da 108 ms). Kazancı hız değil, norm korunumudur.")
     s.append("  Yani 'kübit yapacaksın' isteği mimarî olarak karşılandı,")
