@@ -58,5 +58,5 @@ def ogren(kayip: Optional[Callable] = None, p0=None, ayar=None,
     if kayip is None or p0 is None:
         raise ValueError("öğrenmek için kayıp ve başlangıç lâzım")
     if ayar is None:
-        ayar = OptimizeAyari(tur=int(tur), tunel_acik=bool(tunel))
+        ayar = OptimizeAyari(tur=int(tur), tunel_acik=bool(tunel), **kw)
     return hoca_egit(kayip, np.asarray(p0, float), ayar)

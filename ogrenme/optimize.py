@@ -3169,6 +3169,19 @@ class KulliOptimizer:
                    else np.arange(self.d, dtype=np.intp))
             yonler = list(idx)
             if self.ayar.yon_sayisi:
+                # ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H230). Evvelce
+                # ``yonler[:N]`` alınıyordu: bütçe kısılınca hoca
+                # DÂİMA ilk ``N`` ekseni tarıyor, geri kalan bütün
+                # parametreler **sessizce donuyordu**. Müşterek
+                # ``[θ | p]`` vektöründe ölçüldü: ``‖Δθ‖ = 1,25`` fakat
+                # ``‖Δp‖ = TAM SIFIR`` -- 272 kapı parametresine hiç
+                # dokunulmamıştı. Bütçe kısıtı bir **örnekleme**dir,
+                # bir dondurma değil; eksenler tur başına deterministik
+                # olarak karıştırılıp öyle kesilir. Tohum sabit olduğu
+                # için koşu yine birebir tekrarlanabilirdir.
+                kr = np.random.default_rng(
+                    int(self.ayar.tohum) * 1000003 + tur)
+                yonler = [int(j) for j in kr.permutation(np.asarray(yonler))]
                 yonler = yonler[:int(self.ayar.yon_sayisi)]
             for j in yonler:
                 e = np.zeros(self.d)
