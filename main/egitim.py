@@ -881,7 +881,7 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
 #: ``main.kaggle_cikarim``) ve ``tanilama/nizam.py:GIRISLER`` dördünü de
 #: "giriş" sayıyordu; bu, o dört ağaçtan erişilen her şeyi **sessizce**
 #: tebaa gösteriyor, yetimliği ölçüden gizliyordu.
-KIPLER: Tuple[str, ...] = ("tâlim", "kaggle", "teftiş")
+KIPLER: Tuple[str, ...] = ("tâlim", "kaggle", "teftiş", "veri")
 
 
 def taht(ne: str = "tâlim", *arg: str) -> str:
@@ -892,6 +892,9 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
     * ``"tâlim"``  -- ``kos``: iki hattın tek hatta terkibi (H230).
     * ``"kaggle"`` -- ``main/kaggle_egitim.py`` + ``main/kaggle_cikarim.py``.
       Bunlar ayrı birer taht DEĞİL, tahtın koşum kipidir.
+    * ``"veri"``   -- ``main/veri.py``: belirteçleri 500 MB'lık,
+      64 bayta hizalı, mmap'lenebilir parçalara dizer ve Kaggle'a
+      umumi veri kümesi olarak gönderir. Hem Kaggle'da hem burada.
     * ``"teftiş"`` -- ``tanilama/divan.py``: dimağı **muayene eden**
       hekim. Hekim uzuv değildir; ama yetim de değildir -- padişah onu
       çağırır, o padişahı değil.
@@ -914,6 +917,11 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
         return ("=== KAGGLE KİPİ ===\n  donanım profili: %r\n"
                 "  tâlim: %r\n  teslimat: %s"
                 % (prof, t, kaggle_teslimat_dosyasi_uret.__name__))
+    if ne == "veri":
+        # Veri dönüştürücü: hem Kaggle hem burası. Ayrı bir taht
+        # değil, tahtın kipi.
+        from main.veri import rapor as veri_raporu
+        return veri_raporu(*(arg[:1] or ("training",)))
     if ne == "teftiş":
         from tanilama.divan import rapor as divan_raporu
         return divan_raporu(kos=bool(arg and arg[0] == "koş"))
