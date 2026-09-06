@@ -331,6 +331,38 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
     # bilmediğini söylüyor demektir ve söylenmez. Eşik ayarlanabilir
     # ve kapatılabilir (H90); elle yazılmış bir kâide değildir.
     ort_sukut = float(np.mean(sukutlar)) if sukutlar else 1.0
+
+    # ══════════════════════════════════════════════════════════════
+    #  ŞÜPHE MANİFOLDU ÇIKARIMDA (nefs/suphe.py)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **SÜKÛTUN İKİNCİ SEBEBİ: TEÂRUZ.** Sükût alanı "bilmiyorum"u
+    # ölçer; teâruz ise başka bir hâldir: model **iki zıddı da aynı
+    # kuvvette** taşıyor demektir (``μ ← μ·(1 − |⟨ψ_P|ψ_¬P⟩|)``).
+    # Orada hüküm vermek, yazı-tura atıp "biliyorum" demektir.
+    #
+    # Bu satır, ``main/cikarim.py``nin *"şüphe manifoldu çıkarımda iş
+    # görür"* iddiasının **karşılığıdır**. Evvelce o iddia yazılmış
+    # fakat manifold yalnız mizanda koşuyordu; ölçüldü (çıkarımda
+    # ``teâruz 0``) ve bağlandı -- iddia edilen şey koşturulur, yoksa
+    # iddia silinir (ferman 5).
+    from .qegitim import belirtecleri_kodla
+    from .suphe import SupheAyari, suphe_manifoldu
+    _E = belirtecleri_kodla(list(uretilen)[-int(pencere):] or [0],
+                            nefs.ayar.satir_kubiti, int(sozluk))
+    _q = nefs.idrak_et(_E)
+    _sp = suphe_manifoldu([np.asarray(_q.y.psi[0], complex)],
+                          [1.0 - 2.0 * ort_sukut],
+                          yakin=np.array([1.0 - ort_sukut]),
+                          ayar=SupheAyari(acik=1))
+    if int(_sp["tevakkuf"]) > 0:
+        return _bitir(Cevap(
+            gorev=gorev.ad, sukut=True, tikaniklik=tik,
+            belirtec=uretilen, guven=float(np.mean(guvenler or [0.0])),
+            budanan=int(budanan),
+            sebep="TEÂRUZ: yakîn %.3f -- tez ile antitez denk kuvvette"
+                  % float(_sp["μ"][0])))
+
     if ort_sukut > float(sukut_esigi):
         return _bitir(Cevap(
             gorev=gorev.ad, sukut=True, tikaniklik=tik,

@@ -248,6 +248,13 @@ class Hafiza:
 
         Ağırlıkla **aynı dosyada fakat ayrı tensörlerde** durur: fıtrat
         ile hadisenin ayrı olduğu dosyanın kendisinde görünür.
+
+        **AYRAÇ ``$`` DEĞİL ``.``DIR VE BU BİR ZEVK MESELESİ DEĞİL.**
+        ``main/hazine.py`` ``$``i karmaşık tensörü ``$re``/``$im``
+        çiftine bölmek için ayırmıştır ve ``_ayir`` adında ``$`` gören
+        her tensörü **reddeder**. Yâni ``hafıza$x`` yazıldığı sürece
+        hafıza hazineye **hiç yazılamıyordu**: tâlim, geçit açıldığı
+        gün ``AssertionError`` ile düşerdi. Ölçüldü ve düzeltildi.
         """
         if not self.kayitlar:
             return {}
@@ -256,11 +263,11 @@ class Hafiza:
         for i, k in enumerate(self.kayitlar):
             X[i, :k.x.size] = k.x
         return {
-            "hafıza$x": X,
-            "hafıza$omega": np.array([k.omega for k in self.kayitlar], float),
-            "hafıza$hüküm": np.array([k.hukum for k in self.kayitlar], float),
-            "hafıza$mu": np.array([k.mu for k in self.kayitlar], float),
-            "hafıza$doğum": np.array([k.dogum for k in self.kayitlar],
+            "hafıza.x": X,
+            "hafıza.omega": np.array([k.omega for k in self.kayitlar], float),
+            "hafıza.hüküm": np.array([k.hukum for k in self.kayitlar], float),
+            "hafıza.mu": np.array([k.mu for k in self.kayitlar], float),
+            "hafıza.doğum": np.array([k.dogum for k in self.kayitlar],
                                      np.int64)}
 
     @classmethod
@@ -277,14 +284,14 @@ class Hafiza:
                 sonum=float(u.get("hafıza_sönümü", 0.02)),
                 zeno_esigi=float(u.get("zeno_eşiği", 0.35)),
                 zeno_tepe=float(u.get("zeno_tepe", 0.9)))
-        if "hafıza$x" not in agirlik:
+        if "hafıza.x" not in agirlik:
             return h
-        X = np.asarray(agirlik["hafıza$x"])
-        om = np.asarray(agirlik["hafıza$omega"], float).reshape(-1)
-        hk = np.asarray(agirlik["hafıza$hüküm"], float).reshape(-1)
-        mu = np.asarray(agirlik["hafıza$mu"], float).reshape(-1)
+        X = np.asarray(agirlik["hafıza.x"])
+        om = np.asarray(agirlik["hafıza.omega"], float).reshape(-1)
+        hk = np.asarray(agirlik["hafıza.hüküm"], float).reshape(-1)
+        mu = np.asarray(agirlik["hafıza.mu"], float).reshape(-1)
         dg = np.asarray(agirlik.get(
-            "hafıza$doğum", np.zeros(om.size)), np.int64).reshape(-1)
+            "hafıza.doğum", np.zeros(om.size)), np.int64).reshape(-1)
         assert X.shape[0] == om.size == hk.size == mu.size, (
             "hafıza tensörlerinin boyları tutmuyor")
         for i in range(X.shape[0]):

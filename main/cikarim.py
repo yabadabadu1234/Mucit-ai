@@ -59,6 +59,23 @@ from nefs.musahede import gorevleri_getir                # noqa: E402
 # **USUL FERMANI:** bu satır ``nefs/hafiza.py`` HENÜZ YOKKEN yazıldı.
 # Çağrı evvel, uzuv sonra (docs/zabit/USUL_UMUMIDEN_HUSUSIYE.md).
 from nefs.hafiza import Hafiza                           # noqa: E402
+# **USUL FERMANI:** bu iki satır ``nefs/sadakat.py`` ve ``nefs/suphe.py``
+# HENÜZ YOKKEN yazıldı.
+#
+# **MANTIĞA SADAKAT ÇIKARIMDA DA KOŞAR -- VE KOŞMASI ŞARTTIR.**
+# Zabıt: *"Bütün melekelerin 7/24, her adımda ve HER UZAYDA uymak
+# zorunda olduğu sarsılmaz kanundur."* Yalnız tâlimde koşan bir sadakat,
+# 7/24 değildir: model eğitilirken mantıklı, konuşurken serbest olurdu.
+# Onun için zemin ``QNefs.idrak_et``e bağlandı -- tâlimin de çıkarımın
+# da tek geçtiği yer orasıdır -- ve burada **hesabı sorulur**.
+#
+# Şüphe manifoldu da çıkarımda iş görür: teâruz hâlinde (``P`` ile
+# ``¬P`` denk kuvvette) model hüküm vermez, **susar**. Sükût hakkı
+# burada bir kaide değil, bir ölçünün neticesidir.
+from nefs.sadakat import sadakat_beyani                  # noqa: E402
+from nefs.suphe import suphe_beyani                      # noqa: E402
+# **FERMAN 1-G:** raporun yeri taht değil, kendi uzvudur.
+from tanilama.beyan import cikarim_beyani                # noqa: E402
 
 __all__ = ["padisah", "degerlendirme_kosusu", "hazineden_yukle",
            "hafizayi_yukle", "kos"]
@@ -70,7 +87,7 @@ def hafizayi_yukle(ayar, dizin: Optional[str] = None) -> "Hafiza":
     **AĞIRLIK HAFIZA DEĞİLDİR.** Ağırlıklar fıtrattır: gramer, refleks,
     mantık terazisi. Tâlim boyunca cerhedilen safsatalar ve tasdik edilen
     meşru teemmüller ise ayrı bir yoğunluk operatöründe (``ρ_Hafıza``)
-    birikir ve hazineye ``hafıza$*`` tensörleri olarak yazılır.
+    birikir ve hazineye ``hafıza.*`` tensörleri olarak yazılır.
 
     Çıkarımda bu hafıza **Zeno budaması** için lâzımdır: model daha evvel
     cerhedilmiş bir mantık koluna girmeye başladığı an, döngüyü
@@ -135,6 +152,14 @@ def _motor(ayar=None, ham: bool = False):
     a = ayar or KISA_CPU
     nefs = QNefs(a.tohum, a.qayar())
     nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
+    # **KADEME PARAMETRELERİ BURADA DA AÇILIR.** Tâlim onları açıyor
+    # (``main/egitim.py``, ``kademe_parametreleri_ac``) ve hazineye 324
+    # sayı yazıyordu; çıkarım açmayınca 318 kuruyor ve yükleme
+    # ``AssertionError`` veriyordu. Yâni çıkarım, eğitilmiş bir hazineyi
+    # **hiç yükleyemezdi**. Ölçüldü (324 ≠ 318) ve düzeltildi: iki kapı
+    # aynı nefsi kurmak zorundadır, yoksa "aynı ağırlık" iddiası boştur.
+    from nefs.kulli_kayip import kademe_parametreleri_ac
+    kademe_parametreleri_ac(nefs.p)
     yuk = hazineden_yukle(nefs, a, ham=ham)
     # Fıtrat (ağırlık) ile hadise (hafıza) AYRI iki şeydir; ikisi ayrı
     # yüklenir. Ham kipte ikisi de yoktur ve bu açıkça söylenir.
@@ -205,8 +230,16 @@ def degerlendirme_kosusu(kume: str = "training", azami: int = 24,
             hucre.append(sum(1 for i in range(n) if h[i] == u[i]) / n)
         if u[:len(h)] == h:
             cozulen += 1
+    # **7/24 ZEMİNİN HESABI ÇIKARIMDA DA SORULUR.** Sayaç ``idrak_et``te
+    # artar; sıfırsa sadakat bu uzayda koşmamış demektir ve o zaman
+    # "her uzayda" iddiası yalan olur -- onun için burada durdurur.
+    sad = sadakat_beyani()
+    sup = suphe_beyani()
+    assert int(sad["çağrı"]) > 0, (
+        "MANTIĞA SADAKAT ÇIKARIMDA KOŞMADI -- 7/24 iddiası düşer.")
     return {"küme": kume, "deneme": deneme, "konuşan": konusan,
             "hazine": yuk, "budanan": budanan,
+            "sadakat": sad, "şüphe": sup,
             "susan": deneme - konusan, "tam_çözülen": cozulen,
             "ortalama_hücre_isabeti":
                 float(np.mean(hucre)) if hucre else 0.0,
@@ -215,24 +248,8 @@ def degerlendirme_kosusu(kume: str = "training", azami: int = 24,
 
 def kos(kume: str = "training", azami: int = 24,
         ham: bool = False) -> str:                       # pragma: no cover
-    d = degerlendirme_kosusu(kume, azami, ham=ham)
-    return "\n".join([
-        "=== ÇIKARIM -- motor cevabı (elle kâide YOK) ===", "",
-        "  küme            : %s" % d["küme"],
-        "  deneme          : %d" % d["deneme"],
-        "  konuşan / susan : %d / %d" % (d["konuşan"], d["susan"]),
-        "  TAM çözülen     : %d" % d["tam_çözülen"],
-        "  hücre isabeti   : %.4f" % d["ortalama_hücre_isabeti"],
-        "  süre            : %.1f sn" % d["süre_sn"],
-        "  ağırlık         : %s" % (d["hazine"].get("yol")
-                                    or "YOK (ham kip -- eğitilmemiş motor)"),
-        "  hafıza (ρ)      : %s" % (d["hazine"].get("hafıza")
-                                    or "YOK (Zeno budaması kapalı)"),
-        "  Zeno budaması   : %d kol kesildi" % d["budanan"],
-        "",
-        "  Elle kurulmuş hiçbir ARC kâidesi kullanılmadı; eski dalga",
-        "  öğrenicisi İMHA EDİLDİ (yedek dizini de silindi).",
-    ])
+    """**Ferman 1-G: burada rapor metni yoktur.** Ölç, beyana havale et."""
+    return cikarim_beyani(degerlendirme_kosusu(kume, azami, ham=ham))
 
 
 if __name__ == "__main__":                               # pragma: no cover

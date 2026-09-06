@@ -1,6 +1,8 @@
 """MÎZÂN-I KÜLLÎ -- modelin minimize edeceği yegâne şey.
 
-    ℒ_Küllî = ℒ_Rezonans + λ₁ℒ_Çevrim + λ₂ℒ_Monogami + λ₃ℒ_Hodge
+    TABAKALI MİZAN (zabıt): L = L_nokta + α·L_uzay + β·L_kategori + γ·L_tip",
+         "  L_uzay ≡ ℒ_Rezonans (Uhlmann), L_tip ≡ ℒ_Hodge -- terkip, tabela değil.",
+         "  Yanına mizanın kendi kefeleri: λ₁ℒ_Çevrim + λ_t ℒ_Tenakuz + λ₂ℒ_Monogami + λ₄ℒ_Engel
                                                     + λ₄ℒ_Engel
 
 ===================================================================
@@ -134,7 +136,7 @@ from .ayna import AynaAyari, halka
 from .hafiza import CERH, TASDIK, TEVAKKUF, Hafiza
 from .tdd import esit_mi, kanonik_adres
 
-__all__ = ["MizanAyari", "rust", "uhlmann", "givens", "holonomi",
+__all__ = ["MizanAyari", "uhlmann", "givens", "holonomi",
            "holonomi_yigin", "engellenme", "kulli_mizan", "mizan_cetveli",
            "rapor"]
 
@@ -175,6 +177,28 @@ class MizanAyari:
     cevrim_sayisi: int = 8
     rust_t0: float = 0.5
     rust_tau: float = 0.15
+    # ── ZABITLARIN ALTI UZVU (bkz. main/egitim.py'deki şerhler) ─────
+    #: ``nefs/sadakat.py`` -- 7/24 zemin. Sıfırlanınca tenakuz alarmı
+    #: sönmez ve rapor kırmızı yanar.
+    sadakat_acik: int = 1
+    parite_lifi: int = 2
+    #: ``nefs/tenakuz.py`` -- log-bariyer × eş-zamanlı dışlama.
+    lam_tenakuz: float = 0.4
+    tenakuz_eps: float = 1e-5
+    dislama_tau: float = 8.0
+    #: ``nefs/tabakali_mizan.py`` -- funktör kompozisyonu ve kısmî Born.
+    lam_kategori: float = 0.5
+    lam_nokta: float = 0.25
+    #: ``nefs/usul.py`` -- mantık yürütme seferi (7/24 DEĞİL).
+    usul_acik: int = 1
+    usul_haddi: float = 0.0
+    usul_seferi: int = 4
+    #: ``nefs/suphe.py`` -- teâruz, modalite, merak, Liouville.
+    suphe_acik: int = 1
+    suphe_sonumu: float = 0.05
+    #: ``nefs/rust.py`` -- muayene kapısı.
+    rust_kapanis: float = 0.5
+    rust_muayene: int = 1
     #: ``|ω| > 1 − kenar`` ise hal saftır (tam kısır yahut tam tenakuz).
     kenar: float = 0.05
     zeno_esigi: float = 0.35
@@ -203,15 +227,16 @@ class MizanAyari:
 
 
 # ══════════════════════════════════════════════════════════════════
-#  0. RÜŞT ÇİZELGESİ
+#  0. RÜŞT -- **KÖR TAKVİM İMHA EDİLDİ** (bkz. nefs/rust.py)
 # ══════════════════════════════════════════════════════════════════
-def rust(adim: int, ayar: Optional[MizanAyari] = None) -> float:
-    """``α(t) = σ((t/T − t₀)/τ)`` -- bebeklikten rüşte adyabatik geçiş."""
-    a = ayar or MizanAyari()
-    T = max(1, int(a.toplam_adim))
-    u = (float(adim) / T - float(a.rust_t0)) / max(float(a.rust_tau), 1e-9)
-    u = float(np.clip(u, -60.0, 60.0))
-    return float(1.0 / (1.0 + math.exp(-u)))
+#
+# Burada ``rust(adim, ayar)`` duruyordu ve yalnız bir takvimdi:
+# ``α(t) = σ((t/T − t₀)/τ)``. Vakit gelince fıtratı kilitliyordu --
+# topolojisi yırtık bir dimağı da. Vakit bir olgunluk delili değildir.
+#
+# Yerine **hibrit rüşt kilidi** geldi (``nefs/rust.py:rust_kilidi``):
+# takvim ile muayenenin çarpımı. Eski usul aynı turda kesildi (ferman
+# 1-E: iki yol yan yana durdukça hangisinin koştuğu belirsizdir).
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -380,14 +405,24 @@ def holonomi_yigin(H: np.ndarray, idx: np.ndarray
     return U, np.clip(om, -1.0, 1.0), yol
 
 
-def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari
-                     ) -> Dict[str, Any]:
-    """Yığından kapalı çevrimler seç, hepsini sınıflandır ve cezala."""
+def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
+                     baglamlar: Optional[Sequence[Sequence[int]]] = None,
+                     hedefler: Optional[Sequence[int]] = None,
+                     n_v: int = 0) -> Dict[str, Any]:
+    """Yığından kapalı çevrimler seç, hepsini sınıflandır ve cezala.
+
+    ``baglamlar``/``hedefler`` verilirse ``L_Tenakuz`` de burada ölçülür:
+    log-bariyer holonominin izini ister, iz de ``U_C``yi -- ikisi de
+    zaten burada kuruluyor, ikinci kere kurmak israf olurdu (ferman 3).
+    """
     m = len(haller)
     a = ayar
     if m < int(a.cevrim_boyu):
         return {"ceza": 0.0, "meşru": 0, "kısır": 0, "tenakuz": 0,
-                "engel": 0, "çevrim": [], "ω": []}
+                "engel": 0, "çevrim": [], "ω": [], "indis": [],
+                "bariyer": {"ceza": 0.0, "azamî": 0.0, "ham_azamî": 0.0,
+                            "tavan": 0.0, "dışlama_ortalama": 0.0,
+                            "çevrim": 0}}
     r = np.random.default_rng(int(a.tohum))
     ceza = 0.0
     say = {"meşru": 0, "kısır": 0, "tenakuz": 0, "engel": 0}
@@ -452,7 +487,38 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari
             say["meşru"] += 1
         kayit.append((om, yol, c))
     n_c = max(1, int(a.cevrim_sayisi))
-    return {"ceza": ceza / n_c, "çevrim": kayit, "ω": omegalar, **say}
+    # ══════════════════════════════════════════════════════════════
+    #  L_TENAKUZ -- LOG BARİYER × DIŞLAMA (nefs/tenakuz.py)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Yukarıdaki ``ceza`` ham ``max(0,−ω)²``dir: sonludur, fakat tam
+    # taklaya yaklaşan bir çevrimle hafif eğik bir çevrim arasında
+    # neredeyse hiç ayrım yapmaz (kare fonksiyonu orada yatıktır).
+    # Log-bariyer o ayrımı keskinleştirir ve ``ε`` freniyle ıraksamaz.
+    #
+    # ``S_dışlama`` her çevrimin **kendi köşelerinin hedeflerinden**
+    # okunur: çevrim, veride hiç beraber görülmemiş kavramları
+    # birbirine bağlıyorsa cezası ağırdır.
+    from .tenakuz import TenakuzAyari, dislama_dizeyi, log_bariyer
+    ta = TenakuzAyari(lam=float(a.lam_tenakuz), eps=float(a.tenakuz_eps),
+                      tau=float(a.dislama_tau))
+    if baglamlar is not None and hedefler is not None and int(n_v) > 0:
+        S = dislama_dizeyi(baglamlar, int(n_v), ta)
+        h = np.asarray(list(hedefler), np.int64) % int(n_v)
+        cift = np.empty(idx_hepsi.shape[0], float)
+        for c_no in range(idx_hepsi.shape[0]):
+            t = h[idx_hepsi[c_no]]
+            # Çevrimin bütün köşe ikilileri: A ile B hiç beraber
+            # görülmemişse S≈1, sık görülmüşse S≈0.
+            alt = [float(S[int(t[i]), int(t[j])])
+                   for i in range(t.size) for j in range(i + 1, t.size)]
+            cift[c_no] = float(np.mean(alt)) if alt else 1.0
+    else:
+        cift = np.ones(idx_hepsi.shape[0], float)
+    bariyer = log_bariyer(U_hepsi, cift, ta)
+    return {"ceza": ceza / n_c, "çevrim": kayit, "ω": omegalar,
+            "indis": [[int(i) for i in r] for r in idx_hepsi],
+            "bariyer": bariyer, **say}
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -742,9 +808,11 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     F = uhlmann(rho_veri, rho_model)
     L_rez = float(1.0 - F)
 
-    # ── 2. ÇEVRİM (Wilson holonomisi) ─────────────────────────────
-    cv = _cevrimleri_tara(ileri["hal"], a)
+    # ── 2. ÇEVRİM (Wilson holonomisi) + L_TENAKUZ ─────────────────
+    cv = _cevrimleri_tara(ileri["hal"], a, ileri["bağlam"],
+                          ileri["hedef"], n_v)
     L_cev = float(cv["ceza"])
+    L_ten = float(cv["bariyer"]["ceza"])
 
     # ── 3. MONOGAMİ (CKW'nin ⊕ mukabili) ──────────────────────────
     mono, mono_sol, mono_sag = _monogami(
@@ -790,8 +858,56 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         "ceza ödüle dönmüş demektir" % L_hod)
     L_hod = max(0.0, L_hod)
 
-    # ── RÜŞT: tenakuz cezası kime yazılacak? ──────────────────────
-    alfa = rust(int(adim), a)
+    # ══════════════════════════════════════════════════════════════
+    #  TABAKALI MİZANIN İKİ YENİ KEFESİ (nefs/tabakali_mizan.py)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Öteki iki mertebe **zaten yukarıdadır**: ``L_uzay ≡ L_rez``
+    # (Uhlmann) ve ``L_tip ≡ L_hod`` (Hodge). Aynı şeyi ikinci isimle
+    # yazmak terkip değil ikilemedir (ferman 3).
+    from .tabakali_mizan import kategori_kaybi, nokta_kaybi
+    kat = kategori_kaybi(ileri["hal"], azami=int(a.cevrim_sayisi) * 4,
+                         tohum=int(a.tohum))
+    nok = nokta_kaybi(ileri["lifli"], ileri["hedef"], n_v)
+    L_kat = float(kat["kayıp"])
+    L_nok = float(nok["kayıp"])
+
+    # ══════════════════════════════════════════════════════════════
+    #  ŞÜPHE MANİFOLDU (nefs/suphe.py)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Teâruz, modal dallanma, Liouville sönümü ve merak kancası.
+    # Neticesi kullanılır: tevakkuf eden örnekler ``hafıza``ya
+    # ``TEVAKKUF`` hükmüyle yazılır (aşağıda).
+    from .suphe import SupheAyari, suphe_manifoldu
+    sup = suphe_manifoldu(
+        ileri["hal"], cv["ω"],
+        ayar=SupheAyari(acik=int(a.suphe_acik), sonum=float(a.suphe_sonumu),
+                        kip_kenari=float(a.kenar) * 5.0,
+                        parite_lifi=int(a.parite_lifi)))
+
+    # ══════════════════════════════════════════════════════════════
+    #  MANTIK YÜRÜTME SEFERİ (nefs/usul.py) -- 7/24 DEĞİL
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Kalp yoklar; yalnız karanlık çevrimler için sefer açılır.
+    from .usul import UsulAyari, usul_kos
+    usl = usul_kos(ileri["hal"], cv["indis"], cv["ω"],
+                   UsulAyari(acik=int(a.usul_acik), had=float(a.usul_haddi),
+                             sefer=int(a.usul_seferi)))
+
+    # ══════════════════════════════════════════════════════════════
+    #  RÜŞT KİLİDİ -- TAKVİM **VE** MUAYENE (nefs/rust.py)
+    # ══════════════════════════════════════════════════════════════
+    from .rust import RustAyari, rust_kilidi, topolojik_yirtik
+    ra = RustAyari(t0=float(a.rust_t0), tau=float(a.rust_tau),
+                   kapanis=float(a.rust_kapanis),
+                   muayene=int(a.rust_muayene),
+                   toplam_adim=int(a.toplam_adim))
+    yirtik = topolojik_yirtik(ileri["bağlam"], n_v)
+    kilit = rust_kilidi(int(adim), float(yirtik["dF_dec"]),
+                        int(yirtik["h1"]), ra)
+    alfa = float(kilit["α"])
     # Bebeklikte (α→0) tenakuz cezasının tamamı fıtrata akar; rüştte
     # (α→1) fıtrattan çekilip hafızaya nakşedilir.
     fitrata = (1.0 - alfa) * L_cev
@@ -801,12 +917,38 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                 cv["çevrim"], range(len(cv["çevrim"]))):
             hukum = (CERH if om < -1.0 + a.kenar else
                      TEVAKKUF if om > 1.0 - a.kenar else TASDIK)
-            hafiza.yaz(ileri["hal"][hidx % len(ileri["hal"])],
-                       omega=om, hukum=hukum)
+            # **ŞÜPHENİN NETİCESİ BURADA KULLANILIR.** Rapora yazılıp
+            # bırakılsaydı bağlanmış olmazdı (ferman 1-C/b). Yakîn
+            # tevakkuf eşiğinin altına inmişse hüküm **TASDİK
+            # OLAMAZ**: teâruz hâlinde mühür vurmak, delilsiz zannı
+            # hafızaya hakikat diye nakşetmek olurdu.
+            j = hidx % len(ileri["hal"])
+            mu = sup.get("μ")
+            if (hukum == TASDIK and mu is not None and len(mu) > j
+                    and float(mu[j]) < 0.35):
+                hukum = TEVAKKUF
+            hafiza.yaz(ileri["hal"][j], omega=om, hukum=hukum)
 
-    kayip = (L_rez + float(a.lam_cevrim) * fitrata
+    # ══════════════════════════════════════════════════════════════
+    #  TABAKALI TERKİP -- ZABITIN BİRLEŞİK KAYIP FONKSİYONU
+    # ══════════════════════════════════════════════════════════════
+    #
+    #     L_toplam = L_nokta + α·L_uzay + β·L_kategori + γ·L_tip
+    #
+    # ``α = 1``dir ve bir katsayı değil **çıpadır**: ``L_uzay`` mizanın
+    # veriye bağlandığı tek yerdir (``L_rez``, Uhlmann). ``γ`` zaten
+    # ``lam_hodge``, ``β`` ise ``lam_kategori``.
+    #
+    # Mizanın kendi kefeleri (çevrim, tenakuz, monogami, engel) bunun
+    # **üstüne** binmez, yanına gelir: onlar hükmün iç tutarlılığını,
+    # tabakalı mizan ise hükmün dış hizasını ölçer.
+    kayip = (float(a.lam_nokta) * L_nok                     # 0. nokta
+             + L_rez                                        # 1. uzay (α=1)
+             + float(a.lam_kategori) * L_kat                # 2. kategori
+             + float(a.lam_hodge) * L_hod                   # 3. tip
+             + float(a.lam_cevrim) * fitrata
+             + float(a.lam_tenakuz) * L_ten
              + float(a.lam_monogami) * L_mon
-             + float(a.lam_hodge) * L_hod
              + float(a.lam_engel) * L_eng)
     assert np.isfinite(kayip), "mizan sonlu değil"
 
@@ -815,6 +957,22 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     if ne != "döküm":
         raise ValueError("mizan kipi bilinmiyor: %r" % (ne,))
     return {"kayıp": float(kayip), "rezonans": L_rez, "sadakat": F,
+            # ── tabakalı mizan ────────────────────────────────────
+            "nokta": L_nok, "nokta_isabet": float(nok["isabet"]),
+            "kategori": L_kat, "kategori_ihlâl": int(kat["ihlâl"]),
+            "kategori_deneme": int(kat["deneme"]),
+            # ── L_Tenakuz ─────────────────────────────────────────
+            "tenakuz_bariyer": L_ten,
+            "tenakuz_azamî": float(cv["bariyer"]["azamî"]),
+            "tenakuz_tavan": float(cv["bariyer"]["tavan"]),
+            "dışlama_ortalama": float(cv["bariyer"]["dışlama_ortalama"]),
+            # ── rüşt kilidi ───────────────────────────────────────
+            "rüşt_takvim": float(kilit["takvim"]),
+            "rüşt_muayene": float(kilit["muayene"]),
+            "dF_dec": float(yirtik["dF_dec"]), "h1": int(yirtik["h1"]),
+            # ── sefer ve şüphe ────────────────────────────────────
+            "sefer": int(usl["sefer"]), "gedik": int(usl["gedik"]),
+            "tevakkuf": int(sup["tevakkuf"]),
             "çevrim": L_cev, "çevrim_fıtrata": float(fitrata),
             "çevrim_hafızaya": float(hafizaya),
             "monogami": L_mon, "monogami_sol": float(mono_sol / n_o),
@@ -932,10 +1090,62 @@ def rapor(profil: str = "kısa") -> str:                  # pragma: no cover
     # Aynı hâl üç kere: kısır döngü, U = I beklenir.
     _, om_kisir, yol_kisir = holonomi([e[0], e[0], e[0]])
     # Parite taklası: a → b → −a. Başladığı aksiyomu inkâr eden çevrim.
-    _, om_par, yol_par = holonomi([e[0], e[1], -e[0]])
+    U_par, om_par, yol_par = holonomi([e[0], e[1], -e[0]])
+    # ══════════════════════════════════════════════════════════════
+    #  YENİ KEFELER KIRMIZI YANABİLİYOR MU? (ferman 5)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Ana akışta bu üç kefe sıfır çıkıyor (bütün çevrimler kısır) ve
+    # sıfır bir kefe hiçbir şey ölçmüyor da olabilir. Onun için elle
+    # kurulmuş bir **tenakuz** verilir ve yanıp yanmadığı ölçülür.
+    from .tenakuz import TenakuzAyari, log_bariyer
+    from .tabakali_mizan import kategori_kaybi
+    from .rust import RustAyari, rust_kilidi
+    _ta = TenakuzAyari(eps=float(a.tenakuz_eps), tau=float(a.dislama_tau))
+    # (1) Tam takla ``U_C ≈ −I``: bariyer tavana yaklaşmalı.
+    _bar_par = log_bariyer(U_par[None, :, :], np.ones(1), _ta)
+    _bar_bir = log_bariyer(np.eye(U_par.shape[0], dtype=complex)[None],
+                           np.ones(1), _ta)
+    # (2) Kategori: **kasten geçişsiz** üç hâl. Rastgele üç dik vektörde
+    #     ``givens(a,c) ≠ givens(b,c)·givens(a,b)`` olmalıdır.
+    _rk = np.random.default_rng(7)
+    _dik = np.linalg.qr(_rk.normal(size=(8, 8))
+                        + 1j * _rk.normal(size=(8, 8)))[0]
+    _kat_kirmizi = kategori_kaybi([_dik[:, 0], _dik[:, 1], _dik[:, 2]],
+                                  azami=1, tohum=0)
+    _kat_yesil = kategori_kaybi([_dik[:, 0], _dik[:, 0], _dik[:, 0]],
+                                azami=1, tohum=0)
+    # (3) Rüşt: yırtık varken kilit tutuyor mu (aynı vakitte)?
+    _ra = RustAyari(t0=float(a.rust_t0), tau=float(a.rust_tau),
+                    kapanis=float(a.rust_kapanis), muayene=1,
+                    toplam_adim=int(a.toplam_adim))
+    _rust_saglam = rust_kilidi(a.toplam_adim, 0.0, 0, _ra)
+    _rust_yirtik = rust_kilidi(a.toplam_adim, 0.0, 2, _ra)
+    # (4) SEFER: ana akışta hiç açılmıyor (bütün çevrimler kısır, ω=+1)
+    #     ve bu **doğru** davranıştır -- fakat "hiç açılmıyor" ile
+    #     "açılamıyor" ayrı şeydir. Elle bir gedik verilir.
+    from .usul import UsulAyari, usul_beyani, usul_kos, usul_sifirla
+    _u_once = usul_beyani()["sefer"]
+    _ua = UsulAyari(acik=1, had=0.0, sefer=2)
+    _gedikli = usul_kos([_dik[:, i] for i in range(4)],
+                        [[0, 1, 2], [1, 2, 3]], [-0.9, +0.9], _ua)
+    _kapali = usul_kos([_dik[:, i] for i in range(4)],
+                       [[0, 1, 2]], [-0.9], UsulAyari(acik=0))
+    # (5) SADAKAT: kapı kapanınca yırtık sektör duruyor mu?
+    from .sadakat import SadakatAyari, sadakat_uygula
+    _yirtik_hal = np.ones(64, complex) / 8.0
+    _sa = SadakatAyari(parite_lifi=1, lif_yapisi=(8, 8))
+    _sad_acik = sadakat_uygula(_yirtik_hal.copy(),
+                               SadakatAyari(acik=1, parite_lifi=1,
+                                            lif_yapisi=(8, 8)))
+    _sad_kapali = sadakat_uygula(_yirtik_hal.copy(),
+                                 SadakatAyari(acik=0, parite_lifi=1,
+                                              lif_yapisi=(8, 8)))
 
     s = ["=== MÎZÂN-I KÜLLÎ (nefs/kulli_mizan.py) ===", "",
-         "  ℒ_Küllî = ℒ_Rezonans + λ₁ℒ_Çevrim + λ₂ℒ_Monogami + λ₃ℒ_Hodge",
+         "  TABAKALI MİZAN (zabıt): L = L_nokta + α·L_uzay + β·L_kategori + γ·L_tip",
+         "  L_uzay ≡ ℒ_Rezonans (Uhlmann), L_tip ≡ ℒ_Hodge -- terkip, tabela değil.",
+         "  Yanına mizanın kendi kefeleri: λ₁ℒ_Çevrim + λ_t ℒ_Tenakuz + λ₂ℒ_Monogami + λ₄ℒ_Engel",
          "", "  --- KEFELER (%d örnek, %.2f sn) ---" % (d["örnek"], sure),
          "    ℒ_Rezonans (Uhlmann)  : %.6f   (sadakat F = %.6f)"
          % (d["rezonans"], d["sadakat"]),
@@ -946,15 +1156,25 @@ def rapor(profil: str = "kısa") -> str:                  # pragma: no cover
          "    ℒ_Monogami (CKW ⊕)    : %.6f   (Σ_A %.4f vs hepsi %.4f)"
          % (d["monogami"], d["monogami_sol"], d["monogami_sağ"]),
          "    ℒ_Hodge    (Δ|Ψ⟩=0)   : %.6f" % d["hodge"],
+         "    ℒ_Tenakuz  (log bar.) : %.6f   azamî %.4f / tavan %.4f"
+         % (d["tenakuz_bariyer"], d["tenakuz_azamî"], d["tenakuz_tavan"]),
+         "        S_dışlama ortalaması %.4f" % d["dışlama_ortalama"],
+         "    ℒ_Kategori (funktör)  : %.6f   ihlâl %d/%d"
+         % (d["kategori"], d["kategori_ihlâl"], d["kategori_deneme"]),
+         "    ℒ_Nokta    (kısmî Born): %.6f   tepe isabeti %.4f"
+         % (d["nokta"], d["nokta_isabet"]),
          "    ─────────────────────────────────────",
          "    ℒ_Küllî               : %.6f" % d["kayıp"],
          "",
-         "  --- RÜŞT ÇİZELGESİ (kör terazide hüküm verilmez) ---",
-         "    α(0)   = %.4f   → tenakuzun %%%.1f'i FITRATA"
-         % (rust(0, a), 100 * (1 - rust(0, a))),
-         "    α(T/2) = %.4f" % rust(a.toplam_adim // 2, a),
-         "    α(T)   = %.4f   → tenakuzun %%%.1f'i HAFIZAYA"
-         % (rust(a.toplam_adim, a), 100 * rust(a.toplam_adim, a)),
+         "  --- RÜŞT KİLİDİ: TAKVİM **VE** MUAYENE (nefs/rust.py) ---",
+         "    ölçülen ‖dF‖² = %.6f   ‖H¹‖ = %d  (kapanmamış delik)"
+         % (d["dF_dec"], d["h1"]),
+         "    takvim σ(·) = %.4f   muayene exp(·) = %.4f   α = %.4f"
+         % (d["rüşt_takvim"], d["rüşt_muayene"], d["α_rüşt"]),
+         "    → tenakuzun %%%.1f'i FITRATA, %%%.1f'i HAFIZAYA"
+         % (100 * (1 - d["α_rüşt"]), 100 * d["α_rüşt"]),
+         "    kör takvim olsaydı α = %.4f olurdu (fark: muayene kapısı)"
+         % d["rüşt_takvim"],
          "",
          "  --- ÖLÇÜ KIRMIZI YANABİLİYOR MU? (elle kurulan üç hal) ---",
          "    üç dik hâl (engellenme): ω = %+.6f  yol = %.4f   %s"
@@ -966,6 +1186,31 @@ def rapor(profil: str = "kısa") -> str:                  # pragma: no cover
          "    parite taklası a→b→−a  : ω = %+.6f  yol = %.4f  ceza = %.6f  %s"
          % (om_par, yol_par, max(0.0, -om_par) ** 2,
             "TENAKUZ YAKALANDI" if om_par < 0 else "⚠ YAKALAYAMADI"),
+         "    L_Tenakuz bariyeri     : U=I → %.6f | U≈−I → %.6f  "
+         "(tavan %.4f)   %s"
+         % (_bar_bir["ceza"], _bar_par["ceza"], _bar_par["tavan"],
+            "YANDI" if _bar_par["ceza"] > 10 * _bar_bir["ceza"] + 1e-6
+            else "⚠ YANMADI"),
+         "    L_Kategori             : eş hâl → %.3e | dik üçlü → %.6f   %s"
+         % (_kat_yesil["kayıp"], _kat_kirmizi["kayıp"],
+            "YANDI" if _kat_kirmizi["kayıp"] > 1e-6
+            and _kat_yesil["kayıp"] < 1e-9 else "⚠ YANMADI"),
+         "    Rüşt kilidi (t=T)      : yırtıksız α = %.4f | ‖H¹‖=2 iken "
+         "α = %.4f   %s"
+         % (_rust_saglam["α"], _rust_yirtik["α"],
+            "KİLİTLENDİ" if _rust_yirtik["α"] < 0.01 * _rust_saglam["α"]
+            else "⚠ KİLİTLENMEDİ"),
+         "    Sefer (nefs/usul.py)   : gedikli → %d sefer | kapı kapalı "
+         "→ %d sefer   %s"
+         % (_gedikli["sefer"], _kapali["sefer"],
+            "AÇILDI" if _gedikli["sefer"] > 0 and _kapali["sefer"] == 0
+            else "⚠ AÇILMADI"),
+         "    Sadakat (nefs/sadakat.py): açık → alarm %d→%d | kapalı → "
+         "alarm %d→%d   %s"
+         % (_sad_acik["alarm_önce"], _sad_acik["alarm_sonra"],
+            _sad_kapali["alarm_önce"], _sad_kapali["alarm_sonra"],
+            "SÖNDÜRDÜ" if _sad_acik["alarm_sonra"] == 0
+            and _sad_kapali["alarm_sonra"] == 1 else "⚠ SÖNDÜREMEDİ"),
          "",
          "  --- VERİ KENDİNİ DÖRDE AYIRDI MI? (etiketsiz) ---",
          "    hakikat %d | tenakuz %d | şüpheli %d | gürültü %d"

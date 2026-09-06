@@ -32,9 +32,11 @@ from . import melekeler as akil
 from . import melekeler as beyan
 from . import melekeler as idrak
 from . import melekeler as murakabe
-from .melekeler import AKIS, KULLI_SIRA, Nefs, sira_gecerli_mi
-from .melekeler import melekeler, sicil
-from .melekeler import Durum, Parametreler, ehlilestir, tevafuk, devirler
+# **KLASİK MELEKELER İMHA EDİLDİ.** ``AKIS``, ``KULLI_SIRA``, ``Nefs``,
+# ``sira_gecerli_mi``, ``melekeler``, ``sicil``, ``Durum``,
+# ``Parametreler`` yok; onları sınayan sınamalar da aynı turda kesildi
+# (ferman 2-B). Kalan iki yardımcı hâlâ canlı koda hizmet ediyor.
+from .melekeler import ehlilestir, tevafuk, devirler
 
 
 def _E(tohum: int = 0, n: int = 20, d: int = 12) -> np.ndarray:
@@ -44,83 +46,20 @@ def _E(tohum: int = 0, n: int = 20, d: int = 12) -> np.ndarray:
 # =====================================================================
 #  A. Sözleşme
 # =====================================================================
-def test_kirkbir_meleke_kayitli():
-    ms = melekeler()
-    assert len(ms) == 41, len(ms)
-    assert [m.no for m in ms] == list(range(1, 42))
-    assert all(m.ad for m in ms)
 
 
-def test_akis_sirasi_gecerli():
-    gecerli, hatalar = sira_gecerli_mi()
-    assert gecerli, hatalar
 
 
-def test_kulli_sira_metinle_uyusuyor():
-    """Metnin kapanış bölümündeki silsile akışta korunuyor mu?"""
-    ilk, son = {}, {}
-    for yer, no in enumerate(AKIS):
-        ilk.setdefault(no, yer)
-        son[no] = yer
-    for a, b in KULLI_SIRA:
-        assert ilk[a] <= son[b], (a, b)
 
 
-def test_ucdan_uca_kosuyor():
-    d = Nefs(0).idrak_et(_E(0))
-    assert d.X is not None and d.S is not None and d.N is not None
-    assert d.S.shape[1] == d.d_sem
-    assert np.all(np.isfinite(d.S)) and np.all(np.isfinite(d.N))
-    assert d.makam in ("Yakîn", "Zann-ı gālib", "Zan", "Şek", "Vehim")
-    assert 0.0 <= d.T <= 1.0 and 0.0 <= d.P_idrak <= 1.0
 
 
-def test_farkli_boyutlarda_kosuyor():
-    for (n, di, dh, ds) in ((8, 6, 12, 8), (30, 20, 32, 24), (12, 12, 16, 16)):
-        d = Nefs(1).idrak_et(_E(1, n, di), d_hayal=dh, d_sem=ds)
-        assert d.S.shape == (n, ds), (n, di, dh, ds, d.S.shape)
-        assert len(d.N) == ds
 
 
-def test_sozlesme_ihlali_yakalaniyor():
-    """Bir alanı yazmadan okumaya kalkan meleke net hata vermeli."""
-    d = Durum.kur(_E(0))
-    try:
-        sicil()[6].kosu(d, Parametreler(0))     # 𝒪₆ Tasavvur, D yazılmadan
-    except ValueError as e:
-        assert "boş" in str(e), str(e)
-    else:
-        raise AssertionError("sözleşme ihlâli yakalanmadı")
 
 
-def test_surecler_arasi_tekrarlanabilir():
-    """Ağırlıklar SÜREÇTEN süreçe aynı mı?
-
-    Bu sınama, ``Parametreler.W``de Python'un ``hash()``i kullanıldığı
-    için gerçekten kırılmıştı: dizge hash'i süreç başına rastgeleleşir,
-    dolayısıyla her koşuda başka ağırlık üretiliyordu. Süreç içi
-    tekrarlanabilirlik sınaması bunu göremez.
-    """
-    import subprocess, sys, json
-    kod = ("import numpy as np;"
-           "from nefs.melekeler import Nefs;"
-           "d=Nefs(0).idrak_et(np.random.default_rng(0).normal(size=(20,12)));"
-           "print(repr(float(np.sum(d.S))), repr(float(d.T)))")
-    ciktilar = set()
-    for tohum in ("0", "1", "12345"):
-        r = subprocess.run([sys.executable, "-c", kod],
-                           capture_output=True, text=True,
-                           env={"PYTHONHASHSEED": tohum, "PATH": "/usr/bin:/bin"})
-        assert r.returncode == 0, r.stderr
-        ciktilar.add(r.stdout.strip())
-    assert len(ciktilar) == 1, ciktilar
 
 
-def test_ayni_tohum_ayni_netice():
-    a = Nefs(3).idrak_et(_E(2))
-    b = Nefs(3).idrak_et(_E(2))
-    assert np.allclose(a.S, b.S) and np.allclose(a.N, b.N)
-    assert a.makam == b.makam and abs(a.T - b.T) < 1e-12
 
 
 # =====================================================================
@@ -159,55 +98,14 @@ def test_asiklik_olcutu():
     assert devirler("ihlâl", devir) > 1e-6
 
 
-def test_illet_kesfi_dag_uretiyor():
-    d = Nefs(0).idrak_et(_E(0))
-    assert d.A_neden is not None
-    assert abs(devirler("ihlâl", d.A_neden)) < 1e-9
-    assert abs(d.olcum.al("illet.asiklik_ihlali")) < 1e-9
 
 
-def test_arka_kapi_mudahaleyi_veriyor():
-    """`yaklasim.nedensel`in aynı hesabı: karıştırıcıya şart koşmak."""
-    rng = np.random.default_rng(0)
-    n = 200000
-    z = rng.normal(size=n)
-    x = 1.5 * z + 0.5 * rng.normal(size=n)
-    y = 0.8 * x - 2.0 * z + 0.5 * rng.normal(size=n)
-    assert abs(akil.arka_kapi(x, z, y) - 0.8) < 0.02
-    ham = float(np.polyfit(x, y, 1)[0])
-    assert abs(ham - 0.8) > 0.1          # düzeltilmemiş tahmin yanlı
 
 
-def test_modus_ponens_dogruluk_tablosu():
-    assert akil.ima(True, True) is True
-    assert akil.ima(True, False) is False
-    assert akil.ima(False, True) is True
-    assert akil.ima(False, False) is True
-    assert akil.modus_ponens(True, True) is True
-    for (P1, P2) in ((True, False), (False, True), (False, False)):
-        try:
-            akil.modus_ponens(P1, P2)
-        except ValueError:
-            pass
-        else:
-            raise AssertionError("öncülsüz çıkarım yapıldı: %s" % ((P1, P2),))
 
 
-def test_kiyas_bilinen_esplemeyi_geri_buluyor():
-    rng = np.random.default_rng(0)
-    d = 6
-    A = rng.normal(size=(d, d))
-    S1 = rng.normal(size=(200, d))
-    S2 = S1 @ A.T
-    W = akil.kiyas_ogren(S1, S2)
-    assert np.linalg.norm(W - A) / np.linalg.norm(A) < 1e-6
 
 
-def test_bayes_normalizasyonu():
-    d = Nefs(0).idrak_et(_E(0))
-    assert abs(d.olcum.al("ihtimal.sonsal_toplamı") - 1.0) < 1e-9
-    assert 0.0 <= d.olcum.al("ihtimal.sonsal_azami") <= 1.0
-    assert d.olcum.al("ihtimal.entropi") >= -1e-12
 
 
 def test_hsic_bagimsizlikta_sifira_yakin():
@@ -222,11 +120,6 @@ def test_hsic_bagimsizlikta_sifira_yakin():
     assert h1 > 5 * h0, (h0, h1)
 
 
-def test_tenakuz_kendisiyle_celismiyor():
-    """Ters simetrik çekirdek ⟹ ``SᵢᵀWSᵢ = 0``: hiçbir önerme kendisiyle
-    çelişmez."""
-    d = Nefs(0).idrak_et(_E(0))
-    assert d.olcum.al("tenakuz.köşegen") < 1e-9
 
 
 def test_makam_parcalanisi_tam_ve_ayrik():
@@ -279,94 +172,29 @@ def test_altin_oran_ve_harmoni():
     assert abs(tevafuk("ayna", 1000 * A) - h) < 1e-9
 
 
-def test_tertip_permutasyon_ve_softmax_normlari():
-    d = Nefs(0).idrak_et(_E(0))
-    assert d.olcum.al("tertip.permütasyon_mu") == 1.0
-    assert sorted(d.sira.tolist()) == list(range(len(d.sira)))
-    assert abs(d.olcum.al("merak.Q_toplamı") - 1.0) < 1e-9
-    assert abs(d.olcum.al("tafsil.ağırlık_toplamı") - 1.0) < 1e-9
 
 
-def test_lie_tasarrufu_norm_koruyor():
-    """``R = exp(θX)``, ``X`` ters simetrik ⟹ ``RᵀR = I``."""
-    p = Parametreler(0)
-    for dd in (4, 9, 16):
-        R = p.lie_tasarruf("sınama.%d" % dd, dd, teta=0.7)
-        assert np.allclose(R.T @ R, np.eye(dd), atol=1e-10)
-        assert abs(abs(np.linalg.det(R)) - 1.0) < 1e-10
 
 
-def test_terkip_wedge_ters_simetrik():
-    d = Nefs(0).idrak_et(_E(0))
-    assert d.olcum.al("terkip.ω_ters_simetrik") < 1e-9
 
 
 # =====================================================================
 #  C. Davranış
 # =====================================================================
-def test_teemmul_yakinsiyor():
-    for t in range(4):
-        d = Nefs(t).idrak_et(_E(t))
-        assert d.olcum.al("teemmül.yakınsadı") == 1.0, t
-        assert d.olcum.al("teemmül.τ_durma") < 200, t
-        # geometrik yakınsama: son fark, ilk farkın binde birinden küçük
-        assert d.olcum.al("teemmül.azalma_oranı") < 1e-3, t
-        # monotonluk garanti DEĞİL; sıçrama olsa da nadir olmalı
-        assert d.olcum.al("teemmül.geriye_sıçrama") <= 3, t
 
 
-def test_muhayyile_serbestligi_hadde_kaliyor():
-    for t in range(4):
-        d = Nefs(t).idrak_et(_E(t))
-        assert d.olcum.al("muhayyile.serbestlik") <= d.olcum.al("muhayyile.tau") + 1e-9
-        assert d.Z_muhayyile is not None
 
 
-def test_deneme_yanilma_ogreniyor():
-    kazanan = 0
-    for t in range(6):
-        d = Nefs(t).idrak_et(_E(t))
-        kazanan += int(d.olcum.al("deneme.öğrendi") == 1.0)
-    assert kazanan >= 5, kazanan
 
 
-def test_tefekkur_potansiyeli_dusuruyor():
-    for t in range(4):
-        d = Nefs(t).idrak_et(_E(t))
-        assert d.olcum.al("tefekkür.azaldı") == 1.0, t
-        assert d.olcum.al("tefekkür.V_son") < d.olcum.al("tefekkür.V_ilk")
 
 
-def test_talakat_puruzu_azaltiyor():
-    for t in range(4):
-        d = Nefs(t).idrak_et(_E(t))
-        if d.sukut:
-            continue          # sükûtta kelam kurulmaz, düzleşecek şey yok
-        assert d.olcum.al("talâkat.düzleşti") == 1.0, t
 
 
-def test_tevil_ancak_celiski_varsa():
-    """Çelişki yoksa veya te'vil çelişkiyi azaltmıyorsa zâhir kalır."""
-    for t in range(5):
-        d = Nefs(t).idrak_et(_E(t))
-        if d.olcum.al("tevil.geçerli") == 1.0:
-            assert d.olcum.al("tevil.zâhir_çelişki") > 0.0
-            assert d.olcum.al("tevil.müevvel_çelişki") < d.olcum.al("tevil.zâhir_çelişki")
 
 
-def test_tashih_ancak_iyilestiriyorsa():
-    for t in range(5):
-        d = Nefs(t).idrak_et(_E(t))
-        if d.olcum.al("tashih.başarılı") == 1.0:
-            assert d.olcum.al("tashih.yeni_T") > d.olcum.al("tashih.eski_T")
 
 
-def test_belagat_fesahati_asamaz():
-    for t in range(4):
-        d = Nefs(t).idrak_et(_E(t))
-        if d.sukut:
-            continue
-        assert d.olcum.al("belâgat.fesâhatı_aşamaz") == 1.0, t
 
 
 # =====================================================================
@@ -385,84 +213,22 @@ def _sahitli_akis(m=4, t=6, d_in=12, bozuk=None, tohum=0):
     return np.vstack(bloklar)
 
 
-def test_sahit_bolutlemesi_ayirac_sembolu_aramadan():
-    """Şahit sayısı **duyudan** sezilir; bayrakla verilmez."""
-    d = Nefs(0).idrak_et(_sahitli_akis(m=4))
-    assert d.olcum.al("tertip.şahit_verildi") == 0.0
-    assert len(d.sahitler) == 4
 
 
-def test_nakz_yalniz_bozuk_sahidi_dusurur():
-    """Kurallı akışta nakz boş; bir şahit bozuksa YALNIZ o düşer."""
-    temiz = Nefs(0).idrak_et(_sahitli_akis(m=4))
-    assert temiz.nakz == []
-    bozuk = Nefs(0).idrak_et(_sahitli_akis(m=4, bozuk=2))
-    assert bozuk.nakz == [2], bozuk.nakz
 
 
-def test_nakz_yakini_dusurur():
-    """Tek karşı örnek küllî iddianın idrakini düşürür."""
-    temiz = Nefs(0).idrak_et(_sahitli_akis(m=4))
-    bozuk = Nefs(0).idrak_et(_sahitli_akis(m=4, bozuk=2))
-    assert bozuk.P_idrak < temiz.P_idrak
 
 
-def test_istikra_sonlu_sahitle_yakin_vermez():
-    """``β > 0`` iken ardışıklık kaidesi 1'e ulaşmaz (dürüstlük şartı)."""
-    d = Nefs(0).idrak_et(_sahitli_akis(m=4))
-    if d.olcum.al("idrak.vekil_formül") == 0.0:
-        assert d.P_idrak < 1.0
-        assert d.olcum.al("idrak.tam_istikrâ") == 0.0
 
 
-def test_sekte_sukut_edilir():
-    """Makam Şek ise beyan kurulmaz: kelam sıfırdır."""
-    import numpy as _np
-    d = Nefs(0).idrak_et(_E(0))
-    if d.makam == "Şek":
-        assert d.sukut
-        assert float(_np.linalg.norm(d.N)) == 0.0
-    assert d.sukut == (d.makam == "Şek")
 
 
-def test_hukum_kaydi_semboliktir():
-    """𝒪₁₃ mühürü sayı olarak değil KAYIT olarak bırakır (kütük H4)."""
-    d = Nefs(0).idrak_et(_E(0))
-    assert isinstance(d.hukum, dict)
-    assert d.hukum["mühür_sırası"] == 2      # akışta iki kere koşar
-    assert set(("T", "mühür", "makam", "gerekçe")) <= set(d.hukum)
 
 
-def test_tasdik_uyusan_delille_yukseliyor():
-    """Aynı sinyalin gürültülü iki kopyası ⟹ tasdik; birbirine ZIT iki
-    yarı ⟹ tenakuz yükselir, tasdik düşer.
-
-    Bu, mimarinin işleyişine dair en doğrudan davranış sınamasıdır.
-    """
-    rng = np.random.default_rng(0)
-    taban = rng.normal(size=(10, 12))
-    uyusan = np.concatenate([taban, taban + 0.05 * rng.normal(size=taban.shape)])
-    celisen = np.concatenate([taban, -taban + 0.05 * rng.normal(size=taban.shape)])
-
-    a = Nefs(0).idrak_et(uyusan)
-    b = Nefs(0).idrak_et(celisen)
-    assert a.tenakuz <= b.tenakuz + 1e-12, (a.tenakuz, b.tenakuz)
 
 
-def test_teyit_bagimsizlikla_olculuyor():
-    for t in range(4):
-        d = Nefs(t).idrak_et(_E(t))
-        assert 0.0 <= d.olcum.al("teyit.bağımsızlık") <= 1.0
-        assert d.olcum.al("teyit.T_artışı") >= -1e-12      # teyit düşürmez
 
 
-def test_munazara_tabii_netice_sentez():
-    """Cerh eşiği aşılmadıkça netice telîftir, galibiyet değil."""
-    sentez = 0
-    for t in range(6):
-        d = Nefs(t).idrak_et(_E(t))
-        sentez += int(d.olcum.al("münazara.netice_sentez") == 1.0)
-    assert sentez >= 1, sentez
 
 
 # =====================================================================
@@ -494,63 +260,6 @@ def main() -> int:
 #  KAN tabanı: RBF ile B-spline yan yana
 # =====================================================================
 
-def test_kan_temelleri_kiyas() -> None:
-    """İki taban da çalışmalı; farkları İDDİA değil ÖLÇÜM olmalı.
-
-    Risaleler KAN kenarlarını B-spline ile tarif ediyor; ilk gerçekleme
-    Gauss RBF kullanıyordu.  İkisi de tek değişkenli taban verir, fakat
-    B-spline üç şeyi garanti eder ki RBF etmez.  Burada o üçü tartılır.
-    """
-    from nefs.melekeler import kan_temeli
-
-    rng = np.random.default_rng(0)
-    v = rng.normal(0.0, 1.0, (200, 6))
-    nb = 12
-
-    B_rbf = kan_temeli(v, nb, "rbf")
-    B_spl = kan_temeli(v, nb, "bspline")
-    assert B_rbf.shape == B_spl.shape == (200, 6, nb)
-    assert np.all(np.isfinite(B_rbf)) and np.all(np.isfinite(B_spl))
-
-    # 1) Birliğin bölünmesi — B-spline'da tam, RBF'te değil.
-    top_spl = B_spl.sum(axis=2)
-    top_rbf = B_rbf.sum(axis=2)
-    ic = np.abs(v) < 1.5                      # ızgaranın iç bölgesi
-    spl_sapma = float(np.max(np.abs(top_spl[ic] - 1.0)))
-    rbf_dalga = float(np.max(top_rbf[ic]) - np.min(top_rbf[ic]))
-    assert spl_sapma < 1e-12, spl_sapma
-    assert rbf_dalga > 1e-3, "RBF toplamı sabit çıktı — kıyas boş"
-
-    # 2) Yerellik — B-spline'da her satırda pek az sıfırdan farklı terim.
-    spl_dolu = float(np.mean(np.sum(B_spl > 1e-12, axis=2)))
-    rbf_dolu = float(np.mean(np.sum(B_rbf > 1e-12, axis=2)))
-    assert spl_dolu <= 4.0 + 1e-9, spl_dolu     # derece 3 → en çok 4
-    assert rbf_dolu > spl_dolu
-
-    # 3) Negatiflik — ikisi de negatif değer üretmemeli.
-    assert np.min(B_spl) > -1e-12 and np.min(B_rbf) >= 0.0
-
-    # 4) İkisi de gerçek melekede koşabilmeli ve SONLU çıktı vermeli.
-    import nefs.melekeler as idrak
-    eski = idrak.KAN_TEMELI
-    ciktilar = {}
-    try:
-        for tur in ("rbf", "bspline"):
-            idrak.KAN_TEMELI = tur
-            d = Nefs(3).idrak_et(_E(3))
-            assert np.all(np.isfinite(d.Z_muhayyile)), tur
-            assert np.all(np.isfinite(d.S)) and np.all(np.isfinite(d.N)), tur
-            # Muhayyile'nin vaadi: serbestlik her hâlükârda τ'nun altında
-            assert d.olcum.al("muhayyile.serbestlik") <= \
-                d.olcum.al("muhayyile.tau") + 1e-9, tur
-            ciktilar[tur] = d.Z_muhayyile.copy()
-    finally:
-        idrak.KAN_TEMELI = eski
-
-    # İki taban aynı sayıyı vermez (vermeseydi kıyas anlamsız olurdu),
-    # ama ikisi de melekenin şartını sağlar.
-    fark = float(np.max(np.abs(ciktilar["rbf"] - ciktilar["bspline"])))
-    assert fark > 0.0, "iki taban birebir aynı çıktı verdi — kıyas boş"
 
 
 # =====================================================================
@@ -1232,67 +941,6 @@ def test_qsp_faz_tablosu_CEVRIMDISI_ve_dogru():
     assert art < 1e-9, art
 
 
-def test_dimag_41_meleke_URETEC_ve_muvazene_KIRMIZIYA_donuyor():
-    """41 meleke katman değil üreteç mi, ve muvazene ölçüsü ısırıyor mu?
-
-    Padişahın küllî esası: *"41 Meleke, arka arkaya dizilen 41 klasik
-    gizli katman DEĞİLDİR; tek bir Hamiltonyenin paralel koordinat
-    eksenleridir."* Üç şart denetlenir.
-    """
-    import numpy as np
-    from nefs.melekeler import (MELEKE_SAYISI, MERTEBE_SAYISI, KANONIK_CETVEL,
-                            EKSIK_MELEKELER,
-                            melekelerin_dondurucusu, H_toplam,
-                            DimagAyari)
-
-    # 1) divanın KANONİK cetveli harfiyen tutmalı, boş mertebe olmamalı
-    cet = melekelerin_dondurucusu(np.zeros(MELEKE_SAYISI), 12)["cetvel"]
-    assert len(cet) == MELEKE_SAYISI
-    for no, m in KANONIK_CETVEL.items():
-        assert cet[no] == m, (no, cet[no], m)
-    # cetvelde 39 meleke var; eksik ikisi AYRICA işaretli durmalı
-    # divan 09-KÜLLÎ-TEŞKİLAT celsesinde borcu kapattı: cetvel 44 tam
-    assert len(KANONIK_CETVEL) == MELEKE_SAYISI == 44
-    assert EKSIK_MELEKELER == {}, EKSIK_MELEKELER
-    assert cet[9] == 4 and cet[21] == 12          # tasdik edilen ikisi
-    assert cet[42] == cet[43] == cet[44] == 19    # umum, talim, tahsil
-    for m in range(MERTEBE_SAYISI):
-        assert any(v == m for v in cet.values()), m
-
-    # 2) üreteçler ANTİSİMETRİK: exp(θT) tam ortogonal olsun
-    bir = melekelerin_dondurucusu(np.ones(MELEKE_SAYISI), 12)
-    for a in (0, 5, 40):
-        T = bir["üreteç"][a]             # θ=1 iken üretecin kendisi
-        assert np.allclose(T, -T.T)
-        assert abs(np.trace(T)) < 1e-12
-
-    # bir mertebenin Hamiltonyeni TEK dizeydir, katman yığını değil
-    H, uy = bir["Ĥ"][7], bir["üyeler"][7]
-    assert H.shape == (12, 12) and np.allclose(H, -H.T)
-    assert sorted(uy) == [18, 23]        # k=7 mantık ve dedüksiyon
-
-    # 3) BGCM: tek meleke uyanıkken TAM sıfır, 41'i birden büyük
-    t0 = np.zeros(MELEKE_SAYISI)
-    t0[0] = 1.0
-    b0 = melekelerin_dondurucusu(t0, 12)["bgcm"]
-    assert b0["kayıp"] == 0.0 and b0["muvazeneli"]
-    rng = np.random.default_rng(0)
-    b1 = melekelerin_dondurucusu(rng.normal(size=MELEKE_SAYISI), 12)["bgcm"]
-    assert b1["kayıp"] > 1.0 and not b1["muvazeneli"]      # KIRMIZI
-    # **NORMALİZE hâli [0,1]de kalmalı** -- θ ne kadar azarsa azsın
-    for olc in (0.05, 1.0, 5.0, 50.0, 500.0):
-        bb = melekelerin_dondurucusu(
-            olc * rng.normal(size=MELEKE_SAYISI), 12)["bgcm"]
-        assert 0.0 <= bb["kayıp_norm"] <= 1.0, (olc, bb["kayıp_norm"])
-
-    # Ĥ_toplam üç kalemi ayrı ayrı raporlamalı; hiçbiri gizlenmemeli
-    r = H_toplam(0.05 * rng.normal(size=MELEKE_SAYISI),
-                 rng.normal(size=(16, 3)), H_arc=np.eye(16) * 0.3,
-                 ayar=DimagAyari(D=16))
-    assert set(r["kalem"]) == {"ARC", "meleke", "BGCM"}
-    assert r["kalem"]["ARC"] > 0 and r["kalem"]["meleke"] > 0
-    assert r["dolu_mertebe"] == MERTEBE_SAYISI
-    assert r["H"].shape == (16, 16)
 
 
 

@@ -145,6 +145,34 @@ motorun **fiilen** koştuğu, eskisinin **kalmadığı** kastedilir.
 
 ---
 
+## ▓▓▓ 1-G. FERMAN: ANA KODA RAPOR YAZMAK YASAKTIR ▓▓▓
+
+> *"Umumiden hususiye gidiyorsun ama umumiye rapor yazıyorsun!! **Bundan
+> böyle ana koda rapor yazmak yasak!!!!!!!** Tek yapacağın gerçek
+> fonksiyonları çağırmak."*
+
+Taht (`main/egitim.py`, `main/cikarim.py`) bir **nazırlık katıdır**;
+matbaa değildir. Orada bulunabilecek tek şey:
+
+* uzvun **ithali**,
+* uzvun ayarının **kurulması**,
+* uzvun **fiilen çağrılması** ve neticesinin kullanılması,
+* uzvun kendi **beyan/rapor** fonksiyonunun çağrılması.
+
+**YASAK OLAN.** Tahtta `"%.4f" %`, `s += [...]`, `"\n".join(...)`
+biçiminde bir metin kurmak. Bir uzvun neticesi nasıl yazılacaksa onu
+**o uzuv** bilir ve kendi dosyasında yazar; taht yalnız çağırır.
+
+**NİÇİN.** Rapor tahtta yazılınca iki şey oluyordu:
+
+1. Uzuv **bağlanmadan** da rapor satırı yazılabiliyordu -- yâni ferman
+   1-C(b)'nin yasakladığı münafıklık tam da bu kapıdan giriyordu.
+2. Taht şişiyor, hangi uzvun fiilen koştuğu o metin yığınının içinde
+   kayboluyordu. Umumiden hususiye gitmenin manası, umuminin **ince**
+   kalmasıdır.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

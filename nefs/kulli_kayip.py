@@ -36,8 +36,11 @@ meşrudur.
 5. **Dinamik LogSumExp küllî toplayıcı** -- ``zayif_halka``:
    zayıf halka prensibi ve ``√n`` aktif uzuv hedefleyen dinamik ``β``.
 
-Ayrıca **tesir teşhisi** (``eksilt``): bir meleke düşünce
-neticede ne değişir -- yapısal zaruret / tesirli / tesirsiz ayrımı.
+**TESİR TEŞHİSİ (``eksilt``) İMHA EDİLDİ** -- klasik melekelerle
+beraber (padişahın birinci emri). ``eksilt``, ``Iz``, ``Tesir`` ve
+``_parmak_izi`` klasik ``Nefs``i koşturup "bu meleke düşse ne değişir"
+diye ölçüyordu. Ölçtükleri akış artık yoktur; ferman 2-B gereğince
+"bir kısmı hâlâ işe yarıyor" denmeden kökünden kesildiler.
 """
 from __future__ import annotations
 
@@ -51,8 +54,12 @@ import numpy as np
 
 from matematik.mizan import ardisiklik_kaidesi
 from matematik.mizan import mertebe_adi
-from .melekeler import (AKIS, Durum, Nefs, QParametre, melekeler,
-                        qmelekeler, qsicil)
+# **KLASİK MELEKELER İMHA EDİLDİ (padişahın birinci emri).** Evvelce
+# buradan ``AKIS``, ``Durum``, ``Nefs`` ve ``melekeler`` de geliyordu ve
+# ``eksilt`` (bir meleke düşse ne değişir) o klasik akışı koşturuyordu.
+# Klasik akış kalkınca ``eksilt``, ``Iz``, ``Tesir``, ``_parmak_izi``
+# aynı turda kökünden kesildi (ferman 2-B) -- ölçtükleri şey artık yok.
+from .melekeler import QParametre, qmelekeler, qsicil
 from .zihin_durumu import QAyar, QYazmac, donme
 
 
@@ -1614,39 +1621,6 @@ def suz(gorev, yakin_esigi: float = YAKIN_ESIGI,
             "müphem": muphem, "tesadüf": t}
 
 
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/tesir.py
-# ════════════════════════════════════════════════════════════════════
-
-@dataclass
-class Iz:
-    """Bir melekenin bir koşudaki izi."""
-    sira: int
-    no: int
-    ad: str
-    sure_ms: float
-    yazdigi: Tuple[str, ...]
-    degisen: Tuple[str, ...]      # fiilen DEĞİŞEN alanlar (bildirdiği değil)
-
-
-def _parmak_izi(d: Durum, alan: str) -> Any:
-    """Bir alanın karşılaştırılabilir özeti (şerhi ``eksilt``de)."""
-    v = getattr(d, alan, None)
-    if v is None:
-        return None
-    if isinstance(v, np.ndarray):
-        return (v.shape, float(np.sum(v * v)), float(np.sum(v)))
-    if isinstance(v, (int, float, bool, str)):
-        return v
-    if isinstance(v, (list, tuple)):
-        return repr(v)[:400]
-    if isinstance(v, dict):
-        return repr(sorted(v.items(), key=lambda kv: kv[0]))[:400]
-    return repr(v)[:400]
-
-
 _IZLENEN = ("X", "Z_hayal", "H_hayal", "Z_muhayyile", "sira", "U_k", "D",
             "S", "S_kebir", "K_vahime", "mu_mana", "parcalar",
             "tekil_degerler", "tenakuz", "G", "G_kebir", "Q_sual",
@@ -1654,148 +1628,6 @@ _IZLENEN = ("X", "Z_hayal", "H_hayal", "Z_muhayyile", "sira", "U_k", "D",
             "sahitler", "kaideler", "kaide", "nakz", "sahit_agirliklari",
             "muteber_sahit", "tevafuk", "ispat", "hukum", "sukut",
             "tezat_kutbu", "w_kesit")
-
-
-def eksilt(E=None, tohum: int = 0, sira: Sequence[int] = AKIS,
-                    ne: str = "tesir", d: "Durum" = None,
-                    sonuc: Sequence["Tesir"] = (), m: int = 4, t: int = 6,
-                    d_in: int = 12, bozuk: Optional[int] = None):
-    """BU MELEKE DÜŞSE NE DEĞİŞİR -- **tek terkip** (kütük H224).
-
-    Küme: ``icra_izi`` + ``netice_ozeti`` + ``tesir_olc`` +
-    ``tesir_tablosu`` + ``yapili_girdi``. Beşi tek amelin durakları idi:
-    kurallı bir girdi hazırla, akışı koştur ve her adımda fiilen ne
-    değiştiğini kaydet, neticenin karşılaştırılabilir yüzünü çıkar, her
-    melekeyi sırayla düşürüp temelle yüzleştir, ve neticeyi tablola.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``girdi``       şahitli, **kurallı** girdi -- rastgele gürültü değil
-    ``iz``          ``(Durum, [Iz])`` -- adım adım fiilen ne değişti
-    ``netice``      neticenin karşılaştırılabilir bütün yüzleri
-    ``tesir``       ``(temel, [Tesir])`` -- her melekeyi düşürüp ölç
-    ``tablo``       tesirli / tesirsiz / yapısal ayrımı
-    ==============  ==================================================
-
-    **Bildirilen ``yazar`` ile fiilen değişen alanın farkı mühimdir:**
-    sözleşme "yazacağım" der, iz "yazdı" der. İkisi ayrıştığında ya
-    sözleşme dar ya meleke gizli tesir ediyor demektir.
-
-    **Girdi niçin kurallı.** Rastgele girdide bazı melekelerin yapacak
-    işi yoktur (çelişki yok, kaide yok) ve "tesirsiz" ölçülürler. Bu,
-    onların boş olduğunu değil, ölçünün sorduğu sualin o girdide
-    anlamsız olduğunu gösterir; onun için hassasiyet iki girdide birden
-    ölçülür. ``bozuk`` verilirse o şahit başka bir kurala tâbidir ve
-    nakz onu yakalamalıdır.
-    """
-    if ne == "girdi":
-        rng = np.random.default_rng(tohum)
-        R = np.linalg.qr(rng.normal(size=(d_in, d_in)))[0]
-        R2 = np.linalg.qr(rng.normal(size=(d_in, d_in)))[0]
-        bloklar = []
-        for k in range(m):
-            G = rng.normal(size=(t, d_in))
-            C = G @ (R2 if k == bozuk else R).T
-            bloklar.append(np.vstack([G, C + 6.0]) + 60.0 * k)
-        return np.vstack(bloklar)
-
-    def netice(dd):
-        N = dd.N if dd.N is not None else np.zeros(1)
-        return {
-            "N": np.asarray(N, float).copy(),
-            "makam": dd.makam,
-            "sukut": bool(dd.sukut),
-            "nakz": tuple(dd.nakz) if dd.nakz is not None else None,
-            "mühür": bool((dd.hukum or {}).get("mühür", False)),
-            "T": float(dd.T),
-            "P_idrak": float(dd.P_idrak),
-        }
-
-    if ne == "netice":
-        return netice(d)
-
-    if ne == "tablo":
-        tesirsiz = [x.no for x in sonuc if not x.tesirli]
-        yapisal = [x.no for x in sonuc if x.kirildi]
-        tesirli = [x.no for x in sonuc if x.tesirli and not x.kirildi]
-        return {"toplam": len(sonuc), "tesirsiz": tesirsiz,
-                "yapısal": yapisal, "tesirli": tesirli,
-                "tesirsiz_oranı": len(tesirsiz) / max(len(sonuc), 1)}
-
-    if ne == "iz":
-        nefs = Nefs(tohum, sira)
-        dd = Durum.kur(E)
-        izler: List[Iz] = []
-        onceki = {a: _parmak_izi(dd, a) for a in _IZLENEN}
-        for yer, no in enumerate(sira):
-            mm = nefs.s[no]
-            t0 = time.perf_counter()
-            mm.kosu(dd, nefs.p)
-            dt = (time.perf_counter() - t0) * 1e3
-            simdi = {a: _parmak_izi(dd, a) for a in _IZLENEN}
-            degisen = tuple(a for a in _IZLENEN if simdi[a] != onceki[a])
-            onceki = simdi
-            izler.append(Iz(yer, no, mm.ad, dt, tuple(mm.yazar), degisen))
-        return dd, izler
-
-    if ne != "tesir":
-        raise ValueError("tesir ölçüsünün kipi bilinmiyor: %r" % (ne,))
-
-    nefs = Nefs(tohum)
-    temel = netice(nefs.idrak_et(E))
-    cikti: List[Tesir] = []
-    for mm in melekeler():
-        eksik = tuple(x for x in AKIS if x != mm.no)
-        tt = Tesir(no=mm.no, ad=mm.ad)
-        try:
-            dd = Nefs(tohum, eksik).idrak_et(E)
-        except Exception as e:                    # sözleşme denetimi vs.
-            tt.kirildi = True
-            tt.sebep = "%s: %s" % (type(e).__name__, str(e)[:90])
-            cikti.append(tt)
-            continue
-        o = netice(dd)
-        a, b = temel["N"], o["N"]
-        if a.shape == b.shape:
-            tt.dN = float(np.linalg.norm(a - b))
-        else:
-            tt.dN = float(np.linalg.norm(a) + np.linalg.norm(b))
-        tt.makam_degisti = o["makam"] != temel["makam"]
-        tt.sukut_degisti = o["sukut"] != temel["sukut"]
-        tt.nakz_degisti = o["nakz"] != temel["nakz"]
-        tt.muhur_degisti = o["mühür"] != temel["mühür"]
-        tt.dP = abs(o["P_idrak"] - temel["P_idrak"])
-        cikti.append(tt)
-    return temel, cikti
-
-
-@dataclass
-class Tesir:
-    """Bir melekenin düşürülmesinin neticeye tesiri."""
-    no: int
-    ad: str
-    kirildi: bool = False
-    sebep: str = ""
-    dN: float = 0.0
-    makam_degisti: bool = False
-    sukut_degisti: bool = False
-    nakz_degisti: bool = False
-    muhur_degisti: bool = False
-    dP: float = 0.0
-
-    @property
-    def tesirli(self) -> bool:
-        if self.kirildi:
-            return True         # yapısal zaruret de bir tesirdir
-        return (self.dN > 1e-12 or self.makam_degisti or self.sukut_degisti
-                or self.nakz_degisti or self.muhur_degisti or self.dP > 1e-12)
-
-    @property
-    def hal(self) -> str:
-        if self.kirildi:
-            return "YAPISAL"
-        return "tesirli" if self.tesirli else "TESİRSİZ"
 
 
 
@@ -2613,85 +2445,11 @@ def rapor() -> str:                                     # pragma: no cover
     s.append("=" * 70)
     s += _rapor_nefs_mudrike()
 
-    def _rapor_nefs_tesir() -> List[str]:
-        s: List[str] = []
-        tohum = 0
-        n = 40
-        d_in = 12
-        ayrinti = True
-        # ASIL ÖLÇÜM yapılandırılmış girdide yapılır. Rastgele gürültüde
-        # model -- doğru olarak -- **susar** (makam Şek → sükût), o hâlde
-        # ``N`` zaten sıfırdır ve ``‖ΔN‖`` hiçbir melekeyi ayırt edemez;
-        # o girdideki "tesirsiz" sayısı sükûtun gölgesidir, melekelerin
-        # hâli değil. Rastgele girdi yine de raporlanır, fakat ikinci
-        # sırada ve bu kayıtla.
-        E = eksilt(ne="girdi", tohum=tohum)
-
-        d, izler = eksilt(E, tohum, ne="iz")
-        satir = ["=== Kademe 5: icra izi ===",
-                 "adım: %d   şahit: %d   makam: %s   sükût: %s"
-                 % (len(izler), len(d.sahitler or []), d.makam, d.sukut)]
-        sessiz = [iz for iz in izler if not iz.degisen]
-        satir.append("hiçbir alanı değiştirmeyen adım: %d/%d  %s"
-                     % (len(sessiz), len(izler), [iz.no for iz in sessiz]))
-        gizli = [iz for iz in izler
-                 if set(iz.degisen) - set(iz.yazdigi) - {"tenakuz", "T",
-                                                         "P_idrak", "makam",
-                                                         "muteber_sahit",
-                                                         "tevafuk", "sukut"}]
-        satir.append("sözleşmesinde olmayan alanı değiştiren adım: %d  %s"
-                     % (len(gizli), [(iz.no, tuple(set(iz.degisen)
-                                                   - set(iz.yazdigi)))
-                                     for iz in gizli]))
-
-        temel, sonuc = eksilt(E, tohum)
-        t = eksilt(ne="tablo", sonuc=sonuc)
-        satir += ["", "=== Kademe 5: hassasiyet (bir meleke düşerse) ===",
-                  "temel: ‖N‖=%.6f  makam=%s  sükût=%s  P=%.4f"
-                  % (float(np.linalg.norm(temel["N"])), temel["makam"],
-                     temel["sukut"], temel["P_idrak"]),
-                  "tesirli: %d   yapısal zaruret: %d   TESİRSİZ: %d / %d"
-                  % (len(t["tesirli"]), len(t["yapısal"]),
-                     len(t["tesirsiz"]), t["toplam"])]
-        satir.append("tesirsiz melekeler: %s" % t["tesirsiz"])
-
-        if ayrinti:
-            satir += ["", "%-4s %-18s %-10s %10s %8s %s"
-                      % ("𝒪", "ad", "hâl", "‖ΔN‖", "ΔP", "değişen hüküm")]
-            satir.append("-" * 82)
-            for x in sorted(sonuc, key=lambda z: (-z.dN, z.no)):
-                hukumler = ",".join(
-                    a for a, v in (("makam", x.makam_degisti),
-                                   ("sükût", x.sukut_degisti),
-                                   ("nakz", x.nakz_degisti),
-                                   ("mühür", x.muhur_degisti)) if v) or "—"
-                satir.append("%-4d %-18s %-10s %10.5f %8.4f %s"
-                             % (x.no, x.ad, x.hal, x.dN, x.dP,
-                                hukumler if not x.kirildi else x.sebep))
-
-        # --- ikinci ölçümler
-        ikinciler = [("bir şahit bozuk", eksilt(ne="girdi", bozuk=2, tohum=tohum)),
-                     ("rastgele gürültü (model susar; ölçü ayırt etmez)",
-                      np.random.default_rng(tohum).normal(size=(n, d_in)))]
-        for etiket, E2 in ikinciler:
-            d2 = Nefs(tohum).idrak_et(E2)
-            temel2, sonuc2 = eksilt(E2, tohum)
-            t2 = eksilt(ne="tablo", sonuc=sonuc2)
-            satir += ["", "=== yapılandırılmış girdi: %s ===" % etiket,
-                      "şahit=%d  nakz=%s  müteber=%.2f  P=%.4f  makam=%s  sükût=%s"
-                      % (len(d2.sahitler or []), d2.nakz, d2.muteber_sahit,
-                         d2.P_idrak, d2.makam, d2.sukut),
-                      "tesirli: %d   yapısal: %d   TESİRSİZ: %d / %d  → %s"
-                      % (len(t2["tesirli"]), len(t2["yapısal"]),
-                         len(t2["tesirsiz"]), t2["toplam"], t2["tesirsiz"])]
-        return "\n".join(satir)
-        return s
 
     s.append("")
     s.append("=" * 70)
     s.append("  TESİR -- bu meleke düşse ne değişir")
     s.append("=" * 70)
-    s += _rapor_nefs_tesir()
 
     def _rapor_nefs_kulli_kayip() -> List[str]:
         s: List[str] = []
