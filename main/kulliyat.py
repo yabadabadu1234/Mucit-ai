@@ -54,7 +54,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 __all__ = ["Kaynak", "KAYNAKLAR", "kulliyat_cek", "kulliyat_verisi",
            "kulliyat_beyani", "kulliyat_dokumu", "mucit_cevir",
-           "mucit_ac",
+           "mucit_ac", "yer_ac", "bos_alan",
            "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
 
 #: Külliyatın indiği yer. **Depoya girmez** (``.gitignore``).
@@ -279,6 +279,71 @@ KAYNAKLAR: Tuple[Kaynak, ...] = (
 
 def _dizin(k: Kaynak) -> str:
     return os.path.join(KULLIYAT_DIZINI, k.depo.replace("/", "__"))
+
+
+def bos_alan(yol: str = "") -> int:
+    """Kaptaki boş bayt -- **ölçülür** (ferman 5-B), elle yazılmaz."""
+    import shutil as _sh
+    d = yol or KULLIYAT_DIZINI
+    os.makedirs(d, exist_ok=True)
+    return int(_sh.disk_usage(d).free)
+
+
+def yer_ac(gerek: int, koru: Sequence[str] = ()) -> Dict[str, Any]:
+    """``gerek`` bayt yer açılana kadar **çevrilmiş** külliyatı bırak.
+
+    ===================================================================
+    KAP KÜLLİYATTAN KÜÇÜKTÜR -- VE BU BİR BUDAMA SEBEBİ DEĞİLDİR
+    ===================================================================
+
+    **FERMAN 1-O.** *"Verisetinin tamamı o repoda duracak"* -- depo
+    GitHub'dır ve orada tamamı durur. Kap ise sonludur: bu makinede
+    30 GB, külliyat ise ondan büyük. Ölçüldü: budanmamış tefsir
+    külliyatı tek başına 8,9 GB ham, çevrilmişi de o mertebede.
+
+    Kusurlu iki cevap vardır ve ikisi de reddedilir:
+
+    * **Veriyi kesmek.** Fermanın yasakladığı şey.
+    * **Hepsini kapta tutmak.** Fizikî olarak imkânsız; ``ENOSPC`` ile
+      koşu ölür ve saatler çöpe gider.
+
+    Doğru cevap üçüncüsüdür ve fermanın kendi sözüdür: *"işini bitire
+    bitire alacaksın"*. Bir kaynak çekilir, çevrilir, **örneklenir**;
+    yer lâzım olunca çevrilmişi de bırakılır. Hiçbir kaynak kesilmez --
+    her koşuda hepsi baştan sona okunur; kapta duran şey yalnız o an
+    lâzım olandır.
+
+    ``koru`` o an ``mmap``lenmiş dosyalardır; onlara dokunulmaz.
+    """
+    korunan = {os.path.abspath(y) for y in koru}
+    atilan: List[str] = []
+    kazanc = 0
+    if bos_alan() >= int(gerek):
+        return {"gerek": int(gerek), "atılan": atilan, "kazanç": 0,
+                "boş": bos_alan()}
+    adaylar = []
+    for f in os.listdir(KULLIYAT_DIZINI):
+        if not f.endswith(MUCIT_UZANTI):
+            continue
+        y = os.path.join(KULLIYAT_DIZINI, f)
+        if os.path.abspath(y) in korunan:
+            continue
+        try:
+            adaylar.append((os.path.getmtime(y), os.path.getsize(y), y))
+        except OSError:
+            pass
+    # En eski çevrilmiş önce gider: en uzun zamandır okunmayan odur.
+    for _t, b, y in sorted(adaylar):
+        if bos_alan() >= int(gerek):
+            break
+        try:
+            os.remove(y)
+            atilan.append(y)
+            kazanc += b
+        except OSError:
+            pass
+    return {"gerek": int(gerek), "atılan": atilan, "kazanç": kazanc,
+            "boş": bos_alan()}
 
 
 def _boy(kok: str, uzantilar: Sequence[str]) -> Tuple[int, int]:
@@ -613,6 +678,20 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                 kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
                 continue
+            # **ÇEVİRMEDEN EVVEL YER ÖLÇÜLÜR VE AÇILIR** (ferman 1-O).
+            # Çevrilmiş dosya ham gövdeyle aynı mertebededir (belirteç
+            # başına 4 bayt, belirteç başına ~4 harf). Ölçüldü: tefsir
+            # külliyatı 8,9 GB ham, kapta 5,2 GB boş vardı ve koşu
+            # ``ENOSPC`` ile ölecekti. Yer, o an ``mmap``li dosyalara
+            # dokunmadan, en eski çevrilmişten başlayarak açılır.
+            if not os.path.isfile(yol) and os.path.isdir(kok):
+                ham, _n = _boy(kok, k.uzantilar())
+                # ``mmap``li dosyalara dokunulmaz: onlar bu koşunun
+                # hâlihazırda okuduğu külliyattır.
+                acik = [str(getattr(t, "filename", "") or "")
+                        for t, _p in diziler]
+                yer_ac(int(ham * 1.5) + (1 << 30),
+                       koru=[y for y in acik if y])
             # **BAYAT BİÇİM SESSİZCE ATLANMAZ.** ``mucit_ac`` damgası
             # tutmayan dosyaya ``None`` döner; o dosya yerinde durduğu
             # için ``isfile`` doğru çıkar ve kaynak her koşuda sessizce
