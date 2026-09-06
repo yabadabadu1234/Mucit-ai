@@ -407,7 +407,12 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
     uz = tuple(uzantilar)
     os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
     n = dosya = 0
-    with open(cikti, "wb") as ch:
+    # **GEÇİCİ ADA YAZILIR, SONUNDA YERİNE KONUR.** Koşu ortada
+    # kesilirse (ölçüldü: ``kill -9``) yarım bir dosya kalıyor ve
+    # sonraki koşu onu bizim sanıp çöküyordu. ``os.replace`` atomiktir:
+    # ya tam dosya vardır ya hiç.
+    gecici = cikti + ".yaziliyor"
+    with open(gecici, "wb") as ch:
         ch.write(MUCIT_DAMGA)
         yer = ch.tell()
         ch.write(b" " * 320 + b"\n")
@@ -452,6 +457,7 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
         assert len(bas) <= 320, "başlık 320 baytı aşamaz: %d" % len(bas)
         ch.seek(yer)
         ch.write(bas + b" " * (320 - len(bas)))
+    os.replace(gecici, cikti)
     return {"yol": cikti, "belirteç": n, "dosya": dosya,
             "kodlama": kodlama, "sözlük": V}
 
@@ -468,8 +474,27 @@ def mucit_ac(yol: str, kodlama: str = "o200k_base"):
     with open(yol, "rb") as fh:
         if fh.read(len(MUCIT_DAMGA)) != MUCIT_DAMGA:
             return None
-        bas = json.loads(fh.read(321).decode("utf-8").strip())
+        ham = fh.read(321).decode("utf-8", "replace").strip()
         ofset = fh.tell()
+    # **YARIM YAZILMIŞ DOSYA ÇÖKERTMEZ, "BİZİM DEĞİL" DER.**
+    #
+    # ``mucit_cevir`` damgayı BAŞTA yazar, başlığı SONDA doldurur.
+    # Koşu arada kesilirse (ölçüldü: ``kill -9``) damga yerinde, başlık
+    # ise 320 boşluk kalır ve ``json.loads`` ``JSONDecodeError`` ile
+    # bütün tâlimi düşürürdü. Yarım bir dosya bir hata değil, bir
+    # **hâldir**: o kaynak henüz çevrilmemiştir. ``None`` dönmek
+    # çağıranı yeniden çevirmeye yollar -- sessiz ikame değildir,
+    # çünkü çağıran dosyayı siler ve baştan çevirir.
+    #
+    # (Yapısal çare de kondu: ``mucit_cevir`` artık geçici ada yazıp
+    # sonunda ``os.replace`` ediyor, o hâlde yarım dosya artık
+    # oluşamaz. Bu dal evvelki koşulardan kalanlar içindir.)
+    if not ham or not ham.startswith("{"):
+        return None
+    try:
+        bas = json.loads(ham)
+    except ValueError:
+        return None
     # **SESSİZ İKAME YASAK** (ferman 5): başka kodlamayla çevrilmiş bir
     # dosyayı okumak, başka bir belirteç uzayını okumaktır.
     assert str(bas["kodlama"]) == str(kodlama), (
