@@ -344,16 +344,25 @@ class QYazmac:
     def mera(self, kademe: Optional[int] = None, teta=None,
              kulli_dahil: bool = True) -> None:
         """MERA -- quditte **lif içi üniter**, izometri/kesme yok."""
+        # **BİT DÜZLEMİNE ÇEVRİLDİ (graf motoru).** Evvelce lif başına
+        # bir ``n×n`` Cayley üniteri kurulup ``lif_kapisi`` ile
+        # vuruluyordu; o kapı graf motoruna geçmediği için imha edildi.
+        #
+        # MERA'nın manası "yerel üniterlerle kademe kademe karıştırmak"
+        # tır ve bit düzlemi kapıları tam olarak odur: her kademede her
+        # bit düzlemine bir ``SU(2)`` dönmesi vurulur. Aynı tohum aynı
+        # diziyi verir; stokastiklik yoktur.
         k = int(kademe if kademe is not None else self.ayar.mera_kademe)
         r = np.random.default_rng(int(self.ayar.tohum) + 17)
         for _ in range(max(1, k)):
             for f, n in enumerate(self.y.ayar.lif):
                 if not kulli_dahil and f == len(self.y.ayar.lif) - 1:
                     continue
-                A = r.normal(scale=0.1, size=(n, n))
-                A = A - A.T
-                G = np.linalg.solve(np.eye(n) + A, np.eye(n) - A)
-                self.y.lif_kapisi(f, G)
+                for alt in range(max(1, int(n).bit_length() - 1)):
+                    a = float(r.normal(scale=0.1))
+                    c, sn = np.cos(a), np.sin(a)
+                    self.y.bit_kapisi(f, alt,
+                                      np.array([[c, -sn], [sn, c]], complex))
 
     # ── okuma ─────────────────────────────────────────────────────
     def alan_degeri(self, ad: str):

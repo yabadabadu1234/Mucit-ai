@@ -157,6 +157,12 @@ class MizanAyari:
     #: Artık ``ℒ_Hodge`` süzülmüş durumda ölçülür: Chebyshev polinomu
     #: harmonik olmayan bileşeni bastırır ve geriye kalan enerji hakiki
     #: tenakuzdur. ``qsvt = 0`` ile kapatılabilir -- ölçü kırmızı yanar.
+    #: **KLASİK GÖLGELER** (``nefs/golge.py``). ``0`` = kapalı: bütün
+    #: sektör ağırlıkları tam hesaplanır. ``>0`` ise ``K`` gölge örneği
+    #: alınır ve hata haddi aşılırsa **tam ölçüme dönülür** -- sessizce
+    #: değil, dökümde ``gölge_düştü`` diye yazılır.
+    golge_ornegi: int = 0
+    golge_haddi: float = 0.05
     qsvt: int = 16
     qudit_derece: int = 8
     qudit_yon: int = 8

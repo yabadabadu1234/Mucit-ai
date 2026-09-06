@@ -110,6 +110,41 @@ işte kullanılmaz.
 
 ---
 
+## ▓▓▓ 1-E. FERMAN: HÜKMÜN GEREĞİ HARFİYYEN YAPILIR -- YARIM İŞ YASAK ▓▓▓
+
+> *"O bilmem ne motoruna tamamen geçmedik, melekeler hâlâ yoğun ortamda
+> vuruluyor, bilmem ne şu bahane bu bahane, mazeret bulup duruyorsun.
+> Sana bir hüküm verdiysem süs olsun diye vermedim, gereği neyse onu
+> yapacaksın, **iddia edeceksin ve sözünün ardında duracaksın**. Ne
+> hüküm verilmişse, gereği neyse onu **harfiyyen** yapacaksın... bu
+> motora **tamamen** geç! Yarısı orda yarısı burda bir şey istemiyorum,
+> **yarım meyve sağlam kalmaz, iki günde çürür!**"*
+
+### YASAK OLAN İKİ SÖZ
+
+1. **"Şu kısmı yapıldı, şu kısmı yapılmadı."** Bir hüküm verildiyse
+   gereği **tamamen** yapılır. "Temsili kurdum ama ameliyeler hâlâ eski
+   yolda" demek hükmü icra etmek değil, hükmü süs yapmaktır.
+2. **"Ne iddia edilmiyor: ... motoruna geçtik demek yalan olurdu."**
+   Bu cümle bir dürüstlük gibi görünüp mazeret olur. Doğrusu mazereti
+   yazmak değil, **motora fiilen geçmektir**. Hudut ancak hükmün
+   **kendisi** imkânsızsa yazılır ve o zaman da imkânsızlığın delili
+   konur -- "vaktim olmadı", "riskli", "büyük iş" delil değildir.
+
+### YARIM İŞİN ALAMETİ
+
+Bir uzuv yazılıp eski yol da yerinde duruyorsa **yarımdır**. Yeni usul
+geldiyse eskisi aynı turda **imha edilir** (2. ferman). İki yol yan yana
+durdukça hangisinin koştuğu belirsizdir ve belirsizlik münafıklığın
+yatağıdır.
+
+### SÖZÜN ARDINDA DURMAK
+
+İddia edilir ve arkasında durulur: *"bu motora geçildi"* denince o
+motorun **fiilen** koştuğu, eskisinin **kalmadığı** kastedilir.
+
+---
+
 ## ▓▓▓ 2. FERMAN: İPTAL = ANINDA İMHA, YENİ = ANINDA BAĞ ▓▓▓
 
 > *"Daha sonra terkip etmekle uğraşmamamız için iptal ettiklerimizi **anında,

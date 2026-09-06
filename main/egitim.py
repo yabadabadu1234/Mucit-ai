@@ -122,6 +122,14 @@ from main import hazine                             # noqa: E402
 from nefs.kulli_mizan import (MizanAyari, kulli_mizan,   # noqa: E402
                               mizan_cetveli)
 from nefs.hafiza import Hafiza                           # noqa: E402
+# ── ZABIT 2'NİN KALAN ÜÇ USULÜ (Saf CPU 2026 Mimarisi) ────────────
+# **USUL FERMANI:** üçünün de çağrısı, dosyalar YOKKEN buraya yazıldı.
+#   1. usul  LimTDD    -- durumu DAG olarak sıkıştır (nefs/tdd.py)
+#   2. usul  Stabilizer-- Clifford çerçevesinde tableau (nefs/kararname.py)
+#   3. usul  Gölgeler  -- O(log M) ölçüm (nefs/golge.py)
+from nefs.tdd import TddAyari, olcu as tdd_olcu           # noqa: E402
+from nefs.kararname import kararname                      # noqa: E402
+from nefs.golge import GolgeAyari, golge_al               # noqa: E402
 
 #: Ağırlıkların yattığı dizin. ``main/cikarim.py`` buradan okur.
 HAZINE_DIZINI = os.environ.get("MUCIT_HAZINE", "depo/hazine")
@@ -310,6 +318,25 @@ class EgitimAyari:
     #: L2/L3 önbelleğinden akan bir veri nehri gibi geçmeli.
     #: ``complex64`` bellek trafiğini yarıya indirir.
     genlik_tipi: str = "complex64"
+    # --- ZABIT 2: SAF CPU 2026 USULLERİ
+    #: **1. USUL -- LimTDD.** Durum yoğun bir dizi değil, yönlendirilmiş
+    #: asiklik graf olarak tutulur; özdeş alt bloklar tek düğüme çöker.
+    #: ``0`` = kapalı; ``>0`` = düğüm haddi. Sıkışma nispeti raporlanır
+    #: ve kazanç yoksa **görünür** (ölçü kırmızı yanabilir).
+    tdd_dugum_haddi: int = 4096
+    #: Özdeşlik toleransı: iki alt blok bu farkla aynı sayılır.
+    tdd_tolerans: float = 1e-7
+    #: **2. USUL -- QUDİT STABILIZER RANK.** Durumun Clifford çerçevesine
+    #: ne kadar yakın olduğu (``χ_stab``) ölçülür; küçükse durum bit
+    #: seviyesinde tableau ile taşınabilir. ``0`` = kapalı.
+    stab_mertebe: int = 8
+    #: **3. USUL -- KLASİK GÖLGELER.** ``K`` gölge örneği ile ``M``
+    #: gözlenebilirin beklentisi ``O(log M)``de kestirilir. ``0`` =
+    #: kapalı (bütün ölçümler tam yapılır).
+    golge_ornegi: int = 0
+    #: Gölge kestiriminin kabul edilen azamî hatası; aşılırsa tam ölçüme
+    #: dönülür ve bu **sessiz değildir**, dökümde yazılır.
+    golge_haddi: float = 0.05
     #: Yazmacın yığın dilimi. ``0`` = donanımdan tayin et
     #: (``nefs/onbellek.py``). Elle bir sayı verilirse o kullanılır ve
     #: sebebi çağıranın sorumluluğundadır.
@@ -620,6 +647,7 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         ayna_r=float(a.ayna_r),
         lam_cevrim=float(a.lam_cevrim), lam_monogami=float(a.lam_monogami),
         lam_hodge=float(a.lam_hodge), cevrim_boyu=int(a.cevrim_boyu),
+        golge_ornegi=int(a.golge_ornegi), golge_haddi=float(a.golge_haddi),
         qsvt=int(a.qudit_qsvt), qudit_derece=int(a.qudit_derece),
         qudit_yon=int(a.qudit_yon),
         cevrim_sayisi=int(a.cevrim_sayisi), rust_t0=float(a.rust_t0),
@@ -773,6 +801,20 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
              "bağıntı": 0.0, "artık": 0.0, "bükülme": 0.0,
              "toplam_düşüş": float(r["V_ilk"] - r["V_son"])})
 
+    # --- ZABIT 2'NİN ÜÇ USULÜ: DURUM NE KADAR SIKIŞIYOR?
+    #
+    # Tâlim bittikten sonra öğrenilmiş durum bir kere kurulur ve üç
+    # usul onun üstünde **fiilen** koşar. Neticeleri hazineye yazılır:
+    # bir sonraki koşu, durumun hangi temsille taşınacağını bunlardan
+    # bilir. Kazanç yoksa sayı öyle çıkar ve saklanmaz.
+    q_son = nefs.idrak_et(np.zeros((ayar.yigin(), 2, ayar.satir_kubiti)))
+    psi_son = np.asarray(q_son.y.psi[0], complex)
+    tdd = tdd_olcu(psi_son, TddAyari(tolerans=float(ayar.tdd_tolerans)))
+    stab = kararname(psi_son, mertebe=int(ayar.stab_mertebe))
+    golge = golge_al(psi_son, GolgeAyari(ornek=max(32, int(ayar.golge_ornegi)
+                                                   or 128),
+                                         tohum=int(ayar.tohum)))
+
     # --- MİZANIN DÖRT KEFESİ AYRI AYRI (hangisi kırmızı, görünsün)
     kefeler = kulli_mizan(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn,
                           hafiza=hafiza, adim=_sayac["çağrı"],
@@ -805,6 +847,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
 
     return {"ayar": ayar.ad, "parametre": d,
             "geçit": kapi, "ders": ders, "hazine": kayit,
+            "tdd": tdd, "stabilizer": stab, "gölge": golge,
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
             "veri": len(veri), "süreç": surec,
@@ -1114,6 +1157,26 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
               % (kulli["geçit"]["zaman_düğümü"],
                  len(kulli["geçit"]["zaman_çevrimi"]),
                  kulli["geçit"]["kelam_ayrıştı"])]
+        s += ["",
+              "    ZABIT 2 -- SAF CPU 2026 USULLERİ (durumun temsili):",
+              "      1. LimTDD (nefs/tdd.py)",
+              "         düğüm %d / %d yaprak → sıkışma %.2f×   "
+              "yeniden kurma hatası %.3e"
+              % (kulli["tdd"]["düğüm"], kulli["tdd"]["yaprak"],
+                 kulli["tdd"]["sıkışma"], kulli["tdd"]["hata"]),
+              "         L2'ye sığıyor mu: %s  (%d bayt)"
+              % (kulli["tdd"]["önbelleğe_sığdı"], kulli["tdd"]["bayt"]),
+              "      2. Stabilizer rank (nefs/kararname.py)",
+              "         χ_stab = %d   örtüşme %.4f   Clifford'a yakın: %s"
+              % (kulli["stabilizer"]["chi"],
+                 kulli["stabilizer"]["örtüşme"],
+                 kulli["stabilizer"]["clifforda_yakın"]),
+              "      3. Klasik gölgeler (nefs/golge.py)",
+              "         K=%d gölge → %d gözlenebilir, azamî hata %.4f"
+              % (kulli["gölge"]["örnek"], kulli["gölge"]["gözlenebilir"],
+                 kulli["gölge"]["azamî_hata"]),
+              "         tam ölçüme nispeten hız: %.1f×"
+              % kulli["gölge"]["hız"]]
         if kulli.get("düşen_uzuv"):
             s.append("    DÜŞEN UZUV: %s"
                      % ", ".join(sorted(kulli["düşen_uzuv"])))
