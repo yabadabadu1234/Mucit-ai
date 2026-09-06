@@ -101,6 +101,10 @@ class QAyar:
     motor: str = "galois"
     #: Ayrık faz grubunun mertebesi.
     faz_mertebesi: int = 16
+    #: Kapı hattı: ``c`` = kapı bandı + C çekirdeği, ``numpy`` = eski yol.
+    hat: str = "c"
+    #: Bandın azamî boyu; ``0`` = çekirdeğin kendi ölçüsü.
+    hat_bandi: int = 0
     #: Genlik tipi. ``complex64`` bellek ve bant genişliğini yarıya
     #: indirir; bedeli hassasiyettir ve **ölçülerek** kabul edilir
     #: (üniterlik hatası ``hiz_teftisi``de raporlanır). Varsayılan
@@ -171,7 +175,8 @@ class QYazmac:
                       kulli_alanlar=a.kulli_alanlar,
                       yerel_kubit=int(a.yerel_kubit), tohum=int(a.tohum),
                       tip=a.tip, motor=str(a.motor),
-                      faz_mertebesi=int(a.faz_mertebesi)),
+                      faz_mertebesi=int(a.faz_mertebesi),
+                      hat=str(a.hat), hat_bandi=int(a.hat_bandi)),
             n_satir=1, satir_kubiti=int(a.satir_kubiti))
         self.iz = self.y.iz
         # ── ARA KATMAN KALDIRILDI (ölçüldü) ───────────────────────

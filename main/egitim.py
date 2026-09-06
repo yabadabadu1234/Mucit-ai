@@ -167,6 +167,20 @@ from nefs.faz_polinomu import FazAyari, faz_oturt         # noqa: E402
 # komutuna iner."*
 from nefs.siklotomik import (SiklotomikAyari,             # noqa: E402
                              koset_indirge, iz_esitligi)
+# ── 41 MELEKENİN TAŞINDIĞI HAT VE KALICI HIZÖLÇER ─────────────────
+# **USUL FERMANI:** bu iki satır modüller HENÜZ YOKKEN yazıldı.
+#
+#   nefs/qcekirdek.py    -- melekelerin vurduğu bütün kapılar bir
+#                           **kapı bandına** yazılır ve bandın tamamı
+#                           TEK C çağrısında icra edilir. Meleke
+#                           kodları değişmez; değişen, kapının nerede
+#                           koştuğudur.
+#   tanilama/hizolcer.py -- hızölçer ana hatta KALICI olarak bağlanır:
+#                           her küllî mizan çağrısı saatlenir, belirteç
+#                           sayılır. Koşu sonunda değil, koşarken ölçer.
+from nefs.qcekirdek import cekirdek_beyani                 # noqa: E402
+from tanilama.hizolcer import (Hizolcer, hizolcer_bagla,   # noqa: E402
+                               hizolcer_beyani)
 # ── ZABIT: 1 TB/S GPU AKIŞI (4× L4 VRAM DOYUMU) ───────────────────
 # **USUL FERMANI:** bu satır modül HENÜZ YOKKEN yazıldı.
 #
@@ -383,6 +397,28 @@ class EgitimAyari:
     # tek bir ``cos(θ)`` 15-30 çevrim yer.
     #
     # O hâlde durum artık sürekli genlik vektörü DEĞİLDİR.
+    # ══════════════════════════════════════════════════════════════
+    #  41 MELEKENİN KOŞTUĞU HAT
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **ZABIT (Derece-12 ve 1 GB/s, 1. ameliyat):** *"1 GB/s hız
+    # hedefinde Python `for` döngüsü KULLANILAMAZ. Ana akış motoru saf
+    # C ile yazılır ve tek parça derlenir; Python sadece başlatma
+    # anında devreye girer, akış başladığında kontrolü tamamen C
+    # çekirdeğine bırakır."*
+    #
+    # Melekelerin **kodu değişmez**: yine ``q.tek(i, G)`` derler.
+    # Değişen, o çağrının nereye gittiğidir: kapı artık duruma
+    # vurulmaz, bir **banda** yazılır; bant dolunca yahut durum
+    # okununca tamamı tek C çağrısında icra edilir.
+    #:   ``c``     -- kaynaşık C çekirdeği (nefs/qcekirdek.py)
+    #:   ``numpy`` -- eski yol. **Kıyas içindir**; seçilirse rapor
+    #:                onu söyler ve hız ölçüsü kırmızı yanar.
+    hat: str = "c"
+    #: Kapı bandının azamî boyu. ``0`` = donanımdan tayin (L2'ye sığsın).
+    #: Bant dolunca kendiliğinden boşalır; netice sıraya bağlıdır ve
+    #: bant boyu neticeyi **değiştirmez** (sıra korunur).
+    hat_bandi: int = 0
     #: Motorun cinsi:
     #:   ``galois``    -- GF(2⁸) + Stabilizer Tableau (XOR/AND bitmask)
     #:   ``kronecker`` -- matrix-free [16,16,16] lifli SIMD akışı
@@ -545,7 +581,9 @@ class EgitimAyari:
                      # Faz grubu **tek kaynaktan**: yazmaç ile faz
                      # polinomu aynı ``Z_m``de olmalı, yoksa polinom
                      # başka bir fazı tarif eder.
-                     faz_mertebesi=int(self.faz_mertebesi))
+                     faz_mertebesi=int(self.faz_mertebesi),
+                     # 41 melekenin kapıları bu hatta koşar.
+                     hat=str(self.hat), hat_bandi=int(self.hat_bandi))
 
     def yigin(self) -> int:
         """Yazmacın YIĞIN DİLİMİ -- elle değil, **donanımdan**.
@@ -912,6 +950,16 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                     ayniyet=float(ayar.hafiza_ayniyet),
                     buhar=float(ayar.hafiza_buhar), tohum=int(ayar.tohum))
     _sayac = {"çağrı": 0}
+    # ── HIZÖLÇER ANA HATTA **KALICI** BAĞLANIR ────────────────────
+    # Evvelce hız yalnız ``gecit()``te, koşudan EVVEL, tek bir yoklama
+    # çağrısıyla ölçülüyordu. O bir kestirimdir: koşunun kendisi başka
+    # türlü davranabilir (önbellek ısınır, yığın dolar, hafıza büyür).
+    # Ferman: *"hızölçeri ana hatta kalıcı olarak bağla."* Artık **her**
+    # küllî mizan çağrısı saatlenir ve belirteç sayılır; hız koşarken
+    # bilinir, sonradan tahmin edilmez.
+    olcer = Hizolcer(belirtec_basina=len(veri) * int(ayar.pencere),
+                     had=None, ad="küllî mizan")
+    hizolcer_bagla(olcer)
 
     def kayip_p(P: np.ndarray) -> np.ndarray:
         P = np.atleast_2d(np.asarray(P, float))
@@ -920,9 +968,10 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         out = np.empty(P.shape[0], float)
         for i, p in enumerate(P):
             _sayac["çağrı"] += 1
-            t = kulli_mizan(nefs, veri, p, ayar.sozluk, ayar=mzn,
-                            hafiza=hafiza, adim=_sayac["çağrı"],
-                            kademe_gorevleri=kademe_gorevleri)
+            with olcer.saat():
+                t = kulli_mizan(nefs, veri, p, ayar.sozluk, ayar=mzn,
+                                hafiza=hafiza, adim=_sayac["çağrı"],
+                                kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
         return out
 
@@ -1098,6 +1147,10 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "galois": tab.beyan(),
             "flo": flo, "sbox": sb, "sbox_ölçü": sb_olcu,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
+            # Hızölçer koşunun **tamamını** gördü; geçitteki tek
+            # yoklama değil, her kayıp çağrısı.
+            "hızölçer": hizolcer_beyani(),
+            "çekirdek": cekirdek_beyani(),
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
             "veri": len(veri), "süreç": surec,
@@ -1462,7 +1515,30 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
               "         dallanma: %d  (Bravyi-Gosset yolunda %.3e olurdu)"
               % (fp["dallanma"], fp["dallanma_kubit"])]
         sk = kulli["siklotomik"]
+        ho, ck = kulli["hızölçer"], kulli["çekirdek"]
         s += ["",
+              "    HIZÖLÇER -- ANA HATTA KALICI BAĞLI (koşarken ölçtü):",
+              "      çağrı %d   toplam %.2f sn   belirteç %d"
+              % (ho["çağrı"], ho["toplam_sn"], ho["belirteç"]),
+              "      belirteç/sn: ortalama %.0f | en iyi %.0f | en kötü %.0f"
+              % (ho["belirteç_sn"], ho["en_iyi"], ho["en_kötü"]),
+              "      ilk çağrı %.0f → son çağrı %.0f  (ısınma payı %.2f×)"
+              % (ho["ilk"], ho["son"], ho["ısınma"]),
+              "      hüküm: %s" % ho["hüküm"],
+              "",
+              "    41 MELEKENİN KOŞTUĞU HAT (nefs/qcekirdek.py):",
+              "      hat: %s   çekirdek derlendi: %s   koşuyor: %s"
+              % (ck["hat"], ck["derlendi"], ck["koşuyor"]),
+              "      kapı %d (karo %d, çift %d; matchgate %d)"
+              % (ck["kapı"], ck["karo"], ck["çift"], ck["matchgate"]),
+              "      boşaltma %d → bant başına %.1f kapı   "
+              "numpy'a düşen boşaltma: %d"
+              % (ck["boşaltma"], ck["bant_basina_kapi"],
+                 ck["numpy_boşaltma"]),
+              "      %s" % ck["kıyas"],
+              "      karo → BLAS zgemm | çift → C (ölçü: karo BLAS'ta "
+              "2-25× hızlı, çift C'de 6,9×)",
+              "",
               "    DERECE-%d FAZ -- CNOT-DİHEDRAL İDDİASI İPTAL (zabıt):"
               % fp["derece"],
               "      Amy-Maslov-Mosca ≤3 ister; ölçülen %d. İddia DÜŞTÜ."

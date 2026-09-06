@@ -130,6 +130,11 @@ class QuditAyar:
     motor: str = "galois"
     #: Ayrık faz grubunun mertebesi ``Z_m`` (``motor="galois"`` iken).
     faz_mertebesi: int = 16
+    #: **KAPI HATTI.** ``c`` = kapı bandı + kaynaşık C çekirdeği;
+    #: ``numpy`` = eski yol (kıyas içindir, seçilirse rapor söyler).
+    hat: str = "c"
+    #: Bandın azamî boyu; ``0`` = çekirdeğin kendi ölçüsü.
+    hat_bandi: int = 0
 
     def __post_init__(self):
         if int(np.prod(self.lif)) != int(self.d):
@@ -206,6 +211,13 @@ class QuditYazmac:
         # Aynı tohum daima aynı durumu verir (stokastiklik yasak).
         #: Lif başına **bekleyen karo**; durum okununca iner.
         self._bekleyen: Dict[int, np.ndarray] = {}
+        # ── KAPI BANDI: 41 MELEKENİN KAPILARI BURAYA YAZILIR ──────
+        # Melekelerin kodu değişmez; değişen, kapının nerede koştuğudur.
+        # ``hat="numpy"`` seçilirse eski yol koşar ve ``beyan``da görünür
+        # -- ölçü kırmızı yanabilmeli (ferman 5).
+        from .qcekirdek import Bant
+        self._bant = Bant(int(a.yigin), int(a.d), tuple(a.lif),
+                          hat=str(a.hat), bant=int(a.hat_bandi))
         #: Bekleyen köşegen fazın ``Z_m`` üssü (Amy-Maslov-Mosca).
         self._faz_bekleyen: Optional[np.ndarray] = None
         #: Koşu boyunca biriken **bütün** faz üssü -- polinoma oturur.
@@ -522,7 +534,8 @@ class QuditYazmac:
     @property
     def psi(self) -> np.ndarray:
         """Durum ``(B, d)``. Okunduğu anda bekleyenler **iner**."""
-        if self._bekleyen or self._faz_bekleyen is not None:
+        if (self._bekleyen or self._faz_bekleyen is not None
+                or not self._bant.bos_mu()):
             self._bosalt()
         return self._psi
 
@@ -535,11 +548,26 @@ class QuditYazmac:
         self._faz_bekleyen = None
         self._psi = np.asarray(v)
 
-    def _bosalt(self) -> None:
-        """Bekleyenleri duruma indir -- karo GEMM'i ve faz üssü."""
+    def _karolari_banda(self) -> None:
+        """Bekleyen karoları **banda** yaz -- henüz duruma vurulmaz."""
+        if not self._bekleyen:
+            return
         bekleyen, self._bekleyen = self._bekleyen, {}
         for k in sorted(bekleyen):
-            self._karo_indir(int(k), bekleyen[k])
+            self._bant.karo(int(k), bekleyen[k])
+
+    def _bosalt(self) -> None:
+        """Bandın tamamını icra et, sonra bekleyen fazı indir.
+
+        Sıra harfiyyen korunur: karo ve çift kapılar banda yazılış
+        sırasıyla koşar; faz ise (değişmeli olduğu için) sonda iner --
+        zâten faz biriktirilirken bant boşaltılmıştır, o hâlde fazın
+        yeri daima bandın sonrasıdır.
+        """
+        self._karolari_banda()
+        if not self._bant.bos_mu():
+            self._psi = np.ascontiguousarray(self._psi)
+            self._bant.bosalt(self._psi)
         self._faz_indir()
 
     def _faz_indir(self) -> None:
@@ -654,41 +682,25 @@ class QuditYazmac:
                         M[idx[a], idx[b]] = G[a, b]
             self._karo_vur(int(ki), M)
             return
+        # ── KAPI DURUMA VURULMAZ, **BANDA** YAZILIR ─────────────────
+        # Ölçüldü (nefs/qcekirdek.py): çift kapı numpy'da dört süslü
+        # indisleme + bir ``stack`` + bir ``einsum`` ister ve durumu beş
+        # kere dolaştırır; C'de dört adres okunup dört adres yazılır ve
+        # durum **bir kere** dolaşılır -- 6,9× hızlı. Karo ise bir
+        # GEMM'dir ve orada BLAS bizden 2-25× hızlıdır; o yüzden karo
+        # BLAS'ta, çift C'de koşar. İkisi de banda yazılır ki sıra
+        # bozulmasın.
+        #
+        # Kapı matchgate formundaysa (Valiant-Terhal) bant bunu tanır ve
+        # C'de **yarım çarpımla** koşar: parite korunduğu için iki
+        # altuzay ayrı döner, öbek başına 16 değil 8 karmaşık çarpım.
         self._faz_indir()
-        T = self._bit_gorunumu()
-        e1, e2 = (ei, ej) if ei < ej else (ej, ei)
-        d1 = e2 - 1                                  # birinciden sonra kayar
-        v = []
-        for bi in (0, 1):
-            for bj in (0, 1):
-                b1, b2 = (bi, bj) if ei < ej else (bj, bi)
-                v.append(self._duzlem(self._duzlem(T, e1, b1), d1, b2))
-        # ── ÇARE 1: MATCHGATE İSE PARİTE BLOĞUNDA VURULUR ───────────
-        # Zabıt (Valiant-Terhal-DiVincenzo): ``G(A,B)`` formundaki kapı
-        # kübit tabanında non-Clifford olsa dahi **pariteyi korur**;
-        # ``A`` çift pariteli ``{|00⟩,|11⟩}``, ``B`` tek pariteli
-        # ``{|01⟩,|10⟩}`` altuzayında ayrı ayrı döner. İki altuzay
-        # birbirine karışmadığı için dört dilim toplanmaz: iki bağımsız
-        # ``2×2`` dönme yapılır. Yarı trafik, tahsis yok, dallanma yok.
-        mg, A, Bq = matchgate_mi(G)
-        if mg:
-            for M2, (p, q) in ((A, (0, 3)), (Bq, (1, 2))):
-                a0, a1 = v[p], v[q]
-                y0 = M2[0, 0] * a0 + M2[0, 1] * a1
-                y1 = M2[1, 0] * a0 + M2[1, 1] * a1
-                a0[...] = y0
-                a1[...] = y1
+        self._karolari_banda()
+        bi = 1 << int(self._seviye - ei)
+        bj = 1 << int(self._seviye - ej)
+        if matchgate_mi(G)[0]:
             self._matchgate_kapi += 1
-            self._kapi += 1
-            self.iz.kapi += 1
-            return
-        # Matchgate değil: dört dilim ardışık toplanır ve ``(4,4)@(4,N)``
-        # BLAS-3 GEMM vurulur. ``(N,4)`` DEĞİL -- orada yazma adımlı,
-        # çarpım da ince olurdu.
-        C = np.stack([x.reshape(-1) for x in v], axis=0)
-        Y = G @ C
-        for a in range(4):
-            v[a][...] = Y[a].reshape(v[a].shape)
+        self._bant.cift(bi, bj, G)
         self._kapi += 1
         self.iz.kapi += 1
 
