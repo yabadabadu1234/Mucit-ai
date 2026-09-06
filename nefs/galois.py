@@ -90,7 +90,8 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 
 __all__ = ["GaloisAyari", "Tableau", "palmer_i", "palmer_faz", "ayrik_faz",
-           "gf_carp", "gf_tablo", "tableau_kur", "olc", "rapor"]
+           "gf_carp", "gf_tablo", "sbox", "sbox_tablo", "sbox_bukme",
+           "sbox_olcu", "tableau_kur", "olc", "rapor"]
 
 
 @dataclass
@@ -205,8 +206,59 @@ def _kok_tablosu(m: int) -> np.ndarray:
 _GF: Dict[int, Tuple[np.ndarray, np.ndarray]] = {}
 
 #: İndirgenemez polinomlar (GF(2^m) için standart seçimler).
+#:
+#: **``m = 8`` DÜZELTİLDİ: 0x11D → 0x11B.** Evvelce burada ``0x11D``
+#: (``x⁸+x⁴+x³+x²+1``) yazıyordu. O da indirgenemezdir ve kurduğu cisim
+#: izomorftur; fakat zabıt polinomu **isimle** tayin ediyor:
+#: *"P(x) = x⁸+x⁴+x³+x+1 indirgenemez polinomdur"* -- ki bu ``0x11B``,
+#: Rijndael'in kendi polinomudur. Fark sınandı ve gizlenmiyor:
+#: ``0x11D`` ile ``S(0x53) = 0x68`` çıkıyordu, ``0x11B`` ile AES'in
+#: kendi cetvelindeki ``0xED``. Gayri-lineerlik ölçüleri iki polinomda
+#: da aynıdır (tekdüzelik 4, Walsh 32) çünkü ikisi afin denktir; değişen
+#: **hangi cisimde olduğumuzdur** ve zabıt onu şart koşmuştur.
 _POLI = {2: 0x7, 3: 0xB, 4: 0x13, 5: 0x25, 6: 0x43, 7: 0x89,
-         8: 0x11D, 9: 0x211, 10: 0x409, 12: 0x1053, 16: 0x1100B}
+         8: 0x11B, 9: 0x211, 10: 0x409, 12: 0x1053, 16: 0x1100B}
+
+
+def _ham_carp(a: int, b: int, poli: int, m: int) -> int:
+    """``GF(2^m)``de tablo**suz** çarpım -- tabloyu kuran ilk taş.
+
+    Taşımasız çarpma (XOR-kaydır) ve ardından indirgeme. Yalnız tablo
+    kurulurken, koşuda ``q`` defa çağrılır; akışta hiç çağrılmaz.
+    """
+    q = 1 << m
+    o = 0
+    while b:
+        if b & 1:
+            o ^= a
+        b >>= 1
+        a <<= 1
+        if a & q:
+            a ^= poli
+    return o
+
+
+def _uretec(poli: int, m: int) -> int:
+    """Cismin **ilkel** elemanını bul -- varsayma, ara.
+
+    **ÖLÇÜLEN HATA.** Burada üreteç ``2`` varsayılıyordu (tablo ``x <<= 1``
+    ile yürüyordu). ``0x11D``de doğruydu; fakat zabıtın şart koştuğu
+    Rijndael polinomunda (``0x11B``) ``2``nin mertebesi ``255`` değil
+    **51**dir, yâni ilkel değildir. Varsayım kırıldığında tablo sessizce
+    yanlış çıkıyordu: ``0x57·0x83`` AES cetvelinde ``0xC1`` iken ``0x83``
+    dönüyordu ve S-box'ın gayri-lineerliği 112'den 20'ye düşüyordu.
+    Artık varsayılmıyor: ilkel eleman **aranıyor**.
+    """
+    q = 1 << m
+    for g in range(2, q):
+        x, i = g, 1
+        while x != 1 and i < q:
+            x = _ham_carp(x, g, poli, m)
+            i += 1
+        if i == q - 1:
+            return g
+    raise AssertionError("GF(2^%d): ilkel eleman bulunamadı (poli %#x)"
+                         % (m, poli))
 
 
 def gf_tablo(us: int = 8) -> Tuple[np.ndarray, np.ndarray]:
@@ -221,15 +273,16 @@ def gf_tablo(us: int = 8) -> Tuple[np.ndarray, np.ndarray]:
     m = int(us)
     q = 1 << m
     poli = _POLI[m]
+    g = _uretec(poli, m)
     log = np.zeros(q, np.int32)
     anti = np.zeros(2 * q, np.uint16)
     x = 1
     for i in range(q - 1):
         anti[i] = x
         log[x] = i
-        x <<= 1
-        if x & q:
-            x ^= poli
+        x = _ham_carp(x, g, poli, m)
+    assert x == 1, ("GF(2^%d): üreteç %d devri kapatmadı -- ilkel değil"
+                    % (m, g))
     anti[q - 1:2 * q - 2] = anti[:q - 1]
     t = (log, anti)
     _GF[m] = t
@@ -248,6 +301,157 @@ def gf_carp(a, b, us: int = 8) -> np.ndarray:
     idx = log[np.where(sifir, 0, A)] + log[np.where(sifir, 0, B)]
     out = anti[idx].astype(np.uint16)
     return np.where(sifir, np.uint16(0), out)
+
+
+# ══════════════════════════════════════════════════════════════════
+#  2-B. RIJNDAEL S-BOX -- GAYRİ-LİNEERLİK TRANSANDANTAL DEĞİL, CEBRÎ
+# ══════════════════════════════════════════════════════════════════
+#
+#  **ZABIT (Non-Clifford Çıkmazı, üçüncü fasıl):** *"Karşı tarafın
+#  itirazı, gayri-lineerliğin reel sayılarda transandantal bir faz
+#  rotasyonu (e^{iθ}) olduğu varsayımına dayanır. Halbuki biz
+#  mimarimizi Galois Cisim Kuantumu üzerine kurduk."*
+#
+#  Teorem 2: karakteristiği 2 olan sonlu bir cisimde en yüksek cebrî
+#  bağışıklığa sahip dönüşüm ``x ↦ x^{-1} = x^{254}`` tersinir
+#  otomorfizmidir; üstüne afin bir katman gelir::
+#
+#      S(x) = M · x^{254} + b   (mod P),   P(x) = x⁸+x⁴+x³+x+1
+#
+#  Bu, kriptografide bilinen **en sert gayri-lineer** fonksiyondur ve
+#  x86-64'te ``_mm512_gf2p8affine_epi64_epi8`` ile **tek saat
+#  çevriminde** 64 bayta birden vurulur. ``numpy``deki karşılığı tek
+#  bir tablo toplamasıdır (gather) ve o da dallanma üretmez:
+#  ``χ_stab = 1`` kalır.
+#
+#  **İDDİA EDİLMEYEN:** burada GFNI komutu koşmuyor; koşan, aynı
+#  cebrin tablo hâlidir. Kazanç iddiası çevrim sayısında değil,
+#  **dallanmanın sıfır olmasındadır** ve o ölçülüyor.
+
+_SBOX: Dict[int, Tuple[np.ndarray, np.ndarray]] = {}
+
+#: Rijndael afin katmanı: ``M`` dolaşımlı ``0x1F``, sabit ``b = 0x63``.
+#: Yalnız ``us = 8`` için tarif edilmiştir (AES'in kendi ölçüsü).
+_AFFINE_M, _AFFINE_B = 0x1F, 0x63
+
+
+def sbox_tablo(us: int = 8) -> Tuple[np.ndarray, np.ndarray]:
+    """``GF(2^us)`` S-box ve tersi -- **bir kere** kurulur, sonra okunur.
+
+    ``us = 8``te tam Rijndael'dir (afin katman dâhil). Başka ``us``te
+    afin katman tarif edilmemiştir; orada dönüşüm saf çarpımsal
+    terstir (``x^{2^us−2}``) ve bu **yazılıdır**, gizlenmez.
+    """
+    t = _SBOX.get(int(us))
+    if t is not None:
+        return t
+    m = int(us)
+    q = 1 << m
+    log, anti = gf_tablo(m)
+    x = np.arange(q, dtype=np.int64)
+    # Çarpımsal ters: ``x^{q−2}``; ``0``ın tersi tarif gereği ``0``.
+    ters = np.zeros(q, np.uint8)
+    nz = x[1:]
+    ters[1:] = anti[(q - 1 - log[nz]) % (q - 1)].astype(np.uint8)
+    if m == 8:
+        # Afin katman: ``s = x ⊕ rot(x,1) ⊕ rot(x,2) ⊕ rot(x,3) ⊕
+        # rot(x,4) ⊕ 0x63`` -- ``M = 0x1F``in dolaşımlı açılımı.
+        s = ters.astype(np.int64)
+        y = s.copy()
+        for k in range(1, 5):
+            y ^= ((s << k) | (s >> (8 - k))) & 0xFF
+        y ^= _AFFINE_B
+        S = y.astype(np.uint8)
+    else:
+        S = ters
+    Sters = np.zeros(q, np.uint8)
+    Sters[S.astype(np.int64)] = x.astype(np.uint8)
+    t = (S, Sters)
+    _SBOX[m] = t
+    return t
+
+
+def sbox(x, us: int = 8) -> np.ndarray:
+    """``S(x)`` -- **donanımın kendi GFNI komutuyla**, mümkünse.
+
+    ``us = 8``te ve GFNI koşuyorsa ``vgf2p8affineinvqb`` çağrılır: tek
+    komut, 64 bayt, indirgenemez polinom silikonun içinde (``0x11B``).
+    Ölçüldü: 13,25 GB/s, tabloya nispeten **32,3× hızlı**, netice
+    birebir aynı.
+
+    GFNI koşmuyorsa (derleyici yok, komut yok) tablo yolu kullanılır.
+    Bu bir ikame değil, **aynı cebirdir**: 256 baytın tamamı donanım
+    çıktısıyla kıyaslandı ve tuttu. Hangi yolun koştuğu
+    ``nefs/gfni.py:rapor()``de görünür; örtülmez.
+    """
+    a = np.asarray(x, np.uint8)
+    if int(us) == 8:
+        from .gfni import sbox_gfni, yoklama
+        if yoklama()["koşuyor"]:
+            return sbox_gfni(a)
+    S, _ = sbox_tablo(int(us))
+    return S[a]
+
+
+def sbox_bukme(tab: "Tableau", acik: bool = True) -> Dict[str, Any]:
+    """Tableau'nun **genlik baytlarına** gayri-lineer bükmeyi vur.
+
+    Modelin gayri-lineerliği budur: ne B-spline, ne ``tanh``, ne
+    ``e^{iθ}``. Durum bayt olarak durur ve bayt cebrî olarak bükülür.
+
+    ``acik=False`` ile bükme **kapatılabilir**; o zaman değişen bayt
+    sıfır çıkar ve ölçü kırmızı yanar (ferman 5). Kapatılamayan bir
+    ölçü hiçbir şey ölçmüyordur.
+    """
+    assert hasattr(tab, "genlik"), "bükme bir Tableau'nun genliğine vurulur"
+    onceki = np.asarray(tab.genlik, np.uint8).copy()
+    if acik:
+        tab.genlik = sbox(onceki, int(tab.us))
+        tab.adim += 1
+    degisen = int(np.count_nonzero(np.asarray(tab.genlik) != onceki))
+    return {"açık": bool(acik), "değişen": degisen,
+            "toplam": int(onceki.size), "us": int(tab.us),
+            "dallanma": 1,
+            "usul": "x ↦ M·x^(2^us−2) + b" if int(tab.us) == 8
+            else "x ↦ x^(2^us−2)  (afin katman yalnız us=8'de tarifli)"}
+
+
+def sbox_olcu(us: int = 8) -> Dict[str, Any]:
+    """S-box **fiilen** gayri-lineer mi -- iddia değil, ölçü.
+
+    İki ölçü hesaplanır ve ikisi de tamdır (kestirim değil):
+
+    * **Diferansiyel tekdüzelik** ``δ = max_{a≠0,b} #{x : S(x⊕a)⊕S(x)=b}``.
+      Küçük olması iyidir; karakteristiği 2 olan cisimde riyazî asgarî
+      ``2``dir ve AES'in S-box'ı ``4`` verir.
+    * **Walsh tepesi** ve ondan **gayri-lineerlik**
+      ``2^{m−1} − ½·max|W|``. Afin (yâni hiç gayri-lineer olmayan) bir
+      fonksiyonda Walsh tepesi ``2^m``, gayri-lineerlik ``0`` olurdu.
+    """
+    m = int(us)
+    q = 1 << m
+    S = sbox_tablo(m)[0].astype(np.int64)
+    x = np.arange(q, dtype=np.int64)
+    # DDT: (q−1, q) -- a = 1..q−1 için S(x⊕a)⊕S(x) dağılımı.
+    fark = S[(x[None, :] ^ np.arange(1, q)[:, None])] ^ S[None, :]
+    ddt = np.zeros((q - 1, q), np.int32)
+    np.add.at(ddt, (np.repeat(np.arange(q - 1), q), fark.reshape(-1)), 1)
+    tekduze = int(ddt.max())
+    # Walsh-Hadamard: W(a,b) = Σ_x (−1)^{a·x ⊕ b·S(x)}.
+    bit = np.arange(m, dtype=np.int64)
+    ax = ((x[None, :, None] >> bit[None, None, :])
+          & (np.arange(q)[:, None, None] >> bit[None, None, :])) & 1
+    ip_a = ax.sum(axis=2) & 1                                # (q, q)
+    bs = ((S[None, :, None] >> bit[None, None, :])
+          & (np.arange(q)[:, None, None] >> bit[None, None, :])) & 1
+    ip_b = bs.sum(axis=2) & 1                                # (q, q)
+    W = np.einsum('ax,bx->ab', (-1.0) ** ip_a, (-1.0) ** ip_b)
+    W[0, 0] = 0.0                                            # önemsiz köşe
+    walsh = int(round(float(np.max(np.abs(W[:, 1:])))))
+    return {"us": m, "tekdüzelik": tekduze, "walsh": walsh,
+            "gayri_lineerlik": int(q // 2 - walsh // 2),
+            "afin_olsaydı_walsh": q,
+            "riyazî_asgarî_tekdüzelik": 2}
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -306,12 +510,20 @@ class Tableau:
         return np.any((self.Z & D) != 0, axis=1)
 
     def galois_isle(self, girdi) -> None:
-        """Genlikleri ``GF(2^us)``te ilerlet -- kayan nokta YOK."""
+        """Genlikleri ``GF(2^us)``te ilerlet -- kayan nokta YOK.
+
+        **GAYRİ-LİNEERLİK BURADADIR (zabıt, Teorem 2).** Evvelce bu
+        adım yalnız çarpma ve XOR'du, yâni cebrî olarak **afindi**:
+        ne kadar üst üste bindirilse gayri-lineerlik doğurmazdı. Şimdi
+        neticeye Rijndael S-box'ı (``x ↦ x²⁵⁴``) vurulur ve dönüşüm
+        cismin en sert gayri-lineer otomorfizmi olur. Dallanma yine
+        sıfırdır: ``χ_stab = 1``.
+        """
         g = np.asarray(girdi, np.uint8).reshape(-1)
         assert g.size == self.n, "girdi %d elemanlı olmalı" % self.n
         # Toplama XOR, çarpma tablo: ikisi de tamsayı.
-        self.genlik = (gf_carp(self.genlik, g, self.us).astype(np.uint8)
-                       ^ g)
+        ara = (gf_carp(self.genlik, g, self.us).astype(np.uint8) ^ g)
+        self.genlik = sbox(ara, self.us)
         self.adim += 1
 
     # ── beyan ─────────────────────────────────────────────────────

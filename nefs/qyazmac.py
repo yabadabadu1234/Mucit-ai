@@ -78,6 +78,7 @@ import math
 import numpy as np
 
 from .galois import ayrik_faz
+from .matchgate import matchgate_mi
 
 __all__ = ["QuditAyar", "QuditYazmac", "Iz"]
 
@@ -179,6 +180,10 @@ class QuditYazmac:
         self._veri_onbellek: Dict[Tuple[int, int], int] = {}
         #: Düşen kapı sayacı -- **saklanmıyor**, ``beyan``da görünür.
         self._dusen_kapi = 0
+        #: Parite bloğunda (matchgate yolunda) vurulan çift kapı sayısı.
+        #: Sıfır kalırsa Valiant yolu hiç kullanılmıyor demektir ve bu
+        #: ``beyan``da görünür (ferman 5: ölçü kırmızı yanabilmeli).
+        self._matchgate_kapi = 0
         r = np.random.default_rng(int(a.tohum))
         self.B = int(a.yigin)
         self.d = int(a.d)
@@ -201,6 +206,10 @@ class QuditYazmac:
         # Aynı tohum daima aynı durumu verir (stokastiklik yasak).
         #: Lif başına **bekleyen karo**; durum okununca iner.
         self._bekleyen: Dict[int, np.ndarray] = {}
+        #: Bekleyen köşegen fazın ``Z_m`` üssü (Amy-Maslov-Mosca).
+        self._faz_bekleyen: Optional[np.ndarray] = None
+        #: Koşu boyunca biriken **bütün** faz üssü -- polinoma oturur.
+        self._faz_toplam = np.zeros(int(a.d), np.int64)
         self._psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
                             dtype=a.tip)
         self._sadakat_log = 0.0
@@ -494,26 +503,67 @@ class QuditYazmac:
     #  (``psi`` müşahedesi). Bu bir yaklaşıklık değildir; aynı hesabın
     #  ertelenmesidir ve netice bit bit aynıdır.
 
+    # ══════════════════════════════════════════════════════════════════
+    #  CNOT-DIHEDRAL FAZ BİRİKİMİ (Amy-Maslov-Mosca, 2014)
+    # ══════════════════════════════════════════════════════════════════
+    #  Zabıt (Non-Clifford Çıkmazı, dördüncü fasıl): *"Z tabanında
+    #  köşegen bütün non-Clifford evrimler, durumu bir stabilizer
+    #  toplamına açmadan, tek bir İkili Faz Polinomu olarak takip
+    #  edilir."*
+    #
+    #  Ameliyesi şudur: ``|x⟩ ↦ ω^{P(x)}|x⟩``. Ardışık iki köşegen faz
+    #  **değişmelidir**, o hâlde birbirleriyle çarpılmaz -- üsleri
+    #  ``Z_m``de **toplanır**. Toplama tamsayı ``ADD``tır; genlik
+    #  vektörüne dokunulmaz.
+    #
+    #  Karo ile faz DEĞİŞMEZ (biri köşegen değil). O yüzden ikisi aynı
+    #  anda bekleyemez: biri gelince öteki iner. Sıra harfiyyen korunur.
+
     @property
     def psi(self) -> np.ndarray:
-        """Durum ``(B, d)``. Okunduğu anda bekleyen karolar **iner**."""
-        if self._bekleyen:
+        """Durum ``(B, d)``. Okunduğu anda bekleyenler **iner**."""
+        if self._bekleyen or self._faz_bekleyen is not None:
             self._bosalt()
         return self._psi
 
     @psi.setter
     def psi(self, v) -> None:
-        # Yeni durum eskisinin yerine geçer; bekleyen karolar okunmuş
+        # Yeni durum eskisinin yerine geçer; bekleyenler okunmuş
         # (yahut geçersiz kılınmış) demektir. Sessizce uygulamak, iki
         # kere vurmak olurdu.
         self._bekleyen.clear()
+        self._faz_bekleyen = None
         self._psi = np.asarray(v)
 
     def _bosalt(self) -> None:
-        """Bekleyen karoları duruma indir -- lif başına **tek** GEMM."""
+        """Bekleyenleri duruma indir -- karo GEMM'i ve faz üssü."""
         bekleyen, self._bekleyen = self._bekleyen, {}
         for k in sorted(bekleyen):
             self._karo_indir(int(k), bekleyen[k])
+        self._faz_indir()
+
+    def _faz_indir(self) -> None:
+        """Biriken ``Z_m`` faz üssünü duruma **bir kere** vur."""
+        k = self._faz_bekleyen
+        if k is None:
+            return
+        self._faz_bekleyen = None
+        m = int(self.ayar.faz_mertebesi)
+        if not np.any(k):
+            return                                   # ω⁰ = 1: iş yok
+        self._psi = np.asarray(
+            ayrik_faz(self._psi, -k * (2.0 * math.pi / m), m),
+            self._psi.dtype)
+
+    def faz_birikimi(self) -> np.ndarray:
+        """Koşu boyunca biriken **bütün** köşegen fazın ``Z_m`` üssü.
+
+        Amy-Maslov-Mosca'nın ``P(x)``i budur: ``d`` uzunluğunda tamsayı
+        dizisi, ``|x⟩ ↦ ω^{P(x)}|x⟩``. ``nefs/faz_polinomu.py`` bunu
+        polinom katsayılarına oturtur ve **derecesini** ölçer: derece
+        ``≤ 3`` ise durum CNOT-Dihedral sınıfındadır ve tablo dallanmaz.
+        """
+        return self._faz_toplam.copy()
 
     def _karo_indir(self, k: int, M: np.ndarray) -> None:
         """``k``ıncı life ``n×n`` **karo**yu fiilen vur -- BLAS-3 GEMM.
@@ -550,6 +600,9 @@ class QuditYazmac:
 
         Durum burada dolaşılmaz; yalnız ``n×n`` karo güncellenir.
         """
+        # Karo köşegen değildir: bekleyen faz onunla DEĞİŞMEZ, o hâlde
+        # evvela iner. Aksi hâlde sıra bozulur ve netice başka çıkardı.
+        self._faz_indir()
         M = np.asarray(M, complex)
         eski = self._bekleyen.get(int(k))
         self._bekleyen[int(k)] = M if eski is None else M @ eski
@@ -601,6 +654,7 @@ class QuditYazmac:
                         M[idx[a], idx[b]] = G[a, b]
             self._karo_vur(int(ki), M)
             return
+        self._faz_indir()
         T = self._bit_gorunumu()
         e1, e2 = (ei, ej) if ei < ej else (ej, ei)
         d1 = e2 - 1                                  # birinciden sonra kayar
@@ -609,9 +663,28 @@ class QuditYazmac:
             for bj in (0, 1):
                 b1, b2 = (bi, bj) if ei < ej else (bj, bi)
                 v.append(self._duzlem(self._duzlem(T, e1, b1), d1, b2))
-        # ``(4, N)`` toplanır -- ``(N, 4)`` DEĞİL: birincisinde her satır
-        # ardışık yazılır ve çarpım ``(4,4)@(4,N)`` hakiki bir BLAS-3
-        # GEMM olur. İkincisinde yazma adımlı, çarpım da ince olurdu.
+        # ── ÇARE 1: MATCHGATE İSE PARİTE BLOĞUNDA VURULUR ───────────
+        # Zabıt (Valiant-Terhal-DiVincenzo): ``G(A,B)`` formundaki kapı
+        # kübit tabanında non-Clifford olsa dahi **pariteyi korur**;
+        # ``A`` çift pariteli ``{|00⟩,|11⟩}``, ``B`` tek pariteli
+        # ``{|01⟩,|10⟩}`` altuzayında ayrı ayrı döner. İki altuzay
+        # birbirine karışmadığı için dört dilim toplanmaz: iki bağımsız
+        # ``2×2`` dönme yapılır. Yarı trafik, tahsis yok, dallanma yok.
+        mg, A, Bq = matchgate_mi(G)
+        if mg:
+            for M2, (p, q) in ((A, (0, 3)), (Bq, (1, 2))):
+                a0, a1 = v[p], v[q]
+                y0 = M2[0, 0] * a0 + M2[0, 1] * a1
+                y1 = M2[1, 0] * a0 + M2[1, 1] * a1
+                a0[...] = y0
+                a1[...] = y1
+            self._matchgate_kapi += 1
+            self._kapi += 1
+            self.iz.kapi += 1
+            return
+        # Matchgate değil: dört dilim ardışık toplanır ve ``(4,4)@(4,N)``
+        # BLAS-3 GEMM vurulur. ``(N,4)`` DEĞİL -- orada yazma adımlı,
+        # çarpım da ince olurdu.
         C = np.stack([x.reshape(-1) for x in v], axis=0)
         Y = G @ C
         for a in range(4):
@@ -649,12 +722,19 @@ class QuditYazmac:
         if t.size != self.d:
             from .qudit import agirlik
             t = np.asarray(agirlik(self.d, t), float).reshape(-1)
-        if str(self.ayar.motor) == "galois":
-            self.psi = np.asarray(
-                ayrik_faz(self.psi, t, int(self.ayar.faz_mertebesi)),
-                self.psi.dtype)
-        else:
-            self.psi = self.psi * np.exp(-1j * t)
+        m = int(self.ayar.faz_mertebesi)
+        if str(self.ayar.motor) != "galois":
+            self._bosalt()
+            self._psi = self._psi * np.exp(-1j * t)
+            self._kapi += 1
+            return
+        # ``Z_m``de tamsayı üs. Genliğe DOKUNULMAZ; üsler toplanır.
+        k = (np.rint(-t * m / (2.0 * math.pi)).astype(np.int64) % m)
+        self._faz_toplam = (self._faz_toplam + k) % m
+        if self._bekleyen:
+            self._bosalt()                # karo bekliyorsa evvela o iner
+        self._faz_bekleyen = (k if self._faz_bekleyen is None
+                              else (self._faz_bekleyen + k) % m)
         self._kapi += 1
 
     def sektor_kapisi(self, ad: str, M: np.ndarray) -> None:

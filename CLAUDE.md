@@ -145,6 +145,43 @@ motorun **fiilen** koştuğu, eskisinin **kalmadığı** kastedilir.
 
 ---
 
+## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
+
+> *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o
+> talimatta denileni yapmanın yolunu bulacak, talimatı tahrif
+> etmeyeceksin!"*
+
+Bir talimat "şu kodu bizzat koştur" diyorsa:
+
+* **Yerini tutan bir şey koşturulmaz.** `numpy` tablosu GFNI değildir,
+  `torch` GEMM'i CUDA warp intrinsic'i değildir. Aynı neticeyi veren
+  başka bir yol, "o kodu koşturdum" demenin ruhsatı değildir.
+* **Donanım yoksa yol aranır, talimat kısaltılmaz.** Emülatör
+  (Intel SDE, QEMU), bulut, çapraz derleme -- hangisi mümkünse o
+  denenir. "Bu makinede o komut yok" bir netice değil, bir **engeldir**;
+  engelin aşılıp aşılmadığı ayrıca yazılır.
+* **Aşılamazsa açıkça yazılır** ve o zaman da yerine koşan şeyin ne
+  olduğu, hangi komutla koştuğu ve neyin koşmadığı sayıyla belirtilir.
+  Örtük ikame yasaktır.
+
+---
+
+## ▓▓▓ 5-B. FERMAN: DONANIM ÖLÇÜSÜ ELLE YAZILMAZ, ÖLÇÜLÜR ▓▓▓
+
+> *"Gpu için ayarları kendin tayin edip simülasyonda gözümü
+> boyamayacaksın, **tüm ayarları otomatik ölçen fonksiyonlarla**
+> belirleyeceksin, hem gpu hem cpu için."*
+
+* Bant genişliği, önbellek boyu, çekirdek sayısı, SIMD genişliği, VRAM,
+  PCIe, saat frekansı -- hiçbiri ayara **elle** yazılmaz.
+* Her biri o donanımı **fiilen yoklayan** bir fonksiyondan gelir
+  (`nefs/donanim.py`). Yoklanamıyorsa değer `None`dur ve ona dayanan
+  iddia **kurulmaz**; "kabul ettim" diye bir sayı uydurulmaz.
+* Bir zabıtta geçen donanım rakamı bir **iddiadır**, ölçü değildir:
+  ölçülenin yanına konur ve ikisi ayrı sütunda gösterilir.
+
+---
+
 ## ▓▓▓ 2. FERMAN: İPTAL = ANINDA İMHA, YENİ = ANINDA BAĞ ▓▓▓
 
 > *"Daha sonra terkip etmekle uğraşmamamız için iptal ettiklerimizi **anında,
@@ -225,6 +262,27 @@ mühendisliği, göreve mahsus çözücü **yasaktır**.
 | **Transandantal faz e^{iθ} (sin/cos/exp)** | **Palmer 2-bit rotasyonu: i(a,b) = (−b, a)** |
 | **O(d²) GEMM / yoğun 4096 matris** | **Matrix-free Kronecker-SIMD [16,16,16], L1'de** |
 | **TDD'nin HESAP MOTORU olması** | TDD yalnız **kanonik denetçi** (çevrim kapanışında, O(1) adres) |
+| **Sürekli açılı kapıyı KÜBİT tabanında vurmak** (Bravyi-Gosset: χ_stab ~ 2^{0,468t}) | **Valiant-Terhal Matchgate/FLO düalitesi**: Majorana kovaryansında SO(2N) Givens, **χ_stab = 1** (`nefs/matchgate.py`) |
+| **Gayri-lineerliğin sürekli B-spline / transandantal olması** | **Rijndael-Galois otomorfizmi** `x ↦ x²⁵⁴` (GF(2⁸) S-box, GFNI) (`nefs/galois.py`) |
+| **Köşegen fazı genlik vektörüne tek tek vurmak** | **Amy-Maslov-Mosca faz polinomu**: `Z_m`de tamsayı katsayı dizisi, tablo DALLANMAZ (`nefs/faz_polinomu.py`) |
+
+### 7-A. NON-CLIFFORD ÇIKMAZININ ÜÇ ÇARESİ -- HÜKÜM
+
+Zabıt (*Non-Clifford ve Stabilizer Rank Çıkmazının Riyazî Çözümü*)
+itirazın haklılığını tescil eder: saf kübit tablosunda tek bir `T`
+kapısı rankı `2^{0,468t}` patlatır. Fakat **çıkmaz değildir**; üç
+ispatlı çare vardır ve **üçü de icra edilir**:
+
+1. **Matchgate/FLO (Valiant-Terhal-DiVincenzo, 2002).** `G(A,B)`
+   formundaki kapı kübitte non-Clifford olsa da Majorana
+   kovaryansında yalnız 4 satır/sütunda bir Givens dönmesidir.
+   Parite korunur, dallanma yoktur.
+2. **Galois `F_2^8` S-box (Rijndael).** Gayri-lineerlik `e^{iθ}`
+   değil, `x ↦ M·x^{254} + b (mod P)` cebrî otomorfizmidir.
+   `P(x) = x⁸+x⁴+x³+x+1`. Tek tablo okuması; dallanma sıfır.
+3. **CNOT-Dihedral faz polinomu (Amy-Maslov-Mosca, 2014).**
+   `Z` tabanında köşegen bütün fazlar tek bir `Z_m` tamsayı
+   polinomunda toplanır: `|x⟩ ↦ ω^{P(x)}|x⟩`. Toplama `ADD`tır.
 
 ---
 

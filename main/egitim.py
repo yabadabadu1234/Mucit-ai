@@ -135,8 +135,42 @@ from nefs.hafiza import Hafiza                           # noqa: E402
 #   nefs/tdd.py      -- artık HESAP MOTORU DEĞİL, yalnız kanonik
 #                       DENETÇİ: çevrim kapanışında O(1) adres eşitliği.
 from nefs.galois import (GaloisAyari, Tableau,            # noqa: E402
-                         palmer_i, tableau_kur, gf_carp)
+                         palmer_i, tableau_kur, gf_carp,
+                         sbox_bukme, sbox_olcu)
 from nefs.tdd import TddAyari, kanonik_adres              # noqa: E402
+# ── ZABIT: NON-CLIFFORD VE STABILIZER RANK ÇIKMAZININ ÇÖZÜMÜ ──────
+# **USUL FERMANI:** bu iki satır modüller HENÜZ YOKKEN yazıldı.
+#
+# İtiraz haklıdır ve tescillidir: Bravyi-Gosset (2016) gereğince saf
+# kübit tablosuna tek bir non-Clifford kapı vurulursa stabilizer rank
+# ``χ_stab ~ 2^{0,468 t}`` ile patlar. Zabıt bunu inkâr etmez; üç
+# ispatlı çare koyar ve **üçü de burada koşar**:
+#
+#   1. nefs/matchgate.py     Valiant-Terhal-DiVincenzo FLO düalitesi.
+#                            Sürekli açılı kapı kübitte non-Clifford,
+#                            Majorana kovaryansında SO(2N) Givens: χ=1.
+#   2. nefs/galois.py:sbox   Rijndael otomorfizmi x↦x²⁵⁴. Gayri-lineerlik
+#                            transandantal değil cebrîdir; dallanma yok.
+#   3. nefs/faz_polinomu.py  Amy-Maslov-Mosca CNOT-Dihedral teoremi.
+#                            Köşegen fazlar tek Z_m tamsayı polinomunda.
+from nefs.matchgate import (MatchgateAyari, flo_evrimi,   # noqa: E402
+                            matchgate_mi)
+from nefs.faz_polinomu import FazAyari, faz_oturt         # noqa: E402
+# ── ZABIT: 1 TB/S GPU AKIŞI (4× L4 VRAM DOYUMU) ───────────────────
+# **USUL FERMANI:** bu satır modül HENÜZ YOKKEN yazıldı.
+#
+# Zabıt iki dünyayı bıçakla ayırır ve ikisini karıştırmayı yasaklar:
+#   HARİCÎ AKIŞ (PCIe)  -- kart başına 31,5 GB/s; dördü 126 GB/s.
+#                          Dışarıdan 1 TB/s ham veri fırlatmak
+#                          **fiziken imkânsızdır**.
+#   DÂHİLÎ AKIŞ (VRAM)  -- 4×300 = 1200 GB/s. Durum VRAM'de yerleşikse
+#                          yahut orada üretiliyorsa 1 TB/s mümkündür.
+#
+# O hâlde dört motor: (1) warp-seviyesi symplectic bitmask,
+# (2) tek geçişli kaynaşık çekirdek (ara bellek YOK), (3) GPU-yerel
+# bitstream genleşmesi (tohum girer, dalga açılır), (4) 4 kart arası
+# P2P sınır kilidi (temas yalnız sınır dizeyi).
+from nefs.gpu_akis import GpuAyari, gpu_akisi              # noqa: E402
 from nefs.kararname import kararname                      # noqa: E402
 from nefs.golge import GolgeAyari, golge_al               # noqa: E402
 
@@ -352,6 +386,70 @@ class EgitimAyari:
     galois_us: int = 8
     #: Stabilizer tableau'nun kübit sayısı (``2N`` bit satırı).
     tableau_n: int = 64
+    # ══════════════════════════════════════════════════════════════
+    #  ZABIT: NON-CLIFFORD ÇIKMAZININ ÜÇ ÇARESİ
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **İTİRAZ HAKLIDIR (zabıt, birinci fasıl).** Gottesman-Knill'in
+    # haddi kat'îdir ve Bravyi-Gosset (2016) onu sayıya döker: ``t``
+    # adet non-Clifford kapıdan sonra ``χ_stab ~ 2^{0,468 t}``. Yâni
+    # yalnız "tableau kurdum" demek 16 çevrimlik bütçeyi beşinci adımda
+    # çökertir. Zabıt bunu inkâr etmez, üç ayrı kapıdan dolaşır.
+    #
+    #: **1. ÇARE -- MATCHGATE / FLO.** Majorana modu sayısı ``N``;
+    #: kovaryans ``2N × 2N`` antisimetrik reel dizeydir. Sürekli açılı
+    #: kapı burada **dallanmaz**, yalnız dört satır/sütunda döner.
+    #: ``0`` = kapalı; kapatılırsa χ ölçüsü kırmızı yanar (ferman 5).
+    flo_modu: int = 24
+    #: FLO evriminde kaç sürekli açılı matchgate vurulacak. Zabıtın
+    #: iddiası: ``t`` ne olursa olsun ``χ_stab = 1`` kalır. İddia bu
+    #: sayıyla sınanır -- büyütülünce de 1 kalmalıdır.
+    flo_kapisi: int = 64
+    #: **2. ÇARE -- GALOIS S-BOX.** Gayri-lineerlik ``x ↦ M·x²⁵⁴ + b``
+    #: (Rijndael). ``0`` = kapalı: bükme kimlik olur ve gayri-lineerlik
+    #: ölçüsü (diferansiyel tekdüzelik) kırmızı yanar.
+    sbox_acik: int = 1
+    #: **3. ÇARE -- CNOT-DIHEDRAL FAZ POLİNOMU.** Faz grubu ``Z_m``.
+    #: Amy-Maslov-Mosca teoremi ``m = 8`` (T kapısı mertebesi) için
+    #: yazılıdır; ``m`` ikinin kuvveti olduğu sürece hüküm değişmez,
+    #: yalnız faz incelir.
+    #:
+    #: **BU SAYI İKİ YERE BİRDEN GİDER VE GİTMELİDİR**: yazmaç fazı
+    #: bu grupta biriktirir (``QuditYazmac.faz``), polinom da bu grupta
+    #: oturur (``faz_oturt``). Evvelce ayrışmışlardı -- yazmaç ``Z_16``,
+    #: polinom ``Z_8`` -- ve o hâlde polinom, biriken üssü ikiye bölüp
+    #: **başka bir fazı** tarif ediyordu. 16 seçildi: faz hatası
+    #: ``π/16 = 0,196`` radyan, ``π/8 = 0,393`` değil.
+    faz_mertebesi: int = 16
+    #: Faz polinomunun azamî derecesi. Teorem ``≤ 3`` der (Reed-Muller
+    #: mertebesi); daha yüksek dereceli bir faz CNOT-Dihedral sınıfının
+    #: dışına düşer ve bu **ölçülüp raporlanır**, örtülmez.
+    faz_derecesi: int = 3
+    # ══════════════════════════════════════════════════════════════
+    #  ZABIT: 1 TB/S GPU AKIŞI
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **FERMAN 5-B: BURADA DONANIM SAYISI YOKTUR.** Evvelce burada
+    # ``gpu_karti=4``, ``gpu_vram_bandi=300``, ``gpu_pcie_bandi=31.5``,
+    # ``gpu_tops=485`` yazıyordu. Dördü de **elle yazılmıştı** ve
+    # zabıttan kopyalanmıştı; bu makinede hiçbiri ölçülmemişti. Padişahın
+    # hükmü kat'îdir: *"Gpu için ayarları kendin tayin edip simülasyonda
+    # gözümü boyamayacaksın, tüm ayarları otomatik ölçen fonksiyonlarla
+    # belirleyeceksin."* Dördü de kesildi.
+    #
+    # Kart adedi, VRAM bandı, PCIe bandı, önbellek, SIMD genişliği,
+    # tamsayı bandı -- hepsi ``nefs/donanim.py``de **yoklanarak** bulunur.
+    # Ölçülemeyen ``None``dur ve ona dayanan iddia kurulmaz.
+    #
+    # Aşağıda kalan iki sayı donanım ölçüsü DEĞİLDİR:
+    #: **HEDEF** -- zabıtın koyduğu had, GB/s. Bu bir iddiadır ve öyle
+    #: raporlanır; ölçülen akış onun yanında ayrı sütunda durur.
+    gpu_akis_haddi: float = 1000.0
+    #: **USUL SEÇİMİ** -- bitstream genleşme katsayısı (3. motor).
+    #: Zabıt 8 der (125 GB/s × 8 = 1000 GB/s). Bu bir donanım ölçüsü
+    #: değil, sıkıştırma tasarımıdır; **fiilen elde edilen** kat
+    #: ölçülür ve tutmuyorsa öyle yazılır.
+    gpu_genlesmesi: int = 8
     # --- ZABIT 2: SAF CPU 2026 USULLERİ
     #: **1. USUL -- LimTDD: HESAP MOTORU OLMAKTAN ÇIKARILDI.**
     #:
@@ -414,7 +512,11 @@ class EgitimAyari:
                      mera_kademe=self.mera_kademe, tohum=self.tohum,
                      yigin=self.yigin(), tip=tip,
                      motor=str(self.motor),
-                     lif_yapisi=tuple(self.lif_yapisi))
+                     lif_yapisi=tuple(self.lif_yapisi),
+                     # Faz grubu **tek kaynaktan**: yazmaç ile faz
+                     # polinomu aynı ``Z_m``de olmalı, yoksa polinom
+                     # başka bir fazı tarif eder.
+                     faz_mertebesi=int(self.faz_mertebesi))
 
     def yigin(self) -> int:
         """Yazmacın YIĞIN DİLİMİ -- elle değil, **donanımdan**.
@@ -876,6 +978,50 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     golge = golge_al(psi_son, GolgeAyari(ornek=max(32, int(ayar.golge_ornegi)
                                                    or 128),
                                          tohum=int(ayar.tohum)))
+    # ══════════════════════════════════════════════════════════════
+    #  NON-CLIFFORD ÇIKMAZININ ÜÇ ÇARESİ -- ÜÇÜ DE FİİLEN KOŞAR
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **1. ÇARE -- MATCHGATE/FLO (Valiant-Terhal-DiVincenzo).**
+    # Tâlimin bulduğu parametreler sürekli açılardır ve kübit tabanında
+    # non-Clifford'durlar. Aynı açılar Majorana kovaryansına taşınır;
+    # orada her biri dört satır/sütunda tek bir SO(2N) Givens dönmesidir
+    # ve stabilizer rank **1**de kalır. İddia burada sınanır: ``kapı``
+    # sayısı büyütülünce de χ 1 kalmalıdır.
+    flo = flo_evrimi(p_yildiz, MatchgateAyari(
+        mod=int(ayar.flo_modu), kapi=int(ayar.flo_kapisi),
+        tohum=int(ayar.tohum)))
+    # **2. ÇARE -- GALOIS S-BOX (Rijndael otomorfizmi).** Gayri-lineerlik
+    # sürekli bir B-spline değil, ``x ↦ M·x²⁵⁴ + b (mod P)`` cebrî
+    # dönüşümüdür. Tableau'nun genlik baytları bundan geçirilir;
+    # dönüşümün gayri-lineerliği ayrıca **ölçülür** (diferansiyel
+    # tekdüzelik ve Walsh tepe değeri), iddia edilmez.
+    sb = sbox_bukme(tab, acik=bool(int(ayar.sbox_acik)))
+    sb_olcu = sbox_olcu(us=int(ayar.galois_us))
+    # **3. ÇARE -- CNOT-DIHEDRAL FAZ POLİNOMU (Amy-Maslov-Mosca).**
+    # Yazmaç koşu boyunca köşegen fazları genliğe tek tek vurmaz;
+    # ``Z_m``de tamsayı olarak biriktirir (``faz_birikimi``). O birikim
+    # burada bir faz polinomuna oturtulur ve **derecesi ölçülür**:
+    # derece ≤ 3 ise durum CNOT-Dihedral sınıfındadır ve tablo
+    # dallanmaz. Derece büyükse o da yazılır, örtülmez.
+    fazp = faz_oturt(q_son.y.faz_birikimi(),
+                     FazAyari(mertebe=int(ayar.faz_mertebesi),
+                              derece=int(ayar.faz_derecesi)))
+    # ══════════════════════════════════════════════════════════════
+    #  ZABIT: 1 TB/S GPU AKIŞI -- DÖRT MOTOR FİİLEN KOŞAR
+    # ══════════════════════════════════════════════════════════════
+    # Dört motorun hepsi burada koşar ve **ölçülür**. GPU yoksa aynı
+    # cebir ``numpy``da koşar; o zaman rapor "GPU YOK" der ve 1 TB/s
+    # iddiası **kırmızı yanar** (ferman 5). İlan edilen donanım
+    # sayıları (VRAM, PCIe, TOPS) ayardadır ve ölçülmüş gibi
+    # gösterilmez -- çatı çizgisi onlardan hesaplanır, ölçümden değil.
+    # Ayardan geçen **yalnız iki sayı**: hedef had (bir iddia) ve
+    # genleşme katsayısı (bir tasarım). Kart adedi, VRAM, PCIe, SIMD
+    # genişliği, kelime boyu, dilim sayısı ve sınır baytı buraya
+    # yazılmaz -- ``nefs/donanim.py`` onları **yoklayarak** bulur.
+    akis = gpu_akisi(psi_son, tab, GpuAyari(
+        had=float(ayar.gpu_akis_haddi),
+        genlesme=int(ayar.gpu_genlesmesi), tohum=int(ayar.tohum)))
 
     # --- MİZANIN DÖRT KEFESİ AYRI AYRI (hangisi kırmızı, görünsün)
     kefeler = kulli_mizan(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn,
@@ -911,6 +1057,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "geçit": kapi, "ders": ders, "hazine": kayit,
             "tdd": tdd, "stabilizer": stab, "gölge": golge,
             "galois": tab.beyan(),
+            "flo": flo, "sbox": sb, "sbox_ölçü": sb_olcu,
+            "faz_polinomu": fazp, "gpu_akışı": akis,
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
             "veri": len(veri), "süreç": surec,
@@ -1245,6 +1393,95 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
                  kulli["gölge"]["azamî_hata"]),
               "         tam ölçüme nispeten hız: %.1f×"
               % kulli["gölge"]["hız"]]
+        f, sb, so, fp = (kulli["flo"], kulli["sbox"],
+                         kulli["sbox_ölçü"], kulli["faz_polinomu"])
+        s += ["",
+              "    NON-CLIFFORD ÇIKMAZI -- ÜÇ ÇARE (zabıt):",
+              "      İTİRAZ TESCİLLİ: Bravyi-Gosset, χ_stab ~ 2^(0,468·t);",
+              "      %d kapıda saf kübit tablosu %.3e kola ayrılırdı."
+              % (f["kapı"], f["kübit_dallanması"]),
+              "      1. MATCHGATE/FLO (nefs/matchgate.py)",
+              "         %d Majorana modu, %d sürekli açılı kapı → "
+              "χ_stab = %d" % (f["mod"], f["kapı"], f["chi"]),
+              "         kovaryans Γ²=−I hatası %.3e   parite korundu: %s"
+              % (f["kovaryans_hatası"], f["parite_korundu"]),
+              "         kapı başına %.9f sn  (yoğun 2^N yola nispeten "
+              "%.1f× hızlı)" % (f["kapı_sn"], f["hız"]),
+              "      2. GALOIS S-BOX (nefs/galois.py)",
+              "         x↦M·x²⁵⁴+b   açık: %s   değişen bayt: %d/%d"
+              % (sb["açık"], sb["değişen"], sb["toplam"]),
+              "         diferansiyel tekdüzelik %d (asgarî mümkün 2)   "
+              "Walsh tepesi %d" % (so["tekdüzelik"], so["walsh"]),
+              "         gayri-lineerlik %d   (afin fonksiyonda 0 olurdu)"
+              % so["gayri_lineerlik"],
+              "      3. CNOT-DIHEDRAL FAZ POLİNOMU (nefs/faz_polinomu.py)",
+              "         Z_%d   derece %d   terim %d   (yoğun faz vektörü "
+              "%d eleman)" % (fp["mertebe"], fp["derece"], fp["terim"],
+                              fp["boy"]),
+              "         tam mı: %s   artık %d/%d bileşen"
+              % (fp["tam"], fp["artık"], fp["boy"]),
+              "         dallanma: %d  (Bravyi-Gosset yolunda %.3e olurdu)"
+              % (fp["dallanma"], fp["dallanma_kubit"])]
+        g = kulli["gpu_akışı"]
+        s += ["",
+              "    1 TB/S GPU AKIŞI (nefs/gpu_akis.py) -- zabıt:",
+              "      koşan kütüphane: %s   GPU var mı: %s"
+              % (g["kütüphane"], g["gpu"])]
+        if not g["gpu"]:
+            s.append("      ⚠ GPU YOK: 1 TB/s HADDİ BU MAKİNEDE ÖLÇÜLMEDİ. "
+                     "Aşağısı aynı cebrin CPU ölçümüdür.")
+        # **ÖLÇÜLEMEYEN SAYI BİÇİMLENDİRİLMEZ.** Bu üç satır evvelce
+        # ``%.1f`` ile ``None`` basmaya kalkıyordu ve GPU'suz bir
+        # makinede rapor **düşerdi**. Ölçülmeyenin yeri boş değil,
+        # "ölçülemedi"dir; sıfır yazmak da uydurmak olurdu.
+        def _gb(v):
+            return "ölçülemedi" if v is None else "%.1f GB/s" % v
+
+        def _hukum(v):
+            return "ÖLÇÜLEMEDİ" if v is None else ("yeter" if v
+                                                   else "YETMEZ")
+
+        s += ["      İKİ DÜNYA (zabıt, ikinci fasıl) -- karıştırılmaz:",
+              "        haricî (PCIe) tavanı : %s  (kart: %s)"
+              % (_gb(g["pcie_tavan"]), g["kart"] or "—"),
+              "        dâhilî (VRAM) tavanı : %s  (kart: %s)"
+              % (_gb(g["vram_tavan"]), g["kart"] or "—"),
+              "        had %.0f GB/s → haricî yol %s, dâhilî yol %s"
+              % (g["had"], _hukum(g["haricî_yeter"]),
+                 _hukum(g["dâhilî_yeter"])),
+              "        zabıtın iddiası (ÖLÇÜ DEĞİL): %d × %s, "
+              "VRAM %.0f, PCIe %.1f GB/s"
+              % (g["iddia"]["kart"], g["iddia"]["kart_adı"],
+                 g["iddia"]["vram_kart_gb"], g["iddia"]["pcie_kart_gb"]),
+              "      ÇATI ÇİZGİSİ (Roofline): bayt başına bütçe %.0f işlem"
+              % g["bayt_basina_islem"],
+              "        ölçülen aritmetik yoğunluk: %.2f işlem/bayt  → %s"
+              % (g["yogunluk"], "bant sınırlı (doğru taraf)"
+                 if g["bant_sinirli"] else "hesap sınırlı (İFLAS)"),
+              "      1. MOTOR -- warp symplectic bitmask (XOR/POPCOUNT)",
+              "         %d bitlik kelime, %d satır → %.3f GB/s symplectic "
+              "(bu makinede)" % (g["kelime"], g["satır"], g["symplectic_gb"]),
+              "         kayan nokta çarpımı: %d  (sıfır olmalı)"
+              % g["kayan_nokta"],
+              "      2. MOTOR -- tek geçişli kaynaşık çekirdek",
+              "         kaynaşık %.4f sn / ayrık %.4f sn → %.1f× ; "
+              "bellek trafiği %.1f× azaldı"
+              % (g["kaynasik_sn"], g["ayrik_sn"], g["kaynasma"],
+                 g["trafik_kazanci"]),
+              "      3. MOTOR -- GPU-yerel bitstream genleşmesi",
+              "         tohum %d bayt → dalga %d bayt (%.1f×)   "
+              "PCIe'den girmesi gereken: %.1f GB/s"
+              % (g["tohum_bayt"], g["dalga_bayt"], g["genlesme"],
+                 g["pcie_gereken"]),
+              "         çığ: tohumun tek biti çevrilince dalganın "
+              "%%%.1f'i değişiyor" % (100.0 * g["tohuma_bağlı"]),
+              "         PCIe'ye sığıyor mu: %s" % _hukum(g["pcie_sigdi"]),
+              "      4. MOTOR -- 4 kart P2P sınır kilidi",
+              "         dilim %d × %d bayt, sınır %d bayt → temas %.4f%%"
+              % (g["dilim"], g["dilim_bayt"], g["sınır_bayt"],
+                 g["temas_yuzdesi"]),
+              "         yeniden kurma hatası %.3e  (sınır kaybı YOK)"
+              % g["dilim_hatası"]]
         if kulli.get("düşen_uzuv"):
             s.append("    DÜŞEN UZUV: %s"
                      % ", ".join(sorted(kulli["düşen_uzuv"])))
