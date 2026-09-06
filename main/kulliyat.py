@@ -602,6 +602,26 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                 os.remove(yol)
             if not os.path.isfile(yol):
                 mucit_cevir(kok, yol, kodlama, k.uzantilar(), k.ad)
+                # ══════════════════════════════════════════════════
+                #  BORU HATTININ SON HALKASI: HAM BIRAKILIR
+                # ══════════════════════════════════════════════════
+                #
+                # **FERMAN 1-O.** *"İşini bitire bitire alacaksın ama
+                # verisetinin tamamı o repoda duracak."*
+                #
+                # Ham klon çevrildikten sonra kapta durmasının hiçbir
+                # faydası yoktur: tâlim ``.mucit``i okur, hamı hiç
+                # açmaz. Fakat zararı vardır -- 23 GB'lık ham yığın
+                # diski doldurur ve **bir sonraki kaynağın tam
+                # inmesini engeller**; evvelki turda budamaya
+                # sürüklenmemin sebebi tam olarak buydu.
+                #
+                # O hâlde halka şudur: **çek → çevir → hamı bırak.**
+                # Kaynağın tamamı GitHub'da durur (orası deponun
+                # kendisidir); kapta duran şey yalnız çevrilmiş
+                # külliyattır. Ham lâzım olursa yeniden çekilir --
+                # silinen bir nüsha, kesilen bir veri değildir.
+                shutil.rmtree(_dizin(k), ignore_errors=True)
         if not os.path.isfile(yol):
             continue
         t = mucit_ac(yol, kodlama)
