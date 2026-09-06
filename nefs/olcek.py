@@ -395,7 +395,14 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "degerlendirme_gorevi": int(max(2, round(8 + 112 * c))),
         "dogrulama_sayisi": int(max(4, round(20 + 180 * c))),
         "kademe_gorevi": int(max(1, round(1 + 7 * c))),
-        "azami_uret": int(max(8, _ikinin_kuvveti(pencere / 16.0, 8))),
+        # **ÜRETİM HADDİ BASAMAK CİNSİNDENDİR** (ferman 1-N). Model
+        # bir belirteç değil, bir **basamak** üretir; bir belirteç
+        # ``basamak`` adet üretim adımıdır. Had belirteç cinsinden
+        # kalırsa ARC hedefleri daima "çok uzun" görünür ve **hepsi
+        # atlanır**: ölçüldü, ``tam çözülen 0 / 0`` -- yâni ölçüt sıfır
+        # değil BOŞtu ve sıfır gibi görünmesi daha kötüsüdür.
+        "azami_uret": int(max(8, basamak
+                              * _ikinin_kuvveti(pencere / 2.0, 8))),
         #: Arama yarıçapı: cömertlik açtıkça arama genişler.
         "yaricap": float(1.5 + 2.5 * c),
         #: **FREN CÖMERTLİKLE KISILMAZ.** Bu bir bütçe değil, bir

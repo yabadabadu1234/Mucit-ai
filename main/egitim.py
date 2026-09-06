@@ -1234,6 +1234,16 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     deg = degerlendir(nefs, dogrulama, azami=ayar.degerlendirme_gorevi,
                       pencere=ayar.pencere, sozluk=ayar.sozluk,
                       azami_uret=ayar.azami_uret, ayna=ayna)
+    # **ÖLÇÜT BOŞ KALAMAZ** (ferman 5). Bütün görevler üretim haddine
+    # takılıp atlandıysa ``tam_çözülen`` sıfır değil **boştur** ve onu
+    # sıfır gibi basmak, yapılmayan bir ölçümü yapılmış göstermektir.
+    assert not deg.get("ölçüt_boş"), (
+        "ARC ÖLÇÜTÜ BOŞ -- hiçbir görev denenmedi.\n"
+        "  atlanan (hedef üretim haddinden uzun): %d\n"
+        "  üretim haddi: %d basamak   basamak/belirteç: %d\n"
+        "  Had belirteç cinsinden kalmış olabilir (ferman 1-N)."
+        % (int(deg.get("atlanan_uzun", 0)), int(ayar.azami_uret),
+           int(ayar.belirtec_basamak)))
 
     # --- ÖĞRENİYOR MU? (ogrenme/izgara.py -- düzenli uydurma)
     ham_seyir = [float(x["V"]) for x in (r.get("seyir") or [])

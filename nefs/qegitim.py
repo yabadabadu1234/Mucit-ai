@@ -545,8 +545,14 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
             cozulen += 1
         if n and uretilen[0] == h[0]:
             isabet += 1
+    # **BOŞ ÖLÇÜT SIFIR GİBİ GÖSTERİLMEZ** (ferman 5). ``deneme = 0``
+    # iken ``tam_çözülen = 0`` yazmak "hiçbirini çözemedi" demek olur;
+    # halbuki hiçbiri **denenmemiştir**. Ölçüldü ve oldu: üretim haddi
+    # belirteç cinsindeyken bütün ARC hedefleri "çok uzun" göründü ve
+    # 0/0 basıldı. Şimdi hâl açıkça dönüyor ve taht onu denetliyor.
     return {"deneme": deneme, "tam_çözülen": cozulen,
             "atlanan_uzun": atlanan,
+            "ölçüt_boş": bool(deneme == 0),
             "ilk_belirteç_isabeti": isabet, "sükût": sukut_sayisi,
             "ortalama_hücre_isabeti":
                 float(np.mean(hucre)) if hucre else 0.0}
