@@ -153,6 +153,12 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "       sefer nispeti: %%%.2f  (%%100 olsaydı 'her an boş "
               "yere mantık kapısı çalıştıran kör hesap makinesi' olurdu)"
               % (100.0 * uz["sefer_nispeti"]),
+              "       NETİCE KULLANILIYOR (rapora yazılıp bırakılmıyor):",
+              "         kapanan gedik %d/%d   kapanmayanın mizandaki "
+              "bedeli ℒ_gedik = %.6f"
+              % (m["sefer_kapanan"], m["gedik"], m["L_gedik"]),
+              "         Lan_K ile hafızaya nakşedilen yeni hüküm: %d"
+              % m["sefer_kapanan"],
               "       gaye dökümü: istihrac %d | cerh %d | tahkik %d"
               % (uz["istihrac"], uz["cerh"], uz["tahkik"]),
               "       usul dökümü: %s"
@@ -202,7 +208,15 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "(sürekli ℂ^d İPTAL)"
               % (kulli["galois"]["us"], kulli["galois"]["n"],
                  kulli["galois"]["bayt"]),
-              "         Palmer i(a,b)=(−b,a): transandantal faz YOK",
+              "         Palmer i(a,b)=(−b,a) -- İDDİA SINANDI (%d genlik):"
+              % kulli["palmer"]["boy"],
+              "           i² = −1 hatası %.1e   i⁴ = +1 hatası %.1e   "
+              "norm hatası %.1e   tuttu: %s"
+              % (kulli["palmer"]["i_kare_hatası"],
+                 kulli["palmer"]["i_dört_hatası"],
+                 kulli["palmer"]["norm_hatası"], kulli["palmer"]["tam"]),
+              "           sin/cos/exp çağrısı: %d  (transandantal faz YOK)"
+              % kulli["palmer"]["transandantal_çağrı"],
               "         yoğun ℂ^d'ye nispeten bellek: %.1f× küçük"
               % kulli["galois"]["kazanç"],
               "      1. TDD -- yalnız KANONİK DENETÇİ (hesap motoru DEĞİL)",
@@ -215,9 +229,12 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
                  kulli["stabilizer"]["örtüşme"],
                  kulli["stabilizer"]["clifforda_yakın"]),
               "      3. Klasik gölgeler (nefs/golge.py)",
-              "         K=%d gölge → %d gözlenebilir, azamî hata %.4f"
-              % (kulli["gölge"]["örnek"], kulli["gölge"]["gözlenebilir"],
-                 kulli["gölge"]["azamî_hata"]),
+              ("         KAPALI (golge_ornegi=0): bütün sektörler TAM "
+               "ölçüldü -- anahtar hakikaten kesiyor"
+               if not kulli["gölge"].get("açık") else
+               "         K=%d gölge → %d gözlenebilir, azamî hata %.4f"
+               % (kulli["gölge"]["örnek"], kulli["gölge"]["gözlenebilir"],
+                  kulli["gölge"]["azamî_hata"])),
               "         tam ölçüme nispeten hız: %.1f×"
               % kulli["gölge"]["hız"]]
         f, sb, so, fp = (kulli["flo"], kulli["sbox"],
@@ -232,6 +249,11 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "χ_stab = %d" % (f["mod"], f["kapı"], f["chi"]),
               "         kovaryans Γ²=−I hatası %.3e   parite korundu: %s"
               % (f["kovaryans_hatası"], f["parite_korundu"]),
+              "         MATCHGATE ŞARTI SINANDI (parite karışmaz, A/B "
+              "üniter, det A = det B):",
+              "           tutan %d/%d kapı   hepsi matchgate: %s"
+              % (f["matchgate_tutan"], f["matchgate_denenen"],
+                 f["matchgate_hepsi"]),
               "         kapı başına %.9f sn  (yoğun 2^N yola nispeten "
               "%.1f× hızlı)" % (f["kapı_sn"], f["hız"]),
               "      2. GALOIS S-BOX (nefs/galois.py)",
@@ -259,9 +281,10 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % (ho["belirteç_sn"], ho["en_iyi"], ho["en_kötü"]),
               "      ilk çağrı %.0f → son çağrı %.0f  (ısınma payı %.2f×)"
               % (ho["ilk"], ho["son"], ho["ısınma"]),
-              "      hüküm: %s" % ho["hüküm"],
+              "      HAD BAĞLI: %s  (evvelce had=None idi ve ölçü "
+              "kırmızı yanamıyordu)" % ho["hüküm"],
               "",
-              "    41 MELEKENİN KOŞTUĞU HAT (nefs/qcekirdek.py):",
+              "    44 QMELEKENİN KOŞTUĞU HAT (nefs/qcekirdek.py):",
               "      hat: %s   çekirdek derlendi: %s   koşuyor: %s"
               % (ck["hat"], ck["derlendi"], ck["koşuyor"]),
               "      kapı %d (karo %d, çift %d; matchgate %d)"

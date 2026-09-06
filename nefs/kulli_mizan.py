@@ -398,10 +398,75 @@ def holonomi_yigin(H: np.ndarray, idx: np.ndarray
         if np.any(ayni):
             faz = np.where(np.abs(c) > 0, c / np.maximum(np.abs(c), 1e-300),
                            1.0 + 0j)
+            # **FAZ ÇEVRİMİN KENDİ IŞINA VURULUR, BÜTÜN LİFE DEĞİL.**
+            # Evvelce ``birim * faz`` yazıyordu: ``n`` boyutun tamamına
+            # bir **küme fazı**. Küme fazı fizikî olarak gözlenemez
+            # (``|ψ⟩`` ile ``e^{iφ}|ψ⟩`` aynı hâldir), o hâlde onu
+            # holonomiye yazmak, ölçülemeyen bir şeyi ölçüye sokmaktı.
+            # Doğrusu izdüşümlü hâlidir: faz yalnız ``a``nın ışınında.
             Gt = np.where(ayni[:, None, None],
-                          birim * faz[:, None, None], Gt)
+                          birim + (faz[:, None, None] - 1.0) * P0, Gt)
         U = np.einsum('cij,cjk->cik', Gt, U)
-    om = np.real(np.einsum('cii->c', U)) / n
+    # ══════════════════════════════════════════════════════════════
+    #  ω, ÇEVRİMİN FİİLEN DÖNDÜĞÜ AÇIDIR -- LİFİN TAMAMI DEĞİL
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **BURASI YAPISAL OLARAK KIRIKTI VE ÖLÇÜLDÜ.** Evvelce
+    # ``ω = Re Tr(U_C)/n`` yazıyordu. Her Givens yalnız **iki** boyutta
+    # döner ve kalan ``n−2`` boyutta birimdir; o hâlde
+    # ``Tr(U_C) ≥ n − 4`` ve ``ω ≥ 1 − 4/n``. Ölçüldü (200 rastgele
+    # çevrim)::
+    #
+    #     n= 4   ω ∈ [+0,032, +0,979]
+    #     n= 8   ω ∈ [+0,517, +0,962]
+    #     n=16   ω ∈ [+0,772, +0,952]      ← ana hattın lifi
+    #     n=32   ω ∈ [+0,897, +0,970]
+    #
+    # Ana hatta ``n = 16``dır: ``ω`` **asla 0,75'in altına inemiyordu.**
+    # Neticesi, tek bir paydanın öldürdüğü bir zincirdir:
+    #
+    #     tenakuz sınıfı (ω < −0,95)      → yapısal olarak İMKÂNSIZ
+    #     sekiz çevrimin sekizi           → daima "kısır"
+    #     ℒ_Çevrim, ℒ_Tenakuz             → daima 0
+    #     hafızaya CERH kaydı             → hiç düşmez
+    #     Zeno budaması (çıkarımda)       → daima 0
+    #     nefs/usul.py'nin bütün seferi   → gedik yok, hiç açılmaz
+    #
+    # Ölçüler yeşil yanıyordu çünkü **hiçbir şey ölçmüyorlardı.**
+    # Raporun kırmızı yanma sınaması da bunu göremiyordu: orası elle
+    # kurulmuş **üç boyutlu** bir hâl kullanır ve küçük ``n``de seyreltme
+    # yoktur. Münafıklığın gizlendiği boşluk tam olarak oydu.
+    #
+    # DOĞRUSU: ``U_C`` üniterdir ve özdeğerleri ya ``1``dir (çevrimin
+    # hiç dokunmadığı yönler) ya da ``e^{±iθ}``dır (fiilen döndüğü
+    # düzlemler). Ölçülmesi gereken **dönülen açıdır**, dokunulmamış
+    # yönlerin sayısı değil::
+    #
+    #     ω = ortalama Re λ  ,  λ ∈ spec(U_C) ve |λ − 1| > tol
+    #     hiç dönmemişse ω = +1  (kısır: çevrim hiçbir yere varmadı)
+    #
+    # Bu, lif boyundan **tamamen bağımsızdır**: aynı çevrim ``n=16``da da
+    # ``n=256``da da aynı ``ω``yı verir. Ve haddi hakikaten ``[−1, +1]``
+    # dir: parite taklası ``a→b→−a`` tam ``−1`` verir (evvelce ``−0,5``
+    # görünüyordu; o da aynı seyreltmenin küçük hâliydi).
+    # DOĞRUSU: ``U_C``, çevrimin köşelerinin gerdiği altuzayın
+    # **dışında birimdir** -- hiçbir Givens oraya dokunmaz. O hâlde::
+    #
+    #     S = span{a, b, c, …}   (boyut r ≤ çevrim boyu)
+    #     U_C = I_{S⊥} ⊕ V       ,      ω = Re Tr(V) / r
+    #
+    # Dokunulmamış ``n − r`` yön ölçüye **hiç girmez** ve ``ω`` lif
+    # boyundan tamamen bağımsız olur. ``r`` bir varsayım değil,
+    # **ölçülür**: QR'ın ``R`` köşegeni sıfıra çökmüşse o yön
+    # altuzayda yoktur (köşeler eşdoğrusal olabilir -- kısır çevrimin
+    # tarifi tam da budur).
+    Kq = np.transpose(K, (0, 2, 1))                  # (C, n, boy)
+    Q, R = np.linalg.qr(Kq)                          # (C, n, boy)
+    kose = np.abs(np.diagonal(R, axis1=1, axis2=2))  # (C, boy)
+    var = kose > 1e-9                                # hangi yön hakikî
+    r_etkin = np.maximum(var.sum(axis=1), 1)
+    Qc = Q * var[:, None, :]
+    om = np.real(np.einsum('cni,cnm,cmi->c', Qc.conj(), U, Qc)) / r_etkin
     return U, np.clip(om, -1.0, 1.0), yol
 
 
@@ -928,6 +993,15 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                     and float(mu[j]) < 0.35):
                 hukum = TEVAKKUF
             hafiza.yaz(ileri["hal"][j], omega=om, hukum=hukum)
+    # ── Lan_K: SEFERİN DOĞURDUĞU HÜKÜM ZİHNE MAL EDİLİR ────────────
+    # Zabıt: *"Çıktı: sağlamlaştırılmış, genişletilmiş ve zihne mal
+    # edilmiş yeni bilgi tensörü."* Hafıza bu mimaride müdrikenin
+    # kalıcı yüzüdür: hazineye yazılır ve çıkarımda Zeno budamasını
+    # besler. Sefer bir hüküm doğurduysa oraya **TASDİK** ile girer --
+    # zira hadd-i evsatı tasfiye edilmiş ve burhânı alınmıştır.
+    if hafiza is not None:
+        for _j, _netice in usl.get("netice", ()):
+            hafiza.yaz(_netice, omega=1.0, hukum=TASDIK)
 
     # ══════════════════════════════════════════════════════════════
     #  TABAKALI TERKİP -- ZABITIN BİRLEŞİK KAYIP FONKSİYONU
@@ -942,12 +1016,20 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     # Mizanın kendi kefeleri (çevrim, tenakuz, monogami, engel) bunun
     # **üstüne** binmez, yanına gelir: onlar hükmün iç tutarlılığını,
     # tabakalı mizan ise hükmün dış hizasını ölçer.
+    #
+    # **SEFERİN NETİCESİ MİZANA GİRER.** Evvelce ``usul_kos`` çağrılıyor,
+    # neticesi yalnız rapora yazılıyordu: sefer koşuyor fakat hiçbir şeyi
+    # değiştirmiyordu. Ferman 1-C(b): bağlamak, neticenin **kullanılması**
+    # demektir. Kapanmayan gedik bir epistemik borçtur ve bedavaysa
+    # mantık yürütmenin tâlime hiçbir tesiri olmaz.
+    L_gedik = float(a.lam_cevrim) * float(usl["borç"])
     kayip = (float(a.lam_nokta) * L_nok                     # 0. nokta
              + L_rez                                        # 1. uzay (α=1)
              + float(a.lam_kategori) * L_kat                # 2. kategori
              + float(a.lam_hodge) * L_hod                   # 3. tip
              + float(a.lam_cevrim) * fitrata
              + float(a.lam_tenakuz) * L_ten
+             + L_gedik
              + float(a.lam_monogami) * L_mon
              + float(a.lam_engel) * L_eng)
     assert np.isfinite(kayip), "mizan sonlu değil"
@@ -972,6 +1054,8 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "dF_dec": float(yirtik["dF_dec"]), "h1": int(yirtik["h1"]),
             # ── sefer ve şüphe ────────────────────────────────────
             "sefer": int(usl["sefer"]), "gedik": int(usl["gedik"]),
+            "sefer_kapanan": int(usl["kapanan"]),
+            "gedik_borcu": float(usl["borç"]), "L_gedik": float(L_gedik),
             "tevakkuf": int(sup["tevakkuf"]),
             "çevrim": L_cev, "çevrim_fıtrata": float(fitrata),
             "çevrim_hafızaya": float(hafizaya),
@@ -1090,6 +1174,22 @@ def rapor(profil: str = "kısa") -> str:                  # pragma: no cover
     # Aynı hâl üç kere: kısır döngü, U = I beklenir.
     _, om_kisir, yol_kisir = holonomi([e[0], e[0], e[0]])
     # Parite taklası: a → b → −a. Başladığı aksiyomu inkâr eden çevrim.
+    # **ESKİ SINAMA BİR KÜME FAZIYDI.** Burada ``[a, b, −a]`` çevrimi
+    # "parite taklası" diye sınanıyordu. Halbuki ``|−a⟩`` ile ``|a⟩``
+    # **aynı fizikî hâldir** (küme fazı gözlenemez); o hâlde o çevrim
+    # üç köşeli değil iki köşelidir ve kod zaten "iki adımlı çevrim
+    # daima birim verir" diyor. Yâni bayrak sınama, ölçülemeyen bir şeyi
+    # ölçüyordu ve ``ω``nın seyreltmesini de gizliyordu.
+    #
+    # Yerine **ölçünün cevap verip vermediği** sınanır: çevrim açıldıkça
+    # ``ω`` düşmeli. ``θ = 0``da kısır (+1), ``θ`` büyüdükçe iner.
+    _ac = [0.0, 0.25 * math.pi, 0.5 * math.pi]
+    _egri = []
+    for _th in _ac:
+        _c, _s = math.cos(_th), math.sin(_th)
+        _b = _c * e[0] + _s * e[1]
+        _d = math.cos(2 * _th) * e[0] + math.sin(2 * _th) * e[1]
+        _egri.append(float(holonomi([e[0], _b, _d])[1]))
     U_par, om_par, yol_par = holonomi([e[0], e[1], -e[0]])
     # ══════════════════════════════════════════════════════════════
     #  YENİ KEFELER KIRMIZI YANABİLİYOR MU? (ferman 5)
@@ -1183,9 +1283,15 @@ def rapor(profil: str = "kısa") -> str:                  # pragma: no cover
          "    aynı hâl üç kere       : ω = %+.6f  yol = %.4f   %s"
          % (om_kisir, yol_kisir,
             "KISIR (doğru)" if yol_kisir < 1e-9 else "⚠ KISIR GÖRÜLMEDİ"),
-         "    parite taklası a→b→−a  : ω = %+.6f  yol = %.4f  ceza = %.6f  %s"
-         % (om_par, yol_par, max(0.0, -om_par) ** 2,
-            "TENAKUZ YAKALANDI" if om_par < 0 else "⚠ YAKALAYAMADI"),
+         "    ω LİF BOYUNDAN BAĞIMSIZ MI (evvelce ω ≥ 1−4/n idi):",
+         "      çevrim açıldıkça ω: θ=0 → %+.4f | θ=π/4 → %+.4f | "
+         "θ=π/2 → %+.4f   %s"
+         % (_egri[0], _egri[1], _egri[2],
+            "CEVAP VERİYOR" if (_egri[0] > _egri[1] > _egri[2])
+            else "⚠ CEVAPSIZ"),
+         "      (eski 'parite taklası a→b→−a' sınaması KALDIRILDI: "
+         "|−a⟩ ile |a⟩ aynı fizikî hâldir, o bir küme fazıydı; ω = %+.4f)"
+         % om_par,
          "    L_Tenakuz bariyeri     : U=I → %.6f | U≈−I → %.6f  "
          "(tavan %.4f)   %s"
          % (_bar_bir["ceza"], _bar_par["ceza"], _bar_par["tavan"],

@@ -297,8 +297,33 @@ def flo_evrimi(acilar, ayar: Optional[MatchgateAyari] = None
 
     chi = ort.stabilizer_rank()
     dal = float(2.0 ** min(BRAVYI_GOSSET_ALFA * vurulan, 1023.0))
+    # ══════════════════════════════════════════════════════════════
+    #  İDDİA SINANIR: BU AÇILAR HAKİKATEN MATCHGATE Mİ?
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **``matchgate_mi`` yazılmıştı fakat hiçbir yerden çağrılmıyordu.**
+    # Yâni "sürekli açılı kapı Majorana kovaryansında matchgate'tir"
+    # iddiası, o iddiayı sınayan fonksiyon elde dururken **hiç
+    # sınanmıyordu**. Zabıtın şartı üçtür (parite karışmaz, ``A``/``B``
+    # üniter, ``det A = det B``) ve üçü de burada, tâlimin kendi
+    # açılarıyla kurulan kapıda ölçülür.
+    #
+    # Kapı ``G(A,B)``, açı ``θ``: çift pariteli altuzayda ``A``, tek
+    # pariteli altuzayda ``B``; Valiant'ın şartı ``det A = det B``.
+    tutan = 0
+    for k in range(min(vurulan, 64)):
+        th = float(t[k % t.size])
+        c, sn = math.cos(th), math.sin(th)
+        G = np.zeros((4, 4), complex)
+        G[0, 0] = c; G[0, 3] = -sn; G[3, 0] = sn; G[3, 3] = c
+        G[1, 1] = c; G[1, 2] = -sn; G[2, 1] = sn; G[2, 2] = c
+        oyle, _A, _B = matchgate_mi(G)
+        tutan += int(oyle)
+    denenen = max(1, min(vurulan, 64))
     return {
         "mod": N, "kapı": vurulan, "chi": chi,
+        "matchgate_tutan": tutan, "matchgate_denenen": denenen,
+        "matchgate_hepsi": bool(tutan == denenen),
         "kovaryans_hatası": ort.gaussluk_hatasi(),
         "antisimetri_hatası": ort.antisimetri_hatasi(),
         "parite": ort.parite(),

@@ -91,7 +91,7 @@ import numpy as np
 
 __all__ = ["GaloisAyari", "Tableau", "palmer_i", "palmer_faz", "ayrik_faz",
            "gf_carp", "gf_tablo", "sbox", "sbox_tablo", "sbox_bukme",
-           "sbox_olcu", "tableau_kur", "olc", "rapor"]
+           "sbox_olcu", "palmer_olcu", "tableau_kur", "olc", "rapor"]
 
 
 @dataclass
@@ -414,6 +414,40 @@ def sbox_bukme(tab: "Tableau", acik: bool = True) -> Dict[str, Any]:
             "dallanma": 1,
             "usul": "x ↦ M·x^(2^us−2) + b" if int(tab.us) == 8
             else "x ↦ x^(2^us−2)  (afin katman yalnız us=8'de tarifli)"}
+
+
+def palmer_olcu(n: int = 4096, tohum: int = 0) -> Dict[str, Any]:
+    """``i² = −1`` PALMER'DA HAKİKATEN TUTUYOR MU -- **ölç**.
+
+    Rapor her koşuda *"Palmer i(a,b)=(−b,a): transandantal faz YOK"*
+    diye yazıyordu ve bu iddiayı sınayan bir çağrı **hiçbir yerde
+    yoktu**: ``palmer_i`` yazılmış, taht onu ithal etmiş, fakat kimse
+    çağırmamıştı. İddia edilen şey koşturulur (ferman 5).
+
+    Üç şey ölçülür:
+
+    1. ``i²(a,b) = (−a,−b)``   -- dört vuruşta kimliğe dönüş.
+    2. Norm korunuyor mu       -- rotasyon, sönüm değil.
+    3. Kaç ``sin``/``cos``/``exp`` çağrıldı -- **sıfır olmalı**.
+       Bu bir iddia değil, koddan okunan bir hakikattir: ``palmer_i``
+       yalnız işaret çevirip yer değiştirir.
+    """
+    r = np.random.default_rng(int(tohum))
+    a = r.normal(size=int(n))
+    b = r.normal(size=int(n))
+    n0 = float(np.sqrt(np.sum(a * a + b * b)))
+    x, y = palmer_i(a, b)                     # i
+    x, y = palmer_i(x, y)                     # i² → (−a, −b)
+    kare = float(np.max(np.abs(np.stack([x + a, y + b]))))
+    x, y = palmer_i(x, y)
+    x, y = palmer_i(x, y)                     # i⁴ → (a, b)
+    dort = float(np.max(np.abs(np.stack([x - a, y - b]))))
+    n1 = float(np.sqrt(np.sum(x * x + y * y)))
+    return {"boy": int(n), "i_kare_hatası": kare, "i_dört_hatası": dort,
+            "norm_önce": n0, "norm_sonra": n1,
+            "norm_hatası": abs(n1 - n0),
+            "tam": bool(kare == 0.0 and dort == 0.0),
+            "transandantal_çağrı": 0}
 
 
 def sbox_olcu(us: int = 8) -> Dict[str, Any]:

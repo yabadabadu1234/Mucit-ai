@@ -2297,10 +2297,17 @@ class QNefs:
             # de çıkarımın da tek geçtiği yerdir. Sadakat başka bir
             # yere konsaydı (mesela yalnız mizana) model eğitilirken
             # mantıklı, konuşurken serbest olurdu.
+            # **KAPI AYARDAN GELİR, KODA GÖMÜLÜ DEĞİL.** Evvelce burada
+            # ``acik=1`` ve ``parite_lifi=min(2, …)`` yazılıydı; o hâlde
+            # ``EgitimAyari.sadakat_acik = 0`` demek hiçbir şeyi
+            # kapatmıyordu ve tedbirin faydası ölçülemiyordu (ferman 5).
             from .sadakat import SadakatAyari, sadakat_uygula
+            lif = tuple(int(x) for x in q.y.ayar.lif)
             sadakat_uygula(q.y, SadakatAyari(
-                acik=1, parite_lifi=min(2, len(q.y.ayar.lif) - 1),
-                lif_yapisi=tuple(int(x) for x in q.y.ayar.lif)))
+                acik=int(getattr(self.ayar, "sadakat_acik", 1)),
+                parite_lifi=min(int(getattr(self.ayar, "parite_lifi", 2)),
+                                len(lif) - 1),
+                lif_yapisi=lif))
         if bec:
             bec_faz_kilidi(q)
         # **Ölçümden evvel durum, durum olmalıdır.** Kesme her vuruşta

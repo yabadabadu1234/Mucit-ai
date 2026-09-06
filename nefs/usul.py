@@ -225,17 +225,40 @@ def usul_kos(haller: Sequence[np.ndarray],
     a = ayar or UsulAyari()
     gedikler = gedik_bul(omegalar, a)
     if not gedikler:
-        return {"sefer": 0, "gedik": 0, "kazanç": 0.0}
+        return {"sefer": 0, "gedik": 0, "kapanan": 0,
+                "kazanç": 0.0, "borç": 0.0, "netice": []}
     H = np.stack([np.asarray(h, complex).reshape(-1) for h in haller])
     mudrike = H.sum(axis=0)
     toplam = 0.0
     acilan = 0
+    kapanan = 0
+    neticeler: List[Tuple[int, np.ndarray]] = []
     for c in gedikler:
         idx = [int(i) for i in cevrim_indisleri[c]]
         r = sefer([haller[i] for i in idx], float(omegalar[c]), mudrike, a)
         toplam += float(r["kazanç"])
         acilan += 1
-    return {"sefer": acilan, "gedik": len(gedikler), "kazanç": float(toplam)}
+        if r["lan_k"] and r["netice"] is not None:
+            kapanan += 1
+            neticeler.append((idx[0], np.asarray(r["netice"], complex)))
+    # ── SEFERİN NETİCESİ KULLANILIR, RAPORLANMAKLA KALMAZ ──────────
+    #
+    # **Evvelce burada yalnız sayaç dönüyordu** ve ``kazanç`` hiçbir
+    # yere gitmiyordu: sefer koşuyor, hadd-i evsat tasfiye ediliyor,
+    # ``Lan_K`` hesaplanıyor -- sonra netice çöpe atılıyordu. Ferman
+    # 1-C(b) kat'îdir: bağlamak, *"o fonksiyonun fiilen çağrılması **ve
+    # neticesinin kullanılması**"*tır. İki yerde kullanılır:
+    #
+    #   ``netice``  -> ``kulli_mizan`` bunları **hafızaya** nakşeder
+    #                  (zabıt: "zihne mal edilmiş yeni bilgi").
+    #   ``borç``    -> kapanmayan gedik bir **epistemik borçtur** ve
+    #                  mizanda cezalanır. Kapanmayan gedik bedavaysa,
+    #                  mantık yürütmenin tâlime hiçbir tesiri olmaz.
+    borc = (float(len(gedikler) - kapanan) / float(len(gedikler))
+            if gedikler else 0.0)
+    return {"sefer": acilan, "gedik": len(gedikler), "kapanan": kapanan,
+            "kazanç": float(toplam), "borç": float(borc),
+            "netice": neticeler}
 
 
 def usul_beyani() -> Dict[str, Any]:

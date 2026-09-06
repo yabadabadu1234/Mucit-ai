@@ -104,9 +104,13 @@ from nefs.hafiza import Hafiza                           # noqa: E402
 #                       Palmer 2-bit rotasyonu. Sürekli Hilbert İPTAL.
 #   nefs/tdd.py      -- artık HESAP MOTORU DEĞİL, yalnız kanonik
 #                       DENETÇİ: çevrim kapanışında O(1) adres eşitliği.
-from nefs.galois import (GaloisAyari, Tableau,            # noqa: E402
-                         palmer_i, tableau_kur, gf_carp,
-                         sbox_bukme, sbox_olcu)
+# ``Tableau``, ``palmer_i`` ve ``gf_carp`` buradan **kesildi**: üçü de
+# ithal ediliyor fakat tahtta hiç çağrılmıyordu (ferman 1-C/b: ithal
+# etmek bağlamak değildir). ``palmer_i``nin iddiası -- ``i²=−1``,
+# transandantal faz yok -- artık ``palmer_olcu`` ile **sınanıyor**;
+# evvelce rapor onu her koşuda yazıyor, kimse ölçmüyordu.
+from nefs.galois import (GaloisAyari, tableau_kur,         # noqa: E402
+                         sbox_bukme, sbox_olcu, palmer_olcu)
 from nefs.tdd import TddAyari, kanonik_adres              # noqa: E402
 # ── ZABIT: NON-CLIFFORD VE STABILIZER RANK ÇIKMAZININ ÇÖZÜMÜ ──────
 # **USUL FERMANI:** bu iki satır modüller HENÜZ YOKKEN yazıldı.
@@ -123,8 +127,11 @@ from nefs.tdd import TddAyari, kanonik_adres              # noqa: E402
 #                            transandantal değil cebrîdir; dallanma yok.
 #   3. nefs/faz_polinomu.py  Amy-Maslov-Mosca CNOT-Dihedral teoremi.
 #                            Köşegen fazlar tek Z_m tamsayı polinomunda.
-from nefs.matchgate import (MatchgateAyari, flo_evrimi,   # noqa: E402
-                            matchgate_mi)
+# ``matchgate_mi`` buradan kesildi ve **koştuğu yere kondu**:
+# ``flo_evrimi`` artık kendi ürettiği kapıları onunla sınıyor. Evvelce
+# taht onu ithal ediyor, hiç çağırmıyordu; yâni "bu kapılar
+# matchgate'tir" iddiası, sınayan fonksiyon elde dururken sınanmıyordu.
+from nefs.matchgate import MatchgateAyari, flo_evrimi     # noqa: E402
 from nefs.faz_polinomu import FazAyari, faz_oturt         # noqa: E402
 # ── ZABIT: DERECE-12 FAZ PATLAMASI VE 1 GB/S DARBOĞAZI ────────────
 # **USUL FERMANI:** bu satır modül HENÜZ YOKKEN yazıldı.
@@ -209,14 +216,14 @@ from nefs.golge import (GolgeAyari, golge_al,             # noqa: E402
 #                     modal dallanma, merak kancası ve Liouville sönümü.
 from nefs.sadakat import (SadakatAyari, sadakat_uygula,   # noqa: E402
                           sadakat_beyani)
-from nefs.tenakuz import (TenakuzAyari, log_bariyer,      # noqa: E402
-                          dislama_dizeyi)
-from nefs.rust import (RustAyari, rust_kilidi,            # noqa: E402
-                       topolojik_yirtik)
-from nefs.tabakali_mizan import (kategori_kaybi,          # noqa: E402
-                                 nokta_kaybi)
-from nefs.usul import UsulAyari, usul_beyani              # noqa: E402
-from nefs.suphe import SupheAyari, suphe_beyani           # noqa: E402
+# **ALTI UZVUN DÖRDÜ ARA KATA BAĞLANDI, İTHALLERİ KESİLDİ.**
+# ``tenakuz``, ``rust``, ``tabakali_mizan`` ve ``usul_kos``/
+# ``suphe_manifoldu`` mizanın **içinde** koşar; tahtta yalnız adları
+# duruyordu ve ferman 1-C(b) buna "isim eklemek" der. Ayarları
+# ``mizan_ayari`` ile geçer, hesapları ``*_beyani`` ile sorulur.
+# Tahtta kalan üç isim, tahtın **fiilen çağırdığı** üç şeydir.
+from nefs.usul import usul_beyani                         # noqa: E402
+from nefs.suphe import suphe_beyani                       # noqa: E402
 # **FERMAN 1-G:** raporun yeri taht değil, kendi uzvudur.
 from tanilama.beyan import (talim_beyani,                 # noqa: E402
                             kaggle_beyani)
@@ -248,7 +255,7 @@ def tek_iplik_zorla() -> Dict[str, str]:
 # =====================================================================
 @dataclass
 class EgitimAyari:
-    """Yazmaç, veri, dalga ve donanım ölçüleri **tek yerde**.
+    """Yazmaç, veri, mizan ve donanım ölçüleri **tek yerde**.
 
     Kullanıcı hükmü: *"modelin tüm parametrelerini en genel eğitim için
     mümkün olan hududun en sonuna kadar açmanı istiyorum."* Hiçbiri
@@ -299,8 +306,9 @@ class EgitimAyari:
     # sokan mekanizma -- fermanla imha edildi; ayarları da aynı turda
     # kökünden kesildi. Ayarın var olup okunmaması, ayarlanabildiği
     # yalanını söyler.
-    # --- MÎZÂN-I KÜLLÎ (nefs/kulli_mizan.py) -- dört kefenin ağırlıkları
-    #: ``ℒ_Küllî = ℒ_Rezonans + λ₁ℒ_Çevrim + λ₂ℒ_Monogami + λ₃ℒ_Hodge``
+    # --- MÎZÂN-I KÜLLÎ (nefs/kulli_mizan.py) -- kefelerin ağırlıkları
+    #: ``L = L_nokta + α·L_uzay + β·L_kategori + γ·L_tip``
+    #: ``  + λ₁ℒ_Çevrim + λ_tℒ_Tenakuz + λ₂ℒ_Monogami + λ₄ℒ_Engel``
     #:
     #: **KÖR NLL BURADA YOKTUR VE OLMAYACAKTIR.** Padişahın hükmü:
     #: *"loss = CrossEntropyLoss() satırı modelin katilidir."* Veriye
@@ -323,7 +331,7 @@ class EgitimAyari:
     #  kestiriyor. Bu ortamda ölçtüm ve öyle çıkmadı: ``ayna`` tâlim
     #  hattında hiç çağrılmıyor (yalnız ``nefs/soyle.py``nin arama
     #  kipinde), ``qsvt`` de kayıp yolunda görünmüyor. Profilin tamamı
-    #  ``idrak_et``te: 41 meleke ve onların vurduğu kapılar.
+    #  ``idrak_et``te: 44 QMeleke ve onların vurduğu kapılar.
     #  Zabıtın **hükmü** yine de icra edildi (değerler indirildi ve
     #  döngüler kaldırıldı); yalnız kazancın nereden geleceği hakkında
     #  ölçüm başka söylüyor ve o da yazılıdır. Hüküm uygulanır, ölçü
@@ -699,7 +707,10 @@ class EgitimAyari:
     #: sebebi çağıranın sorumluluğundadır.
     yigin_dilimi: int = 0
     # --- donanım
-    surec: int = 0                   # 0 = donanımdan tayin et
+    # **``surec`` KESİLDİ.** Süreç havuzu imha edildi (yukarıdaki şerhe
+    # bakınız: ölçüldü, üç yerden kırıktı ve paralel yol seri yoldan
+    # başka bir kayıp veriyordu). Koşmayan bir havuzun ayarı, o havuzun
+    # ayarlanabildiği yalanını söylerdi.
     tohum: int = 0
     #: **TÂLİM SAAT HADDİ (kütük H212).** ``ogrenme/hoca.py``nin bütçe
     #: freni bu haddi okur: ``tur × d × düğüm`` çağrısının kestirilen
@@ -715,7 +726,7 @@ class EgitimAyari:
     def qayar(self):
         from nefs.zihin_durumu import QAyar
         # **YIĞIN YAZMACA GEÇER.** Evvelce geçmiyordu ve yazmaç daima
-        # ``B=1`` kuruluyordu: 41 melekenin 300 000 kapısı her örnek
+        # ``B=1`` kuruluyordu: 44 QMelekenin 300 000 kapısı her örnek
         # için baştan vuruluyordu. Hız teftişi bunu ölçtü.
         import numpy as _np
         tip = {"complex64": _np.complex64,
@@ -730,8 +741,15 @@ class EgitimAyari:
                      # polinomu aynı ``Z_m``de olmalı, yoksa polinom
                      # başka bir fazı tarif eder.
                      faz_mertebesi=int(self.faz_mertebesi),
-                     # 41 melekenin kapıları bu hatta koşar.
-                     hat=str(self.hat), hat_bandi=int(self.hat_bandi))
+                     # 44 QMelekenin kapıları bu hatta koşar.
+                     hat=str(self.hat), hat_bandi=int(self.hat_bandi),
+                     # **MANTIĞA SADAKAT ``idrak_et``te koşar**, mizanda
+                     # değil; o hâlde ayarı yazmaca geçmelidir. Yalnız
+                     # ``MizanAyari``ye koymak, anahtarı koşmadığı kata
+                     # bırakmaktı: ``sadakat_acik=0`` hiçbir şey
+                     # kapatmıyordu (ölçüldü, düzeltildi).
+                     sadakat_acik=int(self.sadakat_acik),
+                     parite_lifi=int(self.parite_lifi))
 
     def yigin(self) -> int:
         """Yazmacın YIĞIN DİLİMİ -- elle değil, **donanımdan**.
@@ -983,29 +1001,42 @@ def ogreniyor_mu(seyir: Sequence[float], lam: float = 1e-3
 
 
 # =====================================================================
-#  SÜREÇ HAVUZU -- kübit ileri geçişi paraleldir
+#  SÜREÇ HAVUZU İMHA EDİLDİ -- ÖLÇÜLDÜ, ÜÇ YERDEN KIRIKTI
 # =====================================================================
-_ISCI: Dict[str, object] = {}
-
-
-def _isci_kur(ayar: EgitimAyari, veri, kademe=None) -> None:
-    from nefs.melekeler import QNefs
-    tek_iplik_zorla()
-    _ISCI["nefs"] = QNefs(ayar.tohum, ayar.qayar())
-    _ISCI["veri"] = veri
-    _ISCI["ayar"] = ayar
-    _ISCI["kademe"] = list(kademe or [])
-    _ISCI["nefs"].idrak_et(np.zeros((2, ayar.satir_kubiti)))
-
-
-def _isci_kayip(p: np.ndarray) -> float:
-    """İşçi de **aynı** mizanı hesaplar; ayrı kayıp mukayeseyi bozardı."""
-    a: EgitimAyari = _ISCI["ayar"]        # type: ignore[assignment]
-    t = kulli_mizan(_ISCI["nefs"], _ISCI["veri"], p,   # type: ignore
-                    a.sozluk, ayar=mizan_ayari(a),
-                    hafiza=_ISCI.get("hafıza"),
-                    kademe_gorevleri=_ISCI.get("kademe"))
-    return float(t["kayıp"])
+#
+# Burada ``_ISCI``, ``_isci_kur`` ve ``_isci_kayip`` duruyordu ve
+# ``kulli_kayip_talimi`` bir ``multiprocessing`` havuzu kuruyordu.
+# **Hiçbir profilde koşmamıştı**: ``surec`` varsayılan ``0``, kod ise
+# ``ayar.surec or 1`` diyordu, o hâlde daima ``1`` çıkıyor ve havuz hiç
+# kurulmuyordu. Ölü kod, kırıklığını da saklıyordu.
+#
+# ÖLÇÜLDÜ (sahte kayıpla, KISA_CPU profili):
+#
+#     kayip_p çağrısı  : 16
+#     yığın dağılımı   : 12 çağrı × 1 satır, 3 çağrı × 3, 1 çağrı × 9
+#     toplam satır     : 30
+#
+# Yâni çağrıların **dörtte üçü tek satırlıktır** ve paralelleşemez;
+# 4 çekirdekle en iyi hâlde 30 satır 18 satırlık zamana iner (~1,67×).
+# Bedeli ise üç kırıktır ve üçü de sessizdi:
+#
+#   1. **İŞÇİ BAŞKA BİR KAYIP HESAPLIYORDU.** ``_isci_kayip``
+#      ``hafiza=_ISCI.get("hafıza")`` diyordu ve o daima ``None``dı
+#      (``_ISCI["hafıza"] = None`` yazılıydı). Hafıza kayba giriyor
+#      (rüşt, tevakkuf, Zeno); o hâlde paralel yol ile seri yol **aynı
+#      parametrede farklı sayı** veriyordu. İki yol yan yana durdukça
+#      hangisinin koştuğu belirsizdir (ferman 1-E).
+#   2. **İŞÇİ KADEME PARAMETRELERİNİ AÇMIYORDU.** Ana yol
+#      ``kademe_parametreleri_ac`` ile 318'i 324'e çıkarıyor, işçi
+#      açmıyordu: ``nefs.yukle(p)`` boy uyuşmazlığıyla düşerdi.
+#   3. **7/24 SAYAÇLARI FORK'U GEÇMEZ.** ``sadakat``/``şüphe``/``usul``
+#      sayaçları çocuk süreçte artar, ebeveyne dönmez; tahtın
+#      "bu uzuv hiç koşmadı" ``assert``i paralel kipte **yanlışlıkla**
+#      ateşlerdi.
+#
+# Üçüncüsü tamir edilebilir, ikincisi de; fakat birincisi tabiatı gereği
+# tamir edilemez: hafıza sıralı ve hâllidir, parçalanamaz. O hâlde
+# kökünden kesildi (ferman 2-B) ve ``surec`` ayarı da beraberinde.
 
 
 def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
@@ -1049,8 +1080,7 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
 #  TEK HAT -- KÜLLÎ KAYIP TÂLİMİ (44 QMeleke fiilen eniyilenir)
 # =====================================================================
 def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
-                       gorevler: Optional[Sequence] = None,
-                       paralel: bool = True) -> Dict[str, object]:
+                       gorevler: Optional[Sequence] = None) -> Dict[str, object]:
     """44 QMelekeyi Mîzân-ı Küllî ile ölçüp motorla eniyile.
 
     **ARTIK TEK HAT BUDUR.** Evvelce yanında ikinci bir hat vardı
@@ -1092,25 +1122,18 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     p0 = nefs.vektor()
     kademe_gorevleri = list(egitim_gorevleri)[:int(ayar.kademe_gorevi)]
 
-    havuz = None
-    surec = ayar.surec or 1
-    if paralel and surec > 1:
-        import multiprocessing as mp
-        havuz = mp.get_context("fork").Pool(
-            surec, initializer=_isci_kur,
-            initargs=(ayar, veri, kademe_gorevleri))
-        _ISCI["hafıza"] = None      # her işçi kendi hafızasını kurar
-
     # **HATA FONKSİYONU MÎZÂN-I KÜLLÎ'DİR** (nefs/kulli_mizan.py).
-    #
-    #     ℒ_Küllî = ℒ_Rezonans + λ₁ℒ_Çevrim + λ₂ℒ_Monogami + λ₃ℒ_Hodge
-    #
-    # Dördü de kuantumun kendi hadiselerinden mülhemdir ve hiçbiri
-    # veriye kör teslimiyet değildir:
-    #   Rezonans  -- Uhlmann sadakati (kör NLL DEĞİL)
+    # Tabakalı mizan + mizanın kendi kefeleri; hiçbiri veriye kör
+    # teslimiyet değildir:
+    #   Nokta     -- kısmî Born, **son basamak**, küçük ağırlıkla
+    #   Uzay      -- Uhlmann sadakati (kör NLL DEĞİL)
+    #   Kategori  -- funktör kompozisyonu; etiketsiz, kendini denetler
+    #   Tip       -- Δ|Ψ⟩ = 0; harmonik hüküm
     #   Çevrim    -- Wilson holonomisi; manayı bilmeden tenakuz bulur
+    #   Tenakuz   -- log-bariyer × eş-zamanlı dışlama
+    #   Gedik     -- kapanmayan seferin epistemik borcu
     #   Monogami  -- CKW eşitsizliği; sahte illetleri budar
-    #   Hodge     -- Δ|Ψ⟩ = 0; harmonik hüküm
+    #   Engel     -- CIM; taban durumuna oturamayan gerilim
     mzn = mizan_ayari(ayar)
     hafiza = Hafiza(kapasite=int(ayar.hafiza_kapasitesi),
                     yazma=float(ayar.hafiza_yazma),
@@ -1127,14 +1150,18 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     # Ferman: *"hızölçeri ana hatta kalıcı olarak bağla."* Artık **her**
     # küllî mizan çağrısı saatlenir ve belirteç sayılır; hız koşarken
     # bilinir, sonradan tahmin edilmez.
+    # **HAD BAĞLANDI.** Evvelce ``had=None`` geçiyordu ve rapor "had
+    # konmadı (ölçü yalnız görülüyor)" diyordu -- yâni ana hattaki
+    # hızölçer **hiç kırmızı yanamıyordu**. Halbuki had ortadadır ve
+    # ``gecit()`` onu koşudan evvel zaten uyguluyor; koşarken de aynı
+    # haddin uygulanmaması, ölçüyü seyirlik yapmaktı (ferman 5).
+    from tanilama.hiz_teftisi import HAD as _HIZ_HADDI
     olcer = Hizolcer(belirtec_basina=len(veri) * int(ayar.pencere),
-                     had=None, ad="küllî mizan")
+                     had=float(_HIZ_HADDI), ad="küllî mizan")
     hizolcer_bagla(olcer)
 
     def kayip_p(P: np.ndarray) -> np.ndarray:
         P = np.atleast_2d(np.asarray(P, float))
-        if havuz is not None:
-            return np.array(list(havuz.map(_isci_kayip, list(P))))
         out = np.empty(P.shape[0], float)
         for i, p in enumerate(P):
             _sayac["çağrı"] += 1
@@ -1172,12 +1199,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     opt.vekil_acik = False
     opt.bütçe_denetimi = True
     opt.azami_saniye = float(ayar.azami_talim_saati) * 3600.0
-    try:
-        r = hoca_egit(kayip_p, p0, opt)
-    finally:
-        if havuz is not None:
-            havuz.close()
-            havuz.join()
+    r = hoca_egit(kayip_p, p0, opt)
 
     p_yildiz = np.asarray(r["p"], float)
     assert p_yildiz.size == d, (
@@ -1233,12 +1255,24 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     # raporlanıyordu. Ölçüldü ve düzeltildi.
     #
     # Gözlenebilirler **uydurulmaz**: yazmacın kendi hüküm alanlarıdır.
-    golge_ham = golge_al(psi_son, GolgeAyari(
-        ornek=max(32, int(ayar.golge_ornegi) or 128),
-        had=float(ayar.golge_haddi), tohum=int(ayar.tohum)))
+    #
+    # **"0 = KAPALI" ARTIK HAKİKATEN KAPALI.** Evvelce burada
+    # ``max(32, int(ayar.golge_ornegi) or 128)`` yazıyordu: ``0``
+    # verilince ``or`` onu 128'e çeviriyordu, yâni anahtar kapanmıyordu.
+    # Kapanmayan bir anahtar, ölçünün kırmızı yanamaması demektir
+    # (ferman 5). Şimdi ``0`` verilince gölge hiç alınmaz ve rapor
+    # "KAPALI" der; tam ölçüm zaten aşağıda koşuyor ve kıyas kalır.
     goz = [q_son.y.sektor(ad) for ad, _ in q_son.ayar.kulli_alanlar]
+    K = int(ayar.golge_ornegi)
     t_g = time.perf_counter()
-    golge = kestir(golge_ham, goz, tahkik=True)
+    if K > 0:
+        golge_ham = golge_al(psi_son, GolgeAyari(
+            ornek=K, had=float(ayar.golge_haddi), tohum=int(ayar.tohum)))
+        golge = kestir(golge_ham, goz, tahkik=True)
+        golge["açık"] = True
+    else:
+        golge = {"kestirim": np.zeros(len(goz)), "gözlenebilir": len(goz),
+                 "örnek": 0, "açık": False}
     golge["gölge_sn"] = time.perf_counter() - t_g
     # Tam ölçüm: bütün sektör ağırlıkları doğrudan. Hız kıyası ölçülür,
     # iddia edilmez.
@@ -1271,6 +1305,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     # tekdüzelik ve Walsh tepe değeri), iddia edilmez.
     sb = sbox_bukme(tab, acik=bool(int(ayar.sbox_acik)))
     sb_olcu = sbox_olcu(us=int(ayar.galois_us))
+    # **PALMER İDDİASI SINANIR.** Rapor her koşuda "transandantal faz
+    # YOK" yazıyordu; o iddia burada, durumun kendi boyunda ölçülür.
+    palmer = palmer_olcu(n=int(psi_son.size), tohum=int(ayar.tohum))
     # **3. ÇARE -- CNOT-DIHEDRAL FAZ POLİNOMU (Amy-Maslov-Mosca).**
     # Yazmaç koşu boyunca köşegen fazları genliğe tek tek vurmaz;
     # ``Z_m``de tamsayı olarak biriktirir (``faz_birikimi``). O birikim
@@ -1332,7 +1369,13 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     # **SON DURUM MANTIK ALT-UZAYINDA MI?** Tâlimin bulduğu ağırlıkla
     # kurulan durumun paritesi burada, tahtın kendi elinde yoklanır.
     # Neticesi kullanılır: alarm sönmediyse rapor onu yazar.
-    son_sadakat = sadakat_uygula(tab, SadakatAyari(
+    #
+    # **ASIL DURUMUN ÜSTÜNDE, VEKİLİN DEĞİL.** Evvelce buraya ``tab``
+    # (Tableau) veriliyordu; o ise ``tableau_n = 64`` elemanlık bir
+    # nicelenmiş vekildir. 4096 genlikli durumun paritesini 64 baytlık
+    # bir özetten yoklamak, ölçüyü ölçtüğü şeyden koparmaktı. Yoklama
+    # ``psi_son``un kendisi üstünde yapılır.
+    son_sadakat = sadakat_uygula(psi_son.copy(), SadakatAyari(
         acik=int(ayar.sadakat_acik), parite_lifi=int(ayar.parite_lifi),
         lif_yapisi=tuple(ayar.lif_yapisi)))
 
@@ -1371,6 +1414,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "tdd": tdd, "stabilizer": stab, "gölge": golge,
             "galois": tab.beyan(),
             "flo": flo, "sbox": sb, "sbox_ölçü": sb_olcu,
+            "palmer": palmer,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "sadakat": sad, "son_sadakat": son_sadakat,
             "usul": usl, "şüphe": sup,
@@ -1380,7 +1424,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "çekirdek": cekirdek_beyani(),
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
-            "veri": len(veri), "süreç": surec,
+            "veri": len(veri),
             "V_ilk": float(r["V_ilk"]), "V_son": float(r["V_son"]),
             "süre_sn": time.perf_counter() - t0,
             "kayıp_çağrısı": int(r.get("kayıp_çağrısı", 0)),
@@ -1488,13 +1532,16 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
 
     ``ne`` kipi:
 
-    * ``"tâlim"``  -- ``kos``: iki hattın tek hatta terkibi (H230).
+    * ``"tâlim"``  -- ``kos``: **tek hat**. (Evvelce "iki hattın tek
+      hatta terkibi" yazıyordu; ikinci hat -- meclis -- imha edildi ve
+      şerhi düzeltmemek olmayan bir hattı işaret etmek olurdu.)
     * ``"sabit"``  -- ``tanilama/sabit_teftisi.py``: elle tayin edilmiş
       bütün sabitlerin listesi. Hangisi ayara bağlı, hangisi koda gömülü,
       hangisi hiç okunmuyor -- ``ast`` ile çıkarılır.
     * ``"mizan"``  -- ``nefs/kulli_mizan.py``: hata fonksiyonunun kendisi.
-      Dört kefe (Rezonans, Çevrim, Monogami, Hodge) ayrı ayrı ölçülür ve
-      verinin etiketsiz dört kampa ayrılması gösterilir. **Kök budur.**
+      Bütün kefeler (Nokta, Uzay≡Rezonans, Kategori, Tip≡Hodge,
+      Çevrim, Tenakuz, Monogami, Engel) ayrı ayrı ölçülür ve verinin
+      etiketsiz dört kampa ayrılması gösterilir. **Kök budur.**
     * ``"kaggle"`` -- ``main/kaggle_egitim.py`` + ``main/kaggle_cikarim.py``.
       Bunlar ayrı birer taht DEĞİL, tahtın koşum kipidir.
     * ``"veri"``   -- ``main/veri.py``: belirteçleri 500 MB'lık,

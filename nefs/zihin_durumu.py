@@ -105,6 +105,20 @@ class QAyar:
     hat: str = "c"
     #: Bandın azamî boyu; ``0`` = çekirdeğin kendi ölçüsü.
     hat_bandi: int = 0
+    #: **MANTIĞA SADAKAT KAPISI** (``nefs/sadakat.py``). ``0`` = kapalı:
+    #: Zeno sıfırlaması yapılmaz ve tenakuz alarmı sönmez.
+    #:
+    #: **BU İKİSİ BURADA OLMAK ZORUNDADIR.** Evvelce ``EgitimAyari``de
+    #: vardı, ``MizanAyari``ye geçiyordu, fakat sadakat ``idrak_et``te
+    #: koştuğu için oraya **hiç ulaşmıyordu**: ``idrak_et`` ``acik=1``i
+    #: koda gömülü tutuyordu. Yâni ``sadakat_acik=0`` demek hiçbir şeyi
+    #: kapatmıyordu -- kapatılamayan bir tedbirin faydası ölçülemez
+    #: (ferman 5). Ayarın yolu, uzvun koştuğu yere varmalıdır.
+    sadakat_acik: int = 1
+    #: Parite maskesinin oturduğu lif. ``lif_yapisi`` üç karodur; hükmün
+    #: taşındığı karo budur. Evvelce ``min(2, len-1)`` diye koda
+    #: gömülüydü.
+    parite_lifi: int = 2
     #: Genlik tipi. ``complex64`` bellek ve bant genişliğini yarıya
     #: indirir; bedeli hassasiyettir ve **ölçülerek** kabul edilir
     #: (üniterlik hatası ``hiz_teftisi``de raporlanır). Varsayılan
