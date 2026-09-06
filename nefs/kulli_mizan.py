@@ -564,11 +564,14 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
             # döndü fakat hiçbir yere varmadıysa ``U_C`` kendi
             # altuzayında birimdir, yâni ``ω → +1``. Bu, dönüş
             # adresinden değil **katedilen dönmeden** okunur.
-            say["kısır"] += 1
-            # **KANONİK ADRES KIYASI** (eşik değil): ``U_C a`` ile ``a``
-            # aynı ışında. Çevrim döndü fakat hiçbir yere varmadı --
-            # boş salınım. Evvelce bu ``yol < 1e-9`` eşiğiyle tayin
-            # ediliyordu ve eşik keyfîydi; adres kıyası kat'îdir.
+            # **BİR ÇEVRİM BİR KERE SAYILIR.** Burada ``say["kısır"]``
+            # **iki kere** artıyordu: kısırlık ``ω``ya taşınırken eski
+            # (kanonik adres) satırı silinmemiş, yenisi üstüne
+            # yazılmıştı. Netice, ölçünün kendisini bozuyordu --
+            # ``çevrim`` paydası ``meşru + kısır + tenakuz + engel``
+            # olduğu için kısır hem paya hem paydaya çift giriyor ve
+            # ``nispet_kısır = 1 − kısır/çevrim`` yanlış çıkıyordu.
+            # Sayılan şey çevrimdir; bir çevrim bir tanedir.
             say["kısır"] += 1
         elif engelli:
             say["engel"] += 1
