@@ -111,7 +111,7 @@ def _duzeni_dogrula() -> bool:
     """
     from nefs.zihin_durumu import donme
 
-    ayar = QAyar(bag=4)
+    ayar = QAyar()
     q = QYazmac(1, ayar)
     bas = q.kulli("tasdik", 0)
     q.tek(bas, donme(0.5 * np.pi))          # |0> → |1>
@@ -176,13 +176,13 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
     ayar = ayar or QAyar(tohum=tohum)
     rng = np.random.default_rng(tohum)
     belirtec = [int(x) for x in rng.integers(0, sozluk, size=satir)]
-    E = belirtecleri_kodla(belirtec, ayar.satir_kubiti, sozluk)
+    E = belirtecleri_kodla(belirtec, ayar.veri_lifi, sozluk)
 
     nefs = QNefs(tohum, ayar, sadakat=kalp)
     q = QYazmac(satir, ayar)
     q.kodla(E)
     q.superpozisyon()
-    q.mera()
+    q.harman()
 
     sicil = qsicil()
     onceki = _kutleler(q)
@@ -269,7 +269,7 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
         from nefs.melekeler import QNefs as _QN
         from nefs.qegitim import belirtecleri_kodla as _bk
         _ay = QAyar(tohum=tohum)
-        _E = _bk([1, 2, 3, 4, 5, 6], _ay.satir_kubiti, 16)
+        _E = _bk([1, 2, 3, 4, 5, 6], _ay.veri_lifi, 16)
         _q = _QN(tohum, _ay).idrak_et(_E)
         yz = muhru_stabilizerle_yuzlestir(_q)
         s += ["", "STABİLİZER YÜZLEŞTİRMESİ (kuantum/stabilizer.py):",

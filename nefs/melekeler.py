@@ -904,12 +904,13 @@ class QMeleke:
         # yüzleştirdiği gibi. İlan artık **icra edilmiyor, sınanıyor**;
         # aradaki fark, kelepçe ile sözleşme arasındaki farktır.
         #
-        # ``NIZAM_ACIK`` ile eski davranış geri alınabilir; kapatılamayan
-        # bir tedbirin faydası ölçülemez (kütük H90).
-        eski = q.y.bag_tavan
-        if NIZAM_ACIK and self.CHI is not None:
-            q.y.bag_tavan = max(1, min(int(self.CHI), q.y.bag))
-        try:
+        # **``bag_tavan`` KESİLDİ (χ, MPS bağ boyutu).** Burada
+        # ``q.y.bag_tavan = min(CHI, q.y.bag)`` yazıyordu; ``bag_tavan``
+        # kuruluyor fakat **hiçbir yerde okunmuyordu** -- yâni nizam
+        # kelepçesi zaten hiçbir şey kısmıyordu. Quditte bağ yoktur:
+        # durum tam tutulur, kesme sıfırdır (SVD/MPS fermanla iptal).
+        # ``CHI`` ilanı duruyor ve ``nizam_yuzlestir()`` onu ölçümle
+        # yüzleştiriyor: ilan icra edilmiyor, **sınanıyor**.
             # **STIEFEL İZOMETRİSİ -- meleke koşmadan EVVEL** (H163).
             # Kanonik hâlde SVD kesmesi en iyidir; kanonik olmayan
             # biçimde tekil değerler atılanın hakikî ağırlığını
@@ -921,11 +922,9 @@ class QMeleke:
             # fakat maliyeti akışta ölçülmelidir; meleke başına
             # çağırmak, kazancın çoğunu maliyetin küçük bir kısmıyla
             # alır. Bu bir tercih değil, ölçülen iki ucun arasıdır.
-            if KANONIK_ACIK:
-                q.y.kanonikle()
-            self.uygula(q, p)
-        finally:
-            q.y.bag_tavan = eski
+        if KANONIK_ACIK:
+            q.y.kanonikle()
+        self.uygula(q, p)
         q.iz.not_dus("𝒪%d %s" % (self.no, self.ad),
                      "%d kapı" % (q.iz.kapi - n0))
 
@@ -935,12 +934,12 @@ class QMeleke:
         """Veri kübitleri üzerinde fırça (brick) düzeninde ``SO(4)`` katmanı.
 
         Komşu çiftlere dik kapı vurmak dolaşıklığı yayar; iki ofsetli iki
-        katman, menzili bir kademede iki katına çıkarır (MERA'nın MPS
-        üzerindeki fiilî karşılığı).
+        katman, menzili bir kademede iki katına çıkarır (kademeli
+        harmanın fırça düzenindeki karşılığı).
         """
         a = self.aci(p, 6, olcek)
         G = dik_iki_kubit(a)
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         # **Y I Ğ I N.** Bütün fırça çiftleri birbirinden ayrıktır:
         # bir satır içinde ``j`` ile ``j+2`` çakışmaz, satırlar arasında
         # da yerel hüküm kübiti ayırıcı durur. O hâlde ``n·⌊k/2⌋`` ayrı
@@ -952,7 +951,7 @@ class QMeleke:
     def satir_donmesi(self, q: QYazmac, p: "QParametre",
                       olcek: float = 0.6) -> None:
         """Her satırın her veri kübitine kendi öğrenilen dönmesi."""
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         a = self.aci(p, k, olcek)          # sütun başına, satırdan bağımsız
         # Kapılar sütuna bağlı olduğu için ``k`` ayrı dizey yeter;
         # ``n·k`` yuvaya tek çağrıda yayılır.
@@ -998,7 +997,7 @@ class QHayal(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.9)
-        j = q.ayar.satir_kubiti - 1
+        j = q.ayar.veri_lifi - 1
         q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)],
                     np.stack([donme(0.25 * math.pi + float(t)) for t in a]))
 
@@ -1016,7 +1015,7 @@ class QMuhayyile(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.8))
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         for i in range(q.n_satir):
             for j in range(0, k - 2):
                 q.uzak_cift(q.veri(i, j), q.veri(i, j + 2), G)
@@ -1037,7 +1036,7 @@ class QTertip(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.7)
-        j = q.ayar.satir_kubiti - 1
+        j = q.ayar.veri_lifi - 1
         # (veri son kübiti, yerel hüküm) çiftleri bitişik ve ayrıktır
         q.cift_yigin([q.veri(i, j) for i in range(q.n_satir)],
                      np.stack([kontrollu_donme(float(t)) for t in a]))
@@ -1071,7 +1070,7 @@ class QTecrit(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         q.cift_yigin([q.veri(i, j) for i in range(q.n_satir)
                       for j in range(1, k - 1, 2)], G.T)
 
@@ -1087,7 +1086,7 @@ class QTasavvur(QMeleke):
     SINIF, CHI = "kurucu", 16   # MERA kademesi: dolaşıklığı satırlar arasına taşır
 
     def uygula(self, q, p):
-        q.mera(kademe=1, teta=self.aci(p, 24, 0.6))
+        q.harman(kademe=1, teta=self.aci(p, 24, 0.6))
 
 
 @qkaydet
@@ -1142,7 +1141,7 @@ class QTezat(QMeleke):
 
     def uygula(self, q, p):
         Z = faz_z()
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         q.tek_yigin([q.veri(i, k - 1) for i in range(1, q.n_satir, 2)], Z)
 
 
@@ -1259,7 +1258,7 @@ class QDenemeYanilma(QMeleke):
     SINIF, CHI = "kurucu", 8   # keşif hamleleri
 
     def uygula(self, q, p):
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         a = self.aci(p, k, 0.3)
         Gk = np.tile(np.stack([donme(float(t)) for t in a]),
                      (q.n_satir, 1, 1))
@@ -1317,7 +1316,7 @@ class QTemsil(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.6))
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         sol = [q.veri(i, 0) for i in range(q.n_satir)]
         if k >= 4:
             sol += [q.veri(i, 2) for i in range(q.n_satir)]
@@ -1338,7 +1337,7 @@ class QTesbih(QMeleke):
         if q.n_satir < 2:
             return
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         for j in range(k):
             q.uzak_cift(q.veri(0, j), q.veri(1, j), G)
 
@@ -1366,7 +1365,7 @@ class QTefekkur(QMeleke):
     def uygula(self, q, p):
         lifler = lifleri_kur(DINAMIK)
         a = self.aci(p, len(lifler), 1.0)
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
 
         # --- (1) Tek kübitlik kısım: her lif KENDİ eksenine dokunur.
         # Aynı eksene düşen lifler (yuva % k aynı olanlar) aynı kübite
@@ -1557,7 +1556,7 @@ class QTashih(QMeleke):
     SINIF, CHI = "çözücü", 2   # tashih: tetkikin bir kısmını geri alır
 
     def uygula(self, q, p):
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         tetkik = QTetkik().aci(p, k, 0.2)
         lam = float(np.tanh(self.aci(p, 1, 1.0)[0]))
         Gk = np.tile(np.stack([donme(-lam * float(t)) for t in tetkik]),
@@ -1609,7 +1608,7 @@ class QTeyit(QMeleke):
     SINIF, CHI = "koruyucu", 8   # teyit: veri ile yerel hüküm
 
     def uygula(self, q, p):
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         if k < 2:
             return
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
@@ -1788,7 +1787,7 @@ class QTefsir(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.4))
-        k = q.ayar.satir_kubiti
+        k = q.ayar.veri_lifi
         for i in range(1, q.n_satir):
             q.uzak_cift(q.veri(i - 1, k - 1), q.veri(i, 0), G)
 
@@ -2249,7 +2248,7 @@ class QNefs:
         if tikaniklik:
             ortu(ne="kapı", q=q, h1=float(tikaniklik))
         q.superpozisyon()
-        q.mera()
+        q.harman()
         # **MANTIĞA SADAKAT: her melekeden sonra, muafiyetsiz** (H102/H105).
         # Bu bir meleke değildir, melekelerin tâbi olduğu şarttır -- yani
         # bu mimarinin kalbidir. Kaldırıldığında hiçbir hüküm mantıklı
@@ -2358,7 +2357,7 @@ def rapor_qakis(tohum: int = 0, n: int = 20, d_in: int = 12,
     s = ["=== nefs (KÜBİT): 41 meleke, tek dalga, tek ölçüm ===",
          "",
          "kübit=%d  (satır=%d × %d + küllî %d)   χ=%d   durum=%.1f KB"
-         % (q.n, q.n_satir, q.oge, q.ayar.kulli_kubit, q.ayar.bag,
+         % (q.n, q.n_satir, q.oge, q.ayar.kulli_yuva, q.ayar.bag,
             q.y.bayt / 1024.0),
          "kapı=%d  takas=%d  MPO=%d  toplam kesme=%.3e  %.2f sn"
          % (q.iz.kapi, q.iz.takas, q.iz.supurme, q.iz.kesme, dt),

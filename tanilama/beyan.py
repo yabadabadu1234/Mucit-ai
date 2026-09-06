@@ -34,7 +34,24 @@ __all__ = ["talim_beyani", "cikarim_beyani", "kaggle_beyani"]
 
 def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
     """Tâlimin neticesini beyan et. ``kulli`` ``kulli_kayip_talimi``dendir."""
+    from nefs.olcek import Kok, olcek_beyani
     s = ["", "=== TÂLİM NETİCESİ (%s) ===" % ayar.ad, ""]
+    if kulli and kulli.get("ölçek"):
+        s += [olcek_beyani(Kok(sozluk=int(ayar.sozluk),
+                               comert=float(ayar.comert),
+                               tohum=int(ayar.tohum)),
+                           kulli["ölçek"]), ""]
+        d_ = kulli["denge"]
+        s += ["  FORMÜL 3'ÜN NETİCESİ -- ÖLÇÜLEN λ'LAR:",
+              "    " + "  ".join(
+                  "%s %.4f" % (a.replace("lam_", ""), v)
+                  for a, v in sorted(d_.items()) if a != "frenlenen"),
+              "    frenlenen: %s" % (", ".join(d_.get("frenlenen", []))
+                                     or "yok -- hepsi ölçüyle kondu"),
+              "    elle verilen (türetilmeyen): %s"
+              % (", ".join(kulli.get("elle_verilen") or ())
+                 or "yok -- hepsi formülden"),
+              ""]
     if kulli:
         d = kulli["değerlendirme"]
         s += ["  KÜLLÎ KAYIP TÂLİMİ -- TEK HAT",
@@ -56,8 +73,9 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "      TABAKALI MİZAN (zabıt: kör NLL intihardır)",
               "        L_toplam = L_nokta + α·L_uzay + β·L_kategori "
               "+ γ·L_tip",
-              "        α = 1 (çıpa)   β = %.2f   γ = %.2f"
-              % (ayar.lam_kategori, ayar.lam_hodge),
+              "        α = 1 (çıpa)   β = %.4f   γ = %.4f   "
+              "(ikisi de ÖLÇÜLDÜ, elle yazılmadı)"
+              % (ayar.lam_kategori, ayar.lam_tip),
               "      0. ℒ_Nokta   (kısmî Born)  : %.6f   × %.2f"
               % (m["nokta"], ayar.lam_nokta),
               "         −ln Tr(P_hedef ρ). KÖR NLL DEĞİL: üç zırhtan "

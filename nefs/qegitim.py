@@ -202,7 +202,7 @@ def adayin_tuttugu(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
     olduğunu bilmiyoruz; orada **ne olacağını** biliyoruz.
     """
     def kos(bag):
-        E = belirtecleri_kodla(bag, nefs.ayar.satir_kubiti, sozluk)
+        E = belirtecleri_kodla(bag, nefs.ayar.veri_lifi, sozluk)
         q = nefs.idrak_et(E)
         return q.beyan(sozluk), q.olcumler()
 

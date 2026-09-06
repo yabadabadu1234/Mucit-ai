@@ -1173,10 +1173,10 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
         from .qegitim import belirtecleri_kodla, ornekler
         a = ayar or KISA_CPU
         nefs = QNefs(a.tohum, a.qayar())
-        nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
+        nefs.idrak_et(np.zeros((2, a.veri_lifi)))
         veri = ornekler(gorevleri_getir("training")[:6], azami=2,
                         pencere=a.pencere, sozluk=a.sozluk)
-        E = np.stack([belirtecleri_kodla(b, a.satir_kubiti, a.sozluk)
+        E = np.stack([belirtecleri_kodla(b, a.veri_lifi, a.sozluk)
                       for b, _ in veri])
     _q, _ok, dSler = olcumlu_idrak(nefs, E, meleke_olcumu=False,
                                    sinif_olcumu=True)
@@ -1672,10 +1672,10 @@ def rapor() -> str:                                     # pragma: no cover
     from nefs.zihin_durumu import QAyar, QYazmac
     rng = np.random.default_rng(0)
     for bag in (4, 8, 16):
-        q = QYazmac(4, QAyar(bag=bag))
+        q = QYazmac(4, QAyar())
         q.kodla(rng.normal(size=(4, 8)))
         q.superpozisyon()
-        q.mera()
+        q.harman()
         # ``tasdik`` ile ``nakz`` arasında ``sukut`` var; bitişik
         # olan çift ``tenakuz`` ile ``tasdik``tır. Bitişiklik şartı
         # gevşetilmiyor, ona uyan alanlar seçiliyor.

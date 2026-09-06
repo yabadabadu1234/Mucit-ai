@@ -77,7 +77,7 @@ def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
     print("BLAS ipliği süreç başına 1'e sabitlendi: %s" % _TEK_IPLIK,
           flush=True)
     print("seçilen ayar: %s  (satır kübiti=%d, χ=%d, çevrim=%d, örnek=%d)"
-          % (ayar.ad, ayar.satir_kubiti, ayar.bag, ayar.cevrim, ayar.ornek),
+          % (ayar.ad, ayar.veri_lifi, ayar.bag, ayar.cevrim, ayar.ornek),
           flush=True)
 
     t0 = time.perf_counter()

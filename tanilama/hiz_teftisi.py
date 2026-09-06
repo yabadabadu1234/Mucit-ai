@@ -98,7 +98,7 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
                     sozluk=int(a.sozluk), tohum=int(a.tohum))
     assert veri, "hız teftişi için veri BOŞ"
     nefs = QNefs(a.tohum, a.qayar())
-    nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
+    nefs.idrak_et(np.zeros((2, a.veri_lifi)))
     p = nefs.vektor()
 
     kalem: List[Kalem] = []
@@ -106,14 +106,14 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     # ── 1. Kodlama
     t = 0.0
     for bag, _h in veri:
-        _, s = _saat(belirtecleri_kodla, list(bag), a.satir_kubiti, a.sozluk)
+        _, s = _saat(belirtecleri_kodla, list(bag), a.veri_lifi, a.sozluk)
         t += s
     kalem.append(Kalem("belirteç kodlaması", len(veri), t))
 
     # ── 2. İLERİ GEÇİŞ (41 meleke) -- asıl şüpheli
-    E = belirtecleri_kodla(list(veri[0][0]), a.satir_kubiti, a.sozluk)
+    E = belirtecleri_kodla(list(veri[0][0]), a.veri_lifi, a.sozluk)
     t = 0.0
-    Ey = np.stack([belirtecleri_kodla(list(bag), a.satir_kubiti, a.sozluk)
+    Ey = np.stack([belirtecleri_kodla(list(bag), a.veri_lifi, a.sozluk)
                    for bag, _h in veri])
     for _ in range(int(tekrar)):
         _, s = _saat(nefs.idrak_et, Ey)
@@ -129,11 +129,11 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     tek.sort(key=lambda x: -x[1])
 
     # ── 4. Yazmaç ameliyeleri
-    _, s_mera = _saat(q.mera)
+    _, s_harman = _saat(q.harman)
     _, s_olc = _saat(q.olcumler)
     _, s_ent = _saat(q.y.dolasiklik_entropisi)
     _, s_bey = _saat(q.beyan, a.sozluk)
-    kalem.append(Kalem("mera", 1, s_mera))
+    kalem.append(Kalem("harman", 1, s_harman))
     kalem.append(Kalem("olcumler", 1, s_olc))
     kalem.append(Kalem("dolaşıklık entropisi", 1, s_ent))
     kalem.append(Kalem("beyan", 1, s_bey))

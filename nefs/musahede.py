@@ -2372,7 +2372,7 @@ def iki_sahit_ayri_mi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
     A, B = [], []
     for t in range(int(n_kosu)):
         E = np.random.default_rng(500 + t).normal(size=(n_satir, 12))
-        q = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum)).idrak_et(E)
+        q = QNefs(tohum, QAyar(tohum=tohum)).idrak_et(E)
         a, b = kanal(q)
         A.append(a)                       # satır satır -- koşu ortalaması DEĞİL
         B.append(b)
@@ -2514,7 +2514,7 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
         if len(X) == 0:
             return np.zeros(16)
         E = np.concatenate([X, Y], axis=1)              # (çift, 28)
-        q = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum)).idrak_et(E)
+        q = QNefs(tohum, QAyar(tohum=tohum)).idrak_et(E)
         return np.asarray(q.beyan(16), float)
 
     if ne != "açı":
@@ -2695,7 +2695,7 @@ def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
         if len(X) == 0:
             continue
         E = np.concatenate([X, Y], axis=1)
-        q = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum)).idrak_et(
+        q = QNefs(tohum, QAyar(tohum=tohum)).idrak_et(
             E, tikaniklik=(float(c["H1"]) if kapi else 0.0))
         yuv = [q.kulli("sukut", j)
                for j in range(q._alan["sukut"][1])]

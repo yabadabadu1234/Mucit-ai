@@ -68,7 +68,7 @@ def haraplama(tohum: int = 0, satir: int = 6, sozluk: int = 16,
     ayar = ayar or QAyar(tohum=tohum)
     rng = np.random.default_rng(tohum)
     belirtec = [int(x) for x in rng.integers(0, sozluk, size=satir)]
-    E = belirtecleri_kodla(belirtec, ayar.satir_kubiti, sozluk)
+    E = belirtecleri_kodla(belirtec, ayar.veri_lifi, sozluk)
 
     P0, o0 = _kos(QAKIS, E, ayar, sozluk, tohum)
     sicil = qsicil()
@@ -126,7 +126,7 @@ def rapor(tohum: int = 0, satir: int = 6, esik: float = 1e-6) -> str:
     ayar_k = QAyar(tohum=tohum)
     rng_k = np.random.default_rng(tohum)
     bel = [int(x) for x in rng_k.integers(0, sozluk_varsayilan(), size=satir)]
-    Ek = belirtecleri_kodla(bel, ayar_k.satir_kubiti, sozluk_varsayilan())
+    Ek = belirtecleri_kodla(bel, ayar_k.veri_lifi, sozluk_varsayilan())
     Pk, ok_ = _kos(QAKIS, Ek, ayar_k, sozluk_varsayilan(), tohum, kalp=True)
     Ps, os_ = _kos(QAKIS, Ek, ayar_k, sozluk_varsayilan(), tohum, kalp=False)
     kalp_tvd = _tvd(Pk, Ps)

@@ -90,7 +90,7 @@ def _tek_kosu(acik: bool, chi: int, tohum: int, n: int, d_in: int,
     try:
         rng = np.random.default_rng(tohum)
         E = rng.normal(size=(n, d_in))
-        nefs = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum))
+        nefs = QNefs(tohum, QAyar(tohum=tohum))
         q = nefs.idrak_et(E)
         # **ÖLÇÜ ALETİ DÜZELTİLDİ (kütük H173).** Evvelce burada
         # ``dolasiklik_entropisi()`` varsayılanıyla çağrılıyordu: kesit
@@ -128,7 +128,7 @@ def _tek_kosu(acik: bool, chi: int, tohum: int, n: int, d_in: int,
         beyanlar = [P]
         for t in range(1, girdi_sayisi):
             r2 = np.random.default_rng(tohum + 1000 * t)
-            q2 = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum)).idrak_et(
+            q2 = QNefs(tohum, QAyar(tohum=tohum)).idrak_et(
                 r2.normal(size=(n, d_in)))
             beyanlar.append(_beyan(q2))
         cift = [0.5 * float(np.sum(np.abs(beyanlar[i] - beyanlar[j])))

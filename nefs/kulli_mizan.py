@@ -147,7 +147,7 @@ class MizanAyari:
 
     lam_cevrim: float = 1.0
     lam_monogami: float = 0.5
-    lam_hodge: float = 0.75
+    lam_tip: float = 0.75   # ℒ_Hodge; ``denge()`` ölçer
     #: λ₄ kuantum engellenmesi (bkz. ``_engellenme``).
     lam_engel: float = 0.6
     #: Aynanın (Coherent Ising Machine) ölçüleri -- engellenme onunla
@@ -798,7 +798,7 @@ def _ileri(nefs, veri, sozluk: int) -> Dict[str, Any]:
     sektor: List[Tuple[int, int]] = []
     veri = list(veri)
     B = max(1, int(getattr(nefs.ayar, "yigin", 1)))
-    kubit = int(nefs.ayar.satir_kubiti)
+    kubit = int(nefs.ayar.veri_lifi)
     for bas in range(0, len(veri), B):
         dilim = veri[bas:bas + B]
         E = np.stack([belirtecleri_kodla(list(bag), kubit, sozluk)
@@ -1011,7 +1011,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     #
     # ``α = 1``dir ve bir katsayı değil **çıpadır**: ``L_uzay`` mizanın
     # veriye bağlandığı tek yerdir (``L_rez``, Uhlmann). ``γ`` zaten
-    # ``lam_hodge``, ``β`` ise ``lam_kategori``.
+    # ``lam_tip``, ``β`` ise ``lam_kategori``.
     #
     # Mizanın kendi kefeleri (çevrim, tenakuz, monogami, engel) bunun
     # **üstüne** binmez, yanına gelir: onlar hükmün iç tutarlılığını,
@@ -1026,7 +1026,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     kayip = (float(a.lam_nokta) * L_nok                     # 0. nokta
              + L_rez                                        # 1. uzay (α=1)
              + float(a.lam_kategori) * L_kat                # 2. kategori
-             + float(a.lam_hodge) * L_hod                   # 3. tip
+             + float(a.lam_tip) * L_hod                   # 3. tip
              + float(a.lam_cevrim) * fitrata
              + float(a.lam_tenakuz) * L_ten
              + L_gedik
@@ -1156,7 +1156,7 @@ def rapor(profil: str = "kısa") -> str:                  # pragma: no cover
     veri = ornekler(g, azami=int(ayar.ornek_sayisi), pencere=ayar.pencere,
                     sozluk=ayar.sozluk, tohum=ayar.tohum)
     nefs = QNefs(ayar.tohum, ayar.qayar())
-    nefs.idrak_et(np.zeros((2, ayar.satir_kubiti)))
+    nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
     haf = Hafiza(kapasite=64)
 
     t0 = time.perf_counter()

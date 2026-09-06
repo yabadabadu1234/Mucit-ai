@@ -4608,7 +4608,7 @@ def rapor() -> str:                                     # pragma: no cover
              ""]
         satirlar = []
         for acik in (False, True):
-            q = QNefs(tohum, QAyar(bag=16, tohum=tohum), gaye=acik).idrak_et(E)
+            q = QNefs(tohum, QAyar(tohum=tohum), gaye=acik).idrak_et(E)
             alanlar = {}
             for ad, kac in q.ayar.kulli_alanlar:
                 yuv = [q.kulli(ad, j) for j in range(kac)]

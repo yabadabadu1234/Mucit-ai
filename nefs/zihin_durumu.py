@@ -50,23 +50,36 @@ __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI", "donme",
 class QAyar:
     """Zihin durumunun ölçüleri. Alan adları eski hâliyle **aynı**."""
 
-    #: **ARTIK KÜBİT SAYISI DEĞİL, SEVİYE SAYISIDIR.** Ad eski hâliyle
-    #: duruyor (bütün çağrı yerleri onu kullanıyor) fakat mânâsı ikili
-    #: kodlamayla beraber değişti: veri lifi ``ℂ^satir_kubiti``dir.
+    #: **VERİ LİFİ -- belirtecin oturduğu qudit seviyesi.**
     #:
-    #: **ÖLÇÜLEN HATA (bu tur).** Burada ``sozluk = 1 << satir_kubiti``
-    #: yazıyordu -- imha edilen ikili kodlamadan kalma. ``EgitimAyari``
-    #: bu alanı 4'ten 16'ya çıkarınca (16 belirteç 16 seviyeye dizilsin
-    #: diye) formül ``1 << 16 = 65 536`` verdi ve ``mera`` 65536²'lik
-    #: bir dizey istedi: **32 GiB**, tâlim daha ilk adımda düştü. Yâni
-    #: yasağın kaldığı tek yer buydu ve ancak fiilen koşturunca ortaya
-    #: çıktı. Formül kaldırıldı: seviye sayısı doğrudan okunuyor.
-    satir_kubiti: int = 16
-    yerel_kubit: int = 1
-    #: Eski ``χ`` bağ boyutu. **Quditte bağ YOKTUR**; alan yalnız
-    #: uyum için duruyor ve okunduğunda hiçbir şeyi kısmaz.
-    bag: int = 8
-    mera_kademe: int = 3
+    #: Eski adı ``veri_lifi``ydi ve o ad **ikili kodlamadan kalmaydı**:
+    #: bir zamanlar ``sozluk = 1 << veri_lifi`` yazıyordu, yâni
+    #: ``veri_lifi`` hakikaten kübit sayısıydı. İkili kodlama
+    #: fermanla imha edilince (qudit seviye kodlaması geldi) alanın
+    #: **manası değişti fakat adı değişmedi** -- ve tam da bu yüzden
+    #: 4'ten 16'ya çıkarıldığında eski formül ``1 << 16 = 65 536``
+    #: verdi, harman 65536²'lik bir dizey istedi (**32 GiB**) ve tâlim
+    #: ilk adımda düştü.
+    #:
+    #: Ad artık manasına uyuyor: bu bir **lif**tir, kübit değil.
+    veri_lifi: int = 16
+    #: Satır başına yerel hüküm yuvası (eski ``yerel_yuva``). Yine
+    #: kübit değil, yuva: quditin bir seviyesi.
+    yerel_yuva: int = 1
+    # **``bag`` (χ) KESİLDİ.** MPS bağ boyutuydu ve o motor fermanla
+    # imhadır (SVD / bond truncation). Alan yalnız "uyum için" duruyor,
+    # okunduğunda hiçbir şeyi kısmıyordu; ``QuditYazmac.bag_tavan`` da
+    # kurulup **hiç okunmuyordu**. Yâni χ, iptal edilmiş bir dünyanın
+    # kodda kalan gölgesiydi ve quditte karşılığı **yoktur**: durum tam
+    # tutulur, kesme sıfırdır.
+    #: Kademe kademe yerel üniter **harmanı** (eski ``harman_kademesi``).
+    #:
+    #: "MERA" (Multiscale Entanglement Renormalization Ansatz) bir
+    #: tensör-ağı kurgusudur ve o dünya fermanla iptaldir (SVD/MPS/bağ
+    #: kesmesi). Kodda kalan ameliye ise MERA değildi: her kademede her
+    #: bit düzlemine bir ``SU(2)`` dönmesi vurmak, yâni **harmanlamak**.
+    #: Ad, yapılan işe çevrildi.
+    harman_kademesi: int = 3
     tohum: int = 0
     obek: int = 150000
     yigin: int = 1
@@ -75,7 +88,7 @@ class QAyar:
         ("sukut", 1), ("nakz", 2), ("kelam", 4), ("kaide", 12),
         ("orak", 1), ("gaye", 2), ("tertip", 4),
     )
-    kaide_bit: int = 4
+    kaide_basamak: int = 4
     bolge_ac: bool = True
     bolge_asgari: int = 1
     #: Hüküm lifinin boyutu. **Zabıtın misali 4096'dır ve o tam dil
@@ -126,7 +139,7 @@ class QAyar:
     tip: object = np.complex128
 
     @property
-    def kulli_kubit(self) -> int:
+    def kulli_yuva(self) -> int:
         return sum(n for _, n in self.kulli_alanlar)
 
 
@@ -170,9 +183,9 @@ class QYazmac:
         #
         # ``n_satir`` artık lif sayısı değil, **kaç belirteç faza
         # katıldığıdır**.
-        sozluk = int(a.satir_kubiti)
+        sozluk = int(a.veri_lifi)
         assert sozluk >= 2, (
-            "veri lifi en az iki seviyeli olmalı: satir_kubiti=%d" % sozluk)
+            "veri lifi en az iki seviyeli olmalı: veri_lifi=%d" % sozluk)
         d = sozluk * int(a.hukum_lifi)
         # **ZABITIN YOL 3'Ü**: hüküm lifi tek parça (256) değil, ``16``lık
         # karolara bölünür. Toplam boyut aynıdır (``d`` değişmez), düz
@@ -187,11 +200,11 @@ class QYazmac:
         self.y = QuditYazmac(
             QuditAyar(d=d, lif=lif, yigin=int(a.yigin),
                       kulli_alanlar=a.kulli_alanlar,
-                      yerel_kubit=int(a.yerel_kubit), tohum=int(a.tohum),
+                      yerel_yuva=int(a.yerel_yuva), tohum=int(a.tohum),
                       tip=a.tip, motor=str(a.motor),
                       faz_mertebesi=int(a.faz_mertebesi),
                       hat=str(a.hat), hat_bandi=int(a.hat_bandi)),
-            n_satir=1, satir_kubiti=int(a.satir_kubiti))
+            n_satir=1, veri_lifi=int(a.veri_lifi))
         self.iz = self.y.iz
         # ── ARA KATMAN KALDIRILDI (ölçüldü) ───────────────────────
         # ``veri``, ``yerel`` ve ``kulli`` burada yalnız ``self.y``ye
@@ -257,15 +270,15 @@ class QYazmac:
 
     @property
     def veri_kubiti(self) -> int:
-        return self.n_satir * int(self.ayar.satir_kubiti)
+        return self.n_satir * int(self.ayar.veri_lifi)
 
     @property
-    def kulli_kubit(self) -> int:
-        return self.ayar.kulli_kubit
+    def kulli_yuva(self) -> int:
+        return self.ayar.kulli_yuva
 
     @property
     def meleke_kubiti(self) -> int:
-        return self.kulli_kubit
+        return self.kulli_yuva
 
     @property
     def ancilla(self) -> int:
@@ -334,7 +347,7 @@ class QYazmac:
         E = np.asarray(E, float)
         if E.ndim == 2:
             E = E[None]
-        sozluk = int(self.ayar.satir_kubiti)
+        sozluk = int(self.ayar.veri_lifi)
         B = self.y.B
         n_sat = E.shape[1]
         T = np.zeros((B, sozluk, int(self.ayar.hukum_lifi)), complex)
@@ -408,7 +421,7 @@ class QYazmac:
         self.y.psi = T.reshape(self.y.B, self.y.d)
         self.y.normalize()
 
-    def mera(self, kademe: Optional[int] = None, teta=None,
+    def harman(self, kademe: Optional[int] = None, teta=None,
              kulli_dahil: bool = True) -> None:
         """MERA -- quditte **lif içi üniter**, izometri/kesme yok."""
         # **BİT DÜZLEMİNE ÇEVRİLDİ (graf motoru).** Evvelce lif başına
@@ -419,7 +432,7 @@ class QYazmac:
         # tır ve bit düzlemi kapıları tam olarak odur: her kademede her
         # bit düzlemine bir ``SU(2)`` dönmesi vurulur. Aynı tohum aynı
         # diziyi verir; stokastiklik yoktur.
-        k = int(kademe if kademe is not None else self.ayar.mera_kademe)
+        k = int(kademe if kademe is not None else self.ayar.harman_kademesi)
         r = np.random.default_rng(int(self.ayar.tohum) + 17)
         for _ in range(max(1, k)):
             for f, n in enumerate(self.y.ayar.lif):

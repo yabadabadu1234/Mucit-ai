@@ -151,7 +151,7 @@ def _motor(ayar=None, ham: bool = False):
     from nefs.melekeler import QNefs
     a = ayar or KISA_CPU
     nefs = QNefs(a.tohum, a.qayar())
-    nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
+    nefs.idrak_et(np.zeros((2, a.veri_lifi)))
     # **KADEME PARAMETRELERİ BURADA DA AÇILIR.** Tâlim onları açıyor
     # (``main/egitim.py``, ``kademe_parametreleri_ac``) ve hazineye 324
     # sayı yazıyordu; çıkarım açmayınca 318 kuruyor ve yükleme

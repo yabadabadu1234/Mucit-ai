@@ -517,7 +517,7 @@ def test_gaye_alani_ARTIK_YASIYOR_ve_sukutu_bastiriyor():
 
     def kos(acik, tohum):
         E = np.random.default_rng(200 + tohum).normal(size=(5, 12))
-        q = QNefs(0, QAyar(bag=16, tohum=0), gaye=acik).idrak_et(E)
+        q = QNefs(0, QAyar(tohum=0), gaye=acik).idrak_et(E)
         d = {}
         for ad in ("gaye", "sukut"):
             _, kac = q._alan[ad]
@@ -606,10 +606,10 @@ def test_mera_kulli_hukum_blokuna_dokunmuyor():
     from .zihin_durumu import QAyar, QYazmac
 
     def blok(kulli_dahil):
-        q = QYazmac(3, QAyar(bag=16, tohum=0))
+        q = QYazmac(3, QAyar(tohum=0))
         q.kodla(np.random.default_rng(0).normal(size=(3, 12)))
         q.superpozisyon()
-        q.mera(kulli_dahil=kulli_dahil)
+        q.harman(kulli_dahil=kulli_dahil)
         yuv = list(range(q.kulli_bas, q.n))
         return np.asarray(q.y.tekil_yogunluklar(yuv), float)[0]
 
@@ -724,7 +724,7 @@ def test_eklem_paralel_degil_ve_KIRMIZIYA_donebiliyor():
     assert q.bolge_var("meleke") and q.bolge_var("parametre")
     q.kodla(np.random.default_rng(0).normal(size=(5, 8)))
     q.superpozisyon()
-    q.mera()
+    q.harman()
     once = q.eklem_olcusu()
     assert len(once["kesit"]) == 4, once["kesit"]
     assert not once["eklemli"], once            # KIRMIZI olabiliyor

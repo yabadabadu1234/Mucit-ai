@@ -541,7 +541,7 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
     def bolge_yuvalari(q):
         """Her bölgenin zincirdeki kübit yerleri."""
         d = {"veri": [q.veri(i, j) for i in range(q.n_satir)
-                      for j in range(q.ayar.satir_kubiti)],
+                      for j in range(q.ayar.veri_lifi)],
              "yerel": q.yereller()}
         for a, kac in q.ayar.kulli_alanlar:
             d[a] = [q.kulli(a, j) for j in range(kac)]
@@ -559,10 +559,10 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
 
     # --- dolaşık başlangıç
     rng = np.random.default_rng(tohum)
-    q = QYazmac(n_satir, QAyar(bag=int(chi), tohum=tohum))
+    q = QYazmac(n_satir, QAyar(tohum=tohum))
     q.kodla(rng.normal(size=(n_satir, 12)))
     q.superpozisyon()
-    q.mera()
+    q.harman()
     for a, kac in q.ayar.kulli_alanlar:
         for j in range(kac):
             q.tek(q.kulli(a, j), donme(0.4))
@@ -1347,7 +1347,7 @@ def suz(gorev, yakin_esigi: float = YAKIN_ESIGI,
             return None
         E = np.concatenate([X, Y], axis=1)
         c = ortu(gorev)
-        q = (nefs or QNefs(tohum, QAyar(bag=int(chi), tohum=tohum))
+        q = (nefs or QNefs(tohum, QAyar(tohum=tohum))
              ).idrak_et(E, tikaniklik=float(c["H1"]))
         _, ks = q._alan["sukut"]
         sk = float(np.asarray(q.y.tekil_yogunluklar(
@@ -1665,7 +1665,7 @@ def bolge_degeri(q, ad: str) -> Optional[float]:
         return zayif_halka(q.povm(y))
     if ad == "veri":
         y = [q.veri(i, j) for i in range(q.n_satir)
-             for j in range(q.ayar.satir_kubiti)][:VERI_ORNEK]
+             for j in range(q.ayar.veri_lifi)][:VERI_ORNEK]
         assert y, "veri yuvası yok -- ``veri`` bölgesi BOŞ"
         return zayif_halka(q.povm(y))
     assert ad not in _TAKSIMAT_ARTIGI, (
@@ -1704,7 +1704,7 @@ def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
     q = QYazmac(E.shape[-2], ayar)
     q.kodla(E)
     q.superpozisyon()
-    q.mera()
+    q.harman()
 
     def _entropi() -> float:
         """Dolaşıklık entropisi -- **yalnız o**.
@@ -1915,7 +1915,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     if azami_veri:
         veri = veri[:int(azami_veri)]
     hepsi: List[Olcum] = []
-    E_yigin = np.stack([belirtecleri_kodla(b, nefs.ayar.satir_kubiti,
+    E_yigin = np.stack([belirtecleri_kodla(b, nefs.ayar.veri_lifi,
                                            sozluk) for b, _h in veri])
     q, okumalar, dS = olcumlu_idrak(nefs, E_yigin, meleke_olcumu)
     if meleke_olcumu:
@@ -2462,7 +2462,7 @@ def rapor() -> str:                                     # pragma: no cover
 
         ayar = KISA_CPU
         nefs = QNefs(ayar.tohum, ayar.qayar())
-        nefs.idrak_et(np.zeros((2, ayar.satir_kubiti)))
+        nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
         veri = ornekler(gorevleri_getir("training")[:6], azami=int(n),
                         pencere=ayar.pencere, sozluk=ayar.sozluk)
         t = kulli_kayip(nefs, veri, sozluk=ayar.sozluk)

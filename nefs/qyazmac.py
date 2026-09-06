@@ -117,8 +117,8 @@ class QuditAyar:
         ("sukut", 1), ("nakz", 2), ("kelam", 4), ("kaide", 12),
         ("orak", 1), ("gaye", 2), ("tertip", 4),
     )
-    #: Satır başına yerel hüküm yuvası (eski ``QAyar.yerel_kubit``).
-    yerel_kubit: int = 1
+    #: Satır başına yerel hüküm yuvası (eski ``QAyar.yerel_yuva``).
+    yerel_yuva: int = 1
     tip: object = np.complex128
     tohum: int = 0
     #: **MOTOR** -- durumun fazı hangi grupta yürüyor.
@@ -151,7 +151,7 @@ class QuditYazmac:
     """
 
     def __init__(self, ayar: Optional[QuditAyar] = None,
-                 n_satir: int = 2, satir_kubiti: int = 4,
+                 n_satir: int = 2, veri_lifi: int = 4,
                  n: Optional[int] = None, bag: Optional[int] = None,
                  tohum: int = 0, tip=None, obek: Optional[int] = None,
                  yigin: Optional[int] = None) -> None:
@@ -165,11 +165,11 @@ class QuditYazmac:
             k = int(min(max(k, 1), 20))
             ayar = QuditAyar(d=1 << k, lif=(1 << k,), tohum=int(tohum),
                              yigin=int(yigin or 1))
-            n_satir, satir_kubiti = 1, k
+            n_satir, veri_lifi = 1, k
         self.ayar = ayar or QuditAyar()
         a = self.ayar
         self._n_satir = int(n_satir)
-        self._satir_kubiti = int(satir_kubiti)
+        self._veri_lifi = int(veri_lifi)
         # ── ÖNBELLEKLER (hız teftişinin ölçtüğü Python yükü) ──────
         self._yuva_onbellek: Dict[int, Tuple[int, int]] = {}
         #: Bütün lifler ikinin kuvveti mi? Bit düzlemi yolu buna bakar
@@ -229,7 +229,6 @@ class QuditYazmac:
         self.iz = Iz()
         # Bağ tavanı ve kanoniklik MPS mefhumlarıdır; quditte **yoktur**.
         # İmza uyumu için duruyorlar ve okunduklarında bunu söylerler.
-        self.bag_tavan = 0
         self.bag = 0
         # --- sektör taksimatı: alan payına göre, ORANTILI
         toplam = sum(p for _, p in a.kulli_alanlar)
@@ -249,8 +248,8 @@ class QuditYazmac:
     @property
     def n(self) -> int:
         """Yuva sayısı -- artık **lif tabanlı**, 126 değil."""
-        return self._n_satir * (self._satir_kubiti
-                                + int(self.ayar.yerel_kubit)) + self.d
+        return self._n_satir * (self._veri_lifi
+                                + int(self.ayar.yerel_yuva)) + self.d
 
     @property
     def A(self) -> np.ndarray:
@@ -382,8 +381,8 @@ class QuditYazmac:
     def superpozisyona_sok(self) -> None:
         self.superpozisyon()
 
-    def mera_kur(self, *a, **k) -> None:
-        self.iz.not_dus("mera_kur", "qudit lif üniterleri kullanılır")
+    def harman_kur(self, *a, **k) -> None:
+        self.iz.not_dus("harman_kur", "qudit lif üniterleri kullanılır")
 
     def tek_kapi(self, G, yuvalar) -> None:
         for y in np.atleast_1d(np.asarray(yuvalar)).reshape(-1):
@@ -904,8 +903,8 @@ class QuditYazmac:
         c = self._yuva_onbellek.get(y)
         if c is not None:
             return c
-        ns, sk = self._n_satir, self._satir_kubiti
-        satir_yuva = sk + int(self.ayar.yerel_kubit)
+        ns, sk = self._n_satir, self._veri_lifi
+        satir_yuva = sk + int(self.ayar.yerel_yuva)
         if y < ns * satir_yuva:
             c = (y // satir_yuva, y % satir_yuva)
         else:
@@ -974,19 +973,19 @@ class QuditYazmac:
         """
         c = self._veri_onbellek.get((i, j))
         if c is None:
-            c = int(i) * (self._satir_kubiti
-                          + int(self.ayar.yerel_kubit)) + int(j)
+            c = int(i) * (self._veri_lifi
+                          + int(self.ayar.yerel_yuva)) + int(j)
             self._veri_onbellek[(i, j)] = c
         return c
 
     def yerel(self, i: int) -> int:
-        return self.veri(i, self._satir_kubiti)
+        return self.veri(i, self._veri_lifi)
 
     def kulli(self, ad: str, j: int = 0) -> int:
         """Küllî alanın ``j``inci yuvası -- artık **sektör** indisi."""
         i, _ = self.sektor(ad)
-        return self._n_satir * (self._satir_kubiti
-                                + int(self.ayar.yerel_kubit)) + i + int(j)
+        return self._n_satir * (self._veri_lifi
+                                + int(self.ayar.yerel_yuva)) + i + int(j)
 
     def yereller(self) -> List[int]:
         return [self.yerel(i) for i in range(self._n_satir)]

@@ -279,7 +279,7 @@ def yakin_yuzlestirmesi(gorev, tohum: int = 0, chi: int = 8
 
     X, Yz = iki_olcegin_acisi(gorev, ne="öznitelik")
     E = np.concatenate([X, Yz], axis=1)
-    q = QNefs(tohum, QAyar(bag=int(chi), tohum=tohum)).idrak_et(
+    q = QNefs(tohum, QAyar(tohum=tohum)).idrak_et(
         E, tikaniklik=float(c["H1"]))
     P = np.atleast_1d(np.asarray(q.makam_dagilimi(), float)).ravel()
     # ``MAKAM_ADLARI``yı taban durumu indeksi sanmak bir hataydı: Gray
