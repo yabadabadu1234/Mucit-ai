@@ -271,6 +271,16 @@ class QYazmac:
         """Adreslenebilir veri satırı -- **yazmacın kendi sayısı**."""
         return int(self.y.n_satir)
 
+    @property
+    def veri_yuvasi(self) -> int:
+        """Bir satırdaki adreslenebilir veri yuvası -- **yazmaçtan**.
+
+        Melekeler evvelce ``q.ayar.veri_lifi``yi (16) yuva sayısı
+        sanıyordu; o **seviye** sayısıdır. Yuva bir bit düzlemidir ve
+        16 seviyeli lifte dörttür. Aradaki fark sessizce düşen kapıydı.
+        """
+        return int(self.y.veri_yuvasi)
+
     # ── adresleme (eski adlar, qudit altyapısı) ───────────────────
     def veri(self, i: int, j: int) -> int:
         return self.y.veri(i, j)
@@ -313,7 +323,7 @@ class QYazmac:
 
     @property
     def veri_kubiti(self) -> int:
-        return self.n_satir * int(self.ayar.veri_lifi)
+        return self.n_satir * self.veri_yuvasi
 
     @property
     def kulli_yuva(self) -> int:

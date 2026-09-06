@@ -958,7 +958,7 @@ class QMeleke:
         """
         a = self.aci(p, 6, olcek)
         G = dik_iki_kubit(a)
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         # **Y I Ğ I N.** Bütün fırça çiftleri birbirinden ayrıktır:
         # bir satır içinde ``j`` ile ``j+2`` çakışmaz, satırlar arasında
         # da yerel hüküm kübiti ayırıcı durur. O hâlde ``n·⌊k/2⌋`` ayrı
@@ -969,7 +969,7 @@ class QMeleke:
     def satir_donmesi(self, q: QYazmac, p: "QParametre",
                       olcek: float = 0.6) -> None:
         """Her satırın her veri kübitine kendi öğrenilen dönmesi."""
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         a = self.aci(p, k, olcek)          # sütun başına, satırdan bağımsız
         # Kapılar sütuna bağlı olduğu için ``k`` ayrı dizey yeter;
         # ``n·k`` yuvaya tek çağrıda yayılır.
@@ -1014,7 +1014,7 @@ class QHayal(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.9)
-        j = q.ayar.veri_lifi - 1
+        j = q.veri_yuvasi - 1
         q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)],
                     np.stack([donme(0.25 * math.pi + float(t)) for t in a]))
 
@@ -1032,7 +1032,7 @@ class QMuhayyile(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.8))
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         for i in range(q.n_satir):
             for j in range(0, k - 2):
                 q.uzak_cift(q.veri(i, j), q.veri(i, j + 2), G)
@@ -1053,7 +1053,7 @@ class QTertip(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.7)
-        j = q.ayar.veri_lifi - 1
+        j = q.veri_yuvasi - 1
         # (veri son kübiti, yerel hüküm) çiftleri bitişik ve ayrıktır
         q.cift_yigin([q.veri(i, j) for i in range(q.n_satir)],
                      np.stack([kontrollu_donme(float(t)) for t in a]))
@@ -1087,7 +1087,7 @@ class QTecrit(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         q.cift_yigin(q.veri_izgara(range(1, k - 1, 2)), G.T)
 
 
@@ -1157,7 +1157,7 @@ class QTezat(QMeleke):
 
     def uygula(self, q, p):
         Z = faz_z()
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         q.tek_yigin([q.veri(i, k - 1) for i in range(1, q.n_satir, 2)], Z)
 
 
@@ -1274,7 +1274,7 @@ class QDenemeYanilma(QMeleke):
     SINIF, CHI = "kurucu", 8   # keşif hamleleri
 
     def uygula(self, q, p):
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         a = self.aci(p, k, 0.3)
         Gk = np.tile(np.stack([donme(float(t)) for t in a]),
                      (q.n_satir, 1, 1))
@@ -1331,7 +1331,7 @@ class QTemsil(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.6))
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         sol = [q.veri(i, 0) for i in range(q.n_satir)]
         if k >= 4:
             sol += [q.veri(i, 2) for i in range(q.n_satir)]
@@ -1352,7 +1352,7 @@ class QTesbih(QMeleke):
         if q.n_satir < 2:
             return
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         for j in range(k):
             q.uzak_cift(q.veri(0, j), q.veri(1, j), G)
 
@@ -1380,7 +1380,7 @@ class QTefekkur(QMeleke):
     def uygula(self, q, p):
         lifler = lifleri_kur(DINAMIK)
         a = self.aci(p, len(lifler), 1.0)
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
 
         # --- (1) Tek kübitlik kısım: her lif KENDİ eksenine dokunur.
         # Aynı eksene düşen lifler (yuva % k aynı olanlar) aynı kübite
@@ -1571,7 +1571,7 @@ class QTashih(QMeleke):
     SINIF, CHI = "çözücü", 2   # tashih: tetkikin bir kısmını geri alır
 
     def uygula(self, q, p):
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         tetkik = QTetkik().aci(p, k, 0.2)
         lam = float(np.tanh(self.aci(p, 1, 1.0)[0]))
         Gk = np.tile(np.stack([donme(-lam * float(t)) for t in tetkik]),
@@ -1622,7 +1622,7 @@ class QTeyit(QMeleke):
     SINIF, CHI = "koruyucu", 8   # teyit: veri ile yerel hüküm
 
     def uygula(self, q, p):
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         if k < 2:
             return
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
@@ -1801,7 +1801,7 @@ class QTefsir(QMeleke):
 
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.4))
-        k = q.ayar.veri_lifi
+        k = q.veri_yuvasi
         for i in range(1, q.n_satir):
             q.uzak_cift(q.veri(i - 1, k - 1), q.veri(i, 0), G)
 

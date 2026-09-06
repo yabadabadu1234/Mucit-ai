@@ -540,8 +540,10 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
 
     def bolge_yuvalari(q):
         """Her bölgenin zincirdeki kübit yerleri."""
-        d = {"veri": [q.veri(i, j) for i in range(q.n_satir)
-                      for j in range(q.ayar.veri_lifi)],
+        # **YUVA SAYISI YAZMAÇTAN** (ferman 1-M): ``ayar.veri_lifi``
+        # seviye sayısıdır, yuva sayısı değil -- olmayan yuvaları
+        # bölgeye katmak, ölçüyü boş adreslerle şişirmekti.
+        d = {"veri": list(q.veri_izgara()),
              "yerel": q.yereller()}
         for a, kac in q.ayar.kulli_alanlar:
             d[a] = [q.kulli(a, j) for j in range(kac)]
@@ -1664,8 +1666,7 @@ def bolge_degeri(q, ad: str) -> Optional[float]:
         assert y, "yerel kübit yok -- ``yerel`` bölgesi BOŞ"
         return zayif_halka(q.povm(y))
     if ad == "veri":
-        y = [q.veri(i, j) for i in range(q.n_satir)
-             for j in range(q.ayar.veri_lifi)][:VERI_ORNEK]
+        y = list(q.veri_izgara())[:VERI_ORNEK]
         assert y, "veri yuvası yok -- ``veri`` bölgesi BOŞ"
         return zayif_halka(q.povm(y))
     assert ad not in _TAKSIMAT_ARTIGI, (

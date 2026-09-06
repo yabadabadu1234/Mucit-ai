@@ -212,9 +212,27 @@ class QuditYazmac:
         self._adres_np: Optional[Tuple[np.ndarray, np.ndarray,
                                        np.ndarray]] = None
         #: ``veri(i, j)`` yuva adresi -- koşu boyunca sabit (önbellek).
-        #: Bir satırın yuva adedi -- ``veri()`` bunu her çağrıda
-        #: yeniden hesaplıyordu (``ayar``a inip toplama yapıyordu).
-        self._satir_yuva = self._veri_lifi + int(self.ayar.yerel_yuva)
+        # ══════════════════════════════════════════════════════════
+        #  SATIR BAŞINA YUVA: **SEVİYE SAYISI DEĞİL, BİT DÜZLEMİ**
+        # ══════════════════════════════════════════════════════════
+        #
+        # **FERMAN 1-M.** ``veri_lifi`` burada iki ayrı manada
+        # kullanılıyordu ve ikisi ``16``da tesadüfen buluşuyordu:
+        #
+        #   (a) veri lifinin **seviye** sayısı        → 16
+        #   (b) bir satırdaki adreslenebilir **yuva** → ?
+        #
+        # Halbuki yuva bir bit düzlemidir: ``gecerli`` şartı
+        # ``(1 << alt) < lif[k]``tır, yâni 16 seviyeli bir lifte
+        # ``alt ∈ {0,1,2,3}`` -- **dört** yuva. Melekeler ise
+        # ``range(veri_lifi)`` ile on altı yuva dolaşıyor ve on ikisi
+        # sessizce düşüyordu. ``gecerli``nin şerhindeki *"89 341 kapı
+        # çağrısının yalnız 159'u iş yapıyor (%0,2)"* ölçümünün ikinci
+        # yarısı budur; birincisi ``n_satir`` çift başlılığıydı.
+        #
+        # Yuva sayısı artık **liften** çıkar ve iki mana ayrıldı.
+        self._veri_yuvasi = max(1, int(a.lif[0]).bit_length() - 1)
+        self._satir_yuva = self._veri_yuvasi + int(self.ayar.yerel_yuva)
         #: Düşen kapı sayacı -- **saklanmıyor**, ``beyan``da görünür.
         self._dusen_kapi = 0
         #: Parite bloğunda (matchgate yolunda) vurulan çift kapı sayısı.
@@ -935,8 +953,8 @@ class QuditYazmac:
         c = self._yuva_onbellek.get(y)
         if c is not None:
             return c
-        ns, sk = self._n_satir, self._veri_lifi
-        satir_yuva = sk + int(self.ayar.yerel_yuva)
+        ns = self._n_satir
+        satir_yuva = self._satir_yuva
         if y < ns * satir_yuva:
             c = (y // satir_yuva, y % satir_yuva)
         else:
@@ -1093,6 +1111,11 @@ class QuditYazmac:
         """
         return int(self._n_satir)
 
+    @property
+    def veri_yuvasi(self) -> int:
+        """Bir satırdaki **adreslenebilir** veri yuvası (bit düzlemi)."""
+        return int(self._veri_yuvasi)
+
     def veri_izgara(self, sutun=None, satir=None) -> np.ndarray:
         """``veri(i, j)`` ızgarasının **tamamı, tek çağrıda** (satır-major).
 
@@ -1105,18 +1128,17 @@ class QuditYazmac:
         """
         i = (np.arange(self._n_satir) if satir is None
              else np.asarray(satir, np.int64).reshape(-1))
-        j = (np.arange(self._veri_lifi) if sutun is None
+        j = (np.arange(self._veri_yuvasi) if sutun is None
              else np.asarray(sutun, np.int64).reshape(-1))
         return (i[:, None] * self._satir_yuva + j[None, :]).reshape(-1)
 
     def yerel(self, i: int) -> int:
-        return self.veri(i, self._veri_lifi)
+        return self.veri(i, self._veri_yuvasi)
 
     def kulli(self, ad: str, j: int = 0) -> int:
         """Küllî alanın ``j``inci yuvası -- artık **sektör** indisi."""
         i, _ = self.sektor(ad)
-        return self._n_satir * (self._veri_lifi
-                                + int(self.ayar.yerel_yuva)) + i + int(j)
+        return self._n_satir * self._satir_yuva + i + int(j)
 
     def yereller(self) -> List[int]:
         return [self.yerel(i) for i in range(self._n_satir)]
