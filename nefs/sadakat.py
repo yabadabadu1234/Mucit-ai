@@ -101,6 +101,7 @@ class SadakatAyari:
 #: demenin bedeli budur (ferman 1-C/b).
 _SAYAC: Dict[str, float] = {"çağrı": 0.0, "yoklanan": 0.0, "alarm": 0.0,
                             "sıfırlanan": 0.0, "ağırlık": 0.0,
+                            "artık": 0.0,
                             "kapalı_çağrı": 0.0}
 
 #: Parite dizini önbelleği: ``(d, maske) → bool dizi``. Dizin girdiden
@@ -233,6 +234,8 @@ def sadakat_uygula(hedef: Any, ayar: Optional[SadakatAyari] = None
         # **KAPI KAPALI.** Sıfırlama yok; alarm olduğu gibi kalır ve
         # rapor kırmızı yanar. Ferman 5: kapatılabilen tedbir.
         _SAYAC["kapalı_çağrı"] += 1.0
+        # Kapalıyken artık = gelen: tedbir koşmadı, kırmızı yansın.
+        _SAYAC["artık"] += once
         return {"alarm_önce": _bit(once), "alarm_sonra": _bit(once),
                 "ağırlık_önce": once, "ağırlık_sonra": once,
                 "sıfırlanan": 0, "satır": satir, "açık": False}
@@ -261,6 +264,22 @@ def sadakat_uygula(hedef: Any, ayar: Optional[SadakatAyari] = None
         P = Q
 
     sonra, _ = tenakuz_alarmi(P, a)
+    # ══════════════════════════════════════════════════════════════
+    #  ARTIK DA SAYILIR -- HUDUT ONU OKUR (ferman 5)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # ``ağırlık`` yalnız **Zeno'dan EVVELKİ** taşmayı biriktiriyordu ve
+    # ``keyfiyet`` mantıksızlık hududunu ondan okuyordu. Netice
+    # ölçüldü: ``alarm nispeti %50,869`` -- yâni hudut daima kirli,
+    # halbuki aynı raporun iki satır altında *"tâlim sonu durumu:
+    # alarm 0 → 0 (ALT-UZAYDA)"* yazıyordu. Sadakat taşmayı zaten
+    # söndürüyor; söndürülmüş olanı kirli saymak, tedbirin kendisini
+    # görmezden gelmektir.
+    #
+    # Hudut **kalanı** ölçer: ``sonra``. Gelen taşma da ayrıca durur
+    # (``alarm_nispeti``) çünkü o başka bir şeyi söyler: zeminin ne
+    # sıklıkla müdahale etmek zorunda kaldığını.
+    _SAYAC["artık"] += sonra
     return {"alarm_önce": _bit(once), "alarm_sonra": _bit(sonra),
             "ağırlık_önce": once, "ağırlık_sonra": sonra,
             "sıfırlanan": sifirlanan, "satır": satir, "açık": True}
@@ -326,7 +345,11 @@ def sadakat_beyani() -> Dict[str, Any]:
             "yoklanan": int(_SAYAC["yoklanan"]),
             "alarm": int(_SAYAC["alarm"]),
             "sıfırlanan": int(_SAYAC["sıfırlanan"]),
+            #: **GELEN** taşma -- zemin ne sıklıkla müdahale etti.
             "alarm_nispeti": float(_SAYAC["ağırlık"] / c),
+            #: **KALAN** taşma -- mantıksızlık hududu BUDUR. Sadakat
+            #: açıkken sıfıra yakın olmalıdır; değilse zemin koşmuyor.
+            "artık_nispeti": float(_SAYAC["artık"] / c),
             "kapalı_çağrı": int(_SAYAC["kapalı_çağrı"])}
 
 

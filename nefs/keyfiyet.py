@@ -120,7 +120,15 @@ def keyfiyet(kefeler: Dict[str, Any],
     # Mantıksızlık: kod uzayı dışına taşan ağırlık. Sadakat kapısı
     # açıkken bu **sıfırlanmış** olmalıdır; sıfır değilse zemin
     # koşmuyor demektir ve o bir mimarî çöküştür.
-    tasma = float((sadakat or {}).get("alarm_nispeti", 0.0))
+    # **KALAN TAŞMA ÖLÇÜLÜR, GELEN DEĞİL.** Hudut "mantık dışına
+    # taşıldı mı" diye sormaz -- taşma olur ve zemin söndürür; sorulan
+    # "taşma **kaldı mı**"dır. Evvelce gelen taşma okunuyordu ve hudut
+    # daima kirli çıkıyordu (ölçüldü: %50,869), halbuki aynı koşunun
+    # son durumu alt-uzaydaydı. Sessiz vekil yasak: alan yoksa düşer.
+    assert sadakat is None or "artık_nispeti" in sadakat, (
+        "sadakat beyanında ``artık_nispeti`` yok -- mantıksızlık hududu "
+        "gelen taşmadan okunamaz (ferman 5)")
+    tasma = float((sadakat or {}).get("artık_nispeti", 0.0))
 
     # ── ÜÇ NİSPET ────────────────────────────────────────────────
     nis_ten = 1.0 - float(n_ten) / cevrim

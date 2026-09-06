@@ -520,6 +520,11 @@ class EgitimAyari:
     #: sürebilir; padişah akışı görmeden beklemesin diye hızölçer
     #: koşarken bildirir (``tanilama/hizolcer.py``).
     canli_saniye: float = 20.0
+    #: **HÂL NEREDEN OKUNUR** -- ``"tutarlı"`` (faz korunur) yahut
+    #: ``"özvektör"`` (eski yol, faz yok olur). Ölçü kapatılabilir:
+    #: eskiye dönülünce kısır çevrim sayısının fırladığı görülür.
+    #: Şerhi ``nefs/kulli_mizan.py:MizanAyari.hal_kaynagi``dadır.
+    hal_kaynagi: str = "tutarlı"
     sadakat_acik: int = 1
     parite_lifi: int = 2
     usul_acik: int = 1
@@ -903,6 +908,7 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         # Bunlar birer "isim" değildir: her biri mizanın içinde fiilen
         # çağrılan bir fonksiyonun ölçüsüdür ve hepsi kapatılabilir
         # (kapatılınca ilgili sayı sıfırlanır ve rapor kırmızı yanar).
+        hal_kaynagi=str(a.hal_kaynagi),
         sadakat_acik=int(a.sadakat_acik), parite_lifi=int(a.parite_lifi),
         lam_tenakuz=float(a.lam_tenakuz), tenakuz_eps=float(a.tenakuz_eps),
         dislama_tau=float(a.dislama_tau),

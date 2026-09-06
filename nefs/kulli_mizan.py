@@ -145,6 +145,23 @@ __all__ = ["MizanAyari", "uhlmann", "givens", "holonomi",
 class MizanAyari:
     """Mizanın bütün ölçüleri **tek yerde**; hiçbiri koda gömülü değil."""
 
+    #: **HÂL NEREDEN OKUNUR** -- ``"tutarlı"`` yahut ``"özvektör"``.
+    #:
+    #: ``özvektör`` eski yoldur: indirgenmiş yoğunluk ``ρ``nun baş
+    #: özvektörü. ``ρ`` **fazları yok eden** bir indirgemedir
+    #: (``Σ_h M_vh conj(M_wh)``) ve bağlam bu mimaride tam olarak
+    #: fazda taşınır (``QYazmac.kodla``: ilk belirteç taban durumunu
+    #: seçer, kalanı faza girer). O hâlde baş özvektör bağlamı atar ve
+    #: aynı ilk belirteci paylaşan bütün örnekler **paralel** hâller
+    #: verir. Ölçüldü ve neticesi buydu: ``meşru 0 / kısır 4``, yâni
+    #: her Wilson çevriminin holonomisi birim -- "çevrim döndü, hiçbir
+    #: yere varmadı". Kısırdöngü hududu bu yüzden hiç temizlenemiyordu.
+    #:
+    #: ``tutarlı`` faz koruyan indirgemedir: ``h_v = Σ_h M_vh``. Aynı
+    #: belirteç lifinde kalır, hiçbir bileşen atılmaz, fakat bağlamın
+    #: fazı **taşınır**. Ölçü kapatılabilir: eskiye dönülüp kısır
+    #: sayısının geri fırlaması görülebilir (ferman 5).
+    hal_kaynagi: str = "tutarlı"
     lam_cevrim: float = 1.0
     lam_monogami: float = 0.5
     lam_tip: float = 0.75   # ℒ_Hodge; ``denge()`` ölçer
@@ -795,7 +812,7 @@ def _laplasyen(baglamlar: Sequence[Sequence[int]], n: int) -> np.ndarray:
 # ══════════════════════════════════════════════════════════════════
 #  5. MÎZÂN-I KÜLLÎ
 # ══════════════════════════════════════════════════════════════════
-def _ileri(nefs, veri, sozluk: int) -> Dict[str, Any]:
+def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     """İleri geçiş -- **YIĞIN HALİNDE**, örnek örnek değil.
 
     ===================================================================
@@ -847,14 +864,25 @@ def _ileri(nefs, veri, sozluk: int) -> Dict[str, Any]:
         n_v = int(q.y.ayar.lif[0])
         M_hepsi = np.asarray(q.y.psi, complex).reshape(B, n_v, -1)
         assert M_hepsi.size > 0, "ileri geçiş BOŞ durum verdi"
-        # Belirteç lifi üstündeki hâl: indirgenmiş yoğunluğun baş
-        # özvektörü. (Ölçümdür, kesme değildir: hiçbir bileşen atılmaz.)
-        rho = np.einsum('bvh,bwh->bvw', M_hepsi, M_hepsi.conj())
-        rho = 0.5 * (rho + np.conj(np.swapaxes(rho, -1, -2)))
-        _w, V = np.linalg.eigh(rho)
+        # ── BELİRTEÇ LİFİ ÜSTÜNDEKİ HÂL ───────────────────────────
+        # ``tutarlı``: ``h_v = Σ_h M_vh`` -- faz korunur, bağlam taşınır.
+        # ``özvektör``: ``ρ``nun baş özvektörü -- faz yok olur (bkz.
+        # ``MizanAyari.hal_kaynagi`` şerhi).
+        _hk = str(getattr(ayar, "hal_kaynagi", "tutarlı"))
+        if _hk == "tutarlı":
+            _H = M_hepsi.sum(axis=-1)                      # (B, n_v)
+            _H = _H / np.maximum(
+                np.linalg.norm(_H, axis=-1, keepdims=True), 1e-300)
+        elif _hk == "özvektör":
+            rho = np.einsum('bvh,bwh->bvw', M_hepsi, M_hepsi.conj())
+            rho = 0.5 * (rho + np.conj(np.swapaxes(rho, -1, -2)))
+            _w, V = np.linalg.eigh(rho)
+            _H = V[:, :, -1]
+        else:
+            raise ValueError("hal_kaynagi bilinmiyor: %r" % (_hk,))
         for t, (bag, hedef) in enumerate(dilim):
             lifliler.append(M_hepsi[t])
-            haller.append(np.asarray(V[t][:, -1], complex))
+            haller.append(np.asarray(_H[t], complex))
             # **HEDEF BİR BASAMAKTIR** ve ``[0, taban)`` aralığındadır.
             # Evvelce ``% sozluk`` alınıyordu; sözlük artık 200 019 ve
             # o mod, hedefi yazmacın taşıyamayacağı bir sayıda
@@ -895,7 +923,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         nefs.yukle(np.asarray(p, float))
     veri = list(veri)
     assert veri, "BOŞ veriyle mizan kurulamaz"
-    ileri = _ileri(nefs, veri, sozluk)
+    ileri = _ileri(nefs, veri, sozluk, ayar)
 
     # ── 1. REZONANS (Uhlmann) ─────────────────────────────────────
     n_v = ileri["lifli"][0].shape[0]
@@ -1136,7 +1164,7 @@ def mizan_cetveli(nefs, veri, p=None, sozluk: int = 16,
         nefs.yukle(np.asarray(p, float))
     veri = list(veri)
     assert veri, "BOŞ veri tasnif edilemez"
-    ileri = _ileri(nefs, veri, sozluk)
+    ileri = _ileri(nefs, veri, sozluk, ayar)
     n_v = ileri["lifli"][0].shape[0]
     D = _laplasyen(ileri["bağlam"], n_v)
 
