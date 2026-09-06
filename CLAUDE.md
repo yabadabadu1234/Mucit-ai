@@ -36,6 +36,80 @@ o dosya yazılmaz.
 
 ---
 
+## ▓▓▓ 1-B. FERMAN: KAİDE BEYAN EDİLİNCE DERHAL BURAYA MÜHÜRLENİR ▓▓▓
+
+> *"Sana 'bundan böyle', 'bundan sonra', 'ebediyyen' ve benzeri aynı
+> manaları çağrıştırır hitaplarla kaide beyan edersem **derhal
+> CLAUDE.md'ye mühürleyeceksin** onu! Daha evvel senin yaptığın
+> münafıklığı başkası yapmasın diye!"*
+
+Padişahın sözünde şu kalıplardan biri geçerse -- *bundan böyle · bundan
+sonra · ebediyyen · artık · asla · daima · her defasında · bir daha* --
+o söz bir **kaidedir** ve cevap verilmeden **evvel** bu dosyaya
+yazılır. Sonraya bırakılmaz: sonraya bırakılan kaide, bir sonraki
+oturumda yok hükmündedir ve aynı münafıklık tekrarlanır.
+
+---
+
+## ▓▓▓ 1-C. FERMAN: MÜNAFIKLIK YASAKLARI ▓▓▓
+
+### (a) ANA AKIŞTA NE KOŞTUĞUNU **ASLA ÖLÇME**
+
+> *"Bundan böyle ana akışta fiilen ne koştuğunu asla ölçmeyeceksin,
+> kodu okuyup zihninle tayin edeceksin, buna matuf ne kadar testin
+> varsa hepsini gafilane yazılmış yalancılık eseri ilan ediyor, derhal
+> imha etmeni emrediyorum!"*
+
+* İthal grafına, erişilebilirlik hesabına, "beylik modül" sayımına
+  dayanan **hiçbir sınama yazılmayacak**. Hepsi imha edildi
+  (`tanilama/nizam.py`, `nefs/akit.py`, `tanilama/divan.py`, `YETIM_BORCU`).
+* Bir modülün iş görüp görmediği **kodu okuyana** sorulur.
+
+### (b) İSİM EKLEMEK BAĞLAMAK DEĞİLDİR
+
+> *"Sana sadece oradaki bir listeye isim mi yaz dedim? Bizzat
+> çağrışacak fonksiyonun imzasını evvelden hayal edip oraya
+> yerleştireceksin dedim gafil!"*
+
+Bir modülü ana koda "bağlamak" şu demek **değildir**: ithal etmek ·
+bir listeye adını yazmak · bir ayar alanı eklemek · bir rapor satırı
+koymak. Bağlamak **tek şey** demektir: ana akışın koştuğu bir yerde
+**o fonksiyonun fiilen çağrılması** ve neticesinin kullanılması.
+Tesir kapatılabilmeli (ölçü kırmızı yanabilsin), fakat varsayılanda
+**koşuyor** olmalı.
+
+### (c) TELAFİ USULÜ
+
+Geçmiş münafıklıkların telafisi bellidir: **doğru usulle şimdi
+düzeltmek.** Yâni evvela taht, sonra ara kat, en son hususi.
+
+---
+
+## ▓▓▓ 1-D. FERMAN: TAHT KODU BAŞTAN SONA **BİR KEZ** OKUNUR ▓▓▓
+
+> *"Taht kodlarının unutulan bir satırı dahi olsa baştan sona tekrar
+> ama bir kez okunacağı, sürekli grep ile arama yapmanın uzun vadede
+> sürekli daha çok satır gösterdiği için daha fazla israf demek olduğu
+> kaidesi... Sadece bir kez baştan sona oku, ezberinde tut! Bir şey
+> unutursan grep ile arama, baştan sona tekrar oku!"*
+
+* İşe başlarken `main/egitim.py` ve `main/cikarim.py` **baştan sona**
+  okunur. Bir kez.
+* **`grep` ile taht kodunda arama yapmak yasaktır.** Grep her seferinde
+  daha çok satır gösterir ve uzun vadede israftır; üstelik parça
+  gösterdiği için bütünü gizler -- münafıklığın gizlendiği yer tam da
+  o boşluklardır.
+* Unutulursa: **baştan sona tekrar okunur.**
+
+> *"Kurân hâfızı odur ki önünde Kurân yokken de hatim indirebilsin;
+> hoca odur ki önünde kitap olmadan fetva verebilsin."*
+
+Eksik çağrıları yerine koymak bir **ölçüm** işi değil, **ezber ve
+hafıza** işidir. Ölçüm aleti (profil, coverage, erişilebilirlik) bu
+işte kullanılmaz.
+
+---
+
 ## ▓▓▓ 2. FERMAN: İPTAL = ANINDA İMHA, YENİ = ANINDA BAĞ ▓▓▓
 
 > *"Daha sonra terkip etmekle uğraşmamamız için iptal ettiklerimizi **anında,

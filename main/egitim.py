@@ -104,7 +104,7 @@ from nefs.musahede import gorevleri_getir                                    # n
 # kodlamasıdır (``nefs/qyazmac.py``).                    # noqa: E402
 from ogrenme.optimize import (qsvt_gibbs_sogutma,        # noqa: E402
                           statik_faz_tablosu_oku)
-from nefs.musahede import IzafiMevki2D, tiktoken_2d_kodla   # noqa: E402
+from nefs.musahede import IzafiMevki2D                     # noqa: E402
 from nefs.melekeler import melekeleri_kur                # noqa: E402
 from ogrenme.optimize import OptimizeAyari               # noqa: E402
 from ogrenme.optimize import hoca_egit                   # noqa: E402
@@ -116,8 +116,11 @@ from main import hazine                             # noqa: E402
 # **USUL FERMANI (docs/zabit/USUL_UMUMIDEN_HUSUSIYE.md):** bu iki satır
 # modüller HENÜZ YOKKEN yazıldı. Çağrı evvel yazılır, uzuv sonra; böylece
 # bağlanmamış bir dosya yazmak imkânsız olur.
+# ``rust`` ithal ediliyor fakat çağrılmıyordu -- kaldırıldı. Rüşt
+# çizelgesi ``kulli_mizan``ın kendi içinde işler ve neticesi
+# ``kefeler["α_rüşt"]`` ile buraya döner.
 from nefs.kulli_mizan import (MizanAyari, kulli_mizan,   # noqa: E402
-                              mizan_cetveli, rust)
+                              mizan_cetveli)
 from nefs.hafiza import Hafiza                           # noqa: E402
 
 #: Ağırlıkların yattığı dizin. ``main/cikarim.py`` buradan okur.
@@ -179,37 +182,22 @@ class EgitimAyari:
     dogrulama_sayisi: int = 100
     kademe_gorevi: int = 2
     azami_uret: int = 32
-    #: Eski kübit kodlaması ölçüsü. Yeni motor (`ogrenme/optimize.py`)
-    #: sürekli uzayda çalışır ve parametreyi kübite açmaz; ``bit``
-    #: yalnız eski ölçümlerin tekrarlanabilirliği için duruyor.
-    bit: int = 6
     yaricap: float = 2.5
     # --- arama (FCT kapalı formu + blok koordinat inişi)
-    nqs_gizli: Tuple[int, ...] = (48,)
-    nqs_derece: int = 5
+    #
+    # **ÖLÜ AYARLAR KALDIRILDI (ferman).** ``bit``, ``nqs_gizli``,
+    # ``nqs_derece``, ``zincir``, ``oran``, ``kademe``, ``lam``,
+    # ``azami_kubit``, ``sanal_kubit_sayisi`` bu dosyada bir tek yerde
+    # bile okunmuyordu: ne ``OptimizeAyari``ye geçiyor, ne ``qayar``a,
+    # ne rapora. Bir ayarın var olup okunmaması, onun ayarlanabildiği
+    # yalanını söyler.
     cevrim: int = 6
     ornek: int = 24
-    zincir: int = 8
-    oran: float = 0.20
-    kademe: float = 0.6
-    lam: float = 1e-2
     talim_tur: int = 3
     altuzay_ornek: int = 24
     #: Blok koordinat inişi: 0 = kapalı (bütün yönler her turda).
     blok: int = 0
-    #: Kesit boyutu ``r``yi bağlayan kübit haddi. **Ölçüldü** (d=262,
-    #: aynı bütçe, yarıçap 2,5)::
-    #:
-    #:     V(p₀)                       0,5758
-    #:     "etkin" altuzay r=8         yayılım 0,0026  (rastgeleden kötü)
-    #:     Walsh kesiti r=32  en iyi   0,4443
-    #:     TAM UZAY  d=262    en iyi   0,3215
-    #:
-    #: Kesit ulaşılabilir iyileşmenin yarısını yiyor; had ``d·bit``i
-    #: aşacak kadar açıldı ki kesit kurulmasın ve arama tam uzayda koşsun.
-    azami_kubit: int = 4096
     # --- şemanın QSVT/FCT ölçüleri
-    sanal_kubit_sayisi: int = 22_000_000
     qsvt_derecesi: int = 32          # cetveldeki derece; arama YASAK
     beta_maksimum: float = 4.0       # cetvelde mühürlü β
     gcl_nokta_sayisi: int = 128
@@ -307,6 +295,12 @@ class EgitimAyari:
     # --- QUDİT ÇEKİRDEĞİ (nefs/qudit.py) -- zabıtın A grubu
     #: **ZABIT: 64 → 16.** "16. dereceden sonra Chebyshev kalıntı hatası
     #: zaten 1e−7 altına iner; 64 fuzulidir."
+    #:
+    #: Bu üçü evvelce ayara konmuş fakat **hiçbir yere geçmiyordu** --
+    #: ``nefs/qudit.py``nin kendi varsayılanları koşuyordu. Artık
+    #: ``mizan_ayari`` ile ``ℒ_Hodge``un QSVT süzgecine gider
+    #: (``nefs/qudit.py:suz``): harmonik bileşen Chebyshev polinomuyla
+    #: ayrılır ve tenakuz enerjisi **süzülmüş** durumda ölçülür.
     qudit_qsvt: int = 16
     #: KAN-Chebyshev derecesi.
     qudit_derece: int = 8
@@ -399,18 +393,20 @@ class EgitimAyari:
 #: hesabın kendisi değil: B=4/L=8'de iki hat **birebir** aynı sayıyı
 #: veriyor (2,888511).
 KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=512, pencere=512,
-                       cevrim=1, ornek=3, zincir=2, talim_tur=1,
+                       cevrim=1, ornek=3, talim_tur=1,
                        altuzay_ornek=6, degerlendirme_gorevi=8,
-                       dogrulama_sayisi=20,
-                       sanal_kubit_sayisi=1_000_000, bag=8)
+                       dogrulama_sayisi=20, bag=8)
 
 #: Orta hâl -- tek makinede saatler.
-ORTA = EgitimAyari(ad="orta", satir_kubiti=6, bag=32, gorev=120,
-                   ornek_sayisi=24, degerlendirme_gorevi=40,
-                   azami_uret=120, dogrulama_sayisi=100,
-                   nqs_gizli=(96, 64), nqs_derece=6, cevrim=40,
-                   ornek=128, zincir=32, bit=8,
-                   azami_talim_saati=6.0)
+#: **KIRIK PROFİL DÜZELTİLDİ.** ``satir_kubiti=6`` yazıyordu; halbuki
+#: ikili kodlama imha edilince ``satir_kubiti`` **seviye sayısı** oldu
+#: ve ``sozluk=16`` belirteci 6 seviyeye sığmaz. Yâni bu profil
+#: çağrılsaydı düşerdi -- koşmayan bir profil, olmayan bir profildir.
+ORTA = EgitimAyari(ad="orta", satir_kubiti=16, bag=32, gorev=120,
+                   ornek_sayisi=256, pencere=512,
+                   degerlendirme_gorevi=40,
+                   azami_uret=120, dogrulama_sayisi=100, cevrim=40,
+                   ornek=128, azami_talim_saati=6.0)
 
 #: **Kaggle azamî hâli.** 4 cihaz, ~84 GB VRAM. Ceridenin taksimatı::
 #:
@@ -420,13 +416,12 @@ ORTA = EgitimAyari(ad="orta", satir_kubiti=6, bag=32, gorev=120,
 #: **HUDUT -- açıkça:** bu ayar bu ortamda KOŞMAMIŞTIR ve koştuğu iddia
 #: edilmiyor. Burada GPU yoktur (``torch`` kurulu değil); 8,4 milyon
 #: belirteçlik yığın bu makinenin belleğine sığmaz.
+#: **``satir_kubiti=12`` de kırıktı**, aynı sebeple 16'ya çekildi.
 AZAMI_KAGGLE = EgitimAyari(
-    ad="azamî-Kaggle", satir_kubiti=12, yerel_kubit=1, bag=256,
+    ad="azamî-Kaggle", satir_kubiti=16, yerel_kubit=1, bag=256,
     mera_kademe=5, gorev=1000, ornek_sayisi=2048, pencere=4096,
     sozluk=16, degerlendirme_gorevi=120, dogrulama_sayisi=100,
-    azami_uret=0, bit=10, yaricap=3.0, nqs_gizli=(512, 256, 128),
-    nqs_derece=8, cevrim=400, ornek=4096, zincir=256, oran=0.10,
-    kademe=0.4, lam=1e-3, sanal_kubit_sayisi=88_000_000,
+    azami_uret=0, yaricap=3.0, cevrim=400, ornek=4096,
     qsvt_derecesi=32, beta_maksimum=4.0, azami_talim_saati=24.0)
 
 #: Ayar adından profile -- komut satırı için.
@@ -502,6 +497,21 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         o["kayıp_süresi"] = float(h["kayıp_süresi"])
         o["en_pahalı_uzuv"] = (h["tek_meleke"][0][0]
                                if h["tek_meleke"] else "?")
+        # **TÂLİM SÜRESİ HADDİ FİİLEN DENETLENİR.** ``AZAMI_SANIYE``
+        # evvelce ithal ediliyor fakat **hiç kullanılmıyordu**: padişahın
+        # "toplam en fazla 10 dakika" hükmü kodda yalnız bir sayı olarak
+        # duruyor, hiçbir şeyi durdurmuyordu. Kestirim tek kayıp
+        # çağrısının ölçülen süresinden çıkar::
+        #
+        #     kestirilen = kayıp_süresi × (tur × yön + HAD yoklaması)
+        #
+        # Yön sayısı ``altuzay_ornek``, tur ``talim_tur``tur; ikisi de
+        # ayardadır ve hocanın bütçesini onlar tayin eder.
+        cagri = max(1, int(hiz_ayari.talim_tur)
+                    * max(1, int(hiz_ayari.altuzay_ornek)))
+        o["kestirilen_saniye"] = float(h["kayıp_süresi"]) * cagri
+        o["süre_haddi"] = float(AZAMI_SANIYE)
+        o["süre_geçti"] = bool(o["kestirilen_saniye"] <= AZAMI_SANIYE)
     if sert:
         assert not zaman_cevrimi, (
             "ZAMAN AÇILIMLI SEBEP ÇİZGESİNDE ÇEVRİM VAR -- bir adım "
@@ -512,7 +522,16 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
             "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
             "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
         if "belirteç_sn" in o:
-            from tanilama.hiz_teftisi import HAD
+            from tanilama.hiz_teftisi import AZAMI_SANIYE, HAD
+            assert o["süre_geçti"], (
+                "TÂLİM SÜRESİ HADDİ AŞILIYOR -- TÂLİM BAŞLAMAZ.\n"
+                "  kestirilen: %.1f sn   had: %.0f sn\n"
+                "  (bir kayıp çağrısı %.4f sn × %d çağrı)\n"
+                "  Ferman: eğitim hızını toplamda en fazla 10 dakikaya "
+                "indirmelisin."
+                % (o["kestirilen_saniye"], AZAMI_SANIYE,
+                   o["kayıp_süresi"],
+                   int(o["kestirilen_saniye"] / max(1e-9, o["kayıp_süresi"]))))
             assert o["hız_geçti"], (
                 "HIZ HADDİ TUTMUYOR -- TÂLİM BAŞLAMAZ.\n"
                 "  ölçülen : %.1f belirteç/sn\n"
@@ -601,6 +620,8 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         ayna_r=float(a.ayna_r),
         lam_cevrim=float(a.lam_cevrim), lam_monogami=float(a.lam_monogami),
         lam_hodge=float(a.lam_hodge), cevrim_boyu=int(a.cevrim_boyu),
+        qsvt=int(a.qudit_qsvt), qudit_derece=int(a.qudit_derece),
+        qudit_yon=int(a.qudit_yon),
         cevrim_sayisi=int(a.cevrim_sayisi), rust_t0=float(a.rust_t0),
         rust_tau=float(a.rust_tau), zeno_esigi=float(a.zeno_esigi),
         # Rüşt çizelgesinin paydası tâlimin kendi bütçesidir; elle
@@ -828,9 +849,9 @@ class KulliDalgaTalimMotoru:
             elif isinstance(v, dict) and "izgara" in v:
                 vektorler.append(self.izafi_mevki.durum_vektoru_kur(
                     np.asarray(v["izgara"], dtype=int)))
-            elif isinstance(v, dict) and "metin" in v:
-                vektorler.append(np.asarray(
-                    tiktoken_2d_kodla(str(v["metin"])), float))
+            # ``"metin"`` dalı KALDIRILDI: ARC görevlerinde böyle bir
+            # anahtar yoktur, dal hiç girilmiyordu ve yalnız
+            # ``tiktoken_2d_kodla``ya sahte bir çağıran uyduruyordu.
         vektorler = [np.asarray(x, float).reshape(-1)
                      for x in vektorler if np.asarray(x).size]
         if not vektorler:
@@ -955,279 +976,27 @@ def dalga_talimi_kos(ayar: EgitimAyari = KISA_CPU,
 
 
 # =====================================================================
-#  3. HAT -- GÖREV TÂLİMİ (ARC'de fiilen çözen hat)
+#  ÖLÜ HAT İMHASI (ferman: "isim eklemek bağlamak değildir")
 # =====================================================================
-def gorev_talimi(gorev, devir: int = 120):
-    """Tek görevin şahitlerinden o göreve mahsus dalgayı çıkar."""
-    from main.cikarim import dalga_kur
-    cift = [(np.asarray(a, int), np.asarray(b, int))
-            for a, b in getattr(gorev, "egitim", [])]
-    return dalga_kur(cift, devir=int(devir))
-
-
-
-# =====================================================================
-#  TEK HAT -- dört hattın terkibi (kütük H230)
-# =====================================================================
-def _bol(P, n_teta: int):
-    """Müşterek vektörü iki yüze ayır: ``θ`` (dönme) ve ``p`` (kapı)."""
-    P = np.asarray(P, float).reshape(-1)
-    return P[:n_teta], P[n_teta:]
-
-
-def tek_hattin_kaybi(P, motor, nefs, veri, ayar, kademe_gorevleri,
-                     ne: str = "kayıp"):
-    """DÖRT HATTIN TEK KAYBI -- **terkip** (kütük H230).
-
-    Dört hattı birleştirmenin önündeki asıl engel isim yahut dosya
-    değildi; **iki ayrı parametre taşıyıcısıydı**:
-
-    ==============  ==================  ==========================
-    hat             taşıyıcı            ne öğreniyordu
-    ==============  ==================  ==========================
-    HAT 1 (dalga)   ``KulliMelekeManifoldu.teta``  44 sayı: her
-                                        melekenin ``so(D)`` dönme
-                                        açısı -- meleke NE KADAR
-                                        döner
-    HAT 2 (küllî)   ``QNefs.p``         272 sayı: her melekenin MPS
-                                        kapısı -- meleke NE YAPAR
-    ==============  ==================  ==========================
-
-    İkisi **aynı 44 melekenin iki yüzüdür** ve birbirini hiç
-    görmüyordu: dalga hattı θ'yı eğitiyor, küllî hat p'yi eğitiyor,
-    ne biri ötekinin neticesini okuyor ne de ortak bir mîzâna
-    giriyorlardı. Terkip budur: **tek vektör ``[θ | p]``, tek kayıp,
-    tek hoca.**
-
-    Kayıp iki yüzü **zayıf halkaya göre** birleştirir, düz toplamla
-    değil::
-
-        L = yumuşak_asgarî_tersi(ℓ_zırh, ℓ_küllî)
-
-    Sebep proje kaidesidir: zincir en zayıf halkası kadardır. Düz
-    toplam, zırhı temiz bir dalgayı küllî kaybı berbat iken aklardı;
-    yumuşak âzamî **en kötü yüzü** öne çıkarır. (Aynı usul zırhın
-    kendi beş süzgecinde de kullanılıyor.)
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kayıp``       tek sayı -- hocanın gördüğü
-    ``döküm``       iki yüz ayrı ayrı; hangisi zayıf halka
-    ==============  ==================================================
-    """
-    from nefs.kulli_kayip import kulli_kayip, zayif_halka
-    from nefs.zirh import zirhla
-
-    teta, pp = _bol(P, int(np.asarray(motor.meleke_manifoldu.teta).size))
-
-    # --- YÜZ 1: dönme yüzü (HAT 1'in cevheri) ---------------------
-    mm = motor.meleke_manifoldu
-    eski = np.array(mm.teta, float).copy()
-    mm.teta = np.asarray(teta, float).copy()
-    try:
-        H = mm.hamiltonyen_uret()
-        _, z = zirhla(H)
-        l_zirh = float(z.get("toplam_kayip", 0.0))
-    finally:
-        mm.teta = eski                      # kayıp saf olmalı: yan tesir yok
-
-    # --- YÜZ 2: kapı yüzü (HAT 2'nin cevheri) ---------------------
-    t = kulli_kayip(nefs, veri, np.asarray(pp, float), ayar.sozluk,
-                    kademe_gorevleri=kademe_gorevleri)
-    l_kulli = float(t["kayıp"])
-
-    # --- ZAYIF HALKA: en kötü yüz hükmü verir --------------------
-    # Yumuşak ÂZAMÎ, aynı çekirdekle: ``max(x) = −min(−x)``. Kapı
-    # ``asgarî`` kipinde yumuşak asgarîdir; işareti çevirmek onu tam
-    # olarak yumuşak âzamî yapar -- ikinci bir çekirdek yazılmaz.
-    # (``ne="azamî"`` kipi ``Olcu`` nesneleri içindir, düz sayı için
-    # değil.)
-    L = -float(zayif_halka([-l_zirh, -l_kulli], beta=8.0, ne="asgarî"))
-    if ne == "kayıp":
-        return L
-    if ne != "döküm":
-        raise ValueError("tek hat kaybının kipi bilinmiyor: %r" % (ne,))
-    return {"kayıp": L, "zırh": l_zirh, "küllî": l_kulli,
-            "zayıf_halka": ("zırh" if l_zirh >= l_kulli else "küllî"),
-            "θ": int(teta.size), "p": int(np.asarray(pp).size)}
-
-
-def dimag(gorevler=None, tur: int = 2, n_gorev: int = 24,
-          tohum: int = 0, ayar: Optional[EgitimAyari] = None,
-          egit: bool = True, ne: str = "kos", **opt_kw):
-    """KÜLLÎ DİMAĞ -- **dört hat tek hatta terkip** (kütük H230).
-
-    Evvelce dört ayrı hat vardı ve hiçbiri ötekinin neticesini
-    okumuyordu::
-
-        HAT 1  dalga_talimi_kos      θ'yı eğitir      (öğrenmiyordu -- H229)
-        HAT 2  kulli_kayip_talimi    p'yi eğitir      (θ'yı görmez)
-        HAT 3  idrak.cozucu          ispatla çözer    (ikisini de görmez)
-        HAT 4  nazırlık zinciri      gor→dusun→söyle  (ogren'i çağırmıyordu)
-
-    Terkipte tek hat kalır ve dört cevher yerini bulur::
-
-        manzara = gor(gorev)              # görmek
-        hal     = dusun(manzara)          # 44 meleke + dörtlü zırh
-        mizan   = tart(hal)               # zayıf halka + sözleşme
-        ogren(tek_hattin_kaybi, [θ|p])    # HAT 1 + HAT 2, TEK vektör
-        cevap   = soyle(gorev, nefs=nefs) # HAT 3 -- MOTOR üretir
-
-    **Öğrenilen ile söylenen nasıl bağlanır.** Bu, hattın en ince
-    yeridir ve kaidesi şudur: **ispat öğrenmeyi ezer.** Çözücü aday
-    dönüşümleri gösterim çiftlerinde doğrular; tutan tek aday varsa
-    öğrenilenin söyleyecek sözü yoktur -- ispat kesindir. Fakat
-    **birden çok aday tutuyorsa** "ilkini al" keyfîdir, ve keyfî
-    olan yerde öğrenilen hüküm verebilir. Ölçüldü (200 eğitim
-    görevi): cevap verilen altı görevin **üçünde** birden çok aday
-    tutuyor. Köprü işte o üç görevdedir; ötekilerde yoktur ve
-    olmaması doğrudur.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kos``         bütün akış: görülen, düşünülen, tartılan, öğrenilen,
-                    söylenen
-    ``gor``         yalnız manzaralar
-    ``soyle``       yalnız cevaplar (çıkarım hattı; tâlim yok)
-    ``kayıp``       tek hattın kaybının dökümü (iki yüz yan yana)
-    ==============  ==================================================
-    """
-    from nefs.gor import gor
-    from nefs.dusun import dusun
-    from nefs.tart import tart
-    from nefs.ogren import ogren
-    from nefs.soyle import soyle
-    from nefs.melekeler import QNefs
-    from nefs.qegitim import ornekler
-
-    a = ayar or KISA_CPU
-    if gorevler is None:
-        gorevler = gorevleri_getir("training")
-    gorevler = list(gorevler)[:int(n_gorev)]
-
-    if ne == "gor":
-        return [gor(g) for g in gorevler]
-    if ne == "soyle":
-        # Motorsuz söylemek yasak: kâide cebri tasfiye edildi.
-        nefs = QNefs(a.tohum, a.qayar())
-        nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
-        return [soyle(g, nefs=nefs) for g in gorevler]
-
-    # --- tek taşıyıcı: iki yüz tek vektörde ----------------------
-    motor = KulliDalgaTalimMotoru(a)
-    nefs = QNefs(a.tohum, a.qayar())
-    nefs.idrak_et(np.zeros((2, a.satir_kubiti)))
-    teta0 = np.asarray(motor.meleke_manifoldu.teta, float).reshape(-1)
-    p0 = np.asarray(nefs.vektor(), float).reshape(-1)
-    P0 = np.concatenate([teta0, p0])
-    veri = ornekler(gorevler, azami=a.ornek_sayisi, pencere=a.pencere,
-                    sozluk=a.sozluk, tohum=a.tohum)
-    kademe = list(gorevler)[:int(a.kademe_gorevi)]
-
-    def kayip(M):
-        M = np.atleast_2d(np.asarray(M, float))
-        return np.array([tek_hattin_kaybi(m, motor, nefs, veri, a, kademe)
-                         for m in M])
-
-    if ne == "kayıp":
-        return tek_hattin_kaybi(P0, motor, nefs, veri, a, kademe,
-                                ne="döküm")
-    if ne != "kos":
-        raise ValueError("dimağ kipi bilinmiyor: %r" % (ne,))
-
-    ilk = tek_hattin_kaybi(P0, motor, nefs, veri, a, kademe, ne="döküm")
-    P = P0
-    talim = None
-    if egit and veri:
-        # Müşterek kaybın bedeli ÖLÇÜLDÜ: tek çağrı 30,8 sn, bunun
-        # 25,8'i kademe görevlerinden geliyor (``kademe_gorevi=2``).
-        # Bütçe çağırana bırakılır; gizlice kısılmaz.
-        talim = ogren(kayip, P0, tur=int(tur), tunel=True, **opt_kw)
-        P = np.asarray(talim["p"], float).reshape(-1)
-    son = tek_hattin_kaybi(P, motor, nefs, veri, a, kademe, ne="döküm")
-
-    # --- HANGİ YÜZ KIPIRDADI -- ve niçin.
-    #
-    #     Müşterek vektör kurmak yetmez; hangi yüze fiilen dokunulduğu
-    #     ÖLÇÜLMELİDİR, yoksa "birleştirdim" demek tabeladır.
-    #
-    #     Fakat tek yüzün kıpırdaması körlük DEĞİLDİR: kayıp zayıf
-    #     halkaya göre kurulduğu için hoca bütçesini **en kötü yüze**
-    #     harcar ve öteki yüzü oynatmak L'yi düşürmez. Ölçüldü:
-    #     hoca 316 eksenin HEPSİNİ yokluyor (sayıldı), fakat yalnız
-    #     zayıf halkadakiler kabul ediliyor. İki yüz de sırası gelince
-    #     kıpırdar -- zayıf halka el değiştirince.
-    #     (Bunun kırmızısı da ölçüldü: eksen kesme kusuru varken
-    #     yalnız θ erişilebilirdi ve o zaman θ 1,25 oynayıp zırh
-    #     %97 düşmüştü. Yâni iki yüz de oynatılabilir.)
-    teta, pp = _bol(P, teta0.size)
-    d_teta = float(np.linalg.norm(np.asarray(teta, float) - teta0))
-    d_p = float(np.linalg.norm(np.asarray(pp, float) - p0))
-
-    # --- öğrenileni yazmaca yükle: söylenen artık onu görebilsin --
-    motor.meleke_manifoldu.teta = np.asarray(teta, float).copy()
-    # ``except pass`` KALDIRILDI (ferman). Burası tâlimin öğrendiğini
-    # yazmaca **yükleyen** satırdı; düşerse söylenen eski parametreyi
-    # görürdü ve netice "öğrenmedi" diye okunurdu. Sessizce geçilecek
-    # bir yer değil, hattın can damarıdır.
-    assert hasattr(nefs.p, "vektorden"), (
-        "parametre taşıyıcısında ``vektorden`` yok: %r" % type(nefs.p))
-    nefs.p.vektorden(np.asarray(pp, float))
-
-    manzaralar, mizanlar, cevaplar = [], [], []
-    for g in gorevler:
-        manzara = gor(g)
-        hal = dusun(manzara, nefs=nefs)
-        mizanlar.append(tart(hal, sozlesme=False))
-        cevaplar.append(soyle(g, manzara=manzara, nefs=nefs,
-                              sozluk=a.sozluk))
-        manzaralar.append(manzara)
-
-    konusan = [c for c in cevaplar if not c.sukut]
-    return {
-        "görev": len(gorevler),
-        "parametre": int(P0.size), "θ": int(teta0.size), "p": int(p0.size),
-        "V_ilk": ilk["kayıp"], "V_son": son["kayıp"],
-        "kazanç": ilk["kayıp"] - son["kayıp"],
-        "ilk_döküm": ilk, "son_döküm": son,
-        "kayıp_çağrısı": int((talim or {}).get("kayıp_çağrısı", 0)),
-        "Δθ": d_teta, "Δp": d_p,
-        "iki_yüze_de_dokundu": bool(d_teta > 1e-12 and d_p > 1e-12),
-        "kalıbı_bilinen": sum(1 for m in manzaralar if not m.sukut),
-        "konuşan": len(konusan), "susan": len(cevaplar) - len(konusan),
-        "ortalama_kayıp": (float(np.mean([m.kayip for m in mizanlar]))
-                           if mizanlar else 0.0),
-        "manzara": manzaralar, "mizan": mizanlar, "cevap": cevaplar,
-    }
-
-
-def dimag_raporu(n_gorev: int = 24, tur: int = 2,
-                 **kw) -> str:              # pragma: no cover
-    """Tek hattın ölçümü -- dört cevher de ısırıyor mu?"""
-    d = dimag(n_gorev=n_gorev, tur=tur, **kw)
-    s = ["=== TEK HAT: dört hattın terkibi ===", ""]
-    s.append("  parametre         : %d  (θ=%d dönme + p=%d kapı)"
-             % (d["parametre"], d["θ"], d["p"]))
-    s.append("  görev             : %d" % d["görev"])
-    s.append("")
-    s.append("  KAYIP (zayıf halkaya göre)")
-    for ad, k in (("ilk", d["ilk_döküm"]), ("son", d["son_döküm"])):
-        s.append("    %-4s L=%.6f  |  zırh=%.6f  küllî=%.6f  zayıf halka: %s"
-                 % (ad, k["kayıp"], k["zırh"], k["küllî"], k["zayıf_halka"]))
-    s.append("    kazanç %.6f   kayıp çağrısı %d"
-             % (d["kazanç"], d["kayıp_çağrısı"]))
-    s.append("    ‖Δθ‖=%.6f  ‖Δp‖=%.6f   (hoca zayıf halkaya harcar:"
-             " %s)" % (d["Δθ"], d["Δp"], d["son_döküm"]["zayıf_halka"]))
-    s.append("")
-    s.append("  NAZIRLIK ZİNCİRİ")
-    s.append("    kalıbı bilinen  : %d  (gor)" % d["kalıbı_bilinen"])
-    s.append("    konuşan         : %d  (soyle -- ispatla)" % d["konuşan"])
-    s.append("    susan           : %d  (H10)" % d["susan"])
-    s.append("    ortalama mîzân  : %.6f  (tart)" % d["ortalama_kayıp"])
-    return "\n".join(s)
-
+#
+# Burada dört uzuv vardı ve **hiçbiri tahttan çağrılmıyordu**:
+#
+#   gorev_talimi       ``main.cikarim.dalga_kur``ı ithal ediyordu.
+#                      O fonksiyon ARC hilelerinin tasfiyesinde İMHA
+#                      EDİLMİŞTİ; yâni ``gorev_talimi`` çağrılsaydı
+#                      **ImportError** verirdi. Üstelik ``kos``un son
+#                      satırı onu "ARC'de fiilen çözen hat" diye ilan
+#                      ediyordu: çalışmayan bir fonksiyonu asıl çözücü
+#                      göstermek, münafıklığın en açığıdır.
+#   _bol               yalnız ``tek_hattin_kaybi`` içindi.
+#   tek_hattin_kaybi   ``dimag``dan başka çağıranı yoktu.
+#   dimag/dimag_raporu ``taht``ın hiçbir kipinde geçmiyordu.
+#
+# Dördü de "dört hattın terkibi" diye yazılmıştı; fakat terkip edilen
+# hat **koşmuyordu**. Koşmayan terkip terkip değildir.
+#
+# Bu turda hakikaten koşan iki hat vardır ve ikisi de ``kos``tan
+# çağrılır: ``dalga_talimi_kos`` ve ``kulli_kayip_talimi``.
 
 # =====================================================================
 def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
@@ -1348,9 +1117,12 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
         if kulli.get("düşen_uzuv"):
             s.append("    DÜŞEN UZUV: %s"
                      % ", ".join(sorted(kulli["düşen_uzuv"])))
-    s += ["", "  HAD: ARC'de fiilen çözen hat bu ikisi DEĞİL, üçüncüsüdür:",
-          "  `gorev_talimi` (bkz. main/cikarim.py). İkisinin ARC çözümüne",
-          "  katkısı ÖLÇÜLMEMİŞTİR ve ölçülmüş gibi gösterilmiyor."]
+    # **YALAN SATIR KALDIRILDI.** Burada "ARC'de fiilen çözen hat bu
+    # ikisi değil, üçüncüsüdür: ``gorev_talimi``" yazıyordu. O fonksiyon
+    # imha edilmiş bir uzvu ithal ediyordu ve çağrılsa ImportError
+    # verirdi -- yâni "asıl çözen" diye gösterilen hat hiç koşmuyordu.
+    s += ["", "  HAD: ARC çözüm oranı yukarıdaki `tam_çözülen`dir ve",
+          "  başka hiçbir hat yoktur. Elle kâide de yoktur."]
     return "\n".join(s)
 
 

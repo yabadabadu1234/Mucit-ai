@@ -152,6 +152,14 @@ class MizanAyari:
     ayna_tur: int = 24
     ayna_teta: float = 0.2617993877991494
     ayna_r: float = 0.35
+    #: **QSVT HODGE SÜZGECİ** (``nefs/qudit.py:suz``). Bu üçü evvelce
+    #: ``main/egitim.py``de ayara konmuş fakat hiçbir yere geçmiyordu.
+    #: Artık ``ℒ_Hodge`` süzülmüş durumda ölçülür: Chebyshev polinomu
+    #: harmonik olmayan bileşeni bastırır ve geriye kalan enerji hakiki
+    #: tenakuzdur. ``qsvt = 0`` ile kapatılabilir -- ölçü kırmızı yanar.
+    qsvt: int = 16
+    qudit_derece: int = 8
+    qudit_yon: int = 8
     #: Muhakeme çevriminin boyu. **En az 3 olmalıdır** ve bu keyfî
     #: değildir: iki adımlı bir çevrim (``a → b → a``) inşa gereği
     #: daima birim matris verir (ölçüldü), yâni holonomi taşımaz.
@@ -685,7 +693,26 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     nrm = float(np.linalg.norm(psi))
     assert nrm > 0.0, "yığın hâli sıfıra çöktü -- Hodge ölçülemez"
     psi /= nrm
-    L_hod = float(np.real(np.vdot(psi, D @ psi)))
+    # **QSVT HODGE SÜZGECİ FİİLEN KOŞAR** (``nefs/qudit.py:suz``).
+    # Ham ``⟨Ψ|Δ|Ψ⟩`` bütün pürüzü sayar; halbuki pürüzün bir kısmı
+    # yüksek frekanslı gürültüdür, tenakuz değil. QSVT süzgeci
+    # Chebyshev polinomuyla harmonik bileşeni (``Δ``nın çekirdeğini)
+    # ayırır; **artan** kısım hakiki tenakuzdur.
+    #
+    # ``qsvt = 0`` ile kapatılır ve ham enerji ölçülür -- fark
+    # görülebilsin diye ikisi de dönüyor.
+    L_ham = float(np.real(np.vdot(psi, D @ psi)))
+    if int(a.qsvt) > 0 and psi.size >= 4:
+        from .qudit import QuditAyari, suz
+        qa = QuditAyari(d=int(psi.size), qsvt=int(a.qsvt),
+                        derece=int(a.qudit_derece), yon=int(a.qudit_yon))
+        harmonik = np.asarray(suz(D, psi, qa), complex).reshape(-1)
+        artik = psi - harmonik
+        nrm_a = float(np.linalg.norm(artik))
+        L_hod = (float(np.real(np.vdot(artik, D @ artik))) / (nrm_a ** 2)
+                 if nrm_a > 1e-12 else 0.0)
+    else:
+        L_hod = L_ham
     assert L_hod >= -1e-9, (
         "Hodge enerjisi NEGATİF çıktı (%.6f) -- Laplasyen PSD değil, "
         "ceza ödüle dönmüş demektir" % L_hod)
@@ -720,7 +747,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "çevrim_hafızaya": float(hafizaya),
             "monogami": L_mon, "monogami_sol": float(mono_sol / n_o),
             "monogami_sağ": float(mono_sag / n_o),
-            "hodge": L_hod, "engel": L_eng,
+            "hodge": L_hod, "hodge_ham": L_ham, "engel": L_eng,
             "engel_bağ": int(eng["bağ"]), "engel_toplam": int(eng["toplam"]),
             "engel_öbek": int(eng.get("öbek", 0)),
             "engel_şahidi": float(eng.get("şahit_nispeti", 0.0)),
