@@ -176,7 +176,8 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
     ayar = ayar or QAyar(tohum=tohum)
     rng = np.random.default_rng(tohum)
     belirtec = [int(x) for x in rng.integers(0, sozluk, size=satir)]
-    E = belirtecleri_kodla(belirtec, ayar.veri_lifi, sozluk)
+    # Genişlik TABANDIR, sözlük değil (ferman 1-N).
+    E = belirtecleri_kodla(belirtec, ayar.veri_lifi, ayar.veri_lifi)
 
     nefs = QNefs(tohum, ayar, sadakat=kalp)
     q = QYazmac(satir, ayar)

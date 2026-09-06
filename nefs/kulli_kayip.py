@@ -2467,7 +2467,9 @@ def rapor() -> str:                                     # pragma: no cover
         nefs = QNefs(ayar.tohum, ayar.qayar())
         nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
         veri = ornekler(gorevleri_getir("training")[:6], azami=int(n),
-                        pencere=ayar.pencere, sozluk=ayar.sozluk)
+                        pencere=ayar.pencere, sozluk=ayar.sozluk,
+                        taban=int(ayar.veri_lifi),
+                        basamak=int(getattr(ayar, "belirtec_basamak", 0)))
         t = kulli_kayip(nefs, veri, sozluk=ayar.sozluk)
         s += ["=== KÜLLÎ KAYIP -- 41 melekenin hepsi sayılıyor mu? ===",
              "",

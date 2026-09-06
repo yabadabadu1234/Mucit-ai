@@ -1193,7 +1193,9 @@ def rapor(profil: str = "kısa") -> str:                  # pragma: no cover
     a = MizanAyari(tohum=ayar.tohum, cevrim_sayisi=12)
     g = list(gorevleri_getir("training"))[:12]
     veri = ornekler(g, azami=int(ayar.ornek_sayisi), pencere=ayar.pencere,
-                    sozluk=ayar.sozluk, tohum=ayar.tohum)
+                    sozluk=ayar.sozluk, tohum=ayar.tohum,
+                    taban=int(ayar.veri_lifi),
+                    basamak=int(getattr(ayar, "belirtec_basamak", 0)))
     nefs = QNefs(ayar.tohum, ayar.qayar())
     nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
     haf = Hafiza(kapasite=64)

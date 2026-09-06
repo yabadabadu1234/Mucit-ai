@@ -94,8 +94,11 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     # olmalıdır.
     ornek = int(ornek) if int(ornek) > 0 else int(a.ornek_sayisi)
     g = list(gorevleri_getir("training"))
+    # **BASAMAK AKIŞI** (ferman 1-N): taban ve basamak ayardan gelir.
     veri = ornekler(g, azami=int(ornek), pencere=int(a.pencere),
-                    sozluk=int(a.sozluk), tohum=int(a.tohum))
+                    sozluk=int(a.sozluk), tohum=int(a.tohum),
+                    taban=int(a.veri_lifi),
+                    basamak=int(getattr(a, "belirtec_basamak", 0)))
     assert veri, "hız teftişi için veri BOŞ"
     nefs = QNefs(a.tohum, a.qayar())
     nefs.idrak_et(np.zeros((2, a.veri_lifi)))
@@ -111,9 +114,11 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     kalem.append(Kalem("belirteç kodlaması", len(veri), t))
 
     # ── 2. İLERİ GEÇİŞ (41 meleke) -- asıl şüpheli
-    E = belirtecleri_kodla(list(veri[0][0]), a.veri_lifi, a.sozluk)
+    E = belirtecleri_kodla(list(veri[0][0]), a.veri_lifi,
+                           a.veri_lifi)
     t = 0.0
-    Ey = np.stack([belirtecleri_kodla(list(bag), a.veri_lifi, a.sozluk)
+    Ey = np.stack([belirtecleri_kodla(list(bag), a.veri_lifi,
+                                          a.veri_lifi)
                    for bag, _h in veri])
     for _ in range(int(tekrar)):
         _, s = _saat(nefs.idrak_et, Ey)
@@ -132,7 +137,10 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     _, s_harman = _saat(q.harman)
     _, s_olc = _saat(q.olcumler)
     _, s_ent = _saat(q.y.dolasiklik_entropisi)
-    _, s_bey = _saat(q.beyan, a.sozluk)
+    # **BASAMAK DAĞILIMI** (ferman 1-N): ``0`` = tabanı yazmaçtan al.
+    # ``a.sozluk`` geçmek 200 019 parça istemekti; kelâm sektörü 443
+    # genliktir ve o bölme dağılımı düzgün sıfır yapardı.
+    _, s_bey = _saat(q.beyan, 0)
     kalem.append(Kalem("harman", 1, s_harman))
     kalem.append(Kalem("olcumler", 1, s_olc))
     kalem.append(Kalem("dolaşıklık entropisi", 1, s_ent))
