@@ -63,7 +63,8 @@ import numpy as np
 
 __all__ = ["GFNI_C", "derle", "yoklama", "kutuphane", "sbox_gfni",
            "affine_gfni", "gfcarp_gfni", "symplectic_gfni",
-           "kaynasik_gfni", "ayrik_gfni", "genlesme_gfni", "rapor"]
+           "kaynasik_gfni", "ayrik_gfni", "genlesme_gfni",
+           "dfa_tablosu", "faz_dfa_gfni", "akis_gfni", "akis_olc", "rapor"]
 
 #: Derlenmiş kütüphanenin yattığı yer. Kaynağın özetiyle adlandırılır;
 #: kaynak değişirse yeniden derlenir, eskisi kullanılmaz.
@@ -290,6 +291,109 @@ void mucit_genlesme(const uint8_t *tohum, size_t tn, uint8_t *out, size_t g)
     }
 }
 
+/* ================================================================
+ *  KAYNAŞIK AKIŞ ÇEKİRDEĞİ -- ZABITIN ÜÇ AMELİYATI
+ * ================================================================
+ *
+ * Zabıt (Derece-12 ve 1 GB/s) üç ameliyat emreder: (1) yorumlayıcı
+ * ana döngüden çıkar, (2) sıfır tahsis, (3) monom taraması yerine
+ * siklotomik indirgeme. Üçü de burada.
+ *
+ * MİSAL KODDAN AYRILDIĞIMIZ YERLER -- her biri bir hatadır:
+ *
+ *  (a) Misal ``immintrin.h``ı dâhil eder fakat **tek bir intrinsic
+ *      kullanmaz**; gövdesi skaler ``uint64``tür. Yorum "AVX-512
+ *      L1 Stream" der, kod öyle değildir. Burada gövde fiilen
+ *      ``__m512i``dir.
+ *  (b) Misal ``x³``ü ``b & (b>>1)`` yazar -- kendi yorumundaki
+ *      ``b & (b>>1) & (b>>2)``ye bile uymaz. Ve zaten AND, ``GF(2⁸)``
+ *      çarpımı değildir. Burada ``x³ = x²·x``, ``vgf2p8mulb`` ile.
+ *  (c) Misal Frobenius karesini ``(t<<2) ^ (t<<4)`` yapar. Kaydırma
+ *      Frobenius DEĞİLDİR: ``x²`` cisim çarpımıdır. Burada
+ *      ``x⁶ = x³·x³``, ``x¹² = x⁶·x⁶``.
+ *  (d) Misal ``tabZ ^= (tabX & maske) + faz`` yazar. XOR ile tamsayı
+ *      TOPLAMAYI karıştırmak symplectic yapıyı bozar: elde (carry)
+ *      ``GF(2)``de yoktur. Burada symplectic hat yalnız XOR/AND'dir.
+ *  (e) Misal fazı ``uint64``te biriktirip "Z_256 halkası" der;
+ *      ``uint64`` toplaması ``mod 2⁶⁴``tür, ``mod 2⁸`` değil. Burada
+ *      faz ``epi8`` şeritlerinde birikir ve fiilen ``Z_256``dır.
+ *  (f) Misal "L1 Cache Ring Buffer" der, 256 MB'lık bir vektörü
+ *      DRAM'den akıtır. Burada iki ölçü **ayrı ayrı** alınır:
+ *      DRAM'den akan ve L1'e sığan.
+ *  (g) Misal ``restrict`` yazar (C anahtar kelimesi) fakat dosya
+ *      C++'tır; ``g++`` ile derlenmez.                              */
+
+/* Faz otomatı: 64 baytın LUT araması TEK ``vpshufb`` ile. Zabıtın
+ * 2. yolu (Mealy/DFA): derece-12 polinomu hesaplanmaz, durum geçiş
+ * tablosu yazmaçta durur ve her bayt onu adresler. */
+void mucit_faz_dfa(const uint8_t *in, uint8_t *out, size_t n,
+                   const uint8_t *lut16)
+{
+    const __m512i L = _mm512_broadcast_i32x4(
+        _mm_loadu_si128((const __m128i *)lut16));
+    const __m512i NIB = _mm512_set1_epi8(0x0F);
+    __m512i faz = _mm512_setzero_si512();
+    size_t i = 0;
+    for (; i + 64 <= n; i += 64) {
+        __m512i x = _mm512_loadu_si512((const void *)(in + i));
+        __m512i nib = _mm512_and_si512(x, NIB);
+        /* Tek komut: 64 ayrı bayt, 64 ayrı tablo araması. */
+        __m512i adim = _mm512_shuffle_epi8(L, nib);
+        /* Faz Z_256'da birikir: epi8 taşması tam olarak mod 256'dır. */
+        faz = _mm512_add_epi8(faz, adim);
+        _mm512_storeu_si512((void *)(out + i), faz);
+    }
+}
+
+/* Kaynaşık akış: siklotomik indirgeme + faz otomatı + symplectic
+ * tableau + tenakuz alarmı -- HEPSİ TEK GEÇİŞTE, yazmaçta.
+ * Bellek tahsisi YOKTUR; durum ``zmm`` yazmaçlarında döner. */
+uint64_t mucit_akis(const uint8_t *veri, size_t n, const uint8_t *lut16,
+                    uint64_t *durum_out)
+{
+    const __m512i A = _mm512_set1_epi64((long long)0xF1E3C78F1F3E7CF8ULL);
+    const __m512i L = _mm512_broadcast_i32x4(
+        _mm_loadu_si128((const __m128i *)lut16));
+    const __m512i NIB = _mm512_set1_epi8(0x0F);
+    const __m512i PAR = _mm512_set1_epi64((long long)0xFF00FF00FF00FF00ULL);
+    __m512i tabX = _mm512_set1_epi64((long long)0xAAAAAAAAAAAAAAAAULL);
+    __m512i tabZ = _mm512_set1_epi64((long long)0x5555555555555555ULL);
+    __m512i faz = _mm512_setzero_si512();
+    uint64_t tenakuz = 0;
+    size_t i = 0;
+    for (; i + 64 <= n; i += 64) {
+        __m512i b = _mm512_loadu_si512((const void *)(veri + i));
+        /* --- SİKLOTOMİK: x³ ve iki Frobenius karesi ------------
+         * x³ = x²·x ,  x⁶ = (x³)² ,  x¹² = (x⁶)²
+         * Hepsi ``vgf2p8mulb``: cisim çarpımı, kaydırma DEĞİL. */
+        __m512i x2 = _mm512_gf2p8mul_epi8(b, b);
+        __m512i x3 = _mm512_gf2p8mul_epi8(x2, b);
+        __m512i x6 = _mm512_gf2p8mul_epi8(x3, x3);
+        __m512i x12 = _mm512_gf2p8mul_epi8(x6, x6);
+        /* --- FAZ OTOMATI: tek vpshufb, 64 paralel arama -------- */
+        faz = _mm512_add_epi8(faz,
+                  _mm512_shuffle_epi8(L, _mm512_and_si512(x12, NIB)));
+        /* --- SYMPLECTIC: YALNIZ XOR/AND. Toplama yok, elde yok. */
+        tabX = _mm512_xor_si512(tabX, b);
+        tabZ = _mm512_xor_si512(tabZ, _mm512_and_si512(tabX, PAR));
+        tabZ = _mm512_xor_si512(tabZ,
+                  _mm512_gf2p8affineinv_epi64_epi8(faz, A, 0x63));
+        /* --- TENAKUZ ALARMI: parite yırtığı, tek maske testi --- */
+        __mmask64 alarm = _mm512_test_epi8_mask(
+            _mm512_and_si512(tabX, tabZ), PAR);
+        if (alarm) {
+            tenakuz += (uint64_t)__builtin_popcountll((unsigned long long)alarm);
+            tabX = _mm512_xor_si512(tabX, PAR);      /* Zeno söndürme */
+        }
+    }
+    if (durum_out) {
+        _mm512_storeu_si512((void *)(durum_out + 0), tabX);
+        _mm512_storeu_si512((void *)(durum_out + 8), tabZ);
+        _mm512_storeu_si512((void *)(durum_out + 16), faz);
+    }
+    return tenakuz;
+}
+
 /* ---- CPUID: bayrak ne diyor (komutun ne yaptığından AYRI) ------ */
 void mucit_cpuid(uint32_t *o)
 {
@@ -472,6 +576,10 @@ def kutuphane():
         lib.mucit_genlesme.argtypes = [u8, ctypes.c_size_t, u8,
                                        ctypes.c_size_t]
         lib.mucit_genlesme.restype = None
+        lib.mucit_faz_dfa.argtypes = [u8, u8, ctypes.c_size_t, u8]
+        lib.mucit_faz_dfa.restype = None
+        lib.mucit_akis.argtypes = [u8, ctypes.c_size_t, u8, u64]
+        lib.mucit_akis.restype = ctypes.c_uint64
         lib.mucit_symplectic.argtypes = [u64, u64, u64, u64,
                                          ctypes.c_size_t, ctypes.c_size_t]
         lib.mucit_symplectic.restype = ctypes.c_uint64
@@ -577,6 +685,89 @@ def genlesme_gfni(tohum, kat: int = 8) -> np.ndarray:
     o = np.empty(blok * int(kat), np.uint8)
     kutuphane().mucit_genlesme(_p8(t), ctypes.c_size_t(t.size),
                                _p8(o), ctypes.c_size_t(int(kat)))
+    return o
+
+
+#: DFA geçiş tablosu: 16 baytlık, ``vpshufb``ın yazmaç içi LUT'u.
+#: Bu bir **ayar değil**, faz otomatının durum geçişidir; tohumdan
+#: türetilir ki koda gömülü bir sabit olmasın.
+def dfa_tablosu(tohum: int = 0) -> np.ndarray:
+    r = np.random.default_rng(int(tohum))
+    return r.integers(0, 256, size=16, dtype=np.uint8)
+
+
+def faz_dfa_gfni(x, lut=None) -> np.ndarray:
+    """Faz otomatı -- ``vpshufb``, 64 bayt/vuruş, bellekten LUT okuma YOK."""
+    assert yoklama()["koşuyor"], "GFNI koşmuyor"
+    a = np.ascontiguousarray(np.asarray(x, np.uint8).reshape(-1))
+    L = np.ascontiguousarray(dfa_tablosu() if lut is None
+                             else np.asarray(lut, np.uint8))
+    assert L.size == 16, "vpshufb tablosu 16 bayttır"
+    o = np.zeros_like(a)
+    kutuphane().mucit_faz_dfa(_p8(a), _p8(o), ctypes.c_size_t(a.size), _p8(L))
+    return o
+
+
+def akis_gfni(veri, lut=None) -> Dict[str, Any]:
+    """Kaynaşık akış çekirdeği -- **sıfır tahsis**, tek geçiş.
+
+    Siklotomik indirgeme, faz otomatı, symplectic tableau ve tenakuz
+    alarmı aynı geçişte, ``zmm`` yazmaçlarında biter.
+    """
+    assert yoklama()["koşuyor"], "GFNI koşmuyor"
+    a = np.ascontiguousarray(np.asarray(veri, np.uint8).reshape(-1))
+    L = np.ascontiguousarray(dfa_tablosu() if lut is None
+                             else np.asarray(lut, np.uint8))
+    durum = np.zeros(24, np.uint64)
+    t = kutuphane().mucit_akis(_p8(a), ctypes.c_size_t(a.size), _p8(L),
+                               _p64(durum))
+    return {"tenakuz": int(t), "durum": durum, "bayt": int(a.size)}
+
+
+def akis_olc(tohum: int = 0) -> Dict[str, Any]:
+    """Kaynaşık akışın hızı -- **DRAM ve L1 AYRI ÖLÇÜLÜR**.
+
+    Misal kod "L1 Cache Ring Buffer" der ve 256 MB'lık bir vektörü
+    DRAM'den akıtır; ölçtüğü şey L1 değil bellek yoludur. Burada iki
+    hâl ayrı ayrı ölçülür ve hangisinin ne olduğu yazılır:
+
+    * **DRAM hattı**: veri önbelleğe sığmaz (64 MB), her bayt bir kere
+      okunur. Bu, hakikî akış süratidir.
+    * **L1 halkası**: 32 KB'lık bir pencere üstünde döner. Bu, hesabın
+      kendi tavanıdır -- bellek yolu devrede değildir. Akış hızı diye
+      **bunu göstermek aldatmaca olurdu**; ayrı satırda durur.
+    """
+    import time
+    y = yoklama()
+    if not y["koşuyor"]:
+        return {"koşuyor": False, "sebep": y["sebep"]}
+    r = np.random.default_rng(int(tohum))
+    L = dfa_tablosu(int(tohum))
+    lib = kutuphane()
+    pL = _p8(L)
+    durum = np.zeros(24, np.uint64)
+    pd = _p64(durum)
+    o: Dict[str, Any] = {"koşuyor": True}
+    for ad, bayt, tekrar in (("dram", 1 << 26, 3), ("l1", 1 << 15, 20000)):
+        v = np.ascontiguousarray(r.integers(0, 256, size=bayt,
+                                            dtype=np.uint8))
+        pv, n = _p8(v), ctypes.c_size_t(v.size)
+        lib.mucit_akis(pv, n, pL, pd)
+        t0 = time.perf_counter()
+        for _ in range(tekrar):
+            lib.mucit_akis(pv, n, pL, pd)
+        sn = (time.perf_counter() - t0) / tekrar
+        o[ad + "_bayt"] = int(bayt)
+        o[ad + "_sn"] = float(sn)
+        o[ad + "_gb"] = float(bayt / sn / 1e9)
+    # Bayt başına çevrim: ilan edilen saatle. Saat ölçülemezse ``None``.
+    from .donanim import saat_ghz
+    ghz = saat_ghz().get("ilan_ghz")
+    o["saat_ghz"] = ghz
+    o["l1_bayt_cevrimi"] = (None if not ghz else
+                            float(ghz * 1e9 * o["l1_sn"] / o["l1_bayt"]))
+    o["dram_bayt_cevrimi"] = (None if not ghz else
+                              float(ghz * 1e9 * o["dram_sn"] / o["dram_bayt"]))
     return o
 
 

@@ -264,7 +264,10 @@ mühendisliği, göreve mahsus çözücü **yasaktır**.
 | **TDD'nin HESAP MOTORU olması** | TDD yalnız **kanonik denetçi** (çevrim kapanışında, O(1) adres) |
 | **Sürekli açılı kapıyı KÜBİT tabanında vurmak** (Bravyi-Gosset: χ_stab ~ 2^{0,468t}) | **Valiant-Terhal Matchgate/FLO düalitesi**: Majorana kovaryansında SO(2N) Givens, **χ_stab = 1** (`nefs/matchgate.py`) |
 | **Gayri-lineerliğin sürekli B-spline / transandantal olması** | **Rijndael-Galois otomorfizmi** `x ↦ x²⁵⁴` (GF(2⁸) S-box, GFNI) (`nefs/galois.py`) |
-| **Köşegen fazı genlik vektörüne tek tek vurmak** | **Amy-Maslov-Mosca faz polinomu**: `Z_m`de tamsayı katsayı dizisi, tablo DALLANMAZ (`nefs/faz_polinomu.py`) |
+| **Köşegen fazı genlik vektörüne tek tek vurmak** | **Faz üssünü `Z_m`de biriktirmek**: tamsayı toplaması, genliğe tek dokunuş (`nefs/qyazmac.py:faz`) |
+| **CNOT-DİHEDRAL SINIF İDDİASI** (Amy-Maslov-Mosca, derece ≤ 3) | **Siklotomik koset + Frobenius iz indirgemesi** (`nefs/siklotomik.py`) |
+| **Kombinatorik monom taraması** (derece-12 polinomunu terim terim toplamak) | **`vpshufb` faz otomatı**: 64 baytlık LUT yazmaçta, tek vuruş |
+| **Ana akış döngüsünde Python/dispatch ve tahsis** | **Sıfır tahsisli kaynaşık C çekirdeği** (halka tampon, `nefs/gfni.py`) |
 
 ### 7-A. NON-CLIFFORD ÇIKMAZININ ÜÇ ÇARESİ -- HÜKÜM
 
@@ -280,9 +283,31 @@ ispatlı çare vardır ve **üçü de icra edilir**:
 2. **Galois `F_2^8` S-box (Rijndael).** Gayri-lineerlik `e^{iθ}`
    değil, `x ↦ M·x^{254} + b (mod P)` cebrî otomorfizmidir.
    `P(x) = x⁸+x⁴+x³+x+1`. Tek tablo okuması; dallanma sıfır.
-3. **CNOT-Dihedral faz polinomu (Amy-Maslov-Mosca, 2014).**
-   `Z` tabanında köşegen bütün fazlar tek bir `Z_m` tamsayı
-   polinomunda toplanır: `|x⟩ ↦ ω^{P(x)}|x⟩`. Toplama `ADD`tır.
+3. **~~CNOT-Dihedral faz polinomu~~ → SİKLOTOMİK KOSET.**
+   Faz üssü `Z_m`de biriktirilir (`|x⟩ ↦ ω^{P(x)}|x⟩`, toplama `ADD`);
+   fakat **sınıf iddiası iptal edildi**, bkz. 7-B.
+
+### 7-B. CNOT-DİHEDRAL İDDİASI RESMEN İPTALDİR
+
+Ölçüm kendi iddiamızı yere serdi ve örtülmedi: ana akışta biriken
+fazın Reed-Muller derecesi **12** çıktı. Amy-Maslov-Mosca teoremi
+derece `≤ 3` (Clifford+T, `C_3`) varsayar; derece 12 operatörü
+Clifford hiyerarşisinin **12. seviyesindedir**. O hâlde:
+
+* **"Durum CNOT-Dihedral sınıfındadır" denmeyecektir.** Denirse yalan olur.
+* Yerine gelen: derece 12 bir kaos değil, **`x³`ün iki Frobenius
+  karesidir** — `12 = 8+4 = 2³+2²`, yâni `x¹² = ((x³)²)²`.
+  Karakteristiği 2 olan cisimde Frobenius **lineerdir**, o hâlde
+  `Tr(α·x¹²) = Tr(α^{1/4}·x³)`: derece-12 iz terimi derece-3'e
+  **tam olarak** iner. Monom açılımı yoktur.
+
+### 7-C. MİSAL KOD KÖRÜ KÖRÜNE ALINMAZ
+
+Padişah bir misal kod verdiğinde ("yanlışlıkları olma ihtimali çok
+yüksek" dese de demese de), o kod **kopyalanmaz**: her satırı
+sınanır, yanlışı sayıyla gösterilir, doğrusu yazılır. Bir misalin
+yorum satırındaki iddia (`AVX-512`, `Frobenius`, `Ring Buffer`)
+gövdesinde fiilen yoksa, o iddia **tekrarlanmaz**.
 
 ---
 

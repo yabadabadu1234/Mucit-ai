@@ -156,6 +156,17 @@ from nefs.tdd import TddAyari, kanonik_adres              # noqa: E402
 from nefs.matchgate import (MatchgateAyari, flo_evrimi,   # noqa: E402
                             matchgate_mi)
 from nefs.faz_polinomu import FazAyari, faz_oturt         # noqa: E402
+# ── ZABIT: DERECE-12 FAZ PATLAMASI VE 1 GB/S DARBOĞAZI ────────────
+# **USUL FERMANI:** bu satır modül HENÜZ YOKKEN yazıldı.
+#
+# Ölçümümüz kendi iddiamızı yere serdi: biriken fazın derecesi 12
+# çıktı, yâni CNOT-Dihedral sınıfının dışında. Zabıtın hükmü:
+# *"CNOT-Dihedral iddiasını resmî olarak iptal ediyoruz... yerine
+# Galois Siklotomik Koset İndirgemesini koyuyoruz. Böylece derece 12,
+# x³'ün iki ardışık Frobenius karesi olarak tek çevrimlik donanım
+# komutuna iner."*
+from nefs.siklotomik import (SiklotomikAyari,             # noqa: E402
+                             koset_indirge, iz_esitligi)
 # ── ZABIT: 1 TB/S GPU AKIŞI (4× L4 VRAM DOYUMU) ───────────────────
 # **USUL FERMANI:** bu satır modül HENÜZ YOKKEN yazıldı.
 #
@@ -445,6 +456,24 @@ class EgitimAyari:
     #: **HEDEF** -- zabıtın koyduğu had, GB/s. Bu bir iddiadır ve öyle
     #: raporlanır; ölçülen akış onun yanında ayrı sütunda durur.
     gpu_akis_haddi: float = 1000.0
+    # ══════════════════════════════════════════════════════════════
+    #  ZABIT: DERECE-12 FAZ -- SİKLOTOMİK KOSET İNDİRGEMESİ
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **CNOT-DİHEDRAL İDDİASI İPTAL** (CLAUDE.md 7-B). Ölçüldü: ana
+    # akışta biriken fazın Reed-Muller derecesi 12; Amy-Maslov-Mosca
+    # ``≤ 3`` ister. İddia düştü ve yerine siklotomik koset geldi.
+    #
+    #: İndirgemenin yürüdüğü cisim ``GF(2^us)``. Frobenius
+    #: (``x ↦ x²``) burada **lineerdir**; bütün mesele odur.
+    siklotomik_us: int = 8
+    #: Taban üs. Zabıt ``x³`` der: ``12 = 3·4`` ve ``4 = 2²``, o hâlde
+    #: ``x¹² = ((x³)²)²``. Kaç kare alınacağı ``derece``den çıkar.
+    siklotomik_taban: int = 3
+    #: Hangi dereceye kadar indirgeme aranacak. ``faz_derecesi``
+    #: (CNOT-Dihedral haddi) DEĞİLDİR: o iptal edildi. Bu, ölçülen
+    #: derecedir ve ölçüm 12 dedi.
+    siklotomik_derece: int = 12
     #: **USUL SEÇİMİ** -- bitstream genleşme katsayısı (3. motor).
     #: Zabıt 8 der (125 GB/s × 8 = 1000 GB/s). Bu bir donanım ölçüsü
     #: değil, sıkıştırma tasarımıdır; **fiilen elde edilen** kat
@@ -1007,6 +1036,16 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     fazp = faz_oturt(q_son.y.faz_birikimi(),
                      FazAyari(mertebe=int(ayar.faz_mertebesi),
                               derece=int(ayar.faz_derecesi)))
+    # **SİKLOTOMİK KOSET İNDİRGEMESİ.** ``fazp["derece"]`` 3'ü aşarsa
+    # -- ki ölçüm 12 dedi -- CNOT-Dihedral iddiası düşer. Düşen iddia
+    # yerine boşluk konmaz: derece siklotomik kosete indirgenir ve
+    # ``Tr(α·x^d) = Tr(α^{2^{-k}}·x^taban)`` eşitliği **sınanır**.
+    sik = koset_indirge(int(fazp["derece"]), SiklotomikAyari(
+        us=int(ayar.siklotomik_us), taban=int(ayar.siklotomik_taban),
+        derece=int(ayar.siklotomik_derece)))
+    sik["iz_eşitliği"] = iz_esitligi(SiklotomikAyari(
+        us=int(ayar.siklotomik_us), taban=int(ayar.siklotomik_taban),
+        derece=int(ayar.siklotomik_derece)))
     # ══════════════════════════════════════════════════════════════
     #  ZABIT: 1 TB/S GPU AKIŞI -- DÖRT MOTOR FİİLEN KOŞAR
     # ══════════════════════════════════════════════════════════════
@@ -1058,7 +1097,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "tdd": tdd, "stabilizer": stab, "gölge": golge,
             "galois": tab.beyan(),
             "flo": flo, "sbox": sb, "sbox_ölçü": sb_olcu,
-            "faz_polinomu": fazp, "gpu_akışı": akis,
+            "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
             "veri": len(veri), "süreç": surec,
@@ -1422,6 +1461,30 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
               % (fp["tam"], fp["artık"], fp["boy"]),
               "         dallanma: %d  (Bravyi-Gosset yolunda %.3e olurdu)"
               % (fp["dallanma"], fp["dallanma_kubit"])]
+        sk = kulli["siklotomik"]
+        s += ["",
+              "    DERECE-%d FAZ -- CNOT-DİHEDRAL İDDİASI İPTAL (zabıt):"
+              % fp["derece"],
+              "      Amy-Maslov-Mosca ≤3 ister; ölçülen %d. İddia DÜŞTÜ."
+              % fp["derece"],
+              "      Yerine SİKLOTOMİK KOSET (nefs/siklotomik.py):",
+              "        %d = %s   →  x^%d = %s"
+              % (sk["derece"], sk["ikili"], sk["derece"], sk["yazılış"]),
+              "        koset(%d) mod 2^%d−1 : %s"
+              % (sk["taban"], sk["us"], sk["koset"]),
+              "        derece %d bu kosette mi: %s   (öyleyse iz terimi "
+              "derece %d'e TAM iner)"
+              % (sk["derece"], sk["kosette"], sk["taban"]),
+              "      İZ EŞİTLİĞİ FİİLEN SINANDI (%d eleman):"
+              % sk["iz_eşitliği"]["eleman"],
+              "        Tr(α·x^%d) = Tr(β·x^%d) ,  β = α^(2^-%d)"
+              % (sk["derece"], sk["taban"], sk["kare"]),
+              "        uyuşmayan: %d / %d   →  eşitlik: %s"
+              % (sk["iz_eşitliği"]["uyuşmayan"],
+                 sk["iz_eşitliği"]["eleman"],
+                 sk["iz_eşitliği"]["tuttu"]),
+              "        monom açılımı olsaydı terim: %.3e  (açılmadı)"
+              % sk["monom_sayisi"]]
         g = kulli["gpu_akışı"]
         s += ["",
               "    1 TB/S GPU AKIŞI (nefs/gpu_akis.py) -- zabıt:",
