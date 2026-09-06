@@ -1488,9 +1488,36 @@ def muhurle(cikti_yolu: str, netice: Dict[str, object]) -> None:
     dizin = os.path.dirname(cikti_yolu)
     if dizin:
         os.makedirs(dizin, exist_ok=True)
+    def _yaz(o):
+        """JSON'un tanımadığı her şey **açıkça** yazılır.
+
+        Evvelce burada ``default=float`` vardı ve o bir **sessiz
+        ikame** denemesiydi (ferman 5'in yasakladığı şey): karmaşık bir
+        genlik gelince ``float(complex)`` ``TypeError`` veriyor ve
+        tâlimin bütün neticesi -- saatlerce koşmuş olsa da -- basılmadan
+        düşüyordu. Ölçüldü: koşu 150 sn sürdü, hazine yazıldı, rapor
+        **hiç görülmedi**.
+        Karmaşık sayı ``float``a çevrilemez; çevrilirse hayalî kısım
+        sessizce atılırdı. O hâlde iki bileşen ayrı ayrı yazılır.
+        """
+        import numpy as _np
+        if isinstance(o, (complex, _np.complexfloating)):
+            return {"re": float(o.real), "im": float(o.imag)}
+        if isinstance(o, _np.ndarray):
+            return o.tolist()
+        if isinstance(o, (_np.integer,)):
+            return int(o)
+        if isinstance(o, (_np.floating,)):
+            return float(o)
+        if isinstance(o, (set, tuple)):
+            return list(o)
+        if isinstance(o, (bytes, bytearray)):
+            return o.decode("utf-8", "replace")
+        return str(o)
+
     with open(cikti_yolu + ".olcum.json", "w", encoding="utf-8") as f:
         json.dump({k: v for k, v in netice.items() if k != "p"},
-                  f, ensure_ascii=False, indent=2, default=float)
+                  f, ensure_ascii=False, indent=2, default=_yaz)
     print("  [MÜHÜR] Ölçümler kaydedildi: %s.olcum.json" % cikti_yolu,
           flush=True)
 
