@@ -301,6 +301,28 @@ Clifford hiyerarşisinin **12. seviyesindedir**. O hâlde:
   `Tr(α·x¹²) = Tr(α^{1/4}·x³)`: derece-12 iz terimi derece-3'e
   **tam olarak** iner. Monom açılımı yoktur.
 
+### 7-D. ZABIT FORMÜLLERİ YENİ NESİL MİMARİYE **ADAPTE EDİLİR**
+
+> *"C^d üstünde yazılmasına da bakma, quditten sonra nasıl o yeni
+> mimariye geçtiysen söylenen formülleri de o yeni nesil mimariye
+> adapte et."*
+
+Zabıtlar sürekli Hilbert uzayının (`ℂ^d`) diliyle yazılır: Uhlmann
+sadakati, Fubini-Study metriği, Hodge Laplasyeni, Berry eğriliği,
+Kraus operatörü, `ρ` yoğunluk matrisi. **Bu bir çelişki değildir ve
+ferman 7'yi nakzetmez.**
+
+* Zabıt **manayı** verir, taşıyıcıyı değil. `ℂ^d` orada bir tarif
+  dilidir; hüküm o dilin altındaki geometrik/cebrî hakikattir.
+* O hâlde her formül **yeni nesil taşıyıcıya tercüme edilir**: Galois
+  `GF(2⁸)`, stabilizer tableau, `Z_m` ayrık faz, Kronecker karo,
+  matchgate/FLO kovaryansı, siklotomik koset.
+* Tercümenin sıhhati **ölçülür**: yeni taşıyıcıdaki netice ile zabıtın
+  tarif ettiği netice kıyaslanır ve fark sayıyla yazılır.
+* **"Zabıt ℂ^d diyor, o hâlde ferman 7 kalksın" demek yasaktır.**
+  Aynı şekilde "ferman 7 var, o hâlde bu formül icra edilemez" demek
+  de yasaktır. İkisi de tembelliktir; doğrusu **tercümedir**.
+
 ### 7-C. MİSAL KOD KÖRÜ KÖRÜNE ALINMAZ
 
 Padişah bir misal kod verdiğinde ("yanlışlıkları olma ihtimali çok
