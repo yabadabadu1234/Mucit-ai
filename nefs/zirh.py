@@ -1186,7 +1186,8 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
         nefs.idrak_et(np.zeros((2, a.veri_lifi)))
         veri = ornekler(gorevleri_getir("training")[:6], azami=2,
                         pencere=a.pencere, sozluk=a.sozluk)
-        E = np.stack([belirtecleri_kodla(b, a.veri_lifi, a.sozluk)
+        # Genişlik TABANDIR, sözlük değil (ferman 1-N).
+        E = np.stack([belirtecleri_kodla(b, a.veri_lifi, a.veri_lifi)
                       for b, _ in veri])
     _q, _ok, dSler = olcumlu_idrak(nefs, E, meleke_olcumu=False,
                                    sinif_olcumu=True)

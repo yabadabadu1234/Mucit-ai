@@ -250,6 +250,26 @@ from nefs.sadakat import (SadakatAyari, sadakat_uygula,   # noqa: E402
 #   FORMÜL 3 (DENGE)   λ ağırlıkları -- kefeler ölçülür, elle yazılmaz.
 from nefs.olcek import Kok, olcek, denge, olcek_beyani  # noqa: E402
 # ══════════════════════════════════════════════════════════════════
+#  BELİRTEÇ -- **USUL FERMANI: DOSYA HENÜZ YOKKEN**
+# ══════════════════════════════════════════════════════════════════
+#
+# **FERMAN 1-N:** *"Ana tokenizer ister arc ister metin, ne olursa
+# olsun her daim tiktokendir, sen tiktokenin altındaki mekanizmayı
+# değiştirip bizim tip vektörleri yapacaksın! Tüm ayarlarda sözlük
+# ebatını sen değil tiktoken belirleyecek, otomatik!!"*
+#
+# Evvelce ``sozluk = 16`` diye **elle** yazılıydı ve o bir kök
+# sayılıyordu. Kök değildi: belirteç uzayının ebadı bir tercih olamaz,
+# belirteçleyicinin kendi ``n_vocab``ıdır. Artık ``nefs/belirtec.py``
+# tiktoken kapısını açar ve sözlük **yoklanarak** gelir.
+#
+# Değişen şey tiktoken değil, **altındaki mekanizmadır**: belirteç
+# kimliği artık bir qudit seviyesinin kendisi değil, veri lifinin
+# tabanında **basamaklara açılmış tip vektörüdür**. Böylece 200 019
+# belirteçlik bir sözlük ``d``yi patlatmadan taşınır.
+from nefs.belirtec import (belirtec_kapisi, belirtec_sozlugu,  # noqa: E402
+                           belirtec_beyani)
+# ══════════════════════════════════════════════════════════════════
 #  KEYFİYET VE MÜNASEBET -- **USUL FERMANI: DOSYALAR HENÜZ YOKKEN**
 # ══════════════════════════════════════════════════════════════════
 #
@@ -346,9 +366,23 @@ class EgitimAyari:
     """
     ad: str = "kısa"
     # ══════════════════════════════════════════════════════════════
-    #  KÖK 1 -- SÖZLÜK (veriden gelir, tayin edilmez)
+    #  KÖK 1 -- BELİRTEÇLEYİCİ (sözlük ondan gelir, tayin edilmez)
     # ══════════════════════════════════════════════════════════════
-    sozluk: int = 16
+    #
+    # **FERMAN 1-N.** Kök artık bir sayı değil, bir **kodlamanın
+    # adıdır**. Sözlük ebadı o kodlamanın ``n_vocab``ıdır ve
+    # ``__post_init__``te **yoklanarak** doldurulur; elle yazılamaz.
+    #
+    # ``o200k_base`` en yeni tiktoken kodlamasıdır (``n_vocab``ı
+    # yoklanır ve rapora yazılır). Ad değişirse sözlük, basamak sayısı
+    # ve bütün bütçe beraberce değişir -- tek yerden.
+    kodlama: str = "o200k_base"
+    #: ``0`` = tiktoken'den ölç. **Elle bir sayı yazmak ferman 1-N'e
+    #: aykırıdır**; alan yalnız ölçülenin durduğu yerdir.
+    sozluk: int = 0
+    #: Bir belirtecin kaç qudit basamağı işgal ettiği --
+    #: ``⌈log_{veri_lifi}(sözlük)⌉``. ``0`` = ölçekten türet.
+    belirtec_basamak: int = 0
     # ══════════════════════════════════════════════════════════════
     #  KÖK 2 -- CÖMERTLİK (padişahın tek kabzası)
     # ══════════════════════════════════════════════════════════════
@@ -546,6 +580,12 @@ class EgitimAyari:
         hakkı saklıdır ve hangi alanın elle verildiği ``elle`` kümesinde
         durur -- rapor onu yazar, yâni "bu sayı türetilmedi" gizlenmez.
         """
+        # **SÖZLÜK EVVELÂ ÖLÇÜLÜR** (ferman 1-N): ölçek ona bağlıdır,
+        # o hâlde ölçekten evvel gelir. ``belirtec_sozlugu`` tiktoken
+        # kapısını açar, gerekirse BPE tablosunu GitHub'dan yerine
+        # koyar ve ``n_vocab``ı döndürür.
+        if int(self.sozluk) <= 0:
+            self.sozluk = int(belirtec_sozlugu(str(self.kodlama)))
         o = olcek(Kok(sozluk=int(self.sozluk), comert=float(self.comert),
                       tohum=int(self.tohum)))
         self.olcek_dokumu = o
@@ -904,6 +944,14 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     from nefs.qegitim import degerlendir, ornekler
 
     t0 = time.perf_counter()
+    # **BELİRTEÇ KAPISI KOŞUDAN EVVEL AÇILIR** (ferman 1-N). Açılmazsa
+    # tâlim başlamaz: belirteç uzayı olmadan ne veri okunur ne hedef
+    # tayin edilir. Kapı BPE tablosunu yerine koyar ve kodlamayı verir.
+    kapi_bel = belirtec_kapisi(str(ayar.kodlama))
+    assert int(kapi_bel.n_vocab) == int(ayar.sozluk), (
+        "sözlük ile kodlama tutmuyor: ayar %d, %s %d -- sözlük elle "
+        "yazılmış olabilir (ferman 1-N)"
+        % (ayar.sozluk, ayar.kodlama, kapi_bel.n_vocab))
     # **GEÇİT KOŞUDAN EVVEL.** Saatler süren bir tâlimin sonunda
     # "akit tutmuyormuş" demek saatleri çöpe atmaktır.
     kapi = gecit(sert=bool(int(ayar.hiz_geciti)), hiz_ayari=ayar)
@@ -920,7 +968,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     arc_veri = ornekler(egitim_gorevleri,
                         azami=max(1, int(ayar.ornek_sayisi) // 2),
                         pencere=ayar.pencere, sozluk=ayar.sozluk,
-                        tohum=ayar.tohum)
+                        tohum=ayar.tohum, taban=int(ayar.veri_lifi),
+                        basamak=int(ayar.belirtec_basamak))
     # **KÜLLİYAT EVVELÂ ÇEKİLİR.** Evvelce ``kulliyat_cek`` yalnız
     # ``kulliyat_beyani``nin içinden, yâni **rapor vaktinde** koşuyordu:
     # tâlim, henüz inmemiş bir külliyattan veri okumaya çalışıyor ve
@@ -929,7 +978,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     kul_veri = kulliyat_verisi(
         sozluk=int(ayar.sozluk), pencere=int(ayar.pencere),
         azami=max(0, int(ayar.ornek_sayisi) - len(arc_veri)),
-        tohum=int(ayar.tohum))
+        tohum=int(ayar.tohum), kodlama=str(ayar.kodlama),
+        taban=int(ayar.veri_lifi),
+        basamak=int(ayar.belirtec_basamak))
     veri = list(arc_veri) + list(kul_veri)
     assert veri, "tâlim verisi BOŞ"
 
@@ -1417,6 +1468,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "keyfiyet": keyfiyet_beyani(),
             "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri),
                          "döküm": kul_dokum},
+            "belirteç": belirtec_beyani(str(ayar.kodlama)),
             "ölçek": ayar.olcek_dokumu, "elle_verilen": ayar.elle,
             "denge": olculen_lam, "ilk_kefeler": ilk_kefeler,
             "usul": usl, "şüphe": sup,

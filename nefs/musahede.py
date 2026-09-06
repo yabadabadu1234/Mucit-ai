@@ -77,22 +77,22 @@ SOYUT = os.path.join(KOK, "soyutlamalar")
 RENK = 10
 
 
-SATIR_SONU = 10
-
-
-IZGARA_SONU = 11
-
-
-AYIRAC = 12
-
-
-DOLGU = 13
-
-
-ORNEK_AYIRAC = 14
-
-
-SOZLUK = 15
+#: **ESKİ ARC SÖZLÜĞÜ İMHA EDİLDİ (ferman 1-N, 2-B).**
+#:
+#: Burada ``SATIR_SONU = 10``, ``IZGARA_SONU = 11``, ``AYIRAC = 12``,
+#: ``DOLGU = 13``, ``ORNEK_AYIRAC = 14``, ``SOZLUK = 15`` duruyordu.
+#: Yâni ARC'ın **kendi** on beş elemanlı belirteç uzayı vardı ve
+#: metnin belirteç uzayı ondan başkaydı. İki belirteç uzayı iki ayrı
+#: modeldir. Padişahın hükmü: *"ana tokenizer ister arc ister metin,
+#: ne olursa olsun her daim tiktokendir."*
+#:
+#: Yerine gelen: ızgara **metne** dökülür (``izgara_metni``), tiktoken
+#: onu belirteçler, ``metin_izgara`` geri ayrıştırır. Ayıraçlar birer
+#: belirteç kimliği değil, metnin kendi işaretleridir.
+#:
+#: Dolgu da kalktı: dizi ``tiktoken``in kendi bitiş belirteciyle
+#: hizalanır (``DOLGU_BELIRTECI``).
+DOLGU_BELIRTECI = 0
 
 
 @dataclass
@@ -165,43 +165,77 @@ def gorevleri_getir(kume: str = "training", ne: str = "hepsi",
     return e, d
 
 
-def izgara_belirtecle(g: np.ndarray) -> List[int]:
-    """Izgara → belirteç dizisi (satır sonlarıyla)."""
-    t: List[int] = []
-    for satir in g:
-        t.extend(int(v) for v in satir)
-        t.append(SATIR_SONU)
-    return t
+#: ARC ızgarasının **metin** işaretleri. Belirteç kimliği değildirler:
+#: metne yazılır, tiktoken onları kendi belirteçlerine böler.
+#:
+#: **FERMAN 1-N.** Evvelce burada ``SATIR_SONU = 10``, ``AYIRAC = 12``
+#: gibi **belirteç kimlikleri** duruyordu ve ARC'ın kendi on beş
+#: elemanlı bir sözlüğü vardı. Yâni projede iki belirteçleyici vardı:
+#: biri ARC için, biri metin için. İki belirteç uzayı iki ayrı
+#: modeldir; padişahın hükmü kat'îdir: *"ana tokenizer ister arc ister
+#: metin, ne olursa olsun her daim tiktokendir."*
+IZGARA_AYIRACI = "\n---\n"
+ORNEK_AYIRACI = "\n===\n"
 
 
-def belirtec_izgara(t: Sequence[int]) -> Optional[np.ndarray]:
-    """Belirteç dizisi → ızgara.  Bozuksa ``None``.
+def izgara_metni(g: np.ndarray) -> str:
+    """Izgara → **metin**. Belirteçleme tiktoken'in işidir.
 
-    **Sessizce onarmıyoruz**: satırlar eşit uzunlukta değilse ya da hiç
-    hücre yoksa ``None`` dönüyor.  Yanlış bir ızgarayı "düzelterek"
-    doğru saymak, tam eşleşme ölçütünü sahte kılardı.
+    Hücreler ``0-9`` rakamlarıdır ve aralarına boşluk konur: boşluksuz
+    yazılsaydı tiktoken ``123`` gibi çok haneli sayıları **tek**
+    belirteçte birleştirir ve hücre hududu kaybolurdu. Ölçülebilir
+    hudut: ayrıştırma (``metin_izgara``) birebir geri veriyor mu.
     """
+    return "\n".join(" ".join(str(int(v)) for v in satir) for satir in g)
+
+
+def metin_izgara(m: str) -> Optional[np.ndarray]:
+    """Metin → ızgara. Bozuksa ``None`` -- **sessizce onarılmaz**."""
     satirlar: List[List[int]] = []
-    cari: List[int] = []
-    for v in t:
-        v = int(v)
-        if v in (IZGARA_SONU, AYIRAC, DOLGU, ORNEK_AYIRAC):
+    for ham in str(m).split("\n"):
+        ham = ham.strip()
+        if not ham:
+            if satirlar:
+                break                       # ilk boş satır ızgarayı bitirir
+            continue
+        if ham.startswith("-") or ham.startswith("="):
             break
-        if v == SATIR_SONU:
-            satirlar.append(cari)
-            cari = []
-        elif 0 <= v < RENK:
-            cari.append(v)
-        else:
+        hucre: List[int] = []
+        for p in ham.split():
+            if not p.isdigit():
+                return None
+            v = int(p)
+            if not (0 <= v < RENK):
+                return None
+            hucre.append(v)
+        if not hucre:
             return None
-    if cari:
-        satirlar.append(cari)
+        satirlar.append(hucre)
     if not satirlar or not satirlar[0]:
         return None
     w = len(satirlar[0])
     if any(len(s) != w for s in satirlar):
         return None
     return np.array(satirlar, dtype=np.int64)
+
+
+def izgara_belirtecle(g: np.ndarray, kodlama: str = "o200k_base"
+                      ) -> List[int]:
+    """Izgara → **tiktoken** belirteçleri (metin üzerinden)."""
+    from nefs.belirtec import belirtecle
+    return belirtecle(izgara_metni(g), kodlama)
+
+
+def belirtec_izgara(t: Sequence[int], kodlama: str = "o200k_base"
+                    ) -> Optional[np.ndarray]:
+    """Tiktoken belirteçleri → ızgara.  Bozuksa ``None``.
+
+    **Sessizce onarmıyoruz**: satırlar eşit uzunlukta değilse ya da hiç
+    hücre yoksa ``None`` dönüyor.  Yanlış bir ızgarayı "düzelterek"
+    doğru saymak, tam eşleşme ölçütünü sahte kılardı.
+    """
+    from nefs.belirtec import coz
+    return metin_izgara(coz(list(t), kodlama))
 
 
 def gorev_dizisi(gorev: Gorev, hedef_indis: int = 0,
@@ -223,19 +257,22 @@ def gorev_dizisi(gorev: Gorev, hedef_indis: int = 0,
     else:
         ornekler = [c for k, c in enumerate(gorev.egitim)
                     if k != hedef_indis][:azami_baglam]
-    baglam: List[int] = []
+    # **METİN KURULUR, SONRA BİR KERE BELİRTEÇLENİR.** Parça parça
+    # belirteçlemek ayıraçları belirteç kimliği yapmak olurdu; halbuki
+    # ayıraç da metnin parçasıdır ve tiktoken onu kendi bölüyor.
+    from nefs.belirtec import belirtecle
+    parca: List[str] = []
     for a, b in ornekler:
-        baglam.extend(izgara_belirtecle(a))
-        baglam.append(AYIRAC)
-        baglam.extend(izgara_belirtecle(b))
-        baglam.append(ORNEK_AYIRAC)
+        parca.append(izgara_metni(a) + IZGARA_AYIRACI + izgara_metni(b))
     kaynak = gorev.sinama if sinamadan else gorev.egitim
     if hedef_indis >= len(kaynak):
         raise IndexError("hedef indisi yok")
     gi, co = kaynak[hedef_indis]
-    baglam.extend(izgara_belirtecle(gi))
-    baglam.append(AYIRAC)
-    hedef = izgara_belirtecle(co) + [IZGARA_SONU]
+    parca.append(izgara_metni(gi) + IZGARA_AYIRACI)
+    # Bağlam TEK metindir ve TEK kere belirteçlenir; hedef ayrı, çünkü
+    # bağlamda hiç geçmemelidir (yukarıdaki şerh).
+    baglam = belirtecle(ORNEK_AYIRACI.join(parca))
+    hedef = belirtecle(izgara_metni(co) + ORNEK_AYIRACI)
     return baglam, hedef
 
 
@@ -263,7 +300,7 @@ def toplu_uret(gorevler: Sequence[Gorev], azami_uzunluk: int,
                 if len(dizi) > azami_uzunluk:
                     continue
                 n = len(dizi)
-                x = np.full(azami_uzunluk, DOLGU, dtype=np.int64)
+                x = np.full(azami_uzunluk, DOLGU_BELIRTECI, dtype=np.int64)
                 m = np.zeros(azami_uzunluk, dtype=np.float64)
                 x[:n] = dizi
                 m[len(b):n] = 1.0
@@ -1868,7 +1905,7 @@ def kopru(sozluk: int = 16, kubit: int = 16,
 
     # --- 1) TERSİNİRLİK: her belirteç geri çözülüyor mu?
     T = np.arange(sozluk)
-    E = belirtecleri_kodla(T, kubit, sozluk)             # (sozluk, kubit)
+    E = belirtecleri_kodla(T, kubit, kubit)              # genişlik TABAN
     bit = (E > 0).astype(np.int64)
     # **GERİ ÇÖZÜM İKİLİ AĞIRLIKLARLA YAPILMAZ ARTIK.** Evvelce
     # ``Σ bit_i · 2^i`` ile çözülüyordu; o, düz ikili kodlamanın
@@ -2515,7 +2552,7 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
             return np.zeros(16)
         E = np.concatenate([X, Y], axis=1)              # (çift, 28)
         q = QNefs(tohum, QAyar(tohum=tohum)).idrak_et(E)
-        return np.asarray(q.beyan(16), float)
+        return np.asarray(q.beyan(0), float)   # taban yazmaçtan
 
     if ne != "açı":
         raise ValueError("iki ölçek kipi bilinmiyor: %r" % (ne,))
@@ -2765,10 +2802,10 @@ def rapor() -> str:                                     # pragma: no cover
         s.append("  200 görevin bütün ızgaralarında gidiş-dönüş hatası: %d" % hata)
 
         s.append("\n=== Bozuk diziyi sessizce onarmıyoruz ===")
-        for ad, t in (("eşit olmayan satır", [1, 2, SATIR_SONU, 3, SATIR_SONU]),
-                      ("hiç hücre yok", [SATIR_SONU]),
-                      ("geçersiz belirteç", [1, 99, SATIR_SONU])):
-            s.append("  %-20s → %s" % (ad, belirtec_izgara(t)))
+        for ad, m in (("eşit olmayan satır", "1 2\n3"),
+                      ("hiç hücre yok", ""),
+                      ("geçersiz renk", "1 99")):
+            s.append("  %-20s → %s" % (ad, metin_izgara(m)))
 
         s.append("\n=== Sözlü algoritma (soyutlama) verisi ===")
         var = sum(soyutlama_oku(g.ad) is not None for g in dgr)

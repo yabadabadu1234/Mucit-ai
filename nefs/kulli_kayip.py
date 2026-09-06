@@ -1916,8 +1916,10 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     if azami_veri:
         veri = veri[:int(azami_veri)]
     hepsi: List[Olcum] = []
+    # Genişlik TABANDIR, sözlük değil (ferman 1-N).
     E_yigin = np.stack([belirtecleri_kodla(b, nefs.ayar.veri_lifi,
-                                           sozluk) for b, _h in veri])
+                                           nefs.ayar.veri_lifi)
+                        for b, _h in veri])
     q, okumalar, dS = olcumlu_idrak(nefs, E_yigin, meleke_olcumu)
     if meleke_olcumu:
         hepsi += meleke_olcumleri(okumalar)

@@ -828,7 +828,9 @@ def _ileri(nefs, veri, sozluk: int) -> Dict[str, Any]:
     kubit = int(nefs.ayar.veri_lifi)
     for bas in range(0, len(veri), B):
         dilim = veri[bas:bas + B]
-        E = np.stack([belirtecleri_kodla(list(bag), kubit, sozluk)
+        # **GENİŞLİK TABANDIR** (ferman 1-N): gelen dizi basamak
+        # akışıdır, belirteç akışı değil. ``kubit`` = veri lifi = taban.
+        E = np.stack([belirtecleri_kodla(list(bag), kubit, kubit)
                       for bag, _h in dilim])
         if E.shape[0] < B:
             E = np.concatenate(
@@ -853,7 +855,17 @@ def _ileri(nefs, veri, sozluk: int) -> Dict[str, Any]:
         for t, (bag, hedef) in enumerate(dilim):
             lifliler.append(M_hepsi[t])
             haller.append(np.asarray(V[t][:, -1], complex))
-            hedefler.append(int(hedef) % int(sozluk))
+            # **HEDEF BİR BASAMAKTIR** ve ``[0, taban)`` aralığındadır.
+            # Evvelce ``% sozluk`` alınıyordu; sözlük artık 200 019 ve
+            # o mod, hedefi yazmacın taşıyamayacağı bir sayıda
+            # bırakırdı. Basamak akışında hedef zaten aralıktadır;
+            # ``assert`` onu **denetler**, sessizce kırpmaz.
+            hb = int(hedef)
+            assert 0 <= hb < int(kubit), (
+                "hedef basamak taşıyıcının dışında: %d ∉ [0,%d) -- veri "
+                "katmanı tip vektörüne çevirmemiş olabilir (ferman 1-N)"
+                % (hb, kubit))
+            hedefler.append(hb)
             baglamlar.append(list(bag))
         if not sektor:
             sektor = [q.y.sektor(ad) for ad, _ in q.ayar.kulli_alanlar]

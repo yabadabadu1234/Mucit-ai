@@ -53,14 +53,25 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 __all__ = ["Kaynak", "KAYNAKLAR", "kulliyat_cek", "kulliyat_verisi",
-           "kulliyat_beyani", "disk_butcesi", "mucit_cevir",
-           "mucit_ac", "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
+           "kulliyat_beyani", "mucit_cevir", "mucit_ac",
+           "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
 
 #: Külliyatın indiği yer. **Depoya girmez** (``.gitignore``).
 KULLIYAT_DIZINI = os.environ.get("MUCIT_KULLIYAT", "depo/kulliyat")
 
-#: Diskin ne kadarı külliyata ayrılır. Bkz. ``disk_butcesi``.
-DISK_PAYI: float = 0.5
+#: **BUDAMA VE DİSK BÜTÇESİ İMHA EDİLDİ (ferman 1-O).**
+#:
+#:     "Sana ne oluyor da indirdiğin veriseti sınırlıyorsun? İnen şey
+#:     githuba inecek, sen de ineni kendi cpu'na tek hamlede paldır
+#:     küldür almayacaksın, boru hattı kurup işini bitire bitire
+#:     alacaksın ama verisetinin tamamı o repoda duracak!"
+#:
+#: Burada ``DISK_PAYI``, ``disk_butcesi()`` ve ``_buda()`` duruyordu:
+#: 23 GB'lık çekimin 11,2 GB'ını **siliyorlardı**. O bir çare değil,
+#: kusurun kendisiydi -- kabın darlığı **akışla** çözülür, veriyi
+#: kesmekle değil. Kaynak olduğu gibi durur; kapta tutulan şey ancak
+#: o an okunan **penceredir** (``mucit_cevir`` öbek öbek çevirir,
+#: ``mucit_ac`` mmap ile bakar).
 
 
 @dataclass(frozen=True)
@@ -269,126 +280,139 @@ def _dizin(k: Kaynak) -> str:
     return os.path.join(KULLIYAT_DIZINI, k.depo.replace("/", "__"))
 
 
-def disk_butcesi() -> int:
-    """Külliyata ayrılan **toplam bayt** -- diskten ÖLÇÜLÜR (ferman 5-B).
-
-    Elle yazılmış bir tavan yoktur ve olamaz: aynı kod 30 GB'lık bir
-    kapta da, 2 TB'lık bir makinede de koşacak. Bütçe, o an fiilen
-    boş olan alan ile külliyatın hâlihazırda tuttuğu alanın
-    toplamının bir nispetidir::
-
-        havuz  = boş + külliyatın tuttuğu
-        bütçe  = havuz × PAY
-
-    ``PAY`` bir keyfiyet ölçüsüdür: diskin tamamını doldurmak tâlimin
-    kendi yazacağı hazineye yer bırakmamak demektir; hiç doldurmamak
-    ise külliyatı süs yapmak. Yarısı, ikisinin arasıdır ve **ölçü
-    kırmızı yanabilir**: bütçe sıfırlanırsa hiçbir kaynak tutulmaz ve
-    ``kulliyat_verisi`` boş döner.
-    """
-    import shutil
-    os.makedirs(KULLIYAT_DIZINI, exist_ok=True)
-    bos = int(shutil.disk_usage(KULLIYAT_DIZINI).free)
-    tutulan = 0
-    for kk, _dd, ff in os.walk(KULLIYAT_DIZINI):
+def _boy(kok: str, uzantilar: Sequence[str]) -> Tuple[int, int]:
+    """Bir kaynağın metin gövdesi: ``(bayt, dosya)``. **Hiçbir şey silmez.**"""
+    uz, b, n = tuple(uzantilar), 0, 0
+    for kk, _dd, ff in os.walk(kok):
         for f in ff:
-            try:
-                tutulan += os.path.getsize(os.path.join(kk, f))
-            except OSError:
-                pass
-    return int((bos + tutulan) * DISK_PAYI)
+            if f.endswith(uz):
+                try:
+                    b += os.path.getsize(os.path.join(kk, f))
+                    n += 1
+                except OSError:
+                    pass
+    return b, n
 
 
-#: Çevrilmiş külliyat dosyasının damgası. Sürüm değişirse eski
-#: dosyalar **okunmaz**; sessizce yanlış biçim okumak yasaktır.
-MUCIT_DAMGA = b"MUCIT1\n"
+
+MUCIT_DAMGA = b"MUCIT2\n"
 
 #: Çevrilmiş dosyanın uzantısı.
 MUCIT_UZANTI = ".mucit"
 
 
-def mucit_cevir(kok: str, cikti: str, sozluk: int,
-                uzantilar: Sequence[str] = (), ad: str = "") -> Dict[str, Any]:
-    """Ham metni **bizim biçime** çevir: tek dosya, tek geçiş, mmap'lenir.
+def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
+                uzantilar: Sequence[str] = (), ad: str = "",
+                obek_bayt: int = 8 << 20) -> Dict[str, Any]:
+    """Ham metni **bizim biçime** çevir: tiktoken belirteçleri, tek dosya.
 
     ===================================================================
-    NİÇİN ÇEVİRİ -- BU BİR SÜS DEĞİL, TÂLİMİN ŞARTI
+    BELİRTEÇLEME TİKTOKEN'DİR (ferman 1-N)
     ===================================================================
 
-    ``kulliyat_verisi`` evvelce her tâlim koşusunda külliyatın
-    **bütün** dosyalarını açıp belleğe alıyor, birleştiriyor ve ancak
-    ondan sonra ``mod sozluk`` alıyordu. Külliyat 2,7 GB olunca bu, her
-    koşuda 2,7 GB okumak ve 165 bin dosya açmak demektir -- ve
-    neticesinde elde edilen şey ``[0, sozluk)`` aralığında tek baytlık
-    bir dizidir, yâni **aynı boyda fakat bir kere hesaplanabilir**.
+    Evvelce burada ``bayt % sozluk`` vardı ve ``sozluk`` 16'ydı: 256
+    bayt on altı seviyeye iniyordu. Bu bir belirteçleme değil, bir
+    **imhaydı** -- her seviye on altı ayrı baytı temsil ediyordu ve
+    metnin kelime yapısı tamamen kayboluyordu.
 
-    Çeviri o hesabı bir kereye indirir::
-
-        MUCIT1\n
-        {"sözlük": 16, "bayt": N, "kaynak": "...", "dosya": M}\n
-        <N bayt, her biri [0, sözlük) aralığında>
-
-    Netice ``np.memmap`` ile açılır: tâlim artık külliyatı **okumaz**,
-    ona bakar. Pencere örneklemesi de o mmap üstünde yapılır.
+    Artık metin tiktoken'den geçer ve dosyaya **belirteç kimlikleri**
+    ``uint32`` olarak yazılır. Kayıp yoktur: ``coz`` metni geri verir.
 
     ===================================================================
-    BELİRTEÇLEME BURADA OLUR VE KAYBI YAZILIDIR
+    BORU HATTI (ferman 1-O)
     ===================================================================
 
-    UTF-8 baytı ``mod sozluk`` alınır. Sözlük 16 ise 256 bayt 16
-    seviyeye iner; her seviye 16 baytı temsil eder. **Bu bir kayıptır
-    ve saklanmıyor**; sözlük büyütülünce (``EgitimAyari.sozluk``) veri
-    lifi de beraber büyür (``nefs/olcek.py`` Formül 1) ve kayıp azalır.
+    Kaynağın tamamı belleğe **alınmaz**. Dosyalar sırayla açılır,
+    ``obek_bayt``lık parçalar hâlinde belirteçlenir ve çıktıya
+    **akıtılır**. Yâni 8 GB'lık bir tefsir külliyatı, 8 MB'lık bir
+    pencereyle çevrilir. Kabın darlığı akışla çözülür, veri kesilmez.
+
+    Biçim::
+
+        MUCIT2\n
+        {"kodlama": "o200k_base", "sözlük": 200019, "belirteç": N, …}\n
+        <N adet uint32 belirteç kimliği>
     """
     import numpy as np
+    from nefs.belirtec import belirtec_kapisi, belirtec_sozlugu
+
+    kod = belirtec_kapisi(kodlama)
+    V = int(belirtec_sozlugu(kodlama))
     uz = tuple(uzantilar)
     os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
     n = dosya = 0
     with open(cikti, "wb") as ch:
         ch.write(MUCIT_DAMGA)
         yer = ch.tell()
-        ch.write(b" " * 256 + b"\n")            # başlık için yer ayır
+        ch.write(b" " * 320 + b"\n")
         for kk, _dd, ff in os.walk(kok):
             for f in sorted(ff):
                 if uz and not f.endswith(uz):
                     continue
-                y = os.path.join(kk, f)
                 try:
-                    with open(y, "rb") as fh:
-                        ham = fh.read()
+                    fh = open(os.path.join(kk, f), "rb")
                 except OSError:
                     continue
-                if not ham:
-                    continue
-                b = np.frombuffer(ham, dtype=np.uint8)
-                ch.write((b % np.uint8(int(sozluk))).tobytes())
-                ch.write(bytes([10 % int(sozluk)]))   # satır ayırıcı
-                n += b.size + 1
+                with fh:
+                    artik = b""
+                    while True:
+                        parca = fh.read(int(obek_bayt))
+                        if not parca:
+                            break
+                        parca = artik + parca
+                        # **UTF-8 SINIRINDA KESME.** Çok baytlı bir
+                        # harfin ortasından bölmek o harfi bozar ve
+                        # belirteçleme sessizce başka bir şey okur.
+                        # Son dört bayt sonraki öbeğe devredilir.
+                        artik, parca = parca[-4:], parca[:-4]
+                        if not parca:
+                            continue
+                        t = kod.encode(parca.decode("utf-8", "replace"),
+                                       disallowed_special=())
+                        if t:
+                            ch.write(np.asarray(t, np.uint32).tobytes())
+                            n += len(t)
+                    if artik:
+                        t = kod.encode(artik.decode("utf-8", "replace"),
+                                       disallowed_special=())
+                        if t:
+                            ch.write(np.asarray(t, np.uint32).tobytes())
+                            n += len(t)
                 dosya += 1
-        bas = json.dumps({"sözlük": int(sozluk), "bayt": int(n),
-                          "kaynak": ad or kok, "dosya": int(dosya)},
+        bas = json.dumps({"kodlama": kodlama, "sözlük": V,
+                          "belirteç": int(n), "kaynak": ad or kok,
+                          "dosya": int(dosya)},
                          ensure_ascii=False).encode("utf-8")
-        assert len(bas) <= 256, "başlık 256 baytı aşamaz: %d" % len(bas)
+        assert len(bas) <= 320, "başlık 320 baytı aşamaz: %d" % len(bas)
         ch.seek(yer)
-        ch.write(bas + b" " * (256 - len(bas)))
-    return {"yol": cikti, "bayt": n, "dosya": dosya, "sözlük": int(sozluk)}
+        ch.write(bas + b" " * (320 - len(bas)))
+    return {"yol": cikti, "belirteç": n, "dosya": dosya,
+            "kodlama": kodlama, "sözlük": V}
 
 
-def mucit_ac(yol: str, sozluk: int):
-    """Çevrilmiş külliyatı **mmap** ile aç. Sözlük tutmuyorsa reddet."""
+
+def mucit_ac(yol: str, kodlama: str = "o200k_base"):
+    """Çevrilmiş külliyatı **mmap** ile aç. Kodlama tutmuyorsa reddet.
+
+    ``np.memmap`` dosyayı belleğe **almaz**, sayfa sayfa okur. Boru
+    hattının kap tarafı budur (ferman 1-O): 8 GB'lık bir kaynaktan
+    yalnız okunan pencere kapta durur.
+    """
     import numpy as np
     with open(yol, "rb") as fh:
         if fh.read(len(MUCIT_DAMGA)) != MUCIT_DAMGA:
             return None
-        bas = json.loads(fh.read(257).decode("utf-8").strip())
+        bas = json.loads(fh.read(321).decode("utf-8").strip())
         ofset = fh.tell()
-    # **SESSİZ İKAME YASAK** (ferman 5): başka sözlükle çevrilmiş bir
+    # **SESSİZ İKAME YASAK** (ferman 5): başka kodlamayla çevrilmiş bir
     # dosyayı okumak, başka bir belirteç uzayını okumaktır.
-    assert int(bas["sözlük"]) == int(sozluk), (
-        "çevrilmiş külliyatın sözlüğü tutmuyor: %s dosyada %d, tâlimde "
-        "%d -- yeniden çevrilmeli" % (yol, bas["sözlük"], sozluk))
-    return np.memmap(yol, dtype=np.uint8, mode="r", offset=ofset,
-                     shape=(int(bas["bayt"]),))
+    assert str(bas["kodlama"]) == str(kodlama), (
+        "çevrilmiş külliyatın kodlaması tutmuyor: %s dosyada %r, "
+        "tâlimde %r -- yeniden çevrilmeli"
+        % (yol, bas["kodlama"], kodlama))
+    return np.memmap(yol, dtype=np.uint32, mode="r", offset=ofset,
+                     shape=(int(bas["belirteç"]),))
+
 
 
 def envanter(kok: str) -> Dict[str, int]:
@@ -401,123 +425,87 @@ def envanter(kok: str) -> Dict[str, int]:
     return e
 
 
-def _buda(kok: str, uzantilar: Sequence[str], had: int
-          ) -> Tuple[int, int, Dict[str, int]]:
-    """Bir kaynağı ``had`` bayta indir; ``(tutulan, atılan, envanter)``.
+
+def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None
+                 ) -> List[Dict[str, Any]]:
+    """Kaynakları ``depo/kulliyat/`` altına **çek. BUDAMA YOKTUR.**
 
     ===================================================================
-    NİÇİN BUDAMA -- ÖLÇÜLDÜ
+    FERMAN 1-O
     ===================================================================
 
-    Çekilen külliyat 23 GB'a çıktı ve diskte 6,9 GB kaldı. Fakat mesele
-    yalnız yer değil, **söz hakkı**dır: ``spa5k/tafsir_api`` tek başına
-    8,9 GB ve o 8,9 GB'ın büyük kısmı **aynı âyetin başka
-    tercümeleridir**. Budanmazsa külliyatın onda dokuzu tek bir
-    kaynağın tekrarı olur ve tâlim onu öğrenir.
+        "Sana ne oluyor da indirdiğin veriseti sınırlıyorsun? İnen şey
+        githuba inecek... ama **verisetinin tamamı o repoda duracak!**"
 
-    ===================================================================
-    EVVELÂ SAYIM -- ÖLÇÜLMÜŞ VE DÜZELTİLMİŞ YIKIM
-    ===================================================================
+    Evvelce burada bir disk bütçesi vardı ve kaynaklar payına göre
+    **budanıyordu**: 23 GB'lık çekimin 11,2 GB'ı siliniyordu. O bir
+    çare değil, kusurun kendisiydi. Kaynak olduğu gibi durur; kabın
+    darlığı ``mucit_cevir``in öbek öbek çevirmesi ve ``mucit_ac``ın
+    ``mmap``i ile, yâni **akışla** çözülür.
 
-    Bu fonksiyonun ilk hâli sayım yapmadan siliyordu: cetveldeki
-    ``uzanti`` yanlışsa **bütün depo siliniyordu**. Ölçüldü ve on yedi
-    kaynak (h-arc, BARC, MINI-ARC, ConceptARC, re-arc, set.mm, ArsivNur,
-    hadith-json...) 4 kilobayta indi. Yanlış bir tahminin bedeli
-    kaynağın kendisi olamaz.
-
-    Artık envanter **evvelâ** çıkarılır; hiçbir dosya uzantıya
-    uymuyorsa **tek dosya bile silinmez** ve envanter geri döner --
-    yâni yanlış cetvel satırı, veriyi imha etmek yerine kendini
-    ihbar eder.
-    """
-    env = envanter(kok)
-    uz = tuple(uzantilar)
-    dosyalar: List[Tuple[str, int]] = []
-    ote: List[str] = []
-    for kk, _dd, ff in os.walk(kok):
-        for f in sorted(ff):
-            y = os.path.join(kk, f)
-            try:
-                b = os.path.getsize(y)
-            except OSError:
-                continue
-            (dosyalar.append((y, b)) if f.endswith(uz) else ote.append(y))
-    if not dosyalar:
-        return 0, 0, env                    # **HİÇBİR ŞEY SİLİNMEZ**
-    git = os.path.join(kok, ".git")
-    if os.path.isdir(git):
-        shutil.rmtree(git, ignore_errors=True)
-    for y in ote:                           # metin olmayan: yalnız yer tutar
-        try:
-            os.remove(y)
-        except OSError:
-            pass
-    dosyalar.sort()
-    tutulan = atilan = 0
-    for y, b in dosyalar:
-        if tutulan + b <= had:
-            tutulan += b
-        else:
-            atilan += b
-            try:
-                os.remove(y)
-            except OSError:
-                pass
-    return tutulan, atilan, env
-
-
-def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None,
-                 had: Optional[int] = None) -> List[Dict[str, Any]]:
-    """Kaynakları ``depo/kulliyat/`` altına **çek ve payına göre buda**.
-
-    Zaten çekilmişse tekrar çekilmez. Çekilemeyen **sessizce
-    geçilmez**: sözlükte ``engel`` alanı sebebiyle beraber döner.
-
-    Bütçe payı: ``had_i = bütçe × pay_i / Σ pay``. Yâni bir kaynağın
-    tutacağı yer büyüklüğünden değil, **külliyattaki söz hakkından**
-    çıkar (ferman 1-J: kemiyete değil keyfiyete).
+    Çekilemeyen **sessizce geçilmez**: ``engel`` alanı sebebiyle döner.
     """
     ks = list(kaynaklar or KAYNAKLAR)
-    butce = int(disk_butcesi() if had is None else had)
-    toplam_pay = sum(float(k.pay) for k in ks
-                     if not k.engel and k.depo) or 1.0
     out: List[Dict[str, Any]] = []
     for k in ks:
         if k.engel or not k.depo:
             out.append({"ad": k.ad, "alındı": False, "engel": k.engel,
-                        "bayt": 0, "dosya": 0, "atılan": 0, "had": 0})
+                        "bayt": 0, "dosya": 0})
             continue
-        pay_had = int(butce * float(k.pay) / toplam_pay)
         d = _dizin(k)
         # ══════════════════════════════════════════════════════════
-        #  SÜRÜM VARLIĞI YOLU -- HF'e GitHub ÜZERİNDEN ŞÜMUL
+        #  SÜRÜM VARLIĞI -- HF'e GitHub ÜZERİNDEN ŞÜMUL
         # ══════════════════════════════════════════════════════════
         #
         # Ajan yalnız GitHub görür (ferman 1-K'nin ölçtüğü hudut).
         # ``.github/workflows/hf_to_gh.yml`` HuggingFace'ten çeker,
-        # ``mucit_cevir`` ile **bizim biçime** dönüştürür ve GitHub
-        # Release'e varlık olarak koyar. Burada indirilen şey ham veri
-        # değil, çevrilmiş külliyattır: doğrudan ``mmap``lenir.
+        # ``mucit_cevir`` ile bizim biçime dönüştürür ve Release'e
+        # varlık olarak koyar. Buraya inen şey ham veri değil,
+        # **çevrilmiş külliyattır**; doğrudan ``mmap``lenir.
+        #
+        # Release varlık başına 2 GB'a kadar tutar; daha büyük
+        # külliyat iş akışında parçalanır ve parçalar burada
+        # **birleştirilir** -- biçim düz bayt olduğu için kayıpsızdır.
         if k.varlik:
             hedef = os.path.join(d, k.varlik)
             if not os.path.isfile(hedef):
                 os.makedirs(d, exist_ok=True)
-                adres = ("https://github.com/%s/releases/download/%s/%s"
-                         % (k.depo, k.surum, k.varlik))
-                r = subprocess.run(
-                    ["curl", "-fsSL", "-o", hedef, adres],
-                    capture_output=True, text=True, timeout=3600)
-                if r.returncode != 0:
-                    out.append({"ad": k.ad, "alındı": False, "bayt": 0,
-                                "dosya": 0, "atılan": 0, "had": pay_had,
+                kok_adres = ("https://github.com/%s/releases/download/%s/"
+                             % (k.depo, k.surum))
+                parcalar: List[str] = []
+                i = 0
+                while True:
+                    ad_p = k.varlik if i == 0 else "%s.parca%02d" % (k.varlik, i - 1)
+                    yer = os.path.join(d, ad_p)
+                    r = subprocess.run(
+                        ["curl", "-fsSL", "-o", yer, kok_adres + ad_p],
+                        capture_output=True, text=True, timeout=7200)
+                    if r.returncode != 0:
+                        if i == 0:
+                            out.append({
+                                "ad": k.ad, "alındı": False, "bayt": 0,
+                                "dosya": 0,
                                 "engel": "sürüm varlığı inmedi (%s): %s"
-                                         % (adres,
+                                         % (kok_adres + ad_p,
                                             (r.stderr or "").strip()[-160:])})
+                        break
+                    parcalar.append(yer)
+                    i += 1
+                    if i == 1 and os.path.isfile(hedef):
+                        break              # tek parça geldi
+                if not parcalar:
                     continue
-            b = os.path.getsize(hedef)
-            out.append({"ad": k.ad, "alındı": True, "engel": "",
-                        "yol": d, "bayt": b, "dosya": 1, "atılan": 0,
-                        "had": pay_had, "çevrilmiş": True})
+                if len(parcalar) > 1:
+                    with open(hedef + ".birlesik", "wb") as ch:
+                        for y in parcalar:
+                            with open(y, "rb") as f:
+                                shutil.copyfileobj(f, ch, 8 << 20)
+                            os.remove(y)
+                    os.replace(hedef + ".birlesik", hedef)
+            b = os.path.getsize(hedef) if os.path.isfile(hedef) else 0
+            out.append({"ad": k.ad, "alındı": b > 0, "engel": "",
+                        "yol": d, "bayt": b, "dosya": 1,
+                        "çevrilmiş": True})
             continue
         if not os.path.isdir(d):
             os.makedirs(os.path.dirname(d) or ".", exist_ok=True)
@@ -527,85 +515,74 @@ def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None,
             komut += ["https://github.com/" + k.depo, d]
             ortam = dict(os.environ, GIT_LFS_SKIP_SMUDGE="1")
             r = subprocess.run(komut, capture_output=True, text=True,
-                               env=ortam, timeout=1800)
+                               env=ortam, timeout=7200)
             if r.returncode != 0:
                 out.append({"ad": k.ad, "alındı": False, "bayt": 0,
-                            "dosya": 0, "atılan": 0, "had": pay_had,
+                            "dosya": 0,
                             "engel": "git clone düştü: %s"
                                      % (r.stderr or "").strip()[-200:]})
                 continue
         kok = os.path.join(d, k.yol) if k.yol else d
         if not os.path.isdir(kok):
-            out.append({"ad": k.ad, "alındı": False, "bayt": 0,
-                        "dosya": 0, "atılan": 0, "had": pay_had,
-                        "engel": "depo geldi fakat ``%s`` yolu yok "
-                                 "-- cetveldeki yol yanlış" % k.yol})
+            out.append({"ad": k.ad, "alındı": False, "bayt": 0, "dosya": 0,
+                        "engel": "depo geldi fakat ``%s`` yolu yok -- "
+                                 "cetveldeki yol yanlış" % k.yol})
             continue
-        # **BUDAMA: PAYINDAN FAZLASINI TUTMAZ.**
-        #
-        # Kaynağın kendi yolu dışındaki dizinler de atılır -- fakat
-        # **yalnız ``yol`` verilmişse**. Verilmemişse ``kok`` deponun
-        # kendisidir ve o hâlde bu döngü deponun bütün içeriğini
-        # silerdi: ölçüldü, on yedi kaynak bu yüzden 4 kilobayta indi.
-        if k.yol and os.path.abspath(kok) != os.path.abspath(d):
-            tut = os.path.abspath(kok)
-            for alt in os.listdir(d):
-                y = os.path.abspath(os.path.join(d, alt))
-                if y == tut or tut.startswith(y + os.sep):
-                    continue
-                if os.path.isdir(y):
-                    shutil.rmtree(y, ignore_errors=True)
-                else:
-                    try:
-                        os.remove(y)
-                    except OSError:
-                        pass
-        tutulan, atilan, env = _buda(kok, k.uzantilar(), pay_had)
-        dosya = sum(1 for kk, _dd, ff in os.walk(kok) for f in ff
-                    if f.endswith(k.uzantilar()))
+        bayt, dosya = _boy(kok, k.uzantilar())
         if not dosya:
             # **BOŞ DÖNEN KAYNAK SESSİZCE GEÇİLMEZ.** Envanter yazılır:
-            # yâni "hangi uzantı aranmalıydı" sorusu tahmine değil,
-            # deponun kendi sayımına havale edilir.
+            # "hangi uzantı aranmalıydı" sorusu tahmine değil, deponun
+            # kendi sayımına havale edilir.
+            env = envanter(kok)
             ilk = sorted(env.items(), key=lambda x: -x[1])[:6]
-            out.append({"ad": k.ad, "alındı": False, "bayt": 0,
-                        "dosya": 0, "atılan": 0, "had": pay_had,
-                        "engel": "depo geldi fakat ``%s`` yolunda "
-                                 "%s uzantılı dosya yok. Fiilen olan: %s"
+            out.append({"ad": k.ad, "alındı": False, "bayt": 0, "dosya": 0,
+                        "engel": "``%s`` yolunda %s uzantılı dosya yok. "
+                                 "Fiilen olan: %s"
                                  % (k.yol or ".", "/".join(k.uzantilar()),
                                     ", ".join("%s×%d" % (u, n)
                                               for u, n in ilk) or "hiç")})
             continue
         out.append({"ad": k.ad, "alındı": True, "engel": "", "yol": kok,
-                    "bayt": tutulan, "dosya": dosya, "atılan": atilan,
-                    "had": pay_had, "çevrilmiş": False})
+                    "bayt": bayt, "dosya": dosya, "çevrilmiş": False})
     return out
+
 
 
 def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                     tohum: int = 0,
-                    kaynaklar: Optional[Sequence[Kaynak]] = None
+                    kaynaklar: Optional[Sequence[Kaynak]] = None,
+                    kodlama: str = "o200k_base", taban: int = 16,
+                    basamak: int = 0
                     ) -> List[Tuple[List[int], int]]:
-    """Külliyattan ``(bağlam, hedef)`` çiftleri -- **çevrilmiş dosyadan**.
+    """Külliyattan ``(bağlam, sonraki basamak)`` -- **boru hattıyla**.
 
     ===================================================================
-    HAM METİN ARTIK HER KOŞUDA OKUNMUYOR
+    HAM METİN OKUNMAZ, PENCEREYE BAKILIR (ferman 1-O)
     ===================================================================
 
-    Evvelce burada külliyatın **bütün** dosyaları açılıp belleğe
-    alınıyor, birleştiriliyor ve ancak ondan sonra ``mod sozluk``
-    alınıyordu. Külliyat 2,7 GB ve 165 bin dosya olunca bu, her tâlim
-    koşusunda 2,7 GB okumak demektir -- üstelik neticesi her koşuda
-    **aynı** dizidir.
+    Kaynağın tamamı belleğe alınmaz ve **kesilmez**. Her kaynak bir
+    kere ``mucit_cevir`` ile ``.mucit``e çevrilir (tiktoken belirteç
+    kimlikleri, ``uint32``), burada ``np.memmap`` ile açılır ve yalnız
+    okunan pencereler kapta durur. 8 GB'lık bir tefsir külliyatı da,
+    200 MB'lık bir ispat külliyatı da aynı kapta koşar.
 
-    Artık her kaynak bir kere ``mucit_cevir`` ile ``.mucit`` dosyasına
-    çevrilir ve burada ``np.memmap`` ile açılır: tâlim külliyatı
-    okumaz, ona bakar. Pencereler doğrudan mmap üstünden alınır.
+    ===================================================================
+    BELİRTEÇ → BASAMAK (ferman 1-N)
+    ===================================================================
 
-    Kaynaklar arasında pay **kaynağın payıdır**, boyu değil: 8 GB'lık
-    bir tefsir külliyatı, 200 MB'lık bir ispat külliyatını ezmesin.
+    Dosyada duran şey tiktoken kimlikleridir (200 019'a kadar). Yazmaca
+    girerken ``tip_vektoru`` ile ``taban`` tabanında ``basamak`` haneye
+    açılırlar; yâni akış bir **basamak akışıdır** ve hedef daima
+    ``[0, taban)`` aralığındadır.
+
+    Kaynaklar arası pay **boy değil söz hakkıdır** (ferman 1-J).
     """
     import numpy as np
+    from nefs.belirtec import basamak_sayisi, belirtec_sozlugu, tip_vektoru
+
+    tb = max(2, int(taban))
+    bs = int(basamak) if int(basamak) > 0 else basamak_sayisi(
+        int(sozluk) if int(sozluk) > 0 else belirtec_sozlugu(kodlama), tb)
     r = np.random.default_rng(int(tohum))
     ks = [k for k in (kaynaklar or KAYNAKLAR) if not k.engel and k.depo]
     diziler: List[Tuple[Any, float]] = []
@@ -617,30 +594,44 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             if not os.path.isdir(kok):
                 continue
             yol = _dizin(k) + MUCIT_UZANTI
+            # **BAYAT BİÇİM SESSİZCE ATLANMAZ.** ``mucit_ac`` damgası
+            # tutmayan dosyaya ``None`` döner; o dosya yerinde durduğu
+            # için ``isfile`` doğru çıkar ve kaynak her koşuda sessizce
+            # düşerdi. Damga tutmuyorsa **yeniden çevrilir**.
+            if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
+                os.remove(yol)
             if not os.path.isfile(yol):
-                mucit_cevir(kok, yol, int(sozluk), k.uzantilar(), k.ad)
+                mucit_cevir(kok, yol, kodlama, k.uzantilar(), k.ad)
         if not os.path.isfile(yol):
             continue
-        t = mucit_ac(yol, int(sozluk))
-        if t is None or t.size <= int(pencere) + 1:
+        t = mucit_ac(yol, kodlama)
+        # Bir pencere ``pencere`` BASAMAKtır; o hâlde lâzım olan
+        # belirteç sayısı ``⌈pencere/basamak⌉ + 1``dir.
+        gerek = int(np.ceil(int(pencere) / bs)) + 2
+        if t is None or t.size <= gerek:
             continue
         diziler.append((t, float(k.pay)))
     if not diziler:
         return []
-    # **PAY, BOY DEĞİL** (ferman 1-J): her kaynaktan alınacak örnek
-    # sayısı ilan edilen söz hakkına göre dağıtılır.
     toplam = sum(p for _t, p in diziler) or 1.0
     cift: List[Tuple[List[int], int]] = []
     for t, pay in diziler:
         n = int(round(int(azami) * pay / toplam))
         if n <= 0:
             continue
-        bas = r.integers(0, t.size - int(pencere) - 1, size=n)
+        gerek = int(np.ceil(int(pencere) / bs)) + 2
+        bas = r.integers(0, t.size - gerek, size=n)
         for i in bas:
-            pen = np.asarray(t[i:i + int(pencere)], np.int64)
-            cift.append(([int(x) for x in pen],
-                         int(t[i + int(pencere)])))
+            # **YALNIZ PENCERE OKUNUR.** ``t`` bir mmap'tir; burada
+            # dosyanın tamamı değil, ``gerek`` kadar belirteç okunur.
+            ham = np.asarray(t[int(i):int(i) + gerek], np.int64)
+            akis = tip_vektoru(ham, tb, bs)
+            if akis.size < int(pencere) + 1:
+                continue
+            cift.append(([int(x) for x in akis[:int(pencere)]],
+                         int(akis[int(pencere)])))
     return cift[:int(azami)]
+
 
 
 def kulliyat_beyani(dokum: Optional[Sequence[Dict[str, Any]]] = None) -> str:
@@ -648,20 +639,18 @@ def kulliyat_beyani(dokum: Optional[Sequence[Dict[str, Any]]] = None) -> str:
     d = list(dokum if dokum is not None else kulliyat_cek())
     s = ["=== KÜLLİYAT (main/kulliyat.py) -- harici metin ===", "",
          "  Depoya gömülmez; ``%s`` altına çekilir." % KULLIYAT_DIZINI, ""]
-    top_b = top_f = top_a = 0
+    top_b = top_f = 0
     for k in d:
         if k["alındı"]:
             top_b += int(k["bayt"])
             top_f += int(k["dosya"])
-            top_a += int(k.get("atılan", 0))
-            s.append("  ✔ %-42s %8.2f MB  %5d dosya  [had %6.0f MB, "
-                     "budanan %7.1f MB]"
+            s.append("  ✔ %-46s %9.2f MB  %6d dosya%s"
                      % (k["ad"], k["bayt"] / 1e6, k["dosya"],
-                        k.get("had", 0) / 1e6, k.get("atılan", 0) / 1e6))
+                        "  [çevrilmiş]" if k.get("çevrilmiş") else ""))
         else:
             s.append("  ✘ %-46s ALINAMADI" % k["ad"])
             s.append("      sebep: %s" % k["engel"])
-    s += ["", "  TOPLAM: %.2f MB, %d dosya  (budanan %.2f MB; "
-          "disk bütçesi %.2f GB)"
-          % (top_b / 1e6, top_f, top_a / 1e6, disk_butcesi() / 1e9)]
+    s += ["", "  TOPLAM: %.2f MB, %d dosya  -- **budama yok** "
+          "(ferman 1-O: veri kesilmez, akışla okunur)"
+          % (top_b / 1e6, top_f)]
     return "\n".join(s)

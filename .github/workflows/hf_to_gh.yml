@@ -16,12 +16,17 @@
 # ikilisi yok -- ferman 1-K). Fakat GitHub Actions koşucusu HF'i
 # görür. O hâlde veri **GitHub sunucusu üzerinden** geçer.
 #
-# ÇEVİRİ NİÇİN BURADA. Ham veri seti gigabaytlarcadır ve Release varlığı
-# başına 2 GB haddi vardır. ``main/kulliyat.py:mucit_cevir`` metni
-# bizim biçime indirir -- bayt başına tek belirteç, ``[0, sözlük)``
-# aralığında -- ve netice ``np.memmap`` ile açılır. Yâni yüklenen şey
-# ham veri değil, **tâlimin doğrudan okuduğu külliyattır**: hem küçük,
-# hem her koşuda yeniden çevrilmez.
+# ÇEVİRİ NİÇİN BURADA. ``main/kulliyat.py:mucit_cevir`` metni
+# **tiktoken**den geçirir ve düz ``uint32`` belirteç kimlikleri olarak
+# yazar (ferman 1-N: ana belirteçleyici her daim tiktokendir). Netice
+# ``np.memmap`` ile açılır. Yâni yüklenen şey ham veri değil, **tâlimin
+# doğrudan okuduğu külliyattır**: her koşuda yeniden çevrilmez ve
+# kodlama tutmazsa ``mucit_ac`` **reddeder**.
+#
+# VERİ KESİLMEZ (ferman 1-O). Release varlık başına 2 GB tutar; daha
+# büyük külliyat aşağıda **parçalanır** ve ``kulliyat_cek`` parçaları
+# indirip birleştirir. Biçim düz bayt olduğu için kayıpsızdır. Yâni
+# hudut bir budama sebebi değil, bir parçalama sebebidir.
 #
 # İNDİRME TARAFI. ``main/kulliyat.py``deki ``Kaynak(surum=..., varlik=...)``
 # satırı bu Release varlığını ``curl`` ile indirir. Yâni bu iş akışının
@@ -36,10 +41,10 @@ on:
         description: 'HuggingFace veri kümesi kimliği (ör. openbmb/UltraData-Math)'
         required: true
         type: string
-      sozluk:
-        description: 'Sözlük (EgitimAyari.sozluk ile AYNI olmalı; tutmazsa mucit_ac reddeder)'
+      kodlama:
+        description: 'tiktoken kodlaması (EgitimAyari.kodlama ile AYNI olmalı; tutmazsa mucit_ac REDDEDER)'
         required: true
-        default: '16'
+        default: 'o200k_base'
         type: string
       alt_yol:
         description: 'Veri kümesi içinde alınacak alt dizin (boş = hepsi)'
@@ -68,7 +73,7 @@ jobs:
           python-version: '3.11'
 
       - name: Gerekli paketleri yükle
-        run: pip install --quiet huggingface_hub numpy
+        run: pip install --quiet huggingface_hub numpy tiktoken
 
       - name: Hugging Face verisini indir
         env:
@@ -97,7 +102,7 @@ jobs:
       - name: Bizim biçime çevir (mucit_cevir)
         env:
           HF_REPO_ID: ${{ inputs.hf_repo_id }}
-          SOZLUK: ${{ inputs.sozluk }}
+          KODLAMA: ${{ inputs.kodlama }}
           ALT_YOL: ${{ inputs.alt_yol }}
           UZANTI: ${{ inputs.uzanti }}
         run: |
@@ -112,18 +117,18 @@ jobs:
           uz = tuple(u.strip() for u in os.environ["UZANTI"].split(",")
                      if u.strip())
           cikti = ad + MUCIT_UZANTI
-          o = mucit_cevir(kok, cikti, int(os.environ["SOZLUK"]),
+          o = mucit_cevir(kok, cikti, os.environ["KODLAMA"],
                           uzantilar=uz, ad=kimlik)
           print("ÇEVRİLDİ:", o)
           # **BOŞ ÇIKTI SESSİZCE GEÇİLMEZ** (ferman 5): hiçbir dosya
           # uzantıya uymadıysa yüklenecek şey yoktur ve iş akışı
           # burada KIRMIZI yanar, boş bir varlık yüklemez.
-          assert o["bayt"] > 0, (
+          assert o["belirteç"] > 0, (
               "çeviri boş çıktı: '%s' yolunda %s uzantılı dosya yok"
               % (kok, "/".join(uz)))
           with open(os.environ["GITHUB_ENV"], "a") as f:
               f.write("MUCIT_AD=%s\n" % ad)
-              f.write("MUCIT_BAYT=%d\n" % o["bayt"])
+              f.write("MUCIT_BELIRTEC=%d\n" % o["belirteç"])
               f.write("MUCIT_DOSYA=%d\n" % o["dosya"])
           PY
           ls -lh *.mucit
@@ -132,11 +137,11 @@ jobs:
       # ondan büyükse parçalanır. Parçalar indirildikten sonra
       # ``cat``lenerek birleşir -- biçim düz bayt olduğu için parçalama
       # ve birleştirme kayıpsızdır.
-      - name: 1,8 GB'lık parçalara böl (Release haddi)
+      - name: Release haddine göre parçala (BUDAMA YOK -- ferman 1-O)
         run: |
           BOY=$(stat -c%s "${MUCIT_AD}.mucit")
           if [ "$BOY" -gt 1900000000 ]; then
-            split -b 1800M -d "${MUCIT_AD}.mucit" "${MUCIT_AD}.mucit.parca"
+            split -b 1800M -d -a 2 "${MUCIT_AD}.mucit" "${MUCIT_AD}.mucit.parca"
             rm -f "${MUCIT_AD}.mucit"
             echo "parçalandı: $(ls ${MUCIT_AD}.mucit.parca* | wc -l) parça"
           else
@@ -155,8 +160,8 @@ jobs:
             | | |
             |---|---|
             | Kaynak | `${{ inputs.hf_repo_id }}` (HuggingFace) |
-            | Sözlük | `${{ inputs.sozluk }}` |
-            | Belirteç | `${{ env.MUCIT_BAYT }}` |
+            | Kodlama | `${{ inputs.kodlama }}` (tiktoken) |
+            | Belirteç | `${{ env.MUCIT_BELIRTEC }}` |
             | Dosya | `${{ env.MUCIT_DOSYA }}` |
 
             Tâlime bağlamak için `main/kulliyat.py` cetveline:
@@ -167,9 +172,9 @@ jobs:
                    varlik="${{ env.MUCIT_AD }}.mucit", pay=2.0),
             ```
 
-            Biçim: `MUCIT1\n` + 256 baytlık JSON başlık + `[0, sözlük)`
-            aralığında düz `uint8` belirteçler. `mucit_ac` `np.memmap`
-            ile açar; sözlük tutmazsa **reddeder** (sessiz ikame yasak).
+            Biçim: `MUCIT2\n` + 320 baytlık JSON başlık + düz `uint32`
+            **tiktoken belirteç kimlikleri**. `mucit_ac` `np.memmap` ile
+            açar; kodlama tutmazsa **reddeder** (sessiz ikame yasak).
           files: |
             *.mucit
             *.mucit.parca*

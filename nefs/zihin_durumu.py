@@ -542,7 +542,8 @@ class QYazmac:
         return np.stack([np.real(R[..., 1, 1]), np.real(R[..., 0, 1])],
                         axis=-1)
 
-    def beyan(self, sozluk: int = 16, satir: int = 0) -> np.ndarray:
+    def beyan(self, sozluk: int = 0, satir: int = 0) -> np.ndarray:
+        """**BASAMAK** dağılımı; ``0`` = tabanı yazmaçtan al (1-M/1-N)."""
         return self.y.beyan(sozluk)
 
 

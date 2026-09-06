@@ -349,7 +349,7 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
     from .qegitim import belirtecleri_kodla
     from .suphe import SupheAyari, suphe_manifoldu
     _E = belirtecleri_kodla(list(uretilen)[-int(pencere):] or [0],
-                            nefs.ayar.veri_lifi, int(sozluk))
+                            nefs.ayar.veri_lifi, nefs.ayar.veri_lifi)
     _q = nefs.idrak_et(_E)
     _sp = suphe_manifoldu([np.asarray(_q.y.psi[0], complex)],
                           [1.0 - 2.0 * ort_sukut],

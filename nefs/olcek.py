@@ -33,9 +33,12 @@ donanımı, aynı sözlüğü, aynı bütçeyi tarif etmiyordu.
 Zabıtın hükmü: durum L1'de dönmeli, ``4096×4096`` GEMM olmamalı. O
 hâlde lif yapısı bir tercih değil, bir **önbellek denklemidir**::
 
-    V = 2^⌈log₂ sözlük⌉                     (veri lifi; ikinin kuvveti
-                                             şart -- parite maskesi bir
-                                             bit aralığıdır)
+    V = K                                   (veri lifi = karo; belirteç
+                                             bir SEVİYE değil, ``V``
+                                             tabanında basamak dizisidir
+                                             -- ferman 1-N)
+    basamak = ⌈log_V(sözlük)⌉               (sözlük buraya gider, ``d``ye
+                                             değil)
     3·K²·bayt ≤ L1d · doluluk               (üç karo L1'e sığsın)
     K = 2^⌊½ log₂(L1d·doluluk / (3·bayt))⌋
     lif = (V, K, K)   ,   hüküm lifi = K²   ,   d = V·K²
@@ -254,10 +257,26 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     # ══════════════════════════════════════════════════════════════
     #  FORMÜL 1 -- YAPI (önbellekten)
     # ══════════════════════════════════════════════════════════════
-    V = max(2, _yukari_kuvvet(int(k.sozluk)))
-    # Cömertlik önbelleğin ne kadarını istediğimizdir: 0,25 → 0,90.
+    # ══════════════════════════════════════════════════════════════
+    #  VERİ LİFİ ARTIK SÖZLÜKTEN GELMİYOR (ferman 1-N)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Evvelce ``V = 2^⌈log₂ sözlük⌉`` yazıyordu: yâni **belirteç, veri
+    # lifinin bir taban durumunun kendisiydi** ve o yapıda sözlük 16'yı
+    # aşamazdı. Tiktoken ``o200k_base``de 200 019 belirteç vardır;
+    # ``V``yi oraya çekmek ``d = V·K²``yi 2³⁴'e fırlatırdı.
+    #
+    # Doğrusu ikisini **ayırmaktır**: ``V`` taşıyıcının ölçüsüdür ve
+    # önbellekten gelir; sözlük ise ``basamak``a gider. Yâni belirteç
+    # bir seviye değil, **``V`` tabanında bir basamak dizisidir**
+    # (``nefs/belirtec.py:tip_vektoru``).
+    #
+    # ``V = K``: zabıtın ``[16,16,16]`` karosu tam olarak budur -- üç
+    # eşit karo, hepsi L1'de. Ayrı bir formül uydurmak, aynı önbellek
+    # denklemini iki kere yazmak olurdu (ferman 2-B).
     doluluk = 0.25 + 0.65 * c
     K = _ikinin_kuvveti(math.sqrt(L1 * doluluk / (3.0 * bayt)), 4)
+    V = K
     # Hüküm lifi bütün küllî alanları taşımalı; taşımıyorsa karo büyür.
     yuva = sum(n for _, n in QAyar.kulli_alanlar)
     while K * K < yuva:
@@ -355,7 +374,13 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     # Kronecker karosunun duraklarına yayılır, karo kadar açıda yayma
     # **devirsiz** olur. Ondan fazlası taşıyıcıda karşılıksız kalır.
     genislik = int(max(1, round(1.0 + (K - 1) * c)))
+    # **BASAMAK: SÖZLÜK BURAYA GİDER.** Bir belirteç kaç qudit
+    # seviyesi işgal eder -- ``⌈log_V(sözlük)⌉``. Sözlük büyürse
+    # ``d`` değil **basamak** büyür; taşıyıcı sabit kalır.
+    from .belirtec import basamak_sayisi
+    basamak = basamak_sayisi(int(k.sozluk), V)
     return {
+        "belirtec_basamak": basamak,
         "parametre_genisligi": genislik,
         # yapı
         "veri_lifi": V, "karo": K, "hukum_lifi": hukum,
@@ -506,13 +531,17 @@ def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
     d = o or olcek(kok)
     return "\n".join([
         "=== ÖLÇEK -- ÜÇ KÖK, ÜÇ FORMÜL (nefs/olcek.py) ===", "",
-        "  KÖK 1  sözlük  = %d      (veriden)" % kok.sozluk,
+        "  KÖK 1  kodlama : tiktoken, sözlük = %d  (ÖLÇÜLDÜ, "
+        "elle yazılmadı -- ferman 1-N)" % kok.sozluk,
         "  KÖK 2  cömert  = %.2f    (padişahın tek kabzası)" % kok.comert,
         "  KÖK 3  donanım : L1d %d B | L2 %d B | L3 %d B | %d çekirdek"
         % (d["L1d"], d["L2"], d["L3"], d["çekirdek"]),
         "",
         "  FORMÜL 1 -- YAPI (önbellekten)",
-        "    V = 2^⌈log₂ sözlük⌉                      = %d" % d["veri_lifi"],
+        "    V = K (veri lifi = karo)                 = %d" % d["veri_lifi"],
+        "    sözlük (tiktoken'den ÖLÇÜLDÜ)            = %d" % kok.sozluk,
+        "    basamak = ⌈log_V(sözlük)⌉                = %d"
+        % d["belirtec_basamak"],
         "    3·K²·bayt ≤ L1d·%.2f  →  K              = %d"
         % (d["doluluk"], d["karo"]),
         "    lif = (V, K, K)   hüküm lifi = K²        = %d"

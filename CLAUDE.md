@@ -307,6 +307,57 @@ dışarıda tutup tahtı fakir bırakıyordu.
 
 ---
 
+## ▓▓▓ 1-N. FERMAN: BELİRTEÇ HER DAİM TİKTOKEN'DİR ▓▓▓
+
+> *"Workflowda bana sözlük boyutu sorup 16 demişsin, bu ne rezalet,
+> sence ultramath verisetinde 16 token mi var, tiktoken kadar token
+> mi var? Ana tokenizer ister arc ister metin, ne olursa olsun **her
+> daim tiktokendir**, sen tiktokenin altındaki mekanizmayı değiştirip
+> bizim tip vektörleri yapacaksın! Tüm ayarlarda sözlük ebatını sen
+> değil **tiktoken belirleyecek, otomatik!!**"*
+
+* **TEK BELİRTEÇLEYİCİ VARDIR: tiktoken.** ARC ızgarası da, tefsir de,
+  riyaziye ispatı da aynı kapıdan geçer. "Bu veri için bayt düzeyi
+  yeter" demek yasaktır: iki belirteç uzayı, iki ayrı modeldir.
+* **SÖZLÜK EBADI ELLE YAZILMAZ.** ``sozluk = 16`` gibi bir satır
+  yoktur ve olamaz. Sözlük, tiktoken kodlamasının kendi ``n_vocab``ıdır
+  ve **yoklanarak** alınır (ferman 5-B'nin belirteç tarafı).
+* **DEĞİŞTİRİLEN ŞEY TİKTOKEN DEĞİL, ALTINDAKİ MEKANİZMADIR.**
+  Tiktoken belirteç **kimliğini** verir; o kimliğin taşıyıcıya nasıl
+  gömüleceği bizimdir. Gömme, sürekli bir "embedding matrisi" değil,
+  **tip vektörüdür**: belirteç kimliği veri lifinin tabanında
+  basamaklara açılır ve her basamak bir qudit seviyesidir. Böylece
+  100 bin belirteçlik bir sözlük, ``d``yi patlatmadan taşınır.
+* Bir belirteç uzayı iddiası **sayısıyla** yazılır: kodlamanın adı,
+  ``n_vocab``ı ve basamak sayısı raporda görünür.
+
+---
+
+## ▓▓▓ 1-O. FERMAN: VERİ SINIRLANMAZ -- BORU HATTI KURULUR ▓▓▓
+
+> *"Ayrıca sana ne oluyor da indirdiğin veriseti sınırlıyorsun? İnen
+> şey githuba inecek, sen de ineni kendi cpu'na tek hamlede paldır
+> küldür almayacaksın, **boru hattı kurup işini bitire bitire**
+> alacaksın ama **verisetinin tamamı o repoda duracak!**"*
+
+İki yer birbirine karıştırılmayacak:
+
+    DEPO (GitHub)   verisetinin **TAMAMI** durur. Budama YOKTUR,
+                    pay yoktur, "diskim yetmiyor" mazereti yoktur.
+                    Yer meselesi GitHub'ın meselesidir, bizim değil.
+    KAP (bu CPU)    veri **tek hamlede** alınmaz. Boru hattı parça
+                    çeker, işini bitirir, parçayı bırakır, sonrakini
+                    çeker. Kabın darlığı **akışla** çözülür, veriyi
+                    kesmekle değil.
+
+* ``depo/kulliyat``ta bir kaynağın **tamamının** durması şart değildir;
+  fakat **hiçbir kaynak kesilmez** -- kesilen şey ancak o an kapta
+  tutulan penceredir.
+* "Diskte yer kalmadı" bir hüküm değil, **boru hattının yanlış
+  kurulduğunun delilidir**.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

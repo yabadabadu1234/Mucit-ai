@@ -125,22 +125,60 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
     #
     # ÖLÇÜLDÜ: 16 belirteç, bütün ikili mesafeler ``√2`` (tam eşit),
     # çarpışma sıfır, değişke 0,0000.
-    t = np.asarray(belirtecler, int).reshape(-1) % int(sozluk)
-    out = np.zeros((t.size, int(sozluk)))
+    # ══════════════════════════════════════════════════════════════
+    #  GENİŞLİK SÖZLÜK DEĞİL, **TABAN**DIR (ferman 1-N)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Evvelce genişlik ``sozluk``tu ve o yapıda **belirteç, veri
+    # lifinin bir taban durumunun kendisiydi**: 16 belirteçten fazlası
+    # imkânsızdı. Artık gelen dizi bir belirteç akışı değil, bir
+    # **basamak akışıdır** (``nefs/belirtec.py:tip_vektoru``): her
+    # eleman ``[0, taban)`` aralığındadır ve taban veri lifidir.
+    #
+    # ``kubit`` argümanı o tabanı taşır. ``sozluk`` artık genişliği
+    # tayin etmez -- etseydi 200 019 sütunluk bir tek-sıcak vektör
+    # istenirdi ve o, mimarinin kendisini inkâr olurdu.
+    taban = int(kubit) if int(kubit) >= 2 else int(sozluk)
+    t = np.asarray(belirtecler, int).reshape(-1) % taban
+    out = np.zeros((t.size, taban))
     out[np.arange(t.size), t] = 1.0
     return out
 
 
 def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
-             sozluk: int = 16, tohum: int = 0
-             ) -> List[Tuple[List[int], int]]:
-    """(bağlam, sonraki belirteç) çiftleri -- ARC akışından (kütük H5).
+             sozluk: int = 0, tohum: int = 0, taban: int = 16,
+             basamak: int = 0) -> List[Tuple[List[int], int]]:
+    """(bağlam, sonraki basamak) çiftleri -- ARC akışından, **tiktoken**.
 
-    ARC zaten metindir; model neyi verirsen onu konuşur. Pencere kısa
-    tutulur ki eğitim bir oturumda bitsin -- kapasite iddiası ayrıdır ve
-    ``main/`` onu 6 000 000 kübitte zaten ölçtü.
+    ===================================================================
+    NE DEĞİŞTİ (ferman 1-N)
+    ===================================================================
+
+    Evvelce burada ``[int(x) % sozluk for x in dizi]`` yazıyordu ve
+    ``sozluk`` 16'ydı: ARC'ın kendi on beş elemanlı belirteç uzayı
+    doğrudan qudit seviyelerine düşüyordu. Yâni ARC ile metin **ayrı
+    iki belirteç uzayındaydı** ve o, iki ayrı model demekti.
+
+    Artık ARC ızgarası da metne dökülüp tiktoken'den geçer
+    (``nefs/musahede.py:gorev_dizisi``); dönen şey 200 bin elemanlı bir
+    uzayda belirteç kimlikleridir. O kimlikler taşıyıcıya **tip
+    vektörü** olarak girer: her belirteç ``taban`` tabanında
+    ``basamak`` haneye açılır ve her hane bir qudit seviyesidir.
+
+    Böylece:
+
+    * bağlam ``pencere`` **basamaktan** oluşur (belirteçten değil),
+    * hedef daima ``[0, taban)`` aralığındadır -- yâni mizanın bütün
+      makinesi (Born, Uhlmann, dışlama) **hiç değişmeden** çalışır,
+    * fakat model artık tiktoken'in tamamını kapsar, çünkü belirteç
+      basamak dizisinden ``tipten`` ile **birebir** geri kurulur.
     """
+    from .belirtec import basamak_sayisi, tip_vektoru
+
     rng = np.random.default_rng(tohum)
+    tb = max(2, int(taban))
+    bs = int(basamak) if int(basamak) > 0 else basamak_sayisi(
+        int(sozluk) if int(sozluk) > 0 else tb, tb)
     cikti: List[Tuple[List[int], int]] = []
     for g in gorevler:
         # ``except: continue`` KALDIRILDI (ferman). Bir görev dizisi
@@ -148,7 +186,9 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
         # veri kümesi kendi kendini, sebebi söylenmeden küçültüyordu.
         dizi, hedef = gorev_dizisi(g, hedef_indis=0)
         assert len(dizi) > 0, "görev %r BOŞ dizi verdi" % getattr(g, "ad", "")
-        akis = [int(x) % sozluk for x in list(dizi) + list(hedef)]
+        # **BELİRTEÇ → BASAMAK.** Akış artık basamak akışıdır.
+        akis = [int(x) for x in tip_vektoru(
+            list(dizi) + list(hedef), tb, bs)]
         if len(akis) < pencere + 2:
             continue
         for _ in range(2):
@@ -202,9 +242,11 @@ def adayin_tuttugu(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
     olduğunu bilmiyoruz; orada **ne olacağını** biliyoruz.
     """
     def kos(bag):
-        E = belirtecleri_kodla(bag, nefs.ayar.veri_lifi, sozluk)
+        E = belirtecleri_kodla(bag, nefs.ayar.veri_lifi,
+                               nefs.ayar.veri_lifi)
         q = nefs.idrak_et(E)
-        return q.beyan(sozluk), q.olcumler()
+        # **BASAMAK DAĞILIMI** (ferman 1-N): taban yazmaçtan.
+        return q.beyan(0), q.olcumler()
 
     def mizan(olc, ister=True):
         ceza = 0.0
@@ -439,6 +481,8 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
     müdrike çevrimini hâlâ koşturabilir; kıyas ölçüsü olarak durur,
     akışın kendisi değildir.
     """
+    from .belirtec import basamak_sayisi as _basamak, tip_vektoru as _tip
+
     if mudrike_ile:
         return _degerlendir_mudrike(nefs, gorevler, azami, derinlik)
     cozulen = isabet = deneme = atlanan = 0
@@ -455,8 +499,13 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
         dizi, hedef = gorev_dizisi(g, hedef_indis=0)
         assert len(hedef) > 0, "görev %r BOŞ hedef verdi" % getattr(g, "ad", "")
         deneme += 1
-        baglam = [int(x) % sozluk for x in dizi]
-        h = [int(x) % sozluk for x in hedef]
+        # **BELİRTEÇ → BASAMAK** (ferman 1-N). Model bir basamak söyler;
+        # belirteci basamaklar terkip eder. ``% sozluk`` almak, 200 019
+        # elemanlı bir uzayı taşıyıcının 16 seviyesine kırpmak olurdu.
+        tb = int(nefs.ayar.veri_lifi)
+        bs = _basamak(sozluk, tb)
+        baglam = [int(x) for x in _tip(dizi, tb, bs)]
+        h = [int(x) for x in _tip(hedef, tb, bs)]
         # **Ölçülen ve düzeltilen kusur.** Evvelce had aşılınca görev
         # kesilip ``kesilen`` diye sayılıyor, yine de ``deneme``ye dâhil
         # ediliyordu. Ölçüldü ve KALDI: kısa koşuda 4 görevin 4'ü de

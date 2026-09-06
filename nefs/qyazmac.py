@@ -868,16 +868,30 @@ class QuditYazmac:
                 "kesit": kesit}
 
     # ── okuma ──────────────────────────────────────────────────────
-    def beyan(self, sozluk: int = 16) -> np.ndarray:
-        """Belirteç dağılımı -- **kelâm sektöründen**.
+    def beyan(self, sozluk: int = 0) -> np.ndarray:
+        """**BASAMAK** dağılımı -- kelâm sektöründen (ferman 1-N).
 
-        Sektör ``sozluk`` parçaya bölünür ve her parçanın ağırlığı o
-        belirtecin olasılığıdır. Born kuralı burada da geçerlidir;
+        Sektör ``taban`` parçaya bölünür ve her parçanın ağırlığı o
+        **basamağın** olasılığıdır. Born kuralı burada da geçerlidir;
         fakat faz **atılmaz**: ``kulli_mizan`` onu ayrıca görür.
+
+        ``sozluk`` ile bölmek artık yanlıştır ve sessizce geçilmez:
+        tiktoken sözlüğü 200 019'dur, kelâm sektörü ise ``d/hüküm``
+        kadar genliktir -- 200 bin parçaya bölünen bir sektörün her
+        parçası boş çıkar ve dağılım **düzgün sıfır** olurdu. Model
+        bir belirteci değil, bir **basamağı** söyler; belirteci
+        basamaklar terkip eder (``nefs/belirtec.py:tipten``).
+
+        ``0`` verilirse taban yazmacın kendisinden gelir (ferman 1-M).
         """
         i, j = self.sektor("kelam")
+        taban = int(sozluk) if int(sozluk) >= 2 else int(self.ayar.lif[0])
+        assert taban <= (j - i), (
+            "kelâm sektörü %d genlik, taban %d -- taban sektörden büyük "
+            "olamaz; sözlük geçilmiş olabilir (ferman 1-N)"
+            % (j - i, taban))
         p = np.abs(self.psi[:, i:j]) ** 2
-        parca = np.array_split(np.arange(j - i), int(sozluk))
+        parca = np.array_split(np.arange(j - i), taban)
         P = np.stack([p[:, idx].sum(axis=1) for idx in parca], axis=1)
         return P / np.maximum(P.sum(axis=1, keepdims=True), 1e-300)
 
