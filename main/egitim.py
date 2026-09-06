@@ -1140,7 +1140,12 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             # Küme boyu = yığın. Ölçekte tek sayı olarak türetildi.
             obek=int(ayar.yigin()),
                             azami_tur=int(ayar.keyfiyet_turu),
-                            n_v=int(ayar.veri_lifi)),
+                            n_v=int(ayar.veri_lifi),
+            # Fermanın ilan ettiği süre haddi döngüye **fiilen**
+            # bağlanır; evvelce yalnız ``hoca_egit``in ayarındaydı ve
+            # ``_eniyile`` bütçe denetimini kapattığı için hiçbir yerde
+            # işlemiyordu -- münasebet döngüsü hudutsuz koşuyordu.
+            azami_saniye=float(ayar.azami_talim_saati) * 3600.0),
         keyfiyet_ayari=KeyfiyetAyari(acik=1,
                                      azami_tur=int(ayar.keyfiyet_turu)))
     _kume["v"] = list(veri)

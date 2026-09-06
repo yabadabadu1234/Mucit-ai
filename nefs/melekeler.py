@@ -1913,8 +1913,15 @@ class QBelagat(QMeleke):
 
     def uygula(self, q, p):
         _, kk = q._alan["kelam"]
+        # **AÇI SAYISI VURULACAK ALANDAN GELİR** (ferman 1-M), satır
+        # sayısından değil. Evvelce ikinci öbek ``birikim(p, q.n_satir)``
+        # ile boyutlanıyor, fakat ``tasdik`` yuvalarına vuruluyordu:
+        # iki ayrı şeyin sayısı bir yerden alınıyordu. ``n_satir`` 2
+        # iken tesadüfen tutuyor, yazmacın kendi sayısı (1) konunca
+        # ``IndexError`` veriyordu -- yâni tutması tesadüftü.
+        _, tk = q._alan["tasdik"]
         a = np.concatenate([self.aci(p, kk, 0.45),
-                            self.birikim(p, q.n_satir, 0.7)])
+                            self.birikim(p, tk, 0.7)])
         # makam kelama sirayet eder: küllî blok içinde, kısa mesafe.
         # Bölen ``2`` değil alanın **kendi genişliğidir**: makam 3
         # kübite çıkınca (H129) sabit 2 üçüncü kübiti hiç kullanmaz ve
@@ -1927,8 +1934,9 @@ class QBelagat(QMeleke):
         # makam SATIRLARA (yerel hükümlere) iniyordu. Belâgat sözü
         # makamına göre söylemektir; hükmü aşağı indirmek 𝒪₃₄ Tafsil'in
         # işidir, beyanın değil. Sirayet artık tasdik üzerinden kelama.
-        for j in range(2):
-            q.uzak_cift(q.kulli("tasdik", j), q.kulli("kelam", j + 2),
+        for j in range(min(tk, kk)):
+            q.uzak_cift(q.kulli("tasdik", j),
+                        q.kulli("kelam", (j + 2) % kk),
                         kontrollu_donme(float(a[kk + j])))
 
 

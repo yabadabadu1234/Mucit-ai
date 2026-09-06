@@ -52,6 +52,7 @@ Harita üç yerde iş görür ve üçü de ölçülür:
 """
 from __future__ import annotations
 
+import time
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 
@@ -75,6 +76,15 @@ class MunasebetAyari:
     azami_tur: int = 8
     #: Belirteç lifi -- haritanın boyu.
     n_v: int = 16
+    #: **SAAT HADDİ (saniye).** ``0`` = hudutsuz.
+    #:
+    #: Ferman 1-I "hata sıfırlanana kadar" der; fakat aynı fermanın
+    #: yanında padişahın ilan ettiği ``AZAMI_SANIYE`` durur. İkisi
+    #: çelişmez: hudut temizlenene kadar durulur, **saat bitene kadar**.
+    #: Haddi olmayan bir döngü "sıfırlanana kadar"ı sonsuza kadar diye
+    #: okur ve tâlim hiç bitmez; bitmeyen tâlim de hazineye bir şey
+    #: yazmaz, yâni öğrendiğini kaybeder.
+    azami_saniye: float = 0.0
 
 
 @dataclass
@@ -128,7 +138,7 @@ class Harita:
 _SAYAC: Dict[str, float] = {
     "örnek": 0.0, "tur": 0.0, "temizlenen": 0.0, "kirli_kalan": 0.0,
     "bag": 0.0, "kayip_cagrisi": 0.0, "geri_donen": 0.0,
-    "denge": 0.0}
+    "denge": 0.0, "saat_kesti": 0.0}
 
 
 def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
@@ -173,6 +183,8 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
         return {"p": p, "harita": h, "açık": False, "örnek": 0,
                 "temizlenen": 0, "kirli_kalan": 0, "tur": 0}
 
+    t0 = time.perf_counter()
+    had = float(a.azami_saniye)
     kalan = list(range(len(veri)))
     obek = max(1, int(a.obek))
     temizlenen = kirli = 0
@@ -190,6 +202,12 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
     # kümeye daha çok, hiç yaklaşamayana daha az uğranır.
     ugrayis: Dict[int, int] = {}
     while kalan:
+        # **SAAT DOLDUYSA GERİ DÖNÜŞ BİTER.** Kalan kümeler kirli
+        # sayılır ve öyle yazılır -- "temizlendi" denmez (ferman 5).
+        if had > 0.0 and time.perf_counter() - t0 >= had:
+            _SAYAC["saat_kesti"] += float(len(kalan))
+            kirli += len(kalan)
+            break
         # ── SIRA: haritaya en çok YENİ bağ getiren öne ─────────────
         zayif = np.asarray([h.zayiflik(veri[i][0]) for i in kalan], float)
         sira = np.argsort(-zayif)[:obek]
@@ -268,6 +286,7 @@ def munasebet_beyani() -> Dict[str, Any]:
             "kayıp_çağrısı": int(_SAYAC["kayip_cagrisi"]),
             "geri_dönen": int(_SAYAC["geri_donen"]),
             "denge_çağrısı": int(_SAYAC["denge"]),
+            "saat_kesti": int(_SAYAC["saat_kesti"]),
             "küme_başına_tur": float(_SAYAC["tur"] / k)}
 
 
@@ -297,4 +316,6 @@ def munasebet_metni(b: Optional[Dict[str, Any]] = None) -> str:
         "    denge çağrısı   : %d   (λ'lar HER TURDA yeniden ölçülür; "
         "0 ise donmuş demektir)" % d.get("denge_çağrısı", 0),
         "    kayıp çağrısı   : %d      müşterek haritaya işlenen bağ: %d"
-        % (d["kayıp_çağrısı"], d["bağ"])])
+        % (d["kayıp_çağrısı"], d["bağ"]),
+        "    saatin kestiği  : %d küme   (had dolunca kalan kümeler "
+        "KİRLİ sayılır, temiz denmez)" % d.get("saat_kesti", 0)])
