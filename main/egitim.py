@@ -92,6 +92,12 @@ from main import hazine                             # noqa: E402
 from nefs.kulli_mizan import (MizanAyari, kulli_mizan,   # noqa: E402
                               mizan_cetveli)
 from nefs.hafiza import Hafiza                           # noqa: E402
+# **FERMAN 1-H -- TEK MOTOR: TÂLİM DE KONUŞUR.** ``hazineden_yukle`` ve
+# ``hafizayi_yukle`` evvelce yalnız ``main/cikarim.py``deydi; o hâlde
+# tâlim, öğrendiğiyle **hiç konuşmuyordu** ve doğru konuşup
+# konuşmadığı ancak ayrı bir koşuda anlaşılıyordu. İki kapı arasındaki
+# meşru tek fark eniyilemenin koşup koşmamasıdır.
+from main.cikarim import hazineden_yukle, hafizayi_yukle, padisah  # noqa: E402
 # ── ZABIT 2'NİN KALAN ÜÇ USULÜ (Saf CPU 2026 Mimarisi) ────────────
 # **USUL FERMANI:** üçünün de çağrısı, dosyalar YOKKEN buraya yazıldı.
 #   1. usul  LimTDD    -- durumu DAG olarak sıkıştır (nefs/tdd.py)
@@ -243,6 +249,40 @@ from nefs.sadakat import (SadakatAyari, sadakat_uygula,   # noqa: E402
 #   FORMÜL 2 (BÜTÇE)   çağrı × örnek × pencere = ölçülen hız × süre haddi
 #   FORMÜL 3 (DENGE)   λ ağırlıkları -- kefeler ölçülür, elle yazılmaz.
 from nefs.olcek import Kok, olcek, denge, olcek_beyani  # noqa: E402
+# ══════════════════════════════════════════════════════════════════
+#  KEYFİYET VE MÜNASEBET -- **USUL FERMANI: DOSYALAR HENÜZ YOKKEN**
+# ══════════════════════════════════════════════════════════════════
+#
+# **FERMAN 1-I:** *"O veri için hata sıfırlanana kadar devam etmelisin,
+# sonra yeni veri getirmelisin. Böylece bir süre sonra tüm veriler için
+# müşterek bir münasebet haritası oluşacak."*
+#
+# **FERMAN 1-J:** *"Eşik koyarken sabit bir değer koymayacaksın, bir
+# fonksiyona bağlı olacak o eşik. Yâni kemiyete değil keyfiyete, o
+# keyfiyetin ne nispete eriştiğini ölçen bir fonksiyon vasıtasıyla."*
+#
+#   nefs/keyfiyet.py   ÜÇ KAT'Î HUDUT ölçülür ve tek nispete iner:
+#                        1. TENAKUZ      (parite alarmı, ω taklası)
+#                        2. KISIRDÖNGÜ   (kanonik adres kapanışı)
+#                        3. MANTIKSIZLIK (kod uzayı dışına taşma)
+#                      Eşik bir sayı değil, bu üç hududun temizlik
+#                      nispetini ölçen fonksiyonun **kendisidir**.
+#   nefs/munasebet.py  Bir örneğin hududu temizlenene kadar üstünde
+#                      durulur; temizlenince yeni örnek gelir ve
+#                      aradaki bağ **müşterek münasebet haritasına**
+#                      işlenir.
+from nefs.keyfiyet import (KeyfiyetAyari, keyfiyet,      # noqa: E402
+                           keyfiyet_beyani)
+from nefs.munasebet import (MunasebetAyari, munasebet_kos,  # noqa: E402
+                            munasebet_beyani)
+# ══════════════════════════════════════════════════════════════════
+#  KÜLLİYAT -- HARİCÎ VERİ (main/kulliyat.py)
+# ══════════════════════════════════════════════════════════════════
+#
+# Padişahın emri: *"Kodu öyle yaz ki gidip oradan veri çekip burada
+# eğitime katsın ama dosyaları repoya tümden koymasın."* Külliyat
+# ``depo/kulliyat/`` altına çekilir (depoya girmez) ve tâlime katılır.
+from main.kulliyat import kulliyat_verisi, kulliyat_beyani  # noqa: E402
 from nefs.usul import usul_beyani                         # noqa: E402
 from nefs.suphe import suphe_beyani                       # noqa: E402
 # **FERMAN 1-G:** raporun yeri taht değil, kendi uzvudur.
@@ -426,6 +466,10 @@ class EgitimAyari:
     usul_acik: int = 1
     usul_haddi: float = 0.0
     usul_seferi: int = 0
+    #: **KEYFİYET TURU** (ferman 1-I): bir küme üstünde azamî kaç tur
+    #: durulacak. Bu bir eşik değil **bütçedir**; eşik ``nefs/keyfiyet.py``
+    #: içinde bir fonksiyondur.
+    keyfiyet_turu: int = 0
     suphe_acik: int = 1
     rust_muayene: int = 1
     sbox_acik: int = 1
@@ -833,9 +877,21 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     # **İMTİHAN BÖLÜMLEMESİ** -- ezberi ve sızıntıyı engeller.
     egitim_gorevleri, dogrulama = gorevleri_getir(ne="böl", gorevler=
         hepsi, dogrulama=int(ayar.dogrulama_sayisi), tohum=ayar.tohum)
-    veri = ornekler(egitim_gorevleri, azami=ayar.ornek_sayisi,
-                    pencere=ayar.pencere, sozluk=ayar.sozluk,
-                    tohum=ayar.tohum)
+    # ── VERİ: ARC + KÜLLİYAT ──────────────────────────────────────
+    # **Tek motor tek veriyle beslenmez.** ARC muhakemeyi, külliyat
+    # lisanı öğretir; ikisi aynı belirteç uzayında aynı mizana girer.
+    # Pay **formüldür, sabit değil**: ARC elinden geleni verir (azamî
+    # yarısı), kalanı külliyat doldurur. Külliyat tükenmez, ARC tükenir.
+    arc_veri = ornekler(egitim_gorevleri,
+                        azami=max(1, int(ayar.ornek_sayisi) // 2),
+                        pencere=ayar.pencere, sozluk=ayar.sozluk,
+                        tohum=ayar.tohum)
+    kul_veri = kulliyat_verisi(
+        sozluk=int(ayar.sozluk), pencere=int(ayar.pencere),
+        azami=max(0, int(ayar.ornek_sayisi) - len(arc_veri)),
+        tohum=int(ayar.tohum))
+    veri = list(arc_veri) + list(kul_veri)
+    assert veri, "tâlim verisi BOŞ"
 
     nefs = QNefs(ayar.tohum, ayar.qayar())
     nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
@@ -874,6 +930,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     ilk_kefeler = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=mzn,
                               kademe_gorevleri=kademe_gorevleri,
                               ne="döküm")
+    _ilk_kayip = float(ilk_kefeler["kayıp"])
     olculen_lam = denge(ilk_kefeler)
     for _ad, _deger in olculen_lam.items():
         if _ad == "frenlenen":
@@ -907,16 +964,23 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                      had=float(_HIZ_HADDI), ad="küllî mizan")
     hizolcer_bagla(olcer)
 
+    #: Münasebet döngüsünün o an üstünde durduğu küme. Kayıp **bütün
+    #: veriye değil, bu kümeye** bakar; ferman 1-I'in ta kendisi.
+    _kume: Dict[str, Sequence] = {"v": list(veri)}
+    _seyir: List[Dict[str, float]] = []
+
     def kayip_p(P: np.ndarray) -> np.ndarray:
         P = np.atleast_2d(np.asarray(P, float))
         out = np.empty(P.shape[0], float)
+        kume = list(_kume["v"])
         for i, p in enumerate(P):
             _sayac["çağrı"] += 1
-            with olcer.saat():
-                t = kulli_mizan(nefs, veri, p, ayar.sozluk, ayar=mzn,
+            with olcer.saat(len(kume) * int(ayar.pencere)):
+                t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=mzn,
                                 hafiza=hafiza, adim=_sayac["çağrı"],
                                 kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
+            _seyir.append({"V": float(t["kayıp"])})
         return out
 
     # **`nefs/talim.py` ilga edildi; motor `ogrenme/optimize.py`dir.**
@@ -947,7 +1011,73 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     opt.vekil_acik = False
     opt.bütçe_denetimi = True
     opt.azami_saniye = float(ayar.azami_talim_saati) * 3600.0
-    r = hoca_egit(kayip_p, p0, opt)
+    # ══════════════════════════════════════════════════════════════
+    #  FERMAN 1-I -- BİR VERİ, HUDUDU TEMİZLENENE KADAR
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Evvelce burada tek satır vardı: ``hoca_egit(kayip_p, p0, opt)``.
+    # Bütün veri tek kayba toplanıyor, eniyileyici o **ortalamayı**
+    # düşürüyordu. Ölçüldü ve sebebi buydu: 30 kayıp çağrısında eğim
+    # yalnız ``−0,32``. Düşen şey ortalamaydı; bir örneğin tenakuzu
+    # öteki 511'in içinde kayboluyordu.
+    #
+    # Artık örnekler **küme küme** alınır ve her küme kendi hududu
+    # (tenakuz · kısırdöngü · mantıksızlık) temizlenene kadar üstünde
+    # durulur. Küme boyu uydurulmaz: **yazmacın yığınıdır** -- bir küme
+    # tam bir yazmaç geçişidir, ne eksik ne fazla.
+    def _eniyile(p_, kume):
+        """Bir küme üstünde kısa bir eniyileme turu."""
+        o = OptimizeAyari(
+            ad=ayar.ad, tur=1, yaricap=float(ayar.yaricap),
+            gcl_nokta_sayisi=max(8, int(ayar.altuzay_ornek)),
+            yon_sayisi=int(ayar.altuzay_ornek), blok=int(ayar.blok),
+            sesli=False, tohum=ayar.tohum)
+        o.tunel_acik = True
+        o.vekil_acik = False
+        o.bütçe_denetimi = False
+        n0 = _sayac["çağrı"]
+        _kume["v"] = list(kume)
+        rr = hoca_egit(kayip_p, np.asarray(p_, float), o)
+        return np.asarray(rr["p"], float), _sayac["çağrı"] - n0
+
+    def _olc(p_, kume):
+        """O kümenin mizan dökümü -- keyfiyet buradan okunur."""
+        return kulli_mizan(nefs, list(kume), np.asarray(p_, float),
+                           ayar.sozluk, ayar=mzn, hafiza=hafiza,
+                           adim=_sayac["çağrı"],
+                           kademe_gorevleri=kademe_gorevleri, ne="döküm")
+
+    mun = munasebet_kos(
+        veri, p0, _eniyile, _olc,
+        # **KÜME BOYU BÜTÇEDEN ÇIKAR, UYDURULMAZ.** Bir küme, hududu
+        # temizlenebilecek kadar küçük olmalı; fakat kaç küme olacağını
+        # bütçe tayin eder: her küme azamî ``keyfiyet_turu`` tur alır,
+        # elde ``çağrı`` kadar tur var, o hâlde::
+        #
+        #     küme sayısı ≈ çağrı / keyfiyet_turu
+        #     obek        = len(veri) · keyfiyet_turu / çağrı
+        #
+        # Ve obek yazmacın yığınını aşamaz (bir küme bir geçiştir).
+        # Ölçüldü: bu kural konmadan önce ``obek = yığın = 1024`` çıktı
+        # ve bütün veri **tek küme** oldu -- yâni münasebet döngüsü eski
+        # usule geri dönmüştü, ferman 1-I fiilen koşmuyordu.
+        ayar=MunasebetAyari(
+            acik=1,
+            # Küme boyu = yığın. Ölçekte tek sayı olarak türetildi.
+            obek=int(ayar.yigin()),
+                            azami_tur=int(ayar.keyfiyet_turu),
+                            n_v=int(ayar.veri_lifi)),
+        keyfiyet_ayari=KeyfiyetAyari(acik=1,
+                                     azami_tur=int(ayar.keyfiyet_turu)))
+    _kume["v"] = list(veri)
+    p_son = np.asarray(mun["p"], float)
+    _son = kulli_mizan(nefs, veri, p_son, ayar.sozluk, ayar=mzn,
+                       hafiza=hafiza, adim=_sayac["çağrı"],
+                       kademe_gorevleri=kademe_gorevleri)
+    r = {"p": p_son, "V_ilk": float(_ilk_kayip),
+         "V_son": float(_son["kayıp"]),
+         "kayıp_çağrısı": int(_sayac["çağrı"]), "seyir": _seyir,
+         "günlük": [], "düşen_uzuv": {}}
 
     p_yildiz = np.asarray(r["p"], float)
     assert p_yildiz.size == d, (
@@ -1127,6 +1257,32 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         acik=int(ayar.sadakat_acik), parite_lifi=int(ayar.parite_lifi),
         lif_yapisi=tuple(ayar.lif_yapisi)))
 
+    # ══════════════════════════════════════════════════════════════
+    #  FERMAN 1-H -- TÂLİM DE KONUŞUR (tek motor)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # *"Hazine + hafıza yükle → söyle sadece çıkarımda olamaz. Eğitimde
+    # de mutlaka olacaktır ki doğru konuşup konuşmadığı tespit
+    # edilebilsin, konuşacak bir hafızası oluşsun."*
+    #
+    # Hazine **evvela yazılır** (aşağıda), sonra buradan **geri
+    # yüklenir** ve motor konuşturulur. Geri yükleme şart: yazılan ile
+    # yüklenen aynı değilse "aynı ağırlıkla konuştu" demek yalan olur.
+    # İki kapı arasındaki tek fark, burada eniyilemenin bitmiş
+    # olmasıdır -- motor aynı motordur.
+    nefs.yukle(p_yildiz)
+    _konusma = [padisah(g, nefs=nefs, ayar=ayar, hafiza=hafiza)
+                for g in list(dogrulama)[:int(ayar.kademe_gorevi)]]
+    konusma = {
+        "görev": len(_konusma),
+        "konuşan": sum(1 for c in _konusma if not c["sükût"]),
+        "susan": sum(1 for c in _konusma if c["sükût"]),
+        "budanan": sum(int(c.get("budanan", 0)) for c in _konusma),
+        "sebep": [c["sebep"] for c in _konusma if c["sükût"]][:3],
+        "belirteç": [list(c["belirteç"] or [])[:12] for c in _konusma][:2],
+        "güven": (float(np.mean([c["güven"] for c in _konusma]))
+                  if _konusma else 0.0)}
+
     # --- MİZANIN DÖRT KEFESİ AYRI AYRI (hangisi kırmızı, görünsün)
     kefeler = kulli_mizan(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn,
                           hafiza=hafiza, adim=_sayac["çağrı"],
@@ -1168,6 +1324,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "palmer": palmer,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "sadakat": sad, "son_sadakat": son_sadakat,
+            "konuşma": konusma, "münasebet": munasebet_beyani(),
+            "keyfiyet": keyfiyet_beyani(),
+            "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri)},
             "ölçek": ayar.olcek_dokumu, "elle_verilen": ayar.elle,
             "denge": olculen_lam, "ilk_kefeler": ilk_kefeler,
             "usul": usl, "şüphe": sup,

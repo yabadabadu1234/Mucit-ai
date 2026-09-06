@@ -59,7 +59,7 @@ _BAGLI: Optional["Hizolcer"] = None
 class Hizolcer:
     """Bir hattın belirteç/sn'sini **çağrı çağrı** tutar."""
 
-    __slots__ = ("ad", "belirtec_basina", "had", "sert", "sure", "baslangic")
+    __slots__ = ("ad", "belirtec_basina", "had", "sert", "sure", "baslangic", "belirtec")
 
     def __init__(self, belirtec_basina: int, had: Optional[float] = None,
                  ad: str = "hat", sert: bool = False) -> None:
@@ -67,21 +67,32 @@ class Hizolcer:
             "çağrı başına belirteç sıfır olamaz -- ölçü bölünemez")
         self.ad = str(ad)
         self.belirtec_basina = int(belirtec_basina)
+        #: Çağrı başına fiilen işlenen belirteç -- küme küme değişir.
+        self.belirtec: list = []
         self.had = None if had is None else float(had)
         self.sert = bool(sert)
         self.sure: List[float] = []
         self.baslangic = time.perf_counter()
 
     @contextmanager
-    def saat(self):
-        """Tek çağrıyı saatle. ``with olcer.saat(): ...``"""
+    def saat(self, belirtec: int = 0):
+        """Tek çağrıyı saatle. ``with olcer.saat(n): ...``
+
+        **``belirtec`` VERİLMEK ZORUNDA KALDI** ve sebebi ölçüldü:
+        münasebet döngüsü (ferman 1-I) artık **küme küme** koşuyor ve
+        her kümenin boyu ayrı. Sabit bir ``belirtec_basina`` ile
+        çarpmak, küçük kümeleri büyük gibi sayıp hızı **şişirirdi**.
+        Verilmezse eski davranış sürer (sabit çarpan).
+        """
         t0 = time.perf_counter()
         try:
             yield self
         finally:
             self.sure.append(time.perf_counter() - t0)
+            self.belirtec.append(int(belirtec) if belirtec > 0
+                                 else int(self.belirtec_basina))
             if self.sert and self.had is not None:
-                h = self.belirtec_basina / max(self.sure[-1], 1e-12)
+                h = self.belirtec[-1] / max(self.sure[-1], 1e-12)
                 assert h >= self.had, (
                     "HIZ HADDİ TUTMADI (%s): %.0f < %.0f belirteç/sn"
                     % (self.ad, h, self.had))
@@ -105,8 +116,10 @@ class Hizolcer:
                       "hüküm": "ÖLÇÜLMEDİ -- hiç çağrı saatlenmedi"})
             return o
         toplam = float(sum(self.sure))
-        belirtec = self.belirtec_basina * n
-        hiz = [self.belirtec_basina / max(s, 1e-12) for s in self.sure]
+        bel = (self.belirtec if len(self.belirtec) == n
+               else [self.belirtec_basina] * n)
+        belirtec = int(sum(bel))
+        hiz = [b / max(s, 1e-12) for b, s in zip(bel, self.sure)]
         o.update({
             "toplam_sn": toplam,
             "belirteç": int(belirtec),

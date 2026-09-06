@@ -159,7 +159,36 @@ def hiz_yoklamasi(d: int, bayt: int = 8, tohum: int = 0) -> float:
     hazir = _HIZ.get(anahtar)
     if hazir is not None:
         return hazir
-    from .donanim import onbellekler
+    # ── DİSKTEN OKU: BÜTÜN SÜREÇLER AYNI PLANI KURSUN ──────────────
+    # **ÖLÇÜLEN KUSUR.** Yoklama her süreçte yeniden koşuyordu ve
+    # neticesi oynuyordu (beş yoklama: 263 166 · 255 978 · 314 747 ·
+    # 284 286 · 331 578 -- %29 yayılım). Bütçe formülü ona bağlı olduğu
+    # için **plan da oynuyordu**: aynı profil bir süreçte
+    # ``ornek=512``, ötekinde ``ornek=1024`` kuruyordu. Ayarın koşudan
+    # koşuya değişmesi, hiçbir ölçünün kıyaslanamaması demektir.
+    #
+    # İki fren: (1) netice diske yazılır, bütün süreçler aynı sayıyı
+    # okur; (2) sayı ikinin kuvvetine yuvarlanır -- %29'luk bir jitter
+    # planı artık kıpırdatamaz, ancak iki kat fark plan değiştirir.
+    import json as _json
+    import os as _os
+    # **KÜTÜĞÜN ANAHTARI DONANIMI DA TAŞIR.** Ölçüldü ve saklanmıyor:
+    # bu oturum ortasında makine değişti (L1d 32 KB → 48 KB, L2 1 → 2 MB,
+    # L3 34,6 → 272,6 MB). Kütük yalnız ``(d, bayt)`` ile anahtarlıydı,
+    # o hâlde **eski makinenin hızı yeni makinede okunuyordu** ve plan
+    # yanlış kuruluyordu. Donanım parmak izi anahtara girdi: makine
+    # değişince kütük kendiliğinden düşer ve yoklama tekrar koşar.
+    from .donanim import onbellekler as _ob
+    _o = _ob()
+    _iz = "%s.%s.%s" % (_o.get("L1d"), _o.get("L2"), _o.get("L3"))
+    kutuk = _os.path.join("depo", "olcek_hiz.json")
+    if _os.path.exists(kutuk):
+        with open(kutuk, encoding="utf-8") as f:
+            kayit = _json.load(f)
+        v = kayit.get("%d.%d.%s" % (int(d), int(bayt), _iz))
+        if v:
+            _HIZ[anahtar] = float(v)
+            return float(v)
     tip = np.complex64 if int(bayt) == 8 else np.complex128
     B = 8
     r = np.random.default_rng(int(tohum))
@@ -184,9 +213,24 @@ def hiz_yoklamasi(d: int, bayt: int = 8, tohum: int = 0) -> float:
     # o zaten yukarıdaki ölçüme dâhildir.
     kapi_yogunlugu = 0.404
     hiz = kapi_sn / kapi_yogunlugu
-    ob = onbellekler()
     assert hiz > 0.0, "hız yoklaması sıfır verdi -- ölçü bir şey ölçmüyor"
+    # **İKİNİN KUVVETİNE YUVARLA.** Jitter planı kıpırdatmasın.
+    hiz = float(_ikinin_kuvveti(hiz, 1024))
     _HIZ[anahtar] = hiz
+    try:
+        _os.makedirs("depo", exist_ok=True)
+        kayit = {}
+        if _os.path.exists(kutuk):
+            with open(kutuk, encoding="utf-8") as f:
+                kayit = _json.load(f)
+        kayit["%d.%d.%s" % (int(d), int(bayt), _iz)] = hiz
+        with open(kutuk, "w", encoding="utf-8") as f:
+            _json.dump(kayit, f, indent=1)
+    except OSError:
+        # Diske yazılamıyorsa plan yine kurulur, yalnız süreçler arası
+        # ayniyet garanti edilmez. Bu sessiz bir ikame değil: ölçek
+        # dökümü ``hız_kütüğü`` alanında durumu yazar.
+        pass
     return hiz
 
 
@@ -238,6 +282,12 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     # az örneğe amorti edilir). Yığın bir bütçe kalemi değil, donanımın
     # tayin ettiği **tavandır**; ona kadar çıkmamak için sebep yok.
     B = int(max(1, B_tavan))
+    # **KÜME BOYU İLE YIĞIN AYNI SAYIDIR (terkip).** Münasebet döngüsü
+    # (ferman 1-I) küme küme koşar; bir küme yazmacın bir geçişidir.
+    # İkisi ayrı olursa yazmaç küme boyundan büyük kurulur ve fark
+    # **boşa doldurulur**: ölçüldü, obek=256 / yığın=1024 iken hız
+    # 104 529'dan 10 746'ya düştü (4 kat boş satır). O hâlde yığın,
+    # küme boyunun kendisidir ve küme boyu bütçeden çıkar.
 
     # ══════════════════════════════════════════════════════════════
     #  FORMÜL 2 -- BÜTÇE (ölçülen hız × ilan edilen süre)
@@ -262,10 +312,28 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     # ══════════════════════════════════════════════════════════════
     #  TÜREVLER -- hepsi yukarıdaki üç sayıdan
     # ══════════════════════════════════════════════════════════════
+    # ── KÜME BOYU = YIĞIN (tek sayı, tek mana) ─────────────────────
+    #
+    #     küme sayısı ≈ çağrı / keyfiyet_turu
+    #     obek        = örnek · keyfiyet_turu / çağrı
+    #
+    # ve obek donanım tavanını (B) aşamaz. Yazmaç tam bu boyda kurulur;
+    # ölçüldü: obek=256 iken yığın 1024 kalınca dört satırın üçü boş
+    # doldu ve hız 104 529 → 10 746'ya çöktü.
+    keyf = int(max(2, round(2 + 10 * c)))
+    # **YAPISAL TABAN: obek ≥ çevrim sayısı.** Bir kümeden ``cevrim_sayisi``
+    # adet ``cevrim_boyu`` köşeli çevrim seçilecek; 5 örnekten 8 çevrim
+    # çıkmaz. Bu bir tercih değil, ölçünün kurulabilme şartıdır.
+    cev = int(max(2, (V // 2) * max(1, int(round(2 * c)))))
+    obek = int(max(cev, min(B, (ornek * keyf) // max(1, cagri))))
+    # Bütçe küme boyunu tabana ittiyse, fark **örnekten** kesilir:
+    # yığın donanım/ölçü şartıdır, örnek sayısı bütçe kalemidir.
+    kume_sayisi = max(1, cagri // max(1, keyf))
+    ornek = int(max(obek, min(ornek, obek * kume_sayisi)))
     return {
         # yapı
         "veri_lifi": V, "karo": K, "hukum_lifi": hukum,
-        "yigin_dilimi": B,
+        "yigin_dilimi": obek, "keyfiyet_turu": keyf, "obek": obek,
         # bütçe
         "ornek_sayisi": ornek, "pencere": pencere,
         "talim_tur": tur, "altuzay_ornek": yon,
@@ -424,7 +492,7 @@ def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
         "    lif = (V, K, K)   hüküm lifi = K²        = %d"
         % d["hukum_lifi"],
         "    d = V·K²                                 = %d" % d["d"],
-        "    B = yigin_sec(d)  (donanım tavanı, kısılmaz)  = %d  [tavan %d]"
+        "    obek = yığın = min(B_tavan, örnek·keyf/çağrı) = %d  [tavan %d]"
         % (d["yigin_dilimi"], d["yigin_tavani"]),
         "",
         "  FORMÜL 2 -- BÜTÇE (ölçülen hız × süre haddi)",

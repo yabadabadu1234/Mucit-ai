@@ -511,9 +511,15 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
     A0 = A0 / np.maximum(np.linalg.norm(A0, axis=-1, keepdims=True), 1e-300)
     A1 = np.einsum('cij,cj->ci', U_hepsi, A0)
     cek = int(a.tdd_cekirdek)
+    # **TDD DENETÇİSİ NE SÖYLÜYORSA O YAZILIR.** Zabıtın ona verdiği
+    # tek vazife kanonik adres eşitliğidir ve o eşitlik burada
+    # **yapısal bir kimliktir**, bir hüküm değil: Givens taşıması
+    # kapanmayı garanti eder. Denetçi bunu teyit eder (bir sağlama
+    # toplamıdır); kısırlık hükmü ``ω``dan verilir.
     kapali = [esit_mi(kanonik_adres(A0[c], cekirdek=cek),
                       kanonik_adres(A1[c], cekirdek=cek))
               for c in range(idx_hepsi.shape[0])]
+    tdd_kimlik = bool(all(kapali))
     for c_no in range(int(a.cevrim_sayisi)):
         idx = [int(i) for i in idx_hepsi[c_no]]
         koseler = [haller[i] for i in idx]
@@ -538,7 +544,27 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
         engelli = bool(ort) and max(ort) < 0.5
         if om < -1.0 + a.kenar:
             say["tenakuz"] += 1
-        elif kapali[c_no]:
+        elif om > 1.0 - a.kenar:
+            # **KISIRLIK ARTIK ω'DAN OKUNUR, TDD ADRESİNDEN DEĞİL.**
+            #
+            # Evvelce burada ``kapali[c_no]`` vardı: ``U_C·a`` ile ``a``
+            # aynı kanonik adreste mi? Ölçüldü ve **yapısal olarak daima
+            # evet** çıktı: 200 rastgele çevrimin 200'ü "kapalı",
+            # ``‖U_C·a − a‖`` azamî ``6,3e−16``. Sebebi inşadır --
+            # Givens taşıması ``a → b → c → a`` diye kurulur, o hâlde
+            # ``U_C·a = a`` **daima** sağlanır.
+            #
+            # Neticesi: her çevrim kısır sayılıyordu. ``ℒ_Çevrim`` sıfır,
+            # ``meşru`` sıfır, keyfiyet nispeti sıfır (çarpımda bir
+            # çarpan sıfırsa netice sıfır) -- ve o yüzden münasebet
+            # döngüsü hiçbir kümeyi temizleyemiyordu. Tek bir yapısal
+            # sabitin öldürdüğü zincir buydu.
+            #
+            # Doğrusu: kısırlık **holonominin birim olmasıdır**. Çevrim
+            # döndü fakat hiçbir yere varmadıysa ``U_C`` kendi
+            # altuzayında birimdir, yâni ``ω → +1``. Bu, dönüş
+            # adresinden değil **katedilen dönmeden** okunur.
+            say["kısır"] += 1
             # **KANONİK ADRES KIYASI** (eşik değil): ``U_C a`` ile ``a``
             # aynı ışında. Çevrim döndü fakat hiçbir yere varmadı --
             # boş salınım. Evvelce bu ``yol < 1e-9`` eşiğiyle tayin
@@ -546,8 +572,6 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
             say["kısır"] += 1
         elif engelli:
             say["engel"] += 1
-        elif om > 1.0 - a.kenar:
-            say["kısır"] += 1
         else:
             say["meşru"] += 1
         kayit.append((om, yol, c))
@@ -583,7 +607,7 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
     bariyer = log_bariyer(U_hepsi, cift, ta)
     return {"ceza": ceza / n_c, "çevrim": kayit, "ω": omegalar,
             "indis": [[int(i) for i in r] for r in idx_hepsi],
-            "bariyer": bariyer, **say}
+            "bariyer": bariyer, "tdd_kimlik": tdd_kimlik, **say}
 
 
 # ══════════════════════════════════════════════════════════════════

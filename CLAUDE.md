@@ -173,6 +173,64 @@ biçiminde bir metin kurmak. Bir uzvun neticesi nasıl yazılacaksa onu
 
 ---
 
+## ▓▓▓ 1-H. FERMAN: TEK MOTOR -- EĞİTİM DE KONUŞUR ▓▓▓
+
+> *"Hazine + hafıza yükle → söyle **sadece çıkarımda olamaz**. Eğitimde
+> de mutlaka olacaktır ki doğru konuşup konuşmadığı tespit edilebilsin,
+> konuşacak bir hafızası oluşsun. Eğitim ile çıkarım arasındaki **tek
+> fark** normal llm'ler gibi çıkarım esnasında optimizasyon
+> yapılmayacak olmasıdır, 'Test Time Training hariç'. Onun dışında
+> **tek bir motor vardır**."*
+
+* `hazine` + `hafıza` + `söyle` üçlüsü **her iki kapıda da** koşar.
+* Tâlim konuşmadan bitmez: konuşmayan bir tâlim, doğru konuşup
+  konuşmadığını ölçemez ve konuşacak bir hafıza biriktirmez.
+* İki kapı arasındaki fark **tek satırdır**: çıkarımda eniyileme
+  koşmaz. (Test Time Training bunun istisnasıdır ve açıkça öyle
+  ilan edilir.) Başka hiçbir fark meşru değildir.
+
+---
+
+## ▓▓▓ 1-I. FERMAN: BİR VERİ, HATASI SIFIRLANANA KADAR ▓▓▓
+
+> *"O veri için hata sıfırlanana kadar devam etmelisin, sonra yeni veri
+> getirmelisin. Böylece bir süre sonra tüm veriler için **müşterek bir
+> münasebet haritası** oluşacak."*
+
+Tâlim, veri yığınını bir kere görüp geçmez. Bir örnek alınır ve o
+örneğin hatası **sıfırlanana kadar** üstünde durulur; ancak ondan
+sonra yeni örnek getirilir. Biriken şey tek tek cevaplar değil,
+bütün veriler için **müşterek münasebet haritasıdır**.
+
+### SIFIRLANMAK NE DEMEK -- KAT'Î HUDUT
+
+> *"Kesinlikle **tenakuz, kısırdöngü, mantıksızlık olmayacak**, bunlar
+> kesin huduttur, bunun haricinde zaten sıfır olamaz."*
+
+Sıfır, kaybın sayısal sıfırı değildir (o zaten imkânsızdır). Sıfır
+**üç hududun temiz olmasıdır**:
+
+    1. TENAKUZ      yok    (parite alarmı sönük, ω taklası yok)
+    2. KISIRDÖNGÜ   yok    (kanonik adres kapanışı yok)
+    3. MANTIKSIZLIK yok    (kod uzayı dışına taşma yok)
+
+---
+
+## ▓▓▓ 1-J. FERMAN: EŞİK SABİT DEĞİL, FONKSİYONDUR ▓▓▓
+
+> *"Eşik koyarken **sabit bir değer koymayacaksın**, bir fonksiyona
+> bağlı olacak o eşik. Yâni **kemiyete değil keyfiyete**, o keyfiyetin
+> ne nispete eriştiğini ölçen bir fonksiyon vasıtasıyla olacak."*
+
+* Bir eşik koda `0.35` diye yazılamaz. Eşik, bir **keyfiyetin** hangi
+  nispete eriştiğini ölçen bir fonksiyonun çıktısıdır.
+* Kemiyet (kaç tane, ne kadar büyük) eşik olamaz; keyfiyet (temiz mi,
+  kapandı mı, tutarlı mı) ölçülür ve nispeti eşiği verir.
+* Bu ferman 5-B'nin (donanım ölçülür) mizan tarafındaki kardeşidir:
+  orada sayı donanımdan, burada eşik keyfiyetten gelir.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o
