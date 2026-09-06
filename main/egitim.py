@@ -1258,7 +1258,8 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
 #: ``main.kaggle_cikarim``) ve ``tanilama/nizam.py:GIRISLER`` dördünü de
 #: "giriş" sayıyordu; bu, o dört ağaçtan erişilen her şeyi **sessizce**
 #: tebaa gösteriyor, yetimliği ölçüden gizliyordu.
-KIPLER: Tuple[str, ...] = ("tâlim", "mizan", "kaggle", "teftiş", "veri")
+KIPLER: Tuple[str, ...] = ("tâlim", "mizan", "sabit", "kaggle", "teftiş",
+                           "veri")
 
 
 def taht(ne: str = "tâlim", *arg: str) -> str:
@@ -1267,6 +1268,9 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
     ``ne`` kipi:
 
     * ``"tâlim"``  -- ``kos``: iki hattın tek hatta terkibi (H230).
+    * ``"sabit"``  -- ``tanilama/sabit_teftisi.py``: elle tayin edilmiş
+      bütün sabitlerin listesi. Hangisi ayara bağlı, hangisi koda gömülü,
+      hangisi hiç okunmuyor -- ``ast`` ile çıkarılır.
     * ``"mizan"``  -- ``nefs/kulli_mizan.py``: hata fonksiyonunun kendisi.
       Dört kefe (Rezonans, Çevrim, Monogami, Hodge) ayrı ayrı ölçülür ve
       verinin etiketsiz dört kampa ayrılması gösterilir. **Kök budur.**
@@ -1297,6 +1301,14 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
         return ("=== KAGGLE KİPİ ===\n  donanım profili: %r\n"
                 "  tâlim: %r\n  teslimat: %s"
                 % (prof, t, kaggle_teslimat_dosyasi_uret.__name__))
+    if ne == "sabit":
+        # **ELLE TAYİN EDİLEN HER SABİT GÖRÜNÜR OLMALI.** Padişahın
+        # hükmü: *"elle tayin ettiğin tüm sabit değişkenleri mutlaka bir
+        # fonksiyona bağlamak ya da değerini değiştirmek üzere evvela
+        # bana liste halinde sunmak."* Bu kip o listeyi koddan **ast**
+        # ile çıkarır; hafızadan yazılmaz, dolayısıyla eksik olamaz.
+        from tanilama.sabit_teftisi import rapor as sabit_raporu
+        return sabit_raporu(*(arg[:1] or ()))
     if ne == "mizan":
         # Mîzân-ı Küllî'yi **tâlim koşturmadan** ölç: dört kefe ayrı ayrı,
         # ve verinin kendini dörde ayırması (hakikat/tenakuz/şüpheli/
