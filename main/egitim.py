@@ -247,6 +247,18 @@ class EgitimAyari:
     lam_cevrim: float = 1.0        # λ₁ Wilson holonomisi (tenakuz)
     lam_monogami: float = 0.5      # λ₂ CKW dolanıklık monogamisi
     lam_hodge: float = 0.75        # λ₃ Hodge tenakuzsuzluğu
+    #: λ₄ **KUANTUM ENGELLENMESİ** (Geometric Quantum Frustration).
+    #: Zabıt (*Küllî Kuantum Mizânı*, III. fasıl, 1. hadise): üçgen
+    #: kafesli antiferromıknatısta ``s₁`` ile ``s₂`` zıt olmak ister,
+    #: ``s₂`` ile ``s₃`` zıt olmak ister, fakat o zaman ``s₃`` ile
+    #: ``s₁`` aynı olmak zorunda kalır ve sistem taban durumuna
+    #: **oturamaz**. Metin safsataysa mikroskobik bir gerilim dalgası
+    #: yayılır; bu kefe onu ölçer.
+    #:
+    #: Gerilimi ölçen uzuv ``nefs/ayna.py:halka``dır -- Coherent Ising
+    #: Machine. **Aynanın ana akıştaki fiilî işi budur**; evvelce
+    #: yalnız adı geçiyordu ve hiçbir yerde çağrılmıyordu.
+    lam_engel: float = 0.6
     #: Muhakeme çevrimi kaç adımlıdır (``X → Y → Z → X``).
     cevrim_boyu: int = 3
     #: Taranacak azamî kapalı çevrim sayısı. **Zabıt: 8 KALIR, fakat
@@ -285,9 +297,9 @@ class EgitimAyari:
     #: Hafızadan buharlaşma eşiği ``μ`` (gömülüydü).
     hafiza_buhar: float = 1e-4
     # --- AYNA (nefs/ayna.py) -- zabıtın A grubu
-    #: **ZABIT: 400 → 16.** Kavite 400 turda kararlı duruma varıyordu;
+    #: **ZABIT: 400 → 16; ÖLÇÜM 24 dedi** (bkz. nefs/ayna.py:tur).
     #: kararlı durum döngü kurmadan da bulunur (analitik/Padé).
-    ayna_tur: int = 16
+    ayna_tur: int = 24
     #: Işın bölücü açısı -- kör sıcaklığın yerini alan ölçü.
     ayna_teta: float = 0.2617993877991494        # π/12
     #: Sıkıştırma.
@@ -434,12 +446,12 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
     saatleri çöpe atmak demektir. Bu geçit ikisini de **koşudan evvel**
     ve **saniyeler içinde** ölçer:
 
-    1. ``nefs/akit.py`` -- SÖZLEŞME İLE KOD UYUŞUYOR MU?
-       Uzuv sofrasında yazan her melekenin kodda karşılığı var mı,
-       hangileri hâlâ vekil formülle çalışıyor, hangileri veri yoluna
-       hiçbir şey **yazmıyor** (koşar, hesaplar, tesirsizdir).
+    **``nefs/akit.py`` İMHA EDİLDİ (ferman).** O denetim "meleke şu
+    modülü bildiriyor, ``nefs/`` içinde ithal ediliyor mu" diye
+    soruyordu. İthal edilmek **iş görmek değildir**; aynı yalanın
+    kardeşiydi ve yeşil yandığı hâlde hiçbir şey ispat etmiyordu.
 
-    2. ``nefs/illet.py`` -- SEBEP ÇİZGESİ SAĞLAM MI?
+    1. ``nefs/illet.py`` -- SEBEP ÇİZGESİ SAĞLAM MI?
 
        (a) **ZAMAN AÇILIMLI** çizge çevrimsiz olmalı. Alan seviyesindeki
            çizgede çevrim beklenir ve kusur değildir (``makam`` ile
@@ -463,13 +475,8 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
     kipte yalnız raporlanır; o kip ölçüyü görmek içindir, geçmek için
     değil.
     """
-    from nefs.akit import akdi_denetle, vekil_kalanlar, yazmayanlar
     from nefs.illet import (alan_cizgesi, cevrimler, kelam_ayrismasi,
                             zaman_cizgesi)
-
-    uydu, sikayet = akdi_denetle()
-    vekil = vekil_kalanlar()
-    sessiz = yazmayanlar()
 
     dug, ken, kabul = alan_cizgesi()
     assert dug, "sebep çizgesi BOŞ -- illet ölçüsü bir şey ölçmüyor"
@@ -479,8 +486,6 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
     ayrisma = kelam_ayrismasi()
 
     o: Dict[str, object] = {
-        "akit_uydu": bool(uydu), "akit_şikâyeti": list(sikayet),
-        "vekil_meleke": len(vekil), "yazmayan_meleke": len(sessiz),
         "alan": len(dug), "kenar": len(ken),
         "alan_çevrimi": len(alan_cevrimi),
         "zaman_düğümü": len(zg.dugumler),
@@ -498,8 +503,6 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         o["en_pahalı_uzuv"] = (h["tek_meleke"][0][0]
                                if h["tek_meleke"] else "?")
     if sert:
-        assert uydu, ("AKİT TUTMUYOR -- sözleşme ile kod uyuşmuyor:\n  %s"
-                      % "\n  ".join(sikayet[:8]))
         assert not zaman_cevrimi, (
             "ZAMAN AÇILIMLI SEBEP ÇİZGESİNDE ÇEVRİM VAR -- bir adım "
             "kendi geleceğine bağlı: %r" % (zaman_cevrimi[:3],))
@@ -593,7 +596,9 @@ def _isci_kayip(p: np.ndarray) -> float:
 def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
     """Tâlim ayarından mizan ayarı -- **tek kaynak**, iki nüsha değil."""
     return MizanAyari(
-        zeno_tepe=float(a.zeno_tepe),
+        zeno_tepe=float(a.zeno_tepe), lam_engel=float(a.lam_engel),
+        ayna_tur=int(a.ayna_tur), ayna_teta=float(a.ayna_teta),
+        ayna_r=float(a.ayna_r),
         lam_cevrim=float(a.lam_cevrim), lam_monogami=float(a.lam_monogami),
         lam_hodge=float(a.lam_hodge), cevrim_boyu=int(a.cevrim_boyu),
         cevrim_sayisi=int(a.cevrim_sayisi), rust_t0=float(a.rust_t0),
@@ -727,9 +732,16 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         "tâlim %d parametre aldı, %d döndürdü" % (d, p_yildiz.size))
     assert np.all(np.isfinite(p_yildiz)), "tâlim NaN/Inf parametre döndürdü"
     nefs.yukle(p_yildiz)
+    # **AYNA ÇIKARIMDA DA FİİLEN KOŞAR.** Değerlendirme evvelce
+    # ``argmax(P)`` diyordu -- yâni kör seçim. Kıvılcım (vakum
+    # uyarılması) buraya bağlandı; ``ayna=None`` verilirse eski kör
+    # yol geri gelir ve fark ölçülebilir (H90).
+    from nefs.ayna import AynaAyari
+    ayna = AynaAyari(teta=float(ayar.ayna_teta), r=float(ayar.ayna_r),
+                     tur=int(ayar.ayna_tur), tohum=int(ayar.tohum))
     deg = degerlendir(nefs, dogrulama, azami=ayar.degerlendirme_gorevi,
                       pencere=ayar.pencere, sozluk=ayar.sozluk,
-                      azami_uret=ayar.azami_uret)
+                      azami_uret=ayar.azami_uret, ayna=ayna)
 
     # --- ÖĞRENİYOR MU? (ogrenme/izgara.py -- düzenli uydurma)
     ham_seyir = [float(x["V"]) for x in (r.get("seyir") or [])
@@ -1289,6 +1301,11 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
               "      ℒ_Monogami (CKW)     : %.6f   ihlâl: %d"
               % (m["monogami"], m["ihlâl"]),
               "      ℒ_Hodge    (Δ|Ψ⟩=0)  : %.6f" % m["hodge"],
+              "      ℒ_Engel    (CIM/ayna) : %.6f   "
+              "tatmin olmayan bağ: %d/%d"
+              % (m["engel"], m["engel_bağ"], m["engel_toplam"]),
+              "        mana öbeği (Morse): %d   bağımsız kesim şahidi: %.3f"
+              % (m["engel_öbek"], m["engel_şahidi"]),
               "      ─────────────────────────────────",
               "      ℒ_Küllî              : %.6f" % m["kayıp"],
               "      rüşt α               : %.4f   (0=bebeklik → "
@@ -1323,11 +1340,7 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
               % (kulli["hazine"]["yol"], kulli["hazine"]["bayt"],
                  kulli["hazine"]["sha256"][:16]),
               "",
-              "    GEÇİT (nefs/akit.py + nefs/illet.py):",
-              "      akit uydu : %s   vekil meleke: %d   yazmayan: %d"
-              % (kulli["geçit"]["akit_uydu"],
-                 kulli["geçit"]["vekil_meleke"],
-                 kulli["geçit"]["yazmayan_meleke"]),
+              "    GEÇİT (nefs/illet.py):",
               "      zaman çizgesi: %d düğüm, %d çevrim   kelam ayrıştı: %s"
               % (kulli["geçit"]["zaman_düğümü"],
                  len(kulli["geçit"]["zaman_çevrimi"]),
@@ -1344,11 +1357,11 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
 #: ``taht`` kipleri. Padişahın **tek** girişi budur; yanında ikinci bir
 #: ``__main__`` bırakmak paralel devlettir. KÜME 9'a kadar dört ayrı taht
 #: vardı (``main.egitim``, ``main.cikarim``, ``main.kaggle_egitim``,
-#: ``main.kaggle_cikarim``) ve ``tanilama/nizam.py:GIRISLER`` dördünü de
-#: "giriş" sayıyordu; bu, o dört ağaçtan erişilen her şeyi **sessizce**
-#: tebaa gösteriyor, yetimliği ölçüden gizliyordu.
-KIPLER: Tuple[str, ...] = ("tâlim", "mizan", "sabit", "kaggle", "teftiş",
-                           "veri")
+#: ``main.kaggle_cikarim``) ve erişilebilirlik hesabı dördünü de "giriş"
+#: sayıyordu. O hesap fermanla İMHA EDİLDİ: ithal edilmek iş görmek
+#: değildir. Taht yine tektir, fakat artık bunu bir sınama değil kodun
+#: kendisi söyler.
+KIPLER: Tuple[str, ...] = ("tâlim", "mizan", "sabit", "kaggle", "veri")
 
 
 def taht(ne: str = "tâlim", *arg: str) -> str:
@@ -1368,9 +1381,10 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
     * ``"veri"``   -- ``main/veri.py``: belirteçleri 500 MB'lık,
       64 bayta hizalı, mmap'lenebilir parçalara dizer ve Kaggle'a
       umumi veri kümesi olarak gönderir. Hem Kaggle'da hem burada.
-    * ``"teftiş"`` -- ``tanilama/divan.py``: dimağı **muayene eden**
-      hekim. Hekim uzuv değildir; ama yetim de değildir -- padişah onu
-      çağırır, o padişahı değil.
+    **``teftiş`` kipi İMHA EDİLDİ.** ``tanilama/divan.py`` bir isim
+    listesiydi: her modülü ithal edip "eksik mi" diye bakıyordu. İthal
+    edilebilmek iş görmek değildir; o tablo, bağlanmamış bir dosyayı
+    da "tebaa" gösteriyordu.
 
     Buradaki hiçbir dal yeni matematik yazmaz; hepsi mevcut uzuvların
     çağrısıdır. Yeni bir formül yazarsa bu kapı nazırlık olmaktan çıkar,
@@ -1410,9 +1424,6 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
         # değil, tahtın kipi.
         from main.veri import rapor as veri_raporu
         return veri_raporu(*(arg[:1] or ("training",)))
-    if ne == "teftiş":
-        from tanilama.divan import rapor as divan_raporu
-        return divan_raporu(kos=bool(arg and arg[0] == "koş"))
     if ne == "tâlim":
         ad = arg[0] if arg else "kısa"
         yol = arg[1] if len(arg) > 1 else "depo/kulli_dimag_talim"

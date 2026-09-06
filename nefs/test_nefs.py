@@ -757,64 +757,27 @@ def test_makam_kodlamasi_epistemik_komsulugu_koruyor():
 #: giriş ikiye indi (main tek hâkim) ve gizlenen 15 yetim ortaya çıktı.
 #: Sınamayı yeşile boyamak için tahtları geri koymak, ölçüyü kendi
 #: lehine bozmak olurdu.
-YETIM_BORCU: frozenset = frozenset()
-#: **BORÇ DEFTERİ KAPANDI.** KÜME 9'da sekiz beylik modül vardı; hepsi
-#: bu turda ya ana akışa bağlandı ya imha edildi. Nereye bağlandığı
-#: tek tek yazılıdır ve hiçbiri "ithal edip bırakmak" değildir:
-#:
-#:   kuantum.devre        → nefs/ayna.py: Bogoliubov faz kaydırması QFT
-#:                          ile icra edilir (zabıt III.3).
-#:   kuantum.eniyileme    → nefs/ayna.py: Coherent Ising Machine'in
-#:                          Ising bedeli ve tayf aralığı (zabıt IV.2).
-#:   kuantum.topolojik    → nefs/ayna.py: örgü üreteçleri korunaklı
-#:                          ışın bölücü olarak; Yang-Baxter ölçülür.
-#:   ogrenme.morse        → nefs/ayna.py: boşlukta kaç mana tepesi
-#:                          kaldığını Banchoff sayımıyla saymak.
-#:   nefs.illet           → main/egitim.py geçidi: sebep çizgesinde
-#:                          çevrim ve kelam ayrışması ŞART.
-#:   nefs.akit            → main/egitim.py geçidi: akit denetimi ŞART.
-#:   ogrenme.izgara       → main/egitim.py: seyir eğrisinin düzenli
-#:                          uydurmayla eğimi -- öğreniyor mu?
-#:   kuantum.kubit_taksimati → **İMHA.** MPS zincirinin 22 milyon
-#:                          kübitlik taksimatıydı; zincir fermanla
-#:                          iptal olunca taksim edilecek bir şey
-#:                          kalmadı. Yasaklı usulü yedekte tutmak
-#:                          yasağı kaldırmaktır.
-
-
-def test_padisahin_eli_HER_MODULE_uzaniyor():
-    """Beylik kalmadı mı? (kütük H123, KÜME 9'da mandala çevrildi)
-
-    Bu sınama divanın **çürümesini** engeller: yeni bir modül eklenip
-    ana akışa bağlanmazsa `tanilama/nizam.py` onu beylik sayar ve
-    burası kırmızı yanar.
-
-    Ölçüt divanın kendi sayımı DEĞİLDİR -- o kendi kendini onaylardı.
-    Ölçüt, divanı hiç tanımayan `tanilama/nizam.py`nin ``ast`` ile
-    yaptığı bağımsız erişilebilirlik hesabıdır. Hekimin (``tanilama``)
-    üzerinden GEÇİLMEZ: divan bütün tebaayı ithal ettiği için, taht
-    divanı çağırınca herkes "erişilir" görünürdü; muayene edilmek iş
-    görmek değildir.
-    """
-    from tanilama.nizam import (GIRISLER, modulleri_tara, padisahin_eli,
-                                tabiiyet)
-
-    tab = tabiiyet(modulleri_tara())
-    tebaa = padisahin_eli(GIRISLER, tab, gecilmez=("tanilama",))
-    beylik = {m for m in set(tab) - set(tebaa)
-              if not m.startswith("tanilama")
-              and not m.startswith("local_run")
-              and not m.rsplit(".", 1)[-1].startswith("test_")}
-    yeni = sorted(beylik - YETIM_BORCU)
-    assert not yeni, ("YENİ beylik modül -- borç defterine yazılmadı: %s"
-                      % yeni[:20])
-    # Mandal: borç kapandıysa defterden de düşsün, yoksa defter yalan
-    # söylemeye başlar ("hâlâ yetim" der, halbuki bağlanmıştır).
-    kapanan = sorted(YETIM_BORCU - beylik)
-    assert not kapanan, (
-        "bu modüller artık ana akışta -- YETIM_BORCU'ndan silin: %s"
-        % kapanan)
-
+# ══════════════════════════════════════════════════════════════════
+#  ERİŞİLEBİLİRLİK SINAMASI İMHA EDİLDİ (ferman)
+# ══════════════════════════════════════════════════════════════════
+#
+# Burada ``YETIM_BORCU`` mandalı ve ``test_padisahin_eli_HER_MODULE_
+# uzaniyor`` sınaması vardı. İkisi de **yalancıydı** ve padişah onu
+# ``nefs/ayna.py`` üstünde yakaladı:
+#
+#     Ayna yazıldı, ``main/egitim.py``ye ayarları kondu, ithal edildi.
+#     Sınama YEŞİL yandı: "beylik modül yok."
+#     Halbuki ayna tâlim hattında **hiç çağrılmıyordu**.
+#
+# Kusur ölçünün kendisindeydi: ``tanilama/nizam.py`` ithal grafına
+# bakıyordu, çağrı grafına değil. Bir modülün adını bir listeye yazmak
+# yahut onu ithal etmek, o modülün **iş gördüğü** manasına gelmez.
+# Yeşil yanan bir sınamanın arkasına saklanmak, borcu kapatmak değil
+# borcu görünmez kılmaktır -- münafıklıktır.
+#
+# Ferman: *"ana akışta fiilen ne koştuğunu asla ölçmeyeceksin, kodu
+# okuyup zihninle tayin edeceksin."* Bir modülün iş görüp görmediği
+# artık bir sınamaya değil, **kodu okuyana** sorulur.
 
 def test_gaye_alani_ARTIK_YASIYOR_ve_sukutu_bastiriyor():
     """Dosya 4: `gaye` alanı yazılıyor ve sükût eşiği çalışıyor mu?

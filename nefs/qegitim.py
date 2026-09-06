@@ -386,7 +386,7 @@ def _degerlendir_mudrike(nefs, gorevler: Sequence, azami: int,
 
 def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
                 pencere: int = 8, sozluk: int = 16,
-                azami_uret: int = 0, mudrike_ile: bool = False,
+                azami_uret: int = 0, ayna=None, mudrike_ile: bool = False,
                 derinlik: int = 2) -> Dict[str, object]:
     """Hiç görülmemiş bulmacalar: hedef ızgara **tam** çözüldü mü?
 
@@ -480,7 +480,13 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
             P, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=pen)
             if o.get("sukut", 0.0) > 0.8:
                 sukut_sayisi += 1
-            t = int(np.argmax(P))
+            # **KÖR ARGMAX'IN YERİNE VAKUM KIVILCIMI (nefs/ayna.py).**
+            # Burası evvelce ``int(np.argmax(P))`` diyordu: aynanın adı
+            # ana kodda geçiyor, kendisi hiç koşmuyordu. ``ayna=None``
+            # verilirse eski kör yol aynen geri gelir -- tesir
+            # kapatılabilir, dolayısıyla ölçülebilir (H90).
+            from nefs.soyle import _sec
+            t = _sec(P, ayna)
             uretilen.append(t)
             baglam.append(t)
         n = min(len(h), len(uretilen))

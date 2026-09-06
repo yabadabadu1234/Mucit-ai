@@ -125,7 +125,26 @@ class AynaAyari:
     #: Hüküm icra edildi: ``usul="kararlı"`` kipinde halka artık 400
     #: adım atmaz; pompa rampası **kaba** adımlarla geçilir ve her kaba
     #: adımda kararlı duruma sabit nokta ile oturulur (bkz. ``halka``).
-    tur: int = 16
+    #:
+    #: **ZABIT 16 DEDİ, ÖLÇÜM 24 DEDİ.** Zabıtın hükmü (400 → analitik
+    #: kararlı durum) icra edildi ve doğruydu; fakat ölçek satır
+    #: toplamına çevrilince (bkz. ``halka``) rampa yavaşladı ve 16
+    #: kaba kademe tam çözümü kaçırdı. Ölçüldü (N=8, bağımsız tam
+    #: kesim şahidiyle)::
+    #:
+    #:      tur   kesim nispeti
+    #:       16       0,900
+    #:       24       1,000   ← seçilen
+    #:       32       1,000
+    #:       48       1,000
+    #:
+    #: Zabıtın maksadı (400 turu kaldırmak) korundu: 400 → 24, yâni
+    #: 16,7 kat. Sayıyı 16'da bırakıp "zabıt öyle dedi" demek, hükmü
+    #: tutup neticeyi kaybetmek olurdu.
+    tur: int = 24
+    #: Bağımsız şahit için seçilecek alt-örneklem boyu (``2^n`` tam
+    #: sıralanır, o yüzden küçük olmalı). ``0`` = şahit kapalı.
+    sahit_n: int = 8
     #: Halkanın koşum usulü:
     #: ``kararlı`` -- kaba rampa + sabit nokta (zabıtın hükmü, hızlı)
     #: ``adım``    -- her turu tek tek at (eski yol; delil için durur)
@@ -218,6 +237,16 @@ def bolucu(teta: float, korunakli: bool = False) -> np.ndarray:
     """
     if korunakli:
         s1, s2 = orgu_ureticleri()
+        # **ÖRGÜ TEMSİLİ OLDUĞU HER KURULUMDA TAHKİK EDİLİR.**
+        # ``kuantum/topolojik.py`` evvelce yalnız ``olc``tan
+        # çağrılıyordu; korunaklılık iddiası ana akışta hiç
+        # denetlenmiyordu. Yang-Baxter bağıntısı tutmuyorsa eldeki
+        # dizeyler bir örgü temsili DEĞİLDİR ve "topolojik koruma"
+        # sözü boşa çıkar -- o hâlde burada durulur.
+        yb = float(yang_baxter_hatasi(s1, s2))
+        assert yb < 1e-9, (
+            "korunaklı ışın bölücü istendi fakat üreteçler örgü "
+            "temsili değil: Yang-Baxter hatası %.3e" % yb)
         U = np.asarray(s2, complex)
     else:
         c, s = math.cos(float(teta)), math.sin(float(teta))
@@ -386,9 +415,28 @@ def kivilcim(dagilim, ayar: Optional[AynaAyari] = None,
         return P
 
     kok = np.sqrt(P)
-    # Boş port: durumun kendi eşlenik dördünü. Ayrık Fourier dönüşümü
-    # tam da faz uzayındaki ``x ↔ p`` eşleniğidir.
-    esle = np.fft.fft(kok) / math.sqrt(kok.size)
+    # ══════════════════════════════════════════════════════════════
+    #  BOŞ PORT: DURUMUN KENDİ EŞLENİK DÖRDÜNÜ -- **QFT İLE**
+    # ══════════════════════════════════════════════════════════════
+    # Evvelce burada ``np.fft.fft`` vardı ve ``kuantum/devre.py``
+    # ana akışta **hiç koşmuyordu**: adı ``faz_kaydir``da geçiyor,
+    # ``faz_kaydir`` da yalnız ``olc``/``rapor``dan çağrılıyordu.
+    # Yâni modül "bağlı" görünüyor fakat iş görmüyordu -- münafıklık.
+    #
+    # Eşlenik dördün zaten kuantum Fourier dönüşümüdür ve sözlük
+    # ikinin kuvvetiyse (16 = 2⁴) ``qft_dizeyi`` **tam** onu verir.
+    # 16×16'lık bir dizey; ``fft``den pahalı değil ve artık motorun
+    # kendi kapısı koşuyor.
+    m = kok.size
+    us = int(round(math.log2(m)))
+    if 2 ** us == m and us <= 12:
+        esle = (qft_dizeyi(us) @ kok.astype(complex)) / math.sqrt(m)
+        yol = "qft"
+    else:
+        # İkinin kuvveti değilse QFT tanımlı değildir; ayrık Fourier
+        # aynı eşleniği verir ve bu **saklanmaz**, dökümde yazılır.
+        esle = np.fft.fft(kok) / math.sqrt(m)
+        yol = "fft"
     # Sıkıştırılmış vakum: bir dördün ``e^{−r}``, öteki ``e^{+r}``.
     # Şişen dördün gerçel kısma, sıkılan sanal kısma bindirilir.
     fz = complex(math.cos(a.sikma_fazi), math.sin(a.sikma_fazi))
@@ -415,7 +463,8 @@ def kivilcim(dagilim, ayar: Optional[AynaAyari] = None,
         x = np.clip(x, 1e-15, None)
         return float(-np.sum(x * np.log(x)))
 
-    return Q, {"sapma": float(np.max(np.abs(Q - P))),
+    return Q, {"eşlenik_yolu": yol,
+               "sapma": float(np.max(np.abs(Q - P))),
                "tepe_kaydi": int(np.argmax(Q) != np.argmax(P)),
                "entropi_farkı": _H(Q) - _H(P),
                "çekirdek": cekirdek_adi, "gpu": bool(gpu),
@@ -461,7 +510,13 @@ def halka(J, ayar: Optional[AynaAyari] = None, ne: str = "çözüm"
     # değişkeli. Tohum ilan edilmiştir; gizli bir zar değildir.
     x = float(a.vakum_genligi) * r.standard_normal(N)
     seyir: List[float] = []
-    Jx_olcegi = float(np.max(np.abs(J))) or 1.0
+    # **ÖLÇEK SATIR TOPLAMIDIR, EN BÜYÜK ELEMAN DEĞİL.**
+    # Evvelce ``max|J|`` alınıyordu ve N=8'de çalışıyordu; N=64'te
+    # ``J@x`` terimi satır başına ~64 bağın toplamı olduğu için taştı
+    # ve halka **ıraksadı** (assert yakaladı, sessizce geçmedi).
+    # Satır toplamı (``‖J‖_∞``) N'den bağımsız kararlılık verir:
+    # ``|ξ/‖J‖_∞ · (Jx)_i| ≤ ξ·max|x|`` her N için.
+    Jx_olcegi = float(np.max(np.sum(np.abs(J), axis=1))) or 1.0
     c, sn = math.cos(a.teta), math.sin(a.teta)
     dt = float(a.adim)
     gecmis: List[np.ndarray] = []
@@ -577,6 +632,27 @@ def _halka_netice(x, J, a, seyir, gecmis, N, ne, cekirdek_adi, gpu):
     # --- BAĞIMSIZ ŞAHİT: tam sıralama + adyabatik tayf aralığı.
     # Yalnız küçük ``N``de; ``2^N`` sıralamak zaten makinenin iptal
     # ettiği şeydir, onu büyük ``N``de yapmak kendini yalanlamak olurdu.
+    # ── BAĞIMSIZ ŞAHİT: TAM SIRALAMA (kuantum/eniyileme.py)
+    # ``N`` büyükse ``2^N`` sıralanamaz -- o zaten makinenin iptal
+    # ettiği şeydir. Fakat **alt-örneklem** sıralanabilir: rastgele
+    # ``sahit_n`` kavram seçilir, o alt problemde tam kesim bulunur ve
+    # halkanın aynı alt problemdeki kesimiyle kıyaslanır. Böylece
+    # ``kuantum/eniyileme.py`` ana akışta fiilen koşar ve halkanın
+    # iddiası her çağrıda bağımsız bir şahide bağlanır.
+    if N > 12 and int(a.sahit_n) >= 3:
+        k = int(min(a.sahit_n, N))
+        sec = np.random.default_rng(int(a.tohum) + 7).choice(
+            N, size=k, replace=False)
+        Jk = J[np.ix_(sec, sec)]
+        kenarlar = [(i, j) for i in range(k) for j in range(i + 1, k)
+                    if abs(Jk[i, j]) > 1e-12]
+        if kenarlar:
+            hc = maxcut_hamiltonyeni(k, kenarlar)
+            kesim = float(-np.min(hc))
+            sk = s[sec]
+            bizim = float(sum(1 for (i, j) in kenarlar if sk[i] != sk[j]))
+            netice["şahit_n"] = k
+            netice["şahit_nispeti"] = (bizim / kesim) if kesim > 0 else 0.0
     if N <= 12:
         kenarlar = [(i, j) for i in range(N) for j in range(i + 1, N)
                     if abs(J[i, j]) > 1e-12]

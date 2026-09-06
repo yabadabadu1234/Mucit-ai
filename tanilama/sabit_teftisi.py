@@ -53,14 +53,14 @@ KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #: Cebrin kendisi olan sayılar -- ayar değildirler.
 ATLANAN = frozenset({0, 1, -1, 2, -2, 0.0, 1.0, -1.0, 2.0, 0.5})
 
-#: Taranmayan dizinler. **Hüküm ``tanilama/nizam.py``den alınır**,
-#: burada ikinci bir nüsha yazılmaz: ``idrak/veri`` ARC görevlerinin
+#: Taranmayan dizinler. ``idrak/veri`` ARC görevlerinin
 #: tarifidir (VERİ, kod değil) ve ``mucit_ai_esas`` ilham kaynağıdır.
 #: Onlardaki sabitleri saymak, olmayan bir borç göstermek olurdu --
 #: ölçüldü: 45 933 satırlık sahte borç.
 _HARIC = ("__pycache__", ".git", "depo", "yedek")
 
-#: Kod sayılmayan yollar (nizam.py'nin hükmüyle aynı).
+#: Kod sayılmayan yollar (padişahın hükmü: *"ARC veri dosyalarını
+#: koddan sayman hata, onlar kalacak, senin onlarla işin yok."*).
 _KOD_DEGIL = (os.path.join("idrak", "veri"), "mucit_ai_esas", "docs",
               "local_run")
 

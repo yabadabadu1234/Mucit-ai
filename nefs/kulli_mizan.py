@@ -1,6 +1,7 @@
 """MÎZÂN-I KÜLLÎ -- modelin minimize edeceği yegâne şey.
 
     ℒ_Küllî = ℒ_Rezonans + λ₁ℒ_Çevrim + λ₂ℒ_Monogami + λ₃ℒ_Hodge
+                                                    + λ₄ℒ_Engel
 
 ===================================================================
 NİÇİN BU DOSYA VAR: KÖK OLMADAN AĞAÇ OLMAZ
@@ -129,10 +130,12 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
+from .ayna import AynaAyari, halka
 from .hafiza import CERH, TASDIK, TEVAKKUF, Hafiza
 
 __all__ = ["MizanAyari", "rust", "uhlmann", "givens", "holonomi",
-           "kulli_mizan", "mizan_cetveli", "rapor"]
+           "holonomi_yigin", "engellenme", "kulli_mizan", "mizan_cetveli",
+           "rapor"]
 
 
 @dataclass
@@ -142,6 +145,13 @@ class MizanAyari:
     lam_cevrim: float = 1.0
     lam_monogami: float = 0.5
     lam_hodge: float = 0.75
+    #: λ₄ kuantum engellenmesi (bkz. ``_engellenme``).
+    lam_engel: float = 0.6
+    #: Aynanın (Coherent Ising Machine) ölçüleri -- engellenme onunla
+    #: ölçülür. ``nefs/ayna.py``.
+    ayna_tur: int = 24
+    ayna_teta: float = 0.2617993877991494
+    ayna_r: float = 0.35
     #: Muhakeme çevriminin boyu. **En az 3 olmalıdır** ve bu keyfî
     #: değildir: iki adımlı bir çevrim (``a → b → a``) inşa gereği
     #: daima birim matris verir (ölçüldü), yâni holonomi taşımaz.
@@ -456,6 +466,77 @@ def _monogami(M: np.ndarray, sektorler: Sequence[Tuple[int, int]]
 
 
 # ══════════════════════════════════════════════════════════════════
+#  3b. ENGELLENME -- KUANTUM FRUSTRATION (nefs/ayna.py'nin HALKASI)
+# ══════════════════════════════════════════════════════════════════
+def engellenme(H: np.ndarray, ayar: Optional[MizanAyari] = None
+               ) -> Dict[str, Any]:
+    """``ℒ_Engel`` -- sistem taban durumuna oturabiliyor mu?
+
+    ===================================================================
+    AYNANIN ANA AKIŞTAKİ FİİLÎ İŞİ BURASIDIR
+    ===================================================================
+
+    Zabıt (*Küllî Kuantum Mizânı*, III. fasıl, 1. hadise):
+
+        *"Üçgen kafesli antiferromanyetlerde s₁ ile s₂ zıt olmak ister,
+        s₂ ile s₃ zıt olmak ister. Fakat bu durumda s₃ ile s₁ aynı
+        olmak zorunda kalır ve sistem kilitlenir... Eğer metin
+        safsataysa, sistemdeki spinler hiçbir zaman taban durumuna
+        oturamaz; sürekli mikroskobik bir gerilim dalgası yayar."*
+
+    Bu bir **kombinatorik kriz**tir: ``2^m`` diziliş arasından gerilimi
+    asgarîye indireni bulmak. Zabıtın ikinci vazifesi tam da bunun
+    içindi -- *"iki ayna arasına kapalı bir optik döngü (Coherent Ising
+    Machine)... doğru olan tek mana tepesi lazerin osilasyona başlaması
+    gibi bir anda tepeye fırlar."*
+
+    O hâlde çiftlenim ``J_ij = Re⟨h_i|h_j⟩`` kurulur ve dizilişi
+    **``nefs/ayna.py:halka``** bulur. Sonra tatmin edilmeyen bağların
+    ağırlık payı ceza olur::
+
+        ℒ_Engel = 1 − Σ max(0, J_ij·s_i·s_j) / Σ|J_ij|
+
+    Sıfır = bütün bağlar tatmin (taban durumuna oturuldu).
+    Bir     = hiçbir bağ tatmin edilemiyor (tam engellenme).
+
+    ``lam_engel = 0`` ile kapatılabilir ve kapatılınca kefe kaybolur --
+    yâni tesir ölçülebilir (H90).
+    """
+    a = ayar or MizanAyari()
+    H = np.asarray(H, complex)
+    m = H.shape[0]
+    if m < 3:
+        return {"ceza": 0.0, "bağ": 0, "toplam": 0, "spin": None,
+                "doyum": 0.0}
+    Hn = H / np.maximum(np.linalg.norm(H, axis=-1, keepdims=True), 1e-300)
+    J = np.real(Hn @ Hn.conj().T)
+    np.fill_diagonal(J, 0.0)
+    olcek = float(np.sum(np.abs(J)))
+    if olcek <= 0.0:
+        return {"ceza": 0.0, "bağ": 0, "toplam": 0, "spin": None,
+                "doyum": 0.0}
+    # ``ne="döküm"`` istenir ve bu tercih **kasıtlıdır**: döküm yolu
+    # ``ogrenme/morse.py``nin Banchoff sayımını (kaç mana öbeği kaldı)
+    # ve ``kuantum/eniyileme.py``nin bağımsız kesim şahidini de
+    # koşturur. ``çözüm`` yolu ikisini de atlar ve o iki modül ana
+    # akışta hiç iş görmemiş olurdu.
+    h = halka(J, AynaAyari(teta=float(a.ayna_teta), r=float(a.ayna_r),
+                           tur=int(a.ayna_tur), tohum=int(a.tohum)),
+              ne="döküm")
+    s = np.asarray(h["spin"], int)
+    tatmin = J * np.outer(s, s)
+    kazanc = float(np.sum(np.maximum(tatmin, 0.0)))
+    ceza = float(np.clip(1.0 - kazanc / olcek, 0.0, 1.0))
+    bag = int(np.count_nonzero(tatmin < 0) // 2)
+    top = int(np.count_nonzero(J) // 2)
+    return {"ceza": ceza, "bağ": bag, "toplam": top, "spin": s,
+            "doyum": float(h.get("bedel", 0.0)),
+            "öbek": int(h.get("öbek", 0)),
+            "şahit_nispeti": float(h.get("şahit_nispeti", 0.0)),
+            "kilitlendi": bool(h.get("kilitlendi", False))}
+
+
+# ══════════════════════════════════════════════════════════════════
 #  4. HODGE -- verinin kendi eş-zamanlılık çizgesi
 # ══════════════════════════════════════════════════════════════════
 def _laplasyen(baglamlar: Sequence[Sequence[int]], n: int) -> np.ndarray:
@@ -591,6 +672,11 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     n_o = len(ileri["lifli"])
     L_mon = float(mono / n_o)
 
+    # ── 3b. ENGELLENME (nefs/ayna.py'nin halkası FİİLEN KOŞAR) ────
+    eng = engellenme(np.stack([np.asarray(h, complex).reshape(-1)
+                               for h in ileri["hal"]]), a)
+    L_eng = float(eng["ceza"])
+
     # ── 4. HODGE (verinin eş-zamanlılık çizgesi) ──────────────────
     D = _laplasyen(ileri["bağlam"], n_v)
     psi = np.zeros(n_v, complex)
@@ -621,7 +707,8 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
 
     kayip = (L_rez + float(a.lam_cevrim) * fitrata
              + float(a.lam_monogami) * L_mon
-             + float(a.lam_hodge) * L_hod)
+             + float(a.lam_hodge) * L_hod
+             + float(a.lam_engel) * L_eng)
     assert np.isfinite(kayip), "mizan sonlu değil"
 
     if ne == "toplam":
@@ -633,7 +720,11 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "çevrim_hafızaya": float(hafizaya),
             "monogami": L_mon, "monogami_sol": float(mono_sol / n_o),
             "monogami_sağ": float(mono_sag / n_o),
-            "hodge": L_hod, "α_rüşt": float(alfa),
+            "hodge": L_hod, "engel": L_eng,
+            "engel_bağ": int(eng["bağ"]), "engel_toplam": int(eng["toplam"]),
+            "engel_öbek": int(eng.get("öbek", 0)),
+            "engel_şahidi": float(eng.get("şahit_nispeti", 0.0)),
+            "α_rüşt": float(alfa),
             "meşru": int(cv["meşru"]), "kısır": int(cv["kısır"]),
             "tenakuz": int(cv["tenakuz"]), "engel": int(cv["engel"]),
             "ihlâl": int(mono_sol > mono_sag),
