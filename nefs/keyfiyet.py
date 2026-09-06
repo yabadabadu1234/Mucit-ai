@@ -68,7 +68,7 @@ from typing import Any, Dict, List, Optional
 
 import numpy as np
 
-__all__ = ["KeyfiyetAyari", "keyfiyet", "esik", "keyfiyet_beyani",
+__all__ = ["KeyfiyetAyari", "keyfiyet", "esik", "keyfiyet_beyani", "keyfiyet_metni",
            "keyfiyet_sifirla"]
 
 
@@ -189,3 +189,16 @@ def keyfiyet_sifirla() -> None:
     for k in _HAL:
         _HAL[k] = 0.0
     _GECMIS.clear()
+
+
+def keyfiyet_metni(b=None) -> str:
+    """Üç kat'î hududun hâli -- **metni burada yazılır** (ferman 1-G)."""
+    d = dict(b if b is not None else keyfiyet_beyani())
+    return "\n".join([
+        "  KEYFİYET -- ÜÇ KAT'Î HUDUT (ferman 1-I) ve EŞİK FONKSİYONU (1-J)",
+        "    ölçüm       : %d      temiz: %d   kirli: %d   (nispet %.4f)"
+        % (d["çağrı"], d["temiz"], d["kirli"], d["temiz_nispeti"]),
+        "    nispet      : en iyi %.4f   ortanca %.4f   ortalama %.4f"
+        % (d["en_iyi"], d["ortanca"], d["ortalama"]),
+        "    nispet = (1−tenakuz/çevrim)·(1−kısır/çevrim)·(1−alarm) "
+        "-- ÇARPIM, ortalama değil: bir hudut kirliyse nispet sıfırdır."])

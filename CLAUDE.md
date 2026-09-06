@@ -231,6 +231,28 @@ Sıfır, kaybın sayısal sıfırı değildir (o zaten imkânsızdır). Sıfır
 
 ---
 
+## ▓▓▓ 1-K. FERMAN: KAYNAK YOKLANIR, TAHMİN EDİLMEZ ▓▓▓
+
+> *"Bunları tek tek araştırıp bulman mümkün değil, githubda var
+> olduğunu bildiğin çok büyük çaplı verisetlerini şöyle bir
+> hatırlamanı rica edeceğim... Şu kodları dene, çalışıyorsa **artık**
+> huggingface'e de şümullen."*
+
+* Hatırlamak bir başlangıçtır, hüküm değildir. Hatırlanan her depo
+  **yoklanır** (`git ls-remote`, sonra klon ve envanter) ve cetvele
+  ancak yoklandıktan sonra girer. *"Var sanıyorum"* diye bir satır
+  yazılmaz; alınamayan satırın **engeli sayıyla** yazılır (ferman 1-F).
+* Bir kaynağın `yol`u ve `uzanti`si tahminle konmaz: deponun kendi
+  **envanterinden** okunur. Yanlış tahminin bedeli veri imhası olamaz --
+  hiçbir dosya uzantıya uymuyorsa **tek dosya bile silinmez**.
+* HuggingFace'e şümul **şarta bağlıdır ve şart yoklanmıştır**: bu
+  oturumda `huggingface.co` vekilde siyaseten kapalıdır (`CONNECT`a
+  403) ve kapta `ssh` ikilisi yoktur. Şart açılırsa -- yâni klon
+  fiilen koşarsa -- `main/kulliyat.py` cetveline HF kaynakları
+  **derhal** girer; kapalıyken girmeleri süs olurdu.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

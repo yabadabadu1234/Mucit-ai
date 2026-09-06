@@ -68,6 +68,24 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "      ortalama hücre isabeti: %.4f"
               % d["ortalama_hücre_isabeti"],
               "      sükût                 : %d" % d["sükût"]]
+        from nefs.munasebet import munasebet_metni
+        from nefs.keyfiyet import keyfiyet_metni
+        from main.kulliyat import kulliyat_beyani
+        kn = kulli["konuşma"]
+        s += ["",
+              "  TEK MOTOR -- TÂLİM DE KONUŞUR (ferman 1-H)",
+              "    görev %d: konuşan %d, susan %d, budanan %d, "
+              "ortalama güven %.4f"
+              % (kn["görev"], kn["konuşan"], kn["susan"], kn["budanan"],
+                 kn["güven"]),
+              "    sükût sebebi: %s" % (", ".join(kn["sebep"]) or "yok"),
+              "    ilk belirteçler: %s" % (kn["belirteç"] or "yok"),
+              "",
+              munasebet_metni(kulli["münasebet"]), "",
+              keyfiyet_metni(kulli["keyfiyet"]), "",
+              "  VERİ: ARC %d örnek + külliyat %d örnek"
+              % (kulli["külliyat"]["arc"], kulli["külliyat"]["külliyat"]),
+              kulliyat_beyani(kulli["külliyat"]["döküm"])]
         m = kulli["mizan"]
         s += ["", "    MÎZÂN-I KÜLLÎ (nefs/kulli_mizan.py) -- KEFELER:",
               "      TABAKALI MİZAN (zabıt: kör NLL intihardır)",

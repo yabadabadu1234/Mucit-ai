@@ -282,7 +282,8 @@ from nefs.munasebet import (MunasebetAyari, munasebet_kos,  # noqa: E402
 # Padişahın emri: *"Kodu öyle yaz ki gidip oradan veri çekip burada
 # eğitime katsın ama dosyaları repoya tümden koymasın."* Külliyat
 # ``depo/kulliyat/`` altına çekilir (depoya girmez) ve tâlime katılır.
-from main.kulliyat import kulliyat_verisi, kulliyat_beyani  # noqa: E402
+from main.kulliyat import (kulliyat_cek, kulliyat_verisi,   # noqa: E402
+                           kulliyat_beyani)  # noqa: E402
 from nefs.usul import usul_beyani                         # noqa: E402
 from nefs.suphe import suphe_beyani                       # noqa: E402
 # **FERMAN 1-G:** raporun yeri taht değil, kendi uzvudur.
@@ -374,6 +375,16 @@ class EgitimAyari:
     karo: int = 0
     #: Satır başına yerel hüküm yuvası (eski ``yerel_yuva``).
     yerel_yuva: int = 1
+    #: **PARAMETRE GENİŞLİĞİ** -- padişahın hükmü: *"galois gibi dar bir
+    #: uzay kullandığımız için mutlaka fazla sayıda parametre
+    #: kullanmalısın."* Her meleke evvelce ``n_sabit`` açı sahibi
+    #: oluyor, o açılar ``np.resize`` ile duraklara **devrolarak**
+    #: yayılıyordu; yâni 20 durak 8 açının tekrarıydı. Genişlik, bir
+    #: melekenin kendi açı dilimini kaç kat büyüteceğini söyler:
+    #: devir daha geç başlar, ayrı durak ayrı parametre alır.
+    #: ``0`` = ölçekten türet (``nefs/olcek.py`` Formül 2'nin bütçe
+    #: payı: eniyileyici kaç yön arayabiliyorsa o kadar parametre).
+    parametre_genisligi: int = 0
     #: Yazmacın yığın dilimi -- ``nefs/onbellek.py`` × cömertlik.
     yigin_dilimi: int = 0
     # ── FORMÜL 2 (BÜTÇE): ölçülen hız × süre haddi ──────────────────
@@ -566,7 +577,8 @@ class EgitimAyari:
                      faz_mertebesi=int(self.faz_mertebesi),
                      hat=str(self.hat), hat_bandi=int(self.hat_bandi),
                      sadakat_acik=int(self.sadakat_acik),
-                     parite_lifi=int(self.parite_lifi))
+                     parite_lifi=int(self.parite_lifi),
+                     parametre_genisligi=int(self.parametre_genisligi))
 
     def yigin(self) -> int:
         """Yazmacın yığın dilimi -- veriden büyük olamaz."""
@@ -886,6 +898,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                         azami=max(1, int(ayar.ornek_sayisi) // 2),
                         pencere=ayar.pencere, sozluk=ayar.sozluk,
                         tohum=ayar.tohum)
+    # **KÜLLİYAT EVVELÂ ÇEKİLİR.** Evvelce ``kulliyat_cek`` yalnız
+    # ``kulliyat_beyani``nin içinden, yâni **rapor vaktinde** koşuyordu:
+    # tâlim, henüz inmemiş bir külliyattan veri okumaya çalışıyor ve
+    # sessizce boş dönüyordu. Çekme, okumadan **evvel** olmalıdır.
+    kul_dokum = kulliyat_cek()
     kul_veri = kulliyat_verisi(
         sozluk=int(ayar.sozluk), pencere=int(ayar.pencere),
         azami=max(0, int(ayar.ornek_sayisi) - len(arc_veri)),
@@ -927,18 +944,46 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     #
     # Bu bir ölçüm çağrısıdır ve bedeli bir kayıp çağrısıdır -- yâni
     # ilan edilen bütçeden düşer, gizli değildir.
+    #
+    # ══════════════════════════════════════════════════════════════
+    #  DENGE **HER TURDA** YENİDEN ÖLÇÜLÜR -- ÖLÇÜLMÜŞ SEBEBİYLE
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Evvelce ``denge`` yalnız **bir kere**, ``p₀``da çağrılıyordu ve
+    # λ'lar koşu boyunca donuyordu. Ölçüldü ve kusur buydu: kefelerin
+    # büyüklük mertebesi eniyileme ilerledikçe değişir (meselâ çevrim
+    # kefesi düşerken tenakuz kefesi yükselir); λ donunca ilan edilen
+    # **söz hakkı** bozulur ve bir kefe ötekileri ezmeye başlar.
+    # Netice ölçülmüştü: küme küme eniyileme her kümeyi mahallî olarak
+    # iyileştirirken küllî kayıp ``0,160367 → 0,342040`` **yükseliyordu**.
+    #
+    # Artık denge bir **çağrıdır**, bir sabit değil: münasebet döngüsü
+    # her turun başında bunu çağırır, kefeler o anki hâlleriyle ölçülür
+    # ve pay yeniden dağıtılır. Elle verilmiş λ'lara hiç dokunulmaz --
+    # hangilerinin elle verildiği **ilk kalibrasyondan evvel** tesbit
+    # edilir, yoksa ilk atamadan sonra hepsi "elle verilmiş" görünürdü.
+    LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
+                  "lam_tenakuz", "lam_kategori", "lam_nokta")
+    _elle_lam = tuple(a for a in LAM_ADLARI
+                      if float(getattr(ayar, a, 0.0)) != 0.0)
+    #: Mizan ayarının **tek nüshası**; denge onu yerinde yeniler.
+    _mzn = {"a": mzn}
+
+    def _dengele(dokum) -> Dict[str, float]:
+        """Kefeleri ölç, payı yeniden dağıt, mizan ayarını **yenile**."""
+        lam = denge(dokum)
+        for ad, deger in lam.items():
+            if ad == "frenlenen" or ad in _elle_lam:
+                continue
+            setattr(ayar, ad, float(deger))
+        _mzn["a"] = mizan_ayari(ayar)
+        return lam
+
     ilk_kefeler = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=mzn,
                               kademe_gorevleri=kademe_gorevleri,
                               ne="döküm")
-    _ilk_kayip = float(ilk_kefeler["kayıp"])
-    olculen_lam = denge(ilk_kefeler)
-    for _ad, _deger in olculen_lam.items():
-        if _ad == "frenlenen":
-            continue
-        # Elle verilmiş bir λ varsa ona **dokunulmaz** (ezme hakkı).
-        if float(getattr(ayar, _ad, 0.0)) == 0.0:
-            setattr(ayar, _ad, float(_deger))
-    mzn = mizan_ayari(ayar)
+    olculen_lam = _dengele(ilk_kefeler)
+    mzn = _mzn["a"]
     hafiza = Hafiza(kapasite=int(ayar.hafiza_kapasitesi),
                     yazma=float(ayar.hafiza_yazma),
                     sonum=float(ayar.hafiza_sonumu),
@@ -976,7 +1021,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         for i, p in enumerate(P):
             _sayac["çağrı"] += 1
             with olcer.saat(len(kume) * int(ayar.pencere)):
-                t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=mzn,
+                t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
                                 hafiza=hafiza, adim=_sayac["çağrı"],
                                 kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
@@ -1043,12 +1088,17 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     def _olc(p_, kume):
         """O kümenin mizan dökümü -- keyfiyet buradan okunur."""
         return kulli_mizan(nefs, list(kume), np.asarray(p_, float),
-                           ayar.sozluk, ayar=mzn, hafiza=hafiza,
+                           ayar.sozluk, ayar=_mzn["a"], hafiza=hafiza,
                            adim=_sayac["çağrı"],
                            kademe_gorevleri=kademe_gorevleri, ne="döküm")
 
     mun = munasebet_kos(
         veri, p0, _eniyile, _olc,
+        # **DENGE HER TURDA** (yukarıdaki ``_dengele``): münasebet
+        # döngüsü her turun başında kefeleri ölçer ve payı yeniden
+        # dağıtır. ``None`` verilirse λ'lar donar ve eski hâl geri
+        # gelir -- yâni bu anahtar da kapatılabilir ve kırmızı yanar.
+        dengele=_dengele,
         # **KÜME BOYU BÜTÇEDEN ÇIKAR, UYDURULMAZ.** Bir küme, hududu
         # temizlenebilecek kadar küçük olmalı; fakat kaç küme olacağını
         # bütçe tayin eder: her küme azamî ``keyfiyet_turu`` tur alır,
@@ -1071,10 +1121,20 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                                      azami_tur=int(ayar.keyfiyet_turu)))
     _kume["v"] = list(veri)
     p_son = np.asarray(mun["p"], float)
-    _son = kulli_mizan(nefs, veri, p_son, ayar.sozluk, ayar=mzn,
+    # ── V_İLK İLE V_SON **AYNI MİZANDA** ÖLÇÜLÜR ──────────────────
+    # λ artık her turda yenilendiği için tâlim başındaki mizan ile
+    # sonundaki mizan **aynı fonksiyon değildir**. İkisini kıyaslamak
+    # iki ayrı cetvelle ölçüp "kısaldı" demek olurdu. O hâlde ``p₀``
+    # son λ ile **yeniden ölçülür**: bedeli bir kayıp çağrısıdır ve
+    # ilan edilmiştir.
+    _ilk = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=_mzn["a"],
                        hafiza=hafiza, adim=_sayac["çağrı"],
                        kademe_gorevleri=kademe_gorevleri)
-    r = {"p": p_son, "V_ilk": float(_ilk_kayip),
+    _son = kulli_mizan(nefs, veri, p_son, ayar.sozluk, ayar=_mzn["a"],
+                       hafiza=hafiza, adim=_sayac["çağrı"],
+                       kademe_gorevleri=kademe_gorevleri)
+    mzn = _mzn["a"]
+    r = {"p": p_son, "V_ilk": float(_ilk["kayıp"]),
          "V_son": float(_son["kayıp"]),
          "kayıp_çağrısı": int(_sayac["çağrı"]), "seyir": _seyir,
          "günlük": [], "düşen_uzuv": {}}
@@ -1326,7 +1386,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "sadakat": sad, "son_sadakat": son_sadakat,
             "konuşma": konusma, "münasebet": munasebet_beyani(),
             "keyfiyet": keyfiyet_beyani(),
-            "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri)},
+            "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri),
+                         "döküm": kul_dokum},
             "ölçek": ayar.olcek_dokumu, "elle_verilen": ayar.elle,
             "denge": olculen_lam, "ilk_kefeler": ilk_kefeler,
             "usul": usl, "şüphe": sup,

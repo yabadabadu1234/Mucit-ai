@@ -58,7 +58,7 @@ from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = ["MunasebetAyari", "Harita", "munasebet_kos", "munasebet_beyani",
-           "munasebet_sifirla"]
+           "munasebet_metni", "munasebet_sifirla"]
 
 
 @dataclass
@@ -127,7 +127,8 @@ class Harita:
 
 _SAYAC: Dict[str, float] = {
     "örnek": 0.0, "tur": 0.0, "temizlenen": 0.0, "kirli_kalan": 0.0,
-    "bag": 0.0, "kayip_cagrisi": 0.0}
+    "bag": 0.0, "kayip_cagrisi": 0.0, "geri_donen": 0.0,
+    "denge": 0.0}
 
 
 def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
@@ -136,7 +137,9 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
                   olc: Callable[[np.ndarray, Sequence], Dict[str, Any]],
                   harita: Optional[Harita] = None,
                   ayar: Optional[MunasebetAyari] = None,
-                  keyfiyet_ayari=None) -> Dict[str, Any]:
+                  keyfiyet_ayari=None,
+                  dengele: Optional[Callable[[Dict[str, Any]], Any]] = None
+                  ) -> Dict[str, Any]:
     """**BİR VERİ, HUDUDU TEMİZLENENE KADAR.** Sonra yeni veri.
 
     ``eniyile(p, küme) -> (p_yeni, çağrı)``  bir örnek kümesi üstünde
@@ -173,6 +176,19 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
     kalan = list(range(len(veri)))
     obek = max(1, int(a.obek))
     temizlenen = kirli = 0
+    # ── KİRLİ KALAN KÜME **GERİ DÖNER** (ferman 1-I'in harfi) ───────
+    # Evvelce bütçesi biten küme kirli kirli terkediliyor ve bir daha
+    # hiç görülmüyordu. Ölçüldü: 8 kümenin **0'ı** temizlendi
+    # (``temizlik_nispeti = 0,0``), yâni *"hata sıfırlanana kadar devam
+    # edeceksin"* hükmü fiilen hiç koşmuyordu -- döngü hududa göre
+    # değil, bütçeye göre çıkıyordu.
+    #
+    # Artık kirli küme kuyruğun **başına** döner ve sırası tekrar gelir.
+    # Sonsuz döngü imkânsızdır: her uğrayışta ``sabir`` bir düşer ve
+    # sıfırlanınca küme kapanır. ``sabir`` bir sayı değil, keyfiyetin
+    # eriştiği nispetin fonksiyonudur (ferman 1-J): temizliğe yaklaşan
+    # kümeye daha çok, hiç yaklaşamayana daha az uğranır.
+    ugrayis: Dict[int, int] = {}
     while kalan:
         # ── SIRA: haritaya en çok YENİ bağ getiren öne ─────────────
         zayif = np.asarray([h.zayiflik(veri[i][0]) for i in kalan], float)
@@ -184,11 +200,28 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
 
         # ── BİR KÜME, HUDUDU TEMİZLENENE KADAR ─────────────────────
         k: Dict[str, Any] = {}
+        dokum: Optional[Dict[str, Any]] = None
         for tur in range(max(1, int(a.azami_tur))):
+            # **DENGE HER TURUN BAŞINDA.** λ donarsa ilan edilen söz
+            # hakkı bozulur ve bir kefe ötekileri ezer; ölçüldü:
+            # küme küme eniyileme her kümeyi mahallî olarak
+            # iyileştirirken küllî kayıp 0,160367 → 0,342040 yükseliyordu.
+            #
+            # **DÖKÜM TEKRAR ÖLÇÜLMEZ, DEVRALINIR.** Denge ile keyfiyet
+            # aynı dökümü ister; her turda ikisi için ayrı ayrı
+            # ölçmek, tur başına bir kayıp çağrısını **iki katına**
+            # çıkarırdı. Bir evvelki turun dökümü zaten elde durur;
+            # yalnız ilk turda yeni bir ölçüm gerekir.
+            if dengele is not None:
+                if dokum is None:
+                    dokum = olc(p, kume)
+                dengele(dokum)
+                _SAYAC["denge"] += 1.0
             p, c = eniyile(p, kume)
             _SAYAC["kayip_cagrisi"] += float(c)
             _SAYAC["tur"] += 1.0
-            k = keyfiyet(olc(p, kume), sadakat_beyani(), keyfiyet_ayari)
+            dokum = olc(p, kume)
+            k = keyfiyet(dokum, sadakat_beyani(), keyfiyet_ayari)
             if k["hudut_temiz"]:
                 break
             # **EŞİK BİR FONKSİYONDUR** (ferman 1-J): sabit bir sayıyla
@@ -198,13 +231,24 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
                                    keyfiyet_ayari):
                 break
         assert k, "keyfiyet ölçülmeden küme kapatılamaz"
-        if k["hudut_temiz"]:
-            temizlenen += 1
-        else:
-            kirli += 1
         for bag, _hed in kume:
             _SAYAC["bag"] += float(h.isle(bag, float(k["nispet"])))
         _SAYAC["örnek"] += float(len(kume))
+        if k["hudut_temiz"]:
+            temizlenen += 1
+            continue
+        # **SABIR KEYFİYETİN FONKSİYONUDUR** -- sabit bir tekrar sayısı
+        # değil. ``nispet`` 1'e ne kadar yakınsa o kadar çok uğranır.
+        anahtar = min(kume_idx)
+        if anahtar not in ugrayis:
+            ugrayis[anahtar] = 1 + int(round(float(k["nispet"])
+                                             * max(1, int(a.azami_tur))))
+        ugrayis[anahtar] -= 1
+        if ugrayis[anahtar] > 0:
+            _SAYAC["geri_donen"] += 1.0
+            kalan[:0] = kume_idx          # kuyruğun BAŞINA
+        else:
+            kirli += 1
 
     _SAYAC["temizlenen"] += float(temizlenen)
     _SAYAC["kirli_kalan"] += float(kirli)
@@ -222,9 +266,35 @@ def munasebet_beyani() -> Dict[str, Any]:
             "temizlik_nispeti": float(_SAYAC["temizlenen"] / k),
             "bağ": int(_SAYAC["bag"]),
             "kayıp_çağrısı": int(_SAYAC["kayip_cagrisi"]),
+            "geri_dönen": int(_SAYAC["geri_donen"]),
+            "denge_çağrısı": int(_SAYAC["denge"]),
             "küme_başına_tur": float(_SAYAC["tur"] / k)}
 
 
 def munasebet_sifirla() -> None:
     for k in _SAYAC:
         _SAYAC[k] = 0.0
+
+
+def munasebet_metni(b: Optional[Dict[str, Any]] = None) -> str:
+    """Münasebet döngüsünün hâli -- **metni burada yazılır** (ferman 1-G).
+
+    Taht bir nazırlık katıdır; bir uzvun neticesinin nasıl yazılacağını
+    o uzuv bilir.
+    """
+    d = dict(b if b is not None else munasebet_beyani())
+    t = float(d.get("temizlik_nispeti", 0.0))
+    hal = ("HİÇBİR KÜME TEMİZLENMEDİ" if t <= 0.0
+           else "HEPSİ TEMİZLENDİ" if t >= 1.0 else "kısmen temiz")
+    return "\n".join([
+        "  MÜNASEBET -- BİR VERİ, HUDUDU TEMİZLENENE KADAR (ferman 1-I)",
+        "    işlenen örnek   : %d   (küme başına %.2f tur)"
+        % (d["örnek"], d["küme_başına_tur"]),
+        "    temizlenen küme : %d      kirli kapanan: %d      → %s"
+        % (d["temizlenen"], d["kirli_kalan"], hal),
+        "    geri dönen küme : %d   (kirli kalan küme kuyruğun başına "
+        "döner; sabır keyfiyetin fonksiyonudur)" % d.get("geri_dönen", 0),
+        "    denge çağrısı   : %d   (λ'lar HER TURDA yeniden ölçülür; "
+        "0 ise donmuş demektir)" % d.get("denge_çağrısı", 0),
+        "    kayıp çağrısı   : %d      müşterek haritaya işlenen bağ: %d"
+        % (d["kayıp_çağrısı"], d["bağ"])])

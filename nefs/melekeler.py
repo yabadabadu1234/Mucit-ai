@@ -738,8 +738,12 @@ class QParametre:
     **numarası ve adı**dır; akış sırası değişse de dilim kaymaz.
     """
 
-    def __init__(self, tohum: int = 0) -> None:
+    def __init__(self, tohum: int = 0, genislik: int = 1) -> None:
         self.tohum = int(tohum)
+        #: **DAR TAŞIYICININ TELÂFİSİ** (bkz. ``QMeleke.yay``). Her
+        #: meleke kendi açı dilimini bu kat kadar büyük ister.
+        #: ``1`` = telâfi yok; ölçü kapatılabilir ve kırmızı yanar.
+        self.genislik = max(1, int(genislik))
         self._yer: Dict[str, Tuple[int, int]] = {}
         self._n = 0
         self._vek: Optional[np.ndarray] = None
@@ -844,7 +848,22 @@ class QMeleke:
         bağışıklığı ile aynı kaidedir. Fazla durak varsa açılar
         devrolur (tile), eksikse kesilir.
         """
-        a = self.aci(p, int(n_sabit), olcek)
+        # ── GENİŞLİK: DEVRİ GECİKTİREN TELÂFİ ─────────────────────
+        # Padişahın hükmü: *"galois gibi dar bir uzay kullandığımız
+        # için mutlaka fazla sayıda parametre kullanmalısın."*
+        #
+        # ``np.resize`` açıları duraklara **devrederek** yayar: 8 açı
+        # 20 durağa yayılınca 12 durak bir öncekinin açısını tekrar
+        # eder. Genişlik o devri geciktirir -- meleke ``n_sabit·g``
+        # açı sahibi olur ve ``g`` katı durak ayrı parametre alır.
+        #
+        # **``hedef`` İSTENEN AÇI SAYISINA GİREMEZ.** Girerse parametre
+        # sayısı girdinin uzunluğuna bağlanır ve model uzunluklar
+        # arasında hiç genelleyemez -- bu dosyada evvelce ölçülmüş
+        # kusurun ta kendisidir. O hâlde çarpan yalnız ``g``dir;
+        # ``hedef`` küçükse fazlası aşağıda **kesilir**.
+        g = max(1, int(getattr(p, "genislik", 1)))
+        a = self.aci(p, int(n_sabit) * g, olcek)
         if hedef <= 0:
             return np.zeros(0)
         return np.resize(a, int(hedef))
@@ -2208,8 +2227,12 @@ class QNefs:
     def __init__(self, tohum: int = 0, ayar: Optional[QAyar] = None,
                  sira: Sequence[int] = QAKIS, sadakat: bool = True,
                  gaye: bool = True) -> None:
-        self.p = QParametre(tohum)
+        # **AYAR EVVELÂ.** Parametre taşıyıcısı genişliğini ayardan
+        # okur; ters sırada kurulursa genişlik daima ``1`` kalırdı --
+        # yâni ayar konur, hiç okunmazdı (ferman 1-C/b).
         self.ayar = ayar or QAyar(tohum=tohum)
+        self.p = QParametre(tohum, genislik=int(
+            getattr(self.ayar, "parametre_genisligi", 1)))
         self.sira = tuple(sira)
         self.s = qsicil()
         #: Gaye doğuşu açık mı (Dosya 4 / kütük H122)? Yalnız **ölçüm**

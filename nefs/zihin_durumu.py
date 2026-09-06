@@ -88,6 +88,10 @@ class QAyar:
         ("sukut", 1), ("nakz", 2), ("kelam", 4), ("kaide", 12),
         ("orak", 1), ("gaye", 2), ("tertip", 4),
     )
+    #: **PARAMETRE GENİŞLİĞİ** -- her melekenin kendi açı diliminin
+    #: kaç katı büyütüleceği. ``1`` = telâfi yok (eski hâl, ölçü
+    #: kırmızı yanar). ``nefs/olcek.py`` türetir; bkz. ``QMeleke.yay``.
+    parametre_genisligi: int = 1
     kaide_basamak: int = 4
     bolge_ac: bool = True
     bolge_asgari: int = 1
@@ -319,12 +323,17 @@ class QYazmac:
         # yazmacın haddini aşan yuvalara vurulup boş dönüyor. Aynı
         # eleme burada, tek sözlük aramasıyla yapılır; davranış birebir
         # aynıdır (düşenler yine ``_dusen_kapi``de sayılır).
-        gecerli, cift = self.y.gecerli, self.y.cift
-        for y, g in zip(yuvalar, G):
-            if gecerli(y) and gecerli(y + 1):
-                cift(y, g)
-            else:
-                self.y._dusen_kapi += 1
+        # **ELEME TEK ÇAĞRIDA** (``QuditYazmac.gecerli_toplu``). Ölçüldü:
+        # aynı elemeyi tek tek yapmak yuva başına 226 ns (iki
+        # ``dict.get``), toplu yapmak 4,8 ns -- 47 kat. C'ye çevirmek
+        # ise **daha kötüdür** (``ctypes`` hududu 726 ns); ölçümü ve
+        # gerekçesi ``qyazmac.py:_adres_dizileri``dedir.
+        yv = np.asarray(yuvalar, np.int64)
+        gec = self.y.gecerli_toplu(yv) & self.y.gecerli_toplu(yv + 1)
+        self.y._dusen_kapi += int((~gec).sum())
+        cift = self.y.cift
+        for idx in np.flatnonzero(gec):
+            cift(int(yv[idx]), G[int(idx)])
 
     def uzak_cift(self, i: int, j: int, G) -> None:
         self.y.uzak_cift(i, j, G)

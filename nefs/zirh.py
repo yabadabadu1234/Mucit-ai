@@ -1035,15 +1035,25 @@ def vicdan(q=None, p=None, usuller=None, tur: int = 1,
             return 0.0
         yuv = sorted(int(k) for k in orutu_)
         bas, son = yuv[0], yuv[-1] + 1
+        # ── ARADAKİ **BİRİM** YUVALAR HİÇ KURULMAZ ────────────────
+        # Evvelce ``bas``tan ``son``a bütün yuvalar için bir
+        # ``(2,2,2,2)`` tensör kuruluyordu; ``mpo_uygula`` ise onların
+        # ``W[0,:,:,0]`` kesitini alıp **kimlik olduğu için atıyordu**.
+        # Yâni işaret başına yüzlerce tensör kuruluyor, hepsi
+        # kuruldukları yerde çöpe gidiyordu. Ölçüldü: tek küllî mizan
+        # çağrısında ``numpy.zeros`` 15 678 kere çağrılıyor ve ezici
+        # çoğunluğu buradan geliyor.
+        #
+        # **NETİCE BİREBİR AYNIDIR** ve bu bir yaklaşıklık değildir:
+        # kimlik kapısı duruma vurulunca durumu hiç değiştirmez; onu
+        # kurmamak ile kurup atmak arasında **hesap farkı yoktur**,
+        # yalnız masraf farkı vardır.
         W: Dict[int, np.ndarray] = {}
-        for j in range(bas, son):
+        for j in yuv:
             T = np.zeros((2, 2, 2, 2))
             T[0, 0, 0, 0] = T[0, 1, 1, 0] = 1.0          # birim kanalı
-            if j in orutu_:
-                b = int(orutu_[j]) & 1
-                T[1, b, b, 1] = 1.0                      # yalnız aranan bit
-            else:
-                T[1, 0, 0, 1] = T[1, 1, 1, 1] = 1.0      # aradaki: birim
+            b = int(orutu_[j]) & 1
+            T[1, b, b, 1] = 1.0                          # yalnız aranan bit
             W[j] = T
         return q.y.mpo_uygula(W, 2, bas=bas, son=son,
                               sol_sinir=np.array([1.0, -2.0]),

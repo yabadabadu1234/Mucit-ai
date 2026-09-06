@@ -330,7 +330,33 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     # yığın donanım/ölçü şartıdır, örnek sayısı bütçe kalemidir.
     kume_sayisi = max(1, cagri // max(1, keyf))
     ornek = int(max(obek, min(ornek, obek * kume_sayisi)))
+    # ══════════════════════════════════════════════════════════════
+    #  PARAMETRE GENİŞLİĞİ -- DAR TAŞIYICININ TELÂFİSİ
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Padişahın hükmü: *"galois gibi dar bir uzay kullandığımız için
+    # mutlaka fazla sayıda parametre kullanmalısın."* Hüküm hem doğru
+    # hem de ölçülebilirdir: taşıyıcı ``GF(2⁸)``tir, yâni bir açı 256
+    # ayrık seviye (8 bit) taşır. Sürekli bir açının taşıyacağı bilgi
+    # taşıyıcıda kesiliyorsa, aynı kabiliyet ancak **daha çok açı** ile
+    # elde edilir.
+    #
+    # Telâfi nispeti keyfî değildir, yaymanın kendisinden çıkar: bir
+    # melekenin açıları ``np.resize`` ile duraklara **devrolarak**
+    # yayılır; ``n_sabit`` açı ``hedef`` durağa yayılınca durakların
+    # ``hedef/n_sabit`` katı aynı açıyı tekrar eder. Devir ancak açı
+    # sayısı durak sayısına eşitlenince biter::
+    #
+    #     genişlik = 1 + (karo − 1) · cömertlik
+    #
+    # ALT HUDUT (``c=0``) ``1``dir: telâfi yok, eski hâl -- yâni ölçü
+    # **kapatılabilir ve kırmızı yanabilir** (ferman 5). ÜST HUDUT
+    # ``karo``dur ve o da keyfî değildir: bir melekenin açıları bir
+    # Kronecker karosunun duraklarına yayılır, karo kadar açıda yayma
+    # **devirsiz** olur. Ondan fazlası taşıyıcıda karşılıksız kalır.
+    genislik = int(max(1, round(1.0 + (K - 1) * c)))
     return {
+        "parametre_genisligi": genislik,
         # yapı
         "veri_lifi": V, "karo": K, "hukum_lifi": hukum,
         "yigin_dilimi": obek, "keyfiyet_turu": keyf, "obek": obek,

@@ -181,8 +181,15 @@ class QuditYazmac:
         self._bolum_onbellek: Dict[int, Tuple[int, int]] = {}
         #: Yuva yazmaçta fiilen var mı? (önbellek)
         self._gecerli_onbellek: Dict[int, bool] = {}
+        #: **TOPLU ADRES DİZİLERİ** -- ``_adres_dizileri`` doldurur.
+        #: Skaler önbellek (sözlük) ile aynı hakikati taşırlar; fark
+        #: yalnız **kaç Python çağrısında** okunduklarıdır.
+        self._adres_np: Optional[Tuple[np.ndarray, np.ndarray,
+                                       np.ndarray]] = None
         #: ``veri(i, j)`` yuva adresi -- koşu boyunca sabit (önbellek).
-        self._veri_onbellek: Dict[Tuple[int, int], int] = {}
+        #: Bir satırın yuva adedi -- ``veri()`` bunu her çağrıda
+        #: yeniden hesaplıyordu (``ayar``a inip toplama yapıyordu).
+        self._satir_yuva = self._veri_lifi + int(self.ayar.yerel_yuva)
         #: Düşen kapı sayacı -- **saklanmıyor**, ``beyan``da görünür.
         self._dusen_kapi = 0
         #: Parite bloğunda (matchgate yolunda) vurulan çift kapı sayısı.
@@ -962,6 +969,74 @@ class QuditYazmac:
         self._gecerli_onbellek[y] = c
         return c
 
+    def _adres_dizileri(self):
+        """Bütün yuvaların ``(geçerli, lif, alt)`` adresi -- **BİR KERE**.
+
+        ===============================================================
+        NİÇİN DİZİ: C'YE ÇEVİRME KARARI **ÖLÇÜLDÜ**
+        ===============================================================
+
+        Padişahın hükmü: *"verimi iki kat ve üzeri arttırmak kaydıyla ne
+        kadar çevirebileceğin kod varsa hepsini c++'a çevir. Aynı
+        zamanda çok çok az çevrim kullanmalarına ehemmiyet ver."*
+
+        Şart **ölçüldü** ve hüküm şartın kendisinden çıktı (200 000
+        çağrı, bu makine)::
+
+            dict.get            113,0 ns/çağrı      (bugünkü hâl)
+            liste[]              80,1 ns/çağrı      1,43×  -- şart TUTMAZ
+            ctypes ile C         725,7 ns/çağrı     0,16×  -- ŞART TERSİNE
+            numpy skaler        143,7 ns/çağrı      0,79×  -- daha kötü
+            numpy TOPLU           2,4 ns/çağrı     47,1×   -- şart TUTAR
+
+        Yâni bu fonksiyonları **tek tek** C'ye çevirmek verimi iki kat
+        arttırmaz, **altıda bire düşürür**: hesabın kendisi iki bölmedir,
+        pahalı olan hudut geçişidir ve ``ctypes`` hududu Python
+        çağrısından pahalıdır. Şartı tutturan tek yol çağrıyı C'ye
+        taşımak değil, **çağrıyı ortadan kaldırmaktır**: 60 000 ayrı
+        arama yerine bir dizi araması.
+
+        (Kapıların **icrası** zaten C'dedir -- ``nefs/qcekirdek.py``
+        bandın tamamını tek C çağrısında koşturur. Oradaki şart tutar
+        çünkü orada bir çağrıya binlerce kapı düşer.)
+        """
+        if self._adres_np is None:
+            ns = self._n_satir
+            satir_yuva = self._veri_lifi + int(self.ayar.yerel_yuva)
+            lif = tuple(self.ayar.lif)
+            n = ns * satir_yuva + sum(
+                int(x).bit_length() - 1 for x in lif[ns:])
+            k = np.empty(n, np.int64)
+            alt = np.empty(n, np.int64)
+            gec = np.empty(n, bool)
+            for y in range(n):
+                kk, aa = self._lif_no(y)
+                k[y] = kk
+                alt[y] = aa
+                gec[y] = self.gecerli(y)
+            self._adres_np = (gec, k, alt)
+        return self._adres_np
+
+    def gecerli_toplu(self, yuvalar) -> np.ndarray:
+        """``gecerli`` -- **tek çağrıda bütün yuvalar**. Netice birebir aynı."""
+        y = np.asarray(yuvalar, np.int64).reshape(-1)
+        gec, _k, _a = self._adres_dizileri()
+        icinde = (y >= 0) & (y < gec.size)
+        out = np.zeros(y.size, bool)
+        out[icinde] = gec[y[icinde]]
+        return out
+
+    def lif_no_toplu(self, yuvalar) -> Tuple[np.ndarray, np.ndarray]:
+        """``_lif_no`` -- tek çağrıda. Geçersiz yuvada ``(-1, -1)``."""
+        y = np.asarray(yuvalar, np.int64).reshape(-1)
+        gec, k, a = self._adres_dizileri()
+        icinde = (y >= 0) & (y < gec.size)
+        kk = np.full(y.size, -1, np.int64)
+        aa = np.full(y.size, -1, np.int64)
+        kk[icinde] = k[y[icinde]]
+        aa[icinde] = a[y[icinde]]
+        return kk, aa
+
     def veri(self, i: int, j: int) -> int:
         """``i``inci satırın ``j``inci yuvası -- **önbellekli**.
 
@@ -971,12 +1046,14 @@ class QuditYazmac:
         Python çağrısı ve ``int()`` dönüşümleridir. Netice ``(i,j)``ye
         göre koşu boyunca **sabittir**.
         """
-        c = self._veri_onbellek.get((i, j))
-        if c is None:
-            c = int(i) * (self._veri_lifi
-                          + int(self.ayar.yerel_yuva)) + int(j)
-            self._veri_onbellek[(i, j)] = c
-        return c
+        # **ÖNBELLEK KALDIRILDI -- ÖLÇÜLDÜ, ZARARDAYDI.** Hesap tek bir
+        # çarpma-toplamadır (~60 ns); demet anahtarlı bir ``dict.get``
+        # ise ~150 ns. Yâni "hatırlamak" hesaptan **iki buçuk kat
+        # pahalıydı**: önbellek burada bir tasarruf değil, bir masraftı.
+        # (``_lif_no``da tersidir ve orada duruyor: onun gövdesi bir
+        # döngüdür.) ``_satir_yuva`` bir kere kurulur; her çağrıda
+        # ``ayar``a inmek de o masrafın parçasıydı.
+        return int(i) * self._satir_yuva + int(j)
 
     def yerel(self, i: int) -> int:
         return self.veri(i, self._veri_lifi)
@@ -1051,12 +1128,18 @@ class QuditYazmac:
             G = np.broadcast_to(G, (len(yuvalar), 2, 2))
         sira: List[Tuple[int, int]] = []
         birik: Dict[Tuple[int, int], np.ndarray] = {}
-        for y, g in zip(yuvalar, G):
-            if not self.gecerli(int(y)):
-                self._dusen_kapi += 1
-                continue
-            k, alt = self._lif_no(int(y))
-            anahtar = (int(k), int(alt))
+        # **ELEME TOPLU** (bkz. ``_adres_dizileri``): kapıların %99,8'i
+        # yazmacın haddini aşıp düşer. Evvelce her düşen kapı için üç
+        # Python çağrısı (``gecerli`` → ``_lif_no`` → sözlük) yapılıyordu;
+        # şimdi hepsi tek dizi aramasında elenir. Netice birebir aynı,
+        # düşenler yine ``_dusen_kapi``de sayılır.
+        yv = np.asarray([int(y) for y in yuvalar], np.int64)
+        gec = self.gecerli_toplu(yv)
+        kk, aa = self.lif_no_toplu(yv)
+        self._dusen_kapi += int((~gec).sum())
+        for idx in np.flatnonzero(gec):
+            g = G[int(idx)]
+            anahtar = (int(kk[idx]), int(aa[idx]))
             g2 = np.asarray(g, complex).reshape(2, 2)
             if anahtar in birik:
                 birik[anahtar] = g2 @ birik[anahtar]
