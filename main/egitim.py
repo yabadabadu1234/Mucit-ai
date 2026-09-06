@@ -302,8 +302,8 @@ from nefs.munasebet import (MunasebetAyari, munasebet_kos,  # noqa: E402
 # Padişahın emri: *"Kodu öyle yaz ki gidip oradan veri çekip burada
 # eğitime katsın ama dosyaları repoya tümden koymasın."* Külliyat
 # ``depo/kulliyat/`` altına çekilir (depoya girmez) ve tâlime katılır.
-from main.kulliyat import (kulliyat_cek, kulliyat_verisi,   # noqa: E402
-                           kulliyat_beyani)  # noqa: E402
+from main.kulliyat import (kulliyat_verisi,               # noqa: E402
+                           kulliyat_dokumu, kulliyat_beyani)  # noqa: E402
 from nefs.usul import usul_beyani                         # noqa: E402
 from nefs.suphe import suphe_beyani                       # noqa: E402
 # **FERMAN 1-G:** raporun yeri taht değil, kendi uzvudur.
@@ -970,11 +970,14 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                         pencere=ayar.pencere, sozluk=ayar.sozluk,
                         tohum=ayar.tohum, taban=int(ayar.veri_lifi),
                         basamak=int(ayar.belirtec_basamak))
-    # **KÜLLİYAT EVVELÂ ÇEKİLİR.** Evvelce ``kulliyat_cek`` yalnız
-    # ``kulliyat_beyani``nin içinden, yâni **rapor vaktinde** koşuyordu:
-    # tâlim, henüz inmemiş bir külliyattan veri okumaya çalışıyor ve
-    # sessizce boş dönüyordu. Çekme, okumadan **evvel** olmalıdır.
-    kul_dokum = kulliyat_cek()
+    # **ÇEKME ARTIK BURADA DEĞİL, BORU HATTININ İÇİNDE** (ferman 1-O).
+    #
+    # Burada ``kulliyat_cek()`` duruyordu ve **bütün** kaynakları
+    # peşinen indiriyordu; ``kulliyat_verisi`` ancak ondan sonra tek tek
+    # çevirip bırakıyordu. Ölçüldü: kap 24 GB'a çıktı -- adı boru
+    # hattıydı, fiili bir havuzdu. Artık her kaynak kendi sırası
+    # gelince çekilir, çevrilir ve hamı bırakılır; kapta bir seferde
+    # tek kaynağın hamı durur.
     kul_veri = kulliyat_verisi(
         sozluk=int(ayar.sozluk), pencere=int(ayar.pencere),
         azami=max(0, int(ayar.ornek_sayisi) - len(arc_veri)),
@@ -1477,7 +1480,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "konuşma": konusma, "münasebet": munasebet_beyani(),
             "keyfiyet": keyfiyet_beyani(),
             "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri),
-                         "döküm": kul_dokum},
+                         "döküm": kulliyat_dokumu()},
             "belirteç": belirtec_beyani(str(ayar.kodlama)),
             "ölçek": ayar.olcek_dokumu, "elle_verilen": ayar.elle,
             "denge": olculen_lam, "ilk_kefeler": ilk_kefeler,

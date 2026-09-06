@@ -53,7 +53,8 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 __all__ = ["Kaynak", "KAYNAKLAR", "kulliyat_cek", "kulliyat_verisi",
-           "kulliyat_beyani", "mucit_cevir", "mucit_ac",
+           "kulliyat_beyani", "kulliyat_dokumu", "mucit_cevir",
+           "mucit_ac",
            "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
 
 #: Külliyatın indiği yer. **Depoya girmez** (``.gitignore``).
@@ -590,10 +591,28 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
         if k.varlik:
             yol = os.path.join(_dizin(k), k.varlik)
         else:
-            kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
-            if not os.path.isdir(kok):
-                continue
             yol = _dizin(k) + MUCIT_UZANTI
+            # ══════════════════════════════════════════════════════
+            #  BORU HATTI KAYNAK BAŞINADIR (ferman 1-O)
+            # ══════════════════════════════════════════════════════
+            #
+            # **ÖLÇÜLEN VE DÜZELTİLEN KUSUR.** Klonlama ile çevirme
+            # ayrı iki geçişteydi: taht evvelâ ``kulliyat_cek()`` ile
+            # **bütün** kaynakları indiriyor, ancak ondan sonra
+            # buradaki döngü tek tek çeviriyordu. Netice ölçüldü: kap
+            # 24 GB'a çıktı -- yâni "boru hattı" adı konmuştu fakat
+            # fiilen bir **havuz** kurulmuştu.
+            #
+            # Halka kaynak başına kapanır: bu kaynağın hamı yoksa
+            # **şimdi** çekilir, **şimdi** çevrilir, **şimdi**
+            # bırakılır. Kapta hiçbir zaman birden fazla kaynağın hamı
+            # durmaz.
+            kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
+            if not os.path.isfile(yol) and not os.path.isdir(kok):
+                kulliyat_cek([k])
+                kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
+            if not os.path.isfile(yol) and not os.path.isdir(kok):
+                continue
             # **BAYAT BİÇİM SESSİZCE ATLANMAZ.** ``mucit_ac`` damgası
             # tutmayan dosyaya ``None`` döner; o dosya yerinde durduğu
             # için ``isfile`` doğru çıkar ve kaynak her koşuda sessizce
@@ -654,9 +673,44 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
 
 
 
+def kulliyat_dokumu(kaynaklar: Optional[Sequence[Kaynak]] = None
+                    ) -> List[Dict[str, Any]]:
+    """Külliyatın hâli -- **hiçbir şey çekmeden**, kapta olana bakarak.
+
+    ``kulliyat_cek`` bir **fiildir**: çağrıldığı yerde indirir. Onu
+    rapora koymak, her rapor basışında bütün külliyatı yeniden
+    indirmek olurdu. Rapor bir fiil değil bir **beyandır**; o hâlde
+    kapta fiilen ne olduğunu sayar.
+    """
+    out: List[Dict[str, Any]] = []
+    for k in (kaynaklar or KAYNAKLAR):
+        if k.engel or not k.depo:
+            out.append({"ad": k.ad, "alındı": False, "engel": k.engel,
+                        "bayt": 0, "dosya": 0})
+            continue
+        yol = (os.path.join(_dizin(k), k.varlik) if k.varlik
+               else _dizin(k) + MUCIT_UZANTI)
+        if os.path.isfile(yol):
+            out.append({"ad": k.ad, "alındı": True, "engel": "",
+                        "yol": yol, "bayt": os.path.getsize(yol),
+                        "dosya": 1, "çevrilmiş": True})
+            continue
+        kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
+        if os.path.isdir(kok):
+            b, n = _boy(kok, k.uzantilar())
+            out.append({"ad": k.ad, "alındı": n > 0, "engel": "" if n else
+                        "ham duruyor, henüz çevrilmedi", "yol": kok,
+                        "bayt": b, "dosya": n, "çevrilmiş": False})
+            continue
+        out.append({"ad": k.ad, "alındı": False, "bayt": 0, "dosya": 0,
+                    "engel": "kapta yok -- sırası gelince çekilecek "
+                             "(boru hattı, ferman 1-O)"})
+    return out
+
+
 def kulliyat_beyani(dokum: Optional[Sequence[Dict[str, Any]]] = None) -> str:
     """Külliyatın hâli -- **ne alındı, ne alınamadı, niçin**."""
-    d = list(dokum if dokum is not None else kulliyat_cek())
+    d = list(dokum if dokum is not None else kulliyat_dokumu())
     s = ["=== KÜLLİYAT (main/kulliyat.py) -- harici metin ===", "",
          "  Depoya gömülmez; ``%s`` altına çekilir." % KULLIYAT_DIZINI, ""]
     top_b = top_f = 0
