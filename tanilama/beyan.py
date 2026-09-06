@@ -174,8 +174,11 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
                  sd["çağrı"], sd["yoklanan"]),
               "       tenakuz alarmı: %d kere yandı   Zeno ile sıfırlanan "
               "bit: %d" % (sd["alarm"], sd["sıfırlanan"]),
-              "       alarm nispeti: %%%.3f  (0 = hiçbir hesap mantık "
-              "dışına taşmadı)" % (100.0 * sd["alarm_nispeti"]),
+              "       GELEN taşma  : %%%.3f  (zemin kaç kere müdahale "
+              "etmek zorunda kaldı)" % (100.0 * sd["alarm_nispeti"]),
+              "       KALAN taşma  : %%%.3f  ← MANTIKSIZLIK HUDUDU "
+              "BUDUR (0 = hiçbir hesap mantık dışına taşmış KALMADI)"
+              % (100.0 * sd["artık_nispeti"]),
               "       tâlim sonu durumu: alarm %d → %d  (%s)"
               % (ss["alarm_önce"], ss["alarm_sonra"],
                  "ALT-UZAYDA" if ss["alarm_sonra"] == 0

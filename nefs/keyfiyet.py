@@ -148,6 +148,13 @@ def keyfiyet(kefeler: Dict[str, Any],
     _HAL["en_iyi"] = max(_HAL["en_iyi"], nispet)
     _HAL["temiz" if temiz else "kirli"] += 1.0
     _GECMIS.append(nispet)
+    # **ÜÇ BİLEŞEN AYRI AYRI SAKLANIR.** Nispet bir çarpımdır; hangi
+    # çarpanın sıfıra yakın olduğu görünmezse "niçin temizlenmiyor"
+    # sorusu tahmine kalır (ferman 5: her iddianın bir sayısı olacak).
+    for ad, v in (("ten", nis_ten), ("kis", nis_kis), ("man", nis_man)):
+        _HAL["n_" + ad] = _HAL.get("n_" + ad, 0.0) + float(v)
+        _HAL["en_kotu_" + ad] = min(
+            _HAL.get("en_kotu_" + ad, 1.0), float(v))
     return {"hudut": hudut, "hudut_temiz": bool(temiz), "nispet": nispet,
             "nispet_tenakuz": nis_ten, "nispet_kısır": nis_kis,
             "nispet_mantık": nis_man, "çevrim": cevrim,
@@ -190,7 +197,14 @@ def keyfiyet_beyani() -> Dict[str, Any]:
             "ortanca": float(np.median(g)),
             "temiz": int(_HAL["temiz"]), "kirli": int(_HAL["kirli"]),
             "temiz_nispeti": float(_HAL["temiz"] / c),
-            "son_eşik": float(esik(0, 1))}
+            "son_eşik": float(esik(0, 1)),
+            # Hangi hudut kirli tutuyor -- üç çarpan ayrı ayrı.
+            "ort_tenakuz": float(_HAL.get("n_ten", 0.0) / c),
+            "ort_kısır": float(_HAL.get("n_kis", 0.0) / c),
+            "ort_mantık": float(_HAL.get("n_man", 0.0) / c),
+            "en_kötü_tenakuz": float(_HAL.get("en_kotu_ten", 1.0)),
+            "en_kötü_kısır": float(_HAL.get("en_kotu_kis", 1.0)),
+            "en_kötü_mantık": float(_HAL.get("en_kotu_man", 1.0))}
 
 
 def keyfiyet_sifirla() -> None:
@@ -208,5 +222,13 @@ def keyfiyet_metni(b=None) -> str:
         % (d["çağrı"], d["temiz"], d["kirli"], d["temiz_nispeti"]),
         "    nispet      : en iyi %.4f   ortanca %.4f   ortalama %.4f"
         % (d["en_iyi"], d["ortanca"], d["ortalama"]),
-        "    nispet = (1−tenakuz/çevrim)·(1−kısır/çevrim)·(1−alarm) "
+        "    çarpanlar   : tenakuz %.4f   kısır %.4f   mantık %.4f "
+        "(ortalama; 1 = o hudut temiz)"
+        % (d.get("ort_tenakuz", 0.0), d.get("ort_kısır", 0.0),
+           d.get("ort_mantık", 0.0)),
+        "    en kötü hâli: tenakuz %.4f   kısır %.4f   mantık %.4f "
+        "← HANGİSİ SIFIRA YAKINSA HUDUT ONDAN KİRLİ"
+        % (d.get("en_kötü_tenakuz", 1.0), d.get("en_kötü_kısır", 1.0),
+           d.get("en_kötü_mantık", 1.0)),
+        "    nispet = (1−tenakuz/çevrim)·(1−kısır/çevrim)·(1−artık) "
         "-- ÇARPIM, ortalama değil: bir hudut kirliyse nispet sıfırdır."])
