@@ -132,6 +132,7 @@ import numpy as np
 
 from .ayna import AynaAyari, halka
 from .hafiza import CERH, TASDIK, TEVAKKUF, Hafiza
+from .tdd import esit_mi, kanonik_adres
 
 __all__ = ["MizanAyari", "rust", "uhlmann", "givens", "holonomi",
            "holonomi_yigin", "engellenme", "kulli_mizan", "mizan_cetveli",
@@ -177,6 +178,15 @@ class MizanAyari:
     #: ``|ω| > 1 − kenar`` ise hal saftır (tam kısır yahut tam tenakuz).
     kenar: float = 0.05
     zeno_esigi: float = 0.35
+    #: **KANONİK DENETÇİNİN ÇEKİRDEĞİ** (``nefs/tdd.py``). Zabıt TDD'yi
+    #: hesap motoru olmaktan çıkardı ve tek vazife bıraktı: *"mantık
+    #: kilitlendiğinde kanonik adres eşitliğini (O(1)) kontrol eden
+    #: haricî bir denetçi"*. Mantığın kilitlendiği yer burasıdır: bir
+    #: muhakeme çevrimi kendi ışınına döndüyse kısırdır. Evvelce bu
+    #: ``yol < 1e-9`` diye bir eşikle tayin ediliyordu; şimdi **adres
+    #: kıyasıyla** kat'î olarak tayin edilir (çekirdek lif boyuna eşit
+    #: veya ondan büyükse kıyas tamdır, elek değil).
+    tdd_cekirdek: int = 16
     #: Cerh kaydının hangi belirteçleri kestiği (evvelce ``hafiza``da
     #: gömülüydü). **ZABIT: KORUNACAK (0,9).**
     zeno_tepe: float = 0.9
@@ -393,6 +403,17 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari
         for _ in range(int(a.cevrim_sayisi))])          # (C, boy)
     H = np.stack([np.asarray(h, complex).reshape(-1) for h in haller])
     U_hepsi, om_hepsi, yol_hepsi = holonomi_yigin(H, idx_hepsi)
+    # ── KANONİK DENETÇİ: ÇEVRİM KENDİ IŞININA MI DÖNDÜ ──────────────
+    # Zabıtın TDD'ye bıraktığı tek vazife. Başlangıç köşesi ``a`` ile
+    # holonominin götürdüğü ``U_C a`` **aynı adreste** ise çevrim
+    # hiçbir yere varmamıştır: kısırdır. Bu bir eşik değil, kıyastır.
+    A0 = H[idx_hepsi[:, 0]]
+    A0 = A0 / np.maximum(np.linalg.norm(A0, axis=-1, keepdims=True), 1e-300)
+    A1 = np.einsum('cij,cj->ci', U_hepsi, A0)
+    cek = int(a.tdd_cekirdek)
+    kapali = [esit_mi(kanonik_adres(A0[c], cekirdek=cek),
+                      kanonik_adres(A1[c], cekirdek=cek))
+              for c in range(idx_hepsi.shape[0])]
     for c_no in range(int(a.cevrim_sayisi)):
         idx = [int(i) for i in idx_hepsi[c_no]]
         koseler = [haller[i] for i in idx]
@@ -417,9 +438,11 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari
         engelli = bool(ort) and max(ort) < 0.5
         if om < -1.0 + a.kenar:
             say["tenakuz"] += 1
-        elif yol < 1e-9:
-            # Hiç yol katetmedi: hangi ``ω`` çıkarsa çıksın bu boş
-            # salınımdır (Vol_FS = 0, modüler akış durdu).
+        elif kapali[c_no]:
+            # **KANONİK ADRES KIYASI** (eşik değil): ``U_C a`` ile ``a``
+            # aynı ışında. Çevrim döndü fakat hiçbir yere varmadı --
+            # boş salınım. Evvelce bu ``yol < 1e-9`` eşiğiyle tayin
+            # ediliyordu ve eşik keyfîydi; adres kıyası kat'îdir.
             say["kısır"] += 1
         elif engelli:
             say["engel"] += 1
@@ -435,12 +458,19 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari
 # ══════════════════════════════════════════════════════════════════
 #  3. MONOGAMİ -- CKW'nin doğrudan-toplam mukabili
 # ══════════════════════════════════════════════════════════════════
-def _monogami(M: np.ndarray, sektorler: Sequence[Tuple[int, int]]
+def _monogami(M3: np.ndarray, sektorler: Sequence[Tuple[int, int]]
               ) -> Tuple[float, float, float]:
-    """``(ceza, Σ_A w_A 𝒞²(V:A), 𝒞²(V:hepsi))``.
+    """``(Σ ceza, Σ Σ_A w_A 𝒞²(V:A), Σ 𝒞²(V:hepsi))`` -- **bütün yığın**.
 
-    ``M`` durumun lifli görünümüdür: ``(n_veri, n_hüküm)``. Hüküm alanları
-    ise **düz** ``d`` indisinde ``[i:j)`` aralıklarıdır.
+    ``M3`` durumun lifli görünümüdür: ``(S, n_veri, n_hüküm)``. Hüküm
+    alanları ise **düz** ``d`` indisinde ``[i:j)`` aralıklarıdır.
+
+    **NİÇİN YIĞIN HÂLİNDE.** Ölçüldü: bu terim örnek başına ayrı ayrı
+    çağrılıyordu (512 çağrı, 0,49 sn -- küllî mizanın altıda biri) ve
+    her çağrıda on bir sektör maskesi **yeniden** kuruluyordu; halbuki
+    maskeler örnekten bağımsızdır ve bir kere kurulur. Yığınla hem
+    maskeler bir kere kurulur, hem ``ρ_A`` çarpımları tek yığın GEMM'e
+    iner. Netice birebir aynıdır: aynı toplamın başka sırayla alınması.
 
     **ÖLÇEREK BULUNAN HATA.** Evvelce ``M[:, i:j]`` yazılmıştı, yâni
     sektör aralığı hüküm lifinin sütunu sanılmıştı. Ölçüldü: sektörler
@@ -453,30 +483,65 @@ def _monogami(M: np.ndarray, sektorler: Sequence[Tuple[int, int]]
     Doğrusu: düz indis ``k = v·n_h + h``dir; sektör bu ızgarada bir
     **maske**dir ve satırları da sütunları da kesebilir.
     """
-    M = np.asarray(M, complex)
-    assert M.ndim == 2 and M.size > 0, "lifli görünüm (n_v, n_h) olmalı"
-    n_v, n_h = M.shape
+    M = np.asarray(M3, complex)
+    assert M.ndim == 3 and M.size > 0, "lifli yığın (S, n_v, n_h) olmalı"
+    S, n_v, n_h = M.shape
     d = n_v * n_h
-    top = float(np.sum(np.abs(M) ** 2))
-    assert top > 0.0, "durum BOŞ -- monogami ölçülemez"
-    M = M / math.sqrt(top)
-    rho_V = M @ M.conj().T
-    saf_hepsi = float(np.real(np.trace(rho_V @ rho_V)))
-    C2_hepsi = float(max(0.0, 2.0 * (1.0 - saf_hepsi)))
-    duz = np.arange(d).reshape(n_v, n_h)
-    toplam = 0.0
+    top = np.sum(np.abs(M) ** 2, axis=(1, 2))
+    assert float(np.min(top)) > 0.0, "durum BOŞ -- monogami ölçülemez"
+    M = M / np.sqrt(top)[:, None, None]
+
+    Mc = M.conj()
+
+    def _saflik(X: np.ndarray, Xc: np.ndarray) -> np.ndarray:
+        """``Tr ρ²`` -- ``ρ = XX†``, yığın **BLAS** çarpımıyla.
+
+        ``einsum`` DEĞİL: ölçüldü, ``np.einsum('svh,swh->svw')`` BLAS'a
+        inmiyor ve tek başına 0,62 sn yiyordu. ``matmul`` aynı hesabı
+        yığın ``zgemm`` olarak yapar. ``Tr(g²)`` ise ``16×16``dır,
+        orada einsum ucuzdur.
+        """
+        g = np.matmul(X, Xc.swapaxes(1, 2))
+        return np.real(np.einsum('svw,swv->s', g, g))
+
+    C2_hepsi = np.maximum(0.0, 2.0 * (1.0 - _saflik(M, Mc)))
+
+    # ── MASKE DEĞİL, DİLİM ─────────────────────────────────────────
+    # Sektör düz indiste **ardışık** bir aralıktır ve sektörler
+    # birbirini takip eder. O hâlde her sektör için bütün diziyi
+    # maskelemek (``np.where``, sektör başına üç tam geçiş; ölçüldü
+    # 0,79 sn) israftır. Tek tampon kurulur, yalnız sektörün dilimi
+    # yazılır, ölçüldükten sonra **yalnız o dilim** sıfırlanır.
+    # Bütün sektörler boyunca yazılan toplam eleman ``2d``dir.
+    F = M.reshape(S, d)
+    Fc = Mc.reshape(S, d)
+    g2 = np.abs(F) ** 2
+    A = np.zeros((S, d), complex)
+    Ac = np.zeros((S, d), complex)
+    Av = A.reshape(S, n_v, n_h)
+    Avc = Ac.reshape(S, n_v, n_h)
+    toplam = np.zeros(S, float)
     for (i, j) in sektorler:
         assert 0 <= i < j <= d, (
             "sektör düz indisin dışında: (%d,%d) ∉ [0,%d]" % (i, j, d))
-        mask = (duz >= i) & (duz < j)
-        B = np.where(mask, M, 0.0)
-        w = float(np.sum(np.abs(B) ** 2))
-        if w <= 1e-15:
+        w = np.sum(g2[:, i:j], axis=1)
+        var = w > 1e-15
+        if not np.any(var):
             continue
-        rho_A = (B @ B.conj().T) / w
-        saf = float(np.real(np.trace(rho_A @ rho_A)))
-        toplam += w * float(max(0.0, 2.0 * (1.0 - saf)))
-    return float(max(0.0, toplam - C2_hepsi)), float(toplam), C2_hepsi
+        A[:, i:j] = F[:, i:j]
+        Ac[:, i:j] = Fc[:, i:j]
+        # Sektörün dokunduğu **satır kuşağı**: ``v = düz // n_h``. Kuşak
+        # dışındaki satırlar tamamen sıfırdır; ``g = XX†``de sıfır satır
+        # ve sıfır sütun verirler, ``Tr(g²)``ye hiçbir şey katmazlar.
+        # O hâlde çarpım da onları dolaşmaz (16 satır yerine 2-3).
+        v0, v1 = i // n_h, (j - 1) // n_h
+        saf = (_saflik(Av[:, v0:v1 + 1], Avc[:, v0:v1 + 1])
+               / np.maximum(w, 1e-300) ** 2)
+        A[:, i:j] = 0.0
+        Ac[:, i:j] = 0.0
+        toplam += np.where(var, w * np.maximum(0.0, 2.0 * (1.0 - saf)), 0.0)
+    return (float(np.sum(np.maximum(0.0, toplam - C2_hepsi))),
+            float(np.sum(toplam)), float(np.sum(C2_hepsi)))
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -614,7 +679,13 @@ def _ileri(nefs, veri, sozluk: int) -> Dict[str, Any]:
         assert q.y.B == B, (
             "yazmaç yığını %d, istenen %d -- ayar ile veri uyuşmuyor"
             % (q.y.B, B))
-        M_hepsi = np.asarray(q.y.lifli, complex)          # (B, n_v, n_h)
+        # ── LİF YAPISI ARTIK ÜÇ KARO (zabıt Yol 3: [16,16,16]) ──────
+        # Mizan **iki** eksen ister: veri lifi ve hükmün tamamı. Yazmaç
+        # ise hükmü karolara böldü. Düz bellek dizilimi aynı olduğu için
+        # ``(B, n_v, −1)`` görünümü hükmü tek eksende toplar; ayrı bir
+        # ayar alanına hâcet yoktur, yapı yazmacın kendisinden okunur.
+        n_v = int(q.y.ayar.lif[0])
+        M_hepsi = np.asarray(q.y.psi, complex).reshape(B, n_v, -1)
         assert M_hepsi.size > 0, "ileri geçiş BOŞ durum verdi"
         # Belirteç lifi üstündeki hâl: indirgenmiş yoğunluğun baş
         # özvektörü. (Ölçümdür, kesme değildir: hiçbir bileşen atılmaz.)
@@ -676,13 +747,8 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     L_cev = float(cv["ceza"])
 
     # ── 3. MONOGAMİ (CKW'nin ⊕ mukabili) ──────────────────────────
-    mono = 0.0
-    mono_sol = mono_sag = 0.0
-    for M in ileri["lifli"]:
-        c, sol, sag = _monogami(M, ileri["sektör"])
-        mono += c
-        mono_sol += sol
-        mono_sag += sag
+    mono, mono_sol, mono_sag = _monogami(
+        np.stack(ileri["lifli"]), ileri["sektör"])
     n_o = len(ileri["lifli"])
     L_mon = float(mono / n_o)
 

@@ -158,6 +158,24 @@ motorun **fiilen** koştuğu, eskisinin **kalmadığı** kastedilir.
 
 ---
 
+## ▓▓▓ 2-B. FERMAN: FAZLALIK KÖKÜNDEN KESİLİR ▓▓▓
+
+> *"İptal olan dosyanın başka faydası varsa başkasına referans verir
+> demeyeceksin, **fazlalığı kökünden kesip atacaksın**, kaidedir!"*
+
+Bir usul iptal edildiğinde şu mazeretlerin hiçbiri geçerli değildir:
+
+* "Ama bu dosyayı başkası da ithal ediyor."
+* "Bir kısmı hâlâ işe yarıyor, o kısmı kalsın."
+* "Referans olarak dursun, ileride lâzım olur."
+* "Silmek şunu bunu kırar."
+
+**Kırılsın.** Kırık, saklanmış bir fazlalıktan iyidir. İptal olan
+kökünden kesilir; ona bağlı olan ne varsa **aynı turda** yeniye
+bağlanır yahut o da kesilir. Yarım kesilen kök yeniden sürer.
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.
@@ -203,6 +221,10 @@ mühendisliği, göreve mahsus çözücü **yasaktır**.
 | Kör `temperature` örneklemesi | Vakum kıvılcımı (`nefs/ayna.py`) |
 | `kuantum/kubit_taksimati.py` | (imha; taksim edilecek zincir yok) |
 | Elle ARC kâideleri | Motor |
+| **Sürekli Hilbert ℂ^d + Float32/Complex64 genlik** | **Galois GF(2⁸) + Stabilizer Tableau** |
+| **Transandantal faz e^{iθ} (sin/cos/exp)** | **Palmer 2-bit rotasyonu: i(a,b) = (−b, a)** |
+| **O(d²) GEMM / yoğun 4096 matris** | **Matrix-free Kronecker-SIMD [16,16,16], L1'de** |
+| **TDD'nin HESAP MOTORU olması** | TDD yalnız **kanonik denetçi** (çevrim kapanışında, O(1) adres) |
 
 ---
 

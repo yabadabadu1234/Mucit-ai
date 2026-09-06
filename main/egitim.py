@@ -127,7 +127,16 @@ from nefs.hafiza import Hafiza                           # noqa: E402
 #   1. usul  LimTDD    -- durumu DAG olarak sıkıştır (nefs/tdd.py)
 #   2. usul  Stabilizer-- Clifford çerçevesinde tableau (nefs/kararname.py)
 #   3. usul  Gölgeler  -- O(log M) ölçüm (nefs/golge.py)
-from nefs.tdd import TddAyari, olcu as tdd_olcu           # noqa: E402
+# ── ZABIT: 1 GB/S GALOIS-CLIFFORD MOTORU ──────────────────────────
+# **USUL FERMANI:** çağrılar dosya YOKKEN yazıldı.
+#
+#   nefs/galois.py   -- GF(2⁸) cismi, Stabilizer Tableau (XOR/AND),
+#                       Palmer 2-bit rotasyonu. Sürekli Hilbert İPTAL.
+#   nefs/tdd.py      -- artık HESAP MOTORU DEĞİL, yalnız kanonik
+#                       DENETÇİ: çevrim kapanışında O(1) adres eşitliği.
+from nefs.galois import (GaloisAyari, Tableau,            # noqa: E402
+                         palmer_i, tableau_kur, gf_carp)
+from nefs.tdd import TddAyari, kanonik_adres              # noqa: E402
 from nefs.kararname import kararname                      # noqa: E402
 from nefs.golge import GolgeAyari, golge_al               # noqa: E402
 
@@ -318,12 +327,49 @@ class EgitimAyari:
     #: L2/L3 önbelleğinden akan bir veri nehri gibi geçmeli.
     #: ``complex64`` bellek trafiğini yarıya indirir.
     genlik_tipi: str = "complex64"
+    # ══════════════════════════════════════════════════════════════
+    #  ZABIT: 1 GB/S -- AYRIK KUANTUM MEKANİĞİ
+    # ══════════════════════════════════════════════════════════════
+    #
+    # **HÜKÜM 1 (zabıt, birinci fasıl):** *"Sürekli Hilbert uzayında
+    # (ℂ^d), kayan nokta sayılarıyla, matris çarpımlarıyla ve
+    # trigonometrik fazlarla kalarak 1 GB/s hızına ulaşmak fizikî bir
+    # imkânsızlıktır."*  Belirteç başına bütçe **16 saat çevrimidir**;
+    # tek bir ``cos(θ)`` 15-30 çevrim yer.
+    #
+    # O hâlde durum artık sürekli genlik vektörü DEĞİLDİR.
+    #: Motorun cinsi:
+    #:   ``galois``    -- GF(2⁸) + Stabilizer Tableau (XOR/AND bitmask)
+    #:   ``kronecker`` -- matrix-free [16,16,16] lifli SIMD akışı
+    #: İkisi de sürekli ``ℂ^4096`` yoğun diziyi **iptal eder**.
+    motor: str = "galois"
+    #: Kronecker lif yapısı. **Zabıt (TDD Darboğazı, Yol 3): kesin
+    #: çözüm ``[16,16,16]``dır** -- 3 adet 16×16 karo, 16 KB, tamamen
+    #: L1 önbellekte. ``4096×4096`` GEMM değil.
+    lif_yapisi: Tuple[int, ...] = (16, 16, 16)
+    #: Galois cisminin mertebesi: ``GF(2^galois_us)``. 8 seçildi çünkü
+    #: GFNI donanım komutları ``GF(2⁸)`` üstünde çalışır.
+    galois_us: int = 8
+    #: Stabilizer tableau'nun kübit sayısı (``2N`` bit satırı).
+    tableau_n: int = 64
     # --- ZABIT 2: SAF CPU 2026 USULLERİ
-    #: **1. USUL -- LimTDD.** Durum yoğun bir dizi değil, yönlendirilmiş
-    #: asiklik graf olarak tutulur; özdeş alt bloklar tek düğüme çöker.
-    #: ``0`` = kapalı; ``>0`` = düğüm haddi. Sıkışma nispeti raporlanır
-    #: ve kazanç yoksa **görünür** (ölçü kırmızı yanabilir).
-    tdd_dugum_haddi: int = 4096
+    #: **1. USUL -- LimTDD: HESAP MOTORU OLMAKTAN ÇIKARILDI.**
+    #:
+    #: Zabıt (TDD Darboğazının Riyazî İspatı) kat'îdir: rastgele
+    #: tensörde iki alt bloğun kolinye olma olasılığı **sıfırdır**
+    #: (Lebesgue ölçüsü), o hâlde hiçbir düğüm birleşmez ve graf tam
+    #: ağaç olarak açılır. Ölçtüğümüz **35 163× yavaşlama**, işaretçi
+    #: kovalamanın SIMD'e nispetidir ve bir kodlama kusuru değildir.
+    #:
+    #: Zabıtın hükmü: *"İleri ve geri yayılımda TDD'nin işaretçi/hash
+    #: hamallığını derhal iptal ediyoruz. TDD'yi bir hesaplama motoru
+    #: olarak değil; sadece mantık kilitlendiğinde kanonik adres
+    #: eşitliğini (O(1)) kontrol eden haricî bir denetçi olarak
+    #: tutuyoruz."*
+    #:
+    #: Bu alan artık denetçinin çekirdek boyudur: çevrim kapanışında
+    #: durumun yalnız bu kadar elemanı hashlenir.
+    tdd_cekirdek: int = 16
     #: Özdeşlik toleransı: iki alt blok bu farkla aynı sayılır.
     tdd_tolerans: float = 1e-7
     #: **2. USUL -- QUDİT STABILIZER RANK.** Durumun Clifford çerçevesine
@@ -366,7 +412,9 @@ class EgitimAyari:
         return QAyar(satir_kubiti=self.satir_kubiti,
                      yerel_kubit=self.yerel_kubit, bag=self.bag,
                      mera_kademe=self.mera_kademe, tohum=self.tohum,
-                     yigin=self.yigin(), tip=tip)
+                     yigin=self.yigin(), tip=tip,
+                     motor=str(self.motor),
+                     lif_yapisi=tuple(self.lif_yapisi))
 
     def yigin(self) -> int:
         """Yazmacın YIĞIN DİLİMİ -- elle değil, **donanımdan**.
@@ -647,6 +695,11 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         ayna_r=float(a.ayna_r),
         lam_cevrim=float(a.lam_cevrim), lam_monogami=float(a.lam_monogami),
         lam_hodge=float(a.lam_hodge), cevrim_boyu=int(a.cevrim_boyu),
+        # ``motor`` ve ``lif_yapisi`` mizana **geçmez**: ikisi de
+        # yazmacın ölçüsüdür ve oraya ``qayar()`` ile gider. Mizan lif
+        # yapısını yazmacın kendisinden okur (``_ileri``). Buraya da
+        # koymak, aynı ölçünün iki nüshası olurdu (CLAUDE.md 2-B).
+        tdd_cekirdek=int(a.tdd_cekirdek),
         golge_ornegi=int(a.golge_ornegi), golge_haddi=float(a.golge_haddi),
         qsvt=int(a.qudit_qsvt), qudit_derece=int(a.qudit_derece),
         qudit_yon=int(a.qudit_yon),
@@ -809,7 +862,16 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     # bilir. Kazanç yoksa sayı öyle çıkar ve saklanmaz.
     q_son = nefs.idrak_et(np.zeros((ayar.yigin(), 2, ayar.satir_kubiti)))
     psi_son = np.asarray(q_son.y.psi[0], complex)
-    tdd = tdd_olcu(psi_son, TddAyari(tolerans=float(ayar.tdd_tolerans)))
+    # **GALOIS TABLEAU: durumun ayrık temsili** (nefs/galois.py).
+    # Sürekli genlik vektörü iptal; durum GF(2⁸) elemanları ve
+    # stabilizer bitmask olarak taşınır.
+    ga = GaloisAyari(us=int(ayar.galois_us), n=int(ayar.tableau_n),
+                     tohum=int(ayar.tohum))
+    tab = tableau_kur(psi_son, ga)
+    # **TDD ARTIK YALNIZ DENETÇİ**: çekirdek hashlenir, kanonik adres
+    # alınır. O(1) eşitlik için; hesap için değil.
+    tdd = kanonik_adres(psi_son, cekirdek=int(ayar.tdd_cekirdek),
+                        ayar=TddAyari(tolerans=float(ayar.tdd_tolerans)))
     stab = kararname(psi_son, mertebe=int(ayar.stab_mertebe))
     golge = golge_al(psi_son, GolgeAyari(ornek=max(32, int(ayar.golge_ornegi)
                                                    or 128),
@@ -848,6 +910,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     return {"ayar": ayar.ad, "parametre": d,
             "geçit": kapi, "ders": ders, "hazine": kayit,
             "tdd": tdd, "stabilizer": stab, "gölge": golge,
+            "galois": tab.beyan(),
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
             "veri": len(veri), "süreç": surec,
@@ -1159,13 +1222,18 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
                  kulli["geçit"]["kelam_ayrıştı"])]
         s += ["",
               "    ZABIT 2 -- SAF CPU 2026 USULLERİ (durumun temsili):",
-              "      1. LimTDD (nefs/tdd.py)",
-              "         düğüm %d / %d yaprak → sıkışma %.2f×   "
-              "yeniden kurma hatası %.3e"
-              % (kulli["tdd"]["düğüm"], kulli["tdd"]["yaprak"],
-                 kulli["tdd"]["sıkışma"], kulli["tdd"]["hata"]),
-              "         L2'ye sığıyor mu: %s  (%d bayt)"
-              % (kulli["tdd"]["önbelleğe_sığdı"], kulli["tdd"]["bayt"]),
+              "      0. GALOIS-STABILIZER (nefs/galois.py) -- ASIL MOTOR",
+              "         GF(2^%d)  tableau %d kübit  %d bayt  "
+              "(sürekli ℂ^d İPTAL)"
+              % (kulli["galois"]["us"], kulli["galois"]["n"],
+                 kulli["galois"]["bayt"]),
+              "         Palmer i(a,b)=(−b,a): transandantal faz YOK",
+              "         yoğun ℂ^d'ye nispeten bellek: %.1f× küçük"
+              % kulli["galois"]["kazanç"],
+              "      1. TDD -- yalnız KANONİK DENETÇİ (hesap motoru DEĞİL)",
+              "         çekirdek %d eleman → adres %s   %d bayt"
+              % (kulli["tdd"]["çekirdek"], kulli["tdd"]["adres"],
+                 kulli["tdd"]["bayt"]),
               "      2. Stabilizer rank (nefs/kararname.py)",
               "         χ_stab = %d   örtüşme %.4f   Clifford'a yakın: %s"
               % (kulli["stabilizer"]["chi"],

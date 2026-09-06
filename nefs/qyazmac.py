@@ -77,7 +77,7 @@ import math
 
 import numpy as np
 
-from .tdd import Havuz, Tdd, TddAyari
+from .galois import ayrik_faz
 
 __all__ = ["QuditAyar", "QuditYazmac", "Iz"]
 
@@ -120,6 +120,15 @@ class QuditAyar:
     yerel_kubit: int = 1
     tip: object = np.complex128
     tohum: int = 0
+    #: **MOTOR** -- durumun fazı hangi grupta yürüyor.
+    #:   ``galois``  : ``Z_m`` ayrık faz (``nefs/galois.ayrik_faz``);
+    #:                 akışta ``exp`` çağrısı YOK. Zabıtın hükmü budur.
+    #:   ``surekli`` : eski ``e^{iθ}`` yolu. Zabıtla **iptal edildi**;
+    #:                 ad yalnız kıyas ölçümü için duruyor ve seçilirse
+    #:                 ``beyan``da açıkça görünür.
+    motor: str = "galois"
+    #: Ayrık faz grubunun mertebesi ``Z_m`` (``motor="galois"`` iken).
+    faz_mertebesi: int = 16
 
     def __post_init__(self):
         if int(np.prod(self.lif)) != int(self.d):
@@ -166,24 +175,34 @@ class QuditYazmac:
         self._bolum_onbellek: Dict[int, Tuple[int, int]] = {}
         #: Yuva yazmaçta fiilen var mı? (önbellek)
         self._gecerli_onbellek: Dict[int, bool] = {}
+        #: ``veri(i, j)`` yuva adresi -- koşu boyunca sabit (önbellek).
+        self._veri_onbellek: Dict[Tuple[int, int], int] = {}
         #: Düşen kapı sayacı -- **saklanmıyor**, ``beyan``da görünür.
         self._dusen_kapi = 0
         r = np.random.default_rng(int(a.tohum))
         self.B = int(a.yigin)
         self.d = int(a.d)
-        # ── TDD: durumun asıl taşıyıcısı (nefs/tdd.py) -- ``d``den SONRA
-        self._havuz = Havuz(TddAyari())
-        self._gosterge_onbellek: Dict[Tuple[int, int], object] = {}
+        # ══════════════════════════════════════════════════════════
+        #  DURUMUN TAŞIYICISI: KRONECKER LİFLİ, L1'DE (zabıt Yol 3)
+        # ══════════════════════════════════════════════════════════
+        # **TDD BAĞI KÖKÜNDEN KESİLDİ.** Zabıt: *"İleri ve geri
+        # yayılımda TDD'nin işaretçi/hash hamallığını derhal iptal
+        # ediyoruz."* Ölçüldü: 35 163× yavaşlama, işaretçi kovalamanın
+        # SIMD'e nispeti.
+        #
+        # Yerine gelen zabıtın **Yol 3**üdür: durum ``4096``lık kaba bir
+        # dizi değil, ``[16,16,16]`` lifli ardışık bir blok. 16 KB'tır
+        # ve tamamen L1 önbellekte döner; kapılar ``4096×4096`` GEMM
+        # değil, üç adet ``16×16`` karo çarpımıdır.
         self._seviye = int(round(math.log2(self.d)))
         assert 2 ** self._seviye == self.d, (
-            "TDD ikinin kuvvetini ister: d=%d" % self.d)
-        self._yogun = None
-        self._tdd: List[Tdd] = []
-        self._tdd_esik = 4096
+            "bit düzlemi ikinin kuvvetini ister: d=%d" % self.d)
         # Başlangıç: **düzgün süperpozisyon**, keyfî bir gürültü değil.
         # Aynı tohum daima aynı durumu verir (stokastiklik yasak).
-        self.psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
-                           dtype=a.tip)
+        #: Lif başına **bekleyen karo**; durum okununca iner.
+        self._bekleyen: Dict[int, np.ndarray] = {}
+        self._psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
+                            dtype=a.tip)
         self._sadakat_log = 0.0
         self._kapi = 0
         self.iz = Iz()
@@ -238,6 +257,9 @@ class QuditYazmac:
         out = np.zeros((self.B, len(idx), 2, 2), complex)
         for m, y in enumerate(idx):
             k, alt = self._lif_no(y)
+            if not (0 <= k < len(lif)):
+                out[:, m] = np.eye(2) * 0.5      # o lif yok: azamî cehalet
+                continue
             n = lif[k]
             b = 1 << int(alt)
             if b >= n:
@@ -264,6 +286,7 @@ class QuditYazmac:
     def blok_dagilimi(self, bas: int, kac: int) -> np.ndarray:
         """``bas``tan ``kac`` yuvanın ortak dağılımı -- lif üstünde tam."""
         k, alt = self._lif_no(int(bas))
+        k = min(int(k), len(self.ayar.lif) - 1)      # lifsiz yuva: son life
         n = self.ayar.lif[k]
         X = np.moveaxis(self.lifli, k + 1, -1).reshape(self.B, -1, n)
         p = np.sum(np.abs(X) ** 2, axis=1)
@@ -393,138 +416,245 @@ class QuditYazmac:
             "Bit düzlemi kapılarını kullanın (``tek``, ``cift``, "
             "``bit_kapisi``). Lif %d, kapı %r." % (k, np.shape(G)))
 
-    # ══════════════════════════════════════════════════════════════
-    #  TDD KATMANI -- DURUM GRAFTIR (nefs/tdd.py)
-    # ══════════════════════════════════════════════════════════════
-    #
-    # ``psi`` bir **yüz**dür: okunduğunda graf açılır, yazıldığında graf
-    # yeniden kurulur. Eski çağrı yerleri bozulmasın diye durur; fakat
-    # iç ameliyelerin hiçbiri onu kullanmaz -- hepsi grafta yürür.
-    @property
-    def psi(self) -> np.ndarray:
-        """Yoğun yüz -- **iç ameliyeler bunu kullanmaz**, graf kullanır."""
-        if self._yogun is not None:
-            return self._yogun
-        # Açılan yüz **önbelleklenir**: graf değişmedikçe bir daha
-        # açılmaz. Her kapı ``_yogun``u geçersiz kılar, o hâlde bayat
-        # bir yüz okunması imkânsızdır.
-        self._yogun = np.stack([t.ac() for t in self._tdd]).astype(
-            self.ayar.tip)
-        return self._yogun
-
-    @psi.setter
-    def psi(self, v) -> None:
-        v = np.asarray(v, self.ayar.tip)
-        if v.ndim == 1:
-            v = v.reshape(1, -1)
-        assert v.shape[1] == self.d, (
-            "durum boyu %d olmalı, %d verildi" % (self.d, v.shape[1]))
-        self._yogun = None
-        self._tdd = [Tdd.kur(v[b], havuz=self._havuz)
-                     for b in range(v.shape[0])]
-
     def _bit(self, k: int, alt: int) -> int:
-        """Lif ``k``nın ``alt``ıncı biti → **düz** bit konumu.
-
-        Düz indis ``i = ((… )·lif[k] + i_k)·ard + …`` olduğuna göre
-        lif içindeki ``alt`` biti, ardındaki çarpım kadar kayar.
-        """
+        """Lif ``k``nın ``alt``ıncı biti → **düz** bit konumu."""
         _on, ard = self._bolum(int(k))
         return int(math.log2(ard)) + int(alt)
 
-    def _havuz_temizle(self) -> None:
-        """Havuz şiştiyse çöp topla -- **kökler yenilenir**.
-
-        Eşik: erişilebilir düğüm sayısının kaç katına izin verildiği.
-        ``4×`` seçildi ve sebebi ölçümdür: temizlik ``O(havuz)``dur, çok
-        sık çağrılırsa kendisi maliyet olur; çok seyrek çağrılırsa havuz
-        haddi aşar (ölçüldü: temizliksiz 4 194 304 düğüme fırlıyor).
-        """
-        n = len(self._havuz.dugum)
-        if n < max(4096, 4 * self._tdd_esik):
-            return
-        kokler = [t.kok for t in self._tdd] + [
-            g.kok for g in self._gosterge_onbellek.values()]
-        o = self._havuz.temizle(kokler)
-        m = len(self._tdd)
-        for i, t in enumerate(self._tdd):
-            self._tdd[i] = Tdd(o["kök"][i], t.lam, t.seviye, self._havuz)
-        for i, anahtar in enumerate(list(self._gosterge_onbellek)):
-            g = self._gosterge_onbellek[anahtar]
-            self._gosterge_onbellek[anahtar] = Tdd(
-                o["kök"][m + i], g.lam, g.seviye, self._havuz)
-        self._tdd_esik = max(4096, int(o["kalan"]))
-
-    def bit_kapisi_tdd(self, k: int, alt: int, G) -> None:
-        """Kapıyı **grafta** vur -- yoğun diziye hiç inilmez."""
-        b = self._bit(k, alt)
-        if b >= self._seviye:
-            self._dusen_kapi += 1
-            return
-        G = np.asarray(G, complex).reshape(2, 2)
-        self._tdd = [t.bit_kapisi(b, G) for t in self._tdd]
-        self._yogun = None
-        self._kapi += 1
-        self._havuz_temizle()
-
-    def cift_bit_kapisi_tdd(self, ki: int, ai: int, kj: int, aj: int,
-                            G) -> None:
-        """``4×4`` kapı **grafta** -- Pauli ayrışımıyla, açmadan."""
-        bi, bj = self._bit(ki, ai), self._bit(kj, aj)
-        if bi == bj or bi >= self._seviye or bj >= self._seviye:
-            self._dusen_kapi += 1
-            return
-        G = np.asarray(G, complex).reshape(2, 2, 2, 2)
-        self._tdd = [t.cift_kapisi(bi, bj, G) for t in self._tdd]
-        self._yogun = None
-        self._kapi += 1
-        self._havuz_temizle()
-
     def sektor_agirligi(self, ad: str) -> np.ndarray:
-        """``‖Π_C Ψ‖²`` -- **grafta**, iç çarpımla; durum açılmaz.
-
-        Sektör göstergesi ``Π`` bir ``0/1`` vektörüdür ve TDD'de
-        neredeyse hiç düğüm tutmaz (bitişik bir aralık). ``Ψ⊙Π``
-        noktasal çarpımı graftadır, normu iç çarpımdır.
-        """
+        """``‖Π_C Ψ‖²`` -- ardışık dilim, SIMD. Graf yok, işaretçi yok."""
         i, j = self.sektor(ad)
-        pi = self._gosterge(i, j)
-        return np.array([t.faz(pi).norm_kare() for t in self._tdd], float)
+        return np.sum(np.abs(self.psi[:, i:j]) ** 2, axis=1)
 
-    def _gosterge(self, i: int, j: int):
-        """``[i, j)`` aralığının gösterge vektörü -- TDD olarak, önbellekli."""
-        c = self._gosterge_onbellek.get((int(i), int(j)))
-        if c is not None:
-            return c
-        v = np.zeros(self.d, complex)
-        v[int(i):int(j)] = 1.0
-        c = Tdd.kur(v, havuz=self._havuz)
-        self._gosterge_onbellek[(int(i), int(j))] = c
-        return c
+    # ══════════════════════════════════════════════════════════════════
+    #  YOL 3 -- MATRIX-FREE KRONECKER-SIMD (zabıt: TDD Darboğazı)
+    # ══════════════════════════════════════════════════════════════════
+    #  Zabıtın hükmü harfiyyen: *"Durumu bellekte düz değil, 3 adet
+    #  16×16 bloğu hâlinde CPU L1 önbelleğinde döndürür... 4096×4096
+    #  GEMM değil."*
+    #
+    #  Usul şudur: ``d = 2^L`` olduğu için durum ``(B, 2, 2, …, 2)``
+    #  görünümüne **kopyasız** girer. Bir bit düzlemi bir eksendir; o
+    #  eksenin ``0`` ve ``1`` dilimleri **görünümdür**, ayrılmış bellek
+    #  değil. Kapı o iki dilim üstünde dört çarpma-toplamadır:
+    #
+    #      a₀' = G₀₀a₀ + G₀₁a₁          (tek eksik: dizey yok)
+    #      a₁' = G₁₀a₀ + G₁₁a₁
+    #
+    #  Ne ``np.eye`` tahsisi, ne ``einsum``, ne ``@``, ne ``moveaxis``
+    #  kopyası. Dokunulan bellek kapı başına durumun tamamıdır ve
+    #  ``B=1``de 64 KB'tır -- L2'de, dilimler L1'de döner.
+    #
+    #  Bit sırası: ``reshape((B,)+(2,)*L)``da 1. eksen **en anlamlı**
+    #  bittir, o hâlde ``2^p`` ağırlıklı bit ``L−p``ıncı eksendir.
+
+    def _eksen(self, k: int, alt: int) -> int:
+        """Lif ``k``nın ``alt``ıncı biti → lifli görünümün ekseni.
+
+        Eksen yoksa (``1<<alt`` lifin boyunu aşıyorsa) ``0`` döner; ``0``
+        yığın ekseni olduğu için kapı düşürülür ve **sayılır**.
+        """
+        lif = tuple(self.ayar.lif)
+        if not (0 <= int(k) < len(lif)):
+            return 0
+        n = int(lif[int(k)])
+        if (1 << int(alt)) >= n:
+            return 0
+        return self._seviye - self._bit(int(k), int(alt))
+
+    def _duzlem(self, T: np.ndarray, eksen: int, bit: int) -> np.ndarray:
+        """``T``nin ``eksen``indeki ``bit`` dilimi -- **görünüm**, kopya yok."""
+        return T[(slice(None),) * eksen + (int(bit),)]
+
+    def _bit_gorunumu(self) -> np.ndarray:
+        """Durumun ``(B, 2, 2, …, 2)`` görünümü -- **kopya olmamalı**.
+
+        Kopya olsaydı kapı hiçbir şeye vurmazdı ve sessizce kaybolurdu;
+        bu yüzden acımasız ``assert`` ile bağlanmıştır (CLAUDE.md 5).
+        """
+        T = self.psi.reshape((self.B,) + (2,) * self._seviye)
+        assert np.shares_memory(T, self.psi), (
+            "bit görünümü kopya çıktı -- kapı duruma vurmazdı")
+        return T
+
+    # ══════════════════════════════════════════════════════════════════
+    #  KARO BİRİKTİRME -- KRONECKER CEBRİNİN ASIL KAZANCI
+    # ══════════════════════════════════════════════════════════════════
+    #  Ölçüldü: tek ileri geçişte 195 karo vuruluyor ve her biri durumun
+    #  **tamamını** (8 MB) baştan sona dolaşıyor. Halbuki aynı life düşen
+    #  karolar birbirleriyle çarpılabilir: ``M₂(M₁Ψ) = (M₂M₁)Ψ``. İki
+    #  ``16×16`` karonun çarpımı 4096 işlemdir; durumu bir kere dolaşmak
+    #  ise 500 000 işlem. Yâni yüz karo biriktirmek **bedavadır**.
+    #
+    #  Ayrı liflerdeki karolar da birbiriyle değişmelidir (farklı
+    #  eksenlere değerler), o hâlde her lifin kendi bekleyen karosu
+    #  ayrı durur ve sıra bozulmaz.
+    #
+    #  Biriken karolar duruma **ancak durum okunduğunda** iner
+    #  (``psi`` müşahedesi). Bu bir yaklaşıklık değildir; aynı hesabın
+    #  ertelenmesidir ve netice bit bit aynıdır.
+
+    @property
+    def psi(self) -> np.ndarray:
+        """Durum ``(B, d)``. Okunduğu anda bekleyen karolar **iner**."""
+        if self._bekleyen:
+            self._bosalt()
+        return self._psi
+
+    @psi.setter
+    def psi(self, v) -> None:
+        # Yeni durum eskisinin yerine geçer; bekleyen karolar okunmuş
+        # (yahut geçersiz kılınmış) demektir. Sessizce uygulamak, iki
+        # kere vurmak olurdu.
+        self._bekleyen.clear()
+        self._psi = np.asarray(v)
+
+    def _bosalt(self) -> None:
+        """Bekleyen karoları duruma indir -- lif başına **tek** GEMM."""
+        bekleyen, self._bekleyen = self._bekleyen, {}
+        for k in sorted(bekleyen):
+            self._karo_indir(int(k), bekleyen[k])
+
+    def _karo_indir(self, k: int, M: np.ndarray) -> None:
+        """``k``ıncı life ``n×n`` **karo**yu fiilen vur -- BLAS-3 GEMM.
+
+        Zabıtın Yol 3'ünün tam ifadesi budur. Durum ``(B, ön, n, ard)``
+        görünümündedir ve karo yalnız ``n`` eksenine değer::
+
+            ard = 1  →  (N, n) @ Mᵀ          tek büyük GEMM
+            ard > 1  →  M @ (N, n, ard)      yığın GEMM
+
+        ``n = 16`` olduğu için karo 512 bayttır ve L1'de kalır; taşınan
+        blok ``n·ard`` sütunudur. ``4096×4096`` bir dizey **hiç
+        kurulmaz** -- zabıtın yasakladığı tam olarak oydu.
+
+        **ÖLÇÜLEN SEBEP.** Evvelce kapı bit düzlemi diliminde
+        (``T[..., 0, ...]`` / ``T[..., 1, ...]``) vuruluyordu ve netice
+        doğruydu; fakat alt bitlerde dilimin iç adımı 2 elemana kadar
+        düşüyor, SIMD hattı boş dönüyordu. Karoya geçmek dört kat daha
+        çok çarpma yapar, buna mukabil hepsi ardışıktır.
+        """
+        n = int(self.ayar.lif[int(k)])
+        on, ard = self._bolum(int(k))
+        X = self._psi.reshape(self.B * on, n, ard)
+        M = np.asarray(M, complex)
+        if ard == 1:
+            Y = X.reshape(-1, n) @ M.T
+        else:
+            Y = np.matmul(M, X)
+        self._psi = np.ascontiguousarray(
+            Y.reshape(self.B, self.d), dtype=self._psi.dtype)
+
+    def _karo_vur(self, k: int, M: np.ndarray) -> None:
+        """``k``ıncı lifin bekleyen karosuna ``M``yi **çarp** -- ertele.
+
+        Durum burada dolaşılmaz; yalnız ``n×n`` karo güncellenir.
+        """
+        M = np.asarray(M, complex)
+        eski = self._bekleyen.get(int(k))
+        self._bekleyen[int(k)] = M if eski is None else M @ eski
+        self._kapi += 1
+        self.iz.kapi += 1
+
+    def _bit_kapisi_lifli(self, k: int, alt: int, G: np.ndarray) -> None:
+        """Bir bit düzlemine ``2×2`` kapı -- lifin ``n×n`` karosunda.
+
+        ``2×2`` kapı, lifin ``alt``ıncı bit düzlemine göre eşleşen
+        çiftleri döndüren bir ``SU(n)`` elemanıdır (``_gomulu``); o karo
+        kurulup ``_karo_vur`` ile vurulur.
+        """
+        if self._eksen(k, alt) <= 0:                 # o bit düzlemi yok
+            self._dusen_kapi += 1
+            return
+        n = int(self.ayar.lif[int(k)])
+        self._karo_vur(k, self._gomulu(n, int(alt), G))
+
+    def _cift_kapisi_lifli(self, ki: int, ai: int, kj: int, aj: int,
+                           G: np.ndarray) -> None:
+        """İki bit düzlemine ``4×4`` kapı.
+
+        Taban sırası ``uzak_cift``inkiyle birdir: ``a = 2·bit_i + bit_j``.
+
+        İki bit **aynı lifteyse** kapı o lifin ``n×n`` karosuna gömülür
+        ve tek GEMM olur. **Ayrı liflerdeyse** kapı çarpanlarına
+        ayrılamaz (dolaştırıcıdır); o hâlde dört bit dilimi ardışık bir
+        ``(N, 4)`` bloğa toplanır, ``4×4`` GEMM vurulur ve geri
+        dağıtılır. Toplama-dağıtma iki geçiştir; on altı ayrı adımlı
+        ufunc geçişinden ucuzdur (ölçüldü).
+        """
+        ei = self._eksen(ki, ai)
+        ej = self._eksen(kj, aj)
+        if ei <= 0 or ej <= 0 or ei == ej:
+            self._dusen_kapi += 1
+            return
+        G = np.asarray(G, complex).reshape(4, 4)
+        if int(ki) == int(kj):
+            n = int(self.ayar.lif[int(ki)])
+            bi, bj = 1 << int(ai), 1 << int(aj)
+            M = np.eye(n, dtype=complex)
+            for x in range(n):
+                if (x & bi) or (x & bj):
+                    continue
+                idx = [x, x | bj, x | bi, x | bi | bj]
+                for a in range(4):
+                    for b in range(4):
+                        M[idx[a], idx[b]] = G[a, b]
+            self._karo_vur(int(ki), M)
+            return
+        T = self._bit_gorunumu()
+        e1, e2 = (ei, ej) if ei < ej else (ej, ei)
+        d1 = e2 - 1                                  # birinciden sonra kayar
+        v = []
+        for bi in (0, 1):
+            for bj in (0, 1):
+                b1, b2 = (bi, bj) if ei < ej else (bj, bi)
+                v.append(self._duzlem(self._duzlem(T, e1, b1), d1, b2))
+        # ``(4, N)`` toplanır -- ``(N, 4)`` DEĞİL: birincisinde her satır
+        # ardışık yazılır ve çarpım ``(4,4)@(4,N)`` hakiki bir BLAS-3
+        # GEMM olur. İkincisinde yazma adımlı, çarpım da ince olurdu.
+        C = np.stack([x.reshape(-1) for x in v], axis=0)
+        Y = G @ C
+        for a in range(4):
+            v[a][...] = Y[a].reshape(v[a].shape)
+        self._kapi += 1
+        self.iz.kapi += 1
 
     def bit_kapisi(self, k: int, alt: int, G: np.ndarray) -> None:
         """``k``ıncı lifin ``alt``ıncı bit düzlemine ``2×2`` kapı.
 
         **YOĞUN GÖVDE İMHA EDİLDİ (CLAUDE.md 1-E: yarım iş yasak).**
-        Burada durumun tamamını ``reshape`` edip dilim dilim çarpan bir
-        gövde vardı. Zabıt 2'nin birinci usulü "durumu düz tensör olarak
-        tutmazsınız" der; o hâlde kapı da düz tensörde vurulmaz.
-        Ameliye ``nefs/tdd.py``ye, grafın üstüne geçti.
+        Burada durumun tamamını ``reshape`` edip ``n×n`` dizeyle çarpan
+        bir gövde vardı; sonra bir müddet graf (TDD) yolundaydı ve o da
+        zabıtla iptal edildi. Şimdi ``_bit_kapisi_lifli``dedir: dizeysiz
+        Kronecker-SIMD.
 
         İki yol yan yana bırakılmadı: eskisi silindi, bu ad yenisine
         havale eder. Yan yana dursalardı hangisinin koştuğu belirsiz
         olurdu ve belirsizlik münafıklığın yatağıdır.
         """
-        self.bit_kapisi_tdd(k, alt, G)
+        self._bit_kapisi_lifli(k, alt, G)
 
     def faz(self, teta) -> None:
-        """Cartan köşegeni: ``|Ψ⟩ ← e^{−iθ·h} ⊙ |Ψ⟩``. ``O(d)``.
+        """Cartan köşegeni: ``|Ψ⟩ ← ω^{k(θ)} ⊙ |Ψ⟩``. ``O(d)``.
 
         Matris çarpımı yoktur; zabıtın üçüncü tedbiri budur
         (``O(d²) → O(d)``, 4096×).
+
+        **TRANSANDANTAL FAZ İPTAL (zabıt, birinci fasıl).** ``motor``
+        ``galois`` iken açı ``Z_m``ye yuvarlanır ve ``m`` elemanlı birim
+        kök tablosundan **okunur**; ``np.exp`` akışta hiç çağrılmaz.
+        ``surekli`` seçilirse eski yol koşar ve bu, ``beyan``da görünür.
         """
-        from .hizli import faz_cevir
-        self.psi = faz_cevir(self.psi, teta)
+        t = np.asarray(teta, float).reshape(-1)
+        if t.size != self.d:
+            from .qudit import agirlik
+            t = np.asarray(agirlik(self.d, t), float).reshape(-1)
+        if str(self.ayar.motor) == "galois":
+            self.psi = np.asarray(
+                ayrik_faz(self.psi, t, int(self.ayar.faz_mertebesi)),
+                self.psi.dtype)
+        else:
+            self.psi = self.psi * np.exp(-1j * t)
         self._kapi += 1
 
     def sektor_kapisi(self, ad: str, M: np.ndarray) -> None:
@@ -687,7 +817,21 @@ class QuditYazmac:
         if y < ns * satir_yuva:
             c = (y // satir_yuva, y % satir_yuva)
         else:
-            c = (ns, y - ns * satir_yuva)                # hüküm lifi
+            # ── HÜKÜM YUVALARI: ARTAN LİFLERE **YAYILIR** ──────────
+            # Evvelce hepsi tek bir hüküm lifine (``ns``) düşüyordu ve
+            # o yapıda o lif ``256`` seviyeliydi, sekiz bit düzlemi
+            # oradaydı. Zabıt lifi ``[16,16,16]``e böldü: aynı sekiz
+            # bit düzlemi şimdi **iki** lifte durur. Tek life
+            # düşürmeye devam etseydik dört bit düzlemi adressiz
+            # kalırdı -- yâni kapıların yarısı sessizce düşerdi.
+            o = y - ns * satir_yuva
+            c = (len(self.ayar.lif), o)                  # hiçbir lif: düşer
+            for k in range(ns, len(self.ayar.lif)):
+                w = int(self.ayar.lif[k]).bit_length() - 1
+                if o < w:
+                    c = (k, o)
+                    break
+                o -= w
         self._yuva_onbellek[y] = c
         return c
 
@@ -728,7 +872,20 @@ class QuditYazmac:
         return c
 
     def veri(self, i: int, j: int) -> int:
-        return int(i) * (self._satir_kubiti + int(self.ayar.yerel_kubit)) + int(j)
+        """``i``inci satırın ``j``inci yuvası -- **önbellekli**.
+
+        Ölçüldü: tek küllî mizan çağrısında 392 380 kere çağrılıyor ve
+        iki katman (``zihin_durumu.veri`` → burası) toplam 0,41 sn
+        yiyor. Hesabın kendisi bir çarpma bir toplamadır; pahalı olan
+        Python çağrısı ve ``int()`` dönüşümleridir. Netice ``(i,j)``ye
+        göre koşu boyunca **sabittir**.
+        """
+        c = self._veri_onbellek.get((i, j))
+        if c is None:
+            c = int(i) * (self._satir_kubiti
+                          + int(self.ayar.yerel_kubit)) + int(j)
+            self._veri_onbellek[(i, j)] = c
+        return c
 
     def yerel(self, i: int) -> int:
         return self.veri(i, self._satir_kubiti)
@@ -840,15 +997,14 @@ class QuditYazmac:
 
     def cift_bit_kapisi(self, ki: int, ai: int, kj: int, aj: int,
                         G: np.ndarray) -> None:
-        """İki bit düzlemine ``4×4`` kapı -- **grafta** (nefs/tdd.py).
+        """İki bit düzlemine ``4×4`` kapı -- **dizeysiz Kronecker-SIMD**.
 
         **YOĞUN GÖVDE İMHA EDİLDİ.** Eskisi durumu on eksene bölüp
-        ``einsum`` ile çarpıyordu. Graf yolunda kapı Pauli tabanında
-        16 terime açılır ve her terim iki tek-bit kapısıdır; iki farklı
-        bit düzlemi komüt ettiği için sıra da serbesttir. Doğruluğu
-        ölçüldü: 56 bit çiftinde yoğunla fark ``4,696e-16``.
+        ``einsum`` ile çarpıyordu; sonraki graf (Pauli açılımlı TDD)
+        yolu da zabıtla iptal edildi. Şimdi ``_cift_kapisi_lifli``dedir:
+        dört dilim, on altı çarpma-toplama, tahsis yok.
         """
-        self.cift_bit_kapisi_tdd(ki, ai, kj, aj, G)
+        self._cift_kapisi_lifli(ki, ai, kj, aj, G)
 
     def uzak_cift(self, i: int, j: int, G: np.ndarray) -> None:
         """İki yuvaya ``4×4`` kapı -- **takas yok, MPO yok, SVD yok**.
@@ -936,7 +1092,6 @@ class QuditYazmac:
         for yuva, Wk in W.items():
             Wk = np.asarray(Wk)
             k, alt = self._lif_no(int(yuva))
-            n = lif[k]
             # ``(D,2,2,D)`` MPO tensöründen tek kübitlik etkiyi al:
             # sınır vektörleriyle kapatılınca geriye ``2×2`` kalır.
             if Wk.ndim == 4:

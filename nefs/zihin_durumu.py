@@ -89,6 +89,18 @@ class QAyar:
     #: Bu bir kırpma DEĞİLDİR -- durum yine **tam** tutulur; yalnız
     #: hüküm uzayı ihtiyaca göre boyutlanır ve büyütülebilir.
     hukum_lifi: int = 256
+    #: **KRONECKER LİF YAPISI (zabıt: TDD Darboğazı, Yol 3).**
+    #: ``d = ∏ lif_yapisi`` olmak şartıyla durumun lifleri. Zabıt
+    #: ``[16,16,16]`` der: her karo ``16×16``dır, üçü birden 16 KB'tır
+    #: ve **tamamen L1 önbellekte** döner. Eski ``(16, 256)`` yapısı
+    #: hüküm lifini tek parça bırakıyordu; ``256×256`` karo L1'e
+    #: sığmaz. ``None`` verilirse eski iki lifli yapı kurulur.
+    lif_yapisi: Optional[Tuple[int, ...]] = (16, 16, 16)
+    #: Fazın grubu: ``galois`` → ``Z_m`` ayrık (akışta ``exp`` yok),
+    #: ``surekli`` → iptal edilmiş ``e^{iθ}`` yolu. Yazmaca geçer.
+    motor: str = "galois"
+    #: Ayrık faz grubunun mertebesi.
+    faz_mertebesi: int = 16
     #: Genlik tipi. ``complex64`` bellek ve bant genişliğini yarıya
     #: indirir; bedeli hassasiyettir ve **ölçülerek** kabul edilir
     #: (üniterlik hatası ``hiz_teftisi``de raporlanır). Varsayılan
@@ -143,15 +155,37 @@ class QYazmac:
         sozluk = int(a.satir_kubiti)
         assert sozluk >= 2, (
             "veri lifi en az iki seviyeli olmalı: satir_kubiti=%d" % sozluk)
-        lif = (sozluk, int(a.hukum_lifi))
-        d = int(np.prod(lif))
+        d = sozluk * int(a.hukum_lifi)
+        # **ZABITIN YOL 3'Ü**: hüküm lifi tek parça (256) değil, ``16``lık
+        # karolara bölünür. Toplam boyut aynıdır (``d`` değişmez), düz
+        # bellek dizilimi de aynıdır -- değişen yalnız kapıların hangi
+        # karoda vurulduğudur ve karo artık L1'e sığar.
+        lif = tuple(int(x) for x in (a.lif_yapisi or (sozluk, a.hukum_lifi)))
+        assert int(np.prod(lif)) == d, (
+            "lif_yapisi çarpımı d'ye eşit olmalı: %s ≠ %d" % (lif, d))
+        assert int(lif[0]) == sozluk, (
+            "ilk lif veri lifidir, sözlükle bir olmalı: %d ≠ %d"
+            % (lif[0], sozluk))
         self.y = QuditYazmac(
             QuditAyar(d=d, lif=lif, yigin=int(a.yigin),
                       kulli_alanlar=a.kulli_alanlar,
                       yerel_kubit=int(a.yerel_kubit), tohum=int(a.tohum),
-                      tip=a.tip),
+                      tip=a.tip, motor=str(a.motor),
+                      faz_mertebesi=int(a.faz_mertebesi)),
             n_satir=1, satir_kubiti=int(a.satir_kubiti))
         self.iz = self.y.iz
+        # ── ARA KATMAN KALDIRILDI (ölçüldü) ───────────────────────
+        # ``veri``, ``yerel`` ve ``kulli`` burada yalnız ``self.y``ye
+        # havale ediyordu; küllî mizanın tek çağrısında 386 232 Python
+        # çerçevesi sırf bu havale için kuruluyordu (0,30 sn). Örnek
+        # metodu doğrudan yazmacınkine bağlanır: **aynı fonksiyon**,
+        # bir çerçeve eksik.
+        self.veri = self.y.veri            # type: ignore[assignment]
+        self.yerel = self.y.yerel          # type: ignore[assignment]
+        self.kulli = self.y.kulli          # type: ignore[assignment]
+        self.tek = self.y.tek              # type: ignore[assignment]
+        self.cift = self.y.cift            # type: ignore[assignment]
+        self.uzak_cift = self.y.uzak_cift  # type: ignore[assignment]
         # Eski yazmaçtaki ``_alan`` sözlüğü: ``ad → (başlangıç, kaç)``.
         # Melekeler onu doğrudan okuyor (``q._alan["makam"][1]``), o
         # hâlde qudit sektörleri aynı biçimde sunulur -- "başlangıç"
@@ -243,11 +277,22 @@ class QYazmac:
         "size 4 into shape (4,4)" ile düştü.)
         """
         G = np.asarray(G)
-        m = len(list(sol_yuvalar))
+        yuvalar = [int(y) for y in sol_yuvalar]
+        m = len(yuvalar)
         if G.ndim == 2:
             G = np.broadcast_to(G, (m,) + G.shape)
-        for y, g in zip(sol_yuvalar, G):
-            self.y.cift(int(y), g)
+        # **DÜŞECEK KAPI DÖRT KATMANDAN GEÇMEZ.** Ölçüldü: küllî mizanın
+        # tek çağrısında 115 104 ``cift`` → 155 276 ``uzak_cift`` →
+        # 415 308 ``gecerli`` çağrısı var ve bunların ezici çoğunluğu
+        # yazmacın haddini aşan yuvalara vurulup boş dönüyor. Aynı
+        # eleme burada, tek sözlük aramasıyla yapılır; davranış birebir
+        # aynıdır (düşenler yine ``_dusen_kapi``de sayılır).
+        gecerli, cift = self.y.gecerli, self.y.cift
+        for y, g in zip(yuvalar, G):
+            if gecerli(y) and gecerli(y + 1):
+                cift(y, g)
+            else:
+                self.y._dusen_kapi += 1
 
     def uzak_cift(self, i: int, j: int, G) -> None:
         self.y.uzak_cift(i, j, G)
@@ -336,8 +381,11 @@ class QYazmac:
     def superpozisyon(self, yalniz_veri: bool = False) -> None:
         """Hüküm lifini düzgün süperpozisyona sok."""
         h = int(self.ayar.hukum_lifi)
-        T = self.y.lifli.copy()
-        T[..., :] = T[..., :1] * 0.0 + T.sum(axis=-1, keepdims=True) / np.sqrt(h)
+        # Hüküm lifi artık birden çok karoya bölünmüş olabilir
+        # (``[16,16,16]``); düz dizilim aynı olduğu için ``(B, -1, h)``
+        # görünümü hükmün tamamını **tek eksende** verir.
+        T = self.y.psi.reshape(self.y.B, -1, h).copy()
+        T[...] = T.sum(axis=-1, keepdims=True) / np.sqrt(h)
         self.y.psi = T.reshape(self.y.B, self.y.d)
         self.y.normalize()
 
