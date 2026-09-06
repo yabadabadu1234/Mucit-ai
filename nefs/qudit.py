@@ -85,7 +85,9 @@ class QuditAyari:
     #: Chebyshev derecesi ``d_poly``.
     derece: int = 8
     #: QSVT süzgeç derecesi ``d_qsp``. Zabıt 64 der.
-    qsvt: int = 64
+    #: **ZABITIN HÜKMÜ: 64 → 16.** *"16. dereceden sonra Chebyshev
+    #: kalıntı hatası zaten 1e−7 altına iner; 64 fuzulidir."*
+    qsvt: int = 16
     #: Cartan yönü sayısı ``r``. ``d−1`` DEĞİL: zabıtın hafıza iddiası
     #: (``birkaç kilobayt``) ancak ``r ≪ d`` ile doğrudur.
     yon: int = 8

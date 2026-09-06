@@ -110,6 +110,8 @@ class Hafiza:
 
     def __init__(self, kapasite: int = 256, yazma: float = 0.05,
                  sonum: float = 0.02, zeno_esigi: float = 0.35,
+                 zeno_tepe: float = 0.9, ayniyet: float = 0.98,
+                 buhar: float = 1e-4, mu_asgari: float = 1e-3,
                  tohum: int = 0) -> None:
         assert int(kapasite) >= 1, "hafıza kapasitesi en az 1 olmalı"
         assert 0.0 < float(yazma) <= 1.0, "yazma oranı (0,1] olmalı"
@@ -118,6 +120,16 @@ class Hafiza:
         self.yazma = float(yazma)
         self.sonum = float(sonum)
         self.zeno_esigi = float(zeno_esigi)
+        # **GÖMÜLÜ SABİTLER AYARA BAĞLANDI (ferman).** Üçü de fonksiyon
+        # gövdesinde çıplak duruyordu; kimse göremiyor, kimse
+        # değiştiremiyordu. **Değerleri DEĞİŞMEDİ** -- zabıtın hükmü
+        # ``hafiza.zeno (0,9) KORUNACAK``dır; yalnız yerleri değişti.
+        self.zeno_tepe = float(zeno_tepe)       # evvelce gövdede 0.9
+        self.ayniyet = float(ayniyet)           # evvelce gövdede 0.98
+        self.buhar = float(buhar)               # evvelce gövdede 1e-4
+        self.mu_asgari = float(mu_asgari)       # evvelce gövdede 1e-3
+        assert 0.0 < self.zeno_tepe <= 1.0, "zeno tepe nispeti (0,1]"
+        assert 0.0 < self.ayniyet <= 1.0, "ayniyet eşiği (0,1]"
         self.tohum = int(tohum)
         self.kayitlar: List[Kayit] = []
         self.budama = 0
@@ -136,7 +148,8 @@ class Hafiza:
         # yoksa hafıza aynı hatırayı yüzlerce kere sayar ve tek bir
         # tekrarlanan yol bütün kütleyi ele geçirir.
         for k in self.kayitlar:
-            if k.hukum == y.hukum and abs(complex(np.vdot(k.x, y.x))) > 0.98:
+            if (k.hukum == y.hukum
+                    and abs(complex(np.vdot(k.x, y.x))) > self.ayniyet):
                 k.mu += y.mu
                 return k
         self.kayitlar.append(y)
@@ -149,8 +162,7 @@ class Hafiza:
             for k in self.kayitlar:
                 k.mu *= (1.0 - self.sonum * _SONUM_PAYI[k.hukum])
         # Buharlaşanlar: ``μ`` gürültü seviyesine inen kuru zanlar.
-        esik = 1e-4
-        self.kayitlar = [k for k in self.kayitlar if k.mu > esik]
+        self.kayitlar = [k for k in self.kayitlar if k.mu > self.buhar]
         if len(self.kayitlar) > self.kapasite:
             self.kayitlar.sort(key=lambda k: k.mu, reverse=True)
             self.kayitlar = self.kayitlar[:self.kapasite]
@@ -210,10 +222,10 @@ class Hafiza:
             # Doğrusu ikisini AYIRMAKTIR: örtüşme yolun aynı yol olup
             # olmadığını söyler; ``μ`` ise o hatıranın hâlâ hayatta olup
             # olmadığını. İkincisi bir eşik değil, bir varlık şartıdır.
-            if ort < self.zeno_esigi or k.mu < 1e-3:
+            if ort < self.zeno_esigi or k.mu < self.mu_asgari:
                 continue
             g = np.abs(np.asarray(k.x)).astype(float)
-            maske &= ~(g >= g.max() * 0.9)
+            maske &= ~(g >= g.max() * self.zeno_tepe)
             vuran = True
         if not vuran or maske.all():
             return None
@@ -263,7 +275,8 @@ class Hafiza:
         h = cls(kapasite=int(float(u.get("hafıza_kapasitesi", 256))),
                 yazma=float(u.get("hafıza_yazma", 0.05)),
                 sonum=float(u.get("hafıza_sönümü", 0.02)),
-                zeno_esigi=float(u.get("zeno_eşiği", 0.35)))
+                zeno_esigi=float(u.get("zeno_eşiği", 0.35)),
+                zeno_tepe=float(u.get("zeno_tepe", 0.9)))
         if "hafıza$x" not in agirlik:
             return h
         X = np.asarray(agirlik["hafıza$x"])

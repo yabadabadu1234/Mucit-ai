@@ -153,6 +153,9 @@ class MizanAyari:
     #: ``|ω| > 1 − kenar`` ise hal saftır (tam kısır yahut tam tenakuz).
     kenar: float = 0.05
     zeno_esigi: float = 0.35
+    #: Cerh kaydının hangi belirteçleri kestiği (evvelce ``hafiza``da
+    #: gömülüydü). **ZABIT: KORUNACAK (0,9).**
+    zeno_tepe: float = 0.9
     #: Tâlimin toplam kayıp çağrısı kestirimi -- rüşt çizelgesinin paydası.
     toplam_adim: int = 200
     tohum: int = 0
@@ -277,6 +280,72 @@ def holonomi(hal: Sequence[np.ndarray]) -> Tuple[np.ndarray, float, float]:
     return U, float(np.clip(omega, -1.0, 1.0)), float(yol)
 
 
+def holonomi_yigin(H: np.ndarray, idx: np.ndarray
+                   ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """``C`` çevrimin holonomisi **tek hamlede** -- Python döngüsü yok.
+
+    ===================================================================
+    ZABITIN 2. AMELİYESİ (Qudit Kapasitesi ve Hız Tahkiki)
+    ===================================================================
+
+    Zabıt der ki:
+
+        *"8 adet Wilson çevrimi tek tek sıralı bir döngüde
+        hesaplanıyorsa, tensör çekirdekleri paralel çalışamaz...
+        8 çevrimin transfer matrisleri tek bir tensör bloğunda
+        toplanır: [8, B, d, d]."*
+
+    Burada icra edilen budur. ``H`` bütün hâller ``(m, n)``, ``idx``
+    ise ``(C, boy)`` köşe indisleridir. Bütün Givens dönmeleri
+    ``(C, n, n)`` bloğunda toplu kurulur ve çarpım tek ``einsum``
+    zinciriyle alınır.
+
+    **YOĞUN ``n×n`` KURULMASININ SEBEBİ YAZILIDIR:** holonominin izi
+    ``Re Tr(U_C)/n`` istenir; iz, matrisin kendisini ister. ``n`` burada
+    belirteç lifidir (16), ``d`` (4096) değil -- yâni blok ``(8,16,16)``
+    kadardır, 2048 sayı. Zabıtın ``[8, B, d, d]`` tarifi ``d``yi
+    quditin tamamı sayarsa 8·4096² olurdu ve o **kurulmuyor**.
+    """
+    H = np.asarray(H, complex)
+    idx = np.asarray(idx, int)
+    C, boy = idx.shape
+    n = H.shape[1]
+    assert boy >= 3, "kapalı çevrim en az üç köşe ister"
+    # Köşeleri normalize et: (C, boy, n)
+    K = H[idx]
+    K = K / np.maximum(np.linalg.norm(K, axis=-1, keepdims=True), 1e-300)
+    U = np.broadcast_to(np.eye(n, dtype=complex), (C, n, n)).copy()
+    yol = np.zeros(C, float)
+    for t in range(boy):
+        A = K[:, t, :]                                   # (C, n)
+        Bv = K[:, (t + 1) % boy, :]                      # (C, n)
+        c = np.einsum('ci,ci->c', A.conj(), Bv)          # ⟨a|b⟩
+        yol += np.arccos(np.clip(np.abs(c), 0.0, 1.0))
+        dik = Bv - c[:, None] * A
+        sn = np.linalg.norm(dik, axis=-1)                # (C,)
+        e2 = dik / np.maximum(sn, 1e-300)[:, None]
+        # Düzlem içi SU(2); düzlem dışı birim. Aynı ışında ise yalnız faz.
+        P0 = np.einsum('ci,cj->cij', A, A.conj())
+        P1 = np.einsum('ci,cj->cij', e2, e2.conj())
+        X01 = np.einsum('ci,cj->cij', A, e2.conj())
+        X10 = np.einsum('ci,cj->cij', e2, A.conj())
+        G = (c[:, None, None] * P0 - sn[:, None, None] * X01
+             + sn[:, None, None] * X10
+             + np.conj(c)[:, None, None] * P1)
+        birim = np.broadcast_to(np.eye(n, dtype=complex), (C, n, n))
+        Gt = birim - P0 - P1 + G
+        # Aynı ışın (sn≈0): morfizm yalnız bir fazdır, birim DEĞİL.
+        ayni = sn < 1e-12
+        if np.any(ayni):
+            faz = np.where(np.abs(c) > 0, c / np.maximum(np.abs(c), 1e-300),
+                           1.0 + 0j)
+            Gt = np.where(ayni[:, None, None],
+                          birim * faz[:, None, None], Gt)
+        U = np.einsum('cij,cjk->cik', Gt, U)
+    om = np.real(np.einsum('cii->c', U)) / n
+    return U, np.clip(om, -1.0, 1.0), yol
+
+
 def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari
                      ) -> Dict[str, Any]:
     """Yığından kapalı çevrimler seç, hepsini sınıflandır ve cezala."""
@@ -290,11 +359,21 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari
     say = {"meşru": 0, "kısır": 0, "tenakuz": 0, "engel": 0}
     kayit: List[Tuple[float, float, float]] = []
     omegalar: List[float] = []
-    for _ in range(int(a.cevrim_sayisi)):
-        idx = [int(i) for i in r.choice(m, size=int(a.cevrim_boyu),
-                                        replace=False)]
+    # **ZABITIN 2. AMELİYESİ: ÇEVRİMLER VEKTÖRİZE EDİLDİ.**
+    # Evvelce sekiz çevrimin köşeleri Python döngüsünde tek tek
+    # seçiliyordu. Şimdi indisler **tek hamlede** çekilir ve holonomiler
+    # yığın halinde kurulur; ``holonomi_yigin`` içinde bütün Givens
+    # dönmeleri toplu ``einsum``la çarpılır.
+    idx_hepsi = np.stack([
+        r.choice(m, size=int(a.cevrim_boyu), replace=False)
+        for _ in range(int(a.cevrim_sayisi))])          # (C, boy)
+    H = np.stack([np.asarray(h, complex).reshape(-1) for h in haller])
+    U_hepsi, om_hepsi, yol_hepsi = holonomi_yigin(H, idx_hepsi)
+    for c_no in range(int(a.cevrim_sayisi)):
+        idx = [int(i) for i in idx_hepsi[c_no]]
         koseler = [haller[i] for i in idx]
-        U, om, yol = holonomi(koseler)
+        om = float(om_hepsi[c_no])
+        yol = float(yol_hepsi[c_no])
         omegalar.append(om)
         # **CEZA YALNIZ PARİTE TAKLASINA.** Dönmek yasak değildir;
         # cezalandırılan, kendi başladığı aksiyomu inkâr eden ``ω < 0``

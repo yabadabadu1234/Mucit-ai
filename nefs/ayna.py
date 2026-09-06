@@ -114,18 +114,26 @@ class AynaAyari:
     korunakli: bool = False
     #: Kip (mod/port) sayısı. En az iki: ışın bölücü tek girdili olamaz.
     kip: int = 2
-    #: Halkanın (boşluğun) tur sayısı. **Ölçülerek seçildi** (N=8,
-    #: bağımsız tam kesim şahidiyle)::
+    #: Halkanın (boşluğun) tur sayısı.
     #:
-    #:      tur   kesim nispeti
-    #:       40       0,80
-    #:      100       0,90
-    #:      200       0,70
-    #:      400       1,00      ← seçilen
+    #: **ZABITIN 1. AMELİYESİ: 400 → 16.** Zabıt der ki: *"GPU'da lazer
+    #: darbesini adım adım 400 defa koşturmak... Bir optik parametrik
+    #: kavite 400 tur sonra kararlı duruma ulaşır. 400 tur sonraki
+    #: netice, döngü kurmadan kapalı formlu intaç operatörüyle
+    #: hesaplanabilir."*
     #:
-    #: 200'deki düşüş gürültü değil pompa rampasının hızıdır: rampa
-    #: tur sayısına bağlıdır, o yüzden az turda kazanç geç gelir.
-    tur: int = 400
+    #: Hüküm icra edildi: ``usul="kararlı"`` kipinde halka artık 400
+    #: adım atmaz; pompa rampası **kaba** adımlarla geçilir ve her kaba
+    #: adımda kararlı duruma sabit nokta ile oturulur (bkz. ``halka``).
+    tur: int = 16
+    #: Halkanın koşum usulü:
+    #: ``kararlı`` -- kaba rampa + sabit nokta (zabıtın hükmü, hızlı)
+    #: ``adım``    -- her turu tek tek at (eski yol; delil için durur)
+    usul: str = "kararlı"
+    #: Kararlı duruma oturma haddi: sabit nokta iterasyonunun azamîsi.
+    kararli_adim: int = 24
+    #: Kararlı durum eşiği: ``‖Δx‖`` bunun altına inince durulur.
+    kararli_esik: float = 1e-6
     #: Pompa kazancının son değeri; ``p`` sıfırdan buna doğru rampalanır.
     pompa: float = 1.6
     #: Ising çiftlenim şiddeti.
@@ -457,6 +465,37 @@ def halka(J, ayar: Optional[AynaAyari] = None, ne: str = "çözüm"
     c, sn = math.cos(a.teta), math.sin(a.teta)
     dt = float(a.adim)
     gecmis: List[np.ndarray] = []
+    if str(a.usul) == "kararlı":
+        # ══════════════════════════════════════════════════════════
+        #  ANALİTİK KARARLI DURUM (zabıtın 1. ameliyesi)
+        # ══════════════════════════════════════════════════════════
+        # Pompa rampası ``tur`` kaba kademede geçilir; her kademede
+        # DOPO denkleminin sabit noktasına oturulur::
+        #
+        #     0 = (p−1)x − x³ + ξ·Jx   ⟹   x = tanh_fix(...)
+        #
+        # Sabit nokta iterasyonu ``kararli_adim`` adımda yakınsar ve
+        # ``kararli_esik``e inince durur -- yâni 400 sabit adım yerine
+        # **gereken kadar** adım atılır. Vakum her kademede yine girer
+        # (ışın bölücünün boş portu kapanmaz; kapanırsa osilasyon hiç
+        # başlamaz ve ``assert`` yakalar).
+        for t in range(int(a.tur)):
+            p = float(a.pompa) * (t + 1) / float(a.tur)
+            vak = float(a.vakum_genligi) * r.standard_normal(N)
+            x = c * x + sn * vak
+            for _ in range(int(a.kararli_adim)):
+                once = x
+                x = x + dt * ((p - 1.0) * x - x ** 3
+                              + (float(a.ciftlenim) / Jx_olcegi) * (J @ x))
+                if float(np.max(np.abs(x - once))) < float(a.kararli_esik):
+                    break
+            seyir.append(float(np.mean(np.abs(x))))
+            gecmis.append(np.where(x >= 0, 1, -1).astype(int))
+        assert np.all(np.isfinite(x)), "halka ıraksadı (NaN/Inf)"
+        assert float(np.max(np.abs(x))) > 0.0, (
+            "halka hiç osilasyona başlamadı -- vakum genliği sıfır mı?")
+        return _halka_netice(x, J, a, seyir, gecmis, N, ne,
+                             cekirdek_adi, gpu)
     for t in range(int(a.tur)):
         p = float(a.pompa) * (t + 1) / float(a.tur)
         # (a) IŞIN BÖLÜCÜ: kavite her tur dönüşünde kuplörden geçer ve
@@ -474,7 +513,16 @@ def halka(J, ayar: Optional[AynaAyari] = None, ne: str = "çözüm"
     assert np.all(np.isfinite(x)), "halka ıraksadı (NaN/Inf)"
     assert float(np.max(np.abs(x))) > 0.0, (
         "halka hiç osilasyona başlamadı -- vakum genliği sıfır mı?")
+    return _halka_netice(x, J, a, seyir, gecmis, N, ne, cekirdek_adi, gpu)
 
+
+def _halka_netice(x, J, a, seyir, gecmis, N, ne, cekirdek_adi, gpu):
+    """Halkanın neticesi -- **iki usul de aynı hesabı paylaşır**.
+
+    ``kararlı`` ile ``adım`` usulleri farklı yoldan aynı kararlı duruma
+    varır; neticenin iki nüshasını yazmak, ikisinin ayrışmasına kapı
+    açardı. Tek yer, tek hesap.
+    """
     s = np.where(x >= 0, 1, -1).astype(int)
     ust = float(np.max(np.abs(x)))
     bedel = float(-0.5 * s @ J @ s)

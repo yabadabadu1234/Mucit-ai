@@ -224,12 +224,34 @@ class EgitimAyari:
     #: sadakati (``ℒ_Rezonans``). Veri bir kural değil, dışarıdan gelen
     #: **zayıf bir uyarımdır**; modelden verinin faz gürültüsünü taklit
     #: etmesi değil, ana frekansıyla rezonansa girmesi istenir.
+    # ══════════════════════════════════════════════════════════════
+    #  ZABITIN NİHAÎ AYAR CETVELİ (Qudit Kapasitesi ve Hız Tahkiki)
+    # ══════════════════════════════════════════════════════════════
+    #  A grubu (HIZ) değişti, B ve C grubu (HÜKÜM) **DOKUNULMADI**:
+    #
+    #    ornek_sayisi (B)   128 → 512     GPU/CPU doygunluğu
+    #    Ayna.tur           400 → 16      analitik kararlı durum
+    #    QuditAyari.qsvt     64 → 16      Chebyshev kalıntısı 1e−7 altı
+    #    cevrim_sayisi        8 → 8       fakat DÖNGÜ KALKTI (vektörize)
+    #
+    #  **ÖLÇÜMÜN ZABITTAN AYRILDIĞI YER, AÇIKÇA.** Zabıt 1,06 sn'lik
+    #  adımın payını "Ayna %50-60, QSVT %20-25, çevrim %15" diye
+    #  kestiriyor. Bu ortamda ölçtüm ve öyle çıkmadı: ``ayna`` tâlim
+    #  hattında hiç çağrılmıyor (yalnız ``nefs/soyle.py``nin arama
+    #  kipinde), ``qsvt`` de kayıp yolunda görünmüyor. Profilin tamamı
+    #  ``idrak_et``te: 41 meleke ve onların vurduğu kapılar.
+    #  Zabıtın **hükmü** yine de icra edildi (değerler indirildi ve
+    #  döngüler kaldırıldı); yalnız kazancın nereden geleceği hakkında
+    #  ölçüm başka söylüyor ve o da yazılıdır. Hüküm uygulanır, ölçü
+    #  gizlenmez.
     lam_cevrim: float = 1.0        # λ₁ Wilson holonomisi (tenakuz)
     lam_monogami: float = 0.5      # λ₂ CKW dolanıklık monogamisi
     lam_hodge: float = 0.75        # λ₃ Hodge tenakuzsuzluğu
     #: Muhakeme çevrimi kaç adımlıdır (``X → Y → Z → X``).
     cevrim_boyu: int = 3
-    #: Taranacak azamî kapalı çevrim sayısı.
+    #: Taranacak azamî kapalı çevrim sayısı. **Zabıt: 8 KALIR, fakat
+    #: Python döngüsü kalkar** -- sekiz holonomi tek tensör bloğunda
+    #: toplu hesaplanır (``nefs/kulli_mizan.py:_cevrimleri_tara``).
     cevrim_sayisi: int = 8
     # --- RÜŞT ÇİZELGESİ (Tabula Rasa zabıtı)
     #: ``α(t) = σ((t − t₀)/τ)``. ``α → 0`` bebeklik: hata doğrudan
@@ -250,7 +272,42 @@ class EgitimAyari:
     hafiza_sonumu: float = 0.02
     #: Zeno budaması eşiği: hafızada cerhedilmiş bir yolla örtüşme bunu
     #: aşarsa döngü **tamamlanmadan** kesilir.
+    #: **ZABIT: KORUNACAK** -- "safsata budama hassasiyetidir;
+    #: gevşetilirse zekâ düşer."
     zeno_esigi: float = 0.35
+    #: Hafızadaki cerh kaydının hangi belirteçleri kestiği: kaydın kendi
+    #: tepe genliğinin bu nispetini aşanlar. **ZABIT: KORUNACAK (0,9).**
+    #: Evvelce ``nefs/hafiza.py``de gömülüydü; ferman gereği ayara
+    #: bağlandı, **değeri değişmedi**.
+    zeno_tepe: float = 0.9
+    #: Aynı hatıranın tekrar sayılmaması için örtüşme eşiği (gömülüydü).
+    hafiza_ayniyet: float = 0.98
+    #: Hafızadan buharlaşma eşiği ``μ`` (gömülüydü).
+    hafiza_buhar: float = 1e-4
+    # --- AYNA (nefs/ayna.py) -- zabıtın A grubu
+    #: **ZABIT: 400 → 16.** Kavite 400 turda kararlı duruma varıyordu;
+    #: kararlı durum döngü kurmadan da bulunur (analitik/Padé).
+    ayna_tur: int = 16
+    #: Işın bölücü açısı -- kör sıcaklığın yerini alan ölçü.
+    ayna_teta: float = 0.2617993877991494        # π/12
+    #: Sıkıştırma.
+    ayna_r: float = 0.35
+    # --- QUDİT ÇEKİRDEĞİ (nefs/qudit.py) -- zabıtın A grubu
+    #: **ZABIT: 64 → 16.** "16. dereceden sonra Chebyshev kalıntı hatası
+    #: zaten 1e−7 altına iner; 64 fuzulidir."
+    qudit_qsvt: int = 16
+    #: KAN-Chebyshev derecesi.
+    qudit_derece: int = 8
+    #: Cartan yön sayısı (``θ`` boyutu).
+    qudit_yon: int = 8
+    #: **Genlik tipi.** Zabıt 2 (Saf CPU Mimarisi, 4. usul): durum
+    #: L2/L3 önbelleğinden akan bir veri nehri gibi geçmeli.
+    #: ``complex64`` bellek trafiğini yarıya indirir.
+    genlik_tipi: str = "complex64"
+    #: Yazmacın yığın dilimi. ``0`` = donanımdan tayin et
+    #: (``nefs/onbellek.py``). Elle bir sayı verilirse o kullanılır ve
+    #: sebebi çağıranın sorumluluğundadır.
+    yigin_dilimi: int = 0
     # --- donanım
     surec: int = 0                   # 0 = donanımdan tayin et
     tohum: int = 0
@@ -270,10 +327,37 @@ class EgitimAyari:
         # **YIĞIN YAZMACA GEÇER.** Evvelce geçmiyordu ve yazmaç daima
         # ``B=1`` kuruluyordu: 41 melekenin 300 000 kapısı her örnek
         # için baştan vuruluyordu. Hız teftişi bunu ölçtü.
+        import numpy as _np
+        tip = {"complex64": _np.complex64,
+               "complex128": _np.complex128}[str(self.genlik_tipi)]
         return QAyar(satir_kubiti=self.satir_kubiti,
                      yerel_kubit=self.yerel_kubit, bag=self.bag,
                      mera_kademe=self.mera_kademe, tohum=self.tohum,
-                     yigin=int(self.ornek_sayisi))
+                     yigin=self.yigin(), tip=tip)
+
+    def yigin(self) -> int:
+        """Yazmacın YIĞIN DİLİMİ -- elle değil, **donanımdan**.
+
+        **``ornek_sayisi`` ile yığın dilimi ayrı şeylerdir** ve evvelce
+        karıştırılıyordu: birincisi kaç örnek işleneceğidir (veri),
+        ikincisi tek geçişte kaçının yazmaca sığacağıdır (donanım).
+        Aynı sayı tutulunca ``ornek_sayisi``yi büyütmek yazmacı
+        önbellekten taşırıyordu -- ölçüldü: B=512'de hız 61 312'den
+        41 980'e **düşüyor**.
+
+        ``yigin_dilimi > 0`` ise o kullanılır (elle ezme hakkı saklı);
+        değilse ``nefs/onbellek.py`` donanımdan hesaplar.
+        """
+        if int(self.yigin_dilimi) > 0:
+            return int(self.yigin_dilimi)
+        import numpy as _np
+        from nefs.onbellek import yigin_sec
+        from nefs.zihin_durumu import QAyar as _QA
+        d = int(self.satir_kubiti) * int(_QA.hukum_lifi)
+        tip = {"complex64": _np.complex64,
+               "complex128": _np.complex128}[str(self.genlik_tipi)]
+        B = int(yigin_sec(d, tip)["B"])
+        return max(1, min(B, int(self.ornek_sayisi)))
 
 
 #: **CPU'da koşan kısa hâl.** ``B = ornek_sayisi`` bu ortam için
@@ -302,7 +386,7 @@ class EgitimAyari:
 #: Kayıp değişti çünkü veri değişti (daha uzun bağlam, daha çok örnek),
 #: hesabın kendisi değil: B=4/L=8'de iki hat **birebir** aynı sayıyı
 #: veriyor (2,888511).
-KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=128, pencere=512,
+KISA_CPU = EgitimAyari(ad="kısa-CPU", ornek_sayisi=512, pencere=512,
                        cevrim=1, ornek=3, zincir=2, talim_tur=1,
                        altuzay_ornek=6, degerlendirme_gorevi=8,
                        dogrulama_sayisi=20,
@@ -509,6 +593,7 @@ def _isci_kayip(p: np.ndarray) -> float:
 def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
     """Tâlim ayarından mizan ayarı -- **tek kaynak**, iki nüsha değil."""
     return MizanAyari(
+        zeno_tepe=float(a.zeno_tepe),
         lam_cevrim=float(a.lam_cevrim), lam_monogami=float(a.lam_monogami),
         lam_hodge=float(a.lam_hodge), cevrim_boyu=int(a.cevrim_boyu),
         cevrim_sayisi=int(a.cevrim_sayisi), rust_t0=float(a.rust_t0),
@@ -583,7 +668,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     mzn = mizan_ayari(ayar)
     hafiza = Hafiza(kapasite=int(ayar.hafiza_kapasitesi),
                     yazma=float(ayar.hafiza_yazma),
-                    sonum=float(ayar.hafiza_sonumu), tohum=int(ayar.tohum))
+                    sonum=float(ayar.hafiza_sonumu),
+                    zeno_esigi=float(ayar.zeno_esigi),
+                    zeno_tepe=float(ayar.zeno_tepe),
+                    ayniyet=float(ayar.hafiza_ayniyet),
+                    buhar=float(ayar.hafiza_buhar), tohum=int(ayar.tohum))
     _sayac = {"çağrı": 0}
 
     def kayip_p(P: np.ndarray) -> np.ndarray:
