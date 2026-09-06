@@ -216,8 +216,24 @@ class MizanAyari:
     #: ``nefs/rust.py`` -- muayene kapısı.
     rust_kapanis: float = 0.5
     rust_muayene: int = 1
-    #: ``|ω| > 1 − kenar`` ise hal saftır (tam kısır yahut tam tenakuz).
-    kenar: float = 0.05
+    #: **KENAR ARTIK BİR SAYI DEĞİL, BİR ÇÖZÜNÜRLÜKTÜR** (ferman 1-J).
+    #:
+    #: Burada ``kenar = 0.05`` yazıyordu ve kısırlık hükmünü tam da o
+    #: veriyordu (``ω > 1 − kenar`` → kısır). Padişahın hükmü kat'îdir:
+    #: *"Eşik koyarken sabit bir değer koymayacaksın, bir fonksiyona
+    #: bağlı olacak o eşik. Yâni kemiyete değil keyfiyete."*
+    #:
+    #: Sorulan keyfiyet şudur: **çevrim fiilen bir yol katetti mi?**
+    #: Kemiyet (``ω`` 1'e ne kadar yakın) değil. Bir çevrimin
+    #: katedebileceği en küçük **anlamlı** yol, iç çarpımın sayısal
+    #: çözünürlüğüdür ve o **ölçülür**: ``arccos(1 − √ε)``, ``ε``
+    #: taşıyıcının kendi kayan nokta çözünürlüğü. Bundan kısa bir yol
+    #: "kısa" değil, **ayırt edilemezdir** -- o çevrim hiçbir yere
+    #: varmamıştır.
+    #:
+    #: ``0`` = çözünürlükten türet. Elle bir sayı verilirse o kullanılır
+    #: ve sebebi çağıranın sorumluluğudur (ölçü kapatılabilir kalsın).
+    kenar: float = 0.0
     zeno_esigi: float = 0.35
     #: **KANONİK DENETÇİNİN ÇEKİRDEĞİ** (``nefs/tdd.py``). Zabıt TDD'yi
     #: hesap motoru olmaktan çıkardı ve tek vazife bıraktı: *"mantık
@@ -240,7 +256,7 @@ class MizanAyari:
             "çevrim boyu en az 3 olmalı: iki adımlı çevrim daima U=I "
             "verir ve holonomi taşımaz (ölçüldü)")
         assert int(self.cevrim_sayisi) >= 1, "en az bir çevrim taranmalı"
-        assert 0.0 < float(self.kenar) < 0.5, "kenar (0, 0.5) olmalı"
+        assert 0.0 <= float(self.kenar) < 0.5, "kenar [0, 0.5) olmalı"
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -537,6 +553,13 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
                       kanonik_adres(A1[c], cekirdek=cek))
               for c in range(idx_hepsi.shape[0])]
     tdd_kimlik = bool(all(kapali))
+    # **ÇÖZÜNÜRLÜK ÖLÇÜLÜR** (ferman 1-J + 5-B): taşıyıcının kendi
+    # kayan nokta hassasiyetinden gelir, elle yazılmaz.
+    _eps = float(np.finfo(H.dtype).eps)
+    _cz = float(np.arccos(np.clip(1.0 - np.sqrt(_eps), -1.0, 1.0)))
+    yol_haddi = float(a.kenar) if float(a.kenar) > 0.0 else \
+        _cz * float(int(a.cevrim_boyu))
+    kenar_haddi = float(a.kenar) if float(a.kenar) > 0.0 else _cz
     for c_no in range(int(a.cevrim_sayisi)):
         idx = [int(i) for i in idx_hepsi[c_no]]
         koseler = [haller[i] for i in idx]
@@ -559,9 +582,25 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
                 v = koseler[j] / (np.linalg.norm(koseler[j]) or 1.0)
                 ort.append(float(abs(np.vdot(u, v))))
         engelli = bool(ort) and max(ort) < 0.5
-        if om < -1.0 + a.kenar:
+        # ── KISIRLIK: KATEDİLEN YOLDAN, ω'NIN YAKINLIĞINDAN DEĞİL ──
+        #
+        # **FERMAN 1-J.** Evvelce hüküm ``ω > 1 − kenar`` idi ve
+        # ``kenar`` elle yazılmış ``0,05``ti. O bir **kemiyet** eşiğidir:
+        # "ω bire ne kadar yakın". Sorulması gereken keyfiyet ise
+        # başkadır: **çevrim fiilen bir yol katetti mi?**
+        #
+        # Ölçüldü ve fark buradaydı: bütün çevrimler ``ω ≈ 1`` verip
+        # kısır sayılıyor, ``meşru`` daima ``0`` çıkıyor ve keyfiyet
+        # nispeti (üç hududun çarpımı) hiç temizlenemiyordu. Halbuki
+        # tenakuz ve mantık hudutları temizdi (ölçüldü: 1,0000 ve
+        # 1,0000; kalan taşma %0,000) -- tek kirli tutan buydu.
+        #
+        # ``yol_haddi`` bir tercih değil, taşıyıcının kendi
+        # çözünürlüğüdür: bundan kısa bir yol "kısa" değil **ayırt
+        # edilemezdir**.
+        if om < -1.0 + kenar_haddi:
             say["tenakuz"] += 1
-        elif om > 1.0 - a.kenar:
+        elif yol <= yol_haddi:
             # **KISIRLIK ARTIK ω'DAN OKUNUR, TDD ADRESİNDEN DEĞİL.**
             #
             # Evvelce burada ``kapali[c_no]`` vardı: ``U_C·a`` ile ``a``
