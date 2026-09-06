@@ -253,6 +253,60 @@ Sıfır, kaybın sayısal sıfırı değildir (o zaten imkânsızdır). Sıfır
 
 ---
 
+## ▓▓▓ 1-L. FERMAN: YALNIZ TAHT KOŞAR -- TEST KODU ASLA ▓▓▓
+
+> *"Sana **bundan böyle** tahttan başka hiçbir koşu çalıştırmayı caiz
+> kılmıyorum, hiçbir test kodu **asla ve kat'a** çalışamayacak, yalnız
+> main kodu çalışabilir ve sen kod okuyup öyle hata ayıklayabilirsin,
+> başka türlüsü yok!"*
+
+**KOŞTURULABİLEN TEK ŞEY:**
+
+```
+python -m main.egitim ...
+python -m main.cikarim ...
+```
+
+**YASAK:** `python -c "..."` ile kurulan tek seferlik denemeler ·
+`/tmp` altına yazılan ölçüm betikleri · `cProfile` koşusu · A/B
+kıyası için kurulan ikinci bir hat · `depo/` altındaki koşturucular ·
+`pytest` · her ne ad altında olursa olsun **tahtın dışında** koşan
+her şey.
+
+**HATA AYIKLAMA USULÜ: KOD OKUNUR.** Bir kusur ölçülerek değil,
+**kodu okuyarak** bulunur (ferman 1-C/a ve 1-D'nin tabiî neticesi:
+ana akışta ne koştuğu ölçülmez, zihinle tayin edilir). Bir sayı
+lâzımsa o sayıyı **taht** basar: ölçü tahtın kendi beyanına konur ve
+tahtla beraber koşar. Tahtın basmadığı sayı, sayı değildir.
+
+**NİÇİN.** Yan koşu iki şey yapıyordu: (1) tahtta olmayan bir yolu
+ölçüp "ölçtüm" dedirtiyordu -- yâni ölçülen şey ile koşan şey ayrı
+olabiliyordu; (2) tahtın kendi beyanına konması gereken ölçüyü
+dışarıda tutup tahtı fakir bırakıyordu.
+
+---
+
+## ▓▓▓ 1-M. FERMAN: HER ŞEY YAZMAÇTAN GİRER, YAZMAÇTAN ÇIKAR ▓▓▓
+
+> *"Boyut moyut da ayrı bir yerden gelmez ahmak, llm yapıyoruz llm,
+> boru değil!!! Satır sayısı yazmaçtan gelmez demişsin! **Her şey
+> yazmaçtan girer, yazmaçtan çıkar, aksi yol yoktur**, yazmaç da kübit
+> değil quditttir, o da ℂ^d uzayında değil diğer tarif ettiğimiz
+> uzaydadır."*
+
+* Bir ölçü -- satır sayısı, lif boyu, sektör haddi, yığın -- **ayrı
+  bir yerden** gelmez. Tek kaynak **yazmaçtır**; başka her yer onu
+  okur.
+* İki yerde iki ayrı sayı duruyorsa bu bir "uyum meselesi" değil,
+  **çift başlılıktır** ve ferman 2-B gereği kökünden kesilir. Doğrusu
+  ikisini birbirine yaklaştırmak değil, birini **imha edip** ötekini
+  tek kaynak yapmaktır.
+* Yazmaç kübit yazmacı değildir ve ℂ^d de değildir: Galois `GF(2⁸)` +
+  stabilizer tableau + `Z_m` ayrık faz + Kronecker karo (ferman 7).
+  "Boyut" o taşıyıcının kendi ölçüsüdür.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

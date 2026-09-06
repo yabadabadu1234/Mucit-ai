@@ -59,10 +59,12 @@ _BAGLI: Optional["Hizolcer"] = None
 class Hizolcer:
     """Bir hattın belirteç/sn'sini **çağrı çağrı** tutar."""
 
-    __slots__ = ("ad", "belirtec_basina", "had", "sert", "sure", "baslangic", "belirtec")
+    __slots__ = ("ad", "belirtec_basina", "had", "sert", "sure",
+                 "baslangic", "belirtec", "canli_saniye", "_son_bildirim")
 
     def __init__(self, belirtec_basina: int, had: Optional[float] = None,
-                 ad: str = "hat", sert: bool = False) -> None:
+                 ad: str = "hat", sert: bool = False,
+                 canli_saniye: float = 0.0) -> None:
         assert int(belirtec_basina) > 0, (
             "çağrı başına belirteç sıfır olamaz -- ölçü bölünemez")
         self.ad = str(ad)
@@ -73,6 +75,12 @@ class Hizolcer:
         self.sert = bool(sert)
         self.sure: List[float] = []
         self.baslangic = time.perf_counter()
+        #: **CANLI KÜTÜK.** Tâlim saatler sürebilir; ``0``dan büyükse
+        #: hızölçer bu aralıkla koşarken bildirir. Ferman 1-L yan
+        #: koşuyu yasakladı, o hâlde akışı gösterme işi de ölçünün
+        #: kendi uzvuna düştü -- taht yalnız aralığı verir.
+        self.canli_saniye = float(canli_saniye)
+        self._son_bildirim = time.perf_counter()
 
     @contextmanager
     def saat(self, belirtec: int = 0):
@@ -91,11 +99,33 @@ class Hizolcer:
             self.sure.append(time.perf_counter() - t0)
             self.belirtec.append(int(belirtec) if belirtec > 0
                                  else int(self.belirtec_basina))
+            self._canli()
             if self.sert and self.had is not None:
                 h = self.belirtec[-1] / max(self.sure[-1], 1e-12)
                 assert h >= self.had, (
                     "HIZ HADDİ TUTMADI (%s): %.0f < %.0f belirteç/sn"
                     % (self.ad, h, self.had))
+
+    def _canli(self) -> None:
+        """Aralık dolduysa akışı bildir. **Metin burada yazılır** (1-G)."""
+        if self.canli_saniye <= 0.0:
+            return
+        t = time.perf_counter()
+        if t - self._son_bildirim < self.canli_saniye:
+            return
+        self._son_bildirim = t
+        sn = sum(self.sure) or 1e-12
+        bel = sum(self.belirtec)
+        from nefs.munasebet import munasebet_beyani
+        from nefs.keyfiyet import keyfiyet_beyani
+        m = munasebet_beyani()
+        k = keyfiyet_beyani()
+        print("  [%7.1f sn] çağrı %4d | belirteç %10d | %9.0f bel/sn | "
+              "küme %d temiz / %d kirli / %d geri dönen | "
+              "keyfiyet en_iyi %.4f ort %.4f"
+              % (t - self.baslangic, len(self.sure), bel, bel / sn,
+                 m["temizlenen"], m["kirli_kalan"], m.get("geri_dönen", 0),
+                 k["en_iyi"], k["ortalama"]), flush=True)
 
     def ekle(self, sn: float) -> None:
         """Dışarıda saatlenmiş bir çağrıyı kaydet."""

@@ -963,8 +963,7 @@ class QMeleke:
         # bir satır içinde ``j`` ile ``j+2`` çakışmaz, satırlar arasında
         # da yerel hüküm kübiti ayırıcı durur. O hâlde ``n·⌊k/2⌋`` ayrı
         # çağrı yerine TEK yığın SVD'si yeter (kütük H79).
-        sol = [q.veri(i, j) for i in range(q.n_satir)
-               for j in range(ofset, k - 1, 2)]
+        sol = q.veri_izgara(range(ofset, k - 1, 2))
         q.cift_yigin(sol, G)
 
     def satir_donmesi(self, q: QYazmac, p: "QParametre",
@@ -975,8 +974,7 @@ class QMeleke:
         # Kapılar sütuna bağlı olduğu için ``k`` ayrı dizey yeter;
         # ``n·k`` yuvaya tek çağrıda yayılır.
         Gk = np.stack([donme(float(t)) for t in a])
-        yuv = np.array([q.veri(i, j) for i in range(q.n_satir)
-                        for j in range(k)])
+        yuv = q.veri_izgara()
         q.tek_yigin(yuv, np.tile(Gk, (q.n_satir, 1, 1)))
 
 
@@ -1090,8 +1088,7 @@ class QTecrit(QMeleke):
     def uygula(self, q, p):
         G = dik_iki_kubit(self.aci(p, 6, 0.5))
         k = q.ayar.veri_lifi
-        q.cift_yigin([q.veri(i, j) for i in range(q.n_satir)
-                      for j in range(1, k - 1, 2)], G.T)
+        q.cift_yigin(q.veri_izgara(range(1, k - 1, 2)), G.T)
 
 
 @qkaydet
@@ -1281,8 +1278,7 @@ class QDenemeYanilma(QMeleke):
         a = self.aci(p, k, 0.3)
         Gk = np.tile(np.stack([donme(float(t)) for t in a]),
                      (q.n_satir, 1, 1))
-        q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)
-                     for j in range(k)], Gk)
+        q.tek_yigin(q.veri_izgara(), Gk)
 
 
 @qkaydet
@@ -1580,8 +1576,7 @@ class QTashih(QMeleke):
         lam = float(np.tanh(self.aci(p, 1, 1.0)[0]))
         Gk = np.tile(np.stack([donme(-lam * float(t)) for t in tetkik]),
                      (q.n_satir, 1, 1))
-        q.tek_yigin([q.veri(i, j) for i in range(q.n_satir)
-                     for j in range(k)], Gk)
+        q.tek_yigin(q.veri_izgara(), Gk)
 
 
 @qkaydet

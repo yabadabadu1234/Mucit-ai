@@ -428,6 +428,14 @@ def yoklama() -> Dict[str, Any]:
                   "sebep": (d.get("derleyici_çıktısı") or "derlenemedi")[:200]})
         _ONBELLEK["yoklama"] = o
         return o
+    # **KENDİ KENDİNİ SINAMA KOŞU SAYAÇLARINA GİRMEZ.** Ölçüldü ve
+    # düzeltildi: ithal anında koşan bu sınama ``_SAYAC``a 496 kapı /
+    # 496 boşaltma yazıyor, ``cekirdek_beyani`` de onu tâlimin kendi
+    # sayısı gibi gösteriyordu -- ``bant_başına_kapı`` **1,0** çıkıyor,
+    # yâni "bant hiç toplamıyor" gibi okunuyordu. Halbuki gerçek koşuda
+    # 46 kapı 8 boşaltmada iniyor (5,75). Kendi sınamasını koşunun
+    # ölçüsüne katan bir ölçü, ölçtüğü şeyi ölçmüyordur (ferman 5).
+    _kopya = dict(_SAYAC)
     try:
         B, d_ = 2, 16
         r = np.random.default_rng(0)
@@ -442,6 +450,8 @@ def yoklama() -> Dict[str, Any]:
     except Exception as e:                                # noqa: BLE001
         o.update({"koşuyor": False, "sebep": "%s: %s"
                   % (type(e).__name__, e)})
+    _SAYAC.clear()
+    _SAYAC.update(_kopya)
     _ONBELLEK["yoklama"] = o
     return o
 

@@ -472,6 +472,20 @@ class EgitimAyari:
     # ══════════════════════════════════════════════════════════════
     #  KAPILAR -- hepsi kapatılabilir (ferman 5)
     # ══════════════════════════════════════════════════════════════
+    #: **HIZ GEÇİDİ SERT Mİ?** ``1`` = had tutmazsa tâlim başlamaz.
+    #:
+    #: Bu anahtar bir kaçamak değil, bir **ilandır**. Evvelce tâlim
+    #: ``depo/`` altındaki bir koşturucudan başlatılıyor ve o koşturucu
+    #: ``gecit``i yumuşak kipe **maymuncuklayarak** geçiyordu -- yâni
+    #: haddin aşıldığı tahtın dışında, görünmez bir yerde kararlaşıyordu.
+    #: Ferman 1-L o koşturucuyu imha etti (yalnız taht koşar); o hâlde
+    #: karar tahta taşındı ve **rapora girer**: hangi profilin haddi
+    #: gözardı ettiği ve o an ölçülen hızın ne olduğu yazılır.
+    hiz_geciti: int = 1
+    #: Canlı kütük aralığı (saniye). ``0`` = sussun. Tâlim saatler
+    #: sürebilir; padişah akışı görmeden beklemesin diye hızölçer
+    #: koşarken bildirir (``tanilama/hizolcer.py``).
+    canli_saniye: float = 20.0
     sadakat_acik: int = 1
     parite_lifi: int = 2
     usul_acik: int = 1
@@ -598,7 +612,16 @@ class EgitimAyari:
 # **cömertliktir**; gerisini donanım, ferman ve ölçü tayin eder.
 
 #: **DAR** -- en küçük koşan hâl. Ölçüm ve teşhis içindir.
-DAR = EgitimAyari(ad="dar", comert=0.15)
+#:
+#: **HIZ GEÇİDİ BU PROFİLDE YUMUŞAKTIR VE SEBEBİ YAZILIDIR.** Had
+#: ``tanilama/hiz_teftisi.py:HAD`` = 1 000 000 belirteç/sn'dir; bu
+#: makinede ölçülen ~90 000'dir, yâni on bir kat eksiktir. Padişahın
+#: bu husustaki emri sarihtir: *"Hız hedefinin zaten gerisindeyiz ama
+#: bari eğitim yapmışken konuşabilen bir model elde ettiğimizi
+#: görelim."* O hâlde teşhis profili koşar, **fakat ölçülen hız
+#: raporda aynen yazılır ve kırmızı yanar**. ``ORTA`` ve ``AZAMÎ``de
+#: geçit **serttir**: umumi tâlim hız garantisi olmadan başlamaz.
+DAR = EgitimAyari(ad="dar", comert=0.15, hiz_geciti=0)
 
 #: **ORTA** -- bu makinenin dengeli hâli. Varsayılan.
 ORTA = EgitimAyari(ad="orta", comert=0.5)
@@ -883,7 +906,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     t0 = time.perf_counter()
     # **GEÇİT KOŞUDAN EVVEL.** Saatler süren bir tâlimin sonunda
     # "akit tutmuyormuş" demek saatleri çöpe atmaktır.
-    kapi = gecit(sert=True, hiz_ayari=ayar)
+    kapi = gecit(sert=bool(int(ayar.hiz_geciti)), hiz_ayari=ayar)
     hepsi = list(gorevler) if gorevler is not None else \
         gorevleri_getir("training")
     # **İMTİHAN BÖLÜMLEMESİ** -- ezberi ve sızıntıyı engeller.
@@ -1006,7 +1029,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     # haddin uygulanmaması, ölçüyü seyirlik yapmaktı (ferman 5).
     from tanilama.hiz_teftisi import HAD as _HIZ_HADDI
     olcer = Hizolcer(belirtec_basina=len(veri) * int(ayar.pencere),
-                     had=float(_HIZ_HADDI), ad="küllî mizan")
+                     had=float(_HIZ_HADDI), ad="küllî mizan",
+                     canli_saniye=float(ayar.canli_saniye))
     hizolcer_bagla(olcer)
 
     #: Münasebet döngüsünün o an üstünde durduğu küme. Kayıp **bütün

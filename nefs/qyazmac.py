@@ -151,7 +151,7 @@ class QuditYazmac:
     """
 
     def __init__(self, ayar: Optional[QuditAyar] = None,
-                 n_satir: int = 2, veri_lifi: int = 4,
+                 veri_lifi: int = 4,
                  n: Optional[int] = None, bag: Optional[int] = None,
                  tohum: int = 0, tip=None, obek: Optional[int] = None,
                  yigin: Optional[int] = None) -> None:
@@ -165,11 +165,36 @@ class QuditYazmac:
             k = int(min(max(k, 1), 20))
             ayar = QuditAyar(d=1 << k, lif=(1 << k,), tohum=int(tohum),
                              yigin=int(yigin or 1))
-            n_satir, veri_lifi = 1, k
+            veri_lifi = k
         self.ayar = ayar or QuditAyar()
         a = self.ayar
-        self._n_satir = int(n_satir)
         self._veri_lifi = int(veri_lifi)
+        # ══════════════════════════════════════════════════════════
+        #  SATIR SAYISI **ARGÜMANDAN DEĞİL, LİFTEN** (ferman 1-M)
+        # ══════════════════════════════════════════════════════════
+        #
+        # *"Boyut da ayrı bir yerden gelmez... Her şey yazmaçtan girer,
+        # yazmaçtan çıkar, aksi yol yoktur."*
+        #
+        # Evvelce bu sayı dışarıdan geliyordu ve ``nefs/zihin_durumu.py``
+        # onu **elle ``1``e sabitliyordu** -- halbuki aynı dosyada
+        # ``QYazmac.n_satir`` girdideki belirteç sayısıydı (2). İki
+        # sayı, iki mana, tek isim: melekeler yanlış olanı okuyor ve
+        # olmayan bir satıra kapı vuruyordu.
+        #
+        # Doğrusu liften çıkar ve tek satırdır: ``_lif_no`` ``k``ıncı
+        # satırı ``k``ıncı life eşler, o hâlde veri satırı sayısı
+        # **çarpımı ``veri_lifi``ye erişene kadar soldan alınan lif
+        # adedidir**. ``lif=(16,16,16)``, ``veri_lifi=16`` → ``1``:
+        # bir veri lifi, iki hüküm karosu. Lif yapısı değişirse sayı
+        # kendiliğinden değişir; elle düzeltilecek bir yer yoktur.
+        ns, carp = 0, 1
+        for _x in tuple(a.lif):
+            if carp >= int(veri_lifi):
+                break
+            carp *= int(_x)
+            ns += 1
+        self._n_satir = max(1, ns)
         # ── ÖNBELLEKLER (hız teftişinin ölçtüğü Python yükü) ──────
         self._yuva_onbellek: Dict[int, Tuple[int, int]] = {}
         #: Bütün lifler ikinin kuvveti mi? Bit düzlemi yolu buna bakar
@@ -1054,6 +1079,35 @@ class QuditYazmac:
         # döngüdür.) ``_satir_yuva`` bir kere kurulur; her çağrıda
         # ``ayar``a inmek de o masrafın parçasıydı.
         return int(i) * self._satir_yuva + int(j)
+
+    @property
+    def n_satir(self) -> int:
+        """**TEK KAYNAK** (ferman 1-M): kaç veri satırı adreslenebilir.
+
+        Yazmacın lif yapısı ``(veri_lifi, karo, karo)``dır ve
+        ``_lif_no`` satırı **lif indisiyle** eşler: ``k``ıncı satır
+        ``k``ıncı liftir. O hâlde adreslenebilir satır sayısı bir
+        tercih değil, lif yapısının kendisidir. Dışarıdan gelen
+        "kaç belirteç var" sayısı **satır sayısı değildir**: kalan
+        belirteçler ``kodla``da faza girer, yeni bir lif açmaz.
+        """
+        return int(self._n_satir)
+
+    def veri_izgara(self, sutun=None, satir=None) -> np.ndarray:
+        """``veri(i, j)`` ızgarasının **tamamı, tek çağrıda** (satır-major).
+
+        Ölçüldü: tek küllî mizan çağrısında ``veri`` **49 071** kere
+        çağrılıyor ve çağrıların ezici çoğunluğu
+        ``[q.veri(i, j) for i in ... for j in ...]`` biçiminde düzenli
+        bir ızgaradır. Hesap tek bir çarpma-toplamadır; pahalı olan
+        49 bin ayrı Python çağrısıdır. Yayın (broadcast) ile aynı
+        ızgara tek işlemde çıkar ve **sıra birebir korunur**.
+        """
+        i = (np.arange(self._n_satir) if satir is None
+             else np.asarray(satir, np.int64).reshape(-1))
+        j = (np.arange(self._veri_lifi) if sutun is None
+             else np.asarray(sutun, np.int64).reshape(-1))
+        return (i[:, None] * self._satir_yuva + j[None, :]).reshape(-1)
 
     def yerel(self, i: int) -> int:
         return self.veri(i, self._veri_lifi)

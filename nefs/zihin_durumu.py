@@ -169,7 +169,41 @@ class QYazmac:
     def __init__(self, n_satir: int, ayar: Optional[QAyar] = None) -> None:
         self.ayar = ayar or QAyar()
         a = self.ayar
-        self.n_satir = int(n_satir)
+        # ══════════════════════════════════════════════════════════
+        #  ``n_satir`` ARTIK BURADA DURMUYOR -- YAZMAÇTAN OKUNUR
+        # ══════════════════════════════════════════════════════════
+        #
+        # **FERMAN 1-M:** *"Boyut da ayrı bir yerden gelmez... Her şey
+        # yazmaçtan girer, yazmaçtan çıkar, aksi yol yoktur."*
+        #
+        # Burada bir **çift başlılık** vardı ve sessizce iş bozuyordu:
+        # ``QYazmac.n_satir`` girdideki belirteç sayısıydı (2), fakat
+        # yazmaç aşağıda ``n_satir=1`` ile **elle sabitlenmişti**. İki
+        # sayı iki ayrı manaya geliyordu ve melekeler yanlış olanı
+        # okuyordu.
+        #
+        # Neticesi kodu okuyunca görünür: ``kodla`` yalnız
+        # ``E[:, 0, :]``i taban durumuna kodlar, kalan belirteçleri
+        # **faza** yazar (aşağıdaki kimlik). Yâni yazmaçta **bir** veri
+        # satırı vardır. Melekeler ise ``range(q.n_satir)`` ile iki
+        # satır dolaşıyor, ikinci satırın yuvaları hüküm sektörünün
+        # adreslerine düşüyor, ``gecerli`` onları eliyor ve kapı
+        # **sessizce düşüyordu**. ``gecerli``nin şerhindeki *"89 341
+        # kapı çağrısının yalnız 159'u iş yapıyor (%0,2)"* ölçümü tam
+        # olarak budur: bir kusurun ölçüsü, kusur diye değil hız
+        # meselesi diye yazılmıştı.
+        #
+        # ``n_satir`` bir alan değil, yazmacın kendi sayısına bakan bir
+        # **hüküm**dür artık (aşağıda ``@property``).
+        #
+        # Gelen sayı ise bağlam uzunluğudur ve **hiçbir yerde
+        # okunmuyordu**: ``kodla`` bağlam uzunluğunu ``E``nin kendi
+        # şeklinden alır (``E.shape[1]``). Bir alanda saklamak, ferman
+        # 1-C(b)'nin "isim eklemek bağlamak değildir" dediği şey
+        # olurdu; o hâlde saklanmıyor. İmza, çağıran yerler kırılmasın
+        # diye duruyor ve **yalnız denetlenir**.
+        assert int(n_satir) >= 1, (
+            "bağlam uzunluğu en az bir belirteç olmalı: %r" % (n_satir,))
         # ==============================================================
         # SATIR BAŞINA LİF **DEĞİL** -- üsteli geri getirirdi
         # ==============================================================
@@ -208,7 +242,7 @@ class QYazmac:
                       tip=a.tip, motor=str(a.motor),
                       faz_mertebesi=int(a.faz_mertebesi),
                       hat=str(a.hat), hat_bandi=int(a.hat_bandi)),
-            n_satir=1, veri_lifi=int(a.veri_lifi))
+            veri_lifi=int(a.veri_lifi))
         self.iz = self.y.iz
         # ── ARA KATMAN KALDIRILDI (ölçüldü) ───────────────────────
         # ``veri``, ``yerel`` ve ``kulli`` burada yalnız ``self.y``ye
@@ -231,6 +265,11 @@ class QYazmac:
         self._alan: Dict[str, Tuple[int, int]] = {
             ad: (self.y.kulli(ad, 0), int(kac))
             for ad, kac in a.kulli_alanlar}
+
+    @property
+    def n_satir(self) -> int:
+        """Adreslenebilir veri satırı -- **yazmacın kendi sayısı**."""
+        return int(self.y.n_satir)
 
     # ── adresleme (eski adlar, qudit altyapısı) ───────────────────
     def veri(self, i: int, j: int) -> int:
@@ -304,6 +343,15 @@ class QYazmac:
 
     def cift(self, i: int, G) -> None:
         self.y.cift(i, G)
+
+    def veri_izgara(self, sutun=None, satir=None):
+        """``[veri(i, j) for i in satır for j in sütun]`` -- tek çağrıda.
+
+        Satır sayısı **yazmaçtan** gelir (ferman 1-M); burada ayrıca
+        bir sayı tutulmaz. Evvelce tutuluyordu ve yazmacınkiyle
+        tutmuyordu: bkz. ``__init__``teki şerh.
+        """
+        return self.y.veri_izgara(sutun, satir)
 
     def cift_yigin(self, sol_yuvalar, G) -> None:
         """``m`` komşu çifte kapı. Tek kapı verilirse **yayılır**.

@@ -1,0 +1,177 @@
+# ══════════════════════════════════════════════════════════════════
+#  HUGGINGFACE → GITHUB RELEASE  (çevrilmiş külliyat olarak)
+# ══════════════════════════════════════════════════════════════════
+#
+# PADİŞAHIN HÜKMÜ:
+#
+#   "Hugging Face ve GitHub sunucuları birbirine doğrudan veri aktarımı
+#   yapmaz; ancak GitHub Actions altyapısını kullanarak veriyi GitHub
+#   sunucuları üzerinden Hugging Face'ten çekip bir GitHub Release veya
+#   depoya aktarabilir, oradan da ajanınıza indirebilirsiniz... Sen bu
+#   verdiğim koda bizim dataset format çeviriciyi de ekle, veriyi
+#   çekerken aynı anda formatını da dönüştürmüş olalım."
+#
+# NİÇİN LÂZIM. Ajan yalnız GitHub görür; ``huggingface.co`` bu oturumun
+# ağ siyasetiyle kapalıdır (ölçüldü: CONNECT'e 403, ayrıca kapta ``ssh``
+# ikilisi yok -- ferman 1-K). Fakat GitHub Actions koşucusu HF'i
+# görür. O hâlde veri **GitHub sunucusu üzerinden** geçer.
+#
+# ÇEVİRİ NİÇİN BURADA. Ham veri seti gigabaytlarcadır ve Release varlığı
+# başına 2 GB haddi vardır. ``main/kulliyat.py:mucit_cevir`` metni
+# bizim biçime indirir -- bayt başına tek belirteç, ``[0, sözlük)``
+# aralığında -- ve netice ``np.memmap`` ile açılır. Yâni yüklenen şey
+# ham veri değil, **tâlimin doğrudan okuduğu külliyattır**: hem küçük,
+# hem her koşuda yeniden çevrilmez.
+#
+# İNDİRME TARAFI. ``main/kulliyat.py``deki ``Kaynak(surum=..., varlik=...)``
+# satırı bu Release varlığını ``curl`` ile indirir. Yâni bu iş akışının
+# çıktısı tâlime **bağlıdır**, ayrı durmaz (ferman 1-C/b).
+
+name: HuggingFace to GitHub Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      hf_repo_id:
+        description: 'HuggingFace veri kümesi kimliği (ör. openbmb/UltraData-Math)'
+        required: true
+        type: string
+      sozluk:
+        description: 'Sözlük (EgitimAyari.sozluk ile AYNI olmalı; tutmazsa mucit_ac reddeder)'
+        required: true
+        default: '16'
+        type: string
+      alt_yol:
+        description: 'Veri kümesi içinde alınacak alt dizin (boş = hepsi)'
+        required: false
+        default: ''
+        type: string
+      uzanti:
+        description: 'Metin sayılan uzantılar, virgülle (boş = hepsi)'
+        required: false
+        default: '.jsonl,.json,.parquet,.txt,.csv,.md'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu klonla
+        uses: actions/checkout@v4
+
+      - name: Python ortamını kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Gerekli paketleri yükle
+        run: pip install --quiet huggingface_hub numpy
+
+      - name: Hugging Face verisini indir
+        env:
+          HF_REPO_ID: ${{ inputs.hf_repo_id }}
+        run: |
+          python - <<'PY'
+          import os
+          from huggingface_hub import snapshot_download
+          yol = snapshot_download(
+              repo_id=os.environ["HF_REPO_ID"],
+              repo_type="dataset",
+              local_dir="./hf_data",
+          )
+          print("indi:", yol)
+          PY
+          du -sh ./hf_data
+
+      # ══════════════════════════════════════════════════════════
+      #  BİZİM FORMAT ÇEVİRİCİ -- ``main/kulliyat.py:mucit_cevir``
+      # ══════════════════════════════════════════════════════════
+      #
+      # Çevirici **depodan** çağrılır, burada yeniden yazılmaz: iki
+      # nüsha olsaydı hangisinin koştuğu belirsiz olurdu (ferman 1-E)
+      # ve biri ötekinden kayınca tâlim başka bir belirteç uzayı
+      # okurdu -- ``mucit_ac``ın sözlük denetimi tam da onun içindir.
+      - name: Bizim biçime çevir (mucit_cevir)
+        env:
+          HF_REPO_ID: ${{ inputs.hf_repo_id }}
+          SOZLUK: ${{ inputs.sozluk }}
+          ALT_YOL: ${{ inputs.alt_yol }}
+          UZANTI: ${{ inputs.uzanti }}
+        run: |
+          python - <<'PY'
+          import os, sys
+          sys.path.insert(0, os.getcwd())
+          from main.kulliyat import mucit_cevir, MUCIT_UZANTI
+
+          kimlik = os.environ["HF_REPO_ID"]
+          ad = kimlik.replace("/", "__")
+          kok = os.path.join("hf_data", os.environ.get("ALT_YOL") or "")
+          uz = tuple(u.strip() for u in os.environ["UZANTI"].split(",")
+                     if u.strip())
+          cikti = ad + MUCIT_UZANTI
+          o = mucit_cevir(kok, cikti, int(os.environ["SOZLUK"]),
+                          uzantilar=uz, ad=kimlik)
+          print("ÇEVRİLDİ:", o)
+          # **BOŞ ÇIKTI SESSİZCE GEÇİLMEZ** (ferman 5): hiçbir dosya
+          # uzantıya uymadıysa yüklenecek şey yoktur ve iş akışı
+          # burada KIRMIZI yanar, boş bir varlık yüklemez.
+          assert o["bayt"] > 0, (
+              "çeviri boş çıktı: '%s' yolunda %s uzantılı dosya yok"
+              % (kok, "/".join(uz)))
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write("MUCIT_AD=%s\n" % ad)
+              f.write("MUCIT_BAYT=%d\n" % o["bayt"])
+              f.write("MUCIT_DOSYA=%d\n" % o["dosya"])
+          PY
+          ls -lh *.mucit
+
+      # Release varlığı başına 2 GB haddi vardır; çevrilmiş külliyat
+      # ondan büyükse parçalanır. Parçalar indirildikten sonra
+      # ``cat``lenerek birleşir -- biçim düz bayt olduğu için parçalama
+      # ve birleştirme kayıpsızdır.
+      - name: 1,8 GB'lık parçalara böl (Release haddi)
+        run: |
+          BOY=$(stat -c%s "${MUCIT_AD}.mucit")
+          if [ "$BOY" -gt 1900000000 ]; then
+            split -b 1800M -d "${MUCIT_AD}.mucit" "${MUCIT_AD}.mucit.parca"
+            rm -f "${MUCIT_AD}.mucit"
+            echo "parçalandı: $(ls ${MUCIT_AD}.mucit.parca* | wc -l) parça"
+          else
+            echo "tek parça: $BOY bayt"
+          fi
+          ls -lh ${MUCIT_AD}.mucit*
+
+      - name: GitHub Release olarak yayınla
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "kulliyat-${{ github.run_number }}"
+          name: "Külliyat (çevrilmiş): ${{ inputs.hf_repo_id }}"
+          body: |
+            **Çevrilmiş külliyat** -- `main/kulliyat.py:mucit_cevir`
+
+            | | |
+            |---|---|
+            | Kaynak | `${{ inputs.hf_repo_id }}` (HuggingFace) |
+            | Sözlük | `${{ inputs.sozluk }}` |
+            | Belirteç | `${{ env.MUCIT_BAYT }}` |
+            | Dosya | `${{ env.MUCIT_DOSYA }}` |
+
+            Tâlime bağlamak için `main/kulliyat.py` cetveline:
+
+            ```python
+            Kaynak("${{ inputs.hf_repo_id }}", "${{ github.repository }}", "",
+                   surum="kulliyat-${{ github.run_number }}",
+                   varlik="${{ env.MUCIT_AD }}.mucit", pay=2.0),
+            ```
+
+            Biçim: `MUCIT1\n` + 256 baytlık JSON başlık + `[0, sözlük)`
+            aralığında düz `uint8` belirteçler. `mucit_ac` `np.memmap`
+            ile açar; sözlük tutmazsa **reddeder** (sessiz ikame yasak).
+          files: |
+            *.mucit
+            *.mucit.parca*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
