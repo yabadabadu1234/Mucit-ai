@@ -873,10 +873,11 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     dilimlenir, küçükse **son örnek tekrarlanır ve fazlası atılır** --
     sessizce değil, dilim uzunluğu kadar netice alınır.
     """
-    from .qegitim import belirtecleri_kodla
+    from .qegitim import belirtecleri_kodla, ornek_bol
     haller: List[np.ndarray] = []
     lifliler: List[np.ndarray] = []
     hedefler: List[int] = []
+    cinsler: List[str] = []
     baglamlar: List[Sequence[int]] = []
     sektor: List[Tuple[int, int]] = []
     veri = list(veri)
@@ -887,7 +888,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
         # **GENİŞLİK TABANDIR** (ferman 1-N): gelen dizi basamak
         # akışıdır, belirteç akışı değil. ``kubit`` = veri lifi = taban.
         E = np.stack([belirtecleri_kodla(list(bag), kubit, kubit)
-                      for bag, _h in dilim])
+                      for bag, _h, _c in (ornek_bol(o) for o in dilim)])
         if E.shape[0] < B:
             E = np.concatenate(
                 [E, np.repeat(E[-1:], B - E.shape[0], axis=0)], axis=0)
@@ -919,7 +920,8 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
             _H = V[:, :, -1]
         else:
             raise ValueError("hal_kaynagi bilinmiyor: %r" % (_hk,))
-        for t, (bag, hedef) in enumerate(dilim):
+        for t, (bag, hedef, cins) in enumerate(
+                ornek_bol(o) for o in dilim):
             lifliler.append(M_hepsi[t])
             haller.append(np.asarray(_H[t], complex))
             # **HEDEF BİR BASAMAKTIR** ve ``[0, taban)`` aralığındadır.
@@ -933,6 +935,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
                 "katmanı tip vektörüne çevirmemiş olabilir (ferman 1-N)"
                 % (hb, kubit))
             hedefler.append(hb)
+            cinsler.append(str(cins))
             baglamlar.append(list(bag))
         if not sektor:
             sektor = [q.y.sektor(ad) for ad, _ in q.ayar.kulli_alanlar]
@@ -941,7 +944,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
         "ileri geçiş %d örnek aldı, %d netice verdi -- örnek kayboldu"
         % (len(veri), len(haller)))
     return {"hal": haller, "lifli": lifliler, "hedef": hedefler,
-            "bağlam": baglamlar, "sektör": sektor}
+            "cins": cinsler, "bağlam": baglamlar, "sektör": sektor}
 
 
 def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
@@ -1039,7 +1042,9 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     from .tabakali_mizan import kategori_kaybi, nokta_kaybi
     kat = kategori_kaybi(ileri["hal"], azami=int(a.cevrim_sayisi) * 4,
                          tohum=int(a.tohum))
-    nok = nokta_kaybi(ileri["lifli"], ileri["hedef"], n_v)
+    # **CİNS MİZANA GİRER** (ferman 1-R): tek formül, ölçülen ağırlık.
+    nok = nokta_kaybi(ileri["lifli"], ileri["hedef"], n_v,
+                      cinsler=ileri.get("cins"))
     L_kat = float(kat["kayıp"])
     L_nok = float(nok["kayıp"])
 
@@ -1147,6 +1152,10 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     return {"kayıp": float(kayip), "rezonans": L_rez, "sadakat": F,
             # ── tabakalı mizan ────────────────────────────────────
             "nokta": L_nok, "nokta_isabet": float(nok["isabet"]),
+            # **İKİ CİNSİN AYRI SAYISI** (ferman 1-R): tek motor, tek
+            # formül; fakat hangi cinste ne tutturulduğu görünmezse
+            # ayrımın işe yarayıp yaramadığı bilinemez (ferman 5).
+            "nokta_cins": nok.get("cins", {}),
             "kategori": L_kat, "kategori_ihlâl": int(kat["ihlâl"]),
             "kategori_deneme": int(kat["deneme"]),
             # ── L_Tenakuz ─────────────────────────────────────────

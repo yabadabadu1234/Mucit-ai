@@ -134,7 +134,8 @@ def kategori_kaybi(haller: Sequence[np.ndarray], azami: int = 32,
 
 
 def nokta_kaybi(lifliler: Sequence[np.ndarray], hedefler: Sequence[int],
-                n_v: int, eps: float = 1e-12) -> Dict[str, Any]:
+                n_v: int, eps: float = 1e-12,
+                cinsler: Optional[Sequence[str]] = None) -> Dict[str, Any]:
     """``−ln Tr(P_hedef · ρ)`` -- kısmî Born, **son basamak**.
 
     ``lifliler`` her örneğin ``(n_veri, n_hüküm)`` lifli görünümüdür.
@@ -156,9 +157,46 @@ def nokta_kaybi(lifliler: Sequence[np.ndarray], hedefler: Sequence[int],
     rho_kosegen = guc / iz[:, None]
     h = np.asarray(list(hedefler), np.int64) % int(n_v)
     p = rho_kosegen[np.arange(h.size), h]
-    kayip = float(np.mean(-np.log(np.maximum(p, float(eps)))))
+    tekil = -np.log(np.maximum(p, float(eps)))
+    tepe = np.argmax(rho_kosegen, axis=1) == h
+    # ══════════════════════════════════════════════════════════════
+    #  İKİ VERİ CİNSİ, TEK FORMÜL (ferman 1-R)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # Padişahın hükmü: *"iki farklı motor kurmuyoruz asla, sadece
+    # motora girecek verinin cinsine göre bir ayrım yapıyoruz."*
+    #
+    # Formül **aynıdır** (``−ln P(hedef)``); değişen tek şey ağırlıktır
+    # ve o da elle yazılmaz (ferman 1-J):
+    #
+    #   ARC       hedef **hariçten** gelir (bulmacanın test çıkışı) ve
+    #             yüzde yüz uyum aranır → ağırlık ``1``.
+    #   SÖZLÜ     hedef **kendindendir**: model okuduğunu yeniden
+    #             üretir. Padişah *"tamamen çıktıyla ayniyet olmasa da
+    #             bir nebze aynılık olmalı"* dedi; o "nebze" bir sabit
+    #             olamaz. Ölçülen keyfiyet şudur: modelin sözlü
+    #             örneklerde **fiilen tutturduğu nispet**. İyi
+    #             ürettikçe terim ağırlık kazanır, üretemedikçe
+    #             ötekileri ezmez -- kendi kendini ölçekler.
+    if cinsler is None:
+        agirlik = np.ones(h.size, float)
+        pay = {"arc": int(h.size), "sözlü": 0}
+    else:
+        c = np.asarray([str(x) for x in cinsler])
+        arc = np.char.startswith(c, "arc")
+        soz = ~arc
+        nebze = float(tepe[soz].mean()) if bool(soz.any()) else 0.0
+        agirlik = np.where(arc, 1.0, nebze)
+        pay = {"arc": int(arc.sum()), "sözlü": int(soz.sum()),
+               "sözlü_nebze": nebze,
+               "arc_isabet": (float(tepe[arc].mean())
+                              if bool(arc.any()) else 0.0),
+               "sözlü_isabet": (float(tepe[soz].mean())
+                                if bool(soz.any()) else 0.0)}
+    top = float(agirlik.sum())
+    kayip = float((tekil * agirlik).sum() / max(top, 1e-300))
     assert math.isfinite(kayip), "nokta kaybı sonlu değil"
     # Tepe hücre hedefe düşüyor mu -- gradyansız bir teftiş sayısı.
-    isabet = float(np.mean(np.argmax(rho_kosegen, axis=1) == h))
+    isabet = float(np.mean(tepe))
     return {"kayıp": kayip, "isabet": isabet, "örnek": int(h.size),
-            "ortalama_born": float(np.mean(p))}
+            "ortalama_born": float(np.mean(p)), "cins": pay}

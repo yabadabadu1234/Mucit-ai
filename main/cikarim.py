@@ -185,8 +185,14 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
     # evvel cerhedilmiş (``T=0``) bir mantık koluna girerse, o kol daha
     # döngü tamamlanmadan kesilir. Hafıza verilmezse budama yoktur ve
     # ölçü bunu görür -- kapatılabilen bir tesirdir (H90).
-    c = soyle(gorev, nefs=nefs, sozluk=(ayar.sozluk if ayar else 16),
-              hafiza=hafiza)
+    # **SÖZLÜK ELLE YAZILMAZ** (ferman 1-N). Burada ``else 16``
+    # duruyordu: ayar verilmezse sözlük sessizce 16 oluyor, yâni
+    # tiktoken'in 200 019 belirteci bir anda on altıya iniyordu.
+    # Ayar yoksa **kurulur**, uydurulmaz.
+    if ayar is None:
+        from main.egitim import KISA_CPU
+        ayar = KISA_CPU
+    c = soyle(gorev, nefs=nefs, sozluk=int(ayar.sozluk), hafiza=hafiza)
     return {"görev": getattr(gorev, "ad", ""),
             "sükût": bool(c.sukut),
             "sebep": c.sebep,
@@ -223,7 +229,14 @@ def degerlendirme_kosusu(kume: str = "training", azami: int = 24,
         # paydasını gizlice küçültüyordu.
         _, hedef = gorev_dizisi(g)
         assert len(hedef) > 0, "görev %r için hedef BOŞ" % getattr(g, "ad", "")
-        h = [int(x) % a.sozluk for x in hedef]
+        # **HEDEF BASAMAĞA AÇILIR** (ferman 1-N). Evvelce
+        # ``% a.sozluk`` alınıyordu; sözlük 200 019 olunca o mod hiçbir
+        # şey yapmaz ve hedef, modelin ürettiği **basamak** akışıyla
+        # kıyaslanamaz hâle gelirdi -- yâni çıkarımın tam eşleşme
+        # ölçüsü sessizce daima sıfır verirdi.
+        from nefs.belirtec import basamak_sayisi, tip_vektoru
+        _bs = basamak_sayisi(int(a.sozluk), int(a.veri_lifi))
+        h = [int(x) for x in tip_vektoru(hedef, int(a.veri_lifi), _bs)]
         u = list(r["belirteç"] or [])
         n = min(len(h), len(u))
         if n:

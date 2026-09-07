@@ -43,11 +43,29 @@ from . import melekeler as mertebe
 from .melekeler import QNefs
 from .zihin_durumu import QAyar, QYazmac
 
-__all__ = ["ornekler", "belirtecleri_kodla", "adayin_tuttugu",
+__all__ = ["ornekler", "ornek_bol", "belirtecleri_kodla",
+           "adayin_tuttugu",
            "egit", "degerlendir"]
 
 
 # =====================================================================
+def ornek_bol(o) -> Tuple[List[int], int, str]:
+    """Bir tâlim ögesini ``(bağlam, hedef, cins)`` diye oku -- **tek yer**.
+
+    **FERMAN 1-R.** Öge artık bir üçlüdür: cins ``"arc"``,
+    ``"arc_sözlü"`` yahut ``"sözlü"``dür. Eski ikili ögeler de okunur
+    ve cinsleri ``"sözlü"`` sayılır -- fakat bu bir sessiz ikame
+    değildir: cins raporda görünür, o hâlde ikili bir ögenin nereden
+    geldiği gizlenemez.
+
+    Cins **motoru değiştirmez** (iki motor kurulmaz); yalnız hedefin
+    nereden geldiğini ve sadakatin ne kadar kat'î arandığını söyler.
+    """
+    if len(o) >= 3:
+        return list(o[0]), int(o[1]), str(o[2])
+    return list(o[0]), int(o[1]), "sözlü"
+
+
 def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
                        sozluk: int = 16, usul: str = "kategorik"
                        ) -> np.ndarray:
@@ -147,56 +165,86 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
 
 def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
              sozluk: int = 0, tohum: int = 0, taban: int = 16,
-             basamak: int = 0) -> List[Tuple[List[int], int]]:
-    """(bağlam, sonraki basamak) çiftleri -- ARC akışından, **tiktoken**.
+             basamak: int = 0) -> List[Tuple[List[int], int, str]]:
+    """**ARC CİNSİ** (ferman 1-R): *"teste çıkış olarak ne verirsin?"*
 
     ===================================================================
-    NE DEĞİŞTİ (ferman 1-N)
+    SUAL DEĞİŞTİ -- VE EVVELKİ SUAL YANLIŞTI
     ===================================================================
 
-    Evvelce burada ``[int(x) % sozluk for x in dizi]`` yazıyordu ve
-    ``sozluk`` 16'ydı: ARC'ın kendi on beş elemanlı belirteç uzayı
-    doğrudan qudit seviyelerine düşüyordu. Yâni ARC ile metin **ayrı
-    iki belirteç uzayındaydı** ve o, iki ayrı model demekti.
+    Padişahın hükmü sarihtir::
 
-    Artık ARC ızgarası da metne dökülüp tiktoken'den geçer
-    (``nefs/musahede.py:gorev_dizisi``); dönen şey 200 bin elemanlı bir
-    uzayda belirteç kimlikleridir. O kimlikler taşıyıcıya **tip
-    vektörü** olarak girer: her belirteç ``taban`` tabanında
-    ``basamak`` haneye açılır ve her hane bir qudit seviyesidir.
+        "Arc verilerinde temel esasımız şu: sana girdi olarak şu
+        bulmacanın şu giriş ve çıkışları verildiğinde teste çıkış olarak
+        ne verirsin? Soracağımız temel sual bu."
 
-    Böylece:
+    Evvelce burada bu sual **hiç sorulmuyordu**: ``gorev_dizisi``in
+    verdiği bağlam ile hedef birleştirilip tek akış yapılıyor, sonra o
+    akıştan **rastgele pencereler** çekiliyordu. Yâni model "bu
+    bulmacanın cevabı nedir" diye değil, "bu metinde bir sonraki
+    belirteç nedir" diye sorgulanıyordu; hedefin bağlamdan geldiği bile
+    tesadüftü.
 
-    * bağlam ``pencere`` **basamaktan** oluşur (belirteçten değil),
-    * hedef daima ``[0, taban)`` aralığındadır -- yâni mizanın bütün
-      makinesi (Born, Uhlmann, dışlama) **hiç değişmeden** çalışır,
-    * fakat model artık tiktoken'in tamamını kapsar, çünkü belirteç
-      basamak dizisinden ``tipten`` ile **birebir** geri kurulur.
+    Doğrusu **öğretmen zorlamasıdır** (teacher forcing): bağlam
+    sabittir (misal çiftleri + test girdisi) ve hedefin her basamağı
+    sırayla sorulur; her adımda o ana kadar yazılmış basamaklar bağlama
+    eklenir. Böylece eğitilen şey tam olarak koşarken yapılan iştir.
+
+    ===================================================================
+    SÖZLÜ ÇÖZÜM DE HEDEFTİR
+    ===================================================================
+
+        "Eğer veride çıkışı sözle tarif eden ızgaradan başka herhangi
+        bir kaynak veya sözlü çözüm varsa onun çıkmasını hedeflemesini
+        sağlayacağız."
+
+    ``soyutlama_oku`` bir görevin sözlü algoritmasını verir. Varsa o da
+    aynı bağlamdan hedeflenir ve cinsi ``"arc_sözlü"`` yazılır -- **aynı
+    mizan, aynı motor**, yalnız cins ayrı (ferman 1-R).
+
+    Dönen her öge ``(bağlam, hedef_basamak, cins)`` üçlüsüdür.
     """
     from .belirtec import basamak_sayisi, tip_vektoru
+    from .musahede import soyutlama_oku
+    from .belirtec import belirtecle
 
     rng = np.random.default_rng(tohum)
     tb = max(2, int(taban))
     bs = int(basamak) if int(basamak) > 0 else basamak_sayisi(
         int(sozluk) if int(sozluk) > 0 else tb, tb)
-    cikti: List[Tuple[List[int], int]] = []
+    P = max(1, int(pencere))
+    cikti: List[Tuple[List[int], int, str]] = []
+
+    def _zorla(bag_bas, hed_bas, cins: str) -> None:
+        """Öğretmen zorlaması: hedefin her basamağı sırayla sorulur."""
+        akis = list(bag_bas)
+        for h in hed_bas:
+            pen = akis[-P:] if len(akis) >= P else ([0] * (P - len(akis))
+                                                    + akis)
+            cikti.append(([int(x) for x in pen], int(h), cins))
+            akis.append(int(h))
+
     for g in gorevler:
         # ``except: continue`` KALDIRILDI (ferman). Bir görev dizisi
-        # kurulamıyorsa o görev sessizce örneklemden düşüyordu; yâni
-        # veri kümesi kendi kendini, sebebi söylenmeden küçültüyordu.
+        # kurulamıyorsa o görev sessizce örneklemden düşüyordu.
         dizi, hedef = gorev_dizisi(g, hedef_indis=0)
         assert len(dizi) > 0, "görev %r BOŞ dizi verdi" % getattr(g, "ad", "")
-        # **BELİRTEÇ → BASAMAK.** Akış artık basamak akışıdır.
-        akis = [int(x) for x in tip_vektoru(
-            list(dizi) + list(hedef), tb, bs)]
-        if len(akis) < pencere + 2:
-            continue
-        for _ in range(2):
-            i = int(rng.integers(pencere, len(akis)))
-            cikti.append((akis[i - pencere:i], int(akis[i])))
+        bag_bas = tip_vektoru(list(dizi), tb, bs)
+        hed_bas = tip_vektoru(list(hedef), tb, bs)
+        _zorla(bag_bas, hed_bas, "arc")
+        # ── SÖZLÜ ÇÖZÜM VARSA O DA HEDEFTİR ────────────────────────
+        soz = soyutlama_oku(getattr(g, "ad", "") or "")
+        if soz:
+            soz_bas = tip_vektoru(belirtecle(soz), tb, bs)
+            _zorla(bag_bas, soz_bas, "arc_sözlü")
         if len(cikti) >= azami:
             break
-    return cikti[:azami]
+    # Bütçe aşılırsa **rastgele** seyreltilir: baştan kesmek, ilk
+    # görevlerin hepsini alıp sonrakileri hiç görmemek olurdu.
+    if len(cikti) > int(azami):
+        se = rng.choice(len(cikti), size=int(azami), replace=False)
+        cikti = [cikti[int(i)] for i in sorted(se)]
+    return cikti
 
 
 # =====================================================================
@@ -274,7 +322,7 @@ def adayin_tuttugu(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
     top = 0.0
     ceza = 0.0
     hedef_top = 0.0
-    for bag, hedef in veri:
+    for bag, hedef, _cins in (ornek_bol(o) for o in veri):
         P, olc = kos(bag)
         top -= float(np.log(P[hedef % len(P)] + 1e-12))
         ceza += lam_mizan * mizan(olc)

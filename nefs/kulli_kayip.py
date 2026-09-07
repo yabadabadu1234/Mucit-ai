@@ -1869,7 +1869,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     toplanır. Elle konmuş ``0,25``/``0,1`` katsayıları **yoktur**:
     uzaylar arası intibak artık funktörle sağlanıyor.
     """
-    from .qegitim import belirtecleri_kodla
+    from .qegitim import belirtecleri_kodla, ornek_bol
 
     if p is not None:
         nefs.yukle(p)
@@ -1914,7 +1914,7 @@ def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
     # Genişlik TABANDIR, sözlük değil (ferman 1-N).
     E_yigin = np.stack([belirtecleri_kodla(b, nefs.ayar.veri_lifi,
                                            nefs.ayar.veri_lifi)
-                        for b, _h in veri])
+                        for b, _h, _c in (ornek_bol(o) for o in veri)])
     q, okumalar, dS = olcumlu_idrak(nefs, E_yigin, meleke_olcumu)
     if meleke_olcumu:
         hepsi += meleke_olcumleri(okumalar)

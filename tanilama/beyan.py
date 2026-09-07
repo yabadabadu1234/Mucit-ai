@@ -94,8 +94,14 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "        α = 1 (çıpa)   β = %.4f   γ = %.4f   "
               "(ikisi de ÖLÇÜLDÜ, elle yazılmadı)"
               % (ayar.lam_kategori, ayar.lam_tip),
-              "      0. ℒ_Nokta   (kısmî Born)  : %.6f   × %.2f"
+              "      0. ℒ_Nokta   (kısmî Born = −ln P) : %.6f   × %.2f"
               % (m["nokta"], ayar.lam_nokta),
+              "         İKİ CİNS, TEK FORMÜL (ferman 1-R): %s"
+              % ("  ".join("%s %s" % (k, ("%.4f" % v)
+                                      if isinstance(v, float) else v)
+                           for k, v in sorted(
+                               (m.get("nokta_cins") or {}).items()))
+                 or "cins yok -- veri katmanı üçlü vermiyor"),
               "         −ln Tr(P_hedef ρ). KÖR NLL DEĞİL: üç zırhtan "
               "sonra, küçük ağırlıkla.",
               "      1. ℒ_Uzay ≡ ℒ_Rezonans (Uhlmann) : %.6f"

@@ -701,8 +701,8 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                     kaynaklar: Optional[Sequence[Kaynak]] = None,
                     kodlama: str = "o200k_base", taban: int = 16,
                     basamak: int = 0
-                    ) -> List[Tuple[List[int], int]]:
-    """Külliyattan ``(bağlam, sonraki basamak)`` -- **boru hattıyla**.
+                    ) -> List[Tuple[List[int], int, str]]:
+    """Külliyattan ``(bağlam, hedef, cins)`` -- **boru hattıyla**.
 
     ===================================================================
     HAM METİN OKUNMAZ, PENCEREYE BAKILIR (ferman 1-O)
@@ -814,7 +814,7 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
     if not diziler:
         return []
     toplam = sum(p for _t, p in diziler) or 1.0
-    cift: List[Tuple[List[int], int]] = []
+    cift: List[Tuple[List[int], int, str]] = []
     for t, pay in diziler:
         n = int(round(int(azami) * pay / toplam))
         if n <= 0:
@@ -828,8 +828,24 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             akis = tip_vektoru(ham, tb, bs)
             if akis.size < int(pencere) + 1:
                 continue
-            cift.append(([int(x) for x in akis[:int(pencere)]],
-                         int(akis[int(pencere)])))
+            # ══════════════════════════════════════════════════════
+            #  SÖZLÜ CİNS: "SEN OLSAN NE SÖYLERDİN?" (ferman 1-R)
+            # ══════════════════════════════════════════════════════
+            #
+            # Padişahın hükmü::
+            #
+            #     "Normal sözlü verilerde şu soruyu soracağız: sen olsan
+            #     bu çıktı yerine ne söylerdin. Dolayısıyla ona girdiyi
+            #     verdiğimizde çıktının SONRAKİ VERİLERE UYMASINI
+            #     BEKLEMEYECEĞİZ, sadece onun girişte aldığı veriyle
+            #     çıkışta tekrar ürettiği veriyi kıyaslayacağız."
+            #
+            # O hâlde hedef **pencerenin kendi içindedir**: model
+            # okuduğunu yeniden üretir. Bu, sözlü veriyi eğitim/test
+            # diye bölmeyi gereksiz kılar -- her metin hem sual hem
+            # şahittir; tutulan bir "sonraki veri" yoktur.
+            cift.append(([int(x) for x in akis[:int(pencere) - 1]],
+                         int(akis[int(pencere) - 1]), "sözlü"))
     return cift[:int(azami)]
 
 
