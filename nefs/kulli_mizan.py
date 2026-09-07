@@ -533,6 +533,14 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         L_nizam = float(max(_ih)) if _ih else 0.0
     else:
         L_nizam = 0.0
+    from .mukayese import spektrum as _spektrum, vecih_kur as _vecih_kur
+    _vec = _vecih_kur([(ad, sk) for (ad, _n), sk
+                       in zip(nefs.ayar.kulli_alanlar,
+                              ileri["sektör"])]) if ileri.get("sektör") \
+        else None
+    _hal = list(ileri["hal"])[:max(3, int(a.cevrim_boyu) + 1)]
+    spek = (_spektrum(_hal, _vec, azami_n=int(a.cevrim_boyu),
+                      tohum=int(a.tohum)) if len(_hal) >= 2 else None)
     from .zirh import zirhla
     _H_zirh = np.real(rho_model).astype(float)
     _z_ham, _z = zirhla(_H_zirh, ZirhAyari())
@@ -624,7 +632,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "kategori": L_kat, "kategori_ihlâl": int(kat["ihlâl"]),
             "kategori_deneme": int(kat["deneme"]),
             "artık": artik, "artık_adı": artik_adlari,
-            "bileşen": int(artik.size),
+            "bileşen": int(artik.size), "spektrum": spek,
             "meleke": L_mel, "meleke_en_zayıf": _en_kotu[0],
             "meleke_en_kötü_hata": float(_en_kotu[1]),
             "meleke_sayısı": sum(1 for ad in artik_adlari

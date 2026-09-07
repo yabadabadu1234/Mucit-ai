@@ -50,7 +50,7 @@ from nefs.munasebet import (MunasebetAyari, munasebet_kos,
 from main.kulliyat import (kulliyat_verisi,
                            kulliyat_dokumu, kulliyat_beyani)
 from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
-                           spektrum, vecih_kur)
+                           vecih_kur)
 from nefs.qegitim import kaide_kefesi
 from nefs.usul import usul_beyani
 from nefs.suphe import suphe_beyani
@@ -622,9 +622,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         _vec = vecih_kur([(ad, s) for (ad, _n), s
                           in zip(q_son.ayar.kulli_alanlar, _sek)])
         mukayese = mukayese_beyani(
-            spektrum(list(np.asarray(q_son.y.psi, complex)[:8]),
-                     _vec, azami_n=int(ayar.cevrim_boyu),
-                     tohum=int(ayar.tohum)),
+            kefeler.get("spektrum"),
             hata_payi(list(kefeler["artık_adı"]),
                       list(np.asarray(kefeler["artık"], float))))
         _dun = [np.asarray(h, complex) for h in
