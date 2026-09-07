@@ -973,6 +973,29 @@ edilmeyecektir. Bu bir mazeret değil, **mühürlenmiş bir hudut**tur:
 
 ---
 
+## ▓▓▓ 2-K. FERMAN: MİMARİNİN FORMÜLÜ `FORMUL.md`DE DURUR ▓▓▓
+
+> *"Mesela bu transformer'ın sembolik formülü. Sen de bizim
+> mimarimizin şu anki sembolik tam formülünü sembollerle değil
+> **kelimelerle** olmak kaydıyla çıkarıp bir dosyaya mühürler misin."*
+
+* Mimarinin tam formülü `FORMUL.md`de durur ve **kelimelerle**
+  yazılır: sembol, alt indis, dizey gösterimi yoktur. Sebep,
+  formülün okunur kalması ve bir sembolün arkasına münafıklık
+  gizlenememesidir.
+* **NİYET DEĞİL, KOŞAN KOD YAZILIR.** `FORMUL.md`ye ancak `main/` ve
+  `nefs/` altında **fiilen koşan** ameliye girer. Yazılmayan koşmaz,
+  koşmayan yazılmaz.
+* **KOD DEĞİŞİRSE FORMÜL AYNI TURDA DEĞİŞİR.** Bir uzuv bağlandığında,
+  bir usul iptal edildiğinde yahut bir kefe eklendiğinde `FORMUL.md`
+  o turda güncellenir. Güncellenmeyen formül, bir sonraki oturumda
+  yalan söyler ve yalan söyleyen formül, koda bakmadan hüküm
+  verilmesine sebep olur.
+* Dosyanın sonunda **"ne iddia edilmiyor"** babı bulunur ve orada
+  icra edilmemiş her hüküm sayısıyla yazılır (ferman 5, 1-E).
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.
