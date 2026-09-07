@@ -43999,3 +43999,56 @@ Pipeline:
 """Functional fold that applies `update` sequentially over items."""
 ```
 
+
+---
+
+# FERMAN 2-H OKUMALARI -- BAŞTAN SONA OKUNAN DOSYALAR
+
+## `nefs/hafiza.py` (259 satır) -- oturum: faz/Δ_K/mihenk turu
+
+### MİMARİYLE MÜNASEBETİ
+
+Hafıza, mizanın **şartlı yan tesiridir**: `kulli_mizan` bir çevrimin
+hükmünü (TASDİK/TEVAKKUF/CERH) tayin ettikten sonra `hafiza.yaz`
+çağrılır; TEVAKKUF hâlinde ayrıca `taban_degistir` koşar. Okuma tarafında
+`zeno` belirteç üretiminde (`soyle._buda`) kör yolları budar. Hazineye
+`hazineye()` ile beş tensör olarak yazılır, `hazineden()` ile geri döner
+-- yâni hafıza ferman 1-Y'nin "devam esastır" hükmüne dâhildir.
+Kalple (taht) bağı aracısızdır: taht `Hafiza(...)` kurar, `kulli_mizan`a
+verir, sonunda `hafiza.hazineye()` ve `hafiza.beyan()` çağırır.
+
+### GARABETLER
+
+1. **SEKİZ ELLE YAZILMIŞ EŞİK (ferman 1-J ihlâli).** `zeno_esigi=0.35`,
+   `zeno_tepe=0.9`, `ayniyet=0.98`, `buhar=1e-4`, `mu_asgari=1e-3`,
+   `yazma=0.05`, `sonum=0.02` ve `_SONUM_PAYI = {0.25, 1.0, 0.10}`.
+   Hiçbiri bir keyfiyetin nispetini ölçen fonksiyondan gelmiyor;
+   hepsi kemiyet olarak koda yazılmış.
+
+2. **ÖRTÜŞME ÖLÇÜSÜ İKİ AYRI YOLDAN (ferman 1-M çift başlılığı).**
+   `taban_degistir` mukayese motorunu kullanıyor (`swap_testi`), fakat
+   `yaz`, `oku` ve `zeno` aynı ölçüyü elle `abs(np.vdot(...))**2` ile
+   hesaplıyor. Tek kaynak olmalı: hepsi `swap_testi`den geçmeli.
+
+3. **`hazineden()` SESSİZ SAYI UYDURUYOR (ferman 5 ihlâli).**
+   `u.get("hafıza_kapasitesi", 256)`, `0.05`, `0.02`, `0.35`, `0.9` --
+   hazinede üst veri yoksa hafıza uydurma sayılarla kuruluyor. Doğrusu
+   assert: yoklanamayan değere dayanan iddia kurulmaz.
+
+4. **`Kayit.yaprak` YARIM BAĞLANMIŞ (ferman 1-C/b).** `taban_degistir`
+   yaprağı ekliyor, `beyan` sayıyor; fakat `oku`, `zeno` ve `hazineye`
+   yaprağa hiç bakmıyor. Hazineye yazılmadığı için tur bitince yaprak
+   buharlaşıyor -- yâni taban değiştirme bir sonraki tura geçmiyor.
+
+5. **`Kayit.omega` ÖLÜ ALAN.** Yazılıyor, [-1,1] diye doğrulanıyor,
+   hazineye konuyor; fakat `oku`, `zeno`, `_tasfiye`, `taban_degistir`
+   hiçbiri ω'ya bakmıyor. Holonomi izi hafızada duruyor ama hükme
+   girmiyor.
+
+6. **ÜÇ AYRI O(n) TARAMA.** `yaz`ın ayniyet taraması, `oku`, `zeno` ve
+   `taban_degistir` -- dördü de kayıt listesini ayrı ayrı geziyor.
+   Kapasite yığın mertebesinde olduğu için şimdilik ucuz.
+
+7. **`rapor()` VE `__main__` BLOĞU (ferman 1-L).** Elle kurulmuş
+   hâller üstünde ölçüm yapan bir yan koşu. Tahttan çağrılmıyorsa
+   ölüdür; çağrılıyorsa ölçüsü tahtın beyanına konmalıdır.
