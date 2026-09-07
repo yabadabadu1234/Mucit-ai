@@ -13,8 +13,7 @@ ATLANAN = frozenset({0, 1, -1, 2, -2, 0.0, 1.0, -1.0, 2.0, 0.5})
 
 _HARIC = ("__pycache__", ".git", "depo", "yedek")
 
-_KOD_DEGIL = (os.path.join("idrak", "veri"), "mucit_ai_esas", "docs",
-              "local_run")
+_KOD_DEGIL = (os.path.join("idrak", "veri"), "docs")
 
 
 @dataclass
