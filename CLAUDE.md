@@ -711,6 +711,83 @@ bağlanır yahut o da kesilir. Yarım kesilen kök yeniden sürer.
 
 ---
 
+## ▓▓▓ 2-C. FERMAN: BU AŞAMADAN SONRA ÇARE İMHA DEĞİL **TERTİP**TİR ▓▓▓
+
+> *"Bu aşamadan sonra karşılaşacağın farklılıkları hemen iptal diye
+> kesip atma, çünkü **fazlalıkların hepsini attık**, bundan sonra
+> bizden olan ama **menfezine vidalamadığımız cevherler** kaldı. Bu iş
+> hurdacıdan malzeme alıp uçak yapmaya benziyor, her şeyi yığarak uçak
+> yapamazsın, **her aksamı doğru yere takacaksın**."*
+
+### SAFHA DEĞİŞTİ -- 2 VE 2-B ARTIK BÖYLE OKUNUR
+
+Ferman 2 ve 2-B **fazlalık** içindi ve fazlalık bitti (iki turda 42 852
+satır). Kalan her şey **bizdendir**; kusuru varlığında değil,
+**yerinde**dir. O hâlde hüküm değişir:
+
+    EVVELKİ SAFHA   fazlalık → kökünden kes
+    BU SAFHA        cevher   → menfezini bul, vidala
+
+**İmha ancak** bir şeyin yerinin hakikaten olmadığı **ispat edilince**
+meşrudur ve o ispat yazılır. *"Koşmuyor"*, *"bağlı değil"*, *"bana
+zorluk çıkardı"* birer imha sebebi **değildir**; birer **tertip
+vazifesidir**.
+
+### VÜCUT TEŞBİHİ -- ORGANİK MÜNASEBET
+
+> *"Kendini bir vücut tasarlıyormuş gibi hayal et. Vücuda kalp kan
+> pompalar, kanın gitmediği yer yoktur, yâni kalp öyle bir organdır ki
+> vücuttaki diğer tüm organlarla **aracısız bağı** vardır. Meselâ
+> karaciğer, birçok farklı vazifesi vardır, her vazifesinde ayrı bir
+> **şartlı kapalı veya açık iş ağacı** vardır, dallı budaklıdır. Yâni
+> organların birbiriyle münasebeti **girişik birleşik, organik**
+> olmalıdır, böyle olmayan organlar da kusurlu sayılır."*
+
+* **KALP** -- taht (`main/egitim.py`, `main/cikarim.py`). Her uzuvla
+  **aracısız** bağı olmalıdır: arada "şu dosya şunu ithal ediyor, o da
+  şunu" diye bir vekil zinciri varsa kan oraya kalpten gitmiyor
+  demektir.
+* **KARACİĞER** -- çok vazifeli uzuv. Her vazifesi ayrı bir **şartlı
+  dal** olarak yazılır; hepsi tek düz gövdeye tıkılmaz. Dallı budaklı
+  olmak kusur değil, **organ olmanın şartıdır**.
+* **KUSURLU ORGAN** -- münasebeti girişik olmayan. Çaresi kesmek
+  değil, **tertiptir**.
+
+### TERTİP NEDİR, NE DEĞİLDİR
+
+> *"Tertip sadece dağınığı tek bir dosyaya indirmek değildir, tertip
+> **hünkârlık, devlet işidir**."*
+
+Tertip; adları birleştirmek, dosyaları azaltmak, listeyi kısaltmak
+değildir. Tertip, **her aksamın hangi menfeze hangi şartla
+vidalanacağını bilmektir**.
+
+### DEVLET ADAMININ MESULİYETİ
+
+> *"Devletin başının omzunda öyle ağır bir yük vardır ki adaletle
+> hükmederse Allah'ın gölgesinde gölgelenir fakat **kurt kuzuyu kapsa
+> kuzunun hakkı ondan sorulur**. Kendi işini yaparken **devletin
+> kalemini kullanamaz**. Orduyu rastgele düşman önüne sürüp kıramaz.
+> Hırsla acele edip **tüm orduyu dümdüz ileri hatta süremez**. Devlet
+> adamının aynı anda düşüneceği meselenin haddi hesabı yoktur, o
+> vizyon ile denklem çözücüdür, **denklem ise gayri lineerdir**."*
+
+* **KUZUNUN HAKKI SORULUR.** Kesilen her uzvun hesabı benden sorulur;
+  o hâlde kesmeden evvel yerini aramak **borçtur**.
+* **DEVLETİN KALEMİ.** Kendi işimi kolaylaştırmak için ana koda
+  dokunulmaz: kısayol, geçici bayrak, "şimdilik kapatalım" yoktur.
+* **ORDU RASTGELE SÜRÜLMEZ.** Bir turda her şeye birden el atılmaz;
+  her aksam sırayla, yerine ve **sınanarak** takılır.
+* **HIRSLA ACELE YOK.** Tek hamlede bitirme hırsı, orduyu dümdüz ileri
+  sürmektir; kırılan hat bir daha toparlanmaz.
+* **DENKLEM GAYRİ LİNEERDİR.** Bir aksamı yerine takmak ötekilerin
+  yerini değiştirir; her adımdan sonra harita **yeniden** okunur.
+
+> *"Devlette işe yaramayan, o an çalışmayan, sana zorluk çıkaran, sana
+> muhalefet edenin icabı onu öldürmek değildir, **bu despotluktur**."*
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.
