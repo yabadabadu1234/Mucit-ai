@@ -1,9 +1,7 @@
-"""Solver for ARC-AGI-2 task b9e38dc0."""
 
 from __future__ import annotations
 from typing import List, Tuple, Dict, Set
 
-# Typed alias used by the DSL lambda and local helpers
 Grid = List[List[int]]
 
 
@@ -267,7 +265,7 @@ def classifyPaletteRoles(grid: Grid) -> Tuple[int, int, int]:
     background = dominant_color(grid)
     bar = barrier_color(grid, background)
     fill = fill_color(grid, background, bar)
-    return background, bar, fill  # type: ignore[return-value]
+    return background, bar, fill
 
 
 def chooseOrientation(grid: Grid, fill: int, barrier: int) -> Tuple[str, Tuple[int, int, int] | None]:

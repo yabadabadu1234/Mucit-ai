@@ -1,15 +1,9 @@
-"""Typed-DSL style solver for ARC-AGI-2 task eee78d87 (evaluation split).
-
-Refactored to match the Lambda Representation in abstractions.md while
-preserving original semantics.
-"""
 
 from typing import List, Tuple
 
 Grid = List[List[int]]
 Cell = Tuple[int, int]
 
-# Static row/column type maps and 4-value template palette.
 ROW_TYPE_MAP: List[int] = [0, 1, 1, 0, 1, 2, 3, 2, 2, 3, 2, 1, 0, 1, 1, 0]
 COL_TYPE_MAP: List[int] = ROW_TYPE_MAP
 
@@ -35,10 +29,7 @@ TEMPLATES = {
 }
 
 
-# --- Pure helpers (DSL-friendly) ---
-
 def locateForegroundCenter(grid: Grid) -> Cell:
-    # Compute center of the bounding box of non-7 cells
     coords = [(r, c) for r, row in enumerate(grid) for c, v in enumerate(row) if v != 7]
     if not coords:
         return (0, 0)

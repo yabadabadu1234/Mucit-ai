@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 8698868d (split: evaluation)."""
 
 from collections import Counter, deque
 from itertools import permutations
@@ -146,7 +145,6 @@ def _render_solution(
         top = row_idx * tile_h
         left = col_idx * tile_w
 
-        # Fill tile with background color
         for rr in range(tile_h):
             for cc in range(tile_w):
                 output[top + rr][left + cc] = base_color
@@ -171,7 +169,6 @@ def solve_8698868d(grid: Grid) -> Grid:
     components = _extract_components(grid, (base_color,))
     backgrounds, shapes = _classify_components(components)
 
-    # Guard: ensure consistent tile sizes
     if not backgrounds or len(backgrounds) != len(shapes):
         return _clone(grid)
 

@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC-AGI-2 task 62593bfd."""
 
 from __future__ import annotations
 
@@ -86,10 +85,10 @@ def _paint(arr_shape: Tuple[int, int], bg: int, info: ColorInfo, orientations: D
 
     for color in sorted(info):
         orient = orientations[color]
-        min_row = info[color]["min_row"]  # type: ignore[index]
-        max_row = info[color]["max_row"]  # type: ignore[index]
+        min_row = info[color]["min_row"]
+        max_row = info[color]["max_row"]
         delta = -min_row if orient == "top" else (h - 1) - max_row
-        for r, c in info[color]["cells"]:  # type: ignore[index]
+        for r, c in info[color]["cells"]:
             nr = r + delta
             out[nr, c] = color
 
@@ -97,10 +96,10 @@ def _paint(arr_shape: Tuple[int, int], bg: int, info: ColorInfo, orientations: D
 
 
 def _median_split(info: ColorInfo, height: int) -> Dict[int, str]:
-    min_rows = [info[color]["min_row"] for color in info]  # type: ignore[index]
+    min_rows = [info[color]["min_row"] for color in info]
     threshold = float(np.median(min_rows)) if min_rows else 0.0
     return {
-        color: ("top" if info[color]["min_row"] >= threshold else "bottom")  # type: ignore[index]
+        color: ("top" if info[color]["min_row"] >= threshold else "bottom")
         for color in info
     }
 
@@ -110,9 +109,9 @@ def _component_overlap_orientation(info: ColorInfo, height: int) -> Dict[int, st
     colors = sorted(info)
 
     for idx, color_a in enumerate(colors):
-        comps_a = info[color_a]["components"]  # type: ignore[index]
+        comps_a = info[color_a]["components"]
         for color_b in colors[idx + 1 :]:
-            comps_b = info[color_b]["components"]  # type: ignore[index]
+            comps_b = info[color_b]["components"]
             for comp_a in comps_a:
                 for comp_b in comps_b:
                     common = set(comp_a["column_counts"]) & set(comp_b["column_counts"])
@@ -130,12 +129,12 @@ def _component_overlap_orientation(info: ColorInfo, height: int) -> Dict[int, st
 
     free = [color for color, orient in orientations.items() if orient is None]
     if free:
-        min_rows = [info[color]["min_row"] for color in free]  # type: ignore[index]
+        min_rows = [info[color]["min_row"] for color in free]
         threshold = float(np.median(min_rows)) if len(min_rows) > 1 else (height - 1) / 2.0
         for color, min_row in zip(free, min_rows):
             orientations[color] = "top" if min_row >= threshold else "bottom"
 
-    return orientations  # type: ignore[return-value]
+    return orientations
 
 
 def _aggregated_overlap_orientation(info: ColorInfo, height: int) -> Dict[int, str]:
@@ -143,9 +142,9 @@ def _aggregated_overlap_orientation(info: ColorInfo, height: int) -> Dict[int, s
     colors = sorted(info)
 
     for idx, color_a in enumerate(colors):
-        counts_a = info[color_a]["column_counts"]  # type: ignore[index]
+        counts_a = info[color_a]["column_counts"]
         for color_b in colors[idx + 1 :]:
-            counts_b = info[color_b]["column_counts"]  # type: ignore[index]
+            counts_b = info[color_b]["column_counts"]
             common = set(counts_a) & set(counts_b)
             if not common:
                 continue
@@ -153,12 +152,12 @@ def _aggregated_overlap_orientation(info: ColorInfo, height: int) -> Dict[int, s
             area_a = sum(counts_a[col] for col in common)
             area_b = sum(counts_b[col] for col in common)
             if area_a == area_b:
-                if info[color_a]["min_row"] == info[color_b]["min_row"]:  # type: ignore[index]
+                if info[color_a]["min_row"] == info[color_b]["min_row"]:
                     top_color = max(color_a, color_b)
                 else:
                     top_color = (
                         color_a
-                        if info[color_a]["min_row"] > info[color_b]["min_row"]  # type: ignore[index]
+                        if info[color_a]["min_row"] > info[color_b]["min_row"]
                         else color_b
                     )
                 weight = 1
@@ -178,12 +177,12 @@ def _aggregated_overlap_orientation(info: ColorInfo, height: int) -> Dict[int, s
 
     free = [color for color, orient in orientations.items() if orient is None]
     if free:
-        min_rows = [info[color]["min_row"] for color in free]  # type: ignore[index]
+        min_rows = [info[color]["min_row"] for color in free]
         threshold = float(np.median(min_rows)) if len(min_rows) > 1 else (height - 1) / 2.0
         for color, min_row in zip(free, min_rows):
             orientations[color] = "top" if min_row >= threshold else "bottom"
 
-    return {color: orientations[color] for color in colors}  # type: ignore[return-value]
+    return {color: orientations[color] for color in colors}
 
 
 def median_split_abstraction(grid: Grid) -> Grid:

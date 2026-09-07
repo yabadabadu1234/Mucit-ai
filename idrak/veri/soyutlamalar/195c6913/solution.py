@@ -1,14 +1,12 @@
-"""Solver for ARC-AGI-2 task 195c6913 (split: evaluation)."""
 
 from collections import deque
 from typing import Any, Callable, Dict, Iterable, List, Sequence, Tuple
 
 Grid = List[List[int]]
-Anchor = Any  # anchor payload assembled by locateAnchors
+Anchor = Any
 
 
 def _iter_components(grid: Sequence[Sequence[int]]) -> Iterable[Tuple[int, List[Tuple[int, int]]]]:
-    """Yield 4-connected components as (color, cells)."""
 
     height = len(grid)
     width = len(grid[0]) if height else 0
@@ -34,8 +32,6 @@ def _iter_components(grid: Sequence[Sequence[int]]) -> Iterable[Tuple[int, List[
 
             yield color, cells
 
-
-# === DSL-style helpers ===
 
 def iterComponents(grid: Grid) -> List[Tuple[int, List[Tuple[int, int]]]]:
     return list(_iter_components(grid))
@@ -76,7 +72,6 @@ def stripPalette(grid: Grid, pattern: List[int]) -> Grid:
     components = list(_iter_components(grid))
     totals = _color_totals(grid)
 
-    # identify palette cells (2x2 legend at the top rows)
     palette_infos: List[Tuple[int, int, List[Tuple[int, int]]]] = []
     for color, cells in components:
         if len(cells) != 4:
@@ -91,7 +86,6 @@ def stripPalette(grid: Grid, pattern: List[int]) -> Grid:
     palette_infos.sort(key=lambda item: item[0])
     pattern_cells = [cells for _, _, cells in palette_infos]
 
-    # choose fill and cap colours from remaining palette
     candidates = [
         (totals[c], c)
         for c in totals
@@ -119,7 +113,6 @@ def stripPalette(grid: Grid, pattern: List[int]) -> Grid:
 
 
 def locateAnchors(grid: Grid, pattern: List[int]) -> List[Tuple[int, int, int, str, int, int, Grid]]:
-    # returns anchors as (row, boundary, start_idx, role, fill_color, cap_color, base_grid)
     if not grid or not grid[0]:
         return []
     height = len(grid)
@@ -180,7 +173,6 @@ def fold_repaint(initial: Grid, items: List[Anchor], update: Callable[[Grid, Anc
 
 
 def propagatePattern(canvas: Grid, pattern: List[int], anchor: Tuple[int, int, int, str, int, int, Grid]) -> Grid:
-    # anchor = (row, boundary, start_idx, role, fill_color, cap_color, base_grid)
     r_anchor, boundary, start_idx, role, fill_color, cap_color, base = anchor
     height = len(canvas)
     width = len(canvas[0]) if height else 0
@@ -265,7 +257,6 @@ def propagatePattern(canvas: Grid, pattern: List[int], anchor: Tuple[int, int, i
             out[row_idx][c] = cap_color
         return out
 
-    # fill the anchor row first
     filled = paint_anchor_row(canvas, r_anchor, boundary, start_idx)
     if role == "both":
         return propagate_dir(propagate_dir(filled, direction=-1), direction=1)
@@ -273,7 +264,6 @@ def propagatePattern(canvas: Grid, pattern: List[int], anchor: Tuple[int, int, i
         return propagate_dir(filled, direction=-1)
     if role == "bottom":
         return propagate_dir(filled, direction=-1)
-    # default for any middle anchors: upward only as conservative choice
     return propagate_dir(filled, direction=-1)
 
 

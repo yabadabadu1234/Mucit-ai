@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 35ab12c3."""
 
 from collections import defaultdict
 from typing import Dict, Iterable, List, Sequence, Set, Tuple, Optional, TypedDict
@@ -6,14 +5,12 @@ from typing import Dict, Iterable, List, Sequence, Set, Tuple, Optional, TypedDi
 Coord = Tuple[int, int]
 Grid = List[List[int]]
 
-# DSL helper type aliases (opaque aggregates for pipeline stages)
 Anchors = Tuple[Dict[int, List[Tuple[int, int]]], List[int], List[int]]
 Hulls = Tuple[Dict[int, Set[Tuple[int, int]]], Set[Tuple[int, int]]]
 Shifts = Dict[int, Set[Tuple[int, int]]]
 
 
 def _line_points(a: Coord, b: Coord) -> List[Coord]:
-    """Return grid coordinates along the straight segment between two points."""
     (r1, c1), (r2, c2) = a, b
     dr = r2 - r1
     dc = c2 - c1

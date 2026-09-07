@@ -1,10 +1,3 @@
-"""Abstraction experiments for ARC task e8686506.
-
-We log a few lightweight transformations that were explored while looking
-for a consistent rule.  The harness compares each abstraction against
-all known grids (train + evaluation test) and prints the match rate and
-first failure index for quick inspection.
-"""
 
 from __future__ import annotations
 
@@ -14,7 +7,6 @@ from collections import Counter
 from pathlib import Path
 from typing import Callable, Iterable, List, Sequence, Tuple
 
-# Ensure the project root is importable when executing this file directly.
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
@@ -74,7 +66,6 @@ def dedup_row_signature(grid: Grid) -> Tuple[Tuple[int, ...], ...]:
 
 
 def quantile_projection(grid: Grid, width: int = 5) -> Grid:
-    """Compress the bbox into *width* vertical stripes using majority colour."""
 
     background, min_r, max_r, min_c, max_c = bounding_box(grid)
     width_span = max_c - min_c + 1
@@ -101,7 +92,6 @@ def quantile_projection(grid: Grid, width: int = 5) -> Grid:
 
 
 def stripe_profile(grid: Grid) -> Grid:
-    """Profile that keeps only the leftmost/rightmost colours per row."""
 
     background, min_r, max_r, min_c, max_c = bounding_box(grid)
     rows: List[List[int]] = []
@@ -112,7 +102,6 @@ def stripe_profile(grid: Grid) -> Grid:
             continue
         profile = [colours[0], colours[len(colours) // 2], colours[-1]]
         rows.append([profile[2], profile[0], profile[1], profile[0], profile[2]])
-    # deduplicate consecutive rows
     result: List[List[int]] = []
     for row in rows:
         if not result or result[-1] != row:

@@ -1,8 +1,3 @@
-"""Typed DSL-conformant solver for ARC-AGI-2 task 21897d95.
-
-This retains the baseline identity behaviour while matching the
-Lambda Representation in `tasks/21897d95/abstractions.md`.
-"""
 
 from typing import List
 

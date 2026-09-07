@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 67e490f4."""
 
 from __future__ import annotations
 
@@ -228,12 +227,10 @@ def _detect_by_two_colour_scan(grid: Grid) -> Optional[Tuple[int, int, int, int,
 
 
 def abstraction_colour_bbox(grid: Grid) -> Optional[Grid]:
-    """Initial attempt: rely on colour bounding boxes to locate the motif."""
     return _build_solution(grid, _detect_by_colour_bbox)
 
 
 def abstraction_two_colour_scan(grid: Grid) -> Optional[Grid]:
-    """Refined abstraction: scan for two-colour squares with controlled component sizes."""
     return _build_solution(grid, _detect_by_two_colour_scan)
 
 

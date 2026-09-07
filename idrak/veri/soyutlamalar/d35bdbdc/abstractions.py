@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task d35bdbdc."""
 
 import json
 import sys

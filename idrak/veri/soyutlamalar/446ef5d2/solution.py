@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 446ef5d2 (evaluation split)."""
 
 from collections import defaultdict
 from typing import List, Dict, Tuple, Any
@@ -11,7 +10,6 @@ def _ceil_div(a: int, b: int) -> int:
 
 
 def _best_grid_shape(n: int) -> tuple[int, int]:
-    """Pick a near-square rows×cols grid to host n components."""
     best: tuple[int, int, int, int] | None = None
     for rows in range(1, n + 1):
         cols = _ceil_div(n, rows)
@@ -27,7 +25,6 @@ def _best_grid_shape(n: int) -> tuple[int, int]:
 
 
 def _components_by_color(grid):
-    """Return connected-component metadata keyed by color."""
     h, w = len(grid), len(grid[0])
     seen = [[False] * w for _ in range(h)]
     comps: dict[int, list[dict]] = defaultdict(list)
@@ -83,7 +80,6 @@ def _order_components(components):
     base = sorted(components, key=lambda comp: comp["minx"])
 
     if rows == 1:
-        # Single-row layouts benefit from grouping by size and sorting by vertical position.
         ordered = []
         i = 0
         while i < len(base):

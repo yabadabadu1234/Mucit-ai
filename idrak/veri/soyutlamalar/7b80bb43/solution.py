@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task 7b80bb43.
-
-Refactored to align the main entry with the typed-DSL lambda
-composition while preserving original semantics.
-"""
 
 from collections import Counter
 from typing import Dict, List, Tuple
@@ -17,10 +12,6 @@ def _copy_grid(grid: Grid) -> Grid:
 
 
 def computeForegroundMask(grid: Grid) -> Tuple[int, int, BoolMatrix]:
-    """Return (foreground_color, background_color, mask) for the dominant line color.
-
-    The mask is True where the foreground color occurs.
-    """
     height = len(grid)
     width = len(grid[0]) if height else 0
     if height == 0 or width == 0:
@@ -34,8 +25,6 @@ def computeForegroundMask(grid: Grid) -> Tuple[int, int, BoolMatrix]:
     background = counts.most_common(1)[0][0]
     foreground_candidates = [color for color in counts if color != background]
     if not foreground_candidates:
-        # Single-color input: treat it as both foreground and background; mask empty
-        # so downstream will return the original grid (all background painted).
         return background, background, [[False for _ in row] for row in grid]
 
     foreground = max(foreground_candidates, key=lambda color: counts[color])
@@ -222,7 +211,6 @@ def extendRows(
             if len_right > small_segment_limit:
                 continue
 
-            # Only bridge when any side touches a key column (i.e., has vertical support)
             left_has_key = any((c in key_columns) for c in range(s1, e1 + 1))
             right_has_key = any((c in key_columns) for c in range(s2, e2 + 1))
             if not (left_has_key or right_has_key):

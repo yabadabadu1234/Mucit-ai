@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task f560132c, refactored to align with DSL."""
 
 from __future__ import annotations
 
@@ -78,9 +77,9 @@ def classifyQuadrants(components: List[Dict[str, Any]]) -> QuadrantPlan:
     remaining = [comp for comp in others if comp is not comp_d]
     negative_dy = [comp for comp in remaining if comp["dy"] < 0]
     if negative_dy:
-        comp_c = min(negative_dy, key=lambda comp: comp["dy"])  # most negative dy
+        comp_c = min(negative_dy, key=lambda comp: comp["dy"])
     else:
-        comp_c = max(remaining, key=lambda comp: comp["dy"])    # otherwise largest dy
+        comp_c = max(remaining, key=lambda comp: comp["dy"])
     comp_b = next(comp for comp in remaining if comp is not comp_c)
 
     components_map = {"a": comp_a, "b": comp_b, "c": comp_c, "d": comp_d}
@@ -96,7 +95,6 @@ def classifyQuadrants(components: List[Dict[str, Any]]) -> QuadrantPlan:
     min_col = min(c for _, c in palette_cells)
     block: List[List[int]] = [[0, 0], [0, 0]]
     for r, c in palette_cells:
-        # colour can be taken from any component holding this cell
         for comp in components:
             if (r, c) in comp["cell_colors"]:
                 block[r - min_row][c - min_col] = comp["cell_colors"][(r, c)]
@@ -127,7 +125,7 @@ def rotate_mask(mask: Grid, times: int) -> Grid:
 
 def rotateComponentMask(plan: QuadrantPlan, label: str) -> Grid:
     comp = plan.components[label]
-    mask = trimmed_mask(comp["cells"])  # type: ignore[index]
+    mask = trimmed_mask(comp["cells"])
     return rotate_mask(mask, plan.orientations[label])
 
 
@@ -155,7 +153,6 @@ def composeCanvas(rotated_masks: Dict[str, Grid], colours: Dict[str, int]) -> Gr
     return canvas
 
 
-# The main solver is intentionally identical to abstractions.md's Lambda Representation.
 def solve_f560132c(grid: Grid) -> Grid:
     components = extractComponents(grid)
     plan = classifyQuadrants(components)

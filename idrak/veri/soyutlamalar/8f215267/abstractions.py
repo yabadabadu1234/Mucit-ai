@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task 8f215267."""
 
 from __future__ import annotations
 
@@ -28,13 +27,11 @@ PATCH_STRIPES = _solver.PATCH_STRIPES
 
 
 def load_task() -> dict:
-    """Load the ARC task description from disk."""
 
     return json.loads(TASK_PATH.read_text())
 
 
 def identity(grid: Grid) -> Grid:
-    """Return the grid unchanged (baseline sanity check)."""
 
     return [row[:] for row in grid]
 
@@ -115,13 +112,11 @@ def _infer_v1(grid: Grid, block: Tuple[int, int, int, int, int, int]) -> int:
 
 
 def striped_frames_v0(grid: Grid) -> Grid:
-    """First attempt: rely on colour diversity in the noisy patch."""
 
     return _run_pipeline(grid, _infer_v0)
 
 
 def striped_frames_v1(grid: Grid) -> Grid:
-    """Final abstraction: canonical patch lookup with fitted templates."""
 
     return _run_pipeline(grid, _infer_v1)
 
@@ -184,4 +179,3 @@ def evaluate_abstractions() -> None:
 
 if __name__ == "__main__":
     evaluate_abstractions()
-

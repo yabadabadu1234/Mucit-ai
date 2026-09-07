@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task 135a2760."""
 
 from __future__ import annotations
 
@@ -26,7 +25,6 @@ def _identity(grid: Grid) -> Grid:
 
 
 def _two_color_parity(grid: Grid) -> Grid:
-    """Enforce a simple alternating pattern for rows with exactly two inner colors."""
     result = [row[:] for row in grid]
     for row in result:
         if len(row) <= 4:

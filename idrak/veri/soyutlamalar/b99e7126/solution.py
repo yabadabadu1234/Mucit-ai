@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task b99e7126."""
 
 from __future__ import annotations
 
@@ -17,7 +16,6 @@ class MacroGrid(TypedDict):
 
 
 def splitMacroTiles(grid: Grid) -> MacroGrid:
-    """Partition the board into 4-step aligned 3x3 tiles and tally them."""
     rows = len(grid)
     cols = len(grid[0])
     cell_rows = (rows - 1) // 4
@@ -37,11 +35,9 @@ def splitMacroTiles(grid: Grid) -> MacroGrid:
 
 
 def chooseMinorityTile(macro_grid: MacroGrid) -> Optional[Tile]:
-    """Select the least frequent tile (the motif); None if degenerate."""
     freq = macro_grid["freq"]
     if len(freq) <= 1:
         return None
-    # The non-background 3x3 pattern appears only a handful of times – find it.
     return min(freq.items(), key=lambda item: item[1])[0]
 
 
@@ -51,7 +47,6 @@ def _majority_colour(tile: Tile) -> int:
 
 
 def alignMask(macro_grid: MacroGrid, motif: Optional[Tile]) -> Optional[List[Tuple[int, int]]]:
-    """Locate the macro 3x3 window and return absolute macro cells to paint."""
     if motif is None:
         return None
 
@@ -82,7 +77,6 @@ def alignMask(macro_grid: MacroGrid, motif: Optional[Tile]) -> Optional[List[Tup
 
 
 def paintMotifTiles(grid: Grid, motif: Optional[Tile], alignment: Optional[List[Tuple[int, int]]]) -> Grid:
-    """Copy the motif tile into every aligned macro cell position; no-op if unset."""
     result = [row[:] for row in grid]
     if motif is None or alignment is None:
         return result

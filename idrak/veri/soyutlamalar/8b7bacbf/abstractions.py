@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 8b7bacbf."""
 
 from collections import Counter, defaultdict, deque
 import json
@@ -23,7 +22,6 @@ def copy_grid(grid: Grid) -> Grid:
 
 
 def zero_components(grid: Grid) -> Iterable[Tuple[Component, Optional[int]]]:
-    """Yield (component, boundary_colour) pairs for 4-connected zero regions."""
 
     h, w = len(grid), len(grid[0])
     seen = [[False] * w for _ in range(h)]
@@ -60,7 +58,6 @@ def identity_baseline(grid: Grid) -> Grid:
 
 
 def fill_all_enclosed(grid: Grid) -> Grid:
-    """Fill every uniquely bounded zero component with the maximal colour."""
 
     result = copy_grid(grid)
     fill_colour = max(max(row) for row in grid)
@@ -75,7 +72,6 @@ def fill_all_enclosed(grid: Grid) -> Grid:
 
 
 def distance_filtered_fill(grid: Grid) -> Grid:
-    """Fill only cavities that are close to informative colours."""
 
     h, w = len(grid), len(grid[0])
     counts = Counter()

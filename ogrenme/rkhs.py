@@ -1,37 +1,3 @@
-"""RKHS — yeniden üreten çekirdek Hilbert uzayı ve kapalı form çözüm.
-
-Bir çekirdek ``K(x,y)`` **simetrik ve pozitif yarı-belirli** ise
-(Moore–Aronszajn) ona karşılık gelen tek bir Hilbert uzayı vardır ve
-o uzayda değerlendirme sürekli bir işleçtir:
-
-.. math::  \\langle f, K(\\cdot, x)\\rangle_{\\mathcal{H}_K} = f(x)
-
-Temsil teoremi, düzenli bir kayıp için en iyi ``f``in **veri
-noktalarındaki çekirdeklerin gerdiği** sonlu boyutlu altuzayda
-bulunduğunu söyler; oradan kapalı form çıkar:
-
-.. math::  \\bm{\\alpha}^* = (\\mathbf{K} + \\lambda I)^{-1}\\mathbf{y}
-
-Bu modülün üç ısrarı:
-
-1. **PSD'lik denetlenir, varsayılmaz.**  Bir çekirdeğin PSD olduğunu
-   iddia etmek kolaydır; ölçmek gerekir.  ``psd_mi`` rastgele nokta
-   kümelerinde Gram dizeyinin en küçük özdeğerine bakar.  (K24
-   tashihi: ``exp(iS)`` biçiminde salınımlı bir faz **PSD değildir** ve
-   orada temsil teoremi geçersizdir.)
-
-2. **Ters alınmaz, çözülür.**  ``(K+λI)^{-1}y`` yerine Cholesky ile
-   ``(K+λI)α = y`` çözülür.  Aynı cevabı verir, daha kararlıdır, ve
-   ``λ = 0``da tekilse **hata verir** -- sessizce devasa sayı üretmez.
-
-3. **Koşul sayısı raporlanır.**  ``λ`` küçüldükçe çözüm daha iyi
-   uyar ama koşul sayısı patlar; ikisi arasındaki alışveriş ölçülür.
-
-Ayrıca **Nyström** yaklaşımı: ``m ≪ N`` iniş noktasıyla Gram dizeyini
-düşük rütbeli yaklaşır.  ``O(N³)`` yerine ``O(Nm²)``.  Hızlanma ve
-**hatanın ne kadar olduğu** birlikte ölçülür; hız tek başına iddia
-edilmez.
-"""
 
 from __future__ import annotations
 
@@ -48,19 +14,7 @@ __all__ = [
 ]
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Çekirdekler
-# ══════════════════════════════════════════════════════════════════════
-
 def _kare_mesafe(X: np.ndarray, Y: np.ndarray) -> np.ndarray:
-    """``‖x−y‖²`` — açılım yerine doğrudan fark.
-
-    ``‖x‖² + ‖y‖² − 2⟨x,y⟩`` açılımı hızlıdır ama yakın noktalarda
-    **çıkarma iptali** yüzünden küçük negatif değerler üretir; sonra
-    ``exp(−γ·negatif)`` 1'i aşar ve çekirdek PSD'liğini kaybeder.
-    Burada fark doğrudan alınır: biraz daha yavaş, fakat sonuç her
-    zaman ``≥ 0``.
-    """
     X = np.atleast_2d(np.asarray(X, float))
     Y = np.atleast_2d(np.asarray(Y, float))
     d = X[:, None, :] - Y[None, :, :]
@@ -69,14 +23,12 @@ def _kare_mesafe(X: np.ndarray, Y: np.ndarray) -> np.ndarray:
 
 def gauss_cekirdegi(gama: float) -> Callable[[np.ndarray, np.ndarray],
                                              np.ndarray]:
-    """``K(x,y) = exp(−γ‖x−y‖²)`` — Sobolev/Gauss çekirdeği."""
     if gama <= 0:
         raise ValueError("γ > 0 olmalı")
     return lambda X, Y: np.exp(-gama * _kare_mesafe(X, Y))
 
 
 def laplace_cekirdegi(gama: float) -> Callable:
-    """``K(x,y) = exp(−γ‖x−y‖)``."""
     if gama <= 0:
         raise ValueError("γ > 0 olmalı")
     return lambda X, Y: np.exp(-gama * np.sqrt(np.maximum(
@@ -84,12 +36,6 @@ def laplace_cekirdegi(gama: float) -> Callable:
 
 
 def matern_cekirdegi(uzunluk: float, nu: float = 1.5) -> Callable:
-    """Matérn ``ν = 1/2, 3/2, 5/2`` — kapalı formlar.
-
-    Genel ``ν`` Bessel fonksiyonu ister; burada yalnız kapalı formu
-    olan üç hâl var ve başkası istenirse **hata verilir**, yaklaşık
-    bir şey uydurulmaz.
-    """
     if uzunluk <= 0:
         raise ValueError("uzunluk > 0 olmalı")
     if nu not in (0.5, 1.5, 2.5):
@@ -108,7 +54,6 @@ def matern_cekirdegi(uzunluk: float, nu: float = 1.5) -> Callable:
 
 
 def polinom_cekirdegi(derece: int, c: float = 1.0) -> Callable:
-    """``K(x,y) = (⟨x,y⟩ + c)^d`` — sonlu boyutlu öznitelik uzayı."""
     if derece < 1:
         raise ValueError("derece ≥ 1 olmalı")
     if c < 0:
@@ -117,25 +62,12 @@ def polinom_cekirdegi(derece: int, c: float = 1.0) -> Callable:
 
 
 def gram(K: Callable, X: np.ndarray) -> np.ndarray:
-    """``K_ij = K(x_i, x_j)`` — simetrikleştirilerek.
-
-    Simetrikleştirme yuvarlama artığını temizler; **idempotentlik
-    veya PSD'lik vermez** (bkz. K28 tashihi), yalnız simetriyi tam
-    yapar ki ``eigvalsh`` kullanılabilsin.
-    """
     G = np.asarray(K(X, X), float)
     return (G + G.T) / 2.0
 
 
 def psd_mi(K: Callable, boyut: int = 3, n: int = 24,
            deneme: int = 20, tohum: int = 0) -> Dict[str, object]:
-    """Çekirdek pozitif yarı-belirli mi? — rastgele nokta kümelerinde.
-
-    Bu bir **ispat değil, sınamadır**: hiçbir örneklemde negatif
-    özdeğer görülmemesi PSD'liği ispatlamaz.  Fakat *bir* negatif
-    özdeğer görmek, PSD **olmadığını** ispatlar.  Sınama bu asimetriyi
-    kullanır ve neticesi ona göre okunur.
-    """
     r = np.random.default_rng(tohum)
     en_kucuk = float("inf")
     for _ in range(deneme):
@@ -152,11 +84,6 @@ def psd_mi(K: Callable, boyut: int = 3, n: int = 24,
 
 
 def medyan_genislik(X: np.ndarray) -> float:
-    """``γ = 1/(2·medyan‖x_i−x_j‖²)`` — medyan uzaklık sezgisi.
-
-    Köşegen (sıfır) mesafeler **dışarıda bırakılır**; içeride
-    bırakılırsa medyan sıfıra kayar ve ``γ`` patlar.
-    """
     D = _kare_mesafe(X, X)
     ust = D[np.triu_indices_from(D, k=1)]
     if ust.size == 0:
@@ -165,13 +92,8 @@ def medyan_genislik(X: np.ndarray) -> float:
     return 1.0 / (2.0 * m) if m > 0 else 1.0
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  RKHS regresyonu
-# ══════════════════════════════════════════════════════════════════════
-
 @dataclass
 class RKHS:
-    """Çekirdek sırt regresyonu; kapalı form çözüm."""
     K: Callable
     lam: float = 1e-6
     X: Optional[np.ndarray] = field(default=None, repr=False)
@@ -179,13 +101,6 @@ class RKHS:
     kosul: float = field(default=float("nan"), init=False)
 
     def uydur(self, X: np.ndarray, y: np.ndarray) -> "RKHS":
-        """``(K + λI)α = y`` — Cholesky ile ÇÖZÜLÜR, ters ALINMAZ.
-
-        ``λ`` çok küçükse Cholesky başarısız olur ve **hata verilir**;
-        o hâlde ya ``λ`` büyütülmeli ya da veri tekrarları
-        temizlenmelidir.  Sessizce en küçük karelere düşmek, koşul
-        sayısını gizler.
-        """
         X = np.atleast_2d(np.asarray(X, float))
         y = np.asarray(y, float).reshape(X.shape[0], -1)
         if self.lam < 0:
@@ -210,11 +125,6 @@ class RKHS:
         return np.asarray(self.K(Xy, self.X), float) @ self.alfa
 
     def norm_karesi(self) -> float:
-        """``‖f*‖²_{H_K} = αᵀKα`` — skalerdir, norm çubuğu almaz.
-
-        (K19 tashihi: kaynakta ``‖αᵀKα‖`` yazılmıştı; ifade zaten
-        skaler ve ``K`` PSD olduğundan negatif olamaz.)
-        """
         if self.alfa is None:
             raise ValueError("önce uydur() çağrılmalı")
         G = gram(self.K, self.X)
@@ -225,12 +135,6 @@ def temsil_teoremi_sagmasi(K: Callable, X: np.ndarray, y: np.ndarray,
                            lam: float = 1e-3,
                            deneme: int = 200, tohum: int = 0
                            ) -> Dict[str, object]:
-    """Temsil teoremi: en iyi ``f``, çekirdeklerin gerdiği uzayda.
-
-    Sağlama: ``α*`` çözümüne **dik** yönde küçük sapmalar eklenir ve
-    düzenli kaybın arttığı gösterilir.  Artmıyorsa ya çözüm en iyi
-    değildir ya da kayıp yanlış kurulmuştur.
-    """
     X = np.atleast_2d(np.asarray(X, float))
     y = np.asarray(y, float).reshape(-1)
     G = gram(K, X)
@@ -253,36 +157,8 @@ def temsil_teoremi_sagmasi(K: Callable, X: np.ndarray, y: np.ndarray,
             "en_iyi_mi": kotu == 0, "deneme": deneme}
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Nyström
-# ══════════════════════════════════════════════════════════════════════
-
 def nystrom(K: Callable, X: np.ndarray, m: int,
             tohum: int = 0) -> Dict[str, object]:
-    """``K ≈ K_{nm} K_{mm}^{+} K_{mn}`` — ``m`` iniş noktasıyla.
-
-    Maliyet ``O(N³)`` yerine ``O(Nm² + m³)``.  ``K_{mm}`` tekil
-    olabileceğinden **sözde ters** kullanılır; küçük özdeğerler
-    kırpılır ve kırpma eşiği raporlanır.
-
-    Dönen sözlükte hem hızlanma hem **hata** var: biri diğeri olmadan
-    okunmamalı.
-
-    **Ölçülen iki kaide:**
-
-    1. Düzgün (analitik) çekirdeklerde Gram dizeyinin sayısal rütbesi
-       ``N``den çok küçüktür -- Gauss çekirdeği için ``N=900``de 249
-       ölçüldü.  ``m`` bu rütbeyi aşınca ``K_mm`` de tekilleşir ve
-       hatayı artık ``m`` değil kırpma eşiği belirler; hata ``m`` ile
-       **tekdüze düşmez**.
-
-    2. ``m = N`` iken bile hata sıfıra inmez.  Sebebi atılan özdeğer
-       kütlesi **değildir**: ``N=200``lük bir örnekte atılan kütle
-       ``6e-14`` iken hata ``5.2e-5`` ölçüldü.  Fark, eşiğin hemen
-       üstünde kalan küçük özdeğerlerin **tersinin alınmasından**
-       gelen büyütmedir.  Yani hata bir yaklaşım hatası değil, bir
-       **koşullanma** hatasıdır ve iniş noktası eklemek onu gidermez.
-    """
     X = np.atleast_2d(np.asarray(X, float))
     N = X.shape[0]
     if not 1 <= m <= N:
@@ -307,10 +183,6 @@ def nystrom(K: Callable, X: np.ndarray, m: int,
         "m": m, "N": N,
     }
 
-
-# ══════════════════════════════════════════════════════════════════════
-#  Gösterim
-# ══════════════════════════════════════════════════════════════════════
 
 def _gosterim() -> str:
     import time

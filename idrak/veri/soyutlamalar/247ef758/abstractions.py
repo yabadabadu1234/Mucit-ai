@@ -1,4 +1,3 @@
-"""Abstractions explored while solving ARC task 247ef758."""
 
 from __future__ import annotations
 
@@ -27,13 +26,11 @@ def deep_copy(grid: Grid) -> Grid:
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Leave the grid untouched (baseline)."""
 
     return deep_copy(grid)
 
 
 def gravity_drop_abstraction(grid: Grid) -> Grid:
-    """Initial attempt: align left shapes to top-row markers then drop."""
 
     work = deep_copy(grid)
     height = len(work)
@@ -51,7 +48,7 @@ def gravity_drop_abstraction(grid: Grid) -> Grid:
     for color, cells in color_shapes.items():
         if color not in top_columns:
             continue
-        anchor = min(cells)  # approx top-most cell
+        anchor = min(cells)
         relative = [(r - anchor[0], c - anchor[1]) for r, c in cells]
         for target_col in sorted(top_columns[color]):
             col_shift = target_col - anchor[1]
@@ -65,7 +62,6 @@ def gravity_drop_abstraction(grid: Grid) -> Grid:
 
 
 def border_marker_cartesian_abstraction(grid: Grid) -> Grid:
-    """Final abstraction: Cartesian placement from top-row and last-column markers."""
 
     work = deep_copy(grid)
     height = len(work)
@@ -180,7 +176,7 @@ class SplitOutcome:
     total: int
     first_fail: int | None
 
-    def __str__(self) -> str:  # pragma: no cover - helper stringify
+    def __str__(self) -> str:
         if self.total == 0:
             return "no-targets"
         ratio = self.solved / self.total
@@ -234,10 +230,9 @@ ABSTRACTIONS: dict[str, Abstraction] = {
 }
 
 
-def main() -> None:  # pragma: no cover - manual harness
+def main() -> None:
     evaluate_abstractions(ABSTRACTIONS)
 
 
-if __name__ == "__main__":  # pragma: no cover - manual harness
+if __name__ == "__main__":
     main()
-

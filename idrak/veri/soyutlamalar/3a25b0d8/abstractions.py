@@ -1,19 +1,3 @@
-"""Abstraction experiments for ARC task 3a25b0d8.
-
-This script captures three stages of the solver that we iterated through:
-
-1. `expanded_only` – just crop to the interesting columns/rows and add
-   background padding.
-2. `band_adjust` – adds the colour-specific band heuristics (widen 7,
-   suppress singleton 4s, etc.) but stops before the final row-level
-   synthesis.
-3. `final_solver` – the finished solver from
-   `analysis.arc2_samples.3a25b0d8`.
-
-The harness evaluates each abstraction on the training set and reports
-match counts plus the first failing example index. Test inputs do not ship
-with ground-truth outputs, so they are omitted from the accuracy report.
-"""
 
 from __future__ import annotations
 

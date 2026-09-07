@@ -1,44 +1,3 @@
-"""SABİT TEFTİŞİ -- elle tayin edilmiş her sayı görünür olsun.
-
-    python -m main.egitim sabit          # bütün liste
-    python -m main.egitim sabit nefs     # yalnız bir dizin
-
-===================================================================
-NİÇİN VAR
-===================================================================
-
-Padişahın hükmü:
-
-    *"Elle tayin ettiğin tüm sabit değişkenleri mutlaka bir fonksiyona
-    bağlamak ya da değerini değiştirmek üzere evvela bana liste halinde
-    hızlıca sunmak."*
-
-Bir sabit üç hâlden birindedir ve üçü **birbirinden ayrılmalıdır**:
-
-=============  ==================================================
-``AYARDA``     Bir ``dataclass`` alanıdır: dışarıdan değiştirilebilir.
-               Meşrudur; yeri de değeri de bellidir.
-``İLAN``       Modül seviyesinde ``BÜYÜK_HARF`` bir sabittir. Görünür
-               fakat çağrı yerinden değiştirilemez.
-``GÖMÜLÜ``     Fonksiyon gövdesinde çıplak bir sayıdır. **En tehlikeli
-               olan budur**: kimse görmez, kimse değiştiremez, ve
-               niçin o değer olduğu çoğu zaman yazılı değildir.
-=============  ==================================================
-
-Liste ``ast`` ile **koddan** çıkarılır; hafızadan yazılmaz, dolayısıyla
-eksik olamaz. Bir sabit eklenirse burada kendiliğinden görünür.
-
-===================================================================
-NE SAYILMAZ (VE NİÇİN)
-===================================================================
-
-``0``, ``1``, ``-1``, ``2`` ve ``0.0``/``1.0`` gömülü sayılardan
-sayılmaz: bunlar ayar değil, cebrin kendisidir (indis, boyut, birim,
-işaret). Onları listeye katmak listeyi okunamaz yapardı ve okunamayan
-liste, olmayan listedir.
-
-Şerh satırları ve ``__all__`` gibi meta yapılar da sayılmaz.
-"""
 from __future__ import annotations
 
 import ast
@@ -50,32 +9,24 @@ __all__ = ["Sabit", "KOK", "ATLANAN", "tara", "ozet", "rapor"]
 
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-#: Cebrin kendisi olan sayılar -- ayar değildirler.
 ATLANAN = frozenset({0, 1, -1, 2, -2, 0.0, 1.0, -1.0, 2.0, 0.5})
 
-#: Taranmayan dizinler. ``idrak/veri`` ARC görevlerinin
-#: tarifidir (VERİ, kod değil) ve ``mucit_ai_esas`` ilham kaynağıdır.
-#: Onlardaki sabitleri saymak, olmayan bir borç göstermek olurdu --
-#: ölçüldü: 45 933 satırlık sahte borç.
 _HARIC = ("__pycache__", ".git", "depo", "yedek")
 
-#: Kod sayılmayan yollar (padişahın hükmü: *"ARC veri dosyalarını
-#: koddan sayman hata, onlar kalacak, senin onlarla işin yok."*).
 _KOD_DEGIL = (os.path.join("idrak", "veri"), "mucit_ai_esas", "docs",
               "local_run")
 
 
 @dataclass
 class Sabit:
-    """Tek bir elle tayin edilmiş değer."""
 
     dosya: str
     satir: int
-    kap: str                 # hangi sınıf/fonksiyon içinde
+    kap: str
     ad: str
     deger: str
-    cins: str                # AYARDA / İLAN / GÖMÜLÜ
-    serh: bool               # üstünde ``#:`` yahut şerh var mı
+    cins: str
+    serh: bool
 
 
 def _deger(d: ast.AST) -> Optional[str]:
@@ -122,7 +73,6 @@ def _dosyalar(alt: Optional[str] = None) -> List[str]:
 
 
 def tara(alt: Optional[str] = None) -> List[Sabit]:
-    """Bütün sabitleri ``ast`` ile çıkar. Tahmin yok, kaynak var."""
     cikti: List[Sabit] = []
     for yol in _dosyalar(alt):
         bagil = os.path.relpath(yol, KOK)
@@ -141,7 +91,6 @@ def tara(alt: Optional[str] = None) -> List[Sabit]:
                 if isinstance(c, ast.ClassDef):
                     gez(c, c.name, True)
                 elif isinstance(c, (ast.FunctionDef, ast.AsyncFunctionDef)):
-                    # Fonksiyonun VARSAYILAN ARGÜMANLARI da elle tayindir.
                     for arg, var in zip(
                             c.args.args[len(c.args.args)
                                         - len(c.args.defaults):],
@@ -204,7 +153,7 @@ def ozet(alt: Optional[str] = None) -> Dict[str, Any]:
             "gömülü_dosya": sorted(dosya.items(), key=lambda t: -t[1])}
 
 
-def rapor(alt: Optional[str] = None, hadd: int = 60) -> str:  # pragma: no cover
+def rapor(alt: Optional[str] = None, hadd: int = 60) -> str:
     o = ozet(alt)
     s: List[Sabit] = o["sabit"]
     say = o["sayım"]
@@ -252,6 +201,6 @@ def rapor(alt: Optional[str] = None, hadd: int = 60) -> str:  # pragma: no cover
     return "\n".join(y)
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     import sys
     print(rapor(sys.argv[1] if len(sys.argv) > 1 else None))

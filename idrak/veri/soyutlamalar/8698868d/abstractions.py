@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 8698868d."""
 
 from __future__ import annotations
 
@@ -38,7 +37,7 @@ def _load_solver_module():
     if spec is None or spec.loader is None:
         raise RuntimeError("Unable to import solver module")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)  # type: ignore[assignment]
+    spec.loader.exec_module(module)
     return module
 
 
@@ -109,4 +108,3 @@ def run_abstractions() -> None:
 
 if __name__ == "__main__":
     run_abstractions()
-

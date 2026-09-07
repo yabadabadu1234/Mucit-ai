@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 898e7135 (evaluation split)."""
 
 from collections import Counter, defaultdict, deque
 from math import gcd, sqrt
@@ -9,7 +8,6 @@ Coord = Tuple[int, int]
 
 
 def _dominant_color(grid: Grid) -> int:
-    """Return the most common nonzero color as the background color."""
     freq = Counter(val for row in grid for val in row if val != 0)
     return max(freq, key=lambda k: freq[k])
 
@@ -20,7 +18,6 @@ def _bbox_of_color(grid: Grid, color: int) -> Tuple[int, int, int, int]:
 
 
 def _zero_components_within_bbox(grid: Grid, bbox: Tuple[int, int, int, int]) -> List[List[Coord]]:
-    """Find 4-connected zero components restricted to the given bounding box."""
     r0, r1, c0, c1 = bbox
     h, w = r1 - r0 + 1, c1 - c0 + 1
     seen = [[False] * w for _ in range(h)]
@@ -45,7 +42,6 @@ def _zero_components_within_bbox(grid: Grid, bbox: Tuple[int, int, int, int]) ->
 
 
 def _color_components(grid: Grid, skip_color: int) -> List[Tuple[int, List[Coord]]]:
-    """Return 4-connected components for all colors except the skip_color."""
     h, w = len(grid), len(grid[0])
     seen = [[False] * w for _ in range(h)]
     comps: List[Tuple[int, List[Coord]]] = []
@@ -70,7 +66,6 @@ def _color_components(grid: Grid, skip_color: int) -> List[Tuple[int, List[Coord
 
 
 def _scale_grid(coarse: Grid, factor: int) -> Grid:
-    """Upscale a coarse grid by the given factor via nearest-neighbour copy."""
     h, w = len(coarse), len(coarse[0])
     upscaled = [[0] * (w * factor) for _ in range(h * factor)]
     for r in range(h):
@@ -95,13 +90,10 @@ def solve_898e7135(grid: Grid) -> Grid:
 p = solve_898e7135
 
 
-# === DSL-friendly helper wrappers (pure, no side effects) ===
-
 ComponentData = Dict[str, Grid]
 
 
 def extractComponents(grid: Grid) -> List[ComponentData]:
-    # Represent components abstractly by carrying the original grid once.
     return [{"grid": grid}]
 
 
@@ -118,8 +110,6 @@ def expandComponent(component: ComponentData, scale: int) -> Grid:
 def composeUpscaledGrid(upscaled: List[Grid]) -> Grid:
     return upscaled[0]
 
-
-# === Original logic, factored as pure helpers ===
 
 def _infer_scale_from_grid(grid: Grid) -> int:
     bg = _dominant_color(grid)

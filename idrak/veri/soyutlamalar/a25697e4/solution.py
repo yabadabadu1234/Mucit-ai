@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task a25697e4 (evaluation split)."""
 
 from __future__ import annotations
 
@@ -157,8 +156,6 @@ def _place_third_color(out_grid: Grid, params):
     for r, c in chosen:
         out_grid[r][c] = third
 
-
-# === Typed-DSL friendly helpers ===
 
 @dataclass(frozen=True)
 class ColourStats:

@@ -1,73 +1,3 @@
-"""
-MANTIĞA SADAKAT ÖLÇÜMÜ -- kütük H102'nin açık borcunun kapatılması.
-
-Kullanıcı hükmü (H102): *"Mantığa sadık kalmak, tüm melekelerin tüm
-adımları boyunca asla sadakatten ayrılmaması gereken bir şeydir;
-melekelerden başka sistemde ne varsa onun da sadık kalması gerekir.
-Mantık yürütme ise arada sırada tercih edilecek bir stratejidir."*
-
-Ben *"bu şu hâliyle koda geçmez, tarifi lâzım"* diye itiraz etmiştim.
-Kullanıcının getirdiği vesika tarifi verdi ve tarif **doğrudur**:
-
-> Mantığa sadakat, zihnin bir şeyi *hesaplaması* değil; hiçbir hesabın
-> mantık dışı bir duruma taşmasına izin vermeyen bir **kod uzayı**
-> (stabilizer / gauge alt-uzayı) olmasıdır.
-
-===================================================================
-TENKİT: vesikanın şartı FAZLA KUVVETLİ (H100 gereği)
-===================================================================
-
-Vesika şunu yazıyor::
-
-    [𝒪_j , Ŝ_mantık] = 0        ∀ j ∈ {1..41}
-
-Bu **merkezleyici** (centralizer) şartıdır ve modeli felç eder:
-``n`` kübitte ``n`` bağımsız üreteçli bir stabilizer grubunun
-merkezleyicisi (fazlar hariç) grubun kendisidir. O hâlde melekeler
-stabilizer grubunun dışına hiç çıkamaz, yani **hiçbir şey öğrenemez**.
-
-Doğrusu **normalleştirici** (normalizer) şartıdır::
-
-    U† Ŝ U ∈ ⟨Ŝ⟩              (kod uzayını kendine götürmek)
-
-Komütasyon bunun hususî ve kısır hâlidir. Normalleştirici şartı Clifford
-tipi zenginliğe izin verir: meleke kod uzayının **içinde** serbestçe
-dolaşır, dışına taşamaz. Aranan da budur.
-
-===================================================================
-ÖLÇÜLEN ŞART -- somut ve kırmızı yanabilir (H90)
-===================================================================
-
-Soyut stabilizer yerine, bu mimarinin kendi alanlarında tarif edilmiş
-**üç mantık şartı** ölçülür. Üçü de küllî hüküm bloğundan, H88'de
-düzeltilip tam dalgayla doğrulanmış ``blok_dagilimi`` ile okunur:
-
-1. **Tenakuzsuzluk** -- ``P(tasdik=1 ∧ nakz=1)``.
-   Bir hüküm hem mühürlenip hem nakzedilemez. Bu ihtimalin ağırlığı
-   **tenakuz kütlesi**dir ve sıfıra yakın olmalıdır.
-
-2. **Ayniyet** -- ``P(tasdik₀ ≠ tasdik₁)``.
-   Aynı alanın kübitleri aynı hükmü taşır; ayrışmaları, hükmün kendi
-   içinde bölünmesidir.
-
-3. **Kâfi sebep** -- ``P(tasdik=1 ∧ mîzân=0)``.
-   Delilsiz mühür. Tasdik uyanıkken mîzân bütünüyle uykudaysa hüküm
-   dayanaksızdır.
-
-**Sadakat ölçüsü** bir melekenin bu üç kütleyi **artırıp
-artırmadığıdır**. Artırmayan meleke sadıktır; artıran değildir.
-
-===================================================================
-NİÇİN BU BİR OKUMA DEĞİL
-===================================================================
-
-Kütük H31 akış içinde okumayı yasaklar. Burada yasak çiğnenmiyor:
-bu modül `tanilama/` altındadır ve **hâricî bir âlettir**, tıpkı
-`tanilama/haraplama.py` gibi. Akışın kendisi hiçbir şey okumaz; ölçen,
-dışarıdan bakan tabiptir. Sadakatin akış **içinde** icrası ayrı bir
-iştir ve üniter olmak zorundadır (tenakuzlu kolun faz sönümlemesi);
-o henüz kurulmamıştır ve kurulmuş gibi de yapılmamaktadır.
-"""
 from __future__ import annotations
 
 import time
@@ -83,100 +13,62 @@ from nefs.zirh import vicdan
 
 __all__ = ["sadakat_olcusu", "haritala", "rapor"]
 
-# Bu âlet iki müstakil temsili de kullanır ve ikisi de EVVELCE BEYLİKTİ:
-#   * `nefs/kod_uzayi.py` → `kuantum/stabilizer.py` (hüküm bloğunun
-#     Clifford temsili; MPS'i denetleyen ikinci hakikat kaynağı)
-#   * `nefs/kopru.py`     → `token_uzaylari/morfizm.py` (kodlamanın
-#     funktör olarak sıhhati: tersinirlik ve izometri)
 
-
-# =====================================================================
 def _blok_bitleri(kac: int) -> np.ndarray:
-    """``blok_dagilimi``nin indis düzenindeki bit dizeyi ``(2^kac, kac)``.
-
-    Düzen **ölçülerek** tayin edilir, varsayılmaz: ``rho`` yeniden
-    dizilirken ilk kübit en anlamlı bit olur. Yine de bu, sınamayla
-    doğrulanır (``_duzeni_dogrula``).
-    """
     n = 1 << kac
     x = np.arange(n)
     return np.stack([(x >> (kac - 1 - j)) & 1 for j in range(kac)], axis=1)
 
 
 def _duzeni_dogrula() -> bool:
-    """Bit düzeni hakikaten öyle mi? Bilinen bir durumla sınanır.
-
-    ``bas`` kübiti ``|1⟩``, gerisi ``|0⟩`` olan bir durumda ağırlık,
-    ilk kübitin en anlamlı bit olduğu indiste toplanmalıdır.
-    """
     from nefs.zihin_durumu import donme
 
     ayar = QAyar()
     q = QYazmac(1, ayar)
     bas = q.kulli("tasdik", 0)
-    q.tek(bas, donme(0.5 * np.pi))          # |0> → |1>
+    q.tek(bas, donme(0.5 * np.pi))
     P = np.asarray(q.blok_dagilimi(bas, 3), float).ravel()
-    return bool(np.argmax(P) == 4)          # 100 (ikilik) = 4
+    return bool(np.argmax(P) == 4)
 
 
 def _kutleler(q: QYazmac) -> Dict[str, float]:
-    """Üç mantık şartının ihlâl kütlesi -- hepsi ``[0,1]``."""
     bas = q.kulli("tasdik", 0)
-    kac = 5                                  # tasdik(2) + sukut(1) + nakz(2)
+    kac = 5
     P = np.asarray(q.blok_dagilimi(bas, kac), float).ravel()
     b = _blok_bitleri(kac)
     tas0, tas1, nak0 = b[:, 0], b[:, 1], b[:, 3]
 
-    # 1) tenakuzsuzluk: hem mühürlenmiş hem nakzedilmiş olamaz
     tenakuz = float(P[(tas0 == 1) & (nak0 == 1)].sum())
-    # 2) ayniyet: aynı alanın kübitleri ayrışmamalı
     ayniyet = float(P[tas0 != tas1].sum())
 
-    # --- TESADÜF TABANI: ham sayı tek başına YANILTIR.
-    # İki bağımsız ve yansız kübit zaten ``P(ikisi de 1) = 0,25`` ve
-    # ``P(ayrışık) = 0,50`` verir. O hâlde ölçülmesi gereken şey ham
-    # kütle değil, **bağımsızlık varsayımının üstündeki fazlalıktır**.
-    # Fazlalık sıfıra yakınsa hüküm şudur: alanlar mantıkî şartı ne
-    # çiğniyor ne gözetiyor -- yapısızlar. (H90: ölçüt kırmızı
-    # yanabilmeli, ama yeşilin nerede olduğu da bilinmeli.)
     p_tas0 = float(P[tas0 == 1].sum())
     p_tas1 = float(P[tas1 == 1].sum())
     p_nak0 = float(P[nak0 == 1].sum())
     tenakuz_taban = p_tas0 * p_nak0
     ayniyet_taban = p_tas0 * (1.0 - p_tas1) + (1.0 - p_tas0) * p_tas1
 
-    # 3) kâfi sebep: tasdik uyanıkken mîzân bütünüyle uykuda olamaz
     mb = q.kulli("mizan", 0)
     _, mk = q._alan["mizan"]
     Pm = np.asarray(q.blok_dagilimi(mb, mk), float).ravel()
-    mizan_uyku = float(Pm[0])                # bütün mîzân kübitleri |0>
+    mizan_uyku = float(Pm[0])
     tasdik_uyanik = float(P[tas0 == 1].sum())
-    kafi_sebep = tasdik_uyanik * mizan_uyku  # bağımsızlık yaklaşığı
+    kafi_sebep = tasdik_uyanik * mizan_uyku
 
     return {"tenakuz": tenakuz, "ayniyet": ayniyet,
             "kâfi_sebep": kafi_sebep,
             "tenakuz_fazla": tenakuz - tenakuz_taban,
             "ayniyet_fazla": ayniyet - ayniyet_taban,
             "toplam": tenakuz + ayniyet + kafi_sebep,
-            # Hüküm bu satıra bakar: bağımsızlık tabanının üstündeki
-            # fazlalık. Sıfıra yakınsa alanlar YAPISIZDIR.
             "fazla": abs(tenakuz - tenakuz_taban)
                      + abs(ayniyet - ayniyet_taban)}
 
 
-# =====================================================================
 def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
                    ayar: Optional[QAyar] = None, kalp: bool = True
                    ) -> List[Dict[str, object]]:
-    """Akışı meleke meleke koştur ve her adımda üç kütleyi ölç.
-
-    Dönen listede her satır bir melekedir ve ``Δ`` sütunları o melekenin
-    kütleleri **ne kadar artırdığını** söyler. Artı işaret sadakatsizliktir.
-    """
     ayar = ayar or QAyar(tohum=tohum)
     rng = np.random.default_rng(tohum)
     belirtec = [int(x) for x in rng.integers(0, sozluk, size=satir)]
-    # Genişlik TABANDIR, sözlük değil (ferman 1-N).
     E = belirtecleri_kodla(belirtec, ayar.veri_lifi, ayar.veri_lifi)
 
     nefs = QNefs(tohum, ayar, sadakat=kalp)
@@ -192,7 +84,7 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
         t0 = time.perf_counter()
         sicil[no].kosu(q, nefs.p)
         if kalp:
-            vicdan(q, nefs.p, ne="işaret")      # KALP: muafiyetsiz, her adımda
+            vicdan(q, nefs.p, ne="işaret")
         simdi = _kutleler(q)
         satirlar.append({
             "adım": adim, "no": no, "ad": sicil[no].ad,
@@ -209,7 +101,7 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
         })
         onceki = simdi
     if kalp:
-        vicdan(q, ne="intaç")                  # işaretler burada söner
+        vicdan(q, ne="intaç")
         son = _kutleler(q)
         satirlar.append({"adım": len(satirlar), "no": 0, "ad": "«sadakat intâcı»",
                          "tenakuz": son["tenakuz"], "ayniyet": son["ayniyet"],
@@ -227,7 +119,6 @@ def sadakat_olcusu(tohum: int = 0, satir: int = 6, sozluk: int = 16,
 
 def haritala(satirlar: Sequence[Dict[str, object]], esik: float = 1e-9
              ) -> Dict[str, object]:
-    """Sadık / sadakatsiz melekelerin dökümü."""
     sadik = [r for r in satirlar if float(r["Δtoplam"]) <= esik]
     sadakatsiz = sorted((r for r in satirlar if float(r["Δtoplam"]) > esik),
                         key=lambda r: -float(r["Δtoplam"]))
@@ -263,8 +154,6 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
                      " kâfi %+.2e)"
                      % (x["no"], x["ad"], x["Δtoplam"], x["Δtenakuz"],
                         x["Δayniyet"], x["Δkâfi"]))
-    # --- İKİNCİ TEMSİLLE YÜZLEŞTİRME (H88'in dersi: karşılaştıracak
-    # ikinci bir temsil olmadığı için kusur aylarca görünmedi).
     try:
         from nefs.zirh import muhru_stabilizerle_yuzlestir
         from nefs.melekeler import QNefs as _QN
@@ -278,10 +167,9 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
               " tvd = %.4f" % (yz["kübit"], yz["tvd"]),
               "  kapsanan şart: %d   kapsanmayan: %s"
               % (yz["kapsanan_şart"], yz["kapsanmayan"])]
-    except Exception as e:                       # pragma: no cover
+    except Exception as e:
         s += ["", "STABİLİZER YÜZLEŞTİRMESİ kurulamadı: %s" % e]
 
-    # --- KODLAMANIN FUNKTÖR SIHHATİ
     try:
         from nefs.musahede import kopru
         kk = kopru()
@@ -290,7 +178,7 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
               % (kk["tersinir"], kk["çarpışma"], kk["izometri"],
                  kk["mesafe_korelasyonu"]),
               "  " + str(kk["hüküm"])]
-    except Exception as e:                       # pragma: no cover
+    except Exception as e:
         s += ["", "FUNKTÖR KÖPRÜSÜ kurulamadı: %s" % e]
 
     son = r[-1] if r else None
@@ -307,7 +195,6 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
               "Fazlalık sıfıra yakınsa mana şudur: küllî hüküm alanları",
               "mantıkî şartı ne çiğniyor ne gözetiyor -- YAPISIZLAR.",
               "Bu, H94'teki 'kalp yok' hükmünün ikinci bir delilidir."]
-    # --- KALPLİ / KALPSİZ MUKAYESESİ: kalp söküldüğünde ne oluyor?
     ry = sadakat_olcusu(tohum=tohum, satir=satir, kalp=False)
     sy, sk = ry[-1], r[-1]
     s += ["", "=" * 62,
@@ -330,5 +217,5 @@ def rapor(tohum: int = 0, satir: int = 6) -> str:
     return "\n".join(s)
 
 
-if __name__ == "__main__":   # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

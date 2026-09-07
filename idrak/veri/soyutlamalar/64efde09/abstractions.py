@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC-AGI-2 task 64efde09."""
 
 from __future__ import annotations
 
@@ -181,7 +180,6 @@ def main() -> None:
         failure_info = first_failure if first_failure != -1 else "-"
         print(f"[train] {name:>13}: {status} (first miss: {failure_info})")
         if test:
-            # We cannot score against hidden outputs; we just ensure the pipeline runs.
             for idx, item in enumerate(test):
                 _ = fn(item["input"])
             print(f"[test ] {name:>13}: evaluated {len(test)} inputs")

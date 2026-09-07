@@ -1,48 +1,3 @@
-"""
-KÜLLİYAT -- HARİCÎ METİN KAYNAKLARI, DEPOYA GİRMEDEN
-
-===================================================================
-PADİŞAHIN HÜKMÜ
-===================================================================
-
-    "Githubdan Risale-i Nur diyanet reposunu bizim repoya veri olarak
-    ekle. Yine githubdan Türkçe İslami kaynaklar araştır ve repoya ekle.
-    Bilhassa fıkıh hadis tefsir usulleri, Tefsir Hadis Tarih
-    külliyatları, Edebi külliyatlar. İngilizce olarak da Ultramath veri
-    setlerini repoya koy. Ya da kodu öyle yaz ki gidip oradan veri çekip
-    burada eğitime katsın ama dosyaları repoya tümden koymasın."
-
-İkinci yol seçildi ve sebebi ölçüdür: Risale-i Nur külliyatının tek
-başına metni **13,8 MB**, deposu **118 MB**dır. Bunu kod deposuna
-gömmek, her klonlamada yüz megabaytı taşımak demektir. Külliyat
-``depo/kulliyat/`` altına **çekilir**, oraya gömülmez.
-
-===================================================================
-BU MAKİNEDE NE MÜMKÜN -- ÖLÇÜLDÜ, GİZLENMİYOR
-===================================================================
-
-Bu oturumun ağ siyaseti doğrudan HTTPS'i **reddediyor** (``CONNECT``a
-403). Ölçüldü::
-
-    api.github.com   → 403 (tünel reddedildi)
-    huggingface.co   → 000 (tünel kurulamadı)
-
-Fakat oturumun **git vekili** umumi GitHub depolarının anonim
-okumasına hizmet ediyor ve o yol **açık**: ``git clone`` koşuyor.
-O hâlde:
-
-* **GitHub deposu olan kaynaklar çekilebilir** ve çekiliyor.
-* **HuggingFace veri setleri çekilemiyor** (UltraMath dâhil). Bu bir
-  tercih değil, ölçülmüş bir engeldir (ferman 1-F): engel yazılır,
-  yerine bir şey konursa ne konduğu da yazılır.
-
-===================================================================
-KAYNAK CETVELİ -- HER SATIR YOKLANDI
-===================================================================
-
-Aşağıdaki cetvelin her satırı ya **fiilen klonlandı ve sayıldı**, ya da
-niçin alınamadığı yazıldı. "Var sanıyorum" diye bir satır yoktur.
-"""
 from __future__ import annotations
 
 import json
@@ -57,52 +12,20 @@ __all__ = ["Kaynak", "KAYNAKLAR", "kulliyat_cek", "kulliyat_verisi",
            "mucit_ac", "hf_boru", "yer_ac", "bos_alan",
            "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
 
-#: Külliyatın indiği yer. **Depoya girmez** (``.gitignore``).
 KULLIYAT_DIZINI = os.environ.get("MUCIT_KULLIYAT", "depo/kulliyat")
-
-#: **BUDAMA VE DİSK BÜTÇESİ İMHA EDİLDİ (ferman 1-O).**
-#:
-#:     "Sana ne oluyor da indirdiğin veriseti sınırlıyorsun? İnen şey
-#:     githuba inecek, sen de ineni kendi cpu'na tek hamlede paldır
-#:     küldür almayacaksın, boru hattı kurup işini bitire bitire
-#:     alacaksın ama verisetinin tamamı o repoda duracak!"
-#:
-#: Burada ``DISK_PAYI``, ``disk_butcesi()`` ve ``_buda()`` duruyordu:
-#: 23 GB'lık çekimin 11,2 GB'ını **siliyorlardı**. O bir çare değil,
-#: kusurun kendisiydi -- kabın darlığı **akışla** çözülür, veriyi
-#: kesmekle değil. Kaynak olduğu gibi durur; kapta tutulan şey ancak
-#: o an okunan **penceredir** (``mucit_cevir`` öbek öbek çevirir,
-#: ``mucit_ac`` mmap ile bakar).
 
 
 @dataclass(frozen=True)
 class Kaynak:
-    """Bir metin kaynağı. ``dal`` boşsa deponun kendi varsayılanı."""
 
     ad: str
-    depo: str                 # "sahip/isim"
-    yol: str                  # depo içinde metnin bulunduğu dizin
-    #: Metin sayılan uzantılar. Tek dize de verilebilir.
+    depo: str
+    yol: str
     uzanti: Any = ".txt"
     dal: str = ""
-    #: **GITHUB RELEASE VARLIĞI.** Doluysa kaynak ``git clone`` ile
-    #: değil, ``https://github.com/<depo>/releases/download/<surum>/
-    #: <varlik>`` adresinden indirilir. HuggingFace'e doğrudan şümul
-    #: kapalı olduğu için (ferman 1-K) veri oraya **GitHub Actions**
-    #: ile taşınır: ``.github/workflows/hf_to_gh.yml`` HF'ten çeker,
-    #: ``mucit_cevir`` ile bizim biçime dönüştürür ve Release'e koyar.
-    #: Ajan yalnız GitHub gördüğü için o adresten indirebilir.
     surum: str = ""
     varlik: str = ""
-    #: Alınamıyorsa sebebi. Boşsa alınabilir demektir.
     engel: str = ""
-    #: Bu kaynağın külliyattaki **söz hakkı**. Bütün payların toplamı
-    #: bire indirilir ve disk bütçesi o nispette dağıtılır. Pay bir
-    #: kemiyet değil keyfiyet ölçüsüdür (ferman 1-J): bir kaynağın ne
-    #: kadar yer tutacağı ne kadar **büyük** olduğuna değil, külliyatta
-    #: ne kadar **ayrı bir şey** söylediğine göre verilir. Meselâ 8 GB
-    #: tefsir dosyasının yüzde doksanı aynı âyetin başka tercümesidir;
-    #: 200 MB riyaziye ispatı ise baştan sona ayrıdır.
     pay: float = 1.0
 
     def uzantilar(self) -> Tuple[str, ...]:
@@ -110,47 +33,26 @@ class Kaynak:
         return (u,) if isinstance(u, str) else tuple(u)
 
 
-#: **CETVEL.** Her satır ya klonlandı ya da engeli yazıldı.
 KAYNAKLAR: Tuple[Kaynak, ...] = (
-    # ══════════════════════════════════════════════════════════════
-    #  ARC AİLESİ -- NVARC'ın kendi ``external/`` alt modülleri
-    # ══════════════════════════════════════════════════════════════
-    #
-    # Padişahın emri: *"Githubda NVARC ARC AGI 2 sisteminin 3 verisetini
-    # bul ve eğitim kaynaklarına ekle."* Depo bulundu ve okundu
-    # (``1ytic/NVARC``, NVIDIA KGMoN; Sorokin & Puget). **Adı geçen üç
-    # veri seti Kaggle'dadır**, GitHub'da değil::
-    #
-    #     sorokin/nvarc-artifacts-puzzles    (üretilen metin)
-    #     sorokin/nvarc-synthetic-puzzles    (103 bin sentetik bulmaca)
-    #     sorokin/nvarc-augmented-puzzles    (3,2 milyon çoğaltılmış)
-    #
-    # ve ``www.kaggle.com`` bu oturumda **kapalıdır** (ölçüldü: ``000``,
-    # tünel kurulamıyor). O hâlde üçü de aşağıda engeliyle yazılıdır.
-    # Fakat NVARC'ın **kendi** veri kaynakları GitHub alt modülleridir
-    # ve hepsi çekildi: ARC-AGI-2, h-arc, BARC, MINI-ARC, ConceptARC,
-    # re-arc. Yâni NVARC'ın bulmaca havuzu -- Kaggle'daki türevleri
-    # hariç -- külliyattadır.
     Kaynak("ARC-AGI-2 (resmî, arcprize)", "arcprize/ARC-AGI-2", "data",
            ".json", pay=3.0),
     Kaynak("ARC-AGI-1 (fchollet)", "fchollet/ARC-AGI", "data",
            ".json", pay=2.0),
+    Kaynak("ARC-AGI-3 (resmî ajan takımı, arcprize)",
+           "arcprize/ARC-AGI-3-Agents", "", (".py", ".md", ".json"),
+           pay=3.0),
+    Kaynak("ARC veri kümeleri derlemesi (neoneye)",
+           "neoneye/arc-dataset-collection", "", (".json", ".jsonl"),
+           pay=2.0),
     Kaynak("h-ARC (insan çözüm izleri)", "Le-Gris/h-arc", "",
            (".csv", ".json", ".ipynb", ".py"), pay=2.0),
-    # Envanterden: 524 ``.json`` + 567 ``.py`` (kaideyi üreten kod da
-    # verinin kendisidir), ``synthetic_problems/`` ve ``ConceptARC/``.
     Kaynak("BARC (kaide ile üretilmiş ARC)", "xu3kev/BARC", "",
            (".json", ".jsonl", ".py"), pay=1.5),
     Kaynak("MINI-ARC", "KSB21ST/MINI-ARC", "data", ".json", pay=1.0),
     Kaynak("ConceptARC", "victorvikram/ConceptARC", "corpus", ".json",
            pay=1.0),
-    # ``re_arc.zip`` sıkıştırılmıştır ve bayt olarak manasızdır; asıl
-    # veri **üreticidir** (``generators.py``, ``verifiers.py``, ``dsl.py``).
     Kaynak("re-ARC (üretici + DSL)", "michaelhodel/re-arc", "",
            ".py", pay=1.5),
-    # ══════════════════════════════════════════════════════════════
-    #  BULMACA / BENCMARK / CHALLENGE
-    # ══════════════════════════════════════════════════════════════
     Kaynak("BIG-bench (204 vazife)", "google/BIG-bench", "bigbench/benchmark_tasks",
            (".json", ".jsonl", ".py"), pay=3.0),
     Kaynak("BIG-Bench Hard (23 zor vazife)",
@@ -160,21 +62,6 @@ KAYNAKLAR: Tuple[Kaynak, ...] = (
            "allenai/natural-instructions", "tasks", ".json", pay=3.0),
     Kaynak("OpenAI Evals", "openai/evals", "evals/registry/data",
            (".jsonl", ".json"), pay=1.5),
-    # ══════════════════════════════════════════════════════════════
-    #  RİYAZİYE VE MANTIK YÜRÜTME İZLERİ
-    # ══════════════════════════════════════════════════════════════
-    #
-    # Padişahın emri: *"1 gb ve üzeri akıl yürütme izi verisetleri
-    # bul."* GitHub'da metin gövdesiyle duran, gigabayt mertebesinde
-    # **akıl yürütme izi** üç yerdedir ve üçü de aşağıdadır:
-    # ``natural-instructions`` (3,1 GB vazife + izah), ``BIG-bench``
-    # (2,3 GB), ``set.mm`` (Metamath: 40 bin resmî ispat, tek dosya).
-    # PRM800K adım-adım muhakeme etiketleriyle küçüktür fakat cinsi
-    # tamdır; ``mathlib4`` ise makine ile denetlenmiş ispatın kendisi.
-    # **MATH gövdesi ``MATH.tar`` içindedir** ve depoda öyle durur.
-    # Tar bir metin kabıdır: içindeki JSON gövdesi baytça okunabilir,
-    # 512 baytlık başlıklar ~%0,4 gürültü katar. Açmak yerine olduğu
-    # gibi okumak, kabı ayrıca diske yaymamak demektir.
     Kaynak("MATH (Hendrycks, 12500 mesele + çözüm)",
            "hendrycks/math", "", (".tar", ".txt"), pay=3.0),
     Kaynak("PRM800K (adım adım muhakeme etiketi)", "openai/prm800k",
@@ -186,9 +73,6 @@ KAYNAKLAR: Tuple[Kaynak, ...] = (
            ".json", pay=1.5),
     Kaynak("DeepMind Mathematics (üretici)",
            "google-deepmind/mathematics_dataset", "", ".py", pay=0.5),
-    # Envanterden: depoda 18 ``.py`` + 5 ``.ipynb`` var, veri gövdesi
-    # harici indirmededir. O hâlde alınan şey ispat **metni** değil,
-    # ispatı ayrıştıran koddur ve payı ona göredir.
     Kaynak("NaturalProofs (ayrıştırıcı)", "wellecks/naturalproofs", "",
            (".json", ".jsonl", ".py", ".ipynb"), pay=0.5),
     Kaynak("miniF2F (resmî ispat mihengi)", "openai/miniF2F", "",
@@ -197,14 +81,6 @@ KAYNAKLAR: Tuple[Kaynak, ...] = (
            ".mm", pay=2.0),
     Kaynak("Lean mathlib4 (makine denetimli riyaziye)",
            "leanprover-community/mathlib4", "Mathlib", ".lean", pay=2.0),
-    # ══════════════════════════════════════════════════════════════
-    #  İSLÂMÎ KAYNAKLAR -- TEFSİR, HADİS, RİSALE
-    # ══════════════════════════════════════════════════════════════
-    # **İKİ SATIR TEK SATIRA TERKİP EDİLDİ (ferman 3).** Evvelce aynı
-    # depo iki kere yazılıydı (``txt`` ve ``obsidian-markdown``) ve
-    # ikisi de **aynı dizine** klonlanıyordu: birincinin budaması
-    # ikincinin yolunu siliyor, ikinci "yol yok" diye düşüyordu. İki
-    # satır aynı şeyi işaret ediyorsa iki satır değildir.
     Kaynak("Risale-i Nur (Diyanet tashihli, txt + markdown)",
            "alitekdemir/Risale-i-Nur-Diyanet", "", (".txt", ".md"),
            dal="master", pay=3.0),
@@ -213,23 +89,14 @@ KAYNAKLAR: Tuple[Kaynak, ...] = (
     Kaynak("Risale-i Nur kelime frekansı (lügat)",
            "alitekdemir/Risale-i-Nur-Kelime-Frekans", "data",
            (".txt", ".csv"), pay=0.5),
-    # **KÜTÜB-İ SİTTE BULUNDU.** Evvelki turda "metin gövdesi olan umumi
-    # depo bulunamadı" yazılıydı; o hüküm **yanlıştı ve düzeltiliyor**:
-    # ``AhmedBaset/hadith-json`` altı kitabın tam metnini JSON olarak
-    # taşıyor (176 MB), ``fawazahmed0/hadith-api`` ise çok dilli
-    # neşirleri (3,8 GB; Türkçesi dâhil).
     Kaynak("Kütüb-i Sitte (hadis, tam metin JSON)",
            "AhmedBaset/hadith-json", "db", ".json", pay=3.0),
     Kaynak("Hadis neşirleri (çok dilli)", "fawazahmed0/hadith-api",
            "editions", ".json", pay=1.5),
     Kaynak("Tefsir külliyatı (çok müfessir)", "spa5k/tafsir_api",
            "tafsir", ".json", pay=2.0),
-    # 6348 ``.mp3`` var ve metin değildir; ``_buda`` onları atar.
     Kaynak("Kur'ân-ı Kerîm (metin + meâl + tecvid)",
            "semarketir/quranjson", "source", ".json", pay=1.0),
-    # ══════════════════════════════════════════════════════════════
-    #  ENGELİ YAZILANLAR -- "var sanıyorum" satırı yoktur
-    # ══════════════════════════════════════════════════════════════
     Kaynak("NVARC Artifacts Puzzles", "", "", pay=0.0,
            engel="Kaggle veri seti (sorokin/nvarc-artifacts-puzzles). "
                  "Bu oturumun ağ siyaseti www.kaggle.com'a tüneli "
@@ -282,7 +149,6 @@ def _dizin(k: Kaynak) -> str:
 
 
 def bos_alan(yol: str = "") -> int:
-    """Kaptaki boş bayt -- **ölçülür** (ferman 5-B), elle yazılmaz."""
     import shutil as _sh
     d = yol or KULLIYAT_DIZINI
     os.makedirs(d, exist_ok=True)
@@ -290,31 +156,6 @@ def bos_alan(yol: str = "") -> int:
 
 
 def yer_ac(gerek: int, koru: Sequence[str] = ()) -> Dict[str, Any]:
-    """``gerek`` bayt yer açılana kadar **çevrilmiş** külliyatı bırak.
-
-    ===================================================================
-    KAP KÜLLİYATTAN KÜÇÜKTÜR -- VE BU BİR BUDAMA SEBEBİ DEĞİLDİR
-    ===================================================================
-
-    **FERMAN 1-O.** *"Verisetinin tamamı o repoda duracak"* -- depo
-    GitHub'dır ve orada tamamı durur. Kap ise sonludur: bu makinede
-    30 GB, külliyat ise ondan büyük. Ölçüldü: budanmamış tefsir
-    külliyatı tek başına 8,9 GB ham, çevrilmişi de o mertebede.
-
-    Kusurlu iki cevap vardır ve ikisi de reddedilir:
-
-    * **Veriyi kesmek.** Fermanın yasakladığı şey.
-    * **Hepsini kapta tutmak.** Fizikî olarak imkânsız; ``ENOSPC`` ile
-      koşu ölür ve saatler çöpe gider.
-
-    Doğru cevap üçüncüsüdür ve fermanın kendi sözüdür: *"işini bitire
-    bitire alacaksın"*. Bir kaynak çekilir, çevrilir, **örneklenir**;
-    yer lâzım olunca çevrilmişi de bırakılır. Hiçbir kaynak kesilmez --
-    her koşuda hepsi baştan sona okunur; kapta duran şey yalnız o an
-    lâzım olandır.
-
-    ``koru`` o an ``mmap``lenmiş dosyalardır; onlara dokunulmaz.
-    """
     korunan = {os.path.abspath(y) for y in koru}
     atilan: List[str] = []
     kazanc = 0
@@ -332,7 +173,6 @@ def yer_ac(gerek: int, koru: Sequence[str] = ()) -> Dict[str, Any]:
             adaylar.append((os.path.getmtime(y), os.path.getsize(y), y))
         except OSError:
             pass
-    # En eski çevrilmiş önce gider: en uzun zamandır okunmayan odur.
     for _t, b, y in sorted(adaylar):
         if bos_alan() >= int(gerek):
             break
@@ -347,7 +187,6 @@ def yer_ac(gerek: int, koru: Sequence[str] = ()) -> Dict[str, Any]:
 
 
 def _boy(kok: str, uzantilar: Sequence[str]) -> Tuple[int, int]:
-    """Bir kaynağın metin gövdesi: ``(bayt, dosya)``. **Hiçbir şey silmez.**"""
     uz, b, n = tuple(uzantilar), 0, 0
     for kk, _dd, ff in os.walk(kok):
         for f in ff:
@@ -360,29 +199,35 @@ def _boy(kok: str, uzantilar: Sequence[str]) -> Tuple[int, int]:
     return b, n
 
 
-
 MUCIT_DAMGA = b"MUCIT2\n"
 
-#: Çevrilmiş dosyanın uzantısı.
 MUCIT_UZANTI = ".mucit"
 
 
+BELIRTEC_PENCERESI: int = 1 << 16
+
+
+def _belirtecle(kod, metin: str, pencere: int = BELIRTEC_PENCERESI):
+    if not metin:
+        return []
+    out = []
+    i, boy = 0, len(metin)
+    while i < boy:
+        j = min(i + int(pencere), boy)
+        if j < boy:
+            k = max(metin.rfind("\n", i, j), metin.rfind(" ", i, j))
+            if k > i:
+                j = k + 1
+        out.extend(kod.encode(metin[i:j], disallowed_special=()))
+        i = j
+    return out
+
+
 def _parquet_akit(yol: str, kod, ch) -> Tuple[int, int]:
-    """Bir ``.parquet`` dosyasının **metin sütunlarını** akıt.
-
-    Parquet bir ikili kaptır: baytını doğrudan belirteçlemek,
-    sıkıştırılmış blokları metin sanmaktır. Kap açılır, **satır öbeği
-    öbek** okunur (ferman 1-O: tek hamlede belleğe alınmaz) ve dizgi
-    tipindeki her sütun belirteçlenir.
-
-    Hangi sütunun metin olduğu **tahmin edilmez**: ``pyarrow`` şemayı
-    söyler. Dizgi olmayan sütunlar (sayı, ikili) atlanır ve atlandığı
-    dönen sayıdan görünür.
-    """
     import numpy as np
     try:
         import pyarrow.parquet as pq
-    except ImportError as e:                              # pragma: no cover
+    except ImportError as e:
         raise AssertionError(
             "``%s`` bir parquet dosyası fakat ``pyarrow`` kurulu değil. "
             "Sessizce atlamak, verinin bir kısmını gizlice düşürmek "
@@ -399,7 +244,7 @@ def _parquet_akit(yol: str, kod, ch) -> Tuple[int, int]:
                                if v is not None)
             if not metin:
                 continue
-            t = kod.encode(metin, disallowed_special=())
+            t = _belirtecle(kod, metin)
             if t:
                 ch.write(np.asarray(t, np.uint32).tobytes())
                 n += len(t)
@@ -408,13 +253,6 @@ def _parquet_akit(yol: str, kod, ch) -> Tuple[int, int]:
 
 def _metin_akit(yol: str, kod, ch, obek_bayt: int = 8 << 20
                 ) -> Tuple[int, int]:
-    """Bir metin dosyasını **öbek öbek** belirteçleyip çıktıya akıt.
-
-    ``mucit_cevir``in gövdesinden **ayrıldı** ve sebebi ferman 1-O'dur:
-    boru hattı artık dizin yürüyüşüne bağlı değil, dosya başına
-    çağrılabilir. Böylece bir kaynak, dosyası indirildikçe çevrilip
-    hamı **derhal bırakılabilir** -- koşucunun diski dolmaz.
-    """
     import numpy as np
     if yol.endswith(".parquet"):
         return _parquet_akit(yol, kod, ch)
@@ -430,20 +268,15 @@ def _metin_akit(yol: str, kod, ch, obek_bayt: int = 8 << 20
             if not parca:
                 break
             parca = artik + parca
-            # **UTF-8 SINIRINDA KESME.** Çok baytlı bir harfin
-            # ortasından bölmek o harfi bozar ve belirteçleme sessizce
-            # başka bir şey okur. Son dört bayt sonraki öbeğe devredilir.
             artik, parca = parca[-4:], parca[:-4]
             if not parca:
                 continue
-            t = kod.encode(parca.decode("utf-8", "replace"),
-                           disallowed_special=())
+            t = _belirtecle(kod, parca.decode("utf-8", "replace"))
             if t:
                 ch.write(np.asarray(t, np.uint32).tobytes())
                 n += len(t)
         if artik:
-            t = kod.encode(artik.decode("utf-8", "replace"),
-                           disallowed_special=())
+            t = _belirtecle(kod, artik.decode("utf-8", "replace"))
             if t:
                 ch.write(np.asarray(t, np.uint32).tobytes())
                 n += len(t)
@@ -454,35 +287,6 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
                 uzantilar: Sequence[str] = (), ad: str = "",
                 obek_bayt: int = 8 << 20,
                 getirici=None) -> Dict[str, Any]:
-    """Ham metni **bizim biçime** çevir: tiktoken belirteçleri, tek dosya.
-
-    ===================================================================
-    BELİRTEÇLEME TİKTOKEN'DİR (ferman 1-N)
-    ===================================================================
-
-    Evvelce burada ``bayt % sozluk`` vardı ve ``sozluk`` 16'ydı: 256
-    bayt on altı seviyeye iniyordu. Bu bir belirteçleme değil, bir
-    **imhaydı** -- her seviye on altı ayrı baytı temsil ediyordu ve
-    metnin kelime yapısı tamamen kayboluyordu.
-
-    Artık metin tiktoken'den geçer ve dosyaya **belirteç kimlikleri**
-    ``uint32`` olarak yazılır. Kayıp yoktur: ``coz`` metni geri verir.
-
-    ===================================================================
-    BORU HATTI (ferman 1-O)
-    ===================================================================
-
-    Kaynağın tamamı belleğe **alınmaz**. Dosyalar sırayla açılır,
-    ``obek_bayt``lık parçalar hâlinde belirteçlenir ve çıktıya
-    **akıtılır**. Yâni 8 GB'lık bir tefsir külliyatı, 8 MB'lık bir
-    pencereyle çevrilir. Kabın darlığı akışla çözülür, veri kesilmez.
-
-    Biçim::
-
-        MUCIT2\n
-        {"kodlama": "o200k_base", "sözlük": 200019, "belirteç": N, …}\n
-        <N adet uint32 belirteç kimliği>
-    """
     import numpy as np
     from nefs.belirtec import belirtec_kapisi, belirtec_sozlugu
 
@@ -491,30 +295,11 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
     uz = tuple(uzantilar)
     os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
     n = dosya = 0
-    # **GEÇİCİ ADA YAZILIR, SONUNDA YERİNE KONUR.** Koşu ortada
-    # kesilirse (ölçüldü: ``kill -9``) yarım bir dosya kalıyor ve
-    # sonraki koşu onu bizim sanıp çöküyordu. ``os.replace`` atomiktir:
-    # ya tam dosya vardır ya hiç.
     gecici = cikti + ".yaziliyor"
     with open(gecici, "wb") as ch:
         ch.write(MUCIT_DAMGA)
         yer = ch.tell()
         ch.write(b" " * 320 + b"\n")
-        # ══════════════════════════════════════════════════════════
-        #  GETİRİCİ -- BORU HATTININ DAR KAP TARAFI (ferman 1-O)
-        # ══════════════════════════════════════════════════════════
-        #
-        # ``getirici`` verilirse dizin **yürünmez**: her dosya sırası
-        # gelince getirilir, çevrilir ve **derhal bırakılır**. Getirici
-        # ``(yerel_yol, birak)`` çiftleri veren bir yineleyicidir;
-        # ``birak()`` hamı siler.
-        #
-        # NİÇİN LÂZIM OLDU (ölçüldü): GitHub Actions koşucusu bütün
-        # kaynağı ``snapshot_download`` ile indirip sonra çevirince
-        # ``No space left on device (os error 28)`` verdi. Kaynak da
-        # netice de aynı diskte duruyordu; hâlbuki hamın hepsinin bir
-        # arada durmasına hiç lüzum yok. Adı boru hattıydı, fiili bir
-        # havuzdu -- aynı ders kapta da öğrenilmişti.
         if getirici is not None:
             for y, birak in getirici:
                 if uz and not str(y).endswith(uz):
@@ -524,8 +309,6 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
                 try:
                     n_m, d_m = _metin_akit(y, kod, ch, int(obek_bayt))
                 finally:
-                    # **HAM DAİMA BIRAKILIR**, çeviri düşse de: yer
-                    # açılmazsa sonraki dosya zaten inemez.
                     if birak is not None:
                         birak()
                 n += n_m
@@ -535,18 +318,6 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
                 if uz and not f.endswith(uz):
                     continue
                 y = os.path.join(kk, f)
-                # ══════════════════════════════════════════════════
-                #  PARQUET METİN DEĞİL, KAPTIR -- AÇILIR
-                # ══════════════════════════════════════════════════
-                #
-                # Ölçüldü: HuggingFace veri setlerinin çoğu ``.parquet``
-                # taşır ve o bir **ikili kaptır**. Baytını doğrudan
-                # belirteçlemek, sıkıştırılmış blokları metin sanmaktır:
-                # netice belirteç değil gürültüdür. O hâlde kap açılır
-                # ve **içindeki metin** belirteçlenir.
-                #
-                # Sessiz ikame yasak (ferman 5): ``pyarrow`` yoksa
-                # dosya atlanmaz, koşu **durur** ve sebebi yazılır.
                 if f.endswith(".parquet"):
                     n_p, d_p = _parquet_akit(y, kod, ch)
                     n += n_p
@@ -567,37 +338,10 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
             "kodlama": kodlama, "sözlük": V}
 
 
-
 def hf_boru(kimlik: str, cikti: str, kodlama: str = "o200k_base",
             alt_yol: str = "", uzantilar: Sequence[str] = (),
             jeton: Optional[str] = None,
             gecici_dizin: str = "hf_parca") -> Dict[str, Any]:
-    """HuggingFace veri setini **dosya dosya** çekip çevir, hamı bırak.
-
-    ===================================================================
-    NİÇİN: KOŞUCUNUN DİSKİ DOLUYORDU (ÖLÇÜLDÜ)
-    ===================================================================
-
-    İş akışı evvelce ``snapshot_download`` ile **bütün** kaynağı
-    indiriyor, sonra çeviriyordu. Netice::
-
-        RuntimeError: Task error: File reconstruction error:
-        IO Error: No space left on device (os error 28)
-
-    O disk bizim kabın değil, **GitHub koşucusunun** diskidir ve
-    ubuntu-latest'te on dört gigabayt civarı boştur. Ham kaynak ile
-    çevrilmiş netice aynı diskte yan yana duruyordu; hâlbuki hamın
-    hepsinin bir arada durmasına hiç lüzum yoktu.
-
-    Ferman 1-O'nun hükmü buydu ve koşucuya da aynen tatbik edilir:
-    *"boru hattı kurup işini bitire bitire alacaksın ama verisetinin
-    tamamı o repoda duracak."* Depoya (Release'e) çıkan **çevrilmiş
-    külliyatın tamamıdır**; kesilen şey yalnız o an diskte duran
-    penceredir -- bir dosya.
-
-    Akış: depo dosyaları listelenir → biri indirilir → çevrilir →
-    **silinir** → sonraki. Diskte bir seferde tek dosya durur.
-    """
     from huggingface_hub import HfApi, hf_hub_download
 
     api = HfApi(token=jeton or None)
@@ -610,8 +354,6 @@ def hf_boru(kimlik: str, cikti: str, kodlama: str = "o200k_base",
     uz = tuple(uzantilar)
     if uz:
         hepsi = [f for f in hepsi if f.endswith(uz)]
-    # **BOŞ LİSTE SESSİZCE GEÇİLMEZ** (ferman 5): çevrilecek bir şey
-    # yoksa iş akışı burada durur ve **niçin** durduğunu söyler.
     assert hepsi, (
         "``%s`` deposunda çevrilecek dosya yok: alt_yol=%r uzantı=%r. "
         "Depoda bulunan uzantılar: %s"
@@ -633,7 +375,6 @@ def hf_boru(kimlik: str, cikti: str, kodlama: str = "o200k_base",
                 pass
 
             def _birak(_y=y):
-                # Ham **derhal** silinir; sembolik bağ varsa hedefi de.
                 for hedef in {_y, os.path.realpath(_y)}:
                     try:
                         os.remove(hedef)
@@ -650,39 +391,18 @@ def hf_boru(kimlik: str, cikti: str, kodlama: str = "o200k_base",
 
 
 def mucit_ac(yol: str, kodlama: str = "o200k_base"):
-    """Çevrilmiş külliyatı **mmap** ile aç. Kodlama tutmuyorsa reddet.
-
-    ``np.memmap`` dosyayı belleğe **almaz**, sayfa sayfa okur. Boru
-    hattının kap tarafı budur (ferman 1-O): 8 GB'lık bir kaynaktan
-    yalnız okunan pencere kapta durur.
-    """
     import numpy as np
     with open(yol, "rb") as fh:
         if fh.read(len(MUCIT_DAMGA)) != MUCIT_DAMGA:
             return None
         ham = fh.read(321).decode("utf-8", "replace").strip()
         ofset = fh.tell()
-    # **YARIM YAZILMIŞ DOSYA ÇÖKERTMEZ, "BİZİM DEĞİL" DER.**
-    #
-    # ``mucit_cevir`` damgayı BAŞTA yazar, başlığı SONDA doldurur.
-    # Koşu arada kesilirse (ölçüldü: ``kill -9``) damga yerinde, başlık
-    # ise 320 boşluk kalır ve ``json.loads`` ``JSONDecodeError`` ile
-    # bütün tâlimi düşürürdü. Yarım bir dosya bir hata değil, bir
-    # **hâldir**: o kaynak henüz çevrilmemiştir. ``None`` dönmek
-    # çağıranı yeniden çevirmeye yollar -- sessiz ikame değildir,
-    # çünkü çağıran dosyayı siler ve baştan çevirir.
-    #
-    # (Yapısal çare de kondu: ``mucit_cevir`` artık geçici ada yazıp
-    # sonunda ``os.replace`` ediyor, o hâlde yarım dosya artık
-    # oluşamaz. Bu dal evvelki koşulardan kalanlar içindir.)
     if not ham or not ham.startswith("{"):
         return None
     try:
         bas = json.loads(ham)
     except ValueError:
         return None
-    # **SESSİZ İKAME YASAK** (ferman 5): başka kodlamayla çevrilmiş bir
-    # dosyayı okumak, başka bir belirteç uzayını okumaktır.
     assert str(bas["kodlama"]) == str(kodlama), (
         "çevrilmiş külliyatın kodlaması tutmuyor: %s dosyada %r, "
         "tâlimde %r -- yeniden çevrilmeli"
@@ -691,9 +411,7 @@ def mucit_ac(yol: str, kodlama: str = "o200k_base"):
                      shape=(int(bas["belirteç"]),))
 
 
-
 def envanter(kok: str) -> Dict[str, int]:
-    """Bir dizindeki uzantı sayımı -- **silmeden evvel**."""
     e: Dict[str, int] = {}
     for kk, _dd, ff in os.walk(kok):
         for f in ff:
@@ -702,26 +420,8 @@ def envanter(kok: str) -> Dict[str, int]:
     return e
 
 
-
 def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None
                  ) -> List[Dict[str, Any]]:
-    """Kaynakları ``depo/kulliyat/`` altına **çek. BUDAMA YOKTUR.**
-
-    ===================================================================
-    FERMAN 1-O
-    ===================================================================
-
-        "Sana ne oluyor da indirdiğin veriseti sınırlıyorsun? İnen şey
-        githuba inecek... ama **verisetinin tamamı o repoda duracak!**"
-
-    Evvelce burada bir disk bütçesi vardı ve kaynaklar payına göre
-    **budanıyordu**: 23 GB'lık çekimin 11,2 GB'ı siliniyordu. O bir
-    çare değil, kusurun kendisiydi. Kaynak olduğu gibi durur; kabın
-    darlığı ``mucit_cevir``in öbek öbek çevirmesi ve ``mucit_ac``ın
-    ``mmap``i ile, yâni **akışla** çözülür.
-
-    Çekilemeyen **sessizce geçilmez**: ``engel`` alanı sebebiyle döner.
-    """
     ks = list(kaynaklar or KAYNAKLAR)
     out: List[Dict[str, Any]] = []
     for k in ks:
@@ -730,19 +430,6 @@ def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None
                         "bayt": 0, "dosya": 0})
             continue
         d = _dizin(k)
-        # ══════════════════════════════════════════════════════════
-        #  SÜRÜM VARLIĞI -- HF'e GitHub ÜZERİNDEN ŞÜMUL
-        # ══════════════════════════════════════════════════════════
-        #
-        # Ajan yalnız GitHub görür (ferman 1-K'nin ölçtüğü hudut).
-        # ``.github/workflows/hf_to_gh.yml`` HuggingFace'ten çeker,
-        # ``mucit_cevir`` ile bizim biçime dönüştürür ve Release'e
-        # varlık olarak koyar. Buraya inen şey ham veri değil,
-        # **çevrilmiş külliyattır**; doğrudan ``mmap``lenir.
-        #
-        # Release varlık başına 2 GB'a kadar tutar; daha büyük
-        # külliyat iş akışında parçalanır ve parçalar burada
-        # **birleştirilir** -- biçim düz bayt olduğu için kayıpsızdır.
         if k.varlik:
             hedef = os.path.join(d, k.varlik)
             if not os.path.isfile(hedef):
@@ -769,7 +456,7 @@ def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None
                     parcalar.append(yer)
                     i += 1
                     if i == 1 and os.path.isfile(hedef):
-                        break              # tek parça geldi
+                        break
                 if not parcalar:
                     continue
                 if len(parcalar) > 1:
@@ -807,9 +494,6 @@ def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None
             continue
         bayt, dosya = _boy(kok, k.uzantilar())
         if not dosya:
-            # **BOŞ DÖNEN KAYNAK SESSİZCE GEÇİLMEZ.** Envanter yazılır:
-            # "hangi uzantı aranmalıydı" sorusu tahmine değil, deponun
-            # kendi sayımına havale edilir.
             env = envanter(kok)
             ilk = sorted(env.items(), key=lambda x: -x[1])[:6]
             out.append({"ad": k.ad, "alındı": False, "bayt": 0, "dosya": 0,
@@ -824,36 +508,12 @@ def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None
     return out
 
 
-
 def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                     tohum: int = 0,
                     kaynaklar: Optional[Sequence[Kaynak]] = None,
                     kodlama: str = "o200k_base", taban: int = 16,
                     basamak: int = 0
                     ) -> List[Tuple[List[int], int, str]]:
-    """Külliyattan ``(bağlam, hedef, cins)`` -- **boru hattıyla**.
-
-    ===================================================================
-    HAM METİN OKUNMAZ, PENCEREYE BAKILIR (ferman 1-O)
-    ===================================================================
-
-    Kaynağın tamamı belleğe alınmaz ve **kesilmez**. Her kaynak bir
-    kere ``mucit_cevir`` ile ``.mucit``e çevrilir (tiktoken belirteç
-    kimlikleri, ``uint32``), burada ``np.memmap`` ile açılır ve yalnız
-    okunan pencereler kapta durur. 8 GB'lık bir tefsir külliyatı da,
-    200 MB'lık bir ispat külliyatı da aynı kapta koşar.
-
-    ===================================================================
-    BELİRTEÇ → BASAMAK (ferman 1-N)
-    ===================================================================
-
-    Dosyada duran şey tiktoken kimlikleridir (200 019'a kadar). Yazmaca
-    girerken ``tip_vektoru`` ile ``taban`` tabanında ``basamak`` haneye
-    açılırlar; yâni akış bir **basamak akışıdır** ve hedef daima
-    ``[0, taban)`` aralığındadır.
-
-    Kaynaklar arası pay **boy değil söz hakkıdır** (ferman 1-J).
-    """
     import numpy as np
     from nefs.belirtec import basamak_sayisi, belirtec_sozlugu, tip_vektoru
 
@@ -868,74 +528,26 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             yol = os.path.join(_dizin(k), k.varlik)
         else:
             yol = _dizin(k) + MUCIT_UZANTI
-            # ══════════════════════════════════════════════════════
-            #  BORU HATTI KAYNAK BAŞINADIR (ferman 1-O)
-            # ══════════════════════════════════════════════════════
-            #
-            # **ÖLÇÜLEN VE DÜZELTİLEN KUSUR.** Klonlama ile çevirme
-            # ayrı iki geçişteydi: taht evvelâ ``kulliyat_cek()`` ile
-            # **bütün** kaynakları indiriyor, ancak ondan sonra
-            # buradaki döngü tek tek çeviriyordu. Netice ölçüldü: kap
-            # 24 GB'a çıktı -- yâni "boru hattı" adı konmuştu fakat
-            # fiilen bir **havuz** kurulmuştu.
-            #
-            # Halka kaynak başına kapanır: bu kaynağın hamı yoksa
-            # **şimdi** çekilir, **şimdi** çevrilir, **şimdi**
-            # bırakılır. Kapta hiçbir zaman birden fazla kaynağın hamı
-            # durmaz.
             kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
                 kulliyat_cek([k])
                 kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
                 continue
-            # **ÇEVİRMEDEN EVVEL YER ÖLÇÜLÜR VE AÇILIR** (ferman 1-O).
-            # Çevrilmiş dosya ham gövdeyle aynı mertebededir (belirteç
-            # başına 4 bayt, belirteç başına ~4 harf). Ölçüldü: tefsir
-            # külliyatı 8,9 GB ham, kapta 5,2 GB boş vardı ve koşu
-            # ``ENOSPC`` ile ölecekti. Yer, o an ``mmap``li dosyalara
-            # dokunmadan, en eski çevrilmişten başlayarak açılır.
             if not os.path.isfile(yol) and os.path.isdir(kok):
                 ham, _n = _boy(kok, k.uzantilar())
-                # ``mmap``li dosyalara dokunulmaz: onlar bu koşunun
-                # hâlihazırda okuduğu külliyattır.
                 acik = [str(getattr(t, "filename", "") or "")
                         for t, _p in diziler]
                 yer_ac(int(ham * 1.5) + (1 << 30),
                        koru=[y for y in acik if y])
-            # **BAYAT BİÇİM SESSİZCE ATLANMAZ.** ``mucit_ac`` damgası
-            # tutmayan dosyaya ``None`` döner; o dosya yerinde durduğu
-            # için ``isfile`` doğru çıkar ve kaynak her koşuda sessizce
-            # düşerdi. Damga tutmuyorsa **yeniden çevrilir**.
             if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
                 os.remove(yol)
             if not os.path.isfile(yol):
                 mucit_cevir(kok, yol, kodlama, k.uzantilar(), k.ad)
-                # ══════════════════════════════════════════════════
-                #  BORU HATTININ SON HALKASI: HAM BIRAKILIR
-                # ══════════════════════════════════════════════════
-                #
-                # **FERMAN 1-O.** *"İşini bitire bitire alacaksın ama
-                # verisetinin tamamı o repoda duracak."*
-                #
-                # Ham klon çevrildikten sonra kapta durmasının hiçbir
-                # faydası yoktur: tâlim ``.mucit``i okur, hamı hiç
-                # açmaz. Fakat zararı vardır -- 23 GB'lık ham yığın
-                # diski doldurur ve **bir sonraki kaynağın tam
-                # inmesini engeller**; evvelki turda budamaya
-                # sürüklenmemin sebebi tam olarak buydu.
-                #
-                # O hâlde halka şudur: **çek → çevir → hamı bırak.**
-                # Kaynağın tamamı GitHub'da durur (orası deponun
-                # kendisidir); kapta duran şey yalnız çevrilmiş
-                # külliyattır. Ham lâzım olursa yeniden çekilir --
-                # silinen bir nüsha, kesilen bir veri değildir.
                 shutil.rmtree(_dizin(k), ignore_errors=True)
         if not os.path.isfile(yol):
             continue
         t = mucit_ac(yol, kodlama)
-        # Bir pencere ``pencere`` BASAMAKtır; o hâlde lâzım olan
-        # belirteç sayısı ``⌈pencere/basamak⌉ + 1``dir.
         gerek = int(np.ceil(int(pencere) / bs)) + 2
         if t is None or t.size <= gerek:
             continue
@@ -951,54 +563,17 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
         gerek = int(np.ceil(int(pencere) / bs)) + 2
         bas = r.integers(0, t.size - gerek, size=n)
         for i in bas:
-            # **YALNIZ PENCERE OKUNUR.** ``t`` bir mmap'tir; burada
-            # dosyanın tamamı değil, ``gerek`` kadar belirteç okunur.
             ham = np.asarray(t[int(i):int(i) + gerek], np.int64)
             akis = tip_vektoru(ham, tb, bs)
             if akis.size < int(pencere) + 1:
                 continue
-            # ══════════════════════════════════════════════════════
-            #  SÖZLÜ CİNS: "SEN OLSAN NE SÖYLERDİN?" (ferman 1-R)
-            # ══════════════════════════════════════════════════════
-            #
-            # Padişahın hükmü::
-            #
-            #     "Normal sözlü verilerde şu soruyu soracağız: sen olsan
-            #     bu çıktı yerine ne söylerdin. Dolayısıyla ona girdiyi
-            #     verdiğimizde çıktının SONRAKİ VERİLERE UYMASINI
-            #     BEKLEMEYECEĞİZ, sadece onun girişte aldığı veriyle
-            #     çıkışta tekrar ürettiği veriyi kıyaslayacağız."
-            #
-            # O hâlde hedef **pencerenin kendi içindedir**: model
-            # okuduğunu yeniden üretir. Bu, sözlü veriyi eğitim/test
-            # diye bölmeyi gereksiz kılar -- her metin hem sual hem
-            # şahittir; tutulan bir "sonraki veri" yoktur.
-            # **BAĞLAM BOYU İKİ CİNSTE DE AYNIDIR.** Ölçüldü ve
-            # düştü: sözlü cins ``pencere−1`` veriyor, ARC ``pencere``
-            # veriyordu ve ``_ileri``nin ``np.stack``i *"all input
-            # arrays must have the same shape"* ile tâlimi kesiyordu.
-            # Yazmaç tek boyda kurulur; iki cins iki boy demek, ferman
-            # 1-R'nin yasakladığı **iki motor** olurdu.
-            #
-            # Hedefin kendindenliği boydan gelmez, **pencerenin
-            # bütünlüğünden** gelir: ``akis`` tek bir bitişik okumadır,
-            # o hâlde ``akis[pencere]`` de o pencerenin içindedir --
-            # "sonraki veri" değil, aynı metnin devamıdır.
             cift.append(([int(x) for x in akis[:int(pencere)]],
                          int(akis[int(pencere)]), "sözlü"))
     return cift[:int(azami)]
 
 
-
 def kulliyat_dokumu(kaynaklar: Optional[Sequence[Kaynak]] = None
                     ) -> List[Dict[str, Any]]:
-    """Külliyatın hâli -- **hiçbir şey çekmeden**, kapta olana bakarak.
-
-    ``kulliyat_cek`` bir **fiildir**: çağrıldığı yerde indirir. Onu
-    rapora koymak, her rapor basışında bütün külliyatı yeniden
-    indirmek olurdu. Rapor bir fiil değil bir **beyandır**; o hâlde
-    kapta fiilen ne olduğunu sayar.
-    """
     out: List[Dict[str, Any]] = []
     for k in (kaynaklar or KAYNAKLAR):
         if k.engel or not k.depo:
@@ -1026,7 +601,6 @@ def kulliyat_dokumu(kaynaklar: Optional[Sequence[Kaynak]] = None
 
 
 def kulliyat_beyani(dokum: Optional[Sequence[Dict[str, Any]]] = None) -> str:
-    """Külliyatın hâli -- **ne alındı, ne alınamadı, niçin**."""
     d = list(dokum if dokum is not None else kulliyat_dokumu())
     s = ["=== KÜLLİYAT (main/kulliyat.py) -- harici metin ===", "",
          "  Depoya gömülmez; ``%s`` altına çekilir." % KULLIYAT_DIZINI, ""]

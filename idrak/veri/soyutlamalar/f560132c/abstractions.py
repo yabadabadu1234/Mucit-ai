@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task f560132c."""
 
 from __future__ import annotations
 
@@ -14,12 +13,10 @@ Cells = List[Tuple[int, int]]
 
 
 def load_samples() -> Dict[str, List[Dict[str, Grid]]]:
-    """Load train/test (and optional arc-gen) splits for the task."""
 
     base = Path(__file__).resolve().parents[1]
     data = json.loads((base / "arc2_samples" / "f560132c.json").read_text())
 
-    # Optional synthetic split.
     gen_path = base / "arc2_samples" / "f560132c_gen.json"
     if gen_path.exists():
         data["arc_gen"] = json.loads(gen_path.read_text())["samples"]
@@ -28,7 +25,6 @@ def load_samples() -> Dict[str, List[Dict[str, Grid]]]:
 
 
 def get_components(grid: Grid) -> List[Dict[str, object]]:
-    """Return connected non-zero components with centroid metadata."""
 
     height, width = len(grid), len(grid[0])
     seen = [[False] * width for _ in range(height)]
@@ -107,13 +103,11 @@ def palette_info(grid: Grid) -> Tuple[List[int], List[Tuple[int, int]], Dict[str
 
 
 def abstraction_identity(grid: Grid) -> Grid:
-    """Baseline identity abstraction."""
 
     return [row[:] for row in grid]
 
 
 def abstraction_size_sorted(grid: Grid) -> Grid:
-    """Assign palette colours by descending component size (naïve)."""
 
     components = get_components(grid)
     palette, cells, mapping = palette_info(grid)
@@ -154,7 +148,6 @@ def abstraction_size_sorted(grid: Grid) -> Grid:
 
 
 def abstraction_offset_oriented(grid: Grid) -> Grid:
-    """Final abstraction mirroring the production solver."""
 
     height, width = len(grid), len(grid[0])
     components = get_components(grid)

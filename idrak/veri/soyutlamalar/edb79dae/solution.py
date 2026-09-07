@@ -1,4 +1,3 @@
-"""Solver for ARC task edb79dae."""
 
 from collections import Counter
 from typing import Dict, List, Optional, Set, Tuple, TypedDict
@@ -12,8 +11,6 @@ class DigitInfo(TypedDict):
     primary: int
     secondary: int
 
-
-# --- Internal helpers (unchanged logic) ---
 
 def _bounding_box(grid: Grid, color: int) -> ROI:
     coords = [(r, c) for r, row in enumerate(grid) for c, val in enumerate(row) if val == color]
@@ -71,7 +68,6 @@ def _collect_digit_info(grid: Grid, roi: ROI, block: int) -> Tuple[int, Dict[int
 
     info: Dict[int, DigitInfo] = {}
     for color in digit_colors:
-        # Locate a block describing the shape (mask) for this color.
         mask_block = None
         best = -1
         for patch, colors in blocks:
@@ -88,7 +84,6 @@ def _collect_digit_info(grid: Grid, roi: ROI, block: int) -> Tuple[int, Dict[int
                         best = count
                         mask_block = patch
 
-        # Aggregate potential target colors for the primary colour of the digit.
         non_digit_counts: Counter[int] = Counter()
         digit_counts: Counter[int] = Counter()
         for patch, colors in blocks:
@@ -173,15 +168,11 @@ def _render_roi(grid: Grid, roi: ROI, block: int, info: Dict[int, DigitInfo]) ->
     return [row[min_c : max_c + 1] for row in result[min_r : max_r + 1]]
 
 
-# --- Typed-DSL wrapper operations used by the Lambda ---
-
 def findLegendROI(grid: Grid, color: int) -> ROI:
     return _bounding_box(grid, color)
 
 
 def inferBlockSize(grid: Grid, roi: ROI, legend_colours: Set[int]) -> int:
-    # Behaviour-preserving: choose the dominant top background among the legend rows
-    # and ignore only that plus the frame colour 5 when inferring block size.
     r0, _, _, _ = roi
     top_rows = grid[:r0]
     top_bg = Counter(val for row in top_rows for val in row).most_common(1)[0][0]
@@ -196,8 +187,6 @@ def decodeDigitTemplates(grid: Grid, roi: ROI, block_size: int) -> Dict[int, Dig
 def renderDigitBlocks(grid: Grid, roi: ROI, block_size: int, templates: Dict[int, DigitInfo]) -> Grid:
     return _render_roi(grid, roi, block_size, templates)
 
-
-# --- Lambda-aligned solver ---
 
 def solve_edb79dae(grid: Grid) -> Grid:
     roi = findLegendROI(grid, 5)

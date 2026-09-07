@@ -1,4 +1,3 @@
-"""Solver for task cb2d8a2c."""
 
 from __future__ import annotations
 
@@ -70,7 +69,7 @@ def derive_segments(grid, left_col, right_col, mode):
                 change = prev_row + diff // 2
                 if diff % 2 == 1:
                     change -= 1
-            else:  # vertical (handled on transposed grid)
+            else:
                 width = hi - lo + 1
                 addition = max(0, diff - width) + (1 if diff % 2 == 0 else 0)
                 change = prev_row + diff // 2 + addition
@@ -147,7 +146,6 @@ def render_path(grid):
         out[r][c] = 3
     return out
 
-# --- DSL-aligned wrappers (pure, used by the typed lambda) ---
 
 def classifyCorridorOrientation(grid: Grid) -> str:
     comps = get_components(grid)

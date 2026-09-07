@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task db0c5428."""
 
 from __future__ import annotations
 
@@ -90,8 +89,6 @@ def solve_db0c5428(grid: Grid) -> Grid:
 
 p = solve_db0c5428
 
-
-# === DSL-friendly helpers (pure) =========================================
 
 Box = Tuple[int, int, int, int]
 

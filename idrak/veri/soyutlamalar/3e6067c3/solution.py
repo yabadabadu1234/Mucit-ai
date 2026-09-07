@@ -1,10 +1,9 @@
-"""Solver for ARC-AGI-2 task 3e6067c3."""
 
 from collections import Counter, defaultdict
 from typing import Any, Dict, List, Tuple
 
 Grid = List[List[int]]
-Cell = Tuple[int, int, int]  # (row, col, color)
+Cell = Tuple[int, int, int]
 Node = Dict[str, int]
 
 
@@ -55,7 +54,6 @@ def _components(grid: Grid, background: int) -> List[Node]:
 
 
 def parseHintRow(grid: Grid) -> Any:
-    """Collect hint context: sequence and nodes_by_color plus canvas info."""
     height = len(grid)
     width = len(grid[0]) if grid else 0
     if not grid or not grid[0]:
@@ -105,21 +103,19 @@ def parseHintRow(grid: Grid) -> Any:
 
 
 def buildHintPath(hints: Any) -> List[Any]:
-    """Select path nodes per hint sequence and emit adjacent segments."""
     sequence: List[int] = hints.get("sequence", [])
     nodes_by_color: Dict[int, List[Node]] = hints.get("nodes_by_color", {})
     background: int = hints.get("background", 0)
     height: int = hints.get("height", 0)
     width: int = hints.get("width", 0)
 
-    # Select nodes by consuming per-color lists in order
     counters: Dict[int, int] = defaultdict(int)
     path_nodes: List[Node] = []
     for color in sequence:
         idx = counters[color]
         bucket = nodes_by_color.get(color, [])
         if idx >= len(bucket):
-            return []  # invalid; no path
+            return []
         path_nodes.append(bucket[idx])
         counters[color] += 1
 
@@ -141,7 +137,6 @@ def buildHintPath(hints: Any) -> List[Any]:
 
 
 def traceSegmentCells(grid: Grid, segment: Any) -> List[Cell]:
-    """Trace vertical and horizontal corridor cells for a segment."""
     src: Node = segment["src"]
     dst: Node = segment["dst"]
     color: int = segment["color"]
@@ -151,7 +146,6 @@ def traceSegmentCells(grid: Grid, segment: Any) -> List[Cell]:
 
     cells: List[Cell] = []
 
-    # Vertical corridor (between disjoint row ranges and overlapping columns)
     col_start = max(src["min_col"], dst["min_col"])
     col_end = min(src["max_col"], dst["max_col"])
     if col_start <= col_end:
@@ -162,15 +156,14 @@ def traceSegmentCells(grid: Grid, segment: Any) -> List[Cell]:
             r_start = dst["max_row"] + 1
             r_end = src["min_row"] - 1
         else:
-            r_start = None  # type: ignore[assignment]
-            r_end = None    # type: ignore[assignment]
+            r_start = None
+            r_end = None
         if r_start is not None and r_end is not None:
             for r in range(r_start, r_end + 1):
                 for c in range(col_start, col_end + 1):
                     if 0 <= r < height and 0 <= c < width and grid[r][c] == background:
                         cells.append((r, c, color))
 
-    # Horizontal corridor (between disjoint column ranges and overlapping rows)
     row_start = max(src["min_row"], dst["min_row"])
     row_end = min(src["max_row"], dst["max_row"])
     if row_start <= row_end:
@@ -181,8 +174,8 @@ def traceSegmentCells(grid: Grid, segment: Any) -> List[Cell]:
             c_start = dst["max_col"] + 1
             c_end = src["min_col"] - 1
         else:
-            c_start = None  # type: ignore[assignment]
-            c_end = None    # type: ignore[assignment]
+            c_start = None
+            c_end = None
         if c_start is not None and c_end is not None:
             for r in range(row_start, row_end + 1):
                 for c in range(c_start, c_end + 1):
@@ -193,7 +186,6 @@ def traceSegmentCells(grid: Grid, segment: Any) -> List[Cell]:
 
 
 def paintHintPath(grid: Grid, cells: List[Cell]) -> Grid:
-    """Paint traced cells on a copy of the grid."""
     result = _deep_copy(grid)
     for r, c, color in cells:
         if 0 <= r < len(result) and 0 <= c < len(result[0]):

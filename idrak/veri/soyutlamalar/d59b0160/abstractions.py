@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task d59b0160."""
 
 from __future__ import annotations
 
@@ -73,7 +72,6 @@ def _apply_rule(grid: Grid, predicate: Callable[[Component, Tuple[int, int]], bo
 
 
 def abstraction_touch_right(grid: Grid) -> Grid:
-    """Fill components touching the right edge when sufficiently wide."""
 
     def predicate(comp: Component, shape: Tuple[int, int]) -> bool:
         width = comp["width"]
@@ -85,7 +83,6 @@ def abstraction_touch_right(grid: Grid) -> Grid:
 
 
 def abstraction_internal_height4(grid: Grid) -> Grid:
-    """Fill interior components (no edge contact) with height <= 4."""
 
     def predicate(comp: Component, shape: Tuple[int, int]) -> bool:
         height = comp["height"]
@@ -99,7 +96,6 @@ def abstraction_internal_height4(grid: Grid) -> Grid:
 
 
 def abstraction_full_rule(grid: Grid) -> Grid:
-    """Final rule mirrored in the solver."""
 
     def predicate(comp: Component, shape: Tuple[int, int]) -> bool:
         h, w = shape

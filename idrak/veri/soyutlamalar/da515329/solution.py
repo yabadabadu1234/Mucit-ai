@@ -1,7 +1,3 @@
-"""Typed-DSL-compatible solver for ARC-AGI-2 task da515329 (evaluation split).
-
-This keeps the identity semantics while matching the DSL lambda exactly.
-"""
 
 from typing import List
 

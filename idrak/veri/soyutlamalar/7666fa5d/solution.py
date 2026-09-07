@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 7666fa5d."""
 
 from collections import Counter, deque
 from typing import List, Tuple, Set, Optional
@@ -6,7 +5,7 @@ from typing import List, Tuple, Set, Optional
 Grid = List[List[int]]
 Cell = Tuple[int, int]
 Component = List[Cell]
-Summary = Tuple[int, int, int]  # (u = r+c, v_min = min(c-r), v_max = max(c-r))
+Summary = Tuple[int, int, int]
 
 
 def copy_grid(grid: Grid) -> Grid:
@@ -25,11 +24,6 @@ def background_and_single_foreground(grid: Grid) -> Tuple[int, Optional[int]]:
 
 
 def extractDiagonalComponents(grid: Grid) -> List[Component]:
-    """Flood-fill the single foreground colour and keep only diagonal components.
-
-    Returns an empty list if the grid is empty, there is not exactly one
-    foreground colour, or any component is not strictly on a single diagonal.
-    """
     background, target = background_and_single_foreground(grid)
     if target is None:
         return []
@@ -68,7 +62,6 @@ def extractDiagonalComponents(grid: Grid) -> List[Component]:
 
 
 def summariseComponents(components: List[Component]) -> List[Summary]:
-    """Map each component to (u=r+c, v_min, v_max) and sort by u."""
     summaries: List[Summary] = []
     for comp in components:
         if not comp:
@@ -81,7 +74,6 @@ def summariseComponents(components: List[Component]) -> List[Summary]:
 
 
 def bracketBackgroundCells(grid: Grid, summaries: List[Summary]) -> Set[Cell]:
-    """Collect background cells that are bracketed by components on both sides."""
     background, _ = background_and_single_foreground(grid)
     if len(summaries) < 2:
         return set()
@@ -122,7 +114,6 @@ def bracketBackgroundCells(grid: Grid, summaries: List[Summary]) -> Set[Cell]:
 
 
 def fillCorridor(grid: Grid, corridor: Set[Cell], color: int) -> Grid:
-    """Paint the cells in `corridor` with `color`, leaving others unchanged."""
     result = copy_grid(grid)
     for r, c in corridor:
         result[r][c] = color

@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC-AGI-2 task 45a5af55."""
 
 from __future__ import annotations
 

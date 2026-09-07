@@ -1,10 +1,3 @@
-"""Abstractions explored for ARC task 7ed72f31.
-
-Each abstraction is a lightweight transformation or heuristic that was
-evaluated while solving the task. A compact harness runs them on the
-available splits (train/test/arc-gen), reporting match counts and the
-first failing example index per abstraction.
-"""
 
 from __future__ import annotations
 
@@ -23,19 +16,16 @@ SOLVER_PATH = TASK_DIR / f"{TASK_ID}.py"
 
 
 def load_task() -> dict:
-    """Load the ARC task description from disk."""
 
     return json.loads(TASK_PATH.read_text())
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline: leave the grid unchanged."""
 
     return [row[:] for row in grid]
 
 
 def nearest_axis_reflection_abstraction(grid: Grid) -> Grid:
-    """Mirror non-axis objects across the closest axis of color 2."""
 
     if not grid:
         return []
@@ -148,25 +138,22 @@ def nearest_axis_reflection_abstraction(grid: Grid) -> Grid:
 
 
 def solver_wrapper(grid: Grid) -> Grid:
-    """Delegate to the final solver implementation."""
 
     spec = importlib.util.spec_from_file_location(f"task_{TASK_ID}_solver", SOLVER_PATH)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
-    spec.loader.exec_module(module)  # type: ignore[assignment]
+    spec.loader.exec_module(module)
     solver = getattr(module, f"solve_{TASK_ID}")
     return solver(grid)
 
 
 def render(grid: Grid) -> str:
-    """Render grid values using hexadecimal digits."""
 
     palette = "0123456789abcdef"
     return "\n".join("".join(palette[val] for val in row) for row in grid)
 
 
 def evaluate_abstractions() -> None:
-    """Run each abstraction on every available split and report matches."""
 
     data = load_task()
     abstractions: dict[str, Callable[[Grid], Grid]] = {

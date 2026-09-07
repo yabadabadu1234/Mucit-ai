@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 88e364bc."""
 
 from __future__ import annotations
 
@@ -11,12 +10,10 @@ Grid = List[List[int]]
 
 
 def identity_solver(grid: Grid) -> Grid:
-    """Baseline: return the grid unchanged."""
     return [row[:] for row in grid]
 
 
 def directional_slide_solver(grid: Grid) -> Grid:
-    """Attempt: slide each 4 toward the richer zero corridor (fails on train)."""
 
     def longest_zero_run(r: int, c: int, dr: int, dc: int) -> int:
         steps = 0
@@ -108,7 +105,6 @@ BLOCK_RULES = {
 
 
 def block_template_solver(grid: Grid) -> Grid:
-    """Final abstraction: place 4s according to 5x5 digit templates."""
 
     height = len(grid)
     width = len(grid[0]) if grid else 0

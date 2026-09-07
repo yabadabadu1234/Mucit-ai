@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task cbebaa4b."""
 
 from collections import Counter, defaultdict, deque
 from typing import Dict, Iterable, List, Sequence, Tuple, cast
@@ -9,8 +8,6 @@ Point = Tuple[int, int]
 Vector = Tuple[int, int]
 Translations = Dict[int, Vector]
 
-# Gadgets bundle used by the typed-DSL style wrappers
-# (components, owner, connectors, door_index)
 Gadgets = Tuple[
     List[Dict[str, object]],
     List[List[int]],
@@ -28,7 +25,6 @@ def deep_copy(grid: Grid) -> Grid:
 
 
 def get_components(grid: Grid) -> Tuple[List[Dict[str, object]], List[List[int]]]:
-    """Return connected components (excluding colours 0 and 2) and owner map."""
 
     h, w = len(grid), len(grid[0])
     owner = [[-1] * w for _ in range(h)]
@@ -70,7 +66,6 @@ def get_components(grid: Grid) -> Tuple[List[Dict[str, object]], List[List[int]]
 
 
 def get_connectors(grid: Grid, owner: List[List[int]]) -> Dict[int, List[Tuple[Point, Vector]]]:
-    """Return connector cells (colour 2) attached to each component."""
 
     h, w = len(grid), len(grid[0])
     connectors: Dict[int, List[Tuple[Point, Vector]]] = defaultdict(list)
@@ -82,20 +77,18 @@ def get_connectors(grid: Grid, owner: List[List[int]]) -> Dict[int, List[Tuple[P
                 nr, nc = r + dr, c + dc
                 if in_bounds(h, w, nr, nc) and owner[nr][nc] != -1:
                     comp_id = owner[nr][nc]
-                    # Direction from component cell towards connector.
                     connectors[comp_id].append(((r, c), (r - nr, c - nc)))
                     break
     return connectors
 
 
 def find_door(components: Sequence[Dict[str, object]]) -> int:
-    """Locate the solid rectangular "door" component."""
 
     best_idx = -1
     best_area = -1
     for idx, comp in enumerate(components):
         cells = cast(List[Point], comp["cells"])
-        y0, y1, x0, x1 = cast(Tuple[int, int, int, int], comp["bbox"])  # type: ignore[misc]
+        y0, y1, x0, x1 = cast(Tuple[int, int, int, int], comp["bbox"])
         height = y1 - y0 + 1
         width = x1 - x0 + 1
         area = height * width
@@ -108,7 +101,6 @@ def find_door(components: Sequence[Dict[str, object]]) -> int:
 
 
 def build_edges(connectors: Dict[int, List[Tuple[Point, Vector]]]) -> Dict[int, Dict[int, Vector]]:
-    """Infer preferred translation deltas between connected components."""
 
     edges: Dict[int, Dict[int, Vector]] = defaultdict(dict)
     comp_ids = list(connectors)
@@ -137,7 +129,6 @@ def fallback_place(
     connectors: Dict[int, List[Tuple[Point, Vector]]],
     translations: Dict[int, Vector],
 ) -> None:
-    """Greedy connector-alignment fallback for components not in the edge graph."""
 
     h, w = len(grid), len(grid[0])
     remaining = [idx for idx in range(len(components)) if idx not in translations]
@@ -146,16 +137,14 @@ def fallback_place(
 
     placed_cells = set()
     for idx, (dy, dx) in translations.items():
-        for r, c in cast(List[Point], components[idx]["cells"]):  # type: ignore[index]
+        for r, c in cast(List[Point], components[idx]["cells"]):
             placed_cells.add((r + dy, c + dx))
 
-    # Known connector coordinates in absolute space.
     known_conns = set()
     for idx, (dy, dx) in translations.items():
         for (r, c), _ in connectors.get(idx, []):
             known_conns.add((r + dy, c + dx))
 
-    # Iteratively place remaining components by aligning connectors to known positions.
     while remaining:
         progress = False
         for idx in remaining[:]:
@@ -167,9 +156,8 @@ def fallback_place(
             for (cr, cc) in conn_positions:
                 for tr, tc in known_conns:
                     dy, dx = tr - cr, tc - cc
-                    # Validate placement bounds and overlap.
                     good = True
-                    for r, c in cast(List[Point], components[idx]["cells"]):  # type: ignore[index]
+                    for r, c in cast(List[Point], components[idx]["cells"]):
                         nr, nc = r + dy, c + dx
                         if not in_bounds(h, w, nr, nc) or (nr, nc) in placed_cells:
                             good = False
@@ -186,13 +174,12 @@ def fallback_place(
                 continue
             _, dy, dx, shifted = best
             translations[idx] = (dy, dx)
-            for r, c in cast(List[Point], components[idx]["cells"]):  # type: ignore[index]
+            for r, c in cast(List[Point], components[idx]["cells"]):
                 placed_cells.add((r + dy, c + dx))
             known_conns |= shifted
             remaining.remove(idx)
             progress = True
         if not progress:
-            # If we cannot place the rest, keep them at original location.
             for idx in remaining:
                 translations[idx] = (0, 0)
             break
@@ -207,15 +194,13 @@ def apply_translations(
     h, w = len(grid), len(grid[0])
     out = [[0] * w for _ in range(h)]
 
-    # Place coloured components.
     for idx, comp in enumerate(components):
-        colour = cast(int, comp["colour"])  # type: ignore[index]
+        colour = cast(int, comp["colour"])
         dy, dx = translations.get(idx, (0, 0))
-        for r, c in cast(List[Point], comp["cells"]):  # type: ignore[index]
+        for r, c in cast(List[Point], comp["cells"]):
             nr, nc = r + dy, c + dx
             out[nr][nc] = colour
 
-    # Place connectors (colour 2) after all shapes.
     for idx, con_list in connectors.items():
         dy, dx = translations.get(idx, (0, 0))
         for (r, c), _ in con_list:
@@ -228,7 +213,6 @@ def apply_translations(
 def extractGadgetComponents(grid: Grid) -> Gadgets:
     components, owner = get_components(grid)
     if not components:
-        # Represent an empty setup with an empty connectors map and dummy door index
         return (components, owner, {}, -1)
     connectors = get_connectors(grid, owner)
     door = find_door(components)
@@ -237,7 +221,6 @@ def extractGadgetComponents(grid: Grid) -> Gadgets:
 
 def pairConnectors(gadgets: Gadgets) -> Dict[int, Dict[int, Vector]]:
     components, owner, connectors, door = gadgets
-    # Only the connectors map matters to infer deltas
     return build_edges(connectors)
 
 
@@ -258,19 +241,16 @@ def buildConnectorGraph(gadgets: Gadgets, edges: Dict[int, Dict[int, Vector]]) -
             candidate = (base[0] + delta[0], base[1] + delta[1])
             if dst in translations:
                 if translations[dst] != candidate:
-                    # Prefer already assigned value; inconsistent cycles should not occur.
                     continue
             else:
                 translations[dst] = candidate
                 queue.append(dst)
 
-    # Greedy fallback for components not in the edge graph
-    fallback_place(grid=owner and [[0]*len(owner[0]) for _ in range(len(owner))] or [],  # dummy grid shape
+    fallback_place(grid=owner and [[0]*len(owner[0]) for _ in range(len(owner))] or [],
                    components=components,
                    connectors=connectors,
                    translations=translations)
 
-    # Ensure all components have translations (default to zero if unreachable).
     for idx in range(len(components)):
         translations.setdefault(idx, (0, 0))
     return translations

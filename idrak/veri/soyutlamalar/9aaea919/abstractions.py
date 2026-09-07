@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 9aaea919."""
 
 from __future__ import annotations
 
@@ -38,8 +37,8 @@ def _load_solver() -> Callable[[Grid], Grid]:
     if spec is None or spec.loader is None:
         raise RuntimeError("Unable to import task solver module")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)  # type: ignore[assignment]
-    return module.solve_9aaea919  # type: ignore[attr-defined]
+    spec.loader.exec_module(module)
+    return module.solve_9aaea919
 
 
 _solver = _load_solver()
@@ -98,4 +97,3 @@ def run_abstractions() -> None:
 
 if __name__ == "__main__":
     run_abstractions()
-

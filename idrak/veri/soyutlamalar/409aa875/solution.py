@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 409aa875."""
 
 from collections import Counter, deque
 from typing import Dict, List, Tuple, TypedDict
@@ -150,12 +149,6 @@ def _project_components(grid: Grid) -> Grid:
 
 
 def groupByBand(grid: Grid) -> List[Band]:
-    """Group components by their destination row band after lifting.
-
-    A band is a dict with keys:
-      - "dest_r": int, the lifted row index
-      - "comps": List[Component], components in this band
-    """
     background = _background_color(grid)
     components: List[Component] = [
         comp
@@ -168,26 +161,14 @@ def groupByBand(grid: Grid) -> List[Band]:
         dest_r = comp["r_min"] - SHIFT_ROWS
         per_row.setdefault(dest_r, []).append(comp)
 
-    # Preserve insertion order of bands as discovered
     return [{"dest_r": r, "comps": comps} for r, comps in per_row.items()]
 
 
 def liftBands(bands: List[Band]) -> List[Band]:
-    """Pass-through: components are already implicitly lifted by dest_r.
-
-    This keeps the same structure while making the stage explicit.
-    """
     return bands
 
 
 def normaliseBandColumns(bands: List[Band]) -> List[BandEntries]:
-    """Compute marker destination columns using a global base column.
-
-    For each component, compute dest_c as (c_min - base_col) + (width-1)//2,
-    where base_col is the minimum c_min across all components (global).
-    Returns bands with an added key "entries": List[(dest_c:int, comp:Component)].
-    """
-    # Flatten to find global base column (matches committed solver semantics)
     all_comps: List[Component] = [comp for band in bands for comp in band["comps"]]
     if not all_comps:
         return []
@@ -207,13 +188,6 @@ def normaliseBandColumns(bands: List[Band]) -> List[BandEntries]:
 
 
 def markBandCentroids(grid: Grid, bands: List[BandEntries]) -> Grid:
-    """Render markers for each band, highlighting the middle one when odd-sized.
-
-    - Places color 1 at the middle marker of odd-sized bands (size >= 3)
-    - Places color 9 at other marker positions
-    - If the marker lands on a non-background color different from marker,
-      recolor that original 4-connected component to the marker color.
-    """
     background = _background_color(grid)
     height = len(grid)
     width = len(grid[0])

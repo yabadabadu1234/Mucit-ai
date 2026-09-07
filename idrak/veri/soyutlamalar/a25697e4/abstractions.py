@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task a25697e4."""
 
 from __future__ import annotations
 
@@ -28,7 +27,6 @@ def _collect_counts_and_positions(grid: Grid) -> Tuple[Dict[int, int], Dict[int,
 
 
 def abstraction_fill_anchor_holes(grid: Grid) -> Grid:
-    """Keep anchor component and fill its bounding holes with the closer secondary color."""
 
     counts, positions = _collect_counts_and_positions(grid)
     background = max(counts.items(), key=lambda kv: kv[1])[0]
@@ -77,7 +75,6 @@ def abstraction_fill_anchor_holes(grid: Grid) -> Grid:
 
 
 def abstraction_compact_components_v1(grid: Grid) -> Grid:
-    """First compacting attempt: project third color using a fixed vertical orientation."""
 
     counts, positions = _collect_counts_and_positions(grid)
     background = max(counts.items(), key=lambda kv: kv[1])[0]
@@ -152,7 +149,6 @@ def abstraction_compact_components_v1(grid: Grid) -> Grid:
 
 
 def abstraction_compact_components_final(grid: Grid) -> Grid:
-    """Wrapper around the refined solver."""
 
     return solve_a25697e4(grid)
 

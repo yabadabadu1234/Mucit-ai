@@ -1,4 +1,3 @@
-"""Exploratory abstractions for task e87109e9."""
 
 from collections import Counter
 import json
@@ -185,7 +184,6 @@ def _load_samples():
     return samples
 
 
-# Preload samples for nearest-neighbour solver.
 _SAMPLES = _load_samples()
 
 

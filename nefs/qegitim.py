@@ -1,34 +1,3 @@
-"""
-Ana modelin eğitimi -- **gradyan inişi yoktur** (kütük H3/H28).
-
-Kullanıcı hükmü: ölçüt "ikisi birden" olacak -- hem ARC potansiyeli
-(dışarıdan sınanabilir), hem nefsin kendi mîzânı (kendi hükmüne bağlı):
-
-    V(p) = −(1/n) Σ log P(doğru belirteç)          ← ARC
-           + λ_m · mîzân cezası                     ← nefsin kendi hükmü
-           + λ_t · topolojik ceza                   ← mertebe tıkanıklığı
-
-**Mîzân cezası nedir.** Nefs, doğru cevabı vermekle mükellef olduğu
-kadar doğru HÜKÜM vermekle de mükelleftir. Küllî hüküm alanlarından
-okunan (yalnız burada, eğitim ölçütünde okunur; akış içinde hiçbir
-meleke okumaz):
-
-* ``tenakuz`` yüksekse ceza -- çelişkili bir zihin doğru cevap verse de
-  tesadüfen vermiştir.
-* ``nakz`` yüksekse ceza -- küllî iddia düşmüştür.
-* ``tasdik`` düşükse ceza -- hüküm mühürlenmemiştir.
-* ``sukut`` yüksekken cevap isteniyorsa ceza -- susmak, cevabı bilmemek
-  hâlinde fazilettir (H10); cevabın bilindiği yerde kusurdur.
-
-Motor ``ogrenme/optimize.py``dedir ve **aynen** kullanılır (H32'nin
-mimarisi ana modele geçti): Active Subspaces ``d→r`` → Nyström AS-GEK
-vekil yüzeyi → hedef bilgisi sızdırma → sanal zamanlı **dalga yayılımı**.
-Ayrık motor (Postnikov + tersine tavlama) burada dinamik mertebeleri
-seçer -- ``nefs/mertebe.py``in ``DINAMIK``ini.
-
-Tünelleme (H29) başıboş değildir: tıkanma teşhis edilecek VE sıkışılmış
-olacak; ilerleme olunca mühürlenir.
-"""
 from __future__ import annotations
 
 import time
@@ -48,19 +17,7 @@ __all__ = ["ornekler", "ornek_bol", "belirtecleri_kodla",
            "egit", "degerlendir"]
 
 
-# =====================================================================
 def ornek_bol(o) -> Tuple[List[int], int, str]:
-    """Bir tâlim ögesini ``(bağlam, hedef, cins)`` diye oku -- **tek yer**.
-
-    **FERMAN 1-R.** Öge artık bir üçlüdür: cins ``"arc"``,
-    ``"arc_sözlü"`` yahut ``"sözlü"``dür. Eski ikili ögeler de okunur
-    ve cinsleri ``"sözlü"`` sayılır -- fakat bu bir sessiz ikame
-    değildir: cins raporda görünür, o hâlde ikili bir ögenin nereden
-    geldiği gizlenemez.
-
-    Cins **motoru değiştirmez** (iki motor kurulmaz); yalnız hedefin
-    nereden geldiğini ve sadakatin ne kadar kat'î arandığını söyler.
-    """
     if len(o) >= 3:
         return list(o[0]), int(o[1]), str(o[2])
     return list(o[0]), int(o[1]), "sözlü"
@@ -69,54 +26,6 @@ def ornek_bol(o) -> Tuple[List[int], int, str]:
 def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
                        sozluk: int = 16, usul: str = "kategorik"
                        ) -> np.ndarray:
-    """Belirteç akışını ham duyu dizeyine çevir: satır başına bir belirteç.
-
-    Her belirteç ``kubit`` bitine açılır ve her bit ``±1`` olarak bir
-    sütuna yazılır. ``QYazmac.kodla`` bu sütunları açıya çevirir; ``+1``
-    ile ``−1`` ayrı açılar verir, dolayısıyla kodlama **tersinirdir**
-    ve hiçbir bit kaybolmaz (H14).
-
-    ==================================================================
-    ZABITIN HÜKMÜ VE BU HATTIN ÖLÇÜLEN HÂLİ (KÜME 9/C)
-    ==================================================================
-
-    Padişahın zabıtı düz ikili kodlamayı **yasaklar** (Tuzak A/B). Bu
-    hattı yasağa göre ölçtüm; netice iki başlıdır ve ikisi de yazılıyor:
-
-    **1) ARC RENKLERİNDE yasak İŞLEMEZ -- çünkü tahrip edilecek bir
-    geometri yoktur.** Renk kategoriktir; 7 ile 8 arasında "yakınlık"
-    manasızdır. Ölçüldü (10 belirteç, mesafe değişkesi = std/ort)::
-
-        kubit= 4, sozluk=16 : en az 2,000  en çok 4,000  değişke 0,2224
-        kubit=16, sozluk=16 : en az 5,657  en çok 5,657  değişke 0,0000
-
-    ``kubit ≥ sozluk`` dalı (Hadamard) fiilen **tam bir qudit
-    tabanıdır**: bütün ikili mesafeler eşit. Zabıt bunu yasaklamaz,
-    ister. İkili dal 4 boyutta elde edilebilecek en iyi hâldir; 16
-    belirteci 4 boyutta eşit uzaklıkta dizmek imkânsızdır.
-
-    **2) SÜREKLİ NİCELİKTE yasak TAM İŞLER -- ve hat kırmızıdır.**
-    Mevki, gömme, açı gibi Öklid manası olan bir niceliği önce
-    tamsayıya kırpıp sonra ``±1`` bitlere açmak geometriyi öldürür.
-    Ölçüldü (14 nokta, ℝ⁴, giriş mesafeleri ↔ kodlanmış mesafeler,
-    sıra bağıntısı)::
-
-        mevcut hat (±1 bit)   ρ = +0,2685      ← Tuzak A/B, İMHA EDİLDİ
-        lif: tutarlı          ρ = +1,0000
-
-    O hâlde hüküm: **kategorik girdi Hadamard/qudit tabanına, sürekli
-    girdi ``nefs/lif.py``ye gider. İkili dal imha edildi.** ``usul`` bunu açıkça seçtirir.
-
-    ==============  ==================================================
-    ``usul``        ne yapar
-    ==============  ==================================================
-    ``kategorik``   Hadamard/qudit tabanı. ``kubit ≥ sozluk`` ŞARTTIR;
-                    ikili dal imha edildi.
-    ``sürekli``     ``nefs/lif.py:kodla(ne="tutarlı")`` -- koherent
-                    durum; Öklid metriği birebir korunur.
-    ``lie``         ``nefs/lif.py:kodla(ne="lie-chebyshev qudit")``.
-    ==============  ==================================================
-    """
     if usul in ("sürekli", "lie"):
         from .lif import kodla, KIP_TUTARLI, KIP_LIE
         ne = KIP_TUTARLI if usul == "sürekli" else KIP_LIE
@@ -128,34 +37,6 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
     if usul != "kategorik":
         raise ValueError("kodlama usulü bilinmiyor: %r" % (usul,))
 
-    # ==============================================================
-    # QUDİT TABANI -- bit yok, seviye var
-    # ==============================================================
-    #
-    # MPS yazmacı silindiği için "belirteci ``kubit`` bite aç" diye bir
-    # iş kalmadı: yeni yazmaçta satır bir ``ℂ^sozluk`` lifidir ve
-    # belirteç onun bir **taban durumudur**. Taban durumları dik olduğu
-    # için bütün ikili mesafeler kendiliğinden eşittir -- ne Hadamard
-    # kurmak gerekir, ne ``2·bit − 1``.
-    #
-    # ``kubit`` artık kodlamayı DEĞİL, yalnız çıktının genişliğini
-    # ilgilendirir ve o da ``sozluk``tur. İmza uyum için duruyor.
-    #
-    # ÖLÇÜLDÜ: 16 belirteç, bütün ikili mesafeler ``√2`` (tam eşit),
-    # çarpışma sıfır, değişke 0,0000.
-    # ══════════════════════════════════════════════════════════════
-    #  GENİŞLİK SÖZLÜK DEĞİL, **TABAN**DIR (ferman 1-N)
-    # ══════════════════════════════════════════════════════════════
-    #
-    # Evvelce genişlik ``sozluk``tu ve o yapıda **belirteç, veri
-    # lifinin bir taban durumunun kendisiydi**: 16 belirteçten fazlası
-    # imkânsızdı. Artık gelen dizi bir belirteç akışı değil, bir
-    # **basamak akışıdır** (``nefs/belirtec.py:tip_vektoru``): her
-    # eleman ``[0, taban)`` aralığındadır ve taban veri lifidir.
-    #
-    # ``kubit`` argümanı o tabanı taşır. ``sozluk`` artık genişliği
-    # tayin etmez -- etseydi 200 019 sütunluk bir tek-sıcak vektör
-    # istenirdi ve o, mimarinin kendisini inkâr olurdu.
     taban = int(kubit) if int(kubit) >= 2 else int(sozluk)
     t = np.asarray(belirtecler, int).reshape(-1) % taban
     out = np.zeros((t.size, taban))
@@ -166,44 +47,6 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
 def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
              sozluk: int = 0, tohum: int = 0, taban: int = 16,
              basamak: int = 0) -> List[Tuple[List[int], int, str]]:
-    """**ARC CİNSİ** (ferman 1-R): *"teste çıkış olarak ne verirsin?"*
-
-    ===================================================================
-    SUAL DEĞİŞTİ -- VE EVVELKİ SUAL YANLIŞTI
-    ===================================================================
-
-    Padişahın hükmü sarihtir::
-
-        "Arc verilerinde temel esasımız şu: sana girdi olarak şu
-        bulmacanın şu giriş ve çıkışları verildiğinde teste çıkış olarak
-        ne verirsin? Soracağımız temel sual bu."
-
-    Evvelce burada bu sual **hiç sorulmuyordu**: ``gorev_dizisi``in
-    verdiği bağlam ile hedef birleştirilip tek akış yapılıyor, sonra o
-    akıştan **rastgele pencereler** çekiliyordu. Yâni model "bu
-    bulmacanın cevabı nedir" diye değil, "bu metinde bir sonraki
-    belirteç nedir" diye sorgulanıyordu; hedefin bağlamdan geldiği bile
-    tesadüftü.
-
-    Doğrusu **öğretmen zorlamasıdır** (teacher forcing): bağlam
-    sabittir (misal çiftleri + test girdisi) ve hedefin her basamağı
-    sırayla sorulur; her adımda o ana kadar yazılmış basamaklar bağlama
-    eklenir. Böylece eğitilen şey tam olarak koşarken yapılan iştir.
-
-    ===================================================================
-    SÖZLÜ ÇÖZÜM DE HEDEFTİR
-    ===================================================================
-
-        "Eğer veride çıkışı sözle tarif eden ızgaradan başka herhangi
-        bir kaynak veya sözlü çözüm varsa onun çıkmasını hedeflemesini
-        sağlayacağız."
-
-    ``soyutlama_oku`` bir görevin sözlü algoritmasını verir. Varsa o da
-    aynı bağlamdan hedeflenir ve cinsi ``"arc_sözlü"`` yazılır -- **aynı
-    mizan, aynı motor**, yalnız cins ayrı (ferman 1-R).
-
-    Dönen her öge ``(bağlam, hedef_basamak, cins)`` üçlüsüdür.
-    """
     from .belirtec import basamak_sayisi, tip_vektoru
     from .musahede import soyutlama_oku
     from .belirtec import belirtecle
@@ -216,7 +59,6 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
     cikti: List[Tuple[List[int], int, str]] = []
 
     def _zorla(bag_bas, hed_bas, cins: str) -> None:
-        """Öğretmen zorlaması: hedefin her basamağı sırayla sorulur."""
         akis = list(bag_bas)
         for h in hed_bas:
             pen = akis[-P:] if len(akis) >= P else ([0] * (P - len(akis))
@@ -225,75 +67,32 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
             akis.append(int(h))
 
     for g in gorevler:
-        # ``except: continue`` KALDIRILDI (ferman). Bir görev dizisi
-        # kurulamıyorsa o görev sessizce örneklemden düşüyordu.
         dizi, hedef = gorev_dizisi(g, hedef_indis=0)
         assert len(dizi) > 0, "görev %r BOŞ dizi verdi" % getattr(g, "ad", "")
         bag_bas = tip_vektoru(list(dizi), tb, bs)
         hed_bas = tip_vektoru(list(hedef), tb, bs)
         _zorla(bag_bas, hed_bas, "arc")
-        # ── SÖZLÜ ÇÖZÜM VARSA O DA HEDEFTİR ────────────────────────
         soz = soyutlama_oku(getattr(g, "ad", "") or "")
         if soz:
             soz_bas = tip_vektoru(belirtecle(soz), tb, bs)
             _zorla(bag_bas, soz_bas, "arc_sözlü")
         if len(cikti) >= azami:
             break
-    # Bütçe aşılırsa **rastgele** seyreltilir: baştan kesmek, ilk
-    # görevlerin hepsini alıp sonrakileri hiç görmemek olurdu.
     if len(cikti) > int(azami):
         se = rng.choice(len(cikti), size=int(azami), replace=False)
         cikti = [cikti[int(i)] for i in sorted(se)]
     return cikti
 
 
-# =====================================================================
 def adayin_tuttugu(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
                    p: Optional[np.ndarray] = None, sozluk: int = 16,
                    lam_mizan: float = 0.25, lam_top: float = 0.1,
                    ne: str = "uygunluk", o=None,
                    cevap_isteniyor: bool = True, baglam=None):
-    """BU ADAY NE KADAR TUTUYOR -- **tek terkip** (kütük H223).
-
-    Küme: ``_kos`` + ``mizan_cezasi`` + ``uygunluk`` + ``hedef_cezasi``.
-    Dördü tek sualin parçalarıydı: adayı koştur, nefsin kendi hükmünün
-    cezasını çıkar, hedefe uzaklığı ölç. Son ikisi ``_kos``u veri
-    başına **ayrı ayrı** çağırıyordu; ikisi birden istendiğinde bütün
-    akış iki kere koşuyordu.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``koş``         ``(P, ölçüler)`` -- tek bağlam için akış
-    ``mizan``       nefsin kendi hükmünün cezası
-    ``uygunluk``    ``V(p)`` -- dalganın gördüğü potansiyel
-    ``hedef``       ``‖𝒢(u) − y_hedef‖²`` -- hedef bilgisinin sızdırılması
-    ``ikisi``       ``(V, hedef_cezası)`` -- **tek** akış geçişinde
-    ==============  ==================================================
-
-    ``V(p)`` bir **kayıp fonksiyonu değildir** ve aradaki fark lafzî
-    değildir: bu potansiyelin gradyanı hiç alınmaz. Active Subspaces'in
-    kurduğu ``r`` boyutlu yüzeyde dalga yayılır ve küresel minimum
-    spektral çöküşle bulunur (H28).
-
-    Mizan cezası: tenakuz + nakz + (1 − tasdik), cevap isteniyorsa
-    sükûtun yarısı, ve **Şek'te kalmanın** yarısı -- delil varken hüküm
-    verilmemesi de bir kusurdur.
-
-    Topolojik terim ``−λ_top·entropi``dir: dolaşıklık **ödüllendirilir**,
-    zira çarpım durumuna çöken bir yazmaç süperpozisyonun zenginliğini
-    kaybetmiştir.
-
-    ``hedef`` cezasının ``−log P``den farkı: ``−log P`` yalnız doğru
-    belirtece bakar; bu ise bütün dağılımın hedefe uzaklığını
-    cezalandırır ve yanlışların hepsini bastırır. Minimumun **nerede**
-    olduğunu bilmiyoruz; orada **ne olacağını** biliyoruz.
-    """
     def kos(bag):
         E = belirtecleri_kodla(bag, nefs.ayar.veri_lifi,
                                nefs.ayar.veri_lifi)
         q = nefs.idrak_et(E)
-        # **BASAMAK DAĞILIMI** (ferman 1-N): taban yazmaçtan.
         return q.beyan(0), q.olcumler()
 
     def mizan(olc, ister=True):
@@ -303,7 +102,6 @@ def adayin_tuttugu(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
         ceza += 1.0 * (1.0 - float(olc.get("tasdik", 0.0)))
         if ister:
             ceza += 0.5 * float(olc.get("sukut", 0.0))
-        # Şek'te kalmak da bir kusurdur: delil varken hüküm verilmemiştir.
         ceza += 0.5 * float(olc.get("P_Şek", 0.0))
         return ceza
 
@@ -339,15 +137,11 @@ def adayin_tuttugu(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
     return V, H
 
 
-
-# =====================================================================
 def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
          cevrim: int = 4, r: int = 2, n_ornek: int = 8, izgara: int = 16,
          sozluk: int = 16, ayrik: bool = True, lam_hedef: float = 0.5,
          gama_azami: float = 0.3, tohum: int = 0,
          gunluk: Optional[List[str]] = None) -> Dict[str, object]:
-    """Çift motorlu eğitim -- sürekli (AS-GEK + dalga) ve ayrık (Postnikov)."""
-    # yer tahsisi ilk koşuda olur; vektör ondan sonra bilinir
     adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=[0] * 4)
     p = nefs.vektor()
     V0 = adayin_tuttugu(nefs, veri, p, sozluk)
@@ -358,22 +152,18 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
     tunel: List[float] = []
 
     for c in range(cevrim):
-        # --- TÜNELLEME VANASI (H29): teşhise kilitli, başıboş değil
         _, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=veri[0][0])
         tikanik = float(o.get("tenakuz", 0.0))
         sikisti = c > 0 and kayit[-1] >= kayit[-2] - 1e-9
         if sikisti and tikanik > 0.5:
-            gama = min(gama_azami, gama + 0.1)     # 𝒪₁₅ Merak Γ'yı yükseltir
+            gama = min(gama_azami, gama + 0.1)
         elif not sikisti:
-            gama = 0.0                             # 𝒪₃₀ Tahkik mühürler
+            gama = 0.0
         tunel.append(gama)
         if gama > 0.0:
-            # tünelleme: parametre uzayında enine alan -- dar bariyerin
-            # ardındaki daha derin tabana sıçrama imkânı
             p = p + gama * np.random.default_rng(tohum + 100 + c).normal(
                 scale=0.3, size=len(p))
 
-        # --- SÜREKLİ MOTOR: AS → GEK → hedef sızdırma → dalga
         p_yeni, tani = as_gek_adimi(
             lambda q: adayin_tuttugu(nefs, veri, q, sozluk), p,
             yaricap=0.5, r=r, izgara=izgara, n_ornek=n_ornek,
@@ -383,11 +173,10 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
         if V_yeni < kayit[-1]:
             p, V = p_yeni, V_yeni
         else:
-            V = kayit[-1]                          # kabul edilmedi; dürüst
+            V = kayit[-1]
         kayit.append(V)
         nefs.yukle(p)
 
-        # --- AYRIK MOTOR: Postnikov adresi + tersine tavlama
         if ayrik:
             _, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=veri[0][0])
             tik = {m: float(o.get("tenakuz", 0.0)) * (1.0 + i * 0.05)
@@ -397,10 +186,6 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
             aday[int(np.argmax([tik[m] for m in aday]))] = adres
 
             def E_ayrik(vek: Tuple[int, ...]) -> float:
-                # Mertebe değişince 20 lif YENİDEN kurulur ve yeniden
-                # MAKİNE DENETİMİNDEN geçer (nefs/mertebe.py); ayrık
-                # motorun seçtiği mertebe, tip denetiminden geçmeyen bir
-                # lif olamaz.
                 mertebe.DINAMIK = tuple(vek)
                 return adayin_tuttugu(nefs, veri[:2], p, sozluk)
 
@@ -423,15 +208,8 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
             "tünel_açıldı": float(sum(1 for g in tunel if g > 0.0))}
 
 
-# =====================================================================
 def _degerlendir_mudrike(nefs, gorevler: Sequence, azami: int,
                          derinlik: int) -> Dict[str, object]:
-    """Müdrike çevrimiyle değerlendirme -- padişahın hakikî çıkarımı.
-
-    Ölçü aynı ve sert kalır: hedef ızgara **tam** eşleşti mi. Fakat
-    cevap belirteç kestirimiyle değil, **ispatlı kaide** ile üretilir ve
-    yakîn eşiğini geçmeyen görevde model **susar**.
-    """
     from .kulli_kayip import suz as _mudrike
 
     deneme = cozulen = konusan = yanlis = sukut = 0
@@ -478,57 +256,6 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
                 pencere: int = 8, sozluk: int = 16,
                 azami_uret: int = 0, ayna=None, mudrike_ile: bool = False,
                 derinlik: int = 2) -> Dict[str, object]:
-    """Hiç görülmemiş bulmacalar: hedef ızgara **tam** çözüldü mü?
-
-    ===================================================================
-    KÖK SEBEP -- niçin bu fonksiyon baştan yazıldı (kütük H133)
-    ===================================================================
-
-    Bu değerlendirme evvelce ARC'yi **bir sonraki belirteci kestirme**
-    olarak koşuyordu: görev düz bir belirteç dizisine çevriliyor, sonra
-    hedef ızgara ``argmax(beyan)`` ile **belirteç belirteç** üretiliyordu
-    -- 8 belirteçlik bağlam penceresiyle, 16 sembollük sözlükten.
-
-    Yani padişah, tam da olmamaya yemin ettiği şeyi yapıyordu: bir dil
-    modeli. Ve bu usulle ARC çözülemez, sebebi cebridir:
-
-    * 30×30 bir ızgara 900 hücredir; model 8 belirtecine bakıyor.
-    * Tam eşleşme için ~100–900 belirtecin **hepsi** doğru olmalı.
-      Belirteç başına %95 isabetle bile ``0,95^100 ≈ 0,006``.
-    * Ve `idrak/cozucu.py` -- **ispatlı** ARC çözücüsü, cevap verdiğinde
-      isabeti %100 -- çıkarım yolunda **hiç çağrılmıyordu**.
-
-    Daha kötüsü: 41 melekenin kurduğu hüküm alanları (``tasdik``,
-    ``makam``, ``sukut``) cevaba hiç dokunmuyordu; yalnız ``beyan``ın
-    ``argmax``ı vardı. H115/H105/H129'da ölçülen "hüküm alanları
-    yapısız" neticesi bunun **sonucudur**: hüküm zaten cevaba
-    ulaşmıyordu.
-
-    Artık çıkarım `nefs/mudrike.py`nin **müdrike çevrimi**dir: vazife
-    nevi → tesadüf mü → örtü → kaide → yakîn → beyan. Dalga kaideyi
-    bulmaz, **yakîni tartar** (𝒪₃₂/𝒪₃₃); kaideyi kaide cebri bulur.
-
-    ===================================================================
-    PADİŞAHIN FERMANIYLA BU HÜKÜM **İPTAL EDİLDİ** (KÜME 9)
-    ===================================================================
-
-    Yukarıdaki gerekçe -- *"padişah tam da olmamaya yemin ettiği şeyi
-    yapıyordu: bir dil modeli"* -- yanlıştı. Ferman sarihtir:
-
-        *"Bu proje bir llm projesidir... ARC yalnız llm motoruyla
-        çözülecek, başka herhangi bir şeyle değil."*
-
-    ``0,95¹⁰⁰ ≈ 0,006`` cebri doğrudur; fakat o, motoru **terk
-    etmenin** değil **büyütmenin** gerekçesidir. Kusur dil modeli
-    olmakta değil, 8 belirteçlik pencerede ve 16 sembollük sözlüktedir.
-    Ve ``idrak/cozucu.py`` -- "cevap verdiğinde isabeti %100" diye
-    övülen ispatlı çözücü -- elle yazılmış ARC tahminlerinden ibaretti;
-    tasfiye edildi.
-
-    O hâlde varsayılan **belirteç üretimidir**. ``mudrike_ile=True``
-    müdrike çevrimini hâlâ koşturabilir; kıyas ölçüsü olarak durur,
-    akışın kendisi değildir.
-    """
     from .belirtec import basamak_sayisi as _basamak, tip_vektoru as _tip
 
     if mudrike_ile:
@@ -536,35 +263,16 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
     cozulen = isabet = deneme = atlanan = 0
     hucre: List[float] = []
     sukut_sayisi = 0
-    # ``azami`` artık "kaç görev TARANIR" değil "kaç görev fiilen
-    # DENENİR" demektir. Aksi hâlde had yüzünden atlanan görevler
-    # denemenin yerini yiyor ve tarama boşa gidiyordu.
     for g in gorevler:
         if deneme >= azami:
             break
-        # ``except: continue`` KALDIRILDI: ölçünün paydası (``deneme``)
-        # gizlice küçülüyordu ve isabet oranı olduğundan yüksek çıkıyordu.
         dizi, hedef = gorev_dizisi(g, hedef_indis=0)
         assert len(hedef) > 0, "görev %r BOŞ hedef verdi" % getattr(g, "ad", "")
         deneme += 1
-        # **BELİRTEÇ → BASAMAK** (ferman 1-N). Model bir basamak söyler;
-        # belirteci basamaklar terkip eder. ``% sozluk`` almak, 200 019
-        # elemanlı bir uzayı taşıyıcının 16 seviyesine kırpmak olurdu.
         tb = int(nefs.ayar.veri_lifi)
         bs = _basamak(sozluk, tb)
         baglam = [int(x) for x in _tip(dizi, tb, bs)]
         h = [int(x) for x in _tip(hedef, tb, bs)]
-        # **Ölçülen ve düzeltilen kusur.** Evvelce had aşılınca görev
-        # kesilip ``kesilen`` diye sayılıyor, yine de ``deneme``ye dâhil
-        # ediliyordu. Ölçüldü ve KALDI: kısa koşuda 4 görevin 4'ü de
-        # kesiliyor, netice "tam çözülen 0/4" görünüyordu -- oysa hiçbir
-        # görev fiilen sonuna kadar denenmemişti. Yani ölçüt sıfır
-        # değil, **boş**tu; sıfır gibi görünmesi daha kötüsüdür.
-        #
-        # Doğrusu, hadde SIĞMAYAN görevi hiç denememektir: uzun hedefli
-        # görev atlanır ve atlandığı ayrıca yazılır. Böylece ``deneme``ye
-        # giren her görev sonuna kadar üretilmiş olur ve ``tam_çözülen``
-        # gerçekten bir orandır.
         if 0 < azami_uret < len(h):
             atlanan += 1
             deneme -= 1
@@ -577,11 +285,6 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
             P, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=pen)
             if o.get("sukut", 0.0) > 0.8:
                 sukut_sayisi += 1
-            # **KÖR ARGMAX'IN YERİNE VAKUM KIVILCIMI (nefs/ayna.py).**
-            # Burası evvelce ``int(np.argmax(P))`` diyordu: aynanın adı
-            # ana kodda geçiyor, kendisi hiç koşmuyordu. ``ayna=None``
-            # verilirse eski kör yol aynen geri gelir -- tesir
-            # kapatılabilir, dolayısıyla ölçülebilir (H90).
             from nefs.soyle import _sec
             t = _sec(P, ayna)
             uretilen.append(t)
@@ -593,11 +296,6 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
             cozulen += 1
         if n and uretilen[0] == h[0]:
             isabet += 1
-    # **BOŞ ÖLÇÜT SIFIR GİBİ GÖSTERİLMEZ** (ferman 5). ``deneme = 0``
-    # iken ``tam_çözülen = 0`` yazmak "hiçbirini çözemedi" demek olur;
-    # halbuki hiçbiri **denenmemiştir**. Ölçüldü ve oldu: üretim haddi
-    # belirteç cinsindeyken bütün ARC hedefleri "çok uzun" göründü ve
-    # 0/0 basıldı. Şimdi hâl açıkça dönüyor ve taht onu denetliyor.
     return {"deneme": deneme, "tam_çözülen": cozulen,
             "atlanan_uzun": atlanan,
             "ölçüt_boş": bool(deneme == 0),

@@ -1,34 +1,3 @@
-"""Operatör — DeepONet, FINO ve ızgaradan bağımsız operatör öğrenmesi.
-
-Bir *operatör* ``𝒢: u ↦ 𝒢(u)`` fonksiyondan fonksiyona gider.  İki
-mimari:
-
-**DeepONet.**  Evrensel operatör yaklaşım teoreminin doğrudan
-gerçeklemesi:
-
-.. math::  \\mathcal{G}(u)(y) \\approx \\sum_{k=1}^{p}
-   \\underbrace{b_k\\bigl(u(x_1),\\dots,u(x_m)\\bigr)}_{\\text{dal}}\\;
-   \\underbrace{t_k(y)}_{\\text{gövde}}
-
-Girdi fonksiyonu ``m`` sensör noktasında örneklenir (dal), çıktı
-konumu ``y`` ayrıca beslenir (gövde), ve ikisinin **iç çarpımı**
-alınır.  Ayrışım kasten çarpımsaldır: gövde ``y``ye sürekli bağlıdır,
-o yüzden **çıktı ızgarası eğitimdekinden farklı olabilir**.  Bu,
-mimarinin asıl vaadi ve burada ölçülen şeydir.
-
-**FINO (çarpanlara ayrılmış FNO).**  İki boyutlu spektral çekirdek
-``R_θ(k₁,k₂)``, tam bir ``K×K`` tensör yerine ``R`` rütbeli çarpanlara
-ayrılır:
-
-.. math::  R_\\theta(k_1,k_2) = \\sum_{r=1}^{R} U_r(k_1)\\otimes V_r(k_2)
-
-Parametre sayısı ``K²`` yerine ``2KR``.  **Rütbe yetmezse hata
-kalır** ve o hata ölçülür; sıkıştırma bedava değildir ve bedeli
-raporlanır.
-
-Her ikisi için de asıl sınama **çözünürlükten bağımsızlık**tır:
-eğitimden farklı bir ızgarada aynı fonksiyon çıkmalı.
-"""
 
 from __future__ import annotations
 
@@ -45,33 +14,15 @@ __all__ = [
 
 
 def l2_norm(v: np.ndarray, alan: float = 1.0) -> float:
-    """``‖v‖_{L²} = √(|Ω|/N · Σ|v_i|²)``.
-
-    Ölçek çarpanı **norma** girer, alanın kendisine değil (K30
-    tashihi).  Alanı çarpanla ölçeklemek, fonksiyonu çözünürlüğe
-    bağımlı kılar -- yani ızgaradan bağımsızlığın tam aksini yapar.
-    """
     v = np.asarray(v, float)
     N = v.shape[0]
     return float(np.sqrt(alan / N * np.sum(v * v)))
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  DeepONet
-# ══════════════════════════════════════════════════════════════════════
-
 @dataclass
 class DeepONet:
-    """``𝒢(u)(y) ≈ Σ_k b_k(u|sensör) · t_k(y) + b₀``.
-
-    Dal ve gövde birer küçük ileri beslemeli ağdır.  Eğitim, **kapalı
-    form** ile yapılır: gövde çıktıları sabit tutulup dal katsayıları
-    en küçük karelerle çözülür, sonra tersi.  Bu, gradyan inişinden
-    hem daha hızlı hem de tekrarlanabilir; ve bu risalenin ısrarı olan
-    "kör gradyan aramasını bırak" ile aynı yöndedir.
-    """
-    m: int                       # sensör sayısı
-    p: int = 16                  # taban sayısı
+    m: int
+    p: int = 16
     gizli: int = 32
     tohum: int = 0
     W_dal: np.ndarray = field(init=False, repr=False)
@@ -82,61 +33,29 @@ class DeepONet:
         if self.m < 1 or self.p < 1:
             raise ValueError("m, p ≥ 1 olmalı")
         r = np.random.default_rng(self.tohum)
-        # Rastgele öznitelikler (sabit) + öğrenilen doğrusal kat:
         self._A_dal = r.normal(0, 1.0 / np.sqrt(self.m),
                                (self.m, self.gizli))
         self._c_dal = r.uniform(-1, 1, self.gizli)
-        # Dal özniteliklerine girdinin KENDİSİ de eklenir.  Sebebi
-        # ölçüldü: burada öğrenilen işleç (antitürev) DOĞRUSALDIR ve
-        # salt tanh öznitelikleriyle bağıl hata 0.80'de kalıyordu;
-        # doğrusal terim eklenince 1e-15'e iniyor. Doğrusal olmayan
-        # işleçlerde tanh kısmı devreye girer, yani ikisi de lazım.
         self.dal_boyu = self.gizli + self.m
         self._A_govde = r.normal(0, 1.0, (1, self.gizli))
         self._c_govde = r.uniform(-2, 2, self.gizli)
         self.W_dal = np.zeros((self.dal_boyu, self.p))
         self.W_govde = np.zeros((self.gizli, self.p))
 
-    # --- öznitelikler ---------------------------------------------------
     def _dal_ozn(self, U: np.ndarray) -> np.ndarray:
-        """``(N, m) → (N, gizli+m)`` — tanh öznitelikleri **ve** girdinin
-        kendisi.  Doğrusal işleçler ikinci kısımla tam yakalanır."""
         U = np.atleast_2d(np.asarray(U, float))
         if U.shape[1] != self.m:
             raise ValueError(f"dal girdisi {self.m} sensörlü olmalı")
         return np.hstack([np.tanh(U @ self._A_dal + self._c_dal), U])
 
     def _govde_ozn(self, y: np.ndarray) -> np.ndarray:
-        """``(M,) → (M, gizli)`` — ``y``ye SÜREKLİ bağlı.
-
-        Süreklilik şart: gövde ``y``yi ızgara indeksi olarak değil
-        **konum** olarak alır, o yüzden eğitimde görülmemiş bir ``y``de
-        de değerlendirilebilir.
-        """
         y = np.asarray(y, float).reshape(-1, 1)
         return np.tanh(y @ self._A_govde + self._c_govde)
 
-    # --- eğitim ---------------------------------------------------------
     def uydur(self, U: np.ndarray, Y: np.ndarray, hedef: np.ndarray,
               lam: float = 1e-4, tur: int = 30) -> "DeepONet":
-        """Değişimli en küçük kareler.
-
-        ``hedef``: ``(N, M)``, ``U``: ``(N, m)``, ``Y``: ``(M,)``.
-        Kayıp ``‖Σ_k (Φ_dal W_dal)_k (Φ_gövde W_gövde)_k − hedef‖²``
-        her iki değişkende ayrı ayrı **doğrusaldır**; o yüzden biri
-        sabitken diğeri kapalı formda çözülür.
-
-        **Ölçek dejenerasyonu.**  ``(W_d, W_t) → (cW_d, W_t/c)`` çarpımı
-        değiştirmez; yani çözüm bir ölçek kadar belirsizdir.  ``λ`` çok
-        küçükken bu belirsizlik sayısal olarak patlar: ölçüldü, ``λ=1e-8``
-        ile ağırlık normları ``6e3`` ve ``9e4``e çıkıyor ve kayıp
-        **tekdüze düşmüyor** (5.6e-3 → 2.5e-2 → 1.7e+0 …).  ``λ=1e-4``te
-        normlar ``1e2`` mertebesinde kalıyor ve kayıp tekdüze düşüyor.
-        Bu yüzden varsayılan ``λ`` küçük seçilmedi ve her turdan sonra
-        çarpanlar **dengeleniyor**.
-        """
-        Pd = self._dal_ozn(U)                    # (N, g)
-        Pt = self._govde_ozn(Y)                  # (M, g)
+        Pd = self._dal_ozn(U)
+        Pt = self._govde_ozn(Y)
         H = np.asarray(hedef, float)
         if H.shape != (Pd.shape[0], Pt.shape[0]):
             raise ValueError(f"hedef {(Pd.shape[0], Pt.shape[0])} olmalı")
@@ -144,20 +63,17 @@ class DeepONet:
         self.W_govde = r.normal(0, 0.5, (self.gizli, self.p))
         tarih: List[float] = []
         for _ in range(tur):
-            T = Pt @ self.W_govde                # (M, p)
-            # W_dal: (g,p) çöz — vec ile: (Pd ⊗ T) w = vec(H)
+            T = Pt @ self.W_govde
             A = (np.kron(T.T @ T, Pd.T @ Pd)
                  + lam * np.eye(self.dal_boyu * self.p))
             b = (Pd.T @ H @ T).reshape(-1, order="F")
             self.W_dal = np.linalg.solve(A, b).reshape(
                 self.dal_boyu, self.p, order="F")
-            B = Pd @ self.W_dal                  # (N, p)
+            B = Pd @ self.W_dal
             A2 = np.kron(B.T @ B, Pt.T @ Pt) + lam * np.eye(self.gizli * self.p)
             b2 = (Pt.T @ H.T @ B).reshape(-1, order="F")
             self.W_govde = np.linalg.solve(A2, b2).reshape(
                 self.gizli, self.p, order="F")
-            # Ölçek dejenerasyonunu kapat: iki çarpanın normunu eşitle.
-            # Çarpımı DEĞİŞTİRMEZ (c ile 1/c), yalnız belirsizliği alır.
             nd = float(np.linalg.norm(self.W_dal))
             ng = float(np.linalg.norm(self.W_govde))
             if nd > 1e-300 and ng > 1e-300:
@@ -165,30 +81,16 @@ class DeepONet:
                 self.W_dal = self.W_dal * c
                 self.W_govde = self.W_govde / c
             tarih.append(float(np.mean((self(U, Y) - H) ** 2)))
-        self.tarih = tarih                       # type: ignore[attr-defined]
+        self.tarih = tarih
         return self
 
     def __call__(self, U: np.ndarray, Y: np.ndarray) -> np.ndarray:
-        """``(N, m) × (M,) → (N, M)``."""
-        B = self._dal_ozn(U) @ self.W_dal        # (N, p)
-        T = self._govde_ozn(Y) @ self.W_govde    # (M, p)
+        B = self._dal_ozn(U) @ self.W_dal
+        T = self._govde_ozn(Y) @ self.W_govde
         return B @ T.T + self.b0
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  FINO: spektral tensör ayrışımı
-# ══════════════════════════════════════════════════════════════════════
-
 def fino_ayristir(R: np.ndarray, rutbe: int) -> Dict[str, object]:
-    """``R(k₁,k₂) ≈ Σ_r U_r(k₁) V_r(k₂)`` — SVD ile en iyi ``R`` rütbeli.
-
-    Eckart–Young teoremi: kesilmiş SVD, Frobenius normunda **en iyi**
-    düşük rütbeli yaklaşımdır; başka bir ayrışım daha iyi olamaz.
-    Kalan hata da kapalı formda bilinir: ``√(Σ_{r>R} σ_r²)``.
-
-    Yani buradaki hata bir *gerçekleme kusuru* değil, seçilen rütbenin
-    **kaçınılmaz** bedelidir ve tam olarak hesaplanabilir.
-    """
     R_ = np.asarray(R)
     if R_.ndim != 2:
         raise ValueError("R iki indisli olmalı")
@@ -212,21 +114,10 @@ def fino_ayristir(R: np.ndarray, rutbe: int) -> Dict[str, object]:
 
 def fino_uygula(U: np.ndarray, V: np.ndarray, vhat: np.ndarray
                 ) -> np.ndarray:
-    """``(Σ_r U_r ⊗ V_r) · v̂`` — tam tensörü KURMADAN.
-
-    ``(UV)v̂`` yerine ``U(Vv̂)`` sırasıyla çarpılır.  Netice aynı,
-    maliyet ``K²`` yerine ``2KR``.  Bu, dizey çarpımının birleşme
-    özelliğinden başka bir şey değildir ve testte birebir sınanır.
-    """
     return np.asarray(U) @ (np.asarray(V) @ np.asarray(vhat))
 
 
 def spektral_rutbe(R: np.ndarray, eps: float = 1e-3) -> int:
-    """Enerjinin ``1−ε``ini tutan en küçük rütbe.
-
-    Eşik **bağıldır** (toplam enerjiye göre); mutlak eşik, ölçeği
-    değişen bir çekirdekte bambaşka bir rütbe verir.
-    """
     s = np.linalg.svd(np.asarray(R), compute_uv=False)
     toplam = float(np.sum(s ** 2))
     if toplam <= 0:
@@ -239,16 +130,7 @@ def spektral_rutbe(R: np.ndarray, eps: float = 1e-3) -> int:
     return s.size
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Çözünürlükten bağımsızlık
-# ══════════════════════════════════════════════════════════════════════
-
 def ornek_operator(u: np.ndarray, x: np.ndarray) -> np.ndarray:
-    """``𝒢(u)(y) = ∫₀^y u(t)dt`` — antitürev işleci.
-
-    Doğrusal, sürekli ve düzgün; bir operatör öğrenme sınaması için
-    kanonik.  Trapez kuralıyla hesaplanır (hata ``O(h²)``).
-    """
     u = np.asarray(u, float)
     x = np.asarray(x, float)
     dx = np.diff(x, prepend=x[0])
@@ -261,11 +143,6 @@ def cozunurluk_bagimsizligi(model: DeepONet,
                             sensor: np.ndarray,
                             Y_kaba: np.ndarray,
                             Y_ince: np.ndarray) -> Dict[str, object]:
-    """Aynı modeli iki çıktı ızgarasında koş, ORTAK noktalarda kıyasla.
-
-    ``Y_ince``, ``Y_kaba``yı kapsamalıdır; aksi hâlde kıyas
-    interpolasyon hatasıyla kirlenir ve hiçbir şey söylemez.
-    """
     ortak = np.intersect1d(Y_kaba, Y_ince)
     if ortak.size < Y_kaba.size:
         raise ValueError("ince ızgara kaba ızgarayı kapsamalı")
@@ -281,10 +158,6 @@ def cozunurluk_bagimsizligi(model: DeepONet,
     }
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Gösterim
-# ══════════════════════════════════════════════════════════════════════
-
 def _gosterim() -> str:
     import time
     s: List[str] = []
@@ -295,7 +168,6 @@ def _gosterim() -> str:
     sensor = np.linspace(0, 1, m)
 
     def rastgele_u(r, n):
-        """Band-sınırlı rastgele fonksiyonlar."""
         a = r.normal(size=(n, 4))
         b = r.normal(size=(n, 4))
         return (a @ np.cos(2 * np.pi * np.arange(1, 5)[:, None] * sensor)
@@ -349,7 +221,6 @@ def _gosterim() -> str:
     K = 48
     k1 = np.arange(K)[:, None]
     k2 = np.arange(K)[None, :]
-    # Düzgün, hızlı sönen bir çekirdek (fiilî rütbesi düşük):
     R = np.exp(-(k1 + k2) / 12.0) * np.cos(0.3 * (k1 - k2))
     s.append(f"  tam tensör {R.shape}, {R.size} parametre")
     s.append(f"  enerjinin %99.9'unu tutan rütbe: {spektral_rutbe(R, 1e-3)}")

@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task db0c5428."""
 
 from __future__ import annotations
 
@@ -156,8 +155,6 @@ def apply_macro_layout(grid: Grid, *, dual_ring: bool) -> Grid:
     return out
 
 
-# --- Abstractions ---------------------------------------------------------
-
 def identity_abstraction(grid: Grid) -> Grid:
     return copy_grid(grid)
 
@@ -176,8 +173,6 @@ ABSTRACTIONS: Dict[str, Callable[[Grid], Grid]] = {
     "macro_dual_ring": macro_reflection_dual_ring,
 }
 
-
-# --- Evaluation harness ---------------------------------------------------
 
 def evaluate_split(
     examples: List[Example], fn: Callable[[Grid], Grid]

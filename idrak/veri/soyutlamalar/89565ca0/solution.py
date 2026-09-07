@@ -1,8 +1,3 @@
-"""Typed-DSL style solver for ARC-AGI-2 task 89565ca0 (evaluation split).
-
-This refactor preserves the original solver's behavior while expressing the
-top-level logic as a pure, staged pipeline to match the DSL lambda.
-"""
 
 from collections import Counter, defaultdict, deque
 from typing import Dict, List, Optional, Tuple
@@ -126,13 +121,11 @@ def derivePrefixLengths(stats: ColourStats, stripe_dominators: Dict[int, Optiona
     non_filler = stats.non_filler
     areas = stats.areas
 
-    # Fallback for colours that never dominate a stripe.
     prefix_lengths: Dict[int, int] = {}
     no_dom = sorted((c for c in non_filler if stripe_dominators.get(c) is None), key=lambda c: (areas[c], c))
     for rank, col in enumerate(no_dom):
         prefix_lengths[col] = 1 if rank == 0 else 2
 
-    # Map bottommost dominant stripe to refined prefix length.
     for col in non_filler:
         dom_idx = stripe_dominators.get(col)
         if dom_idx is None:
@@ -148,8 +141,6 @@ def derivePrefixLengths(stats: ColourStats, stripe_dominators: Dict[int, Optiona
 
 
 def renderSummaryRows(prefix_lengths: Dict[int, int], filler_colour: Optional[int]) -> Grid:
-    # Distinguish an actually empty grid (no colours at all)
-    # from a single-colour grid (only the filler present).
     if filler_colour is None:
         return []
 

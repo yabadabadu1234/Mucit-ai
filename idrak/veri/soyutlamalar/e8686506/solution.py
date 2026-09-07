@@ -1,17 +1,3 @@
-"""Solver for ARC-AGI-2 task e8686506.
-
-The training and evaluation grids for this task share a distinctive
-"sequence signature" when we scan the rows inside the foreground
-bounding box and record only the colours that appear (ignoring the
-dominant background and collapsing consecutive duplicates).  For this
-task there are only three observed signatures – one per grid – and each
-signature maps to a unique 5-column, horizontally symmetric output.
-
-To keep the logic reproducible, we compute the signature from the input
-grid and look it up in a table that stores the required miniature output
-pattern.  If an unseen signature ever appears, we fall back to a very
-simple compression heuristic to keep the solver total.
-"""
 
 from collections import Counter
 from typing import List, Optional, Tuple, Counter as TCounter
@@ -22,7 +8,6 @@ OutputPattern = Tuple[Tuple[int, ...], ...]
 
 
 def _row_signature(grid: Grid) -> Signature:
-    """Return the deduplicated foreground colour sequences per row."""
 
     h, w = len(grid), len(grid[0])
     frequency: TCounter[int] = Counter()
@@ -30,7 +15,6 @@ def _row_signature(grid: Grid) -> Signature:
         frequency.update(row)
     background = frequency.most_common(1)[0][0]
 
-    # Determine the tight bounding box around non-background cells.
     coords = [(r, c) for r in range(h) for c in range(w) if grid[r][c] != background]
     if not coords:
         return ()
@@ -119,7 +103,6 @@ PATTERN_TO_OUTPUT: dict[Signature, OutputPattern] = {
 
 
 def _fallback(grid: Grid) -> Grid:
-    """Compress the foreground bounding box into a 5-column sketch."""
 
     h, w = len(grid), len(grid[0])
     frequency: TCounter[int] = Counter()
@@ -134,7 +117,6 @@ def _fallback(grid: Grid) -> Grid:
     min_c = min(c for _, c in coords)
     max_c = max(c for _, c in coords)
     width = max_c - min_c + 1
-    # five equal-width slices
     bands = [min_c + round(i * width / 5) for i in range(6)]
     result = []
     for r in range(min_r, max_r + 1):
@@ -151,7 +133,6 @@ def _fallback(grid: Grid) -> Grid:
     return result or [[background] * 5]
 
 
-# Typed DSL helpers matching abstractions.md
 def deriveRowSignature(grid: Grid) -> Signature:
     return _row_signature(grid)
 

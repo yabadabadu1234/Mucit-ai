@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task bf45cf4b (DSL-aligned composition)."""
 
 from collections import Counter
 from typing import List, Tuple
@@ -11,7 +10,6 @@ Color = int
 
 
 def _extract_components(grid: Grid, background: int) -> List[Component]:
-    """Return 4-connected components of non-background cells."""
 
     height, width = len(grid), len(grid[0])
     seen = [[False] * width for _ in range(height)]
@@ -46,8 +44,6 @@ def _bounding_box(cells: Component) -> Tuple[int, int, int, int]:
     return min(rows), max(rows), min(cols), max(cols)
 
 
-# === DSL helper primitives (pure) ===
-
 def majorityColor(grid: Grid) -> Color:
     return Counter(cell for row in grid for cell in row).most_common(1)[0][0]
 
@@ -63,7 +59,6 @@ def extractComponents(grid: Grid) -> Tuple[Component, Component]:
             pattern_cells = cells
             break
 
-    # Fallback to identity if no clear split.
     if not pattern_cells:
         return ([], [])
 

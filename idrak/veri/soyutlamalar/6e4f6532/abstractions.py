@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task 6e4f6532."""
 
 from __future__ import annotations
 
@@ -14,7 +13,6 @@ Grid = List[List[int]]
 
 DATA_PATH = Path(__file__).resolve().parents[1] / "arc2_samples" / "6e4f6532.json"
 
-# Ensure the project root is available for dynamic imports.
 sys.path.append(str(DATA_PATH.parents[1]))
 
 
@@ -28,7 +26,6 @@ def identity_solver(grid: Grid) -> Grid:
 
 
 def heuristic_orientation_solver(grid: Grid) -> Grid:
-    """Attempt to rotate shapes by aligning their 9-cells to markers."""
 
     height = len(grid)
     width = len(grid[0])
@@ -43,7 +40,6 @@ def heuristic_orientation_solver(grid: Grid) -> Grid:
     if not objects or len(objects) != len(markers):
         return [row[:] for row in grid]
 
-    # Helper transforms copied locally to keep the abstraction self-contained.
     def rotate90(block: Grid) -> Grid:
         return [list(row) for row in zip(*block[::-1])]
 

@@ -1,4 +1,3 @@
-"""Abstractions explored while solving ARC task 3e6067c3."""
 
 from pathlib import Path
 from typing import Callable, Dict, List, Optional
@@ -25,12 +24,10 @@ def deep_copy(grid: Grid) -> Grid:
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline that leaves the grid unchanged."""
     return deep_copy(grid)
 
 
 def hint_path_abstraction(grid: Grid) -> Grid:
-    """Propagate colors along corridors following the hint-row sequence."""
     return solve_3e6067c3(grid)
 
 

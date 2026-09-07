@@ -1,40 +1,3 @@
-"""MÜŞAHEDE ÇİPİ -- izafî lisan, mübser duyu, şahitlik ve ARC verisi.
-
-KÜME 6'nın tevhidi (kütük H225). On bir dosya -- ``idrak/arc.py``,
-``nefs/lisan.py``, ``nefs/mubser.py``, ``idrak/sekil.py``,
-``nefs/boyut.py``, ``nefs/gomme.py``, ``nefs/kopru.py``,
-``nefs/sahit.py``, ``nefs/sahitlik.py``, ``nefs/iki_olcek.py``,
-``nefs/operad.py`` -- burada birleşti. Terkip üç adımda yapıldı,
-padişahın usulü gereği: (a) evvelâ her dosya **kendi içinde** terkip
-edildi, (b) sonra dosyalar birleştirildi, (c) sonra birleşik gövdede
-**bir daha** terkip edildi. Hiçbir cevher seçilip imha edilmedi;
-asılları ``yedek/kume6_asillari/`` altında şahittir.
-
-**Kök problem.** Modelin dış âlemi gördüğü, işittiği, belirteçlediği ve
-şahitlikten kural çıkardığı duyu organı on bir dosyaya dağılmıştı; en
-ağır kusuru **iki ayrı boyut/şekil indüksiyon sistemiydi**
-(``nefs/boyut.py`` kaide cetveliyle, ``idrak/sekil.py`` kesirli oranla)
-ve ikisi birbiriyle konuşmuyordu.
-
-**Çipin altı odası.**
-
-1. **Lisan ve gömme** -- ``Kodlayici`` (yerel ``o200k_base`` + 19 özel
-   belirteç + bayt yedeği), ``genlige_gom`` (QTT/MPS), ``kopru``
-   (belirteç → açı morfizminin tersinirlik ve izometri sınaması).
-2. **2D izafî hendese** -- ``otele``: çevrimsel ortogonal
-   öteleme üreteçleri ve ``𝒟(Δx,Δy) = T̂_x^{Δx} ⊗ T̂_y^{Δy}``. Mutlak
-   koordinat taşınmaz; hüküm komşuluk örüntüsünden çıkar.
-3. **İbnü'l-Heysem tabakalı müşahede** -- ``bak``: ışık, levn,
-   geçirgenlik, mekân, bağlantı, doku, nesneler, bu'd, süreklilik,
-   tenasüb, emsal, şeffafiyet, aykırılık; ``devinim_olc`` ile hareket.
-4. **Otonom şahit bölütlemesi ve Procrustes** -- ``ayir``
-   (medyan + 3·MAD kopmalarından, ayıraç aramadan), ``kaide``
-   (``R̄ = polar(Σ A_k)``), ``nakz_bul`` (LOO), ``iki_sahit_ayri_mi``.
-5. **Şekil/ebat indüksiyonu ve Čech tıkanıklığı** --
-   ``kalip`` (kesirli kaide **ve** cetvel, tek kapıda), ``ortu`` (H¹ ve sükût kapısı).
-6. **ARC verisi ve sızıntısız akış** -- ``gorevleri_getir``,
-   ``izgara_belirtecle``/``belirtec_izgara``, ``gorev_dizisi``.
-"""
 from __future__ import annotations
 
 import json
@@ -55,14 +18,6 @@ from matematik.geometri import Metrik, metrik
 from matematik.geometri import Morfizm, izometri_mi, jakobi
 
 
-
-# ════════════════════════════════════════════════════════════════════
-#  idrak/arc.py
-# ════════════════════════════════════════════════════════════════════
-
-#: ARC verisi ``idrak/veri`` altındadır ve KÜME 6 tevhidinden sonra da
-#: orada durur: veri deponun bir uzvu değil, dışarıdan gelen ham
-#: müşahededir; çipin yanına taşınması onu koda karıştırmak olurdu.
 KOK = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     "idrak", "veri")
@@ -77,27 +32,11 @@ SOYUT = os.path.join(KOK, "soyutlamalar")
 RENK = 10
 
 
-#: **ESKİ ARC SÖZLÜĞÜ İMHA EDİLDİ (ferman 1-N, 2-B).**
-#:
-#: Burada ``SATIR_SONU = 10``, ``IZGARA_SONU = 11``, ``AYIRAC = 12``,
-#: ``DOLGU = 13``, ``ORNEK_AYIRAC = 14``, ``SOZLUK = 15`` duruyordu.
-#: Yâni ARC'ın **kendi** on beş elemanlı belirteç uzayı vardı ve
-#: metnin belirteç uzayı ondan başkaydı. İki belirteç uzayı iki ayrı
-#: modeldir. Padişahın hükmü: *"ana tokenizer ister arc ister metin,
-#: ne olursa olsun her daim tiktokendir."*
-#:
-#: Yerine gelen: ızgara **metne** dökülür (``izgara_metni``), tiktoken
-#: onu belirteçler, ``metin_izgara`` geri ayrıştırır. Ayıraçlar birer
-#: belirteç kimliği değil, metnin kendi işaretleridir.
-#:
-#: Dolgu da kalktı: dizi ``tiktoken``in kendi bitiş belirteciyle
-#: hizalanır (``DOLGU_BELIRTECI``).
 DOLGU_BELIRTECI = 0
 
 
 @dataclass
 class Gorev:
-    """Bir ARC görevi: ``train`` çiftleri ve ``test`` çiftleri."""
     ad: str
     egitim: List[Tuple[np.ndarray, np.ndarray]]
     sinama: List[Tuple[np.ndarray, np.ndarray]]
@@ -110,31 +49,12 @@ class Gorev:
         return k
 
     def sekil_sabit_mi(self) -> bool:
-        """Girdi ve çıktı aynı şekilde mi? — en kolay sınıf."""
         return all(a.shape == b.shape for a, b in self.egitim + self.sinama)
 
 
 def gorevleri_getir(kume: str = "training", ne: str = "hepsi",
                     yol: str = "", gorevler=None, dogrulama: int = 100,
                     tohum: int = 0):
-    """ARC GÖREVLERİNİ DİSKTEN GETİRMEK -- tek terkip (kütük H225).
-
-    Küme: ``_cift`` + ``yukle`` + ``yukle_hepsi`` + ``bol``. Dördü tek
-    amelin durakları idi: bir çifti diziye çevir, bir görev dosyasını
-    oku, bir kümenin hepsini oku, ve resmî eğitim kümesini
-    eğitim/doğrulama diye ayır.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``tek``         ``yol``daki tek görev
-    ``hepsi``       ``training`` (1000) yahut ``evaluation`` (120)
-    ``böl``         ``(eğitim, doğrulama)``
-    ==============  ==================================================
-
-    Karıştırma **sabit tohumludur**: aynı bölme her koşuda tekrarlanır,
-    yoksa *"doğrulama iyileşti"* hükmü ölçülemez olur.
-    """
     def cift(d):
         return (np.array(d["input"], dtype=np.int64),
                 np.array(d["output"], dtype=np.int64))
@@ -165,38 +85,21 @@ def gorevleri_getir(kume: str = "training", ne: str = "hepsi",
     return e, d
 
 
-#: ARC ızgarasının **metin** işaretleri. Belirteç kimliği değildirler:
-#: metne yazılır, tiktoken onları kendi belirteçlerine böler.
-#:
-#: **FERMAN 1-N.** Evvelce burada ``SATIR_SONU = 10``, ``AYIRAC = 12``
-#: gibi **belirteç kimlikleri** duruyordu ve ARC'ın kendi on beş
-#: elemanlı bir sözlüğü vardı. Yâni projede iki belirteçleyici vardı:
-#: biri ARC için, biri metin için. İki belirteç uzayı iki ayrı
-#: modeldir; padişahın hükmü kat'îdir: *"ana tokenizer ister arc ister
-#: metin, ne olursa olsun her daim tiktokendir."*
 IZGARA_AYIRACI = "\n---\n"
 ORNEK_AYIRACI = "\n===\n"
 
 
 def izgara_metni(g: np.ndarray) -> str:
-    """Izgara → **metin**. Belirteçleme tiktoken'in işidir.
-
-    Hücreler ``0-9`` rakamlarıdır ve aralarına boşluk konur: boşluksuz
-    yazılsaydı tiktoken ``123`` gibi çok haneli sayıları **tek**
-    belirteçte birleştirir ve hücre hududu kaybolurdu. Ölçülebilir
-    hudut: ayrıştırma (``metin_izgara``) birebir geri veriyor mu.
-    """
     return "\n".join(" ".join(str(int(v)) for v in satir) for satir in g)
 
 
 def metin_izgara(m: str) -> Optional[np.ndarray]:
-    """Metin → ızgara. Bozuksa ``None`` -- **sessizce onarılmaz**."""
     satirlar: List[List[int]] = []
     for ham in str(m).split("\n"):
         ham = ham.strip()
         if not ham:
             if satirlar:
-                break                       # ilk boş satır ızgarayı bitirir
+                break
             continue
         if ham.startswith("-") or ham.startswith("="):
             break
@@ -221,19 +124,12 @@ def metin_izgara(m: str) -> Optional[np.ndarray]:
 
 def izgara_belirtecle(g: np.ndarray, kodlama: str = "o200k_base"
                       ) -> List[int]:
-    """Izgara → **tiktoken** belirteçleri (metin üzerinden)."""
     from nefs.belirtec import belirtecle
     return belirtecle(izgara_metni(g), kodlama)
 
 
 def belirtec_izgara(t: Sequence[int], kodlama: str = "o200k_base"
                     ) -> Optional[np.ndarray]:
-    """Tiktoken belirteçleri → ızgara.  Bozuksa ``None``.
-
-    **Sessizce onarmıyoruz**: satırlar eşit uzunlukta değilse ya da hiç
-    hücre yoksa ``None`` dönüyor.  Yanlış bir ızgarayı "düzelterek"
-    doğru saymak, tam eşleşme ölçütünü sahte kılardı.
-    """
     from nefs.belirtec import coz
     return metin_izgara(coz(list(t), kodlama))
 
@@ -241,25 +137,11 @@ def belirtec_izgara(t: Sequence[int], kodlama: str = "o200k_base"
 def gorev_dizisi(gorev: Gorev, hedef_indis: int = 0,
                  sinamadan: bool = False, azami_baglam: int = 3
                  ) -> Tuple[List[int], List[int]]:
-    """``(bağlam, hedef)`` — bağlamda örnekler, hedefte istenen çıktı.
-
-    Bağlam: ``girdi₁ 12 çıktı₁ 14 girdi₂ 12 çıktı₂ 14 … girdi* 12``
-    Hedef : ``çıktı* 11``
-
-    Model kaideyi **örneklerden** çıkarmak zorundadır; hedef ızgara
-    bağlamda hiç geçmez.
-    """
-    # Hedef örnek bağlamdan ÇIKARILIR. (İlk hâlde çıkarmamıştım ve
-    # kendi denetimim yakaladı: hedef ızgara bağlamda birebir geçiyordu,
-    # yani model kaideyi öğrenmeden kopyalayarak "çözebilirdi".)
     if sinamadan:
         ornekler = gorev.egitim[:azami_baglam]
     else:
         ornekler = [c for k, c in enumerate(gorev.egitim)
                     if k != hedef_indis][:azami_baglam]
-    # **METİN KURULUR, SONRA BİR KERE BELİRTEÇLENİR.** Parça parça
-    # belirteçlemek ayıraçları belirteç kimliği yapmak olurdu; halbuki
-    # ayıraç da metnin parçasıdır ve tiktoken onu kendi bölüyor.
     from nefs.belirtec import belirtecle
     parca: List[str] = []
     for a, b in ornekler:
@@ -269,8 +151,6 @@ def gorev_dizisi(gorev: Gorev, hedef_indis: int = 0,
         raise IndexError("hedef indisi yok")
     gi, co = kaynak[hedef_indis]
     parca.append(izgara_metni(gi) + IZGARA_AYIRACI)
-    # Bağlam TEK metindir ve TEK kere belirteçlenir; hedef ayrı, çünkü
-    # bağlamda hiç geçmemelidir (yukarıdaki şerh).
     baglam = belirtecle(ORNEK_AYIRACI.join(parca))
     hedef = belirtecle(izgara_metni(co) + ORNEK_AYIRACI)
     return baglam, hedef
@@ -279,12 +159,6 @@ def gorev_dizisi(gorev: Gorev, hedef_indis: int = 0,
 def toplu_uret(gorevler: Sequence[Gorev], azami_uzunluk: int,
                tohum: int = 0, azami_baglam: int = 3
                ) -> Iterator[Tuple[np.ndarray, np.ndarray, np.ndarray]]:
-    """``(dizi, hedef, maske)`` üçlüleri — sonsuz karışık akış.
-
-    ``maske`` yalnız hedef bölgesinde 1'dir: kayıp **bağlamdan
-    hesaplanmaz**, yoksa model kaideyi öğrenmek yerine bağlamı
-    kopyalamayı öğrenir.
-    """
     r = np.random.default_rng(tohum)
     sira = list(range(len(gorevler)))
     while True:
@@ -328,19 +202,12 @@ def istatistik(gorevler: Sequence[Gorev]) -> Dict[str, object]:
 
 
 def soyutlama_oku(ad: str) -> Optional[str]:
-    """Bir değerlendirme görevinin **sözlü algoritmasını** oku."""
     yol = os.path.join(SOYUT, ad, "abstractions.md")
     if not os.path.exists(yol):
         return None
     with open(yol, encoding="utf-8") as f:
         return f.read()
 
-
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/lisan.py
-# ════════════════════════════════════════════════════════════════════
 
 OZEL_BELIRTECLER: Tuple[str, ...] = (
     "<renk_0>", "<renk_1>", "<renk_2>", "<renk_3>", "<renk_4>",
@@ -362,7 +229,6 @@ YON_ADLARI: Tuple[Tuple[str, int, int], ...] = (
 
 @dataclass
 class Kodlayici:
-    """tiktoken yahut bayt yedeği -- **hangisi olduğunu saklamaz**."""
     kaynak: str
     taban_sozluk: int
     _enc: object = field(default=None, repr=False)
@@ -412,12 +278,11 @@ def _yerel_tablo() -> Optional[str]:
 
 
 def kodlayici(tercih: str = "o200k_base") -> Kodlayici:
-    """Yerel tabloyu, sonra ağı, sonra bayt yedeğini dene -- ve söyle."""
     yol = _yerel_tablo()
     if yol is not None:
         try:
             import base64
-            import tiktoken                   # type: ignore
+            import tiktoken
             ranks: Dict[bytes, int] = {}
             with open(yol, "r", encoding="utf-8") as f:
                 for satir in f:
@@ -434,7 +299,7 @@ def kodlayici(tercih: str = "o200k_base") -> Kodlayici:
         except Exception:
             pass
     try:
-        import tiktoken                       # type: ignore
+        import tiktoken
         enc = tiktoken.get_encoding(tercih)
         return Kodlayici(kaynak="tiktoken", taban_sozluk=int(enc.n_vocab),
                          _enc=enc)
@@ -444,13 +309,6 @@ def kodlayici(tercih: str = "o200k_base") -> Kodlayici:
 
 @dataclass
 class IzafiMevki:
-    """Bir hücrenin **izafî** tarifi: komşularıyla ilişkisi.
-
-    Mutlak ``(x, y)`` tutulmaz. Tutulan, sekiz komşunun her birine
-    bakıldığında ne görüldüğüdür -- yani hücrenin **çevresindeki
-    örüntü**. Aynı örüntü ızgaranın neresinde olursa olsun aynı
-    kodlanır; kural "sol üstte" öğrenilip "sağ altta" tanınabilir.
-    """
     merkez: int
     komsu: Tuple[int, ...]
 
@@ -462,28 +320,6 @@ def otele(nx: int = 0, ny: int = 0, dx: int = 0, dy: int = 0,
                   ne: str = "operator", n: int = 0, adim: int = 1,
                   yon: Tuple[int, int] = (0, 0), g=None, k=None,
                   dolgu: int = -1, metin: str = ""):
-    """MUTLAK YER DEĞİL, İZAFÎ KOMŞULUK -- tek terkip (kütük H225).
-
-    Küme: ``yon_indisi`` + ``oteleme_ureteci`` + ``izafi_operator`` +
-    ``IzafiMevki.kod`` + ``izgara_kodla`` + ``metin_kodla``. Altısı tek
-    fikrin katlarıydı: ``x = 5, y = 3`` gibi **mutlak** koordinat
-    genellemeyi öldürür; hüküm ancak **komşuluk örüntüsünden** çıkarsa
-    ızgaranın neresinde olursa olsun aynı kalır.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``yön``         ``(dx, dy)`` komşuluk yönünün indisi
-    ``üreteç``      ``T̂`` -- ``n`` yuvalı çevrimsel öteleme
-    ``operator``    ``𝒟(Δx,Δy) = T̂_x^{Δx} ⊗ T̂_y^{Δy}``
-    ``ızgara``      ızgarayı izafî komşuluk örüntülerine çevir
-    ``metin``       metni aynı akışa kat -- ``Δ = (+1, 0)`` doğrusal
-    ==============  ==================================================
-
-    Öteleme **çevrimseldir** (kenarsız, sınırsız devir) ve permütasyon
-    olduğu için ortogonaldir; ``𝒟`` böylece üniter kalır ve normu
-    korur.
-    """
     if ne == "yön":
         for i, (a, _, _) in enumerate(YON_ADLARI):
             if a == ad:
@@ -535,56 +371,34 @@ def otele(nx: int = 0, ny: int = 0, dx: int = 0, dy: int = 0,
             "Δ": (1, 0)}
 
 
-
-
 class IzafiMevki2D:
-    """2D izafî (öteleme değişmez) mevki -- **mutlak koordinat YOK**.
-
-    Bir hücrenin yeri ``(i, j)`` diye değil, komşularına göre
-    ``sağında / solunda / üstünde`` diye taşınır. Öteleme üreteçleri
-    çevrimsel ve ortogonaldir (``oteleme_ureteci``), yani bu bir Lie
-    akışıdır, bir tablo değil.
-    """
 
     def __init__(self, yaricap: int = 1) -> None:
         self.yaricap = int(yaricap)
         self._kod = None
 
-    # -- bağlam ---------------------------------------------------------
     def izgara_donustur(self, g) -> "np.ndarray":
-        """Izgarayı izafî bağlam vektörlerine çevir: ``(H·W, 1+komşu)``."""
-        # ``main/cikarim.py:baglam_cikar`` fermanla tasfiye edildi;
-        # fakat KOMŞULUK PENCERESİ bir ARC kâidesi değil, umumî bir
-        # görme işidir ve müşahedenin kendi işidir. Buraya alındı.
         B = _komsuluk(g, self.yaricap)
         return B.reshape(-1, B.shape[2]).astype(float)
 
     def durum_vektoru_kur(self, g) -> "np.ndarray":
-        """Izgaradan **tek** dalga vektörü: genlikler normalize."""
         v = self.izgara_donustur(g).reshape(-1)
         n = np.linalg.norm(v)
         return v / n if n > 0 else v
 
     def ebat_kanunu_coz(self, g):
-        """Çıktı ebadını **kanundan** okur; şablon listesi yoktur.
-
-        Tek ızgaradan kanun çözülemez (şahit lazımdır); o hâlde girdi
-        ebadı döner ve bu bir varsayım olarak **ilan edilir**.
-        """
         import numpy as _np
         a = _np.atleast_2d(_np.asarray(g, int))
         return (int(a.shape[0]), int(a.shape[1]))
 
 
 def tiktoken_2d_kodla(metin: str, k=None):
-    """Metni ``o200k_base`` ile kodla -- kaynağı daima raporlanır."""
     r = otele(ne="metin", metin=str(metin), k=k)
     import numpy as _np
     return _np.asarray(r.get("belirtec", r.get("kod", [])), dtype=float)
 
 
 def tiktoken_2d_coz(kodlar, k=None) -> str:
-    """Belirteçlerden metne dön; çözülemeyen belirteç **saklanmaz**."""
     kod = k or kodlayici()
     enc = getattr(kod, "_enc", None)
     dizi = [int(x) for x in np.asarray(kodlar).reshape(-1)]
@@ -592,59 +406,48 @@ def tiktoken_2d_coz(kodlar, k=None) -> str:
         return " ".join(str(x) for x in dizi)
     try:
         return enc.decode(dizi)
-    except Exception:                                    # noqa: BLE001
+    except Exception:
         return " ".join(str(x) for x in dizi)
 
 
-# ════════════════════════════════════════════════════════════════════
-#  nefs/mubser.py
-# ════════════════════════════════════════════════════════════════════
-
 @dataclass
 class Nesne:
-    """Bir bağlantılı bileşen -- Tabaka 2'nin sakini."""
     renk: int
-    hucreler: np.ndarray            # (k, 2) satır-sütun
-    izam: int                       # alan (hücre sayısı)
-    kutu: Tuple[int, int, int, int]  # (üst, sol, alt, sağ)
+    hucreler: np.ndarray
+    izam: int
+    kutu: Tuple[int, int, int, int]
     merkez: Tuple[float, float]
-    sekil: np.ndarray               # kutuya kırpılmış ikili maske
-    tenasub: Tuple[float, float, float]   # (en/boy, yatay sim., dikey sim.)
-    tarif: Dict[str, float] = field(default_factory=dict)  # ŞEKLİN TARİFİ
+    sekil: np.ndarray
+    tenasub: Tuple[float, float, float]
+    tarif: Dict[str, float] = field(default_factory=dict)
 
 
 @dataclass
 class Mesud:
-    """Müşahede edilenin tabakalı kaydı -- **tek tensör değildir**."""
     izgara: np.ndarray
 
-    # --- Tabaka 0: noktasal (H, W)
-    isik: np.ndarray                # Ziyâ(+)/Zulmet(−)/Zıl
-    levn: np.ndarray                # (H, W, 3) karşıt renk kanalları
-    gecirgenlik: np.ndarray         # Şeffafiyet(+)/Kesafet(−)
-    mekan: np.ndarray               # (H, W, 2) normalize konum
+    isik: np.ndarray
+    levn: np.ndarray
+    gecirgenlik: np.ndarray
+    mekan: np.ndarray
 
-    # --- Tabaka 1: çizgisel (H, W)
-    baglanti: np.ndarray            # İttisal(+)/Teferruk(−)
-    doku: np.ndarray                # Huşunet(+)/Meles(−)
+    baglanti: np.ndarray
+    doku: np.ndarray
 
-    # --- Tabaka 2: nesne
     nesneler: List[Nesne]
-    bud: np.ndarray                 # (H, W) en yakın nesneye mesafe
+    bud: np.ndarray
 
-    # --- Tabaka 3: küllî
-    adet: Dict[int, int]            # renk → bileşen sayısı
-    tenasub: Tuple[float, float, float]   # nesne başına, ızam ağırlıklı
-    mukayese: np.ndarray            # (H, W) aykırılık alanı (Teşabüh DEĞİL)
-    emsal: Dict[str, float]         # NESNELER arası Teşabüh(+)/İhtilaf(−)
-    katman: Dict[str, float]        # kavşak / kesafet / şeffafiyet
-    sekil_ozeti: Dict[str, float]   # ŞEKLİN tarifi, ızam ağırlıklı
-    sureklilik: Dict[str, float]    # örtme hadiseleri (katman delili)
+    adet: Dict[int, int]
+    tenasub: Tuple[float, float, float]
+    mukayese: np.ndarray
+    emsal: Dict[str, float]
+    katman: Dict[str, float]
+    sekil_ozeti: Dict[str, float]
+    sureklilik: Dict[str, float]
     husn: float
     kubh: float
 
     def ozet(self) -> Dict[str, float]:
-        """Küllî hükümlerin skaler hulâsası -- rapor ve ölçüm için."""
         return {
             "ışık_ort": float(self.isik.mean()),
             "ışık_sap": float(self.isik.std()),
@@ -670,65 +473,35 @@ class Mesud:
 
 
 def _isik(g: np.ndarray) -> np.ndarray:
-    """Işık ekseni: Ziyâ(+) = varlık, Zulmet(−) = taban, Zıl = kenar eğimi.
-
-    ARC'de foton yoktur; Ziyâ **mevcudiyettir**. Dolu hücre uyarılmış
-    (``+1``), zemin hücresi taban durumudur (``−1``). Zıl ayrı bir kanal
-    değildir: figürün kenarında bu alanın yerel eğimi kendiliğinden
-    negatifleşir, gölge oradan doğar.
-
-    Uydurma parlaklık tablosuyla ölçülüp çökmüştü (0/174); bu hâliyle
-    yeniden ölçülmelidir ve ölçülür.
-    """
     varlik = np.where(g != 0, 1.0, -1.0)
     yerel = _pencere_ortalamasi(varlik, 3)
-    # Ziyâ mevcudiyetin kendisi, Zıl ise yerel düşüştür; ikisi TEK eksende
     return 0.5 * varlik + 0.5 * (varlik - yerel)
 
 
 def _levn(g: np.ndarray) -> np.ndarray:
-    """Levn: karşıt renk kanalları (kırmızı-yeşil, mavi-sarı, parlaklık).
-
-    Renk indisi bir **sayı değildir**: 3 ile 7 arasında "4 fark" yoktur,
-    ikisi ayrı kategoridir. Onun için renk indisi doğrudan kanala
-    yazılmaz; retinadaki gibi üç karşıtlık eksenine açılır. Böylece iki
-    renk arasındaki mesafe algısal olur, keyfî olmaz.
-    """
     idx = np.clip(g, 0, 9)
-    # ARC paletinin kaba RGB karşılıkları (0-1)
-    rgb = np.array([[0.00, 0.00, 0.00],   # siyah
-                    [0.15, 0.35, 0.95],   # mavi
-                    [0.95, 0.20, 0.20],   # kırmızı
-                    [0.20, 0.80, 0.25],   # yeşil
-                    [0.98, 0.90, 0.20],   # sarı
-                    [0.60, 0.60, 0.60],   # gri
-                    [0.95, 0.20, 0.70],   # fuşya
-                    [0.98, 0.60, 0.15],   # turuncu
-                    [0.45, 0.80, 0.95],   # açık mavi
-                    [0.55, 0.10, 0.20]])  # bordo
-    c = rgb[idx]                                   # (H, W, 3)
+    rgb = np.array([[0.00, 0.00, 0.00],
+                    [0.15, 0.35, 0.95],
+                    [0.95, 0.20, 0.20],
+                    [0.20, 0.80, 0.25],
+                    [0.98, 0.90, 0.20],
+                    [0.60, 0.60, 0.60],
+                    [0.95, 0.20, 0.70],
+                    [0.98, 0.60, 0.15],
+                    [0.45, 0.80, 0.95],
+                    [0.55, 0.10, 0.20]])
+    c = rgb[idx]
     R, G, B = c[..., 0], c[..., 1], c[..., 2]
-    return np.stack([R - G,                        # kırmızı-yeşil
-                     B - 0.5 * (R + G),            # mavi-sarı
+    return np.stack([R - G,
+                     B - 0.5 * (R + G),
                      0.3 * R + 0.6 * G + 0.1 * B], axis=-1)
 
 
 def _gecirgenlik(g: np.ndarray) -> np.ndarray:
-    """Şeffafiyet(+) / Kesafet(−).
-
-    ARC'de zemin (0) ışığı geçiren, dolu hücre ise kesif olandır. Bu
-    ikisi tek eksendir; ayrı iki kanal yazmak tekrar olurdu.
-    """
     return np.where(g == 0, 1.0, -1.0)
 
 
 def _mekan(g: np.ndarray) -> np.ndarray:
-    """Mekân: normalize retinotopik koordinat.
-
-    Mekân bir hücre tipinin **çıktısı değildir**; bütün haritanın
-    zeminidir. Onun için ayrı bir detektör olarak değil, her tabakanın
-    üzerine serilen koordinat alanı olarak taşınır.
-    """
     H, W = g.shape
     r = np.linspace(0.0, 1.0, H)[:, None] * np.ones((1, W))
     c = np.ones((H, 1)) * np.linspace(0.0, 1.0, W)[None, :]
@@ -736,13 +509,6 @@ def _mekan(g: np.ndarray) -> np.ndarray:
 
 
 def _baglanti(g: np.ndarray) -> np.ndarray:
-    """İttisal(+) / Teferruk(−): dört komşuluğun işaretli dengesi.
-
-    Her hücre için ``(aynı renk komşu) − (farklı renk komşu)``. Bitişiklik
-    ile ayrıklık aynı ölçünün iki ucudur; ayrı kanal yazmak tekrar olur.
-    Kenar hücrelerinde eksik komşu **farklı** sayılmaz, hiç sayılmaz --
-    ızgaranın kenarı bir ayrıklık delili değildir.
-    """
     H, W = g.shape
     ayni = np.zeros((H, W), float)
     farkli = np.zeros((H, W), float)
@@ -758,12 +524,6 @@ def _baglanti(g: np.ndarray) -> np.ndarray:
 
 
 def _doku(g: np.ndarray) -> np.ndarray:
-    """Huşunet(+) / Meles(−): yerel çeşitlilik, medyana göre işaretli.
-
-    Pürüzlülük ile düzlük tek eksendir. Ölçü, 3×3 penceredeki **farklı
-    renk sayısıdır**; varyans değil, çünkü renk kategoriktir (bkz.
-    ``_levn``): 3 ile 7 arasındaki "fark" bir mesafe değildir.
-    """
     H, W = g.shape
     cesit = np.zeros((H, W), float)
     for dr in (-1, 0, 1):
@@ -781,12 +541,6 @@ def _doku(g: np.ndarray) -> np.ndarray:
 
 def _bilesenler(g: np.ndarray, zemin: int = 0,
                 capraz: bool = False) -> List[Nesne]:
-    """Aynı renkli bağlantılı bileşenler -- birlik-bul ile ``O(HW·α)``.
-
-    ``capraz`` kapalıdır: ARC'de köşeden temas ekseriya "ayrı nesne"
-    demektir. Bu bir tercihtir ve ölçülmelidir; açık bırakılırsa iki
-    ayrı şekil tek nesne sayılır ve Adet vasfı bozulur.
-    """
     H, W = g.shape
     ata = -np.ones(H * W, dtype=int)
 
@@ -844,12 +598,6 @@ def _bilesenler(g: np.ndarray, zemin: int = 0,
 
 
 def _bud(g: np.ndarray, nesneler: Sequence[Nesne]) -> np.ndarray:
-    """Bu'd: her hücrenin en yakın nesneye uzaklığı (Chebyshev).
-
-    ARC'de derinlik yoktur; Bu'd burada **düzlem içi mesafedir**. Bunu
-    "derinlik" diye sunmak yalan olurdu; vasfın adı korunur, mahiyeti
-    ızgaraya göre yeniden tarif edilir ve öyle bildirilir.
-    """
     H, W = g.shape
     if not nesneler:
         return np.zeros((H, W))
@@ -858,7 +606,6 @@ def _bud(g: np.ndarray, nesneler: Sequence[Nesne]) -> np.ndarray:
         return np.zeros((H, W))
     d = np.full((H, W), np.inf)
     d[dolu] = 0.0
-    # Chebyshev mesafesi: iki geçişli dinamik programlama, O(HW)
     for i in range(H):
         for j in range(W):
             v = d[i, j]
@@ -888,31 +635,6 @@ def _bud(g: np.ndarray, nesneler: Sequence[Nesne]) -> np.ndarray:
 
 
 def _sekil_tarifi(m: np.ndarray) -> Dict[str, float]:
-    """**Şeklin hakiki tarifi.** Evvelce şekil diye bir şey yoktu.
-
-    Şekil yalnız ``emsal_şekil`` içinde "maskeler birebir eşit mi" diye
-    geçiyordu; bu son derece kırılgandır -- **tek hücre farkı emsalliği
-    düşürür**. Ablasyonda 19 kanalın zararlı çıkmasının en kuvvetli
-    şüphelisi buydu ve tarif yazılmadan hüküm verilemezdi.
-
-    Yedi ölçü, hepsi ötelemeden bağımsız, çoğu ölçekten de:
-
-    * ``betti1``   -- delik sayısı. Şeklin topolojik cinsi; ARC'de
-      "içi dolu mu boş mu" bulmacalarının doğrudan cevabı.
-    * ``cevre``    -- dış sınır uzunluğu (dolu hücrenin boş komşusu).
-    * ``tıkızlık`` -- ``çevre²/alan``. Daire en tıkız, ince çizgi en
-      dağınıktır; ölçekten bağımsızdır.
-    * ``doluluk``  -- ``alan / kutu alanı``. Dikdörtgen 1, çapraz çizgi
-      ``1/n``dir.
-    * ``simetri``  -- 8 katlı dihedral grubun kaçı şekli sabit bırakıyor
-      (1 = hiç simetri yok, 8 = kare/daire gibi tam simetrik).
-    * ``m20/m02``  -- ikinci merkezî momentler, alana normalize. Şeklin
-      yatay mı dikey mi uzandığını **maskeye bakmadan** söyler.
-    * ``m11``      -- çapraz moment; eğik uzanımı verir.
-
-    Bunlar bir "gömme" (embedding) değildir; her biri **okunabilir bir
-    vasıftır** ve hangi ARC kaidesine dokunduğu söylenebilir.
-    """
     h, w = m.shape
     alan = float(m.sum())
     if alan == 0:
@@ -920,15 +642,12 @@ def _sekil_tarifi(m: np.ndarray) -> Dict[str, float]:
                 "doluluk": 0.0, "simetri": 8.0,
                 "m20": 0.0, "m02": 0.0, "m11": 0.0}
 
-    # çevre: dolu hücrenin boş (yahut kutu dışı) komşu sayısı
     P = np.pad(m, 1, constant_values=False)
     cevre = 0.0
     for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
         kaydir = P[1 + dr:1 + dr + h, 1 + dc:1 + dc + w]
         cevre += float((m & ~kaydir).sum())
 
-    # betti1: kutu içindeki boş bölgelerden kenara ULAŞAMAYANLARIN sayısı.
-    # Kenara ulaşanlar dış boşluktur, delik değildir.
     bos = ~m
     gorulmus = np.zeros_like(bos)
     yigin = []
@@ -965,7 +684,6 @@ def _sekil_tarifi(m: np.ndarray) -> Dict[str, float]:
                     kalan[p_, q_] = False
                     y.append((p_, q_))
 
-    # dihedral simetri: 8 dönüşümün kaçı şekli sabit bırakıyor
     sim = 0
     for k in range(4):
         R = np.rot90(m, k)
@@ -975,7 +693,6 @@ def _sekil_tarifi(m: np.ndarray) -> Dict[str, float]:
         if Y.shape == m.shape and np.array_equal(Y, m):
             sim += 1
 
-    # merkezî momentler (alana normalize → ölçekten bağımsız)
     idx = np.argwhere(m)
     y0, x0 = idx.mean(0)
     dy = idx[:, 0] - y0
@@ -992,21 +709,6 @@ def _sekil_tarifi(m: np.ndarray) -> Dict[str, float]:
 
 
 def _sureklilik(g: np.ndarray) -> Dict[str, float]:
-    """**Şeffafiyet, kavşakta değil SÜREKLİLİKTE aranır** (kullanıcı hükmü).
-
-    Evvelce "kavşakta üçüncü renk var mı" diye arandı ve kanal öldü
-    (sıfır oranı 0,99). Doğru testi kullanıcı verdi: *"bir ızgara
-    çizgisinin renkli bir karenin içinden kesilmeden geçmesi"*.
-
-    Ölçü şudur: bir ``c`` renkli dizi, bir ``d`` rengiyle kesilip
-    öbür tarafta **aynı hizada** ``c`` ile devam ediyorsa, orada bir
-    **örtme hadisesi** vardır: ``c`` arkada, ``d`` öndedir. Bu, tek
-    ızgarada görülebilen hakiki bir katman delilidir.
-
-    * ``örtme``     -- kaç yerde böyle bir kesinti-devam var.
-    * ``ön_renk``   -- örten (öndeki) rengin çeşitliliği.
-    * ``arka_renk`` -- örtülen (arkadaki) rengin çeşitliliği.
-    """
     H, W = g.shape
     ortme = 0
     on: Dict[int, int] = {}
@@ -1025,7 +727,6 @@ def _sureklilik(g: np.ndarray) -> Dict[str, float]:
                 k = j
                 while k < w and A[i, k] == c:
                     k += 1
-                # dizi [j,k) ; kesinti ve devam var mı
                 t = k
                 while t < w and A[i, t] != c and A[i, t] != 0:
                     t += 1
@@ -1044,15 +745,6 @@ def _sureklilik(g: np.ndarray) -> Dict[str, float]:
 
 
 def _tenasub(g=None, nesneler=None, ne: str = "maske"):
-    """TENASÜB: ORAN VE SİMETRİ -- tek terkip (kütük H225).
-
-    Küme: ``_tenasub_maske`` + ``_tenasub_kulli``. İkincisi birincisini
-    nesne nesne çağırıyordu; aynı ölçünün iki mikyasıdır -- biri tek
-    maskede, öteki bütün nesnelerde.
-
-    ``ne="maske"``: ``(en/boy oranı, yatay simetri, dikey simetri)``.
-    ``ne="küllî"``: nesnelerin oran ve simetrilerinin **ortalaması**.
-    """
     if ne == "maske":
         m = g
         h, w = m.shape
@@ -1072,18 +764,6 @@ def _tenasub(g=None, nesneler=None, ne: str = "maske"):
 
 
 def _emsal(nesneler=None, sekil=None, ne: str = "emsal"):
-    """EMSAL: ŞEKİL BENZERLİĞİ -- tek terkip (kütük H225).
-
-    Küme: ``_dihedral_kanonik`` + ``_emsal``. İkincisi birincisini nesne
-    başına **bir kere** çağırıp hash ile kıyaslar; ayrı isim taşımaları,
-    kanonik sûret ile onun kullanımını iki şey gibi gösteriyordu.
-
-    ``ne="kanonik"``: şeklin **dihedral kanonik sûreti** -- 8 katlı
-    grubun (``D₄``) yörüngesinden sözlük sırasında en küçüğü. Her nesne
-    için **bir kere** çıkarılır ve hash ile ``O(1)`` kıyaslanır; çift
-    döngüsünün içinde sekiz dönüşümü tekrar tekrar hesaplamak
-    ``O(n²·8)`` olurdu.
-    """
     if ne == "kanonik":
         en_kucuk: Optional[Tuple[Tuple[int, int], bytes]] = None
         for k in range(4):
@@ -1093,7 +773,7 @@ def _emsal(nesneler=None, sekil=None, ne: str = "emsal"):
                 aday = ((int(A.shape[0]), int(A.shape[1])), A.tobytes())
                 if en_kucuk is None or aday < en_kucuk:
                     en_kucuk = aday
-        return en_kucuk                                    # type: ignore[return-value]
+        return en_kucuk
 
     if ne != "emsal":
         raise ValueError("emsal kipi bilinmiyor: %r" % (ne,))
@@ -1103,7 +783,6 @@ def _emsal(nesneler=None, sekil=None, ne: str = "emsal"):
                 "emsal_dönük": 0.0, "ihtilaf": 0.0, "sınıf": float(m)}
     ayni_sekil = ayni_izam = ayni_renk = donuk = 0
     cift = 0
-    # Vasıflar çift döngüsünün DIŞINDA, nesne başına bir kere.
     ham = [(n.sekil.shape, np.ascontiguousarray(n.sekil).tobytes())
            for n in nesneler]
     kan = [_emsal(sekil=n.sekil, ne="kanonik") for n in nesneler]
@@ -1118,9 +797,7 @@ def _emsal(nesneler=None, sekil=None, ne: str = "emsal"):
             if ham[i] == ham[j]:
                 ayni_sekil += 1
             elif kan[i] == kan[j]:
-                # dönme yahut yansımayla emsal (8 katlı dihedral grup)
                 donuk += 1
-    # şekil kümesi sayısı: kaç ayrı "cins" var
     imza = set()
     for n in nesneler:
         imza.add((n.sekil.shape, n.sekil.tobytes()))
@@ -1133,21 +810,6 @@ def _emsal(nesneler=None, sekil=None, ne: str = "emsal"):
 
 
 def _seffafiyet(g: np.ndarray) -> Dict[str, float]:
-    """Şeffafiyet: **katman topolojisi** -- Ziyâ ile çakışmaz (kullanıcı hükmü).
-
-    Ziyâ varlık/yokluktur; Şeffafiyet ise iki figür üst üste bindiğinde
-    arkadakinin hissedilip hissedilmediğidir. ARC'de bunun fiilî izi
-    **kavşaklardır**: yatay bir dizi ile dikey bir dizi kesiştiğinde
-    kavşak hücresini hangi renk tutuyor?
-
-    * Kavşakta hep aynı renk kazanıyorsa → **Kesafet** (bir katman üstte,
-      öteki kesilmiş).
-    * Kavşak rengi değişiyorsa yahut üçüncü bir renkse → **Şeffafiyet**
-      (katmanlar birbirini yok etmiyor).
-
-    Bu bir **vekil ölçüdür** ve öyle bildirilir: hakiki katman sırası
-    ARC'de verilmez, kavşaktan çıkarılır.
-    """
     H, W = g.shape
     kavsak = 0
     yatay_kazandi = 0
@@ -1158,7 +820,6 @@ def _seffafiyet(g: np.ndarray) -> Dict[str, float]:
             c = g[i, j]
             if c == 0:
                 continue
-            # yatay komşuların hâkim rengi, dikey komşuların hâkim rengi
             y = [g[i, j - 1] if j > 0 else 0, g[i, j + 1] if j + 1 < W else 0]
             d = [g[i - 1, j] if i > 0 else 0, g[i + 1, j] if i + 1 < H else 0]
             ys = y[0] if y[0] == y[1] and y[0] != 0 else 0
@@ -1175,23 +836,11 @@ def _seffafiyet(g: np.ndarray) -> Dict[str, float]:
         return {"kavşak": 0.0, "kesafet": 0.0, "şeffafiyet": 0.0}
     tutarli = max(yatay_kazandi, dikey_kazandi) / kavsak
     return {"kavşak": float(kavsak),
-            "kesafet": float(tutarli),           # bir katman hep üstte
-            "şeffafiyet": float(ucuncu / kavsak)}  # üçüncü renk = karışım
+            "kesafet": float(tutarli),
+            "şeffafiyet": float(ucuncu / kavsak)}
 
 
 def _mukayese(g: np.ndarray, pencere: int = 3) -> np.ndarray:
-    """**Aykırılık alanı** -- hücrenin, ızgaranın hâkim örgüsünden sapması.
-
-    **Bu artık "Teşabüh/İhtilaf" DEĞİLDİR.** Öyle adlandırılmıştı ve
-    ölçüm yalanladı: ``doku`` ve ``bağlantı``dan türetildiği hâlde
-    174 çiftin 86'sında baskın çıkıyordu -- yani bağımsız bir eksen
-    değil, ötekilerin toplamıydı. Tekrar günahı buydu.
-
-    Teşabüh/İhtilaf'ın hakiki yeri **nesneler arasıdır** (``_emsal``).
-    Burada kalan şey ise başka ve meşru bir şeydir: bir hücrenin
-    ızgaranın genel örgüsüne göre **ne kadar sıra dışı** olduğu --
-    ARC'de "tek farklı hücre" bulmacalarının doğrudan sinyali.
-    """
     H, W = g.shape
     d = _doku(g)
     b = _baglanti(g)
@@ -1199,11 +848,10 @@ def _mukayese(g: np.ndarray, pencere: int = 3) -> np.ndarray:
     merkez = oz.mean(0)
     sapma = np.linalg.norm(oz - merkez, axis=1).reshape(H, W)
     olcek = float(sapma.max()) + 1e-12
-    return 1.0 - 2.0 * (sapma / olcek)          # +1 benzer, −1 aykırı
+    return 1.0 - 2.0 * (sapma / olcek)
 
 
 def _pencere_ortalamasi(A: np.ndarray, k: int) -> np.ndarray:
-    """``k×k`` kutu ortalaması -- kenarda kenar değeri tekrarlanır."""
     p = k // 2
     P = np.pad(A, p, mode="edge")
     out = np.zeros_like(A, dtype=float)
@@ -1214,12 +862,6 @@ def _pencere_ortalamasi(A: np.ndarray, k: int) -> np.ndarray:
 
 
 def bak(izgara: np.ndarray) -> Mesud:
-    """Bir ızgarayı 15 kanallı tabakalı müşahedeye çevir.
-
-    Hiçbir yerde öğrenilen ağırlık yoktur: bunlar **fıtrî** kanallardır,
-    tıpkı retinanın ve V1'in doğuştan gelen devreleri gibi. Öğrenme
-    bunların üzerinde olur, bunların yerine değil.
-    """
     g = np.asarray(izgara, int)
     if g.ndim != 2:
         raise ValueError("müşahede iki boyutlu ızgara ister")
@@ -1228,10 +870,6 @@ def bak(izgara: np.ndarray) -> Mesud:
     for n in nesneler:
         adet[n.renk] = adet.get(n.renk, 0) + 1
 
-    # **DÜZELTİLDİ.** Evvelce tenasüb ızgaranın tamamından ölçülüyordu;
-    # ızgara şekli sabit kalınca ``Δen_boy`` cebren sıfır çıkıyordu
-    # (ölçüldü: ortalama 0.0000, sıfır olma oranı 1.00 -- kanal ÖLÜYDÜ).
-    # Tenasüb bir **nesnenin** vasfıdır; nesneler üzerinden toplanır.
     ten = _tenasub(g=g, nesneler=nesneler, ne="küllî")
     muk = _mukayese(g)
     ems = _emsal(nesneler)
@@ -1246,10 +884,6 @@ def bak(izgara: np.ndarray) -> Mesud:
     else:
         sek = {k: 0.0 for k in ("betti1", "çevre", "tıkızlık", "doluluk",
                                 "simetri", "m20", "m02", "m11")}
-    # Hüsn: intizam. Simetri yüksek, aykırılık düşük, oran dengeli ise
-    # güzeldir. Türevdir; ayrı bir detektörü yoktur (mertebe 2).
-    # Hüsn TÜREVDİR (mertebe 2): simetri × emsal-nizamı ÷ oran sapması.
-    # Ayrı bir detektörü yoktur; Tenasüb + Teşabüh'ten doğar.
     husn = float(0.5 * (ten[1] + ten[2])
                  * (0.5 + 0.5 * ems["emsal_şekil"])
                  / (1.0 + abs(np.log(max(ten[0], 1e-6)))))
@@ -1275,18 +909,12 @@ def bak(izgara: np.ndarray) -> Mesud:
 
 
 def devinim_olc(a: Mesud, b: Mesud) -> Dict[str, float]:
-    """Tabaka 4: iki müşahede arasındaki Hareket / Sükûn / İhtilaf.
-
-    ARC'de girdi ile çıktı arasındaki **kaide** buradadır. Ölçü, hangi
-    kanalın değiştiğini söyler; kaidenin ne olduğunu değil. Müşahedenin
-    haddi budur ve aşılmaz -- kaideyi çıkarmak Kıyas'ın (𝒪₁₈) işidir.
-    """
     out: Dict[str, float] = {}
     ayni_sekil = a.izgara.shape == b.izgara.shape
     out["şekil_aynı"] = float(ayni_sekil)
     if ayni_sekil:
         deg = (a.izgara != b.izgara)
-        out["hareket"] = float(deg.mean())            # değişen hücre oranı
+        out["hareket"] = float(deg.mean())
         out["sükûn"] = float(1.0 - deg.mean())
         for ad, X, Y in (("ışık", a.isik, b.isik),
                          ("bağlantı", a.baglanti, b.baglanti),
@@ -1310,12 +938,8 @@ def devinim_olc(a: Mesud, b: Mesud) -> Dict[str, float]:
         out["Δ" + k] = float(b.emsal[k] - a.emsal[k])
     for k in ("kavşak", "kesafet", "şeffafiyet"):
         out["Δ" + k] = float(b.katman[k] - a.katman[k])
-    # ŞEKLİN tarifi -- yeni ve asıl kanal
     for k in a.sekil_ozeti:
         out["Δş_" + k] = float(b.sekil_ozeti[k] - a.sekil_ozeti[k])
-    # ŞEFFAFİYET: kullanıcı hükmü gereği girdi-çıktı ARASINDA aranır.
-    # Girdide örtülü olan çıktıda ortaya çıkıyorsa, örtme çözülmüştür;
-    # tersi ise örtme kurulmuştur. Tek ızgarada görünmeyen budur.
     for k in ("örtme", "ön_renk", "arka_renk"):
         out["Δsür_" + k] = float(b.sureklilik[k] - a.sureklilik[k])
     out["örtme_çözüldü"] = float(a.sureklilik["örtme"] > 0
@@ -1325,18 +949,7 @@ def devinim_olc(a: Mesud, b: Mesud) -> Dict[str, float]:
     return out
 
 
-# ════════════════════════════════════════════════════════════════════
-#  idrak/sekil.py
-# ════════════════════════════════════════════════════════════════════
-
 class SekilKaidesi:
-    """İki eksenin kaidesi birlikte -- ``(kip, katsayı)`` çifti olarak.
-
-    KÜME 6 tevhidinde (kütük H225) ``EksenKaidesi`` buraya eridi: tek
-    eksenin kaidesi bir sınıf olmayı hak edecek kadar hâl tutmuyordu --
-    iki alanı (``kip``, ``deger``) ve tek bir metodu vardı, o metot da
-    ancak bu sınıfın içinden çağrılıyordu.
-    """
 
     def __init__(self, satir: Tuple[str, object], sutun: Tuple[str, object]):
         self.satir, self.sutun = satir, sutun
@@ -1354,7 +967,7 @@ class SekilKaidesi:
         kaynak = gs[eksen] if kip == "oran" else gs[1 - eksen]
         pay = Fraction(kaynak) * deger
         if pay.denominator != 1 or pay < 1:
-            return None                       # tam sayı değilse sükût
+            return None
         return int(pay)
 
     def kestir(self, girdi: np.ndarray, azami_kenar: int = 30
@@ -1365,20 +978,12 @@ class SekilKaidesi:
         if r is None or c is None:
             return None
         if not (1 <= r <= azami_kenar and 1 <= c <= azami_kenar):
-            return None                       # ARC sınırı dışı → sükût
+            return None
         return r, c
 
-    def __repr__(self) -> str:                # pragma: no cover
+    def __repr__(self) -> str:
         return "SekilKaidesi(%r, %r)" % (self.satir, self.sutun)
 
-
-
-
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/boyut.py
-# ════════════════════════════════════════════════════════════════════
 
 Boyut = Tuple[int, int]
 
@@ -1389,12 +994,6 @@ KAIDE_ADLARI: Tuple[str, ...] = (
     "×2", "÷2", "×3", "÷3", "×4", "÷4", "×2 yatay", "×2 dikey",
 )
 
-
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/gomme.py
-# ════════════════════════════════════════════════════════════════════
 
 QTT_TABAN: int = 2
 
@@ -1409,54 +1008,6 @@ def kalip(ciftler=None, girdi=None, ne: str = "tahmin",
                    ad: str = "", g=None, m=None, gorevler=None,
                    azami: int = 400, azami_hucre: int = 1600,
                    eksen: int = 0, azami_kenar: int = 30):
-    """ÇIKTI KAÇ SATIR KAÇ SÜTUN OLACAK -- **tek terkip** (kütük H225).
-
-    KÜME 6 tevhidinde iki **ayrı** boyut indüksiyon sistemi bulundu ve
-    zabıttaki birinci kök problem buydu: ``nefs/boyut.py`` on yedi adaylı
-    bir **kaide cetveliyle** (aynı, devrik, dolu_kutu, ×2, ÷3, …),
-    ``idrak/sekil.py`` ise eksen başına **kesirli oranla**
-    (``Fraction`` ile tam) çalışıyordu; ikisi birbiriyle hiç konuşmuyor,
-    aynı sualin iki cevabı iki dosyada ayrı ayrı duruyordu.
-
-    Terkipte ikisi **tek kapıdan** geçer ve sıraları cebren bellidir:
-
-    1. **Kesirli kaide evvel denenir.** Eksen başına ``oran`` yahut
-       ``capraz`` bir kesir bulunabiliyorsa o **genelleyen** cevaptır;
-       ``Fraction`` ile tam tutulduğu için "3.0000001 kat" gibi sahte
-       kaideler kabul edilmez.
-    2. **Cetvel sonra denenir.** Kesir tutmazsa, kesirle ifade
-       edilemeyen kaideler (dolu_kutu, en_büyük_nesne, tek_nesne,
-       nesne_sayısı_kare …) sırayla sınanır.
-    3. **İkisi de tutmazsa sükût.** Uydurma bir boyut vermek,
-       bilmediğini söylememekten kötüdür (H10).
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kesir``       eksen başına ``(kip, katsayı)`` yahut ``None``
-    ``şekil``       iki eksenin ``SekilKaidesi``i yahut ``None``
-    ``kaide``       adı verilen cetvel kaidesinin verdiği boyut
-    ``bul``         **hepsini** sağlayan ilk kaide (kesir → cetvel)
-    ``tahmin``      ``(boyut, kaide_adı)``; bulunamazsa ``(None, sükût)``
-    ``ölç``         görev kümesinde kaide isabetinin dökümü
-    ``kapsam``      kaide ne kadar **kapsıyor**, kapsayınca ne kadar
-                    **doğru** -- sınama çiftlerinde, hiç görmediği çiftte
-    ==============  ==================================================
-
-    ``ölç`` ile ``kapsam`` **ayrı iki ölçüdür** ve ikisi de tutulur:
-    ``ölç`` görev başına tek sınama çiftinde isabet/yanlış/sükût sayar,
-    ``kapsam`` bütün sınama çiftlerinde kaidenin **erimini** ölçer. Biri
-    "konuşunca doğru mu", öteki "kaç yerde konuşabiliyor" sualidir.
-
-    **Hepsini sağlaması şarttır**: tek karşı örnek küllî kaideyi düşürür
-    (kütük H6 -- nakz). Bir kaide dokuz çiftin sekizinde tutuyorsa
-    **kabul edilmez**; o, kaide değil tesadüftür.
-
-    Sabit boyut kaidesi en son denenir: bütün çıktılar aynı boyutta ise
-    o boyut ezberlenebilir. Bu bir kaide değil **ezberdir** ve öyle
-    işaretlenir; yine de ARC'de meşru bir kaidedir.
-    """
-    # --- kesirli kol (eski ``idrak/sekil.py``) ---------------------
     if ne == "kesir":
         if not ciftler:
             return None
@@ -1489,7 +1040,6 @@ def kalip(ciftler=None, girdi=None, ne: str = "tahmin",
         if k == "devrik":
             return (gg.shape[1], gg.shape[0])
         if k == "dolu_kutu":
-            # zemin olmayan bölgenin sınırlayıcı kutusu -- kırpma
             idx = np.argwhere(gg != 0)
             if not len(idx):
                 return None
@@ -1545,7 +1095,6 @@ def kalip(ciftler=None, girdi=None, ne: str = "tahmin",
     if ne == "bul":
         if not ciftler:
             return None
-        # 1) kesirli cetvel -- genelleyen olan odur
         k = kalip(ciftler, ne="şekil")
         if k is not None:
             hepsi = all(k.kestir(a, azami_kenar)
@@ -1553,7 +1102,6 @@ def kalip(ciftler=None, girdi=None, ne: str = "tahmin",
                         for a, b in ciftler)
             if hepsi:
                 return k
-        # 2) cetvel kaideleri
         mesudlar = [bak(a) for a, _ in ciftler]
         for k2 in KAIDE_ADLARI:
             tamam = True
@@ -1564,7 +1112,6 @@ def kalip(ciftler=None, girdi=None, ne: str = "tahmin",
                     break
             if tamam:
                 return k2
-        # 3) sabit boyut (ezber)
         boyutlar = {(b.shape[0], b.shape[1]) for _, b in ciftler}
         if len(boyutlar) == 1:
             return "sabit%s" % (boyutlar.pop(),)
@@ -1640,31 +1187,11 @@ def kalip(ciftler=None, girdi=None, ne: str = "tahmin",
 
 def qtt_parametre_sayisi(kademe: int = QTT_KADEME, chi: int = QTT_BAG,
                          taban: int = QTT_TABAN) -> int:
-    """``kademe × (taban·χ·χ)`` -- gömmenin serbest sayı adedi.
-
-    Padişahın hükmü: *"4096 sayıyı düz dizi olarak tutma; 12 adet
-    2×8×8'lik tensör çekirdeği öğren."* Netice ``12 × 128 = 1536``tır.
-    Uç çekirdeklerin bağı bir yanda 1 olduğu için hakikî adet biraz
-    daha azdır; burada **üst sınır** verilir ve alt sınır
-    ``qtt_gomme``nin kendi çekirdeklerinden sayılır -- iddia değil,
-    sayım.
-    """
     return int(kademe) * int(taban) * int(chi) * int(chi)
 
 
 def qtt_gomme(v: np.ndarray, chi: int = QTT_BAG
               ) -> Tuple[List[np.ndarray], float, int]:
-    """4096 boyutlu vektörü **12 QTT çekirdeğine** indir (χ bağıyla).
-
-    Döner ``(çekirdekler, sadakat, parametre)``. ``sadakat``
-    ``1 − bağıl hata``dır; ``parametre`` çekirdeklerdeki hakikî sayı
-    adedidir (uç çekirdeklerin daralması dâhil).
-
-    **Rank-1 DEĞİLDİR ve olmamalıdır** (padişahın 2. emri): ``χ = 1``
-    12 kademede yalnız 24 parametre bırakır ve ölçüldüğüne göre dili
-    temsil edemez. ``χ = 4`` ve ``χ = 8`` cetveli
-    ``qtt_sadakat_cetveli``dedir.
-    """
     psi, _ = genlige_gom(v)
     k = genlige_gom(D=np.asarray(v).size, ne="kübit")
     cek, bag, hata = genlige_gom(psi=psi, kubit=k, chi=int(chi), ne="mps")
@@ -1675,11 +1202,6 @@ def qtt_gomme(v: np.ndarray, chi: int = QTT_BAG
 def qtt_sadakat_cetveli(v: np.ndarray,
                         chiler: Sequence[int] = (1, 2, 4, 8, 16, 32)
                         ) -> List[Dict[str, float]]:
-    """χ ile sadakat ve parametre adedi -- **yan yana** (H47).
-
-    Ceridenin iddiası ``χ = 4`` → %99,2 ve ``χ = 8`` → %99,98'dir. Bu
-    bir iddiadır; burada ölçülür ve verinin cinsine göre değişir.
-    """
     out: List[Dict[str, float]] = []
     for c in chiler:
         _, sad, par = qtt_gomme(v, chi=int(c))
@@ -1691,37 +1213,6 @@ def qtt_sadakat_cetveli(v: np.ndarray,
 
 def genlige_gom(v=None, psi=None, kubit: int = 0, chi=None,
                 norm: float = 1.0, D=None, ne: str = "gom"):
-    """VEKTÖRÜ GENLİĞE GÖMMEK -- **tek terkip** (kütük H225).
-
-    Küme: ``kubit_sayisi`` + ``genlik_gom`` + ``genlik_coz`` +
-    ``mps_kur`` + ``qtt_bag_ihtiyaci`` + ``gomme_hatasi``. Altısı tek
-    zincirin halkalarıydı ve son ikisi yalnız ``mps_kur``un iki ayrı
-    çıktısını almak için vardı.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kübit``       ``⌈log₂ D⌉`` -- ``D`` boyutu taşıyan kübit adedi
-    ``gom``         ``(ψ, norm)`` -- birim normlu genlik vektörü
-    ``çöz``         genlikten klasik vektöre dönüş
-    ``mps``         ``(çekirdekler, bağlar, hata)``
-    ``bağ``         kesmesiz **hakikî** bağ profili
-    ``hata``        ``chi``de kesince atılan ağırlığın bağıl normu
-    ==============  ==================================================
-
-    ``D = 4096`` için kübit **12**'dir; ``4096 × 16`` bit (65.536 kübit)
-    değil. Fark, genlik kodlamasının bütün kazancıdır.
-
-    Genlik kodlaması normu **atar** (durum projektiftir); atılan norm
-    ayrıca döndürülür ki kaybolmasın. **Kaba sıfırlama yasağı (H14)**
-    burada da geçerlidir: ``v``nin uzunluğu ``2^k``ya tamamlanmaz,
-    **sıfırla doldurulur** ve doldurulan yer raporlanır.
-
-    MPS ayrışımı ardışık SVD'dir; ``chi`` verilirse her bağda kesilir ve
-    **atılan ağırlık biriktirilerek** bağıl hata döndürülür.
-    ``chi=None`` iken kesme yoktur ve dönen bağlar **hakikî** bağ
-    ihtiyacıdır -- *"χ ≤ 16 yeter mi"* sualinin cevabı odur.
-    """
     if ne == "kübit":
         d = int(D if D is not None else v)
         if d < 1:
@@ -1778,7 +1269,6 @@ def genlige_gom(v=None, psi=None, kubit: int = 0, chi=None,
 
 @dataclass
 class YazmacOlcusu:
-    """35 kübitlik veri yazmacının taksimatı -- ceridenin cetveli."""
     B: int = 2048
     L: int = 4096
     D: int = 4096
@@ -1814,12 +1304,6 @@ class YazmacOlcusu:
 
 
 def veri_yazmaci(V: np.ndarray) -> Tuple[np.ndarray, YazmacOlcusu]:
-    """``(B, L, D)`` klasik veriyi tek genlik vektörüne gömer.
-
-    Netice ``2^(kübit)`` uzunluktadır ve birim normludur. **Bu bir
-    tanımdır, bir sıkıştırma değildir**: sıkıştırma MPS'e ayrılınca ve
-    bağ kesilince olur (bkz. ``bellek_cetveli``).
-    """
     V = np.asarray(V, float)
     if V.ndim != 3:
         raise ValueError("V (B, L, D) olmalı")
@@ -1834,12 +1318,6 @@ def veri_yazmaci(V: np.ndarray) -> Tuple[np.ndarray, YazmacOlcusu]:
 
 def bellek_cetveli(V: np.ndarray, chi: Sequence[int] = (2, 4, 8, 16, 32)
                    ) -> Dict[str, object]:
-    """χ cetveli: **bağ ihtiyacı, hata ve bellek** -- üçü yan yana.
-
-    Ceridenin iddiası ``χ ≤ 16``dır. Burada üçü birden ölçülür ve
-    hiçbiri tek başına okunmaz (kullanıcı hükmü H47: iki ölçü daima yan
-    yana). Bellek, MPS çekirdeklerinin eleman sayısıdır (float32).
-    """
     psi, o = veri_yazmaci(V)
     hakiki = genlige_gom(psi=psi, kubit=o.kubit, ne="bağ")
     out: List[Dict[str, float]] = []
@@ -1855,45 +1333,13 @@ def bellek_cetveli(V: np.ndarray, chi: Sequence[int] = (2, 4, 8, 16, 32)
             "cetvel": out}
 
 
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/kopru.py
-# ════════════════════════════════════════════════════════════════════
-
 def kopru(sozluk: int = 16, kubit: int = 16,
                       ne: str = "ölç"):
-    """BELİRTEÇTEN AÇIYA GEÇİŞ SAĞLAM MI -- tek terkip (kütük H225).
-
-    Küme: ``belirtec_morfizmi`` + ``kodlamayi_olc``. İkincisi birincisini
-    kurup iki ölçütle sınıyordu; ayrı isim taşımaları, morfizm ile
-    morfizmin sıhhatini iki ayrı şey gibi gösteriyordu.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``morfizm``     ``φ: t ↦ (±1 bitleri)`` -- sürekli uzantısıyla
-    ``ölç``         H14'ün iddiası: tersinirlik **ve** izometri
-    ==============  ==================================================
-
-    ``Morfizm`` sürekli bir eşleme bekler; belirteç ayrık olduğu için
-    **sürekli uzantısı** kullanılır: ``t`` reel alınır ve bitler
-    ``2·frac(t/2^i) − 1``in pürüzsüz karşılığıyla yazılır (her bit kendi
-    ölçeğinde bir üçgen dalgadır). Jakobi böylece tanımlıdır ve
-    ``token_uzaylari`` olduğu gibi çalışır.
-
-    **Tersinirlik ile izometri AYRI sayılardır** ve ikisi birden döner
-    (H47): bir kodlama tersinir olduğu hâlde mesafeyi paramparça
-    edebilir; o zaman "yakın belirteç" mefhumu kaybolur. Çarpışma sayısı
-    da açıkça sayılır -- izometri bozulduğunda sessiz kalınmaz.
-    """
     def phi(x: np.ndarray) -> np.ndarray:
         t = np.asarray(x, float).reshape(-1)[0]
-        # ``belirtecleri_kodla``nın sürekli karşılığı: her bit, kendi
-        # ölçeğindeki bir üçgen dalgadır ve ``±1``e ölçeklenir.
         out = []
         for i in range(kubit):
-            u = (t / (1 << i)) % 2.0            # [0,2)
+            u = (t / (1 << i)) % 2.0
             out.append(2.0 * (1.0 - abs(u - 1.0)) - 1.0)
         return np.asarray(out, float)
 
@@ -1903,30 +1349,21 @@ def kopru(sozluk: int = 16, kubit: int = 16,
         raise ValueError("köprü kipi bilinmiyor: %r" % (ne,))
     from nefs.qegitim import belirtecleri_kodla
 
-    # --- 1) TERSİNİRLİK: her belirteç geri çözülüyor mu?
     T = np.arange(sozluk)
-    E = belirtecleri_kodla(T, kubit, kubit)              # genişlik TABAN
+    E = belirtecleri_kodla(T, kubit, kubit)
     bit = (E > 0).astype(np.int64)
-    # **GERİ ÇÖZÜM İKİLİ AĞIRLIKLARLA YAPILMAZ ARTIK.** Evvelce
-    # ``Σ bit_i · 2^i`` ile çözülüyordu; o, düz ikili kodlamanın
-    # kendisidir ve fermanla imha edildi. Hadamard/qudit tabanında
-    # geri çözüm **en yakın satırı bulmaktır** -- satırlar birbirine
-    # dik olduğu için bu tam ve tersinirdir.
     geri = np.argmin(
         np.linalg.norm(E[:, None, :] - E[None, :, :], axis=2)
         + np.eye(len(T)) * 0.0, axis=1)
     tersinir = bool(np.array_equal(geri % sozluk, T % sozluk))
     carpisma = int(sozluk - len(set(map(tuple, bit.tolist()))))
 
-    # --- 2) İZOMETRİ: mesafe korunuyor mu?
-    # ``token_uzaylari.morfizm`` ile ölçülür; hedef metrik birimdir.
     m = Morfizm(1, kubit, phi, ad="belirteç→açı")
-    g = metrik("düz", n=1)                    # kaynak: sözlük ekseni
-    h = metrik("düz", n=kubit)                # hedef: açı uzayı
+    g = metrik("düz", n=1)
+    h = metrik("düz", n=kubit)
     noktalar = [[float(x)] for x in np.linspace(0.3, sozluk - 0.7, 24)]
     izo = izometri_mi(m, g, h, noktalar, tol=1e-6)
 
-    # Ham mesafe kıyası: sözlükteki komşuluk açı uzayında korunuyor mu?
     D_soz = np.abs(T[:, None] - T[None, :]).astype(float)
     D_aci = np.linalg.norm(E[:, None, :] - E[None, :, :], axis=2)
     ust = np.triu_indices(sozluk, 1)
@@ -1944,19 +1381,8 @@ def kopru(sozluk: int = 16, kubit: int = 16,
     }
 
 
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/sahit.py
-# ════════════════════════════════════════════════════════════════════
-
 @dataclass(frozen=True)
 class Sahit:
-    """Bir gösterim çifti: ``[bas, son)`` satırları, içinde girdi/çıktı.
-
-    ``kesim`` bölütün içindeki girdi→çıktı sınırıdır (mutlak satır
-    indisi). ``bas < kesim < son`` daima sağlanır.
-    """
     no: int
     bas: int
     kesim: int
@@ -1980,11 +1406,10 @@ class Sahit:
 
 @dataclass
 class Bolutleme:
-    """Bölütlemenin kendisi ve onu **denetlenebilir** kılan ölçüler."""
     sahitler: List[Sahit] = field(default_factory=list)
     esik: float = 0.0
     kopmalar: Optional[np.ndarray] = None
-    yeterli: bool = False          # tevafuk için en az iki şahit var mı?
+    yeterli: bool = False
     sebep: str = ""
 
     def __len__(self) -> int:
@@ -1994,27 +1419,6 @@ class Bolutleme:
 def ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
                    ne: str = "bölütle", v=None, kopma=None,
                    bas: int = 0, son: int = 0):
-    """DUYU AKIŞINI ŞAHİTLERE AYIRMAK -- **tek terkip** (kütük H225).
-
-    Küme: ``_kopma_olcusu`` + ``_mad_esigi`` + ``bolutle`` +
-    ``_ic_kesim``. Dördü tek amelin durakları idi: ardışık satırlar
-    arasındaki kopmayı ölç, medyan+MAD ile eşiği kur, akışı şahitlere
-    böl, ve her bölütün içindeki girdi/çıktı sınırını bul.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kopma``       ardışık satırlar arasındaki normalize mesafe
-    ``eşik``        medyan + kat·MAD
-    ``bölütle``     ``Bolutleme`` -- şahitler ve denetlenebilir ölçüler
-    ``iç_kesim``    bölütün içindeki en büyük kopma
-    ==============  ==================================================
-
-    Ayıraç sembolü **aranmaz**: sınır, ham duyudaki kopmadan okunur.
-    Medyan + kat·MAD, ortalama+std yerine seçildi: sınırlar kendileri
-    aykırı değerlerdir ve ortalamayı yukarı çeker, yani eşik kendi
-    aradığı şeyden bozulurdu.
-    """
     if ne == "kopma":
         Z = np.asarray(Z, float)
         if len(Z) < 2:
@@ -2040,9 +1444,6 @@ def ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
 
     if ne != "bölütle":
         raise ValueError("bölütleme kipi bilinmiyor: %r" % (ne,))
-    # ``asgari_uzunluk``: bir şahit hem girdi hem çıktı barındıracağı
-    # için en az 4 satır olmalıdır (2+2). Daha kısa bölütler komşusuna
-    # katılır.
     n = len(Z)
     if n < 2 * asgari_uzunluk:
         return Bolutleme(sahitler=[], esik=float("nan"),
@@ -2053,18 +1454,11 @@ def ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
     esik = ayir(v=kopma, kat=kat, ne="eşik")
     aday = [i + 1 for i, v in enumerate(kopma) if v > esik]
 
-    # İKİ MERTEBELİ AYIRAÇ. Bir bulmaca akışında iki tür kopma vardır:
-    # örnekleri ayıran (büyük) ve bir örneğin girdisiyle çıktısını ayıran
-    # (küçük). İkisi de eşiği aşar. Hepsini şahit sınırı saymak akışı
-    # ikiye katlayarak böler -- ölçüldü: 5 şahitlik akış 10 parçaya
-    # bölünüyordu. Bu yüzden adaylar kendi aralarında medyanla ikiye
-    # ayrılır: üst yarı şahit sınırı, alt yarı iç kesimdir.
     if len(aday) >= 3:
         buyukluk = np.array([kopma[a - 1] for a in aday])
         ic_esik = float(np.median(buyukluk))
         aday = [a for a, v in zip(aday, buyukluk) if v > ic_esik]
 
-    # asgarî uzunluk şartıyla sınırları ayıkla
     sinirlar: List[int] = [0]
     for a in aday:
         if a - sinirlar[-1] >= asgari_uzunluk and n - a >= asgari_uzunluk:
@@ -2087,19 +1481,6 @@ def ayir(Z=None, asgari_uzunluk: int = 4, kat: float = 3.0,
 
 def _cerceve(S: np.ndarray, sahit: Sahit
              ) -> Tuple[np.ndarray, np.ndarray]:
-    """Şahidi **kendi çerçevesine** taşı: merkezle ve ölçekle.
-
-    Bu, kaidenin ne olduğuna dair bir hükümdür. Kaide, ızgaranın nerede
-    durduğu ya da ne kadar büyük olduğu değildir -- **şekil**tir. Yer ve
-    ölçek şahide hastır (her örnek başka yerde, başka boyuttadır); kural
-    hepsinde ortaktır. Bu yüzden Procrustes merkezlenmiş ve ölçeklenmiş
-    çerçevede kurulur.
-
-    Merkezlemesiz kurulup ölçüldü ve **kaldı**: aynı kurala tâbi beş
-    şahitte dahi dışarıda-bırak artığı 0.27–1.00 arasına çıkıyor, nakz
-    5/5 şahidi düşürüyordu. Sebep, akıştaki yer kaymasının (offset)
-    dik dönmeyle taşınamamasıydı.
-    """
     G = np.asarray(S[sahit.girdi], float)
     C = np.asarray(S[sahit.cikti], float)
     t = min(len(G), len(C))
@@ -2117,29 +1498,6 @@ def _cerceve(S: np.ndarray, sahit: Sahit
 
 def kaide(S=None, sahit=None, ne: str = "küllî", sahitler=None,
                 A=None):
-    """ŞAHİTLERDEN KÜLLÎ KAİDEYİ ÇÖZMEK -- **tek terkip** (kütük H225).
-
-    Küme: ``capraz_kovaryans`` + ``_polar`` + ``kaide(ne="tek")`` +
-    ``kaide(ne="küllî")``. Dördü tek formülün halkalarıydı::
-
-        A_k = Ç_kᵀ G_k                (şahidin ham şehadeti)
-        polar(A) = U Vᵀ               (en yakın dik dizey)
-        R_k = polar(A_k)              (tek şahidin kaidesi)
-        R̄  = polar(Σ_k A_k)          (şahitlerin MÜŞTEREK kaidesi)
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kovaryans``   ``A_k = Ç_kᵀ G_k``
-    ``polar``       ``polar(A) = UVᵀ`` -- Frobenius'ta en yakın dik
-    ``tek``         ``R = argmin_{RᵀR=I} ‖R G − Ç‖_F``
-    ``küllî``       ``R̄ = polar(Σ_k A_k)``
-    ==============  ==================================================
-
-    **Çoklu şahit toplama kaidesi:** şahit kaideleri tek tek bulunup
-    ortalanmaz; çapraz kovaryanslar **toplanıp** tek bir kutupsal
-    izdüşüm alınır. Ortalama, dik dizeyler manifoldunda kalmaz.
-    """
     def polar(Am):
         U, _, Vt = np.linalg.svd(np.asarray(Am, float))
         return U @ Vt
@@ -2167,7 +1525,6 @@ def kaide(S=None, sahit=None, ne: str = "küllî", sahitler=None,
 
 
 def artiklar(S: np.ndarray, sahit: Sahit, R: np.ndarray) -> np.ndarray:
-    """``‖R gₚ − çₚ‖ / (‖çₚ‖+ε)`` -- şahidin kendi çerçevesinde."""
     G, C = _cerceve(S, sahit)
     if len(G) == 0:
         return np.zeros(0)
@@ -2177,7 +1534,6 @@ def artiklar(S: np.ndarray, sahit: Sahit, R: np.ndarray) -> np.ndarray:
 
 
 def _bos_kaide(ds: int, tohum: int) -> np.ndarray:
-    """Hiçbir alâkası olmayan bir dik dizey -- **boş hipotez** ölçeği."""
     rng = np.random.default_rng(tohum)
     Q, _ = np.linalg.qr(rng.normal(size=(ds, ds)))
     return Q
@@ -2185,23 +1541,6 @@ def _bos_kaide(ds: int, tohum: int) -> np.ndarray:
 
 def _tolerans(S: np.ndarray, sahitler: Sequence[Sahit],
               kaideler: Sequence[np.ndarray]) -> float:
-    """Tolerans **iki uçtan** kalibre edilir; dışarıdan sabit konmaz.
-
-    Tek uçtan kalibrasyon kurulup ölçüldü ve **kaldı**: yalnız kendi
-    artıklarının medyan+MAD eşiği alınınca tolerans 0.045 çıktı, çünkü
-    bir kaide kendi şahidinde tanımı gereği neredeyse hatasızdır. O
-    eşikle bütün şahitler nakzedilmiş görünüyordu (5/5) -- ölçü, "tutar"
-    ile "tutmaz"ı ayırmıyordu.
-
-    Doğrusu iki ölçeği karşılaştırmaktır:
-
-    * ``kendi``  : kaidenin kendi şahidindeki artığı -- **en iyi** hâl,
-    * ``boş``    : alâkasız (rastgele dik) bir kaidenin artığı -- **tesadüf** hâli,
-
-    ve eşik ikisinin geometrik ortasıdır. Böylece soru şu olur: dışarıda
-    bırakılan şahit, küllî kaideyle *tam uyuma* mı yoksa *tesadüfe* mi
-    daha yakın?
-    """
     if not sahitler:
         return float("inf")
     R_hep = kaide(
@@ -2215,9 +1554,6 @@ def _tolerans(S: np.ndarray, sahitler: Sequence[Sahit],
     if not kendi or not bos:
         return float("inf")
     b = max(float(np.median(bos)), 1e-9)
-    # medyan alınır, ortalama değil: bozuk şahit azınlıksa ölçeği
-    # bozmasın diye. Taban ``b·1e-4``: kusursuz uyumda (artık ≈ 0)
-    # geometrik orta sıfıra çöker ve eşik anlamsızlaşırdı.
     k = max(float(np.median(kendi)), b * 1e-4)
     return float(np.sqrt(k * b))
 
@@ -2226,21 +1562,6 @@ def delil_dizileri(S: np.ndarray, sahitler: Sequence[Sahit],
                    kaideler: Sequence[np.ndarray],
                    tol: Optional[float] = None
                    ) -> Tuple[List[np.ndarray], float]:
-    """Şahit başına ikili delil dizisi -- ``fitrat.tevafuk`` için.
-
-    ``dₖ[i] = 𝕀( şahit k ile şahit i BERABER kurdukları kaide, i'yi
-    açıklıyor mu )``, yani ``polar(Aₖ + Aᵢ)``ın ``i``deki artığı.
-
-    Tek şahidin kendi kaidesi kullanılmadı ve sebebi ölçüldü: ``t <
-    d_sem`` iken ``polar(Aₖ)``ın boş uzayı keyfîdir, dolayısıyla
-    ``dₖ`` neredeyse köşegen çıkıyor (herkes yalnız kendini teyit
-    ediyor) ve tevafuk sûnî olarak sıfıra iniyordu. İkişerli birleşim,
-    şahitliğin tabiatına da uygundur: iki şahit bir şahitten fazlasını
-    tayin eder.
-
-    Bu diziler `fitrat.tevafuk.tevafuk_olcusu` ve `fazla_sayma`ya
-    doğrudan verilir; "kaç müteber şahit var" hükmü oradan gelir.
-    """
     if tol is None:
         tol = _tolerans(S, sahitler, kaideler)
     caprazlar = [kaide(S, s, ne="kovaryans") for s in sahitler]
@@ -2258,27 +1579,6 @@ def delil_dizileri(S: np.ndarray, sahitler: Sequence[Sahit],
 def nakz_bul(S: np.ndarray, sahitler: Sequence[Sahit],
              kaideler: Sequence[np.ndarray],
              tol: Optional[float] = None) -> Dict[str, object]:
-    """Dışarıda-bırak sınaması: küllî kaideyi **düşüren** şahitler.
-
-    ``j``'siz kurulan ``R̄₋ⱼ`` şahit ``j``'de tolerans dışında kalıyorsa
-    ``j`` bir karşı örnektir. Mîzânda tek karşı örnek küllî önermeyi
-    düşürür (`mizan.munazara.nakz_gecerli_mi` ile aynı hüküm); burada da
-    öyle davranılır: ``nakz`` boş değilse "hepsi aynı kurala tâbi"
-    iddiası **yakîn** olamaz.
-
-    **Nakz kademelidir.** Tek turda kurulup ölçüldü ve **kaldı**: dört
-    şahitten yalnız biri başka kurala tâbiyken dördü birden nakzedilmiş
-    çıkıyordu. Sebep açıktır -- dışarıda bırakılan şahit ``j`` sağlam
-    olsa bile, geri kalanların içinde bozuk olan durduğu için küllî
-    kaide zaten bozuktur ve ``j``de tutmaz. Yani bir karşı örnek bütün
-    şahitleri suçlu gösteriyordu.
-
-    Doğrusu, mîzânda da olduğu gibi, **önce en ağır karşı örneği
-    ayırmak**tır: artığı en büyük şahit nakzedilmiş sayılır, kaide
-    onsuz yeniden kurulur ve kalanlar tekrar yoklanır. Hiçbiri toleransı
-    aşmayana kadar sürer; en az iki şahit kalır (tek şahitle küllî
-    kaideden söz edilemez).
-    """
     m = len(sahitler)
     if m < 2:
         return {"nakz": [], "artık": [], "tolerans": float("nan"),
@@ -2310,8 +1610,6 @@ def nakz_bul(S: np.ndarray, sahitler: Sequence[Sahit],
 
 def _akis_kur(m: int, ds: int, t: int, bozuk: Optional[int] = None,
               tohum: int = 0) -> np.ndarray:
-    """``m`` şahitlik yapay akış. ``bozuk`` verilirse o şahit BAŞKA bir
-    kurala tâbidir -- nakzın yakalaması gereken şey odur."""
     rng = np.random.default_rng(tohum)
     R_hakiki = np.linalg.qr(rng.normal(size=(ds, ds)))[0]
     R_sapik = np.linalg.qr(rng.normal(size=(ds, ds)))[0]
@@ -2320,7 +1618,6 @@ def _akis_kur(m: int, ds: int, t: int, bozuk: Optional[int] = None,
         G = rng.normal(size=(t, ds))
         R = R_sapik if k == bozuk else R_hakiki
         C = G @ R.T
-        # iç kopma (girdi→çıktı) KÜÇÜK, dış kopma (örnek→örnek) BÜYÜK
         bloklar.append(np.vstack([G, C + 6.0]) + 60.0 * k)
     return np.vstack(bloklar)
 
@@ -2345,53 +1642,8 @@ def _bir_deneme(baslik: str, S: np.ndarray) -> List[str]:
     return s
 
 
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/sahitlik.py
-# ════════════════════════════════════════════════════════════════════
-
 def iki_sahit_ayri_mi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
                       tohum: int = 0, ne: str = "bağımsızlık", q=None):
-    """İKİ ŞAHİT HAKİKATEN AYRI MI -- **tek terkip** (kütük H225).
-
-    Küme: ``kanal_degerleri`` + ``kanal_bagimsizligi``. İkincisi
-    birincisini koşu koşu çağırıyordu; ayrı isim taşımaları, kanalı
-    okumakla kanalların ayrılığını tartmayı iki şey gibi gösteriyordu.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kanal``       ``(ham duyu, hüküm)`` -- satır satır yoğunluktan
-    ``bağımsızlık`` uyuşma ve fazla sayma -- `fitrat/tevafuk.py` ile
-    ==============  ==================================================
-
-    Değerler **hakikî** indirgenmiş yoğunluktan okunur (H121). Eski
-    ``yuva_yogunluklari`` ayara bağlıydı; onunla ölçülen bir bağıntı
-    fizikî bir şey söylemezdi.
-
-    **KANAL ÇİFTİ DEĞİŞTİ (kütük H162).** Evvelce satırın ilk ve son
-    **veri** kübitiydi; ölçüldü ve %19 fazla saydırıyordu (H128). Beş
-    aday yarıştırıldı ve ``veri_vs_yerel`` iki ölçütte birden kazandı.
-    Bu terkip 𝒪₂₉'un fiilen kullandığı çifti okur; ayrı düşerlerse ölçüm
-    melekeyi değil kendini ölçmüş olurdu.
-
-    Her koşu bir "vaka"dır; kanal değerleri o vakadaki delildir.
-    ``uyuşma`` ikisinin aynı yöne işaret edip etmediğini,
-    ``fazla_sayma`` bağımsızlık farzının ne kadar fazla saydırdığını
-    verir.
-
-    **``fazla_sayma`` İKİLİ delil ister ve bu ölçülerek anlaşıldı.**
-    İlk kullanımda sürekli değerler verildi; ölçüt hem aynı şahidi iki
-    kere verince hem bağımsız iki şahit verince **1,0** döndü, yani hiç
-    ayırt etmedi (``log`` içeride ``nan`` üretiyordu). Kusur
-    `fitrat/tevafuk.py`de değil kullanımdaydı: o modül ikili şahitlikle
-    çalışır ve öyle beslendiğinde mükemmel ayırır -- bağımsız üç şahitte
-    fazla sayma 1,05, ortak kaynaklıda 2,55. O hâlde kanal değerleri
-    **medyanına göre ikilileştirilir**: delil "bu satır tipik olandan
-    yukarıda mı" der; hipotez de aynı usulle ikisinin ortalamasından
-    kurulur.
-    """
     def kanal(qq):
         ilk = [qq.veri(i, 0) for i in range(qq.n_satir)]
         hukum = [qq.yerel(i) for i in range(qq.n_satir)]
@@ -2411,23 +1663,12 @@ def iki_sahit_ayri_mi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
         E = np.random.default_rng(500 + t).normal(size=(n_satir, 12))
         q = QNefs(tohum, QAyar(tohum=tohum)).idrak_et(E)
         a, b = kanal(q)
-        A.append(a)                       # satır satır -- koşu ortalaması DEĞİL
+        A.append(a)
         B.append(b)
     d1 = np.concatenate(A)
     d2 = np.concatenate(B)
     uyusma = float(cift_uyusmasi(d1, d2))
 
-    # **``fazla_sayma`` İKİLİ delil ister ve bu ölçülerek anlaşıldı.**
-    # İlk kullanımda sürekli değerler verildi; ölçüt hem aynı şahidi iki
-    # kere verince hem bağımsız iki şahit verince **1,0** döndü, yani
-    # hiç ayırt etmedi (``log`` içeride ``nan`` üretiyordu). Kusur
-    # `fitrat/tevafuk.py`de değil kullanımımdaydı: o modül ikili
-    # şahitlikle çalışır ve öyle beslendiğinde mükemmel ayırıyor --
-    # bağımsız üç şahitte fazla sayma 1,05, ortak kaynaklıda 2,55.
-    #
-    # O hâlde kanal değerleri **medyanına göre ikilileştirilir**: delil
-    # "bu satır tipik olandan yukarıda mı" der. Hipotez de aynı usulle
-    # ikisinin ortalamasından kurulur.
     def ikili(v: np.ndarray) -> np.ndarray:
         return (v > float(np.median(v))).astype(np.int64)
 
@@ -2438,58 +1679,9 @@ def iki_sahit_ayri_mi(n_kosu: int = 12, n_satir: int = 8, chi: int = 8,
             "fazla_sayma": fs}
 
 
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/iki_olcek.py
-# ════════════════════════════════════════════════════════════════════
-
 def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
                       tohum: int = 0, chi: int = 8, k: int = 3,
                       gorevler=None, g=None):
-    """SAĞÎR İLE KEBÎR AYNI YERE Mİ BAKIYOR -- tek terkip (kütük H225).
-
-    Küme: ``_izgara_tarifi`` + ``gorev_ozellikleri`` + ``sagir_uydur`` +
-    ``kebir_ozellik`` + ``olcek_acilari``. Beşi tek sualin durakları
-    idi: ızgarayı sabit uzunlukta tarif et, görevin çiftlerini
-    özniteliğe çevir, göreve mahsus (sağîr) ölçeği kapalı formda kur,
-    küllî (kebîr) ölçeğin beyanını al, ve ikisinin gerdiği alt uzayları
-    Grassmann asal açılarıyla yüzleştir.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``tarif``       bir ızgaranın **sabit uzunlukta** tarifi (14 sayı)
-    ``öznitelik``   görevin gösterim çiftlerinden ``(X, Y)``
-    ``sağîr``       göreve mahsus RKHS ölçeği, kapalı formda
-    ``kebîr``       ana akışın (44 meleke) bu göreve dair beyanı
-    ``açı``         iki ölçek **aynı** alt uzayı mı geriyor
-    ==============  ==================================================
-
-    Tarif kasten **kaba** tutulur (şekil + renk histogramı): maksat
-    çözmek değil, iki ölçeğin **aynı** öznitelik uzayında
-    kıyaslanabilmesidir. İnce tarif işi `idrak/cozucu.py`nindir.
-
-    Sağîr ölçekte çekirdek Gauss'tur ve genişliği medyan sezgisiyle
-    konur (elle ayarlanmış bir sabit değil, verinin kendi ölçeği).
-    PSD'lik **denetlenir** -- PSD olmayan bir çekirdekte temsil teoremi
-    geçersizdir. **Tek** kapalı form çözüm kurulur: ``uydur`` çok
-    sütunlu hedefi olduğu gibi alır ve ``(K+λI)`` bir kere
-    Cholesky'lenir; 14 ayrı sistem kurmak aynı dizeyi 14 kere
-    ayrıştırmak olurdu.
-
-    **ÇAKIŞAN TARİF -- ölçülen hudut, gizlenmiyor.** 14 sayılık tarif
-    kabadır; bazı görevlerde iki AYRI çiftin tarifi birbirinin aynı
-    çıkar. O zaman Gram dizeyinin iki satırı eşitlenir, ``K+λI``nın
-    koşul sayısı ``1/λ`` mertebesine fırlar (ölçüldü: 5e6) ve kapalı
-    form artık **enterpolasyon yapamaz** -- düzenlileştirme iki çakışan
-    noktanın ortalamasına düşer. Bu, `ogrenme/rkhs.py`nin kusuru
-    DEĞİLDİR; o modül zaten koşul sayısını raporlamakta ısrar ediyor ve
-    haklı çıkıyor. Kusur kaba tarifdedir ve bir borçtur.
-
-    Kebîr ölçek **bütün görevlerde ortak** parametrelerle üretilir --
-    ihtisas yoktur, ve ölçülecek olan da odur.
-    """
     def tarif(gg):
         gg = np.asarray(gg, int)
         h, w = gg.shape
@@ -2517,26 +1709,10 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
             return {"kuruldu": False, "sebep": "iki çiftten az"}
         gen = medyan_genislik(X)
         K = gauss_cekirdegi(1.0 / max(2.0 * gen ** 2, 1e-9))
-        # ``psd_mi`` çekirdeği RASTGELE noktalarda sınar (nokta kümesi
-        # almaz); boyut olarak özniteliğin boyutu verilir.
         psd = bool(psd_mi(K, boyut=int(X.shape[1]))["psd_görünüyor"])
-        # **Tek** kapalı form çözüm: ``uydur`` çok sütunlu hedefi olduğu
-        # gibi alır ve ``(K+λI)`` bir kere Cholesky'lenir -- 14 ayrı sistem
-        # kurmak aynı dizeyi 14 kere ayrıştırmak olurdu.
         m = RKHS(K, lam=lam)
         m.uydur(X, Y)
         artik = float(np.abs(np.asarray(m(X), float) - Y).max())
-        # **ÇAKIŞAN TARİF -- ölçülen hudut, gizlenmiyor.**
-        # 14 sayılık tarif kabadır; bazı görevlerde iki AYRI çiftin tarifi
-        # birbirinin aynı çıkar. O zaman Gram dizeyinin iki satırı eşitlenir,
-        # ``K+λI``nın koşul sayısı ``1/λ`` mertebesine fırlar (ölçüldü: 5e6)
-        # ve kapalı form artık **enterpolasyon yapamaz** -- düzenlileştirme
-        # iki çakışan noktanın ortalamasına düşer.
-        #
-        # Bu, `ogrenme/rkhs.py`nin kusuru DEĞİLDİR; o modül zaten koşul
-        # sayısını raporlamakta ısrar ediyor ve haklı çıkıyor. Kusur benim
-        # kaba tarifimdedir ve bir borçtur: ince tarif işi
-        # `idrak/cozucu.py`nindir.
         d = np.linalg.norm(X[:, None, :] - X[None, :, :], axis=2)
         n = len(X)
         cakisan = int((d[np.triu_indices(n, 1)] < 1e-9).sum()) if n > 1 else 0
@@ -2550,9 +1726,9 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
         X, Y = oznitelik(gorev)
         if len(X) == 0:
             return np.zeros(16)
-        E = np.concatenate([X, Y], axis=1)              # (çift, 28)
+        E = np.concatenate([X, Y], axis=1)
         q = QNefs(tohum, QAyar(tohum=tohum)).idrak_et(E)
-        return np.asarray(q.beyan(0), float)   # taban yazmaçtan
+        return np.asarray(q.beyan(0), float)
 
     if ne != "açı":
         raise ValueError("iki ölçek kipi bilinmiyor: %r" % (ne,))
@@ -2563,8 +1739,6 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
         if not r.get("kuruldu"):
             continue
         X = r["X"]
-        # Sağîr ölçeğin tahmini: kendi kapalı formundan, görev başına
-        # tek vektör (çiftler üzerinden ortalama).
         tah = np.asarray(r["model"](X), float).mean(axis=0)
         S.append(tah)
         K.append(iki_olcegin_acisi(gv, ne="kebîr", tohum=tohum, chi=chi)[:len(tah)])
@@ -2573,7 +1747,6 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
         return {"görev": kurulan, "yeterli_mi": False}
     S = np.asarray(S, float)
     Kb = np.asarray(K, float)
-    # Ortak boy: her iki matris de (görev × boyut)
     d = min(S.shape[1], Kb.shape[1])
     S, Kb = S[:, :d], Kb[:, :d]
     kk = min(k, d, S.shape[0])
@@ -2592,29 +1765,11 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
     }
 
 
-
-
-# ════════════════════════════════════════════════════════════════════
-#  nefs/operad.py
-# ════════════════════════════════════════════════════════════════════
-
 def terkip_saglam_mi() -> Dict[str, object]:
-    """41 melekenin terkibi **iyi tipli** mi -- makine denetimi.
-
-    Operadın şartı, terkibin tanımlı olmasıdır. Burada bunun somut
-    karşılığı şudur: ``QAKIS`` sırasındaki her meleke, bir evvelkinin
-    bıraktığı yazmaç üzerinde tanımlı olmalı ve ilan ettiği bölgenin
-    dışına çıkmamalıdır (`nefs/sozlesme.py` bunu zaten ölçüyor).
-
-    Ayrıca ``matematik.tip_teorisi``nin **kendi** tip denetleyicisi çağrılır ve
-    çekirdeğin bilinen eksikleri raporlanır -- o modülün kendi kütüğü
-    (``bosluklar``) sessiz kalmasın diye.
-    """
     from matematik.tip_teorisi import bosluklar
     from .melekeler import QAKIS, qsicil
 
     s = qsicil()
-    # Terkip zinciri: her adımın çıktısı bir sonrakinin girdisi.
     zincir_tam = all(no in s for no in QAKIS)
     return {
         "adım": len(QAKIS),
@@ -2629,46 +1784,6 @@ def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
                       h1: float = 0.0, olcek: float = 0.9,
                       n_gorev: int = 40, tohum: int = 0, chi: int = 8,
                       kapi: bool = True):
-    """YAMALAR YAPIŞIYOR MU -- **tek terkip** (kütük H225).
-
-    Küme: ``yamalar`` + ``cech_tikanikligi`` + ``tikaniklik_kapisi`` +
-    ``tikaniklik_sukut_bagi``. Dördü tek amelin durakları idi: örtüyü
-    kur, yamaların yapışıp yapışmadığını say, tıkanıklığı sükût
-    kübitine yaz, ve o bağın **fiilen ısırdığını** ölç.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``yama``        örtü: her gösterim çifti bir yama, mahallî kâidesi
-    ``tıkanıklık``  ``H⁰`` ve ``H¹``in sonlu gölgesi
-    ``kapı``        ``H¹``i ``sukut`` alanına **kapı olarak** yazar
-    ``bağ``         tıkanıklık ile sükûtun fiilî bağının ölçümü
-    ==============  ==================================================
-
-    Mahallî kâide ``idrak/sekil.py``den gelir (çıktının boyu girdiden
-    nasıl çıkıyor). Kâide bulunamayan yama ``None``dır ve **bu da bir
-    bilgidir** -- o yamada mahallî çözüm bile yok demektir.
-
-    Örtüşmelerde geçiş şartı: iki yamanın mahallî kâidesi **aynı** mı?
-    Hepsi aynıysa küllî bir kesit vardır (``H¹ = 0``); ayrılan varsa
-    tıkanıklık vardır. Üçlü tutarlılık ayrıca sayılır: ikili uyuşma bir
-    denklik bağıntısı kurduğu için ``i~j`` ve ``j~k`` iken ``i~k``
-    **cebren** sağlanır; yine de sağlaması yapılır ki denklik varsayımı
-    sessiz kalmasın.
-
-    **``kapı`` niçin bir okuma DEĞİLDİR.** ``H¹`` dalganın bir vasfı
-    değil, **girdinin** vasfıdır: görevin gösterim çiftlerinden, akış
-    hiç koşmadan hesaplanır. Onu bir dönme açısına çevirmek, ham duyuyu
-    kübitlere kodlayan ``QYazmac.kodla`` ile **aynı cinsten** bir
-    işlemdir. H31 yasağı melekenin kendi girdisine bakıp karar
-    vermesineydi; bu, girdinin kendisidir.
-
-    **Niçin sükût.** Tıkanıklık "cevap yanlış" demek değildir; *"bu
-    örtüde küllî cevap YOKTUR"* demektir. Küllî cevabı olmayan bir suale
-    verilecek doğru karşılık susmaktır (H10/H16). Açı ``arctan``la
-    sınırlanır ki çok yamalı bir görevde sükût çemberi sarıp tersine
-    dönmesin (H119'un birikim dersi).
-    """
     if ne == "kapı":
         import math
         from .zihin_durumu import donme
@@ -2686,7 +1801,6 @@ def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
         if n == 0:
             return {"yama": 0, "H1": 0, "kurulabilir": False}
         bos = sum(1 for k in K if k is None)
-        # Geçiş fonksiyonları: örtüşmede uyuşma.
         uyusmaz: List[Tuple[int, int]] = []
         for i in range(n):
             for j in range(i + 1, n):
@@ -2694,7 +1808,6 @@ def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
                     continue
                 if repr(K[i]) != repr(K[j]):
                     uyusmaz.append((i, j))
-        # Üçlü tutarlılık sağlaması (kozikıl şartı).
         ucler_tutarli = True
         for i in range(n):
             for j in range(i + 1, n):
@@ -2706,14 +1819,13 @@ def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
                     ik = repr(K[i]) == repr(K[k])
                     if ij and jk and not ik:
                         ucler_tutarli = False
-        # ``H⁰``: bütün yamaların ortak kesiti -- ancak hepsi uyuşursa var.
         kurulabilir = (bos == 0 and not uyusmaz)
         return {
             "yama": n,
             "kâidesiz_yama": bos,
             "uyuşmayan_çift": len(uyusmaz),
             "üçlü_tutarlı": ucler_tutarli,
-            "H1": len(uyusmaz),          # tıkanıklığın ölçüsü
+            "H1": len(uyusmaz),
             "kurulabilir": bool(kurulabilir),
         }
 
@@ -2753,14 +1865,7 @@ def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
     }
 
 
-def rapor() -> str:                                     # pragma: no cover
-    """KENDİNİ GÖSTERME -- **tek terkip** (kütük H225).
-
-    Küme: on bir dosyanın ``rapor()``ları. Her bölüm **kendi kapanışında**
-    koşar; H223'te ölçülmüştü ki tek gövdede toplanınca yerel isimler
-    (``n``, ``tur``, ``tohum``) birbirini eziyor ve ölçüm **fiilen
-    değişiyor**. O kusur burada baştan engellendi.
-    """
+def rapor() -> str:
     s: List[str] = ["MÜŞAHEDE ÇİPİ -- Küme 6 tevhidi"]
 
     def _rapor_idrak_arc() -> List[str]:
@@ -3035,10 +2140,6 @@ def rapor() -> str:                                     # pragma: no cover
               % fs["fazla_sayma_oranı"],
               "  Kıyas için: bağımsız üç şahitte 1,05; ortak kaynaklıda 2,55.",
               ""]
-        # **Hüküm İKİ ölçüte birden bakar ve ikisi aynı şeyi söylemiyor.**
-        # Pearson doğrusal bağıntıyı görür; fazla sayma, bağımsızlık farzının
-        # delili ne kadar şişirdiğini görür. Yalnız Pearson'a bakıp "kanallar
-        # ayrı" demek, ikinci ölçütün gördüğünü örtmek olurdu.
         if abs(u) < 0.3 and oran < 1.10:
             s += ["  HÜKÜM: kanallar fiilen AYRI. 𝒪₂₉'un tedbiri tutuyor;",
                   "  ikisinin uyuşması hakikaten yeni delildir."]
@@ -3204,25 +2305,9 @@ def rapor() -> str:                                     # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                              # pragma: no cover
+if __name__ == "__main__":
     print(rapor())
 
-
-# ══════════════════════════════════════════════════════════════════
-#  BAĞLI BİLEŞENLER -- `idrak/cozucu.py`den kurtarılan cevher
-# ══════════════════════════════════════════════════════════════════
-#
-#  `idrak/cozucu.py` padişahın fermanıyla tasfiye edildi: elle yazılmış
-#  ARC kâideleri (yerçekimi, bakışım onarımı, delik rengi, döşeme…)
-#  ARC'yi motorun çözdüğü izlenimini veriyordu; halbuki çözen motor
-#  değil, o dosyaya elle yazılmış tahminlerdi.
-#
-#  Fakat ``_bilesenler`` bir ARC kâidesi DEĞİLDİR: 4-komşulukta bağlı
-#  bileşen bulmak umumî bir görme işidir ve müşahedenin kendi işidir.
-#  Hafıza (memoization) cevheri de beraber gelir -- ölçülmüştü: tek bir
-#  görevde 21.976 çağrı, 65,8 saniye.
-#
-#  İMHA YOK, CEVHER TOPLAMA VAR.
 
 _BILESEN_HAFIZA: Dict[bytes, List[Tuple[int, np.ndarray,
                                         Tuple[int, int, int, int]]]] = {}
@@ -3231,29 +2316,6 @@ _HAFIZA_HADDI: int = 4096
 
 def bilesen_kutulari(g: np.ndarray, arka: int = 0
                      ) -> List[Tuple[int, np.ndarray, Tuple[int, int, int, int]]]:
-    """4-komşulukta bağlı bileşenler: ``(renk, maske, kutu)``.
-
-    **ADI ÇARPIŞMADAN KURTARILDI.** Bu dosyada zaten bir ``_bilesenler``
-    vardı (satır 743) ve o ``.renk`` alanı olan **nesneler** döndürür;
-    bu ise ``(renk, maske, kutu)`` **demeti** döndürür. İkisi aynı adı
-    taşıyınca ikincisi birincisini sessizce gölgeledi ve ``bak``
-    ``'tuple' object has no attribute 'renk'`` ile düştü. Demet dönen
-    bu sürüm ``bilesen_kutulari`` adını alır; kutusu asıl cevheridir.
-
-    ===================================================================
-    ÖLÇÜLEN VE DÜZELTİLEN KUSUR (kütük H197)
-    ===================================================================
-
-    Profil çıkarıldı: **tek bir ARC görevinde bu fonksiyon 21.976 kere
-    çağrılıyor** ve 65,8 saniye yiyordu (görev başına 246,9 saniyenin
-    dörtte biri). Halbuki fonksiyon **saftır**: aynı ızgara ve aynı
-    arka renk için neticesi hep aynıdır. Kâide arayışı aynı birkaç
-    ızgarayı binlerce kere tarıyordu.
-
-    Çare hafızadır (memoization). Anahtar ızgaranın baytlarıdır;
-    netice **kopyalanmadan** paylaşılır -- maskeler okunur, yazılmaz.
-    Mana hiç değişmez, yalnız tekrar hesap kalkar.
-    """
     anah = arka.to_bytes(2, "little") + g.shape[0].to_bytes(2, "little") \
         + g.shape[1].to_bytes(2, "little") \
         + np.ascontiguousarray(g, dtype=np.int16).tobytes()
@@ -3293,13 +2355,6 @@ def bilesen_kutulari(g: np.ndarray, arka: int = 0
 
 
 def _komsuluk(g: np.ndarray, yaricap: int = 1) -> np.ndarray:
-    """Her hücrenin ``(2r+1)²`` komşuluğu -- `cikarim`den kurtarılan cevher.
-
-    Elle kurulmuş bir ARC kâidesi DEĞİLDİR: bir ızgaranın her hücresine
-    komşularıyla beraber bakmak umumî bir görme işidir. Kenarlar sıfırla
-    doldurulur (dışarısı yok demektir, sıfır demek değil -- fakat ölçüde
-    ikisi aynı yere düşer ve bu şerh onu gizlemez).
-    """
     g = np.asarray(g)
     r = int(yaricap)
     P = np.pad(g, r, mode="constant", constant_values=0)

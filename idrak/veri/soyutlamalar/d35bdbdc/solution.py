@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task d35bdbdc, refactored to match the DSL lambda."""
 
 from typing import Dict, List, Tuple, Optional, cast
 

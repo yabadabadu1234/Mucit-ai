@@ -1,26 +1,18 @@
-"""Solver for ARC-AGI-2 task abc82100 using a tiny kNN classifier.
-
-This file has been adapted to expose small, pure helper functions and a
-DSL-friendly main that matches the Lambda Representation in abstractions.md
-exactly, without changing the underlying solver semantics.
-"""
 
 from __future__ import annotations
 
 from typing import Iterable, List, Sequence, Tuple, Callable
 
-# --- Lightweight type aliases for the DSL surface ---
 Grid = List[List[int]]
 Color = int
 FeatureVector = Tuple[float, ...]
-RowInfo = Tuple[int, int, int, int, int]  # (left, right, category, nonzero_count, y)
-ColInfo = Tuple[int, int, int, int, int]  # (top, bottom, category, nonzero_count, x)
-Bounds = Tuple[int, int, int, int]        # (row_min, row_max, col_min, col_max)
+RowInfo = Tuple[int, int, int, int, int]
+ColInfo = Tuple[int, int, int, int, int]
+Bounds = Tuple[int, int, int, int]
 
 
 _TRAIN_CACHE: List[Tuple[Tuple[float, ...], int]] | None = None
 
-# Indices of categorical features inside the feature vector.
 _CATEGORICAL_IDX = {6, 7, 10, 11, 12, 13, 14, 15, 16}
 
 
@@ -149,7 +141,6 @@ TRAIN_DATA = [
 
 
 def _load_training_samples() -> List[Tuple[Tuple[float, ...], int]]:
-    """Load train examples and convert them into feature vectors."""
 
     global _TRAIN_CACHE
     if _TRAIN_CACHE is not None:
@@ -186,12 +177,10 @@ def _precompute_axis_features(
     List[Tuple[int, int, int, int]],
     Tuple[int, int, int, int],
 ]:
-    """Collect per-row / per-column summaries reused across feature extraction."""
 
     h = len(grid)
     w = len(grid[0])
 
-    # Extremes of rows/columns containing any non-zero colour.
     row_min = next((i for i, row in enumerate(grid) if any(v != 0 for v in row)), 0)
     row_max = next(
         (h - 1 - i for i, row in enumerate(reversed(grid)) if any(v != 0 for v in row)),
@@ -234,7 +223,6 @@ def _encode_features(
     col_min: int,
     col_max: int,
 ) -> Tuple[float, ...]:
-    """Encode a cell into the feature vector used by the kNN classifier."""
 
     h = len(grid)
     w = len(grid[0])
@@ -267,7 +255,6 @@ def _encode_features(
 
 
 def _nearest_colour(feats: Tuple[float, ...], samples: Iterable[Tuple[Tuple[float, ...], int]]) -> int:
-    """Return the label of the nearest training sample under a mixed metric."""
 
     best_dist = float("inf")
     best_colour = 0
@@ -289,19 +276,11 @@ def _nearest_colour(feats: Tuple[float, ...], samples: Iterable[Tuple[Tuple[floa
     return best_colour
 
 
-# === DSL surface helpers (thin wrappers) ===
-
 def loadTrainingFeatures(_: None) -> List[Tuple[FeatureVector, Color]]:
-    """Unit -> training samples as (feature, color)."""
     return _load_training_samples()
 
 
 def precomputeAxisStats(grid: Grid) -> Tuple[List[RowInfo], List[ColInfo], Bounds]:
-    """Grid -> (row stats, col stats, bounds).
-
-    Extends internal row/col info with their indices so downstream encoding can
-    derive positional features without loops or mutation.
-    """
     rows_info, cols_info, bounds = _precompute_axis_features(grid)
     rows_ext: List[RowInfo] = [
         (left, right, cat, nz, y) for y, (left, right, cat, nz) in enumerate(rows_info)
@@ -313,10 +292,6 @@ def precomputeAxisStats(grid: Grid) -> Tuple[List[RowInfo], List[ColInfo], Bound
 
 
 def encodeCellFeatures(grid: Grid, row_info: RowInfo, col_info: ColInfo, bounds: Bounds) -> FeatureVector:
-    """Encode a cell using per-row/col info and global bounds.
-
-    Matches the internal feature definition used by the kNN classifier.
-    """
     row_left, row_right, row_cat, row_nz, y = row_info
     col_top, col_bottom, col_cat, col_nz, x = col_info
     row_min, row_max, col_min, col_max = bounds

@@ -27,7 +27,6 @@ def _in_bounds(h: int, w: int, r: int, c: int) -> bool:
 
 
 def floodAccessibleBackground(grid: Grid) -> Set[Cell]:
-    """Flood-fill colour-8 cells reachable from the left edge."""
     h, w = _shape(grid)
     if h == 0 or w == 0:
         return set()
@@ -50,11 +49,6 @@ def floodAccessibleBackground(grid: Grid) -> Set[Cell]:
 
 
 def labelInaccessibleRegions(grid: Grid, accessible: Set[Cell]) -> List[List[bool]]:
-    """Label non-accessible components by whether they touch the border.
-
-    Returns a Boolean grid `touch[r][c]` that is True iff the blocked component
-    containing (r,c) touches any border. Cells in `accessible` are ignored.
-    """
     h, w = _shape(grid)
     touch = [[False] * w for _ in range(h)]
     all_cells = {(r, c) for r in range(h) for c in range(w)}
@@ -83,7 +77,6 @@ def labelInaccessibleRegions(grid: Grid, accessible: Set[Cell]) -> List[List[boo
 
 
 def pruneOnes(grid: Grid, accessible: Set[Cell]) -> Grid:
-    """Remove colour-1 components that neither touch the left edge nor border the accessible background."""
     h, w = _shape(grid)
     result = _copy_grid(grid)
     seen = [[False] * w for _ in range(h)]
@@ -121,7 +114,6 @@ def pruneOnes(grid: Grid, accessible: Set[Cell]) -> Grid:
 
 
 def selectFrontierCells(grid: Grid, accessible: Set[Cell], region_labels: List[List[bool]]) -> Set[Cell]:
-    """Choose accessible background cells that neighbour the exterior or diagonal obstacles."""
     h, w = _shape(grid)
     sevens: Set[Cell] = set()
 
@@ -149,7 +141,6 @@ def selectFrontierCells(grid: Grid, accessible: Set[Cell], region_labels: List[L
 
 
 def paintFrontier(grid: Grid, frontier: Set[Cell]) -> Grid:
-    """Colour the selected frontier cells with 7 and the remaining accessible background as 8."""
     result = _copy_grid(grid)
     accessible = floodAccessibleBackground(grid)
     for r, c in accessible:

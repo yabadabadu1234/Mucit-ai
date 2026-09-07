@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task edb79dae."""
 
 from __future__ import annotations
 
@@ -167,12 +166,7 @@ def render_roi(grid: Grid, roi: ROI, block: int, info: Dict[int, Dict[str, objec
     return [row[min_c : max_c + 1] for row in working[min_r : max_r + 1]]
 
 
-# ---------------------------------------------------------------------------
-# Abstractions
-
-
 def abstraction_primary_only(grid: Grid) -> Grid:
-    """Map each digit block to a uniform primary colour (no mask)."""
 
     roi = bounding_box(grid, 5)
     top_rows = grid[: roi[0]]
@@ -180,7 +174,6 @@ def abstraction_primary_only(grid: Grid) -> Grid:
     block = detect_block_size(grid, roi, (top_bg, 5))
     _, info = collect_digit_metadata(grid, roi, block)
 
-    # Overwrite mask info with full blocks so that rendering paints a solid colour.
     for data in info.values():
         mask = data["mask"]
         if mask is None:
@@ -191,7 +184,6 @@ def abstraction_primary_only(grid: Grid) -> Grid:
 
 
 def abstraction_template_fill(grid: Grid) -> Grid:
-    """Full legend/template decoding used by the final solver."""
 
     roi = bounding_box(grid, 5)
     top_rows = grid[: roi[0]]
@@ -199,10 +191,6 @@ def abstraction_template_fill(grid: Grid) -> Grid:
     block = detect_block_size(grid, roi, (top_bg, 5))
     _, info = collect_digit_metadata(grid, roi, block)
     return render_roi(grid, roi, block, info)
-
-
-# ---------------------------------------------------------------------------
-# Harness
 
 
 ABSTRACTIONS: Dict[str, Callable[[Grid], Grid]] = {

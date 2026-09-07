@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 221dfab4 (evaluation split)."""
 
 from __future__ import annotations
 
@@ -10,8 +9,6 @@ Color = int
 Column = int
 Row = int
 
-
-# --- Small, pure helpers (DSL-compatible) ---
 
 def majorityColor(grid: Grid) -> Color:
     counts = Counter(v for row in grid for v in row)
@@ -56,7 +53,6 @@ def paintStripes(grid: Grid, stripe_cols: Set[Column], background: Color) -> Gri
                 return 4
             return background
 
-        # Rebuild column c immutably
         return [([paint_cell(r, v) if ci == c else v for ci, v in enumerate(row)]) for r, row in enumerate(g)]
 
     return fold_repaint(grid, stripe_cols, repaint_column)
@@ -78,8 +74,6 @@ def overlayObjects(grid: Grid, stripe_cols: Set[Column], object_colors: Set[Colo
 
     return fold_repaint(grid, positions, paint_pos)
 
-
-# --- Solver entrypoint must exactly match abstractions.md lambda ---
 
 def solve_221dfab4(grid: Grid) -> Grid:
     background = majorityColor(grid)

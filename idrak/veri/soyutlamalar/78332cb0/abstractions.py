@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 78332cb0."""
 
 import json
 from dataclasses import dataclass
@@ -114,13 +113,13 @@ def rotate_blocks_clockwise(blocks: Sequence[Sequence[Grid]]) -> List[List[Grid]
         return []
     block_rows = len(blocks)
     block_cols = len(blocks[0])
-    rotated: List[List[Grid]] = [[None for _ in range(block_rows)] for _ in range(block_cols)]  # type: ignore[list-item]
+    rotated: List[List[Grid]] = [[None for _ in range(block_rows)] for _ in range(block_cols)]
     for r, row in enumerate(blocks):
         for c, block in enumerate(row):
             nr = c
             nc = block_rows - 1 - r
             rotated[nr][nc] = block
-    return rotated  # type: ignore[return-value]
+    return rotated
 
 
 def flatten_block_grid(block_grid: Sequence[Sequence[Grid]]) -> List[Grid]:

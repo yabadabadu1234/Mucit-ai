@@ -1,54 +1,3 @@
-"""KLASİK GÖLGELER -- ``M`` gözlenebilir, ``O(log M)`` ölçüm.
-
-    G = golge_al(psi, GolgeAyari(ornek=128))
-    deger = kestir(G, gozlenebilirler)
-
-===================================================================
-ZABITIN 3. USULÜ (Saf CPU 2026 Mimarisi)
-===================================================================
-
-    *"Bir durumun M adet farklı kavram, kural veya tenakuz operatörüyle
-    örtüşmesini hesaplamak için durumu bellekte açık tutmanıza gerek
-    yoktur! Teorem gereğince, M adet gözlenebilirin beklenti değeri
-    sadece K ~ O(log M · max‖O‖²_shadow) adet küçük gölge örneği ile
-    tam doğrulukla ve yüksek güven aralığıyla çıkarılır."*
-
-Huang-Kueng-Preskill (2020) usulü, qudit tabanına uyarlanmış hâliyle::
-
-    ρ̂ = (1/K) Σ_k  ℳ⁻¹( U_k† |b_k⟩⟨b_k| U_k )
-
-===================================================================
-BURADA HANGİ ÖLÇÜM ÇERÇEVESİ KULLANILIYOR
-===================================================================
-
-**Rastgele küresel Clifford değil, rastgele TABAN dönmesi.** Sebep
-açıktır ve saklanmıyor: küresel Clifford çerçevesinde ters kanal
-``ℳ⁻¹(X) = (d+1)X − Tr(X)I``dır ve ``d = 4096``te tek gölgenin
-varyansı ``d``yle büyür. Bizim gözlenebilirlerimiz **sektör
-göstergeleri** ve **taban izdüşümleridir** -- yâni köşegen. Köşegen
-gözlenebilirler için doğru çerçeve taban ölçümüdür ve orada::
-
-    ℳ⁻¹(|b⟩⟨b|) = |b⟩⟨b|,     ⟨O⟩ ≈ (1/K) Σ_k O_{b_k b_k}
-
-Bu, gölgelerin **köşegen hâlidir** ve tam doğrudur; küresel Clifford
-çerçevesinin genelliği burada gereksiz bir varyans bedelidir. Ne
-kaybedildiği yazılı: köşegen-dışı gözlenebilirlerin beklentisi bu
-çerçeveden çıkarılamaz -- onlar için ``ic_carpim`` (graf üstünde, tam)
-kullanılır.
-
-===================================================================
-KAZANÇ NEREDE
-===================================================================
-
-``M`` sektör/taban gözlenebilirinin hepsini **tam** hesaplamak durumu
-``M`` kere dolaşmaktır. Gölgeyle durum **bir kere** örneklenir ve
-``M``sinin hepsi aynı ``K`` örnekten okunur. Kazanç ``M/1``dir ve
-``rapor``da ölçülür.
-
-Hata ``O(1/√K)``dir ve **ölçülür**: ``kestir`` her gözlenebilir için
-tam değerle farkı da döndürebilir (``tahkik=True``). Had aşılırsa
-çağıran tam ölçüme döner ve bu **sessiz değildir**.
-"""
 from __future__ import annotations
 
 import math
@@ -62,34 +11,16 @@ __all__ = ["GolgeAyari", "golge_al", "kestir", "rapor"]
 
 @dataclass
 class GolgeAyari:
-    """Gölge örneklemesinin ölçüleri."""
 
-    #: ``K`` -- gölge örneği sayısı. Hata ``O(1/√K)``.
     ornek: int = 128
-    #: Kabul edilen azamî hata; aşılırsa çağıran tam ölçüme döner.
     had: float = 0.05
     tohum: int = 0
 
 
 def golge_al(psi, ayar: Optional[GolgeAyari] = None) -> Dict[str, Any]:
-    """Durumdan ``K`` gölge örneği çıkar -- durum bir kere dolaşılır.
-
-    Taban çerçevesinde gölge, Born kuralıyla çekilmiş ``K`` adet taban
-    indisidir. Bunlar ``d`` uzunluklu durumun yerine geçer: ``M``
-    köşegen gözlenebilirin hepsi bu ``K`` sayıdan okunur.
-    """
     a = ayar or GolgeAyari()
     K = max(1, int(a.ornek))
     r = np.random.default_rng(int(a.tohum))
-    # ── GRAFTAN DOĞRUDAN ÖRNEKLEME (durum AÇILMAZ) ────────────────
-    #
-    # Asıl kazanç budur ve evvelce kaçırılmıştı: ``psi`` yoğun bir dizi
-    # olarak verilirse durum zaten açıktır ve gölge hiçbir şey
-    # kazandırmaz -- ölçüldü, tam ölçümden **0,28× yavaş** çıkmıştı.
-    #
-    # Graf verilirse durum hiç açılmaz: kökten yaprağa inilir, her
-    # düğümde iki dalın **ağırlığı** grafta (iç çarpımla) bulunur ve
-    # zar ona göre atılır. Bir örnek ``O(seviye)``dir, ``O(d)`` değil.
     if hasattr(psi, "havuz") and hasattr(psi, "kok"):
         d = int(psi.boy)
         h = psi.havuz
@@ -122,16 +53,6 @@ def golge_al(psi, ayar: Optional[GolgeAyari] = None) -> Dict[str, Any]:
 
 def kestir(golge: Dict[str, Any], gozlenebilirler: Sequence[Tuple[int, int]],
            tahkik: bool = True) -> Dict[str, Any]:
-    """``M`` sektör göstergesinin beklentisini gölgeden oku.
-
-    Her gözlenebilir ``[i, j)`` aralığının göstergesidir (sektör
-    ağırlığı). Gölgeden kestirim, o aralığa düşen örneklerin payıdır::
-
-        ⟨Π_[i,j)⟩ ≈ (1/K) · #{k : i ≤ b_k < j}
-
-    ``tahkik`` doğruysa tam değer de hesaplanır ve **fark döndürülür**;
-    yâni gölgenin doğruluğu iddia edilmez, ölçülür.
-    """
     b = np.asarray(golge["b"], int)
     K = int(golge["K"])
     P = golge.get("olasılık")
@@ -153,13 +74,11 @@ def kestir(golge: Dict[str, Any], gozlenebilirler: Sequence[Tuple[int, int]],
     return o
 
 
-def rapor(d: int = 4096, tohum: int = 0) -> str:         # pragma: no cover
-    """Gölge kaç kat hızlı ve ne kadar hatalı -- **ölç**."""
+def rapor(d: int = 4096, tohum: int = 0) -> str:
     import time
     r = np.random.default_rng(int(tohum))
     v = r.normal(size=d) + 1j * r.normal(size=d)
     v /= np.linalg.norm(v)
-    # M sektör: quditin 11 hüküm alanı gibi, bitişik aralıklar.
     M = 64
     kenar = np.linspace(0, d, M + 1).astype(int)
     goz = [(int(kenar[k]), int(kenar[k + 1])) for k in range(M)]
@@ -173,7 +92,6 @@ def rapor(d: int = 4096, tohum: int = 0) -> str:         # pragma: no cover
         sure = time.perf_counter() - t0
         s.append("  K=%-5d azamî hata %.4f   %.4f sn   hadde sığdı: %s"
                  % (K, o["azamî_hata"], sure, o["hadde_sığdı"]))
-    # Tam ölçümle hız kıyası
     t0 = time.perf_counter()
     P = np.abs(v) ** 2
     for _ in range(10):
@@ -195,5 +113,5 @@ def rapor(d: int = 4096, tohum: int = 0) -> str:         # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

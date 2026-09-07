@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task c7f57c3e (evaluation split)."""
 
 from collections import Counter, deque
 from typing import List, Tuple
@@ -144,8 +143,6 @@ def _apply_variant_b(grid: Grid, background: Color, c2: Color, mid: Color, high:
 
     return out
 
-
-# --- DSL-style wrappers ----------------------------------------------------
 
 def analysePalette(grid: Grid) -> Tuple[Color, Color, Color, Color]:
     background = _most_common_color(grid)

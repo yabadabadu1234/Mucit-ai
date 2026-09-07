@@ -1,4 +1,3 @@
-"""Refactored solver for ARC-AGI-2 task 64efde09 using a typed-DSL style pipeline."""
 
 from __future__ import annotations
 
@@ -7,7 +6,6 @@ from dataclasses import dataclass
 from typing import List, Sequence, Tuple
 
 
-# Type aliases for clarity and mypy
 Grid = List[List[int]]
 Motif = "Component"
 
@@ -142,7 +140,6 @@ def castHorizontalShadows(grid: Sequence[Sequence[int]], motifs: Sequence[Compon
 
 
 def mergeShadowPasses(original: Sequence[Sequence[int]], vertical: Sequence[Sequence[int]], horizontal: Sequence[Sequence[int]]) -> Grid:
-    # Horizontal shadows are applied on top of vertical shadows in this solver.
     return _clone(horizontal)
 
 

@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 5dbc8537."""
 
 from __future__ import annotations
 
@@ -72,7 +71,6 @@ ABSTRACTIONS: Sequence[Tuple[str, Callable[[Grid], Grid]]] = (
 def _evaluate_on_split(
     name: str, split: Optional[Sequence[Dict[str, Grid]]], abstraction: Callable[[Grid], Grid]
 ) -> Tuple[int, int, Optional[Tuple[str, int]]]:
-    """Return (#matches, total, first_failure) for the requested abstraction."""
 
     if not split:
         return 0, 0, None
@@ -85,7 +83,7 @@ def _evaluate_on_split(
 
         try:
             result = abstraction(grid_in)
-        except Exception:  # pragma: no cover - diagnostic hook
+        except Exception:
             if first_failure is None:
                 first_failure = (name, idx)
             continue

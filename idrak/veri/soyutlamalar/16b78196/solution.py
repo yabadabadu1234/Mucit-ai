@@ -1,4 +1,3 @@
-"""Solver for ARC task 16b78196."""
 
 from collections import defaultdict, deque
 from typing import Dict, Iterable, List, Optional, Tuple, cast
@@ -16,7 +15,6 @@ def _copy_grid(grid: Grid) -> Grid:
 
 
 def _get_components(grid: Grid) -> List[Dict[str, object]]:
-    """Return 4-connected monochromatic components with metadata."""
 
     grid_height, grid_width = len(grid), len(grid[0])
     seen = [[False] * grid_width for _ in range(grid_height)]
@@ -69,8 +67,8 @@ def _get_components(grid: Grid) -> List[Dict[str, object]]:
 
 
 def _paint_component(target: Grid, top: int, left: int, comp: Dict[str, object]) -> None:
-    shape = cast(Iterable[Tuple[int, int]], comp["shape"])  # type: ignore[index]
-    color = cast(int, comp["color"])  # type: ignore[index]
+    shape = cast(Iterable[Tuple[int, int]], comp["shape"])
+    color = cast(int, comp["color"])
     for dr, dc in shape:
         rr = top + dr
         cc = left + dc
@@ -138,7 +136,6 @@ def _stack_components(
     if top0 < 0:
         shift = -top0
         top0 = 0
-        # If stacking below, maintain relative anchor by shifting reference
         if not above and top_anchor is not None:
             top_anchor = cast(int, top_anchor) + shift
 
@@ -177,13 +174,12 @@ def _stack_components(
         _paint_component(output, top, col_clamped, comp)
 
 
-# --- Minimal DSL-style wrappers to match abstractions.md ---
 def getComponents(grid: Grid) -> List[Dict[str, object]]:
     return _get_components(grid)
 
 
 def splitByWidth(components: List[Dict[str, object]]) -> Tuple[Dict[str, object], List[Dict[str, object]], List[Dict[str, object]]]:
-    dominant = max(components, key=lambda comp: cast(int, comp["size"]))  # type: ignore[index]
+    dominant = max(components, key=lambda comp: cast(int, comp["size"]))
     others = [comp for comp in components if comp is not dominant]
     wide = [comp for comp in others if cast(int, comp["width"]) >= 5]
     narrow = [comp for comp in others if cast(int, comp["width"]) < 5]
@@ -193,8 +189,8 @@ def splitByWidth(components: List[Dict[str, object]]) -> Tuple[Dict[str, object]
 def paintDominantBand(grid: Grid, dominant: Dict[str, object]) -> Grid:
     height, width = len(grid), len(grid[0])
     output: Grid = [[0] * width for _ in range(height)]
-    for r, c in cast(Iterable[Tuple[int, int]], dominant["cells"]):  # type: ignore[index]
-        output[r][c] = cast(int, dominant["color"])  # type: ignore[index]
+    for r, c in cast(Iterable[Tuple[int, int]], dominant["cells"]):
+        output[r][c] = cast(int, dominant["color"])
     return output
 
 
@@ -203,7 +199,7 @@ def placeWideComponents(result: Grid, wide: List[Dict[str, object]], dominant: D
         return result
     height, width = len(result), len(result[0])
     wide_sorted = sorted(wide, key=lambda comp: (cast(int, comp["top"]), -cast(int, comp["left"])) )
-    bottom_anchor = cast(int, dominant["top"]) + 1  # type: ignore[index]
+    bottom_anchor = cast(int, dominant["top"]) + 1
     _stack_components(
         result,
         wide_sorted,
@@ -228,9 +224,7 @@ def placeNarrowComponents(result: Grid, ordered_narrow: List[Dict[str, object]],
         return result
     height, width = len(result), len(result[0])
 
-    # Detect whether wide components were already placed by scanning for
-    # any non-dominant colored cells in the result.
-    dom_cells = set(cast(Iterable[Tuple[int, int]], dominant["cells"]))  # type: ignore[index]
+    dom_cells = set(cast(Iterable[Tuple[int, int]], dominant["cells"]))
     wide_present = any(
         (result[r][c] != 0) and ((r, c) not in dom_cells)
         for r in range(height)
@@ -240,7 +234,7 @@ def placeNarrowComponents(result: Grid, ordered_narrow: List[Dict[str, object]],
     mean_left = sum(cast(int, comp["left"]) for comp in ordered_narrow) / len(ordered_narrow)
     max_width = max(cast(int, comp["width"]) for comp in ordered_narrow)
 
-    dom_bottom = cast(int, dominant["bottom"])  # type: ignore[index]
+    dom_bottom = cast(int, dominant["bottom"])
     if wide_present:
         column = int(round(mean_left))
         top_anchor = dom_bottom

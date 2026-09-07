@@ -1,4 +1,3 @@
-"""Abstractions explored while solving ARC task 7666fa5d."""
 
 from __future__ import annotations
 
@@ -76,13 +75,11 @@ def diagonal_components(grid: Grid, color: int) -> List[Component]:
 
 
 def abstraction_identity(grid: Grid) -> Grid:
-    """Baseline: return the input as-is."""
 
     return copy_grid(grid)
 
 
 def abstraction_uv_box(grid: Grid) -> Grid:
-    """Fill the interior of a coarse bounding box in (r+c, c-r) space."""
 
     background, foreground = background_and_foreground(grid)
     if foreground is None:
@@ -121,7 +118,6 @@ def abstraction_uv_box(grid: Grid) -> Grid:
 
 
 def abstraction_component_lerp(grid: Grid) -> Grid:
-    """Linear interpolation between component envelopes (over-fills top rows)."""
 
     background, foreground = background_and_foreground(grid)
     if foreground is None:
@@ -162,7 +158,6 @@ def abstraction_component_lerp(grid: Grid) -> Grid:
 
 
 def abstraction_component_corridor(grid: Grid) -> Grid:
-    """Final solver: ensure each filled cell is bracketed by guide components."""
 
     background, foreground = background_and_foreground(grid)
     if foreground is None:
@@ -253,4 +248,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

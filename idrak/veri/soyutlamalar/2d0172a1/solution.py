@@ -1,9 +1,3 @@
-"""
-ARC task 2d0172a1 — DSL-style pipeline with identical behavior to the original template-based solver.
-
-Pipeline:
-  majorityColor -> selectAccent -> accentBoundingBox -> chooseTemplate -> renderTemplate -> extendRightMargin
-"""
 from __future__ import annotations
 from typing import List, Tuple
 
@@ -18,7 +12,6 @@ def majorityColor(grid: Grid) -> Color:
     for row in grid:
         for v in row:
             counts[v] = counts.get(v, 0) + 1
-    # return the color with max frequency (ties broken by smaller value deterministically)
     return max(counts.items(), key=lambda kv: (kv[1], -kv[0]))[0]
 
 
@@ -30,11 +23,9 @@ def _touches_border(grid: Grid, color: Color) -> bool:
     H, W = _grid_size(grid)
     if H == 0 or W == 0:
         return False
-    # top/bottom rows
     for c in range(W):
         if grid[0][c] == color or grid[H - 1][c] == color:
             return True
-    # left/right columns
     for r in range(H):
         if grid[r][0] == color or grid[r][W - 1] == color:
             return True
@@ -53,7 +44,6 @@ def selectAccent(grid: Grid, background: Color) -> Color:
     cands = [col for col, cnt in counts.items() if cnt == min_cnt]
     if len(cands) == 1:
         return cands[0]
-    # tie-break: prefer one touching the frame
     for col in cands:
         if _touches_border(grid, col):
             return col
@@ -91,7 +81,6 @@ def chooseTemplate(bbox: Box) -> TemplateId:
         return "7x5_vdash"
     if Ws >= 16 and Hs <= 12:
         return "5x7_hdash"
-    # large
     if left_bg == 0:
         return "11x9_case0"
     return "9x11_case3" if Ws >= Hs else "11x9_case0"
@@ -129,7 +118,6 @@ def renderTemplate(template: TemplateId, background: Color, accent: Color) -> Gr
         return g
     if template == "9x11_case3":
         g = _with_border(_blank(9, 11, background), accent)
-        # insert the 7x9 interior pattern
         intpat_9x11: List[List[int]] = [
             [background, background, background, background, background, background, background, background, background],
             [background, accent, accent, accent, accent, accent, background, background, background],
@@ -143,7 +131,6 @@ def renderTemplate(template: TemplateId, background: Color, accent: Color) -> Gr
             for cc in range(9):
                 g[1 + rr][1 + cc] = intpat_9x11[rr][cc]
         return g
-    # default to 11x9_case0
     g = _with_border(_blank(11, 9, background), accent)
     intpat_11x9: List[List[int]] = [
         [background, background, background, background, background, background, background],
@@ -175,9 +162,7 @@ def extendRightMargin(rendered: Grid, bbox: Box, grid: Grid) -> Grid:
     append = (right_bg - 1) if (left_bg == 0 and right_bg > 0) else 0
     if append <= 0:
         return rendered
-    # start with background-extended copy
     out = [row[:] + [bg] * append for row in rendered]
-    # Continue alternating interior rows across the margin when present
     for r in range(1, H - 1):
         interior = rendered[r][1:W - 1]
         pattern_bg = [(bg if j % 2 == 0 else acc) for j in range(len(interior))]
@@ -188,7 +173,6 @@ def extendRightMargin(rendered: Grid, bbox: Box, grid: Grid) -> Grid:
             last = interior[-1]
             for k in range(append):
                 out[r][W + k] = last if (k % 2 == 0) else (acc if last == bg else bg)
-        # else: keep background as filled
     return out
 
 
@@ -201,6 +185,5 @@ def solve_2d0172a1(grid: Grid) -> Grid:
     return extendRightMargin(rendered, bbox, grid)
 
 
-# Kaggle-style entrypoint
 def p(grid: Grid) -> Grid:
     return solve_2d0172a1(grid)

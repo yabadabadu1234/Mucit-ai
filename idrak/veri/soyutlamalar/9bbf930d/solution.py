@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 9bbf930d (split: evaluation)."""
 
 from __future__ import annotations
 
@@ -6,7 +5,6 @@ from collections import Counter
 from typing import List, Optional, Tuple
 
 
-# Local type alias to satisfy typing/static checks in this repository
 Grid = List[List[int]]
 
 
@@ -15,7 +13,6 @@ COL_NON_THRESHOLD = 4
 
 
 def _dominant_color(sequence: List[int]) -> Optional[int]:
-    """Return the unique most common non-(6,7) color or None if tied/absent."""
     counts = Counter(value for value in sequence if value not in (6, 7))
     if not counts:
         return None
@@ -29,17 +26,13 @@ def _row_non_count(row: List[int]) -> int:
     return sum(1 for value in row if value not in (6, 7))
 
 
-# --- DSL-aligned helper operations ----------------------------------------
-
 def analyseRows(grid: Grid) -> Tuple[List[int], List[Optional[int]]]:
-    """Compute per-row non-(6,7) counts and dominant colours."""
     row_non_counts = [_row_non_count(row) for row in grid]
     row_dominants = [_dominant_color(row) for row in grid]
     return row_non_counts, row_dominants
 
 
 def adjustSeparatorRows(grid: Grid, metrics: Tuple[List[int], List[Optional[int]]]) -> Grid:
-    """Recolour separator rows when neighbouring dominant colours match."""
     rows = len(grid)
     cols = len(grid[0]) if rows else 0
     result = [row[:] for row in grid]
@@ -59,7 +52,6 @@ def adjustSeparatorRows(grid: Grid, metrics: Tuple[List[int], List[Optional[int]
 
 
 def selectSparseColumns(grid: Grid) -> List[int]:
-    """Find columns with few non-(6,7) cells to inspect for 6 placement."""
     rows = len(grid)
     cols = len(grid[0]) if rows else 0
     column_counts = [Counter(val for val in column if val not in (6, 7)) for column in zip(*grid)]
@@ -71,14 +63,12 @@ def selectSparseColumns(grid: Grid) -> List[int]:
 
 
 def markColumnJunctions(grid: Grid, metrics: Tuple[List[int], List[Optional[int]]], sparse_columns: List[int]) -> Grid:
-    """Place colour-6 markers in sparse columns using learnt heuristics (caps, thin towers)."""
     rows = len(grid)
     cols = len(grid[0]) if rows else 0
     result = [row[:] for row in grid]
     row_non_counts, row_dominants = metrics
 
     for c in sparse_columns:
-        # Top boundary: move the topmost 6 to the far edge when the column starts with 7s.
         if (
             grid[0][c] == 7
             and rows > 1
@@ -94,7 +84,6 @@ def markColumnJunctions(grid: Grid, metrics: Tuple[List[int], List[Optional[int]
 
             down_val = grid[r + 1][c] if r + 1 < rows else None
 
-            # Rows that already contain non-7 content: mark when the colour band below is symmetric.
             if r + 1 < rows - 1 and down_val != 7 and row_non_counts[r] >= 1:
                 down_dom = row_dominants[r + 1]
                 up_dom = row_dominants[r - 1] if r > 0 else None
@@ -106,7 +95,6 @@ def markColumnJunctions(grid: Grid, metrics: Tuple[List[int], List[Optional[int]
                     result[r][c] = 6
                     continue
 
-            # Nearly pure separator rows: only mark when the new colour is small and symmetric.
             if (
                 r + 1 < rows - 1
                 and down_val != 7
@@ -121,14 +109,11 @@ def markColumnJunctions(grid: Grid, metrics: Tuple[List[int], List[Optional[int]
                     result[r][c] = 6
                     continue
 
-            # Bottom boundary always ends with a 6 when the column is sparse.
             if r == rows - 1:
                 result[r][c] = 6
 
     return result
 
-
-# --- Solver entrypoint (must match abstractions.md Lambda Representation) ---
 
 def solve_9bbf930d(grid: Grid) -> Grid:
     metrics = analyseRows(grid)

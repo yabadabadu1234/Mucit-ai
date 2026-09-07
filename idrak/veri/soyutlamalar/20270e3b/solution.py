@@ -1,4 +1,3 @@
-"""Solution for ARC-AGI-2 task 20270e3b."""
 
 from __future__ import annotations
 
@@ -16,9 +15,7 @@ def _copy(grid: Grid) -> Grid:
     return [row[:] for row in grid]
 
 
-# DSL helper: verticalFold : Grid -> Optional[Grid]
 def verticalFold(grid: Grid) -> Optional[Grid]:
-    """Overlay the right block onto the left block across a background column."""
 
     h = len(grid)
     w = len(grid[0])
@@ -74,9 +71,7 @@ def verticalFold(grid: Grid) -> Optional[Grid]:
     return out
 
 
-# DSL helper: horizontalFold : Grid -> Optional[Grid]
 def horizontalFold(grid: Grid) -> Optional[Grid]:
-    """Remove the special band and glue the remaining parts with an offset."""
 
     h = len(grid)
     w = len(grid[0])
@@ -126,7 +121,6 @@ def horizontalFold(grid: Grid) -> Optional[Grid]:
     return out
 
 
-# DSL helper: recolourFallback : Grid -> Grid
 def recolourFallback(grid: Grid) -> Grid:
     return [[FILL if v == SPECIAL else v for v in row] for row in grid]
 

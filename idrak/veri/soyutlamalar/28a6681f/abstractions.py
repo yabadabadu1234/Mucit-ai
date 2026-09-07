@@ -1,4 +1,3 @@
-"""Abstractions explored while solving ARC task 28a6681f."""
 
 from __future__ import annotations
 
@@ -21,7 +20,6 @@ def deep_copy(grid: Grid) -> Grid:
 
 
 def candidate_segments(grid: Grid) -> List[Segment]:
-    """Return horizontal zero segments bracketed by non-zero colors."""
 
     segments: List[Segment] = []
     width = len(grid[0]) if grid else 0
@@ -53,13 +51,11 @@ def segment_cells(segments: Iterable[Segment]) -> List[Cell]:
 
 
 def abstraction_identity(grid: Grid) -> Grid:
-    """Baseline: leave the grid untouched."""
 
     return deep_copy(grid)
 
 
 def abstraction_fill_all(grid: Grid) -> Grid:
-    """Fill every bounded horizontal gap with color 1."""
 
     result = deep_copy(grid)
     for r, c in segment_cells(candidate_segments(grid)):
@@ -68,7 +64,6 @@ def abstraction_fill_all(grid: Grid) -> Grid:
 
 
 def abstraction_equal_boundaries(grid: Grid) -> Grid:
-    """Fill only those gaps framed by the same non-zero color on both sides."""
 
     result = deep_copy(grid)
     for segment in candidate_segments(grid):
@@ -81,7 +76,6 @@ def abstraction_equal_boundaries(grid: Grid) -> Grid:
 
 
 def abstraction_bottom_greedy(grid: Grid) -> Grid:
-    """Final solver: bottom-first placement with top-first supply removal."""
 
     height = len(grid)
     width = len(grid[0]) if height else 0
@@ -154,4 +148,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

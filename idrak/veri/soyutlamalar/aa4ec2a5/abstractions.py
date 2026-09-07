@@ -1,11 +1,3 @@
-"""Abstractions explored for ARC task aa4ec2a5.
-
-The module records the progression from a coarse rectangular framing
-heuristic to the segment-aware neighborhood annotation that solves the
-task. A compact harness evaluates each abstraction on the available ARC
-splits (train/test/arc-gen) and reports match counts together with the
-first failure index.
-"""
 
 from __future__ import annotations
 
@@ -25,13 +17,11 @@ SOLVER_PATH = TASK_DIR / f"{TASK_ID}.py"
 
 
 def load_task() -> Dict[str, Sequence[dict]]:
-    """Load the task JSON (train/test splits)."""
 
     return json.loads(TASK_PATH.read_text())
 
 
 def load_arc_gen() -> Sequence[dict]:
-    """Load synthetic arc-gen cases if the file exists."""
 
     if ARC_GEN_PATH.exists():
         return json.loads(ARC_GEN_PATH.read_text())
@@ -39,13 +29,11 @@ def load_arc_gen() -> Sequence[dict]:
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline: copy the grid unchanged."""
 
     return [row[:] for row in grid]
 
 
 def _render_component_with_border(grid: Grid, use_segments: bool) -> Grid:
-    """Shared component renderer used by the explored abstractions."""
 
     if not grid:
         return []
@@ -148,37 +136,32 @@ def _render_component_with_border(grid: Grid, use_segments: bool) -> Grid:
 
 
 def rectangular_frame_abstraction(grid: Grid) -> Grid:
-    """Early abstraction: treat each row as a single span (rectangular frame)."""
 
     return _render_component_with_border(grid, use_segments=False)
 
 
 def segment_frame_abstraction(grid: Grid) -> Grid:
-    """Refined abstraction: respect disjoint spans per row (final logic)."""
 
     return _render_component_with_border(grid, use_segments=True)
 
 
 def solver_wrapper(grid: Grid) -> Grid:
-    """Delegate to the production solver implementation."""
 
     spec = importlib.util.spec_from_file_location(f"task_{TASK_ID}_solver", SOLVER_PATH)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
-    spec.loader.exec_module(module)  # type: ignore[assignment]
+    spec.loader.exec_module(module)
     solver = getattr(module, f"solve_{TASK_ID}")
     return solver(grid)
 
 
 def render(grid: Grid) -> str:
-    """Render grid values using hexadecimal digits for quick inspection."""
 
     palette = "0123456789abcdef"
     return "\n".join("".join(palette[val] for val in row) for row in grid)
 
 
 def evaluate_abstractions() -> None:
-    """Evaluate each abstraction on train/test/arc-gen splits."""
 
     data = load_task()
     arc_gen_cases = load_arc_gen()

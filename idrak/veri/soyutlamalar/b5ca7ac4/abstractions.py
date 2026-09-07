@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task b5ca7ac4."""
 
 from __future__ import annotations
 
@@ -95,7 +94,7 @@ def place_group(
     usage = {lane: [] for lane in lanes}
     placements: List[Tuple[Object, int]] = []
     for obj in objects:
-        top, bottom, _, _ = obj["bbox"]  # type: ignore[misc]
+        top, bottom, _, _ = obj["bbox"]
         chosen = None
         for lane in order_fn(obj, lanes):
             if lane not in usage:
@@ -117,8 +116,8 @@ def render(grid: Grid, placements: Sequence[Tuple[Object, int]], span: int, fill
     width = len(grid[0]) if height else 0
     out = [[fill] * width for _ in range(height)]
     for obj, lane in placements:
-        top, _, _, _ = obj["bbox"]  # type: ignore[misc]
-        pattern: Grid = obj["pattern"]  # type: ignore[assignment]
+        top, _, _, _ = obj["bbox"]
+        pattern: Grid = obj["pattern"]
         for dy in range(span):
             for dx in range(span):
                 out[top + dy][lane + dx] = pattern[dy][dx]
@@ -150,13 +149,13 @@ def reposition(grid: Grid, right_strategy: str) -> Grid:
         return lanes
 
     if right_strategy == "threshold":
-        avg_left = sum(obj["bbox"][2] for obj in right_objs) / len(right_objs)  # type: ignore[index]
+        avg_left = sum(obj["bbox"][2] for obj in right_objs) / len(right_objs)
     else:
         avg_left = None
 
     def right_order(obj: Object, lanes: Sequence[int]) -> Sequence[int]:
         if avg_left is not None and lanes:
-            primary = lanes[0] if obj["bbox"][2] >= avg_left else (lanes[1] if len(lanes) > 1 else lanes[0])  # type: ignore[index]
+            primary = lanes[0] if obj["bbox"][2] >= avg_left else (lanes[1] if len(lanes) > 1 else lanes[0])
         else:
             primary = lanes[0]
         ordered = [primary]
@@ -233,7 +232,6 @@ def evaluate() -> None:
                 extra = "" if first_fail is None else f" first_fail={first_fail}"
                 print(f"  {split}: {status}{extra}")
             else:
-                # No ground truth: show shape of prediction for sanity.
                 shape_samples = []
                 for sample in cases:
                     pred = fn(sample["input"])

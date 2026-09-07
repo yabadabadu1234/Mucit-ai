@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 7b3084d4."""
 
 from __future__ import annotations
 
@@ -31,13 +30,11 @@ def copy_grid(grid: Grid) -> Grid:
 
 
 def abstraction_identity(grid: Grid) -> Grid:
-    """Baseline: return the grid unchanged."""
 
     return copy_grid(grid)
 
 
 def abstraction_first_fit(grid: Grid) -> Grid:
-    """Pack components greedily without backtracking (fails on train[1])."""
 
     comps = task_module._extract_components(grid)
     total = sum(len(cells) for _, cells in comps)
@@ -85,7 +82,6 @@ def abstraction_first_fit(grid: Grid) -> Grid:
 
 
 def abstraction_perimeter_dfs(grid: Grid) -> Grid:
-    """Invoke the final perimeter-guided search from the solver."""
 
     return task_module.solve_7b3084d4(grid)
 

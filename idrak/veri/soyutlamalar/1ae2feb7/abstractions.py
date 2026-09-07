@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 1ae2feb7."""
 
 from pathlib import Path
 import json
@@ -20,7 +19,6 @@ def identity(grid: Grid) -> Grid:
 
 
 def repeat_last_nonzero_block(grid: Grid) -> Grid:
-    """Repeat only the rightmost non-zero block left of the final 2."""
 
     output = [row[:] for row in grid]
 
@@ -52,7 +50,6 @@ def repeat_last_nonzero_block(grid: Grid) -> Grid:
 
 
 def repeat_all_blocks(grid: Grid) -> Grid:
-    """Project every non-zero block across the barrier column of 2s."""
 
     output = [row[:] for row in grid]
 

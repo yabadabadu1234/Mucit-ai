@@ -1,51 +1,3 @@
-"""Grassmann manifoldu: izdüşüm, asal açılar, geodezik Exp/Log.
-
-Kaynak: ``docs/kaynak/analitik_darbogazlar.txt`` Darboğaz 1-2, ve
-``docs/kaynak/mantik_noronlari.tex`` §5.1.
-
-``Gr(k,d)``: ``ℝ^d``nin ``k`` boyutlu alt uzayları.  Bir nokta, bir
-**alt uzaydır**; onu temsil eden ``d×k`` taban dizeyi tek değildir
-(``Y`` ile ``YQ``, ``Q ∈ O(k)``, aynı noktadır).  Bu yüzden buradaki
-her ölçüm ``O(k)`` etkisine göre **değişmezdir**; değişmez olmayan
-bir "mesafe" Grassmann mesafesi değildir ve bu ölçülerek gösteriliyor.
-
-**Asal açılar.**  ``cos θ_i = σ_i(Y₁ᵀY₂)`` (Formül 2.1).  Geodezik
-mesafe ``d = √(Σθ_i²)`` (Formül 2.2).
-
-**K26 tashihi.**  Kaynak, logaritma haritasını
-``Log_{G₁}(G₂) = U arcsin(Σ) Vᵀ`` diye yazıyor.  Bu **yanlıştır**.
-Doğrusu, yatay kaldırmanın ince SVD'sinden
-
-.. math::  \\mathrm{Log}_{Y_1}(Y_2) = U \\arctan(\\Sigma) V^\\mathsf{T},
-   \\quad (Y_2 - Y_1 M) M^{-1} = U\\Sigma V^\\mathsf{T},\\ M = Y_1^\\mathsf{T}Y_2
-
-şeklindedir ve ``arctan Σ`` tam olarak asal açıları verir.
-``arcsin`` yazıldığında Exp∘Log gidiş-dönüşü **kapanmaz**.  Ölçülen
-alt uzay hatası (``d=8, k=3``, ``θ_max`` ölçekleriyle):
-
-===========  =============  =============
-``θ_max``    ``arctan``     ``arcsin``
-===========  =============  =============
-0.0785       4.8e-16        3.5e-04
-0.3142       6.4e-16        2.4e-02
-0.7854       8.2e-16        1.0e+00
-1.4137       1.8e-15        4.7e-01
-===========  =============  =============
-
-``arcsin Σ`` ancak ``Σ`` küçükken ``arctan Σ``ya yakındır -- hata
-küçük açılarda gizlenir, büyük açılarda patlar.  ``θ = π/4``ü geçince
-``Σ = tan θ > 1`` olur ve ``arcsin`` tanımsızdır bile.
-``θ_max = π/2``de ``arctan`` da bozulur (ölçülen 7.9e-01): orası
-**kesim lokusudur**, ``M = Y₁ᵀY₂`` tekilleşir ve Log tek değildir --
-bu Grassmann'ın kendi özelliğidir, kod kusuru değil.
-
-**Tikhonov ve Betti-0 (K25).**  Kaynak, ``L_ε = L + εI`` ile
-düzenleyip sonra ``dim ker(L_ε) = β₀`` beklemektedir.  ``ε > 0``
-iken ``ker(L_ε)`` **boştur**; düzenleme çekirdeği korumaz, yok eder.
-Doğru okuma, ``ε``dan küçük özdeğerleri saymak değil, ``L``nin
-kendi tayfındaki ``ε``a yakın kümelenmeye bakmaktır.  Bu da
-ölçülüyor.
-"""
 
 from __future__ import annotations
 
@@ -63,40 +15,21 @@ __all__ = [
 ]
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  1. Temel
-# ══════════════════════════════════════════════════════════════════════
-
 def dik_taban(A: np.ndarray) -> np.ndarray:
-    """``A``nın sütun uzayı için dik taban (ince QR, işaret sabitlenmiş)."""
     Q, R = np.linalg.qr(np.asarray(A, float))
     return Q * np.sign(np.where(np.diag(R) == 0, 1.0, np.diag(R)))
 
 
 def izdusum(U: np.ndarray) -> np.ndarray:
-    """``P = U(UᵀU)⁻¹Uᵀ`` (Formül 1.4) — taban seçiminden bağımsız.
-
-    ``P`` simetrik, idempotent ve ``tr P = k``dır; üçü de burada
-    sınanıyor.  ``P``, Grassmann noktasının **kanonik** temsilidir:
-    ``U → UQ`` onu değiştirmez.
-    """
     U = np.asarray(U, float)
     return U @ np.linalg.solve(U.T @ U, U.T)
 
 
 def asal_acilar(Y1: np.ndarray, Y2: np.ndarray) -> np.ndarray:
-    """``θ_i = arccos σ_i(Y₁ᵀY₂)`` — artan sırada, ``[0, π/2]``.
-
-    ``Y₁, Y₂`` dik tabanlar olmalıdır; değilse önce dikleştirilir.
-    Küçük açılarda ``arccos`` duyarsızdır; o yüzden ``σ ≈ 1``
-    bölgesinde ikinci bir yol (fark tabanının tekil değerleri)
-    kullanılıyor.
-    """
     Q1, Q2 = dik_taban(Y1), dik_taban(Y2)
     s = np.linalg.svd(Q1.T @ Q2, compute_uv=False)
     s = np.clip(s, -1.0, 1.0)
     th = np.arccos(s)
-    # σ→1 (θ→0) bölgesinde arccos duyarsız: sin θ'yı doğrudan ölç
     kucuk = s > 1 - 1e-8
     if np.any(kucuk):
         t = np.linalg.svd(Q2 - Q1 @ (Q1.T @ Q2), compute_uv=False)
@@ -106,40 +39,24 @@ def asal_acilar(Y1: np.ndarray, Y2: np.ndarray) -> np.ndarray:
 
 
 def grassmann_mesafesi(Y1: np.ndarray, Y2: np.ndarray) -> float:
-    """``d = √(Σ θ_i²)`` (Formül 2.2) — ``O(k)`` etkisine göre değişmez."""
     return float(np.linalg.norm(asal_acilar(Y1, Y2)))
 
 
 def alt_uzay_hatasi(Y1: np.ndarray, Y2: np.ndarray) -> float:
-    """``‖P₁ − P₂‖_F`` — iki alt uzay aynı mı, taban seçiminden bağımsız.
-
-    Gidiş-dönüşü ``‖Y₁ − Y₂‖`` ile ölçmek **yanlış** olurdu: aynı alt
-    uzayın farklı tabanları arasında o norm sıfır değildir.
-    """
     return float(np.linalg.norm(izdusum(Y1) - izdusum(Y2)))
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  2. Geodezik Exp / Log
-# ══════════════════════════════════════════════════════════════════════
-
 def exp_haritasi(Y: np.ndarray, H: np.ndarray, t: float = 1.0
                  ) -> np.ndarray:
-    """``Exp_Y(tH) = YV cos(tΣ)Vᵀ + U sin(tΣ)Vᵀ``, ``H = UΣVᵀ``.
-
-    ``H`` yatay olmalıdır (``YᵀH = 0``); değilse yatay bileşeni
-    alınır -- dikey bileşen alt uzayı değil yalnız tabanı döndürür.
-    """
     Y = dik_taban(Y)
     H = np.asarray(H, float)
-    H = H - Y @ (Y.T @ H)                 # yatay izdüşüm
+    H = H - Y @ (Y.T @ H)
     U, S, Vt = np.linalg.svd(H, full_matrices=False)
     return (Y @ Vt.T * np.cos(t * S)) @ Vt + (U * np.sin(t * S)) @ Vt
 
 
 def _log_cekirdegi(Y1: np.ndarray, Y2: np.ndarray
                    ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """``(U, Σ, Vᵀ)``: ``(Y₂ − Y₁M)M⁻¹``in ince SVD'si, ``M = Y₁ᵀY₂``."""
     Q1, Q2 = dik_taban(Y1), dik_taban(Y2)
     M = Q1.T @ Q2
     A = np.linalg.solve(M.T, (Q2 - Q1 @ M).T).T
@@ -147,45 +64,22 @@ def _log_cekirdegi(Y1: np.ndarray, Y2: np.ndarray
 
 
 def log_haritasi(Y1: np.ndarray, Y2: np.ndarray) -> np.ndarray:
-    """``Log_{Y₁}(Y₂) = U arctan(Σ) Vᵀ`` — **doğru** hâl (K26).
-
-    ``arctan Σ`` asal açıları verir: ``‖Log‖_F = d_Gr(Y₁,Y₂)``.
-    """
     U, S, Vt = _log_cekirdegi(Y1, Y2)
     return (U * np.arctan(S)) @ Vt
 
 
 def log_haritasi_arcsin(Y1: np.ndarray, Y2: np.ndarray) -> np.ndarray:
-    """Kaynaktaki ``U arcsin(Σ) Vᵀ`` — **kasten yanlış**, kıyas için.
-
-    ``Σ = tan θ`` olduğundan ``arcsin Σ``, ``Σ > 1`` (yani
-    ``θ > π/4``) iken tanımsızdır bile.  Burada kırpılıyor ki
-    hatanın büyüklüğü ölçülebilsin.
-    """
     U, S, Vt = _log_cekirdegi(Y1, Y2)
     return (U * np.arcsin(np.clip(S, -1.0, 1.0))) @ Vt
 
 
 def gidis_donus_hatasi(Y1: np.ndarray, Y2: np.ndarray,
                        log=log_haritasi) -> float:
-    """``‖P(Exp_{Y₁}(Log_{Y₁}(Y₂))) − P(Y₂)‖_F`` — Formül 2.5'in özü.
-
-    Kaynak bunu ``Tr(Exp(Log)) = Tr(G₂)`` diye yazıyor; iz eşitliği
-    **zayıf** bir ölçüttür (her ``Gr(k,d)`` noktasının izi ``k``dır,
-    yani hep sağlanır).  İzdüşümler arası Frobenius farkı gerçek
-    ölçüttür.
-    """
     return alt_uzay_hatasi(exp_haritasi(Y1, log(Y1, Y2)), Y2)
 
 
 def grassmann_geodezigi(Y1: np.ndarray, Y2: np.ndarray, n: int = 21
                         ) -> Dict[str, object]:
-    """``γ(t) = Exp_{Y₁}(t·Log_{Y₁}(Y₂))``, ``t ∈ [0,1]``.
-
-    Geodezik olmanın ölçütü: ``d(Y₁, γ(t))`` ``t`` ile **doğrusal**
-    artmalı ve ``d(Y₁,γ(t)) + d(γ(t),Y₂) = d(Y₁,Y₂)`` olmalı.  İkisi
-    de burada hesaplanıp döndürülüyor.
-    """
     H = log_haritasi(Y1, Y2)
     ts = np.linspace(0.0, 1.0, n)
     yol = [exp_haritasi(Y1, H, float(t)) for t in ts]
@@ -200,20 +94,6 @@ def grassmann_geodezigi(Y1: np.ndarray, Y2: np.ndarray, n: int = 21
 
 def grassmann_ortalamasi(tabanlar: Sequence[np.ndarray], tur: int = 400,
                          adim: float = 1.0) -> Dict[str, object]:
-    """Karcher ortalaması: ``Σ Log_μ(Y_i) = 0`` olana dek yinele.
-
-    Öklit ortalaması (tabanları toplayıp dikleştirmek) Grassmann
-    ortalaması **değildir** ve taban seçimine bağlıdır; fark
-    ölçülüyor.
-
-    Yakınsama **doğrusaldır**, kuadratik değil: ölçülen artık dizisi
-    her adımda ~0.8 katına iniyor, 1e-13'e inmesi 307 yineleme
-    alıyor.  Bu yüzden öntanımlı ``tur`` 400'dür; 60'ta artık daha
-    3e-05'tir (ilk hâlde 60 yazmıştım, ölçüm yetersiz olduğunu
-    gösterdi).  Kare mesafe toplamı ise 60 yinelemede bile aynı
-    çıkıyor -- yani ortalamanın *değeri* erken oturuyor, *artık*
-    geç iniyor.
-    """
     mu = dik_taban(tabanlar[0])
     seyir = []
     for _ in range(tur):
@@ -228,12 +108,7 @@ def grassmann_ortalamasi(tabanlar: Sequence[np.ndarray], tur: int = 400,
             "kare_mesafe_toplamı": kare}
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  3. Spektral Laplasyen ve Tikhonov (K25)
-# ══════════════════════════════════════════════════════════════════════
-
 def normalize_laplasyen(A: np.ndarray) -> np.ndarray:
-    """``L = I − D^{−1/2} A D^{−1/2}`` — yalıtık düğüm derecesi 0 ise ``0``."""
     A = np.asarray(A, float)
     d = A.sum(axis=1)
     inv = np.where(d > 0, 1.0 / np.sqrt(np.where(d > 0, d, 1.0)), 0.0)
@@ -241,7 +116,6 @@ def normalize_laplasyen(A: np.ndarray) -> np.ndarray:
 
 
 def betti0_tayftan(A: np.ndarray, esik: float = 1e-8) -> Dict[str, object]:
-    """``β₀`` = ``L``nin sıfıra yakın özdeğer sayısı = bağlı bileşen sayısı."""
     L = normalize_laplasyen(A)
     e = np.linalg.eigvalsh(L)
     return {"özdeğerler": e, "β₀": int(np.sum(np.abs(e) < esik)),
@@ -250,15 +124,6 @@ def betti0_tayftan(A: np.ndarray, esik: float = 1e-8) -> Dict[str, object]:
 
 def tikhonov_cekirdegi_yok_eder(A: np.ndarray, eps: float = 1e-3,
                                 esik: float = 1e-8) -> Dict[str, object]:
-    """``dim ker(L + εI) = 0`` — düzenleme çekirdeği **korumaz**.
-
-    Kaynak (Darboğaz 1) hem ``L_ε = L + εI`` diyor hem de
-    ``dim ker(L_ε) = β₀`` bekliyor; ikisi bir arada olamaz.  Doğrusu:
-    tayf ``ε`` kadar kayar, sıfır özdeğerler ``ε``a taşınır.  ``β₀``
-    o zaman "``ε``a eşit özdeğer sayısı"ndan okunur -- ama bunun için
-    ``ε``ı zaten bilmek gerekir; yani düzenleme bilgi eklemez, sadece
-    kaydırır.
-    """
     L = normalize_laplasyen(A)
     e0 = np.linalg.eigvalsh(L)
     ee = np.linalg.eigvalsh(L + eps * np.eye(L.shape[0]))
@@ -270,10 +135,6 @@ def tikhonov_cekirdegi_yok_eder(A: np.ndarray, eps: float = 1e-3,
         "eps": eps,
     }
 
-
-# ══════════════════════════════════════════════════════════════════════
-#  Gösterim
-# ══════════════════════════════════════════════════════════════════════
 
 def _rastgele(d: int, k: int, tohum: int) -> np.ndarray:
     r = np.random.default_rng(tohum)
@@ -300,7 +161,6 @@ def _gosterim() -> str:
     s.append("\n=== K26: Log'da arctan mı arcsin mi? ===")
     s.append("  açı ölçeği   θ_max      arctan hatası   arcsin hatası")
     for olcek in (0.05, 0.2, 0.5, 0.9, 1.0):
-        # Y₁'den ölçekli bir yatay yönde gidip hedefi üretelim
         r2 = np.random.default_rng(7)
         H = r2.normal(size=(d, k))
         H = H - Y1 @ (Y1.T @ H)
@@ -356,7 +216,6 @@ def _gosterim() -> str:
              % alt_uzay_hatasi(ok, ok2))
 
     s.append("\n=== K25: Tikhonov çekirdeği YOK EDER ===")
-    # üç bileşenli çizge
     A = np.zeros((9, 9))
     for blok in ([0, 1, 2], [3, 4], [5, 6, 7, 8]):
         for i, j in [(i, j) for i in blok for j in blok if i != j]:
@@ -374,5 +233,5 @@ def _gosterim() -> str:
     return "\n".join(s)
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     print(_gosterim())

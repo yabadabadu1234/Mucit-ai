@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 4e34c42c."""
 
 from __future__ import annotations
 
@@ -9,11 +8,6 @@ from typing import Callable, Dict, Iterable, List, Sequence, Tuple
 
 Grid = List[List[int]]
 Block = List[List[int]]
-
-
-# ---------------------------------------------------------------------------
-# Shared geometry helpers
-# ---------------------------------------------------------------------------
 
 
 def deep_copy(grid: Grid) -> Grid:
@@ -171,11 +165,6 @@ def enrich_components(grid: Grid):
     return background, enriched
 
 
-# ---------------------------------------------------------------------------
-# Abstractions
-# ---------------------------------------------------------------------------
-
-
 def abstraction_descending_min_col(grid: Grid) -> Grid:
     background, comps = enrich_components(grid)
     ordered = sorted(comps, key=lambda comp: -comp["min_col"])
@@ -231,11 +220,6 @@ ABSTRACTIONS: Dict[str, Callable[[Grid], Grid]] = {
 }
 
 
-# ---------------------------------------------------------------------------
-# Harness
-# ---------------------------------------------------------------------------
-
-
 def load_task() -> Dict[str, Sequence[Dict[str, Grid]]]:
     task_path = Path(__file__).resolve().parents[1] / "arc2_samples" / "4e34c42c.json"
     return json.loads(task_path.read_text())
@@ -243,7 +227,6 @@ def load_task() -> Dict[str, Sequence[Dict[str, Grid]]]:
 
 def evaluate_split(name: str, pairs: Sequence[Dict[str, Grid]], fn: Callable[[Grid], Grid]):
     if not pairs or "output" not in pairs[0]:
-        # No reference output available (e.g. evaluation split).
         return None, None
     for idx, pair in enumerate(pairs):
         pred = fn(pair["input"])

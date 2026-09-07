@@ -1,9 +1,3 @@
-"""Abstractions explored for ARC task e376de54.
-
-This module lists the candidate pipelines considered while iterating on the
-task as well as a tiny harness for spot-checking their performance on the
-available splits.
-"""
 
 from __future__ import annotations
 
@@ -18,7 +12,6 @@ Abstraction = Callable[[Grid], Grid]
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline: copy the grid unchanged."""
 
     return [row[:] for row in grid]
 
@@ -37,7 +30,6 @@ SOLVER = _load_solver()
 
 
 def median_line_alignment_abstraction(grid: Grid) -> Grid:
-    """Orientation-aware alignment used in the final solver."""
 
     return SOLVER(grid)
 
@@ -102,7 +94,6 @@ def evaluate_abstractions() -> None:
                     f" acc={accuracy:.2%} first_fail={fail_display}"
                 )
             else:
-                # No reference outputs; show the first prediction for manual vetting.
                 prediction = fn(cases[0]["input"])
                 print(f"  {split_name}: no targets available; sample prediction:\n{_format_grid(prediction)}")
         print()

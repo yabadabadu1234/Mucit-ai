@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 58490d8a (split: evaluation)."""
 
 from __future__ import annotations
 

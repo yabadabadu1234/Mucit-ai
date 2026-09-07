@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 9385bd28 (split: evaluation)."""
 
 from __future__ import annotations
 
@@ -22,7 +21,6 @@ class LegendPairs(TypedDict):
 
 
 def _extract_components(grid: Grid) -> Tuple[Dict[int, List[List[Coord]]], Dict[Coord, Tuple[int, int]]]:
-    """Return connected components per color and a lookup by cell."""
     height, width = len(grid), len(grid[0])
     coords_by_color: Dict[int, List[Coord]] = defaultdict(list)
     for r, row in enumerate(grid):
@@ -58,7 +56,6 @@ def _extract_components(grid: Grid) -> Tuple[Dict[int, List[List[Coord]]], Dict[
 
 
 def extractLegendPairs(grid: Grid) -> LegendPairs:
-    """Read legend rows/cols to identify zero and fill pairs and related metadata."""
     height, width = len(grid), len(grid[0])
     legend_rows = min(5, height)
     legend_cols = min(4, width)
@@ -110,7 +107,6 @@ def extractLegendPairs(grid: Grid) -> LegendPairs:
 
 
 def computeBoundingBoxes(grid: Grid) -> Boxes:
-    """Compute bboxes of non-legend components for each color."""
     height, width = len(grid), len(grid[0])
     legend_rows = min(5, height)
     legend_cols = min(4, width)
@@ -129,7 +125,6 @@ def computeBoundingBoxes(grid: Grid) -> Boxes:
 
 
 def clearZeroPairs(grid: Grid, legend_pairs: LegendPairs, boxes: Boxes) -> Grid:
-    """Clear interior of boxes whose source color maps to zero."""
     result = [row[:] for row in grid]
     for source, _ in legend_pairs["zero_pairs"]:
         bbox = boxes.get(source)
@@ -144,7 +139,6 @@ def clearZeroPairs(grid: Grid, legend_pairs: LegendPairs, boxes: Boxes) -> Grid:
 
 
 def fillBoxes(grid: Grid, legend_pairs: LegendPairs, boxes: Boxes) -> Grid:
-    """Recolour each remaining box according to target while respecting protection and purity rules."""
     background = legend_pairs["background"]
     protected_boxes = [bbox for color, bbox in boxes.items() if color not in legend_pairs["legend_sources"] and color != background]
 
@@ -155,7 +149,6 @@ def fillBoxes(grid: Grid, legend_pairs: LegendPairs, boxes: Boxes) -> Grid:
         if not bbox:
             continue
         r0, r1, c0, c1 = bbox
-        # Recolor entire if box contains no background or zeros in original grid
         recolor_entire = True
         for r in range(r0, r1 + 1):
             for c in range(c0, c1 + 1):

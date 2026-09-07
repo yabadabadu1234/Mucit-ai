@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 409aa875."""
 
 from __future__ import annotations
 
@@ -138,25 +137,16 @@ def _project_components(
 
 
 def identity_solver(grid: Grid) -> Grid:
-    """Baseline abstraction: mirror the input unchanged."""
 
     return copy_grid(grid)
 
 
 def centroid_projection_no_normalisation(grid: Grid) -> Grid:
-    """Prototype – project component centres without horizontal normalisation.
-
-    This captures the basic idea of lifting components upward but keeps their
-    absolute X positions. It succeeds on cases where the bands are already
-    anchored near the origin but fails on scenarios such as train[2], where the
-    patterns live far to the right and need re-anchoring.
-    """
 
     return _project_components(grid, normalise_columns=False)
 
 
 def centroid_projection_global_shift(grid: Grid) -> Grid:
-    """Refined abstraction – shift components by the band minimum before lifting."""
 
     return _project_components(grid, normalise_columns=True)
 

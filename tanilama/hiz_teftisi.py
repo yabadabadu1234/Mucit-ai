@@ -1,41 +1,3 @@
-"""HIZ TEFTİŞİ -- tâlim başlamadan EVVEL, belirteç/sn haddi tutuyor mu?
-
-    python -m tanilama.hiz_teftisi
-
-===================================================================
-NİÇİN VAR: BİR YALANIN TASHİHİ
-===================================================================
-
-Padişahın ikazı:
-
-    *"Saniyede 1 milyon token üretebildiğimizi iddia etmiştin, o hâlde
-    neden 38 dakika olmuş hâlâ eski eğitim bitmedi? Hız konusunda
-    garanti elde etmeden umumi eğitim başlatma!"*
-
-**İTİRAF.** 1 milyon belirteç/sn'ye ulaştığımız hiç ölçülmedi. Ölçülen
-tek sayı ``nefs/soyle.py``de yazılıdır: ``d=256``te **1401 belirteç/sn**
-ve o da eski MPS hattına nispetle "127 kat" diye anılmıştı. Nispet
-doğruydu, mutlak had ise **hiçbir zaman tutmadı**. Hedef 1.000.000'du;
-"127 kat hızlandı" cümlesi hedefin tutulduğu intibaını veriyordu ve bu
-bir örtmedir.
-
-Bu modül o örtmeyi imkânsız kılar: tâlim, bu teftişten geçmeden
-başlamaz (``main/egitim.py:kulli_kayip_talimi`` onu çağırır ve
-``assert`` eder).
-
-===================================================================
-BELİRTEÇ NASIL SAYILIR (TARİF ÖNCE, SAYI SONRA)
-===================================================================
-
-Bir "belirteç işlendi" demek, o belirtecin **ileri geçişten geçip
-mizana girmesi** demektir. Bir kayıp çağrısı ``B`` örneği ve örnek
-başına ``L`` bağlam belirtecini işler::
-
-    belirteç / kayıp çağrısı = B × L
-
-Bu sayım şişirilemez: üretimde atılan adımlar değil, fiilen ileri
-geçişten geçen belirteçler sayılır.
-"""
 from __future__ import annotations
 
 import time
@@ -46,16 +8,13 @@ import numpy as np
 
 __all__ = ["HAD", "AZAMI_SANIYE", "olc", "teftis", "rapor"]
 
-#: **HAD (ferman).** Bunun altında umumi tâlim BAŞLAMAZ.
 HAD: float = 1_000_000.0
 
-#: **TÂLİM HADDİ (ferman).** Toplam tâlim bunu aşamaz.
 AZAMI_SANIYE: float = 600.0
 
 
 @dataclass
 class Kalem:
-    """Tek bir uzvun payı: kaç kere çağrıldı, ne kadar sürdü."""
 
     ad: str
     cagri: int
@@ -73,12 +32,6 @@ def _saat(f, *a, **k) -> Tuple[Any, float]:
 
 
 def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
-    """Bir kayıp çağrısının **içini** aç: hangi uzuv kaç saniye yiyor?
-
-    Tahmin yoktur; her kalem ayrı ayrı saatlenir. Toplamın kalemlerin
-    toplamına eşit olması ``assert`` edilir -- yoksa ölçüm bir yeri
-    kaçırıyor demektir ve o boşluk saklanamaz.
-    """
     from main.egitim import KISA_CPU, mizan_ayari
     from nefs.hafiza import Hafiza
     from nefs.kulli_mizan import kulli_mizan
@@ -87,14 +40,8 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     from nefs.qegitim import belirtecleri_kodla, ornekler
 
     a = ayar or KISA_CPU
-    # **ÖRNEK SAYISI AYARIN YIĞIN BOYUDUR.** Evvelce sabit 4'tü ve
-    # ölçüm kendi kendini bozuyordu: yazmaç B=64 kuruluyor, teftiş 4
-    # örnek veriyor, netice 2 119 belirteç/sn çıkıyordu -- halbuki aynı
-    # ayar 64 örnekle 37 542 veriyor. Ölçü, ölçtüğü şeyle aynı ölçekte
-    # olmalıdır.
     ornek = int(ornek) if int(ornek) > 0 else int(a.ornek_sayisi)
     g = list(gorevleri_getir("training"))
-    # **BASAMAK AKIŞI** (ferman 1-N): taban ve basamak ayardan gelir.
     veri = ornekler(g, azami=int(ornek), pencere=int(a.pencere),
                     sozluk=int(a.sozluk), tohum=int(a.tohum),
                     taban=int(a.veri_lifi),
@@ -106,16 +53,13 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
 
     kalem: List[Kalem] = []
 
-    # ── 1. Kodlama
     t = 0.0
-    # **ÖGE ÜÇLÜDÜR** (ferman 1-R): tek çözücü ``ornek_bol``.
     from nefs.qegitim import ornek_bol
     for bag, _h, _c in (ornek_bol(o) for o in veri):
         _, s = _saat(belirtecleri_kodla, list(bag), a.veri_lifi, a.sozluk)
         t += s
     kalem.append(Kalem("belirteç kodlaması", len(veri), t))
 
-    # ── 2. İLERİ GEÇİŞ (41 meleke) -- asıl şüpheli
     E = belirtecleri_kodla(list(veri[0][0]), a.veri_lifi,
                            a.veri_lifi)
     t = 0.0
@@ -127,7 +71,6 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
         t += s
     kalem.append(Kalem("ileri geçiş (idrak_et)", int(tekrar), t))
 
-    # ── 3. Tek melekenin payı
     q = nefs.idrak_et(E)
     tek: List[Tuple[str, float]] = []
     for no in list(nefs.sira)[:41]:
@@ -135,20 +78,15 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
         tek.append((getattr(nefs.s[no], "ad", str(no)), s))
     tek.sort(key=lambda x: -x[1])
 
-    # ── 4. Yazmaç ameliyeleri
     _, s_harman = _saat(q.harman)
     _, s_olc = _saat(q.olcumler)
     _, s_ent = _saat(q.y.dolasiklik_entropisi)
-    # **BASAMAK DAĞILIMI** (ferman 1-N): ``0`` = tabanı yazmaçtan al.
-    # ``a.sozluk`` geçmek 200 019 parça istemekti; kelâm sektörü 443
-    # genliktir ve o bölme dağılımı düzgün sıfır yapardı.
     _, s_bey = _saat(q.beyan, 0)
     kalem.append(Kalem("harman", 1, s_harman))
     kalem.append(Kalem("olcumler", 1, s_olc))
     kalem.append(Kalem("dolaşıklık entropisi", 1, s_ent))
     kalem.append(Kalem("beyan", 1, s_bey))
 
-    # ── 5. MİZANIN KENDİSİ (ileri geçiş dâhil ve hariç)
     mz = mizan_ayari(a)
     haf = Hafiza(kapasite=32)
     _, s_mizan = _saat(kulli_mizan, nefs, veri, p, a.sozluk,
@@ -171,12 +109,6 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
 
 
 def teftis(ayar=None, had: float = HAD, sert: bool = True) -> Dict[str, Any]:
-    """HIZ GEÇİDİ -- had tutmuyorsa tâlim BAŞLAMAZ.
-
-    ``sert`` doğruysa ``assert`` ile durdurur. Bu geçit kapatılabilir
-    (``sert=False``) ve kapatılınca yalnız raporlar; yâni ölçü kırmızı
-    yanabilir ve yandığında görünür (H90).
-    """
     o = olc(ayar)
     o["had"] = float(had)
     o["geçti"] = bool(o["belirteç_sn"] >= float(had))
@@ -190,7 +122,7 @@ def teftis(ayar=None, had: float = HAD, sert: bool = True) -> Dict[str, Any]:
     return o
 
 
-def rapor(ayar=None) -> str:                             # pragma: no cover
+def rapor(ayar=None) -> str:
     o = olc(ayar)
     s = ["=== HIZ TEFTİŞİ -- belirteç/sn haddi ===", "",
          "  yazmaç: d=%d  lif=%r  parametre=%d"
@@ -212,5 +144,5 @@ def rapor(ayar=None) -> str:                             # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

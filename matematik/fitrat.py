@@ -1,36 +1,3 @@
-"""FITRAT ÇİPİ -- nedensellik, illiyet ve oyun dengesi.
-
-KÜME 7'nin üçüncü karargâhı (kütük H226). Altı dosya --
-``fitrat/ayrisma.py``, ``karsi_olgusal.py``, ``serbest_enerji.py``,
-``denge.py``, ``tevafuk.py``, ``havuz.py`` -- burada birleşti. Terkip
-üç adımda yapıldı: (a) her dosya kendi içinde, (b) birleştirme,
-(c) birleşik gövdede bir daha. Asılları
-``yedek/kume7_asillari/fitrat/`` altında şahittir.
-
-**Kök problem.** *"Bu, şunun sebebi mi?"* suâlinin dört ayrı cevap
-makinesi vardı -- graf teorik ayrışma, karşıolgusal hesap,
-varyasyonel serbest enerji ve oyun dengesi -- ve birbirleriyle
-konuşmuyorlardı.
-
-**Çipin beş odası.**
-
-1. **Graf teorik illiyet** -- ``Cizge`` (çevrimsizlik ``__post_init__``
-   ile mühürlü), Bayes-Ball ``O(V+E)`` d-ayrışması, yol sayımıyla
-   bağımsız ikinci şahit, arka kapı / ön kapı ölçütleri, B-ayrışması.
-2. **Karşıolgusal hesap** -- üç pas (abduction → action → prediction),
-   budayarak müdahale ``do(X=x)``, NOTEARS çevrimsizlik değişmezi
-   ``h(A) = tr(e^{A∘A}) − d`` ve gradyanı, örtük değişkenlerin
-   doğurduğu sahte bağıntı, locus üstünde Newton düzeltmeli yürüme.
-3. **Varyasyonel serbest enerji** -- ``F = −ELBO ≥ −ln p(x)``, tam
-   ayrışım ``F = kesinsizlik + karmaşıklık(KL)``, koordinat inişi,
-   Gauss kapalı biçimi.
-4. **Çok failli denge** -- damped Newton kök bulucu, spektral yarıçap
-   ile kararlılık, en iyi karşılık iterasyonu, örtük fonksiyon
-   teoremiyle hassasiyet türevi, Cournot kapalı çözümüyle mihenk.
-5. **Tevâfuk ve şahitlik** -- şartlı bağımsızlık ağırlıklı konsensüs,
-   fazla sayma oranı, muteber şahit sayısı; şüphe havuzu ve
-   karantina hükmü.
-"""
 from __future__ import annotations
 
 import itertools
@@ -46,18 +13,8 @@ from typing import Callable, Dict, List, Optional, Sequence, Tuple
 from typing import Dict, List, Optional, Sequence, Tuple
 
 
-# ====================================================================
-#  fitrat/ayrisma.py
-# ====================================================================
-
 @dataclass
 class Cizge:
-    """Yönlü çevrimsiz çizge.
-
-    ``kenarlar``: ``(ebeveyn, çocuk)`` çiftleri.  Kurulurken çevrimsizlik
-    **denetlenir**; çevrimli bir çizgede d-ayrışması tanımlı değildir ve
-    sessizce yanlış cevap vermektense hata verilir.
-    """
     dugumler: Tuple[str, ...]
     kenarlar: Tuple[Tuple[str, str], ...]
     ebeveyn: Dict[str, Set[str]] = field(default_factory=dict, repr=False)
@@ -76,7 +33,6 @@ class Cizge:
             raise ValueError("çizge çevrimli — d-ayrışması tanımsız")
 
     def _cevrim_var_mi(self) -> bool:
-        """Kahn topolojik sıralaması; hepsi tükenmezse çevrim vardır."""
         derece = {d: len(self.ebeveyn[d]) for d in self.dugumler}
         kuyruk = deque(d for d, k in derece.items() if k == 0)
         sayi = 0
@@ -90,7 +46,6 @@ class Cizge:
         return sayi != len(self.dugumler)
 
     def nesil(self, kume: Iterable[str]) -> Set[str]:
-        """``kume`` ve bütün nesli (kendisi dâhil)."""
         yigin = list(kume)
         gorulen: Set[str] = set(yigin)
         while yigin:
@@ -102,7 +57,6 @@ class Cizge:
         return gorulen
 
     def ata(self, kume: Iterable[str]) -> Set[str]:
-        """``kume`` ve bütün ataları (kendisi dâhil)."""
         yigin = list(kume)
         gorulen: Set[str] = set(yigin)
         while yigin:
@@ -118,26 +72,9 @@ class Cizge:
 
 
 def _erisilenler(g: Cizge, X: Set[str], Z: Set[str]) -> Set[str]:
-    """``X``ten ``Z`` verildiğinde d-bağlantılı olan bütün düğümler.
-
-    Yürüyüş, düğüm değil **(düğüm, geliş yönü)** çiftleri üzerinde
-    yapılır; çünkü bir düğümden devam edilip edilemeyeceği oraya
-    yukarıdan mı aşağıdan mı gelindiğine bağlıdır.  Bu ayrım
-    yapılmazsa çarpışma kaidesi doğru işlemez.
-
-    ``yon = 0``: düğüme bir çocuğundan gelindi (yani ok yukarı bakıyor).
-    ``yon = 1``: düğüme bir ebeveyninden gelindi (ok aşağı bakıyor).
-    """
-    # Şarta bağlananların atalarından herhangi biri, açılmış bir
-    # çarpışma düğümü olabilir.
     zin_atalari = g.ata(Z)
 
     ziyaret: Set[Tuple[str, int]] = set()
-    # Başlangıç düğümleri HER İKİ yöne de gidebilmeli: X'in kendi
-    # ebeveynlerine çıkan yol (X ← Z → Y çatalı) da bir yoldur.  Bunun
-    # için ``yon=0`` ("çocuğundan gelindi") ile tohumlanır; o dal hem
-    # ebeveynlere hem çocuklara açılır.  ``yon=1`` ile tohumlamak
-    # ebeveynlere çıkışı kapatır ve bütün karıştırıcıları görünmez kılar.
     kuyruk = deque((x, 0) for x in X)
     for x in X:
         ziyaret.add((x, 0))
@@ -147,18 +84,15 @@ def _erisilenler(g: Cizge, X: Set[str], Z: Set[str]) -> Set[str]:
         d, yon = kuyruk.popleft()
         erisilen.add(d)
         if yon == 1:
-            # Düğüme ebeveyninden gelindi: d, bir zincirin ortası.
             if d not in Z:
-                for c in g.cocuk[d]:          # zincir devam eder
+                for c in g.cocuk[d]:
                     if (c, 1) not in ziyaret:
                         ziyaret.add((c, 1)); kuyruk.append((c, 1))
-            # d ∈ Z ise ok kapanır; ayrıca "çarpışma" olarak da bakılır:
             if d in zin_atalari:
-                for e in g.ebeveyn[d]:        # çarpışma açık
+                for e in g.ebeveyn[d]:
                     if (e, 0) not in ziyaret:
                         ziyaret.add((e, 0)); kuyruk.append((e, 0))
         else:
-            # Düğüme çocuğundan gelindi: d, çatalın tepesi.
             if d not in Z:
                 for e in g.ebeveyn[d]:
                     if (e, 0) not in ziyaret:
@@ -169,10 +103,7 @@ def _erisilenler(g: Cizge, X: Set[str], Z: Set[str]) -> Set[str]:
     return erisilen
 
 
-
-
 def _yollar(g: Cizge, x: str, y: str) -> List[List[str]]:
-    """``x`` ile ``y`` arasındaki bütün **yönsüz** basit yollar."""
     sonuc: List[List[str]] = []
     yol = [x]
     ustunde = {x}
@@ -193,11 +124,6 @@ def _yollar(g: Cizge, x: str, y: str) -> List[List[str]]:
 
 
 def _yol_acik_mi(g: Cizge, yol: Sequence[str], Z: Set[str]) -> bool:
-    """Yolun her ara düğümü açık mı?
-
-    ``a → b ← c`` çarpışmasında ``b`` veya nesli ``Z``de olmalı;
-    diğer iki hâlde ``b`` ``Z``de olmamalı.
-    """
     zin_atalari = g.ata(Z)
     for i in range(1, len(yol) - 1):
         onc, orta, son = yol[i - 1], yol[i], yol[i + 1]
@@ -211,8 +137,6 @@ def _yol_acik_mi(g: Cizge, yol: Sequence[str], Z: Set[str]) -> bool:
     return True
 
 
-
-
 KIP_DYOL, KIP_ARKA = "d_yol", "arka_kapı"
 KIP_ON, KIP_B = "ön_kapı", "b"
 
@@ -220,33 +144,6 @@ KIP_ON, KIP_B = "ön_kapı", "b"
 def gecer_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
                     M: Iterable[str] = (), cizgeler=None,
                     ne: str = "d") -> bool:
-    """TESİR BURADAN GEÇEBİLİR Mİ -- **tek terkip** (kütük H226).
-
-    Küme: ``d_ayrik_mi``, ``d_ayrik_yollarla``, ``arka_kapi_mi``,
-    ``on_kapi_mi``, ``b_ayrik_mi``. Beş isim, tek suâlin beş ölçütü
-    idi: *bu küme, tesirin geçtiği yolları kapatıyor mu?* Ayrı ayrı
-    dururken ölçütlerin **birbirini nasıl kullandığı** görünmüyordu;
-    hâlbuki arka kapı da ön kapı da d-ayrışmanın üstüne kuruludur.
-
-    ==============  ==================================================
-    ``ne``          hangi ölçüt
-    ==============  ==================================================
-    ``d``           ``X ⫫_d Y | Z`` -- Bayes toplarıyla, ``O(V+E)``
-    ``d_yol``       aynı suâle **bağımsız** cevap: bütün yolları
-                    dolaşarak. Üstel zamanlıdır ve yalnız Bayes
-                    toplarının **sağlaması** için vardır; ikisi her
-                    çizgede uyuşmak zorundadır.
-    ``arka_kapı``   verilen küme ``(X,Y)`` için arka kapı ölçütünü
-                    sağlıyor mu (orada ona **şart kümesi** ``Z`` denir)
-    ``ön_kapı``     verilen küme ``(X,Y)`` için ön kapı ölçütünü
-                    sağlıyor mu (orada ona **aracı kümesi** ``M`` denir)
-    ``b``           ``X ⫫ Y | Z`` **bütün** ortamlarda -- ``cizgeler``
-    ==============  ==================================================
-
-    Bir hesap ile onun bağımsız şahidini aynı kapıya koymak kasıtlıdır:
-    ``d`` ile ``d_yol`` ayrı isimler taşırken biri ötekinin sağlaması
-    olduğu ancak şerhten anlaşılıyordu; şimdi tek ``ne``nin iki değeri.
-    """
     if ne == "d":
         Xs, Ys, Zs = set(X), set(Y), set(Z)
         ortak = (Xs | Ys) & Zs
@@ -271,21 +168,15 @@ def gecer_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
             return False
         return gecer_mi(_oku_cikarilmis(g, {X}), [X], [Y], Zs)
     if ne == "ön_kapı":
-        # Dördüncü argüman **verilen kümedir**: arka kapıda ona şart
-        # kümesi (``Z``), ön kapıda aracı kümesi (``M``) denir. Terkipte
-        # ikisi aynı yerdedir; ``M`` boşsa ``Z``den okunur.
         M = M or Z
         Ms = set(M)
         if X in Ms or Y in Ms:
             return False
-        # 1: X'ten çıkan bütün yönlü yollar M'den geçmeli.
         if not _yonlu_yollar_kesiliyor_mu(g, X, Y, Ms):
             return False
-        # 2: X → M arka kapısı yok (boş kümeyle kapanıyor).
         if not all(gecer_mi(_oku_cikarilmis(g, {X}), [X], [m])
                    for m in Ms):
             return False
-        # 3: M → Y arka kapıları X ile kapanıyor.
         for m in Ms:
             if not gecer_mi(_oku_cikarilmis(g, {m}), [m], [Y], {X}):
                 return False
@@ -297,7 +188,6 @@ def gecer_mi(g=None, X=None, Y=None, Z: Iterable[str] = (),
 
 def butun_ayrismalar(g: Cizge, azami_z: int = 2
                      ) -> List[Tuple[str, str, FrozenSet[str]]]:
-    """Çizgenin ima ettiği bütün ``X ⫫ Y | Z`` (``|Z| ≤ azami_z``)."""
     sonuc = []
     for x, y in itertools.combinations(g.dugumler, 2):
         kalan = [d for d in g.dugumler if d not in (x, y)]
@@ -309,26 +199,17 @@ def butun_ayrismalar(g: Cizge, azami_z: int = 2
 
 
 def _oku_sokulmus(g: Cizge, X: Set[str]) -> Cizge:
-    """``X``e **giren** okları silinmiş çizge (``G_X̲``)."""
     yeni = tuple((a, b) for a, b in g.kenarlar if b not in X)
     return Cizge(g.dugumler, yeni)
 
 
 def _oku_cikarilmis(g: Cizge, X: Set[str]) -> Cizge:
-    """``X``ten **çıkan** okları silinmiş çizge (``G_X̄``)."""
     yeni = tuple((a, b) for a, b in g.kenarlar if a not in X)
     return Cizge(g.dugumler, yeni)
 
 
-
-
 def arka_kapi_kumeleri(g: Cizge, X: str, Y: str, azami: int = 3
                        ) -> List[FrozenSet[str]]:
-    """Arka kapıyı kapatan bütün ``Z`` kümeleri (``|Z| ≤ azami``).
-
-    Boş küme de aday olarak denenir: bazı çizgelerde karıştırıcı yoktur
-    ve hiçbir şeye şarta bağlanmamak doğru cevaptır.
-    """
     adaylar = [d for d in g.dugumler if d not in (X, Y)]
     sonuc = []
     for k in range(azami + 1):
@@ -338,29 +219,23 @@ def arka_kapi_kumeleri(g: Cizge, X: str, Y: str, azami: int = 3
     return sonuc
 
 
-
-
 def _yonlu_yollar_kesiliyor_mu(g: Cizge, x: str, y: str, M: Set[str]) -> bool:
-    """``x``ten ``y``ye giden her **yönlü** yol ``M``den geçiyor mu?"""
     yigin = [x]
     gorulen = {x}
     while yigin:
         d = yigin.pop()
         for c in g.cocuk[d]:
             if c in M:
-                continue                 # bu yol kesildi
+                continue
             if c == y:
-                return False             # M'ye uğramadan Y'ye varıldı
+                return False
             if c not in gorulen:
                 gorulen.add(c); yigin.append(c)
     return True
 
 
-
-
 def ortak_ayrismalar(cizgeler: Sequence[Cizge], azami_z: int = 2
                      ) -> List[Tuple[str, str, FrozenSet[str]]]:
-    """Bütün ortamlarda ortak olan ayrışmaların **kesişimi**."""
     if not cizgeler:
         return []
     kumeler = [set(butun_ayrismalar(g, azami_z)) for g in cizgeler]
@@ -414,20 +289,17 @@ def _rapor_fitrat_ayrisma() -> str:
              f" arasında uyuşmazlık: {uyusmazlik}")
 
     s.append("\n=== Arka kapı ===")
-    # X ← Z → Y, X → Y : Z karıştırıcı
     g3 = Cizge(("X", "Y", "Z"), (("Z", "X"), ("Z", "Y"), ("X", "Y")))
     s.append(f"  karıştırıcılı çizgede Z uygun mu? {gecer_mi(g3, 'X', 'Y', ['Z'], ne=KIP_ARKA)}")
     s.append(f"  hiçbir şeye bağlanmamak?          {gecer_mi(g3, 'X', 'Y', [], ne=KIP_ARKA)}")
     s.append(f"  bütün uygun kümeler: "
              + ", ".join("{" + ",".join(sorted(z)) + "}" if z else "∅"
                          for z in arka_kapi_kumeleri(g3, "X", "Y")))
-    # X → M → Y, Z ardıl (X'in nesli): şarta bağlanmamalı
     g4 = Cizge(("X", "M", "Y"), (("X", "M"), ("M", "Y")))
     s.append(f"  ardıla (M) bağlanmak uygun mu? {gecer_mi(g4, 'X', 'Y', ['M'], ne=KIP_ARKA)}"
              "   (hayır — X'in nesli)")
 
     s.append("\n=== Ön kapı (gözlenmemiş karıştırıcı varken) ===")
-    # U gözlenmemiş: U→X, U→Y, X→M→Y
     g5 = Cizge(("U", "X", "M", "Y"),
                (("U", "X"), ("U", "Y"), ("X", "M"), ("M", "Y")))
     s.append(f"  M ön kapıyı sağlıyor mu? {gecer_mi(g5, 'X', 'Y', M=['M'], ne=KIP_ON)}")
@@ -437,7 +309,6 @@ def _rapor_fitrat_ayrisma() -> str:
     s.append("  → arka kapı kapanmıyor ama ön kapı açık; ikisi ayrı âlet.")
 
     s.append("\n=== B-ayrışması: ortamlar arası ortak ===")
-    # Ortamlar Z→Y kenarında ayrışıyor; Z→X→Y omurgası ikisinde de sabit.
     o1 = Cizge(("X", "Y", "Z"), (("Z", "X"), ("X", "Y"), ("Z", "Y")))
     o2 = Cizge(("X", "Y", "Z"), (("Z", "X"), ("X", "Y")))
     s.append("  omurga Z→X→Y ikisinde de var; ortam-1'de fazladan Z→Y var.")
@@ -461,18 +332,7 @@ def _rapor_fitrat_ayrisma() -> str:
     return "\n".join(s)
 
 
-
-# ====================================================================
-#  fitrat/karsi_olgusal.py
-# ====================================================================
-
 class YapisalModel:
-    """``X_i = f_i(pa_i, u_i)`` — topolojik sırada çözülür.
-
-    ``denklemler[d]``: ``(ebeveyn_değerleri: Dict[str,float], u: float)
-    -> float``.  Toplamsal gürültü şart değildir; şart olmadığı için
-    abduction'ın ne zaman tekilleştiği ayrıca sınanabiliyor.
-    """
 
     def __init__(self, cizge: Cizge,
                  denklemler: Dict[str, Callable[[Dict[str, float], float],
@@ -499,7 +359,6 @@ class YapisalModel:
 
     def coz(self, u: Dict[str, float],
             sabit: Optional[Dict[str, float]] = None) -> Dict[str, float]:
-        """``Sol(G, u)`` — ``sabit``teki düğümler zorlanır (müdahale)."""
         sabit = sabit or {}
         X: Dict[str, float] = {}
         for d in self.sira:
@@ -512,25 +371,12 @@ class YapisalModel:
 
 
 def budayarak_mudahale(g: Cizge, dugum: str) -> Cizge:
-    """``do(X_k)`` — ``X_k``ye **giren** okları sil (``G_ampüte``).
-
-    Çıkan okları silmek yanlış olurdu: müdahale nedeni koparır,
-    neticeyi değil.
-    """
     return Cizge(g.dugumler,
                  tuple((a, b) for a, b in g.kenarlar if b != dugum))
 
 
 def abduction(M: YapisalModel, gozlem: Dict[str, float],
               cozucu_tur: int = 80) -> Dict[str, float]:
-    """1. pas: gözlemden ``u``yu geri çıkar.
-
-    Toplamsal gürültüde ``u_i = X_i − f_i(pa_i, 0)`` doğrudan; genel
-    hâlde ``f_i(pa_i, u) = X_i`` tek değişkenli denklemi sayısal
-    olarak çözülür (kesme yöntemi, ``u ∈ [−10³, 10³]``).  Çözüm
-    bulunamazsa **NaN** dönülür; sessizce sıfır koymak, 3. pasın
-    çıktısını sahte kılardı.
-    """
     u: Dict[str, float] = {}
     for d in M.sira:
         pa = {p: gozlem[p] for p in M.g.ebeveyn[d]}
@@ -546,7 +392,7 @@ def abduction(M: YapisalModel, gozlem: Dict[str, float],
         elif rb == 0.0:
             u[d] = b
         elif ra * rb > 0:
-            u[d] = float("nan")          # kök yok ya da tek değil
+            u[d] = float("nan")
         else:
             for _ in range(cozucu_tur):
                 m = 0.5 * (a + b)
@@ -561,11 +407,6 @@ def abduction(M: YapisalModel, gozlem: Dict[str, float],
 
 def abduction_degismezi(M: YapisalModel, gozlem: Dict[str, float]
                         ) -> Dict[str, object]:
-    """Formül 46.5: ``Sol(G_orijinal, u) == Y_göz`` mi?
-
-    Bu, 1. pasın sağlamasıdır.  Bozuksa 3. pasın çıktısına
-    **güvenilemez**; o yüzden :func:`karsiolgusal` bunu önce koşuyor.
-    """
     u = abduction(M, gozlem)
     if any(math.isnan(v) for v in u.values()):
         return {"u": u, "sağlanıyor": False, "hata": float("inf"),
@@ -578,7 +419,6 @@ def abduction_degismezi(M: YapisalModel, gozlem: Dict[str, float]
 
 def karsiolgusal(M: YapisalModel, gozlem: Dict[str, float],
                  mudahale: Dict[str, float]) -> Dict[str, object]:
-    """Üç pası birlikte koş; değişmez bozuksa **hüküm verme**."""
     d = abduction_degismezi(M, gozlem)
     if not d["sağlanıyor"]:
         return {"geçerli": False, "sebep": d.get("sebep") or
@@ -599,14 +439,12 @@ def karsiolgusal(M: YapisalModel, gozlem: Dict[str, float],
 
 def abduction_tekil_mi(M: YapisalModel, gozlem: Dict[str, float]
                        ) -> Dict[str, object]:
-    """Hangi düğümde ``u`` geri çıkarılamıyor? — kutuplu tanı."""
     u = abduction(M, gozlem)
     tekil = sorted(d for d, v in u.items() if math.isnan(v))
     return {"tekil_düğümler": tekil, "tekil_mi": bool(tekil), "u": u}
 
 
 def _matris_ustel(M: np.ndarray, tur: int = 200) -> np.ndarray:
-    """``exp(M)`` — ölçekle-kare-al + Taylor (``scipy`` yok)."""
     M = np.asarray(M, float)
     n = max(int(np.ceil(np.log2(max(np.abs(M).sum(axis=1).max(), 1e-30)))) + 4,
             0)
@@ -624,23 +462,19 @@ def _matris_ustel(M: np.ndarray, tur: int = 200) -> np.ndarray:
 
 
 def notears_h(A: np.ndarray) -> float:
-    """``h(A) = tr(exp(A∘A)) − d`` — ``0`` ⟺ çevrimsiz."""
     A = np.asarray(A, float)
     return float(np.trace(_matris_ustel(A * A)) - A.shape[0])
 
 
 def notears_gradyan(A: np.ndarray) -> np.ndarray:
-    """``∂h/∂A = 2 (exp(A∘A))ᵀ ∘ A`` (Formül 45.3) — kaynak doğru yazmış."""
     A = np.asarray(A, float)
     return 2.0 * _matris_ustel(A * A).T * A
 
 
 def cevrimsiz_mi_h_ile(A: np.ndarray, esik: float = 1e-8
                        ) -> Dict[str, object]:
-    """``h(A) ≤ esik`` (Formül 45.5) ile kombinatorik sayımı kıyasla."""
     A = np.asarray(A, float)
     B = (np.abs(A) > 0).astype(int)
-    # Kahn: kombinatorik hakikat
     derece = B.sum(axis=0).tolist()
     kuyruk = [i for i, k in enumerate(derece) if k == 0]
     say = 0
@@ -658,12 +492,6 @@ def cevrimsiz_mi_h_ile(A: np.ndarray, esik: float = 1e-8
 
 def ortuk_sahte_baginti(n: int = 4000, a: float = 1.0, b: float = 1.0,
                         tohum: int = 0) -> Dict[str, float]:
-    """``X ← L → Y``: ``L`` gözlenmezse ``X`` ile ``Y`` bağıntılı görünür.
-
-    Üç okuma yan yana: (1) ham bağıntı, (2) ``L``ye koşullanmış kısmî
-    bağıntı, (3) ``do(L = sabit)`` altındaki bağıntı.  İkisi de sahte
-    bağıntıyı **keser**; ilki kesmez.
-    """
     r = np.random.default_rng(tohum)
     L = r.normal(size=n)
     X = a * L + r.normal(size=n)
@@ -672,10 +500,9 @@ def ortuk_sahte_baginti(n: int = 4000, a: float = 1.0, b: float = 1.0,
     def kor(u, v):
         return float(np.corrcoef(u, v)[0, 1])
 
-    # L'ye koşullama = doğrusal artıklar üzerinden kısmî bağıntı
     ex = X - L * (X @ L) / (L @ L)
     ey = Y - L * (Y @ L) / (L @ L)
-    Ld = np.zeros(n)                              # do(L = 0)
+    Ld = np.zeros(n)
     Xd = a * Ld + r.normal(size=n)
     Yd = b * Ld + r.normal(size=n)
     return {"ham_bağıntı": kor(X, Y), "kısmî_bağıntı": kor(ex, ey),
@@ -684,11 +511,6 @@ def ortuk_sahte_baginti(n: int = 4000, a: float = 1.0, b: float = 1.0,
 
 
 def locus_izdusumu(J: np.ndarray) -> np.ndarray:
-    """``P = I − Jᵀ(JJᵀ)⁻¹J`` — ``ker(dφ)``ye dik izdüşüm.
-
-    ``JJᵀ`` tekilse (kısıtlar bağımlıysa) sözde ters kullanılır:
-    ``inv`` çağırmak orada patlardı.
-    """
     J = np.atleast_2d(np.asarray(J, float))
     return np.eye(J.shape[1]) - J.T @ np.linalg.pinv(J @ J.T) @ J
 
@@ -699,14 +521,6 @@ def locus_uzerinde_yurut(phi: Callable[[np.ndarray], np.ndarray],
                          x0: np.ndarray, adim: float = 0.05,
                          tur: int = 200, duzelt: bool = True
                          ) -> Dict[str, object]:
-    """``S = {φ = 0}`` üzerinde inişi yürüt.
-
-    ``duzelt=False`` iken salt teğet izdüşümü kullanılır: ikinci
-    mertebeden **kayma** birikir ve nokta locus'tan çıkar.  ``True``
-    iken her adımdan sonra bir Newton düzeltmesi
-    (``x ← x − J⁺φ(x)``) yapılır ve kayma bastırılır.  İkisi
-    kıyaslanıyor.
-    """
     x = np.asarray(x0, float).copy()
     ihlal, deger = [], []
     for _ in range(tur):
@@ -722,7 +536,6 @@ def locus_uzerinde_yurut(phi: Callable[[np.ndarray], np.ndarray],
 
 
 def _ornek_model() -> YapisalModel:
-    """``Z → X → Y``, ``Z → Y`` — toplamsal gürültü."""
     g = Cizge(("Z", "X", "Y"), (("Z", "X"), ("X", "Y"), ("Z", "Y")))
     return YapisalModel(g, {
         "Z": lambda pa, u: u,
@@ -774,7 +587,7 @@ def _rapor_fitrat_karsi_olgusal() -> str:
         t = abduction_tekil_mi(mm, gg)
         s.append("  %s: gözlem B=%.3f  tekil mi? %-5s  tekil düğüm=%s"
                  % (ad, gg["B"], t["tekil_mi"], t["tekil_düğümler"]))
-    gg = {"A": 1.0, "B": 0.5}       # B < A: u² = −0.5, kök YOK
+    gg = {"A": 1.0, "B": 0.5}
     t = abduction_tekil_mi(kotu, gg)
     s.append("  u² modelinde B=0.5 (yani u²=−0.5) istenirse: tekil mi? %s %s"
              % (t["tekil_mi"], t["tekil_düğümler"]))
@@ -824,7 +637,6 @@ def _rapor_fitrat_karsi_olgusal() -> str:
     s.append("  ikisi de sahte yolu kesiyor. b=0'da zaten bağıntı yok.")
 
     s.append("\n=== Denge lokusu: teğet izdüşümü yetiyor mu? ===")
-    # φ(x) = ‖x‖² − 1 (birim çember), hedef: x₀'ı küçült
     def phi(x):
         return np.array([float(x @ x) - 1.0])
 
@@ -834,9 +646,6 @@ def _rapor_fitrat_karsi_olgusal() -> str:
     def grad(x):
         return np.array([1.0, 0.0])
 
-    # Başlangıç (1,0) OLMAZ: orada gradyan tamamen normal yönde, teğet
-    # izdüşümü sıfır verir ve hiçbir şey kımıldamaz (ölçüldü: ihlal 0,
-    # varılan nokta yine (1,0)).  Genel bir noktadan başlanıyor.
     x0 = np.array([math.cos(0.4), math.sin(0.4)])
     for adim in (0.05, 0.2, 0.5):
         a_ = locus_uzerinde_yurut(phi, jac, grad, x0, adim=adim, duzelt=False)
@@ -852,22 +661,11 @@ def _rapor_fitrat_karsi_olgusal() -> str:
     return "\n".join(s)
 
 
-# ====================================================================
-#  fitrat/serbest_enerji.py
-# ====================================================================
-
-EPS_LOG = 1e-300          # logaritma tabanı: sıfırın logu alınmasın
+EPS_LOG = 1e-300
 
 
 @dataclass(frozen=True)
 class AyrikModel:
-    """``K`` gizli hâl, ``N`` gözlem değeri.
-
-    ``pz``: ``(K,)`` önsel.  ``pxz``: ``(K, N)`` şartlı olabilirlik.
-    İkisi de satır bazında toplamı 1 olmak zorundadır; kurulurken
-    **denetlenir** — normalize edilmemiş bir tablo bütün büyüklükleri
-    sessizce bozar.
-    """
     pz: np.ndarray
     pxz: np.ndarray
 
@@ -894,18 +692,10 @@ class AyrikModel:
         return self.pxz.shape[1]
 
     def ortak(self, x: int) -> np.ndarray:
-        """``p(x, z)`` — ``z`` üzerinde vektör."""
         return self.pz * self.pxz[:, x]
 
 
 def kl(q: np.ndarray, p: np.ndarray) -> float:
-    """``D_KL(q‖p) = Σ q ln(q/p)``.
-
-    ``q_i = 0`` olan terimler ``0 ln 0 = 0`` kabulüyle atlanır (limit
-    doğrudur).  ``q_i > 0`` iken ``p_i = 0`` ise KL sonsuzdur ve
-    ``inf`` döner — büyük bir sayıyla değiştirilmez, çünkü o hâlde
-    sınır da anlamını yitirir ve bunun görünmesi gerekir.
-    """
     q = np.asarray(q, float)
     p = np.asarray(p, float)
     m = q > 0
@@ -915,18 +705,15 @@ def kl(q: np.ndarray, p: np.ndarray) -> float:
 
 
 def kanit_log(model: AyrikModel, x: int) -> float:
-    """``ln p(x)`` — kapalı form (küçük ayrık modelde toplayarak)."""
     return float(np.log(model.ortak(x).sum()))
 
 
 def ardil(model: AyrikModel, x: int) -> np.ndarray:
-    """Tam ardıl ``p(z|x)`` — ELBO'nun sıkı olduğu tek nokta."""
     o = model.ortak(x)
     return o / o.sum()
 
 
 def elbo(model: AyrikModel, q: np.ndarray, x: int) -> float:
-    """``E_q[ln p(x,z) − ln q(z)]``."""
     q = np.asarray(q, float)
     if abs(q.sum() - 1.0) > 1e-9:
         raise ValueError("q normalize değil")
@@ -938,13 +725,11 @@ def elbo(model: AyrikModel, q: np.ndarray, x: int) -> float:
 
 
 def serbest_enerji(model: AyrikModel, q: np.ndarray, x: int) -> float:
-    """``F = −ELBO``.  Sınır: ``F ≥ −ln p(x)``."""
     return -elbo(model, q, x)
 
 
 def serbest_enerji_ayrisimi(model: AyrikModel, q: np.ndarray, x: int
                             ) -> Dict[str, float]:
-    """``F = kesinsizlik + karmaşıklık`` ayrışımı ve sağlaması."""
     q = np.asarray(q, float)
     m = q > 0
     kesinsizlik = -float(np.sum(q[m] * np.log(np.maximum(model.pxz[m, x],
@@ -962,11 +747,6 @@ def serbest_enerji_ayrisimi(model: AyrikModel, q: np.ndarray, x: int
 
 def sinir_dogrula(model: AyrikModel, x: int, deneme: int = 2000,
                   tohum: int = 0) -> Dict[str, object]:
-    """``F ≥ −ln p(x)`` sınırını rastgele ``q``larda tartar.
-
-    Ayrıca **eşitlik ancak ardılda** iddiasını sınar: en küçük boşluk
-    veren ``q``, tam ardıla ne kadar yakın?
-    """
     r = np.random.default_rng(tohum)
     surpriz = -kanit_log(model, x)
     p_zx = ardil(model, x)
@@ -994,23 +774,14 @@ def sinir_dogrula(model: AyrikModel, x: int, deneme: int = 2000,
 
 def koordinat_inisi(model: AyrikModel, x: int, adim: int = 50,
                     tohum: int = 0) -> Dict[str, object]:
-    """``F``yi ``q`` üzerinde azaltmak, ardıla yakınsamalı.
-
-    Kapalı çözümü bilinen bir hâlde gradyan inişine gerek yoktur:
-    ``F``nin ``q`` üzerindeki asgarisi doğrudan ``q ∝ p(x,z)``dir.
-    Yine de iteratif iniş yazılır ki **yakınsadığı yer** bağımsız
-    olarak doğrulanabilsin.
-    """
     r = np.random.default_rng(tohum)
     q = r.dirichlet(np.ones(model.K))
     o = model.ortak(x)
     tarih: List[float] = []
     for _ in range(adim):
         tarih.append(serbest_enerji(model, q, x))
-        # F(q) = −Σq ln o + Σ q ln q ; ∂F/∂q_k = −ln o_k + ln q_k + 1
-        # Lagrange ile normalize edilmiş sabit nokta: q ∝ o (yumuşatılmış)
         hedef = o / o.sum()
-        q = 0.5 * q + 0.5 * hedef        # sönümlü, tek adımda atlamasın
+        q = 0.5 * q + 0.5 * hedef
         q = q / q.sum()
     tarih.append(serbest_enerji(model, q, x))
     return {
@@ -1024,11 +795,6 @@ def koordinat_inisi(model: AyrikModel, x: int, adim: int = 50,
 
 
 def gauss_kl(m1: float, s1: float, m2: float, s2: float) -> float:
-    """``D_KL(N(m₁,s₁²) ‖ N(m₂,s₂²))`` — kapalı form.
-
-    .. math::  \\ln\\frac{s_2}{s_1} + \\frac{s_1^2 + (m_1-m_2)^2}{2s_2^2}
-               - \\frac12
-    """
     if s1 <= 0 or s2 <= 0:
         raise ValueError("standart sapmalar pozitif olmalı")
     return float(np.log(s2 / s1) + (s1 ** 2 + (m1 - m2) ** 2)
@@ -1038,14 +804,6 @@ def gauss_kl(m1: float, s1: float, m2: float, s2: float) -> float:
 def gauss_serbest_enerji(x: float, m_q: float, s_q: float,
                          m_p: float, s_p: float, s_g: float
                          ) -> Dict[str, float]:
-    """Doğrusal Gauss modelinde ``F`` ve kapalı ``−ln p(x)``.
-
-    Model: ``z ~ N(m_p, s_p²)``, ``x | z ~ N(z, s_g²)``.  O hâlde
-    ``x ~ N(m_p, s_p² + s_g²)`` (kapalı) ve tam ardıl da Gauss'tur.
-
-    ``F = E_q[−ln p(x|z)] + KL(q‖p(z))`` doğrudan hesaplanır:
-    ``E_q[(x−z)²] = (x − m_q)² + s_q²``.
-    """
     kesinsizlik = (0.5 * np.log(2 * np.pi * s_g ** 2)
                    + ((x - m_q) ** 2 + s_q ** 2) / (2 * s_g ** 2))
     karmasiklik = gauss_kl(m_q, s_q, m_p, s_p)
@@ -1053,7 +811,6 @@ def gauss_serbest_enerji(x: float, m_q: float, s_q: float,
     s_x = np.sqrt(s_p ** 2 + s_g ** 2)
     surpriz = float(0.5 * np.log(2 * np.pi * s_x ** 2)
                     + (x - m_p) ** 2 / (2 * s_x ** 2))
-    # Tam ardıl: hassasiyetler toplanır
     tau = 1 / s_p ** 2 + 1 / s_g ** 2
     m_ardil = (m_p / s_p ** 2 + x / s_g ** 2) / tau
     s_ardil = np.sqrt(1 / tau)
@@ -1118,12 +875,7 @@ def _rapor_fitrat_serbest_enerji() -> str:
     return "\n".join(s)
 
 
-
-# ====================================================================
-#  fitrat/denge.py
-# ====================================================================
-
-EPS_MAKINE = np.finfo(float).eps   # makine hassasiyeti
+EPS_MAKINE = np.finfo(float).eps
 
 
 _H3 = EPS_MAKINE ** (1.0 / 3.0)
@@ -1131,30 +883,18 @@ _H3 = EPS_MAKINE ** (1.0 / 3.0)
 
 @dataclass(frozen=True)
 class Oyun:
-    """``n`` failli bir oyun.
-
-    ``F(x, θ)`` birinci mertebe şartlarını verir; içsel dengede sıfırdır.
-    ``n`` fail sayısı, ``p`` parametre sayısıdır.
-    """
     n: int
     p: int
     F: Callable[[np.ndarray, np.ndarray], np.ndarray]
     ad: str = ""
 
     def artik(self, x: np.ndarray, teta: np.ndarray) -> float:
-        """Birinci mertebe şartlarının ihlali — dengede sıfır."""
         return float(np.linalg.norm(self.F(np.asarray(x, float),
                                            np.asarray(teta, float))))
 
 
 def merkezi_jakobi(g: Callable[[np.ndarray], np.ndarray],
                    x: np.ndarray) -> np.ndarray:
-    """``g``'nin ``x``teki Jacobi'si, merkezî farkla (hata ``O(h²)``).
-
-    Her koordinat için adım ayrı ölçeklenir: ``h_j = ε^{1/3}·max(1,|x_j|)``.
-    Sabit bir ``h`` kullanmak, büyük ve küçük koordinatların bir arada
-    bulunduğu hâllerde birinde kesme, diğerinde yuvarlama hatası doğurur.
-    """
     x = np.asarray(x, float)
     g0 = np.asarray(g(x), float)
     J = np.empty((g0.size, x.size))
@@ -1162,7 +902,6 @@ def merkezi_jakobi(g: Callable[[np.ndarray], np.ndarray],
         h = _H3 * max(1.0, abs(x[j]))
         arti = x.copy(); arti[j] += h
         eksi = x.copy(); eksi[j] -= h
-        # Fiilî adım, kayan noktada yuvarlandıktan sonraki farktır:
         gercek = arti[j] - eksi[j]
         J[:, j] = (np.asarray(g(arti), float)
                    - np.asarray(g(eksi), float)) / gercek
@@ -1174,15 +913,6 @@ def newton_koku(g: Callable[[np.ndarray], np.ndarray],
                 tol: float = 1e-11,
                 azami_adim: int = 100
                 ) -> Tuple[np.ndarray, bool, int, float]:
-    """``g(x) = 0`` için sönümlü Newton.
-
-    Sönüm (line search) şart: sönümsüz Newton uzak başlangıçlarda
-    ıraksayabilir.  Adım, artık normunu **düşürene** kadar yarılanır;
-    hiçbir yarılama düşürmüyorsa durulur ve ``yakinsadi=False`` döner —
-    yakınsamamış bir sonuç yakınsamış gibi sunulmaz.
-
-    Dönen: ``(x, yakınsadı, adım sayısı, son artık)``.
-    """
     x = np.array(x0, float)
     art = float(np.linalg.norm(g(x)))
     for k in range(azami_adim):
@@ -1201,7 +931,7 @@ def newton_koku(g: Callable[[np.ndarray], np.ndarray],
                 break
             t *= 0.5
         else:
-            return x, False, k, art        # hiçbir sönüm düşürmedi
+            return x, False, k, art
         x, art = yeni, yeni_art
     return x, art < tol, azami_adim, art
 
@@ -1209,7 +939,6 @@ def newton_koku(g: Callable[[np.ndarray], np.ndarray],
 def denge_bul(oyun: Oyun, teta: Sequence[float],
               x0: Optional[Sequence[float]] = None,
               tol: float = 1e-11) -> Dict[str, object]:
-    """Oyunun içsel dengesini bul ve hâlini bildir."""
     teta = np.asarray(teta, float)
     if teta.size != oyun.p:
         raise ValueError(f"θ boyu {oyun.p} olmalı, {teta.size} verildi")
@@ -1221,21 +950,11 @@ def denge_bul(oyun: Oyun, teta: Sequence[float],
 
 
 def spektral_yaricap(M: np.ndarray) -> float:
-    """``ρ(M) = max |λ_i|`` — özdeğerlerin azamî mutlak değeri."""
     return float(np.max(np.abs(np.linalg.eigvals(np.asarray(M, float)))))
 
 
 def kararli_mi(oyun: Oyun, x: np.ndarray, teta: Sequence[float]
                ) -> Dict[str, object]:
-    """En iyi karşılık dinamiğinin yerel kararlılığı.
-
-    ``F(x)=0`` sisteminin ``ẋ = F(x)`` akışı olarak kararlılığı,
-    ``∂_x F``in özdeğerlerinin **reel kısımlarının negatifliğine**
-    bakar (Lyapunov).  Ayrıca en iyi karşılık **iterasyonunun**
-    (ayrık zaman) kararlılığı için ``ρ(I + ∂_xF)`` değil, sabit nokta
-    dönüşümünün Jacobi'si gerekir; ikisi ayrı sorulardır ve burada
-    ikisi de ayrı ayrı bildirilir, biri diğerinin yerine geçmez.
-    """
     teta = np.asarray(teta, float)
     J = merkezi_jakobi(lambda z: oyun.F(z, teta), np.asarray(x, float))
     ozd = np.linalg.eigvals(J)
@@ -1252,11 +971,6 @@ def en_iyi_karsilik_iterasyonu(
         en_iyi: Callable[[np.ndarray], np.ndarray],
         x0: Sequence[float], azami: int = 500,
         tol: float = 1e-12) -> Dict[str, object]:
-    """``x ← EnİyiKarşılık(x)`` sabit nokta iterasyonu.
-
-    Yakınsarsa dengedir; yakınsamazsa **yakınsamadı** denir.  Ayrıca son
-    adımdaki büzülme oranı ölçülür: ``<1`` ise yerel büzülme vardır.
-    """
     x = np.asarray(x0, float)
     farklar: List[float] = []
     for k in range(azami):
@@ -1279,14 +993,6 @@ def ortuk_fonksiyon_turevi(oyun: Oyun, x: np.ndarray,
                            teta: Sequence[float],
                            tekillik_esigi: float = 1e-10
                            ) -> Optional[np.ndarray]:
-    """``∂x*/∂θ = −(∂ₓF)⁻¹ ∂_θF`` — ya da şart sağlanmıyorsa ``None``.
-
-    Örtük fonksiyon teoreminin şartı ``∂ₓF``in tersinir olmasıdır.
-    Tekilse denge parametreye göre türevlenebilir bir fonksiyon olmak
-    zorunda **değildir**; o hâlde bir sayı uydurmak yerine ``None``
-    döndürülür.  Tekillik, koşul sayısıyla ölçülür (determinantla
-    değil — determinant ölçekle birlikte patlar).
-    """
     x = np.asarray(x, float)
     teta = np.asarray(teta, float)
     Fx = merkezi_jakobi(lambda z: oyun.F(z, teta), x)
@@ -1299,12 +1005,6 @@ def ortuk_fonksiyon_turevi(oyun: Oyun, x: np.ndarray,
 def hassasiyet_sonlu_farkla(oyun: Oyun, teta: Sequence[float],
                             x0: Optional[Sequence[float]] = None,
                             h: float = 1e-5) -> np.ndarray:
-    """Aynı hassasiyeti dengeyi **yeniden çözerek** hesaplar.
-
-    Örtük fonksiyon teoremiyle çıkanla karşılaştırmak içindir: iki
-    bağımsız yol aynı sayıya varmalıdır.  Pahalıdır (her parametre için
-    iki tam Newton çözümü), o yüzden asıl yol teoremdir.
-    """
     teta = np.asarray(teta, float)
     taban = denge_bul(oyun, teta, x0)["x"]
     D = np.empty((oyun.n, oyun.p))
@@ -1318,23 +1018,6 @@ def hassasiyet_sonlu_farkla(oyun: Oyun, teta: Sequence[float],
 
 
 def cournot(n: int) -> Oyun:
-    """``n`` firmalı doğrusal Cournot oyunu.
-
-    Ters talep ``P(Q) = a − b·Q``, maliyet ``c_i·x_i``.  Fayda
-    ``u_i = (a − b·Σx)·x_i − c_i x_i``, birinci mertebe şartı:
-
-    .. math::  F_i = a - b\\Bigl(\\sum_j x_j\\Bigr) - b x_i - c_i = 0
-
-    FOC'ları toplayınca ``Q = (na − Σc)/(b(n+1))``, geri koyunca genel
-    kapalı çözüm çıkar:
-
-    .. math::  x_i^\\star = \\frac{a - (n+1)c_i + \\sum_j c_j}{b(n+1)}
-
-    Simetrik hâlde (``c_i = c``) bu ``x* = (a−c)/(b(n+1))``e iner.  Bu, sayısal çözümün sağlaması için
-    kullanılır — beklenen cevabı bağımsız olarak bilmek şarttır.
-
-    θ = (a, b, c₀, …, c_{n−1}), yani ``p = n + 2``.
-    """
     def F(x: np.ndarray, teta: np.ndarray) -> np.ndarray:
         a, b = teta[0], teta[1]
         c = teta[2:]
@@ -1345,7 +1028,6 @@ def cournot(n: int) -> Oyun:
 
 
 def cournot_kapali_cozum(n: int, a: float, b: float, c: float) -> float:
-    """Simetrik Cournot dengesi — kalemle çıkarılan cevap."""
     return (a - c) / (b * (n + 1))
 
 
@@ -1371,7 +1053,6 @@ def _rapor_fitrat_denge() -> str:
 
     s.append("\n=== En iyi karşılık iterasyonu ===")
     def en_iyi(x):
-        # x_i = (a − c_i − b·Σ_{j≠i} x_j) / (2b)
         Q = float(np.sum(x))
         return (a - c - b * (Q - x)) / (2 * b)
     it = en_iyi_karsilik_iterasyonu(en_iyi, np.zeros(n))
@@ -1402,13 +1083,10 @@ def _rapor_fitrat_denge() -> str:
     s.append(f"  kendi maliyetine göre ∂x*_0/∂c_0 = {D[0, 2]:.10f}"
              f"   kapalı −n/(b(n+1)) = {-n / (b * (n + 1)):.10f}")
 
-    # Asimetrik hâl: kapalı çözüm x_i = (a − n c_i + Σ_j c_j) / (b(n+1))
     s.append("\n=== Asimetrik maliyetler — kapalı çözümle sağlama ===")
     cc = np.array([1.0, 2.0, 3.0, 4.0])
     teta2 = np.concatenate(([a, b], cc))
     r2 = denge_bul(oyun, teta2)
-    # FOC'lar toplanınca Q = (na − Σc)/(b(n+1)); geri koyunca:
-    #   x_i = [a − (n+1)c_i + Σc] / (b(n+1))
     kapali = (a - (n + 1) * cc + np.sum(cc)) / (b * (n + 1))
     s.append(f"  sayısal = {np.array2string(r2['x'], precision=8)}")
     s.append(f"  kapalı  = {np.array2string(kapali, precision=8)}")
@@ -1428,13 +1106,7 @@ def _rapor_fitrat_denge() -> str:
     return "\n".join(s)
 
 
-
-# ====================================================================
-#  fitrat/tevafuk.py
-# ====================================================================
-
 def _pearson(u: np.ndarray, v: np.ndarray) -> float:
-    """Sabit değişkende 0 döner — sıfıra bölmek yerine 'bağıntı yok'."""
     u = np.asarray(u, float); v = np.asarray(v, float)
     if u.size < 2:
         return 0.0
@@ -1447,17 +1119,6 @@ def _pearson(u: np.ndarray, v: np.ndarray) -> float:
 
 def sartli_bagintisi(dk: np.ndarray, dl: np.ndarray,
                      H: np.ndarray) -> float:
-    """``ρ(d_k, d_l | H)`` — hüküm katmanlarında ağırlıklı ortalama.
-
-    ``H`` ikili (0/1) olduğundan şartlı bağıntı, iki katmanda ayrı ayrı
-    hesaplanıp katman büyüklüğüyle ağırlıklandırılır.  Bu, kısmî
-    bağıntı (partial correlation) formülüne göre daha doğrudandır ve
-    ``H``in ikili olduğu hâlde tam sonucu verir; kısmî bağıntı ise
-    doğrusallık farz eder.
-
-    Bir katmanda 2'den az örnek varsa o katman **atlanır** (ağırlığı
-    sıfırdır); iki örnekten bağıntı uydurulmaz.
-    """
     dk = np.asarray(dk, float); dl = np.asarray(dl, float)
     H = np.asarray(H)
     toplam, agirlik = 0.0, 0.0
@@ -1472,21 +1133,11 @@ def sartli_bagintisi(dk: np.ndarray, dl: np.ndarray,
 
 
 def cift_uyusmasi(dk: np.ndarray, dl: np.ndarray) -> float:
-    """``a(d_k, d_l)`` — iki delil aynı yöne mi işaret ediyor?
-
-    Ham Pearson bağıntısı kullanılır: ``+1`` tam uyuşma, ``−1`` tam
-    zıtlık, ``0`` alâkasızlık.
-    """
     return _pearson(dk, dl)
 
 
 def tevafuk_olcusu(deliller: Sequence[np.ndarray], H: np.ndarray
                    ) -> Dict[str, object]:
-    """Şartlı-bağımsızlıkla ağırlıklandırılmış tevâfuk.
-
-    ``m < 2`` ise tevâfuk tanımsızdır (tek şahit kendisiyle tevâfuk
-    etmez); ``None`` döner, sıfır değil — ikisi ayrı şeydir.
-    """
     m = len(deliller)
     if m < 2:
         return {"tevafuk": None, "çift_sayısı": 0, "çiftler": [],
@@ -1495,7 +1146,7 @@ def tevafuk_olcusu(deliller: Sequence[np.ndarray], H: np.ndarray
     ciftler: List[Dict[str, float]] = []
     toplam = 0.0
     for k in range(m):
-        for l in range(k + 1, m):           # k < l : her çift BİR kere
+        for l in range(k + 1, m):
             a = cift_uyusmasi(deliller[k], deliller[l])
             rho = sartli_bagintisi(deliller[k], deliller[l], H)
             w = 1.0 - abs(rho)
@@ -1514,13 +1165,6 @@ def tevafuk_olcusu(deliller: Sequence[np.ndarray], H: np.ndarray
 
 def log_olabilirlik_orani(d: np.ndarray, H: np.ndarray,
                           duzeltme: float = 0.5) -> float:
-    """``ln Λ = ln[P(d=1|H)/P(d=1|¬H)]`` — ikili delil için.
-
-    ``duzeltme`` Jeffreys düzeltmesidir (her hücreye ½): örneklem
-    küçükken sıfır hücre ``ln 0 = −∞`` verir ve bir şahit tek başına
-    hükmü kesinleştirir.  Düzeltme bunu engeller ve **taraf tutmaz**
-    (her iki hücreye de aynı miktarda eklenir).
-    """
     d = np.asarray(d).astype(int)
     H = np.asarray(H).astype(int)
     p1 = (float(np.sum(d[H == 1])) + duzeltme) / (float(np.sum(H == 1))
@@ -1532,7 +1176,6 @@ def log_olabilirlik_orani(d: np.ndarray, H: np.ndarray,
 
 def bayes_yigma(deliller: Sequence[np.ndarray], H: np.ndarray,
                 onsel_oran: float = 1.0) -> Dict[str, object]:
-    """Bağımsızlık farzıyla log-oranların toplanması."""
     lo = [log_olabilirlik_orani(d, H) for d in deliller]
     return {"log_Λ'lar": lo, "toplam": float(np.sum(lo)),
             "ardıl_log_oran": float(np.log(onsel_oran) + np.sum(lo))}
@@ -1540,14 +1183,6 @@ def bayes_yigma(deliller: Sequence[np.ndarray], H: np.ndarray,
 
 def fazla_sayma(deliller: Sequence[np.ndarray], H: np.ndarray
                 ) -> Dict[str, object]:
-    """Bağımsızlık farzı ne kadar fazla saydırıyor?
-
-    Ölçüt: bütün delillerin toplamı ile, **birbiriyle en az bağıntılı**
-    tek delilin katkısının karşılaştırılması değil — bu yanıltırdı.
-    Bunun yerine tevâfuk ağırlıklarının ortalaması alınır: ağırlık 1'e
-    ne kadar yakınsa yığma o kadar meşrudur.  Ağırlıklı toplam,
-    fiilen "kaç bağımsız şahide denk geldiğini" verir.
-    """
     t = tevafuk_olcusu(deliller, H)
     if t["tevafuk"] is None:
         return {"muteber_şahit_sayısı": float(len(deliller)),
@@ -1555,7 +1190,6 @@ def fazla_sayma(deliller: Sequence[np.ndarray], H: np.ndarray
     y = bayes_yigma(deliller, H)
     ort_agirlik = float(np.mean([c["ağırlık"] for c in t["çiftler"]]))
     m = len(deliller)
-    # m şahidin fiilî sayısı: tam bağımsızsa m, tam bağımlıysa 1.
     muteber = 1.0 + (m - 1.0) * ort_agirlik
     return {
         "şahit_sayısı": m,
@@ -1569,17 +1203,6 @@ def fazla_sayma(deliller: Sequence[np.ndarray], H: np.ndarray
 
 def sahit_uret(n: int, m: int, dogruluk: float, ortak_kaynak: float,
                tohum: int = 0) -> Tuple[np.ndarray, List[np.ndarray]]:
-    """``m`` şahit üret; ``ortak_kaynak`` bağımlılığın şiddeti.
-
-    Her şahit, olasılık ``dogruluk`` ile hükmü doğru bildirir.  Ayrıca
-    ``ortak_kaynak`` olasılığıyla, kendi gözlemi yerine **ortak bir
-    gürültü kaynağını** bildirir — bu, "hepsi aynı dedikoduyu duymuş"
-    hâlidir ve şahitler arasında hüküm verildikten sonra da kalan bir
-    bağıntı doğurur.
-
-    ``ortak_kaynak = 0`` iken şahitler ``H`` verildiğinde şartlı
-    bağımsızdır; ``1`` iken hepsi tek bir şahide iner.
-    """
     r = np.random.default_rng(tohum)
     H = r.integers(0, 2, n)
     ortak = r.integers(0, 2, n)
@@ -1634,7 +1257,6 @@ def _rapor_fitrat_tevafuk() -> str:
     t = tevafuk_olcusu(D, H)
     s.append(f"  iki bağımsız şahit: çift sayısı = {t['çift_sayısı']}"
              f"  tevafuk = {t['tevafuk']:+.4f}")
-    # Birbirinin tam zıddı iki şahit
     H2 = np.array([0, 1] * 500)
     d1 = H2.copy(); d2 = 1 - H2
     t2 = tevafuk_olcusu([d1, d2], H2)
@@ -1644,20 +1266,7 @@ def _rapor_fitrat_tevafuk() -> str:
     return "\n".join(s)
 
 
-
-# ====================================================================
-#  fitrat/havuz.py
-# ====================================================================
-
 def logsumexp(a: Sequence[float]) -> float:
-    """``ln Σ exp(a_i)`` — azamî terim dışarı alınarak.
-
-    ``m = max a``; ``ln Σ e^{a_i} = m + ln Σ e^{a_i − m}``.  Üsler artık
-    ``≤ 0`` olduğundan taşma imkânsız; en az bir terim tam olarak
-    ``e^0 = 1`` olduğundan alttan taşma da toplamı sıfırlayamaz.
-    Hepsi ``−inf`` ise netice ``−inf``tir (boş toplam değil, imkânsız
-    hâl).
-    """
     arr = [float(x) for x in a]
     if not arr:
         return float("-inf")
@@ -1668,7 +1277,6 @@ def logsumexp(a: Sequence[float]) -> float:
 
 
 def log_normalize(log_a: Sequence[float]) -> List[float]:
-    """Log uzayında normalize: ``log_a − logsumexp(log_a)``."""
     z = logsumexp(log_a)
     if z == float("-inf"):
         raise ValueError("bütün hipotezler imkânsız — havuz çökmüş")
@@ -1683,12 +1291,6 @@ class Hukum(Enum):
 
 @dataclass
 class Hipotez:
-    """Bir izah adayı.
-
-    ``log_olabilirlik(d)`` delilin bu hipotez altındaki log
-    olasılığını verir.  ``iddiayi_dogrular``: bu izah doğruysa asıl
-    iddia da doğru mu?
-    """
     ad: str
     log_onsel: float
     log_olabilirlik: Callable[[object], float]
@@ -1702,12 +1304,6 @@ class Hipotez:
 
 @dataclass
 class Havuz:
-    """Şüphe uzayı ve onun üzerindeki hüküm mekanizması.
-
-    ``esik``: en yüksek hipotezin ardılı için asgarî değer.
-    ``fark_esigi``: birinci ile ikinci arasındaki asgarî **log-oran**
-    (nat cinsinden; ``ln 3 ≈ 1.1`` "üç katı" demektir).
-    """
     hipotezler: List[Hipotez]
     esik: float = 0.7
     fark_esigi: float = math.log(3.0)
@@ -1728,9 +1324,7 @@ class Havuz:
         for h, l in zip(self.hipotezler, logs):
             h.log_ardil = l
 
-    # --- güncelleme ---------------------------------------------------
     def delil_ekle(self, delil: object, etiket: str = "") -> Dict[str, object]:
-        """Tek bir delille Bayes güncellemesi — hep log uzayında."""
         ham = [h.log_ardil + h.log_olabilirlik(delil)
                for h in self.hipotezler]
         if logsumexp(ham) == float("-inf"):
@@ -1752,17 +1346,14 @@ class Havuz:
         et = etiketler or [f"d{i}" for i in range(len(deliller))]
         return [self.delil_ekle(d, e) for d, e in zip(deliller, et)]
 
-    # --- hüküm --------------------------------------------------------
     def siralama(self) -> List[Hipotez]:
         return sorted(self.hipotezler, key=lambda h: -h.log_ardil)
 
     def ayrisma(self) -> float:
-        """Birinci ile ikinci arasındaki log-oran."""
         s = self.siralama()
         return s[0].log_ardil - s[1].log_ardil
 
     def hukum(self) -> Tuple[Hukum, Dict[str, object]]:
-        """Kabul / red / karantina — iki şartın ikisi de aranır."""
         s = self.siralama()
         bas, ikinci = s[0], s[1]
         ayr = bas.log_ardil - ikinci.log_ardil
@@ -1779,16 +1370,7 @@ class Havuz:
             return Hukum.KARANTINA, gerekce
         return (Hukum.KABUL if bas.iddiayi_dogrular else Hukum.RED), gerekce
 
-    # --- şüphe uzayını genişletme ------------------------------------
     def izah_ekle(self, h: Hipotez, pay: float = 0.1) -> None:
-        """Sonradan akla gelen bir izahı havuza al.
-
-        Yeni izaha ihtimal kütlesinin ``pay`` kadarı verilir, kalanı
-        mevcutlar arasında **oranları korunarak** paylaştırılır.  Böylece
-        yeni bir ihtimalin akla gelmesi, eski deliller yeniden işlenmeden
-        de hükmü gevşetebilir — ki doğrusu budur: şüphe uzayı eksikse
-        varılan kesinlik sahtedir.
-        """
         if not 0.0 < pay < 1.0:
             raise ValueError("pay ∈ (0,1)")
         kalan = math.log1p(-pay)
@@ -1813,13 +1395,11 @@ class Havuz:
 
 
 def _bernoulli(p: float) -> Callable[[object], float]:
-    """``d=1`` iken ``ln p``, ``d=0`` iken ``ln(1−p)``."""
     lp, lq = math.log(p), math.log1p(-p)
     return lambda d: lp if d else lq
 
 
 def _havuz_kur() -> Havuz:
-    """İddia: 'şu âlet bozuk'. Üç izah."""
     return Havuz([
         Hipotez("âlet bozuk", math.log(0.2), _bernoulli(0.9), True),
         Hipotez("ölçen beceriksiz", math.log(0.3), _bernoulli(0.6), False),
@@ -1912,12 +1492,6 @@ def _rapor_fitrat_havuz() -> str:
     return "\n".join(s)
 
 
-
-
-# ====================================================================
-#  KÜME 8: bağlanım ile müdahalenin ölçülen farkı
-# ====================================================================
-
 A_ZX, B_XY, C_ZY = 1.5, 0.8, -2.0
 
 
@@ -1927,7 +1501,6 @@ def uret(n: int, tohum: int = 0, mudahale: float | None = None) -> Tuple[np.ndar
     if mudahale is None:
         x = A_ZX * z + rng.normal(size=n) * 0.5
     else:
-        # do(X): X artık Z'den gelmiyor, dışarıdan atanıyor
         x = rng.normal(size=n) * mudahale
     y = B_XY * x + C_ZY * z + rng.normal(size=n) * 0.5
     return z, x, y
@@ -1944,12 +1517,11 @@ def _kismi_egim(x: np.ndarray, z: np.ndarray, y: np.ndarray) -> float:
 
 
 def baglanim_mudahale_ayrimi(n: int = 200000, tohum: int = 0) -> Dict[str, object]:
-    """Üç tahmin, bilinen doğru cevap ``b = 0.8`` ile kıyaslanır."""
     z, x, y = uret(n, tohum)
-    ham = _egim(x, y)                              # E[Y|X]: yanlı
-    duzeltilmis = _kismi_egim(x, z, y)             # arka kapı: doğru
+    ham = _egim(x, y)
+    duzeltilmis = _kismi_egim(x, z, y)
 
-    _, xi, yi = uret(n, tohum + 1, mudahale=1.0)   # fiilî do(X)
+    _, xi, yi = uret(n, tohum + 1, mudahale=1.0)
     deneysel = _egim(xi, yi)
 
     return {
@@ -1965,15 +1537,9 @@ def baglanim_mudahale_ayrimi(n: int = 200000, tohum: int = 0) -> Dict[str, objec
 
 
 def olculmemis_karistirici(n: int = 200000, tohum: int = 0) -> Dict[str, object]:
-    """**Zaaf.** Z gözlenmiyorsa arka kapı düzeltmesi kurulamaz.
-
-    Burada ikinci, GİZLİ bir karıştırıcı U eklenir; Z ölçülür, U ölçülmez.
-    Z ile düzeltmek yetmez: tahmin hâlâ yanlıdır. do-hesabı bir hesap
-    usulüdür, karıştırıcı üretmez -- neyin ölçüldüğü bir VERİ meselesidir.
-    """
     rng = np.random.default_rng(tohum)
     z = rng.normal(size=n)
-    u = rng.normal(size=n)                       # gizli
+    u = rng.normal(size=n)
     x = A_ZX * z + 1.2 * u + 0.5 * rng.normal(size=n)
     y = B_XY * x + C_ZY * z + 1.7 * u + 0.5 * rng.normal(size=n)
 
@@ -1990,25 +1556,15 @@ def olculmemis_karistirici(n: int = 200000, tohum: int = 0) -> Dict[str, object]
 
 
 def catal_ve_carpisma(n: int = 200000, tohum: int = 0) -> Dict[str, object]:
-    """Hangi değişkene şart koşulacağı, grafiğin YÖNÜNE bağlıdır.
-
-    * **Çatal** ``X ← Z → Y``: Z'ye şart koşmak sahte ilişkiyi KALDIRIR.
-    * **Çarpışma** ``X → C ← Y``: C'ye şart koşmak, bağımsız X ve Y
-      arasında sahte ilişki YARATIR (Berkson yanlılığı).
-
-    Yani "ne kadar çok değişken katarsan o kadar iyi" YANLIŞTIR.
-    """
     rng = np.random.default_rng(tohum)
-    # çatal
     z = rng.normal(size=n)
     x1 = z + 0.5 * rng.normal(size=n)
-    y1 = z + 0.5 * rng.normal(size=n)          # X'in Y'ye doğrudan etkisi YOK
+    y1 = z + 0.5 * rng.normal(size=n)
     catal_ham = _egim(x1, y1)
     catal_z_ile = _kismi_egim(x1, z, y1)
 
-    # çarpışma
     x2 = rng.normal(size=n)
-    y2 = rng.normal(size=n)                    # gerçekten bağımsız
+    y2 = rng.normal(size=n)
     c = x2 + y2 + 0.5 * rng.normal(size=n)
     carp_ham = _egim(x2, y2)
     carp_c_ile = _kismi_egim(x2, c, y2)
@@ -2040,9 +1596,6 @@ def _rapor_nedensel() -> str:
              % (c["carpisma_ham"], c["carpisma_c_ile"], c["carpisma_sart_kosmak_bozdu"]))
     return "\n".join(s)
 
-# ====================================================================
-#  Çipin toplu raporu
-# ====================================================================
 BOLUMLER = (
     ("AYRIŞMA -- Bayes-Ball, arka kapı, ön kapı", "_rapor_fitrat_ayrisma"),
     ("KARŞIOLGUSAL -- üç pas, NOTEARS, locus",
@@ -2055,8 +1608,7 @@ BOLUMLER = (
 )
 
 
-def rapor() -> str:                            # pragma: no cover
-    """Beş odanın ölçümü, sırayla."""
+def rapor() -> str:
     s = []
     for baslik, fn in BOLUMLER:
         s.append("")
@@ -2067,5 +1619,5 @@ def rapor() -> str:                            # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                     # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

@@ -1,4 +1,3 @@
-"""Auto-generated identity stub for ARC-AGI-2 task 142ca369 (split: evaluation)."""
 
 
 def identity(grid: list[list[int]]) -> list[list[int]]:

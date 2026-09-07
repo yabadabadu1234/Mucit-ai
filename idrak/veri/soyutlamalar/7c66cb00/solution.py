@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task 7c66cb00.
-
-Refactored to expose DSL-style helpers and a main function that matches the
-Lambda Representation in abstractions.md.
-"""
 
 from collections import defaultdict, deque
 from typing import Dict, List, Tuple, TypedDict
@@ -18,7 +13,6 @@ class Component(TypedDict):
 
 
 def split_sections(grid: Grid, base: int) -> List[Tuple[int, int]]:
-    """Return row ranges that contain non-uniform content."""
     sections: List[Tuple[int, int]] = []
     start = None
     for r, row in enumerate(grid):
@@ -37,7 +31,6 @@ def split_sections(grid: Grid, base: int) -> List[Tuple[int, int]]:
 def extract_prototypes(
     grid: Grid, sections: List[Tuple[int, int]], base: int
 ) -> Tuple[Dict[int, List[Component]], List[Tuple[int, int]], List[Tuple[int, int]]]:
-    """Collect prototype components above the first target section."""
     prototypes: Dict[int, List[Component]] = defaultdict(list)
     proto_sections: List[Tuple[int, int]] = []
     target_sections: List[Tuple[int, int]] = []
@@ -134,10 +127,8 @@ def apply_prototypes(
             if r0 <= rr <= r1 and 0 <= cc < width:
                 result[rr][cc] = edge_color
 
-# === DSL-style helper wrappers ===
 
 def getBackground(grid: Grid) -> int:
-    """Background colour selection used by the pipeline (top-left)."""
     return grid[0][0]
 
 
@@ -173,8 +164,6 @@ def stampBottomAnchored(
         apply_prototypes(cleared, result, section, prototypes)
     return result
 
-
-# === Lambda-shaped main (must match abstractions.md) ===
 
 def solve_7c66cb00(grid: Grid) -> Grid:
     base = getBackground(grid)

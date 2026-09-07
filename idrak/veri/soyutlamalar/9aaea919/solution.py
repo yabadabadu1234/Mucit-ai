@@ -1,4 +1,3 @@
-"""Solver for ARC task 9aaea919 (evaluation split)."""
 
 from collections import Counter
 from typing import Any, Callable, Dict, Iterable, List, Tuple
@@ -134,7 +133,7 @@ def _extend_column(grid: Grid, info: Dict[str, Any], count: int) -> None:
     if count <= 0:
         return
 
-    step = 4  # 3 rows of the plus and one row gap
+    step = 4
     top = min(info["rows"])
     pattern = info["pattern"]
 
@@ -148,7 +147,6 @@ def _extend_column(grid: Grid, info: Dict[str, Any], count: int) -> None:
 
 
 def _clear_instruction_segments(grid: Grid, segments: List[Tuple[int, int, int]], background: int) -> Grid:
-    """Return a copy of grid with the bottom-row instruction segments cleared to background."""
     out = [row[:] for row in grid]
     for _, start, end in segments:
         for c in range(start, end + 1):
@@ -160,12 +158,6 @@ def _build_assignments(
     mapping: Dict[int, List[int]],
     columns: Dict[int, Dict[str, Any]],
 ) -> Dict[int, Dict[str, int]]:
-    """Build per-column instruction: recolor flag and extend count.
-
-    - recolor: 1 if colour 2 is present for the column, else 0
-    - extend: number of extra stacks to add if colour 3 is present; this equals
-      the total number of existing crosses across all columns flagged with colour 2.
-    """
     color2_columns = [col for col, colors in mapping.items() if 2 in colors]
     total_crosses = sum(len(columns[col]["rows"]) for col in color2_columns)
 
@@ -180,14 +172,11 @@ def _build_assignments(
 def fold_repaint(
     canvas: Grid, items: Iterable[Any], update: Callable[[Grid, Any], Grid]
 ) -> Grid:
-    """Functional fold over items to repaint the canvas."""
     g = canvas
     for x in items:
         g = update(g, x)
     return g
 
-
-# Public DSL-named wrappers to align with abstractions.md
 
 def extractCrossColumns(grid: Grid) -> Dict[int, Dict[str, Any]]:
     return _find_cross_columns(grid)

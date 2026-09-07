@@ -1,4 +1,3 @@
-"""Auto-generated identity stub for ARC-AGI-2 task b0039139 (split: evaluation)."""
 
 from __future__ import annotations
 
@@ -146,11 +145,9 @@ def rebuildByOrientation(pattern: Grid, segment_groups: Tuple[List[Grid], List[G
         main_color = _dominant_color(segs[2]) if len(segs) > 2 else 0
         gap_color = _dominant_color(segs[3]) if len(segs) > 3 else 0
         return _build_vertical(pattern, repeats, main_color, gap_color)
-    # Fallback shouldn't be reached due to guard in solver
-    return []  # type: ignore[return-value]
+    return []
 
 
-# === DSL-style main, must match abstractions.md ===
 def solve_b0039139(grid: Grid) -> Grid:
     separators = findFullLines(grid)
     segment_groups = extractSegments(grid, separators)

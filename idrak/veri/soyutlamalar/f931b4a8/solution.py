@@ -1,10 +1,8 @@
-"""Solver for ARC-AGI-2 task f931b4a8 (evaluation split)."""
 
 from collections import defaultdict
 from typing import List, Tuple
 
 
-# Shared type aliases
 Grid = List[List[int]]
 RowPlan = Tuple[List[int], List[List[int]]]
 
@@ -171,17 +169,7 @@ def solve_f931b4a8(grid: Grid) -> Grid:
 p = solve_f931b4a8
 
 
-# === DSL-style helper surface ===
-
-
 def extractTileQuadrants(grid: Grid) -> Tuple[Grid, Grid, Grid, Grid, Grid]:
-    """Return (grid, tile, tl, tr, br) for downstream pure steps.
-
-    - tile: base tile computed by preferring BR over BL and falling back
-    - tl: top-left quadrant region used to derive row anchors
-    - tr: top-right quadrant region used to derive column anchors
-    - br: bottom-right quadrant region used for zero-signature analysis
-    """
     tile, bl, br = _compute_tile(grid)
     hh = len(tile)
     hw = len(tile[0]) if tile else 0

@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC-AGI-2 task a395ee82."""
 
 from __future__ import annotations
 
@@ -29,12 +28,10 @@ def load_task() -> dict:
 
 
 def abstraction_identity(grid: Grid) -> Grid:
-    """Baseline that leaves the grid unchanged."""
     return [row[:] for row in grid]
 
 
 def abstraction_template_transfer(grid: Grid) -> Grid:
-    """Final abstraction that copies the learned template onto the marker grid."""
     return solve_a395ee82(grid)
 
 

@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task d8e07eb2."""
 
 from __future__ import annotations
 
@@ -18,7 +17,6 @@ from analysis.arc2_samples import d8e07eb2 as task
 Grid = List[List[int]]
 Example = Dict[str, Grid]
 
-# Shared helpers imported from the final solver module.
 _ROW_BLOCKS = task._ROW_BLOCKS
 _COL_BLOCKS = task._COL_BLOCKS
 _COLUMN_FINGERPRINTS = task._COLUMN_FINGERPRINTS
@@ -85,7 +83,6 @@ def solve_row_or_column(grid: Grid) -> Grid:
                 needed[colour] -= 1
         return _apply(grid, chosen, highlight_top)
 
-    # No structural match; return with optional top highlight only.
     return _apply(grid, [], highlight_top)
 
 
@@ -129,7 +126,6 @@ def _evaluate_solver(name: str, solver: Callable[[Grid], Grid], dataset: Dict[st
 def main() -> None:
     dataset_path = Path("analysis/arc2_samples/d8e07eb2.json")
     dataset = _load_dataset(dataset_path)
-    # Optional generator split.
     gen_path = dataset_path.with_name("d8e07eb2_gen.json")
     if gen_path.exists():
         dataset["arc-gen"] = _load_dataset(gen_path)["instances"]

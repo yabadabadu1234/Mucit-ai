@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task a395ee82 (evaluation split)."""
 
 from collections import Counter
 from typing import List, Tuple, Dict, Optional, TypedDict
@@ -54,8 +53,6 @@ def _extract_components(grid: Grid, background: int) -> List[Tuple[int, List[Tup
     return components
 
 
-# === DSL helpers (pure, no side effects) ===
-
 def extractTemplate(grid: Grid) -> Tuple[Template, int]:
     rows, cols = len(grid), len(grid[0])
     background = grid[0][0]
@@ -63,7 +60,6 @@ def extractTemplate(grid: Grid) -> Tuple[Template, int]:
 
     multi = [(color, comp) for color, comp in components if len(comp) > 1]
     if not multi:
-        # No template; return a passthrough template wrapper
         empty_template: Grid = []
         return (Template(
             rows=rows,
@@ -144,10 +140,8 @@ def tileTemplate(template: Template, lattice: Lattice) -> Grid:
 
     singles = lattice["markers"]
     if template_height == 0 or not singles:
-        # No template or no markers: passthrough
         return [[background] * cols for _ in range(rows)]
 
-    # Derive the template colour from the mask (any non-background entry)
     template_color: Optional[int] = None
     for dr in range(template_height):
         for dc in range(template_width):
@@ -159,7 +153,6 @@ def tileTemplate(template: Template, lattice: Lattice) -> Grid:
     if template_color is None:
         return [[background] * cols for _ in range(rows)]
 
-    # Determine colour swap for markers matching the template colour
     singleton_colors = [color for color, _, _ in singles]
     alt_candidates = [color for color in singleton_colors if color != template_color]
     swap_color = Counter(alt_candidates).most_common(1)[0][0] if alt_candidates else template_color

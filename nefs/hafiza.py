@@ -1,69 +1,3 @@
-"""KUANTUM ASOSİYATİF HAFIZA -- **ağırlık hafıza değildir**.
-
-    hafiza = Hafiza(kapasite=256)
-    hafiza.yaz(x, omega, hukum)         # tecrübe edileni nakşet
-    maske = hafiza.zeno(x)              # cerhedilmiş kolu kes
-
-===================================================================
-NİÇİN AYRI BİR UZUV
-===================================================================
-
-Padişahın teşhisi (zabıt: *Ham Veriden Kuantum Hafızasına*):
-
-    *"Modelin öğrendiği safsatayı veya kısır döngüyü sakladığı bir
-    kuantum hafızası yok; parametre hafıza değildir!"*
-
-Doğrudur ve mimarînin can damarıdır:
-
-* **Ağırlık ($\\Theta$) FITRATTIR.** Gramerdir, reflekstir, mantık
-  terazisidir. Bir hatırayı ağırlığa yazarsanız katastrofik unutma
-  başlar: yeni tecrübe eskisini siler.
-* **Hafıza ($\\rho$) HADİSEDİR.** "Şu döngü safsataydı", "şu teemmül
-  meşruydu" gibi tekil tecrübelerdir. Bunlar bir yoğunluk operatöründe
-  birikir ve ağırlıklara **hiç dokunmaz**.
-
-===================================================================
-VERİ YAPISI
-===================================================================
-
-    ρ_Hafıza = Σ_k μ_k |Φ_k⟩⟨Φ_k|
-    |Φ_k⟩    = |x_kavram⟩ ⊗ |U_C holonomisi⟩ ⊗ |T hüküm⟩
-
-``T`` üç değer alır ve üçü zabıtın üç halidir:
-
-=========  =====  ==========================================
-``T = 1``  TASDİK meşru teemmül; bir daha görülünce hızlı doğrulanır
-``T = ½``  TEVAKKUF kısır döngü; bir daha girilince budanır
-``T = 0``  CERH   hakiki tenakuz; bir daha tetiklenince **Zeno**
-=========  =====  ==========================================
-
-Holonomi tam bir ``d×d`` matris olarak saklanmaz -- 256 kayıt için
-``256·4096²`` sayı eder ve hafıza ağırlıktan ağır olurdu. Saklanan
-şey holonominin **sınıflandırıcı izidir**: ``ω = Re Tr(U_C)/d``.
-Bu tek sayı üç hali birbirinden ayırmaya yeter (``+1`` kısır, ``−1``
-tenakuz, arası meşru) ve zaten hüküm ondan çıkar. Ne kaybedildiği
-saklanmıyor: ``U_C``nin hangi alt uzayda döndüğü unutulur.
-
-===================================================================
-ÜÇ AMELİYE
-===================================================================
-
-1. **YAZMA (Kraus atlaması).**
-   ``ρ ← (1−ε)ρ + ε|Φ⟩⟨Φ|``. Ağırlıklar değişmez; yalnız yeni bir
-   izdüşüm eklenir.
-
-2. **OKUMA (asosiyatif çağrışım, ``O(1)``).**
-   ``𝒦 = Tr(ρ · |ψ⟩⟨ψ|) = Σ_k μ_k |⟨x_k|ψ⟩|²``.
-   Model 10.000 adımı geriye taramaz; yeni durum eski safsatanın
-   rezonans frekansına bastığı an alarm çalar. Zaman mesafesi
-   **hükümsüzdür**.
-
-3. **SÖNÜM (Liouville tasfiyesi).**
-   ``dVol/dt = −γ·Vol``. Delili gelmeyen, tekrarlanmayan kuru zan
-   zamanla buharlaşır; şüphe uzayı bir çöplük olmaz. Tasdik ve cerh
-   damgalı kayıtlar **daha yavaş** söner: ispatlanmış bir hüküm ile
-   ispatsız bir zan aynı hızda unutulamaz.
-"""
 from __future__ import annotations
 
 import math
@@ -74,25 +8,21 @@ import numpy as np
 
 __all__ = ["Kayit", "Hafiza", "TASDIK", "TEVAKKUF", "CERH", "rapor"]
 
-#: Hüküm damgaları.
 TASDIK = 1.0
 TEVAKKUF = 0.5
 CERH = 0.0
 
-#: Sönüm nispetleri: ispatlanmış hüküm, ispatsız zandan yavaş unutulur.
-#: (Liouville sönümü ``γ`` bunlarla çarpılır.)
 _SONUM_PAYI: Dict[float, float] = {TASDIK: 0.25, TEVAKKUF: 1.0, CERH: 0.10}
 
 
 @dataclass
 class Kayit:
-    """Tek bir hatıra: kavram genliği, holonomi izi, hüküm, güven."""
 
-    x: np.ndarray            # ℂ^m -- kavramın belirteç lifi üstündeki genliği
-    omega: float             # Re Tr(U_C)/d ∈ [−1, 1]
-    hukum: float             # TASDIK / TEVAKKUF / CERH
-    mu: float                # güven genliği μ_k
-    dogum: int = 0           # hangi adımda nakşedildi
+    x: np.ndarray
+    omega: float
+    hukum: float
+    mu: float
+    dogum: int = 0
 
     def __post_init__(self) -> None:
         self.x = np.asarray(self.x).reshape(-1)
@@ -106,7 +36,6 @@ class Kayit:
 
 
 class Hafiza:
-    """``ρ_Hafıza`` -- birikimli, sönümlü, asosiyatif yoğunluk operatörü."""
 
     def __init__(self, kapasite: int = 256, yazma: float = 0.05,
                  sonum: float = 0.02, zeno_esigi: float = 0.35,
@@ -120,14 +49,10 @@ class Hafiza:
         self.yazma = float(yazma)
         self.sonum = float(sonum)
         self.zeno_esigi = float(zeno_esigi)
-        # **GÖMÜLÜ SABİTLER AYARA BAĞLANDI (ferman).** Üçü de fonksiyon
-        # gövdesinde çıplak duruyordu; kimse göremiyor, kimse
-        # değiştiremiyordu. **Değerleri DEĞİŞMEDİ** -- zabıtın hükmü
-        # ``hafiza.zeno (0,9) KORUNACAK``dır; yalnız yerleri değişti.
-        self.zeno_tepe = float(zeno_tepe)       # evvelce gövdede 0.9
-        self.ayniyet = float(ayniyet)           # evvelce gövdede 0.98
-        self.buhar = float(buhar)               # evvelce gövdede 1e-4
-        self.mu_asgari = float(mu_asgari)       # evvelce gövdede 1e-3
+        self.zeno_tepe = float(zeno_tepe)
+        self.ayniyet = float(ayniyet)
+        self.buhar = float(buhar)
+        self.mu_asgari = float(mu_asgari)
         assert 0.0 < self.zeno_tepe <= 1.0, "zeno tepe nispeti (0,1]"
         assert 0.0 < self.ayniyet <= 1.0, "ayniyet eşiği (0,1]"
         self.tohum = int(tohum)
@@ -135,18 +60,13 @@ class Hafiza:
         self.budama = 0
         self.adim = 0
 
-    # ── 1. YAZMA ──────────────────────────────────────────────────
     def yaz(self, x, omega: float, hukum: float) -> Kayit:
-        """Kraus atlaması: ``ρ ← (1−ε)ρ + ε|Φ⟩⟨Φ|``. Ağırlık DEĞİŞMEZ."""
         self.adim += 1
         e = self.yazma
         for k in self.kayitlar:
             k.mu *= (1.0 - e)
         y = Kayit(x=x, omega=float(omega), hukum=float(hukum), mu=e,
                   dogum=self.adim)
-        # Aynı kavram daha evvel aynı hükümle nakşedilmişse **birleştir**;
-        # yoksa hafıza aynı hatırayı yüzlerce kere sayar ve tek bir
-        # tekrarlanan yol bütün kütleyi ele geçirir.
         for k in self.kayitlar:
             if (k.hukum == y.hukum
                     and abs(complex(np.vdot(k.x, y.x))) > self.ayniyet):
@@ -157,24 +77,16 @@ class Hafiza:
         return y
 
     def _tasfiye(self) -> None:
-        """Liouville sönümü + kapasite haddi."""
         if self.sonum > 0.0:
             for k in self.kayitlar:
                 k.mu *= (1.0 - self.sonum * _SONUM_PAYI[k.hukum])
-        # Buharlaşanlar: ``μ`` gürültü seviyesine inen kuru zanlar.
         self.kayitlar = [k for k in self.kayitlar if k.mu > self.buhar]
         if len(self.kayitlar) > self.kapasite:
             self.kayitlar.sort(key=lambda k: k.mu, reverse=True)
             self.kayitlar = self.kayitlar[:self.kapasite]
         assert len(self.kayitlar) <= self.kapasite
 
-    # ── 2. OKUMA -- asosiyatif çağrışım, O(1) ─────────────────────
     def oku(self, x) -> Dict[str, float]:
-        """``𝒦 = Tr(ρ|ψ⟩⟨ψ|)`` -- hüküm başına ayrı ayrı.
-
-        Zaman mesafesine bakılmaz: 1. dalgadaki kayıt ile 10.000.
-        dalgadaki durum aynı iç çarpımda buluşur.
-        """
         v = np.asarray(x).reshape(-1)
         nrm = float(np.linalg.norm(v))
         assert nrm > 0.0, "boş durumla hafıza okunamaz"
@@ -189,18 +101,7 @@ class Hafiza:
             out["toplam"] += ort
         return out
 
-    # ── 3. ZENO BUDAMASI ──────────────────────────────────────────
     def zeno(self, x) -> Optional[np.ndarray]:
-        """Cerhedilmiş kola girildiyse hangi belirteçler kesilecek?
-
-        ``True`` = kalsın, ``False`` = kesilsin. Kesilecek bir şey yoksa
-        ``None`` döner ve çağıran hiçbir şey yapmaz -- yâni tesir
-        **kapatılabilir**, dolayısıyla ölçülebilir (H90).
-
-        Kesilen belirteçler, cerh damgalı kaydın kendi tepe genlikleri
-        olan belirteçlerdir: safsatanın hangi kelimeler üstünden
-        yürüdüğü kaydın kendisinde yazılıdır.
-        """
         v = np.asarray(x, float).reshape(-1)
         nrm = float(np.linalg.norm(v))
         if nrm <= 0.0:
@@ -212,16 +113,6 @@ class Hafiza:
             if k.hukum != CERH or k.x.size != v.size:
                 continue
             ort = float(abs(np.vdot(k.x, v)) ** 2)
-            # **ÖLÇEREK DÜZELTİLDİ.** Evvelce şart ``ort·μ < eşik²``
-            # yazılmıştı; yanlıştı ve ölçüm yakaladı: cerh kaydı
-            # örtüşmeyi 0,505 verdiği hâlde budama hiç çalışmadı, çünkü
-            # ``μ`` iki yazmadan sonra 0,16'ydı ve çarpım eşiğin altında
-            # kalıyordu. Yâni eşik, yolun ne kadar örtüştüğünü değil,
-            # hafızada kaç kayıt olduğunu ölçüyordu.
-            #
-            # Doğrusu ikisini AYIRMAKTIR: örtüşme yolun aynı yol olup
-            # olmadığını söyler; ``μ`` ise o hatıranın hâlâ hayatta olup
-            # olmadığını. İkincisi bir eşik değil, bir varlık şartıdır.
             if ort < self.zeno_esigi or k.mu < self.mu_asgari:
                 continue
             g = np.abs(np.asarray(k.x)).astype(float)
@@ -232,7 +123,6 @@ class Hafiza:
         self.budama += int(np.count_nonzero(~maske))
         return maske
 
-    # ── 4. BEYAN ──────────────────────────────────────────────────
     def beyan(self) -> Dict[str, Any]:
         say = {TASDIK: 0, TEVAKKUF: 0, CERH: 0}
         for k in self.kayitlar:
@@ -242,20 +132,7 @@ class Hafiza:
                 "budama": int(self.budama), "adım": int(self.adim),
                 "kütle": float(sum(k.mu for k in self.kayitlar))}
 
-    # ── 5. HAZİNEYE YAZ / HAZİNEDEN AL (main/hazine.py ile) ───────
     def hazineye(self) -> Dict[str, np.ndarray]:
-        """Hafızayı safetensors tensörlerine çevir.
-
-        Ağırlıkla **aynı dosyada fakat ayrı tensörlerde** durur: fıtrat
-        ile hadisenin ayrı olduğu dosyanın kendisinde görünür.
-
-        **AYRAÇ ``$`` DEĞİL ``.``DIR VE BU BİR ZEVK MESELESİ DEĞİL.**
-        ``main/hazine.py`` ``$``i karmaşık tensörü ``$re``/``$im``
-        çiftine bölmek için ayırmıştır ve ``_ayir`` adında ``$`` gören
-        her tensörü **reddeder**. Yâni ``hafıza$x`` yazıldığı sürece
-        hafıza hazineye **hiç yazılamıyordu**: tâlim, geçit açıldığı
-        gün ``AssertionError`` ile düşerdi. Ölçüldü ve düzeltildi.
-        """
         if not self.kayitlar:
             return {}
         m = max(k.x.size for k in self.kayitlar)
@@ -273,11 +150,6 @@ class Hafiza:
     @classmethod
     def hazineden(cls, agirlik: Mapping[str, Any],
                   ust_veri: Optional[Mapping[str, Any]] = None) -> "Hafiza":
-        """Hazineden hafızayı geri kur. Kayıt yoksa **boş** hafıza döner.
-
-        Boş hafıza sessiz bir düşüş değildir: ``beyan()["kayıt"] == 0``
-        diye görünür ve çıkarım raporunda "Zeno budaması 0" diye yazılır.
-        """
         u = dict(ust_veri or {})
         h = cls(kapasite=int(float(u.get("hafıza_kapasitesi", 256))),
                 yazma=float(u.get("hafıza_yazma", 0.05)),
@@ -302,23 +174,19 @@ class Hafiza:
         return h
 
 
-def rapor(tohum: int = 0) -> str:                        # pragma: no cover
-    """Hafıza fiilen iş görüyor mu -- **ölç**, iddia etme."""
+def rapor(tohum: int = 0) -> str:
     r = np.random.default_rng(int(tohum))
     m = 16
     h = Hafiza(kapasite=64, yazma=0.2, sonum=0.02)
 
-    # Bir safsata yolu nakşedilir: 3 ve 7 numaralı belirteçler üstünden.
     safsata = np.zeros(m)
     safsata[3] = 1.0
     safsata[7] = 0.95
     h.yaz(safsata, omega=-1.0, hukum=CERH)
-    # Bir meşru teemmül yolu
     mesru = np.zeros(m)
     mesru[1] = 1.0
     h.yaz(mesru, omega=0.2, hukum=TASDIK)
 
-    # Aynı yola tekrar girilirse ne olur?
     P = np.full(m, 1.0 / m)
     P[3] = 0.5
     P[7] = 0.4
@@ -326,7 +194,6 @@ def rapor(tohum: int = 0) -> str:                        # pragma: no cover
     mask = h.zeno(np.sqrt(P))
     kesik = 0 if mask is None else int(np.count_nonzero(~mask))
 
-    # Alâkasız bir yola girilirse kesilmemeli (ölçü kırmızı yanabilmeli)
     Q = np.full(m, 1.0 / m)
     Q[11] = 0.6
     Q = Q / Q.sum()
@@ -334,7 +201,6 @@ def rapor(tohum: int = 0) -> str:                        # pragma: no cover
     kesik2 = 0 if mask2 is None else int(np.count_nonzero(~mask2))
 
     k = h.oku(np.sqrt(P))
-    # Sönüm: delilsiz zan buharlaşıyor mu?
     zan = np.zeros(m)
     zan[5] = 1.0
     h.yaz(zan, omega=1.0, hukum=TEVAKKUF)
@@ -363,5 +229,5 @@ def rapor(tohum: int = 0) -> str:                        # pragma: no cover
     ])
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

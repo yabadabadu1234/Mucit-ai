@@ -1,19 +1,16 @@
-"""Solver for ARC-AGI-2 task 4a21e3da (evaluation split), refactored to DSL workflow."""
 
 from __future__ import annotations
 
 from typing import Dict, Iterable, List, Set, Tuple, Union
 
 
-# Basic typed aliases used by the DSL subset
 Grid = List[List[int]]
 Point = Tuple[int, int]
-Sentinel = Point  # classified later relative to the glyph's bounding box
+Sentinel = Point
 Component = Set[Point]
-Corner = str  # "top-left" | "top-right" | "bottom-left" | "bottom-right"
+Corner = str
 
 
-# Pure helpers (no mutation of inputs)
 def _component_cells(grid: Grid, color: int) -> List[Point]:
     return [(r, c) for r, row in enumerate(grid) for c, v in enumerate(row) if v == color]
 
@@ -37,7 +34,7 @@ def _align_to_corner(cells: Iterable[Point], corner: Corner, height: int, width:
         dy, dx = -min_r, (width - w_span) - min_c
     elif corner == "bottom-left":
         dy, dx = (height - h_span) - min_r, -min_c
-    else:  # "bottom-right"
+    else:
         dy, dx = (height - h_span) - min_r, (width - w_span) - min_c
     return {
         (r + dy, c + dx)
@@ -46,7 +43,6 @@ def _align_to_corner(cells: Iterable[Point], corner: Corner, height: int, width:
     }
 
 
-# === DSL main function (must exactly match abstractions.md) ===
 def solve_4a21e3da(grid: Grid) -> Grid:
     sentinels = findCornerSentinels(grid)
     glyph = extractSourceGlyph(grid)
@@ -54,9 +50,7 @@ def solve_4a21e3da(grid: Grid) -> Grid:
     return projectGlyphToCorners(grid, glyph, offsets)
 
 
-# === Implementations of the DSL-sketched helpers ===
 def findCornerSentinels(grid: Grid) -> List[Sentinel]:
-    # Return all sentinel positions (colour 2); classification is done later
     return _component_cells(grid, 2)
 
 
@@ -64,7 +58,6 @@ def extractSourceGlyph(grid: Grid) -> Component:
     return set(_component_cells(grid, 7))
 
 
-# Offsets/instructions per sentinel; structure tailored to downstream projection
 Instruction = Dict[str, Union[int, bool]]
 Offsets = Dict[Sentinel, Instruction]
 
@@ -81,15 +74,15 @@ def selectCornerOffsets(sentinels: List[Sentinel], glyph: Component) -> Offsets:
 
     offsets: Offsets = {}
     for sr, sc in sentinels:
-        if sr < min_r:  # top
+        if sr < min_r:
             instr: Instruction = {"kind_top": 1, "sr": sr, "sc": sc}
             if has_right:
-                instr["limit_left_distance"] = min_r - sr  # constrain upper extent for left subset
+                instr["limit_left_distance"] = min_r - sr
             instr["include_right_subset"] = not has_right
             offsets[(sr, sc)] = instr
-        elif sr > max_r:  # bottom
+        elif sr > max_r:
             offsets[(sr, sc)] = {"kind_bottom": 1, "sr": sr, "sc": sc}
-        elif sc < min_c:  # left
+        elif sc < min_c:
             offsets[(sr, sc)] = {
                 "kind_left": 1,
                 "sr": sr,
@@ -97,7 +90,7 @@ def selectCornerOffsets(sentinels: List[Sentinel], glyph: Component) -> Offsets:
                 "include_top_subset": not has_top,
                 "include_bottom_subset": not has_bottom,
             }
-        elif sc > max_c:  # right
+        elif sc > max_c:
             distance = sc - max_c
             threshold = max_c - distance
             offsets[(sr, sc)] = {
@@ -107,7 +100,6 @@ def selectCornerOffsets(sentinels: List[Sentinel], glyph: Component) -> Offsets:
                 "threshold": threshold,
             }
         else:
-            # Sentinel inside glyph bbox: keep only itself as a ray origin
             offsets[(sr, sc)] = {"kind_inside": 1, "sr": sr, "sc": sc}
     return offsets
 
@@ -187,10 +179,9 @@ def projectGlyphToCorners(grid: Grid, glyph: Component, offsets: Offsets) -> Gri
             sevens_to_paint |= _align_to_corner(bottom_cells, "bottom-right", height, width)
             sevens_to_paint |= {(r, c) for (r, c) in glyph if r == sr}
 
-        else:  # inside bbox: only ensure the sentinel itself is present
+        else:
             pass
 
-    # Paint onto a fresh canvas (background 1), then 2s, then 7s
     out: Grid = [[1 for _ in range(width)] for _ in range(height)]
     for r, c in twos_to_paint:
         out[r][c] = 2
@@ -199,5 +190,4 @@ def projectGlyphToCorners(grid: Grid, glyph: Component, offsets: Offsets) -> Gri
     return out
 
 
-# Backwards compatibility alias used by tooling
 p = solve_4a21e3da

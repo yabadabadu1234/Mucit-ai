@@ -1,8 +1,3 @@
-"""Solver for ARC task 13e47133.
-
-Refactored to a typed-DSL style entrypoint while preserving the original
-template-overlay behaviour.
-"""
 
 from __future__ import annotations
 
@@ -10,7 +5,6 @@ from collections import Counter, deque
 from copy import deepcopy
 from typing import Callable, Dict, Iterable, List, NamedTuple, Optional, Tuple
 
-# Lightweight typed aliases to mirror the DSL nomenclature used in abstractions.md
 Grid = List[List[int]]
 Template = List[List[Optional[int]]]
 Offset = Tuple[int, int]
@@ -26,9 +20,6 @@ class Component(NamedTuple):
     width: int
 
 
-# Templates captured from training outputs.  Each key is
-# (color, grid_height, component_size, (row_offset, col_offset)) and values are
-# 2D arrays with `None` marking untouched cells.
 TEMPLATES: Dict[TemplateKey, Template] = {
     (7, 20, 1, (0, 0)): [
         [7, 7, 7, 7, 7, 7, 7, 7],
@@ -285,7 +276,6 @@ TEMPLATES: Dict[TemplateKey, Template] = {
 
 
 def _find_components(grid: Grid, background: int) -> List[Component]:
-    """Return connected non-background components with metadata."""
     height = len(grid)
     width = len(grid[0])
     seen = [[False] * width for _ in range(height)]
@@ -329,7 +319,6 @@ def _select_offset(
     min_col: int,
     width: int,
 ) -> Optional[Offset]:
-    """Choose an offset for placing a template using the learned heuristics."""
     candidates = [
         key for key in TEMPLATES if key[0] == color and key[1] == height and key[2] == comp_size
     ]
@@ -359,7 +348,6 @@ def _select_offset(
     if color == 7 and height == 10 and (color, height, comp_size, (0, -5)) in TEMPLATES:
         return (0, -5)
 
-    # Fallback: choose the offset with minimal magnitude that stays closest to bounds.
     def score(key: TemplateKey) -> int:
         off = key[3]
         start_col = min_col + off[1]
@@ -371,7 +359,6 @@ def _select_offset(
 
 
 def _overlay(canvas: Grid, template: Iterable[Iterable[Optional[int]]], start_row: int, start_col: int) -> Grid:
-    """Overlay template onto a copy of canvas respecting boundaries and None markers."""
     result = deepcopy(canvas)
     height = len(result)
     width = len(result[0]) if height else 0
@@ -387,8 +374,6 @@ def _overlay(canvas: Grid, template: Iterable[Iterable[Optional[int]]], start_ro
                 result[rr][cc] = value
     return result
 
-
-# --- DSL-style helper façade used by the lambda entrypoint ---
 
 def findComponents(grid: Grid) -> List[Component]:
     flat = [cell for row in grid for cell in row]
@@ -440,4 +425,3 @@ def solve_13e47133(grid: Grid) -> Grid:
 
 
 p = solve_13e47133
-# Initial adjustment pass; will refine after observing failures.

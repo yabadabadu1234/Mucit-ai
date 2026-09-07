@@ -1,69 +1,3 @@
-"""
-İLLET -- akışın **sebep çizgesi** kurulur ve `fitrat/ayrisma.py` ile tartılır.
-
-===================================================================
-NİÇİN KURULABİLİYOR
-===================================================================
-
-`nefs/sozlesme.py` (kütük H119) her melekenin dokunacağı bölgeleri
-**ilan** ettirir ve ölçüm o ilanı dalgayla yüzleştirir -- 41 melekede
-sıfır ihlâl. O hâlde elimizde bir şey var: akışın hangi adımının hangi
-alana dokunduğu, **iddia değil ölçülmüş** bir bilgi.
-
-``QAKIS`` sırası da bellidir. İkisi birleşince akışın **sebep çizgesi**
-çıkar:
-
-    meleke_t bir alana dokunuyorsa, o alanın SONRAKİ hâli
-    meleke_t'nin dokunduğu bütün alanların ÖNCEKİ hâline bağlıdır.
-
-Bu bir benzetme değil, akışın fiilî bağımlılık yapısıdır.
-
-===================================================================
-𝒪₂₂'NİN İDDİASI
-===================================================================
-
-`nefs/qmeleke.py`, 𝒪₂₂ İllet Keşfi için şöyle diyor:
-
-> *"Nedensellik simetrik değildir; sebep sonuçtan öncedir… **Asiklik
-> şartı inşa gereği sağlanır** -- kapı hep soldan sağadır."*
-
-Son cümle bir **iddia**dır ve tek bir meleke için doğrudur. Fakat
-sorulmayan sual şudur: **bütün akışın** sebep çizgesi asiklik mi?
-41 meleke sırayla koşuyor ve aynı alana defalarca dönüyor; zaman
-açılımında (her adım ayrı düğüm) asiklik cebren sağlanır, fakat
-**alan seviyesinde** -- yani "hangi alan hangi alanı etkiliyor" --
-çevrim pekâlâ olabilir ve olması da normaldir.
-
-İkisi ayrı sualdir ve burada **ikisi de** ölçülür. Birini ötekinin
-yerine koymak, iddiayı ispatlanmış göstermek olurdu.
-
-===================================================================
-ASIL KIYMET: d-AYRIŞMASI
-===================================================================
-
-`fitrat/ayrisma.py` beylikti ve tam da bunu ölçer: ``X ⫫_d Y | Z``.
-Zaman açılımlı çizgede mimarî bir şart sınanabilir:
-
-    ``kelam``, ``veri``den **yalnız hüküm üzerinden** mi besleniyor?
-
-**Ve burada kendi hükmümü daraltmam gerekti.** Ölçüm "hükmü atlayan
-yol var" dedi ve ilk yazdığım şerh *"mimarînin gerekçesi delinmiş"*
-diyordu. **Bu fazla söylemekti.** `nefs/zihin_durumu.py`nin kelam hakkındaki
-iddiası şudur: *"kelam ``|0⟩``dan başlayıp yalnız beyan melekelerinin
-yazdığı bir alandır"* -- ve o iddia **doğrudur** (kelama yalnız
-𝒪₃₇–𝒪₄₁ dokunuyor). Mimarî, "veriden kelama giden yol hükümden
-geçmelidir" diye bir şey **iddia etmemişti**; o şartı ben koydum.
-
-O hâlde burada ölçülen şey bir kusur değil, bir **tasarım
-hakikatidir** ve karar kullanıcınındır:
-
-    𝒪₃₇ Fesâhat, 𝒪₃₈ Talâkat ve 𝒪₄₀ Sanat, aynı üniter içinde hem
-    ``veri``ye hem ``kelam``a dokunuyor -- yani beyan, hükme uğramadan
-    da veriden besleniyor.
-
-Bunun istenip istenmediği mimarî bir tercihtir. Ölçüm onu görünür
-kılar; hükmü vermez.
-"""
 from __future__ import annotations
 
 from typing import Dict, List, Optional, Sequence, Set, Tuple
@@ -73,8 +7,6 @@ from matematik.fitrat import Cizge, gecer_mi
 __all__ = ["alan_cizgesi", "zaman_cizgesi", "cevrimler", "kelam_ayrismasi",
            "rapor"]
 
-#: Hüküm taşıyan alanlar -- ``veri``den ``kelam``a giden yolun geçmesi
-#: **beklenen** yer. ``yerel`` de hükümdür (satır hakkındaki hüküm).
 HUKUM_ALANLARI: Tuple[str, ...] = (
     "yerel", "makam", "mizan", "tenakuz", "tasdik", "sukut", "nakz",
     "gaye", "tertip",
@@ -82,24 +14,12 @@ HUKUM_ALANLARI: Tuple[str, ...] = (
 
 
 def _melekelerin_bolgeleri() -> List[Tuple[int, Tuple[str, ...]]]:
-    """``QAKIS`` sırasında her adımın dokunduğu bölgeler -- sözleşmeden."""
     from .melekeler import QAKIS
     from .kulli_kayip import SOZLESME
     return [(no, SOZLESME[no][0]) for no in QAKIS]
 
 
 def alan_cizgesi() -> Tuple[List[str], List[Tuple[str, str]], bool]:
-    """**Alan seviyesinde** sebep çizgesi: hangi alan hangisini etkiliyor.
-
-    ``(düğümler, kenarlar, Cizge_kabul_etti_mi)`` döner.
-
-    **Niçin ``Cizge`` değil.** `fitrat/ayrisma.py`nin ``Cizge`` tipi
-    çevrimli bir çizgeyi **reddeder** (*"çizge çevrimli -- d-ayrışması
-    tanımsız"*) ve haklıdır: d-ayrışması yönlü **asiklik** çizgede
-    tanımlıdır. Bu red, bizzat aradığımız ölçümün makine teyididir --
-    akışın alan seviyesindeki sebep yapısı **çevrimlidir**. Kurulmaya
-    çalışılır, reddedilirse o red raporlanır.
-    """
     adimlar = _melekelerin_bolgeleri()
     dugumler: List[str] = []
     kenarlar: Set[Tuple[str, str]] = set()
@@ -116,23 +36,11 @@ def alan_cizgesi() -> Tuple[List[str], List[Tuple[str, str]], bool]:
         Cizge(tuple(dugumler), tuple(ken))
         kabul = True
     except ValueError:
-        kabul = False          # çevrimli: d-ayrışması tanımsız
+        kabul = False
     return dugumler, ken, kabul
 
 
 def zaman_cizgesi() -> Tuple[Cizge, Dict[str, List[str]]]:
-    """**Zaman açılımlı** sebep çizgesi -- her adımda alanın ayrı düğümü.
-
-    ``alan@t`` düğümü, ``t``inci adımdan **sonraki** hâlidir. Kenarlar:
-
-    * ``alan@t → alan@t+1``      -- kendi geçmişi (bütün alanlar için),
-    * ``a@t → b@t+1``            -- ``t+1``inci meleke ikisine de
-      dokunuyorsa (aynı üniter içinde dolaşırlar).
-
-    Bu çizge **cebren asikliktir** (zaman ileri akar) ve o yüzden
-    "asiklik ispatlandı" diye bir hüküm çıkarılmaz; asıl kıymeti
-    d-ayrışması sorulabilmesidir.
-    """
     adimlar = _melekelerin_bolgeleri()
     alanlar = sorted({a for _, b in adimlar for a in b})
     T = len(adimlar)
@@ -157,7 +65,6 @@ def zaman_cizgesi() -> Tuple[Cizge, Dict[str, List[str]]]:
 
 def cevrimler(dugumler: Sequence[str],
               kenarlar: Sequence[Tuple[str, str]]) -> List[List[str]]:
-    """Çizgede çevrim var mı? -- derinlik önce arama ile."""
     cocuk: Dict[str, Set[str]] = {}
     for a, b in kenarlar:
         cocuk.setdefault(a, set()).add(b)
@@ -183,16 +90,6 @@ def cevrimler(dugumler: Sequence[str],
 
 
 def kelam_ayrismasi() -> Dict[str, object]:
-    """``kelam``, ``veri``den **yalnız hüküm üzerinden** mi besleniyor?
-
-    Zaman açılımlı çizgede sorulur: ``veri@0`` ile ``kelam@T``,
-    hüküm alanlarının bütün zaman dilimlerine şart koşulduğunda
-    d-ayrık mı?
-
-    Ayrıksa mimarînin gerekçesi tutuyor: beyan, hükümden geçmeden
-    veriden beslenmiyor. Ayrık değilse **hükmü atlayan bir yol** var
-    demektir ve kelamı ayırma gerekçesi delinmiştir.
-    """
     g, yer = zaman_cizgesi()
     if "kelam" not in yer or "veri" not in yer:
         return {"kurulabilir": False}
@@ -201,11 +98,8 @@ def kelam_ayrismasi() -> Dict[str, object]:
     for a in HUKUM_ALANLARI:
         Z += yer.get(a, [])
     ayrik = bool(gecer_mi(g, [yer["veri"][0]], [yer["kelam"][T]], Z))
-    # Şartsız hâl: hüküm alanlarına şart koşulmazsa elbette bağlıdır;
-    # bu, ölçütün kör olmadığının şahididir.
     ayrik_sartsiz = bool(gecer_mi(g, [yer["veri"][0]],
                                     [yer["kelam"][T]], []))
-    # Doğrudan yolu açan melekeler: aynı ilanda hem ``veri`` hem ``kelam``.
     from .melekeler import QAKIS, qsicil
     from .kulli_kayip import SOZLESME
     sic = qsicil()
@@ -284,5 +178,5 @@ def rapor() -> str:
     return "\n".join(s)
 
 
-if __name__ == "__main__":   # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

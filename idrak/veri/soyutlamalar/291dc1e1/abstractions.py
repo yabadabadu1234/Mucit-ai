@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC-AGI-2 task 291dc1e1."""
 
 from __future__ import annotations
 
@@ -107,7 +106,6 @@ def _segment_pipeline(
 
 
 def abstraction_row_left_to_right(grid: Sequence[Sequence[int]]) -> List[List[int]]:
-    """Row-wise segmentation without directional heuristics."""
 
     return _segment_pipeline(
         grid,
@@ -119,7 +117,6 @@ def abstraction_row_left_to_right(grid: Sequence[Sequence[int]]) -> List[List[in
 
 
 def abstraction_column_left_to_right(grid: Sequence[Sequence[int]]) -> List[List[int]]:
-    """Column-wise segmentation with natural column ordering."""
 
     return _segment_pipeline(
         grid,
@@ -131,7 +128,6 @@ def abstraction_column_left_to_right(grid: Sequence[Sequence[int]]) -> List[List
 
 
 def abstraction_directional(grid: Sequence[Sequence[int]]) -> List[List[int]]:
-    """Directional hybrid that mirrors the final solver behaviour."""
 
     transpose_input = len(grid[0]) <= len(grid)
     return _segment_pipeline(

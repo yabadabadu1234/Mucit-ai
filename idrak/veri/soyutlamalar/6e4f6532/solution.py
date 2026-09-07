@@ -1,4 +1,3 @@
-"""Hand-tuned solver for ARC-AGI-2 task 6e4f6532 (evaluation split)."""
 
 from collections import Counter, deque
 from typing import Callable, Iterable, List, Optional, Sequence, Tuple, TypeVar
@@ -81,14 +80,12 @@ PATTERNS: dict[tuple[tuple[int, int], ...], List[Tuple[int, int, int]]] = {
 
 
 def _most_common_color(grid: Grid) -> int:
-    """Return the color appearing most frequently in the grid."""
 
     counts = Counter(val for row in grid for val in row)
     return counts.most_common(1)[0][0]
 
 
 def _describe_components(grid: Grid, base: int) -> List[dict]:
-    """Return metadata for every 4-connected component not in the base color."""
 
     height = len(grid)
     width = len(grid[0])
@@ -156,12 +153,10 @@ def mostCommonColor(grid: Grid) -> int:
 def extractComponents(grid: Grid) -> List[dict]:
     base = _most_common_color(grid)
     comps = _describe_components(grid, base)
-    # attach base colour for downstream pure helpers
     return [dict(comp, base=base) for comp in comps]
 
 
 def splitObjectsAndMarkers(components: List[dict]) -> Tuple[List[dict], List[dict]]:
-    # separate
     objects: List[dict] = [info for info in components if info["colors"].get(8) and info["colors"].get(9)]
     raw_markers: List[dict] = []
     for info in components:
@@ -172,7 +167,6 @@ def splitObjectsAndMarkers(components: List[dict]) -> Tuple[List[dict], List[dic
             min_c = min(c for _, c in coords)
             raw_markers.append({"coords": coords, "size": len(coords), "min_rc": (min_r, min_c)})
 
-    # pair markers to objects by size and order, and enrich markers with object context
     by_size: dict[int, List[dict]] = {}
     for m in raw_markers:
         by_size.setdefault(m["size"], []).append(m)
@@ -188,9 +182,6 @@ def splitObjectsAndMarkers(components: List[dict]) -> Tuple[List[dict], List[dic
             paired_markers.append({**m, "obj_cells": obj["cells"], "base": obj.get("base")})
 
     return objects, paired_markers
-
-
-# pairing now handled inside splitObjectsAndMarkers; keep names minimal per DSL
 
 
 def lookupPattern(obj: dict) -> Optional[List[Tuple[int, int, int]]]:
@@ -210,7 +201,6 @@ def stampPatternAtMarker(canvas: Grid, pattern: List[Tuple[int, int, int]], mark
     height = len(canvas)
     width = len(canvas[0])
     out = [row[:] for row in canvas]
-    # clear associated object's original cells to base if provided
     base = marker.get("base")
     obj_cells = marker.get("obj_cells")
     if base is not None and obj_cells is not None:

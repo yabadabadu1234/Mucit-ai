@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 62593bfd."""
 
 from typing import Dict, List, Tuple, Optional, TypedDict
 
@@ -23,19 +22,16 @@ def _mode_background(grid: Grid) -> int:
     for row in grid:
         for v in row:
             counts[v] = counts.get(v, 0) + 1
-    # choose the value with max frequency; ties broken by larger color id for determinism
     return max(counts.items(), key=lambda kv: (kv[1], kv[0]))[0] if counts else 0
 
 
 def aggregateColumnCounts(grid: Grid) -> ColumnStats:
-    """Aggregate per-colour cells, min/max rows, and counts per column (background excluded)."""
     if not grid or not grid[0]:
         return {}
     h = len(grid)
     w = len(grid[0])
     bg = _mode_background(grid)
     info: ColumnStats = {}
-    # single pass over the grid; connectivity not required for aggregate stats
     for r in range(h):
         row = grid[r]
         for c in range(w):
@@ -52,13 +48,11 @@ def aggregateColumnCounts(grid: Grid) -> ColumnStats:
 
 
 def rankColorsByDominance(column_counts: ColumnStats) -> List[Color]:
-    """Order colours by total occupancy (sum across columns), descending, tiebreak by id."""
     totals = {color: sum(column_counts[color]["column_counts"].values()) for color in column_counts}
     return sorted(totals, key=lambda color: (-totals[color], color))
 
 
 def computeShiftTargets(grid: Grid, ordered_colors: List[Color]) -> ShiftPlan:
-    """Decide per-colour orientation ('top' or 'bottom') using aggregated overlap logic."""
     info = aggregateColumnCounts(grid)
     height = len(grid)
     colors = sorted(info)
@@ -94,7 +88,6 @@ def computeShiftTargets(grid: Grid, ordered_colors: List[Color]) -> ShiftPlan:
     if free:
         min_rows = [info[color]["min_row"] for color in free]
         if len(min_rows) > 1:
-            # median without numpy
             sorted_vals = sorted(float(x) for x in min_rows)
             mid = len(sorted_vals) // 2
             threshold = (sorted_vals[mid] if len(sorted_vals) % 2 == 1 else (sorted_vals[mid - 1] + sorted_vals[mid]) / 2.0)
@@ -107,7 +100,6 @@ def computeShiftTargets(grid: Grid, ordered_colors: List[Color]) -> ShiftPlan:
 
 
 def applyColorShifts(grid: Grid, targets: ShiftPlan) -> Grid:
-    """Translate each colour's cells to the top/bottom edge as decided by the targets."""
     if not grid or not grid[0]:
         return []
     h = len(grid)

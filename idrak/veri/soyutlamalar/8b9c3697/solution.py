@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 8b9c3697, refactored to DSL-style main."""
 
 from __future__ import annotations
 
@@ -27,10 +26,7 @@ def _neighbors(r: int, c: int) -> Iterable[Cell]:
     yield r, c + 1
 
 
-# --- DSL helpers (pure) ---
-
 def extractObjects(grid: Grid) -> List[Dict[str, Any]]:
-    """Non-background, non-2 connected objects with ids, cells, size, center."""
     bg = _background(grid)
     h = len(grid)
     w = len(grid[0]) if h else 0
@@ -64,7 +60,6 @@ def extractObjects(grid: Grid) -> List[Dict[str, Any]]:
 
 
 def extractTwoComponents(grid: Grid) -> List[Dict[str, Any]]:
-    """Connected components of color 2 with cells, size, center."""
     h = len(grid)
     w = len(grid[0]) if h else 0
     seen = [[False] * w for _ in range(h)]
@@ -112,29 +107,21 @@ def enumerateCorridorCandidates(
     two_components: Sequence[Dict[str, Any]],
     objects: Sequence[Dict[str, Any]],
 ) -> Dict[str, Any]:
-    """Enumerate valid straight corridors from each 2-component to objects.
-
-    Returns a structure with:
-      - components: the input components (for later application)
-      - by_object: mapping object id -> list of candidate dicts
-      - objects_by_id: id -> object dict
-    """
     bg = _background(grid)
     h = len(grid)
     w = len(grid[0]) if h else 0
 
-    # Build object id grid from objects' cells
     obj_id = [[-1] * w for _ in range(h)]
     for obj in objects:
-        oid = obj["id"]  # type: ignore[index]
-        for r, c in obj["cells"]:  # type: ignore[index]
-            obj_id[r][c] = oid  # type: ignore[assignment]
+        oid = obj["id"]
+        for r, c in obj["cells"]:
+            obj_id[r][c] = oid
 
     by_object: Dict[int, List[Dict[str, Any]]] = {}
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
     for comp_idx, comp in enumerate(two_components):
-        cells: Sequence[Cell] = comp["cells"]  # type: ignore[assignment]
+        cells: Sequence[Cell] = comp["cells"]
         if not cells:
             continue
         for dr, dc in directions:
@@ -168,7 +155,7 @@ def enumerateCorridorCandidates(
                     break
             if not valid or shift is None or shift > 8:
                 continue
-            tr, tc = target  # type: ignore[misc]
+            tr, tc = target
             oid = obj_id[tr][tc]
             if oid == -1:
                 continue
@@ -188,17 +175,15 @@ def enumerateCorridorCandidates(
             }
             by_object.setdefault(oid, []).append(cand)
 
-    objects_by_id = {obj["id"]: obj for obj in objects}  # type: ignore[index]
+    objects_by_id = {obj["id"]: obj for obj in objects}
     return {"components": list(two_components), "by_object": by_object, "objects_by_id": objects_by_id}
 
 
 def assignCorridors(candidates: Dict[str, Any]) -> Dict[str, Any]:
-    """Choose at most one corridor per object using size/shift/distance tiebreaks."""
     components: Sequence[Dict[str, Any]] = candidates["components"]
     by_object: Dict[int, List[Dict[str, Any]]] = candidates["by_object"]
     objects_by_id: Dict[int, Dict[str, Any]] = candidates["objects_by_id"]
 
-    # Sort objects by size, then id for stability
     objects_sorted = sorted(objects_by_id.values(), key=lambda o: (o["size"], o["id"]))
 
     assigned: Dict[int, Dict[str, Any]] = {}
@@ -219,7 +204,6 @@ def assignCorridors(candidates: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def applyCorridorMoves(grid: Grid, assignments: Dict[str, Any]) -> Grid:
-    """Apply chosen corridors; erase unassigned 2-components to background."""
     result = _copy(grid)
     bg = _background(grid)
     components: Sequence[Dict[str, Any]] = assignments["components"]
@@ -228,17 +212,16 @@ def applyCorridorMoves(grid: Grid, assignments: Dict[str, Any]) -> Grid:
     for idx, comp in enumerate(components):
         chosen = assigned.get(idx)
         if chosen is None:
-            for r, c in comp["cells"]:  # type: ignore[index]
+            for r, c in comp["cells"]:
                 result[r][c] = bg
             continue
-        for r, c in chosen["path"]:  # type: ignore[index]
+        for r, c in chosen["path"]:
             result[r][c] = 0
-        for r, c in chosen["new"]:  # type: ignore[index]
+        for r, c in chosen["new"]:
             result[r][c] = 2
     return result
 
 
-# --- Main (must match abstractions.md Lambda Representation) ---
 def solve_8b9c3697(grid: Grid) -> Grid:
     objects = extractObjects(grid)
     two_components = extractTwoComponents(grid)

@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 135a2760 (DSL-aligned)."""
 
 from __future__ import annotations
 
@@ -9,14 +8,12 @@ Grid = List[List[int]]
 Row = List[int]
 
 
-# --- Pure helpers matching the DSL abstraction ---
 def _border_color(row: Sequence[int]) -> int:
     return row[0]
 
 
-def _walkway_color(row: Sequence[int]) -> int | None:  # type: ignore[operator]
+def _walkway_color(row: Sequence[int]) -> int | None:
     border = row[0] if row else None
-    # pick the first value different from border as the walkway colour
     for v in row:
         if border is not None and v != border:
             return v
@@ -24,23 +21,16 @@ def _walkway_color(row: Sequence[int]) -> int | None:  # type: ignore[operator]
 
 
 def detectInnerSegment(row: Row) -> List[int]:
-    """Return the interior slice excluding border/walkway colours.
-
-    Border is inferred as row[0]; walkway as row[1] when available.
-    """
     if not row:
         return []
     border = _border_color(row)
     walkway = _walkway_color(row)
-    # find first and last index not equal to border/walkway
     def is_inner(v: int) -> bool:
         return v != border and (walkway is None or v != walkway)
 
-    # locate start
     start = next((i for i, v in enumerate(row) if is_inner(v)), None)
     if start is None:
         return []
-    # locate end
     end = next((i for i, v in enumerate(reversed(row)) if is_inner(v)), None)
     if end is None:
         return []
@@ -49,7 +39,6 @@ def detectInnerSegment(row: Row) -> List[int]:
 
 
 def _majority(bucket: Sequence[int]) -> Tuple[int, int]:
-    """Return (value, freq) for the majority element in the bucket."""
     if not bucket:
         return 0, 0
     value, freq = Counter(bucket).most_common(1)[0]
@@ -57,10 +46,6 @@ def _majority(bucket: Sequence[int]) -> Tuple[int, int]:
 
 
 def enumeratePatterns(segment: List[int]) -> List[Tuple[List[int], Tuple[float, int, int]]]:
-    """Enumerate candidate repeating patterns up to period 6 with scores.
-
-    Returns list of (pattern, score) with score = (mismatch_ratio, mismatch, period).
-    """
     n = len(segment)
     if n == 0:
         return []
@@ -80,14 +65,12 @@ def enumeratePatterns(segment: List[int]) -> List[Tuple[List[int], Tuple[float, 
 
 
 def selectBestPattern(patterns: List[Tuple[List[int], Tuple[float, int, int]]]) -> Tuple[List[int], Tuple[float, int, int]]:
-    """Pick the lowest-score pattern tuple."""
     if not patterns:
         return ([], (0.0, 0, 0))
     return min(patterns, key=lambda ps: ps[1])
 
 
 def tileSegment(row: Row, best: Tuple[List[int], Tuple[float, int, int]]) -> Row:
-    """Overwrite the inner segment with the repeating best pattern, returning a new row."""
     pattern, (_ratio, _mismatch, p) = best
     if not row or not pattern or p == 0:
         return row[:]

@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 4e34c42c."""
 
 from __future__ import annotations
 
@@ -10,7 +9,6 @@ Block = List[List[int]]
 
 
 def most_frequent_color(grid: Grid) -> int:
-    """Return the color that appears most often in the grid."""
     cnt: Counter[int] = Counter()
     for row in grid:
         cnt.update(row)
@@ -19,7 +17,6 @@ def most_frequent_color(grid: Grid) -> int:
 
 
 def pad_vertical(block: Block, background: int, height: int = 5) -> Block:
-    """Pad or sample rows so the block has exactly `height` rows."""
     current = len(block)
     if current == height:
         return [row[:] for row in block]
@@ -41,7 +38,6 @@ def pad_vertical(block: Block, background: int, height: int = 5) -> Block:
 
 
 def extract_components(grid: Grid, background: int):
-    """Return connected components (4-neighbour) of non-background cells."""
     h = len(grid)
     w = len(grid[0])
     visited = [[False] * w for _ in range(h)]
@@ -160,7 +156,6 @@ def assemble_components(components, background: int) -> Block:
     small_unique = []
     small_redundant = []
 
-    # Pre-compute column signatures of every block for redundancy tests.
     all_columns: List[set] = []
     for comp in components:
         all_columns.append(column_signatures(comp["normalized"]))
@@ -172,7 +167,6 @@ def assemble_components(components, background: int) -> Block:
         elif comp_type == "wide_short":
             wide_short.append(comp)
         else:
-            # Determine if every column already appears elsewhere.
             other_cols = set().union(*(all_columns[j] for j in range(len(components)) if j != idx))
             target_cols = all_columns[idx]
             if target_cols.issubset(other_cols):
@@ -194,10 +188,6 @@ def assemble_components(components, background: int) -> Block:
         result = merge_blocks(result, comp["normalized"])
     return result
 
-
-# ---------------------------------------------------------------------------
-# DSL wrappers to match abstractions.md lambda exactly
-# ---------------------------------------------------------------------------
 
 def extractComponents(grid: Grid) -> List[Dict]:
     background = most_frequent_color(grid)

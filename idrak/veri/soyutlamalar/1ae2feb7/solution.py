@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 1ae2feb7 (split: evaluation)."""
 
 from typing import List, Tuple, Optional
 

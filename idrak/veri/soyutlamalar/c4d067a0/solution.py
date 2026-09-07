@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task c4d067a0 (split: evaluation)."""
 
 from __future__ import annotations
 
@@ -72,18 +71,15 @@ def decodeInstructionSequences(grid: Grid, components: ComponentSet) -> Tuple[Li
 
 
 def inferColumnGeometry(components: ComponentSet) -> Dict[str, object]:
-    # Derive canvas size and background purely from components.
     height, width = _grid_size_from_components(components)
     background = _background_from_components(components)
 
-    # Template components are non-background and larger than one cell.
     template_components: ComponentSet = [
         (colour, cells)
         for colour, cells in components
         if colour != background and len(cells) > 1
     ]
     if not template_components:
-        # Fallback minimal geometry
         return {
             "height": height,
             "width": width,
@@ -101,7 +97,6 @@ def inferColumnGeometry(components: ComponentSet) -> Dict[str, object]:
 
     template_components.sort(key=comp_key)
 
-    # Establish the block mask from the first template component.
     _, base_cells = template_components[0]
     base_row = min(r for r, _ in base_cells)
     base_col = min(c for _, c in base_cells)
@@ -109,14 +104,11 @@ def inferColumnGeometry(components: ComponentSet) -> Dict[str, object]:
     block_height = 1 + max(dr for dr, _ in mask)
     block_width = 1 + max(dc for _, dc in mask)
 
-    # Horizontal spacing learned from existing template columns; fallback to block_width.
     existing_cols = sorted({min(c for _, c in cells) for _, cells in template_components})
     if len(existing_cols) >= 2:
         deltas = [existing_cols[i + 1] - existing_cols[i] for i in range(len(existing_cols) - 1)]
         spacing = Counter(deltas).most_common(1)[0][0]
     else:
-        # If only one template column exists, we cannot infer spacing robustly here;
-        # default to block_width (the main solver previously also allowed an alt fallback).
         spacing = block_width
 
     grouped: DefaultDict[int, ComponentSet] = defaultdict(list)
@@ -146,18 +138,17 @@ def _reconstruct_grid(components: ComponentSet, height: int, width: int) -> Grid
 
 
 def stackColumns(geometry: Dict[str, object], sequences: List[List[int]]) -> Grid:
-    height: int = cast(int, geometry["height"])  # type: ignore[index]
-    width: int = cast(int, geometry["width"])  # type: ignore[index]
-    mask: List[Tuple[int, int]] = cast(List[Tuple[int, int]], geometry["mask"])  # type: ignore[index]
-    block_height: int = cast(int, geometry["block_height"])  # type: ignore[index]
-    spacing: int = cast(int, geometry["spacing"])  # type: ignore[index]
-    base_col: int = cast(int, geometry["base_col"])  # type: ignore[index]
-    grouped: DefaultDict[int, ComponentSet] = cast(DefaultDict[int, ComponentSet], geometry["grouped"])  # type: ignore[index]
-    base_grid: Grid = cast(Grid, geometry["base_grid"])  # type: ignore[index]
+    height: int = cast(int, geometry["height"])
+    width: int = cast(int, geometry["width"])
+    mask: List[Tuple[int, int]] = cast(List[Tuple[int, int]], geometry["mask"])
+    block_height: int = cast(int, geometry["block_height"])
+    spacing: int = cast(int, geometry["spacing"])
+    base_col: int = cast(int, geometry["base_col"])
+    grouped: DefaultDict[int, ComponentSet] = cast(DefaultDict[int, ComponentSet], geometry["grouped"])
+    base_grid: Grid = cast(Grid, geometry["base_grid"])
 
     column_count = len(sequences)
 
-    # Determine the common bottom row so that all columns align at their final block.
     candidate_last_rows: List[int] = []
     for index, comps in grouped.items():
         if not (0 <= index < column_count):
@@ -189,7 +180,6 @@ def stackColumns(geometry: Dict[str, object], sequences: List[List[int]]) -> Gri
                 last_row = row
                 break
 
-    # Paint onto a reconstruction of the original grid to preserve other content.
     output = [row[:] for row in base_grid]
     for idx, sequence in enumerate(sequences):
         col_start = base_col + idx * spacing

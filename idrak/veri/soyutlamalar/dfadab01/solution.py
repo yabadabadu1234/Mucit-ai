@@ -1,4 +1,3 @@
-"""Heuristic solver for ARC-AGI-2 task dfadab01."""
 
 from typing import Callable, Dict, List, Optional, Sequence, Tuple, TypeVar
 
@@ -6,9 +5,6 @@ Grid = List[List[int]]
 Cell = Tuple[int, int]
 Patch = Tuple[Tuple[int, ...], ...]
 
-# Mapping from input 4x4 neighbourhoods (with -1 padding outside the grid) to
-# the corresponding output 4x4 motif. The mapping is colour-specific and was
-# distilled from the four training examples.
 PATCH_LIBRARY: Dict[int, Dict[Patch, Patch]] = {
     1: {
         (
@@ -200,7 +196,6 @@ PATCH_LIBRARY: Dict[int, Dict[Patch, Patch]] = {
 
 
 def _extract_patch(grid: Grid, r: int, c: int) -> Patch:
-    """Return the 4x4 neighbourhood around (r, c), padding with -1 outside."""
 
     rows = len(grid)
     cols = len(grid[0])
@@ -219,7 +214,6 @@ def _extract_patch(grid: Grid, r: int, c: int) -> Patch:
 
 
 def _stamp_patch(out: Grid, patch: Patch, r: int, c: int) -> None:
-    """Overlay a 4x4 patch onto the output grid, ignoring zero entries."""
 
     rows = len(out)
     cols = len(out[0])
@@ -256,7 +250,6 @@ T = TypeVar("T")
 
 
 def fold_repaint(canvas: Grid, items: Sequence[T], update: Callable[[Grid, T], Grid]) -> Grid:
-    # Start from a blank canvas with the same shape to match solver semantics.
     rows = len(canvas)
     cols = len(canvas[0]) if rows else 0
     acc = [[0 for _ in range(cols)] for _ in range(rows)]

@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 7b0280bc."""
 
 from __future__ import annotations
 
@@ -25,7 +24,6 @@ def deepcopy_grid(grid: Grid) -> Grid:
 
 
 def union_component_tree(grid: Grid) -> Grid:
-    """Prototype: decision tree over union components (initial attempt)."""
 
     h, w = len(grid), len(grid[0])
     counts = Counter(cell for row in grid for cell in row)
@@ -75,7 +73,6 @@ def union_component_tree(grid: Grid) -> Grid:
 
 
 def color_component_tree(grid: Grid) -> Grid:
-    """Final abstraction: decision tree over monochrome components."""
 
     h, w = len(grid), len(grid[0])
     counts = Counter(cell for row in grid for cell in row)
@@ -183,7 +180,6 @@ def main() -> None:
             else:
                 print(f"  {name:25s} no labelled pairs")
 
-        # For test split, echo the predicted grid from the current best abstraction.
         if split == "test":
             best_name, best_fn = ABSTRACTIONS[-1]
             pred = best_fn(pairs[0]["input"])

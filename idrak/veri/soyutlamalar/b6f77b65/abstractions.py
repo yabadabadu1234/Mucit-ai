@@ -1,10 +1,3 @@
-"""Abstractions explored for ARC task b6f77b65.
-
-Each abstraction is implemented as a pure function and wired into a lightweight
-evaluation harness that reports match rates across the available dataset splits
-(train/test/arc-gen) together with the first failing index when ground-truth
-outputs are provided.
-"""
 
 from __future__ import annotations
 
@@ -51,13 +44,11 @@ OLD_PATTERN_OFFSET = [
 
 
 def load_task() -> dict:
-    """Load the ARC task description from disk."""
 
     return json.loads(TASK_PATH.read_text())
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Return the grid unchanged (baseline sanity check)."""
 
     return [row[:] for row in grid]
 
@@ -100,7 +91,6 @@ def _apply_mapping(grid: Grid, mapping: Dict[Tuple[int, str, Optional[str]], Lis
 
 
 def segment_template_lookup_v0(grid: Grid) -> Grid:
-    """First attempt: template lookup with the misaligned (2,'adf','e') pattern."""
 
     mapping = {key: [row[:] for row in value] for key, value in CURRENT_MAPPING.items()}
     mapping[(2, 'adf', 'e')] = [row[:] for row in OLD_PATTERN_OFFSET]
@@ -108,7 +98,6 @@ def segment_template_lookup_v0(grid: Grid) -> Grid:
 
 
 def segment_template_lookup_v1(grid: Grid) -> Grid:
-    """Corrected template lookup that matches the final solver."""
 
     return _apply_mapping(grid, CURRENT_MAPPING)
 

@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 9bbf930d."""
 
 from __future__ import annotations
 
@@ -36,15 +35,11 @@ def row_non_count(row: Iterable[int]) -> int:
     return sum(1 for val in row if val not in (6, 7))
 
 
-# --- Abstraction pipelines -------------------------------------------------
-
-
 def identity_solver(grid: List[List[int]]) -> List[List[int]]:
     return clone(grid)
 
 
 def row_separator_solver(grid: List[List[int]]) -> List[List[int]]:
-    """Only move the left-edge 6 for repeating row bands."""
     result = clone(grid)
     rows = len(grid)
     cols = len(grid[0])
@@ -76,12 +71,9 @@ def full_solver(grid: List[List[int]]) -> List[List[int]]:
         spec = importlib.util.spec_from_file_location("task_9bbf930d", solver_path)
         module = importlib.util.module_from_spec(spec)
         assert spec.loader is not None
-        spec.loader.exec_module(module)  # type: ignore[assignment]
+        spec.loader.exec_module(module)
         _FULL_SOLVER = module.solve_9bbf930d
     return _FULL_SOLVER(grid)
-
-
-# --- Evaluation harness ----------------------------------------------------
 
 
 def evaluate(solver: Callable[[List[List[int]]], List[List[int]]], train, test):
@@ -113,7 +105,6 @@ def main():
             print(f"  first failing train index: {first_fail}")
         else:
             print("  first failing train index: None (all matched)")
-        # Run on test grids to ensure solver executes end-to-end
         if test:
             for t_idx, puzzle in enumerate(test):
                 _ = solver(puzzle["input"]) if isinstance(puzzle, dict) else solver(puzzle)

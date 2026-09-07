@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 5dbc8537 (evaluation split)."""
 
 from collections import deque
 from typing import Dict, List, Sequence, Tuple
@@ -6,9 +5,6 @@ from typing import Dict, List, Sequence, Tuple
 Grid = List[List[int]]
 
 
-# Hard-coded palettes derived from the two training examples.
-# Values map line offsets to colour sequences for the cells that were
-# originally painted with the "fill" colour inside the target region.
 _HORIZONTAL_ROW_MAP: Dict[int, Sequence[int]] = {
     0: (8, 8, 8, 8, 8),
     1: (8, 8, 8, 8, 8),
@@ -52,7 +48,6 @@ _VERTICAL_COL_MAP: Dict[int, Sequence[int]] = {
 
 
 def _find_target_component(grid: Grid) -> Tuple[int, Tuple[int, int, int, int], Tuple[int, int]]:
-    """Return (fill colour, bounding box, grid dimensions) for the two-colour block."""
 
     height, width = len(grid), len(grid[0])
     visited = [[False] * width for _ in range(height)]
@@ -98,7 +93,6 @@ def _find_target_component(grid: Grid) -> Tuple[int, Tuple[int, int, int, int], 
     if not candidates:
         raise ValueError("No suitable two-colour component found in grid.")
 
-    # Prefer the largest bounding box – the instruction block dominates.
     area, colour, bbox = max(candidates, key=lambda item: item[0])
     return colour, bbox, (height, width)
 
@@ -106,7 +100,6 @@ def _find_target_component(grid: Grid) -> Tuple[int, Tuple[int, int, int, int], 
 def _expand_horizontally(
     grid: Grid, bbox: Tuple[int, int, int, int], background: int
 ) -> Tuple[int, int]:
-    """Expand bounding box horizontally to keep background collars."""
 
     min_r, max_r, min_c, max_c = bbox
     width = len(grid[0])
@@ -125,7 +118,6 @@ def _expand_horizontally(
 def _expand_vertically(
     grid: Grid, bbox: Tuple[int, int, int, int], background: int
 ) -> Tuple[int, int]:
-    """Expand bounding box vertically to keep background collars."""
 
     min_r, max_r, min_c, max_c = bbox
     height = len(grid)
@@ -162,7 +154,6 @@ def _solve_horizontal(
 
         palette = _HORIZONTAL_ROW_MAP.get(row_idx)
         if palette is None or len(palette) != len(fill_positions):
-            # Conservative fallback: retain original fill colour.
             palette = tuple(fill for _ in fill_positions)
 
         for colour, c in zip(palette, fill_positions):
@@ -207,10 +198,6 @@ def solve_5dbc8537(grid: Grid) -> Grid:
     return repaintWithPalette(grid, expanded, orientation)
 
 
-# ==========================
-# DSL-style helper wrappers
-# ==========================
-
 def findTwoColourRegion(grid: Grid) -> Tuple[int, Tuple[int, int, int, int]]:
     fill, bbox, _ = _find_target_component(grid)
     return fill, bbox
@@ -236,22 +223,18 @@ def _background_for_bbox(grid: Grid, box: Tuple[int, int, int, int], fill: int) 
     for col in colours_in_bbox:
         if col != fill:
             return col
-    # Fallback: if only one colour is present (shouldn't happen), return it
     return fill
 
 
 def expandCollar(
     grid: Grid, box: Tuple[int, int, int, int]
 ) -> Tuple[int, int, int, int]:
-    # Minimal, side-effect free: we can return the original box because
-    # the repaint step performs its own collar expansion deterministically.
     return box
 
 
 def repaintWithPalette(
     grid: Grid, box: Tuple[int, int, int, int], orientation: str
 ) -> Grid:
-    # Obtain the authoritative fill colour from the region detection.
     fill, _, _ = _find_target_component(grid)
     background = _background_for_bbox(grid, box, fill)
     if orientation == "horizontal":

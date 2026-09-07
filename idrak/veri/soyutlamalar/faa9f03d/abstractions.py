@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task faa9f03d."""
 
 from __future__ import annotations
 
@@ -24,38 +23,38 @@ def load_task() -> Dict[str, List[Example]]:
 
 
 def abstraction_remove_noise(grid: Grid) -> Grid:
-    cleaned, _ = solver._remove_noise(grid)  # type: ignore[attr-defined]
+    cleaned, _ = solver._remove_noise(grid)
     return cleaned
 
 
 def abstraction_row_col_closure(grid: Grid) -> Grid:
-    cleaned, top = solver._remove_noise(grid)  # type: ignore[attr-defined]
+    cleaned, top = solver._remove_noise(grid)
     dominant = top[0] if top else None
-    stats = solver._analyze_color_stats(grid)  # type: ignore[attr-defined]
+    stats = solver._analyze_color_stats(grid)
     allowed = {3}
     for color, (max_col, _max_row) in stats.items():
         if color != 3 and max_col <= 4:
             allowed.add(color)
-    g = solver._close_cols_selective(cleaned, dominant)  # type: ignore[attr-defined]
-    g = solver._close_rows_selective(g, allowed)  # type: ignore[attr-defined]
+    g = solver._close_cols_selective(cleaned, dominant)
+    g = solver._close_rows_selective(g, allowed)
     return g
 
 
 def abstraction_flanked_and_extend(grid: Grid) -> Grid:
-    cleaned, top = solver._remove_noise(grid)  # type: ignore[attr-defined]
+    cleaned, top = solver._remove_noise(grid)
     dominant = top[0] if top else None
-    stats = solver._analyze_color_stats(grid)  # type: ignore[attr-defined]
+    stats = solver._analyze_color_stats(grid)
     allowed = {3}
     for color, (max_col, _max_row) in stats.items():
         if color != 3 and max_col <= 4:
             allowed.add(color)
-    g = solver._close_cols_selective(cleaned, dominant)  # type: ignore[attr-defined]
-    g = solver._close_rows_selective(g, allowed)  # type: ignore[attr-defined]
-    g = solver._flanked_selective(g, dominant)  # type: ignore[attr-defined]
+    g = solver._close_cols_selective(cleaned, dominant)
+    g = solver._close_rows_selective(g, allowed)
+    g = solver._flanked_selective(g, dominant)
     h = len(g)
     mid = h // 2
     rows_to_extend = [r for r in range(mid + 1) if Counter(v for v in g[r] if v)[3] >= 6]
-    g = solver._extend_rows(g, rows_to_extend)  # type: ignore[attr-defined]
+    g = solver._extend_rows(g, rows_to_extend)
     return g
 
 

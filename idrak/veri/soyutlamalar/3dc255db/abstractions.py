@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task 3dc255db."""
 
 from __future__ import annotations
 
@@ -72,12 +71,10 @@ def _collect_metadata(grid: Grid) -> Tuple[
 
 
 def abstraction_identity(grid: Grid) -> Grid:
-    """Baseline identity mapping."""
     return _deep_copy(grid)
 
 
 def abstraction_normalized_axis(grid: Grid) -> Grid:
-    """Early attempt that pushes intruders using normalized offsets (fails on train[0])."""
 
     height = len(grid)
     width = len(grid[0])
@@ -164,7 +161,6 @@ def abstraction_normalized_axis(grid: Grid) -> Grid:
 
 
 def abstraction_intruder_edge_push(grid: Grid) -> Grid:
-    """Final abstraction: push intruders opposite their dominant offset."""
 
     height = len(grid)
     width = len(grid[0])

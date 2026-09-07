@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 291dc1e1 (split: evaluation)."""
 
 from __future__ import annotations
 
@@ -8,7 +7,6 @@ from typing import Iterable, List, Sequence, Tuple
 BACKGROUND = 8
 HEADER_COLORS = {0, 1, 2}
 
-# DSL type aliases
 Grid = List[List[int]]
 Range = range
 Segment = List[int]
@@ -61,7 +59,6 @@ def _inflate(segment: Sequence[int], width: int) -> List[int]:
     right = remaining - left
     return [BACKGROUND] * left + list(segment) + [BACKGROUND] * right
 
-# === DSL helper wrappers (pure API layer) ===
 
 def maybeTranspose(grid: Sequence[Sequence[int]]) -> Tuple[Grid, bool]:
     use_transpose = len(grid[0]) <= len(grid)
@@ -111,7 +108,7 @@ def weaveSegments(
     return result
 
 
-def restoreOrientation(grid: Grid, transposed: bool) -> Grid:  # identity for this task
+def restoreOrientation(grid: Grid, transposed: bool) -> Grid:
     return grid
 
 

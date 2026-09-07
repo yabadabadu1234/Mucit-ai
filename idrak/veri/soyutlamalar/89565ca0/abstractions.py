@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 89565ca0."""
 
 from collections import Counter, defaultdict, deque
 import json
@@ -162,7 +161,6 @@ def _profile_to_rows(
 
 
 def abstraction_naive_stripe(grid: Grid) -> Grid:
-    """First attempt: map stripe index directly to prefix length."""
 
     def mapper(dom_idx: Optional[int]) -> Optional[int]:
         if dom_idx is None:
@@ -173,7 +171,6 @@ def abstraction_naive_stripe(grid: Grid) -> Grid:
 
 
 def abstraction_refined_stripe(grid: Grid) -> Grid:
-    """Final refinement mirroring the production solver."""
 
     def mapper(dom_idx: Optional[int]) -> Optional[int]:
         if dom_idx is None:

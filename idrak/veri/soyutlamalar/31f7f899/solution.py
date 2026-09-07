@@ -1,10 +1,9 @@
-"""Solver for ARC-AGI-2 task 31f7f899 (evaluation split)."""
 
 from collections import Counter
 from typing import List, Sequence, Tuple
 
 Grid = List[List[int]]
-Stripe = Tuple[int, int, int]  # (column, color, height)
+Stripe = Tuple[int, int, int]
 
 
 def _clone(grid: Grid) -> Grid:

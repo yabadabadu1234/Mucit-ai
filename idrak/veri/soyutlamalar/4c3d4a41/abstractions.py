@@ -1,4 +1,3 @@
-"""Abstractions explored while solving ARC task 4c3d4a41."""
 
 import json
 from collections import Counter
@@ -138,4 +137,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

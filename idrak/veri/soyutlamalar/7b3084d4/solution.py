@@ -1,7 +1,4 @@
-"""Solver for ARC task 7b3084d4 based on perimeter-max tiling."""
 
-# Iterative refinement in progress; eval-driven adjustments forthcoming.
-# TODO: revisit heuristic scoring if future grids require different packing order.
 
 from collections import deque
 from typing import List, Optional, Sequence, Tuple, TypedDict
@@ -38,7 +35,6 @@ WEIGHTS: Tuple[float, ...] = (
 
 
 def _extract_components(grid: Grid) -> List[Tuple[int, List[Tuple[int, int]]]]:
-    """Return list of (color, cells) for each 4-connected non-zero component."""
     h, w = len(grid), len(grid[0])
     seen = [[False] * w for _ in range(h)]
     comps: List[Tuple[int, List[Tuple[int, int]]]] = []
@@ -86,7 +82,6 @@ def _generate_variants(cells: List[Tuple[int, int]]) -> List[Tuple[Tuple[int, in
             norm = normalize_list(arr)
             if norm not in seen:
                 seen.add(norm)
-        # revert flip for next rotation
             if flip:
                 arr = [(r, -c) for r, c in arr]
     return [variant for variant in seen]
@@ -108,7 +103,6 @@ def _grid_perimeter(grid: Grid) -> int:
 
 
 def _bounding_box(cells: List[Tuple[int, int]]) -> Tuple[int, int, int, int]:
-    """Return (top, left, bottom, right) inclusive bounds for the given cells."""
     rows = [r for r, _ in cells]
     cols = [c for _, c in cells]
     return min(rows), min(cols), max(rows), max(cols)
@@ -258,4 +252,3 @@ def solve_7b3084d4(grid: Grid) -> Grid:
 
 
 p = solve_7b3084d4
-# Initial tweak; logic to be implemented below.

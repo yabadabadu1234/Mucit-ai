@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task de809cff."""
 
 from typing import List, Tuple
 
@@ -25,7 +24,6 @@ def _nonzero_colors(grid: Grid) -> List[int]:
 
 
 def detectZeroSeeds(grid: Grid) -> List[Seed]:
-    """Find zero cells with ≥3 matching non-zero orthogonal neighbours, record host colour."""
     h, w = _dims(grid)
     orth = ((1, 0), (-1, 0), (0, 1), (0, -1))
     seeds: List[Seed] = []
@@ -44,7 +42,6 @@ def detectZeroSeeds(grid: Grid) -> List[Seed]:
 
 
 def paintHalos(grid: Grid, seeds: List[Seed]) -> Grid:
-    """Paint seed cell to 8 and surround with the opposite colour halo (incl. diagonals)."""
     colors = _nonzero_colors(grid)
     if len(colors) != 2:
         return _copy_grid(grid)
@@ -73,7 +70,6 @@ def paintHalos(grid: Grid, seeds: List[Seed]) -> Grid:
 
 
 def realignSecondaryPixels(grid: Grid, halo_grid: Grid) -> Grid:
-    """Flip unchanged secondary pixels supported by ≥3 primary neighbours in the original grid."""
     colors = _nonzero_colors(grid)
     if len(colors) != 2:
         return _copy_grid(halo_grid)
@@ -96,7 +92,6 @@ def realignSecondaryPixels(grid: Grid, halo_grid: Grid) -> Grid:
 
 
 def pruneStragglers(grid: Grid, realigned: Grid) -> Grid:
-    """Remove unchanged pixels that have ≥3 zero neighbours (counting off-grid as zero)."""
     colors = _nonzero_colors(grid)
     if len(colors) != 2:
         return _copy_grid(realigned)

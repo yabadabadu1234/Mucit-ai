@@ -1,9 +1,3 @@
-"""Solver for ARC-AGI-2 task 3dc255db (split: evaluation).
-
-Refactored to the typed-DSL workflow using pure helpers and a
-fold-repaint iteration in the main function, preserving original
-behaviour.
-"""
 
 from __future__ import annotations
 
@@ -11,14 +5,12 @@ from collections import deque
 from typing import Any, Dict, Iterable, List, Sequence, Tuple
 
 
-# --- Basic types ---
 Grid = List[List[int]]
-Component = Dict[str, Any]  # typed payload: host bbox/dims, colour, cells
-Edge = Dict[str, str]  # {"axis": "horizontal|vertical", "direction": "east|west|north|south"}
-Offset = Dict[str, float]  # {"drow": float, "dcol": float, "host_h": int, "host_w": int}
+Component = Dict[str, Any]
+Edge = Dict[str, str]
+Offset = Dict[str, float]
 
 
-# --- Shared helpers (pure) ---
 def _deep_copy(grid: Grid) -> Grid:
     return [row[:] for row in grid]
 
@@ -75,7 +67,6 @@ def _collect_metadata(grid: Grid) -> Tuple[
     return colors, color_cells, bboxes, areas, components
 
 
-# --- DSL primitives ---
 def fold_repaint(initial: Grid, items: List[Component], update: Any) -> Grid:
     g = _deep_copy(initial)
     for it in items:
@@ -216,7 +207,6 @@ def pushComponent(canvas: Grid, component: Component, edge: Edge) -> Grid:
     return _place_vertical(canvas, component, edge["direction"])
 
 
-# --- Main function (must match abstractions.md exactly) ---
 def solve_3dc255db(grid: Grid) -> Grid:
     intruders = extractIntruders(grid)
     

@@ -1,16 +1,13 @@
-"""Solver for ARC-AGI-2 task e87109e9 (evaluation split)."""
 
 from collections import Counter
 from typing import Any, Iterable, List, Optional, Sequence, Set, Tuple
 
-# Typed aliases used by the DSL-style main
 Grid = List[List[int]]
 Color = int
 Digit = int
 Mask = Tuple[Tuple[int, ...], ...]
 
 
-# Pre-computed diff/target masks extracted from the training samples.
 _SAMPLE_DATA: List[dict[str, Any]] = [
     {"digit": 1,
      "target": [[1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1]] ,
@@ -89,10 +86,6 @@ def solve_e87109e9(grid: Grid) -> Grid:
 
     return fold_repaint(body, list(range(block_count)), carve)
 
-
-#
-# DSL helper wrappers (pure) bridging to the existing internal implementation.
-#
 
 def splitHeaderBody(grid: Grid) -> Tuple[Grid, Grid]:
     if not grid:

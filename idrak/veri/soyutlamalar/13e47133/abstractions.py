@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 13e47133."""
 
 from __future__ import annotations
 
@@ -132,15 +131,15 @@ def apply_template_abstraction(grid: Grid, templates: Templates) -> Grid:
 
     result = _deep_copy(grid)
     for comp in _find_components(grid, background):
-        color = comp["color"]  # type: ignore[index]
-        comp_size = len(comp["cells"])  # type: ignore[index]
+        color = comp["color"]
+        comp_size = len(comp["cells"])
         offset = _select_offset(
             templates,
-            color,  # type: ignore[arg-type]
+            color,
             height,
             comp_size,
-            comp["min_row"],  # type: ignore[index]
-            comp["min_col"],  # type: ignore[index]
+            comp["min_row"],
+            comp["min_col"],
             width,
         )
         if offset is None:
@@ -148,15 +147,14 @@ def apply_template_abstraction(grid: Grid, templates: Templates) -> Grid:
         template = templates.get((color, height, comp_size, offset))
         if template is None:
             continue
-        start_row = comp["min_row"] + offset[0]  # type: ignore[index]
-        start_col = comp["min_col"] + offset[1]  # type: ignore[index]
+        start_row = comp["min_row"] + offset[0]
+        start_col = comp["min_col"] + offset[1]
         _overlay(result, template, start_row, start_col)
 
     return result
 
 
 def abstraction_identity(grid: Grid) -> Grid:
-    """Baseline: return the grid unchanged."""
 
     return _deep_copy(grid)
 
@@ -174,13 +172,11 @@ if (5, 20, 1, (0, 0)) in _TEMPLATES_V1:
 
 
 def abstraction_template_v1(grid: Grid) -> Grid:
-    """First template attempt with missing strokes for colors 4 and 5."""
 
     return apply_template_abstraction(grid, _TEMPLATES_V1)
 
 
 def abstraction_template_final(grid: Grid) -> Grid:
-    """Final corrected template overlay (matches solver implementation)."""
 
     return apply_template_abstraction(grid, _BASE_TEMPLATES)
 

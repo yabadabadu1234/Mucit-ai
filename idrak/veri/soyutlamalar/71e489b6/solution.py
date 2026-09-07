@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 71e489b6 (evaluation split)."""
 
 from __future__ import annotations
 
@@ -76,7 +75,6 @@ def paintTipHalos(
     base: Grid = [list(row) for row in cleaned]
     result: Grid = [list(row) for row in cleaned]
 
-    # Pre-compute, for each zero cell in the original (pre-halo) canvas, how many tip neighbours it has.
     tip_adj: List[List[int]] = [[0] * w for _ in range(h)]
     for r in range(h):
         for c in range(w):

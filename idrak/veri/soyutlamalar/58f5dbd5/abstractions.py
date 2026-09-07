@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 58f5dbd5."""
 
 import json
 from collections import Counter
@@ -7,7 +6,6 @@ from pathlib import Path
 
 TASK_PATH = Path(__file__).parent / "arc2_samples" / "58f5dbd5.json"
 
-# 3×3 interior patterns used to paint 5×5 scoreboard glyphs.
 PATTERNS = {
     (3, 1, 0, 0): ((0, 0, 0), (1, 0, 1), (0, 0, 0)),
     (3, 1, 1, 0): ((0, 1, 0), (0, 0, 1), (0, 1, 1)),
@@ -37,7 +35,6 @@ def copy_grid(grid):
 
 
 def identity(grid):
-    """Straight copy of the input (baseline)."""
 
     return copy_grid(grid)
 

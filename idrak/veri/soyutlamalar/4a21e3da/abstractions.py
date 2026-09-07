@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 4a21e3da."""
 
 from __future__ import annotations
 
@@ -22,7 +21,6 @@ def identity_baseline(grid: Grid) -> Grid:
 
 
 def simple_corner_projection(grid: Grid) -> Grid:
-    """First attempt: align entire left/right subsets without guarding."""
     height, width = len(grid), len(grid[0])
     sevens = [(r, c) for r, row in enumerate(grid) for c, val in enumerate(row) if val == 7]
     twos = [(r, c) for r, row in enumerate(grid) for c, val in enumerate(row) if val == 2]
@@ -51,7 +49,7 @@ def simple_corner_projection(grid: Grid) -> Grid:
             dy, dx = -r0, (width - span_c) - c0
         elif corner == "bottom-left":
             dy, dx = (height - span_r) - r0, -c0
-        else:  # bottom-right
+        else:
             dy, dx = (height - span_r) - r0, (width - span_c) - c0
         for r, c in cells:
             nr, nc = r + dy, c + dx
@@ -80,10 +78,10 @@ def final_corner_projection(grid: Grid) -> Grid:
     module_path = Path(__file__).with_name("arc2_samples") / "4a21e3da.py"
     spec = importlib.util.spec_from_file_location("solver_4a21e3da", module_path)
     module = importlib.util.module_from_spec(spec)
-    sys.modules[spec.name] = module  # type: ignore[arg-type]
+    sys.modules[spec.name] = module
     assert spec.loader is not None
-    spec.loader.exec_module(module)  # type: ignore[attr-defined]
-    return module.solve_4a21e3da(grid)  # type: ignore[attr-defined]
+    spec.loader.exec_module(module)
+    return module.solve_4a21e3da(grid)
 
 
 Solver = Callable[[Grid], Grid]

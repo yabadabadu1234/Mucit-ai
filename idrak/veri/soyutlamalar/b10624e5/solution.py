@@ -1,11 +1,9 @@
-"""Solver for ARC-AGI-2 task b10624e5 (split: evaluation)."""
 
 from __future__ import annotations
 
 from collections import Counter
 from typing import Callable, Iterable, List, Sequence, Tuple, TypedDict, Optional
 
-# Typed aliases for clarity and mypy
 Grid = List[List[int]]
 Coord = Tuple[int, int]
 Component = List[Coord]
@@ -23,8 +21,6 @@ def _clone_grid(grid: Grid) -> Grid:
 
 
 def findCenterCross(grid: Grid) -> Tuple[int, int]:
-    """Locate the dominant row and column of ones that form the cross."""
-    # Reset per-solve globals to ensure purity across calls
     global _B10624E5_ORIG, _B10624E5_CROSS
     _B10624E5_ORIG = _clone_grid(grid)
     _B10624E5_CROSS = None
@@ -158,10 +154,8 @@ def paintOrnaments(canvas: Grid, component: Component, palette: OrnamentPalette)
     minc, maxc = min(cols), max(cols)
     comp_height = maxr - minr + 1
 
-    # Determine side and vertical position relative to the global center cross
     base_center = _B10624E5_CROSS
     if base_center is None:
-        # Fallback: compute from original/base if available
         base_center = findCenterCross(_B10624E5_ORIG or canvas)
     center_row, center_col = base_center
     avg_row = sum(rows) / len(rows)
@@ -169,7 +163,6 @@ def paintOrnaments(canvas: Grid, component: Component, palette: OrnamentPalette)
     side = "left" if avg_col < center_col else "right"
     vert_pos = "top" if avg_row < center_row else "bottom"
 
-    # Horizontal expansions (towards and away from the centre column).
     inner_horizontal_color = palette.get("inner_h")
     outer_horizontal_color = palette.get("outer_h")
     inner_thickness = comp_height if inner_horizontal_color is not None else 0
@@ -178,8 +171,7 @@ def paintOrnaments(canvas: Grid, component: Component, palette: OrnamentPalette)
     result = _clone_grid(canvas)
 
     if inner_thickness:
-        ihc = inner_horizontal_color  # type: ignore[assignment]
-        # mypy: guarded by inner_thickness implies non-None
+        ihc = inner_horizontal_color
         assert ihc is not None
         if side == "left":
             for offset in range(1, inner_thickness + 1):
@@ -189,7 +181,7 @@ def paintOrnaments(canvas: Grid, component: Component, palette: OrnamentPalette)
                 for row in range(minr, maxr + 1):
                     if result[row][col] == 4:
                         result[row][col] = ihc
-        else:  # right side component, fill to the left
+        else:
             for offset in range(1, inner_thickness + 1):
                 col = minc - offset
                 if col < 0:
@@ -218,7 +210,6 @@ def paintOrnaments(canvas: Grid, component: Component, palette: OrnamentPalette)
                     if result[row][col] == 4:
                         result[row][col] = ohc
 
-    # Vertical expansions (away from the centre row).
     vertical_inner_color = palette.get("inner_v")
     vertical_outer_color = palette.get("outer_v")
     vertical_inner_thickness = comp_height if vertical_inner_color is not None else 0

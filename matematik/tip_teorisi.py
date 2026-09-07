@@ -1,55 +1,3 @@
-"""TİP TEORİSİ ÇİPİ -- kübik tip teorisi, NbE ve HoTT.
-
-KÜME 7'nin birinci karargâhı (kütük H226). On bir dosya --
-``omega_kategori_nbe/`` altındaki aralik, sozdizim, terimler,
-cekirdek, denklik, denetleyici, kutuphane, turetimler, geometri,
-iliskiler, yazdir -- burada birleşti. Terkip üç adımda yapıldı:
-(a) her dosya kendi içinde, (b) birleştirme, (c) birleşik gövdede bir
-daha. Asılları ``yedek/kume7_asillari/omega_kategori_nbe/`` altında
-şahittir.
-
-**Kök problem -- NbE zorunluluğu.** İki tip teorisi sürümü vardı:
-eski ``omega_kategori/`` terim seviyesinde ağaç kopyaladığı için
-``π₁(S¹) ≅ ℤ`` hesabında tıkanıyor, ``omega_kategori_nbe/`` ise
-kapanışlar ve ortamlarla aynı hesabı saniyenin altında bitiriyordu.
-Terkipte **yalnız NbE sürümü** alındı; eski sürüm tasfiye edildi.
-
-**İki seviye -- terkibin açığa çıkardığı asıl şey.** ``terimler.py``
-ile ``cekirdek.py`` yedi ismi **aynı** yazıyordu (``uygula``,
-``transp``, ``hkomp``, ``komp``, ``dolgu``, ``yol_uygula``,
-``taze``); ayrı modüllerde durdukları için bu görünmüyordu. İkisi
-aynı işlemin iki seviyesidir:
-
-* **terim seviyesi** (``terim_*``) -- ikame ile, ağaç kopyalayarak.
-* **değer seviyesi** (öneksiz) -- kapanışlarla, NbE ile.
-
-NbE'nin bütün iddiası budur: değer seviyesi terim seviyesinin yerini
-alır. Ön ek, o iddiayı isimde görünür kılar.
-
-**Çipin altı odası.**
-
-1. **Aralık cebri ve yüz kafesi** -- De Morgan aralığı ``I``
-   (antizincir DNF normal formu), ``Kofibrasyon`` (yüzler), yüz
-   çelişkisi denetimi.
-2. **Sözdizim ve terim seviyesi** -- ``Terim`` düğümleri (Π, Σ, Path,
-   Transp, Komp, HComp, Glue, ℕ, ℤ, S¹), ``terim_ikame`` ve
-   ``terim_*`` işlemleri.
-3. **NbE değerlendirme çekirdeği** -- ``Deger`` ve ``Kapanis``
-   aileleri, ``Ortam``, ``degerlendir``/``geri_oku``/``nf``,
-   ``comp``, ``transp``, ``hcomp``, ``dolgu``; tanımsal eşitlik
-   normal formların karşılaştırılmasıdır.
-4. **Glue ve Univalence** -- ``GlueHam``, ``denklikle_tamamla``,
-   ``ua(e)`` boyunca kayıpsız taşıma, sınırda çöküş
-   (``ua e@0 ≡ A``, ``ua e@1 ≡ B``) tanımsal olarak.
-5. **Homotopi mertebeleri ve S¹** -- h-seviyeleri (bütün, önerme,
-   küme, grupoid), döngü uzayları ``Ωⁿ``, ``dongu_kuvveti(n)`` ve
-   ``sarim(donguⁿ) = n`` -- π₁(S¹) ≅ ℤ'nin tam hesabı.
-6. **Sentetik diferansiyel geometri ve münasebetler** --
-   sonsuz küçükler ``D = {x | x² = 0}``, teğet demeti ``TX = Xᴰ``,
-   kotanjant duali, de Rham kompleksi, kritik lokus, demetler ve
-   kesitler. Postulatlar **postulat olarak** işaretlidir; hesaplanmış
-   gibi sunulmaz.
-"""
 from __future__ import annotations
 
 import itertools
@@ -58,14 +6,6 @@ from typing import (Any, Callable, Dict, FrozenSet, Iterable, Iterator,
                     List, Optional, Sequence, Set, Tuple, Union)
 
 
-
-
-
-
-# ====================================================================
-#  omega_kategori_nbe/aralik.py
-# ====================================================================
-
 Literal = Tuple[str, bool]
 
 
@@ -73,17 +13,6 @@ Cumle = FrozenSet[Literal]
 
 
 def _antizincire_indir(cumleler: Iterable[Cumle]) -> FrozenSet[Cumle]:
-    """Yutma kanunu: ``A ∨ (A ∧ B) = A``.
-
-    Bir cümle, başka bir cümlenin üst kümesiyse gereksizdir (daha zayıftır)
-    ve atılır. Geriye kapsama sıralamasına göre bir ANTİZİNCİR kalır; bu,
-    serbest dağılmalı kafesin kanonik normal formudur.
-
-    Hız: bu fonksiyon çekirdeğin en sıcak noktasıdır (ölçüldü). Uzunluğa
-    göre sıralanınca her hakiki alt küme DAHA ÖNCE gelir, dolayısıyla
-    yalnız önek taranır; eşit uzunlukta iki farklı cümle birbirinin alt
-    kümesi olamaz.
-    """
     kume = {frozenset(c) for c in cumleler}
     if len(kume) <= 1:
         return frozenset(kume)
@@ -99,14 +28,12 @@ def _antizincire_indir(cumleler: Iterable[Cumle]) -> FrozenSet[Cumle]:
 
 
 class Aralik:
-    """Serbest De Morgan cebrinin bir elemanı; DNF (cümlelerin birleşimi)."""
 
     __slots__ = ("cumleler",)
 
     def __init__(self, cumleler: Iterable[Cumle]) -> None:
         self.cumleler: FrozenSet[Cumle] = _antizincire_indir(cumleler)
 
-    # ---- kurucular -----------------------------------------------------
     @staticmethod
     def degisken(ad: str) -> "Aralik":
         return Aralik([frozenset({(ad, True)})])
@@ -115,31 +42,24 @@ class Aralik:
     def _literal(ad: str, pozitif: bool) -> "Aralik":
         return Aralik([frozenset({(ad, pozitif)})])
 
-    # ---- kafes işlemleri ------------------------------------------------
     def ve(self, obur: "Aralik") -> "Aralik":
-        """Meet (∧). Dağıtarak DNF'de kalır."""
         return Aralik(a | b for a in self.cumleler for b in obur.cumleler)
 
     def veya(self, obur: "Aralik") -> "Aralik":
-        """Join (∨)."""
         return Aralik(self.cumleler | obur.cumleler)
 
     def degil(self) -> "Aralik":
-        """De Morgan involüsyonu (~). ``~(⋁ᵢ ⋀ⱼ lᵢⱼ) = ⋀ᵢ ⋁ⱼ ~lᵢⱼ``."""
         sonuc = BIR
         for cumle in self.cumleler:
-            if not cumle:          # boş çarpım = 1  =>  ~1 = 0
+            if not cumle:
                 return SIFIR
             ayrik = SIFIR
             for (ad, pozitif) in cumle:
                 ayrik = ayrik.veya(Aralik._literal(ad, not pozitif))
             sonuc = sonuc.ve(ayrik)
-        return sonuc               # boş birleşim = 0  =>  ~0 = 1
+        return sonuc
 
-    # ---- yerine koyma ---------------------------------------------------
     def yerine_koy(self, atama: Dict[str, "Aralik"]) -> "Aralik":
-        """``i ↦ r`` aralık ikamesi. Değişkenler eşzamanlı değiştirilir."""
-        # erken çıkış: ikame bu ifadeye hiç dokunmuyorsa kopya üretme
         if not atama or not (self.degiskenler() & atama.keys()):
             return self
         sonuc = SIFIR
@@ -156,14 +76,12 @@ class Aralik:
     def degiskenler(self) -> FrozenSet[str]:
         return frozenset(ad for cumle in self.cumleler for (ad, _) in cumle)
 
-    # ---- tanıma ---------------------------------------------------------
     def sifir_mi(self) -> bool:
         return len(self.cumleler) == 0
 
     def bir_mi(self) -> bool:
         return frozenset() in self.cumleler
 
-    # ---- protokol -------------------------------------------------------
     def __eq__(self, obur: object) -> bool:
         return isinstance(obur, Aralik) and self.cumleler == obur.cumleler
 
@@ -181,10 +99,10 @@ class Aralik:
         return "∨".join(sorted(cumle_yaz(c) for c in self.cumleler))
 
 
-SIFIR = Aralik([])                    # 0  (boş birleşim)
+SIFIR = Aralik([])
 
 
-BIR = Aralik([frozenset()])           # 1  (boş çarpım içeren birleşim)
+BIR = Aralik([frozenset()])
 
 
 Yuz = FrozenSet[Tuple[str, bool]]
@@ -200,7 +118,6 @@ def _yuz_celiskili_mi(yuz: Yuz) -> bool:
 
 
 class Kofibrasyon:
-    """Yüz kafesinin bir elemanı: yüzlerin (conjunctive face) birleşimi."""
 
     __slots__ = ("yuzler",)
 
@@ -208,39 +125,27 @@ class Kofibrasyon:
         temiz = [frozenset(y) for y in yuzler if not _yuz_celiskili_mi(frozenset(y))]
         self.yuzler: FrozenSet[Yuz] = _antizincire_indir(temiz)
 
-    # ---- kurucular -----------------------------------------------------
     @staticmethod
     def atom(ad: str, deger: bool) -> "Kofibrasyon":
-        """``(ad = 1)`` eğer deger True ise, aksi hâlde ``(ad = 0)``."""
         return Kofibrasyon([frozenset({(ad, deger)})])
 
-    # ---- kafes işlemleri ------------------------------------------------
     def ve(self, obur: "Kofibrasyon") -> "Kofibrasyon":
         return Kofibrasyon(a | b for a in self.yuzler for b in obur.yuzler)
 
     def veya(self, obur: "Kofibrasyon") -> "Kofibrasyon":
         return Kofibrasyon(self.yuzler | obur.yuzler)
 
-    # ---- tanıma ---------------------------------------------------------
     def bos_mu(self) -> bool:
-        """⊥ mü? (hiçbir yüzde sağlanmıyor)"""
         return len(self.yuzler) == 0
 
     def dogru_mu(self) -> bool:
-        """⊤ mü? (her yerde sağlanıyor)"""
         return frozenset() in self.yuzler
 
     def kapsiyor_mu(self, yuz: Yuz) -> bool:
-        """Verilen yüz üzerinde bu kofibrasyon sağlanıyor mu?
-
-        Yüz bir "kısıt bağlamı"dır; kofibrasyonun cümlelerinden biri onun
-        alt kümesiyse (yani o cümlenin şartları zaten dayatılmışsa) sağlanır.
-        """
         yuz = frozenset(yuz)
         return any(c <= yuz for c in self.yuzler)
 
     def yerine_koy(self, atama: Dict[str, Aralik]) -> "Kofibrasyon":
-        """Yüzlere aralık ikamesi uygular; ``(i=ε)[i↦r]`` = ``(r=ε)``."""
         if not atama:
             return self
         sonuc = YANLIS
@@ -271,21 +176,14 @@ class Kofibrasyon:
         return "∨".join(sorted(yuz_yaz(y) for y in self.yuzler))
 
 
-YANLIS = Kofibrasyon([])              # ⊥
+YANLIS = Kofibrasyon([])
 
 
-DOGRU = Kofibrasyon([frozenset()])    # ⊤
+DOGRU = Kofibrasyon([frozenset()])
 
 
 def aralik_esitligi(r: Aralik, deger: bool) -> Kofibrasyon:
-    """Aralık kafesinden yüz kafesine köprü: ``(r = deger)`` şartı.
-
-    ``r = ⋁ₖ ⋀ₗ lit`` olmak üzere:
-      * ``r = 1``  ⟺  ⋁ₖ ⋀ₗ (lit = 1)
-      * ``r = 0``  ⟺  ⋀ₖ ⋁ₗ (lit = 0)
-    ve ``(i = 1) = atom(i, True)``, ``(~i = 1) = atom(i, False)``.
-    """
-    if deger:  # r = 1
+    if deger:
         sonuc = YANLIS
         for cumle in r.cumleler:
             carpim = DOGRU
@@ -293,7 +191,6 @@ def aralik_esitligi(r: Aralik, deger: bool) -> Kofibrasyon:
                 carpim = carpim.ve(Kofibrasyon.atom(ad, pozitif))
             sonuc = sonuc.veya(carpim)
         return sonuc
-    # r = 0
     sonuc = DOGRU
     for cumle in r.cumleler:
         ayrik = YANLIS
@@ -304,19 +201,13 @@ def aralik_esitligi(r: Aralik, deger: bool) -> Kofibrasyon:
 
 
 def yuzu_atamaya_cevir(yuz: Yuz) -> Dict[str, Aralik]:
-    """Bir yüzü, aralık değişkenleri için somut bir ikameye çevirir."""
     return {ad: (BIR if deger else SIFIR) for (ad, deger) in yuz}
 
-
-# ====================================================================
-#  omega_kategori_nbe/sozdizim.py
-# ====================================================================
 
 Yuz = FrozenSet[Tuple[str, bool]]
 
 
 class Dugum:
-    """Yapısal eşitlik veren taban sınıf."""
 
     __slots__ = ()
 
@@ -331,7 +222,7 @@ class Dugum:
 
     def __repr__(self) -> str:
         try:
-            return terimi_yaz(self)  # type: ignore[arg-type]
+            return terimi_yaz(self)
         except Exception:
             return "%s(%s)" % (type(self).__name__,
                                ", ".join(repr(a) for a in self._alanlar()))
@@ -342,7 +233,6 @@ class Terim(Dugum):
 
 
 class Deg(Terim):
-    """Terim değişkeni."""
     __slots__ = ("ad",)
 
     def __init__(self, ad: str) -> None:
@@ -350,7 +240,6 @@ class Deg(Terim):
 
 
 class Evren(Terim):
-    """``U_seviye``"""
     __slots__ = ("seviye",)
 
     def __init__(self, seviye: int = 0) -> None:
@@ -358,7 +247,6 @@ class Evren(Terim):
 
 
 class Pi(Terim):
-    """``(ad : alan) → hedef``"""
     __slots__ = ("ad", "alan", "hedef")
 
     def __init__(self, ad: str, alan: Terim, hedef: Terim) -> None:
@@ -380,7 +268,6 @@ class Uygula(Terim):
 
 
 class Sigma(Terim):
-    """``(ad : alan) × hedef``"""
     __slots__ = ("ad", "alan", "hedef")
 
     def __init__(self, ad: str, alan: Terim, hedef: Terim) -> None:
@@ -409,7 +296,6 @@ class Ikinci(Terim):
 
 
 class YolP(Terim):
-    """``PathP (λ ad. cizgi) sol sag``"""
     __slots__ = ("ad", "cizgi", "sol", "sag")
 
     def __init__(self, ad: str, cizgi: Terim, sol: Terim, sag: Terim) -> None:
@@ -417,7 +303,6 @@ class YolP(Terim):
 
 
 class YolLam(Terim):
-    """``<ad> govde``"""
     __slots__ = ("ad", "govde")
 
     def __init__(self, ad: str, govde: Terim) -> None:
@@ -425,7 +310,6 @@ class YolLam(Terim):
 
 
 class YolUygula(Terim):
-    """``yol @ r``  (r bir aralık kafes elemanı)"""
     __slots__ = ("yol", "r")
 
     def __init__(self, yol: Terim, r: Aralik) -> None:
@@ -433,11 +317,6 @@ class YolUygula(Terim):
 
 
 class Transp(Terim):
-    """``transp (λ ad. cizgi) kof u0``
-
-    ``kof`` doğru olduğu yüzlerde ``cizgi`` sabit olmalıdır; orada transp
-    özdeşliktir.
-    """
     __slots__ = ("ad", "cizgi", "kof", "u0")
 
     def __init__(self, ad: str, cizgi: Terim, kof: Kofibrasyon, u0: Terim) -> None:
@@ -445,11 +324,6 @@ class Transp(Terim):
 
 
 class Komp(Terim):
-    """``comp (λ ad. cizgi) [dallar] u0`` -- çekirdeğin ASLİ Kan işlemi.
-
-    ``dallar``: ``((yuz, govde), ...)``; ``govde`` içinde ``ad`` bağlıdır.
-    ``transp`` ve ``hcomp`` bundan türetilir.
-    """
     __slots__ = ("ad", "cizgi", "dallar", "u0")
 
     def __init__(self, ad: str, cizgi: Terim,
@@ -460,7 +334,6 @@ class Komp(Terim):
 
 
 class HKomp(Terim):
-    """``hcomp {tip} [dallar] u0`` -- sabit tipte kapak doldurma."""
     __slots__ = ("tip", "ad", "dallar", "u0")
 
     def __init__(self, tip: Terim, ad: str,
@@ -471,10 +344,6 @@ class HKomp(Terim):
 
 
 class Yapistir(Terim):
-    """``Glue taban [dallar]``; ``dallar``: ``((yuz, T, denklik), ...)``
-
-    ``denklik : Denklik T taban`` yani ``Σ (f : T → taban). izDenklik f``.
-    """
     __slots__ = ("taban", "dallar")
 
     def __init__(self, taban: Terim,
@@ -484,7 +353,6 @@ class Yapistir(Terim):
 
 
 class YapistirTerim(Terim):
-    """``glue [dallar] taban_terim``"""
     __slots__ = ("dallar", "taban_terim")
 
     def __init__(self, dallar: Sequence[Tuple[Yuz, Terim]],
@@ -494,11 +362,6 @@ class YapistirTerim(Terim):
 
 
 class Coz(Terim):
-    """``unglue g`` -- Glue tipinden taban tipe düşürme.
-
-    ``dallar`` yalnız hangi yüzlerde hangi denkliğin uygulanacağını bilmek
-    için taşınır (tip bilgisinin terimde kalması gerekir).
-    """
     __slots__ = ("taban", "dallar", "govde")
 
     def __init__(self, taban: Terim,
@@ -510,7 +373,6 @@ class Coz(Terim):
 
 
 class Dogal(Terim):
-    """ℕ"""
     __slots__ = ()
 
 
@@ -526,7 +388,6 @@ class Ard(Terim):
 
 
 class DogalInd(Terim):
-    """``natInd (λ ad. hedef) sfr_dali (λ n_ad rec_ad. ard_dali) sayi``"""
     __slots__ = ("ad", "hedef", "sfr_dali", "n_ad", "rec_ad", "ard_dali", "sayi")
 
     def __init__(self, ad: str, hedef: Terim, sfr_dali: Terim,
@@ -537,7 +398,6 @@ class DogalInd(Terim):
 
 
 class Tamsayi(Terim):
-    """ℤ -- ``poz n`` = n,  ``negArd n`` = −(n+1)"""
     __slots__ = ()
 
 
@@ -556,7 +416,6 @@ class NegArd(Terim):
 
 
 class TamsayiInd(Terim):
-    """``intInd (λ ad. hedef) (λ poz_ad. poz_dali) (λ neg_ad. neg_dali) sayi``"""
     __slots__ = ("ad", "hedef", "poz_ad", "poz_dali", "neg_ad", "neg_dali", "sayi")
 
     def __init__(self, ad: str, hedef: Terim, poz_ad: str, poz_dali: Terim,
@@ -568,7 +427,6 @@ class TamsayiInd(Terim):
 
 
 class Cember(Terim):
-    """S¹"""
     __slots__ = ()
 
 
@@ -577,7 +435,6 @@ class Taban(Terim):
 
 
 class Dongu(Terim):
-    """``loop r``; ``r=0`` ve ``r=1`` uçlarında ``taban``."""
     __slots__ = ("r",)
 
     def __init__(self, r: Aralik) -> None:
@@ -585,7 +442,6 @@ class Dongu(Terim):
 
 
 class CemberInd(Terim):
-    """``S¹-ind (λ ad. hedef) taban_dali (<i_ad> dongu_dali) nokta``"""
     __slots__ = ("ad", "hedef", "taban_dali", "i_ad", "dongu_dali", "nokta")
 
     def __init__(self, ad: str, hedef: Terim, taban_dali: Terim,
@@ -595,7 +451,6 @@ class CemberInd(Terim):
 
 
 def yuz(**kisitlar: int) -> Yuz:
-    """``yuz(i=0, j=1)`` → ``(i=0) ∧ (j=1)``"""
     return frozenset((ad, bool(deger)) for ad, deger in kisitlar.items())
 
 
@@ -622,12 +477,10 @@ def pi_hepsi(baglar: Sequence[Tuple[str, Terim]], hedef: Terim) -> Terim:
 
 
 def ok(alan: Terim, hedef: Terim) -> Terim:
-    """Bağımsız fonksiyon tipi ``alan → hedef``."""
     return Pi("_", alan, hedef)
 
 
 def carpim(sol: Terim, sag: Terim) -> Terim:
-    """Bağımsız çarpım ``sol × sag``."""
     return Sigma("_", sol, sag)
 
 
@@ -639,24 +492,18 @@ def dogal_sayi(n: int) -> Terim:
 
 
 def tam_sayi(n: int) -> Terim:
-    """``tam_sayi(2) = poz 2``, ``tam_sayi(-1) = negArd 0``"""
     if n >= 0:
         return Poz(dogal_sayi(n))
     return NegArd(dogal_sayi(-n - 1))
 
 
 def yol(tip: Terim, sol: Terim, sag: Terim) -> Terim:
-    """``Path tip sol sag = PathP (λ _. tip) sol sag``"""
     return YolP("_", tip, sol, sag)
 
 
 def refl(terim: Terim) -> Terim:
     return YolLam("_", terim)
 
-
-# ====================================================================
-#  omega_kategori_nbe/terimler.py
-# ====================================================================
 
 terim__sayac = itertools.count()
 
@@ -984,7 +831,6 @@ def terim_komp(ad: str, cizgi: Terim, dallar, u0: Terim) -> Terim:
 
 
 def terim_dolgu(ad: str, cizgi: Terim, dallar, u0: Terim) -> Terim:
-    """``fill^ad`` -- ``ad`` serbest kalır; ``fill@0 = u0``, ``fill@1 = comp``."""
     j = terim_taze("j")
     ikj = {ad: Aralik.degisken(ad).ve(Aralik.degisken(j))}
     yeni_dallar = list(_dallar_ara_ikame(dallar, ikj,
@@ -992,10 +838,6 @@ def terim_dolgu(ad: str, cizgi: Terim, dallar, u0: Terim) -> Terim:
     yeni_dallar.append((yuz(**{ad: 0}), u0))
     return terim_komp(j, ara_ikame(cizgi, ikj), yeni_dallar, u0)
 
-
-# ====================================================================
-#  omega_kategori_nbe/cekirdek.py
-# ====================================================================
 
 _sayac = itertools.count()
 
@@ -1009,7 +851,6 @@ class CekirdekHatasi(Exception):
 
 
 class Ortam:
-    """Terim değişkenleri → Değer, aralık değişkenleri → Aralık."""
 
     __slots__ = ("terimler", "araliklar")
 
@@ -1058,7 +899,6 @@ def _act(x, s):
 
 
 class _Basit(Deger):
-    """Alansız kanonik değerler."""
     __slots__ = ()
 
     def act(self, s):
@@ -1189,7 +1029,6 @@ class DNegArd(Deger):
 
 
 class DDongu(Deger):
-    """``loop r`` -- r kesinlikle 0/1 değildir (öyleyse DTaban'a çöker)."""
     __slots__ = ("r",)
 
     def __init__(self, r: Aralik) -> None:
@@ -1200,7 +1039,6 @@ class DDongu(Deger):
 
 
 class DYapistir(Deger):
-    """``Glue taban [ (yuz, T, denklik) ]``"""
     __slots__ = ("taban", "dallar")
 
     def __init__(self, taban: Deger, dallar) -> None:
@@ -1222,7 +1060,6 @@ class DYapistirTerim(Deger):
 
 
 class DHKomp(Deger):
-    """S¹ içindeki hcomp -- KANONİK bir değerdir."""
     __slots__ = ("tip", "sistem", "u0")
 
     def __init__(self, tip: Deger, sistem: "Sistem", u0: Deger) -> None:
@@ -1243,7 +1080,6 @@ class DNotr(Deger):
 
 
 def _dallari_act(dallar, s):
-    """Yüzler ikame altında BİRDEN ÇOK yüze açılabilir."""
     yeni = []
     for dal in dallar:
         k = Kofibrasyon([dal[0]]).yerine_koy(s)
@@ -1370,7 +1206,6 @@ class NCemberInd(Notr):
 
 
 class Kapanis:
-    """``Deger -> Deger``"""
     __slots__ = ()
 
     def uygula(self, d: Deger) -> Deger:
@@ -1407,10 +1242,6 @@ class KSabit(Kapanis):
 
 
 class KTuretilmis(Kapanis):
-    """Türetilmiş kapanış: etiket + alanlar + modül seviyesi fonksiyon.
-
-    Yakalayan lambda YOKTUR; ``act`` alanları dönüştürüp yeniden kurar.
-    """
     __slots__ = ("fn", "alanlar")
 
     def __init__(self, fn: Callable, alanlar: tuple) -> None:
@@ -1424,7 +1255,6 @@ class KTuretilmis(Kapanis):
 
 
 class Kapanis2:
-    """İki argümanlı kapanış (ℕ tümevarımının ardıl dalı için)."""
     __slots__ = ("ad1", "ad2", "terim", "ortam")
 
     def __init__(self, ad1: str, ad2: str, terim: Terim, ortam: Ortam) -> None:
@@ -1439,7 +1269,6 @@ class Kapanis2:
 
 
 class ACizgi:
-    """``Aralik -> Deger``"""
     __slots__ = ()
 
     def uygula(self, r: Aralik) -> Deger:
@@ -1476,7 +1305,6 @@ class ASoz(ACizgi):
 
 
 class ATuretilmis(ACizgi):
-    """Türetilmiş çizgi -- ``KTuretilmis``in aralık mukabili."""
     __slots__ = ("fn", "alanlar")
 
     def __init__(self, fn: Callable, alanlar: tuple) -> None:
@@ -1490,7 +1318,6 @@ class ATuretilmis(ACizgi):
 
 
 class AYeniden(ACizgi):
-    """``λr. alt(ifade[ad := r])`` -- yeniden indisleme."""
     __slots__ = ("alt", "ad", "ifade")
 
     def __init__(self, alt: ACizgi, ad: str, ifade: Aralik) -> None:
@@ -1505,7 +1332,6 @@ class AYeniden(ACizgi):
 
 
 class Sistem:
-    """``[(yuz, ACizgi)]`` -- ikame altında yüzler açılabilir."""
 
     __slots__ = ("dallar",)
 
@@ -1549,10 +1375,6 @@ def _eta_yol(alanlar, r):
 
 
 def notr(n: Notr, tip: Optional[Deger]) -> Deger:
-    """Nötr değer -- Π/Σ/Yol tiplerinde DERHAL eta genişletilir.
-
-    Böylece geri okuma tipsiz yapılabilir ve eta bedavaya gelir.
-    """
     d = DNotr(n, tip)
     if isinstance(tip, DPi):
         return DLam(KTuretilmis(_eta_pi, (d, tip)))
@@ -1612,7 +1434,6 @@ def tamsayi_ind(motif: Kapanis, poz: Kapanis, neg: Kapanis,
 
 
 def _cember_hedef(alanlar, r):
-    """``λr. motif(hfill r)``"""
     motif, hfill = alanlar
     return motif.uygula(hfill.uygula(r))
 
@@ -1629,7 +1450,6 @@ def cember_ind(motif: Kapanis, taban_dali: Deger, dongu_dali: ACizgi,
     if isinstance(nokta, DDongu):
         return dongu_dali.uygula(nokta.r)
     if isinstance(nokta, DHKomp) and isinstance(nokta.tip, DCember):
-        # S¹ eliminatörü hcomp ile DEĞİŞİR: hedefte comp doğar.
         hfill = dolgu(ASabit(DCember()), nokta.sistem, nokta.u0)
         L = ATuretilmis(_cember_hedef, (motif, hfill))
         sis = Sistem([(y, ATuretilmis(_cember_dal, (motif, taban_dali,
@@ -1701,7 +1521,6 @@ def _alt_c(al, r):
 
 
 def _geri_dolgu_c(al, r):
-    """``w(r) : A(r)``, ``w(1) = v`` -- geriye doğru dolgu."""
     A, v = al
     j = taze("j")
     hat = AYeniden(A, j, r.veya(Aralik.degisken(j).degil()))
@@ -1759,11 +1578,6 @@ def _komp_yol_c(al, j):
 
 
 def _sabit_mi(L: ACizgi) -> bool:
-    """MUHAFAZAKÂR sabitlik sınaması: yalnız ispatlanabildiğinde True.
-
-    DİKKAT: ``L(0) == L(1)`` sınaması SAĞLAM DEĞİLDİR (``ua e`` tuzağı);
-    burada asla kullanılmaz.
-    """
     if isinstance(L, ASabit):
         return True
     if isinstance(L, ASoz):
@@ -1784,7 +1598,6 @@ def hkomp(tip: Deger, sistem: Sistem, u0: Deger) -> Deger:
 
 
 def dolgu(L: ACizgi, sistem: Sistem, u0: Deger) -> ACizgi:
-    """``fill`` -- ``fill(0) = u0``, ``fill(1) = comp``."""
     return ATuretilmis(_dolgu_c, (L, sistem, u0))
 
 
@@ -1847,7 +1660,6 @@ def komp(L: ACizgi, sistem: Sistem, u0: Deger) -> Deger:
 
 
 def _sistem_kur(dallar, ad: str, ortam: Ortam) -> Sistem:
-    """Terim yüzlerini ortamdaki aralık bağlarıyla çözer (açılabilir)."""
     yeni = []
     for (y, govde) in dallar:
         k = Kofibrasyon([y]).yerine_koy(ortam.araliklar)
@@ -2078,7 +1890,6 @@ def _geri_oku_notr(n: Notr, k: int) -> Terim:
 
 
 def ortam_kur(baglam: Optional[Dict[str, Terim]] = None) -> Ortam:
-    """Serbest değişkenleri, tipi verilmiş nötrlere bağlar."""
     o = BOS
     for ad, tip in (baglam or {}).items():
         try:
@@ -2098,7 +1909,6 @@ def nf(t: Terim, baglam: Optional[Dict[str, Terim]] = None) -> Terim:
 
 
 def _esit(a: Terim, b: Terim, derinlik: int = 0) -> bool:
-    """Yapısal kıyas + Σ/Π/Yol için şekle dayalı eta."""
     if a == b:
         return True
     if isinstance(a, Cift) != isinstance(b, Cift):
@@ -2134,10 +1944,6 @@ def deger_esit_mi(d1: Deger, d2: Deger, k: int = 0) -> bool:
     return _esit(geri_oku(d1, k), geri_oku(d2, k), k)
 
 
-# ====================================================================
-#  omega_kategori_nbe/kutuphane.py
-# ====================================================================
-
 U = Evren(0)
 
 
@@ -2149,12 +1955,10 @@ def _t(ad: str) -> Terim:
 
 
 def refl(a: Terim) -> Terim:
-    """``refl a : Path A a a``"""
     return YolLam("_", a)
 
 
 def ters(A: Terim, a: Terim, b: Terim, p: Terim) -> Terim:
-    """``p⁻¹ : Path A b a``"""
     i, j = terim_taze("i"), terim_taze("j")
     return YolLam(i, HKomp(A, j,
         [(yuz(**{i: 0}), terim_yol_uygula(p, Aralik.degisken(j))),
@@ -2163,7 +1967,6 @@ def ters(A: Terim, a: Terim, b: Terim, p: Terim) -> Terim:
 
 def terkip(A: Terim, a: Terim, b: Terim, c: Terim,
            p: Terim, q: Terim) -> Terim:
-    """``p ∙ q : Path A a c``"""
     i, j = terim_taze("i"), terim_taze("j")
     return YolLam(i, HKomp(A, j,
         [(yuz(**{i: 0}), a),
@@ -2172,19 +1975,16 @@ def terkip(A: Terim, a: Terim, b: Terim, c: Terim,
 
 
 def esle(A: Terim, B: Terim, f: Terim, a: Terim, b: Terim, p: Terim) -> Terim:
-    """``ap f p : Path B (f a) (f b)``"""
     i = terim_taze("i")
     return YolLam(i, Uygula(f, terim_yol_uygula(p, Aralik.degisken(i))))
 
 
 def tasi(P: Terim, x: Terim) -> Terim:
-    """``transport : Path U A B → A → B``  (``P`` bir tip yoludur)"""
     i = terim_taze("i")
     return Transp(i, terim_yol_uygula(P, Aralik.degisken(i)), YANLIS, x)
 
 
 def aile_tasi(C: Terim, p: Terim, x: Terim) -> Terim:
-    """``C : A → U`` ailesinde ``p : Path A a b`` boyunca taşıma."""
     i = terim_taze("i")
     return Transp(i, Uygula(C, terim_yol_uygula(p, Aralik.degisken(i))),
                     YANLIS, x)
@@ -2192,11 +1992,6 @@ def aile_tasi(C: Terim, p: Terim, x: Terim) -> Terim:
 
 def yol_tumevarimi(A: Terim, a: Terim, C: Terim, d: Terim,
                    b: Terim, p: Terim) -> Terim:
-    """J: ``C : (b:A) → Path A a b → U`` ve ``d : C a (refl a)`` verildiğinde
-    ``J A a C d b p : C b p``.
-
-    Kübik ispat: ``transp^i (C (p@i) (<j> p@(i∧j))) ⊥ d``.
-    """
     i, j = terim_taze("i"), terim_taze("j")
     i_ar, j_ar = Aralik.degisken(i), Aralik.degisken(j)
     kismi_yol = YolLam(j, terim_yol_uygula(p, i_ar.ve(j_ar)))
@@ -2205,30 +2000,6 @@ def yol_tumevarimi(A: Terim, a: Terim, C: Terim, d: Terim,
 
 
 def mertebe(X: Terim, n: int = -2) -> Terim:
-    """BU TİP KAÇ MERTEBEDEN -- **tek terkip** (kütük H226).
-
-    Küme: ``iz_butun``, ``iz_onerme``, ``iz_kume``, ``iz_grupoid``,
-    ``n_mertebe``. Beş isim **tek merdivenin** basamaklarıydı ve
-    merdiven zâten ``n_mertebe``nin içinde yazılıydı:
-
-        ``h_{-2}(X) = Σ(x:X). Π(y:X). Path X x y``   (büzülebilir)
-        ``h_{n}(X) = Π(x y : X). h_{n-1}(Path X x y)``
-
-    ==========  ====================  ==============================
-    ``n``       halkça                eski isim
-    ==========  ====================  ==============================
-    ``-2``      büzülebilir           ``iz_butun``
-    ``-1``      önerme                ``iz_onerme``
-    ``0``       küme                  ``iz_kume``
-    ``1``       grupoid               ``iz_grupoid``
-    ``n``       ``n``-tip             ``n_mertebe``
-    ==========  ====================  ==============================
-
-    ``iz_onerme``in ayrı yazılması gerekiyordu, zira özyineleme
-    ``-1``de durur: ``h_{-1}(X) = Π(x y). Path X x y`` -- burada
-    ``h_{-2}``ye inilmez, aksi hâlde her önerme büzülebilir çıkardı.
-    Ayrı isimlerde bu **durak** görünmüyordu; şimdi tek dalda duruyor.
-    """
     if n <= -2:
         x, y = terim_taze("x"), terim_taze("y")
         return Sigma(x, X, Pi(y, X, yol(X, _t(x), _t(y))))
@@ -2238,12 +2009,10 @@ def mertebe(X: Terim, n: int = -2) -> Terim:
 
 
 def dongu_uzayi(A: Terim, a: Terim) -> Terim:
-    """``Ω(A,a) = Path A a a``"""
     return yol(A, a, a)
 
 
 def dongu_uzayi_n(A: Terim, a: Terim, n: int) -> Terim:
-    """``Ωⁿ(A,a)`` -- yineli döngü uzayı."""
     if n <= 0:
         return A
     if n == 1:
@@ -2253,7 +2022,6 @@ def dongu_uzayi_n(A: Terim, a: Terim, n: int) -> Terim:
 
 
 def refl_n(A: Terim, a: Terim, n: int) -> Terim:
-    """``Ωⁿ``nin taban noktası (yineli refl)."""
     nokta = a
     for _ in range(n):
         nokta = refl(nokta)
@@ -2261,29 +2029,21 @@ def refl_n(A: Terim, a: Terim, n: int) -> Terim:
 
 
 def lif(A: Terim, B: Terim, f: Terim, b: Terim) -> Terim:
-    """``fiber f b = Σ (a:A). Path B (f a) b``"""
     a = terim_taze("a")
     return Sigma(a, A, yol(B, Uygula(f, _t(a)), b))
 
 
 def iz_denklik(A: Terim, B: Terim, f: Terim) -> Terim:
-    """``isEquiv f = Π (b:B). isContr (fiber f b)``"""
     b = terim_taze("b")
     return Pi(b, B, mertebe(lif(A, B, f, _t(b)), -2))
 
 
 def denklik_tipi(A: Terim, B: Terim) -> Terim:
-    """``Equiv A B = Σ (f : A → B). isEquiv f``"""
     f = terim_taze("f")
     return Sigma(f, ok(A, B), iz_denklik(A, B, _t(f)))
 
 
 def ozdeslik_denkligi(A: Terim) -> Terim:
-    """``idEquiv A : Equiv A A``
-
-    Büzülebilirlik ispatı, tekil-lif büzülmesinin kübik hâlidir:
-    ``<i> ( z.2 @ ~i , <j> z.2 @ (~i ∨ j) )``.
-    """
     x, b, z = terim_taze("x"), terim_taze("b"), terim_taze("z")
     i, j = terim_taze("i"), terim_taze("j")
     i_ar, j_ar = Aralik.degisken(i), Aralik.degisken(j)
@@ -2301,12 +2061,6 @@ def denklik_fonksiyonu(e: Terim) -> Terim:
 
 
 def ua(A: Terim, B: Terim, e: Terim) -> Terim:
-    """``ua e : Path U A B``
-
-    ``ua e = <i> Glue B [ (i=0) ↦ (A, e), (i=1) ↦ (B, idEquiv B) ]``
-
-    Uçlarda Glue çöker: ``ua e @ 0 = A``, ``ua e @ 1 = B`` (tanımsal).
-    """
     i = terim_taze("i")
     return YolLam(i, Yapistir(B, [
         (yuz(**{i: 0}), A, e),
@@ -2316,31 +2070,20 @@ def ua(A: Terim, B: Terim, e: Terim) -> Terim:
 
 def cember_rec(hedef: Terim, taban_dali: Terim, dongu_dali_ad: str,
                dongu_dali: Terim, nokta: Terim) -> Terim:
-    """Bağımsız (non-dependent) S¹ özyinelemesi."""
     return CemberInd("_", hedef, taban_dali, dongu_dali_ad, dongu_dali, nokta)
 
 
 def dongu() -> Terim:
-    """``dongu : Path S¹ taban taban``"""
     i = terim_taze("i")
     return YolLam(i, Dongu(Aralik.degisken(i)))
 
 
 def dongu_tersi() -> Terim:
-    """``dongu⁻¹ = <i> dongu(~i)`` -- S¹'in KENDİ simetrisi.
-
-    Genel ``ters`` (yol tersleme) bir ``hcomp`` kurar; S¹ döngüsünde ise
-    aralık involüsyonu ``~i`` doğrudan ters yolu verir. İkisi de aynı tipin
-    sakinidir ve tip denetiminden geçer, fakat sade olan iç içe hcomp
-    doğurmadığı için sarım hesabını ÖLÇÜLEN biçimde 245 kat hızlandırır
-    (dongu⁻⁵: 27.4 s → 0.11 s).
-    """
     i = terim_taze("i")
     return YolLam(i, Dongu(Aralik.degisken(i).degil()))
 
 
 def dongu_kuvveti(n: int) -> Terim:
-    """``dongu`` yolunun ``n`` kez terkibi (n<0 ise ``dongu⁻¹`` ile)."""
     A, a = Cember(), Taban()
     if n == 0:
         return refl(a)
@@ -2353,11 +2096,6 @@ def dongu_kuvveti(n: int) -> Terim:
 
 
 def dongu_kuvveti_genel_ters(n: int) -> Terim:
-    """Aynı yol, fakat GENEL ``ters`` ile kurulmuş hâli.
-
-    Yalnız kıyas ve sağlama için tutulur: iki inşanın da aynı sarım
-    sayısını vermesi, sadeleştirmenin doğruluğunun sınamasıdır.
-    """
     A, a = Cember(), Taban()
     if n == 0:
         return refl(a)
@@ -2369,12 +2107,8 @@ def dongu_kuvveti_genel_ters(n: int) -> Terim:
 
 
 def ardil_z() -> Terim:
-    """``sucZ : ℤ → ℤ``"""
     n = terim_taze("n")
     m = terim_taze("m")
-    # poz k        ↦ poz (k+1)
-    # negArd 0     ↦ poz 0
-    # negArd (k+1) ↦ negArd k
     neg_dali = DogalInd("_", Tamsayi(), Poz(Sfr()),
                           m, "_r", NegArd(_t(m)), _t(n))
     return Lam("z", TamsayiInd("_", Tamsayi(),
@@ -2384,12 +2118,8 @@ def ardil_z() -> Terim:
 
 
 def oncel_z() -> Terim:
-    """``predZ : ℤ → ℤ``"""
     n = terim_taze("n")
     m = terim_taze("m")
-    # poz 0     ↦ negArd 0
-    # poz (k+1) ↦ poz k
-    # negArd k  ↦ negArd (k+1)
     poz_dali = DogalInd("_", Tamsayi(), NegArd(Sfr()),
                           m, "_r", Poz(_t(m)), _t(n))
     return Lam("z", TamsayiInd("_", Tamsayi(),
@@ -2400,13 +2130,6 @@ def oncel_z() -> Terim:
 
 def izo_denklige(A: Terim, B: Terim, f: Terim, g: Terim,
                  s: Terim, t: Terim) -> Terim:
-    """``f : A→B``, ``g : B→A``, ``s : Π b. f(g b) ≡ b``,
-    ``t : Π a. g(f a) ≡ a`` verildiğinde ``Denklik A B``.
-
-    Lifin büzülebilirliği, iki lif elemanını birleştiren bir kare (``sq``)
-    ve onun ``s`` ile ``B``ye taşınmışı (``sq1``) üzerinden kurulur; bu,
-    yarı-eşlenik (half-adjoint) düzeltmesinin kübik hâlidir.
-    """
     y, x0, x1, p0, p1, z = (terim_taze("y"), terim_taze("x0"), terim_taze("x1"),
                             terim_taze("p0"), terim_taze("p1"), terim_taze("z"))
     i, j, k = terim_taze("i"), terim_taze("j"), terim_taze("k")
@@ -2430,7 +2153,7 @@ def izo_denklige(A: Terim, B: Terim, f: Terim, g: Terim,
          (yuz(**{i: 0}), at(fill0, Kk, BIR))],
         gy)
 
-    p_yol = YolLam(i, at(fill2, I, BIR))          # p : Path A x0 x1
+    p_yol = YolLam(i, at(fill2, I, BIR))
 
     sq = HKomp(A, k,
         [(yuz(**{i: 1}), at(fill1, J, Kk.degil())),
@@ -2438,11 +2161,8 @@ def izo_denklige(A: Terim, B: Terim, f: Terim, g: Terim,
          (yuz(**{j: 0}), gy),
          (yuz(**{j: 1}), terim_yol_uygula(uy(t, at(fill2, I, BIR)),
                                         Kk.degil()))],
-        at(fill2, I, J))                             # i, j serbest
+        at(fill2, I, J))
 
-    # sq'nun j yönü p0/p1'e göre TERSİNEDİR: fill1 j (~k) ucu g(p1 @ ~j)
-    # verir. Bu yüzden sq1'in i-dallarında p @ ~j, ve j=0/j=1 dalları
-    # (g y / f (p i)) sırasıyla yer alır.
     sq1 = HKomp(B, k,
         [(yuz(**{i: 1}), terim_yol_uygula(uy(s, terim_yol_uygula(P1, J.degil())),
                                         Kk)),
@@ -2451,13 +2171,12 @@ def izo_denklige(A: Terim, B: Terim, f: Terim, g: Terim,
          (yuz(**{j: 0}), terim_yol_uygula(uy(s, Y), Kk)),
          (yuz(**{j: 1}), terim_yol_uygula(uy(s, uy(f, terim_yol_uygula(p_yol, I))),
                                         Kk))],
-        uy(f, sq))                                   # i, j serbest
+        uy(f, sq))
 
     lem = YolLam(i, Cift(
         terim_yol_uygula(p_yol, I),
         YolLam(j, ara_ikame(sq1, {j: J.degil()}))))
 
-    # isEquiv f : Π (y:B). isContr (fiber f y)
     merkez = Cift(gy, uy(s, Y))
     buzme = Lam(z, ikame(lem, {x0: gy, p0: uy(s, Y),
                                    x1: Birinci(_t(z)),
@@ -2466,7 +2185,6 @@ def izo_denklige(A: Terim, B: Terim, f: Terim, g: Terim,
 
 
 def _z_yol_ispati(dis_govde, ic_sfr, ic_ard, neg_govde) -> Terim:
-    """ℤ tümevarımı + poz dalında ℕ tümevarımı ile yol ispatı iskeleti."""
     Z = Tamsayi()
     z, n, m = terim_taze("z"), terim_taze("n"), terim_taze("m")
     poz_dali = DogalInd(m, dis_govde(Poz(_t(m))), ic_sfr,
@@ -2478,7 +2196,6 @@ def _z_yol_ispati(dis_govde, ic_sfr, ic_ard, neg_govde) -> Terim:
 
 
 def ardil_oncel() -> Terim:
-    """``Π b:ℤ. sucZ (predZ b) ≡ b`` -- her hâlde refl ile kapanır."""
     Z = Tamsayi()
     suc, pred = ardil_z(), oncel_z()
     ifade = lambda w: yol(Z, terim_uygula(suc, terim_uygula(pred, w)), w)
@@ -2490,7 +2207,6 @@ def ardil_oncel() -> Terim:
 
 
 def oncel_ardil() -> Terim:
-    """``Π a:ℤ. predZ (sucZ a) ≡ a``"""
     Z = Tamsayi()
     suc, pred = ardil_z(), oncel_z()
     ifade = lambda w: yol(Z, terim_uygula(pred, terim_uygula(suc, w)), w)
@@ -2503,14 +2219,12 @@ def oncel_ardil() -> Terim:
 
 
 def ardil_denkligi() -> Terim:
-    """``sucEquiv : Denklik ℤ ℤ``"""
     Z = Tamsayi()
     return izo_denklige(Z, Z, ardil_z(), oncel_z(),
                         ardil_oncel(), oncel_ardil())
 
 
 def sarmal(nokta: Terim) -> Terim:
-    """``helix : S¹ → U``;  ``taban ↦ ℤ``,  ``dongu ↦ ua sucEquiv``."""
     Z = Tamsayi()
     i = terim_taze("i")
     govde = Yapistir(Z, [
@@ -2521,15 +2235,10 @@ def sarmal(nokta: Terim) -> Terim:
 
 
 def sarim(p: Terim) -> Terim:
-    """``sarim : (Path S¹ taban taban) → ℤ`` -- sarım sayısı."""
     i = terim_taze("i")
     cizgi = sarmal(terim_yol_uygula(p, Aralik.degisken(i)))
     return Transp(i, cizgi, YANLIS, Poz(Sfr()))
 
-
-# ====================================================================
-#  omega_kategori_nbe/denklik.py
-# ====================================================================
 
 class EksikKural(NotImplementedError):
     pass
@@ -2549,12 +2258,6 @@ _LIF_T = lif(_AA, _BB, _FF, _BSC)
 
 
 class GlueHam:
-    """Glue'nun HAM bileşenleri.
-
-    ``DYapistir`` değeri ``act`` altında bir yüz ⊤ olunca ``T``ye ÇÖKER;
-    hesabın ortasında taban ve dalların kaybolmaması için ham hâlleri
-    ayrıca taşınır.
-    """
 
     __slots__ = ("taban", "dallar")
 
@@ -2566,7 +2269,6 @@ class GlueHam:
 
 
 def her_i_icin(kof: Kofibrasyon, ad: str) -> Kofibrasyon:
-    """``∀ad. kof`` -- ``ad``i kısıtlamayan yüzlerin birleşimi."""
     return Kofibrasyon([y for y in kof.yuzler
                         if all(a != ad for (a, _) in y)])
 
@@ -2578,11 +2280,6 @@ def _denklik_cizgi(al, r):
 
 
 def cizgi_denkligi(hat: ACizgi) -> Deger:
-    """``Denklik hat(0) hat(1)``.
-
-    Özdeşlik denkliğini ``Denklik hat(0) hat(r)`` çizgisi boyunca taşır;
-    yalnız Σ/Π/Path'te ``transp`` gerektirir.
-    """
     c0 = hat.uygula(SIFIR)
     idq = degerlendir(_IDEQ_T, BOS.genislet("!A0", c0))
     return transp(ATuretilmis(_denklik_cizgi, (c0, hat)), YANLIS, idq)
@@ -2604,7 +2301,6 @@ def _buzme_c(al, j):
 
 def denklikle_tamamla(A: Deger, B: Deger, e: Deger, b: Deger,
                       kismi: Sequence[Tuple[frozenset, Deger]]) -> Deger:
-    """``e : Denklik A B``, ``b : B`` ve kısmî lif elemanı → tam lif elemanı."""
     X = degerlendir(_LIF_T, BOS.genislet("!A", A).genislet("!B", B)
                     .genislet("!f", bir(e)).genislet("!b", b))
     buzuk = uygula(iki(e), b)
@@ -2613,13 +2309,11 @@ def denklikle_tamamla(A: Deger, B: Deger, e: Deger, b: Deger,
 
 
 def _act_cizgi(al, r):
-    """``λr. deger.act({ad: r})``"""
     d, ad = al
     return d.act({ad: r})
 
 
 def _uyg_bir_c(al, r):
-    """``λr. (e(r)).1 (c(r))``"""
     e_hat, c = al
     return uygula(bir(e_hat.uygula(r)), c.uygula(r))
 
@@ -2652,7 +2346,7 @@ def _alfa_ters_c(al, j):
 
 def komp_yapistir(hat: ACizgi, sistem: Sistem, u0: Deger) -> Deger:
     i = taze("i")
-    Ai = hat.uygula(Aralik.degisken(i))          # DYapistir (yüzler i içerebilir)
+    Ai = hat.uygula(Aralik.degisken(i))
     if not isinstance(Ai, DYapistir):
         raise EksikKural("komp_yapistir: Glue bekleniyordu")
 
@@ -2681,7 +2375,6 @@ def komp_yapistir(hat: ACizgi, sistem: Sistem, u0: Deger) -> Deger:
                                ap1.act(sig))
         kismi: List[Tuple[frozenset, Deger]] = []
 
-        # (a) ψ üzerinde: (b(1), refl a'1)
         for (yp, c) in sistem:
             k = Kofibrasyon([yp]).yerine_koy(sig)
             if k.bos_mu():
@@ -2692,7 +2385,6 @@ def komp_yapistir(hat: ACizgi, sistem: Sistem, u0: Deger) -> Deger:
                 kismi.append((yf, DCift(c.uygula(BIR).act(sg),
                                           DYolLam(ASabit(ap1.act(sg))))))
 
-        # (b) δ üzerinde: (t'1, ω)
         for (yd, Td, ed) in delta_dallari:
             k = Kofibrasyon([yd]).yerine_koy(sig)
             if k.bos_mu():
@@ -2721,10 +2413,6 @@ def komp_yapistir(hat: ACizgi, sistem: Sistem, u0: Deger) -> Deger:
     a1 = hkomp(A1, Sistem(a1_dallar), ap1)
     return yapistir_terim(t1_dallar, a1)
 
-
-# ====================================================================
-#  omega_kategori_nbe/denetleyici.py
-# ====================================================================
 
 class DenetimHatasi(Exception):
     pass
@@ -2783,7 +2471,6 @@ def _bagdasir(y1: Yuz, y2: Yuz) -> Optional[Yuz]:
 
 
 def _sabit_cizgi_mi(hat, ad_ipucu: str = "i") -> bool:
-    """Çizgi NORMAL FORMDA sabit mi? (uçların eşitliğine BAKILMAZ)"""
     k = taze("sbt")
     govde = geri_oku(hat.uygula(Aralik.degisken(k)), 0)
     return k not in ara_serbest(govde)
@@ -2964,7 +2651,6 @@ def sentezle(t: Terim, g: Baglam) -> Deger:
         denetle_tip(t.hedef, g.genislet(t.ad, DCember()))
         denetle(t.nokta, DCember(), g)
         denetle(t.taban_dali, motif.uygula(DTaban()), g)
-        # dongu_dali'nin UÇLARI taban_dalının DEĞERİdir, tipi değil
         tbd = g.d(t.taban_dali)
         cizgi = ikame(t.hedef,
                          {t.ad: Dongu(Aralik.degisken(t.i_ad))})
@@ -3041,7 +2727,6 @@ def denetle(t: Terim, tip: Deger, g: Baglam) -> None:
 
 
 def denetle_t(t: Terim, tip_terim: Terim, g: Baglam) -> None:
-    """``denetle`` ama beklenen tip TERİM olarak verilir."""
     denetle(t, g.d(tip_terim), g)
 
 
@@ -3049,12 +2734,8 @@ def _genislet_t(self: Baglam, ad: str, tip_terim: Terim) -> Baglam:
     return self.genislet(ad, self.d(tip_terim))
 
 
-Baglam.genislet_t = _genislet_t   # type: ignore[attr-defined]
+Baglam.genislet_t = _genislet_t
 
-
-# ====================================================================
-#  omega_kategori_nbe/turetimler.py
-# ====================================================================
 
 U = Evren(0)
 
@@ -3076,11 +2757,6 @@ def _ikili(f: Terim, x: Terim, y: Terim) -> Terim:
 
 
 def morfizm_tipi(A: Terim, n: int) -> Terim:
-    """``A`` içindeki ``n``-morfizmlerin tipi (serbest uçlarla).
-
-    ``n=0`` → ``A``;  ``n=1`` → ``Π x y. Path A x y``;
-    ``n=2`` → ``Π x y. Π p q. Path (Path A x y) p q`` ...
-    """
     if n <= 0:
         return A
     x, y = terim_taze("x"), terim_taze("y")
@@ -3088,41 +2764,31 @@ def morfizm_tipi(A: Terim, n: int) -> Terim:
 
 
 def morfizm_uzayi(A: Terim, x: Terim, y: Terim, n: int) -> Terim:
-    """``x`` ile ``y`` arasındaki ``n``-morfizm uzayı (n≥1)."""
     if n <= 1:
         return yol(A, x, y)
     raise ValueError("n≥2 için uçları da vermek gerekir; morfizm_tipi kullanın")
 
 
 def koherens_tipi(A: Terim, n: int) -> Terim:
-    """``n``-boyutlu koherensin tipi: ``Ωⁿ``nin bir üst mertebesi.
-
-    "Katı eşitlik değil, bir üst mertebedeki morfizmle eşdeğerlik" iddiası
-    tam olarak bu tipin sakinleriyle ifade edilir.
-    """
     return morfizm_tipi(A, n + 1)
 
 
 def kume_tipi() -> Terim:
-    """``Küme = Σ (X : U). isSet X`` -- klasik küme kavramı buradan doğar."""
     X = terim_taze("X")
     return Sigma(X, U, mertebe(D(X), 0))
 
 
 def onerme_tipi() -> Terim:
-    """``Önerme = Σ (X : U). isProp X``"""
     X = terim_taze("X")
     return Sigma(X, U, mertebe(D(X), -1))
 
 
 def grupoid_tipi() -> Terim:
-    """``Grupoid = Σ (X : U). isGroupoid X``"""
     X = terim_taze("X")
     return Sigma(X, U, mertebe(D(X), 1))
 
 
 def n_tip_tipi(n: int) -> Terim:
-    """``n``-tiplerin tipi: ``Σ (X:U). n-mertebe X``."""
     X = terim_taze("X")
     return Sigma(X, U, mertebe(D(X), n))
 
@@ -3146,11 +2812,6 @@ def monoid_tipi() -> Terim:
 
 
 def grup_tipi() -> Terim:
-    """Grup: küme + birim + çarpma + ters + kanunlar.
-
-    Kanunlar YOL olarak ifade edilir; küme şartı (0-mertebe) bu yolların
-    tekil olmasını, yani klasik cebirdeki "denklem" davranışını sağlar.
-    """
     X, EksikKural, m, iv = D("X"), D("EksikKural"), D("m"), D("iv")
     x, y, z = D("x"), D("y"), D("z")
     birlesme = Pi("x", X, Pi("y", X, Pi("z", X,
@@ -3174,7 +2835,6 @@ def grup_tipi() -> Terim:
 
 
 def halka_tipi() -> Terim:
-    """Değişmeli halka: toplama grubu + çarpma monoidi + dağılma."""
     X = D("X")
     sf, bir = D("sifir"), D("bir")
     top, carp, eks = D("top"), D("carp"), D("eks")
@@ -3203,7 +2863,6 @@ def halka_tipi() -> Terim:
 
 
 def kategori_tipi() -> Terim:
-    """1-kategori: nesneler + küme-değerli hom + birim + bileşke + kanunlar."""
     Ob, Hom, bir, bil = D("Ob"), D("Hom"), D("bir"), D("bil")
     a, b, c, d = D("a"), D("b"), D("c"), D("d")
     H = lambda u, v: _ikili(Hom, u, v)
@@ -3235,14 +2894,6 @@ def kategori_tipi() -> Terim:
 
 
 def globuler_tip(n: int) -> Terim:
-    """``n``-derinlikli globüler tip:
-
-    ``Glob(0) = U``,  ``Glob(k+1) = Σ (Ob : U). (Ob → Ob → Glob(k))``.
-
-    ``n → ∞`` limiti (∞,∞)-kategorinin altında yatan globüler kümedir.
-    Sonlu her kesimi burada TEŞKİL EDİLİR ve tip denetiminden geçer;
-    limit, sonlu kesimlerin kulesi olarak alınır.
-    """
     if n <= 0:
         return U1 if False else U
     Ob = terim_taze("Ob")
@@ -3250,16 +2901,10 @@ def globuler_tip(n: int) -> Terim:
 
 
 def omega_grupoid_kulesi(A: Terim, n: int) -> List[Tuple[int, Terim]]:
-    """``A``nın ∞-grupoid kulesinin ilk ``n`` katı: ``(k, k-morfizm tipi)``."""
     return [(k, morfizm_tipi(A, k)) for k in range(n + 1)]
 
 
 def cember_bilgisi() -> Dict[str, Terim]:
-    """S¹: bu çekirdekte TAM olarak imâl edilmiş yegâne HIT.
-
-    Poincaré homotopi hipotezine göre ∞-grupoidler ile topolojik uzaylar
-    aynı şeydir; S¹ bunun en küçük ehemmiyetli misalidir.
-    """
     S1 = Cember()
     return {
         "uzay": S1,
@@ -3271,11 +2916,6 @@ def cember_bilgisi() -> Dict[str, Terim]:
 
 
 class Postulat:
-    """Nesne dilinde İSPATLANMAYAN, aksiyom olarak eklenen sakin.
-
-    Tipi yine de tip denetiminden geçirilir; yani "iyi teşkil edilmiş
-    aksiyom" olduğu makine ile doğrulanır. İspatı yoktur.
-    """
 
     __slots__ = ("ad", "tip", "izah")
 
@@ -3287,31 +2927,20 @@ class Postulat:
 
 
 def sdg_postulatlari() -> List[Postulat]:
-    """Sentetik diferansiyel geometrinin (Kock-Lawvere) çekirdek aksiyomları.
-
-    Bunlar POSTULATTIR: hiçbir kübik çekirdek -- bu modül dâhil, Cubical
-    Agda dâhil -- pürüzsüz ∞-toposu HESAPLAYAN bir indirgeyici vermez.
-    Burada yapılan, aksiyomların TİPLERİNİ makine ile denetlemektir.
-    """
     R = D("R")
     hR = D("halka_R")
-    # halka_R : bir halka yapısı; R onun taşıyıcısı olsun diye
-    # bileşenlerine erişimi kolaylaştıran kısayollar:
     carp = D("carp_R")
     top = D("top_R")
     sf = D("sifir_R")
     d, x, ff, aa, bb = D("d"), D("x"), D("f"), D("a"), D("b")
 
-    # D = Σ (x : R). Path R (x·x) 0   -- birinci mertebeden sonsuz küçükler
     Dtip = Sigma("x", R, yol(R, _ikili(carp, x, x), sf))
 
-    # Kock-Lawvere: her f : D → R, tek bir (a,b) ile f(d) = a + b·d
     kl_govde = Pi("d", Dtip, yol(R, Uygula(ff, d),
         _ikili(top, aa, _ikili(carp, bb, Birinci(d)))))
     kl = Pi("f", ok(Dtip, R),
               mertebe(sigma_hepsi([("a", R), ("b", R)], kl_govde), -2))
 
-    # Sonsuz küçük şekil kipi (infinitesimal shape modality) ℑ
     im = D("Im")
     im_tip = ok(U, U)
     im_birim = Pi("X", U, ok(D("X"), Uygula(im, D("X"))))
@@ -3334,9 +2963,6 @@ def sdg_postulatlari() -> List[Postulat]:
 
 
 def univalence_postulati() -> Postulat:
-    """Tümel değişmezlik, bu çekirdekte İFADE EDİLİR fakat TAŞIMASI
-    hesaplanmaz; dolayısıyla ``ua``yı hesapla kullanmak isteyen, aksiyom
-    olarak ``uaBeta``yı eklemek zorundadır."""
     A, B, EksikKural, x = D("A"), D("B"), D("EksikKural"), D("x")
     tip = Pi("A", U, Pi("B", U, Pi("EksikKural", denklik_tipi(A, B),
         Pi("x", A, yol(B, tasi(ua(A, B, EksikKural), x),
@@ -3356,7 +2982,6 @@ def postulat_baglami(postulatlar: Sequence[Postulat],
 
 
 def bosluklar() -> List[Dict[str, str]]:
-    """Bu çekirdeğin BİLİNEN eksikleri. Sessiz değil, kütüklü."""
     return [
         {
             "ad": "π₁(S¹) ≅ ℤ hesabı",
@@ -3402,12 +3027,11 @@ def _dene(ad: str, is_: Callable[[], None]) -> Dict[str, str]:
         return {"ad": ad, "netice": "GEÇTİ"}
     except EksikKural as EksikKural:
         return {"ad": ad, "netice": "EKSİK KURAL", "izah": str(EksikKural)[:120]}
-    except Exception as EksikKural:  # noqa: BLE001
+    except Exception as EksikKural:
         return {"ad": ad, "netice": "HATA", "izah": ("%s: %s" % (type(EksikKural).__name__, EksikKural))[:300]}
 
 
 def dogrula_hepsi_turetimler() -> List[Dict[str, str]]:
-    """Bu dosyadaki her türetimi fiilen tip denetiminden geçirir."""
     g = Baglam()
     A = D("A")
     gA = Baglam.terimlerden({"A": U, "a": A, "b": A})
@@ -3439,7 +3063,6 @@ def dogrula_hepsi_turetimler() -> List[Dict[str, str]]:
     ]
     neticeler = [_dene(ad, f) for ad, f in isler]
 
-    # (C) postulat tipleri iyi teşkil edilmiş mi?
     ps = sdg_postulatlari()
     gp = Baglam()
     for p in ps:
@@ -3450,7 +3073,6 @@ def dogrula_hepsi_turetimler() -> List[Dict[str, str]]:
     neticeler.append(_dene("POSTULAT tipi iyi teşkil: uaBeta",
                            lambda: denetle_tip_yardimci(ua_p.tip, Baglam())))
 
-    # (B) NbE'de HESAPLANAN: uaβ ve π₁(S¹)
     neticeler.append(_dene("uaβ: transport (ua sucEquiv) 3 = 4",
                            lambda: _esit_dene(
                                tasi(ua(Tamsayi(), Tamsayi(),
@@ -3474,14 +3096,12 @@ def _esit_dene(a: Terim, b: Terim) -> None:
 
 
 def _ua_tasima_dene() -> None:
-    """NbE'de ua boyunca taşıma HESAPLANIR; somut sınama dogrula_hepsi_turetimler'de."""
     A, B, EksikKural, x = D("A"), D("B"), D("EksikKural"), D("x")
     g = Baglam.terimlerden({"A": U, "B": U, "EksikKural": denklik_tipi(A, B), "x": A})
     geri_oku(g.d(tasi(ua(A, B, EksikKural), x)))
 
 
 def _rapor_turetimler() -> str:
-    """Dürüst hulâsa: ne hesaplanıyor, ne ifade ediliyor, ne postulat."""
     satirlar = ["=" * 66,
                 "omega_kategori -- türetim raporu",
                 "=" * 66, "", "(A) HESAPLANAN ve TİP DENETİMİNDEN GEÇEN:"]
@@ -3507,10 +3127,6 @@ def _rapor_turetimler() -> str:
     return "\n".join(satirlar)
 
 
-# ====================================================================
-#  omega_kategori_nbe/geometri.py
-# ====================================================================
-
 U = Evren(0)
 
 
@@ -3521,7 +3137,6 @@ D = Deg
 
 
 def sdg_baglami() -> Baglam:
-    """``R`` ve halka işlemleri postulat olarak eklenmiş bağlam."""
     return postulat_baglami(sdg_postulatlari())
 
 
@@ -3546,40 +3161,30 @@ def _carp(a: Terim, b: Terim) -> Terim:
 
 
 def sonsuz_kucukler() -> Terim:
-    """``D = Σ (x : R). Path R (x·x) 0`` -- birinci mertebeden sonsuz küçükler."""
     x = terim_taze("x")
     return Sigma(x, R, yol(R, _carp(D(x), D(x)), SIFIR_R))
 
 
 def sifir_sonsuz_kucuk() -> Terim:
-    """``0 ∈ D``: sıfırın karesi sıfırdır (halka aksiyomundan gelir;
-    burada tanık POSTULAT olarak istenir)."""
     return Cift(SIFIR_R, D("sifir_kare"))
 
 
 def teget_demeti(X: Terim) -> Terim:
-    """``TX := X^D = (D → X)`` -- teğet demeti HARİTALAMA UZAYIDIR.
-
-    Uzayı kurmak, teğetini de kurmaktır: ayrıca bir inşa gerekmez.
-    """
     return ok(sonsuz_kucukler(), X)
 
 
 def teget_izdusum(X: Terim) -> Terim:
-    """``π : TX → X``, ``v ↦ v(0)``."""
     v = terim_taze("v")
     return Lam(v, terim_uygula(D(v), sifir_sonsuz_kucuk()))
 
 
 def teget_lifi(X: Terim, x: Terim) -> Terim:
-    """``T_x X = Σ (v : D → X). Path X (v 0) x`` -- ``x``teki teğet uzayı."""
     v = terim_taze("v")
     return Sigma(v, teget_demeti(X),
                    yol(X, terim_uygula(D(v), sifir_sonsuz_kucuk()), x))
 
 
 class Modul:
-    """Bir ``R``-modülün taşıyıcısı ve işlemleri (terimler)."""
 
     __slots__ = ("V", "top", "sifir", "eks", "skaler")
 
@@ -3596,7 +3201,6 @@ class Modul:
 
 
 def modul_tipi() -> Terim:
-    """``Mod_R``: ``R`` üzerinde modül yapısının tipi."""
     V, top, sf, eks, sk = D("V"), D("top"), D("sf"), D("eks"), D("sk")
     x, y, z, c, d_ = D("x"), D("y"), D("z"), D("c"), D("d")
     A = lambda a, b: terim_uygula(terim_uygula(top, a), b)
@@ -3623,7 +3227,6 @@ def modul_tipi() -> Terim:
 
 
 def dogrusal_mi(M: Modul, N: Modul, f: Terim) -> Terim:
-    """``f : M.V → N.V`` doğrusal mı? (toplamsal + homojen)"""
     x, y, c = terim_taze("x"), terim_taze("y"), terim_taze("c")
     uy = terim_uygula
     toplamsal = Pi(x, M.V, Pi(y, M.V,
@@ -3636,18 +3239,15 @@ def dogrusal_mi(M: Modul, N: Modul, f: Terim) -> Terim:
 
 
 def skaler_modulu() -> Modul:
-    """``R``nin kendisi bir ``R``-modüldür; skalerler burada yaşar."""
     return Modul(R, TOP, SIFIR_R, D("eks_R"), CARP)
 
 
 def dual(M: Modul) -> Terim:
-    """``M* = Σ (f : V → R). f doğrusal`` -- kotanjant tarafı."""
     f = terim_taze("f")
     return Sigma(f, ok(M.V, R), dogrusal_mi(M, skaler_modulu(), D(f)))
 
 
 def cok_dogrusal_tip(yuvalar: Sequence[Terim], hedef: Terim) -> Terim:
-    """``V₁ → V₂ → … → W`` -- çok-doğrusal dönüşümün TAŞIYICI tipi."""
     sonuc = hedef
     for V in reversed(list(yuvalar)):
         sonuc = ok(V, sonuc)
@@ -3656,8 +3256,6 @@ def cok_dogrusal_tip(yuvalar: Sequence[Terim], hedef: Terim) -> Terim:
 
 def _yuvada_dogrusal(moduller: Sequence[Modul], N: Modul, f: Terim,
                      k: int) -> Terim:
-    """``f``nin ``k``ıncı yuvada doğrusal olduğu şartı; öbür yuvalar
-    serbest değişken olarak evrensel nicelenir."""
     adlar = [terim_taze("a%d" % n) for n in range(len(moduller))]
     x, y, c = terim_taze("x"), terim_taze("y"), terim_taze("c")
 
@@ -3685,25 +3283,12 @@ def _yuvada_dogrusal(moduller: Sequence[Modul], N: Modul, f: Terim,
 
 
 def tensor_tipi(M: Modul, r: int, s: int) -> Terim:
-    """``(r,s)`` mertebesinden tensörün tipi.
-
-    ``r`` tane KOVEKTÖR (dual eleman) ve ``s`` tane VEKTÖR alıp skaler
-    veren çok-doğrusal dönüşüm. Klasik ``T^{⊗r} ⊗ (T*)^{⊗s}`` demetinin
-    global kesitinin iç dildeki karşılığı budur.
-    """
     yuvalar = [dual(M)] * r + [M.V] * s
     return cok_dogrusal_tip(yuvalar, R)
 
 
 def tensor_yapisi(M: Modul, r: int, s: int,
                   dualM: Optional[Modul] = None) -> Terim:
-    """``(r,s)``-tensör YAPISI: taşıyıcı çok-doğrusal dönüşüm + HER
-    yuvada doğrusallık şartı. Tensörü "yalnız bir fonksiyon"dan ayıran
-    şart budur.
-
-    ``r > 0`` ise dual yuvalar için ``M*`` üzerinde de bir modül yapısı
-    gerekir; ``dualM`` ile verilir (noktasal yapı, burada teşkil edilmez).
-    """
     if dualM is None:
         dualM = Modul(dual(M), D("dtop"), D("dsf"), D("deks"), D("dsk"))
     moduller = [dualM] * r + [M] * s
@@ -3718,8 +3303,6 @@ def tensor_yapisi(M: Modul, r: int, s: int,
 
 
 def teget_tensoru(X: Terim, x: Terim, r: int, s: int) -> Terim:
-    """``x`` noktasında ``(r,s)`` tensörlerinin tipi -- teğet lifinden
-    doğrudan doğar; ayrıca bir demet inşası GEREKMEZ."""
     Tx = teget_lifi(X, x)
     M = Modul(Tx, D("teget_top"), D("teget_sifir"), D("teget_eks"),
               D("teget_skaler"))
@@ -3727,11 +3310,6 @@ def teget_tensoru(X: Terim, x: Terim, r: int, s: int) -> Terim:
 
 
 def cebir_tipi() -> Terim:
-    """``Mod_R`` içindeki monoid nesnesi: ``μ : A⊗A → A``, ``η : 1 → A``.
-
-    ``⊗`` iç dilde çok-doğrusallıkla temsil edildiğinden ``μ`` iki-doğrusal
-    bir dönüşümdür; ``η`` bir noktadır (``1 = R``den gelen birim).
-    """
     A, top, sf, eks, sk = D("A"), D("top"), D("sf"), D("eks"), D("sk")
     mu, eta = D("mu"), D("eta")
     x, y, z, c = D("x"), D("y"), D("z"), D("c")
@@ -3746,8 +3324,8 @@ def cebir_tipi() -> Terim:
         ("sf", A),
         ("eks", ok(A, A)),
         ("sk", ok(R, ok(A, A))),
-        ("mu", ok(A, ok(A, A))),        # μ : A ⊗ A → A
-        ("eta", A),                          # η : 1 → A
+        ("mu", ok(A, ok(A, A))),
+        ("eta", A),
         ("mu_birlesme", P("x", A, P("y", A, P("z", A,
             yol(A, M(M(x, y), z), M(x, M(y, z))))))),
         ("eta_sol", P("x", A, yol(A, M(eta, x), x))),
@@ -3761,12 +3339,6 @@ def cebir_tipi() -> Terim:
 
 
 def lie_tipi() -> Terim:
-    """Lie cebri: ``[·,·]``, antisimetri, Jacobi.
-
-    Jacobi bir YOL olarak ifade edilir; kümeler mertebesinde bu klasik
-    özdeşliktir, daha yüksek mertebede ise ``lie_koherens`` ile bir üst
-    mertebeden yol talep edilebilir.
-    """
     V, top, sf, eks, sk, br = (D("V"), D("top"), D("sf"), D("eks"),
                                D("sk"), D("br"))
     x, y, z = D("x"), D("y"), D("z")
@@ -3791,13 +3363,6 @@ def lie_tipi() -> Terim:
 
 
 def koherens_kulesi(V: Terim, sol: Terim, sag: Terim, n: int) -> Terim:
-    """``sol`` ile ``sag`` arasındaki ``n``inci mertebeden koherens tipi.
-
-    ``n=1``: iki terim arasındaki yol (klasik özdeşlik).
-    ``n=2``: iki yol arasındaki yol (özdeşliğin İSPATLARI arasındaki
-             koherens) -- "katı eşitlik değil, bir üst mertebeden morfizm"
-             iddiasının fiilî karşılığı.
-    """
     tip = yol(V, sol, sag)
     nokta = refl(sol)
     for _ in range(n - 1):
@@ -3806,13 +3371,10 @@ def koherens_kulesi(V: Terim, sol: Terim, sag: Terim, n: int) -> Terim:
 
 
 def alterne_form_tipi(M: Modul, n: int) -> Terim:
-    """``n``-form: ``n`` tane vektör alıp skaler veren çok-doğrusal
-    dönüşüm (alternelik ayrı bir şart olarak istenir)."""
     return cok_dogrusal_tip([M.V] * n, R)
 
 
 def form_uzayi(X: Terim, n: int) -> Terim:
-    """``Ωⁿ(X) = Π (x:X). (T_x X)ⁿ → R``"""
     x = terim_taze("x")
     return Pi(x, X, alterne_form_tipi(
         Modul(teget_lifi(X, D(x)), D("teget_top"), D("teget_sifir"),
@@ -3820,11 +3382,6 @@ def form_uzayi(X: Terim, n: int) -> Terim:
 
 
 def de_rham_postulatlari(X: Terim, n: int) -> List[Postulat]:
-    """``d : Ωⁿ → Ωⁿ⁺¹`` ve ``d∘d = 0``.
-
-    POSTULATTIR: dış türevin hesaplanan bir kuralı bu çekirdekte yoktur.
-    Tipleri denetlenir; sakinleri aksiyomdur.
-    """
     om_n, om_n1, om_n2 = (form_uzayi(X, n), form_uzayi(X, n + 1),
                           form_uzayi(X, n + 2))
     w = terim_taze("w")
@@ -3901,7 +3458,6 @@ def dogrula_hepsi_geometri() -> List[Dict[str, str]]:
     ]
     neticeler = [_dene(ad, f) for ad, f in isler]
 
-    # koherens kulesi: 1., 2., 3. mertebe
     a, b = D("a"), D("b")
     gk = g.genislet_t("A", U).genislet_t("a", D("A")).genislet_t("b", D("A"))
     for n in (1, 2, 3):
@@ -3909,7 +3465,6 @@ def dogrula_hepsi_geometri() -> List[Dict[str, str]]:
             "koherens kulesi mertebe %d : U" % n,
             lambda n=n: denetle_t(koherens_kulesi(D("A"), a, a, n), U, gk)))
 
-    # de Rham postulatlarının tipleri iyi teşkil mi?
     gd = g
     for p in de_rham_postulatlari(X, 1):
         neticeler.append(_dene("POSTULAT tipi iyi teşkil: %s" % p.ad,
@@ -3934,10 +3489,6 @@ def _rapor_geometri() -> str:
     return "\n".join(satirlar)
 
 
-# ====================================================================
-#  omega_kategori_nbe/iliskiler.py
-# ====================================================================
-
 U = Evren(0)
 
 
@@ -3948,69 +3499,57 @@ D = Deg
 
 
 def bileske(f: Terim, g: Terim) -> Terim:
-    """``g ∘ f``"""
     x = terim_taze("x")
     return Lam(x, terim_uygula(g, terim_uygula(f, D(x))))
 
 
 def geri_cek(f: Terim, P: Terim) -> Terim:
-    """``f^* P = λ x. P (f x)`` -- geri çekme (pullback) funktoru."""
     x = terim_taze("x")
     return Lam(x, terim_uygula(P, terim_uygula(f, D(x))))
 
 
 def toplam_it(X: Terim, Y: Terim, f: Terim, Q: Terim) -> Terim:
-    """``Σ_f Q = λ y. Σ (x:X). (Path Y (f x) y) × Q x`` -- sol bitişik."""
     y, x = terim_taze("y"), terim_taze("x")
     return Lam(y, Sigma(x, X,
         carpim(yol(Y, terim_uygula(f, D(x)), D(y)), terim_uygula(Q, D(x)))))
 
 
 def carpim_it(X: Terim, Y: Terim, f: Terim, Q: Terim) -> Terim:
-    """``Π_f Q = λ y. Π (x:X). (Path Y (f x) y) → Q x`` -- sağ bitişik."""
     y, x = terim_taze("y"), terim_taze("x")
     return Lam(y, Pi(x, X,
         ok(yol(Y, terim_uygula(f, D(x)), D(y)), terim_uygula(Q, D(x)))))
 
 
 def _aile_oku(A: Terim, F1: Terim, F2: Terim) -> Terim:
-    """``Π (a:A). F1 a → F2 a`` -- aileler arası dönüşüm."""
     a = terim_taze("a")
     return Pi(a, A, ok(terim_uygula(F1, D(a)), terim_uygula(F2, D(a))))
 
 
 def bitisiklik_sol_tipi(X: Terim, Y: Terim, f: Terim,
                         Q: Terim, P: Terim) -> Terim:
-    """``Denklik (Σ_f Q ⇒ P) (Q ⇒ f^* P)``  --  ``Σ_f ⊣ f^*``"""
     return denklik_tipi(_aile_oku(Y, toplam_it(X, Y, f, Q), P),
                           _aile_oku(X, Q, geri_cek(f, P)))
 
 
 def bitisiklik_sag_tipi(X: Terim, Y: Terim, f: Terim,
                         P: Terim, Q: Terim) -> Terim:
-    """``Denklik (f^* P ⇒ Q) (P ⇒ Π_f Q)``  --  ``f^* ⊣ Π_f``"""
     return denklik_tipi(_aile_oku(X, geri_cek(f, P), Q),
                           _aile_oku(Y, P, carpim_it(X, Y, f, Q)))
 
 
 def zincir_kurali_tipi(X: Terim, Z: Terim, f: Terim, g: Terim,
                        P: Terim) -> Terim:
-    """``Path (X → U) ((g∘f)^* P) (f^* (g^* P))``"""
     return yol(ok(X, U), geri_cek(bileske(f, g), P),
                  geri_cek(f, geri_cek(g, P)))
 
 
 def zincir_kurali_ispati(X: Terim, Z: Terim, f: Terim, g: Terim,
                          P: Terim) -> Terim:
-    """İSPAT: ``refl``. İki taraf da ``λx. P (g (f x))``e indirgenir;
-    yani zincir kuralı burada bir teorem değil, morfizm bileşkesinin
-    TANIMSAL neticesidir."""
     return refl(geri_cek(bileske(f, g), P))
 
 
 def monoidal_uyum_tipi(X: Terim, Y: Terim, f: Terim,
                        P: Terim, Q: Terim) -> Terim:
-    """``Path (X → U) (f^*(P × Q)) (f^*P × f^*Q)``"""
     y = terim_taze("y")
     carpim_ailesi = Lam(y, carpim(terim_uygula(P, D(y)), terim_uygula(Q, D(y))))
     x = terim_taze("x")
@@ -4021,52 +3560,37 @@ def monoidal_uyum_tipi(X: Terim, Y: Terim, f: Terim,
 
 def monoidal_uyum_ispati(X: Terim, Y: Terim, f: Terim,
                          P: Terim, Q: Terim) -> Terim:
-    """İSPAT: ``refl`` -- tensör/çarpım yapısı geri çekmede TANIMSAL korunur."""
     y = terim_taze("y")
     carpim_ailesi = Lam(y, carpim(terim_uygula(P, D(y)), terim_uygula(Q, D(y))))
     return refl(geri_cek(f, carpim_ailesi))
 
 
 def teget_donusumu(f: Terim) -> Terim:
-    """``Tf : TX → TY``, ``v ↦ λd. f (v d)`` -- diferansiyel (Jacobian).
-
-    Teğet demeti bir haritalama uzayı olduğundan ``Tf`` ayrıca inşa
-    edilmez; ``f`` ile ard arda uygulamadan ibarettir.
-    """
     v, d = terim_taze("v"), terim_taze("d")
     return Lam(v, Lam(d, terim_uygula(f, terim_uygula(D(v), D(d)))))
 
 
 def teget_zincir_tipi(X: Terim, Z: Terim, f: Terim, g: Terim) -> Terim:
-    """``Path (TX → TZ) (T(g∘f)) (Tg ∘ Tf)``"""
     TX, TZ = teget_demeti(X), teget_demeti(Z)
     return yol(ok(TX, TZ), teget_donusumu(bileske(f, g)),
                  bileske(teget_donusumu(f), teget_donusumu(g)))
 
 
 def teget_zincir_ispati(X: Terim, Z: Terim, f: Terim, g: Terim) -> Terim:
-    """İSPAT: ``refl`` -- teğet funktoru bileşkeyi TANIMSAL korur."""
     return refl(teget_donusumu(bileske(f, g)))
 
 
 def ayrik_mi(X: Terim) -> Terim:
-    """Ayrıklık ölçütü: ``isSet X`` (0-kesilmişlik)."""
     return mertebe(X, 0)
 
 
 def yuksek_morfizmler_onemsiz_tipi(X: Terim) -> Terim:
-    """``isSet X → Π (x:X). isContr (Ω(X,x))``
-
-    "Ayrık uzayda bütün yüksek morfizmler önemsizleşir" iddiasının tam
-    ifadesi budur.
-    """
     x = terim_taze("x")
     return ok(mertebe(X, 0),
                 Pi(x, X, mertebe(dongu_uzayi(X, D(x)), -2)))
 
 
 def yuksek_morfizmler_onemsiz_ispati(X: Terim) -> Terim:
-    """İSPAT: merkez ``refl x``; büzme, ``isSet``in kendisidir."""
     h, x, p = terim_taze("h"), terim_taze("x"), terim_taze("p")
     return Lam(h, Lam(x, Cift(
         refl(D(x)),
@@ -4075,18 +3599,11 @@ def yuksek_morfizmler_onemsiz_ispati(X: Terim) -> Terim:
 
 
 def ayrik_uzay_tipi() -> Terim:
-    """``Σ (X:U). isSet X`` -- ayrık uzaylar, hiyerarşinin en dip tabakası."""
     X = terim_taze("X")
     return Sigma(X, U, ayrik_mi(D(X)))
 
 
 def ayrik_postulatlari() -> List[Postulat]:
-    """``Π₀ ⊣ Disc ⊣ Γ`` bitişiklik zinciri.
-
-    ``Disc`` iç dilde zaten dâhil etmedir (bir küme bir tiptir); ``Π₀``
-    ise küme-kesmesi (set truncation) bir HIT olduğundan ve bu çekirdekte
-    genel HIT şeması bulunmadığından POSTULATTIR.
-    """
     X = D("X")
     p0 = D("Pi0")
     x = terim_taze("x")
@@ -4101,12 +3618,6 @@ def ayrik_postulatlari() -> List[Postulat]:
 
 
 def kritik_lokus(f: Terim) -> Terim:
-    """``Crit(f) = Σ (x:R). Π (d:D). Path R (f (x+d)) (f x)``
-
-    SDG'de "türev sıfırdır" şartı budur: fonksiyon sonsuz küçük her
-    kaymada değişmiyorsa o nokta kritiktir. Asgari/azami noktalar bu
-    alt-uzayın sakinleridir.
-    """
     x, d = terim_taze("x"), terim_taze("d")
     kayma = terim_uygula(terim_uygula(TOP, D(x)), Birinci(D(d)))
     return Sigma(x, R, Pi(d, sonsuz_kucukler(),
@@ -4114,8 +3625,6 @@ def kritik_lokus(f: Terim) -> Terim:
 
 
 def tikanma_postulati(X: Terim) -> Postulat:
-    """Tıkanma (obstruction) sınıfı -- kohomoloji bu çekirdekte yok,
-    POSTULATTIR."""
     return Postulat("tikanma", ok(ok(X, U), U),
                       "Bir ailenin global kesitinin varlığına engel olan "
                       "kohomolojik sınıf; sıfırdan farklıysa global inşa "
@@ -4123,41 +3632,29 @@ def tikanma_postulati(X: Terim) -> Postulat:
 
 
 def evrensel_demet(M: Terim, F: Terim) -> Terim:
-    """``E = Σ (w:M). F w`` -- parametre uzayı üzerindeki evrensel demet."""
     w = terim_taze("w")
     return Sigma(w, M, terim_uygula(F, D(w)))
 
 
 def demet_izdusumu(M: Terim, F: Terim) -> Terim:
-    """``π : E → M``"""
     e = terim_taze("e")
     return Lam(e, Birinci(D(e)))
 
 
 def agirlikta_lif(F: Terim, w: Terim) -> Terim:
-    """``X_w = F w`` -- ağırlık ``w``de türetilen uzay (geri çekilmiş lif)."""
     return terim_uygula(F, w)
 
 
 def kesit_tipi(M: Terim, F: Terim) -> Terim:
-    """``Π (w:M). F w`` -- seçim kesiti; "öğrenilmiş ağırlık" budur."""
     w = terim_taze("w")
     return Pi(w, M, terim_uygula(F, D(w)))
 
 
 def lif_geri_cekme_ispati(M: Terim, F: Terim, w: Terim) -> Terim:
-    """``E`` üzerinden ``w``deki lifi geri çekmek ``F w``yi verir --
-    ``refl`` ile: parametrik geri çekme TANIMSALDIR."""
     return refl(terim_uygula(F, w))
 
 
 def kip_postulatlari() -> List[Postulat]:
-    """Gayrilineerliği sağlayan kip (modality).
-
-    Doğrusal funktorlar homotopik sınırları korur; gayrilineerlik, araya
-    bir kip/kesme/lokalizasyon funktoru koyarak elde edilir. Kip bir HIT
-    (kesme) gerektirdiğinden POSTULATTIR.
-    """
     tau = D("tau")
     X = D("X")
     return [
@@ -4199,7 +3696,6 @@ def dogrula_hepsi_iliskiler() -> List[Dict[str, str]]:
     M, Fw, w = D("M"), D("Fw"), D("w")
 
     isler: List[Tuple[str, Callable[[], None]]] = [
-        # 1. geri çekme / itme
         ("f^* : (Y→U) → (X→U)",
          lambda: denetle_t(geri_cek(f, PY), ok(X, U), g)),
         ("Σ_f : (X→U) → (Y→U)",
@@ -4210,29 +3706,24 @@ def dogrula_hepsi_iliskiler() -> List[Dict[str, str]]:
          lambda: denetle_t(bitisiklik_sol_tipi(X, Y, f, Q, PY), U, g)),
         ("bitişiklik f^* ⊣ Π_f (tip) : U",
          lambda: denetle_t(bitisiklik_sag_tipi(X, Y, f, PY, Q), U, g)),
-        # 2. zincir kuralı ve monoidal uyum -- refl ile İSPATLANIR
         ("ZİNCİR KURALI (g∘f)^* ≡ f^*∘g^*  [refl ile İSPAT]",
          lambda: denetle_t(zincir_kurali_ispati(X, Z, f, gg, P),
                          zincir_kurali_tipi(X, Z, f, gg, P), g)),
         ("MONOİDAL UYUM f^*(P×Q) ≡ f^*P × f^*Q  [refl ile İSPAT]",
          lambda: denetle_t(monoidal_uyum_ispati(X, Y, f, PY, QY),
                          monoidal_uyum_tipi(X, Y, f, PY, QY), g)),
-        # 3. teğet funktoru
         ("Tf : TX → TY",
          lambda: denetle_t(teget_donusumu(f),
                          ok(teget_demeti(X), teget_demeti(Y)), g)),
         ("TEĞET ZİNCİRİ T(g∘f) ≡ Tg∘Tf  [refl ile İSPAT]",
          lambda: denetle_t(teget_zincir_ispati(X, Z, f, gg),
                          teget_zincir_tipi(X, Z, f, gg), g)),
-        # 4. ayrık uzaylar
         ("Ayrık uzay tipi : U₁", lambda: denetle_t(ayrik_uzay_tipi(), U1, g)),
         ("AYRIKTA YÜKSEK MORFİZMLER ÖNEMSİZ  [İSPAT]",
          lambda: denetle_t(yuksek_morfizmler_onemsiz_ispati(X),
                          yuksek_morfizmler_onemsiz_tipi(X), g)),
-        # 5. uç haller
         ("Kritik lokus Crit(f) : U",
          lambda: denetle_t(kritik_lokus(D("fR")), U, g)),
-        # 6. parametrik demet
         ("Evrensel demet E = Σ(w:M). F w : U",
          lambda: denetle_t(evrensel_demet(M, Fw), U, g)),
         ("π : E → M",
@@ -4247,7 +3738,6 @@ def dogrula_hepsi_iliskiler() -> List[Dict[str, str]]:
     ]
     neticeler = [_dene(ad, fn) for ad, fn in isler]
 
-    # postulat tipleri iyi teşkil mi?
     gp = g
     for p in (ayrik_postulatlari() + kip_postulatlari()
               + [tikanma_postulati(X)]):
@@ -4272,10 +3762,6 @@ def _rapor_iliskiler() -> str:
     satirlar += ["", "hulâsa: %d geçti, %d kaldı" % (gecti, kaldi), "=" * 66]
     return "\n".join(satirlar)
 
-
-# ====================================================================
-#  omega_kategori_nbe/yazdir.py
-# ====================================================================
 
 def _yuz_yaz(y) -> str:
     if not y:
@@ -4368,9 +3854,6 @@ def terimi_yaz(t) -> str:
     return object.__repr__(t)
 
 
-# ====================================================================
-#  Çipin toplu raporu
-# ====================================================================
 BOLUMLER = (
     ("TÜRETİMLER -- ∞-grupoid kulesi, ℕ, ℤ, S¹, postulatlar",
      "_rapor_turetimler"),
@@ -4380,8 +3863,7 @@ BOLUMLER = (
 )
 
 
-def rapor() -> str:                            # pragma: no cover
-    """Altı odanın ölçümü, sırayla."""
+def rapor() -> str:
     s = []
     for baslik, fn in BOLUMLER:
         s.append("")
@@ -4392,42 +3874,11 @@ def rapor() -> str:                            # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                     # pragma: no cover
+if __name__ == "__main__":
     print(rapor())
 
 
-# ══════════════════════════════════════════════════════════════════
-#  KÜME 9/E -- `omega_kategori/` (NbE ÖNCESİ SÜRÜM) CEVHERİ
-# ══════════════════════════════════════════════════════════════════
-#
-#  KÜME 7'de bu çip kurulurken şöyle yazmışım:
-#
-#      "Terkipte YALNIZ NbE sürümü alındı; eski sürüm tasfiye edildi."
-#
-#  Bu imhaydı ve kaidenin ihlaliydi ("imha yok, cevher toplama var").
-#  İki sürüm ölçüldü (9 719 satır, 10 dosya):
-#
-#      * 8 dosya BİREBİR AYNI (aralik, geometri, iliskiler,
-#        kutuphane, sozdizim, turetimler, yazdir…).
-#      * Eskide olup NbE'de olmayan 34 ad çıktı. Çoğu terim seviyesi
-#        normalleştirmedir (`whnf`, `_nf_hesapla`, `kanonik`,
-#        `_eta_esit`) ve NbE onları KASTEN kaldırır -- eta burada
-#        bedavaya gelir (`_eta_pi`, `_eta_yol`). İki yönlü
-#        denetleyici de kayıp değil, ad değiştirmiş
-#        (`sentez`/`tipini_ver` → `sentezle`/`denetle`);
-#        `buzukten_tamamla` → `denklikle_tamamla`.
-#
-#  GERİYE İKİ HAKİKÎ CEVHER KALDI ve ancak ÖLÇTÜKTEN sonra görüldü;
-#  ikisi de bu çipte hiç yoktu:
-#
-#      serbest  -- terimdeki serbest TERİM değişkenleri. Çipte yalnız
-#                  `ara_serbest` vardı; o serbest ARALIK
-#                  değişkenlerini verir. İkisi ayrı şeydir.
-#      pres     -- Kan kompozisyonunun taşınma lemması. Çipte hiç
-#                  geçmiyordu (arandı: 0 kere).
-
 def _alt_terimler(t: Terim) -> List[Terim]:
-    """Bağlayıcı yapısını umursamadan doğrudan alt terimler."""
     if isinstance(t, Pi) or isinstance(t, Sigma):
         return [t.alan, t.hedef]
     if isinstance(t, Lam):
@@ -4449,7 +3900,6 @@ def _alt_terimler(t: Terim) -> List[Terim]:
     return []
 
 def serbest(t: Terim) -> Set[str]:
-    """Terimdeki serbest TERİM değişkenleri."""
     g: Set[str] = set()
 
     def yur(t: Terim, bagli: Set[str]) -> None:
@@ -4538,10 +3988,6 @@ def _yuz_i_den_bagimsiz(y: Yuz, ad: str) -> bool:
 
 def pres(i: str, A_cizgi: Terim, T_cizgi: Terim, f_i: Terim, f_0: Terim,
          psi_dallar: Sequence[Tuple[Yuz, Terim]], u0: Terim) -> Terim:
-    """``ω : Path A(1) (f(1) (comp^i T [ψ↦u] u0)) (comp^i A [ψ↦ f i (u i)] (f(0) u0))``
-
-    ``ω = <j> comp^i A [ψ ↦ f i (u i), (j=1) ↦ f i (fill^i T [ψ↦u] u0)] (f(0) u0)``
-    """
     j = K.taze("j")
     tfill = K.dolgu(i, T_cizgi, psi_dallar, u0)
     dallar = [(y, K.uygula(f_i, govde)) for (y, govde) in psi_dallar]

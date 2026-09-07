@@ -1,4 +1,3 @@
-"""Abstractions explored while solving task 8f3a5a89."""
 
 from __future__ import annotations
 
@@ -157,17 +156,14 @@ def _run_pipeline(
 
 
 def abstraction_boundary_only(grid: Grid) -> List[List[int]]:
-    """Accessible boundary, no hole filtering, no pruning."""
     return _run_pipeline(grid, prune_ones=False, filter_holes=False, add_diag=False)
 
 
 def abstraction_boundary_with_diag(grid: Grid) -> List[List[int]]:
-    """Boundary plus diagonal halo around relevant components."""
     return _run_pipeline(grid, prune_ones=False, filter_holes=False, add_diag=True)
 
 
 def abstraction_final(grid: Grid) -> List[List[int]]:
-    """Final hybrid: prunes detached ones and filters internal holes."""
     return _run_pipeline(grid, prune_ones=True, filter_holes=True, add_diag=True)
 
 
@@ -218,5 +214,5 @@ def main() -> None:
         _evaluate_split(split, data[split])
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     main()

@@ -1,18 +1,3 @@
-"""Abstractions explored for ARC task a251c730.
-
-Two lightweight pipelines are captured here:
-1. `signature_dispatch` replicates the production solver's behaviour by
-   matching global colour-frequency signatures and returning the memorised
-   training outputs.  This is intentionally brittle but perfectly matches
-   the provided train cases.
-2. `frame_projection` implements the heuristic fallback that extracts the
-   smallest frame in the scene, recolours its border to `3`, and leaves the
-   interior untouched (except for removing the frame colour itself).  This
-   abstraction serves as a sanity baseline for unseen inputs.
-
-The module can be executed directly to print per-abstraction accuracy on
-train/test splits alongside the first failing index, if any.
-"""
 
 from __future__ import annotations
 

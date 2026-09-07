@@ -76,25 +76,6 @@ def bu_rankin_payi(ogeler: Sequence[Any]) -> List[Any]:
 def pencereleri_bolustur(uretici: Any) -> Any:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     d = dunya_boyutu()
     if d == 1:
         yield from uretici
@@ -118,31 +99,6 @@ def pencereleri_bolustur(uretici: Any) -> Any:
 SHARD_ESITLEME_FP32: bool = True
 
 def shardlari_esitle(shard_gradyanlari: List[List[torch.Tensor]]) -> None:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     if not dagitik_aktif():

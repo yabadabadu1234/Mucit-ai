@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task d8e07eb2.
-
-Refactored to expose typed-DSL style helpers and a declarative
-composition for the main solver while preserving original behavior.
-"""
 
 from copy import deepcopy
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
@@ -10,7 +5,6 @@ from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 _ROW_BLOCKS = [(1, 3), (8, 10), (13, 15), (18, 20), (23, 25)]
 _COL_BLOCKS = [(2, 4), (7, 9), (12, 14), (17, 19)]
 
-# Column fingerprints (rows 1..4) extracted from the steady portion of the grid.
 _COLUMN_FINGERPRINTS = {
     0: [(1, 2), (2, 7), (3, 4), (4, 9)],
     1: [(1, 0), (2, 1), (3, 2), (4, 6)],
@@ -18,7 +12,6 @@ _COLUMN_FINGERPRINTS = {
     3: [(1, 9), (2, 0), (3, 1), (4, 2)],
 }
 
-# Preferred occurrences for each colour outside the top digit block.
 _FALLBACK_ORDER = {
     0: [(2, 3), (1, 1)],
     1: [(2, 1), (3, 3)],
@@ -66,23 +59,12 @@ def _paint_block(grid: Grid, ri: int, ci: int, colour: int) -> None:
 
 
 def collectHeaderDigits(grid: Grid) -> Dict[int, int]:
-    """Tally colours detected across the top digit blocks.
-
-    Returns a mapping from colour -> count of occurrences among the top
-    5x5 digit blocks in columns.
-    """
     return _top_counts(grid)
 
 
 def matchColumnFingerprint(header_counts: Dict[int, int]) -> Optional[List[Block]]:
-    """Return highlight blocks if the header colours match any column fingerprint.
-
-    The selection respects colour multiplicities; returns None when no
-    fingerprint matches the observed header colours.
-    """
     colours = set(header_counts)
 
-    # Row-rule ({0,1,6,7}) is treated as a structural match.
     if colours == {0, 1, 6, 7}:
         return [(2, 0), (2, 1), (2, 2), (2, 3)]
 
@@ -90,13 +72,11 @@ def matchColumnFingerprint(header_counts: Dict[int, int]) -> Optional[List[Block
         col_set = {colour for _, colour in values}
         if col_set != colours:
             continue
-        # Count available supply of each colour in the fingerprint column.
         supply: Dict[int, int] = {}
         for _, colour in values:
             supply[colour] = supply.get(colour, 0) + 1
         if any(supply.get(colour, 0) < need for colour, need in header_counts.items()):
             continue
-        # Greedily take from top to bottom respecting needs.
         needed = dict(header_counts)
         chosen: List[Block] = []
         for ri, colour in values:
@@ -108,11 +88,6 @@ def matchColumnFingerprint(header_counts: Dict[int, int]) -> Optional[List[Block
 
 
 def fallbackBlockSelection(header_counts: Dict[int, int]) -> List[Block]:
-    """Priority selection when no fingerprint matches.
-
-    Uses the per-colour ordering of preferred blocks and selects as many
-    as required by the header counts.
-    """
     selection: List[Block] = []
     for colour, need in header_counts.items():
         options: Sequence[Block] = _FALLBACK_ORDER.get(colour, [])
@@ -121,7 +96,6 @@ def fallbackBlockSelection(header_counts: Dict[int, int]) -> List[Block]:
 
 
 def renderHighlights(grid: Grid, selected_blocks: Iterable[Block], highlight_top: bool) -> Grid:
-    """Render the chosen blocks and bands onto a fresh copy of the grid."""
     out = deepcopy(grid)
 
     if highlight_top:

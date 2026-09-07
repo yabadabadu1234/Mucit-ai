@@ -1,9 +1,3 @@
-"""Abstractions explored for ARC task 36a08778.
-
-The module records the intermediate abstraction attempts that led to the final
-solver. Each abstraction is implemented as a pure function and evaluated by a
-lightweight harness on the available splits (train/test/arc-gen).
-"""
 
 from __future__ import annotations
 
@@ -19,19 +13,16 @@ SOLVER_PATH = Path(__file__).with_name("arc2_samples") / "36a08778.py"
 
 
 def load_task() -> dict:
-    """Load the ARC task description from disk."""
 
     return json.loads(TASK_PATH.read_text())
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline abstraction: return the grid unchanged."""
 
     return [row[:] for row in grid]
 
 
 def _iter_runs_from_list(row: List[int], target: int = 2) -> Iterable[tuple[int, int]]:
-    """Yield contiguous [start, end] spans of the target colour within a list."""
 
     start = None
     for idx, value in enumerate(row):
@@ -46,14 +37,11 @@ def _iter_runs_from_list(row: List[int], target: int = 2) -> Iterable[tuple[int,
 
 
 def _scaffold_abstraction(grid: Grid, *, process_runs: bool, require_scaffold_touch: bool) -> Grid:
-    """Shared implementation for the scaffold-based abstractions."""
 
     height = len(grid)
     width = len(grid[0]) if height else 0
     result = [row[:] for row in grid]
 
-    # Seed columns are the positions that already contain colour 6 in the top
-    # two rows; extend them downward until blocked by colour 2.
     seed_cols = set()
     for r in range(min(2, height)):
         for c, value in enumerate(grid[r]):
@@ -117,25 +105,21 @@ def _scaffold_abstraction(grid: Grid, *, process_runs: bool, require_scaffold_to
 
 
 def scaffold_seed_extension(grid: Grid) -> Grid:
-    """Only extend the scaffold columns downward (first abstraction attempt)."""
 
     return _scaffold_abstraction(grid, process_runs=False, require_scaffold_touch=False)
 
 
 def scaffold_unfiltered(grid: Grid) -> Grid:
-    """Extend scaffolds and wrap every 2-run, regardless of connectivity."""
 
     return _scaffold_abstraction(grid, process_runs=True, require_scaffold_touch=False)
 
 
 def scaffold_filtered(grid: Grid) -> Grid:
-    """Final abstraction: wrap only the runs touched by existing scaffold."""
 
     return _scaffold_abstraction(grid, process_runs=True, require_scaffold_touch=True)
 
 
 def load_solver() -> Callable[[Grid], Grid]:
-    """Import the reference solver from the sample module."""
 
     spec = importlib.util.spec_from_file_location("task36a08778_solver", SOLVER_PATH)
     module = importlib.util.module_from_spec(spec)
@@ -145,14 +129,12 @@ def load_solver() -> Callable[[Grid], Grid]:
 
 
 def render(grid: Grid) -> str:
-    """Render a grid as a hexadecimal string for compact display."""
 
     palette = "0123456789abcdef"
     return "\n".join("".join(palette[val] for val in row) for row in grid)
 
 
 def evaluate_abstractions() -> None:
-    """Run all registered abstractions on each split and report metrics."""
 
     data = load_task()
     abstractions: dict[str, Callable[[Grid], Grid]] = {

@@ -1,4 +1,3 @@
-"""ARC task 6ffbe589 solution."""
 
 from typing import List, Optional, Sequence, Set, Tuple
 
@@ -11,9 +10,6 @@ def solve_6ffbe589(grid: Grid) -> Grid:
     transformed = transformVariant(main, palette)
     return fallbackRotate(main) if transformed is None else transformed
 
-
-# -----------------------------------------------------------------------------
-# DSL helpers referenced by the Lambda Representation
 
 def extractMainSquare(grid: Grid) -> Grid:
     return _extract_main_square(grid)
@@ -38,7 +34,6 @@ def fallbackRotate(block: Grid) -> Grid:
 
 
 def _extract_main_square(grid: Grid) -> Grid:
-    """Get the densest contiguous non-zero block; rows then columns."""
 
     top, bottom = _longest_nonzero_run([sum(val != 0 for val in row) for row in grid])
     rows = grid[top : bottom + 1]
@@ -69,7 +64,6 @@ def _longest_nonzero_run(counts: Sequence[int]) -> Tuple[int, int]:
 
 
 def _transform_house_variant(block: Grid) -> Grid:
-    """Rotate masks per color to match the {3,6,8} training archetype."""
 
     size = len(block)
     res = [[0] * size for _ in range(size)]
@@ -100,7 +94,6 @@ def _transform_house_variant(block: Grid) -> Grid:
 
 
 def _transform_balcony_variant(block: Grid) -> Grid:
-    """Rotate clockwise, but restore the original facade edges."""
 
     rotated = _rotate_cw(block)
 

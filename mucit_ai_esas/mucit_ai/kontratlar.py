@@ -694,16 +694,6 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
     def _muhur_anahtari_uret(D1: torch.Tensor, phi_dict: Any) -> Optional[Tuple[Any, ...]]:
 
 
-
-
-
-
-
-
-
-
-
-
         try:
             phi_kimlikleri = tuple(
                 sorted((str(k), id(v), v._version) for k, v in phi_dict.items())
@@ -806,20 +796,6 @@ class Riyazi_LifLaplasyeniBlokInsaEdici:
         return D0.to(target_device), (Delta_0.to(target_device) if Delta_0 is not None else None)
 
 class Bellek_TopolojikDikkatYazici(nn.Module):
-    """N12 nöral uzun-dönemli bellek yazıcısı. Titans (arXiv:2501.00663)
-    sürpriz + momentum + unutma kuralını uygular:
-
-        S_t = eta_t * S_{t-1} - theta_t * grad_M L(M_{t-1}; x_t)
-        M_t = (1 - alpha_t) * M_{t-1} + S_t
-
-    L(M; x_t) = 0.5 * ||M - aday||^2 (bellek ile o anki kanıttan çıkan
-    "aday" arasındaki basit karesel farkı bir çağrışımsal yeniden-
-    yapılandırma kaybı olarak alıyoruz; kapalı-form gradyanı grad_M L =
-    M - aday, ekstra bir backward() çağrısı gerektirmeden hesaplanır).
-    eta (momentum sönümü), theta (anlık sürpriz öğrenme oranı) ve alpha
-    (unutma faktörü) üçü de girdiye duyarlı (data-dependent) ayrı
-    kapılarla üretilir -- eskiden tek bir g kapısı hem yazma hem unutmayı
-    aynı anda kontrol ediyordu, artık üçü ayrışmış durumda."""
 
     def __init__(self, config: Model_TopolojikKonfigurasyon):
         super().__init__()

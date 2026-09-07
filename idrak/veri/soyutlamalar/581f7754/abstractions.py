@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 581f7754."""
 
 from __future__ import annotations
 
@@ -17,7 +16,7 @@ _SOLVER_PATH = _REPO_ROOT / "arc2_samples" / "581f7754.py"
 _spec = util.spec_from_file_location("solver581f7754", _SOLVER_PATH)
 _solver = util.module_from_spec(_spec)
 assert _spec and _spec.loader
-_spec.loader.exec_module(_solver)  # type: ignore[assignment]
+_spec.loader.exec_module(_solver)
 
 
 def _deep_copy(grid: Grid) -> Grid:
@@ -25,12 +24,10 @@ def _deep_copy(grid: Grid) -> Grid:
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline that returns the grid unchanged."""
     return _deep_copy(grid)
 
 
 def column_anchor_alignment(grid: Grid) -> Grid:
-    """Align components using anchor-driven column/row targets (no refinement)."""
     background = _solver.most_common_color(grid)
     components = _solver.extract_components(grid, background)
     color_targets, _ = _solver.determine_color_targets(grid, components, background)
@@ -39,7 +36,6 @@ def column_anchor_alignment(grid: Grid) -> Grid:
 
 
 def full_alignment(grid: Grid) -> Grid:
-    """Final solver with row refinement heuristics."""
     background = _solver.most_common_color(grid)
     components = _solver.extract_components(grid, background)
     color_targets, anchor_coords = _solver.determine_color_targets(grid, components, background)
@@ -121,7 +117,6 @@ if __name__ == "__main__":
             print(f"    first failure example train[{failure_idx}]:")
             print("    expected:\n" + _format_grid(case["output"]))
             print("    predicted:\n" + _format_grid(pred))
-    # Print test outputs for the final abstraction to aid manual inspection.
     final_outputs = evaluate_abstraction(full_alignment, data)["test"]["outputs"]
     for idx, grid in enumerate(final_outputs):
         print(f"-- final test output #{idx} --")

@@ -1,43 +1,3 @@
-"""MÎZÂN ÇİPİ -- mantık, cedel ve epistemik hüküm.
-
-KÜME 7'nin ikinci karargâhı (kütük H226). Sekiz dosya --
-``mizan/onerme.py``, ``kiyas.py``, ``cikarim.py``, ``kiplik.py``,
-``cokdegerli.py``, ``altyapisal.py``, ``istikra.py``, ``munazara.py``
--- burada birleşti. Terkip üç adımda yapıldı: (a) evvelâ her dosya
-**kendi içinde** terkip edildi, (b) sonra dosyalar birleştirildi,
-(c) sonra birleşik gövdede **bir daha** terkip edildi. Hiçbir cevher
-seçilip imha edilmedi; asılları ``yedek/kume7_asillari/mizan/``
-altında şahittir.
-
-**Kök problem.** Sekiz mantık motoru -- önerme mantığı, kıyas,
-çıkarım hesapları, Kripke kiplikleri, çok değerli mantıklar,
-yapısal-altı mantıklar, istikrâ ve cedel -- her biri kusursuz
-çalışıyor fakat sekiz ayrı dosyada duruyordu; hükmün nereden
-geldiğini tek yerden okumak mümkün değildi.
-
-**Çipin altı odası.**
-
-1. **Formül ve doğruluk** -- ``Onerme`` (hash-consing düğümleri),
-   ``Tablo``: bütün ``2ⁿ`` değerleme **tek bir büyük tam sayının**
-   bitlerinde; totoloji, denklik, geçerlilik ve karşı örnek oradan
-   okunur.
-2. **Kıyas-ı iktiranî** -- ``tutuyor_mu`` (A/E/I/O
-   tek bit ameli), 256 monadik modelle **tam** karar, dört şekil,
-   varlık faraziyesiyle 24 mûteber darb.
-3. **Çıkarım hesapları** -- ``aksiyom`` (şema bir kere yazılır,
-   eşleme birleştirmeyle türetilir), Gentzen LK, Dyckhoff G4ip
-   (büzülmesiz, sonlanması ispatlı).
-4. **Kiplik ve zaman** -- 512 Kripke çerçevesiyle K/T/4/5/B/D
-   karşılıkları, ``odev`` (deontik), ``sonra``
-   (sonlu iz üstünde LTL; ``G`` ve ``F``, ``U``nun tanımıdır).
-5. **Derece ve kalıntı** -- ``derece``: sekiz t-normu ve
-   dört kalıntısı tek kapıda; T89 eşlenikliği, Priest LP paratutarlılığı,
-   syādvāda; yapısal-altı mantıklar ve ortomodüler kuantum kafesi.
-6. **İstikrâ ve cedel** -- ``illet_ara`` (uyuşma/ayrılık/birleşik/eş
-   değişim), Laplace ardışıklığı, ICP değişmezliği, Nyāya ve Stoa
-   şemaları; men'/nakz/muâraza oyunu ve Gazâlî yakîn mîzânı
-   ``min(öncül) · 𝟙[şekil geçerli]``.
-"""
 from __future__ import annotations
 
 import itertools
@@ -57,10 +17,6 @@ from typing import Dict, FrozenSet, List, Optional, Sequence, Set, Tuple
 from typing import Dict, List, Optional, Sequence, Set, Tuple
 
 
-# ====================================================================
-#  mizan/onerme.py
-# ====================================================================
-
 DOGRU, YANLIS, DEG, DEGIL, VE, VEYA, ISE, ANCAK, XOR = range(9)
 
 
@@ -73,11 +29,6 @@ _ETIKET_ADI = {DOGRU: "⊤", YANLIS: "⊥", DEG: "", DEGIL: "¬", VE: "∧",
 
 
 class Onerme:
-    """Hash-consing'li önerme düğümü.
-
-    Doğrudan kurulmaz; ``deg``, ``degil``, ``ve`` … kurucuları kullanılır.
-    ``kimlik`` süreç içinde tektir ve bellekleme anahtarıdır.
-    """
 
     __slots__ = ("etiket", "ad", "altlar", "kimlik", "_hash", "_degiskenler")
 
@@ -90,22 +41,19 @@ class Onerme:
         self._hash = hash((etiket, ad, tuple(a.kimlik for a in altlar)))
         self._degiskenler: Optional[FrozenSet[str]] = None
 
-    # -- protokol -----------------------------------------------------
     def __hash__(self) -> int:
         return self._hash
 
     def __eq__(self, obur: object) -> bool:
-        # hash-consing sayesinde kimlik karşılaştırması YETERLİDİR
         return self is obur
 
     def __repr__(self) -> str:
         return yaz(self)
 
-    # -- sorgular -----------------------------------------------------
     def degiskenler(self) -> FrozenSet[str]:
         if self._degiskenler is None:
             if self.etiket == DEG:
-                self._degiskenler = frozenset({self.ad})       # type: ignore[arg-type]
+                self._degiskenler = frozenset({self.ad})
             else:
                 k: set = set()
                 for a in self.altlar:
@@ -114,7 +62,6 @@ class Onerme:
         return self._degiskenler
 
     def boyut(self) -> int:
-        """AYRI alt formül sayısı (paylaşım sayılmaz)."""
         gorulen: set = set()
         yigin = [self]
         while yigin:
@@ -139,7 +86,6 @@ def _kur(etiket: int, ad: Optional[str], altlar: Tuple[Onerme, ...]) -> Onerme:
 
 
 def tablo_boyu() -> int:
-    """Kaç AYRI alt formül kurulmuş? (bellek ölçümü için)"""
     return len(_TABLO)
 
 
@@ -190,12 +136,10 @@ def xor(a: Onerme, b: Onerme) -> Onerme:
 
 
 def kutu(a: Onerme) -> Onerme:
-    """``□A`` -- zorunluluk. Değerlendirmesi ``kiplik.py``dedir."""
     return _kur(KUTU, None, (a,))
 
 
 def elmas(a: Onerme) -> Onerme:
-    """``◇A`` -- imkân. ``◇A ≡ ¬□¬A`` özdeşliği orada sınanır."""
     return _kur(ELMAS, None, (a,))
 
 
@@ -211,13 +155,6 @@ def yaz(d: Onerme) -> str:
 
 
 class Tablo:
-    """``n`` değişken üzerindeki bütün ``2ⁿ`` değerlemenin taşıyıcısı.
-
-    Bir formülün doğruluk **sütunu**, ``2ⁿ`` bitlik tek bir tam sayıdır.
-    ``k``. değişkenin sütunu, ``2^k`` uzunluğunda ardışık blokların
-    dönüşümlü tekrarıdır; bu, standart doğruluk tablosu dizilişidir ve
-    bir kere kurulup saklanır.
-    """
 
     __slots__ = ("degiskenler", "yer", "n", "maske", "_sutun", "_onbellek")
 
@@ -233,29 +170,17 @@ class Tablo:
         self._onbellek: Dict[int, int] = {}
 
     def _degisken_sutunu(self, k: int) -> int:
-        """``k``. değişkenin sütunu: ``2^k`` sıfır, ``2^k`` bir, tekrar.
-
-        Yani ``i``. bit, ``(i >> k) & 1`` ise kuruludur -- standart
-        doğruluk tablosu dizilişi.
-
-        Desen KATLAYARAK üretilir (``sonuc |= sonuc << genişlik``), tek
-        tek tekrarlanarak değil: dönem sayısı ``2^{n-k-1}`` olduğundan
-        naif tekrar ``n=20, k=0`` için 524 288 büyük tam sayı işlemi
-        ister; katlama ``n-k`` işlem ister. Netice birebir aynıdır.
-        """
-        blok = (1 << (1 << k)) - 1           # 2^k tane 1
-        desen = blok << (1 << k)             # dönemin ÜST yarısı 1
+        blok = (1 << (1 << k)) - 1
+        desen = blok << (1 << k)
         sonuc = desen
-        genislik = 1 << (k + 1)              # bir dönemin bit uzunluğu
+        genislik = 1 << (k + 1)
         hedef = 1 << self.n
         while genislik < hedef:
             sonuc |= sonuc << genislik
             genislik <<= 1
         return sonuc & self.maske
 
-    # -- değerlendirme ------------------------------------------------
     def sutun(self, d: Onerme) -> int:
-        """Formülün bütün değerlemelerdeki doğruluk sütunu."""
         onb = self._onbellek.get(d.kimlik)
         if onb is not None:
             return onb
@@ -265,7 +190,7 @@ class Tablo:
         elif e == YANLIS:
             s = 0
         elif e == DEG:
-            s = self._sutun[self.yer[d.ad]]                 # type: ignore[index]
+            s = self._sutun[self.yer[d.ad]]
         elif e == DEGIL:
             s = ~self.sutun(d.altlar[0]) & self.maske
         elif e in (KUTU, ELMAS):
@@ -283,13 +208,12 @@ class Tablo:
                 s = (~a | b) & self.maske
             elif e == ANCAK:
                 s = ~(a ^ b) & self.maske
-            else:                                            # XOR
+            else:
                 s = a ^ b
         self._onbellek[d.kimlik] = s
         return s
 
     def degerle(self, d: Onerme, atama: Dict[str, bool]) -> bool:
-        """Tek bir değerlemede doğruluk."""
         i = 0
         for ad, k in self.yer.items():
             if atama.get(ad, False):
@@ -309,35 +233,6 @@ def _tablo_kur(formuller: Iterable[Onerme]) -> Tablo:
 
 def hukum(a=None, b=None, oncüller=None, netice=None,
                        ne: str = "geçerli"):
-    """DOĞRULUK TABLOSUNDA NE YAZIYOR -- **tek terkip** (kütük H226).
-
-    Küme: ``totoloji_mi``, ``tutarli_mi``, ``denk_mi``, ``gecerli_mi``,
-    ``karsi_ornek``. Beş isim, tek amelin duraklarıydı: **bit-paralel
-    tabloyu kur, bir maskeyi oku.** Terkipte o maske açıkça görünür:
-
-    ==============  ==============================  ==================
-    ``ne``          okunan maske                    hüküm
-    ==============  ==============================  ==================
-    ``totoloji``    ``süt(a) == maske``             her yerde doğru
-    ``tutarlı``     ``süt(a) != 0``                 bir yerde doğru
-    ``denk``        ``süt(a) == süt(b)``            her yerde aynı
-    ``geçerli``     ``kötü == 0``                   nakız yok
-    ``karşı_örnek`` ``kötü``nün en düşük biti       nakzın kendisi
-    ==============  ==============================  ==================
-
-    Burada ``kötü = (⋀ öncül) ∧ ¬netice`` -- yani öncülleri doğrulayıp
-    neticeyi yalanlayan değerlemelerin maskesi. ``geçerli`` ile
-    ``karşı_örnek`` **aynı maskenin** iki okunuşudur: biri sıfır mı
-    diye bakar, öteki sıfır değilse ilk tanığı çıkarır. Ayrı
-    yazıldıklarında aynı maskeyi iki kere kurup birbirinden sapabilme
-    ihtimali vardı.
-
-    Bütün ``2ⁿ`` değerleme **tek bir büyük tam sayının** bitlerindedir;
-    tabloyu gezmek yoktur, maske işlemi vardır.
-
-    T37'nin tashihinin fiilî karşılığı ``geçerli``dedir: geçerlilik,
-    çelişkisizlik **değil**, gerektirmenin her modelde doğru olmasıdır.
-    """
     if ne in ("totoloji", "tutarlı"):
         t = _tablo_kur([a])
         return (t.sutun(a) == t.maske) if ne == "totoloji" else (
@@ -352,18 +247,14 @@ def hukum(a=None, b=None, oncüller=None, netice=None,
     on = t.maske
     for p_ in oncüller:
         on &= t.sutun(p_)
-    kotu = on & ~t.sutun(netice) & t.maske       # nakız maskesi
+    kotu = on & ~t.sutun(netice) & t.maske
     if ne == "geçerli":
         return kotu == 0
     if kotu == 0:
         return None
-    i = (kotu & -kotu).bit_length() - 1          # en düşük kurulu bit
+    i = (kotu & -kotu).bit_length() - 1
     return {ad: bool((i >> k) & 1) for ad, k in t.yer.items()}
 
-
-# ====================================================================
-#  mizan/kiyas.py
-# ====================================================================
 
 S, M, P = 0, 1, 2
 
@@ -375,7 +266,6 @@ TUM = (1 << 8) - 1
 
 
 def _terim_maskesi(t: int) -> int:
-    """``t`` terimini sağlayan atomların maskesi."""
     return sum(1 << a for a in range(8) if (a >> t) & 1)
 
 
@@ -384,35 +274,10 @@ MASKE = (_terim_maskesi(S), _terim_maskesi(M), _terim_maskesi(P))
 
 def tutuyor_mu(m: int, x: int, y: int, bicim: str,
                                    maskeli: bool = False) -> bool:
-    """BU HÜKÜM BU MODELDE TUTUYOR MU -- tek terkip (kütük H226).
-
-    Küme: ``_A``, ``_E``, ``_I``, ``_O``. Dört isim, **tek** bit
-    ameliydi ve o amel şudur:
-
-        ``var = (m & S(x) & (P(y) yahut ~P(y))) != 0``
-
-    * **kemiyet** (küllî A,E / cüz'î I,O) neyin sorulduğunu söyler:
-      küllî böyle bir şeyin **yokluğunu** ister (``== 0``), cüz'î
-      **varlığını** (``!= 0``).
-    * **keyfiyet** (olumlu A,I / olumsuz E,O) yüklemin **tümleneceğini**
-      söyler -- ve iki eksen ``XOR`` ile kenetlenir:
-      ``tümlenmiş = (küllî ≠ olumsuz)``. Sebep cebrîdir: bir varlık
-      önermesini değillemek keyfiyeti çevirir, zira
-      ``¬∃(S ∧ ¬P)`` "her S P'dir" (A), ``¬∃(S ∧ P)`` ise
-      "hiçbir S P değildir" (E)dir.
-
-    Yâni dört biçim, iki ikili tercihin çarpımıdır ve Aristo'nun
-    karşıtlık murabbaı tam bu iki eksendir. Ayrı ayrı yazıldıklarında
-    ne murabba ne de o ``XOR`` görünüyordu.
-
-    ``maskeli=True`` iken ``x`` ve ``y`` terim indisi değil **doğrudan
-    maskedir**; aks-i nakîz (``¬P, ¬S``) böyle kurulur ve dört biçim
-    orada da ikinci kere yazılmaz.
-    """
     if bicim not in ("A", "E", "I", "O"):
         raise ValueError("önerme biçimi bilinmiyor: %r" % (bicim,))
-    kulli = bicim in ("A", "E")           # kemiyet: yokluk mu istenir
-    olumsuz = bicim in ("E", "O")         # keyfiyet
+    kulli = bicim in ("A", "E")
+    olumsuz = bicim in ("E", "O")
     mx = x if maskeli else MASKE[x]
     my = y if maskeli else MASKE[y]
     var = (m & mx & (~my if kulli != olumsuz else my)) != 0
@@ -459,10 +324,6 @@ DARB_ADI: Dict[Tuple[int, str], str] = {
 
 
 def modeller(bos_olmayan: Iterable[int] = ()) -> List[int]:
-    """Verilen terimlerin boş olmadığı bütün modeller (8 bitlik maskeler).
-
-    Faraziye yoksa 256 modelin tamamı döner.
-    """
     sart = tuple(bos_olmayan)
     if not sart:
         return list(range(256))
@@ -474,12 +335,6 @@ _MODEL_ONBELLEK: Dict[FrozenSet[int], List[int]] = {}
 
 
 def _modeller(sart: FrozenSet[int]) -> List[int]:
-    """``modeller`` fonksiyonunun belleklenmiş hâli.
-
-    256 darb-şekil bileşimi aynı model listesini tekrar tekrar ister;
-    liste bir kere kurulup paylaşılır. Netice değişmez, yalnız tekrar
-    hesap düşer.
-    """
     l = _MODEL_ONBELLEK.get(sart)
     if l is None:
         l = modeller(sorted(sart))
@@ -489,7 +344,6 @@ def _modeller(sart: FrozenSet[int]) -> List[int]:
 
 def kiyas_gecerli_mi(sekil: int, darb: str,
                bos_olmayan: Iterable[int] = ()) -> bool:
-    """``darb`` (üç harf: büyük öncül, küçük öncül, netice) geçerli mi?"""
     (bx, by), (kx, ky) = SEKIL[sekil]
     B = tutuyor_mu
     fb, fk, fn = (lambda m, x, y, c=c: B(m, x, y, c) for c in darb[:3])
@@ -501,7 +355,6 @@ def kiyas_gecerli_mi(sekil: int, darb: str,
 
 def karsi_model(sekil: int, darb: str,
                 bos_olmayan: Iterable[int] = ()) -> Optional[int]:
-    """Geçersizse öncülleri doğrulayıp neticeyi yalanlayan bir model."""
     (bx, by), (kx, ky) = SEKIL[sekil]
     B = tutuyor_mu
     fb, fk, fn = (lambda m, x, y, c=c: B(m, x, y, c) for c in darb[:3])
@@ -512,7 +365,6 @@ def karsi_model(sekil: int, darb: str,
 
 
 def model_yaz(m: int) -> str:
-    """Modeli okunur biçimde: hangi atomlar boş değil."""
     if m == 0:
         return "{ } (bütün terimler boş)"
     parcalar = []
@@ -525,7 +377,6 @@ def model_yaz(m: int) -> str:
 
 
 def butun_darblar() -> List[Tuple[int, str]]:
-    """4 şekil × 4³ darb = 256 bileşim."""
     return [(s, a + b + c)
             for s in (1, 2, 3, 4)
             for a in "AEIO" for b in "AEIO" for c in "AEIO"]
@@ -537,12 +388,6 @@ def gecerli_darblar(bos_olmayan: Iterable[int] = ()) -> List[Tuple[int, str]]:
 
 
 def asgari_varlik_faraziyesi(sekil: int, darb: str) -> Optional[FrozenSet[int]]:
-    """Darbı geçerli kılan EN KÜÇÜK boş-olmama şartı.
-
-    ``frozenset()`` : faraziyesiz geçerli.
-    Tek terimli küme : o terimin boş olmaması yeter.
-    ``None``         : üç terim birden boş olmasa dahi geçersiz.
-    """
     if kiyas_gecerli_mi(sekil, darb):
         return frozenset()
     for t in (S, M, P):
@@ -558,11 +403,6 @@ def asgari_varlik_faraziyesi(sekil: int, darb: str) -> Optional[FrozenSet[int]]:
 
 def aks_gecerli_mi(kaynak: str, hedef: str, ters: bool = True,
                    bos_olmayan: Iterable[int] = ()) -> bool:
-    """``kaynak(S,P)`` öncülünden ``hedef`` neticesi çıkar mı?
-
-    ``ters=True`` ise hedefin terimleri ÇEVRİLİR (``P,S``); aks-i müstevî
-    budur. ``ters=False`` iken hedef ``(S,P)`` üzerindedir.
-    """
     B = tutuyor_mu
     def fk(m, x, y): return B(m, x, y, kaynak)
     def fh(m, x, y): return B(m, x, y, hedef)
@@ -574,11 +414,6 @@ def aks_gecerli_mi(kaynak: str, hedef: str, ters: bool = True,
 
 
 def aks_nakiz_gecerli_mi(kaynak: str, hedef: str) -> bool:
-    """Aks-i nakîz: ``kaynak(S,P)`` ⟹ ``hedef(¬P, ¬S)``.
-
-    Değillenmiş terimler için maskeler tümleyendir; bit işlemleri aynı
-    kalır, yalnız maske değişir.
-    """
     B = tutuyor_mu
     mx, my = ~MASKE[P] & TUM, ~MASKE[S] & TUM
 
@@ -591,13 +426,6 @@ def aks_nakiz_gecerli_mi(kaynak: str, hedef: str) -> bool:
 def sorites_gecerli_mi(zincir: Sequence[Tuple[int, int]], n_terim: int,
                        netice: Tuple[int, int],
                        bos_olmayan: Iterable[int] = ()) -> bool:
-    """``A₁⊆A₂⊆…⊆A_k ⟹ A₁⊆A_k`` (tümel olumlu zincir).
-
-    ``n_terim`` terim üzerinde ``2^{2^{n}}`` model olurdu; bunun yerine
-    ATOM temsili yine kullanılır: atom sayısı ``2^n``, model sayısı
-    ``2^{2^n}``. ``n ≤ 4`` için ``2^{16} = 65 536`` model, tam sayımla
-    işlenebilir.
-    """
     if n_terim > 4:
         raise ValueError("sorites tam sayımı 4 terime kadar")
     atom_sayisi = 1 << n_terim
@@ -638,45 +466,9 @@ def _rapor_mizan_kiyas() -> str:
     return "\n".join(satir)
 
 
-# ====================================================================
-#  mizan/cikarim.py
-# ====================================================================
-
 def aksiyom(A: Onerme = None, B: Onerme = None,
                      C: Onerme = None, no: int = 1,
                      ne: str = "kur"):
-    """HANGİ AKSİYOM ŞEMASI -- tek terkip (kütük H226).
-
-    Küme: ``aksiyom1/2/3`` (şemayı **kuran** üç isim) ve
-    ``_esle_aks1/2/3`` + ``_aksiyom_ornegi_mi`` (aynı üç şemayı elle
-    **eşleyen** dört isim). Yedi isim, tek amelin iki yönü idi ve
-    ikisi birbirinden **kopuktu**: şema değişse eşleyicinin de elle
-    değişmesi gerekiyordu; ikisinin ayrı yazılması sessiz bir kayma
-    kapısıydı.
-
-    Terkipte şema **bir kere** yazılır, eşleme ondan **türetilir**:
-    şema taze meta-değişkenlerle kurulur ve formül ona
-    **birleştirme** (unification) ile eşlenir. Böylece eşleyicinin
-    şemadan sapması cebren imkânsızdır.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kur``         ``no``lu şemanın ``A,B,C`` ile örneği
-    ``örnek_mi``    ``A`` formülü **herhangi** bir şemanın örneği mi
-    ``şema``        ``no``lu şema, meta-değişkenlerle
-    ==============  ==================================================
-
-    Şemalar (Łukasiewicz'in klasik üçlüsü):
-
-    1. ``A → (B → A)``                       -- zayıflatma
-    2. ``(A → (B → C)) → ((A → B) → (A → C))`` -- dağılma
-    3. ``(¬B → ¬A) → (A → B)``               -- transpozisyon (KLASİK)
-
-    Üçüncüsü sezgiselci hesapta **yoktur**; onunla ``¬¬A → A``
-    türetilir ve hesap klasikleşir. ``sezgisel_ispatlanabilir``
-    (Dyckhoff G4ip) bu farkı ölçer.
-    """
     _MD = (deg("#A"), deg("#B"), deg("#C"))
 
     def sema(k: int, a: Onerme, b: Onerme, c: Onerme) -> Onerme:
@@ -689,7 +481,6 @@ def aksiyom(A: Onerme = None, B: Onerme = None,
         raise ValueError("aksiyom şeması bilinmiyor: %r" % (k,))
 
     def birlestir(kalip: Onerme, f: Onerme, bag: dict) -> bool:
-        """Kalıptaki meta-değişkenler formülün alt ağaçlarına oturuyor mu?"""
         if kalip in _MD:
             onceki = bag.get(kalip)
             if onceki is None:
@@ -718,15 +509,6 @@ class HilbertHatasi(Exception):
 
 
 def hilbert_denetle(adimlar: Sequence[Tuple[str, object]]) -> Onerme:
-    """Bir Hilbert türetimini adım adım DENETLER ve son satırı verir.
-
-    Her adım ya ``("aks", formül)`` ya ``("mp", i, j)`` biçimindedir;
-    ``mp`` adımında ``i``. satır ``A``, ``j``. satır ``A → B`` olmalıdır.
-
-    Aksiyom adımları ayrıca **totoloji olduklarına** göre değil, üç
-    şemadan birinin örneği olduklarına göre denetlenir -- yoksa denetleyici
-    her totolojiyi kabul eder ve hiçbir şey ispatlamış olmaz.
-    """
     satirlar: List[Onerme] = []
     for k, adim in enumerate(adimlar):
         if adim[0] == "aks":
@@ -737,8 +519,8 @@ def hilbert_denetle(adimlar: Sequence[Tuple[str, object]]) -> Onerme:
                 raise HilbertHatasi("%d. satır aksiyom şeması değil: %s" % (k, f))
             satirlar.append(f)
         elif adim[0] == "mp":
-            i, j = adim[1], adim[2]                       # type: ignore[misc]
-            A, imp = satirlar[i], satirlar[j]             # type: ignore[index]
+            i, j = adim[1], adim[2]
+            A, imp = satirlar[i], satirlar[j]
             if imp.etiket != ISE or imp.altlar[0] is not A:
                 raise HilbertHatasi(
                     "%d. satır modus ponens değil: %s ile %s" % (k, A, imp))
@@ -751,18 +533,13 @@ def hilbert_denetle(adimlar: Sequence[Tuple[str, object]]) -> Onerme:
 
 
 def ozdeslik_turetimi(A: Onerme) -> List[Tuple[str, object]]:
-    """``A → A``ın klasik beş satırlık Hilbert türetimi.
-
-    Aksiyom şemalarından yalnız modus ponens ile; bu, sistemin
-    ``A → A``yı aksiyom olarak İSTEMEDİĞİNİN ispatıdır.
-    """
     AA = ise(A, A)
     return [
-        ("aks", aksiyom(A, AA, A, no=2)),                       # 0
-        ("aks", aksiyom(A, AA, no=1)),                          # 1
-        ("mp", 1, 0),                                      # 2: (A→(A→A))→(A→A)
-        ("aks", aksiyom(A, A, no=1)),                           # 3: A→(A→A)
-        ("mp", 3, 2),                                      # 4: A→A
+        ("aks", aksiyom(A, AA, A, no=2)),
+        ("aks", aksiyom(A, AA, no=1)),
+        ("mp", 1, 0),
+        ("aks", aksiyom(A, A, no=1)),
+        ("mp", 3, 2),
     ]
 
 
@@ -774,7 +551,6 @@ def _sekans(sol: Sequence[Onerme], sag: Sequence[Onerme]) -> Sekans:
 
 
 class LKAdim:
-    """Bir ispat ağacı düğümü: kural adı, sekans, alt ispatlar."""
 
     __slots__ = ("kural", "sekans", "altlar")
 
@@ -801,16 +577,6 @@ _LK_ONBELLEK: Dict[Sekans, Optional[LKAdim]] = {}
 
 
 def lk_ispat(sol: Sequence[Onerme], sag: Sequence[Onerme]) -> Optional[LKAdim]:
-    """``Γ ⊢ Δ`` için KESMESİZ ispat arar.
-
-    Bütün kurallar tersinir olduğundan geri izleme gerekmez: bir bileşik
-    formül seçilir, kuralı uygulanır, alt sekanslar ispatlanır. Ölçü her
-    adımda kesin azaldığı için arama sonlanır.
-
-    Bellekleme sekans üzerinedir; aynı alt sekans farklı dallarda tekrar
-    tekrar doğar (bilhassa ``L→`` ve ``R∧``'da) ve bir kere çözülmesi
-    yeter. Netice değişmez.
-    """
     return _lk(_sekans(sol, sag))
 
 
@@ -825,7 +591,6 @@ def _lk(s: Sekans) -> Optional[LKAdim]:
 
 def _lk_coz(s: Sekans) -> Optional[LKAdim]:
     sol, sag = s
-    # aksiyom: ortak formül, solda ⊥, yahut sağda ⊤
     if sol & sag:
         return LKAdim("Aks", s)
     if any(f.etiket == YANLIS for f in sol):
@@ -833,7 +598,6 @@ def _lk_coz(s: Sekans) -> Optional[LKAdim]:
     if any(f.etiket == DOGRU for f in sag):
         return LKAdim("R⊤", s)
 
-    # bileşik bir formül seç ve kuralını uygula (hepsi tersinir)
     for f in sol:
         e = f.etiket
         if e == DEGIL:
@@ -890,11 +654,10 @@ def _lk_coz(s: Sekans) -> Optional[LKAdim]:
             return LKAdim("R%s" % ("↔" if e == ANCAK else "⊻"), s,
                           (alt,)) if alt else None
 
-    return None                      # yalnız atomlar kaldı ve kesişmiyorlar
+    return None
 
 
 def _ac(f: Onerme) -> Onerme:
-    """``↔`` ve ``⊻``yi temel bağlaçlara açar."""
     a, b = f.altlar
     if f.etiket == ANCAK:
         return ve(ise(a, b), ise(b, a))
@@ -906,11 +669,6 @@ def lk_ispatlanabilir(sol: Sequence[Onerme], sag: Sequence[Onerme]) -> bool:
 
 
 def _olcu(f: Onerme) -> int:
-    """Dyckhoff'un ağırlığı: her düğüm 1, gerektirmenin öncülü ağırlıklı.
-
-    Bu ölçü, ``L→`` dallarının hepsinde kesin azalır; sonlanmanın delili
-    budur.
-    """
     e = f.etiket
     if e in (DEG, DOGRU, YANLIS):
         return 1
@@ -929,7 +687,6 @@ _G4_ONBELLEK: Dict[Tuple[FrozenSet[Onerme], Onerme], bool] = {}
 
 def sezgisel_ispatlanabilir(varsayimlar: Sequence[Onerme],
                             hedef: Onerme) -> bool:
-    """``Γ ⇒ G`` sezgisel mantıkta ispatlanabilir mi? (G4ip)"""
     return _g4(frozenset(varsayimlar), hedef)
 
 
@@ -944,16 +701,13 @@ def _g4(G: FrozenSet[Onerme], hedef: Onerme) -> bool:
 
 
 def _g4_coz(G: FrozenSet[Onerme], hedef: Onerme) -> bool:
-    # ⊥ solda ise her şey çıkar
     if any(f.etiket == YANLIS for f in G):
         return True
     if hedef.etiket == DOGRU:
         return True
-    # eksen: atomik hedef solda duruyorsa
     if hedef in G:
         return True
 
-    # --- tersinir SOL kuralları (öncelikli) --------------------------
     for f in G:
         e = f.etiket
         if e == VE:
@@ -964,12 +718,10 @@ def _g4_coz(G: FrozenSet[Onerme], hedef: Onerme) -> bool:
             k = G - {f}
             return _g4(k | {a}, hedef) and _g4(k | {b}, hedef)
         if e == DEGIL:
-            # ¬A ≡ A → ⊥ ; L→ dallarına havale et
             continue
         if e in (ANCAK, XOR):
             return _g4((G - {f}) | {_ac(f)}, hedef)
 
-    # --- L→ : öncülün ŞEKLİNE göre dört dal --------------------------
     for f in G:
         onc = _oncul(f)
         if onc is None:
@@ -978,12 +730,11 @@ def _g4_coz(G: FrozenSet[Onerme], hedef: Onerme) -> bool:
         k = G - {f}
         ce = C.etiket
         if ce in (DEG, DOGRU):
-            # L0→ : C atomik ve zaten solda ise B'yi sal
             if C in G:
                 return _g4(k | {B}, hedef)
             continue
         if ce == YANLIS:
-            return _g4(k, hedef)          # ⊥→B aşikâr, düşür
+            return _g4(k, hedef)
         if ce == VE:
             c1, c2 = C.altlar
             return _g4(k | {ise(c1, ise(c2, B))}, hedef)
@@ -994,14 +745,12 @@ def _g4_coz(G: FrozenSet[Onerme], hedef: Onerme) -> bool:
             c1, c2 = C.altlar
             return (_g4(k | {ise(c2, B), c1}, c2) and _g4(k | {B}, hedef))
         if ce == DEGIL:
-            # (¬D → B) ≡ ((D → ⊥) → B)
             d = C.altlar[0]
             return (_g4(k | {ise(yanlis(), B), d}, yanlis())
                     and _g4(k | {B}, hedef))
         if ce in (ANCAK, XOR):
             return _g4(k | {ise(_ac(C), B)}, hedef)
 
-    # --- tersinir SAĞ kuralı -----------------------------------------
     if hedef.etiket == ISE:
         a, b = hedef.altlar
         return _g4(G | {a}, b)
@@ -1013,7 +762,6 @@ def _g4_coz(G: FrozenSet[Onerme], hedef: Onerme) -> bool:
     if hedef.etiket in (ANCAK, XOR):
         return _g4(G, _ac(hedef))
 
-    # --- tersinmez SAĞ kuralı: R∨ (geri izleme) ----------------------
     if hedef.etiket == VEYA:
         a, b = hedef.altlar
         return _g4(G, a) or _g4(G, b)
@@ -1022,7 +770,6 @@ def _g4_coz(G: FrozenSet[Onerme], hedef: Onerme) -> bool:
 
 
 def _oncul(f: Onerme) -> Optional[Tuple[Onerme, Onerme]]:
-    """``f`` bir gerektirme ise ``(öncül, ardıl)``; ``¬A`` ise ``(A, ⊥)``."""
     if f.etiket == ISE:
         return (f.altlar[0], f.altlar[1])
     if f.etiket == DEGIL:
@@ -1059,12 +806,7 @@ def _rapor_mizan_cikarim() -> str:
     return "\n".join(satir)
 
 
-# ====================================================================
-#  mizan/kiplik.py
-# ====================================================================
-
 class Cerceve:
-    """``⟨W, R⟩``; ``R[w]`` erişilebilir dünyaların bit maskesi."""
 
     __slots__ = ("n", "R", "tum")
 
@@ -1073,7 +815,6 @@ class Cerceve:
         self.R = tuple(R)
         self.tum = (1 << n) - 1
 
-    # -- bağıntı şartları ---------------------------------------------
     def yansimali_mi(self) -> bool:
         return all((self.R[w] >> w) & 1 for w in range(self.n))
 
@@ -1089,7 +830,6 @@ class Cerceve:
                    for w in range(self.n) for v in range(self.n))
 
     def oklidyen_mi(self) -> bool:
-        """``wRv ∧ wRu ⟹ vRu``."""
         for w in range(self.n):
             for v in range(self.n):
                 if (self.R[w] >> v) & 1 and (self.R[w] & ~self.R[v] & self.tum):
@@ -1106,7 +846,6 @@ class Cerceve:
 
 
 def butun_cerceveler(n: int) -> List[Cerceve]:
-    """``n`` dünyalı BÜTÜN çerçeveler: ``2^{n²}`` tane."""
     if n > 3:
         raise ValueError("tam çerçeve sayımı 3 dünyaya kadar (2⁹ = 512)")
     cerceveler = []
@@ -1117,14 +856,13 @@ def butun_cerceveler(n: int) -> List[Cerceve]:
 
 
 def dogruluk(f: Onerme, c: Cerceve, V: Dict[str, int]) -> int:
-    """Formülün doğru olduğu dünyaların bit maskesi."""
     e = f.etiket
     if e == DOGRU:
         return c.tum
     if e == YANLIS:
         return 0
     if e == DEG:
-        return V.get(f.ad, 0)                              # type: ignore[arg-type]
+        return V.get(f.ad, 0)
     if e == DEGIL:
         return ~dogruluk(f.altlar[0], c, V) & c.tum
     if e == KUTU:
@@ -1144,11 +882,10 @@ def dogruluk(f: Onerme, c: Cerceve, V: Dict[str, int]) -> int:
         return (~a | b) & c.tum
     if e == ANCAK:
         return ~(a ^ b) & c.tum
-    return a ^ b                                            # XOR
+    return a ^ b
 
 
 def cerceve_gecerli_mi(f: Onerme, c: Cerceve) -> bool:
-    """Formül, çerçevede BÜTÜN değerlemeler ve dünyalarda doğru mu?"""
     degiskenler = sorted(f.degiskenler())
     k = len(degiskenler)
     if k == 0:
@@ -1177,7 +914,7 @@ AKSIYOM: Dict[str, Onerme] = {
 
 
 SART: Dict[str, Callable[[Cerceve], bool]] = {
-    "K": lambda c: True,                     # her çerçevede geçerli
+    "K": lambda c: True,
     "T": Cerceve.yansimali_mi,
     "4": Cerceve.gecisli_mi,
     "5": Cerceve.oklidyen_mi,
@@ -1191,7 +928,6 @@ SART_ADI = {"K": "her çerçeve", "T": "yansımalı", "4": "geçişli",
 
 
 def karsilik_dogrula(ad: str, n: int = 3) -> Dict[str, object]:
-    """Aksiyomun geçerli olduğu çerçeveler ile şartı sağlayanlar aynı mı?"""
     f = AKSIYOM[ad]
     sart = SART[ad]
     gecerli, sartli, ayrik = set(), set(), []
@@ -1216,7 +952,6 @@ def karsilik_dogrula(ad: str, n: int = 3) -> Dict[str, object]:
 
 
 def dual_ozdeslikleri(n: int = 3) -> Dict[str, bool]:
-    """``◇A ≡ ¬□¬A`` ve ``□A ≡ ¬◇¬A`` bütün çerçevelerde."""
     A = deg("p")
     d1 = ancak(elmas(A), degil(kutu(degil(A))))
     d2 = ancak(kutu(A), degil(elmas(degil(A))))
@@ -1227,25 +962,6 @@ def dual_ozdeslikleri(n: int = 3) -> Dict[str, bool]:
 
 
 def odev(a: Onerme, ne: str = "ödev") -> Onerme:
-    """BORÇ MU, CAİZ Mİ, YASAK MI -- tek terkip (kütük H226).
-
-    Küme: ``O_``, ``Pm``, ``F_``. Üç isim, ``□``nun etrafına iki değil
-    işaretinin **nereye** konduğundan ibaretti:
-
-    ==============  ====================  ==========================
-    ``ne``          formül                halkça
-    ==============  ====================  ==========================
-    ``ödev``        ``□φ``                yapılması gereken
-    ``caiz``        ``¬□¬φ``              yapılması yasak olmayan
-    ``yasak``       ``□¬φ``               yapılmaması gereken
-    ==============  ====================  ==========================
-
-    Deontik ``□`` alethik ``□``dan **seriliği** ile ayrılır (D:
-    ``□φ → ◇φ``); refleksiflik (T: ``□φ → φ``) deontik mantıkta
-    **istenmez**, zira "ödev olan hep yapılmış olurdu". Serilik şartının
-    ihmali bu üç kipin tutarlılığını çökertir ve
-    ``deontik_tutarlilik`` bunu ölçer.
-    """
     if ne == "ödev":
         return kutu(a)
     if ne == "caiz":
@@ -1256,18 +972,11 @@ def odev(a: Onerme, ne: str = "ödev") -> Onerme:
 
 
 def deontik_tutarlilik(n: int = 3) -> Dict[str, object]:
-    """Deontik mantığın taşıyıcı şartı: ``D`` (serilik).
-
-    ``D`` olmadan ``Oφ ∧ O¬φ`` mümkün olur, yani birbiriyle çelişen iki
-    ödev aynı anda yüklenebilir. Serilik bunu imkânsız kılar; aşağıda
-    ölçülür.
-    """
     A = deg("p")
     celiski = ve(odev(A),
                     odev(degil(A)))
     seri, seri_disi = 0, 0
     for c in butun_cerceveler(n):
-        # çelişkili ödev SAĞLANABİLİR mi? (bir değerleme ve dünya bul)
         bulundu = False
         for kod in range(1 << c.n):
             V = {"p": kod}
@@ -1279,8 +988,8 @@ def deontik_tutarlilik(n: int = 3) -> Dict[str, object]:
         else:
             seri_disi += int(bulundu)
     return {
-        "seri_çerçevede_çelişkili_ödev": seri,           # 0 olmalı
-        "seri_olmayanda_çelişkili_ödev": seri_disi,      # > 0 olmalı
+        "seri_çerçevede_çelişkili_ödev": seri,
+        "seri_olmayanda_çelişkili_ödev": seri_disi,
         "D_çelişkili_ödevi_engelliyor": seri == 0,
         "Pm_ve_F_dualleri": all(
             cerceve_gecerli_mi(
@@ -1291,27 +1000,25 @@ def deontik_tutarlilik(n: int = 3) -> Dict[str, object]:
 
 
 class Iz:
-    """Sonlu bir zaman izi: ``t = 0,…,L-1`` anlarında değerlemeler."""
 
     __slots__ = ("L", "V")
 
     def __init__(self, L: int, V: Dict[str, int]) -> None:
         self.L = L
-        self.V = V                     # değişken → anların bit maskesi
+        self.V = V
 
     def tum(self) -> int:
         return (1 << self.L) - 1
 
 
 def ltl_dogruluk(f: Onerme, iz: Iz, isim: str = "") -> int:
-    """Formülün doğru olduğu ANLARIN bit maskesi (gelecek işlemcileri)."""
     e = f.etiket
     if e == DOGRU:
         return iz.tum()
     if e == YANLIS:
         return 0
     if e == DEG:
-        return iz.V.get(f.ad, 0)                          # type: ignore[arg-type]
+        return iz.V.get(f.ad, 0)
     if e == DEGIL:
         return ~ltl_dogruluk(f.altlar[0], iz) & iz.tum()
     a = ltl_dogruluk(f.altlar[0], iz)
@@ -1331,37 +1038,11 @@ def ltl_dogruluk(f: Onerme, iz: Iz, isim: str = "") -> int:
 
 def sonra(a: int, b: int = -1, L: int = 0,
                  ne: str = "kadar") -> int:
-    """BUNDAN SONRA NE OLACAK -- tek terkip (kütük H226).
-
-    Küme: ``G`` (daima), ``F`` (bir an), ``U`` (-e kadar). Üçü ayrı
-    yazılmıştı; hâlbuki ikisi üçüncüsünün **tanımıdır**:
-
-        ``Fφ ≡ ⊤ U φ``          ``Gφ ≡ ¬(⊤ U ¬φ)``
-
-    Geriye tek çekirdek kalır ve o da **tek geriye doğru taramadır**:
-
-        ``t ∈ φUψ  ⟺  ψ(t) ∨ (φ(t) ∧ t+1 ∈ φUψ)``
-
-    Sonlu iz üstünde bu özyineleme ``L−1``den ``0``a bir taşımayla
-    okunur; ``O(L)``dur ve maskeler bit paralel tutulur.
-
-    ==============  ==================================================
-    ``ne``          döndürdüğü
-    ==============  ==================================================
-    ``kadar``       ``a U b``
-    ``daima``       ``G a``
-    ``biran``       ``F a``
-    ==============  ==================================================
-
-    **T88'in tashihli hâli**: "-e kadar"ın alt sınırı **şimdidir**.
-    Kaynak metinde alt sınır yoktu (``∀t' < t``), yani sonsuz geçmişte
-    de ``φ``nin sağlanması isteniyordu; oysa "-e kadar" şimdiden başlar.
-    """
     tum = (1 << L) - 1
     if ne == "daima":
-        a, b = tum, (~a) & tum          # G a = ¬(⊤ U ¬a)
+        a, b = tum, (~a) & tum
     elif ne == "biran":
-        a, b = tum, a                   # F a = ⊤ U a
+        a, b = tum, a
     elif ne != "kadar":
         raise ValueError("zaman kipi bilinmiyor: %r" % (ne,))
     sonuc = 0
@@ -1375,11 +1056,6 @@ def sonra(a: int, b: int = -1, L: int = 0,
 
 def ltl_ozdeslikleri(L: int = 6, deneme: int = 400,
                      tohum: int = 0) -> Dict[str, bool]:
-    """``G``, ``F``, ``U`` arasındaki klasik özdeşlikler.
-
-    Rastgele izlerde tam sayımla sınanır; hepsi bit maskesi eşitliğidir,
-    yaklaşıklık yoktur.
-    """
     import random
     rng = random.Random(tohum)
     tum = (1 << L) - 1
@@ -1429,10 +1105,6 @@ def _rapor_mizan_kiplik() -> str:
     return "\n".join(satir)
 
 
-# ====================================================================
-#  mizan/cokdegerli.py
-# ====================================================================
-
 TNorm = Callable[[float, float], float]
 
 
@@ -1448,52 +1120,16 @@ def _izgara(n: int = 21) -> List[float]:
 
 def derece(a=None, b=None, ne: str = "Łukasiewicz",
                           tur: str = "ve", p: float = 2.0):
-    """İKİSİ BİRDEN NE KADAR DOĞRU -- **tek terkip** (kütük H226).
-
-    Küme: sekiz t-normu (``t_lukasiewicz, t_godel, t_carpim, t_zayif,
-    t_nilpotent_minimum, t_schweizer_sklar, t_yager, t_dombi``) ve dört
-    kalıntısı (``i_lukasiewicz, i_godel, i_carpim,
-    i_nilpotent_minimum``). On iki isim, **tek** amelin durakları idi:
-    iki dereceli doğruluğu birleştirmek, yahut o birleştirmenin
-    **eşleniğini** (kalıntı) almak.
-
-    ==============  ==================================================
-    ``tur``         döndürdüğü
-    ==============  ==================================================
-    ``ve``          ``a ⊗ b`` -- iki önerme birden ne kadar doğru
-    ``ise``         ``a → b`` -- kalıntı (Galois eşleniği)
-    ``çekirdek``    ``(⊗, →)`` çifti; kalıntısı yoksa ``(⊗, None)``
-    ==============  ==================================================
-
-    Adlar: ``Łukasiewicz``, ``Gödel``, ``çarpım``, ``nilpotent min``,
-    ``en zayıf``, ``Schweizer-Sklar``, ``Yager``, ``Dombi``. Son üçü
-    ``p`` parametresi alır.
-
-    **T89 -- kalıntı eşlenikliği.** ``a → b = min(1, 1−a+b)``
-    alındığında eşlenik t-norm ``min(a,b)`` **değildir**; kuvvetli ve
-    ``a ⊗ b = max(0, a+b−1)``dir. Bu, kalıntı bağıntısının
-    ``a ⊗ b ≤ c ⟺ a ≤ (b → c)`` tek satırından çıkar ve
-    ``lukasiewicz_min_ile_bozulur`` bunu karşı örnekle mühürler.
-    ``min`` ile eşlenen kalıntı Gödel gerektirmesidir, Łukasiewicz'inki
-    değil.
-
-    **T90 (çarpım kalıntısı):** ``min(1, b/a)`` ``a = 0``da tanımsızdır;
-    kalıntı biçiminde yazılınca hem tanım kümesi tamamlanır hem ``min``
-    gereksizleşir. **T94 (Dombi):** ``a = 0``da ``(1−a)/a`` patlar,
-    ``T(0,b) = 0`` dalı açıkça yazılır. **T95 (Schweizer-Sklar):**
-    ``max(0,·)`` kesmesi yalnız ``p > 0`` içindir; ``p < 0`` iken
-    ``a^p + b^p − 1 > 0`` dâima sağlanır ve kesme yanlış dala götürür.
-    """
     def T(a: float, b: float) -> float:
         if ne == "Łukasiewicz":
-            return max(0.0, a + b - 1.0)          # KUVVETLİ ve
+            return max(0.0, a + b - 1.0)
         if ne == "Gödel":
             return min(a, b)
         if ne == "çarpım":
             return a * b
         if ne == "nilpotent min":
             return min(a, b) if a + b > 1.0 else 0.0
-        if ne == "en zayıf":                      # drastic product
+        if ne == "en zayıf":
             if a == 1.0:
                 return b
             if b == 1.0:
@@ -1523,7 +1159,7 @@ def derece(a=None, b=None, ne: str = "Łukasiewicz",
         if ne == "Gödel":
             return 1.0 if a <= b else b
         if ne == "çarpım":
-            return 1.0 if a <= b else b / a       # a > b ≥ 0 ⇒ a > 0
+            return 1.0 if a <= b else b / a
         if ne == "nilpotent min":
             return 1.0 if a <= b else max(1.0 - a, b)
         raise ValueError("bu t-normunun kapalı kalıntısı yazılmadı: %r"
@@ -1564,15 +1200,8 @@ KALINTILAR: Dict[str, Tuple[TNorm, Kalinti]] = {
     k: derece(ne=k, tur="çekirdek") for k in KALINTILI}
 
 
-
-
 def tnorm_aksiyomlari(T: TNorm, n: int = 15,
                       tol: float = 1e-9) -> Dict[str, object]:
-    """Değişme, birleşme, tekdüzelik, birim ve sınır şartları.
-
-    Birleşme sayısal olarak denetlenir (kesirli üsler yüzünden tam
-    eşitlik beklenmez); tolerans açıkça bildirilir.
-    """
     g = _izgara(n)
     degisme = birlesme = tekduze = birim = sinir = True
     en_buyuk_birlesme_sapmasi = 0.0
@@ -1605,7 +1234,6 @@ def tnorm_aksiyomlari(T: TNorm, n: int = 15,
 
 def kalinti_saglaniyor_mu(T: TNorm, I: Kalinti, n: int = 21,
                           tol: float = 1e-9) -> Dict[str, object]:
-    """``a ⊗ b ≤ c ⟺ a ≤ (b → c)`` ızgarada sınanır."""
     g = _izgara(n)
     ihlal: List[Tuple[float, float, float, str]] = []
     for a in g:
@@ -1623,11 +1251,6 @@ def kalinti_saglaniyor_mu(T: TNorm, I: Kalinti, n: int = 21,
 
 
 def lukasiewicz_min_ile_bozulur(n: int = 21) -> Dict[str, object]:
-    """**T89'un fiilî sağlaması.**
-
-    Łukasiewicz gerektirmesi ``min`` ile eşlenik DEĞİLDİR; bağıntının
-    bozulduğu somut bir üçlü gösterilir.
-    """
     dogru = kalinti_saglaniyor_mu(derece(ne="Łukasiewicz", tur="çekirdek")[0], derece(ne="Łukasiewicz", tur="çekirdek")[1], n)
     yanlis = kalinti_saglaniyor_mu(derece(ne="Gödel", tur="çekirdek")[0], derece(ne="Łukasiewicz", tur="çekirdek")[1], n)
     return {
@@ -1652,14 +1275,12 @@ def uc_ise_kleene(a: int, b: int) -> int:
 
 
 def uc_ise_lukasiewicz(a: int, b: int) -> int:
-    """``a ≤ b`` ise 2; değilse ``2 − (a − b)``."""
     return 2 if a <= b else 2 - (a - b)
 
 
 def uc_degerli_gecerli_mi(oncüller: Sequence[Callable[[Tuple[int, ...]], int]],
                           netice: Callable[[Tuple[int, ...]], int],
                           n_deg: int, belirlenmis: Tuple[int, ...]) -> bool:
-    """Öncüller belirlenmiş değer alırken netice de alıyor mu?"""
     for atama in _uclu_atamalar(n_deg):
         if all(p(atama) in belirlenmis for p in oncüller):
             if netice(atama) not in belirlenmis:
@@ -1677,26 +1298,19 @@ def _uclu_atamalar(k: int) -> Iterable[Tuple[int, ...]]:
 
 
 def lp_patlamiyor() -> Dict[str, object]:
-    """Priest'in LP'sinde ``A, ¬A ⊬ B`` -- ex falso İPTAL.
-
-    LP'de ``b`` belirlenmiştir; ``A = b`` iken ``¬A = b`` de belirlenmiş
-    olur, fakat ``B = 0`` seçilebilir. Klasik mantıkta (yalnız ``2``
-    belirlenmiş) bu imkânsızdır.
-    """
     A = lambda v: v[0]
     nA = lambda v: UC_DEGIL[v[0]]
     B = lambda v: v[1]
     lp = uc_degerli_gecerli_mi([A, nA], B, 2, (1, 2))
     klasik_gibi = uc_degerli_gecerli_mi([A, nA], B, 2, (2,))
-    # önemsizleşmeme: çelişkiyi doğrulayan ama B'yi yalanlayan bir atama
     tanik = None
     for atama in _uclu_atamalar(2):
         if A(atama) in (1, 2) and nA(atama) in (1, 2) and B(atama) not in (1, 2):
             tanik = atama
             break
     return {
-        "LP'de A,¬A ⊨ B": lp,                    # False olmalı
-        "klasik belirlenmişle A,¬A ⊨ B": klasik_gibi,   # True olmalı
+        "LP'de A,¬A ⊨ B": lp,
+        "klasik belirlenmişle A,¬A ⊨ B": klasik_gibi,
         "tanık (A,B) değerleri": tanik,
         "önemsizleşmiyor": (not lp) and klasik_gibi,
     }
@@ -1706,12 +1320,6 @@ TEMEL_YUKLEM = ("asti", "nāsti", "avaktavya")
 
 
 def syadvada_modlari() -> List[Tuple[str, ...]]:
-    """**T126'nın tashihli hâli**: yedi mod, üç yüklemin BOŞ OLMAYAN alt
-    kümeleridir.
-
-    ``2³ − 1 = 7``; yani "niçin yedi?" sorusunun cevabı türetilir,
-    ezberlenmez. Sıralama, klasik ``saptabhaṅgī`` sırasıdır.
-    """
     sira = [(0,), (1,), (0, 1), (2,), (0, 2), (1, 2), (0, 1, 2)]
     return [tuple(TEMEL_YUKLEM[i] for i in alt) for alt in sira]
 
@@ -1767,20 +1375,15 @@ def _rapor_mizan_cokdegerli() -> str:
     s = syadvada_tamlik()
     satir.append("Syādvāda: %d mod = 2³−1 = %d, tam ve tekrarsız: %s"
                  % (s["mod_sayısı"], s["2³−1"], s["tam_ve_tekrarsız"]))
-    for m in s["modlar"]:                                    # type: ignore[union-attr]
+    for m in s["modlar"]:
         satir.append("    syād-" + m)
     return "\n".join(satir)
 
-
-# ====================================================================
-#  mizan/altyapisal.py
-# ====================================================================
 
 ATOM, BIR, TENSOR, LOLLIPOP, ILE, ARTI = range(6)
 
 
 class DFormul:
-    """Doğrusal mantık formülü (hash'lenebilir, değişmez)."""
 
     __slots__ = ("etiket", "ad", "altlar", "_hash")
 
@@ -1832,25 +1435,14 @@ def arti(a: DFormul, b: DFormul) -> DFormul:
     return DFormul(ARTI, None, (a, b))
 
 
-Baglam = Tuple[DFormul, ...]           # sıralı ve tekrarlı; değişme serbest
+Baglam = Tuple[DFormul, ...]
 
 
 def _duzenle(g: Sequence[DFormul]) -> Baglam:
-    """Değişme kuralı DÂİMA açık olduğundan bağlam kanonik sıralanır.
-
-    Bu bir kısaltma değil, değişmenin kendisidir: sıralama, çoklu kümeyi
-    tek bir kanonik temsile indirger ve bellekleme anahtarı yapar.
-    """
     return tuple(sorted(g, key=repr))
 
 
 def _bolmeler(g: Baglam) -> List[Tuple[Baglam, Baglam]]:
-    """Bağlamı iki parçaya ayıran BÜTÜN bölmeler.
-
-    ``⊗R`` ve ``⊸L`` kuralları kaynağı paylaştırır; hangi paylaştırmanın
-    işe yarayacağı önceden bilinemez, hepsi denenir. Bölme sayısı
-    ``2^{|Γ|}``dır ve küçük formüllerde tüketilebilir.
-    """
     n = len(g)
     sonuc = []
     for maske in range(1 << n):
@@ -1861,27 +1453,13 @@ def _bolmeler(g: Baglam) -> List[Tuple[Baglam, Baglam]]:
 
 
 class Hesap:
-    """Yapısal kuralları anahtarlanabilir ardışık hesap.
-
-    ``zayiflatma``: kullanılmayan öncül atılabilir.
-    ``buzulme``   : bir öncül birden çok kere kullanılabilir.
-
-    Dört bileşim dört mantık verir:
-
-        (yok, yok)     → doğrusal (linear)
-        (var, yok)     → affine
-        (yok, var)     → sıkı / relevans-benzeri
-        (var, var)     → sezgisel (yapısal kurallar tam)
-    """
 
     def __init__(self, zayiflatma: bool = False, buzulme: bool = False,
                  azami_derinlik: int = 14) -> None:
         self.zayiflatma = zayiflatma
         self.buzulme = buzulme
         self.azami = azami_derinlik
-        # olumsuz: (bağlam, hedef) → o hükmün verildiği EN BOL bütçe
         self._onbellek: Dict[Tuple[Baglam, DFormul], int] = {}
-        # olumlu: bütçeden bağımsız, ispatı bulunmuş ardışıklar
         self._olumlu: set = set()
 
     def ispatlanabilir(self, g: Sequence[DFormul], hedef: DFormul) -> bool:
@@ -1890,11 +1468,6 @@ class Hesap:
     def _coz(self, g: Baglam, hedef: DFormul, d: int) -> bool:
         if d > self.azami:
             return False
-        # Derinlik sınırı bir BÜTÇEdir: "kanıtlanamaz" hükmü yalnız o bütçe
-        # altında geçerlidir; daha bol bütçeyle başarabilirdi.  Bu yüzden
-        # olumsuz sonuç kalan bütçeye göre anahtarlanır.  Olumlu sonuç ise
-        # bütçeden bağımsızdır (bulunmuş ispat her bütçede ispattır), o
-        # sebeple ayrı ve bütçesiz bir kümede saklanır — hem doğru hem ucuz.
         kalan = self.azami - d
         if (g, hedef) in self._olumlu:
             return True
@@ -1909,12 +1482,10 @@ class Hesap:
         return sonuc
 
     def _coz_iç(self, g: Baglam, hedef: DFormul, d: int) -> bool:
-        # --- eksen (identity) ----------------------------------------
         if len(g) == 1 and g[0] == hedef:
             return True
         if self.zayiflatma and hedef in g:
             return True
-        # --- 1 ---------------------------------------------------------
         if hedef.etiket == BIR and len(g) == 0:
             return True
         if hedef.etiket == BIR and self.zayiflatma:
@@ -1925,7 +1496,6 @@ class Hesap:
                 if self._coz(kalan, hedef, d + 1):
                     return True
 
-        # --- sağ kuralları --------------------------------------------
         he = hedef.etiket
         if he == LOLLIPOP:
             a, b = hedef.altlar
@@ -1945,7 +1515,6 @@ class Hesap:
             if self._coz(g, a, d + 1) or self._coz(g, b, d + 1):
                 return True
 
-        # --- sol kuralları --------------------------------------------
         for i, f in enumerate(g):
             kalan = _duzenle(g[:i] + g[i + 1:])
             e = f.etiket
@@ -1970,7 +1539,6 @@ class Hesap:
                         and self._coz(_duzenle(kalan + (b,)), hedef, d + 1)):
                     return True
 
-        # --- yapısal kurallar (anahtarlı) ------------------------------
         if self.buzulme:
             for i, f in enumerate(g):
                 if self._coz(_duzenle(g + (f,)), hedef, d + 1):
@@ -1991,14 +1559,6 @@ HESAPLAR = {
 
 
 def yapisal_hassasiyet() -> List[Dict[str, object]]:
-    """Aynı ardışığın dört mantıktaki ispatlanabilirliği.
-
-    Beklenen ve sınanan olgular:
-
-      * ``A ⊸ (B ⊸ A)`` ZAYIFLATMA ister -- doğrusal ve sıkıda çıkmaz.
-      * ``A ⊸ (A ⊗ A)`` BÜZÜLME ister -- doğrusal ve affinede çıkmaz.
-      * ``A ⊗ (A ⊸ B) ⊢ B`` yapısal kural İSTEMEZ -- dördünde de çıkar.
-    """
     A, B = atom("A"), atom("B")
     ornekler = [
         ("A ⊸ (B ⊸ A)   [zayıflatma ister]", (), lollipop(A, lollipop(B, A))),
@@ -2020,7 +1580,7 @@ def yapisal_hassasiyet() -> List[Dict[str, object]]:
 
 def _degiskenler(f: DFormul) -> FrozenSet[str]:
     if f.etiket == ATOM:
-        return frozenset({f.ad})                            # type: ignore[arg-type]
+        return frozenset({f.ad})
     k: Set[str] = set()
     for a in f.altlar:
         k |= _degiskenler(a)
@@ -2028,13 +1588,6 @@ def _degiskenler(f: DFormul) -> FrozenSet[str]:
 
 
 def degisken_paylasimi(f: DFormul) -> Optional[bool]:
-    """``A → B`` biçimindeki bir formülde ``A`` ile ``B`` değişken paylaşıyor mu?
-
-    Relevans mantığı ``R``nin taşıyıcı hususiyeti şudur: ``A → B`` bir
-    teoremse ``A`` ile ``B`` en az bir önerme değişkenini paylaşır. Bu,
-    "maddî gerektirme paradoksu"nun (``A → (B → A)``) niçin reddedildiğini
-    açıklar: orada ``B`` ile ``A`` alâkasızdır.
-    """
     if f.etiket != LOLLIPOP:
         return None
     a, b = f.altlar
@@ -2044,9 +1597,6 @@ def degisken_paylasimi(f: DFormul) -> Optional[bool]:
 def relevans_paradokslari() -> List[Dict[str, object]]:
     A, B = atom("A"), atom("B")
     ornekler = [
-        # Paylaşım ölçütü GEREK şarttır, YETER şart değildir: paylaşım
-        # sağlansa da formül doğrusalda ispatlanamayabilir.  Üç örnek tam
-        # olarak bu üç hâli ayırt etmek için seçildi.
         ("özdeşlik    A ⊸ A            [paylaşır, doğrusal da ispatlar]",
          lollipop(A, A)),
         ("modus ponens A ⊗ (A⊸B) ⊸ B   [paylaşır, doğrusal da ispatlar]",
@@ -2068,7 +1618,6 @@ def relevans_paradokslari() -> List[Dict[str, object]]:
 
 
 class AltUzay:
-    """``ℝⁿ``in bir alt uzayı; ortonormal taban ile temsil edilir."""
 
     __slots__ = ("n", "T")
 
@@ -2090,9 +1639,7 @@ class AltUzay:
             return np.zeros((self.n, self.n))
         return self.T @ self.T.T
 
-    # -- kafes işlemleri ----------------------------------------------
     def ve(self, o: "AltUzay") -> "AltUzay":
-        """Kesişim: iki izdüşümün de sabit bıraktığı vektörler."""
         M = np.vstack([np.eye(self.n) - self.izdusum(),
                        np.eye(self.n) - o.izdusum()])
         _, s, Vt = np.linalg.svd(M)
@@ -2100,11 +1647,9 @@ class AltUzay:
         return AltUzay(self.n, cekirdek)
 
     def veya(self, o: "AltUzay") -> "AltUzay":
-        """Toplamın kapanışı (sonlu boyutta toplamın kendisi)."""
         return AltUzay(self.n, np.hstack([self.T, o.T]))
 
     def degil(self) -> "AltUzay":
-        """Dik tümleyen."""
         if self.boyut == 0:
             return AltUzay(self.n, np.eye(self.n))
         _, s, Vt = np.linalg.svd(self.T.T)
@@ -2112,7 +1657,6 @@ class AltUzay:
         return AltUzay(self.n, Vt[r:].T)
 
     def icinde_mi(self, o: "AltUzay") -> bool:
-        """``self ≤ o``?"""
         if self.boyut == 0:
             return True
         return bool(np.allclose(o.izdusum() @ self.T, self.T, atol=1e-8))
@@ -2129,17 +1673,6 @@ def dogru_uzay(n: int, v: Sequence[float]) -> AltUzay:
 
 
 def dagilma_kirilir() -> Dict[str, object]:
-    """**T93'ün fiilî sağlaması.**
-
-    ``ℝ²``de ``A = ⟨e₁⟩``, ``B = ⟨e₂⟩``, ``C = ⟨e₁+e₂⟩``:
-
-        B ∨ C = ℝ²,  A ∧ (B∨C) = A          (boyut 1)
-        A ∧ B = 0,   A ∧ C = 0,  toplam = 0  (boyut 0)
-
-    Yani dağılma bozulur. Fakat her ortolatiste geçerli olan
-    ``(A∧B) ∨ (A∧C) ≤ A ∧ (B∨C)`` eşitsizliği SAĞLANIR -- kaynak
-    metindeki "``≠``" işareti bunu gizliyordu.
-    """
     A = dogru_uzay(2, [1.0, 0.0])
     B = dogru_uzay(2, [0.0, 1.0])
     C = dogru_uzay(2, [1.0, 1.0])
@@ -2154,11 +1687,6 @@ def dagilma_kirilir() -> Dict[str, object]:
 
 
 def dagilma_uyumlu_halde() -> Dict[str, object]:
-    """Uyumlu (birbirine dik yahut kapsayan) alt uzaylarda dağılma SAĞLANIR.
-
-    Bu, "``≠``" yazmanın niçin yanlış olduğunun ikinci yüzüdür: bozulma
-    genel değil, husûsîdir.
-    """
     A = dogru_uzay(3, [1.0, 0.0, 0.0])
     B = dogru_uzay(3, [0.0, 1.0, 0.0])
     C = dogru_uzay(3, [0.0, 0.0, 1.0])
@@ -2170,11 +1698,6 @@ def dagilma_uyumlu_halde() -> Dict[str, object]:
 
 def ortomoduler_kanun(deneme: int = 200, n: int = 4,
                       tohum: int = 0) -> Dict[str, object]:
-    """``A ≤ B ⟹ B = A ∨ (B ∧ A^⊥)``.
-
-    Rastgele iç içe alt uzay çiftlerinde sınanır; kuantum mantığını
-    ortolatisten ayıran kanun budur ve dağılmanın yerini tutar.
-    """
     rng = np.random.default_rng(tohum)
     ihlal = 0
     denenen = 0
@@ -2221,21 +1744,8 @@ def _rapor_mizan_altyapisal() -> str:
     return "\n".join(satir)
 
 
-# ====================================================================
-#  mizan/istikra.py
-# ====================================================================
-
 def ardisiklik_kaidesi(k: int, n: int, alfa: float = 1.0,
                        beta: float = 1.0) -> float:
-    """``P(X_{n+1}=1 | k başarı / n deneme)`` — Beta(α,β) önseliyle.
-
-    Türetme: önsel ``p ~ Beta(α,β)``, gözlem ``k ~ Binom(n,p)``.  Beta
-    binom için eşlenik olduğundan ardıl ``Beta(k+α, n−k+β)``, onun da
-    beklentisi ``(k+α)/(n+α+β)``.  Bir sonraki denemenin başarı ihtimali
-    tam olarak bu beklentidir (Bernoulli'nin ortalaması parametresidir).
-
-    ``α=β=1``: Laplace'ın ``(k+1)/(n+2)`` kaidesi.
-    """
     if n < 0 or k < 0 or k > n:
         raise ValueError("0 ≤ k ≤ n olmalı")
     if alfa <= 0 or beta <= 0:
@@ -2245,29 +1755,17 @@ def ardisiklik_kaidesi(k: int, n: int, alfa: float = 1.0,
 
 def ardisiklik_dizisi(n_azami: int, alfa: float = 1.0,
                       beta: float = 1.0) -> List[float]:
-    """Hep-başarı hâlinde (k=n) ihtimalin n=0..n_azami boyunca seyri."""
     return [ardisiklik_kaidesi(n, n, alfa, beta)
             for n in range(n_azami + 1)]
 
 
 def tam_istikra_mi(k: int, n: int, alfa: float = 1.0,
                    beta: float = 1.0) -> bool:
-    """Eksik istikrâ hiçbir sonlu ``n`` için yakîn (=1) vermez.
-
-    ``β > 0`` olduğu sürece ``(k+α)/(n+α+β) < 1``; ancak ``k=n`` ve
-    ``β→0`` sınırında 1'e ulaşılır ki bu da "hiç aksi olamaz" demek olan
-    bir önsel koymaktır — yani istikrâdan değil, önselden gelen yakîndir.
-    """
     return ardisiklik_kaidesi(k, n, alfa, beta) >= 1.0
 
 
 @dataclass(frozen=True)
 class Ortam:
-    """Bir gözlem ortamı: yordayıcı değerleri ve netice.
-
-    ``X``: her satır bir müşahede, her sütun bir yordayıcı.
-    ``y``: aynı uzunlukta netice dizisi.
-    """
     ad: str
     X: Tuple[Tuple[float, ...], ...]
     y: Tuple[float, ...]
@@ -2280,12 +1778,6 @@ class Ortam:
 def _en_kucuk_kareler(X: Sequence[Sequence[float]],
                       y: Sequence[float],
                       sutunlar: Sequence[int]) -> Tuple[List[float], float]:
-    """Seçili sütunlarla sabit terimli EKK; (katsayılar, artık varyansı).
-
-    Normal denklemler ``(AᵀA)β = Aᵀy`` Gauss eliminasyonuyla çözülür.
-    Tekil hâlde küçük bir Tikhonov terimi (1e-12) eklenir — bu yalnız
-    sayısal tekilliği açar, kat sayıları maddî olarak değiştirmez.
-    """
     m = len(y)
     p = len(sutunlar) + 1
     A = [[1.0] + [X[i][j] for j in sutunlar] for i in range(m)]
@@ -2294,7 +1786,6 @@ def _en_kucuk_kareler(X: Sequence[Sequence[float]],
     b = [sum(A[i][r] * y[i] for i in range(m)) for r in range(p)]
     for r in range(p):
         G[r][r] += 1e-12
-    # Gauss — kısmî pivotlama
     for c in range(p):
         piv = max(range(c, p), key=lambda r: abs(G[r][c]))
         if abs(G[piv][c]) < 1e-14:
@@ -2317,12 +1808,6 @@ def _en_kucuk_kareler(X: Sequence[Sequence[float]],
 
 def _kabul_mu(ortamlar: Sequence[Ortam], sutunlar: Sequence[int],
               tolerans: float) -> bool:
-    """Bu yordayıcı kümesi BÜTÜN ortamlarda aynı ilişkiyi mi veriyor?
-
-    Ölçüt: ortamların birleşiminde uydurulan katsayılarla her ortamın
-    artıkları, o ortamın kendi içinde uydurulmuş artıklarından belirgin
-    biçimde kötü olmamalı.  ``tolerans`` bağıl bir eşiktir.
-    """
     hepsi_X = tuple(itertools.chain.from_iterable(o.X for o in ortamlar))
     hepsi_y = tuple(itertools.chain.from_iterable(o.y for o in ortamlar))
     beta, _ = _en_kucuk_kareler(hepsi_X, hepsi_y, sutunlar)
@@ -2341,7 +1826,6 @@ def _kabul_mu(ortamlar: Sequence[Ortam], sutunlar: Sequence[int],
 
 def degismez_kumeler(ortamlar: Sequence[Ortam], n_yordayici: int,
                      tolerans: float = 0.5) -> List[FrozenSet[int]]:
-    """Bütün ortamlarda değişmez kalan yordayıcı kümelerinin listesi."""
     kabul: List[FrozenSet[int]] = []
     for r in range(n_yordayici + 1):
         for alt in itertools.combinations(range(n_yordayici), r):
@@ -2352,12 +1836,6 @@ def degismez_kumeler(ortamlar: Sequence[Ortam], n_yordayici: int,
 
 def degismez_kesisim(ortamlar: Sequence[Ortam], n_yordayici: int,
                      tolerans: float = 0.5) -> FrozenSet[int]:
-    """Kabul edilen kümelerin **kesişimi** — ICP'nin verdiği hüküm.
-
-    Kesişim boşsa hiçbir yordayıcı hakkında hüküm verilmez.  Bu bir
-    kusur değil, usulün kendisidir: değişmezlik delili yoksa illet
-    isnadı da yoktur.
-    """
     kabul = degismez_kumeler(ortamlar, n_yordayici, tolerans)
     if not kabul:
         return frozenset()
@@ -2374,7 +1852,6 @@ class Nesne:
 
 
 def benzerlik(a: Nesne, b: Nesne) -> float:
-    """Jaccard: ``|A∩B| / |A∪B|``.  Boş-boş hâlinde 1 (ikisi de aynı)."""
     birlesim = a.vasiflar | b.vasiflar
     if not birlesim:
         return 1.0
@@ -2382,13 +1859,6 @@ def benzerlik(a: Nesne, b: Nesne) -> float:
 
 
 def temsil_gucu(a: Nesne, b: Nesne, illet_vasiflari: Iterable[str]) -> float:
-    """Analojinin gücü = **illetle alâkalı** vasıflardaki uyuşma oranı.
-
-    Ölçüt kasten yalnız ``illet_vasiflari`` üzerinden hesaplanır: alâkasız
-    vasıflarda benzeşmek analojiyi kuvvetlendirmez.  Uyuşma, her illet
-    vasfı için "ikisinde de var" veya "ikisinde de yok" hâlleridir —
-    yani vasfın müşterek *değeri*, sadece müşterek varlığı değil.
-    """
     illet = list(dict.fromkeys(illet_vasiflari))
     if not illet:
         return 0.0
@@ -2400,27 +1870,15 @@ def temsil_gucu(a: Nesne, b: Nesne, illet_vasiflari: Iterable[str]) -> float:
 def temsil_hukmu(asil: Nesne, fer: Nesne, illet_vasiflari: Iterable[str],
                  asil_hukmu: bool, esik: float = 1.0
                  ) -> Tuple[Optional[bool], float]:
-    """Asıldaki hükmü fer'e taşı — ancak illet tam intibak ederse.
-
-    Dönen: ``(hüküm veya None, güç)``.  Güç eşiğin altındaysa hüküm
-    **verilmez** (``None``); klasik usulde de illetin fer'de tahakkuku
-    şart koşulur, kısmî benzerlik hüküm doğurmaz.
-    """
     g = temsil_gucu(asil, fer, illet_vasiflari)
     return (asil_hukmu if g >= esik else None), g
 
 
 @dataclass(frozen=True)
 class NyayaCikarim:
-    """pratijñā / hetu / udāharaṇa / upanaya / nigamana.
-
-    ``sapaksa``: hetu'nun da sādhya'nın da bulunduğu müsbet misaller.
-    ``vipaksa``: sādhya'nın bulunmadığı menfî misaller — hetu bunların
-    **hiçbirinde** bulunmamalıdır (vyatireka).
-    """
-    paksa: str            # mevzu ("şu dağ")
-    sadhya: str           # isbat edilecek ("ateş var")
-    hetu: str             # delil ("duman var")
+    paksa: str
+    sadhya: str
+    hetu: str
     sapaksa: FrozenSet[str]
     vipaksa: FrozenSet[str]
     hetu_paksada: bool = True
@@ -2428,17 +1886,6 @@ class NyayaCikarim:
 
 
 def nyaya_degerlendir(c: NyayaCikarim) -> Dict[str, object]:
-    """Hetu'nun beş şartını (pañca-rūpa) tek tek dener.
-
-    1. pakṣadharmatā — hetu mevzuda bulunmalı.
-    2. sapakṣa-sattva — hetu en az bir müsbet misalde bulunmalı.
-    3. vipakṣa-asattva — hetu hiçbir menfî misalde bulunmamalı.
-    4. abādhita — netice başka bir kat'î delille çürütülmemiş olmalı.
-    5. asatpratipakṣa — eşit kuvvette bir karşı-delil bulunmamalı.
-
-    4 ve 5 dışsal şartlardır; burada girdi olarak alınır, uydurulmaz.
-    Hüküm ancak ilk üçü sağlanınca verilir.
-    """
     s1 = c.hetu_paksada
     s2 = bool(c.sapaksa & c.hetunun_bulundugu) or (
         not c.hetunun_bulundugu and bool(c.sapaksa))
@@ -2480,7 +1927,6 @@ ANAPODEIKTOI: List[Tuple[str, List[Onerme], Onerme]] = _stoa_semalari()
 
 
 def anapodeiktos_dogrula(oncul: Sequence[Onerme], netice: Onerme) -> bool:
-    """Şemayı doğruluk tablosuyla dene — iddia değil, ölçüm."""
     return hukum(oncüller=list(oncul), netice=netice)
 
 
@@ -2488,7 +1934,7 @@ def butun_anapodeiktoslari_dogrula() -> List[Tuple[str, bool]]:
     return [(ad, anapodeiktos_dogrula(o, n)) for ad, o, n in ANAPODEIKTOI]
 
 
-Vaka = Tuple[FrozenSet[str], bool]   # (mevcut âmiller, netice oldu mu)
+Vaka = Tuple[FrozenSet[str], bool]
 
 
 USUL_AYRILIK, USUL_BIRLESIK = "ayrılık", "birleşik"
@@ -2498,35 +1944,6 @@ USUL_ESDEGISIM = "eş_değişim"
 
 
 def illet_ara(vakalar=None, ne: str = "uyuşma", olcumler=None):
-    """MİLL'İN İSTİKRÂ USULLERİ -- tek terkip (kütük H226).
-
-    Küme: ``mill_uyusma``, ``mill_ayrilik``, ``mill_birlesik``,
-    ``mill_esdegisim``. Dört isim, tek sualin dört yolu idi: *bu
-    neticenin illeti hangi âmildir?* İlk üçü aynı iki kümenin
-    cebridir ve ayrı yazıldıklarında bu cebir görünmüyordu:
-
-        ``K = ∩{a : netice var}``   (her müsbette bulunan)
-        ``M = ∪{a : netice yok}``   (bir menfîde bulunan)
-        ``B = ∪{a : netice var}``   (bir müsbette bulunan)
-
-    ==================  ==============================================
-    ``ne``              döndürdüğü
-    ==================  ==============================================
-    ``uyuşma``          ``K`` -- neticenin olduğu BÜTÜN vakalarda ortak
-    ``ayrılık``         ``B − M`` -- neticenin olmadığı hiçbir vakada
-                        bulunmayan
-    ``birleşik``        ``K ∩ (B − M)`` -- hem her müsbette var, hem
-                        hiçbir menfîde yok
-    ``eş_değişim``      Pearson bağıntı katsayısı (``olcumler``den)
-    ==================  ==============================================
-
-    Uyuşma ile ayrılığın farkı elemenin **nereden** geldiğidir: uyuşma
-    müsbet vakaları keser, ayrılık menfî vakalarla eler. Netice yokken
-    de bulunan bir âmil illet olamaz; bu, ayrılığın tek satırıdır.
-
-    Eş değişim usulünde değişkenlerden biri sabitse ``0`` döner --
-    "birlikte değişme yok" hükmü, uydurma bir sayı değil (H10).
-    """
     if ne == "eş_değişim":
         n = len(olcumler)
         if n < 2:
@@ -2569,10 +1986,6 @@ def _rapor_mizan_istikra() -> str:
              f"   yakîn mi? {tam_istikra_mi(1000, 1000)}")
 
     s.append("\n=== Değişmezlik yoluyla istikrâ ===")
-    # X0 hakiki illet (y = 2·X0 her ortamda); X1 sahte: 1. ortamda y ile
-    # aynı yönde, 2.'de ters yönde gider.  Ortamlar ayrıca y aralığında da
-    # ayrışır — ayrışmasalardı boş küme de kabul edilirdi ve ölçüt hiçbir
-    # şeyi elemezdi (ICP'nin gücü ortam farkından gelir).
     o1 = Ortam("ortam-1",
                tuple((float(i), float(i)) for i in range(8)),
                tuple(2.0 * i for i in range(8)))
@@ -2631,21 +2044,16 @@ def _rapor_mizan_istikra() -> str:
     return "\n".join(s)
 
 
-# ====================================================================
-#  mizan/munazara.py
-# ====================================================================
-
 MERTEBELER: Tuple[Tuple[float, str], ...] = (
-    (1.00, "yakîn"),        # kat'î — aksi muhal
-    (0.75, "zann-ı gālib"),  # kuvvetli zan
+    (1.00, "yakîn"),
+    (0.75, "zann-ı gālib"),
     (0.50, "zan"),
-    (0.25, "şek"),           # iki taraf müsâvî veya altı
-    (0.00, "vehim"),         # mercûh taraf
+    (0.25, "şek"),
+    (0.00, "vehim"),
 )
 
 
 def mertebe_adi(y: float) -> str:
-    """Yakîn derecesine karşılık gelen klasik mertebe adı."""
     if not 0.0 <= y <= 1.0:
         raise ValueError("yakîn ∈ [0,1] olmalı")
     for esik, ad in MERTEBELER:
@@ -2665,15 +2073,8 @@ MAKAM_ADI: Dict[str, str] = {
 
 def makam_tayin(P: float, eps_sek: float = 0.0,
                 eps_yakin: float = 0.0) -> str:
-    """``mertebe_adi``nın **görünen adla** dönen hâli -- aynı cetvel.
-
-    ``eps_*`` payları **varsayılan olarak sıfırdır**: cetvelde öyle bir
-    bant yoktur. Sıfırdan büyük verilirse ``şek``in tabanı aşağı,
-    ``yakîn``in tabanı yukarı kaydırılır ve bu artık cetvelin değil
-    **çağıranın** hükmüdür; öyle de raporlanır.
-    """
     e_sek, e_yakin = float(eps_sek), float(eps_yakin)
-    for esik, ad in MERTEBELER:                  # cetvel azalan sırada
+    for esik, ad in MERTEBELER:
         e = float(esik)
         if ad == "yakîn":
             e -= e_yakin
@@ -2685,31 +2086,18 @@ def makam_tayin(P: float, eps_sek: float = 0.0,
 
 
 def ikili_entropi(P: float) -> float:
-    """``−P log P − (1−P) log(1−P)`` -- yakînin belirsizliği."""
     if P <= 0.0 or P >= 1.0:
         return 0.0
     return float(-P * math.log(P) - (1 - P) * math.log(1 - P))
 
 
 def hukum_agirligi(P: float, makam: str) -> float:
-    """``Hüküm = 1·𝕀_yakîn + P·𝕀_zan + 0.5·𝕀_şek`` (+ Vehim için ``P``).
-
-    ``Zann-ı gālib`` de ``P``dir: kuvvetli zan, zannın kendi
-    kuvvetiyle tartılır; ``1``e yuvarlanmaz. Yuvarlansaydı, ayırt
-    etmek için açtığımız mertebe hemen yakîne katılmış olurdu.
-    """
     return {"Yakîn": 1.0, "Zann-ı gālib": P, "Zan": P,
             "Şek": 0.5, "Vehim": P}[makam]
 
 
 def yakin_gazali(oncul_yakinleri: Sequence[float],
                  sekil_gecerli: bool) -> float:
-    """``min_i Yakîn(P_i) · 𝟙[şekil geçerli]``.
-
-    Öncül yoksa (boş liste) netice öncülsüz iddiadır: yakîn 0.  Bu,
-    ``min(∅)=+∞`` matematiksel kabulünden kasten ayrılır — burada mîzân
-    delil tartar, delilsizlik en yüksek derece olamaz.
-    """
     if not sekil_gecerli:
         return 0.0
     if not oncul_yakinleri:
@@ -2721,14 +2109,6 @@ def yakin_gazali(oncul_yakinleri: Sequence[float],
 
 
 def yakin_zinciri(halkalar: Sequence[Tuple[Sequence[float], bool]]) -> float:
-    """Sorites/zincirleme kıyasta yakînin seyri.
-
-    Her halka bir kıyastır; bir öncekinin neticesi sonrakinin öncülüdür.
-    Minimum idempotent olduğundan zincir uzunluğu **tek başına** yakîni
-    düşürmez — düşüren, araya giren zayıf öncüllerdir.  (Çarpım t-normu
-    seçilseydi zincir uzadıkça yakîn kaçınılmaz olarak sıfıra giderdi;
-    bu, kat'î öncüllerden kurulu uzun bir ispatı da değersizleştirirdi.)
-    """
     tasinan = 1.0
     for onculler, gecerli in halkalar:
         tasinan = yakin_gazali(list(onculler) + [tasinan], gecerli)
@@ -2745,13 +2125,6 @@ class ItirazNevi(Enum):
 
 @dataclass(frozen=True)
 class Hamle:
-    """Bir münâzara hamlesi.
-
-    ``sahip``: "müddeî" veya "muteriz".
-    ``nevi``: îtiraz nev'i (müddeî hamlelerinde ``None``).
-    ``hedef``: men'/nakz edilen öncülün sırası (men' ve nakz için şart).
-    ``delil``: muâraza veya ispat için getirilen öncüller.
-    """
     sahip: str
     nevi: Optional[ItirazNevi]
     hedef: Optional[int] = None
@@ -2762,12 +2135,6 @@ class Hamle:
 
 def men_mesru_mu(hedef: Optional[int], n_oncul: int,
                  daha_once_men_edilenler: Set[int]) -> Tuple[bool, str]:
-    """Men' ancak *mevcut* ve *henüz men edilmemiş* bir öncüle yapılır.
-
-    Aynı öncülü tekrar men etmek "tekrâr-ı men'"dir ve münâzarayı
-    sonlandırmaz — usulen reddedilir; yoksa muteriz aynı hamleyi
-    sonsuza kadar tekrarlayıp mağlubiyetten kaçınabilirdi.
-    """
     if hedef is None:
         return False, "men' bir öncüle taalluk etmeli"
     if not 0 <= hedef < n_oncul:
@@ -2779,14 +2146,6 @@ def men_mesru_mu(hedef: Optional[int], n_oncul: int,
 
 def nakz_gecerli_mi(onculler: Sequence[Onerme], netice: Onerme
                     ) -> Tuple[bool, Optional[Dict[str, bool]]]:
-    """Nakz: delil sûreti aynı kalırken neticenin bâtıl olduğu bir hâl.
-
-    Hesaplanabilir karşılığı doğrudandır — kıyas geçerli **değilse**
-    öncülleri doğru, neticeyi yanlış kılan bir değerlendirme vardır ve
-    o değerlendirme nakzın ta kendisidir.  Geçerliyse nakz imkânsızdır.
-
-    Dönen: ``(nakz mümkün mü, şâhit değerlendirme)``.
-    """
     if hukum(oncüller=list(onculler), netice=netice):
         return False, None
     return True, hukum(oncüller=list(onculler), netice=netice, ne="karşı_örnek")
@@ -2794,23 +2153,11 @@ def nakz_gecerli_mi(onculler: Sequence[Onerme], netice: Onerme
 
 def muaraza_gecerli_mi(karsi_onculler: Sequence[Onerme],
                        davanin_aksi: Onerme) -> bool:
-    """Muâraza ancak getirilen delil dâvânın aksini **ispat ederse** sahih.
-
-    Muteriz burada ispat yükünü üstlenmiştir; delilinin geçerliliği
-    müddeîninkiyle aynı ölçütle tartılır — çifte standart yoktur.
-    """
     return hukum(oncüller=list(karsi_onculler), netice=davanin_aksi)
 
 
 @dataclass
 class Munazara:
-    """Bir münâzaranın hâli ve hükmü.
-
-    ``onculler`` ile ``netice`` müddeînin dâvâsıdır.  ``yakinler``
-    öncüllerin başlangıç yakîn dereceleridir; men' edilen bir öncülün
-    yakîni, müddeî onu ispat edene kadar **sıfır** sayılır — çünkü
-    münâzarada müsellem olmayan öncül delil olarak kullanılamaz.
-    """
     onculler: Tuple[Onerme, ...]
     netice: Onerme
     yakinler: Tuple[float, ...]
@@ -2823,7 +2170,6 @@ class Munazara:
         if len(self.onculler) != len(self.yakinler):
             raise ValueError("her öncül için bir yakîn derecesi lazım")
 
-    # --- hamleler -----------------------------------------------------
     def men_et(self, hedef: int) -> Tuple[bool, str]:
         ok, sebep = men_mesru_mu(hedef, len(self.onculler),
                                  self.men_edilenler)
@@ -2835,7 +2181,6 @@ class Munazara:
         return ok, sebep
 
     def ispat_et(self, hedef: int, delil: Sequence[Onerme]) -> bool:
-        """Müddeî men edilen öncülü müstakil delille ispat eder."""
         if hedef not in self.men_edilenler:
             return False
         if not hukum(oncüller=list(delil), netice=self.onculler[hedef]):
@@ -2860,9 +2205,7 @@ class Munazara:
                                 aciklama=f"muâraza {'tuttu' if tuttu else 'tutmadı'}"))
         return tuttu
 
-    # --- hüküm --------------------------------------------------------
     def gecerli_yakinler(self) -> List[float]:
-        """Men edilip ispat edilmemiş öncülün yakîni sıfırdır."""
         return [0.0 if (i in self.men_edilenler
                         and i not in self.ispat_edilenler) else y
                 for i, y in enumerate(self.yakinler)]
@@ -2915,7 +2258,7 @@ def _rapor_mizan_munazara() -> str:
 
     s.append("\n=== Nakz: geçerli kıyas nakzedilemez ===")
     saglam = Munazara((ise(A, B), A), B, (1.0, 1.0))
-    bozuk = Munazara((ise(A, B), B), A, (1.0, 1.0))   # tâlîyi vaz' etmek
+    bozuk = Munazara((ise(A, B), B), A, (1.0, 1.0))
     for ad, mn in (("modus ponens", saglam), ("tâlîyi vaz'", bozuk)):
         mum, sahit = mn.nakz_et()
         s.append(f"  {ad:14s} nakz mümkün={mum}  şâhit={sahit}")
@@ -2933,9 +2276,6 @@ def _rapor_mizan_munazara() -> str:
     return "\n".join(s)
 
 
-# ====================================================================
-#  Çipin toplu raporu
-# ====================================================================
 BOLUMLER = (
     ("KIYAS -- 256 monadik modelle tam karar", "_rapor_mizan_kiyas"),
     ("ÇIKARIM -- Hilbert, LK, G4ip", "_rapor_mizan_cikarim"),
@@ -2949,8 +2289,7 @@ BOLUMLER = (
 )
 
 
-def rapor() -> str:                            # pragma: no cover
-    """Sekiz odanın ölçümü, sırayla."""
+def rapor() -> str:
     s = []
     for baslik, fn in BOLUMLER:
         s.append("")
@@ -2961,5 +2300,5 @@ def rapor() -> str:                            # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                     # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

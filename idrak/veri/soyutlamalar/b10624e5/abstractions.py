@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task b10624e5."""
 
 from collections import Counter
 from pathlib import Path
@@ -222,12 +221,10 @@ def _solve_with_options(grid, drop_duplicate_vertical_inner=True):
 
 
 def abstraction_naive(grid):
-    """Initial abstraction without deduplicating vertical inner colour."""
     return _solve_with_options(grid, drop_duplicate_vertical_inner=False)
 
 
 def abstraction_refined(grid):
-    """Final abstraction with duplicate vertical-inner colours removed."""
     return _solve_with_options(grid, drop_duplicate_vertical_inner=True)
 
 

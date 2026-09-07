@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task a6f40cea."""
 
 from __future__ import annotations
 
@@ -9,7 +8,6 @@ from typing import Callable, List
 
 
 def _solve(grid: List[List[int]], enable_sequences: bool) -> List[List[int]]:
-    """Internal solver with a switch to enable or disable extra sequences."""
 
     height = len(grid)
     width = len(grid[0])
@@ -76,7 +74,6 @@ def _solve(grid: List[List[int]], enable_sequences: bool) -> List[List[int]]:
             result[row_idx][col_idx] = color
             depth[row_idx][col_idx] = dist
 
-    # Edge projections.
     for offset_col in range(inner_width):
         col = left + 1 + offset_col
         row = top
@@ -256,7 +253,6 @@ def _solve(grid: List[List[int]], enable_sequences: bool) -> List[List[int]]:
                 result[inner_height - 2][col] = cycle[(col - 1) % 2]
             result[inner_height - 1][1] = cycle[1]
 
-    # Gap closing.
     changed = True
     while changed:
         changed = False
@@ -306,13 +302,11 @@ def _solve(grid: List[List[int]], enable_sequences: bool) -> List[List[int]]:
 
 
 def baseline_projection(grid: List[List[int]]) -> List[List[int]]:
-    """Projection without sequence-based refinements."""
 
     return _solve(grid, enable_sequences=False)
 
 
 def augmented_projection(grid: List[List[int]]) -> List[List[int]]:
-    """Projection including sequence-aware refinements (final solver)."""
 
     return _solve(grid, enable_sequences=True)
 
@@ -344,7 +338,6 @@ def evaluate_abstractions() -> None:
             status += " first_fail=None"
         print(f"{name}: {status}")
 
-    # Produce test prediction using final abstraction for manual inspection.
     if test:
         pred = augmented_projection(test[0]["input"])
         print("test prediction (augmented_projection):")
@@ -352,5 +345,5 @@ def evaluate_abstractions() -> None:
             print("".join(map(str, row)))
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     evaluate_abstractions()

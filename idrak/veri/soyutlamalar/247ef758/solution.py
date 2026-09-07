@@ -1,16 +1,14 @@
-"""Solver for ARC-AGI-2 task 247ef758 (split: evaluation)."""
 
 from __future__ import annotations
 
 from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 
-# Typed aliases for the DSL subset
 Grid = List[List[int]]
 Color = int
 Row = int
 Column = int
-Glyph = List[Tuple[int, int, int]]  # list of (r, c, color) cells
+Glyph = List[Tuple[int, int, int]]
 
 
 def deep_copy(grid: Grid) -> Grid:
@@ -40,13 +38,11 @@ def findAxisColumn(grid: Grid) -> Optional[Column]:
 
 def extractGlyphs(grid: Grid, axis_col: Column) -> Dict[Color, Glyph]:
     acc: Dict[Color, Glyph] = {}
-    # collect
     for r, row in enumerate(grid):
         for c in range(axis_col):
             val = row[c]
             if val != 0:
                 acc.setdefault(val, []).append((r, c, val))
-    # reorder by min-row descending to match solver semantics
     order = sorted(acc.keys(), key=lambda col: min(rcv[0] for rcv in acc[col]), reverse=True)
     return {col: acc[col] for col in order}
 
@@ -88,14 +84,11 @@ def placeGlyphs(canvas: Grid, glyph: Glyph, rows: List[Row], cols: List[Column])
         return canvas
     h = len(canvas)
     w = len(canvas[0]) if h else 0
-    # colour is stored within the glyph cells
     r0, c0, color = glyph[0]
     g = deep_copy(canvas)
-    # clear source glyph cells
     for r, c, _ in glyph:
         if 0 <= r < h and 0 <= c < w:
             g[r][c] = 0
-    # compute centre and offsets
     rows_list = [r for r, _, _ in glyph]
     cols_list = [c for _, c, _ in glyph]
     min_r, max_r = min(rows_list), max(rows_list)
@@ -103,7 +96,6 @@ def placeGlyphs(canvas: Grid, glyph: Glyph, rows: List[Row], cols: List[Column])
     cr = (min_r + max_r) // 2
     cc = (min_c + max_c) // 2
     offsets = [(r - cr, c - cc) for r, c, _ in glyph]
-    # stamp at every row/column combination
     for tr in rows:
         for tc in cols:
             for dr, dc in offsets:

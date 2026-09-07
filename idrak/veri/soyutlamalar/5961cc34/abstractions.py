@@ -1,8 +1,3 @@
-"""Abstractions explored for ARC task 5961cc34.
-
-The module records the candidate pipelines we tried and provides a compact
-evaluation harness so we can compare them on every available split.
-"""
 
 from __future__ import annotations
 
@@ -20,10 +15,10 @@ SOLVER_PATH = HERE / "arc2_samples" / "5961cc34.py"
 
 def _load_solver_module():
     spec = importlib.util.spec_from_file_location("task5961cc34_solver", SOLVER_PATH)
-    if spec is None or spec.loader is None:  # pragma: no cover - defensive guard
+    if spec is None or spec.loader is None:
         raise RuntimeError("Failed to load solver module for 5961cc34")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)  # type: ignore[attr-defined]
+    spec.loader.exec_module(module)
     return module
 
 
@@ -39,7 +34,6 @@ Abstraction = Callable[[Grid], Grid]
 
 
 def _ray_connect_all(grid: Grid) -> Grid:
-    """Early attempt: scaffold every motif without filtering the guides."""
 
     components = _component_scan(grid)
     sentinel = next(comp for comp in components if 2 in comp["colors"])
@@ -81,7 +75,6 @@ def _ray_connect_all(grid: Grid) -> Grid:
 
 
 def filtered_scaffold(grid: Grid) -> Grid:
-    """Final abstraction: reuse the shipped solver."""
 
     return solve_5961cc34(grid)
 

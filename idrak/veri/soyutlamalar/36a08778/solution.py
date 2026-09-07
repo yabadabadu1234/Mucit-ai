@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 36a08778 (typed-DSL main with pure helpers)."""
 
 from __future__ import annotations
 
@@ -6,11 +5,10 @@ from typing import Iterable, List, Set, Tuple
 
 Grid = List[List[int]]
 Column = int
-Run = Tuple[int, int, int]  # row, left, right
+Run = Tuple[int, int, int]
 
 
 def _iter_runs(row: List[int], target: int = 2) -> Iterable[Tuple[int, int]]:
-    """Yield [start, end] column spans of consecutive `target` values."""
     start = None
     for idx, value in enumerate(row):
         if value == target:
@@ -23,7 +21,6 @@ def _iter_runs(row: List[int], target: int = 2) -> Iterable[Tuple[int, int]]:
         yield start, len(row) - 1
 
 
-# Typed-DSL helper building blocks (pure, no side effects)
 def extractScaffoldColumns(grid: Grid) -> Set[Column]:
     height = len(grid)
     seeds: Set[int] = set()
@@ -49,7 +46,7 @@ def extendScaffolds(grid: Grid, scaffold_cols: Set[Column]) -> Grid:
 def collectRuns(grid: Grid) -> List[Run]:
     height = len(grid)
     runs: List[Run] = []
-    for r in range(2, height):  # skip first two rows
+    for r in range(2, height):
         for left, right in _iter_runs(grid[r], target=2):
             runs.append((r, left, right))
     return runs
@@ -72,7 +69,6 @@ def wrapRunsWithHalo(scaffolded: Grid, runs: List[Run]) -> Grid:
     result = [row[:] for row in scaffolded]
 
     for r, left, right in runs:
-        # Connectivity check against current result (which accumulates halos)
         touches_scaffold = any(
             result[r - 1][c] == 6 or result[r][c] == 6 for c in range(left, right + 1)
         )
@@ -114,7 +110,6 @@ def wrapRunsWithHalo(scaffolded: Grid, runs: List[Run]) -> Grid:
     return result
 
 
-# Main solver entry — must match abstractions.md Lambda Representation exactly
 def solve_36a08778(grid: Grid) -> Grid:
     scaffold_cols = extractScaffoldColumns(grid)
     scaffolded = extendScaffolds(grid, scaffold_cols)

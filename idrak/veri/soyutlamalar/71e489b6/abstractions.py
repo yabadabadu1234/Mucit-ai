@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task 71e489b6."""
 
 from __future__ import annotations
 
@@ -29,12 +28,10 @@ def _zero_neighbors(grid: Sequence[Sequence[int]], r: int, c: int) -> int:
 
 
 def identity_abstraction(grid: Sequence[Sequence[int]]) -> List[List[int]]:
-    """Baseline identity mapping."""
     return _deep_copy(grid)
 
 
 def majority_cleanup_abstraction(grid: Sequence[Sequence[int]]) -> List[List[int]]:
-    """Only apply the zero-majority cleanup step."""
     h, w = len(grid), len(grid[0])
     result = _deep_copy(grid)
     for r in range(h):
@@ -48,7 +45,6 @@ _solver_module = SourceFileLoader("solver_71e489b6", str(SOLVER_PATH)).load_modu
 
 
 def tip_halo_abstraction(grid: Sequence[Sequence[int]]) -> List[List[int]]:
-    """Full tip-detection with halo drawing (final solver)."""
     return _solver_module.solve_71e489b6(grid)
 
 
@@ -63,7 +59,6 @@ def _evaluate_split(
     func: Callable[[Sequence[Sequence[int]]], List[List[int]]],
     entries: Iterable[Dict[str, Sequence[Sequence[int]]]],
 ) -> Tuple[Optional[int], int, Optional[int]]:
-    """Return (#matches, total, first failure index) or (None, total, None) when no outputs."""
     matches = 0
     total = 0
     first_failure: Optional[int] = None

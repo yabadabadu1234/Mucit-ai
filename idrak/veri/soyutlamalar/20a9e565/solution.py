@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 20a9e565."""
 
 from collections import Counter, defaultdict
 from typing import List
@@ -36,37 +35,27 @@ def _column_groups(grid):
     return groups, len(nonzero_cols)
 
 
-# --- Thin wrappers to match the typed-DSL surface ---
 def columnGroups(grid):
-    """DSL: Group consecutive non-zero columns by top color.
-
-    Returns (groups, count).
-    """
     groups, total_cols = _column_groups(grid)
     return groups, total_cols
 
 
 def classifyPattern(groups):
-    """DSL: Classify groups into one of "S", "C", or "B"."""
     kind, _ = _classify(groups)
     return kind
 
 
 def buildTypeS(groups):
-    """DSL: Build type-S layout from groups only."""
-    # _build_type_s does not actually use the grid argument.
     return _build_type_s(None, groups)
 
 
 def buildTypeC(grid, groups):
-    """DSL: Build type-C layout using grid + groups."""
     return _build_type_c(grid, groups)
 
 
 def buildTypeB(groups):
-    """DSL: Build type-B layout from groups only."""
     total_cols = sum(g["length"] for g in groups)
-    return _build_type_b(grid=None, total_cols=total_cols, groups=groups)  # type: ignore[arg-type]
+    return _build_type_b(grid=None, total_cols=total_cols, groups=groups)
 
 
 def _bounding_boxes(grid):
@@ -181,7 +170,7 @@ def solve_20a9e565(grid: Grid) -> Grid:
         return buildTypeS(groups)
     elif tag == "C":
         return buildTypeC(grid, groups)
-    else:  # tag == "B"
+    else:
         return buildTypeB(groups)
 
 

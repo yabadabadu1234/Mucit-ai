@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task dd6b8c4b (split: evaluation).
-
-Refactored to align the main entrypoint with the typed-DSL lambda
-representation while preserving the original behaviour.
-"""
 
 from __future__ import annotations
 
@@ -73,15 +68,12 @@ def scoreExistingNines(grid: Grid) -> List[Tuple[Score, Cell]]:
 
 
 def rebalanceNines(grid: Grid, ring_targets: List[Cell], ranked: List[Tuple[Score, Cell]]) -> Grid:
-    # Background is the most common colour in the grid.
     background = Counter(v for row in grid for v in row).most_common(1)[0][0]
     result: Grid = [row[:] for row in grid]
 
-    # Promote ring targets to 9.
     for r, c in ring_targets:
         result[r][c] = 9
 
-    # Retire the same number of lowest-scoring original 9s.
     retire = min(len(ring_targets), len(ranked))
     for i in range(retire):
         (__, (r, c)) = ranked[i]

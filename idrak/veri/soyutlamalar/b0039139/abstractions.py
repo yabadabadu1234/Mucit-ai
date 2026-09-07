@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task b0039139."""
 
 from __future__ import annotations
 
@@ -15,13 +14,11 @@ Solver = Callable[[Grid], Grid]
 
 
 def identity_solver(grid: Grid) -> Grid:
-    """Baseline identity transformation."""
 
     return [row[:] for row in grid]
 
 
 def tiling_solver(grid: Grid) -> Grid:
-    """Wrapper around the refined segment-tiling solver."""
 
     return solve_b0039139(grid)
 

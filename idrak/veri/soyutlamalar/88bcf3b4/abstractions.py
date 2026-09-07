@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 88bcf3b4."""
 
 from __future__ import annotations
 
@@ -67,7 +66,6 @@ def evaluate_split(name: str, samples: Sequence[dict], fn: Callable[[Grid], Grid
     for idx, sample in enumerate(samples):
         prediction = fn(sample["input"])
         if "output" not in sample:
-            # Test split lacks references.
             continue
         target = sample["output"]
         if prediction == target:

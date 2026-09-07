@@ -1,26 +1,3 @@
-"""Devre — durum vektörü simülatörü ve spektral işleçler.
-
-Bir ``n`` kübitlik durum ``2^n`` karmaşık genlikten ibarettir.  Kapı
-uygulamak, prensipte ``2^n × 2^n`` bir dizeyle çarpmaktır; fakat **öyle
-yapılmaz**.  Bir ``k``-kübit kapısı yalnız ``k`` indise dokunur, geri
-kalan ``n−k`` indis seyircidir.  Durumu ``(2^k, 2^{n-k})`` biçiminde
-görüp yalnız ilk eksene çarpmak aynı neticeyi verir ve
-
-* zaman: ``O(2^n · 2^k)`` yerine tam dizeyin ``O(4^n)``i,
-* bellek: ``2^n × 2^n`` dizey hiç kurulmaz.
-
-Fark ölçülüyor ve iki yolun **birebir aynı** durumu verdiği sınanıyor;
-hızlanma neticeyi değiştirmiyor.
-
-Ayrıca:
-
-* **QFT** -- hem doğrudan dizeyle hem kapı kapı (Hadamard + kontrollü
-  faz + ters çevirme) kurulur; ikisi karşılaştırılır.
-* **QPE** -- bir üniterin özdeğer fazını okur; kesin temsil edilebilen
-  fazlarda **tam** cevap verir ve o hâl ayrıca sınanır.
-* **Trotter–Suzuki** -- ``e^{-i(A+B)t}`` ayrıştırması; 1. ve 2. mertebe
-  hatalarının ``O(t²/n)`` ve ``O(t³/n²)`` gittiği ölçülür.
-"""
 
 from __future__ import annotations
 
@@ -40,16 +17,8 @@ __all__ = [
 ]
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Durum
-# ══════════════════════════════════════════════════════════════════════
-
 @dataclass
 class Durum:
-    """``n`` kübitlik saf hâl; genlikler ``(2^n,)``.
-
-    ``q_0`` en anlamlı bit (bkz. :mod:`kuantum.kapilar`).
-    """
     n: int
     v: np.ndarray = field(default=None, repr=False)
 
@@ -73,14 +42,6 @@ class Durum:
         return self
 
     def uygula(self, U: np.ndarray, kubitler: Sequence[int]) -> "Durum":
-        """Kapıyı **tam dizey kurmadan** uygular.
-
-        Durum ``(2^k, 2^{n-k})`` biçimine getirilir; kapı yalnız ilk
-        eksene çarpılır.  Bunun için hedef kübitler önce en anlamlı
-        konuma taşınır (eksen permütasyonu), sonra geri alınır.
-        ``np.transpose`` görünüm döndürdüğü için taşıma bedava değildir
-        ama ``2^n × 2^n`` dizey kurmaktan çok ucuzdur.
-        """
         k = len(kubitler)
         if U.shape != (2 ** k, 2 ** k):
             raise ValueError(f"U {2**k}×{2**k} olmalı")
@@ -90,7 +51,7 @@ class Durum:
         kalan = [q for q in range(self.n) if q not in kubitler]
         sira = list(kubitler) + kalan
         T = self.v.reshape([2] * self.n)
-        T = np.transpose(T, sira)                 # hedefler öne
+        T = np.transpose(T, sira)
         T = T.reshape(2 ** k, -1)
         T = U @ T
         T = T.reshape([2] * self.n)
@@ -100,7 +61,6 @@ class Durum:
 
     def uygula_tam_dizey(self, U: np.ndarray,
                          kubitler: Sequence[int]) -> "Durum":
-        """Aynı işi ``2^n × 2^n`` dizey kurarak yapar — kıyas içindir."""
         G = yerlestir(U, kubitler, self.n)
         self.v = G @ self.v
         return self
@@ -113,7 +73,6 @@ class Durum:
 
 
 def olcum_dagilimi(d: Durum, kubitler: Sequence[int]) -> np.ndarray:
-    """Seçili kübitlerin marjinal ölçüm dağılımı."""
     k = len(kubitler)
     kalan = [q for q in range(d.n) if q not in kubitler]
     T = d.v.reshape([2] * d.n)
@@ -121,13 +80,8 @@ def olcum_dagilimi(d: Durum, kubitler: Sequence[int]) -> np.ndarray:
     return np.sum(np.abs(T) ** 2, axis=1)
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Devre
-# ══════════════════════════════════════════════════════════════════════
-
 @dataclass
 class Devre:
-    """Kapı listesi; ``n`` kübit üzerinde sırayla uygulanır."""
     n: int
     adimlar: List[Tuple[np.ndarray, Tuple[int, ...], str]] = \
         field(default_factory=list)
@@ -147,7 +101,6 @@ class Devre:
         return d
 
     def dizey(self) -> np.ndarray:
-        """Devrenin tam ``2^n × 2^n`` dizeyi — kıyas ve tahlil için."""
         M = np.eye(2 ** self.n, dtype=complex)
         for U, q, _ in self.adimlar:
             M = yerlestir(U, q, self.n) @ M
@@ -158,12 +111,7 @@ class Devre:
         return len(self.adimlar)
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  QFT
-# ══════════════════════════════════════════════════════════════════════
-
 def qft_dizeyi(n: int) -> np.ndarray:
-    """``QFT_N |j⟩ = N^{-1/2} Σ_k ω^{jk} |k⟩``, ``ω = e^{2πi/N}``."""
     N = 2 ** n
     j = np.arange(N)
     return np.exp(2j * np.pi * np.outer(j, j) / N) / np.sqrt(N)
@@ -174,16 +122,6 @@ def iqft_dizeyi(n: int) -> np.ndarray:
 
 
 def qft_devresi(n: int, ters_cevir: bool = True) -> Devre:
-    """QFT'yi kapı kapı kurar: H + kontrollü faz + SWAP.
-
-    Kübit ``j`` için: ``H`` uygula, sonra ``k > j`` için ``CU_1``
-    ile ``2π/2^{k-j+1}`` fazı ekle.  Sonunda kübit sırası **tersine
-    döner**; ``ters_cevir=True`` bunu SWAP'larla düzeltir.
-
-    Ters çevirmeyi unutmak sessiz bir hatadır: devre üniter kalır,
-    hatta çoğu testten geçer, ama bit sırası ters okunur.  Bu yüzden
-    aşağıda dizey hâliyle **birebir** karşılaştırılıyor.
-    """
     d = Devre(n)
     for j in range(n):
         d.ekle(H, [j], f"H{j}")
@@ -202,28 +140,14 @@ def _swap() -> np.ndarray:
 
 
 def walsh_hadamard(n: int) -> np.ndarray:
-    """``H^{⊗n} = 2^{-n/2} Σ_{x,y} (-1)^{x·y} |y⟩⟨x|``."""
     M = np.array([[1.0 + 0j]])
     for _ in range(n):
         M = np.kron(M, H)
     return M
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Faz kestirimi (QPE)
-# ══════════════════════════════════════════════════════════════════════
-
 def faz_kestirimi(U: np.ndarray, ozvektor: np.ndarray,
                   m: int) -> Dict[str, object]:
-    """``U|ψ⟩ = e^{2πiφ}|ψ⟩`` iken ``φ``yi ``m`` bitle okur.
-
-    Kayıt: ``m`` sayaç kübiti + ``ψ``nin kübitleri.  Sayaçlara Hadamard,
-    sonra kontrollü ``U^{2^j}``, sonra ters QFT.
-
-    ``φ``, ``m`` bitle **tam** temsil edilebiliyorsa netice kesindir
-    (tek bir sonuç 1 olasılıkla çıkar); aksi hâlde dağılır ve en yakın
-    bit dizisi en yüksek olasılığı alır.  İki hâl de ölçülüyor.
-    """
     if not uniter_mi(U):
         raise ValueError("U üniter olmalı")
     d_psi = U.shape[0]
@@ -235,17 +159,14 @@ def faz_kestirimi(U: np.ndarray, ozvektor: np.ndarray,
 
     n = m + n_psi
     v = np.zeros(2 ** n, dtype=complex)
-    # |0…0⟩ ⊗ |ψ⟩
     v[:d_psi] = psi
     d = Durum(n, v)
     for j in range(m):
         d.uygula(H, [j])
-    # kontrollü U^{2^j};  j = m-1 en düşük anlamlı sayaç biti
     for j in range(m):
         us = 2 ** (m - 1 - j)
         Uk = np.linalg.matrix_power(U, us)
         d.uygula(kontrollu(Uk), [j] + list(range(m, n)))
-    # sayaçlara ters QFT
     d.uygula(iqft_dizeyi(m), list(range(m)))
 
     dag = olcum_dagilimi(d, list(range(m)))
@@ -259,18 +180,12 @@ def faz_kestirimi(U: np.ndarray, ozvektor: np.ndarray,
     }
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Trotter–Suzuki
-# ══════════════════════════════════════════════════════════════════════
-
 def _uexp(M: np.ndarray, t: float) -> np.ndarray:
-    """``exp(-i t M)`` — Hermitesel ``M`` için özayrışımla (tam)."""
     oz, V = np.linalg.eigh(M)
     return V @ np.diag(np.exp(-1j * t * oz)) @ V.conj().T
 
 
 def trotter(A: np.ndarray, B: np.ndarray, t: float, n: int) -> np.ndarray:
-    """1. mertebe: ``(e^{-iAt/n} e^{-iBt/n})^n``.  Hata ``O(t²/n)``."""
     if n < 1:
         raise ValueError("n ≥ 1 olmalı")
     adim = _uexp(A, t / n) @ _uexp(B, t / n)
@@ -278,11 +193,6 @@ def trotter(A: np.ndarray, B: np.ndarray, t: float, n: int) -> np.ndarray:
 
 
 def suzuki2(A: np.ndarray, B: np.ndarray, t: float, n: int) -> np.ndarray:
-    """2. mertebe: ``(e^{-iAt/2n} e^{-iBt/n} e^{-iAt/2n})^n``.
-
-    Hata ``O(t³/n²)``.  Simetrik olduğu için tek mertebeli terimler
-    birbirini götürür; kazanç buradan gelir ve ölçülür.
-    """
     if n < 1:
         raise ValueError("n ≥ 1 olmalı")
     yari = _uexp(A, t / (2 * n))
@@ -292,12 +202,6 @@ def suzuki2(A: np.ndarray, B: np.ndarray, t: float, n: int) -> np.ndarray:
 
 def hadamard_testi(U: np.ndarray, psi: np.ndarray,
                    sanal: bool = False) -> float:
-    """``Re⟨ψ|U|ψ⟩`` (veya ``Im``) — tek yardımcı kübitle.
-
-    Devre: yardımcıya ``H``, kontrollü ``U``, (sanal için ``S†``),
-    tekrar ``H``.  Yardımcıda ``0`` görme olasılığı
-    ``(1 + Re⟨U⟩)/2``dir; oradan ``Re⟨U⟩`` okunur.
-    """
     psi = np.asarray(psi, complex).reshape(-1)
     psi = psi / np.linalg.norm(psi)
     n_psi = int(round(math.log2(psi.size)))
@@ -313,10 +217,6 @@ def hadamard_testi(U: np.ndarray, psi: np.ndarray,
     p0 = float(olcum_dagilimi(d, [0])[0])
     return 2 * p0 - 1
 
-
-# ══════════════════════════════════════════════════════════════════════
-#  Gösterim
-# ══════════════════════════════════════════════════════════════════════
 
 def _gosterim() -> str:
     import time
@@ -370,13 +270,11 @@ def _gosterim() -> str:
 
     s.append("\n=== Faz kestirimi ===")
     for m in (3, 4, 6):
-        # φ = 3/8 = 0.011₂ — 3 bitle TAM temsil edilebilir
         fi = 3 / 8
         U = np.diag([np.exp(2j * np.pi * fi), 1.0]).astype(complex)
         r = faz_kestirimi(U, np.array([1.0, 0.0]), m)
         s.append(f"  m={m}: φ=3/8 → tahmin {r['φ_tahmini']:.6f}"
                  f"   olasılık {r['en_olası_olasılık']:.6f}")
-    # Tam temsil edilemeyen faz
     fi = 1 / 3
     U = np.diag([np.exp(2j * np.pi * fi), 1.0]).astype(complex)
     for m in (4, 6, 8):

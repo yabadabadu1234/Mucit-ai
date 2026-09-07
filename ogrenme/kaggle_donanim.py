@@ -1,36 +1,3 @@
-"""
-Kaggle koşucusu: tek hücrelik başlangıç, çok cihazlı eğitim.
-
-Kullanıcı şartı iki katlıdır ve ikisi de burada karşılanır:
-
-1. *"Kaggle'a, yani gerçek 21×4 = 84 GB GPU'ya paralel çalışacak şekilde
-   hazırla; eğitimi başlatabilmem için hücreye yazacağım bir başlangıç
-   kodu istiyorum."*
-2. *"Sen GPU tarafındaki çalışırlığı garanti edemezsin ama en azından
-   CPU'da eğitimin çok kısa hâli çalışabilmeli."*
-
-Onun için burada **tek** giriş noktası vardır ve donanımı kendisi
-yoklar: GPU varsa ``AZAMI_KAGGLE`` ayarına, yoksa ``KISA_CPU``ya düşer.
-İkisi de aynı koddur; fark yalnız ölçülerdedir.
-
-**Paralellik nasıl kuruldu.** Gradyan olmadığı için (kütük H3) cihazlar
-arası ``all_reduce`` **yoktur**. Bölünen şey iştir:
-
-* **Kübit ileri geçişi** -- ``ℒ_Nefs(Θ)``, ``Θ`` başına bağımsızdır;
-  süreçlere bölünür (``multiprocessing``). CPU çekirdeği kadar.
-* **NQS genlik hesabı ve örnekleme** -- yığın hâlindedir ve cihazlara
-  bölünür (``hesap/donanim.topla_paralel``). GPU başına bir dilim.
-* **Grover özyinelemesi** -- ``k+1`` sayı üzerindedir; bölünmez, zaten
-  bedavadır.
-
-**84 GB nereye gidiyor?** Doğru cevap: **çoğu boşta kalır** ve bu bir
-kusur değil, mimarînin neticesidir. ``2^N`` hiçbir yerde açılmaz; NQS
-parametreleri megabaytlar, Grover katsayıları kilobaytlar tutar. VRAM'i
-tüketen tek şey yığın büyüklüğüdür (``ornek``, ``zincir``). Onun için
-``AZAMI_KAGGLE`` ayarında büyütülen şey belleğe sığdırma numarası değil,
-**örnek sayısıdır** -- yani istatistikî sağlamlık. Kütük H54'ün 2. borcu
-(*"8 örnekli AS-GEK istatistikî olarak imkânsız"*) ancak böyle kapanır.
-"""
 from __future__ import annotations
 
 import argparse
@@ -40,8 +7,6 @@ import sys
 import time
 from typing import Dict, Optional
 
-# **numpy'dan ÖNCE.** Süreç başına BLAS ipliği 1'e sabitlenmezse 4 süreç ×
-# 4 iplik çekirdekleri birbirine kırdırır; ölçüldü: 2,61 → 1,22 sn/çağrı.
 from matematik.geometri import tek_iplik_zorla
 
 _TEK_IPLIK = tek_iplik_zorla()
@@ -52,7 +17,6 @@ __all__ = ["ayar_sec", "kos", "BASLANGIC_HUCRESI"]
 
 
 def ayar_sec(zorla: Optional[str] = None):
-    """Donanımı yokla, ayarı **ölçüme göre** seç -- tahminle değil."""
     from matematik.geometri import donanim
     from main.egitim import AZAMI_KAGGLE, KISA_CPU, ORTA
 
@@ -81,8 +45,6 @@ def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
           flush=True)
 
     t0 = time.perf_counter()
-    # `nefs/kulli_egitim.py` ilga edildi; küllî kayıp hattı artık
-    # `main/egitim.py`dedir ve **aynı** sözlüğü döndürür.
     r = kulli_kayip_talimi(ayar)
     d = r["değerlendirme"]
 
@@ -97,9 +59,6 @@ def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
           flush=True)
 
     if mukayese:
-        # **AS-GEK mukayesesi ilga edilmiştir** (divanın hükmü; ve o
-        # hüküm doğrudur -- vekil yüzey 250 boyutta asgarî 10·d
-        # değerlendirme isterken 8 çevrim koşuyordu).
         print("AS-GEK mukayesesi İLGA EDİLDİ; mukayese koşulmadı.",
               flush=True)
 
@@ -115,7 +74,6 @@ def kos(zorla: Optional[str] = None, cikti: Optional[str] = None,
     return r
 
 
-#: Kaggle defterinde **tek hücreye** yapıştırılacak kod.
 BASLANGIC_HUCRESI = r'''
 # ── MUCİT-AI · KAGGLE BAŞLANGIÇ HÜCRESİ ─────────────────────────────
 # Ayarlar → Accelerator: GPU (4×L4 varsa azamî ayar kendiliğinden seçilir)
@@ -170,5 +128,5 @@ def _ana() -> int:
     return 0
 
 
-if __name__ == "__main__":   # pragma: no cover
+if __name__ == "__main__":
     raise SystemExit(_ana())

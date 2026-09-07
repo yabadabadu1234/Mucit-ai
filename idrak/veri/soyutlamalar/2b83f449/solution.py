@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 2b83f449, refactored to DSL-style pipeline."""
 
 from typing import List, Tuple, Set, Optional
 
@@ -149,7 +148,6 @@ def collectBoundaryCells(grid: Grid, distances: Tuple[Matrix, Matrix]) -> Set[Ce
                 keep_neighbors.add((r, c + 1))
                 continue
 
-    # Edge-adjacent 3s when a row contains zero(s)
     for r in range(1, h - 1):
         if 0 in grid[r]:
             for c in (0, w - 1):
@@ -157,7 +155,6 @@ def collectBoundaryCells(grid: Grid, distances: Tuple[Matrix, Matrix]) -> Set[Ce
                     if _val(grid, r - 1, c) == 0 or _val(grid, r + 1, c) == 0:
                         to_three.add((r, c))
 
-    # Promote neighbor 3s that must be kept
     for (nr, nc) in keep_neighbors:
         if 0 <= nr < h and 0 <= nc < w and grid[nr][nc] == 3:
             to_three.add((nr, nc))

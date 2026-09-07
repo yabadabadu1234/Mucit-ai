@@ -1,14 +1,10 @@
-"""Solver for ARC-AGI-2 task 58f5dbd5."""
 
 from collections import Counter
 from typing import Dict, List, Tuple
 
-# Typed alias used by the DSL lambda representation
 Grid = List[List[int]]
 
 
-# Pre-computed 3×3 interior patterns keyed by (rows, cols, row_idx, col_idx).
-# Each pattern is used inside a 5×5 digit tile with a solid border.
 PATTERNS = {
     (3, 1, 0, 0): ((0, 0, 0), (1, 0, 1), (0, 0, 0)),
     (3, 1, 1, 0): ((0, 1, 0), (0, 0, 1), (0, 1, 1)),
@@ -135,7 +131,6 @@ def _render(
     return out
 
 
-# --- DSL wrapper helpers to match the Lambda Representation ---
 def findSignificantColors(grid: Grid) -> Tuple[int, List[int]]:
     return _significant_colors(grid)
 
@@ -145,7 +140,6 @@ def computeCentroids(grid: Grid, colours: List[int]) -> Dict[int, Tuple[float, f
 
 
 def inferBoardLayout(centroids: Dict[int, Tuple[float, float]]) -> Tuple[int, int]:
-    # choose layout using only centroids mapping; derive color list from keys
     return _choose_arrangement(list(centroids.keys()), centroids)
 
 

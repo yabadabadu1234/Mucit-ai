@@ -1,4 +1,3 @@
-"""Abstractions explored while solving ARC task 16b78196."""
 
 from __future__ import annotations
 
@@ -71,7 +70,7 @@ def get_components(grid: Grid) -> List[Dict[str, object]]:
 
 def paint_component(target: Grid, top: int, left: int, comp: Dict[str, object]) -> None:
     color = int(comp["color"])
-    for dr, dc in comp["shape"]:  # type: ignore[index]
+    for dr, dc in comp["shape"]:
         target[top + dr][left + dc] = color
 
 
@@ -189,10 +188,10 @@ def arrange_by_width(
     if not components:
         return deep_copy(grid)
 
-    dominant = max(components, key=lambda comp: comp["size"])  # type: ignore[index]
+    dominant = max(components, key=lambda comp: comp["size"])
     output: Grid = [[0] * width for _ in range(height)]
-    for r, c in dominant["cells"]:  # type: ignore[index]
-        output[r][c] = int(dominant["color"])  # type: ignore[index]
+    for r, c in dominant["cells"]:
+        output[r][c] = int(dominant["color"])
 
     others = [comp for comp in components if comp is not dominant]
     wide = [comp for comp in others if int(comp["width"]) >= 5]
@@ -200,7 +199,7 @@ def arrange_by_width(
 
     if wide:
         wide_sorted = reorder_wide_components(wide, tie_break=tie_break)
-        bottom_anchor = int(dominant["top"]) + 1  # type: ignore[index]
+        bottom_anchor = int(dominant["top"]) + 1
         stack_components(
             output,
             wide_sorted,
@@ -219,7 +218,7 @@ def arrange_by_width(
         mean_left = sum(int(comp["left"]) for comp in ordered) / len(ordered)
         max_width = max(int(comp["width"]) for comp in ordered)
 
-        dominant_bottom = int(dominant["bottom"])  # type: ignore[index]
+        dominant_bottom = int(dominant["bottom"])
 
         if wide:
             column = int(round(mean_left))
@@ -249,10 +248,10 @@ def dominant_only(grid: Grid) -> Grid:
     components = get_components(grid)
     if not components:
         return deep_copy(grid)
-    dominant = max(components, key=lambda comp: comp["size"])  # type: ignore[index]
+    dominant = max(components, key=lambda comp: comp["size"])
     output = [[0] * len(grid[0]) for _ in grid]
-    for r, c in dominant["cells"]:  # type: ignore[index]
-        output[r][c] = int(dominant["color"])  # type: ignore[index]
+    for r, c in dominant["cells"]:
+        output[r][c] = int(dominant["color"])
     return output
 
 
@@ -314,4 +313,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

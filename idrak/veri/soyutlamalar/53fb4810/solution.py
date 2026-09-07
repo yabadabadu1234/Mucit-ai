@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 53fb4810."""
 
 from typing import Callable, Iterable, List, Tuple
 
@@ -13,7 +12,6 @@ def _copy_grid(grid: Grid) -> Grid:
 
 
 def findMixedComponents(grid: Grid) -> List[Component]:
-    """Return all 4-connected components that contain both colours {2,4}."""
     h, w = len(grid), len(grid[0])
     seen = [[False] * w for _ in range(h)]
     targets = {2, 4}
@@ -47,7 +45,6 @@ def findMixedComponents(grid: Grid) -> List[Component]:
 
 
 def tilePatternUpward(canvas: Grid, comp: Component) -> Grid:
-    """Tile the component's 2/4 pattern upward in its column span."""
     result = _copy_grid(canvas)
     rows = [r for r, _, _ in comp]
     cols = [c for _, c, _ in comp]
@@ -70,7 +67,6 @@ def tilePatternUpward(canvas: Grid, comp: Component) -> Grid:
 def fold_repaint(
     canvas: Grid, items: Iterable[Component], update: Callable[[Grid, Component], Grid]
 ) -> Grid:
-    """Functional fold that applies `update` sequentially over items."""
     acc = _copy_grid(canvas)
     for x in items:
         acc = update(acc, x)

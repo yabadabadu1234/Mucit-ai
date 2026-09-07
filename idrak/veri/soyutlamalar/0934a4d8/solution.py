@@ -1,11 +1,9 @@
-"""Solver for ARC-AGI-2 task 0934a4d8 (typed DSL style)."""
 
 from __future__ import annotations
 
 from typing import List, Tuple, NamedTuple
 
 
-# Typed aliases matching the DSL docs
 Grid = List[List[int]]
 Block = Grid
 
@@ -14,7 +12,7 @@ class Candidate(NamedTuple):
     block: Block
     distance: int
     count8: int
-    axis: str  # 'H' or 'V'
+    axis: str
 
 
 def bbox(grid: Grid) -> Tuple[int, int, int, int]:

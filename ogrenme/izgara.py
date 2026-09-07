@@ -1,49 +1,3 @@
-"""Izgara — adaptif B-spline düğümleri ve sembolik regresyon kapanışı.
-
-İki mesele:
-
-**1. Düğüm dejenerasyonu.**  KAN'da düğüm konumları ``t_k`` de
-öğrenilirse, gradyan onları üst üste bindirebilir; o hâlde Cox–de Boor
-paydası ``t_{k+p} − t_k`` sıfırlanır ve temel tanımsız kalır.  Çözüm,
-düğümleri **doğrudan** değil, **artışlarıyla** parametrelemektir:
-
-.. math::  t_{k+1} = t_k + e^{s_k} + \\varepsilon, \\qquad s_k \\in \\mathbb{R}
-
-``e^{s_k} > 0`` olduğundan sıralama **yapı gereği** korunur -- ceza
-terimiyle değil, parametrelemeyle.  ``s_k`` serbestçe öğrenilebilir.
-
-Zincir kuralı burada bir **kuyruk toplamı** içerir:
-
-.. math::  \frac{\partial L}{\partial s_k}
-           = e^{s_k} \sum_{j > k} \frac{\partial L}{\partial t_j}
-
-çünkü ``t_j`` birikimli toplamdır ve ``s_k`` kendisinden sonraki
-**bütün** düğümleri kaydırır.  Kaynak külliyatta yalnız
-``(∂L/∂t_{k+1})·e^{s_k}`` yazılmış; ölçüldü, o hâl katkının
-%78'ini düşürüyor.  Sayısal türevle sağlaması yapılıyor (fark 2e-9).
-
-**2. Bükülme enerjisi.**  Runge salınımını dizginlemek için
-
-.. math::  \\mathcal{E} = \\int_a^b \\bigl(\\phi''(x)\\bigr)^2 dx
-                        = \\mathbf{c}^\\top \\mathbf{S}\\, \\mathbf{c},
-           \\qquad S_{ij} = \\int_a^b B_i''(x) B_j''(x)\\,dx
-
-``S`` **kapalı formda** kurulur: B-spline'ın ikinci türevi yine
-B-spline'dır ve Gauss–Legendre kuralı parça parça **tam** integral
-verir (integrand parça başına polinom olduğundan yeterli düğüm
-sayısıyla hata sıfırdır).  Sayısal türev kullanılmaz.
-
-**3. Sembolik kapanış.**  Öğrenilen bir kenar fonksiyonu ``φ``, küçük
-bir kütüphaneden en iyi **sade** ifadeyle değiştirilmeye çalışılır:
-
-.. math::  f^* = \\arg\\max_{f \\in \\mathrm{Lib}}
-           \\bigl\\{ R(f,\\phi) - \\mu\\,\\mathrm{Uzunluk}(f) \\bigr\\}
-
-``R`` normalize edilmiş bağıntıdır; sadelik cezası olmadan en karmaşık
-aday hep kazanır.  Kapanış **ancak** artık hata eşiği altındaysa kabul
-edilir; aksi hâlde spline olduğu gibi bırakılır -- yani sembolik
-regresyon burada zorlanmıyor.
-"""
 
 from __future__ import annotations
 
@@ -65,19 +19,8 @@ __all__ = [
 ]
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  1. Adaptif düğümler
-# ══════════════════════════════════════════════════════════════════════
-
 def artislardan_dugum(t0: float, s: Sequence[float],
                       eps: float = 1e-6) -> np.ndarray:
-    """``t_{k+1} = t_k + e^{s_k} + ε`` — sıralama YAPI GEREĞİ korunur.
-
-    Sıralamayı bir ceza terimiyle *teşvik etmek* ile parametrelemeyle
-    *garanti etmek* farklı şeylerdir: ceza ihlal edilebilir, yapı
-    edilemez.  ``ε > 0`` alt sınırı, ``s_k → −∞`` iken bile paydanın
-    sıfırlanmamasını sağlar.
-    """
     s = np.asarray(s, float)
     if eps <= 0:
         raise ValueError("ε > 0 olmalı")
@@ -86,45 +29,22 @@ def artislardan_dugum(t0: float, s: Sequence[float],
 
 
 def dugum_gecerli_mi(t: np.ndarray, eps: float = 0.0) -> bool:
-    """``t_0 < t_1 < … < t_G`` ve her aralık ``> ε``."""
     t = np.asarray(t, float)
     return bool(np.all(np.diff(t) > eps))
 
 
 def artis_gradyani(dL_dt: Sequence[float], s: Sequence[float],
                    eps: float = 1e-6) -> np.ndarray:
-    """``∂L/∂s_k = e^{s_k} · Σ_{j>k} ∂L/∂t_j``.
-
-    ``t_j`` birikimli toplam olduğundan ``s_k``, kendisinden **sonraki
-    bütün** düğümleri kaydırır; zincir kuralı bu yüzden bir kuyruk
-    toplamı içerir.  Yalnız ``∂L/∂t_{k+1}`` almak (kaynaktaki 21.3
-    numaralı formülün yazılışı) katkının çoğunu düşürür.
-    """
     dL_dt = np.asarray(dL_dt, float)
     s = np.asarray(s, float)
     if dL_dt.size != s.size + 1:
         raise ValueError("dL/dt, s'den bir uzun olmalı")
-    kuyruk = np.cumsum(dL_dt[::-1])[::-1]          # Σ_{j≥k} ∂L/∂t_j
+    kuyruk = np.cumsum(dL_dt[::-1])[::-1]
     return np.exp(np.clip(s, -700, 700)) * kuyruk[1:]
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  2. Bükülme enerjisi
-# ══════════════════════════════════════════════════════════════════════
-
 def bukulme_dizeyi(G: int, k: int, alt: float = -1.0, ust: float = 1.0,
                    dugum_sayisi: int = 8) -> np.ndarray:
-    """``S_ij = ∫ B_i''(x) B_j''(x) dx`` — parça parça Gauss–Legendre.
-
-    ``B_i''`` her düğüm aralığında ``k−2`` dereceli bir polinomdur, o
-    yüzden çarpım ``2(k−2)`` derecelidir.  ``n`` düğümlü Gauss–Legendre
-    ``2n−1`` dereceye kadar **tam**tır; ``n ≥ k−1`` seçilirse integral
-    yaklaşık değil, tamdır.  ``dugum_sayisi`` varsayılanı bunu bolca
-    aşar.
-
-    ``k < 2`` iken ikinci türev sıfırdır ve ``S = 0`` döner (hata
-    değil: sabit ve doğrusal parçaların bükülmesi yoktur).
-    """
     if k < 0:
         raise ValueError("derece negatif olamaz")
     n_temel = G + k
@@ -133,14 +53,12 @@ def bukulme_dizeyi(G: int, k: int, alt: float = -1.0, ust: float = 1.0,
     d = dugum_dizisi(G, k, alt, ust)
     dugum, agirlik = np.polynomial.legendre.leggauss(dugum_sayisi)
     S = np.zeros((n_temel, n_temel))
-    # Yalnız TAM DESTEKLENEN aralıklar: [t_k, t_{n}]
     kenarlar = d[k:d.size - k]
     for a, b in zip(kenarlar[:-1], kenarlar[1:]):
         if b <= a:
             continue
         orta, yari = (a + b) / 2, (b - a) / 2
         x = orta + yari * dugum
-        # İkinci türev: türev temelinin türevi (iki kere kapalı form)
         D2 = _ikinci_turev_temeli(x, d, k)
         S += (D2 * (agirlik * yari)[:, None]).T @ D2
     return S
@@ -148,12 +66,6 @@ def bukulme_dizeyi(G: int, k: int, alt: float = -1.0, ust: float = 1.0,
 
 def _ikinci_turev_temeli(t: np.ndarray, dugumler: np.ndarray,
                          k: int) -> np.ndarray:
-    """``B''_{i,k}`` — türev kuralını iki kere uygulayarak.
-
-    ``B'_{i,k} = k(B_{i,k-1}/(t_{i+k}−t_i) − B_{i+1,k-1}/(t_{i+k+1}−t_{i+1}))``
-    özdeşliği ``k−1`` derecede tekrar uygulanır.  Sayısal türev
-    alınmaz; netice kapalı formdur.
-    """
     d = np.asarray(dugumler, float)
     t = np.atleast_1d(np.asarray(t, float))
     if k < 2:
@@ -176,7 +88,6 @@ def _ikinci_turev_temeli(t: np.ndarray, dugumler: np.ndarray,
 
 
 def bukulme_enerjisi(c: np.ndarray, S: np.ndarray) -> float:
-    """``E = cᵀSc`` — skalerdir ve ``S`` PSD olduğundan negatif olamaz."""
     c = np.asarray(c, float).reshape(-1)
     return float(c @ (np.asarray(S, float) @ c))
 
@@ -184,12 +95,6 @@ def bukulme_enerjisi(c: np.ndarray, S: np.ndarray) -> float:
 def duzenli_uydur(t: np.ndarray, y: np.ndarray, G: int, k: int,
                   lam: float = 0.0, alt: float = -1.0,
                   ust: float = 1.0) -> Dict[str, object]:
-    """``min_c ‖Bc − y‖² + λ·cᵀSc`` — kapalı form.
-
-    Normal denklemler ``(BᵀB + λS)c = Bᵀy``.  ``λ = 0``da ve az veriyle
-    ``BᵀB`` tekil olabilir; o hâlde en küçük norm çözümü alınır ve
-    **öyle olduğu bildirilir**, sessizce bir şey uydurulmaz.
-    """
     t = np.atleast_1d(np.asarray(t, float))
     y = np.asarray(y, float).reshape(-1)
     d = dugum_dizisi(G, k, alt, ust)
@@ -208,11 +113,6 @@ def duzenli_uydur(t: np.ndarray, y: np.ndarray, G: int, k: int,
     }
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  3. Sembolik kapanış
-# ══════════════════════════════════════════════════════════════════════
-
-#: ``(ad, fonksiyon, AST uzunluğu)`` — uzunluk sadelik cezasıdır.
 SEMBOL_KUTUPHANESI: Tuple[Tuple[str, Callable[[np.ndarray], np.ndarray],
                                 int], ...] = (
     ("0", lambda x: np.zeros_like(x), 1),
@@ -231,13 +131,6 @@ SEMBOL_KUTUPHANESI: Tuple[Tuple[str, Callable[[np.ndarray], np.ndarray],
 
 
 def bagintili_olcut(f: np.ndarray, g: np.ndarray) -> float:
-    """``R = ⟨f,g⟩/(‖f‖‖g‖)`` — sabit fonksiyonda 0.
-
-    Sabit bir aday her fonksiyonla "mükemmel uyumlu" görünebilir;
-    ortalama çıkarılmadan bağıntı bunu ödüllendirir.  Burada
-    ortalamalar çıkarılıp Pearson alınır, ve payda sıfırsa (sabit)
-    **0** döner -- yani sabit aday hiçbir zaman kazanamaz.
-    """
     f = np.asarray(f, float).reshape(-1)
     g = np.asarray(g, float).reshape(-1)
     df, dg = f - f.mean(), g - g.mean()
@@ -250,16 +143,6 @@ def bagintili_olcut(f: np.ndarray, g: np.ndarray) -> float:
 def sembolik_kapanis(x: np.ndarray, phi: np.ndarray, mu: float = 0.02,
                      esik: float = 0.02
                      ) -> Dict[str, object]:
-    """En iyi **sade** sembolik adayı seç -- kabul şartıyla.
-
-    Her aday için en iyi ``a·f(x) + b`` afin ölçek kapalı formda
-    bulunur (aday ile ``φ`` arasındaki ölçek farkı adayın suçu
-    değildir), sonra puan ``R − μ·uzunluk`` ile sıralanır.
-
-    **Kabul şartı ayrıdır:** en iyi adayın bağıl artığı ``esik``in
-    altındaysa kapanış yapılır, değilse ``kabul=False`` döner ve
-    spline olduğu gibi kalır.  Sembolik regresyon zorlanmaz.
-    """
     x = np.asarray(x, float).reshape(-1)
     phi = np.asarray(phi, float).reshape(-1)
     olcek = float(np.sqrt(np.mean((phi - phi.mean()) ** 2)))
@@ -291,10 +174,6 @@ def sembolik_kapanis(x: np.ndarray, phi: np.ndarray, mu: float = 0.02,
     }
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Gösterim
-# ══════════════════════════════════════════════════════════════════════
-
 def _gosterim() -> str:
     s: List[str] = []
     rng = np.random.default_rng(0)
@@ -302,7 +181,7 @@ def _gosterim() -> str:
     s.append("=== Adaptif düğümler: sıralama YAPI GEREĞİ korunuyor ===")
     for tohum in range(4):
         r = np.random.default_rng(tohum)
-        sv = r.normal(0, 3.0, 7)          # vahşi parametreler
+        sv = r.normal(0, 3.0, 7)
         t = artislardan_dugum(-1.0, sv)
         s.append(f"  tohum {tohum}: s ∈ [{sv.min():+.2f},{sv.max():+.2f}]"
                  f"  → düğüm aralığı [{t.min():.3f},{t.max():.3f}]"
@@ -317,12 +196,11 @@ def _gosterim() -> str:
     sv = np.array([0.1, -0.3, 0.5])
     dL_dt = np.array([1.0, 2.0, 3.0, 4.0])
     g = artis_gradyani(dL_dt, sv)
-    naif = np.exp(sv) * dL_dt[1:]           # kaynaktaki yazılış
+    naif = np.exp(sv) * dL_dt[1:]
     s.append(f"  doğru  ∂L/∂s = {np.array2string(g, precision=4)}")
     s.append(f"  naif   ∂L/∂s = {np.array2string(naif, precision=4)}")
     s.append(f"  bağıl fark: {np.max(np.abs(g - naif) / np.abs(g)):.2%}"
              "  — kuyruk toplamı düşürülünce katkının çoğu kayboluyor")
-    # Sayısal sağlama
     def L(sv_):
         return float(np.sum(dL_dt * artislardan_dugum(0.0, sv_)))
     h = 1e-6
@@ -422,11 +300,6 @@ def _gosterim() -> str:
     return "\n".join(s)
 
 
-
-# ====================================================================
-#  KÜME 8: simgesel bağlanım -- kapalı biçimli ifade aramak
-# ====================================================================
-
 Terim = Tuple[str, Callable[[np.ndarray], np.ndarray]]
 
 
@@ -453,14 +326,6 @@ def _uydur(
 
 
 def bic(rss: float, m: int, k: int, taban: float = 1e-20) -> float:
-    """BIC; ``taban`` sayısal gürültü zeminidir.
-
-    Tabansız hâlde temiz veride iki farklı model ``RSS ≈ 10⁻²⁸`` ve
-    ``10⁻²⁹`` verir; bu fark ANLAMSIZDIR (yuvarlama), fakat ``m·log RSS``
-    onu ``m·log 10`` kadar büyütüp fazla terimli modeli seçtirir. Ölçüm
-    sırasında tam olarak bu oldu: 2 terimli doğru model yerine 3 terimli
-    bir model kazandı. Taban, kayan noktalı sıfırı sıfır saymaktır.
-    """
     return m * np.log(max(rss, taban * m) / m) + k * np.log(m)
 
 
@@ -470,7 +335,6 @@ def ara(
     kutuphane: Sequence[Terim] | None = None,
     azami_terim: int = 3,
 ) -> Dict[str, object]:
-    """Kütüphanenin ``≤ azami_terim`` boyutlu bütün alt kümelerini tarar."""
     kutuphane = list(kutuphane or varsayilan_kutuphane())
     m = len(x)
     en_iyi = None
@@ -485,7 +349,7 @@ def ara(
             if en_iyi is None or skor < en_iyi[0]:
                 en_iyi = (skor, adlar, kat, rss)
     sirali.sort(key=lambda t: t[0])
-    skor, adlar, kat, rss = en_iyi  # type: ignore[misc]
+    skor, adlar, kat, rss = en_iyi
     return {
         "formul": " + ".join("%.4f·%s" % (c, a) for c, a in zip(kat, adlar)),
         "terimler": adlar,
@@ -497,7 +361,6 @@ def ara(
 
 
 def temiz_veride_bulunuyor_mu() -> Dict[str, object]:
-    """``y = 2x² − 3sin x``: doğru terim kümesi tam olarak bulunmalı."""
     x = np.linspace(-2, 2, 200)
     y = 2.0 * x * x - 3.0 * np.sin(x)
     r = ara(x, y)
@@ -513,8 +376,6 @@ def temiz_veride_bulunuyor_mu() -> Dict[str, object]:
 
 
 def ceza_fazla_terimi_eliyor_mu(gurultu: float = 0.05, tohum: int = 0) -> Dict[str, object]:
-    """Gürültülü veride: cezasız ölçüt (RSS) hep en büyük modeli seçer,
-    BIC ise doğru boyutta durur."""
     rng = np.random.default_rng(tohum)
     x = np.linspace(-2, 2, 200)
     y = 2.0 * x * x - 3.0 * np.sin(x) + gurultu * rng.normal(size=x.size)
@@ -540,13 +401,6 @@ def ceza_fazla_terimi_eliyor_mu(gurultu: float = 0.05, tohum: int = 0) -> Dict[s
 
 
 def kutuphane_disinda_ne_oluyor() -> Dict[str, object]:
-    """**Zaaf.** Hedef ``y = log(2+x)``; kütüphanede logaritma YOK.
-
-    Usul yine de bir formül döndürür ve o formül ARALIKTA iyi görünür.
-    Yanlışlık ancak DIŞARIDA ortaya çıkar. Yani simgesel bağlanımın
-    çıktısı 'kanun' diye okunamaz; ancak kütüphane doğru kurulduysa
-    kanundur.
-    """
     x = np.linspace(-1, 1, 200)
     y = np.log(2.0 + x)
     r = ara(x, y)
@@ -554,7 +408,7 @@ def kutuphane_disinda_ne_oluyor() -> Dict[str, object]:
     A_ic = np.stack([kut[a](x) for a in r["terimler"]], axis=1)
     ic_hata = float(np.sqrt(np.mean((A_ic @ r["katsayilar"] - y) ** 2)))
 
-    xd = np.linspace(3, 8, 200)          # eğitim aralığının DIŞI
+    xd = np.linspace(3, 8, 200)
     yd = np.log(2.0 + xd)
     A_dis = np.stack([kut[a](xd) for a in r["terimler"]], axis=1)
     dis_hata = float(np.sqrt(np.mean((A_dis @ r["katsayilar"] - yd) ** 2)))
@@ -562,7 +416,6 @@ def kutuphane_disinda_ne_oluyor() -> Dict[str, object]:
         "bulunan": r["formul"],
         "aralik_ici_hata": ic_hata,
         "aralik_disi_hata": dis_hata,
-        # hedefin aralık içi salınımı ~1.1; %1'in altı "iyi görünüyor"dur
         "hedef_genligi": float(np.max(y) - np.min(y)),
         "icerde_iyi_gorunuyor": bool(ic_hata < 0.01 * (np.max(y) - np.min(y))),
         "disarida_bozuluyor": bool(dis_hata > 100 * max(ic_hata, 1e-12)),

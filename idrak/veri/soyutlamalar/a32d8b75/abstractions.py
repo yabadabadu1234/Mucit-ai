@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task a32d8b75."""
 
 from __future__ import annotations
 
@@ -25,12 +24,10 @@ def _trim_right(grid: Grid, offset: int = 6) -> Grid:
 
 
 def abstraction_identity(grid: Grid) -> Grid:
-    """Naïve baseline: drop the instruction columns and keep the rest."""
     return _trim_right(grid)
 
 
 def abstraction_block_map_no_tail(grid: Grid) -> Grid:
-    """Apply the 3-row instruction mapping but ignore leftover tail rows."""
     if not grid:
         return []
 
@@ -53,7 +50,6 @@ def abstraction_block_map_no_tail(grid: Grid) -> Grid:
 
 
 def abstraction_block_map_full(grid: Grid) -> Grid:
-    """Final hybrid that also handles the leftover tail rows."""
     if not grid:
         return []
 

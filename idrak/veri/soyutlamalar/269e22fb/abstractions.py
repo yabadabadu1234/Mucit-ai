@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 269e22fb."""
 
 from __future__ import annotations
 
@@ -15,10 +14,10 @@ SOLVER_PATH = HERE / "arc2_samples" / "269e22fb.py"
 
 def _load_solver_module():
     spec = importlib.util.spec_from_file_location("task269e22fb_solver", SOLVER_PATH)
-    if spec is None or spec.loader is None:  # pragma: no cover - defensive
+    if spec is None or spec.loader is None:
         raise RuntimeError("unable to load solver module")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)  # type: ignore[assignment]
+    spec.loader.exec_module(module)
     return module
 
 
@@ -68,15 +67,15 @@ def _try_alignment(grid: List[List[int]], allow_swap: bool) -> Optional[Dict[str
 
 def _assemble_from_alignment(alignment: Dict[str, object]) -> List[List[int]]:
     base = solver_module.deep_copy(BASE_PATTERN)
-    r, c = alignment["position"]  # type: ignore[index]
-    pattern: List[List[int]] = alignment["pattern"]  # type: ignore[assignment]
+    r, c = alignment["position"]
+    pattern: List[List[int]] = alignment["pattern"]
     h, w = len(pattern), len(pattern[0])
     for i in range(h):
         base[r + i][c : c + w] = pattern[i][:]
 
-    inverse_name = INVERSE[alignment["transform"]]  # type: ignore[index]
+    inverse_name = INVERSE[alignment["transform"]]
     out_bin = solver_module.apply_named_transform(base, inverse_name)
-    reverse_map = {binary: color for color, binary in alignment["mapping"].items()}  # type: ignore[attr-defined]
+    reverse_map = {binary: color for color, binary in alignment["mapping"].items()}
     return [[reverse_map[value] for value in row] for row in out_bin]
 
 
@@ -159,4 +158,3 @@ def evaluate_abstractions() -> None:
 
 if __name__ == "__main__":
     evaluate_abstractions()
-

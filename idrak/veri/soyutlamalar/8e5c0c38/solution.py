@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task 8e5c0c38 (evaluation split).
-
-Typed-DSL shaped: choose a best horizontal mirror axis per colour by minimal
-deletions and trim asymmetric pixels using a fold-style repaint.
-"""
 
 from __future__ import annotations
 

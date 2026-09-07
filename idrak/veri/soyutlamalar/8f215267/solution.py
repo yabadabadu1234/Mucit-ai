@@ -1,28 +1,13 @@
-"""Solver for ARC task 8f215267.
-
-The puzzle grids are composed of several stacked rectangular frames (objects).
-Each frame must gain a set of vertical "stripes" of its own colour inside the
-frame, while the noisy pattern to the right of the frame is cleared back to the
-background colour.  The number of stripes is encoded by that noisy pattern: the
-right-hand patch is drawn from a small, discrete set of motifs.  We recognise
-these motifs via a canonical form and map them to a stripe count; the counts
-then determine which interior columns in the frame are repainted.
-"""
 
 from __future__ import annotations
 
 from collections import Counter
 from typing import Callable, Dict, Iterable, List, Sequence, Tuple
 
-# DSL-friendly type aliases
 Grid = List[List[int]]
-Frame = Tuple[int, int, int, int, int]  # (color, rmin, rmax, cmin, cmax)
+Frame = Tuple[int, int, int, int, int]
 
 
-# Canonical patch --> stripe count mapping derived from the training puzzles.
-# The canonical encoding uses 0 for background, -1 for the block colour, and
-# 1, 2, ... for the other colours found in the right-hand patch (assigned in
-# order of first appearance per patch).
 PATCH_STRIPES: Dict[Tuple[Tuple[int, ...], ...], int] = {
     (
         (0, 0, 0, 1, 1, 0, 0, 0, 2, 2),
@@ -242,13 +227,10 @@ def lookupStripeCount(patch: Tuple[Tuple[int, ...], ...]) -> int:
 def clearAndPaintStripes(canvas: Grid, frame: Frame, stripe_count: int) -> Grid:
     color, rmin, rmax, cmin, cmax = frame
     background = _most_common_color(canvas)
-    # Start from a copy (purity)
     out = [row[:] for row in canvas]
-    # Clear interior
     for r in range(rmin + 1, rmax):
         for c in range(cmin + 1, cmax):
             out[r][c] = background
-    # Paint stripes on the horizontal midline inside the frame
     inner_width = cmax - cmin - 1
     candidates = _candidate_positions(inner_width)
     if not candidates or stripe_count <= 0:
@@ -268,18 +250,15 @@ def clearNoise(canvas: Grid, frames: List[Frame]) -> Grid:
     out = [row[:] for row in canvas]
     height = len(out)
     width = len(out[0]) if height else 0
-    # Clear everything to the right of the rightmost frame edge
     right_limit = max(cmax for (_color, _rmin, _rmax, _cmin, cmax) in frames)
     for r in range(height):
         for c in range(right_limit + 1, width):
             out[r][c] = background
-    # Build inside mask
     inside = [[False] * width for _ in range(height)]
     for (_color, rmin, rmax, cmin, cmax) in frames:
         for r in range(rmin, rmax + 1):
             for c in range(cmin, cmax + 1):
                 inside[r][c] = True
-    # Clear any non-background outside frames
     for r in range(height):
         for c in range(width):
             if not inside[r][c] and out[r][c] != background:

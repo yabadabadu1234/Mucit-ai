@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 332f06d7 (evaluation split)."""
 
 from __future__ import annotations
 
@@ -6,7 +5,7 @@ from typing import Iterable, List, Sequence, Tuple
 
 
 Grid = List[List[int]]
-Block = Tuple[int, int, int, int]  # (r0, c0, r1, c1)
+Block = Tuple[int, int, int, int]
 
 DIRECTIONS: Tuple[Tuple[int, int, str], ...] = (
     (-1, 0, "up"),
@@ -50,8 +49,6 @@ def _adjacency(grid: Grid, cells: Iterable[Tuple[int, int]], target: int = 3) ->
     return adj
 
 
-# === DSL helpers (typed names) ===
-
 def locateZeroBlock(grid: Grid) -> Block:
     zeros = _collect(grid, 0)
     return _bbox(zeros) if zeros else (0, 0, -1, -1)
@@ -67,7 +64,6 @@ def collectCandidateBlocks(grid: Grid) -> List[Tuple[Block, int]]:
     ones = _collect(grid, 1)
     twos = _collect(grid, 2)
     if not zeros or not ones or not twos:
-        # Provide a safe fallback candidate so selection does not crash.
         two_box = _bbox(twos) if twos else (0, 0, -1, -1)
         return [(two_box, -10)]
 
@@ -88,7 +84,6 @@ def collectCandidateBlocks(grid: Grid) -> List[Tuple[Block, int]]:
     out: List[Tuple[Block, int]] = []
     for top in range(h - zero_h + 1):
         for left in range(w - zero_w + 1):
-            # window contents
             vals = [grid[r][c] for r in range(top, top + zero_h) for c in range(left, left + zero_w)]
             if len(set(vals)) != 1 or vals[0] != 1:
                 continue
@@ -104,13 +99,11 @@ def collectCandidateBlocks(grid: Grid) -> List[Tuple[Block, int]]:
             improvement = int(color2_dist_one - dist_one)
             out.append((box, improvement))
 
-    # Ensure a fallback exists for max(); two_box with poor score.
     out.append((two_box, -10))
     return out
 
 
 def scoreCandidates(zero_block: Block, candidates: List[Tuple[Block, int]]) -> List[Tuple[Block, int]]:
-    # Scoring is precomputed during candidate collection; pass through.
     return candidates
 
 
@@ -127,7 +120,6 @@ def relocateZeroBlock(grid: Grid, zero_block: Block, target_block: Block) -> Gri
     return out
 
 
-# === Main (must match abstractions.md lambda exactly) ===
 def solve_332f06d7(grid: Grid) -> Grid:
     zero_block = locateZeroBlock(grid)
     candidates = collectCandidateBlocks(grid)

@@ -1,58 +1,3 @@
-"""
-DOLAŞIKLIK NİZAMI -- Dosya 1'in hükmü **ölçülür**, iddia edilmez.
-
-===================================================================
-NİÇİN
-===================================================================
-
-Kütük H115'te teşhis kondu ve teşhis kötüydü::
-
-    χ:   8 → Schmidt 8      entropi ≈ ln 8
-        16 → Schmidt 16     entropi ≈ ln 16
-        32 → Schmidt 32     entropi ≈ ln 32
-        64 → Schmidt 64     entropi ≈ ln 64
-
-Yani Schmidt rütbesi **her bütçede doyuyor**. Akış âzamî (hacim
-kanunu) dolaşıklık üretiyor. Bunun neticesi H94 ve H105'i birden
-açıklar: âzamî dolaşık bir durumda küçük her bloğun marjinali
-düzgündür -- yani hüküm alanları YAPISIZ okunur ve hiçbir uzuv
-"kalp" gibi davranamaz.
-
-Dosya 1 buna çare olarak **dolaşıklık nizamı** koyuyor: her meleke
-kendi sınıfına göre bir χ tavanıyla koşsun; kurucular dolaşıklık
-kursun, çözücüler çözsün.
-
-===================================================================
-TENKİT -- baştan ve açıkça
-===================================================================
-
-Dosya 1 "Tecrit χ→1", "Tasdik χ=1", "İspat mutlak çözücü" diyor.
-Sabit bir **üniter** kapı Schmidt rütbesini şartsız düşüremez
-(H107'de ispatlandı: üniterlik normu korur, dönme monoton değildir).
-Tablo bir üniter iddiası olarak okunursa yanlıştır.
-
-Doğru okunuşu **kesme cetveli**dir. Kesme zaten üniter değildir;
-yaklaşıklığın ta kendisidir. ``Yazmac.bag_tavan`` o cetveli taşır ve
-``QMeleke.kosu`` her melekede kurup iade eder.
-
-===================================================================
-NE ÖLÇÜLÜR
-===================================================================
-
-Nizam **kapatılabilir** (``qmeleke.nizami_ac(False)``), çünkü
-kapatılamayan bir tedbirin faydası ölçülemez (H90). İki koşu aynı
-tohumla, aynı girdiyle, aynı χ ile yapılır ve şu dört sayı kıyaslanır:
-
-1. **Schmidt rütbesi** -- doyuyor mu, yoksa χ'nin altında mı kalıyor?
-2. **Entropi** -- ``ln χ``ye yapışık mı?
-3. **Sadakat** (``Π tutulan/tam``) -- nizam ne kadar bilgi attı?
-4. **Beyan yapısı** -- kelam dağılımının düzgünden sapması. Asıl mesele
-   budur: dolaşıklığı kısmak, dağılımı YAPILANDIRDIYSA işe yaramıştır;
-   yalnız bilgi attıysa yaramamıştır.
-
-Dördüncüsü hakemdir. Nizam entropiyi düşürüp beyanı da düzleştiriyorsa
-kazanılan bir şey yoktur ve rapor bunu **böyle** yazar.
-"""
 from __future__ import annotations
 
 from typing import Dict, List, Optional
@@ -67,12 +12,6 @@ __all__ = ["nizam_olcumu", "rapor"]
 
 
 def _sapma(P: np.ndarray) -> float:
-    """Dağılımın **düzgünden** sapması: ``½Σ|P − 1/k|`` (toplam değişinti).
-
-    ``0`` = tam düzgün (model konuşamıyor), ``1``e yaklaştıkça
-    yoğunlaşmış. Varyans yerine bu kullanılır çünkü ``[0,1]``dedir ve
-    ``k`` değişse de kıyas edilebilir.
-    """
     P = np.asarray(P, float).ravel()
     k = P.size
     return 0.5 * float(np.sum(np.abs(P - 1.0 / k)))
@@ -92,39 +31,10 @@ def _tek_kosu(acik: bool, chi: int, tohum: int, n: int, d_in: int,
         E = rng.normal(size=(n, d_in))
         nefs = QNefs(tohum, QAyar(tohum=tohum))
         q = nefs.idrak_et(E)
-        # **ÖLÇÜ ALETİ DÜZELTİLDİ (kütük H173).** Evvelce burada
-        # ``dolasiklik_entropisi()`` varsayılanıyla çağrılıyordu: kesit
-        # ``n//2``, pencere 24. İkisi de zincirin UZUNLUĞUNA bağlıdır,
-        # ölçülmek istenen şeye değil. Ceride bölgeleri eklenip zincir
-        # 67'den 116'ya çıkınca kesit 33'ten 58'e kaydı, pencere de
-        # tamamen hüküm bloğunun içine düştü -- ve ``dolasiklik_entropisi``
-        # pencerenin ilk yuvasını sol uçmuş gibi aldığı için okuma
-        # **sahte** oldu: aynı fizikî durum için nizam açıkken 0,0802
-        # (bölgesiz) ve 2,0393 (bölgeli) okundu.
-        #
-        # Doğrusu adı olan bir kesitte, pencereyi zincirin başına kadar
-        # açarak ölçmektir. Netice o zaman bölgelerden bağımsız ve
-        # **daha keskin** çıkar; H115'in hükmü zayıflamaz, kuvvetlenir::
-        #
-        #     nizam kapalı : S = 2,0794 = ln 8  (schmidt 8, doygun)
-        #     nizam açık   : S = 1,3863 = ln 4  (schmidt 4, doygunluk ½)
-        #
-        # ve bu iki sayı bölge açık/kapalı **birebir aynıdır**.
         kesit = q.taksimat.kesitler().get("veri|hukum", q.n // 2)
         e = q.y.dolasiklik_entropisi(kesit=int(kesit), pencere=int(kesit))
         P = _beyan(q)
 
-        # --- GİRDİ HASSASİYETİ -- bu ölçütün hakemi budur.
-        #
-        # Nizam beyanı yapılandırıyor görünebilir; fakat kesme bilgiyi
-        # atarak da yapılandırır. Atılan bilgi GİRDİNİN kendisiyse
-        # netice sahtedir: model her girdiye aynı şeyi söyler ve
-        # "yapılanmış" dağılım yalnız bir sabittir.
-        #
-        # Onun için ``girdi_sayisi`` ayrı girdi koşturulur ve
-        # beyanlarının birbirinden ORTALAMA toplam değişinti mesafesi
-        # ölçülür. Yüksekse model girdiyi görüyor; sıfıra yakınsa
-        # görmüyor ve nizam **zarar** vermiştir.
         beyanlar = [P]
         for t in range(1, girdi_sayisi):
             r2 = np.random.default_rng(tohum + 1000 * t)
@@ -154,7 +64,6 @@ def _tek_kosu(acik: bool, chi: int, tohum: int, n: int, d_in: int,
 
 def nizam_olcumu(chiler=(8, 16, 32), tohum: int = 0, n: int = 8,
                  d_in: int = 12) -> Dict[str, List[Dict[str, float]]]:
-    """Nizam **açık** ve **kapalı** koşuları, her χ için."""
     return {
         "kapalı": [_tek_kosu(False, c, tohum, n, d_in) for c in chiler],
         "açık": [_tek_kosu(True, c, tohum, n, d_in) for c in chiler],
@@ -181,7 +90,6 @@ def rapor(chiler=(8, 16, 32), tohum: int = 0, n: int = 8,
                         r["girdi_hassasiyeti"]))
         s.append("")
 
-    # --- HÜKÜM: sayı ne diyorsa o yazılır.
     s.append("HÜKÜM:")
     for k, a in zip(o["kapalı"], o["açık"]):
         chi = int(k["χ"])
@@ -233,5 +141,5 @@ def rapor(chiler=(8, 16, 32), tohum: int = 0, n: int = 8,
     return "\n".join(s)
 
 
-if __name__ == "__main__":   # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

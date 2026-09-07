@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task fc7cae8d (split: evaluation).
-
-Refactored to align the main solver with the typed DSL lambda while
-preserving original behavior and heuristics.
-"""
 
 from __future__ import annotations
 
@@ -28,7 +23,6 @@ class _CompDict(TypedDict):
 
 
 def _largest_component(grid: Grid) -> _CompDict:
-    """Return the largest color component, preferring ones away from the border."""
     height = len(grid)
     width = len(grid[0])
     visited = [[False] * width for _ in range(height)]
@@ -70,7 +64,7 @@ def _largest_component(grid: Grid) -> _CompDict:
                 if best_interior is None or len(cells) > len(best_interior["cells"]):
                     best_interior = component
 
-    return best_interior or best_any  # type: ignore[return-value]
+    return best_interior or best_any
 
 
 def _rotate_ccw(grid: Grid) -> Grid:
@@ -93,8 +87,6 @@ def _maybe_flip_horizontal(grid: Grid, dominant_color: int) -> Grid:
         return [list(reversed(row)) for row in grid]
     return grid
 
-
-# --- DSL-style helpers used by the main lambda-equivalent solver ---
 
 def selectInteriorComponent(grid: Grid) -> Component:
     d = _largest_component(grid)

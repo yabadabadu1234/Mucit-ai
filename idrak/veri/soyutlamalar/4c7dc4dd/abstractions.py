@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 4c7dc4dd."""
 
 from __future__ import annotations
 
@@ -23,11 +22,9 @@ def identity(grid: Grid) -> Grid:
 
 
 def downsample_zero_presence(grid: Grid) -> Grid:
-    """Coarse map where cells indicate whether the block contains a zero."""
 
     height = len(grid)
     width = len(grid[0])
-    # Assume 5×5 coarse view as first attempt.
     out_size = 5
     block_h = height // out_size
     block_w = width // out_size
@@ -45,7 +42,6 @@ def downsample_zero_presence(grid: Grid) -> Grid:
 
 
 def zero_component_glyph(grid: Grid) -> Grid:
-    """Projection implemented by the production solver."""
 
     def find_components(min_size: int = 6) -> List[Tuple[List[Tuple[int, int]], Tuple[int, int, int, int]]]:
         h = len(grid)
@@ -190,4 +186,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

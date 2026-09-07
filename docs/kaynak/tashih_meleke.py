@@ -1,36 +1,3 @@
-"""
-41 Meleke, reel operatörler, dalga bükümü, asgarî arama, hudutsuzluk ve
-veri akış hızı risalelerinin tashih cetveli.
-
-:mod:`tashih_kuantum` ile aynı usul: her düzeltme bir **veri** kaydıdır,
-kaynağa birebir uygulanır, tam bir kere eşleştiği sınanır, cetvel elle
-değil kayıttan üretilir.
-
-    python3 docs/kaynak/tashih_meleke.py            # tashihli nüshalar
-    python3 docs/kaynak/tashih_meleke.py --cetvel   # cetvel
-
-**Ölçüt aynı:** yalnız *gösterilebilir* hatalar.  Üslûp tercihi ve
-modelleme seçimi hata sayılmadı.  Buradaki kayıtların çoğu makine ile
-sağlanmaktadır; hangi testin hangi tashihi tarttığı ``sağlama``
-alanında yazılıdır.
-
-**Kaynağın doğru yazdığı, dokunulmayan yerler** (ölçülerek teyit edildi;
-tashih cetveli yalnız yanlışları saymamalı, doğruları da tanımalı):
-
-* ``ζ₈ + ζ₈⁷ = √2`` ve ``ζ₈² = i`` -- Galois genişlemesi doğru kurulmuş.
-* RHT ``(1/√N)[cas(2πjk/N)]`` gerçekten diktir, simetriktir ve
-  ``RHT² = I``dır (ölçüldü: ``N=64``te 1.3e-14).
-* ``Û_R = cos(Ht)I + sin(Ht)J``, ``H_R = [[A,−B],[B,A]]`` blok biçimi
-  için **doğrudur** -- çünkü o biçim ``J`` ile sıra değiştirir
-  (ölçüldü: ``[J,H_R] = 0.0``, cos/sin ile üstel farkı 1.2e-15).
-* ``m ≈ (π/4)√(2^N/K)`` Grover tur sayısı doğru; kusur ``K``nın
-  bilinmemesindedir (M18).
-* ``T ≥ ħ·max|⟨E₁|dH/dt|E₀⟩| / g_min²`` adiyabatik ölçütü doğru yazılmış.
-* L4 GPU raporunun **bütün aritmetiği doğrudur** (ölçüldü: 968 TFLOPS ×
-  0.65 = 629.2 TFLOPS; ``D=4096``te 90·D² = 1.51 GFLOP/token →
-  416.7 bin token/sn → 1.67 MB/sn; ``D=512``de 106.7 MB/sn).  Eksiği
-  bir hata değil, yazılmamış bir şarttır (M23).
-"""
 from __future__ import annotations
 
 import os
@@ -61,8 +28,7 @@ class Tashih:
     eski: str
     yeni: str
     sebep: str
-    tur: str      # derleme | uniterlik | cebir | isaret | mantik |
-                  # aritmetik | boyut | eksik_sart | terim
+    tur: str
     saglama: Optional[str] = None
 
 
@@ -73,12 +39,6 @@ def _t(no, yer, baslik, dosyalar, eski, yeni, sebep, tur, saglama=None):
     T.append(Tashih(no, yer, baslik, tuple(dosyalar), eski, yeni,
                     sebep, tur, saglama))
 
-
-# =====================================================================
-#  M1-M6: derlemeyi kıran bozukluklar
-# =====================================================================
-# Yedi dosyanın DÖRDÜ hiç derlenmiyor. ``tex_denetle.py`` bulguları:
-# dalga_bukum 3, asgari_arama 4, veri_akis 4, reel_meleke 6.
 
 _t(1, "§FNO-KAN büküm", "Ortam kapanışı bozuk: \\end{align\">",
    [BUKUM],
@@ -160,10 +120,6 @@ _t(8, "§Reel çakışma", "Ortam kapanışı bozuk: \\end{equation\">",
    "Bkz. M5.",
    "derleme", "test_reel_meleke_derleniyor"),
 
-
-# =====================================================================
-#  M9-M12: üniterlik iddiaları (kapı olmayan şeye kapı denmesi)
-# =====================================================================
 
 _t(9, "§8 Tenakuz", "Householder yansıması durumun TAMAMINI negatiflemez",
    [MELEKE],
@@ -253,10 +209,6 @@ _t(13, "§11 Şek-Zan-Yakîn", "Yazılan operatör üniter değil, tabanı da tu
    "uniterlik", "test_sek_zan_yakin_uniter_degil"),
 
 
-# =====================================================================
-#  M14-M16: grup ile cebrin karıştırılması, çarpım-üstel
-# =====================================================================
-
 _t(14, "§Komütasyon bağıntıları",
    "Yapı sabitleri cebir için geçerlidir, grup elemanları için değil",
    [MELEKE],
@@ -313,10 +265,6 @@ _t(16, "§Usul (küllî idrak devresi)",
    "cebir", "test_carpim_usteli_ancak_komut_edende_esit"),
 
 
-# =====================================================================
-#  M17-M19: fizikî imkânsızlık iddiaları
-# =====================================================================
-
 _t(17, "§Sual 2 (haberleşme)",
    "Dolaşıklık uzak melekenin durumunu değiştirmez (no-communication)",
    [MELEKE],
@@ -372,10 +320,6 @@ _t(19, "§Adyabatik netice", "Sonlu $T$'de başarı asla \\%100 değildir",
    "ħ·max|⟨E₁|dH/dt|E₀⟩|/g_min²`` şartı da bunu söyler.",
    "mantik", "test_adiyabatik_sonlu_T_de_tam_degil"),
 
-
-# =====================================================================
-#  M20-M22: dalga bükümü risalesi
-# =====================================================================
 
 _t(20, "§Tünelleme", "Tünelleme olasılığı üsteldir; geçiş $O(1)$ değildir",
    [BUKUM],
@@ -435,10 +379,6 @@ _t(22, "§GRAPE", "GRAPE gradyanı eşitlik değil, $\\mathcal{O}(\\Delta t^2)$ 
    "sebebi aranırken yanlış yerde aranır.",
    "eksik_sart", "test_grape_gradyani_dt_kare_yaklasimi"),
 
-
-# =====================================================================
-#  M23-M26: hudutsuzluk ve rasyonel hesap risalesi
-# =====================================================================
 
 _t(23, "§Nefs-i Müdrike entegrasyonu",
    "$\\sum |c_i|_p^2 = 1$ bir normalizasyon şartı değildir",
@@ -513,10 +453,6 @@ _t(27, "§Atom sayısı kısıtlamasının reddi",
    "eksik_sart", "test_yapili_durumlar_400_kubitin_otesinde"),
 
 
-# =====================================================================
-#  M28-M30: reel operatörler risalesi
-# =====================================================================
-
 _t(28, "§Usul (reel Schrödinger)", "İşaret ters: $-J H_\\mathbb{R}$ olmalı",
    [REEL],
    "\\hbar \\frac{d}{dt} |\\Psi(t)\\rangle_{\\mathbb{R}} &= J \\cdot "
@@ -565,10 +501,6 @@ _t(30, "§4 Fıtrâtı İdrak (reel)",
    "**bağlı** olması, yani bir izdüşüm üzerinden yazılması gerekir.",
    "uniterlik", None),
 
-
-# =====================================================================
-#  M31-M33: veri akış hızı risalesi
-# =====================================================================
 
 _t(31, "§Karmaşıklık cetveli", "$\\log^2 N$ değeri yanlış hesaplanmış",
    [AKIS],
@@ -619,10 +551,6 @@ _t(33, "§Efektif sürat",
    "boyut", "test_bant_genisligi_carpimi_boyutsuz_degil"),
 
 
-# =====================================================================
-#  M34: L4 raporu — hata değil, YAZILMAMIŞ ŞART
-# =====================================================================
-
 _t(34, "§Bölüm 3 (throughput)",
    "Tepe FLOPS ancak büyük yığında erişilir; küçük yığında iş bellek-bağlı",
    [L4],
@@ -648,12 +576,8 @@ _t(34, "§Bölüm 3 (throughput)",
    "eksik_sart", "test_aritmetik_yogunluk_yigina_bagli"),
 
 
-# =====================================================================
-#  Uygulama
-# =====================================================================
 def uygula(kaynak_dizin: str = KAYNAK,
            hedef_dizin: str = HEDEF) -> Dict[str, List[int]]:
-    """Tashihleri uygular; her tashihin TAM BİR KERE eşleştiğini sınar."""
     os.makedirs(hedef_dizin, exist_ok=True)
     metinler = {ad: open(os.path.join(kaynak_dizin, ad),
                          encoding="utf-8").read()

@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task 65b59efc."""
 
 from __future__ import annotations
 
@@ -25,7 +24,7 @@ def load_solver_module():
     if spec is None or spec.loader is None:
         raise ImportError("Unable to load solver module for task 65b59efc")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)  # type: ignore[attr-defined]
+    spec.loader.exec_module(module)
     return module
 
 

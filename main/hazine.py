@@ -1,73 +1,3 @@
-"""HAZİNE -- tâlimin kazandığı ağırlıkları saklamak ve geri almak.
-
-    hazine.koy("depo/dimag", {"p": p_yildiz}, {"ayar": "kısa"})
-    a, ust = hazine.al("depo/dimag")
-
-===================================================================
-NİÇİN BU BİÇİM: **safetensors** (2026 itibariyle sahanın ölçüsü)
-===================================================================
-
-Ferman: *"eğitim ağırlıklarını 2026 itibariyle dünyanın en iyi
-formatıyla kaydeden modülü yaz."* Seçim gerekçesiyle beraber yazılıdır;
-"en iyi" demek delil değildir, delil şudur:
-
-============  ================================================
-``pickle``    **KOD ÇALIŞTIRIR.** Bir ağırlık dosyası açmak
-(``.pt``)     keyfî kod icra ettirebilir. Bir modelin ağırlığı
-              indirilip açılan bir şeydir; bu, biçimin kendisinde
-              olan bir açıktır ve şifreyle kapanmaz.
-``.npz``      Zip'tir: mmap edilemez, tembel okunamaz, her tensör
-              açılırken kopyalanır. 100 GB'lık bir ağırlık için
-              100 GB RAM ister.
-``HDF5``      Ağır C bağımlılığı, iş parçacığı sorunları, dile
-              bağlı. Tek dosyada gizli durum tutar.
-``GGUF``      Nicemlenmiş **çıkarım** için mükemmel; fakat kayıpsız
-              tam duyarlıklı tâlim ağırlığı için tasarlanmadı.
-``safeten-``  Sıfır kopya ``mmap``, başlık JSON, gövde ham bayt;
-``sors``      kod çalıştırmaz, dilden bağımsızdır, tensör tensör
-   ← SEÇİLEN  tembel okunur. Sahanın fiilî ölçüsüdür.
-============  ================================================
-
-===================================================================
-KÜTÜPHANE YOK -- BİÇİM ELDE YAZILDI
-===================================================================
-
-Bu ortamda ``safetensors`` paketi **kurulu değildir** ve bu saklanmıyor.
-Biçim kütüphane olmadan da tam olarak yazılabilir, çünkü biçim basittir
-ve tamamı ilan edilmiştir::
-
-    [ 8 bayt ]  N -- başlık uzunluğu, küçük uçlu ``u64``
-    [ N bayt ]  UTF-8 JSON başlık
-    [ gövde  ]  ham tensör baytları, başlığın bittiği yerden itibaren
-
-JSON başlıkta her tensör için ``{"dtype", "shape", "data_offsets"}``
-bulunur; ``__metadata__`` anahtarı serbest ``str→str`` sözlüğüdür.
-Yazdığımız dosya ``safetensors`` kütüphanesiyle **okunabilir**; bunu
-iddia ediyoruz çünkü biçim şartlarına birebir uyuluyor (başlık 8 bayta
-hizalanır, ofsetler bitişik ve artan, C-sıralı).
-
-===================================================================
-İKİ HUDUT, AÇIKÇA
-===================================================================
-
-1. **safetensors karmaşık sayı tanımaz.** ``dtype`` cetvelinde
-   ``C64``/``C128`` yoktur. Quditin durumu karmaşıktır. Onun için
-   karmaşık diziler ``ad$re`` ve ``ad$im`` diye **iki** gerçel tensöre
-   ayrılır ve ``__metadata__``ya ``karmaşık`` listesi yazılır. ``al``
-   onları geri birleştirir. Bu bir kaçamak değil, biçimin haddidir ve
-   dosya yine de standart okuyucuyla açılır.
-2. **Sıkıştırma yoktur.** Biçim ham bayt tutar; ``mmap``ın bedeli
-   budur. Sıkıştırılmış bir ağırlık ``mmap`` edilemez.
-
-===================================================================
-BÜTÜNLÜK
-===================================================================
-
-``__metadata__``da gövdenin SHA-256'sı durur. ``al`` onu **her defasında
-yeniden hesaplar** ve tutmuyorsa ``assert`` ile düşer. Bozuk ağırlıkla
-çıkarım yapmak, hiç çıkarım yapmamaktan kötüdür: sessizce yanlış cevap
-verir.
-"""
 from __future__ import annotations
 
 import hashlib
@@ -81,14 +11,10 @@ import numpy as np
 
 __all__ = ["UZANTI", "BICIM", "koy", "al", "listele", "beyan", "rapor"]
 
-#: Dosya uzantısı -- sahanın ölçüsüyle aynı.
 UZANTI = ".safetensors"
 
-#: Bu modülün yazdığı biçimin sürümü (``__metadata__``ya konur).
 BICIM = "safetensors/1.0"
 
-#: numpy ``dtype`` ↔ safetensors ``dtype`` adı. Karmaşık **yoktur**;
-#: onun için ``_ayir`` ile ikiye bölünür.
 _TIP: Dict[str, str] = {
     "float64": "F64", "float32": "F32", "float16": "F16",
     "int64": "I64", "int32": "I32", "int16": "I16", "int8": "I8",
@@ -100,7 +26,6 @@ _TERS: Dict[str, str] = {v: k for k, v in _TIP.items()}
 
 def _ayir(agirliklar: Mapping[str, Any]) -> Tuple[Dict[str, np.ndarray],
                                                   List[str]]:
-    """Karmaşık dizileri ``$re``/``$im`` çiftine böl; adlarını say."""
     duz: Dict[str, np.ndarray] = {}
     karmasik: List[str] = []
     for ad, a in agirliklar.items():
@@ -124,7 +49,6 @@ def _ayir(agirliklar: Mapping[str, Any]) -> Tuple[Dict[str, np.ndarray],
 
 def _birlestir(duz: Mapping[str, np.ndarray], karmasik: List[str]
                ) -> Dict[str, np.ndarray]:
-    """``$re``/``$im`` çiftlerini karmaşık diziye geri topla."""
     out: Dict[str, np.ndarray] = {}
     for ad in karmasik:
         re, im = ad + "$re", ad + "$im"
@@ -142,16 +66,8 @@ def _yol(yol: str) -> str:
     return yol if yol.endswith(UZANTI) else yol + UZANTI
 
 
-# ══════════════════════════════════════════════════════════════════
-#  KOYMAK
-# ══════════════════════════════════════════════════════════════════
 def koy(yol: str, agirliklar: Mapping[str, Any],
         ust_veri: Optional[Mapping[str, Any]] = None) -> Dict[str, object]:
-    """Ağırlıkları safetensors olarak yaz; **ne yazdığını döndür**.
-
-    Dosya evvela geçici bir ada yazılıp sonra ``os.replace`` ile yerine
-    konur: yarıda kesilen bir tâlim, evvelki sağlam hazineyi bozamaz.
-    """
     duz, karmasik = _ayir(agirliklar)
     yol = _yol(yol)
     dizin = os.path.dirname(os.path.abspath(yol))
@@ -175,15 +91,12 @@ def koy(yol: str, agirliklar: Mapping[str, Any],
     if karmasik:
         meta["karmaşık"] = json.dumps(sorted(karmasik), ensure_ascii=False)
     for k, v in dict(ust_veri or {}).items():
-        # safetensors ``__metadata__``sı **str→str**tir; sayıyı sessizce
-        # atmak yerine açıkça metne çeviriyoruz ve ``al`` geri çevirmez.
         meta[str(k)] = v if isinstance(v, str) else json.dumps(
             v, ensure_ascii=False, default=str)
     basi["__metadata__"] = meta
 
     ham_bas = json.dumps(basi, ensure_ascii=False,
                          separators=(",", ":")).encode("utf-8")
-    # Gövdenin 8 bayta hizalanması için başlık boşlukla doldurulur.
     dolgu = (-len(ham_bas)) % 8
     ham_bas += b" " * dolgu
 
@@ -201,11 +114,7 @@ def koy(yol: str, agirliklar: Mapping[str, Any],
             "başlık_bayt": len(ham_bas)}
 
 
-# ══════════════════════════════════════════════════════════════════
-#  ALMAK
-# ══════════════════════════════════════════════════════════════════
 def beyan(yol: str) -> Dict[str, Any]:
-    """Yalnız başlığı oku -- gövdeye dokunmadan ne var ne yok."""
     yol = _yol(yol)
     assert os.path.exists(yol), "hazine yok: %s" % yol
     with open(yol, "rb") as f:
@@ -218,16 +127,6 @@ def beyan(yol: str) -> Dict[str, Any]:
 
 def al(yol: str, mmap: bool = True, tahkik: bool = True
        ) -> Tuple[Dict[str, np.ndarray], Dict[str, str]]:
-    """Hazineyi aç: ``(ağırlıklar, üst_veri)``.
-
-    ``mmap`` doğruysa gövde **kopyalanmaz**: her tensör dosyanın
-    üstünde bir görünümdür (safetensors'ın asıl kazancı budur ve
-    ``.npz``de imkânsızdır). Yazmak isteyen ``np.array(...)`` ile
-    kendi kopyasını alır.
-
-    ``tahkik`` doğruysa gövdenin SHA-256'sı yeniden hesaplanır ve
-    başlıktakiyle karşılaştırılır.
-    """
     yol = _yol(yol)
     basi = beyan(yol)
     meta: Dict[str, str] = dict(basi.pop("__metadata__", {}) or {})
@@ -278,7 +177,6 @@ def al(yol: str, mmap: bool = True, tahkik: bool = True
 
 
 def listele(dizin: str = "depo") -> List[Dict[str, object]]:
-    """Dizindeki bütün hazineler: ad, boy, tensör sayısı, zaman."""
     if not os.path.isdir(dizin):
         return []
     out: List[Dict[str, object]] = []
@@ -294,8 +192,7 @@ def listele(dizin: str = "depo") -> List[Dict[str, object]]:
     return out
 
 
-def rapor(yol: Optional[str] = None) -> str:                # pragma: no cover
-    """Biçim gerçekten yuvarlak dönüyor mu -- **ölç**, iddia etme."""
+def rapor(yol: Optional[str] = None) -> str:
     import tempfile
     r = np.random.default_rng(0)
     ornek = {"p": r.normal(size=(3, 5)),
@@ -329,5 +226,5 @@ def rapor(yol: Optional[str] = None) -> str:                # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                                 # pragma: no cover
+if __name__ == "__main__":
     print(rapor("depo/x"))

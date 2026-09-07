@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 136b0064."""
 
 from __future__ import annotations
 
@@ -24,12 +23,10 @@ SOLVE = load_solver()
 
 
 def abstraction_identity(grid: List[List[int]]) -> List[List[int]]:
-    """Copy the right partition without further interpretation."""
     return [row[8:] for row in grid]
 
 
 def abstraction_digit_bars(grid: List[List[int]]) -> List[List[int]]:
-    """Final bar-based digit abstraction implemented in the solver."""
     return SOLVE(grid)
 
 

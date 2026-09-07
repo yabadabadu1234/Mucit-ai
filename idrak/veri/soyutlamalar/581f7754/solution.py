@@ -1,9 +1,7 @@
-"""Solver for ARC-AGI-2 task 581f7754 (split: evaluation)."""
 
 from collections import Counter, deque, defaultdict
 from typing import Any, Dict, List
 
-# Typed aliases used by the DSL-style entrypoint
 Grid = List[List[int]]
 
 
@@ -72,7 +70,6 @@ def determine_color_targets(grid, components, background):
             color = grid[r][c]
             anchors[color].append((r, c))
 
-    # map color -> (axis, target)
     targets = {}
     anchor_coords = {}
     color_comp_positions = defaultdict(list)
@@ -87,7 +84,6 @@ def determine_color_targets(grid, components, background):
         anchor_coords[color] = (anchor_r, anchor_c)
         entries = color_comp_positions.get(color, [])
         if len(entries) <= 1:
-            # Nothing to align if the color only appears in the anchor component.
             continue
 
         row_offsets = []
@@ -225,7 +221,6 @@ def refine_row_targets(components, shifts, color_targets, anchor_coords, width):
             dr = info["dr"]
             row_origin = info["row_origin"]
 
-            # Keep anchor and constrained components fixed.
             if info["is_anchor"] or info["col_constrained"]:
                 last_right = cur_right
                 continue
@@ -239,7 +234,6 @@ def refine_row_targets(components, shifts, color_targets, anchor_coords, width):
                 last_right = cur_right
                 continue
 
-            # Slide towards the anchor while keeping at least one column gap from the previous component.
             target_left = max(last_right + 2, 0)
             target_left = min(target_left, width - comp_width)
 
@@ -301,7 +295,6 @@ def compressRowsTowardAnchor(state: Dict[str, Any]) -> Dict[str, Any]:
     color_targets = state.get("color_targets", {})
     anchor_coords = state.get("anchor_coords", {})
     shifts = state.get("shifts", [])
-    # Work on a copy to preserve functional style
     new_shifts = list(shifts)
     refine_row_targets(components, new_shifts, color_targets, anchor_coords, len(grid[0]))
     return {**state, "shifts": new_shifts}

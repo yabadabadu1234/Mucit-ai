@@ -1,4 +1,3 @@
-"""Abstractions explored while solving ARC task 221dfab4."""
 
 from __future__ import annotations
 
@@ -12,7 +11,6 @@ Sample = Dict[str, Grid]
 
 
 def infer_palette(grid: Grid) -> Tuple[int, Tuple[int, ...], Tuple[int, ...]]:
-    """Infer background, stripe columns (color 4), and non-background colors."""
     counts = Counter(value for row in grid for value in row)
     background = counts.most_common(1)[0][0]
     stripe_columns = tuple(
@@ -25,7 +23,6 @@ def infer_palette(grid: Grid) -> Tuple[int, Tuple[int, ...], Tuple[int, ...]]:
 
 
 def apply_stripe_projection(grid: Grid) -> Grid:
-    """First abstraction: project the observed 3/4 stripe pattern onto 4-columns."""
     background, stripe_columns, _ = infer_palette(grid)
     result = [row[:] for row in grid]
     for c in stripe_columns:
@@ -41,7 +38,6 @@ def apply_stripe_projection(grid: Grid) -> Grid:
 
 
 def overlay_mod0_objects(grid: Grid) -> Grid:
-    """Second abstraction: overwrite every 0 mod 6 row object cell with color 3."""
     _, stripe_columns, object_colors = infer_palette(grid)
     result = apply_stripe_projection(grid)
     height = len(grid)
@@ -63,7 +59,6 @@ ABSTRACTIONS: Sequence[Tuple[str, Callable[[Grid], Grid]]] = (
 
 
 def load_samples(kind: str) -> List[Sample]:
-    """Load train/test data from disk."""
     repo_root = Path(__file__).resolve().parents[1]
     task_path = repo_root / "arc2_samples" / "221dfab4.json"
     data = json.loads(task_path.read_text())
@@ -81,7 +76,6 @@ def evaluate_split(
     samples: Iterable[Sample],
     transform: Callable[[Grid], Grid],
 ) -> Tuple[int, int, Optional[int]]:
-    """Return (matches, total, first_failure_index) for the given split."""
     matches = 0
     total = 0
     first_failure = None

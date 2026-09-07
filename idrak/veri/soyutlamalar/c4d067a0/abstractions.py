@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task c4d067a0."""
 
 from __future__ import annotations
 
@@ -20,8 +19,8 @@ def load_solver() -> Callable[[Grid], Grid]:
     spec = importlib.util.spec_from_file_location("task_c4d067a0_solver", solver_path)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
-    spec.loader.exec_module(module)  # type: ignore[arg-type]
-    return module.solve_c4d067a0  # type: ignore[attr-defined]
+    spec.loader.exec_module(module)
+    return module.solve_c4d067a0
 
 
 def load_dataset() -> Dict[str, List[Dict[str, Grid]]]:
@@ -87,7 +86,6 @@ def extract_structure(grid: Grid) -> Optional[Dict[str, object]]:
 
     template_components.sort(key=comp_key)
 
-    # Establish the block mask from the first template component.
     _, base_cells = template_components[0]
     base_row = min(r for r, _ in base_cells)
     base_col = min(c for _, c in base_cells)
@@ -127,12 +125,12 @@ def extract_structure(grid: Grid) -> Optional[Dict[str, object]]:
 
 
 def paint_columns(grid: Grid, structure: Dict[str, object], top_rows: Sequence[int]) -> Grid:
-    height = structure["height"]  # type: ignore[index]
-    width = structure["width"]  # type: ignore[index]
-    mask = structure["mask"]  # type: ignore[index]
-    spacing = structure["spacing"]  # type: ignore[index]
-    sequences = structure["sequences"]  # type: ignore[index]
-    column_positions = structure["column_positions"]  # type: ignore[index]
+    height = structure["height"]
+    width = structure["width"]
+    mask = structure["mask"]
+    spacing = structure["spacing"]
+    sequences = structure["sequences"]
+    column_positions = structure["column_positions"]
 
     output = [row[:] for row in grid]
     for idx, sequence in enumerate(sequences):
@@ -157,11 +155,11 @@ def abstraction_global_stack(grid: Grid) -> Grid:
     if structure is None:
         return [row[:] for row in grid]
 
-    sequences: List[List[int]] = structure["sequences"]  # type: ignore[assignment]
-    spacing: int = structure["spacing"]  # type: ignore[assignment]
-    block_height: int = structure["block_height"]  # type: ignore[assignment]
-    height: int = structure["height"]  # type: ignore[assignment]
-    components_by_column: Dict[int, List[Component]] = structure["components_by_column"]  # type: ignore[assignment]
+    sequences: List[List[int]] = structure["sequences"]
+    spacing: int = structure["spacing"]
+    block_height: int = structure["block_height"]
+    height: int = structure["height"]
+    components_by_column: Dict[int, List[Component]] = structure["components_by_column"]
 
     candidates: List[int] = []
     for idx, comps in components_by_column.items():
@@ -227,7 +225,6 @@ def main() -> None:
                 status = f"{matches}/{total}"
                 detail = "all matched" if matches == total else f"first_fail={first_fail}"
             else:
-                # For evaluation-only cases we simply show the prediction size.
                 sample = fn(cases[0]["input"]) if cases else []
                 status = f"prediction size {len(sample)}x{len(sample[0]) if sample else 0}"
                 detail = "no ground truth"

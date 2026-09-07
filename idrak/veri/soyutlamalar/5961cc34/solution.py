@@ -1,16 +1,9 @@
-"""Solver for ARC-AGI-2 task 5961cc34 (split: evaluation).
-
-Refactored to the typed DSL workflow: the main solver is a simple
-composition of pure helpers that mirror the Lambda Representation in
-abstractions.md. Logic and behavior are preserved.
-"""
 
 from __future__ import annotations
 
 from collections import deque
 from typing import Iterable, List, Sequence, Set, Tuple, TypedDict
 
-# Basic domain aliases
 Grid = List[List[int]]
 Point = Tuple[int, int]
 
@@ -30,7 +23,6 @@ class GuideGraph(TypedDict):
 
 
 def _component_scan(grid: Grid) -> List[Motif]:
-    """Enumerate connected components with boundary metadata."""
 
     h, w = len(grid), len(grid[0])
     visited = [[False] * w for _ in range(h)]
@@ -94,7 +86,6 @@ def _component_scan(grid: Grid) -> List[Motif]:
 
 
 def _extend_ray(grid: Grid, origin: Point, direction: Tuple[int, int]) -> List[Point]:
-    """Collect background cells reached from origin while following direction."""
 
     h, w = len(grid), len(grid[0])
     dr, dc = direction
@@ -109,34 +100,24 @@ def _extend_ray(grid: Grid, origin: Point, direction: Tuple[int, int]) -> List[P
     return ray
 
 
-# === DSL helper primitives ===
-
 def extractMotifs(grid: Grid) -> List[Motif]:
-    """Collect candidate motifs with their guide-ray metadata."""
     return _component_scan(grid)
 
 
 def filterByGuideCount(motifs: Sequence[Motif]) -> List[Motif]:
-    """Keep motifs whose orange guides appear in paired counts (>= 2).
-
-    The sentinel (blue, color 2) is not required here; it will be
-    rediscovered from the grid inside the graph construction step.
-    """
     return [m for m in motifs if len(m["threes"]) >= 2]
 
 
 def _find_sentinel(motifs: Iterable[Motif]) -> Motif:
-    return next(m for m in motifs if 2 in m["colors"])  # type: ignore[return-value]
+    return next(m for m in motifs if 2 in m["colors"])
 
 
 def buildGuideGraph(grid: Grid, filtered: Sequence[Motif]) -> GuideGraph:
-    """Connect filtered motifs via their guide rays and sentinel anchors."""
     motifs = _component_scan(grid)
     sentinel = _find_sentinel(motifs)
 
-    candidates: Set[Point] = set(sentinel["coords"])  # seed with sentinel body
+    candidates: Set[Point] = set(sentinel["coords"])
 
-    # The red cap (4) indicates where to shoot the sentinel's vertical ray.
     for (cell, directions) in sentinel["fours"]:
         direction = next((d for d in directions if d == (-1, 0)), None)
         if direction is None and directions:
@@ -144,7 +125,6 @@ def buildGuideGraph(grid: Grid, filtered: Sequence[Motif]) -> GuideGraph:
         if direction:
             candidates.update(_extend_ray(grid, cell, direction))
 
-    # Scaffold each filtered motif and cast its orange guide rays.
     for comp in filtered:
         candidates.update(comp["coords"])
         for (cell, directions) in comp["threes"]:
@@ -157,7 +137,6 @@ def buildGuideGraph(grid: Grid, filtered: Sequence[Motif]) -> GuideGraph:
 
 
 def propagateScaffold(graph: GuideGraph) -> Grid:
-    """Run a BFS from the sentinel over the candidate scaffold cells and paint."""
     h, w = graph["shape"]
     candidates = graph["candidates"]
     start = graph["sentinel"]

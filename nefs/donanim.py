@@ -1,45 +1,3 @@
-"""DONANIM -- BÜTÜN ÖLÇÜLER **YOKLANARAK** BULUNUR, ELLE YAZILMAZ.
-
-    from nefs.donanim import donanim
-    d = donanim()
-    d["cpu"]["bant_gb"]      # ölçülen bellek bant genişliği
-    d["gpu"]["vram_bant_gb"] # ölçülen; GPU yoksa None
-
-===================================================================
-FERMAN 5-B: DONANIM ÖLÇÜSÜ ELLE YAZILMAZ
-===================================================================
-
-*"Gpu için ayarları kendin tayin edip simülasyonda gözümü
-boyamayacaksın, tüm ayarları otomatik ölçen fonksiyonlarla
-belirleyeceksin, hem gpu hem cpu için."*
-
-Bu dosyada **tek bir donanım sabiti yoktur**. Ne 300 GB/s VRAM, ne
-31,5 GB/s PCIe, ne 968 TFLOPS. Hepsi ya o donanımı fiilen yoklayarak
-ölçülür, ya da ``None`` döner.
-
-``None`` bir eksiklik değil, bir **hükümdür**: o sayı bu makinede
-ölçülemedi demektir ve ona dayanan bir iddia **kurulmaz**. Zabıtta
-geçen rakam ``iddia`` sütununda ayrıca durur; ``ölçü`` sütunuyla
-karıştırılmaz.
-
-===================================================================
-NE ÖLÇÜLÜR, NASIL
-===================================================================
-
-    ölçü                        usul
-    --------------------------  ------------------------------------
-    çekirdek sayısı             ``os.sched_getaffinity`` (fiilen
-                                kullanılabilen, ``cpu_count`` değil)
-    önbellek boyları            ``/sys/.../cache/index*/size``
-    saat frekansı               ``/proc/cpuinfo`` + boş döngü saati
-    SIMD genişliği              **komut koşturarak** (nefs/gfni.py)
-    bellek bant genişliği       STREAM-triad: ``a = b + s·c``, saatli
-    tamsayı işlem hızı          symplectic XOR/POPCOUNT süpürmesi
-    GPU var mı                  ``cupy`` yahut ``nvidia-smi`` yoklaması
-    VRAM bant genişliği         GPU'da cihaz-içi kopya, saatli
-    PCIe bant genişliği         konak↔cihaz kopyası, saatli
-    GPU tamsayı hızı            cihazda XOR süpürmesi, saatli
-"""
 from __future__ import annotations
 
 import os
@@ -57,15 +15,7 @@ __all__ = ["cekirdek_sayisi", "onbellekler", "saat_ghz", "simd_bilgisi",
 _ONBELLEK: Dict[str, Any] = {}
 
 
-# ══════════════════════════════════════════════════════════════════
-#  CPU
-# ══════════════════════════════════════════════════════════════════
 def cekirdek_sayisi() -> int:
-    """**Fiilen kullanılabilen** çekirdek -- ``cpu_count`` değil.
-
-    Kapta ``os.cpu_count()`` konağın çekirdeğini söyler ve yanıltır;
-    ``sched_getaffinity`` bu sürecin gerçekten koşabildiğini verir.
-    """
     try:
         return max(1, len(os.sched_getaffinity(0)))
     except AttributeError:
@@ -73,7 +23,6 @@ def cekirdek_sayisi() -> int:
 
 
 def onbellekler() -> Dict[str, Optional[int]]:
-    """L1d/L2/L3 boyları (bayt) -- ``sysfs``ten okunur, tahmin edilmez."""
     kok = "/sys/devices/system/cpu/cpu0/cache"
     o: Dict[str, Optional[int]] = {"L1d": None, "L2": None, "L3": None}
     if not os.path.isdir(kok):
@@ -104,12 +53,6 @@ def onbellekler() -> Dict[str, Optional[int]]:
 
 
 def saat_ghz() -> Dict[str, Optional[float]]:
-    """Saat frekansı: ilan edilen (``cpuinfo``) **ve** ölçülen.
-
-    İkisi ayrı sütunda durur: ilan edilen bir dizgeden okunur ve
-    turbo/kısıntı altında yanıltır; ölçülen, sıkı bir tamsayı
-    döngüsünün saatlenmesinden çıkar ve bu makinede fiilen olan budur.
-    """
     ilan: Optional[float] = None
     try:
         with open("/proc/cpuinfo") as f:
@@ -123,25 +66,16 @@ def saat_ghz() -> Dict[str, Optional[float]]:
                 ilan = float(m.group(1)) / 1000.0
     except OSError:
         pass
-    # Ölçüm: bağımlı zincirli tamsayı toplaması -- her tur bir çevrim.
     x = np.uint64(1)
     n = 3_000_000
     t0 = time.perf_counter()
     for _ in range(n):
         x = x + np.uint64(1)
     sure = time.perf_counter() - t0
-    # Python yorumlayıcısının payı hâkimdir; bu **saat değil**, tur
-    # başına saniyedir ve öyle yazılır. Yanıltmamak için ayrı isim.
     return {"ilan_ghz": ilan, "tur_ns": float(sure / n * 1e9)}
 
 
 def simd_bilgisi() -> Dict[str, Any]:
-    """SIMD genişliği ve Galois komutları -- **koşturarak** tayin edilir.
-
-    ``/proc/cpuinfo`` bayrağına bakılmaz: bu makinede bayrak ``gfni``
-    demiyor, komut ise koşuyor (``nefs/gfni.py``de ölçüldü). Karar
-    icradan çıkar.
-    """
     from .gfni import cpuid, olc, yoklama
     y = yoklama()
     o: Dict[str, Any] = {
@@ -153,7 +87,6 @@ def simd_bilgisi() -> Dict[str, Any]:
     }
     o["cpuid_ayrıştı"] = bool(
         o["gfni_koşuyor"] and not (o["cpuid_bayrağı"] or {}).get("GFNI", False))
-    # Genişlik: AVX-512 ile derlenip koşuyorsa 512 bittir.
     o["genişlik_bit"] = 512 if o["gfni_koşuyor"] else None
     g = olc() if o["gfni_koşuyor"] else {}
     o["gfni_gb"] = g.get("gfni_gb")
@@ -163,18 +96,12 @@ def simd_bilgisi() -> Dict[str, Any]:
 
 
 def bellek_bandi(bayt: int = 1 << 26, tekrar: int = 5) -> Dict[str, float]:
-    """**STREAM-triad**: ``a = b + s·c``. Saatlenir, kestirilmez.
-
-    Üç dizi dolaşılır (iki okuma, bir yazma), o hâlde geçiş başına
-    trafik ``3 × bayt``tır. Bu, çatı çizgisi modelinin paydasıdır ve
-    ilan edilen bir sayı değil, bu makinenin kendi ölçüsüdür.
-    """
     n = max(1 << 16, int(bayt) // 8)
     b = np.ones(n, np.float64)
     c = np.full(n, 2.0)
     a = np.empty(n, np.float64)
     s = 3.0
-    np.add(b, s * c, out=a)                              # ısıtma
+    np.add(b, s * c, out=a)
     t0 = time.perf_counter()
     for _ in range(int(tekrar)):
         np.add(b, s * c, out=a)
@@ -186,22 +113,16 @@ def bellek_bandi(bayt: int = 1 << 26, tekrar: int = 5) -> Dict[str, float]:
 
 def tamsayi_hizi(satir: int = 4096, kelime: int = 64,
                  tekrar: int = 20) -> Dict[str, Any]:
-    """Symplectic XOR/AND/POPCOUNT süpürmesi -- **donanımda**, saatli.
-
-    Zabıtın (1 TB/s GPU) 1. motorunun ta kendisi: kayan nokta yok,
-    matris yok; XOR, AND ve bit sayımı var. GFNI kütüphanesi koşuyorsa
-    AVX-512 gövdesi çağrılır; koşmuyorsa ``numpy`` bit ameliyeleri.
-    """
     from .gfni import symplectic_gfni, yoklama
     r = np.random.default_rng(0)
     X = r.integers(0, 1 << 62, size=(satir, kelime), dtype=np.uint64)
     Z = r.integers(0, 1 << 62, size=(satir, kelime), dtype=np.uint64)
     m = r.integers(0, 1 << 62, size=kelime, dtype=np.uint64)
     f = r.integers(0, 1 << 62, size=kelime, dtype=np.uint64)
-    bayt = float(X.nbytes + Z.nbytes) * 2.0             # oku + yaz
+    bayt = float(X.nbytes + Z.nbytes) * 2.0
     donanim_var = bool(yoklama().get("koşuyor"))
     if donanim_var:
-        symplectic_gfni(X, Z, m, f)                      # ısıtma
+        symplectic_gfni(X, Z, m, f)
         t0 = time.perf_counter()
         for _ in range(int(tekrar)):
             symplectic_gfni(X, Z, m, f)
@@ -219,22 +140,18 @@ def tamsayi_hizi(satir: int = 4096, kelime: int = 64,
             "satır": int(satir), "kelime": int(kelime)}
 
 
-# ══════════════════════════════════════════════════════════════════
-#  GPU -- VARSA ÖLÇÜLÜR, YOKSA ``None``. UYDURULMAZ.
-# ══════════════════════════════════════════════════════════════════
 def gpu_var_mi() -> Dict[str, Any]:
-    """GPU var mı -- **yoklanarak**. Üç kapı denenir, hepsi yazılır."""
     o: Dict[str, Any] = {"cupy": False, "torch": False, "nvidia_smi": False,
                          "cihaz": [], "sebep": ""}
     try:
-        import cupy                                       # noqa: F401
+        import cupy
         o["cupy"] = True
-    except Exception as e:                                # noqa: BLE001
+    except Exception as e:
         o["sebep"] += "cupy: %s; " % type(e).__name__
     try:
-        import torch                                      # noqa: F401
+        import torch
         o["torch"] = bool(torch.cuda.is_available())
-    except Exception as e:                                # noqa: BLE001
+    except Exception as e:
         o["sebep"] += "torch: %s; " % type(e).__name__
     try:
         r = subprocess.run(
@@ -244,19 +161,13 @@ def gpu_var_mi() -> Dict[str, Any]:
         if r.returncode == 0 and r.stdout.strip():
             o["nvidia_smi"] = True
             o["cihaz"] = [x.strip() for x in r.stdout.strip().splitlines()]
-    except Exception as e:                                # noqa: BLE001
+    except Exception as e:
         o["sebep"] += "nvidia-smi: %s; " % type(e).__name__
     o["var"] = bool(o["cupy"] or o["torch"] or o["nvidia_smi"])
     return o
 
 
 def gpu_olcu(bayt: int = 1 << 26, tekrar: int = 10) -> Dict[str, Any]:
-    """VRAM, PCIe ve tamsayı hızı -- **cihazda saatlenerek**.
-
-    GPU yoksa bütün ölçüler ``None`` döner ve ``var=False`` yazılır.
-    **Hiçbir sayı uydurulmaz**: zabıtta 300 GB/s yazıyor olması bu
-    makinede 300 GB/s ölçüldüğü manasına gelmez (ferman 5-B).
-    """
     v = gpu_var_mi()
     o: Dict[str, Any] = {
         "var": bool(v["var"]), "yoklama": v, "kart": None,
@@ -269,7 +180,7 @@ def gpu_olcu(bayt: int = 1 << 26, tekrar: int = 10) -> Dict[str, Any]:
         return o
     try:
         import cupy as cp
-    except Exception:                                     # noqa: BLE001
+    except Exception:
         o["sebep"] = ("GPU görünüyor fakat ``cupy`` yok: cihaz-içi ölçü "
                       "yapılamadı. Kart listesi ``yoklama``dadır.")
         o["kart"] = len(v["cihaz"]) or None
@@ -291,7 +202,7 @@ def gpu_olcu(bayt: int = 1 << 26, tekrar: int = 10) -> Dict[str, Any]:
         b[:] = a
     cp.cuda.Stream.null.synchronize()
     sure = (time.perf_counter() - t0) / int(tekrar)
-    o["vram_bant_gb"] = float(2.0 * n * 8 / sure / 1e9)   # oku + yaz
+    o["vram_bant_gb"] = float(2.0 * n * 8 / sure / 1e9)
     h = np.ones(n, np.float64)
     d = cp.empty(n, cp.float64)
     d.set(h)
@@ -317,9 +228,7 @@ def gpu_olcu(bayt: int = 1 << 26, tekrar: int = 10) -> Dict[str, Any]:
     return o
 
 
-# ══════════════════════════════════════════════════════════════════
 def donanim(yeniden: bool = False) -> Dict[str, Any]:
-    """Bütün donanım ölçüsü **tek yerde** -- hepsi yoklanmış."""
     if not yeniden and "hepsi" in _ONBELLEK:
         return _ONBELLEK["hepsi"]
     o = {
@@ -337,8 +246,7 @@ def donanim(yeniden: bool = False) -> Dict[str, Any]:
     return o
 
 
-def rapor() -> str:                                      # pragma: no cover
-    """Ne ölçüldü, ne ölçülemedi -- **iddia ile ölçü ayrı sütunda**."""
+def rapor() -> str:
     d = donanim()
     c, g = d["cpu"], d["gpu"]
     ob = c["önbellek"]
@@ -393,5 +301,5 @@ def rapor() -> str:                                      # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

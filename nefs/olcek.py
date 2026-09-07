@@ -1,106 +1,3 @@
-"""
-ÖLÇEK -- BÜTÜN YAPISAL SAYILARIN TEK KAYNAĞI
-
-===================================================================
-PADİŞAHIN HÜKMÜ
-===================================================================
-
-    "Bulacağın bütün sabit ayarları tek veya çok az formüle en optimize
-    şekilde bağla, mümkün olduğunca cömert ol."
-
-``main/egitim.py``de altmışa yakın elle yazılmış sayı vardı. Her birinin
-yanında bir ölçüm şerhi duruyordu ve o şerhler **doğruydu** -- fakat
-ölçüldüğü şart değişince sayı yerinde kaldı. Sabitler, geçmiş bir
-ölçümün mumyasıydı: ``pencere=512`` bir turda ölçülmüştü, ``ornek=24``
-başkasında, ``cevrim_sayisi=8`` zabıttan gelmişti; hiçbiri artık aynı
-donanımı, aynı sözlüğü, aynı bütçeyi tarif etmiyordu.
-
-===================================================================
-ÜÇ KÖK
-===================================================================
-
-    KÖK 1  sozluk   Veriden gelir. Tayin edilmez, sayılır.
-    KÖK 2  comert   Padişahın **tek kabzası**. 0 → darboğaz,
-                    1 → donanımın izin verdiği azamî.
-    KÖK 3  donanım  ``nefs/donanim.py`` fiilen yoklar (ferman 5-B).
-
-===================================================================
-ÜÇ FORMÜL
-===================================================================
-
-**FORMÜL 1 -- YAPI (önbellekten).**
-
-Zabıtın hükmü: durum L1'de dönmeli, ``4096×4096`` GEMM olmamalı. O
-hâlde lif yapısı bir tercih değil, bir **önbellek denklemidir**::
-
-    V = K                                   (veri lifi = karo; belirteç
-                                             bir SEVİYE değil, ``V``
-                                             tabanında basamak dizisidir
-                                             -- ferman 1-N)
-    basamak = ⌈log_V(sözlük)⌉               (sözlük buraya gider, ``d``ye
-                                             değil)
-    3·K²·bayt ≤ L1d · doluluk               (üç karo L1'e sığsın)
-    K = 2^⌊½ log₂(L1d·doluluk / (3·bayt))⌋
-    lif = (V, K, K)   ,   hüküm lifi = K²   ,   d = V·K²
-
-``doluluk`` cömertlikle açılır (0,25 → 0,90): cömert olmak, önbelleğin
-daha çoğunu istemektir; hududu koyan yine ölçülen L1'dir.
-
-Yığın da aynı cinstendir, yalnız bir mertebe yukarıda: durum şeridi
-``(B, d)`` **L3**'e sığmalıdır::
-
-    B = clamp( L3 · doluluk / (d · bayt) , 1 , örnek )
-
-**FORMÜL 2 -- BÜTÇE (ölçülen hız × ilan edilen süre).**
-
-Fermanın haddi bellidir: tâlim toplamda ``AZAMI_SANIYE``yi aşmayacak.
-Bir tâlim koşusunun işlediği belirteç sayısı ise şudur::
-
-    toplam_belirteç = çağrı × örnek × pencere
-    çağrı           = talim_tur × altuzay_ornek
-
-O hâlde bütçe **tek denklemdir**::
-
-    çağrı × örnek × pencere  =  ölçülen_hız × AZAMI_SANIYE × comert
-
-``ölçülen_hız`` uydurulmaz: bu modülde bir **mikro yoklama** ile
-ölçülür (küçük bir yazmaçta kapı vurup saniyede kaç belirteç işlendiğine
-bakılır) ve önbelleklenir. Haddin kendisini (1 000 000 belirteç/sn)
-kullanmak yanlış olurdu: makinenin koşamayacağı bir plan yazmak, tam da
-fermanın yasakladığı şeydir.
-
-Bütçenin dağıtımı da ilan edilir ve gizli değildir::
-
-    çağrı   = (1 + ⌊8·comert⌉) × (8 + ⌊56·comert⌉)
-    kalan   = bütçe / çağrı
-    örnek = pencere = 2^⌊½ log₂ kalan⌋      (log'da eşit bölüşüm)
-
-Sonra ``örnek`` yığına, ``pencere`` de sözlüğe göre yuvarlanır.
-
-**FORMÜL 3 -- DENGE (kefeler ölçülür).**
-
-Yedi ``λ`` vardı ve yedisi de elle yazılmıştı. Bir kefe ağırlığının tek
-meşru manası, o kefenin mizanda ne kadar **söz hakkı** olacağıdır::
-
-    λ_i = pay_i / (kefe_i'nin tâlim başındaki ölçülen değeri + ε)
-
-Paylar toplamı 1'dir. Böylece büyük sayılı bir kefe küçüklerini ezmez
-ve ayarlanan şey bir katsayı değil, **söz hakkıdır**. Ölçüm
-``denge()``de yapılır ve mizanın ilk çağrısından okunur.
-
-===================================================================
-NE TÜRETİLMEZ VE NİÇİN
-===================================================================
-
-Boyutsuz nispetler türetilmez ve türetilmemelidir: ``rust_t0`` (geçişin
-ortası, tur nispetiyle), ``rust_tau``, sönüm hızları, eşikler. Bunların
-donanımla da sözlükle de alâkası yoktur; bir formüle bağlamak, olmayan
-bir bağı uydurmak olurdu.
-
-``cevrim_boyu = 3`` de türetilmez: iki adımlı çevrim inşa gereği daima
-``U = I`` verir (ölçüldü) ve Berry fazı alan ister, alan da üç köşe.
-Bu bir ayar değil, bir **teoremdir**.
-"""
 from __future__ import annotations
 
 import math
@@ -115,11 +12,8 @@ __all__ = ["Kok", "olcek", "denge", "olcek_beyani", "hiz_yoklamasi"]
 
 @dataclass(frozen=True)
 class Kok:
-    """Üç kök. Ölçeğin tamamı bunlardan çıkar."""
 
-    #: Veriden gelir; tayin edilmez.
     sozluk: int = 16
-    #: Padişahın tek kabzası: 0 = darboğaz, 1 = donanımın azamîsi.
     comert: float = 0.5
     tohum: int = 0
 
@@ -129,58 +23,26 @@ class Kok:
             "cömertlik [0,1] aralığında olmalı; verilen %r" % (self.comert,))
 
 
-#: Mikro yoklamanın önbelleği. Yoklama bir kere koşar; her ayar
-#: kurulduğunda tekrar koşsaydı ``EgitimAyari()`` pahalı olurdu.
 _HIZ: Dict[Tuple[int, int], float] = {}
 
 
 def _ikinin_kuvveti(x: float, en_az: int = 1) -> int:
-    """``2^⌊log₂ x⌋`` -- aşağı yuvarlayarak ikinin kuvveti."""
     v = max(float(x), 1.0)
     return int(max(en_az, 1 << int(math.floor(math.log2(v)))))
 
 
 def _yukari_kuvvet(x: int) -> int:
-    """``2^⌈log₂ x⌉`` -- yukarı yuvarlayarak ikinin kuvveti."""
     v = max(int(x), 1)
     return int(1 << int(math.ceil(math.log2(v))))
 
 
 def hiz_yoklamasi(d: int, bayt: int = 8, tohum: int = 0) -> float:
-    """**MİKRO YOKLAMA** -- bu makine saniyede kaç belirteç işliyor?
-
-    Bütçe formülünün paydası budur ve **uydurulmaz**. Haddin kendisini
-    (1 000 000 belirteç/sn) kullanmak yanlış olurdu: makinenin
-    koşamayacağı bir plan yazmak, fermanın yasakladığı şeydir.
-
-    Yoklama, ana akışın fiilen yaptığı işi taklit eder: ``(B, d)``
-    şeridine ardışık karo kapıları vurmak. Tam kayıp çağrısı koşulmaz
-    (o saniyeler alır); ölçülen, **kapı başına maliyettir** ve belirteç
-    sayısına o oranla çevrilir.
-    """
     anahtar = (int(d), int(bayt))
     hazir = _HIZ.get(anahtar)
     if hazir is not None:
         return hazir
-    # ── DİSKTEN OKU: BÜTÜN SÜREÇLER AYNI PLANI KURSUN ──────────────
-    # **ÖLÇÜLEN KUSUR.** Yoklama her süreçte yeniden koşuyordu ve
-    # neticesi oynuyordu (beş yoklama: 263 166 · 255 978 · 314 747 ·
-    # 284 286 · 331 578 -- %29 yayılım). Bütçe formülü ona bağlı olduğu
-    # için **plan da oynuyordu**: aynı profil bir süreçte
-    # ``ornek=512``, ötekinde ``ornek=1024`` kuruyordu. Ayarın koşudan
-    # koşuya değişmesi, hiçbir ölçünün kıyaslanamaması demektir.
-    #
-    # İki fren: (1) netice diske yazılır, bütün süreçler aynı sayıyı
-    # okur; (2) sayı ikinin kuvvetine yuvarlanır -- %29'luk bir jitter
-    # planı artık kıpırdatamaz, ancak iki kat fark plan değiştirir.
     import json as _json
     import os as _os
-    # **KÜTÜĞÜN ANAHTARI DONANIMI DA TAŞIR.** Ölçüldü ve saklanmıyor:
-    # bu oturum ortasında makine değişti (L1d 32 KB → 48 KB, L2 1 → 2 MB,
-    # L3 34,6 → 272,6 MB). Kütük yalnız ``(d, bayt)`` ile anahtarlıydı,
-    # o hâlde **eski makinenin hızı yeni makinede okunuyordu** ve plan
-    # yanlış kuruluyordu. Donanım parmak izi anahtara girdi: makine
-    # değişince kütük kendiliğinden düşer ve yoklama tekrar koşar.
     from .donanim import onbellekler as _ob
     _o = _ob()
     _iz = "%s.%s.%s" % (_o.get("L1d"), _o.get("L2"), _o.get("L3"))
@@ -199,7 +61,6 @@ def hiz_yoklamasi(d: int, bayt: int = 8, tohum: int = 0) -> float:
     psi = np.asarray(psi, tip)
     K = _ikinin_kuvveti(math.sqrt(max(int(d) // 2, 4)), 4)
     G = np.asarray(r.normal(size=(K, K)) + 1j * r.normal(size=(K, K)), tip)
-    # Isınma: ilk vuruş tahsis ve önbellek doldurma yükünü taşır.
     T = psi.reshape(B, -1, K)
     for _ in range(3):
         T = (T @ G.T).reshape(B, -1, K)
@@ -208,16 +69,10 @@ def hiz_yoklamasi(d: int, bayt: int = 8, tohum: int = 0) -> float:
     for _ in range(n):
         T = (T @ G.T).reshape(B, -1, K)
     sure = max(time.perf_counter() - t0, 1e-9)
-    kapi_sn = float(n * B) / sure                 # saniyede kaç satır-kapı
-    # Bir belirteç, ana akışta ~kapı_yogunlugu kadar karo kapısı yer.
-    # Bu sayı ölçümle bulundu: 105 833 kapı / (512 örnek × 512 pencere)
-    # ≈ 0,404 kapı/belirteç. Yâni bir belirteç yarım karo kapısından
-    # ucuzdur; pahalı olan, kapının ``d`` genlik üstünde koşmasıdır ve
-    # o zaten yukarıdaki ölçüme dâhildir.
+    kapi_sn = float(n * B) / sure
     kapi_yogunlugu = 0.404
     hiz = kapi_sn / kapi_yogunlugu
     assert hiz > 0.0, "hız yoklaması sıfır verdi -- ölçü bir şey ölçmüyor"
-    # **İKİNİN KUVVETİNE YUVARLA.** Jitter planı kıpırdatmasın.
     hiz = float(_ikinin_kuvveti(hiz, 1024))
     _HIZ[anahtar] = hiz
     try:
@@ -230,87 +85,35 @@ def hiz_yoklamasi(d: int, bayt: int = 8, tohum: int = 0) -> float:
         with open(kutuk, "w", encoding="utf-8") as f:
             _json.dump(kayit, f, indent=1)
     except OSError:
-        # Diske yazılamıyorsa plan yine kurulur, yalnız süreçler arası
-        # ayniyet garanti edilmez. Bu sessiz bir ikame değil: ölçek
-        # dökümü ``hız_kütüğü`` alanında durumu yazar.
         pass
     return hiz
 
 
 def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
-    """**BÜTÜN YAPISAL SAYILAR, ÜÇ FORMÜLDEN.**
-
-    Dönen sözlüğün her anahtarı ``EgitimAyari``de bir alandır ve
-    ``__post_init__`` sıfır olanları buradan doldurur.
-    """
     k = kok or Kok()
     from .donanim import cekirdek_sayisi, onbellekler
     from .zihin_durumu import QAyar
 
     c = float(k.comert)
-    bayt = 8                                    # complex64
+    bayt = 8
     ob = onbellekler()
     L1 = int(ob.get("L1d") or 32768)
     L2 = int(ob.get("L2") or (1 << 20))
     L3 = int(ob.get("L3") or (32 << 20))
 
-    # ══════════════════════════════════════════════════════════════
-    #  FORMÜL 1 -- YAPI (önbellekten)
-    # ══════════════════════════════════════════════════════════════
-    # ══════════════════════════════════════════════════════════════
-    #  VERİ LİFİ ARTIK SÖZLÜKTEN GELMİYOR (ferman 1-N)
-    # ══════════════════════════════════════════════════════════════
-    #
-    # Evvelce ``V = 2^⌈log₂ sözlük⌉`` yazıyordu: yâni **belirteç, veri
-    # lifinin bir taban durumunun kendisiydi** ve o yapıda sözlük 16'yı
-    # aşamazdı. Tiktoken ``o200k_base``de 200 019 belirteç vardır;
-    # ``V``yi oraya çekmek ``d = V·K²``yi 2³⁴'e fırlatırdı.
-    #
-    # Doğrusu ikisini **ayırmaktır**: ``V`` taşıyıcının ölçüsüdür ve
-    # önbellekten gelir; sözlük ise ``basamak``a gider. Yâni belirteç
-    # bir seviye değil, **``V`` tabanında bir basamak dizisidir**
-    # (``nefs/belirtec.py:tip_vektoru``).
-    #
-    # ``V = K``: zabıtın ``[16,16,16]`` karosu tam olarak budur -- üç
-    # eşit karo, hepsi L1'de. Ayrı bir formül uydurmak, aynı önbellek
-    # denklemini iki kere yazmak olurdu (ferman 2-B).
     doluluk = 0.25 + 0.65 * c
     K = _ikinin_kuvveti(math.sqrt(L1 * doluluk / (3.0 * bayt)), 4)
     V = K
-    # Hüküm lifi bütün küllî alanları taşımalı; taşımıyorsa karo büyür.
     yuva = sum(n for _, n in QAyar.kulli_alanlar)
     while K * K < yuva:
         K *= 2
     hukum = K * K
     d = V * K * K
-    # Yığın: durum şeridi ``(B, d)`` L3'e sığsın.
-    #
-    # **BURASI İKİNCİ KERE YAZILMAZ.** ``nefs/onbellek.py:yigin_sec``
-    # bu hesabı zaten yapıyor ve **ölçülmüş bir payla** yapıyor (L3'ün
-    # %20'si; L3 paylaşımlıdır, durum tek sakini değildir). Kendi
-    # payımı uydurup ``doluluk``la çarpsaydım ölçüden ayrılırdım:
-    # denendi ve ölçüldü -- ``doluluk=0,35`` B=256 verdi, halbuki
-    # ölçülen tavan 128'dir (B=128: 61 660 belirteç/sn, B=256: 58 248).
-    # Cömertlik burada **tavanı aşmaz**, yalnız tavana kadar açar.
     from .onbellek import yigin_sec
     tip = np.complex64 if bayt == 8 else np.complex128
     B_tavan = int(yigin_sec(d, tip)["B"])
-    # **CÖMERTLİK YIĞINI KÜÇÜLTMEZ.** Denendi ve ölçüldü: cömertlikle
-    # ölçekleyince ``comert=0,15`` B=32 verdi ve hız düştü. Sebebi
-    # bellidir -- küçük yığın **daima** daha yavaştır (aynı kapı daha
-    # az örneğe amorti edilir). Yığın bir bütçe kalemi değil, donanımın
-    # tayin ettiği **tavandır**; ona kadar çıkmamak için sebep yok.
     B = int(max(1, B_tavan))
-    # **KÜME BOYU İLE YIĞIN AYNI SAYIDIR (terkip).** Münasebet döngüsü
-    # (ferman 1-I) küme küme koşar; bir küme yazmacın bir geçişidir.
-    # İkisi ayrı olursa yazmaç küme boyundan büyük kurulur ve fark
-    # **boşa doldurulur**: ölçüldü, obek=256 / yığın=1024 iken hız
-    # 104 529'dan 10 746'ya düştü (4 kat boş satır). O hâlde yığın,
-    # küme boyunun kendisidir ve küme boyu bütçeden çıkar.
 
-    # ══════════════════════════════════════════════════════════════
-    #  FORMÜL 2 -- BÜTÇE (ölçülen hız × ilan edilen süre)
-    # ══════════════════════════════════════════════════════════════
     from tanilama.hiz_teftisi import AZAMI_SANIYE
     hiz = hiz_yoklamasi(d, bayt, int(k.tohum))
     butce = float(hiz) * float(AZAMI_SANIYE) * max(c, 1e-3)
@@ -319,134 +122,49 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     cagri = max(1, tur * yon)
     kalan = max(butce / float(cagri), 4.0)
     kenar = _ikinin_kuvveti(math.sqrt(kalan), 2)
-    # Örnek yığından küçük olmasın (yığın boşa gitmesin), pencere de
-    # sözlükten küçük olmasın (bağlam belirteci taşımalı).
     ornek = int(max(kenar, B))
     pencere = int(max(kenar, V))
-    # Bütçe aşıldıysa fazlalık pencereden kesilir: yığın donanım
-    # ölçüsüdür, pencere ise bütçe ölçüsü.
     while float(cagri) * ornek * pencere > butce and pencere > V:
         pencere //= 2
 
-    # ══════════════════════════════════════════════════════════════
-    #  TÜREVLER -- hepsi yukarıdaki üç sayıdan
-    # ══════════════════════════════════════════════════════════════
-    # ── KÜME BOYU = YIĞIN (tek sayı, tek mana) ─────────────────────
-    #
-    #     küme sayısı ≈ çağrı / keyfiyet_turu
-    #     obek        = örnek · keyfiyet_turu / çağrı
-    #
-    # ve obek donanım tavanını (B) aşamaz. Yazmaç tam bu boyda kurulur;
-    # ölçüldü: obek=256 iken yığın 1024 kalınca dört satırın üçü boş
-    # doldu ve hız 104 529 → 10 746'ya çöktü.
     keyf = int(max(2, round(2 + 10 * c)))
-    # **YAPISAL TABAN: obek ≥ çevrim sayısı.** Bir kümeden ``cevrim_sayisi``
-    # adet ``cevrim_boyu`` köşeli çevrim seçilecek; 5 örnekten 8 çevrim
-    # çıkmaz. Bu bir tercih değil, ölçünün kurulabilme şartıdır.
     cev = int(max(2, (V // 2) * max(1, int(round(2 * c)))))
     obek = int(max(cev, min(B, (ornek * keyf) // max(1, cagri))))
-    # Bütçe küme boyunu tabana ittiyse, fark **örnekten** kesilir:
-    # yığın donanım/ölçü şartıdır, örnek sayısı bütçe kalemidir.
     kume_sayisi = max(1, cagri // max(1, keyf))
     ornek = int(max(obek, min(ornek, obek * kume_sayisi)))
-    # ══════════════════════════════════════════════════════════════
-    #  PARAMETRE GENİŞLİĞİ -- DAR TAŞIYICININ TELÂFİSİ
-    # ══════════════════════════════════════════════════════════════
-    #
-    # Padişahın hükmü: *"galois gibi dar bir uzay kullandığımız için
-    # mutlaka fazla sayıda parametre kullanmalısın."* Hüküm hem doğru
-    # hem de ölçülebilirdir: taşıyıcı ``GF(2⁸)``tir, yâni bir açı 256
-    # ayrık seviye (8 bit) taşır. Sürekli bir açının taşıyacağı bilgi
-    # taşıyıcıda kesiliyorsa, aynı kabiliyet ancak **daha çok açı** ile
-    # elde edilir.
-    #
-    # Telâfi nispeti keyfî değildir, yaymanın kendisinden çıkar: bir
-    # melekenin açıları ``np.resize`` ile duraklara **devrolarak**
-    # yayılır; ``n_sabit`` açı ``hedef`` durağa yayılınca durakların
-    # ``hedef/n_sabit`` katı aynı açıyı tekrar eder. Devir ancak açı
-    # sayısı durak sayısına eşitlenince biter::
-    #
-    #     genişlik = 1 + (karo − 1) · cömertlik
-    #
-    # ALT HUDUT (``c=0``) ``1``dir: telâfi yok, eski hâl -- yâni ölçü
-    # **kapatılabilir ve kırmızı yanabilir** (ferman 5). ÜST HUDUT
-    # ``karo``dur ve o da keyfî değildir: bir melekenin açıları bir
-    # Kronecker karosunun duraklarına yayılır, karo kadar açıda yayma
-    # **devirsiz** olur. Ondan fazlası taşıyıcıda karşılıksız kalır.
     genislik = int(max(1, round(1.0 + (K - 1) * c)))
-    # **BASAMAK: SÖZLÜK BURAYA GİDER.** Bir belirteç kaç qudit
-    # seviyesi işgal eder -- ``⌈log_V(sözlük)⌉``. Sözlük büyürse
-    # ``d`` değil **basamak** büyür; taşıyıcı sabit kalır.
     from .belirtec import basamak_sayisi
     basamak = basamak_sayisi(int(k.sozluk), V)
     return {
         "belirtec_basamak": basamak,
         "parametre_genisligi": genislik,
-        # yapı
         "veri_lifi": V, "karo": K, "hukum_lifi": hukum,
         "yigin_dilimi": obek, "keyfiyet_turu": keyf, "obek": obek,
-        # bütçe
         "ornek_sayisi": ornek, "pencere": pencere,
         "talim_tur": tur, "altuzay_ornek": yon,
-        #: Çevrim sayısı veri lifinin yarısı kadar: her belirteç
-        #: seviyesine ortalama bir çevrim düşsün.
         "cevrim_sayisi": int(max(2, (V // 2) * max(1, int(round(2 * c))))),
-        #: Değerlendirme ve doğrulama: bütçenin görev cinsinden karşılığı.
         "degerlendirme_gorevi": int(max(2, round(8 + 112 * c))),
         "dogrulama_sayisi": int(max(4, round(20 + 180 * c))),
         "kademe_gorevi": int(max(1, round(1 + 7 * c))),
-        # **ÜRETİM HADDİ BASAMAK CİNSİNDENDİR** (ferman 1-N). Model
-        # bir belirteç değil, bir **basamak** üretir; bir belirteç
-        # ``basamak`` adet üretim adımıdır. Had belirteç cinsinden
-        # kalırsa ARC hedefleri daima "çok uzun" görünür ve **hepsi
-        # atlanır**: ölçüldü, ``tam çözülen 0 / 0`` -- yâni ölçüt sıfır
-        # değil BOŞtu ve sıfır gibi görünmesi daha kötüsüdür.
         "azami_uret": int(max(8, basamak
                               * _ikinin_kuvveti(pencere / 2.0, 8))),
-        #: Arama yarıçapı: cömertlik açtıkça arama genişler.
         "yaricap": float(1.5 + 2.5 * c),
-        #: **FREN CÖMERTLİKLE KISILMAZ.** Bu bir bütçe değil, bir
-        #: emniyet frenidir: koşu fermanın ``AZAMI_SANIYE``sini aşarsa
-        #: durur. Cömertlikle ölçeklenirse küçük profil kendi frenine
-        #: takılır (ölçüldü: comert=0,15'te fren 90 sn'ye iniyor ve
-        #: 104 sn'lik koşuyu reddediyordu). İşin hacmini cömertlik
-        #: zaten ``çağrı × örnek × pencere`` ile tayin ediyor.
         "azami_talim_saati": float(AZAMI_SANIYE / 3600.0),
-        # donanımdan gelenler
-        #: GFNI komutunun cismi. Bir tercih değil, komutun kendisi.
         "galois_us": 8,
-        #: Bir ``uint64`` kelimesi -- tableau tek komutta evrilsin.
         "tableau_n": 64,
-        #: Faz grubu yazmaçla **aynı** olmalı: ``Z_{veri_lifi}``.
         "faz_mertebesi": V,
         "siklotomik_us": 8,
-        #: FLO: Majorana modu çevrim sayısının üç katı (her çevrim bir
-        #: köşe çifti), kapı sayısı yığın kadar.
         "flo_modu": int(max(4, 3 * max(2, V // 2))),
         "flo_kapisi": int(max(8, B)),
-        #: TDD denetçisinin çekirdeği: bir karo satırı.
         "tdd_cekirdek": int(K),
-        #: Stabilizer rank mertebesi: karo satırının yarısı.
         "stab_mertebe": int(max(2, K // 2)),
-        #: Sefer bütçesi: çevrimlerin yarısı.
         "usul_seferi": int(max(1, max(2, V // 2) // 2)),
-        #: Hafıza kapasitesi: yığın kadar hadise taşınsın.
         "hafiza_kapasitesi": int(max(16, B)),
-        #: Ayna turu ve QSVT derecesi: karo satırıyla ölçekli.
         "ayna_tur": int(max(4, K + K // 2)),
         "qudit_qsvt": int(K),
         "qudit_derece": int(max(2, K // 2)),
         "qudit_yon": int(max(2, K // 2)),
-        #: Harman kademesi: **her life bir kademe**.
-        #:
-        #: Evvelce ``K.bit_length()−1`` denemiştim (K=16 için 4) ve
-        #: ölçüldü: eski elle yazılmış 3'e nispetle çağrı süresi
-        #: 2,59 → 2,73 sn (%5 pahalı), kazanç ise ölçülmedi. Harmanın
-        #: manası "kademe kademe yerel üniterle karıştırmak"tır ve
-        #: kademe sayısının tabiî ölçüsü **lif sayısıdır**: her kademe
-        #: bir lifin ölçeğini ötekilere taşır. Bit sayısı değil.
         "harman_kademesi": 3,
-        # ölçüler (rapor için)
         "d": d, "L1d": L1, "L2": L2, "L3": L3, "yigin_tavani": B_tavan,
         "doluluk": doluluk, "ölçülen_hız": hiz, "bütçe": butce,
         "çağrı": cagri, "çekirdek": int(cekirdek_sayisi()),
@@ -454,72 +172,22 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     }
 
 
-#: **SÖZ HAKLARI.** Toplamı 1'dir ve ayarlanan şey budur: bir kefenin
-#: mizanda ne kadar söz hakkı olacağı. Katsayı değil, paydır.
-#:
-#: Uzay (rezonans) mizanın **çıpasıdır** ve payı en büyüktür: veriye
-#: bağlanan tek kefe odur. Nokta (kısmî Born) en küçüktür ve öyle
-#: olmalıdır -- büyütülürse mizan bir softmax taklidine iner.
-#: **FERMAN 1-S İLE İKİ YENİ KEFE GELDİ VE PAYLAR YENİDEN DAĞITILDI.**
-#: Pay eklemek, ötekilerden almak demektir; toplam daima 1'dir. Nispetleri
-#: hep birden ölçeklemek hiçbir şeyi değiştirmezdi (denge zaten nispet
-#: alıyor), o hâlde söz hakkı hakikaten devredildi.
-#:
-#: ``nokta`` 0,03'ten 0,10'a **çıkarıldı** ve sebebi ölçülmüştür: ARC
-#: kanadında basamak isabeti %0,20, yâni kör seçimin (1/16 = %6,25)
-#: altında. Hedefe sadakati ölçen tek kefe mizanda yüzde üç söz hakkına
-#: sahipken "yüzde yüz uyum arıyoruz" (ferman 1-R/a) demek, aramayı
-#: iddia edip aramamaktı.
 PAYLAR: Dict[str, float] = {
-    "uzay": 0.22,        # ℒ_Rezonans -- çıpa, λ = 1 (bölünmez)
-    "tip": 0.13,         # ℒ_Hodge
-    "meleke": 0.12,      # ℒ_Meleke -- 41 melekenin kendi sözleşmesi
-    "kategori": 0.10,    # ℒ_Kategori (funktör)
-    "nokta": 0.10,       # ℒ_Nokta -- ARC'ın hedefe sadakat kefesi
-    "cevrim": 0.09,      # ℒ_Çevrim (Wilson)
-    "tenakuz": 0.09,     # ℒ_Tenakuz (log bariyer)
-    "zirh": 0.07,        # ℒ_Zırh -- sheaf/Betti/koho/homotopi/nizam
-    "monogami": 0.05,    # ℒ_Monogami (CKW)
-    "engel": 0.03,       # ℒ_Engel (CIM)
+    "uzay": 0.22,
+    "tip": 0.13,
+    "meleke": 0.12,
+    "kategori": 0.10,
+    "nokta": 0.10,
+    "cevrim": 0.09,
+    "tenakuz": 0.09,
+    "zirh": 0.07,
+    "monogami": 0.05,
+    "engel": 0.03,
 }
 
 
 def denge(kefeler: Dict[str, float], taban: float = 0.05,
           tavan: float = 8.0) -> Dict[str, float]:
-    """**FORMÜL 3 -- λ'LAR ÖLÇÜLÜR, ELLE YAZILMAZ.**
-
-    ``kefeler`` mizanın tâlim başındaki ham dökümüdür. Her kefe için::
-
-        λ_i = (pay_i / pay_uzay) · çıpa / kefe_i
-
-    Yâni ``ℒ_Rezonans`` çıpa alınır (``λ = 1``) ve öteki kefeler ona
-    **nispetle** ölçeklenir; böylece her kefe ilan edilen payı kadar
-    katkı verir. Büyük sayılı bir kefe küçüklerini ezmez.
-
-    ===================================================================
-    İKİ FREN -- VE İKİSİ DE ÖLÇÜMLE KONDU
-    ===================================================================
-
-    Ham hâliyle bu formül **ıraksar** ve ölçüldü: tâlim başında
-    ``ℒ_Tenakuz = 0,0063`` çıktı (çevrimlerin hepsi kısırdı, bariyer
-    daha yanmamıştı) ve ``λ_tenakuz = 48,34`` oldu. Yâni henüz hiçbir
-    şey ölçmemiş bir kefe, tâlimin tamamını yutacak ağırlığı aldı.
-    Bu, ``1/v`` ağırlıklandırmasının bilinen tuzağıdır: **küçük olan
-    kefe, önemli olan kefe değildir** -- çoğu zaman yalnız henüz
-    yanmamış olandır.
-
-    İki fren konur ve ikisi de beyan edilir:
-
-    1. **TABAN** -- kefe, çıpanın ``taban`` katından küçükse "henüz
-       yanmamış" sayılır ve ölçek ona göre alınır. Sıfıra bölüp
-       sonsuz ağırlık üretmek yasaktır (ferman 5).
-    2. **TAVAN** -- hiçbir λ, payının ``tavan`` katından fazlasını
-       alamaz. Kefeler yandıkça ölçü kendiliğinden yerine oturur;
-       tavan yalnız ilk adımdaki ıraksamayı keser.
-
-    Frenlenen kefeler ``frenlenen`` anahtarında **isimleriyle** döner:
-    hangi ağırlığın ölçüyle, hangisinin frenle konduğu gizlenmez.
-    """
     cipa = float(kefeler.get("rezonans", 0.0))
     pay_u = float(PAYLAR["uzay"])
     o: Dict[str, float] = {}
@@ -527,14 +195,12 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
     esle = {"cevrim": "çevrim", "tenakuz": "tenakuz_bariyer",
             "monogami": "monogami", "engel": "engel", "tip": "hodge",
             "kategori": "kategori", "nokta": "nokta",
-            # Ferman 1-S: imha edilen iki hata fonksiyonunun cevherleri.
             "meleke": "meleke", "zirh": "zırh"}
     esik = max(float(taban) * cipa, 1e-9)
     for ad, anahtar in esle.items():
         v = abs(float(kefeler.get(anahtar, 0.0)))
         nispet = float(PAYLAR[ad]) / pay_u
         if v < esik:
-            # Henüz yanmamış kefe: ölçek çıpadan değil, payından gelir.
             lam = nispet
             frenlenen.append(ad + "(taban)")
         else:
@@ -543,12 +209,11 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
             lam = nispet * float(tavan)
             frenlenen.append(ad + "(tavan)")
         o["lam_" + ad] = float(lam)
-    o["frenlenen"] = frenlenen          # type: ignore[assignment]
+    o["frenlenen"] = frenlenen
     return o
 
 
 def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
-    """Ölçeğin kendi beyanı -- **formülleriyle beraber** (ferman 1-G)."""
     d = o or olcek(kok)
     return "\n".join([
         "=== ÖLÇEK -- ÜÇ KÖK, ÜÇ FORMÜL (nefs/olcek.py) ===", "",

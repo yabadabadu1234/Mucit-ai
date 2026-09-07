@@ -1,27 +1,3 @@
-"""Kapılar — tek ve çok kübitli üniter operatörler.
-
-Külliyattaki kapı envanterinin çalışan hâli.  Her kapı bir ``(2^k, 2^k)``
-karmaşık dizeydir ve **üniterliği kurulurken denetlenir**; üniter olmayan
-bir dizeye "kapı" demek, bütün aşağı akış hesabını sessizce bozar.
-
-İki nokta bilhassa gözetildi:
-
-**Küresel faz.**  ``U_1(λ) = diag(1, e^{iλ})`` ile
-``R_z(λ) = diag(e^{-iλ/2}, e^{iλ/2})`` **eşit değildir**; aralarında
-``e^{iλ/2}`` küresel fazı vardır.  Tek başına kullanıldığında hiçbir
-ölçüm ikisini ayırt edemez, fakat **kontrol altında ayırt edilir**:
-``CU_1(λ) ≠ CR_z(λ)``, çünkü kontrol kübiti küresel fazı göreli faza
-çevirir.  Bu yüzden :func:`esdeger_mi` iki ayrı ölçüt sunar --
-``kuresel_faz_serbest`` ve tam eşitlik -- ve hangisinin kullanıldığı
-her yerde açıkça yazılır.  (Kaynak külliyatta ``U_1 \\equiv R_z``
-yazılmıştı; K7 tashihi.)
-
-**Kübit sırası.**  ``|q_0 q_1 … q_{n-1}⟩`` yazılışında ``q_0`` **en
-anlamlı** bittir; yani ``|01⟩`` indeks ``1``dir.  Kapı yerleştirme
-(:func:`yerlestir`) bu sıraya göre çalışır ve testlerde birebir
-sınanır -- sıra karışırsa CNOT'un kontrolü ile hedefi yer değiştirir
-ve hata sessiz kalır.
-"""
 
 from __future__ import annotations
 
@@ -41,9 +17,6 @@ __all__ = [
 
 TOL = 1e-10
 
-# ══════════════════════════════════════════════════════════════════════
-#  Tek kübit
-# ══════════════════════════════════════════════════════════════════════
 
 I2 = np.eye(2, dtype=complex)
 X = np.array([[0, 1], [1, 0]], dtype=complex)
@@ -59,12 +32,6 @@ PAULI: Dict[str, np.ndarray] = {"I": I2, "X": X, "Y": Y, "Z": Z}
 
 
 def _donme(P: np.ndarray, teta: float) -> np.ndarray:
-    """``exp(-i θ/2 · P)`` — ``P² = I`` olan bir Pauli için kapalı form.
-
-    ``P² = I`` olduğundan üstel seri iki parçaya ayrılır ve
-    ``cos(θ/2)I − i sin(θ/2)P`` verir.  Genel dizey üstelini almaya
-    gerek yoktur; hem daha hızlı hem tam.
-    """
     return np.cos(teta / 2) * np.eye(P.shape[0], dtype=complex) \
         - 1j * np.sin(teta / 2) * P
 
@@ -82,10 +49,6 @@ def Rz(teta: float) -> np.ndarray:
 
 
 def U1(lam: float) -> np.ndarray:
-    """``diag(1, e^{iλ})``.
-
-    ``R_z(λ)``ye **eşit değildir**: ``U_1(λ) = e^{iλ/2} R_z(λ)``.
-    """
     return np.diag([1.0 + 0j, np.exp(1j * lam)])
 
 
@@ -96,7 +59,6 @@ def U2(fi: float, lam: float) -> np.ndarray:
 
 
 def U3(teta: float, fi: float, lam: float) -> np.ndarray:
-    """Her ``SU(2)`` kapısı bununla (küresel faz kadarıyla) yazılır."""
     c, s = np.cos(teta / 2), np.sin(teta / 2)
     return np.array([[c, -np.exp(1j * lam) * s],
                      [np.exp(1j * fi) * s, np.exp(1j * (fi + lam)) * c]],
@@ -107,10 +69,6 @@ def faz(a: float) -> complex:
     return complex(np.exp(1j * a))
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Çok kübit
-# ══════════════════════════════════════════════════════════════════════
-
 def kron(*dizeyler: np.ndarray) -> np.ndarray:
     sonuc = np.array([[1.0 + 0j]])
     for d in dizeyler:
@@ -119,10 +77,6 @@ def kron(*dizeyler: np.ndarray) -> np.ndarray:
 
 
 def kontrollu(U: np.ndarray, n_kontrol: int = 1) -> np.ndarray:
-    """``|1…1⟩⟨1…1| ⊗ U + (kalan) ⊗ I`` — çok kontrollü kapı.
-
-    Kontrol kübitleri **en anlamlı** taraftadır (``q_0`` en solda).
-    """
     d = U.shape[0]
     K = 2 ** n_kontrol
     C = np.eye(K * d, dtype=complex)
@@ -149,7 +103,6 @@ def CRz(teta: float) -> np.ndarray:
 
 
 def _cift_donme(P: np.ndarray, teta: float) -> np.ndarray:
-    """``exp(-i θ/2 · P⊗P)``; ``(P⊗P)² = I`` olduğundan kapalı form."""
     PP = np.kron(P, P)
     return np.cos(teta / 2) * np.eye(4, dtype=complex) \
         - 1j * np.sin(teta / 2) * PP
@@ -168,13 +121,6 @@ def RZZ(teta: float) -> np.ndarray:
 
 
 def molmer_sorensen(n: int, teta: float, fi: float) -> np.ndarray:
-    """``exp(-i θ/4 (Σ_i (cos φ X_i + sin φ Y_i))²)`` — iyon tuzağı kapısı.
-
-    Kare alındığı için toplam operatörü **kendisiyle çarpılır**; bu,
-    bütün kübit çiftleri arasında aynı anda dolaşıklık kurar.  Dizey
-    üsteli özayrışımla alınır: toplam Hermitesel olduğundan bu tam
-    sonucu verir, seri kesmesi gerekmez.
-    """
     if n < 1:
         raise ValueError("n ≥ 1 olmalı")
     A = np.zeros((2 ** n, 2 ** n), dtype=complex)
@@ -185,18 +131,7 @@ def molmer_sorensen(n: int, teta: float, fi: float) -> np.ndarray:
     return V @ np.diag(np.exp(-1j * teta / 4 * oz)) @ V.conj().T
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Yerleştirme
-# ══════════════════════════════════════════════════════════════════════
-
 def yerlestir(U: np.ndarray, kubitler: Sequence[int], n: int) -> np.ndarray:
-    """``U``yu ``n`` kübitlik kayıtta belirtilen kübitlere yerleştirir.
-
-    ``q_0`` **en anlamlı** bit sayılır.  Bitişik olmayan veya sırası
-    karışık kübitler için, önce bitişik yerleştirilir sonra bir
-    permütasyonla taşınır; permütasyon dizeyi **açıkça** kurulur ki
-    indis sırası gizli kalmasın.
-    """
     k = len(kubitler)
     if U.shape != (2 ** k, 2 ** k):
         raise ValueError(f"U {2**k}×{2**k} olmalı, {U.shape} verildi")
@@ -206,19 +141,13 @@ def yerlestir(U: np.ndarray, kubitler: Sequence[int], n: int) -> np.ndarray:
         raise ValueError("kübit indisi kayıt dışında")
 
     kalan = [q for q in range(n) if q not in kubitler]
-    sira = list(kubitler) + kalan          # yeni sıralama
+    sira = list(kubitler) + kalan
     tam = np.kron(U, np.eye(2 ** (n - k), dtype=complex))
     P = _permutasyon_dizeyi(sira, n)
-    # sira sıralamasından standart sıralamaya geri dön:
     return P.conj().T @ tam @ P
 
 
 def _permutasyon_dizeyi(sira: Sequence[int], n: int) -> np.ndarray:
-    """Standart sıradan ``sira`` sıralamasına götüren permütasyon.
-
-    ``sira[j] = q`` ise, yeni kayıtta ``j``. konumda eski ``q``. kübit
-    durur.  Temel durumlar üzerinde bit taşıyarak kurulur.
-    """
     N = 2 ** n
     P = np.zeros((N, N), dtype=complex)
     for eski in range(N):
@@ -229,10 +158,6 @@ def _permutasyon_dizeyi(sira: Sequence[int], n: int) -> np.ndarray:
         P[yeni, eski] = 1.0
     return P
 
-
-# ══════════════════════════════════════════════════════════════════════
-#  Denetimler
-# ══════════════════════════════════════════════════════════════════════
 
 def uniter_mi(U: np.ndarray, tol: float = TOL) -> bool:
     U = np.asarray(U)
@@ -245,13 +170,6 @@ def uniter_mi(U: np.ndarray, tol: float = TOL) -> bool:
 def esdeger_mi(A: np.ndarray, B: np.ndarray,
                kuresel_faz_serbest: bool = False,
                tol: float = TOL) -> bool:
-    """İki kapı eşit mi?
-
-    ``kuresel_faz_serbest=True`` iken ``A = e^{iφ}B`` de eşdeğer sayılır.
-    Bu ayrım **tercih değil**: tek başına kullanılan bir kapıda küresel
-    faz ölçülemez, fakat kontrol altında ölçülebilir hâle gelir.  O
-    yüzden hangi ölçütün kullanıldığı her çağrıda açıkça yazılmalıdır.
-    """
     A, B = np.asarray(A), np.asarray(B)
     if A.shape != B.shape:
         return False
@@ -273,10 +191,6 @@ def komutator(A: np.ndarray, B: np.ndarray) -> np.ndarray:
 def antikomutator(A: np.ndarray, B: np.ndarray) -> np.ndarray:
     return A @ B + B @ A
 
-
-# ══════════════════════════════════════════════════════════════════════
-#  Gösterim
-# ══════════════════════════════════════════════════════════════════════
 
 def _gosterim() -> str:
     s: List[str] = []
@@ -348,7 +262,6 @@ def _gosterim() -> str:
                  + ("   (küresel faz serbest)" if faz_serbest else ""))
 
     s.append("\n=== Kübit sırası: q₀ en anlamlı bit ===")
-    # |01⟩ = indeks 1;  CNOT(kontrol=0, hedef=1) onu değiştirmemeli
     v01 = np.zeros(4, dtype=complex); v01[1] = 1
     v10 = np.zeros(4, dtype=complex); v10[2] = 1
     s.append(f"  CNOT|01⟩ = |01⟩ mi? "
@@ -387,28 +300,7 @@ def _gosterim() -> str:
     return "\n".join(s)
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  Chebyshev tabanı -- KÜME 4 terkibinin tensör katmanına bıraktığı uzuv
-# ══════════════════════════════════════════════════════════════════════
-
 def chebyshev(x, derece: int):
-    """``T_0..T_d(x)`` -- yineleme ile, ``[-1,1]`` üzerinde kararlı.
-
-    KÜME 4 tevhidinde (kütük H223) iki ayrı ``chebyshev`` bulundu:
-    ``kuantum/nqs.py``daki **yığın** hâli (``T_0..T_d`` hepsini döndürür)
-    ve ``kuantum/qsvt.py``deki **skaler** hâli (yalnız ``T_d``). İkisi
-    aynı özyinelemedir; ayrı durmalarının tek sebebi ayrı dosyalarda
-    olmalarıydı. Yığın hâli buraya -- tensör katmanının yaprak
-    modülüne -- konuldu, zira ``kuantum/yazmac.py`` onu çağırır ve
-    tâlim çipine bağlanmak orada bir çevrim doğururdu. Skaler hâl,
-    tâlim çipinde ``faz_dizisinin_polinomu(ne="chebyshev")`` içinde
-    aynı özyinelemeyle durur; iki gövde de ``T[..., d]``nin son
-    terimidir.
-
-    ``cos(d·arccos x)`` kapalı formu ``|x| = 1``de türev tekilliği verir
-    ve yığın hesabında ``nan`` üretir; yineleme
-    ``T_{d+1} = 2xT_d − T_{d−1}`` hem kararlı hem ucuzdur.
-    """
     x = np.clip(np.asarray(x, float), -1.0, 1.0)
     T = np.empty(x.shape + (int(derece) + 1,), float)
     T[..., 0] = 1.0
@@ -427,19 +319,9 @@ if __name__ == "__main__":
     print(rapor())
 
 
-# ══════════════════════════════════════════════════════════════════
-#  SİLİNEN MPS MOTORUNDAN KURTARILAN KAPI ÜRETEÇLERİ
-# ══════════════════════════════════════════════════════════════════
-#
-#  ``kuantum/yazmac.py`` fermanla imha edildi (MPS). Fakat bu iki
-#  üreteç MPS'e ait DEĞİLDİR: biri iki kübitlik dik kapı kuruyor,
-#  öteki ``so(4)`` üretecini veriyor. Yasaklı usul olmadıkları için
-#  imha edilmediler, kapıların kendi dosyasına alındılar.
-
 KAPI_USULU: str = "us"
 
 def _so4_ureteci(teta: np.ndarray) -> np.ndarray:
-    """``(..., 6)`` açı → ``(..., 4, 4)`` ters simetrik ``so(4)`` üreteci."""
     t = np.asarray(teta, float)
     A = np.zeros(t.shape[:-1] + (4, 4))
     iu = np.triu_indices(4, 1)
@@ -447,18 +329,6 @@ def _so4_ureteci(teta: np.ndarray) -> np.ndarray:
     return A - np.swapaxes(A, -1, -2)
 
 def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
-    """6 açıdan ``SO(4)`` kapısı -- usule göre Cayley yahut üstel.
-
-    ``so(4)`` altı boyutludur (``4·3/2``); ters simetrik bir üreteçten
-    Cayley dönüşümü ``Q = (I−A)(I+A)⁻¹`` tam dik bir dizey verir.
-    Dolaşıklığı üreten budur: çarpım durumundaki iki kübit bu kapıdan
-    geçince Schmidt rütbesi 1'den 2'ye çıkar.
-
-    **Cayley'in erişemediği yer vardır ve ölçüldü (H120):** ``det(I+Q)
-    = 0`` olan her dönme, yani bütün **π dönmeleri**. Reel yazmaçta
-    yegâne faz π olduğu için (H98) bu, melekelerin işaret çevirmeyi
-    hiç öğrenememesi demektir. ``KAPI_USULU = "us"`` o boşluğu kapatır.
-    """
     if KAPI_USULU == "us":
         return dik_iki_kubit_us(teta)
     A = np.zeros((4, 4), dtype=np.float64)
@@ -472,11 +342,6 @@ def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
 KAPI_USULU: str = "us"
 
 def dik_iki_kubit_us_yigin(teta: np.ndarray) -> np.ndarray:
-    """``(..., 6)`` açı → ``(..., 4, 4)`` dik kapı yığını -- ``exp(−2A)``.
-
-    ``A`` ters simetrik ⟹ ``iA`` Hermiteseldir; ``eigh`` tam üsteli
-    verir (seri kesmesi yok). Netice cebren ``SO(4)``tedir.
-    """
     A = -2.0 * _so4_ureteci(teta)
     oz, V = np.linalg.eigh(1j * A)
     E = np.matmul(V * np.exp(-1j * oz)[..., None, :],
@@ -484,37 +349,4 @@ def dik_iki_kubit_us_yigin(teta: np.ndarray) -> np.ndarray:
     return np.real(E).astype(np.float32)
 
 def dik_iki_kubit_us(teta: np.ndarray) -> np.ndarray:
-    """6 açıdan ``SO(4)`` kapısı -- **üstel harita** ile, ``exp(A)``.
-
-    ``dik_iki_kubit`` (Cayley) ile aynı işi görür ve aynı gruba düşer;
-    farkı **erişebildiği kümededir** ve bu fark ölçüldü.
-
-    **Cayley'in eksiği (kütük H120).** ``Q = (I−A)(I+A)⁻¹`` yalnız
-    ``det(I+Q) ≠ 0`` olan ``Q``lara ulaşır. Yani ``−1`` özdeğerli her
-    dönme -- bütün **π dönmeleri** -- Cayley'in erişemediği yerdedir.
-    Ölçüldü::
-
-        hedef  diag(1, 1, −1, −1)  ∈ SO(4),  det(I+Q) = 0
-        exp    ile hata            2,22e-16   (tam)
-        Cayley ile en iyi          0,3563     (300 000 rastgele deneme)
-
-    Ve bu, bu mimaride **tam da ihtiyaç duyulan** kapıdır: reel
-    yazmaçta ``e^{iθ}`` yoktur, yalnız ``π`` fazı vardır (kütük H98).
-    Yani melekelerin öğrenilen kapıları, reel yazmacın sahip olduğu
-    **yegâne fazı** kuramıyordu. İşaret çeviren her şey (``faz_z``,
-    ``CZ``, ``sadakat`` kapıları) o yüzden elle konmak zorunda kaldı;
-    hiçbir meleke onu öğrenemezdi.
-
-    ``exp``, tıkız ve bağlantılı bir grupta **örtendir**: ``SO(4)``ün
-    tamamına ulaşır. Maliyet bir ``4×4`` özayrışımdır ve yığın hâlinde
-    ``numpy`` tarafından taşınır.
-
-    **Ölçek Cayley'e uydurulmuştur.** Cayley açılınca
-    ``(I−A)(I+A)⁻¹ = I − 2A + O(A²)``, ``exp`` ise ``I + A + O(A²)``
-    verir; yani aynı açı ikisinde **farklı** kapı demektir. Ölçüldü:
-    ``θ ~ 1e-3``te ``exp(−2A)`` ile Cayley arasındaki fark 3,5e-10.
-    Bu yüzden burada ``exp(−2A)`` kullanılır ve usul değiştiğinde
-    öğrenilmiş bütün açılar aynı manada kalır -- yalnız π dönmeleri
-    artık erişilebilirdir.
-    """
     return dik_iki_kubit_us_yigin(np.asarray(teta, float).reshape(-1)[:6])

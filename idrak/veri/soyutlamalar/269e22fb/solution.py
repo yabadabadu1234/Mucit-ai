@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task 269e22fb.
-
-Refactored to expose a DSL-style main that composes pure helpers while
-preserving the original solver semantics.
-"""
 
 from __future__ import annotations
 
@@ -39,9 +34,9 @@ Mapping = Dict[int, int]
 
 class Alignment(NamedTuple):
     transform: str
-    mapping: Mapping  # original color -> binary {0,1}
+    mapping: Mapping
     position: Tuple[int, int]
-    pattern: Grid  # transformed binary grid (0/1)
+    pattern: Grid
 
 
 def deep_copy(grid: Grid) -> Grid:
@@ -117,14 +112,6 @@ def _map_colors(grid: Grid, mapping: Mapping) -> Grid:
 
 
 def findAlignment(grid: Grid) -> Alignment:
-    """Find dihedral transform, color mapping, and placement into BASE_PATTERN.
-
-    Returns an Alignment that captures:
-      - transform: name of the dihedral transform that aligns the input
-      - mapping: original->binary color mapping (to {0,1})
-      - position: top-left insertion coordinates within BASE_PATTERN
-      - pattern: transformed binary grid
-    """
     colors = sorted({value for row in grid for value in row})
     if len(colors) != 2:
         raise ValueError("expected exactly two colors")

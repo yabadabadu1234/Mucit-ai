@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 7c66cb00."""
 
 from __future__ import annotations
 
@@ -111,7 +110,6 @@ def _stamp_sections(grid: Grid, align_to: str) -> Grid:
     width = len(grid[0])
     result = [row[:] for row in grid]
 
-    # Always clear the prototype area first.
     for r0, r1 in prototype_sections:
         for r in range(r0, r1 + 1):
             result[r] = [base] * width
@@ -139,7 +137,7 @@ def _stamp_sections(grid: Grid, align_to: str) -> Grid:
                 continue
             if align_to == "top":
                 top_row = r0
-            else:  # align_to == "bottom"
+            else:
                 top_row = r1 - comp_height + 1
             left_col = int(comp["col"])
             if left_col < 0 or left_col + comp_width > width:

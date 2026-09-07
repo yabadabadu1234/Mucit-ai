@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task 2c181942.
-
-Refactored to align the main solver with the typed-DSL lambda while
-preserving original behaviour via pure helpers.
-"""
 
 from __future__ import annotations
 
@@ -40,7 +35,6 @@ def gatherColorStats(grid: Grid) -> Stats:
 
 
 def detectAxis(grid: Grid) -> Axis:
-    """Return (axis_left_col, per-color counts, per-color cells) or None."""
     height, width = len(grid), len(grid[0])
     best: Optional[Tuple[int, int, Dict[int, int]]] = None
     best_cells: Optional[Dict[int, List[Coord]]] = None
@@ -83,7 +77,7 @@ def selectVerticalColors(stats: Stats, axis: Axis) -> Tuple[int, int]:
     if axis is None or not counts:
         return BACKGROUND, BACKGROUND
     axis_left, axis_counts, axis_cells_map = axis
-    _ = axis_left  # unused here, kept for symmetry
+    _ = axis_left
     return _select_vertical_colors(axis_counts, counts, axis_cells_map)
 
 
@@ -103,7 +97,6 @@ def _normalise_rows(mid_start: int, mid_end: int, height: int) -> List[int]:
 
 
 def fillVerticalArms(grid: Grid, colors: Tuple[int, int], axis: Axis) -> Grid:
-    # Preserve original guards inside helper
     counts, _rows_by_color, _cols_by_color, _cells_by_color = gatherColorStats(grid)
     if not counts or axis is None:
         return _copy_grid(grid)
@@ -112,7 +105,6 @@ def fillVerticalArms(grid: Grid, colors: Tuple[int, int], axis: Axis) -> Grid:
     axis_right = axis_left + 1
 
     top_color, bottom_color = colors
-    # Find mid rows between extreme occurrences on the axis
     top_axis_rows = [r for r, _ in axis_cells_map[top_color]]
     bottom_axis_rows = [r for r, _ in axis_cells_map[bottom_color]]
     mid_rows = _normalise_rows(min(top_axis_rows), max(bottom_axis_rows), len(grid))
@@ -139,7 +131,6 @@ def fillVerticalArms(grid: Grid, colors: Tuple[int, int], axis: Axis) -> Grid:
     top_rows_used = fill_vertical(top_color, mid_start, -1)
     fill_vertical(bottom_color, mid_end, 1)
 
-    # Selective top-row flare adjustment
     top_axis_ratio = axis_counts[top_color] / counts[top_color]
     if len(top_rows_used) == 3 and top_axis_ratio < 0.5:
         topmost = min(top_rows_used)
@@ -163,7 +154,6 @@ def placeHorizontalArms(grid: Grid, stats: Stats, axis: Axis) -> Grid:
     axis_left, axis_counts, axis_cells_map = axis
     axis_right = axis_left + 1
 
-    # Recompute mid rows and centres deterministically from stats+axis
     top_color, bottom_color = _select_vertical_colors(axis_counts, counts, axis_cells_map)
     top_axis_rows = [r for r, _ in axis_cells_map[top_color]]
     bottom_axis_rows = [r for r, _ in axis_cells_map[bottom_color]]
@@ -256,5 +246,4 @@ def solve_2c181942(grid: Grid) -> Grid:
     return placeHorizontalArms(result, stats, axis)
 
 
-# Alias used by the framework
 p = solve_2c181942

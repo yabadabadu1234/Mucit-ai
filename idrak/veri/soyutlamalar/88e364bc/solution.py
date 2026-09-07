@@ -1,12 +1,10 @@
-"""Solver for ARC-AGI-2 task 88e364bc (split: evaluation)."""
 
 from __future__ import annotations
 
 from typing import Callable, Iterable, List, Optional, Tuple, cast
 
-# Typed aliases used by the DSL-style solver
 Grid = List[List[int]]
-Block = Tuple[int, int, List[List[int]]]  # (top, left, 5x5 data)
+Block = Tuple[int, int, List[List[int]]]
 Position = Tuple[int, int]
 Key5x5 = Tuple[
     Tuple[int, int, int, int, int],
@@ -69,7 +67,6 @@ def _copy_grid(g: Grid) -> Grid:
 
 
 def enumerateBlocks5x5(grid: Grid) -> Iterable[Block]:
-    """Yield each full 5x5 block as (top,left,data). If grid is not divisible by 5, yield none (preserves identity)."""
     h = len(grid)
     w = len(grid[0]) if grid else 0
     if h % 5 or w % 5:
@@ -82,14 +79,12 @@ def enumerateBlocks5x5(grid: Grid) -> Iterable[Block]:
 
 
 def lookupBlockRule(block: Block) -> Optional[Position]:
-    """Canonicalise 4->0 within the 5x5 data and look up the target offset."""
     _, _, data = block
     key = tuple(tuple(0 if v == 4 else v for v in row) for row in data)
     return BLOCK_RULES.get(cast(Key5x5, key))
 
 
 def clearBlockFours(canvas: Grid, block: Block) -> Grid:
-    """Return a new grid with any 4s inside the block cleared to 0."""
     top, left, _ = block
     out = _copy_grid(canvas)
     for dr in range(5):
@@ -100,7 +95,6 @@ def clearBlockFours(canvas: Grid, block: Block) -> Grid:
 
 
 def placeFourAtOffset(canvas: Grid, block: Block, position: Position) -> Grid:
-    """Return a new grid with a 4 placed at block origin + offset."""
     top, left, _ = block
     rr, cc = position
     out = _copy_grid(canvas)

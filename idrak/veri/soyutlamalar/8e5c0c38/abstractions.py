@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 8e5c0c38."""
 
 from collections import Counter, defaultdict
 import json

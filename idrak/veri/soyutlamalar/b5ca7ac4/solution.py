@@ -1,4 +1,3 @@
-"""Typed-DSL refactor for ARC-AGI-2 task b5ca7ac4 (evaluation split)."""
 
 from __future__ import annotations
 
@@ -11,7 +10,7 @@ Grid = List[List[int]]
 
 class Ring(TypedDict):
     outer: int
-    bbox: Tuple[int, int, int, int]  # top, bottom, left, right
+    bbox: Tuple[int, int, int, int]
     pattern: Grid
 
 
@@ -125,7 +124,7 @@ def _place_group(
     lanes: Sequence[int],
     order_fn: Callable[[Ring, Sequence[int]], Iterable[int]],
 ) -> List[Tuple[Ring, int]]:
-    usage: Dict[int, List[Tuple[int, int]]]= {lane: [] for lane in lanes}  # vertical spans per lane
+    usage: Dict[int, List[Tuple[int, int]]]= {lane: [] for lane in lanes}
     placements: List[Tuple[Ring, int]] = []
     for obj in objs:
         top, bottom, _, _ = obj["bbox"]
@@ -148,7 +147,6 @@ def _place_group(
 
 def assignRingLanes(rings: List[Ring], lane_plan: LanePlan) -> List[Tuple[Ring, int]]:
     colors = sorted({r["outer"] for r in rings})
-    # If not exactly two outer colors, preserve original positions (identity).
     if len(colors) != 2:
         return [(r, r["bbox"][2]) for r in rings]
 
@@ -157,7 +155,6 @@ def assignRingLanes(rings: List[Ring], lane_plan: LanePlan) -> List[Tuple[Ring, 
     left_objs = [r for r in rings if r["outer"] == left_color]
     right_objs = [r for r in rings if r["outer"] == right_color]
 
-    # If either side empty, keep identity.
     if not left_objs or not right_objs:
         return [(r, r["bbox"][2]) for r in rings]
 
@@ -185,7 +182,6 @@ def assignRingLanes(rings: List[Ring], lane_plan: LanePlan) -> List[Tuple[Ring, 
 
 
 def renderRingPlacements(grid: Grid, placements: Sequence[Tuple[Ring, int]], background: int) -> Grid:
-    # Preserve the original canvas size.
     h = len(grid)
     w = len(grid[0]) if h else 0
     out = [[background] * w for _ in range(h)]

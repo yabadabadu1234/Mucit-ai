@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 195c6913."""
 
 import json
 from importlib import util
@@ -21,11 +20,10 @@ def _extract_pattern_and_anchors(grid: Grid) -> Tuple[List[int], List[Tuple[int,
     width = len(grid[0])
     background = grid[0][0]
 
-    # basic component analysis (duplicated from the solver for introspection)
     module_spec = util.spec_from_file_location("solver195c6913_support", SOLVER_PATH)
     module = util.module_from_spec(module_spec)
     module_spec.loader.exec_module(module)
-    components = list(module._iter_components(grid))  # type: ignore[attr-defined]
+    components = list(module._iter_components(grid))
 
     pattern_infos = []
     totals: Dict[int, int] = {}
@@ -87,7 +85,7 @@ def full_propagation(grid: Grid) -> Grid:
     module_spec = util.spec_from_file_location("solver195c6913", SOLVER_PATH)
     module = util.module_from_spec(module_spec)
     module_spec.loader.exec_module(module)
-    return module.solve_195c6913(grid)  # type: ignore[attr-defined]
+    return module.solve_195c6913(grid)
 
 
 ABSTRACTIONS: Dict[str, Callable[[Grid], Grid]] = {

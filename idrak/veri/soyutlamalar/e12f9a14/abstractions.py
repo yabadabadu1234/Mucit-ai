@@ -1,8 +1,3 @@
-"""Abstractions explored for ARC task e12f9a14.
-
-The module collects the successive reasoning pipelines that were tried while
-fixing the task and provides a lightweight harness to compare them.
-"""
 
 from __future__ import annotations
 
@@ -61,13 +56,11 @@ UNION_OFFSETS = {
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Return the grid unchanged (baseline)."""
 
     return _clone(grid)
 
 
 def union_template_abstraction(grid: Grid) -> Grid:
-    """Apply the union-of-offsets template without variant selection."""
 
     height = len(grid)
     width = len(grid[0])
@@ -100,7 +93,6 @@ def union_template_abstraction(grid: Grid) -> Grid:
 
 
 def variant_selector_abstraction(grid: Grid) -> Grid:
-    """Delegate to the final collision-aware variant selection solver."""
 
     return solve_e12f9a14(grid)
 

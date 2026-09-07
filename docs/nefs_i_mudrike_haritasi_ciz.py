@@ -1,22 +1,3 @@
-"""
-docs/nefs_i_mudrike_mimarisi.tex dosyasinin sonundaki "VAKIA-I IDRAK VE
-INSANI SEBEKE (41 MELEKENIN KOPUKSUZ GIRDI-CIKTI MANIFOLDU)" bolumunu
-DOGRUDAN LaTeX kaynagindan ayristirip (regex ile, elle transkripsiyon
-YAPILMADAN -- 41 dugum x ~5-11 kenar, elle kopyalamak hataya acik olurdu)
-bir yonlendirilmis cizge (DiGraph) olarak insa eder ve iki ayri gorsel
-uretir:
-
-  1) nefs_i_mudrike_haritasi_tam.png     -- 41 melekenin TAMAMI, guclu
-     baglanti bilesenlerine gore renklendirilmis, yaylanma (spring)
-     duzeniyle.
-  2) nefs_i_mudrike_haritasi_cekirdek.png -- yalnizca en yuksek dereceli
-     (en cok baglantili) 12 melekeyi ve aralarindaki kenarlari gosteren,
-     okunakli bir "cekirdek" alt-cizge (41 dugumlu tam grafik gorsel
-     olarak asiri kalabalik oldugu icin ayrica).
-
-Sistemin KENDI iddia ettigi "Talim/Tahsil halkasi" (sona -- basa donen
-kapanma) da metinden ayrica ayristirilip cizgeye eklenir.
-"""
 import re
 import sys
 from pathlib import Path
@@ -30,12 +11,9 @@ TEX_YOLU = Path(__file__).parent / "nefs_i_mudrike_mimarisi.tex"
 
 
 def _latex_temizle(metin: str) -> str:
-    """LaTeX kacis dizilerini (\\c{s} -> s, \\u{g} -> g, \\^{i} -> i vb.)
-    ve \\mathcal{...} gibi matematik sarmalayicilarini temizleyip okunur
-    duz metne cevirir."""
     metin = re.sub(r"\\mathcal\{([^}]*)\}", r"\1", metin)
     metin = re.sub(r"\\bm\{([^}]*)\}", r"\1", metin)
-    metin = re.sub(r"\\[a-zA-Z]\{([^}]*)\}", r"\1", metin)  # \c{s}, \u{g}, \^{i} vb.
+    metin = re.sub(r"\\[a-zA-Z]\{([^}]*)\}", r"\1", metin)
     metin = metin.replace("\\", "")
     return metin.strip()
 
@@ -48,7 +26,6 @@ def _agi_ayristir() -> nx.DiGraph:
     govde = metin[baslangic:bitis]
     kapanis = metin[bitis:bitis + 900]
 
-    # Her dugum: "N. MelekeAdi\n * Girdiler (\leftarrow): a, b, c\n * Ciktilar (\rightarrow): d, e, f"
     dugum_deseni = re.compile(
         r"^\d+\.\s+(?P<ad>[^\n]+?)\s*\n"
         r"\s*\*?\s*Girdiler[^:]*:\s*(?P<girdiler>[^\n]+)\n"
@@ -65,17 +42,12 @@ def _agi_ayristir() -> nx.DiGraph:
             hedef = hedef.strip()
             if hedef:
                 G.add_edge(ad, hedef)
-        # Girdiler de -- kaynak dugum bu listede bir "melekeler dısı" oge
-        # (ör. "Dış Âlem Hadiseleri") olabilir; yine de dahil ediyoruz,
-        # cizgenin GERCEK tum girdi kaynaklarini gostersin diye.
         girdiler = [_latex_temizle(x) for x in eslesme.group("girdiler").split(",")]
         for kaynak in girdiler:
             kaynak = kaynak.strip()
             if kaynak:
                 G.add_edge(kaynak, ad)
 
-    # Kapanis halkasi (Talim/Tahsil) -- ayni dugum-deseniyle, biraz farkli
-    # girinti/madde isaretiyle yazilmis, ayri ayristiriliyor.
     kapanis_deseni = re.compile(
         r"(?P<ad>Talim|Tahsil)\s*\n"
         r"\s*\*?\s*Girdiler[^:]*:\s*(?P<girdiler>[^\n]+)\n"
@@ -104,10 +76,6 @@ def _tam_haritayi_ciz(G: nx.DiGraph, cikti_yolu: Path) -> None:
     dereceler = dict(G.degree())
     boyutlar = [300 + dereceler[n] * 90 for n in G.nodes()]
 
-    # Guclu baglanti bilesenlerine (SCC) gore renklendir -- "41 melekenin
-    # KOPUKSUZ [birbirine donen] sebeke" iddiasini gorsel olarak da
-    # dogrulamak/sinamak icin: gercekten TEK bir buyuk SCC mi olusuyor,
-    # yoksa kopuk adacıklar mi var?
     sccler = list(nx.strongly_connected_components(G))
     sccler.sort(key=len, reverse=True)
     renk_haritasi = {}

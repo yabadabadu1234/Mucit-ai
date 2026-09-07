@@ -1,30 +1,3 @@
-"""
-TÂLİM VE ÇIKARIM BEYANI -- **raporun yeri burasıdır, taht değil.**
-
-===================================================================
-FERMAN 1-G: ANA KODA RAPOR YAZMAK YASAKTIR
-===================================================================
-
-Padişahın hükmü: *"Umumiden hususiye gidiyorsun ama umumiye rapor
-yazıyorsun!! Bundan böyle ana koda rapor yazmak yasak!!!!!!! Tek
-yapacağın gerçek fonksiyonları çağırmak."*
-
-Bu dosya o hükmün icrasıdır. Evvelce ``main/egitim.py:kos`` içinde
-**332 satırlık** bir metin yığını vardı; taht bir nazırlık katı olmaktan
-çıkıp matbaa olmuştu. Daha kötüsü: bir uzuv ana koda **bağlanmadan** da
-oraya bir rapor satırı yazılabiliyordu -- ferman 1-C(b)'nin yasakladığı
-münafıklık tam da o kapıdan giriyordu.
-
-Artık taht yalnız şunu yapar::
-
-    kulli = kulli_kayip_talimi(ayar)      # gerçek fonksiyon çağrısı
-    return talim_beyani(ayar, kulli)      # gerçek fonksiyon çağrısı
-
-Metnin tamamı buradadır ve buradaki her satır, tâlimin **fiilen
-döndürdüğü** bir sayıya bakar: uzuv koşmadıysa o anahtar sözlükte
-yoktur ve beyan ``KeyError`` ile düşer. Yâni bu dosya bir süs değil,
-bir **denetimdir**.
-"""
 from __future__ import annotations
 
 from typing import Dict, Optional
@@ -33,7 +6,6 @@ __all__ = ["talim_beyani", "cikarim_beyani", "kaggle_beyani"]
 
 
 def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
-    """Tâlimin neticesini beyan et. ``kulli`` ``kulli_kayip_talimi``dendir."""
     from nefs.olcek import Kok, olcek_beyani
     s = ["", "=== TÂLİM NETİCESİ (%s) ===" % ayar.ad, ""]
     if kulli and kulli.get("ölçek"):
@@ -403,10 +375,6 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         if not g["gpu"]:
             s.append("      ⚠ GPU YOK: 1 TB/s HADDİ BU MAKİNEDE ÖLÇÜLMEDİ. "
                      "Aşağısı aynı cebrin CPU ölçümüdür.")
-        # **ÖLÇÜLEMEYEN SAYI BİÇİMLENDİRİLMEZ.** Bu üç satır evvelce
-        # ``%.1f`` ile ``None`` basmaya kalkıyordu ve GPU'suz bir
-        # makinede rapor **düşerdi**. Ölçülmeyenin yeri boş değil,
-        # "ölçülemedi"dir; sıfır yazmak da uydurmak olurdu.
         def _gb(v):
             return "ölçülemedi" if v is None else "%.1f GB/s" % v
 
@@ -458,16 +426,11 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         if kulli.get("düşen_uzuv"):
             s.append("    DÜŞEN UZUV: %s"
                      % ", ".join(sorted(kulli["düşen_uzuv"])))
-    # **YALAN SATIR KALDIRILDI.** Burada "ARC'de fiilen çözen hat bu
-    # ikisi değil, üçüncüsüdür: ``gorev_talimi``" yazıyordu. O fonksiyon
-    # imha edilmiş bir uzvu ithal ediyordu ve çağrılsa ImportError
-    # verirdi -- yâni "asıl çözen" diye gösterilen hat hiç koşmuyordu.
     s += ["", "  HAD: ARC çözüm oranı yukarıdaki `tam_çözülen`dir ve",
           "  başka hiçbir hat yoktur. Elle kâide de yoktur."]
     return "\n".join(s)
 
 def cikarim_beyani(d: Dict[str, object]) -> str:
-    """Çıkarım koşusunun neticesini beyan et (``main/cikarim.py``)."""
     return "\n".join([
         "=== ÇIKARIM -- motor cevabı (elle kâide YOK) ===", "",
         "  küme            : %s" % d["küme"],
@@ -500,7 +463,6 @@ def cikarim_beyani(d: Dict[str, object]) -> str:
 
 
 def kaggle_beyani(profil, talim, teslimat) -> str:
-    """Kaggle kipinin neticesini beyan et (``main/egitim.py:taht``)."""
     return ("=== KAGGLE KİPİ ===\n  donanım profili: %r\n"
             "  tâlim: %r\n  teslimat: %s"
             % (profil, talim, getattr(teslimat, "__name__", teslimat)))

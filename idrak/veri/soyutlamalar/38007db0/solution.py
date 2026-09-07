@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 38007db0."""
 
 from __future__ import annotations
 
@@ -21,7 +20,6 @@ class BorderSpec(NamedTuple):
 
 
 def _non_border_row_segments(grid: Grid, border_color: int) -> List[Tuple[int, int]]:
-    """Return (start, end) index pairs for contiguous non-border row runs."""
 
     segments: List[Tuple[int, int]] = []
     start = None
@@ -40,7 +38,6 @@ def _non_border_row_segments(grid: Grid, border_color: int) -> List[Tuple[int, i
 
 
 def _non_border_col_segments(grid: Grid, border_color: int) -> List[Tuple[int, int]]:
-    """Return (start, end) index pairs for contiguous non-border column runs."""
 
     segments: List[Tuple[int, int]] = []
     start = None
@@ -60,7 +57,6 @@ def _non_border_col_segments(grid: Grid, border_color: int) -> List[Tuple[int, i
 
 
 def _choose_unique_block(blocks: Sequence[Tuple[Tuple[int, ...], ...]]) -> int:
-    """Return the index of the block that stands out within its row."""
 
     if not blocks:
         return 0

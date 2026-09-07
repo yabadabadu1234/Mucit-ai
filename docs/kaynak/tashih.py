@@ -1,23 +1,3 @@
-"""
-Tashih cetveli: kaynak risalelerdeki formül hatalarının tespiti ve düzeltmesi.
-
-Her tashih bir **veri** kaydıdır: hangi dosya, hangi metin, yerine ne, ve
-**niçin**. Böylece:
-
-  * düzeltme kaynak metne birebir uygulanabilir (``uygula()``),
-  * her düzeltmenin tam olarak bir kere eşleştiği sınanabilir,
-  * cetvel elle değil kayıttan üretilir (``cetvel_yaz()``), yani metin ile
-    kod ayrışamaz.
-
-    python3 docs/kaynak/tashih.py            # tashihli nüshaları üretir
-    python3 docs/kaynak/tashih.py --cetvel   # cetveli basar
-
-**Ölçüt.** Buraya yalnız *gösterilebilir* hatalar alındı: tip/boyut
-uyuşmazlığı, işaret hatası, tanımsız veya erişilemez ifade, mantıkî
-denklik hatası, ve bir ifadenin kendi tanım kümesinde özdeş olarak
-sıfırlanması. Üslûp tercihleri, gösterim alışkanlıkları ve modelleme
-seçimleri **alınmadı** -- onlar hata değildir.
-"""
 from __future__ import annotations
 
 import os
@@ -33,7 +13,6 @@ MELEKE = "nefs_i_mudrike_41_meleke.tex"
 HOTT = "nefs_i_mudrike_hott_topos.tex"
 FITRAT = "nefs_i_mudrike_fitrat_ve_topos.tex"
 
-# ikinci küme: mantık külliyatı ve mimari risaleleri
 MIZAN = "mizan_i_muhakemat.tex"
 ZEYL = "mizan_zeyl.tex"
 GENIS = "mizan_genisletilmis.tex"
@@ -52,13 +31,13 @@ DOSYALAR = (KULLI, MELEKE, HOTT, FITRAT,
 @dataclass(frozen=True)
 class Tashih:
     no: int
-    yer: str            # hangi meleke / bölüm
+    yer: str
     baslik: str
     dosyalar: Tuple[str, ...]
     eski: str
     yeni: str
     sebep: str
-    tur: str            # tip | boyut | isaret | mantik | erisilmez | ozdes-sifir | tanimsiz
+    tur: str
 
 
 T: List[Tashih] = []
@@ -68,9 +47,6 @@ def _t(no, yer, baslik, dosyalar, eski, yeni, sebep, tur):
     T.append(Tashih(no, yer, baslik, tuple(dosyalar), eski, yeni, sebep, tur))
 
 
-# =====================================================================
-#  1-12: idrak mertebesi
-# =====================================================================
 _t(1, "𝒪₁ Müşahede", "Dikkat çekirdeğinde $W_k$ düşmüş",
    [KULLI],
    r"\text{Softmax}\left(\frac{X_t W_q X_t^T}{\sqrt{d}}\right) X_t W_v",
@@ -205,9 +181,6 @@ _t(15, "𝒪₃₃ Muhakeme", "Skaler integrale vektör eklenmiş",
     "Aynı sebep (bkz. T14).",
     "boyut")
 
-# =====================================================================
-#  13-26: hüküm ve burhân mertebesi
-# =====================================================================
 _t(16, "𝒪₈ Tahlil", "HSIC'in merkezleme dizeyi tanımsız bırakılmış",
     [MELEKE],
     r"\text{Tr}(K_{\text{cins}} H_{\text{ort centrality}} L_{\text{fasıl}} H_{\text{ort centrality}})",
@@ -534,9 +507,6 @@ _t(49, "𝒪₄₀ Sanat", "Simetrik harmoni normalize değil, negatife düşüy
     "ölçü simetrik dizede tam 1, ters simetrik dizede tam 0'dır.",
     "tip")
 
-# =====================================================================
-#  50-58: HoTT / kübik nüshaya mahsus
-# =====================================================================
 _t(50, "𝒪₁ Müşahede (HoTT)", "Glue $\\beta$-kuralı gösterge diye yazılmış",
     [HOTT],
     r"\mathbf{1}_{\text{müşahede}} &= \text{unglue}(\text{glue } X_t \, [\dots])",
@@ -596,7 +566,6 @@ _t(55, "𝒪₁₃ Tasdik (HoTT)", "Univalence gerçel sayılara tatbik edilemez
     r"$\mathcal{S}$'deki bir yolun varlığına dair bir ÖNERMEDİR.",
     "tip")
 
-# --- Fıtrat ve topos tebliği ---
 _t(56, "Tebliğ §1.1", "Serbest enerji $\\ge 0$ değildir",
     [FITRAT],
     r"\mathcal{F}(X, S) &= \mathbb{E}_{q(S)} \left[ \ln q(S) - \ln p(X, S) \right] \ge 0",
@@ -689,9 +658,6 @@ _t(63, "Tebliğ §3.3", "Kesme ile ``univalence mührü'' birbirini yalanlıyor"
     "mantik")
 
 
-# ---------------------------------------------------------------------
-#  64-70: HoTT nüshasındaki aynı hataların o nüshaya mahsus yazılışları
-# ---------------------------------------------------------------------
 _t(64, "𝒪₅ Tecrit (HoTT)", "Grassmannian'a izdüşüm diye bir şey yoktur",
     [HOTT],
     r"\text{Proj}_{\text{Gr}(k,d_{\text{in}})}(X_t) = U_k U_k^T X_t \in \mathcal{T}_{\text{inv}}",
@@ -745,11 +711,7 @@ _t(70, "𝒪₂₇ Tetkik (HoTT)", "Tensör çarpımı yerine Hadamard çarpım�
     "Aynı sebep (bkz. T40).",
     "tip")
 
-# =====================================================================
-#  71-...: Mantık külliyatı ve mimari risaleleri
-# =====================================================================
 
-# --- A. DERLEMEYİ KIRAN yapı hataları ------------------------------
 _t(71, "Münazara §1.3 (Mîzân)", "Ortam kapanışı bozuk: derleme KIRILIYOR",
     [MIZAN],
     "\\end{align\">",
@@ -798,7 +760,6 @@ _t(76, "Sezgisellik (Zeyl)", "Markdown başlığı LaTeX'e sızmış",
     r"Aynı kusur (bkz. T74). Ayrıca ``Semantigi'' $\to$ ``Semantiği''.",
     "yapi")
 
-# --- B. Klasik mantık: varlık faraziyesi --------------------------
 _t(77, "Darapti (Mîzân)", "VARLIK FARAZİYESİ eksik: kıyas geçersiz",
     [MIZAN, GENIS],
     r"P_2 &: \forall x (M(x) \implies S(x)) \quad (\text{Her M, S'dir}) \\"
@@ -854,7 +815,6 @@ _t(81, "Aks-i Müstevî (Mîzân)", "Arazî çevirme de varlık faraziyesi ister
     r"Bamalip/Fesapo'da düşen şart budur (bkz. T77-T80).",
     "mantik")
 
-# --- C. Klasik mantık: diğer ---------------------------------------
 _t(82, "İstikra-i Nâkıs (Mîzân)", "Formül ``en az biri'' olasılığı; tümevarım güveni değil",
     [MIZAN, GENIS],
     r"P\left( \forall x \in K, P(x) \right) = 1 - \prod_{i=1}^k (1 - p_i)",
@@ -1020,7 +980,6 @@ _t(96, "Adams (Zeyl)", "$P(A) = 0$'da şartlı olasılık tanımsız",
     r"belirsizlik sınırı da düşer.",
     "tanimsiz")
 
-# --- D. Mimari risaleleri ------------------------------------------
 _t(97, "Token Uzayları §Glue", "SAĞLAMLIK HATASI: hcomp $u_0$'a indirgenmez",
     [TOKEN],
     r"\text{hcomp}^i \, \mathcal{X}_{w_k} \, [\dots] \, u_0 &\longrightarrow u_0 \quad (\text{Ayrık Lif İç Dolgu İndirgemesi})",
@@ -1330,24 +1289,11 @@ _t(126, "Mütedahile §Syādvāda", "Uzaylar gerçel ağırlıklarla toplanamaz"
     r"eş-limittir (colimit).",
     "tip")
 
-# =====================================================================
-#  Eksik onbirinci denklemler (yalnız 41-meleke nüshası)
-# =====================================================================
-# Metnin özeti "450'den fazla", kapanış bölümü ise "11'er denklemle
-# tanımlanan" diyor. Sayım YAPILDI: yalnız ilk altı meleke 11 denklem
-# taşıyor, kalan 35'i 10; toplam 451 değil 416.
-#
-# İki tashih yolu vardı: iddiayı 416'ya çekmek, yahut eksik denklemi
-# tamamlamak. İkincisi seçildi, çünkü denetim zaten her melekede AYNI
-# cinsten bir denklemin eksik olduğunu gösterdi: değer aralığı,
-# normalizasyon yahut iyi tanımlılık şartı. Bu şartlar yazılmadan
-# yukarıdaki tashihlerin çoğu (erişilemez eşik, sınırsız skor,
-# normalize olmayan olasılık) zaten tespit edilemezdi.
 
 @dataclass(frozen=True)
 class Ek:
-    meleke: str          # \subsection başlığındaki ayırt edici parça
-    satir: str           # eklenecek denklem (align satırı, & ile)
+    meleke: str
+    satir: str
     sebep: str
 
 
@@ -1426,7 +1372,6 @@ EKLER: List[Ek] = [
 
 
 def ekleri_uygula(metin: str) -> Tuple[str, int]:
-    """Her melekenin ``align`` gövdesine eksik onbirinci denklemi ekler."""
     sayi = 0
     for e in EKLER:
         yer = metin.index("\\subsection{" + e.meleke)
@@ -1439,11 +1384,7 @@ def ekleri_uygula(metin: str) -> Tuple[str, int]:
     return metin, sayi
 
 
-# =====================================================================
-#  Uygulama
-# =====================================================================
 def uygula(kaynak_dizin: str = KAYNAK, hedef_dizin: str = HEDEF) -> Dict[str, List[int]]:
-    """Tashihleri uygular; her dosya için uygulanan tashih numaralarını verir."""
     os.makedirs(hedef_dizin, exist_ok=True)
     metinler = {ad: open(os.path.join(kaynak_dizin, ad), encoding="utf-8").read()
                 for ad in DOSYALAR}
@@ -1468,7 +1409,6 @@ def uygula(kaynak_dizin: str = KAYNAK, hedef_dizin: str = HEDEF) -> Dict[str, Li
 
 
 def _basligi_isaretle(metin: str, nolar: List[int]) -> str:
-    """Tashihli nüsha olduğunu başlıkta ve özette bildirir."""
     imza = (r"\\ \normalsize\textmd{(Tashihli nüsha --- %d formül düzeltmesi; "
             r"gerekçeler \texttt{docs/kaynak/TASHIH\_CETVELI.md} dosyasındadır)}"
             % len(nolar))
@@ -1476,7 +1416,6 @@ def _basligi_isaretle(metin: str, nolar: List[int]) -> str:
 
 
 def _sayilari_duzelt(metin: str) -> str:
-    """41-meleke nüshasının özetindeki denklem sayısı iddiasını düzeltir."""
     return metin.replace("450'den fazla tanımlı riyazî denklemle",
                          "451 tanımlı riyazî denklemle (41 meleke x 11)")
 

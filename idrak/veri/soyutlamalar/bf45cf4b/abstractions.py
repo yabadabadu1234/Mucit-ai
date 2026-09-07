@@ -1,8 +1,3 @@
-"""Abstractions explored for ARC task bf45cf4b.
-
-This module enumerates the candidate pipelines considered and provides a tiny
-evaluation harness so we can compare them on the available splits.
-"""
 
 from __future__ import annotations
 
@@ -23,13 +18,11 @@ Abstraction = Callable[[Grid], Grid]
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline: keep the grid unchanged for comparison."""
 
     return [row[:] for row in grid]
 
 
 def mask_tiling_abstraction(grid: Grid) -> Grid:
-    """Mask-driven tiling that matches the final solver."""
 
     return solve_bf45cf4b(grid)
 

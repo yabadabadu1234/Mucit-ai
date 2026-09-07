@@ -1,43 +1,3 @@
-"""Adiyabatik geçiş, QAOA ve parametre-kaydırma kuralı.
-
-Kaynak: ``docs/kaynak/kuantum_kapi_kulliyati.tex`` §"Kuantum Annealing,
-Adiabatik ve Hamiltonian Simülasyonu".
-
-**Adiyabatik.**  ``H(t) = (1 − t/T) H_baş + (t/T) H_hedef``,
-``H_baş = −Σ X_i``.  Adiyabatik kuram, ``T`` yeterince büyükse
-başlangıç temel durumunun hedef temel durumuna taşındığını söyler.
-"Yeterince büyük"ün alışıldık ölçüsü **asgarî tayf aralığıdır**:
-``T ≳ 1/Δ_min²``.  Bu ölçüt burada olduğu gibi **kullanılamaz** ve
-sebebi ölçülerek gösteriliyor: ``H₁``in temel öz-uzayı dejeneredir,
-bu yüzden ``E₁(s) − E₀(s)`` ``s → 1``de sıfıra iner ve ``Δ_min``
-nereden kestiğinize bağlı bir sayı olur (ölçüldü: ``s ≤ 0.95``te
-4-döngüde 1e-04, ``s = 1``de tam 0).  Üstelik 4-döngünün ``Δ_min``i
-``K₄``ünkinden **küçük** olduğu hâlde ``T = 128``de başarısı daha
-**yüksektir** (1.0000'e karşı 0.9992).  Sebep: kapanan aralık,
-hedefin dejenere temel öz-uzayının oluşmasıdır ve o alt uzayın
-içinde kalmak geçişi bozmaz.  Onun için başarı, temel duruma değil
-**temel alt uzaya** örtüşmeyle ölçülüyor.
-
-**QAOA.**  ``|γ,β⟩ = U_B(β_p)U_C(γ_p)…U_B(β_1)U_C(γ_1)|+⟩^{⊗n}`` ile
-``U_C(γ) = e^{−iγH_C}``, ``U_B(β) = e^{−iβΣX_i}``.  ``H_C`` köşegen
-olduğundan ``U_C`` köşegen bir faz çarpımıdır: **tam dizey
-kurulmaz**.  ``U_B`` çarpım hâlindedir, kubit kubit uygulanır.
-
-**Parametre kaydırma.**
-
-.. math::
-
-   \\partial_{\\theta_k}\\langle H\\rangle =
-   \\tfrac12\\big(\\langle H\\rangle_{\\theta_k+\\pi/2}
-   - \\langle H\\rangle_{\\theta_k-\\pi/2}\\big)
-
-Bu **tam** bir türevdir, sonlu fark yaklaşımı değil -- ama yalnız
-üreteci ``G² = I`` olan kapılar için.  Burada iki şey ölçülüyor:
-(1) ``R_z``, ``R_x`` gibi kapılarda sonuç makine hassasiyetinde
-sonlu farkla uyuşuyor; (2) üreteci ``G² = I`` **olmayan** bir kapıda
-(``e^{−iθ n̂}``, ``n̂ = diag(0,1,2)``) aynı formül **yanlış** cevap
-veriyor.  Kuralın şartı süs değildir.
-"""
 
 from __future__ import annotations
 
@@ -68,12 +28,7 @@ def _tek_kubit(P: np.ndarray, i: int, n: int) -> np.ndarray:
     return _tensor([P if k == i else _I for k in range(n)])
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  1. Adiyabatik geçiş
-# ══════════════════════════════════════════════════════════════════════
-
 def baslangic_hamiltonyeni(n: int) -> np.ndarray:
-    """``H_baş = −Σ_i X_i`` — temel durumu ``|+⟩^{⊗n}``."""
     H = np.zeros((2 ** n, 2 ** n), dtype=complex)
     for i in range(n):
         H -= _tek_kubit(_X, i, n)
@@ -82,25 +37,11 @@ def baslangic_hamiltonyeni(n: int) -> np.ndarray:
 
 def kesitli_hamiltonyen(H0: np.ndarray, H1: np.ndarray, s: float
                         ) -> np.ndarray:
-    """``H(s) = (1−s) H₀ + s H₁``, ``s = t/T ∈ [0,1]``."""
     return (1.0 - s) * H0 + s * H1
 
 
 def tayf_araligi(H0: np.ndarray, H1: np.ndarray, ornek: int = 201,
                  s_ust: float = 0.95) -> Dict[str, object]:
-    """``Δ(s) = E₁(s) − E₀(s)`` ve ``[0, s_ust]``teki asgarîsi.
-
-    Neden uç nokta dışarıda?  ``H₁`` (MaxCut) temel öz-uzayı Z₂
-    bakışımı yüzünden **dejeneredir** -- ölçüldü: 4-döngüde 2 katlı,
-    ``K₄``te 6 katlı.  Bu yüzden ``E₁(1) − E₀(1) = 0``dır ve ``s → 1``
-    yaklaştıkça aralık sıfıra iner (ölçüldü: ``s=0.995``te 3e-09).
-    Ama bu **zararsız** bir kapanmadır: dejenere temel öz-uzayın
-    içinde kalmak adiyabatik geçişi bozmaz, başarı zaten o alt uzaya
-    örtüşmeyle ölçülür.  ``E_k − E_{k−1}`` yazmak da işe yaramaz:
-    ``H₀``ın tayfı da dejeneredir, o zaman aralık ``s=0``da kapanır
-    (ölçüldü).  Dürüst ölçüt, kapanmanın nerede olduğunu söyleyip
-    uç bölgeyi ayırmaktır.
-    """
     e1s = np.linalg.eigvalsh(H1)
     kat = int(np.sum(e1s < e1s[0] + 1e-9))
     ss = np.linspace(0.0, 1.0, ornek)
@@ -116,12 +57,6 @@ def tayf_araligi(H0: np.ndarray, H1: np.ndarray, ornek: int = 201,
 
 def adiyabatik_kos(H0: np.ndarray, H1: np.ndarray, T: float,
                    adim: int = 400) -> Dict[str, object]:
-    """``|ψ(T)⟩``ı ``H(t/T)`` ile taşı; hedef temel duruma örtüşme.
-
-    Zaman dilimi başına **tam** üstel (özayrışım) kullanılır: adım
-    hatası yalnız ``H``nin zamanla değişmesinden gelir, üstelden
-    değil.  Böylece ölçülen şey gerçekten adiyabatik hata olur.
-    """
     e0, V0 = np.linalg.eigh(H0)
     psi = V0[:, 0].astype(complex)
     dt = T / adim
@@ -131,7 +66,6 @@ def adiyabatik_kos(H0: np.ndarray, H1: np.ndarray, T: float,
         lam, V = np.linalg.eigh(H)
         psi = (V * np.exp(-1j * lam * dt)) @ (V.conj().T @ psi)
     e1, V1 = np.linalg.eigh(H1)
-    # hedefin temel öz-uzayı dejenere olabilir: bütün alt uzaya örtüşme
     kat = int(np.sum(e1 < e1[0] + 1e-9))
     P = V1[:, :kat]
     ortusme = float(np.sum(np.abs(P.conj().T @ psi) ** 2))
@@ -141,18 +75,8 @@ def adiyabatik_kos(H0: np.ndarray, H1: np.ndarray, T: float,
             "temel_enerji": float(e1[0])}
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  2. QAOA
-# ══════════════════════════════════════════════════════════════════════
-
 def maxcut_hamiltonyeni(n: int, kenarlar: Sequence[Tuple[int, int]]
                         ) -> np.ndarray:
-    """``H_C = Σ_{(i,j)} ½(Z_iZ_j − 1)`` — köşegen, **vektör** olarak.
-
-    Tam dizey kurmak ``4^n`` yer ister; köşegen olduğu için ``2^n``
-    uzunluğunda bir vektör yeter.  ``H_C``nin asgarîsi (en negatif)
-    en büyük kesime karşılık gelir.
-    """
     d = np.zeros(2 ** n)
     idx = np.arange(2 ** n)
     for i, j in kenarlar:
@@ -163,7 +87,6 @@ def maxcut_hamiltonyeni(n: int, kenarlar: Sequence[Tuple[int, int]]
 
 
 def _mixer_uygula(psi: np.ndarray, beta: float, n: int) -> np.ndarray:
-    """``e^{−iβΣX_i}`` = kubit başına ``R_x(2β)`` — tam dizey YOK."""
     c, s = math.cos(beta), -1j * math.sin(beta)
     T = psi.reshape([2] * n)
     for i in range(n):
@@ -177,7 +100,6 @@ def _mixer_uygula(psi: np.ndarray, beta: float, n: int) -> np.ndarray:
 
 def qaoa_durumu(n: int, hc: np.ndarray, gamma: Sequence[float],
                 beta: Sequence[float]) -> np.ndarray:
-    """``|γ,β⟩`` — ``U_C`` köşegen faz, ``U_B`` kubit kubit."""
     psi = np.full(2 ** n, 2 ** (-n / 2.0), dtype=complex)
     for g, b in zip(gamma, beta):
         psi = np.exp(-1j * g * hc) * psi
@@ -194,11 +116,6 @@ def qaoa_beklenen(n: int, hc: np.ndarray, gamma: Sequence[float],
 def qaoa_eniyile(n: int, hc: np.ndarray, p: int, tohum: int = 0,
                  baslangic: int = 8, tur: int = 250, adim: float = 0.15
                  ) -> Dict[str, object]:
-    """Çok başlangıçlı sonlu-fark inişiyle ``(γ,β)`` araması.
-
-    QAOA'nın **iddiası**, ``p`` arttıkça oranın 1'e gitmesidir; burada
-    iddia edilmiyor, ``p = 1…4`` için ölçülüyor.
-    """
     r = np.random.default_rng(tohum)
     en_iyi, en_par = float("inf"), None
     for _ in range(baslangic):
@@ -229,17 +146,8 @@ def qaoa_eniyile(n: int, hc: np.ndarray, p: int, tohum: int = 0,
             "parametre": en_par}
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  3. Parametre kaydırma
-# ══════════════════════════════════════════════════════════════════════
-
 def parametre_kaydirma(f: Callable[[np.ndarray], float], theta: np.ndarray,
                        k: int) -> float:
-    """``½(f(θ+π/2 e_k) − f(θ−π/2 e_k))``.
-
-    ``f(θ) = ⟨ψ(θ)|H|ψ(θ)⟩`` ve ``θ_k`` kapısının üreteci ``G² = I``
-    ise bu **tam** türevdir.
-    """
     a, b = theta.copy(), theta.copy()
     a[k] += math.pi / 2
     b[k] -= math.pi / 2
@@ -255,17 +163,7 @@ def _sonlu_fark(f: Callable[[np.ndarray], float], theta: np.ndarray,
 
 
 def kaydirma_sarti_ihlali() -> Dict[str, object]:
-    """``G² = I`` şartı bozulunca kaydırma kuralı **yanlış** cevap verir.
-
-    Kutuplu hâl: ``U(θ) = e^{−iθn̂}``, ``n̂ = diag(0,1,2)``.  Burada
-    ``n̂² ≠ I``dir; kaydırma kuralı sonlu farkla **uyuşmaz** ve fark
-    yuvarlama düzeyinde değildir.
-    """
     n_ = np.diag([0.0, 1.0, 2.0])
-    # |0⟩↔|2⟩ bağı ŞART: yalnız komşu bağlarla (fark 1) ⟨H⟩ saf bir
-    # 2π-periyotlu sinüs olur ve kaydırma kuralı tesadüfen doğru çıkar
-    # (ölçüldü: fark 0.0000).  Fark-2 terimi π-periyotlu bir bileşen
-    # katar ve kural o zaman bozulur.
     H = np.array([[0, 1, 1], [1, 0, 1], [1, 1, 0]], dtype=complex)
     psi0 = np.ones(3, dtype=complex) / math.sqrt(3)
 
@@ -278,10 +176,6 @@ def kaydirma_sarti_ihlali() -> Dict[str, object]:
             "sonlu_fark": _sonlu_fark(f, t, 0),
             "üreteç": "n̂ = diag(0,1,2), n̂² ≠ I"}
 
-
-# ══════════════════════════════════════════════════════════════════════
-#  Gösterim
-# ══════════════════════════════════════════════════════════════════════
 
 def _gosterim() -> str:
     s = []
@@ -330,11 +224,7 @@ def _gosterim() -> str:
         t0 = time.perf_counter()
         psi = qaoa_durumu(nq, h, g, b)
         t1 = time.perf_counter()
-        # kıyas: tam dizeyle
         Hc = np.diag(h).astype(complex)
-        # U_B(β) = e^{−iβΣX_i}: karıştırıcının Hamiltonyeni +ΣX'tir.
-        # (Başlangıç Hamiltonyeni −ΣX; işareti karıştırmak iki yolu
-        #  ayırıyordu — ölçüm 1.5e-01 fark verince yakalandı.)
         Hb = np.zeros((2 ** nq, 2 ** nq), dtype=complex)
         for i in range(nq):
             Hb += _tek_kubit(_X, i, nq)
@@ -390,5 +280,5 @@ def _gosterim() -> str:
     return "\n".join(s)
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     print(_gosterim())

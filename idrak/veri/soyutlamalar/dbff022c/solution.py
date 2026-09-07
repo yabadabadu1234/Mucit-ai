@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task dbff022c (DSL-aligned)."""
 
 from __future__ import annotations
 
@@ -6,7 +5,6 @@ from collections import deque
 from typing import Callable, List, Optional, Set, Tuple, TypedDict
 
 
-# --- Types ---
 Grid = List[List[int]]
 
 
@@ -18,7 +16,6 @@ class Component(TypedDict):
     touches_border: bool
 
 
-# --- Low-level grid utilities (pure) ---
 def _neighbors(r: int, c: int):
     yield r + 1, c
     yield r - 1, c
@@ -30,7 +27,6 @@ def _in_bounds(r: int, c: int, rows: int, cols: int) -> bool:
     return 0 <= r < rows and 0 <= c < cols
 
 
-# --- DSL helper primitives ---
 def fold_repaint(canvas: Grid, items: List[Component], update: Callable[[Grid, Component], Grid]) -> Grid:
     acc = [row[:] for row in canvas]
     for it in items:
@@ -79,7 +75,6 @@ def enumerateZeroCavities(grid: Grid) -> List[Component]:
             if neighbor_color is None or neighbors_mixed:
                 continue
 
-            # Expand through the enclosing color to learn adjacent palette context.
             region = set(zero_cells)
             region_queue = deque(zero_cells + list(boundary_cells))
             seen = set(region_queue)
@@ -150,7 +145,6 @@ def fillComponent(canvas: Grid, component: Component, colour: int) -> Grid:
     return out
 
 
-# --- Main solver must match Lambda Representation exactly ---
 def solve_dbff022c(grid: Grid) -> Grid:
     cavities = enumerateZeroCavities(grid)
 

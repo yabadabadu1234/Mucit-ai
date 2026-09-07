@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 6e453dd6."""
 
 from collections import Counter, deque
 from pathlib import Path
@@ -39,7 +38,6 @@ def _highlight_color(grid, preferred=2):
 
 
 def _shift_against_five(grid):
-    """Slide zero components so their right edge touches the five-column."""
     col_five = _locate_five_column(grid)
     if col_five is None:
         return _copy_grid(grid), None, None

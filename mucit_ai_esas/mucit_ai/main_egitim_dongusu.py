@@ -1723,20 +1723,6 @@ def _tekil_egitim_adimi_icra(
     ]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     dagitik_egitim.shardlari_esitle(shard_gradyanlari)
 
     _P_toplam = sum(p.numel() for p in trainable_params)

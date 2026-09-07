@@ -1,6 +1,3 @@
-"""
-Abstractions explored for ARC task 2d0172a1 with a tiny eval harness.
-"""
 from __future__ import annotations
 from typing import List, Tuple, Callable
 import numpy as np
@@ -8,7 +5,6 @@ import json
 
 Grid = List[List[int]]
 
-# Import solver logic inline (mirrors arc2_samples/2d0172a1.py)
 def _majority_color(arr: np.ndarray) -> int:
     vals, cnts = np.unique(arr, return_counts=True)
     return int(vals[np.argmax(cnts)])
@@ -131,7 +127,6 @@ if __name__ == "__main__":
         print(f"train[{i}] -> {'OK' if ok else 'FAIL'}  pred_shape={np.array(pred).shape}  gt_shape={np.array(tr['output']).shape}")
         hits += int(ok)
     print(f"Train exact matches: {hits}/{len(d['train'])}")
-    # Show test shapes and a preview
     for i,te in enumerate(d["test"]):
         pred = solve(te["input"])
         print(f"test[{i}] pred shape: {np.array(pred).shape}")

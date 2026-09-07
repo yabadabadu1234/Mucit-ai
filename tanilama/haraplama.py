@@ -1,36 +1,3 @@
-"""
-HARAPLAMA (lezyon) ÇALIŞMASI -- "melekeler ârızasız bir vücut mü?"
-
-Kullanıcı suali:
-
-> *"Sen bu melekeleri mimariye nasıl bağladın, bunlar arızasız bir vücut
-> teşkil ediyor mu? Kendisi sıhhatsiz olduğu zaman tüm vücut sıhhatsiz
-> olduğu organ olan kalp bizde de mühim mi o kadar? Bunları bilmediğim
-> için kararsız kalıyorum."*
-
-Bu suale zan ile cevap verilmez. Biyolojide bir organın vazifesi
-**haraplama** ile anlaşılır: organ çıkarılır, vücutta ne bozulduğuna
-bakılır. Burada da aynısı yapılır -- 41 melekenin her biri **tek tek**
-akıştan çıkarılır ve şu ölçülür:
-
-* ``beyan`` dağılımı ne kadar değişti (toplam değişinti mesafesi),
-* küllî hükümler (tasdik, tenakuz, nakz, sükût, makam) ne kadar kaydı,
-* dolaşıklık entropisi ne kadar düştü.
-
-**Hükmün ölçütü.** Bir meleke çıkarıldığında hiçbir şey değişmiyorsa o
-meleke bir **uzuv değildir**; adı vardır, vazifesi yoktur. Kullanıcının
-H92'deki hükmü tam da budur: *"o olmadığı zaman model zeki olamayacak,
-olduğu zaman da müthiş olacak derecede."*
-
-**Kalp aranıyor.** Hadis-i şerifteki ölçü şudur: bozulduğunda bütün
-vücudu bozan bir uzuv. Burada onun karşılığı, çıkarıldığında ``beyan``ı
-en çok değiştiren melekedir. Öyle bir meleke **yoksa** -- yani hepsinin
-tesiri birbirine yakın ve küçükse -- bu mimarinin kalbi yok demektir ve
-o zaman ``H88``in niçin aylarca farkedilmediği de anlaşılır: kalbi
-olmayan vücutta nabız da yoktur.
-
-Bu vesika bir iddia değil bir **âlettir**; neticeyi koşan görür.
-"""
 from __future__ import annotations
 
 import time
@@ -45,7 +12,6 @@ from nefs.zihin_durumu import MAKAM_ADLARI, QAyar
 
 __all__ = ["haraplama", "rapor"]
 
-#: Karşılaştırılan küllî hükümler.
 HUKUMLER = ("tasdik", "tenakuz", "nakz", "sukut", "mizan", "makam", "kelam")
 
 
@@ -58,17 +24,14 @@ def _kos(sira: Sequence[int], E: np.ndarray, ayar: QAyar,
 
 
 def _tvd(a: np.ndarray, b: np.ndarray) -> float:
-    """Toplam değişinti mesafesi -- iki dağılım arası, ``[0,1]``."""
     return 0.5 * float(np.sum(np.abs(a - b)))
 
 
 def haraplama(tohum: int = 0, satir: int = 6, sozluk: int = 16,
               ayar: Optional[QAyar] = None) -> List[Dict[str, object]]:
-    """Her melekeyi tek tek çıkar ve vücutta ne değiştiğini ölç."""
     ayar = ayar or QAyar(tohum=tohum)
     rng = np.random.default_rng(tohum)
     belirtec = [int(x) for x in rng.integers(0, sozluk, size=satir)]
-    # Genişlik TABANDIR, sözlük değil (ferman 1-N).
     E = belirtecleri_kodla(belirtec, ayar.veri_lifi, ayar.veri_lifi)
 
     P0, o0 = _kos(QAKIS, E, ayar, sozluk, tohum)
@@ -103,7 +66,6 @@ def sozluk_varsayilan() -> int:
 
 
 def rapor(tohum: int = 0, satir: int = 6, esik: float = 1e-6) -> str:
-    """Haraplama neticesi + **vücut hükmü**."""
     s = ["=== HARAPLAMA: her meleke çıkarılınca vücutta ne değişiyor? ===",
          "",
          "beyan_tvd  : belirteç dağılımının toplam değişinti mesafesi [0,1]",
@@ -119,11 +81,6 @@ def rapor(tohum: int = 0, satir: int = 6, esik: float = 1e-6) -> str:
                     x["hüküm_kayması"], x["makam_kayması"],
                     x["entropi_farkı"]))
 
-    # --- KALBİN KENDİ HARAPLAMASI.
-    # Bu âlet yalnız MELEKE söker; kalp ise meleke DEĞİLDİR (H103).
-    # Onun için kalbin lezyonu ayrıca ölçülür: sadakat kapısı kapatılıp
-    # aynı girdi koşulur. "Melekeler arasında kalp yok" hükmü, kalbin
-    # yokluğu demek değildir -- kalbin meleke olmadığı demektir.
     ayar_k = QAyar(tohum=tohum)
     rng_k = np.random.default_rng(tohum)
     bel = [int(x) for x in rng_k.integers(0, sozluk_varsayilan(), size=satir)]
@@ -149,7 +106,6 @@ def rapor(tohum: int = 0, satir: int = 6, esik: float = 1e-6) -> str:
           "tesir nispeti (en çok / ortanca) = %.1f"
           % (float(tvd[0]) / max(float(np.median(tvd)), 1e-30))]
 
-    # Kalp ölçütü: bozulduğunda bütün vücudu bozan bir uzuv var mı?
     pay = float(tvd[0]) / max(float(tvd.sum()), 1e-30)
     s += ["",
           "MELEKELER ARASINDA KALP VAR MI?",
@@ -176,5 +132,5 @@ def rapor(tohum: int = 0, satir: int = 6, esik: float = 1e-6) -> str:
     return "\n".join(s)
 
 
-if __name__ == "__main__":   # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

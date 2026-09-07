@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 7b80bb43."""
 
 from __future__ import annotations
 
@@ -36,7 +35,6 @@ def identity_abstraction(grid: Grid) -> Grid:
 
 
 def column_snap_v0(grid: Grid) -> Grid:
-    """Earlier attempt that straightens dominant columns without gap checks."""
 
     height = len(grid)
     width = len(grid[0]) if height else 0
@@ -117,14 +115,14 @@ def _load_solver():
         spec = importlib.util.spec_from_file_location("task7b80bb43", SOLVER_PATH)
         module = importlib.util.module_from_spec(spec)
         assert spec and spec.loader
-        spec.loader.exec_module(module)  # type: ignore[attr-defined]
+        spec.loader.exec_module(module)
         _solver_module = module
     return _solver_module
 
 
 def column_snap_refined(grid: Grid) -> Grid:
     module = _load_solver()
-    return module.solve_7b80bb43(grid)  # type: ignore[attr-defined]
+    return module.solve_7b80bb43(grid)
 
 
 ABSTRACTIONS: Dict[str, Callable[[Grid], Grid]] = {

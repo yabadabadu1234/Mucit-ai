@@ -1,4 +1,3 @@
-"""Abstraction playground for ARC task 6ffbe589."""
 
 from __future__ import annotations
 
@@ -15,10 +14,6 @@ Grid = List[List[int]]
 def _load_samples() -> Tuple[List[dict], List[dict]]:
     data = json.loads(DATA_PATH.read_text())
     return data["train"], data.get("test", [])
-
-
-# ---------------------------------------------------------------------------
-# Shared helpers
 
 
 def _extract_main_square(grid: Grid) -> Grid:
@@ -74,10 +69,6 @@ def _apply_mask(target: Grid, mask: Grid, color: int, *, overwrite: bool = True)
         for c, flag in enumerate(row):
             if flag and (overwrite or target[r][c] == 0):
                 target[r][c] = color
-
-
-# ---------------------------------------------------------------------------
-# Candidate abstractions
 
 
 def abstraction_crop(grid: Grid) -> Grid:

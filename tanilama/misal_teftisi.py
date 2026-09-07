@@ -1,20 +1,3 @@
-"""MİSAL KOD TEFTİŞİ -- verilen misal kopyalanmaz, SINANIR.
-
-    python -m tanilama.misal_teftisi
-
-===================================================================
-FERMAN 7-C: MİSAL KOD KÖRÜ KÖRÜNE ALINMAZ
-===================================================================
-
-Padişah zabıtla beraber bir C++ misali verdi ve *"yanlışlıkları olma
-ihtimali çok yüksek bir kod"* dedi. Bu dosya o misali **fiilen
-derler, koşturur ve her iddiasını ayrı ayrı ölçer**. Maksat misali
-küçümsemek değil; zabıtın hükmünü doğru icra edebilmek için misalin
-nerede hükmü tarif ettiğini, nerede ondan ayrıldığını **sayıyla**
-bilmektir.
-
-Yedi husus sınanır. Her birinin neticesi ölçüdür, kanaat değildir.
-"""
 from __future__ import annotations
 
 import os
@@ -29,7 +12,6 @@ from nefs.galois import gf_carp
 __all__ = ["MISAL_CPP", "derlenir_mi", "frobenius_hatasi",
            "symplectic_hatasi", "halka_hatasi", "teftis", "rapor"]
 
-#: Misalin kendisi -- **değiştirilmeden**. Sınanan budur.
 MISAL_CPP = r'''
 #include <iostream>
 #include <vector>
@@ -79,12 +61,6 @@ def _derle(kaynak: str, bayrak: List[str], derleyici: str) -> Dict[str, Any]:
 
 
 def derlenir_mi() -> Dict[str, Any]:
-    """**1. HUSUS:** misal C++ olarak derleniyor mu.
-
-    Misal ``const uint8_t* restrict veri`` yazar. ``restrict`` bir **C**
-    anahtar kelimesidir; C++'ta yoktur (``__restrict`` vardır). Zabıt
-    kodu C++20 diye takdim eder, o hâlde ``g++`` ile sınanır.
-    """
     cpp = _derle(MISAL_CPP, ["-O3", "-std=c++20", "-mavx512f", "-mgfni"],
                  "g++")
     duzeltilmis = MISAL_CPP.replace("* restrict veri", "* __restrict veri")
@@ -97,23 +73,12 @@ def derlenir_mi() -> Dict[str, Any]:
 
 
 def frobenius_hatasi(tohum: int = 0) -> Dict[str, Any]:
-    """**2. HUSUS:** misalin "Frobenius karesi" hakikaten ``x²`` mi.
-
-    Misal ``x¹²``yi ``(t<<2) ^ (t<<4)`` ile hesaplar ve buna "iki kez
-    Frobenius karesi" der. Frobenius ``GF(2⁸)``de **cisim çarpımıdır**
-    (``x·x``), bit kaydırma değildir. İkisi kıyaslanır.
-
-    Ayrıca misal ``x³``ü ``b & (b>>1)`` yazar; kendi yorum satırındaki
-    ``b & (b>>1) & (b>>2)``ye bile uymaz ve AND zaten çarpım değildir.
-    """
     r = np.random.default_rng(int(tohum))
     x = r.integers(0, 256, size=4096, dtype=np.uint8)
-    # Hakikî yol: x³ = x²·x , x⁶ = (x³)² , x¹² = (x⁶)²
     x2 = gf_carp(x, x, 8).astype(np.uint8)
     x3 = gf_carp(x2, x, 8).astype(np.uint8)
     x6 = gf_carp(x3, x3, 8).astype(np.uint8)
     x12 = gf_carp(x6, x6, 8).astype(np.uint8)
-    # Misalin yolu (64-bit kelime üstünde; bayt bayt mukabili):
     m_x3 = (x & (x >> 1)).astype(np.uint8)
     m_x12 = (((m_x3.astype(np.uint16) << 2)
               ^ (m_x3.astype(np.uint16) << 4)) & 0xFF).astype(np.uint8)
@@ -128,20 +93,12 @@ def frobenius_hatasi(tohum: int = 0) -> Dict[str, Any]:
 
 
 def symplectic_hatasi() -> Dict[str, Any]:
-    """**3. HUSUS:** XOR ile TOPLAMAYI karıştırmak.
-
-    Misal ``tableau_Z ^= (tableau_X & parite_mask) + faz_akumulatoru``
-    yazar. ``GF(2)``de toplama XOR'dur ve **elde (carry) yoktur**;
-    tamsayı ``+`` elde üretir ve symplectic yapıyı bozar. Kaç bitin
-    eldeyle kirlendiği ölçülür.
-    """
     r = np.random.default_rng(0)
     a = r.integers(0, 1 << 62, size=100000, dtype=np.uint64)
     b = r.integers(0, 1 << 62, size=100000, dtype=np.uint64)
     xor = a ^ b
     topla = (a + b)
     fark = xor ^ topla
-    # Elde üreten bit sayısı: fark'ın popcount'u.
     bit = int(np.unpackbits(fark.view(np.uint8)).sum())
     return {"örnek": int(a.size), "toplam_bit": int(a.size * 64),
             "elde_kirlenen_bit": bit,
@@ -150,20 +107,11 @@ def symplectic_hatasi() -> Dict[str, Any]:
 
 
 def halka_hatasi() -> Dict[str, Any]:
-    """**4. HUSUS:** "Z_256 halkası" iddiası.
-
-    Misal fazı ``uint64 faz_akumulatoru`` içinde ``+=`` ile biriktirir
-    ve yorumunda *"Z_256 halkası üzerinde durum vektörü"* der.
-    ``uint64`` toplaması ``mod 2⁶⁴``tür. ``Z_256`` olması için taşmanın
-    her **bayt**ta olması lâzımdır (``epi8`` şeritleri).
-    """
     r = np.random.default_rng(0)
     adim = r.integers(0, 256, size=4096, dtype=np.uint8)
-    # Misalin yolu: tek uint64 birikim.
     misal = np.uint64(0)
     for a in adim:
         misal = np.uint64((int(misal) + int(a)) % (1 << 64))
-    # Hakikî Z_256: bayt şeridinde taşma.
     hakiki = np.uint8(0)
     for a in adim:
         hakiki = np.uint8((int(hakiki) + int(a)) % 256)
@@ -174,33 +122,17 @@ def halka_hatasi() -> Dict[str, Any]:
 
 
 def olcu_hatasi() -> Dict[str, Any]:
-    """**5. HUSUS:** "belirteç/sn" nasıl sayılıyor.
-
-    Misal ``tok_sn = bayt_sayisi / toplam_sn`` yazar: **bir bayt = bir
-    belirteç** sayar. Bizim ölçümüzde belirteç, örnek × pencere'dir ve
-    her belirteç 41 melekenin geçtiği bir qudit durumudur. İki sayı
-    aynı isimle anılırsa mukayese yalan olur.
-    """
     from main.egitim import KISA_CPU
     a = KISA_CPU
     return {"misal_tanımı": "1 bayt = 1 belirteç",
             "bizim_tanımımız": "örnek × pencere; her biri 41 meleke geçer",
             "bizim_belirteç": int(a.ornek_sayisi) * int(a.pencere),
-            # Belirteç BAŞINA durum: d=4096 genlik × 16 bayt (complex128).
-            # Yığın toplamı değil -- yığını belirteç başına göstermek
-            # tam da misalin yaptığı karıştırma olurdu.
             "belirteç_başına_bayt": 4096 * 16,
             "yığın_durum_baytı": int(a.yigin()) * 4096 * 16,
             "misal_256mb_belirteci": 256 * 1024 * 1024}
 
 
 def halka_tamponu() -> Dict[str, Any]:
-    """**6. HUSUS:** "L1 Cache Ring Buffer" iddiası.
-
-    Misal yorumunda *"L1 Cache Ring Buffer üzerinde akar"* der; gövdesi
-    ise ``std::vector`` ile **256 MB** tahsis edip DRAM'den akıtır.
-    256 MB hiçbir L1'e sığmaz. Bu makinenin L1'i ölçülür.
-    """
     from nefs.donanim import onbellekler
     ob = onbellekler()
     return {"misal_tampon_bayt": 256 * 1024 * 1024,
@@ -213,14 +145,12 @@ def halka_tamponu() -> Dict[str, Any]:
 
 
 def teftis() -> Dict[str, Any]:
-    """Yedi hususun hepsi -- tek sözlük."""
     return {"derleme": derlenir_mi(), "frobenius": frobenius_hatasi(),
             "symplectic": symplectic_hatasi(), "halka": halka_hatasi(),
             "ölçü": olcu_hatasi(), "tampon": halka_tamponu()}
 
 
-def rapor() -> str:                                      # pragma: no cover
-    """Misalin her iddiası ayrı ayrı -- **ölçüyle**."""
+def rapor() -> str:
     t = teftis()
     d, f, sy, h, o, tp = (t["derleme"], t["frobenius"], t["symplectic"],
                           t["halka"], t["ölçü"], t["tampon"])
@@ -293,5 +223,5 @@ def rapor() -> str:                                      # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

@@ -1,11 +1,3 @@
-"""Abstractions explored for ARC task 1818057f.
-
-This module documents the small set of abstractions evaluated while solving the
-task. Each abstraction is implemented as a function that transforms an input
-grid. A lightweight harness executes them on the available splits (train/test)
-and reports basic match statistics and first-failure indices when ground truth
-is present.
-"""
 
 from __future__ import annotations
 
@@ -21,23 +13,16 @@ SOLVER_PATH = Path(__file__).with_suffix("").with_name("arc2_samples") / "181805
 
 
 def load_task() -> dict:
-    """Load the ARC task description from disk."""
 
     return json.loads(TASK_PATH.read_text())
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline abstraction: return the grid unchanged."""
 
     return [row[:] for row in grid]
 
 
 def plus_painter_abstraction(grid: Grid) -> Grid:
-    """Highlight every `4`-colored plus by repainting it with `8`.
-
-    A plus is a center cell with four von-Neumann neighbours in color `4`; the
-    output paints the center and neighbours with `8`, matching the final solver.
-    """
 
     height = len(grid)
     width = len(grid[0]) if height else 0
@@ -57,7 +42,6 @@ def plus_painter_abstraction(grid: Grid) -> Grid:
 
 
 def load_solver() -> Callable[[Grid], Grid]:
-    """Dynamically import the task solver from the analysis sample module."""
 
     spec = importlib.util.spec_from_file_location("task1818057f_solver", SOLVER_PATH)
     module = importlib.util.module_from_spec(spec)
@@ -67,14 +51,12 @@ def load_solver() -> Callable[[Grid], Grid]:
 
 
 def render(grid: Grid) -> str:
-    """Convert a grid to a compact hexadecimal string representation."""
 
     palette = "0123456789abcdef"
     return "\n".join("".join(palette[val] for val in row) for row in grid)
 
 
 def evaluate_abstractions() -> None:
-    """Evaluate each abstraction on train/test splits and print statistics."""
 
     data = load_task()
     abstractions: dict[str, Callable[[Grid], Grid]] = {
@@ -116,7 +98,6 @@ def evaluate_abstractions() -> None:
 
         print()
 
-    # Compare the dedicated solver for completeness.
     solver = load_solver()
     print("[solver] predicted test output:")
     test_cases = data.get("test", [])
@@ -129,4 +110,3 @@ def evaluate_abstractions() -> None:
 
 if __name__ == "__main__":
     evaluate_abstractions()
-

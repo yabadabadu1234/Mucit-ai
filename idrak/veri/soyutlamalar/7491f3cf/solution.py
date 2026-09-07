@@ -1,4 +1,3 @@
-"""ARC-AGI-2 task 7491f3cf solver."""
 from __future__ import annotations
 
 from collections import Counter

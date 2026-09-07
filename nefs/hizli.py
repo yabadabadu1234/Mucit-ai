@@ -1,55 +1,3 @@
-"""HIZLI -- boyut patlamasının dört tedbiri, GPU dahil.
-
-Zabıt: ``docs/zabit/kudret/Qudit_Boyut_Patlamasini_Onleme_ve_Hizlandirma.md``
-
-===================================================================
-TEŞHİS -- ÖLÇÜLEN TABLO ZABITIN GEREKÇESİDİR
-===================================================================
-
-``nefs/qudit.py`` ölçüldü ve şu çıktı::
-
-    d=16   B=4096   1 167 680 belirteç/sn   (hedefin 1,17'si)
-    d=256  B=4096      70 179               (hedefin 0,07'si)
-    d=4096 B=256        4 117               (hedefin 0,00'ı)
-
-``d`` 16 kat artınca hız 16,6 kat düştü: bu tam olarak ``O(d)``
-**bellek bant genişliği** darboğazıdır. Sebep, ``d=4096``ün düz,
-homojen ve yoğun bir Öklid vektörü gibi işlenmesidir -- halbuki o
-uzay tabakalı bir Tip Kristalidir.
-
-===================================================================
-DÖRT TEDBİR
-===================================================================
-
-1. ``kronecker`` -- ``d = 16×16×16`` lifine ayır; operatör
-   ``A ⊗ B ⊗ C``dir. ``4096²`` yerine üç kere ``16²``.
-2. ``blok_carp`` -- süperseçim sektörleri blok-köşegendir; sıfırları
-   çarpmak için bellek yolu yakılmaz.
-3. ``faz_cevir`` -- Cartan alt cebri **tamamen köşegendir**; evrimin
-   çoğu matris çarpımı değil **noktasal** faz çarpımıdır.
-4. ``cekirdek`` -- GPU'da kaynaşık (fused) çekirdek: durum SRAM'e bir
-   kere çekilir, bütün ameliyeler orada biter, yalnız netice VRAM'e
-   yazılır.
-
-===================================================================
-GPU: **YAZILDI, BURADA KOŞMADI** -- ve bu açıkça söyleniyor
-===================================================================
-
-Padişahın emri: *"zabıtlarda gpu için alınan tedbirleri gpu olması
-şartıyla mutlaka koda ekleyeceksin, burada yalnız cpu var diye kodu
-eksik yazmayacaksın."*
-
-O hâlde GPU yolları **tam** yazılmıştır: CuPy ham çekirdeği
-(``_FUSED_KAYNAK``), Torch yolu ve ikisinin seçimi. Fakat bu makinede
-``torch`` ve ``cupy`` **kurulu değildir** (ölçüldü) ve dolayısıyla
-GPU yolları **koşturulmamıştır**. ``rapor()`` bunu satır satır yazar;
-"çalışıyor" denmez, "yazıldı, denenmedi" denir (H100).
-
-Bütün çekirdekler tek bir ``xp`` dizi modülüne karşı yazılmıştır;
-NumPy, CuPy ve Torch aynı koddan geçer. Yâni GPU yolu ayrı bir kod
-kopyası değildir -- kopya olsaydı biri bozulunca öteki sessizce
-ayrışırdı.
-"""
 from __future__ import annotations
 
 from typing import Any, Dict, List, Optional, Sequence, Tuple
@@ -60,36 +8,23 @@ __all__ = ["hesap", "kronecker", "blok_carp", "faz_cevir", "cekirdek",
            "SEKTOR", "rapor"]
 
 
-# ══════════════════════════════════════════════════════════════════
-#  ÇEKİRDEK SEÇİMİ -- numpy / cupy / torch, TEK kod
-# ══════════════════════════════════════════════════════════════════
-
 def hesap(ne: str = "oto"):
-    """Dizi modülünü seç: ``(xp, ad, gpu_mu)``.
-
-    ``oto``: CuPy varsa o, yoksa Torch-CUDA, yoksa NumPy.
-    Açıkça ``numpy``/``cupy``/``torch`` da denebilir.
-
-    **Düşerse sessizce numpy'a dönmez** -- açıkça istenmiş bir çekirdek
-    yoksa hata verir. Sessiz geri düşüş, GPU'da koştuğunu sanıp CPU'da
-    koşmak demektir ve o, ölçüyü yalan yapar.
-    """
     ne = str(ne)
     if ne in ("oto", "cupy"):
         try:
-            import cupy as cp                            # type: ignore
+            import cupy as cp
             return cp, "cupy", True
-        except Exception:                                # noqa: BLE001
+        except Exception:
             if ne == "cupy":
                 raise RuntimeError("cupy istendi fakat kurulu değil")
     if ne in ("oto", "torch"):
         try:
-            import torch                                 # type: ignore
+            import torch
             if torch.cuda.is_available():
                 return torch, "torch-cuda", True
             if ne == "torch":
                 return torch, "torch-cpu", False
-        except Exception:                                # noqa: BLE001
+        except Exception:
             if ne == "torch":
                 raise RuntimeError("torch istendi fakat kurulu değil")
     if ne in ("oto", "numpy"):
@@ -98,53 +33,14 @@ def hesap(ne: str = "oto"):
 
 
 def _bicimle(xp, a):
-    """Diziyi seçili çekirdeğe taşı. Torch ``asarray`` farklıdır."""
     if xp is np:
         return np.asarray(a)
     if hasattr(xp, "asarray"):
         return xp.asarray(a)
-    return xp.tensor(a)                                  # pragma: no cover
+    return xp.tensor(a)
 
-
-# ══════════════════════════════════════════════════════════════════
-#  1. TEDBİR -- KRONECKER LİF AYRIŞIMI
-# ══════════════════════════════════════════════════════════════════
 
 def kronecker(psi, A, B, C, xp=None):
-    """``(A ⊗ B ⊗ C)|Ψ⟩`` -- yoğun ``d×d`` dizey **kurulmadan**.
-
-    ``d = d_kat · d_uzay · d_nokta`` (zabıtın misali ``16·16·16``).
-    Durum ``(B, d)`` yerine ``(B, d_kat, d_uzay, d_nokta)`` olarak
-    görülür ve her lif kendi küçük dizeyiyle büzülür.
-
-    **Hesap.** Yoğun yol ``2d²`` işlemdir; ``d=4096``te 33,55 M.
-    Lifli yol her mertebe için ``d · d_i`` işlemdir::
-
-        3 × (4096 × 16) = 196 608 çarpma   (zabıt buna 170× der;
-                                            ölçtüm, 85,3× -- aşağıda)
-
-    Bellekte 67 MB'lık dev operatör yerine ``3 × 16×16`` katsayı,
-    yâni **3 KB**. Bellek darboğazı buharlaşır.
-
-    **ZABITLA ARAMDAKİ FARKI SESSİZ GEÇMİYORUM.** Zabıt bu kazancı
-    ``170×`` yazar, ben ``85×`` ölçüyorum. Sebep FLOP sayma usulüdür:
-    zabıt yoğun tarafı ``2 × 4096²`` (çarpma **ve** toplama) sayarken
-    lifli tarafı ``3 × 16⁴`` (yalnız çarpma) sayıyor. İki tarafı aynı
-    usulle saymak lâzım::
-
-        yoğun (çarpma+toplama) : 2·d²          = 33 554 432
-        lifli (çarpma+toplama) : 2·d·(a+b+c)   =    393 216
-        ⟹ 85,3×
-
-    Yalnız çarpma sayılsaydı da nispet **aynı** çıkardı (16,7 M /
-    196 608 = 85,3). Yâni ``170×`` bir sayım kaymasıdır; kazanç
-    hakikîdir fakat **85×**tir. Ölçülen duvar saati kazancı ise
-    bundan da büyüktür (``289×``), çünkü asıl darboğaz aritmetik
-    değil belleğin kendisidir -- zabıtın teşhisi tam da budur.
-
-    Mana birebir aynıdır: Kronecker çarpımının tanımı budur ve
-    ``rapor()`` bunu yoğun hâlle **sayı sayı** karşılaştırır.
-    """
     xp = xp or np
     a = _bicimle(xp, A)
     b = _bicimle(xp, B)
@@ -156,7 +52,6 @@ def kronecker(psi, A, B, C, xp=None):
         P = P.reshape(1, -1)
     Bn = P.shape[0]
     T = P.reshape(Bn, na, nb, nc)
-    # Sıra mühimdir yalnız hız için, netice için değil.
     T = xp.einsum("bijk,xi->bxjk", T, a)
     T = xp.einsum("bxjk,yj->bxyk", T, b)
     T = xp.einsum("bxyk,zk->bxyz", T, c)
@@ -164,11 +59,6 @@ def kronecker(psi, A, B, C, xp=None):
     return out.reshape(-1) if tek else out
 
 
-# ══════════════════════════════════════════════════════════════════
-#  2. TEDBİR -- BLOK-DİYAGONAL SÜPERSEÇİM
-# ══════════════════════════════════════════════════════════════════
-
-#: Zabıtın taksimatı: ``ℋ = ℋ_sentaks ⊕ ℋ_ontoloji ⊕ ℋ_mantık``.
 SEKTOR: Tuple[Tuple[str, int, int], ...] = (
     ("sentaks", 0, 512),
     ("ontoloji", 512, 2560),
@@ -177,18 +67,6 @@ SEKTOR: Tuple[Tuple[str, int, int], ...] = (
 
 
 def blok_carp(psi, bloklar: Sequence, xp=None, sektor=None):
-    """Blok-köşegen operatör: **sıfırlar çarpılmaz**.
-
-    Sektörler arası doğrudan geçiş süperseçim kuralıyla yasaktır;
-    yoğun ``4096²`` dizeyin %60'ı zaten sıfırdır. Zabıtın hesabı::
-
-        512² + 2048² + 1536² = 6 815 744      (blok)
-        4096²                = 16 777 216     (yoğun)
-        ⟹ %59,4 tasarruf
-
-    ``bloklar`` her sektör için bir kare dizey verir; ``sektor``
-    verilmezse ``SEKTOR`` kullanılır ve ``d``ye göre ölçeklenir.
-    """
     xp = xp or np
     P = _bicimle(xp, psi)
     tek = (P.ndim == 1)
@@ -207,23 +85,7 @@ def blok_carp(psi, bloklar: Sequence, xp=None, sektor=None):
     return out.reshape(-1) if tek else out
 
 
-# ══════════════════════════════════════════════════════════════════
-#  3. TEDBİR -- CARTAN KÖŞEGENİ: NOKTASAL FAZ
-# ══════════════════════════════════════════════════════════════════
-
 def faz_cevir(psi, teta, xp=None):
-    """``|Ψ⟩ ← e^{−i θ·h} ⊙ |Ψ⟩`` -- matris çarpımı **yok**.
-
-    Cartan alt cebri tamamen köşegendir; köşegen bir Hamiltonyenin
-    duruma etkisi noktasal çarpımdır::
-
-        matris-vektör : O(d²)  = 16 777 216  (d=4096)
-        noktasal      : O(d)   =      4 096
-        ⟹ 4096× kazanç
-
-    ``teta`` ya ``d`` uzunluğunda hazır faz vektörüdür, ya da Cartan
-    açılarıdır ve ağırlık izdüşümünden faz üretilir.
-    """
     xp = xp or np
     P = _bicimle(xp, psi)
     d = P.shape[-1]
@@ -235,18 +97,6 @@ def faz_cevir(psi, teta, xp=None):
     return P * faz
 
 
-# ══════════════════════════════════════════════════════════════════
-#  4. TEDBİR -- KAYNAŞIK (FUSED) GPU ÇEKİRDEĞİ
-# ══════════════════════════════════════════════════════════════════
-
-#: CuPy ham çekirdeği. Durum SRAM'e (``extern __shared__``) bir kere
-#: çekilir; Lie-Chebyshev fazı, Cartan noktasal çarpımı ve normalizasyon
-#: orada biter; yalnız netice global belleğe yazılır. FlashAttention'ın
-#: mantığı budur ve VRAM trafiğini ~10× düşürür.
-#:
-#: **Bu çekirdek burada DERLENMEDİ ve KOŞMADI** -- cupy kurulu değil.
-#: Doğruluğu ancak GPU'lu bir makinede ``cekirdek(...)`` çağrılınca
-#: ``rapor()`` tarafından numpy neticesiyle karşılaştırılır.
 _FUSED_KAYNAK = r"""
 extern "C" __global__
 void lie_chebyshev_fused(
@@ -287,12 +137,6 @@ void lie_chebyshev_fused(
 
 
 def cekirdek(W, cs, ss, ne: str = "oto") -> Dict[str, Any]:
-    """Kaynaşık çekirdeği koştur; GPU yoksa **aynı hesabı** numpy ile.
-
-    Dönen sözlükte ``çekirdek`` alanı hangi yolun **fiilen** koştuğunu
-    söyler: ``cupy-fused``, ``torch``, yahut ``numpy``. "GPU'da koştu"
-    demek için o alana bakılır; iddia edilmez.
-    """
     W = np.asarray(W, np.float32)
     cs = np.asarray(cs, np.float32).reshape(-1)
     ss = np.asarray(ss, np.float32).reshape(-1)
@@ -300,8 +144,8 @@ def cekirdek(W, cs, ss, ne: str = "oto") -> Dict[str, Any]:
     n = cs.size
 
     if ne in ("oto", "cupy"):
-        try:                                             # pragma: no cover
-            import cupy as cp                            # type: ignore
+        try:
+            import cupy as cp
             mod = cp.RawModule(code=_FUSED_KAYNAK, options=("-use_fast_math",))
             fn = mod.get_function("lie_chebyshev_fused")
             Wg = cp.asarray(W)
@@ -313,7 +157,7 @@ def cekirdek(W, cs, ss, ne: str = "oto") -> Dict[str, Any]:
                shared_mem=4 * d)
             return {"psi": out, "çekirdek": "cupy-fused", "gpu": True,
                     "sram_bayt": 4 * d}
-        except Exception as exc:                         # noqa: BLE001
+        except Exception as exc:
             if ne == "cupy":
                 raise
             _son = "%s: %s" % (type(exc).__name__, str(exc)[:60])
@@ -321,8 +165,8 @@ def cekirdek(W, cs, ss, ne: str = "oto") -> Dict[str, Any]:
         _son = "denenmedi"
 
     if ne in ("oto", "torch"):
-        try:                                             # pragma: no cover
-            import torch                                 # type: ignore
+        try:
+            import torch
             aygit = "cuda" if torch.cuda.is_available() else "cpu"
             Wt = torch.as_tensor(W, device=aygit)
             cst = torch.as_tensor(cs, device=aygit)
@@ -341,12 +185,11 @@ def cekirdek(W, cs, ss, ne: str = "oto") -> Dict[str, Any]:
             psi = psi / torch.linalg.vector_norm(psi, dim=1, keepdim=True)
             return {"psi": psi, "çekirdek": "torch-" + aygit,
                     "gpu": aygit == "cuda"}
-        except Exception as exc:                         # noqa: BLE001
+        except Exception as exc:
             if ne == "torch":
                 raise
             _son = "%s: %s" % (type(exc).__name__, str(exc)[:60])
 
-    # --- numpy: GPU yolu yoksa **aynı hesap**, gizli fark yok
     ikix = 2.0 * W
     b1 = np.zeros_like(W); b2 = np.zeros_like(W)
     for j in range(n - 1, 0, -1):
@@ -365,12 +208,7 @@ def cekirdek(W, cs, ss, ne: str = "oto") -> Dict[str, Any]:
             "gpu_sebep": _son}
 
 
-# ══════════════════════════════════════════════════════════════════
-#  ÖLÇÜ
-# ══════════════════════════════════════════════════════════════════
-
-def rapor() -> str:                                      # pragma: no cover
-    """Dört tedbiri ölç; GPU yollarının hâlini **açıkça** yaz."""
+def rapor() -> str:
     import time
 
     r = np.random.default_rng(0)
@@ -379,7 +217,6 @@ def rapor() -> str:                                      # pragma: no cover
     xp, ad, gpu = hesap("oto")
     s += ["  ÇEKİRDEK: %s  (GPU: %s)" % (ad, "EVET" if gpu else "hayır"), ""]
 
-    # 1. Kronecker
     na = nb = nc = 16
     d = na * nb * nc
     A = r.normal(size=(na, na)); Bm = r.normal(size=(nb, nb))
@@ -399,7 +236,6 @@ def rapor() -> str:                                      # pragma: no cover
           "    operatör belleği: %.1f MB → %.1f KB"
           % (d * d * 4 / 1e6, (na * na + nb * nb + nc * nc) * 4 / 1e3)]
 
-    # 2. Blok-diyagonal
     boy = [j - i for _, i, j in SEKTOR]
     blk = [r.normal(size=(n, n)) for n in boy]
     p2 = r.normal(size=(4, 4096)) + 1j * r.normal(size=(4, 4096))
@@ -413,7 +249,6 @@ def rapor() -> str:                                      # pragma: no cover
           "    tasarruf        : %%%.1f" % (100 * (1 - tam / (4096 * 4096))),
           "    süre            : %.2f ms" % (1e3 * t_bl)]
 
-    # 3. Cartan noktasal
     p3 = r.normal(size=(64, 4096)) + 1j * r.normal(size=(64, 4096))
     tt = r.normal(size=8)
     t0 = time.perf_counter(); faz_cevir(p3, tt); t_fz = time.perf_counter() - t0
@@ -422,7 +257,6 @@ def rapor() -> str:                                      # pragma: no cover
           "    O(d)  işlem     : %d   (%d× az)" % (4096, 4096),
           "    süre (B=64)     : %.2f ms" % (1e3 * t_fz)]
 
-    # 4. Kaynaşık çekirdek
     W = r.normal(size=(4096, 16)).astype(np.float32)
     cs = r.normal(size=9).astype(np.float32); ss = r.normal(size=9).astype(np.float32)
     t0 = time.perf_counter(); k = cekirdek(W, cs, ss); t_ck = time.perf_counter() - t0
@@ -440,5 +274,5 @@ def rapor() -> str:                                      # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

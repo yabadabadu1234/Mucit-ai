@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-"""Abstraction experiments for ARC task eee78d87."""
 
 from __future__ import annotations
 
@@ -57,12 +55,10 @@ def render_template(name: str) -> Grid:
 
 
 def plus_bias(_: Grid) -> Grid:
-    """Naive first attempt: assume every shape behaves like the plus case."""
     return render_template("plus")
 
 
 def or_only(grid: Grid) -> Grid:
-    """Second attempt: classify but restrict to OR-based templates (fails on the X case)."""
     key = choose_template_name(grid)
     if key == "X":
         key = "H"
@@ -70,7 +66,6 @@ def or_only(grid: Grid) -> Grid:
 
 
 def final_template(grid: Grid) -> Grid:
-    """Final abstraction that matches the task."""
     return render_template(choose_template_name(grid))
 
 

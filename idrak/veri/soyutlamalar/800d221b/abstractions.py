@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC-AGI-2 task 800d221b."""
 
 from __future__ import annotations
 
@@ -16,12 +15,12 @@ def _load_solver():
     spec = importlib.util.spec_from_file_location("task800d221b", SOLVER_PATH)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
-    spec.loader.exec_module(module)  # type: ignore[arg-type]
+    spec.loader.exec_module(module)
     return module
 
 
 solver_module = _load_solver()
-TRAINING_DATA = solver_module.TRAINING_DATA  # type: ignore[attr-defined]
+TRAINING_DATA = solver_module.TRAINING_DATA
 
 
 Grid = List[List[int]]

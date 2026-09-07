@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task e3721c99 (evaluation split)."""
 
 from __future__ import annotations
 
@@ -6,7 +5,6 @@ from collections import deque
 from typing import Callable, Iterable, List, Sequence, Tuple
 
 
-# Type aliases for clarity and mypy
 Grid = List[List[int]]
 Component = List[Tuple[int, int]]
 Mask = List[List[int]]
@@ -14,14 +12,10 @@ Color = int
 
 
 def p(grid: Grid) -> Grid:
-    """Wrapper to match the golf runner expectations."""
     return solve_e3721c99(grid)
 
 
-# --- Low-level helpers (implementation) ---
-
 def _extract_components(grid: Grid, target: int) -> Iterable[Component]:
-    """Yield 4-connected components with the given value."""
     rows = len(grid)
     cols = len(grid[0]) if grid else 0
     visited = [[False] * cols for _ in range(rows)]
@@ -105,8 +99,6 @@ def _clone_grid(grid: Grid) -> Grid:
     return [row[:] for row in grid]
 
 
-# --- DSL surface (typed ops used by the lambda) ---
-
 def extractComponents(grid: Grid, target: int) -> List[Component]:
     return list(_extract_components(grid, target))
 
@@ -136,8 +128,6 @@ def fold_repaint(canvas: Grid, items: Sequence[Component], update: Callable[[Gri
         acc = update(acc, it)
     return acc
 
-
-# --- Main solver rewritten to match the DSL Lambda Representation ---
 
 def solve_e3721c99(grid: Grid) -> Grid:
     components = extractComponents(grid, 5)

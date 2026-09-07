@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task a47bf94d."""
 
 from __future__ import annotations
 
@@ -29,7 +28,6 @@ def load_split() -> dict:
 
 
 def abstraction_square_to_plus(grid: Grid) -> Grid:
-    """Convert each detected 3x3 square into a plus-cross; no X placement."""
     out = [row[:] for row in grid]
     squares = _detect_squares(grid)
     for color, centers in squares.items():
@@ -39,7 +37,6 @@ def abstraction_square_to_plus(grid: Grid) -> Grid:
 
 
 def abstraction_final_solver(grid: Grid) -> Grid:
-    """The final paired plus/X abstraction."""
     return solve_a47bf94d(grid)
 
 
@@ -85,7 +82,6 @@ def main() -> None:
     test_in = [case["input"] for case in data.get("test", [])]
     summaries["test"] = evaluate_split("test", test_in, None)
 
-    # Dump summary to stdout
     for split, split_data in summaries.items():
         print(f"=== Split: {split} ===")
         for name, meta in split_data.items():

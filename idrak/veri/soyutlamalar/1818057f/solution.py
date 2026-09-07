@@ -1,9 +1,3 @@
-"""Solver for ARC-AGI-2 task 1818057f.
-
-Typed-DSL shaped solution using pure helpers and a fold-style repaint. The
-semantics match the original imperative solver: detect 4-coloured plus motifs
-on the original grid and recolour their centre and arms to 8.
-"""
 
 from __future__ import annotations
 
@@ -33,7 +27,6 @@ def isPlus(g: Grid, position: Tuple[int, int]) -> bool:
 
 def repaintPlus(canvas: Grid, position: Tuple[int, int]) -> Grid:
     r, c = position
-    # Copy-on-write to keep purity.
     out = [row[:] for row in canvas]
     out[r][c] = 8
     out[r - 1][c] = 8

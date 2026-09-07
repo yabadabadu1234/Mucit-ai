@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 8b9c3697."""
 
 from __future__ import annotations
 
@@ -119,7 +118,7 @@ def scan_corridors(
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
     for comp_idx, comp in enumerate(components):
-        cells: Sequence[Cell] = comp["cells"]  # type: ignore[assignment]
+        cells: Sequence[Cell] = comp["cells"]
         for dr, dc in directions:
             front = _front_cells(cells, dr, dc)
             if not front:
@@ -156,7 +155,7 @@ def scan_corridors(
             if shift_limit is not None and shift > shift_limit:
                 continue
 
-            tr, tc = target_cell  # type: ignore[misc]
+            tr, tc = target_cell
             obj_idx = object_id[tr][tc]
             if obj_idx == -1:
                 continue
@@ -181,15 +180,10 @@ def scan_corridors(
 
 
 def apply_candidate(result: Grid, cand: Dict[str, object]) -> None:
-    for r, c in cand["path"]:  # type: ignore[index]
+    for r, c in cand["path"]:
         result[r][c] = 0
-    for r, c in cand["new"]:  # type: ignore[index]
+    for r, c in cand["new"]:
         result[r][c] = 2
-
-
-# ---------------------------------------------------------------------------
-# Abstractions
-# ---------------------------------------------------------------------------
 
 
 def abstraction_identity(grid: Grid) -> Grid:
@@ -197,7 +191,6 @@ def abstraction_identity(grid: Grid) -> Grid:
 
 
 def abstraction_greedy_slide(grid: Grid) -> Grid:
-    """Initial attempt: slide along the first valid corridor per component."""
 
     bg = background_color(grid)
     result = copy_grid(grid)
@@ -206,7 +199,7 @@ def abstraction_greedy_slide(grid: Grid) -> Grid:
     for idx, comp in enumerate(components):
         candidate = find_first_corridor(grid, bg, comp)
         if candidate is None:
-            for r, c in comp["cells"]:  # type: ignore[index]
+            for r, c in comp["cells"]:
                 result[r][c] = bg
         else:
             apply_candidate(result, candidate)
@@ -216,7 +209,7 @@ def abstraction_greedy_slide(grid: Grid) -> Grid:
 def find_first_corridor(grid: Grid, background: int, comp: Dict[str, object]) -> Optional[Dict[str, object]]:
     height = len(grid)
     width = len(grid[0]) if height else 0
-    cells: Sequence[Cell] = comp["cells"]  # type: ignore[assignment]
+    cells: Sequence[Cell] = comp["cells"]
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
     for dr, dc in directions:
@@ -263,7 +256,6 @@ def find_first_corridor(grid: Grid, background: int, comp: Dict[str, object]) ->
 
 
 def abstraction_matched_corridors(grid: Grid) -> Grid:
-    """Final heuristic: match `2` components to objects with scoring."""
 
     bg = background_color(grid)
     result = copy_grid(grid)
@@ -294,7 +286,7 @@ def abstraction_matched_corridors(grid: Grid) -> Grid:
 
     for idx, comp in enumerate(components):
         if idx not in assigned:
-            for r, c in comp["cells"]:  # type: ignore[index]
+            for r, c in comp["cells"]:
                 result[r][c] = bg
             continue
         apply_candidate(result, assigned[idx])

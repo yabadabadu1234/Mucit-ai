@@ -1,8 +1,3 @@
-"""Solver for ARC-AGI-2 task 4c3d4a41 (split: evaluation).
-
-Refactored to match the typed-DSL lambda composition while preserving
-the original solver semantics.
-"""
 
 from typing import List, Tuple, Iterable, Set
 
@@ -22,19 +17,16 @@ def _find_split_col(grid: Grid) -> int:
 
 
 def locateLeftWedge(grid: Grid) -> List[Tuple[int, int]]:
-    """Return coordinates of left-wedge cells (color 5 left of the split)."""
     split = _find_split_col(grid)
     return [(r, c) for r, row in enumerate(grid) for c in range(split) if row[c] == 5]
 
 
 def extractRightBlocks(grid: Grid, wedge_cells: Iterable[Tuple[int, int]]) -> List[int]:
-    """Return the source rows whose right blocks should be shifted upward."""
     rows: List[int] = sorted({r for r, _ in wedge_cells})
     return rows
 
 
 def shiftBlocksUpwards(grid: Grid, rows: Iterable[int]) -> Grid:
-    """Copy each right-side block one row above for the given source rows."""
     split = _find_split_col(grid)
     h, w = len(grid), len(grid[0])
     out = _clone(grid)
@@ -48,16 +40,13 @@ def shiftBlocksUpwards(grid: Grid, rows: Iterable[int]) -> Grid:
 
 
 def mirrorWedge(shifted: Grid, wedge_cells: Iterable[Tuple[int, int]]) -> Grid:
-    """Zero the left region and mirror wedge color 5 onto the right."""
     split = _find_split_col(shifted)
     h, w = len(shifted), len(shifted[0])
     offset = split + 1
     out = _clone(shifted)
-    # Mirror exactly the original wedge cell positions
     for r, c in wedge_cells:
         if c + offset < w:
             out[r][c + offset] = 5
-    # Zero the entire left region
     for r in range(h):
         for c in range(split):
             out[r][c] = 0

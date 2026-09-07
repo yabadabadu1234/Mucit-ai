@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task b99e7126."""
 
 from __future__ import annotations
 
@@ -77,7 +76,6 @@ def identity_abstraction(grid: Grid) -> Grid:
 
 
 def bounding_square_abstraction(grid: Grid) -> Grid:
-    """First attempt: fill the entire 3x3 macro window with the minority tile."""
     result = deep_copy(grid)
     tiles, freq = _split_into_tiles(grid)
     target = _minority_tile(freq)
@@ -103,7 +101,6 @@ def bounding_square_abstraction(grid: Grid) -> Grid:
 
 
 def majority_mask_abstraction(grid: Grid) -> Grid:
-    """Final abstraction: honour the majority-colour mask inside the minority tile."""
     result = deep_copy(grid)
     tiles, freq = _split_into_tiles(grid)
     target = _minority_tile(freq)

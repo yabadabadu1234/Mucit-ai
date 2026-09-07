@@ -1,18 +1,3 @@
-"""
-Kuantum ve küllî öğrenme risalelerinin tashih cetveli.
-
-:mod:`tashih` ile aynı usul: her düzeltme bir **veri** kaydıdır, kaynağa
-birebir uygulanır, tam bir kere eşleştiği sınanır, ve cetvel elle değil
-kayıttan üretilir.
-
-    python3 docs/kaynak/tashih_kuantum.py            # tashihli nüshalar
-    python3 docs/kaynak/tashih_kuantum.py --cetvel   # cetvel
-
-**Ölçüt aynı:** yalnız *gösterilebilir* hatalar. Üslûp tercihi, gösterim
-alışkanlığı ve modelleme seçimi hata sayılmadı. Buradaki kayıtların bir
-kısmı ayrıca **makine ile sağlanmaktadır**; hangi testin hangi tashihi
-tarttığı ``sağlama`` alanında yazılıdır.
-"""
 from __future__ import annotations
 
 import os
@@ -41,9 +26,8 @@ class Tashih:
     eski: str
     yeni: str
     sebep: str
-    tur: str                       # derleme | tip | isaret | mantik | vakum |
-                                   # tanimsiz | olcek | istatistik
-    saglama: Optional[str] = None  # bu tashihi tartan test
+    tur: str
+    saglama: Optional[str] = None
 
 
 T: List[Tashih] = []
@@ -53,12 +37,6 @@ def _t(no, yer, baslik, dosyalar, eski, yeni, sebep, tur, saglama=None):
     T.append(Tashih(no, yer, baslik, tuple(dosyalar), eski, yeni,
                     sebep, tur, saglama))
 
-
-# =====================================================================
-#  K1-K6: derlemeyi kıran bozukluklar (kuantum kapı külliyatı)
-# =====================================================================
-# Aynı sınıf hata daha önce mizan risalelerinde de bulunmuştu: ortam
-# kapanışının tırnakla bozulması. Metin bu hâliyle HİÇ derlenmiyor.
 
 _t(1, "§1 Pauli", "Ortam kapanışı bozuk: \\end{equation\">",
    [KAPI],
@@ -127,9 +105,6 @@ _t(6, "§7.4 HHL", "Ortam kapanışı bozuk",
    "derleme", "test_kuantum_kapi_derleniyor"),
 
 
-# =====================================================================
-#  K7-K8: kapı cebri
-# =====================================================================
 _t(7, "§1.4 Genel üniter", "$U_1(\\lambda) \\equiv R_z(\\lambda)$ değil",
    [KAPI],
    "U_1(\\lambda) &= \\begin{pmatrix} 1 & 0 \\\\ 0 & e^{i\\lambda} "
@@ -163,9 +138,6 @@ _t(8, "§5.1 QFT", "QFT'nin çarpım formu köşegen operatör gibi yazılmış"
    "tip", "test_qft_kosegen_degil"),
 
 
-# =====================================================================
-#  K9-K14: kuantum-topos risalesi
-# =====================================================================
 _t(9, "§2.1 Lif metriği", "Fubini–Study metriğinde izdüşüm terimi eksik",
    [TOPOS],
    "g_{\\mu\\nu}^{(k)}(u) &= \\langle \\partial_\\mu \\Psi_{w_k} | "
@@ -267,9 +239,6 @@ _t(14, "§6.1 İntaç", "hLevel 0 büzülebilirliktir, küme değil",
    "tip", "test_hlevel_sirasi"),
 
 
-# =====================================================================
-#  K15-K21: küllî öğrenme risalesi
-# =====================================================================
 _t(15, "§2.1 KAN", "B-spline temel sayısı $G$ değil $G+p$",
    [KULLI],
    "\\phi_{q,p}(x) &= w_{\\text{base}} \\cdot \\text{silu}(x) + "
@@ -370,9 +339,6 @@ _t(21, "§6.1 Deriv-Crit", "Küme ile sayı kıyaslanmış",
    "tip", None),
 
 
-# =====================================================================
-#  K22: serbest enerji sınırı -- üç belgede birden
-# =====================================================================
 _t(22, "§7.1 Do-Calculus", "Serbest enerjinin alt sınırı $0$ değil",
    [KULLI],
    "\\mathcal{F}(X, S) &= \\mathbb{E}_{q(S)} \\left[ \\ln q(S) - "
@@ -406,9 +372,6 @@ _t(23, "§8.1 Hacim akışı", "Eyer noktası şartı eksik yazılmış",
    "mantik", "test_eyer_noktasi_olcutu"),
 
 
-# =====================================================================
-#  K24: operatör öğrenmesi risalesi
-# =====================================================================
 _t(24, "§6 Sonsuz-kategorik", "Yol integrali çekirdeği PSD değildir",
    [OPERATOR],
    "K_\\infty(x, y) = \\int_{\\text{Map}(I, \\mathcal{C}_\\infty)} "
@@ -428,9 +391,6 @@ _t(24, "§6 Sonsuz-kategorik", "Yol integrali çekirdeği PSD değildir",
    "mantik", "test_faz_cekirdegi_psd_degil"),
 
 
-# =====================================================================
-#  K25-K33: analitik darboğazlar külliyatı
-# =====================================================================
 _t(25, "Darboğaz 1", "Tikhonov çekirdeği yok eder, korumaz",
    [DARBOGAZ],
    " * Formül 1.5 (Analitik Betti-0 Korunum Dengesi): dim(ker(L_eps)) "
@@ -659,12 +619,8 @@ _t(38, "Darboğaz 48", "Teğet izdüşümü tek başına locus'ta tutmuyor",
    "eksik_adim", "test_duzeltmesiz_tegetin_locustan_kaydigi"),
 
 
-# =====================================================================
-#  Uygulama
-# =====================================================================
 def uygula(kaynak_dizin: str = KAYNAK,
            hedef_dizin: str = HEDEF) -> Dict[str, List[int]]:
-    """Tashihleri uygular; her tashihin TAM BİR KERE eşleştiğini sınar."""
     os.makedirs(hedef_dizin, exist_ok=True)
     metinler = {ad: open(os.path.join(kaynak_dizin, ad),
                          encoding="utf-8").read()
@@ -690,7 +646,6 @@ def uygula(kaynak_dizin: str = KAYNAK,
 
 
 def _basligi_isaretle(metin: str, nolar: List[int], ad: str) -> str:
-    """Tashihli nüshanın başına hangi tashihlerin uygulandığını yazar."""
     if not nolar:
         return metin
     satir = ("Bu nüshaya %d tashih uygulanmıştır (K%s). "
@@ -702,7 +657,6 @@ def _basligi_isaretle(metin: str, nolar: List[int], ad: str) -> str:
 
 
 def cetvel() -> str:
-    """Cetveli kayıtlardan üretir -- elle yazılmaz."""
     turler: Dict[str, int] = {}
     for t in T:
         turler[t.tur] = turler.get(t.tur, 0) + 1

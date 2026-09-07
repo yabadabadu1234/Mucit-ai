@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 8b7bacbf (evaluation split)."""
 
 from __future__ import annotations
 
@@ -7,11 +6,8 @@ from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
 
 Grid = List[List[int]]
-# Use an immutable, hashable representation for components so they can be dict keys.
 Component = Tuple[Tuple[int, int], ...]
 
-
-# --- Minimal functional DSL helpers (runtime implementations) ---
 
 def fold_repaint(initial: Grid, items: List[Component], update):
     canvas = [row[:] for row in initial]
@@ -89,8 +85,6 @@ def _min_distance(points_a: Iterable[Tuple[int, int]], points_b: Iterable[Tuple[
                     return 0
     return best
 
-
-# --- Publicly named helpers to align with the DSL lambda ---
 
 def extractZeroComponents(grid: Grid) -> List[Component]:
     return _zero_components(grid)

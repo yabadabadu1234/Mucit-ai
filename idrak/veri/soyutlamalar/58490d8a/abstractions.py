@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 58490d8a."""
 
 from collections import deque
 import json

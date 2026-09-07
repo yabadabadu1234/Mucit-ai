@@ -1,9 +1,3 @@
-"""Abstractions explored for ARC task dd6b8c4b.
-
-This module captures the intermediate pipelines considered while developing the
-final solver and offers a small harness so we can compare their performance
-across the available splits (train/test/arc-gen).
-"""
 
 from __future__ import annotations
 
@@ -28,13 +22,11 @@ def _center(grid: Grid) -> Tuple[int, int]:
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline pass-through for reference."""
 
     return [row[:] for row in grid]
 
 
 def ring_fill_abstraction(grid: Grid) -> Grid:
-    """Fill the central ring according to the quadrant imbalance, without rebalancing the 9s."""
 
     height = len(grid)
     width = len(grid[0])
@@ -75,7 +67,6 @@ def ring_fill_abstraction(grid: Grid) -> Grid:
 
 
 def balanced_relocation_abstraction(grid: Grid) -> Grid:
-    """Full solver that relocates 9s via scoring and ring filling."""
 
     return solve_dd6b8c4b(grid)
 

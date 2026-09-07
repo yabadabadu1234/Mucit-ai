@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 332f06d7."""
 
 from __future__ import annotations
 
@@ -62,7 +61,6 @@ def identity_solver(grid: Grid) -> Grid:
 
 
 def always_swap_to_color2(grid: Grid) -> Grid:
-    """Move the zero block directly to the colour-2 component."""
 
     zeros = collect(grid, 0)
     twos = collect(grid, 2)
@@ -83,7 +81,6 @@ def always_swap_to_color2(grid: Grid) -> Grid:
 
 
 def threshold_solver(grid: Grid, *, threshold: float) -> Grid:
-    """Relocate the zero block when a good 1-block candidate is sufficiently central."""
 
     zeros = collect(grid, 0)
     ones = collect(grid, 1)
@@ -192,4 +189,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

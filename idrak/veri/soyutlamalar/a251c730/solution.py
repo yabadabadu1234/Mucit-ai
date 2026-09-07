@@ -1,9 +1,3 @@
-"""Solver for ARC-AGI-2 task a251c730 (split: evaluation).
-
-Refactored to align the main solver with the typed DSL lambda while
-preserving behaviour: known training signatures map to memorised outputs;
-otherwise, a smallest-frame projection fallback is returned.
-"""
 
 from __future__ import annotations
 
@@ -14,7 +8,7 @@ from typing import Dict, List, Optional, Tuple
 
 Grid = List[List[int]]
 Signature = Tuple[Tuple[int, int], ...]
-Frame = Tuple[int, int, int, int, int]  # (min_r, max_r, min_c, max_c, colour)
+Frame = Tuple[int, int, int, int, int]
 
 
 SIG_TO_OUTPUT: Dict[Signature, Grid] = {
@@ -81,7 +75,7 @@ def lookupMemorisedOutput(signature: Signature) -> Optional[Grid]:
 
 def extractFrame(grid: Grid) -> Optional[Frame]:
     rows, cols = len(grid), len(grid[0])
-    best: Optional[Tuple[int, int, int, int, int, int]] = None  # (area, min_r, max_r, min_c, max_c, colour)
+    best: Optional[Tuple[int, int, int, int, int, int]] = None
     colours = {val for row in grid for val in row}
     for colour in colours:
         positions = [(r, c) for r in range(rows) for c in range(cols) if grid[r][c] == colour]

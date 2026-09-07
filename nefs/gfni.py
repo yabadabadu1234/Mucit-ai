@@ -1,54 +1,3 @@
-"""GFNI -- GALOIS KOMUTLARI **BİZZAT DONANIMDA** KOŞAR.
-
-    from nefs.gfni import sbox_gfni, yoklama
-    y = sbox_gfni(x)          # vgf2p8affineinvqb, tek komut, 64 bayt/vuruş
-
-===================================================================
-BU DOSYA BİR TAKLİT DEĞİLDİR -- KOŞAN ŞEY KOMUTUN KENDİSİDİR
-===================================================================
-
-**FERMAN 1-F:** *"Bizzat GFNI kodu koşturacaksın! ... Sana en derin
-kodları çalıştırma talimatı gelmişse mutlaka o talimatta denileni
-yapmanın yolunu bulacak, talimatı tahrif etmeyeceksin!"*
-
-O hâlde burada ``numpy`` tablosu yoktur. Burada C ile yazılmış
-``immintrin.h`` gövdesi vardır, ``gcc -mgfni -mavx512f -mavx512bw`` ile
-**derlenir**, ``ctypes`` ile yüklenir ve işlemcinin kendi
-``vgf2p8affineinvqb`` komutu koşar.
-
-Zabıtın (Non-Clifford Çıkmazı, Teorem 2) tarif ettiği komut budur::
-
-    __m512i sonuc = _mm512_gf2p8affineinv_epi64_epi8(durum, A, 0x63);
-
-Tek komutta 64 baytlık durum, ``GF(2⁸)``te evvela çarpımsal tersine
-(``x²⁵⁴``) sonra Rijndael afin katmanına sokulur. İndirgenemez polinom
-komutun kendisinde gömülüdür ve ``0x11B``dir -- yâni
-``x⁸+x⁴+x³+x+1``, zabıtın şart koştuğu polinom.
-
-===================================================================
-GEÇİT CPUID DEĞİL, **FİİLÎ YOKLAMADIR** -- ÖLÇÜLDÜ, SEBEBİ YAZILDI
-===================================================================
-
-Bu makinede ``CPUID.7.0:ECX[8]`` (GFNI) **sıfır** döner ve
-``/proc/cpuinfo``da ``gfni`` bayrağı **yoktur**. Buna rağmen komut
-koşar ve doğru neticeyi verir: sanallaştırma katmanı bayrağı
-maskelemiş, fakat komutu tuzağa düşürmemiştir.
-
-Yâni CPUID'e bakıp "GFNI yok" demek, **olan bir kabiliyeti yok
-saymak** olurdu. Onun için geçit şudur: komut ayrı bir süreçte
-koşturulur ve neticesi AES'in kendi cetveliyle kıyaslanır. Süreç
-``SIGILL`` alırsa kabiliyet yoktur; doğru cetveli verirse vardır.
-Bu bir kanaat değil, bir **icradır**.
-
-===================================================================
-NE KOŞMUYOR -- açıkça
-===================================================================
-
-``_mm512_gf2p8affine_epi64_epi8`` ve ``_mm512_gf2p8mul_epi8`` de
-buradadır ve aynı yolla koşar. Koşmayan tek şey ``VAES`` ve
-``VPCLMULQDQ``dır: yoklandı, bu makinede **yok** (``donanim.py``
-raporunda görünür). Onlara dayanan bir iddia kurulmadı.
-"""
 from __future__ import annotations
 
 import ctypes
@@ -66,15 +15,10 @@ __all__ = ["GFNI_C", "derle", "yoklama", "kutuphane", "sbox_gfni",
            "kaynasik_gfni", "ayrik_gfni", "genlesme_gfni",
            "dfa_tablosu", "faz_dfa_gfni", "akis_gfni", "akis_olc", "rapor"]
 
-#: Derlenmiş kütüphanenin yattığı yer. Kaynağın özetiyle adlandırılır;
-#: kaynak değişirse yeniden derlenir, eskisi kullanılmaz.
 DERLEME_DIZINI = os.environ.get(
     "MUCIT_DERLEME", os.path.join(os.path.dirname(os.path.dirname(
         os.path.abspath(__file__))), "depo", "derleme"))
 
-#: Rijndael afin dizeyi, GFNI'nin bit sırasında. Bu sayı **AES'in
-#: kendi tarifidir**, seçilmiş bir ayar değildir; doğruluğu
-#: ``yoklama()``da 256 baytın tamamıyla sınanır.
 AES_AFFINE = 0xF1E3C78F1F3E7CF8
 AES_SABIT = 0x63
 
@@ -439,8 +383,6 @@ int main(void){
 }
 '''
 
-#: Derleme bayrakları. ``-mgfni`` olmadan komut **üretilmez**; yâni bu
-#: bayrak kalkarsa dosya yerine getirmediği bir iddiada bulunmuş olur.
 BAYRAK = ["-O3", "-fPIC", "-mgfni", "-mavx512f", "-mavx512bw",
           "-mavx512vl", "-mpopcnt"]
 
@@ -455,12 +397,6 @@ def _ozet() -> str:
 
 
 def derle() -> Dict[str, Any]:
-    """Kaynağı **fiilen derle**: ``.so`` ve yoklama ikilisi.
-
-    Derleyici yoksa yahut derleme düşerse bu **sessiz geçilmez**:
-    dönen sözlükte ``derlendi=False`` ve derleyicinin kendi çıktısı
-    yazılıdır (ferman 5: ölçü kırmızı yanabilmeli).
-    """
     c = _ONBELLEK.get("derleme")
     if c is not None:
         return c
@@ -495,22 +431,6 @@ def derle() -> Dict[str, Any]:
 
 
 def yoklama() -> Dict[str, Any]:
-    """Komut **fiilen koşuyor mu** -- ayrı süreçte icra ederek ölç.
-
-    ===============================================================
-    NİÇİN CPUID'E BAKILMIYOR
-    ===============================================================
-
-    Bu makinede CPUID ``GFNI = 0`` der ve ``/proc/cpuinfo``da bayrak
-    yoktur; buna rağmen komut koşar ve 256 baytın tamamında AES'in
-    kendi cetvelini verir (ölçüldü). Sanallaştırma bayrağı maskelemiş,
-    komutu tuzağa düşürmemiştir.
-
-    O hâlde bayrağa bakmak **olan bir kabiliyeti yok saymak** olurdu.
-    Hüküm icradan çıkar: ayrı süreçte koştur, ``SIGILL`` alırsa yok,
-    doğru cetveli verirse var. CPUID yine okunur -- fakat karar için
-    değil, **ikisinin ayrıştığı görünsün** diye.
-    """
     c = _ONBELLEK.get("yoklama")
     if c is not None:
         return c
@@ -531,7 +451,6 @@ def yoklama() -> Dict[str, Any]:
                   ("SIGILL -- komut bu işlemcide YOK" if r.returncode < 0
                    else "yoklama cetveli tutmadı"))
     o["sbox"] = r.stdout.strip() if kostu else ""
-    # CPUID ayrı okunur: kararı o vermez, fakat ayrışma görünsün.
     o["cpuid"] = cpuid() if kostu else {}
     o["cetvel_tuttu"] = kostu and o["sbox"][:16] == "637c777bf26b6fc5"
     _ONBELLEK["yoklama"] = o
@@ -539,7 +458,6 @@ def yoklama() -> Dict[str, Any]:
 
 
 def cpuid() -> Dict[str, bool]:
-    """``CPUID.7.0`` bayrakları -- **bilgi**, karar değil."""
     lib = kutuphane()
     if lib is None:
         return {}
@@ -551,7 +469,6 @@ def cpuid() -> Dict[str, bool]:
 
 
 def kutuphane():
-    """``ctypes`` kütüphanesi -- yalnız yoklama geçtiyse yüklenir."""
     if "lib" in _ONBELLEK:
         return _ONBELLEK["lib"]
     d = derle()
@@ -600,7 +517,6 @@ def _p64(a: np.ndarray):
 
 
 def sbox_gfni(x) -> np.ndarray:
-    """AES S-box -- ``vgf2p8affineinvqb``, **donanımda**, 64 bayt/vuruş."""
     assert yoklama()["koşuyor"], (
         "GFNI koşmuyor: %s" % yoklama().get("sebep"))
     a = np.ascontiguousarray(np.asarray(x, np.uint8).reshape(-1))
@@ -610,7 +526,6 @@ def sbox_gfni(x) -> np.ndarray:
 
 
 def affine_gfni(x, A: int = AES_AFFINE, b: int = AES_SABIT) -> np.ndarray:
-    """Keyfî Galois afin otomorfizmi -- ``vgf2p8affineqb``, donanımda."""
     assert yoklama()["koşuyor"], "GFNI koşmuyor"
     a = np.ascontiguousarray(np.asarray(x, np.uint8).reshape(-1))
     o = np.empty_like(a)
@@ -621,7 +536,6 @@ def affine_gfni(x, A: int = AES_AFFINE, b: int = AES_SABIT) -> np.ndarray:
 
 
 def gfcarp_gfni(x, y) -> np.ndarray:
-    """``GF(2⁸)`` çarpım -- ``vgf2p8mulb``, donanımda, tablosuz."""
     assert yoklama()["koşuyor"], "GFNI koşmuyor"
     a = np.ascontiguousarray(np.asarray(x, np.uint8).reshape(-1))
     b = np.ascontiguousarray(np.asarray(y, np.uint8).reshape(-1))
@@ -632,11 +546,6 @@ def gfcarp_gfni(x, y) -> np.ndarray:
 
 
 def symplectic_gfni(X, Z, maske, faz) -> int:
-    """Symplectic süpürme -- XOR/AND/POPCOUNT, **yerinde**, kayan nokta yok.
-
-    Zabıtın (1 TB/s GPU) 1. motorunun CPU mukabili. ``X`` ve ``Z``
-    **yerinde** değişir; dönen parite toplamıdır.
-    """
     assert yoklama()["koşuyor"], "GFNI kütüphanesi koşmuyor"
     Xa = np.ascontiguousarray(X, np.uint64)
     Za = np.ascontiguousarray(Z, np.uint64)
@@ -654,7 +563,6 @@ def symplectic_gfni(X, Z, maske, faz) -> int:
 
 
 def kaynasik_gfni(x, k: int = 0x1B) -> np.ndarray:
-    """Dört adım **tek geçişte** -- ara dizi yok, yazmaçta biter."""
     assert yoklama()["koşuyor"], "GFNI koşmuyor"
     a = np.ascontiguousarray(np.asarray(x, np.uint8).reshape(-1))
     o = np.empty_like(a)
@@ -664,7 +572,6 @@ def kaynasik_gfni(x, k: int = 0x1B) -> np.ndarray:
 
 
 def ayrik_gfni(x, k: int = 0x1B) -> np.ndarray:
-    """Aynı dört adım **ayrık** -- her adım belleğe yazar. Kıyas içindir."""
     assert yoklama()["koşuyor"], "GFNI koşmuyor"
     a = np.ascontiguousarray(np.asarray(x, np.uint8).reshape(-1))
     o = np.empty_like(a)
@@ -677,7 +584,6 @@ def ayrik_gfni(x, k: int = 0x1B) -> np.ndarray:
 
 
 def genlesme_gfni(tohum, kat: int = 8) -> np.ndarray:
-    """Tohumu ``kat`` misli dalgaya aç -- zincirli, çığ tesirli."""
     assert yoklama()["koşuyor"], "GFNI koşmuyor"
     t = np.ascontiguousarray(np.asarray(tohum, np.uint8).reshape(-1))
     assert t.size >= 64, "tohum en az 64 bayt olmalı (512 bitlik durum)"
@@ -688,16 +594,12 @@ def genlesme_gfni(tohum, kat: int = 8) -> np.ndarray:
     return o
 
 
-#: DFA geçiş tablosu: 16 baytlık, ``vpshufb``ın yazmaç içi LUT'u.
-#: Bu bir **ayar değil**, faz otomatının durum geçişidir; tohumdan
-#: türetilir ki koda gömülü bir sabit olmasın.
 def dfa_tablosu(tohum: int = 0) -> np.ndarray:
     r = np.random.default_rng(int(tohum))
     return r.integers(0, 256, size=16, dtype=np.uint8)
 
 
 def faz_dfa_gfni(x, lut=None) -> np.ndarray:
-    """Faz otomatı -- ``vpshufb``, 64 bayt/vuruş, bellekten LUT okuma YOK."""
     assert yoklama()["koşuyor"], "GFNI koşmuyor"
     a = np.ascontiguousarray(np.asarray(x, np.uint8).reshape(-1))
     L = np.ascontiguousarray(dfa_tablosu() if lut is None
@@ -709,11 +611,6 @@ def faz_dfa_gfni(x, lut=None) -> np.ndarray:
 
 
 def akis_gfni(veri, lut=None) -> Dict[str, Any]:
-    """Kaynaşık akış çekirdeği -- **sıfır tahsis**, tek geçiş.
-
-    Siklotomik indirgeme, faz otomatı, symplectic tableau ve tenakuz
-    alarmı aynı geçişte, ``zmm`` yazmaçlarında biter.
-    """
     assert yoklama()["koşuyor"], "GFNI koşmuyor"
     a = np.ascontiguousarray(np.asarray(veri, np.uint8).reshape(-1))
     L = np.ascontiguousarray(dfa_tablosu() if lut is None
@@ -725,18 +622,6 @@ def akis_gfni(veri, lut=None) -> Dict[str, Any]:
 
 
 def akis_olc(tohum: int = 0) -> Dict[str, Any]:
-    """Kaynaşık akışın hızı -- **DRAM ve L1 AYRI ÖLÇÜLÜR**.
-
-    Misal kod "L1 Cache Ring Buffer" der ve 256 MB'lık bir vektörü
-    DRAM'den akıtır; ölçtüğü şey L1 değil bellek yoludur. Burada iki
-    hâl ayrı ayrı ölçülür ve hangisinin ne olduğu yazılır:
-
-    * **DRAM hattı**: veri önbelleğe sığmaz (64 MB), her bayt bir kere
-      okunur. Bu, hakikî akış süratidir.
-    * **L1 halkası**: 32 KB'lık bir pencere üstünde döner. Bu, hesabın
-      kendi tavanıdır -- bellek yolu devrede değildir. Akış hızı diye
-      **bunu göstermek aldatmaca olurdu**; ayrı satırda durur.
-    """
     import time
     y = yoklama()
     if not y["koşuyor"]:
@@ -760,7 +645,6 @@ def akis_olc(tohum: int = 0) -> Dict[str, Any]:
         o[ad + "_bayt"] = int(bayt)
         o[ad + "_sn"] = float(sn)
         o[ad + "_gb"] = float(bayt / sn / 1e9)
-    # Bayt başına çevrim: ilan edilen saatle. Saat ölçülemezse ``None``.
     from .donanim import saat_ghz
     ghz = saat_ghz().get("ilan_ghz")
     o["saat_ghz"] = ghz
@@ -772,7 +656,6 @@ def akis_olc(tohum: int = 0) -> Dict[str, Any]:
 
 
 def olc(bayt: int = 1 << 22, tekrar: int = 20) -> Dict[str, Any]:
-    """Donanım GFNI ne kadar hızlı -- **saatlenerek**, kestirimsiz."""
     import time
     y = yoklama()
     if not y["koşuyor"]:
@@ -782,7 +665,7 @@ def olc(bayt: int = 1 << 22, tekrar: int = 20) -> Dict[str, Any]:
     o = np.empty_like(x)
     lib = kutuphane()
     px, po, n = _p8(x), _p8(o), ctypes.c_size_t(x.size)
-    lib.mucit_sbox(px, po, n)                        # ısıtma
+    lib.mucit_sbox(px, po, n)
     t0 = time.perf_counter()
     for _ in range(int(tekrar)):
         lib.mucit_sbox(px, po, n)
@@ -803,8 +686,7 @@ def olc(bayt: int = 1 << 22, tekrar: int = 20) -> Dict[str, Any]:
             "netice_aynı": ayni}
 
 
-def rapor() -> str:                                      # pragma: no cover
-    """GFNI bu makinede koşuyor mu, ne kadar hızlı -- **ölç**."""
+def rapor() -> str:
     y = yoklama()
     c = y.get("cpuid") or {}
     s = ["=== GFNI -- GALOIS KOMUTLARI DONANIMDA ===", "",
@@ -834,6 +716,6 @@ def rapor() -> str:                                      # pragma: no cover
     return "\n".join(s)
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     print(rapor())
     sys.exit(0 if yoklama()["koşuyor"] else 1)

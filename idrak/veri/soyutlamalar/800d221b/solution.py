@@ -1,20 +1,3 @@
-"""Solver for ARC-AGI-2 task 800d221b (evaluation split).
-
-The task features a dominant background colour and a secondary colour that
-acts as a "transition" palette between two other colours.  On the training
-examples, the transition colour forms one or more connected components that
-sit between a "left" colour and a "right" colour.  The goal is to recolour
-the transition pixels so that regions nearer the left colour adopt it, regions
-nearer the right colour adopt that colour, while deeply interior pixels remain
-unchanged.  The notion of "nearness" is learned from the training pairs by a
-simple feature-based kNN classifier operating on normalised geometric
-features.
-
-The training pairs from `800d221b.json` are embedded directly below so that
-the solver remains self contained even when imported via `exec`.  They are
-used to build a tiny dataset of labelled examples which, in turn, powers a
-lightweight kNN classifier reused at inference time.
-"""
 
 from __future__ import annotations
 

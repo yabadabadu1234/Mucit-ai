@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 evaluation task faa9f03d."""
 
 from collections import Counter
 from typing import Dict, List, Tuple, Optional

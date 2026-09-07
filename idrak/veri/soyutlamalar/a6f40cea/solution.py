@@ -1,11 +1,9 @@
-"""Solver for ARC-AGI-2 task a6f40cea (evaluation split)."""
 
 from __future__ import annotations
 
 from collections import Counter
 from typing import Any, Dict, List, Optional, Tuple, cast
 
-# Simple alias to support the typed lambda in the DSL doc.
 Grid = List[List[int]]
 
 
@@ -14,11 +12,6 @@ def _clone(grid: Grid) -> Grid:
 
 
 def detectFrame(grid: Grid) -> Dict[str, Any]:
-    """Detect the smallest valid rectangular frame and basic stats.
-
-    Returns a dict carrying bounds and metadata used by subsequent phases.
-    Keys: height, width, background, frame_color, bounds (tuple) or None.
-    """
     height = len(grid)
     width = len(grid[0])
     counts: Counter[int] = Counter()
@@ -67,18 +60,16 @@ def detectFrame(grid: Grid) -> Dict[str, Any]:
 
 
 def projectBorderColours(grid: Grid, frame: Dict[str, Any]) -> Grid:
-    """Project colours orthogonally from the four borders into the interior."""
-    # carry original grid for later phases
     frame["grid_full"] = grid
 
     if frame.get("bounds") is None:
         return _clone(grid)
 
-    top, bottom, left, right = cast(Tuple[int, int, int, int], frame["bounds"])  # type: ignore[index]
-    height = cast(int, frame["height"])  # type: ignore[assignment]
-    width = cast(int, frame["width"])  # type: ignore[assignment]
-    background = cast(int, frame["background"])  # type: ignore[assignment]
-    frame_color = cast(int, frame["frame_color"])  # type: ignore[assignment]
+    top, bottom, left, right = cast(Tuple[int, int, int, int], frame["bounds"])
+    height = cast(int, frame["height"])
+    width = cast(int, frame["width"])
+    background = cast(int, frame["background"])
+    frame_color = cast(int, frame["frame_color"])
 
     inner_height = bottom - top - 1
     inner_width = right - left - 1
@@ -99,7 +90,6 @@ def projectBorderColours(grid: Grid, frame: Dict[str, Any]) -> Grid:
             result[row_idx][col_idx] = color
             depth[row_idx][col_idx] = dist
 
-    # Top
     for offset_col in range(inner_width):
         col = left + 1 + offset_col
         row = top
@@ -114,7 +104,6 @@ def projectBorderColours(grid: Grid, frame: Dict[str, Any]) -> Grid:
                 for d in range(min(length, inner_height)):
                     assign(d, offset_col, d, probe)
 
-    # Bottom
     for offset_col in range(inner_width):
         col = left + 1 + offset_col
         row = bottom
@@ -129,7 +118,6 @@ def projectBorderColours(grid: Grid, frame: Dict[str, Any]) -> Grid:
                 for d in range(min(length, inner_height)):
                     assign(inner_height - 1 - d, offset_col, d, probe)
 
-    # Left
     for offset_row in range(inner_height):
         row = top + 1 + offset_row
         col = left
@@ -149,7 +137,6 @@ def projectBorderColours(grid: Grid, frame: Dict[str, Any]) -> Grid:
                 for d in range(limit):
                     assign(offset_row, d, d, probe)
 
-    # Right
     for offset_row in range(inner_height):
         row = top + 1 + offset_row
         col = right
@@ -167,7 +154,6 @@ def projectBorderColours(grid: Grid, frame: Dict[str, Any]) -> Grid:
                 for d in range(limit):
                     assign(offset_row, inner_width - 1 - d, d, probe)
 
-    # Stash state for later phases on the same frame dict (minimal change).
     frame.update(
         {
             "top": top,
@@ -186,7 +172,6 @@ def projectBorderColours(grid: Grid, frame: Dict[str, Any]) -> Grid:
 
 
 def applySequenceHeuristics(current: Grid, frame: Dict[str, Any]) -> Grid:
-    """Inject alternating stripe sequences derived from nearby runs."""
     if frame.get("bounds") is None:
         return current
 
@@ -332,19 +317,17 @@ def applySequenceHeuristics(current: Grid, frame: Dict[str, Any]) -> Grid:
 
 
 def closeGaps(current: Grid, frame: Dict[str, Any]) -> Grid:
-    """Fill single-cell gaps horizontally and vertically to smooth projection."""
     if frame.get("bounds") is None:
         return current
 
-    result: Grid = frame.get("result", current)  # type: ignore[assignment]
-    base_color: int = frame.get("base_color")  # type: ignore[assignment]
-    inner_height: int = frame.get("inner_height")  # type: ignore[assignment]
-    inner_width: int = frame.get("inner_width")  # type: ignore[assignment]
+    result: Grid = frame.get("result", current)
+    base_color: int = frame.get("base_color")
+    inner_height: int = frame.get("inner_height")
+    inner_width: int = frame.get("inner_width")
 
     changed = True
     while changed:
         changed = False
-        # Horizontal pass
         for r in range(inner_height):
             last_color: Optional[int] = None
             last_idx: Optional[int] = None
@@ -365,7 +348,6 @@ def closeGaps(current: Grid, frame: Dict[str, Any]) -> Grid:
                 else:
                     last_color = val
                     last_idx = c
-        # Vertical pass
         for c in range(inner_width):
             last_color = None
             last_idx = None
@@ -391,7 +373,6 @@ def closeGaps(current: Grid, frame: Dict[str, Any]) -> Grid:
     return result
 
 
-# NOTE: Main entry must match abstractions.md Lambda Representation exactly.
 def solve_a6f40cea(grid: Grid) -> Grid:
     frame = detectFrame(grid)
     projected = projectBorderColours(grid, frame)

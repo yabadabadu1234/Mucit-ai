@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC-AGI-2 task f931b4a8."""
 
 from __future__ import annotations
 
@@ -50,7 +49,6 @@ def _reshape(tile: Grid, row_ids: Sequence[int], col_ids: Sequence[int], row_pat
 
 
 def abstraction_cycle(grid: Grid) -> Grid:
-    """Cycle row and column patterns regardless of structure."""
 
     tile, _, _ = solver._compute_tile(grid)
     if not tile or not tile[0]:
@@ -108,7 +106,6 @@ def _row_ids_without_fallback(grid: Grid) -> Tuple[List[int], List[Grid]]:
 
 
 def abstraction_seqcols_origrow(grid: Grid) -> Grid:
-    """Use original row heuristic with sequential columns (fails on train[4])."""
 
     row_ids, row_patterns = _row_ids_without_fallback(grid)
     if not row_ids:
@@ -125,7 +122,6 @@ def abstraction_seqcols_origrow(grid: Grid) -> Grid:
 
 
 def abstraction_final(grid: Grid) -> Grid:
-    """Final solver shipped in analysis.arc2_samples.f931b4a8."""
 
     return solver.solve_f931b4a8(grid)
 

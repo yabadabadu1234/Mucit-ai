@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task dfadab01."""
 
 from __future__ import annotations
 
@@ -49,15 +48,11 @@ def load_datasets() -> List[Dataset]:
     return datasets
 
 
-# --- Abstractions -----------------------------------------------------------------
-
-
 def identity_solver(grid: Grid) -> Grid:
     return [row[:] for row in grid]
 
 
 def simple_tile_solver(grid: Grid) -> Grid:
-    """Early attempt: paint fixed motifs per colour without context awareness."""
 
     rows = len(grid)
     cols = len(grid[0])
@@ -97,9 +92,6 @@ def simple_tile_solver(grid: Grid) -> Grid:
 
 def patch_dictionary_solver(grid: Grid) -> Grid:
     return solve_dfadab01(grid)
-
-
-# --- Evaluation -------------------------------------------------------------------
 
 
 @dataclass
@@ -147,5 +139,5 @@ def main() -> None:
         print()
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     main()

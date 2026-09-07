@@ -1,38 +1,3 @@
-"""Sürekli değişkenli (CV) fotonik operatörler — kesilmiş Fock uzayında.
-
-Kaynak: ``docs/kaynak/kuantum_kapi_kulliyati.tex`` §"Sürekli Değişkenli
-(CV) Optik Fotonik Operatörleri".
-
-.. math::
-
-   [\\hat a, \\hat a^\\dagger] = I, \\quad
-   \\hat x = \\sqrt{\\hbar/2}\\,(\\hat a + \\hat a^\\dagger), \\quad
-   \\hat p = -i\\sqrt{\\hbar/2}\\,(\\hat a - \\hat a^\\dagger)
-
-**Bu uzay sonsuz boyutludur; bilgisayarda değildir.**  Her şey ``N``
-boyutlu bir kesmede yapılır ve kesmenin bedeli burada *gizlenmez,
-ölçülür*:
-
-* ``[a, a†] = I`` kesmede **sağlanmaz**.  Sapma yalnız son köşegen
-  girdisindedir ve ölçülen değeri ``−N``dir (``a``nın son satırı
-  sıfır olduğu için ``0 − (N−1) − 1``).  Yuvarlama değil **yapısal**
-  bir sapmadır.
-* Buna rağmen ``D(α)``, ``S(z)``, ``BS(θ,φ)`` kesmede **tam
-  üniterdir**: üreteçleri ters-Hermityendir ve ters-Hermityen bir
-  dizeyin üsteli her boyutta üniter çıkar (ölçüldü: ``‖U†U−I‖`` her
-  ``N``de ~1e-15).  *Yanlış yazmıştım; ölçüm düzeltti.*  Kesmenin
-  bedeli üniterliği bozmak değil, **başka bir operatör** vermektir.
-* O bedel :func:`kesme_hatasi` ile iki kesme kıyaslanarak ölçülür ve
-  kapıya göre çok değişir.  Sıkıştırmada ``N``, ``r`` ile hızla
-  büyümek zorundadır (ölçülen: ``r=0.5``te ``N=80`` yeter, ``r=1.5``te
-  ``N=320`` gerekir, ``r=2.0``de ``N=320`` bile yetmez).
-* Kerr kapısı ``K(κ) = exp(iκ n̂²)`` ve kesirsel Fourier ``F^a``
-  **köşegendir**: kesmeden hiç etkilenmezler.  Kesme hatası
-  operatörün *biçimine* bağlıdır, tek bir sayıya değil.
-
-Ölçüm ölçütü olarak her yerde, düşük foton sayılı alt blokta
-(``n < N/2``) hata verilir: fiziksel olarak anlamlı olan orasıdır.
-"""
 
 from __future__ import annotations
 
@@ -53,14 +18,6 @@ HBAR = 1.0
 
 
 def expm(A: np.ndarray) -> np.ndarray:
-    """``exp(A)`` — buradaki bütün üreteçler **ters-Hermityen** olduğu için
-    ``A = −iH`` ile ``H`` Hermityen alınıp özayrışımla hesaplanır.
-
-    Bu, seriye göre hem tam hem hızlıdır ve sonucu **kesin üniter**
-    kılar (bkz. ``akis.lie``da ölçülen seri/özayrışım farkı).
-    Ters-Hermityen olmayan bir girdi burada kabul EDİLMEZ: sessizce
-    yanlış sonuç vermektense hata atmak yeğdir.
-    """
     A = np.asarray(A, complex)
     H = 1j * A
     sapma = float(np.abs(H - H.conj().T).max())
@@ -71,22 +28,15 @@ def expm(A: np.ndarray) -> np.ndarray:
     return (V * np.exp(-1j * lam)) @ V.conj().T
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  1. Temel operatörler
-# ══════════════════════════════════════════════════════════════════════
-
 def yok_et(N: int) -> np.ndarray:
-    """``â``: ``a|n⟩ = √n |n−1⟩`` — üst köşegen."""
     return np.diag(np.sqrt(np.arange(1, N)), 1).astype(complex)
 
 
 def yarat(N: int) -> np.ndarray:
-    """``â†`` — ``yok_et``in eşleniği."""
     return yok_et(N).conj().T
 
 
 def sayi(N: int) -> np.ndarray:
-    """``n̂ = â†â = diag(0,1,…,N−1)`` — kesmede **tam**."""
     return np.diag(np.arange(N)).astype(complex)
 
 
@@ -101,13 +51,6 @@ def momentum(N: int, hbar: float = HBAR) -> np.ndarray:
 
 
 def komutator_sapmasi(N: int) -> Dict[str, object]:
-    """``[a,a†] − I`` kesmede sıfır DEĞİLDİR — nerede ve ne kadar.
-
-    Tam uzayda ``[a,a†] = I``.  Kesmede ``a†``nin son satırı yok
-    edildiği için son köşegen girdi ``−N`` olur (``a``nın son satırı
-    sıfır: ``0 − (N−1) − 1``); başka her yerde sapma makine
-    hassasiyetindedir.
-    """
     a = yok_et(N)
     C = a @ a.conj().T - a.conj().T @ a - np.eye(N)
     return {
@@ -119,42 +62,18 @@ def komutator_sapmasi(N: int) -> Dict[str, object]:
     }
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  2. Gauss kapıları
-# ══════════════════════════════════════════════════════════════════════
-
 def yer_degistirme(alpha: complex, N: int) -> np.ndarray:
-    """``D(α) = exp(α â† − α* â)``.
-
-    Heisenberg'de ``D†(α) â D(α) = â + α I``.
-    """
     a = yok_et(N)
     return expm(alpha * a.conj().T - np.conj(alpha) * a)
 
 
 def sikistirma(z: complex, N: int) -> np.ndarray:
-    """``S(z) = exp(½(z* â² − z â†²))``, ``z = r e^{iφ}``.
-
-    ``φ = 0`` için ``S†(r) x̂ S(r) = e^{−r} x̂``.
-    """
     a = yok_et(N)
     return expm(0.5 * (np.conj(z) * (a @ a)
                        - z * (a.conj().T @ a.conj().T)))
 
 
 def isik_bolucu(theta: float, phi: float, N: int) -> np.ndarray:
-    """``BS(θ,φ) = exp(θ(e^{iφ} â₁†â₂ − e^{−iφ} â₁â₂†))`` — iki kip.
-
-    Heisenberg'de çıkış kipleri
-
-    .. math::
-
-       \\begin{pmatrix}\\cos θ & -e^{-iφ}\\sin θ\\\\
-       e^{iφ}\\sin θ & \\cos θ\\end{pmatrix}
-
-    dizeyiyle karışır; toplam foton sayısı **korunur** (üreteç
-    ``n̂₁+n̂₂`` ile sıfır komutatörlüdür).
-    """
     a = yok_et(N)
     I = np.eye(N, dtype=complex)
     a1, a2 = np.kron(a, I), np.kron(I, a)
@@ -164,43 +83,19 @@ def isik_bolucu(theta: float, phi: float, N: int) -> np.ndarray:
 
 
 def kesirsel_fourier(a_kuvvet: float, N: int) -> np.ndarray:
-    """``F^a = exp(−i a (π/2)(n̂ + ½))`` — köşegen, kesmeden etkilenmez.
-
-    Grup özelliği ``F^a F^b = F^{a+b}`` **tam** sağlanır (köşegen
-    olduğu için).  ``a = 1``de ``F† x̂ F = p̂`` çıkar: alışıldık
-    Fourier dönüşümü.
-    """
     n = np.arange(N)
     return np.diag(np.exp(-1j * a_kuvvet * (math.pi / 2) * (n + 0.5)))
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  3. Gauss olmayan kapılar
-# ══════════════════════════════════════════════════════════════════════
-
 def kerr(kappa: float, N: int) -> np.ndarray:
-    """``K(κ) = exp(i κ n̂²)`` — köşegen; kesmede **tam üniter**."""
     n = np.arange(N)
     return np.diag(np.exp(1j * kappa * n * n))
 
 
 def kubik_faz(gamma: float, N: int, hbar: float = HBAR) -> np.ndarray:
-    """``V(γ) = exp(i γ x̂³ / (3ħ))`` — evrensellik için gereken kapı.
-
-    Kesilmiş ``x̂`` Hermityen olduğundan ``V`` her ``N``de üniterdir.
-    Yakınsaması ``γ``ya bağlıdır (ölçüldü, ilk 6×6 blokta):
-    ``γ=0.1``de ``N=40`` ile 8e-16, ``γ=0.5``te ``N=80`` ile 1e-11,
-    ``γ=2.0``de ``N=160`` ile ancak 6e-02.  Yani küçük ``γ`` ucuz,
-    büyük ``γ`` pahalıdır -- ``x̂³`` yüksek Fock bileşenlerini güçlü
-    karıştırır.
-    """
     x = konum(N, hbar)
     return expm(1j * gamma / (3.0 * hbar) * (x @ x @ x))
 
-
-# ══════════════════════════════════════════════════════════════════════
-#  4. Durumlar ve ölçümler
-# ══════════════════════════════════════════════════════════════════════
 
 def vakum(N: int) -> np.ndarray:
     v = np.zeros(N, dtype=complex)
@@ -215,13 +110,7 @@ def fock(n: int, N: int) -> np.ndarray:
 
 
 def tutarli_durum(alpha: complex, N: int) -> np.ndarray:
-    """``|α⟩ = e^{−|α|²/2} Σ αⁿ/√n! |n⟩`` — kapalı biçim.
-
-    ``D(α)|0⟩`` ile kıyaslamak, ``D``nin kesme hatasının bağımsız bir
-    ölçüsüdür: iki yol aynı duruma varmalı.
-    """
     n = np.arange(N)
-    # log-uzayda: |α|^n / √(n!) taşma yapmasın
     log_c = n * np.log(abs(alpha) + 1e-300) - 0.5 * _log_faktoriyel(n)
     faz = np.exp(1j * np.angle(alpha) * n)
     v = np.exp(log_c - abs(alpha) ** 2 / 2.0) * faz
@@ -240,7 +129,6 @@ def foton_dagilimi(psi: np.ndarray) -> np.ndarray:
 
 def kuadratur_belirsizligi(psi: np.ndarray, hbar: float = HBAR
                            ) -> Dict[str, float]:
-    """``Δx``, ``Δp`` ve çarpımları — Heisenberg ``ΔxΔp ≥ ħ/2``."""
     N = len(psi)
     x, p = konum(N, hbar), momentum(N, hbar)
 
@@ -254,12 +142,7 @@ def kuadratur_belirsizligi(psi: np.ndarray, hbar: float = HBAR
             "alt_sınır": hbar / 2.0, "sağlanıyor": dx * dp >= hbar / 2 - 1e-9}
 
 
-# ══════════════════════════════════════════════════════════════════════
-#  5. Kesme bedelinin ölçülmesi
-# ══════════════════════════════════════════════════════════════════════
-
 def uniterlik_sapmasi(U: np.ndarray, alt: Optional[int] = None) -> float:
-    """``‖U†U − I‖_∞`` — istenirse yalnız alt blokta."""
     V = U if alt is None else U[:alt, :alt]
     W = U.conj().T @ U
     W = W if alt is None else W[:alt, :alt]
@@ -268,11 +151,6 @@ def uniterlik_sapmasi(U: np.ndarray, alt: Optional[int] = None) -> float:
 
 def kesme_hatasi(uret, N: int, kat: int = 2, alt: Optional[int] = None
                  ) -> Dict[str, float]:
-    """``uret(N)`` ile ``uret(kat·N)``ı düşük Fock bloğunda kıyasla.
-
-    Tam operatörü bilmediğimiz hâlde kesmenin yakınsayıp
-    yakınsamadığını söyleyen dürüst ölçüt budur.
-    """
     k = alt if alt is not None else N // 2
     A = np.asarray(uret(N))[:k, :k]
     B = np.asarray(uret(kat * N))[:k, :k]
@@ -283,10 +161,6 @@ def kesme_hatasi(uret, N: int, kat: int = 2, alt: Optional[int] = None
                             / max(np.abs(B).max(), 1e-300)),
     }
 
-
-# ══════════════════════════════════════════════════════════════════════
-#  Gösterim
-# ══════════════════════════════════════════════════════════════════════
 
 def _gosterim() -> str:
     s = []
@@ -347,7 +221,6 @@ def _gosterim() -> str:
     Ntop = np.kron(a.conj().T @ a, I) + np.kron(I, a.conj().T @ a)
     for th in (0.3, math.pi / 4, 1.2):
         B = isik_bolucu(th, 0.4, N)
-        # tek foton her iki kipte: |1,0⟩
         psi = np.kron(fock(1, N), fock(0, N))
         out = B @ psi
         n_once = complex(psi.conj() @ (Ntop @ psi)).real
@@ -389,5 +262,5 @@ def _gosterim() -> str:
     return "\n".join(s)
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     print(_gosterim())

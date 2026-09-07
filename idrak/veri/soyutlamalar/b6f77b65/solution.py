@@ -1,10 +1,8 @@
-"""Solver for ARC-AGI-2 task b6f77b65 (split: evaluation)."""
 
 from __future__ import annotations
 
 from typing import List, Optional
 
-# DSL type alias
 Grid = List[List[int]]
 
 

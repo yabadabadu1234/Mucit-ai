@@ -1,12 +1,9 @@
-"""Solver for ARC-AGI-2 task 78332cb0."""
 
 from typing import List, Tuple
 
-# Typed alias used by the DSL lambda
 Grid = List[List[int]]
 
 
-# DSL lambda-equivalent main entrypoint
 def solve_78332cb0(grid: Grid) -> Grid:
     separator = detectSeparatorColor(grid)
     blocks = segmentIntoBlocks(grid, separator)
@@ -14,7 +11,6 @@ def solve_78332cb0(grid: Grid) -> Grid:
     return assembleBlocks(list(ordered_blocks), orientation, separator)
 
 
-# Thin wrappers to align helper names with the DSL lambda, delegating to existing logic
 def detectSeparatorColor(grid: Grid) -> int:
     return _find_separator_color(grid)
 

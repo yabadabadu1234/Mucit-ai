@@ -1,4 +1,3 @@
-"""Abstraction experiments for task cbebaa4b."""
 
 from __future__ import annotations
 
@@ -22,7 +21,7 @@ def load_solver():
     spec = importlib.util.spec_from_file_location("cbebaa4b_solver", path)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
-    spec.loader.exec_module(module)  # type: ignore[attr-defined]
+    spec.loader.exec_module(module)
     return module.solve_cbebaa4b
 
 
@@ -64,7 +63,6 @@ def naive_stack_abstraction(grid: Grid) -> Optional[Grid]:
 
     ymin, _, xmin, _ = get_bbox(color_cells[door_color])
     out = [[0] * w for _ in range(h)]
-    # keep the door where it already sits
     for y, x in color_cells[door_color]:
         out[y][x] = door_color
 

@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 5545f144 (split: evaluation)."""
 
 from collections import Counter
 from typing import List, Sequence, Set, Tuple
@@ -7,7 +6,6 @@ Grid = List[List[int]]
 
 
 def _combined_solver(grid: Grid) -> Grid:
-    """Original implementation preserved to ensure identical semantics."""
 
     height = len(grid)
     width = len(grid[0])
@@ -141,7 +139,6 @@ def _combined_solver(grid: Grid) -> Grid:
     return result
 
 
-# --- Minimal DSL-style facade to match abstractions.md lambda ---
 def extractSegmentsPerRow(grid: Grid):
     return grid
 

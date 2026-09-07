@@ -1,9 +1,7 @@
-"""Solver for ARC-AGI-2 task 16de56c4."""
 
 from typing import List
 from math import gcd
 
-# Typed alias used by the DSL checker
 Grid = List[List[int]]
 
 

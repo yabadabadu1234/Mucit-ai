@@ -1,4 +1,3 @@
-"""Abstractions explored while solving ARC task 31f7f899."""
 
 from collections import Counter
 from pathlib import Path
@@ -18,12 +17,10 @@ def deep_copy(grid: Grid) -> Grid:
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline pass-through."""
     return deep_copy(grid)
 
 
 def sorted_stripes_abstraction(grid: Grid) -> Grid:
-    """Sort the vertical spans of non-dominant stripes left→right."""
     rows = len(grid)
     cols = len(grid[0]) if rows else 0
     if rows == 0 or cols == 0:

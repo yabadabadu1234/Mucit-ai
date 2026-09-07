@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC-AGI-2 task 38007db0."""
 
 from __future__ import annotations
 
@@ -33,7 +32,6 @@ def _split_segments(row: Sequence[int]) -> Tuple[int, List[Tuple[int, ...]]]:
 
 
 def _choose_central_segment(segments: Sequence[Tuple[int, ...]]) -> Tuple[int, ...]:
-    """Naive abstraction: take the middle repeated block regardless of uniqueness."""
     if not segments:
         return tuple()
     mid_index = (len(segments) - 1) // 2
@@ -41,7 +39,6 @@ def _choose_central_segment(segments: Sequence[Tuple[int, ...]]) -> Tuple[int, .
 
 
 def abstraction_middle_segment(grid: Grid) -> Grid:
-    """Keep only the central interior stripe for each row."""
 
     parsed = [_split_segments(row) for row in grid]
     lengths = [len(seg) for _, segs in parsed for seg in segs]
@@ -80,7 +77,6 @@ def _choose_unique_segment(segments: Sequence[Tuple[int, ...]]) -> Tuple[int, ..
 
 
 def abstraction_unique_segment(grid: Grid) -> Grid:
-    """Keep the interior stripe that deviates from the repeated pattern."""
 
     parsed = [_split_segments(row) for row in grid]
     lengths = [len(seg) for _, segs in parsed for seg in segs]
@@ -143,7 +139,6 @@ def _non_border_col_segments(grid: Grid, border_color: int) -> List[Tuple[int, i
 
 
 def abstraction_unique_block_column(grid: Grid) -> Grid:
-    """Collapse each block-row to its unique interior block."""
 
     if not grid or not grid[0]:
         return [row[:] for row in grid]

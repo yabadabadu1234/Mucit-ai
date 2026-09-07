@@ -1,4 +1,3 @@
-"""Abstractions explored for ARC task de809cff."""
 
 import json
 import sys
@@ -94,27 +93,22 @@ def _solve_with_options(grid: Grid, *, apply_secondary_rule: bool, apply_pruning
 
 
 def identity_abstraction(grid: Grid) -> Grid:
-    """Baseline: leave the grid untouched."""
     return _copy_grid(grid)
 
 
 def seed_halo_abstraction(grid: Grid) -> Grid:
-    """Seed-driven halo without clean-up."""
     return _solve_with_options(grid, apply_secondary_rule=False, apply_pruning=False)
 
 
 def halo_with_pruning_abstraction(grid: Grid) -> Grid:
-    """Halo expansion followed by pruning of stranded pixels."""
     return _solve_with_options(grid, apply_secondary_rule=False, apply_pruning=True)
 
 
 def final_abstraction(grid: Grid) -> Grid:
-    """Halo expansion, secondary realignment, and pruning."""
     return _solve_with_options(grid, apply_secondary_rule=True, apply_pruning=True)
 
 
 def final_solver(grid: Grid) -> Grid:
-    """Wrapper so the harness can evaluate the refined solution."""
     return solve_de809cff(grid)
 
 

@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 7b0280bc (evaluation split)."""
 
 from __future__ import annotations
 
@@ -24,7 +23,6 @@ def identifyForegroundColours(grid: Grid) -> Tuple[int, int]:
     background, _ = counts.most_common(1)[0]
     colours = [c for c, _ in counts.most_common() if c != background][:2]
     if len(colours) < 2:
-        # degenerate; mirror behaviour by returning duplicates
         return (colours[0], colours[0]) if colours else (0, 0)
     return colours[0], colours[1]
 

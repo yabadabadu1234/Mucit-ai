@@ -1,4 +1,3 @@
-"""Abstraction explorations for ARC task fc7cae8d."""
 
 from __future__ import annotations
 
@@ -113,9 +112,6 @@ def _rotate_pipeline(grid: Grid, *, flip_mode: str) -> Grid:
     if left_score < right_score:
         return _flip_horizontal(rotated)
     return rotated
-
-
-# --- Abstractions ---------------------------------------------------------
 
 
 def identity_baseline(grid: Grid) -> Grid:

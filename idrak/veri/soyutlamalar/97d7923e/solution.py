@@ -1,4 +1,3 @@
-"""Directional selective cap-fill for ARC task 97d7923e (DSL-aligned)."""
 
 from __future__ import annotations
 
@@ -6,7 +5,6 @@ from typing import Callable, Dict, Iterable, List, Optional, Sequence, Tuple
 from typing import NamedTuple
 
 
-# Local DSL type aliases
 Grid = List[List[int]]
 
 
@@ -50,7 +48,6 @@ def parseColumnRuns(grid: Grid) -> ColumnRuns:
 
 
 def detectCapPattern(runs: List[Run]) -> Optional[CapPattern]:
-    # Find the first (top, middle, bottom) triple where top/bottom match and middle is non-zero
     for i in range(len(runs) - 2):
         top, mid, bot = runs[i], runs[i + 1], runs[i + 2]
         if top.color != 0 and mid.color != 0 and top.color == bot.color:

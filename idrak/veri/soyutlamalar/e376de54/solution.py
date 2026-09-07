@@ -1,9 +1,3 @@
-"""Solver for ARC task e376de54 (typed DSL wrapper).
-
-This refactor preserves the original behaviour while exposing a small, typed
-pipeline compatible with the dataset’s DSL subset. The main `solve_e376de54`
-function matches the Lambda Representation in `abstractions.md` exactly.
-"""
 
 from __future__ import annotations
 
@@ -12,11 +6,10 @@ from typing import Dict, Iterable, List, Literal, Sequence, Tuple, Union
 
 Grid = List[List[int]]
 Color = int
-Cell = Tuple[int, int, int]  # (row, col, color)
+Cell = Tuple[int, int, int]
 Orientation = Literal["row", "col", "diag1", "diag2"]
 LineGroups = Dict[int, List[Cell]]
 
-# Pattern encodes the median footprint; diagonals also carry the base key for translation.
 RowPattern = Tuple[Literal["row"], List[int]]
 ColPattern = Tuple[Literal["col"], List[int]]
 Diag1Pattern = Tuple[Literal["diag1"], List[Tuple[int, int]], int]
@@ -39,14 +32,12 @@ def _orientation_key(name: Orientation, r: int, c: int) -> int:
         return r
     if name == "col":
         return c
-    if name == "diag1":  # main diagonal (slope +1)
+    if name == "diag1":
         return r - c
-    if name == "diag2":  # anti-diagonal (slope -1)
+    if name == "diag2":
         return r + c
     raise ValueError(name)
 
-
-# === DSL helper operations ===
 
 def collectColoredCells(grid: Grid) -> Tuple[Color, List[Cell]]:
     background = Counter(_flatten(grid)).most_common(1)[0][0]
@@ -80,7 +71,6 @@ def scoreOrientations(coloured_cells: List[Cell]) -> Tuple[Orientation, LineGrou
 
 def extractMedianPattern(orientation: Orientation, line_groups: LineGroups) -> Pattern:
     if not line_groups:
-        # Degenerate; return empty pattern per orientation.
         if orientation == "row":
             return ("row", [])
         if orientation == "col":
@@ -106,7 +96,6 @@ def extractMedianPattern(orientation: Orientation, line_groups: LineGroups) -> P
         )
         return pattern2
 
-    # For diagonals keep absolute coordinates plus the base key for translation.
     coords = [(r, c) for r, c, _ in sorted(base_cells, key=lambda x: x[0])]
     if orientation == "diag1":
         pattern3: Diag1Pattern = ("diag1", coords, base_key)
@@ -119,7 +108,6 @@ def realignLines(grid: Grid, orientation: Orientation, pattern: Pattern) -> Grid
     h, w = len(grid), len(grid[0])
     background = Counter(_flatten(grid)).most_common(1)[0][0]
 
-    # Rebuild line groups from the current grid to obtain colours per line.
     _, coloured_cells = collectColoredCells(grid)
     _, line_groups = scoreOrientations(coloured_cells)
     keys = sorted(line_groups)
@@ -149,8 +137,8 @@ def realignLines(grid: Grid, orientation: Orientation, pattern: Pattern) -> Grid
                 delta -= (1 if delta > 0 else -1)
             shift = delta // 2
             target = {(r + shift, c - shift) for r, c in coords}
-        else:  # diag2
-            _, coords, base_key = pattern  # type: ignore[assignment]
+        else:
+            _, coords, base_key = pattern
             delta = key - base_key
             if delta % 2:
                 delta -= (1 if delta > 0 else -1)
@@ -167,7 +155,6 @@ def realignLines(grid: Grid, orientation: Orientation, pattern: Pattern) -> Grid
     return result
 
 
-# === Lambda Representation (must match abstractions.md) ===
 def solve_e376de54(grid: Grid) -> Grid:
     _, coloured_cells = collectColoredCells(grid)
     orientation, line_groups = scoreOrientations(coloured_cells)

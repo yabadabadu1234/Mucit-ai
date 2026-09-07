@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 88bcf3b4 (evaluation split)."""
 
 from typing import List, Dict, Iterable, Tuple, Optional, Set
 from collections import Counter
@@ -111,7 +110,6 @@ def generatePath(
     h, w = len(grid), len(grid[0])
     accent_count = len(accent_cells) if accent_cells else 0
 
-    # Build an overall height for the start colour across the grid (matches original heuristic).
     start_component = {
         (y, x)
         for y, row in enumerate(grid)
@@ -141,7 +139,6 @@ def generatePath(
 
     max_vertical = cy if dir_y == -1 else (h - 1 - cy if dir_y == 1 else 0)
 
-    # Single-cell target handled separately to mimic training behaviour.
     if start_height == 1 and dir_y != 0:
         path = [contact]
         y, x = cy, cx
@@ -155,7 +152,6 @@ def generatePath(
         return path
 
     if dir_y == 0:
-        # Horizontal sweep when start shares the contact row.
         path = [contact]
         y, x = cy, cx
         step_dir = dir_x if dir_x != 0 else (_sign(anchor_x - cx) or 1)
@@ -225,14 +221,12 @@ def generatePath(
 def rewritePath(
     grid: Grid, accent_cells: Optional[Set[Tuple[int, int]]], path_cells: List[Tuple[int, int]]
 ) -> Grid:
-    # Guard: if any prior step failed to find necessary structure, keep grid unchanged.
     if not accent_cells or not path_cells:
         return [row[:] for row in grid]
 
     counts = Counter(val for row in grid for val in row)
     background = counts.most_common(1)[0][0]
 
-    # Determine accent colour from any accent cell.
     any_y, any_x = next(iter(accent_cells))
     accent_color = grid[any_y][any_x]
 

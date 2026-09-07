@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 2ba387bc."""
 
 from __future__ import annotations
 
@@ -93,7 +92,7 @@ def _canonical_pattern(component: Optional[Dict[str, object]]) -> Grid:
     if component is None:
         return [[0] * 4 for _ in range(4)]
     pattern = component["pattern"]
-    return _resample_to_four(pattern)  # type: ignore[arg-type]
+    return _resample_to_four(pattern)
 
 
 def abstraction_identity(grid: Grid) -> Grid:
@@ -180,4 +179,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

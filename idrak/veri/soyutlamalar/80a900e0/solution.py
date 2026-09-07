@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 80a900e0 (split: evaluation)."""
 
 from __future__ import annotations
 
@@ -45,7 +44,6 @@ def find_runs(points: Sequence[Pos], step: Pos) -> List[List[Pos]]:
 
 
 def groupHandlesByColour(grid: Grid) -> List[Tuple[Color, List[Pos]]]:
-    """Collect non-background colours and their coordinates in first-encounter order."""
     bg = background_palette(grid)
     order: List[Color] = []
     coords_by_color: Dict[Color, List[Pos]] = {}
@@ -61,7 +59,6 @@ def groupHandlesByColour(grid: Grid) -> List[Tuple[Color, List[Pos]]]:
 
 
 def findHandleRuns(handles: List[Tuple[Color, List[Pos]]]):
-    """For each colour's points, detect diagonal runs and target diagonals to extend."""
     runs_by_colour: Dict[Color, Dict[str, object]] = {}
     for color, coords in handles:
         sum_groups: Dict[int, List[Pos]] = defaultdict(list)
@@ -105,7 +102,6 @@ def findHandleRuns(handles: List[Tuple[Color, List[Pos]]]):
 
 
 def extendAlongAxis(canvas: Grid, handle_runs, colour: Color) -> Grid:
-    """Extend a colour's diagonal handles along the perpendicular axis with guards."""
     rows = len(canvas)
     cols = len(canvas[0]) if rows else 0
     bg = background_palette(canvas)

@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task db695cfb (split: evaluation)."""
 
 from __future__ import annotations
 
@@ -16,8 +15,7 @@ def _clone(grid: Grid) -> Grid:
 
 
 def _fill_nwse_path(grid: Grid, output: Grid, coords: List[Coord], six_seeds: SixSeeds) -> None:
-    """Fill the NW–SE diagonal segment defined by coords with color 1, collect 6 seeds for anti-diagonal extension."""
-    key = coords[0][0] - coords[0][1]  # r - c stays constant on NW–SE diagonals
+    key = coords[0][0] - coords[0][1]
     rows = [r for r, _ in coords]
     r_min, r_max = min(rows), max(rows)
     width = len(grid[0])
@@ -28,12 +26,11 @@ def _fill_nwse_path(grid: Grid, output: Grid, coords: List[Coord], six_seeds: Si
         if grid[r][c] != 6:
             output[r][c] = 1
         if grid[r][c] == 6:
-            six_seeds["anti"].add((r, c))  # need NE–SW fill through this seed
+            six_seeds["anti"].add((r, c))
 
 
 def _fill_nesw_path(grid: Grid, output: Grid, coords: List[Coord], six_seeds: SixSeeds) -> None:
-    """Fill the NE–SW diagonal segment defined by coords with color 1, collect 6 seeds for main-diagonal extension."""
-    key = coords[0][0] + coords[0][1]  # r + c stays constant on NE–SW diagonals
+    key = coords[0][0] + coords[0][1]
     rows = [r for r, _ in coords]
     r_min, r_max = min(rows), max(rows)
     width = len(grid[0])
@@ -44,14 +41,13 @@ def _fill_nesw_path(grid: Grid, output: Grid, coords: List[Coord], six_seeds: Si
         if grid[r][c] != 6:
             output[r][c] = 1
         if grid[r][c] == 6:
-            six_seeds["main"].add((r, c))  # need NW–SE fill through this seed
+            six_seeds["main"].add((r, c))
 
 
 def _fill_diag(output: Grid, seed: Coord, orientation: str) -> None:
-    """Paint color 6 along a full diagonal passing through the seed, without overwriting 1-paths."""
     height, width = len(output), len(output[0])
     r0, c0 = seed
-    if orientation == "anti":  # NE–SW diagonal (constant r + c)
+    if orientation == "anti":
         diag_sum = r0 + c0
         for r in range(height):
             c = diag_sum - r
@@ -59,7 +55,7 @@ def _fill_diag(output: Grid, seed: Coord, orientation: str) -> None:
                 if output[r][c] == 1 and (r, c) != seed:
                     continue
                 output[r][c] = 6
-    else:  # 'main' -> NW–SE diagonal (constant r - c)
+    else:
         diff = r0 - c0
         for r in range(height):
             c = r - diff
@@ -70,7 +66,6 @@ def _fill_diag(output: Grid, seed: Coord, orientation: str) -> None:
 
 
 def groupAnchorsByDiagonal(grid: Grid) -> DiagonalGroups:
-    """Group colour-1 anchors by both diagonal orientations (main: NW–SE, anti: NE–SW)."""
     height = len(grid)
     width = len(grid[0]) if grid else 0
     if height == 0 or width == 0:
@@ -86,7 +81,6 @@ def groupAnchorsByDiagonal(grid: Grid) -> DiagonalGroups:
 
 
 def paintOnePaths(grid: Grid, diagonal_groups: DiagonalGroups) -> Tuple[Grid, SixSeeds]:
-    """Paint connecting 1-paths for diagonals with at least two anchors; collect perpendicular 6-seeds."""
     painted = _clone(grid)
     six_seeds: SixSeeds = {"anti": set(), "main": set()}
 
@@ -102,7 +96,6 @@ def paintOnePaths(grid: Grid, diagonal_groups: DiagonalGroups) -> Tuple[Grid, Si
 
 
 def extendSixDiagonals(painted: Grid, six_seeds: SixSeeds) -> Grid:
-    """Extend colour-6 along full diagonals through each recorded seed, preserving 1-paths."""
     extended = _clone(painted)
     for seed in six_seeds.get("anti", set()):
         _fill_diag(extended, seed, "anti")
@@ -112,7 +105,6 @@ def extendSixDiagonals(painted: Grid, six_seeds: SixSeeds) -> Grid:
 
 
 def finaliseGrid(original: Grid, extended: Grid) -> Grid:
-    """Overlay repainted diagonals onto the original grid (already reflected in `extended`)."""
     return extended
 
 

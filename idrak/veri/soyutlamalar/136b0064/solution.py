@@ -1,9 +1,7 @@
-"""Solver for ARC task 136b0064."""
 
 from collections import Counter
 from typing import List, Tuple
 
-# Type aliases for DSL-style annotations
 Grid = List[List[int]]
 
 
@@ -16,7 +14,6 @@ GLYPHS = {
 
 
 def split_blocks(grid: Grid) -> List[Tuple[int, int]]:
-    """Return (start, end) row indices for each non-empty left block."""
     blocks = []
     start = None
     for r, row in enumerate(grid):
@@ -168,7 +165,6 @@ def splitBlocks(grid: Grid) -> List[Tuple[int, int]]:
 
 
 def extractDigitLists(grid: Grid, blocks: List[Tuple[int, int]]) -> Tuple[List[int], List[int]]:
-    # The underlying extractor computes blocks internally; `blocks` is unused here.
     return extract_digits(grid)
 
 
@@ -180,7 +176,7 @@ def renderDigits(grid: Grid, sequence: List[int], digits: List[int]) -> Grid:
     height = len(grid)
     right_part = [row[8:] for row in grid]
     output = [row[:] for row in right_part]
-    row = 1  # leave top row as copied from input
+    row = 1
     for start, digit in zip(sequence, digits):
         glyph_height, _glyph_width = glyph_size(digit)
         if row + glyph_height > height:

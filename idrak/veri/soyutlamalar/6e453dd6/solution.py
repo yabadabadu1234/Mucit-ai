@@ -1,20 +1,14 @@
-"""Solver for ARC-AGI-2 task 6e453dd6 (split: evaluation).
-
-Refactored to align the solver's main with the typed DSL lambda.
-"""
 
 from collections import Counter, deque
 from typing import List, Tuple, Optional
 
 
-# Type aliases for clarity and static checking
 Grid = List[List[int]]
 Pos = Tuple[int, int]
 Component = List[Pos]
 
 
 def _most_common_nonzero(grid: Grid) -> int:
-    """Return the most frequent non-zero color (fallback to 0 if none)."""
     counts = Counter(cell for row in grid for cell in row)
     non_zero = [color for color in counts if color != 0]
     if non_zero:
@@ -23,7 +17,6 @@ def _most_common_nonzero(grid: Grid) -> int:
 
 
 def _highlight_color(grid: Grid, default: int = 2) -> int:
-    """Pick a highlight color, preferring the default if unused, else first unused digit."""
     present = {cell for row in grid for cell in row}
     if default not in present:
         return default
@@ -32,8 +25,6 @@ def _highlight_color(grid: Grid, default: int = 2) -> int:
             return candidate
     return default
 
-
-# === DSL helper shims (pure) ===
 
 def locateFiveColumn(grid: Grid) -> Optional[int]:
     width = len(grid[0])
@@ -68,30 +59,22 @@ def extractZeroComponents(grid: Grid, five_col: int) -> List[Component]:
 
 
 def slideComponentsRight(grid: Grid, components: List[Component], five_col: int) -> Grid:
-    """Return a grid where each zero-component is slid so its right edge meets five_col-1.
-
-    Also repaints the left-of-five region to the background colour and preserves
-    the original right-of-five region, matching the baseline behaviour.
-    """
     height = len(grid)
     width = len(grid[0])
     background = _most_common_nonzero(grid)
 
     result: Grid = [row[:] for row in grid]
 
-    # Reset left-of-five to background
     for r in range(height):
         for c in range(five_col):
             result[r][c] = background
 
-    # Paint shifted zero components
     for comp in components:
         rightmost = max(col for _, col in comp)
         shift = max(0, (five_col - 1) - rightmost)
         for rr, cc in comp:
             result[rr][cc + shift] = 0
 
-    # Preserve the original content to the right of the 5-column
     for r in range(height):
         for c in range(five_col + 1, width):
             result[r][c] = grid[r][c]
@@ -118,7 +101,6 @@ def highlightRowTail(grid: Grid, five_col: int, background: int, highlight: int)
     return result
 
 
-# === Main matches the DSL lambda ===
 def solve_6e453dd6(grid: Grid) -> Grid:
     five_col = locateFiveColumn(grid)
     if five_col is None:

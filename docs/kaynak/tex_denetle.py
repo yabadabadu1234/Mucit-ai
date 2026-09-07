@@ -1,20 +1,3 @@
-"""
-LaTeX yapı denetleyicisi -- derleyici olmadan yakalanabilenler.
-
-Bu makinede TeX kurulu değil, dolayısıyla "derleniyor" diye bir iddiada
-bulunulamaz. Buna karşılık, derleyicinin hata vereceği kusurların çoğu
-saf metin üzerinde **kesin** olarak yakalanabilir ve burada yakalanır:
-
-  * süslü parantez dengesi (kaçışlı ``\\{`` ve ``\\}`` sayılmaz)
-  * ``$`` ve ``$$`` çiftlenmesi
-  * ``\\begin{X}`` / ``\\end{X}`` eşleşmesi (yığın olarak)
-  * ``align`` içinde satır başına en fazla bir hizalama işareti ``&``
-  * ``align`` içinde son satırda gereksiz ``\\\\``
-  * ``\\left`` / ``\\right`` dengesi
-  * tanımsız ortam adları ve bilinmeyen makro şüphesi (kaba tarama)
-
-    python3 -m docs.kaynak.tex_denetle docs/kaynak/*.tex
-"""
 from __future__ import annotations
 
 import re
@@ -31,7 +14,6 @@ _YORUM = re.compile(r"(?<!\\)%.*$")
 
 
 def _temizle(satir: str) -> str:
-    """Yorumları ve kaçışlı özel karakterleri düşür."""
     satir = _YORUM.sub("", satir)
     return _KACIS.sub("", satir)
 
@@ -57,10 +39,6 @@ def denetle(metin: str) -> List[Bulgu]:
             derinlik = 0
 
         dolar += s.count("$")
-        # DİKKAT: ``\\leftarrow`` ve ``\\leftrightarrow`` de ``\\left`` ile
-        # başlar. Sözcük sınırı konmazsa denetleyicinin kendisi yanlış
-        # alarm verir -- ilk kurulumda tam bunu yaptı ve üç dosyada
-        # olmayan "dengesizlik" bildirdi. Sınır şart.
         left_right += (len(re.findall(r"\\left(?![a-zA-Z])", s))
                        - len(re.findall(r"\\right(?![a-zA-Z])", s)))
 
@@ -80,16 +58,7 @@ def denetle(metin: str) -> List[Bulgu]:
                         (no, r"ortam uyuşmuyor: \begin{%s} (satır %d) ile \end{%s}"
                          % (acik, acik_no, ad)))
 
-        # align içinde satır başına en fazla bir '&'.
-        # DİKKAT: iç ortamların (``cases``, ``array``…) ``&``leri SÜTUN
-        # ayracıdır, hizalama işareti değil. Aynı satırda açılıp kapanan
-        # iç ortamlar sayımdan önce düşürülmezse denetleyici yanlış alarm
-        # verir -- ilk kurulumda tam bunu yaptı: tek satıra sığdırılmış
-        # bir ``cases`` bloğu ``2 hizalama işareti'' diye bildirildi.
         if ortam_yigini and ortam_yigini[-1] in ("align", "align*"):
-            # SIRA mühim: önce iç ortamlar düşürülür, SONRA satır sonuna
-            # göre bölünür. Tersi yapılırsa ``cases`` içindeki ``\\\\``
-            # bölmeyi erken tetikler ve blok hiç düşürülemez (ölçüldü).
             govde = _IC_ORTAM.sub("", s).split(r"\\")[0]
             if govde.count("&") > 1:
                 bulgular.append((no, "align satırında %d hizalama işareti '&' "
@@ -105,7 +74,6 @@ def denetle(metin: str) -> List[Bulgu]:
     for ad, no in yigin:
         bulgular.append((no, r"kapanmamış \begin{%s}" % ad))
 
-    # align ortamlarının son satırında gereksiz \\
     for m in re.finditer(r"\\begin\{align\*?\}(.*?)\\end\{align\*?\}", metin, re.S):
         govde = m.group(1).rstrip()
         if govde.endswith("\\\\"):
@@ -116,17 +84,6 @@ def denetle(metin: str) -> List[Bulgu]:
 
 
 def denklem_sayisi(metin: str) -> int:
-    """NUMARALANACAK denklem sayısı: ``align`` satırları **ve** ``equation``.
-
-    İç içe ortamlardaki (``cases``, ``array``, ``aligned``…) satır sonları
-    numara üretmez; sayılmadan önce o bloklar düşürülür. Düşürülmezse
-    sayım şişer -- ölçüldü: ``cases`` blokları yüzünden 41-meleke
-    metninde 419 yerine 421 çıkıyordu.
-
-    Müstakil ``equation`` ortamları da sayılır.  İlk hâlde yalnız
-    ``align`` sayılıyordu; ölçüldü: ağırlıkla ``equation`` kullanan
-    kuantum risalesinde 19 denklem varken 2 raporlanıyordu.
-    """
     ic_ortam = re.compile(r"\\begin\{(cases|array|aligned|matrix|[pbv]matrix|split)\}"
                           r".*?\\end\{\1\}", re.S)
     toplam = 0

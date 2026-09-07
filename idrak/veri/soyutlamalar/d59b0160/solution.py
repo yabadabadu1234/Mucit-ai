@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task d59b0160."""
 
 from __future__ import annotations
 
@@ -19,8 +18,6 @@ class Component(TypedDict):
     height: int
 
 
-# --- Minimal DSL helpers ----------------------------------------------------
-
 def fold_repaint(canvas: Grid, items: List[Component], update: Callable[[Grid, Component], Grid]) -> Grid:
     result = [row[:] for row in canvas]
     for item in items:
@@ -29,7 +26,6 @@ def fold_repaint(canvas: Grid, items: List[Component], update: Callable[[Grid, C
 
 
 def extractNonSevenComponents(grid: Grid) -> List[Component]:
-    """Return 4-connected components of non-7 cells with basic stats."""
     height = len(grid)
     width = len(grid[0])
     seen = [[False] * width for _ in range(height)]
@@ -77,7 +73,6 @@ def extractNonSevenComponents(grid: Grid) -> List[Component]:
 
 
 def shouldFill(comp: Component, h: int, w: int) -> bool:
-    """Decide whether the component should be painted to 7."""
     height, width = h, w
     comp_width = comp["width"]
     comp_height = comp["height"]

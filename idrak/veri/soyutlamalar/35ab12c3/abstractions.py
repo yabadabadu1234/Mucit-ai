@@ -1,4 +1,3 @@
-"""Abstractions explored for task 35ab12c3."""
 
 from __future__ import annotations
 
@@ -52,11 +51,6 @@ def convex_hull(points: Sequence[Coord]) -> List[Coord]:
 
 
 def abstraction_diag_expand(grid: Grid) -> Grid:
-    """Early attempt: connect points via diagonals plus adjacency.
-
-    This mirrors the first workable prototype and intentionally over-connects,
-    producing interior diagonals for case 2.
-    """
 
     height = len(grid)
     width = len(grid[0]) if grid else 0
@@ -219,7 +213,6 @@ def build_base_shape(points: Sequence[Coord], grid: Grid) -> Set[Coord]:
 
 
 def abstraction_hull_shift(grid: Grid) -> Grid:
-    """Final abstraction: base hull + component linking + shifted layers."""
 
     height = len(grid)
     width = len(grid[0]) if grid else 0

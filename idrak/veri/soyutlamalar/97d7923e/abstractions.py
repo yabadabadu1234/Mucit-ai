@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 97d7923e."""
 
 from __future__ import annotations
 
@@ -13,7 +12,6 @@ Grid = List[List[int]]
 
 @dataclass
 class Sample:
-    """Container for a single ARC sample."""
 
     input: Grid
     output: Grid | None
@@ -57,13 +55,11 @@ def _deep_copy(grid: Grid) -> Grid:
 
 
 def identity_baseline(grid: Grid) -> Grid:
-    """Return the input unchanged."""
 
     return _deep_copy(grid)
 
 
 def naive_column_cap_fill(grid: Grid) -> Grid:
-    """Always fill sandwiched segments regardless of context."""
 
     height = len(grid)
     width = len(grid[0])
@@ -101,12 +97,11 @@ def _load_solver() -> Callable[[Grid], Grid]:
     spec = importlib.util.spec_from_file_location("solver_97d7923e", solver_path)
     module = importlib.util.module_from_spec(spec)
     assert spec and spec.loader
-    spec.loader.exec_module(module)  # type: ignore[attr-defined]
-    return module.solve_97d7923e  # type: ignore[attr-defined]
+    spec.loader.exec_module(module)
+    return module.solve_97d7923e
 
 
 def selective_cap_fill(grid: Grid) -> Grid:
-    """Wrapper around the tuned solver used for the final submission."""
 
     return _load_solver()(grid)
 

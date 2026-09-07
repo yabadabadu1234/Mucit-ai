@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 2ba387bc (split: evaluation)."""
 
 from typing import Dict, List, Optional, Tuple
 
@@ -6,7 +5,6 @@ Grid = List[List[int]]
 
 
 def _extract_components(grid: Grid) -> List[Dict[str, object]]:
-    """Detect non-zero components together with their metadata."""
     height = len(grid)
     width = len(grid[0])
     seen = [[False] * width for _ in range(height)]
@@ -53,7 +51,6 @@ def _extract_components(grid: Grid) -> List[Dict[str, object]]:
 
 
 def _resample_to_four(pattern: Grid) -> Grid:
-    """Resize a small grid to 4×4 via nearest-neighbour sampling."""
     target = 4
     src_h = len(pattern)
     src_w = len(pattern[0])
@@ -79,7 +76,7 @@ def _canonical_pattern(component: Optional[Dict[str, object]]) -> Grid:
     if component is None:
         return [[0] * 4 for _ in range(4)]
     pattern = component["pattern"]
-    return _resample_to_four(pattern)  # type: ignore[arg-type]
+    return _resample_to_four(pattern)
 
 def extractComponents(grid: Grid) -> List[Dict[str, object]]:
     return _extract_components(grid)
@@ -94,8 +91,8 @@ def partitionByHollowness(
 
 
 def resampleToFour(component: Dict[str, object]) -> Grid:
-    pattern = component["pattern"]  # type: ignore[index]
-    return _resample_to_four(pattern)  # type: ignore[arg-type]
+    pattern = component["pattern"]
+    return _resample_to_four(pattern)
 
 
 def packPairs(hollow_blocks: List[Grid], solid_blocks: List[Grid]) -> Grid:

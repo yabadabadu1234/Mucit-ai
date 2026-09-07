@@ -1,18 +1,13 @@
-"""Solver for ARC-AGI-2 task e12f9a14 (split: evaluation).
-
-Refactored to match the typed-DSL lambda while preserving behaviour.
-"""
 
 from __future__ import annotations
 
 from collections import Counter
 from typing import Any, Callable, Iterable, List, Optional, Sequence, Tuple
 
-# Type aliases for readability and mypy.
 Grid = List[List[int]]
 Cell = Tuple[int, int]
 Offset = Tuple[int, int]
-Seed = Any  # Structured dict carrying seed + context; opaque to the lambda.
+Seed = Any
 
 
 DIGIT_TEMPLATE_VARIANTS = {
@@ -254,8 +249,6 @@ def _clone(grid: Grid) -> Grid:
     return [row[:] for row in grid]
 
 
-# Helper routines ---------------------------------------------------------
-
 def _dominant_color(grid: Grid) -> int:
     counter: Counter[int] = Counter()
     for row in grid:
@@ -286,10 +279,7 @@ def _components(grid: Grid) -> Iterable[Tuple[int, List[Cell]]]:
             yield color, cells
 
 
-# DSL helper shims --------------------------------------------------------
-
 def extractComponents(grid: Grid) -> List[Seed]:
-    """Enumerate components, attaching grid-context so later steps are pure."""
     bg = _dominant_color(grid)
     h, w = len(grid), len(grid[0])
     return [
@@ -306,7 +296,6 @@ def extractComponents(grid: Grid) -> List[Seed]:
 
 
 def filterSeedBlocks(components: List[Seed]) -> List[Seed]:
-    """Keep only non-background 2x2 seeds; compute anchor per seed."""
     seeds: List[Seed] = []
     for comp in components:
         color: int = comp["color"]
@@ -325,24 +314,19 @@ def filterSeedBlocks(components: List[Seed]) -> List[Seed]:
 
 
 def selectDigitVariant(seed: Seed) -> Optional[List[Offset]]:
-    """Choose the best collision-free template offsets for the seed color.
-
-    Mirrors original logic: maximize in-bounds placements; forbid drawing over
-    non-background cells except the seed's own footprint.
-    """
     color: int = seed["color"]
     variants = DIGIT_TEMPLATE_VARIANTS.get(color)
     if not variants:
         return None
 
     anchor_r, anchor_c = seed["anchor"]
-    seed_cells = set(seed["cells"])  # absolute positions
+    seed_cells = set(seed["cells"])
     grid: Grid = seed["grid"]
     bg: int = seed["background"]
     height: int = seed["height"]
     width: int = seed["width"]
 
-    best: Optional[Tuple[int, List[Offset]]] = None  # (count, offsets)
+    best: Optional[Tuple[int, List[Offset]]] = None
     for offsets in variants:
         count = 0
         collision = False
@@ -350,7 +334,6 @@ def selectDigitVariant(seed: Seed) -> Optional[List[Offset]]:
             r = anchor_r + dr
             c = anchor_c + dc
             if not (0 <= r < height and 0 <= c < width):
-                # Out of bounds: ignore; counts as not placed.
                 continue
             if (r, c) not in seed_cells and grid[r][c] != bg:
                 collision = True
@@ -365,15 +348,13 @@ def selectDigitVariant(seed: Seed) -> Optional[List[Offset]]:
 
 
 def paintDigitTemplate(canvas: Grid, seed: Seed, offsets: Sequence[Offset]) -> Grid:
-    """Paint the union of seed cells and variant placements with seed color."""
     out = _clone(canvas)
     anchor_r, anchor_c = seed["anchor"]
     color: int = seed["color"]
     height: int = seed["height"]
     width: int = seed["width"]
-    cells = set(seed["cells"])  # absolute seed cells
+    cells = set(seed["cells"])
 
-    # Convert offsets to absolute placements, clip to bounds.
     placements = {
         (anchor_r + dr, anchor_c + dc)
         for dr, dc in offsets
@@ -386,7 +367,6 @@ def paintDigitTemplate(canvas: Grid, seed: Seed, offsets: Sequence[Offset]) -> G
 
 
 def fold_repaint(canvas: Grid, items: Iterable[Seed], update: Callable[[Grid, Seed], Grid]) -> Grid:
-    """Functional fold: repeatedly repaint the canvas for each item."""
     acc = canvas
     for it in items:
         acc = update(acc, it)

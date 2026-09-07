@@ -8,14 +8,12 @@ Cell = Tuple[int, int]
 ColourCentres = Dict[int, List[Cell]]
 PlacementMap = Dict[int, Tuple[Cell, Cell]]
 
-# Context for helpers that require grid dimensions without threading through signatures
 _CTX_H: int | None = None
 _CTX_W: int | None = None
 _CTX_GRID: Grid | None = None
 
 
 def _detect_squares(grid: Grid) -> Dict[int, List[Tuple[int, int]]]:
-    """Return mapping color->list of 3x3 square centers (row, col)."""
     h, w = len(grid), len(grid[0])
     visited = [[False] * w for _ in range(h)]
     squares = defaultdict(list)
@@ -64,7 +62,6 @@ def _detect_squares(grid: Grid) -> Dict[int, List[Tuple[int, int]]]:
 
 
 def _detect_patterns(grid: Grid) -> Tuple[Dict[int, Tuple[int, int]], Dict[int, Tuple[int, int]]]:
-    """Detect existing plus-hollow (cardinal arms) and x-center (diagonal arms) patterns."""
     h, w = len(grid), len(grid[0])
     plus: Dict[int, Tuple[int, int]] = {}
     diag: Dict[int, Tuple[int, int]] = {}
@@ -195,7 +192,6 @@ def _last_nonzero_row(grid: Grid) -> int:
 
 
 def detect3x3Squares(grid: Grid) -> ColourCentres:
-    # Initialize context for downstream placement derivation
     global _CTX_H, _CTX_W, _CTX_GRID
     _CTX_H, _CTX_W, _CTX_GRID = len(grid), len(grid[0]), grid
     return _detect_squares(grid)
@@ -210,13 +206,11 @@ def determinePlacementCentres(
     x_axes: Dict[int, Tuple[int, int]],
     squares: Dict[int, List[Tuple[int, int]]],
 ) -> PlacementMap:
-    # Recreate original target computation deterministically
     global _CTX_H, _CTX_W, _CTX_GRID
     if _CTX_H is None or _CTX_W is None or _CTX_GRID is None:
         raise RuntimeError("Grid context not initialized for determinePlacementCentres")
     h, w, grid = _CTX_H, _CTX_W, _CTX_GRID
 
-    # Build colours set
     colors = set(squares) | set(plus_axes) | set(x_axes)
 
     orient, axis_val = _orientation(squares, plus_axes)
@@ -266,13 +260,11 @@ def determinePlacementCentres(
         for color, row in zip(ordered, remaining_coords):
             x_targets[color] = (row, default_col)
 
-    # Compose final placement map with insertion order matching colours_sorted for stability
     placements: PlacementMap = {}
     for color in colors_sorted:
         p = plus_targets[color]
         x = x_targets[color]
         placements[color] = (p, x)
-    # Add any remaining colours not in colors_sorted (shouldn't occur) to preserve total coverage
     for color in colors:
         if color not in placements:
             placements[color] = (plus_targets[color], x_targets[color])

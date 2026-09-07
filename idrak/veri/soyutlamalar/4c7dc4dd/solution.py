@@ -1,4 +1,3 @@
-"""Solver for ARC-AGI-2 task 4c7dc4dd (split: evaluation)."""
 
 from collections import Counter, deque
 from typing import List, Tuple, Optional, Dict, Any
@@ -7,7 +6,6 @@ Grid = List[List[int]]
 
 
 def _find_zero_components(grid: Grid, min_size: int = 6) -> List[Tuple[List[Tuple[int, int]], Tuple[int, int, int, int]]]:
-    """Return sizeable 4-connected zero components with their bounding boxes."""
 
     height = len(grid)
     width = len(grid[0])
@@ -44,7 +42,6 @@ def _find_zero_components(grid: Grid, min_size: int = 6) -> List[Tuple[List[Tupl
 
 
 def _select_output_size(components: List[Tuple[List[Tuple[int, int]], Tuple[int, int, int, int]]]) -> int:
-    """Use component heights to pick a square output resolution."""
 
     heights = [bbox[1] - bbox[0] + 1 for _, bbox in components]
     robust = [h for h in heights if h >= 3]
@@ -58,7 +55,6 @@ def _component_centers(
     in_width: int,
     out_size: int,
 ) -> List[Tuple[float, float]]:
-    """Return component centers scaled into the output coordinate system."""
 
     centres: List[Tuple[float, float]] = []
     for cells, _ in components:
@@ -71,7 +67,6 @@ def _component_centers(
 
 
 def _rare_non_background_color(grid: Grid) -> Optional[Tuple[int, int]]:
-    """Return the rarest non-zero color (count, value) for corner highlighting."""
 
     counts = Counter(value for row in grid for value in row if value != 0)
     if not counts:
@@ -81,7 +76,6 @@ def _rare_non_background_color(grid: Grid) -> Optional[Tuple[int, int]]:
 
 
 def detectZeroRectangles(grid: Grid) -> Dict[str, Any]:
-    """Detect sizeable zero components; return metadata bundle for downstream steps."""
     components = _find_zero_components(grid)
     return {
         "components": components,
@@ -92,7 +86,6 @@ def detectZeroRectangles(grid: Grid) -> Dict[str, Any]:
 
 
 def buildScaffold(rectangles: Dict[str, Any]) -> Dict[str, Any]:
-    """Build coarse scaffold: output size, centers, and anchor decisions."""
     components = rectangles["components"]
     if not components:
         return {"empty": True}
@@ -147,7 +140,6 @@ def buildScaffold(rectangles: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def augmentScaffold(scaffold: Dict[str, Any]) -> Dict[str, Any]:
-    """No-op augmenter; scaffold already encodes all needed strokes."""
     return scaffold
 
 

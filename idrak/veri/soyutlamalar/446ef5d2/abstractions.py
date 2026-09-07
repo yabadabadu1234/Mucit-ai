@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 446ef5d2."""
 
 from __future__ import annotations
 
@@ -9,10 +8,6 @@ from typing import Callable, Iterable
 
 
 TASK_PATH = Path("analysis/arc2_samples/446ef5d2.json")
-
-
-# ---------------------------------------------------------------------------
-# Shared helpers
 
 
 def _ceil_div(a: int, b: int) -> int:
@@ -167,17 +162,11 @@ def _assemble_row(components, inner_width, base_color):
     return block
 
 
-# ---------------------------------------------------------------------------
-# Abstractions
-
-
 def identity_abstraction(grid):
-    """Only drop the noisy color 4."""
     return _clean_grid(grid)
 
 
 def horizontal_compactor(grid):
-    """Pack each color into a single horizontal strip (fails on case 1)."""
     base_grid = _clean_grid(grid)
     comps = _components_by_color(base_grid)
     if not comps:
@@ -215,7 +204,6 @@ def horizontal_compactor(grid):
 
 
 def grid_compactor(grid):
-    """Final abstraction: grid-based packing with per-row balancing."""
     base_grid = _clean_grid(grid)
     comps = _components_by_color(base_grid)
     if not comps:
@@ -279,10 +267,6 @@ def grid_compactor(grid):
         for c in range(rect_width):
             out[off_r + r][off_c + c] = rect[r][c]
     return out
-
-
-# ---------------------------------------------------------------------------
-# Evaluation harness
 
 
 def _load_task():

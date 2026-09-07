@@ -1,57 +1,3 @@
-"""QÇEKİRDEK -- 41 MELEKENİN KAPILARI **BANTTA**, İCRA C'DE.
-
-    from nefs.qcekirdek import Bant
-    bant = Bant(B, d, lif)
-    bant.karo(k, M)          # kapı duruma vurulmaz, banda yazılır
-    bant.cift(pi, pj, G)
-    bant.bosalt(psi)         # bandın TAMAMI tek C çağrısında icra olur
-
-===================================================================
-NİÇİN BANT: ÖLÇÜLEN PYTHON YÜKÜ
-===================================================================
-
-**ZABIT (Derece-12 ve 1 GB/s, 1. ameliyat):** *"Ana akış motoru saf C
-ile yazılır... Python sadece başlatma anında devreye girer; akış
-başladığında kontrolü tamamen C çekirdeğine bırakır."*
-
-Ölçüldü (tek küllî mizan çağrısı, `cProfile`):
-
-    _karo_indir            136 çağrı   0,35 sn
-    _cift_kapisi_lifli     264 çağrı   0,53 sn
-    gecerli             415 628 çağrı   0,30 sn
-    veri                392 380 çağrı   0,19 sn
-
-Yâni kapının **hesabı** değil, kapıya **varmak** pahalıdır. Her kapı
-ayrı bir Python çerçevesi, ayrı bir ``numpy`` gönderimi, ayrı bir
-durum dolaşımıdır.
-
-Bant bunu şöyle keser: meleke ``q.tek(i, G)`` demeye devam eder --
-**meleke kodu hiç değişmez** -- fakat kapı duruma vurulmaz, bir
-diziye yazılır. Durum okunduğunda bandın tamamı **tek** C çağrısıyla
-icra edilir. 400 kapı için 400 gönderim yerine 1 gönderim olur.
-
-===================================================================
-İKİ TASARRUF DAHA -- İKİSİ DE ÖLÇÜLÜR
-===================================================================
-
-1. **AYRIŞTIRMA BİR KERE.** Karmaşık durum ``(re, im)`` şeklinde
-   iç içedir; gerçek SIMD için ayrıştırmak gerekir. Bant bunu kapı
-   başına değil, **boşaltma başına** bir kere yapar: bir ayrıştırma,
-   bütün kapılar, bir birleştirme.
-
-2. **SIFIR TAHSİS.** Ayrıştırma tamponları bir kere ayrılır ve
-   yeniden kullanılır (zabıtın halka tamponu). Kapı döngüsünde
-   ``malloc`` yoktur.
-
-===================================================================
-NE İDDİA EDİLMİYOR
-===================================================================
-
-Bu, melekeleri C'ye **çevirmek** değildir; melekelerin *kapılarını*
-C'de icra etmektir. Melekelerin muhakemesi (hangi kapıyı nereye
-vuracakları) Python'da kalır ve orada kalması gerekir: o kısım
-belirteç başına değil, meleke başına koşar.
-"""
 from __future__ import annotations
 
 import ctypes
@@ -70,7 +16,6 @@ DERLEME_DIZINI = os.environ.get(
     "MUCIT_DERLEME", os.path.join(os.path.dirname(os.path.dirname(
         os.path.abspath(__file__))), "depo", "derleme"))
 
-#: Kapı cinsleri -- C tarafıyla **aynı** sayılar.
 KARO, CIFT, MATCHGATE = 0, 1, 2
 
 CEKIRDEK_C = r'''
@@ -337,13 +282,11 @@ BAYRAK = ["-O3", "-fPIC", "-mavx512f", "-mavx512bw", "-mavx512vl",
           "-mfma", "-funroll-loops"]
 
 _ONBELLEK: Dict[str, Any] = {}
-#: Koşu boyunca biriken sayaçlar -- ``cekirdek_beyani`` bunları okur.
 _SAYAC: Dict[str, int] = {"kapı": 0, "boşaltma": 0, "karo": 0, "çift": 0,
                           "numpy_boşaltma": 0}
 
 
 class CekirdekAyari:
-    """Bandın ölçüleri. ``hat`` neyin koştuğunu tayin eder."""
 
     __slots__ = ("hat", "bant")
 
@@ -360,7 +303,6 @@ def _ozet() -> str:
 
 
 def derle() -> Dict[str, Any]:
-    """Çekirdeği **fiilen derle**. Düşerse sessiz geçilmez."""
     c = _ONBELLEK.get("derleme")
     if c is not None:
         return c
@@ -416,7 +358,6 @@ def kutuphane():
 
 
 def yoklama() -> Dict[str, Any]:
-    """Çekirdek koşuyor mu -- **küçük bir kapıyı fiilen icra ederek**."""
     c = _ONBELLEK.get("yoklama")
     if c is not None:
         return c
@@ -428,13 +369,6 @@ def yoklama() -> Dict[str, Any]:
                   "sebep": (d.get("derleyici_çıktısı") or "derlenemedi")[:200]})
         _ONBELLEK["yoklama"] = o
         return o
-    # **KENDİ KENDİNİ SINAMA KOŞU SAYAÇLARINA GİRMEZ.** Ölçüldü ve
-    # düzeltildi: ithal anında koşan bu sınama ``_SAYAC``a 496 kapı /
-    # 496 boşaltma yazıyor, ``cekirdek_beyani`` de onu tâlimin kendi
-    # sayısı gibi gösteriyordu -- ``bant_başına_kapı`` **1,0** çıkıyor,
-    # yâni "bant hiç toplamıyor" gibi okunuyordu. Halbuki gerçek koşuda
-    # 46 kapı 8 boşaltmada iniyor (5,75). Kendi sınamasını koşunun
-    # ölçüsüne katan bir ölçü, ölçtüğü şeyi ölçmüyordur (ferman 5).
     _kopya = dict(_SAYAC)
     try:
         B, d_ = 2, 16
@@ -447,7 +381,7 @@ def yoklama() -> Dict[str, Any]:
         b.bosalt(v)
         o["koşuyor"] = bool(np.max(np.abs(v - psi)) < 1e-12)
         o["sebep"] = "tamam" if o["koşuyor"] else "kimlik kapısı durumu bozdu"
-    except Exception as e:                                # noqa: BLE001
+    except Exception as e:
         o.update({"koşuyor": False, "sebep": "%s: %s"
                   % (type(e).__name__, e)})
     _SAYAC.clear()
@@ -457,12 +391,6 @@ def yoklama() -> Dict[str, Any]:
 
 
 class Bant:
-    """Kapı bandı: kapılar buraya yazılır, ``bosalt`` hepsini icra eder.
-
-    Sıra **harfiyyen** korunur: banda yazılış sırası icra sırasıdır.
-    Yâni bant bir eniyileme değil, bir **erteleme**dir ve netice bit
-    bit aynıdır (``rapor()`` bunu ölçer).
-    """
 
     __slots__ = ("B", "d", "lif", "bant", "hat", "_kapi", "_dizey",
                  "_re", "_im", "_tre", "_tim", "_tampon")
@@ -473,13 +401,9 @@ class Bant:
         self.d = int(d)
         self.lif = tuple(int(x) for x in lif)
         self.hat = str(hat)
-        # Bant boyu: 0 ise donanımdan. Bandın kendisi küçüktür (kapı
-        # başına 24 bayt + dizey); had, durumun bir kere dolaşılması
-        # gereken kapı sayısıdır ve ölçüyle 256 seçildi.
         self.bant = int(bant) if int(bant) > 0 else 256
         self._kapi: List[Tuple[int, int, int, int, int]] = []
         self._dizey: List[np.ndarray] = []
-        # ── SIFIR TAHSİS: tamponlar bir kere ayrılır ──────────────
         n = self.B * self.d
         self._re = np.zeros(n, np.float64)
         self._im = np.zeros(n, np.float64)
@@ -489,7 +413,6 @@ class Bant:
         self._tim = np.zeros(enb * max(1, enb_ard), np.float64)
         self._tampon = None
 
-    # ── kapı yazma ────────────────────────────────────────────────
     def _bolum(self, k: int) -> Tuple[int, int]:
         on, ard = 1, 1
         for x in self.lif[:k]:
@@ -499,7 +422,6 @@ class Bant:
         return on, ard
 
     def karo(self, k: int, M) -> None:
-        """``k``ıncı life ``n×n`` karo -- **banda yazılır**."""
         n = int(self.lif[int(k)])
         on, ard = self._bolum(int(k))
         A = np.ascontiguousarray(np.asarray(M, complex).reshape(n, n))
@@ -509,13 +431,6 @@ class Bant:
         _SAYAC["karo"] += 1
 
     def cift(self, bi: int, bj: int, G) -> None:
-        """İki bit düzlemine ``4×4`` -- ``bi``, ``bj`` **düz ağırlıktır**.
-
-        Kapı matchgate formundaysa (Valiant-Terhal) banda ``MATCHGATE``
-        diye yazılır ve C'de **yarım çarpımla** koşar: parite korunduğu
-        için iki altuzay ayrı ayrı döner, öbek başına 16 değil 8
-        karmaşık çarpım olur.
-        """
         from .matchgate import matchgate_mi
         A = np.ascontiguousarray(np.asarray(G, complex).reshape(4, 4))
         mg = bool(matchgate_mi(A)[0])
@@ -533,39 +448,7 @@ class Bant:
     def bos_mu(self) -> bool:
         return not self._kapi
 
-    # ── icra ──────────────────────────────────────────────────────
     def bosalt(self, psi: np.ndarray) -> None:
-        """Bandı icra et -- **her kapı en iyi koştuğu yerde**.
-
-        ===============================================================
-        ÖLÇÜ HÜKMÜ VERDİ: KARO BLAS'TA, ÇİFT C'DE
-        ===============================================================
-
-        Evvelce bütün bant elle yazılmış C'ye gidiyordu ve ölçü
-        **kırmızı yandı**: C hattı numpy'dan ``2,8×`` yavaş çıktı.
-        Kapı cinslerine ayırınca sebep göründü (aynı bant, 30'ar kapı)::
-
-            kapı cinsi            C hattı     numpy      nispet
-            karo lif0 (ard=256)   0,20793     0,10046     0,48×
-            karo lif1 (ard=16)    0,23359     0,11449     0,49×
-            karo lif2 (ard=1)     1,28921     0,05306     0,04×
-            çift (bit 0,6)        0,07171     0,48386     6,75×
-            çift (bit 5,11)       0,06414     0,44236     6,90×
-
-        **Karo bir GEMM'dir ve numpy onu BLAS'a verir.** OpenBLAS'ın
-        ``zgemm``i yıllarca elle ayarlanmış bir C çekirdeğidir;
-        ``ard = 1`` hâlinde benim döngüm tamamen skaler kalıyor ve
-        **25 kat** geri düşüyor. Onu yenmeye çalışmak gurur olurdu.
-
-        **Çift kapı bir GEMM değildir.** numpy'da dört ayrı süslü
-        indisleme, bir ``stack`` ve bir ``einsum`` gerekir; durum beş
-        kere dolaşılır. C'de dört adres okunur, on altı çarpma yapılır,
-        dört adres yazılır: durum **bir kere** dolaşılır. 6,9×.
-
-        O hâlde bant kapı cinsine göre ayrılır ve **sıra korunur**:
-        ardışık çift kapılar tek C çağrısında toplanır, karolar
-        BLAS'a gider. Netice iki yolda da birebir aynıdır.
-        """
         if not self._kapi:
             return
         kapilar, dizeyler = self._kapi, self._dizey
@@ -586,12 +469,10 @@ class Bant:
         while i < n_kapi:
             tip = kapilar[i][0]
             if tip == KARO:
-                # BLAS yolu -- tek kapı, tek ``zgemm``.
                 _, on, n, ard, j = kapilar[i]
                 self._karo_blas(psi, on, n, ard, dizeyler[j])
                 i += 1
                 continue
-            # Ardışık bütün çift kapılar TEK C çağrısında.
             j0 = i
             while i < n_kapi and kapilar[i][0] in (CIFT, MATCHGATE):
                 i += 1
@@ -610,7 +491,6 @@ class Bant:
             _SAYAC["cift_bant"] = _SAYAC.get("cift_bant", 0) + 1
 
     def _karo_blas(self, psi, on: int, n: int, ard: int, M) -> None:
-        """Karo -- ``np.matmul`` üzerinden **BLAS zgemm**. Ölçü öyle dedi."""
         Mx = np.asarray(M).reshape(n, n)
         X = psi.reshape(self.B * on, n, ard)
         if ard == 1:
@@ -620,7 +500,6 @@ class Bant:
         psi[...] = Y.reshape(self.B, self.d)
 
     def _numpy_bosalt(self, psi, kapilar, dizeyler) -> None:
-        """Kıyas yolu -- ``hat="numpy"``. **Netice birebir aynı olmalı.**"""
         B, d = self.B, self.d
         for tip, a, b, c, j in kapilar:
             M = dizeyler[j]
@@ -646,7 +525,6 @@ class Bant:
 
 
 def cekirdek_beyani() -> Dict[str, Any]:
-    """Bandın koşu boyunca ne yaptığı -- **saklanmaz**."""
     y = yoklama()
     kapi = int(_SAYAC["kapı"])
     bos = int(_SAYAC["boşaltma"])
@@ -662,9 +540,6 @@ def cekirdek_beyani() -> Dict[str, Any]:
         "bant": 256,
         "matchgate": int(_SAYAC.get("matchgate", 0)),
         "cift_bant": int(_SAYAC.get("cift_bant", 0)),
-        # **ETİKET ÖLÇTÜĞÜ ŞEYİ SÖYLER.** Burada evvelce "kapı başına
-        # Python çerçevesi" yazıyordu; hesaplanan ise boşaltma başına
-        # düşen kapı sayısıydı. Yanlış etiket, yanlış sayıdan beterdir.
         "bant_basina_kapi": (float(kapi) / max(1, bos)) if kapi else 0.0,
         "kıyas": ("kapı yok" if not kapi else
                   "%d kapı %d boşaltmada; ardışık çift kapılar %d C "
@@ -673,8 +548,7 @@ def cekirdek_beyani() -> Dict[str, Any]:
     }
 
 
-def rapor(tohum: int = 0) -> str:                        # pragma: no cover
-    """C hattı ile numpy hattı **birebir aynı mı** ve ne kadar hızlı."""
+def rapor(tohum: int = 0) -> str:
     import time
     r = np.random.default_rng(int(tohum))
     B, lif = 128, (16, 16, 16)
@@ -711,7 +585,6 @@ def rapor(tohum: int = 0) -> str:                        # pragma: no cover
     vc, tc = kos("c")
     vn, tn = kos("numpy")
     y = yoklama()
-    # Isıtma sonrası tekrar saatle.
     _, tc = kos("c")
     _, tn = kos("numpy")
     fark = float(np.max(np.abs(vc - vn)))
@@ -740,5 +613,5 @@ def rapor(tohum: int = 0) -> str:                        # pragma: no cover
     ])
 
 
-if __name__ == "__main__":                               # pragma: no cover
+if __name__ == "__main__":
     print(rapor())

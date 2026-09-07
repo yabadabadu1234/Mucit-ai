@@ -1,4 +1,3 @@
-"""Abstraction experiments for ARC task 53fb4810."""
 
 from pathlib import Path
 import json
