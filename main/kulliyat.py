@@ -844,8 +844,19 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             # okuduğunu yeniden üretir. Bu, sözlü veriyi eğitim/test
             # diye bölmeyi gereksiz kılar -- her metin hem sual hem
             # şahittir; tutulan bir "sonraki veri" yoktur.
-            cift.append(([int(x) for x in akis[:int(pencere) - 1]],
-                         int(akis[int(pencere) - 1]), "sözlü"))
+            # **BAĞLAM BOYU İKİ CİNSTE DE AYNIDIR.** Ölçüldü ve
+            # düştü: sözlü cins ``pencere−1`` veriyor, ARC ``pencere``
+            # veriyordu ve ``_ileri``nin ``np.stack``i *"all input
+            # arrays must have the same shape"* ile tâlimi kesiyordu.
+            # Yazmaç tek boyda kurulur; iki cins iki boy demek, ferman
+            # 1-R'nin yasakladığı **iki motor** olurdu.
+            #
+            # Hedefin kendindenliği boydan gelmez, **pencerenin
+            # bütünlüğünden** gelir: ``akis`` tek bir bitişik okumadır,
+            # o hâlde ``akis[pencere]`` de o pencerenin içindedir --
+            # "sonraki veri" değil, aynı metnin devamıdır.
+            cift.append(([int(x) for x in akis[:int(pencere)]],
+                         int(akis[int(pencere)]), "sözlü"))
     return cift[:int(azami)]
 
 

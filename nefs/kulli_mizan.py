@@ -887,8 +887,23 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
         dilim = veri[bas:bas + B]
         # **GENİŞLİK TABANDIR** (ferman 1-N): gelen dizi basamak
         # akışıdır, belirteç akışı değil. ``kubit`` = veri lifi = taban.
+        #
+        # **BAĞLAM BOYU DENETLENİR, SESSİZCE YIĞILMAZ.** ``np.stack``
+        # boyları tutmayınca *"all input arrays must have the same
+        # shape"* der ve tâlimi keser; o hata mesajı hangi cinsin
+        # hangi boyu verdiğini **söylemez**. Ölçüldü ve oldu: sözlü
+        # cins ``pencere−1``, ARC ``pencere`` veriyordu. Boy burada
+        # sayılır ve kusur cinsiyle beraber yazılır (ferman 5).
+        _bag = [ornek_bol(o) for o in dilim]
+        _boy = {len(b) for b, _h, _c in _bag}
+        assert len(_boy) == 1, (
+            "bağlam boyu tek olmalı, %s bulundu -- cins başına boy: %s. "
+            "İki cins iki boy demek, ferman 1-R'nin yasakladığı iki "
+            "motordur."
+            % (sorted(_boy),
+               sorted({(c, len(b)) for b, _h, c in _bag})))
         E = np.stack([belirtecleri_kodla(list(bag), kubit, kubit)
-                      for bag, _h, _c in (ornek_bol(o) for o in dilim)])
+                      for bag, _h, _c in _bag])
         if E.shape[0] < B:
             E = np.concatenate(
                 [E, np.repeat(E[-1:], B - E.shape[0], axis=0)], axis=0)
@@ -920,8 +935,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
             _H = V[:, :, -1]
         else:
             raise ValueError("hal_kaynagi bilinmiyor: %r" % (_hk,))
-        for t, (bag, hedef, cins) in enumerate(
-                ornek_bol(o) for o in dilim):
+        for t, (bag, hedef, cins) in enumerate(_bag):
             lifliler.append(M_hepsi[t])
             haller.append(np.asarray(_H[t], complex))
             # **HEDEF BİR BASAMAKTIR** ve ``[0, taban)`` aralığındadır.
