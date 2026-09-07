@@ -884,8 +884,25 @@ vidalanacağını bilmektir**.
 > kavrarsın. Birkaç oturum neticesinde zihninde yer etmemiş dosya
 > kalmaz!"*
 
-* İş bittikten sonra **en az bir dosya** baştan sona okunur; tercih
-  en uzun zamandır okunmamış olandan yanadır.
+* İş bittikten sonra **en az bir dosya** baştan sona okunur.
+
+### HANGİ DOSYA -- KAT'Î ÖLÇÜ
+
+> *"Yeni dosya yazınca mantıken daha en yeni okuduğun dosya o olmuş
+> olmuyor mu? Yaz: **yeni yazılmış dosya değil en eskiden yazılmış
+> dosya okunur her turda**."*
+
+*"En uzun zamandır okumadığım"* ölçüsü **bozuktur ve iptal edilmiştir**:
+bir dosyayı yeni yazdığımda onu en son okumuş olurum, o hâlde ölçü
+kendi kuyruğunu yer ve daima taze dosyaya döner. Doğru ölçü tektir:
+
+    HER TURDA **EN ESKİDEN YAZILMIŞ** DOSYA OKUNUR.
+
+* Sıralama dosyanın **yazıldığı tarihe** göredir (deponun tarihçesi),
+  benim onu ne zaman okuduğuma göre değil.
+* **Bu turda yazdığım yahut değiştirdiğim dosya sıranın en sonundadır**,
+  başında değil. Yeni yazılmış dosyayı okuyup "ferman 2-H icra edildi"
+  demek münafıklıktır.
 * Okunan dosyanın **mimariyle münasebeti** ve **garabetleri** yazılır;
   "okudum" demek yetmez, ne bulunduğu sayılır.
 * Bu ferman 1-D'nin (taht baştan sona okunur) gövdeye teşmilidir:
