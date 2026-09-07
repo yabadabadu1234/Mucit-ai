@@ -516,6 +516,47 @@ kategorideki iş, bir sandalyeye ve bir sayıya iniyordu.
 
 ---
 
+## ▓▓▓ 1-W. FERMAN: KOD İÇİNE YORUM YAZILMAZ -- ŞERH TEK DOSYADADIR ▓▓▓
+
+> *"Tüm dosyalardaki yorum satırlarını evvelâ oku, sonra terkip yap,
+> tek bir yorum dosyasında birleştir. Sonra tüm kodlardaki artık
+> yorumları imha et, **bir daha da asla kod içine yorum yapma!** Kod
+> 300 satır, yorum 1000 satır!!!!"*
+
+* **KOD DOSYASINDA YORUM YOKTUR.** Ne `#` satırı, ne izah eden bir
+  belge dizgisi. Kod, yaptığı işi kendi adlarıyla söyler (ferman 4:
+  halkça isim); söyleyemiyorsa kusur yorumun eksikliğinde değil,
+  **adın kötülüğündedir**.
+* **ŞERH TEK DOSYADADIR:** `SERH.md`. Bir hükmün sebebi, bir ölçümün
+  neticesi, bir usulün niçin iptal edildiği oraya yazılır ve **oraya
+  bir kere** yazılır (ferman 3: terkip).
+* **NİÇİN.** Yorum kodun yanında dururken üç şey oluyordu: (1) kod
+  yorumun içinde kayboluyordu -- üç yüz satırlık bir dosyada bin
+  satır şerh; (2) aynı izah on ayrı dosyada tekrarlanıyordu; (3) kod
+  değişince yorum yerinde kalıyor ve **yalan söylüyordu**. Şerh tek
+  yerde olunca üçü de imkânsız olur.
+* Bu ferman geçmişe de şâmildir: mevcut bütün yorumlar okunur, terkip
+  edilir, `SERH.md`ye taşınır ve koddan **imha edilir**.
+
+---
+
+## ▓▓▓ 1-X. FERMAN: HEDEF HEM ARC-AGI-2 HEM ARC-AGI-3 ▓▓▓
+
+> *"ARC AGI 3 var, belki onun için hazırlanmış en itibarlı veri
+> kümesini de eklersin, aynı anda iki yarışmaya çözüm bulmuş oluruz.
+> **Kararımı verdim, bundan sonra hedefimiz hem ARC AGI 2, hem 3!!!!**"*
+
+* Hedef **ikidir** ve ikisi de aynı motorla çözülür (ferman 6): elle
+  yazılmış kâide, göreve mahsus çözücü, yarışmaya mahsus hat yoktur.
+* ARC-AGI-3 bir **etkileşimli** mihenktir: tek ızgara çifti değil,
+  oynanan bir oyun -- girdi, fiil, netice, tekrar. O hâlde veri cinsi
+  ferman 1-R'nin üçüncü kanadıdır ve motora **aynı kapıdan** girer.
+* Kaynaklar yoklanır, tahmin edilmez (ferman 1-K): ARC-AGI-3 için
+  konan her satır ya fiilen çekilmiştir ya da engeli sayısıyla
+  yazılmıştır.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

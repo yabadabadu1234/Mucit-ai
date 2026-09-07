@@ -603,9 +603,10 @@ def hf_boru(kimlik: str, cikti: str, kodlama: str = "o200k_base",
     api = HfApi(token=jeton or None)
     hepsi = [f for f in api.list_repo_files(kimlik, repo_type="dataset")
              if not f.endswith("/")]
-    if alt_yol:
-        on = alt_yol.strip("/") + "/"
-        hepsi = [f for f in hepsi if f.startswith(on)]
+    onler = tuple(y.strip().strip("/") + "/" for y in
+                  str(alt_yol).replace(",", " ").split() if y.strip())
+    if onler:
+        hepsi = [f for f in hepsi if f.startswith(onler)]
     uz = tuple(uzantilar)
     if uz:
         hepsi = [f for f in hepsi if f.endswith(uz)]

@@ -47,7 +47,7 @@ on:
         default: 'o200k_base'
         type: string
       alt_yol:
-        description: 'Veri kümesi içinde alınacak alt dizin (boş = hepsi)'
+        description: 'Alt dizin(ler), virgülle. Boş = hepsi'
         required: false
         default: ''
         type: string
@@ -153,7 +153,12 @@ jobs:
           from main.kulliyat import hf_boru, MUCIT_UZANTI
 
           kimlik = os.environ["HF_REPO_ID"]
+          alt = (os.environ.get("ALT_YOL") or "").strip()
           ad = kimlik.replace("/", "__")
+          if alt:
+              ek = "-".join(y.strip().strip("/").replace("/", "_")
+                            for y in alt.replace(",", " ").split())
+              ad = ad + "__" + ek
           uz = tuple(u.strip() for u in os.environ["UZANTI"].split(",")
                      if u.strip())
           o = hf_boru(kimlik, ad + MUCIT_UZANTI, os.environ["KODLAMA"],
