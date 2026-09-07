@@ -22,7 +22,8 @@ from main import hazine
 from nefs.kulli_mizan import (MizanAyari, kulli_mizan,
                               mizan_cetveli)
 from nefs.hafiza import Hafiza
-from main.cikarim import hazineden_yukle, hafizayi_yukle, padisah
+from main.cikarim import (hazineden_yukle, hafizayi_yukle, padisah,
+                          hazineden_devam, devam_agirligi)
 from nefs.galois import (GaloisAyari, tableau_kur,
                          sbox_bukme, sbox_olcu, palmer_olcu)
 from nefs.tdd import TddAyari, kanonik_adres
@@ -51,9 +52,25 @@ from main.kulliyat import (kulliyat_verisi,
 from nefs.usul import usul_beyani
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import (talim_beyani,
-                            kaggle_beyani)
+                            kaggle_beyani, sifir_beyani)
 
 HAZINE_DIZINI = os.environ.get("MUCIT_HAZINE", "depo/hazine")
+
+HAZINE_ADI = "dimag"
+
+
+def hazine_yolu(dizin: Optional[str] = None) -> str:
+    return os.path.join(dizin or HAZINE_DIZINI, HAZINE_ADI)
+
+
+def hazine_sifirla(dizin: Optional[str] = None) -> Dict[str, object]:
+    from main import hazine as _h
+    y = hazine_yolu(dizin) + _h.UZANTI
+    vardi = os.path.isfile(y)
+    b = os.path.getsize(y) if vardi else 0
+    if vardi:
+        os.remove(y)
+    return {"yol": y, "vardı": vardi, "bayt": int(b)}
 
 __all__ = ["EgitimAyari", "DAR", "ORTA", "AZAMI",
            "KISA_CPU", "AZAMI_KAGGLE",
@@ -358,12 +375,14 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                         pencere=ayar.pencere, sozluk=ayar.sozluk,
                         tohum=ayar.tohum, taban=int(ayar.veri_lifi),
                         basamak=int(ayar.belirtec_basamak))
-    kul_veri = kulliyat_verisi(
+    devam = hazineden_devam(hazine_yolu())
+    kul_veri, imlec = kulliyat_verisi(
         sozluk=int(ayar.sozluk), pencere=int(ayar.pencere),
         azami=max(0, int(ayar.ornek_sayisi) - len(arc_veri)),
         tohum=int(ayar.tohum), kodlama=str(ayar.kodlama),
         taban=int(ayar.veri_lifi),
-        basamak=int(ayar.belirtec_basamak))
+        basamak=int(ayar.belirtec_basamak),
+        imlec=devam.get("imleç"), ne="imleçli")
     veri = list(arc_veri) + list(kul_veri)
     assert veri, "tâlim verisi BOŞ"
 
@@ -371,7 +390,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
     kademe_parametresi = kademe_parametreleri_ac(nefs.p)
     d = len(nefs)
-    p0 = nefs.vektor()
+    p0 = devam_agirligi(devam, nefs, d)
     kademe_gorevleri = list(egitim_gorevleri)[:int(ayar.kademe_gorevi)]
 
     mzn = mizan_ayari(ayar)
@@ -590,9 +609,12 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
 
     kayit = hazine.koy(
-        os.path.join(HAZINE_DIZINI, "dimag_%s" % ayar.ad),
+        hazine_yolu(),
         dict({"p": p_yildiz}, **hafiza.hazineye()),
-        {"ayar": ayar.ad, "parametre": d, "V_ilk": float(r["V_ilk"]),
+        {"tur": int(devam.get("tur", 0)) + 1,
+         "imleç": imlec,
+         "devam_etti": bool(devam.get("yüklendi")),
+         "ayar": ayar.ad, "parametre": d, "V_ilk": float(r["V_ilk"]),
          "V_son": float(r["V_son"]), "veri_lifi": int(ayar.veri_lifi),
          "sözlük": int(ayar.sozluk), "pencere": int(ayar.pencere),
          "yerel_yuva": int(ayar.yerel_yuva), "karo": int(ayar.karo),
@@ -610,6 +632,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
          "zeno_eşiği": float(ayar.zeno_esigi)})
 
     return {"ayar": ayar.ad, "parametre": d,
+            "devam": devam, "imleç": imlec,
             "geçit": kapi, "ders": ders, "hazine": kayit,
             "tdd": tdd, "stabilizer": stab, "gölge": golge,
             "galois": tab.beyan(),
@@ -683,11 +706,14 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
     return talim_beyani(ayar, kulli)
 
 
-KIPLER: Tuple[str, ...] = ("tâlim", "mizan", "sabit", "kaggle", "veri")
+KIPLER: Tuple[str, ...] = ("tâlim", "sıfırla", "mizan", "sabit",
+                           "kaggle", "veri")
 
 
 def taht(ne: str = "tâlim", *arg: str) -> str:
     ne = str(ne)
+    if ne == "sıfırla":
+        return sifir_beyani(hazine_sifirla())
     if ne == "kaggle":
         from main.kaggle_egitim import kaggle_talimini_baslat
         from main.kaggle_cikarim import kaggle_teslimat_dosyasi_uret

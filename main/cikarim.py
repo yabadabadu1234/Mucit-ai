@@ -19,14 +19,44 @@ from nefs.suphe import suphe_beyani
 from tanilama.beyan import cikarim_beyani
 
 __all__ = ["padisah", "degerlendirme_kosusu", "hazineden_yukle",
-           "hafizayi_yukle", "kos"]
+           "hafizayi_yukle", "hazineden_devam", "devam_agirligi", "kos"]
+
+
+def hazineden_devam(yol: str) -> Dict[str, object]:
+    from main import hazine
+    tam = yol + hazine.UZANTI
+    if not os.path.isfile(tam):
+        return {"yüklendi": False, "yol": tam, "tur": 0, "imleç": None,
+                "sebep": "hazine yok -- ilk tur"}
+    agirlik, ust = hazine.al(yol)
+    assert "p" in agirlik, "hazinede ``p`` tensörü yok: %r" % sorted(agirlik)
+    p = np.array(agirlik["p"], dtype=float).reshape(-1)
+    assert np.all(np.isfinite(p)), "hazinedeki parametrede NaN/Inf var"
+    return {"yüklendi": True, "yol": tam, "p": p,
+            "tur": int(ust.get("tur", 0) or 0),
+            "imleç": ust.get("imleç") or None,
+            "V_son": ust.get("V_son"),
+            "bayt": int(os.path.getsize(tam))}
+
+
+def devam_agirligi(devam: Dict[str, object], nefs, d: int) -> np.ndarray:
+    if not devam.get("yüklendi"):
+        return nefs.vektor()
+    p = np.asarray(devam["p"], float).reshape(-1)
+    assert p.size == d, (
+        "HAZİNEDEKİ AĞIRLIK BU AYARA UYMUYOR: %d parametre kayıtlı, %d "
+        "isteniyor. Ayar değişmiş demektir; devam etmek başka bir modeli "
+        "sürdürmek olurdu. Sıfırlayın: ``python -m main.egitim sıfırla``"
+        % (p.size, d))
+    nefs.yukle(p)
+    devam["kaldığı_kayıp"] = devam.get("V_son")
+    return p
 
 
 def hafizayi_yukle(ayar, dizin: Optional[str] = None) -> "Hafiza":
     from main import hazine
-    from main.egitim import HAZINE_DIZINI
-    d = dizin or HAZINE_DIZINI
-    yol = os.path.join(d, "dimag_%s" % ayar.ad)
+    from main.egitim import hazine_yolu
+    yol = hazine_yolu(dizin)
     agirlik, ust = hazine.al(yol)
     h = Hafiza.hazineden(agirlik, ust)
     assert h is not None, "hafıza kurulamadı -- boş bir şey dönemez"
@@ -36,17 +66,16 @@ def hafizayi_yukle(ayar, dizin: Optional[str] = None) -> "Hafiza":
 def hazineden_yukle(nefs, ayar, dizin: Optional[str] = None,
                     ham: bool = False) -> Dict[str, object]:
     from main import hazine
-    from main.egitim import HAZINE_DIZINI
+    from main.egitim import hazine_yolu
     if ham:
         return {"yüklendi": False, "sebep": "ham kip istendi", "yol": None}
-    d = dizin or HAZINE_DIZINI
-    yol = os.path.join(d, "dimag_%s" % ayar.ad)
+    yol = hazine_yolu(dizin)
     tam = yol + hazine.UZANTI
     assert os.path.exists(tam), (
         "HAZİNE YOK: %s\n  Evvela tâlimi koşturun (``python -m main.egitim "
-        "tâlim %s``). Eğitilmemiş motorla çıkarım yapıp neticeyi rapora "
+        "tâlim``). Eğitilmemiş motorla çıkarım yapıp neticeyi rapora "
         "yazmak ölçüyü yalanlamaktır; onun için burası sessizce "
-        "geçilmiyor." % (tam, ayar.ad))
+        "geçilmiyor." % (tam,))
     agirlik, ust = hazine.al(yol)
     assert "p" in agirlik, "hazinede ``p`` tensörü yok: %r" % sorted(agirlik)
     p = np.array(agirlik["p"], dtype=float).reshape(-1)

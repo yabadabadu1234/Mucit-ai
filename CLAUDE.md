@@ -557,6 +557,33 @@ kategorideki iş, bir sandalyeye ve bir sayıya iniyordu.
 
 ---
 
+## ▓▓▓ 1-Y. FERMAN: TEK TÂLİM DOSYASI -- BAŞTAN BAŞLANMAZ, DEVAM EDİLİR ▓▓▓
+
+> *"Artık bundan böyle **tek bir tâlim verisini kaydet**, o ortamda
+> zaten önceden kayıtlı veri varsa **o güncellensin**, boş yere tekrar
+> tekrar baştan başlamayalım, en son **hangi verinin hangi baytında**
+> olduğumuzu vesaireye kadar ince ayrıntıyla takip edelim. Eğer baştan
+> eğitim gerekirse **sıfırlarız o dosyayı** olur biter."*
+
+* **TEK DOSYA.** Tâlimin bütün hâli tek bir hazinede durur. Profile
+  göre (`dimag_dar`, `dimag_orta`…) ayrı dosya **yoktur**: profil bir
+  bütçedir, ayrı bir model değildir. Ayrı dosya, ayrı model demektir
+  ve ferman 1-H'nin tek motorunu üçe bölerdi.
+* **DEVAM ASILDIR, BAŞTAN BAŞLAMAK İSTİSNADIR.** Koşu başlarken hazine
+  varsa ağırlık **oradan yüklenir** ve tâlim kaldığı yerden sürer.
+  Rastgele bir `p₀`dan başlamak ancak hazine **yokken** meşrudur ve
+  hangisinin olduğu raporda **yazılır**.
+* **İMLEÇ İNCE TUTULUR.** Külliyatın hangi kaynağının **hangi
+  baytında** kalındığı hazinede saklanır ve sonraki koşu oradan okur.
+  Yoksa her koşu aynı ilk pencereyi öğrenir ve külliyatın gerisini
+  hiç görmez -- yedi gigabaytlık bir külliyatta bu, verinin binde
+  birini ezberlemek demektir.
+* **SIFIRLAMA AÇIK VE TEK HAMLEDİR.** Baştan tâlim istenirse dosya
+  silinir: `python -m main.egitim sıfırla`. Gizli bir "yeni koşu"
+  anahtarı yoktur; sıfırlamak bir **fiildir**, bir bayrak değil.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

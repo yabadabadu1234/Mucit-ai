@@ -533,17 +533,19 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                     tohum: int = 0,
                     kaynaklar: Optional[Sequence[Kaynak]] = None,
                     kodlama: str = "o200k_base", taban: int = 16,
-                    basamak: int = 0
-                    ) -> List[Tuple[List[int], int, str]]:
+                    basamak: int = 0,
+                    imlec: Optional[Dict[str, Any]] = None,
+                    ne: str = "veri"):
     import numpy as np
     from nefs.belirtec import basamak_sayisi, belirtec_sozlugu, tip_vektoru
 
     tb = max(2, int(taban))
     bs = int(basamak) if int(basamak) > 0 else basamak_sayisi(
         int(sozluk) if int(sozluk) > 0 else belirtec_sozlugu(kodlama), tb)
-    r = np.random.default_rng(int(tohum))
     ks = [k for k in (kaynaklar or KAYNAKLAR) if not k.engel and k.depo]
-    diziler: List[Tuple[Any, float]] = []
+    onceki = dict(imlec or {})
+    yeni: Dict[str, Any] = {}
+    diziler: List[Tuple[Any, float, str]] = []
     for k in ks:
         if k.varlik:
             yol = os.path.join(_dizin(k), k.varlik)
@@ -572,25 +574,39 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
         gerek = int(np.ceil(int(pencere) / bs)) + 2
         if t is None or t.size <= gerek:
             continue
-        diziler.append((t, float(k.pay)))
+        diziler.append((t, float(k.pay), k.ad))
     if not diziler:
-        return []
-    toplam = sum(p for _t, p in diziler) or 1.0
+        return ([], {}) if ne == "imleçli" else []
+    toplam = sum(p for _t, p, _a in diziler) or 1.0
     cift: List[Tuple[List[int], int, str]] = []
-    for t, pay in diziler:
+    gerek = int(np.ceil(int(pencere) / bs)) + 2
+    for t, pay, ad in diziler:
         n = int(round(int(azami) * pay / toplam))
-        if n <= 0:
-            continue
-        gerek = int(np.ceil(int(pencere) / bs)) + 2
-        bas = r.integers(0, t.size - gerek, size=n)
-        for i in bas:
-            ham = np.asarray(t[int(i):int(i) + gerek], np.int64)
+        eski = onceki.get(ad) or {}
+        yer = int(eski.get("belirteç", 0) or 0)
+        if yer >= t.size - gerek:
+            yer = 0
+        okunan = 0
+        for _ in range(max(0, n)):
+            if yer >= t.size - gerek:
+                yer = 0
+            ham = np.asarray(t[yer:yer + gerek], np.int64)
+            yer += gerek
+            okunan += gerek
             akis = tip_vektoru(ham, tb, bs)
             if akis.size < int(pencere) + 1:
                 continue
             cift.append(([int(x) for x in akis[:int(pencere)]],
                          int(akis[int(pencere)]), "sözlü"))
-    return cift[:int(azami)]
+        yeni[ad] = {"belirteç": int(yer), "bayt": int(yer) * 4,
+                    "boy": int(t.size), "boy_bayt": int(t.size) * 4,
+                    "okunan": int(okunan),
+                    "devir": int(eski.get("devir", 0) or 0)
+                             + (1 if yer < int(eski.get("belirteç", 0) or 0)
+                                else 0),
+                    "nispet": float(yer) / float(max(int(t.size), 1))}
+    cift = cift[:int(azami)]
+    return (cift, yeni) if ne == "imleçli" else cift
 
 
 def kulliyat_dokumu(kaynaklar: Optional[Sequence[Kaynak]] = None

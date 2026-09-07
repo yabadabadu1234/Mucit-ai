@@ -2,7 +2,55 @@ from __future__ import annotations
 
 from typing import Dict, Optional
 
-__all__ = ["talim_beyani", "cikarim_beyani", "kaggle_beyani"]
+__all__ = ["talim_beyani", "cikarim_beyani", "kaggle_beyani",
+           "sifir_beyani", "devam_metni"]
+
+
+def _bayt(n) -> str:
+    n = float(n or 0)
+    for birim in ("B", "KB", "MB", "GB", "TB"):
+        if n < 1024.0 or birim == "TB":
+            return "%.1f %s" % (n, birim)
+        n /= 1024.0
+    return "%.1f TB" % n
+
+
+def devam_metni(devam: Dict[str, object],
+                imlec: Dict[str, object]) -> str:
+    s = ["  TÂLİM HÂLİ -- TEK DOSYA, DEVAM ESAS (ferman 1-Y)"]
+    if devam.get("yüklendi"):
+        s += ["    hazine    : DEVAM EDİLDİ  (%s, %s)"
+              % (devam.get("yol"), _bayt(devam.get("bayt"))),
+              "    tur       : %d. tur  (kaldığı kayıp %s)"
+              % (int(devam.get("tur", 0) or 0) + 1,
+                 ("%.4f" % float(devam["kaldığı_kayıp"]))
+                 if devam.get("kaldığı_kayıp") is not None else "—")]
+    else:
+        s += ["    hazine    : YOK -- rastgele p₀ ile İLK TUR",
+              "    sebep     : %s" % (devam.get("sebep") or "—")]
+    if imlec:
+        s += ["    İMLEÇ -- külliyatın hangi baytında kalındı:"]
+        for ad in sorted(imlec):
+            v = imlec[ad] or {}
+            s += ["      %-46s %s / %s  (%%%.2f, %d. devir)"
+                  % (ad[:46], _bayt(v.get("bayt")),
+                     _bayt(v.get("boy_bayt")),
+                     100.0 * float(v.get("nispet", 0.0)),
+                     int(v.get("devir", 0) or 0))]
+    else:
+        s += ["    İMLEÇ     : yok -- külliyat okunmadı"]
+    return "\n".join(s + [""])
+
+
+def sifir_beyani(o: Dict[str, object]) -> str:
+    if o.get("vardı"):
+        return ("\n=== TÂLİM HAZİNESİ SIFIRLANDI ===\n\n"
+                "  silinen : %s  (%s)\n"
+                "  Sonraki tâlim rastgele p₀ ile ve imleç sıfırdan "
+                "başlar.\n" % (o.get("yol"), _bayt(o.get("bayt"))))
+    return ("\n=== SIFIRLANACAK BİR ŞEY YOK ===\n\n"
+            "  aranan : %s\n  Hazine zaten yok; sonraki tâlim ilk "
+            "turdur.\n" % (o.get("yol"),))
 
 
 def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
@@ -26,7 +74,9 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               ""]
     if kulli:
         d = kulli["değerlendirme"]
-        s += ["  KÜLLÎ KAYIP TÂLİMİ -- TEK HAT",
+        s += [devam_metni(kulli.get("devam") or {},
+                          kulli.get("imleç") or {}),
+              "  KÜLLÎ KAYIP TÂLİMİ -- TEK HAT",
               "    parametre      : %d" % kulli["parametre"],
               "    veri örneği    : %d" % kulli["veri"],
               "    kayıp çağrısı  : %d" % kulli["kayıp_çağrısı"],
