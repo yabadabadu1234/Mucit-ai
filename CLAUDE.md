@@ -444,6 +444,78 @@ Cinse göre ayrı ayrı hata fonksiyonu yoktur. Ferman 1-R'nin
 
 ---
 
+## ▓▓▓ 1-T. FERMAN: KLONLANAMAZLIK KALDIRILDI -- ZAYIF ÖLÇÜM ÇÖPE ▓▓▓
+
+> *"Ne de olsa gerçek kuantum değil bu, eğer doğruluğa bir halel
+> getirmeyecekse şu zayıf ölçüm fasa fiso işlerini **çöpe at**, sadece
+> nihai cevabı vermek için kullanalım ama düşünürken durum bozulmasın
+> diye hafif ölçüm yapmamıza gerek yok, **klonlarsın durumu**, ordan
+> bakıp devam edersin. Ne de olsa klonlanamazlık da fizikî bir şey
+> değil mi, ihlâl etsen kuantum bilgisayarda çalışmaz ama bence
+> doğruluğa halel de getirmez."*
+
+* **ZAYIF ÖLÇÜM (POVM, hafif okuma) İMHA EDİLDİ.** Bir alanı "durumu
+  bozmadan" okumak için zayıf ölçüm kurmak, simülasyonda hem pahalı
+  hem manasızdır: bozulacak fizikî bir durum yoktur, `numpy` dizisi
+  vardır.
+* **YERİNE KLON.** Ölçülecek şey **kopyalanır** (`psi.copy()`), ölçüm
+  klonun üstünde **tam** yapılır, asıl akış hiç dokunulmadan devam
+  eder. Ölçüm artık ne durumu bozar ne de yaklaşıktır.
+* **KLONLANAMAZLIK (no-cloning) BU PROJEDE BAĞLAYICI DEĞİLDİR** ve bu
+  açıkça ilan edilir: kod gerçek bir kuantum donanımında bu hâliyle
+  koşmaz. Karşılığında alınan şey **doğruluk ve hızdır**; kaybedilen
+  şey donanım taşınabilirliğidir ve kaybedildiği yazılıdır.
+* **İSTİSNA: NİHAÎ CEVAP.** Ölçüm-çökmesi yalnız cevabın kendisi
+  verilirken (`nefs/soyle.py` belirteç üretimi) manalıdır; orada
+  ölçüm hakikaten hükümdür ve klonla kaçılmaz.
+
+---
+
+## ▓▓▓ 1-U. FERMAN: MECLİS YASAĞI -- HER MELEKE AYRI KEFEDİR ▓▓▓
+
+> *"Anladığım kadarıyla sen o 41 melekeyi hâlâ tek mecliste toplayıp
+> sözleştiriyorsun, **bu yasaktır demedik mi**, her meleke ayrı
+> kategori bir iş yapar, tıpkı mantık gibi, tenakuz gibi demedik mi?"*
+
+Meclis yasağı **bir kere daha ihlâl edildi ve bu sefer kayıp
+fonksiyonunun içinde**: 41 melekenin ölçüsü `zayif_halka(...,
+ne="azamî")` ile **tek bir skalere** indiriliyordu (`ℒ_Meleke`). Adı
+"zayıf halka" olsa da yaptığı iş meclisin ta kendisidir: kırk bir ayrı
+kategorideki iş, bir sandalyeye ve bir sayıya iniyordu.
+
+* **TEK SAYIYA İNDİRMEK YASAKTIR.** Yumuşak azamî, ortalama, softmax,
+  norm -- hangi ad altında olursa olsun, kırk bir melekeyi bir skalere
+  toplayan her terkip meclistir.
+* **HER MELEKE KENDİ KEFESİDİR.** `ℒ_Çevrim` nasıl ayrı bir kefe ise,
+  `𝒪₇` de ayrı bir kefedir. Mizan bir **kefeler listesidir**, bir
+  toplam değil.
+* **NİÇİN.** Meclis melekeyi meleke olmaktan çıkarır: ne okuduğu, ne
+  yazdığı, hangi lifte durduğu o tek sayının içinde kaybolur -- ve
+  bir melekenin ölmesi kırkının içinde görünmez olur. Bu, evvelce
+  `KulliMelekeManifoldu` imha edilirken verilen hükmün aynısıdır.
+
+---
+
+## ▓▓▓ 1-V. FERMAN: HATA VEKTÖRDÜR -- TÜREV ALMIYORUZ ▓▓▓
+
+> *"Biz türev almadığımız için **bundan sonra** hatalarımızı kendimiz
+> **vektör olarak** hesaplamalıyız."*
+
+* Kayıp bir **skaler değildir**; artıkların **vektörüdür**:
+  `ℒ = (ℓ₁, ℓ₂, …, ℓ_m)`. Her bileşen bir kefenin (yahut bir
+  melekenin) kendi hatasıdır.
+* **NİÇİN VEKTÖR.** Skaler kayıp, gradyanı olan bir motor içindir:
+  türev zinciri o tek sayıdan geriye akar. Bizde türev **yoktur**
+  (`ogrenme/optimize.py` türevsiz koşar), o hâlde tek sayıya inmenin
+  hiçbir faydası yok, bütün zararı vardır: bileşenler birbirini örter
+  ve hangi yönün iyileştiği görünmez.
+* Toplama **ancak en son**, eniyileyicinin bir sıralama istediği yerde
+  yapılır ve o toplama **açıkça** yazılır -- kaybın kendisi vektör
+  kalır. Ferman 1-U'nun tabiî neticesidir: meclis kurulmayınca kayıp
+  zaten vektördür.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

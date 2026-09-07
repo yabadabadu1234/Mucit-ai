@@ -54,7 +54,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 __all__ = ["Kaynak", "KAYNAKLAR", "kulliyat_cek", "kulliyat_verisi",
            "kulliyat_beyani", "kulliyat_dokumu", "mucit_cevir",
-           "mucit_ac", "yer_ac", "bos_alan",
+           "mucit_ac", "hf_boru", "yer_ac", "bos_alan",
            "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
 
 #: Külliyatın indiği yer. **Depoya girmez** (``.gitignore``).
@@ -406,9 +406,54 @@ def _parquet_akit(yol: str, kod, ch) -> Tuple[int, int]:
     return n, 1
 
 
+def _metin_akit(yol: str, kod, ch, obek_bayt: int = 8 << 20
+                ) -> Tuple[int, int]:
+    """Bir metin dosyasını **öbek öbek** belirteçleyip çıktıya akıt.
+
+    ``mucit_cevir``in gövdesinden **ayrıldı** ve sebebi ferman 1-O'dur:
+    boru hattı artık dizin yürüyüşüne bağlı değil, dosya başına
+    çağrılabilir. Böylece bir kaynak, dosyası indirildikçe çevrilip
+    hamı **derhal bırakılabilir** -- koşucunun diski dolmaz.
+    """
+    import numpy as np
+    if yol.endswith(".parquet"):
+        return _parquet_akit(yol, kod, ch)
+    try:
+        fh = open(yol, "rb")
+    except OSError:
+        return 0, 0
+    n = 0
+    with fh:
+        artik = b""
+        while True:
+            parca = fh.read(int(obek_bayt))
+            if not parca:
+                break
+            parca = artik + parca
+            # **UTF-8 SINIRINDA KESME.** Çok baytlı bir harfin
+            # ortasından bölmek o harfi bozar ve belirteçleme sessizce
+            # başka bir şey okur. Son dört bayt sonraki öbeğe devredilir.
+            artik, parca = parca[-4:], parca[:-4]
+            if not parca:
+                continue
+            t = kod.encode(parca.decode("utf-8", "replace"),
+                           disallowed_special=())
+            if t:
+                ch.write(np.asarray(t, np.uint32).tobytes())
+                n += len(t)
+        if artik:
+            t = kod.encode(artik.decode("utf-8", "replace"),
+                           disallowed_special=())
+            if t:
+                ch.write(np.asarray(t, np.uint32).tobytes())
+                n += len(t)
+    return n, 1
+
+
 def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
                 uzantilar: Sequence[str] = (), ad: str = "",
-                obek_bayt: int = 8 << 20) -> Dict[str, Any]:
+                obek_bayt: int = 8 << 20,
+                getirici=None) -> Dict[str, Any]:
     """Ham metni **bizim biçime** çevir: tiktoken belirteçleri, tek dosya.
 
     ===================================================================
@@ -455,7 +500,37 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
         ch.write(MUCIT_DAMGA)
         yer = ch.tell()
         ch.write(b" " * 320 + b"\n")
-        for kk, _dd, ff in os.walk(kok):
+        # ══════════════════════════════════════════════════════════
+        #  GETİRİCİ -- BORU HATTININ DAR KAP TARAFI (ferman 1-O)
+        # ══════════════════════════════════════════════════════════
+        #
+        # ``getirici`` verilirse dizin **yürünmez**: her dosya sırası
+        # gelince getirilir, çevrilir ve **derhal bırakılır**. Getirici
+        # ``(yerel_yol, birak)`` çiftleri veren bir yineleyicidir;
+        # ``birak()`` hamı siler.
+        #
+        # NİÇİN LÂZIM OLDU (ölçüldü): GitHub Actions koşucusu bütün
+        # kaynağı ``snapshot_download`` ile indirip sonra çevirince
+        # ``No space left on device (os error 28)`` verdi. Kaynak da
+        # netice de aynı diskte duruyordu; hâlbuki hamın hepsinin bir
+        # arada durmasına hiç lüzum yok. Adı boru hattıydı, fiili bir
+        # havuzdu -- aynı ders kapta da öğrenilmişti.
+        if getirici is not None:
+            for y, birak in getirici:
+                if uz and not str(y).endswith(uz):
+                    if birak is not None:
+                        birak()
+                    continue
+                try:
+                    n_m, d_m = _metin_akit(y, kod, ch, int(obek_bayt))
+                finally:
+                    # **HAM DAİMA BIRAKILIR**, çeviri düşse de: yer
+                    # açılmazsa sonraki dosya zaten inemez.
+                    if birak is not None:
+                        birak()
+                n += n_m
+                dosya += d_m
+        for kk, _dd, ff in (() if getirici is not None else os.walk(kok)):
             for f in sorted(ff):
                 if uz and not f.endswith(uz):
                     continue
@@ -477,36 +552,9 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
                     n += n_p
                     dosya += d_p
                     continue
-                try:
-                    fh = open(y, "rb")
-                except OSError:
-                    continue
-                with fh:
-                    artik = b""
-                    while True:
-                        parca = fh.read(int(obek_bayt))
-                        if not parca:
-                            break
-                        parca = artik + parca
-                        # **UTF-8 SINIRINDA KESME.** Çok baytlı bir
-                        # harfin ortasından bölmek o harfi bozar ve
-                        # belirteçleme sessizce başka bir şey okur.
-                        # Son dört bayt sonraki öbeğe devredilir.
-                        artik, parca = parca[-4:], parca[:-4]
-                        if not parca:
-                            continue
-                        t = kod.encode(parca.decode("utf-8", "replace"),
-                                       disallowed_special=())
-                        if t:
-                            ch.write(np.asarray(t, np.uint32).tobytes())
-                            n += len(t)
-                    if artik:
-                        t = kod.encode(artik.decode("utf-8", "replace"),
-                                       disallowed_special=())
-                        if t:
-                            ch.write(np.asarray(t, np.uint32).tobytes())
-                            n += len(t)
-                dosya += 1
+                n_m, d_m = _metin_akit(y, kod, ch, int(obek_bayt))
+                n += n_m
+                dosya += d_m
         bas = json.dumps({"kodlama": kodlama, "sözlük": V,
                           "belirteç": int(n), "kaynak": ad or kok,
                           "dosya": int(dosya)},
@@ -518,6 +566,86 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
     return {"yol": cikti, "belirteç": n, "dosya": dosya,
             "kodlama": kodlama, "sözlük": V}
 
+
+
+def hf_boru(kimlik: str, cikti: str, kodlama: str = "o200k_base",
+            alt_yol: str = "", uzantilar: Sequence[str] = (),
+            jeton: Optional[str] = None,
+            gecici_dizin: str = "hf_parca") -> Dict[str, Any]:
+    """HuggingFace veri setini **dosya dosya** çekip çevir, hamı bırak.
+
+    ===================================================================
+    NİÇİN: KOŞUCUNUN DİSKİ DOLUYORDU (ÖLÇÜLDÜ)
+    ===================================================================
+
+    İş akışı evvelce ``snapshot_download`` ile **bütün** kaynağı
+    indiriyor, sonra çeviriyordu. Netice::
+
+        RuntimeError: Task error: File reconstruction error:
+        IO Error: No space left on device (os error 28)
+
+    O disk bizim kabın değil, **GitHub koşucusunun** diskidir ve
+    ubuntu-latest'te on dört gigabayt civarı boştur. Ham kaynak ile
+    çevrilmiş netice aynı diskte yan yana duruyordu; hâlbuki hamın
+    hepsinin bir arada durmasına hiç lüzum yoktu.
+
+    Ferman 1-O'nun hükmü buydu ve koşucuya da aynen tatbik edilir:
+    *"boru hattı kurup işini bitire bitire alacaksın ama verisetinin
+    tamamı o repoda duracak."* Depoya (Release'e) çıkan **çevrilmiş
+    külliyatın tamamıdır**; kesilen şey yalnız o an diskte duran
+    penceredir -- bir dosya.
+
+    Akış: depo dosyaları listelenir → biri indirilir → çevrilir →
+    **silinir** → sonraki. Diskte bir seferde tek dosya durur.
+    """
+    from huggingface_hub import HfApi, hf_hub_download
+
+    api = HfApi(token=jeton or None)
+    hepsi = [f for f in api.list_repo_files(kimlik, repo_type="dataset")
+             if not f.endswith("/")]
+    if alt_yol:
+        on = alt_yol.strip("/") + "/"
+        hepsi = [f for f in hepsi if f.startswith(on)]
+    uz = tuple(uzantilar)
+    if uz:
+        hepsi = [f for f in hepsi if f.endswith(uz)]
+    # **BOŞ LİSTE SESSİZCE GEÇİLMEZ** (ferman 5): çevrilecek bir şey
+    # yoksa iş akışı burada durur ve **niçin** durduğunu söyler.
+    assert hepsi, (
+        "``%s`` deposunda çevrilecek dosya yok: alt_yol=%r uzantı=%r. "
+        "Depoda bulunan uzantılar: %s"
+        % (kimlik, alt_yol, uz,
+           sorted({os.path.splitext(f)[1] or "(uzantısız)"
+                   for f in api.list_repo_files(kimlik,
+                                                repo_type="dataset")})))
+    os.makedirs(gecici_dizin, exist_ok=True)
+    sayac = {"indi": 0, "bayt": 0}
+
+    def _akis():
+        for f in sorted(hepsi):
+            y = hf_hub_download(kimlik, f, repo_type="dataset",
+                                local_dir=gecici_dizin, token=jeton or None)
+            sayac["indi"] += 1
+            try:
+                sayac["bayt"] += int(os.path.getsize(y))
+            except OSError:
+                pass
+
+            def _birak(_y=y):
+                # Ham **derhal** silinir; sembolik bağ varsa hedefi de.
+                for hedef in {_y, os.path.realpath(_y)}:
+                    try:
+                        os.remove(hedef)
+                    except OSError:
+                        pass
+            yield y, _birak
+
+    o = mucit_cevir("", cikti, kodlama, uzantilar=uz, ad=kimlik,
+                    getirici=_akis())
+    shutil.rmtree(gecici_dizin, ignore_errors=True)
+    o["inen_dosya"] = int(sayac["indi"])
+    o["inen_bayt"] = int(sayac["bayt"])
+    return o
 
 
 def mucit_ac(yol: str, kodlama: str = "o200k_base"):

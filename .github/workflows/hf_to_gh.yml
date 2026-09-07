@@ -104,67 +104,74 @@ jobs:
             echo "HF_TOKEN sırrı konmamış -- yalnız umumi depolar inebilir."
           fi
 
-      - name: Hugging Face verisini indir
-        env:
-          HF_REPO_ID: ${{ inputs.hf_repo_id }}
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      # ══════════════════════════════════════════════════════════
+      #  KOŞUCUNUN DİSKİ AÇILIR -- ÖLÇÜLDÜ, DOLUYORDU
+      # ══════════════════════════════════════════════════════════
+      #
+      #   RuntimeError: File reconstruction error:
+      #   IO Error: No space left on device (os error 28)
+      #
+      # ubuntu-latest'te ~14 GB boş alan vardır ve onun bir kısmını
+      # koşucunun kendi kurulu takımları tutar (.NET, GHC, Android
+      # SDK, CodeQL) -- hiçbiri bu işte kullanılmaz. Silinince ~25 GB
+      # açılır. Bu bir budama değil, **kabın genişletilmesidir**;
+      # veriye dokunulmaz (ferman 1-O).
+      - name: Koşucunun diskini aç (veriye DOKUNULMAZ)
         run: |
-          python - <<'PY'
-          import os
-          from huggingface_hub import snapshot_download
-          yol = snapshot_download(
-              repo_id=os.environ["HF_REPO_ID"],
-              repo_type="dataset",
-              local_dir="./hf_data",
-              token=os.environ.get("HF_TOKEN") or None,
-              max_workers=8,
-          )
-          print("indi:", yol)
-          PY
-          du -sh ./hf_data
-          echo "--- envanter (uzantı sayımı) ---"
-          find ./hf_data -type f | sed 's|.*/||; s|^[^.]*||' | sort | uniq -c | sort -rn | head -20
+          echo "--- evvel ---"; df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android \
+                      /usr/local/share/boost /opt/hostedtoolcache/CodeQL \
+                      /usr/local/.ghcup || true
+          sudo apt-get clean || true
+          echo "--- sonra ---"; df -h / | tail -1
 
       # ══════════════════════════════════════════════════════════
-      #  BİZİM FORMAT ÇEVİRİCİ -- ``main/kulliyat.py:mucit_cevir``
+      #  BORU HATTI -- ``main/kulliyat.py:hf_boru`` (ferman 1-O)
       # ══════════════════════════════════════════════════════════
       #
       # Çevirici **depodan** çağrılır, burada yeniden yazılmaz: iki
       # nüsha olsaydı hangisinin koştuğu belirsiz olurdu (ferman 1-E)
       # ve biri ötekinden kayınca tâlim başka bir belirteç uzayı
       # okurdu -- ``mucit_ac``ın sözlük denetimi tam da onun içindir.
-      - name: Bizim biçime çevir (mucit_cevir)
+      #
+      # ``snapshot_download`` **kesildi**: bütün kaynağı indirip sonra
+      # çevirmek, adı boru hattı olan bir havuzdu ve koşucunun diskini
+      # doldurdu. ``hf_boru`` dosya dosya indirir, çevirir ve hamı
+      # **derhal siler**; diskte bir seferde tek dosya durur. Veri
+      # kesilmez -- Release'e çıkan çevrilmiş külliyatın tamamıdır.
+      - name: Çek-çevir-bırak (hf_boru)
         env:
           HF_REPO_ID: ${{ inputs.hf_repo_id }}
           KODLAMA: ${{ inputs.kodlama }}
           ALT_YOL: ${{ inputs.alt_yol }}
           UZANTI: ${{ inputs.uzanti }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           python - <<'PY'
           import os, sys
           sys.path.insert(0, os.getcwd())
-          from main.kulliyat import mucit_cevir, MUCIT_UZANTI
+          from main.kulliyat import hf_boru, MUCIT_UZANTI
 
           kimlik = os.environ["HF_REPO_ID"]
           ad = kimlik.replace("/", "__")
-          kok = os.path.join("hf_data", os.environ.get("ALT_YOL") or "")
           uz = tuple(u.strip() for u in os.environ["UZANTI"].split(",")
                      if u.strip())
-          cikti = ad + MUCIT_UZANTI
-          o = mucit_cevir(kok, cikti, os.environ["KODLAMA"],
-                          uzantilar=uz, ad=kimlik)
+          o = hf_boru(kimlik, ad + MUCIT_UZANTI, os.environ["KODLAMA"],
+                      alt_yol=os.environ.get("ALT_YOL") or "",
+                      uzantilar=uz,
+                      jeton=os.environ.get("HF_TOKEN") or None)
           print("ÇEVRİLDİ:", o)
-          # **BOŞ ÇIKTI SESSİZCE GEÇİLMEZ** (ferman 5): hiçbir dosya
-          # uzantıya uymadıysa yüklenecek şey yoktur ve iş akışı
-          # burada KIRMIZI yanar, boş bir varlık yüklemez.
+          # **BOŞ ÇIKTI SESSİZCE GEÇİLMEZ** (ferman 5): çevrilecek bir
+          # şey yoksa iş akışı KIRMIZI yanar, boş bir varlık yüklemez.
           assert o["belirteç"] > 0, (
-              "çeviri boş çıktı: '%s' yolunda %s uzantılı dosya yok"
-              % (kok, "/".join(uz)))
+              "çeviri boş çıktı: inen %d dosya, %d bayt"
+              % (o["inen_dosya"], o["inen_bayt"]))
           with open(os.environ["GITHUB_ENV"], "a") as f:
               f.write("MUCIT_AD=%s\n" % ad)
               f.write("MUCIT_BELIRTEC=%d\n" % o["belirteç"])
               f.write("MUCIT_DOSYA=%d\n" % o["dosya"])
           PY
+          df -h / | tail -1
           ls -lh *.mucit
 
       # Release varlığı başına 2 GB haddi vardır; çevrilmiş külliyat
