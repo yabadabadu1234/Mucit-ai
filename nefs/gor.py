@@ -21,7 +21,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-from .musahede import Gorev, ayir, bak, genlige_gom, kaide, kalip
+from .musahede import Gorev, ayir, bak, genlige_gom, kaide
 
 __all__ = ["Manzara", "gor"]
 
@@ -37,17 +37,29 @@ class Manzara:
     ad: str = ""
     girdi: Optional[np.ndarray] = None      # ham ızgara
     duyu: Any = None                        # ``bak``ın on beş kanalı
-    kalip: Optional[Tuple[int, int]] = None  # çıktı kaç satır kaç sütun
-    kalip_kaidesi: str = "sükût"            # o kalıbı hangi kaide verdi
+    # **KALIP KESTİRİMİ İMHA EDİLDİ (ferman 1-P).**
+    #
+    #     "Bana satır sütun tahmini için ayrı bir mimarinin koştuğunu
+    #     söyledin, sil dedim... artık tek bir model var, satır sütun
+    #     diye bir şey yok, elimizde sadece bir llm var!!!"
+    #
+    # Burada ``kalip`` (çıktı kaç satır kaç sütun) ve
+    # ``kalip_kaidesi`` duruyordu; ``sukut`` da onlardan doğuyordu.
+    # Yâni model konuşmadan evvel **ayrı bir mimari** ızgaranın
+    # ebadını kestiriyor, kestiremeyince model susturuluyordu.
+    # Ölçüldü ve neticesi buydu: *"kalıp bilinmiyor -- çıktının ebadı
+    # kestirilemedi"* iki görevin birinde sükût sebebiydi.
+    #
+    # Ebat da modelin yazdığı metinden çıkar: model ızgarayı yazar,
+    # ``metin_izgara`` okur, okunamazsa **yanlış cevap** sayılır.
     sahitler: Optional[List[Any]] = None    # otonom bölütleme
     kulli_kaide: Optional[np.ndarray] = None  # şahitlerin ortak kaidesi
     genlik: Optional[np.ndarray] = None     # QTT gömmesi
     sukut: bool = False                     # kalıp bulunamadıysa doğru
 
     def __repr__(self) -> str:              # pragma: no cover
-        return ("Manzara(%r, kalıp=%s [%s], şahit=%d, sükût=%s)"
-                % (self.ad, self.kalip, self.kalip_kaidesi,
-                   len(self.sahitler or []), self.sukut))
+        return ("Manzara(%r, şahit=%d, sükût=%s)"
+                % (self.ad, len(self.sahitler or []), self.sukut))
 
 
 def gor(gorev: Optional[Gorev] = None, izgara=None,
@@ -59,8 +71,7 @@ def gor(gorev: Optional[Gorev] = None, izgara=None,
     1. ``bak``    -- on beş kanallı mübser duyu (ışık, levn, mekân,
                      bağlantı, doku, nesneler, bu'd, süreklilik,
                      tenâsüb, emsâl, şeffâfiyet, aykırılık…).
-    2. ``kalip``  -- çıktı kaç satır kaç sütun olacak. Evvelâ kesirli
-                     kaide, sonra cetvel, ikisi de tutmazsa **sükût**.
+    2. (kalıp kestirimi **İMHA EDİLDİ** -- ferman 1-P)
     3. ``ayir``   -- şahitleri otonom bölütle (ayıraç aramadan,
                      medyan + 3·MAD kopmalarından).
     4. ``kaide``  -- şahitlerin ortak kaidesi (Procrustes).
@@ -71,12 +82,11 @@ def gor(gorev: Optional[Gorev] = None, izgara=None,
     ==============  ==================================================
     ``manzara``     ``Manzara`` -- hepsi
     ``duyu``        yalnız ``bak``ın neticesi (ucuz)
-    ``kalıp``       yalnız ``(boyut, kaide_adı)``
     ==============  ==================================================
 
-    **Sükût buradan başlar.** Kalıp bulunamazsa ``Manzara.sukut``
-    doğrudur ve ``soyle`` onu görüp susar. Uydurma bir boyut vermek,
-    bilmediğini söylememekten kötüdür (H10).
+    **SÜKÛT ARTIK BURADAN BAŞLAMAZ** (ferman 1-P): ebat kestirimi
+    imha edildi. Susma hükmü ``nefs/suphe.py``nin teâruz ölçüsünden
+    gelir -- yâni modelin kendi hükmünden, ayrı bir mimariden değil.
     """
     if izgara is None and gorev is not None:
         izgara = np.asarray(gorev.sinama[0][0] if gorev.sinama
@@ -89,11 +99,11 @@ def gor(gorev: Optional[Gorev] = None, izgara=None,
     if ne == "duyu":
         return duyu
 
-    boyut, kaide_adi = (None, "sükût")
-    if gorev is not None:
-        boyut, kaide_adi = kalip(gorev.egitim, izgara)
     if ne == "kalıp":
-        return boyut, kaide_adi
+        raise ValueError(
+            "``gor(ne='kalıp')`` İMHA EDİLDİ (ferman 1-P): ızgaranın "
+            "ebadını kestiren ayrı bir mimari yoktur. Ebat modelin "
+            "yazdığı metinden çıkar.")
 
     sahitler = None
     kulli = None
@@ -115,9 +125,11 @@ def gor(gorev: Optional[Gorev] = None, izgara=None,
     return Manzara(
         ad=(gorev.ad if gorev is not None else ""),
         girdi=izgara, duyu=duyu,
-        kalip=(tuple(boyut) if boyut is not None else None),
-        kalip_kaidesi=str(kaide_adi),
         sahitler=sahitler or None,
         kulli_kaide=kulli, genlik=genlik,
-        sukut=(boyut is None),
+        # **SÜKÛT ARTIK KALIPTAN DOĞMAZ** (ferman 1-P). Manzara
+        # görmenin neticesidir; susup susmamaya ``nefs/suphe.py``
+        # karar verir (teâruz ölçüsü). Ebadı kestiremediği için
+        # susan bir model, hiç konuşmayan bir modeldir.
+        sukut=False,
     )

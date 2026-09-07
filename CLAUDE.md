@@ -358,6 +358,64 @@ dışarıda tutup tahtı fakir bırakıyordu.
 
 ---
 
+## ▓▓▓ 1-P. FERMAN: TEK MODEL -- SATIR/SÜTUN DİYE BİR ŞEY YOK ▓▓▓
+
+> *"Bana satır sütun tahmini için ayrı bir mimarinin koştuğunu
+> söyledin, sil dedim, sen kendi içindeki tenakuzunu giderdin. Ahmak,
+> **artık tek bir model var**, satır sütun diye bir şey yok, elimizde
+> **sadece bir llm var**!!!"*
+
+* Izgaranın ebadını (satır, sütun) kestiren **hiçbir yardımcı mimari
+  yoktur**. Ebat da modelin söylediği metinden çıkar: model ızgarayı
+  yazar, ayrıştırıcı okur. Ayrı bir "ölçü kestirimi" kolu açmak,
+  ferman 6'nın yasakladığı göreve mahsus çözücüdür.
+* *"Kalıp bilinmiyor -- çıktının ebadı kestirilemedi"* diye bir sükût
+  sebebi olamaz: model konuşur, konuştuğu ayrıştırılır, ayrıştırılamazsa
+  **yanlış cevap** sayılır. Ebat kestirilmez.
+
+---
+
+## ▓▓▓ 1-R. FERMAN: TEK MOTOR, İKİ VERİ CİNSİ ▓▓▓
+
+> *"Bundan sonra eğitimimizde temel esasımız iki türlü olmalı ama
+> **her iki türü de çalıştırmalıyız**... Yukarıda dediklerimden sakın
+> yanlış bir şey anlama, **iki farklı motor kurmuyoruz asla**, sadece
+> motora girecek verinin **cinsine göre** bir ayrım yapıyoruz."*
+
+Motor tektir (ferman 1-H). Ayrım motorda değil, **suâldedir**:
+
+### (a) ARC CİNSİ -- "bu bulmacanın testine ne verirsin?"
+
+Sual: *"Şu bulmacanın şu giriş/çıkışları verildiğinde teste çıkış
+olarak ne verirsin?"* Beklenen cevap **ızgaranın kendisidir** ve
+orada **yüzde yüz uyum aranır**. O hâlde mizana, hedefe sadakati
+ölçen bir kefe girer (negatif olabilirlik / çapraz düzensizlik yahut
+2026 literatürünün daha iyisi).
+
+Veride ızgaradan başka **sözlü çözüm** varsa (soyutlama metni), onun
+da çıkması hedeflenir ve orada **bizim aynı mizanımız** koşar --
+sadakat kefesi sözlü kanatta da vardır fakat hüküm ızgaradaki gibi
+kat'î değildir.
+
+### (b) SÖZLÜ CİNS -- "sen olsan ne söylerdin?"
+
+Sual: *"Sen olsan bu çıktı yerine ne söylerdin?"* Burada çıktının
+**sonraki veriye uyması beklenmez**: kıyaslanan şey, modelin girişte
+aldığı veri ile çıkışta **tekrar ürettiği** veridir. Yâni sözlü veri
+**eğitim/test diye bölünmez** -- her metin hem sual hem şahittir.
+
+### HÜKÜM
+
+* İki cins **aynı tâlimde beraber koşar**; biri ötekinin yerine geçmez.
+* İki cins için **iki ayrı motor, iki ayrı kayıp, iki ayrı yazmaç
+  yoktur**. Değişen tek şey: hedefin nereden geldiği ve sadakat
+  kefesinin ne kadar kat'î olduğu.
+* ARC verisi böylece **daha verimli** kullanılır (aynı görevden hem
+  ızgara hem sözlü çözüm hedefi çıkar), sözlü veri ise bölünmeden
+  tamamı tâlime girer.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

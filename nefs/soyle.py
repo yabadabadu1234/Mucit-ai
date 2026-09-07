@@ -239,10 +239,12 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
             raise ValueError("söyleme kipi bilinmiyor: %r" % (ne,))
         return c
 
-    if manzara.sukut:
-        return _bitir(Cevap(
-            gorev=gorev.ad, sukut=True,
-            sebep="kalıp bilinmiyor -- çıktının ebadı kestirilemedi"))
+    # **EBAT KESTİRİLEMEDİĞİ İÇİN SUSMAK İMHA EDİLDİ** (ferman 1-P).
+    # Burada ``if manzara.sukut: sükût`` duruyordu ve sebebi *"kalıp
+    # bilinmiyor -- çıktının ebadı kestirilemedi"* idi. Yâni model
+    # konuşmadan evvel ayrı bir mimari ızgaranın satır/sütununu
+    # kestiriyor, kestiremeyince model **susturuluyordu**. Artık model
+    # konuşur; yazdığı ayrıştırılamazsa yanlış cevap sayılır.
 
     if motor == "mps" and nefs is None:
         return _bitir(Cevap(

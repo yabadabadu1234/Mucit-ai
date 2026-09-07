@@ -672,9 +672,8 @@ class Idrak:
     ciftler: List[Tuple[Izgara, Izgara]]
     girdiler: List[Izgara]
     nesne_sayisi: List[int] = field(default_factory=list)
-    olcu: Optional[Tuple[int, int]] = None      # kestirilen çıktı ölçüsü
-    olcu_sebebi: str = ""
-    sekil_kaidesi: Optional[str] = None
+    # ``olcu``/``olcu_sebebi``/``sekil_kaidesi`` İMHA EDİLDİ (1-P):
+    # ızgaranın ebadını kestiren ayrı bir mimari yoktur.
     ayni_sekil: bool = False
 
 
@@ -809,33 +808,28 @@ class Kademeler:
                                bak(ciftler[0][1]))
         self._dene("nefs.mubser", _mubser)
 
-        def _boyut():
-            from .musahede import kalip
-            b, sebep = kalip(ciftler, girdiler[0] if girdiler
-                                    else ciftler[0][0])
-            return (None if b is None else tuple(int(x) for x in b)), sebep
-        r = self._dene("nefs.boyut", _boyut)
-        if r is not None:
-            I.olcu, I.olcu_sebebi = r
-
-        def _sekil():
-            from .musahede import kalip
-            k = kalip(ciftler, ne="şekil")
-            return None if k is None else str(k)
-        I.sekil_kaidesi = self._dene("idrak.sekil", _sekil)
+        # ══════════════════════════════════════════════════════════
+        #  ÖLÇÜ VE ŞEKİL KESTİRİMİ İMHA EDİLDİ (ferman 1-P)
+        # ══════════════════════════════════════════════════════════
+        #
+        #     "Artık tek bir model var, satır sütun diye bir şey yok,
+        #     elimizde sadece bir llm var!!!"
+        #
+        # Burada ``kalip`` çağrılıyor, çıktının satır/sütunu ve şekil
+        # kaidesi kestiriliyor, sonra ``I.olcu``/``I.sekil_kaidesi``
+        # idrakın hatasına giriyordu. Bu, göreve mahsus bir çözücüdür
+        # ve ferman 6 onu zaten yasaklıyordu; 1-P kat'îleştirdi.
+        # Ebat modelin yazdığı metinden çıkar, kestirilmez.
 
         # İdrakın hatası: **belirsizlik**. Ölçü bilinmiyor ve nesne
         # ayrıştırılamıyorsa görülen şey yoktur.
         h = 0.0
-        h += 0.5 if I.olcu is not None else 0.0
         h += 0.3 if I.nesne_sayisi and min(I.nesne_sayisi) > 0 else 0.0
-        h += 0.2 if I.sekil_kaidesi is not None else 0.0
         self._olc("idrak", h)
         self.gunluk.append(
-            "1. İDRAK: %d çift, %s, ölçü %s (%s), şekil kaidesi %s"
+            "1. İDRAK: %d çift, %s  (ölçü/şekil kestirimi İMHA -- 1-P)"
             % (len(ciftler), "aynı şekilli" if I.ayni_sekil
-               else "şekil değişiyor", I.olcu, I.olcu_sebebi or "—",
-               "var" if I.sekil_kaidesi else "yok"))
+               else "şekil değişiyor"))
         return I
 
     # -- 2. TASAVVUR: İdrak → Hâl ------------------------------------
@@ -1059,7 +1053,12 @@ class Kademeler:
 
         # İki müstakil ölçü şahidinin teyidi (1. kademeden gelir).
         # Tek şahitle kalınca ne kadar güvenileceği **öğrenilir**.
-        tam_sahit = (I.olcu is not None and I.sekil_kaidesi is not None)
+        # **ŞAHİDİN TAMLIĞI EBATTAN OKUNMAZ** (ferman 1-P): evvelce
+        # ``I.olcu is not None and I.sekil_kaidesi is not None``
+        # yazıyordu, yâni şahit ancak ebat kestirilebilirse tam
+        # sayılıyordu. Ebat kestirimi imha edildi; tamlık artık
+        # nesnenin fiilen ayrıştırılabilmesidir.
+        tam_sahit = bool(I.nesne_sayisi and min(I.nesne_sayisi) > 0)
         Y.tevafuk = 1.0 if tam_sahit else self._par("kademe.tasdik.tevafuk")
 
         def _makam():
@@ -1128,14 +1127,10 @@ class Kademeler:
             return None
         k = S.kaideler[0]
         cevap = [k(g) for g in I.girdiler]
-        if I.olcu is not None:
-            for c in cevap:
-                if c is not None and tuple(c.shape) != tuple(I.olcu):
-                    self.gunluk.append(
-                        "6. BEYAN: sükût -- kaide %s veriyor, ölçü "
-                        "kestirimi %s diyor; iki hesap uyuşmuyor"
-                        % (tuple(c.shape), tuple(I.olcu)))
-                    return None
+        # **EBAT KIYASI İMHA EDİLDİ (ferman 1-P).** Burada kaidenin
+        # verdiği ızgara ile "ölçü kestirimi" karşılaştırılıyor,
+        # tutmazsa model **susturuluyordu**. İki hesap değil, tek hesap
+        # vardır: modelin yazdığı. Ebadı kestiren ikinci mimari yoktur.
         self.gunluk.append("6. BEYAN: konuşuyorum -- kaide %s, yakîn %.3f"
                            % (getattr(k, "ad", "?"), Y.deger))
         return cevap

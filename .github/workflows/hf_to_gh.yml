@@ -52,9 +52,9 @@ on:
         default: ''
         type: string
       uzanti:
-        description: 'Metin sayılan uzantılar, virgülle (boş = hepsi)'
+        description: 'Metin sayılan uzantılar, virgülle. BOŞ = HEPSİ (uzantıya bakma)'
         required: false
-        default: '.jsonl,.json,.parquet,.txt,.csv,.md'
+        default: ''
         type: string
 
 permissions:
@@ -73,11 +73,41 @@ jobs:
           python-version: '3.11'
 
       - name: Gerekli paketleri yükle
-        run: pip install --quiet huggingface_hub numpy tiktoken
+        run: pip install --quiet huggingface_hub numpy tiktoken pyarrow
+
+      # ══════════════════════════════════════════════════════════
+      #  HF GİRİŞİ -- KAPALI (gated) DEPOLAR İÇİN
+      # ══════════════════════════════════════════════════════════
+      #
+      # Ölçüldü: ``openbmb/UltraData-SFT-2605`` için
+      # ``GatedRepoError: 401 ... Access to dataset is restricted.
+      # You must have access to it and be authenticated``.
+      # Yâni depo umumi değil, **izinli**dir; jeton olmadan inmez.
+      #
+      # **JETON KODA YAZILMAZ.** Depoya gömülen bir jeton, deponun
+      # okunabildiği her yerde ifşadır. GitHub → Settings → Secrets and
+      # variables → Actions → New repository secret:
+      #
+      #     Ad    : HF_TOKEN
+      #     Değer : hf_...
+      #
+      # Jeton konmamışsa iş akışı **düşmez**: umumi depolar yine iner,
+      # kapalı olan ise 401 ile ve **sebebiyle** durur (ferman 5:
+      # sessiz ikame yok).
+      - name: Hugging Face'e giriş (kapalı depolar için)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -n "$HF_TOKEN" ]; then
+            python -c "from huggingface_hub import login; import os; login(token=os.environ['HF_TOKEN'], add_to_git_credential=True); print('HF girişi yapıldı')"
+          else
+            echo "HF_TOKEN sırrı konmamış -- yalnız umumi depolar inebilir."
+          fi
 
       - name: Hugging Face verisini indir
         env:
           HF_REPO_ID: ${{ inputs.hf_repo_id }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           python - <<'PY'
           import os
@@ -86,10 +116,14 @@ jobs:
               repo_id=os.environ["HF_REPO_ID"],
               repo_type="dataset",
               local_dir="./hf_data",
+              token=os.environ.get("HF_TOKEN") or None,
+              max_workers=8,
           )
           print("indi:", yol)
           PY
           du -sh ./hf_data
+          echo "--- envanter (uzantı sayımı) ---"
+          find ./hf_data -type f | sed 's|.*/||; s|^[^.]*||' | sort | uniq -c | sort -rn | head -20
 
       # ══════════════════════════════════════════════════════════
       #  BİZİM FORMAT ÇEVİRİCİ -- ``main/kulliyat.py:mucit_cevir``

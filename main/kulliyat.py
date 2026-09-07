@@ -367,6 +367,45 @@ MUCIT_DAMGA = b"MUCIT2\n"
 MUCIT_UZANTI = ".mucit"
 
 
+def _parquet_akit(yol: str, kod, ch) -> Tuple[int, int]:
+    """Bir ``.parquet`` dosyasının **metin sütunlarını** akıt.
+
+    Parquet bir ikili kaptır: baytını doğrudan belirteçlemek,
+    sıkıştırılmış blokları metin sanmaktır. Kap açılır, **satır öbeği
+    öbek** okunur (ferman 1-O: tek hamlede belleğe alınmaz) ve dizgi
+    tipindeki her sütun belirteçlenir.
+
+    Hangi sütunun metin olduğu **tahmin edilmez**: ``pyarrow`` şemayı
+    söyler. Dizgi olmayan sütunlar (sayı, ikili) atlanır ve atlandığı
+    dönen sayıdan görünür.
+    """
+    import numpy as np
+    try:
+        import pyarrow.parquet as pq
+    except ImportError as e:                              # pragma: no cover
+        raise AssertionError(
+            "``%s`` bir parquet dosyası fakat ``pyarrow`` kurulu değil. "
+            "Sessizce atlamak, verinin bir kısmını gizlice düşürmek "
+            "olurdu (ferman 5). Kurun: ``pip install pyarrow``" % yol) from e
+    dosya = pq.ParquetFile(yol)
+    import pyarrow as pa
+    n = 0
+    for obek in dosya.iter_batches(batch_size=4096):
+        for ad, sut in zip(obek.schema.names, obek.columns):
+            if not (pa.types.is_string(sut.type)
+                    or pa.types.is_large_string(sut.type)):
+                continue
+            metin = "\n".join(str(v) for v in sut.to_pylist()
+                               if v is not None)
+            if not metin:
+                continue
+            t = kod.encode(metin, disallowed_special=())
+            if t:
+                ch.write(np.asarray(t, np.uint32).tobytes())
+                n += len(t)
+    return n, 1
+
+
 def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
                 uzantilar: Sequence[str] = (), ad: str = "",
                 obek_bayt: int = 8 << 20) -> Dict[str, Any]:
@@ -420,8 +459,26 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
             for f in sorted(ff):
                 if uz and not f.endswith(uz):
                     continue
+                y = os.path.join(kk, f)
+                # ══════════════════════════════════════════════════
+                #  PARQUET METİN DEĞİL, KAPTIR -- AÇILIR
+                # ══════════════════════════════════════════════════
+                #
+                # Ölçüldü: HuggingFace veri setlerinin çoğu ``.parquet``
+                # taşır ve o bir **ikili kaptır**. Baytını doğrudan
+                # belirteçlemek, sıkıştırılmış blokları metin sanmaktır:
+                # netice belirteç değil gürültüdür. O hâlde kap açılır
+                # ve **içindeki metin** belirteçlenir.
+                #
+                # Sessiz ikame yasak (ferman 5): ``pyarrow`` yoksa
+                # dosya atlanmaz, koşu **durur** ve sebebi yazılır.
+                if f.endswith(".parquet"):
+                    n_p, d_p = _parquet_akit(y, kod, ch)
+                    n += n_p
+                    dosya += d_p
+                    continue
                 try:
-                    fh = open(os.path.join(kk, f), "rb")
+                    fh = open(y, "rb")
                 except OSError:
                     continue
                 with fh:
