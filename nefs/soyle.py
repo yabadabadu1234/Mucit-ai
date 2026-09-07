@@ -5,7 +5,6 @@ from typing import Any, Dict, List, Optional
 
 import numpy as np
 
-from .gor import Manzara, gor
 from .musahede import gorev_dizisi, ortu
 
 __all__ = ["Cevap", "soyle"]
@@ -110,8 +109,10 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           hafiza=None, ne: str = "cevap") -> Any:
     if gorev is None:
         raise ValueError("söylemek için bir görev lâzım")
-    if manzara is None:
-        manzara = gor(gorev)
+    assert manzara is None, (
+        "``soyle`` manzara ALMAZ (ferman 6): ızgaradan elle çıkarılmış "
+        "nesne/kaide, motorun cevabına karışamaz. Cevap belirteç "
+        "üretiminden gelir.")
 
     def _bitir(c: "Cevap"):
         if ne == "sukut_mu":

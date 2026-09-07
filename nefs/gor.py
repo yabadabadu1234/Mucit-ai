@@ -47,13 +47,6 @@ def gor(gorev: Optional[Gorev] = None, izgara=None,
 
     sahitler = None
     kulli = None
-    try:
-        b = ayir(izgara, ne="bölütle")
-        sahitler = list(getattr(b, "sahitler", None) or [])
-        if sahitler:
-            kulli = kaide(sahitler=sahitler, ne="küllî")
-    except Exception:
-        sahitler = None
 
     genlik = None
     if gom:

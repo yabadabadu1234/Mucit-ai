@@ -51,7 +51,6 @@ from main.kulliyat import (kulliyat_verisi,
                            kulliyat_dokumu, kulliyat_beyani)
 from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            vecih_kur)
-from nefs.qegitim import kaide_kefesi
 from nefs.usul import usul_beyani
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import (talim_beyani,
@@ -615,8 +614,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                           hafiza=hafiza, adim=_sayac["çağrı"],
                           kademe_gorevleri=kademe_gorevleri, ne="döküm")
     cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
-    kaide = kaide_kefesi(kademe_gorevleri, taban=int(ayar.veri_lifi),
-                         basamak=int(ayar.belirtec_basamak))
     if int(ayar.mukayese_acik):
         _sek = [q_son.y.sektor(ad) for ad, _ in q_son.ayar.kulli_alanlar]
         _vec = vecih_kur([(ad, s) for (ad, _n), s
@@ -664,7 +661,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "palmer": palmer,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "sadakat": sad, "son_sadakat": son_sadakat,
-            "mukayese": mukayese, "kaide": kaide,
+            "mukayese": mukayese,
             "konuşma": konusma, "münasebet": munasebet_beyani(),
             "keyfiyet": keyfiyet_beyani(),
             "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri),

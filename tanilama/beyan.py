@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Dict, Optional
 
-__all__ = ["kaide_metni", "talim_beyani", "cikarim_beyani", "kaggle_beyani",
+__all__ = ["talim_beyani", "cikarim_beyani", "kaggle_beyani",
            "sifir_beyani", "devam_metni"]
 
 
@@ -51,22 +51,6 @@ def sifir_beyani(o: Dict[str, object]) -> str:
     return ("\n=== SIFIRLANACAK BİR ŞEY YOK ===\n\n"
             "  aranan : %s\n  Hazine zaten yok; sonraki tâlim ilk "
             "turdur.\n" % (o.get("yol"),))
-
-
-def kaide_metni(k: Dict[str, object]) -> str:
-    if not k or not int(k.get("görev", 0) or 0):
-        return ("  ARC KÜLLÎ KAİDE HALKASI (Δ_K): görev yok -- "
-                "kademe görevi sıfır olmalı")
-    return "\n".join([
-        "  ARC KÜLLÎ KAİDE HALKASI (Δ_K -- n=K numune mertebesi)",
-        "    görev            : %d   küllî tasdik: %d   faz yırtığı: %d"
-        % (int(k["görev"]), int(k["küllî"]), int(k["yırtık"])),
-        "    halka rezonansı  : ortalama %.4f  (en iyi %.4f, en kötü %.4f)"
-        % (float(k["ortalama_r"]), float(k.get("en_iyi_r", 0.0)),
-           float(k.get("en_kötü_r", 0.0))),
-        "    ℒ_Kaide = 1−r    : %.6f   -- kaide bütün numunelerde aynı "
-        "çalışıyorsa 0" % float(k["kayıp"]),
-    ])
 
 
 def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
@@ -120,8 +104,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "    sükût sebebi: %s" % (", ".join(kn["sebep"]) or "yok"),
               "    ilk belirteçler: %s" % (kn["belirteç"] or "yok"),
               "",
-              mukayese_metni(kulli.get("mukayese") or {}),
-              kaide_metni(kulli.get("kaide") or {}), "",
+              mukayese_metni(kulli.get("mukayese") or {}), "",
               munasebet_metni(kulli["münasebet"]), "",
               keyfiyet_metni(kulli["keyfiyet"]), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"
