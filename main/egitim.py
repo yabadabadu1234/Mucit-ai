@@ -406,8 +406,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     _mzn = {"a": mzn}
 
     def _dengele(dokum) -> Dict[str, float]:
-        lam = denge(dokum, artik=list(dokum.get("artık") or ()),
-                    adlar=list(dokum.get("artık_adı") or ()))
+        _a = dokum.get("artık")
+        _n = dokum.get("artık_adı")
+        lam = denge(dokum,
+                    artik=(list(_a) if _a is not None else None),
+                    adlar=(list(_n) if _n is not None else None))
         for ad, deger in lam.items():
             if ad == "frenlenen" or ad in _elle_lam:
                 continue
