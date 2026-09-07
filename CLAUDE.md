@@ -979,10 +979,15 @@ edilmeyecektir. Bu bir mazeret değil, **mühürlenmiş bir hudut**tur:
 > mimarimizin şu anki sembolik tam formülünü sembollerle değil
 > **kelimelerle** olmak kaydıyla çıkarıp bir dosyaya mühürler misin."*
 
-* Mimarinin tam formülü `FORMUL.md`de durur ve **kelimelerle**
-  yazılır: sembol, alt indis, dizey gösterimi yoktur. Sebep,
-  formülün okunur kalması ve bir sembolün arkasına münafıklık
-  gizlenememesidir.
+* Mimarinin tam formülü `FORMUL.md`de durur ve **formüldür** --
+  cümle cümle tarif değil. Değişen tek şey **isimlerdir**: tek harfli
+  sembol yerine kelime konur. `H`, `W_Q`, `f_i` değil; `Yazmaç`,
+  `Açı(Parametre)`, `Meleke_k`. Ameliyeler (eşittir, toplama, çarpma,
+  bileşke, argmin, toplam, çarpım) **olduğu gibi kalır**.
+* **NİÇİN.** Tek harfli sembol formülü kısaltmaz, **gizler**: `W`nin
+  ne olduğunu bilmeyen formülü okuyamaz ve okuyamadığı için
+  denetleyemez. Kelime isim konunca formül hem formül kalır hem
+  denetlenebilir olur.
 * **NİYET DEĞİL, KOŞAN KOD YAZILIR.** `FORMUL.md`ye ancak `main/` ve
   `nefs/` altında **fiilen koşan** ameliye girer. Yazılmayan koşmaz,
   koşmayan yazılmaz.
