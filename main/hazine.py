@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Mapping, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["UZANTI", "BICIM", "koy", "al", "listele", "beyan", "rapor"]
+__all__ = ["ust_coz", "UZANTI", "BICIM", "koy", "al", "listele", "beyan", "rapor"]
 
 UZANTI = ".safetensors"
 
@@ -123,6 +123,19 @@ def beyan(yol: str) -> Dict[str, Any]:
         basi = json.loads(f.read(n).decode("utf-8"))
     assert isinstance(basi, dict) and basi, "başlık boş yahut bozuk"
     return basi
+
+
+def ust_coz(meta: Mapping[str, str]) -> Dict[str, Any]:
+    out: Dict[str, Any] = {}
+    for k, v in dict(meta or {}).items():
+        if not isinstance(v, str):
+            out[k] = v
+            continue
+        try:
+            out[k] = json.loads(v)
+        except (ValueError, TypeError):
+            out[k] = v
+    return out
 
 
 def al(yol: str, mmap: bool = True, tahkik: bool = True

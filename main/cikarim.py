@@ -28,13 +28,18 @@ def hazineden_devam(yol: str) -> Dict[str, object]:
     if not os.path.isfile(tam):
         return {"yüklendi": False, "yol": tam, "tur": 0, "imleç": None,
                 "sebep": "hazine yok -- ilk tur"}
-    agirlik, ust = hazine.al(yol)
+    agirlik, ham = hazine.al(yol)
+    ust = hazine.ust_coz(ham)
     assert "p" in agirlik, "hazinede ``p`` tensörü yok: %r" % sorted(agirlik)
     p = np.array(agirlik["p"], dtype=float).reshape(-1)
     assert np.all(np.isfinite(p)), "hazinedeki parametrede NaN/Inf var"
+    imlec = ust.get("imleç")
+    assert imlec is None or isinstance(imlec, dict), (
+        "hazinedeki imleç sözlük değil (%s) -- üst veri çözülmemiş "
+        "olmalı (main/hazine.py:ust_coz)" % type(imlec).__name__)
     return {"yüklendi": True, "yol": tam, "p": p,
             "tur": int(ust.get("tur", 0) or 0),
-            "imleç": ust.get("imleç") or None,
+            "imleç": imlec or None,
             "V_son": ust.get("V_son"),
             "bayt": int(os.path.getsize(tam))}
 
