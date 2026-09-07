@@ -7,7 +7,7 @@ from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = ["Vecih", "VECIHLER", "vecih_kur", "uyanik_vecihler",
-           "bargmann", "swap_testi", "simplisiyal", "istisna_yeri",
+           "bargmann", "hipotez_halkasi", "swap_testi", "simplisiyal", "istisna_yeri",
            "choi", "nesnelestir", "spektrum", "hata_payi",
            "zorunlu", "mumkun", "kiplik", "paylar_olc",
            "mukayese_beyani", "mukayese_metni", "sayac"]
@@ -120,6 +120,41 @@ def bargmann(durumlar: Sequence[np.ndarray],
             "bağ": baglar, "kopuk": bool(min(baglar) <= 1e-12),
             "tenakuz": bool(r > 0.0 and abs(abs(fi) - math.pi) < 0.5),
             "kısır": bool(r > 0.0 and abs(fi) < 1e-9)}
+
+
+def hipotez_halkasi(haller: Sequence[np.ndarray],
+                    cinsler: Optional[Sequence[str]] = None,
+                    vecih: Optional[Vecih] = None) -> Dict[str, Any]:
+    H = [np.asarray(h, complex).reshape(-1) for h in haller]
+    ad = ([str(c) for c in cinsler] if cinsler is not None
+          else ["hepsi"] * len(H))
+    assert len(ad) == len(H), (
+        "hipotez sayısı %d, cins sayısı %d -- hâl ile cins ayrışmış"
+        % (len(H), len(ad)))
+    grup: Dict[str, List[int]] = {}
+    for i, c in enumerate(ad):
+        grup.setdefault(c, []).append(i)
+    dokum: Dict[str, Any] = {}
+    toplam = 0.0
+    halka = ten = kis = kop = 0
+    for c, idx in sorted(grup.items()):
+        if len(idx) < 3:
+            continue
+        b = bargmann([H[i] for i in idx], vecih)
+        d = (float(1.0 - float(b["r"])) + float(bool(b["tenakuz"]))
+             + float(bool(b["kısır"])) + float(bool(b["kopuk"])))
+        dokum[c] = {"hipotez": len(idx), "r": float(b["r"]),
+                    "Φ": float(b["Φ"]), "tenakuz": bool(b["tenakuz"]),
+                    "kısır": bool(b["kısır"]), "kopuk": bool(b["kopuk"]),
+                    "Δ_K": float(d)}
+        toplam += d
+        halka += 1
+        ten += int(bool(b["tenakuz"]))
+        kis += int(bool(b["kısır"]))
+        kop += int(bool(b["kopuk"]))
+    return {"Δ_K": (toplam / halka) if halka else 0.0, "halka": int(halka),
+            "tenakuz": int(ten), "kısır": int(kis), "kopuk": int(kop),
+            "grup": dokum}
 
 
 def swap_testi(a: np.ndarray, b: np.ndarray,

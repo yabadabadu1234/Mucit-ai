@@ -28,6 +28,7 @@ from nefs.galois import (GaloisAyari, tableau_kur,
                          sbox_bukme, sbox_olcu, palmer_olcu)
 from nefs.tdd import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
+from nefs.mihenk import MIHENK, nobet_kur
 from nefs.faz_polinomu import FazAyari, faz_oturt
 from nefs.siklotomik import (SiklotomikAyari,
                              koset_indirge, iz_esitligi)
@@ -140,6 +141,8 @@ class EgitimAyari:
     lam_nokta: float = 0.0
     lam_meleke: float = 0.0
     lam_zirh: float = 0.0
+    lam_kaide: float = 0.0
+    mihenk_arasi: float = 300.0
     galois_us: int = 0
     tableau_n: int = 0
     faz_mertebesi: int = 0
@@ -278,7 +281,7 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         "kelam_dökümü": ayrisma,
     }
     if hiz_ayari is not None:
-        from tanilama.hiz_teftisi import AZAMI_SANIYE, HAD, olc
+        from tanilama.hiz_teftisi import BUTCE_SANIYESI, HAD, olc
         h = olc(hiz_ayari)
         o["belirteç_sn"] = float(h["belirteç_sn"])
         o["hız_haddi"] = float(HAD)
@@ -289,8 +292,8 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         cagri = max(1, int(hiz_ayari.talim_tur)
                     * max(1, int(hiz_ayari.altuzay_ornek)))
         o["kestirilen_saniye"] = float(h["kayıp_süresi"]) * cagri
-        o["süre_haddi"] = float(AZAMI_SANIYE)
-        o["süre_geçti"] = bool(o["kestirilen_saniye"] <= AZAMI_SANIYE)
+        o["süre_haddi"] = float(BUTCE_SANIYESI)
+        o["süre_geçti"] = bool(o["kestirilen_saniye"] <= BUTCE_SANIYESI)
     if sert:
         assert not zaman_cevrimi, (
             "ZAMAN AÇILIMLI SEBEP ÇİZGESİNDE ÇEVRİM VAR -- bir adım "
@@ -301,14 +304,14 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
             "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
             "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
         if "belirteç_sn" in o:
-            from tanilama.hiz_teftisi import AZAMI_SANIYE, HAD
+            from tanilama.hiz_teftisi import BUTCE_SANIYESI, HAD
             assert o["süre_geçti"], (
                 "TÂLİM SÜRESİ HADDİ AŞILIYOR -- TÂLİM BAŞLAMAZ.\n"
                 "  kestirilen: %.1f sn   had: %.0f sn\n"
                 "  (bir kayıp çağrısı %.4f sn × %d çağrı)\n"
                 "  Ferman: eğitim hızını toplamda en fazla 10 dakikaya "
                 "indirmelisin."
-                % (o["kestirilen_saniye"], AZAMI_SANIYE,
+                % (o["kestirilen_saniye"], BUTCE_SANIYESI,
                    o["kayıp_süresi"],
                    int(o["kestirilen_saniye"] / max(1e-9, o["kayıp_süresi"]))))
             assert o["hız_geçti"], (
@@ -362,6 +365,7 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         dislama_tau=float(a.dislama_tau),
         lam_kategori=float(a.lam_kategori), lam_nokta=float(a.lam_nokta),
         lam_meleke=float(a.lam_meleke), lam_zirh=float(a.lam_zirh),
+        lam_kaide=float(a.lam_kaide),
         meleke_olcumu=int(a.meleke_olcumu),
         usul_acik=int(a.usul_acik), usul_haddi=float(a.usul_haddi),
         usul_seferi=int(a.usul_seferi),
@@ -416,7 +420,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     mzn = mizan_ayari(ayar)
     LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
                   "lam_tenakuz", "lam_kategori", "lam_nokta",
-                  "lam_meleke", "lam_zirh")
+                  "lam_meleke", "lam_zirh", "lam_kaide")
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}
@@ -455,6 +459,12 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
 
     _kume: Dict[str, Sequence] = {"v": list(veri)}
     _seyir: List[Dict[str, float]] = []
+    nobet = nobet_kur(nefs, ara_saniye=float(ayar.mihenk_arasi),
+                      pencere=int(ayar.pencere), sozluk=int(ayar.sozluk),
+                      taban=int(ayar.veri_lifi),
+                      basamak=int(ayar.belirtec_basamak),
+                      kodlama=str(ayar.kodlama),
+                      azami_uret=int(ayar.azami_uret))
 
     def kayip_p(P: np.ndarray) -> np.ndarray:
         P = np.atleast_2d(np.asarray(P, float))
@@ -468,6 +478,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                                 kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
             _seyir.append({"V": float(t["kayıp"])})
+            nobet.yokla(p, kayip=float(t["kayıp"]),
+                        adim=_sayac["çağrı"])
         return out
 
     opt = OptimizeAyari(
@@ -681,6 +693,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "sadakat": sad, "son_sadakat": son_sadakat,
             "mukayese": mukayese,
+            "mihenk": nobet.beyan(p_yildiz),
+            "faz_borcu": q_son.y.faz_borcu(),
             "konuşma": konusma, "münasebet": munasebet_beyani(),
             "keyfiyet": keyfiyet_beyani(),
             "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri),

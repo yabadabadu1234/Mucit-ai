@@ -115,10 +115,10 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     B_tavan = int(yigin_sec(d, tip)["B"])
     B = int(max(1, B_tavan))
 
-    from tanilama.hiz_teftisi import AZAMI_SANIYE
+    from tanilama.hiz_teftisi import BUTCE_SANIYESI
     hiz = (float(k.hiz) if float(getattr(k, "hiz", 0.0)) > 0.0
            else hiz_yoklamasi(d, bayt, int(k.tohum)))
-    butce = float(hiz) * float(AZAMI_SANIYE) * max(c, 1e-3)
+    butce = float(hiz) * float(BUTCE_SANIYESI) * max(c, 1e-3)
     tur = 1 + int(round(8.0 * c))
     yon = 8 + int(round(56.0 * c))
     cagri = max(1, tur * yon)
@@ -159,7 +159,7 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "kademe_gorevi": int(max(1, round(1 + 7 * c))),
         "azami_uret": int(max(8, basamak * int(_gb["hedef_azamî"]))),
         "yaricap": float(1.5 + 2.5 * c),
-        "azami_talim_saati": float(AZAMI_SANIYE / 3600.0),
+        "azami_talim_saati": float(BUTCE_SANIYESI / 3600.0),
         "galois_us": 8,
         "tableau_n": 64,
         "faz_mertebesi": V,
@@ -185,9 +185,10 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
 
 
 PAYLAR: Dict[str, float] = {
-    "uzay": 0.22,
-    "tip": 0.13,
-    "meleke": 0.12,
+    "uzay": 0.19,
+    "tip": 0.12,
+    "meleke": 0.11,
+    "kaide": 0.05,
     "kategori": 0.10,
     "nokta": 0.10,
     "cevrim": 0.09,
@@ -210,7 +211,7 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
         esle_ad = {"uzay": "uzay", "tip": "tip", "kategori": "kategori",
                    "nokta": "nokta", "cevrim": "çevrim",
                    "tenakuz": "tenakuz", "monogami": "monogami",
-                   "engel": "engel"}
+                   "engel": "engel", "kaide": "kaide_halkası"}
         toplu: Dict[str, float] = {}
         for ad, anahtar in esle_ad.items():
             toplu[ad] = float(ham.get(anahtar, 0.0))
@@ -231,7 +232,7 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
     esle = {"cevrim": "çevrim", "tenakuz": "tenakuz_bariyer",
             "monogami": "monogami", "engel": "engel", "tip": "hodge",
             "kategori": "kategori", "nokta": "nokta",
-            "meleke": "meleke", "zirh": "zırh"}
+            "meleke": "meleke", "zirh": "zırh", "kaide": "kaide_halkası"}
     esik = max(float(taban) * cipa, 1e-9)
     for ad, anahtar in esle.items():
         v = abs(float(kefeler.get(anahtar, 0.0)))
@@ -275,7 +276,7 @@ def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
         "  FORMÜL 2 -- BÜTÇE (ölçülen hız × süre haddi)",
         "    ölçülen hız (%s) = %.0f belirteç/sn"
         % (d.get("hız_kaynağı", "mikro yoklama"), d["ölçülen_hız"]),
-        "    bütçe = hız × AZAMİ_SANİYE × cömert      = %.3e belirteç"
+        "    bütçe = hız × BÜTÇE_SANİYESİ × cömert     = %.3e belirteç"
         % d["bütçe"],
         "    çağrı = tur × yön = %d × %d              = %d"
         % (d["talim_tur"], d["altuzay_ornek"], d["çağrı"]),

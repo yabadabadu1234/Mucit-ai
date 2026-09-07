@@ -6,11 +6,11 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["HAD", "AZAMI_SANIYE", "olc", "teftis", "rapor"]
+__all__ = ["HAD", "BUTCE_SANIYESI", "olc", "teftis", "rapor"]
 
 HAD: float = 1_000_000.0
 
-AZAMI_SANIYE: float = 600.0
+BUTCE_SANIYESI: float = 86_400.0
 
 
 @dataclass

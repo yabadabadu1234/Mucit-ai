@@ -6,9 +6,10 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["GaloisAyari", "Tableau", "palmer_i", "palmer_faz", "ayrik_faz",
+__all__ = ["GaloisAyari", "Tableau", "palmer_i", "palmer_indir",
            "gf_carp", "gf_tablo", "sbox", "sbox_tablo", "sbox_bukme",
-           "sbox_olcu", "palmer_olcu", "tableau_kur", "olc", "rapor"]
+           "sbox_olcu", "palmer_olcu", "tableau_kur", "olc",
+           "faz_borcu_metni", "rapor"]
 
 
 @dataclass
@@ -33,43 +34,40 @@ def palmer_i(a, b) -> Tuple[np.ndarray, np.ndarray]:
     return -B, A
 
 
-def palmer_faz(v, k: int, mertebe: int = 16):
-    m = int(mertebe)
-    k = int(k) % m
-    V = np.asarray(v)
-    if m == 4 or k % (m // 4) == 0:
-        adim = (k * 4) // m
-        A, B = V.real, V.imag
-        for _ in range(adim):
-            A, B = palmer_i(A, B)
-        return A + 1j * B
-    return V * _kok_tablosu(m)[k]
+def faz_borcu_metni(b: Dict[str, Any]) -> str:
+    if not b:
+        return ("  FAZ DEFTERİ: ölçü YOK -- yazmaç yoklanmadı, "
+                "kırmızı yanıyor (ferman 5)")
+    m = float(b.get("mertebe", 0.0))
+    c = float(b.get("çeyrek", 1.0))
+    return "\n".join([
+        "  FAZ ARTIK GALOİS TARAFINDA (ferman 7 / 7-A·3)",
+        "    faz mertebesi m            : %d   (Z_m tamsayı defteri)" % m,
+        "    Palmer çeyreği m/4         : %d   i(a,b)=(−b,a), tam" % c,
+        "    genliğe inen               : YALNIZ çeyrek -- exp/sin/cos YOK",
+        "    ödenmemiş üs (ortalama)    : %.4f  (azamî %d)"
+        % (b.get("ödenmemiş_üs", 0.0), int(b.get("azamî_üs", 0))),
+        "    ödenmemiş nispet           : %.4f  (1.0 = tam bir çeyrek borç)"
+        % b.get("nispet", 0.0),
+        "    indirme sayısı             : %d" % int(b.get("indirme", 0)),
+        "    artık üs İMHA EDİLMEZ, deftere geri konur ve bir sonraki",
+        "    ``faz`` çağrısında ödenir; borç sıfırlanmaz, taşınır."])
 
 
-def ayrik_faz(v, teta, mertebe: int = 16):
+def palmer_indir(v, k, mertebe: int = 16) -> Tuple[np.ndarray, np.ndarray]:
     m = int(mertebe)
     assert m >= 4 and m % 4 == 0, "faz mertebesi 4'ün katı olmalı: %d" % m
     V = np.asarray(v)
-    t = np.asarray(teta, float)
-    k = np.rint(-t * m / (2.0 * math.pi)).astype(np.int64) % m
-    if k.size == 0:
-        return V
-    ilk = int(k.flat[0])
-    if bool(np.all(k == ilk)):
-        return palmer_faz(V, ilk, m)
-    return V * _kok_tablosu(m)[k]
-
-
-_KOK: Dict[int, np.ndarray] = {}
-
-
-def _kok_tablosu(m: int) -> np.ndarray:
-    t = _KOK.get(int(m))
-    if t is None:
-        j = np.arange(int(m))
-        t = np.exp(2j * math.pi * j / int(m))
-        _KOK[int(m)] = t
-    return t
+    K = np.asarray(k, np.int64) % m
+    ceyrek = m // 4
+    q = K // ceyrek
+    artik = K - q * ceyrek
+    if not np.any(q):
+        return V, artik
+    A, B = V.real, V.imag
+    R = np.where(q == 0, A, np.where(q == 1, -B, np.where(q == 2, -A, B)))
+    I = np.where(q == 0, B, np.where(q == 1, A, np.where(q == 2, -B, -A)))
+    return R + 1j * I, artik
 
 
 _GF: Dict[int, Tuple[np.ndarray, np.ndarray]] = {}
@@ -357,7 +355,7 @@ def rapor(tohum: int = 0) -> str:
     o = olc(v, a)
     t0 = time.perf_counter()
     for _ in range(20000):
-        _ = palmer_faz(v, 4, 16)
+        _ = palmer_indir(v, np.full(v.size, 4, np.int64), 16)
     palmer = (time.perf_counter() - t0) / 20000
     g = r.integers(0, 256, size=12, dtype=np.uint8)
     T = tableau_kur(v, a)

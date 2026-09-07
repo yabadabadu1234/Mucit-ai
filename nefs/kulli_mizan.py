@@ -44,6 +44,7 @@ class MizanAyari:
     lam_nokta: float = 0.25
     lam_meleke: float = 0.5
     lam_zirh: float = 0.5
+    lam_kaide: float = 0.5
     meleke_olcumu: int = 1
     usul_acik: int = 1
     usul_haddi: float = 0.0
@@ -533,7 +534,8 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         L_nizam = float(max(_ih)) if _ih else 0.0
     else:
         L_nizam = 0.0
-    from .mukayese import spektrum as _spektrum, vecih_kur as _vecih_kur
+    from .mukayese import (spektrum as _spektrum, vecih_kur as _vecih_kur,
+                           hipotez_halkasi as _hipotez_halkasi)
     _vec = _vecih_kur([(ad, sk) for (ad, _n), sk
                        in zip(nefs.ayar.kulli_alanlar,
                               ileri["sektör"])]) if ileri.get("sektör") \
@@ -541,6 +543,9 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     _hal = list(ileri["hal"])[:max(3, int(a.cevrim_boyu) + 1)]
     spek = (_spektrum(_hal, _vec, azami_n=int(a.cevrim_boyu),
                       tohum=int(a.tohum)) if len(_hal) >= 2 else None)
+    dk = _hipotez_halkasi(ileri["hal"], ileri.get("cins"),
+                          (_vec[0] if _vec else None))
+    _bilesen.append(("kaide_halkası", float(dk["Δ_K"]), float(a.lam_kaide)))
     from .zirh import zirhla
     _H_zirh = np.real(rho_model).astype(float)
     _z_ham, _z = zirhla(_H_zirh, ZirhAyari())

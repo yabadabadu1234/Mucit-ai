@@ -7,10 +7,12 @@ import math
 
 import numpy as np
 
-from .galois import ayrik_faz
+from .galois import palmer_indir, sbox
 from .matchgate import matchgate_mi
 
 __all__ = ["QuditAyar", "QuditYazmac", "Iz"]
+
+_CEYREK = np.array([1.0 + 0.0j, 0.0 + 1.0j, -1.0 + 0.0j, 0.0 - 1.0j])
 
 
 class Iz:
@@ -95,6 +97,8 @@ class QuditYazmac:
                           hat=str(a.hat), bant=int(a.hat_bandi))
         self._faz_bekleyen: Optional[np.ndarray] = None
         self._faz_toplam = np.zeros(int(a.d), np.int64)
+        self._faz_artik = np.zeros(int(a.d), np.int64)
+        self._faz_indirilen = 0
         self._psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
                             dtype=a.tip)
         self._sadakat_log = 0.0
@@ -326,12 +330,23 @@ class QuditYazmac:
         m = int(self.ayar.faz_mertebesi)
         if not np.any(k):
             return
-        self._psi = np.asarray(
-            ayrik_faz(self._psi, -k * (2.0 * math.pi / m), m),
-            self._psi.dtype)
+        V, artik = palmer_indir(self._psi, k, m)
+        self._psi = np.asarray(V, self._psi.dtype)
+        self._faz_artik = np.asarray(artik, np.int64)
+        self._faz_indirilen += 1
 
     def faz_birikimi(self) -> np.ndarray:
         return self._faz_toplam.copy()
+
+    def faz_borcu(self) -> Dict[str, float]:
+        m = int(self.ayar.faz_mertebesi)
+        ceyrek = max(1, m // 4)
+        a = np.asarray(self._faz_artik, np.int64)
+        return {"mertebe": float(m), "çeyrek": float(ceyrek),
+                "ödenmemiş_üs": float(np.mean(a)),
+                "nispet": float(np.mean(a) / ceyrek),
+                "azamî_üs": float(a.max()) if a.size else 0.0,
+                "indirme": float(self._faz_indirilen)}
 
     def _karo_indir(self, k: int, M: np.ndarray) -> None:
         n = int(self.ayar.lif[int(k)])
@@ -400,12 +415,9 @@ class QuditYazmac:
             from .qudit import agirlik
             t = np.asarray(agirlik(self.d, t), float).reshape(-1)
         m = int(self.ayar.faz_mertebesi)
-        if str(self.ayar.motor) != "galois":
-            self._bosalt()
-            self._psi = self._psi * np.exp(-1j * t)
-            self._kapi += 1
-            return
         k = (np.rint(-t * m / (2.0 * math.pi)).astype(np.int64) % m)
+        k = (k + self._faz_artik) % m
+        self._faz_artik = np.zeros(self.d, np.int64)
         self._faz_toplam = (self._faz_toplam + k) % m
         if self._bekleyen:
             self._bosalt()
@@ -491,8 +503,9 @@ class QuditYazmac:
             tb = t[b % t.size]
             idx = parca[int(tb)]
             u = np.arange(idx.size) - (idx.size - 1) / 2.0
-            zarf = np.exp(-(u ** 2) / max(idx.size, 1))
-            self.psi[b, idx] = zarf * np.exp(1j * u * (1.0 + tb))
+            zarf = 1.0 / (1.0 + (u ** 2) / max(idx.size, 1))
+            q = sbox((np.arange(idx.size) + int(tb)) % 256) & 3
+            self.psi[b, idx] = zarf * _CEYREK[q]
         self.normalize()
 
     def superpozisyon(self) -> None:
@@ -771,10 +784,9 @@ class QuditYazmac:
                        float).reshape(-1)
         i, jj = self.sektor(alan)
         u = np.arange(jj - i)
-        faz = np.exp(1j * (a.mean() * (u + 1.0) / max(jj - i, 1)))
-        self.psi[:, i:jj] = self.psi[:, i:jj] * faz
-        self._kapi += 1
-        self.iz.kapi += 1
+        t = np.zeros(self.d, float)
+        t[i:jj] = -(float(a.mean()) * (u + 1.0) / max(jj - i, 1))
+        self.faz(t)
         return 0.0
 
     def mpo_dagit(self, alan: str, acilar=None, duraklar=None, j: int = 0
