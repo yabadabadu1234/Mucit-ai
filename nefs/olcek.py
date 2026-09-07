@@ -16,6 +16,7 @@ class Kok:
     sozluk: int = 16
     comert: float = 0.5
     tohum: int = 0
+    hiz: float = 0.0
 
     def __post_init__(self) -> None:
         assert int(self.sozluk) >= 2, "sözlük en az iki belirteç olmalı"
@@ -115,7 +116,8 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     B = int(max(1, B_tavan))
 
     from tanilama.hiz_teftisi import AZAMI_SANIYE
-    hiz = hiz_yoklamasi(d, bayt, int(k.tohum))
+    hiz = (float(k.hiz) if float(getattr(k, "hiz", 0.0)) > 0.0
+           else hiz_yoklamasi(d, bayt, int(k.tohum)))
     butce = float(hiz) * float(AZAMI_SANIYE) * max(c, 1e-3)
     tur = 1 + int(round(8.0 * c))
     yon = 8 + int(round(56.0 * c))
@@ -177,6 +179,8 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "doluluk": doluluk, "ölçülen_hız": hiz, "bütçe": butce,
         "çağrı": cagri, "çekirdek": int(cekirdek_sayisi()),
         "belirteç": float(cagri) * ornek * pencere,
+        "hız_kaynağı": ("koşulmuş ölçü" if float(getattr(k, "hiz", 0.0)) > 0.0
+                        else "mikro yoklama"),
     }
 
 
@@ -269,8 +273,8 @@ def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
         % (d["yigin_dilimi"], d["yigin_tavani"]),
         "",
         "  FORMÜL 2 -- BÜTÇE (ölçülen hız × süre haddi)",
-        "    ölçülen hız (mikro yoklama)              = %.0f belirteç/sn"
-        % d["ölçülen_hız"],
+        "    ölçülen hız (%s) = %.0f belirteç/sn"
+        % (d.get("hız_kaynağı", "mikro yoklama"), d["ölçülen_hız"]),
         "    bütçe = hız × AZAMİ_SANİYE × cömert      = %.3e belirteç"
         % d["bütçe"],
         "    çağrı = tur × yön = %d × %d              = %d"

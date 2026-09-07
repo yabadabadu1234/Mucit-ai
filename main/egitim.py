@@ -61,6 +61,20 @@ HAZINE_DIZINI = os.environ.get("MUCIT_HAZINE", "depo/hazine")
 HAZINE_ADI = "dimag"
 
 
+def hazineden_hiz(dizin: Optional[str] = None) -> float:
+    from main import hazine as _h
+    y = hazine_yolu(dizin) + _h.UZANTI
+    if not os.path.isfile(y):
+        return 0.0
+    try:
+        ust = _h.ust_coz(_h.beyan(y).get("__metadata__", {}) or {})
+    except Exception as e:
+        raise AssertionError(
+            "hazine üst verisi okunamadı (%s): hız ölçüsü sessizce "
+            "yoklanamaz -- ferman 5" % e)
+    return float(ust.get("ölçülen_hız", 0.0) or 0.0)
+
+
 def hazine_yolu(dizin: Optional[str] = None) -> str:
     return os.path.join(dizin or HAZINE_DIZINI, HAZINE_ADI)
 
@@ -96,6 +110,7 @@ class EgitimAyari:
     belirtec_basamak: int = 0
     comert: float = 0.5
     tohum: int = 0
+    olculen_hiz: float = 0.0
 
     veri_lifi: int = 0
     hukum_lifi: int = 0
@@ -183,8 +198,10 @@ class EgitimAyari:
     def __post_init__(self) -> None:
         if int(self.sozluk) <= 0:
             self.sozluk = int(belirtec_sozlugu(str(self.kodlama)))
+        if float(self.olculen_hiz) <= 0.0:
+            self.olculen_hiz = float(hazineden_hiz())
         o = olcek(Kok(sozluk=int(self.sozluk), comert=float(self.comert),
-                      tohum=int(self.tohum)))
+                      tohum=int(self.tohum), hiz=float(self.olculen_hiz)))
         self.olcek_dokumu = o
         self.elle = tuple(sorted(
             k for k in o if getattr(self, k, None) not in (0, 0.0, None)))
@@ -635,6 +652,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         {"tur": int(devam.get("tur", 0)) + 1,
          "imleç": imlec,
          "devam_etti": bool(devam.get("yüklendi")),
+         "ölçülen_hız": float(
+             (hizolcer_beyani() or {}).get("belirteç_sn", 0.0)),
          "ayar": ayar.ad, "parametre": d, "V_ilk": float(r["V_ilk"]),
          "V_son": float(r["V_son"]), "veri_lifi": int(ayar.veri_lifi),
          "sözlük": int(ayar.sozluk), "pencere": int(ayar.pencere),
