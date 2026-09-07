@@ -472,15 +472,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                         adim=_sayac["çağrı"])
         return out
 
-    opt = OptimizeAyari(
-        ad=ayar.ad, tur=ayar.talim_tur, yaricap=ayar.yaricap,
-        gcl_nokta_sayisi=max(8, int(ayar.altuzay_ornek)),
-        yon_sayisi=int(ayar.altuzay_ornek), blok=int(ayar.blok),
-        sesli=True, tohum=ayar.tohum)
-    opt.tunel_acik = True
-    opt.vekil_acik = False
-    opt.bütçe_denetimi = True
-    opt.azami_saniye = float(ayar.azami_talim_saati) * 3600.0
     def _eniyile(p_, kume):
         o = OptimizeAyari(
             ad=ayar.ad, tur=1, yaricap=float(ayar.yaricap),
@@ -490,6 +481,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         o.tunel_acik = True
         o.vekil_acik = False
         o.bütçe_denetimi = False
+        o.azami_saniye = float(ayar.azami_talim_saati) * 3600.0
         n0 = _sayac["çağrı"]
         _kume["v"] = list(kume)
         rr = hoca_egit(kayip_p, np.asarray(p_, float), o)
