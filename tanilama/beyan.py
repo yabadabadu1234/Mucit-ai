@@ -136,15 +136,14 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % (m["engel_öbek"], m["engel_şahidi"]),
               "      ─── ferman 1-S: imha edilen iki hata "
               "fonksiyonunun cevheri ───",
-              "      ℒ_Meleke   (41 melekenin sözleşmesi) : %.6f   × %.2f"
-              % (m["meleke"], ayar.lam_meleke),
-              "        zayıf halka (yumuşak AZAMÎ): %d ölçü, %d ayrı "
-              "meleke   en zayıf: %s"
-              % (m["meleke_uzuv"], m["meleke_sayısı"],
-                 m["meleke_en_zayıf"]),
+              "      ℒ_Meleke kanadı (MECLİS YOK -- ferman 1-U): %.6f"
+              % m["meleke"],
+              "        %d meleke AYRI AYRI kefe; en kötü: %s (%.4f)"
+              % (m["meleke_sayısı"], m["meleke_en_zayıf"],
+                 m["meleke_en_kötü_hata"]),
               "        kesme (YAPISAL, kayba GİRMEZ): kapı başına "
               "tutulan kesir %.6f" % m["kesme_yapısal"],
-              "      ℒ_Zırh     (τ-softmax, beş ihlâl)   : %.6f   × %.2f"
+              "      ℒ_Zırh kanadı (beşi AYRI kefe): %.6f   × %.2f"
               % (m["zırh"], ayar.lam_zirh),
               "        sheaf %.4f | Betti %.4f | koho %.4f | "
               "homotopi %.4f | nizam %.4f"
@@ -152,11 +151,22 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
                  m["zırh_homotopi"], m["zırh_nizam"]),
               "        nizam İKİ fonksiyonda da vardı, BİR KEZ sayıldı "
               "(zırhın beşinci ihlâli).",
+              "        eski τ-softmax terkibi olsaydı: %.6f  "
+              "(KIYAS; kayba GİRMEZ -- ferman 1-U)" % m["zırh_softmax"],
               "        meleke ölçümü: %s"
               % ("AÇIK" if ayar.meleke_olcumu
-                 else "KAPALI ⚠ -- iki kefe de sıfır"),
+                 else "KAPALI ⚠ -- iki kanat da sıfır"),
               "      ─────────────────────────────────",
-              "      ℒ_Küllî              : %.6f" % m["kayıp"],
+              "    HATA VEKTÖRÜ (ferman 1-V -- türev almıyoruz):",
+              "      bileşen sayısı        : %d   (skaler DEĞİL)"
+              % m["bileşen"],
+              "      en büyük beş artık    : %s"
+              % "  ".join(
+                  "%s %.4f" % (m["artık_adı"][i], m["artık"][i])
+                  for i in sorted(range(len(m["artık"])),
+                                  key=lambda k: -m["artık"][k])[:5]),
+              "      toplama YALNIZ burada: eniyileyici sıralama ister.",
+              "      ℒ_Küllî = Σ artık     : %.6f" % m["kayıp"],
               "",
               "    RÜŞT KİLİDİ (nefs/rust.py) -- ÇİZELGE **VE** MUAYENE:",
               "      α_rüşt = σ((t−t₀)/τ) · exp(−(‖dF‖²+‖H¹‖²)/σ²)",

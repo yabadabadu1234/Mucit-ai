@@ -2333,9 +2333,21 @@ class QNefs:
                     return float(e["entropi"])
                 return float(np.asarray(v, float).reshape(-1)[0])
 
+        # **ENTROPİ ARTIK TAŞINIYOR** (ferman 1-T). Evvelce her meleke
+        # için iki kere ölçülüyordu (önce/sonra) ve taşımak **denenip
+        # reddedilmişti**: aradaki okumalar POVM'di ve durumu
+        # değiştiriyordu, o hâlde "bir melekenin sonrası, bir sonrakinin
+        # öncesidir" doğru değildi.
+        #
+        # O gerekçe **artık yok**: zayıf ölçüm çöpe atıldı, okumalar
+        # ``alan_degeri`` (``‖Π_C Ψ‖²``) ile alınıyor ve o durumu
+        # **hiç değiştirmiyor**. Yâni iki nokta artık hakikaten aynı
+        # durumdur ve taşımak bir kısaltma değil, bir kimliktir.
+        # Entropi çağrısı meleke başına 2'den 1'e iner.
+        S_tasinan = _entropi() if olcum else 0.0
         for no in self.sira:
             onceki_sadakat = float(q.y.sadakat_log()) if olcum else 0.0
-            S_once = _entropi() if olcum else 0.0
+            S_once = S_tasinan
             self.s[no].kosu(q, self.p)
             if self.sadakat:
                 vicdan(q, self.p, ne="işaret")
@@ -2343,7 +2355,8 @@ class QNefs:
                 # ``ΔS`` -- melekenin dolaşıklığa tesiri (nizam taahhüdü
                 # bununla yüzleştirilir). Aynı meleke sırada iki kere
                 # geçebilir; tesirleri toplanır.
-                fark = _entropi() - S_once
+                S_tasinan = _entropi()
+                fark = S_tasinan - S_once
                 dS[int(no)] = dS.get(int(no), 0.0) + (
                     0.0 if fark != fark else fark)
                 ilan = SOZLESME.get(int(no), ((), ""))[0]

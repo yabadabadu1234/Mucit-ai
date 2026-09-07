@@ -1130,24 +1130,64 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     # ``kesme`` kayba **girmez** ve bu bir eksiltme değil, eski kaybın
     # kendi hükmüdür: bir kapının ne kadar kestiği açı parametreleriyle
     # değişmez, mimarînin vasfıdır. Ayrıca sayılır ve dökümde durur.
+    # ══════════════════════════════════════════════════════════════
+    #  MECLİS YASAĞI (FERMAN 1-U) -- HER MELEKE **AYRI KEFE**
+    # ══════════════════════════════════════════════════════════════
+    #
+    # *"Sen o 41 melekeyi hâlâ tek mecliste toplayıp sözleştiriyorsun,
+    # bu yasaktır demedik mi, her meleke ayrı kategori bir iş yapar,
+    # tıpkı mantık gibi, tenakuz gibi demedik mi?"*
+    #
+    # Burada ``zayif_halka(olcumler=..., ne="azamî")`` duruyordu ve kırk
+    # bir melekeyi **tek skalere** indiriyordu. Adı "zayıf halka" olsa da
+    # yaptığı iş meclisin ta kendisiydi: kırk bir ayrı kategorideki iş,
+    # bir sandalyeye ve bir sayıya iniyordu -- ve ölçüldü, o tek sayıyı
+    # ``kademe.idrak`` tek başına ele geçirmişti (0,0), kırk melekenin
+    # hepsi onun arkasında görünmez olmuştu.
+    #
+    # Artık her meleke **kendi kefesidir**. Melekenin hatası kendi
+    # sözleşmesinden çıkar: ilan ettiği bölgelerde eksik kalan pay
+    # (``1 − doyum``), o melekenin **kendi** bölgeleri üzerinden. Bu bir
+    # meclis değildir: bir melekenin kendi taahhüdünün muhasebesidir.
     from .kulli_kayip import (UZAYLAR, Olcum, kademeleri_kos,
-                              meleke_olcumleri, zayif_halka)
-    _olcumler: List[Olcum] = []
+                              meleke_olcumleri)
     _okumalar = ileri.get("okumalar") or {}
+    #: ``(ad, ham hata, λ)`` -- hata **vektörünün** bileşenleri.
+    _bilesen: List[Tuple[str, float, float]] = []
+    _mel_lam = float(a.lam_meleke)
     if int(a.meleke_olcumu) and _okumalar:
-        _olcumler += meleke_olcumleri(_okumalar)
+        # **FUNKTÖR CEVHERİ KORUNDU** (ferman 1-S): ham okuma doğrudan
+        # ``1−v`` yapılmaz; ``Olcum.eksik()`` okumayı kendi uzayından
+        # (``OlcuUzayi``) müşterek mertebeye taşır ve eksik payı verir.
+        # Meclis, uzuvları **birbiriyle** toplamaktı; bir melekenin
+        # kendi bölgelerini kendi içinde muhasebe etmek meclis değildir.
+        _grup: Dict[str, List[Olcum]] = {}
+        for o in meleke_olcumleri(_okumalar):
+            _grup.setdefault(str(o.kaynak).split(".")[0], []).append(o)
+        # Küllî alanlar da **ayrı ayrı**: ``tasdik`` ile ``tenakuz`` iki
+        # ayrı kategoridir, bir sayıya toplanamaz.
         for ad, v in sorted((ileri.get("alan") or {}).items()):
-            _olcumler.append(Olcum("alan.%s" % ad, float(v), UZAYLAR[ad]))
+            if ad in UZAYLAR:
+                _grup["alan.%s" % ad] = [
+                    Olcum("alan.%s" % ad, float(v), UZAYLAR[ad])]
+        # Kademeler de öyle: altı kademe, altı ayrı iş.
         if kademe_gorevleri:
             for g in kademe_gorevleri:
-                _olcumler += list(kademeleri_kos(g, p=nefs.p)["ölçümler"])
-    if _olcumler:
-        _mel = zayif_halka(olcumler=_olcumler, ne="azamî")
-        L_mel = float(_mel["kayıp"])
-    else:
-        # Ölçüm kapalı: kefe **sıfırlanır** ve rapor onu öyle yazar.
-        _mel = {"kayıp": 0.0, "en_zayıf": "ÖLÇÜM KAPALI", "uzuv": 0}
-        L_mel = 0.0
+                for o in kademeleri_kos(g, p=nefs.p)["ölçümler"]:
+                    _grup.setdefault(str(o.kaynak), []).append(o)
+        # λ payı kefeler arasında **bölünür**: kırk bir meleke, tek bir
+        # kefenin kırk bir katı ağırlık kazanmasın. Bölmek meclis
+        # değildir -- toplamak mecliştir; burada her biri ayrı satırda
+        # durur ve biri ölürse **görünür**.
+        _pay = _mel_lam / max(1, len(_grup))
+        for ad, olculer in sorted(_grup.items()):
+            hata = sum(float(o.eksik()) for o in olculer) / len(olculer)
+            _bilesen.append((ad, float(hata), _pay))
+    #: Meleke kanadının **toplamı** -- yalnız rapor içindir, kayıp
+    #: bileşenlerin kendisinden kurulur (aşağıda).
+    L_mel = float(sum(h * l for _ad, h, l in _bilesen))
+    _en_kotu = (max(_bilesen, key=lambda x: x[1])[:2] if _bilesen
+                else ("ÖLÇÜM KAPALI", 0.0))
 
     # ══════════════════════════════════════════════════════════════
     #  ℒ_ZIRH -- İMHA EDİLEN ZIRH KAYBININ CEVHERİ (FERMAN 1-S)
@@ -1184,12 +1224,31 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     from .zirh import zirhla
     _H_zirh = np.real(rho_model).astype(float)
     _z_ham, _z = zirhla(_H_zirh, ZirhAyari())
+    # **τ-SOFTMAX DA AÇILDI** (ferman 1-U/1-V). ``zirh_kaybi`` beş ihlâli
+    # yumuşak azamîyle **tek sayıya** indiriyordu; beşi ayrı kategoridir
+    # (sheaf yerel ek yeri, Betti delik, kohomoloji tıkanıklık, homotopi
+    # burulma, nizam taahhüt) ve bir sandalyeye oturamazlar. Beş cevherin
+    # hiçbiri düşmedi -- düşen, onları örten **terkiptir**.
+    #
+    # ``zirh_kaybi`` yine çağrılır ve neticesi **raporda** durur: eski
+    # terkip ile yeni vektörün farkı böylece görünür kalır, iddia
+    # edilmez (ferman 5).
     _zirh = zirh_kaybi(sheaf=float(_z["sheaf_ceza"]),
                        betti=float(_z["betti_ceza"]),
                        koho=float(_z["koho_ceza"]),
                        homotopi=float(_z["homotopi_ceza"]),
                        nizam=L_nizam, ayar=ZirhAyari())
-    L_zirh = float(_zirh["kayıp"])
+    _z_bes = (("zırh.sheaf", float(_z["sheaf_ceza"])),
+              ("zırh.betti", float(_z["betti_ceza"])),
+              ("zırh.koho", float(_z["koho_ceza"])),
+              ("zırh.homotopi", float(_z["homotopi_ceza"])),
+              ("zırh.nizam", float(L_nizam)))
+    _zpay = float(a.lam_zirh) / len(_z_bes)
+    for _ad, _v in _z_bes:
+        _bilesen.append((_ad, _v, _zpay))
+    L_zirh = float(sum(_v * _zpay for _ad, _v in _z_bes))
+    #: Eski terkibin verdiği sayı -- kıyas için, kayba **girmez**.
+    L_zirh_softmax = float(_zirh["kayıp"])
 
     # ══════════════════════════════════════════════════════════════
     #  ŞÜPHE MANİFOLDU (nefs/suphe.py)
@@ -1277,22 +1336,51 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     # demektir. Kapanmayan gedik bir epistemik borçtur ve bedavaysa
     # mantık yürütmenin tâlime hiçbir tesiri olmaz.
     L_gedik = float(a.lam_cevrim) * float(usl["borç"])
-    kayip = (float(a.lam_nokta) * L_nok                     # 0. nokta
-             + L_rez                                        # 1. uzay (α=1)
-             + float(a.lam_kategori) * L_kat                # 2. kategori
-             + float(a.lam_tip) * L_hod                   # 3. tip
-             + float(a.lam_cevrim) * fitrata
-             + float(a.lam_tenakuz) * L_ten
-             + L_gedik
-             + float(a.lam_monogami) * L_mon
-             + float(a.lam_engel) * L_eng
-             # ── FERMAN 1-S: ÜÇ HATA FONKSİYONU TEK MİZANDA ────────
-             + float(a.lam_meleke) * L_mel                   # 41 meleke
-             + float(a.lam_zirh) * L_zirh)                   # topolojik zırh
+    # ══════════════════════════════════════════════════════════════
+    #  HATA VEKTÖRDÜR (FERMAN 1-V) -- TOPLAMA **EN SON** VE AÇIKÇA
+    # ══════════════════════════════════════════════════════════════
+    #
+    # *"Biz türev almadığımız için bundan sonra hatalarımızı kendimiz
+    # vektör olarak hesaplamalıyız."*
+    #
+    # Skaler kayıp, gradyanı olan bir motor içindir: türev zinciri o tek
+    # sayıdan geriye akar. Bizde türev **yoktur** (``ogrenme/optimize.py``
+    # türevsiz koşar), o hâlde tek sayıya inmenin faydası yok, zararı
+    # var: bileşenler birbirini örter ve hangi yönün iyileştiği
+    # görünmez olur.
+    #
+    # Mizanın kendi kefeleri de bileşendir; melekeler ve zırhın beş
+    # ihlâli yukarıda zaten ``_bilesen``e girdi.
+    _bilesen = [("nokta", L_nok, float(a.lam_nokta)),
+                # ``uzay`` çıpadır: λ = 1 ve bölünmez.
+                ("uzay", L_rez, 1.0),
+                ("kategori", L_kat, float(a.lam_kategori)),
+                ("tip", L_hod, float(a.lam_tip)),
+                ("çevrim", fitrata, float(a.lam_cevrim)),
+                ("tenakuz", L_ten, float(a.lam_tenakuz)),
+                ("gedik", float(usl["borç"]), float(a.lam_cevrim)),
+                ("monogami", L_mon, float(a.lam_monogami)),
+                ("engel", L_eng, float(a.lam_engel))] + _bilesen
+    #: **HATA VEKTÖRÜ** -- her bileşen bir kefenin (yahut bir melekenin)
+    #: ağırlıklı artığıdır. Kaybın kendisi budur.
+    artik = np.array([float(h) * float(l) for _ad, h, l in _bilesen],
+                     float)
+    artik_adlari = tuple(str(ad) for ad, _h, _l in _bilesen)
+    assert np.all(np.isfinite(artik)), (
+        "hata vektöründe NaN/Inf var: %s"
+        % [artik_adlari[i] for i in np.flatnonzero(~np.isfinite(artik))])
+    # **TOPLAMA BURADA, TEK SATIRDA VE GÖRÜNÜR.** Eniyileyici bir
+    # sıralama ister (hangi aday daha iyi); o sıralama için tek sayı
+    # lâzımdır ve **yalnız burada** kurulur. Kaybın kendisi vektör
+    # kalır ve ``artık`` anahtarında döner.
+    kayip = float(artik.sum())
     assert np.isfinite(kayip), "mizan sonlu değil"
 
     if ne == "toplam":
-        return {"kayıp": float(kayip)}
+        # Vektör **burada da** döner: eniyileyici toplamı okur, fakat
+        # ölçen göz bileşeni görebilsin (ferman 1-V).
+        return {"kayıp": float(kayip), "artık": artik,
+                "artık_adı": artik_adlari}
     if ne != "döküm":
         raise ValueError("mizan kipi bilinmiyor: %r" % (ne,))
     return {"kayıp": float(kayip), "rezonans": L_rez, "sadakat": F,
@@ -1304,14 +1392,18 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "nokta_cins": nok.get("cins", {}),
             "kategori": L_kat, "kategori_ihlâl": int(kat["ihlâl"]),
             "kategori_deneme": int(kat["deneme"]),
-            # ── FERMAN 1-S: iki yeni kefe, cevherleriyle beraber ──
-            "meleke": L_mel, "meleke_en_zayıf": _mel.get("en_zayıf"),
-            "meleke_uzuv": int(_mel.get("uzuv", 0) or 0),
-            "meleke_sayısı": len({o.kaynak.split(".")[0] for o in _olcumler
-                                  if o.kaynak.startswith("𝒪")}),
+            # ── FERMAN 1-V: HATA VEKTÖRÜ, bileşen bileşen ─────────
+            "artık": artik, "artık_adı": artik_adlari,
+            "bileşen": int(artik.size),
+            # ── FERMAN 1-S/1-U: melekeler AYRI AYRI, meclis yok ───
+            "meleke": L_mel, "meleke_en_zayıf": _en_kotu[0],
+            "meleke_en_kötü_hata": float(_en_kotu[1]),
+            "meleke_sayısı": sum(1 for ad in artik_adlari
+                                 if ad.startswith("𝒪")),
             # Kesme YAPISALDIR: kayba girmez, ayrıca sayılır.
             "kesme_yapısal": float(ileri.get("kesme", 0.0)),
-            "zırh": L_zirh, "zırh_sheaf": float(_z["sheaf_ceza"]),
+            "zırh": L_zirh, "zırh_softmax": L_zirh_softmax,
+            "zırh_sheaf": float(_z["sheaf_ceza"]),
             "zırh_betti": float(_z["betti_ceza"]),
             "zırh_koho": float(_z["koho_ceza"]),
             "zırh_homotopi": float(_z["homotopi_ceza"]),
