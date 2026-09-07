@@ -838,6 +838,61 @@ vidalanacağını bilmektir**.
 
 ---
 
+## ▓▓▓ 2-F. FERMAN: MİHENK ARTIK ALELADE BİR SUALDİR ▓▓▓
+
+> *"**Bundan sonra** testi ARC ile değil alelade bir İngilizce soruyla
+> yap, bakalım cevap verebilecek mi, verdiği cevabın makul olup
+> olmadığını anlamak hem senin hem benim için daha kolay, öğrenip
+> öğrenmediği çok daha rahat **faş olmuş** olur."*
+
+* Tâlimin canlı mihengi **düz bir İngilizce sualdir**. ARC ölçüsü
+  yerinde kalır fakat *"öğreniyor mu"* sualinin cevabı artık oradan
+  değil, **verilen cevabın makul olup olmadığından** okunur.
+* **NİÇİN.** ARC'ın tam eşleşmesi 0/25 iken model öğreniyor mu
+  öğrenmiyor mu görünmüyordu: sıfır ile sıfır arasında fark yok.
+  Bir cümlelik cevap ise **gözle** tartılır; hezeyan mı, kelime
+  salatası mı, yoksa mana mı -- derhal faş olur.
+* Sual sabittir ve raporda **aynen** yazılır; cevabın turdan tura
+  nasıl değiştiği görünür.
+
+---
+
+## ▓▓▓ 2-G. FERMAN: TÂLİM ANBEAN TAKİP EDİLİR -- HUDUT KALKTI ▓▓▓
+
+> *"**Bundan sonra her zaman** eğitimi 'sürekli' takip et. Anbean
+> takip ettiğin için gariplik gördüğün anda durdur. **Bundan sonra
+> 600 saniye hududunu kaldır**, en geniş bütçeyle eğitime devam et.
+> Zaten anbean takip etmeni bunun için istiyorum, hududu
+> kaldıracağımız için **gafletin saatlerime mal olur**."*
+
+* **SÜRE HUDUDU KALKTI.** `AZAMI_SANIYE` bir tavan değildir artık;
+  bütçe en geniş hâlde kurulur.
+* **BUNUN BEDELİ NÖBETTİR.** Koşu arkada bırakılıp unutulmaz: her
+  turda kütük yoklanır, gariplik görülür görülmez **durdurulur**.
+  Gaflet padişahın saatlerine mal olur.
+* **KOD DA NÖBET TUTAR:** tâlim her birkaç yüz saniyede bir, o anki
+  ağırlığıyla mihenk suâline **cevap verir** ve kütüğe yazar. Böylece
+  cevabın adım adım nasıl değiştiği hem koda hem göze görünür.
+
+---
+
+## ▓▓▓ 2-H. FERMAN: HER OTURUM BİR DOSYA BAŞTAN SONA OKUNUR ▓▓▓
+
+> *"**Her oturumda** işim bittikten sonra **en az bir tane çok uzun
+> zamandır okumadığın dosya** seçip onu baştan sona okuyacaksın, bu
+> sayede mevcut mimariyle olan münasebetini, garabetleri derhal
+> kavrarsın. Birkaç oturum neticesinde zihninde yer etmemiş dosya
+> kalmaz!"*
+
+* İş bittikten sonra **en az bir dosya** baştan sona okunur; tercih
+  en uzun zamandır okunmamış olandan yanadır.
+* Okunan dosyanın **mimariyle münasebeti** ve **garabetleri** yazılır;
+  "okudum" demek yetmez, ne bulunduğu sayılır.
+* Bu ferman 1-D'nin (taht baştan sona okunur) gövdeye teşmilidir:
+  birkaç oturumda zihinde yer etmemiş dosya kalmaz.
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.
