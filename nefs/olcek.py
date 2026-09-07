@@ -122,32 +122,40 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     cagri = max(1, tur * yon)
     kalan = max(butce / float(cagri), 4.0)
     kenar = _ikinin_kuvveti(math.sqrt(kalan), 2)
-    ornek = int(max(kenar, B))
-    pencere = int(max(kenar, V))
-    while float(cagri) * ornek * pencere > butce and pencere > V:
-        pencere //= 2
+    from .belirtec import basamak_sayisi as _bs
+    _basamak = _bs(int(k.sozluk), V)
+    from .musahede import gorev_boyu, sigan_nispet
+    _gb = gorev_boyu()
+    gereken = int(_gb["azamî"]) * int(_basamak)
+    pencere = int(max(V, _ikinin_kuvveti(float(gereken), int(V))))
+    sigan = float(sigan_nispet(pencere // max(1, int(_basamak))))
+    ornek = int(max(1, min(int(max(kenar, B)),
+                           int(butce // (float(cagri) * pencere)))))
 
     keyf = int(max(2, round(2 + 10 * c)))
     cev = int(max(2, (V // 2) * max(1, int(round(2 * c)))))
-    obek = int(max(cev, min(B, (ornek * keyf) // max(1, cagri))))
+    obek = int(max(1, min(B, ornek,
+                          max(cev, (ornek * keyf) // max(1, cagri)))))
     kume_sayisi = max(1, cagri // max(1, keyf))
     ornek = int(max(obek, min(ornek, obek * kume_sayisi)))
     genislik = int(max(1, round(1.0 + (K - 1) * c)))
-    from .belirtec import basamak_sayisi
-    basamak = basamak_sayisi(int(k.sozluk), V)
+    basamak = _basamak
     return {
         "belirtec_basamak": basamak,
         "parametre_genisligi": genislik,
         "veri_lifi": V, "karo": K, "hukum_lifi": hukum,
         "yigin_dilimi": obek, "keyfiyet_turu": keyf, "obek": obek,
         "ornek_sayisi": ornek, "pencere": pencere,
+        "görev_belirteç_azamî": int(_gb["azamî"]),
+        "görev_belirteç_ortanca": int(_gb["ortanca"]),
+        "görev_sayısı": int(_gb["görev"]),
+        "bağlama_sığan_nispet": sigan,
         "talim_tur": tur, "altuzay_ornek": yon,
         "cevrim_sayisi": int(max(2, (V // 2) * max(1, int(round(2 * c))))),
         "degerlendirme_gorevi": int(max(2, round(8 + 112 * c))),
         "dogrulama_sayisi": int(max(4, round(20 + 180 * c))),
         "kademe_gorevi": int(max(1, round(1 + 7 * c))),
-        "azami_uret": int(max(8, basamak
-                              * _ikinin_kuvveti(pencere / 2.0, 8))),
+        "azami_uret": int(max(8, basamak * int(_gb["hedef_azamî"]))),
         "yaricap": float(1.5 + 2.5 * c),
         "azami_talim_saati": float(AZAMI_SANIYE / 3600.0),
         "galois_us": 8,
@@ -243,8 +251,17 @@ def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
         % d["bütçe"],
         "    çağrı = tur × yön = %d × %d              = %d"
         % (d["talim_tur"], d["altuzay_ornek"], d["çağrı"]),
-        "    örnek × pencere = bütçe/çağrı            = %d × %d"
-        % (d["ornek_sayisi"], d["pencere"]),
+        "    BAĞLAM SUALİ TAŞIR (ferman 1-Ö) -- bütçe artığı DEĞİL:",
+        "      ölçülen görev boyu: ortanca %d, azamî %d belirteç "
+        "(%d görev)"
+        % (d["görev_belirteç_ortanca"], d["görev_belirteç_azamî"],
+           d["görev_sayısı"]),
+        "      pencere = azamî × basamak, ikinin kuvvetine    = %d"
+        % d["pencere"],
+        "      bağlama TAM sığan görev nispeti               = %%%.2f"
+        % (100.0 * float(d["bağlama_sığan_nispet"])),
+        "    örnek (bütçe pencereyi DEĞİL örneği kısar)      = %d"
+        % d["ornek_sayisi"],
         "    fiilî yük = çağrı × örnek × pencere      = %.3e belirteç"
         % d["belirteç"],
         "    bütçeye sığdı mı                         : %s"

@@ -12,9 +12,6 @@ import numpy as np
 __all__ = ["CekirdekAyari", "CEKIRDEK_C", "derle", "yoklama", "kutuphane",
            "Bant", "cekirdek_beyani", "rapor"]
 
-DERLEME_DIZINI = os.environ.get(
-    "MUCIT_DERLEME", os.path.join(os.path.dirname(os.path.dirname(
-        os.path.abspath(__file__))), "depo", "derleme"))
 
 KARO, CIFT, MATCHGATE = 0, 1, 2
 
@@ -278,8 +275,10 @@ void mucit_birlestir(double *psi, const double *re, const double *im,
 }
 '''
 
-BAYRAK = ["-O3", "-fPIC", "-mavx512f", "-mavx512bw", "-mavx512vl",
-          "-mfma", "-funroll-loops"]
+from .derleyici import DERLEME_DIZINI, ORTAK_BAYRAK
+
+BAYRAK = ORTAK_BAYRAK + ["-mavx512f", "-mavx512bw", "-mavx512vl",
+                         "-mfma", "-funroll-loops"]
 
 _ONBELLEK: Dict[str, Any] = {}
 _SAYAC: Dict[str, int] = {"kapı": 0, "boşaltma": 0, "karo": 0, "çift": 0,
@@ -296,35 +295,13 @@ class CekirdekAyari:
 
 
 def _ozet() -> str:
-    h = hashlib.sha256()
-    h.update(CEKIRDEK_C.encode("utf-8"))
-    h.update(" ".join(BAYRAK).encode("utf-8"))
-    return h.hexdigest()[:16]
+    from .derleyici import ozet
+    return ozet(CEKIRDEK_C, BAYRAK)
 
 
 def derle() -> Dict[str, Any]:
-    c = _ONBELLEK.get("derleme")
-    if c is not None:
-        return c
-    os.makedirs(DERLEME_DIZINI, exist_ok=True)
-    so = os.path.join(DERLEME_DIZINI, "qcekirdek_%s.so" % _ozet())
-    cc = os.environ.get("CC", "cc")
-    o: Dict[str, Any] = {"so": so, "derleyici": cc,
-                         "bayrak": " ".join(BAYRAK)}
-    if os.path.exists(so):
-        o["derlendi"] = True
-        _ONBELLEK["derleme"] = o
-        return o
-    with tempfile.TemporaryDirectory() as td:
-        kay = os.path.join(td, "q.c")
-        with open(kay, "w", encoding="utf-8") as f:
-            f.write(CEKIRDEK_C)
-        r = subprocess.run([cc] + BAYRAK + ["-shared", "-o", so, kay],
-                           capture_output=True, text=True)
-    o["derlendi"] = bool(r.returncode == 0)
-    o["derleyici_çıktısı"] = r.stderr or ""
-    _ONBELLEK["derleme"] = o
-    return o
+    from .derleyici import derle as _derle
+    return _derle("qcekirdek", CEKIRDEK_C, BAYRAK)
 
 
 class _Kapi(ctypes.Structure):

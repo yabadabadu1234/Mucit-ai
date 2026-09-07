@@ -156,6 +156,41 @@ def gorev_dizisi(gorev: Gorev, hedef_indis: int = 0,
     return baglam, hedef
 
 
+_BOY_ONBELLEK: Dict[str, Dict[str, Any]] = {}
+
+
+def gorev_boyu(kume: str = "training", azami_baglam: int = 3
+               ) -> Dict[str, Any]:
+    if kume in _BOY_ONBELLEK:
+        return _BOY_ONBELLEK[kume]
+    boylar: List[int] = []
+    hedefler: List[int] = []
+    for g in gorevleri_getir(kume):
+        try:
+            bag, hed = gorev_dizisi(g, hedef_indis=0,
+                                    azami_baglam=int(azami_baglam))
+        except (IndexError, ValueError):
+            continue
+        boylar.append(len(bag) + len(hed))
+        hedefler.append(len(hed))
+    assert boylar, "görev boyu ölçülemedi -- ARC verisi BOŞ"
+    a = np.asarray(boylar, np.int64)
+    h = np.asarray(hedefler, np.int64)
+    o = {"görev": int(a.size), "ortanca": int(np.median(a)),
+         "azamî": int(a.max()), "asgarî": int(a.min()),
+         "ortalama": float(a.mean()),
+         "y90": int(np.quantile(a, 0.90)),
+         "hedef_azamî": int(h.max()), "hedef_ortanca": int(np.median(h)),
+         "boylar": a}
+    _BOY_ONBELLEK[kume] = o
+    return o
+
+
+def sigan_nispet(boy: int, kume: str = "training") -> float:
+    a = gorev_boyu(kume)["boylar"]
+    return float(np.mean(a <= int(boy)))
+
+
 def toplu_uret(gorevler: Sequence[Gorev], azami_uzunluk: int,
                tohum: int = 0, azami_baglam: int = 3
                ) -> Iterator[Tuple[np.ndarray, np.ndarray, np.ndarray]]:

@@ -15,9 +15,6 @@ __all__ = ["GFNI_C", "derle", "yoklama", "kutuphane", "sbox_gfni",
            "kaynasik_gfni", "ayrik_gfni", "genlesme_gfni",
            "dfa_tablosu", "faz_dfa_gfni", "akis_gfni", "akis_olc", "rapor"]
 
-DERLEME_DIZINI = os.environ.get(
-    "MUCIT_DERLEME", os.path.join(os.path.dirname(os.path.dirname(
-        os.path.abspath(__file__))), "depo", "derleme"))
 
 AES_AFFINE = 0xF1E3C78F1F3E7CF8
 AES_SABIT = 0x63
@@ -383,51 +380,22 @@ int main(void){
 }
 '''
 
-BAYRAK = ["-O3", "-fPIC", "-mgfni", "-mavx512f", "-mavx512bw",
-          "-mavx512vl", "-mpopcnt"]
+from .derleyici import DERLEME_DIZINI, ORTAK_BAYRAK
+
+BAYRAK = ORTAK_BAYRAK + ["-mgfni", "-mavx512f", "-mavx512bw",
+                         "-mavx512vl", "-mpopcnt"]
 
 _ONBELLEK: Dict[str, Any] = {}
 
 
 def _ozet() -> str:
-    h = hashlib.sha256()
-    h.update(GFNI_C.encode("utf-8"))
-    h.update(" ".join(BAYRAK).encode("utf-8"))
-    return h.hexdigest()[:16]
+    from .derleyici import ozet
+    return ozet(GFNI_C, BAYRAK, _YOKLAMA_C)
 
 
 def derle() -> Dict[str, Any]:
-    c = _ONBELLEK.get("derleme")
-    if c is not None:
-        return c
-    os.makedirs(DERLEME_DIZINI, exist_ok=True)
-    ad = _ozet()
-    so = os.path.join(DERLEME_DIZINI, "gfni_%s.so" % ad)
-    prob = os.path.join(DERLEME_DIZINI, "gfni_%s.yokla" % ad)
-    cc = os.environ.get("CC", "cc")
-    o: Dict[str, Any] = {"kaynak_özeti": ad, "so": so, "yoklama_ikilisi": prob,
-                         "derleyici": cc, "bayrak": " ".join(BAYRAK)}
-    if os.path.exists(so) and os.path.exists(prob):
-        o["derlendi"] = True
-        o["önbellekten"] = True
-        _ONBELLEK["derleme"] = o
-        return o
-    with tempfile.TemporaryDirectory() as td:
-        kay = os.path.join(td, "gfni.c")
-        yok = os.path.join(td, "yokla.c")
-        with open(kay, "w", encoding="utf-8") as f:
-            f.write(GFNI_C)
-        with open(yok, "w", encoding="utf-8") as f:
-            f.write(_YOKLAMA_C)
-        r1 = subprocess.run([cc] + BAYRAK + ["-shared", "-o", so, kay],
-                            capture_output=True, text=True)
-        r2 = subprocess.run([cc] + BAYRAK + ["-o", prob, yok, kay],
-                            capture_output=True, text=True)
-    o["derlendi"] = bool(r1.returncode == 0 and r2.returncode == 0)
-    o["derleyici_çıktısı"] = (r1.stderr or "") + (r2.stderr or "")
-    o["önbellekten"] = False
-    _ONBELLEK["derleme"] = o
-    return o
+    from .derleyici import derle as _derle
+    return _derle("gfni", GFNI_C, BAYRAK, _YOKLAMA_C)
 
 
 def yoklama() -> Dict[str, Any]:

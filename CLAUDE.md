@@ -584,6 +584,65 @@ kategorideki iş, bir sandalyeye ve bir sayıya iniyordu.
 
 ---
 
+## ▓▓▓ 1-Z. FERMAN: MÜNASEBET HARİTASI -- KOPUKLUK DA ÇELİŞKİDİR ▓▓▓
+
+> *"Evvelâ bir dosyaya giriyorsun. O dosyanın varlıklarını yâni
+> **cevherlerini** haritaya listeliyorsun. Sonra bu cevherleri
+> birbiriyle olan **ilişkilerine göre** diziyorsun. Sonra diğer
+> dosyaya geçiyorsun, aynısını ona yapıyorsun. Sonra bu iki dosyayı
+> **iki varlık olarak** görüp birbirine münasebetine göre bir yere
+> koymaya çalışıyorsun haritada. Eğer koyamıyorsan **çelişki var**
+> demektir, bu zaten bariz. Ama öyle dosyalar olur ki birbirleriyle
+> ortak elemanları olmadığı için birbirlerine bağlanamıyordur. İşte
+> ben **bunu da yanlış kabul ediyorum**. İki dosyayı birbirine
+> bağlayan bir yol **mutlaka olmalı**. Eğer bir dosyadan diğer
+> dosyaya geçiş yoksa orada **çift başlılık** vardır, yeniden
+> organizasyon icap ediyordur. Eğer bu işe **main kodlarından**
+> başlarsan hataları bulman daha kolay olur, çünkü her şeyin başı
+> onlar, baş kopuksa gövde işe yaramaz."*
+
+### USUL -- SIRA DEĞİŞMEZ
+
+```
+1. DOSYAYA GİR      cevherlerini (ad, sınıf, sabit) haritaya listele
+2. İÇİNİ DİZ        cevherleri birbirine olan münasebetine göre yerleştir
+3. SONRAKİ DOSYA    aynısı
+4. İKİSİNİ YERLEŞTİR  iki dosyayı İKİ VARLIK sayıp münasebetlerine
+                      göre haritaya koy
+5. HÜKÜM            koyulamıyorsa ÇELİŞKİ; bağlanamıyorsa ÇİFT BAŞLILIK
+```
+
+Başlangıç noktası **`main/`dır**: baş kopuksa gövde işe yaramaz.
+
+### İKİ AYRI KUSUR, İKİSİ DE HÜKÜMLÜ
+
+* **ÇELİŞKİ** -- iki cevher haritada aynı yere talip fakat başka şey
+  söylüyor (iki ayrı sayı, iki ayrı yol, iki ayrı ad). Bariz olandır.
+* **KOPUKLUK** -- iki dosya arasında **hiçbir yol yok**. Bu bir
+  "bağımsızlık" değil, **çift başlılıktır**: aynı devlette birbirini
+  hiç tanımayan iki kat. Kopuk dosya ya yeniye bağlanır ya kesilir
+  (ferman 2-B); *"bağlantısı yok ama işini görüyor"* demek yasaktır.
+
+---
+
+## ▓▓▓ 1-Ö. FERMAN: BAĞLAM SUALİ TAŞIMALIDIR ▓▓▓
+
+> *"Contexti genişlet, sen 1 milyon contextlisin, bu model 512, böyle
+> şey olmaz."*
+
+* Bağlam penceresi bir **bütçe artığı değildir**. Evvelce `pencere`
+  Formül 2'nin (bütçe) bölüşümünden arta kalan sayıydı; o hâlde
+  modelin ne kadar görebildiğini donanımın darlığı tayin ediyordu.
+* **Doğru hudut keyfiyettir** (ferman 1-J): *"bağlam suali tamamen
+  taşıyor mu?"* Bir ARC görevi bağlama sığmıyorsa model o suali hiç
+  görmemiştir ve cevabı da bir tahmindir; o hâlde pencere, **verinin
+  kendi ölçülen boyundan** türer, bütçeden değil.
+* Bütçe pencereyi **kısamaz**; bütçe ancak örnek sayısını kısar. Az
+  örneği tam suâlle öğrenmek, çok örneği yarım suâlle öğrenmeye
+  yeğdir -- ikincisi zaten öğrenmek değildir.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o
