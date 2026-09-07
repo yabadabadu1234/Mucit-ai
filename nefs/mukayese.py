@@ -9,6 +9,7 @@ import numpy as np
 __all__ = ["Vecih", "VECIHLER", "vecih_kur", "uyanik_vecihler",
            "bargmann", "swap_testi", "simplisiyal", "istisna_yeri",
            "choi", "nesnelestir", "spektrum", "hata_payi",
+           "zorunlu", "mumkun", "kiplik", "paylar_olc",
            "mukayese_beyani", "mukayese_metni", "sayac"]
 
 _SAYAC: Dict[str, int] = {"bargmann": 0, "swap": 0, "spektrum": 0,
@@ -257,6 +258,66 @@ def hata_payi(adlar: Sequence[str], artik: Sequence[float]
             "dağılım": float(-np.sum(
                 np.abs(birim)[np.abs(birim) > 0]
                 * np.log(np.abs(birim)[np.abs(birim) > 0])))}
+
+
+def zorunlu(onerme: np.ndarray, sahitler: Sequence[np.ndarray],
+            vecihler: Optional[Sequence[Vecih]] = None) -> Dict[str, Any]:
+    return kiplik(onerme, sahitler, vecihler)["zorunlu"]
+
+
+def mumkun(onerme: np.ndarray, sahitler: Sequence[np.ndarray],
+           vecihler: Optional[Sequence[Vecih]] = None) -> Dict[str, Any]:
+    return kiplik(onerme, sahitler, vecihler)["mümkün"]
+
+
+def kiplik(onerme: np.ndarray, sahitler: Sequence[np.ndarray],
+           vecihler: Optional[Sequence[Vecih]] = None) -> Dict[str, Any]:
+    _SAYAC["kiplik"] = _SAYAC.get("kiplik", 0) + 1
+    S = [np.asarray(x, complex).reshape(-1) for x in sahitler]
+    assert S, "kiplik için en az bir şahit dünya lâzım"
+    canli = uyanik_vecihler(S + [np.asarray(onerme, complex).reshape(-1)],
+                            vecihler)
+    dunya: Dict[str, float] = {}
+    for v in canli:
+        en = 0.0
+        for w in S:
+            en = max(en, float(swap_testi(onerme, w, v)["örtüşme"]))
+        dunya[v.ad] = en
+    if not dunya:
+        return {"dünya": {}, "zorunlu": {"doğru": False, "nispet": 0.0},
+                "mümkün": {"doğru": False, "nispet": 0.0},
+                "erişilen": 0}
+    d = np.asarray(list(dunya.values()), float)
+    eps = math.sqrt(float(np.finfo(float).eps))
+    tutan = d > eps
+    return {"dünya": dunya, "erişilen": int(len(dunya)),
+            "zorunlu": {"doğru": bool(np.all(tutan)),
+                        "nispet": float(d.min())},
+            "mümkün": {"doğru": bool(np.any(tutan)),
+                       "nispet": float(d.max())}}
+
+
+def paylar_olc(adlar: Sequence[str], artik: Sequence[float]
+               ) -> Dict[str, float]:
+    _SAYAC["pay"] = _SAYAC.get("pay", 0) + 1
+    a = np.asarray(list(artik), float).reshape(-1)
+    n = a.size
+    assert n == len(adlar), "pay ölçüsü: ad ile artık sayısı tutmuyor"
+    if n < 3 or not np.any(np.abs(a) > 0.0):
+        return {str(ad): 1.0 / max(n, 1) for ad in adlar}
+    E = np.eye(n, dtype=complex)
+    v = a.astype(complex)
+    rez = np.zeros(n, float)
+    for i in range(n):
+        halka = [v, E[i], v - complex(np.vdot(E[i], v)) * E[i]]
+        if float(np.linalg.norm(halka[2])) <= 1e-300:
+            continue
+        o = bargmann(halka)
+        rez[i] = float(o["r"])
+    top = float(rez.sum())
+    if top <= 0.0:
+        return {str(ad): 1.0 / n for ad in adlar}
+    return {str(adlar[i]): float(rez[i] / top) for i in range(n)}
 
 
 def mukayese_beyani(spek: Optional[Dict[str, Any]] = None,

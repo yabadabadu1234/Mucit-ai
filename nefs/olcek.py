@@ -195,9 +195,33 @@ PAYLAR: Dict[str, float] = {
 
 
 def denge(kefeler: Dict[str, float], taban: float = 0.05,
-          tavan: float = 8.0) -> Dict[str, float]:
+          tavan: float = 8.0,
+          artik: Optional[Sequence[float]] = None,
+          adlar: Optional[Sequence[str]] = None) -> Dict[str, float]:
+    paylar = dict(PAYLAR)
+    olculen = False
+    if artik is not None and adlar is not None and len(adlar) >= 3:
+        from .mukayese import paylar_olc
+        ham = paylar_olc(list(adlar), list(artik))
+        esle_ad = {"uzay": "uzay", "tip": "tip", "kategori": "kategori",
+                   "nokta": "nokta", "cevrim": "çevrim",
+                   "tenakuz": "tenakuz", "monogami": "monogami",
+                   "engel": "engel"}
+        toplu: Dict[str, float] = {}
+        for ad, anahtar in esle_ad.items():
+            toplu[ad] = float(ham.get(anahtar, 0.0))
+        toplu["meleke"] = float(sum(v for k, v in ham.items()
+                                    if k.startswith("𝒪")
+                                    or k.startswith("alan.")
+                                    or k.startswith("kademe.")))
+        toplu["zirh"] = float(sum(v for k, v in ham.items()
+                                  if k.startswith("zırh.")))
+        top = float(sum(toplu.values()))
+        if top > 0.0:
+            paylar = {k: v / top for k, v in toplu.items()}
+            olculen = True
     cipa = float(kefeler.get("rezonans", 0.0))
-    pay_u = float(PAYLAR["uzay"])
+    pay_u = float(paylar.get("uzay", PAYLAR["uzay"])) or PAYLAR["uzay"]
     o: Dict[str, float] = {}
     frenlenen = []
     esle = {"cevrim": "çevrim", "tenakuz": "tenakuz_bariyer",
@@ -207,7 +231,7 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
     esik = max(float(taban) * cipa, 1e-9)
     for ad, anahtar in esle.items():
         v = abs(float(kefeler.get(anahtar, 0.0)))
-        nispet = float(PAYLAR[ad]) / pay_u
+        nispet = float(paylar.get(ad, PAYLAR[ad])) / pay_u
         if v < esik:
             lam = nispet
             frenlenen.append(ad + "(taban)")

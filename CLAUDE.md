@@ -813,6 +813,31 @@ vidalanacağını bilmektir**.
 
 ---
 
+## ▓▓▓ 2-E. FERMAN: SIRA SORULMAZ -- TETABUK SORULUR ▓▓▓
+
+> *"Arkadaş, bana **artık bundan sonra hangi işi önce yapayım diye
+> sorma**, bana hangi işi önce sonra yaptığın değil yaptığın işi
+> **becerdin mi becermedin mi** o lâzım, becerebildiğin bütün işleri
+> de **aynı anda tamamla**, seni marifetli diye biliyorum ben,
+> marifeti yeten adam neden acaba hangisini önce yapsam sonra yapsam
+> diye bana sorsun, bana soracağın şey şu usulle şu usul **nasıl
+> tetabuk etsin**. Kapat tüm borçları hemen."*
+
+* **SIRA SUALİ YASAKTIR.** *"Evvelâ hangisini yapayım?"*, *"bu turda
+  kaç aksam?"*, *"önce mi sonra mı?"* -- üçü de sorulmaz. Marifeti
+  yeten sırayı kendi kurar.
+* **BECERİLEBİLEN HER İŞ AYNI ANDA BİTİRİLİR.** Ferman 2-C'nin "ordu
+  rastgele sürülmez" hükmü bir **acele yasağıdır**, bir tembellik
+  ruhsatı değil: her aksam yerine ve sınanarak takılır, fakat
+  **hepsi** takılır.
+* **SORULACAK TEK ŞEY TETABUKTUR:** iki usul, iki uzuv, iki cevher
+  birbirine **nasıl denk gelecek**. Yerleşim sualidir, sıra suali
+  değil (ferman 2-D bu manada okunur).
+* **ÖLÇÜ TEKTİR:** becerildi mi, becerilmedi mi. Yarım bırakılan iş
+  "sıraya kondu" diye savunulamaz (ferman 1-E).
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.

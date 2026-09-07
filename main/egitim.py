@@ -49,8 +49,9 @@ from nefs.munasebet import (MunasebetAyari, munasebet_kos,
                             munasebet_beyani)
 from main.kulliyat import (kulliyat_verisi,
                            kulliyat_dokumu, kulliyat_beyani)
-from nefs.mukayese import (hata_payi, mukayese_beyani, spektrum,
-                           vecih_kur)
+from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
+                           spektrum, vecih_kur)
+from nefs.qegitim import kaide_kefesi
 from nefs.usul import usul_beyani
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import (talim_beyani,
@@ -405,7 +406,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     _mzn = {"a": mzn}
 
     def _dengele(dokum) -> Dict[str, float]:
-        lam = denge(dokum)
+        lam = denge(dokum, artik=list(dokum.get("artık") or ()),
+                    adlar=list(dokum.get("artık_adı") or ()))
         for ad, deger in lam.items():
             if ad == "frenlenen" or ad in _elle_lam:
                 continue
@@ -610,6 +612,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                           hafiza=hafiza, adim=_sayac["çağrı"],
                           kademe_gorevleri=kademe_gorevleri, ne="döküm")
     cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
+    kaide = kaide_kefesi(kademe_gorevleri, taban=int(ayar.veri_lifi),
+                         basamak=int(ayar.belirtec_basamak))
     if int(ayar.mukayese_acik):
         _sek = [q_son.y.sektor(ad) for ad, _ in q_son.ayar.kulli_alanlar]
         _vec = vecih_kur([(ad, s) for (ad, _n), s
@@ -620,6 +624,10 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                      tohum=int(ayar.tohum)),
             hata_payi(list(kefeler["artık_adı"]),
                       list(np.asarray(kefeler["artık"], float))))
+        _dun = [np.asarray(h, complex) for h in
+                np.asarray(q_son.y.psi, complex)[:4]]
+        mukayese["kiplik"] = kiplik(np.asarray(psi_son, complex), _dun,
+                                    _vec)
     else:
         mukayese = mukayese_beyani(None, None)
 
@@ -655,7 +663,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "palmer": palmer,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "sadakat": sad, "son_sadakat": son_sadakat,
-            "mukayese": mukayese,
+            "mukayese": mukayese, "kaide": kaide,
             "konuşma": konusma, "münasebet": munasebet_beyani(),
             "keyfiyet": keyfiyet_beyani(),
             "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri),

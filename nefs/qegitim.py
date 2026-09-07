@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import time
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
@@ -12,7 +12,7 @@ from . import melekeler as mertebe
 from .melekeler import QNefs
 from .zihin_durumu import QAyar, QYazmac
 
-__all__ = ["ornekler", "ornek_bol", "belirtecleri_kodla",
+__all__ = ["kaide_halkasi", "kaide_kefesi", "ornekler", "ornek_bol", "belirtecleri_kodla",
            "adayin_tuttugu",
            "egit", "degerlendir"]
 
@@ -42,6 +42,63 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
     out = np.zeros((t.size, taban))
     out[np.arange(t.size), t] = 1.0
     return out
+
+
+def kaide_halkasi(gorev, taban: int = 16, basamak: int = 0
+                  ) -> Dict[str, Any]:
+    from .belirtec import basamak_sayisi, tip_vektoru
+    from .kulli_mizan import givens
+    from .mukayese import bargmann, istisna_yeri, nesnelestir
+    from .musahede import izgara_belirtecle
+
+    ciftler = list(getattr(gorev, "egitim", ()) or ())
+    if len(ciftler) < 2:
+        return {"K": len(ciftler), "r": 0.0, "Φ": 0.0,
+                "küllî": False, "istisna": None,
+                "sebep": "numune çifti ikiden az -- halka kurulamaz"}
+    tb = max(2, int(taban))
+    bs = int(basamak) if int(basamak) > 0 else basamak_sayisi(256, tb)
+    hipotez: List[np.ndarray] = []
+    for gi, co in ciftler:
+        a = tip_vektoru(izgara_belirtecle(gi), tb, bs)
+        b = tip_vektoru(izgara_belirtecle(co), tb, bs)
+        n = int(max(2, min(tb, max(a.size, b.size))))
+        va = np.zeros(n, complex)
+        vb = np.zeros(n, complex)
+        for i, x in enumerate(a[:n]):
+            va[i] = float(x) + 1.0
+        for i, x in enumerate(b[:n]):
+            vb[i] = float(x) + 1.0
+        na = float(np.linalg.norm(va)) or 1.0
+        nb = float(np.linalg.norm(vb)) or 1.0
+        U = givens(va / na, vb / nb)
+        o = bargmann([va / na, U @ (va / na), vb / nb])
+        hipotez.append(nesnelestir(o, n))
+    h = bargmann(hipotez)
+    ist = (istisna_yeri(hipotez) if len(hipotez) >= 3
+           else {"istisna": None, "yırtık": False, "sapma": 0.0})
+    return {"K": len(hipotez), "r": float(h["r"]), "Φ": float(h["Φ"]),
+            "küllî": bool(h["r"] > 0.0 and not h["kopuk"]
+                          and not h["tenakuz"]),
+            "kopuk": bool(h["kopuk"]),
+            "istisna": ist.get("istisna"),
+            "yırtık": bool(ist.get("yırtık", False)),
+            "sapma": float(ist.get("sapma", 0.0))}
+
+
+def kaide_kefesi(gorevler, taban: int = 16, basamak: int = 0
+                 ) -> Dict[str, Any]:
+    o = [kaide_halkasi(g, taban, basamak) for g in list(gorevler)]
+    o = [x for x in o if int(x["K"]) >= 2]
+    if not o:
+        return {"kayıp": 0.0, "görev": 0, "küllî": 0, "yırtık": 0,
+                "ortalama_r": 0.0}
+    r = np.asarray([x["r"] for x in o], float)
+    return {"kayıp": float(np.mean(1.0 - r)), "görev": len(o),
+            "küllî": int(sum(1 for x in o if x["küllî"])),
+            "yırtık": int(sum(1 for x in o if x["yırtık"])),
+            "ortalama_r": float(r.mean()),
+            "en_iyi_r": float(r.max()), "en_kötü_r": float(r.min())}
 
 
 def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,

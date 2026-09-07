@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["UsulAyari", "USULLER", "gedik_bul", "sefer", "usul_kos",
+__all__ = ["DEVRELER", "usul_sec", "usul_imzasi", "UsulAyari", "USULLER", "gedik_bul", "sefer", "usul_kos",
            "usul_beyani", "usul_sifirla"]
 
 
@@ -35,7 +35,8 @@ class UsulAyari:
 
 _SAYAC: Dict[str, float] = {
     "yoklama": 0.0, "sefer": 0.0, "istihrac": 0.0, "cerh": 0.0,
-    "tahkik": 0.0, "uncompute": 0.0, "lan_k": 0.0, "artık": 0.0}
+    "tahkik": 0.0, "uncompute": 0.0, "lan_k": 0.0, "artık": 0.0,
+    "tasfiye": 0.0}
 _USUL_SAYAC: Dict[str, int] = {}
 
 
@@ -53,16 +54,128 @@ def gedik_bul(omegalar: Sequence[float],
     return [int(i) for i in sira[:max(0, int(a.sefer))]]
 
 
-def _usul_sec(omega: float, kose: int) -> str:
-    if omega < -0.75:
-        return "Baroco"
-    if kose > 3:
-        return "Sorites"
-    if omega < -0.25:
-        return "Celarent"
-    if omega < 0.0:
-        return "AksiMüstevî"
-    return "Barbara"
+def _bir(v: np.ndarray) -> np.ndarray:
+    n = float(np.linalg.norm(v))
+    return v / n if n > 1e-300 else v
+
+
+def _householder(v: np.ndarray, x: np.ndarray) -> np.ndarray:
+    v = _bir(v)
+    return x - 2.0 * complex(np.vdot(v, x)) * v
+
+
+def _dikleştir(v: np.ndarray, x: np.ndarray) -> np.ndarray:
+    v = _bir(v)
+    return x - complex(np.vdot(v, x)) * v
+
+
+def _barbara(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    return G(b, c) @ (G(a, b) @ a), b
+
+
+def _celarent(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    return _householder(c, G(a, b) @ a), b
+
+
+def _cesare(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    return _dikleştir(c, a), b
+
+
+def _darapti(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    return _bir(b + c), b
+
+
+def _baroco(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    return _householder(b, a), b
+
+
+def _modus_ponens(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    return G(a, c) @ a, b
+
+
+def _munfasila(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    return _householder(a, c), b
+
+
+def _temsil(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    illet = complex(np.vdot(a, b))
+    return _bir(illet * c + (1.0 - abs(illet)) * b), b
+
+
+def _aksi_mustevi(K, G):
+    a, b, c = K[0], K[1], K[-1]
+    faz = complex(np.vdot(a, c))
+    faz = faz / abs(faz) if abs(faz) > 1e-300 else 1.0 + 0j
+    return _bir(faz * c), b
+
+
+def _sorites(K, G):
+    x = K[0]
+    for i in range(len(K) - 1):
+        x = G(K[i], K[i + 1]) @ x
+    return x, K[len(K) // 2]
+
+
+DEVRELER: Dict[str, Any] = {
+    "Barbara": _barbara,
+    "Celarent": _celarent,
+    "Cesare": _cesare,
+    "Darapti": _darapti,
+    "Baroco": _baroco,
+    "ModusPonens": _modus_ponens,
+    "Munfasıla": _munfasila,
+    "Temsil": _temsil,
+    "AksiMüstevî": _aksi_mustevi,
+    "Sorites": _sorites,
+}
+
+_IMZA: Dict[str, np.ndarray] = {}
+
+
+def usul_imzasi(boy: int = 8) -> Dict[str, np.ndarray]:
+    from .kulli_mizan import givens
+    from .mukayese import nesnelestir, bargmann
+    anahtar = "%d" % int(boy)
+    if _IMZA.get("__boy__") is not None and str(
+            _IMZA["__boy__"]) == anahtar:
+        return {k: v for k, v in _IMZA.items() if k != "__boy__"}
+    _IMZA.clear()
+    E = np.eye(int(boy), dtype=complex)
+    kanon = [E[0], _bir(E[0] + E[1]), _bir(E[1] + 1j * E[2]),
+             _bir(E[2] - E[0])]
+    for ad, dev in DEVRELER.items():
+        netice, orta = dev(kanon, givens)
+        o = bargmann([kanon[0], _bir(np.asarray(netice)), kanon[-1]])
+        _IMZA[ad] = nesnelestir(o, int(boy))
+    _IMZA["__boy__"] = anahtar
+    return {k: v for k, v in _IMZA.items() if k != "__boy__"}
+
+
+def usul_sec(koseler: Sequence[np.ndarray]) -> Dict[str, Any]:
+    from .kulli_mizan import givens
+    from .mukayese import bargmann, nesnelestir, swap_testi
+    K = [_bir(np.asarray(k, complex).reshape(-1)) for k in koseler]
+    boy = int(K[0].size)
+    imza = usul_imzasi(min(boy, 8))
+    o = bargmann([K[0], K[1], K[-1]])
+    parmak = nesnelestir(o, min(boy, 8))
+    en, ad_en = -1.0, "Barbara"
+    olcu: Dict[str, float] = {}
+    for ad, im in imza.items():
+        v = float(swap_testi(parmak, im)["örtüşme"])
+        olcu[ad] = v
+        if v > en:
+            en, ad_en = v, ad
+    return {"usul": ad_en, "örtüşme": float(en), "ölçü": olcu,
+            "r": float(o["r"]), "Φ": float(o["Φ"])}
 
 
 def _gaye(omega: float) -> str:
@@ -77,43 +190,50 @@ def sefer(koseler: Sequence[np.ndarray], omega: float,
           mudrike: np.ndarray, ayar: Optional[UsulAyari] = None
           ) -> Dict[str, Any]:
     from .kulli_mizan import givens
+    from .mukayese import swap_testi
     a = ayar or UsulAyari()
     K = [np.asarray(k, complex).reshape(-1) for k in koseler]
     assert len(K) >= 3, "sefer en az üç köşe ister (hadd-i evsat lâzım)"
-    K = [k / max(float(np.linalg.norm(k)), 1e-300) for k in K]
-    usul = _usul_sec(float(omega), len(K))
+    K = [_bir(k) for k in K]
+    _sec = usul_sec(K)
+    usul = str(_sec["usul"])
     gaye = _gaye(float(omega))
     _SAYAC["sefer"] += 1.0
     _SAYAC[gaye] += 1.0
     _USUL_SAYAC[usul] = _USUL_SAYAC.get(usul, 0) + 1
 
-    a0, b0, c0 = K[0], K[1], K[-1]
-    U_f = givens(a0, b0)
-    U_g = givens(b0, c0)
-    netice = U_g @ (U_f @ a0)
+    netice, orta = DEVRELER[usul](K, givens)
+    netice = np.asarray(netice, complex).reshape(-1)
+    orta = np.asarray(orta, complex).reshape(-1)
 
-    ic = complex(np.vdot(b0, netice))
-    temiz = netice - ic * b0
+    ic = complex(np.vdot(orta, netice))
+    temiz = netice - ic * _bir(orta)
     artik = float(abs(ic))
     _SAYAC["artık"] += artik
     if artik < 0.5:
         _SAYAC["uncompute"] += 1.0
+    sifir = np.zeros_like(temiz)
+    sifir[0] = 1.0
+    _tasfiye = float(swap_testi(
+        orta, temiz)["örtüşme"]) if float(np.linalg.norm(temiz)) > 0 else 1.0
+    _SAYAC["tasfiye"] = _SAYAC.get("tasfiye", 0.0) + _tasfiye
 
     nrm = float(np.linalg.norm(temiz))
     if nrm <= 1e-300:
         return {"usul": usul, "gaye": gaye, "artık": artik,
+                "tasfiye": _tasfiye, "seçim": _sec,
                 "lan_k": False, "kazanç": 0.0, "netice": None}
     temiz = temiz / nrm
 
-    M = np.asarray(mudrike, complex).reshape(-1)
-    M = M / max(float(np.linalg.norm(M)), 1e-300)
-    once = float(abs(complex(np.vdot(M, a0))))
+    M = _bir(np.asarray(mudrike, complex).reshape(-1))
+    once = float(abs(complex(np.vdot(M, K[0]))))
     sonra = float(abs(complex(np.vdot(M, temiz))))
     kazanc = sonra - once
     tasindi = bool(kazanc > float(a.lan_esigi))
     if tasindi:
         _SAYAC["lan_k"] += 1.0
     return {"usul": usul, "gaye": gaye, "artık": artik,
+            "tasfiye": _tasfiye, "seçim": _sec,
             "lan_k": tasindi, "kazanç": float(kazanc), "netice": temiz}
 
 
@@ -159,6 +279,9 @@ def usul_beyani() -> Dict[str, Any]:
             "uncompute": int(_SAYAC["uncompute"]),
             "lan_k": int(_SAYAC["lan_k"]),
             "artık_dolanıklık": float(_SAYAC["artık"] / s),
+            "hadd_tasfiyesi": float(_SAYAC.get("tasfiye", 0.0) / s),
+            "devre": len(DEVRELER),
+            "ayrı_koşan_usul": len(_USUL_SAYAC),
             "usul": dict(_USUL_SAYAC)}
 
 
