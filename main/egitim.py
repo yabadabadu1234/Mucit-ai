@@ -28,6 +28,7 @@ from nefs.galois import (GaloisAyari, tableau_kur,
                          sbox_bukme, sbox_olcu, palmer_olcu)
 from nefs.tdd import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
+from nefs.ayna import AynaAyari
 from nefs.mihenk import MIHENK, nobet_kur
 from nefs.faz_polinomu import FazAyari, faz_oturt
 from nefs.siklotomik import (SiklotomikAyari,
@@ -454,7 +455,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                       taban=int(ayar.veri_lifi),
                       basamak=int(ayar.belirtec_basamak),
                       kodlama=str(ayar.kodlama),
-                      azami_uret=int(ayar.azami_uret))
+                      azami_uret=int(ayar.azami_uret),
+                      ayna=AynaAyari(teta=float(ayar.ayna_teta),
+                                     r=float(ayar.ayna_r),
+                                     tur=int(ayar.ayna_tur),
+                                     tohum=int(ayar.tohum)))
 
     def kayip_p(P: np.ndarray) -> np.ndarray:
         P = np.atleast_2d(np.asarray(P, float))
@@ -521,7 +526,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         "tâlim %d parametre aldı, %d döndürdü" % (d, p_yildiz.size))
     assert np.all(np.isfinite(p_yildiz)), "tâlim NaN/Inf parametre döndürdü"
     nefs.yukle(p_yildiz)
-    from nefs.ayna import AynaAyari
     ayna = AynaAyari(teta=float(ayar.ayna_teta), r=float(ayar.ayna_r),
                      tur=int(ayar.ayna_tur), tohum=int(ayar.tohum))
     deg = degerlendir(nefs, dogrulama, azami=ayar.degerlendirme_gorevi,

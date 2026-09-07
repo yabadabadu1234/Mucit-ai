@@ -57,7 +57,7 @@ def _sozluk(kodlama: str) -> int:
 def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
                sozluk: int = 16, taban: int = 16, basamak: int = 5,
                kodlama: str = "o200k_base", azami_uret: int = 0,
-               sual: str = MIHENK) -> Dict[str, Any]:
+               sual: str = MIHENK, ayna=None) -> Dict[str, Any]:
     from .soyle import _uret
     if p is not None:
         nefs.yukle(np.asarray(p, float))
@@ -67,7 +67,7 @@ def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
     kac = max(int(basamak), (kac // int(basamak)) * int(basamak))
     t0 = time.perf_counter()
     uretilen, bedel, sukutlar, budanan = _uret(
-        nefs, bag, kac, int(pencere), int(taban))
+        nefs, bag, kac, int(pencere), int(taban), ayna=ayna)
     sure = time.perf_counter() - t0
     coz = _metne(uretilen, str(kodlama), int(taban), int(basamak))
     cevap = str(coz["metin"])
@@ -79,6 +79,9 @@ def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
             "sözlük": int(coz["sözlük"]),
             "basamak": [int(x) for x in uretilen],
             "üretilen_basamak": int(len(uretilen)),
+            "ayrı_basamak": int(len(set(int(x) for x in uretilen))),
+            "sabit_nokta": bool(len(set(int(x) for x in uretilen)) <= 1),
+            "ayna": bool(ayna is not None),
             "bedel": float(bedel), "budanan": int(budanan),
             "sükût": float(np.mean(sukutlar)) if sukutlar else 1.0,
             "saniye": float(sure),
@@ -92,8 +95,9 @@ class Nobet:
     def __init__(self, nefs, ara_saniye: float = 300.0, pencere: int = 8,
                  sozluk: int = 16, taban: int = 16, basamak: int = 5,
                  kodlama: str = "o200k_base", azami_uret: int = 0,
-                 sual: str = MIHENK) -> None:
+                 sual: str = MIHENK, ayna=None) -> None:
         self.nefs = nefs
+        self.ayna = ayna
         self.ara = float(ara_saniye)
         self.pencere = int(pencere)
         self.sozluk = int(sozluk)
@@ -112,7 +116,8 @@ class Nobet:
             c = mihenk_sor(self.nefs, p, pencere=self.pencere,
                            sozluk=self.sozluk, taban=self.taban,
                            basamak=self.basamak, kodlama=self.kodlama,
-                           azami_uret=self.azami_uret, sual=self.sual)
+                           azami_uret=self.azami_uret, sual=self.sual,
+                           ayna=self.ayna)
         finally:
             self.nefs.yukle(eski)
         c["saniye_ofset"] = float(time.perf_counter() - self._t0)
@@ -120,9 +125,11 @@ class Nobet:
         c["adım"] = int(adim)
         self.defter.append(c)
         print("  [mihenk %6.0f sn · adım %d · V %.4f] %s → %r"
-              "   (geçersiz belirteç %d/%d)%s"
+              "   (geçersiz %d/%d · ayrı basamak %d%s)%s"
               % (c["saniye_ofset"], c["adım"], c["kayıp"], self.sual,
                  c["cevap"], c["geçersiz"], c["belirteç"],
+                 c["ayrı_basamak"],
+                 " SABİT NOKTA" if c["sabit_nokta"] else "",
                  "  ✓" if c["isabet"] else ""),
               flush=True)
         return c
@@ -155,10 +162,11 @@ class Nobet:
 def nobet_kur(nefs, ara_saniye: float = 300.0, pencere: int = 8,
               sozluk: int = 16, taban: int = 16, basamak: int = 5,
               kodlama: str = "o200k_base", azami_uret: int = 0,
-              sual: str = MIHENK) -> Nobet:
+              sual: str = MIHENK, ayna=None) -> Nobet:
     return Nobet(nefs, ara_saniye=ara_saniye, pencere=pencere,
                  sozluk=sozluk, taban=taban, basamak=basamak,
-                 kodlama=kodlama, azami_uret=azami_uret, sual=sual)
+                 kodlama=kodlama, azami_uret=azami_uret, sual=sual,
+                 ayna=ayna)
 
 
 def mihenk_metni(beyan: Dict[str, Any]) -> str:
@@ -175,12 +183,18 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
         return "\n".join(s)
     s += ["  kod uzayı : %d   sözlük : %d"
           % (d[-1]["kod_uzayı"], d[-1]["sözlük"]),
-          "  %-8s %-7s %-9s %-6s %-9s %s"
-          % ("saniye", "adım", "kayıp", "sükût", "geçersiz", "cevap")]
+          "  vakum kıvılcımı: %s"
+          % ("AÇIK" if d[-1].get("ayna") else
+             "KAPALI -- açgözlü argmax (ferman 7 ihlâli)"),
+          "  %-8s %-7s %-9s %-6s %-9s %-8s %s"
+          % ("saniye", "adım", "kayıp", "sükût", "geçersiz",
+             "ayrıbas", "cevap")]
     for c in d:
-        s.append("  %-8.0f %-7d %-9.4f %-6.3f %-9s %r%s"
+        s.append("  %-8.0f %-7d %-9.4f %-6.3f %-9s %-8s %r%s"
                  % (c["saniye_ofset"], c["adım"], c["kayıp"], c["sükût"],
                     "%d/%d" % (c["geçersiz"], c["belirteç"]),
+                    "%d%s" % (c["ayrı_basamak"],
+                              "!" if c["sabit_nokta"] else ""),
                     c["cevap"], "  ✓" if c["isabet"] else ""))
     ayri = len({c["cevap"] for c in d})
     s += ["",
@@ -192,6 +206,8 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
           "büyük; taşan kimlik ÇÖZÜLEMEZ, sessizce elenmez, sayılır"
           % (sum(c["geçersiz"] for c in d), sum(c["belirteç"] for c in d),
              float(d[-1]["kod_uzayı"]) / max(1, d[-1]["sözlük"])),
+          "  sabit nokta : %d / %d yoklamada üretim TEK basamağa çöktü"
+          % (sum(1 for c in d if c["sabit_nokta"]), len(d)),
           "  ayrı cevap  : %d  %s"
           % (ayri, "(cevap HİÇ DEĞİŞMEDİ -- ağırlık cevaba geçmiyor)"
              if ayri <= 1 and len(d) > 1 else "")]
