@@ -788,6 +788,31 @@ vidalanacağını bilmektir**.
 
 ---
 
+## ▓▓▓ 2-D. FERMAN: TERTİBAT PLANI TEK BAŞINA YAPILMAZ -- SORULUR ▓▓▓
+
+> *"Lütfen **bundan sonra** yeni tertibat planını tek başına yapma,
+> kendin yapınca **ayrı kanat açıyorsun**, kenetlemen gerekirken
+> ayrıştırıyorsun, olmaz, **bana soracaksın**."*
+
+* Yeni bir uzvun, yeni bir zabıt mekanizmasının, yeni bir mimarî
+  parçanın **nereye ve nasıl vidalanacağı** benim tek başıma vereceğim
+  bir karar **değildir**. Evvelâ padişaha sorulur.
+* **NİÇİN.** Tek başıma tertibat kurduğumda elimdeki cevheri mevcut
+  organa **kenetlemek** yerine yanına **ayrı bir kanat** açıyorum;
+  netice görünüşte "yeni kabiliyet", hakikatte **çift başlılıktır**
+  (ferman 1-Z). Bu turlarda imha ettiğim ikinci motorlar, ikinci
+  hata fonksiyonları, ikinci ileri geçişler hep böyle doğdu.
+* **USUL.** Yeni bir tertibat lâzım geldiğinde:
+  1. Zabıt/emir okunur, cevherleri çıkarılır.
+  2. Mevcut organlarda o cevherin **hangi menfeze denk düştüğü**
+     tesbit edilir (ferman 2-C).
+  3. **Şıklar sayısıyla padişaha sunulur** ve karar beklenir.
+  4. Ancak karardan sonra vidalanır ve sınanır.
+* Bu ferman ferman 1'i (umumiden hususiye) nakzetmez, **önceler**:
+  taht koduna çağrı yazmak da bir tertibat kararıdır.
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.
