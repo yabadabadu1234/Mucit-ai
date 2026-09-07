@@ -49,7 +49,15 @@ def gedik_bul(omegalar: Sequence[float],
     om = np.asarray(list(omegalar), float)
     if om.size == 0:
         return []
-    karanlik = np.nonzero(om < float(a.had))[0]
+    if float(a.had) != 0.0:
+        esik = float(a.had)
+    else:
+        eps = float(np.finfo(om.dtype).eps)
+        cz = float(np.arccos(np.clip(1.0 - np.sqrt(eps), -1.0, 1.0)))
+        esik = float(np.median(om)) - cz
+    karanlik = np.nonzero(om < esik)[0]
+    if karanlik.size == 0 and om.size >= 2:
+        karanlik = np.asarray([int(np.argmin(om))])
     sira = karanlik[np.argsort(om[karanlik])]
     return [int(i) for i in sira[:max(0, int(a.sefer))]]
 
