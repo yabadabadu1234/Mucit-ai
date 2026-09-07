@@ -956,6 +956,16 @@ edilmeyecektir. Bu bir mazeret değil, **mühürlenmiş bir hudut**tur:
 
 * Genlik **büyüklüğü** `float`tır; GF(2⁸) tableau yayılımına
   geçirilmeyecektir.
+* **HUDUT YAZMAÇTADIR, BÜTÜN GÖVDEDE DEĞİL.** "Aşkın işlem yok"
+  hükmü `nefs/qyazmac.py`nin faz defteri, kapı vurma ve belirteç
+  kodlaması içindir. Gövdede hâlâ aşkın koşan, canlı yolda bulunan
+  ve **sayılmış** yerler şunlardır:
+  - `nefs/ayna.py:kivilcim` -- `qft_dizeyi` (yoğun `np.exp` dizeyi),
+    `cosh`, `sinh`, `cos`, `sin`. Vakum kıvılcımı örneklemede koşar.
+  - `nefs/ayna.py:150-166` -- QFT ile kaydırma yolu, aynı sebeple.
+  Bunlar iptal edilmedi ve gizlenmedi; menfezleri ayrı bir turun
+  işidir (ferman 2-C: çare imha değil tertip). **Bu satır silinmeden
+  "gövdede aşkın işlem yok" denemez.**
 * **O HÂLDE "TAMAMEN GALOİS'YA GEÇTİK" DENMEYECEKTİR.** Denirse yalan
   olur (ferman 7-B'nin CNOT-Dihedral iddiasını iptal ettiği gibi).
   Doğru cümle şudur: *"faz ve gayri-lineerlik Galois'dadır, genlik

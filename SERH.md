@@ -44052,3 +44052,116 @@ verir, sonunda `hafiza.hazineye()` ve `hafiza.beyan()` çağırır.
 7. **`rapor()` VE `__main__` BLOĞU (ferman 1-L).** Elle kurulmuş
    hâller üstünde ölçüm yapan bir yan koşu. Tahttan çağrılmıyorsa
    ölüdür; çağrılıyorsa ölçüsü tahtın beyanına konmalıdır.
+
+## `ogrenme/optimize.py` (3103 satır) -- ceza okuması, ferman 2-H
+
+### MİMARİYLE MÜNASEBETİ
+
+Tahtın eniyileyicisidir: `main/egitim.py:_eniyile` → `hoca_egit` →
+`KulliOptimizer.kos`. Fakat **3103 satırın ancak dördü canlı yolda**:
+`KulliOptimizer`, `chebyshev_tasarimi`, `hareketin_altuzayi` ve
+`kestirmeden_sur` (tünelde). Bir de `gaye_kos`/`_aci` var ki onları
+`nefs/melekeler.py` çağırır -- yâni eniyileyici dosyasının içinde bir
+**gaye uzvu** oturuyor (ferman 1-Z: menfez yanlış yerde).
+
+### GARABETLER
+
+1. **`chebyshev` İKİ KERE TARİF EDİLİYOR.** 15. satır
+   `kuantum.kapilar`dan `chebyshev` ithal ediyor, 20. satır aynı adı
+   **yeniden tarif edip** ithali sessizce gölgeliyor. İki yerde iki
+   ayrı tarif -- ferman 1-M'nin çift başlılığı, üstelik hangisinin
+   koştuğu okumadan anlaşılmıyor.
+
+2. **`Z` ithal ediliyor, hiç kullanılmıyor.**
+
+3. **`hiz = 50.0` SESSİZ İKAME (satır 1890).** `except Exception:`
+   içinde uydurulan bir sayı; kendi günlüğüne "ölçülemedi -- eski
+   sabit" yazıyor ve bütün bütçe muhakemesi o uydurma sayının üstüne
+   kuruluyor. Ferman 5 bunu açıkça yasaklıyor: "``except`` ile sessiz
+   ikame yasaktır. Yerine **assert**."
+
+4. **`_boyut_guvenligi` ANA AKIŞI ÖLÇÜYOR (satır 1877-1901).**
+   Koşunun ne kadar süreceğini kestirmek için `self.kayip`ı **üç kere
+   fiilen çağırıyor**. Ferman 1-C(a) bunu yasaklıyor; dahası bu
+   koşuda bir kayıp çağrısı ~350 saniye, yâni "çok mu uzun sürecek"
+   suâline cevap vermek **~18 dakika** sürüyor. Ölçü kendi ölçtüğü
+   şeyi doğuruyor.
+
+5. **O ÜÇ ÇAĞRI SAYILMIYOR.** `self._f` değil `self.kayip` doğrudan
+   çağrıldığı için `self.cagri` artmıyor: rapordaki "kayıp çağrısı"
+   sayısı üç eksik. Ölçü yalan söylüyor.
+
+6. **`azami_saniye: float = 3600.0` elle yazılmış tavan.** Ferman
+   2-G'nin kaldırdığı hududun kalıntısıydı ve bu oturumda koşuyu
+   1052. saniyede öldürdü. Tahttan bağlandı; fakat varsayılanın
+   kendisi hâlâ bir kemiyet sabiti (ferman 1-J).
+
+7. **`Cevrim` DİYE BİR TİP YOK.** `DalgaEniyileyici.cevrim` ve
+   `TabiiGradyan.cevrim` dönüş tipini `Cevrim` diye yazıyor; o ad
+   dosyada hiç tarif edilmemiş (`DalgaCevrimi` ve `TabiiCevrim` var).
+   `from __future__ import annotations` sayesinde patlamıyor, yâni
+   **yalan sessizce duruyor**.
+
+8. **`purzu_yerini_bul` ÖLÜ.** `QuditYazmac` üstünde `_kesme_sayisi`,
+   `_kesme_bosluk`, `_kesme_buyukluk` okuyor; yazmacı baştan sona
+   okudum, bu üç alan **yok**. Çağrılsa `AttributeError` verir.
+
+9. **`odenen_bedel(..., "serbest")` ÖLÜ.** `q._alan[ad]` okuyor;
+   yazmaçta `_alan` değil `_sektor` var.
+
+10. **`izgarayi_oku(..., renk_sayisi=10)`** -- `(H, W)` tamsayı
+    ızgarası üreten, varsayılan renk sayısı **10** (ARC paleti) olan
+    bir okuyucu. Canlı yolda değil, yalnız raporda; fakat ferman 6 ve
+    1-P'nin yasakladığı "göreve mahsus çözücü"nün tohumu burada
+    duruyor.
+
+11. **~460 SATIRLIK YAN KOŞU.** `rapor()` + dokuz `_bolum_*` +
+    `_rapor_kuyu`/`_rapor_had`/`_rapor_arayis` + `__main__`. Ferman
+    1-L: yalnız taht koşar.
+
+12. **BAĞLANMAMIŞ CEVHER YIĞINI.** `NQS`, `DalgaEniyileyici`,
+    `TabiiGradyan`, `NesterovEnKotu`, `OgdaTarti`, `oyun_degeri`,
+    `Ikiz`/`tam_turev`, `qsvt`, `faz_dizisinin_polinomu`,
+    `ters_polinomu`, `gibbs_*`, `fazlari_kilitle`, `yokus`,
+    `en_iyiyi_ara`, `had`, `kuyudan_cik`, `gek_uydur`,
+    `as_gek_adimi`, `dalga_yayilimi`, `ayrik_mertebede_sicra`,
+    `tayf_araligi_asgari`, `odenen_bedel` -- hiçbiri canlı yolda
+    değil. Ferman 2-C gereği bunlar **imha edilmez**; menfezleri
+    aranacak cevherlerdir. Fakat hangisinin nereye vidalanacağı
+    padişaha sorulmadan kararlaştırılmaz (ferman 2-D).
+
+13. `_yansima_govdesi(fazlar, x, _eiZ)` üçüncü parametresini hiç
+    kullanmıyor. `_bolum_9` sonunda iki kere `return s` var.
+
+---
+
+## `kuantum/devre.py` (326 satır) -- deponun en eski kod dosyalarından
+
+### MİMARİYLE MÜNASEBETİ
+
+Gövdeye **tek bir fonksiyonla** bağlı: `nefs/ayna.py` yalnız
+`qft_dizeyi`yi ithal ediyor. `__all__`daki diğer on isim
+(`Durum`, `Devre`, `iqft_dizeyi`, `qft_devresi`, `faz_kestirimi`,
+`trotter`, `suzuki2`, `hadamard_testi`, `walsh_hadamard`,
+`olcum_dagilimi`) yalnız dosyanın kendi `_gosterim` raporunda geçiyor.
+
+### GARABETLER
+
+1. **`Durum` İKİNCİ BİR YAZMAÇTIR.** `2^n` uzunluğunda yoğun
+   `complex` genlik vektörü, yâni ferman 7'nin iptal ettiği **ikili
+   kübit kodlaması**. `QuditYazmac`ın yanında ikinci bir taşıyıcı
+   olarak duruyor (ferman 1-M: çift başlılık). Canlı yolda değil ama
+   duruyor.
+
+2. **`qft_dizeyi` YOĞUN VE AŞKIN.** `N×N` boyunda `np.exp` dizeyi
+   kuruyor -- hem `O(N²)` (ferman 7'nin iptal ettiği yoğun dizey) hem
+   transandantal. Ve bu, gövdeye bağlı **tek** fonksiyondur.
+
+3. **BU YÜZDEN FERMAN 2-J'NİN HUDUDU DARALTILDI.** `nefs/ayna.py`
+   `kivilcim` canlı yoldadır (`nefs/soyle.py` üretimde çağırır) ve
+   `qft_dizeyi` ile beraber `cosh`, `sinh`, `cos`, `sin` koşturur.
+   Yâni "aşkın işlem yok" hükmü **yazmaç içindir, gövdenin tamamı
+   için değildir**; bu, ferman 2-J'ye sayısıyla yazıldı.
+
+4. **`_gosterim()` YAN KOŞUDUR** ve `n=18`de `2^18` genlikli durum
+   kurup zamanlama yapıyor (ferman 1-L).
