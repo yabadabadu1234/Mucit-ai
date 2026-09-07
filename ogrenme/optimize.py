@@ -12,20 +12,9 @@ from itertools import permutations, product
 import numpy as np
 
 from matematik.geometri import Donanim, donanim, topla_paralel
-from kuantum.kapilar import Z, chebyshev, uniter_mi
+from kuantum.kapilar import chebyshev, uniter_mi
 from nefs.zihin_durumu import QYazmac, donme
 from ogrenme.rkhs import RKHS, gauss_cekirdegi, medyan_genislik
-
-
-def chebyshev(x: np.ndarray, derece: int) -> np.ndarray:
-    x = np.clip(np.asarray(x, float), -1.0, 1.0)
-    T = np.empty(x.shape + (derece + 1,), float)
-    T[..., 0] = 1.0
-    if derece >= 1:
-        T[..., 1] = x
-    for d in range(2, derece + 1):
-        T[..., d] = 2.0 * x * T[..., d - 1] - T[..., d - 2]
-    return T
 
 
 @dataclass
@@ -225,7 +214,7 @@ KIP_CHEB = "chebyshev"
 KIP_FAZ = "faz"
 
 
-def _yansima_govdesi(fazlar, x, _eiZ):
+def _yansima_govdesi(fazlar, x):
     if len(fazlar) < 1:
         raise ValueError("en az bir faz lazım")
     x = float(np.clip(x, -1.0, 1.0))
@@ -301,7 +290,7 @@ def faz_dizisinin_polinomu(fazlar=None, x: float = 0.0, ne: str = "yansıma",
             U = U @ Wx @ eiZ(float(fi))
         return U if ne == "üniter" else complex(U[0, 0])
     if ne == "yansıma":
-        return _yansima_govdesi(fazlar, x, eiZ)
+        return _yansima_govdesi(fazlar, x)
     raise ValueError("faz polinomunun kipi bilinmiyor: %r" % (ne,))
 
 
@@ -862,47 +851,6 @@ def yokus(F=None, P=None, ne: str = "önşart", sonum: float = 1e-6,
                                 / max(np.linalg.norm(fisher), 1e-12))}
 
 
-def izgarayi_oku(W: np.ndarray, F: np.ndarray, sekil: Tuple[int, int],
-                 komsu_guncelle: Optional[Callable[[np.ndarray, int, int],
-                                                   np.ndarray]] = None,
-                 renk_sayisi: int = 10, tekrar: int = 0):
-    def coz(F0):
-        Wm = np.asarray(W, float)
-        Fm = np.atleast_2d(np.asarray(F0, float)).copy()
-        H, Wd = int(sekil[0]), int(sekil[1])
-
-        def _olasilik(X: np.ndarray) -> np.ndarray:
-            z = X @ Wm
-            z = z - z.max(axis=1, keepdims=True)
-            e = np.exp(z)
-            return e / e.sum(axis=1, keepdims=True)
-
-        Ginv = yokus(Fm, _olasilik(Fm), ne="önşart")
-        out = np.zeros((H, Wd), dtype=int)
-        guven = []
-        for i in range(H):
-            for j in range(Wd):
-                k = i * Wd + j
-                if k >= Fm.shape[0]:
-                    continue
-                phi = Fm[k]
-                p = _olasilik(phi[None, :])[0]
-                olcek = float(phi @ (Ginv @ phi))
-                skor = np.log(np.clip(p, 1e-12, 1.0)) + olcek * (p - p.mean())
-                c = int(np.argmax(skor))
-                out[i, j] = c
-                guven.append(float(p[c]))
-                if komsu_guncelle is not None:
-                    Fm = komsu_guncelle(Fm, k, c)
-        return out, (float(np.mean(guven)) if guven else 0.0)
-
-    g0, guv = coz(F)
-    if int(tekrar) <= 0:
-        return g0, guv
-    ayni = all(np.array_equal(g0, coz(F)[0]) for _ in range(int(tekrar) - 1))
-    return g0, guv, bool(ayni)
-
-
 KayipYigin = Callable[[np.ndarray], np.ndarray]
 
 
@@ -1030,7 +978,7 @@ class DalgaEniyileyici:
 
     def cevrim(self, no: int, ornek: int = 512, zincir: int = 64,
                oran: float = 0.15, lam: float = 1e-3,
-               kademe: float = 0.5) -> Cevrim:
+               kademe: float = 0.5) -> DalgaCevrimi:
         X, tani = self.nqs.ornekle(ornek, zincir=zincir,
                                    tohum=self.tohum + 1000 * no,
                                    baslangic=self.elit, kenar=self.kenar)
@@ -1269,65 +1217,6 @@ def tam_turev(f=None, p=None, yon=None, ne: str = "yönlü", x=None,
                                 <= 1e-5 * max(abs(tam_d), 1.0))}
 
 
-def purzu_yerini_bul(tohum: int = 0, n: int = 8, chi: int = 4
-                     ) -> Dict[str, object]:
-    from kuantum.kapilar import _so4_ureteci
-
-    rng = np.random.default_rng(tohum)
-    t0 = rng.normal(size=6)
-    yon = rng.normal(size=6)
-
-    def kapi_izi(teta):
-        A = _ureteci_ikiz(teta)
-        M = _birim_gibi(A)
-        T = _birim_gibi(A)
-        for k in range(1, 18):
-            T = (T @ A) * (-2.0 / k)
-            M = M + T
-        return _iz(M)
-
-    def kapi_izi_duz(teta):
-        A = _so4_ureteci(np.asarray(teta, float))
-        M = np.eye(4)
-        T = np.eye(4)
-        for k in range(1, 18):
-            T = (T @ A) * (-2.0 / k)
-            M = M + T
-        return float(np.trace(M))
-
-    k1 = tam_turev(lambda z: kapi_izi(z), t0, yon, "kıyas", f_duz=kapi_izi_duz)
-
-    from kuantum.kapilar import dik_iki_kubit
-    from nefs.qyazmac import QuditYazmac as Yazmac
-    bosluklar = []
-    buyuk = []
-    kesme_say = 0
-    for s in np.linspace(0.0, 1.0, 41):
-        y = Yazmac(n, bag=chi, tohum=tohum)
-        y.superpozisyona_sok()
-        r2 = np.random.default_rng(tohum)
-        for t in range(10):
-            y.cift_kapi(dik_iki_kubit(r2.normal(size=6) * 0.8
-                                      + s * yon[:6] * 0.5), ofset=t % 2)
-        if y._kesme_sayisi:
-            bosluklar.append(float(y._kesme_bosluk))
-            buyuk.append(float(y._kesme_buyukluk))
-            kesme_say += int(y._kesme_sayisi)
-    yakin = int(sum(1 for b in bosluklar if b < 1e-2))
-    return {"kapı_pürüzsüz_mü": k1["pürüzsüz_mü"],
-            "kapı_tam_türev": k1["tam_türev"],
-            "kapı_en_yakın_fark": k1["en_yakın"]["fark"],
-            "kapı_en_iyi_h": k1["en_yakın"]["h"],
-            "kesme_boşluğu_ölçüldü": len(bosluklar),
-            "kesme_sayısı": kesme_say,
-            "kesme_sınırı_yakın": yakin,
-            "en_dar_boşluk": (float(min(bosluklar)) if bosluklar
-                              else float("nan")),
-            "sınır_büyüklüğü": (float(min(buyuk)) if buyuk
-                                else float("nan")),
-            "tarama_noktası": 41}
-
-
 def _ureteci_ikiz(teta: Ikiz) -> Ikiz:
     z = Ikiz(np.zeros(()), np.zeros(()))
     A_a = np.zeros((4, 4))
@@ -1450,7 +1339,7 @@ class TabiiGradyan:
         return Q[:, :a.r]
 
 
-    def cevrim(self, no: int) -> Cevrim:
+    def cevrim(self, no: int) -> TabiiCevrim:
         a = self.ayar
         W = self._yonler(no)
         V0 = self.V(self.p)
@@ -1563,7 +1452,7 @@ def odenen_bedel(q: QYazmac, ne: str = "landauer") -> Dict[str, float]:
     from matematik.fitrat import AyrikModel, kl, serbest_enerji_ayrisimi
 
     def marjinal(ad: str) -> np.ndarray:
-        _, kac = q._alan[ad]
+        kac = dict(q.ayar.kulli_alanlar)[ad]
         yuv = [q.kulli(ad, j) for j in range(kac)]
         R = np.asarray(q.y.tekil_yogunluklar(yuv), float)[0]
         v = np.clip(R[:, 1, 1], 1e-9, 1.0 - 1e-9)
@@ -1765,8 +1654,6 @@ class OptimizeAyari:
     durgunluk_esigi: float = 1e-3
     vekil_acik: bool = False
     vekil_aday: int = 6
-    bütçe_denetimi: bool = False
-    azami_saniye: float = 3600.0
 
 
 class KulliOptimizer:
@@ -1874,32 +1761,6 @@ class KulliOptimizer:
             return D / np.sqrt(self.d), {"‖ĝ‖": 0.0, "c": c, "m": float(m)}
         return -g / nrm, {"‖ĝ‖": nrm, "c": c, "m": float(m)}
 
-    def _boyut_guvenligi(self) -> None:
-        M = int(self.ayar.gcl_nokta_sayisi) + 1
-        cagri = int(self.butce_kestirimi()["beklenen_çağrı"])
-        try:
-            t0 = time.perf_counter()
-            n_dene = 3
-            for _ in range(n_dene):
-                self.kayip(self.p0[None, :])
-            gecen = time.perf_counter() - t0
-            hiz = float(n_dene) / gecen if gecen > 0 else 50.0
-            self.gunluk.append({"uzuv": "hız", "çağrı_sn": hiz,
-                                "kaynak": "ölçüldü"})
-        except Exception:
-            hiz = 50.0
-            self.gunluk.append({"uzuv": "hız", "çağrı_sn": hiz,
-                                "kaynak": "ölçülemedi -- eski sabit"})
-        saniye = cagri / max(hiz, 1e-9)
-        if saniye > float(self.ayar.azami_saniye):
-            raise RuntimeError(
-                "hoca: d=%d parametre, tur=%d, düğüm=%d ile beklenen çağrı "
-                "≈ %d (~%.1f saat). Bu motor yön-taramalıdır ve milyonlarca "
-                "parametreye ÖLÇEKLENMEZ (bkz. docs/KUTUK.md, idrak/model.py "
-                "tartışması). d'yi küçültün, OptimizeAyari.yon_sayisi/blok "
-                "ile daraltın, ya da azami_saniye'yi bilerek yükseltin."
-                % (self.d, self.ayar.tur, M, cagri, saniye / 3600))
-
     def _vekil_sec(self, p_merkez: np.ndarray, adaylar: List[np.ndarray]
                    ) -> np.ndarray:
         if len(adaylar) <= 1 or len(self._ornekler) < 8:
@@ -1955,8 +1816,6 @@ class KulliOptimizer:
                 "beklenen_çağrı": int(self.ayar.tur) * tur_basi + 1}
 
     def kos(self) -> Dict[str, object]:
-        if self.ayar.bütçe_denetimi:
-            self._boyut_guvenligi()
         rng = np.random.default_rng(int(self.ayar.tohum))
         kes = self.butce_kestirimi()
         if self.ayar.sesli:
@@ -2057,11 +1916,8 @@ def hoca_egit(kayip: Callable[[np.ndarray], np.ndarray], p0: np.ndarray,
         a.durgunluk_esigi = float(getattr(ayar, "durgunluk_esigi", 1e-3))
         a.vekil_acik = bool(getattr(ayar, "vekil_acik", False))
         a.vekil_aday = int(getattr(ayar, "vekil_aday", 6))
-        a.bütçe_denetimi = bool(getattr(ayar, "bütçe_denetimi", True))
-        a.azami_saniye = float(getattr(ayar, "azami_saniye", 3600.0))
         return KulliOptimizer(kayip, p0, a).kos()
     a.tunel_acik = True
-    a.bütçe_denetimi = True
     return KulliOptimizer(kayip, p0, a).kos()
 
 
@@ -2522,582 +2378,3 @@ def tayf_araligi_asgari(f: np.ndarray, ornek: int = 101,
     i = int(np.argmin(np.where(mask, g, np.inf)))
     return {"s": ss, "aralık": g, "g_min": float(g[i]),
             "s_min": float(ss[i]), "uç": float(g[-1])}
-
-
-def _rapor_kuyu() -> str:
-    s = ["=== akislar ==="]
-    c = kuyudan_cik(ne="çukurlar")
-    s.append("çift kuyu   sol=%.4f (f=%.4f)  eyer=%.4f  sağ=%.4f (f=%.4f)"
-             % (c["sol_cukur"], c["f_sol"], c["eyer"], c["sag_cukur"], c["f_sag"]))
-    t = kuyudan_cik(ne="tuzak")
-    s.append("vektör akışı  sığ=%.4f → vardığı=%.4f  sığda kaldı=%s"
-             % (t["sig_cukur"], t["vardigi"], t["sig_cukurda_kaldi"]))
-    k = kuyudan_cik(ne="kaçış")
-    s.append("topluluk akışı  kaçan kesir=%.3f  kaçtı=%s"
-             % (k["toplulugun_kacan_kesri"], k["topluluk_kacti"]))
-    g = kuyudan_cik(ne="gibbs")
-    s.append("Gibbs kıyası  TV=%.4f uyuşuyor=%s   sol kütle: ampirik=%.3f gibbs=%.3f"
-             % (g["toplam_degisim_uzakligi"], g["gibbs_ile_uyusuyor"],
-                g["sol_cukur_kutlesi"], g["gibbs_sol_kutlesi"]))
-    f = kuyudan_cik(ne="serbest_enerji")
-    s.append("serbest enerji  düşüş=%.4f azaldı=%s  azamî ara artış=%.4f"
-             % (f["toplam_dusus"], f["azaldi"], f["azami_ara_artis"]))
-    e = egri_kisaltma()
-    s.append("eğri kısaltma  r_sayısal=%.6f  r_kuram=%.6f  bağıl hata=%.2e  uyuşuyor=%s"
-             % (e["r_sayisal"], e["r_kuram"], e["bagil_hata"], e["kanunla_uyusuyor"]))
-    return "\n".join(s)
-
-
-def _rapor_had() -> str:
-    satirlar = ["=== kara_kutu ==="]
-    a = had(ne="nfl", m=3, n=3)
-    satirlar.append(
-        "NFL tam sayım  m=%d n=%d  fonksiyon=%d usul=%d  izler aynı=%s  ortalamalar aynı=%s"
-        % (a["nokta"], a["deger"], a["fonksiyon_sayisi"], a["usul_sayisi"],
-           a["iz_dagilimlari_ayni"], a["ortalamalar_ayni"])
-    )
-    b = had(ne="kaçamak")
-    satirlar.append(
-        "NFL kaçamağı   tek tepeli sınıfta  rastgele=%.3f  üçdurum=%.3f  yapılı iyi=%s"
-        % (b["rastgele_ortalama"], b["ucdurum_ortalama"], b["yapili_usul_daha_iyi"])
-    )
-    c = had(ne="zincir")
-    satirlar.append(
-        "Sıfır zinciri  destek=%s  adımla sınırlı=%s"
-        % (c["destek_dizisi"], c["destek_adimla_sinirli"])
-    )
-    d = had(ne="alt_sınır")
-    satirlar.append("Nesterov alt sınırı  ihlal yok=%s" % d["ihlal_yok"])
-    return "\n".join(satirlar)
-
-
-def _rapor_arayis() -> str:
-    s = []
-    N = 1024
-    s.append("=== Grover eğrisi: fazla dönmek ZARARDIR ===")
-    s.append("     K   m_opt   P(m_opt)   P(2·m_opt)   P(3·m_opt)")
-    for K in (1, 4, 16, 64):
-        m = en_iyiyi_ara(ne="tur", N=N, K=K)
-        e = en_iyiyi_ara(ne="eğri", N=N, K=K, azami_tur=3 * m + 1)
-        s.append("  %4d   %5d   %8.4f   %10.4f   %10.4f"
-                 % (K, m, e[m], e[min(2 * m, len(e) - 1)],
-                    e[min(3 * m, len(e) - 1)]))
-    s.append("  Başarı m ile TEKDÜZE ARTMIYOR; sinüzoidal salınıyor.")
-
-    s.append("\n=== M18: K bilinmezse m seçilemez ===")
-    r = np.random.default_rng(0)
-    f = r.random(N)
-    K_gercek = 64
-    esik = np.sort(f)[K_gercek]
-    for varsayim, ad in ((1, "K=1 varsayıldı (YANLIŞ)"),
-                         (K_gercek, "K=64 biliniyor (İMKÂNSIZ)")):
-        m = en_iyiyi_ara(ne="tur", N=N, K=varsayim)
-        d = en_iyiyi_ara(f, ne="grover", esik=esik, m=m)
-        s.append("  %-28s m=%3d → başarı = %.4f"
-                 % (ad, m, d["başarı_olasılığı"]))
-    s.append("  'K biliniyor' hâli gerçekte kurulamaz: K, aramanın")
-    s.append("  NETİCESİNE bağlıdır. Doğru çare rastgele tur çizelgesi:")
-
-    s.append("\n=== Dürr–Høyer: K bilinmeden asgarîyi buluyor ===")
-    s.append("      N    bulundu mu   sorgu   sorgu/√N")
-    for n in (8, 10, 12):
-        Nn = 2 ** n
-        basari, sorgular = 0, []
-        for t in range(20):
-            ff = np.random.default_rng(100 + t).random(Nn)
-            d = en_iyiyi_ara(ff, ne="dürr", tohum=t)
-            basari += d["bulundu_mu"]
-            sorgular.append(d["sorgu"])
-        s.append("  %5d      %2d/20     %6.1f   %7.2f"
-                 % (Nn, basari, float(np.mean(sorgular)),
-                    float(np.mean(sorgular)) / math.sqrt(Nn)))
-    s.append("  Sorgu sayısı √N'in küçük bir katı; K hiç bilinmedi.")
-
-    s.append("\n=== M19: adiyabatik başarı sonlu T'de TAM 1 DEĞİL ===")
-    n = 4
-    ff = np.random.default_rng(5).random(2 ** n)
-    ff[3] = -1.0
-    t = tayf_araligi_asgari(ff)
-    s.append("  g_min = %.6f (s=%.2f)   uçta g(1) = %.6f"
-             % (t["g_min"], t["s_min"], t["uç"]))
-    s.append("       T     başarı        1 − başarı    tam 1 mi?")
-    for T in (1.0, 4.0, 16.0, 64.0, 256.0):
-        a = en_iyiyi_ara(ff, ne="adiyabatik", T=T)
-        s.append("  %6.1f   %.10f   %.3e     %s"
-                 % (T, a["başarı"], a["1_e_uzaklık"], a["tam_1_mi"]))
-    s.append("  T büyüdükçe 1'e YAKLAŞIYOR ama hiçbir sonlu T'de")
-    s.append("  ULAŞMIYOR. '%100 doğrulukla' cümlesi bu yüzden yanlış")
-    s.append("  (ve LaTeX'te '%' kaçırılmadığı için zaten görünmüyor).")
-
-    s.append("\n=== Faz kehaneti gerçekten üniter mi? (kaynak DOĞRU) ===")
-    for g in (0.3, 1.0, 3.0):
-        d = faz_kehaneti(ff, g)
-        s.append("  γ=%.1f  ‖diag(d)† diag(d) − I‖ = %.2e"
-                 % (g, float(np.abs(np.abs(d) ** 2 - 1).max())))
-    return "\n".join(s)
-
-def rapor() -> str:
-    s: List[str] = ["TÂLİM VE ENİYİLEME ÇİPİ -- Küme 4 tevhidi"]
-
-    def _bolum_1() -> List[str]:
-        s: List[str] = []
-        s += []
-        rng = np.random.default_rng(0)
-
-        s.append("=== Blok kodlama üniter mi? ===")
-        for n in (2, 3, 5):
-            A = rng.normal(size=(n, n)) + 1j * rng.normal(size=(n, n))
-            A = A / (np.linalg.norm(A, 2) * 1.2)
-            U = blok_kodlama(A)
-            s.append(f"  n={n}: ‖A‖₂={np.linalg.norm(A,2):.4f}"
-                     f"   U üniter mi? {uniter_mi(U)}"
-                     f"   geri okuma hatası = "
-                     f"{np.max(np.abs(blok_kodlama(U, KIP_COZ, n) - A)):.2e}")
-        try:
-            blok_kodlama(2.0 * np.eye(2))
-            s.append("  ‖A‖>1 kabul edildi (BEKLENMEZ)")
-        except ValueError as e:
-            s.append(f"  ‖A‖₂>1 reddedildi: {e}")
-
-        s.append("\n=== QSP mihenk taşı 1 (Wx): bütün fazlar 0 → T_d ===")
-        for d in (1, 2, 3, 5, 8, 12):
-            fazlar = [0.0] * (d + 1)
-            hata = 0.0
-            for x in np.linspace(-1, 1, 201):
-                p = faz_dizisinin_polinomu(fazlar, float(x), KIP_WX)
-                hata = max(hata, abs(p.real - faz_dizisinin_polinomu(x=float(x), ne=KIP_CHEB, d=d)),
-                           abs(p.imag))
-            s.append(f"  d={d:2d}: max|⟨0|U|0⟩ − T_d(x)| = {hata:.3e}")
-        s.append("  Sanal kısım da sıfır çıkıyor — polinom tam reel.")
-
-        s.append("\n=== QSP mihenk taşı 2 (yansıma): orta fazlar π/2 → |T_d| ===")
-        for d in (1, 2, 3, 5, 8, 11):
-            f = [0.0] + [np.pi / 2] * (d - 1) + [0.0]
-            h = max(abs(abs(faz_dizisinin_polinomu(f, float(x), KIP_YANSIMA))
-                        - abs(faz_dizisinin_polinomu(x=float(x), ne=KIP_CHEB, d=d)))
-                    for x in np.linspace(-0.99, 0.99, 201))
-            s.append(f"  d={d:2d}: max‖P|−|T_d‖ = {h:.3e}")
-        s.append("  İki konvansiyon AYNI fazlarla aynı polinomu vermez;")
-        s.append("  QSVT devresi yansıma konvansiyonunda çalışır, o yüzden")
-        s.append("  qsvt() de onu kullanır. Wx kullanılsaydı d≥3'te iki yol")
-        s.append("  0.5 mertebesinde ayrışırdı — ölçülmüştü.")
-
-        s.append("\n=== QSP üniterliği ve sınırı ===")
-        for _ in range(3):
-            d = int(rng.integers(2, 8))
-            fazlar = list(rng.uniform(-np.pi, np.pi, d + 1))
-            en_buyuk = 0.0
-            uniter = True
-            for x in np.linspace(-1, 1, 101):
-                U = faz_dizisinin_polinomu(fazlar, float(x), KIP_UNITER)
-                uniter = uniter and uniter_mi(U)
-                en_buyuk = max(en_buyuk, abs(faz_dizisinin_polinomu(fazlar, float(x), KIP_WX)))
-            s.append(f"  d={d}: üniter mi? {uniter}   max|P(x)| = {en_buyuk:.6f}"
-                     f"   (≤1 olmalı)")
-
-        s.append("\n=== QSP paritesi: d tek ⟹ P tek, d çift ⟹ P çift ===")
-        for d in (3, 4, 5, 6):
-            fazlar = list(rng.uniform(-np.pi, np.pi, d + 1))
-            fark = max(abs(faz_dizisinin_polinomu(fazlar, x, KIP_WX)
-                           - (-1) ** d * faz_dizisinin_polinomu(fazlar, -x, KIP_WX))
-                       for x in np.linspace(0.05, 0.95, 40))
-            s.append(f"  d={d}: |P(x) − (−1)^d P(−x)| azamî = {fark:.3e}")
-
-        s.append("\n=== QSVT: iki bağımsız yol uyuşuyor mu? ===")
-        for n in (2, 3, 4):
-            A = rng.normal(size=(n, n))
-            A = A / (np.linalg.norm(A, 2) * 1.3)
-            for d in (1, 3, 5):
-                fazlar = list(rng.uniform(-np.pi, np.pi, d + 1))
-                svd_yolu = qsvt(A, fazlar)["P(A)"]
-                devre_yolu = _devreyle_qsvt(A, fazlar)
-                s.append(f"  n={n} d={d}: ‖SVD yolu − devre yolu‖∞ = "
-                         f"{np.max(np.abs(svd_yolu - devre_yolu)):.2e}")
-
-        s.append("\n=== 1/x yaklaşımı: dizey tersi, ters ALMADAN ===")
-        for kappa in (4.0, 8.0):
-            for derece in (11, 21, 41, 61):
-                p = ters_polinomu(kappa, derece)
-                x = np.linspace(1 / kappa, 1.0, 500)
-                bagil = max(abs(p(float(xx)) * xx - 1.0) for xx in x)
-                s.append(f"  κ={kappa:.0f} derece={derece:2d}: "
-                         f"[1/κ,1] üzerinde azamî bağıl hata = {bagil:.3e}")
-        s.append("  Aralık DIŞINDA 1/x sınırsızdır; hiçbir polinom yakalayamaz,")
-        s.append("  o yüzden yaklaşımın geçerli aralığı açıkça yazılıyor.")
-
-        s.append("\n=== Polinomu dizeye uygulamak ters veriyor — ama HANGİ ters? ===")
-        s.append("  QSVT konvansiyonu P^SV(A) = Σ P(σ)|u⟩⟨v| verir; oysa")
-        s.append("  A⁻¹ = Σ σ⁻¹|v⟩⟨u|. Yani u ile v YER DEĞİŞTİRİR ve netice")
-        s.append("  A⁻¹ değil (A⁻¹)† olur. Ölçelim:")
-        for n in (3, 4):
-            B = rng.normal(size=(n, n))
-            U_, _, Vh = np.linalg.svd(B)
-            sg = np.linspace(0.3, 1.0, n)
-            A = U_ @ np.diag(sg) @ Vh
-            kappa = float(sg.max() / sg.min())
-            p = ters_polinomu(kappa * 1.05, 61)
-            PA = U_ @ np.diag([p(float(x)) for x in sg]) @ Vh
-            inv = np.linalg.inv(A)
-            n_inv = np.linalg.norm(inv, 2)
-            s.append(f"  n={n} κ={kappa:.2f}:")
-            s.append(f"    ‖P(A) − A⁻¹‖/‖A⁻¹‖    = "
-                     f"{np.linalg.norm(PA - inv, 2) / n_inv:.3e}   ← uyuşmuyor")
-            s.append(f"    ‖P(A) − (A⁻¹)†‖/‖A⁻¹‖ = "
-                     f"{np.linalg.norm(PA - inv.conj().T, 2) / n_inv:.3e}"
-                     f"   ← uyuşuyor")
-            Ud, sd, Vd = np.linalg.svd(A.conj().T)
-            PAd = Ud @ np.diag([p(float(x)) for x in sd]) @ Vd
-            s.append(f"    P(A†) ile A⁻¹          = "
-                     f"{np.linalg.norm(PAd - inv, 2) / n_inv:.3e}"
-                     f"   ← A⁻¹ istiyorsan A† ver")
-        s.append("  Bu bir kusur değil, konvansiyonun kendisidir; fakat")
-        s.append("  farkedilmezse 'ters alındı' sanılıp eşleniği kullanılır.")
-        s.append("  Hermitesel A'da ikisi çakışır, o yüzden hata orada gizlenir.")
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  QSVT -- blok kodlama, QSP ve tekil değer dönüşümü")
-    s.append("=" * 70)
-    s += _bolum_1()
-
-    def _bolum_2() -> List[str]:
-        s: List[str] = []
-        s += ["CERİDENİN ÜÇ KAPALI-FORM BABI", ""]
-
-        s.append("=== BAB: FCT -- GCL düğümlerinde XᵀX = I, κ = 1,0 ===")
-        s.append("   M    ‖XᵀX − I‖        κ(XᵀX)      eş aralıkta κ")
-        for M in (8, 16, 32, 64):
-            X, w, d = chebyshev_tasarimi(M, KIP_TASARIM)
-            G = X.T @ X
-            E = chebyshev_tasarimi(M, KIP_ESARALIK)
-            Ge = E.T @ E
-            s.append("  %3d   %.3e     %.6f     %.3e"
-                     % (M, np.linalg.norm(G - np.eye(M + 1)),
-                        np.linalg.cond(G), np.linalg.cond(Ge)))
-        s.append("  → GCL'de κ tam 1,0; eş aralıkta patlıyor (kırmızı).")
-        M = 24
-        x = chebyshev_tasarimi(M, KIP_DUGUM)
-        f = np.exp(-3.0 * x ** 2) * np.cos(4.0 * x)
-        a = chebyshev_tasarimi(M, KIP_KATSAYI, f=f)
-        geri = chebyshev_tasarimi(M, KIP_DEGER, a=a, x=x)
-        s.append("  düğümlerde geri-çatma hatası: %.3e   (ters matris YOK)"
-                 % float(np.max(np.abs(geri - f))))
-
-        s.append("")
-        s.append("=== BAB: STA -- karşıt-adiyabatik sürüş ===")
-        s.append("      τ     STA'sız sadakat   STA'lı sadakat   θ̇ uçta")
-        for tau in (40.0, 8.0, 2.0, 0.5):
-            a0 = kestirmeden_sur(tau, sta=False)
-            a1 = kestirmeden_sur(tau, sta=True)
-            s.append("  %6.1f      %10.6f      %10.6f     %.1e"
-                     % (tau, a0["sadakat"], a1["sadakat"], a1["θ̇_uçta"]))
-        s.append("  → τ küçüldükçe STA'sız sadakat düşüyor; sürüş tutuyor.")
-        s.append("  → Ĥ_CD(0) = Ĥ_CD(τ) = 0 şartını CETVEL sağlıyor"
-                 " (smoothstep), elle sıfırlama değil.")
-
-        s.append("")
-        s.append("=== BAB: Fubini-Study bilgi geometrisi ===")
-
-        def dalga(th):
-            a, b = float(th[0]), float(th[1])
-            return np.array([math.cos(a) * math.cos(b),
-                             math.cos(a) * math.sin(b),
-                             math.sin(a), 0.0])
-
-        th = np.array([0.4, 0.9])
-        r = yokus(ne=KIP_DOGRULAMA, psi=dalga, teta=th)
-        s.append("  g =\n%s" % np.array2string(r["g"], precision=6))
-        s.append("  en küçük özdeğer %.3e   PSD: %s" %
-                 (r["en_küçük_özdeğer"], r["psd"]))
-
-        def olcekli(th):
-            return (1.0 + 0.5 * float(th[2])) * dalga(th[:2])
-
-        th3 = np.array([0.4, 0.9, 0.0])
-        g3 = yokus(ne="sayısal", psi=olcekli, teta=th3)
-        s.append("  ölçek yönünün Fubini uzunluğu : %.3e  (sıfır olmalı)"
-                 % abs(float(g3[2, 2])))
-        d = np.empty((3, 4))
-        for k in range(3):
-            e = np.zeros(3); e[k] = 1e-5
-            p = lambda z: olcekli(z) / np.linalg.norm(olcekli(z))
-            d[k] = (p(th3 + e) - p(th3 - e)) / 2e-5
-        s.append("  (izdüşümsüz) ham ⟨∂₂Ψ|∂₂Ψ⟩     : %.3e  ← KIRMIZI olurdu"
-                 % float(d[2] @ d[2] + 0.25))
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  CERİDE -- FCT, STA ve Fubini-Study")
-    s.append("=" * 70)
-    s += _bolum_2()
-
-    def _bolum_3() -> List[str]:
-        s: List[str] = []
-        kg, ke = _kappa_olc(64)
-        s.append("  κ(GCL)        = %.6f   (1'e oturmalı)" % kg)
-        s.append("  κ(eşaralıklı) = %.3e   (kırmızı kontrol)" % ke)
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  FCT -- Gauss-Chebyshev-Lobatto, κ = 1,0")
-    s.append("=" * 70)
-    s += _bolum_3()
-
-    def _bolum_4() -> List[str]:
-        s: List[str] = []
-        c = kestirmeden_sur(ne="cetvel")
-        s += ["STA -- karşıt-adiyabatik sürüş", "",
-             "  %8s %12s %12s" % ("tau", "sürüşlü", "sürüşsüz")]
-        for r in c["satır"]:
-            s.append("  %8.2f %12.6f %12.6f"
-                     % (r["tau"], r["sürüşlü"], r["sürüşsüz"]))
-        s.append("")
-        s.append("  Sürüşsüz sütun hızlı geçişte çökmeli; çökmezse ölçü bozuk.")
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  STA -- karşıt-adiyabatik sürüş")
-    s.append("=" * 70)
-    s += _bolum_4()
-
-    def _bolum_5() -> List[str]:
-        s: List[str] = []
-        c = fazlari_kilitle(None, ne="cetvel")
-        s += ["BEC -- Gross-Pitaevskii faz kilidi", "",
-             "  başlangıç faz uyumu T = %.6f" % c["başlangıç_T"], "",
-             "  %8s %12s" % ("tur", "T")]
-        for r in c["satır"]:
-            s.append("  %8d %12.6f" % (r["tur"], r["T"]))
-        s.append("")
-        s.append("  tur=0 DÜŞÜK, tur büyüdükçe T→1 olmalı. tur=0 da yüksek")
-        s.append("  çıkarsa ölçü kırmızı yanamıyor demektir.")
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  BEC -- Gross-Pitaevskii faz kilidi")
-    s.append("=" * 70)
-    s += _bolum_5()
-
-    def _bolum_6() -> List[str]:
-        s: List[str] = []
-        rng = np.random.default_rng(0)
-        d, C = 12, 10
-        F = rng.normal(size=(20, d))
-        W = rng.normal(size=(d, C))
-        g, guv, det = izgarayi_oku(W, F, (4, 5), tekrar=3)
-        k = yokus(ne="kıyas")
-        s += ["FUBINI-STUDY DETERMİNİSTİK AĞAÇ OKUMASI", "",
-             "  okunan ızgara (4×5):", "    " + str(g.tolist()),
-             "  güven = %.4f" % guv,
-             "  BELİRLENİMCİ Mİ (3 tekrar aynı mı): %s" % det, "",
-             "  öznitelik metriği ↔ hakiki Fubini-Study:",
-             "    iz(Fisher)=%.4f  iz(önşart)=%.4f  ölçek=%.4f"
-             % (k["iz_fisher"], k["iz_önşart"], k["ölçek"]),
-             "    bağıl fark=%.4f  → kısaltma olduğu ölçüyle sabit"
-             % k["bağıl_fark"]]
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  FUBINI-STUDY -- deterministik ağaç okuması")
-    s.append("=" * 70)
-    s += _bolum_6()
-
-    def _bolum_7() -> List[str]:
-        s: List[str] = []
-        tohum = 0
-        r = purzu_yerini_bul(tohum)
-        s += ["=== İKİZ SAYILAR -- H88'in pürüz suali cevaplanıyor ===", "",
-             "H88 şöyle bırakmıştı: *'yönlü türev h→0'da tam oturmuyor…",
-             "en kuvvetli şüpheli SVD kesmesidir. Bu hipotez ölçülmektedir",
-             "ve neticesi çıkınca yazılacaktır.'*  Netice hiç yazılmamıştı,",
-             "çünkü alet (sonlu fark) suali cevaplayamaz: pürüzü de kendi",
-             "gürültüsünü de aynı belirtiyle gösterir.",
-             "",
-             "1. KADEME -- KAPI KURULUMU (exp(−2A), ikiz sayı ile TAM):",
-             "     tam türev            : %+.8f" % r["kapı_tam_türev"],
-             "     sonlu farkın en iyisi: h=%.0e, fark %.3e"
-             % (r["kapı_en_iyi_h"], r["kapı_en_yakın_fark"]),
-             "     PÜRÜZSÜZ MÜ          : %s" % r["kapı_pürüzsüz_mü"],
-             "",
-             "2. KADEME -- KESME SINIRINDAKİ BOŞLUK (s[χ−1] − s[χ]):",
-             "     ölçülen nokta        : %d / %d"
-             % (r["kesme_boşluğu_ölçüldü"], r["tarama_noktası"]),
-             "     en dar nispî boşluk  : %.3e" % r["en_dar_boşluk"],
-             "     sınırdaki tekil değer: %.3e  (gürültü mü?)"
-             % r["sınır_büyüklüğü"],
-             "     boşluk < %%1 olan nokta: %d" % r["kesme_sınırı_yakın"],
-             "",
-             "HÜKÜM -- iki parça, ikisi de haddiyle:",
-             "  1. Kapı kurulumu **türevlenebilir**. Sonlu fark orada tam",
-             "     türeve makine hassasiyetinde yaklaşıyor; o hâlde H88'in",
-             "     gördüğü pürüz kapıdan gelmiyor. Bu KESİN.",
-             "  2. Kesme bir **sıralamadır** ve sıralama ancak sınırdaki iki",
-             "     tekil değer kesiştiğinde sıçrar. Yukarıdaki en dar boşluk",
-             "     o kesişmeye ne kadar yaklaşıldığının ölçüsüdür.",
-             "",
-             "  YALANCI YEŞİL TUZAĞI ve nasıl kapandığı: ilk ölçümde boşluk",
-             "  tam 0,000e+00 çıktı ve 'dejenere' diye okunacaktı. Halbuki",
-             "  s[χ−1] ile s[χ] İKİSİ DE sıfırsa oran da sıfır çıkar --",
-             "  orada kesilecek bir şey yoktur. Sınırdaki tekil değerin",
-             "  BÜYÜKLÜĞÜ de raporlanıyor; gürültü mertebesindeyse hüküm",
-             "  verilmez. Fren konunca hakikî boşluk ~%2 çıktı: küçüktür",
-             "  fakat sıfır değildir, ve sınırdaki değerler gürültü değil.",
-             "",
-             "  O hâlde H88'in şüphelisi ÖLÇÜMLE DESTEKLENİYOR: %2'lik bir",
-             "  boşluk, küçük bir parametre değişikliğiyle kolayca aşılır ve",
-             "  aşıldığında tutulan altuzay yer değiştirir. Bu bir ispat",
-             "  değil kuvvetli bir delildir; 'ispatlandı' denmiyor."]
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  İKİZ SAYILAR -- türevin tam hâli")
-    s.append("=" * 70)
-    s += _bolum_7()
-
-    def _bolum_8() -> List[str]:
-        s: List[str] = []
-        n, tur, tohum = 40, 60, 0
-        rng = np.random.default_rng(tohum)
-
-        e = rng.uniform(0.0, 1.0, size=n)
-        b = 8.0
-        kapali = oyun_degeri(e, b)
-        z = b * e - np.max(b * e)
-        w = np.exp(z) / np.sum(np.exp(z))
-        oyun = oyun_degeri(e, b, w)
-        ozdeslik = abs(kapali - oyun)
-
-        t = OgdaTarti(n=n, beta=b, adim=0.5)
-        sapma: List[float] = []
-        for k in range(tur):
-            ek = e + 0.15 * np.sin(0.3 * k + np.arange(n))
-            t.guncelle(ek)
-            sapma.append(abs(oyun_degeri(ek, b, t.w) - oyun_degeri(ek, b)))
-        son = float(np.mean(sapma[-10:]))
-        ilk = float(np.mean(sapma[:10]))
-
-        t2 = OgdaTarti(n=n, beta=b, adim=0.5)
-        sapma2: List[float] = []
-        for k in range(tur):
-            ek = e + 0.15 * np.sin(0.3 * k + np.arange(n))
-            t2.g_onceki = np.asarray(ek, float)
-            t2.guncelle(ek)
-            sapma2.append(abs(oyun_degeri(ek, b, t2.w) - oyun_degeri(ek, b)))
-        son2 = float(np.mean(sapma2[-10:]))
-
-        s += ["=== OGDA -- kaybın min-max olduğunun farkedilmesi ===", "",
-             "Özdeşlik (Fenchel):",
-             "    max_w [⟨w,e⟩ + H(w)/β]  =  (1/β)·log Σ exp(β·e_i)",
-             "  iki taraf arasındaki fark : %.3e  ← sıfır olmalı" % ozdeslik,
-             "",
-             "Yani padişahın eğitimi baştan beri şu oyunmuş:",
-             "    min_p max_w [ ⟨w, e(p)⟩ + H(w)/β ]",
-             "ve ben onu tek taraflı bir asgarîleme sanıyordum.",
-             "",
-             "OGDA HAREKETLİ HEDEFTE (%d tur):" % tur,
-             "  ilk 10 turun sapması : %.4f" % ilk,
-             "  son 10 turun sapması : %.4f" % son,
-             "  iyimserlik KALDIRILINCA (sıradan GDA): %.4f" % son2,
-             "  nispet (GDA / OGDA)  : %.3f" % (son2 / max(son, 1e-12)),
-             "",
-             "  HÜKÜM -- ve fazlası söylenmiyor: iyimserliğin kazancı",
-             "  %.1f%%'tir, yani **fiilen yoktur**. Dahası sapma turlarla"
-             % (100.0 * (son2 / max(son, 1e-12) - 1.0)),
-             "  BÜYÜYOR (%.4f → %.4f), yani OGDA burada hedefi kovalıyor"
-             % (ilk, son),
-             "  fakat yakalayamıyor. Sebep bellidir ve kusur değildir:",
-             "  ``w`` tarafının en iyisi zaten **kapalı formda** biliniyor",
-             "  (yukarıdaki özdeşlik, fark 0). Kapalı formu olan bir",
-             "  problemi yürüyerek çözmenin kazanacağı bir şey yoktur.",
-             "",
-             "  O hâlde ceridenin OGDA hükmünden alınan şey **çözücü değil",
-             "  TEŞHİStir**: kaybın bir oyun olduğunun ispatı. Çözücü",
-             "  olarak faydası ölçüldü ve **çıkmadı**; iddia edilmiyor.",
-             "  OGDA'nın hakikaten lâzım olacağı yer, ``w`` ile ``p``nin",
-             "  BERABER yürütüldüğü hâldir -- orada ``w``nin kapalı formu",
-             "  ``p`` değiştikçe geçersizleşir. O hâl henüz kurulmadı.",
-             "",
-             "β'nın manası da değişiyor: bir kalibrasyon sabiti değil,",
-             "**düşmanın ne kadar düzenlendiği**. H164/H169'da ona bir",
-             "sezgi (√n) koymuştum ve ölçüm çürütmüştü; oyun görüşü o suali",
-             "sezgiden çıkarıp nazariyeye taşıyor.",
-             "",
-             "İDDİA EDİLMEYEN: OGDA'nın yakınsama teoremi dışbükey-içbükey",
-             "oyunlar içindir. Burada e(p) p'de dışbükey DEĞİLDİR; teorem",
-             "yalnız w tarafına tatbik edilir, oyunun tamamına değil."]
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  OGDA -- kaybın min-max olduğunun farkedilmesi")
-    s.append("=" * 70)
-    s += _bolum_8()
-
-    def _bolum_9() -> List[str]:
-        s: List[str] = []
-        tohum, n, d_in = 0, 6, 12
-        from nefs.melekeler import QNefs
-        from nefs.zihin_durumu import QAyar
-
-        E = np.random.default_rng(tohum).normal(size=(n, d_in))
-        s += ["=== GAYE (Dosya 4) -- muhtar gaye, Landauer, sükût eşiği ===",
-             "",
-             "H108 'gaye alanı hükümle dolaştırılır' diyordu. ÖLÇÜLDÜ:",
-             "alan tam olarak |0⟩'daydı, yani hiç yazılmamıştı. Burada",
-             "nakzedilir ve icra edilir.",
-             ""]
-        satirlar = []
-        for acik in (False, True):
-            q = QNefs(tohum, QAyar(tohum=tohum), gaye=acik).idrak_et(E)
-            alanlar = {}
-            for ad, kac in q.ayar.kulli_alanlar:
-                yuv = [q.kulli(ad, j) for j in range(kac)]
-                R = np.asarray(q.y.tekil_yogunluklar(yuv), float)[0]
-                alanlar[ad] = float(R[:, 1, 1].mean())
-            satirlar.append((acik, alanlar, odenen_bedel(q, "landauer"),
-                             odenen_bedel(q, "serbest")))
-
-        adlar = [ad for ad, _ in satirlar[0][1].items()]
-        s.append("  %-10s %12s %12s" % ("alan", "gaye KAPALI", "gaye AÇIK"))
-        for ad in adlar:
-            s.append("  %-10s %12.6f %12.6f"
-                     % (ad, satirlar[0][1][ad], satirlar[1][1][ad]))
-
-        s += ["", "LANDAUER DEFTERİ (akıştaki tek tersinmez adım: kesme):"]
-        for acik, _, L, _ in satirlar:
-            s.append("  gaye %-7s sadakat=%.3e  silinen bit=%.1f  "
-                     "kübit başına %.3f"
-                     % ("AÇIK" if acik else "KAPALI", L["sadakat"],
-                        L["silinen_bit"], L["kübit_başına_bit"]))
-
-        s += ["", "SERBEST ENERJİ (fitrat/serbest_enerji.py ile):"]
-        for acik, _, _, F in satirlar:
-            s.append("  gaye %-7s F=%.6f  kesinsizlik=%.6f  karmaşıklık=%.6f"
-                     "  ayrışım sapması=%.1e"
-                     % ("AÇIK" if acik else "KAPALI", F["F"], F["kesinsizlik"],
-                        F["karmaşıklık"], F["ayrışım_sapması"]))
-        s += ["",
-              "Ayrışım sapması, `fitrat`ın F = kesinsizlik + karmaşıklık",
-              "kimliğinin bu sayılarda fiilen tuttuğunun şahididir; sıfıra",
-              "yakın olmalıdır. Gayenin faydası bu tabloda İDDİA EDİLMEZ --",
-              "sayılar konur, hüküm ölçüme bırakılır."]
-        return s
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  GAYE -- teleolojik akış ve ödenen bedel")
-    s.append("=" * 70)
-    s += _bolum_9()
-    return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

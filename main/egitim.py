@@ -480,8 +480,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             sesli=False, tohum=ayar.tohum)
         o.tunel_acik = True
         o.vekil_acik = False
-        o.bütçe_denetimi = False
-        o.azami_saniye = float(ayar.azami_talim_saati) * 3600.0
         n0 = _sayac["çağrı"]
         _kume["v"] = list(kume)
         rr = hoca_egit(kayip_p, np.asarray(p_, float), o)
