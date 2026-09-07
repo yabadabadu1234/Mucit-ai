@@ -17,7 +17,7 @@ import numpy as np
 
 from nefs.musahede import gorevleri_getir
 from ogrenme.optimize import OptimizeAyari
-from ogrenme.optimize import hoca_egit
+from ogrenme.optimize import hoca_egit, optimize_beyani
 from main import hazine
 from nefs.kulli_mizan import (MizanAyari, kulli_mizan,
                               mizan_cetveli)
@@ -674,6 +674,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "sadakat": sad, "son_sadakat": son_sadakat,
             "mukayese": mukayese,
             "mihenk": nobet.beyan(p_yildiz),
+            "eniyileme": optimize_beyani(),
             "faz_borcu": q_son.y.faz_borcu(),
             "konuşma": konusma, "münasebet": munasebet_beyani(),
             "keyfiyet": keyfiyet_beyani(),

@@ -1632,6 +1632,53 @@ def as_gek_adimi(f: Callable[[np.ndarray], float], x0: np.ndarray,
                     "hedef_cezası": hedef_bilgisi}
 
 
+_ENIYILEME: Dict[str, float] = {
+    "çağrı": 0.0, "enküçük": float("inf"), "enbüyük": float("-inf"),
+    "toplam": 0.0, "kabul": 0.0, "tarama": 0.0, "adım_normu": 0.0}
+
+
+def optimize_sifirla() -> None:
+    _ENIYILEME.update({"çağrı": 0.0, "enküçük": float("inf"),
+                       "enbüyük": float("-inf"), "toplam": 0.0,
+                       "kabul": 0.0, "tarama": 0.0, "adım_normu": 0.0})
+
+
+def optimize_beyani() -> Dict[str, float]:
+    n = max(1.0, _ENIYILEME["çağrı"])
+    enk, enb = _ENIYILEME["enküçük"], _ENIYILEME["enbüyük"]
+    ort = _ENIYILEME["toplam"] / n
+    yayilim = (enb - enk) if enb > enk else 0.0
+    return {"çağrı": int(_ENIYILEME["çağrı"]),
+            "enküçük": float(enk if enk < float("inf") else 0.0),
+            "enbüyük": float(enb if enb > float("-inf") else 0.0),
+            "ortalama": float(ort),
+            "yayılım": float(yayilim),
+            "nispî_yayılım": float(yayilim / max(abs(ort), 1e-30)),
+            "tarama": int(_ENIYILEME["tarama"]),
+            "kabul": int(_ENIYILEME["kabul"]),
+            "adım_normu": float(_ENIYILEME["adım_normu"])}
+
+
+def optimize_metni(b: Optional[Dict[str, float]] = None) -> str:
+    d = dict(b if b is not None else optimize_beyani())
+    ny = float(d.get("nispî_yayılım", 0.0))
+    hal = ("⚠ PARAMETRE KAYBA TESİR ETMİYOR" if ny < 1e-9 else
+           "⚠ tesir makine hassasiyeti mertebesinde" if ny < 1e-12 * 1e6 else
+           "parametre kayba tesir ediyor")
+    return "\n".join([
+        "  ENİYİLEME -- PARAMETRENİN KAYBA TESİRİ (ferman 5)",
+        "    kayıp çağrısı   : %d" % d["çağrı"],
+        "    kayıp aralığı   : %.10f .. %.10f" % (d["enküçük"], d["enbüyük"]),
+        "    yayılım         : %.3e   (nispî %.3e)  → %s"
+        % (d["yayılım"], ny, hal),
+        "    taranan yön     : %d      kabul edilen adım: %d"
+        % (d["tarama"], d["kabul"]),
+        "    toplam adım normu: %.6e   (0 ise p HİÇ kımıldamadı)"
+        % d["adım_normu"],
+        "    Yayılım sıfırsa parametre kapılara ulaşmıyor yahut kayıp",
+        "    p'den bağımsızdır; ikisi de kırmızıdır."])
+
+
 @dataclass
 class OptimizeAyari:
     ad: str = "küllî-optimize"
@@ -1675,6 +1722,10 @@ class KulliOptimizer:
         P = np.atleast_2d(np.asarray(P, float))
         self.cagri += int(P.shape[0])
         v = np.asarray(self.kayip(P), float).reshape(-1)
+        _ENIYILEME["çağrı"] += float(v.size)
+        _ENIYILEME["toplam"] += float(v.sum())
+        _ENIYILEME["enküçük"] = min(_ENIYILEME["enküçük"], float(v.min()))
+        _ENIYILEME["enbüyük"] = max(_ENIYILEME["enbüyük"], float(v.max()))
         if self.ayar.vekil_acik:
             P2 = np.atleast_2d(P)
             for _i in range(P2.shape[0]):
@@ -1859,7 +1910,11 @@ class KulliOptimizer:
 
             for _i, (_ad, e) in enumerate(adimlar):
                 pa, va = self._yon_asgarisi(p, e, R)
+                _ENIYILEME["tarama"] += 1.0
                 if va < v:
+                    _ENIYILEME["kabul"] += 1.0
+                    _ENIYILEME["adım_normu"] += float(
+                        np.linalg.norm(pa - p))
                     p, v = pa, va
                 if self.ayar.sesli:
                     print("    [%-11s %3d/%3d] V=%.6f çağrı=%d"
