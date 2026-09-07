@@ -585,6 +585,10 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             if (hukum == TASDIK and mu is not None and len(mu) > j
                     and float(mu[j]) < 0.35):
                 hukum = TEVAKKUF
+            if hukum == TEVAKKUF:
+                hafiza.taban_degistir(ileri["hal"][j],
+                                      yaprak="ω%+.2f" % float(om),
+                                      omega=float(om))
             hafiza.yaz(ileri["hal"][j], omega=om, hukum=hukum)
     if hafiza is not None:
         for _j, _netice in usl.get("netice", ()):

@@ -49,6 +49,8 @@ from nefs.munasebet import (MunasebetAyari, munasebet_kos,
                             munasebet_beyani)
 from main.kulliyat import (kulliyat_verisi,
                            kulliyat_dokumu, kulliyat_beyani)
+from nefs.mukayese import (hata_payi, mukayese_beyani, spektrum,
+                           vecih_kur)
 from nefs.usul import usul_beyani
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import (talim_beyani,
@@ -152,6 +154,7 @@ class EgitimAyari:
     rust_muayene: int = 1
     sbox_acik: int = 1
     meleke_olcumu: int = 1
+    mukayese_acik: int = 1
     hat: str = "c"
     hat_bandi: int = 0
     motor: str = "galois"
@@ -607,6 +610,18 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                           hafiza=hafiza, adim=_sayac["çağrı"],
                           kademe_gorevleri=kademe_gorevleri, ne="döküm")
     cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
+    if int(ayar.mukayese_acik):
+        _sek = [q_son.y.sektor(ad) for ad, _ in q_son.ayar.kulli_alanlar]
+        _vec = vecih_kur([(ad, s) for (ad, _n), s
+                          in zip(q_son.ayar.kulli_alanlar, _sek)])
+        mukayese = mukayese_beyani(
+            spektrum(list(np.asarray(q_son.y.psi, complex)[:8]),
+                     _vec, azami_n=int(ayar.cevrim_boyu),
+                     tohum=int(ayar.tohum)),
+            hata_payi(list(kefeler["artık_adı"]),
+                      list(np.asarray(kefeler["artık"], float))))
+    else:
+        mukayese = mukayese_beyani(None, None)
 
     kayit = hazine.koy(
         hazine_yolu(),
@@ -640,6 +655,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "palmer": palmer,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "sadakat": sad, "son_sadakat": son_sadakat,
+            "mukayese": mukayese,
             "konuşma": konusma, "münasebet": munasebet_beyani(),
             "keyfiyet": keyfiyet_beyani(),
             "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri),

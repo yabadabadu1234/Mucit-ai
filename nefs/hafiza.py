@@ -23,6 +23,7 @@ class Kayit:
     hukum: float
     mu: float
     dogum: int = 0
+    yaprak: str = ""
 
     def __post_init__(self) -> None:
         self.x = np.asarray(self.x).reshape(-1)
@@ -58,6 +59,7 @@ class Hafiza:
         self.tohum = int(tohum)
         self.kayitlar: List[Kayit] = []
         self.budama = 0
+        self.tertip = 0
         self.adim = 0
 
     def yaz(self, x, omega: float, hukum: float) -> Kayit:
@@ -101,6 +103,28 @@ class Hafiza:
             out["toplam"] += ort
         return out
 
+    def taban_degistir(self, x, yaprak: str, omega: float = 0.0
+                       ) -> Dict[str, Any]:
+        from .mukayese import swap_testi
+        v = np.asarray(x).reshape(-1)
+        nrm = float(np.linalg.norm(v))
+        assert nrm > 0.0, "boş durumla taban değiştirilemez"
+        v = v / nrm
+        tasinan = 0
+        for k in self.kayitlar:
+            if k.x.size != v.size:
+                continue
+            s = swap_testi(k.x.astype(complex), v.astype(complex))
+            if float(s["örtüşme"]) < self.zeno_esigi:
+                continue
+            eski = k.yaprak
+            k.yaprak = (eski + "|" + str(yaprak)) if eski else str(yaprak)
+            k.omega = float(omega) if omega else k.omega
+            tasinan += 1
+        self.tertip += 1
+        return {"yaprak": str(yaprak), "taşınan": int(tasinan),
+                "tertip": int(self.tertip), "silinen": 0}
+
     def zeno(self, x) -> Optional[np.ndarray]:
         v = np.asarray(x, float).reshape(-1)
         nrm = float(np.linalg.norm(v))
@@ -130,6 +154,8 @@ class Hafiza:
         return {"kayıt": len(self.kayitlar), "tasdik": say[TASDIK],
                 "tevakkuf": say[TEVAKKUF], "cerh": say[CERH],
                 "budama": int(self.budama), "adım": int(self.adim),
+                "tertip": int(self.tertip),
+                "yapraklı": sum(1 for k in self.kayitlar if k.yaprak),
                 "kütle": float(sum(k.mu for k in self.kayitlar))}
 
     def hazineye(self) -> Dict[str, np.ndarray]:

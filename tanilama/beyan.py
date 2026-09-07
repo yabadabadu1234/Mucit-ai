@@ -90,6 +90,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "      ortalama hücre isabeti: %.4f"
               % d["ortalama_hücre_isabeti"],
               "      sükût                 : %d" % d["sükût"]]
+        from nefs.mukayese import mukayese_metni
         from nefs.munasebet import munasebet_metni
         from nefs.keyfiyet import keyfiyet_metni
         from main.kulliyat import kulliyat_beyani
@@ -103,6 +104,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "    sükût sebebi: %s" % (", ".join(kn["sebep"]) or "yok"),
               "    ilk belirteçler: %s" % (kn["belirteç"] or "yok"),
               "",
+              mukayese_metni(kulli.get("mukayese") or {}), "",
               munasebet_metni(kulli["münasebet"]), "",
               keyfiyet_metni(kulli["keyfiyet"]), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"
