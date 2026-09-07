@@ -416,6 +416,34 @@ aldığı veri ile çıkışta **tekrar ürettiği** veridir. Yâni sözlü veri
 
 ---
 
+## ▓▓▓ 1-S. FERMAN: TEK HATA FONKSİYONU -- CEVHERLER TOPLANIR ▓▓▓
+
+> *"Üç hata fonksiyonundaki cevherleri toplayıp **hiçbir cevheri
+> silmeden** tek bir hata fonksiyonunu üçüne de koyacaksın o zaman.
+> Yâni meselâ birinde `a+b` var, diğerinde `c+d+a` var, öbüründe
+> `x+y+b` var ise senin yapacağın **`a+b+c+d+x+y`** olacak!"*
+
+Cinse göre ayrı ayrı hata fonksiyonu yoktur. Ferman 1-R'nin
+*"iki ayrı kayıp yoktur"* hükmünün icrası budur:
+
+* **CEVHERLER TOPLANIR, BİRLEŞTİRİLMEZ.** Üç fonksiyonda geçen her
+  kefe -- tekrar edeni **bir kez** olmak üzere -- tek bir mizanda
+  toplanır. `a` iki yerde geçiyorsa toplamda **bir** `a` vardır;
+  fakat `c`, `d`, `x`, `y`'den **hiçbiri düşmez**.
+* **HİÇBİR CEVHER SİLİNMEZ.** "Bu kefe şu cinste manasız" demek
+  yasaktır. Manasız olduğu iddia edilen kefe, o cinste **kendi
+  sayısıyla sıfıra yakın** çıkar; sıfırı kefe atarak değil, **ölçerek**
+  gösterilir (ferman 5: ölçü kırmızı yanabilmeli).
+* **AYNI FONKSİYON ÜÇÜNE DE KONUR.** ARC ızgarası, ARC sözlü kanadı ve
+  sözlü cins -- üçü de **aynı** hata fonksiyonundan geçer. Değişen
+  şey fonksiyon değil, ona giren **hedefin nereden geldiğidir**.
+* **DALLANMA YASAK.** `if cins == "arc": ... else: ...` diye ayrılan
+  bir kayıp gövdesi, iki hata fonksiyonunun kılık değiştirmiş hâlidir
+  ve ferman 1-E'nin yarım işidir. Cins, kayba **ağırlık** olarak girer,
+  **dal** olarak değil.
+
+---
+
 ## ▓▓▓ 1-F. FERMAN: TALİMAT TAHRİF EDİLMEZ -- EN DERİN KOD KOŞTURULUR ▓▓▓
 
 > *"Sana en derin kodları çalıştırma talimatı gelmişse **mutlaka** o

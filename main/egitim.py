@@ -466,6 +466,27 @@ class EgitimAyari:
     lam_tenakuz: float = 0.0
     lam_kategori: float = 0.0
     lam_nokta: float = 0.0
+    # ── FERMAN 1-S: ÜÇ HATA FONKSİYONUNUN CEVHERLERİ TEK MİZANDA ────
+    #
+    # *"Üç hata fonksiyonundaki cevherleri toplayıp hiçbir cevheri
+    # silmeden tek bir hata fonksiyonunu üçüne de koyacaksın."*
+    #
+    # Depoda **üç** hata fonksiyonu duruyordu ve ikisi ana akışta hiç
+    # koşmuyordu (ferman 1-E'nin yarım işi):
+    #
+    #   1. ``nefs/kulli_mizan.py:kulli_mizan``  -- koşan.
+    #   2. ``nefs/kulli_kayip.py:kulli_kayip``  -- KOŞMUYORDU. Cevheri:
+    #      41 melekenin kendi sözleşmesi, küllî alan okumaları, kademe
+    #      ölçüleri, zayıf halka (yumuşak azamî) terkibi.
+    #   3. ``nefs/zirh.py:zirh_kaybi``          -- KOŞMUYORDU. Cevheri:
+    #      sheaf uyumsuzluğu, Betti deliği, kohomoloji tıkanıklığı,
+    #      homotopi burulması, nizam ihlâli; τ-softmax ile birleşir.
+    #
+    # ``nizam`` iki fonksiyonda birden geçiyordu: **bir kez** sayılır
+    # (zırh kefesinin beşinci ihlâli olarak). Başka hiçbir cevher
+    # düşmedi; ikisi de mizana kefe olarak girdi ve λ'ları ölçülür.
+    lam_meleke: float = 0.0
+    lam_zirh: float = 0.0
     # ══════════════════════════════════════════════════════════════
     #  DONANIMDAN GELENLER (ferman 5-B) -- elle yazılmaz
     # ══════════════════════════════════════════════════════════════
@@ -537,6 +558,14 @@ class EgitimAyari:
     suphe_acik: int = 1
     rust_muayene: int = 1
     sbox_acik: int = 1
+    #: **MELEKE ÖLÇÜMÜ AÇIK MI** (ferman 1-S'in kapatılabilir ucu).
+    #: ``1`` = ileri geçiş her melekeden sonra kendi alanını okur ve
+    #: ``ΔS``sini tartar; o okumalar ``ℒ_Meleke`` ile ``ℒ_Zırh``ın
+    #: nizam ucunu besler. ``0`` = okuma alınmaz, iki kefe sıfırlanır
+    #: ve rapor kırmızı yanar -- yâni cevherin tesiri **ölçülebilir**
+    #: (ferman 5). Bedeli de ölçülür: okuma meleke başına iki entropi
+    #: ve bir sadakat yoklamasıdır, hızölçer onu aynen basar.
+    meleke_olcumu: int = 1
     # ══════════════════════════════════════════════════════════════
     #  TAŞIYICI -- ferman 7'nin tayin ettiği yol
     # ══════════════════════════════════════════════════════════════
@@ -637,7 +666,8 @@ class EgitimAyari:
                      hat=str(self.hat), hat_bandi=int(self.hat_bandi),
                      sadakat_acik=int(self.sadakat_acik),
                      parite_lifi=int(self.parite_lifi),
-                     parametre_genisligi=int(self.parametre_genisligi))
+                     parametre_genisligi=int(self.parametre_genisligi),
+                     meleke_olcumu=int(self.meleke_olcumu))
 
     def yigin(self) -> int:
         """Yazmacın yığın dilimi -- veriden büyük olamaz."""
@@ -913,6 +943,11 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         lam_tenakuz=float(a.lam_tenakuz), tenakuz_eps=float(a.tenakuz_eps),
         dislama_tau=float(a.dislama_tau),
         lam_kategori=float(a.lam_kategori), lam_nokta=float(a.lam_nokta),
+        # **FERMAN 1-S:** imha edilen iki hata fonksiyonunun cevherleri
+        # mizana iki kefe olarak girdi; ağırlıkları da ötekiler gibi
+        # ölçülür (Formül 3), elle yazılmaz.
+        lam_meleke=float(a.lam_meleke), lam_zirh=float(a.lam_zirh),
+        meleke_olcumu=int(a.meleke_olcumu),
         usul_acik=int(a.usul_acik), usul_haddi=float(a.usul_haddi),
         usul_seferi=int(a.usul_seferi),
         suphe_acik=int(a.suphe_acik), suphe_sonumu=float(a.suphe_sonumu),
@@ -1046,7 +1081,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     # hangilerinin elle verildiği **ilk kalibrasyondan evvel** tesbit
     # edilir, yoksa ilk atamadan sonra hepsi "elle verilmiş" görünürdü.
     LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
-                  "lam_tenakuz", "lam_kategori", "lam_nokta")
+                  "lam_tenakuz", "lam_kategori", "lam_nokta",
+                  # Ferman 1-S ile gelen iki kefe -- ötekilerle aynı
+                  # muameleyi görür: her turda ölçülür, elle verilirse
+                  # dokunulmaz.
+                  "lam_meleke", "lam_zirh")
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     #: Mizan ayarının **tek nüshası**; denge onu yerinde yeniler.

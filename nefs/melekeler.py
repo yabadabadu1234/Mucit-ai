@@ -2250,15 +2250,43 @@ class QNefs:
 
     # -----------------------------------------------------------------
     def idrak_et(self, E: np.ndarray, bec: bool = True,
-                 yigin: int = 0, tikaniklik: float = 0.0) -> QYazmac:
-        """Ham duyudan nihaî hükme -- tek geçiş, hiç okuma yok.
+                 yigin: int = 0, tikaniklik: float = 0.0,
+                 olcum: Optional[bool] = None) -> QYazmac:
+        """Ham duyudan nihaî hükme -- **tek geçiş, tek yol**.
 
         ``E`` ``(n, d)`` ise tek girdi; ``(B, n, d)`` ise **yığın**:
         ``B`` ayrı girdi aynı anda idrak edilir ve her üye kendi hükmünü
         verir. ``yigin`` açıkça verilirse yazmaç o büyüklükte kurulur
         (aynı girdi ``B`` kere -- yalnız hız ölçümü için).
+
+        =================================================================
+        ``olcumlu_idrak`` İMHA EDİLDİ -- İKİNCİ İLERİ GEÇİŞ YOKTU ARTIK
+        =================================================================
+
+        Evvelce buranın yanında ``nefs/kulli_kayip.py:olcumlu_idrak``
+        duruyordu: aynı akışı **ikinci kere** kuruyor, farkı melekeler
+        arasında okuma almasıydı. İki yol yan yana durdukça hangisinin
+        koştuğu belirsizdir (ferman 1-E) -- ve burada belirsizlik zararsız
+        değildi: o ikinci yol ``sadakat_uygula``yı, yâni **7/24 mantık
+        zeminini hiç çağırmıyordu**. Yâni melekelerin ölçüldüğü geçiş,
+        mantık alt-uzayı şartının koşmadığı geçişti.
+
+        Artık tek yol var. ``olcum`` doğruysa her melekeden sonra:
+
+        * melekenin **ilan ettiği alanların** okuması alınır (sözleşme),
+        * o geçişte **attığı bilgi** (kesme) tutulan kesir olarak yazılır,
+        * dolaşıklık entropisindeki fark ``ΔS`` olarak biriktirilir --
+          nizam taahhüdü bununla yüzleştirilir.
+
+        Netice ``q.okumalar`` ve ``q.dS``de durur; ``ℒ_Meleke`` ile
+        ``ℒ_Zırh``ın nizam ucu oradan okunur (ferman 1-S). ``olcum``
+        verilmezse ayardan gelir (``meleke_olcumu``, varsayılan açık) --
+        yâni cevher varsayılanda **koşar**, kapatılınca ölçü kırmızı
+        yanar (ferman 5).
         """
         E = np.asarray(E, float)
+        if olcum is None:
+            olcum = bool(int(getattr(self.ayar, "meleke_olcumu", 1)))
         B = E.shape[0] if E.ndim == 3 else max(1, int(yigin))
         n_satir = E.shape[-2]
         ayar = self.ayar
@@ -2282,10 +2310,62 @@ class QNefs:
         # Hiçbir şey OKUMAZ: şartı hesaplayıp karar vererek değil,
         # dolaştırarak icra eder (kullanıcı hükmü: "kalp seçmez,
         # dolaştırır").
+        # ── FERMAN 1-S: OKUMA BU GEÇİŞTE ALINIR, İKİNCİSİNDE DEĞİL ──
+        okumalar: Dict[int, Dict[str, float]] = {}
+        dS: Dict[int, float] = {}
+        if olcum:
+            from .kulli_kayip import (SOZLESME, _TAKSIMAT_ARTIGI,
+                                      bolge_degeri)
+
+            def _entropi() -> float:
+                """Dolaşıklık entropisi -- **yalnız o**.
+
+                ``q.olcumler()`` çağrılıp içinden tek sayı almak, on bir
+                küllî alanın yoğunluğunu ve ``norm_hatasi``yı da
+                hesaplatırdı (ölçüldü: 90 çağrıda 2,56 sn, 1,07'si
+                ``norm_hatasi``). Yığında **ilk üye** okunur; ortalama
+                alınca kayıp kayıyordu (0,414573544417 → 0,414415282390)
+                ve kayan sayı hızlanma değil hiledir.
+                """
+                e = q.y.dolasiklik_entropisi()
+                v = e.get("entropi_yigin", None)
+                if v is None:
+                    return float(e["entropi"])
+                return float(np.asarray(v, float).reshape(-1)[0])
+
         for no in self.sira:
+            onceki_sadakat = float(q.y.sadakat_log()) if olcum else 0.0
+            S_once = _entropi() if olcum else 0.0
             self.s[no].kosu(q, self.p)
             if self.sadakat:
                 vicdan(q, self.p, ne="işaret")
+            if olcum:
+                # ``ΔS`` -- melekenin dolaşıklığa tesiri (nizam taahhüdü
+                # bununla yüzleştirilir). Aynı meleke sırada iki kere
+                # geçebilir; tesirleri toplanır.
+                fark = _entropi() - S_once
+                dS[int(no)] = dS.get(int(no), 0.0) + (
+                    0.0 if fark != fark else fark)
+                ilan = SOZLESME.get(int(no), ((), ""))[0]
+                d: Dict[str, float] = {}
+                for ad in ilan:
+                    # İmha edilen kübit taksimatının artığı ve veri/yerel
+                    # alanları ölçüye girmez: birincisi olmayan bir
+                    # bölgedir, ikincisi hüküm taşımaz (büyüğü iyi demek
+                    # keyfî olurdu). İkisi de **kesmeden** ölçülür.
+                    if ad in _TAKSIMAT_ARTIGI or ad in ("veri", "yerel"):
+                        continue
+                    d[ad] = bolge_degeri(q, ad)
+                # Melekenin o geçişte **tuttuğu kesir**: ``exp(−düşüş)``.
+                # Log uzayında, zira ``sadakat()`` çarpımsaldır ve 1814
+                # kapıdan sonra 4e-12'ye iner.
+                dus = max(0.0, onceki_sadakat - float(q.y.sadakat_log()))
+                d["kesme"] = float(np.exp(-dus))
+                # İki geçişten birinde bozması, bozmadığı manasına
+                # gelmez: **en kötüsü** tutulur.
+                eski = okumalar.get(int(no))
+                okumalar[int(no)] = d if eski is None else {
+                    k: min(v, eski.get(k, v)) for k, v in d.items()}
         if self.sadakat:
             # TERTİP: mantık usulleri süperpozisyonda koşar ve `mizan`
             # neyin yasak olduğunu söyler (H109). Ana akışa buradan
@@ -2353,6 +2433,13 @@ class QNefs:
         # başına tutulan kesrin ÇARPIMIDIR (``Yazmac.sadakat``).
         q.iz.kesme_hakiki = float(max(0.0, 1.0 - q.y.sadakat()))
         q.y.normalize()
+        # **OKUMALAR YAZMACIN ÜSTÜNDE DURUR** (ferman 1-S). Ayrı bir
+        # dönüş değeri yapılmadı: ``idrak_et``in on beş çağrı yeri var ve
+        # hepsi ``q`` bekliyor. Ölçüm kapalıysa ikisi de boştur ve o
+        # zaman ``ℒ_Meleke`` ile ``ℒ_Zırh``ın nizam ucu sıfırlanır --
+        # yâni kapatınca ölçü hakikaten kırmızı yanar.
+        q.okumalar = okumalar
+        q.dS = dS
         return q
 
     # -- eğitim arayüzü ------------------------------------------------

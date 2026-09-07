@@ -1672,155 +1672,23 @@ def bolge_degeri(q, ad: str) -> Optional[float]:
     return v
 
 
-def olcumlu_idrak(nefs, E: np.ndarray, meleke_olcumu: bool = True,
-                  sinif_olcumu: bool = True):
-    """Akışı koştur ve **her melekeden sonra** onun alanını oku.
-
-    ``QNefs.idrak_et``in aynısını yapar; farkı, melekeler arasında
-    eğitim ölçütü için zayıf okuma almasıdır. Akışın kendisi bundan
-    haberdar değildir ve kararları değişmez (H31 yerinde durur).
-
-    Dönen: ``(q, okumalar, dS)``:
-
-    * ``okumalar[no][bölge]`` -- melekenin ilan ettiği alanın okuması,
-    * ``dS[no]`` -- melekenin dolaşıklığa tesiri (`nefs/nizam.py`),
-      sınıf taahhüdünün yüzleştirildiği ölçü.
-    """
-    from ogrenme.optimize import gaye_kos
-    from .melekeler import bec_faz_kilidi
-    from .zihin_durumu import QYazmac
-    from .zirh import vicdan
-
-    E = np.asarray(E, float)
-    B = E.shape[0] if E.ndim == 3 else 1
-    ayar = nefs.ayar
-    if B != ayar.yigin:
-        from dataclasses import replace
-        ayar = replace(ayar, yigin=B)
-    q = QYazmac(E.shape[-2], ayar)
-    q.kodla(E)
-    q.superpozisyon()
-    q.harman()
-
-    def _entropi() -> float:
-        """Dolaşıklık entropisi -- **yalnız o**.
-
-        ÖLÇÜLEN VE DÜZELTİLEN İSRAF. Evvelce burada ``q.olcumler()``
-        çağrılıp içinden ``["entropi"]`` alınıyordu. ``olcumler`` ise
-        **on bir küllî alanın** yoğunluklarını, ``norm_hatasi(ornek=32)``
-        iç çarpımını ve makam dağılımlarını da hesaplar -- hepsi
-        atılmak üzere. Tek sayı için bütün divan toplanıyordu.
-
-        Profil (tek kayıp çağrısı): ``_entropi`` 90 çağrıda 2,56 sn;
-        bunun içinde ``norm_hatasi`` tek başına 1,07 sn.
-
-        ``dolasiklik_entropisi`` doğrudan çağrılır. Dönen sayı
-        birebir aynıdır: ``olcumler_yigin`` da onu okuyordu.
-        """
-        # ``olcumler()`` yığının **ilk üyesini** verir (``float(v[0])``);
-        # bütün yığının ortalamasını DEĞİL. Burada da öyle okunur --
-        # yoksa B>1'de sayı kayar. (Ölçüldü: ortalama alınca kayıp
-        # 0,414573544417 → 0,414415282390 oynuyordu. Hızlanma
-        # uğruna kaymış bir sayı, hızlanma değil hiledir.)
-        e = q.y.dolasiklik_entropisi()
-        v = e.get("entropi_yigin", None)
-        if v is None:
-            return float(e["entropi"])
-        return float(np.asarray(v, float).reshape(-1)[0])
-
-    okumalar: Dict[int, Dict[str, float]] = {}
-    #: ``ΔS`` -- melekenin dolaşıklığa tesiri (`nefs/nizam.py`).
-    dS: Dict[int, float] = {}
-    # **DENENDİ VE REDDEDİLDİ -- entropiyi taşımak.** "Bir melekenin
-    # sonrası, bir sonrakinin öncesidir" diye ölçümü yarıya indirmeyi
-    # denedim (90 → 46). ÖLÇTÜM: kayıp 0,414573544417'den
-    # 0,414415282390'a KAYDI. Sebebi şudur -- aradaki ``meleke_olcumu``
-    # bloğu POVM okumaları yapar ve durumu **değiştirir**; yâni iki
-    # nokta aynı durum değildir. Hızlanma hakikî fakat mana bozuluyordu;
-    # mana bozan hızlanma hile olur. Geri alındı.
-    for no in nefs.sira:
-        onceki_sadakat = (float(q.y.sadakat_log())
-                          if meleke_olcumu else 0.0)
-        S_once = _entropi() if sinif_olcumu else 0.0
-        nefs.s[no].kosu(q, nefs.p)
-        if nefs.sadakat:
-            vicdan(q, nefs.p, ne="işaret")
-        if sinif_olcumu:
-            fark = _entropi() - S_once
-            # Aynı meleke sırada iki kere geçebilir; tesirleri toplanır.
-            dS[int(no)] = dS.get(int(no), 0.0) + (
-                0.0 if fark != fark else fark)
-        if meleke_olcumu:
-            ilan = SOZLESME.get(int(no), ((), ""))[0]
-            d: Dict[str, float] = {}
-            for ad in ilan:
-                if ad in _TAKSIMAT_ARTIGI:
-                    # **İMHA EDİLEN TAKSİMATIN ARTIĞI (bu tur ölçüldü).**
-                    # Bu adlar ``kuantum/kubit_taksimati.py``nin dört
-                    # bölgesiydi (veri / parametre / meleke / ancilla)
-                    # ve MPS zincirinin kübitlerini bölüyorlardı. Zincir
-                    # de taksimat da fermanla imha edildi; quditte böyle
-                    # bir bölge YOKTUR.
-                    #
-                    # Bunu ``bolge_degeri``deki ``except → None`` örtüyordu:
-                    # olmayan bölge sessizce "ölçülemedi" oluyor, meleke
-                    # de sessizce ölçüsüz kalıyordu. ``except`` kalkınca
-                    # ``ValueError: küllî alan bilinmiyor: 'parametre'``
-                    # diye ortaya çıktı -- yâni yasak, bir yakalayıcının
-                    # ardında yaşamaya devam ediyormuş.
-                    #
-                    # Bu melekeler ölçüsüz BIRAKILMIYOR: aşağıdaki
-                    # **kesme** yolundan ölçülüyorlar (veri/yerel ile
-                    # aynı usul), yâni geçişte ne kadar bilgi attıkları.
-                    continue
-                if ad in ("veri", "yerel"):
-                    # **VERİ BİR HÜKÜM ALANI DEĞİLDİR.** Evvelce buranın
-                    # POVM ortalaması alınıp "büyüğü iyi" sayılıyordu ve
-                    # ÖLÇÜLDÜ: ``𝒪₁.veri`` her parametrede tam ``0,000``
-                    # çıkıyor, yani doymuş bir en-kötü uzuv olarak
-                    # yumuşak azamîyi tek başına ele geçiriyor ve kaybı
-                    # yine sabitliyordu. Kusur melekede değil benim
-                    # ölçümümdeydi: veri kübitleri girdiyi taşır, hüküm
-                    # taşımaz; onlara "büyüğü iyi" demek keyfîdir.
-                    #
-                    # Doğru ölçü melekenin **ne kadar bilgi attığı**dır:
-                    # kesme. Yönü tartışmasızdır (az atmak iyidir),
-                    # parametreye bağlıdır, ve her meleke için tanımlıdır.
-                    continue
-                d[ad] = bolge_degeri(q, ad)
-            # Veri/yerel ilan eden melekeler **kesmeden** ölçülür: o
-            # geçişte sadakatin ne kadar düştüğü. Böylece 41 melekenin
-            # hepsi ölçülür ve hiçbiri doymuş bir sabit değildir.
-            # **LOG UZAYINDA**: ``sadakat()`` çarpımsaldır ve 1814
-            # kapıdan sonra ``4e-12``ye iner, yani oranı da manasızlaşır.
-            # Melekenin o geçişte attığı nispî ağırlık log farkındadır.
-            # Log farkını ``[0,1]``e **kırpmak** yanlıştı ve ölçüldü:
-            # düşüş çoğu melekede 1'i aştığı için kırpma doyuyor,
-            # ``𝒪₁.kesme`` sabit ``0`` çıkıyor ve yumuşak azamîyi yine
-            # tek başına ele geçiriyordu. Kırpma bir had değil, haddi
-            # olmayan bir sayıyı hadde zorlamaktır.
-            #
-            # Doğru hâl melekenin **kendi tuttuğu kesir**dir:
-            # ``exp(−düşüş) ∈ (0,1]``. Hiçbir keyfî üst sınır gerekmez,
-            # doymaz, ve yönü tartışmasızdır -- çok tutan iyidir.
-            dus = max(0.0, onceki_sadakat - float(q.y.sadakat_log()))
-            d["kesme"] = float(np.exp(-dus))
-            # Aynı meleke sırada iki kere geçebilir (QAKIS'te 13 böyle);
-            # son okuma değil **en kötüsü** tutulur: bir melekenin iki
-            # geçişinden birinde bozması, bozmadığı manasına gelmez.
-            eski = okumalar.get(int(no))
-            okumalar[int(no)] = d if eski is None else {
-                k: min(v, eski.get(k, v)) for k, v in d.items()}
-    if nefs.sadakat:
-        q.iz.kesme += vicdan(q, ne="usul")
-    if nefs.gaye:
-        q.iz.kesme += gaye_kos(q, nefs.p)
-    if nefs.sadakat:
-        vicdan(q, ne="intaç")
-    bec_faz_kilidi(q)
-    q.iz.kesme_hakiki = float(max(0.0, 1.0 - q.y.sadakat()))
-    q.y.normalize()
-    return q, okumalar, dS
+# ══════════════════════════════════════════════════════════════════
+#  ``olcumlu_idrak`` İMHA EDİLDİ -- İKİNCİ İLERİ GEÇİŞ YOKTUR
+# ══════════════════════════════════════════════════════════════════
+#
+# Burada 150 satırlık ``olcumlu_idrak`` duruyordu: ``QNefs.idrak_et``in
+# aynısını kuruyor, farkı melekeler arasında okuma almasıydı. İki yol
+# yan yana durdukça hangisinin koştuğu belirsizdir (ferman 1-E) -- ve
+# burada belirsizlik zararsız değildi:
+#
+#   * ``idrak_et``  ``sadakat_uygula`` çağırır (7/24 mantık zemini).
+#   * ``olcumlu_idrak`` **çağırmazdı**. Yâni melekelerin ölçüldüğü
+#     geçiş, mantık alt-uzayı şartının koşmadığı geçişti; ölçülen şey
+#     ile koşan şey ayrıydı.
+#
+# Ölçüm ``nefs/melekeler.py:QNefs.idrak_et``in kendi içine alındı
+# (``olcum=True``); netice ``q.okumalar`` ve ``q.dS``de durur. Yol tek
+# olduğu için ölçülen ile koşan artık aynıdır.
 
 
 def meleke_olcumleri(okumalar: Dict[int, Dict[str, float]]
@@ -1849,203 +1717,30 @@ def meleke_olcumleri(okumalar: Dict[int, Dict[str, float]]
     return out
 
 
-def kulli_kayip(nefs, veri: Sequence[Tuple[List[int], int]],
-                p: Optional[np.ndarray] = None, sozluk: int = 16,
-                meleke_olcumu: bool = True,
-                kademe_olcumleri: Optional[Sequence[Olcum]] = None,
-                kademe_gorevleri: Optional[Sequence] = None,
-                azami_veri: int = 0) -> Dict[str, object]:
-    """``ℒ`` -- bütün uzuvların hatası, funktörle müşterek uzayda.
-
-    Toplananlar:
-
-    1. **41 meleke**, her biri kendi sözleşmesine göre (yukarıdaki şerh),
-    2. **küllî alanlar** -- akış sonundaki tenakuz/nakz/tasdik/sükût…,
-    3. **kesme** -- dalganın attığı bilgi (``kesme_hakiki``),
-    4. **kademeler** -- verilirse altı kademenin kendi ölçüleri
-       (`nefs/kademeler.py`).
-
-    Hepsi ``nefs/olcu.py``nin funktörüyle mertebeye iner ve orada
-    toplanır. Elle konmuş ``0,25``/``0,1`` katsayıları **yoktur**:
-    uzaylar arası intibak artık funktörle sağlanıyor.
-    """
-    from .qegitim import belirtecleri_kodla, ornek_bol
-
-    if p is not None:
-        nefs.yukle(p)
-    if not len(veri):
-        return {"kayıp": 0.0, "uzuv": 0}
-
-    # **MELEKE ÖLÇÜMÜ KAÇ VERİDE YAPILIR.** Ölçüldü: dört veri
-    # örneğinde bir kayıp çağrısı 7,7 sn sürüyor ve bunun tamamına
-    # yakını meleke başına zayıf okumalardır (41 meleke × ~2 alan ×
-    # veri sayısı). Melekenin hatası **melekeye** aittir, veriye
-    # değil; o hâlde ilk ``meleke_ornegi`` veride ölçmek yeter ve
-    # kalan veriler yine küllî alan ile kesme ölçüsünü verir.
-    # Bu bir kısaltmadır ve gizlenmiyor: ``meleke_ornegi`` büyütülünce
-    # ölçüm zenginleşir, bedeli de doğrusal artar.
-    # =================================================================
-    # VERİ **YIĞIN HÂLİNDE** KOŞULUR (kütük H151)
-    # =================================================================
-    #
-    # Evvelce veri örnekleri tek tek döngüyle akıştan geçiriliyordu.
-    # Hâlbuki `kuantum/yazmac.py` yazmacı zaten **yığın** taşıyor
-    # (``yigin`` ekseni) ve ``QNefs.idrak_et`` ``(B, n, d)`` şeklinde
-    # girdi kabul ediyor. Ölçüldü (CPU, χ=16, aynı donanım):
-    #
-    #     B= 1  yığın  1,01 sn   tek tek  1,01 sn   hızlanma 1,00×
-    #     B= 4  yığın  2,71 sn   tek tek  4,05 sn   hızlanma 1,49×
-    #     B=16  yığın 10,00 sn   tek tek 16,09 sn   hızlanma 1,61×
-    #     B=32  yığın 19,47 sn   tek tek 32,86 sn   hızlanma 1,69×
-    #
-    # Örnek başına maliyet 1,014 → 0,608 sn'ye iniyor ve B büyüdükçe
-    # düşmeye devam ediyor: kapı kurulumu, MPO inşası ve süpürme yığın
-    # üyeleri arasında **paylaşılıyor**. Yani B'yi büyütmek yalnız daha
-    # çok veri işlemek değil, **veri başına daha ucuz** işlemektir --
-    # kullanıcı hükmü buydu ve ölçüm onu doğruladı.
-    #
-    # Meleke ölçümü yığının tamamında **bir kere** alınır: melekenin
-    # hatası melekeye aittir, tek bir veri örneğine değil. Böylece
-    # ``meleke_ornegi`` kısaltmasına da lüzum kalmadı.
-    veri = list(veri)
-    if azami_veri:
-        veri = veri[:int(azami_veri)]
-    hepsi: List[Olcum] = []
-    # Genişlik TABANDIR, sözlük değil (ferman 1-N).
-    E_yigin = np.stack([belirtecleri_kodla(b, nefs.ayar.veri_lifi,
-                                           nefs.ayar.veri_lifi)
-                        for b, _h, _c in (ornek_bol(o) for o in veri)])
-    q, okumalar, dS = olcumlu_idrak(nefs, E_yigin, meleke_olcumu)
-    if meleke_olcumu:
-        hepsi += meleke_olcumleri(okumalar)
-    # **SINIF TAAHHÜDÜ ÖĞRENİLEBİLİR KAYBA GİRER** (`nefs/nizam.py`).
-    # Meleke "çözücüyüm" dediği için değil, FİİLEN çözdüğü için
-    # çözücü olmalıdır. ΔS açılarla değişir, yani bu ölçü hakikaten
-    # öğrenilebilir -- kesme gibi yapısal değil.
-    if dS:
-        from .zirh import taahhude_yuzlestir
-        from .melekeler import qsicil
-        sic = qsicil()
-        for no, d in sorted(dS.items()):
-            m = sic.get(int(no))
-            if m is None:
-                continue
-            hepsi.append(Olcum(
-                "𝒪%d.nizam" % no, 1.0 - taahhude_yuzlestir(m.SINIF, d),
-                OlcuUzayi("nizam_uyumu", 0.0, 1.0, True)))
-    o = q.olcumler()
-    for ad, _kac in q.ayar.kulli_alanlar:
-        if ad in o and ad in UZAYLAR:
-            hepsi.append(Olcum("alan.%s" % ad,
-                               zayif_halka(o[ad]), UZAYLAR[ad]))
-    # **Kapı başına** tutulan kesir (bkz. `kuantum/yazmac.py::sadakat`).
-    hepsi.append(Olcum(
-        "kesme", float(q.y.sadakat_kapi_basina(max(q.iz.kapi, 1))),
-        OlcuUzayi("kapı_başına_sadakat", 0.0, 1.0, True)))
-    # =================================================================
-    # KADEME ÖLÇÜLERİ DE KAYBA GİRMİYOR (kütük H156)
-    # =================================================================
-    #
-    # H154'ün aynı hatası başka yerde tekrarlanmıştı. Altı kademe
-    # (`nefs/kademeler.py`) **dalga parametrelerine hiç bağlı
-    # değildir**: idrak nesne ayrıştırır, muhakeme ``kaide_ara``
-    # koşturur, tasdik istikrâ hesaplar -- hiçbiri melekelerin
-    # açılarını kullanmaz. O hâlde kademe ölçüleri her parametrede
-    # **aynı sayıdır**.
-    #
-    # Ölçüldü (5 parametre, aynı kayıp):
-    #
-    #     kademesiz : V(p₀)=0,5758   yayılım 0,2176
-    #     kademeli  : V(p₀)=0,7978   yayılım 0,0118   ← 18 kat seyreltme
-    #
-    # 44 uzvun 24'ü sabitse, kaybın yarısından fazlası kımıldamıyor
-    # demektir; yumuşak azamî de o sabit tabana oturuyor ve arama
-    # körleşiyor.
-    #
-    # =================================================================
-    # VE BU BORÇ KAPANDI (kütük H160): kademeler artık PARAMETRELİ
-    # =================================================================
-    #
-    # H156'nın hükmü şuydu: *"Kademelerin eğitilebilmesi için kendi
-    # parametrelerinin olması ve o parametrelerin `nefs/talim.py`ye
-    # verilmesi gerekir -- henüz yok ve iddia edilmiyor."*
-    #
-    # Artık var. `nefs/kademeler.py` altı kademenin elle konmuş
-    # sayılarını (beyan eşiği, müphemlik cezası, tevâfuk, muhakeme
-    # derinliği, nesne eşiği, hüküm tabanı) **melekelerin açılarıyla
-    # aynı düz vektörden** alıyor. O hâlde kademe ölçüleri artık
-    # parametrede sabit değildir ve öğrenilebilir kayba **girer**.
-    #
-    # ``kademe_gorevleri`` verilirse kademeler her kayıp çağrısında o
-    # görevlerde yeniden koşar (parametre değiştiği için mecburdur).
-    # ``kademe_olcumleri`` eski yoldur: bir kere hesaplanmış sabit
-    # ölçüler; onlar **yalnız raporlanır**, kayba girmez -- zira
-    # parametreden bağımsızdırlar ve H156'nın körlüğünü geri getirirler.
-    kademe_hepsi: List[Olcum] = []
-    if kademe_gorevleri:
-        for g in kademe_gorevleri:
-            try:
-                kademe_hepsi += list(
-                    kademeleri_kos(g, p=nefs.p)["ölçümler"])
-            except Exception:                            # noqa: BLE001
-                continue
-        hepsi += kademe_hepsi
-    if kademe_olcumleri:
-        kt = zayif_halka(olcumler=list(kademe_olcumleri), ne="azamî")
-        _kademe_ozet = {"kademe_kayıp": kt["kayıp"],
-                        "kademe_en_zayıf": kt["en_zayıf"],
-                        "kademe_uzuv": kt["uzuv"]}
-    elif kademe_hepsi:
-        kt = zayif_halka(olcumler=list(kademe_hepsi), ne="azamî")
-        _kademe_ozet = {"kademe_kayıp": kt["kayıp"],
-                        "kademe_en_zayıf": kt["en_zayıf"],
-                        "kademe_uzuv": kt["uzuv"]}
-    else:
-        _kademe_ozet = {}
-
-    # =================================================================
-    # ÖĞRENİLEBİLİR HATA ile YAPISAL KUSUR AYRILDI (kütük H154)
-    # =================================================================
-    #
-    # Padişah koşturuldu ve kayıp yine kımıldamadı (0,8379 → 0,8376,
-    # 170 çağrı). Sebep arandı: yumuşak azamîyi ele geçiren uzuv
-    # ``𝒪₂₄.kesme``ydi (tutulan kesir 0,0046, yani eksik ~0,995).
-    #
-    # Fakat **bir kapının ne kadar kestiği, açı parametreleriyle
-    # değişmez.** Kesme; menzilin uzunluğundan, MPO'nun zinciri baştan
-    # sona sıkıştırmasından ve χ'den doğar -- yani **mimarînin
-    # vasfıdır**, melekenin öğrenebileceği bir şey değil. Onu kayba
-    # koymak, öğrenciye çözemeyeceği bir soruyu sorup notunu ona
-    # bağlamaktır: not sabitlenir, öğrenme durur.
-    #
-    # O hâlde ölçüler ikiye ayrılır:
-    #
-    #   ÖĞRENİLEBİLİR -- hüküm alanlarının okumaları (tasdik, tenakuz,
-    #       nakz, makam, sükût, kelâm, mizan, gaye) ve kademe ölçüleri.
-    #       Bunlar açı parametreleriyle fiilen değişir; kayıp bunlardır.
-    #
-    #   YAPISAL -- kesme/sadakat. Kayba **girmez**; ayrıca raporlanır
-    #       ve tamiri tasarımladır (nitekim H148/H149'da χ tavanları
-    #       kaldırılarak 𝒪₂₄'ün tuttuğu 5,3e-07'den 0,0046'ya çıktı).
-    #
-    # Yapısalı gizlemiyoruz -- ``yapısal`` anahtarında sayılıyor ve en
-    # kötüsü adıyla veriliyor. Gizleseydik, mimarî kusuru ölçüsüz
-    # bırakmış olurduk.
-    ogrenilebilir = [o for o in hepsi if not o.kaynak.endswith(".kesme")
-                     and o.kaynak != "kesme"]
-    yapisal = [o for o in hepsi if o.kaynak.endswith(".kesme")
-               or o.kaynak == "kesme"]
-    t = zayif_halka(olcumler=ogrenilebilir, ne="azamî")
-    t.update(_kademe_ozet)
-    if yapisal:
-        yt = zayif_halka(olcumler=yapisal, ne="azamî")
-        t["yapısal_kayıp"] = yt["kayıp"]
-        t["yapısal_en_zayıf"] = yt["en_zayıf"]
-        t["yapısal_uzuv"] = yt["uzuv"]
-    t["meleke_sayısı"] = len({o.kaynak.split(".")[0] for o in hepsi
-                              if o.kaynak.startswith("𝒪")})
-    return t
-
+# ══════════════════════════════════════════════════════════════════
+#  ``kulli_kayip`` İMHA EDİLDİ -- CEVHERİ MİZANA GİRDİ (FERMAN 1-S)
+# ══════════════════════════════════════════════════════════════════
+#
+# Burada 200 satırlık ikinci bir **hata fonksiyonu** duruyordu ve ana
+# akışta **hiç koşmuyordu**: tahttan yalnız ``kademe_parametreleri_ac``
+# çağrılıyor, kaybın kendisi ise sadece bu dosyanın kendi raporundan
+# çağrılıyordu. Yâni cevheri olan bir kayıp, kimsenin eniyilemediği bir
+# yerde duruyordu.
+#
+# Padişahın hükmü (ferman 1-S): *"Üç hata fonksiyonundaki cevherleri
+# toplayıp hiçbir cevheri silmeden tek bir hata fonksiyonunu üçüne de
+# koyacaksın."* İcra edildi -- cevherlerin gittiği yer ``ℒ_Meleke``dir
+# (``nefs/kulli_mizan.py``):
+#
+#   41 meleke ölçümü      → ``meleke_olcumleri(q.okumalar)``
+#   küllî alan okumaları  → ``alan.*`` ölçüleri, aynı zayıf halkada
+#   kesme (yapısal)       → ``kesme`` ölçüsü, ayrı sayılır
+#   kademe ölçüleri       → ``kademeleri_kos``, aynı zayıf halkada
+#   zayıf halka terkibi   → ``zayif_halka(..., ne="azamî")``
+#   nizam taahhüdü        → ``ℒ_Zırh``ın beşinci ihlâli (BİR KEZ:
+#                           ``zirh_kaybi`` de nizam istiyordu)
+#
+# Bir cevher düşmedi, tekrar eden bir kez sayıldı.
 
 
 # ====================================================================
@@ -2444,47 +2139,13 @@ def rapor() -> str:                                     # pragma: no cover
     s += _rapor_nefs_mudrike()
 
 
-    s.append("")
-    s.append("=" * 70)
-    s.append("  TESİR -- bu meleke düşse ne değişir")
-    s.append("=" * 70)
-
-    def _rapor_nefs_kulli_kayip() -> List[str]:
-        s: List[str] = []
-        n = 2
-        from .musahede import gorevleri_getir
-
-        from main.egitim import KISA_CPU
-        from .melekeler import QNefs
-        from .qegitim import ornekler
-
-        ayar = KISA_CPU
-        nefs = QNefs(ayar.tohum, ayar.qayar())
-        nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
-        veri = ornekler(gorevleri_getir("training")[:6], azami=int(n),
-                        pencere=ayar.pencere, sozluk=ayar.sozluk,
-                        taban=int(ayar.veri_lifi),
-                        basamak=int(getattr(ayar, "belirtec_basamak", 0)))
-        t = kulli_kayip(nefs, veri, sozluk=ayar.sozluk)
-        s += ["=== KÜLLÎ KAYIP -- 41 melekenin hepsi sayılıyor mu? ===",
-             "",
-             "  toplanan uzuv ölçüsü : %d" % t["uzuv"],
-             "  ayrı meleke sayısı   : %d  ← 41 olmalı" % t["meleke_sayısı"],
-             "  ortalama mertebe     : %.4f" % t["ortalama_mertebe"],
-             "  KAYIP (1 − mertebe)  : %.4f" % t["kayıp"],
-             "  en zayıf uzuv        : %s" % (t["en_zayıf"],),
-             "  haddi tahminî ölçü   : %d" % t["tahminî_hadli"],
-             "",
-             "Eskiden kayıp BEŞ sayı okuyordu ve otuz altı melekenin eğitim",
-             "sinyali sıfırdı. Yukarıdaki 'ayrı meleke sayısı' o borcun",
-             "kapanıp kapanmadığının ölçüsüdür; iddia değil sayımdır."]
-        return s
-
-    s.append("")
-    s.append("=" * 70)
-    s.append("  KÜLLÎ KAYIP -- funktöryel birleşim")
-    s.append("=" * 70)
-    s += _rapor_nefs_kulli_kayip()
+    # **KÜLLÎ KAYBIN RAPOR FASLI DA KESİLDİ** (ferman 2-B: fazlalık
+    # kökünden kesilir). Burada ``kulli_kayip`` çağrılıp "41 melekenin
+    # hepsi sayılıyor mu" diye soruluyordu; fonksiyon imha edildi ve
+    # cevheri ``ℒ_Meleke`` olarak mizana girdi. O sual artık **tahtın
+    # kendi beyanına** sorulur ve orada koşan sayıyla cevaplanır
+    # (ferman 1-L: tahtın basmadığı sayı, sayı değildir). Burada
+    # tutulsaydı, imha edilmiş bir yolu ölçen bir rapor kalırdı.
     return "\n".join(s)
 
 

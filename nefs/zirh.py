@@ -393,6 +393,18 @@ def zirhla(hedef, ayar: Optional[ZirhAyari] = None,
             "betti_delik_sayisi": float(b1["betti"]),
             "kohomoloji_tikaniklik": float(b0["ada_cezası"]),
             "homotopi_burulma": float(h["sapma"]),
+            # **NORMALİZE EDİLMİŞ ÜÇLÜ DE DÖNER** (ferman 1-S). Yukarıdaki
+            # üç sayı hamdır (sayım ve mutlak ceza); ``zirh_kaybi``in
+            # yumuşak azamîsi ise ``[0,1]``de yaşayan ihlâller ister --
+            # ham sayımla kesir yarışınca sayım daima kazanır. Çağıran
+            # nizam ihlâlini de katıp **beşini birden** tartabilsin diye
+            # normalize hâller ayrıca veriliyor; yoksa çağıran onları
+            # yeniden hesaplamak zorunda kalır ve iki yerde iki formül
+            # olurdu (ferman 1-M).
+            "sheaf_ceza": float(s_hata),
+            "betti_ceza": float(b1["delik_cezası"]) / azami_b1,
+            "koho_ceza": float(b0["ada_cezası"]) / max(n, 1),
+            "homotopi_ceza": float(h["sapma"]),
             "toplam_kayip": float(toplam["kayıp"]),
             "mizan_dengesi": float(np.abs(np.mean(H_zirhli))),
         }
@@ -1172,7 +1184,6 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
     if sinif is not None and dS is not None:
         return ihlal(sinif, dS)
 
-    from .kulli_kayip import olcumlu_idrak
     from .melekeler import qsicil
 
     if nefs is None:
@@ -1185,12 +1196,22 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
         nefs = QNefs(a.tohum, a.qayar())
         nefs.idrak_et(np.zeros((2, a.veri_lifi)))
         veri = ornekler(gorevleri_getir("training")[:6], azami=2,
-                        pencere=a.pencere, sozluk=a.sozluk)
-        # Genişlik TABANDIR, sözlük değil (ferman 1-N).
+                        pencere=a.pencere, sozluk=a.sozluk,
+                        taban=int(a.veri_lifi),
+                        basamak=int(a.belirtec_basamak))
+        # Genişlik TABANDIR, sözlük değil (ferman 1-N). Örnek bir
+        # **üçlüdür** (bağlam, hedef, cins -- ferman 1-R) ve tek
+        # okuyucudan geçer: ikili açmak burada ``ValueError`` verirdi.
+        from .qegitim import ornek_bol
         E = np.stack([belirtecleri_kodla(b, a.veri_lifi, a.veri_lifi)
-                      for b, _ in veri])
-    _q, _ok, dSler = olcumlu_idrak(nefs, E, meleke_olcumu=False,
-                                   sinif_olcumu=True)
+                      for b, _h, _c in (ornek_bol(o) for o in veri)])
+    # **TEK İLERİ GEÇİŞ** (ferman 1-E): ``olcumlu_idrak`` imha edildi,
+    # ölçüm ``idrak_et``in kendi içinde. ``ΔS`` yazmacın üstünde döner.
+    _q = nefs.idrak_et(E, olcum=True)
+    dSler = dict(getattr(_q, "dS", {}) or {})
+    assert dSler, (
+        "ΔS BOŞ -- meleke ölçümü kapalı olmalı (``meleke_olcumu=0``); "
+        "nizam taahhüdü ölçüsüz yüzleştirilemez")
     sic = qsicil()
     out: List[Dict[str, object]] = []
     for no in sorted(dSler):

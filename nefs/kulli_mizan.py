@@ -206,6 +206,22 @@ class MizanAyari:
     #: ``nefs/tabakali_mizan.py`` -- funktör kompozisyonu ve kısmî Born.
     lam_kategori: float = 0.5
     lam_nokta: float = 0.25
+    # ── FERMAN 1-S: İMHA EDİLEN İKİ HATA FONKSİYONUNUN KEFELERİ ─────
+    #: ``ℒ_Meleke`` -- eski ``nefs/kulli_kayip.py:kulli_kayip``ın
+    #: cevheri: 41 melekenin kendi sözleşmesi, küllî alan okumaları ve
+    #: kademe ölçüleri, hepsi **zayıf halka** (yumuşak azamî) ile tek
+    #: sayıya iner. En kötü uzuv hükmü verir; ortalama alınsaydı bir
+    #: uzvun ölmesi otuz dokuzun içinde kaybolurdu.
+    lam_meleke: float = 0.5
+    #: ``ℒ_Zırh`` -- eski ``nefs/zirh.py:zirh_kaybi``ın cevheri: sheaf
+    #: uyumsuzluğu, Betti deliği, kohomoloji tıkanıklığı, homotopi
+    #: burulması ve **nizam ihlâli**; beşi τ-softmax ile birleşir.
+    #: Nizam iki fonksiyonda da vardı ve **bir kez** sayılır -- burada.
+    lam_zirh: float = 0.5
+    #: Meleke okumaları alınıyor mu (``QAyar.meleke_olcumu``in mizan
+    #: tarafındaki kardeşi). ``0`` = iki kefe de sıfırlanır ve rapor
+    #: kırmızı yanar; tesir böylece ölçülebilir kalır (ferman 5).
+    meleke_olcumu: int = 1
     #: ``nefs/usul.py`` -- mantık yürütme seferi (7/24 DEĞİL).
     usul_acik: int = 1
     usul_haddi: float = 0.0
@@ -883,6 +899,14 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     veri = list(veri)
     B = max(1, int(getattr(nefs.ayar, "yigin", 1)))
     kubit = int(nefs.ayar.veri_lifi)
+    # ── FERMAN 1-S: MELEKE OKUMALARI BU GEÇİŞTEN TOPLANIR ───────────
+    # İkinci bir ileri geçiş kurulmaz (``olcumlu_idrak`` imha edildi):
+    # okuma ``idrak_et``in kendi içinde alınır ve yazmacın üstünde döner.
+    # Dilimler arasında **en kötüsü** tutulur, ``ΔS`` toplanır.
+    okumalar: Dict[int, Dict[str, float]] = {}
+    dS: Dict[int, float] = {}
+    alan_okumasi: Dict[str, float] = {}
+    kesme_kesri = 1.0
     for bas in range(0, len(veri), B):
         dilim = veri[bas:bas + B]
         # **GENİŞLİK TABANDIR** (ferman 1-N): gelen dizi basamak
@@ -953,12 +977,35 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
             baglamlar.append(list(bag))
         if not sektor:
             sektor = [q.y.sektor(ad) for ad, _ in q.ayar.kulli_alanlar]
+        # ── İMHA EDİLEN KÜLLÎ KAYBIN CEVHERLERİ (ferman 1-S) ────────
+        for no, d in (getattr(q, "okumalar", None) or {}).items():
+            eski = okumalar.get(int(no))
+            okumalar[int(no)] = dict(d) if eski is None else {
+                k: min(v, eski.get(k, v)) for k, v in d.items()}
+        for no, v in (getattr(q, "dS", None) or {}).items():
+            dS[int(no)] = dS.get(int(no), 0.0) + float(v)
+        # Küllî alan okumaları: hükmün kendi alanlarının doyumu.
+        # ``zayif_halka`` bir okumayı tek sayıya indirir (yumuşak asgarî);
+        # ham okuma dizi olabilir, ``min`` ona vurulamaz.
+        from .kulli_kayip import UZAYLAR, zayif_halka
+        _alan = q.olcumler()
+        for ad, _kac in q.ayar.kulli_alanlar:
+            if ad in _alan and ad in UZAYLAR:
+                v = float(zayif_halka(_alan[ad]))
+                alan_okumasi[ad] = min(alan_okumasi.get(ad, v), v)
+        # **KESME YAPISALDIR** ve öyle kalır: kayba girmez, ayrıca
+        # sayılır (mimarî kusuru öğrenciye sormak, notu sabitler).
+        kesme_kesri = min(
+            kesme_kesri,
+            float(q.y.sadakat_kapi_basina(max(int(q.iz.kapi), 1))))
     assert haller, "BOŞ veriyle mizan kurulamaz"
     assert len(haller) == len(veri), (
         "ileri geçiş %d örnek aldı, %d netice verdi -- örnek kayboldu"
         % (len(veri), len(haller)))
     return {"hal": haller, "lifli": lifliler, "hedef": hedefler,
-            "cins": cinsler, "bağlam": baglamlar, "sektör": sektor}
+            "cins": cinsler, "bağlam": baglamlar, "sektör": sektor,
+            "okumalar": okumalar, "ΔS": dS, "alan": alan_okumasi,
+            "kesme": float(kesme_kesri)}
 
 
 def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
@@ -1063,6 +1110,88 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     L_nok = float(nok["kayıp"])
 
     # ══════════════════════════════════════════════════════════════
+    #  ℒ_MELEKE -- İMHA EDİLEN KÜLLÎ KAYBIN CEVHERİ (FERMAN 1-S)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # *"Üç hata fonksiyonundaki cevherleri toplayıp hiçbir cevheri
+    # silmeden tek bir hata fonksiyonunu üçüne de koyacaksın."*
+    #
+    # ``nefs/kulli_kayip.py:kulli_kayip`` ikinci bir hata fonksiyonuydu
+    # ve ana akışta **hiç koşmuyordu**. Cevheri buraya alındı:
+    #
+    #   * 41 melekenin **kendi sözleşmesi** -- her meleke ilan ettiği
+    #     alanı ne kadar dolduruyor (``meleke_olcumleri``),
+    #   * **küllî alan okumaları** -- tasdik/tenakuz/nakz/makam/kelâm…,
+    #   * **kademe ölçüleri** -- altı kademe, parametreye bağlı,
+    #   * **zayıf halka** terkibi -- yumuşak **azamî**: hükmü en kötü
+    #     uzuv verir. Ortalama alınsaydı bir uzvun ölmesi otuz dokuzun
+    #     içinde kaybolurdu.
+    #
+    # ``kesme`` kayba **girmez** ve bu bir eksiltme değil, eski kaybın
+    # kendi hükmüdür: bir kapının ne kadar kestiği açı parametreleriyle
+    # değişmez, mimarînin vasfıdır. Ayrıca sayılır ve dökümde durur.
+    from .kulli_kayip import (UZAYLAR, Olcum, kademeleri_kos,
+                              meleke_olcumleri, zayif_halka)
+    _olcumler: List[Olcum] = []
+    _okumalar = ileri.get("okumalar") or {}
+    if int(a.meleke_olcumu) and _okumalar:
+        _olcumler += meleke_olcumleri(_okumalar)
+        for ad, v in sorted((ileri.get("alan") or {}).items()):
+            _olcumler.append(Olcum("alan.%s" % ad, float(v), UZAYLAR[ad]))
+        if kademe_gorevleri:
+            for g in kademe_gorevleri:
+                _olcumler += list(kademeleri_kos(g, p=nefs.p)["ölçümler"])
+    if _olcumler:
+        _mel = zayif_halka(olcumler=_olcumler, ne="azamî")
+        L_mel = float(_mel["kayıp"])
+    else:
+        # Ölçüm kapalı: kefe **sıfırlanır** ve rapor onu öyle yazar.
+        _mel = {"kayıp": 0.0, "en_zayıf": "ÖLÇÜM KAPALI", "uzuv": 0}
+        L_mel = 0.0
+
+    # ══════════════════════════════════════════════════════════════
+    #  ℒ_ZIRH -- İMHA EDİLEN ZIRH KAYBININ CEVHERİ (FERMAN 1-S)
+    # ══════════════════════════════════════════════════════════════
+    #
+    # ``nefs/zirh.py:zirh_kaybi`` üçüncü hata fonksiyonuydu ve o da ana
+    # akışta hiç koşmuyordu. Beş ihlâli τ-softmax ile birleşir:
+    #
+    #   sheaf · Betti · kohomoloji · homotopi · **nizam**
+    #
+    # **NİZAM İKİ FONKSİYONDA DA VARDI VE BİR KEZ SAYILIR.** Eski küllî
+    # kayıp onu ``𝒪ᵢ.nizam`` diye ayrı bir ölçü olarak topluyor,
+    # ``zirh_kaybi`` ise beşinci ihlâl olarak istiyordu. Aynı cevherin
+    # iki nüshası olurdu (ferman 1-M/2-B): burada **yalnız** zırhın
+    # beşinci ihlâli olarak girer, ``ℒ_Meleke``de tekrarlanmaz.
+    #
+    # Zırh, modelin **kendi hüküm dizeyi** üstüne giydirilir: ``ρ_model``
+    # belirteç lifi üstündeki indirgenmiş yoğunluktur ve zaten burada
+    # kurulu (yeniden kurmak israf olurdu -- ferman 3).
+    from .zirh import ZirhAyari, taahhude_yuzlestir, zirh_kaybi
+    from .melekeler import qsicil
+    _dS = ileri.get("ΔS") or {}
+    if int(a.meleke_olcumu) and _dS:
+        _sic = qsicil()
+        _ih = [float(taahhude_yuzlestir(sinif=_sic[int(no)].SINIF,
+                                        dS=float(v)))
+               for no, v in sorted(_dS.items()) if int(no) in _sic]
+        # **EN KÖTÜ İHLÂL** hükmü verir, ortalama değil: zırhın kendi
+        # usulü de yumuşak azamîdir ve bir melekenin taahhüdünü
+        # tutmaması, kırkının tutmasıyla telâfi edilmez.
+        L_nizam = float(max(_ih)) if _ih else 0.0
+    else:
+        L_nizam = 0.0
+    from .zirh import zirhla
+    _H_zirh = np.real(rho_model).astype(float)
+    _z_ham, _z = zirhla(_H_zirh, ZirhAyari())
+    _zirh = zirh_kaybi(sheaf=float(_z["sheaf_ceza"]),
+                       betti=float(_z["betti_ceza"]),
+                       koho=float(_z["koho_ceza"]),
+                       homotopi=float(_z["homotopi_ceza"]),
+                       nizam=L_nizam, ayar=ZirhAyari())
+    L_zirh = float(_zirh["kayıp"])
+
+    # ══════════════════════════════════════════════════════════════
     #  ŞÜPHE MANİFOLDU (nefs/suphe.py)
     # ══════════════════════════════════════════════════════════════
     #
@@ -1156,7 +1285,10 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
              + float(a.lam_tenakuz) * L_ten
              + L_gedik
              + float(a.lam_monogami) * L_mon
-             + float(a.lam_engel) * L_eng)
+             + float(a.lam_engel) * L_eng
+             # ── FERMAN 1-S: ÜÇ HATA FONKSİYONU TEK MİZANDA ────────
+             + float(a.lam_meleke) * L_mel                   # 41 meleke
+             + float(a.lam_zirh) * L_zirh)                   # topolojik zırh
     assert np.isfinite(kayip), "mizan sonlu değil"
 
     if ne == "toplam":
@@ -1172,6 +1304,18 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "nokta_cins": nok.get("cins", {}),
             "kategori": L_kat, "kategori_ihlâl": int(kat["ihlâl"]),
             "kategori_deneme": int(kat["deneme"]),
+            # ── FERMAN 1-S: iki yeni kefe, cevherleriyle beraber ──
+            "meleke": L_mel, "meleke_en_zayıf": _mel.get("en_zayıf"),
+            "meleke_uzuv": int(_mel.get("uzuv", 0) or 0),
+            "meleke_sayısı": len({o.kaynak.split(".")[0] for o in _olcumler
+                                  if o.kaynak.startswith("𝒪")}),
+            # Kesme YAPISALDIR: kayba girmez, ayrıca sayılır.
+            "kesme_yapısal": float(ileri.get("kesme", 0.0)),
+            "zırh": L_zirh, "zırh_sheaf": float(_z["sheaf_ceza"]),
+            "zırh_betti": float(_z["betti_ceza"]),
+            "zırh_koho": float(_z["koho_ceza"]),
+            "zırh_homotopi": float(_z["homotopi_ceza"]),
+            "zırh_nizam": float(L_nizam),
             # ── L_Tenakuz ─────────────────────────────────────────
             "tenakuz_bariyer": L_ten,
             "tenakuz_azamî": float(cv["bariyer"]["azamî"]),

@@ -460,15 +460,27 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
 #: Uzay (rezonans) mizanın **çıpasıdır** ve payı en büyüktür: veriye
 #: bağlanan tek kefe odur. Nokta (kısmî Born) en küçüktür ve öyle
 #: olmalıdır -- büyütülürse mizan bir softmax taklidine iner.
+#: **FERMAN 1-S İLE İKİ YENİ KEFE GELDİ VE PAYLAR YENİDEN DAĞITILDI.**
+#: Pay eklemek, ötekilerden almak demektir; toplam daima 1'dir. Nispetleri
+#: hep birden ölçeklemek hiçbir şeyi değiştirmezdi (denge zaten nispet
+#: alıyor), o hâlde söz hakkı hakikaten devredildi.
+#:
+#: ``nokta`` 0,03'ten 0,10'a **çıkarıldı** ve sebebi ölçülmüştür: ARC
+#: kanadında basamak isabeti %0,20, yâni kör seçimin (1/16 = %6,25)
+#: altında. Hedefe sadakati ölçen tek kefe mizanda yüzde üç söz hakkına
+#: sahipken "yüzde yüz uyum arıyoruz" (ferman 1-R/a) demek, aramayı
+#: iddia edip aramamaktı.
 PAYLAR: Dict[str, float] = {
-    "uzay": 0.28,        # ℒ_Rezonans -- çıpa, λ = 1 (bölünmez)
-    "tip": 0.18,         # ℒ_Hodge
-    "kategori": 0.14,    # ℒ_Kategori (funktör)
-    "cevrim": 0.12,      # ℒ_Çevrim (Wilson)
-    "tenakuz": 0.12,     # ℒ_Tenakuz (log bariyer)
-    "monogami": 0.08,    # ℒ_Monogami (CKW)
-    "engel": 0.05,       # ℒ_Engel (CIM)
-    "nokta": 0.03,       # ℒ_Nokta -- son basamak, küçük kalır
+    "uzay": 0.22,        # ℒ_Rezonans -- çıpa, λ = 1 (bölünmez)
+    "tip": 0.13,         # ℒ_Hodge
+    "meleke": 0.12,      # ℒ_Meleke -- 41 melekenin kendi sözleşmesi
+    "kategori": 0.10,    # ℒ_Kategori (funktör)
+    "nokta": 0.10,       # ℒ_Nokta -- ARC'ın hedefe sadakat kefesi
+    "cevrim": 0.09,      # ℒ_Çevrim (Wilson)
+    "tenakuz": 0.09,     # ℒ_Tenakuz (log bariyer)
+    "zirh": 0.07,        # ℒ_Zırh -- sheaf/Betti/koho/homotopi/nizam
+    "monogami": 0.05,    # ℒ_Monogami (CKW)
+    "engel": 0.03,       # ℒ_Engel (CIM)
 }
 
 
@@ -514,7 +526,9 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
     frenlenen = []
     esle = {"cevrim": "çevrim", "tenakuz": "tenakuz_bariyer",
             "monogami": "monogami", "engel": "engel", "tip": "hodge",
-            "kategori": "kategori", "nokta": "nokta"}
+            "kategori": "kategori", "nokta": "nokta",
+            # Ferman 1-S: imha edilen iki hata fonksiyonunun cevherleri.
+            "meleke": "meleke", "zirh": "zırh"}
     esik = max(float(taban) * cipa, 1e-9)
     for ad, anahtar in esle.items():
         v = abs(float(kefeler.get(anahtar, 0.0)))

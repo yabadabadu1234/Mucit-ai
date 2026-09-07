@@ -92,6 +92,12 @@ class QAyar:
     #: kaç katı büyütüleceği. ``1`` = telâfi yok (eski hâl, ölçü
     #: kırmızı yanar). ``nefs/olcek.py`` türetir; bkz. ``QMeleke.yay``.
     parametre_genisligi: int = 1
+    #: **MELEKE ÖLÇÜMÜ** (ferman 1-S). ``1`` = ``idrak_et`` her
+    #: melekeden sonra onun ilan ettiği alanları okur, attığı bilgiyi
+    #: (kesme) ve ``ΔS``sini tartar; ``ℒ_Meleke`` ile ``ℒ_Zırh``ın nizam
+    #: ucu bu okumalardan doğar. ``0`` = okuma alınmaz ve iki kefe
+    #: sıfırlanır -- kapatılabilen bir tesirdir, ölçüsü kırmızı yanar.
+    meleke_olcumu: int = 1
     kaide_basamak: int = 4
     bolge_ac: bool = True
     bolge_asgari: int = 1

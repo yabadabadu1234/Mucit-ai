@@ -134,6 +134,27 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % (m["engel"], m["engel_bağ"], m["engel_toplam"]),
               "        mana öbeği (Morse): %d   bağımsız kesim şahidi: %.3f"
               % (m["engel_öbek"], m["engel_şahidi"]),
+              "      ─── ferman 1-S: imha edilen iki hata "
+              "fonksiyonunun cevheri ───",
+              "      ℒ_Meleke   (41 melekenin sözleşmesi) : %.6f   × %.2f"
+              % (m["meleke"], ayar.lam_meleke),
+              "        zayıf halka (yumuşak AZAMÎ): %d ölçü, %d ayrı "
+              "meleke   en zayıf: %s"
+              % (m["meleke_uzuv"], m["meleke_sayısı"],
+                 m["meleke_en_zayıf"]),
+              "        kesme (YAPISAL, kayba GİRMEZ): kapı başına "
+              "tutulan kesir %.6f" % m["kesme_yapısal"],
+              "      ℒ_Zırh     (τ-softmax, beş ihlâl)   : %.6f   × %.2f"
+              % (m["zırh"], ayar.lam_zirh),
+              "        sheaf %.4f | Betti %.4f | koho %.4f | "
+              "homotopi %.4f | nizam %.4f"
+              % (m["zırh_sheaf"], m["zırh_betti"], m["zırh_koho"],
+                 m["zırh_homotopi"], m["zırh_nizam"]),
+              "        nizam İKİ fonksiyonda da vardı, BİR KEZ sayıldı "
+              "(zırhın beşinci ihlâli).",
+              "        meleke ölçümü: %s"
+              % ("AÇIK" if ayar.meleke_olcumu
+                 else "KAPALI ⚠ -- iki kefe de sıfır"),
               "      ─────────────────────────────────",
               "      ℒ_Küllî              : %.6f" % m["kayıp"],
               "",
