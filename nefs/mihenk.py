@@ -25,19 +25,21 @@ def _basamaklar(metin: str, kodlama: str, taban: int, basamak: int
 
 
 def _metne(basamaklar: Sequence[int], kodlama: str, taban: int,
-           basamak: int) -> str:
+           basamak: int) -> Dict[str, Any]:
     from .belirtec import coz, tipten
     b = [int(x) % int(taban) for x in basamaklar]
     kirp = (len(b) // int(basamak)) * int(basamak)
     if kirp <= 0:
-        return ""
-    bel = [int(t) for t in np.asarray(
+        return {"metin": "", "belirteç": 0, "geçersiz": 0,
+                "kod_uzayı": int(taban) ** int(basamak),
+                "sözlük": _sozluk(kodlama)}
+    ham = [int(t) for t in np.asarray(
         tipten(b[:kirp], int(taban), int(basamak)), int).reshape(-1)]
     sozluk = _sozluk(kodlama)
-    bel = [t for t in bel if 0 <= t < sozluk]
-    if not bel:
-        return ""
-    return coz(bel, kodlama)
+    bel = [t for t in ham if 0 <= t < sozluk]
+    return {"metin": (coz(bel, kodlama) if bel else ""),
+            "belirteç": len(ham), "geçersiz": len(ham) - len(bel),
+            "kod_uzayı": int(taban) ** int(basamak), "sözlük": sozluk}
 
 
 _SOZLUK: Dict[str, int] = {}
@@ -67,9 +69,14 @@ def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
     uretilen, bedel, sukutlar, budanan = _uret(
         nefs, bag, kac, int(pencere), int(taban))
     sure = time.perf_counter() - t0
-    cevap = _metne(uretilen, str(kodlama), int(taban), int(basamak))
+    coz = _metne(uretilen, str(kodlama), int(taban), int(basamak))
+    cevap = str(coz["metin"])
     bekleniyor = str(MIHENK_CEVABI).strip().lower()
     return {"sual": str(sual), "cevap": cevap,
+            "belirteç": int(coz["belirteç"]),
+            "geçersiz": int(coz["geçersiz"]),
+            "kod_uzayı": int(coz["kod_uzayı"]),
+            "sözlük": int(coz["sözlük"]),
             "basamak": [int(x) for x in uretilen],
             "üretilen_basamak": int(len(uretilen)),
             "bedel": float(bedel), "budanan": int(budanan),
@@ -112,9 +119,11 @@ class Nobet:
         c["kayıp"] = float(kayip)
         c["adım"] = int(adim)
         self.defter.append(c)
-        print("  [mihenk %6.0f sn · adım %d · V %.4f] %s → %r%s"
+        print("  [mihenk %6.0f sn · adım %d · V %.4f] %s → %r"
+              "   (geçersiz belirteç %d/%d)%s"
               % (c["saniye_ofset"], c["adım"], c["kayıp"], self.sual,
-                 c["cevap"], "  ✓" if c["isabet"] else ""),
+                 c["cevap"], c["geçersiz"], c["belirteç"],
+                 "  ✓" if c["isabet"] else ""),
               flush=True)
         return c
 
@@ -164,11 +173,14 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
         s += ["  ⚠ HİÇ YOKLANMADI -- nöbet koşmadı yahut tâlim aradan",
               "    kısa sürdü. Ölçü kırmızı yanıyor (ferman 5)."]
         return "\n".join(s)
-    s += ["  %-8s %-7s %-9s %-6s %s"
-          % ("saniye", "adım", "kayıp", "sükût", "cevap")]
+    s += ["  kod uzayı : %d   sözlük : %d"
+          % (d[-1]["kod_uzayı"], d[-1]["sözlük"]),
+          "  %-8s %-7s %-9s %-6s %-9s %s"
+          % ("saniye", "adım", "kayıp", "sükût", "geçersiz", "cevap")]
     for c in d:
-        s.append("  %-8.0f %-7d %-9.4f %-6.3f %r%s"
+        s.append("  %-8.0f %-7d %-9.4f %-6.3f %-9s %r%s"
                  % (c["saniye_ofset"], c["adım"], c["kayıp"], c["sükût"],
+                    "%d/%d" % (c["geçersiz"], c["belirteç"]),
                     c["cevap"], "  ✓" if c["isabet"] else ""))
     ayri = len({c["cevap"] for c in d})
     s += ["",
@@ -176,6 +188,10 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
                                        len(d)),
           "  boş cevap   : %d / %d" % (sum(1 for c in d if c["boş"]),
                                        len(d)),
+          "  geçersiz belirteç : %d / %d  -- kod uzayı sözlükten %.1f kat "
+          "büyük; taşan kimlik ÇÖZÜLEMEZ, sessizce elenmez, sayılır"
+          % (sum(c["geçersiz"] for c in d), sum(c["belirteç"] for c in d),
+             float(d[-1]["kod_uzayı"]) / max(1, d[-1]["sözlük"])),
           "  ayrı cevap  : %d  %s"
           % (ayri, "(cevap HİÇ DEĞİŞMEDİ -- ağırlık cevaba geçmiyor)"
              if ayri <= 1 and len(d) > 1 else "")]
