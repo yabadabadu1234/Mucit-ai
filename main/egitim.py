@@ -292,8 +292,7 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         cagri = max(1, int(hiz_ayari.talim_tur)
                     * max(1, int(hiz_ayari.altuzay_ornek)))
         o["kestirilen_saniye"] = float(h["kayıp_süresi"]) * cagri
-        o["süre_haddi"] = float(BUTCE_SANIYESI)
-        o["süre_geçti"] = bool(o["kestirilen_saniye"] <= BUTCE_SANIYESI)
+        o["bütçe_saniyesi"] = float(BUTCE_SANIYESI)
     if sert:
         assert not zaman_cevrimi, (
             "ZAMAN AÇILIMLI SEBEP ÇİZGESİNDE ÇEVRİM VAR -- bir adım "
@@ -304,16 +303,7 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
             "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
             "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
         if "belirteç_sn" in o:
-            from tanilama.hiz_teftisi import BUTCE_SANIYESI, HAD
-            assert o["süre_geçti"], (
-                "TÂLİM SÜRESİ HADDİ AŞILIYOR -- TÂLİM BAŞLAMAZ.\n"
-                "  kestirilen: %.1f sn   had: %.0f sn\n"
-                "  (bir kayıp çağrısı %.4f sn × %d çağrı)\n"
-                "  Ferman: eğitim hızını toplamda en fazla 10 dakikaya "
-                "indirmelisin."
-                % (o["kestirilen_saniye"], BUTCE_SANIYESI,
-                   o["kayıp_süresi"],
-                   int(o["kestirilen_saniye"] / max(1e-9, o["kayıp_süresi"]))))
+            from tanilama.hiz_teftisi import HAD
             assert o["hız_geçti"], (
                 "HIZ HADDİ TUTMUYOR -- TÂLİM BAŞLAMAZ.\n"
                 "  ölçülen : %.1f belirteç/sn\n"

@@ -9,7 +9,8 @@ from typing import Any, Dict, List, Optional
 import numpy as np
 
 __all__ = ["cekirdek_sayisi", "onbellekler", "saat_ghz", "simd_bilgisi",
-           "bellek_bandi", "tamsayi_hizi", "gpu_var_mi", "gpu_olcu",
+           "bellek_bandi", "bellek_baytlari", "tamsayi_hizi",
+           "bellek_haddi", "gpu_var_mi", "gpu_olcu",
            "donanim", "rapor"]
 
 _ONBELLEK: Dict[str, Any] = {}
@@ -109,6 +110,42 @@ def bellek_bandi(bayt: int = 1 << 26, tekrar: int = 5) -> Dict[str, float]:
     trafik = 3.0 * n * 8.0
     return {"bayt": float(trafik), "sn": float(sure),
             "bant_gb": float(trafik / sure / 1e9)}
+
+
+def bellek_baytlari() -> Dict[str, Optional[int]]:
+    o: Dict[str, Optional[int]] = {"toplam": None, "erişilebilir": None,
+                                   "kap_haddi": None, "kaynak": None}
+    try:
+        with open("/proc/meminfo") as f:
+            m = {}
+            for satir in f:
+                ad, _, kalan = satir.partition(":")
+                p = kalan.split()
+                if p:
+                    m[ad.strip()] = int(p[0]) * 1024
+    except OSError:
+        return o
+    o["toplam"] = m.get("MemTotal")
+    o["erişilebilir"] = m.get("MemAvailable", m.get("MemFree"))
+    o["kaynak"] = "/proc/meminfo"
+    for yol in ("/sys/fs/cgroup/memory.max",
+                "/sys/fs/cgroup/memory/memory.limit_in_bytes"):
+        try:
+            with open(yol) as f:
+                v = f.read().strip()
+        except OSError:
+            continue
+        if v.isdigit() and int(v) < (1 << 62):
+            o["kap_haddi"] = int(v)
+            o["kaynak"] = yol
+        break
+    return o
+
+
+def bellek_haddi() -> Optional[int]:
+    b = bellek_baytlari()
+    aday = [x for x in (b["erişilebilir"], b["kap_haddi"]) if x]
+    return int(min(aday)) if aday else None
 
 
 def tamsayi_hizi(satir: int = 4096, kelime: int = 64,
@@ -238,6 +275,7 @@ def donanim(yeniden: bool = False) -> Dict[str, Any]:
             "saat": saat_ghz(),
             "simd": simd_bilgisi(),
             "bant": bellek_bandi(),
+            "bellek": bellek_baytlari(),
             "tamsayı": tamsayi_hizi(),
         },
         "gpu": gpu_olcu(),

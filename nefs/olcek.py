@@ -131,8 +131,18 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     gereken = int(_gb["azamî"]) * int(_basamak)
     pencere = int(max(V, _ikinin_kuvveti(float(gereken), int(V))))
     sigan = float(sigan_nispet(pencere // max(1, int(_basamak))))
+    from .donanim import bellek_haddi
+    _bellek = bellek_haddi()
+    assert _bellek, (
+        "bellek yoklanamadı -- örnek haddi ölçüsüz konamaz (ferman 5-B)")
+    _ornek_bayti = (int(pencere) * 8 * 4
+                    + int(pencere) * int(V) * int(bayt)
+                    + int(d) * int(bayt) * 2)
+    _bellek_ornegi = int(max(1, (float(_bellek) * max(c, 1e-3))
+                            // _ornek_bayti))
     ornek = int(max(1, min(int(max(kenar, B)),
-                           int(butce // (float(cagri) * pencere)))))
+                           int(butce // (float(cagri) * pencere)),
+                           _bellek_ornegi)))
 
     keyf = int(max(2, round(2 + 10 * c)))
     cev = int(max(2, (V // 2) * max(1, int(round(2 * c)))))
@@ -177,6 +187,8 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "harman_kademesi": 3,
         "d": d, "L1d": L1, "L2": L2, "L3": L3, "yigin_tavani": B_tavan,
         "doluluk": doluluk, "ölçülen_hız": hiz, "bütçe": butce,
+        "bellek_haddi": int(_bellek), "örnek_baytı": int(_ornek_bayti),
+        "belleğin_verdiği_örnek": int(_bellek_ornegi),
         "çağrı": cagri, "çekirdek": int(cekirdek_sayisi()),
         "belirteç": float(cagri) * ornek * pencere,
         "hız_kaynağı": ("koşulmuş ölçü" if float(getattr(k, "hiz", 0.0)) > 0.0
@@ -289,6 +301,10 @@ def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
         % d["pencere"],
         "      bağlama TAM sığan görev nispeti               = %%%.2f"
         % (100.0 * float(d["bağlama_sığan_nispet"])),
+        "    ÖRNEK HADDİ ÜÇ KAYNAKTAN EN DARIDIR:",
+        "      bellek (ÖLÇÜLDÜ, ferman 5-B)  = %.2f GB → %d örnek"
+        % (d["bellek_haddi"] / 1e9, d["belleğin_verdiği_örnek"]),
+        "      örnek başına bayt             = %d" % d["örnek_baytı"],
         "    örnek (bütçe pencereyi DEĞİL örneği kısar)      = %d"
         % d["ornek_sayisi"],
         "    fiilî yük = çağrı × örnek × pencere      = %.3e belirteç"
