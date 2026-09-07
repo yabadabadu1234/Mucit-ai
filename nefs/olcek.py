@@ -119,11 +119,7 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     hiz = (float(k.hiz) if float(getattr(k, "hiz", 0.0)) > 0.0
            else hiz_yoklamasi(d, bayt, int(k.tohum)))
     butce = float(hiz) * float(BUTCE_SANIYESI) * max(c, 1e-3)
-    tur = 1 + int(round(8.0 * c))
     yon = 8 + int(round(56.0 * c))
-    cagri = max(1, tur * yon)
-    kalan = max(butce / float(cagri), 4.0)
-    kenar = _ikinin_kuvveti(math.sqrt(kalan), 2)
     from .belirtec import basamak_sayisi as _bs
     _basamak = _bs(int(k.sozluk), V)
     from .musahede import gorev_boyu, sigan_nispet
@@ -140,16 +136,15 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
                     + int(d) * int(bayt) * 2)
     _bellek_ornegi = int(max(1, (float(_bellek) * max(c, 1e-3))
                             // _ornek_bayti))
-    ornek = int(max(1, min(int(max(kenar, B)),
-                           int(butce // (float(cagri) * pencere)),
-                           _bellek_ornegi)))
+    ornek = int(max(1, _bellek_ornegi))
 
     keyf = int(max(2, round(2 + 10 * c)))
     cev = int(max(2, (V // 2) * max(1, int(round(2 * c)))))
-    obek = int(max(1, min(B, ornek,
-                          max(cev, (ornek * keyf) // max(1, cagri)))))
-    kume_sayisi = max(1, cagri // max(1, keyf))
-    ornek = int(max(obek, min(ornek, obek * kume_sayisi)))
+    obek = int(max(1, min(B, ornek, max(cev, ornek // max(1, yon)))))
+    ornek = int(max(obek, (ornek // obek) * obek))
+    _tur_bedeli = float(yon) * float(ornek) * float(pencere)
+    tur = int(max(1, butce // max(_tur_bedeli, 1.0)))
+    cagri = max(1, tur * yon)
     genislik = int(max(1, round(1.0 + (K - 1) * c)))
     basamak = _basamak
     return {
@@ -189,6 +184,7 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "doluluk": doluluk, "ölçülen_hız": hiz, "bütçe": butce,
         "bellek_haddi": int(_bellek), "örnek_baytı": int(_ornek_bayti),
         "belleğin_verdiği_örnek": int(_bellek_ornegi),
+        "tur_bedeli": float(_tur_bedeli),
         "çağrı": cagri, "çekirdek": int(cekirdek_sayisi()),
         "belirteç": float(cagri) * ornek * pencere,
         "hız_kaynağı": ("koşulmuş ölçü" if float(getattr(k, "hiz", 0.0)) > 0.0
@@ -301,10 +297,15 @@ def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
         % d["pencere"],
         "      bağlama TAM sığan görev nispeti               = %%%.2f"
         % (100.0 * float(d["bağlama_sığan_nispet"])),
-        "    ÖRNEK HADDİ ÜÇ KAYNAKTAN EN DARIDIR:",
+        "    TUR BELLEKTEN, VERİ İMLEÇTEN (ferman 2-I):",
         "      bellek (ÖLÇÜLDÜ, ferman 5-B)  = %.2f GB → %d örnek"
         % (d["bellek_haddi"] / 1e9, d["belleğin_verdiği_örnek"]),
         "      örnek başına bayt             = %d" % d["örnek_baytı"],
+        "      bir turun bedeli              = %.3e belirteç"
+        % d["tur_bedeli"],
+        "      bütçe / tur bedeli            = %d TUR"
+        % d["talim_tur"],
+        "      kalkan süre haddi ÖRNEĞİ DEĞİL TURU büyütür.",
         "    örnek (bütçe pencereyi DEĞİL örneği kısar)      = %d"
         % d["ornek_sayisi"],
         "    fiilî yük = çağrı × örnek × pencere      = %.3e belirteç"

@@ -893,6 +893,59 @@ vidalanacağını bilmektir**.
 
 ---
 
+## ▓▓▓ 2-I. FERMAN: TUR SAYISI BELLEKTEN, VERİ İMLEÇTEN ▓▓▓
+
+> *"İkisi de: tur sayısı bellekten, veri imleçten."*
+
+Ferman 2-G süre haddini kaldırdı; kod bunu *"aynı anda 88 kat daha çok
+örnek"* diye okudu ve iki koşu OOM ile öldü. Hüküm şudur:
+
+* **BİR TURDA ALINAN KÜME BELLEĞE SIĞAN KADARDIR.** Örnek haddi üç
+  kaynağın **en darıdır**: bütçe, kenar ve **ölçülen bellek**
+  (`nefs/donanim.py:bellek_haddi`, ferman 5-B). Bellek elle yazılmaz,
+  `/proc/meminfo` ve cgroup haddinden yoklanır.
+* **KALKAN SÜRE HADDİ ÖRNEĞİ DEĞİL TURU BÜYÜTÜR.** Fazla vakit "daha
+  çok veri" değil, **aynı küme üstünde daha çok tur** demektir.
+* **KÜME ÜÇ HUDUT TEMİZLENENE KADAR BIRAKILMAZ** (ferman 1-I):
+  tenakuz yok, kısırdöngü yok, mantıksızlık yok. Ancak ondan sonra
+  **imleç ilerler** ve külliyattan yeni küme gelir (ferman 1-Y).
+* **"Diskim/belleğim yetmiyor" bir hüküm değildir** (ferman 1-O):
+  kabın darlığı akışla çözülür -- küme küçülür, tur artar, imleç ilerler.
+
+---
+
+## ▓▓▓ 2-J. FERMAN: FAZ GALOİS'DADIR, GENLİK BÜYÜKLÜĞÜ KAYAN NOKTADIR ▓▓▓
+
+> *"Faz kanadı yeter, genlik kayan nokta kalsın."*
+
+Ferman 7'nin *"Sürekli Hilbert ℂ^d → Galois GF(2⁸) + Stabilizer
+Tableau"* satırı **faz ve gayri-lineerlik kanadında** icra edilmiştir
+ve orada tamdır; **genlik büyüklüğü** kanadında icra edilmemiştir ve
+edilmeyecektir. Bu bir mazeret değil, **mühürlenmiş bir hudut**tur:
+
+### İCRA EDİLEN (aşkın işlem SIFIR)
+
+* Faz üssü `Z_m`de **tamsayı** birikir; genliğe yalnız Palmer çeyreği
+  iner -- `i(a,b) = (−b, a)`, işaret takası, çarpma yok.
+* Çeyreğe yetmeyen artık üs genliğe **hiç dokunmaz**, deftere geri
+  konur, bir sonraki `faz` çağrışında ödenir. Borç **ölçülür**
+  (`QuditYazmac.faz_borcu`) ve rapora basılır.
+* Belirteç kodlaması Rijndael S-box otomorfizminden geçer; zarf
+  rasyoneldir. `np.exp`, `sin`, `cos` **canlı yolda yoktur**.
+* `_kok_tablosu` (aşkın kök tablosu) ve `faz`ın `motor != "galois"`
+  kolu **imha edildi** (ferman 2-B).
+
+### İCRA EDİLMEYEN VE EDİLMEYECEK OLAN
+
+* Genlik **büyüklüğü** `float`tır; GF(2⁸) tableau yayılımına
+  geçirilmeyecektir.
+* **O HÂLDE "TAMAMEN GALOİS'YA GEÇTİK" DENMEYECEKTİR.** Denirse yalan
+  olur (ferman 7-B'nin CNOT-Dihedral iddiasını iptal ettiği gibi).
+  Doğru cümle şudur: *"faz ve gayri-lineerlik Galois'dadır, genlik
+  büyüklüğü süreklidir."*
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.
