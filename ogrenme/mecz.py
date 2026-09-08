@@ -69,12 +69,8 @@ def hata_operatoru(q, hedefler: Optional[Sequence[int]] = None,
 
 
 def uretecler(q) -> List[Tuple[int, int]]:
-    lif = tuple(int(x) for x in q.y.ayar.lif)
-    out: List[Tuple[int, int]] = []
-    for f, n in enumerate(lif):
-        for alt in range(max(1, int(n).bit_length() - 1)):
-            out.append((f, alt))
-    return out
+    from nefs.melekeler import harman_uretecleri
+    return harman_uretecleri(tuple(int(x) for x in q.y.ayar.lif))
 
 
 def _uretec_vur(psi: np.ndarray, lif: Tuple[int, ...],
@@ -184,19 +180,20 @@ class Memuriyet:
         self.kume = list(kume)
         self.sozluk = int(sozluk)
         self.ayar = ayar or MeczAyari()
-        self._yer = self._harman_yeri()
 
-    def _harman_yeri(self) -> Tuple[int, int]:
-        from nefs.melekeler import QParametre
+    def _harman_yeri(self, q) -> Tuple[int, int]:
+        from nefs.melekeler import QParametre, harman_anahtari
         p = self.nefs.p
         assert isinstance(p, QParametre), (
             "mecz harman yazmacını QParametre defterinden okur; "
             "%s verildi" % type(p).__name__)
-        anahtar = [k for k in p._yer if k.startswith("harman/")]
-        assert anahtar, (
-            "harman parametresi defterde YOK -- harman açıları hâlâ "
-            "tohumdan geliyor olabilir (ferman 2-P)")
-        bas, kac = p._yer[anahtar[0]]
+        anahtar, _n = harman_anahtari(q, self.nefs.ayar)
+        assert anahtar in p._yer, (
+            "harman yazmacı defterde YOK: %r -- harman bu lifle hiç "
+            "koşmamış olabilir (ferman 2-P). Defterdekiler: %r"
+            % (anahtar, sorted(k for k in p._yer
+                               if k.startswith("harman/"))[:4]))
+        bas, kac = p._yer[anahtar]
         return int(bas), int(kac)
 
     def _durum(self, p: np.ndarray):
@@ -216,6 +213,7 @@ class Memuriyet:
         eg = egim(q, H)
         dv = duvar(eg["metrik"])
         r = yaricap(float(keyf), float(_MECZ["iz_g"]))
+        bas, kac = self._harman_yeri(q)
         maske = np.asarray(dv["maske"], float)
         yon = -np.asarray(eg["eğim"], float) * maske
         n = float(np.linalg.norm(yon))
@@ -226,8 +224,9 @@ class Memuriyet:
             n = float(np.linalg.norm(yon))
         if n > 0.0:
             yon = yon / n
-        return {"yön": yon, "yarıçap": r, "ΔE": ck["ΔE"],
-                "⟨H⟩": ck["⟨H⟩"], "duvar": dv, "durak": ck["durak"]}
+        return {"yön": yon, "yarıçap": r, "ΔE": ck["ΔE"], "başlangıç": bas,
+                "kaç": kac, "⟨H⟩": ck["⟨H⟩"], "duvar": dv,
+                "durak": ck["durak"]}
 
     def kademeye_yay(self, yon: np.ndarray, kac: int) -> np.ndarray:
         y = np.asarray(yon, float).reshape(-1)
@@ -241,9 +240,7 @@ class Memuriyet:
     def kos(self, p0: np.ndarray) -> Dict[str, Any]:
         from nefs.keyfiyet import keyfiyet_beyani
         p = np.asarray(p0, float).copy()
-        bas, kac = self._yer
         _MECZ["toplam_parametre"] = float(p.size)
-        _MECZ["kapsanan_parametre"] = float(kac)
         v = float(np.atleast_1d(self.kayip(p[None, :]))[0])
         _MECZ["çağrı"] += 1.0
         seyir: List[Dict[str, float]] = [{"V": v}]
@@ -251,6 +248,8 @@ class Memuriyet:
             _MECZ["tur"] += 1.0
             keyf = float((keyfiyet_beyani() or {}).get("en_iyi", 0.0)) or 1.0
             d = self.divan(p, keyf)
+            bas, kac = int(d["başlangıç"]), int(d["kaç"])
+            _MECZ["kapsanan_parametre"] = float(kac)
             yon = self.kademeye_yay(d["yön"], kac)
             assert yon.size == kac, (
                 "yön %d, harman yazmacı %d -- boy tutmuyor"

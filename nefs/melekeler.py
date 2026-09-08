@@ -352,6 +352,22 @@ def nizam_cetveli() -> List[Tuple[int, str, str, Optional[int]]]:
     return [(m.no, m.ad, m.SINIF, m.CHI) for m in qmelekeler()]
 
 
+def harman_uretecleri(lif) -> "list":
+    out = []
+    for f, n in enumerate(tuple(int(x) for x in lif)):
+        for alt in range(max(1, int(n).bit_length() - 1)):
+            out.append((int(f), int(alt)))
+    return out
+
+
+def harman_anahtari(q, ayar) -> "tuple":
+    lif = tuple(int(x) for x in q.y.ayar.lif)
+    kademe = max(1, int(getattr(ayar, "harman_kademesi", 1)))
+    n = kademe * len(harman_uretecleri(lif))
+    return ("harman/%s/%d" % ("x".join(str(v) for v in lif), int(n)),
+            int(n))
+
+
 class QParametre:
 
     def __init__(self, tohum: int = 0, genislik: int = 1) -> None:
@@ -1102,10 +1118,7 @@ class QNefs:
     HARMAN_OLCEGI = 0.6
 
     def harman_acilari(self, q) -> np.ndarray:
-        lif = tuple(int(x) for x in q.y.ayar.lif)
-        kademe = max(1, int(getattr(self.ayar, "harman_kademesi", 1)))
-        n = kademe * sum(max(1, int(x).bit_length() - 1) for x in lif)
-        anahtar = "harman/%d" % int(n)
+        anahtar, n = harman_anahtari(q, self.ayar)
         ham = (self.p.al(anahtar, n) if isinstance(self.p, QParametre)
                else self.p.v(anahtar, n))
         return self.HARMAN_OLCEGI * np.asarray(ham, float)
