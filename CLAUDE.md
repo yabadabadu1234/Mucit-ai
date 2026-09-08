@@ -1106,6 +1106,41 @@ yerine gelmiş, manası boşa çıkmıştı (ferman 1-E: yarım iş).
 
 ---
 
+## ▓▓▓ 2-O. FERMAN: PENCERE AZAMÎ HUDUTTUR -- ALT SINIR YOKTUR ▓▓▓
+
+> *"Ben insan olarak **bana illâ 32 bin kelimelik sual sorulacak,
+> yoksa ben kalanları 0 ile doldururum** demiyorum, 45 kelimelik bir
+> durum oluşturuyorum. **Azamî hudut duruma girebilecek azamî kelime
+> sayısıdır, alt sınır yok** ki mübarek. Ayrıca 32000 çok az, sana
+> **1 milyon** yap şunu dedim dinlemedin beni, tekrar ediyorum!"*
+
+### DOLDURMA KALDIRILDI -- YARIM DEĞİL, TAMAMEN
+
+Evvelce doldurmanın **faz yazması** durdurulmuştu; fakat doldurmanın
+**kendisi** duruyordu: 45 basamaklık suâl için 32 768 satırlık dizi
+kuruluyor, %99.86'sı boş taşınıyordu. Bu yarım düzeltmedir (ferman
+1-E) ve hem fecaattir hem her çağrının yavaşlığının sebebidir.
+
+    PENCERE = duruma girebilecek AZAMÎ basamak sayısı.
+    ALT SINIR YOKTUR. 45 basamaklık suâl 45 basamaklık durumdur.
+
+* Bağlam **hiçbir yerde doldurulmaz**: ne üretimde, ne tâlim
+  örneğinde, ne değerlendirmede. Kısa bağlam kısa kalır.
+* **YAZMAÇ DA O KADAR OLUR.** Yazmacın seviyesi ayardan gelen sabit
+  bir sayı değil, o an içinde ne varsa **ondan** türer. Ferman 2-M'nin
+  "yazmaç bağlam kadardır" hükmü iki yönlüdür: bağlamdan küçük
+  olamaz, **bağlamdan büyük de tutulmaz**.
+* Kısa durum ucuzdur, uzun durum pahalıdır ve bu tabiîdir. Sabit
+  ebatlı yazmaç, kısa suâli uzun suâl fiyatına koşturur.
+
+### PENCERE BİR MİLYONDUR
+
+Azamî hudut `1 048 576` basamaktır. Ferman 1-Ö pencereyi verinin
+ölçülen boyundan türetir; o ölçü bu haddin **altında** kalabilir
+fakat hadd bu kadardır ve daraltılmaz.
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.

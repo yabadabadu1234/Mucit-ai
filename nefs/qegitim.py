@@ -64,8 +64,7 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
     def _zorla(bag_bas, hed_bas, cins: str) -> None:
         akis = list(bag_bas)
         for i, h in enumerate(hed_bas):
-            pen = akis[-P:] if len(akis) >= P else ([-1] * (P - len(akis))
-                                                    + akis)
+            pen = akis[-P:]
             cikti.append(([int(x) for x in pen], int(h), cins, int(i % bs)))
             akis.append(int(h))
 
@@ -283,8 +282,7 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
         uretilen: List[int] = []
         kac = len(h)
         for _ in range(kac):
-            pen = baglam[-pencere:] if len(baglam) >= pencere else \
-                ([-1] * (pencere - len(baglam)) + baglam)
+            pen = baglam[-pencere:]
             P, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=pen)
             if o.get("sukut", 0.0) > 0.8:
                 sukut_sayisi += 1

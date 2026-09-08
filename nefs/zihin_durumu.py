@@ -68,13 +68,25 @@ class QYazmac:
         sozluk = int(a.veri_lifi)
         assert sozluk >= 2, (
             "veri lifi en az iki seviyeli olmalı: veri_lifi=%d" % sozluk)
-        d = sozluk * int(a.hukum_lifi)
-        lif = tuple(int(x) for x in (a.lif_yapisi or (sozluk, a.hukum_lifi)))
-        assert int(np.prod(lif)) == d, (
-            "lif_yapisi çarpımı d'ye eşit olmalı: %s ≠ %d" % (lif, d))
-        assert int(lif[0]) == sozluk, (
+        azami = tuple(int(x) for x in (a.lif_yapisi
+                                       or (sozluk, a.hukum_lifi)))
+        assert int(azami[0]) == sozluk, (
             "ilk lif veri lifidir, sözlükle bir olmalı: %d ≠ %d"
-            % (lif[0], sozluk))
+            % (azami[0], sozluk))
+        d_azami = int(np.prod(azami))
+        assert int(n_satir) <= d_azami, (
+            "bağlam azamî hududu aşıyor: %d basamak, hadd %d seviye "
+            "(ferman 2-O)" % (int(n_satir), d_azami))
+        yuva = int(a.kulli_yuva)
+        K = 2
+        while sozluk * K * K < int(n_satir) or K * K < yuva:
+            K *= 2
+        K = min(K, int(azami[1]))
+        lif = (sozluk, K, K)
+        d = int(np.prod(lif))
+        assert d >= int(n_satir), (
+            "yazmaç bağlamı taşımıyor: d=%d < bağlam=%d (ferman 2-M)"
+            % (d, int(n_satir)))
         self.y = QuditYazmac(
             QuditAyar(d=d, lif=lif, yigin=int(a.yigin),
                       kulli_alanlar=a.kulli_alanlar,
@@ -219,7 +231,7 @@ class QYazmac:
                           % (int(dolu.sum() // max(B, 1)), d))
 
     def superpozisyon(self, yalniz_veri: bool = False) -> None:
-        h = int(self.ayar.hukum_lifi)
+        h = int(np.prod(self.y.ayar.lif[1:]))
         T = self.y.psi.reshape(self.y.B, -1, h).copy()
         T[...] = T.sum(axis=-1, keepdims=True) / np.sqrt(h)
         self.y.psi = T.reshape(self.y.B, self.y.d)

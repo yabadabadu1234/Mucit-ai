@@ -109,18 +109,19 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     from .musahede import gorev_boyu, sigan_nispet
     _gb = gorev_boyu()
     gereken = int(_gb["azamî"]) * int(_basamak)
-    pencere = int(max(V, _ikinin_kuvveti(float(gereken), int(V))))
+    pencere = int(min(PENCERE_HADDI,
+                      max(V, _ikinin_kuvveti(float(gereken), int(V)))))
     sigan = float(sigan_nispet(pencere // max(1, int(_basamak))))
 
     yuva = sum(n for _, n in QAyar.kulli_alanlar)
-    K = _ikinin_kuvveti(math.sqrt(float(pencere) / float(V)), 4)
-    while V * K * K < pencere or K * K < yuva:
+    K = _ikinin_kuvveti(math.sqrt(float(PENCERE_HADDI) / float(V)), 4)
+    while V * K * K < PENCERE_HADDI or K * K < yuva:
         K *= 2
     hukum = K * K
     d = V * K * K
-    assert d >= pencere, (
-        "yazmaç bağlamı taşımıyor: d=%d < pencere=%d (ferman 2-M)"
-        % (d, pencere))
+    assert d >= PENCERE_HADDI, (
+        "yazmaç azamî hududu taşımıyor: d=%d < hadd=%d (ferman 2-O)"
+        % (d, PENCERE_HADDI))
     from .onbellek import yigin_sec
     tip = HAT_TIPI
     B_tavan = int(yigin_sec(d, tip)["B"])
@@ -188,7 +189,9 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "taban_cetveli": _cetvel, "taban_kaynağı": "sözlük (ferman 1-N)",
         "d": d, "L1d": L1, "L2": L2, "L3": L3, "yigin_tavani": B_tavan,
         "yazmaç_bağlamı_taşıyor": bool(d >= pencere),
-        "karo_kaynağı": "pencere (ferman 2-M)",
+        "pencere_haddi": int(PENCERE_HADDI),
+        "karo_kaynağı": "pencere haddi (ferman 2-M, 2-O); "
+                        "fiilî yazmaç bağlamdan türer",
         "doluluk": doluluk, "ölçülen_hız": hiz, "bütçe": butce,
         "bellek_haddi": int(_bellek), "örnek_baytı": int(_ornek_bayti),
         "belleğin_verdiği_örnek": int(_bellek_ornegi),
@@ -215,6 +218,9 @@ def taban_sec(sozluk: int) -> Tuple[int, int, Dict[int, Dict[str, float]]]:
     en = min(cetvel, key=lambda V: (round(cetvel[V]["fazlalık"], 9),
                                     cetvel[V]["basamak"]))
     return int(en), int(cetvel[en]["basamak"]), cetvel
+
+
+PENCERE_HADDI: int = 1_048_576
 
 
 PAYLAR: Dict[str, float] = {
