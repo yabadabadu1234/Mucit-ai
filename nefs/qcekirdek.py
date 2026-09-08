@@ -9,11 +9,14 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["CekirdekAyari", "CEKIRDEK_C", "derle", "yoklama", "kutuphane",
+__all__ = ["CekirdekAyari", "CEKIRDEK_C", "HAT_TIPI", "derle", "yoklama",
+           "kutuphane",
            "Bant", "cekirdek_beyani", "rapor"]
 
 
 KARO, CIFT, MATCHGATE = 0, 1, 2
+
+HAT_TIPI = np.complex128
 
 CEKIRDEK_C = r'''
 /* MUCİT-AI -- KAPI BANDI ÇEKİRDEĞİ.

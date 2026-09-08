@@ -178,7 +178,7 @@ class EgitimAyari:
     hat: str = "c"
     hat_bandi: int = 0
     motor: str = "galois"
-    genlik_tipi: str = "complex64"
+    genlik_tipi: str = ""
     rust_t0: float = 0.5
     rust_tau: float = 0.15
     rust_kapanis: float = 0.5
@@ -211,7 +211,7 @@ class EgitimAyari:
         self.elle = tuple(sorted(
             k for k in o if getattr(self, k, None) not in (0, 0.0, None)))
         for k, v in o.items():
-            if getattr(self, k, None) in (0, 0.0):
+            if getattr(self, k, None) in (0, 0.0, ""):
                 setattr(self, k, v)
 
     olcek_dokumu: Dict[str, object] = field(default_factory=dict)

@@ -96,16 +96,16 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     from .zihin_durumu import QAyar
 
     c = float(k.comert)
-    bayt = 8
+    from .qcekirdek import HAT_TIPI
+    bayt = int(np.dtype(HAT_TIPI).itemsize)
     ob = onbellekler()
     L1 = int(ob.get("L1d") or 32768)
     L2 = int(ob.get("L2") or (1 << 20))
     L3 = int(ob.get("L3") or (32 << 20))
 
     doluluk = 0.25 + 0.65 * c
-    V = _ikinin_kuvveti(math.sqrt(L1 * doluluk / (3.0 * bayt)), 4)
     from .belirtec import basamak_sayisi as _bs
-    _basamak = _bs(int(k.sozluk), V)
+    V, _basamak, _cetvel = taban_sec(int(k.sozluk))
     from .musahede import gorev_boyu, sigan_nispet
     _gb = gorev_boyu()
     gereken = int(_gb["azamî"]) * int(_basamak)
@@ -122,7 +122,7 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "yazmaç bağlamı taşımıyor: d=%d < pencere=%d (ferman 2-M)"
         % (d, pencere))
     from .onbellek import yigin_sec
-    tip = np.complex64 if bayt == 8 else np.complex128
+    tip = HAT_TIPI
     B_tavan = int(yigin_sec(d, tip)["B"])
     B = int(max(1, B_tavan))
 
@@ -184,6 +184,8 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "qudit_derece": int(max(2, K // 2)),
         "qudit_yon": int(max(2, K // 2)),
         "harman_kademesi": 3,
+        "genlik_tipi": np.dtype(HAT_TIPI).name,
+        "taban_cetveli": _cetvel, "taban_kaynağı": "sözlük (ferman 1-N)",
         "d": d, "L1d": L1, "L2": L2, "L3": L3, "yigin_tavani": B_tavan,
         "yazmaç_bağlamı_taşıyor": bool(d >= pencere),
         "karo_kaynağı": "pencere (ferman 2-M)",
@@ -196,6 +198,23 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "hız_kaynağı": ("koşulmuş ölçü" if float(getattr(k, "hiz", 0.0)) > 0.0
                         else "mikro yoklama"),
     }
+
+
+def taban_sec(sozluk: int) -> Tuple[int, int, Dict[int, Dict[str, float]]]:
+    from .belirtec import basamak_sayisi
+    n = max(2, int(sozluk))
+    cetvel: Dict[int, Dict[str, float]] = {}
+    for V in (2, 4, 8, 16, 32, 64, 128, 256):
+        b = int(basamak_sayisi(n, V))
+        kod = V ** b
+        esik = -(-n // (V ** (b - 1)))
+        cetvel[V] = {"basamak": float(b), "kod_uzayı": float(kod),
+                     "fazlalık": float(kod) / float(n),
+                     "taşan_üst_basamak": float(max(0, V - esik)),
+                     "taşan_nispet": float(max(0, V - esik)) / float(V)}
+    en = min(cetvel, key=lambda V: (round(cetvel[V]["fazlalık"], 9),
+                                    cetvel[V]["basamak"]))
+    return int(en), int(cetvel[en]["basamak"]), cetvel
 
 
 PAYLAR: Dict[str, float] = {
