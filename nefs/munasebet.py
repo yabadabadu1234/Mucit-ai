@@ -122,7 +122,7 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
                 break
         assert k, "keyfiyet ölçülmeden küme kapatılamaz"
         from .qegitim import ornek_bol
-        for bag, _hed, _cins in (ornek_bol(o) for o in kume):
+        for bag, _hed, _cins, _makam in (ornek_bol(o) for o in kume):
             _SAYAC["bag"] += float(h.isle(bag, float(k["nispet"])))
         _SAYAC["örnek"] += float(len(kume))
         if k["hudut_temiz"]:

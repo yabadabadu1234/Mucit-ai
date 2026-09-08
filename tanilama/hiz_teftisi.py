@@ -55,7 +55,7 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
 
     t = 0.0
     from nefs.qegitim import ornek_bol
-    for bag, _h, _c in (ornek_bol(o) for o in veri):
+    for bag, _h, _c, _m in (ornek_bol(o) for o in veri):
         _, s = _saat(belirtecleri_kodla, list(bag), a.veri_lifi, a.sozluk)
         t += s
     kalem.append(Kalem("belirteç kodlaması", len(veri), t))
@@ -65,7 +65,7 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     t = 0.0
     Ey = np.stack([belirtecleri_kodla(list(bag), a.veri_lifi,
                                           a.veri_lifi)
-                   for bag, _h, _c in (ornek_bol(o) for o in veri)])
+                   for bag, _h, _c, _m in (ornek_bol(o) for o in veri)])
     for _ in range(int(tekrar)):
         _, s = _saat(nefs.idrak_et, Ey)
         t += s

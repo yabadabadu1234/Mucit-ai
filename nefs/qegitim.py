@@ -122,7 +122,7 @@ def adayin_tuttugu(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
     top = 0.0
     ceza = 0.0
     hedef_top = 0.0
-    for bag, hedef, _cins in (ornek_bol(o) for o in veri):
+    for bag, hedef, _cins, _makam in (ornek_bol(o) for o in veri):
         P, olc = kos(bag)
         top -= float(np.log(P[hedef % len(P)] + 1e-12))
         ceza += lam_mizan * mizan(olc)

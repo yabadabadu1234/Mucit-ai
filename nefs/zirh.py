@@ -618,7 +618,7 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
                         basamak=int(a.belirtec_basamak))
         from .qegitim import ornek_bol
         E = np.stack([belirtecleri_kodla(b, a.veri_lifi, a.veri_lifi)
-                      for b, _h, _c in (ornek_bol(o) for o in veri)])
+                      for b, _h, _c, _m in (ornek_bol(o) for o in veri)])
     _q = nefs.idrak_et(E, olcum=True)
     dSler = dict(getattr(_q, "dS", {}) or {})
     assert dSler, (
