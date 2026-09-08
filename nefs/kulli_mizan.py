@@ -350,6 +350,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     makamlar: List[int] = []
     baglamlar: List[Sequence[int]] = []
     sektor: List[Tuple[int, int]] = []
+    sektor_ebat: Dict[int, List[Tuple[int, int]]] = {}
     veri = list(veri)
     B = max(1, int(getattr(nefs.ayar, "yigin", 1)))
     kubit = int(nefs.ayar.veri_lifi)
@@ -410,8 +411,10 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
             cinsler.append(str(cins))
             makamlar.append(int(makam))
             baglamlar.append(list(bag))
+        _sk = [q.y.sektor(ad) for ad, _ in q.ayar.kulli_alanlar]
+        sektor_ebat[int(M_hepsi.shape[-1])] = _sk
         if not sektor:
-            sektor = [q.y.sektor(ad) for ad, _ in q.ayar.kulli_alanlar]
+            sektor = _sk
         for no, d in (getattr(q, "okumalar", None) or {}).items():
             eski = okumalar.get(int(no))
             okumalar[int(no)] = dict(d) if eski is None else {
@@ -432,7 +435,8 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
         "ileri geçiş %d örnek aldı, %d netice verdi -- örnek kayboldu"
         % (len(veri), len(haller)))
     return {"hal": haller, "lifli": lifliler, "hedef": hedefler,
-            "cins": cinsler, "makam": makamlar, "bağlam": baglamlar, "sektör": sektor,
+            "cins": cinsler, "makam": makamlar, "bağlam": baglamlar,
+            "sektör": sektor, "sektör_ebat": sektor_ebat,
             "okumalar": okumalar, "ΔS": dS, "alan": alan_okumasi,
             "kesme": float(kesme_kesri)}
 
@@ -468,9 +472,19 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     L_cev = float(cv["ceza"])
     L_ten = float(cv["bariyer"]["ceza"])
 
-    mono, mono_sol, mono_sag = _monogami(
-        np.stack(ileri["lifli"]), ileri["sektör"])
+    _ebat: Dict[int, List[np.ndarray]] = {}
+    for _M in ileri["lifli"]:
+        _ebat.setdefault(int(np.asarray(_M).shape[-1]), []).append(_M)
+    mono = mono_sol = mono_sag = 0.0
+    for _h, _yig in sorted(_ebat.items()):
+        _sk = (ileri.get("sektör_ebat") or {}).get(_h) or ileri["sektör"]
+        _m, _sl, _sg = _monogami(np.stack(_yig), _sk)
+        mono += float(_m)
+        mono_sol += float(_sl) * len(_yig)
+        mono_sag += float(_sg) * len(_yig)
     n_o = len(ileri["lifli"])
+    mono_sol /= max(n_o, 1)
+    mono_sag /= max(n_o, 1)
     L_mon = float(mono / n_o)
 
     eng = engellenme(np.stack([np.asarray(h, complex).reshape(-1)

@@ -58,8 +58,10 @@ def tasma_kaybi(lifliler, makamlar, n_v: int, sozluk: int,
         return {"kayıp": 0.0, "üst_makam_örneği": int(sec.size),
                 "eşik": esik, "taşan_basamak": int(n_v) - esik,
                 "kod_uzayı": int(n_v) ** int(basamak), "sözlük": int(sozluk)}
-    M = np.stack([np.asarray(lifliler[int(i)], complex) for i in sec])
-    guc = np.einsum('svh,svh->sv', M, M.conj()).real
+    guc = np.stack([
+        np.einsum('vh,vh->v', np.asarray(lifliler[int(i)], complex),
+                  np.asarray(lifliler[int(i)], complex).conj()).real
+        for i in sec])
     iz = np.maximum(guc.sum(axis=1), 1e-300)
     P = guc / iz[:, None]
     tasan = float(P[:, esik:].sum(axis=1).mean())
@@ -76,8 +78,10 @@ def nokta_kaybi(lifliler: Sequence[np.ndarray], hedefler: Sequence[int],
         % (len(lifliler), len(hedefler)))
     if not lifliler:
         return {"kayıp": 0.0, "isabet": 0.0, "örnek": 0}
-    M = np.stack([np.asarray(x, complex) for x in lifliler])
-    guc = np.einsum('svh,svh->sv', M, M.conj()).real
+    guc = np.stack([
+        np.einsum('vh,vh->v', np.asarray(x, complex),
+                  np.asarray(x, complex).conj()).real
+        for x in lifliler])
     iz = np.maximum(guc.sum(axis=1), 1e-300)
     rho_kosegen = guc / iz[:, None]
     h = np.asarray(list(hedefler), np.int64) % int(n_v)
