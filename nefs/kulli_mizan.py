@@ -627,6 +627,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                 ("engel", L_eng, float(a.lam_engel))] + _bilesen
     artik = np.array([float(h) * float(l) for _ad, h, l in _bilesen],
                      float)
+    ham_artik = np.array([float(h) for _ad, h, _l in _bilesen], float)
     artik_adlari = tuple(str(ad) for ad, _h, _l in _bilesen)
     assert np.all(np.isfinite(artik)), (
         "hata vektöründe NaN/Inf var: %s"
@@ -634,12 +635,15 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     kayip = float(artik.sum())
     assert np.isfinite(kayip), "mizan sonlu değil"
 
+    kayip_ham = float(ham_artik.sum())
     if ne == "toplam":
-        return {"kayıp": float(kayip), "artık": artik,
+        return {"kayıp": float(kayip), "kayıp_ham": kayip_ham,
+                "artık": artik, "ham_artık": ham_artik,
                 "artık_adı": artik_adlari}
     if ne != "döküm":
         raise ValueError("mizan kipi bilinmiyor: %r" % (ne,))
-    return {"kayıp": float(kayip), "rezonans": L_rez, "sadakat": F,
+    return {"kayıp": float(kayip), "kayıp_ham": kayip_ham,
+            "ham_artık": ham_artik, "rezonans": L_rez, "sadakat": F,
             "taşma": L_tas, "taşma_dökümü": tas,
             "nokta": L_nok, "nokta_isabet": float(nok["isabet"]),
             "nokta_cins": nok.get("cins", {}),

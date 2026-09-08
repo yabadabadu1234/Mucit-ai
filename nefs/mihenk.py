@@ -119,7 +119,8 @@ class Nobet:
         self._t0 = time.perf_counter()
         self._son = self._t0 - self.ara
 
-    def _sor(self, p, kayip: float, adim: int) -> Dict[str, Any]:
+    def _sor(self, p, kayip: float, adim: int,
+             ham: float = 0.0) -> Dict[str, Any]:
         eski = np.asarray(self.nefs.vektor(), float).copy()
         try:
             c = mihenk_sor(self.nefs, p, pencere=self.pencere,
@@ -130,11 +131,13 @@ class Nobet:
             self.nefs.yukle(eski)
         c["saniye_ofset"] = float(time.perf_counter() - self._t0)
         c["kayıp"] = float(kayip)
+        c["ham"] = float(ham)
         c["adım"] = int(adim)
         self.defter.append(c)
-        print("  [mihenk %6.0f sn · adım %d · V %.4f] %s → %r"
+        print("  [mihenk %6.0f sn · adım %d · V %.4f (ham %.4f)] %s → %r"
               "   (geçersiz %d/%d · ayrı basamak %d%s)%s"
-              % (c["saniye_ofset"], c["adım"], c["kayıp"], self.sual,
+              % (c["saniye_ofset"], c["adım"], c["kayıp"], c["ham"],
+                 self.sual,
                  c["cevap"], c["geçersiz"], c["belirteç"],
                  c["ayrı_basamak"],
                  " SABİT NOKTA" if c["sabit_nokta"] else "",
@@ -142,17 +145,18 @@ class Nobet:
               flush=True)
         return c
 
-    def yokla(self, p, kayip: float = 0.0, adim: int = 0
-              ) -> Optional[Dict[str, Any]]:
+    def yokla(self, p, kayip: float = 0.0, adim: int = 0,
+              ham: float = 0.0) -> Optional[Dict[str, Any]]:
         simdi = time.perf_counter()
         if simdi - self._son < self.ara:
             return None
         self._son = simdi
-        return self._sor(p, kayip, adim)
+        return self._sor(p, kayip, adim, ham)
 
     def beyan(self, p=None) -> Dict[str, Any]:
         if p is not None:
-            self._sor(p, kayip=float("nan"), adim=-1)
+            self._sor(p, kayip=float("nan"), adim=-1,
+                      ham=float("nan"))
         d = list(self.defter)
         return {"sual": self.sual, "beklenen": MIHENK_CEVABI,
                 "ara_saniye": self.ara, "yoklama": len(d),
@@ -199,14 +203,18 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
              "KAPALI -- açgözlü argmax (ferman 7 ihlâli)"),
           "  düz dağılımın tepe payı : %.6f  (1/taban)"
           % float(d[-1].get("düz_pay", 0.0)),
-          "  %-8s %-7s %-9s %-9s %-8s %-10s %s"
-          % ("saniye", "adım", "kayıp", "geçersiz",
+          "  V ağırlıklıdır ve ağırlık her turda YENİDEN ölçülür",
+          "  (ferman 1-J); o hâlde turlar arasında KIYAS KABUL ETMEZ.",
+          "  Kıyas kabul eden sütun HAM'dır: ağırlıksız artık toplamı.",
+          "  %-8s %-7s %-9s %-9s %-9s %-8s %-10s %s"
+          % ("saniye", "adım", "V", "ham", "geçersiz",
              "ayrıbas", "tepepayı", "cevap")]
     for c in d:
         _tp = float(c.get("tepe_payı", 0.0))
         _dz = float(c.get("düz_pay", 1.0)) or 1.0
-        s.append("  %-8.0f %-7d %-9.4f %-9s %-8s %-10s %r%s"
+        s.append("  %-8.0f %-7d %-9.4f %-9.4f %-9s %-8s %-10s %r%s"
                  % (c["saniye_ofset"], c["adım"], c["kayıp"],
+                    float(c.get("ham", 0.0)),
                     "%d/%d" % (c["geçersiz"], c["belirteç"]),
                     "%d%s" % (c["ayrı_basamak"],
                               "!" if c["sabit_nokta"] else ""),

@@ -474,8 +474,10 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                                 hafiza=hafiza, adim=_sayac["çağrı"],
                                 kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
-            _seyir.append({"V": float(t["kayıp"])})
+            _seyir.append({"V": float(t["kayıp"]),
+                           "ham": float(t.get("kayıp_ham", 0.0))})
             nobet.yokla(p, kayip=float(t["kayıp"]),
+                        ham=float(t.get("kayıp_ham", 0.0)),
                         adim=_sayac["çağrı"])
         return out
 
