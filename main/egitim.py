@@ -487,6 +487,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             nobet.yokla(p, kayip=float(t["kayıp"]),
                         ham=float(t.get("kayıp_ham", 0.0)),
                         kume=len(kume), kume_kimlik=_kume_kimlik(kume),
+                        eniyileme=optimize_beyani(),
                         adim=_sayac["çağrı"])
         return out
 
