@@ -228,6 +228,15 @@ class Memuriyet:
         return {"yön": yon, "yarıçap": r, "ΔE": ck["ΔE"],
                 "⟨H⟩": ck["⟨H⟩"], "duvar": dv, "durak": ck["durak"]}
 
+    def kademeye_yay(self, yon: np.ndarray, kac: int) -> np.ndarray:
+        y = np.asarray(yon, float).reshape(-1)
+        assert y.size > 0 and int(kac) % y.size == 0, (
+            "harman yazmacı %d açı tutuyor, üreteç sayısı %d -- ikisi "
+            "kademe katı olmalı (ferman 5: sessiz atlama yok)"
+            % (int(kac), y.size))
+        kademe = int(kac) // y.size
+        return np.tile(y, kademe) / np.sqrt(float(kademe))
+
     def kos(self, p0: np.ndarray) -> Dict[str, Any]:
         from nefs.keyfiyet import keyfiyet_beyani
         p = np.asarray(p0, float).copy()
@@ -241,8 +250,12 @@ class Memuriyet:
             _MECZ["tur"] += 1.0
             keyf = float((keyfiyet_beyani() or {}).get("en_iyi", 0.0)) or 1.0
             d = self.divan(p, keyf)
-            yon = np.asarray(d["yön"], float)
-            if yon.size != kac or float(np.linalg.norm(yon)) <= 0.0:
+            yon = self.kademeye_yay(d["yön"], kac)
+            assert yon.size == kac, (
+                "yön %d, harman yazmacı %d -- boy tutmuyor"
+                % (yon.size, kac))
+            if float(np.linalg.norm(yon)) <= 0.0:
+                _MECZ["yönsüz_tur"] = _MECZ.get("yönsüz_tur", 0.0) + 1.0
                 continue
             aday = p.copy()
             aday[bas:bas + kac] = aday[bas:bas + kac] + d["yarıçap"] * yon
@@ -266,6 +279,7 @@ def mecz_egit(nefs, kayip, p0: np.ndarray, kume: Sequence,
 
 def mecz_beyani() -> Dict[str, float]:
     b = dict(_MECZ)
+    b["tarama"] = b["tur"]
     b["kabul_nispeti"] = (b["kabul"] / b["tur"]) if b["tur"] else 0.0
     b["çağrı_başına_tur"] = (b["tur"] / b["çağrı"]) if b["çağrı"] else 0.0
     b["kapsam"] = ((b["kapsanan_parametre"] / b["toplam_parametre"])
