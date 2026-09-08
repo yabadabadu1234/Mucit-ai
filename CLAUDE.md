@@ -1040,6 +1040,42 @@ bu ferman 5'in yasakladığı sessiz ikamedir. Taşma artık **sayılır** ve
 
 ---
 
+## ▓▓▓ 2-M. FERMAN: YAZMAÇ BAĞLAM KADARDIR -- FAZ PENCERESİ KISILMAZ ▓▓▓
+
+> *"Bu durum şu an 65536 tokenden oluşan **tek** bir durum değil mi?
+> Öyle ise bu durumu ölçmeden evvel ihtimal hesaplarına göre
+> güncelleyeceğin şeyleri güncelle, işin bitince ölç... Eğer faz
+> penceresi kullanacaksan **yine 65536 kullansana, niye 4096'ya
+> indiriyorsun?**"*
+
+### KUSURUN ADI: ÇİFT BAŞLILIK
+
+Bağlam 65 536 basamak, yazmaç 4096 seviyeydi. Bağlam yazmaca
+sığmadığı için `kodla` onu **iki sayıya** eziyordu: ilk basamağın
+indisi, artı kalan 65 535 basamağın harmonik ağırlıklı **tek
+skaleri**. Son basamağın ağırlığı 1/65536 idi; model kendi ürettiğini
+görmüyor, üretim **sabit noktaya** düşüyordu. Ferman 1-Ö pencereyi
+büyütmüştü fakat kodlayıcı hepsini çöpe atıyordu -- fermanın harfi
+yerine gelmiş, manası boşa çıkmıştı (ferman 1-E: yarım iş).
+
+### HÜKÜM
+
+    YAZMAÇ SEVİYESİ  ≥  BAĞLAM PENCERESİ.       Aksi yol yoktur.
+
+* **Yazmaç ebadı bağlamdan türer**, önbellekten değil. Lif yapısı
+  `(veri lifi, karo, karo)` olarak kalır fakat **karo pencereden**
+  hesaplanır. Önbellek ölçüsü artık lifi tayin etmez; yalnız
+  çekirdeğin bloklamasını bildirir ve raporda öyle yazılır.
+* **BAĞLAMIN HER BASAMAĞI KENDİ SEVİYESİNE DÜŞER.** Bir skalere
+  ezilmez, harmonik ağırlıkla sönümlenmez. Son basamak ilk basamak
+  kadar ağırlık taşır.
+* **ÖLÇMEDEN EVVEL GÜNCELLE.** Bağlamın tamamı yazmaca yazılır,
+  melekeler koşar, ancak **ondan sonra** ölçülür.
+* **PENCERE KISILMAZ.** Yazmaç dar diye bağlam kesilmez; dar olan
+  yazmaç büyütülür (ferman 1-O'nun taşıyıcı tarafı).
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.

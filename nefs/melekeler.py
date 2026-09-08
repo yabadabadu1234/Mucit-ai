@@ -1114,7 +1114,6 @@ class QNefs:
         q.kodla(E)
         if tikaniklik:
             ortu(ne="kapı", q=q, h1=float(tikaniklik))
-        q.superpozisyon()
         q.harman()
         okumalar: Dict[int, Dict[str, float]] = {}
         dS: Dict[int, float] = {}

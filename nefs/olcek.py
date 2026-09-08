@@ -103,13 +103,24 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     L3 = int(ob.get("L3") or (32 << 20))
 
     doluluk = 0.25 + 0.65 * c
-    K = _ikinin_kuvveti(math.sqrt(L1 * doluluk / (3.0 * bayt)), 4)
-    V = K
+    V = _ikinin_kuvveti(math.sqrt(L1 * doluluk / (3.0 * bayt)), 4)
+    from .belirtec import basamak_sayisi as _bs
+    _basamak = _bs(int(k.sozluk), V)
+    from .musahede import gorev_boyu, sigan_nispet
+    _gb = gorev_boyu()
+    gereken = int(_gb["azamî"]) * int(_basamak)
+    pencere = int(max(V, _ikinin_kuvveti(float(gereken), int(V))))
+    sigan = float(sigan_nispet(pencere // max(1, int(_basamak))))
+
     yuva = sum(n for _, n in QAyar.kulli_alanlar)
-    while K * K < yuva:
+    K = _ikinin_kuvveti(math.sqrt(float(pencere) / float(V)), 4)
+    while V * K * K < pencere or K * K < yuva:
         K *= 2
     hukum = K * K
     d = V * K * K
+    assert d >= pencere, (
+        "yazmaç bağlamı taşımıyor: d=%d < pencere=%d (ferman 2-M)"
+        % (d, pencere))
     from .onbellek import yigin_sec
     tip = np.complex64 if bayt == 8 else np.complex128
     B_tavan = int(yigin_sec(d, tip)["B"])
@@ -120,13 +131,6 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
            else hiz_yoklamasi(d, bayt, int(k.tohum)))
     butce = float(hiz) * float(BUTCE_SANIYESI) * max(c, 1e-3)
     yon = 8 + int(round(56.0 * c))
-    from .belirtec import basamak_sayisi as _bs
-    _basamak = _bs(int(k.sozluk), V)
-    from .musahede import gorev_boyu, sigan_nispet
-    _gb = gorev_boyu()
-    gereken = int(_gb["azamî"]) * int(_basamak)
-    pencere = int(max(V, _ikinin_kuvveti(float(gereken), int(V))))
-    sigan = float(sigan_nispet(pencere // max(1, int(_basamak))))
     from .donanim import bellek_haddi
     _bellek = bellek_haddi()
     assert _bellek, (
@@ -181,6 +185,8 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "qudit_yon": int(max(2, K // 2)),
         "harman_kademesi": 3,
         "d": d, "L1d": L1, "L2": L2, "L3": L3, "yigin_tavani": B_tavan,
+        "yazmaç_bağlamı_taşıyor": bool(d >= pencere),
+        "karo_kaynağı": "pencere (ferman 2-M)",
         "doluluk": doluluk, "ölçülen_hız": hiz, "bütçe": butce,
         "bellek_haddi": int(_bellek), "örnek_baytı": int(_ornek_bayti),
         "belleğin_verdiği_örnek": int(_bellek_ornegi),

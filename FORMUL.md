@@ -29,12 +29,15 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
     Örnek       = (Bağlam, Hedef, Cins, Makam)             Cins ∈ {ARC, sözlü}
                   Makam = Hedef basamağın grup içindeki yeri, 0..BasamakSayısı−1
     Pencere     = ikininkuvveti(enuzunGörev × BasamakSayısı) = 65536
+                  Boyut ≥ Pencere olmak ZORUNDA (ferman 2-M)
 
 ---
 
 ## 2. YAZMAÇ
 
-    Boyut   = VeriLifi × Karo × Karo = 16 × 16 × 16 = 4096
+    Karo    = ikininkuvveti(√(Pencere / VeriLifi))          öyle ki Boyut ≥ Pencere
+    Boyut   = VeriLifi × Karo × Karo = 16 × 64 × 64 = 65536 = Pencere
+              ← yazmaç BAĞLAM KADARDIR (ferman 2-M); önbellek lifi tayin etmez
     Yazmaç  = Genlik[yığın, Boyut]                        karmaşık, TAM tutulur
     Sektör(ad) = Genlik[başlangıç(ad) : bitiş(ad)]
     AlanDeğeri(ad) = Toplam(|Sektör(ad)|²)
@@ -69,7 +72,14 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
 
 ## 3. İLERİ GEÇİŞ
 
-    Yazmaç₀ = Harman(EşitÜstüsteBinme(Yerleştir(Kodlanmış)))
+    Yazmaç₀ = Harman(Yerleştir(Kodlanmış))
+
+    Yerleştir(Kodlanmış):
+        Genlik      = EşitÜstüsteBinme                     her seviye 1/√Boyut
+        Açı[yuva]   = −2π · (Basamak[yuva] + 1) / VeriLifi   yuva = 0 … n_satır−1
+        FazDefteri ← FazDefteri + Açı                      ← HER basamak KENDİ seviyesine
+
+    Bağlam bir skalere EZİLMEZ: son basamak ilk basamak kadar ağırlık taşır.
 
     Harman(Yazmaç) = ⨀(kademe=1..3, lif, bitdüzlemi) Dönme(küçükAçı(tohum))
 

@@ -199,29 +199,19 @@ class QYazmac:
             E = E[None]
         sozluk = int(self.ayar.veri_lifi)
         B = self.y.B
-        n_sat = E.shape[1]
-        T = np.zeros((B, sozluk, int(self.ayar.hukum_lifi)), complex)
-        E0 = np.asarray(E)
-        if E0.shape[0] != B:
-            E0 = E0[np.arange(B) % E0.shape[0]]
-        s0 = np.argmax(E0[:, 0, :].reshape(B, -1), axis=-1) % sozluk
-        T[np.arange(B), s0, 0] = 1.0
-        self.y.psi = T.reshape(B, self.y.d)
-        self.superpozisyon(yalniz_veri=False)
-        n_aci = min(8, self.y.d - 1)
-        if n_sat > 1:
-            from .qudit import agirlik
-            Eb = np.asarray(E)
-            if Eb.shape[0] != B:
-                Eb = Eb[np.arange(B) % Eb.shape[0]]
-            sec = np.argmax(Eb[:, 1:, :].reshape(B, n_sat - 1, -1),
-                            axis=-1) % sozluk
-            pay = 1.0 / (np.arange(1, n_sat, dtype=float) + 1.0)
-            top = (sec + 1.0) @ pay
-            teta = np.repeat(top[:, None], n_aci, axis=1)
-            w = np.stack([agirlik(self.y.d, teta[b]) for b in range(B)])
-            self.y.psi = self.y.psi * np.exp(-1j * w)
-            self.y._kapi += 1
+        d = int(self.y.d)
+        n_sat = int(E.shape[1])
+        if E.shape[0] != B:
+            E = E[np.arange(B) % E.shape[0]]
+        bas = np.argmax(E.reshape(B, n_sat, -1), axis=-1) % sozluk
+        assert n_sat <= d, (
+            "bağlam yazmaca sığmıyor: %d basamak, %d seviye -- yazmaç "
+            "bağlam kadar olmalı (ferman 2-M)" % (n_sat, d))
+        self.y.superpozisyon()
+        t = np.zeros((B, d), float)
+        t[:, :n_sat] = (-2.0 * math.pi / float(sozluk)) * (
+            bas.astype(float) + 1.0)
+        self.y.faz(t)
 
     def superpozisyon(self, yalniz_veri: bool = False) -> None:
         h = int(self.ayar.hukum_lifi)

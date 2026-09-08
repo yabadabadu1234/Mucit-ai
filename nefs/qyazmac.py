@@ -96,8 +96,8 @@ class QuditYazmac:
         self._bant = Bant(int(a.yigin), int(a.d), tuple(a.lif),
                           hat=str(a.hat), bant=int(a.hat_bandi))
         self._faz_bekleyen: Optional[np.ndarray] = None
-        self._faz_toplam = np.zeros(int(a.d), np.int64)
-        self._faz_artik = np.zeros(int(a.d), np.int64)
+        self._faz_toplam = np.zeros((int(a.yigin), int(a.d)), np.int64)
+        self._faz_artik = np.zeros((int(a.yigin), int(a.d)), np.int64)
         self._faz_indirilen = 0
         self._psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
                             dtype=a.tip)
@@ -332,7 +332,8 @@ class QuditYazmac:
             return
         V, artik = palmer_indir(self._psi, k, m)
         self._psi = np.asarray(V, self._psi.dtype)
-        self._faz_artik = np.asarray(artik, np.int64)
+        self._faz_artik = np.broadcast_to(
+            np.asarray(artik, np.int64), (self.B, self.d)).copy()
         self._faz_indirilen += 1
 
     def faz_birikimi(self) -> np.ndarray:
@@ -341,7 +342,7 @@ class QuditYazmac:
     def faz_borcu(self) -> Dict[str, float]:
         m = int(self.ayar.faz_mertebesi)
         ceyrek = max(1, m // 4)
-        a = np.asarray(self._faz_artik, np.int64)
+        a = np.asarray(self._faz_artik, np.int64).reshape(-1)
         return {"mertebe": float(m), "çeyrek": float(ceyrek),
                 "ödenmemiş_üs": float(np.mean(a)),
                 "nispet": float(np.mean(a) / ceyrek),
@@ -410,14 +411,18 @@ class QuditYazmac:
         self._bit_kapisi_lifli(k, alt, G)
 
     def faz(self, teta) -> None:
-        t = np.asarray(teta, float).reshape(-1)
-        if t.size != self.d:
+        t = np.asarray(teta, float)
+        if t.ndim == 1 and t.size != self.d:
             from .qudit import agirlik
-            t = np.asarray(agirlik(self.d, t), float).reshape(-1)
+            t = np.asarray(agirlik(self.d, t.reshape(-1)), float)
+        t = np.atleast_2d(t)
+        assert t.shape[-1] == self.d, (
+            "faz açısı yazmaç ebadında olmalı: %s ≠ %d"
+            % (t.shape, self.d))
         m = int(self.ayar.faz_mertebesi)
         k = (np.rint(-t * m / (2.0 * math.pi)).astype(np.int64) % m)
         k = (k + self._faz_artik) % m
-        self._faz_artik = np.zeros(self.d, np.int64)
+        self._faz_artik = np.zeros((self.B, self.d), np.int64)
         self._faz_toplam = (self._faz_toplam + k) % m
         if self._bekleyen:
             self._bosalt()
