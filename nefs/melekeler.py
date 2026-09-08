@@ -361,11 +361,15 @@ def harman_uretecleri(lif) -> "list":
 
 
 def harman_anahtari(q, ayar) -> "tuple":
-    lif = tuple(int(x) for x in q.y.ayar.lif)
+    azami = tuple(int(x) for x in (getattr(ayar, "lif_yapisi", None)
+                                   or q.y.ayar.lif))
     kademe = max(1, int(getattr(ayar, "harman_kademesi", 1)))
-    n = kademe * len(harman_uretecleri(lif))
-    return ("harman/%s/%d" % ("x".join(str(v) for v in lif), int(n)),
-            int(n))
+    n = kademe * len(harman_uretecleri(azami))
+    assert n >= kademe * len(harman_uretecleri(
+        tuple(int(x) for x in q.y.ayar.lif))), (
+        "harman yazmacı azamî liften küçük çıktı: azamî %r, fiilî %r "
+        "-- yazmaç bir tanedir (ferman 1-M)" % (azami, q.y.ayar.lif))
+    return ("harman", int(n))
 
 
 class QParametre:

@@ -194,7 +194,16 @@ class Memuriyet:
             % (anahtar, sorted(k for k in p._yer
                                if k.startswith("harman/"))[:4]))
         bas, kac = p._yer[anahtar]
-        return int(bas), int(kac)
+        kademe = max(1, int(getattr(self.nefs.ayar,
+                                    "harman_kademesi", 1)))
+        kullanilan = kademe * len(uretecler(q))
+        assert kullanilan <= int(kac), (
+            "harman fiilî lifte %d açı ister, yazmaçta %d var"
+            % (kullanilan, int(kac)))
+        assert int(bas) + kullanilan <= int(self.nefs.p._n), (
+            "harman yazmacı parametre vektörünün dışına taşıyor: "
+            "%d+%d > %d" % (int(bas), kullanilan, int(self.nefs.p._n)))
+        return int(bas), int(kullanilan)
 
     def _durum(self, p: np.ndarray):
         from nefs.qegitim import belirtecleri_kodla, ornek_bol
