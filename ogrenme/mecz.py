@@ -73,8 +73,7 @@ def uretecler(q) -> List[Tuple[int, int]]:
     out: List[Tuple[int, int]] = []
     for f, n in enumerate(lif):
         for alt in range(max(1, int(n).bit_length() - 1)):
-            if (1 << alt) < n:
-                out.append((f, alt))
+            out.append((f, alt))
     return out
 
 
@@ -84,6 +83,8 @@ def _uretec_vur(psi: np.ndarray, lif: Tuple[int, ...],
     T = psi.reshape((B,) + lif)
     n = lif[int(f)]
     b = 1 << int(alt)
+    if b >= n:
+        return np.zeros((B, psi.shape[1]), psi.dtype)
     idx = np.arange(n)
     dus = idx[(idx & b) == 0]
     ust = dus | b
