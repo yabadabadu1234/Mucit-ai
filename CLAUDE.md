@@ -1085,6 +1085,27 @@ yerine gelmiş, manası boşa çıkmıştı (ferman 1-E: yarım iş).
 
 ---
 
+## ▓▓▓ 2-N. FERMAN: KÜTÜK ANINDA AKAR -- MANASIZA SÜKÛT ▓▓▓
+
+> *"20 dakikada değil, **her log basıldığı anda sana gitsin**, log
+> anlamlıysa bakar, manasızsa manasız olduğunu dahi konuşmadan
+> **sadece susarsın**."*
+
+* **NÖBET ARALIKLI DEĞİL, AKIŞTIR.** Kütük yoklanmaz; basılan her
+  satır basıldığı anda gelir. Aralıklı yoklama iki şeyi kaçırır:
+  arada olup biteni, ve bir kusurun **ne zaman** başladığını.
+* **MANASIZ SATIRA SÜKÛT.** Bir satır kayda değer değilse
+  konuşulmaz. *"Yeni bir şey yok"*, *"koşu sürüyor"*, *"bekliyorum"*
+  demek de konuşmaktır ve yasaktır. Sükût, manasızın karşılığıdır.
+* **MANALI SATIRA DERHAL BAKILIR.** Hata, sabit noktanın kırılması,
+  cevabın değişmesi, ham hatanın sıçraması, bellek daralması --
+  bunlar görülür görülmez ele alınır, sonraki yoklamaya bırakılmaz.
+* **NİÇİN.** Padişahın vakti, benim her turda *"hâlâ aynı"* diye
+  rapor vermemle harcanır. Rapor bir netice olduğunda verilir,
+  nöbet tuttuğumu ispat etmek için değil.
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.
