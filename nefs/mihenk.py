@@ -5,8 +5,8 @@ from typing import Any, Dict, List, Optional, Sequence
 
 import numpy as np
 
-__all__ = ["MIHENK", "MIHENK_CEVABI", "mihenk_sor", "Nobet", "nobet_kur",
-           "mihenk_metni"]
+__all__ = ["MIHENK", "MIHENK_CEVABI", "CEVAP_PAYI", "cevap_haddi",
+           "mihenk_sor", "Nobet", "nobet_kur", "mihenk_metni"]
 
 
 MIHENK = "Question: What is the capital city of France? Answer:"
@@ -54,17 +54,25 @@ def _sozluk(kodlama: str) -> int:
     return v
 
 
+CEVAP_PAYI = 8
+
+
+def cevap_haddi(basamak: int, kodlama: str = "o200k_base") -> int:
+    from .belirtec import belirtecle
+    boy = max(1, len(belirtecle(MIHENK_CEVABI, kodlama)))
+    return int(max(1, boy * CEVAP_PAYI) * max(1, int(basamak)))
+
+
 def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
                sozluk: int = 16, taban: int = 16, basamak: int = 5,
-               kodlama: str = "o200k_base", azami_uret: int = 0,
+               kodlama: str = "o200k_base",
                sual: str = MIHENK, ayna=None) -> Dict[str, Any]:
     from .soyle import _uret
     if p is not None:
         nefs.yukle(np.asarray(p, float))
     bag = [int(x) % int(taban) for x
            in _basamaklar(str(sual), str(kodlama), int(taban), int(basamak))]
-    kac = int(azami_uret) if int(azami_uret) > 0 else int(basamak) * 4
-    kac = max(int(basamak), (kac // int(basamak)) * int(basamak))
+    kac = int(cevap_haddi(int(basamak), str(kodlama)))
     t0 = time.perf_counter()
     uretilen, bedel, sukutlar, budanan = _uret(
         nefs, bag, kac, int(pencere), int(taban), ayna=ayna)
@@ -94,7 +102,7 @@ class Nobet:
 
     def __init__(self, nefs, ara_saniye: float = 300.0, pencere: int = 8,
                  sozluk: int = 16, taban: int = 16, basamak: int = 5,
-                 kodlama: str = "o200k_base", azami_uret: int = 0,
+                 kodlama: str = "o200k_base",
                  sual: str = MIHENK, ayna=None) -> None:
         self.nefs = nefs
         self.ayna = ayna
@@ -104,7 +112,6 @@ class Nobet:
         self.taban = int(taban)
         self.basamak = int(basamak)
         self.kodlama = str(kodlama)
-        self.azami_uret = int(azami_uret)
         self.sual = str(sual)
         self.defter: List[Dict[str, Any]] = []
         self._t0 = time.perf_counter()
@@ -116,8 +123,7 @@ class Nobet:
             c = mihenk_sor(self.nefs, p, pencere=self.pencere,
                            sozluk=self.sozluk, taban=self.taban,
                            basamak=self.basamak, kodlama=self.kodlama,
-                           azami_uret=self.azami_uret, sual=self.sual,
-                           ayna=self.ayna)
+                           sual=self.sual, ayna=self.ayna)
         finally:
             self.nefs.yukle(eski)
         c["saniye_ofset"] = float(time.perf_counter() - self._t0)
@@ -161,12 +167,11 @@ class Nobet:
 
 def nobet_kur(nefs, ara_saniye: float = 300.0, pencere: int = 8,
               sozluk: int = 16, taban: int = 16, basamak: int = 5,
-              kodlama: str = "o200k_base", azami_uret: int = 0,
+              kodlama: str = "o200k_base",
               sual: str = MIHENK, ayna=None) -> Nobet:
     return Nobet(nefs, ara_saniye=ara_saniye, pencere=pencere,
                  sozluk=sozluk, taban=taban, basamak=basamak,
-                 kodlama=kodlama, azami_uret=azami_uret, sual=sual,
-                 ayna=ayna)
+                 kodlama=kodlama, sual=sual, ayna=ayna)
 
 
 def mihenk_metni(beyan: Dict[str, Any]) -> str:
@@ -181,8 +186,12 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
         s += ["  ⚠ HİÇ YOKLANMADI -- nöbet koşmadı yahut tâlim aradan",
               "    kısa sürdü. Ölçü kırmızı yanıyor (ferman 5)."]
         return "\n".join(s)
-    s += ["  kod uzayı : %d   sözlük : %d"
-          % (d[-1]["kod_uzayı"], d[-1]["sözlük"]),
+    s += ["  kod uzayı : %d   sözlük : %d   üretim haddi : %d basamak"
+          % (d[-1]["kod_uzayı"], d[-1]["sözlük"],
+             int(d[-1].get("üretilen_basamak", 0))),
+          "  üretim haddi ARC ızgara bütçesinden DEĞİL, beklenen cevabın",
+          "  belirteç boyundan türer (%d kat pay) -- ferman 1-J"
+          % CEVAP_PAYI,
           "  vakum kıvılcımı: %s"
           % ("AÇIK" if d[-1].get("ayna") else
              "KAPALI -- açgözlü argmax (ferman 7 ihlâli)"),
