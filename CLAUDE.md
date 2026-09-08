@@ -960,9 +960,18 @@ edilmeyecektir. Bu bir mazeret değil, **mühürlenmiş bir hudut**tur:
   hükmü `nefs/qyazmac.py`nin faz defteri, kapı vurma ve belirteç
   kodlaması içindir. Gövdede hâlâ aşkın koşan, canlı yolda bulunan
   ve **sayılmış** yerler şunlardır:
+  - `kuantum/kapilar.py:dik_iki_kubit` -- `eigh` + `np.exp(-1j·λ)`
+    ile dizey üsteli. **En sıcak olanı budur**: her melekenin her
+    tuğlasında, her örnek için koşar.
   - `nefs/ayna.py:kivilcim` -- `qft_dizeyi` (yoğun `np.exp` dizeyi),
     `cosh`, `sinh`, `cos`, `sin`. Vakum kıvılcımı örneklemede koşar.
   - `nefs/ayna.py:150-166` -- QFT ile kaydırma yolu, aynı sebeple.
+  - `nefs/zihin_durumu.py:harman` -- `cos`, `sin` ile küçük dönme.
+
+  **Bu liste bir kere eksik yazıldı**: evvelce yalnız `ayna` sayılmış,
+  en sıcak olan `dik_iki_kubit` atlanmıştı. Liste eksik yazılırsa
+  ferman 5 ihlâl edilmiş olur (yapılmayan yapıldı diye yazılmaz);
+  o hâlde yeni bir aşkın çağrı görülünce **derhal buraya eklenir**.
   Bunlar iptal edilmedi ve gizlenmedi; menfezleri ayrı bir turun
   işidir (ferman 2-C: çare imha değil tertip). **Bu satır silinmeden
   "gövdede aşkın işlem yok" denemez.**

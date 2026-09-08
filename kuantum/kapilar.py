@@ -328,25 +328,13 @@ def _so4_ureteci(teta: np.ndarray) -> np.ndarray:
     A[..., iu[0], iu[1]] = t[..., :6]
     return A - np.swapaxes(A, -1, -2)
 
-def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
-    if KAPI_USULU == "us":
-        return dik_iki_kubit_us(teta)
-    A = np.zeros((4, 4), dtype=np.float64)
-    iu = np.triu_indices(4, 1)
-    A[iu] = np.asarray(teta, float).reshape(-1)[:6]
-    A = A - A.T
-    I = np.eye(4)
-    Q = np.linalg.solve((I + A).T, (I - A).T).T
-    return Q.astype(np.float32)
-
-KAPI_USULU: str = "us"
-
-def dik_iki_kubit_us_yigin(teta: np.ndarray) -> np.ndarray:
+def dik_iki_kubit_yigin(teta: np.ndarray) -> np.ndarray:
     A = -2.0 * _so4_ureteci(teta)
     oz, V = np.linalg.eigh(1j * A)
     E = np.matmul(V * np.exp(-1j * oz)[..., None, :],
                   np.conjugate(np.swapaxes(V, -1, -2)))
-    return np.real(E).astype(np.float32)
+    return np.real(E).astype(np.float64)
 
-def dik_iki_kubit_us(teta: np.ndarray) -> np.ndarray:
-    return dik_iki_kubit_us_yigin(np.asarray(teta, float).reshape(-1)[:6])
+
+def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
+    return dik_iki_kubit_yigin(np.asarray(teta, float).reshape(-1)[:6])
