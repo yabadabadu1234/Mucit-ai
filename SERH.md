@@ -44165,3 +44165,29 @@ Gövdeye **tek bir fonksiyonla** bağlı: `nefs/ayna.py` yalnız
 
 4. **`_gosterim()` YAN KOŞUDUR** ve `n=18`de `2^18` genlikli durum
    kurup zamanlama yapıyor (ferman 1-L).
+
+---
+
+## NÖBET USULÜ -- İKİ GAFLET VE ÇARESİ
+
+### 1. `pgrep -f` SARMALAYICI KABUĞU DA EŞLER
+
+`kill $(pgrep -f "main.egitim" | head -1)` **python'u değil kabuğu
+öldürür**: `pgrep -f` komut satırının tamamına bakar, sarmalayıcı
+`bash -c ... main.egitim ...` da eşleşir ve `head -1` en küçük PID'yi,
+yâni kabuğu alır. Netice: koşu öksüz kalıp **saatlerce yaşamaya devam
+eder**, üstelik durdurdum zannedilir.
+
+**Doğrusu:** `pgrep -f "python -u -m main.egitim"` ile yalnız yorumlayıcıyı
+eşle, yahut `ps` ile PPID'ye bakıp yaprak süreci seç.
+
+### 2. İKİ KOŞU AYNI KÜTÜĞE YAZARSA KÜTÜK YALAN SÖYLER
+
+Öksüz kalan koşu eski kütük tanıtıcısını tutmaya devam eder. Yeni koşu
+`>` ile dosyayı kırpsa bile eskisi kendi kaydırmasından yazmayı sürdürür;
+dosyada delik açılır ve **iki koşunun satırları karışır**. Satırdaki
+saniye, koşan sürecin yaşından büyük çıkıyorsa o satır **başka bir
+koşuya aittir**.
+
+**Doğrusu:** her koşuya kendi kütüğü (`kosu-<pid>.log`), ve nöbet
+kütükteki bir işarete değil **sürecin kendisine** bağlanır.
