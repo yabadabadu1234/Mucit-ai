@@ -91,6 +91,8 @@ def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
             "sabit_nokta": bool(len(set(int(x) for x in uretilen)) <= 1),
             "ayna": bool(ayna is not None),
             "bedel": float(bedel), "budanan": int(budanan),
+            "tepe_payı": float(np.exp(-float(bedel) / max(kac, 1))),
+            "düz_pay": float(1.0 / max(int(taban), 1)),
             "sükût": float(np.mean(sukutlar)) if sukutlar else 1.0,
             "saniye": float(sure),
             "boş": bool(not cevap.strip()),
@@ -195,15 +197,20 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
           "  vakum kıvılcımı: %s"
           % ("AÇIK" if d[-1].get("ayna") else
              "KAPALI -- açgözlü argmax (ferman 7 ihlâli)"),
-          "  %-8s %-7s %-9s %-6s %-9s %-8s %s"
-          % ("saniye", "adım", "kayıp", "sükût", "geçersiz",
-             "ayrıbas", "cevap")]
+          "  düz dağılımın tepe payı : %.6f  (1/taban)"
+          % float(d[-1].get("düz_pay", 0.0)),
+          "  %-8s %-7s %-9s %-9s %-8s %-10s %s"
+          % ("saniye", "adım", "kayıp", "geçersiz",
+             "ayrıbas", "tepepayı", "cevap")]
     for c in d:
-        s.append("  %-8.0f %-7d %-9.4f %-6.3f %-9s %-8s %r%s"
-                 % (c["saniye_ofset"], c["adım"], c["kayıp"], c["sükût"],
+        _tp = float(c.get("tepe_payı", 0.0))
+        _dz = float(c.get("düz_pay", 1.0)) or 1.0
+        s.append("  %-8.0f %-7d %-9.4f %-9s %-8s %-10s %r%s"
+                 % (c["saniye_ofset"], c["adım"], c["kayıp"],
                     "%d/%d" % (c["geçersiz"], c["belirteç"]),
                     "%d%s" % (c["ayrı_basamak"],
                               "!" if c["sabit_nokta"] else ""),
+                    "%.5f(%.1fx)" % (_tp, _tp / _dz),
                     c["cevap"], "  ✓" if c["isabet"] else ""))
     ayri = len({c["cevap"] for c in d})
     s += ["",
@@ -215,6 +222,9 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
           "büyük; taşan kimlik ÇÖZÜLEMEZ, sessizce elenmez, sayılır"
           % (sum(c["geçersiz"] for c in d), sum(c["belirteç"] for c in d),
              float(d[-1]["kod_uzayı"]) / max(1, d[-1]["sözlük"])),
+          "  tepe payı düz paya YAKINSA dağılımda yapı yoktur ve",
+          "  argmax'ın seçtiği basamak keyfîdir; UZAKSA yapı vardır",
+          "  fakat açgözlü çözücü onu sabit noktaya eziyordur.",
           "  sabit nokta : %d / %d yoklamada üretim TEK basamağa çöktü"
           % (sum(1 for c in d if c["sabit_nokta"]), len(d)),
           "  ayrı cevap  : %d  %s"
