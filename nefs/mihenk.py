@@ -141,7 +141,7 @@ class Nobet:
         print("  [mihenk %6.0f sn · adım %d · V %.4f (ham %.4f · küme %s"
               "/%d)] %s → %r"
               "   (geçersiz %d/%d · ayrı basamak %d%s"
-              " · kabul %d/%d · adım‖%.3e‖)%s"
+              " · kabul %d/%d · adım‖%.3e‖ · kapsam %d/%d)%s"
               % (c["saniye_ofset"], c["adım"], c["kayıp"], c["ham"],
                  c["küme_kimlik"] or "—", c["küme"], self.sual,
                  c["cevap"], c["geçersiz"], c["belirteç"],
@@ -150,6 +150,8 @@ class Nobet:
                  int(c["eniyileme"].get("kabul", 0)),
                  int(c["eniyileme"].get("tarama", 0)),
                  float(c["eniyileme"].get("adım_normu", 0.0)),
+                 int(c["eniyileme"].get("kapsanan_parametre", 0)),
+                 int(c["eniyileme"].get("toplam_parametre", 0)),
                  "  ✓" if c["isabet"] else ""),
               flush=True)
         return c
