@@ -21,7 +21,9 @@ def mecz_sifirla() -> None:
                   "duvar_elenen": 0.0, "duvar_bakılan": 0.0,
                   "çukur": 0.0, "vadi": 0.0, "nakil": 0.0,
                   "ΔE": 0.0, "yarıçap": 0.0, "iz_g": 0.0,
-                  "operatörlü_kefe": 0.0, "operatörsüz_kefe": 0.0})
+                  "operatörlü_kefe": 0.0, "operatörsüz_kefe": 0.0,
+                  "κ": 0.0, "yarıçap_düzeltmesi": 0.0,
+                  "yönsüz_tur": 0.0})
 
 
 mecz_sifirla()
@@ -95,6 +97,19 @@ def _uretec_vur(psi: np.ndarray, lif: Tuple[int, ...],
     out[tuple(dilim_dus)] = -C
     out[tuple(dilim_ust)] = A
     return out.reshape(B, -1)
+
+
+def hat_egriligi(dv_gercek: float, dv_lineer: float,
+                 r: float) -> Dict[str, float]:
+    r = float(r)
+    assert r > 0.0, "yarıçap sıfırken eğrilik okunamaz"
+    kappa = 2.0 * (float(dv_gercek) - float(dv_lineer)) / (r * r)
+    _MECZ["κ"] = float(kappa)
+    if kappa <= 0.0:
+        return {"κ": float(kappa), "yarıçap*": 2.0 * r, "bükey": False}
+    yildiz = -float(dv_lineer) / (kappa * r)
+    return {"κ": float(kappa), "yarıçap*": float(abs(yildiz)),
+            "bükey": True}
 
 
 def cukur(psi: np.ndarray, H: np.ndarray) -> Dict[str, float]:
@@ -180,6 +195,7 @@ class Memuriyet:
         self.kume = list(kume)
         self.sozluk = int(sozluk)
         self.ayar = ayar or MeczAyari()
+        self._r_duzeltme = 0.0
 
     def _harman_yeri(self, q) -> Tuple[int, int]:
         from nefs.melekeler import QParametre, harman_anahtari
@@ -235,6 +251,10 @@ class Memuriyet:
             yon = yon / n
         return {"yön": yon, "yarıçap": r, "ΔE": ck["ΔE"], "başlangıç": bas,
                 "kaç": kac, "⟨H⟩": ck["⟨H⟩"], "duvar": dv,
+                "eğim_yayılmış": self.kademeye_yay(
+                    -np.asarray(eg["eğim"], float) * maske, kac)
+                if float(np.linalg.norm(eg["eğim"] * maske)) > 0.0
+                else np.zeros(int(kac)),
                 "durak": ck["durak"]}
 
     def kademeye_yay(self, yon: np.ndarray, kac: int) -> np.ndarray:
@@ -266,17 +286,27 @@ class Memuriyet:
             if float(np.linalg.norm(yon)) <= 0.0:
                 _MECZ["yönsüz_tur"] = _MECZ.get("yönsüz_tur", 0.0) + 1.0
                 continue
+            r = float(self._r_duzeltme if self._r_duzeltme > 0.0
+                      else d["yarıçap"])
+            egim_yon = float(np.dot(np.asarray(d["eğim_yayılmış"], float),
+                                    yon))
             aday = p.copy()
-            aday[bas:bas + kac] = aday[bas:bas + kac] + d["yarıçap"] * yon
+            aday[bas:bas + kac] = aday[bas:bas + kac] + r * yon
             va = float(np.atleast_1d(self.kayip(aday[None, :]))[0])
             _MECZ["çağrı"] += 1.0
-            seyir.append({"V": va, "yarıçap": float(d["yarıçap"]),
-                          "ΔE": float(d["ΔE"])})
+            eg = hat_egriligi(va - v, egim_yon * r, r)
+            seyir.append({"V": va, "yarıçap": r, "ΔE": float(d["ΔE"]),
+                          "κ": float(eg["κ"])})
             if va < v:
                 _MECZ["kabul"] += 1.0
                 _MECZ["adım_normu"] += float(
                     np.linalg.norm(aday - p))
                 p, v = aday, va
+                self._r_duzeltme = 0.0
+            else:
+                self._r_duzeltme = float(eg["yarıçap*"])
+                _MECZ["yarıçap_düzeltmesi"] = _MECZ.get(
+                    "yarıçap_düzeltmesi", 0.0) + 1.0
         return {"p": p, "V_son": v, "seyir": seyir}
 
 
@@ -319,6 +349,8 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          "  NAKİL  %d kere sıçrattı" % int(b["nakil"]),
          "  YARIÇAP = keyfiyet / √iz(g_FS) = %.4e   (iz g = %.4e)"
          % (b["yarıçap"], b["iz_g"]),
+         "         hat eğriliği κ = %.4e   %d kere düzeltti"
+         % (b["κ"], int(b["yarıçap_düzeltmesi"])),
          "",
          "  operatörlü kefe   : %d  (yönü kurar)" % int(b["operatörlü_kefe"]),
          "  operatörsüz kefe  : %d  (yönü kurmaz, HÜKMÜ verir)"
