@@ -44191,3 +44191,61 @@ koşuya aittir**.
 
 **Doğrusu:** her koşuya kendi kütüğü (`kosu-<pid>.log`), ve nöbet
 kütükteki bir işarete değil **sürecin kendisine** bağlanır.
+
+---
+
+## FERMAN 2-H OKUMASI: `ogrenme/izgara.py` (448 satır, baştan sona)
+
+Ferman 2-H'nin ölçüsü **en eskiden yazılmış dosyadır**. Sıradaki dosya
+`ogrenme/izgara.py`dir (yazılış 1787625417). Dokuz garabet bulundu:
+
+1. **KOPUKLUK (ferman 1-Z).** Dosyayı hiçbir modül ithal etmiyor. Tek
+   geçtiği yer `ogrenme/__init__.py:__all__` içindeki **dizgi**:
+   `__all__ = ["rkhs", "operator", "izgara", "grassmann"]`. Ferman
+   1-C(b) bunu bağ saymaz: bir listeye ad yazmak bağlamak değildir.
+   Tahttan bu dosyaya giden yol **yoktur**.
+
+2. **İPTAL EDİLMİŞ USUL (ferman 7).** `bukulme_dizeyi`,
+   `_ikinci_turev_temeli`, `duzenli_uydur` tamamen B-spline üstüne
+   kurulu. Ferman 7'nin cetvelinde *"Gayri-lineerliğin sürekli
+   B-spline / transandantal olması"* satırı **iptaldir**; yerine
+   Rijndael-Galois otomorfizmi `x ↦ x²⁵⁴` gelmiştir.
+
+3. **TÜREV (ferman 1-V).** `artis_gradyani` bir zincir kuralı
+   uygulamasıdır, `bspline_turev_temeli` çağrılır, `_gosterim` merkezî
+   fark ile sayısal türev alır. Bu motorda türev **yoktur**.
+
+4. **AŞKIN İŞLEM (ferman 2-J).** `np.exp` (3 yer), `np.sin`, `np.cos`,
+   `np.tanh`, `np.log`, `np.log1p` -- `SEMBOL_KUTUPHANESI` ve
+   `varsayilan_kutuphane` neredeyse tamamen transandantal.
+
+5. **YAN KOŞU (ferman 1-L).** `_gosterim`, `_rapor_simgesel`, `rapor`,
+   `temiz_veride_bulunuyor_mu`, `ceza_fazla_terimi_eliyor_mu`,
+   `kutuphane_disinda_ne_oluyor` ve `if __name__ == "__main__"`.
+   448 satırın **~230'u** tahtın dışında koşan gösteri kodudur.
+
+6. **SABİT EŞİK (ferman 1-J).** `mu=0.02`, `esik=0.02`,
+   `azami_terim=3`, `dugum_sayisi=8`, `1e-9`, `0.01`, `100×`. Hiçbiri
+   bir keyfiyetin nispetini ölçen fonksiyondan gelmiyor; hepsi elle
+   yazılmış kemiyet.
+
+7. **ÇİFT BAŞLILIK (ferman 1-M, 2-B).** Aynı dosyada **iki ayrı
+   simgesel regresyon** var: (a) `SEMBOL_KUTUPHANESI` +
+   `sembolik_kapanis`, puanı `bağıntı − μ·uzunluk`; (b)
+   `varsayilan_kutuphane` + `ara`, puanı BIC. İki kütüphane, iki
+   ölçüt, tek iş. Doğrusu ikisini yaklaştırmak değil, birini imha
+   edip ötekini tek kaynak yapmaktır.
+
+8. **`__all__` YALAN SÖYLÜYOR.** Dokuz ad ilân ediliyor; dosya
+   `ara`, `bic`, `varsayilan_kutuphane`, `rapor`, `Terim` dâhil
+   yirmiden çok umumi ad tanımlıyor.
+
+9. **DİZGİ İÇİNDE YORUM (ferman 1-W).** Dosyada `#` yok, fakat
+   `_gosterim` içinde ~60 satır Türkçe izah **dizgi olarak** duruyor
+   (*"Ceza terimiyle olsaydı bu hâlde payda sıfırlanabilirdi."*).
+   Kılık değiştirmiş yorumdur.
+
+**HÜKÜM.** 2 ve 3 numaralı maddeler ferman 2-C'nin istediği **ispattır**:
+bu dosyanın gövdesi *"koşmuyor"* diye değil, **usulü iptal edildiği**
+için yersizdir. Fakat tertibat kararı ferman 2-D gereği tek başıma
+verilmez; şıklar sayısıyla padişaha sunulur.
