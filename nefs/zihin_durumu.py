@@ -203,15 +203,20 @@ class QYazmac:
         n_sat = int(E.shape[1])
         if E.shape[0] != B:
             E = E[np.arange(B) % E.shape[0]]
-        bas = np.argmax(E.reshape(B, n_sat, -1), axis=-1) % sozluk
+        Ez = E.reshape(B, n_sat, -1)
+        bas = np.argmax(Ez, axis=-1) % sozluk
+        dolu = Ez.max(axis=-1) > 0.0
         assert n_sat <= d, (
             "bağlam yazmaca sığmıyor: %d basamak, %d seviye -- yazmaç "
             "bağlam kadar olmalı (ferman 2-M)" % (n_sat, d))
         self.y.superpozisyon()
         t = np.zeros((B, d), float)
-        t[:, :n_sat] = (-2.0 * math.pi / float(sozluk)) * (
-            bas.astype(float) + 1.0)
+        t[:, :n_sat] = np.where(
+            dolu, (-2.0 * math.pi / float(sozluk)) * (bas.astype(float)
+                                                      + 1.0), 0.0)
         self.y.faz(t)
+        self.y.iz.not_dus("kodla", "dolu %d / %d seviye"
+                          % (int(dolu.sum() // max(B, 1)), d))
 
     def superpozisyon(self, yalniz_veri: bool = False) -> None:
         h = int(self.ayar.hukum_lifi)

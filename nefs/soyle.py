@@ -61,7 +61,7 @@ def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
     sukutlar: List[float] = []
     for _ in range(n):
         pen = (bag[-pencere:] if len(bag) >= pencere
-               else [0] * (pencere - len(bag)) + bag)
+               else [-1] * (pencere - len(bag)) + bag)
         P = np.asarray(q.uret(pen, teta=teta, sozluk=int(sozluk)), float)
         P = np.clip(P.reshape(-1), 1e-12, None)
         P = P / P.sum()
@@ -85,7 +85,7 @@ def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
     sukutlar: List[float] = []
     for _ in range(n):
         pen = (bag[-pencere:] if len(bag) >= pencere
-               else [0] * (pencere - len(bag)) + bag)
+               else [-1] * (pencere - len(bag)) + bag)
         P, o = adayin_tuttugu(nefs, (), sozluk=int(sozluk), ne="koş",
                               baglam=pen)
         P = np.asarray(P, float).reshape(-1)

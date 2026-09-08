@@ -40,9 +40,10 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
         raise ValueError("kodlama usulü bilinmiyor: %r" % (usul,))
 
     taban = int(kubit) if int(kubit) >= 2 else int(sozluk)
-    t = np.asarray(belirtecler, int).reshape(-1) % taban
+    t = np.asarray(belirtecler, int).reshape(-1)
     out = np.zeros((t.size, taban))
-    out[np.arange(t.size), t] = 1.0
+    dolu = t >= 0
+    out[np.arange(t.size)[dolu], t[dolu] % taban] = 1.0
     return out
 
 
@@ -63,7 +64,7 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
     def _zorla(bag_bas, hed_bas, cins: str) -> None:
         akis = list(bag_bas)
         for i, h in enumerate(hed_bas):
-            pen = akis[-P:] if len(akis) >= P else ([0] * (P - len(akis))
+            pen = akis[-P:] if len(akis) >= P else ([-1] * (P - len(akis))
                                                     + akis)
             cikti.append(([int(x) for x in pen], int(h), cins, int(i % bs)))
             akis.append(int(h))
@@ -283,7 +284,7 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
         kac = len(h)
         for _ in range(kac):
             pen = baglam[-pencere:] if len(baglam) >= pencere else \
-                ([0] * (pencere - len(baglam)) + baglam)
+                ([-1] * (pencere - len(baglam)) + baglam)
             P, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=pen)
             if o.get("sukut", 0.0) > 0.8:
                 sukut_sayisi += 1
