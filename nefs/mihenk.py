@@ -119,8 +119,8 @@ class Nobet:
         self._t0 = time.perf_counter()
         self._son = self._t0 - self.ara
 
-    def _sor(self, p, kayip: float, adim: int,
-             ham: float = 0.0) -> Dict[str, Any]:
+    def _sor(self, p, kayip: float, adim: int, ham: float = 0.0,
+             kume: int = 0, kume_kimlik: str = "") -> Dict[str, Any]:
         eski = np.asarray(self.nefs.vektor(), float).copy()
         try:
             c = mihenk_sor(self.nefs, p, pencere=self.pencere,
@@ -132,12 +132,15 @@ class Nobet:
         c["saniye_ofset"] = float(time.perf_counter() - self._t0)
         c["kayıp"] = float(kayip)
         c["ham"] = float(ham)
+        c["küme"] = int(kume)
+        c["küme_kimlik"] = str(kume_kimlik)
         c["adım"] = int(adim)
         self.defter.append(c)
-        print("  [mihenk %6.0f sn · adım %d · V %.4f (ham %.4f)] %s → %r"
+        print("  [mihenk %6.0f sn · adım %d · V %.4f (ham %.4f · küme %s"
+              "/%d)] %s → %r"
               "   (geçersiz %d/%d · ayrı basamak %d%s)%s"
               % (c["saniye_ofset"], c["adım"], c["kayıp"], c["ham"],
-                 self.sual,
+                 c["küme_kimlik"] or "—", c["küme"], self.sual,
                  c["cevap"], c["geçersiz"], c["belirteç"],
                  c["ayrı_basamak"],
                  " SABİT NOKTA" if c["sabit_nokta"] else "",
@@ -146,12 +149,13 @@ class Nobet:
         return c
 
     def yokla(self, p, kayip: float = 0.0, adim: int = 0,
-              ham: float = 0.0) -> Optional[Dict[str, Any]]:
+              ham: float = 0.0, kume: int = 0, kume_kimlik: str = ""
+              ) -> Optional[Dict[str, Any]]:
         simdi = time.perf_counter()
         if simdi - self._son < self.ara:
             return None
         self._son = simdi
-        return self._sor(p, kayip, adim, ham)
+        return self._sor(p, kayip, adim, ham, kume, kume_kimlik)
 
     def beyan(self, p=None) -> Dict[str, Any]:
         if p is not None:
@@ -205,7 +209,8 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
           % float(d[-1].get("düz_pay", 0.0)),
           "  V ağırlıklıdır ve ağırlık her turda YENİDEN ölçülür",
           "  (ferman 1-J); o hâlde turlar arasında KIYAS KABUL ETMEZ.",
-          "  Kıyas kabul eden sütun HAM'dır: ağırlıksız artık toplamı.",
+          "  HAM ağırlıksızdır fakat o da ANCAK AYNI KÜME İÇİNDE kıyas",
+          "  kabul eder; küme kimliği değişince veri değişmiş demektir.",
           "  %-8s %-7s %-9s %-9s %-9s %-8s %-10s %s"
           % ("saniye", "adım", "V", "ham", "geçersiz",
              "ayrıbas", "tepepayı", "cevap")]

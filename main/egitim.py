@@ -463,6 +463,14 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                                      tur=int(ayar.ayna_tur),
                                      tohum=int(ayar.tohum)))
 
+    def _kume_kimlik(kume) -> str:
+        import hashlib
+        h = hashlib.blake2b(digest_size=3)
+        for o in kume:
+            h.update(np.asarray(o[0], np.int64).tobytes()[:64])
+            h.update(bytes([int(o[1]) & 0xFF]))
+        return h.hexdigest()
+
     def kayip_p(P: np.ndarray) -> np.ndarray:
         P = np.atleast_2d(np.asarray(P, float))
         out = np.empty(P.shape[0], float)
@@ -478,6 +486,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                            "ham": float(t.get("kayıp_ham", 0.0))})
             nobet.yokla(p, kayip=float(t["kayıp"]),
                         ham=float(t.get("kayıp_ham", 0.0)),
+                        kume=len(kume), kume_kimlik=_kume_kimlik(kume),
                         adim=_sayac["çağrı"])
         return out
 
