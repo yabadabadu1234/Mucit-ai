@@ -36,15 +36,18 @@ def keyfiyet(kefeler: Dict[str, Any],
         "sadakat beyanında ``artık_nispeti`` yok -- mantıksızlık hududu "
         "gelen taşmadan okunamaz (ferman 5)")
     tasma = float((sadakat or {}).get("artık_nispeti", 0.0))
+    bel_tasma = float(kefeler.get("taşma", 0.0))
 
     nis_ten = 1.0 - float(n_ten) / cevrim
     nis_kis = 1.0 - float(n_kis) / cevrim
-    nis_man = max(0.0, 1.0 - tasma)
+    nis_par = max(0.0, 1.0 - tasma)
+    nis_bel = max(0.0, 1.0 - bel_tasma)
+    nis_man = nis_par * nis_bel
     nispet = float(nis_ten * nis_kis * nis_man)
     assert 0.0 <= nispet <= 1.0 + 1e-9, "nispet [0,1] dışına çıktı"
 
     hudut = {"tenakuz": n_ten, "kısırdöngü": n_kis,
-             "mantıksızlık": int(tasma > 1e-12)}
+             "mantıksızlık": int(tasma > 1e-12) + int(bel_tasma > 1e-12)}
     temiz = all(v == 0 for v in hudut.values())
 
     _HAL["toplam"] += nispet
@@ -58,6 +61,8 @@ def keyfiyet(kefeler: Dict[str, Any],
     return {"hudut": hudut, "hudut_temiz": bool(temiz), "nispet": nispet,
             "nispet_tenakuz": nis_ten, "nispet_kısır": nis_kis,
             "nispet_mantık": nis_man, "çevrim": cevrim,
+            "parite_taşması": tasma, "belirteç_taşması": bel_tasma,
+            "nispet_parite": nis_par, "nispet_belirteç": nis_bel,
             "açık": bool(int(a.acik))}
 
 

@@ -17,10 +17,12 @@ __all__ = ["ornekler", "ornek_bol", "belirtecleri_kodla",
            "egit", "degerlendir"]
 
 
-def ornek_bol(o) -> Tuple[List[int], int, str]:
-    if len(o) >= 3:
-        return list(o[0]), int(o[1]), str(o[2])
-    return list(o[0]), int(o[1]), "sözlü"
+def ornek_bol(o) -> Tuple[List[int], int, str, int]:
+    if len(o) >= 4:
+        return list(o[0]), int(o[1]), str(o[2]), int(o[3])
+    if len(o) == 3:
+        return list(o[0]), int(o[1]), str(o[2]), -1
+    return list(o[0]), int(o[1]), "sözlü", -1
 
 
 def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
@@ -46,7 +48,7 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
 
 def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
              sozluk: int = 0, tohum: int = 0, taban: int = 16,
-             basamak: int = 0) -> List[Tuple[List[int], int, str]]:
+             basamak: int = 0) -> List[Tuple[List[int], int, str, int]]:
     from .belirtec import basamak_sayisi, tip_vektoru
     from .musahede import soyutlama_oku
     from .belirtec import belirtecle
@@ -56,14 +58,14 @@ def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
     bs = int(basamak) if int(basamak) > 0 else basamak_sayisi(
         int(sozluk) if int(sozluk) > 0 else tb, tb)
     P = max(1, int(pencere))
-    cikti: List[Tuple[List[int], int, str]] = []
+    cikti: List[Tuple[List[int], int, str, int]] = []
 
     def _zorla(bag_bas, hed_bas, cins: str) -> None:
         akis = list(bag_bas)
-        for h in hed_bas:
+        for i, h in enumerate(hed_bas):
             pen = akis[-P:] if len(akis) >= P else ([0] * (P - len(akis))
                                                     + akis)
-            cikti.append(([int(x) for x in pen], int(h), cins))
+            cikti.append(([int(x) for x in pen], int(h), cins, int(i % bs)))
             akis.append(int(h))
 
     for g in gorevler:

@@ -193,10 +193,11 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
 
 
 PAYLAR: Dict[str, float] = {
-    "uzay": 0.19,
+    "uzay": 0.15,
     "tip": 0.12,
     "meleke": 0.11,
     "kaide": 0.05,
+    "tasma": 0.04,
     "kategori": 0.10,
     "nokta": 0.10,
     "cevrim": 0.09,
@@ -219,7 +220,8 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
         esle_ad = {"uzay": "uzay", "tip": "tip", "kategori": "kategori",
                    "nokta": "nokta", "cevrim": "çevrim",
                    "tenakuz": "tenakuz", "monogami": "monogami",
-                   "engel": "engel", "kaide": "kaide_halkası"}
+                   "engel": "engel", "kaide": "kaide_halkası",
+                   "tasma": "taşma"}
         toplu: Dict[str, float] = {}
         for ad, anahtar in esle_ad.items():
             toplu[ad] = float(ham.get(anahtar, 0.0))
@@ -240,7 +242,8 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
     esle = {"cevrim": "çevrim", "tenakuz": "tenakuz_bariyer",
             "monogami": "monogami", "engel": "engel", "tip": "hodge",
             "kategori": "kategori", "nokta": "nokta",
-            "meleke": "meleke", "zirh": "zırh", "kaide": "kaide_halkası"}
+            "meleke": "meleke", "zirh": "zırh", "kaide": "kaide_halkası",
+            "tasma": "taşma"}
     esik = max(float(taban) * cipa, 1e-9)
     for ad, anahtar in esle.items():
         v = abs(float(kefeler.get(anahtar, 0.0)))

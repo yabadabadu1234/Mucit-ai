@@ -1001,6 +1001,45 @@ edilmeyecektir. Bu bir mazeret değil, **mühürlenmiş bir hudut**tur:
 
 ---
 
+## ▓▓▓ 2-L. FERMAN: MANTIKSIZLIK İKİ TAŞMADIR -- HEM KEFE HEM HUDUT ▓▓▓
+
+> *"İkisi de: hem kendi kefesi hem hudut çarpanı."*
+
+Ferman 1-I'nin üçüncü huddudu *"mantıksızlık yok (kod uzayı dışına
+taşma yok)"* der. Kodda bu ad altında ölçülen tek şey **parite
+artığıydı** -- yâni yazmaç durumunun kod uzayından taşması. Modelin
+konuşurken ürettiği **belirteç kimliğinin tiktoken sözlüğünden
+taşması** hiç ölçülmüyordu; ölçülünce yüzde yüz çıktı (1801/1801).
+
+**MANTIKSIZLIK BİR DEĞİL İKİ TAŞMADIR** ve ikisi de sayılır:
+
+    1. PARİTE TAŞMASI     durum, yazmacın kod uzayının dışında
+    2. BELİRTEÇ TAŞMASI   kimlik, tiktoken sözlüğünün dışında
+
+### İKİSİ DE İKİ YERDE GÖRÜNÜR
+
+* **KENDİ KEFESİ.** Belirteç taşması hata vektörüne **ayrı bir kefe**
+  olarak girer (ferman 1-U: her ölçü ayrı kefedir, meclis yok) ve
+  ağırlığı rezonanstan **ölçülür** (ferman 1-J). Kefe `p`ye bağlıdır:
+  modelin basamak dağılımından ve o basamağın **makamından** hesaplanır.
+* **HUDUT ÇARPANI.** Keyfiyetin mantıksızlık nispeti iki taşmanın
+  **çarpımıdır**. O hâlde küme, ikisi birden sıfırlanmadan **temiz
+  sayılmaz** ve bırakılmaz (ferman 1-I, 2-I).
+
+### HİÇBİR CEVHER DÜŞMEZ
+
+Parite taşması iptal edilmez, yerinde kalır (ferman 1-S: `a+b` ile
+`x+y` toplanır, biri ötekinin yerine geçmez). Yeni gelen ona
+**eklenir**.
+
+### SESSİZ İKAME YASAĞI BURADA DA GEÇER
+
+`coz()` taşan kimliği **sözlük mertebesine göre katlayarak** susturuyordu;
+bu ferman 5'in yasakladığı sessiz ikamedir. Taşma artık **sayılır** ve
+`belirtec_beyani`de görünür.
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.

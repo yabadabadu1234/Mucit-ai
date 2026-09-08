@@ -143,6 +143,7 @@ class EgitimAyari:
     lam_meleke: float = 0.0
     lam_zirh: float = 0.0
     lam_kaide: float = 0.0
+    lam_tasma: float = 0.0
     mihenk_arasi: float = 300.0
     galois_us: int = 0
     tableau_n: int = 0
@@ -357,6 +358,7 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         lam_kategori=float(a.lam_kategori), lam_nokta=float(a.lam_nokta),
         lam_meleke=float(a.lam_meleke), lam_zirh=float(a.lam_zirh),
         lam_kaide=float(a.lam_kaide),
+        lam_tasma=float(a.lam_tasma), basamak=int(a.belirtec_basamak),
         meleke_olcumu=int(a.meleke_olcumu),
         usul_acik=int(a.usul_acik), usul_haddi=float(a.usul_haddi),
         usul_seferi=int(a.usul_seferi),
@@ -411,7 +413,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     mzn = mizan_ayari(ayar)
     LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
                   "lam_tenakuz", "lam_kategori", "lam_nokta",
-                  "lam_meleke", "lam_zirh", "lam_kaide")
+                  "lam_meleke", "lam_zirh", "lam_kaide",
+                  "lam_tasma")
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}

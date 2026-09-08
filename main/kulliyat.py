@@ -587,17 +587,19 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
         if yer >= t.size - gerek:
             yer = 0
         okunan = 0
-        for _ in range(max(0, n)):
+        for _k in range(max(0, n)):
             if yer >= t.size - gerek:
                 yer = 0
             ham = np.asarray(t[yer:yer + gerek], np.int64)
             yer += gerek
             okunan += gerek
             akis = tip_vektoru(ham, tb, bs)
-            if akis.size < int(pencere) + 1:
+            kay = int(_k % max(1, bs))
+            if akis.size < int(pencere) + 1 + kay:
                 continue
-            cift.append(([int(x) for x in akis[:int(pencere)]],
-                         int(akis[int(pencere)]), "sözlü"))
+            cift.append(([int(x) for x in akis[kay:kay + int(pencere)]],
+                         int(akis[kay + int(pencere)]), "sözlü",
+                         int((kay + int(pencere)) % max(1, bs))))
         yeni[ad] = {"belirteç": int(yer), "bayt": int(yer) * 4,
                     "boy": int(t.size), "boy_bayt": int(t.size) * 4,
                     "okunan": int(okunan),

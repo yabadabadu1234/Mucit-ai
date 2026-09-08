@@ -5,7 +5,7 @@ from typing import Any, Dict, Optional, Sequence
 
 import numpy as np
 
-__all__ = ["kategori_kaybi", "nokta_kaybi"]
+__all__ = ["tasma_kaybi", "kategori_kaybi", "nokta_kaybi"]
 
 
 def kategori_kaybi(haller: Sequence[np.ndarray], azami: int = 32,
@@ -40,6 +40,32 @@ def kategori_kaybi(haller: Sequence[np.ndarray], azami: int = 32,
     assert kayip >= 0.0, "Frobenius normunun karesi negatif çıkamaz"
     return {"kayıp": float(kayip), "ihlâl": int(ihlal),
             "deneme": int(len(ucluler)), "azamî": float(azami_fark)}
+
+
+def tasma_kaybi(lifliler, makamlar, n_v: int, sozluk: int,
+                basamak: int) -> Dict[str, Any]:
+    ust = max(0, int(basamak) - 1)
+    if not lifliler or int(basamak) <= 1 or int(sozluk) <= 0:
+        return {"kayıp": 0.0, "üst_makam_örneği": 0, "eşik": 0,
+                "taşan_basamak": 0, "kod_uzayı": int(n_v) ** int(basamak),
+                "sözlük": int(sozluk)}
+    agirlik = int(n_v) ** ust
+    esik = -(-int(sozluk) // agirlik)
+    esik = int(min(max(esik, 0), int(n_v)))
+    m = np.asarray(list(makamlar), np.int64)
+    sec = np.flatnonzero(m == ust)
+    if sec.size == 0 or esik >= int(n_v):
+        return {"kayıp": 0.0, "üst_makam_örneği": int(sec.size),
+                "eşik": esik, "taşan_basamak": int(n_v) - esik,
+                "kod_uzayı": int(n_v) ** int(basamak), "sözlük": int(sozluk)}
+    M = np.stack([np.asarray(lifliler[int(i)], complex) for i in sec])
+    guc = np.einsum('svh,svh->sv', M, M.conj()).real
+    iz = np.maximum(guc.sum(axis=1), 1e-300)
+    P = guc / iz[:, None]
+    tasan = float(P[:, esik:].sum(axis=1).mean())
+    return {"kayıp": tasan, "üst_makam_örneği": int(sec.size),
+            "eşik": esik, "taşan_basamak": int(n_v) - esik,
+            "kod_uzayı": int(n_v) ** int(basamak), "sözlük": int(sozluk)}
 
 
 def nokta_kaybi(lifliler: Sequence[np.ndarray], hedefler: Sequence[int],

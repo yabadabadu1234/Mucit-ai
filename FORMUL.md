@@ -26,7 +26,8 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
     Basamak     = TabanAçılımı(Belirteç, VeriLifi, BasamakSayısı)
     Kodlanmış[satır, sütun] = 1 eğer sütun = Basamak[satır], değilse 0
 
-    Örnek       = (Bağlam, Hedef, Cins)                    Cins ∈ {ARC, sözlü}
+    Örnek       = (Bağlam, Hedef, Cins, Makam)             Cins ∈ {ARC, sözlü}
+                  Makam = Hedef basamağın grup içindeki yeri, 0..BasamakSayısı−1
     Pencere     = ikininkuvveti(enuzunGörev × BasamakSayısı) = 65536
 
 ---
@@ -102,7 +103,7 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
              Hata_alan[makam..tertip],
              Hata_kademe[1..kademeGörevi],
              Hata_zırh[demet, betti, kohomoloji, homotopi, nizam],
-             Hata_kaideHalkası,
+             Hata_kaideHalkası, Hata_taşma,
              Hata_nokta, Hata_uzay, Hata_kategori, Hata_tip,
              Hata_çevrim, Hata_tenakuz, Hata_gedik,
              Hata_monogami, Hata_engel )
@@ -123,6 +124,11 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
     Hata_gedik    = Borç(Usul, KaranlıkÇevrimler)
     Hata_monogami = enbüyük(0, Dolaşıklık(bütün) − Toplam(Dolaşıklık(ikili)))
     Hata_engel    = Engellenme(Yazmaç, SürekliÖlçüm)
+
+    Eşik_taşma    = tavan(n_vocab / VeriLifi^(BasamakSayısı−1))       = 4
+    Hata_taşma    = ortalama over {örnek : Makam = BasamakSayısı−1}
+                    of Σ(basamak ≥ Eşik_taşma) Dağılım[basamak]
+                    ← üst makamda Eşik_taşma ve üstü basamak DAİMA taşar
 
 ### Kaide halkası -- modelin kendi hipotezlerinin teftişi
 
@@ -173,7 +179,9 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
         Parametre ← Adım(Parametre, Küme)
         dur eğer HudutTemiz(Küme)
 
-    HudutTemiz = (Tenakuz = 0) ve (Kısırdöngü = 0) ve (Mantıksızlık = 0)
+    HudutTemiz    = (Tenakuz = 0) ve (Kısırdöngü = 0) ve (Mantıksızlık = 0)
+    Mantıksızlık  = PariteTaşması + BelirteçTaşması          ← İKİ taşma
+    Nispet_mantık = (1 − PariteTaşması) × (1 − BelirteçTaşması)
 
     MünasebetHaritası[a, b] += Nispet(Küme)     her a, b ∈ Bağlam(Küme)
 
@@ -188,11 +196,13 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
 
     Dağılım[t]   = Toplam(|Sektör(kelâm)[parça t]|²),  normalize
     Budanmış     = Buda(Dağılım, Hafıza.cerh)
-    Basamak_yeni = VakumKıvılcımı(Budanmış)               ← sıcaklık örneklemesi DEĞİL
+    Basamak_yeni = enbüyük(VakumKıvılcımı(Budanmış))     ← sıcaklık örneklemesi DEĞİL
+                   Ayna YOKSA düz enbüyük olur ve üretim SABİT NOKTAYA düşer
     Bağlam       ← Bağlam + Basamak_yeni
 
     Belirteç = TabandanTopla(Basamak[5'erli], VeriLifi)
     Cevap    = tiktoken⁻¹(Belirteç eğer Belirteç < n_vocab)
+               taşan Belirteç SUSTURULMAZ, sayılır (ferman 2-L)
 
     Sükût eğer AlanDeğeri(sükût) > eşik  ya da  Şüphe = teâruz
 
@@ -210,6 +220,8 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
     Klonlanamazlık  = ihlâl edildi        →  gerçek kuantum donanımında koşmaz
 
     Cevap(mihenk) = ""                     boş
-        çünkü  VeriLifi^BasamakSayısı = 16⁵ = 1048576  >  n_vocab = 200019
-        yâni   %81 kimlik sözlük dışına düşer
-        bu, Hata'nın mantıksızlık huddududur ve düşmesi beklenir
+        ölçüldü: geçersiz 1801/1801 = %100  (kestirdiğim %81 değil)
+        sebep 1: mihenk Ayna'yı geçirmiyordu → düz enbüyük → sabit nokta
+        sebep 2: külliyatta Makam daima (Pencere mod BasamakSayısı) idi,
+                 yâni ÜST BASAMAK hiç hedef olmuyordu
+        ikisi de düzeltildi; Hata_taşma artık kefe VE hudut çarpanıdır

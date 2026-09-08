@@ -93,6 +93,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from nefs.mukayese import mukayese_metni
         from nefs.galois import faz_borcu_metni
         from ogrenme.optimize import optimize_metni
+        from nefs.belirtec import belirtec_metni
         from nefs.munasebet import munasebet_metni
         from nefs.keyfiyet import keyfiyet_metni
         from main.kulliyat import kulliyat_beyani
@@ -109,6 +110,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               (kulli.get("mihenk") or {}).get("metin", ""), "",
               faz_borcu_metni(kulli.get("faz_borcu") or {}), "",
               optimize_metni(kulli.get("eniyileme") or {}), "",
+              belirtec_metni(kulli.get("belirteç") or {}), "",
               mukayese_metni(kulli.get("mukayese") or {}), "",
               munasebet_metni(kulli["münasebet"]), "",
               keyfiyet_metni(kulli["keyfiyet"]), "",

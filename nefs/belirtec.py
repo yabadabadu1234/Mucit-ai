@@ -167,8 +167,35 @@ def belirtecle(metin, ad: str = "o200k_base") -> List[int]:
 
 def coz(belirtecler: Sequence[int], ad: str = "o200k_base") -> str:
     _SAYAC["coz"] += 1.0
-    return belirtec_kapisi(ad).decode(
-        [int(x) % int(belirtec_sozlugu(ad)) for x in belirtecler])
+    n = int(belirtec_sozlugu(ad))
+    ham = [int(x) for x in belirtecler]
+    tasan = [t for t in ham if not (0 <= t < n)]
+    _SAYAC["cozulen"] = _SAYAC.get("cozulen", 0.0) + float(len(ham))
+    _SAYAC["tasan"] = _SAYAC.get("tasan", 0.0) + float(len(tasan))
+    return belirtec_kapisi(ad).decode([t for t in ham if 0 <= t < n])
+
+
+def belirtec_metni(b: Dict[str, Any]) -> str:
+    if not b:
+        return "  BELİRTEÇ: beyan yok -- ölçü kırmızı (ferman 5)"
+    n = float(b.get("taşma_nispeti", 0.0))
+    hal = ("taşma yok" if n <= 0.0 else
+           "⚠ HER KİMLİK TAŞIYOR -- üretim kod uzayının dışında"
+           if n >= 0.999 else "⚠ taşma var")
+    return "\n".join([
+        "  BELİRTEÇ -- TEK KAPI TİKTOKEN (ferman 1-N)",
+        "    kodlama            : %s   (açık: %s)"
+        % (b.get("kodlama"), b.get("açık")),
+        "    sözlük (n_vocab)   : %d   ← yoklandı, elle yazılmadı"
+        % int(b.get("sözlük", 0)),
+        "    kodlanan belirteç  : %d   (çağrı %d)"
+        % (int(b.get("belirteç", 0)), int(b.get("kodlama_çağrısı", 0))),
+        "    KOD UZAYINA TAŞMA (ferman 1-I üçüncü hudut, 2-L):",
+        "      çözülen kimlik   : %d" % int(b.get("çözülen_kimlik", 0)),
+        "      taşan kimlik     : %d   nispet %.4f  → %s"
+        % (int(b.get("taşan_kimlik", 0)), n, hal),
+        "      Taşan kimlik artık SUSTURULMUYOR (evvelce sözlük",
+        "      mertebesine göre katlanıyordu -- ferman 5 ihlâli); sayılıyor."])
 
 
 def belirtec_beyani(ad: str = "o200k_base") -> Dict[str, Any]:
@@ -179,4 +206,8 @@ def belirtec_beyani(ad: str = "o200k_base") -> Dict[str, Any]:
             "çözme_çağrısı": int(_SAYAC["coz"]),
             "belirteç": int(_SAYAC["belirtec"]),
             "bpe_yerleştirme": int(_SAYAC["yerlestirme"]),
+            "çözülen_kimlik": int(_SAYAC.get("cozulen", 0.0)),
+            "taşan_kimlik": int(_SAYAC.get("tasan", 0.0)),
+            "taşma_nispeti": float(_SAYAC.get("tasan", 0.0)
+                                   / max(_SAYAC.get("cozulen", 0.0), 1.0)),
             "önbellek": onbellek_dizini()}

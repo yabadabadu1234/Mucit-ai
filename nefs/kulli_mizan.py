@@ -45,6 +45,8 @@ class MizanAyari:
     lam_meleke: float = 0.5
     lam_zirh: float = 0.5
     lam_kaide: float = 0.5
+    lam_tasma: float = 0.5
+    basamak: int = 0
     meleke_olcumu: int = 1
     usul_acik: int = 1
     usul_haddi: float = 0.0
@@ -345,6 +347,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     lifliler: List[np.ndarray] = []
     hedefler: List[int] = []
     cinsler: List[str] = []
+    makamlar: List[int] = []
     baglamlar: List[Sequence[int]] = []
     sektor: List[Tuple[int, int]] = []
     veri = list(veri)
@@ -357,15 +360,15 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     for bas in range(0, len(veri), B):
         dilim = veri[bas:bas + B]
         _bag = [ornek_bol(o) for o in dilim]
-        _boy = {len(b) for b, _h, _c in _bag}
+        _boy = {len(b) for b, _h, _c, _m in _bag}
         assert len(_boy) == 1, (
             "bağlam boyu tek olmalı, %s bulundu -- cins başına boy: %s. "
             "İki cins iki boy demek, ferman 1-R'nin yasakladığı iki "
             "motordur."
             % (sorted(_boy),
-               sorted({(c, len(b)) for b, _h, c in _bag})))
+               sorted({(c, len(b)) for b, _h, c, _m in _bag})))
         E = np.stack([belirtecleri_kodla(list(bag), kubit, kubit)
-                      for bag, _h, _c in _bag])
+                      for bag, _h, _c, _m in _bag])
         if E.shape[0] < B:
             E = np.concatenate(
                 [E, np.repeat(E[-1:], B - E.shape[0], axis=0)], axis=0)
@@ -388,7 +391,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
             _H = V[:, :, -1]
         else:
             raise ValueError("hal_kaynagi bilinmiyor: %r" % (_hk,))
-        for t, (bag, hedef, cins) in enumerate(_bag):
+        for t, (bag, hedef, cins, makam) in enumerate(_bag):
             lifliler.append(M_hepsi[t])
             haller.append(np.asarray(_H[t], complex))
             hb = int(hedef)
@@ -398,6 +401,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
                 % (hb, kubit))
             hedefler.append(hb)
             cinsler.append(str(cins))
+            makamlar.append(int(makam))
             baglamlar.append(list(bag))
         if not sektor:
             sektor = [q.y.sektor(ad) for ad, _ in q.ayar.kulli_alanlar]
@@ -421,7 +425,7 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
         "ileri geçiş %d örnek aldı, %d netice verdi -- örnek kayboldu"
         % (len(veri), len(haller)))
     return {"hal": haller, "lifli": lifliler, "hedef": hedefler,
-            "cins": cinsler, "bağlam": baglamlar, "sektör": sektor,
+            "cins": cinsler, "makam": makamlar, "bağlam": baglamlar, "sektör": sektor,
             "okumalar": okumalar, "ΔS": dS, "alan": alan_okumasi,
             "kesme": float(kesme_kesri)}
 
@@ -490,11 +494,14 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         "ceza ödüle dönmüş demektir" % L_hod)
     L_hod = max(0.0, L_hod)
 
-    from .tabakali_mizan import kategori_kaybi, nokta_kaybi
+    from .tabakali_mizan import kategori_kaybi, nokta_kaybi, tasma_kaybi
     kat = kategori_kaybi(ileri["hal"], azami=int(a.cevrim_sayisi) * 4,
                          tohum=int(a.tohum))
     nok = nokta_kaybi(ileri["lifli"], ileri["hedef"], n_v,
                       cinsler=ileri.get("cins"))
+    tas = tasma_kaybi(ileri["lifli"], ileri.get("makam") or [], n_v,
+                      int(sozluk), int(a.basamak))
+    L_tas = float(tas["kayıp"])
     L_kat = float(kat["kayıp"])
     L_nok = float(nok["kayıp"])
 
@@ -546,6 +553,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     dk = _hipotez_halkasi(ileri["hal"], ileri.get("cins"),
                           (_vec[0] if _vec else None))
     _bilesen.append(("kaide_halkası", float(dk["Δ_K"]), float(a.lam_kaide)))
+    _bilesen.append(("taşma", L_tas, float(a.lam_tasma)))
     from .zirh import zirhla
     _H_zirh = np.real(rho_model).astype(float)
     _z_ham, _z = zirhla(_H_zirh, ZirhAyari())
@@ -632,6 +640,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     if ne != "döküm":
         raise ValueError("mizan kipi bilinmiyor: %r" % (ne,))
     return {"kayıp": float(kayip), "rezonans": L_rez, "sadakat": F,
+            "taşma": L_tas, "taşma_dökümü": tas,
             "nokta": L_nok, "nokta_isabet": float(nok["isabet"]),
             "nokta_cins": nok.get("cins", {}),
             "kategori": L_kat, "kategori_ihlâl": int(kat["ihlâl"]),
