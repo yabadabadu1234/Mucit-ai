@@ -35,18 +35,30 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
 
 ## 2. YAZMAÇ
 
-    Karo    = ikininkuvveti(√(Pencere / VeriLifi))          öyle ki Boyut ≥ Pencere
-    Boyut   = VeriLifi × Karo × Karo = 16 × 64 × 64 = 65536 = Pencere
-              ← yazmaç BAĞLAM KADARDIR (ferman 2-M); önbellek lifi tayin etmez
+    Karo    = ikininkuvveti(√Pencere)                     öyle ki Yer ≥ Pencere
+    Yer     = Karo × Karo                                 BASAMAK BAŞINA yer
+    Boyut   = VeriLifi × Yer
     Yazmaç  = Genlik[yığın, Boyut]                        karmaşık, TAM tutulur
+
+    Seviye(basamak, mevki) = basamak × Yer + mevki
+              ← 0. EKSEN BASAMAKTIR, adımı Yer'dir; mevki kalan eksenlerdedir.
+                Yazmaç bağlam kadardır (ferman 2-M) fakat hadd basamak
+                başına yerdedir, Boyut'ta değil (ferman 2-O).
+
     Sektör(ad) = Genlik[başlangıç(ad) : bitiş(ad)]
     AlanDeğeri(ad) = Toplam(|Sektör(ad)|²)
 
     ad ∈ {makam, mizan, tenakuz, tasdik, sükût, nakz, kelâm, kaide,
           orak, gaye, tertip}
 
+    SEKTÖR CEVABIN EVİ DEĞİLDİR. Sektör bitişik bir dilimdir, basamak
+    ekseni ise Yer adımıyla yazmacın tamamına yayılır; ikisi ayrı
+    koordinattır. Cevap YALNIZ basamak ekseninin marjinalinden okunur
+    (§ Hâl), sektörden değil. Sektör yalnız küllî ölçüleri taşır.
+
 ### Belirtecin genliğe girişi -- Rijndael otomorfizmi
 
+    yuva ∈ Seviye(Belirteç, 0 … Yer−1)            ← belirtecin KENDİ basamak bloğu
     Zarf(yuva)   = 1 / (1 + (yuva − orta)² / genişlik)              ← rasyonel
     Çeyrek       = (1, i, −1, −i)
     Genlik[yuva] = Zarf(yuva) × Çeyrek[ SBox((yuva + Belirteç) mod 256) mod 4 ]
@@ -75,13 +87,21 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
     Yazmaç₀ = Harman(Yerleştir(Kodlanmış))
 
     Yerleştir(Kodlanmış):
-        Genlik      = EşitÜstüsteBinme                     her seviye 1/√Boyut
-        Açı[yuva]   = −2π · (Basamak[yuva] + 1) / VeriLifi   yuva = 0 … n_satır−1
-        FazDefteri ← FazDefteri + Açı                      ← HER basamak KENDİ seviyesine
+        mevki ∈ 0 … n_satır−1,   basamak = Basamak[mevki]
+        Genlik[ Seviye(basamak, mevki) ] = 1                 ← GENLİĞE
+        Açı   [ Seviye(basamak, mevki) ] = −2π (basamak + 1) / VeriLifi
+        FazDefteri ← FazDefteri + Açı                        ← FAZA
+        Genlik = Normalize(Genlik)
+
+    Bağlam HEM GENLİĞE HEM FAZA girer. Yalnız faza girseydi cevaba hiç
+    ulaşmazdı: Hâl |Genlik|² okur, faz ise büyüklüğü değiştirmez.
 
     Bağlam bir skalere EZİLMEZ: son basamak ilk basamak kadar ağırlık taşır.
+    DOLDURMA YOKTUR: n_satır neyse yazmaç o kadardır (ferman 2-O).
 
-    Harman(Yazmaç) = ⨀(kademe=1..3, lif, bitdüzlemi) Dönme(küçükAçı(tohum))
+    Harman(Yazmaç) = ⨀(kademe, lif, bitdüzlemi) Dönme(Açı(Parametre))
+              ← açılar TOHUMDAN değil PARAMETREDEN gelir; böylece tâlim
+                faz→genlik yolunu kendi açar ve genişletir.
 
     Yazmaç_k = Vicdan(Meleke_k(Yazmaç_{k−1}, Parametre))        k = 1 … 45
 
@@ -102,8 +122,11 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
 
 ### Hâl -- hem cevap hem kaide hipotezi
 
-    Satırlar = YenidenŞekillendir(Yazmaç_son, VeriLifi, Boyut / VeriLifi)
-    Hâl      = Normalize(Toplam(Satırlar, son eksen))
+    Satırlar = YenidenŞekillendir(Yazmaç_son, VeriLifi, Yer)
+    Hâl      = Normalize(Toplam(|Satırlar|², son eksen))
+
+    Hâl BASAMAK EKSENİNİN MARJİNALİDİR. Yerleştir hangi eksene yazdıysa
+    Hâl o ekseni okur; ikisi aynı eksendir ve kesişimleri TAMDIR.
 
 ---
 
@@ -204,7 +227,7 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
 
 ## 7. KONUŞMA -- HER İKİ KAPIDA DA
 
-    Dağılım[t]   = Toplam(|Sektör(kelâm)[parça t]|²),  normalize
+    Dağılım      = Hâl(İleriGeçiş(Yerleştir(Bağlam)))    ← basamak marjinali
     Budanmış     = Buda(Dağılım, Hafıza.cerh)
     Basamak_yeni = enbüyük(VakumKıvılcımı(Budanmış))     ← sıcaklık örneklemesi DEĞİL
                    Ayna YOKSA düz enbüyük olur ve üretim SABİT NOKTAYA düşer
@@ -217,6 +240,10 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
     Sükût eğer AlanDeğeri(sükût) > eşik  ya da  Şüphe = teâruz
 
     Tâlim ile Çıkarım arasındaki TEK fark:  çıkarımda Adım koşmaz.
+
+    ÜRETİM YOLU TEKTİR (ferman 1-H). İkinci bir üretim yolu (kendi
+    yazmacını kuran, parametresiz, bağlamı (t+1)/(k+1) diye tek skalere
+    ezen) vardı ve kesildi; onunla beraber motor seçimi de kalktı.
 
     Mihenk: her ~300 saniyede  Cevap(Parametre_şimdiki, sabitSuâl)  →  kütük
 
@@ -235,3 +262,15 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
         sebep 2: külliyatta Makam daima (Pencere mod BasamakSayısı) idi,
                  yâni ÜST BASAMAK hiç hedef olmuyordu
         ikisi de düzeltildi; Hata_taşma artık kefe VE hudut çarpanıdır
+
+    Cevap(mihenk) = " cei ёсць ёсць ёsць …"   hezeyan, sekizde yedisi tekrar
+        ölçüldü: geçersiz 0/8, ayrı basamak 2, kabul 1/1, adım‖9,4e−1‖
+        evvelki koşuda aynı yerde: geçersiz 8/8, ayrı basamak 1 SABİT NOKTA
+        SABİT NOKTANIN SEBEBİ BULUNDU VE KESİLDİ: Yerleştir 0. basamağa
+            yazıyor, Hâl ise kelâm sektöründen (v ≈ 0,378…0,486·VeriLifi)
+            okuyordu -- İKİ KOORDİNAT, KESİŞİM BOŞ. Artık ikisi de
+            basamak eksenidir.
+        NE İDDİA EDİLMİYOR: cevabın MAKUL olduğu. Cevap hâlâ hezeyandır;
+            iddia edilen tek şey yolun açıldığıdır (adım 1'de, hiç
+            eniyileme koşmadan cevabın değişmesi bunun delilidir).
+        Küme(temiz) = 0                        üç hudut henüz sönmedi
