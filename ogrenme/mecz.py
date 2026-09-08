@@ -331,9 +331,9 @@ def mecz_beyani() -> Dict[str, float]:
 def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
     b = b or mecz_beyani()
     s = ["=== MECZ -- BEŞ MEMURİYET (ferman 2-P) ===", "",
-         "  tur / kayıp çağrısı : %d / %d   (tur başına %.2f çağrı)"
-         % (int(b["tur"]), int(b["çağrı"]), 1.0 / max(b["çağrı_başına_tur"],
-                                                      1e-9)),
+         "  tur / kayıp çağrısı : %d / %d   (tur başına %s çağrı)"
+         % (int(b["tur"]), int(b["çağrı"]),
+            ("%.2f" % (b["çağrı"] / b["tur"])) if b["tur"] else "—"),
          "  kabul               : %d / %d   (%.1f%%)"
          % (int(b["kabul"]), int(b["tur"]), 100.0 * b["kabul_nispeti"]),
          "  adım normu toplamı  : %.4e" % b["adım_normu"],
