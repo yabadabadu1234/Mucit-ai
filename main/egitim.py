@@ -16,8 +16,7 @@ from typing import Dict, Optional, Sequence, Tuple
 import numpy as np
 
 from nefs.musahede import gorevleri_getir
-from ogrenme.optimize import OptimizeAyari
-from ogrenme.optimize import hoca_egit, optimize_beyani
+from ogrenme.mecz import MeczAyari, mecz_egit, mecz_beyani
 from main import hazine
 from nefs.kulli_mizan import (MizanAyari, kulli_mizan,
                               mizan_cetveli)
@@ -487,21 +486,18 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             nobet.yokla(p, kayip=float(t["kayıp"]),
                         ham=float(t.get("kayıp_ham", 0.0)),
                         kume=len(kume), kume_kimlik=_kume_kimlik(kume),
-                        eniyileme=optimize_beyani(),
+                        eniyileme=mecz_beyani(),
                         adim=_sayac["çağrı"])
         return out
 
     def _eniyile(p_, kume):
-        o = OptimizeAyari(
-            ad=ayar.ad, tur=1, yaricap=float(ayar.yaricap),
-            gcl_nokta_sayisi=max(8, int(ayar.altuzay_ornek)),
-            yon_sayisi=int(ayar.altuzay_ornek), blok=int(ayar.blok),
-            sesli=False, tohum=ayar.tohum)
-        o.tunel_acik = True
-        o.vekil_acik = False
         n0 = _sayac["çağrı"]
         _kume["v"] = list(kume)
-        rr = hoca_egit(kayip_p, np.asarray(p_, float), o)
+        rr = mecz_egit(nefs, kayip_p, np.asarray(p_, float),
+                       kume=list(kume), sozluk=int(ayar.sozluk),
+                       ayar=MeczAyari(ad=ayar.ad,
+                                      tur=max(1, int(ayar.altuzay_ornek)),
+                                      tohum=int(ayar.tohum)))
         return np.asarray(rr["p"], float), _sayac["çağrı"] - n0
 
     def _olc(p_, kume):
@@ -692,7 +688,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "sadakat": sad, "son_sadakat": son_sadakat,
             "mukayese": mukayese,
             "mihenk": nobet.beyan(p_yildiz),
-            "eniyileme": optimize_beyani(),
+            "eniyileme": mecz_beyani(),
             "faz_borcu": q_son.y.faz_borcu(),
             "konuşma": konusma, "münasebet": munasebet_beyani(),
             "keyfiyet": keyfiyet_beyani(),

@@ -1141,6 +1141,80 @@ fakat hadd bu kadardır ve daraltılmaz.
 
 ---
 
+## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
+
+> *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...
+> **bir daha yön arama saçmalığına düşeriz, öyle şey yok**, tek seferde
+> analitik çözüm lâzım bize, o analitiğin de kuantum hız imkânından
+> faydalanması lâzım... **Sadece bir motor körü körüne yönlendirmesin
+> bizi, ya da tüm motorların dediği belli bir ağırlıkla toplanıp bizi
+> oraya yönlendirmesin**, yâni bu iş **artık** sadece bir yönlenme
+> işinden çıksın... Yâni **meclis değil mecz, vazife dağılımı**."*
+
+### İLGA EDİLEN
+
+Adım atılmadan evvel harcanan **18 kör çağrı** kaldırılmıştır:
+`V_ilk` (1), `_had_yaricap` (3 yarıçap × 3 yön = 9), `_toptan_yon`
+(4 ortalama × 2 uç = 8). Bunlar durumu **kara kutu** zanneder: elde
+`ψ`, `ρ` ve üreteçler dururken dışarıdan el feneri tutmaktır.
+**Türevden de beterdir**, çünkü türev hiç değilse analitiktir.
+
+### İKAME EDİLEN: TEK SEFERDE ANALİTİK, KUANTUM HIZIYLA
+
+* **YOL İNTEGRALİ ASLI.** Yön **tek tek aranmaz**; bütün yönler aynı
+  anda denenir. `Eğim_a = 2·Im⟨ψ|Üreteç_a · Hata|ψ⟩` bütün `a` için
+  **tek hamlede** hesaplanır. Kayıp çağrısı: **sıfır**.
+* **TÜREV GERİ GELDİ, FAKAT TEK BAŞINA DEĞİL.** Ferman 1-V'nin
+  *"türev almıyoruz"* hükmü **yön** kanadında kalkmıştır: türev
+  analitik olarak alınır ve **yanına yardımcılar** verilir. Kaybın
+  **vektör** kalması (ferman 1-U, 1-V) aynen bâkîdir; kalkan şey
+  türev yasağı değil, **kör taramadır**.
+
+### VAZİFE DAĞILIMI -- BEŞ MEMURİYET, HER BİRİ AYRI CİNS
+
+    EĞİM     "aşağı gideceksek böyle gidelim"   → yön verir
+    ÇUKUR    "burası minimum muymuş bakalım"    → durak mı, söyler
+    DUVAR    "şuraları duvarlı, vakit kaybetme" → koordinat eler
+    VADİ     "şu vadiyi bir atlatalım"          → engeli aşırtır
+    NAKİL    "bizi çok farklı bir yere taşısın" → sıçratır
+
+### MECZ NE DEMEK, MECLİS NE DEMEK
+
+* **MECLİS (yasak).** Beş memurun dediğini bir ağırlıkla toplayıp
+  tek bir yöne inmek. Bu ferman 1-U'nun yasakladığı sandalyedir:
+  toplanınca hangi memurun ne dediği kaybolur.
+* **MECZ (asıl).** Her memurun **çıktısının cinsi başkadır**, o hâlde
+  toplanamazlar: DUVAR bir **maskedir** (eler, ağırlık vermez), ÇUKUR
+  bir **hükümdür** (dur yahut yürü), EĞİM bir **yöndür**, VADİ ile
+  NAKİL adımın **yerine geçer**. Bunlar ferman 2-C'nin karaciğeridir:
+  **her vazife ayrı bir şartlı daldır**, hepsi tek düz gövdeye
+  tıkılmaz.
+
+### YARIÇAP FUBINI-STUDY İZİNDENDİR -- VE TARAMA RUHSATI DEĞİLDİR
+
+> *"Fubini-Study izinden olsun ama tekrar ediyorum, bunlar vazife
+> dağılımıdır. **Yarıçap belirledin diye oradaki her şeyi tarayacaksın
+> diye bir şey yok**."*
+
+    Yarıçap = Keyfiyet(üç hudut) / √iz(Fubini-Study metriği)
+
+* Sabit `eta`, sabit kelepçe (`clamp`) **yazılamaz** (ferman 1-J):
+  pay keyfiyetin ölçülen nispetidir, payda durumun kendi metriğidir.
+* **YARIÇAP BİR TARAMA DAVETİ DEĞİLDİR.** Yarıçap bulununca o
+  yarıçaptaki noktalar taranmaz; yarıçap yalnız **adımın boyudur**.
+  Hat araması (Gauss-Chebyshev-Lobatto düğümleri dâhil) bu ferman
+  ile **ilga edilmiştir**.
+
+### HER KEFEYE OPERATÖR
+
+Mizanın her kefesi için yazmaç üstünde bir **operatör** kurulur ki
+yön mizanın **tamamından** analitik çıksın. Operatörü ispatlanamayan
+kefe **uydurulmaz** (ferman 5): o kefe yönü kurmaz fakat **hükmü
+verir** -- adımın kabulünde tam mizan vektörü konuşur ve hiçbir cevher
+düşmez (ferman 1-S).
+
+---
+
 ## ▓▓▓ 3. FERMAN: TERKİP ÜÇ ADIMDIR ▓▓▓
 
 1. Her dosya **kendi içinde** terkip edilir.
