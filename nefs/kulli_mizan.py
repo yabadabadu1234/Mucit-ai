@@ -357,8 +357,15 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     dS: Dict[int, float] = {}
     alan_okumasi: Dict[str, float] = {}
     kesme_kesri = 1.0
-    for bas in range(0, len(veri), B):
-        dilim = veri[bas:bas + B]
+    _grup: Dict[int, List[Any]] = {}
+    for _o in veri:
+        _grup.setdefault(len(_o[0]), []).append(_o)
+    dilimler: List[List[Any]] = []
+    for _boy in sorted(_grup):
+        _g = _grup[_boy]
+        for _b in range(0, len(_g), B):
+            dilimler.append(_g[_b:_b + B])
+    for dilim in dilimler:
         _bag = [ornek_bol(o) for o in dilim]
         _boy = {len(b) for b, _h, _c, _m in _bag}
         assert len(_boy) == 1, (

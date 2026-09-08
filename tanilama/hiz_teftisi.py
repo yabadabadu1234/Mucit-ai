@@ -63,9 +63,13 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     E = belirtecleri_kodla(list(veri[0][0]), a.veri_lifi,
                            a.veri_lifi)
     t = 0.0
+    _boy = {}
+    for _o in veri:
+        _boy.setdefault(len(_o[0]), []).append(_o)
+    _esit = _boy[max(_boy, key=lambda k: len(_boy[k]))]
     Ey = np.stack([belirtecleri_kodla(list(bag), a.veri_lifi,
                                           a.veri_lifi)
-                   for bag, _h, _c, _m in (ornek_bol(o) for o in veri)])
+                   for bag, _h, _c, _m in (ornek_bol(o) for o in _esit)])
     for _ in range(int(tekrar)):
         _, s = _saat(nefs.idrak_et, Ey)
         t += s
