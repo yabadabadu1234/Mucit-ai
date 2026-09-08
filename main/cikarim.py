@@ -98,7 +98,7 @@ def _motor(ayar=None, ham: bool = False):
     from nefs.melekeler import QNefs
     a = ayar or KISA_CPU
     nefs = QNefs(a.tohum, a.qayar())
-    nefs.idrak_et(np.zeros((2, a.veri_lifi)))
+    nefs.idrak_et(np.eye(2, a.veri_lifi))
     from nefs.kulli_kayip import kademe_parametreleri_ac
     kademe_parametreleri_ac(nefs.p)
     yuk = hazineden_yukle(nefs, a, ham=ham)

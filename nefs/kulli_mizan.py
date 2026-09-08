@@ -774,7 +774,7 @@ def rapor(profil: str = "kısa") -> str:
                     taban=int(ayar.veri_lifi),
                     basamak=int(getattr(ayar, "belirtec_basamak", 0)))
     nefs = QNefs(ayar.tohum, ayar.qayar())
-    nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
+    nefs.idrak_et(np.eye(2, ayar.veri_lifi))
     haf = Hafiza(kapasite=64)
 
     t0 = time.perf_counter()

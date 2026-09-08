@@ -1099,6 +1099,17 @@ class QNefs:
         self.gaye = bool(gaye)
         self.sadakat = bool(sadakat)
 
+    HARMAN_OLCEGI = 0.6
+
+    def harman_acilari(self, q) -> np.ndarray:
+        lif = tuple(int(x) for x in q.y.ayar.lif)
+        kademe = max(1, int(getattr(self.ayar, "harman_kademesi", 1)))
+        n = kademe * sum(max(1, int(x).bit_length() - 1) for x in lif)
+        anahtar = "harman/%d" % int(n)
+        ham = (self.p.al(anahtar, n) if isinstance(self.p, QParametre)
+               else self.p.v(anahtar, n))
+        return self.HARMAN_OLCEGI * np.asarray(ham, float)
+
     def idrak_et(self, E: np.ndarray, bec: bool = True,
                  yigin: int = 0, tikaniklik: float = 0.0,
                  olcum: Optional[bool] = None) -> QYazmac:
@@ -1114,7 +1125,7 @@ class QNefs:
         q.kodla(E)
         if tikaniklik:
             ortu(ne="kapı", q=q, h1=float(tikaniklik))
-        q.harman()
+        q.harman(teta=self.harman_acilari(q))
         okumalar: Dict[int, Dict[str, float]] = {}
         dS: Dict[int, float] = {}
         if olcum:

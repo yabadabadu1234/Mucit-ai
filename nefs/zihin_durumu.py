@@ -73,20 +73,21 @@ class QYazmac:
         assert int(azami[0]) == sozluk, (
             "ilk lif veri lifidir, sözlükle bir olmalı: %d ≠ %d"
             % (azami[0], sozluk))
-        d_azami = int(np.prod(azami))
-        assert int(n_satir) <= d_azami, (
-            "bağlam azamî hududu aşıyor: %d basamak, hadd %d seviye "
-            "(ferman 2-O)" % (int(n_satir), d_azami))
+        yer_azami = int(np.prod(azami[1:]))
+        assert int(n_satir) <= yer_azami, (
+            "bağlam azamî hududu aşıyor: %d basamak, basamak başına hadd "
+            "%d yer (ferman 2-O)" % (int(n_satir), yer_azami))
         yuva = int(a.kulli_yuva)
         K = 2
-        while sozluk * K * K < int(n_satir) or K * K < yuva:
+        while K * K < int(n_satir) or K * K < yuva:
             K *= 2
-        K = min(K, int(azami[1]))
+        K = min(K, int(math.isqrt(yer_azami)))
         lif = (sozluk, K, K)
         d = int(np.prod(lif))
-        assert d >= int(n_satir), (
-            "yazmaç bağlamı taşımıyor: d=%d < bağlam=%d (ferman 2-M)"
-            % (d, int(n_satir)))
+        assert K * K >= int(n_satir), (
+            "yazmaç bağlamı taşımıyor: basamak başına %d yer < bağlam=%d "
+            "-- her basamak kendi seviyesini ister (ferman 2-M)"
+            % (K * K, int(n_satir)))
         self.y = QuditYazmac(
             QuditAyar(d=d, lif=lif, yigin=int(a.yigin),
                       kulli_alanlar=a.kulli_alanlar,
@@ -215,18 +216,32 @@ class QYazmac:
         n_sat = int(E.shape[1])
         if E.shape[0] != B:
             E = E[np.arange(B) % E.shape[0]]
+        assert sozluk == int(self.y.ayar.lif[0]), (
+            "bağlam basamak eksenine yazılır: veri_lifi %d, lif[0] %d -- "
+            "ikisi aynı eksen olmalı (ferman 1-M)"
+            % (sozluk, int(self.y.ayar.lif[0])))
         Ez = E.reshape(B, n_sat, -1)
         bas = np.argmax(Ez, axis=-1) % sozluk
         dolu = Ez.max(axis=-1) > 0.0
-        assert n_sat <= d, (
-            "bağlam yazmaca sığmıyor: %d basamak, %d seviye -- yazmaç "
-            "bağlam kadar olmalı (ferman 2-M)" % (n_sat, d))
-        self.y.superpozisyon()
-        t = np.zeros((B, d), float)
-        t[:, :n_sat] = np.where(
-            dolu, (-2.0 * math.pi / float(sozluk)) * (bas.astype(float)
-                                                      + 1.0), 0.0)
-        self.y.faz(t)
+        yer = d // sozluk
+        assert n_sat <= yer, (
+            "bağlam yazmaca sığmıyor: %d basamak, basamak başına %d yer -- "
+            "yazmaç bağlam kadar olmalı (ferman 2-M)" % (n_sat, yer))
+        seviye = bas * yer + np.arange(n_sat)[None, :]
+        genlik = np.zeros((B, d), float)
+        faz = np.zeros((B, d), float)
+        yigin = np.repeat(np.arange(B), n_sat)
+        sec = dolu.reshape(-1)
+        genlik[yigin[sec], seviye.reshape(-1)[sec]] = 1.0
+        faz[yigin[sec], seviye.reshape(-1)[sec]] = (
+            (-2.0 * math.pi / float(sozluk))
+            * (bas.reshape(-1)[sec].astype(float) + 1.0))
+        assert bool(dolu.any()), (
+            "bağlamın hiçbir basamağı dolu değil -- yazmaca yazacak şey "
+            "yok, norm sıfır çıkardı (ferman 5)")
+        self.y.psi = genlik.astype(self.y.ayar.tip)
+        self.y.normalize()
+        self.y.faz(faz)
         self.y.iz.not_dus("kodla", "dolu %d / %d seviye"
                           % (int(dolu.sum() // max(B, 1)), d))
 
@@ -240,13 +255,21 @@ class QYazmac:
     def harman(self, kademe: Optional[int] = None, teta=None,
              kulli_dahil: bool = True) -> None:
         k = int(kademe if kademe is not None else self.ayar.harman_kademesi)
-        r = np.random.default_rng(int(self.ayar.tohum) + 17)
+        acilar = (None if teta is None
+                  else np.asarray(teta, float).reshape(-1))
+        r = (np.random.default_rng(int(self.ayar.tohum) + 17)
+             if acilar is None else None)
+        s = 0
         for _ in range(max(1, k)):
             for f, n in enumerate(self.y.ayar.lif):
                 if not kulli_dahil and f == len(self.y.ayar.lif) - 1:
                     continue
                 for alt in range(max(1, int(n).bit_length() - 1)):
-                    a = float(r.normal(scale=0.1))
+                    if acilar is None:
+                        a = float(r.normal(scale=0.1))
+                    else:
+                        a = float(acilar[s % acilar.size])
+                        s += 1
                     c, sn = np.cos(a), np.sin(a)
                     self.y.bit_kapisi(f, alt,
                                       np.array([[c, -sn], [sn, c]], complex))

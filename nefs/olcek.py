@@ -114,14 +114,22 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     sigan = float(sigan_nispet(pencere // max(1, int(_basamak))))
 
     yuva = sum(n for _, n in QAyar.kulli_alanlar)
-    K = _ikinin_kuvveti(math.sqrt(float(PENCERE_HADDI) / float(V)), 4)
-    while V * K * K < PENCERE_HADDI or K * K < yuva:
+    K_hadd = _ikinin_kuvveti(math.sqrt(float(PENCERE_HADDI)), 4)
+    while K_hadd * K_hadd < PENCERE_HADDI:
+        K_hadd *= 2
+    hukum = K_hadd * K_hadd
+    assert hukum >= PENCERE_HADDI, (
+        "yazmaç azamî hududu taşımıyor: basamak başına %d yer < hadd=%d "
+        "-- her basamak kendi seviyesini ister (ferman 2-O)"
+        % (hukum, PENCERE_HADDI))
+    K = _ikinin_kuvveti(math.sqrt(float(pencere)), 4)
+    while K * K < pencere or K * K < yuva:
         K *= 2
-    hukum = K * K
+    K = min(K, K_hadd)
     d = V * K * K
-    assert d >= PENCERE_HADDI, (
-        "yazmaç azamî hududu taşımıyor: d=%d < hadd=%d (ferman 2-O)"
-        % (d, PENCERE_HADDI))
+    assert K * K >= pencere, (
+        "yazmaç fiilî bağlamı taşımıyor: basamak başına %d yer < "
+        "pencere=%d (ferman 2-M)" % (K * K, pencere))
     from .onbellek import yigin_sec
     tip = HAT_TIPI
     B_tavan = int(yigin_sec(d, tip)["B"])

@@ -611,7 +611,7 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
         from .qegitim import belirtecleri_kodla, ornekler
         a = ayar or KISA_CPU
         nefs = QNefs(a.tohum, a.qayar())
-        nefs.idrak_et(np.zeros((2, a.veri_lifi)))
+        nefs.idrak_et(np.eye(2, a.veri_lifi))
         veri = ornekler(gorevleri_getir("training")[:6], azami=2,
                         pencere=a.pencere, sozluk=a.sozluk,
                         taban=int(a.veri_lifi),

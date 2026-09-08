@@ -49,31 +49,6 @@ def _sec(P: np.ndarray, ayna=None) -> int:
     return int(np.argmax(Q))
 
 
-def _uret_qudit(baglam: List[int], n: int, pencere: int, sozluk: int,
-                teta=None, d: int = 256, ayna=None, hafiza=None) -> tuple:
-    from .qyazmac import QuditYazmac, QuditAyar
-    lif = (4, 8, 8) if d == 256 else (16, 16, 16)
-    q = QuditYazmac(QuditAyar(d=d, lif=lif))
-    bag = list(baglam)
-    cikti: List[int] = []
-    bedel = 0.0
-    budanan = 0
-    sukutlar: List[float] = []
-    for _ in range(n):
-        pen = bag[-pencere:]
-        P = np.asarray(q.uret(pen, teta=teta, sozluk=int(sozluk)), float)
-        P = np.clip(P.reshape(-1), 1e-12, None)
-        P = P / P.sum()
-        sukutlar.append(float(np.ravel(q.alan_degeri("sukut"))[0]))
-        P, kesik = _buda(P, hafiza)
-        budanan += kesik
-        t = _sec(P, ayna)
-        bedel -= float(np.log(P[t]))
-        cikti.append(t)
-        bag.append(t)
-    return cikti, bedel, sukutlar, budanan
-
-
 def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
           ayna=None, hafiza=None) -> tuple:
     from .qegitim import adayin_tuttugu
@@ -103,7 +78,7 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           nefs=None, pencere: int = 8, sozluk: int = 16,
           azami_uret: int = 0, sukut_esigi: float = 0.8,
           usul: str = "açgözlü", aday: int = 8, tohum: int = 0,
-          motor: str = "mps", qudit_d: int = 256, teta=None,
+          teta=None,
           hafiza=None, ne: str = "cevap") -> Any:
     if gorev is None:
         raise ValueError("söylemek için bir görev lâzım")
@@ -120,12 +95,10 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         return c
 
 
-    if motor == "mps" and nefs is None:
+    if nefs is None:
         return _bitir(Cevap(
             gorev=gorev.ad, sukut=True,
             sebep="motor verilmedi -- kâide cebriyle cevap vermek yasak"))
-    if motor not in ("mps", "qudit"):
-        raise ValueError("motor bilinmiyor: %r" % (motor,))
 
     tik = None
     if tikaniklik_bak:
@@ -145,10 +118,6 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
     baglam = [int(x) % int(sozluk) for x in dizi]
 
     def _cek(ayna=None):
-        if motor == "qudit":
-            return _uret_qudit(baglam, len(h), pencere, sozluk,
-                               teta=teta, d=int(qudit_d), ayna=ayna,
-                               hafiza=hafiza)
         return _uret(nefs, baglam, len(h), pencere, sozluk, ayna=ayna,
                      hafiza=hafiza)
 

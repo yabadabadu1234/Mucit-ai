@@ -404,7 +404,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     assert veri, "tâlim verisi BOŞ"
 
     nefs = QNefs(ayar.tohum, ayar.qayar())
-    nefs.idrak_et(np.zeros((2, ayar.veri_lifi)))
+    nefs.idrak_et(np.eye(2, ayar.veri_lifi))
     kademe_parametresi = kademe_parametreleri_ac(nefs.p)
     d = len(nefs)
     p0 = devam_agirligi(devam, nefs, d)

@@ -478,15 +478,12 @@ class QuditYazmac:
                 "kesit": kesit}
 
     def beyan(self, sozluk: int = 0) -> np.ndarray:
-        i, j = self.sektor("kelam")
         taban = int(sozluk) if int(sozluk) >= 2 else int(self.ayar.lif[0])
-        assert taban <= (j - i), (
-            "kelâm sektörü %d genlik, taban %d -- taban sektörden büyük "
-            "olamaz; sözlük geçilmiş olabilir (ferman 1-N)"
-            % (j - i, taban))
-        p = np.abs(self.psi[:, i:j]) ** 2
-        parca = np.array_split(np.arange(j - i), taban)
-        P = np.stack([p[:, idx].sum(axis=1) for idx in parca], axis=1)
+        assert taban == int(self.ayar.lif[0]), (
+            "beyan basamak eksenini okur: taban %d, lif[0] %d -- ikisi "
+            "aynı eksen olmalı (ferman 1-M)" % (taban, int(self.ayar.lif[0])))
+        p = np.abs(self.psi) ** 2
+        P = p.reshape(self.B, taban, -1).sum(axis=2)
         return P / np.maximum(P.sum(axis=1, keepdims=True), 1e-300)
 
     def povm(self, ad: str) -> Tuple[float, float]:
@@ -500,13 +497,16 @@ class QuditYazmac:
         return z, x
 
     def kodla(self, belirtecler: Sequence[int], sozluk: int = 16) -> None:
-        t = np.asarray(belirtecler, int).reshape(-1) % int(sozluk)
-        i, j = self.sektor("kelam")
-        parca = np.array_split(np.arange(i, j), int(sozluk))
+        taban = int(self.ayar.lif[0])
+        assert int(sozluk) == taban, (
+            "kodla basamak eksenine yazar: sözlük %d, lif[0] %d -- ikisi "
+            "aynı eksen olmalı (ferman 1-M)" % (int(sozluk), taban))
+        t = np.asarray(belirtecler, int).reshape(-1) % taban
+        h = self.d // taban
         self.psi = np.zeros((self.B, self.d), dtype=self.ayar.tip)
         for b in range(self.B):
             tb = t[b % t.size]
-            idx = parca[int(tb)]
+            idx = np.arange(int(tb) * h, (int(tb) + 1) * h)
             u = np.arange(idx.size) - (idx.size - 1) / 2.0
             zarf = 1.0 / (1.0 + (u ** 2) / max(idx.size, 1))
             q = sbox((np.arange(idx.size) + int(tb)) % 256) & 3
@@ -802,31 +802,6 @@ class QuditYazmac:
                        float).reshape(-1)
         self.faz(np.full(min(8, self.d - 1), -float(a.mean())))
         return 0.0
-
-    def uret(self, baglam: Sequence[int], teta=None, sozluk: int = 16
-             ) -> np.ndarray:
-        bag = list(np.asarray(baglam, int).reshape(-1) % int(sozluk))
-        if not bag:
-            raise ValueError("üretim için bağlam lâzım")
-        self.kodla([bag[0]], sozluk=sozluk)
-        for k, t in enumerate(bag[1:], start=1):
-            aci = np.full(min(8, self.d - 1),
-                          (t + 1.0) / (k + 1.0), dtype=float)
-            self.faz(aci)
-        if teta is not None:
-            T = np.asarray(teta, float).reshape(-1)
-            lif = tuple(self.ayar.lif)
-            gerek = sum(n * n for n in lif)
-            T = np.resize(T, gerek)
-            bas = 0
-            for k, n in enumerate(lif):
-                Ak = T[bas:bas + n * n].reshape(n, n)
-                bas += n * n
-                A = Ak - Ak.T
-                I = np.eye(n)
-                G = np.linalg.solve(I + A, I - A)
-                self.lif_kapisi(k, G)
-        return self.beyan(sozluk)
 
     def rapor(self) -> str:
         o = self.olcumler()

@@ -47,14 +47,15 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
                     taban=int(a.veri_lifi),
                     basamak=int(getattr(a, "belirtec_basamak", 0)))
     assert veri, "hız teftişi için veri BOŞ"
+    from nefs.qegitim import ornek_bol
     nefs = QNefs(a.tohum, a.qayar())
-    nefs.idrak_et(np.zeros((2, a.veri_lifi)))
+    nefs.idrak_et(belirtecleri_kodla(list(ornek_bol(veri[0])[0]),
+                                     a.veri_lifi, a.veri_lifi))
     p = nefs.vektor()
 
     kalem: List[Kalem] = []
 
     t = 0.0
-    from nefs.qegitim import ornek_bol
     for bag, _h, _c, _m in (ornek_bol(o) for o in veri):
         _, s = _saat(belirtecleri_kodla, list(bag), a.veri_lifi, a.sozluk)
         t += s
