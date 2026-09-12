@@ -18,6 +18,7 @@ class QAyar:
 
     veri_lifi: int = 16
     yerel_yuva: int = 1
+    kartan_acisi: float = 0.2617993877991494
     harman_kademesi: int = 3
     tohum: int = 0
     obek: int = 150000

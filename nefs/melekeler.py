@@ -1176,6 +1176,10 @@ class QNefs:
                           np.asarray(q.y.psi, complex).copy())
         if tikaniklik:
             ortu(ne="kapı", q=q, h1=float(tikaniklik))
+        from .casimir import kartan_fazi
+        q.y.faz(kartan_fazi(tuple(int(x) for x in q.y.ayar.lif),
+                            [float(getattr(self.ayar, "kartan_acisi",
+                                           0.2617993877991494))]))
         _hb, _hn = harman_anahtari(q, self.ayar)
         _hyer = self.p.defter().get(_hb, (-1, 0))[0] if hasattr(
             self.p, "defter") else -1

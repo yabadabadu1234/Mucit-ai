@@ -52,6 +52,11 @@ from main.kulliyat import (kulliyat_verisi,
                            kulliyat_dokumu, kulliyat_beyani)
 from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            vecih_kur)
+from nefs.hendese import (HendeseAyari, hendese_teshisi,
+                          hendese_beyani)
+from nefs.casimir import (CasimirAyari, blok_kosegen_artigi,
+                          casimir_beyani, dhr_ayrismasi,
+                          gelfand_tsetlin_araya_girme, kartan_fazi)
 from nefs.usul import usul_beyani
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import (talim_beyani,
@@ -402,6 +407,15 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     veri = list(arc_veri) + list(kul_veri)
     assert veri, "tâlim verisi BOŞ"
 
+    from nefs.qegitim import ornek_bol as _bol
+    hendese = hendese_teshisi(
+        [_bol(o)[0] for o in veri], ayar.lif_yapisi,
+        HendeseAyari(azami_alfabe=int(ayar.veri_lifi),
+                     tohum=int(ayar.tohum)))
+
+    if "parite_lifi" not in ayar.elle:
+        ayar.parite_lifi = int(hendese["asansör"]["kat"])
+
     nefs = QNefs(ayar.tohum, ayar.qayar())
     nefs.idrak_et(np.eye(2, ayar.veri_lifi))
     kademe_parametresi = kademe_parametreleri_ac(nefs.p)
@@ -559,6 +573,14 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
 
     q_son = nefs.idrak_et(np.zeros((ayar.yigin(), 2, ayar.veri_lifi)))
     psi_son = np.asarray(q_son.y.psi[0], complex)
+    dhr = dhr_ayrismasi(np.asarray(q_son.y.psi, complex),
+                        q_son.y.ayar.lif, CasimirAyari(acik=1))
+    dhr["araya_girme"] = gelfand_tsetlin_araya_girme(dhr["pay"])
+    dhr["blok_artığı"] = blok_kosegen_artigi(
+        np.asarray(q_son.y.psi, complex), q_son.y.ayar.lif)
+    dhr["kartan_boyu"] = int(kartan_fazi(
+        q_son.y.ayar.lif, [float(ayar.ayna_teta)]).size)
+
     ga = GaloisAyari(us=int(ayar.galois_us), n=int(ayar.tableau_n),
                      tohum=int(ayar.tohum))
     tab = tableau_kur(psi_son, ga)
@@ -680,6 +702,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     return {"ayar": ayar.ad, "parametre": d,
             "devam": devam, "imleç": imlec,
             "geçit": kapi, "ders": ders, "hazine": kayit,
+            "hendese": hendese, "hendese_beyanı": hendese_beyani(),
+            "dhr": dhr, "casimir_beyanı": casimir_beyani(),
+            "parite_lifi": int(ayar.parite_lifi),
             "tdd": tdd, "stabilizer": stab, "gölge": golge,
             "galois": tab.beyan(),
             "flo": flo, "sbox": sb, "sbox_ölçü": sb_olcu,

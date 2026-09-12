@@ -573,6 +573,21 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                       tohum=int(a.tohum)) if len(_hal) >= 2 else None)
     dk = _hipotez_halkasi(ileri["hal"], ileri.get("cins"),
                           (_vec[0] if _vec else None))
+    from .casimir import (blok_kosegen_artigi, dhr_ayrismasi,
+                          gelfand_tsetlin_araya_girme)
+    _lif = tuple(int(x) for x in nefs.ayar.lif_yapisi or ())
+    _psi_son = np.asarray(ileri["hal"][-1], complex).reshape(1, -1)
+    _lif = _lif if int(np.prod(_lif or (0,))) == _psi_son.shape[1] else (
+        (_psi_son.shape[1],))
+    _dhr = dhr_ayrismasi(_psi_son, _lif)
+    _gt = gelfand_tsetlin_araya_girme(_dhr["pay"])
+    _bilesen.append(("dhr_sızıntı", float(_dhr["sızıntı"]),
+                     float(a.lam_kaide)))
+    _bilesen.append(("gt_araya_girme", float(_gt["nispet"]),
+                     float(a.lam_kaide)))
+    _bilesen.append(("dhr_blok_artığı",
+                     float(blok_kosegen_artigi(_psi_son, _lif)),
+                     float(a.lam_kaide)))
     _bilesen.append(("kaide_halkası", float(dk["Δ_K"]), float(a.lam_kaide)))
     _bilesen.append(("taşma", L_tas, float(a.lam_tasma)))
     from .zirh import zirhla
