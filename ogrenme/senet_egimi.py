@@ -238,12 +238,16 @@ def egim_ikiz(iz, lif: Tuple[int, ...], psi_son: np.ndarray,
     for i, kayit in enumerate(iz.senet):
         if str(kayit[0]) in ("durum", "başlangıç"):
             continue
+        katki = None
         for (par, olcek, turev) in bag.get(i, ()):
             if int(par) < v.size and v[int(par)] != 0.0:
-                dpsi = dpsi + (float(olcek) * float(v[int(par)])
-                               * _turev_vur(psi, lif, turev))
+                ek = (float(olcek) * float(v[int(par)])
+                      * _turev_vur(psi, lif, turev))
+                katki = ek if katki is None else katki + ek
         psi = senedi_uygula(psi, lif, kayit)
         dpsi = senedi_uygula(dpsi, lif, kayit)
+        if katki is not None:
+            dpsi = dpsi + katki
     return 2.0 * float(np.real(np.sum(np.conj(psi * H[None, :]) * dpsi)))
 
 
