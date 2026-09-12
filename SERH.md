@@ -44343,3 +44343,130 @@ Bu turda uzvu **kurulan ve bağlanan** safhalar:
          Cartan fazı
     VIII. QSL yarıçapı + QNG yönü + üç     ogrenme/mecz.py +  BAĞLI
          eğim mutabakatı                   senet_egimi.py
+
+---
+
+## FERMAN 2-H OKUMASI: `ogrenme/operator.py` (277 satır, baştan sona)
+
+Sıra ölçüsü: bu turda `kuantum/kapilar.py`ye dokundum, o hâlde ferman
+2-H'nin tashih edilmiş kaidesince sıranın **sonuna** gider. Deponun
+tarihçesinde ondan sonra gelen, henüz baştan sona okunmamış en eski
+dosya `ogrenme/operator.py`dir. 277 satırın tamamı okundu.
+
+### MİMARİYLE MÜNASEBETİ -- TEK CANLI İPLİK
+
+Dosyanın taht zincirine bağlı **tek** uzvu `spektral_rutbe`dir:
+
+    main/egitim.py:776   kulli_kayip_talimi(ayar)
+      → nefs/kulli_kayip.py  kademeleri_kos → tasavvur
+      → :547  from ogrenme.operator import spektral_rutbe
+      → :549  H.spektral_rutbe = ... or 0
+      → Hal.spektral_rutbe, "2. TASAVVUR" günlük satırı
+
+`__all__`daki öteki altı addan (`DeepONet`, `fino_ayristir`,
+`fino_uygula`, `cozunurluk_bagimsizligi`, `ornek_operator`, `l2_norm`)
+**hiçbirinin** dosya dışında çağrısı yoktur; hepsini yalnız aynı
+dosyanın `_gosterim()` gösterisi çağırır. Yâni dosya taht zincirine
+tek bir iple bağlıdır, geri kalanı kopuktur (ferman 1-Z: kopukluk da
+çelişkidir).
+
+### GARABETLER -- SAYISIYLA
+
+**1. YAN KOŞU DOSYANIN %39'U (ferman 1-L).** `_gosterim()` (161-268),
+`rapor()` (271-272) ve `if __name__ == "__main__": print(rapor())`
+(275-276) -- 277 satırın **108'i**. İçinde `time.perf_counter()` ile
+iki kere **20 000** turluk zamanlama döngüsü (242, 246) var. Ferman
+1-L koşturulabilen tek şeyi `python -m main.egitim` / `main.cikarim`
+diye tayin etti; bu dosyanın kendi giriş noktası vardır ve ölçüm
+betiğidir.
+
+**2. ÇİFT BAŞLILIK: `DeepONet` İKİ YERDE TANIMLI (ferman 1-M, 1-Z).**
+
+    ogrenme/operator.py:23      DeepONet(m, p, gizli, tohum)
+    matematik/geometri.py:4700  DeepONet(duyu, taban)
+
+İki ayrı sınıf, aynı ad, ayrı imza, ayrı gövde; ikisi de çağrılmıyor.
+Bu bir "uyum meselesi" değil çift başlılıktır: biri imha edilip öteki
+tek kaynak yapılmalıdır (ferman 1-M).
+
+**3. FERMAN 7'NİN İPTAL ETTİĞİ SVD **CANLI YOLDA** KOŞUYOR.**
+`spektral_rutbe:121` `np.linalg.svd(..., compute_uv=False)` çağırır ve
+yukarıdaki zincirle **tahttan** koşar. Ferman 7 cetvelinde "SVD / MPS /
+bond truncation" iptaldir ve yerine "Qudit ℂ^d, durum TAM tutulur"
+konmuştur. `fino_ayristir:99` da tam SVD kurar (o kopuk). Zabıt 11
+XII.1'in "matris tersi tamamen kaldırılmıştır" hükmü ile birlikte
+okunduğunda bu dosya iptal edilmiş iki usulü barındırır.
+
+**4. SESSİZ İKAME -- ÖLÇÜ KIRMIZI YANAMIYOR (ferman 5).**
+`nefs/kulli_kayip.py:474` `_dene` çıplak `except Exception`dur ve
+`None` döner; `:549` onu `or 0` ile yutar. O hâlde ithal patlasa da,
+SVD yakınsamasa da `H.spektral_rutbe = 0` olur ve günlük satırı
+"spektral rütbe 0" diye **ölçülmüş gibi** basar. Ferman 5 `except` ile
+sessiz ikameyi yasaklar ve yerine assert emreder: ölçü kapatıldığında
+kırmızı yanamıyorsa hiçbir şey ölçmüyordur. Bu, dosyanın **tek canlı
+ipliğinin** aynı zamanda **ölçüsüz** olduğu mânâsına gelir.
+
+**5. ELLE YAZILMIŞ EŞİKLER (ferman 1-J).** `spektral_rutbe`nin
+`eps=1e-3`i (120) rütbeyi -- yâni kayba giren özelliği -- doğrudan
+tayin eder ve sabittir. `uydur`un `lam=1e-4` ve `tur=30`u (56),
+`DeepONet`in `p=16`, `gizli=32`si (25-26), gösterinin `1e-9` assert'i
+(232) hep kemiyet eşiğidir; hiçbiri bir keyfiyetin nispetinden gelmez.
+
+**6. YOĞUN KRONECKER + `solve` (ferman 7).** `uydur`un ALS turu her
+turda **iki** yoğun dizey kurar: `np.kron(T.T@T, Pd.T@Pd)` →
+`(dal_boyu·p)²` ve `np.kron(B.T@B, Pt.T@Pt)` → `(gizli·p)²` (67-76).
+Öntanımlı `m=32, gizli=32, p=16` ile `dal_boyu=64`, yâni
+1024×1024'lük iki `np.linalg.solve`, 30 tur boyunca. Ferman 7 "O(d²)
+GEMM / yoğun matris"i iptal edip yerine "matrix-free Kronecker-SIMD"
+koymuştur; burada Kronecker'in **yoğun hâli** kurulur.
+
+**7. ÖLÜ SATIR.** `ornek_operator:136` `dx = np.diff(x, prepend=x[0])`
+hesaplanır ve **hiç kullanılmaz**; integral 137'de `np.diff(x)` ile
+yeniden alınır.
+
+**8. `tarih` BEYAN EDİLMEMİŞ ALAN.** `self.tarih` yalnız `uydur`un
+sonunda (84) atanır; `__post_init__`te yoktur. Uydurulmamış bir
+`DeepONet`in `model.tarih`i `AttributeError` verir, hâlbuki
+`_gosterim:184` ona doğrudan dokunur.
+
+**9. `b0` DAİMÂ SIFIR.** `b0: float = field(default=0.0, init=False)`
+(30); hiçbir yerde yazılmaz, `__call__`da `+ self.b0` diye eklenir
+(90). Ölçüsü olmayan, tesiri olmayan bir alan.
+
+**10. GÖSTERİNİN "ÇÖZÜNÜRLÜKTEN BAĞIMSIZLIK" İDDİASI KENDİNİ
+DOĞRULUYOR.** `_gosterim:211` `cozunurluk_bagimsizligi`ye
+`lambda ss: rastgele_u(np.random.default_rng(7), 3)` geçer: bu lambda
+`ss` argümanını -- yâni sensör ızgarasını -- **hiç kullanmaz** ve sabit
+tohumla daima aynı üç satırı döner. Ölçülen fark bu yüzden ızgaradan
+bağımsız olmak zorundadır; 217-218'deki "gövde ağı y'ye sürekli bağlı
+olduğu için" izahı ölçünün değil niyetin beyanıdır (ferman 5).
+
+**11. AŞKIN İŞLEMLER.** `_dal_ozn:49` ve `_govde_ozn:53` `np.tanh`
+kullanır; gösteride `np.cos`, `np.sin` (173-174, 224, 259) ve `np.exp`
+(224) vardır. Bunların hiçbiri **canlı yolda değildir** (tek canlı
+iplik `spektral_rutbe`dir, o da aşkın işlem içermez), o hâlde ferman
+2-J'nin sayılmış listesine eklenmez; fakat `DeepONet` bir gün
+bağlanırsa aynı turda ferman 2-J'ye yazılmaları borçtur.
+
+### HÜKÜM -- KESMEK DEĞİL TERTİP (ferman 2-C)
+
+Bu safhada çare imha değil menfez bulmaktır. Dosyanın cevheri
+`spektral_rutbe`nin ölçtüğü şeydir: bir işlecin tayfının kaç kademede
+enerjisinin tamamını tuttuğu. Bu, mizanın `hendese`/`casimir`
+kefelerinin ölçtüğü keyfiyetle aynı cinstendir. Vidalanacağı menfez ve
+SVD'nin ferman 7 mukabili (Lanczos/Krylov iz kestirimi mi, Galois
+mertebesi mi) **ferman 2-D gereği padişaha sorulacak bir tertibat
+kararıdır**; tek başıma ayrı kanat açmam yasaktır. Bu turda yapılan
+şey okumak ve garabeti sayıyla yazmaktır.
+
+### BU TURDA İCRA EDİLEN -- YAN KOŞU İMHA
+
+Garabet 1 ve 7 bir tertibat kararı değil, mevcut hükmün gereğidir:
+ferman 1-L tahtın dışında koşan her şeyi yasaklamıştır. O hâlde
+`_gosterim()`, `rapor()` ve `if __name__ == "__main__"` bloğu
+**imha edildi** (108 satır), `ornek_operator`daki ölü `dx` satırı
+silindi, kullanılmayan `Optional`/`Sequence`/`Tuple` ithalleri
+kesildi. Dosya 277 → 157 satır. Öteki garabetler (çift başlı
+`DeepONet`, canlı yoldaki SVD, `_dene`nin sessiz ikamesi, sabit
+eşikler, yoğun Kronecker) menfez kararı gerektirir ve ferman 2-D
+gereği sorulmadan vidalanmayacaktır.

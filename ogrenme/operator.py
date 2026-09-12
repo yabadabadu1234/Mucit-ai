@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass, field
-from typing import Callable, Dict, List, Optional, Sequence, Tuple
+from typing import Callable, Dict, List
 
 import numpy as np
 
@@ -133,7 +133,6 @@ def spektral_rutbe(R: np.ndarray, eps: float = 1e-3) -> int:
 def ornek_operator(u: np.ndarray, x: np.ndarray) -> np.ndarray:
     u = np.asarray(u, float)
     x = np.asarray(x, float)
-    dx = np.diff(x, prepend=x[0])
     orta = np.concatenate([[0.0], (u[1:] + u[:-1]) / 2 * np.diff(x)])
     return np.cumsum(orta)
 
@@ -156,121 +155,3 @@ def cozunurluk_bagimsizligi(model: DeepONet,
         "bağıl_fark": float(np.max(np.abs(yk - yi[:, idx]))) / olcek,
         "kaba_nokta": int(Y_kaba.size), "ince_nokta": int(Y_ince.size),
     }
-
-
-def _gosterim() -> str:
-    import time
-    s: List[str] = []
-    rng = np.random.default_rng(0)
-
-    s.append("=== DeepONet: antitürev işlecini öğreniyor ===")
-    m = 32
-    sensor = np.linspace(0, 1, m)
-
-    def rastgele_u(r, n):
-        a = r.normal(size=(n, 4))
-        b = r.normal(size=(n, 4))
-        return (a @ np.cos(2 * np.pi * np.arange(1, 5)[:, None] * sensor)
-                + b @ np.sin(2 * np.pi * np.arange(1, 5)[:, None] * sensor))
-
-    N = 300
-    U = rastgele_u(rng, N)
-    Y = np.linspace(0, 1, 41)
-    hedef = np.stack([np.interp(Y, sensor, ornek_operator(u, sensor))
-                      for u in U])
-    model = DeepONet(m=m, p=16, gizli=40, tohum=0).uydur(U, Y, hedef, tur=12)
-    s.append(f"  eğitim MSE seyri: "
-             + " → ".join(f"{v:.2e}" for v in model.tarih[::3]))
-    t = model.tarih
-    artan = [i for i in range(1, len(t)) if t[i] > t[i - 1] + 1e-15]
-    en_buyuk = max((t[i] - t[i - 1] for i in range(1, len(t))), default=0.0)
-    s.append(f"  {len(t)} turun {len(artan)}'inde MSE arttı"
-             f" (en büyük artış {en_buyuk:.1e}, taban {min(t):.1e}"
-             f" — yani ‰{en_buyuk/min(t)*1000:.1f})")
-    s.append(f"  artışların yeri: {artan}  (yakınsamadan SONRAKİ adımlar)")
-    s.append("  Sebep: ALS DÜZENLENMİŞ hedefi eniyiliyor, burada")
-    s.append("  DÜZENLENMEMİŞ MSE raporlanıyor; ikisi yakınsama sonrası")
-    s.append("  bir mikron ayrışıyor. Tekdüzelik iddiası bu yüzden")
-    s.append("  düzenlenmiş hedef için geçerlidir, MSE için değil.")
-    s.append(f"  ‖W_dal‖={np.linalg.norm(model.W_dal):.2e}"
-             f"  ‖W_gövde‖={np.linalg.norm(model.W_govde):.2e}"
-             f"   (λ=1e-8 ile 6e3 ve 9e4'e patlıyordu)")
-    U_s = rastgele_u(np.random.default_rng(99), 60)
-    hedef_s = np.stack([np.interp(Y, sensor, ornek_operator(u, sensor))
-                        for u in U_s])
-    tahmin = model(U_s, Y)
-    bagil = (np.linalg.norm(tahmin - hedef_s)
-             / np.linalg.norm(hedef_s))
-    s.append(f"  sınama bağıl L² hatası: {bagil:.4f}")
-
-    s.append("\n=== Çıktı ızgarasından bağımsızlık ===")
-    s.append("  model 41 noktada eğitildi; başka ızgaralarda koşuluyor:")
-    for M in (41, 81, 161, 401):
-        Yi = np.linspace(0, 1, M)
-        try:
-            r = cozunurluk_bagimsizligi(model, lambda ss: rastgele_u(
-                np.random.default_rng(7), 3), sensor, Y, Yi)
-            s.append(f"    M={M:4d}: ortak noktalarda bağıl fark = "
-                     f"{r['bağıl_fark']:.3e}")
-        except ValueError as e:
-            s.append(f"    M={M:4d}: {e}")
-    s.append("  Gövde ağı y'ye SÜREKLİ bağlı olduğu için çıktı ızgarası")
-    s.append("  serbest; ızgara indisine bağlı olsaydı bu imkânsızdı.")
-
-    s.append("\n=== FINO: spektral tensörün çarpanlara ayrılması ===")
-    K = 48
-    k1 = np.arange(K)[:, None]
-    k2 = np.arange(K)[None, :]
-    R = np.exp(-(k1 + k2) / 12.0) * np.cos(0.3 * (k1 - k2))
-    s.append(f"  tam tensör {R.shape}, {R.size} parametre")
-    s.append(f"  enerjinin %99.9'unu tutan rütbe: {spektral_rutbe(R, 1e-3)}")
-    s.append("   rütbe   bağıl hata   parametre   sıkıştırma")
-    for rut in (1, 2, 4, 8, 16):
-        d = fino_ayristir(R, rut)
-        s.append(f"  {rut:5d}   {d['bağıl_hata']:.3e}   {d['parametre_fino']:8d}"
-                 f"   {d['parametre_tam']/d['parametre_fino']:6.2f}×")
-        assert abs(d["hata_frobenius"] - d["kapalı_form_hata"]) < 1e-9
-    s.append("  Hata kapalı formda biliniyor: √(Σ_{r>R} σ_r²).")
-    s.append("  Ölçülen Frobenius hatası ile bu formül 1e-9 içinde uyuşuyor;")
-    s.append("  yani kesilmiş SVD gerçekten EN İYİ ayrışım (Eckart–Young).")
-
-    s.append("\n=== FINO uygulaması: tam tensör kurulmadan ===")
-    for rut in (4, 8):
-        d = fino_ayristir(R, rut)
-        vhat = rng.normal(size=K)
-        t0 = time.perf_counter()
-        for _ in range(20000):
-            a = fino_uygula(d["U"], d["V"], vhat)
-        hizli = time.perf_counter() - t0
-        t0 = time.perf_counter()
-        for _ in range(20000):
-            b = d["yaklaşık"] @ vhat
-        yavas = time.perf_counter() - t0
-        s.append(f"  rütbe {rut}: ayrık çarpım {hizli*1000:6.1f} ms,"
-                 f" tam dizey {yavas*1000:6.1f} ms  ({yavas/hizli:.2f}×)"
-                 f"   fark = {np.max(np.abs(a - b)):.2e}")
-    s.append("  K=48'de kazanç küçük; asıl fayda K büyüdükçe:")
-    for KK in (48, 256, 1024):
-        for rut in (8,):
-            s.append(f"    K={KK:5d} rütbe={rut}: {KK*KK} v {2*KK*rut}"
-                     f" parametre → {KK*KK/(2*KK*rut):6.1f}× tasarruf")
-
-    s.append("\n=== K30: ölçek çarpanı norma girer, alana değil ===")
-    f = lambda z: np.sin(2 * np.pi * z)
-    s.append("      N     doğru ‖v‖_L²     yanlış: alanı ölçekleyip azamî")
-    for N in (64, 256, 1024, 4096):
-        x = np.linspace(0, 1, N, endpoint=False)
-        v = f(x)
-        s.append(f"  {N:6d}   {l2_norm(v):.10f}      "
-                 f"{np.max(np.abs(v * np.sqrt(1.0 / N))):.10f}")
-    s.append("  Doğru norm çözünürlükten bağımsız; yanlış ölçekleme")
-    s.append("  fonksiyonun genliğini √N ile çökertiyor.")
-    return "\n".join(s)
-
-
-def rapor() -> str:
-    return _gosterim()
-
-
-if __name__ == "__main__":
-    print(rapor())
