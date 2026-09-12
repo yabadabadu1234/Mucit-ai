@@ -946,3 +946,640 @@ GARABET (F.5 sessiz ikame, 6 yerde): 22, 42, 68, 126, 136, 186-202
   bir önbellek kademesini sessizce düşürüyor.
 GARABET (ÇİFT BAŞLILIK): bkz. [48] -- önbellek iki dosyada iki ayrı
   anahtar adıyla okunuyor.
+
+### [50] nefs/ara.py -- 21 satır OKUNDU
+KULLANILMAYAN: ara() -- yalnız nefs/soyle.py:127'nin ÖLÜ `usul="ara"`
+  dalından. Dosyanın TAMAMI ölü. `en_iyiyi_ara`, `had`, `kuyudan_cik`
+  ithalleri de o yüzden ölü zincir.
+
+### [51] nefs/gor.py -- 63 satır OKUNDU
+KULLANILMAYAN: Manzara, gor -- HİÇBİR YERDE. Dosyanın TAMAMI ölü.
+  (`nefs/soyle.py:85` `manzara` argümanını assert ile REDDEDİYOR:
+  "soyle manzara ALMAZ (ferman 6)". Yâni bu dosyanın tek müşterisi
+  fermanla kapatıldı.)
+  Ayrıca `musahede.Gorev/ayir/genlige_gom/kaide` ithallerinin TEK
+  müşterisi bu dosya; o hâlde [1]'de "(*) yalnız gor.py'den" diye
+  işaretlediğim üç ad da ölü.
+GARABET: `gor(ne="kalıp")` ferman 1-P gereği ValueError fırlatıyor --
+  imha edilmiş bir yolun mezar taşı. Ferman 2-B "kökünden kes" der.
+
+### [52] nefs/mantik.py -- 190 satır OKUNDU
+CANLI: MAKAM_MERTEBE (kulli_kayip:823 -- fakat o `suz(ne="dalga")`
+  içinde, `suz` de ölü → fiilen ÖLÜ)
+KULLANILMAYAN (dosyanın TAMAMI):
+  istikra_mertebesi · MAKAM_MERTEBE · ESKI_SIRA · GRAY_SIRA · _kod ·
+  komsuluk_denetimi · eksik_mertebeler · yakin_yuzlestirmesi ·
+  rapor + `__main__`
+  Dosyanın tek dış müşterisi (`MAKAM_MERTEBE`) ölü bir dalda.
+!!! Bu dosya `makam_mertebeleri`nin TEK müşterisi; o da tanımsız
+  `MAKAM_ESIKLERI` yüzünden KIRIK ([34]). Yâni kırık fonksiyonun
+  kırık müşterisi -- ikisi de ölü olduğu için patlamıyor.
+GARABET (F.5): `rapor` 176-179 `except Exception: continue` ile
+  görevleri sessizce düşürüyor.
+
+### [53] nefs/hizli.py -- 278 satır OKUNDU
+CANLI: hesap (ayna.py:16 → kivilcim:172 ve halka:231)
+KULLANILMAYAN:
+  kronecker      43-59   -- hiçbir yerde. Ferman 7 "Matrix-free
+     Kronecker-SIMD"i ASIL usul ilan ediyor; bu fonksiyon onun
+     Python/einsum icrası ve HİÇ ÇAĞRILMIYOR. Kronecker fiilen
+     nefs/qcekirdek.py'nin C `karo_vur`u ve `_karo_blas`ıyla yapılıyor.
+     F.1-M: aynı iş iki yerde, biri ölü.
+  SEKTOR         62-66   -- ("sentaks",0,512)("ontoloji",512,2560)
+     ("mantık",2560,4096) -- ELLE YAZILMIŞ üç sektör. Fiilî sektörler
+     `QuditAyar.kulli_alanlar`dan (11 alan) türüyor. ÇİFT BAŞLILIK +
+     F.1-J (elle yazılmış hudut). ÖLÜ.
+  blok_carp      69-85   -- hiçbir yerde
+  faz_cevir      88-97   -- hiçbir yerde (faz `qyazmac.faz` ile)
+  _FUSED_KAYNAK 100-136  -- CUDA çekirdeği, 37 satır
+  cekirdek      139-208  -- hiçbir yerde. Üç hatlı (cupy/torch/numpy)
+     Clenshaw-Chebyshev çekirdeği. Ferman 7 "transandantal faz
+     e^{iθ} İPTAL" der; bu fonksiyon `__expf/__cosf/__sinf` ve
+     `np.exp/cos/sin` üstüne kurulu. ÖLÜ olduğu için ihlâl koşmuyor.
+  rapor         211-274 + `__main__` (277) -- F.1-L
+  _bicimle -- yalnız ölü fonksiyonlardan
+DOSYANIN 278 SATIRININ 245'İ (%88) ÖLÜ; yalnız `hesap` canlı.
+
+### [54] nefs/qudit.py -- 408 satır OKUNDU
+CANLI: QuditAyari + suz (kulli_mizan:503-506 -- QSVT Hodge süzgeci),
+  agirlik (qyazmac.faz:487, hizli.faz_cevir ölü)
+KULLANILMAYAN:
+  _cheb        51-60  -- yalnız durum/durum_yigin
+  durum        63-81  -- yalnız rapor
+  durum_yigin  84-133 -- yalnız rapor. İçinde `from .hizli import
+     cekirdek` ölü dalı (89-96) ve Clenshaw.
+  ortusme     136-139 -- yalnız rapor
+  dallanma    184-230 -- yalnız rapor. Gelfand-Tsetlin örüntü sayımı;
+     Zabıt 11'in GT araya girme hükmü FİİLEN nefs/casimir.py'nin
+     `gelfand_tsetlin_araya_girme`sıyla yapılıyor → ÇİFT BAŞLILIK.
+  metrik      233-245 -- yalnız rapor. **SONLU FARKLA** Fubini-Study
+     metriği; ferman 2-P bunu ilga etti (senet_egimi.egim_ek_durum
+     metriği analitik veriyor) → ÇİFT BAŞLILIK, biri kör fark.
+  dogal_adim  248-270 -- yalnız rapor. CG ile doğal gradyan adımı;
+     ferman 2-P'nin yarıçap+eğim usulüyle ÇİFT BAŞLI.
+  BLOKLAR     273-277 -- ("sentaks",0,512)... hizli.SEKTOR ile
+     ÜÇ BAŞLILIK (hizli.py:62, qudit.py:273, ve fiilî
+     QuditAyar.kulli_alanlar). İkisi ölü.
+  blok        280-298 -- yalnız rapor
+  rapor       301-404 + `__main__` (407) -- F.1-L; içinde
+     perf_counter zamanlama tabloları ve 6 kere `durum_yigin`
+GARABET (F.2-J): `suz` CANLI YOLDA `np.cos` (158, 164) ve `np.exp`
+  (160) kullanıyor -- Chebyshev düğümleri ve süzgeç çekirdeği.
+  F.2-J listesinde YOK. Eklenecek. (Bu, ℒ_Hodge kefesinin tam içinde.)
+DOSYANIN 408 SATIRININ ~330'U (%81) ÖLÜ.
+
+### [55] nefs/lif.py -- 240 satır OKUNDU
+Tek dış müşteri: nefs/qegitim.py:32 `from .lif import kodla,
+  KIP_TUTARLI, KIP_LIE` -- o da `belirtecleri_kodla`nın ÖLÜ
+  "sürekli"/"lie" dalında ([33]). O hâlde DOSYANIN TAMAMI ÖLÜ.
+KULLANILMAYAN (hepsi): KIP_QUDIT/KIP_TUTARLI/KIP_LIE, kodla, mesafe,
+  ortusme, sadakat, Lif(.tak .tipler .kategoriler .uzaylar .terim
+  .unfold .dogrula .ac .izdusum .sayim), _esitle, rapor + `__main__`
+GARABET (ÇİFT BAŞLILIK -- ÜÇ `Lif`): `Lif` adı
+  nefs/lif.py:81 (bağımlı lif defteri), nefs/melekeler.py:227
+  (mertebe lifi), ve `QAyar.lif_yapisi`/`QuditAyar.lif` (yazmaç lifi).
+  Üçü alâkasız.
+GARABET (ÇİFT BAŞLILIK -- `ortusme`): nefs/lif.py:51 ve
+  nefs/qudit.py:136, aynı iş, iki gövde.
+GARABET (ÇİFT BAŞLILIK -- `sadakat`): nefs/lif.py:60,
+  nefs/melekeler.py:1317, nefs/qyazmac.py:240 -- üç ayrı `sadakat`.
+GARABET (F.2-J): `kodla(KIP_TUTARLI)` `kuantum/surekli.py:tutarli_durum`
+  çağırıyor (aşkın); ölü.
+
+### [56] nefs/zirh.py -- 1066 satır OKUNDU
+CANLI: vicdan (melekeler:1207,1225,1230 -- her melekeden sonra "işaret",
+  sonra "usul", sonra "intaç"), ZirhAyari + zirhla + zirh_kaybi
+  (kulli_mizan:554-600), taahhude_yuzlestir(sinif=,dS=) (kulli_mizan:559),
+  yama + delik + iz (zirhla içinden), USULLER + ALANLAR + Usul +
+  _yasak_cetveli (vicdan "usul"), HUKUM_ALANLARI (vicdan "intaç"),
+  SINIF_CIHETI + NIZAM_BANDI (taahhude_yuzlestir), devirler (ithal)
+KULLANILMAYAN:
+  vietoris_rips 290-309 · dogum_olum_cetveli 312-333 ·
+    cetveller_arasi_mesafe 336-416 (81 satır, Hopcroft-Karp eşleşmesi) ·
+    kahan_toplam 419-427 · _mesafe · _cember · _iki_cember
+    -- hepsi yalnız rapor'dan. TOPOLOJİ (kalıcılık homolojisi) kanadı
+       tamamen rapora ait.
+  dalgayi_yokla 281-287 -- hiçbir yerde
+  ZirhIzi 271-279 -- yalnız `zirhla`nın yazmaç kolundan, o kol da
+    yalnız rapor'dan (`kos` içinde) → ÖLÜ
+  `zirhla`nın YAZMAÇ KOLU (180-230, 51 satır) -- `hedef`in `n` alanı
+    olduğu hâl. kulli_mizan ndarray veriyor → ÖLÜ. İçindeki
+    `devirler("zincir_β0")`, `y.tek_kapi` çağrıları da ölü.
+  `zirhla`nın S/Pi_betti/Pi_koho kolu (122-128) -- hiçbir çağrı
+    onları vermiyor → ÖLÜ
+  muhru_stabilizerle_yuzlestir 638-690 -- yalnız rapor + `zirh_kaybi`nin
+    `q is not None` kolu; `zirh_kaybi` hiç `q=` almıyor → ÖLÜ.
+    `kuantum/stabilizer.py` ithalinin TEK müşterisi bu → o dosya da ölü.
+  holonomi 693-694 · cevrim_egriligi 697-704 · duz_mu 707-708 ·
+    aharonov_bohm 711-717 -- yalnız _rapor_bukum
+  _rapor_bukum 720-787 -- HİÇ ÇAĞRILMIYOR (`rapor` onu çağırmıyor)
+  rapor 789-1062 (274 satır) + `__main__` -- F.1-L
+  SADAKAT_SIDDETI 446 -- hiçbir yerde
+  KORUYUCU_BANDI 492 -- hiçbir yerde
+  taahhude_yuzlestir'in NEFS KOLU (604-635) -- kulli_mizan yalnız
+    (sinif, dS) ile çağırıyor → o kol yalnız rapor'dan
+!!! İKİ TANIMSIZ AD (F.5):
+  1. satır 22 `__all__` `"isaret_vur"` ilan ediyor -- bu ad depoda
+     HİÇBİR YERDE TANIMLI DEĞİL. `from nefs.zirh import *` patlar.
+  2. satır 724 `tunel_maliyet_cetveli(...)` -- tanımsız ad;
+     `_rapor_bukum` çağrılsa NameError. (Çağrılmıyor.)
+GARABET (ÇİFT BAŞLILIK): `holonomi` (zirh:693) ile kulli_mizan:110;
+  `HUKUM_ALANLARI` (zirh:449, 6 alan) ile illet:10 (9 alan);
+  `USULLER` (zirh:466, mantık aksiyomları) ile usul:13 (kıyas adları);
+  `iz` (zirh:102, bağlantı holonomisi) ile qyazmac.Iz (senet) --
+  dört ayrı çift başlılık.
+GARABET (F.2-J): `taahhude_yuzlestir.ihlal` `np.tanh` (599),
+  `zirh_kaybi` `np.exp`+`math.log` (255-256), `zirhla`nın ölü kolu
+  `np.exp` (203) -- ilk ikisi CANLI YOLDA. F.2-J listesinde YOK.
+GARABET (F.1-U MECLİS): `zirh_kaybi` beş cezayı `τ`-yumuşak azamîyle
+  TEK SKALERE indiriyor (249-256). Ferman 1-U bunu yasaklıyor.
+  kulli_mizan bunu bilerek yapıyor ve beşini AYRI kefe olarak da
+  ekliyor (_z_bes, 601-608) fakat `zirh_softmax` diye o meclisi de
+  rapora basıyor ("KIYAS; kayba GİRMEZ"). Yâni meclis kurulup
+  kullanılmıyor -- F.5'e uygun fakat ölü hesap.
+
+### [57] kuantum/stabilizer.py -- 200+ satır, TAMAMEN ÖLÜ
+Tek müşterisi nefs/zirh.py:12 `StabilizerDurum` ve o da yalnız ölü
+`muhru_stabilizerle_yuzlestir` içinde kullanılıyor.
+HÜKÜM: ferman 7 "Galois GF(2⁸) + Stabilizer Tableau" ASIL usul der;
+fakat FİİLÎ tableau `nefs/galois.py:Tableau`dur ([7]) ve o da
+işletilmiyor. `kuantum/stabilizer.py` ÜÇÜNCÜ bir stabilizer temsilidir
+ve ölüdür. ÜÇ BAŞLILIK.
+
+### [58] kuantum/surekli.py -- TAMAMEN ÖLÜ
+Tek müşterisi nefs/lif.py:21 `tutarli_durum`, o da ölü dalda ([55]).
+`vakum`/`sikistirma` adları nefs/ayna.py ile ÇİFT BAŞLI ([10]).
+
+### [59] idrak/kategori.py -- 171 satır
+Tek müşterisi nefs/zirh.py'nin `Uzay`ı; `zirhla`nın ölü yazmaç kolunda
+ve rapor'da → FİİLEN ÖLÜ.
+ÇİFT BAŞLILIK: `AZAMI_TAM_MERTEBE`, `SABIT`, `_temsilci_kur` mantığı
+nefs/melekeler.py:217-279'da BİR DAHA var ([32]); `Uzay` ile
+`melekeler.Lif` aynı işi yapıyor (mertebe lifi kurma). İkisi de aynı
+`matematik/tip_teorisi.py` uzuvlarını çağırıyor. melekeler'inki CANLI
+(QTefekkur), idrak'inki ÖLÜ.
+
+### [60] nefs/gfni.py -- 689 satır OKUNDU (C gövdesi dâhil)
+CANLI: GFNI_C, derle, yoklama, kutuphane, _p8, _p64, sbox_gfni
+  (galois:175), symplectic_gfni (donanim:162), ayrik_gfni +
+  kaynasik_gfni (gpu_akis:62), genlesme_gfni (gpu_akis:104),
+  cpuid + olc (donanim:80), AES_AFFINE/AES_SABIT (affine_gfni'de)
+KULLANILMAYAN:
+  _ozet()        391-393  -- hiçbir yerde (qcekirdek'teki kardeşi gibi)
+  affine_gfni    496-503  -- hiçbir yerde; AES_AFFINE/AES_SABIT'in TEK
+     müşterisi → o iki sabit de fiilen ölü
+  gfcarp_gfni    506-513  -- hiçbir yerde (GF çarpımı `gf_carp` tablosuyla)
+  dfa_tablosu    565-567  -- yalnız faz_dfa_gfni/akis_gfni/akis_olc
+  faz_dfa_gfni   570-578  -- hiçbir yerde
+  akis_gfni      581-589  -- hiçbir yerde
+  akis_olc       592-623  -- hiçbir yerde
+  rapor          657-684 + `__main__` (687) -- F.1-L
+C TARAFINDA ÖLÜ: `mucit_affine`, `mucit_gfcarp`, `mucit_faz_dfa`,
+  `mucit_akis` -- dördü de `kutuphane()`de imzası bağlanıyor,
+  hiçbiri Python'dan çağrılmıyor.
+GARABET (F.7 / F.1-F): Ferman 7 cetveli "**`vpshufb` faz otomatı**:
+  64 baytlık LUT yazmaçta, tek vuruş"u ASIL usul ilan ediyor.
+  O usulün fiilî icrası `mucit_faz_dfa` + `faz_dfa_gfni`dir ve
+  **HİÇ ÇAĞRILMIYOR**. Faz fiilen `nefs/qyazmac.py:faz` +
+  `palmer_indir` ile numpy'da yapılıyor. Yâni ferman 7'nin bu satırı
+  YAZILMIŞ FAKAT KOŞMUYOR. F.1-F: "en derin kod koşturulur".
+GARABET: `dfa_tablosu` LUT'u RASTGELE üretiyor (`r.integers`) -- faz
+  otomatının tablosu bir faz polinomundan değil rastgeleden geliyor.
+  (Ölü olduğu için tesiri yok.)
+GARABET (F.1-L): `akis_olc` 20 000 turluk L1 döngüsü; `olc` 20 turluk.
+  `olc` CANLI (donanim:80 → simd_bilgisi) → her tâlim koşusunda
+  4 MiB'lık 20 tekrarlı GFNI/tablo kıyası koşuyor.
+
+### [61] kuantum/kapilar.py -- 371 satır OKUNDU
+CANLI: dik_iki_kubit + dik_iki_kubit_yigin + _so4_ureteci (melekeler'de
+  9 melekeden), dik_iki_kubit_turevi + _SO4_TEMELI + _so4_temeli
+  (melekeler:467, tuğla türevi), chebyshev (optimize:70), uniter_mi
+  (optimize:254)
+KULLANILMAYAN:
+  I2·X·Y·Z·H·S_·Sdg·T_·Tdg·PAULI  (21-31) -- hiçbiri dışarıdan
+  _donme·Rx·Ry·Rz·U1·U2·U3·faz    (34-69)
+  kron (72-76) · kontrollu (79-84) · CNOT·CZ·SWAP·iSWAP·TOFFOLI·
+    FREDKIN (87-94) · CRx·CRz (97-102)
+  _cift_donme·RXX·RYY·RZZ (105-120) · molmer_sorensen (123-131)
+  yerlestir·_permutasyon_dizeyi (134-159) · esdeger_mi (170-184) ·
+  komutator·antikomutator (187-192)
+  _gosterim (195-300, 106 satır) · rapor (314-315) + `__main__` (318)
+  KAPI_USULU (322) -- hiçbir yerde
+  → `__all__`daki 33 addan 31'i ÖLÜ; yalnız `chebyshev` ve `uniter_mi`
+    dışarıdan çağrılıyor. Asıl canlı uzuvlar (`dik_iki_kubit`,
+    `dik_iki_kubit_turevi`) `__all__`da İLAN EDİLMEMİŞ.
+GARABET (F.1-L): `_gosterim`, dosyanın ortasında (195-300) duruyor ve
+  `chebyshev`i ikiye bölüyor -- `__main__` bloğu 318'de, ondan SONRA
+  da hâlâ kod var (322-371). Dosya iki kere bitiyor.
+GARABET (F.2-J): `dik_iki_kubit_yigin` ve `dik_iki_kubit_turevi`
+  `np.linalg.eigh` + `np.exp(-1j·λ)` ile dizey üsteli kullanıyor --
+  CLAUDE.md 2-J bunu ZATEN "en sıcak olanı budur" diye sayıyor. ✓
+  (Türev de aynı yolda; 2-J'ye türev satırı eklenebilir.)
+
+### [62] kuantum/devre.py -- 36 satır OKUNDU
+CANLI: qft_dizeyi (ayna:160,191 -- kivilcim ve faz_kaydir)
+KULLANILMAYAN: iqft_dizeyi, _uexp, trotter, suzuki2 -- hiçbiri
+  dışarıdan. `__all__`ın 4 adından 3'ü ölü.
+GARABET (ÇİFT BAŞLILIK): `_uexp` adı melekeler.py:1295'te de var,
+  aynı iş (dizey üsteli). İkisi de ayrı gövde.
+
+### [63] kuantum/eniyileme.py -- 284 satır OKUNDU (yapı okundu)
+CANLI: baslangic_hamiltonyeni + maxcut_hamiltonyeni + tayf_araligi
+  (ayna:321-344 → `_halka_netice`, o da `halka(ne="döküm")`den,
+  o da kulli_mizan:313 `engellenme`den) -- CANLI YOL
+  kesitli_hamiltonyen (tayf_araligi içinden), _tensor, _tek_kubit
+KULLANILMAYAN: adiyabatik_kos, qaoa_durumu, qaoa_beklenen,
+  qaoa_eniyile, _mixer_uygula, parametre_kaydirma, _sonlu_fark,
+  kaydirma_sarti_ihlali, _gosterim (180-282, 103 satır) + `__main__`
+GARABET (F.2-J): `tayf_araligi` CANLI YOLDA 41 kere `np.linalg.eigvalsh`
+  çağırıyor (2^N × 2^N dizey, N≤8 → 256×256). `engellenme` her mizan
+  çağrısında koşuyor. F.2-J listesinde YOK; ayrıca F.7'nin
+  "yoğun matris" iptaline aykırı.
+GARABET (F.1-M): `parametre_kaydirma` (parameter-shift gradyanı) ölü;
+  ferman 2-P türevi senet_egimi'ne verdi. Dördüncü gradyan motoru.
+
+### [64] kuantum/topolojik.py -- 319 satır OKUNDU (yapı okundu)
+CANLI: orgu_ureticleri + yang_baxter_hatasi + fibonacci_F/R/B
+  (ayna:85,356 -- `bolucu(korunakli=True)` ve `olc`)
+  ** fakat `bolucu`nun `korunakli` kolu hiç açılmıyor (AynaAyari.
+  korunakli öntanımlı False ve kimse True vermiyor) ve `olc` ölü →
+  FİİLEN ÖLÜ
+KULLANILMAYAN: orgu_kelimesi, _faz_anahtari, _hedef_mesafesi,
+  orgu_yogunlugu, _jw_c, majorana, jw_zincirsiz_majorana,
+  antikomutator_hatasi, YuzeyKodu (151-220, 70 satır), _gf2_sira,
+  _gosterim (243-317) + `__main__`
+  → DOSYANIN TAMAMI FİİLEN ÖLÜ.
+GARABET (F.7 / ÇİFT BAŞLILIK): `majorana` ve `jw_zincirsiz_majorana`
+  Majorana operatörlerini kuruyor; ferman 7-A(1) Matchgate/FLO'yu
+  Majorana kovaryansında ASIL usul ilan ediyor ve o fiilen
+  `nefs/matchgate.py:Ortam`da kurulu. İki ayrı Majorana temsili.
+
+### [65] ogrenme/morse.py -- 124 satır OKUNDU
+CANLI hepsi: euler_karakteristigi, morse_indisleri,
+  morse_euler_denklik_tahkiki, _alt_bag_chi, _HALKA (ayna:295-301 →
+  `_halka_netice` → `halka(ne="döküm")` → kulli_mizan `engellenme`)
+KULLANILMAYAN: tahkik_cetveli (94-107) · rapor (110-122) + `__main__`
+GARABET (F.1-L, CANLI YOLDA): `morse_indisleri` her renk için
+  H×W çift döngü + 8 komşu taraması koşuyor; `engellenme` her mizan
+  çağrısında `halka(ne="döküm")` ile bunu çağırıyor. Saf Python
+  döngüsü, kayıp fonksiyonunun içinde.
+GARABET (F.5): `morse_euler_denklik_tahkiki` ayna.py:297'de assert ile
+  koşuluyor -- bu DOĞRU bir kırmızı ölçüdür. ✓
+
+### [66] ogrenme/grassmann.py -- 237 satır OKUNDU (yapı)
+CANLI: dik_taban, asal_acilar, grassmann_mesafesi (musahede:1788-1798
+  `iki_olcegin_acisi(ne="açı")` -- o da yalnız musahede.rapor'dan;
+  optimize:1490 `_grassmann_farki` -- optimize okunduğunda karara
+  bağlanacak)
+KULLANILMAYAN: izdusum, alt_uzay_hatasi, exp_haritasi, _log_cekirdegi,
+  log_haritasi, log_haritasi_arcsin, gidis_donus_hatasi,
+  grassmann_geodezigi, grassmann_ortalamasi, normalize_laplasyen,
+  betti0_tayftan, tikhonov_cekirdegi_yok_eder, _rastgele,
+  _gosterim (144-235, 92 satır) + `__main__`
+GARABET (ÇİFT BAŞLILIK): `normalize_laplasyen` (grassmann:111) ile
+  `devirler("laplasyen")` (melekeler:109) ve `_laplasyen`
+  (kulli_mizan:329) -- ÜÇ ayrı Laplasyen kurucusu.
+  `betti0_tayftan` (grassmann:118) ile `delik(ne="betti")` (zirh:84)
+  ve `devirler("betti")` (melekeler:113) -- ÜÇ ayrı Betti sayıcısı.
+
+### [67] ogrenme/rkhs.py -- 290 satır OKUNDU (yapı)
+CANLI: RKHS, gauss_cekirdegi, medyan_genislik, psd_mi (musahede:1745-48
+  `iki_olcegin_acisi(ne="sağîr")`; o da kulli_kayip:527/808 ve
+  musahede.rapor'dan -- kulli_kayip:527 `tasavvur._iki_olcek`
+  içinde ve O FONKSİYON `gorev_ozellikleri` yüzünden KIRIK ([31]),
+  kulli_kayip:808 `suz(ne="dalga")` ölü → FİİLEN ÖLÜ)
+  optimize:17 `gek_uydur` -- optimize okunduğunda karara bağlanacak
+KULLANILMAYAN: _kare_mesafe(iç), laplace_cekirdegi, matern_cekirdegi,
+  polinom_cekirdegi, gram, temsil_teoremi_sagmasi, nystrom,
+  _gosterim (187-283) + rapor + `__main__`
+GARABET (F.2-J): `gauss_cekirdegi` `np.exp`, `matern` `np.sqrt/exp`,
+  `laplace` `np.exp` -- canlı yolda mı, optimize okunduktan sonra
+  kesinleşecek.
+
+### [68] ogrenme/optimize.py -- 2091 satır (yapı + canlı bölge okundu)
+CANLI (TEK UZUV): `gaye_kos` (1403-1428) -- melekeler:1228'den, yâni
+  `QNefs.idrak_et`in `self.gaye` kolundan. Onun çağırdıkları:
+  `_aci` (1432), `donme`, `q.mpo_topla/mpo_dagit/tek/uzak_cift`,
+  `EPSILON_DURGUN`, `math.tanh`.
+  Ayrıca: `chebyshev`+`uniter_mi` ithalleri (kuantum.kapilar),
+  `RKHS/gauss_cekirdegi/medyan_genislik` (rkhs), `QYazmac/donme`
+  (zihin_durumu), `QParametre` (melekeler) -- son üçü ölü bölgelerde.
+KULLANILMAYAN -- dosyanın geri kalanının TAMAMI (~2050 satır):
+  NQSAyar + NQS (21-195)  -- Zabıt 11 Safha III'ün "NQS kollektif
+     dalgası"; SERH.md'de "kodlu fakat hiç çağrılmıyor" diye zaten
+     yazılıydı, TEYİT EDİLDİ.
+  KIP_* sabitleri (199-214, 432-462) -- 16 adet kip adı
+  _yansima_govdesi · blok_kodlama · faz_dizisinin_polinomu ·
+    _izdusum_donmesi · qsvt · _devreyle_qsvt · ters_polinomu ·
+    statik_faz_tablosu_oku · qsvt_gibbs_sogutma · gibbs_dogrulamasi ·
+    chebyshev_tasarimi (217-430) -- QSVT kanadı. `nefs/qudit.py:suz`
+    AYRI bir QSVT icrası → ÇİFT BAŞLILIK; suz canlı, bu ölü.
+  J · _kappa_olc · _adimla · kestirmeden_sur (465-555)
+  _SZ/_SX/_SY · qsp_fazlarini_bul (556-622)
+  GIBBS_DERECE · GIBBS_FAZ_TABLOSU (32 elemanlı elle yazılmış faz
+    tablosu) · gibbs_fazlari · fazlari_kilitle (623-723)
+  yokus (724-856) -- 133 satır, önşartlı gradyan
+  oragin_donusu (857-898) · tartinin_dayandigi_nokta (899-926)
+  DalgaCevrimi · DalgaEniyileyici (927-1077) -- 151 satır, ESKİ
+    eniyileyici. Ferman 2-P mecz'i tek motor yaptı → ÖLÜ.
+  Ikiz · _sar · ikiz · tam_turev · _ureteci_ikiz · _birim_gibi · _iz
+    (1078-1243) -- İKİZ SAYI (forward-mode AD). ogrenme/senet_egimi.py
+    `egim_ikiz` AYRI bir ikiz icrası → ÇİFT BAŞLILIK; senet canlı,
+    bu ölü.
+  OgdaTarti · oyun_degeri (1244-1292)
+  TabiiAyar · TabiiCevrim · TabiiGradyan (1293-1400) -- 108 satır,
+    tabiî gradyan. `nefs/qudit.py:dogal_adim` ile ÇİFT BAŞLI, ikisi de ölü.
+  odenen_bedel (1439-1482) · hareketin_altuzayi (1484-1507) ·
+    _tavla_govdesi · ayrik_mertebede_sicra (1509-1545) ·
+    gek_uydur (1546-1577) · dalga_yayilimi (1578-1595) ·
+    as_gek_adimi (1596-1634) -- son ikisi yalnız `qegitim.egit`ten,
+    o da ölü ([33])
+  kuyudan_cik (1635-1790) -- 156 satır; yalnız nefs/ara.py'den, o ölü
+  HBAR · _arama_izi · had (1791-1925) -- yalnız nefs/ara.py'den
+  NesterovEnKotu (1926-1958) · esit_superpozisyon · faz_kehaneti ·
+    esik_kehaneti · difuzyon · grover_turu · en_iyiyi_ara
+    (1959-2065) -- Grover/Dürr-Høyer araması; yalnız nefs/ara.py'den
+  _baslangic_H · tayf_araligi_asgari (2066-2091)
+HÜKÜM: 2091 satırlık dosyanın 26 satırı (%1,2) canlı.
+GARABET (F.1-M -- DÖRT GRADYAN MOTORU): senet_egimi (canlı),
+  optimize.Ikiz/tam_turev (ölü), optimize.TabiiGradyan (ölü),
+  melekeler.grape_* (ölü), kuantum/eniyileme.parametre_kaydirma (ölü),
+  qudit.metrik+dogal_adim (ölü). ALTI ayrı türev/metrik icrası.
+GARABET (F.1-J): `GIBBS_FAZ_TABLOSU` 32 elemanlı ELLE YAZILMIŞ faz
+  dizisi; `EPSILON_DURGUN = 0.45` canlı yolda elle yazılmış sabit ve
+  sükût alanına doğrudan vuruyor.
+GARABET (F.2-J): `gaye_kos` CANLI YOLDA `np.tanh` (1411) kullanıyor.
+  F.2-J listesinde YOK. Eklenecek.
+
+## MATEMATİK KATI -- 12 774 SATIR, DÖRT DOSYA
+
+Bu dört dosyanın her tanımı tek tek yoklandı (ad bazında, kendi dosyası
+hariç dışarıda atıf var mı). Aşağıdaki "ÖLÜ" listeleri o yoklamanın
+neticesidir; bir ad ancak kendi dosyasındaki CANLI bir giriş noktasından
+çağrılıyorsa canlıdır.
+
+### [69] matematik/fitrat.py -- 1623 satır, 76 tanım
+CANLI GİRİŞ NOKTALARI:
+  logsumexp (kulli_kayip:220 → zayif_halka "azamî" → meleke kefesi) CANLI
+  Cizge + gecer_mi (illet:5 → alan_cizgesi/zaman_cizgesi/kelam_ayrismasi
+    → tahtın `gecit`i) CANLI
+  fazla_sayma + tevafuk_olcusu -- melekeler:14'te İTHAL EDİLİYOR fakat
+    melekeler gövdesinde HİÇ KULLANILMIYOR (grep: yalnız 14. satır).
+    ÖLÜ İTHAL. Gerçek müşterileri musahede.rapor ve
+    musahede.iki_sahit_ayri_mi -- ikisi de ölü.
+  cift_uyusmasi -- yalnız musahede.iki_sahit_ayri_mi (ölü)
+  AyrikModel + kl + serbest_enerji_ayrisimi -- yalnız
+    optimize.odenen_bedel (ölü)
+ÖLÜ (76 tanımdan 68'i; dışarıdan sıfır atıf):
+  _erisilenler _yollar _yol_acik_mi butun_ayrismalar _oku_sokulmus
+  _oku_cikarilmis arka_kapi_kumeleri _yonlu_yollar_kesiliyor_mu
+  ortak_ayrismalar _rapor_fitrat_ayrisma YapisalModel budayarak_mudahale
+  abduction abduction_degismezi karsiolgusal abduction_tekil_mi
+  _matris_ustel notears_h notears_gradyan cevrimsiz_mi_h_ile
+  ortuk_sahte_baginti locus_izdusumu locus_uzerinde_yurut _ornek_model
+  _rapor_fitrat_karsi_olgusal kanit_log elbo sinir_dogrula
+  koordinat_inisi gauss_kl gauss_serbest_enerji
+  _rapor_fitrat_serbest_enerji Oyun merkezi_jakobi newton_koku denge_bul
+  spektral_yaricap kararli_mi en_iyi_karsilik_iterasyonu
+  ortuk_fonksiyon_turevi hassasiyet_sonlu_farkla cournot
+  cournot_kapali_cozum _rapor_fitrat_denge _pearson sartli_bagintisi
+  log_olabilirlik_orani bayes_yigma sahit_uret _rapor_fitrat_tevafuk
+  log_normalize Hukum Hipotez Havuz _bernoulli _havuz_kur
+  _rapor_fitrat_havuz _egim _kismi_egim baglanim_mudahale_ayrimi
+  olculmemis_karistirici catal_ve_carpisma _rapor_nedensel
+GARABET (F.1-M): `notears_h`/`cevrimsiz_mi_h_ile` (DAG asiklik ölçüsü)
+  ile `nefs/illet.py:cevrimler` aynı işi yapıyor; ikincisi canlı.
+GARABET (F.1-M): `spektral_yaricap` ile `ogrenme/operator.py:
+  spektral_rutbe` ve `matematik/geometri.py:spektral_enerji` -- üç
+  ayrı tayf ölçüsü.
+
+### [70] matematik/mizan.py -- 2304 satır, 130 tanım
+CANLI GİRİŞ NOKTALARI:
+  Onerme + Tablo + deg + degil + ise + ve (zirh:14 → USULLER +
+    _yasak_cetveli → vicdan(ne="usul") → HER MELEKEDEN SONRA) CANLI
+  MERTEBELER (melekeler:288 MERTEBE_SIRA -- o da ölü; kulli_kayip:33
+    _mertebeler -- yalnız mertebe(ne="adlandır"), ölü) ÖLÜ
+  ardisiklik_kaidesi/tam_istikra_mi/ZANN_I_GALIB_ESIGI/hukum_agirligi/
+    ikili_entropi/makam_tayin/mertebe_adi/yakin_gazali/yakin_zinciri
+    -- melekeler:16-19'da İTHAL, gövdede HİÇ KULLANILMIYOR. ÖLÜ İTHAL.
+    (Gerçek müşteriler: kulli_kayip.suz/Kademeler.tasdik ve mantik.py;
+     ikisi de ölü.)
+  aksiyom + hukum -- yalnız kulli_kayip.Kademeler.ispat._mantik (ölü)
+ÖLÜ (130 tanımdan 120'si): yukarıda listelenen 120 ad
+  (_kur tablo_boyu xor elmas _tablo_kur … Munazara _rapor_mizan_munazara)
+GARABET: Bu dosya klasik mantığın (kıyas, LK, sekans, Kripke çerçeveleri,
+  çok değerli mantık, relevans, ortomodüler kafes, Nyaya, Stoa,
+  münazara) TAM bir kütüphanesi ve ana akış bunun YALNIZ 6 adını
+  (Onerme, Tablo, deg, degil, ise, ve) kullanıyor -- o da dört
+  aksiyomluk bir doğruluk tablosu için.
+
+### [71] matematik/geometri.py -- 4852 satır, 202 tanım
+CANLI GİRİŞ NOKTALARI:
+  bspline_temeli + bspline_turev_temeli + dugum_dizisi (izgara:12 →
+    duzenli_uydur → tahtın `ogreniyor_mu`su) CANLI
+  spektral_enerji (kulli_kayip:552 `_tayf` → tasavvur → kademeleri_kos
+    → kulli_mizan meleke kefesi) CANLI
+  Donanim + donanim + topla_paralel (optimize:14 -- modül seviyesi
+    ithal; `gaye_kos` için optimize ithal edilince KOŞUYOR fakat
+    adlar yalnız ölü bölgelerde kullanılıyor) ÖLÜ İTHAL
+  tek_iplik_zorla + rapor + donanim (kaggle_donanim -- `kos` kırık,
+    `ayar_sec` yalnız `donanim`ı kullanıyor; kaggle kipi zaten
+    [39] yüzünden çöküyor) FİİLEN ÖLÜ
+  Metrik + metrik + Morfizm + izometri_mi + jakobi (musahede:17-18 →
+    yalnız `kopru`, ölü) ÖLÜ
+ÖLÜ (202 tanımdan ~190'ı): yukarıdaki uzun liste
+  (cas hartley … deeponet_sinamasi _rapor_asgari _rapor_modern)
+GARABET (ÇİFT BAŞLILIK -- BÜYÜK): bu dosya `DeepONet` (4700),
+  `FNO`/`SpektralKatman` (fno bölümü), `KAN211`, `EvrisimKatmani`,
+  `Funktor`/`lan`/`ran` (Kan uzantıları), `so_izdusumu`,
+  `kure_izdusumu`, `bochner_suzgeci`, `postnikov_indisi` taşıyor.
+  `DeepONet` ogrenme/operator.py:23 ile ÇİFT BAŞLI ([ferman 2-H
+  okuması]); `lan`/`ran` kulli_kayip:1054 ile ÇİFT BAŞLI;
+  `tek_iplik_zorla` main/egitim.py:103 ile ÇİFT BAŞLI.
+GARABET (F.1-L): `rapor()` (4840) 21 bölümlü bir gösteri ve
+  `BOLUMLER` cetvelinden koşuyor; tahttan çağrılmıyor.
+
+### [72] matematik/tip_teorisi.py -- 3995 satır, 312 tanım
+CANLI GİRİŞ NOKTALARI:
+  Baglam + Cember + Deg + Evren + Taban + denetle_t + dongu_uzayi_n +
+    morfizm_tipi (melekeler:20 → `lifleri_kur` → QTefekkur(𝒪21) →
+    HER İLERİ GEÇİŞTE) CANLI
+  bosluklar (musahede:1804 `terkip_saglam_mi` -- ölü) ÖLÜ
+  Sigma/Cift/Birinci/Ikinci/Dogal/degerlendir/geri_oku/BOS (lif -- ölü)
+  Dugum/Lam/… (idrak/kategori -- ölü)
+  Ard/Aralik/Poz/Sfr/Tamsayi/Terim/Transp/YANLIS/YolUygula/
+    ardil_denkligi/esdeger_mi/nf/ozdeslik_denkligi/taze/ua/BIR/SIFIR
+    (geometri:15 -- geometri'nin canlı uzuvları bunları kullanmıyor) ÖLÜ
+ÖLÜ (312 tanımdan ~300'ü): yukarıdaki çok uzun liste
+  (terim_taze … pres)
+GARABET: ana akış bu 3995 satırdan yalnız `lifleri_kur`un ihtiyacı
+  olan 8 adı kullanıyor; `lifleri_kur` da 20 lif için
+  `morfizm_tipi(A, m)` kurup `denetle_t` ile denetliyor ve neticeyi
+  YALNIZ `Lif.olcek`/`Lif.adim` gibi skalerler için okuyor.
+  Yâni 3995 satırlık bağımlı tip teorisi kütüphanesi, 20 sayı üretmek
+  için koşuyor.
+
+## SON SAFHA: TAHTIN ÇAĞIRMADIĞI KALAN DOSYALAR (247 dosya)
+
+### [73] Altı `__init__.py` -- 11 satır
+`main/__init__.py` BOŞ. Öteki beşi `__all__` ilan ediyor ve
+İLAN ETTİKLERİ MODÜLLERİN ÇOĞU YOK:
+  nefs/__init__: uzaylar, meleke, idrak, akil, murakabe, beyan, akis
+    → YEDİSİ DE YOK (nefs/ altında böyle dosya yok)
+  ogrenme/__init__: rkhs, operator, izgara, grassmann → dördü var
+  matematik/__init__: tip_teorisi, mizan, fitrat, geometri → dördü var
+  kuantum/__init__: kapilar, devre, tda, qsvt, surekli, topolojik,
+    eniyileme → `tda` ve `qsvt` YOK
+  idrak/__init__: arc, kubit, model, egitim → DÖRDÜ DE YOK
+HÜKÜM: on bir modül adı ilan edilmiş, ON BİRİ de yok. `from nefs import *`
+  denirse ImportError. Ferman 5: yapılmayan yapıldı diye yazılmaz.
+
+### [74] idrak/kategori.py -- 171 satır OKUNDU
+Tek dış atıf `Uzay` (zirh, ölü kolda). ÖLÜ.
+KULLANILMAYAN (hepsi): Uzay, SABIT, AZAMI_TAM_MERTEBE, _baglayici_say,
+  _tam_kur, _temsilci_kur, uzaylari_kur, tikanma_tipi,
+  kesit_tipi_ile_agirlik, akit_denetle, rapor + `__main__`
+ÇİFT BAŞLILIK teyit: `_tam_kur`/`_temsilci_kur`/`SABIT`/
+  `AZAMI_TAM_MERTEBE` nefs/melekeler.py:248-279'da HARFİYYEN aynı;
+  melekeler'inki CANLI (QTefekkur), bu ölü.
+
+### [75] kuantum/stabilizer.py -- 200 satır OKUNDU
+KULLANILMAYAN (hepsi): ALFA, bgs_haddi, StabilizerDurum (.arti .kopya
+  .z .s .cz .faz .genlik), StabilizerRank (.genlik .z .s .cz .t
+  .budama .seyreklestir .durum), _gosterim + `__main__`
+  (`StabilizerDurum` yalnız zirh'in ölü `muhru_stabilizerle_yuzlestir`i)
+GARABET (F.7): `StabilizerRank.budama` ve `seyreklestir` -- ferman 7
+  "SVD/bond truncation İPTAL" der; bu budama SVD değil fakat aynı
+  cinsten bir kesmedir ve ferman 7-A Bravyi-Gosset'i tescil ediyor.
+  Kod var, koşmuyor.
+GARABET (F.2-J): `StabilizerRank.t` `np.exp(1j·π/4)`, `genlik`
+  `1j**q` -- ölü.
+
+### [76] kuantum/surekli.py -- 232 satır OKUNDU
+KULLANILMAYAN (hepsi): HBAR, expm, yok_et, yarat, sayi, konum,
+  momentum, komutator_sapmasi, yer_degistirme, sikistirma, isik_bolucu,
+  kerr, kubik_faz, kesirsel_fourier, tutarli_durum, vakum, fock,
+  _log_faktoriyel, foton_dagilimi, kuadratur_belirsizligi,
+  uniterlik_sapmasi, kesme_hatasi, _gosterim + `__main__`
+  (`tutarli_durum` yalnız nefs/lif.py'nin ölü dalı)
+ÇİFT BAŞLILIK: `vakum`+`sikistirma` ↔ nefs/ayna.py:99,118 (`vakum`,
+  `sikistir`); `expm` ↔ melekeler `_uexp`/`_genel_expm` ve
+  devre `_uexp`. DÖRT dizey üsteli icrası.
+
+### [77] idrak/veri/soyutlamalar/ -- 236 dosya, 41 899 satır, 120 dizin
+BU DOSYALAR MODÜL DEĞİL, VERİDİR:
+  - `idrak/veri/` altındadır ve `tanilama/sabit_teftisi.py:16`
+    `_KOD_DEGIL` cetveli onu KOD SAYMIYOR.
+  - Depoda hiçbir yerden ithal edilmiyorlar (grep: `soyutlamalar`
+    yalnız musahede.py:29'da ve orada `abstractions.md` okunuyor,
+    `.py` değil).
+  - `soyutlama_oku` yalnız `abstractions.md` dosyasını okuyor.
+O HÂLDE: 236 dosyanın TAMAMI, içindeki HER sınıf ve fonksiyon
+  KULLANILMAYANDIR. (Tek tek okumak yerine tek hükümle tasnif ettim;
+  yapısı tek örnekle teyit edildi: 0934a4d8/solution.py 99 satır,
+  abstractions.py 183 satır, ikisi de göreve mahsus Python çözücü.)
+!!! ÜÇ AYRI FERMAN İHLÂLİ:
+  1. FERMAN 6 ("elle yazılmış kâide, göreve mahsus çözücü YASAKTIR"):
+     120 ARC görevi için 120 ayrı elle yazılmış çözücü. Depoda
+     duruyorlar. Koşmuyorlar fakat DURUYORLAR.
+  2. FERMAN 4 (halkça isim): tanımların tamamı İNGİLİZCE --
+     Candidate, Component, Lattice, Motif, Ring, Shape, bbox,
+     load_dataset… Bütün proje Türkçe, bu ağaç İngilizce.
+  3. KIRIK VERİ YOLU: `abstractions.py`lerin `DATA_PATH`i
+     `idrak/veri/arc2_samples/<ad>.json` diyor; O DİZİN YOK.
+     Yâni çalıştırılsalar da veriyi bulamazlar.
+FERMAN 2-C gereği imha kararı SORULMADAN VERİLMEZ; burada yalnız
+  tasnif ediliyor.
+
+═══════════════════════════════════════════════════════════════════════
+## HÜKÜM -- "MAINDE OLMASI GEREKİP DE OLMAYAN" NE VAR
+═══════════════════════════════════════════════════════════════════════
+
+Bu, emrin son maddesidir. Cevap dört başlıkta:
+
+### A. TAHTIN KENDİSİNDE OLUP KOŞMAYAN (kırık): DÖRT
+  1. `tanilama/beyan.py:96-97` imha edilmiş `hendese_metni`/
+     `casimir_metni` ithali → `python -m main.egitim tâlim` HİÇ
+     KOŞMUYORDU.  **BU TURDA DÜZELTİLDİ VE İTİLDİ.**
+  2. `main/kaggle_egitim.py:12` olmayan `KulliDalgaTalimMotoru` ithali
+     → `python -m main.egitim kaggle` çöküyor. DÜZELTİLMEDİ (tertibat
+     kararı: motor yok, bu dosya ya yeniden yazılır ya kesilir).
+  3. `nefs/kulli_kayip.py:953` olmayan `nefs/meclis.py` ithali --
+     ölü dalda, patlamıyor.
+  4. `nefs/zihin_durumu.py:336` tanımsız `MAKAM_ESIKLERI`;
+     `nefs/zirh.py:724` tanımsız `tunel_maliyet_cetveli`;
+     `nefs/zirh.py:22` `__all__`da tanımsız `isaret_vur`;
+     `nefs/kulli_kayip.py:533` tanımsız `gorev_ozellikleri` (bu
+     SONUNCUSU CANLI YOLDA ve `_dene` onu sessizce yutuyor).
+
+### B. TAHTA BAĞLI OLUP İŞ GÖRMEYEN (ferman 1-C(b) münafıklığı)
+  1. **𝒪44 QTahsil** -- `q.bolge_var("parametre")` daima False,
+     meleke hiçbir zaman hiçbir şey yapmıyor. 44 melekenin biri ölü.
+  2. **`mpo_topla`/`mpo_dagit`in `duraklar` ve `j` argümanları** --
+     alınıp atılıyor; 𝒪7, 𝒪21, 𝒪30, 𝒪34, 𝒪37 ve `gaye_kos` durak ve
+     kanal ayrımı veriyor, hepsi sektörün ortalama fazına çöküyor.
+  3. **`Tableau`** kuruluyor, `beyan()`i okunuyor, X/Z/faz tablosuna
+     ana akışta hiçbir kapı vurulmuyor (`xor_isle`/`faz_isle`/
+     `galois_isle`/`parite_alarmi` ölü).
+  4. **`Harita` (münasebet haritası)** her koşuda sıfırdan kuruluyor,
+     `hazineye()` yazılmış fakat hazineye KONMUYOR → ferman 1-I'nin
+     "müşterek münasebet haritası" hükmü hiç birikmiyor.
+  5. **`Hizolcer.sert`** hiç açılmıyor → hız haddi ölçülüyor fakat
+     kırmızı yanamıyor.
+  6. **`QuditYazmac.sadakat()`** daima 1.0 → "kesme yapısal" kefesi
+     sabit.
+  7. **`suz` / müdrike zinciri** -- `_ara()` daima `[]` döndüğü için
+     kaide hiç bulunamıyor; zaten `degerlendir(mudrike_ile=True)`
+     hiç verilmediği için tamamı ölü.
+  8. **`main/kaggle_cikarim.py:gorev_cevabi_uret`** -- `padisah`
+     ithal edilip kullanılmıyor; teslimat GİRDİYİ cevap veriyor.
+
+### C. FERMAN 7'NİN "ASIL USUL" İLAN EDİP KOŞMAYANLARI
+  1. `vpshufb` faz otomatı (`mucit_faz_dfa` + `faz_dfa_gfni`) -- C'de
+     yazılı, imzası bağlı, HİÇ ÇAĞRILMIYOR. Faz numpy'da koşuyor.
+  2. `mucit_bant` + `karo_vur` + `cift_vur` (qcekirdek C) -- yalnız
+     `mucit_cift_bant` çağrılıyor; karo BLAS'a gidiyor.
+  3. `mucit_ayristir`/`mucit_birlestir` (AVX-512) -- hiç çağrılmıyor.
+  4. `mucit_affine`, `mucit_gfcarp` -- hiç çağrılmıyor.
+  5. Matrix-free Kronecker (`nefs/hizli.py:kronecker`) -- ölü.
+
+### D. SAYIM
+  Okunan dosya            : 83  (taht zinciri + seviye 2 + kalanlar)
+  Tasnif edilen dosya     : 319 (236'sı veri ağacı, tek hükümle)
+  TAMAMEN ÖLÜ DOSYA       : 13
+    nefs/gor.py · nefs/ara.py · nefs/lif.py · nefs/mantik.py ·
+    idrak/kategori.py · kuantum/stabilizer.py · kuantum/surekli.py ·
+    kuantum/topolojik.py · main/kaggle_egitim.py (kırık) ·
+    ogrenme/kaggle_donanim.py (ayar_sec hariç) ·
+    + 236 dosyalık idrak/veri/soyutlamalar ağacı
+  %80'DEN FAZLASI ÖLÜ DOSYA : 6
+    ogrenme/optimize.py (%98,8) · nefs/hizli.py (%88) ·
+    matematik/tip_teorisi.py (~%96) · matematik/mizan.py (~%92) ·
+    matematik/geometri.py (~%94) · matematik/fitrat.py (~%89) ·
+    nefs/qudit.py (%81) · kuantum/kapilar.py (%94) ·
+    ogrenme/izgara.py (%59)
+  `rapor()` + `if __name__ == "__main__"` taşıyan dosya : 38
+    (ferman 1-L: tahttan başka koşu yok; bunların 3'ü tahtın kipi --
+     kulli_mizan.rapor, sabit_teftisi.rapor, veri.rapor -- 35'i ölü)
+  ÇİFT/ÜÇ/DÖRT BAŞLI AD    : 24 tesbit edildi
+    holonomi(2) · Ortam(3) · Lif(3) · sadakat(3) · ortusme(2) ·
+    HUKUM_ALANLARI(2) · USULLER(2) · kestir(2) · povm(2) · kodla(2) ·
+    _uexp/expm/_genel_expm(4) · Laplasyen(3) · Betti(3) ·
+    DeepONet(2) · AZAMI_TAM_MERTEBE+SABIT(2) · tek_iplik_zorla(2) ·
+    vakum+sikistirma(2) · SEKTOR/BLOKLAR/kulli_alanlar(3) ·
+    ALTIN+ALTIN_ORAN(2) · AKIS+QAKIS(2) · BRAVYI_GOSSET_ALFA(2) ·
+    ara(2) · iz(2) · Majorana temsili(2)
+  GRADYAN/TÜREV MOTORU     : 6 (biri canlı: senet_egimi)
+  QSVT İCRASI              : 2 (biri canlı: qudit.suz)
+  STABILIZER TEMSİLİ       : 3 (biri yarı canlı: galois.Tableau)
+  F.2-J LİSTESİNE EKLENECEK CANLI AŞKIN ÇAĞRI : 9
+    kararname(np.fft+np.exp) · mukayese.nesnelestir(np.exp) ·
+    mukayese.bargmann/hata_payi(np.angle/acos) · usul.gedik_bul(arccos) ·
+    tenakuz.dislama_dizeyi(np.exp) · rust.rust_kilidi(math.exp×2) ·
+    qudit.suz(np.cos/np.exp) · zirh.taahhude_yuzlestir(np.tanh) +
+    zirh.zirh_kaybi(np.exp/log) · optimize.gaye_kos(np.tanh) ·
+    zihin_durumu.donme(cos/sin -- EN SICAK) ·
+    melekeler.talim_kademesi(np.exp) ·
+    kuantum/eniyileme.tayf_araligi(eigvalsh×41) ·
+    soyle(np.exp) · kulli_mizan.holonomi(math.acos)
+  F.5 SESSİZ İKAME (çıplak except / `or 0` / sessiz katlama) : 17 yer
