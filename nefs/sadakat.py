@@ -130,6 +130,13 @@ def sadakat_uygula(hedef: Any, ayar: Optional[SadakatAyari] = None
             "durumun TAMAMI mantık yırtığı sektöründe -- kod uzayına "
             "izdüşümü sıfır. Bu bir sayı hatası değil, mimarî bir "
             "çöküştür: parite lifi yanlış seçilmiş olmalı.")
+        _iz = getattr(yazmac, "iz", None) if yazmac is not None else None
+        if (_iz is not None and _iz.senet_acik and psi.ndim == 2
+                and np.asarray(nrm, float).reshape(-1).size == P.shape[0]):
+            _iz.kapi_yaz("durum", (), np.asarray(P, complex).copy())
+            _iz.kapi_yaz("maske", (), np.asarray(dizin, bool).copy())
+            _iz.kapi_yaz("ölçek", (),
+                         np.asarray(nrm, float).reshape(-1, 1).copy())
         Q = Q / nrm
         sifirlanan = int(np.count_nonzero(dizin))
         _SAYAC["sıfırlanan"] += float(sifirlanan)

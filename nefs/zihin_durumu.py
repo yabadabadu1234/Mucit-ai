@@ -178,13 +178,13 @@ class QYazmac:
     def tek_yigin(self, yuvalar, G) -> None:
         self.y.tek_yigin(yuvalar, G)
 
-    def cift(self, i: int, G) -> None:
-        self.y.cift(i, G)
+    def cift(self, i: int, G, baglar=None) -> None:
+        self.y.cift(i, G, baglar=baglar)
 
     def veri_izgara(self, sutun=None, satir=None):
         return self.y.veri_izgara(sutun, satir)
 
-    def cift_yigin(self, sol_yuvalar, G) -> None:
+    def cift_yigin(self, sol_yuvalar, G, baglar=None) -> None:
         G = np.asarray(G)
         yuvalar = [int(y) for y in sol_yuvalar]
         m = len(yuvalar)
@@ -195,7 +195,7 @@ class QYazmac:
         self.y._dusen_kapi += int((~gec).sum())
         cift = self.y.cift
         for idx in np.flatnonzero(gec):
-            cift(int(yv[idx]), G[int(idx)])
+            cift(int(yv[idx]), G[int(idx)], baglar=baglar)
 
     def uzak_cift(self, i: int, j: int, G) -> None:
         self.y.uzak_cift(i, j, G)
@@ -253,7 +253,8 @@ class QYazmac:
         self.y.normalize()
 
     def harman(self, kademe: Optional[int] = None, teta=None,
-             kulli_dahil: bool = True) -> None:
+             kulli_dahil: bool = True, par_bas: int = -1,
+             olcek: float = 1.0) -> None:
         k = int(kademe if kademe is not None else self.ayar.harman_kademesi)
         acilar = (None if teta is None
                   else np.asarray(teta, float).reshape(-1))
@@ -273,6 +274,13 @@ class QYazmac:
                     c, sn = np.cos(a), np.sin(a)
                     self.y.bit_kapisi(f, alt,
                                       np.array([[c, -sn], [sn, c]], complex))
+                    if acilar is not None and int(par_bas) >= 0:
+                        self.y.iz.bag_yaz(
+                            self.y.iz.son_senet,
+                            int(par_bas) + ((s - 1) % acilar.size),
+                            float(olcek),
+                            ("bit", int(f), int(alt),
+                             np.array([[-sn, -c], [c, -sn]], complex)))
 
     def alan_degeri(self, ad: str):
         return self.y.alan_degeri(ad)

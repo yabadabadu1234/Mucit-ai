@@ -23,7 +23,10 @@ def mecz_sifirla() -> None:
                   "ΔE": 0.0, "yarıçap": 0.0, "iz_g": 0.0,
                   "operatörlü_kefe": 0.0, "operatörsüz_kefe": 0.0,
                   "κ": 0.0, "yarıçap_düzeltmesi": 0.0,
-                  "yönsüz_tur": 0.0})
+                  "yönsüz_tur": 0.0, "kapı": 0.0, "üretecsiz": 0.0,
+                  "ek_durum_ikiz_farkı": 0.0, "üreteç_ikiz_farkı": 0.0,
+                  "senet_ileri": 0.0,
+                  "durum_saklaması": 0.0})
 
 
 mecz_sifirla()
@@ -169,6 +172,15 @@ def vadi(metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
     return v
 
 
+def nakil_senetli(metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
+    s = np.asarray(metrik, float) * np.asarray(maske, float)
+    v = np.zeros_like(s)
+    if s.size and float(s.max()) > 0.0:
+        v[int(np.argmax(s))] = 1.0
+    _MECZ["nakil"] += 1.0
+    return v
+
+
 def nakil(q, maske: np.ndarray) -> np.ndarray:
     psi = np.asarray(q.y.psi, complex)
     lif = tuple(int(x) for x in q.y.ayar.lif)
@@ -231,31 +243,61 @@ class Memuriyet:
                                        for o in self.kume]
 
     def divan(self, p: np.ndarray, keyf: float) -> Dict[str, Any]:
-        q, hedefler = self._durum(p)
+        from .senet_egimi import (egim_ek_durum, egim_ikiz, egim_uretec,
+                                  mutabakat, senet_kapsami,
+                                  senet_ileri_sadakati)
+        n_par = int(np.asarray(p, float).size)
+        from nefs.qyazmac import SENET_ACIK
+        self.nefs.yukle(np.asarray(p, float))
+        from nefs.qegitim import belirtecleri_kodla, ornek_bol
+        bag = ornek_bol(self.kume[0])[0]
+        E = belirtecleri_kodla(list(bag), self.nefs.ayar.veri_lifi,
+                               self.nefs.ayar.veri_lifi)
+        _eski = bool(SENET_ACIK[0])
+        SENET_ACIK[0] = True
+        try:
+            q = self.nefs.idrak_et(E)
+        finally:
+            SENET_ACIK[0] = _eski
+        iz = q.y.iz
+        lif = tuple(int(x) for x in q.y.ayar.lif)
+        hedefler = [int(ornek_bol(o)[1]) for o in self.kume]
         H = hata_operatoru(q, hedefler, int(self.nefs.ayar.veri_lifi))
         psi = np.asarray(q.y.psi, complex)
         ck = cukur(psi, H)
-        eg = egim(q, H)
-        dv = duvar(eg["metrik"])
-        r = yaricap(float(keyf), float(_MECZ["iz_g"]))
-        bas, kac = self._harman_yeri(q)
+
+        g_ek, metrik = egim_ek_durum(iz, lif, psi, H, n_par)
+        g_ur = egim_uretec(iz, lif, psi, H, n_par)
+        kap = senet_kapsami(iz, n_par)
+        _MECZ["kapı"] = float(kap["kapı"])
+        _MECZ["kapsanan_parametre"] = float(kap["kapsanan_parametre"])
+        _MECZ["toplam_parametre"] = float(kap["toplam_parametre"])
+        _MECZ["üretecsiz"] = float(kap["üretecsiz"])
+        _MECZ["durum_saklaması"] = float(kap["durum_saklaması"])
+        _MECZ["eğim_normu"] = float(np.linalg.norm(g_ek))
+        _MECZ["iz_g"] = float(metrik.sum())
+
+        dv = duvar(metrik)
         maske = np.asarray(dv["maske"], float)
-        yon = -np.asarray(eg["eğim"], float) * maske
-        n = float(np.linalg.norm(yon))
-        if ck["durak"] or n <= 1e-300:
+        r = yaricap(float(keyf), float(_MECZ["iz_g"]))
+        yon = -g_ek * maske
+        nrm = float(np.linalg.norm(yon))
+        if ck["durak"] or nrm <= 1e-300:
             _MECZ["çukur"] += 1.0
-            yon = (vadi(eg["metrik"], maske) if not ck["durak"]
-                   else nakil(q, maske))
-            n = float(np.linalg.norm(yon))
-        if n > 0.0:
-            yon = yon / n
-        return {"yön": yon, "yarıçap": r, "ΔE": ck["ΔE"], "başlangıç": bas,
-                "kaç": kac, "⟨H⟩": ck["⟨H⟩"], "duvar": dv,
-                "eğim_yayılmış": self.kademeye_yay(
-                    -np.asarray(eg["eğim"], float) * maske, kac)
-                if float(np.linalg.norm(eg["eğim"] * maske)) > 0.0
-                else np.zeros(int(kac)),
-                "durak": ck["durak"]}
+            yon = (vadi(metrik, maske) if not ck["durak"]
+                   else nakil_senetli(metrik, maske))
+            nrm = float(np.linalg.norm(yon))
+        if nrm > 0.0:
+            yon = yon / nrm
+        ikz = egim_ikiz(iz, lif, psi, H, yon)
+        mt = mutabakat(g_ur, g_ek, ikz, yon)
+        _MECZ["senet_ileri"] = float(senet_ileri_sadakati(iz, lif, psi))
+        _MECZ["ek_durum_ikiz_farkı"] = float(mt["ek_durum_ikiz_farkı"])
+        _MECZ["üreteç_ikiz_farkı"] = float(mt["üreteç_ikiz_farkı"])
+        iz.senedi_kapat()
+        return {"yön": yon, "yarıçap": r, "ΔE": ck["ΔE"], "eğim": g_ek,
+                "metrik": metrik, "⟨H⟩": ck["⟨H⟩"], "duvar": dv,
+                "mutabakat": mt, "durak": ck["durak"]}
 
     def kademeye_yay(self, yon: np.ndarray, kac: int) -> np.ndarray:
         y = np.asarray(yon, float).reshape(-1)
@@ -277,21 +319,17 @@ class Memuriyet:
             _MECZ["tur"] += 1.0
             keyf = float((keyfiyet_beyani() or {}).get("en_iyi", 0.0)) or 1.0
             d = self.divan(p, keyf)
-            bas, kac = int(d["başlangıç"]), int(d["kaç"])
-            _MECZ["kapsanan_parametre"] = float(kac)
-            yon = self.kademeye_yay(d["yön"], kac)
-            assert yon.size == kac, (
-                "yön %d, harman yazmacı %d -- boy tutmuyor"
-                % (yon.size, kac))
+            yon = np.asarray(d["yön"], float)
+            assert yon.size == p.size, (
+                "yön %d, parametre %d -- boy tutmuyor"
+                % (yon.size, p.size))
             if float(np.linalg.norm(yon)) <= 0.0:
-                _MECZ["yönsüz_tur"] = _MECZ.get("yönsüz_tur", 0.0) + 1.0
+                _MECZ["yönsüz_tur"] += 1.0
                 continue
             r = float(self._r_duzeltme if self._r_duzeltme > 0.0
                       else d["yarıçap"])
-            egim_yon = float(np.dot(np.asarray(d["eğim_yayılmış"], float),
-                                    yon))
-            aday = p.copy()
-            aday[bas:bas + kac] = aday[bas:bas + kac] + r * yon
+            egim_yon = float(np.dot(np.asarray(d["eğim"], float), yon))
+            aday = p + r * yon
             va = float(np.atleast_1d(self.kayip(aday[None, :]))[0])
             _MECZ["çağrı"] += 1.0
             eg = hat_egriligi(va - v, egim_yon * r, r)
@@ -299,14 +337,12 @@ class Memuriyet:
                           "κ": float(eg["κ"])})
             if va < v:
                 _MECZ["kabul"] += 1.0
-                _MECZ["adım_normu"] += float(
-                    np.linalg.norm(aday - p))
+                _MECZ["adım_normu"] += float(np.linalg.norm(aday - p))
                 p, v = aday, va
                 self._r_duzeltme = 0.0
             else:
                 self._r_duzeltme = float(eg["yarıçap*"])
-                _MECZ["yarıçap_düzeltmesi"] = _MECZ.get(
-                    "yarıçap_düzeltmesi", 0.0) + 1.0
+                _MECZ["yarıçap_düzeltmesi"] += 1.0
         return {"p": p, "V_son": v, "seyir": seyir}
 
 
@@ -351,6 +387,16 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          % (b["yarıçap"], b["iz_g"]),
          "         hat eğriliği κ = %.4e   %d kere düzeltti"
          % (b["κ"], int(b["yarıçap_düzeltmesi"])),
+         "",
+         "  SENET  %d kapı · üretecsiz bağ %d · durum saklaması %d"
+         % (int(b["kapı"]), int(b["üretecsiz"]),
+            int(b["durum_saklaması"])),
+         "         ileri oynatma sadakati %.3e  (senet TAM mı)"
+         % b["senet_ileri"],
+         "  MUTABAKAT  ek_durum↔ikiz = %.3e   (ikisi de TAM olmalı)"
+         % b["ek_durum_ikiz_farkı"],
+         "             üreteç↔ikiz   = %.3e   (derinlik körlüğünün bedeli)"
+         % b["üreteç_ikiz_farkı"],
          "",
          "  operatörlü kefe   : %d  (yönü kurar)" % int(b["operatörlü_kefe"]),
          "  operatörsüz kefe  : %d  (yönü kurmaz, HÜKMÜ verir)"

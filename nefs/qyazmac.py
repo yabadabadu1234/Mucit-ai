@@ -14,6 +14,8 @@ __all__ = ["QuditAyar", "QuditYazmac", "Iz"]
 
 _CEYREK = np.array([1.0 + 0.0j, 0.0 + 1.0j, -1.0 + 0.0j, 0.0 - 1.0j])
 
+SENET_ACIK: List[bool] = [False]
+
 
 class Iz:
 
@@ -21,9 +23,43 @@ class Iz:
         self.kapi = 0
         self.kesme = 0.0
         self.defter: List[Tuple[str, str]] = []
+        self.senet_acik = bool(SENET_ACIK[0])
+        self.senet: List[Tuple[str, Tuple[int, ...], np.ndarray]] = []
+        self.baglanti: List[Tuple[int, int, float, Any]] = []
+        self.derinlik = 0
+        self.uretecsiz = 0
+        self.son_senet = -1
 
     def not_dus(self, meleke: str, mesaj: str = "") -> None:
         self.defter.append((str(meleke), str(mesaj)))
+
+    def senedi_ac(self) -> None:
+        self.senet_acik = True
+        self.senet = []
+        self.baglanti = []
+        self.uretecsiz = 0
+
+    def senedi_kapat(self) -> None:
+        self.senet_acik = False
+
+    def kapi_yaz(self, tur: str, yuvalar, G) -> int:
+        if not self.senet_acik:
+            return -1
+        self.senet.append((str(tur),
+                           tuple(int(y) for y in np.atleast_1d(yuvalar)),
+                           np.asarray(G).copy()))
+        self.son_senet = len(self.senet) - 1
+        return self.son_senet
+
+    def bag_yaz(self, senet_no: int, parametre: int, olcek: float,
+                turev=None) -> None:
+        if not self.senet_acik or int(senet_no) < 0:
+            return
+        if turev is None:
+            self.uretecsiz += 1
+            return
+        self.baglanti.append((int(senet_no), int(parametre), float(olcek),
+                              turev))
 
 
 @dataclass
@@ -194,6 +230,7 @@ class QuditYazmac:
 
     def normalize(self) -> np.ndarray:
         n = np.sqrt(np.maximum(self.norm(), 1e-300))
+        self.iz.kapi_yaz("ölçek", (), n.reshape(-1, 1).copy())
         self.psi = self.psi / n[:, None]
         return n
 
@@ -307,6 +344,9 @@ class QuditYazmac:
         self._bekleyen.clear()
         self._faz_bekleyen = None
         self._psi = np.asarray(v)
+        if self.iz.senet_acik:
+            self.iz.kapi_yaz("durum", (),
+                             np.asarray(self._psi, complex).copy())
 
     def _karolari_banda(self) -> None:
         if not self._bekleyen:
@@ -331,6 +371,12 @@ class QuditYazmac:
         if not np.any(k):
             return
         V, artik = palmer_indir(self._psi, k, m)
+        if self.iz.senet_acik:
+            _c = max(1, m // 4)
+            _q = (((np.asarray(k, np.int64)
+                    - np.asarray(artik, np.int64)) // _c) % 4)
+            self.iz.kapi_yaz("faz", (),
+                             np.broadcast_to(_q, (self.B, self.d)).copy())
         self._psi = np.asarray(V, self._psi.dtype)
         self._faz_artik = np.broadcast_to(
             np.asarray(artik, np.int64), (self.B, self.d)).copy()
@@ -364,6 +410,7 @@ class QuditYazmac:
     def _karo_vur(self, k: int, M: np.ndarray) -> None:
         self._faz_indir()
         M = np.asarray(M, complex)
+        self.iz.kapi_yaz("karo", (int(k),), M)
         eski = self._bekleyen.get(int(k))
         self._bekleyen[int(k)] = M if eski is None else M @ eski
         self._kapi += 1
@@ -377,7 +424,7 @@ class QuditYazmac:
         self._karo_vur(k, self._gomulu(n, int(alt), G))
 
     def _cift_kapisi_lifli(self, ki: int, ai: int, kj: int, aj: int,
-                           G: np.ndarray) -> None:
+                           G: np.ndarray, baglar=None) -> None:
         ei = self._eksen(ki, ai)
         ej = self._eksen(kj, aj)
         if ei <= 0 or ej <= 0 or ei == ej:
@@ -396,6 +443,21 @@ class QuditYazmac:
                     for b in range(4):
                         M[idx[a], idx[b]] = G[a, b]
             self._karo_vur(int(ki), M)
+            if baglar:
+                no = self.iz.son_senet
+                n2 = int(self.ayar.lif[int(ki)])
+                for (par, olcek, dG) in baglar:
+                    dM = np.zeros((n2, n2), complex)
+                    dG4 = np.asarray(dG, complex).reshape(4, 4)
+                    for x in range(n2):
+                        if (x & bi) or (x & bj):
+                            continue
+                        ix = [x, x | bj, x | bi, x | bi | bj]
+                        for a in range(4):
+                            for b in range(4):
+                                dM[ix[a], ix[b]] = dG4[a, b]
+                    self.iz.bag_yaz(no, int(par), float(olcek),
+                                    ("karo4", int(ki), dM))
             return
         self._faz_indir()
         self._karolari_banda()
@@ -403,11 +465,20 @@ class QuditYazmac:
         bj = 1 << int(self._seviye - ej)
         if matchgate_mi(G)[0]:
             self._matchgate_kapi += 1
+        _no = self.iz.kapi_yaz("bant", (int(bi), int(bj)), G)
+        if baglar:
+            for (par, olcek, dG) in baglar:
+                self.iz.bag_yaz(_no, int(par), float(olcek),
+                                ("bant4", int(bi), int(bj),
+                                 np.asarray(dG, complex).reshape(4, 4)))
         self._bant.cift(bi, bj, G)
         self._kapi += 1
         self.iz.kapi += 1
 
     def bit_kapisi(self, k: int, alt: int, G: np.ndarray) -> None:
+        self._bit_kapisi(k, alt, G)
+
+    def _bit_kapisi(self, k: int, alt: int, G: np.ndarray) -> None:
         self._bit_kapisi_lifli(k, alt, G)
 
     def faz(self, teta) -> None:
@@ -436,6 +507,7 @@ class QuditYazmac:
         if M.shape != (j - i, j - i):
             raise ValueError("sektör kapısı %s olmalı, %s verildi"
                              % ((j - i, j - i), M.shape))
+        self.iz.kapi_yaz("sektör", (int(i), int(j)), M)
         self.psi[:, i:j] = self.psi[:, i:j] @ M.T
         self._kapi += 1
 
@@ -648,9 +720,17 @@ class QuditYazmac:
         G = np.asarray(G)
         if G.ndim == 2:
             G = np.broadcast_to(G, (len(yuvalar), 2, 2))
+        yv = np.asarray([int(y) for y in yuvalar], np.int64)
+        if self.iz.senet_acik:
+            gec0 = self.gecerli_toplu(yv)
+            kk0, aa0 = self.lif_no_toplu(yv)
+            self._dusen_kapi += int((~gec0).sum())
+            for idx in np.flatnonzero(gec0):
+                self.bit_kapisi(int(kk0[idx]), int(aa0[idx]),
+                                np.asarray(G[int(idx)], complex).reshape(2, 2))
+            return
         sira: List[Tuple[int, int]] = []
         birik: Dict[Tuple[int, int], np.ndarray] = {}
-        yv = np.asarray([int(y) for y in yuvalar], np.int64)
         gec = self.gecerli_toplu(yv)
         kk, aa = self.lif_no_toplu(yv)
         self._dusen_kapi += int((~gec).sum())
@@ -666,8 +746,8 @@ class QuditYazmac:
         for anahtar in sira:
             self.bit_kapisi(anahtar[0], anahtar[1], birik[anahtar])
 
-    def cift(self, yuva: int, G: np.ndarray) -> None:
-        self.uzak_cift(int(yuva), int(yuva) + 1, G)
+    def cift(self, yuva: int, G: np.ndarray, baglar=None) -> None:
+        self.uzak_cift(int(yuva), int(yuva) + 1, G, baglar=baglar)
 
     def _bolum(self, k: int) -> Tuple[int, int]:
         c = self._bolum_onbellek.get(int(k))
@@ -685,10 +765,11 @@ class QuditYazmac:
         return c
 
     def cift_bit_kapisi(self, ki: int, ai: int, kj: int, aj: int,
-                        G: np.ndarray) -> None:
-        self._cift_kapisi_lifli(ki, ai, kj, aj, G)
+                        G: np.ndarray, baglar=None) -> None:
+        self._cift_kapisi_lifli(ki, ai, kj, aj, G, baglar=baglar)
 
-    def uzak_cift(self, i: int, j: int, G: np.ndarray) -> None:
+    def uzak_cift(self, i: int, j: int, G: np.ndarray,
+                  baglar=None) -> None:
         if not (self.gecerli(i) and self.gecerli(j)):
             self._dusen_kapi += 1
             return
@@ -697,7 +778,7 @@ class QuditYazmac:
         kj, aj = self._lif_no(int(j))
         lif = tuple(self.ayar.lif)
         if self._ikinin_kuvveti:
-            self.cift_bit_kapisi(ki, ai, kj, aj, G)
+            self.cift_bit_kapisi(ki, ai, kj, aj, G, baglar=baglar)
             return
         if ki == kj:
             n = lif[ki]
@@ -736,6 +817,7 @@ class QuditYazmac:
                 for m, (a, b) in enumerate(idx):
                     F[:, a, b] = v[:, m]
         T = F.reshape(sekil)
+        self.iz.kapi_yaz("çift_lif", (int(ki), int(kj), int(bi), int(bj)), G)
         self.psi = np.moveaxis(T, (-2, -1), (ki + 1, kj + 1)).reshape(
             self.B, self.d)
         self._kapi += 1

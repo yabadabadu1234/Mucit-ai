@@ -338,3 +338,34 @@ def dik_iki_kubit_yigin(teta: np.ndarray) -> np.ndarray:
 
 def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
     return dik_iki_kubit_yigin(np.asarray(teta, float).reshape(-1)[:6])
+
+
+def _so4_temeli() -> np.ndarray:
+    iu = np.triu_indices(4, 1)
+    T = np.zeros((6, 4, 4))
+    for k in range(6):
+        T[k, iu[0][k], iu[1][k]] = 1.0
+        T[k, iu[1][k], iu[0][k]] = -1.0
+    return -2.0 * T
+
+
+_SO4_TEMELI = _so4_temeli()
+
+
+def dik_iki_kubit_turevi(teta: np.ndarray) -> np.ndarray:
+    t = np.asarray(teta, float).reshape(-1)[:6]
+    A = -2.0 * _so4_ureteci(t)
+    oz, V = np.linalg.eigh(1j * A)
+    lam = -1j * oz
+    e = np.exp(lam)
+    fark = lam[:, None] - lam[None, :]
+    bol = np.where(np.abs(fark) < 1e-12,
+                   e[:, None],
+                   (e[:, None] - e[None, :]) / np.where(
+                       np.abs(fark) < 1e-12, 1.0, fark))
+    Vd = np.conjugate(V.T)
+    out = np.zeros((6, 4, 4), complex)
+    for k in range(6):
+        Mk = Vd @ _SO4_TEMELI[k] @ V
+        out[k] = V @ (Mk * bol) @ Vd
+    return out
