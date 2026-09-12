@@ -1,0 +1,310 @@
+# ZABIT TARAMASI -- "CEVAPLAR ZABITLARDA MEKNUZ"
+
+> *"Bana şu ana kadar sorduğun sekiz sualin hepsinin gerçek cevapları
+> yabana attığın zabıtlarda meknuz."*
+> *"Zabıtları tekrar tamamen tara, daha fazlasını bulacaksın,
+> bulduklarını mutlaka not et!"*
+
+Bu dosya o taramanın kaydıdır. Her satır bir zabıttan **alıntıyla**
+gelir; benim hükmüm değildir. `MUNASEBET_YURUYUSU.md` ölü uzuvları
+**saydı**; bu dosya onların **niçin yazıldığını** ve zabıtta hangi
+menfeze tahsis edildiğini gösterir.
+
+---
+
+## ▓ EN AĞIR BULGU: ÖLÜ DOSYALAR ZABITLARIN KENDİSİDİR ▓
+
+`docs/zabit/KUME_9_TEK_HAKIMIYET.md` bunu zaten yazmış ve ben
+oturumlarca okumamışım:
+
+> *"**Zabıtların kabul ettiği iki usulün kodu, zaten bu depoda
+> yazılmış ve yetim bırakılmış hâlde duruyor.**"*
+
+| Zabıt ne diyor | Depoda hangi ÖLÜ uzuvda yazılı |
+| :--- | :--- |
+| Kabul 1: MPS / Tensör Treni, sanal bağ `D` | `nefs/ttkan.py` |
+| **Kabul 2: Koherent durum `\|x⟩ = D(x)\|0⟩`** | **`kuantum/surekli.py`** |
+| Yasak: düz ikili kodlama | `idrak/kubit.py` + `qegitim.belirtecleri_kodla` ikili dalı |
+| Lif grupları `G₁=SU(1,1)`, `G₂=SU(d)` | `nefs/hamiltonyen.py` |
+| 316 ekseni **aynı anda** yokla | `ogrenme/izgara.py:artis_gradyani`, `nefs/hiz.py` |
+
+O hâlde *"ölü dosya"* teşhisi doğru, fakat **sebebi** benim
+yazdığım değildi: bu dosyalar zabıtların icrasıdır ve bağlanmamış
+olmaları benim marifetsizliğimdir.
+
+---
+
+## 1. `kuantum/surekli.py` -- KOHERENT DURUM: BELİRTEÇ KODLAMASININ ASLI
+
+### Padişahın tarif ettiği deney
+
+> *"Işığı gönderiyorsun yarı geçirgen aynaya, bir kısmı ilerliyor bir
+> kısmı geri yansıyor ama onların bir şekilde birleşmesinden **sonsuz
+> çoklukta foton** doğuyor."*
+
+Bu, `isik_bolucu` (beam splitter) + `sikistirma` (squeezing) +
+`yer_degistirme` üçlüsünün ta kendisidir ve **üçü de o dosyada
+yazılı, üçü de ölü**. Yarı geçirgen aynadan çıkan iki kol
+birleştiğinde `sikistirma` operatörü vakumdan **sonsuz Fock
+mertebesinde** foton doğurur:
+
+    S(ξ)|0⟩ = (1/√cosh r) Σ_{n=0}^{∞} (−e^{iθ} tanh r)ⁿ · (√(2n)!/(2ⁿ n!)) |2n⟩
+
+Yâni **sonsuz seviyeli bir qudit, sonlu sayıda katsayıdan doğar.**
+Ferman 2-O'nun "yazmaç bağlam kadar olsun, sabit ebat yok" hükmünün
+fizikî karşılığı budur: durumun ebadı önceden çakılmaz, **doğar**.
+
+### Zabıtların bu dosya için söylediği
+
+**A. `Kelime_ve_Durum_Kodlamas_n_n_Tenso_rel_ve_Kuantum_Mahiyeti.md`
+-- "Kabul edilen 2. Çözüm":**
+
+> *"Kelimenin durumu, vakum durumunun ötelenmesiyle elde edilir:
+> `|x⟩ = D(x)|0⟩`. İki kelime arasındaki iç çarpım, **tam olarak
+> Öklid mesafesinin bir Gauss fonksiyonudur**:
+> `|⟨x|y⟩|² = exp(−‖x−y‖²)`."*
+
+Yâni `kuantum/surekli.py:tutarli_durum` + `yer_degistirme`,
+belirteç kodlamasının **iki meşru usulünden biridir** ve tam da
+`nefs/lif.py:kodla(KIP_TUTARLI)`ın çağırdığı şeydir. İkisi de ölü.
+
+**B. `C_oklu_Sonsuz_Kategorili_Koherent_Durum_ve_Qudit_Temsili.md`
+-- Perelomov genelleştirmesi:**
+
+> *"Koherent durum sadece yay osilatörüne mahsus değildir. Herhangi
+> bir `G` Lie grubu ve `H` kararlılık alt-grubu için bir koherent
+> durum ailesi tanımlanabilir... `ℳ = G/H`."*
+> *"`G₀ = Ayrık Simetri` (sentaks & mantık) · `G₁ = SU(1,1)`
+> (kavram ağaçları, Poincaré diski) · `G₂ = SU(d)` (anlamsal akış)."*
+
+Hiperbolik koherent durum formülü zabıtta **açıkça yazılı**:
+
+    |ζ⟩ = (1−|ζ|²)^k Σ_n √(Γ(n+2k)/(n!Γ(2k))) ζⁿ |n⟩
+
+> *"Soyut kavramlar merkeze (ζ≈0), tikel kavramlar diskin kenarına
+> (ζ→1) **kayıpsız** yerleşir."*
+
+`kuantum/surekli.py`de `sikistirma` **SU(1,1) üretecidir** ve bu
+formülün motorudur.
+
+**C. `Kuantum_Metinlerindeki_Cevherin_Qudite_Tahvili.md` -- Lie-Chebyshev:**
+
+> *"Quditin durum genliklerini bellekte açık liste olarak tutmayın;
+> Cartan ağırlıklarına bağlı **Lie-Chebyshev KAN fonksiyonu Φ_k**
+> olarak parametreleyin (hafıza kilobaytlara iner)."*
+> *"`T_j` reel genliği, `U_j` (ikinci tür Chebyshev) **kompleks
+> Berry fazını** yönetir."*
+
+Bunun kodu `nefs/lif.py:kodla(KIP_LIE)` + `nefs/qudit.py:durum` +
+`nefs/hizli.py:cekirdek` (Clenshaw-Chebyshev). **Üçü de ölü yahut
+ölü dalda.**
+
+### HÜKÜM
+`kuantum/surekli.py` bir "CV kütüphanesi" değildir; **belirteç
+kodlamasının zabıtla kabul edilmiş ikinci usulüdür**. Ona
+*"kesme_hatası ölçüsü olsun"* demek, motoru termometre yapmaktır.
+
+---
+
+## 2. `nefs/lif.py` -- SİLSİLE-İ MERÂTİBİN TEPESİ
+
+`Ontolojik_Silsile_ve_Token_Tipinin_Hakikati.md`:
+
+    Noktaların birleşimi  ⟹ UZAY
+    Her noktası uzay olan ⟹ KATEGORİ
+    Her noktası kategori olan ⟹ TİP
+
+`KUME_9` bunun **kod karşılığını harf harf** tahsis etmiş:
+
+| mertebe | dosya |
+| :-- | :-- |
+| nokta | `matematik/geometri.py` (Laplace–Beltrami tayf öz-durumları) |
+| uzay | **`idrak/kategori.py:Uzay`** |
+| kategori | `matematik/tip_teorisi.py` |
+| tip | **`nefs/lif.py`** |
+
+> *"`nefs/lif.py` bir çip değil, alt katın **terkibidir**: yeni
+> matematik yazmaz; `ttkan` (Kabul 1) + `surekli` (Kabul 2) +
+> `hamiltonyen` (lif grupları) + `tip_teorisi` (kategori)
+> uzuvlarını `⊕` nizamında birleştirir."*
+
+Ve `KUME_9/MERHALE F` benim bu dosyada yazdığım kaçamağı
+**bizzat tesbit etmiş**:
+
+> *"`lif.py`de 'ne iddia edilmiyor: bu dosya HoTT'un univalence'ını
+> ispatlamıyor, ∞-kategori kurmuyor' yazmışım. Bu bir tevazu değil,
+> **kaçamaktı**... Zabıt hamaseten yazılmadı; tatbik edilmek için
+> yazıldı. `Lif.ac` bir sözlük gezintisi değil **funktör tatbiki**
+> olacak, `Unfold_{t→c}` gerçek bir lif açılımı. Şerhten çıkarılacak
+> cümle: 'iddia edilmiyor'. İddia edilecek ve **ölçülecek**."*
+
+Bugün `nefs/lif.py:unfold` hâlâ bir sözlük gezintisidir. Merhale F
+**icra edilmemiş**.
+
+### Kartezyen kutunun iptali (KUME_9/C2)
+> *"`ℋ_kat ⊗ ℋ_uzay ⊗ ℋ_nokta` **iptal edilir**. Yerine bağımlı toplam:
+> `⊕_t ⊕_{c∈Cat(t)} ⊕_{u∈Space(c)} ℋ^{(t,c,u)}`. Cevher artık sabit
+> boyutlu bir kutuya **çakılamaz**."*
+
+`Lif.sayim()`in ölçtüğü `kutu_hücresi` ile `lif_hücresi` farkı tam
+budur ve **ölçü doğru yazılmış, fakat hiçbir yere bağlanmamış.**
+
+---
+
+## 3. `idrak/kategori.py` -- SİLSİLENİN "UZAY" MERTEBESİ
+
+`KUME_9/C3` onu **ismiyle** tahsis ediyor: *"uzay: `idrak/kategori.py:Uzay`
+(zaten var, zaten main'den erişilir)."* Bugün erişilmiyor: `zirh`in
+ölü kolunda. Yâni zabıt yazıldığından beri **geri gitmişiz**.
+
+---
+
+## 4. `kuantum/topolojik.py` -- LİFLER ARASI MORFİZM
+
+`KUME_9`un "Buraya takılan yetimler" listesi: *"`kuantum/topolojik`
+(**örgü = lifler arası morfizm**), `kuantum/devre` (QFT = tayf),
+`kuantum/eniyileme` (parametre-kaydırma = Merhale B'nin ikinci
+şahidi)."*
+
+Yâni örgü (`orgu_ureticleri`) süs değil, `Hom(X,Y)` morfizminin
+taşıyıcısıdır -- `Qudite_Tip_Tenso_ru_nu_n_Kodlanma_Nizam_.md`:
+
+> *"Kategori, quditte tek bir vektör olarak duramaz. Kategori, qudit
+> alt-uzaylarını birbirine bağlayan **Kuantum İşlemleri (Kraus
+> Operatörleri / Kısmi İzdüşümler)** olarak kodlanır."*
+
+---
+
+## 5. `kuantum/stabilizer.py` -- ZIRHIN DELİNMEZLİK MÜHRÜ
+
+`KUME_3_7_TERKIP_EMIRLERI.md`, Küme 3, 9 numaralı dosya
+(`nefs/kod_uzayi.py` -- bugünkü `kuantum/stabilizer.py`nin cevheri):
+
+> ALINACAK CEVHER: *"Stabilizer kod uzayı `|φ_{D,J}⟩`: dolaşıklıkta
+> rank=1 kalan Clifford temsili. MPS ile stabilizer dağılımı **TVD
+> yüzleştirmesi**."*
+> ATILACAK TOPRAK: *"Yalnız **pasif karşılaştırma aracı** olması;
+> **aktif koruma projektörü olarak müdahale etmemesi**."*
+> KARAR: *"stabilizer TVD sapması zırhın **delinmezlik mührü** olarak
+> raporlanacak."*
+
+Yâni zabıt bu dosyanın bugünkü hâlini (pasif, ölü) **toprak** ilan
+etmiş ve aktif projektör olmasını emretmiş. İcra edilmemiş.
+
+---
+
+## 6. `nefs/hizli.py` -- HIZ ZABITININ TAM KODU, %88'İ ÖLÜ
+
+`Qudit_Boyut_Patlamasini_Onleme_ve_Hizlandirma.md` dört hamle sayıyor.
+Dördünün de kodu `nefs/hizli.py`de yazılı ve **dördü de ölü**:
+
+| zabıttaki hamle | `nefs/hizli.py`deki ölü uzuv |
+| :-- | :-- |
+| 1. Kronecker lif ayrışımı (170× aritmetik) | `kronecker` |
+| 2. Blok-diyagonal süperseçim (%60 tasarruf) | `SEKTOR` |
+| 3. Cartan köşegenleştirme (4096× faz) | `faz_cevir` |
+| 4. Fused SRAM çekirdeği (VRAM sıfır) | `_FUSED_KAYNAK` + `cekirdek` |
+
+**BENİM HATAMIN TASHİHİ.** `MUNASEBET_YURUYUSU.md`de `SEKTOR`
+için *"ELLE YAZILMIŞ üç sektör, ferman 1-J ihlâli"* yazmıştım.
+Yanlıştı: o üç sektör `Qudite_Tip_Tenso_ru_nu_n_Kodlanma_Nizam_.md`nin
+**IV. faslından harfiyyen** gelir:
+
+    [0 – 511]     SENTAKS KATEGORİSİ (özne 0-127, fiil 128-383, nesne 384-511)
+    [512 – 2559]  ONTO-FİZİK KATEGORİSİ (hiperbolik cins-tür, SU(1,1))
+    [2560 – 4095] NEDENSELLİK VE MANTIK KATEGORİSİ
+
+Elle yazılmış bir eşik değil, **zabıtla mühürlenmiş süperseçim
+tahsisidir**. Kusur onun varlığında değil, `QuditAyar.kulli_alanlar`
+ile **çift başlı** olmasındadır (ferman 1-M).
+
+---
+
+## 7. `nefs/ara.py` -- ARAMAK NAZIRLIĞI
+
+`KUME_8_NAZIRLIK_PLANI.md`:
+
+> *"`arama/` -- 910 satır. **Dağılmıyor: nazırlık oluyor.** Grover,
+> Dürr-Høyer, adiyabatik çöküş, WKB tünelleme, GRAPE, holonomi --
+> hepsi **tek bir suâlin** parçalarıdır: asgarîyi nasıl ararız, ve
+> kuyuya düşersek nasıl çıkarız? Bunu üç ayrı dosyaya serpmek cevheri
+> öldürür."*
+
+Padişahın bu turda verdiği "NAKİL memuriyeti" kararı zabıtla
+**birebir** örtüşüyor. Tetabuk tamdır.
+
+---
+
+## 8. ▓▓ ÇELİŞKİ: `nefs/gor.py` HEM "SİL" HEM "ALTI NAZIRLIKTAN BİRİ" ▓▓
+
+Bu turda emir: **"Sil!"**
+
+Fakat `KUME_8_NAZIRLIK_PLANI.md` §4 altı nazırlık sayıyor ve
+`gor` **birincisidir**:
+
+    nefs/gor.py     GÖRMEK      manzara = gor(gorev)
+    nefs/dusun.py   DÜŞÜNMEK    hal     = dusun(manzara)
+    nefs/ara.py     ARAMAK      aday    = ara(hal, olcut)
+    nefs/tart.py    TARTMAK     mizan   = tart(hal, hedef)
+    nefs/ogren.py   ÖĞRENMEK    hal     = ogren(mizan)
+    nefs/soyle.py   SÖYLEMEK    cevap   = soyle(hal)
+
+> *"Main artık alt kata bakmadan düşünür... Altı satır. Main kaybolsa
+> bu altı satır isimlerden yeniden yazılır -- padişahın istediği tam
+> buydu."*
+
+Sonra `KUME_9/MERHALE D` (ferman 6 tasfiyesi) `gor`un çağırdığı
+`idrak/cozucu.py`yi ve `nefs/qkaide.py`yi imha etti; `soyle`ye
+`assert`le "manzara ALMAZ" kondu. Yâni **`gor`u öldüren şey ferman
+6'dır, ihmal değil.**
+
+O hâlde silmek iki şeyden birini yapar: ya nazırlık katı beşe iner
+(`dusun` manzarayı kendi kurar), ya da ferman 6'ya uygun bir `gor`
+yeniden yazılır. Bu ayrı bir suâldir ve **soruldu**.
+
+---
+
+## 9. TARAMANIN GÖSTERDİĞİ DİĞER İCRA EDİLMEMİŞ HÜKÜMLER
+
+1. **`KUME_9/MERHALE E` -- OMEGA KATEGORİ TERKİBİ.** *"`yedek/
+   kume7_asillari/` altında `omega_kategori/` (4 693 satır) ve
+   `omega_kategori_nbe/` (5 026 satır) duruyor... NbE üstün olabilir;
+   fakat üstün olmak, ötekinin cevherini atmayı meşru kılmaz."*
+   **Bugün `yedek/` dizini YOK** (ferman 2 onu kaldırdı). 9 719 satır
+   cevher, ferman 2 ile ferman "cevher kaybı yasağı" arasında kalmış.
+   *Bu bir tetabuk sualidir ve sorulacaktır.*
+2. **`Quditte_Negatif_Olabilirlik...` -- TABAKALI MİZAN.**
+   `ℒ = ℒ_nokta + α ℒ_uzay + β ℒ_kategori + γ ℒ_tip`. Bugün
+   `ℒ_kategori` (funktör kompozisyonu `‖M_{g∘f} − M_g·M_f‖²`)
+   mizanda **yoktur**. Ferman 1-S gereği hiçbir cevher düşmez;
+   o hâlde bu kefe **eksiktir**.
+3. **Dinamik mertebe ayrışması** (`Qudite_Tip_Tenso_ru__Zincirinin...`):
+   `Π_Kategori`, `Π_Uzay`, `Π_Nokta` izdüşüm operatörleri --
+   *"dalga kimi zaman uzaylarına, kimi zaman kategorilerine, kimi
+   zaman noktalarına ayrışacak."* Depoda **hiçbiri yok**.
+4. **`Su_kut_ve_I_fs_a_Matematig_i.md`** üç faz tarif ediyor
+   (Sükût / Teemmül / İfşa) ve ikisini ayıran eşiğin **topolojik
+   invaryanttan** türemesini şart koşuyor -- ferman 1-J'nin zabıttaki
+   aslı budur. `nefs/soyle.py`de bugün üç faz yok.
+5. **`Dag__n_k_Kod_Modu_llerini_Ana_I_cra_Ak_s__na_Bag_lama_
+   Nizamnamesi.md`** bu turda yaptığım işin **usul kitabıdır**;
+   KADEME 5/2 "Hassasiyet ve Tesir Testi" ferman 1-C(b)'nin aslıdır:
+   *"bir fonksiyonun girdisi bozulduğunda nihai çıktı değişmiyorsa,
+   o fonksiyon akışa **şeklen** bağlanmış demektir."*
+
+---
+
+## TARAMANIN HÂLİ
+
+Tamamen okunan zabıtlar (11): `KUME_9_TEK_HAKIMIYET` ·
+`KUME_8_NAZIRLIK_PLANI` · `KUME_3_7_TERKIP_EMIRLERI` ·
+`C_oklu_Sonsuz_Kategorili_Koherent_Durum` ·
+`Kelime_ve_Durum_Kodlamasi` · `Qudite_Tip_Tensorunun_Kodlanma_Nizami` ·
+`Qudite_Tip_Tensoru_Zincirinin_Kodlanmasi` ·
+`Quditte_Negatif_Olabilirlik` · `Kuantum_Metinlerindeki_Cevherin_Tahvili` ·
+`Ontolojik_Silsile` · `Su_kut_ve_Ifsa` · `Daginik_Kod_Modullerini_Baglama`.
+
+Okunmayı bekleyen (6): `tecrit.md` (136 KB) · `zab_t_2.md` (119 KB) ·
+`terkip_layihas__12.md` (77 KB) · `optimizasyon.md` (40 KB) ·
+`zab_t_9.md` · iki `Nefsi_Mu_drike` nizamnamesi. Tarama sürüyor ve
+bulgular buraya eklenecektir.

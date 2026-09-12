@@ -333,6 +333,42 @@ dışarıda tutup tahtı fakir bırakıyordu.
 
 ---
 
+## ▓▓▓ 1-N-B. FERMAN: TEK BELİRTEÇ TAHMİN EDİLMEZ ▓▓▓
+
+> *"Dikkatini çekerim, kuantum mimaride **tek bir belirteç tahmin
+> etmiyoruz**! Penceremiz mesela 1 milyon ise ve 200 bin kelimelik
+> sözlüğümüz varsa **200.000^1.000.000 kadar ihtimali aynı anda**
+> değerlendirebilmek için qudite kodlama yapıyoruz, mimarimiz böyle
+> olmasa **kuantum olmasının bir manası kalmazdı**!"*
+
+* Üretim bir *"sonraki belirteci seç"* ameliyesi **değildir**. Yazmaç
+  `sözlük^pencere` mertebesindeki bütün **dizileri** aynı anda taşır;
+  tip vektörünün (ferman 1-N) ve seviye kodlamasının varlık sebebi
+  budur.
+* Bir yerde *"en yüksek olasılıklı belirteç"* diye tek başına bir
+  seçim yapılıyorsa orada kuantum mimari **iptal edilmiş** demektir.
+* Arama (`nefs/ara.py`) tek belirtecin genliğini aramaz; **dizinin
+  tamamının** genliğini arar.
+
+---
+
+## ▓▓▓ 1-N-C. FERMAN: ARC'A MAHSUS KOD ÇÖPE ▓▓▓
+
+> *"Sırf ARC ızgarasını çözsün diye oluşturduğun ne kadar kod varsa,
+> içinde **ana motora zorlama olmayan bir katkısı olmadığı müddetçe**
+> at çöpe!"*
+
+* Ölçü tektir: *"bu uzuv ana motora, zorlama olmadan, tabiî bir katkı
+  veriyor mu?"* Vermiyorsa -- yâni yalnız ARC ızgarasını çözmek için
+  yazılmışsa -- **kesilir**.
+* **"Zorlama katkı" katkı sayılmaz.** Bir ARC uzvunu *"ama şu da
+  sayılabilir"* diye motora iliştirmek ferman 1-C(b)'nin
+  münafıklığıdır; katkı tabiî olmalıdır.
+* Bu ferman, *"ölü dosya silinmez"* hükmünün **tek istisnasıdır** ve
+  ferman 6'nın icra kolu olarak okunur.
+
+---
+
 ## ▓▓▓ 1-O. FERMAN: VERİ SINIRLANMAZ -- BORU HATTI KURULUR ▓▓▓
 
 > *"Ayrıca sana ne oluyor da indirdiğin veriseti sınırlıyorsun? İnen
