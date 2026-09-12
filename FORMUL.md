@@ -99,6 +99,7 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
     Bağlam bir skalere EZİLMEZ: son basamak ilk basamak kadar ağırlık taşır.
     DOLDURMA YOKTUR: n_satır neyse yazmaç o kadardır (ferman 2-O).
 
+    Yazmaç  = Faz(Yazmaç, CartanFazı)        ← II. safha, harmandan EVVEL
     Harman(Yazmaç) = ⨀(kademe, lif, bitdüzlemi) Dönme(Açı(Parametre))
               ← açılar TOHUMDAN değil PARAMETREDEN gelir; böylece tâlim
                 faz→genlik yolunu kendi açar ve genişletir.
@@ -182,23 +183,65 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
 
 ---
 
-## 5. ADIM -- TÜREV YOK
+## 5. ADIM -- MECZ: BEŞ MEMURİYET, TEK KAYIP ÇAĞRISI
 
-    Zorlayıcı = ( ortalama(Skaler(P + R·rastgeleYön)) artıyor mu R ile )
-    Yarıçap   = TabanYarıçap × (1 eğer Zorlayıcı, ½ değilse)
+Kör yön araması ilga edildi (ferman 2-P). Türev geri geldi fakat tek
+başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
 
-    Yön = −(1/m) Σ(m kere) [ (Skaler(P + c·İşaret) − Skaler(P − c·İşaret)) / (2c) ] · İşaret
-              İşaret = rastgele (+1, −1) vektörü          ← gradyan DEĞİL, yön kestirimi
+### 5-A SENET -- ileri geçişin kaydı
 
-    Düğüm[j]      = cos(j·π / M)                            Gauss-Chebyshev-Lobatto
-    Parametre_yeni = argmin over j of Skaler(Parametre + Yarıçap · Düğüm[j] · Yön)
+    Senet   = [ (tür, yer, dizey) ]                 her kapı vuruşu sırayla
+    tür ∈ {karo, bant, çift_lif, faz, ölçek, sektör, maske, durum}
+    Bağlantı = [ (senetNo, parametre, ölçek, türevTarifi) ]
 
-    Durgunluk = GrassmannMesafesi(Altuzay_şimdi, Altuzay_önceki)
-    eğer Durgunluk < eşik ve değil Zorlayıcı:
-        Aday = KarşıtAdiyabatikSürüş(Parametre)
-        Parametre ← Aday eğer Skaler(Aday) < Skaler(Parametre)
+    SenetSadakati = ‖SenetiOynat(Yazmaç₀) − Yazmaç_son‖ / ‖Yazmaç_son‖
+                  ← senet TAM ise sıfır; ölçülür ve basılır
 
-    Öğrenme oranı YOK. Momentum YOK. Geri yayılım YOK.
+### 5-B EĞİM -- üç mekanizma, tek hakikat
+
+    Üreteç:    Eğim[p] = Σ 2·ölçek·Re⟨ Hata⊙Yazmaç_son | dKapı·Yazmaç_son ⟩
+                         ← nihaî durumdan, DERİNLİK KÖRÜ, en ucuz
+
+    EkDurum:   λ_son = Hata ⊙ Yazmaç_son
+               λ_{i−1} = Eşlenik(Kapı_i) · λ_i        ← λ EŞLENİK ister
+               ψ_{i−1} = Evrik(Kapı_i) · ψ_i          ← ψ EVRİK ister
+               Eğim[p] += 2·ölçek·Re⟨ λ_i | dKapı_i·ψ_{i−1} ⟩
+               Metrik[p] += ölçek²·( ‖dKapı_i·ψ_{i−1}‖² − |⟨ψ_{i−1}|dKapı_i·ψ_{i−1}⟩|² )
+                         ← metrik köşegeni BEDAVA: U_{>i} üniter
+
+    İkiz:      dψ_i = Kapı_i·dψ_{i−1} + ölçek·yön[p]·dKapı_i·ψ_{i−1}
+               Türev = 2·Re⟨ Hata⊙ψ_son | dψ_son ⟩
+                         ← ileri kip, YAPISAL OLARAK BAĞIMSIZ
+
+    Mutabakat = |EkDurum·yön − İkiz| / |İkiz|
+              ← ikisi de TAM olmalı; sıfır değilse biri yalan söylüyor
+
+    dKapı  Dönme için  [[−sin, −cos], [cos, −sin]]
+           DikİkiKübit için Daleckii-Krein:
+               [Vᵀ·dexp(A)·V]_pq = [Vᵀ·M_k·V]_pq · (e^{λp} − e^{λq})/(λp − λq)
+
+### 5-C BEŞ MEMURİYET -- toplanmaz, her biri ayrı cins (mecz, meclis değil)
+
+    ÇUKUR   ΔE = √(⟨Hata²⟩ − ⟨Hata⟩²)                  → hüküm: durak mı
+    DUVAR   Maske = Metrik/enbüyük(Metrik) > ortanca·10⁻³
+                                                        → koordinat ELER
+    EĞİM    Yön = −Eğim ⊙ Maske, normalize                → yön verir
+    YARIÇAP Yarıçap = Keyfiyet(üç hudut) / √Σ Metrik      → boy verir
+    VADİ    Yön = birim(enbüyükArgüman(Metrik ⊙ Maske))   → adımın YERİNE
+    NAKİL   aynı fakat sapma en büyük olan eksende        → adımın YERİNE
+
+    Aday = Parametre + Yarıçap · Yön
+    V_aday = Skaler(Aday)                       ← TUR BAŞINA YEGÂNE ÇAĞRI
+
+    eğer V_aday < V:  Parametre ← Aday,  YarıçapDüzeltmesi ← 0
+    değilse:          hat eğriliğinden ANALİTİK düzeltme, ek çağrı YOK
+        ΔV_lineer = ⟨Eğim, Yarıçap·Yön⟩
+        κ         = 2(ΔV_gerçek − ΔV_lineer) / Yarıçap²
+        Yarıçap*  = −ΔV_lineer / (κ · Yarıçap)      ← hat üstünde TAM Newton
+        κ ≤ 0 ise hat bükey değildir: Yarıçap* = 2·Yarıçap
+
+    Öğrenme oranı YOK. Momentum YOK. Geri yayılım YOK. Hat araması YOK.
+    Sabit eta YOK, kelepçe YOK (ferman 1-J).
 
 ---
 
@@ -274,3 +317,50 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
             iddia edilen tek şey yolun açıldığıdır (adım 1'de, hiç
             eniyileme koşmadan cevabın değişmesi bunun delilidir).
         Küme(temiz) = 0                        üç hudut henüz sönmedi
+
+    Üç eğimin mutabakatı = 2.2e-16   senet sadakati = 1.3e-15
+        ölçüldü ve TUTUYOR. Kod okunarak bulunan dört kusurdan sonra:
+        senedin eksikliği, durumun harita sanılması, yalan söyleyen
+        geri ölçü, ve λ'da evrik/eşlenik karışması.
+    Eğimin kapsadığı parametre = 79 / 3378 (%2.3)
+        NE İDDİA EDİLMİYOR: bütün parametrelerin kımıldadığı.
+        Üreteci bildirilmemiş kapıya bağlı parametre kımıldamaz.## 0-A HENDESE TEŞHİSİ (Zabıt 11, I. safha)
+
+    GeçişDizeyi[a,b]  = sayım(basamak_a → basamak_b) / satırToplamı
+    KarşılıklıHaber   = Σ Ortak·log(Ortak / (Satır·Sütun))
+    Sapma             = ‖GeçişDizeyi − GeçişDizeyiᵀ‖
+    Nilpotent         = en küçük k öyle ki GeçişDizeyi^k = 0
+    Denklik           = ⟨GeçişDizeyi(ilkYarı), GeçişDizeyi(sonYarı)⟩ / normlar
+    Mesafe            = ensKısaYol(−log(GeçişDizeyi + GeçişDizeyiᵀ))
+    δ_Gromov          = enbüyük |(d_ab+d_cd) − enbüyük(d_ac+d_bd, d_ad+d_bc)|
+
+    Mertebe = enbüyükArgüman(
+        1/(1+Haber+ŞartSapması),                        ← ayrık nokta
+        (1−ÜçgenİhlâliNispeti)/(1+Sapma),               ← sürekli uzay
+        Sapma × (1 eğer Nilpotent>0 değilse 1/4),       ← yönlü kategori
+        enbüyük(0, Denklik) × (1+Haber))                ← univalent tip
+
+    DikeyAsansör = Mertebe. kat
+    BAĞ: ParitéLifi = DikeyAsansör.kat   (elle verilmediyse)
+         yâni teşhis edilen katman, mantık muhafızı lifini seçer
+
+---
+
+## 0-B DHR SÜPERSEÇİM AYRIŞIMI (Zabıt 11, II. safha)
+
+    CasimirYükü[seviye] = Σ_eksen biteSayısı(seviyeninEksenBasamağı)
+    Sektör(q)           = {seviye | CasimirYükü[seviye] = q}
+    Pay[yığın, q]       = Σ_{seviye ∈ Sektör(q)} |Yazmaç[yığın, seviye]|²
+
+    CartanFazı[seviye]  = −Açı[CasimirYükü[seviye]]
+    Yazmaç              = Faz(Yazmaç, CartanFazı)      ← FİİLEN VURULUR
+
+    Sızıntı             = |1 − Σ_q ortalama(Pay[·, q])|
+    AraYaGirmeİhlâli    = sayım(sıralıPay[i] < sıralıPay[i+1]) / denenen
+    BlokKöşegenArtığı   = 1 − Σ_q (Σ_{Sektör(q)}|Yazmaç|²)² / (Σ|Yazmaç|²)²
+
+    BAĞ: üçü de MİZANA KEFE olarak girer (bkz. § 4)
+
+---
+
+
