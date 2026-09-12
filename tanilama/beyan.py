@@ -93,8 +93,6 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from nefs.mukayese import mukayese_metni
         from nefs.galois import faz_borcu_metni
         from ogrenme.mecz import mecz_metni
-        from nefs.hendese import hendese_metni
-        from nefs.casimir import casimir_metni
         from nefs.belirtec import belirtec_metni
         from nefs.munasebet import munasebet_metni
         from nefs.keyfiyet import keyfiyet_metni
@@ -111,8 +109,6 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               "",
               (kulli.get("mihenk") or {}).get("metin", ""), "",
               faz_borcu_metni(kulli.get("faz_borcu") or {}), "",
-              hendese_metni(kulli.get("hendese_beyanı") or {}), "",
-              casimir_metni(kulli.get("casimir_beyanı") or {}), "",
               mecz_metni(kulli.get("eniyileme") or {}), "",
               belirtec_metni(kulli.get("belirteç") or {}), "",
               mukayese_metni(kulli.get("mukayese") or {}), "",
