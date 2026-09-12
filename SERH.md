@@ -44249,3 +44249,97 @@ Ferman 2-H'nin ölçüsü **en eskiden yazılmış dosyadır**. Sıradaki dosya
 bu dosyanın gövdesi *"koşmuyor"* diye değil, **usulü iptal edildiği**
 için yersizdir. Fakat tertibat kararı ferman 2-D gereği tek başıma
 verilmez; şıklar sayısıyla padişaha sunulur.
+
+---
+
+## ZABIT 11 İKAMESİNDEN SONRA: KODLANMIŞ FAKAT KULLANILMAYAN USULLER
+
+Usul: ferman 1-C(a) gereği ithal grafına dayanan bir **sınama
+yazılmadı**; aşağıdaki hüküm kod okunarak verildi, sayılar ise
+mevcudun envanteridir. Yanlış pozitifler ayrıca işaretlendi.
+
+### 1. FERMAN 6'NIN AÇIK İHLÂLİ -- GÖREVE MAHSUS ARC ÇÖZÜCÜLERİ
+
+    idrak/veri/soyutlamalar/     120 dizin · 236 dosya · 41 899 satır
+                                 244 adet `solve_<görev_kimliği>`
+
+Her biri **tek bir ARC görevine mahsus, elle yazılmış çözücüdür**:
+`paintStripes`, `detectInnerSegment`, `orderNarrow`, `buildTypeB`…
+Ferman 6 bunu ismen yasaklar: *"Elle yazılmış kâide, öznitelik
+mühendisliği, göreve mahsus çözücü YASAKTIR."* Hiçbiri tahttan
+çağrılmıyor; motor bunları görmüyor. O hâlde bu 41 899 satır ne
+koşuyor ne de meşrudur.
+
+### 2. HİÇBİR YERDEN İTHAL EDİLMEYEN CANLI MODÜL
+
+    nefs/gor.py    63 satır
+
+İptal edilmiş "manzara" yolunun kalıntısı. `nefs/soyle.py` zaten
+`assert manzara is None` ile o kapıyı kapatıyor (ferman 6): ızgaradan
+elle çıkarılmış nesne/kaide cevaba karışamaz. `gor()` ve `Manzara`
+tam olarak o karışmayı yapacak uzuvlardı.
+
+### 3. KODLANMIŞ FAKAT HİÇ ÇAĞRILMAYAN ADLAR (canlı dizinler)
+
+    ogrenme/optimize.py   DalgaEniyileyici · TabiiGradyan · OgdaTarti
+                          qsvt_gibbs_sogutma · qsp_fazlarini_bul
+                          statik_faz_tablosu_oku · ters_polinomu
+                          gibbs_dogrulamasi · fazlari_kilitle
+                          faz_kehaneti · oyun_degeri · odenen_bedel
+                          tayf_araligi_asgari
+    matematik/geometri.py bit_uzunlugu · genlik_karesi · izoseles_orani
+                          kapi_dizeyi · rosenbrock · sinif_kiyasi
+                          z8_dizey_carp · z8_kayan
+    matematik/mizan.py    aks_gecerli_mi · aks_nakiz_gecerli_mi
+                          sorites_gecerli_mi · uc_ise_kleene
+                          uc_ise_lukasiewicz · karsi_model · model_yaz
+                          tablo_boyu · xor
+    matematik/tip_teorisi.py  yol_tumevarimi · morfizm_uzayi · pres
+                          omega_grupoid_kulesi · cember_rec · aile_tasi
+                          denklik_fonksiyonu · lam_hepsi · pi_hepsi
+                          her_i_icin · terim_hkomp · terim_transp
+                          terim_uygula_hepsi · dongu_kuvveti_genel_ters
+                          cember_bilgisi
+    matematik/fitrat.py   spektral_yaricap
+    nefs/musahede.py      tiktoken_2d_kodla · tiktoken_2d_coz
+                          qtt_parametre_sayisi · qtt_sadakat_cetveli
+                          IzafiMevki2D · toplu_uret
+    nefs/zirh.py          duz_mu
+    ogrenme/senet_egimi.py  durum_yerleri
+    nefs/melekeler.py     kanoniklestir
+
+**YANLIŞ POZİTİF -- 43 MELEKE CANLIDIR.** `QMusahede`, `QHayal`,
+`QTefekkur`… adları kodda hiç anılmıyor fakat `@qkaydet` her sınıfı
+`_QSICIL`e yazıyor ve `idrak_et` `self.s = qsicil()` ile hepsini
+koşturuyor. Sicille kayıt bir bağdır; ad araması bunu görmez.
+
+### 4. ZABIT 11'İN UZVU OLMAYAN SAFHALARI
+
+Vesikanın on bir adımlı ana hattında karşılığı **kodda bulunmayan**
+usuller (ferman 5: yapılmayan yapıldı diye yazılmaz):
+
+    III. TTN hiyerarşik ağaç daraltması          uzuv YOK
+         (NQS kodlu fakat hiç çağrılmıyor, bkz. §3)
+    III. Hadd-i Evsat tasfiyesi χ≡1              uzuv YOK
+    IX.  Fubini-Study deterministik ağaç intacı  uzuv YOK
+    X.   27 keşşâflık operatöründen 22'si        uzuv YOK
+         (Wilczek-Zee, Lindblad, NHSE, CDT, MIPT, MUB, Berry
+          eğrilik tensörü, Floquet, OTOC, parafermiyon, enformasyon
+          darboğazı, Stern-Gerlach, scar, spin squeezing,
+          Weyl-Wigner negatifliği, Thouless pompası, Kato
+          permütasyonu, Baker-Akhiezer, Toda-Lax, KZ monodromisi,
+          Tomita-Takesaki, Atiyah-Singer)
+    XII. K27 Alexandroff/Lions tıkızlığı         uzuv YOK
+    XII. Morse-Euler eşitliği                    kısmî (morse.py)
+    XII. RCD(K,N) Bochner süzgeci                kısmî (geometri.py,
+                                                 çağrılmıyor)
+    XII. Postnikov k-invaryantı                  kısmî (geometri.py,
+                                                 çağrılmıyor)
+
+Bu turda uzvu **kurulan ve bağlanan** safhalar:
+
+    I.   ℓ*(w), δ_Gromov, dikey asansör    nefs/hendese.py    BAĞLI
+    II.  Casimir/DHR, GT araya girme,      nefs/casimir.py    BAĞLI
+         Cartan fazı
+    VIII. QSL yarıçapı + QNG yönü + üç     ogrenme/mecz.py +  BAĞLI
+         eğim mutabakatı                   senet_egimi.py
