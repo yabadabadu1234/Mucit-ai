@@ -603,3 +603,82 @@ o hâlde her şeyi tek skalere indiren bir kayıp zaten **imkânsızdır**.
 
 `nefs/gaye.py`nin canlandırılması ve üç fazla terkip için hüküm
 verilmedi.
+
+---
+
+## 28. KARARNÂMENİN YEDİ UZVU -- SIFIRDAN YAZILIR
+
+> *"Sıfırdan yazılsın."*
+
+Git tarihçesinden geri çağrılmaz. Sebep açıktır: tarihçedeki eski
+sürümler **ferman 7 ve ferman 2-P'den evvel** yazılmıştı ve ilga
+edilmiş usuller taşıyorlar (kör hat araması, POVM, MERA budaması,
+sürekli Hilbert). Cevher değil, **yük** getirirlerdi.
+
+Dokuz uzvun bugünkü hâli:
+
+    1. HAD        Alexandroff + Lions            YOK  → yazılacak
+    2. ALTUZAY    Cayley çekilmesi Gr(k,d)       YOK  → yazılacak
+    3. VEKİL      RKHS + Cholesky LLᵀ            YOK  → yazılacak
+    4. KODLAMA    Causal KAN O(N) ağaç           YOK  → yazılacak
+    5. DALGA      Chebyshev-KAN NQS + QSVT Gibbs YOK  → yazılacak
+    6. DURGUNLUK  Grassmann asal açıları         CANLI ✓
+    7. TÜNEL      STA H_CD sürüşü                YOK  → yazılacak
+    8. DENGE      Çift sayılar ε²=0 + OGDA       YOK  → yazılacak
+    9. BÜTÇE      NFL haddi + donanım sınırı     kısmî
+
+    (+ Morse-Euler katî eşitliği `ogrenme/morse.py`   CANLI ✓)
+
+Yazılırken kararnâmenin **dört İkmâl Fıkrası** bağlayıcıdır:
+PSD tahkiki ve reel alan mecburiyeti · Cholesky emniyet kilidi
+(`(K+λI)⁻¹` **yasak**) · Nyström hata beyanı `ε = ‖K−K̃‖_F` ·
+Alexandroff/Lions tıkızlaştırma · Postnikov k-invaryantları ·
+Morse-Euler katî eşitliği + RCD(K,N) Bochner.
+
+**USUL:** Ferman 1 -- evvelâ taht, sonra ara kat, en son hususi.
+Dokuz uzvun çağrısı `main/egitim.py`ye **yazılmadan** hiçbiri
+yazılmaz.
+
+## 29. YİRMİ DÖRT ÇİFT BAŞLI AD -- DÖRT ŞIK, FAKAT İSPAT CEBİRLE
+
+> *"Hepsi kabul edildi fakat terkipte ispat **ölçülerek değil formül
+> cebriyle** yapılmalıdır!"*
+
+**FERMAN 3-B OLARAK CLAUDE.md'YE MÜHÜRLENDİ.** Benim
+*"ikisi aynı cevabı veriyor mu, ölçülerek gösterilir"* teklifim
+yanlıştı: bu bir ölçümdür (ferman 1-C/a ve 1-L yasağı) ve üstelik
+ispat değildir -- iki fonksiyon bin girdide aynı çıkıp bin birincide
+ayrılabilir.
+
+    YASAK  `assert abs(a(x) − b(x)) < 1e-12` ile terkip ispatı
+    ASIL   a'nın cebrinden b'nin cebrine KAPALI FORM türetmek
+
+1. **Ferman 3'ün üç adımı** her ad için işletilir; ispat cebrîdir.
+2. **Dört dizey üsteli → matchgate.** `_uexp` · `melekeler._genel_expm`
+   · `devre._uexp` · `surekli.expm`. Cebrî indirgeme:
+   `exp(−iθ c_p c_q)` Majorana kovaryansında `SO(2N)` Givens
+   dönmesidir; `χ_stab = 1` (ferman 7-A/1). `expm` diye bir ad kalmaz.
+3. **Üç stabilizer / üç Laplasyen / üç Betti.**
+   * Stabilizer: `galois.Tableau` tek kaynak; `kuantum/stabilizer.py`
+     onun motoru (Karar 17).
+   * Laplasyen ve Betti: `kuantum/tda.py`nin kombinatoryal Hodge
+     Laplasyeni `Δ_k = ∂_{k+1}∂_{k+1}ᵀ + ∂_kᵀ∂_k` **tek kaynaktır**;
+     `morse.py` ve `zirh.py` ondan okur.
+4. **Üç `Lif` → TERKİP DEĞİL, İSİM ISLAHI.** Üçü ayrı mertebedir,
+   o hâlde ayrı ad alır (ferman 4):
+   * `nefs/lif.py` = **tip** mertebesi (Karar 3),
+   * `idrak/kategori.py:Uzay` = **uzay** mertebesi (Karar 12),
+   * `melekeler.Lif` = melekenin taşıyıcısı.
+
+## 30. OTUZ SEKİZ `rapor()` + `__main__` -- FERMAN 1-L İCRASI
+
+**KARAR: `__main__` kesilir, `rapor()` tahta bağlanır.**
+
+* `if __name__ == "__main__"` bloğu **35 ölü dosyada da kesilir**;
+  yan koşu böylece **imkânsız** olur (ferman 1-L).
+* `rapor()` fonksiyonları kalır fakat ancak **o uzuv tahta
+  bağlandığında** tahttan çağrılır. Taht yalnız çağırır, metin
+  kurmaz (ferman 1-G).
+* **NİÇİN.** Bağlanmayan uzvun raporu da koşmaz -- ferman 1-C(b)'nin
+  münafıklık kapısı (uzuv bağlanmadan rapor satırı yazmak) böylece
+  fizikî olarak kapanır.

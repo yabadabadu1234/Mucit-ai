@@ -1260,6 +1260,26 @@ düşmez (ferman 1-S).
 Terkip bir **kimliktir**, tabela değildir. İki şeyi aynı isim altına koymak
 terkip değildir; ikisinin **aynı şey olduğunu ispat etmek** terkiptir.
 
+### 3-B. İSPAT ÖLÇÜLEREK DEĞİL, **FORMÜL CEBRİYLE** YAPILIR
+
+> *"Terkipte ispat **ölçülerek değil formül cebriyle** yapılmalıdır!"*
+
+İki icranın aynı şey olduğu, ikisini koşturup çıktılarını
+kıyaslayarak gösterilmez. Bu bir **ölçüm**dür ve ferman 1-C(a) ile
+1-L'nin yasakladığı şeydir; üstelik ispat da değildir -- iki
+fonksiyon bin girdide aynı çıkabilir, bin birincide ayrılabilir.
+
+    YASAK    `assert abs(a(x) - b(x)) < 1e-12` ile terkip ispatı
+    ASIL     a'nın cebrinden b'nin cebrine **kapalı form türetmek**
+
+* Misal: `expm` ile matchgate Givens dönmesinin aynı olduğu, ikisini
+  koşturarak değil, `exp(−iθ(c_p c_q))`nun Majorana kovaryansında
+  `SO(2N)` dönmesine **cebrî indirgenmesiyle** gösterilir.
+* Cebrî indirgeme **yapılamıyorsa** iki şey aynı değildir; terkip
+  edilmez, ikisi de kendi menfezinde durur (ferman 2-C).
+* Sayı yine de yazılır (ferman 5) fakat o sayı **ispat değil
+  şahittir**: cebir ispat eder, sayı tasdik eder.
+
 ---
 
 ## ▓▓▓ 4. FERMAN: HALKÇA İSİM ▓▓▓
