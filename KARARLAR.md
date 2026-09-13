@@ -772,7 +772,6 @@ yazılmamış olan, borç diye bile yazılmaz.
     nefs/gor.py                     Karar 2, 5
     musahede.kaide                  Karar 9
     musahede.Gorev · ayir · genlige_gom   Karar 13 (ferman 1-N-C)
-    idrak/kubit.py                  Karar 20 (Tuzak A)
     main/kaggle_egitim.py · kaggle_cikarim.py
       · ogrenme/kaggle_donanim.py   Karar 7 (tahta katlanır)
     ogrenme/izgara.py:artis_gradyani     Karar 15
@@ -869,10 +868,25 @@ ferman 1-I'nın *"müşterek münasebet haritası oluşacak"* hükmü fiilen
 koşmuyor, harita her turda sıfırdan kuruluyordu. `Harita.hazineden`
 yazıldı, taht yükleyip geri koyuyor, `hazineden_devam` döndürüyor.
 
-### KARARLAR 20, 32, 33 MEVZUSUZ ÇIKTI
+### ▓ TASHİH: "KARARLAR 20, 32, 33 MEVZUSUZ ÇIKTI" HÜKMÜ YANLIŞTI ▓
 
-`kuantum/tda.py`, `nefs/hamiltonyen.py`, `nefs/ttkan.py`,
-`idrak/kubit.py` **depoda yoktur**. Olmayan dosya ne bağlanır ne
-kesilir; bunların sıfırdan yazılması ayrı bir karardır ve ferman 2-D
-gereği vidalanacakları menfez sorulmadan yazılmayacaktır.
-`ZABIT_TARAMASI.md`deki dört yanlış envanter satırı tashih edildi.
+Evvelce buraya *"olmayan dosya ne bağlanır ne kesilir, mevzusuzdur"*
+diye yazdım. **Bu hüküm yanlıştır ve iptal edilmiştir.** Padişah
+tashih etti: *"Sen sorduğunda bunların iptal olduğunu ikimiz de
+biliyorduk, ona rağmen kullanılacak bir yer bulmuştuk."*
+
+Bulmuşuz ve bu dosyada yazılı. Dosyanın YOKLUĞU kararı düşürmez;
+kararın gereği o dosyanın **yazılmasıdır**. Menfezler tek tek
+şunlardır ve hiçbiri yeniden sorulmayacaktır:
+
+| dosya | bulunmuş menfez | karar |
+| :-- | :-- | :-- |
+| `nefs/ttkan.py` | **dizi zinciri** -- Tip Tensörü Zinciri; ferman 1-N-B'nin (tek belirteç tahmin edilmez) taşıyıcısı. Sanal bağ `D` **budama değil**, belirteçler arası funktör/Kan uzantısı taşır; o hâlde ferman 7'nin MPS yasağına girmez. | 20/1-2 |
+| `idrak/kubit.py` | Karar 20'nin **3. şıkkı (KESİLSİN) KABUL EDİLMEDİ.** Padişah *"3. şık hariç hepsi kabul edildi"* dedi. İCRA CETVELİ'nin §A'sına onu "kesilecekler" diye yazmam **kendi zabtıma aykırı** bir hatadır; o satır kaldırıldı. | 20/3 red |
+| `nefs/hamiltonyen.py` | **üç şık da kabul**: (1) 20 uzayın `H_m(θ)=Σ_a θ_m^a T^a` üreteci -- Karar 26'nın taşıyıcısı; (2) `_cayley` → Karar 28'in ALTUZAY uzvu; (3) SU(1,1)'in `surekli.py` ile **cebrî** terkibi (ferman 3-B). | 32 |
+| `kuantum/tda.py` | **dörtlü zırhın motoru**: `Π_betti = exp(−λΔ_Hodge)` ve `Π_koho = I − Σ|ω⟩⟨ω|` fiilen buradan türer, **her uzayda ayrı ayrı**. Kahan hassas toplaması korunur. | 33/1 |
+| `kuantum/devre.py` | **VAR (36 satır)**: QFT = tayf mertebesi; silsilenin nokta mertebesinin taşıyıcısı. `_uexp` Karar 29(2) ile matchgate'e gider. | 33/2 |
+
+Dördü de **yazılacaktır**. `ZABIT_TARAMASI.md`de bunları "bağlanabilir"
+diye yazan satırlar yanlıştı (bağlanacak dosya yoktu); doğrusu
+"yazılacak"tır ve orası da tashih edildi.

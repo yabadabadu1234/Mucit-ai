@@ -25,6 +25,7 @@ class Kaynak:
     dal: str = ""
     surum: str = ""
     varlik: str = ""
+    yerel: str = ""
     engel: str = ""
     pay: float = 1.0
 
@@ -34,6 +35,9 @@ class Kaynak:
 
 
 KAYNAKLAR: Tuple[Kaynak, ...] = (
+    Kaynak("ARC soyutlamaları -- sözlü çözüm (ferman 1-R'nin sözlü kanadı)",
+           "", "", (".md", ".py"), pay=3.0,
+           yerel="idrak/veri/soyutlamalar"),
     Kaynak("ARC-AGI-2 (resmî, arcprize)", "arcprize/ARC-AGI-2", "data",
            ".json", pay=3.0),
     Kaynak("ARC-AGI-1 (fchollet)", "fchollet/ARC-AGI", "data",
@@ -542,12 +546,24 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
     tb = max(2, int(taban))
     bs = int(basamak) if int(basamak) > 0 else basamak_sayisi(
         int(sozluk) if int(sozluk) > 0 else belirtec_sozlugu(kodlama), tb)
-    ks = [k for k in (kaynaklar or KAYNAKLAR) if not k.engel and k.depo]
+    ks = [k for k in (kaynaklar or KAYNAKLAR)
+          if not k.engel and (k.depo or k.yerel)]
     onceki = dict(imlec or {})
     yeni: Dict[str, Any] = {}
     diziler: List[Tuple[Any, float, str]] = []
     for k in ks:
-        if k.varlik:
+        if k.yerel:
+            assert os.path.isdir(k.yerel), (
+                "yerel kaynak dizini YOK: %s (%s). Uydurulmuş bir yol "
+                "cetvele giremez (ferman 1-K)." % (k.yerel, k.ad))
+            yol = os.path.join(KULLIYAT_DIZINI,
+                               k.yerel.replace("/", "__") + MUCIT_UZANTI)
+            if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
+                os.remove(yol)
+            if not os.path.isfile(yol):
+                os.makedirs(KULLIYAT_DIZINI, exist_ok=True)
+                mucit_cevir(k.yerel, yol, kodlama, k.uzantilar(), k.ad)
+        elif k.varlik:
             yol = os.path.join(_dizin(k), k.varlik)
         else:
             yol = _dizin(k) + MUCIT_UZANTI
