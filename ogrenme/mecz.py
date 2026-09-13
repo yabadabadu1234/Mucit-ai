@@ -8,11 +8,16 @@ import numpy as np
 __all__ = ["MeczAyari", "Memuriyet", "hata_operatoru", "uretecler",
            "cukur", "duvar", "yaricap", "vadi", "nakil",
            "mecz_egit", "mecz_beyani", "mecz_metni", "mecz_sifirla",
-           "yetim_bloklar"]
+           "yetim_bloklar", "adres_beyani"]
 
 
 _MECZ: Dict[str, float] = {}
 _YETIM: List[Tuple[int, str]] = []
+_ADRES: Dict[str, Any] = {}
+
+
+def adres_beyani() -> Dict[str, Any]:
+    return dict(_ADRES)
 
 
 def yetim_bloklar() -> List[Tuple[int, str]]:
@@ -270,6 +275,10 @@ class Memuriyet:
         finally:
             SENET_ACIK[0] = _eski
         iz = q.y.iz
+        _ADRES.clear()
+        _ADRES.update(q.y.adres_beyani())
+        _ADRES["lif"] = tuple(int(x) for x in q.y.ayar.lif)
+        _ADRES["bağlam"] = int(np.asarray(bag).size)
         lif = tuple(int(x) for x in q.y.ayar.lif)
         hedefler = [int(ornek_bol(o)[1]) for o in self.kume]
         H = hata_operatoru(q, hedefler, int(self.nefs.ayar.veri_lifi))

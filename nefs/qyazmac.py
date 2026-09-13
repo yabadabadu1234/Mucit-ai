@@ -666,6 +666,21 @@ class QuditYazmac:
     def veri(self, i: int, j: int) -> int:
         return int(i) * self._satir_yuva + int(j)
 
+    def adres_beyani(self) -> Dict[str, int]:
+        yuva = int(self._seviye)
+        sigan = yuva // max(1, int(self._satir_yuva))
+        kulli_bas = self._n_satir * self._satir_yuva
+        gecersiz = sum(1 for y in range(kulli_bas,
+                                        kulli_bas + int(self.d))
+                       if not self.gecerli(y))
+        return {"yuva_bütçesi": yuva,
+                "satır_yuvası": int(self._satir_yuva),
+                "yazmacın_saydığı_satır": int(self._n_satir),
+                "yuvaya_sığan_satır": int(sigan),
+                "küllî_taban": int(kulli_bas),
+                "küllî_geçersiz_yuva": int(gecersiz),
+                "küllî_yuva_adedi": int(self.d)}
+
     @property
     def n_satir(self) -> int:
         return int(self._n_satir)

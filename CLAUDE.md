@@ -1419,6 +1419,44 @@ fakat hadd bu kadardır ve daraltılmaz.
 
 ---
 
+## ▓▓▓ 2-R. FERMAN: PARAMETRE DE QUDİTTİR -- ÇIPLAK PARAMETRE YASAK ▓▓▓
+
+> *"Parametre çoğaltmanın **körlemesine** yapılmasını da doğru bulmam,
+> bir şeyin parametresini çoğaltacağımıza, hatta **doğrudan doğruya
+> herhangi bir yerde herhangi bir parametre kullanacağımıza ikinci bir
+> qudit sistemi kuralım, tüm parametreler o quditin içinde yer alsın**,
+> böylece nasıl ki aynı anda milyonlarca kelimeyi işleyebilme
+> kapasitesine sahibiz, o kadar da **parametre işleme kabiliyetine**
+> erişiriz!"*
+
+### İKİ YAZMAÇ VARDIR, İKİSİ DE QUDİT
+
+    VERİ YAZMACI       girdi belirteç dizisi Y_n'i tip · kategori · uzay
+                       mertebelerinde süperpozisyonda tutar (ferman 1-Ş).
+    PARAMETRE YAZMACI  modelin BÜTÜN parametrelerini tutar. Ayrı bir
+                       qudit sistemidir, veri yazmacının kopyası değildir.
+
+* **ÇIPLAK PARAMETRE YASAKTIR.** Hiçbir yerde `float` dizisi olarak
+  duran, elle indislenen, `p[17]` diye okunan bir parametre olamaz.
+  Bir açı lâzımsa **parametre yazmacından okunur**.
+* **ÇOĞALTMA KÖRLEMESİNE YAPILMAZ.** "Parametre sayısını 39 katına
+  çıkaralım" diye bir genişletme yoktur. Parametre kapasitesi
+  yazmacın **kendi ölçüsünden** gelir: kaç seviyesi varsa o kadar
+  parametre taşır -- tıpkı veri yazmacının `sözlük^pencere`
+  mertebesinde diziyi taşıması gibi (ferman 1-N-B).
+* **KAPASİTE İDDİASI SAYIYLA YAZILIR** (ferman 5): parametre
+  yazmacının lifi, seviyesi ve taşıdığı parametre adedi raporda
+  görünür. Görünmeyen kapasite iddia edilmez.
+* **TEK KAYNAK YAZMAÇTIR** (ferman 1-M). Parametrenin ikinci bir
+  nüshası -- ayrı bir `numpy` vektörü, ayrı bir defter, "eniyileyici
+  için düz görünüm" -- tutulamaz. Eniyileyici de yazmacın üstünde
+  çalışır.
+* **BU FERMAN `QParametre`yi İLGA EDER.** `p.al(anahtar, n)` usulü
+  bir tahsisat defteridir ve ferman 1-Ş'nin bölge yasağının parametre
+  tarafıdır; yerine parametre yazmacının **adreslemesi** gelir.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...
