@@ -1498,19 +1498,14 @@ FERMAN 2-C gereği imha kararı SORULMADAN VERİLMEZ; burada yalnız
 Bu, emrin son maddesidir. Cevap dört başlıkta:
 
 ### A. TAHTIN KENDİSİNDE OLUP KOŞMAYAN (kırık): DÖRT
-  1. `tanilama/beyan.py:96-97` imha edilmiş `hendese_metni`/
-     `casimir_metni` ithali → `python -m main.egitim tâlim` HİÇ
-     KOŞMUYORDU.  **BU TURDA DÜZELTİLDİ VE İTİLDİ.**
-  2. `main/kaggle_egitim.py:12` olmayan `KulliDalgaTalimMotoru` ithali
-     → `python -m main.egitim kaggle` çöküyor. DÜZELTİLMEDİ (tertibat
-     kararı: motor yok, bu dosya ya yeniden yazılır ya kesilir).
-  3. `nefs/kulli_kayip.py:953` olmayan `nefs/meclis.py` ithali --
-     ölü dalda, patlamıyor.
-  4. `nefs/zihin_durumu.py:336` tanımsız `MAKAM_ESIKLERI`;
-     `nefs/zirh.py:724` tanımsız `tunel_maliyet_cetveli`;
-     `nefs/zirh.py:22` `__all__`da tanımsız `isaret_vur`;
-     `nefs/kulli_kayip.py:533` tanımsız `gorev_ozellikleri` (bu
-     SONUNCUSU CANLI YOLDA ve `_dene` onu sessizce yutuyor).
+  ▓ DÖRDÜ DE KAPATILDI ▓  (1: beyan ithali; 2: kaggle üçlüsü kesilip
+  tahtın kipine katlandı; 3: meclis ithali kesildi -- ferman 1-U onu
+  zaten yasaklamıştı; 4: MAKAM_ESIKLERI ferman 1-J'ye uygun fonksiyona
+  çevrildi, tunel_maliyet_cetveli ve isaret_vur kesildi,
+  gorev_ozellikleri çağrısı kesildi.)
+  ▓ SONRADAN BULUNAN: `nefs/musahede.py:IzafiMevki2D` -- `_komsuluk`
+  tanımsız, hiç çağrılmıyor, `ebat_kanunu_coz` ferman 1-P'nin
+  yasakladığı ölçü kestirimi. Kesildi.
 
 ### B. TAHTA BAĞLI OLUP İŞ GÖRMEYEN (ferman 1-C(b) münafıklığı)
   1. **𝒪44 QTahsil** -- `q.bolge_var("parametre")` daima False,
@@ -1521,18 +1516,18 @@ Bu, emrin son maddesidir. Cevap dört başlıkta:
   3. **`Tableau`** kuruluyor, `beyan()`i okunuyor, X/Z/faz tablosuna
      ana akışta hiçbir kapı vurulmuyor (`xor_isle`/`faz_isle`/
      `galois_isle`/`parite_alarmi` ölü).
-  4. **`Harita` (münasebet haritası)** her koşuda sıfırdan kuruluyor,
-     `hazineye()` yazılmış fakat hazineye KONMUYOR → ferman 1-I'nin
-     "müşterek münasebet haritası" hükmü hiç birikmiyor.
-  5. **`Hizolcer.sert`** hiç açılmıyor → hız haddi ölçülüyor fakat
-     kırmızı yanamıyor.
+  4. ▓ KAPATILDI ▓ `Harita` artık hazineden yükleniyor ve hazineye
+     geri konuyor; turlar boyunca birikiyor.
+  5. ▓ KAPATILDI ▓ `Hizolcer.sert` tahtta açıldı; aşım ayrı bir kefe,
+     tavan (hattın kendi ısınma nispeti) aşılınca assert.
   6. **`QuditYazmac.sadakat()`** daima 1.0 → "kesme yapısal" kefesi
      sabit.
   7. **`suz` / müdrike zinciri** -- `_ara()` daima `[]` döndüğü için
      kaide hiç bulunamıyor; zaten `degerlendir(mudrike_ile=True)`
      hiç verilmediği için tamamı ölü.
-  8. **`main/kaggle_cikarim.py:gorev_cevabi_uret`** -- `padisah`
-     ithal edilip kullanılmıyor; teslimat GİRDİYİ cevap veriyor.
+  8. ▓ KAPATILDI ▓ dosya kesildi; `main/cikarim.py:teslimat_uret`
+     cevabı `padisah()` ile üretiyor, ızgara ayrıştırılamazsa YANLIŞ
+     CEVAP sayılıyor (ferman 1-P).
 
 ### C. FERMAN 7'NİN "ASIL USUL" İLAN EDİP KOŞMAYANLARI
   1. `vpshufb` faz otomatı (`mucit_faz_dfa` + `faz_dfa_gfni`) -- C'de
@@ -1546,12 +1541,14 @@ Bu, emrin son maddesidir. Cevap dört başlıkta:
 ### D. SAYIM
   Okunan dosya            : 83  (taht zinciri + seviye 2 + kalanlar)
   Tasnif edilen dosya     : 319 (236'sı veri ağacı, tek hükümle)
-  TAMAMEN ÖLÜ DOSYA       : 13
-    nefs/gor.py · nefs/ara.py · nefs/lif.py · nefs/mantik.py ·
-    idrak/kategori.py · kuantum/stabilizer.py · kuantum/surekli.py ·
-    kuantum/topolojik.py · main/kaggle_egitim.py (kırık) ·
-    ogrenme/kaggle_donanim.py (ayar_sec hariç) ·
-    + 236 dosyalık idrak/veri/soyutlamalar ağacı
+  TAMAMEN ÖLÜ DOSYA       : 13 idi, ŞİMDİ 4
+    ▓ CANLANDI ▓ nefs/ara.py (NAKİL memuru) · nefs/lif.py (silsile
+      defteri + ℒ_Lif kefesi) · idrak/kategori.py (h-mertebe denetimi) ·
+      idrak/veri/soyutlamalar (236 dosya, artık VERİ)
+    ▓ KESİLDİ ▓ main/kaggle_egitim.py · main/kaggle_cikarim.py ·
+      ogrenme/kaggle_donanim.py
+    ▓ HÂLÂ ÖLÜ ▓ nefs/gor.py · nefs/mantik.py · kuantum/stabilizer.py ·
+      kuantum/surekli.py · kuantum/topolojik.py
   %80'DEN FAZLASI ÖLÜ DOSYA : 6
     ogrenme/optimize.py (%98,8) · nefs/hizli.py (%88) ·
     matematik/tip_teorisi.py (~%96) · matematik/mizan.py (~%92) ·

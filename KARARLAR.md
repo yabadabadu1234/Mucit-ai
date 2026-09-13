@@ -772,20 +772,12 @@ yazılmamış olan, borç diye bile yazılmaz.
     nefs/gor.py                     Karar 2, 5
     musahede.kaide                  Karar 9
     musahede.Gorev · ayir · genlige_gom   Karar 13 (ferman 1-N-C)
-    main/kaggle_egitim.py · kaggle_cikarim.py
-      · ogrenme/kaggle_donanim.py   Karar 7 (tahta katlanır)
-    ogrenme/izgara.py:artis_gradyani     Karar 15
-    kulli_kayip.py:gorev_ozellikleri     Karar 31
-    35 dosyada `if __name__ == "__main__"`  Karar 30
-    17 çıplak `except` → `assert`        Karar 31
 
 ## B. MENFEZİNE VİDALANACAKLAR
 
     kuantum/surekli.py  → belirteç kodlamasının ASLI        Karar 6
-    nefs/lif.py         → sadakat kefesi + münasebet haritası Karar 3
+    nefs/lif.py         → sadakat() borcu KALDI            Karar 3
     nefs/mantik.py      → 3. mantıksızlık taşması + Gray     Karar 4
-    nefs/ara.py         → NAKİL memuru + dizi araması        Karar 1
-    idrak/kategori.py   → silsilenin UZAY mertebesi          Karar 12
     kuantum/stabilizer.py → Tableau'nun motoru               Karar 17
     kuantum/topolojik.py  → lifler arası morfizm             (kabul)
     nefs/hizli.py       → SEKTOR tek kaynak + Lie-Chebyshev  Karar 10
@@ -796,10 +788,8 @@ yazılmamış olan, borç diye bile yazılmaz.
     nefs/hamiltonyen.py → 20 uzayın Hamiltonyeni + Cayley    Karar 32
     nefs/ttkan.py       → dizi zinciri (sıkıştırıcı DEĞİL)   Karar 20
     matematik/ dörtlüsü → tip/mizan/fitrat/geometri          Karar 12
-    ogrenme/optimize.py → _durgunluk ÇUKUR, _yon_asgarisi    Karar 14
-    ogrenme/izgara.py   → bukulme_dizeyi adım boyu           Karar 11
+    ogrenme/optimize.py → _yon_asgarisi ferman 2-P İLE ÇELİŞİK Karar 14
                         → sembolik_kapanis vekil türevi      Karar 15
-    idrak/veri/soyutlamalar/ → 41 899 satır sözlü çözüm verisi Karar 8
 
 ## C. SIFIRDAN YAZILACAKLAR (Karar 28)
 

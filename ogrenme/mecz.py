@@ -23,6 +23,8 @@ def mecz_sifirla() -> None:
                   "ΔE": 0.0, "yarıçap": 0.0, "iz_g": 0.0,
                   "operatörlü_kefe": 0.0, "operatörsüz_kefe": 0.0,
                   "κ": 0.0, "yarıçap_düzeltmesi": 0.0,
+                  "asal_açı": 0.0, "eğrilik": 0.0,
+                  "nakil_geçirgenliği": 0.0, "nakil_dizi_boyu": 0.0,
                   "yönsüz_tur": 0.0, "kapı": 0.0, "üretecsiz": 0.0,
                   "ek_durum_ikiz_farkı": 0.0, "üreteç_ikiz_farkı": 0.0,
                   "senet_ileri": 0.0,
@@ -115,7 +117,9 @@ def hat_egriligi(dv_gercek: float, dv_lineer: float,
             "bükey": True}
 
 
-def cukur(psi: np.ndarray, H: np.ndarray) -> Dict[str, float]:
+def cukur(psi: np.ndarray, H: np.ndarray,
+          onceki: Optional[np.ndarray] = None) -> Dict[str, float]:
+    from .grassmann import asal_acilar
     p = np.abs(psi) ** 2
     iz = np.maximum(p.sum(axis=1, keepdims=True), 1e-300)
     p = p / iz
@@ -123,7 +127,18 @@ def cukur(psi: np.ndarray, H: np.ndarray) -> Dict[str, float]:
     E2 = float((p * (H ** 2)[None, :]).sum(axis=1).mean())
     dE = float(np.sqrt(max(0.0, E2 - E * E)))
     _MECZ["ΔE"] = dE
-    return {"⟨H⟩": E, "ΔE": dE, "durak": bool(dE <= 1e-12)}
+    kipirti = float("nan")
+    if onceki is not None:
+        Y1 = np.asarray(onceki, complex).reshape(len(onceki), -1).T
+        Y2 = np.asarray(psi, complex).reshape(psi.shape[0], -1).T
+        if Y1.shape == Y2.shape and Y1.size:
+            aci = asal_acilar(np.real(Y1), np.real(Y2))
+            kipirti = float(np.max(aci)) if aci.size else 0.0
+            _MECZ["asal_açı"] = kipirti
+    durak = bool(dE <= 1e-12) or bool(
+        kipirti == kipirti and kipirti <= float(np.arcsin(
+            np.sqrt(np.finfo(float).eps))))
+    return {"⟨H⟩": E, "ΔE": dE, "durak": durak, "asal_açı": kipirti}
 
 
 def egim(q, H: np.ndarray) -> Dict[str, Any]:
@@ -157,8 +172,21 @@ def duvar(metrik: np.ndarray) -> Dict[str, Any]:
             "bakılan": int(m.size), "nispet": float(gecen.mean())}
 
 
-def yaricap(keyf: float, iz_g: float) -> float:
+def yaricap(keyf: float, iz_g: float,
+            seyir: Optional[Sequence[float]] = None) -> float:
     r = float(keyf) / float(np.sqrt(max(float(iz_g), 1e-300)))
+    egrilik = 0.0
+    if seyir is not None and len(seyir) >= 4:
+        from .izgara import bukulme_dizeyi, bukulme_enerjisi, duzenli_uydur
+        y = np.asarray(list(seyir), float).reshape(-1)
+        t = np.linspace(-1.0, 1.0, y.size)
+        G, k = max(4, min(8, y.size - 2)), 3
+        u = duzenli_uydur(t, y, G, k)
+        S = bukulme_dizeyi(G, k)
+        c = np.asarray(u["c"], float).reshape(-1)
+        egrilik = float(bukulme_enerjisi(c, S)) / max(float(y.var()), 1e-300)
+        _MECZ["eğrilik"] = egrilik
+        r = r / (1.0 + egrilik)
     _MECZ["yarıçap"] = r
     return r
 
@@ -172,16 +200,10 @@ def vadi(metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
     return v
 
 
-def nakil_senetli(metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
-    s = np.asarray(metrik, float) * np.asarray(maske, float)
-    v = np.zeros_like(s)
-    if s.size and float(s.max()) > 0.0:
-        v[int(np.argmax(s))] = 1.0
-    _MECZ["nakil"] += 1.0
-    return v
 
 
 def nakil(q, maske: np.ndarray) -> np.ndarray:
+    from nefs.ara import ara
     psi = np.asarray(q.y.psi, complex)
     lif = tuple(int(x) for x in q.y.ayar.lif)
     sap: List[float] = []
@@ -192,10 +214,21 @@ def nakil(q, maske: np.ndarray) -> np.ndarray:
         sap.append(max(0.0, ust - abs(ic) ** 2))
     s = np.asarray(sap, float) * np.asarray(maske, float)
     v = np.zeros_like(s)
-    if s.size and float(s.max()) > 0.0:
-        v[int(np.argmax(s))] = 1.0
+    if not s.size or float(s.max()) <= 0.0:
+        _MECZ["nakil"] += 1.0
+        return v
+    dizi_genligi = np.abs(psi.reshape(psi.shape[0], -1)).sum(axis=0)
+    kuyu = -dizi_genligi / max(float(dizi_genligi.max()), 1e-300)
+    bedel = ara(ne="bedel", V=kuyu, E=float(kuyu.mean()),
+                genislikler=(1, 2, 4, 8))
+    gecirgen = max((float(d["T"]) for d in bedel), default=0.0)
     _MECZ["nakil"] += 1.0
-    return v
+    _MECZ["nakil_geçirgenliği"] = gecirgen
+    _MECZ["nakil_dizi_boyu"] = float(dizi_genligi.size)
+    kac = max(1, int(round(gecirgen * float(s.size))))
+    for i in np.argsort(s)[::-1][:kac]:
+        v[int(i)] = 1.0
+    return v / max(float(np.linalg.norm(v)), 1e-300)
 
 
 class Memuriyet:
@@ -205,6 +238,8 @@ class Memuriyet:
         self.nefs = nefs
         self.kayip = kayip
         self.kume = list(kume)
+        self._onceki_psi = None
+        self._seyir: List[float] = []
         self.sozluk = int(sozluk)
         self.ayar = ayar or MeczAyari()
         self._r_duzeltme = 0.0
@@ -264,7 +299,11 @@ class Memuriyet:
         hedefler = [int(ornek_bol(o)[1]) for o in self.kume]
         H = hata_operatoru(q, hedefler, int(self.nefs.ayar.veri_lifi))
         psi = np.asarray(q.y.psi, complex)
-        ck = cukur(psi, H)
+        ck = cukur(psi, H, onceki=self._onceki_psi)
+        self._onceki_psi = psi.copy()
+        self._seyir.append(float(ck["⟨H⟩"]))
+        if len(self._seyir) > 64:
+            del self._seyir[:-64]
 
         g_ek, metrik = egim_ek_durum(iz, lif, psi, H, n_par)
         g_ur = egim_uretec(iz, lif, psi, H, n_par)
@@ -279,13 +318,14 @@ class Memuriyet:
 
         dv = duvar(metrik)
         maske = np.asarray(dv["maske"], float)
-        r = yaricap(float(keyf), float(_MECZ["iz_g"]))
+        r = yaricap(float(keyf), float(_MECZ["iz_g"]),
+                    seyir=self._seyir)
         yon = -g_ek * maske
         nrm = float(np.linalg.norm(yon))
         if ck["durak"] or nrm <= 1e-300:
             _MECZ["çukur"] += 1.0
             yon = (vadi(metrik, maske) if not ck["durak"]
-                   else nakil_senetli(metrik, maske))
+                   else nakil(q, maske))
             nrm = float(np.linalg.norm(yon))
         if nrm > 0.0:
             yon = yon / nrm
@@ -378,15 +418,23 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          % b["eğim_normu"],
          "  ÇUKUR  ΔE = %.4e   durak sayısı = %d"
          % (b["ΔE"], int(b["çukur"])),
+         "         Grassmann asal açısı = %.4e   (hâl kıpırdadı mı --"
+         " Karar 14/1)" % b["asal_açı"],
          "  DUVAR  elenen %d / %d koordinat (%.1f%%)"
          % (int(b["duvar_elenen"]), int(b["duvar_bakılan"]),
             100.0 * b["duvar_nispeti"]),
          "  VADİ   %d kere aşırdı" % int(b["vadi"]),
          "  NAKİL  %d kere sıçrattı" % int(b["nakil"]),
+         "         DİZİNİN genliğinden WKB geçirgenliği T = %.4e"
+         % b["nakil_geçirgenliği"],
+         "         (tek belirteç DEĞİL, %d basamaklık dizinin tamamı --"
+         " ferman 1-N-B)" % int(b["nakil_dizi_boyu"]),
          "  YARIÇAP = keyfiyet / √iz(g_FS) = %.4e   (iz g = %.4e)"
          % (b["yarıçap"], b["iz_g"]),
          "         hat eğriliği κ = %.4e   %d kere düzeltti"
          % (b["κ"], int(b["yarıçap_düzeltmesi"])),
+         "         seyrin B-spline bükülme enerjisi = %.4e"
+         "   (adım boyu ondan kısılır -- Karar 11)" % b["eğrilik"],
          "",
          "  SENET  %d kapı · üretecsiz bağ %d · durum saklaması %d"
          % (int(b["kapı"]), int(b["üretecsiz"]),
