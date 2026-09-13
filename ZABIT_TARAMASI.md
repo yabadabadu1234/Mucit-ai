@@ -493,17 +493,75 @@ tashihlerinde duruyor:
 
 ---
 
-## TARAMANIN HÂLİ
+## TARAMANIN HÂLİ -- ▓ TAMAMLANDI ▓
 
-Tamamen okunan zabıtlar (11): `KUME_9_TEK_HAKIMIYET` ·
-`KUME_8_NAZIRLIK_PLANI` · `KUME_3_7_TERKIP_EMIRLERI` ·
-`C_oklu_Sonsuz_Kategorili_Koherent_Durum` ·
-`Kelime_ve_Durum_Kodlamasi` · `Qudite_Tip_Tensorunun_Kodlanma_Nizami` ·
-`Qudite_Tip_Tensoru_Zincirinin_Kodlanmasi` ·
-`Quditte_Negatif_Olabilirlik` · `Kuantum_Metinlerindeki_Cevherin_Tahvili` ·
-`Ontolojik_Silsile` · `Su_kut_ve_Ifsa` · `Daginik_Kod_Modullerini_Baglama`.
+**On sekiz zabıtın tamamı baştan sona okundu.** Emir icra edilmiştir:
+*"Zabıtları tekrar tamamen tara, daha fazlasını bulacaksın,
+bulduklarını mutlaka not et!"*
 
-Okunmayı bekleyen (6): `tecrit.md` (136 KB) · `zab_t_2.md` (119 KB) ·
-`terkip_layihas__12.md` (77 KB) · `optimizasyon.md` (40 KB) ·
-`zab_t_9.md` · iki `Nefsi_Mu_drike` nizamnamesi. Tarama sürüyor ve
-bulgular buraya eklenecektir.
+```
+KUME_9_TEK_HAKIMIYET                 KUME_8_NAZIRLIK_PLANI
+KUME_3_7_TERKIP_EMIRLERI             tecrit.md            (1451 s.)
+terkip_layihas__12.md  (KARARNÂME)   zab_t_2.md           (teknik ek dâhil)
+Zab_t_1.md             (İLGA CERİDESİ)  optimizasyon.md
+C_oklu_Sonsuz_Kategorili_Koherent_Durum
+Kelime_ve_Durum_Kodlamasinin_Tensorel_ve_Kuantum_Mahiyeti
+Qudite_Tip_Tensorunun_Kodlanma_Nizami
+Qudite_Tip_Tensoru_Zincirinin_Kodlanmasi
+Quditte_Negatif_Olabilirlik_Yanilgisi_ve_Tabakali_Mizan
+Kuantum_Metinlerindeki_Cevherin_Qudite_Tahvili
+Ontolojik_Silsile_ve_Token_Tipinin_Hakikati
+Su_kut_ve_Ifsa_Matematigi            zab_t_9.md (envanter)
+Daginik_Kod_Modullerini_Ana_Icra_Akisina_Baglama_Nizamnamesi
+Nefsi_Mudrike_Ozerk_Hedef_ve_Strateji_Tesekkulu
+Nefsi_Mudrike_Ana_Dongu_ve_Kulli_Paradigma_Sorgu_Nizamnamesi
+Nefsi_Mudrike_Ana_Dongu_ve_Paradigma_Denetim_Nizamnamesi
+```
+
+### ZABITLARIN TARİH SIRASI -- HANGİSİ HANGİSİNİ İLGA EDİYOR
+
+    tecrit.md          mimarinin DOĞUŞU: 20 uzay, MERA, çok uzaylı
+                       kübit, çift motor, POVM, AS-GEK
+          │
+          ▼  1 Eylül 2026
+    Zab_t_1.md         İLGA CERİDESİ: MERA · pasif WKB · POVM/Born ·
+                       Active Subspaces · sanal zamanlı PDE · tersine
+                       tavlama (İsing) · sonlu fark -- YEDİSİ DE İLGA
+          │
+          ▼  1 Eylül 2026
+    terkip_layihas_12  NİHÂÎ KARARNÂME: Zabıt 1 (idrak) + Zabıt 2
+                       (hesap) tevhid; 16 bâtıl usul + 7 zaaf ilga;
+                       9 uzuvlu tâlim teşkilâtı; 4 İkmâl Fıkrası
+
+**KAİDE:** Bir mesele iki zabıtta ayrı hükümlüyse **sonraki tarihli
+olan asıldır**. Karar 24 bu kaidenin ilk tatbikidir.
+
+### ÜÇ HÜKÜMDE ÜÇ ZABIT DA MUTABIK (ihtilafsız, derhal icra)
+
+1. **POVM / zayıf ölçüm ÖLÜDÜR.** Zabıt 1 ilga etti, kararnâme
+   tekrarladı, ferman 1-T *"klonlarsın durumu"* dedi.
+2. **MERA / MPS budaması ÖLÜDÜR.** Hacim kanunu iflası; yerine
+   Reel Chebyshev-KAN + QTT. Ferman 7 ile birebir.
+3. **Rastlantısallık ÖLÜDÜR.** *"Başarısızlığın matematikten mi zar
+   atışından mı geldiğini gizler."* Ferman 5'in (ölçü kırmızı
+   yanabilmeli) zabıttaki temeli budur.
+
+### KARARNÂMENİN DEPODA KARŞILIĞI OLAN VE OLMAYAN UZUVLARI
+
+| Kararnâmenin uzvu | Depodaki hâli |
+| :-- | :-- |
+| Morse-Euler katî eşitliği | **CANLI, `assert` ile** ✓ |
+| Grassmann `arctan` log haritası | **CANLI** (`ogrenme/grassmann.py`) ✓ |
+| Cholesky emniyet kilidi (`ogrenme/rkhs.py`) | dosya yok |
+| STA `H_CD` sürüşü (`ogrenme/sta.py`) | dosya yok |
+| FCT kapalı form (`ogrenme/fct.py`) | dosya yok |
+| Çift sayılar autodiff (`nefs/ikiz.py`) | dosya yok |
+| OGDA (`nefs/ogda.py`) | dosya yok |
+| QSVT Gibbs (`kuantum/qsvt.py`) | dosya yok |
+| Alexandroff + Lions HAD | yok |
+| Postnikov k-invaryantı | yok |
+| Kalıcı homoloji barkodu | yok |
+| QROM blok-kodlama | yok |
+| FPAA faz dizisi | yok |
+| 20 uzay fırlatım-geri çevrim | yok |
+| Özerk döngü (Gaye → Mutasarrıfa) | yok |
