@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional
 import numpy as np
 
 __all__ = ["KeyfiyetAyari", "keyfiyet", "esik", "keyfiyet_beyani", "keyfiyet_metni",
-           "keyfiyet_sifirla"]
+           "keyfiyet_son", "keyfiyet_sifirla"]
 
 
 @dataclass
@@ -91,6 +91,10 @@ def keyfiyet_beyani() -> Dict[str, Any]:
             "en_kötü_tenakuz": float(_HAL.get("en_kotu_ten", 1.0)),
             "en_kötü_kısır": float(_HAL.get("en_kotu_kis", 1.0)),
             "en_kötü_mantık": float(_HAL.get("en_kotu_man", 1.0))}
+
+
+def keyfiyet_son() -> float:
+    return float(_GECMIS[-1]) if _GECMIS else 0.0
 
 
 def keyfiyet_sifirla() -> None:

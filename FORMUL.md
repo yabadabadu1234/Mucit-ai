@@ -231,15 +231,25 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     DUVAR   Maske = Metrik/enbüyük(Metrik) > ortanca·10⁻³
                                                         → koordinat ELER
     EĞİM    Yön = −Eğim ⊙ Maske, normalize                → yön verir
-    YARIÇAP Yarıçap = Keyfiyet(üç hudut) / √Σ Metrik      → boy verir
+    YARIÇAP Yarıçap = 1 / √Σ Metrik                       → boy verir
+            Eğrilik = BükülmeEnerjisi / (BükülmeEnerjisi + Artık²)
+            Yarıçap ← Yarıçap / (1 + Eğrilik)
     VADİ    Yön = birim(enbüyükArgüman(Metrik ⊙ Maske))   → adımın YERİNE
     NAKİL   aynı fakat sapma en büyük olan eksende        → adımın YERİNE
 
     Aday = Parametre + Yarıçap · Yön
     V_aday = Skaler(Aday)                       ← TUR BAŞINA YEGÂNE ÇAĞRI
 
-    eğer V_aday < V:  Parametre ← Aday,  YarıçapDüzeltmesi ← 0
+    KABUL KAPISI -- keyfiyet adımın BOYUNU değil KABULÜNÜ tayin eder:
+    Keyfiyet_aday = KeyfiyetSon()          ← V_aday çağrısında ölçülen
+    Kirletti = Keyfiyet_aday < Keyfiyet
+
+    eğer V_aday < V ve değil Kirletti:
+                      Parametre ← Aday,  YarıçapDüzeltmesi ← 0
     değilse:          hat eğriliğinden ANALİTİK düzeltme, ek çağrı YOK
+        Çözünürlük = MakineEpsilonu · enbüyük(|V|, |V_aday|)
+        eğer |ΔV_gerçek| ≤ Çözünürlük:   kayıp adımı HİSSETMEDİ
+                                          Yarıçap* = 2·Yarıçap
         ΔV_lineer = ⟨Eğim, Yarıçap·Yön⟩
         κ         = 2(ΔV_gerçek − ΔV_lineer) / Yarıçap²
         Yarıçap*  = −ΔV_lineer / (κ · Yarıçap)      ← hat üstünde TAM Newton

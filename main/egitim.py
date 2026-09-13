@@ -11,7 +11,7 @@ import json
 import sys
 import time
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
@@ -150,7 +150,6 @@ class EgitimAyari:
     lam_kaide: float = 0.0
     lam_tasma: float = 0.0
     lam_lif: float = 0.0
-    lam_hiz: float = 0.0
     mihenk_arasi: float = 300.0
     galois_us: int = 0
     tableau_n: int = 0
@@ -367,7 +366,6 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         lam_meleke=float(a.lam_meleke), lam_zirh=float(a.lam_zirh),
         lam_kaide=float(a.lam_kaide),
         lam_tasma=float(a.lam_tasma), lam_lif=float(a.lam_lif),
-        lam_hiz=float(a.lam_hiz),
         basamak=int(a.belirtec_basamak),
         meleke_olcumu=int(a.meleke_olcumu),
         usul_acik=int(a.usul_acik), usul_haddi=float(a.usul_haddi),
@@ -433,7 +431,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
                   "lam_tenakuz", "lam_kategori", "lam_nokta",
                   "lam_meleke", "lam_zirh", "lam_kaide",
-                  "lam_tasma", "lam_lif", "lam_hiz")
+                  "lam_tasma", "lam_lif")
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}
@@ -471,7 +469,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                      canli_saniye=float(ayar.canli_saniye))
     hizolcer_bagla(olcer)
 
-    _kume: Dict[str, Sequence] = {"v": list(veri)}
+    _kume: Dict[str, Any] = {"v": list(veri), "adım": 0}
     _seyir: List[Dict[str, float]] = []
     nobet = nobet_kur(nefs, ara_saniye=float(ayar.mihenk_arasi),
                       pencere=int(ayar.pencere), sozluk=int(ayar.sozluk),
@@ -499,7 +497,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             _sayac["çağrı"] += 1
             with olcer.saat(len(kume) * int(ayar.pencere)):
                 t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
-                                hafiza=hafiza, adim=_sayac["çağrı"],
+                                hafiza=hafiza.klon(),
+                                adim=int(_kume["adım"]),
                                 kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
             _seyir.append({"V": float(t["kayıp"]),
@@ -514,6 +513,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     def _eniyile(p_, kume):
         n0 = _sayac["çağrı"]
         _kume["v"] = list(kume)
+        _kume["adım"] = int(_sayac["çağrı"])
         rr = mecz_egit(nefs, kayip_p, np.asarray(p_, float),
                        kume=list(kume), sozluk=int(ayar.sozluk),
                        ayar=MeczAyari(ad=ayar.ad,

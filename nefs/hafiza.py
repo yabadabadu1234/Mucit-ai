@@ -62,6 +62,12 @@ class Hafiza:
         self.tertip = 0
         self.adim = 0
 
+    def klon(self) -> "Hafiza":
+        import copy
+        y = copy.copy(self)
+        y.kayitlar = [copy.copy(k) for k in self.kayitlar]
+        return y
+
     def yaz(self, x, omega: float, hukum: float) -> Kayit:
         self.adim += 1
         e = self.yazma

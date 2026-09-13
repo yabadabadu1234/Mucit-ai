@@ -28,6 +28,10 @@ def mecz_sifirla() -> None:
                   "yönsüz_tur": 0.0, "kapı": 0.0, "üretecsiz": 0.0,
                   "ek_durum_ikiz_farkı": 0.0, "üreteç_ikiz_farkı": 0.0,
                   "senet_ileri": 0.0,
+                  "keyfiyet": 0.0, "keyfiyet_önceki": 0.0,
+                  "keyfiyet_reddi": 0.0, "hissedilmeyen_adım": 0.0,
+                  "kayıp_çözünürlüğü": 0.0, "r_kullanılan": 0.0,
+                  "ΔV_gerçek": 0.0, "ΔV_lineer": 0.0,
                   "durum_saklaması": 0.0})
 
 
@@ -105,11 +109,17 @@ def _uretec_vur(psi: np.ndarray, lif: Tuple[int, ...],
 
 
 def hat_egriligi(dv_gercek: float, dv_lineer: float,
-                 r: float) -> Dict[str, float]:
+                 r: float, v_olcegi: float = 0.0) -> Dict[str, float]:
     r = float(r)
     assert r > 0.0 and r * r > 0.0, (
         "yarıçap eğrilik için fazla küçük (r=%r, r²=%r): karesi taban "
         "altına düşüyor" % (r, r * r))
+    cozunurluk = float(np.finfo(float).eps) * abs(float(v_olcegi))
+    _MECZ["kayıp_çözünürlüğü"] = cozunurluk
+    if abs(float(dv_gercek)) <= cozunurluk:
+        _MECZ["hissedilmeyen_adım"] += 1.0
+        _MECZ["κ"] = 0.0
+        return {"κ": 0.0, "yarıçap*": 2.0 * r, "bükey": False}
     kappa = 2.0 * (float(dv_gercek) - float(dv_lineer)) / (r * r)
     _MECZ["κ"] = float(kappa)
     if kappa <= 0.0:
@@ -174,9 +184,9 @@ def duvar(metrik: np.ndarray) -> Dict[str, Any]:
             "bakılan": int(m.size), "nispet": float(gecen.mean())}
 
 
-def yaricap(keyf: float, iz_g: float,
+def yaricap(iz_g: float,
             seyir: Optional[Sequence[float]] = None) -> float:
-    r = float(keyf) / float(np.sqrt(max(float(iz_g), 1e-300)))
+    r = 1.0 / float(np.sqrt(max(float(iz_g), 1e-300)))
     egrilik = 0.0
     if seyir is not None and len(seyir) >= 4:
         from .izgara import bukulme_dizeyi, bukulme_enerjisi, duzenli_uydur
@@ -192,9 +202,9 @@ def yaricap(keyf: float, iz_g: float,
         _MECZ["eğrilik"] = egrilik
         r = r / (1.0 + egrilik)
     assert r > 0.0 and np.isfinite(r), (
-        "YARIÇAP SIFIR YAHUT SONSUZ (%r): keyfiyet %.6e, iz(g) %.6e, "
-        "eğrilik nispeti %.6f. Sıfır yarıçapla adım atılamaz ve sessizce "
-        "geçilemez (ferman 5)." % (r, float(keyf), float(iz_g), egrilik))
+        "YARIÇAP SIFIR YAHUT SONSUZ (%r): iz(g) %.6e, eğrilik nispeti "
+        "%.6f. Sıfır yarıçapla adım atılamaz ve sessizce geçilemez "
+        "(ferman 5)." % (r, float(iz_g), egrilik))
     _MECZ["yarıçap"] = r
     return r
 
@@ -279,7 +289,7 @@ class Memuriyet:
         return self.nefs.idrak_et(E), [int(ornek_bol(o)[1])
                                        for o in self.kume]
 
-    def divan(self, p: np.ndarray, keyf: float) -> Dict[str, Any]:
+    def divan(self, p: np.ndarray) -> Dict[str, Any]:
         from .senet_egimi import (egim_ek_durum, egim_ikiz, egim_uretec,
                                   mutabakat, senet_kapsami,
                                   senet_ileri_sadakati)
@@ -320,8 +330,7 @@ class Memuriyet:
 
         dv = duvar(metrik)
         maske = np.asarray(dv["maske"], float)
-        r = yaricap(float(keyf), float(_MECZ["iz_g"]),
-                    seyir=self._seyir)
+        r = yaricap(float(_MECZ["iz_g"]), seyir=self._seyir)
         yon = -g_ek * maske
         nrm = float(np.linalg.norm(yon))
         if ck["durak"] or nrm <= 1e-300:
@@ -351,16 +360,16 @@ class Memuriyet:
         return np.tile(y, kademe) / np.sqrt(float(kademe))
 
     def kos(self, p0: np.ndarray) -> Dict[str, Any]:
-        from nefs.keyfiyet import keyfiyet_beyani
+        from nefs.keyfiyet import keyfiyet_son
         p = np.asarray(p0, float).copy()
         _MECZ["toplam_parametre"] = float(p.size)
         v = float(np.atleast_1d(self.kayip(p[None, :]))[0])
         _MECZ["çağrı"] += 1.0
         seyir: List[Dict[str, float]] = [{"V": v}]
+        keyf = keyfiyet_son()
         for _t in range(max(1, int(self.ayar.tur))):
             _MECZ["tur"] += 1.0
-            keyf = float((keyfiyet_beyani() or {}).get("en_iyi", 0.0)) or 1.0
-            d = self.divan(p, keyf)
+            d = self.divan(p)
             yon = np.asarray(d["yön"], float)
             assert yon.size == p.size, (
                 "yön %d, parametre %d -- boy tutmuyor"
@@ -374,13 +383,22 @@ class Memuriyet:
             aday = p + r * yon
             va = float(np.atleast_1d(self.kayip(aday[None, :]))[0])
             _MECZ["çağrı"] += 1.0
-            eg = hat_egriligi(va - v, egim_yon * r, r)
+            keyf_aday = keyfiyet_son()
+            _MECZ["r_kullanılan"] = r
+            _MECZ["ΔV_gerçek"] = float(va - v)
+            _MECZ["ΔV_lineer"] = float(egim_yon * r)
+            eg = hat_egriligi(va - v, egim_yon * r, r, max(abs(v), abs(va)))
             seyir.append({"V": va, "yarıçap": r, "ΔE": float(d["ΔE"]),
-                          "κ": float(eg["κ"])})
-            if va < v:
+                          "κ": float(eg["κ"]), "keyfiyet": keyf_aday})
+            kirletti = bool(keyf_aday < keyf)
+            _MECZ["keyfiyet"] = float(keyf_aday)
+            _MECZ["keyfiyet_önceki"] = float(keyf)
+            if kirletti:
+                _MECZ["keyfiyet_reddi"] += 1.0
+            if va < v and not kirletti:
                 _MECZ["kabul"] += 1.0
                 _MECZ["adım_normu"] += float(np.linalg.norm(aday - p))
-                p, v = aday, va
+                p, v, keyf = aday, va, keyf_aday
                 self._r_duzeltme = 0.0
             else:
                 self._r_duzeltme = float(eg["yarıçap*"])
@@ -431,10 +449,23 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          % b["nakil_geçirgenliği"],
          "         (tek belirteç DEĞİL, %d basamaklık dizinin tamamı --"
          " ferman 1-N-B)" % int(b["nakil_dizi_boyu"]),
-         "  YARIÇAP = keyfiyet / √iz(g_FS) = %.4e   (iz g = %.4e)"
+         "  YARIÇAP = 1 / √iz(g_FS) = %.4e   (iz g = %.4e)"
          % (b["yarıçap"], b["iz_g"]),
+         "         keyfiyet yarıçabı NE ÇARPAR NE BÖLER: adımın BOYUNU",
+         "         mecz tayin eder, KABULÜNÜ mizan verir.",
+         "  KABUL KAPISI  keyfiyet %.6f → %.6f   (%d adım keyfiyeti"
+         " kirlettiği için reddedildi)"
+         % (b["keyfiyet_önceki"], b["keyfiyet"],
+            int(b["keyfiyet_reddi"])),
          "         hat eğriliği κ = %.4e   %d kere düzeltti"
          % (b["κ"], int(b["yarıçap_düzeltmesi"])),
+         "         HİSSEDİLMEYEN ADIM %d kere: |ΔV| kaybın kendi"
+         " çözünürlüğünün (%.3e) altında kaldı."
+         % (int(b["hissedilmeyen_adım"]), b["kayıp_çözünürlüğü"]),
+         "         Hudut sabit sayı değil, kaybın büyüklüğünden ölçülür",
+         "         (ferman 1-J). Bu bir eğrilik değil küçüklük delilidir; yarıçap",
+         "         yarıya inmez, İKİYE KATLANIR. Sayı büyükse kayıp",
+         "         adımı hissetmiyor demektir (ferman 5).",
          "         seyrin B-spline bükülme enerjisi = %.4e"
          "   (adım boyu ondan kısılır -- Karar 11)" % b["eğrilik"],
          "",

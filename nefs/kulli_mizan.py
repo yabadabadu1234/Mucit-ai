@@ -12,7 +12,31 @@ from .tdd import esit_mi, kanonik_adres
 
 __all__ = ["MizanAyari", "uhlmann", "givens", "holonomi",
            "holonomi_yigin", "engellenme", "kulli_mizan", "mizan_cetveli",
-           "rapor"]
+           "kefe_kimiltisi", "rapor"]
+
+
+_KIMILTI: Dict[str, Any] = {"önceki": None, "ad": "-", "Δ": 0.0,
+                            "ikinci": "-", "Δ2": 0.0}
+
+
+def _kimilti_yaz(adlar, artik) -> None:
+    y = np.asarray(artik, float)
+    o = _KIMILTI["önceki"]
+    _KIMILTI["önceki"] = y.copy()
+    if o is None or o.shape != y.shape:
+        return
+    d = np.abs(y - o)
+    s = np.argsort(d)[::-1]
+    _KIMILTI["ad"] = str(adlar[int(s[0])])
+    _KIMILTI["Δ"] = float(y[int(s[0])] - o[int(s[0])])
+    if s.size > 1:
+        _KIMILTI["ikinci"] = str(adlar[int(s[1])])
+        _KIMILTI["Δ2"] = float(y[int(s[1])] - o[int(s[1])])
+
+
+def kefe_kimiltisi() -> Dict[str, Any]:
+    return {"ad": _KIMILTI["ad"], "Δ": float(_KIMILTI["Δ"]),
+            "ikinci": _KIMILTI["ikinci"], "Δ2": float(_KIMILTI["Δ2"])}
 
 
 @dataclass
@@ -47,7 +71,6 @@ class MizanAyari:
     lam_kaide: float = 0.5
     lam_tasma: float = 0.5
     lam_lif: float = 0.5
-    lam_hiz: float = 0.5
     basamak: int = 0
     meleke_olcumu: int = 1
     usul_acik: int = 1
@@ -670,8 +693,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                 ("gedik", float(usl["borç"]), float(a.lam_cevrim)),
                 ("monogami", L_mon, float(a.lam_monogami)),
                 ("engel", L_eng, float(a.lam_engel)),
-                ("lif", L_lif, float(a.lam_lif)),
-                ("hız", L_hiz, float(a.lam_hiz))] + _bilesen
+                ("lif", L_lif, float(a.lam_lif))] + _bilesen
     artik = np.array([float(h) * float(l) for _ad, h, l in _bilesen],
                      float)
     ham_artik = np.array([float(h) for _ad, h, _l in _bilesen], float)
@@ -681,6 +703,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         % [artik_adlari[i] for i in np.flatnonzero(~np.isfinite(artik))])
     kayip = float(artik.sum())
     assert np.isfinite(kayip), "mizan sonlu değil"
+    _kimilti_yaz(artik_adlari, artik)
 
     kayip_ham = float(ham_artik.sum())
     if ne == "toplam":
