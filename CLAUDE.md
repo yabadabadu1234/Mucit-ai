@@ -690,6 +690,159 @@ Başlangıç noktası **`main/`dır**: baş kopuksa gövde işe yaramaz.
 
 ---
 
+## ▓▓▓ 1-Ç. FERMAN: HÂL BİR SUALİN CEVABIDIR -- FUNKTÖRÜN TERSİ ŞARTTIR ▓▓▓
+
+> *"Ana hâlimiz girdi belirteçlerinden mürekkep hâl; bu hâli evirip
+> çevirip şu sualin cevabını öğrenmeye çalışıyoruz: **bu yazıyı yazan
+> kişinin aklı nasıl çalışmış ki bu çıktıyı üretmiş.** Ulaştığımız
+> nihaî neticelerden biri budur, yâni **o hâldir**. Bir diğeri başka
+> bir sualin cevabıdır: bu veride doğru olan ne, yanlış olan ne?
+> ... Hâller ayrıştıktan sonra her hâl **elma armut gibi farklı bir
+> cinse** dönüşmüştür; bunun için **hâli oluşturan funktör ne ise
+> tersi de mevcut olmalıdır**."*
+
+### HÂL NEDİR, NE DEĞİLDİR
+
+* **HÂL BİR ÇERÇEVE, BİR KATMAN, BİR BÖLGE DEĞİLDİR.** Hâl, ana hâlin
+  (girdi belirteçlerinden mürekkep yazmacın) **bir suale verilmiş
+  nihaî cevabıdır**. Sual başkaysa hâl başkadır.
+* **HÂL EVVELDEN TARİF EDİLMEZ, AÇILIR.** Tıpkı dinamik uzay açma
+  mimarisi gibi, hâl de **açılır**: neye göre? `𝒪15 Merak ve Sual`
+  melekesinin merakına ve gayenin gayesine göre.
+* **HER HÂL AYRI CİNSTİR.** İki hâl elma ile armut gibidir; aynı
+  kefeye konup toplanamaz, kıyaslanamaz. Kıyas ancak bir **vecih**
+  tayin edildikten sonra mümkündür (aşağıya bakınız).
+* **FUNKTÖRÜN TERSİ ŞARTTIR.** Hâli doğuran funktör `F_hâl` ise
+  `F_hâl⁻¹` de **mevcut olmalıdır**. Tersi olmayan bir hâl açılmaz:
+  açılırsa ana hâle dönülemez ve o hâlde biriken idrak kaybolur.
+  Bu, Karar 26'nın *"F_m fırlatım + F_m† geri çevrim"* hükmünün ta
+  kendisidir ve o hükmün umumîleştirilmiş hâlidir.
+
+### MELEKENİN VAZİFESİ -- SUALİ ÜRETMEK
+
+> *"Meleke bir şeye **vurulan** bir şey değil, Türkçe öğren evvelâ!
+> Hâl hem bazı melekelerin **terkibi değil yardımıyla** doğar, hem de
+> başka usullerle. Her meleke hâlin doğmasında aynı derecede müessir
+> değildir. Müessir oldukları şey şudur: **hâlin cinsini, vasfını, o
+> hâlin nasıl bina edileceğini ve neticesinde elde edilmesi gereken
+> şeyi** belirlerler. Yâni **bir nevi soruyu üretirler**."*
+
+* *"Meleke hâle vurulur"* demek **yanlıştır**. Meleke bir kapı değil,
+  hâlin doğumuna **yardım eden** bir müessirdir.
+* Meleke dört şeyi tayin eder: hâlin **cinsi** · **vasfı** · **nasıl
+  bina edileceği** · **neticesinde ne elde edilmesi gerektiği**.
+  Dördü birden bir **sual** demektir.
+* **HÂL MELEKELERİN TERKİBİ DEĞİLDİR.** Melekelerin *yardımıyla*
+  doğar; başka usullerle de doğar. Hâli melekelerin toplamına
+  indirmek ferman 1-U'nun meclisidir.
+* Melekeler hâlin doğumunda **aynı derecede müessir değildir**; hangi
+  melekenin ne kadar müessir olduğu ölçülür, elle yazılmaz (1-J).
+
+### HÂL NİÇİN AÇILIR -- DÜŞÜNME YOLUNU ÇEŞİTLENDİRMEK
+
+> *"Hâller konuşmanın **cinsini belirlemek için değil, düşünme
+> yollarını çeşitlendirmek için**. Bir tarafta Ahmet'in
+> güvenilirliğini değerlendirirken diğer yanda olayın zâhirini, diğer
+> yanda art niyetli olabilecek birinin hesabını düşünür. Başka bir
+> yanda gemide kullanılacak malzemeyi tayin eder, bir diğer yanda
+> yolcu kapasitesini büyük tutmayı düşünür ilââhir."*
+
+* Hâl bir **kip seçici değildir**: *"şimdi ARC cinsi konuşuyoruz"*
+  demek için açılmaz.
+* Hâl **aynı meseleye aynı anda birden çok yoldan bakmaktır.** Bir
+  hâlde güvenilirlik tartılırken bir başkasında zâhir, bir
+  başkasında art niyet hesabı, bir başkasında malzeme, bir
+  başkasında kapasite düşünülür -- hepsi **beraber**.
+* O hâlde hâl mizanda bir **dal** değildir (ferman 1-S: dallanma
+  yasak). Mizan hâllerin hepsinde **aynıdır**; değişen, hangi
+  suale cevap arandığıdır.
+
+### DOĞUMDA AZALAN BİR ŞEY YOKTUR
+
+> *"Hâl doğunca bir şey azalmayacak, hâl bir sorunun cevabı olacak.
+> Farklı vecihlerden düşünme kabiliyeti kazandıracak modele."*
+
+Ferman 1-I'nin kısırdöngü haddi hâl doğumuna **tatbik edilmez**:
+kısırdöngü aynı sualin aynı cevaba dönmesidir; hâl doğumu ise
+**başka bir sualdir**. Ölçü azalan bir sayı değil, **sualin
+başkalığıdır**.
+
+---
+
+## ▓▓▓ 1-Ğ. FERMAN: MUKAYESE SALT DEĞİL İTİBARÎDİR -- VECİH ▓▓▓
+
+> *"Mertebeler bir **vecih** işidir. Meselâ Ahmet ile Mehmet'i isim
+> yönünden kıyaslarsın, maaş yönünden, rütbe yönünden, takva
+> yönünden, zekâ yönünden... Peki bunlardan hangisine ne zaman
+> geçeceği `Y = [y₁ … y_m]` dizisine bakılarak nasıl anlaşılacak?
+> Bana **hangisi yetmiyorsa yenisi açılır** diyeceksin; yeterli
+> değil! Ben farklı vecihlerden düşünme işini sırf bir vecih bana
+> yetmediği için yapmıyorum!"*
+
+### ÜÇ HÜKÜM
+
+1. **SALT MUKAYESE YOKTUR.** *"Ahmet Mehmet'ten büyüktür"* eksik bir
+   önermedir: yaşça mı, ilimce mi, takvaca mı? İdrak daima bir
+   **vecih** seçerek kıyaslar.
+2. **YETERSİZLİK TEK BAŞINA SEBEP DEĞİLDİR.** *"Bu eksende varyans
+   bitti, ötekine geç"* demek klasik eniyilemedir ve yanlıştır.
+   İnsan maaş farkı dururken de takvaya geçer.
+3. **YENİ VECHİN MAHİYETİ GÖKTEN İNMEZ, DİZİDE İÇKİNDİR.** Sıçrama
+   zar atmak değildir; açılacak vechin mahiyeti `Y`den çıkarılır.
+
+### VECHİN TAYİNİ -- ÜÇ ÇEKİMİN ÇARPIMI
+
+    Vecih* = argmax over Vecih of
+                Gaye(Vecih | Dizi)
+              × Tenasüp(Vecih | Dizi)
+              × İnşikak(Vecih | A, B)
+
+    Gaye     = iz( YoğunlukMatrisi(Dizi) · Üreteç(Vecih) )
+    Tenasüp  = ortalama over k of |⟨ belirteç_k | Vecih ⟩|²
+    İnşikak  = 1 − |⟨ A^(Vecih) | B^(Vecih) ⟩|²
+
+**Çarpımdır, toplam değildir**: üçünden biri sıfırsa o vecih açılmaz.
+İnşikakı sıfır olan vecih ayrım doğurmaz (Leibniz: ayrışmazların
+ayniyeti).
+
+### VECHİN MERTEBESİ DİZİDEN OKUNUR
+
+    Mertebe* = argmax over ℓ ∈ {0,1,2,3} of Nispet(ℓ | Dizi)
+
+    ℓ=0 NOKTA     Fubini-Study varyansı ≈ 0  ve  π₁(Dizi) ≡ 0
+    ℓ=1 UZAY      ‖dDizi‖² > ε              ve  rank(metrik) ≥ 1
+    ℓ=2 KATEGORİ  iz(M_AB·M_BC·M_CA) ≠ 0    ve  Hom(A,B) ≠ Hom(B,A)
+    ℓ=3 TİP       ‖idtoeqv − Equiv‖_F ≈ 0   ve  h-mertebe ≥ 3
+
+### MERTEBE İÇİNDEKİ TÜR DE İZOLE EDİLİR
+
+    UZAY ise     Gromov δ ≈ 0 → hiperbolik · eğrilik 0 → Öklid
+                 · eğrilik > 0 → Lie/Cartan torusu
+    KATEGORİ ise tek yön → poset · şartlı → Heyting · illet → DAG
+    TİP ise      iç içe → Σ-bağımlı · döngülü → HIT · eşitlik → Univalent
+
+### KAİDE DIŞARIDAN EZBERLETİLMEZ, DİZİDEN İSTİHRAÇ EDİLİR
+
+    Metrik     g_μν(Dizi)      ← Fubini-Study / Fisher
+    Sıra       [X_a, X_b] = f_ab^c X_c   ← Lie yapı sabitleri
+               sıfırsa "bu vecihte sıra önemsiz" kaidesi doğar
+    Kompozisyon  SolKanUzantısı(Dizi)    ← ko-end integrali
+
+Bu, ferman 6'nın (elle yazılmış kâide yasak) müsbet tarafıdır:
+kâide yasaktır çünkü kâide **diziden damıtılacaktır**.
+
+### YETERSİZLİK OLMADAN VECİH DEĞİŞTİRMENİN ÜÇ YOLU
+
+1. **J-AYNASI (Tomita-Takesaki).** `J·M_v·J = M_v'`. Madde kutbu
+   kilitlenince akıl, hiçbir açık yokken, komütantı olan mana
+   kutbuna takla atar.
+2. **TENSÖREL TERKİP.** `|A^(maaş)⟩ ⊗ |A^(takva)⟩` -- *"parası çok
+   ama ameli az"*. Bu hüküm tek vechin içinde **asla** verilemez.
+3. **ÜST MERTEBE TEFEKKÜR.** Nesnelerden bağımsız olarak kavramın
+   bütün yapraklarını temâşâ (foliation).
+
+---
+
 ## ▓▓▓ 1-Ü. FERMAN: DENETÇİ DEĞİL MÜFETTİŞ -- GEREĞİNİ YAPAR ▓▓▓
 
 > *"Denetçi menetçi istemem, denetleyecekse bana burada sıkıntı var
