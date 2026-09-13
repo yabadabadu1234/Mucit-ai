@@ -46,6 +46,7 @@ class MizanAyari:
     lam_zirh: float = 0.5
     lam_kaide: float = 0.5
     lam_tasma: float = 0.5
+    lam_lif: float = 0.5
     basamak: int = 0
     meleke_olcumu: int = 1
     usul_acik: int = 1
@@ -526,6 +527,10 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     L_kat = float(kat["kayıp"])
     L_nok = float(nok["kayıp"])
 
+    from .lif import lif_kefesi
+    mns = lif_kefesi(ileri["hal"], ileri["bağlam"], cozunurluk=n_v)
+    L_lif = float(mns["kayıp"])
+
     from .kulli_kayip import (UZAYLAR, Olcum, kademeleri_kos,
                               meleke_olcumleri)
     _okumalar = ileri.get("okumalar") or {}
@@ -660,7 +665,8 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                 ("tenakuz", L_ten, float(a.lam_tenakuz)),
                 ("gedik", float(usl["borç"]), float(a.lam_cevrim)),
                 ("monogami", L_mon, float(a.lam_monogami)),
-                ("engel", L_eng, float(a.lam_engel))] + _bilesen
+                ("engel", L_eng, float(a.lam_engel)),
+                ("lif", L_lif, float(a.lam_lif))] + _bilesen
     artik = np.array([float(h) * float(l) for _ad, h, l in _bilesen],
                      float)
     ham_artik = np.array([float(h) for _ad, h, _l in _bilesen], float)
@@ -683,6 +689,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "taşma": L_tas, "taşma_dökümü": tas,
             "nokta": L_nok, "nokta_isabet": float(nok["isabet"]),
             "nokta_cins": nok.get("cins", {}),
+            "lif": L_lif, "lif_dökümü": mns,
             "kategori": L_kat, "kategori_ihlâl": int(kat["ihlâl"]),
             "kategori_deneme": int(kat["deneme"]),
             "artık": artik, "artık_adı": artik_adlari,

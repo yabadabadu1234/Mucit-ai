@@ -820,3 +820,59 @@ yazılmamış olan, borç diye bile yazılmaz.
     Ferman 2-J'nin 14 aşkın çağrısı aynı turda tercüme   Karar 22
     24 çift başlı ad, CEBRÎ ispatla terkip               Karar 29
     omega_kategori git tarihçesinden terkip              Karar 16
+
+---
+
+## İCRA ZABTI -- ADIM 1 ve ADIM 2'NİN İLK KALEMİ
+
+Padişahın emri: *"Evvela gitten çekeceklerini çek. Sonra mevcutta olan,
+çok rahatça bağlayabileceklerini bağla... Asla test ederek doğrulama,
+kod okuyarak doğrula."*
+
+### ADIM 1 -- GİTTEN ÇEKİLECEKLER (bitti)
+
+Karar 16 (`omega_kategori` terkibi) için tarihçe tarandı. Netice:
+**terkip zaten yapılmıştı**. `matematik/tip_teorisi.py` içinde
+`mertebe(X, n)` h-seviyelerini veriyor (2321'de `_pres_c`, 2402'de
+çağrılıyor), `Baglam`/`sentezle`/`denetle`/`denetle_t`/`DenetimHatasi`
+2417-2729 arasında duruyor. Çekilecek bir şey yoktu; yapılan iki iş:
+
+* `if __name__ == "__main__"` bloğu kaldırıldı (ferman 1-L), yerine
+  `tipini_ver` ve `serbest_sayisi` fiilen çağrılabilir uzuvlar kondu.
+* Dosyanın kuyruğundaki bozuk `pres(...)` yapıştırması -- tanımsız
+  `K`/`S` adlarına atıf yapıyordu -- kesildi.
+
+### ADIM 2 -- İLK KALEM: Karar 3 + Karar 12 + Karar 23
+
+`nefs/lif.py` akışa bağlandı. Usul ferman 1'in emrettiği sıradadır:
+evvelâ taht (`main/egitim.py`ye `harita_kur` ve `lif_beyani` çağrıları),
+sonra ara kat (`nefs/kulli_mizan.py`ye kefe, `nefs/olcek.py`ye pay,
+`tanilama/beyan.py`ye beyan), en son hususi (`nefs/lif.py`nin kendisi).
+
+Tafsilâtı ve niçini `SERH.md`dedir. Hulâsası:
+
+| ne | nerede |
+| :-- | :-- |
+| silsile defteri kuruluyor | `main/egitim.py:harita_kur(...)` |
+| noktalar tek kaynaktan | `nefs/munasebet.py:Harita.M` |
+| kategori ölçülüyor | `nefs/hendese.py:mertebe_sec` (klonla, ferman 1-T) |
+| uzay mertebesi | `idrak/kategori.py:uzaylari_kur` (Karar 12) |
+| `ℒ_Lif` kefesi | `nefs/kulli_mizan.py` hata vektöründe |
+| `lam_lif` ölçülüyor | `nefs/olcek.py:denge` (ferman 1-J) |
+| kopukluk sayılıyor | `Lif.kopukluk()` (ferman 1-Z) |
+| defter hazineye | `harita.hazineye()` → devam asıldır (ferman 1-Y) |
+
+### AYNI TURDA KAPATILAN KUSUR -- MÜŞTEREK HARİTA ÇÖPE GİDİYORDU
+
+`nefs/munasebet.py:Harita.hazineye()` hiçbir yerden çağrılmıyordu:
+ferman 1-I'nın *"müşterek münasebet haritası oluşacak"* hükmü fiilen
+koşmuyor, harita her turda sıfırdan kuruluyordu. `Harita.hazineden`
+yazıldı, taht yükleyip geri koyuyor, `hazineden_devam` döndürüyor.
+
+### KARARLAR 20, 32, 33 MEVZUSUZ ÇIKTI
+
+`kuantum/tda.py`, `nefs/hamiltonyen.py`, `nefs/ttkan.py`,
+`idrak/kubit.py` **depoda yoktur**. Olmayan dosya ne bağlanır ne
+kesilir; bunların sıfırdan yazılması ayrı bir karardır ve ferman 2-D
+gereği vidalanacakları menfez sorulmadan yazılmayacaktır.
+`ZABIT_TARAMASI.md`deki dört yanlış envanter satırı tashih edildi.

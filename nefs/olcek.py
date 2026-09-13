@@ -244,7 +244,10 @@ PAYLAR: Dict[str, float] = {
     "zirh": 0.07,
     "monogami": 0.05,
     "engel": 0.03,
+    "lif": 0.05,
 }
+
+PAYLAR = {k: v / sum(PAYLAR.values()) for k, v in PAYLAR.items()}
 
 
 def denge(kefeler: Dict[str, float], taban: float = 0.05,
@@ -260,7 +263,7 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
                    "nokta": "nokta", "cevrim": "çevrim",
                    "tenakuz": "tenakuz", "monogami": "monogami",
                    "engel": "engel", "kaide": "kaide_halkası",
-                   "tasma": "taşma"}
+                   "tasma": "taşma", "lif": "lif"}
         toplu: Dict[str, float] = {}
         for ad, anahtar in esle_ad.items():
             toplu[ad] = float(ham.get(anahtar, 0.0))
@@ -282,7 +285,7 @@ def denge(kefeler: Dict[str, float], taban: float = 0.05,
             "monogami": "monogami", "engel": "engel", "tip": "hodge",
             "kategori": "kategori", "nokta": "nokta",
             "meleke": "meleke", "zirh": "zırh", "kaide": "kaide_halkası",
-            "tasma": "taşma"}
+            "tasma": "taşma", "lif": "lif"}
     esik = max(float(taban) * cipa, 1e-9)
     for ad, anahtar in esle.items():
         v = abs(float(kefeler.get(anahtar, 0.0)))

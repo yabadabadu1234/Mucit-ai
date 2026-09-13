@@ -44470,3 +44470,111 @@ kesildi. Dosya 277 → 157 satır. Öteki garabetler (çift başlı
 `DeepONet`, canlı yoldaki SVD, `_dene`nin sessiz ikamesi, sabit
 eşikler, yoğun Kronecker) menfez kararı gerektirir ve ferman 2-D
 gereği sorulmadan vidalanmayacaktır.
+
+---
+
+## SİLSİLE DEFTERİ (`nefs/lif.py`) VE MÜŞTEREK HARİTANIN KALICILIĞI
+
+### NİÇİN `nefs/lif.py` ÖLÜYDÜ
+
+Dosyada `Lif` defteri, `sadakat`, `mesafe`, `ortusme`, `izdusum`,
+`kopukluk` cevherleri duruyordu fakat tek ithal edileni `kodla`ydı
+(`nefs/qegitim.py:32`). Geri kalanı yalnız `rapor()` içinde, yâni
+`if __name__ == "__main__"` altında koşuyordu -- ferman 1-L'nin
+yasakladığı yan koşu. Bir dosyanın "ölü" olması marifetsizliktendi:
+çağrısı hiç yazılmamıştı (ferman 1).
+
+### BU TURDA YAPILAN -- UMUMİDEN HUSUSİYE
+
+Sıra ferman 1'in emrettiği gibi kuruldu: evvelâ `main/egitim.py`ye
+`harita_kur(...)` ve `lif_beyani(...)` çağrıları yazıldı (fonksiyonlar
+henüz yokken), sonra `nefs/lif.py` o çağrıları karşılayacak şekilde
+yazıldı, en son `tanilama/beyan.py` beyanı bastı.
+
+`rapor()` ve `__main__` bloğu **imha edildi** (ferman 1-L): gösteri
+verisi (`r.normal(size=(12,4))`) üstünde ölçülen bir ρ, ana akışta ne
+koştuğunu söylemez.
+
+### ÇİFT BAŞLILIK -- BİR KERE KURULDU, AYNI TURDA KESİLDİ
+
+İlk yazımda `harita_kur` kendi geçiş dizeyini kuruyor ve noktalarını
+oradan üretiyordu. `nefs/munasebet.py:Harita` ise zaten bir müşterek
+münasebet haritası tutuyor ve dış döngüde örnek seçimini o sürüyor.
+İki harita, iki baş -- ferman 1-M'nin yasağı. Çare ikisini
+yaklaştırmak değil, **birini tek kaynak yapmaktı**: `Lif` artık kendi
+münasebetini hesaplamaz, `Harita.M`nin satırlarını okur ve yalnız
+**tabakalar**. O hâlde adı da düzeltildi: bu dosya bir harita değil,
+haritanın **silsile defteridir** (tip → kategori → uzay → nokta).
+
+### TABAKALARIN NEREDEN GELDİĞİ -- HİÇBİRİ UYDURULMADI
+
+    Tip       veri cinsi ("arc" / "sözlü")      ferman 1-R
+    Kategori  nefs/hendese.py:mertebe_sec ℓ*    keyfiyet nispetiyle seçilir
+    Uzay      idrak/kategori.py:uzaylari_kur    20 uzay; dinamik mertebeler
+                                                ÖLÇÜLEN bağlam boylarıdır
+    Nokta     nefs/munasebet.py:Harita.M satırı tek kaynak
+
+`uzaylari_kur` on dinamik mertebe ister; bunlar `idrak/kategori.py:
+rapor`daki gösteri sayıları (13, 17, … 60000) değil, o turda fiilen
+görülen bağlam boylarının on nicelik konumudur.
+
+### KLON -- ÖLÇÜM ASLI BOZMASIN (ferman 1-T)
+
+`mertebe_sec` modül seviyesindeki `_HENDESE` defterine yazar. Her
+örnek için çağrılınca tahtın kendi `hendese_teshisi` neticesi son
+örneğin hendesesiyle **ezilirdi** ve `hendese_beyanı` yalan söylerdi.
+Zayıf ölçüm kurmak yerine ferman 1-T'nin hükmü uygulandı: defter
+klonlanır (`hendese_beyani()`), ölçüm tam yapılır, sonra klon geri
+yüklenir (`hendese_yukle`). Aslî teşhis hiç dokunulmamış olur.
+
+### KEFE -- `ℒ_Lif`, PARAMETREYE BAĞLIDIR
+
+Kodlama sadakati (`kodla`nın mesafeleri koruması) `p`ye bağlı
+olmadığı için kefe olamazdı: kırmızı yanamayan ölçü hiçbir şey
+ölçmez (ferman 5). O hâlde kefe **modelin kendi hâli** üstünde
+ölçülür:
+
+    ℒ_Lif = 1 − ρ_Spearman( ‖Bağlam_i − Bağlam_j‖ ,
+                            −ln |⟨Hâl_i | Hâl_j⟩| )
+
+Yâni: girişte birbirine yakın olan örnekler, yazmaçta da yakın
+duruyor mu. Durum örnekleri hiç ayırmıyorsa kefe 1,0'a oturur ve
+sebebi `lif_dökümü`nde yazılır -- sessiz ikame yoktur.
+
+Çift sayısı **yazmaçtan** hudutlanır (ferman 1-M): çözünürlük
+`VeriLifi` kadar örnektir, sabit bir sayı değil. Ağırlığı `lam_lif`
+elle yazılmaz, `nefs/olcek.py:denge` içinde ölçülen pay nispetinden
+gelir (ferman 1-J); `PAYLAR` tablosu artık kendi kendini normalize
+eder, böylece yeni bir kefe eklemek eskilerin payını elle yeniden
+bölüştürmeyi gerektirmez.
+
+### KOPUKLUK ARTIK SAYILIYOR (ferman 1-Z)
+
+`Lif.kopukluk()` silsilenin uzay izdüşümünü alır ve hiçbir hücreye
+bağlanamayan hücreleri sayar. Eşik sabit değildir: ortalama örtüşme
+ile örtüşmesi olan hücrelerin oranının çarpımıdır (ferman 1-J).
+`izdusum` böylece fiilen yük taşır; kopukluk kendi gezintisini
+kurmaz (ferman 1-M).
+
+### AYRICA BULUNAN VE AYNI TURDA KAPATILAN KUSUR
+
+`nefs/munasebet.py:Harita.hazineye()` yazılmıştı fakat **hiçbir yerde
+çağrılmıyordu**. Yâni müşterek münasebet haritası her turda sıfırdan
+kuruluyor, tur bitince çöpe gidiyordu. Ferman 1-I "bir süre sonra tüm
+veriler için müşterek bir münasebet haritası oluşacak" der; oluşmuyordu.
+Bu turda:
+
+* `Harita.hazineden(agirlik, n_v, islenen)` yazıldı; ebat uymazsa
+  sessizce yeni harita kurmaz, **sıfırlamayı emreder**.
+* Taht haritayı hazineden yükleyip `munasebet_kos`a verir ve tur
+  sonunda `münasebet.M` tensörü ile `müşterek_işlenen` sayacını
+  hazineye geri koyar.
+* `main/cikarim.py:hazineden_devam` ikisini de döndürür.
+
+### HÂLÂ BAĞLANMAMIŞ OLAN -- SAYIYLA
+
+`nefs/lif.py` içinde `sadakat()` ve `Lif.ac()` hâlâ çağrılmıyor.
+`sadakat` girdi kodlamasının (`kodla`) geometriyi koruyup korumadığını
+ölçer; menfezi "hangi `kodlama` usulü seçilmeli" sualidir ve bu bir
+tertibat kararıdır -- ferman 2-D gereği sorulmadan vidalanmaz.
+Bu satır silinmeden "lif.py tamamen bağlandı" denemez.

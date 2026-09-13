@@ -140,7 +140,7 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
              Hata_kaideHalkası, Hata_taşma,
              Hata_nokta, Hata_uzay, Hata_kategori, Hata_tip,
              Hata_çevrim, Hata_tenakuz, Hata_gedik,
-             Hata_monogami, Hata_engel )
+             Hata_monogami, Hata_engel, Hata_lif )
 
 ### Bileşenler
 
@@ -158,6 +158,11 @@ Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
     Hata_gedik    = Borç(Usul, KaranlıkÇevrimler)
     Hata_monogami = enbüyük(0, Dolaşıklık(bütün) − Toplam(Dolaşıklık(ikili)))
     Hata_engel    = Engellenme(Yazmaç, SürekliÖlçüm)
+    Hata_lif      = 1 − SıraBağıntısı( Mesafe(Bağlam_i, Bağlam_j),
+                                       −ln |⟨ Hâl_i | Hâl_j ⟩| )
+                    over bütün çiftler (i<j) of Çözünürlük örnek
+                       Çözünürlük = VeriLifi                  ← yazmaçtan gelir
+                       ayrışmayan mesafe ⇒ Hata_lif = 1 (kırmızı)
 
     Eşik_taşma    = tavan(n_vocab / VeriLifi^(BasamakSayısı−1))       = 4
     Hata_taşma    = ortalama over {örnek : Makam = BasamakSayısı−1}
@@ -260,11 +265,22 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     Nispet_mantık = (1 − PariteTaşması) × (1 − BelirteçTaşması)
 
     MünasebetHaritası[a, b] += Nispet(Küme)     her a, b ∈ Bağlam(Küme)
+                     ← TEK harita, hazineden yüklenir, hazineye geri konur;
+                       turlar boyunca BİRİKİR (ferman 1-I, 1-Y)
+
+    SilsileDefteri[Tip][Kategori][Uzay] += Σ(a ∈ Bağlam) MünasebetHaritası[a, ·]
+        Tip       = "arc"  yahut  "sözlü"                    ← veri cinsi
+        Kategori  = MertebeSeç(Bağlam).ℓ*                    ← nefs/hendese.py
+        Uzay      = enyakın yuva of UzaylarıKur(Dinamik).mertebe ↔ boy(Bağlam)
+                       Dinamik = 10 ölçülen bağlam boyu       ← idrak/kategori.py
+        Kopukluk  = |{hücre : enbüyük örtüşme ≤ Eşik}| / |hücre|
+                       Eşik = ortalama(örtüşme) × oran(örtüşme > 0)   ← keyfiyet
 
     eğer değil HudutTemiz:  Küme → Kuyruğun BAŞINA,  Sabır = f(Nispet)
     eğer HudutTemiz:        İmleç ← İmleç + bayt(Küme)   → Hazine
 
-    Hazine = (Parametre, Hafıza, İmleç, ÖlçülenHız, Tur)     ← devam ASILDIR
+    Hazine = (Parametre, Hafıza, MünasebetHaritası, SilsileDefteri,
+              İmleç, ÖlçülenHız, Tur)                        ← devam ASILDIR
 
 ---
 

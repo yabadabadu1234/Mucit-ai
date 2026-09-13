@@ -56,6 +56,21 @@ class Harita:
     def hazineye(self) -> Dict[str, np.ndarray]:
         return {"münasebet.M": np.asarray(self.M, float)}
 
+    @staticmethod
+    def hazineden(agirlik: Optional[Dict[str, Any]], n_v: int,
+                  islenen: int = 0) -> "Harita":
+        M = (agirlik or {}).get("münasebet.M")
+        if M is None:
+            return Harita(n_v=int(n_v))
+        M = np.asarray(M, float)
+        assert M.shape == (int(n_v), int(n_v)), (
+            "HAZİNEDEKİ MÜŞTEREK HARİTA BU AYARA UYMUYOR: %s kayıtlı, "
+            "(%d,%d) isteniyor. Taşıyıcı tabanı değişmiş demektir; devam "
+            "etmek başka bir haritayı sürdürmek olurdu. Sıfırlayın: "
+            "``python -m main.egitim sıfırla``"
+            % (M.shape, int(n_v), int(n_v)))
+        return Harita(n_v=int(n_v), M=M, islenen=int(islenen))
+
 
 _SAYAC: Dict[str, float] = {
     "örnek": 0.0, "tur": 0.0, "temizlenen": 0.0, "kirli_kalan": 0.0,

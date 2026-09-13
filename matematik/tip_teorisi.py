@@ -3874,8 +3874,12 @@ def rapor() -> str:
     return "\n".join(s)
 
 
-if __name__ == "__main__":
-    print(rapor())
+def tipini_ver(t: Terim, g: Optional[Baglam] = None) -> Deger:
+    return sentezle(t, g if g is not None else Baglam())
+
+
+def serbest_sayisi(t: Terim) -> int:
+    return len(serbest(t))
 
 
 def _alt_terimler(t: Terim) -> List[Terim]:
@@ -3985,11 +3989,3 @@ def serbest(t: Terim) -> Set[str]:
 
 def _yuz_i_den_bagimsiz(y: Yuz, ad: str) -> bool:
     return all(a != ad for (a, _) in y)
-
-def pres(i: str, A_cizgi: Terim, T_cizgi: Terim, f_i: Terim, f_0: Terim,
-         psi_dallar: Sequence[Tuple[Yuz, Terim]], u0: Terim) -> Terim:
-    j = K.taze("j")
-    tfill = K.dolgu(i, T_cizgi, psi_dallar, u0)
-    dallar = [(y, K.uygula(f_i, govde)) for (y, govde) in psi_dallar]
-    dallar.append((S.yuz(**{j: 1}), K.uygula(f_i, tfill)))
-    return YolLam(j, K.komp(i, A_cizgi, dallar, K.uygula(f_0, u0)))

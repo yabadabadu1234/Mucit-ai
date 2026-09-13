@@ -46,7 +46,7 @@ from nefs.belirtec import (belirtec_kapisi, belirtec_sozlugu,
                            belirtec_beyani)
 from nefs.keyfiyet import (KeyfiyetAyari, keyfiyet,
                            keyfiyet_beyani)
-from nefs.munasebet import (MunasebetAyari, munasebet_kos,
+from nefs.munasebet import (Harita, MunasebetAyari, munasebet_kos,
                             munasebet_beyani)
 from main.kulliyat import (kulliyat_verisi,
                            kulliyat_dokumu, kulliyat_beyani)
@@ -57,6 +57,7 @@ from nefs.hendese import (HendeseAyari, hendese_teshisi,
 from nefs.casimir import (CasimirAyari, blok_kosegen_artigi,
                           casimir_beyani, dhr_ayrismasi,
                           gelfand_tsetlin_araya_girme, kartan_fazi)
+from nefs.lif import harita_kur, lif_beyani
 from nefs.usul import usul_beyani
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import (talim_beyani,
@@ -148,6 +149,7 @@ class EgitimAyari:
     lam_zirh: float = 0.0
     lam_kaide: float = 0.0
     lam_tasma: float = 0.0
+    lam_lif: float = 0.0
     mihenk_arasi: float = 300.0
     galois_us: int = 0
     tableau_n: int = 0
@@ -362,7 +364,8 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         lam_kategori=float(a.lam_kategori), lam_nokta=float(a.lam_nokta),
         lam_meleke=float(a.lam_meleke), lam_zirh=float(a.lam_zirh),
         lam_kaide=float(a.lam_kaide),
-        lam_tasma=float(a.lam_tasma), basamak=int(a.belirtec_basamak),
+        lam_tasma=float(a.lam_tasma), lam_lif=float(a.lam_lif),
+        basamak=int(a.belirtec_basamak),
         meleke_olcumu=int(a.meleke_olcumu),
         usul_acik=int(a.usul_acik), usul_haddi=float(a.usul_haddi),
         usul_seferi=int(a.usul_seferi),
@@ -427,7 +430,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
                   "lam_tenakuz", "lam_kategori", "lam_nokta",
                   "lam_meleke", "lam_zirh", "lam_kaide",
-                  "lam_tasma")
+                  "lam_tasma", "lam_lif")
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}
@@ -523,6 +526,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     mun = munasebet_kos(
         veri, p0, _eniyile, _olc,
         dengele=_dengele,
+        harita=Harita.hazineden(
+            {"münasebet.M": devam.get("müşterek")}
+            if devam.get("müşterek") is not None else None,
+            n_v=int(ayar.veri_lifi),
+            islenen=int(devam.get("müşterek_işlenen", 0) or 0)),
         ayar=MunasebetAyari(
             acik=1,
             obek=int(ayar.yigin()),
@@ -674,11 +682,18 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     else:
         mukayese = mukayese_beyani(None, None)
 
+    harita = harita_kur(nefs, veri, sozluk=int(ayar.sozluk),
+                        hendese=hendese, munasebet=mun["harita"],
+                        onceki=devam.get("harita"))
+
     kayit = hazine.koy(
         hazine_yolu(),
-        dict({"p": p_yildiz}, **hafiza.hazineye()),
+        dict({"p": p_yildiz}, **hafiza.hazineye(),
+             **mun["harita"].hazineye()),
         {"tur": int(devam.get("tur", 0)) + 1,
          "imleç": imlec,
+         "harita": harita.hazineye(),
+         "müşterek_işlenen": int(mun["harita"].islenen),
          "devam_etti": bool(devam.get("yüklendi")),
          "ölçülen_hız": float(
              (hizolcer_beyani() or {}).get("belirteç_sn", 0.0)),
@@ -702,6 +717,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     return {"ayar": ayar.ad, "parametre": d,
             "devam": devam, "imleç": imlec,
             "geçit": kapi, "ders": ders, "hazine": kayit,
+            "lif": lif_beyani(harita),
             "hendese": hendese, "hendese_beyanı": hendese_beyani(),
             "dhr": dhr, "casimir_beyanı": casimir_beyani(),
             "parite_lifi": int(ayar.parite_lifi),

@@ -413,6 +413,27 @@ Kararnâmenin kapanış hükmü bunu tekrar mühürlüyor:
   `ogrenme/grassmann.py`, `nefs/ikiz.py`, `nefs/ogda.py`,
   `kuantum/qsvt.py` -- zabıtın bu dokuz uzvunun kodu **yazılmıştı**;
   bugünkü depoda `grassmann` ve `morse` canlı, ötekiler yok yahut ölü.
+
+#### TASHİH -- BU CETVELDE DÖRT SATIR YANLIŞTI (kod okunarak bulundu)
+
+Aşağıdaki satırlar yoklanmadan yazılmıştı (ferman 1-K'nın ihlâli);
+dosya sistemi okunarak düzeltildi:
+
+    ogrenme/rkhs.py        VAR ve CANLI  -- ogrenme/optimize.py:17 ve
+                           nefs/musahede.py:16 ithal ediyor.
+                           "dosya yok" hükmü YANLIŞTI.
+    nefs/tabakali_mizan.py VAR ve CANLI  -- nefs/kulli_mizan.py:518,815
+                           ithal ediyor; kategori/nokta/taşma kefeleri
+                           oradan geliyor.
+    kuantum/tda.py         YOK           -- hiç yazılmamış.
+    nefs/hamiltonyen.py    YOK           -- hiç yazılmamış.
+    nefs/ttkan.py          YOK           -- hiç yazılmamış.
+    idrak/kubit.py         YOK           -- hiç yazılmamış.
+
+O hâlde `KARARLAR.md`de bu dört dosyayı "bağlanacak" yahut
+"kesilecek" diye anan kararlar (20, 32, 33 ve İCRA CETVELİ §A'nın
+`idrak/kubit.py` satırı) **mevzusuzdur**: olmayan dosya ne bağlanır
+ne kesilir. Sıfırdan yazılmaları ayrı bir karardır.
 * **Morse-Euler katî eşitliği** (`ogrenme/morse.py`) CANLI ve
   `assert` ile koşuyor -- zabıtın *"eşitsizlik kabul edilmez"*
   hükmü fiilen icrada. Bu, depodaki en sahih icralardan biridir.
@@ -552,7 +573,7 @@ olan asıldır**. Karar 24 bu kaidenin ilk tatbikidir.
 | :-- | :-- |
 | Morse-Euler katî eşitliği | **CANLI, `assert` ile** ✓ |
 | Grassmann `arctan` log haritası | **CANLI** (`ogrenme/grassmann.py`) ✓ |
-| Cholesky emniyet kilidi (`ogrenme/rkhs.py`) | dosya yok |
+| Cholesky emniyet kilidi (`ogrenme/rkhs.py`) | **dosya VAR ve canlı** (yukarıdaki tashihe bakınız) |
 | STA `H_CD` sürüşü (`ogrenme/sta.py`) | dosya yok |
 | FCT kapalı form (`ogrenme/fct.py`) | dosya yok |
 | Çift sayılar autodiff (`nefs/ikiz.py`) | dosya yok |

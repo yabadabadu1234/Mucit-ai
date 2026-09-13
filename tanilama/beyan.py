@@ -113,6 +113,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               belirtec_metni(kulli.get("belirteç") or {}), "",
               mukayese_metni(kulli.get("mukayese") or {}), "",
               munasebet_metni(kulli["münasebet"]), "",
+              str(kulli.get("lif") or ""), "",
               keyfiyet_metni(kulli["keyfiyet"]), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"
               % (kulli["külliyat"]["arc"], kulli["külliyat"]["külliyat"]),
@@ -165,6 +166,17 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % (m["engel"], m["engel_bağ"], m["engel_toplam"]),
               "        mana öbeği (Morse): %d   bağımsız kesim şahidi: %.3f"
               % (m["engel_öbek"], m["engel_şahidi"]),
+              "      ℒ_Lif (münasebet sadakati) : %.6f   × %.2f"
+              % (m["lif"], ayar.lam_lif),
+              "        1−ρ_Spearman( ‖bağlam_i−bağlam_j‖ , "
+              "−ln|⟨hal_i|hal_j⟩| ) -- %s"
+              % ("%d örnek, %d çift"
+                 % (int((m.get("lif_dökümü") or {}).get("örnek", 0)),
+                    int((m.get("lif_dökümü") or {}).get("çift", 0)))
+                 if not (m.get("lif_dökümü") or {}).get("sebep")
+                 else str((m["lif_dökümü"])["sebep"])),
+              "        durum örnekleri ayırmazsa KIRMIZI yanar "
+              "(kefe 1,0'a oturur).",
               "      ─── ferman 1-S: imha edilen iki hata "
               "fonksiyonunun cevheri ───",
               "      ℒ_Meleke kanadı (MECLİS YOK -- ferman 1-U): %.6f"

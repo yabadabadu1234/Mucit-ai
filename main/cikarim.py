@@ -33,6 +33,11 @@ def hazineden_devam(yol: str) -> Dict[str, object]:
     assert "p" in agirlik, "hazinede ``p`` tensörü yok: %r" % sorted(agirlik)
     p = np.array(agirlik["p"], dtype=float).reshape(-1)
     assert np.all(np.isfinite(p)), "hazinedeki parametrede NaN/Inf var"
+    musterek = agirlik.get("münasebet.M")
+    harita = ust.get("harita")
+    assert harita is None or isinstance(harita, dict), (
+        "hazinedeki münasebet haritası sözlük değil (%s)"
+        % type(harita).__name__)
     imlec = ust.get("imleç")
     assert imlec is None or isinstance(imlec, dict), (
         "hazinedeki imleç sözlük değil (%s) -- üst veri çözülmemiş "
@@ -40,6 +45,10 @@ def hazineden_devam(yol: str) -> Dict[str, object]:
     return {"yüklendi": True, "yol": tam, "p": p,
             "tur": int(ust.get("tur", 0) or 0),
             "imleç": imlec or None,
+            "harita": harita or None,
+            "müşterek": (None if musterek is None
+                         else np.array(musterek, dtype=float)),
+            "müşterek_işlenen": int(ust.get("müşterek_işlenen", 0) or 0),
             "V_son": ust.get("V_son"),
             "bayt": int(os.path.getsize(tam))}
 

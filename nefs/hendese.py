@@ -7,7 +7,8 @@ import numpy as np
 
 __all__ = ["HendeseAyari", "gecis_dizeyi", "karsilikli_haber",
            "gromov_delta", "mertebe_sec", "dikey_asansor",
-           "hendese_teshisi", "hendese_beyani",            "hendese_sifirla"]
+           "hendese_teshisi", "hendese_beyani", "hendese_yukle",
+           "hendese_sifirla"]
 
 
 _HENDESE: Dict[str, float] = {}
@@ -170,3 +171,8 @@ def hendese_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
 
 def hendese_beyani() -> Dict[str, float]:
     return dict(_HENDESE)
+
+
+def hendese_yukle(d: Dict[str, float]) -> None:
+    _HENDESE.clear()
+    _HENDESE.update({str(k): float(v) for k, v in dict(d).items()})

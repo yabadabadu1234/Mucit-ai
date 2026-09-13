@@ -5,7 +5,8 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["Lif", "kodla", "ortusme", "mesafe", "sadakat", "rapor",
+__all__ = ["Lif", "kodla", "ortusme", "mesafe", "sadakat",
+           "harita_kur", "lif_kefesi", "lif_beyani",
            "KIP_QUDIT", "KIP_TUTARLI", "KIP_LIE"]
 
 KIP_QUDIT = "qudit"
@@ -82,6 +83,12 @@ class Lif:
 
     defter: Dict[str, Dict[str, Dict[str, np.ndarray]]] = field(
         default_factory=dict)
+    sozluk: int = 0
+    asansor_kati: int = -1
+    uzay_mertebesi: Tuple[int, ...] = ()
+    tur: int = 0
+    doyma: float = 0.0
+    islenen: int = 0
 
     def tak(self, tip: str, kategori: str, uzay: str,
             nokta: np.ndarray) -> "Lif":
@@ -161,6 +168,59 @@ class Lif:
         return {k: np.sum(np.stack(_esitle(v)), axis=0)
                 for k, v in out.items()}
 
+    def kopukluk(self, ne: str = "uzay") -> Dict[str, Any]:
+        izd = self.izdusum(ne)
+        adres = sorted(izd)
+        nokta = [np.asarray(izd[k], float).reshape(-1) for k in adres]
+        if len(nokta) < 2:
+            return {"kopuk": 0, "hücre": len(nokta), "nispet": 0.0,
+                    "kopuk_adres": (), "sebep": "tek hücre -- münasebet yok"}
+        X = np.stack(_esitle(nokta))
+        boy = np.maximum(np.linalg.norm(X, axis=1, keepdims=True), 1e-300)
+        G = np.abs((X / boy) @ (X / boy).T)
+        np.fill_diagonal(G, 0.0)
+        komsu = G.max(axis=1)
+        esik = float(np.mean(komsu)) * float(np.mean(komsu > 0.0))
+        kopuk = [adres[i] for i in np.flatnonzero(komsu <= esik)]
+        return {"kopuk": len(kopuk), "hücre": len(adres),
+                "nispet": float(len(kopuk)) / float(len(adres)),
+                "eşik": esik, "kopuk_adres": tuple(sorted(kopuk)[:8])}
+
+    def hazineye(self) -> Dict[str, Any]:
+        return {"defter": {t: {c: {u: [float(x) for x in
+                                       np.asarray(v, float).reshape(-1)]
+                                   for u, v in us.items()}
+                               for c, us in cs.items()}
+                           for t, cs in self.defter.items()},
+                "sözlük": int(self.sozluk),
+                "asansör_katı": int(self.asansor_kati),
+                "uzay_mertebesi": [int(m) for m in self.uzay_mertebesi],
+                "tur": int(self.tur)}
+
+    @staticmethod
+    def hazineden(d: Optional[Dict[str, Any]] = None) -> "Lif":
+        d = dict(d or {})
+        L = Lif(sozluk=int(d.get("sözlük", 0)),
+                asansor_kati=int(d.get("asansör_katı", -1)),
+                uzay_mertebesi=tuple(int(m) for m in
+                                     d.get("uzay_mertebesi", ())),
+                tur=int(d.get("tur", 0)))
+        for t, cs in dict(d.get("defter") or {}).items():
+            for c, us in dict(cs).items():
+                for u, v in dict(us).items():
+                    L.tak(t, c, u, np.asarray(list(v), float))
+        return L
+
+    def birik(self, tip: str, kategori: str, uzay: str,
+             nokta: np.ndarray) -> "Lif":
+        eski = self.defter.get(str(tip), {}).get(str(kategori), {}) \
+                          .get(str(uzay))
+        yeni = np.asarray(nokta, float).reshape(-1)
+        if eski is not None:
+            a, b = _esitle([np.asarray(eski, float).reshape(-1), yeni])
+            yeni = a + b
+        return self.tak(tip, kategori, uzay, yeni)
+
     def sayim(self) -> Dict[str, int]:
         t = len(self.defter)
         c = {x for cs in self.defter.values() for x in cs}
@@ -179,62 +239,135 @@ def _esitle(vs: List[np.ndarray]) -> List[np.ndarray]:
     return [np.pad(v, (0, n - v.size)) if v.size < n else v for v in vs]
 
 
-def rapor(tohum: int = 0) -> str:
-    r = np.random.default_rng(tohum)
-    X = r.normal(size=(12, 4)) * 0.6
-    s = ["=== LİF -- zabıtların ölçüsü ===", "",
-         "  KODLAMA SADAKATİ (giriş mesafeleri ↔ kodlanmış mesafeler)",
-         "  1,0 = geometri tam korundu.",
-         "",
-         "  NE ÖLÇÜLDÜĞÜ AÇIKÇA: bu tablo GİRDİ KODLAMASINI ölçer,",
-         "  yâni 'kelime → durum' işini. ``lie-chebyshev qudit`` bu işi",
-         "  yapmak için yazılmadı: o, MODELİN KENDİ durumunu az sayıda",
-         "  katsayıdan üretir (hafıza ve hız iddiası; ölçüsü",
-         "  ``nefs/qudit.py:rapor``dadır). Buradaki ρ'su benim keyfî",
-         "  ``v → θ`` eşlememi ölçer, zabıtın kuruluşunu değil --",
-         "  onun için düşük çıkması bir nakz değildir ve öyle",
-         "  sayılmıyor. Girdi kodlaması işi ``tutarlı``nındır.",
-         "",
-         ""]
-    for ne in (KIP_LIE, KIP_TUTARLI, KIP_QUDIT):
-        try:
-            d = sadakat(X, ne=ne)
-            s.append("    %-42s ρ = %s"
-                     % (ne, ("%.4f" % d["sadakat"])
-                        if d["sadakat"] == d["sadakat"] else "TANIMSIZ"))
-        except Exception as e:
-            s.append("    %-42s DÜŞTÜ: %s" % (ne, type(e).__name__))
 
-    L = Lif()
-    L.tak("token", "sentaks", "dizim", np.arange(4.0))
-    L.tak("token", "sentaks", "bağımlılık", np.arange(4.0))
-    L.tak("token", "ontoloji", "renk", np.arange(4.0))
-    L.tak("izgara", "nedensellik", "akış", np.arange(4.0))
-    n = L.sayim()
-    s += ["", "  BAĞIMLI LİF vs KARTEZYEN KUTU (aynı muhteva)",
-          "    tip=%d kategori=%d uzay=%d" % (n["tip"], n["kategori"],
-                                              n["uzay"]),
-          "    lif hücresi   : %d" % n["lif_hücresi"],
-          "    kutu hücresi  : %d" % n["kutu_hücresi"],
-          "    boş kalacaktı : %d  (kutuda sıfırla dolardı)"
-          % n["boş_kalacaktı"], "",
-          "  TİP TEORİSİ -- Σ zinciri ve NbE (matematik/tip_teorisi.py)"]
-    dg = L.dogrula()
-    s += ["    tip terimi     : %s" % type(L.terim()).__name__,
-          "    Σ sayısı       : %d   (NbE sonrası %d)"
-          % (dg["Σ_sayısı"], dg["NbE_sonrası_Σ"]),
-          "    defterle uyuştu: %s" % ("EVET" if dg["uyuştu"] else "HAYIR"),
-          "    Unfold(kategori) → %s" % type(L.unfold("kategori")).__name__,
-          "    Unfold(nokta)    → %s" % type(L.unfold("nokta")).__name__,
-          "",
-          "  SİLSİLE: uzaya kategorisiz erişmek hata verir --"]
-    try:
-        L.ac("token", uzay="dizim")
-        s.append("    ⚠ VERMEDİ: silsile zorlanmıyor.")
-    except ValueError:
-        s.append("    ✓ verdi.")
+def _dinamik_mertebeler(boylar: Sequence[int]) -> Tuple[int, ...]:
+    b = sorted({int(x) for x in boylar})
+    assert b, "münasebet haritası için bağlam boyu BOŞ"
+    n = len(b)
+    return tuple(b[min(n - 1, (i * n) // 10)] for i in range(10))
+
+
+def _yuva_sec(mertebeler: Sequence[int], boy: int) -> int:
+    m = np.asarray(list(mertebeler), np.int64)
+    return int(np.argmin(np.abs(m - int(boy))))
+
+
+def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
+               munasebet, onceki: Optional[Dict[str, Any]] = None) -> Lif:
+    from idrak.kategori import uzaylari_kur
+    from .hendese import (HendeseAyari, hendese_beyani, hendese_yukle,
+                          mertebe_sec)
+    from .qegitim import ornek_bol
+
+    veri = list(veri)
+    assert veri, "silsile defteri BOŞ veriyle kurulamaz"
+    n_v = int(nefs.ayar.veri_lifi)
+    assert n_v >= 4, (
+        "taşıyıcı tabanı %d -- silsile defteri dörtlü kıyas yapamaz" % n_v)
+    M = np.asarray(munasebet.M, float)
+    assert M.shape == (n_v, n_v), (
+        "müşterek münasebet haritası %s, taşıyıcı tabanı %d -- tek kaynak "
+        "olmalı (ferman 1-M)" % (M.shape, n_v))
+    bolunmus = [ornek_bol(o) for o in veri]
+    uzaylar = uzaylari_kur(
+        _dinamik_mertebeler([len(b) for b, _h, _c, _m in bolunmus]))
+    mertebeler = [u.mertebe for u in uzaylar]
+    ha = HendeseAyari(azami_alfabe=n_v, tohum=int(nefs.ayar.tohum))
+
+    L = Lif.hazineden(onceki)
+    klon = hendese_beyani()
+    for bag, _hedef, cins, _makam in bolunmus:
+        dizi = [int(x) % n_v for x in bag] + [n_v - 1]
+        tip = "arc" if str(cins).startswith("arc") else "sözlü"
+        kategori = "ℓ%d" % int(mertebe_sec(dizi, ha)["ℓ*"])
+        uzay = "uzay%02d" % _yuva_sec(mertebeler, len(bag))
+        t = np.unique(np.asarray(dizi, np.int64))
+        L.birik(tip, kategori, uzay, M[t, :].sum(axis=0))
+    hendese_yukle(klon)
+    L.asansor_kati = int(hendese["asansör"]["kat"])
+    L.sozluk = int(sozluk)
+    L.uzay_mertebesi = tuple(int(m) for m in mertebeler)
+    L.doyma = float(munasebet.doyma())
+    L.islenen = int(munasebet.islenen)
+    L.tur = int(L.tur) + 1
+    return L
+
+
+def lif_kefesi(haller: Sequence[np.ndarray],
+               baglamlar: Sequence[Sequence[int]],
+               cozunurluk: int = 16) -> Dict[str, Any]:
+    n = min(len(haller), len(baglamlar))
+    if n < 3:
+        return {"kayıp": 1.0, "çift": 0, "sadakat": float("nan"),
+                "sebep": "münasebet için en az üç örnek gerekir"}
+    kac = min(n, max(3, int(cozunurluk)))
+    sec = np.linspace(0, n - 1, kac).astype(np.int64)
+    sec = np.unique(sec)
+    H = np.stack(_esitle([np.asarray(haller[i], complex).reshape(-1)
+                          for i in sec]))
+    X = np.stack(_esitle([np.asarray(baglamlar[i], float).reshape(-1)
+                          for i in sec]))
+    H = H / np.maximum(np.linalg.norm(H, axis=1, keepdims=True), 1e-300)
+    G = np.abs(H @ H.conj().T)
+    D_gom = -np.log(np.maximum(G, 1e-300))
+    kare = np.sum(X * X, axis=1)
+    D_ham = np.sqrt(np.maximum(
+        kare[:, None] + kare[None, :] - 2.0 * (X @ X.T), 0.0))
+    ust = np.triu_indices(sec.size, k=1)
+    h = D_ham[ust]
+    g = D_gom[ust]
+    if h.size < 2 or h.std() < 1e-12 or g.std() < 1e-12:
+        return {"kayıp": 1.0, "çift": int(h.size), "sadakat": float("nan"),
+                "örnek": int(sec.size),
+                "sebep": "mesafeler ayrışmıyor -- durum örnekleri ayırmıyor"}
+    sr = lambda z: np.argsort(np.argsort(z)).astype(float)
+    r_s = float(np.corrcoef(sr(h), sr(g))[0, 1])
+    return {"kayıp": float(1.0 - r_s), "sadakat": r_s,
+            "pearson": float(np.corrcoef(h, g)[0, 1]),
+            "çift": int(h.size), "örnek": int(sec.size),
+            "çözünürlük": int(cozunurluk)}
+
+
+def lif_beyani(lif: Lif) -> str:
+    n = lif.sayim()
+    k = lif.kopukluk()
+    dg = lif.dogrula()
+    s = ["=== SİLSİLE DEFTERİ -- MÜŞTEREK HARİTANIN TABAKALANMASI "
+         "(nefs/lif.py) ===", "",
+         "  TEK KAYNAK (ferman 1-M): noktalar nefs/munasebet.py:Harita.M'den"
+         " okunur;",
+         "  bu defter o haritayı tip/kategori/uzay silsilesine ayırır, "
+         "ikinci bir harita TUTMAZ.",
+         "    müşterek haritanın doyması: %.4f   işlenen örnek: %d"
+         % (lif.doyma, lif.islenen),
+         "",
+         "  silsile : nokta → uzay → kategori → tip",
+         "  tip     : %s" % ", ".join(lif.tipler()),
+         "  sözlük  : %d     asansör katı: %d     biriken tur: %d"
+         % (lif.sozluk, lif.asansor_kati, lif.tur),
+         "  uzay mertebeleri (idrak/kategori.py ile kuruldu):",
+         "    %s" % ", ".join(str(m) for m in lif.uzay_mertebesi),
+         "",
+         "  BAĞIMLI LİF vs KARTEZYEN KUTU (aynı muhteva)",
+         "    tip=%d kategori=%d uzay=%d" % (n["tip"], n["kategori"],
+                                             n["uzay"]),
+         "    lif hücresi   : %d" % n["lif_hücresi"],
+         "    kutu hücresi  : %d" % n["kutu_hücresi"],
+         "    boş kalacaktı : %d" % n["boş_kalacaktı"],
+         "",
+         "  KOPUKLUK (ferman 1-Z: kopukluk da çelişkidir)",
+         "    hücre %d, kopuk %d, nispet %.4f   (eşik %.6f -- ölçülen)"
+         % (k["hücre"], k["kopuk"], k["nispet"], float(k.get("eşik", 0.0)))]
+    if k.get("kopuk_adres"):
+        s.append("    kopuk adresler: %s" % ", ".join(k["kopuk_adres"]))
+    if k.get("sebep"):
+        s.append("    sebep: %s" % k["sebep"])
+    s += ["",
+          "  TİP TEORİSİ -- Σ zinciri ve NbE (matematik/tip_teorisi.py)",
+          "    Σ sayısı %d  (NbE sonrası %d)  defterle uyuştu: %s"
+          % (dg["Σ_sayısı"], dg["NbE_sonrası_Σ"],
+             "EVET" if dg["uyuştu"] else "HAYIR"),
+          "    Unfold(kategori) → %s   Unfold(nokta) → %s"
+          % (type(lif.unfold("kategori")).__name__,
+             type(lif.unfold("nokta")).__name__)]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())
