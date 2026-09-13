@@ -25,6 +25,15 @@ class Cevap:
     budanan: int = 0
 
 
+_OLCUM_TOHUMU: List[int] = [0]
+
+
+def _CEKILIS() -> float:
+    _OLCUM_TOHUMU[0] += 1
+    r = np.random.default_rng(_OLCUM_TOHUMU[0])
+    return float(r.random())
+
+
 def _buda(P: np.ndarray, hafiza) -> tuple:
     if hafiza is None:
         return P, 0
@@ -41,36 +50,40 @@ def _buda(P: np.ndarray, hafiza) -> tuple:
 
 
 def _sec(P: np.ndarray, ayna=None) -> int:
-    if ayna is None:
-        return int(np.argmax(P))
-    from .ayna import kivilcim
-    Q = kivilcim(P, ayna)
-    assert Q.size == P.size and np.all(np.isfinite(Q)), "kıvılcım bozuk"
-    return int(np.argmax(Q))
+    Q = np.asarray(P, float).reshape(-1)
+    if ayna is not None:
+        from .ayna import kivilcim
+        Q = np.asarray(kivilcim(Q, ayna), float).reshape(-1)
+        assert Q.size == P.size and np.all(np.isfinite(Q)), "kıvılcım bozuk"
+    Q = np.clip(Q, 0.0, None)
+    top = float(Q.sum())
+    assert top > 0.0, "ölçüm dağılımı tamamen söndü -- çökme yapılamaz"
+    return int(np.searchsorted(np.cumsum(Q / top), _CEKILIS()))
 
 
 def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,
           ayna=None, hafiza=None) -> tuple:
-    from .qegitim import adayin_tuttugu
-    bag = list(baglam)
+    from .qegitim import belirtecleri_kodla
+    pen = list(baglam)[-pencere:]
+    E = belirtecleri_kodla(pen, nefs.ayar.veri_lifi, nefs.ayar.veri_lifi)
+    q = nefs.idrak_et(E)
+    olc = q.olcumler()
+    P_dizi = np.asarray(q.dizi_beyani(int(n), int(sozluk)), float)[0]
+    assert P_dizi.shape == (int(n), int(sozluk)), (
+        "dizi beyanı %s verdi, (%d,%d) bekleniyordu"
+        % (P_dizi.shape, int(n), int(sozluk)))
     cikti: List[int] = []
     bedel = 0.0
     budanan = 0
-    sukutlar: List[float] = []
-    for _ in range(n):
-        pen = bag[-pencere:]
-        P, o = adayin_tuttugu(nefs, (), sozluk=int(sozluk), ne="koş",
-                              baglam=pen)
-        P = np.asarray(P, float).reshape(-1)
-        P = np.clip(P, 1e-12, None)
+    sukutlar: List[float] = [float(olc.get("sukut", 0.0))] * int(n)
+    for j in range(int(n)):
+        P = np.clip(P_dizi[j], 1e-12, None)
         P = P / P.sum()
-        sukutlar.append(float(o.get("sukut", 0.0)))
         P, kesik = _buda(P, hafiza)
         budanan += kesik
         t = _sec(P, ayna)
         bedel -= float(np.log(P[t]))
-        cikti.append(t)
-        bag.append(t)
+        cikti.append(int(t))
     return cikti, bedel, sukutlar, budanan
 
 

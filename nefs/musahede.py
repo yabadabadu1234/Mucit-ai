@@ -1212,13 +1212,6 @@ def qtt_parametre_sayisi(kademe: int = QTT_KADEME, chi: int = QTT_BAG,
 
 
 
-@dataclass
-
-
-
-
-
-
 def kopru(sozluk: int = 16, kubit: int = 16,
                       ne: str = "ölç"):
     def phi(x: np.ndarray) -> np.ndarray:

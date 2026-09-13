@@ -316,6 +316,9 @@ class QYazmac:
     def beyan(self, sozluk: int = 0, satir: int = 0) -> np.ndarray:
         return self.y.beyan(sozluk)
 
+    def dizi_beyani(self, n: int, sozluk: int = 0) -> np.ndarray:
+        return self.y.dizi_beyani(n, sozluk)
+
 
 MAKAM_ADLARI: Tuple[str, ...] = ("Vehim", "Şek", "Zan", "Zann-ı gālib",
                                  "Yakîn")

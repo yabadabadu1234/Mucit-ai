@@ -44955,3 +44955,72 @@ açıklıyor mu?"* `nakz_bul` ise hiçbir müşterek dönmenin açıklayamadığ
 Yâni `kaide` elle yazılmış bir ARC kâidesi **değildir**; misallerden
 **kaideyi istihraç eden cebirdir** ve ferman 1-Ğ'nin *"kâide diziden
 damıtılır"* hükmünün fiilî icrasıdır. Karar 9 ismine bakıp yanılmış.
+
+---
+
+## İKİ KODLAYICI MESELESİ -- OKUNDU, HÜKÜM ÇIKTI
+
+Padişah *"önce ne işe yaradığını oku, sonra karar"* dedi. Okundu:
+
+    nefs/zirh.py:984        q = QYazmac(4, QAyar());  q.kodla(...)
+    nefs/kulli_kayip.py:329 q = QYazmac(n, QAyar(...)); q.kodla(...)
+
+**İkisi de `QYazmac`tır** -- yâni `nefs/zihin_durumu.py`deki DOĞRU
+kodlayıcı. `QuditYazmac.kodla`yı çağıran **hiç kimse yoktur**:
+`QuditYazmac` yalnız `zihin_durumu.py:92`de `self.y` olarak kuruluyor
+ve `.y.kodla` diye bir çağrı depoda geçmiyor.
+
+O hâlde soru "hangisi kesilsin" değildi: biri zaten **tamamen
+ölüydü**. Kesildi (16 satır). Çift başlılık kalmadı, canlı yolda tek
+kodlayıcı var ve o da bağlamın her basamağını kendi seviyesine yazan
+sağlam olanı.
+
+---
+
+## SABİT NOKTA ÇÖZÜLDÜ -- DİZİ GENLİĞİNDEN ÇÖKME
+
+Padişahın hükmü: *"DİZİ genliğinden çöktür, basamaktan değil."*
+
+### YAZMAÇ ZATEN DİZİYİ TAŞIYOR -- OKUNMUYORDU
+
+`QYazmac.kodla` bağlamı şöyle yazıyor:
+
+    seviye = basamak · yer + sıra        yer = d // sözlük
+
+Yâni yazmacın indisi **(basamak, sıra)** çiftini kodluyor: her sıra
+kendi yuvasında, her basamak kendi bloğunda. Dizinin tamamı orada.
+
+Fakat `beyan(0)` onu şöyle okuyordu:
+
+    P = |ψ|².reshape(B, taban, −1).sum(axis=2)
+
+`axis=2` **sıra eksenidir**. Yâni okuma, dizinin bütün sıralarını
+toplayıp tek bir basamak kenar dağılımına indiriyordu. Sonra `_sec`
+o tek dağılımdan `argmax` alıyor ve **her adımda aynı şeyi** yapıyordu
+-- sabit noktanın mekanizması tam olarak budur.
+
+### YENİ OKUMA: `dizi_beyani(n)`
+
+    P = |ψ|².reshape(B, taban, yer)[:, :, :n]  →  (B, n, taban)
+
+Sıra ekseni **toplanmıyor, açılıyor**. Netice her sıra için ayrı bir
+dağılımdır; dizinin tamamı tek okumada çıkar. Yazmaç diziyi taşımıyorsa
+`assert` ile durur (ferman 2-M).
+
+### ÜRETİM DÖNGÜSÜ KALKTI
+
+Evvelce `_uret` **n kere ileri geçiş** yapıyordu: her adımda bağlamı
+yeniden kodla, melekeleri koştur, tek basamak seç, bağlama ekle.
+Şimdi **tek ileri geçiş** var: bağlam bir kere kodlanır, melekeler bir
+kere koşar, dizinin tamamı bir okumada çıkar. Bu hem ferman 1-N-B'nin
+harfi hem de n kat hız.
+
+### SEÇİM ARTIK ÇÖKMEDİR, argmax DEĞİL
+
+`_sec` Born kuralıyla **çöküyor**: `searchsorted(cumsum(Q), çekiliş)`.
+Ferman 1-T'nin istisnası tam burasıdır -- *"ölçüm-çökmesi yalnız
+cevabın kendisi verilirken manalıdır; orada ölçüm hakikaten hükümdür"*.
+Vakum kıvılcımı (`ayna`) dağılımı evvelce olduğu gibi kımıldatıyor,
+fakat neticesi artık `argmax` değil çöküş.
+
+Dağılım tamamen sönerse `assert` ile durur: sessiz ikame yok (ferman 5).

@@ -558,6 +558,19 @@ class QuditYazmac:
         P = p.reshape(self.B, taban, -1).sum(axis=2)
         return P / np.maximum(P.sum(axis=1, keepdims=True), 1e-300)
 
+    def dizi_beyani(self, n: int, sozluk: int = 0) -> np.ndarray:
+        taban = int(sozluk) if int(sozluk) >= 2 else int(self.ayar.lif[0])
+        assert taban == int(self.ayar.lif[0]), (
+            "dizi beyanı basamak eksenini okur: taban %d, lif[0] %d "
+            "(ferman 1-M)" % (taban, int(self.ayar.lif[0])))
+        yer = self.d // taban
+        assert int(n) >= 1 and int(n) <= yer, (
+            "dizi boyu %d, basamak başına yer %d -- yazmaç diziyi "
+            "taşımıyor (ferman 2-M)" % (int(n), yer))
+        p = (np.abs(self.psi) ** 2).reshape(self.B, taban, yer)
+        P = np.transpose(p[:, :, :int(n)], (0, 2, 1))
+        return P / np.maximum(P.sum(axis=2, keepdims=True), 1e-300)
+
     def povm(self, ad: str) -> Tuple[float, float]:
         i, j = self.sektor(ad)
         v = self.psi[:, i:j]
@@ -568,22 +581,6 @@ class QuditYazmac:
             np.sum(v[:, :yari] * v[:, yari:yari * 2].conj(), axis=1))))
         return z, x
 
-    def kodla(self, belirtecler: Sequence[int], sozluk: int = 16) -> None:
-        taban = int(self.ayar.lif[0])
-        assert int(sozluk) == taban, (
-            "kodla basamak eksenine yazar: sözlük %d, lif[0] %d -- ikisi "
-            "aynı eksen olmalı (ferman 1-M)" % (int(sozluk), taban))
-        t = np.asarray(belirtecler, int).reshape(-1) % taban
-        h = self.d // taban
-        self.psi = np.zeros((self.B, self.d), dtype=self.ayar.tip)
-        for b in range(self.B):
-            tb = t[b % t.size]
-            idx = np.arange(int(tb) * h, (int(tb) + 1) * h)
-            u = np.arange(idx.size) - (idx.size - 1) / 2.0
-            zarf = 1.0 / (1.0 + (u ** 2) / max(idx.size, 1))
-            q = sbox((np.arange(idx.size) + int(tb)) % 256) & 3
-            self.psi[b, idx] = zarf * _CEYREK[q]
-        self.normalize()
 
     def superpozisyon(self) -> None:
         self.psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
