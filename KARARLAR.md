@@ -519,3 +519,87 @@ okunuşudur. Çift başlılık böylece doğmaz (ferman 1-Z):
 `(K + λI)⁻¹` **açık matris tersi yasaktır**; `LLᵀ = K + λI`
 ayrıştırması ve iki kademeli ileri-geri ikame ile çözülür. Koşul
 sayısı `κ(K+λI)` sürekli denetlenir ve raporlanır.
+
+---
+
+## 25. AYRIK TOPOLOJİK MOTOR -- ÜÇ UZVU DA KURULUR
+
+> *"3 şık da kabul edildi!"*
+
+`tecrit.md`in **çift motorlu** mimarisinin ayrık kanadı. Kararnâme
+ile ihtilafsızdır (İkmâl Fıkrası IV Postnikov'u aynen tescil eder).
+
+1. **Postnikov k-invaryantı `[c] ∈ H^{n+1}(X; π_n(Y))`.**
+   Tenakuzun **hangi mertebeye** sıçranacağını **cebirsel adres**
+   olarak verir; kör arama yoktur. *"Gradyana gerek kalmaz;
+   kohomolojinin kendisi, ihtiyaç duyulan dinamik mertebenin
+   indisini hesaplayan bir funktöryel pusula vazifesi görür."*
+2. **Tersine kuantum tavlama** ayrık mertebe vektörünü `D*` seçer:
+   `ℋ_ayrık = Σ ‖H^{d_i}‖² + λ Σ (β₀^{(d_i)} − 1)²`.
+3. **Kalıcı homoloji barkodu → `ogrenme/morse.py`ye.**
+   `ℒ_topo = W_p(Barkod(mevcut), Barkod(hedef))` -- Wasserstein
+   metriği parçalı diferansiyellenebilirdir. İşbölümü:
+   * tamsayı Morse-Euler eşitliği → **hüküm** verir (ÇUKUR memuru),
+   * Wasserstein barkodu → **kefe** olur ve öğrenilebilir.
+4. **Tenakuz ayrık motora SİNYALDİR.** *"Sürekli dalga topolojik bir
+   yırtıkla (`H^n ≠ 0`) karşılaşırsa, bu tıkanıklık ayrık motora
+   sinyal olarak döner ve yeni bir dinamik mertebeye tünellenir."*
+   Ferman 1-I'nin üç huddu böylece pasif ölçü olmaktan çıkıp **fiil**
+   olur.
+
+**FERMAN 1-V'NİN ZEMİNİ BURADADIR.** *"Ayrık bir kategori indisinin
+(13 → 1000) **gradyanı alınamaz**."* Bazı kefelerin türevi yoktur;
+o hâlde her şeyi tek skalere indiren bir kayıp zaten **imkânsızdır**.
+
+## 26. YİRMİ UZAY VE FIRLATIM-GERİ ÇEVRİM -- ÜÇ ŞIK
+
+> *"İlk 3 şık kabul edildi!"*
+
+```
+|Ψ_Nihai⟩ = Σ_m  F_m†  ( Π_koho^(m) · Π_betti^(m) · 𝒮_m · e^{−iηH_m} )  F_m  |Ψ⟩
+             m ∈ {0..9} ∪ {d₁..d₁₀}
+```
+
+1. **`F_m` fırlatım + `F_m†` geri çevrim.** Dalga tek uzayda kalmaz:
+   20 uzaya izometrik funktörle fırlatılır, her uzayda **o uzayın**
+   Hamiltonyeni ile evrilir, sonra esas uzaya geri mühürlenir.
+   Ferman 1-U'nun aslî manası budur: melekeler tek sandalyede değil,
+   **kendi uzaylarında** çalışır.
+2. **ZIRH UZAYA MAHSUS OLUR.** Zabıt: *"Sheaf, Homotopi, Betti ve
+   Kohomoloji **haricî küresel bir şablon değildir**; her bir k'ıncı
+   uzayın kendi iç yapısına mahsus olarak işletilir."* Bugün
+   `nefs/zirh.py` tek bir global zırh koşturuyor -- ferman 1-U
+   ihlâlinin ta kendisi.
+3. **10 DİNAMİK MERTEBE HUDUTSUZDUR.**
+   `D = [13, 17, 30, 55, 1000, 58383, 19, 1009, 60000, …]`
+   Aradaki boş mertebeler **bellekte açılmaz**; Sparse Kan Extension
+   (`Lan`) ile doğrudan sıçranır. Hangi 10 mertebenin açılacağını
+   **Postnikov tıkanıklığı söyler**, elle yazılmaz (ferman 1-J).
+
+## 27. ÖZERK DÖNGÜ -- ANA DÖNGÜ VE MUTASARRIFA
+
+> *"1 ve 3. şık kabul edildi."*
+
+1. **ANA DÖNGÜ ÖZERK OLUR.**
+
+   ```
+   her turda:
+       Tenakuz  = iç çelişki serbest enerjisi (hafıza ↔ vahime ↔ illet)
+       Gaye G_t = o tenakuzu sıfırlayacak hedef durum manifoldu
+       Mutasarrıfa R_t = gayeye matuf strateji
+       Teemmül  = adım
+   ```
+
+   *"Girdi `X = ∅` olduğunda durum tensörü **sıfırlanmaz**"* --
+   veri varsa girer, yoksa **döngü yine döner**. Ferman 1-I'nin
+   *"hata sıfırlanana kadar aynı veride kalınır"* hükmü bunun tabiî
+   neticesidir.
+
+2. **MUTASARRIFA = MECZ'İN KENDİSİDİR.** `R_t = Σ α_j 𝒪_j` zabıtta
+   softmax ile yazılmıştı; ferman 1-U gereği **bu bir toplam
+   olamaz**. Mutasarrıfa, Karar 24(d)'nin beş memurunun **vazife
+   dağılımıdır**: hangi memurun o turda konuşacağını **tenakuzun
+   cinsi** tayin eder. Ayrı bir kanat açılmaz (ferman 1-Z).
+
+`nefs/gaye.py`nin canlandırılması ve üç fazla terkip için hüküm
+verilmedi.

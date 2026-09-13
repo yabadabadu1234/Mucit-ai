@@ -422,6 +422,77 @@ Kararnâmenin kapanış hükmü bunu tekrar mühürlüyor:
 
 ---
 
+## 12. `tecrit.md` (1451 satır) -- MİMARİNİN DOĞUŞ ZABITI
+
+Bu zabıt bir tarif değil, **mimarinin bizzat doğduğu müzakeredir**;
+CLAUDE.md'nin birçok fermanının aslı burada, padişahın kendi
+tashihlerinde duruyor:
+
+| Padişahın tecrit.md'deki sözü | Bugünkü ferman |
+| :-- | :-- |
+| *"H0 H1 H2 belli katsayıyla çarpılıp toplanamaz, bunların kategorisi farklıdır, **elma ile armut toplanmaz**"* | **1-U** (meclis yasağı) |
+| *"Hata payını elle tayin etmek kadar aptalca bir şey olamaz... **irtibat hiçbir zaman çöpe atılamaz**"* | **1-J** (eşik fonksiyondur) + **5** (sessiz ikame yok) |
+| *"**Meşhûd token değildir**, varlığın sonsuz halleridir"* | **1-N** / **1-M** |
+| *"Sen bu uzayın derinliğini sınırlayamazsın... dinamik olan katmanın **mertebe hududu yoktur**"* | **2-O** (pencere kısılmaz) |
+| *"O 20 katman birer **hamiltonyendir**, senin merayı uygulayacağın yer **bizzat kübitlerin kendisi**"* | Yazmaç ile meleke ayrımı |
+| *"**Nyström kuantum asgek kullanılacak, anlamaz mısın**"* | Karar 24(b) |
+
+### ÇİFT MOTORLU NİHAÎ MİMARİ (tecrit.md'nin son sözü)
+
+```
+   AYRIK TOPOLOJİK MOTOR              SÜREKLİ ALAN MOTORU
+   (kategori, mertebe, iskelet)       (ağırlık, faz, dalga)
+   1 Postnikov k-invaryantları        1 Aktif Alt Uzay  d → r
+   2 Tersine kuantum tavlama   ─ D* ─►2 Nyström Kuantum AS-GEK
+   3 Kalıcı homoloji barkodları       3 Sanal zamanlı dalga
+        ▲                                      │
+        └──── tıkanıklık H^n ≠ 0 ──────────────┘
+```
+
+* **AYRIK MOTOR, KARARNÂME İLE DE UYUMLUDUR** (İkmâl Fıkrası IV
+  Postnikov'u aynen tescil ediyor). O hâlde **ihtilafsızdır ve
+  kurulur**.
+* Sürekli motorun üç kalemi kararnâme ile ilga edilmişti; Karar 24
+  bunu çözdü (Nyström hata beyanı şartıyla kalır).
+* **AYRIK/SÜREKLİ AYRIMININ SEBEBİ:** *"Ayrık bir kategori indisinin
+  (13 → 1000) **gradyanı alınamaz**."* Bu, ferman 1-V'nin ("hata
+  vektördür, türev almıyoruz") zabıttaki temelidir: bazı kefelerin
+  türevi **yoktur**, o hâlde tek skalere inen bir kayıp zaten
+  imkânsızdır.
+* **Kalıcı homoloji barkodu** ayrık Betti sayısını sürekli kılar:
+  `ℒ_topo = W_p(Barkod(mevcut), Barkod(hedef))` -- Wasserstein
+  metriği parçalı diferansiyellenebilirdir. Depoda `ogrenme/morse.py`
+  Betti/Euler'i **tamsayı** olarak ölçüyor; barkod yok.
+
+### ZABITIN İÇİNDE İPTAL OLAN İKİ ŞEY (sonraki hükümle)
+
+1. **MERA.** tecrit.md *"kübitlerin kendisi MERA olur"* diyordu;
+   Zabıt 1 (1 Eylül 2026) **MERA'yı hacim kanunu iflası sebebiyle
+   ilga etti** ve yerine Reel Chebyshev-KAN/QTT koydu. Ferman 7 de
+   MERA/MPS/bond truncation'ı iptal listesinde sayıyor. **Üçü aynı
+   yöne bakıyor: MERA ölüdür.**
+2. **POVM / zayıf ölçüm.** tecrit.md'nin son şemasında POVM ile
+   yumuşak okuma vardı; Zabıt 1 onu *"varyans üretir"* diye ilga
+   etti, ferman 1-T ise *"klonlarsın durumu"* diye çöpe attı.
+   **Üçü mutabık: POVM ölüdür, klon asıldır.**
+
+### DEPODA OLMAYAN ÜÇ BÜYÜK YAPI
+
+1. **20 UZAY / FIRLATIM-GERİ ÇEVRİM.**
+   `|Ψ_Nihai⟩ = Σ_m F_m† (Π_koho Π_betti 𝒮_m e^{−iηH_m}) F_m |Ψ⟩`
+   -- 10 sabit (k=0..9) + 10 dinamik (d_i, hudutsuz) uzay, her
+   birinin **kendine mahsus** Hamiltonyeni ve **kendine mahsus**
+   dörtlü zırhı. Depoda tek bir yazmaç ve tek bir zırh var; uzaya
+   mahsus ayrım **yok**.
+2. **ÖZERK DÖNGÜ** (*Nefsi Müdrike Özerk Hedef ve Strateji*):
+   `Tenakuz → Gaye(G_t) → Mutasarrıfa(R_t) → Teemmül(M_t)`.
+   *"Girdi X=∅ olduğunda durum tensörü sıfırlanmaz."* Depoda tâlim
+   bir yığın döngüsüdür; uyaransız iç dinamik **yok**.
+3. **KALICI HOMOLOJİ BARKODU** -- ayrık topolojiyi sürekli kılan
+   tek köprü; **yok**.
+
+---
+
 ## TARAMANIN HÂLİ
 
 Tamamen okunan zabıtlar (11): `KUME_9_TEK_HAKIMIYET` ·
