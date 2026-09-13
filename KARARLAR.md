@@ -682,3 +682,141 @@ ayrılabilir.
 * **NİÇİN.** Bağlanmayan uzvun raporu da koşmaz -- ferman 1-C(b)'nin
   münafıklık kapısı (uzuv bağlanmadan rapor satırı yazmak) böylece
   fizikî olarak kapanır.
+
+---
+
+## 31. DÖRT KIRIK AD -- DÖRT ŞIK DA
+
+> *"4 şık da kabul edildi."*
+
+1. **`gorev_ozellikleri` KESİLİR** (ferman 1-N-C). Göreve mahsus
+   öznitelik çıkarmak ferman 6'nın yasağıdır. `kulli_kayip.py:533`
+   çağrı satırı **ve** `_dene`'nin çıplak `except`i beraber kesilir;
+   `Hal.ozellik` artık **yazmaçtan** okur (ferman 1-M).
+   *Bu, canlı yoldaki tek kırıktı: `oz` bileşeni sessizce düşüyordu.*
+2. **`tunel_maliyet_cetveli` → TÜNEL uzvu.** `KUME_8`in tahsisi:
+   *"`ayar.tunel_acik` kapısının **fiilî hesabı**; şu anda o kapı
+   tünelin bedelini bilmiyor."* Karar 28'in 7. uzvu (STA `H_CD`)
+   yazılırken beraber yazılır: WKB bedeli **ölçülür** (M20:
+   6,2×10⁸ deneme), sonra STA ile `O(1)`e indiği gösterilir.
+3. **`isaret_vur` → D=2 MPO çekirdeği.** `KUME_3`ün 7. dosyası:
+   çok-kontrollü işaret MPO'su + ancillasız `R₀ = I − 2|0…0⟩⟨0…0|`
+   yansıtması. Karar 12(2) `mizan.py`yi zırhın mantık süpürmesi
+   yaptı; `isaret_vur` o süpürmenin **çekirdeğidir**.
+4. **ON YEDİ ÇIPLAK `except` KESİLİR.** Ferman 5: *"`except` ile
+   sessiz ikame yasaktır, yerine **assert**."* Hepsi aynı turda
+   `assert`e çevrilir; boş dönen uzuv artık **kırmızı yanar**.
+
+## 32. nefs/hamiltonyen.py -- ÜÇ ŞIK DA
+
+> *"3 şık da kabul edildi."*
+
+1. **YİRMİ UZAYIN HAMİLTONYEN ÜRETECİ.** `H_m(θ) = Σ_a θ_m^a T^a` --
+   her uzayın kendi Lie cebri üreteçleri. `UzayHamiltonyeni` zaten
+   bu adı taşıyor. 10 sabit uzay simplisiyal enerji matrisi (`H_k`),
+   10 dinamik uzay yüksek mertebe Laplasyeni
+   (`H_{d_i} = Δ_{d_i} + V_bağlam`). Karar 26'nın taşıyıcısıdır.
+2. **`_cayley` → ALTUZAY uzvu.** Karar 28'in 2. uzvu Cayley rasyonel
+   çekilmesidir ve kodu burada **zaten yazılı**:
+   `R_Y(ξ) = (I − W/2)⁻¹(I + W/2)Y`. Sıfırdan yazılacak ALTUZAY onu
+   kendi içine alır.
+3. **SU(1,1) → `surekli.py` ile terkip.** Karar 6(2) `sikistirma`yı
+   SU(1,1) üreteci yaptı; `hamiltonyen.py` de SU(1,1) lif grubunu
+   taşıyor. İkisi **aynı cebirdir** ve ferman 3-B gereği **cebrî
+   olarak** indirgenip tek kaynağa iner (ölçülerek değil).
+
+## 33. kuantum/ üçlüsü -- İKİ ŞIK
+
+> *"1 ve 3 kabul edildi!"*
+
+1. **`tda.py` → DÖRTLÜ ZIRHIN MOTORU.** `KUME_3`ün attığı toprak:
+   *"Yalnız kütüphane seviyesinde kalıp **zırh akışına MPO/projektör
+   olarak bağlanmaması**."* Bundan sonra
+   `Π_betti = exp(−λΔ_Hodge)` ve `Π_koho = I − Σ|ω⟩⟨ω|`
+   fiilen `tda.py`den türer -- **her uzayda ayrı ayrı** (Karar 26/2).
+   Kahan hassas toplaması korunur.
+2. **`devre.QFT` → tayf mertebesi.** `KUME_9`: *"kuantum/devre
+   (QFT = tayf)"*. Silsilenin **nokta** mertebesi Laplace–Beltrami
+   tayf öz-durumlarıydı (Karar 12/4); QFT o tayfın taşıyıcısıdır.
+   `devre._uexp` ise Karar 29(2) ile matchgate'e gider.
+
+**KABUL EDİLMEYEN İKİ ŞIK:** `eniyileme.tayf_araligi`nın STA şartı
+olması ve `parametre_kaydirma`nın kesilmesi. İkisi de **hükümsüz
+kalır**; `kuantum/eniyileme.py` bugünkü hâlinde durur (fakat
+`tayf_araligi`nın 41 kere `eigvalsh` çağırması ferman 2-J listesine
+Karar 22 ile zaten girdi ve **aynı turda tercüme edilecektir**).
+
+## 34. FORMUL.md ve SERH.md -- KOD DEĞİŞTİKÇE GÜNCELLENİR
+
+> *"Kod değiştikçe güncellensin."*
+
+Ferman 2-K'nın harfi: `FORMUL.md`ye **ancak fiilen koşan ameliye**
+girer -- *"yazılmayan koşmaz, koşmayan yazılmaz."*
+
+**Bu otuz dört karar henüz NİYETTİR, FORMÜL DEĞİLDİR.** Şimdi bir
+"borç babı" açılmaz; her uzuv vidalandığı **turda** `FORMUL.md` ve
+`SERH.md` beraber güncellenir. Ferman 5'in *"yapılmayan yapıldı diye
+yazılmaz"* hükmü böylece en dar manasıyla tutulmuş olur:
+yazılmamış olan, borç diye bile yazılmaz.
+
+---
+
+# ▓▓▓ İCRA CETVELİ -- OTUZ DÖRT KARARIN HÜLÂSASI ▓▓▓
+
+**USUL (ferman 1, istisnasız):** evvelâ taht (`main/egitim.py`,
+`main/cikarim.py`), sonra ara kat, en son hususi. Hiçbir dosya,
+çağrısı tahta yazılmadan yazılmaz.
+
+## A. KESİLECEKLER (padişah bizzat emretti)
+
+    nefs/gor.py                     Karar 2, 5
+    musahede.kaide                  Karar 9
+    musahede.Gorev · ayir · genlige_gom   Karar 13 (ferman 1-N-C)
+    idrak/kubit.py                  Karar 20 (Tuzak A)
+    main/kaggle_egitim.py · kaggle_cikarim.py
+      · ogrenme/kaggle_donanim.py   Karar 7 (tahta katlanır)
+    ogrenme/izgara.py:artis_gradyani     Karar 15
+    kulli_kayip.py:gorev_ozellikleri     Karar 31
+    35 dosyada `if __name__ == "__main__"`  Karar 30
+    17 çıplak `except` → `assert`        Karar 31
+
+## B. MENFEZİNE VİDALANACAKLAR
+
+    kuantum/surekli.py  → belirteç kodlamasının ASLI        Karar 6
+    nefs/lif.py         → sadakat kefesi + münasebet haritası Karar 3
+    nefs/mantik.py      → 3. mantıksızlık taşması + Gray     Karar 4
+    nefs/ara.py         → NAKİL memuru + dizi araması        Karar 1
+    idrak/kategori.py   → silsilenin UZAY mertebesi          Karar 12
+    kuantum/stabilizer.py → Tableau'nun motoru               Karar 17
+    kuantum/topolojik.py  → lifler arası morfizm             (kabul)
+    nefs/hizli.py       → SEKTOR tek kaynak + Lie-Chebyshev  Karar 10
+    nefs/qudit.py       → durum üreteci + GT sızıntı huddu   Karar 17
+    kuantum/kapilar.py  → matchgate + meleke tuğla havuzu    Karar 17
+    kuantum/tda.py      → dörtlü zırhın motoru               Karar 33
+    kuantum/devre.py    → tayf mertebesi                     Karar 33
+    nefs/hamiltonyen.py → 20 uzayın Hamiltonyeni + Cayley    Karar 32
+    nefs/ttkan.py       → dizi zinciri (sıkıştırıcı DEĞİL)   Karar 20
+    matematik/ dörtlüsü → tip/mizan/fitrat/geometri          Karar 12
+    ogrenme/optimize.py → _durgunluk ÇUKUR, _yon_asgarisi    Karar 14
+    ogrenme/izgara.py   → bukulme_dizeyi adım boyu           Karar 11
+                        → sembolik_kapanis vekil türevi      Karar 15
+    idrak/veri/soyutlamalar/ → 41 899 satır sözlü çözüm verisi Karar 8
+
+## C. SIFIRDAN YAZILACAKLAR (Karar 28)
+
+    HAD · ALTUZAY · VEKİL · KODLAMA · DALGA · TÜNEL · DENGE
+    (+ BÜTÇE tamamlanır)
+
+## D. KURULACAK BÜYÜK YAPILAR
+
+    Tabakalı mizan: 4 kefe + Π_Kategori/Π_Uzay/Π_Nokta   Karar 18
+    Üç faz: Sükût · Teemmül · İfşa + soru sorma kapısı   Karar 19
+    Ayrık topolojik motor: Postnikov · tersine tavlama
+      · kalıcı homoloji barkodu                          Karar 25
+    20 uzay: F_m fırlatım + F_m† geri çevrim,
+      uzaya mahsus zırh, hudutsuz dinamik mertebe        Karar 26
+    Özerk döngü: Tenakuz → Gaye → Mutasarrıfa → Teemmül  Karar 27
+    Harita hazineye · duraklar+j fiilen kullanılır       Karar 23
+    Ferman 2-J'nin 14 aşkın çağrısı aynı turda tercüme   Karar 22
+    24 çift başlı ad, CEBRÎ ispatla terkip               Karar 29
+    omega_kategori git tarihçesinden terkip              Karar 16
