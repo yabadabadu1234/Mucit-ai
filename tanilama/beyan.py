@@ -96,6 +96,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from nefs.belirtec import belirtec_metni
         from nefs.munasebet import munasebet_metni
         from nefs.keyfiyet import keyfiyet_metni
+        from tanilama.hizolcer import hiz_metni
         from main.kulliyat import kulliyat_beyani
         kn = kulli["konuşma"]
         s += ["",
@@ -114,6 +115,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               mukayese_metni(kulli.get("mukayese") or {}), "",
               munasebet_metni(kulli["münasebet"]), "",
               str(kulli.get("lif") or ""), "",
+              hiz_metni(), "",
               keyfiyet_metni(kulli["keyfiyet"]), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"
               % (kulli["külliyat"]["arc"], kulli["külliyat"]["külliyat"]),
@@ -534,6 +536,25 @@ def cikarim_beyani(d: Dict[str, object]) -> str:
 
 
 def kaggle_beyani(profil, talim, teslimat) -> str:
-    return ("=== KAGGLE KİPİ ===\n  donanım profili: %r\n"
-            "  tâlim: %r\n  teslimat: %s"
-            % (profil, talim, getattr(teslimat, "__name__", teslimat)))
+    d = (talim or {}).get("değerlendirme") or {}
+    t = teslimat or {}
+    return "\n".join([
+        "=== KAGGLE KİPİ -- TAHTIN KENDİ KİPİ (ayrı hat YOK) ===", "",
+        "  donanım profili : %s   (ölçüldü, elle seçilmedi -- ferman 5-B)"
+        % getattr(profil, "ad", profil),
+        "  tâlim parametre : %s   V_ilk → V_son: %.4f → %.4f"
+        % ((talim or {}).get("parametre", "?"),
+           float((talim or {}).get("V_ilk", 0.0)),
+           float((talim or {}).get("V_son", 0.0))),
+        "  tâlim ölçütü    : tam çözülen %s/%s   hücre isabeti %.4f"
+        % (d.get("tam_çözülen", "?"), d.get("deneme", "?"),
+           float(d.get("ortalama_hücre_isabeti", 0.0))),
+        "",
+        "  TESLİMAT (cevabı ``padisah`` üretti, GİRDİ değil)",
+        "    görev        : %s" % t.get("görev", "?"),
+        "    konuşan      : %s        susan: %s"
+        % (t.get("konuşan", "?"), t.get("susan", "?")),
+        "    çözülemeyen  : %s   (ızgara ayrıştırılamadı = YANLIŞ CEVAP, "
+        "ferman 1-P)" % t.get("çözülemeyen", "?"),
+        "    yazılan dosya: %s  (%s bayt)"
+        % (t.get("yol", "?"), t.get("bayt", "?"))])

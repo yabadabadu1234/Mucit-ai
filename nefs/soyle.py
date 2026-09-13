@@ -79,7 +79,8 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           azami_uret: int = 0, sukut_esigi: float = 0.8,
           usul: str = "açgözlü", aday: int = 8, tohum: int = 0,
           teta=None,
-          hafiza=None, ne: str = "cevap") -> Any:
+          hafiza=None, ne: str = "cevap",
+          hedef: int = 0, sinamadan: bool = False) -> Any:
     if gorev is None:
         raise ValueError("söylemek için bir görev lâzım")
     assert manzara is None, (
@@ -105,7 +106,13 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         tik = float(ortu(gorev, ne="tıkanıklık")["H1"])
         assert np.isfinite(tik), "tıkanıklık ölçüsü sonlu değil"
 
-    dizi, hedef = gorev_dizisi(gorev, hedef_indis=0)
+    kaynak = gorev.sinama if sinamadan else gorev.egitim
+    assert 0 <= int(hedef) < len(kaynak), (
+        "%s: istenen hedef %d, fakat %s kaynağında %d örnek var"
+        % (gorev.ad, int(hedef), "sınama" if sinamadan else "eğitim",
+           len(kaynak)))
+    dizi, hedef = gorev_dizisi(gorev, hedef_indis=int(hedef),
+                               sinamadan=bool(sinamadan))
     assert len(dizi) > 0 and len(hedef) > 0, (
         "bağlam yahut hedef BOŞ döndü -- boş bir şeyle üretime girilmez")
 

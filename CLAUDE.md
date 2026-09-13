@@ -661,6 +661,58 @@ Başlangıç noktası **`main/`dır**: baş kopuksa gövde işe yaramaz.
 
 ---
 
+## ▓▓▓ 1-Ş. FERMAN: YAZMAÇTA BÖLGE YOKTUR -- ÜÇ MERTEBE SÜPERPOZİSYON ▓▓▓
+
+> *"Yazmaçta bölge mölge yok arkadaşım, yazmaç girdiye gelen token
+> dizisini Y_n'i **tip, kategori, uzay olarak üç mertebede
+> süperpozisyon hâlinde** tutan quditlerdir. Melekeler bu hâli evirip
+> çevirmek üzerine bina edilecektir."*
+
+* **YAZMAÇ BİR TAHSİSAT DEFTERİ DEĞİLDİR.** Onu "şu alan makama, şu
+  alan mizana" diye paylaştırmak yanlıştır. Yazmaç **tek bir hâldir**:
+  gelen belirteç dizisi `Y_n`, tip · kategori · uzay mertebelerinde
+  **aynı anda** süperpozisyonda durur (ferman 1-N-B'nin taşıyıcısı
+  budur: `sözlük^pencere` mertebesinde bütün diziler aynı anda).
+* **MELEKENİN VAZİFESİ OKUMAK DEĞİL, EVİRİP ÇEVİRMEKTİR.** Bir meleke
+  "kendi bölgesine" bakan bir memur değil, **hâlin tamamına** vuran
+  bir ameliyedir. "Bu melekenin bölgesi yok, o hâlde ölü" demek
+  meseleyi yanlış koymaktır; doğrusu o melekenin hâli **nasıl**
+  evirdiğini tayin etmektir.
+* **𝒪44 ASLA SİLİNMEYECEKTİR.** Ölü görünmesi bölgesizliğinden değil,
+  vazifesinin henüz tayin edilmemiş olmasındandır.
+* **BU FERMAN İLE MEVCUT KOD ÇELİŞİKTİR VE ÇELİŞKİ AÇIKÇA YAZILIDIR:**
+  `QAyar.kulli_alanlar` on bir bölge sayar (`makam`, `mizan`,
+  `tenakuz`, `tasdik`, `sukut`, `nakz`, `kelam`, `kaide`, `orak`,
+  `gaye`, `tertip`) ve `q.bolge_var` ile okunur. Bu tahsisat usulü
+  fermanın hükmüne aykırıdır; kaldırılması ayrı bir tertibattır ve
+  ferman 2-D gereği sorulacaktır. **Bu satır silinmeden "yazmaçta
+  bölge kalmadı" denemez.**
+
+---
+
+## ▓▓▓ 1-Ü. FERMAN: DENETÇİ DEĞİL MÜFETTİŞ -- GEREĞİNİ YAPAR ▓▓▓
+
+> *"Denetçi menetçi istemem, denetleyecekse bana burada sıkıntı var
+> demesi için koymadık, **hâl yoluna koyması için** koyduk. Haber
+> vermesini isteseydim istihbaratçı koyardım, müfettiş değil,
+> **müfettiş gereğini yapar!**"*
+
+* Bir ölçü kusuru bulduğunda **yalnız haber veren** her uzuv kusurlu
+  kurulmuştur. Parite alarmı yakmak, "ihlâl sayısı 7" yazmak, bayrak
+  kaldırmak -- bunlar istihbarattır, teftiş değildir.
+* **TEFTİŞ = KUSURU BULMAK + GEREĞİNİ YAPMAK.** Durum kod uzayının
+  dışına taşmışsa müfettiş onu **kod uzayına geri koyar**; kanonik
+  adres kapanmamışsa **kapatır**; tenakuz varsa **giderir**. Ancak
+  ondan sonra sayıyı yazar.
+* **SAYI YİNE YAZILIR** (ferman 5): fakat artık "kaç ihlâl vardı"
+  değil, **"kaç ihlâl düzeltildi ve kaçı düzeltilemedi"** yazılır.
+  Düzeltilemeyen kalırsa sebebi sayısıyla konur.
+* **ÖLÇÜ KIRMIZI YANABİLMESİ BUNU NAKZETMEZ:** müfettiş kapatılınca
+  kusur birikmeli ve kırmızı yanmalıdır. Kapatılınca hiçbir şey
+  değişmiyorsa o müfettiş de iş görmüyordu.
+
+---
+
 ## ▓▓▓ 1-Ö. FERMAN: BAĞLAM SUALİ TAŞIMALIDIR ▓▓▓
 
 > *"Contexti genişlet, sen 1 milyon contextlisin, bu model 512, böyle

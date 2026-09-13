@@ -150,6 +150,7 @@ class EgitimAyari:
     lam_kaide: float = 0.0
     lam_tasma: float = 0.0
     lam_lif: float = 0.0
+    lam_hiz: float = 0.0
     mihenk_arasi: float = 300.0
     galois_us: int = 0
     tableau_n: int = 0
@@ -365,6 +366,7 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         lam_meleke=float(a.lam_meleke), lam_zirh=float(a.lam_zirh),
         lam_kaide=float(a.lam_kaide),
         lam_tasma=float(a.lam_tasma), lam_lif=float(a.lam_lif),
+        lam_hiz=float(a.lam_hiz),
         basamak=int(a.belirtec_basamak),
         meleke_olcumu=int(a.meleke_olcumu),
         usul_acik=int(a.usul_acik), usul_haddi=float(a.usul_haddi),
@@ -430,7 +432,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
                   "lam_tenakuz", "lam_kategori", "lam_nokta",
                   "lam_meleke", "lam_zirh", "lam_kaide",
-                  "lam_tasma", "lam_lif")
+                  "lam_tasma", "lam_lif", "lam_hiz")
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}
@@ -463,7 +465,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     _sayac = {"çağrı": 0}
     from tanilama.hiz_teftisi import HAD as _HIZ_HADDI
     olcer = Hizolcer(belirtec_basina=len(veri) * int(ayar.pencere),
-                     had=float(_HIZ_HADDI), ad="küllî mizan",
+                     had=float(_HIZ_HADDI), ad="küllî mizan", sert=True,
                      canli_saniye=float(ayar.canli_saniye))
     hizolcer_bagla(olcer)
 
@@ -801,18 +803,35 @@ KIPLER: Tuple[str, ...] = ("tâlim", "sıfırla", "mizan", "sabit",
                            "kaggle", "veri")
 
 
+def profil_sec() -> EgitimAyari:
+    from nefs.donanim import gpu_var_mi
+    g = gpu_var_mi()
+    if not g.get("var"):
+        return DAR
+    kart = list(g.get("cihaz") or ())
+    vram = 0.0
+    for satir in kart:
+        for parca in str(satir).split(","):
+            p = parca.strip()
+            if p.lower().endswith("mib"):
+                vram += float(p[:-3].strip()) / 1024.0
+    if len(kart) >= 2 and vram >= 40.0:
+        return AZAMI
+    return ORTA
+
+
 def taht(ne: str = "tâlim", *arg: str) -> str:
     ne = str(ne)
     if ne == "sıfırla":
         return sifir_beyani(hazine_sifirla())
     if ne == "kaggle":
-        from main.kaggle_egitim import kaggle_talimini_baslat
-        from main.kaggle_cikarim import kaggle_teslimat_dosyasi_uret
-        from ogrenme.kaggle_donanim import ayar_sec
-        veri = arg[0] if arg else "/kaggle/input"
-        prof = ayar_sec()
-        t = kaggle_talimini_baslat(veri)
-        return kaggle_beyani(prof, t, kaggle_teslimat_dosyasi_uret)
+        from main.cikarim import teslimat_uret
+        test = (arg[0] if arg else
+                "/kaggle/input/arc-prize-2026/arc-agi_test_challenges.json")
+        cikti = arg[1] if len(arg) > 1 else "/kaggle/working/submission.json"
+        prof = profil_sec()
+        return kaggle_beyani(prof, kulli_kayip_talimi(prof),
+                             teslimat_uret(test, cikti, ayar=prof))
     if ne == "sabit":
         from tanilama.sabit_teftisi import rapor as sabit_raporu
         return sabit_raporu(*(arg[:1] or ()))

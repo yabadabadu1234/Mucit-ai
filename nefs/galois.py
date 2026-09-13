@@ -276,6 +276,24 @@ class Tableau:
         self.genlik = sbox(ara, self.us)
         self.adim += 1
 
+    def teftis(self, denetim) -> Dict[str, int]:
+        D = np.asarray(denetim, np.uint64).reshape(1, -1)
+        assert D.shape[1] == self.kelime, (
+            "denetim maskesi %d kelime olmalı, %d verildi"
+            % (self.kelime, D.shape[1]))
+        ihlal = self.Z & D
+        yanan = np.flatnonzero(np.any(ihlal != 0, axis=1))
+        if yanan.size:
+            self.Z ^= ihlal
+            self.faz[yanan] = np.uint8(0)
+            self.genlik = sbox(self.genlik, self.us)
+            self.adim += 1
+        kalan = int(np.count_nonzero(np.any((self.Z & D) != 0, axis=1)))
+        return {"yanan": int(yanan.size), "kalan": kalan,
+                "düzeltilen": int(yanan.size) - kalan,
+                "satır": self.n, "nispet": float(yanan.size) / float(self.n),
+                "ihlâl_eden": tuple(int(i) for i in yanan[:8])}
+
     def beyan(self) -> Dict[str, Any]:
         bayt = int(self.X.nbytes + self.Z.nbytes + self.faz.nbytes
                    + self.genlik.nbytes)

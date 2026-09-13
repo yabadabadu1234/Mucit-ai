@@ -5,7 +5,7 @@ from contextlib import contextmanager
 from typing import Any, Dict, List, Optional
 
 __all__ = ["Hizolcer", "hizolcer_bagla", "hizolcer_al", "hizolcer_beyani",
-           "hizolcer_coz"]
+           "hizolcer_coz", "hiz_asimi", "hiz_metni"]
 
 _BAGLI: Optional["Hizolcer"] = None
 
@@ -40,11 +40,14 @@ class Hizolcer:
             self.belirtec.append(int(belirtec) if belirtec > 0
                                  else int(self.belirtec_basina))
             self._canli()
-            if self.sert and self.had is not None:
-                h = self.belirtec[-1] / max(self.sure[-1], 1e-12)
-                assert h >= self.had, (
-                    "HIZ HADDİ TUTMADI (%s): %.0f < %.0f belirteç/sn"
-                    % (self.ad, h, self.had))
+            if self.sert:
+                t = self.tavan()
+                assert not t["aşıldı"], (
+                    "HIZ TAVANI AŞILDI (%s): had %.0f belirteç/sn, ölçülen "
+                    "%.0f -- %.1f kat eksik. Hat kendi ısınmasını (%.2f×) "
+                    "tamamladığı hâlde açığı kapatamıyor; devam etmek "
+                    "padişahın saatine mal olur (ferman 2-G)."
+                    % (self.ad, t["had"], t["hız"], t["kat"], t["ısınma"]))
 
     def _canli(self) -> None:
         if self.canli_saniye <= 0.0:
@@ -65,6 +68,24 @@ class Hizolcer:
               % (t - self.baslangic, len(self.sure), bel, bel / sn,
                  m["temizlenen"], m["kirli_kalan"], m.get("geri_dönen", 0),
                  k["en_iyi"], k["ortalama"]), flush=True)
+
+    def asim(self) -> float:
+        b = self.beyan()
+        if self.had is None or int(b["çağrı"]) == 0:
+            return 0.0
+        return max(0.0, 1.0 - float(b["belirteç_sn"]) / float(self.had))
+
+    def tavan(self) -> Dict[str, Any]:
+        b = self.beyan()
+        hiz = float(b.get("belirteç_sn", 0.0))
+        if self.had is None or int(b["çağrı"]) < 2 or hiz <= 0.0:
+            return {"aşıldı": False, "kat": 0.0, "ısınma": 0.0,
+                    "hız": hiz, "had": float(self.had or 0.0),
+                    "sebep": "tavan için en az iki saatlenmiş çağrı gerekir"}
+        kat = float(self.had) / hiz
+        isinma = max(float(b.get("ısınma", 1.0)), 1.0)
+        return {"aşıldı": bool(kat > isinma), "kat": kat, "ısınma": isinma,
+                "hız": hiz, "had": float(self.had)}
 
     def ekle(self, sn: float) -> None:
         self.sure.append(float(sn))
@@ -127,31 +148,23 @@ def hizolcer_beyani() -> Dict[str, Any]:
     return _BAGLI.beyan()
 
 
-def rapor() -> str:
-    o = Hizolcer(belirtec_basina=1000, had=5000.0, ad="sınama")
-    for sn in (0.5, 0.25, 0.2, 0.1):
-        o.ekle(sn)
-    b = o.beyan()
-    bos = Hizolcer(belirtec_basina=1, ad="boş").beyan()
+def hiz_asimi() -> float:
+    return 0.0 if _BAGLI is None else float(_BAGLI.asim())
+
+
+def hiz_metni() -> str:
+    if _BAGLI is None:
+        return "  HIZ: hızölçer bağlı değil -- ölçü hiçbir şey ölçmüyor."
+    b = _BAGLI.beyan()
+    t = _BAGLI.tavan()
     return "\n".join([
-        "=== HIZÖLÇER ===", "",
-        "  bilinen sürelerle sınama: 0,5 / 0,25 / 0,2 / 0,1 sn",
-        "    çağrı %d  toplam %.2f sn  belirteç %d"
-        % (b["çağrı"], b["toplam_sn"], b["belirteç"]),
-        "    ortalama %.0f  (beklenen 4000/1,05 = %.0f)"
-        % (b["belirteç_sn"], 4000 / 1.05),
-        "    en iyi %.0f (beklenen 10000)   en kötü %.0f (beklenen 2000)"
-        % (b["en_iyi"], b["en_kötü"]),
-        "    ilk %.0f → son %.0f   ısınma %.2f×  (beklenen 5,00)"
-        % (b["ilk"], b["son"], b["ısınma"]),
-        "    had 5000 → %s" % b["hüküm"],
-        "",
-        "  ÖLÇÜ KIRMIZI YANABİLİR:",
-        "    hiç çağrı yoksa: %r" % bos["hüküm"],
-        "    bağlı değilse  : %r" % hizolcer_beyani()["hüküm"],
-        "    (ikisi de sıfır DÖNDÜRMÜYOR; 'ölçülmedi' diyor)",
-    ])
-
-
-if __name__ == "__main__":
-    print(rapor())
+        "  HIZ HADDİ (ferman 5: kırmızı yanabilir)",
+        "    ölçülen %.0f belirteç/sn   had %.0f   hüküm: %s"
+        % (b["belirteç_sn"], b["had"], b["hüküm"]),
+        "    aşım kefesi : %.6f   (0 = had tutuyor)" % _BAGLI.asim(),
+        "    tavan       : %s   (%.1f kat eksik, ısınma %.2f×)"
+        % ("AŞILDI" if t["aşıldı"] else "aşılmadı",
+           t.get("kat", 0.0), t.get("ısınma", 0.0)),
+        "    tavan SABİT DEĞİL (ferman 1-J): hattın kendi ısınma nispeti.",
+        "    Aşım kefesi p'ye zayıf bağlıdır; payı ölçülünce sıfıra yakın",
+        "    çıkarsa bu bir kusur değil, ferman 1-S'nin beklediği neticedir."])

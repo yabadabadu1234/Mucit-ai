@@ -19,7 +19,8 @@ from nefs.suphe import suphe_beyani
 from tanilama.beyan import cikarim_beyani
 
 __all__ = ["padisah", "degerlendirme_kosusu", "hazineden_yukle",
-           "hafizayi_yukle", "hazineden_devam", "devam_agirligi", "kos"]
+           "hafizayi_yukle", "hazineden_devam", "devam_agirligi", "kos",
+           "test_gorevleri", "teslimat_uret"]
 
 
 def hazineden_devam(yol: str) -> Dict[str, object]:
@@ -125,7 +126,9 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
     if ayar is None:
         from main.egitim import KISA_CPU
         ayar = KISA_CPU
-    c = soyle(gorev, nefs=nefs, sozluk=int(ayar.sozluk), hafiza=hafiza)
+    c = soyle(gorev, nefs=nefs, sozluk=int(ayar.sozluk), hafiza=hafiza,
+              hedef=int(kw.pop("hedef", 0)),
+              sinamadan=bool(kw.pop("sinamadan", False)))
     return {"görev": getattr(gorev, "ad", ""),
             "sükût": bool(c.sukut),
             "sebep": c.sebep,
@@ -174,6 +177,67 @@ def degerlendirme_kosusu(kume: str = "training", azami: int = 24,
             "ortalama_hücre_isabeti":
                 float(np.mean(hucre)) if hucre else 0.0,
             "süre_sn": time.perf_counter() - t0}
+
+
+def test_gorevleri(yol: str):
+    import json
+    from nefs.musahede import Gorev
+    assert os.path.isfile(yol), (
+        "TESLİMAT TEST DOSYASI YOK: %s\n  Sentetik görev uydurup teslimat "
+        "diye yazmak ferman 5'in yasakladığı sessiz ikamedir." % yol)
+    with open(yol, encoding="utf-8") as f:
+        ham = json.load(f)
+    assert ham, "test dosyası BOŞ: %s" % yol
+
+    def cift(d):
+        gi = np.asarray(d["input"], dtype=np.int64)
+        co = np.asarray(d.get("output", d["input"]), dtype=np.int64)
+        return gi, co
+
+    return [Gorev(str(gid),
+                  [cift(c) for c in (g.get("train") or [])],
+                  [cift(c) for c in (g.get("test") or [])],
+                  os.path.basename(yol))
+            for gid, g in ham.items()]
+
+
+def teslimat_uret(test_yolu: str, cikti_yolu: str,
+                  ayar=None) -> Dict[str, object]:
+    import json
+    from nefs.belirtec import coz, tipten
+    from nefs.musahede import metin_izgara
+    nefs, a, yuk, hafiza = _motor(ayar)
+    gorevler = test_gorevleri(test_yolu)
+    teslimat: Dict[str, List[Dict[str, List[List[int]]]]] = {}
+    konusan = susan = cozulemeyen = 0
+    for g in gorevler:
+        satir: List[Dict[str, List[List[int]]]] = []
+        for k in range(max(1, len(g.sinama))):
+            r = padisah(g, nefs=nefs, ayar=a, hafiza=hafiza,
+                        hedef=k, sinamadan=True)
+            izg = None
+            if r["sükût"]:
+                susan += 1
+            else:
+                konusan += 1
+                kimlik = tipten(r["belirteç"], int(a.veri_lifi),
+                                int(a.belirtec_basamak))
+                izg = metin_izgara(coz([int(x) % int(a.sozluk)
+                                        for x in kimlik]))
+            if izg is None:
+                cozulemeyen += 1
+                izg = np.zeros((1, 1), dtype=np.int64)
+            cevap = np.asarray(izg, np.int64).tolist()
+            satir.append({"attempt_1": cevap, "attempt_2": cevap})
+        teslimat[g.ad] = satir
+    dizin = os.path.dirname(os.path.abspath(cikti_yolu))
+    if dizin:
+        os.makedirs(dizin, exist_ok=True)
+    with open(cikti_yolu, "w", encoding="utf-8") as f:
+        json.dump(teslimat, f)
+    return {"görev": len(gorevler), "konuşan": konusan, "susan": susan,
+            "çözülemeyen": cozulemeyen, "yol": cikti_yolu,
+            "hazine": yuk, "bayt": os.path.getsize(cikti_yolu)}
 
 
 def kos(kume: str = "training", azami: int = 24,
