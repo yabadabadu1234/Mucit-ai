@@ -294,6 +294,74 @@ yeniden yazılır. Bu ayrı bir suâldir ve **soruldu**.
 
 ---
 
+## 10. `optimizasyon.md` -- ENİYİLEYİCİNİN TAM MİMARİSİ, DEPODA YOK
+
+Bu zabıt bir mütalaa değil, **padişahın bizzat kurguladığı eniyileme
+mimarisidir** ve dört katmanı var. Depoda **hiçbiri** yok.
+
+```
+[ d boyutlu mesele ]
+        │
+        ▼  1. AKTİF ALT UZAY (Active Subspaces)
+   C = (1/N) Σ ∇f ∇fᵀ  →  özayrışım  →  W₁ ∈ ℝ^{d×r},  r = 2-3
+        │                    ("gradyanın bizzat kendisi en çok
+        │                      değişimin olduğu doğrultuları
+        │                      ANALİTİK olarak verir")
+        ▼  2. HEDEF SIZDIRILMIŞ VEKİL YÜZEY
+   V_toplam(u) = V_GEK(u) + λ‖𝒢(u) − y_hedef‖²
+        │        (Nyström ile düşük ranklı kuantum çekirdeği)
+        ▼  3. BİZZAT DALGA YAYILIMI -- sanal zaman
+   ∂ψ/∂τ = ∇²ψ − V_toplam·ψ
+   ψ(u,τ) = Σ c_n e^{−E_n τ} φ_n(u)
+        │   sahte çukurlar ÜSTEL olarak siliner; geriye taban durumu kalır
+        ▼  4. TERS İZDÜŞÜM
+   x* = W₁ u*
+```
+
+### PADİŞAHIN KENDİ TASHİHLERİ (zabıtın içinde)
+
+> *"O zaman sezgim bana şunu söyler ki **yayla bağlı boncuklar
+> kullanacağına dalga gönder**."*
+> *"Tabloda yaylı bilyelerle değil **bizzat bir dalgayla** yapılan
+> kuantum tünellemeyi unutmuşsun. Ayrıca bence bu dalgayla yapılan
+> şey artık **kuantum tünellemeden farklı bir şey**."*
+
+Ve cevabı: dalga yayılımı tünelleme değil, **spektral süzme +
+rezonanstır** -- `e^{−E_n τ}` çarpanı sahte çukurları buharlaştırır,
+yıkıcı girişim onları sıfırlar, yapıcı girişim küresel çukurda tek
+tepe kurar. *"Yaylı boncuklar sadece dalgayı taklit eden fakir bir
+yaklaşımdı."*
+
+### BUNUN FERMAN 2-P İLE MÜNASEBETİ
+
+Ferman 2-P *"kör yön araması ilga, tek seferde analitik çözüm, o
+analitiğin kuantum hız imkânından faydalanması"* diyor. **İşte o
+analitik ve o kuantum hızı budur:** dalga bütün uzayı aynı anda
+kaplar (yön tek tek aranmaz), sanal zaman sönümlemesi hükmü verir.
+Ferman 2-P'nin beş memuriyeti bu mimarinin içinde zaten vardır:
+
+    EĞİM   → Aktif Alt Uzay (gradyandan W₁)
+    ÇUKUR  → e^{−E_n τ} spektral sönümlemesi
+    DUVAR  → λ‖𝒢(u) − y_hedef‖² hedef sızdırma cezası
+    VADİ   → ∇²ψ difüzyonu (bariyerin içinden sızar)
+    NAKİL  → tersine tavlama, aday çukurun etrafında
+
+### DEPODAKİ HÂLİ -- HİÇBİRİ YOK
+
+* Aktif Alt Uzay: **yok**. (`ogrenme/optimize.py` 316 ekseni tek tek
+  tarıyordu; `C = Σ∇f∇fᵀ` kurulmuş değil.)
+* Hedef sızdırma `λ‖𝒢(u) − y_hedef‖²`: **yok**.
+* Nyström kuantum çekirdeği: **yok**. (`cekirdek_sirt`/`rbf_gram`
+  `yaklasim/genisletme`de kalmış, KUME_8 onları `kulli_kayip`a
+  tahsis etmiş, o da olmamış.)
+* Sanal zaman dalga denklemi: **yok**.
+* `sembolik_kapanis`in hakiki vazifesi burada görünüyor: *"o ana
+  kadar denenmiş noktaların oluşturduğu fonksiyona göre tahmin
+  edilen en iyi fonksiyonun türevine analitik olarak gitmek"* --
+  yâni **2. katmanın vekil yüzeyi ve onun analitik türevi**.
+
+---
+
 ## TARAMANIN HÂLİ
 
 Tamamen okunan zabıtlar (11): `KUME_9_TEK_HAKIMIYET` ·

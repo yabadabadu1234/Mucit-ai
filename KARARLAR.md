@@ -279,3 +279,160 @@ git tarihçesinden çıkarılıp karşılaştırılır; NbE'de olmayan cevher
 (geometri, ilişkiler, kütüphane, denklik, türetimler) doğrudan
 `matematik/tip_teorisi.py`ye terkip edilir. **Ara depo yok, doğrudan
 menfezine.** (`KUME_9/MERHALE E` böylece kapanır.)
+
+## 17. nefs/qudit.py + kuantum/kapilar.py -- DÖRT ŞIKKIN DÖRDÜ DE
+
+1. **`qudit.durum` + `hizli.cekirdek` terkibi.** Lie-Chebyshev
+   üretecinin iki icrası tek kaynağa iner ve **canlı yola** konur:
+   durum genliği bellekte açık dizi olarak tutulmaz, `Φ_k` ile
+   üretilir (ferman 1-M).
+2. **Gelfand-Tsetlin → sızıntı hududu.** Zabıt: *"GT interlacing
+   `m_{i,j+1} ≥ m_{i,j} ≥ m_{i+1,j+1}` gereğince üst kategoriden alt
+   uzaya meşru olmayan bütün kuantum sızıntıları cebirsel kısıtla
+   **zaten sıfırdır**."* Bu, ferman 1-I'nin mantıksızlık huddunun
+   **DÖRDÜNCÜ taşmasıdır**: mertebeler arası sızıntı.
+   (Ferman 2-L böylece ikiden dörde çıkar: parite · belirteç ·
+   makam mertebesi · GT sızıntısı.)
+3. **`dik_iki_kubit` → matchgate.** Ferman 2-J'nin **en sıcak**
+   aşkın satırı kapanır: `eigh` + `np.exp(−iλ)` dizey üsteli yerine
+   `nefs/matchgate.py`nin Majorana kovaryansında SO(2N) Givens
+   dönmesi (`χ_stab = 1`, ferman 7-A(1)).
+4. **90 ölü kapı → meleke tuğla havuzu.** Her meleke elle seçilmiş
+   değil, **kendi vazifesine denk düşen** kapıyı havuzdan alır.
+
+## 18. TABAKALI MİZAN -- ÜÇ ŞIKKIN ÜÇÜ DE
+
+> *"3. şıkkı kesin kabul ettim, ilk ikisinin çelişmediğini
+> zannettiğim için hepsi kabul edildi diyorum."*
+
+Üçü çelişmiyor; üçü **tek terkiptir**:
+
+    Π_Kategori, Π_Uzay, Π_Nokta  ──►  her mertebeye izdüşür
+                                          │
+              ┌───────────────┬───────────┴───┬───────────────┐
+              ▼               ▼               ▼               ▼
+          ℒ_nokta         ℒ_uzay        ℒ_kategori         ℒ_tip
+        (Born izi)   (Fubini-Study)    (funktör)        (Hodge)
+          AYRI KEFE     AYRI KEFE       AYRI KEFE       AYRI KEFE
+
+* **Dört mertebe dört ayrı kefedir** (ferman 1-U: meclis yok).
+  `α, β, γ` elle yazılmaz, rezonanstan ölçülür (ferman 1-J).
+* **`ℒ_kategori` yeni gelen cevherdir:**
+  `‖M_{g∘f} − M_g·M_f‖_F²`. Zabıt: *"bu kayıp **dışarıdan bir etiket
+  istemez**; sistemin kendi iç mantığının kendi kendini
+  denetlemesidir."* Veri gerektirmeyen saf iç kefedir.
+* **Üç izdüşüm operatörü kurulur** (`Π_Kategori`, `Π_Uzay`,
+  `Π_Nokta`) -- depoda hiçbiri yoktu. Her kefe kendi mertebesine
+  izdüşürülmüş durumdan ölçülür; zabıtın *"dalga kimi zaman
+  uzaylarına, kimi zaman kategorilerine, kimi zaman noktalarına
+  **ayrışacak**"* hükmü budur.
+
+## 19. nefs/soyle.py -- ÜÇ FAZ, ÜÇÜ DE
+
+1. **Üç faz kurulur:** Sükût · Teemmül · İfşa. Tâlimde ve çıkarımda
+   aynı motor (ferman 1-H). Eşikler sabit değil, **topolojik
+   invaryanttan** türer (ferman 1-J'nin zabıttaki aslı). Mihenk
+   suali (ferman 2-F) artık *"cevap verdi mi"* değil **"hangi
+   fazdaydı"** diye de okunur.
+2. **İfşa-2: SORU SORMA kapısı.** *"Model sonsuz loop'a girmez;
+   dışarıya soru sorar: 'kendi iç hafızam ve melekelerimle bu
+   tenakuzu çözemiyorum, şu parametre lâzım'."* Ferman 1-I'nin
+   kısırdöngü huddunun **çıkış kapısıdır**.
+3. **Gevezelik kilidi:**
+   `α_kelam(t+1) = α_kelam(t)·exp(−γ[λH(N) − I(N;G)])`.
+   Üretilen kelime gayeye katkı vermiyorsa konuşma katsayısı
+   cebirsel olarak söner. Belirteç taşması kefesinin kardeşidir.
+
+## 20. nefs/ttkan.py + idrak/kubit.py
+
+> *"3. şık hariç hepsi kabul edildi!"*
+
+1. **`ttkan` → dizi zinciri.** *Qudite Tip Tensörü Zincirinin
+   Kodlanması*: *"Tek token hesabı **lağvedilmiştir**; bütün dizi,
+   sanal bağlarla (D) kenetlenmiş bir **Tip Tensörü Zinciri**
+   hâlinde tek dalga olarak süperpoze edilir."* Ferman 1-N-B'nin
+   (tek belirteç tahmin edilmez) taşıyıcısı budur.
+2. **`ttkan` bir sıkıştırıcı DEĞİLDİR.** Ferman 7 *"SVD/MPS/bond
+   truncation İPTAL, durum TAM tutulur"* diyor. Sanal bağ `D`
+   belirteçler arası **funktör / Kan uzantısını** taşır; budama yok,
+   **bağlantı** var. (`tt_ayristir`in kesme kolu bu sebeple kapanır.)
+3. **`idrak/kubit.py` → KESİLİR.** Zabıt onu açıkça **Tuzak A**
+   (düz ikili taban kodlaması, Hamming felaketi) ilan ediyor ve
+   ferman 7 *"İkili kübit kodlaması → Qudit seviye kodlaması"* diye
+   iptal etmiş. **Bütçe kipi olarak dahi kalmaz** (`KUME_9/C1`in
+   *"ikili dal bütçe kipi olarak kalsın"* teklifi **reddedildi**).
+
+## 21. ENİYİLEYİCİ -- `optimizasyon.md`NİN DÖRT KATMANI KURULUR
+
+> *"İlk 3 şık kabul edildi!"*
+
+Ferman 2-P'nin *"tek seferde analitik çözüm, o analitiğin kuantum hız
+imkânından faydalanması"* hükmünün **aslî icrası** budur.
+
+```
+[ d boyutlu mesele ]
+        │
+        ▼  1. AKTİF ALT UZAY
+   C = (1/N) Σ ∇f ∇fᵀ  →  özayrışım  →  W₁ ∈ ℝ^{d×r}
+        │
+        ▼  2. HEDEF SIZDIRILMIŞ VEKİL YÜZEY
+   V_toplam(u) = V_GEK(u) + λ‖𝒢(u) − y_hedef‖²
+        │        (Nyström ile düşük ranklı kuantum çekirdeği)
+        ▼  3. BİZZAT DALGA YAYILIMI -- sanal zaman
+   ∂ψ/∂τ = ∇²ψ − V_toplam·ψ ,   ψ = Σ c_n e^{−E_n τ} φ_n
+        │
+        ▼  4. TERS İZDÜŞÜM        x* = W₁ u*
+```
+
+* **MECZ'İN BEŞ MEMURU BU MİMARİNİN İÇİNDEDİR:**
+  EĞİM = `W₁` · ÇUKUR = `e^{−E_n τ}` sönümlemesi · DUVAR = hedef
+  cezası · VADİ = `∇²ψ` difüzyonu · NAKİL = tersine tavlama.
+* **HEDEF SIZDIRMA = MİZANIN KENDİSİ.** Zabıtın `𝒢(u)` hedef kuralı
+  bizde zaten var: **mizanın kefe vektörü**. `λ‖𝒢(u) − y_hedef‖²`
+  terimine üç hudut girer (tenakuz / kısırdöngü / mantıksızlık);
+  potansiyel yüzeyi böylece "kör kayıp" değil **keyfiyet** olur
+  (ferman 1-J).
+* **DALGA TÜNELLEME DEĞİL, SPEKTRAL SÜZMEDİR.**
+  > *"Bu dalgayla yapılan şey artık kuantum tünellemeden farklı bir
+  > şey."*
+  `e^{−E_n τ}` sahte çukurları buharlaştırır; yıkıcı girişim onları
+  sıfırlar, yapıcı girişim küresel çukurda tek tepe kurar.
+  **Yay/boncuk (SQA) kullanılmaz** -- *"yaylı boncuklar sadece
+  dalgayı taklit eden fakir bir yaklaşımdı."*
+* `r ≤ 3` şartının ayrıca ölçülmesi **kabul edilmedi**.
+
+## 22. FERMAN 2-J LİSTESİ -- HEPSİ AYNI TURDA TERCÜME EDİLİR
+
+> *"Hepsi aynı turda tercüme edilsin."*
+
+Ferman 1-E: yarım iş yasak. Liste yazılmakla kalmaz; on iki aşkın
+çağrının **hepsi** aynı turda Galois / Palmer / matchgate karşılığına
+çevrilir ve fark **sayıyla** yazılır (ferman 7-D: tercümenin sıhhati
+ölçülür).
+
+    kararname (np.fft + np.exp)          mukayese.nesnelestir (np.exp)
+    mukayese.bargmann (np.angle/acos)    usul.gedik_bul (arccos)
+    tenakuz.dislama_dizeyi (np.exp)      rust.rust_kilidi (math.exp×2)
+    qudit.suz (np.cos/np.exp)            zirh.taahhude_yuzlestir (tanh)
+    zirh.zirh_kaybi (np.exp/log)         optimize.gaye_kos (np.tanh)
+    zihin_durumu.donme (cos/sin)         melekeler.talim_kademesi (np.exp)
+    eniyileme.tayf_araligi (eigvalsh×41) soyle (np.exp)
+    kulli_mizan.holonomi (math.acos)     kapilar.dik_iki_kubit (Karar 17)
+
+## 23. HÜKÜM B -- İKİ ŞIK
+
+> *"İlk 2 şık kabul edildi."*
+
+1. **`Harita` hazineye yazılır.** Ferman 1-I'nin *"müşterek münasebet
+   haritası"* bugün hiç birikmiyordu; her koşu sıfırdan kuruyordu.
+   Karar 3 `Lif.defter`i o kalıcı harita yaptı: hazineye konur ve
+   ferman 1-Y'nin imleciyle beraber taşınır. **Bu, tâlimin
+   hafızasıdır.**
+2. **`duraklar` + `j` fiilen kullanılır.** Beş meleke (𝒪7, 𝒪21, 𝒪30,
+   𝒪34, 𝒪37) durak ve kanal ayrımı veriyor, hepsi sektörün ortalama
+   fazına çöküyordu. Ferman 1-U: her meleke ayrı kategoridir;
+   ayrımlarının sessizce yutulması **meclisin ta kendisidir**.
+
+`Tableau`nun işletilmesi Karar 17'de zaten verilmişti (`StabilizerDurum`
+onun motoru oldu); `Hizolcer.sert` ve müdrike zinciri için hüküm
+verilmedi.
