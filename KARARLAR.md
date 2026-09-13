@@ -362,7 +362,13 @@ menfezine.** (`KUME_9/MERHALE E` böylece kapanır.)
    iptal etmiş. **Bütçe kipi olarak dahi kalmaz** (`KUME_9/C1`in
    *"ikili dal bütçe kipi olarak kalsın"* teklifi **reddedildi**).
 
-## 21. ENİYİLEYİCİ -- `optimizasyon.md`NİN DÖRT KATMANI KURULUR
+## 21. ENİYİLEYİCİ -- ▓ TASHİH EDİLDİ, AŞAĞIDA KARAR 24'E BAKINIZ ▓
+
+**Bu karar eksik bilgiyle arz edilmiştir ve Karar 24 ile
+sınırlandırılmıştır.** `optimizasyon.md`ye dayandırılmıştı; halbuki
+`terkip_layihas__12.md` (**NİHÂÎ TERKİP KARARNÂMESİ, 1 Eylül 2026**)
+üç katmanı ismen ilga ediyordu. Aşağıdaki metin tarihçe olarak
+bırakılmıştır; **yürürlükte olan hüküm Karar 24'tür.**
 
 > *"İlk 3 şık kabul edildi!"*
 
@@ -436,3 +442,80 @@ Ferman 1-E: yarım iş yasak. Liste yazılmakla kalmaz; on iki aşkın
 `Tableau`nun işletilmesi Karar 17'de zaten verilmişti (`StabilizerDurum`
 onun motoru oldu); `Hizolcer.sert` ve müdrike zinciri için hüküm
 verilmedi.
+
+---
+
+## 24. ENİYİLEYİCİNİN NİHAÎ MİMARİSİ -- KARARNÂME İLE TERKİP
+
+> *"İkisi terkip edilsin."*   ·   *"Beş memur dokuz uzva otursun."*
+
+### (a) HANGİSİ ASIL
+
+`terkip_layihas__12.md` (**NİHÂÎ TERKİP KARARNÂMESİ, 1 Eylül 2026**)
+**asıldır**. Onun ismen ilga ettiği üç katman **kurulmaz**:
+
+| Karar 21'de arz ettiğim (İLGA) | Kararnâmenin ikamesi |
+| :-- | :-- |
+| Lineer Aktif Alt Uzay `d → r ≤ 3` | `Gr(k,d)` **Cayley rasyonel çekilmesi** |
+| Hedef şartlandırma `‖𝒢(u) − y_hedef‖²` | **QSVT dinamik Gibbs tavlaması** (β-annealing) |
+| Sanal zamanlı PDE `∂ψ/∂τ = ∇²ψ − Vψ` | **Spektral taban projektörü `Π₀`** |
+
+### (b) `optimizasyon.md`DEN KORUNAN TEK CEVHER
+
+**Nyström düşük ranklı yaklaşımı** korunur -- çünkü kararnâmenin
+kendi **İkmâl Fıkrası I**'i onu *"hata beyanı şartıyla"* kabul eder:
+
+    K̃ = K_{N,m} K_{m,m}⁻¹ K_{m,N}   ,   m ≪ N
+    ε_Nyström = ‖K − K̃‖_F           ← RAPORA BASILIR (ferman 5)
+
+Yâni kısaltma yapılır fakat **feda edilen ne kadarsa sayıyla yazılır**.
+
+### (c) 9 UZUVLU TÂLİM TEŞKİLATI -- KURULACAK OLAN
+
+```
+1. HAD        Alexandroff tek nokta tıkızlaştırması + Lions
+              konsantrasyonu  (uçurumu ve asgarîsizliği engeller)
+2. ALTUZAY    Cayley rasyonel çekilmesi, Gr(k,d)      (AS DEĞİL)
+3. VEKİL      Grassmann izdüşümlü RKHS, Cholesky LLᵀ  (ters ALINMAZ)
+4. KODLAMA    Causal KAN, O(N) deterministik ağaç
+5. DALGA      Chebyshev-KAN NQS + QSVT Gibbs + FPAA monotonik difüzyon
+6. DURGUNLUK  Grassmann asal açıları + kayıp varyansı (çift kriter)
+7. TÜNEL      STA karşıt-adiyabatik sürüş H_CD(t)    (WKB DEĞİL)
+8. DENGE      Çift sayılar autodiff (ε²=0) + OGDA
+9. BÜTÇE      NFL haddi + ölçülen donanım çağrı sınırı
+```
+
+### (d) TETABUK -- BEŞ MEMUR DOKUZ UZVA OTURUR
+
+Mecz (ferman 2-P) **ayrı bir kanat değildir**; dokuz uzvun
+okunuşudur. Çift başlılık böylece doğmaz (ferman 1-Z):
+
+    EĞİM   → 8. DENGE: çift sayılar autodiff. `ℝ[ε]/ε²=0` cebri
+             SONLU FARK DEĞİL SEMBOLİK türevdir: tek ileri geçiş,
+             kesme hatası sıfır. Ferman 1-V'nin türev yasağı yön
+             kanadında kalkar; kayıp VEKTÖR kalır (ferman 1-U).
+    ÇUKUR  → Morse-Euler KATÎ eşitliği  Σ(−1)ᵏ M_k = χ(X)
+             + RCD(K,N) Bochner eğrilik süzgeci.
+             Zabıt: *"Eşitsizlik (≥) kabul edilmez; katı eşitlik
+             sağlanmadığı müddetçe çözüm eksik sayılır ve intaç
+             ONAYLANMAZ."*  → `ogrenme/morse.py` bugün CANLI ve
+             `assert` ile koşuyor; depodaki en sahih icralardandır.
+    DUVAR  → 1. HAD: Alexandroff + Lions. `max(g, ε)` kırpması
+             YASAK (kısıt geometrisini bozar); yerine log-bariyer
+             iç nokta homotopisi.
+    VADİ   → 7. TÜNEL: STA `H_CD(t)`, O(1) zamanda. Pasif WKB
+             beklemesi (6,2×10⁸ deneme, M20) ilga.
+    NAKİL  → Postnikov k-invaryantı `[c] ∈ H^{n+1}(X; π_n(Y))` ile
+             tıkanan mertebe analitik tesbit edilir, oraya Cayley
+             çekilmesiyle **instanton sıçraması** yapılır.
+             (Karar 1'in `ara()` NAKİL memuru buraya oturur.)
+
+### (e) CHOLESKY EMNİYET KİLİDİ = FERMAN 5'İN ZABITTAKİ ASLI
+
+> *"Eğer regülarizasyon λ=0 iken matris tekilse, bu algoritma
+> **gizlice hatalı katsayı üretmez**; deterministik olarak hata
+> fırlatır (fail-safe) ve sistemi uyarır."*
+
+`(K + λI)⁻¹` **açık matris tersi yasaktır**; `LLᵀ = K + λI`
+ayrıştırması ve iki kademeli ileri-geri ikame ile çözülür. Koşul
+sayısı `κ(K+λI)` sürekli denetlenir ve raporlanır.

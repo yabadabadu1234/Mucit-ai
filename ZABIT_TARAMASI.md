@@ -362,6 +362,66 @@ Ferman 2-P'nin beş memuriyeti bu mimarinin içinde zaten vardır:
 
 ---
 
+## 11. ▓▓ TASHİH: `optimizasyon.md` SONRADAN İLGA EDİLMİŞ ▓▓
+
+**BU BENİM HATAMDIR.** Karar 21'i `optimizasyon.md`ye dayanarak arz
+ettim; halbuki `terkip_layihas__12.md` (**NİHAÎ TERKİP KARARNÂMESİ,
+1 Eylül 2026**) o mimarinin **üç katmanını da ismen ilga ediyor**:
+
+| İlga edilen (Karar 21'de arz ettiğim) | Yerine gelen |
+| :-- | :-- |
+| **2. Lineer Aktif Alt Uzay** `d → r ≤ 3` | `Gr(k,d)` üzerinde **Cayley Rasyonel Çekilmesi** -- *"non-lineer uzayda `W₂` inaktif sapması önlenmiş"* |
+| **4. Hedef Şartlandırma** `‖𝒢(u) − y_hedef‖²` | **QSVT Dinamik Gibbs Tavlaması** (β-annealing) -- *"bilinmeyen asgaride kuyu kazar"* |
+| **5. Sanal Zamanlı PDE** (`∂ψ/∂τ = ∇²ψ − Vψ`) | **Spektral Taban Projektörü `Π₀`** -- *"Heisenberg kinetik cezası dik kuyuları kaçırır, sığ kuyuya çöker"* |
+
+Kararnâmenin kapanış hükmü bunu tekrar mühürlüyor:
+
+> *"1990'lardan kalma çöken optimizasyon araçları (MERA budaması,
+> **Active Subspaces, Nyström AS-GEK**, pasif WKB, POVM gürültüsü,
+> LCU Pauli açılımları) tamamen sökülüp atılmış; yerine QTT-KAN,
+> QROM Blok-Kodlaması, **QSVT Dinamik Gibbs Tavlaması**, FPAA
+> Monotonik Difüzyonu, STA Tünellemesi, Çift Sayılar Autodiff ve
+> Fubini-Study Deterministik Ağaç İntacı ikame edilmiştir."*
+
+### O HÂLDE ENİYİLEYİCİNİN HAKİKİ MİMARİSİ -- 9 UZUVLU TÂLİM TEŞKİLATI
+
+```
+1. HAD        Alexandroff tıkızlaştırma + Lions konsantrasyonu
+2. ALTUZAY    Cayley rasyonel çekilmesi, Gr(k,d)   (AS DEĞİL)
+3. VEKİL      Grassmann izdüşümlü RKHS, Cholesky   (ters ALINMAZ)
+4. KODLAMA    Causal KAN, O(N) deterministik ağaç
+5. DALGA      Chebyshev-KAN NQS + QSVT Gibbs + FPAA
+6. DURGUNLUK  Grassmann asal açıları + kayıp varyansı
+7. TÜNEL      STA karşıt-adiyabatik sürüş (H_CD)   (WKB DEĞİL)
+8. DENGE      Çift sayılar autodiff + OGDA
+9. BÜTÇE      NFL haddi + donanım çağrı sınırı
+```
+
+### VE MECZ'İN BEŞ MEMURU BURAYA OTURUYOR
+
+    EĞİM   → Çift Sayılar autodiff (ε²=0, tam türev, tek çağrı)
+    ÇUKUR  → Morse-Euler katî eşitliği Σ(−1)ᵏM_k = χ(X)
+             + RCD(K,N) Bochner eğrilik süzgeci
+    DUVAR  → HAD: Alexandroff + Lions (uçurum engellenir)
+    VADİ   → STA H_CD(t) karşıt-adiyabatik sürüş, O(1) zamanda
+    NAKİL  → Postnikov k-invaryantı [c] ∈ H^{n+1} ile instanton
+             sıçraması + Cayley çekilmesi
+
+### DEPODA NE VAR, NE YOK
+
+* `ogrenme/rkhs.py`, `ogrenme/sta.py`, `ogrenme/fct.py`,
+  `ogrenme/grassmann.py`, `nefs/ikiz.py`, `nefs/ogda.py`,
+  `kuantum/qsvt.py` -- zabıtın bu dokuz uzvunun kodu **yazılmıştı**;
+  bugünkü depoda `grassmann` ve `morse` canlı, ötekiler yok yahut ölü.
+* **Morse-Euler katî eşitliği** (`ogrenme/morse.py`) CANLI ve
+  `assert` ile koşuyor -- zabıtın *"eşitsizlik kabul edilmez"*
+  hükmü fiilen icrada. Bu, depodaki en sahih icralardan biridir.
+* **Cholesky emniyet kilidi** (İkmâl I): *"λ=0 iken matris tekilse
+  gizlice hatalı katsayı üretmez, deterministik olarak hata fırlatır"*
+  -- ferman 5'in (sessiz ikame yasağı) zabıttaki aslı budur.
+
+---
+
 ## TARAMANIN HÂLİ
 
 Tamamen okunan zabıtlar (11): `KUME_9_TEK_HAKIMIYET` ·
