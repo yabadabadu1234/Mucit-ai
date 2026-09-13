@@ -107,7 +107,9 @@ def _uretec_vur(psi: np.ndarray, lif: Tuple[int, ...],
 def hat_egriligi(dv_gercek: float, dv_lineer: float,
                  r: float) -> Dict[str, float]:
     r = float(r)
-    assert r > 0.0, "yarıçap sıfırken eğrilik okunamaz"
+    assert r > 0.0 and r * r > 0.0, (
+        "yarıçap eğrilik için fazla küçük (r=%r, r²=%r): karesi taban "
+        "altına düşüyor" % (r, r * r))
     kappa = 2.0 * (float(dv_gercek) - float(dv_lineer)) / (r * r)
     _MECZ["κ"] = float(kappa)
     if kappa <= 0.0:
@@ -184,9 +186,15 @@ def yaricap(keyf: float, iz_g: float,
         u = duzenli_uydur(t, y, G, k)
         S = bukulme_dizeyi(G, k)
         c = np.asarray(u["c"], float).reshape(-1)
-        egrilik = float(bukulme_enerjisi(c, S)) / max(float(y.var()), 1e-300)
+        buk = abs(float(bukulme_enerjisi(c, S)))
+        artik = float(u["artık"]) ** 2
+        egrilik = buk / max(buk + artik, 1e-300)
         _MECZ["eğrilik"] = egrilik
         r = r / (1.0 + egrilik)
+    assert r > 0.0 and np.isfinite(r), (
+        "YARIÇAP SIFIR YAHUT SONSUZ (%r): keyfiyet %.6e, iz(g) %.6e, "
+        "eğrilik nispeti %.6f. Sıfır yarıçapla adım atılamaz ve sessizce "
+        "geçilemez (ferman 5)." % (r, float(keyf), float(iz_g), egrilik))
     _MECZ["yarıçap"] = r
     return r
 

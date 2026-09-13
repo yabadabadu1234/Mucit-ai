@@ -44845,3 +44845,113 @@ tek okunup elendi. Geriye kalan iki hakikî bulgu -- `_komsuluk` ve
 kendi kesimimin `ogrenme/izgara.py`de bıraktığı sarkık üç satır
 (`dL_dt`, `g`, `naif`) -- düzeltildi. `main/egitim.py`de eksik olan
 `List` ithali de bu taramada çıktı.
+
+---
+
+## SABİT NOKTANIN KÖKÜ -- `_sec` TEK BELİRTEÇ SEÇİYOR (ferman 1-N-B)
+
+Tâlim koşturuldu, mihenk suâline cevap:
+
+    Question: What is the capital city of France? Answer:
+    → ' ёсць ёсць ёсць ёсць ёсць ёсць ёсць ёсць'
+      (geçersiz 0/8 · ayrı basamak 1 SABİT NOKTA)
+
+Üretim yolu baştan sona okundu (ferman 1-L: ölçerek değil okuyarak):
+
+    soyle → _uret → adayin_tuttugu(ne="koş") → QYazmac.kodla
+                                             → q.beyan(0)  → _sec
+
+### BAĞLAM KODLAMASI SAĞLAMDIR -- KUSUR ORADA DEĞİL
+
+`nefs/zihin_durumu.py:QYazmac.kodla` (canlı olan) bağlamın **her
+basamağını kendi seviyesine** yazıyor: `seviye = basamak·yer + sıra`.
+Ferman 2-M'nin *"bağlamın her basamağı kendi seviyesine düşer"* hükmü
+burada fiilen icra edilmiş. Üstelik yazmaca sığmazsa `assert` ile
+duruyor, sessizce ezmiyor.
+
+### KUSUR İKİ YERDE
+
+**1. `nefs/soyle.py:_sec` = `argmax(P)`.** Ferman 1-N-B'nin harfi:
+*"Bir yerde 'en yüksek olasılıklı belirteç' diye tek başına bir seçim
+yapılıyorsa orada kuantum mimari İPTAL EDİLMİŞ demektir."* `_sec`
+tam olarak budur. Vakum kıvılcımı (`ayna`) dağılımı kımıldatsa da
+netice yine `argmax(Q)`dur. Dağılım turdan tura kıpırdamayınca aynı
+basamak sonsuza kadar seçilir -- **sabit noktanın mekanik sebebi
+budur**.
+
+**2. `q.beyan(0)` dizinin değil BASAMAĞIN marjinalini veriyor.**
+`P = |ψ|² reshape(B, taban, −1).sum(axis=2)` -- yâni bütün dizi
+bilgisi tek basamağın kenar dağılımına iniyor. Ferman 1-N-B `sözlük^
+pencere` mertebesinde **dizinin tamamının** genliğini istiyor; burada
+`sözlük` mertebesinde tek basamak var.
+
+İkisi aynı kusurun iki yüzüdür: **dizi tek basamağa indiriliyor, sonra
+o basamağın en büyüğü seçiliyor.** Çaresi tertibat kararıdır ve
+ferman 2-D gereği padişaha soruldu.
+
+### AYRICA BULUNAN ÇİFT BAŞLILIK
+
+`nefs/qyazmac.py:QuditYazmac.kodla` **ikinci bir kodlayıcıdır** ve
+bağlamı **tek basamağa** eziyor:
+
+    tb = t[b % t.size]      ← yığın satırı başına BİR belirteç
+    idx = tb·h … (tb+1)·h   ← gerisi çöpe
+
+Ferman 2-M'nin *"bağlamı iki sayıya eziyordu"* diye mahkûm ettiği şeyin
+ta kendisi. Canlı yolda değil (canlı olan `QYazmac.kodla`), fakat
+`nefs/zirh.py`, `nefs/kulli_kayip.py` onu rastgele dizilerle çağırıyor.
+Ferman 1-M gereği iki kodlayıcı yan yana duramaz; hangisinin kesileceği
+padişaha soruldu.
+
+## KENDİ HATALARIM -- BU TURDA ÜÇ KERE KIRDIM
+
+1. **`__main__` kesimim canlı kod imha etti.** `kuantum/kapilar.py`de
+   `__main__` bloğundan SONRA kod vardı; betiğim dosya sonuna kadar
+   kesti. `dik_iki_kubit` ve dört uzvu, artı `KAPI_USULU`,
+   `MIZAN_AGIRLIK`, `_BILESEN_HAFIZA`, `_HAFIZA_HADDI` sabitleri
+   gitti. Hepsi gitten geri kondu. **Bunu bulan şey kendi `_dene`
+   düzeltmemdi**: eksik adı yutmak yerine kırdı.
+
+   **TASHİH:** geçen tur *"`_komsuluk` tanımsız"* diye `IzafiMevki2D`yi
+   kestim; o tanımsızlığı **ben yaratmıştım**. Kesim yerinde duruyor
+   (`ebat_kanunu_coz` ferman 1-P'nin yasağı, sınıf hiç çağrılmıyor)
+   fakat gösterdiğim sebep yanlıştı.
+
+2. **Hız tavanını iki kere yanlış kurdum.** Evvelâ hiç erişilmemiş
+   hedefe göre ölçtü, ilk turda koşuyu kesti. Sonra "kendi en
+   iyisinden çöküş > ısınma²" dedim, 7775'e karşı 7769'da gürültüde
+   tetikledi. Doğrusu: toplam hız, hattın **en kötü tek çağrısının**
+   altına düşerse tıkanma vardır.
+
+3. **Karar 11 bağlantım yarıçapı sıfırladı.** `eğrilik = bükülme /
+   var(seyir)` yazmıştım; seyir düzleşince (ki sabit nokta yüzünden
+   düzleşti) payda sıfıra gitti, eğrilik patladı, `r → 0`, sonra
+   `r·r` taban altına düşüp `ZeroDivisionError` verdi. Düzeltmesi:
+   eğrilik artık **nispet** -- `bükülme / (bükülme + artık²)` ∈ [0,1).
+   Ayrıca `yaricap` sıfır yahut sonsuz yarıçapta `assert` ile duruyor.
+
+## `musahede.kaide` NE HİZALIYOR -- KARAR 9'UN ÖNERMESİ YANLIŞ
+
+`S` bir **hâl matrisidir**: satırları yazmaç koordinatındaki hâller.
+Bir `Sahit` satır aralığıdır: `girdi = S[baş:kesim]`,
+`çıktı = S[kesim:son]` -- yâni **bir misalin giriş bulutu ile çıkış
+bulutu**.
+
+    _cerceve      iki bulutu merkezler ve normalize eder
+    ne="kovaryans"  Cᵀ·G  -- çıkış ile giriş bulutunun çapraz kovaryansı
+    ne="tek"      onun polar çarpanı = giriş bulutunu çıkış bulutuna
+                  en iyi taşıyan DİK DÖNME (ortogonal Procrustes)
+    ne="küllî"    birçok şahidin kovaryansı TOPLANIP polar çarpanı =
+                  hepsini birden açıklayan TEK dönme (genelleşmiş
+                  Procrustes)
+    artiklar      ‖G·Rᵀ − C‖ / ‖C‖ -- o dönmenin o şahitte ne kadar
+                  tuttuğu
+
+`delil_dizileri` her (k,i) çifti için k ile i'nin müşterek dönmesini
+alıp i üstünde sınıyor: *"k misalinden çıkan kaide, i misalini de
+açıklıyor mu?"* `nakz_bul` ise hiçbir müşterek dönmenin açıklayamadığı
+şahitleri buluyor -- **nakzı**.
+
+Yâni `kaide` elle yazılmış bir ARC kâidesi **değildir**; misallerden
+**kaideyi istihraç eden cebirdir** ve ferman 1-Ğ'nin *"kâide diziden
+damıtılır"* hükmünün fiilî icrasıdır. Karar 9 ismine bakıp yanılmış.
