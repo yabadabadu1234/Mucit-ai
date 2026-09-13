@@ -1,2 +1,2 @@
 
-__all__ = ["tip_teorisi", "mizan", "fitrat", "geometri"]
+__all__ = ["sonsuz_mertebeler_teorisi", "mizan", "fitrat", "geometri"]

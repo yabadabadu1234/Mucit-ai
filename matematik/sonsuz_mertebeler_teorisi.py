@@ -3989,3 +3989,63 @@ def serbest(t: Terim) -> Set[str]:
 
 def _yuz_i_den_bagimsiz(y: Yuz, ad: str) -> bool:
     return all(a != ad for (a, _) in y)
+
+
+class TipHatasi(Exception):
+    pass
+
+
+def iz_butun(X: Terim) -> Terim:
+    x, y = terim_taze("x"), terim_taze("y")
+    return Sigma(x, X, Pi(y, X, yol(X, _t(x), _t(y))))
+
+
+def iz_onerme(X: Terim) -> Terim:
+    x, y = terim_taze("x"), terim_taze("y")
+    return Pi(x, X, Pi(y, X, yol(X, _t(x), _t(y))))
+
+
+def iz_kume(X: Terim) -> Terim:
+    x, y = terim_taze("x"), terim_taze("y")
+    return Pi(x, X, Pi(y, X, iz_onerme(yol(X, _t(x), _t(y)))))
+
+
+def iz_grupoid(X: Terim) -> Terim:
+    x, y = terim_taze("x"), terim_taze("y")
+    return Pi(x, X, Pi(y, X, iz_kume(yol(X, _t(x), _t(y)))))
+
+
+def n_mertebe(X: Terim, n: int) -> Terim:
+    if n <= -2:
+        return iz_butun(X)
+    if n == -1:
+        return iz_onerme(X)
+    x, y = terim_taze("x"), terim_taze("y")
+    return Pi(x, X, Pi(y, X, n_mertebe(yol(X, _t(x), _t(y)), n - 1)))
+
+
+MERTEBE_ADI: Tuple[str, ...] = ("nokta", "uzay", "kategori", "tip")
+
+
+def mertebe_sarti(X: Terim, l: int) -> Terim:
+    assert 0 <= int(l) < len(MERTEBE_ADI), (
+        "vecih mertebesi 0..%d aralığında olmalı, %d verildi (ferman 1-Ğ)"
+        % (len(MERTEBE_ADI) - 1, int(l)))
+    return n_mertebe(X, int(l) - 1)
+
+
+def buzukten_tamamla(X: Terim, buzuk: Terim, dallar) -> Terim:
+    c = birinci(buzuk)
+    h = ikinci(buzuk)
+    j = terim_taze("j")
+    j_ar = Aralik.degisken(j)
+    yeni = [(y, terim_yol_uygula(terim_uygula(h, govde), j_ar))
+            for (y, govde) in dallar]
+    return terim_hkomp(X, j, yeni, c)
+
+
+def denklikle_tamamla(A: Terim, B: Terim, e: Terim, b: Terim,
+                      dallar) -> Terim:
+    X = lif(A, B, birinci(e), b)
+    buzuk = terim_uygula(ikinci(e), b)
+    return buzukten_tamamla(X, buzuk, dallar)

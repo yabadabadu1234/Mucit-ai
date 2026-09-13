@@ -44578,3 +44578,102 @@ Bu turda:
 ölçer; menfezi "hangi `kodlama` usulü seçilmeli" sualidir ve bu bir
 tertibat kararıdır -- ferman 2-D gereği sorulmadan vidalanmaz.
 Bu satır silinmeden "lif.py tamamen bağlandı" denemez.
+
+---
+
+## SONSUZ MERTEBELER TEORİSİ -- İKİ MODÜLÜN GERİ GETİRİLİŞİ VE TERKİBİ
+
+### PADİŞAHIN ŞÜPHESİ HAKLI ÇIKTI
+
+> *"Ben senin onları lâyığıyla aktardığına inanmıyorum, ikisini geri
+> getireceksin, okuduktan sonra karar vereceksin gerçekten geri
+> getirip getirmediğine."*
+
+`omega_kategori` (4328 satır) ve `omega_kategori_nbe` (4712 satır)
+`b2e55b3` işlemesinde silinmişti. İkisi de gitten geri çekildi ve
+yüzeyleri sayıldı:
+
+    omega_kategori adları        225
+    omega_kategori_nbe adları    297
+    ikisinin birleşimi           323
+    sonsuz_mertebeler'de mevcut  312
+    AKTARILMAMIŞ                  28
+
+Yâni aktarım **tam değildi**. Yirmi sekiz adın dördü esasa dairdir ve
+tam da bu turda mühürlenen fermanların işine yarayacak olanlardı:
+
+### GERİ GETİRİLENLER -- VE NİÇİN ESASA DAİR OLDUKLARI
+
+**1. h-MERTEBELERİ: `iz_butun` · `iz_onerme` · `iz_kume` ·
+`iz_grupoid` · `n_mertebe`.** Ferman 1-Ğ vechin mertebesini
+`ℓ ∈ {nokta, uzay, kategori, tip}` diye tayin ediyor ve *"h-mertebe ≥ 3"*
+şartını koyuyor. O dört mertebe **tam bu dört fonksiyondur**:
+
+    nokta     ← iz_butun    isContr X = Σ(x:X). Π(y:X). Path X x y
+    uzay      ← iz_onerme   isProp  X = Π(x y:X). Path X x y
+    kategori  ← iz_kume     isSet   X = Π(x y:X). isProp (Path X x y)
+    tip       ← iz_grupoid  isGroupoid X = Π(x y:X). isSet (Path X x y)
+
+Mevcut `mertebe(X, n)` bu dördünü **isimsiz gömmüştü**: `n = -2` ve
+`n = -1` kolları vardı fakat hangisinin hangi mertebe olduğu
+okunmuyordu. İsimsiz mertebe, ferman 1-Ğ'nin *"mertebeyi diziden oku"*
+hükmünü icra edilemez kılar -- neyi okuyacağını bilmeyen okuyamaz.
+
+**2. KAN DOLDURMA: `buzukten_tamamla` · `denklikle_tamamla`.**
+Büzülebilir bir tipte **kısmî** bir elemandan **tam** bir eleman
+üretir (`hcomp^j [dallar ↦ h(dal) @ j] c`). İkincisi CCHM'nin
+`equiv^ψ` ameliyesidir ve Glue hesabının kalbidir. Ferman 1-Ç'nin
+*"hâli oluşturan funktörün tersi mevcut olmalıdır"* hükmünün
+taşıyıcısı budur: kısmî olandan tam olanı doldurmak, geri çevirmenin
+ta kendisidir.
+
+**3. `TipHatasi`.** Denetim hatasının kendi tipi.
+
+### AKTARILMIŞ SAYILANLAR -- ÇİFT BAŞLILIK KURULMADI
+
+Şu adlar geri **getirilmedi** ve sebebi yazılıdır (ferman 1-M: iki
+yerde iki ayrı yol duramaz):
+
+    sentez        → `sentezle` aynı işi görüyor
+    pres          → `_pres_c` mevcut
+    dogrula_hepsi → üç ihtisaslaşmış hâli mevcut
+                    (_geometri, _iliskiler, _turetimler)
+    whnf, kanonik → `degerlendir` + `geri_oku` + `nf` + `esdeger_mi`
+                    aynı neticeyi veriyor: `geri_oku` zaten de Bruijn
+                    seviyesiyle alfa-kanonikleştiriyor, `_esit` eta
+                    çiftlerini açıyor. `whnf` bir **strateji**
+                    farkıydı (tembel baş), netice farkı değil.
+    _ile başlayan 16 ad → yukarıdakilerin hususi yardımcıları
+
+**Bu bir mazeret değil, bir hükümdür ve yanlışsa yanlışlığı kodda
+gösterilebilir:** `whnf`in tembel değerlendirmesi bir **hız** cevheri
+taşıyordu; onu geri getirmek bir eniyileme kararıdır ve ferman 2-D
+gereği sorulmadan vidalanmaz.
+
+### DOSYA TEK OLDU
+
+    matematik/tip_teorisi.py  →  matematik/sonsuz_mertebeler_teorisi.py
+
+Padişahın emri: *"Geri getirmemişsen o iki modülü birleştirip tek bir
+'sonsuz_mertebeler_teorisi' modülü oluşturacaksın!"* Ad da mânâyı
+daha doğru veriyor (ferman 4): burada olan şey yalnız tip teorisi
+değil, **mertebelerin sonsuz silsilesidir**.
+
+Altı dosyadaki bütün atıflar aynı turda yeniye bağlandı (ferman 2):
+`nefs/musahede.py`, `nefs/melekeler.py`, `nefs/lif.py`,
+`matematik/__init__.py`, `matematik/geometri.py`, `idrak/kategori.py`.
+Eski ada tek atıf kalmadı.
+
+### İSİM GERİ GELMEK BAĞLANMAK DEĞİLDİR (ferman 1-C/b)
+
+Geri getirilen h-mertebeleri **fiilen koşuyor**: `idrak/kategori.py`
+her uzay kurarken `mertebe_sarti(A, ℓ)` tipini kurup `denetle_t` ile
+**denetliyor**; netice `Uzay.h_mertebe`, `Uzay.h_adi`,
+`Uzay.h_denetlendi`, `Uzay.h_hata` alanlarında duruyor ve
+`kategori_beyani` ile basılıyor. Beyan `nefs/lif.py:lif_beyani`
+üstünden tâlim raporuna çıkıyor -- yâni tahtla beraber koşuyor
+(ferman 1-L: tahtın basmadığı sayı sayı değildir).
+
+`idrak/kategori.py`nin `rapor()` + `__main__` bloğu **imha edildi**
+(ferman 1-L) ve yerine akışın çağırdığı `kategori_beyani(uzaylar)`
+kondu. Dosya 172 → 200 satır.

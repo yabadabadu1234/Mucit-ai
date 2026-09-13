@@ -757,6 +757,36 @@ Başlangıç noktası **`main/`dır**: baş kopuksa gövde işe yaramaz.
   yasak). Mizan hâllerin hepsinde **aynıdır**; değişen, hangi
   suale cevap arandığıdır.
 
+### SUAL ÜRETİCİ BİR VEKTÖR ÜRETMEZ -- KLONLAR VE KURALI DEĞİŞTİRİR
+
+> *"Soru üreticinin **sakın ola bir soru vektörü üreteceğini sanma**
+> ahmak! O **durumu kopyalar**, ayrı bir yerde **durumun değişme
+> dönüşme kurallarını toptan değiştirir**."*
+
+* Sual bir gömme, bir vektör, bir etiket **değildir**. Sual üretmek
+  şu demektir: durum **klonlanır** (ferman 1-T) ve klonun üstünde
+  **değişme-dönüşme kuralları toptan değiştirilir**. Hâl, o değişmiş
+  kural altında durumun vardığı yerdir.
+* **VASIF DEĞİŞTİRME RASTGELE DEĞİLDİR:** *"kategori teorisi
+  modülümüzde yaptığımız gerçek şeyler olacak"* -- yâni kural
+  değişimi hakikî bir tip/kategori/uzay teorisinden gelir, uydurma
+  bir anahtardan değil.
+* **SUAL ÜRETİCİ ÇOK KAPIDAN BESLENİR:** diziden, **hafızadan**, saf
+  durumdan, kurulmuş mantık devrelerinden, tenakuz ve kısırdöngü
+  bulucularından. *"Üreteceği şeyi detaylı üretmesinin yolu birçok
+  yönden veri almasıdır."*
+
+### HÂLİN İÇİ DEĞİL, MOTORUN SEÇİMİ DÜZELTİLİR
+
+> *"Sürekli aynı cinste hâller üretilmeyecek ki! Hangi metinde kafana
+> tamamen aynı sualler gelir? Senin düzeltmen gereken **motorun hangi
+> uzayları üretmeyi seçtiği, motorun kendisi**, hâllerin içleri değil
+> -- onlar zaten **matematikle tayin olunuyor**!"*
+
+Hâlin içi tartışma mevzuu değildir: bir hâl açıldıktan sonra içinde
+ne olacağını **riyaziye** söyler. Islah edilecek yer motorun
+**seçimidir**: hangi hâli açmayı seçiyor.
+
 ### DOĞUMDA AZALAN BİR ŞEY YOKTUR
 
 > *"Hâl doğunca bir şey azalmayacak, hâl bir sorunun cevabı olacak.
@@ -801,9 +831,16 @@ başkalığıdır**.
     Tenasüp  = ortalama over k of |⟨ belirteç_k | Vecih ⟩|²
     İnşikak  = 1 − |⟨ A^(Vecih) | B^(Vecih) ⟩|²
 
-**Çarpımdır, toplam değildir**: üçünden biri sıfırsa o vecih açılmaz.
-İnşikakı sıfır olan vecih ayrım doğurmaz (Leibniz: ayrışmazların
-ayniyeti).
+**Çarpımdır, toplam değildir**; fakat **ÇARPIM BİR SIRALAMADIR,
+ELEME DEĞİLDİR**. İnşikakı sıfır çıkan vecih kapanmaz -- sıralamada
+geriye düşer. *"Ahmet ile Mehmet'in ikisinin de adı Ahmet"* bilgisi
+de bir hükümdür ve verilebilmelidir.
+
+**ELEME YALNIZ DUVAR MEMURUNUN İŞİDİR** (ferman 2-P): DUVAR bir
+maskedir, eler; ÇUKUR bir hükümdür; üç çekimin çarpımı ise yalnız
+**sıra** verir. Bir vechi sıralama kapatırsa ferman 1-Ğ'nin ikinci
+hükmü (*"yetersizlik tek başına sebep değildir"*) ihlâl edilmiş
+olur.
 
 ### VECHİN MERTEBESİ DİZİDEN OKUNUR
 

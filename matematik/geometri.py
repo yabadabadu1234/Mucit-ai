@@ -10,12 +10,12 @@ from dataclasses import dataclass
 from dataclasses import dataclass, field
 from fractions import Fraction
 from itertools import product
-from .tip_teorisi import (Ard, Aralik, Cember, Poz, Sfr, Taban, Tamsayi,
+from .sonsuz_mertebeler_teorisi import (Ard, Aralik, Cember, Poz, Sfr, Taban, Tamsayi,
                           Terim, Transp, YANLIS, YolUygula,
                           ardil_denkligi, esdeger_mi, nf,
                           ozdeslik_denkligi, taze, ua)
-from .tip_teorisi import BIR as ARALIK_BIR
-from .tip_teorisi import SIFIR as ARALIK_SIFIR
+from .sonsuz_mertebeler_teorisi import BIR as ARALIK_BIR
+from .sonsuz_mertebeler_teorisi import SIFIR as ARALIK_SIFIR
 from typing import (Callable, Dict, FrozenSet, Hashable, Iterable, List,
                     Optional, Sequence, Set, Tuple)
 from typing import Callable, Dict, List, Optional, Sequence, Tuple

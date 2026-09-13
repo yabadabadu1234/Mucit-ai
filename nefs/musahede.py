@@ -1801,7 +1801,7 @@ def iki_olcegin_acisi(gorev=None, ne: str = "açı", lam: float = 1e-6,
 
 
 def terkip_saglam_mi() -> Dict[str, object]:
-    from matematik.tip_teorisi import bosluklar
+    from matematik.sonsuz_mertebeler_teorisi import bosluklar
     from .melekeler import QAKIS, qsicil
 
     s = qsicil()

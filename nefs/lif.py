@@ -86,6 +86,7 @@ class Lif:
     sozluk: int = 0
     asansor_kati: int = -1
     uzay_mertebesi: Tuple[int, ...] = ()
+    kategori_beyani: str = ""
     tur: int = 0
     doyma: float = 0.0
     islenen: int = 0
@@ -107,13 +108,13 @@ class Lif:
         return sorted(self.defter.get(str(tip), {}).get(str(kategori), {}))
 
     def terim(self):
-        from matematik.tip_teorisi import Sigma, Evren
+        from matematik.sonsuz_mertebeler_teorisi import Sigma, Evren
         return Sigma("t", Evren(0),
                      Sigma("c", Evren(0),
                            Sigma("u", Evren(0), Evren(0))))
 
     def unfold(self, mertebe: str = "kategori"):
-        from matematik.tip_teorisi import (Cift, Birinci, Ikinci, Dogal,
+        from matematik.sonsuz_mertebeler_teorisi import (Cift, Birinci, Ikinci, Dogal,
                                            degerlendir, geri_oku, BOS)
         e = Cift(Dogal(), Cift(Dogal(), Cift(Dogal(), Dogal())))
         yol = {"tip": Birinci(e),
@@ -125,7 +126,7 @@ class Lif:
         return geri_oku(degerlendir(yol, BOS))
 
     def dogrula(self) -> Dict[str, Any]:
-        from matematik.tip_teorisi import Sigma, degerlendir, geri_oku, BOS
+        from matematik.sonsuz_mertebeler_teorisi import Sigma, degerlendir, geri_oku, BOS
         t = self.terim()
         n = 0
         x = t
@@ -254,7 +255,7 @@ def _yuva_sec(mertebeler: Sequence[int], boy: int) -> int:
 
 def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
                munasebet, onceki: Optional[Dict[str, Any]] = None) -> Lif:
-    from idrak.kategori import uzaylari_kur
+    from idrak.kategori import kategori_beyani, uzaylari_kur
     from .hendese import (HendeseAyari, hendese_beyani, hendese_yukle,
                           mertebe_sec)
     from .qegitim import ornek_bol
@@ -287,6 +288,7 @@ def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
     L.asansor_kati = int(hendese["asansör"]["kat"])
     L.sozluk = int(sozluk)
     L.uzay_mertebesi = tuple(int(m) for m in mertebeler)
+    L.kategori_beyani = kategori_beyani(uzaylar)
     L.doyma = float(munasebet.doyma())
     L.islenen = int(munasebet.islenen)
     L.tur = int(L.tur) + 1
@@ -345,8 +347,8 @@ def lif_beyani(lif: Lif) -> str:
          "  tip     : %s" % ", ".join(lif.tipler()),
          "  sözlük  : %d     asansör katı: %d     biriken tur: %d"
          % (lif.sozluk, lif.asansor_kati, lif.tur),
-         "  uzay mertebeleri (idrak/kategori.py ile kuruldu):",
-         "    %s" % ", ".join(str(m) for m in lif.uzay_mertebesi),
+         "",
+         lif.kategori_beyani,
          "",
          "  BAĞIMLI LİF vs KARTEZYEN KUTU (aynı muhteva)",
          "    tip=%d kategori=%d uzay=%d" % (n["tip"], n["kategori"],
@@ -363,7 +365,7 @@ def lif_beyani(lif: Lif) -> str:
     if k.get("sebep"):
         s.append("    sebep: %s" % k["sebep"])
     s += ["",
-          "  TİP TEORİSİ -- Σ zinciri ve NbE (matematik/tip_teorisi.py)",
+          "  SONSUZ MERTEBELER -- Σ zinciri ve NbE",
           "    Σ sayısı %d  (NbE sonrası %d)  defterle uyuştu: %s"
           % (dg["Σ_sayısı"], dg["NbE_sonrası_Σ"],
              "EVET" if dg["uyuştu"] else "HAYIR"),

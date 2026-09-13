@@ -17,7 +17,7 @@ from matematik.mizan import ardisiklik_kaidesi, tam_istikra_mi
 from matematik.mizan import (MERTEBELER, ZANN_I_GALIB_ESIGI, hukum_agirligi,
                             ikili_entropi, makam_tayin, mertebe_adi,
                             yakin_gazali, yakin_zinciri)
-from matematik.tip_teorisi import (Baglam, Cember, Deg, Evren, Taban,
+from matematik.sonsuz_mertebeler_teorisi import (Baglam, Cember, Deg, Evren, Taban,
                                    denetle_t, dongu_uzayi_n, morfizm_tipi)
 
 

@@ -4,13 +4,14 @@ import sys
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Sequence, Tuple
 
-from matematik.tip_teorisi import (Baglam, Cember, Deg, Dugum, Evren, Lam,
-                                   Pi, Sigma, Taban, Terim, YolLam,
-                                   denetle_t, denetle_tip, dongu_uzayi_n,
-                                   evrensel_demet, kesit_tipi, morfizm_tipi,
-                                   ok, tikanma_postulati)
+from matematik.sonsuz_mertebeler_teorisi import (
+    MERTEBE_ADI, Baglam, Cember, Deg, Dugum, Evren, Lam, Pi, Sigma, Taban,
+    Terim, YolLam, denetle_t, denetle_tip, dongu_uzayi_n, evrensel_demet,
+    iz_butun, iz_grupoid, iz_kume, iz_onerme, kesit_tipi, mertebe_sarti,
+    morfizm_tipi, n_mertebe, ok, tikanma_postulati)
 
-__all__ = ["Uzay", "SABIT", "uzaylari_kur", "rapor", "AZAMI_TAM_MERTEBE"]
+__all__ = ["Uzay", "SABIT", "uzaylari_kur", "rapor", "AZAMI_TAM_MERTEBE",
+           "h_mertebe_sec", "h_sarti_denetle", "kategori_beyani"]
 
 U = Evren(0)
 U1 = Evren(1)
@@ -32,6 +33,10 @@ class Uzay:
     baglayici: int
     tip_ozeti: str
     hata: str = ""
+    h_mertebe: int = -1
+    h_adi: str = ""
+    h_denetlendi: bool = False
+    h_hata: str = ""
 
     @property
     def pencere(self) -> int:
@@ -62,6 +67,20 @@ def _baglayici_say(t: Terim) -> int:
             elif isinstance(alan, tuple):
                 yigin.extend(a for a in alan if isinstance(a, Dugum))
     return n
+
+
+def h_mertebe_sec(mertebe: int) -> int:
+    return int(min(max(int(mertebe), 0), len(MERTEBE_ADI) - 1))
+
+
+def h_sarti_denetle(mertebe: int, baglam: Baglam) -> Tuple[int, str, bool, str]:
+    l = h_mertebe_sec(mertebe)
+    try:
+        denetle_t(mertebe_sarti(Deg("A"), l), Evren(0), baglam)
+        return l, MERTEBE_ADI[l], True, ""
+    except Exception as e:
+        return l, MERTEBE_ADI[l], False, "%s: %s" % (type(e).__name__,
+                                                     str(e)[:120])
 
 
 def _tam_kur(mertebe: int) -> Tuple[Terim, str]:
@@ -97,9 +116,12 @@ def uzaylari_kur(dinamik: Sequence[int]) -> List[Uzay]:
         except Exception as e:
             gecti = False
             hata = "%s: %s" % (type(e).__name__, str(e)[:120])
+        hl, had, hg, hh = h_sarti_denetle(m, gA)
         uzaylar.append(Uzay(yuva=yuva, mertebe=m, tam_kuruldu=tam,
                             denetlendi=gecti, baglayici=_baglayici_say(tip),
-                            tip_ozeti=ozet, hata=hata))
+                            tip_ozeti=ozet, hata=hata,
+                            h_mertebe=hl, h_adi=had,
+                            h_denetlendi=hg, h_hata=hh))
     return uzaylar
 
 
@@ -133,39 +155,46 @@ def akit_denetle() -> List[Dict[str, object]]:
     return out
 
 
-def rapor(dinamik: Sequence[int] = (13, 17, 19, 20, 30, 55, 1000, 1009,
-                                    58383, 60000)) -> str:
-    uz = uzaylari_kur(dinamik)
-    s = ["=== 20 ∞-KATEGORİ UZAYI (omega_kategori_nbe ile kurulup denetlendi) ===",
-         "",
-         "%-5s %-8s %-9s %-11s %-8s %-7s %s"
+def kategori_beyani(uzaylar: Sequence[Uzay]) -> str:
+    uz = list(uzaylar)
+    s = ["=== YİRMİ ∞-KATEGORİ UZAYI (idrak/kategori.py) ===", "",
+         "  %-5s %-8s %-9s %-11s %-9s %-7s %-4s %-10s %s"
          % ("yuva", "mertebe", "kuruluş", "denetim", "bağlayıcı",
-            "pencere", "adım")]
-    s.append("-" * 78)
+            "pencere", "adım", "h-mertebe", "tip"),
+         "  " + "-" * 96]
     for u in uz:
-        s.append("%-5d %-8d %-9s %-11s %-9d %-7d %d   %s"
+        s.append("  %-5d %-8d %-9s %-11s %-9d %-7d %-4d %-10s %s"
                  % (u.yuva, u.mertebe,
                     "TAM" if u.tam_kuruldu else "temsilci",
                     "geçti" if u.denetlendi else "KALDI",
-                    u.baglayici, u.pencere, u.adim, u.tip_ozeti))
+                    u.baglayici, u.pencere, u.adim,
+                    "%s%s" % (u.h_adi, "" if u.h_denetlendi else "!"),
+                    u.tip_ozeti))
         if u.hata:
-            s.append("      ! " + u.hata)
-    s += ["", "Akit denetimi (modül fiilen çağrılıyor mu):"]
-    for n in akit_denetle():
-        s.append("  %s %s%s" % ("✓" if n["netice"] == "GEÇTİ" else "✗",
-                                n["ad"],
-                                "" if n["netice"] == "GEÇTİ"
-                                else "  [%s]" % n.get("izah", "")))
-    tam = sum(1 for u in uz if u.tam_kuruldu)
-    ok = sum(1 for u in uz if u.denetlendi)
+            s.append("        ! " + u.hata)
+        if u.h_hata:
+            s.append("        ! h-mertebe: " + u.h_hata)
     s += ["",
-          "hulâsa: %d/20 uzay TAM kuruldu, %d/20 makine denetiminden geçti."
-          % (tam, ok),
-          "Mertebesi %d'ten büyük olanlar temsilci tiple denetlendi;"
+          "  H-MERTEBE (ferman 1-Ğ: vechin mertebesi diziden okunur)",
+          "    nokta=büzülebilir · uzay=önerme · kategori=küme · "
+          "tip=grupoid ve üstü",
+          "    ``n_mertebe`` ile kurulur, ``denetle_t`` ile DENETLENİR;",
+          "    bu dördü omega_kategori'den geri getirilen cevherlerdir.",
+          "",
+          "  Akit denetimi (modül fiilen çağrılıyor mu):"]
+    for n in akit_denetle():
+        s.append("    %s %s%s" % ("✓" if n["netice"] == "GEÇTİ" else "✗",
+                                  n["ad"],
+                                  "" if n["netice"] == "GEÇTİ"
+                                  else "  [%s]" % n.get("izah", "")))
+    tam = sum(1 for u in uz if u.tam_kuruldu)
+    gecen = sum(1 for u in uz if u.denetlendi)
+    h_gecen = sum(1 for u in uz if u.h_denetlendi)
+    s += ["",
+          "  hulâsa: %d/%d uzay TAM kuruldu, %d/%d makine denetiminden "
+          "geçti, %d/%d h-mertebe şartı denetlendi."
+          % (tam, len(uz), gecen, len(uz), h_gecen, len(uz)),
+          "  Mertebesi %d'ten büyük olanlar temsilci tiple denetlendi;"
           % AZAMI_TAM_MERTEBE,
-          "sebebi seyrek Kan sıçramasıdır (aradaki mertebeler açılmaz)."]
+          "  sebebi seyrek Kan sıçramasıdır (aradaki mertebeler açılmaz)."]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())
