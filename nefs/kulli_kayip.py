@@ -1370,3 +1370,7 @@ def rapor() -> str:
 
 
     return "\n".join(s)
+
+
+MIZAN_AGIRLIK: Dict[str, float] = {"uzay": 1.0, "kategori": 1.0,
+                                   "tip": 1.0}

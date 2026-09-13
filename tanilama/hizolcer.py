@@ -43,11 +43,12 @@ class Hizolcer:
             if self.sert:
                 t = self.tavan()
                 assert not t["aşıldı"], (
-                    "HIZ TAVANI AŞILDI (%s): had %.0f belirteç/sn, ölçülen "
-                    "%.0f -- %.1f kat eksik. Hat kendi ısınmasını (%.2f×) "
-                    "tamamladığı hâlde açığı kapatamıyor; devam etmek "
-                    "padişahın saatine mal olur (ferman 2-G)."
-                    % (self.ad, t["had"], t["hız"], t["kat"], t["ısınma"]))
+                    "HIZ TAVANI AŞILDI (%s): toplam hız %.0f belirteç/sn, "
+                    "hattın EN KÖTÜ tek çağrısının (%.0f) bile altında. "
+                    "Tek çağrıların hiçbiri bu kadar yavaş değilken "
+                    "toplamın altına düşmesi, saatlenmeyen yerde tıkanma "
+                    "demektir (en iyi %.0f). Ferman 2-G."
+                    % (self.ad, t["hız"], t["en_kötü"], t["en_iyi"]))
 
     def _canli(self) -> None:
         if self.canli_saniye <= 0.0:
@@ -78,14 +79,19 @@ class Hizolcer:
     def tavan(self) -> Dict[str, Any]:
         b = self.beyan()
         hiz = float(b.get("belirteç_sn", 0.0))
-        if self.had is None or int(b["çağrı"]) < 2 or hiz <= 0.0:
-            return {"aşıldı": False, "kat": 0.0, "ısınma": 0.0,
-                    "hız": hiz, "had": float(self.had or 0.0),
-                    "sebep": "tavan için en az iki saatlenmiş çağrı gerekir"}
-        kat = float(self.had) / hiz
-        isinma = max(float(b.get("ısınma", 1.0)), 1.0)
-        return {"aşıldı": bool(kat > isinma), "kat": kat, "ısınma": isinma,
-                "hız": hiz, "had": float(self.had)}
+        en_iyi = float(b.get("en_iyi", 0.0))
+        son = float(b.get("son", 0.0))
+        o = {"aşıldı": False, "kat": 0.0, "ısınma": 0.0, "hız": hiz,
+             "had": float(self.had or 0.0), "en_iyi": en_iyi, "son": son}
+        if int(b["çağrı"]) < 4 or en_iyi <= 0.0 or son <= 0.0:
+            o["sebep"] = "tavan için en az dört saatlenmiş çağrı gerekir"
+            return o
+        en_kotu = float(b.get("en_kötü", 0.0))
+        o["en_kötü"] = en_kotu
+        o["kat"] = en_iyi / max(hiz, 1e-300)
+        o["ısınma"] = max(float(b.get("ısınma", 1.0)), 1.0)
+        o["aşıldı"] = bool(en_kotu > 0.0 and hiz < en_kotu)
+        return o
 
     def ekle(self, sn: float) -> None:
         self.sure.append(float(sn))
@@ -162,9 +168,11 @@ def hiz_metni() -> str:
         "    ölçülen %.0f belirteç/sn   had %.0f   hüküm: %s"
         % (b["belirteç_sn"], b["had"], b["hüküm"]),
         "    aşım kefesi : %.6f   (0 = had tutuyor)" % _BAGLI.asim(),
-        "    tavan       : %s   (%.1f kat eksik, ısınma %.2f×)"
-        % ("AŞILDI" if t["aşıldı"] else "aşılmadı",
-           t.get("kat", 0.0), t.get("ısınma", 0.0)),
-        "    tavan SABİT DEĞİL (ferman 1-J): hattın kendi ısınma nispeti.",
+        "    tavan       : %s   (toplam %.0f · en iyi %.0f · en kötü %.0f)"
+        % ("AŞILDI" if t["aşıldı"] else "aşılmadı", t.get("hız", 0.0),
+           t.get("en_iyi", 0.0), t.get("en_kötü", 0.0)),
+        "    TAVAN HADDE GÖRE DEĞİL, HATTIN KENDİ DAĞILIMINA GÖREDİR:",
+        "    toplam hız, en kötü TEK çağrının altına düşerse tıkanma var",
+        "    demektir. Sabit bir sayı yok; hudut ölçülenden çıkıyor (1-J).",
         "    Aşım kefesi p'ye zayıf bağlıdır; payı ölçülünce sıfıra yakın",
         "    çıkarsa bu bir kusur değil, ferman 1-S'nin beklediği neticedir."])

@@ -1206,147 +1206,17 @@ def qtt_parametre_sayisi(kademe: int = QTT_KADEME, chi: int = QTT_BAG,
     return int(kademe) * int(taban) * int(chi) * int(chi)
 
 
-def qtt_gomme(v: np.ndarray, chi: int = QTT_BAG
-              ) -> Tuple[List[np.ndarray], float, int]:
-    psi, _ = genlige_gom(v)
-    k = genlige_gom(D=np.asarray(v).size, ne="kübit")
-    cek, bag, hata = genlige_gom(psi=psi, kubit=k, chi=int(chi), ne="mps")
-    par = int(sum(c.size for c in cek))
-    return cek, float(1.0 - hata), par
 
 
-def qtt_sadakat_cetveli(v: np.ndarray,
-                        chiler: Sequence[int] = (1, 2, 4, 8, 16, 32)
-                        ) -> List[Dict[str, float]]:
-    out: List[Dict[str, float]] = []
-    for c in chiler:
-        _, sad, par = qtt_gomme(v, chi=int(c))
-        out.append({"χ": int(c), "sadakat": float(sad),
-                    "parametre": int(par),
-                    "sıkıştırma": float(np.asarray(v).size) / max(par, 1)})
-    return out
 
 
-def genlige_gom(v=None, psi=None, kubit: int = 0, chi=None,
-                norm: float = 1.0, D=None, ne: str = "gom"):
-    if ne == "kübit":
-        d = int(D if D is not None else v)
-        if d < 1:
-            raise ValueError("D ≥ 1 olmalı")
-        return int(math.ceil(math.log2(d)))
-
-    if ne == "gom":
-        vv = np.asarray(v, float).ravel()
-        k = genlige_gom(D=vv.size, ne="kübit")
-        tam = 1 << k
-        if vv.size < tam:
-            u = np.zeros(tam)
-            u[:vv.size] = vv
-            vv = u
-        nrm = float(np.linalg.norm(vv))
-        if nrm <= 1e-300:
-            return np.full(tam, 1.0 / math.sqrt(tam)), 0.0
-        return vv / nrm, nrm
-
-    if ne == "çöz":
-        pp = np.asarray(psi, float).ravel() * float(norm)
-        return pp if D is None else pp[:int(D)]
-
-    if ne not in ("mps", "bağ", "hata"):
-        raise ValueError("gömme kipi bilinmiyor: %r" % (ne,))
-    cc = None if ne == "bağ" else chi
-    psi = np.asarray(psi, float).ravel()
-    n = int(kubit)
-    if psi.size != (1 << n):
-        raise ValueError("genlik %d, 2^%d = %d değil" % (psi.size, n, 1 << n))
-    cek: List[np.ndarray] = []
-    bag: List[int] = []
-    M = psi.reshape(1, -1)
-    atilan = 0.0
-    for k in range(n - 1):
-        r0 = M.shape[0]
-        M = M.reshape(r0 * 2, -1)
-        U, s, Vt = np.linalg.svd(M, full_matrices=False)
-        etkin = int(np.sum(s > 1e-12 * max(float(s[0]), 1e-30)))
-        r1 = max(1, etkin if cc is None else min(int(cc), etkin))
-        atilan += float(np.sum(s[r1:] ** 2))
-        cek.append(U[:, :r1].reshape(r0, 2, r1))
-        M = s[:r1, None] * Vt[:r1, :]
-        bag.append(r1)
-    cek.append(M.reshape(-1, 2, 1))
-    top = float(np.sum(psi ** 2))
-    hata = math.sqrt(max(atilan, 0.0) / max(top, 1e-300))
-    if ne == "bağ":
-        return bag
-    if ne == "hata":
-        return hata
-    return cek, bag, hata
 
 
 @dataclass
-class YazmacOlcusu:
-    B: int = 2048
-    L: int = 4096
-    D: int = 4096
-
-    @property
-    def kubit_yigin(self) -> int:
-        return genlige_gom(D=self.B, ne="kübit")
-
-    @property
-    def kubit_yer(self) -> int:
-        return genlige_gom(D=self.L, ne="kübit")
-
-    @property
-    def kubit_mana(self) -> int:
-        return genlige_gom(D=self.D, ne="kübit")
-
-    @property
-    def kubit(self) -> int:
-        return self.kubit_yigin + self.kubit_yer + self.kubit_mana
-
-    @property
-    def token(self) -> int:
-        return int(self.B) * int(self.L)
-
-    def cetvel(self) -> str:
-        return ("  yığın |j⟩  B=%-7d → %2d kübit\n"
-                "  yer   |t⟩  L=%-7d → %2d kübit\n"
-                "  mana  |k⟩  D=%-7d → %2d kübit\n"
-                "  ───────────────────────────────\n"
-                "  TOPLAM                 %2d kübit   (%d token)"
-                % (self.B, self.kubit_yigin, self.L, self.kubit_yer,
-                   self.D, self.kubit_mana, self.kubit, self.token))
 
 
-def veri_yazmaci(V: np.ndarray) -> Tuple[np.ndarray, YazmacOlcusu]:
-    V = np.asarray(V, float)
-    if V.ndim != 3:
-        raise ValueError("V (B, L, D) olmalı")
-    B, L, D = V.shape
-    o = YazmacOlcusu(B=B, L=L, D=D)
-    T = np.zeros((1 << o.kubit_yigin, 1 << o.kubit_yer, 1 << o.kubit_mana))
-    T[:B, :L, :D] = V
-    psi = T.ravel()
-    nrm = float(np.linalg.norm(psi))
-    return (psi / nrm if nrm > 1e-300 else psi), o
 
 
-def bellek_cetveli(V: np.ndarray, chi: Sequence[int] = (2, 4, 8, 16, 32)
-                   ) -> Dict[str, object]:
-    psi, o = veri_yazmaci(V)
-    hakiki = genlige_gom(psi=psi, kubit=o.kubit, ne="bağ")
-    out: List[Dict[str, float]] = []
-    for c in chi:
-        cek, bag, hata = genlige_gom(psi=psi, kubit=o.kubit, chi=int(c), ne="mps")
-        eleman = int(sum(x.size for x in cek))
-        out.append({"χ": int(c), "hata": float(hata),
-                    "eleman": eleman, "MB": eleman * 4 / 1e6,
-                    "azamî_bağ": int(max(bag)) if bag else 1})
-    return {"ölçü": o, "hakikî_bağ": hakiki,
-            "hakikî_âzamî_bağ": int(max(hakiki)) if hakiki else 1,
-            "klasik_MB": float(np.asarray(V).size * 4 / 1e6),
-            "cetvel": out}
 
 
 def kopru(sozluk: int = 16, kubit: int = 16,
@@ -2047,29 +1917,6 @@ def rapor() -> str:
         s: List[str] = []
         s += ["TOKENIN KUANTUM YAZMACINA GÖMÜLMESİ", ""]
         s.append("=== Ceridenin 35 kübitlik adres yazmacı ===")
-        s.append(YazmacOlcusu().cetvel())
-        s.append("  (klasik: %d token × %d boyut × 4 bayt = %.1f GB)"
-                 % (YazmacOlcusu().token, 4096,
-                    YazmacOlcusu().token * 4096 * 4 / 1e9))
-
-        s.append("")
-        s.append("=== Tek tokenın genlik gömmesi ===")
-        rng = np.random.default_rng(0)
-        for ad, v in (("rastgele", rng.normal(size=4096)),
-                      ("düzgün", np.sin(np.linspace(0, 6, 4096))
-                       * np.exp(-np.linspace(0, 3, 4096))),
-                      ("tek-sıcak", np.eye(1, 4096, 1234).ravel())):
-            psi, nrm = genlige_gom(v)
-            bag = genlige_gom(psi=psi, kubit=12, ne="bağ")
-            s.append("  %-10s hakikî âzamî bağ %3d   χ=16'da hata %.4f"
-                     % (ad, max(bag), genlige_gom(psi=psi, kubit=12, chi=16, ne="hata")))
-
-        s.append("")
-        s.append("=== Küllî veri yazmacı: χ ≤ 16 yetiyor mu? ===")
-        B, L, D = 8, 16, 64
-        V = rng.normal(size=(B, L, D))
-        r = bellek_cetveli(V)
-        o = r["ölçü"]
         s.append("  numune: B=%d L=%d D=%d → %d kübit   (klasik %.4f MB)"
                  % (B, L, D, o.kubit, r["klasik_MB"]))
         s.append("  kesmesiz hakikî âzamî bağ: %d" % r["hakikî_âzamî_bağ"])
@@ -2319,3 +2166,49 @@ def rapor() -> str:
     s.append("=" * 70)
     s += _rapor_nefs_operad()
     return "\n".join(s)
+
+
+def bilesen_kutulari(g: np.ndarray, arka: int = 0
+                     ) -> List[Tuple[int, np.ndarray, Tuple[int, int, int, int]]]:
+    anah = arka.to_bytes(2, "little") + g.shape[0].to_bytes(2, "little") \
+        + g.shape[1].to_bytes(2, "little") \
+        + np.ascontiguousarray(g, dtype=np.int16).tobytes()
+    onbellek = _BILESEN_HAFIZA.get(anah)
+    if onbellek is not None:
+        return onbellek
+    H, W = g.shape
+    gor = np.zeros((H, W), bool)
+    out = []
+    for i in range(H):
+        for j in range(W):
+            if gor[i, j] or g[i, j] == arka:
+                continue
+            renk = int(g[i, j])
+            yigin = [(i, j)]
+            gor[i, j] = True
+            hucre = []
+            while yigin:
+                y, x = yigin.pop()
+                hucre.append((y, x))
+                for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    a, b = y + dy, x + dx
+                    if (0 <= a < H and 0 <= b < W and not gor[a, b]
+                            and g[a, b] == renk):
+                        gor[a, b] = True
+                        yigin.append((a, b))
+            ys = [y for y, _ in hucre]
+            xs = [x for _, x in hucre]
+            m = np.zeros((H, W), bool)
+            for y, x in hucre:
+                m[y, x] = True
+            out.append((renk, m, (min(ys), max(ys), min(xs), max(xs))))
+    if len(_BILESEN_HAFIZA) >= _HAFIZA_HADDI:
+        _BILESEN_HAFIZA.pop(next(iter(_BILESEN_HAFIZA)))
+    _BILESEN_HAFIZA[anah] = out
+    return out
+
+
+_BILESEN_HAFIZA: Dict[bytes, List[Tuple[int, np.ndarray,
+                                        Tuple[int, int, int, int]]]] = {}
+
+_HAFIZA_HADDI: int = 4096

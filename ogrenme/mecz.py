@@ -202,33 +202,27 @@ def vadi(metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
 
 
 
-def nakil(q, maske: np.ndarray) -> np.ndarray:
+def nakil(q, metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
     from nefs.ara import ara
-    psi = np.asarray(q.y.psi, complex)
-    lif = tuple(int(x) for x in q.y.ayar.lif)
-    sap: List[float] = []
-    for (f, alt) in uretecler(q):
-        Gpsi = _uretec_vur(psi, lif, f, alt)
-        ust = float(np.real(np.sum(np.conj(Gpsi) * Gpsi)))
-        ic = complex(np.sum(np.conj(psi) * Gpsi))
-        sap.append(max(0.0, ust - abs(ic) ** 2))
-    s = np.asarray(sap, float) * np.asarray(maske, float)
+    s = np.asarray(metrik, float) * np.asarray(maske, float)
     v = np.zeros_like(s)
+    _MECZ["nakil"] += 1.0
     if not s.size or float(s.max()) <= 0.0:
-        _MECZ["nakil"] += 1.0
         return v
-    dizi_genligi = np.abs(psi.reshape(psi.shape[0], -1)).sum(axis=0)
-    kuyu = -dizi_genligi / max(float(dizi_genligi.max()), 1e-300)
+    psi = np.asarray(q.y.psi, complex)
+    dizi = np.abs(psi.reshape(psi.shape[0], -1)).sum(axis=0)
+    tepe = max(float(dizi.max()), 1e-300)
+    kuyu = -dizi / tepe
     bedel = ara(ne="bedel", V=kuyu, E=float(kuyu.mean()),
                 genislikler=(1, 2, 4, 8))
     gecirgen = max((float(d["T"]) for d in bedel), default=0.0)
-    _MECZ["nakil"] += 1.0
     _MECZ["nakil_geçirgenliği"] = gecirgen
-    _MECZ["nakil_dizi_boyu"] = float(dizi_genligi.size)
-    kac = max(1, int(round(gecirgen * float(s.size))))
+    _MECZ["nakil_dizi_boyu"] = float(dizi.size)
+    kac = int(min(max(1, round(gecirgen * float(s.size))), s.size))
     for i in np.argsort(s)[::-1][:kac]:
         v[int(i)] = 1.0
-    return v / max(float(np.linalg.norm(v)), 1e-300)
+    n = float(np.linalg.norm(v))
+    return v / n if n > 0.0 else v
 
 
 class Memuriyet:
@@ -325,7 +319,7 @@ class Memuriyet:
         if ck["durak"] or nrm <= 1e-300:
             _MECZ["çukur"] += 1.0
             yon = (vadi(metrik, maske) if not ck["durak"]
-                   else nakil(q, maske))
+                   else nakil(q, metrik, maske))
             nrm = float(np.linalg.norm(yon))
         if nrm > 0.0:
             yon = yon / nrm

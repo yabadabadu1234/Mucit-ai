@@ -6,9 +6,30 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["HAD", "BUTCE_SANIYESI", "olc", "teftis", "rapor"]
+__all__ = ["HEDEF", "had", "had_sifirla", "BUTCE_SANIYESI",
+           "olc", "teftis", "rapor"]
 
-HAD: float = 1_000_000.0
+HEDEF: float = 1_000_000.0
+_HAD: list = []
+
+
+def had(yazmac_boyu: int = 0, kapi: int = 0) -> float:
+    if _HAD:
+        return float(_HAD[0])
+    from nefs.donanim import tamsayi_hizi
+    t = tamsayi_hizi()
+    sn = float(t["sn"])
+    assert sn > 0.0, (
+        "tamsayı hızı yoklanamadı -- had ölçüsüz konamaz (ferman 5-B)")
+    kelime = float(t["satır"]) * float(t["kelime"])
+    d = float(yazmac_boyu) if int(yazmac_boyu) > 0 else kelime
+    k = float(kapi) if int(kapi) > 0 else 1.0
+    _HAD.append(kelime / sn / max(d / kelime, 1.0) / k)
+    return float(_HAD[0])
+
+
+def had_sifirla() -> None:
+    _HAD.clear()
 
 BUTCE_SANIYESI: float = 86_400.0
 
@@ -113,16 +134,21 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     }
 
 
-def teftis(ayar=None, had: float = HAD, sert: bool = True) -> Dict[str, Any]:
+def teftis(ayar=None, had_degeri: float = 0.0, sert: bool = True) -> Dict[str, Any]:
     o = olc(ayar)
-    o["had"] = float(had)
-    o["geçti"] = bool(o["belirteç_sn"] >= float(had))
+    h = float(had_degeri) if float(had_degeri) > 0.0 else had()
+    o["had"] = h
+    o["hedef"] = float(HEDEF)
+    o["hedefe_kat"] = float(HEDEF) / max(1e-9, o["belirteç_sn"])
+    o["geçti"] = bool(o["belirteç_sn"] >= h)
     if sert:
         assert o["geçti"], (
             "HIZ HADDİ TUTMUYOR: %.1f belirteç/sn ölçüldü, %.0f lâzım "
-            "(%.0f kat eksik). Ferman: hız garantisi almadan umumi tâlim "
-            "başlatılmaz. En pahalı uzuv: %s"
-            % (o["belirteç_sn"], had, had / max(1e-9, o["belirteç_sn"]),
+            "(%.1f kat eksik). Had ELLE YAZILMADI, donanımdan ÖLÇÜLDÜ "
+            "(ferman 5-B). Hedef %.0f'e uzaklık: %.1f kat. "
+            "En pahalı uzuv: %s"
+            % (o["belirteç_sn"], h, h / max(1e-9, o["belirteç_sn"]),
+               HEDEF, o["hedefe_kat"],
                o["tek_meleke"][0][0] if o["tek_meleke"] else "?"))
     return o
 
@@ -134,9 +160,12 @@ def rapor(ayar=None) -> str:
          % (o["d"], o["lif"], o["parametre"]),
          "  ölçülen: %d belirteç, %.3f sn → **%.1f belirteç/sn**"
          % (o["belirteç"], o["kayıp_süresi"], o["belirteç_sn"]),
-         "  HAD    : %.0f belirteç/sn   →  %s  (%.0f kat eksik)"
-         % (HAD, "GEÇTİ" if o["belirteç_sn"] >= HAD else "KALDI",
-            HAD / max(1e-9, o["belirteç_sn"])),
+         "  HAD    : %.0f belirteç/sn   →  %s  (%.1f kat eksik)"
+         "   [ÖLÇÜLDÜ, elle yazılmadı -- ferman 5-B]"
+         % (had(), "GEÇTİ" if o["belirteç_sn"] >= had() else "KALDI",
+            had() / max(1e-9, o["belirteç_sn"])),
+         "  HEDEF  : %.0f belirteç/sn   →  %.1f kat uzakta"
+         % (HEDEF, HEDEF / max(1e-9, o["belirteç_sn"])),
          "", "  --- KALEM KALEM (tahmin yok, saatlendi) ---"]
     for k in o["kalem"]:
         s.append("    %-26s %5d çağrı  %8.3f sn  (%8.4f sn/çağrı)"

@@ -313,3 +313,56 @@ def chebyshev(x, derece: int):
 
 def rapor() -> str:
     return _gosterim()
+
+
+def _so4_ureteci(teta: np.ndarray) -> np.ndarray:
+    t = np.asarray(teta, float)
+    A = np.zeros(t.shape[:-1] + (4, 4))
+    iu = np.triu_indices(4, 1)
+    A[..., iu[0], iu[1]] = t[..., :6]
+    return A - np.swapaxes(A, -1, -2)
+
+
+def dik_iki_kubit_yigin(teta: np.ndarray) -> np.ndarray:
+    A = -2.0 * _so4_ureteci(teta)
+    oz, V = np.linalg.eigh(1j * A)
+    E = np.matmul(V * np.exp(-1j * oz)[..., None, :],
+                  np.conjugate(np.swapaxes(V, -1, -2)))
+    return np.real(E).astype(np.float64)
+
+
+def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
+    return dik_iki_kubit_yigin(np.asarray(teta, float).reshape(-1)[:6])
+
+
+def _so4_temeli() -> np.ndarray:
+    iu = np.triu_indices(4, 1)
+    T = np.zeros((6, 4, 4))
+    for k in range(6):
+        T[k, iu[0][k], iu[1][k]] = 1.0
+        T[k, iu[1][k], iu[0][k]] = -1.0
+    return -2.0 * T
+
+
+def dik_iki_kubit_turevi(teta: np.ndarray) -> np.ndarray:
+    t = np.asarray(teta, float).reshape(-1)[:6]
+    A = -2.0 * _so4_ureteci(t)
+    oz, V = np.linalg.eigh(1j * A)
+    lam = -1j * oz
+    e = np.exp(lam)
+    fark = lam[:, None] - lam[None, :]
+    bol = np.where(np.abs(fark) < 1e-12,
+                   e[:, None],
+                   (e[:, None] - e[None, :]) / np.where(
+                       np.abs(fark) < 1e-12, 1.0, fark))
+    Vd = np.conjugate(V.T)
+    out = np.zeros((6, 4, 4), complex)
+    for k in range(6):
+        Mk = Vd @ _SO4_TEMELI[k] @ V
+        out[k] = V @ (Mk * bol) @ Vd
+    return out
+
+
+KAPI_USULU: str = "us"
+
+_SO4_TEMELI = _so4_temeli()

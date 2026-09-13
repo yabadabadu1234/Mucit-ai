@@ -290,11 +290,12 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         "kelam_dökümü": ayrisma,
     }
     if hiz_ayari is not None:
-        from tanilama.hiz_teftisi import BUTCE_SANIYESI, HAD, olc
+        from tanilama.hiz_teftisi import BUTCE_SANIYESI, HEDEF, had, olc
         h = olc(hiz_ayari)
         o["belirteç_sn"] = float(h["belirteç_sn"])
-        o["hız_haddi"] = float(HAD)
-        o["hız_geçti"] = bool(h["belirteç_sn"] >= HAD)
+        o["hız_haddi"] = float(had())
+        o["hız_hedefi"] = float(HEDEF)
+        o["hız_geçti"] = bool(h["belirteç_sn"] >= had())
         o["kayıp_süresi"] = float(h["kayıp_süresi"])
         o["en_pahalı_uzuv"] = (h["tek_meleke"][0][0]
                                if h["tek_meleke"] else "?")
@@ -312,15 +313,15 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
             "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
             "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
         if "belirteç_sn" in o:
-            from tanilama.hiz_teftisi import HAD
+            from tanilama.hiz_teftisi import had
             assert o["hız_geçti"], (
                 "HIZ HADDİ TUTMUYOR -- TÂLİM BAŞLAMAZ.\n"
                 "  ölçülen : %.1f belirteç/sn\n"
                 "  had     : %.0f belirteç/sn  (%.0f kat eksik)\n"
                 "  bir kayıp çağrısı: %.4f sn   en pahalı uzuv: %s\n"
                 "  Ferman: hız garantisi elde etmeden umumi tâlim "
-                "başlatılmaz." % (o["belirteç_sn"], HAD,
-                                  HAD / max(1e-9, o["belirteç_sn"]),
+                "başlatılmaz." % (o["belirteç_sn"], had(),
+                                  had() / max(1e-9, o["belirteç_sn"]),
                                   o["kayıp_süresi"], o["en_pahalı_uzuv"]))
     return o
 
@@ -463,9 +464,10 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                     ayniyet=float(ayar.hafiza_ayniyet),
                     buhar=float(ayar.hafiza_buhar), tohum=int(ayar.tohum))
     _sayac = {"çağrı": 0}
-    from tanilama.hiz_teftisi import HAD as _HIZ_HADDI
+    from tanilama.hiz_teftisi import had as _hiz_haddi
     olcer = Hizolcer(belirtec_basina=len(veri) * int(ayar.pencere),
-                     had=float(_HIZ_HADDI), ad="küllî mizan", sert=True,
+                     had=float(_hiz_haddi(int(ayar.d), int(ayar.karo))),
+                     ad="küllî mizan", sert=True,
                      canli_saniye=float(ayar.canli_saniye))
     hizolcer_bagla(olcer)
 

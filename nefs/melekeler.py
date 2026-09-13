@@ -26,8 +26,7 @@ from .musahede import ortu
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
                       kontrollu_donme)
 from .zirh import vicdan
-from .musahede import (artiklar, delil_dizileri, kaide,
-                    nakz_bul, ayir)
+from .musahede import (artiklar, delil_dizileri, nakz_bul, ayir)
 
 
 __all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
