@@ -182,16 +182,6 @@ def _gosterim() -> str:
              f"   geçerli mi? {dugum_gecerli_mi(t)}")
     s.append("  (Ceza terimiyle olsaydı bu hâlde payda sıfırlanabilirdi.)")
 
-    s.append(f"  bağıl fark: {np.max(np.abs(g - naif) / np.abs(g)):.2%}"
-             "  — kuyruk toplamı düşürülünce katkının çoğu kayboluyor")
-    def L(sv_):
-        return float(np.sum(dL_dt * artislardan_dugum(0.0, sv_)))
-    h = 1e-6
-    say = np.array([(L(sv + h * np.eye(3)[i]) - L(sv - h * np.eye(3)[i]))
-                    / (2 * h) for i in range(3)])
-    s.append(f"  sayısal ∂L/∂s = {np.array2string(say, precision=4)}"
-             f"   doğruyla fark = {np.max(np.abs(say - g)):.2e}")
-
     s.append("\n=== Bükülme dizeyi kapalı formda ===")
     for G, k in ((5, 3), (8, 3), (10, 4)):
         S = bukulme_dizeyi(G, k)

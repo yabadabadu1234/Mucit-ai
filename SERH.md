@@ -44794,3 +44794,54 @@ Burada yeni yoktur. Ferman 2-C ve *"kuzunun hakkı sorulur"* gereği
 kesmiyorum ve sebebini yazıyorum. Bu, bir kararın önermesinin kodla
 yüzleşince yanlış çıktığı **üçüncü** vak'adır (evvelkiler:
 `idrak/kubit.py`, `ogrenme/rkhs.py`).
+
+### TANIMSIZ AD KIRIKLARI KAPATILDI (yürüyüş §A.3-4)
+
+Yürüyüşün saydığı dört kırığın hepsi kapandı ve **beşincisi** bu
+turda ayrıştırma ağacı taranırken bulundu:
+
+**1. `MAKAM_ESIKLERI` (`nefs/zihin_durumu.py:336`) -- CANLI KIRIKTI.**
+`makam_mertebeleri` `nefs/mantik.py:53` ve `:95`ten çağrılıyor, yâni
+her çağrıda `NameError` veriyordu. Sebebi belli: `MAKAM_ESIKLERI` bir
+**sabit eşik cetveliydi** ve ferman 1-J onu yasaklıyor. Çaresi cetveli
+geri getirmek değil, eşiği **fonksiyondan türetmektir**:
+
+    makam_mertebesi(derece) = MAKAM_ADLARI[ ⌊derece × mertebe_sayısı⌋ ]
+
+Eşik yazılmıyor; derece ile mertebe sayısından **çıkıyor**. Mertebe
+sayısı da elle konmuş bir sayı değil, `MAKAM_ADLARI`nın kendi boyudur
+(Vehim · Şek · Zan · Zann-ı gālib · Yakîn).
+
+**2. `tunel_maliyet_cetveli` (`nefs/zirh.py:724`).** Yalnız
+`_rapor_bukum()` içinde geçiyordu; o da `__main__` kesilince öksüz
+kalmış bir gösterimdi. Ferman 1-L gereği kesildi. Uzvun kendisi
+Karar 31(2) ile TÜNEL uzvuna (Karar 28'in 7. uzvu) yazılacak.
+
+**3. `isaret_vur` (`nefs/zirh.py:22`).** Yalnız `__all__`da duruyordu,
+gövdesi yoktu -- yâni `__all__` **yalan söylüyordu**. Kaydı silindi;
+uzvun kendisi Karar 31(3) ile D=2 MPO çekirdeği olarak yazılacak.
+
+**4. `from .meclis import meclis` (`nefs/kulli_kayip.py:947`).**
+`nefs/meclis.py` yok, çünkü **ferman 1-U meclisi yasaklıyor**. Bu
+satır `suz` içindeydi ve yakîni bir "meclis ihtiyatı" ile çarpıyordu
+-- yâni yasaklanmış usulün ta kendisi. Meclis bloğu kesildi; `suz`
+organ olarak yerinde duruyor (ferman 2-C).
+
+**5. `IzafiMevki2D` (`nefs/musahede.py:409`) -- BU TURDA BULUNDU.**
+Ağaç taraması `_komsuluk` adının tanımsız olduğunu gösterdi. Sınıf
+hiçbir yerden çağrılmıyor, `_komsuluk` hiçbir yerde tanımlı değil ve
+`ebat_kanunu_coz` ferman 1-P'nin **açıkça yasakladığı** ölçü
+kestirimidir (*"ızgaranın ebadını kestiren hiçbir yardımcı mimari
+yoktur"*). Üç sebep birden: kesildi.
+
+### DEPO GENELİ AĞAÇ TARAMASI -- USUL
+
+Ferman 1-L koşmayı yasakladığı için tanımsız ad araması **ayrıştırma
+ağacı okunarak** yapıldı: 80 kod dosyasının her birinde `Load`
+bağlamındaki adlar, yerel + modül seviyesi tanımlarla kıyaslandı.
+Tarayıcı kaba olduğu için iç içe fonksiyon kapsamlarında yalancı
+bulgu veriyor (`alt`, `ust`, `ad` gibi parametre adları); onlar tek
+tek okunup elendi. Geriye kalan iki hakikî bulgu -- `_komsuluk` ve
+kendi kesimimin `ogrenme/izgara.py`de bıraktığı sarkık üç satır
+(`dL_dt`, `g`, `naif`) -- düzeltildi. `main/egitim.py`de eksik olan
+`List` ithali de bu taramada çıktı.

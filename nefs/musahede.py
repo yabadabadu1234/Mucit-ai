@@ -406,25 +406,6 @@ def otele(nx: int = 0, ny: int = 0, dx: int = 0, dy: int = 0,
             "Δ": (1, 0)}
 
 
-class IzafiMevki2D:
-
-    def __init__(self, yaricap: int = 1) -> None:
-        self.yaricap = int(yaricap)
-        self._kod = None
-
-    def izgara_donustur(self, g) -> "np.ndarray":
-        B = _komsuluk(g, self.yaricap)
-        return B.reshape(-1, B.shape[2]).astype(float)
-
-    def durum_vektoru_kur(self, g) -> "np.ndarray":
-        v = self.izgara_donustur(g).reshape(-1)
-        n = np.linalg.norm(v)
-        return v / n if n > 0 else v
-
-    def ebat_kanunu_coz(self, g):
-        import numpy as _np
-        a = _np.atleast_2d(_np.asarray(g, int))
-        return (int(a.shape[0]), int(a.shape[1]))
 
 
 def tiktoken_2d_kodla(metin: str, k=None):

@@ -19,7 +19,7 @@ __all__ = [
     "vietoris_rips", "dogum_olum_cetveli", "cetveller_arasi_mesafe",
     "kahan_toplam",
     "ZirhAyari", "ZirhIzi", "zirhla", "dalgayi_yokla",
-    "Usul", "USULLER", "ALANLAR", "isaret_vur",
+    "Usul", "USULLER", "ALANLAR",
     "vicdan",
     "SINIF_CIHETI", "NIZAM_BANDI", "SADAKAT_SIDDETI",
     "taahhude_yuzlestir", "muhru_stabilizerle_yuzlestir",
@@ -717,74 +717,6 @@ def aharonov_bohm(N: int = 8, aki_bolu_2pi: float = 0.37
     return d
 
 
-def _rapor_bukum() -> str:
-    s = []
-    s.append("=== M20: tünelleme O(1) DEĞİL, üstel pahalı ===")
-    s.append("  genişlik      γ          T = e^{−γ}     beklenen deneme")
-    for d in tunel_maliyet_cetveli((1, 2, 4, 8, 16)):
-        s.append("  %8.0f   %8.4f      %.3e      %.3e"
-                 % (d["genişlik"], d["γ"], d["T"], d["beklenen_deneme"]))
-    s.append("  Risalenin kendi formülü T = e^{−γ} diyor; aynı sayfada")
-    s.append("  'O(1) mertebesinde geçilir' demek onunla çelişiyor.")
-    s.append("  Doğru kazanç: klasikte SIFIR olan olasılık POZİTİF oluyor.")
-
-    s.append("\n=== M21: düz bağlantı, trivial OLMAYAN holonomi ===")
-    for aki in (0.0, 0.25, 0.37, 0.5, 1.0):
-        d = aharonov_bohm(8, aki)
-        s.append("  akı/2π=%.2f   yerel F=0 mı? %s   yüz var mı? %s   "
-                 "W=%+.4f%+.4fi   |W−1|=%.4f   trivial mi? %s"
-                 % (aki, d["F_yerel_sıfır_mı"], d["yüz_var_mı"],
-                    d["holonomi"].real, d["holonomi"].imag, d["|W−1|"],
-                    d["holonomi_trivial_mi"]))
-    s.append("  akı tam sayı olduğunda holonomi trivial oluyor; arada")
-    s.append("  DEĞİL. F her hâlde sıfır. Yani 'F=0 ⟹ ΔΦ=0' yanlış;")
-    s.append("  doğru ölçüt W(γ)=1'dir. (Aharonov–Bohm.)")
-
-    s.append("\n=== M22: GRAPE gradyanı O(Δt²) yaklaşımı ===")
-    r = np.random.default_rng(1)
-    n = 4
-
-    def herm(sd):
-        A = (np.random.default_rng(sd).normal(size=(n, n))
-             + 1j * np.random.default_rng(sd + 99).normal(size=(n, n)))
-        return A + A.conj().T
-
-    H0, Hk = herm(1), [herm(2), herm(3)]
-    psi0 = np.zeros(n, complex); psi0[0] = 1
-    hedef = np.zeros(n, complex); hedef[n - 1] = 1
-    s.append("     M      Δt      sonlu fark      GRAPE        fark      "
-             "fark/Δt²")
-    for M in (10, 20, 40, 80, 160):
-        om = [np.full(M, 0.3), np.full(M, -0.2)]
-        dt = 1.0 / M
-        j, k = M // 3, 0
-        sf = sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
-        g = grape_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
-        s.append("  %5d  %.5f  %+.8f  %+.8f  %.2e  %.4f"
-                 % (M, dt, sf, g, abs(g - sf), abs(g - sf) / dt ** 2))
-    s.append("  'fark/Δt²' sütunu sabitleniyor: hata tam olarak O(Δt²).")
-    s.append("  Kaynak bunu EŞİTLİK olarak yazıyor; yaklaşımdır.")
-
-    s.append("\n=== Tam (Fréchet) gradyan sonlu farkla uyuşuyor mu? ===")
-    for M in (10, 20, 40):
-        om = [np.full(M, 0.3), np.full(M, -0.2)]
-        j, k = M // 3, 0
-        sf = sonlu_fark_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
-        tam = tam_gradyan(H0, Hk, om, psi0, hedef, 1.0)[k][j]
-        yak = grape_gradyani(H0, Hk, om, psi0, hedef, 1.0)[k][j]
-        s.append("  M=%3d  sonlu fark=%+.10f   tam=%+.10f (fark %.2e)   "
-                 "GRAPE=%+.10f (fark %.2e)"
-                 % (M, sf, tam, abs(tam - sf), yak, abs(yak - sf)))
-
-    s.append("\n=== GRAPE gerçekten çalışıyor mu? ===")
-    d = grape_kos(H0, Hk, psi0, hedef, 1.0, M=40, tur=300)
-    s.append("  başlangıç sadakat = %.6f   son sadakat = %.6f"
-             % (d["seyir"][0], d["sadakat"]))
-    s.append("  tekdüze artıyor mu? %s   (tur sayısı %d)"
-             % (d["tekdüze_mi"], len(d["seyir"])))
-    s.append("  Yaklaşık gradyan eniyilemeyi bozmuyor: adım kabul ölçütü")
-    s.append("  sadakati doğrudan sınadığı için yanlış yöne gidilmiyor.")
-    return "\n".join(s)
 
 def rapor() -> str:
     s: List[str] = ["ZIRH ÇİPİ -- Küme 3 tevhidi"]

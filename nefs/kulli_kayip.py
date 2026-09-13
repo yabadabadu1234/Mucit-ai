@@ -944,15 +944,7 @@ def suz(gorev, yakin_esigi: float = YAKIN_ESIGI,
     ihtiyat = 0.8 if c["H1"] else 1.0
     yakin = istikra * (0.5 if muphem else 1.0) * ihtiyat * kanit
 
-    from .meclis import meclis
-    mec = meclis(ciftler, girdiler)
-    yakin *= float(mec["ihtiyat"])
-    dusunce.append(
-        "Meclisi topluyorum: %d uzuv (rey %.3f), %d hakem (rey %.3f), "
-        "%d düşen → ihtiyat %.3f, yakînim %.3f."
-        % (len(mec["uzuv_rey"]), mec["uzuv"], len(mec["hakem_rey"]),
-           mec["hakem"], len(mec["eksik"]), mec["ihtiyat"], yakin))
-    kes = mec["bilgi"].get("kestirilen_ölçü")
+    kes = None
     if kes is not None and girdiler:
         deneme = K[0](np.asarray(girdiler[0], np.int64))
         if deneme is not None and tuple(deneme.shape) != tuple(kes):

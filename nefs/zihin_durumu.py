@@ -10,7 +10,7 @@ from .qyazmac import QuditAyar, QuditYazmac
 
 __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI", "donme",
            "makam_derecesi", "makam_merdiveni",
-           "makam_kubit_manasi", "makam_mertebeleri"]
+           "makam_kubit_manasi", "makam_mertebeleri", "makam_mertebesi"]
 
 
 @dataclass
@@ -328,16 +328,14 @@ def makam_derecesi(kac: int) -> np.ndarray:
     n = 1 << int(kac)
     return np.arange(n, dtype=float) / max(n - 1, 1)
 
+def makam_mertebesi(derece: float) -> str:
+    L = len(MAKAM_ADLARI)
+    x = float(min(max(float(derece), 0.0), 1.0))
+    return MAKAM_ADLARI[min(int(x * L), L - 1)]
+
+
 def makam_mertebeleri(kac: int) -> Tuple[str, ...]:
-    d = makam_derecesi(kac)
-    out: List[str] = []
-    for x in d:
-        i = 0
-        for j, e in enumerate(MAKAM_ESIKLERI):
-            if x + 1e-12 >= e:
-                i = j
-        out.append(MAKAM_ADLARI[i])
-    return tuple(out)
+    return tuple(makam_mertebesi(x) for x in makam_derecesi(kac))
 
 def makam_kubit_manasi(kac: int) -> Dict[int, Tuple[int, ...]]:
     merd = makam_merdiveni(kac)
