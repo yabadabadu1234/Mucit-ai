@@ -9,6 +9,8 @@ import numpy as np
 from .qyazmac import QuditAyar, QuditYazmac
 
 __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI", "donme",
+           "donme_turevi", "kontrollu_donme", "kontrollu_donme_turevi",
+           "faz_z", "degil_x",
            "makam_derecesi", "makam_merdiveni",
            "makam_kubit_manasi", "makam_mertebeleri", "makam_mertebesi"]
 
@@ -116,17 +118,8 @@ class QYazmac:
     def veri_yuvasi(self) -> int:
         return int(self.y.veri_yuvasi)
 
-    def veri(self, i: int, j: int) -> int:
-        return self.y.veri(i, j)
-
-    def yerel(self, i: int) -> int:
-        return self.y.yerel(i)
-
     def yereller(self) -> List[int]:
         return self.y.yereller()
-
-    def kulli(self, ad: str, j: int = 0) -> int:
-        return self.y.kulli(ad, j)
 
     def not_dus(self, meleke: str, mesaj: str = "") -> None:
         self.y.not_dus(meleke, mesaj)
@@ -173,14 +166,8 @@ class QYazmac:
     def bolge_olculeri(self) -> Dict[str, int]:
         return {ad: (j - i) for ad, (i, j) in self.y._sektor.items()}
 
-    def tek(self, i: int, G) -> None:
-        self.y.tek(i, G)
-
-    def tek_yigin(self, yuvalar, G) -> None:
-        self.y.tek_yigin(yuvalar, G)
-
-    def cift(self, i: int, G, baglar=None) -> None:
-        self.y.cift(i, G, baglar=baglar)
+    def tek_yigin(self, yuvalar, G, baglar=None) -> None:
+        self.y.tek_yigin(yuvalar, G, baglar=baglar)
 
     def veri_izgara(self, sutun=None, satir=None):
         return self.y.veri_izgara(sutun, satir)
@@ -195,17 +182,21 @@ class QYazmac:
         gec = self.y.gecerli_toplu(yv) & self.y.gecerli_toplu(yv + 1)
         self.y._dusen_kapi += int((~gec).sum())
         cift = self.y.cift
+        tekil = (baglar is not None and len(baglar) == m
+                 and not isinstance(baglar[0], tuple))
         for idx in np.flatnonzero(gec):
-            cift(int(yv[idx]), G[int(idx)], baglar=baglar)
+            cift(int(yv[idx]), G[int(idx)],
+                 baglar=(baglar[int(idx)] if tekil else baglar))
 
-    def uzak_cift(self, i: int, j: int, G) -> None:
-        self.y.uzak_cift(i, j, G)
+    def mpo_topla(self, alan: str, acilar=None, duraklar=None, j: int = 0,
+                  par=None, olcek: float = 1.0, egim=None, bag=None):
+        return self.y.mpo_topla(alan, acilar, duraklar, j, par, olcek,
+                                egim, bag)
 
-    def mpo_topla(self, alan: str, acilar=None, duraklar=None, j: int = 0):
-        return self.y.mpo_topla(alan, acilar, duraklar, j)
-
-    def mpo_dagit(self, alan: str, acilar=None, duraklar=None, j: int = 0):
-        return self.y.mpo_dagit(alan, acilar, duraklar, j)
+    def mpo_dagit(self, alan: str, acilar=None, duraklar=None, j: int = 0,
+                  par=None, olcek: float = 1.0, egim=None, bag=None):
+        return self.y.mpo_dagit(alan, acilar, duraklar, j, par, olcek,
+                                egim, bag)
 
     def kodla(self, E) -> None:
         E = np.asarray(E, float)
@@ -358,8 +349,19 @@ def faz_z() -> np.ndarray:
 def degil_x() -> np.ndarray:
     return np.array([[0.0, 1.0], [1.0, 0.0]], dtype=np.float64)
 
+def donme_turevi(teta: float) -> np.ndarray:
+    c, s = math.cos(float(teta)), math.sin(float(teta))
+    return np.array([[-s, -c], [c, -s]], dtype=np.float64)
+
+
 def kontrollu_donme(teta: float) -> np.ndarray:
     R = donme(teta)
     G = np.eye(4, dtype=np.float64)
     G[2:, 2:] = R
+    return G
+
+
+def kontrollu_donme_turevi(teta: float) -> np.ndarray:
+    G = np.zeros((4, 4), dtype=np.float64)
+    G[2:, 2:] = donme_turevi(teta)
     return G

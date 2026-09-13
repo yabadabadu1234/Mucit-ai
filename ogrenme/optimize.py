@@ -1410,7 +1410,11 @@ def gaye_kos(q: QYazmac, p) -> float:
     isaret = np.array([+1.0, +1.0, -1.0, -1.0])
     ham = np.asarray(_aci(p, "gaye.dogus", 4, 0.8), float)
     a = isaret * (math.pi / 16.0) * np.abs(np.tanh(ham))
-    kesme += q.mpo_topla("gaye", a, duraklar=kaynaklar, j=0)
+    par_d, olc_d = _aci_bagi(p, "gaye.dogus", 4, 0.8)
+    d_tanh = np.sign(ham) * (1.0 - np.tanh(ham) ** 2)
+    kesme += q.mpo_topla("gaye", a, duraklar=kaynaklar, j=0,
+                         par=par_d, olcek=olc_d * (math.pi / 16.0),
+                         egim=isaret * d_tanh)
 
     CZ = np.eye(4)
     CZ[3, 3] = -1.0
@@ -1419,9 +1423,10 @@ def gaye_kos(q: QYazmac, p) -> float:
     q.uzak_cift(q.kulli("tenakuz", 0), gay0, CZ)
 
     b = _aci(p, "gaye.mizan", 4, 0.6)
+    par_m, olc_m = _aci_bagi(p, "gaye.mizan", 4, 0.6)
     kesme += q.mpo_dagit("gaye", b,
                          duraklar=[q.kulli("mizan", j) for j in range(4)],
-                         j=0)
+                         j=0, par=par_m, olcek=olc_m)
 
     q.tek(q.kulli("sukut", 0), donme(0.25 * math.pi))
     kesme += q.mpo_dagit("gaye", [-abs(EPSILON_DURGUN)],
@@ -1434,6 +1439,14 @@ def _aci(p, anahtar: str, n: int, olcek: float) -> np.ndarray:
     if isinstance(p, QParametre):
         return olcek * p.al(anahtar, n)
     return olcek * p.v(anahtar, n)
+
+
+def _aci_bagi(p, anahtar: str, n: int, olcek: float):
+    d = p.defter() if hasattr(p, "defter") else {}
+    bas, _kac = d.get(anahtar, (-1, 0))
+    if int(bas) < 0:
+        return None, 0.0
+    return int(bas) + np.arange(int(n), dtype=np.int64), float(olcek)
 
 
 def odenen_bedel(q: QYazmac, ne: str = "landauer") -> Dict[str, float]:

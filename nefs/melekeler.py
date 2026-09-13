@@ -23,8 +23,9 @@ from matematik.sonsuz_mertebeler_teorisi import (Baglam, Cember, Deg, Evren, Tab
 
 from .kule import ince, kaba
 from .musahede import ortu
-from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme, faz_z,
-                      kontrollu_donme)
+from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme,
+                      donme_turevi, faz_z, kontrollu_donme,
+                      kontrollu_donme_turevi)
 from .zirh import vicdan
 from .musahede import (artiklar, delil_dizileri, nakz_bul, ayir)
 
@@ -442,6 +443,56 @@ class QMeleke:
     def birikim(self, p, n: int, olcek: float = 0.6) -> np.ndarray:
         return self.yay(p, self.BIRIKIM_ACI, n, olcek) / max(float(n), 1.0)
 
+    def dik_bagi(self, p, a, olcek: float = 0.6, devrik: bool = False):
+        from kuantum.kapilar import dik_iki_kubit_turevi
+        a = np.asarray(a, float).reshape(-1)
+        bas = self.aci_yeri(p, int(a.size))
+        if bas < 0:
+            return None
+        dG = dik_iki_kubit_turevi(a)
+        return [(int(bas) + j, float(olcek),
+                 np.asarray(dG[j]).T if devrik else dG[j])
+                for j in range(len(dG))]
+
+    def donme_baglari(self, par, olcek: float, acilar, egim=None,
+                      kontrollu: bool = False):
+        if par is None:
+            return None
+        t = np.asarray(acilar, float).reshape(-1)
+        e = (np.ones(t.size) if egim is None
+             else np.asarray(egim, float).reshape(-1))
+        pid = np.asarray(par, np.int64).reshape(-1)
+        assert pid.size == t.size and e.size == t.size, (
+            "her açının kendi parametresi ve eğimi olmalı: %d/%d/%d"
+            % (t.size, pid.size, e.size))
+        tur = kontrollu_donme_turevi if kontrollu else donme_turevi
+        return [(int(pid[i]), float(olcek),
+                 float(e[i]) * tur(float(t[i]))) for i in range(t.size)]
+
+    def yay_bagi(self, p, n_sabit: int, hedef: int, olcek: float = 0.6):
+        g = max(1, int(getattr(p, "genislik", 1)))
+        blok = int(n_sabit) * g
+        bas = self.aci_yeri(p, blok)
+        if bas < 0 or int(hedef) <= 0:
+            return None, 0.0
+        return (bas + (np.arange(int(hedef), dtype=np.int64) % blok),
+                float(olcek))
+
+    def aci_bagi(self, p, n: int, olcek: float = 0.6):
+        bas = self.aci_yeri(p, int(n))
+        if bas < 0:
+            return None, 0.0
+        return bas + np.arange(int(n), dtype=np.int64), float(olcek)
+
+    def birikim_bagi(self, p, n: int, olcek: float = 0.6):
+        g = max(1, int(getattr(p, "genislik", 1)))
+        blok = int(self.BIRIKIM_ACI) * g
+        bas = self.aci_yeri(p, blok)
+        if bas < 0:
+            return None, 0.0
+        return (bas + (np.arange(int(n), dtype=np.int64) % blok),
+                float(olcek) / max(float(n), 1.0))
+
     def uygula(self, q: QYazmac, p: "QParametre") -> None:
         raise NotImplementedError
 
@@ -530,11 +581,13 @@ class QMuhayyile(QMeleke):
     SINIF, CHI = "kurucu", 16
 
     def uygula(self, q, p):
-        G = dik_iki_kubit(self.aci(p, 6, 0.8))
+        a = self.aci(p, 6, 0.8)
+        G = dik_iki_kubit(a)
+        bag = self.dik_bagi(p, a, 0.8)
         k = q.veri_yuvasi
         for i in range(q.n_satir):
             for j in range(0, k - 2):
-                q.uzak_cift(q.veri(i, j), q.veri(i, j + 2), G)
+                q.uzak_cift(q.veri(i, j), q.veri(i, j + 2), G, baglar=bag)
 
 
 @qkaydet
@@ -544,9 +597,12 @@ class QTertip(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.7)
+        par, olc = self.yay_bagi(p, 4, q.n_satir, 0.7)
         j = q.veri_yuvasi - 1
         q.cift_yigin([q.veri(i, j) for i in range(q.n_satir)],
-                     np.stack([kontrollu_donme(float(t)) for t in a]))
+                     np.stack([kontrollu_donme(float(t)) for t in a]),
+                     baglar=self.donme_baglari(par, olc, a,
+                                               kontrollu=True))
 
 
 @qkaydet
@@ -555,9 +611,11 @@ class QTecrit(QMeleke):
     SINIF, CHI = "çözücü", None
 
     def uygula(self, q, p):
-        G = dik_iki_kubit(self.aci(p, 6, 0.5))
+        a = self.aci(p, 6, 0.5)
+        G = dik_iki_kubit(a)
         k = q.veri_yuvasi
-        q.cift_yigin(q.veri_izgara(range(1, k - 1, 2)), G.T)
+        q.cift_yigin(q.veri_izgara(range(1, k - 1, 2)), G.T,
+                     baglar=self.dik_bagi(p, a, 0.5, devrik=True))
 
 
 @qkaydet
@@ -575,7 +633,9 @@ class QMana(QMeleke):
     SINIF, CHI = "koruyucu", 4
 
     def uygula(self, q, p):
-        q.mpo_topla("tasdik", self.birikim(p, q.n_satir, 0.9))
+        a = self.birikim(p, q.n_satir, 0.9)
+        par, olc = self.birikim_bagi(p, q.n_satir, 0.9)
+        q.mpo_topla("tasdik", a, par=par, olcek=olc)
 
 
 @qkaydet
@@ -615,7 +675,9 @@ class QTenakuz(QMeleke):
     def uygula(self, q, p):
         a = self.birikim(p, q.n_satir, 1.1)
         isaret = np.where(np.arange(q.n_satir) % 2 == 0, 1.0, -1.0)
-        q.mpo_topla("tenakuz", a * isaret)
+        par, olc = self.birikim_bagi(p, q.n_satir, 1.1)
+        q.mpo_topla("tenakuz", a * isaret, par=par, olcek=olc,
+                    egim=isaret)
 
 
 @qkaydet
@@ -625,8 +687,11 @@ class QTenkit(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.4)
-        q.tek_yigin(q.yereller(),
-                    np.stack([donme(-abs(float(t))) for t in a]))
+        par, olc = self.yay_bagi(p, 4, q.n_satir, 0.4)
+        yer = q.yereller()
+        b = self.donme_baglari(par, olc, -np.abs(a), egim=-np.sign(a))
+        q.tek_yigin(yer, np.stack([donme(-abs(float(t))) for t in a]),
+                    baglar=None if b is None else b[:len(yer)])
 
 
 @qkaydet
@@ -636,8 +701,13 @@ class QTasdik(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
-        q.cift(q.kulli("tasdik", 0), kontrollu_donme(float(a[0])))
-        q.tek(q.kulli("tasdik", 1), donme(float(a[1])))
+        par, olc = self.aci_bagi(p, 2, 0.5)
+        b = self.donme_baglari(par, olc, a, kontrollu=True)
+        t = self.donme_baglari(par, olc, a)
+        q.cift(q.kulli("tasdik", 0), kontrollu_donme(float(a[0])),
+               baglar=None if b is None else [b[0]])
+        q.tek(q.kulli("tasdik", 1), donme(float(a[1])),
+              bag=None if t is None else [t[1]])
 
 
 @qkaydet
@@ -647,9 +717,12 @@ class QGaye(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 4, 0.5)
+        par, olc = self.aci_bagi(p, 4, 0.5)
+        b = self.donme_baglari(par, olc, a, kontrollu=True)
         for j in range(2):
             q.uzak_cift(q.kulli("tasdik", j), q.kulli("mizan", j),
-                        kontrollu_donme(float(a[j])))
+                        kontrollu_donme(float(a[j])),
+                        baglar=None if b is None else [b[j]])
 
 
 @qkaydet
@@ -659,9 +732,12 @@ class QMerak(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
+        par, olc = self.aci_bagi(p, 2, 0.5)
         q.tek_yigin([q.kulli("nakz", j) for j in range(2)],
                     np.stack([donme(0.25 * math.pi + float(t))
-                              for t in a[:2]]))
+                              for t in a[:2]]),
+                    baglar=self.donme_baglari(
+                        par, olc, 0.25 * math.pi + a[:2]))
 
 
 @qkaydet
@@ -672,9 +748,14 @@ class QDenemeYanilma(QMeleke):
     def uygula(self, q, p):
         k = q.veri_yuvasi
         a = self.aci(p, k, 0.3)
+        par, olc = self.aci_bagi(p, k, 0.3)
         Gk = np.tile(np.stack([donme(float(t)) for t in a]),
                      (q.n_satir, 1, 1))
-        q.tek_yigin(q.veri_izgara(), Gk)
+        yv = list(q.veri_izgara())
+        b = self.donme_baglari(par, olc, a)
+        q.tek_yigin(yv, Gk,
+                    baglar=None if b is None
+                    else [b[i % len(b)] for i in range(len(yv))])
 
 
 @qkaydet
@@ -684,8 +765,10 @@ class QIhtimal(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 4, 0.4)
+        par, olc = self.aci_bagi(p, 4, 0.4)
         q.tek_yigin([q.kulli("mizan", j) for j in range(4)],
-                    np.stack([donme(float(t)) for t in a[:4]]))
+                    np.stack([donme(float(t)) for t in a[:4]]),
+                    baglar=self.donme_baglari(par, olc, a[:4]))
 
 
 @qkaydet
@@ -694,9 +777,11 @@ class QKiyas(QMeleke):
     SINIF, CHI = "kurucu", 8
 
     def uygula(self, q, p):
-        G = dik_iki_kubit(self.aci(p, 6, 0.5))
+        a = self.aci(p, 6, 0.5)
+        G = dik_iki_kubit(a)
+        bag = self.dik_bagi(p, a, 0.5)
         for i in range(q.n_satir - 1):
-            q.uzak_cift(q.veri(i, 0), q.veri(i + 1, 0), G)
+            q.uzak_cift(q.veri(i, 0), q.veri(i + 1, 0), G, baglar=bag)
 
 
 @qkaydet
@@ -705,12 +790,13 @@ class QTemsil(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
-        G = dik_iki_kubit(self.aci(p, 6, 0.6))
+        a = self.aci(p, 6, 0.6)
+        G = dik_iki_kubit(a)
         k = q.veri_yuvasi
         sol = [q.veri(i, 0) for i in range(q.n_satir)]
         if k >= 4:
             sol += [q.veri(i, 2) for i in range(q.n_satir)]
-        q.cift_yigin(sol, G)
+        q.cift_yigin(sol, G, baglar=self.dik_bagi(p, a, 0.6))
 
 
 @qkaydet
@@ -749,7 +835,9 @@ class QTefekkur(QMeleke):
                 Gl.append(R)
         q.tek_yigin(yuv, np.stack(Gl))
         son = q.kulli("makam", 0)
+        par, olc = self.aci_bagi(p, len(lifler), 1.0)
         katki: Dict[int, float] = {}
+        egim: Dict[int, Dict[int, float]] = {}
         for lif in lifler:
             teta = lif.olcek * (1.0 + 0.3 * float(a[lif.yuva]))
             bas = q.veri(0, lif.yuva % k)
@@ -757,11 +845,24 @@ class QTefekkur(QMeleke):
             if len(duraklar) < 2:
                 continue
             pay = teta / len(duraklar)
+            dpay = lif.olcek * 0.3 / len(duraklar)
             for d in duraklar:
                 katki[d] = katki.get(d, 0.0) + pay
+                yer = egim.setdefault(int(lif.yuva), {})
+                yer[d] = yer.get(d, 0.0) + dpay
         if len(katki) >= 2:
             dur = sorted(katki)
-            q.mpo_topla("makam", [katki[d] for d in dur], duraklar=dur)
+            yeri = {d: i for i, d in enumerate(dur)}
+            bag = None
+            if par is not None:
+                bag = []
+                for yuva, adresler in egim.items():
+                    w = np.zeros(len(dur), float)
+                    for d, v in adresler.items():
+                        w[yeri[d]] = v
+                    bag.append((int(par[yuva]), float(olc), w))
+            q.mpo_topla("makam", [katki[d] for d in dur], duraklar=dur,
+                        bag=bag)
 
 
 @qkaydet
@@ -770,10 +871,14 @@ class QIllet(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
-        a = self.yay(p, 4, max(q.n_satir - 1, 1), 0.5)
+        n = max(q.n_satir - 1, 1)
+        a = self.yay(p, 4, n, 0.5)
+        par, olc = self.yay_bagi(p, 4, n, 0.5)
+        b = self.donme_baglari(par, olc, a, kontrollu=True)
         for i in range(q.n_satir - 1):
             q.uzak_cift(q.veri(i, 0), q.veri(i + 1, 0),
-                        kontrollu_donme(float(a[i])))
+                        kontrollu_donme(float(a[i])),
+                        baglar=None if b is None else [b[i]])
 
 
 @qkaydet
@@ -782,7 +887,10 @@ class QMantik(QMeleke):
     SINIF, CHI = "koruyucu", 4
 
     def uygula(self, q, p):
-        q.mpo_topla("nakz", -np.abs(self.birikim(p, q.n_satir, 0.8)))
+        a = self.birikim(p, q.n_satir, 0.8)
+        par, olc = self.birikim_bagi(p, q.n_satir, 0.8)
+        q.mpo_topla("nakz", -np.abs(a), par=par, olcek=olc,
+                    egim=-np.sign(a))
 
 
 @qkaydet
@@ -791,10 +899,17 @@ class QIspat(QMeleke):
     SINIF, CHI = "çözücü", None
 
     def uygula(self, q, p):
-        a = self.yay(p, 4, max(q.n_satir - 1, 1), 0.5)
+        n = max(q.n_satir - 1, 1)
+        a = self.yay(p, 4, n, 0.5)
+        par, olc = self.yay_bagi(p, 4, n, 0.5)
         for i in range(q.n_satir - 1):
-            teta = float(a[i]) / (1.0 + 0.1 * i)
-            q.uzak_cift(q.yerel(i), q.yerel(i + 1), kontrollu_donme(teta))
+            sonum = 1.0 / (1.0 + 0.1 * i)
+            teta = float(a[i]) * sonum
+            b = self.donme_baglari(
+                None if par is None else [par[i]], olc * sonum, [teta],
+                kontrollu=True)
+            q.uzak_cift(q.yerel(i), q.yerel(i + 1),
+                        kontrollu_donme(teta), baglar=b)
 
 
 @qkaydet
@@ -815,8 +930,11 @@ class QTemkin(QMeleke):
 
     def uygula(self, q, p):
         a = self.yay(p, 4, q.n_satir, 0.12)
-        q.tek_yigin(q.yereller(),
-                    np.stack([donme(float(t)) for t in a]))
+        par, olc = self.yay_bagi(p, 4, q.n_satir, 0.12)
+        yer = q.yereller()
+        b = self.donme_baglari(par, olc, a)
+        q.tek_yigin(yer, np.stack([donme(float(t)) for t in a]),
+                    baglar=None if b is None else b[:len(yer)])
 
 
 @qkaydet
@@ -836,10 +954,16 @@ class QTashih(QMeleke):
     def uygula(self, q, p):
         k = q.veri_yuvasi
         tetkik = QTetkik().aci(p, k, 0.2)
+        par, olc = QTetkik().aci_bagi(p, k, 0.2)
         lam = float(np.tanh(self.aci(p, 1, 1.0)[0]))
         Gk = np.tile(np.stack([donme(-lam * float(t)) for t in tetkik]),
                      (q.n_satir, 1, 1))
-        q.tek_yigin(q.veri_izgara(), Gk)
+        yv = list(q.veri_izgara())
+        b = self.donme_baglari(par, olc, -lam * tetkik,
+                               egim=np.full(k, -lam))
+        q.tek_yigin(yv, Gk,
+                    baglar=None if b is None
+                    else [b[i % len(b)] for i in range(len(yv))])
 
 
 @qkaydet
@@ -851,9 +975,11 @@ class QTeyit(QMeleke):
         k = q.veri_yuvasi
         if k < 2:
             return
-        G = dik_iki_kubit(self.aci(p, 6, 0.5))
+        a = self.aci(p, 6, 0.5)
+        G = dik_iki_kubit(a)
+        bag = self.dik_bagi(p, a, 0.5)
         for i in range(q.n_satir):
-            q.uzak_cift(q.veri(i, 0), q.yerel(i), G)
+            q.uzak_cift(q.veri(i, 0), q.yerel(i), G, baglar=bag)
 
 
 @qkaydet
@@ -862,7 +988,9 @@ class QTahkik(QMeleke):
     SINIF, CHI = "koruyucu", 4
 
     def uygula(self, q, p):
-        q.mpo_topla("tasdik", self.birikim(p, q.n_satir, 1.0), j=1)
+        a = self.birikim(p, q.n_satir, 1.0)
+        par, olc = self.birikim_bagi(p, q.n_satir, 1.0)
+        q.mpo_topla("tasdik", a, j=1, par=par, olcek=olc)
 
 
 @qkaydet
@@ -876,8 +1004,10 @@ class QTedebbur(QMeleke):
         GU = np.linalg.matrix_power(np.asarray(G, float), self.UFUK)
         q.cift_yigin([q.veri(i, 0) for i in range(q.n_satir)], GU)
         a = self.aci(p, 2, 0.3)
+        par2, olc2 = self.aci_bagi(p, 2, 0.3)
         q.tek_yigin([q.kulli("mizan", 2 + j) for j in range(2)],
-                    np.stack([donme(float(t)) for t in a[:2]]))
+                    np.stack([donme(float(t)) for t in a[:2]]),
+                    baglar=self.donme_baglari(par2, olc2, a[:2]))
 
 
 @qkaydet
@@ -887,20 +1017,31 @@ class QSekZanYakin(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 5, 0.6)
+        par, olc = self.aci_bagi(p, 5, 0.6)
+        isaret = np.array([1.0, -1.0, 1.0, 1.0, 1.0])
+        teta = np.array([abs(a[0]), -abs(a[1]), abs(a[2]), a[3],
+                         abs(a[4])], float)
+        egim = isaret * np.array([np.sign(a[0]), np.sign(a[1]),
+                                  np.sign(a[2]), 1.0, np.sign(a[4])])
+        b = self.donme_baglari(par, olc, teta, egim=egim, kontrollu=True)
         mk = q._alan["makam"][1]
+
+        def _b(i):
+            return None if b is None else [b[i]]
+
         q.uzak_cift(q.kulli("tasdik", 0), q.kulli("makam", 0),
-                    kontrollu_donme(abs(float(a[0]))))
+                    kontrollu_donme(float(teta[0])), baglar=_b(0))
         q.uzak_cift(q.kulli("nakz", 0), q.kulli("makam", 0),
-                    kontrollu_donme(-abs(float(a[1]))))
+                    kontrollu_donme(float(teta[1])), baglar=_b(1))
         if mk >= 2:
             q.uzak_cift(q.kulli("tenakuz", 0), q.kulli("makam", 1),
-                        kontrollu_donme(abs(float(a[2]))))
+                        kontrollu_donme(float(teta[2])), baglar=_b(2))
         if mk >= 3:
             q.uzak_cift(q.kulli("tasdik", 1), q.kulli("makam", 2),
-                        kontrollu_donme(float(a[3])))
+                        kontrollu_donme(float(teta[3])), baglar=_b(3))
         q.uzak_cift(q.kulli("makam", 1 if mk >= 2 else 0),
                     q.kulli("sukut", 0),
-                    kontrollu_donme(abs(float(a[4]))))
+                    kontrollu_donme(float(teta[4])), baglar=_b(4))
 
 
 @qkaydet
@@ -910,15 +1051,26 @@ class QMuhakeme(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 6, 0.5)
+        par, olc = self.aci_bagi(p, 6, 0.5)
+        yon = np.array([1.0, 1.0, -1.0, -1.0, -1.0, -1.0])
+        teta = yon * np.abs(a[:6])
+        b = self.donme_baglari(par, olc, teta, egim=yon * np.sign(a[:6]),
+                               kontrollu=True)
+
+        def _b(i):
+            return None if b is None else [b[i]]
+
         for j in range(2):
             q.uzak_cift(q.kulli("tasdik", j), q.kulli("mizan", j),
-                        kontrollu_donme(abs(float(a[j]))))
+                        kontrollu_donme(float(teta[j])), baglar=_b(j))
         for j in range(2):
             q.uzak_cift(q.kulli("tenakuz", j), q.kulli("mizan", 2 + j),
-                        kontrollu_donme(-abs(float(a[2 + j]))))
+                        kontrollu_donme(float(teta[2 + j])),
+                        baglar=_b(2 + j))
         for j in range(2):
             q.uzak_cift(q.kulli("nakz", j), q.kulli("mizan", j),
-                        kontrollu_donme(-abs(float(a[4 + j]))))
+                        kontrollu_donme(float(teta[4 + j])),
+                        baglar=_b(4 + j))
 
 
 @qkaydet
@@ -927,7 +1079,9 @@ class QTafsil(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
-        q.mpo_dagit("makam", self.birikim(p, q.n_satir, 0.7))
+        a = self.birikim(p, q.n_satir, 0.7)
+        par, olc = self.birikim_bagi(p, q.n_satir, 0.7)
+        q.mpo_dagit("makam", a, par=par, olcek=olc)
 
 
 @qkaydet
@@ -936,10 +1090,12 @@ class QTefsir(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
-        G = dik_iki_kubit(self.aci(p, 6, 0.4))
+        a = self.aci(p, 6, 0.4)
+        G = dik_iki_kubit(a)
+        bag = self.dik_bagi(p, a, 0.4)
         k = q.veri_yuvasi
         for i in range(1, q.n_satir):
-            q.uzak_cift(q.veri(i - 1, k - 1), q.veri(i, 0), G)
+            q.uzak_cift(q.veri(i - 1, k - 1), q.veri(i, 0), G, baglar=bag)
 
 
 @qkaydet
@@ -949,9 +1105,12 @@ class QTevil(QMeleke):
 
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
+        par, olc = self.aci_bagi(p, 2, 0.5)
+        b = self.donme_baglari(par, olc, a, kontrollu=True)
         for j in range(2):
             q.uzak_cift(q.kulli("tenakuz", j), q.kulli("tasdik", j),
-                        kontrollu_donme(float(a[j])))
+                        kontrollu_donme(float(a[j])),
+                        baglar=None if b is None else [b[j]])
 
 
 @qkaydet
@@ -962,16 +1121,23 @@ class QFesahat(QMeleke):
     def uygula(self, q, p):
         _, kk = q._alan["kelam"]
         a = self.birikim(p, q.n_satir * kk, 1.2) * kk
+        par, olc = self.birikim_bagi(p, q.n_satir * kk, 1.2 * kk)
         duraklar = q.yereller()
         for j in range(kk):
-            q.mpo_topla("kelam", a[j * q.n_satir:(j + 1) * q.n_satir],
-                        duraklar=duraklar, j=j)
+            dilim = slice(j * q.n_satir, (j + 1) * q.n_satir)
+            q.mpo_topla("kelam", a[dilim], duraklar=duraklar, j=j,
+                        par=None if par is None else par[dilim],
+                        olcek=olc)
         b = self.aci(p, 2, 0.6)
+        par_b, olc_b = self.aci_bagi(p, 2, 0.6)
+        bb = self.donme_baglari(par_b, olc_b, -np.abs(b),
+                                egim=-np.sign(b), kontrollu=True)
         tas = q.kulli("tasdik", 0)
         q.tek(tas, degil_x())
         for j in range(min(kk, 2)):
             q.uzak_cift(tas, q.kulli("kelam", j),
-                        kontrollu_donme(-abs(float(b[j]))))
+                        kontrollu_donme(-abs(float(b[j]))),
+                        baglar=None if bb is None else [bb[j]])
         q.tek(tas, degil_x())
 
 
@@ -1001,14 +1167,20 @@ class QBelagat(QMeleke):
         _, tk = q._alan["tasdik"]
         a = np.concatenate([self.aci(p, kk, 0.45),
                             self.birikim(p, tk, 0.7)])
+        p1, o1 = self.aci_bagi(p, kk, 0.45)
+        p2, o2 = self.birikim_bagi(p, tk, 0.7)
+        b1 = self.donme_baglari(p1, o1, a[:kk], kontrollu=True)
+        b2 = self.donme_baglari(p2, o2, a[kk:], kontrollu=True)
         mk = q._alan["makam"][1]
         for j in range(kk):
             q.uzak_cift(q.kulli("makam", j % mk), q.kulli("kelam", j),
-                        kontrollu_donme(float(a[j])))
+                        kontrollu_donme(float(a[j])),
+                        baglar=None if b1 is None else [b1[j]])
         for j in range(min(tk, kk)):
             q.uzak_cift(q.kulli("tasdik", j),
                         q.kulli("kelam", (j + 2) % kk),
-                        kontrollu_donme(float(a[kk + j])))
+                        kontrollu_donme(float(a[kk + j])),
+                        baglar=None if b2 is None else [b2[j]])
 
 
 @qkaydet
@@ -1036,13 +1208,22 @@ class QMunazara(QMeleke):
     def uygula(self, q, p):
         _, kk = q._alan["kelam"]
         a = self.aci(p, 4 + kk, 0.5)
+        par, olc = self.aci_bagi(p, 4 + kk, 0.5)
+        teta = np.concatenate([a[:4], -np.abs(a[4:])])
+        egim = np.concatenate([np.ones(4), -np.sign(a[4:])])
+        b = self.donme_baglari(par, olc, teta, egim=egim, kontrollu=True)
+        t2 = self.donme_baglari(
+            None if par is None else [par[2]], olc * 0.5,
+            [float(a[2]) * 0.5])
         for j in range(2):
             q.uzak_cift(q.kulli("mizan", j), q.kulli("makam", j),
-                        kontrollu_donme(float(a[j])))
+                        kontrollu_donme(float(a[j])),
+                        baglar=None if b is None else [b[j]])
         for j in range(kk):
             q.uzak_cift(q.kulli("sukut", 0), q.kulli("kelam", j),
-                        kontrollu_donme(-abs(float(a[4 + j]))))
-        q.tek(q.kulli("sukut", 0), donme(float(a[2]) * 0.5))
+                        kontrollu_donme(float(teta[4 + j])),
+                        baglar=None if b is None else [b[4 + j]])
+        q.tek(q.kulli("sukut", 0), donme(float(a[2]) * 0.5), bag=t2)
 
 
 @qkaydet
@@ -1054,8 +1235,12 @@ class QUmumilestirme(QMeleke):
         n = max(1, q.n_satir)
         a = self.aci(p, 2, 0.5)
         ortak = np.full(n, float(a[0]) / float(n))
-        q.iz.kesme += q.mpo_topla("mizan", ortak)
-        q.iz.kesme += q.mpo_topla("tenakuz", -0.25 * ortak)
+        bas, olc = self.aci_bagi(p, 2, 0.5)
+        par = None if bas is None else np.full(n, int(bas[0]), np.int64)
+        q.iz.kesme += q.mpo_topla("mizan", ortak, par=par,
+                                  olcek=olc / float(n))
+        q.iz.kesme += q.mpo_topla("tenakuz", -0.25 * ortak, par=par,
+                                  olcek=-0.25 * olc / float(n))
 
 
 @qkaydet
@@ -1071,10 +1256,14 @@ class QTalim(QMeleke):
             return
         _, kk = q._alan["kelam"]
         a = self.aci(p, len(self.TAU), 0.4)
+        par, olc = self.aci_bagi(p, len(self.TAU), 0.4)
         for l, tau in enumerate(self.TAU):
             teta = float(a[l]) / float(tau)
+            b = self.donme_baglari(
+                None if par is None else [par[l]], olc / float(tau), [teta])
             q.tek_yigin([q.kulli("kelam", j) for j in range(kk)],
-                        np.stack([donme(teta) for _ in range(kk)]))
+                        np.stack([donme(teta) for _ in range(kk)]),
+                        baglar=None if b is None else [b[0]] * kk)
 
 
 @qkaydet
@@ -1090,12 +1279,21 @@ class QTahsil(QMeleke):
         npar = q.taksimat.bolge["parametre"][1]
         kac = min(int(npar), 8)
         a = self.aci(p, 2, 0.5)
+        par, olc = self.aci_bagi(p, 2, 0.5)
+        t0 = -abs(float(a[0])) * float(self.ETA)
+        t1 = float(self.GAMA) * float(a[1])
+        b0 = self.donme_baglari(
+            None if par is None else [par[0]], olc * float(self.ETA),
+            [t0], egim=[-np.sign(a[0])], kontrollu=True)
+        b1 = self.donme_baglari(
+            None if par is None else [par[1]], olc * float(self.GAMA), [t1])
         for j in range(kac):
             q.uzak_cift(q.kulli("mizan", j % 4), q.parametre(j),
-                        kontrollu_donme(-abs(float(a[0])) * float(self.ETA)))
+                        kontrollu_donme(t0),
+                        baglar=None if b0 is None else [b0[0]])
         q.tek_yigin([q.parametre(j) for j in range(kac)],
-                    np.stack([donme(float(self.GAMA) * float(a[1]))
-                              for _ in range(kac)]))
+                    np.stack([donme(t1) for _ in range(kac)]),
+                    baglar=None if b1 is None else [b1[0]] * kac)
 
 
 QAKIS: Tuple[int, ...] = (

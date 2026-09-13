@@ -61,7 +61,7 @@ class Hizolcer:
         bel = sum(self.belirtec)
         from nefs.munasebet import munasebet_beyani
         from nefs.keyfiyet import keyfiyet_beyani
-        from ogrenme.mecz import mecz_beyani
+        from ogrenme.mecz import mecz_beyani, yetim_bloklar
         from nefs.kulli_mizan import kefe_kimiltisi
         m = munasebet_beyani()
         k = keyfiyet_beyani()
@@ -72,7 +72,7 @@ class Hizolcer:
               "mecz r %.3e · iz_g %.3e · ‖eğim‖ %.3e · κ %.3e · "
               "kabul %d/%d · hissedilmeyen %d · r* %.3e · "
               "ΔV %.3e vs lineer %.3e | kımıldayan kefe %s %+.3e, "
-              "%s %+.3e"
+              "%s %+.3e | yetim blok %s"
               % (t - self.baslangic, len(self.sure), bel, bel / sn,
                  m["temizlenen"], m["kirli_kalan"], m.get("geri_dönen", 0),
                  k["en_iyi"], k["ortalama"],
@@ -81,7 +81,9 @@ class Hizolcer:
                  int(z["hissedilmeyen_adım"]), z["r_kullanılan"],
                  z["ΔV_gerçek"], z["ΔV_lineer"],
                  kefe_kimiltisi()["ad"], kefe_kimiltisi()["Δ"],
-                 kefe_kimiltisi()["ikinci"], kefe_kimiltisi()["Δ2"]),
+                 kefe_kimiltisi()["ikinci"], kefe_kimiltisi()["Δ2"],
+                 " · ".join("%s %d" % (ad, n)
+                            for n, ad in yetim_bloklar()) or "yok"),
               flush=True)
 
     def asim(self) -> float:

@@ -134,6 +134,7 @@ class QuditYazmac:
         self._faz_bekleyen: Optional[np.ndarray] = None
         self._faz_toplam = np.zeros((int(a.yigin), int(a.d)), np.int64)
         self._faz_artik = np.zeros((int(a.yigin), int(a.d)), np.int64)
+        self._faz_kesir = np.zeros((int(a.yigin), int(a.d)), float)
         self._faz_indirilen = 0
         self._psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
                             dtype=a.tip)
@@ -389,10 +390,13 @@ class QuditYazmac:
         m = int(self.ayar.faz_mertebesi)
         ceyrek = max(1, m // 4)
         a = np.asarray(self._faz_artik, np.int64).reshape(-1)
+        kes = np.abs(np.asarray(self._faz_kesir, float).reshape(-1))
         return {"mertebe": float(m), "çeyrek": float(ceyrek),
                 "ödenmemiş_üs": float(np.mean(a)),
                 "nispet": float(np.mean(a) / ceyrek),
                 "azamî_üs": float(a.max()) if a.size else 0.0,
+                "ödenmemiş_kesir": float(np.mean(kes)),
+                "azamî_kesir": float(kes.max()) if kes.size else 0.0,
                 "indirme": float(self._faz_indirilen)}
 
     def _karo_indir(self, k: int, M: np.ndarray) -> None:
@@ -491,7 +495,11 @@ class QuditYazmac:
             "faz açısı yazmaç ebadında olmalı: %s ≠ %d"
             % (t.shape, self.d))
         m = int(self.ayar.faz_mertebesi)
-        k = (np.rint(-t * m / (2.0 * math.pi)).astype(np.int64) % m)
+        us = -t * m / (2.0 * math.pi) + self._faz_kesir
+        tam = np.rint(us)
+        self._faz_kesir = np.broadcast_to(us - tam,
+                                          (self.B, self.d)).copy()
+        k = (tam.astype(np.int64) % m)
         k = (k + self._faz_artik) % m
         self._faz_artik = np.zeros((self.B, self.d), np.int64)
         self._faz_toplam = (self._faz_toplam + k) % m
@@ -706,14 +714,23 @@ class QuditYazmac:
             M[y, x] = G[1, 0]; M[y, y] = G[1, 1]
         return M
 
-    def tek(self, yuva: int, G: np.ndarray) -> None:
+    def tek(self, yuva: int, G: np.ndarray, bag=None) -> None:
         if not self.gecerli(yuva):
             self._dusen_kapi += 1
+            if bag is not None:
+                self.iz.uretecsiz += 1
             return
         k, alt = self._lif_no(yuva)
         self.bit_kapisi(k, alt, G)
+        if bag is None or not self.iz.senet_acik:
+            return
+        for (par, olcek, dG) in ([bag] if isinstance(bag, tuple)
+                                 else list(bag)):
+            self.iz.bag_yaz(self.iz.son_senet, int(par), float(olcek),
+                            ("bit", int(k), int(alt),
+                             np.asarray(dG, complex).reshape(2, 2)))
 
-    def tek_yigin(self, yuvalar: Sequence[int], G) -> None:
+    def tek_yigin(self, yuvalar: Sequence[int], G, baglar=None) -> None:
         G = np.asarray(G)
         if G.ndim == 2:
             G = np.broadcast_to(G, (len(yuvalar), 2, 2))
@@ -722,9 +739,21 @@ class QuditYazmac:
             gec0 = self.gecerli_toplu(yv)
             kk0, aa0 = self.lif_no_toplu(yv)
             self._dusen_kapi += int((~gec0).sum())
+            B = list(baglar) if baglar is not None else None
+            if B is not None:
+                assert len(B) == yv.size, (
+                    "her yuvanın kendi bağı olmalı: %d yuva, %d bağ "
+                    "(ferman 1-C/b)" % (yv.size, len(B)))
             for idx in np.flatnonzero(gec0):
                 self.bit_kapisi(int(kk0[idx]), int(aa0[idx]),
                                 np.asarray(G[int(idx)], complex).reshape(2, 2))
+                if B is None or B[int(idx)] is None:
+                    continue
+                par, olcek, dG = B[int(idx)]
+                self.iz.bag_yaz(
+                    self.iz.son_senet, int(par), float(olcek),
+                    ("bit", int(kk0[idx]), int(aa0[idx]),
+                     np.asarray(dG, complex).reshape(2, 2)))
             return
         sira: List[Tuple[int, int]] = []
         birik: Dict[Tuple[int, int], np.ndarray] = {}
@@ -860,27 +889,83 @@ class QuditYazmac:
     def mpo_uygula_hizli(self, *a, **k) -> float:
         return self.mpo_uygula(*a, **k)
 
-    def mpo_topla(self, alan: str, acilar=None, duraklar=None, j: int = 0
-                  ) -> None:
-        if alan not in self._sektor:
+    def _mpo_adresleri(self, alan: str, kac: int, duraklar, j: int
+                       ) -> np.ndarray:
+        if duraklar is not None:
+            d = np.asarray(list(duraklar), np.int64).reshape(-1)
+            assert d.size, "durak listesi boş verilemez -- adres yoksa faz "\
+                           "kime vurulacak (ferman 5)"
+            assert int(d.min()) >= 0 and int(d.max()) < self.d, (
+                "durak adresi yazmacın dışında: [%d, %d] ⊄ [0, %d)"
+                % (int(d.min()), int(d.max()), self.d))
+            return d
+        i, jj = self.sektor(alan)
+        kat = int(dict(self.ayar.kulli_alanlar).get(alan, 1))
+        boy = max(1, (jj - i) // max(1, kat))
+        bas = i + (int(j) % max(1, kat)) * boy
+        son = min(jj, bas + boy)
+        d = np.arange(bas, son, dtype=np.int64)
+        return d if d.size else np.arange(i, jj, dtype=np.int64)
+
+    def _faz_bagla(self, dizin: np.ndarray, baglar) -> None:
+        if not self.iz.senet_acik or not baglar:
             return
+        self._faz_indir()
+        no = self.iz.son_senet
+        if no < 0 or str(self.iz.senet[no][0]) != "faz":
+            self.iz.uretecsiz += len(baglar)
+            return
+        q = np.asarray(self.iz.senet[no][2], np.int64)
+        q = q[0] if q.ndim == 2 else q
+        vur = np.power(1j, q[dizin])
+        for (par, olcek, pay) in baglar:
+            deger = 1j * np.asarray(pay, float) * vur
+            self.iz.bag_yaz(no, int(par), float(olcek),
+                            ("köşegen", dizin.copy(), deger))
+
+    def _mpo(self, alan: str, acilar, duraklar, j: int, par, olcek: float,
+             bol: bool, egim=None, bag=None) -> float:
+        if alan not in self._sektor:
+            return 0.0
         a = np.asarray(acilar if acilar is not None else [0.0],
                        float).reshape(-1)
-        i, jj = self.sektor(alan)
-        u = np.arange(jj - i)
+        dizin = self._mpo_adresleri(alan, a.size, duraklar, int(j))
+        sira = np.arange(dizin.size) % a.size
+        bolen = float(dizin.size) if bol else 1.0
         t = np.zeros(self.d, float)
-        t[i:jj] = -(float(a.mean()) * (u + 1.0) / max(jj - i, 1))
+        np.add.at(t, dizin, -a[sira] / bolen)
         self.faz(t)
+        if bag is not None:
+            self._faz_bagla(dizin, list(bag))
+            return 0.0
+        if par is None:
+            return 0.0
+        pid = np.asarray(par, np.int64).reshape(-1)
+        assert pid.size == a.size, (
+            "her açının kendi parametresi olmalı: %d açı, %d parametre "
+            "(ferman 1-C/b: isim yazmak bağlamak değildir)"
+            % (a.size, pid.size))
+        e = (np.ones(a.size, float) if egim is None
+             else np.asarray(egim, float).reshape(-1))
+        assert e.size == a.size, (
+            "eğim tarifi açı sayısınca olmalı: %d ≠ %d" % (e.size, a.size))
+        self._faz_bagla(
+            dizin, [(int(pid[k]), float(olcek),
+                     np.where(sira == k, e[sira] / bolen, 0.0))
+                    for k in range(a.size)])
         return 0.0
 
-    def mpo_dagit(self, alan: str, acilar=None, duraklar=None, j: int = 0
-                  ) -> None:
-        if alan not in self._sektor:
-            return
-        a = np.asarray(acilar if acilar is not None else [0.0],
-                       float).reshape(-1)
-        self.faz(np.full(min(8, self.d - 1), -float(a.mean())))
-        return 0.0
+    def mpo_topla(self, alan: str, acilar=None, duraklar=None, j: int = 0,
+                  par=None, olcek: float = 1.0, egim=None, bag=None
+                  ) -> float:
+        return self._mpo(alan, acilar, duraklar, j, par, olcek, False,
+                         egim, bag)
+
+    def mpo_dagit(self, alan: str, acilar=None, duraklar=None, j: int = 0,
+                  par=None, olcek: float = 1.0, egim=None, bag=None
+                  ) -> float:
+        return self._mpo(alan, acilar, duraklar, j, par, olcek, True,
+                         egim, bag)
 
     def rapor(self) -> str:
         o = self.olcumler()

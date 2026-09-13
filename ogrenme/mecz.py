@@ -6,11 +6,17 @@ from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = ["MeczAyari", "Memuriyet", "hata_operatoru", "uretecler",
-           "egim", "cukur", "duvar", "yaricap", "vadi", "nakil",
-           "mecz_egit", "mecz_beyani", "mecz_metni", "mecz_sifirla"]
+           "cukur", "duvar", "yaricap", "vadi", "nakil",
+           "mecz_egit", "mecz_beyani", "mecz_metni", "mecz_sifirla",
+           "yetim_bloklar"]
 
 
 _MECZ: Dict[str, float] = {}
+_YETIM: List[Tuple[int, str]] = []
+
+
+def yetim_bloklar() -> List[Tuple[int, str]]:
+    return list(_YETIM)
 
 
 def mecz_sifirla() -> None:
@@ -84,30 +90,6 @@ def uretecler(q) -> List[Tuple[int, int]]:
     return harman_uretecleri(tuple(int(x) for x in q.y.ayar.lif))
 
 
-def _uretec_vur(psi: np.ndarray, lif: Tuple[int, ...],
-                f: int, alt: int) -> np.ndarray:
-    B = psi.shape[0]
-    T = psi.reshape((B,) + lif)
-    n = lif[int(f)]
-    b = 1 << int(alt)
-    if b >= n:
-        return np.zeros((B, psi.shape[1]), psi.dtype)
-    idx = np.arange(n)
-    dus = idx[(idx & b) == 0]
-    ust = dus | b
-    out = np.zeros_like(T)
-    eksen = int(f) + 1
-    A = np.take(T, dus, axis=eksen)
-    C = np.take(T, ust, axis=eksen)
-    dilim_dus = [slice(None)] * T.ndim
-    dilim_ust = [slice(None)] * T.ndim
-    dilim_dus[eksen] = dus
-    dilim_ust[eksen] = ust
-    out[tuple(dilim_dus)] = -C
-    out[tuple(dilim_ust)] = A
-    return out.reshape(B, -1)
-
-
 def hat_egriligi(dv_gercek: float, dv_lineer: float,
                  r: float, v_olcegi: float = 0.0) -> Dict[str, float]:
     r = float(r)
@@ -151,25 +133,6 @@ def cukur(psi: np.ndarray, H: np.ndarray,
         kipirti == kipirti and kipirti <= float(np.arcsin(
             np.sqrt(np.finfo(float).eps))))
     return {"⟨H⟩": E, "ΔE": dE, "durak": durak, "asal_açı": kipirti}
-
-
-def egim(q, H: np.ndarray) -> Dict[str, Any]:
-    psi = np.asarray(q.y.psi, complex)
-    lif = tuple(int(x) for x in q.y.ayar.lif)
-    Hpsi = psi * H[None, :]
-    g: List[float] = []
-    met: List[float] = []
-    for (f, alt) in uretecler(q):
-        Gpsi = _uretec_vur(psi, lif, f, alt)
-        g.append(2.0 * float(np.real(np.sum(np.conj(Gpsi) * Hpsi))))
-        ust = float(np.real(np.sum(np.conj(Gpsi) * Gpsi)))
-        ic = complex(np.sum(np.conj(psi) * Gpsi))
-        met.append(max(0.0, ust - abs(ic) ** 2))
-    v = np.asarray(g, float)
-    m = np.asarray(met, float)
-    _MECZ["eğim_normu"] = float(np.linalg.norm(v))
-    _MECZ["iz_g"] = float(m.sum())
-    return {"eğim": v, "metrik": m}
 
 
 def duvar(metrik: np.ndarray) -> Dict[str, Any]:
@@ -319,7 +282,10 @@ class Memuriyet:
 
         g_ek, metrik = egim_ek_durum(iz, lif, psi, H, n_par)
         g_ur = egim_uretec(iz, lif, psi, H, n_par)
-        kap = senet_kapsami(iz, n_par)
+        kap = senet_kapsami(
+            iz, n_par, defter=(self.nefs.p.defter()
+                               if hasattr(self.nefs.p, "defter") else None))
+        _YETIM[:] = list(kap.get("yetim", ()))[:6]
         _MECZ["kapı"] = float(kap["kapı"])
         _MECZ["kapsanan_parametre"] = float(kap["kapsanan_parametre"])
         _MECZ["toplam_parametre"] = float(kap["toplam_parametre"])

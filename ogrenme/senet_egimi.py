@@ -134,8 +134,18 @@ def bit_turevi_vur(psi: np.ndarray, lif: Tuple[int, ...], k: int,
     return out.reshape(B, -1)
 
 
+def kosegen_vur(psi: np.ndarray, dizin: np.ndarray,
+                deger: np.ndarray) -> np.ndarray:
+    out = np.zeros_like(psi)
+    i = np.asarray(dizin, np.int64)
+    out[:, i] = psi[:, i] * np.asarray(deger, complex)[None, :]
+    return out
+
+
 def _turev_vur(psi: np.ndarray, lif: Tuple[int, ...], turev) -> np.ndarray:
     tur = str(turev[0])
+    if tur == "köşegen":
+        return kosegen_vur(psi, turev[1], turev[2])
     if tur == "bit":
         return bit_turevi_vur(psi, lif, int(turev[1]), int(turev[2]),
                               turev[3])
@@ -147,14 +157,26 @@ def _turev_vur(psi: np.ndarray, lif: Tuple[int, ...], turev) -> np.ndarray:
     raise ValueError("türev tarifi bilinmiyor: %r" % (tur,))
 
 
-def senet_kapsami(iz, n_par: int) -> Dict[str, int]:
-    kapsanan = sorted({int(b[1]) for b in iz.baglanti})
+def senet_kapsami(iz, n_par: int, defter=None) -> Dict[str, Any]:
+    kapsanan = {int(b[1]) for b in iz.baglanti}
     fotograf = sum(1 for k in iz.senet if str(k[0]) == "durum")
-    return {"kapı": len(iz.senet), "bağlantı": len(iz.baglanti),
-            "durum_saklaması": int(fotograf),
-            "kapsanan_parametre": len(kapsanan),
-            "toplam_parametre": int(n_par),
-            "üretecsiz": int(iz.uretecsiz)}
+    o: Dict[str, Any] = {
+        "kapı": len(iz.senet), "bağlantı": len(iz.baglanti),
+        "durum_saklaması": int(fotograf),
+        "kapsanan_parametre": len(kapsanan),
+        "toplam_parametre": int(n_par),
+        "üretecsiz": int(iz.uretecsiz), "yetim": ()}
+    if not defter:
+        return o
+    yetim = []
+    for ad, (bas, kac) in defter.items():
+        acik = sum(1 for i in range(int(bas), int(bas) + int(kac))
+                   if i not in kapsanan)
+        if acik:
+            yetim.append((int(acik), str(ad)))
+    yetim.sort(reverse=True)
+    o["yetim"] = tuple(yetim)
+    return o
 
 
 def egim_uretec(iz, lif: Tuple[int, ...], psi_son: np.ndarray,

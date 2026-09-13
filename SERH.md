@@ -45024,3 +45024,143 @@ Vakum kıvılcımı (`ayna`) dağılımı evvelce olduğu gibi kımıldatıyor,
 fakat neticesi artık `argmax` değil çöküş.
 
 Dağılım tamamen sönerse `assert` ile durur: sessiz ikame yok (ferman 5).
+
+---
+
+## EĞİMİN ÜÇ KOLU -- CEBRÎ İSPAT (ferman 3-B)
+
+İspat ölçülerek değil formül cebriyle yapılır. İki icra (`egim_uretec`,
+`egim_ek_durum`) aynı şeyi mi hesaplıyor sualinin cevabı şudur:
+**hayır, ve hangisinin doğru olduğu ispatlanmıştır.**
+
+### KURULUŞ
+
+Senet `R_1 … R_N` kayıtlarından mürekkeptir; her kaydın hâl üstündeki
+tesiri `𝒰_i` lineer tasvirdir. `p_a` parametresi `i` kaydına `s`
+ölçeğiyle girer ve
+
+    ∂𝒰_i / ∂p_a  =  s · 𝒟_{i,a}                 (`_turev_vur` bunu vurur)
+
+Mizanın mecz tarafından inilen kanadı
+
+    V(p) = ⟨ψ_N | H | ψ_N⟩,      ψ_N = 𝒰_N ⋯ 𝒰_1 ψ_0,   H köşegen ve reel.
+
+### GERÇEK EĞİM
+
+    ∂ψ_N/∂p_a = Σ_i 𝒰_N ⋯ 𝒰_{i+1} (s_{i,a} 𝒟_{i,a}) ψ_{i-1}
+
+    ∂V/∂p_a = Σ_i 2 s_{i,a} Re ⟨ (𝒰_{i+1}† ⋯ 𝒰_N†) H ψ_N , 𝒟_{i,a} ψ_{i-1} ⟩   (★)
+
+### `egim_ek_durum` = (★) -- TAM, İSPATLI
+
+Geriye yürüyen döngünün iki değişmezi vardır. `i` turuna girerken
+
+    psi  =  ψ_i                    (ve `onceki = 𝒰_i^{-1} psi = ψ_{i-1}`)
+    lam  =  (𝒰_{i+1}† ⋯ 𝒰_N†) H ψ_N
+
+Başlangıçta `i = N` için ikinci çarpım boştur ve `lam = H ψ_N` ✓.
+Tur içinde yazılan katkı
+
+    2 s Re ⟨ lam , 𝒟_{i,a} onceki ⟩
+
+(★)'in tam `i`-inci terimidir. Tur sonunda `lam ← 𝒰_i† lam` konur ve
+değişmez `i-1` için korunur. Tümevarım kapanır. **∎**
+
+**ŞART.** `senedi_uygula(·, ters=True)` hâl için `𝒰_i^{-1}`, `lam` için
+`𝒰_i†` olmalıdır. Üniter kayıtlarda ikisi aynıdır. Üniter olmayan üç
+kayıt şöyle durur:
+
+* `ölçek` -- `𝒰 = diag(1/n)`. Tersi `×n`, eşleniği (reel köşegen) yine
+  `/n`. Kod `es=True` ile `lam`e `/n`, `es=False` ile hâle `×n` vurur:
+  **ikisi de doğru**.
+* `maske` -- `𝒰 = P` izdüşümdür, **tersi yoktur**. Eşleniği `P`dir ve
+  `lam` için doğrudur; hâl için yanlış olurdu.
+* `durum` / `başlangıç` -- hâli saklanmış fotoğrafla **yerine koyar**,
+  o hâlde tersine ihtiyaç kalmaz.
+
+`nefs/sadakat.py` maskeyi yazmadan **evvel** `durum` fotoğrafı yazar;
+o hâlde tersi olmayan kaydın solunda daima bir fotoğraf durur ve hâl
+tam geri kurulur. İspat bu şartla tamdır.
+
+### `egim_uretec` = (★) DEĞİL -- KUYRUK DONUK YAKLAŞIMI
+
+`egim_uretec` şunu hesaplar:
+
+    2 s Re ⟨ H ψ_N , 𝒟_{i,a} ψ_N ⟩
+
+yâni `ψ_{i-1}` yerine `ψ_N` koyar ve `lam`i geri taşımaz. (★)'e eşit
+olması için her parametreli kayıtta
+
+    𝒰_N ⋯ 𝒰_{i+1} 𝒟_{i,a} ψ_{i-1}  =  𝒟_{i,a} 𝒰_N ⋯ 𝒰_{i+1} ψ_{i-1}
+
+yâni `[ 𝒰_N ⋯ 𝒰_{i+1} , 𝒟_{i,a} ] ψ_{i-1} = 0` lâzımdır. Bu ancak
+kuyruk boşsa (son parametreli kapı) yahut kuyruk üreteçle **değişmeliyse**
+doğrudur; umumî hâlde yanlıştır. **∎**
+
+### İCRA (ferman 1-E: ispat edildiyse derhal uygulanır)
+
+* **Yön daima `egim_ek_durum`dan kurulur.** `divan` zaten böyle
+  yapıyordu; ispat bunu tesbit eder.
+* **`egim_uretec` iptal edilmez, menfezi tayin edilir** (ferman 2-C):
+  artık bir eğim değil, yukarıdaki **komütatörün ölçüsüdür**.
+  `üreteç_ikiz_farkı` tam olarak `‖[kuyruk, 𝒟]ψ‖` mertebesini verir ve
+  adı **derinlik körlüğü**dür.
+* **`ogrenme/mecz.py:egim` ve `_uretec_vur` İMHA EDİLDİ** (ferman 2-B).
+  Bunlar üreteç formunun ikinci bir nüshasıydı, hiçbir yerden
+  çağrılmıyordu ve ispatsız bir eğim iddiası taşıyordu. Çift başlılık
+  kökünden kesildi; ispatlanan kol tek kaldı.
+
+---
+
+## SENET KAPSAMI -- FAZ ARTIK KÖŞEGEN ÜRETEÇTİR
+
+### `duraklar` ADRESTİR, `j` KATTIR
+
+`mpo_topla`/`mpo_dagit` evvelce iki argümanı da **atıyordu**: gelen
+açılar `a.mean()` ile tek sayıya iniyor, sektörün tamamına düz bir
+rampa basılıyordu. Bunun neticesi ferman 1-U'nun meclisidir -- altı
+ayrı melekenin altı ayrı ameliyesi tek bir ortalamaya iniyordu.
+`gaye_kos`'ta işaretler (`[+,+,−,−]`) ortalamanın içinde birbirini
+yiyordu.
+
+Doğrusu: faz bir **köşegen operatördür** ve `duraklar` o köşegenin
+**taşıyıcısıdır** (hangi adreslere vurulacağı), `j` ise alanın kaçıncı
+**katına** vurulacağıdır. Faz vektörü artık adres adres kurulur:
+
+    t[durak_i]  =  −açı[i mod açı_sayısı] / bölen
+
+### TÜREV: SEYREK KÖŞEGEN
+
+Faz kapısı `U = e^{−i t(p)}` köşegendir, o hâlde
+
+    ∂U/∂p_k = −i (∂t/∂p_k) U = +i (eğim_k / bölen) · ölçek · U
+
+`_turev_vur`a `("köşegen", dizin, değer)` kolu eklendi; değer
+`i · pay · i^q`dır ve `i^q` senetteki faz kaydının fiilen vurduğu
+Palmer çeyreğidir. Böylece faz kanadının türevi **tam**dır ve
+ferman 3-B'nin ispatındaki (★) toplamına girer.
+
+Bir adres birden çok parametreye bağlıysa (𝒪21 Makam: aynı durak
+birçok lifin katkısını taşır) `bag=` ile türev **adres adres** verilir.
+
+### FAZIN KESİR BORCU -- BULUNAN KUSUR
+
+Ferman 2-J *"çeyreğe yetmeyen artık üs deftere geri konur, bir
+sonraki faz çağrışında ödenir"* der. Defter yalnız **tamsayı**
+artığı (`_faz_artik`, çeyrek altı) tutuyordu; `rint` ile tamsayıya
+yuvarlanırken kaybolan **kesir** hiç kaydedilmiyordu:
+
+    k = rint(−t·m/2π)      m = 16  ⟹  |t| < π/16 ≈ 0.196 olan her açı
+                                       sıfıra yuvarlanıp YOK OLUYORDU.
+
+Melekelerin `birikim` ile ürettiği açılar `n`e bölündüğü için ezici
+çoğunluğu bu haddin altındaydı: **parametrelerin hiçbir tesiri
+yoktu**. Defter artık kesirli tutulur (`_faz_kesir`), hiçbir faz
+kaybolmaz, borç `faz_borcu()["ödenmemiş_kesir"]` ile ölçülür.
+
+### ÖLÜ VEKİLLER KESİLDİ
+
+`QYazmac.__init__` içinde `self.tek = self.y.tek` gibi altı atama
+vardı; sınıfın aşağısındaki aynı adlı altı `def` bu atamaların
+gölgesinde kalıp **hiç koşmuyordu** -- ve `uzak_cift`in gölgedeki
+nüshası `baglar`ı düşürüyordu. Altısı da kesildi (ferman 2-B).
