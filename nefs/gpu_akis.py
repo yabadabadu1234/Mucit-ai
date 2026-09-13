@@ -273,7 +273,3 @@ def rapor(tohum: int = 0) -> str:
              o["temas_yuzdesi"]),
           "     dilimlerden yeniden kurma hatası: %.3e" % o["dilim_hatası"]]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

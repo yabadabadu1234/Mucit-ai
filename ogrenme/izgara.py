@@ -13,7 +13,7 @@ from matematik.geometri import (bspline_temeli, bspline_turev_temeli,
                                        dugum_dizisi)
 
 __all__ = [
-    "artislardan_dugum", "dugum_gecerli_mi", "artis_gradyani",
+    "artislardan_dugum", "dugum_gecerli_mi",
     "bukulme_dizeyi", "bukulme_enerjisi", "duzenli_uydur",
     "SEMBOL_KUTUPHANESI", "sembolik_kapanis", "bagintili_olcut",
 ]
@@ -31,16 +31,6 @@ def artislardan_dugum(t0: float, s: Sequence[float],
 def dugum_gecerli_mi(t: np.ndarray, eps: float = 0.0) -> bool:
     t = np.asarray(t, float)
     return bool(np.all(np.diff(t) > eps))
-
-
-def artis_gradyani(dL_dt: Sequence[float], s: Sequence[float],
-                   eps: float = 1e-6) -> np.ndarray:
-    dL_dt = np.asarray(dL_dt, float)
-    s = np.asarray(s, float)
-    if dL_dt.size != s.size + 1:
-        raise ValueError("dL/dt, s'den bir uzun olmalı")
-    kuyruk = np.cumsum(dL_dt[::-1])[::-1]
-    return np.exp(np.clip(s, -700, 700)) * kuyruk[1:]
 
 
 def bukulme_dizeyi(G: int, k: int, alt: float = -1.0, ust: float = 1.0,
@@ -192,13 +182,6 @@ def _gosterim() -> str:
              f"   geçerli mi? {dugum_gecerli_mi(t)}")
     s.append("  (Ceza terimiyle olsaydı bu hâlde payda sıfırlanabilirdi.)")
 
-    s.append("\n=== Zincir kuralı: s_k kendinden SONRAKİ her düğümü kaydırır")
-    sv = np.array([0.1, -0.3, 0.5])
-    dL_dt = np.array([1.0, 2.0, 3.0, 4.0])
-    g = artis_gradyani(dL_dt, sv)
-    naif = np.exp(sv) * dL_dt[1:]
-    s.append(f"  doğru  ∂L/∂s = {np.array2string(g, precision=4)}")
-    s.append(f"  naif   ∂L/∂s = {np.array2string(naif, precision=4)}")
     s.append(f"  bağıl fark: {np.max(np.abs(g - naif) / np.abs(g)):.2%}"
              "  — kuyruk toplamı düşürülünce katkının çoğu kayboluyor")
     def L(sv_):
@@ -441,7 +424,3 @@ def _rapor_simgesel() -> str:
 
 def rapor() -> str:
     return _gosterim()
-
-
-if __name__ == "__main__":
-    print(rapor())

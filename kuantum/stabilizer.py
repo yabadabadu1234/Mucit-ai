@@ -204,7 +204,3 @@ def _gosterim() -> str:
           "dolaştırıcı kapı χ'yı patlatırdı. Bedel, temsil edilen sınıfın",
           "dar olmasıdır -- H yoktur ve olduğu iddia edilmiyor."]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(_gosterim())

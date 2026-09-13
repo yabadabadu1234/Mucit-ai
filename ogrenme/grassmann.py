@@ -231,7 +231,3 @@ def _gosterim() -> str:
                     t["ε'a_eşit_özdeğer"], t["kayma_hatası"]))
     s.append("  Tayf tam ε kadar kayıyor: bilgi eklenmedi, taşındı.")
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(_gosterim())

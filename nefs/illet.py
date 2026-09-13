@@ -176,7 +176,3 @@ def rapor() -> str:
                   "  beyanın hükme uğramadan veriden beslenmesi istenir mi,",
                   "  bu kullanıcının kararıdır."]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

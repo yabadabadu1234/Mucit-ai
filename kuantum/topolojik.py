@@ -313,7 +313,3 @@ def _gosterim() -> str:
     s.append("  Bir yıldızla bir yüz ya 0 ya 2 kenar paylaşır; iki takas")
     s.append("  iki eksi verir, çarpım +1'dir. Sayısal sonuç bunu tutuyor.")
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(_gosterim())

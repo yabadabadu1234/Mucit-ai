@@ -221,7 +221,3 @@ def rapor(tohum: int = 0) -> str:
           "    takas kapısı matchgate mi  : %s  (doğru: pariteyi bozar)"
           % kotu]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

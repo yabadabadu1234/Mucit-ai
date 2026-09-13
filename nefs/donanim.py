@@ -337,7 +337,3 @@ def rapor() -> str:
               % ("%.1f GB/s" % g["tamsayı_bant_gb"]
                  if g["tamsayı_bant_gb"] else "ölçülemedi")]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

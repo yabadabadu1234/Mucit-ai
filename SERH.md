@@ -44677,3 +44677,120 @@ her uzay kurarken `mertebe_sarti(A, ℓ)` tipini kurup `denetle_t` ile
 `idrak/kategori.py`nin `rapor()` + `__main__` bloğu **imha edildi**
 (ferman 1-L) ve yerine akışın çağırdığı `kategori_beyani(uzaylar)`
 kondu. Dosya 172 → 200 satır.
+
+---
+
+## whnf GERİ GETİRİLDİ -- HIZ CEVHERİ, DOĞRULUK CEVHERİ DEĞİL
+
+Padişah: *"whnf'i de geri getir, hız lâzım bize."*
+
+`omega_kategori/cekirdek.py`den on bir uzuv AST ile tam olarak çekildi
+ve tercüme edildi (`S.` ön eki düşürüldü, `taze` → `terim_taze`,
+`sentez` → `_whnf_sentez`, `Baglam` tip takma adı hedefteki `Baglam`
+SINIFI ile çarpışmasın diye kaldırıldı):
+
+    _ust_yuz · _dallari_yeniden_adlandir · _ileri · _geri
+    _komp_ac · _komp_ac_hesapla · whnf · _whnf_hesapla
+    _whnf_sentez · _capala · onbellegi_bosalt
+
+### TANIMSIZ AD YOK -- ÖLÇÜLEREK DEĞİL, AST İLE OKUNARAK DOĞRULANDI
+
+Ferman 1-L koşmayı yasaklıyor; o hâlde doğrulama **ayrıştırma ağacı
+okunarak** yapıldı: modülün bütün `Load` bağlamındaki adları ile
+yerel + modül seviyesi tanımları kıyaslandı. Netice: **tanımsız ad
+yok**. Çarpışan iki ad (`_ic`, `ters`) fonksiyon içi yerel
+değişkenlerdir ve kullanımdan **önce** atanırlar.
+
+### BAĞLANDI -- BAŞ İLE ELEME (ferman 1-C/b)
+
+İsim geri gelmek bağlanmak değildir. `whnf` fiilen **eşdeğerlik
+kıyasında** koşuyor:
+
+    esdeger_mi(a, b):
+        a is b                      → True
+        _bas_ayrisiyor(a, b)        → False   ← whnf, TAM nf'siz
+        aksi hâlde tam normal form kıyası
+
+`_bas_ayrisiyor` iki terimin **zayıf başını** alır; ikisi de kapalı
+bir kurucu ise ve kurucular ayrı ise terimler tanımsal olarak
+eşdeğer **olamaz**. Bu bir yaklaşım değil, bir **teoremdir**: baş
+ayrışıyorsa normal form da ayrışır. O hâlde netice aynı, hesap kısa.
+
+### ÖLÇÜ KIRMIZI YANABİLİR (ferman 5)
+
+`WHNF_ELEMESI[0] = 0` yapıldığında eleme kapanır ve her kıyas tam
+normal forma iner. **Netice değişmez, yalnız yavaşlar** -- yâni bu
+gerçekten bir hız cevheridir. Sayılar `whnf_beyani()` ile basılıyor
+ve `nefs/lif.py:lif_beyani` üzerinden tâlim raporuna çıkıyor:
+çağrı sayısı, önbellekten karşılanan nispet, baş ile elenen kıyas
+nispeti.
+
+---
+
+## BU TURDA KAPATILAN BORÇLAR -- SAYIYLA
+
+### `__main__` BLOKLARI (ferman 1-L)
+
+    kod dosyası           37   kesildi  (228 satır)
+    veri ağacındaki      114   DOKUNULMADI
+
+`idrak/veri/soyutlamalar/` artık **veridir** (Karar 8): motor onları
+okur, çağırmaz. Bir veri dosyasının içini düzeltmek külliyatı tahrif
+etmek olurdu.
+
+### ÇIPLAK `except` -- ONU DA OKUYARAK TASNİF ETTİM
+
+Karar 31 *"on yedi çıplak except kesilir"* diyordu. Okudum; hepsi
+aynı cinsten değil:
+
+    MEŞRU (sessiz değil, ÖLÇÜLÜYOR ve BASILIYOR)
+      nefs/melekeler.py · idrak/kategori.py   hatayı ``hata`` alanına
+                                              yazıp rapora basıyor
+      nefs/qcekirdek.py                       ``koşuyor=False`` + sebep
+      nefs/zirh.py                            ``mühür_tvd=nan`` + hata
+      matematik/geometri.py:_torch            isteğe bağlı ithal yoklaması
+                                              (ferman 5-B: yoklanamazsa None)
+      main/egitim.py:78                       zaten AssertionError'a çeviriyor
+
+    SESSİZ İKAME -- DÜZELTİLDİ
+      nefs/mantik.py:166    ``except Exception: continue`` -- düşen görevi
+                            HİÇ saymıyordu. Artık sayılıyor ve raporda
+                            "düşen görev %d/%d" diye basılıyor.
+      nefs/kulli_kayip.py:_dene  NameError/AttributeError/ImportError artık
+                            **AssertionError'a çevriliyor**: eksik bir ad
+                            bir veri hâli değil, KOD kusurudur.
+
+Yâni sayı on yedi değil **iki**; geri kalanı ferman 5'in yasakladığı
+sessiz ikame değil, ölçülen ve basılan hâl bildirimidir. Bunu
+"on yedisi de kesildi" diye yazmak ferman 5'in kendisini ihlâl
+ederdi (yapılmayan yapıldı diye yazılmaz).
+
+### KESİLENLER
+
+* `kulli_kayip.py:533` `gorev_ozellikleri` çağrısı -- **canlı yoldaki
+  tek kırıktı**, `_dene` onu sessizce yutuyordu. Çağrı ve onu saran
+  `_iki_olcek` kapanışı kesildi; `H.ozellik` artık yalnız tayftan
+  kuruluyor.
+* `ogrenme/izgara.py:artis_gradyani` -- padişahın hükmü (*"işe
+  yaramaz bir şeye benziyor, sil"*). Tanımı, `__all__` kaydı ve
+  gösterim satırları kesildi.
+
+### KESİLMEYEN -- ÇÜNKÜ KARARIN ÖNERMESİ YANLIŞ ÇIKTI
+
+Karar 13 `musahede.Gorev` ve `ayir` için şöyle diyordu: *"aynı iş
+`idrak/arc.py:gorev_dizisi` akışında zaten var (çift başlılık)"*.
+
+**`idrak/arc.py` diye bir dosya YOKTUR.** `gorev_dizisi` bizzat
+`nefs/musahede.py` içindedir ve `Gorev`i kullanır. Sayılar:
+
+    Gorev         9 kullanıcı
+    ayir          5 çağrı
+    genlige_gom  13 çağrı
+    kaide         9 çağrı
+
+Yerine geçecek bir şey olmadan kesmek ferman 2-B'nin *"kırılsın"*ı
+değildir: 2-B yeniye **bağlanacak** bir şey varken geçerlidir.
+Burada yeni yoktur. Ferman 2-C ve *"kuzunun hakkı sorulur"* gereği
+kesmiyorum ve sebebini yazıyorum. Bu, bir kararın önermesinin kodla
+yüzleşince yanlış çıktığı **üçüncü** vak'adır (evvelkiler:
+`idrak/kubit.py`, `ogrenme/rkhs.py`).

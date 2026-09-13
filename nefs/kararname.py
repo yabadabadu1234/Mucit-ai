@@ -83,7 +83,3 @@ def rapor(d: int = 256, tohum: int = 0) -> str:
           "  durumun yapısının neticesidir. Ayrıca dönen sayı χ'nin",
           "  kendisi değil ÜST SINIRIDIR (açgözlü seçim, sabit aile)."]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

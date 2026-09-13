@@ -402,7 +402,3 @@ def rapor(ayar: Optional[QuditAyari] = None) -> str:
     for k, v_ in ag.items():
         s_.append("    %-12s ağırlık %.6f" % (k, v_))
     return "\n".join(s_)
-
-
-if __name__ == "__main__":
-    print(rapor())

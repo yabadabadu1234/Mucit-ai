@@ -147,7 +147,3 @@ def rapor(ayar=None) -> str:
     s += ["", "  ileri geçişin kayıp içindeki payı: %%%.1f"
           % (100.0 * o["ileri_payı"])]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

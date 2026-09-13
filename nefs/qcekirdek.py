@@ -591,7 +591,3 @@ def rapor(tohum: int = 0) -> str:
         "  Gönderim: karo → BLAS (kapı başına 1 zgemm), ardışık çift",
         "  kapıları → tek C çağrısı. Sıra harfiyyen korunur.",
     ])
-
-
-if __name__ == "__main__":
-    print(rapor())

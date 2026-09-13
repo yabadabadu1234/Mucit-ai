@@ -397,7 +397,3 @@ def rapor(tohum: int = 0) -> str:
           "  matematiksel bir kurgudur. Kaybedilen o kurgudur ve ne",
           "  kadarı kaybedildiği yukarıda SAYIYLA yazılıdır."]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

@@ -1060,7 +1060,3 @@ def rapor() -> str:
     s.append("     temsil aynı devreyi taşımıyor -- MPS akışın tamamını,")
     s.append("     stabilizer yalnız iki-kontrollü müsbet şartı görüyor.)")
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

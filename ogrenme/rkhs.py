@@ -284,7 +284,3 @@ def _gosterim() -> str:
 
 def rapor() -> str:
     return _gosterim()
-
-
-if __name__ == "__main__":
-    print(rapor())

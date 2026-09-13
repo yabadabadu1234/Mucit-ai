@@ -682,8 +682,3 @@ def rapor() -> str:
               "    donanım %.2f× hızlı   netice birebir aynı: %s"
               % (o["hız"], o["netice_aynı"])]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())
-    sys.exit(0 if yoklama()["koşuyor"] else 1)

@@ -111,7 +111,3 @@ def rapor(d: int = 4096, tohum: int = 0) -> str:
           "  Hata O(1/√K)dir ve İDDİA EDİLMİYOR, ölçülüyor: her",
           "  kestirim tam değerle karşılaştırılıp farkı dönüyor."]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

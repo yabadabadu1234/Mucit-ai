@@ -253,7 +253,3 @@ def rapor(tohum: int = 0) -> str:
         "  LIOUVILLE SÖNÜMÜ (delilsiz zan buharlaşır)",
         "    tevakkuf μ: %.6f → %.6f  (50 tasfiye sonra)" % (mu0, mu1),
     ])
-
-
-if __name__ == "__main__":
-    print(rapor())

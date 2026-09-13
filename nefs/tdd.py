@@ -76,7 +76,3 @@ def rapor(d: int = 4096, tohum: int = 0) -> str:
         "  çöp toplama -- hiçbiri yok. Zabıtın hükmü: TDD ileri/geri",
         "  akışta REDDEDİLİR, yalnız kanonik denetçidir.",
     ])
-
-
-if __name__ == "__main__":
-    print(rapor())

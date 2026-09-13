@@ -455,7 +455,3 @@ def rapor(ayar: Optional[AynaAyari] = None) -> str:
          "     yoğun d=4096 durumu   : %d bayt" % o["yoğun_bayt_d4096"],
          "     yer kazancı           : %.1f kat" % o["yer_kazancı"]]
     return "\n".join(y)
-
-
-if __name__ == "__main__":
-    print(rapor())

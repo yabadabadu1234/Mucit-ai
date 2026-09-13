@@ -278,7 +278,3 @@ def _gosterim() -> str:
                 abs(r["kaydırma"] - r["sonlu_fark"])))
     s.append("  Fark yuvarlama düzeyinde DEĞİL; kuralın şartı süs değildir.")
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(_gosterim())

@@ -2298,7 +2298,3 @@ def rapor() -> str:
         s.append("=" * 70)
         s.append(globals()[fn]())
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

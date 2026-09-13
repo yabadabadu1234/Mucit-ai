@@ -160,13 +160,25 @@ def rapor(n_gorev: int = 30, tohum: int = 0) -> str:
     s += ["", "YAKÎN YÜZLEŞTİRMESİ (klasik hesap ↔ akışın makamı):"]
     gorevler = gorevleri_getir("training")[:int(n_gorev)]
     K, A = [], []
+    dusen: Dict[str, str] = {}
     for gv in gorevler:
         try:
             r = yakin_yuzlestirmesi(gv, tohum)
-        except Exception:
+        except (NameError, AttributeError, ImportError) as e:
+            raise AssertionError(
+                "yakîn yüzleştirmesi eksik AD ile düştü (%s: %s) -- kod "
+                "kusuru sessizce atlanamaz (ferman 5)" % (type(e).__name__, e))
+        except Exception as e:
+            dusen[getattr(gv, "ad", "?")] = "%s: %s" % (type(e).__name__,
+                                                        str(e)[:60])
             continue
         K.append(r["klasik_yakin"])
         A.append(r["akis_yakin"])
+    if dusen:
+        s.append("  düşen görev %d/%d: %s"
+                 % (len(dusen), len(gorevler),
+                    ", ".join("%s(%s)" % (k, v)
+                              for k, v in sorted(dusen.items())[:4])))
     if len(K) >= 4 and len(set(K)) > 1:
         kor = float(np.corrcoef(K, A)[0, 1])
         s += ["  görev              : %d" % len(K),
@@ -184,7 +196,3 @@ def rapor(n_gorev: int = 30, tohum: int = 0) -> str:
     else:
         s.append("  yeterli çeşitlilik yok (%d görev)" % len(K))
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

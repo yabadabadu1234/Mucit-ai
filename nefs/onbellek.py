@@ -82,7 +82,3 @@ def rapor(d: int = 4096) -> str:
     s += ["", "  GPU dalı (zabıtın hükmü): B = %d -- %s"
           % (g["B"], g["sebep"])]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

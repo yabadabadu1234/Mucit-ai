@@ -198,8 +198,3 @@ def rapor(alt: Optional[str] = None, hadd: int = 60) -> str:
         y.append("    %-30s %-18s %-16s %s:%d"
                  % (x.kap[:30], x.ad[:18], x.deger[:16], x.dosya, x.satir))
     return "\n".join(y)
-
-
-if __name__ == "__main__":
-    import sys
-    print(rapor(sys.argv[1] if len(sys.argv) > 1 else None))

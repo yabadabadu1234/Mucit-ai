@@ -118,7 +118,3 @@ def rapor() -> str:
     s.append("  Son satır KASTEN bozuktur ve False çıkmalıdır;")
     s.append("  çıkmazsa ölçü kırmızı yanamıyor demektir (H90).")
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

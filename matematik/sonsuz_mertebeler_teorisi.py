@@ -1935,6 +1935,12 @@ def _esit(a: Terim, b: Terim, derinlik: int = 0) -> bool:
 
 def esdeger_mi(a: Terim, b: Terim,
                baglam: Optional[Dict[str, Terim]] = None) -> bool:
+    if a is b:
+        return True
+    if WHNF_ELEMESI[0] and _bas_ayrisiyor(a, b, baglam):
+        _WHNF_SAYAC["eleme"] += 1
+        return False
+    _WHNF_SAYAC["tam_kıyas"] += 1
     o = ortam_kur(baglam)
     return _esit(geri_oku(degerlendir(a, o), 0),
                  geri_oku(degerlendir(b, o), 0))
@@ -4049,3 +4055,367 @@ def denklikle_tamamla(A: Terim, B: Terim, e: Terim, b: Terim,
     X = lif(A, B, birinci(e), b)
     buzuk = terim_uygula(ikinci(e), b)
     return buzukten_tamamla(X, buzuk, dallar)
+
+
+_ONBELLEK_SINIRI = 400000
+_whnf_onb: Dict = {}
+_komp_onb: Dict = {}
+_baglam_capa: List = []
+_baglam_kimlik: Set[int] = set()
+_WHNF_SAYAC: Dict[str, int] = {"çağrı": 0, "önbellek": 0, "eleme": 0,
+                               "tam_kıyas": 0}
+WHNF_ELEMESI = [1]
+
+
+def _ust_yuz(dallar) -> Optional[Terim]:
+    for dal in dallar:
+        if not dal[0]:
+            return dal[1]
+    return None
+
+
+def _dallari_yeniden_adlandir(dallar, eski: str, yeni: str):
+    return [(y, ara_ikame(g, {eski: Aralik.degisken(yeni)})) for (y, g) in dallar]
+
+
+def _ileri(ad: str, cizgi: Terim, r: Aralik, x: Terim) -> Terim:
+    j = terim_taze("j")
+    j_ar = Aralik.degisken(j)
+    yeni = ara_ikame(cizgi, {ad: r.veya(j_ar)})
+    return transp(j, yeni, aralik_esitligi(r, True), x)
+
+
+def _geri(ad: str, cizgi: Terim, r: Aralik, v: Terim) -> Terim:
+    j = terim_taze("j")
+    j_ar = Aralik.degisken(j)
+    yeni = ara_ikame(cizgi, {ad: r.veya(j_ar.degil())})
+    return transp(j, yeni, aralik_esitligi(r, True), v)
+
+
+def _komp_ac(ad: str, cizgi: Terim, dallar, u0: Terim,
+             baglam=None) -> Terim:
+    dallar = list(dallar)
+    anahtar = (ad, cizgi, tuple(dallar), u0, id(baglam))
+    onb = _komp_onb.get(anahtar)
+    if onb is not None:
+        return onb
+    sonuc = _komp_ac_hesapla(ad, cizgi, dallar, u0, baglam)
+    if len(_komp_onb) < _ONBELLEK_SINIRI:
+        _capala(baglam)
+        _komp_onb[anahtar] = sonuc
+    return sonuc
+
+
+def _komp_ac_hesapla(ad: str, cizgi: Terim, dallar, u0: Terim,
+                     baglam=None) -> Terim:
+
+
+    for (y, govde) in dallar:
+        if not y:
+            return whnf(ara_ikame(govde, {ad: BIR}), baglam)
+
+    A = whnf(cizgi, baglam)
+
+
+    if not dallar:
+        if ad not in ara_serbest(A):
+            return u0
+        duz = nf(cizgi, baglam)
+        if ad not in ara_serbest(duz):
+            return u0
+        A = whnf(duz, baglam)
+
+    i_ar = Aralik.degisken(ad)
+
+
+    if isinstance(A, Pi):
+        v = terim_taze("v")
+        v_t = Deg(v)
+
+        w_i = _geri(ad, A.alan, i_ar, v_t)
+        w_0 = ara_ikame(w_i, {ad: SIFIR})
+        yeni_cizgi = ikame(A.hedef, {A.ad: w_i})
+        yeni_dallar = [(y, uygula(g, w_i)) for (y, g) in dallar]
+        return Lam(v, komp(ad, yeni_cizgi, yeni_dallar,
+                             uygula(u0, w_0), baglam))
+
+
+    if isinstance(A, Sigma):
+        bir_dallar = [(y, birinci(g)) for (y, g) in dallar]
+        a_i = dolgu(ad, A.alan, bir_dallar, birinci(u0))
+        bir_sonuc = komp(ad, A.alan, bir_dallar, birinci(u0), baglam)
+        iki_cizgi = ikame(A.hedef, {A.ad: a_i})
+        iki_dallar = [(y, ikinci(g)) for (y, g) in dallar]
+        iki_sonuc = komp(ad, iki_cizgi, iki_dallar, ikinci(u0), baglam)
+        return Cift(bir_sonuc, iki_sonuc)
+
+
+    if isinstance(A, YolP):
+        j = terim_taze("j")
+        j_ar = Aralik.degisken(j)
+        ic_cizgi = ara_ikame(A.cizgi, {A.ad: j_ar})
+        ic_dallar = [(y, yol_uygula(g, j_ar)) for (y, g) in dallar]
+        ic_dallar.append((yuz(**{j: 0}), A.sol))
+        ic_dallar.append((yuz(**{j: 1}), A.sag))
+        govde = komp(ad, ic_cizgi, ic_dallar, yol_uygula(u0, j_ar), baglam)
+        return YolLam(j, govde)
+
+
+    if isinstance(A, (Dogal, Tamsayi)):
+        u0w = whnf(u0, baglam)
+        govdeler = [whnf(g, baglam) for (_, g) in dallar]
+        yuzler = [y for (y, _) in dallar]
+
+        def _ic(ic_tip, alt_u0, altlar):
+            return komp(ad, ic_tip, list(zip(yuzler, altlar)), alt_u0, baglam)
+
+        if isinstance(u0w, Sfr) and all(isinstance(x, Sfr) for x in govdeler):
+            return Sfr()
+        if isinstance(u0w, Ard) and all(isinstance(x, Ard) for x in govdeler):
+            return Ard(_ic(Dogal(), u0w.alt, [x.alt for x in govdeler]))
+        if isinstance(u0w, Poz) and all(isinstance(x, Poz) for x in govdeler):
+            return Poz(_ic(Dogal(), u0w.alt, [x.alt for x in govdeler]))
+        if isinstance(u0w, NegArd) and all(isinstance(x, NegArd)
+                                             for x in govdeler):
+            return NegArd(_ic(Dogal(), u0w.alt, [x.alt for x in govdeler]))
+        return Komp(ad, cizgi, dallar, u0)
+
+
+    if isinstance(A, Cember):
+        if not dallar:
+            return whnf(u0, baglam)
+        return HKomp(Cember(), ad, dallar, u0)
+
+
+    if isinstance(A, Evren):
+        from .denklik import cizgi_denkligi
+        taban = u0
+        yeni_dallar = []
+        for (y, g) in dallar:
+            T1 = ara_ikame(g, {ad: BIR})
+
+
+            k = terim_taze("k")
+            ters = ara_ikame(g, {ad: Aralik.degisken(k).degil()})
+            yeni_dallar.append((y, T1, cizgi_denkligi(k, ters)))
+        return yapistir(taban, yeni_dallar)
+
+
+    if isinstance(A, Yapistir):
+        from .denklik import komp_yapistir
+        return komp_yapistir(ad, A, dallar, u0, baglam)
+
+
+    return Komp(ad, cizgi, dallar, u0)
+
+
+def whnf(t: Terim, baglam=None) -> Terim:
+    _WHNF_SAYAC["çağrı"] += 1
+    anahtar = (id(baglam), t)
+    onb = _whnf_onb.get(anahtar)
+    if onb is not None:
+        _WHNF_SAYAC["önbellek"] += 1
+        return onb
+    sonuc = _whnf_hesapla(t, baglam)
+    if len(_whnf_onb) < _ONBELLEK_SINIRI:
+        _capala(baglam)
+        _whnf_onb[anahtar] = sonuc
+    return sonuc
+
+
+def _whnf_hesapla(t: Terim, baglam=None) -> Terim:
+    while True:
+        if isinstance(t, Uygula):
+            f = whnf(t.fonk, baglam)
+            if isinstance(f, Lam):
+                t = ikame(f.govde, {f.ad: t.arg})
+                continue
+            return Uygula(f, t.arg)
+        if isinstance(t, Birinci):
+            c = whnf(t.cift, baglam)
+            if isinstance(c, Cift):
+                t = c.bir
+                continue
+            return Birinci(c)
+        if isinstance(t, Ikinci):
+            c = whnf(t.cift, baglam)
+            if isinstance(c, Cift):
+                t = c.iki
+                continue
+            return Ikinci(c)
+        if isinstance(t, YolUygula):
+            p = whnf(t.yol, baglam)
+            if isinstance(p, YolLam):
+                t = ara_ikame(p.govde, {p.ad: t.r})
+                continue
+
+            if (t.r.sifir_mi() or t.r.bir_mi()) and baglam is not None:
+                tip = _whnf_sentez(p, baglam)
+                if tip is not None:
+                    tip = whnf(tip, baglam)
+                    if isinstance(tip, YolP):
+                        t = tip.sol if t.r.sifir_mi() else tip.sag
+                        continue
+            return YolUygula(p, t.r)
+        if isinstance(t, Dongu):
+            if t.r.sifir_mi() or t.r.bir_mi():
+                return Taban()
+            return t
+        if isinstance(t, DogalInd):
+            s = whnf(t.sayi, baglam)
+            if isinstance(s, (Sfr, Ard)):
+                t = dogal_ind(t.ad, t.hedef, t.sfr_dali, t.n_ad, t.rec_ad,
+                              t.ard_dali, s)
+                continue
+            return DogalInd(t.ad, t.hedef, t.sfr_dali, t.n_ad, t.rec_ad,
+                              t.ard_dali, s)
+        if isinstance(t, TamsayiInd):
+            s = whnf(t.sayi, baglam)
+            if isinstance(s, (Poz, NegArd)):
+                t = tamsayi_ind(t.ad, t.hedef, t.poz_ad, t.poz_dali,
+                                t.neg_ad, t.neg_dali, s)
+                continue
+            return TamsayiInd(t.ad, t.hedef, t.poz_ad, t.poz_dali,
+                                t.neg_ad, t.neg_dali, s)
+        if isinstance(t, CemberInd):
+            n = whnf(t.nokta, baglam)
+            if isinstance(n, (Taban, Dongu, HKomp)):
+                yeni = cember_ind(t.ad, t.hedef, t.taban_dali, t.i_ad,
+                                  t.dongu_dali, n)
+                if yeni != t:
+                    t = yeni
+                    continue
+            return CemberInd(t.ad, t.hedef, t.taban_dali, t.i_ad,
+                               t.dongu_dali, n)
+        if isinstance(t, Komp):
+            yeni = _komp_ac(t.ad, t.cizgi, t.dallar, t.u0, baglam)
+            if yeni == t:
+                return t
+            t = yeni
+            continue
+        if isinstance(t, HKomp):
+            yeni = _komp_ac(t.ad, t.tip, t.dallar, t.u0, baglam)
+            if yeni == t:
+                return t
+            t = yeni
+            continue
+        if isinstance(t, Transp):
+            t = transp(t.ad, t.cizgi, t.kof, t.u0)
+            continue
+        if isinstance(t, Coz):
+            g = whnf(t.govde, baglam)
+            yeni = coz(t.taban, t.dallar, g)
+            if yeni == t or yeni == Coz(t.taban, t.dallar, g):
+                return Coz(t.taban, t.dallar, g)
+            t = yeni
+            continue
+        if isinstance(t, Yapistir):
+            yeni = yapistir(t.taban, t.dallar)
+            if yeni == t:
+                return t
+            t = yeni
+            continue
+        if isinstance(t, YapistirTerim):
+            yeni = yapistir_terim(t.dallar, t.taban_terim)
+            if yeni == t:
+                return t
+            t = yeni
+            continue
+        return t
+
+
+def _whnf_sentez(t: Terim, baglam) -> Optional[Terim]:
+    if isinstance(t, Deg):
+        return baglam.get(t.ad)
+    if isinstance(t, Uygula):
+        ft = _whnf_sentez(t.fonk, baglam)
+        if ft is None:
+            return None
+        ft = whnf(ft, baglam)
+        if isinstance(ft, Pi):
+            return ikame(ft.hedef, {ft.ad: t.arg})
+        return None
+    if isinstance(t, Birinci):
+        ct = _whnf_sentez(t.cift, baglam)
+        if ct is None:
+            return None
+        ct = whnf(ct, baglam)
+        return ct.alan if isinstance(ct, Sigma) else None
+    if isinstance(t, Ikinci):
+        ct = _whnf_sentez(t.cift, baglam)
+        if ct is None:
+            return None
+        ct = whnf(ct, baglam)
+        if isinstance(ct, Sigma):
+            return ikame(ct.hedef, {ct.ad: birinci(t.cift)})
+        return None
+    if isinstance(t, YolUygula):
+        pt = _whnf_sentez(t.yol, baglam)
+        if pt is None:
+            return None
+        pt = whnf(pt, baglam)
+        if isinstance(pt, YolP):
+            return ara_ikame(pt.cizgi, {pt.ad: t.r})
+        return None
+
+    if isinstance(t, DogalInd):
+        return ikame(t.hedef, {t.ad: t.sayi})
+    if isinstance(t, TamsayiInd):
+        return ikame(t.hedef, {t.ad: t.sayi})
+    if isinstance(t, CemberInd):
+        return ikame(t.hedef, {t.ad: t.nokta})
+    if isinstance(t, (Komp, Transp)):
+        return ara_ikame(t.cizgi, {t.ad: BIR})
+    if isinstance(t, HKomp):
+        return t.tip
+    if isinstance(t, Coz):
+        return t.taban
+    if isinstance(t, YapistirTerim):
+        return None
+    return None
+
+
+def _capala(baglam) -> None:
+    if baglam is not None and id(baglam) not in _baglam_kimlik:
+        _baglam_kimlik.add(id(baglam))
+        _baglam_capa.append(baglam)
+
+
+def onbellegi_bosalt() -> None:
+    _whnf_onb.clear()
+    _komp_onb.clear()
+    _ara_serbest_onb.clear()
+    _baglam_capa.clear()
+    _baglam_kimlik.clear()
+    for k in _WHNF_SAYAC:
+        _WHNF_SAYAC[k] = 0
+
+
+def whnf_beyani() -> str:
+    c = _WHNF_SAYAC
+    cag = max(int(c["çağrı"]), 1)
+    kiy = max(int(c["eleme"]) + int(c["tam_kıyas"]), 1)
+    return "\n".join([
+        "  ZAYIF-BAŞ NORMAL FORM (whnf) -- tembel indirgeme",
+        "    çağrı %d   önbellekten karşılanan %d  (%%%.1f)"
+        % (c["çağrı"], c["önbellek"], 100.0 * c["önbellek"] / cag),
+        "    eşdeğerlik kıyası: baş ile elenen %d / %d  (%%%.1f)"
+        % (c["eleme"], kiy, 100.0 * c["eleme"] / kiy),
+        "    eleme KAPATILABİLİR (WHNF_ELEMESI[0] = 0): kapatılınca",
+        "    netice aynı kalır, yalnız tam normal form hesaplanır --",
+        "    yâni bu bir HIZ cevheridir, doğruluk cevheri değil."])
+
+
+_BAS_KAPALI = (Evren, Pi, Sigma, YolP, Dogal, Tamsayi, Cember, Taban,
+               Lam, Cift, YolLam, Sfr, Ard, Poz, NegArd)
+
+
+def _bas_ayrisiyor(a: Terim, b: Terim, baglam=None) -> bool:
+    ha, hb = whnf(a, baglam), whnf(b, baglam)
+    if not isinstance(ha, _BAS_KAPALI) or not isinstance(hb, _BAS_KAPALI):
+        return False
+    if type(ha) is not type(hb):
+        return True
+    if isinstance(ha, Evren):
+        return ha.seviye != hb.seviye
+    return False

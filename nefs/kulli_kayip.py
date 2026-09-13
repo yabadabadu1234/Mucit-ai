@@ -475,6 +475,11 @@ class Kademeler:
     def _dene(self, ad: str, f):
         try:
             return f()
+        except (NameError, AttributeError, ImportError) as e:
+            raise AssertionError(
+                "%s: eksik AD yahut ithal (%s: %s). Bu bir veri hâli "
+                "değil, KOD kusurudur; sessizce yutulamaz (ferman 5)."
+                % (ad, type(e).__name__, e))
         except Exception as e:
             self.eksik[ad] = "%s: %s" % (type(e).__name__, str(e)[:60])
             return None
@@ -523,17 +528,6 @@ class Kademeler:
             return H
         A = I.ciftler[0][0]
 
-        def _iki_olcek():
-            from .musahede import iki_olcegin_acisi
-
-            class _G:
-                ad, kaynak = "kademe", "kademe"
-                egitim = I.ciftler
-                sinama: List = []
-            X, _Y = gorev_ozellikleri(_G())
-            return np.asarray(X, float).reshape(-1)
-        oz = self._dene("nefs.iki_olcek", _iki_olcek)
-
         def _kule():
             from .kule import kaba, kule_kur
             k = kule_kur(np.asarray(A, float))
@@ -554,7 +548,7 @@ class Kademeler:
                 np.asarray(A, float).reshape(-1)[:64]), float).reshape(-1)
         tayf = self._dene("token_uzaylari.fno", _tayf)
 
-        parcalar = [p for p in (oz, tayf) if p is not None and p.size]
+        parcalar = [p for p in (tayf,) if p is not None and p.size]
         H.ozellik = (np.concatenate(parcalar) if parcalar
                      else np.zeros(1, float))
         self._olc("tasavvur", 1.0 - float(np.clip(H.kabalastirma_kaybi,
@@ -1384,11 +1378,3 @@ def rapor() -> str:
 
 
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())
-
-
-MIZAN_AGIRLIK: Dict[str, float] = {"uzay": 1.0, "kategori": 1.0,
-                                   "tip": 1.0}

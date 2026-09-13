@@ -170,7 +170,3 @@ def rapor(tohum: int = 0) -> str:
           "    derece 5 için iz eşitliği: %s"
           % iz_esitligi(SiklotomikAyari(us=8, taban=3, derece=5))["tuttu"]]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

@@ -334,6 +334,7 @@ def lif_beyani(lif: Lif) -> str:
     n = lif.sayim()
     k = lif.kopukluk()
     dg = lif.dogrula()
+    from matematik.sonsuz_mertebeler_teorisi import whnf_beyani
     s = ["=== SİLSİLE DEFTERİ -- MÜŞTEREK HARİTANIN TABAKALANMASI "
          "(nefs/lif.py) ===", "",
          "  TEK KAYNAK (ferman 1-M): noktalar nefs/munasebet.py:Harita.M'den"
@@ -371,5 +372,7 @@ def lif_beyani(lif: Lif) -> str:
              "EVET" if dg["uyuştu"] else "HAYIR"),
           "    Unfold(kategori) → %s   Unfold(nokta) → %s"
           % (type(lif.unfold("kategori")).__name__,
-             type(lif.unfold("nokta")).__name__)]
+             type(lif.unfold("nokta")).__name__),
+          "",
+          whnf_beyani()]
     return "\n".join(s)

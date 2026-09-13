@@ -942,8 +942,3 @@ def rapor(profil: str = "kısa") -> str:
          "  --- HAFIZA (ağırlık değil, hadise) ---",
          "    %r" % (haf.beyan(),)]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    import sys
-    print(rapor(sys.argv[1] if len(sys.argv) > 1 else "kısa"))

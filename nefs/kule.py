@@ -79,7 +79,3 @@ def rapor() -> str:
     s.append("    (norm düşüyor; düşen kısım ATILAN FARK kanadıdır --")
     s.append("     kule izometri değildir ve öyle iddia edilmiyor.)")
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

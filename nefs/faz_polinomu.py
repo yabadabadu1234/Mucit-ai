@@ -143,7 +143,3 @@ def rapor(n: int = 12, tohum: int = 0) -> str:
           "  GERİ DÖNÜŞ HATASI DÖRT HÂLDE DE SIFIR: oturtma bir",
           "  uydurma değil, tam Möbius açılımıdır."]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())

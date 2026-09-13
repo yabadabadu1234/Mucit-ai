@@ -260,7 +260,3 @@ def _gosterim() -> str:
     s.append("  a=1'de F† x̂ F = p̂ mi? azamî fark=%.2e"
              % float(np.abs(sol - momentum(N)[:k, :k]).max()))
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(_gosterim())

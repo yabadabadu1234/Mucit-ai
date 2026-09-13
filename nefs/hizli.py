@@ -272,7 +272,3 @@ def rapor() -> str:
               "    olmadığı için DERLENMEDİ ve KOŞMADI. 'Çalışıyor'",
               "    denmiyor -- 'yazıldı, denenmedi' deniyor (H100)."]
     return "\n".join(s)
-
-
-if __name__ == "__main__":
-    print(rapor())
