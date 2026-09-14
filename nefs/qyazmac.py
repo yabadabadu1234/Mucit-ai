@@ -28,6 +28,7 @@ class Iz:
         self.baglanti: List[Tuple[int, int, float, Any]] = []
         self.derinlik = 0
         self.uretecsiz = 0
+        self.bag_reddi = 0
         self.son_senet = -1
 
     def not_dus(self, meleke: str, mesaj: str = "") -> None:
@@ -54,6 +55,8 @@ class Iz:
     def bag_yaz(self, senet_no: int, parametre: int, olcek: float,
                 turev=None) -> None:
         if not self.senet_acik or int(senet_no) < 0:
+            if self.senet_acik:
+                self.bag_reddi += 1
             return
         if turev is None:
             self.uretecsiz += 1

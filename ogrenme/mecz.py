@@ -37,6 +37,7 @@ def mecz_sifirla() -> None:
                   "asal_açı": 0.0, "eğrilik": 0.0,
                   "nakil_geçirgenliği": 0.0, "nakil_dizi_boyu": 0.0,
                   "yönsüz_tur": 0.0, "kapı": 0.0, "üretecsiz": 0.0,
+                  "bağ_reddi": 0.0,
                   "ek_durum_ikiz_farkı": 0.0, "üreteç_ikiz_farkı": 0.0,
                   "senet_ileri": 0.0,
                   "keyfiyet": 0.0, "keyfiyet_önceki": 0.0,
@@ -317,6 +318,7 @@ class Memuriyet:
         _MECZ["toplam_parametre"] = float(kap["toplam_parametre"])
         _MECZ["tahsis_edilen"] = float(kap["tahsis_edilen"])
         _MECZ["üretecsiz"] = float(kap["üretecsiz"])
+        _MECZ["bağ_reddi"] = float(kap.get("bağ_reddi", 0))
         _MECZ["durum_saklaması"] = float(kap["durum_saklaması"])
         _MECZ["eğim_normu"] = float(np.linalg.norm(g_ek))
         _MECZ["iz_g"] = float(metrik.sum())
@@ -462,9 +464,10 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          "         seyrin B-spline bükülme enerjisi = %.4e"
          "   (adım boyu ondan kısılır -- Karar 11)" % b["eğrilik"],
          "",
-         "  SENET  %d kapı · üretecsiz bağ %d · durum saklaması %d"
+         "  SENET  %d kapı · üretecsiz bağ %d · REDDEDİLEN bağ %d"
+         " · durum saklaması %d"
          % (int(b["kapı"]), int(b["üretecsiz"]),
-            int(b["durum_saklaması"])),
+            int(b.get("bağ_reddi", 0)), int(b["durum_saklaması"])),
          "         ileri oynatma sadakati %.3e  (senet TAM mı)"
          % b["senet_ileri"],
          "  MUTABAKAT  ek_durum↔ikiz = %.3e   (ikisi de TAM olmalı)"

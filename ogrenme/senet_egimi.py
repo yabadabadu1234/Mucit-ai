@@ -167,7 +167,8 @@ def senet_kapsami(iz, n_par: int, defter=None,
         "kapsanan_parametre": len(kapsanan),
         "toplam_parametre": int(n_par),
         "tahsis_edilen": int(tahsis),
-        "üretecsiz": int(iz.uretecsiz), "yetim": ()}
+        "üretecsiz": int(iz.uretecsiz),
+        "bağ_reddi": int(getattr(iz, "bag_reddi", 0)), "yetim": ()}
     if not defter:
         return o
     yetim = []

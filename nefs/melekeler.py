@@ -666,12 +666,9 @@ class QTasdik(QMeleke):
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
         par, olc = self.aci_bagi(p, 2, 0.5)
-        b = self.donme_baglari(par, olc, a, kontrollu=True)
-        t = self.donme_baglari(par, olc, a)
-        q.cift(q.kulli("tasdik", 0), kontrollu_donme(float(a[0])),
-               baglar=None if b is None else [b[0]])
-        q.tek(q.kulli("tasdik", 1), donme(float(a[1])),
-              bag=None if t is None else [t[1]])
+        q.sektor_faz_vur("tasdik", a,
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("tasdik", par, olc)))
 
 
 @qkaydet
@@ -682,11 +679,12 @@ class QGaye(QMeleke):
     def uygula(self, q, p):
         a = self.aci(p, 4, 0.5)
         par, olc = self.aci_bagi(p, 4, 0.5)
-        b = self.donme_baglari(par, olc, a, kontrollu=True)
-        for j in range(2):
-            q.uzak_cift(q.kulli("tasdik", j), q.kulli("mizan", j),
-                        kontrollu_donme(float(a[j])),
-                        baglar=None if b is None else [b[j]])
+        q.sektor_faz_vur("tasdik", a[:2],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("tasdik", par[:2], olc)))
+        q.sektor_faz_vur("mizan", a[2:],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("mizan", par[2:], olc)))
 
 
 @qkaydet
@@ -697,11 +695,9 @@ class QMerak(QMeleke):
     def uygula(self, q, p):
         a = self.aci(p, 2, 0.5)
         par, olc = self.aci_bagi(p, 2, 0.5)
-        q.tek_yigin([q.kulli("nakz", j) for j in range(2)],
-                    np.stack([donme(0.25 * math.pi + float(t))
-                              for t in a[:2]]),
-                    baglar=self.donme_baglari(
-                        par, olc, 0.25 * math.pi + a[:2]))
+        q.sektor_faz_vur("nakz", 0.25 * math.pi + a[:2],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("nakz", par[:2], olc)))
 
 
 @qkaydet
@@ -730,9 +726,9 @@ class QIhtimal(QMeleke):
     def uygula(self, q, p):
         a = self.aci(p, 4, 0.4)
         par, olc = self.aci_bagi(p, 4, 0.4)
-        q.tek_yigin([q.kulli("mizan", j) for j in range(4)],
-                    np.stack([donme(float(t)) for t in a[:4]]),
-                    baglar=self.donme_baglari(par, olc, a[:4]))
+        q.sektor_faz_vur("mizan", a[:4],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("mizan", par[:4], olc)))
 
 
 @qkaydet
@@ -969,9 +965,9 @@ class QTedebbur(QMeleke):
         q.cift_yigin([q.veri(i, 0) for i in range(q.n_satir)], GU)
         a = self.aci(p, 2, 0.3)
         par2, olc2 = self.aci_bagi(p, 2, 0.3)
-        q.tek_yigin([q.kulli("mizan", 2 + j) for j in range(2)],
-                    np.stack([donme(float(t)) for t in a[:2]]),
-                    baglar=self.donme_baglari(par2, olc2, a[:2]))
+        q.sektor_faz_vur("mizan", a[:2],
+                         bag=(None if par2 is None else
+                              q.sektor_faz_bagi("mizan", par2[:2], olc2)))
 
 
 @qkaydet
@@ -993,19 +989,27 @@ class QSekZanYakin(QMeleke):
         def _b(i):
             return None if b is None else [b[i]]
 
-        q.uzak_cift(q.kulli("tasdik", 0), q.kulli("makam", 0),
-                    kontrollu_donme(float(teta[0])), baglar=_b(0))
-        q.uzak_cift(q.kulli("nakz", 0), q.kulli("makam", 0),
-                    kontrollu_donme(float(teta[1])), baglar=_b(1))
-        if mk >= 2:
-            q.uzak_cift(q.kulli("tenakuz", 0), q.kulli("makam", 1),
-                        kontrollu_donme(float(teta[2])), baglar=_b(2))
-        if mk >= 3:
-            q.uzak_cift(q.kulli("tasdik", 1), q.kulli("makam", 2),
-                        kontrollu_donme(float(teta[3])), baglar=_b(3))
-        q.uzak_cift(q.kulli("makam", 1 if mk >= 2 else 0),
-                    q.kulli("sukut", 0),
-                    kontrollu_donme(float(teta[4])), baglar=_b(4))
+        _p = (lambda i, n: None if par is None else par[i:i + n])
+        q.sektor_faz_vur("tasdik", teta[0:2:1] * 0 + teta[0],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("tasdik", _p(0, 1), olc,
+                                                [egim[0]])))
+        q.sektor_faz_vur("nakz", [teta[1]],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("nakz", _p(1, 1), olc,
+                                                [egim[1]])))
+        q.sektor_faz_vur("tenakuz", [teta[2]],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("tenakuz", _p(2, 1), olc,
+                                                [egim[2]])))
+        q.sektor_faz_vur("makam", [teta[3]],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("makam", _p(3, 1), olc,
+                                                [egim[3]])))
+        q.sektor_faz_vur("sukut", [teta[4]],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("sukut", _p(4, 1), olc,
+                                                [egim[4]])))
 
 
 @qkaydet
@@ -1024,17 +1028,16 @@ class QMuhakeme(QMeleke):
         def _b(i):
             return None if b is None else [b[i]]
 
-        for j in range(2):
-            q.uzak_cift(q.kulli("tasdik", j), q.kulli("mizan", j),
-                        kontrollu_donme(float(teta[j])), baglar=_b(j))
-        for j in range(2):
-            q.uzak_cift(q.kulli("tenakuz", j), q.kulli("mizan", 2 + j),
-                        kontrollu_donme(float(teta[2 + j])),
-                        baglar=_b(2 + j))
-        for j in range(2):
-            q.uzak_cift(q.kulli("nakz", j), q.kulli("mizan", j),
-                        kontrollu_donme(float(teta[4 + j])),
-                        baglar=_b(4 + j))
+        _p = (lambda i, n: None if par is None else par[i:i + n])
+        q.sektor_faz_vur("tasdik", teta[0:2],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("tasdik", _p(0, 2), olc)))
+        q.sektor_faz_vur("tenakuz", teta[2:4],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("tenakuz", _p(2, 2), olc)))
+        q.sektor_faz_vur("nakz", teta[4:6],
+                         bag=(None if par is None else
+                              q.sektor_faz_bagi("nakz", _p(4, 2), olc)))
 
 
 @qkaydet
