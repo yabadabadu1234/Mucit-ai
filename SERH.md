@@ -45526,3 +45526,33 @@ iki kanatta da yokluyor.
 Ders ferman 1-Ü'nündür: bir müfettişin kendisi de teftiş edilir. Kırmızı
 yanan bir ölçü, ölçtüğü şeyin bozuk olduğunu değil, bazen **ölçünün**
 bozuk olduğunu gösterir.
+
+---
+
+## YARIÇAP DÜZELTMESİ BİR KERE ÇÖKÜNCE BİR DAHA KALKMIYORDU
+
+Dokuzuncu koşuda mecz otuz turda **tek bir adım** kabul etti
+(`kabul 1/30`), `hissedilmeyen adım` on üçe çıktı ve düzeltilmiş
+yarıçap `6.9e-22`ye indi. Kodu okuyunca sebep çıktı:
+
+`_r_duzeltme` turlar arasında **kalıcıdır**. Bir turda `κ` büyük
+çıkarsa `yarıçap* = |ΔV_lineer| / (κ·r)` çok küçülür; küçük yarıçapla
+atılan adımın `ΔV_lineer`i kaybın çözünürlüğünün altına düşer, fakat
+`ΔV_gerçek` hâlâ üstünde olduğu için "hissedilmedi" dalı **açılmaz**;
+`κ = 2(ΔV−ΔV_lin)/r²` payda `r²` ile patlar (`4e21` ölçüldü) ve
+yarıçap bir kat daha çöker. Kısırdöngü: her tur `r*`ı biraz daha
+küçültür, `2r` ile ikiye katlamak `1e-26`dan dönmeye yetmez.
+
+### İKİ TASHİH
+
+1. **HİSSEDİLMEZLİK İKİ TARAFLI ÖLÇÜLÜR.** Bir adım ya gerçekleşen
+   değişimi ya da **öngörülen** değişimi kaybın çözünürlüğünün altında
+   kalıyorsa hissedilmemiştir. Evvelce yalnız gerçekleşen ölçülüyordu.
+2. **HİSSEDİLMEYEN ADIM DÜZELTMEYİ İPTAL EDER, İKİYE KATLAMAZ.**
+   Yarıçap `1/√iz(g_FS)` ile **ölçülen** bir hendese büyüklüğüdür
+   (ferman 2-P); çökmüş bir düzeltme onun yerine geçemez. Adım
+   hissedilmiyorsa düzeltme sıfırlanır ve bir sonraki tur ölçülen
+   hendese yarıçapından başlar.
+
+Çökmüş bir sayıyı ikiye katlayarak kurtarmaya çalışmak, ölçüyü
+düzeltmek değil **kaderine terk etmektir**.

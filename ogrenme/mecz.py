@@ -105,10 +105,12 @@ def hat_egriligi(dv_gercek: float, dv_lineer: float,
         "altına düşüyor" % (r, r * r))
     cozunurluk = float(np.finfo(float).eps) * abs(float(v_olcegi))
     _MECZ["kayıp_çözünürlüğü"] = cozunurluk
-    if abs(float(dv_gercek)) <= cozunurluk:
+    if (abs(float(dv_gercek)) <= cozunurluk
+            or abs(float(dv_lineer)) <= cozunurluk):
         _MECZ["hissedilmeyen_adım"] += 1.0
         _MECZ["κ"] = 0.0
-        return {"κ": 0.0, "yarıçap*": 2.0 * r, "bükey": False}
+        return {"κ": 0.0, "yarıçap*": 0.0, "hissedilmedi": True,
+                "bükey": False}
     kappa = 2.0 * (float(dv_gercek) - float(dv_lineer)) / (r * r)
     _MECZ["κ"] = float(kappa)
     if kappa <= 0.0:
@@ -396,7 +398,8 @@ class Memuriyet:
                 p, v, keyf = aday, va, keyf_aday
                 self._r_duzeltme = 0.0
             else:
-                self._r_duzeltme = float(eg["yarıçap*"])
+                self._r_duzeltme = (0.0 if eg.get("hissedilmedi")
+                                    else float(eg["yarıçap*"]))
                 _MECZ["yarıçap_düzeltmesi"] += 1.0
         return {"p": p, "V_son": v, "seyir": seyir}
 
