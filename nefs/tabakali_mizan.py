@@ -1,11 +1,12 @@
 from __future__ import annotations
 
 import math
-from typing import Any, Dict, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence
 
 import numpy as np
 
-__all__ = ["tasma_kaybi", "kategori_kaybi", "nokta_kaybi"]
+__all__ = ["tasma_kaybi", "kategori_kaybi", "nokta_kaybi",
+           "dizi_kaybi"]
 
 
 def kategori_kaybi(haller: Sequence[np.ndarray], azami: int = 32,
@@ -68,6 +69,37 @@ def tasma_kaybi(lifliler, makamlar, n_v: int, sozluk: int,
     return {"kayıp": tasan, "üst_makam_örneği": int(sec.size),
             "eşik": esik, "taşan_basamak": int(n_v) - esik,
             "kod_uzayı": int(n_v) ** int(basamak), "sözlük": int(sozluk)}
+
+
+def dizi_kaybi(lifliler: Sequence[np.ndarray],
+               baglamlar: Sequence[Sequence[int]],
+               hedefler: Sequence[int], n_v: int,
+               eps: float = 1e-12) -> Dict[str, Any]:
+    assert len(lifliler) == len(hedefler) == len(baglamlar), (
+        "lifli %d, bağlam %d, hedef %d -- örnek kayboldu"
+        % (len(lifliler), len(baglamlar), len(hedefler)))
+    if not lifliler:
+        return {"kayıp": 0.0, "isabet": 0.0, "örnek": 0, "boy": 0.0}
+    tekil: List[float] = []
+    isabet: List[float] = []
+    boylar: List[int] = []
+    for M, bag, hed in zip(lifliler, baglamlar, hedefler):
+        X = np.asarray(M, complex)
+        yer = int(X.shape[1])
+        dizi = ([int(x) % int(n_v) for x in bag][:yer - 1]
+                + [int(hed) % int(n_v)])
+        guc = (np.abs(X) ** 2)[:, :len(dizi)]
+        P = guc / np.maximum(guc.sum(axis=0, keepdims=True), 1e-300)
+        d = np.asarray(dizi, np.int64)
+        p = P[d, np.arange(d.size)]
+        tekil.append(float(-np.log(np.maximum(p, float(eps))).mean()))
+        isabet.append(float(np.mean(np.argmax(P, axis=0) == d)))
+        boylar.append(int(d.size))
+    kayip = float(np.mean(tekil))
+    assert math.isfinite(kayip), "dizi kaybı sonlu değil"
+    return {"kayıp": kayip, "isabet": float(np.mean(isabet)),
+            "örnek": len(tekil), "boy": float(np.mean(boylar)),
+            "en_uzun": int(max(boylar))}
 
 
 def nokta_kaybi(lifliler: Sequence[np.ndarray], hedefler: Sequence[int],

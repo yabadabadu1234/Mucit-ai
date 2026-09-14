@@ -6,7 +6,44 @@ from typing import Any, Dict, List, Mapping, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["Kayit", "Hafiza", "TASDIK", "TEVAKKUF", "CERH", "rapor"]
+__all__ = ["Kayit", "Hafiza", "TASDIK", "TEVAKKUF", "CERH", "rapor",
+           "tertip_beyani", "tertip_metni"]
+
+_TERTIP: Dict[str, float] = {
+    "çağrı": 0.0, "yırtıktan": 0.0, "kapıdan": 0.0, "alâkalı": 0.0,
+    "taşınan": 0.0, "silinen": 0.0, "kök": 0.0, "Φ₃": 0.0,
+    "vecih": 0.0, "açık": 1.0}
+
+_VECIH_ADI: List[str] = []
+
+
+def tertip_beyani() -> Dict[str, Any]:
+    b: Dict[str, Any] = dict(_TERTIP)
+    b["vecih_adı"] = list(_VECIH_ADI)
+    return b
+
+
+def tertip_metni(b: Optional[Dict[str, Any]] = None) -> str:
+    d = dict(b or tertip_beyani())
+    if not d.get("çağrı"):
+        return ("  HAFIZA YENİDEN TERTİBİ: HİÇ KOŞMADI -- kırmızı "
+                "(ferman 2-Ú)")
+    return "\n".join([
+        "  HAFIZA YENİDEN TERTİBİ -- SİLİNMEZ, TERFİ EDER (ferman 2-Ú)",
+        "    çağrı %d   (Sorites yırtığından %d · veri kapısından %d)"
+        % (int(d["çağrı"]), int(d["yırtıktan"]), int(d["kapıdan"])),
+        "    alâka taramasında parlayan kayıt %d   taşınan %d"
+        "   SİLİNEN %d"
+        % (int(d["alâkalı"]), int(d["taşınan"]), int(d["silinen"])),
+        "    Silinen SIFIR olmalıdır: çizip geçmek amnezidir.",
+        "    modalite vechi Δ₃ ile ölçüldü: Φ₃ = %.6f rad   açılan"
+        " Cartan kökü %d" % (d["Φ₃"], int(d["kök"])),
+        "    açılan yapraklar: %s"
+        % (", ".join(d.get("vecih_adı") or []) or "yok"),
+        "    Yaprak adı ELLE YAZILMAZ (ferman 6): çelişen iki kaydı",
+        "    ayıran vecih, Φ₃'ü azamî yapan vecihtir (ferman 1-Ğ).",
+        "    (ölçü %s)" % ("açık" if d.get("açık") else "KAPALI"),
+    ])
 
 TASDIK = 1.0
 TEVAKKUF = 0.5
@@ -130,6 +167,49 @@ class Hafiza:
         self.tertip += 1
         return {"yaprak": str(yaprak), "taşınan": int(tasinan),
                 "tertip": int(self.tertip), "silinen": 0}
+
+    def yeniden_tertiple(self, capraz, sahit=None, mahalli=None,
+                         kapi: str = "yırtık") -> Dict[str, Any]:
+        from .mukayese import bargmann, vecihleri_istihrac
+        _TERTIP["çağrı"] += 1.0
+        _TERTIP["yırtıktan" if kapi == "yırtık" else "kapıdan"] += 1.0
+        if not _TERTIP.get("açık"):
+            return {"vecih": "", "taşınan": 0, "silinen": 0, "Φ₃": 0.0}
+        A = np.asarray(capraz[0], complex).reshape(-1)
+        B = np.asarray(capraz[1], complex).reshape(-1)
+        S = (A + B) if sahit is None else np.asarray(
+            sahit, complex).reshape(-1)
+        assert A.size == B.size == S.size, (
+            "yeniden tertip üç eşit boyda kutup ister: %d, %d, %d"
+            % (A.size, B.size, S.size))
+        en_iyi = None
+        for v in vecihleri_istihrac([A, B, S]):
+            b = bargmann([A, B, S], v)
+            if en_iyi is None or abs(float(b["Φ"])) > abs(en_iyi[1]):
+                en_iyi = (str(v.ad), float(b["Φ"]))
+        assert en_iyi is not None, (
+            "hiçbir vecih Δ₃ vermedi -- modalite lifi ölçülemedi")
+        yaprak, fi = en_iyi
+        _TERTIP["Φ₃"] = float(fi)
+        if yaprak not in _VECIH_ADI:
+            _VECIH_ADI.append(yaprak)
+        _TERTIP["vecih"] = float(len(_VECIH_ADI))
+        if mahalli is not None:
+            _TERTIP["kök"] = float(
+                mahalli.cartan_ekle("modalite." + yaprak, float(fi)) + 1)
+        P = (A + B)
+        nrm = float(np.linalg.norm(P))
+        assert nrm > 0.0, (
+            "çelişen iki kutup birbirini tamamen söndürdü -- alâka "
+            "izdüşümü kurulamıyor")
+        d = self.taban_degistir(P / nrm, yaprak=yaprak, omega=float(
+            np.cos(float(fi))))
+        _TERTIP["alâkalı"] += float(d["taşınan"])
+        _TERTIP["taşınan"] += float(d["taşınan"])
+        _TERTIP["silinen"] += float(d["silinen"])
+        return {"vecih": yaprak, "Φ₃": float(fi),
+                "taşınan": int(d["taşınan"]), "silinen": int(d["silinen"]),
+                "kapı": kapi}
 
     def zeno(self, x) -> Optional[np.ndarray]:
         v = np.asarray(x, float).reshape(-1)

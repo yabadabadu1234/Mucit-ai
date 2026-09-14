@@ -259,8 +259,12 @@ class QYazmac:
         kan = getattr(self, "kan", None)
         pq = getattr(self, "pq", None)
         tohum = getattr(self, "_tohum", None)
-        if kan is None or tohum is None:
-            return 0.0
+        assert kan is not None, (
+            "intâc KAN'sız çağrıldı -- genlik fonksiyoneli yoksa "
+            "üretilecek bir hâl de yoktur (ferman 2-T, 2-A)")
+        assert tohum is not None, (
+            "intâc tohumsuz çağrıldı -- `kodla` mahallî yazmaca tohum "
+            "ekmeden intâca geçilemez (ferman 2-A)")
         bas, sec, yigin, seviye, B, n_sat, d = tohum
         m = self.mahalli
         kuresel = m.kuresel_faz()
@@ -280,8 +284,10 @@ class QYazmac:
         G = np.zeros((B, d), complex)
         G[yigin[sec], seviye.reshape(-1)[sec]] = agirlik[sec]
         G[:, np.arange(taban) * yer + cephe] = kulli_aday
+        self.y.cephe = int(cephe)
         self.y.psi = G.astype(self.y.ayar.tip)
         self.y.normalize()
+        m.uzunluk_katmani(int(n_sat))
         if self.y.iz.senet_acik:
             no = self.y.iz.kapi_yaz(
                 "durum", (), np.asarray(self.y.psi, complex).copy())
@@ -380,8 +386,12 @@ class QYazmac:
     def beyan(self, sozluk: int = 0, satir: int = 0) -> np.ndarray:
         return self.y.beyan(sozluk)
 
-    def dizi_beyani(self, n: int, sozluk: int = 0) -> np.ndarray:
-        return self.y.dizi_beyani(n, sozluk)
+    def durma_hukmu(self, adim: int) -> bool:
+        m = getattr(self, "mahalli", None)
+        assert m is not None, (
+            "yazmaca mahallî zırh bağlanmadı -- durma hükmü veremeyiz "
+            "ve üretim susmazdı (ferman 2-Ğ, 2-Ó-B)")
+        return bool(m.durma_hukmu(int(adim)))
 
 
 MAKAM_ADLARI: Tuple[str, ...] = ("Vehim", "Şek", "Zan", "Zann-ı gālib",

@@ -8,6 +8,8 @@ import numpy as np
 
 from .ayna import AynaAyari, halka
 from .hafiza import CERH, TASDIK, TEVAKKUF, Hafiza
+from .veri_kapisi import (hafiza_hukmu, kapi_beyani,
+                          kapi_tertibi, kapi_tetabuku)
 from .tdd import esit_mi, kanonik_adres
 
 __all__ = ["MizanAyari", "uhlmann", "givens", "holonomi",
@@ -193,6 +195,13 @@ def holonomi_yigin(H: np.ndarray, idx: np.ndarray
     Qc = Q * var[:, None, :]
     om = np.real(np.einsum('cni,cnm,cmi->c', Qc.conj(), U, Qc)) / r_etkin
     return U, np.clip(om, -1.0, 1.0), yol
+
+
+_SON_HAL: List[np.ndarray] = []
+
+
+def son_haller() -> List[np.ndarray]:
+    return list(_SON_HAL)
 
 
 def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
@@ -461,6 +470,8 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     assert len(haller) == len(veri), (
         "ileri geçiş %d örnek aldı, %d netice verdi -- örnek kayboldu"
         % (len(veri), len(haller)))
+    _SON_HAL.clear()
+    _SON_HAL.extend(haller)
     return {"hal": haller, "lifli": lifliler, "hedef": hedefler,
             "cins": cinsler, "makam": makamlar, "bağlam": baglamlar,
             "sektör": sektor, "sektör_ebat": sektor_ebat,
@@ -471,8 +482,8 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
 def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                 ayar: Optional[MizanAyari] = None,
                 hafiza: Optional[Hafiza] = None, adim: int = 0,
-                kademe_gorevleri=None, ne: str = "toplam"
-                ) -> Dict[str, Any]:
+                kademe_gorevleri=None, kapi_hukmu=None,
+                ne: str = "toplam") -> Dict[str, Any]:
     a = ayar or MizanAyari()
     if p is not None:
         nefs.yukle(np.asarray(p, float))
@@ -542,11 +553,14 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         "ceza ödüle dönmüş demektir" % L_hod)
     L_hod = max(0.0, L_hod)
 
-    from .tabakali_mizan import kategori_kaybi, nokta_kaybi, tasma_kaybi
+    from .tabakali_mizan import (dizi_kaybi, kategori_kaybi,
+                                 nokta_kaybi, tasma_kaybi)
     kat = kategori_kaybi(ileri["hal"], azami=int(a.cevrim_sayisi) * 4,
                          tohum=int(a.tohum))
     nok = nokta_kaybi(ileri["lifli"], ileri["hedef"], n_v,
                       cinsler=ileri.get("cins"))
+    diz = dizi_kaybi(ileri["lifli"], ileri["bağlam"], ileri["hedef"], n_v)
+    L_diz = float(diz["kayıp"])
     tas = tasma_kaybi(ileri["lifli"], ileri.get("makam") or [], n_v,
                       int(sozluk), int(a.basamak))
     L_tas = float(tas["kayıp"])
@@ -596,15 +610,13 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         L_nizam = float(max(_ih)) if _ih else 0.0
     else:
         L_nizam = 0.0
-    from .mukayese import (spektrum as _spektrum, vecih_kur as _vecih_kur,
+    from .mukayese import (spektrum as _spektrum,
+                           vecihleri_istihrac as _vecih_kur,
                            hipotez_halkasi as _hipotez_halkasi)
-    _vec = _vecih_kur([(ad, sk) for (ad, _n), sk
-                       in zip(nefs.ayar.kulli_alanlar,
-                              ileri["sektör"])]) if ileri.get("sektör") \
-        else None
     _hal = list(ileri["hal"])[:max(3, int(a.cevrim_boyu) + 1)]
-    spek = (_spektrum(_hal, _vec, azami_n=int(a.cevrim_boyu),
-                      tohum=int(a.tohum)) if len(_hal) >= 2 else None)
+    _vec = _vecih_kur(_hal) if len(_hal) >= 2 else None
+    spek = (_spektrum(_hal, _vec, tohum=int(a.tohum))
+            if len(_hal) >= 2 else None)
     dk = _hipotez_halkasi(ileri["hal"], ileri.get("cins"),
                           (_vec[0] if _vec else None))
     from .casimir import (blok_kosegen_artigi, dhr_ayrismasi,
@@ -676,6 +688,9 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             hukum = (CERH if om < -1.0 + a.kenar else
                      TEVAKKUF if om > 1.0 - a.kenar else TASDIK)
             j = hidx % len(ileri["hal"])
+            kapi = hafiza_hukmu(kapi_hukmu, j)
+            if kapi != TASDIK:
+                hukum = min(hukum, kapi)
             mu = sup.get("μ")
             if (hukum == TASDIK and mu is not None and len(mu) > j
                     and float(mu[j]) < 0.35):
@@ -689,8 +704,21 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         for _j, _netice in usl.get("netice", ()):
             hafiza.yaz(_netice, omega=1.0, hukum=TASDIK)
 
+    from .mukayese import mukayese_melekesi
+    mky = mukayese_melekesi(ileri["hal"], ileri.get("cins"),
+                            hafiza=hafiza,
+                            mahalli=getattr(nefs, "mahalli", None))
+    L_mky = float(mky["kayıp"])
+
+    ret = kapi_tetabuku(tenakuz=L_ten, kisirdongu=float(cv["ceza"]),
+                        mantiksizlik=L_tas + float(_z["betti_ceza"]))
+    L_ret = float(ret["kayıp"])
+
     L_gedik = float(a.lam_cevrim) * float(usl["borç"])
     _bilesen = [("nokta", L_nok, float(a.lam_nokta)),
+                ("dizi", L_diz, 1.0),
+                ("kapı", L_ret, 1.0),
+                ("mukayese", L_mky, 1.0),
                 ("uzay", L_rez, 1.0),
                 ("kategori", L_kat, float(a.lam_kategori)),
                 ("tip", L_hod, float(a.lam_tip)),
@@ -722,6 +750,9 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "ham_artık": ham_artik, "rezonans": L_rez, "sadakat": F,
             "taşma": L_tas, "taşma_dökümü": tas,
             "nokta": L_nok, "nokta_isabet": float(nok["isabet"]),
+            "dizi": L_diz, "dizi_dökümü": diz,
+            "kapı": L_ret, "kapı_dökümü": ret,
+            "mukayese_melekesi": L_mky, "mukayese_dökümü": mky,
             "nokta_cins": nok.get("cins", {}),
             "lif": L_lif, "lif_dökümü": mns, "hız": L_hiz,
             "kategori": L_kat, "kategori_ihlâl": int(kat["ihlâl"]),

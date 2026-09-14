@@ -360,15 +360,70 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
 
 ---
 
+## 6-B. VECİH VE MUKAYESE -- NETİCE ÇIKARAN MELEKE
+
+    VERİ KAPISI (ferman 2-Ó) -- ret girene bakar, konuşmaya değil
+
+    Hüküm(Örnek) = tenakuz  eğer aynı Bağlam evvelce başka Hedefle geldi
+                 | kısırdöngü eğer Dizi kendi üstüne kapanıyor
+                 | mantıksızlık eğer basamak ∉ [0, VeriLifi)
+    Kabul(Örnek) = yanlış YALNIZ mantıksızlıkta;  tenakuz TERFİ eder
+    HafızaKaydı  = tasdik | tevakkuf | cerh       ← kaydın CİNSİNİ kapı tayin eder
+
+    VECİH İSTİHRACI (ferman 1-Ğ, 2-Ú) -- küllî matris ameliyesi YOK
+
+    Münasebet(a,b) = ⟨Hâl_a | Hâl_b⟩
+    Kaide(a,b)     = ( metrik  = 1 − |Münasebet(a,b)|²
+                     , sıra    = |sin arg Münasebet(a,b)|
+                     , terkip  = |arg Δ₃(a, b, şahit)|
+                     , nispet  = |Münasebet(a,b)|² )
+    Ölçek          = ortancaSapma(Kaide over bütün çiftler)   ← eşik ÖLÇÜLÜR (1-J)
+    İmza(a,b)      = yuvarla(Kaide(a,b) / Ölçek)
+    Âlem           = aynı İmzalı münasebetlerin öbeği
+    Vecih(Âlem)    = izdüşüm( birim( toplam over öbek of AyırtEdiciYön(a,b) ) )
+                     AyırtEdiciYön(a,b) = birim( Hâl_a − ⟨Hâl_b|Hâl_a⟩·Hâl_b )
+    Mertebe(Âlem)  = enbüyükArgüman over ℓ of Nispet(ℓ | öbeğin kutupları)
+                     ℓ = 0 nokta · 1 uzay · 2 kategori · 3 tip · 4… Postnikov
+
+    MUKAYESE MELEKESİ -- durumu EVİRMEZ, hüküm çıkarır
+
+    Δ_n(ψ₁…ψ_n) = ⟨ψ₁|ψ₂⟩⟨ψ₂|ψ₃⟩ … ⟨ψ_n|ψ₁⟩ = r_n · e^(i·Φ_n)
+    Φ_n         = toplam over k=2..n−1 of Φ₃(ψ₁, ψ_k, ψ_{k+1})   (mod 2π)
+    Halka boyu  : BÜTÜN BOYLAR BERABER, n = 2 … m                 (ferman 2-Ú)
+    Tenakuz     eğer Φ_n → π ·  Kısırdöngü eğer Φ_n → 0 ·  Kopuk eğer r_n = 0
+    Yırtık      eğer sapma(üçgen*) > 3 × ortanca(sapma)
+
+    HAFIZA YENİDEN TERTİBİ -- silme YOK, terfi VAR
+
+    Yaprak   = Φ₃'ü AZAMÎ yapan Vecih                  ← vechi Δ₃ tayin eder
+    Kök      = MahallîYazmaç.CartanEkle("modalite." + Yaprak, Φ₃)
+               ← yeni ORTOGONAL kök; evvelki köklerin adresi KAYMAZ (2-İ)
+    Hafıza   ← TabanDeğiştir(birim(A + B), Yaprak, ω = cos Φ₃)
+    Tertip KÜME KAPANINCA bir defa koşar; yırtıklar deftere birikir.
+
+---
+
 ## 7. KONUŞMA -- HER İKİ KAPIDA DA
 
-    Dağılım      = Hâl(İleriGeçiş(Yerleştir(Bağlam)))    ← basamak marjinali
-    Budanmış     = Buda(Dağılım, Hafıza.cerh)
-    Basamak_yeni = enbüyük(VakumKıvılcımı(Budanmış))     ← sıcaklık örneklemesi DEĞİL
-                   Ayna YOKSA düz enbüyük olur ve üretim SABİT NOKTAYA düşer
-    Bağlam       ← Bağlam + Basamak_yeni
+    Bağlam_basamak = TabanAçılımı(tiktoken(Suâl), VeriLifi, BasamakSayısı)
+                     ← modülo katlama YOK; her belirteç basamağa açılır
 
-    Belirteç = TabandanTopla(Basamak[5'erli], VeriLifi)
+    tekrarla:
+      Dağılım    = Hâl(İleriGeçiş(Yerleştir(Bağlam)))    ← nedensel cephenin
+                                                           basamak marjinali
+      eğer Durma(adım):  dur                             ← üst hudut YOK (2-Ó-B)
+      Budanmış   = Buda(Dağılım, Hafıza.cerh)
+      Basamak_yeni = enbüyükArgüman( ∇log Budanmış / g_FubiniStudy )
+                     ← ZAR ATILMAZ (ferman 2-Ĵ): determinist okuma
+      Bağlam     ← Bağlam + Basamak_yeni
+
+    Durma(adım) = UzunlukKatmanı[adım] > toplam over k>adım of UzunlukKatmanı[k]
+                  ← uzunluk bir KARAR değil, süperpozisyonun hükmü (2-Õ)
+
+    Hafıza ← Yaz(Yazmaç_son, ω = e^(−Bedel/uzunluk), hüküm = tasdik)
+             ← konuşma hafızaya BAĞLIDIR (ferman 2-Ó)
+
+    Belirteç = TabandanTopla(Basamak[BasamakSayısı'lı], VeriLifi)
     Cevap    = tiktoken⁻¹(Belirteç eğer Belirteç < n_vocab)
                taşan Belirteç SUSTURULMAZ, sayılır (ferman 2-L)
 

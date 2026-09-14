@@ -140,6 +140,7 @@ class QuditYazmac:
         self._faz_artik = np.zeros((int(a.yigin), int(a.d)), np.int64)
         self._faz_kesir = np.zeros((int(a.yigin), int(a.d)), float)
         self._faz_indirilen = 0
+        self.cephe = 0
         self._psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
                             dtype=a.tip)
         self._sadakat_log = 0.0
@@ -621,22 +622,10 @@ class QuditYazmac:
         assert taban == int(self.ayar.lif[0]), (
             "beyan basamak eksenini okur: taban %d, lif[0] %d -- ikisi "
             "aynı eksen olmalı (ferman 1-M)" % (taban, int(self.ayar.lif[0])))
-        p = np.abs(self.psi) ** 2
-        P = p.reshape(self.B, taban, -1).sum(axis=2)
-        return P / np.maximum(P.sum(axis=1, keepdims=True), 1e-300)
-
-    def dizi_beyani(self, n: int, sozluk: int = 0) -> np.ndarray:
-        taban = int(sozluk) if int(sozluk) >= 2 else int(self.ayar.lif[0])
-        assert taban == int(self.ayar.lif[0]), (
-            "dizi beyanı basamak eksenini okur: taban %d, lif[0] %d "
-            "(ferman 1-M)" % (taban, int(self.ayar.lif[0])))
         yer = self.d // taban
-        assert int(n) >= 1 and int(n) <= yer, (
-            "dizi boyu %d, basamak başına yer %d -- yazmaç diziyi "
-            "taşımıyor (ferman 2-M)" % (int(n), yer))
-        p = (np.abs(self.psi) ** 2).reshape(self.B, taban, yer)
-        P = np.transpose(p[:, :, :int(n)], (0, 2, 1))
-        return P / np.maximum(P.sum(axis=2, keepdims=True), 1e-300)
+        c = int(np.clip(int(self.cephe), 0, yer - 1))
+        p = (np.abs(self.psi) ** 2).reshape(self.B, taban, yer)[:, :, c]
+        return p / np.maximum(p.sum(axis=1, keepdims=True), 1e-300)
 
     def povm(self, ad: str) -> Tuple[float, float]:
         i, j = self.sektor(ad)

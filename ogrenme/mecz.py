@@ -6,7 +6,7 @@ from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 __all__ = ["MeczAyari", "Memuriyet", "hata_operatoru", "uretecler",
-           "cukur", "duvar", "yaricap", "vadi", "nakil",
+           "cukur", "yaricap", "vadi", "nakil",
            "mecz_egit", "mecz_beyani", "mecz_metni", "mecz_sifirla",
            "yetim_bloklar", "adres_beyani"]
 
@@ -29,7 +29,7 @@ def mecz_sifirla() -> None:
     _MECZ.update({"çağrı": 0.0, "tur": 0.0, "kabul": 0.0,
                   "adım_normu": 0.0, "eğim_normu": 0.0,
                   "kapsanan_parametre": 0.0, "toplam_parametre": 0.0,
-                  "duvar_elenen": 0.0, "duvar_bakılan": 0.0,
+                  "sıralanan": 0.0, "en_dar_sıra": 0.0,
                   "çukur": 0.0, "vadi": 0.0, "nakil": 0.0,
                   "ΔE": 0.0, "yarıçap": 0.0, "iz_g": 0.0,
                   "operatörlü_kefe": 0.0, "operatörsüz_kefe": 0.0,
@@ -142,18 +142,6 @@ def cukur(psi: np.ndarray, H: np.ndarray,
         kipirti == kipirti and kipirti <= float(np.arcsin(
             np.sqrt(np.finfo(float).eps))))
     return {"⟨H⟩": E, "ΔE": dE, "durak": durak, "asal_açı": kipirti}
-
-
-def duvar(metrik: np.ndarray) -> Dict[str, Any]:
-    m = np.asarray(metrik, float)
-    if m.size == 0:
-        return {"maske": m, "elenen": 0, "bakılan": 0, "nispet": 0.0}
-    nispet = m / max(float(m.max()), 1e-300)
-    gecen = nispet > float(np.median(nispet)) * 1e-3
-    _MECZ["duvar_bakılan"] = float(m.size)
-    _MECZ["duvar_elenen"] = float(m.size - int(gecen.sum()))
-    return {"maske": gecen.astype(float), "elenen": int(m.size - gecen.sum()),
-            "bakılan": int(m.size), "nispet": float(gecen.mean())}
 
 
 def yaricap(iz_g: float,
@@ -325,15 +313,17 @@ class Memuriyet:
         _MECZ["eğim_normu"] = float(np.linalg.norm(g_ek))
         _MECZ["iz_g"] = float(metrik.sum())
 
-        dv = duvar(metrik)
-        maske = np.asarray(dv["maske"], float)
+        sira = np.asarray(metrik, float)
+        sira = sira / max(float(sira.max()), 1e-300)
+        _MECZ["sıralanan"] = float(sira.size)
+        _MECZ["en_dar_sıra"] = float(sira.min()) if sira.size else 0.0
         r = yaricap(float(_MECZ["iz_g"]), seyir=self._seyir)
-        yon = -g_ek * maske
+        yon = -g_ek * sira
         nrm = float(np.linalg.norm(yon))
         if ck["durak"] or nrm <= 1e-300:
             _MECZ["çukur"] += 1.0
-            yon = (vadi(metrik, maske) if not ck["durak"]
-                   else nakil(q, metrik, maske))
+            yon = (vadi(metrik, sira) if not ck["durak"]
+                   else nakil(q, metrik, sira))
             nrm = float(np.linalg.norm(yon))
         if nrm > 0.0:
             yon = yon / nrm
@@ -344,7 +334,7 @@ class Memuriyet:
         _MECZ["üreteç_ikiz_farkı"] = float(mt["üreteç_ikiz_farkı"])
         iz.senedi_kapat()
         return {"yön": yon, "yarıçap": r, "ΔE": ck["ΔE"], "eğim": g_ek,
-                "metrik": metrik, "⟨H⟩": ck["⟨H⟩"], "duvar": dv,
+                "metrik": metrik, "⟨H⟩": ck["⟨H⟩"], "sıra": sira,
                 "mutabakat": mt, "durak": ck["durak"]}
 
     def kademeye_yay(self, yon: np.ndarray, kac: int) -> np.ndarray:
@@ -416,8 +406,7 @@ def mecz_beyani() -> Dict[str, float]:
     b["çağrı_başına_tur"] = (b["tur"] / b["çağrı"]) if b["çağrı"] else 0.0
     b["kapsam"] = ((b["kapsanan_parametre"] / b["tahsis_edilen"])
                    if b.get("tahsis_edilen") else 0.0)
-    b["duvar_nispeti"] = ((b["duvar_elenen"] / b["duvar_bakılan"])
-                          if b["duvar_bakılan"] else 0.0)
+
     return b
 
 
@@ -437,9 +426,9 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          % (b["ΔE"], int(b["çukur"])),
          "         Grassmann asal açısı = %.4e   (hâl kıpırdadı mı --"
          " Karar 14/1)" % b["asal_açı"],
-         "  DUVAR  elenen %d / %d koordinat (%.1f%%)"
-         % (int(b["duvar_elenen"]), int(b["duvar_bakılan"]),
-            100.0 * b["duvar_nispeti"]),
+         "  DUVAR İLGA EDİLDİ (ferman 1-Ğ): eleme yok, %d koordinat"
+         " yalnız SIRALANDI; en dar sıra %.6e"
+         % (int(b.get("sıralanan", 0)), b.get("en_dar_sıra", 0.0)),
          "  VADİ   %d kere aşırdı" % int(b["vadi"]),
          "  NAKİL  %d kere sıçrattı" % int(b["nakil"]),
          "         DİZİNİN genliğinden WKB geçirgenliği T = %.4e"

@@ -19,8 +19,8 @@ from nefs.musahede import gorevleri_getir
 from ogrenme.mecz import MeczAyari, mecz_egit, mecz_beyani
 from main import hazine
 from nefs.kulli_mizan import (MizanAyari, kulli_mizan,
-                              mizan_cetveli)
-from nefs.hafiza import Hafiza
+                              mizan_cetveli, son_haller)
+from nefs.hafiza import Hafiza, tertip_beyani
 from main.cikarim import (hazineden_yukle, hafizayi_yukle, padisah,
                           hazineden_devam, devam_agirligi)
 from nefs.galois import (GaloisAyari, tableau_kur,
@@ -29,6 +29,8 @@ from nefs.tdd import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
 from nefs.ayna import AynaAyari
 from nefs.mihenk import MIHENK, nobet_kur
+from nefs.veri_kapisi import (VeriKapisiAyari, veri_kapisi,
+                              kapi_beyani, kapi_tertibi)
 from nefs.faz_polinomu import FazAyari, faz_oturt
 from nefs.siklotomik import (SiklotomikAyari,
                              koset_indirge, iz_esitligi)
@@ -36,7 +38,7 @@ from nefs.qcekirdek import cekirdek_beyani
 from nefs.parametre_yazmaci import (ParametreAyari, ParametreYazmaci,
                                     parametre_beyani, kenet_beyani)
 from nefs.nqs import nqs_beyani
-from nefs.mahalli_yazmac import mahalli_beyani
+from nefs.mahalli_yazmac import mahalli_beyani, uzunluk_beyani
 from tanilama.hizolcer import (Hizolcer, hizolcer_bagla,
                                hizolcer_beyani)
 from nefs.gpu_akis import GpuAyari, gpu_akisi
@@ -55,7 +57,8 @@ from nefs.munasebet import (Harita, MunasebetAyari, munasebet_kos,
 from main.kulliyat import (kulliyat_verisi,
                            kulliyat_dokumu, kulliyat_beyani)
 from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
-                           vecih_kur)
+                           mukayese_melekesi_beyani, vecih_beyani,
+                           vecihleri_istihrac, yirtiklari_tertiple)
 from nefs.hendese import (HendeseAyari, hendese_teshisi,
                           hendese_beyani)
 from nefs.casimir import (CasimirAyari, blok_kosegen_artigi,
@@ -412,8 +415,15 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         taban=int(ayar.veri_lifi),
         basamak=int(ayar.belirtec_basamak),
         imlec=devam.get("imleç"), ne="imleçli")
-    veri = list(arc_veri) + list(kul_veri)
-    assert veri, "tâlim verisi BOŞ"
+    kapi_hukmu = veri_kapisi(
+        list(arc_veri) + list(kul_veri),
+        ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
+                             taban=int(ayar.veri_lifi),
+                             basamak=int(ayar.belirtec_basamak)))
+    veri = list(kapi_hukmu["kabul"])
+    assert veri, (
+        "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
+        % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
 
     from nefs.qegitim import ornek_bol as _bol
     hendese = hendese_teshisi(
@@ -502,6 +512,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             with olcer.saat(len(kume) * int(ayar.pencere)):
                 t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
                                 hafiza=hafiza.klon(),
+                                kapi_hukmu=kapi_hukmu,
                                 adim=int(_kume["adım"]),
                                 kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
@@ -528,7 +539,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     def _olc(p_, kume):
         return kulli_mizan(nefs, list(kume), np.asarray(p_, float),
                            ayar.sozluk, ayar=_mzn["a"], hafiza=hafiza,
-                           adim=_sayac["çağrı"],
+                           adim=_sayac["çağrı"], kapi_hukmu=kapi_hukmu,
                            kademe_gorevleri=kademe_gorevleri, ne="döküm")
 
     mun = munasebet_kos(
@@ -548,6 +559,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         keyfiyet_ayari=KeyfiyetAyari(acik=1,
                                      azami_tur=int(ayar.keyfiyet_turu)))
     _kume["v"] = list(veri)
+    kume_kapanisi = {
+        "yırtık": yirtiklari_tertiple(hafiza, getattr(nefs, "mahalli",
+                                                     None)),
+        "kapı": kapi_tertibi(kapi_hukmu, son_haller(), hafiza,
+                             getattr(nefs, "mahalli", None))}
     p_son = np.asarray(mun["p"], float)
     _ilk = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=_mzn["a"],
                        hafiza=hafiza, adim=_sayac["çağrı"],
@@ -676,17 +692,15 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                           kademe_gorevleri=kademe_gorevleri, ne="döküm")
     cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
     if int(ayar.mukayese_acik):
-        _sek = [q_son.y.sektor(ad) for ad, _ in q_son.ayar.kulli_alanlar]
-        _vec = vecih_kur([(ad, s) for (ad, _n), s
-                          in zip(q_son.ayar.kulli_alanlar, _sek)])
+        _dun_ilk = [np.asarray(h, complex) for h in
+                    np.asarray(q_son.y.psi, complex)[:4]]
+        _vec = vecihleri_istihrac(_dun_ilk + [psi_son])
         mukayese = mukayese_beyani(
             kefeler.get("spektrum"),
             hata_payi(list(kefeler["artık_adı"]),
                       list(np.asarray(kefeler["artık"], float))))
-        _dun = [np.asarray(h, complex) for h in
-                np.asarray(q_son.y.psi, complex)[:4]]
-        mukayese["kiplik"] = kiplik(np.asarray(psi_son, complex), _dun,
-                                    _vec)
+        mukayese["kiplik"] = kiplik(np.asarray(psi_son, complex),
+                                    _dun_ilk, _vec)
     else:
         mukayese = mukayese_beyani(None, None)
 
@@ -738,6 +752,10 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "sadakat": sad, "son_sadakat": son_sadakat,
             "mukayese": mukayese,
+            "mukayese_melekesi": mukayese_melekesi_beyani(),
+            "vecih": vecih_beyani(),
+            "hafıza_tertibi": tertip_beyani(),
+            "küme_kapanışı": kume_kapanisi,
             "mihenk": nobet.beyan(p_yildiz),
             "eniyileme": mecz_beyani(),
             "faz_borcu": q_son.y.faz_borcu(),
@@ -755,6 +773,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                 getattr(nefs, "pq", None)),
             "kenetlenme": kenet_beyani(),
             "mahallî_yazmaç": mahalli_beyani(),
+            "uzunluk_katmanı": uzunluk_beyani(),
+            "veri_kapısı": kapi_beyani(),
             "kan_nqs": nqs_beyani(getattr(nefs, "kan", None)),
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),

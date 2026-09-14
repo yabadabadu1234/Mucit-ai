@@ -126,7 +126,8 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
     if ayar is None:
         from main.egitim import KISA_CPU
         ayar = KISA_CPU
-    c = soyle(gorev, nefs=nefs, sozluk=int(ayar.sozluk), hafiza=hafiza,
+    c = soyle(gorev, nefs=nefs, sozluk=int(ayar.sozluk),
+              pencere=int(ayar.pencere), hafiza=hafiza,
               hedef=int(kw.pop("hedef", 0)),
               sinamadan=bool(kw.pop("sinamadan", False)))
     return {"görev": getattr(gorev, "ad", ""),
@@ -134,6 +135,7 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
             "sebep": c.sebep,
             "kural": c.kural,
             "belirteç": c.belirtec,
+            "uzunluk_hükmü": int(c.uzunluk),
             "güven": float(c.guven),
             "budanan": int(getattr(c, "budanan", 0)),
             "yutulan_ayar": sorted(kw) or None}
@@ -157,9 +159,7 @@ def degerlendirme_kosusu(kume: str = "training", azami: int = 24,
         budanan += int(r.get("budanan", 0))
         _, hedef = gorev_dizisi(g)
         assert len(hedef) > 0, "görev %r için hedef BOŞ" % getattr(g, "ad", "")
-        from nefs.belirtec import basamak_sayisi, tip_vektoru
-        _bs = basamak_sayisi(int(a.sozluk), int(a.veri_lifi))
-        h = [int(x) for x in tip_vektoru(hedef, int(a.veri_lifi), _bs)]
+        h = [int(x) for x in hedef]
         u = list(r["belirteç"] or [])
         n = min(len(h), len(u))
         if n:

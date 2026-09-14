@@ -75,7 +75,7 @@ def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
     kac = int(cevap_haddi(int(basamak), str(kodlama)))
     t0 = time.perf_counter()
     uretilen, bedel, sukutlar, budanan = _uret(
-        nefs, bag, kac, int(pencere), int(taban), ayna=ayna)
+        nefs, bag, int(pencere), int(taban), ayna=ayna)
     sure = time.perf_counter() - t0
     coz = _metne(uretilen, str(kodlama), int(taban), int(basamak))
     cevap = str(coz["metin"])

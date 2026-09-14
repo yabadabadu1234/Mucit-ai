@@ -100,7 +100,11 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from main.kulliyat import kulliyat_beyani
         from nefs.parametre_yazmaci import parametre_metni, kenet_metni
         from nefs.nqs import nqs_metni
-        from nefs.mahalli_yazmac import mahalli_metni
+        from nefs.mahalli_yazmac import mahalli_metni, uzunluk_metni
+        from nefs.veri_kapisi import kapi_metni
+        from nefs.mukayese import mukayese_melekesi_metni
+        from nefs.hafiza import tertip_metni
+        from nefs.mukayese import vecih_metni
         kn = kulli["konuşma"]
         s += ["",
               "  TEK MOTOR -- TÂLİM DE KONUŞUR (ferman 1-H)",
@@ -123,6 +127,12 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               parametre_metni(kulli.get("parametre_yazmacı") or {}), "",
               kenet_metni(kulli.get("kenetlenme") or {}), "",
               mahalli_metni(kulli.get("mahallî_yazmaç") or {}), "",
+              uzunluk_metni(kulli.get("uzunluk_katmanı") or {}), "",
+              kapi_metni(kulli.get("veri_kapısı") or {}), "",
+              mukayese_melekesi_metni(
+                  kulli.get("mukayese_melekesi") or {}), "",
+              tertip_metni(kulli.get("hafıza_tertibi") or {}), "",
+              vecih_metni(kulli.get("vecih") or {}), "",
               nqs_metni(kulli.get("kan_nqs") or {}), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"
               % (kulli["külliyat"]["arc"], kulli["külliyat"]["külliyat"]),

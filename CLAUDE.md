@@ -1670,6 +1670,36 @@ kendi temas ettiği bir yahut iki quditin mahallî serbestliğinde döner.
 * **MAHALLÎ DURUM AYRIK VE AÇIKTIR.** `N` quditin her biri kendi
   `ℂ^q` mahallî durumunu taşır; bu bir budama değil, seyirci
   teoreminin neticesidir. Bellek `N·q·16 bayt`tır ve ölçülerek yazılır.
+
+### TAŞIYICI KAT'ÎDİR: `(N, q)` KOMPLEKS -- (genlik, faz) İKİLİSİ DEĞİL
+
+> *"`ℂ^q` olsun: `(N, q)` kompleks -- 1M×64×16 = 1 GB."*
+
+Mahallî yazmaç `ℝ^{N×2}` **değildir**. Ferman 2-Ş'nin *"`[:,0]` genlik
+çarpanı, `[:,1]` Lie faz açısı"* tarifi bir **ara merhaleydi** ve bu
+hükümle kapanmıştır:
+
+    MahallîYazmaç ∈ ℂ^{N × q}          N = 1 048 576,  q = 64
+    Bellek         N · q · 16 bayt  =  1 073 741 824 bayt  (1 GiB)
+
+* **NİÇİN.** `(genlik, faz)` ikilisi bir quditin yalnız **bir**
+  seviyesini tarif eder; `2×2` ve `4×4` kapılar oraya hakikaten
+  vuramaz, ancak faz rotasyonu taklidi yapılabilirdi. `ℂ^q` ile kapı
+  **hakikaten** vurur.
+* **BELLEK ÖLÇÜLÜR** (ferman 5-B, 2-I): 1 GiB ölçülen bellek haddine
+  sığmıyorsa bütçe **kırmızı yanar**; sığdırmak için qudit sayısı
+  değil, tahsis usulü tartışılır.
+* Ferman 2-Ğ'nin *"16 MB sabit zırh"* rakamı bu hükümle **1 GiB**
+  olmuştur; sabitlik bâkîdir, rakam değişmiştir.
+
+### SENET BANDI: MAHALLÎ YAZMACIN ENSTANTANESİ
+
+> *"Mahallî yazmacın enstantanesi kaydedilsin."*
+
+`_psi` kalkınca senet bandı boşa düşmez: her kapı, dokunduğu anın
+**mahallî yazmaç enstantanesini** kaydeder. Seyrek kayıt (*"yalnız
+dokunulan indis"*) ve senedin toptan kaldırılması **reddedilmiştir**.
+Bedeli ölçülür ve raporda yazılır.
 * **`q^N` YİNE HİÇBİR YERDE AÇILMAZ** (ferman 2-T): kapasite bir uzay
   iddiasıdır, bir bellek iddiası değil.
 
@@ -2216,6 +2246,51 @@ araya sahte dizi sokmadan doğrudan üç kaynağı okur:
 tipine ayrılır -- sektör yükü, faz uyumsuzluğu/çevrim, küllî rezonans
 -- ve tek bir okuyucu arayüzle bağlanır.
 
+### BAĞLAM MAHALLÎ YAZMAÇTA DURUR -- TETABUK BÖYLE KURULDU
+
+> *"`_psi` kazınsın, bağlam mahallî yazmaçta dursun."*
+
+`_psi` açık dizi olduğu müddetçe bağlam `yer = d ÷ sözlük` basamakta
+çakılıyordu: `d = 65 536`, sözlük `64` iken hadd **1024 basamak**.
+Ferman 2-Õ'nün bir milyonluk penceresi oraya sığmaz -- sığdırmak
+`d = 67 108 864` genlik, yâni bir terabayt demekti. Hüküm şudur:
+
+    BAĞLAM      bir milyon quditlik MAHALLÎ ZIRHTA durur (ferman 2-Ğ).
+    GENLİK      turda bir defa KAN'dan üretilir (ferman 2-A).
+    `_psi`      KAZINIR: ne bellekte, ne bir özellik olarak kalır.
+
+* **`yer` EKSENİ KALKAR.** Bağlamın basamağı `_psi`nin ikinci eksenine
+  dizilmez; mahallî yazmacın qudit indisidir. Böylece pencere
+  yazmacın ebadından değil, **zırhın** ebadından hudutlanır.
+* **`dizi_beyani` KAN'DAN ÜRETİLİR**, `|ψ|²`nin yeniden şekillenmesinden
+  değil.
+* Kefeler üç kaynağı okur (yukarıda): mahallî yazmaç · `θ_cartan` ·
+  turun tek KAN neticesi.
+
+### KAZIMA YARIM DEĞİL TAMDIR -- KAPILAR DA MAHALLÎ YAZMAÇTA VURUR
+
+> *"**Dizi tamamen kalksın; kapılar da mahallî yazmaçta vursun.**"*
+
+*"`_psi` tekil kavram lifi olarak kalsın"* şıkkı **reddedilmiştir**.
+`_psi` dizisi bütünüyle kalkar; üstünde koşan ne varsa mahallî
+yazmaca taşınır:
+
+    KAPILAR        bit · çift · matchgate · sektör kapısı
+                   → mahallî yazmacın (genlik, faz) sütunlarına vurur
+                     (ferman 2-V: yalnız temas edilen qudit, kalanı seyirci)
+    FAZ DEFTERİ    → mahallî yazmacın faz sütunu; sürekli Lie açısı
+    SENET BANDI    → kapı kayıtları mahallî yazmaç üstünden tutulur
+    SEKTÖR OKUMASI → Cartan kökünün beklenti değeri (ferman 2-Ô, 2-İ)
+    GENLİK         → yalnız KAN'dan (ferman 2-T, 2-A: turda bir kez)
+
+* **YARIM KAZIMA YASAKTIR** (ferman 1-E): dizi dururken *"artık bağlam
+  taşımıyor"* demek, iki yolu yan yana bırakmaktır.
+* **BU FERMAN 2-Ş'NİN TARİFİNİ TADİL EDER.** Orada `_psi` *"tekil
+  kavram lifi, bir quditin iç anatomisi"* diye tarif edilip
+  bırakılmıştı; artık bırakılmıyor. *"Sırf fonksiyonel yetmez, somut
+  yazmaç adresi ve faz defteri lâzım"* hükmü bâkîdir ve o adres
+  **mahallî yazmaçtır** -- `_psi` değil.
+
 ### VERİ YAZMACI DA QUDİTTİR
 
 > *"Veriyi de qudit yapmayı unutma, `q^N`."*
@@ -2286,7 +2361,537 @@ diye mühürledim ve **yanlıştı**. Tashih:
 * Üç vecih (muhakeme, hakikat ayrımı, münasebet haritası) bu
   kestirimin **vasıtalarıdır**, ayrı hedefler değil.
 
-## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
+## ▓▓▓ 2-Ó. FERMAN: İHTİMAL YETMEZ -- MUHAKEME İLE RET ŞARTTIR ▓▓▓
+
+> *"Dizinin tamamının genliği, fakat **öğrenilen şey sadece ihtimal
+> ise bu llm'den farksız** değil mi? Bizimki şunu diyebilir: **bu şu
+> şu sebepten dolayı akla mugayirdir, üretmiyorum.** İnsanda sadece
+> ihtimal yok, **mantık muhakeme var**, bunca meleke de boşuna değil."*
+
+### MERKEZ KEFE: DİZİNİN TAMAMININ GENLİĞİ
+
+    ℓ_Dizi = −ln | Genlik(hedef dizi | evvelki dizi) |²
+
+Tek hedef basamağın olabilirliği **değil**, dizinin tamamının genliği.
+KAN zaten diziyi tek konfigürasyon olarak tartıyor; kefe o genliktir.
+
+### FAKAT İHTİMAL TEK BAŞINA KALIRSA MİMARİ MANASIZDIR
+
+İhtimalden ibaret bir öğrenme, alelade bir dil modelidir; kırk dört
+meleke, üç hudut ve mizan o zaman **süs** olur. Bizimkinin fazlası
+şudur:
+
+    MODEL RET EDEBİLİR VE RETTİN SEBEBİNİ SÖYLER.
+
+    "Bu şu şu sebepten akla mugayirdir; üretmiyorum."
+
+* **RET BİR SÜKÛT DEĞİL, BİR HÜKÜMDÜR.** Boş çıktı vermek değil,
+  **gerekçeli** reddetmektir: hangi hudut çiğnendi (tenakuz mu,
+  kısırdöngü mü, mantıksızlık mı) ve hangi meleke itiraz etti.
+* **RET İHTİMALDEN GELMEZ, MUHAKEMEDEN GELİR.** En yüksek ihtimalli
+  dizi akla mugayir olabilir; o hâlde ihtimal kefesi ile üç hudut
+  **aynı mizanda beraber** durur ve ret, huddun hükmüdür.
+* **MELEKELER BOŞUNA DEĞİLDİR:** her biri kendi kategorisinde bir
+  itiraz mercii olur (ferman 1-U: her meleke ayrı kefe).
+
+### RET KONUŞMAYA DEĞİL, GİRENE BAKAR -- VE HAFIZAYI TAYİN EDER
+
+> *"**Konuşmayı reddetmek artık yok**, red **içeriye alınacak veri
+> hakkındadır**, verinin kabul edilip edilmemesini sağlar. **Hafızaya
+> nasıl kaydedileceğini tayin eder.** Ayrıca sen **konuşmaya hafızayı
+> bağlamamışsın**."*
+
+Yukarıdaki *"bu şu şu sebepten akla mugayirdir, üretmiyorum"* hükmü
+**çıkış kapısında ilga edilmiştir**. Model konuşmayı reddetmez; ret
+**kapının önünde**, içeri girecek veri hakkındadır:
+
+    EVVELKİ (İLGA)   üret → üç hudut kirli mi → kirliyse SUSs
+    ASIL             veri gelsin → üç hudut ne diyor → KABUL / RET
+                                 → kabul edilen HAFIZAYA NASIL yazılacak
+
+* **RET BİR KAPI MEMURUDUR.** Mugayir veri tâlime alınmaz; alınan
+  verinin hafızadaki **kaydının cinsi** (tasdik · tevakkuf · nakz) ret
+  merciinin hükmüdür.
+* **KONUŞMA HAFIZAYA BAĞLANIR.** `nefs/soyle.py` hafızayı yalnız Zeno
+  budamasında kullanıyordu; konuşurken hafızaya **yazmıyordu** ve
+  hafızadan **beslenmiyordu**. Bu bir kopukluktur (ferman 1-Z) ve
+  kapatılır: konuşulan şey hafızaya, hafızadaki şey konuşmaya girer.
+* Mizandaki kefe bu sebeple *"yerinde ret / yersiz ret"* değil,
+  **verinin kabul hükmü ile hafıza kaydının tetabuku**dur.
+
+---
+
+## ▓▓▓ 2-Ó-C. FERMAN: İLERİ GEÇİŞİN MİKTARI DA SÜPERPOZİSYONDADIR ▓▓▓
+
+> *"Bir qudite bu sefer **ileri geçişin miktarı** aynı anda tutulur.
+> Meselâ hem **1'er 1'er ilerleyen**, hem **ikişer ikişer**, hem
+> **üçer üçer**, hem **n n ilerleyen** ihtimalleri aynı anda tutar.
+> **Öğrenirken böyledir**, çıkarımda zaten buna gerek yok."*
+
+### ÜÇÜNCÜ KATMANIN ASIL MANASI
+
+Uzunluk katmanını (ferman 2-Õ) *"çıktı kaç belirteç olacak"* diye
+okumak eksikti. Asıl mana **adımın miktarıdır**:
+
+    ADIM 1   bir belirteç ilerleyen hâl
+    ADIM 2   ikişer ilerleyen hâl
+    ADIM 3   üçer ilerleyen hâl
+    …        n n ilerleyen hâl
+    ── hepsi AYNI ANDA, aynı qudit katmanında
+
+* **TÂLİMDE HEPSİ BERABER KOŞAR.** Model *"bir sonraki belirteç"*i
+  değil, *"bir sonraki n belirteç"*i bütün `n`ler için aynı anda
+  öğrenir. Ferman 1-N-B'nin *"tek belirteç tahmin edilmez"* hükmünün
+  icrası budur.
+* **ÇIKARIMDA GEREK YOKTUR.** Cevap verilirken adım adım ilerlemek
+  meşrudur; süperpozisyonun masrafı yalnız tâlimde ödenir. Bu, ferman
+  1-H'nin *"tek fark eniyilemedir"* hükmüne istisna değildir: motor
+  aynıdır, tâlimde açılan hâl çıkarımda açılmaz.
+* **KEFESİ `ℓ_Dizi`NİN İÇİNDEDİR:** her `n` için dizinin genliği
+  tartıldığından ayrı bir uzunluk kefesi açılmaz (ferman 2-Ó-B).
+
+---
+
+## ▓▓▓ 2-Ó-B. FERMAN: ÇIKTIDA ÜST HUDUT YOKTUR -- DURMA MODELİN HÜKMÜDÜR ▓▓▓
+
+> *"Yanlış anlamışsın, öğrenirken ihtimal hesaplarını öğreneceği için
+> **aynı anda bütün dizi uzunluklarını bir arada öğrenir**, çıktı
+> verirken **ne zaman durmayı uygun görürse o zaman, üst hudut
+> yoktur**."*
+
+### BENİM YANLIŞ ANLAYIŞIM
+
+Uzunluk katmanını bir **kestirici** sandım: *"kaç belirteç üreteceğiz,
+katman bir sayı söylesin, o sayı mizanda ayrı bir kefeyle
+öğrenilsin"*. Bu yanlıştır ve `ℓ_Uzunluk` diye ayrı bir kefe
+**açılmayacaktır**.
+
+### ASIL
+
+* **UZUNLUKLAR ZATEN BERABER ÖĞRENİLİR.** `ℓ_Dizi` (ferman 2-Ó) dizinin
+  tamamının genliğini tarttığı için, bir · iki · üç … belirteçlik
+  bütün hâller **aynı anda** öğrenilir. Ayrı bir uzunluk kefesi
+  koymak, aynı şeyi ikinci defa tartmaktır (ferman 1-M: çift başlılık).
+* **DURMA BİR SAYI DEĞİL, BİR HÜKÜMDÜR.** Üretim baştan *"n belirteç
+  üreteceğim"* diye kurulmaz. Her adımda durma genliği ile devam
+  genliği tartılır; model **uygun gördüğü** anda durur.
+* **ÇIKTIDA ÜST HUDUT YOKTUR.** Ferman 2-Õ'nün *"üst hudut var"*
+  hükmü **pencereye** aittir (duruma girebilecek azamî basamak).
+  Çıktının boyuna bir tavan konmaz: model durmayı uygun görene kadar
+  konuşur.
+* **ALT HUDUT DA YOKTUR** (ferman 2-O): bir belirteçlik cevap da
+  meşrudur.
+
+---
+
+## ▓▓▓ 2-Õ. FERMAN: ÜÇÜNCÜ QUDİT KATMANI -- UZUNLUK DA SÜPERPOZİSYONDADIR ▓▓▓
+
+> *"**Üst hudut var, alt hudut yoktur.** Üçüncü bir qudit katmanında
+> aynı anda hem 1 token, hem 2 token, hem 3, 4, 5… **pencere kadar
+> tokenin üretildiği durumları** hesaplarsın. Bu arada belirteç 798
+> falan olmayacak, **1 milyon olacak!**"*
+
+### HEDEF DİZİNİN BOYU DA SEÇİLMEZ, SÜPERPOZİSYONDA DURUR
+
+Evvelce hedef **tek belirteç grubuydu**; *"kaç belirteç üreteceğiz"*
+diye bir seçim yapılıyordu. O seçim **ilga edilmiştir**:
+
+    ÜÇÜNCÜ KATMAN   uzunluk qudidi: 1, 2, 3, … pencere kadar
+                    belirteç üretilmiş hâllerin HEPSİ aynı anda.
+
+    Genlik(uzunluk L) = nedensel cepheden itibaren L quditin
+                        müşterek genliği
+
+* **ÜST HUDUT VAR, ALT HUDUT YOKTUR:** azamî uzunluk pencere kadardır;
+  asgarî diye bir şey yoktur (ferman 2-O'nun uzunluk kanadı).
+* **UZUNLUK BİR KARAR DEĞİL, BİR ÖLÇÜDÜR:** hangi uzunluğun hangi
+  genlikle geldiği okunur; "şu kadar üret" diye elle konmaz.
+
+### PENCERE BİR MİLYON BELİRTEÇTİR -- GÖREVİN BOYU DEĞİL
+
+    pencere = 1 048 576 BELİRTEÇ.   798 değil, 158 değil.
+
+Pencereyi *"azamî görev boyu kadar"* diye kısmak, haddi göreve
+bağlamaktır ve yanlıştır: hadd **penceredir**, görev onun içinde
+nefes alır (ferman 2-Ğ). Bir milyon belirteç, zırhın içinde aktif
+dilim olarak durur; kalanı seyircidir.
+
+---
+
+## ▓▓▓ 2-Ú. FERMAN: MELEKE TEK CİNS DEĞİLDİR -- NETİCE ÇIKARAN MELEKE ▓▓▓
+
+> *"Her meleke **sadece durumu bir şeyden başka şeye çeviren bir şey
+> değildir**, ayrı ayrı değerlendireceğiz ne olduklarını. Sana şu an
+> sadece **bir mukayese melekesi** göstereyim. Bu meleke **durumu
+> evirip çevirmek için değil, durumun içindeki veriden bir netice
+> çıkarmak için** çalışan bir melekedir. Bu netice **hafızaya da
+> yazılabilir, durumla takıştırıla da bilir**."*
+> (`docs/zabit/KUME_16_BARGMANN_MUKAYESE_INTAC.md`)
+
+### BENİM YANLIŞ TASNİFİM
+
+*"Kırk dört melekenin hepsi `tek`/`cift`/`bit_kapisi` diye dizey
+vuran birer operatördür"* diye bir tek cins varsaydım ve *"`_psi`
+kalkınca bu çağrılar ne olacak"* diye sordum. **Sual yanlış
+kurulmuştur:** melekeler tek cins değildir ve her biri **ayrı ayrı**
+değerlendirilecektir.
+
+    CİNS 1  EVİREN MELEKE    durumu bir hâlden başka hâle çevirir
+                             (kapı vurur: faz, genlik izdüşümü)
+    CİNS 2  NETİCE ÇIKARAN   durumu evirmez; içindeki veriden bir
+                             HÜKÜM çıkarır. Netice hafızaya yazılır
+                             yahut durumla takıştırılır.
+
+**HER MELEKENİN CİNSİ AYRI AYRI TAYİN EDİLİR;** toptan bir tasnif
+yapılmaz (ferman 1-U'nun *"her meleke ayrı kategori bir iş yapar"*
+hükmünün tabiî neticesidir).
+
+### MUKAYESE MELEKESİ -- BARGMANN `n`-NOKTA İNVARYANTI
+
+    Δ_n(ψ₁ … ψ_n) = ⟨ψ₁|ψ₂⟩⟨ψ₂|ψ₃⟩ … ⟨ψ_n|ψ₁⟩ = r_n · üstel(i·Φ_n)
+
+* `r_n = |Δ_n|` -- **halka koheransı**. Zincirin bir yerinde kopukluk
+  varsa çarpım sıfırlanır: münasebet yok.
+* `Φ_n = arg(Δ_n)` -- **Pancharatnam katı açısı**. Yerel `U(1)`
+  fazları kapalı halkada cebirsel olarak birbirini götürür; geriye
+  koordinattan bağımsız **zâtî geometri** kalır.
+
+**SORİTES TUZAĞI `O(1)` SÜREDE YAKALANIR:** her adımı yerel olarak
+`⟨ψ_k|ψ_{k+1}⟩ ≈ 1` görünen `n` adımlık bir safsata, kapalı halkada
+`Φ_n → π` (`üstel(iπ) = −1`) Möbius taklası verir. İkili mukayese bunu
+göremez; `Δ_n` tek vuruşta görür.
+
+### ÜÇ MUKAYESE MERTEBESİ -- ÜÇÜ DE KOŞAR
+
+    2'li   ½(1 − |⟨1|2⟩|²)                    ayniyet ve zıtlık
+    3'lü   arg(⟨1|2⟩⟨2|3⟩⟨3|1⟩)                tez ile antitez, Berry kavisi
+    n'li   iz(Π₁Π₂ … Π_n)                      uzun kıyas zinciri
+
+`n`'li, `(n−2)` adet `3`'lünün bileşkesidir (simplisiyal üçgenleme):
+`Φ_n = Σ_{k=2}^{n−1} Φ₃(ψ₁, ψ_k, ψ_{k+1})  (mod 2π)`.
+
+### MUKAYESENİN ÇIKTISI SKALER DEĞİL, DÖRT BİLEŞENLİDİR
+
+    R_çıktı = ⟨ Topolojik doku , Bargmann spektrumu ,
+                Tertip/kafes , Amelî vecih ⟩
+
+**HİYERARŞİ MECBURÎ DEĞİLDİR:** poset/ağaç · çember (`Φ_n ≈ 0`,
+ast-üst yok) · dipol (`n=2`, `Φ₂ = π`, `J`-aynası) · kafes/çizge.
+Dördünden hangisine oturacağını `Δ_n` söyler, elle konmaz (ferman 6).
+
+### MUKAYESENİN MUKAYESESİ -- NETİCE PAKETLENİR
+
+Netice havada kalmaz: tekil bir **morfizm durumu** `|σ_Y⟩` olarak
+paketlenir ve üst mertebe bir mukayeseye **tek eleman** olarak girer.
+`⟨σ_Y|σ_Z⟩ = iz(ρ_Y·ρ_Z) → 1` çıkarsa hüküm **analojidir**: *"zâhirî
+kelimeler başka, mukayese geometrisi aynı."*
+
+### HAFIZA SİLİNMEZ, YENİDEN TERTİPLENİR
+
+> *"Mantıksızlık olsa çiz üstünü der geçerdin, **burada yeniden
+> tertipleme var!**"*
+
+Kendi davranışını değiştiren bir mukayese doğduğunda hafıza
+**çizilmez**; dört adımda tertiplenir:
+
+    1. ALÂKA TESPİTİ   A_alâka(k) = iz( ρ_hafıza^(k) · Π_R )
+                       eşiği geçen kayıtlar parlar, kalanına dokunulmaz
+    2. DÜĞÜM ÇÖZME     eski yapıştırma bağları gevşetilir
+    3. TABAN DEĞİŞİMİ  kayda yeni bir modalite lif koordinatı eklenir
+    4. YENİDEN MÜHÜR   ρ_yeni = U_tertip·ρ_eski·U_tertip† + Δρ
+
+*"Kuşlar uçar"* kaydı **silinmez**; `[Kuş, Hava]` yaprağına kaydırılır,
+penguen `[Kuş, Su]` yaprağına bağlanır. Tek boyutlu kutu, iki yapraklı
+lifli kütüphaneye **terfi eder**. Silmek amnezidir.
+
+### RE-GLUING İKİ KAPIDAN TETİKLENİR
+
+> *"İkisi de tetiklesin."*
+
+    SORİTES YIRTIĞI   `istisna_yeri` bir üçgende sapmayı ortancanın üç
+                      katının üstünde bulunca -- METAKOGNİTİF TASHİH:
+                      zihnin kendi tarzı yeniden tertiplenir.
+    KAPI REDDİ        `veri_kapisi` aynı bağlamı iki ayrı hedefle
+                      görünce -- VERİ TENAKUZU: çelişen kayıt çöpe
+                      atılmaz, modalite lifi eklenir.
+
+İki ayrı menfez, **tek** re-gluing ameliyesi. İkinci bir tertip yolu
+açılmaz (ferman 1-M: çift başlılık yasak).
+
+### MODALİTE LİFİ: Δ₃ VECHİ TAYİN EDER, CARTAN KÖKÜ TAŞIR
+
+> *"İkisi beraber: `Δ₃` vechi tayin eder, Cartan kökü taşır."*
+
+    1. VASFI ÖLÇ    çelişen iki kayıt + bir şahit üçgen kurar;
+                    ayırt edici vecih, Φ₃'ü AZAMÎ yapan vecihtir
+                    (ferman 1-Ğ'nin vecih tayini; elle yazılmaz -- 6)
+    2. KÖK AÇ       ölçülen o vasıf için mahallî yazmaçta YENİ BİR
+                    ORTOGONAL Cartan kökü açılır (ferman 2-İ)
+    3. TAŞI         alâkalı kayıtlar o köke taşınır; evvelki köklerin
+                    adresinden TEK BİT OYNAMAZ, indis kayması sıfırdır
+
+### MELEKENİN CİNSİNİ PADİŞAH TARİF EDER -- BEN TASNİF ETMEM
+
+> *"Her melekeyi zabıtla ayrı ayrı tarif edeceksiniz."*
+
+Kırk dört melekeyi kodundan okuyup *"bu eviriyor, bu netice
+çıkarıyor"* diye **kendi başıma tasnif etmem yasaktır** (ferman 2-D:
+tertibat planı tek başına yapılmaz). Mukayese melekesi nasıl zabıtla
+tarif edildiyse, kalanı da öyle tarif edilecektir.
+
+* **TARİF GELMEYEN MELEKE MEVCUT HÂLİYLE KALIR** ve *"cinsi tayin
+  edilmemiştir"* diye **kesilmez** (ferman 1-Ş'nin `𝒪44` hükmü:
+  ölü görünmesi vazifesinin tayin edilmemiş olmasındandır).
+* Tarif geldikçe vidalanır ve o turda sınanır.
+
+### TERTİP KÜME KAPANINCA BİR DEFA KOŞAR
+
+> *"Küme kapanınca bir defa tertiplensin."*
+
+Yeniden tertip her mizan çağrısında **koşmaz**. Mizan bir eniyileme
+adımında onlarca defa çağrılır; her çağrıda hafızayı tertiplemek
+kaydın `yaprak` zincirini şişirir ve reddedilecek bir adımın yırtığı
+hafızaya işlerdi.
+
+    KÜME KAPANIR   üç hudut temizlenince (ferman 1-I, 2-I)
+    TERTİP KOŞAR   biriken BÜTÜN yırtıklar tek hamlede tertiplenir
+    İMLEÇ İLERLER  ancak ondan sonra yeni küme gelir (ferman 1-Y)
+
+* Yırtıklar arada **biriktirilir fakat unutulmaz**: her mizan çağrısı
+  gördüğü yırtığı deftere yazar, tertip o defteri kapanışta boşaltır.
+* Bu ferman 1-Ü'yü (müfettiş gereğini yapar) nakzetmez: müfettiş
+  gereğini yapar, fakat **kümenin kapanışında** yapar.
+
+### KAPI ELEME DEĞİL TASNİF MERCİİDİR -- TENAKUZLU VERİ DE TERFİ EDER
+
+> *"Terfi etsin: reddedilmesin, modalite lifiyle tâlime girsin."*
+
+*"Tenakuzlu örnek tâlimden çıkarılır"* hükmü **ilga edilmiştir**;
+ferman 2-Ú'nün *"kayıt silinmez, terfi eder"* hükmü **girene de**
+şâmildir:
+
+    TENAKUZ       → TERFİ.  İki örnek de tâlime girer, ayrı modalite
+                    yapraklarına bağlanır. "Kuşlar uçar" ile "penguen
+                    uçmaz" birbirini nakzetmez; ayrı liftedirler.
+    KISIRDÖNGÜ    → TEVAKKUF.  Tâlime girer, hafızada tevakkuf damgası.
+    MANTIKSIZLIK  → RET.  Kod uzayının dışındaki kimlik zaten
+                    taşınamaz; ret yalnız buraya kalır.
+
+**KAPI BİR ELEK DEĞİL, BİR TASNİF MERCİİDİR.** Eleme yalnız
+mantıksızlıkta vardır; ötekiler tasnif edilir.
+
+### CERRAHÎ YERİNDE YAPILIR -- YENİ DOSYA AÇILMAZ
+
+> *"`qyazmac.py` yerinde dönüştürülsün."*
+
+`nefs/kulli_yazmac.py` diye temiz bir dosya açıp `qyazmac.py`yi kesmek
+**reddedilmiştir**. Dosya kalır, adı kalır, çağıranları kırılmaz;
+içindeki `_psi` alanı `ℂ^{N×q}` ile değiştirilir ve `tek`/`cift`/
+`faz`/`olcumler` gövdeleri tek tek yeni taşıyıcıya çevrilir.
+
+* **NİÇİN.** Yeni dosya açmak ferman 2-D'nin yasakladığı **ayrı kanat**
+  açmaktır: iki yazmaç bir tur yan yana durur ve hangisinin koştuğu
+  belirsizleşir (ferman 1-E'nin yarım işi).
+* Ferman 2-C'nin tertibi budur: aksam sökülüp atılmaz, **yerinde**
+  doğru menfeze vidalanır.
+
+### KAPI BÜTÜN QUDİTLERE TEK ÇEVRİMDE VURUR -- ADRES ARANMAZ
+
+> *"Tüm quditlere tek çevrimde."*
+
+Kapının hangi qudite vuracağı **sorulmaz**: kapı `ℂ^{N×q}` yazmacının
+**bütün `N` qudidine aynı anda**, tek vektörel çevrimde vurur.
+
+    Eski (ilga)   tek(yuva) → bir tamsayı adres → o qudit
+    Yeni          U kapısı  → hal @ Uᵀ          → bütün N qudit
+
+* **ADRESLEME TAMAMEN LAĞVEDİLDİ.** Ferman 2-Ö tamsayı yuvayı
+  lağvetmişti; bu hüküm **yerine rezonans tepesi de koymaz**. Kapının
+  adresi yoktur çünkü kapı her yerdedir.
+* **BU FERMAN 2-V'NİN SEYİRCİ QUDİT İLKESİNİ KAPI TATBİKİ KANADINDA
+  TADİL EDER VE ÇELİŞKİ AÇIKÇA YAZILIDIR:** 2-V *"kapının dokunmadığı
+  `N−2` qudit seyircidir"* der; artık **dokunmadığı qudit yoktur**.
+  Seyirci ilkesi `q^N`in açılmaması kanadında bâkîdir (kapasite bir
+  uzay iddiasıdır); kapının **kime vurduğu** kanadında kalkmıştır.
+* **MALİYET ÖLÇÜLÜR** (ferman 5): `N × q` üstünde bir dizey çarpımı
+  turda kaç defa koştuğu ve kaç saniye sürdüğü beyanda görünür.
+  *"Bir milyon qudide vurmak pahalı"* bir mazeret değil, bir sayıdır.
+
+### VECİH RASTGELE DEĞİL -- ∞-KATEGORİ VE ∞-TİP TEORİSİNDEN NEŞET EDER
+
+> *"Vecihler diziden istihraç edilsin, elle liste kesilsin, vecihler
+> **rastgele değil sonsuz kategori ve sonsuz tip teorisinden neşet
+> etsin**."*
+
+`nefs/mukayese.py`deki elle yazılmış `VECIHLER` listesi (`genlik`,
+`faz`, `fark`, `dilim`) **kökünden kesilir** (ferman 2-B, 6). Yerine
+gelen **rastgele bir izdüşüm değildir**:
+
+    VECİH = ∞-kategorinin bir NESNESİ, ∞-tip teorisinin bir TİPİ
+
+    ℓ=0 NOKTA      Fubini-Study varyansı ≈ 0, π₁ ≡ 0
+    ℓ=1 UZAY       ‖dDizi‖² > ε, rank(metrik) ≥ 1
+    ℓ=2 KATEGORİ   iz(M_AB·M_BC·M_CA) ≠ 0, Hom(A,B) ≠ Hom(B,A)
+    ℓ=3 TİP        ‖idtoeqv − Equiv‖_F ≈ 0, h-mertebe ≥ 3
+    …              mertebe SONSUZA kadar açılır; tavan yoktur
+
+* **HER VECİH BİR h-MERTEBEDİR.** Vecih kümesi sonlu bir liste değil,
+  Postnikov kulesidir: `ℓ` mertebesi yetmeyince `ℓ+1` açılır ve bu
+  **sonsuza kadar** sürer.
+* **NEŞET, TAYİN DEĞİL.** Vecih bir *"şu ekseni seç"* kararı değildir;
+  dizinin kendi yoğunluk matrisinden, Fubini-Study metriğinden ve Lie
+  yapı sabitlerinden **doğar** (ferman 1-Ğ'nin *"kâide diziden
+  istihraç edilir"* hükmü).
+* **RASTGELELİK YASAKTIR** (ferman 2-Ĵ): rastgele izdüşüm, rastgele
+  eksen, rastgele tohumlu vecih **yoktur**. Her vechin bir
+  **mertebesi** ve o mertebeyi ölçen bir **nispet fonksiyonu** vardır.
+
+### VECİH BİR İZDÜŞÜM DEĞİL, BİR **ÂLEM** TAŞIR
+
+> *"Sana bir metin verildiğinde, bu metnin **sıhhatini**, **çelişki
+> barındırıp barındırmadığını**, manasındaki **teşbihleri**,
+> **kinayeleri**, **gizli niyetleri**, eğer bir soru sorulmuşsa
+> **sorunun parametrelerini** ayrı ayrı değerlendirirsin; her birinin
+> kendi içinde **önceden hudutlayamayacağın kadar çok farklı cinsi**
+> vardır, aralarında **mahiyet farkı** vardır. Vecih her ne olacaksa
+> olsun **bir âlem taşıyacak** ve bu âlemin **kendine has kaideleri**
+> olacaktır. Bunları taşıyabilecek **en üst yapı** tipse sonsuz tip,
+> sonsuz kategoriyse o, uzaysa o olacaktır."*
+
+Vecih `t·⟨t|v⟩` gibi bir **rank-1 izdüşüm değildir**. İzdüşüm olsa
+olsa o âleme giriş kapısıdır; vechin kendisi **bir âlemdir**:
+
+    VECİH = ⟨ Âlem , Kaideler , Taşıyıcı Mertebe ⟩
+
+    ÂLEM        sıhhat · tenakuz · teşbih · kinaye · gizli niyet ·
+                sualin parametreleri … ve daha nicesi
+    KAİDELER    o âlemin KENDİNE HAS kaideleri -- metriği, sırası,
+                kompozisyonu. Diziden istihraç edilir (ferman 1-Ğ),
+                elle yazılmaz (ferman 6).
+    TAŞIYICI    o âlemi taşıyabilecek EN ÜST yapı: uzaysa uzay,
+                kategoriyse ∞-kategori, tipse ∞-tip. Ölçülür, seçilmez.
+
+* **CİNSLER ÖNCEDEN HUDUTLANAMAZ.** *"Şu kadar vecih vardır"* denemez;
+  her âlemin içinde de sayısız cins vardır ve aralarında **mahiyet
+  farkı** bulunur -- yâni bir âlemin kaidesi ötekine tatbik edilemez.
+* **ÂLEMLER AYNI KEFEYE KONMAZ** (ferman 1-Ç: her hâl ayrı cinstir).
+  İki vechin neticesi ancak üst mertebe bir mukayeseyle kıyaslanır
+  (ferman 2-Ú: netice `|σ⟩` olarak paketlenir).
+* **TAŞIYICI ÖLÇÜLEREK SEÇİLİR:** hangi mertebe o âlemin kaidelerini
+  taşıyabiliyorsa o. Yetmezse bir üst mertebe açılır; tavan yoktur.
+
+### ÖZDEĞER REDDEDİLDİ -- İNSAN MATRİS ÇÖZMEZ
+
+> *"Kaidenin şeklinden çıkacak **lâkin sen sadece yoğunluk matrisinin
+> özdeğeri demişsin, bu yetmez ve hakikate muvafık değil**, ben insan
+> olarak hiçbir zaman **bir matris hesaplayıp da onun özdeğerini
+> bulmuyorum!**"*
+
+Vechin **özvektörden neşet etmesi reddedilmiştir.** Âlemin adının
+kaidenin şeklinden çıkması **doğrudur ve bâkîdir**; yanlış olan,
+kaidenin küllî bir yoğunluk matrisinin **spektral ayrışımından**
+çıkarılmasıdır.
+
+* **NİÇİN YANLIŞ.** Özdeğer ayrışımı **küllî ve toptan** bir
+  ameliyedir: bütün diziyi tek bir matrise ezer, sonra o matrisin
+  asal eksenlerini vecih ilân eder. İnsan böyle yapmaz; insan
+  **münasebete bakar**: şu iki ifade şu cihetten birbirini tutuyor,
+  bu ikisi tutmuyor -- ve *ayrı tutan şey* bir vecihtir.
+* **ASIL: VECİH MÜNASEBETİN KAİDESİNDEN NEŞET EDER.** Dizinin
+  **ikili ve üçlü münasebetleri** ölçülür (Bargmann `Δ₂`, `Δ₃`); her
+  münasebetin kendi **kaide imzası** çıkar (metrik · sıra · terkip).
+  **Aynı imzayı paylaşan münasebetler bir âlemdir**; imzası ayrışan
+  münasebet **başka bir âlemdir**.
+* Vecih sayısı böylece elle de konmaz, özdeğer sayısından da gelmez:
+  **kaç ayrı kaide imzası varsa o kadar âlem** doğar.
+* **KÜLLÎ MATRİS AMELİYESİ (eigh, svd) VECİH İSTİHRACINDA
+  ÇAĞRILMAZ.**
+
+### BARGMANN HALKASININ BOYU SEÇİLMEZ -- BÜTÜN BOYLAR BERABER
+
+> *"Bütün boylar beraber (2..m)."*
+
+`çevrim_boyu` diye bir sabit tamsayı **ilga edilmiştir** (ferman 1-J).
+Tek bir `n` seçilmez: `2`den `m`ye **bütün halka boyları aynı anda**
+tartılır ve hepsi mizana girer.
+
+* Ferman 1-N-B ve 2-Ó-C'nin mantığının mukayese kanadıdır: nasıl
+  bütün dizi uzunlukları beraber öğreniliyorsa, bütün kıyas zinciri
+  boyları da beraber tartılır.
+* **BEDEL `O(m²)` İÇ ÇARPIMDIR** ve ölçülür (ferman 5); bir mazeret
+  değil, bir sayıdır.
+
+### DUVAR MEMURU İLGA EDİLDİ -- ELEME HİÇ YOKTUR
+
+> *"DUVAR kalksın; eleme hiç olmasın."*
+
+Ferman 1-Ğ'nin *"çarpım bir sıralamadır, eleme değildir"* hükmü
+**DUVAR'a da teşmil edilmiştir**. Ferman 2-P'nin *"eleme yalnız duvar
+memurunun işidir"* satırı bu hükümle **kalkmıştır**:
+
+    MECZ ARTIK DÖRT MEMURDUR:  EĞİM · ÇUKUR · VADİ · NAKİL
+    DUVAR yoktur. Hiçbir koordinat kapatılmaz, yalnız sıralanır.
+
+* **NİÇİN.** Kapatılan koordinat bir daha açılmaz; sıralamada geriye
+  düşen koordinat ise bir sonraki turda öne geçebilir. Eleme bir
+  **kayıptır**, sıralama bir **hükümdür**.
+* Ferman 2-P'nin *"DUVAR bir maskedir"* satırı ve `mecz`in maske
+  kolu kökünden kesilir (ferman 2-B).
+
+---
+
+## ▓▓▓ 2-Ù. FERMAN: `d` UYDURMADIR -- KULE BİR UZAY İDDİASIDIR ▓▓▓
+
+> *"**`d` ne onu dahi bilmiyorum, sen gafil uydurmuşsun.** 1 milyon
+> qudit var, her qudit **200.000 ihtimali** temsil edebiliyor, her bir
+> ihtimalin kendi içinde **tipi, onun kategorisi, onun uzayı, onun da
+> noktası** var. **Nokta^uzay^kategori^tip^200.000^1milyon** kadar şey
+> olacak, sen de bunları **kompakt tutacaksın!** Bul çaresini. Ya da
+> belki yanlış düşünüyorumdur, şu an tamamen sezgisel olarak
+> sallıyorum, bir şey bildiğim yok haberin olsun."*
+
+### `d` KESİLDİ -- KİMSE ONU TARİF ETMEDİ
+
+`d = veri_lifi × karo × karo = 65 536` sayısı **benim uydurmamdır**.
+Ne bir zabıtta geçer, ne bir ferman söyler; önbellek ölçüsünden
+türetilmiş, sonra pencereden türetilmiş, her seferinde başka bir
+mazeretle yaşatılmıştır. **Kesilir** (ferman 2-B) ve yerine hiçbir
+uydurma sayı konmaz.
+
+### KULE -- NE KADAR, NEREDE DURUR
+
+    Nokta ^ Uzay ^ Kategori ^ Tip ^ 200 000 ^ 1 000 000
+
+* **BU BİR UZAY İDDİASIDIR, BİR BELLEK İDDİASI DEĞİL** (ferman 2-T,
+  2-R). Hiçbir yerde açılmaz; açılırsa kâinatın atomları yetmez.
+* **`200 000`** sözlüktür ve elle yazılmaz: tiktoken `n_vocab`ından
+  yoklanır (ferman 1-N).
+* **`1 000 000`** penceredir (ferman 2-O).
+* **`Nokta · Uzay · Kategori · Tip`** ise her ihtimalin **iç
+  mertebesidir** -- ferman 1-Ğ'nin h-mertebe merdiveninin ta kendisi
+  ve **tavanı yoktur** (Postnikov: `ℓ+1` sonsuza kadar açılır).
+
+### KOMPAKT TUTMANIN YOLU -- BEN İDDİA ETMİYORUM, SORUYORUM
+
+Kulenin kompakt taşınması bir **tertibat kararıdır** ve ferman 2-D
+gereği tek başıma verilmez; şıklar sayısıyla sunulur ve karar
+beklenir. **Padişah kendisi *"belki yanlış düşünüyorumdur, sezgisel
+sallıyorum"* dediği için, bu bab bir emir değil bir MÜZAKEREdir** ve
+karar verilene kadar kodda `d` yerine uydurma bir sayı konmaz.
+
+### KULE MESELESİ TEHİR EDİLDİ -- EVVELÂ MODEL KONUŞSUN
+
+> *"Buna bu kadar takma, bu model **konuşmaya başladıktan sonra**
+> mühim olacak."*
+
+* Kule müzakeresi **açıktır fakat sıradadır**: bu bab yeniden
+  açılmaz, sual tekrar sorulmaz, `d`nin yerine konacak taşıyıcı
+  şimdi münakaşa edilmez.
+* **ÖNCELİK KONUŞMAKTIR.** Motorun kırık kalan yerleri -- çıkarım
+  kapısı, hafıza bağı, üretim hattı -- evvelâ ayağa kaldırılır.
+  Kule, model konuşmaya başladıktan sonra ele alınır.
+* Bu bir *"sıra suali"* değildir (ferman 2-E): sırayı ben sormadım,
+  padişah tayin etti.
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...
 > **bir daha yön arama saçmalığına düşeriz, öyle şey yok**, tek seferde

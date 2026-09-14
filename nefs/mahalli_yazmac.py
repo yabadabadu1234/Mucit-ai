@@ -5,7 +5,8 @@ from typing import Any, Dict, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["MahalliYazmac", "mahalli_beyani", "mahalli_metni"]
+__all__ = ["MahalliYazmac", "mahalli_beyani", "mahalli_metni",
+           "uzunluk_beyani", "uzunluk_metni"]
 
 
 ZIRH_QUDITI = 1 << 20
@@ -50,9 +51,44 @@ def mahalli_metni(b: Optional[Dict[str, float]] = None) -> str:
         " GENLİĞE de hükmeder -- ferman 2-Û)" % int(d.get("sönüm", 0)),
         "    Kök vektörü BİR MİLYON QUDİTE SERPİLMEZ (ferman 2-Â):",
         "    KAN üssüne küresel rezonans fazı olarak girer.",
-        "    Bu yazmaç `_psi`nin yerine geçmez: `_psi` TEKİL KAVRAM",
-        "    LİFİDİR (bir quditin iç anatomisi), bu ise KÜLLÎ yazmacın",
-        "    mahallî tensörüdür. İkisi ayrı seviyedir (ferman 2-Ş).",
+        "    BAĞLAM BURADA DURUR (ferman 2-Ĝ): `_psi`nin `yer` ekseni",
+        "    kaldırıldı; pencereyi artık yazmacın ebadı değil bu zırh",
+        "    hudutlar. Cevap nedensel cepheden okunur (ferman 2-Ê).",
+    ])
+
+
+_UZUNLUK: Dict[str, float] = {
+    "kuruldu": 0.0, "hadd": 0.0, "cephe": 0.0, "hüküm": 0.0,
+    "entropi": 0.0, "tepe_ihtimali": 0.0, "kuyruk": 0.0,
+    "durma_genliği": 0.0, "devam_genliği": 0.0, "açık": 1.0}
+
+
+def uzunluk_beyani() -> Dict[str, float]:
+    return dict(_UZUNLUK)
+
+
+def uzunluk_metni(b: Optional[Dict[str, float]] = None) -> str:
+    d = dict(b or uzunluk_beyani())
+    if not d.get("kuruldu"):
+        return ("  ÜÇÜNCÜ QUDİT KATMANI (uzunluk): KURULMADI -- kırmızı "
+                "(ferman 2-Õ)")
+    return "\n".join([
+        "  ÜÇÜNCÜ QUDİT KATMANI -- UZUNLUK SÜPERPOZİSYONU (ferman 2-Õ)",
+        "    aynı anda 1 … %d belirteçlik çıktı hâlleri taşınır;"
+        % int(d["hadd"]),
+        "    üst hudut vardır, ALT HUDUT YOKTUR.",
+        "    nedensel cephe %d   son durma hükmü %d belirteç"
+        % (int(d["cephe"]), int(d["hüküm"])),
+        "    ÇIKTIDA ÜST HUDUT YOKTUR (ferman 2-Ó-B): her adımda durma"
+        " genliği %.6e ile" % d.get("durma_genliği", 0.0),
+        "    devam genliği %.6e tartılır; model uygun gördüğünde durur."
+        % d.get("devam_genliği", 0.0),
+        "    dağılım entropisi %.6f nat   tepe ihtimali %.6e"
+        % (d["entropi"], d["tepe_ihtimali"]),
+        "    hadde taşan kuyruk ihtimali %.6e   (ölçü kapatılabilir: %s)"
+        % (d["kuyruk"], "açık" if d.get("açık") else "KAPALI"),
+        "    Hüküm determinist Fubini-Study okumasıdır, zar atılmaz"
+        " (ferman 2-Ĵ).",
     ])
 
 
@@ -170,6 +206,61 @@ class MahalliYazmac:
         self.hal[:, h, 0] = self.hal[:, h, 0] * c[None, :]
         _MAHALLI["sönüm"] += float(h.size)
         return float(np.abs(1.0 - c).mean())
+
+    def uzunluk_katmani(self, cephe: int, hadd: int = 0) -> np.ndarray:
+        c = int(cephe) % self.qudit
+        L = max(1, min(int(hadd) if int(hadd) > 0 else self.qudit,
+                       self.qudit - c))
+        g = np.abs(self.hal[:, c:c + L, 0]).mean(axis=0)
+        f = self.hal[:, c:c + L, 1].mean(axis=0)
+        devam = np.clip(g / max(float(g.max()), 1e-300), 0.0, 1.0)
+        dur = np.sqrt(np.maximum(1.0 - devam * devam, 0.0))
+        us = np.concatenate([[0.0], np.cumsum(np.log(
+            np.maximum(devam, 1e-300)))[:-1]])
+        us = us + np.log(np.maximum(dur, 1e-300))
+        us = us - float(us.max())
+        dal = np.exp(us) * np.exp(1j * np.cumsum(f))
+        nrm = float(np.linalg.norm(dal))
+        assert nrm > 0.0, (
+            "uzunluk katmanı tamamen söndü -- hiçbir çıktı boyu "
+            "taşınmıyor (ferman 2-Õ)")
+        self._uzunluk = dal / nrm
+        self._uzunluk_cephesi = c
+        P = np.abs(self._uzunluk) ** 2
+        _UZUNLUK["kuruldu"] = 1.0
+        _UZUNLUK["hadd"] = float(L)
+        _UZUNLUK["cephe"] = float(c)
+        _UZUNLUK["entropi"] = float(
+            -np.sum(P * np.log(np.maximum(P, 1e-300))))
+        _UZUNLUK["tepe_ihtimali"] = float(P.max())
+        _UZUNLUK["kuyruk"] = float(
+            1.0 - P.sum()) if P.sum() < 1.0 else 0.0
+        return self._uzunluk
+
+    def durma_hukmu(self, adim: int) -> bool:
+        dal = getattr(self, "_uzunluk", None)
+        assert dal is not None, (
+            "uzunluk katmanı hiç açılmadı -- durma hükmü verecek bir "
+            "hâl yok; üretim susmayan bir döngüye düşerdi (ferman "
+            "2-Õ, 2-Ó-B)")
+        if not _UZUNLUK.get("açık"):
+            return True
+        P = np.abs(dal) ** 2
+        top = float(P.sum())
+        assert top > 0.0, (
+            "uzunluk katmanı tamamen söndü -- durma hükmü verilemez "
+            "(ferman 2-Õ)")
+        k = int(adim)
+        if k >= P.size:
+            return True
+        dur = float(P[k])
+        devam = float(P[k + 1:].sum())
+        _UZUNLUK["durma_genliği"] = dur / top
+        _UZUNLUK["devam_genliği"] = devam / top
+        durdu = bool(dur > devam)
+        if durdu:
+            _UZUNLUK["hüküm"] = float(k + 1)
+        return durdu
 
     def sektor_agirligi(self, ad: str, indis: np.ndarray) -> complex:
         k = self.kok_indisi(str(ad))
