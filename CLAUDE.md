@@ -2870,6 +2870,51 @@ diziliyordu.
 * Veri cinsi (arc/sözlü) ve kapı hükmü (tasdik/tevakkuf/cerh) cins
   **değildir**: ikisi de zâhirî etikettir, âlem ise ölçülür.
 
+### ŞAHİT YOKTUR -- HÜKÜM AYNİYET İLE İHTİLAFTAN OKUNUR
+
+> *"**Şahit mahit yok**, farklı vecihlerde **ayniyet veya ihtilaf**
+> var, bunu da **mukayese melekesi tayin edip hafızaya kaydediyor**,
+> şahitlik bir iş yok."*
+
+Kapıya üçüncü bir kutup (`şahit`) koymak benim uydurmamdı ve
+**ilga edilmiştir**. Üçgenin üçüncü köşesi diye komşu bir örnek
+seçmek, hükmü sıraya bağlayan bir keyfîliktir.
+
+    EVVELKİ (İLGA)   (hâl_i, hâl_eş, ŞAHİT) üçgeni → Δ₃ → hüküm
+    ASIL             (hâl_i, hâl_eş) çifti, BÜTÜN VECİHLERDE tartılır
+                     → ayniyet mi ihtilaf mı → hüküm
+
+    Örtüşme(v)  = |⟨hâl_i^(v) | hâl_eş^(v)⟩|²      her vecih v için
+    İhtilaf     = azamî Örtüşme − asgarî Örtüşme    ← vecihler ayrışıyor
+    İttifak     = 1 − İhtilaf                       ← ikisi toplamı BİR
+
+    TENAKUZ      İhtilaf > İttifak
+                 ← bir âlemde AYNI, başka âlemde ZIT: veri kendini nakzediyor
+    KISIRDÖNGÜ   İttifak > İhtilaf  ve  asgarî Örtüşme ≥ İttifak
+                 ← her vecihte aynı: yeni bir şey söylemiyor
+
+* **HÜKMÜ MUKAYESE MELEKESİ VERİR VE HAFIZAYA KAYDEDER.** Kapı
+  kendi başına bir kâide işletmez; melekeyi çağırır, netice hem
+  hükümdür hem hafıza kaydıdır (ferman 2-Ú: netice çıkaran meleke).
+* **EŞ HÂLÂ EŞTİR:** aynı bağlamı paylaşan evvelki örnek çiftin ikinci
+  kutbudur; yoksa nedensel cephedeki evvelki örnek. Bu bir **kutup
+  seçimidir**, hüküm değildir.
+
+### KAPI PARÇA PARÇA KOŞAR -- BORU HATTI
+
+> *"1-c."* -- Kapı imleçten gelen **her parçada** koşsun, bütün
+> yığında değil.
+
+* Kapı bütün yığını bir defada idrak edip `N` hâli bellekte
+  tutuyordu; bu ferman 1-O'nun boru hattına ve 2-I'nin bellek haddine
+  aykırıdır.
+* **PARÇA ÖLÇÜLEN BELLEKTEN TÜRER** (ferman 5-B, 1-J): kaç örneğin
+  hâli ölçülen bellek haddine sığıyorsa parça o kadardır; elle sayı
+  yazılmaz.
+* Parça hükmünü alır, **tenakuz çıkan çiftin iki kutbu saklanır**,
+  kalan hâller bırakılır. Tertip o kutupları okur; ayrı bir hâl
+  listesi tutulmaz.
+
 ### BARGMANN HALKASININ BOYU SEÇİLMEZ -- BÜTÜN BOYLAR BERABER
 
 > *"Bütün boylar beraber (2..m)."*
@@ -2900,6 +2945,61 @@ memurunun işidir"* satırı bu hükümle **kalkmıştır**:
   **kayıptır**, sıralama bir **hükümdür**.
 * Ferman 2-P'nin *"DUVAR bir maskedir"* satırı ve `mecz`in maske
   kolu kökünden kesilir (ferman 2-B).
+
+---
+
+## ▓▓▓ 2-Ú-B. FERMAN: TİP ÇORBASI ÇÖKERTİLMEZ -- ANALİTİK ÇÖZÜMLENİR ▓▓▓
+
+> *"Biz âlemde olmuş olabilecek **tüm vecih türlerini, yani tüm sonsuz
+> tipleri süperpozisyon hâlinde** tutacağız, **veri bu tipleri tayin
+> edecek**, sonra gpuda **kuantumu çökertmeye lüzum olmadığından tip
+> çorbasını analitik olarak çözümleyip hangi tipler varmış, kaideleri
+> neymiş öğrenmiş olacağız.**"*
+
+### ARGMAX BİR ÇÖKERTMEDİR VE İLGA EDİLDİ
+
+`_mertebe_adi` bütün mertebelerin nispetini hesaplayıp `argmax` ile
+**tek birini** seçiyordu. Bu bir ölçüm-çökmesidir ve ferman 1-T
+gereği simülasyonda **manasızdır**: çökertecek fizikî bir durum yok,
+`numpy` dizisi var. Seçilen mertebe dışındaki bütün tip bilgisi
+çöpe gidiyordu.
+
+    EVVELKİ (İLGA)   nispetleri hesapla → argmax → TEK mertebe
+    ASIL             bütün mertebeler SÜPERPOZİSYONDA durur;
+                     tayf olduğu gibi taşınır ve RAPOR EDİLİR
+
+* **TAYF KESİLMEZ.** `ℓ = 0 nokta · 1 uzay · 2 kategori · 3 tip ·
+  4… Postnikov` -- hepsinin nispeti hesaplanır ve **hepsi saklanır**.
+  Tavan yoktur (ferman 1-Ğ): kule artık sönmedikçe `ℓ+1` açılır.
+* **VERİ TAYİN EDER, BEN DEĞİL.** Hangi tiplerin fiilen bulunduğu
+  nispetlerden okunur; *"bu dizi kategoridir"* diye bir karar
+  verilmez.
+* **KAİDELER DE TAYFLA BERABER ÇIKAR:** her mevcut tipin metriği,
+  sırası ve terkibi ayrı ayrı yazılır -- *"hangi tipler varmış,
+  kaideleri neymiş"* suâlinin cevabı budur ve **raporda görünür**
+  (ferman 5).
+* **ÇÖKERTME YALNIZ NİHAÎ CEVAPTA VARDI, O DA KALKTI** (ferman 2-T,
+  2-Ĵ): ne tip tayfında, ne kelâmda zar atılır yahut tek şık seçilir.
+
+---
+
+## ▓▓▓ 2-Ú-C. FERMAN: HAFIZA DA QUDİTTİR ▓▓▓
+
+> *"Hafıza da **artık** quditli olsun."*
+
+Üçüncü yazmaç açılmaz; hafıza **mevcut qudit taşıyıcısına** oturur
+(ferman 2-D: ayrı kanat yasak, kenetlenecek).
+
+    KAYIT        ℂ^q mahallî qudit durumu -- düz bir vektör değil
+    ADRES        Cartan kökü (ferman 2-İ): kayıt bir bellek diliminde
+                 durmaz, kendi süperseçim yükünde durur
+    YAPRAK       modalite lifi zaten bir Cartan köküdür (ferman 2-Ú);
+                 hafızanın yaprağı ile mahallî yazmacın kökü AYNI ŞEYDİR
+
+* **ÇİFT BAŞLILIK KAPANIR** (ferman 1-M): hafıza kaydı ile mahallî
+  yazmaç iki ayrı taşıyıcıydı; kayıt `ℂ^q`ya geçince tek kaynak olur.
+* **KAPASİTE İDDİASI SAYIYLA YAZILIR** (ferman 5): kaç kayıt, kaç
+  seviye, kaç kök -- raporda yan yana görünür.
 
 ---
 

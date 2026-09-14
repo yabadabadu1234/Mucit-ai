@@ -427,8 +427,15 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
 
     nefs = QNefs(ayar.tohum, ayar.qayar())
     nefs.idrak_et(np.eye(2, ayar.veri_lifi))
+    hafiza = Hafiza(kapasite=int(ayar.hafiza_kapasitesi),
+                    yazma=float(ayar.hafiza_yazma),
+                    sonum=float(ayar.hafiza_sonumu),
+                    zeno_esigi=float(ayar.zeno_esigi),
+                    zeno_tepe=float(ayar.zeno_tepe),
+                    ayniyet=float(ayar.hafiza_ayniyet),
+                    buhar=float(ayar.hafiza_buhar), tohum=int(ayar.tohum))
     kapi_hukmu = veri_kapisi(
-        gelen, nefs=nefs,
+        gelen, nefs=nefs, hafiza=hafiza,
         ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
                              taban=int(ayar.veri_lifi),
                              basamak=int(ayar.belirtec_basamak)))
@@ -468,13 +475,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                               ne="döküm")
     olculen_lam = _dengele(ilk_kefeler)
     mzn = _mzn["a"]
-    hafiza = Hafiza(kapasite=int(ayar.hafiza_kapasitesi),
-                    yazma=float(ayar.hafiza_yazma),
-                    sonum=float(ayar.hafiza_sonumu),
-                    zeno_esigi=float(ayar.zeno_esigi),
-                    zeno_tepe=float(ayar.zeno_tepe),
-                    ayniyet=float(ayar.hafiza_ayniyet),
-                    buhar=float(ayar.hafiza_buhar), tohum=int(ayar.tohum))
     _sayac = {"çağrı": 0}
     from tanilama.hiz_teftisi import had as _hiz_haddi
     olcer = Hizolcer(belirtec_basina=len(veri) * int(ayar.pencere),

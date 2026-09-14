@@ -11,6 +11,7 @@ __all__ = ["mukayese_melekesi", "mukayese_melekesi_beyani",
            "yirtiklari_tertiple",
            "Vecih", "vecihleri_istihrac", "vecih_beyani",
            "vecih_metni", "uyanik_vecihler", "alem_cinsleri",
+           "ayniyet_ihtilaf", "tip_tayfi",
            "bargmann", "hipotez_halkasi", "swap_testi", "simplisiyal", "istisna_yeri",
            "choi", "nesnelestir", "spektrum", "hata_payi",
            "zorunlu", "mumkun", "kiplik", "paylar_olc",
@@ -20,10 +21,12 @@ _MELEKE: Dict[str, float] = {
     "çağrı": 0.0, "halka": 0.0, "tenakuz": 0.0, "kısır": 0.0,
     "kopuk": 0.0, "yırtık": 0.0, "istisna": -1.0, "sapma": 0.0,
     "Φ_toplam": 0.0, "Δ_K": 0.0, "hafızaya": 0.0,
-    "biriken_yırtık": 0.0, "tertiplenen_yırtık": 0.0, "açık": 1.0}
+    "biriken_yırtık": 0.0, "tertiplenen_yırtık": 0.0,
+    "ayniyet": 0.0, "ihtilaf_nispeti": 0.0, "ayrışan_vecih": 0.0,
+    "açık": 1.0}
 
 
-_YIRTIK_DEFTERI: List[Tuple[np.ndarray, np.ndarray, np.ndarray]] = []
+_YIRTIK_DEFTERI: List[Tuple[np.ndarray, np.ndarray]] = []
 
 
 def yirtiklari_tertiple(hafiza, mahalli=None) -> Dict[str, Any]:
@@ -31,8 +34,8 @@ def yirtiklari_tertiple(hafiza, mahalli=None) -> Dict[str, Any]:
         return {"tertip": 0, "biriken": len(_YIRTIK_DEFTERI)}
     say = 0
     while _YIRTIK_DEFTERI:
-        a, b, s = _YIRTIK_DEFTERI.pop()
-        hafiza.yeniden_tertiple((a, b), sahit=s, mahalli=mahalli,
+        a, b = _YIRTIK_DEFTERI.pop()
+        hafiza.yeniden_tertiple((a, b), sahit=None, mahalli=mahalli,
                                 kapi="yırtık")
         say += 1
     _MELEKE["tertiplenen_yırtık"] += float(say)
@@ -76,7 +79,14 @@ def mukayese_melekesi_metni(b: Optional[Dict[str, float]] = None) -> str:
 _VECIH: Dict[str, float] = {
     "istihraç": 0.0, "mertebe": 0.0, "münasebet": 0.0, "vecih": 0.0,
     "taşıyan_ağırlık": 0.0, "âlem": 0.0, "halka": 0.0, "cins": 0.0,
-    "açık": 1.0}
+    "tip": 0.0, "açık": 1.0}
+
+
+_TIP_TAYFI: Dict[str, float] = {}
+
+
+def tip_tayfi() -> Dict[str, float]:
+    return dict(_TIP_TAYFI)
 
 
 _SAYAC: Dict[str, int] = {"bargmann": 0, "swap": 0, "spektrum": 0,
@@ -100,6 +110,7 @@ class Vecih:
     mertebe: int = 0
     tasiyici: str = ""
     kaide: Tuple[Tuple[str, float], ...] = ()
+    tayf: Tuple[Tuple[int, str, float], ...] = ()
 
     def kaidesi(self, ad: str) -> float:
         for k, v in self.kaide:
@@ -161,10 +172,17 @@ def _mertebe_nispetleri(M: np.ndarray) -> List[Tuple[int, str, float]]:
     return out
 
 
-def _mertebe_adi(M: np.ndarray) -> Tuple[int, str]:
+def _tayf(M: np.ndarray) -> Tuple[Tuple[int, str, float], ...]:
     n = _mertebe_nispetleri(M)
-    l, ad, _ = max(n, key=lambda x: x[2])
-    return int(l), str(ad)
+    top = float(sum(max(0.0, x[2]) for x in n))
+    if top <= 0.0:
+        return tuple((int(l), str(a), 0.0) for l, a, _ in n)
+    return tuple((int(l), str(a), float(max(0.0, v) / top))
+                 for l, a, v in n)
+
+
+def _tayf_adi(tayf: Tuple[Tuple[int, str, float], ...]) -> str:
+    return str(max(tayf, key=lambda x: x[2])[1])
 
 
 def _alem_adi(kaide: Tuple[Tuple[str, float], ...], tur: str,
@@ -242,7 +260,9 @@ def vecihleri_istihrac(durumlar: Sequence[np.ndarray]
     for imza, idx in obek.items():
         kutup = sorted({k for i in idx for k in mun[i]["çift"]})
         Mo = M[kutup] if len(kutup) >= 2 else M
-        mertebe, tur = _mertebe_adi(Mo)
+        tayf = _tayf(Mo)
+        tur = _tayf_adi(tayf)
+        mertebe = int(max(tayf, key=lambda x: x[2])[0])
         yon = np.zeros(boy, complex)
         for i in idx:
             yon = yon + np.asarray(mun[i]["yön"], complex)
@@ -263,7 +283,7 @@ def vecihleri_istihrac(durumlar: Sequence[np.ndarray]
             tasiyici=("∞-tip" if mertebe >= 3 else
                       "∞-kategori" if mertebe == 2 else
                       "uzay" if mertebe == 1 else "nokta"),
-            kaide=kaide))
+            kaide=kaide, tayf=tayf))
     assert out, (
         "münasebetler tartıldı fakat tek vecih neşet etmedi -- her "
         "münasebetin ayırt edici yönü söndü (ferman 1-Ğ)")
@@ -271,7 +291,17 @@ def vecihleri_istihrac(durumlar: Sequence[np.ndarray]
     if top_agir > 0.0:
         out = [Vecih(v.ad, v.izdusum, float(v.agirlik / top_agir),
                      alem=v.alem, mertebe=v.mertebe,
-                     tasiyici=v.tasiyici, kaide=v.kaide) for v in out]
+                     tasiyici=v.tasiyici, kaide=v.kaide, tayf=v.tayf)
+               for v in out]
+    _TIP_TAYFI.clear()
+    for v in out:
+        for l, ad, nis in v.tayf:
+            k = "ℓ%d.%s" % (int(l), str(ad))
+            _TIP_TAYFI[k] = _TIP_TAYFI.get(k, 0.0) + float(
+                nis * v.agirlik)
+    _VECIH["tip"] = float(sum(
+        1 for x in _TIP_TAYFI.values()
+        if x > 0.0))
     _VECIH["istihraç"] += 1.0
     _VECIH["münasebet"] = float(len(mun))
     _VECIH["mertebe"] = float(max(v.mertebe for v in out))
@@ -311,6 +341,13 @@ def vecih_metni(b: Optional[Dict[str, float]] = None) -> str:
         % int(d.get("halka", 0)),
         "    Mukayese halkası ÂLEME göre kapanır: ayrı cins %d"
         % int(d.get("cins", 0)),
+        "    TİP ÇORBASI ÇÖKERTİLMEDİ (ferman 2-Ú-B): argmax ile tek",
+        "    mertebe seçilmiyor, bütün tipler süperpozisyonda tartılıyor.",
+        "    çözümlenen tip %d -- nispetleriyle:" % int(d.get("tip", 0)),
+        "      " + ("  ".join(
+            "%s %.4f" % (k, v) for k, v in
+            sorted(tip_tayfi().items(), key=lambda x: -x[1]))
+            or "yok"),
         "    Mertebede TAVAN YOKTUR: Postnikov kulesi artık sönmedikçe",
         "    ℓ+1 açılır.   (ölçü %s)"
         % ("açık" if d.get("açık") else "KAPALI"),
@@ -345,6 +382,43 @@ def uyanik_vecihler(durumlar: Sequence[np.ndarray],
         if ayirt > had:
             canli.append(v)
     return canli
+
+
+def ayniyet_ihtilaf(a: np.ndarray, b: np.ndarray,
+                    vecihler: Sequence[Vecih],
+                    hafiza=None) -> Dict[str, Any]:
+    from .hafiza import CERH, TASDIK, TEVAKKUF
+    vs = list(vecihler)
+    assert vs, (
+        "ayniyet/ihtilaf tayini için vecih lâzım -- şahit yoktur, "
+        "hüküm VECİHLERDEN okunur (ferman 2-Ú)")
+    ortusme: Dict[str, float] = {}
+    for v in vs:
+        ortusme[v.ad] = float(swap_testi(a, b, v)["örtüşme"])
+    d = np.asarray(list(ortusme.values()), float)
+    ihtilaf = float(d.max() - d.min())
+    ittifak = float(1.0 - ihtilaf)
+    asgari = float(d.min())
+    tenakuz = bool(ihtilaf > ittifak)
+    kisir = bool(not tenakuz and asgari >= ittifak)
+    _MELEKE["ayniyet"] += 1.0
+    _MELEKE["ihtilaf_nispeti"] = ihtilaf
+    if tenakuz:
+        _MELEKE["ayrışan_vecih"] = float(len(
+            [x for x in d if x < d.max() - 0.5 * ihtilaf]))
+    hukum = (TEVAKKUF if (tenakuz or kisir) else TASDIK)
+    if hafiza is not None:
+        hafiza.yaz(np.asarray(a, complex).reshape(-1),
+                   omega=float(1.0 - ihtilaf),
+                   hukum=(CERH if tenakuz else hukum))
+        _MELEKE["hafızaya"] += 1.0
+    return {"örtüşme": ortusme, "ihtilaf": ihtilaf, "ittifak": ittifak,
+            "asgarî_örtüşme": asgari, "tenakuz": tenakuz,
+            "kısır": kisir, "kayıt": float(hukum),
+            "en_ayrık": (max(ortusme, key=lambda k: ortusme[k])
+                         if ortusme else ""),
+            "en_yakın": (min(ortusme, key=lambda k: ortusme[k])
+                         if ortusme else "")}
 
 
 def alem_cinsleri(durumlar: Sequence[np.ndarray],
@@ -459,8 +533,7 @@ def mukayese_melekesi(haller: Sequence[np.ndarray],
         _MELEKE["hafızaya"] += 1.0
     if ist["yırtık"] and ist["istisna"] is not None:
         j = int(ist["istisna"]) % len(H)
-        _YIRTIK_DEFTERI.append(
-            (H[j], H[(j + 1) % len(H)], H[(j + 2) % len(H)]))
+        _YIRTIK_DEFTERI.append((H[j], H[(j + 1) % len(H)]))
         _MELEKE["biriken_yırtık"] = float(len(_YIRTIK_DEFTERI))
     return {"kayıp": float(hlk["Δ_K"]), "halka": int(hlk["halka"]),
             "yırtık": bool(ist["yırtık"]), "istisna": ist["istisna"],

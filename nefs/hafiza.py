@@ -11,7 +11,7 @@ __all__ = ["Kayit", "Hafiza", "TASDIK", "TEVAKKUF", "CERH", "rapor",
 
 _TERTIP: Dict[str, float] = {
     "çağrı": 0.0, "yırtıktan": 0.0, "kapıdan": 0.0, "alâkalı": 0.0,
-    "taşınan": 0.0, "silinen": 0.0, "kök": 0.0, "Φ₃": 0.0,
+    "taşınan": 0.0, "silinen": 0.0, "kök": 0.0, "ayırt": 0.0,
     "vecih": 0.0, "açık": 1.0}
 
 _VECIH_ADI: List[str] = []
@@ -36,12 +36,13 @@ def tertip_metni(b: Optional[Dict[str, Any]] = None) -> str:
         "   SİLİNEN %d"
         % (int(d["alâkalı"]), int(d["taşınan"]), int(d["silinen"])),
         "    Silinen SIFIR olmalıdır: çizip geçmek amnezidir.",
-        "    modalite vechi Δ₃ ile ölçüldü: Φ₃ = %.6f rad   açılan"
-        " Cartan kökü %d" % (d["Φ₃"], int(d["kök"])),
+        "    modalite vechi AYIRT ETME nispetiyle ölçüldü: %.6f   açılan"
+        " Cartan kökü %d" % (d.get("ayırt", 0.0), int(d["kök"])),
         "    açılan yapraklar: %s"
         % (", ".join(d.get("vecih_adı") or []) or "yok"),
         "    Yaprak adı ELLE YAZILMAZ (ferman 6): çelişen iki kaydı",
-        "    ayıran vecih, Φ₃'ü azamî yapan vecihtir (ferman 1-Ğ).",
+        "    ayıran vecih, ŞAHİTSİZ olarak ikisini en çok ayıran,",
+        "    yâni örtüşmesi en düşük olan vecihtir (ferman 2-Ú).",
         "    (ölçü %s)" % ("açık" if d.get("açık") else "KAPALI"),
     ])
 
@@ -170,27 +171,26 @@ class Hafiza:
 
     def yeniden_tertiple(self, capraz, sahit=None, mahalli=None,
                          kapi: str = "yırtık") -> Dict[str, Any]:
-        from .mukayese import bargmann, vecihleri_istihrac
+        from .mukayese import swap_testi, vecihleri_istihrac
         _TERTIP["çağrı"] += 1.0
         _TERTIP["yırtıktan" if kapi == "yırtık" else "kapıdan"] += 1.0
         if not _TERTIP.get("açık"):
             return {"vecih": "", "taşınan": 0, "silinen": 0, "Φ₃": 0.0}
         A = np.asarray(capraz[0], complex).reshape(-1)
         B = np.asarray(capraz[1], complex).reshape(-1)
-        S = (A + B) if sahit is None else np.asarray(
-            sahit, complex).reshape(-1)
-        assert A.size == B.size == S.size, (
-            "yeniden tertip üç eşit boyda kutup ister: %d, %d, %d"
-            % (A.size, B.size, S.size))
+        assert A.size == B.size, (
+            "yeniden tertip iki eşit boyda kutup ister: %d, %d"
+            % (A.size, B.size))
         en_iyi = None
-        for v in vecihleri_istihrac([A, B, S]):
-            b = bargmann([A, B, S], v)
-            if en_iyi is None or abs(float(b["Φ"])) > abs(en_iyi[1]):
-                en_iyi = (str(v.ad), float(b["Φ"]))
+        for v in vecihleri_istihrac([A, B]):
+            s = swap_testi(A, B, v)
+            ayirt = float(1.0 - float(s["örtüşme"]))
+            if en_iyi is None or ayirt > en_iyi[1]:
+                en_iyi = (str(v.ad), ayirt)
         assert en_iyi is not None, (
-            "hiçbir vecih Δ₃ vermedi -- modalite lifi ölçülemedi")
+            "hiçbir vecih ayırt etmedi -- modalite lifi ölçülemedi")
         yaprak, fi = en_iyi
-        _TERTIP["Φ₃"] = float(fi)
+        _TERTIP["ayırt"] = float(fi)
         if yaprak not in _VECIH_ADI:
             _VECIH_ADI.append(yaprak)
         _TERTIP["vecih"] = float(len(_VECIH_ADI))
@@ -202,12 +202,12 @@ class Hafiza:
         assert nrm > 0.0, (
             "çelişen iki kutup birbirini tamamen söndürdü -- alâka "
             "izdüşümü kurulamıyor")
-        d = self.taban_degistir(P / nrm, yaprak=yaprak, omega=float(
-            np.cos(float(fi))))
+        d = self.taban_degistir(P / nrm, yaprak=yaprak,
+                                omega=float(1.0 - float(fi)))
         _TERTIP["alâkalı"] += float(d["taşınan"])
         _TERTIP["taşınan"] += float(d["taşınan"])
         _TERTIP["silinen"] += float(d["silinen"])
-        return {"vecih": yaprak, "Φ₃": float(fi),
+        return {"vecih": yaprak, "ayırt": float(fi),
                 "taşınan": int(d["taşınan"]), "silinen": int(d["silinen"]),
                 "kapı": kapi}
 

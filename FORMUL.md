@@ -365,19 +365,24 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     VERİ KAPISI (ferman 2-Ó) -- ret girene bakar, konuşmaya değil
                  KAPI KODLAMADAN SONRA KOŞAR: hüküm HÂLDEN okunur
 
+    Parça        = ölçülen bellek haddine sığan örnek adedi  (ferman 5-B)
+                   ← kapı imleçten gelen HER PARÇADA koşar, yığında değil
     Hâl(Örnek)   = İdrak(Kodla(Bağlam + Hedef))    ← örnek başına BİR idrak
+    Vecihler     = VecihleriİstihraçEt(parçanın hâlleri)
     Eş(i)        = aynı Bağlamı paylaşan evvelki örnek, yoksa i−1
-                   ← bu bir HÜKÜM değil, üçgenin İKİNCİ KUTBUDUR
-    Şahit(i)     = i ve Eş(i) dışındaki en yakın evvelki örnek
-    Δ₃(i)        = ⟨Hâl_i|Hâl_Eş⟩⟨Hâl_Eş|Hâl_Şahit⟩⟨Hâl_Şahit|Hâl_i⟩
+                   ← bu bir HÜKÜM değil, çiftin İKİNCİ KUTBUDUR
 
-    Takla(i)     = |arg Δ₃(i)| / π        Kapanış(i) = 1 − Takla(i)
-                   ← eşik SABİT DEĞİL: iki nispet birbiriyle tartılır (1-J)
+    ŞAHİT YOKTUR. Hüküm çiftin BÜTÜN VECİHLERDEKİ okumasından çıkar:
+
+    Örtüşme(v)   = |⟨Hâl_i^(v) | Hâl_Eş^(v)⟩|²         her vecih v için
+    İhtilaf      = azamî Örtüşme − asgarî Örtüşme
+    İttifak      = 1 − İhtilaf        ← iki nispet toplamı BİR (ferman 1-J)
 
     Hüküm(Örnek) = mantıksızlık eğer basamak ∉ [0, VeriLifi)   → RET
-                 | tenakuz      eğer Takla > Kapanış            → TERFİ
-                 | kısırdöngü   eğer Kapanış > Takla ve r ≥ ort(bağ)
+                 | tenakuz      eğer İhtilaf > İttifak          → TERFİ
+                 | kısırdöngü   eğer İttifak > İhtilaf ve asgarî ≥ İttifak
                  | tasdik       değilse
+                 ← hükmü MUKAYESE MELEKESİ verir ve HAFIZAYA yazar
     Kabul(Örnek) = yanlış YALNIZ mantıksızlıkta;  tenakuz TERFİ eder
     HafızaKaydı  = tasdik | tevakkuf | cerh       ← kaydın CİNSİNİ kapı tayin eder
 
@@ -393,8 +398,15 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     Âlem           = aynı İmzalı münasebetlerin öbeği
     Vecih(Âlem)    = izdüşüm( birim( toplam over öbek of AyırtEdiciYön(a,b) ) )
                      AyırtEdiciYön(a,b) = birim( Hâl_a − ⟨Hâl_b|Hâl_a⟩·Hâl_b )
-    Mertebe(Âlem)  = enbüyükArgüman over ℓ of Nispet(ℓ | öbeğin kutupları)
+    Tayf(Âlem)     = ( Nispet(ℓ | öbeğin kutupları) )  BÜTÜN ℓ için, normalize
                      ℓ = 0 nokta · 1 uzay · 2 kategori · 3 tip · 4… Postnikov
+                     ← ÇÖKERTİLMEZ (ferman 2-Ú-B): argmax ile tek mertebe
+                       SEÇİLMEZ; bütün tipler süperpozisyonda taşınır,
+                       tip çorbası analitik çözümlenir ve tayf raporlanır
+    TipTayfı       = toplam over âlem of  Tayf(âlem) × Ağırlık(âlem)
+                     ← "hangi tipler varmış, kaideleri neymiş" bundan okunur
+
+    Yaprak(A,B)    = Örtüşme'si EN DÜŞÜK vecih   ← şahitsiz, en çok ayıran
 
     MUKAYESE MELEKESİ -- durumu EVİRMEZ, hüküm çıkarır
 
@@ -410,8 +422,9 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
 
     HAFIZA YENİDEN TERTİBİ -- silme YOK, terfi VAR
 
-    Yaprak   = Φ₃'ü AZAMÎ yapan Vecih                  ← vechi Δ₃ tayin eder
-    Kök      = MahallîYazmaç.CartanEkle("modalite." + Yaprak, Φ₃)
+    Yaprak   = Örtüşme'si EN DÜŞÜK Vecih          ← şahit yok, ayırt eden vecih
+    Ayırt    = 1 − Örtüşme(Yaprak)
+    Kök      = MahallîYazmaç.CartanEkle("modalite." + Yaprak, Ayırt)
                ← yeni ORTOGONAL kök; evvelki köklerin adresi KAYMAZ (2-İ)
     Hafıza   ← TabanDeğiştir(birim(A + B), Yaprak, ω = cos Φ₃)
     Tertip KÜME KAPANINCA bir defa koşar; yırtıklar deftere birikir.
