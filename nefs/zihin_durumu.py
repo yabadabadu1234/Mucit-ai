@@ -271,6 +271,9 @@ class QYazmac:
         G[yigin[sec], seviye.reshape(-1)[sec]] = agirlik[sec]
         self.y.psi = G.astype(self.y.ayar.tip)
         self.y.normalize()
+        if self.y.iz.senet_acik:
+            self.y.iz.kapi_yaz("durum", (),
+                               np.asarray(self.y.psi, complex).copy())
         return float(kuresel)
 
     def superpozisyon(self, yalniz_veri: bool = False) -> None:

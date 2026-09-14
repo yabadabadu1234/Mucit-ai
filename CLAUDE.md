@@ -2084,6 +2084,75 @@ HAMALLIĞI YAPILMAZ.**
 
 ---
 
+## ▓▓▓ 2-Û. FERMAN: MELEKENİN EVİ MAHALLÎ YAZMAÇTIR -- KAN KATSAYISINA DOKUNULMAZ ▓▓▓
+
+> *"Melekelerin evireceği yegâne zemin: **Mahallî Yazmaç ve müstakil
+> `θ_cartan` Lie vektörüdür.** KAN'ın katsayıları sabit ve pürüzsüz
+> kalacaktır."*
+
+* **KAN'IN `C` VE `S` KATSAYILARINA ÇIKARIM ANINDA DOKUNULMAZ.** Onlar
+  fonksiyonel mimarinin **küllî parametreleridir**; her belirteçte
+  bükülürse FCT dikliği çöker ve model kendi ağırlığını tahrif eden
+  bir bellek çorbasına döner. Bir operatör **durumu** evirir, doğa
+  kanununun fonksiyonelini değil.
+* **MELEKE YALNIZ FAZA DEĞİL, GENLİĞE DE HÜKMEDER.** Benim *"bütün
+  kapılar köşegen faz olur, genlik zaten KAN'dan gelir"* kabulüm
+  eksikti: Zeno izdüşümü yahut tenakuz sönümlemesi gerektiğinde genliği
+  sıfırlayan mahallî yazmacın **genlik sütunudur**.
+* *"Köşegen tesir faza, köşegen olmayan tesir KAN katsayısına"* diye
+  bir ayrım **yoktur**: köşegen olmayan kapı KAN katsayısını değil,
+  durumun **genlik izdüşümünü** değiştirir.
+
+---
+
+## ▓▓▓ 2-Ê. FERMAN: HÂL BASAMAK TOPLAMI DEĞİL -- HEDEF QUDİDİN İZDÜŞÜMÜ ▓▓▓
+
+> *"Farklı zaman basamaklarındaki genlik karelerini birbirinin üstüne
+> toplamak; **dünü, bugünü ve yarını bir kazana atıp çorba yapmaktan**
+> farksızdır!"*
+
+### İKİ HURAFE BİRDEN KESİLDİ
+
+1. **BASAMAK EKSENİ TOPLAMI HURAFEDİR.** Hâl `|ψ|²`nin basamaklar
+   boyunca toplamı değildir. Farklı konumların olasılıkları birbirine
+   eklenmez; ölçüm, cevabın üretileceği **aktif hedef quditten** okunur.
+2. **KAN SÖZLÜK BOYUNDA ŞİŞİRİLMEZ.** *"Tek çağrıda sözlük kadar
+   konfigürasyon verelim"* teklifim, 3176 çağrıdan kaçıp on binlik bir
+   yığına atlamaktı; reddedildi.
+
+### SAHİH OKUMA
+
+    Hâl(kelâm) = | ⟨ kelâm | Genlik(hedef qudit ; θ_cartan) ⟩ |²
+
+Mahallî yazmaçtaki **hedef çıkış quditinin** yerel durumu, tek bir KAN
+çağrısından gelen küllî rezonans ve `θ_cartan` faz mührü altında
+hesaplama tabanına izdüşürülür. Maliyet `O(1)`; ne geçmiş basamaklar
+toplanır, ne KAN şişirilir.
+
+---
+
+## ▓▓▓ 2-Ô. FERMAN: SEKTÖRÜN DEĞERİ AÇI DEĞİL, BEKLENTİ DEĞERİDİR ▓▓▓
+
+> *"Rotasyon açısının büyüklüğünü sektörün mizan ağırlığı saymak;
+> **saatin akrebinin gösterdiği açıyı zamanın miktarı zannetmeye**
+> benzer!"*
+
+Benim *"sektörün değeri kökte biriken fazın büyüklüğüdür"* teklifim
+**reddedildi** ve haklı olarak: `θ` bir dönme açısıdır. Açı sıfırken
+sektör yok değildir, açı `π` iken en büyük değildir.
+
+### SAHİH ÖLÇÜ
+
+    Ağırlık(sektör_k) = toplam over j ∈ sektörün indisleri of
+                        |MahallîYazmaç[j, genlik]|²
+    Kefe(sektör_k)    = Ağırlık(sektör_k) · üstel( i · θ_cartan[k] )
+
+Yâni ölçülen şey **durumun o sektördeki genlik ağırlığı ile fazının
+bileşkesidir** -- Cartan jeneratörünün beklenti değeri. Dilim aranmaz,
+ve **KAN sektör sayısınca çağrılmaz**: tek küllî çağrı bu mizanı tartar.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...

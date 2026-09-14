@@ -15,7 +15,7 @@ _MAHALLI: Dict[str, float] = {
     "kuruldu": 0.0, "qudit": 0.0, "taban": 0.0, "yığın": 0.0,
     "bayt": 0.0, "vuruş": 0.0, "dokunulan": 0.0, "seyirci": 0.0,
     "pencere": 0.0, "faz_kayması": 0.0, "tahsis": 0.0,
-    "kök": 0.0, "cartan_normu": 0.0, "açık": 1.0}
+    "kök": 0.0, "cartan_normu": 0.0, "sönüm": 0.0, "açık": 1.0}
 
 
 def mahalli_beyani() -> Dict[str, float]:
@@ -46,6 +46,8 @@ def mahalli_metni(b: Optional[Dict[str, float]] = None) -> str:
         % d["faz_kayması"],
         "    CARTAN KÖKÜ %d   küresel ayar fazı normu %.6e rad"
         % (int(d.get("kök", 0)), d.get("cartan_normu", 0.0)),
+        "    genlik sönümü   : %d qudit   (meleke yalnız faza değil"
+        " GENLİĞE de hükmeder -- ferman 2-Û)" % int(d.get("sönüm", 0)),
         "    Kök vektörü BİR MİLYON QUDİTE SERPİLMEZ (ferman 2-Â):",
         "    KAN üssüne küresel rezonans fazı olarak girer.",
         "    Bu yazmaç `_psi`nin yerine geçmez: `_psi` TEKİL KAVRAM",
@@ -157,6 +159,27 @@ class MahalliYazmac:
         _MAHALLI["dokunulan"] = float(dokunulan.size)
         _MAHALLI["faz_kayması"] = float(np.mean(np.abs(kayma)))
         return float(np.mean(np.abs(kayma)))
+
+    def genlik_sondur(self, hedef: np.ndarray, sonum) -> float:
+        h = np.mod(np.asarray(hedef, np.int64).reshape(-1),
+                   max(1, int(self.pencere)))
+        c = np.asarray(sonum, float).reshape(-1)
+        if h.size == 0:
+            return 0.0
+        c = np.resize(c, h.size)
+        self.hal[:, h, 0] = self.hal[:, h, 0] * c[None, :]
+        _MAHALLI["sönüm"] += float(h.size)
+        return float(np.abs(1.0 - c).mean())
+
+    def sektor_agirligi(self, ad: str, indis: np.ndarray) -> complex:
+        k = self.kok_indisi(str(ad))
+        i = np.mod(np.asarray(indis, np.int64).reshape(-1),
+                   max(1, int(self.pencere)))
+        if i.size == 0:
+            return 0j
+        agir = float((np.abs(self.hal[:, i, 0]) ** 2).sum()
+                     / max(1, self.hal.shape[0]))
+        return complex(agir * np.exp(1j * float(self.cartan[k])))
 
     def beyan(self) -> Dict[str, float]:
         return mahalli_beyani()

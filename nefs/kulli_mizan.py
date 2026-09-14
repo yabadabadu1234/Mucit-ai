@@ -414,7 +414,9 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
         assert M_hepsi.size > 0, "ileri geçiş BOŞ durum verdi"
         _hk = str(getattr(ayar, "hal_kaynagi", "tutarlı"))
         if _hk == "tutarlı":
-            _H = M_hepsi.sum(axis=-1)
+            _yer = int(M_hepsi.shape[-1])
+            _hedef_yuva = min(len(_bag[0][0]), _yer - 1)
+            _H = M_hepsi[:, :, _hedef_yuva]
             _H = _H / np.maximum(
                 np.linalg.norm(_H, axis=-1, keepdims=True), 1e-300)
         elif _hk == "özvektör":
