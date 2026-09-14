@@ -46,8 +46,10 @@ def keyfiyet(kefeler: Dict[str, Any],
     nispet = float(nis_ten * nis_kis * nis_man)
     assert 0.0 <= nispet <= 1.0 + 1e-9, "nispet [0,1] dışına çıktı"
 
+    cozunurluk = float(np.finfo(float).eps)
     hudut = {"tenakuz": n_ten, "kısırdöngü": n_kis,
-             "mantıksızlık": int(tasma > 1e-12) + int(bel_tasma > 1e-12)}
+             "mantıksızlık": (int(tasma > cozunurluk)
+                              + int(bel_tasma > cozunurluk))}
     temiz = all(v == 0 for v in hudut.values())
 
     _HAL["toplam"] += nispet

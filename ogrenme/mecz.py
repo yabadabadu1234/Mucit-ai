@@ -41,7 +41,7 @@ def mecz_sifirla() -> None:
                   "ek_durum_ikiz_farkı": 0.0, "üreteç_ikiz_farkı": 0.0,
                   "senet_ileri": 0.0,
                   "keyfiyet": 0.0, "keyfiyet_önceki": 0.0,
-                  "keyfiyet_reddi": 0.0, "hissedilmeyen_adım": 0.0,
+                  "keyfiyet_düşüşü": 0.0, "hissedilmeyen_adım": 0.0,
                   "kayıp_çözünürlüğü": 0.0, "r_kullanılan": 0.0,
                   "ΔV_gerçek": 0.0, "ΔV_lineer": 0.0,
                   "tahsis_edilen": 0.0,
@@ -387,12 +387,11 @@ class Memuriyet:
             eg = hat_egriligi(va - v, egim_yon * r, r, max(abs(v), abs(va)))
             seyir.append({"V": va, "yarıçap": r, "ΔE": float(d["ΔE"]),
                           "κ": float(eg["κ"]), "keyfiyet": keyf_aday})
-            kirletti = bool(keyf_aday < keyf)
             _MECZ["keyfiyet"] = float(keyf_aday)
             _MECZ["keyfiyet_önceki"] = float(keyf)
-            if kirletti:
-                _MECZ["keyfiyet_reddi"] += 1.0
-            if va < v and not kirletti:
+            if keyf_aday < keyf:
+                _MECZ["keyfiyet_düşüşü"] += 1.0
+            if va < v:
                 _MECZ["kabul"] += 1.0
                 _MECZ["adım_normu"] += float(np.linalg.norm(aday - p))
                 p, v, keyf = aday, va, keyf_aday
@@ -451,10 +450,10 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          % (b["yarıçap"], b["iz_g"]),
          "         keyfiyet yarıçabı NE ÇARPAR NE BÖLER: adımın BOYUNU",
          "         mecz tayin eder, KABULÜNÜ mizan verir.",
-         "  KABUL KAPISI  keyfiyet %.6f → %.6f   (%d adım keyfiyeti"
-         " kirlettiği için reddedildi)"
+         "  KABUL KAPISI  keyfiyet %.6f → %.6f   (%d adımda keyfiyet"
+         " düştü -- VETO YOK, keyfiyet mizanda kefedir, ferman 2-Ü)"
          % (b["keyfiyet_önceki"], b["keyfiyet"],
-            int(b["keyfiyet_reddi"])),
+            int(b["keyfiyet_düşüşü"])),
          "         hat eğriliği κ = %.4e   %d kere düzeltti"
          % (b["κ"], int(b["yarıçap_düzeltmesi"])),
          "         HİSSEDİLMEYEN ADIM %d kere: |ΔV| kaybın kendi"

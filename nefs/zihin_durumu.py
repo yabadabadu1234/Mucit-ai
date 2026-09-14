@@ -242,8 +242,7 @@ class QYazmac:
             pq = getattr(self, "pq", None)
             yerel_faz = None
             if pq is not None:
-                from .mahalli_yazmac import MahalliYazmac
-                self.mahalli = MahalliYazmac(n_sat, sozluk, B)
+                self.mahalli.hazirla(n_sat, B)
                 self.mahalli.yerlestir(bas, dolu)
                 kontrol, bag = pq.temas_kapilari()
                 self.mahalli.kapilari_vur(

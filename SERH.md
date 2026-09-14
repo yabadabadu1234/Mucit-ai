@@ -45556,3 +45556,28 @@ küçültür, `2r` ile ikiye katlamak `1e-26`dan dönmeye yetmez.
 
 Çökmüş bir sayıyı ikiye katlayarak kurtarmaya çalışmak, ölçüyü
 düzeltmek değil **kaderine terk etmektir**.
+
+---
+
+## ÜÇ HUDUT ÖLÇÜLÜYOR -- SIFIRLAR "KAPANMIŞ KÜME YOK" DEMEK
+
+*"Küme hiç temiz çıkmıyor"* diye sorulan suâlin cevabı kodda bulundu ve
+teşhisim yanlıştı: **ölçü koşuyor.** `nefs/keyfiyet.py` her turda üç
+huddun üçünü de sayıyor (`hudut_temiz`), `nefs/munasebet.py` de o hükme
+göre kümeyi ya kapatıyor ya kuyruğun başına geri koyuyor.
+
+`0 temiz / 0 kirli / 1 geri dönen` satırı bir ölçü yokluğu değil, bir
+**hâl beyanıdır**: henüz hiçbir küme kapanmamış, ilk küme geri
+dönmüştür. `keyfiyet en_iyi 0.7819` de ölçünün koştuğunun delilidir --
+koşmasa sıfır olurdu.
+
+### FAKAT İÇİNDE ELLE YAZILMIŞ BİR EŞİK VARDI
+
+    mantıksızlık = (parite_taşması > 1e-12) + (belirteç_taşması > 1e-12)
+
+`1e-12` elle konmuş bir sayıdır ve ferman 1-J bunu yasaklar: eşik bir
+keyfiyetin ölçülen nispetinden gelir, parmaktan değil. Yerine **makinenin
+kendi çözünürlüğü** kondu (`np.finfo(float).eps`): bir nispet, taşıyıcının
+temsil edebileceği en küçük farkın altındaysa **sıfırdır**. Bu bir tercih
+değil, kayan noktanın kendi ölçüsüdür -- `nefs/donanim.py`nin donanımı
+yoklaması gibi.

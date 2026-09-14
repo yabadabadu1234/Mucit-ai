@@ -1311,6 +1311,7 @@ class QNefs:
             ParametreAyari(tohum=int(tohum)))
         self.p = self.pq
         self.kan: Optional["ChebyshevKan"] = None
+        self.mahalli = None
         self.sira = tuple(sira)
         self.s = qsicil()
         self.gaye = bool(gaye)
@@ -1363,6 +1364,10 @@ class QNefs:
                 NqsAyari(tohum=int(self.ayar.tohum)))
         q.kan = self.kan
         q.pq = None if self._defter_aciliyor else self.pq
+        if self.mahalli is None:
+            from .mahalli_yazmac import MahalliYazmac
+            self.mahalli = MahalliYazmac(int(self.ayar.veri_lifi))
+        q.mahalli = self.mahalli
         q.kodla(E)
         if q.iz.senet_acik:
             q.iz.kapi_yaz("başlangıç", (),

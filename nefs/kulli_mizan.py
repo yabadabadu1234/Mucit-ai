@@ -622,6 +622,10 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                      float(a.lam_kaide)))
     _bilesen.append(("kaide_halkası", float(dk["Δ_K"]), float(a.lam_kaide)))
     _bilesen.append(("taşma", L_tas, float(a.lam_tasma)))
+    from .keyfiyet import keyfiyet_son as _keyf_son
+    _keyf = _keyf_son()
+    _bilesen.append(("keyfiyet", 1.0 - float(_keyf or 0.0),
+                     float(a.lam_kaide)))
     from .zirh import zirhla
     _H_zirh = np.real(rho_model).astype(float)
     _z_ham, _z = zirhla(_H_zirh, ZirhAyari())

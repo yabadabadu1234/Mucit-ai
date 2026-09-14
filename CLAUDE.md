@@ -1926,6 +1926,76 @@ o koşuyu seyretmek değil, bir sonraki kusuru **şimdi** bulmaktır.
 
 ---
 
+## ▓▓▓ 2-İ. FERMAN: CETVEL LAĞVEDİLDİ -- SEKTÖR BİR LIE KÖKÜDÜR ▓▓▓
+
+> *"**'Cetvel' lafzı ve ameliyesi kökünden imha edilecektir.** Ne elle
+> bir cetvel yazılacak, ne de melekelerden aralık toplayan bir cetvel
+> derleyicisi çalıştırılacaktır."*
+
+### REDDEDİLEN: "CETVEL MELEKELERİN BEYANINDAN TÜRESİN"
+
+Bu benim teklifimdi ve **reddedildi**. Sebebi haklıdır: teklif hâlâ
+belleği dilimleme (`[baş:son]`) putuna tapıyordu. Sözleşmeleri tarayıp
+aralık derlemek de bir cetveldir; on birinci sektör doğunca bütün
+dilimler sağa kayar, yeniden indislenir, bellek taşınır.
+
+### GELEN: DOĞAL DHR CARTAN KÖK NİZAMI
+
+    SEKTÖR BİR BELLEK DİLİMİ DEĞİLDİR.
+    Sektör, Lie cebrinin zâtî süperseçim yüküdür (DHR yükü).
+
+* Yazmaç bir pasta gibi bölünmez. Her yükün bir **Cartan faz
+  biriktiricisi** vardır; meleke bellekte aralık aramaz, doğrudan
+  kendi **kök jeneratörüne** yazar.
+* **İNDİS KAYMASI SIFIRDIR.** On birinci sektör doğduğunda cetvel
+  yeniden hesaplanmaz; Lie cebrine yeni bir **ortogonal** jeneratör
+  eklenir ve evvelki köklerin adresinden tek bit oynamaz.
+* Melekelerin ayrımı mekanik bir adres değil, simetri cebrinin
+  **topolojik yüküdür**.
+
+---
+
+## ▓▓▓ 2-Ğ. FERMAN: MAHALLÎ ZIRH SABİTTİR -- PENCERE İÇİNDE NEFES ALIR ▓▓▓
+
+> *"Sabit bir milyon quditlik (16 MB) donanım zırhı esastır. Dinamik
+> bellek tahsisi CUDA Graph'ı bozar ve adres kayması üretir."*
+
+### SAHTE ÇİFT BAŞLILIK -- İKİ FERMAN ÇATIŞMAZ
+
+Ferman 2-O ile zabıt 14 arasında çelişki **yoktur**; ikisi ayrı şey
+söyler ve ben ikisini karıştırmıştım:
+
+    DONANIM ZIRHI (zabıt 14)   Mahallî yazmaç DAİMA 1 048 576 qudit ×
+                               (genlik, faz). Sıfır tahsis, sabit şekil,
+                               adres asla kaymaz.
+    AKTİF PENCERE (ferman 2-O) Gelen suâl kaç basamaksa yazmacın o kadar
+                               quditi akışa girer; kalanı SEYİRCİDİR.
+
+* **"KISA SUÂL UZUN SUÂL FİYATINA KOŞAR" İDDİASI BÂTILDIR** ve bu benim
+  hatamdı: matris çarpımı zaten çöpe atılmıştır, geriye indisli faz
+  eklemesi kalmıştır. Bir dizide elli bir indise skaler eklemenin
+  maliyeti dizi kırk beş de olsa bir milyon da olsa **aynıdır**
+  (seyirci qudit ilkesi, ferman 2-V).
+* **DOLDURMA KÜLFETİ DOĞMAZ**: seyirci hesaplanmaz, taranmaz, çarpılmaz.
+* **NİÇİN SABİT.** Her suâlde yazmacı silip yeniden açmak bellek
+  parçalanması ve tahsis külfeti doğurur; Cartan kök adresleri her
+  adımda darmadağın olur.
+
+---
+
+## ▓▓▓ 2-Ü. FERMAN: KEYFİYET VETO DEĞİL, KEFEDİR ▓▓▓
+
+> *"Veto kalksın, keyfiyet mizana kefe olarak girsin."*
+
+Kabul kapısında keyfiyet **mutlak veto** idi: kayıp düşse bile keyfiyet
+bir kıl kirlenirse adım reddediliyordu; netice otuz turda **tek** kabul.
+
+* **VETO İLGA EDİLDİ.** Keyfiyet bir kapı değil, bir **kefedir**
+  (ferman 1-U, 1-S): kaybın içine girer, adımı tek başına reddetmez.
+* Kabul hükmünü **tam mizan vektörü** verir; hiçbir cevher düşmez.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...
