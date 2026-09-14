@@ -45581,3 +45581,57 @@ kendi çözünürlüğü** kondu (`np.finfo(float).eps`): bir nispet, taşıyıc
 temsil edebileceği en küçük farkın altındaysa **sıfırdır**. Bu bir tercih
 değil, kayan noktanın kendi ölçüsüdür -- `nefs/donanim.py`nin donanımı
 yoklaması gibi.
+
+---
+
+## CEBRÎ İSPAT: KÖŞEGEN FUBINI-STUDY, TAM METRİĞİN YERİNE GEÇMEZ
+
+Ferman 3-B ispatı ölçerek değil cebirle ister. İspat yazıldı ve
+**kendi teklifimi çürüttü**.
+
+### İDDİA (BENİM TEKLİFİM)
+
+*"Hesaplama tabanında metrik köşegendir (`g_ii = P_i(1−P_i)`), o hâlde
+`argmax[ log P / (P(1−P)) ]` ile `argmax[ g_FS⁺ · ∇ log P ]` aynıdır."*
+
+### CEBİR
+
+Olasılık sadeleşiminde (simplex) Fisher-Rao metriği koordinat `P_i`de
+
+    ds² = toplam over i of  dP_i² / P_i        ⟹   g_ij = δ_ij / P_i
+
+**köşegendir ve bu bir yaklaşım değil, tam eşitliktir.** Fakat
+sadeleşim `Σ P_i = 1` kısıtı taşır; teğet uzayda sözde ters bu yüzden
+köşegen **değildir**:
+
+    g⁺_ij = P_i δ_ij − P_i P_j          ← rank-bir düzeltme kısıttan gelir
+
+Şimdi iki şey ayrılır:
+
+1. **`P(1−P)` FISHER METRİĞİ DEĞİLDİR.** O, iki uçlu bir denemenin
+   (binom) varyansıdır. Sadeleşimin metriği `1/P_i`dir; tersi `P_i`.
+   İkisi ancak `q = 2` iken örtüşür. Sözlük `q = 64` iken örtüşmez.
+2. **GRADYAN `P`YE GÖRE DEĞİL, PARAMETREYE GÖREDİR.** Ferman 2-T
+   `∇ log P(x_k | x_<k)` yazar; bu **θ**ya göre türevdir. `P`ye göre
+   alınırsa `∇_i log P = 1/P_i` olur ve
+
+       (g⁺ ∇)_i = P_i·(1/P_i) − P_i · toplam over j of P_j·(1/P_j)
+                = 1 − q·P_i
+
+   çıkar; bunun `argmax`ı **en küçük olasılığı** seçer. Yâni `P`ye göre
+   okumak cevabı tam ters çevirir.
+
+### HÜKÜM
+
+Cebrî indirgeme **yapılamadı**; o hâlde ferman 3-B gereği iki şey aynı
+değildir ve terkip edilmez. Doğru okuma tektir:
+
+    Kelâm* = argmax over aday b of
+             [ g_FS⁺(parametre) · ∇_parametre log Olabilirlik(b) ]
+
+* Metrik **parametre uzayındadır** ve mecz zaten onu ölçüyor
+  (`egim_ek_durum`in döndürdüğü `metrik`).
+* `∇_parametre log Olabilirlik(b)` senet üzerinden analitik çıkar --
+  yeni bir alet gerekmez, `ogrenme/senet_egimi.py` bunu zaten yapıyor.
+* Bu, ferman 2-T'nin *"matris tersi yoktur"* şartını da korur: metrik
+  köşegen tutulur fakat **parametre** ekseninde, olasılık ekseninde değil.

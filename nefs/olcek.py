@@ -153,8 +153,19 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
 
     keyf = int(max(2, round(2 + 10 * c)))
     cev = int(max(2, (V // 2) * max(1, int(round(2 * c)))))
-    obek = int(max(1, min(B, ornek, max(cev, ornek // max(1, yon)))))
-    ornek = int(max(obek, (ornek // obek) * obek))
+    _obek_eski = int(max(1, min(B, ornek, max(cev, ornek // max(1, yon)))))
+    obek = 1
+    pencere = int(min(PENCERE_HADDI,
+                      _ikinin_kuvveti(float(pencere * _obek_eski),
+                                      int(V))))
+    K = _ikinin_kuvveti(math.sqrt(float(pencere)), 4)
+    while K * K < pencere or K * K < yuva:
+        K *= 2
+    K = min(K, K_hadd)
+    assert K * K >= pencere, (
+        "pencere büyütülünce yazmaç taşımadı: yer %d < pencere %d "
+        "(ferman 2-M)" % (K * K, pencere))
+    ornek = int(max(1, ornek))
     _tur_bedeli = float(yon) * float(ornek) * float(pencere)
     tur = int(max(1, butce // max(_tur_bedeli, 1.0)))
     cagri = max(1, tur * yon)
