@@ -541,16 +541,10 @@ class QuditYazmac:
             a = np.resize(a, gen) if a.size else np.zeros(gen, float)
         t = np.zeros(self.d, float)
         t[i:j] = a
-        no = self.iz.kapi_yaz("sektör_faz", (int(i), int(j)), a)
         self.faz(t)
         self._sektor_vurusu += 1
-        if bag and self.iz.senet_acik:
-            dizin = np.arange(i, j, dtype=np.int64)
-            for (par, olcek, pay) in bag:
-                deger = np.zeros(self.d, complex)
-                deger[dizin] = 1j * np.asarray(pay, float)
-                self.iz.bag_yaz(no, int(par), float(olcek),
-                                ("köşegen", dizin, deger[dizin]))
+        if bag:
+            self._faz_bagla(np.arange(i, j, dtype=np.int64), bag)
         return gen
 
     def sektor_faz_bagi(self, ad: str, par, olcek: float,
