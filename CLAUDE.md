@@ -2153,6 +2153,78 @@ ve **KAN sektör sayısınca çağrılmaz**: tek küllî çağrı bu mizanı tar
 
 ---
 
+## ▓▓▓ 2-Ï. FERMAN: BAĞLAM BOYU SABİT DEĞİL, NEDENSEL CEPHEDİR ▓▓▓
+
+> *"Ajanın 'bağlam boyu elle seçilmiş bir konumdur, ferman 1-J ihlali
+> olabilir' kuruntusu **yersiz bir safsatadır**."*
+
+Ferman 1-J **keyfî** sabitleri men eder: *"daima 16. yuvaya yaz"*,
+*"daima 2048 boyut aç"*. Verinin **kendi uzunluğu** ise bir sabit
+değil, **nedensel dalga cephesidir**: suâl beş kelimeyse beş, yedi yüz
+kelimeyse yedi yüzdür.
+
+* **HEDEF QUDİT BAĞLAMIN BİTTİĞİ YERDİR.** Zamanın oku vardır; cevap
+  geçmişin ön cephesinde tecelli eder.
+* **GERİLİM TEPESİ HEDEF DEĞİLDİR.** Ferman 2-Z'nin gerilimi
+  **melekelerin temas noktasıdır**, cevabın okunacağı yer değil.
+  Cevabı cümlenin ortasındaki tepeye yazdırmak nedenselliği öldürür.
+* **MERAK MELEKESİ BİR İŞARETÇİ DEĞİLDİR.** O, izdüşümün **niyet ve
+  vechini** tayin eder; bellek adresini değil.
+
+---
+
+## ▓▓▓ 2-Ĵ. FERMAN: ZAR ATILMAZ -- DETERMİNİST FUBINI-STUDY OKUMASI ▓▓▓
+
+> *"Mantık, ispat ve hüküm **rastgelelikle üretilemez**."*
+
+`nefs/soyle.py`deki Born çekilişi (`_sec`) ve zar atışı **kaldırılır**:
+
+    Kelâm* = argmax over b of [ g_FS⁺ · ∇ log Olabilirlik(b | evvelkiler) ]
+
+* **ÇEŞİTLİLİK ZARDAN GELMEZ:** girdiye göre açılan **vecih
+  spektrumundan**, `q^N` süperpozisyonunun zenginliğinden ve mizanın
+  teemmül devridaiminden gelir. Klasik modeller `argmax`ta döngüye
+  girdiği için zar atar; burada zar atmak safsatayı davet etmektir.
+* **VAKUM KIVILCIMI DURUM ÜRETİMİNDE MEŞRU, İNTAÇTA DEĞİL.**
+* **TÂLİMDE BAŞKA, ÇIKARIMDA BAŞKA OLMAZ** (ferman 1-H): tek motor.
+
+---
+
+## ▓▓▓ 2-Ĝ. FERMAN: `_psi` KÖKTEN KAZINIR -- ZOMBİ GÖRÜNÜM YASAK ▓▓▓
+
+> *"Olmayan bir durumun 'görünümü' uydurulamaz! '100 kefe yeniden
+> yazılır' mazereti **kabul edilemez bir tembelliktir**."*
+
+### REDDEDİLEN: `_psi`Yİ BİR ÖZELLİK (property) YAPMAK
+
+Bu benim teklifimdi ve reddedildi. Sebebi haklıdır: yüz kefe her turda
+`_psi`yi çağırsa, o özellik her çağrıda KAN'ı yeniden koşturur ve
+bellek tahsis eder -- **tur başına yüz fazladan KAN çağrısı**. İki
+adım evvel 3176 çağrıyı bire indirmişken bu, kod düzenlemekten
+kaçmak için kurulmuş bir hesap cehennemidir.
+
+### HÜKÜM: KEFELER KAYNAĞA BAĞLANIR
+
+`_psi` hem bellekten hem nesne özelliklerinden **kazınır**. Kefeler
+araya sahte dizi sokmadan doğrudan üç kaynağı okur:
+
+    MahallîYazmaç      genlik tohumu ve mahallî fazlar
+    θ_cartan           DHR süperseçim ayar fazları
+    KAN neticesi       turda BİR defa hesaplanan küllî rezonans
+
+**YÜZ KEFE TEK TEK AMELE GİBİ YAZILMAZ:** kefeler üç gözlenebilir
+tipine ayrılır -- sektör yükü, faz uyumsuzluğu/çevrim, küllî rezonans
+-- ve tek bir okuyucu arayüzle bağlanır.
+
+### VERİ YAZMACI DA QUDİTTİR
+
+> *"Veriyi de qudit yapmayı unutma, `q^N`."*
+
+Veri yazmacı da parametre yazmacı gibi `N` qudit × taban `q`dur;
+kapasitesi `q^N`dir ve hiçbir yerde açılmaz (ferman 2-T, 2-V).
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...

@@ -25,15 +25,6 @@ class Cevap:
     budanan: int = 0
 
 
-_OLCUM_TOHUMU: List[int] = [0]
-
-
-def _CEKILIS() -> float:
-    _OLCUM_TOHUMU[0] += 1
-    r = np.random.default_rng(_OLCUM_TOHUMU[0])
-    return float(r.random())
-
-
 def _buda(P: np.ndarray, hafiza) -> tuple:
     if hafiza is None:
         return P, 0
@@ -50,15 +41,17 @@ def _buda(P: np.ndarray, hafiza) -> tuple:
 
 
 def _sec(P: np.ndarray, ayna=None) -> int:
-    Q = np.asarray(P, float).reshape(-1)
-    if ayna is not None:
-        from .ayna import kivilcim
-        Q = np.asarray(kivilcim(Q, ayna), float).reshape(-1)
-        assert Q.size == P.size and np.all(np.isfinite(Q)), "kıvılcım bozuk"
-    Q = np.clip(Q, 0.0, None)
-    top = float(Q.sum())
-    assert top > 0.0, "ölçüm dağılımı tamamen söndü -- çökme yapılamaz"
-    return int(np.searchsorted(np.cumsum(Q / top), _CEKILIS()))
+    Q = np.clip(np.asarray(P, float).reshape(-1), 1e-300, None)
+    Q = Q / Q.sum()
+    egim = np.log(Q)
+    g_fs = Q * (1.0 - Q)
+    artik = g_fs > np.finfo(float).eps
+    assert bool(artik.any()), (
+        "Fubini-Study metriği tamamen söndü -- determinist okuma "
+        "yapılamaz (ferman 2-Ĵ)")
+    skor = np.where(artik, egim / np.where(artik, g_fs, 1.0),
+                    -np.inf)
+    return int(np.argmax(skor))
 
 
 def _uret(nefs, baglam: List[int], n: int, pencere: int, sozluk: int,

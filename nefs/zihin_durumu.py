@@ -265,10 +265,21 @@ class QYazmac:
         m = self.mahalli
         kuresel = m.kuresel_faz()
         yerel = m.faz[:B, :n_sat].mean(axis=-1) + kuresel
-        kulli = kan.genlik(bas, parametre=pq, yerel_faz=yerel)
+        taban = int(self.ayar.veri_lifi)
+        yer = d // taban
+        cephe = min(int(n_sat), yer - 1)
+        aday = np.concatenate(
+            [np.repeat(bas, taban, axis=0),
+             np.tile(np.arange(taban, dtype=bas.dtype), B)[:, None]],
+            axis=1)
+        kulli_aday = kan.genlik(
+            aday, parametre=pq,
+            yerel_faz=np.repeat(yerel, taban)).reshape(B, taban)
+        kulli = kulli_aday.sum(axis=1)
         agirlik = (m.genlik[:B, :n_sat] * kulli[:, None]).reshape(-1)
         G = np.zeros((B, d), complex)
         G[yigin[sec], seviye.reshape(-1)[sec]] = agirlik[sec]
+        G[:, np.arange(taban) * yer + cephe] = kulli_aday
         self.y.psi = G.astype(self.y.ayar.tip)
         self.y.normalize()
         if self.y.iz.senet_acik:
