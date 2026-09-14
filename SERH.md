@@ -45239,3 +45239,60 @@ kurar.
   **icra edilmedi**.
 * Bu satır silinmeden *"parametre yazmacına geçildi"* denemez
   (ferman 1-E, 5).
+
+---
+
+## QUDİT SAYISI İLE SEVİYE SAYISI AYRI ŞEYLERDİR -- HESAP
+
+Padişah *"22 milyon qudit 88 GB'a sığıyordu"* dedi ve haklıdır. Benim
+*"parametre seviyesi 4096"* beyanım yanıltıcıydı: 4096 **seviyedir**,
+yâni `64 × 64` -- **iki qudit**. Beyan düzeltildi, artık qudit sayısı
+da basılır.
+
+### ÜÇ TAŞIYICI, ÜÇ AYRI HESAP
+
+**(1) YOĞUN GENLİK VEKTÖRÜ -- bugün fiilen koşan.**
+`nefs/qyazmac.py`: `tip = np.complex128`, `_psi = np.full((B, d), …)`.
+Seviye sayısı `d = q^N`, bellek `16·d` bayt. O hâlde:
+
+        1 GB  →  6.25e7 genlik  →  25 kübit  =  4 qudit (d=64)
+        8 GB  →  5.0e8  genlik  →  28 kübit  =  4 qudit
+       88 GB  →  5.5e9  genlik  →  32 kübit  =  5 qudit
+
+Yâni **88 GB bu taşıyıcıda beş qudit alır**, 22 milyon değil. Aradaki
+nispet 4.4 milyondur ve üsteldir: bir qudit eklemek belleği 64 katına
+çıkarır.
+
+**(2) YOĞUN STABİLİZER TABLEAU (Aaronson-Gottesman).**
+`(2N+1)×(2N+1)` bit ≈ `N²/2` bayt:
+
+        1 GB  →  44 721 kübit
+       88 GB  →  419 524 kübit
+
+Doğrusal değil karesel; yine 22 milyona varmaz.
+
+**(3) SEYREK TABLEAU / GRAF HÂLİ -- doğrusal.**
+Her üretecin ağırlığı mahdutsa bellek `O(N·w)`dir.
+
+       22 000 000 qudit / 88 GB  =  qudit başına 4000 bayt
+        2 000 000 qudit /  8 GB  =  qudit başına 4000 bayt
+
+**Padişahın rakamı tam olarak budur: qudit başına 4 KB.** Bu hesap
+sahihtir ve `w ≈ 800` ağırlığında üreteçlere kadar yer verir.
+
+### HÜKÜM: KUSUR SAYIDA DEĞİL, TAŞIYICIDA
+
+22 milyon qudit **ancak doğrusal bellekli taşıyıcıda** mümkündür ve
+ferman 7 o taşıyıcıyı zaten emretmiştir:
+
+    | Sürekli Hilbert ℂ^d + Float32/Complex64 genlik
+    | → Galois GF(2⁸) + Stabilizer Tableau
+
+Fakat ferman 2-J bu satırın **genlik kanadını istisna etti**:
+*"faz kanadı yeter, genlik kayan nokta kalsın"*. Bizi beş qudide
+çivileyen şey işte o istisnadır -- ferman 7'nin hükmü değil.
+
+**O HÂLDE ÇELİŞKİ AÇIKÇA YAZILIDIR:** ferman 2-R'nin *"milyonlarca
+parametre"* hedefi ile ferman 2-J'nin *"genlik kayan nokta kalsın"*
+istisnası **aynı anda tutulamaz**. Bu satır silinmeden *"milyonlarca
+qudit taşıyoruz"* denemez.

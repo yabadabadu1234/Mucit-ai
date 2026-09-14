@@ -138,6 +138,8 @@ class ParametreYazmaci:
     def beyan(self) -> Dict[str, Any]:
         tek = self.yigin * self.d_veri * 16
         return {"seviye": int(self.d),
+                "qudit": int(round(math.log2(max(2, self.d)) / 6.0)),
+                "kübit": int(round(math.log2(max(2, self.d)))),
                 "faz_mertebesi": int(self.ayar.faz_mertebesi),
                 "parametre": int(self.parametre_adedi),
                 "genlik_parametresi": int(self.d),
@@ -170,6 +172,10 @@ def parametre_metni(b: Optional[Dict[str, Any]] = None) -> str:
         "  PARAMETRE YAZMACI (ferman 2-R: parametre de quditir)",
         "    seviye        : %d   (yuva bütçesi %d)"
         % (d["seviye"], d["yuva_bütçesi"]),
+        "    QUDİT SAYISI  : %d   (%d kübit)   ← SEVİYE DEĞİL QUDİT."
+        % (d.get("qudit", 0), d.get("kübit", 0)),
+        "    Yoğun genlik vektöründe seviye = 64^qudit'tir; 4096 seviye"
+        " İKİ qudittir, 4096 qudit değil.",
         "    parametre     : %d   = %d genlik + %d faz üssü (Z_%d)"
         % (d["parametre"], d["genlik_parametresi"], d["faz_parametresi"],
            d["faz_mertebesi"]),
