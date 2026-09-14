@@ -7,7 +7,8 @@ from typing import Any, Dict, Optional, Tuple
 import numpy as np
 
 __all__ = ["NqsAyari", "ChebyshevKan", "chebyshev_t", "chebyshev_u",
-           "gcl_dugumleri", "fct_katsayilari", "nqs_beyani", "nqs_metni"]
+           "gcl_dugumleri", "fct_katsayilari", "askin_beyani",
+           "nqs_beyani", "nqs_metni"]
 
 
 @dataclass
@@ -20,28 +21,36 @@ class NqsAyari:
     havuz_haddi: int = 1 << 20
 
 
+_ASKIN = {"cos": 0, "arccos": 0, "sin": 0, "exp": 0}
+
+
+def askin_beyani() -> Dict[str, int]:
+    return dict(_ASKIN)
+
+
 def chebyshev_t(u: np.ndarray, derece: int) -> np.ndarray:
-    u = np.asarray(u, float)
-    d = int(derece)
-    out = np.empty((d + 1,) + u.shape, float)
-    out[0] = 1.0
-    if d >= 1:
-        out[1] = u
-    for j in range(1, d):
-        out[j + 1] = 2.0 * u * out[j] - out[j - 1]
-    return out
+    aci = np.arccos(np.clip(np.asarray(u, float), -1.0, 1.0))
+    _ASKIN["arccos"] += 1
+    j = np.arange(int(derece) + 1, dtype=float)
+    _ASKIN["cos"] += 1
+    return np.cos(j.reshape((-1,) + (1,) * aci.ndim) * aci[None, ...])
 
 
 def chebyshev_u(u: np.ndarray, derece: int) -> np.ndarray:
-    u = np.asarray(u, float)
-    d = int(derece)
-    out = np.empty((d + 1,) + u.shape, float)
-    out[0] = 1.0
-    if d >= 1:
-        out[1] = 2.0 * u
-    for j in range(1, d):
-        out[j + 1] = 2.0 * u * out[j] - out[j - 1]
-    return out
+    aci = np.arccos(np.clip(np.asarray(u, float), -1.0, 1.0))
+    _ASKIN["arccos"] += 1
+    j = np.arange(int(derece) + 1, dtype=float)
+    pay = np.sin((j.reshape((-1,) + (1,) * aci.ndim) + 1.0)
+                 * aci[None, ...])
+    payda = np.sin(aci)[None, ...]
+    _ASKIN["sin"] += 2
+    tekil = np.abs(payda) < 1e-12
+    bol = np.divide(pay, np.where(tekil, 1.0, payda))
+    sinir = (j.reshape((-1,) + (1,) * aci.ndim) + 1.0) * np.where(
+        np.cos(aci)[None, ...] >= 0.0, 1.0,
+        (-1.0) ** j.reshape((-1,) + (1,) * aci.ndim))
+    _ASKIN["cos"] += 1
+    return np.where(tekil, sinir, bol)
 
 
 def gcl_dugumleri(kac: int) -> np.ndarray:
@@ -121,6 +130,7 @@ class ChebyshevKan:
         self._cagri += 1
         self._asikin += 1
         buyuk = np.exp(reel)
+        _ASKIN["exp"] += 1
         ceyrek = np.rint(sanal * 2.0 / math.pi).astype(np.int64) % 4
         doner = np.take(
             np.array([1.0 + 0j, 0.0 + 1j, -1.0 + 0j, 0.0 - 1j]), ceyrek)
@@ -185,6 +195,7 @@ class ChebyshevKan:
                 "çağrı": int(self._cagri),
                 "aşkın_çağrı": int(self._asikin),
                 "son_Z": float(self._son_z),
+                "aşkın_döküm": askin_beyani(),
                 "taban": int(self.taban)}
 
 
@@ -212,9 +223,11 @@ def nqs_metni(b: Optional[Dict[str, Any]] = None) -> str:
         "    MERTEBE: genlik ÜRETİMİ O(1) -- katsayı adedi qudit"
         " sayısından bağımsızdır;",
         "    HAVUZ ise O(N)'dir. Toptan O(1) denmez (ferman 5).",
-        "    T_j ve U_j TEKRARLAMAYLA hesaplanır: cos/arccos YOK.",
-        "    Dıştaki üstel AŞKINDIR ve sayılır: %d çağrı (ferman 2-J)."
-        % d["aşkın_çağrı"],
+        "    T_j = cos(j·arccos u), U_j = sin((j+1)·arccos u)/sin(arccos u)",
+        "    HAKİKÎ FONKSİYONLARIYLA hesaplanır; tekrarlama ikamesi"
+        " YASAKTIR (ferman 2-U).",
+        "    Aşkın çağrı dökümü: %s   (yasak kalktı, muhasebe kalkmadı)"
+        % (d.get("aşkın_döküm", {}),),
         "    son Z (normalize edilen küme üstünde) : %.6e" % d["son_Z"],
         "    AÇIK DİZİ YOKTUR: q^N genlik hiçbir yerde tutulmaz.",
     ])

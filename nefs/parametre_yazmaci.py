@@ -16,10 +16,14 @@ class ParametreAyari:
     faz_mertebesi: int = 16
     tohum: int = 0
     pay: float = 0.5
+    azami_seviye: int = 1 << 20
 
 
 def parametre_seviyesi(d_veri: int, yigin: int, bellek: Optional[int],
-                       pay: float = 0.5, bayt_genlik: int = 16) -> int:
+                       pay: float = 0.5, bayt_genlik: int = 16,
+                       azami: int = 1 << 20) -> int:
+    if int(d_veri) <= 0:
+        return int(azami)
     assert bellek is not None and int(bellek) > 0, (
         "parametre yazmacının ebadı ölçülen bellekten türer; bellek "
         "yoklanamadıysa bütçe uydurulmaz (ferman 5-B, 2-S)")
@@ -33,7 +37,7 @@ def parametre_seviyesi(d_veri: int, yigin: int, bellek: Optional[int],
         "(ferman 2-S: sığmayan bütçe kurulmaz)"
         % (int(yigin), int(d_veri), int(bayt_genlik), tek_dilim / 1e6,
            tavan / 1e6))
-    return 1 << int(math.floor(math.log2(kac)))
+    return min(int(azami), 1 << int(math.floor(math.log2(kac))))
 
 
 class ParametreYazmaci:
@@ -45,7 +49,8 @@ class ParametreYazmaci:
         self.yigin = max(1, int(yigin))
         self.bellek = None if bellek is None else int(bellek)
         self.d = parametre_seviyesi(self.d_veri, self.yigin, self.bellek,
-                                    float(self.ayar.pay))
+                                    float(self.ayar.pay),
+                                    azami=int(self.ayar.azami_seviye))
         m = int(self.ayar.faz_mertebesi)
         assert m >= 4 and m % 4 == 0, (
             "faz mertebesi dörtün katı olmalı: %d" % m)
@@ -60,6 +65,25 @@ class ParametreYazmaci:
     @property
     def parametre_adedi(self) -> int:
         return 2 * int(self.d)
+
+    @property
+    def genislik(self) -> int:
+        return 1
+
+    def __len__(self) -> int:
+        return int(self.parametre_adedi)
+
+    def al(self, anahtar: str, n: int) -> np.ndarray:
+        return self.aci(anahtar, int(n), 1.0)
+
+    def buyukluk(self, anahtar: str, n: int) -> np.ndarray:
+        return self.genlik[self.adres(anahtar, int(n))]
+
+    def aci_adresi(self, anahtar: str, n: int) -> np.ndarray:
+        return int(self.d) + self.adres(anahtar, int(n))
+
+    def aci_katsayisi(self) -> float:
+        return 2.0 * math.pi
 
     def adres(self, anahtar: str, n: int) -> np.ndarray:
         n = max(1, int(n))
@@ -145,6 +169,7 @@ class ParametreYazmaci:
                 "genlik_parametresi": int(self.d),
                 "faz_parametresi": int(self.d),
                 "tahsis_edilen_seviye": int(self._bas),
+                "müşterek_taşınıyor": False,
                 "defter": len(self._yer),
                 "veri_seviyesi": int(self.d_veri),
                 "yığın": int(self.yigin),
@@ -182,7 +207,7 @@ def parametre_metni(b: Optional[Dict[str, Any]] = None) -> str:
         "    tahsis edilen : %d seviye / %d defter kaydı   (boş %d)"
         % (d["tahsis_edilen_seviye"], d["defter"], bos),
         "    müşterek durum: %.1f MB   = yığın %d × veri seviyesi %d"
-        "  × parametre seviyesi %d × 16 bayt"
+        "  × parametre seviyesi %d × 16 bayt   ← TAŞINMIYOR, kestirim"
         % (d["müşterek_bayt"] / 1e6, d["yığın"], d["veri_seviyesi"],
            d["seviye"]),
         "    ölçülen bellek: %.1f MB   pay %.2f   (ferman 2-S: hudut"

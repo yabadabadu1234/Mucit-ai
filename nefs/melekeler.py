@@ -35,7 +35,7 @@ __all__ = ["MELEKE_SAYISI", "MERTEBE_SAYISI", "KANONIK_CETVEL",
            "talim_kademesi", "Lif", "lifleri_kur", "SABIT", "DINAMIK",
            "AZAMI_TAM_MERTEBE", "QMeleke", "qsicil", "qmelekeler",
            "QAKIS", "NIZAM_ACIK", "nizami_ac", "nizam_cetveli", "QNefs",
-           "rapor_qakis", "bec_faz_kilidi", "QParametre",
+           "rapor_qakis", "bec_faz_kilidi",
            "dikkat", "ehlilestir", "tevafuk", "devirler",
            "KAN_TEMELI", "ALTIN_ORAN",
            "grape_gradyani", "tam_gradyan", "sonlu_fark_gradyani",
@@ -372,51 +372,6 @@ def harman_anahtari(q, ayar) -> "tuple":
     return ("harman", int(n))
 
 
-class QParametre:
-
-    def __init__(self, tohum: int = 0, genislik: int = 1) -> None:
-        self.tohum = int(tohum)
-        self.genislik = max(1, int(genislik))
-        self._yer: Dict[str, Tuple[int, int]] = {}
-        self._n = 0
-        self._vek: Optional[np.ndarray] = None
-
-    def al(self, anahtar: str, n: int) -> np.ndarray:
-        if anahtar not in self._yer:
-            self._yer[anahtar] = (self._n, int(n))
-            self._n += int(n)
-        bas, kac = self._yer[anahtar]
-        if self._vek is None or len(self._vek) < self._n:
-            self._buyut()
-        return self._vek[bas:bas + kac]
-
-    def _buyut(self) -> None:
-        eski = self._vek
-        rng = np.random.default_rng(self.tohum)
-        yeni = rng.normal(scale=1.0, size=max(self._n, 1))
-        if eski is not None:
-            yeni[:len(eski)] = eski
-        self._vek = yeni
-
-    def __len__(self) -> int:
-        return self._n
-
-    def vektor(self) -> np.ndarray:
-        if self._vek is None:
-            self._buyut()
-        return np.asarray(self._vek[:self._n], float).copy()
-
-    def yukle(self, v: np.ndarray) -> None:
-        v = np.asarray(v, float).reshape(-1)
-        if self._vek is None:
-            self._buyut()
-        m = min(len(v), len(self._vek))
-        self._vek[:m] = v[:m]
-
-    def defter(self) -> Dict[str, Tuple[int, int]]:
-        return dict(self._yer)
-
-
 class QMeleke:
 
     no: int = 0
@@ -428,9 +383,10 @@ class QMeleke:
 
     def aci(self, p, n: int, olcek: float = 0.6) -> np.ndarray:
         anahtar = "q%d.%s/%d" % (self.no, self.ad, int(n))
-        if isinstance(p, QParametre):
-            return olcek * p.al(anahtar, n)
-        return olcek * p.v(anahtar, n)
+        assert hasattr(p, "al"), (
+            "açı yalnız parametre yazmacından okunur; çıplak parametre "
+            "yasaktır (ferman 2-R). Verilen: %s" % type(p).__name__)
+        return olcek * p.al(anahtar, n)
 
     def yay(self, p, n_sabit: int, hedef: int, olcek: float = 0.6
             ) -> np.ndarray:
@@ -450,7 +406,8 @@ class QMeleke:
         if bas < 0:
             return None
         dG = dik_iki_kubit_turevi(a)
-        return [(int(bas) + j, float(olcek),
+        kat = self.aci_katsayisi(p)
+        return [(int(bas) + j, float(olcek) * kat,
                  np.asarray(dG[j]).T if devrik else dG[j])
                 for j in range(len(dG))]
 
@@ -476,13 +433,14 @@ class QMeleke:
         if bas < 0 or int(hedef) <= 0:
             return None, 0.0
         return (bas + (np.arange(int(hedef), dtype=np.int64) % blok),
-                float(olcek))
+                float(olcek) * self.aci_katsayisi(p))
 
     def aci_bagi(self, p, n: int, olcek: float = 0.6):
         bas = self.aci_yeri(p, int(n))
         if bas < 0:
             return None, 0.0
-        return bas + np.arange(int(n), dtype=np.int64), float(olcek)
+        return (bas + np.arange(int(n), dtype=np.int64),
+                float(olcek) * self.aci_katsayisi(p))
 
     def birikim_bagi(self, p, n: int, olcek: float = 0.6):
         g = max(1, int(getattr(p, "genislik", 1)))
@@ -491,12 +449,12 @@ class QMeleke:
         if bas < 0:
             return None, 0.0
         return (bas + (np.arange(int(n), dtype=np.int64) % blok),
-                float(olcek) / max(float(n), 1.0))
+                float(olcek) * self.aci_katsayisi(p) / max(float(n), 1.0))
 
-    def uygula(self, q: QYazmac, p: "QParametre") -> None:
+    def uygula(self, q: QYazmac, p) -> None:
         raise NotImplementedError
 
-    def kosu(self, q: QYazmac, p: "QParametre") -> None:
+    def kosu(self, q: QYazmac, p) -> None:
         n0 = q.iz.kapi
         if KANONIK_ACIK:
             q.y.kanonikle()
@@ -504,7 +462,7 @@ class QMeleke:
         q.iz.not_dus("𝒪%d %s" % (self.no, self.ad),
                      "%d kapı" % (q.iz.kapi - n0))
 
-    def tugla(self, q: QYazmac, p: "QParametre", ofset: int = 0,
+    def tugla(self, q: QYazmac, p, ofset: int = 0,
               olcek: float = 0.5) -> None:
         from kuantum.kapilar import dik_iki_kubit_turevi
         a = self.aci(p, 6, olcek)
@@ -520,11 +478,15 @@ class QMeleke:
 
     def aci_yeri(self, p, n: int) -> int:
         anahtar = "q%d.%s/%d" % (self.no, self.ad, int(n))
-        d = p.defter() if hasattr(p, "defter") else {}
-        bas, _kac = d.get(anahtar, (-1, 0))
-        return int(bas)
+        assert hasattr(p, "aci_adresi"), (
+            "açının parametre adresi yalnız yazmaçtan alınır "
+            "(ferman 2-R): %s" % type(p).__name__)
+        return int(p.aci_adresi(anahtar, int(n))[0])
 
-    def yuva_donmesi(self, q: QYazmac, p: "QParametre", yuvalar,
+    def aci_katsayisi(self, p) -> float:
+        return float(p.aci_katsayisi())
+
+    def yuva_donmesi(self, q: QYazmac, p, yuvalar,
                      olcek: float = 0.6, kayma: float = 0.0,
                      n: int = 0) -> None:
         yv = [int(y) for y in yuvalar]
@@ -546,7 +508,7 @@ class QMeleke:
                          ("bit", int(kk), int(aa),
                           np.array([[-sn, -c], [c, -sn]], complex)))
 
-    def satir_donmesi(self, q: QYazmac, p: "QParametre",
+    def satir_donmesi(self, q: QYazmac, p,
                       olcek: float = 0.6) -> None:
         k = q.veri_yuvasi
         self.yuva_donmesi(q, p, list(q.veri_izgara()), olcek=olcek, n=k)
@@ -1340,9 +1302,14 @@ class QNefs:
                  sira: Sequence[int] = QAKIS, sadakat: bool = True,
                  gaye: bool = True) -> None:
         self.ayar = ayar or QAyar(tohum=tohum)
-        self.p = QParametre(tohum, genislik=int(
-            getattr(self.ayar, "parametre_genisligi", 1)))
-        self.pq: Optional["ParametreYazmaci"] = None
+        from .donanim import bellek_haddi
+        from .parametre_yazmaci import ParametreAyari, ParametreYazmaci
+        self.pq = ParametreYazmaci(
+            0, 1, bellek_haddi(),
+            ParametreAyari(faz_mertebesi=int(
+                getattr(self.ayar, "faz_mertebesi", 16)),
+                tohum=int(tohum)))
+        self.p = self.pq
         self.kan: Optional["ChebyshevKan"] = None
         self.sira = tuple(sira)
         self.s = qsicil()
@@ -1353,21 +1320,12 @@ class QNefs:
 
     def harman_acilari(self, q) -> np.ndarray:
         anahtar, n = harman_anahtari(q, self.ayar)
-        ham = (self.p.al(anahtar, n) if isinstance(self.p, QParametre)
-               else self.p.v(anahtar, n))
+        ham = self.p.al(anahtar, n)
         return self.HARMAN_OLCEGI * np.asarray(ham, float)
 
     def parametre_yazmacini_kur(self, d_veri: int, B: int) -> int:
-        from .donanim import bellek_haddi
-        from .parametre_yazmaci import ParametreAyari, ParametreYazmaci
-        if (self.pq is not None and self.pq.d_veri == int(d_veri)
-                and self.pq.yigin == int(B)):
-            return int(self.pq.d)
-        self.pq = ParametreYazmaci(
-            int(d_veri), int(B), bellek_haddi(),
-            ParametreAyari(faz_mertebesi=int(
-                getattr(self.ayar, "faz_mertebesi", 16)),
-                tohum=int(self.ayar.tohum)))
+        self.pq.d_veri = int(d_veri)
+        self.pq.yigin = max(1, int(B))
         return int(self.pq.d)
 
     def idrak_et(self, E: np.ndarray, bec: bool = True,

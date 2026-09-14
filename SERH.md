@@ -45349,3 +45349,72 @@ hâlâ `(B, d)` ebadında yoğun bir dizidir; KAN-NQS şimdilik o dizinin
 * Kazanılmayan: `q^N` duvarı hâlâ yerinde, çünkü melekeler ve mizan
   yoğun `_psi` üstünde koşuyor. 22 milyon qudit ancak `_psi` ilga
   edilip bütün ameliyeler fonksiyonel temsile taşınınca gelir.
+
+---
+
+## ÜÇ İŞ -- HAKİKÎ FONKSİYON, ÇIPLAK PARAMETRENİN İLGASI
+
+### 1. TEKRARLAMA KILIFI KESİLDİ (ferman 2-U)
+
+`T_j` ve `U_j` artık tekrarlama bağıntısıyla değil **hakikî
+fonksiyonlarıyla** hesaplanır:
+
+    T_j(u) = cos(j · arccos u)
+    U_j(u) = sin((j+1) · arccos u) / sin(arccos u)
+
+`sin(arccos u) = 0` olan iki uçta (`u = ±1`) bölme yapılmaz; `U_j`nin
+oradaki hakikî limiti konur: `U_j(1) = j+1`, `U_j(−1) = (−1)^j (j+1)`.
+
+**ŞAHİT (ferman 3-B: cebir ispat eder, sayı tasdik eder).** Tekrarlama
+ile hakikî fonksiyon aynı cebirdir; taht ikisinde de **aynı sayıyı**
+bastı: `V = 11.4417`, mihenk cevabı harfi harfine aynı. Bedeli
+ölçüldü: `8143 → 6832 belirteç/sn`, yâni **%16 hız**. Yasak kalktı,
+muhasebe kalkmadı: aşkın çağrı dökümü (`cos`, `arccos`, `sin`, `exp`)
+beyanda ayrı ayrı sayılır.
+
+### 2. ÇIPLAK PARAMETRE KÖKÜNDEN KESİLDİ (ferman 2-R)
+
+`QParametre` **imha edildi**. Artık `nefs.p` parametre yazmacının
+kendisidir; açı yalnız oradan gelir ve gelmediği yerde `assert`
+patlar -- sessiz ikame yoktur (ferman 5).
+
+    QParametre                 → nefs/parametre_yazmaci.ParametreYazmaci
+    p.al(anahtar, n)           → yazmacın FAZ kanadı, açı = 2π·faz/m
+    p.genislik = 39            → 1  (körlemesine çoğaltma ilga, ferman 2-R)
+
+Kalan dört tutunma yeri de kesildi: `melekeler` (10), `mecz` (3),
+`optimize` (2), `kulli_kayip` (2). Depoda `QParametre` geçen **tek
+satır kalmadı**.
+
+**ADRESLEMEDE İKİ KUSUR BULUNDU VE KAPATILDI.** Senet bağları
+parametre vektöründe **genlik kanadını** gösteriyordu, hâlbuki açı
+**faz kanadındadır**: adres `d + seviye` olmalıydı. Ve açının ölçeği
+`2π` katsayısını taşımıyordu. İkisi de `aci_adresi` ve
+`aci_katsayisi` ile tek kaynağa bağlandı; kapsam `0 → 130` geri geldi
+ve mutabakat `9.8e-15` ile yeniden konuştu.
+
+### 3. PARAMETRE ARTIK TAMAMEN KUANTUMDA -- SAYIYLA
+
+    parametre yazmacı  1 048 576 seviye → 2 097 152 parametre
+                       (1 048 576 genlik + 1 048 576 faz üssü)
+    KAN-NQS            1 050 304 parametre (1664 katsayı + havuz)
+    ─────────────────────────────────────────────────────────────
+    TOPLAM             3 147 456 parametre, hepsi kuantum taşıyıcıda
+    çıplak parametre   0
+
+Evvelki hâl 3378 çıplak parametreydi ve 130'u kapsanıyordu. Şimdi
+çıplak parametre **yoktur**.
+
+### NE İDDİA EDİLMİYOR (ferman 5, 1-E)
+
+* **MÜŞTEREK DURUM TAŞINMIYOR.** Beyandaki `müşterek durum` sayısı bir
+  **kestirimdir** ve artık öyle yazılır (`müşterek_taşınıyor: False`).
+  Kontrollü kapı yolu (`kontrollu_tek`, dilimli `_gomulu`) kuruldu
+  fakat melekelerin 51 kapı çağrısı henüz dilimsiz vuruyor.
+* **KAPSAM 130 / 2 097 152.** Bu ölü parametre değil, **kapasite
+  fazlasıdır**: yazmaç bir milyon seviyelidir, melekeler bunun ancak
+  üç bin kadarını adresliyor. Yetim olan parametre değil, henüz
+  vazifesi verilmemiş seviyedir.
+* **`_psi` HÂLÂ YOĞUN DİZİDİR.** `q^N` duvarı yerinde; ferman 2-T'nin
+  tam icrası -- bütün ameliyelerin fonksiyonel temsile taşınması --
+  bu turda bitmedi.

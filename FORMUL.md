@@ -265,6 +265,8 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
                         Yığın · VeriSeviyesi · k · 16 ≤ ÖlçülenBellek · Pay
 
     Parametre[k] = ( Genlik[k],  FazÜssü[k] )
+    Açı(anahtar, k) = 2π · FazÜssü[Adres(anahtar)[k]] / FazMertebesi
+                    ← ÇIPLAK PARAMETRE YOKTUR; melekenin her açısı budur
     Σ_k Genlik[k]² = 1
     Açı(k)  = 2π · FazÜssü[k] / FazMertebesi
 
@@ -274,9 +276,13 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     KontrollüKapı = toplam over k of  |k⟩⟨k| ⊗ Dönme(Açı(k))
                   ← dilim başına ayrı kapı; budama yok, rank düşürme yok
 
-NE İDDİA EDİLMİYOR: melekelerin 44 açı ve 51 kapı çağrısı henüz bu
-yola geçmedi; müşterek durum taşınmıyor, yukarıdaki ParametreSeviyesi
-ölçülen bir KAPASİTEDİR, tahsis edilmiş durum değildir.
+    ChebyshevBirinci(u, j) = kosinüs( j · arkkosinüs(u) )
+    ChebyshevİkinciU(u, j)  = sinüs((j+1)·arkkosinüs(u)) / sinüs(arkkosinüs(u))
+                            ← HAKİKÎ FONKSİYON; tekrarlama ikamesi yasak (2-U)
+
+NE İDDİA EDİLMİYOR: melekelerin 44 açısı artık parametre yazmacından
+gelir fakat 51 kapı çağrısı hâlâ DİLİMSİZ vurur; müşterek durum
+taşınmıyor, yukarıdaki ParametreSeviyesi ölçülen bir KAPASİTEDİR.
 
 ---
 

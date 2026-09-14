@@ -10,7 +10,7 @@ import numpy as np
 
 from matematik.mizan import ardisiklik_kaidesi
 from matematik.mizan import mertebe_adi
-from .melekeler import QParametre, qmelekeler, qsicil
+from .melekeler import qmelekeler, qsicil
 from .zihin_durumu import QAyar, QYazmac, donme
 
 
@@ -332,7 +332,10 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
     for a, kac in q.ayar.kulli_alanlar:
         for j in range(kac):
             q.tek(q.kulli(a, j), donme(0.4))
-    p = QParametre(tohum)
+    from .donanim import bellek_haddi
+    from .parametre_yazmaci import ParametreAyari, ParametreYazmaci
+    p = ParametreYazmaci(0, 1, bellek_haddi(),
+                         ParametreAyari(tohum=int(tohum)))
 
     once = yogunluklar(q)
     qsicil()[int(no)].kosu(q, p)

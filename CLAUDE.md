@@ -1576,11 +1576,11 @@ edilir: TTN ve MERA de yasaktır.
    Gauss-Chebyshev-Lobatto düğümlerini **hat araması** olarak ilga
    etti. Burada GCL bir arama değil, Chebyshev dönüşümünün
    **düğüm kümesidir**. İki ayrı vazifedir; 2-P bâkîdir.
-2. **FERMAN 2-J'NİN AŞKIN YASAĞI KISMEN DELİNİR.** `T_j` ve `U_j`
-   **tekrarlama bağıntısıyla** hesaplanır (yalnız çarp-topla; `cos`,
-   `arccos` **yoktur**). Fakat dıştaki `üstel` aşkındır ve canlı
-   yoldadır. Bu, ferman 2-J'nin sayılı aşkın çağrı listesine
-   **eklenir**; gizlenmez.
+2. **FERMAN 2-J'NİN AŞKIN YASAĞI BU KANATTA KALKTI** (ferman 2-U).
+   `T_j(u) = cos(j·arccos u)` ve `U_j(u) = sin((j+1)·arccos u) /
+   sin(arccos u)` **hakikî fonksiyonlarıyla** hesaplanır; tekrarlama
+   ikamesi yasaktır. Dıştaki `üstel` de aşkındır. Üçü de **sayılır**
+   ve beyanda görünür; gizlenmez.
 3. **NİHÂÎ CEVAPTA BORN ÇÖKMESİ KALDIRILDI.** *"Born ölçümü ile
    rastgele zar atılmaz; Fubini-Study metriği üzerinden
    **deterministik** olarak okunur."* Bu, ferman 1-T'nin *"istisna:
@@ -1589,6 +1589,37 @@ edilir: TTN ve MERA de yasaktır.
         x_k* = argmax [ g_FS⁺ · ∇ log P(x_k | x_<k) ]
 
    `nefs/soyle.py`deki Born çökmesi bu fermanla **ilga edilmiştir**.
+
+---
+
+## ▓▓▓ 2-U. FERMAN: HAKİKÎ FONKSİYON ÇAĞRILIR -- TEKRARLAMA İKAMESİ YASAK ▓▓▓
+
+> *"`cos`/`arccos` canlı yolda yok dedin ya, **olsun artık**, tekrarlı
+> bir şey yapma, **gerçeğe uygun olarak kendi fonksiyonlarını çağır**
+> onların."*
+
+### HÜKÜM
+
+Bir formül `T_j(u) = cos(j·arccos u)` diyorsa kod da **öyle
+hesaplar**. Tekrarlama bağıntısı (`T_{j+1} = 2u·T_j − T_{j−1}`) aynı
+sayıyı verse bile **ikamedir** ve bu fermanla yasaklanmıştır.
+
+* **NİÇİN.** Tekrarlama, aşkın çağrıdan kaçmak için konmuş bir
+  **kılıftı**. Kaçınılan şey artık yasak değildir; kılıf da o hâlde
+  fazlalıktır (ferman 2-B). Üstelik tekrarlama derece büyüdükçe
+  yuvarlama hatası biriktirir; hakikî fonksiyon biriktirmez.
+* **FERMAN 2-J'NİN AŞKIN YASAĞI BU KANATTA KALKTI.** `np.cos`,
+  `np.arccos`, `np.sin`, `np.exp` -- formül onları söylüyorsa
+  **çağrılır**. 2-J'nin hükmü **faz defteri** kanadında bâkîdir:
+  `Z_m` üssü hâlâ tamsayıdır ve Palmer çeyreği hâlâ işaret takasıdır.
+  Kalkan şey, **formülün kendi fonksiyonunun yerine bir tekrarlama
+  koymak** mecburiyetidir.
+* **FERMAN 2-T'NİN İKİNCİ ÇELİŞKİ MADDESİ TADİL EDİLDİ.** Orada
+  *"`T_j` ve `U_j` tekrarlama bağıntısıyla hesaplanır; `cos`,
+  `arccos` yoktur"* yazıyordu. Artık yazmıyor: **hakikî fonksiyon
+  çağrılır.**
+* **SAYI YİNE YAZILIR** (ferman 5): aşkın çağrı **gizlenmez**,
+  sayılır ve beyanda görünür. Yasak kalktı, muhasebe kalkmadı.
 
 ---
 

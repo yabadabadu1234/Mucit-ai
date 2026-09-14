@@ -225,11 +225,11 @@ class Memuriyet:
         self._r_duzeltme = 0.0
 
     def _harman_yeri(self, q) -> Tuple[int, int]:
-        from nefs.melekeler import QParametre, harman_anahtari
+        from nefs.melekeler import harman_anahtari
         p = self.nefs.p
-        assert isinstance(p, QParametre), (
-            "mecz harman yazmacını QParametre defterinden okur; "
-            "%s verildi" % type(p).__name__)
+        assert hasattr(p, "defter") and hasattr(p, "al"), (
+            "mecz harman açısını parametre yazmacından okur; "
+            "%s verildi (ferman 2-R)" % type(p).__name__)
         anahtar, _n = harman_anahtari(q, self.nefs.ayar)
         assert anahtar in p._yer, (
             "harman yazmacı defterde YOK: %r -- harman bu lifle hiç "

@@ -1435,18 +1435,17 @@ def gaye_kos(q: QYazmac, p) -> float:
 
 
 def _aci(p, anahtar: str, n: int, olcek: float) -> np.ndarray:
-    from nefs.melekeler import QParametre
-    if isinstance(p, QParametre):
-        return olcek * p.al(anahtar, n)
-    return olcek * p.v(anahtar, n)
+    assert hasattr(p, "al"), (
+        "açı yalnız parametre yazmacından okunur; çıplak parametre "
+        "yasaktır (ferman 2-R). Verilen: %s" % type(p).__name__)
+    return olcek * p.al(anahtar, n)
 
 
 def _aci_bagi(p, anahtar: str, n: int, olcek: float):
-    d = p.defter() if hasattr(p, "defter") else {}
-    bas, _kac = d.get(anahtar, (-1, 0))
-    if int(bas) < 0:
-        return None, 0.0
-    return int(bas) + np.arange(int(n), dtype=np.int64), float(olcek)
+    assert hasattr(p, "aci_adresi"), (
+        "açının parametre adresi yalnız yazmaçtan alınır (ferman 2-R)")
+    return (p.aci_adresi(anahtar, int(n)),
+            float(olcek) * float(p.aci_katsayisi()))
 
 
 def odenen_bedel(q: QYazmac, ne: str = "landauer") -> Dict[str, float]:
