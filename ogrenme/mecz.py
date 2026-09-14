@@ -284,8 +284,6 @@ class Memuriyet:
         _pq = parametre_beyani(getattr(self.nefs, "pq", None))
         _ADRES["p_qudit"] = _pq.get("qudit", 0)
         _ADRES["p_taban"] = _pq.get("taban", 0)
-        _ADRES["p_kapasite_basamağı"] = round(
-            _pq.get("kapasite_basamağı", 0.0))
         _ADRES["p_mahallî"] = _pq.get("mahallî_serbestlik", 0)
         from nefs.nqs import nqs_beyani
         _k = nqs_beyani(getattr(self.nefs, "kan", None))
@@ -476,11 +474,7 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          "  operatörlü kefe   : %d  (yönü kurar)" % int(b["operatörlü_kefe"]),
          "  operatörsüz kefe  : %d  (yönü kurmaz, HÜKMÜ verir)"
          % int(b["operatörsüz_kefe"]),
-         "  eğimin kapsadığı  : %d / %d TAHSİS EDİLEN serbestlik (%.2f%%)"
+         "  eğimin kapsadığı  : %d / %d tahsis edilen serbestlik (%.2f%%)"
          % (int(b["kapsanan_parametre"]), int(b.get("tahsis_edilen", 0)),
-            100.0 * b["kapsam"]),
-         "  (payda kapasite değildir: yazmacın mahallî serbestliği %d,"
-         % int(b["toplam_parametre"]),
-         "   fakat melekelerin fiilen adreslediği bu kadardır -- "
-         "adreslenmemiş qudit yetim değil, vazifesizdir.)"]
+            100.0 * b["kapsam"])]
     return "\n".join(s)

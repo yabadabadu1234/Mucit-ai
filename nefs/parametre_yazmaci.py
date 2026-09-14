@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["ParametreAyari", "ParametreYazmaci", "qudit_haddi", "kapasite_basamagi",
+__all__ = ["ParametreAyari", "ParametreYazmaci", "qudit_haddi",
            "parametre_beyani", "parametre_metni"]
 
 
@@ -27,10 +27,6 @@ def qudit_haddi(bellek: Optional[int], pay: float = 0.25,
         "bütçe uydurulmaz (ferman 5-B, 2-S)")
     return max(1, int((float(bellek) * float(pay))
                       // float(int(qudit_bayti))))
-
-
-def kapasite_basamagi(taban: int, qudit: int) -> float:
-    return float(qudit) * math.log10(max(2, int(taban)))
 
 
 class ParametreYazmaci:
@@ -65,10 +61,6 @@ class ParametreYazmaci:
     @property
     def mahalli_serbestlik(self) -> int:
         return 2 * int(self.d)
-
-    @property
-    def kapasite_basamak(self) -> float:
-        return kapasite_basamagi(self.taban, self.d)
 
     @property
     def genislik(self) -> int:
@@ -166,7 +158,6 @@ class ParametreYazmaci:
     def beyan(self) -> Dict[str, Any]:
         return {"qudit": int(self.d),
                 "taban": int(self.taban),
-                "kapasite_basamağı": float(self.kapasite_basamak),
                 "mahallî_serbestlik": int(self.mahalli_serbestlik),
                 "faz_mertebesi": int(self.ayar.faz_mertebesi),
                 "tahsis_edilen_qudit": int(self._bas),
@@ -181,7 +172,7 @@ class ParametreYazmaci:
 
 def parametre_beyani(p: Optional[ParametreYazmaci]) -> Dict[str, Any]:
     if p is None:
-        return {"qudit": 0, "taban": 0, "kapasite_basamağı": 0.0,
+        return {"qudit": 0, "taban": 0,
                 "mahallî_serbestlik": 0, "ölçülen_bellek": 0,
                 "tahsis_edilen_qudit": 0, "qudit_haddi": 0,
                 "defter": 0, "hüküm": "PARAMETRE YAZMACI KURULMADI"}
@@ -192,26 +183,13 @@ def parametre_metni(b: Optional[Dict[str, Any]] = None) -> str:
     d = dict(b or parametre_beyani(None))
     if "hüküm" in d:
         return "  PARAMETRE YAZMACI: %s" % d["hüküm"]
-    bos = int(d["qudit"]) - int(d["tahsis_edilen_qudit"])
     return "\n".join([
-        "  PARAMETRE YAZMACI (ferman 2-R: parametre de quditir)",
-        "    qudit × taban      : %d × %d" % (d["qudit"], d["taban"]),
-        "    TAŞIMA KAPASİTESİ  : %d^%d   = 10^%.0f   (%.0f basamaklı)"
-        % (d["taban"], d["qudit"], d["kapasite_basamağı"],
-           d["kapasite_basamağı"]),
-        "    ← KAPASİTE taban^qudit'tir. 'iki kere qudit sayısı' DEĞİL;",
-        "      o yalnız MAHALLÎ serbestliktir ve aşağıda ayrı yazar.",
-        "    mahallî serbestlik : %d   = %d genlik + %d faz üssü (Z_%d)"
-        % (d["mahallî_serbestlik"], d["qudit"], d["qudit"],
-           d["faz_mertebesi"]),
-        "    tahsis edilen      : %d qudit / %d defter kaydı   (boş %d)"
-        % (d["tahsis_edilen_qudit"], d["defter"], bos),
-        "    mahallî bellek     : %.1f MB   (qudit başına 16 bayt)"
-        % (d["qudit_bayt"] / 1e6),
-        "    ölçülen bellek     : %.1f MB   pay %.2f   → qudit haddi %d"
-        % (d["ölçülen_bellek"] / 1e6, d["pay"], d["qudit_haddi"]),
-        "    q^N HİÇBİR YERDE AÇILMAZ: bellekte q^N sayı tutulmaz,",
-        "    genlik fonksiyondan üretilir (ferman 2-T).",
-        "    GENLİK KANADI NORMALİZEDİR (Σ|p|² = 1): mahallî genlikler",
-        "    norm üzerinden bağlıdır; yazmaç olmanın şartıdır.",
+        "  PARAMETRE YAZMACI  %d qudit × taban %d   (kapasite %d^%d)"
+        % (d["qudit"], d["taban"], d["taban"], d["qudit"]),
+        "    mahallî serbestlik %d   tahsis %d qudit / %d kayıt"
+        % (d["mahallî_serbestlik"], d["tahsis_edilen_qudit"],
+           d["defter"]),
+        "    mahallî bellek %.1f MB   ölçülen bellek %.1f MB   hadd %d"
+        % (d["qudit_bayt"] / 1e6, d["ölçülen_bellek"] / 1e6,
+           d["qudit_haddi"]),
     ])
