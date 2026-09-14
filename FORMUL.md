@@ -427,7 +427,9 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     Cevap    = tiktoken⁻¹(Belirteç eğer Belirteç < n_vocab)
                taşan Belirteç SUSTURULMAZ, sayılır (ferman 2-L)
 
-    Sükût eğer AlanDeğeri(sükût) > eşik  ya da  Şüphe = teâruz
+    Kesinlik = (Güven − 1/VeriLifi) / (1 − 1/VeriLifi),   Güven = e^(−Bedel/boy)
+    Sükût eğer AlanDeğeri(sükût) > Kesinlik  ya da  Şüphe = teâruz
+           ← eşik SABİT DEĞİL: cevabın kendi kesinlik nispeti (ferman 1-J)
 
     Tâlim ile Çıkarım arasındaki TEK fark:  çıkarımda Adım koşmaz.
 

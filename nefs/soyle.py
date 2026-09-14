@@ -92,7 +92,7 @@ def _uret(nefs, baglam: List[int], pencere: int, sozluk: int,
 
 def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           nefs=None, pencere: int = 8, sozluk: int = 16,
-          azami_uret: int = 0, sukut_esigi: float = 0.8,
+          azami_uret: int = 0,
           usul: str = "açgözlü",
           hafiza=None, ne: str = "cevap",
           hedef: int = 0, sinamadan: bool = False) -> Any:
@@ -178,13 +178,18 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
             sebep="TEÂRUZ: yakîn %.3f -- tez ile antitez denk kuvvette"
                   % float(_sp["μ"][0])))
 
-    if ort_sukut > float(sukut_esigi):
+    duz = 1.0 / float(taban)
+    kesinlik = float(np.clip(
+        (float(np.mean(guvenler)) - duz) / max(1.0 - duz, 1e-300),
+        0.0, 1.0))
+    if ort_sukut > kesinlik:
         return _bitir(Cevap(
             gorev=gorev.ad, sukut=True, tikaniklik=tik,
             belirtec=uretilen, guven=float(np.mean(guvenler or [0.0])),
             budanan=int(budanan), uzunluk=len(uretilen),
-            sebep="motorun sükût alanı %.3f > %.3f"
-                  % (ort_sukut, float(sukut_esigi))))
+            sebep="motorun sükût alanı %.3f, cevabın kesinlik nispeti "
+                  "%.3f -- söylenecek şey susmak kadar bile kat'î değil"
+                  % (ort_sukut, kesinlik)))
 
     kirp = (len(uretilen) // basamak) * basamak
     kimlik = ([int(t) for t in np.asarray(
