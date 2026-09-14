@@ -1371,10 +1371,9 @@ class QNefs:
                             [float(getattr(self.ayar, "kartan_acisi",
                                            0.2617993877991494))]))
         _hb, _hn = harman_anahtari(q, self.ayar)
-        _hyer = self.p.defter().get(_hb, (-1, 0))[0] if hasattr(
-            self.p, "defter") else -1
-        q.harman(teta=self.harman_acilari(q), par_bas=int(_hyer),
-                 olcek=self.HARMAN_OLCEGI)
+        _hyer = int(self.p.aci_adresi(_hb, int(_hn))[0])
+        q.harman(teta=self.harman_acilari(q), par_bas=_hyer,
+                 olcek=self.HARMAN_OLCEGI * self.p.aci_katsayisi())
         okumalar: Dict[int, Dict[str, float]] = {}
         dS: Dict[int, float] = {}
         if olcum:
