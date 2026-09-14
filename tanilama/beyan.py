@@ -98,6 +98,8 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from nefs.keyfiyet import keyfiyet_metni
         from tanilama.hizolcer import hiz_metni
         from main.kulliyat import kulliyat_beyani
+        from nefs.parametre_yazmaci import parametre_metni, kenet_metni
+        from nefs.nqs import nqs_metni
         kn = kulli["konuşma"]
         s += ["",
               "  TEK MOTOR -- TÂLİM DE KONUŞUR (ferman 1-H)",
@@ -117,6 +119,9 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               str(kulli.get("lif") or ""), "",
               hiz_metni(), "",
               keyfiyet_metni(kulli["keyfiyet"]), "",
+              parametre_metni(kulli.get("parametre_yazmacı") or {}), "",
+              kenet_metni(kulli.get("kenetlenme") or {}), "",
+              nqs_metni(kulli.get("kan_nqs") or {}), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"
               % (kulli["külliyat"]["arc"], kulli["külliyat"]["külliyat"]),
               kulliyat_beyani(kulli["külliyat"]["döküm"])]

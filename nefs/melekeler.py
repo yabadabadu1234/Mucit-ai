@@ -1306,9 +1306,7 @@ class QNefs:
         from .parametre_yazmaci import ParametreAyari, ParametreYazmaci
         self.pq = ParametreYazmaci(
             int(getattr(self.ayar, "veri_lifi", 64)), 1, bellek_haddi(),
-            ParametreAyari(faz_mertebesi=int(
-                getattr(self.ayar, "faz_mertebesi", 16)),
-                tohum=int(tohum)))
+            ParametreAyari(tohum=int(tohum)))
         self.p = self.pq
         self.kan: Optional["ChebyshevKan"] = None
         self.sira = tuple(sira)
@@ -1346,6 +1344,7 @@ class QNefs:
                 int(self.ayar.veri_lifi), int(n_satir),
                 NqsAyari(tohum=int(self.ayar.tohum)))
         q.kan = self.kan
+        q.pq = self.pq
         q.kodla(E)
         if q.iz.senet_acik:
             q.iz.kapi_yaz("başlangıç", (),

@@ -119,22 +119,23 @@ class ChebyshevKan:
         u = iz[..., None] + self.havuz_fazi[None, :]
         return np.clip(u, -1.0, 1.0)
 
-    def genlik(self, basamak: np.ndarray) -> np.ndarray:
+    def genlik(self, basamak: np.ndarray,
+               parametre=None) -> np.ndarray:
         u = self._vecih(basamak)
         D = int(self.ayar.derece)
         T = chebyshev_t(u, D)
         U = chebyshev_u(u, D)
         reel = np.einsum("kj,jnk->n", self.C, T, optimize=True)
         sanal = np.einsum("kj,jnk->n", self.S, U, optimize=True)
+        if parametre is not None:
+            k = parametre.kenet(basamak)
+            reel = reel - np.asarray(k["enerji"], float).reshape(-1)
+            sanal = sanal + np.asarray(k["faz"], float).reshape(-1)
         reel = reel - float(reel.max())
         self._cagri += 1
-        self._asikin += 1
-        buyuk = np.exp(reel)
-        _ASKIN["exp"] += 1
-        ceyrek = np.rint(sanal * 2.0 / math.pi).astype(np.int64) % 4
-        doner = np.take(
-            np.array([1.0 + 0j, 0.0 + 1j, -1.0 + 0j, 0.0 - 1j]), ceyrek)
-        psi = buyuk * doner
+        self._asikin += 2
+        psi = np.exp(reel + 1j * sanal)
+        _ASKIN["exp"] += 2
         z = float(np.linalg.norm(psi))
         self._son_z = z
         assert z > 0.0 and np.isfinite(z), (

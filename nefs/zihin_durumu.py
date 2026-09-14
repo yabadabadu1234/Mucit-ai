@@ -239,7 +239,8 @@ class QYazmac:
         if kan is not None:
             yer_i = np.arange(n_sat)
             dizi = bas[:, (yer_i[:, None] + yer_i[None, :]) % n_sat]
-            psi_f = kan.genlik(dizi.reshape(B * n_sat, n_sat))
+            psi_f = kan.genlik(dizi.reshape(B * n_sat, n_sat),
+                               parametre=getattr(self, "pq", None))
             G = np.zeros((B, d), complex)
             G[yigin[sec], seviye.reshape(-1)[sec]] = psi_f[sec]
             genlik = G

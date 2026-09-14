@@ -264,25 +264,47 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     ParametreSeviyesi = enbüyük ikinin kuvveti k öyle ki
                         Yığın · VeriSeviyesi · k · 16 ≤ ÖlçülenBellek · Pay
 
-    Parametre[k] = ( Genlik[k],  FazÜssü[k] )
-    Açı(anahtar, k) = 2π · FazÜssü[Adres(anahtar)[k]] / FazMertebesi
+    Parametre[k] = ( Genlik[k],  Açı[k] )        Açı[k] ∈ [−π, π]
+                 ← FAZ SÜREKLİDİR; Z_m tamsayı kafesi İLGA (ferman 2-V)
+    Açı(anahtar, k) = Açı[ Adres(anahtar)[k] ]
                     ← ÇIPLAK PARAMETRE YOKTUR; melekenin her açısı budur
     Σ_k Genlik[k]² = 1
-    Açı(k)  = 2π · FazÜssü[k] / FazMertebesi
 
-    MüşterekYığın = ÖrnekSayısı × ParametreSeviyesi
-    Dilim(örnek, k) = Genlik[k] · VeriHâli(örnek)
+    TaşımaKapasitesi = Taban ^ QuditSayısı        ← uzay iddiası
+    MahallîSerbestlik = 2 · QuditSayısı           ← bellek iddiası
 
-    KontrollüKapı = toplam over k of  |k⟩⟨k| ⊗ Dönme(Açı(k))
-                  ← dilim başına ayrı kapı; budama yok, rank düşürme yok
+### 5-E ÇİFT YAZMAÇ KENETLENMESİ -- SEYİRCİ QUDİT (ferman 2-V)
+
+    TemasKapıları = defterde tahsis edilmiş bütün adresler
+    Seyirci       = QuditSayısı − |TemasKapıları|
+                  ← seyircinin iç çarpımı 1'dir; q^N dal AÇILMAZ
+
+    Hedef(k)      = Kontrol(k) modülo BağlamBoyu
+    Basamak(t)    = 2 · Veri[t] / (Taban − 1) − 1
+
+    EtkileşimEnerjisi(Veri) =
+        − toplam over k of  Genlik[Kontrol(k)] · Açı[Kontrol(k)]
+                            · Basamak(Hedef(k))
+
+    EklenenFaz(Veri) = toplam over k of  Açı[Kontrol(k)] · Basamak(Hedef(k))
+
+    Genlik(Veri, Parametre) = üstel( Reel(Veri) − EtkileşimEnerjisi(Veri)
+                              + i · ( Sanal(Veri) + EklenenFaz(Veri) ) )
+                              / Bölen
+        Reel(Veri)  = toplam over k,j of Katsayı_C[k,j] · ChebyshevBirinci
+        Sanal(Veri) = toplam over k,j of Katsayı_S[k,j] · ChebyshevİkinciU
 
     ChebyshevBirinci(u, j) = kosinüs( j · arkkosinüs(u) )
     ChebyshevİkinciU(u, j)  = sinüs((j+1)·arkkosinüs(u)) / sinüs(arkkosinüs(u))
                             ← HAKİKÎ FONKSİYON; tekrarlama ikamesi yasak (2-U)
 
-NE İDDİA EDİLMİYOR: melekelerin 44 açısı artık parametre yazmacından
-gelir fakat 51 kapı çağrısı hâlâ DİLİMSİZ vurur; müşterek durum
-taşınmıyor, yukarıdaki ParametreSeviyesi ölçülen bir KAPASİTEDİR.
+    Yığın ekseni kenetlemesi (Dilim, DalAğırlığı, MüşterekYığın) İLGA;
+    Palmer çeyreği ile faz çökmesi de İLGA -- faz sürekli üstel.
+
+NE İDDİA EDİLMİYOR: kenetleme köşegendir, yâni parametre verinin
+genliklerini birbirine KARIŞTIRMAZ; yalnız üsse skaler girer. Kontrol
+ile hedef arasındaki eşleme `Kontrol modülo BağlamBoyu`dur ve bu bir
+yerleşim seçimidir, ölçülmüş bir münasebet değildir.
 
 ---
 

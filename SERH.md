@@ -45418,3 +45418,69 @@ Evvelki hâl 3378 çıplak parametreydi ve 130'u kapsanıyordu. Şimdi
 * **`_psi` HÂLÂ YOĞUN DİZİDİR.** `q^N` duvarı yerinde; ferman 2-T'nin
   tam icrası -- bütün ameliyelerin fonksiyonel temsile taşınması --
   bu turda bitmedi.
+
+---
+
+## FERMAN 2-V: SEYİRCİ QUDİT -- YIĞIN EKSENİ NİÇİN İLGA EDİLDİ
+
+Üç zabıt (`docs/zabit/KUME_10…12`) kendi kurduğum köprüyü yıktı ve
+yerine hakikîsini koydu.
+
+### YIĞIN EKSENİ KENETLEMESİ NİÇİN BAŞTAN SAKATTI
+
+Parametre yazmacının dallarını veri yazmacının yığın eksenine dizmek
+`N` küçükken (dört kübit, on altı dal) koşan bir oyuncaktı. `N` bir
+milyon ve taban 64 olunca dal sayısı `64^1048576`dır; bu dallar ne
+yığına ne de bilinen kâinatın atomlarına dizilir. `dilim_acisi`,
+`dal_agirligi` ve "müşterek yığın parametre seviyesinin katı olmalı"
+şartı bu yüzden kesildi (ferman 2-B). Bunları zaten hiçbir yer
+çağırmıyordu; yâni kurduğum köprü hem imkânsızdı hem ölüydü.
+
+### YERİNE GELEN: SEYİRCİ TEOREMİ
+
+Bir kapı yazmacın bütününe vurmaz. Kapının dokunmadığı `N−2` quditin
+birim operatör altındaki iç çarpımı birdir; o hâlde onlar **seyircidir**
+ve çarpıma hiç girmezler. 51 kapıyı işletmek için `q^N` dal açmak
+gerekmiyor -- her kapı kendi temas ettiği adreste döner. Kodda temas
+kapıları parametre defterinin fiilen tahsis ettiği adreslerdir
+(`temas_kapilari`), seyirci sayısı ise kalan quditlerdir ve ikisi de
+`kenet_beyani()`de sayıyla görünür.
+
+### FAZ Z_m'DEN ÇIKTI
+
+Parametrenin açısı `Z_m` tamsayı kafesinde tutuluyordu; mertebe 16
+iken çözünürlük `2π/16`ydı ve küsüratlı Berry fazı oraya sığmıyordu.
+Padişahın hükmüyle bu kanatta faz **sürekli** oldu: `θ ∈ [−π, π]`,
+kayan nokta. `aci_katsayisi()` de bu yüzden `2π`den `1.0`a indi --
+artık açının kendisi parametredir, bir üssü değil.
+
+Aynı sebeple `nqs.genlik`teki Palmer çeyreği (`rint(sanal·2/π) % 4`)
+kaldırıldı: o da fazı dört noktaya çöktüren bir kafesti. Yerine
+`exp(reel + i·sanal)` geldi; ferman 2-U aşkın çağrıyı bu kanatta zaten
+serbest bırakmıştı ve çağrı `askin_beyani()`de sayılıyor.
+
+### KENETLEMENİN KENDİSİ
+
+Kontrollü tetabuk hesaplama tabanında köşegendir: genlikleri birbirine
+karıştırmaz, yalnız üsse skaler bir etkileşim enerjisi ekler. O hâlde
+parametre veriyi bir dizeyle ezmez; verinin üstüne bir faz potansiyeli
+serer. Enerji kanadı KAN fonksiyonelinin reel üssünden, faz kanadı
+sürekli açı defterinden akar -- padişahın seçtiği **üçüncü menfez**
+budur.
+
+Bağ kuvveti elle yazılmadı (ferman 1-J): kontrol adresinin **kendi
+genliği** bağ kuvvetidir. Böylece parametrenin iki kanadı da iş görür:
+genlik ne kadar kuvvetli kenetleneceğini, açı hangi yöne kenetleneceğini
+söyler.
+
+### NE İDDİA EDİLMİYOR
+
+* **KONTROL↔HEDEF EŞLEMESİ ÖLÇÜLMÜŞ DEĞİLDİR.** `Kontrol modülo
+  BağlamBoyu` bir yerleşim seçimidir; hangi parametrenin hangi basamağa
+  kenetleneceği henüz bir münasebetten türemiyor.
+* **İLK KODLAMADA KAPI YOKTUR.** Defter tembel tahsis edildiği için ilk
+  `kodla` çağrısında henüz bağlanmış adres bulunmaz; o çağrı
+  `kapısız_çağrı` diye **sayılır**, sessizce geçilmez (ferman 5).
+* **`_psi` HÂLÂ YOĞUN DİZİDİR.** Kenetleme `q^N` açmıyor fakat veri
+  yazmacının kendisi hâlâ `(B, d)` yoğun dizidir; `q^N` duvarı bu
+  turda da yerinde durmaktadır.

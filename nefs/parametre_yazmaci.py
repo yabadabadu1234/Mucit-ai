@@ -7,13 +7,44 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 
 __all__ = ["ParametreAyari", "ParametreYazmaci", "qudit_haddi",
-           "parametre_beyani", "parametre_metni"]
+           "parametre_beyani", "parametre_metni",
+           "kenet_beyani", "kenet_metni"]
+
+
+_KENET: Dict[str, float] = {"çağrı": 0.0, "kapısız_çağrı": 0.0,
+                            "kapı": 0.0, "seyirci": 0.0,
+                            "enerji": 0.0, "faz": 0.0, "açık": 1.0}
+
+
+def kenet_beyani() -> Dict[str, float]:
+    b = dict(_KENET)
+    b["kapı_başına_enerji"] = (b["enerji"] / b["kapı"]) if b["kapı"] else 0.0
+    b["seyirci_nispeti"] = ((b["seyirci"] / (b["seyirci"] + b["kapı"]))
+                            if (b["seyirci"] + b["kapı"]) else 0.0)
+    return b
+
+
+def kenet_metni(b: Optional[Dict[str, float]] = None) -> str:
+    d = dict(b or kenet_beyani())
+    return "\n".join([
+        "  ÇİFT YAZMAÇ KENETLENMESİ (ferman 2-V: seyirci qudit)",
+        "    kenetleme çağrısı  : %d   kapısız %d   (açık: %s)"
+        % (int(d["çağrı"]), int(d["kapısız_çağrı"]),
+           "evet" if d["açık"] else "HAYIR -- kırmızı"),
+        "    temas eden kapı    : %d   seyirci qudit %d   (%.4f seyirci)"
+        % (int(d["kapı"]), int(d["seyirci"]), d["seyirci_nispeti"]),
+        "    etkileşim enerjisi : %.6e   (kapı başına %.6e)"
+        % (d["enerji"], d["kapı_başına_enerji"]),
+        "    eklenen sürekli faz: %.6e   rad   (Z_m DEĞİL, U(1))"
+        % d["faz"],
+        "    Parametre veriyi matrisle ezmez: köşegen kontrollü faz",
+        "    üsse skaler girer, yığın ekseni açılmaz (yığın boyu 1).",
+    ])
 
 
 @dataclass
 class ParametreAyari:
 
-    faz_mertebesi: int = 16
     tohum: int = 0
     pay: float = 0.25
     qudit: int = 1 << 20
@@ -43,14 +74,11 @@ class ParametreYazmaci:
         assert self.d >= 1, (
             "parametre yazmacına tek qudit bile sığmadı: ölçülen bellek "
             "%r, pay %.2f (ferman 2-S)" % (self.bellek, self.ayar.pay))
-        m = int(self.ayar.faz_mertebesi)
-        assert m >= 4 and m % 4 == 0, (
-            "faz mertebesi dörtün katı olmalı: %d" % m)
         r = np.random.default_rng(int(self.ayar.tohum))
         self.genlik = np.abs(r.normal(scale=1.0, size=self.d))
         self.genlik = self.genlik / max(float(np.linalg.norm(self.genlik)),
                                         1e-300)
-        self.faz = r.integers(0, m, size=self.d).astype(np.int64)
+        self.faz = r.uniform(-math.pi, math.pi, size=self.d)
         self._yer: Dict[str, Tuple[int, int]] = {}
         self._bas = 0
 
@@ -79,7 +107,7 @@ class ParametreYazmaci:
         return int(self.d) + self.adres(anahtar, int(n))
 
     def aci_katsayisi(self) -> float:
-        return 2.0 * math.pi
+        return 1.0
 
     def adres(self, anahtar: str, n: int) -> np.ndarray:
         n = max(1, int(n))
@@ -95,38 +123,45 @@ class ParametreYazmaci:
         return bas + (np.arange(n, dtype=np.int64) % int(kac))
 
     def aci(self, anahtar: str, n: int, olcek: float = 1.0) -> np.ndarray:
-        a = self.adres(anahtar, n)
-        m = float(self.ayar.faz_mertebesi)
-        return float(olcek) * (2.0 * math.pi) * (
-            self.faz[a].astype(float) / m)
+        return float(olcek) * self.faz[self.adres(anahtar, n)]
 
-    def dilim_acisi(self, anahtar: str, n: int, olcek: float,
-                    B_ortak: int) -> np.ndarray:
-        a = self.adres(anahtar, n)
-        m = float(self.ayar.faz_mertebesi)
-        t = np.zeros(self.d, float)
-        t[a] = float(olcek) * (2.0 * math.pi) * (
-            self.faz[a].astype(float) / m)
-        kac = max(1, int(B_ortak) // int(self.d))
-        assert kac * self.d == int(B_ortak), (
-            "müşterek yığın parametre seviyesinin katı olmalı: %d ∤ %d "
-            "-- parametre seviyeleri yığın ekseninde durur (ferman 2-R)"
-            % (int(self.d), int(B_ortak)))
-        return np.tile(t, kac)
+    def temas_kapilari(self) -> Tuple[np.ndarray, np.ndarray]:
+        if not self._yer:
+            return (np.zeros(0, np.int64), np.zeros(0, float))
+        kontrol = np.concatenate(
+            [bas + np.arange(int(kac), dtype=np.int64)
+             for (bas, kac) in self._yer.values()])
+        return kontrol, self.genlik[kontrol]
 
-    def dal_agirligi(self, B_ortak: int = 0) -> np.ndarray:
-        if int(B_ortak) <= 0:
-            return self.genlik.copy()
-        kac = max(1, int(B_ortak) // int(self.d))
-        return np.tile(self.genlik, kac)
+    def kenet(self, basamak: np.ndarray) -> Dict[str, np.ndarray]:
+        b = np.asarray(basamak, np.int64)
+        n = int(b.shape[-1])
+        kontrol, bag = self.temas_kapilari()
+        if kontrol.size == 0 or not _KENET["açık"]:
+            sifir = np.zeros(b.shape[:-1], float)
+            _KENET["çağrı"] += 1.0
+            if kontrol.size == 0:
+                _KENET["kapısız_çağrı"] += 1.0
+            return {"enerji": sifir, "faz": sifir}
+        hedef = kontrol % n
+        w = 2.0 * (b.astype(float) / float(max(1, self.taban - 1))) - 1.0
+        w_t = w[..., hedef]
+        teta = self.faz[kontrol]
+        enerji = -(w_t * (bag * teta)).sum(axis=-1)
+        faz = (w_t * teta).sum(axis=-1)
+        _KENET["çağrı"] += 1.0
+        _KENET["kapı"] = float(kontrol.size)
+        _KENET["seyirci"] = float(max(0, self.d - kontrol.size))
+        _KENET["enerji"] = float(np.mean(np.abs(enerji)))
+        _KENET["faz"] = float(np.mean(np.abs(faz)))
+        return {"enerji": np.asarray(enerji, float),
+                "faz": np.asarray(faz, float)}
 
     def defter(self) -> Dict[str, Tuple[int, int]]:
         return dict(self._yer)
 
     def vektor(self) -> np.ndarray:
-        m = float(self.ayar.faz_mertebesi)
-        return np.concatenate([self.genlik,
-                               self.faz.astype(float) / m])
+        return np.concatenate([self.genlik, self.faz])
 
     def yukle(self, v: np.ndarray) -> None:
         v = np.asarray(v, float).reshape(-1)
@@ -135,8 +170,8 @@ class ParametreYazmaci:
             % (v.size, self.d))
         g = np.abs(v[:self.d])
         self.genlik = g / max(float(np.linalg.norm(g)), 1e-300)
-        m = int(self.ayar.faz_mertebesi)
-        self.faz = (np.rint(v[self.d:] * m).astype(np.int64)) % m
+        self.faz = np.remainder(v[self.d:] + math.pi,
+                                2.0 * math.pi) - math.pi
 
     def hazineye(self) -> Dict[str, np.ndarray]:
         return {"parametre.genlik": self.genlik.copy(),
@@ -148,18 +183,17 @@ class ParametreYazmaci:
         if g is None or f is None:
             return False
         g = np.asarray(g, float).reshape(-1)
-        f = np.asarray(f, np.int64).reshape(-1)
+        f = np.asarray(f, float).reshape(-1)
         if g.size != self.d or f.size != self.d:
             return False
         self.genlik = g / max(float(np.linalg.norm(g)), 1e-300)
-        self.faz = f % int(self.ayar.faz_mertebesi)
+        self.faz = np.remainder(f + math.pi, 2.0 * math.pi) - math.pi
         return True
 
     def beyan(self) -> Dict[str, Any]:
         return {"qudit": int(self.d),
                 "taban": int(self.taban),
                 "mahallî_serbestlik": int(self.mahalli_serbestlik),
-                "faz_mertebesi": int(self.ayar.faz_mertebesi),
                 "tahsis_edilen_qudit": int(self._bas),
                 "defter": len(self._yer),
                 "yığın": int(self.yigin),

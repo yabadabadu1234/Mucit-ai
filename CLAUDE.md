@@ -1478,8 +1478,11 @@ kesme, rank düşürme **yoktur** (ferman 7).
 Ferman 2-J'nin iş bölümü parametre yazmacında da aynen geçerlidir ve
 **yeni bir taşıyıcı icat edilmez**:
 
-    GENLİK BÜYÜKLÜĞÜ   kayan nokta      → seviye başına bir parametre
-    FAZ ÜSSÜ           Z_m tamsayısı    → seviye başına bir parametre
+    GENLİK BÜYÜKLÜĞÜ   kayan nokta      → qudit başına bir parametre
+    FAZ AÇISI          sürekli U(1)     → qudit başına bir parametre
+
+**`Z_m` TAMSAYI FAZI BU YAZMAÇTA İLGA EDİLDİ** (ferman 2-V): faz artık
+sonlu Galois kafesinde değil, sürekli Lie açısıdır (`θ ∈ [−π, π]`).
 
 ### KAPASİTE `taban^N`DİR -- "2·N PARAMETRE" DEMEK YANLIŞTI
 
@@ -1641,6 +1644,90 @@ sayıyı verse bile **ikamedir** ve bu fermanla yasaklanmıştır.
   çağrılır.**
 * **SAYI YİNE YAZILIR** (ferman 5): aşkın çağrı **gizlenmez**,
   sayılır ve beyanda görünür. Yasak kalktı, muhasebe kalkmadı.
+
+---
+
+## ▓▓▓ 2-V. FERMAN: SEYİRCİ QUDİT -- YIĞIN EKSENİ İLGA, FAZ SÜREKLİ ▓▓▓
+
+> *"Ben fonksiyonele geçmek istemiyorum, yazmaç ayrık kalsın, **başka
+> bir çözüm olmalı!**"* · *"Bence yine de kötü olmazdı."* ·
+> *"**Faz da Galois olmaktan çıkmalı.**"* · *"**Veri yazmacı da q^N
+> olmalı.**"*
+> (`docs/zabit/KUME_10_SEYIRCI_QUDIT_51_KAPI.md`,
+> `KUME_11_FONKSIYONEL_TEMSIL.md`, `KUME_12_CIFT_YAZMAC_KENETLENMESI.md`)
+
+### İLGA EDİLEN: YIĞIN EKSENİ KENETLEMESİ
+
+Parametre yazmacının dallarını veri yazmacının **yığın (batch)
+eksenine** dizmek -- `dilim_acisi`, `dal_agirligi`, "müşterek yığın
+parametre seviyesinin katı olmalı" -- **kökünden kesilmiştir**
+(ferman 2-B). `N = 1 048 576`, `q = 64` iken `q^N ≈ 10^1 893 917`
+daldır; bu dallar ne yığına, ne kâinatın atomlarına dizilir. Usul
+`N` küçükken koşan bir oyuncaktı.
+
+### ASIL: SEYİRCİ QUDİT İLKESİ
+
+Bir kapı, yazmacın **bütününe** vurmaz:
+
+    U_k = U(i,j) ⊗ (kalan N−2 quditin birim operatörü)
+    ⟨ψ_m | I_m | ψ_m⟩ = 1
+
+Kapının dokunmadığı `N−2` qudit **seyircidir** ve çarpıma `1` girer.
+O hâlde 51 kapıyı vurmak için `q^N` dal açmak **gerekmez**: her kapı
+kendi temas ettiği bir yahut iki quditin mahallî serbestliğinde döner.
+
+* **MAHALLÎ DURUM AYRIK VE AÇIKTIR.** `N` quditin her biri kendi
+  `ℂ^q` mahallî durumunu taşır; bu bir budama değil, seyirci
+  teoreminin neticesidir. Bellek `N·q·16 bayt`tır ve ölçülerek yazılır.
+* **`q^N` YİNE HİÇBİR YERDE AÇILMAZ** (ferman 2-T): kapasite bir uzay
+  iddiasıdır, bir bellek iddiası değil.
+
+### FAZ GALOİS'DAN ÇIKTI -- SÜREKLİ LIE AÇISI
+
+> *"Faz da Galois olmaktan çıkmalı."*
+
+`Z_m` kafesi küsüratlı Berry/Wilczek-Zee fazını öldürüyordu. Faz artık
+**sürekli** `U(1)`/`SU(q)` Cartan açısıdır: `θ ∈ [−π, π]`, kayan nokta.
+
+* **FERMAN 2-J BU KANATTA TADİL EDİLDİ.** *"Faz üssü `Z_m`de tamsayı
+  birikir"* hükmü **parametre yazmacı ve kenetleme** kanadında
+  kalkmıştır. `nefs/qyazmac.py`nin kendi faz defteri (`Z_m` üssü,
+  Palmer çeyreği, faz borcu ve kesri) **yerinde durur ve koşar**;
+  kalkan şey, parametrenin açısının o kafese hapsedilmesidir. **Bu
+  satır silinmeden "faz tamamen sürekli oldu" denemez.**
+
+### KENETLENME: ÜÇÜNCÜ MENFEZ -- GENLİK FONKSİYONEL, FAZ DEFTER
+
+Padişahın üç menfezden seçtiği **üçüncüsüdür**:
+
+    GENLİK BÜYÜKLÜĞÜ   çift girdili KAN fonksiyonelinden (ferman 2-T)
+    YÖN VE FAZ          sürekli Lie-Cartan faz defterinden
+
+51 kapılık kontrollü tetabuk, hesaplama tabanında **köşegendir**; o
+hâlde genlikleri karıştırmaz, yalnız üsse skaler bir etkileşim enerjisi
+ekler:
+
+    Müşterek(veri, parametre) = Enerji(veri) + Enerji(parametre)
+                              − toplam over k of  Bağ_k · θ(kontrol_k)
+                                                        · w(hedef_k)
+
+    Genlik = (1/√Bölen) · üstel( −Müşterek
+                                 + i · toplam over j of
+                                       (θ_faz(j) + w_faz(j)) )
+
+* **PARAMETRE VERİYİ MATRİSLE EZMEZ.** `q^N × q^N` bir dizey kurulmaz.
+  Parametre, verinin üstüne bir **faz potansiyeli** serer; bâtıl dallar
+  yıkıcı girişimle söner, hak olan dal rezonans tepesi olarak kalır.
+* **YIĞIN BOYU 1'DİR.** İşlem yükü 51 çiftin indis çarpımıdır.
+
+### VERİ YAZMACI DA `q^N`DİR
+
+> *"Veri yazmacı da `q^N` olmalı."*
+
+Veri yazmacı tekil bir kelime yahut küçük bir tensör değildir:
+`N` quditlik metin kâinatının süperpozisyonudur (ferman 1-N-B'nin
+`sözlük^pencere` hükmünün ta kendisi). İki yazmaç **aynı mertebede**
+karşılaşır.
 
 ---
 
