@@ -10,7 +10,7 @@ __all__ = ["mukayese_melekesi", "mukayese_melekesi_beyani",
            "mukayese_melekesi_metni",
            "yirtiklari_tertiple",
            "Vecih", "vecihleri_istihrac", "vecih_beyani",
-           "vecih_metni", "uyanik_vecihler",
+           "vecih_metni", "uyanik_vecihler", "alem_cinsleri",
            "bargmann", "hipotez_halkasi", "swap_testi", "simplisiyal", "istisna_yeri",
            "choi", "nesnelestir", "spektrum", "hata_payi",
            "zorunlu", "mumkun", "kiplik", "paylar_olc",
@@ -75,7 +75,7 @@ def mukayese_melekesi_metni(b: Optional[Dict[str, float]] = None) -> str:
 
 _VECIH: Dict[str, float] = {
     "istihraç": 0.0, "mertebe": 0.0, "münasebet": 0.0, "vecih": 0.0,
-    "taşıyan_ağırlık": 0.0, "âlem": 0.0, "halka": 0.0,
+    "taşıyan_ağırlık": 0.0, "âlem": 0.0, "halka": 0.0, "cins": 0.0,
     "açık": 1.0}
 
 
@@ -309,6 +309,8 @@ def vecih_metni(b: Optional[Dict[str, float]] = None) -> str:
         "    sıra, terkip -- diziden istihraç edilir, elle yazılmaz.",
         "    Bargmann halkası: BÜTÜN BOYLAR BERABER, tartılan halka %d"
         % int(d.get("halka", 0)),
+        "    Mukayese halkası ÂLEME göre kapanır: ayrı cins %d"
+        % int(d.get("cins", 0)),
         "    Mertebede TAVAN YOKTUR: Postnikov kulesi artık sönmedikçe",
         "    ℓ+1 açılır.   (ölçü %s)"
         % ("açık" if d.get("açık") else "KAPALI"),
@@ -345,6 +347,22 @@ def uyanik_vecihler(durumlar: Sequence[np.ndarray],
     return canli
 
 
+def alem_cinsleri(durumlar: Sequence[np.ndarray],
+                  vecihler: Optional[Sequence[Vecih]] = None
+                  ) -> List[str]:
+    D = [np.asarray(x, complex).reshape(-1) for x in durumlar]
+    assert D, "âlem tayini için en az bir hâl lâzım"
+    vs = list(vecihler if vecihler is not None
+              else vecihleri_istihrac(D))
+    assert vs, "hiç vecih neşet etmedi -- âlem tayin edilemez"
+    out: List[str] = []
+    for h in D:
+        agir = [float(np.linalg.norm(v.gor(h))) for v in vs]
+        out.append(str(vs[int(np.argmax(agir))].alem))
+    _VECIH["cins"] = float(len(set(out)))
+    return out
+
+
 def bargmann(durumlar: Sequence[np.ndarray],
              vecih: Optional[Vecih] = None) -> Dict[str, Any]:
     _SAYAC["bargmann"] += 1
@@ -361,10 +379,15 @@ def bargmann(durumlar: Sequence[np.ndarray],
         carpim *= c
     r = float(abs(carpim))
     fi = float(np.angle(carpim)) if r > 0.0 else 0.0
+    kopuk = bool(min(baglar) <= float(np.finfo(float).eps))
+    takla = float(abs(fi) / math.pi)
+    kapanis = float(1.0 - takla)
     return {"vecih": v.ad, "n": int(n), "Δ": carpim, "r": r, "Φ": fi,
-            "bağ": baglar, "kopuk": bool(min(baglar) <= 1e-12),
-            "tenakuz": bool(r > 0.0 and abs(abs(fi) - math.pi) < 0.5),
-            "kısır": bool(r > 0.0 and abs(fi) < 1e-9)}
+            "bağ": baglar, "kopuk": kopuk,
+            "takla_nispeti": takla, "kapanış_nispeti": kapanis,
+            "tenakuz": bool(not kopuk and takla > kapanis),
+            "kısır": bool(not kopuk and kapanis > takla
+                          and r >= float(np.mean(baglar)))}
 
 
 def hipotez_halkasi(haller: Sequence[np.ndarray],
@@ -414,7 +437,9 @@ def mukayese_melekesi(haller: Sequence[np.ndarray],
         return {"kayıp": 0.0, "halka": 0, "yırtık": False,
                 "istisna": None, "sapma": 0.0, "Φ_toplam": 0.0,
                 "grup": {}}
-    hlk = hipotez_halkasi(H, cinsler, vecih)
+    cins = (list(cinsler) if cinsler is not None
+            else alem_cinsleri(H))
+    hlk = hipotez_halkasi(H, cins, vecih)
     ist = istisna_yeri(H, vecih)
     sim = simplisiyal(H, vecih)
     _MELEKE["halka"] = float(hlk["halka"])

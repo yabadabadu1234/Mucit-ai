@@ -197,13 +197,6 @@ def holonomi_yigin(H: np.ndarray, idx: np.ndarray
     return U, np.clip(om, -1.0, 1.0), yol
 
 
-_SON_HAL: List[np.ndarray] = []
-
-
-def son_haller() -> List[np.ndarray]:
-    return list(_SON_HAL)
-
-
 def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
                      baglamlar: Optional[Sequence[Sequence[int]]] = None,
                      hedefler: Optional[Sequence[int]] = None,
@@ -470,8 +463,6 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
     assert len(haller) == len(veri), (
         "ileri geçiş %d örnek aldı, %d netice verdi -- örnek kayboldu"
         % (len(veri), len(haller)))
-    _SON_HAL.clear()
-    _SON_HAL.extend(haller)
     return {"hal": haller, "lifli": lifliler, "hedef": hedefler,
             "cins": cinsler, "makam": makamlar, "bağlam": baglamlar,
             "sektör": sektor, "sektör_ebat": sektor_ebat,
@@ -705,7 +696,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             hafiza.yaz(_netice, omega=1.0, hukum=TASDIK)
 
     from .mukayese import mukayese_melekesi
-    mky = mukayese_melekesi(ileri["hal"], ileri.get("cins"),
+    mky = mukayese_melekesi(ileri["hal"], cinsler=None,
                             hafiza=hafiza,
                             mahalli=getattr(nefs, "mahalli", None))
     L_mky = float(mky["kayıp"])

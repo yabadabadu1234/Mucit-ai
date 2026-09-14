@@ -24,7 +24,8 @@ _KAPI: Dict[str, float] = {
     "gelen": 0.0, "kabul": 0.0, "ret": 0.0,
     "tenakuz": 0.0, "kısırdöngü": 0.0, "mantıksızlık": 0.0,
     "tasdik": 0.0, "tevakkuf": 0.0, "cerh": 0.0,
-    "kirlilik": 0.0, "uyumsuzluk": 0.0, "terfi": 0.0, "açık": 1.0}
+    "kirlilik": 0.0, "uyumsuzluk": 0.0, "terfi": 0.0, "idrak": 0.0,
+    "açık": 1.0}
 
 
 def kapi_beyani() -> Dict[str, float]:
@@ -42,7 +43,10 @@ def kapi_metni(b: Optional[Dict[str, float]] = None) -> str:
         "    gelen %d   kabul %d   ret %d   (%.4f)"
         % (int(d["gelen"]), int(d["kabul"]), int(d["ret"]),
            d["ret_nispeti"]),
-        "    ret sebebi üç hudda göre: tenakuz %d · kısırdöngü %d"
+        "    KAPI KODLAMADAN SONRA KOŞAR: %d örnek idrak edildi, üç"
+        " hudut" % int(d.get("idrak", 0)),
+        "    ham metnin zâhirinden değil HÂL ÜÇGENİNDEN (Δ₃) okundu.",
+        "    hudut dökümü: tenakuz %d · kısırdöngü %d"
         " · mantıksızlık %d"
         % (int(d["tenakuz"]), int(d["kısırdöngü"]),
            int(d["mantıksızlık"])),
@@ -62,46 +66,66 @@ def kapi_metni(b: Optional[Dict[str, float]] = None) -> str:
     ])
 
 
-def _kisirdongu(dizi: Sequence[int]) -> int:
-    u = [int(x) for x in dizi]
-    for boy in range(1, len(u) // 2 + 1):
-        if u[-boy:] == u[-2 * boy:-boy]:
-            return int(boy)
-    return 0
+def _tasma(bag: Sequence[int], hedef: int, taban: int) -> int:
+    t = max(2, int(taban))
+    return sum(1 for x in list(bag) + [int(hedef)]
+               if not (0 <= int(x) < t))
 
 
-def _hukum(bag: Sequence[int], hedef: int, gorulen: Dict[Tuple[int, ...],
-           int], ayar: VeriKapisiAyari) -> Dict[str, Any]:
-    anahtar = tuple(int(x) for x in bag)
-    evvelki = gorulen.get(anahtar)
-    if evvelki is not None and int(evvelki) != int(hedef):
-        return {"kabul": True, "hudut": "tenakuz", "terfi": True,
-                "kayıt": TEVAKKUF, "sayı": float(abs(evvelki - hedef)),
-                "sebep": "aynı bağlam evvelce %d hedefiyle geldi, şimdi "
-                         "%d ile geliyor -- veri kendi kendini nakzediyor"
-                         % (int(evvelki), int(hedef))}
-    boy = _kisirdongu(list(bag) + [int(hedef)])
-    if boy:
-        return {"kabul": True, "hudut": "kısırdöngü", "terfi": False,
-                "kayıt": TEVAKKUF, "sayı": float(boy),
-                "sebep": "dizinin son %d basamağı kendinden evvelki %d "
-                         "basamağın aynısı -- veri kendi üstüne kapanıyor"
-                         % (boy, boy)}
-    taban = max(2, int(ayar.taban))
-    tasan = sum(1 for x in list(bag) + [int(hedef)]
-                if not (0 <= int(x) < taban))
+def _idrak(nefs, bag: Sequence[int], hedef: int,
+           taban: int) -> np.ndarray:
+    from .qegitim import belirtecleri_kodla
+    dizi = [int(x) for x in bag] + [int(hedef)]
+    E = belirtecleri_kodla(dizi, int(taban), int(taban))
+    q = nefs.idrak_et(E)
+    _KAPI["idrak"] += 1.0
+    return np.asarray(q.y.psi[0], complex).reshape(-1)
+
+
+def _hukum(i: int, bag: Sequence[int], hedef: int, H: List[np.ndarray],
+           gorulen: Dict[Tuple[int, ...], int],
+           ayar: VeriKapisiAyari) -> Dict[str, Any]:
+    tasan = _tasma(bag, int(hedef), int(ayar.taban))
     if tasan:
         return {"kabul": False, "hudut": "mantıksızlık", "terfi": False,
-                "kayıt": CERH, "sayı": float(tasan),
+                "kayıt": CERH, "sayı": float(tasan), "üçgen": (),
                 "sebep": "%d basamak taşıyıcının kod uzayı [0,%d) dışında"
-                         % (tasan, taban)}
+                         % (tasan, max(2, int(ayar.taban)))}
+    es = gorulen.get(tuple(int(x) for x in bag))
+    if es is None or int(es) == i:
+        es = i - 1
+    sahit = next((j for j in range(i - 1, -1, -1)
+                  if j != i and j != int(es)), -1)
+    if i < 2 or int(es) < 0 or sahit < 0:
+        return {"kabul": True, "hudut": "", "terfi": False,
+                "kayıt": TASDIK, "sayı": 0.0, "üçgen": (),
+                "sebep": ""}
+    from .mukayese import bargmann
+    ucgen = (int(i), int(es), int(sahit))
+    b = bargmann([H[i], H[int(es)], H[sahit]])
+    if bool(b["tenakuz"]):
+        return {"kabul": True, "hudut": "tenakuz", "terfi": True,
+                "kayıt": TEVAKKUF, "sayı": float(b["takla_nispeti"]),
+                "üçgen": ucgen,
+                "sebep": "hâl üçgeni Φ₃=%+.4f rad ile Möbius taklası "
+                         "veriyor (takla nispeti %.4f > kapanış %.4f) -- "
+                         "veri kendi kendini nakzediyor"
+                         % (float(b["Φ"]), float(b["takla_nispeti"]),
+                            float(b["kapanış_nispeti"]))}
+    if bool(b["kısır"]):
+        return {"kabul": True, "hudut": "kısırdöngü", "terfi": False,
+                "kayıt": TEVAKKUF, "sayı": float(b["kapanış_nispeti"]),
+                "üçgen": ucgen,
+                "sebep": "hâl halkası Φ₃=%+.4f rad ile kendi üstüne "
+                         "kapanıyor (koherans %.4f) -- yeni bir şey "
+                         "söylemiyor" % (float(b["Φ"]), float(b["r"]))}
     return {"kabul": True, "hudut": "", "terfi": False,
-            "kayıt": TASDIK, "sayı": 0.0, "sebep": ""}
+            "kayıt": TASDIK, "sayı": 0.0, "üçgen": ucgen, "sebep": ""}
 
 
 def veri_kapisi(veri: Sequence[Any],
-                ayar: Optional[VeriKapisiAyari] = None
-                ) -> Dict[str, Any]:
+                ayar: Optional[VeriKapisiAyari] = None,
+                nefs=None) -> Dict[str, Any]:
     from .qegitim import ornek_bol
     a = ayar or VeriKapisiAyari()
     gelen = list(veri)
@@ -109,18 +133,24 @@ def veri_kapisi(veri: Sequence[Any],
     if not int(a.acik):
         _KAPI["gelen"] += float(len(gelen))
         _KAPI["kabul"] += float(len(gelen))
-        return {"kabul": gelen, "gelen": len(gelen), "reddedilen": [],
+        return {"kabul": gelen, "gelen": len(gelen), "reddedilen": 0,
                 "kayıt": [TASDIK] * len(gelen), "sebep": "kapı KAPALI",
-                "hüküm": [{"kabul": True, "hudut": "", "kayıt": TASDIK,
-                           "sayı": 0.0, "sebep": ""}] * len(gelen)}
+                "hâl": [], "hüküm": [
+                    {"kabul": True, "hudut": "", "kayıt": TASDIK,
+                     "sayı": 0.0, "üçgen": (), "sebep": ""}] * len(gelen)}
+    assert nefs is not None, (
+        "veri kapısı MOTORSUZ çağrıldı -- üç hudut hâl üstünde ölçülür, "
+        "ham metnin zâhirinden değil (ferman 2-Ú)")
     gorulen: Dict[Tuple[int, ...], int] = {}
+    H: List[np.ndarray] = []
     kabul: List[Any] = []
     hukumler: List[Dict[str, Any]] = []
     red_sebebi: List[str] = []
-    for o in gelen:
+    for i, o in enumerate(gelen):
         bag, hedef, _cins, _makam = ornek_bol(o)
-        h = _hukum(bag, int(hedef), gorulen, a)
-        gorulen[tuple(int(x) for x in bag)] = int(hedef)
+        H.append(_idrak(nefs, bag, int(hedef), int(a.taban)))
+        h = _hukum(i, bag, int(hedef), H, gorulen, a)
+        gorulen[tuple(int(x) for x in bag)] = i
         _KAPI["gelen"] += 1.0
         if h["hudut"]:
             _KAPI[str(h["hudut"])] += 1.0
@@ -138,7 +168,7 @@ def veri_kapisi(veri: Sequence[Any],
     return {"kabul": kabul, "gelen": len(gelen),
             "reddedilen": len(gelen) - len(kabul),
             "kayıt": [float(h["kayıt"]) for h in hukumler],
-            "hüküm": hukumler, "sebep": red_sebebi}
+            "hâl": H, "hüküm": hukumler, "sebep": red_sebebi}
 
 
 def kapi_tetabuku(tenakuz: float, kisirdongu: float,
@@ -157,25 +187,23 @@ def kapi_tetabuku(tenakuz: float, kisirdongu: float,
             "gelen": float(b["gelen"]), "uyumsuzluk": uyumsuzluk}
 
 
-def kapi_tertibi(kapi_hukmu: Optional[Dict[str, Any]],
-                 haller: Sequence[Any], hafiza,
+def kapi_tertibi(kapi_hukmu: Optional[Dict[str, Any]], hafiza,
                  mahalli=None) -> int:
     if not kapi_hukmu or hafiza is None:
         return 0
-    hukumler = list(kapi_hukmu.get("hüküm") or ())
-    H = [np.asarray(h, complex).reshape(-1) for h in haller]
-    if len(H) < 3:
+    H = list(kapi_hukmu.get("hâl") or ())
+    if not H:
         return 0
     tertip = 0
-    for i, h in enumerate(hukumler):
+    for h in list(kapi_hukmu.get("hüküm") or ()):
         if str(h.get("hudut")) != "tenakuz":
             continue
-        if not bool(h.get("terfi")):
+        ucgen = tuple(h.get("üçgen") or ())
+        if len(ucgen) != 3:
             continue
-        a = i % len(H)
-        hafiza.yeniden_tertiple(
-            (H[a], H[(a + 1) % len(H)]), sahit=H[(a + 2) % len(H)],
-            mahalli=mahalli, kapi="kapı")
+        i, es, sahit = (int(x) for x in ucgen)
+        hafiza.yeniden_tertiple((H[i], H[es]), sahit=H[sahit],
+                                mahalli=mahalli, kapi="kapı")
         tertip += 1
     return tertip
 

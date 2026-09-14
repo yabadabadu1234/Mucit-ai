@@ -363,10 +363,21 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
 ## 6-B. VECİH VE MUKAYESE -- NETİCE ÇIKARAN MELEKE
 
     VERİ KAPISI (ferman 2-Ó) -- ret girene bakar, konuşmaya değil
+                 KAPI KODLAMADAN SONRA KOŞAR: hüküm HÂLDEN okunur
 
-    Hüküm(Örnek) = tenakuz  eğer aynı Bağlam evvelce başka Hedefle geldi
-                 | kısırdöngü eğer Dizi kendi üstüne kapanıyor
-                 | mantıksızlık eğer basamak ∉ [0, VeriLifi)
+    Hâl(Örnek)   = İdrak(Kodla(Bağlam + Hedef))    ← örnek başına BİR idrak
+    Eş(i)        = aynı Bağlamı paylaşan evvelki örnek, yoksa i−1
+                   ← bu bir HÜKÜM değil, üçgenin İKİNCİ KUTBUDUR
+    Şahit(i)     = i ve Eş(i) dışındaki en yakın evvelki örnek
+    Δ₃(i)        = ⟨Hâl_i|Hâl_Eş⟩⟨Hâl_Eş|Hâl_Şahit⟩⟨Hâl_Şahit|Hâl_i⟩
+
+    Takla(i)     = |arg Δ₃(i)| / π        Kapanış(i) = 1 − Takla(i)
+                   ← eşik SABİT DEĞİL: iki nispet birbiriyle tartılır (1-J)
+
+    Hüküm(Örnek) = mantıksızlık eğer basamak ∉ [0, VeriLifi)   → RET
+                 | tenakuz      eğer Takla > Kapanış            → TERFİ
+                 | kısırdöngü   eğer Kapanış > Takla ve r ≥ ort(bağ)
+                 | tasdik       değilse
     Kabul(Örnek) = yanlış YALNIZ mantıksızlıkta;  tenakuz TERFİ eder
     HafızaKaydı  = tasdik | tevakkuf | cerh       ← kaydın CİNSİNİ kapı tayin eder
 
@@ -392,6 +403,10 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     Halka boyu  : BÜTÜN BOYLAR BERABER, n = 2 … m                 (ferman 2-Ú)
     Tenakuz     eğer Φ_n → π ·  Kısırdöngü eğer Φ_n → 0 ·  Kopuk eğer r_n = 0
     Yırtık      eğer sapma(üçgen*) > 3 × ortanca(sapma)
+
+    Cins(hâl)   = ‖Vecih(hâl)‖'i AZAMÎ yapan vechin ÂLEMİ
+                  ← HER ÂLEM KENDİ HALKASINI KAPATIR (ferman 1-Ç, 2-Ú):
+                    veri cinsi (arc/sözlü) yahut kapı hükmü CİNS DEĞİLDİR
 
     HAFIZA YENİDEN TERTİBİ -- silme YOK, terfi VAR
 

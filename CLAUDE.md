@@ -2807,6 +2807,69 @@ kaidenin küllî bir yoğunluk matrisinin **spektral ayrışımından**
 * **KÜLLÎ MATRİS AMELİYESİ (eigh, svd) VECİH İSTİHRACINDA
   ÇAĞRILMAZ.**
 
+### KAPI KODLAMADAN SONRA KOŞAR -- ÜÇ HUDUT HÂL ÜSTÜNDE ÖLÇÜLÜR
+
+> *"1-a."* -- Kapı kodlamadan **sonraya** alınsın, üç hudut hâl
+> üstünde Bargmann ile ölçülsün.
+
+Kapı evvelce **ham örneğe** bakıyordu: tenakuzu *"aynı bağlam evvelce
+başka hedefle geldi"* diye bir **anahtar eşleşmesiyle**, kısırdöngüyü
+dizinin kendini tekrar etmesiyle buluyordu. İkisi de metnin
+**zâhirine** bakan kâidelerdir (ferman 6) ve motorun ne idrak ettiğini
+hiç sormaz.
+
+    EVVELKİ (İLGA)   ham örnek → anahtar eşleşmesi → hüküm
+    ASIL             örnek → KODLA → idrak → hâl → Δ₃ → hüküm
+
+* **ÜÇ HUDUT DA HÂLDEN OKUNUR:** tenakuz `Φ₃ → π` (Möbius taklası),
+  kısırdöngü `Φ₃ → 0` (halka kendi üstüne kapanıyor), mantıksızlık
+  ise iki taşmadır (ferman 2-L) ve kimlik taşması ham basamaktan,
+  parite taşması hâlden okunur.
+* **BAĞLAM ANAHTARI HÜKÜM DEĞİL, EŞLEŞTİRMEDİR.** Aynı bağlamı
+  paylaşan evvelki örnek artık *"tenakuz"* diye damgalanmaz; yalnız
+  Δ₃ üçgeninin **ikinci kutbu** olarak seçilir. Hükmü Bargmann verir.
+* **SIRA DEĞİŞTİ:** `nefs` kapıdan **evvel** kurulur; hendese teşhisi
+  kapıya **gelen**in tamamını görür (kapı yalnız mantıksızlıkta
+  elediği için ikisi arasındaki fark da sayılır).
+* **BEDEL ÖLÇÜLÜR** (ferman 5): kapıda koşan idrak çağrısı sayılır ve
+  beyanda görünür. *"Her örnek için idrak pahalı"* bir mazeret değil,
+  bir sayıdır.
+
+### TERTİP ÖRNEĞİN KENDİ HÂLİYLE KOŞAR
+
+> *"2-a."* -- Tenakuzlu örnek **kendi doğurduğu hâlle** tertibe girsin.
+
+`kapi_tertibi` çelişen örneği `a = i % len(H)` diye **keyfî** bir
+hâlle eşleştiriyordu; bu bir uydurmaydı (ferman 5). Artık kapı her
+örnek için hâli **kendisi** ürettiğinden (yukarıdaki hüküm), tertip o
+örneğin **kendi** hâlini, **kendi** eşini ve **kendi** şahidini alır.
+
+* Üçgenin üç kutbu da kapının hükmünde **yazılıdır**; tertip başka
+  yerden hâl aramaz (`son_haller()` bu kanatta **ilga edildi**).
+* Ferman 2-Ú'nün modalite lifi hükmü aynen koşar: `Δ₃` vechi tayin
+  eder, Cartan kökü taşır.
+
+### MUKAYESE HALKASI ÂLEME GÖRE KAPANIR
+
+> *"3-c."* -- Vechin âlemi; o zaman **her âlem kendi halkasını
+> kapatır**.
+
+Mukayese melekesi bütün hâlleri **tek gruba** koyup tek halka
+kapatıyordu. Bu, ferman 1-Ç'nin *"her hâl ayrı cinstir, aynı kefeye
+konmaz"* hükmünün ihlâlidir: elma ile armut aynı Bargmann halkasına
+diziliyordu.
+
+    Cins(hâl) = ‖Vecih(hâl)‖'i AZAMÎ yapan vechin ÂLEMİ
+
+* Âlem elle tayin edilmez, **istihraç edilenden** gelir (bu fermanın
+  *"özdeğer reddedildi"* babı): münasebetlerin kaide imzası âlemi
+  doğurur, her hâl kendini en çok taşıyan âleme düşer.
+* **HER ÂLEM KENDİ HALKASINI KAPATIR:** tenakuz, kısırdöngü ve kopuk
+  halka âlem âlem sayılır. Bir âlemdeki `Φ₃ → π`, başka âlemdeki
+  halkayı kirletmez.
+* Veri cinsi (arc/sözlü) ve kapı hükmü (tasdik/tevakkuf/cerh) cins
+  **değildir**: ikisi de zâhirî etikettir, âlem ise ölçülür.
+
 ### BARGMANN HALKASININ BOYU SEÇİLMEZ -- BÜTÜN BOYLAR BERABER
 
 > *"Bütün boylar beraber (2..m)."*

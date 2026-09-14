@@ -18,8 +18,7 @@ import numpy as np
 from nefs.musahede import gorevleri_getir
 from ogrenme.mecz import MeczAyari, mecz_egit, mecz_beyani
 from main import hazine
-from nefs.kulli_mizan import (MizanAyari, kulli_mizan,
-                              mizan_cetveli, son_haller)
+from nefs.kulli_mizan import MizanAyari, kulli_mizan, mizan_cetveli
 from nefs.hafiza import Hafiza, tertip_beyani
 from main.cikarim import (hazineden_yukle, hafizayi_yukle, padisah,
                           hazineden_devam, devam_agirligi)
@@ -415,19 +414,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         taban=int(ayar.veri_lifi),
         basamak=int(ayar.belirtec_basamak),
         imlec=devam.get("imleç"), ne="imleçli")
-    kapi_hukmu = veri_kapisi(
-        list(arc_veri) + list(kul_veri),
-        ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
-                             taban=int(ayar.veri_lifi),
-                             basamak=int(ayar.belirtec_basamak)))
-    veri = list(kapi_hukmu["kabul"])
-    assert veri, (
-        "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
-        % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
+    gelen = list(arc_veri) + list(kul_veri)
 
     from nefs.qegitim import ornek_bol as _bol
     hendese = hendese_teshisi(
-        [_bol(o)[0] for o in veri], ayar.lif_yapisi,
+        [_bol(o)[0] for o in gelen], ayar.lif_yapisi,
         HendeseAyari(azami_alfabe=int(ayar.veri_lifi),
                      tohum=int(ayar.tohum)))
 
@@ -436,6 +427,15 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
 
     nefs = QNefs(ayar.tohum, ayar.qayar())
     nefs.idrak_et(np.eye(2, ayar.veri_lifi))
+    kapi_hukmu = veri_kapisi(
+        gelen, nefs=nefs,
+        ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
+                             taban=int(ayar.veri_lifi),
+                             basamak=int(ayar.belirtec_basamak)))
+    veri = list(kapi_hukmu["kabul"])
+    assert veri, (
+        "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
+        % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
     kademe_parametresi = kademe_parametreleri_ac(nefs.p)
     d = len(nefs)
     p0 = devam_agirligi(devam, nefs, d)
@@ -562,7 +562,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     kume_kapanisi = {
         "yırtık": yirtiklari_tertiple(hafiza, getattr(nefs, "mahalli",
                                                      None)),
-        "kapı": kapi_tertibi(kapi_hukmu, son_haller(), hafiza,
+        "kapı": kapi_tertibi(kapi_hukmu, hafiza,
                              getattr(nefs, "mahalli", None))}
     p_son = np.asarray(mun["p"], float)
     _ilk = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=_mzn["a"],
