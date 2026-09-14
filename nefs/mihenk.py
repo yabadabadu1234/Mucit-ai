@@ -152,7 +152,7 @@ class Nobet:
                  int(c["eniyileme"].get("tarama", 0)),
                  float(c["eniyileme"].get("adım_normu", 0.0)),
                  int(c["eniyileme"].get("kapsanan_parametre", 0)),
-                 int(c["eniyileme"].get("toplam_parametre", 0)),
+                 int(c["eniyileme"].get("tahsis_edilen", 0)),
                  float(c["eniyileme"].get("ek_durum_ikiz_farkı", 0.0)),
                  float(c["eniyileme"].get("senet_ileri", 0.0)),
                  "  ✓" if c["isabet"] else ""),

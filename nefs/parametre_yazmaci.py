@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["ParametreAyari", "ParametreYazmaci", "parametre_seviyesi",
+__all__ = ["ParametreAyari", "ParametreYazmaci", "qudit_haddi", "kapasite_basamagi",
            "parametre_beyani", "parametre_metni"]
 
 
@@ -15,42 +15,38 @@ class ParametreAyari:
 
     faz_mertebesi: int = 16
     tohum: int = 0
-    pay: float = 0.5
-    azami_seviye: int = 1 << 20
+    pay: float = 0.25
+    qudit: int = 1 << 20
+    qudit_bayti: int = 16
 
 
-def parametre_seviyesi(d_veri: int, yigin: int, bellek: Optional[int],
-                       pay: float = 0.5, bayt_genlik: int = 16,
-                       azami: int = 1 << 20) -> int:
-    if int(d_veri) <= 0:
-        return int(azami)
+def qudit_haddi(bellek: Optional[int], pay: float = 0.25,
+                qudit_bayti: int = 16) -> int:
     assert bellek is not None and int(bellek) > 0, (
-        "parametre yazmacının ebadı ölçülen bellekten türer; bellek "
-        "yoklanamadıysa bütçe uydurulmaz (ferman 5-B, 2-S)")
-    tavan = float(bellek) * float(pay)
-    tek_dilim = float(max(1, int(yigin))) * float(int(d_veri)) * float(
-        int(bayt_genlik))
-    kac = int(tavan // tek_dilim)
-    assert kac >= 1, (
-        "müşterek durumun TEK dilimi bile ölçülen belleğe sığmıyor: "
-        "yığın %d × veri seviyesi %d × %d bayt = %.1f MB, pay %.1f MB "
-        "(ferman 2-S: sığmayan bütçe kurulmaz)"
-        % (int(yigin), int(d_veri), int(bayt_genlik), tek_dilim / 1e6,
-           tavan / 1e6))
-    return min(int(azami), 1 << int(math.floor(math.log2(kac))))
+        "qudit haddi ölçülen bellekten türer; bellek yoklanamadıysa "
+        "bütçe uydurulmaz (ferman 5-B, 2-S)")
+    return max(1, int((float(bellek) * float(pay))
+                      // float(int(qudit_bayti))))
+
+
+def kapasite_basamagi(taban: int, qudit: int) -> float:
+    return float(qudit) * math.log10(max(2, int(taban)))
 
 
 class ParametreYazmaci:
 
-    def __init__(self, d_veri: int, yigin: int, bellek: Optional[int],
+    def __init__(self, taban: int, yigin: int, bellek: Optional[int],
                  ayar: Optional[ParametreAyari] = None) -> None:
         self.ayar = ayar or ParametreAyari()
-        self.d_veri = int(d_veri)
+        self.taban = max(2, int(taban) if int(taban) >= 2 else 64)
         self.yigin = max(1, int(yigin))
         self.bellek = None if bellek is None else int(bellek)
-        self.d = parametre_seviyesi(self.d_veri, self.yigin, self.bellek,
-                                    float(self.ayar.pay),
-                                    azami=int(self.ayar.azami_seviye))
+        self.hadd = qudit_haddi(self.bellek, float(self.ayar.pay),
+                                int(self.ayar.qudit_bayti))
+        self.d = min(int(self.ayar.qudit), int(self.hadd))
+        assert self.d >= 1, (
+            "parametre yazmacına tek qudit bile sığmadı: ölçülen bellek "
+            "%r, pay %.2f (ferman 2-S)" % (self.bellek, self.ayar.pay))
         m = int(self.ayar.faz_mertebesi)
         assert m >= 4 and m % 4 == 0, (
             "faz mertebesi dörtün katı olmalı: %d" % m)
@@ -63,15 +59,23 @@ class ParametreYazmaci:
         self._bas = 0
 
     @property
-    def parametre_adedi(self) -> int:
+    def qudit(self) -> int:
+        return int(self.d)
+
+    @property
+    def mahalli_serbestlik(self) -> int:
         return 2 * int(self.d)
+
+    @property
+    def kapasite_basamak(self) -> float:
+        return kapasite_basamagi(self.taban, self.d)
 
     @property
     def genislik(self) -> int:
         return 1
 
     def __len__(self) -> int:
-        return int(self.parametre_adedi)
+        return int(self.mahalli_serbestlik)
 
     def al(self, anahtar: str, n: int) -> np.ndarray:
         return self.aci(anahtar, int(n), 1.0)
@@ -160,30 +164,26 @@ class ParametreYazmaci:
         return True
 
     def beyan(self) -> Dict[str, Any]:
-        tek = self.yigin * self.d_veri * 16
-        return {"seviye": int(self.d),
-                "qudit": int(round(math.log2(max(2, self.d)) / 6.0)),
-                "kübit": int(round(math.log2(max(2, self.d)))),
+        return {"qudit": int(self.d),
+                "taban": int(self.taban),
+                "kapasite_basamağı": float(self.kapasite_basamak),
+                "mahallî_serbestlik": int(self.mahalli_serbestlik),
                 "faz_mertebesi": int(self.ayar.faz_mertebesi),
-                "parametre": int(self.parametre_adedi),
-                "genlik_parametresi": int(self.d),
-                "faz_parametresi": int(self.d),
-                "tahsis_edilen_seviye": int(self._bas),
-                "müşterek_taşınıyor": False,
+                "tahsis_edilen_qudit": int(self._bas),
                 "defter": len(self._yer),
-                "veri_seviyesi": int(self.d_veri),
                 "yığın": int(self.yigin),
-                "müşterek_bayt": int(tek * self.d),
+                "qudit_bayt": int(self.d * int(self.ayar.qudit_bayti)),
+                "qudit_haddi": int(self.hadd),
                 "ölçülen_bellek": (0 if self.bellek is None
                                    else int(self.bellek)),
-                "pay": float(self.ayar.pay),
-                "yuva_bütçesi": int(round(math.log2(max(2, self.d))))}
+                "pay": float(self.ayar.pay)}
 
 
 def parametre_beyani(p: Optional[ParametreYazmaci]) -> Dict[str, Any]:
     if p is None:
-        return {"seviye": 0, "parametre": 0, "müşterek_bayt": 0,
-                "ölçülen_bellek": 0, "tahsis_edilen_seviye": 0,
+        return {"qudit": 0, "taban": 0, "kapasite_basamağı": 0.0,
+                "mahallî_serbestlik": 0, "ölçülen_bellek": 0,
+                "tahsis_edilen_qudit": 0, "qudit_haddi": 0,
                 "defter": 0, "hüküm": "PARAMETRE YAZMACI KURULMADI"}
     return p.beyan()
 
@@ -192,28 +192,26 @@ def parametre_metni(b: Optional[Dict[str, Any]] = None) -> str:
     d = dict(b or parametre_beyani(None))
     if "hüküm" in d:
         return "  PARAMETRE YAZMACI: %s" % d["hüküm"]
-    bos = int(d["seviye"]) - int(d["tahsis_edilen_seviye"])
+    bos = int(d["qudit"]) - int(d["tahsis_edilen_qudit"])
     return "\n".join([
         "  PARAMETRE YAZMACI (ferman 2-R: parametre de quditir)",
-        "    seviye        : %d   (yuva bütçesi %d)"
-        % (d["seviye"], d["yuva_bütçesi"]),
-        "    QUDİT SAYISI  : %d   (%d kübit)   ← SEVİYE DEĞİL QUDİT."
-        % (d.get("qudit", 0), d.get("kübit", 0)),
-        "    Yoğun genlik vektöründe seviye = 64^qudit'tir; 4096 seviye"
-        " İKİ qudittir, 4096 qudit değil.",
-        "    parametre     : %d   = %d genlik + %d faz üssü (Z_%d)"
-        % (d["parametre"], d["genlik_parametresi"], d["faz_parametresi"],
+        "    qudit × taban      : %d × %d" % (d["qudit"], d["taban"]),
+        "    TAŞIMA KAPASİTESİ  : %d^%d   = 10^%.0f   (%.0f basamaklı)"
+        % (d["taban"], d["qudit"], d["kapasite_basamağı"],
+           d["kapasite_basamağı"]),
+        "    ← KAPASİTE taban^qudit'tir. 'iki kere qudit sayısı' DEĞİL;",
+        "      o yalnız MAHALLÎ serbestliktir ve aşağıda ayrı yazar.",
+        "    mahallî serbestlik : %d   = %d genlik + %d faz üssü (Z_%d)"
+        % (d["mahallî_serbestlik"], d["qudit"], d["qudit"],
            d["faz_mertebesi"]),
-        "    tahsis edilen : %d seviye / %d defter kaydı   (boş %d)"
-        % (d["tahsis_edilen_seviye"], d["defter"], bos),
-        "    müşterek durum: %.1f MB   = yığın %d × veri seviyesi %d"
-        "  × parametre seviyesi %d × 16 bayt   ← TAŞINMIYOR, kestirim"
-        % (d["müşterek_bayt"] / 1e6, d["yığın"], d["veri_seviyesi"],
-           d["seviye"]),
-        "    ölçülen bellek: %.1f MB   pay %.2f   (ferman 2-S: hudut"
-        " ölçülür, bütçe oraya kadar açılır)"
-        % (d["ölçülen_bellek"] / 1e6, d["pay"]),
-        "    GENLİK KANADI NORMALİZEDİR (Σ|p|² = 1): parametreler norm"
-        " üzerinden birbirine bağlıdır,",
-        "    bu yazmaç olmanın şartıdır ve gizlenmez (ferman 2-R).",
+        "    tahsis edilen      : %d qudit / %d defter kaydı   (boş %d)"
+        % (d["tahsis_edilen_qudit"], d["defter"], bos),
+        "    mahallî bellek     : %.1f MB   (qudit başına 16 bayt)"
+        % (d["qudit_bayt"] / 1e6),
+        "    ölçülen bellek     : %.1f MB   pay %.2f   → qudit haddi %d"
+        % (d["ölçülen_bellek"] / 1e6, d["pay"], d["qudit_haddi"]),
+        "    q^N HİÇBİR YERDE AÇILMAZ: bellekte q^N sayı tutulmaz,",
+        "    genlik fonksiyondan üretilir (ferman 2-T).",
+        "    GENLİK KANADI NORMALİZEDİR (Σ|p|² = 1): mahallî genlikler",
+        "    norm üzerinden bağlıdır; yazmaç olmanın şartıdır.",
     ])

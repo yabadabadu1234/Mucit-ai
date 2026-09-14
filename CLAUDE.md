@@ -1481,10 +1481,31 @@ Ferman 2-J'nin iş bölümü parametre yazmacında da aynen geçerlidir ve
     GENLİK BÜYÜKLÜĞÜ   kayan nokta      → seviye başına bir parametre
     FAZ ÜSSÜ           Z_m tamsayısı    → seviye başına bir parametre
 
-O hâlde `d_p` seviyeli bir parametre yazmacı **2·d_p** parametre
-taşır. Genlik kanadı normalizasyonla birbirine bağlıdır
-(`Σ|p|² = 1`); bu bir kusur değil, **yazmaç olmanın şartıdır** ve
-raporda böyle yazılır.
+### KAPASİTE `taban^N`DİR -- "2·N PARAMETRE" DEMEK YANLIŞTI
+
+> *"1 milyon qudit olunca senin 1 milyon parametre değil, quditin
+> **tabanı kaç ise taban^1milyon** kadar parametre tutabiliyor olman
+> lazım, ahmak!"*
+
+Burada evvelce *"`d_p` seviyeli bir yazmaç `2·d_p` parametre taşır"*
+yazıyordu ve **yanlıştı**: `d_p` bir seviye sayısı gibi kurulmuş,
+qudit sayısı ile karıştırılmıştı. Doğrusu:
+
+    QUDİT SAYISI        N              ← yazmacın kaç quditi var
+    TABAN               q              ← her quditin kaç seviyesi var
+    TAŞIMA KAPASİTESİ   q^N            ← yazmacın gerdiği uzayın boyutu
+    MAHALLÎ SERBESTLİK  2N             ← qudit başına genlik + faz üssü
+
+* **KAPASİTE `q^N`DİR** ve raporda **öyle** yazılır: `q`, `N` ve
+  `q^N`in basamak sayısı yan yana basılır. `2N` kapasite **değildir**;
+  o yalnız **mahallî** (qudit başına) serbestliktir ve ayrı satırda
+  yazılır. İkisini karıştırmak bu fermanın yasakladığı şeydir.
+* **`q^N` HİÇBİR YERDE AÇILMAZ** (ferman 2-T): bellekte `q^N` sayı
+  tutulmaz, genlik **fonksiyondan üretilir**. Kapasitenin büyüklüğü
+  bir bellek iddiası değil, **uzay iddiasıdır**.
+* Genlik kanadı normalizasyonla birbirine bağlıdır (`Σ|p|² = 1`); bu
+  bir kusur değil, **yazmaç olmanın şartıdır** ve raporda böyle
+  yazılır.
 
 ---
 

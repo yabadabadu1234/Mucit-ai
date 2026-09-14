@@ -1305,7 +1305,7 @@ class QNefs:
         from .donanim import bellek_haddi
         from .parametre_yazmaci import ParametreAyari, ParametreYazmaci
         self.pq = ParametreYazmaci(
-            0, 1, bellek_haddi(),
+            int(getattr(self.ayar, "veri_lifi", 64)), 1, bellek_haddi(),
             ParametreAyari(faz_mertebesi=int(
                 getattr(self.ayar, "faz_mertebesi", 16)),
                 tohum=int(tohum)))
@@ -1324,7 +1324,6 @@ class QNefs:
         return self.HARMAN_OLCEGI * np.asarray(ham, float)
 
     def parametre_yazmacini_kur(self, d_veri: int, B: int) -> int:
-        self.pq.d_veri = int(d_veri)
         self.pq.yigin = max(1, int(B))
         return int(self.pq.d)
 

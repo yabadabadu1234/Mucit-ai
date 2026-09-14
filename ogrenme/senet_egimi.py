@@ -157,7 +157,8 @@ def _turev_vur(psi: np.ndarray, lif: Tuple[int, ...], turev) -> np.ndarray:
     raise ValueError("türev tarifi bilinmiyor: %r" % (tur,))
 
 
-def senet_kapsami(iz, n_par: int, defter=None) -> Dict[str, Any]:
+def senet_kapsami(iz, n_par: int, defter=None,
+                  tahsis: int = 0) -> Dict[str, Any]:
     kapsanan = {int(b[1]) for b in iz.baglanti}
     fotograf = sum(1 for k in iz.senet if str(k[0]) == "durum")
     o: Dict[str, Any] = {
@@ -165,6 +166,7 @@ def senet_kapsami(iz, n_par: int, defter=None) -> Dict[str, Any]:
         "durum_saklaması": int(fotograf),
         "kapsanan_parametre": len(kapsanan),
         "toplam_parametre": int(n_par),
+        "tahsis_edilen": int(tahsis),
         "üretecsiz": int(iz.uretecsiz), "yetim": ()}
     if not defter:
         return o

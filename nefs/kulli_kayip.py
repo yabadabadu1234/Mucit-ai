@@ -334,7 +334,7 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
             q.tek(q.kulli(a, j), donme(0.4))
     from .donanim import bellek_haddi
     from .parametre_yazmaci import ParametreAyari, ParametreYazmaci
-    p = ParametreYazmaci(0, 1, bellek_haddi(),
+    p = ParametreYazmaci(64, 1, bellek_haddi(),
                          ParametreAyari(tohum=int(tohum)))
 
     once = yogunluklar(q)

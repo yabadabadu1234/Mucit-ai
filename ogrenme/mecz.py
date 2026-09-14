@@ -43,6 +43,7 @@ def mecz_sifirla() -> None:
                   "keyfiyet_reddi": 0.0, "hissedilmeyen_adım": 0.0,
                   "kayıp_çözünürlüğü": 0.0, "r_kullanılan": 0.0,
                   "ΔV_gerçek": 0.0, "ΔV_lineer": 0.0,
+                  "tahsis_edilen": 0.0,
                   "durum_saklaması": 0.0})
 
 
@@ -281,10 +282,11 @@ class Memuriyet:
         _ADRES["bağlam"] = int(np.asarray(bag).size)
         from nefs.parametre_yazmaci import parametre_beyani
         _pq = parametre_beyani(getattr(self.nefs, "pq", None))
-        _ADRES["p_seviye"] = _pq.get("seviye", 0)
-        _ADRES["p_adedi"] = _pq.get("parametre", 0)
-        _ADRES["p_müşterek_MB"] = round(
-            _pq.get("müşterek_bayt", 0) / 1e6, 1)
+        _ADRES["p_qudit"] = _pq.get("qudit", 0)
+        _ADRES["p_taban"] = _pq.get("taban", 0)
+        _ADRES["p_kapasite_basamağı"] = round(
+            _pq.get("kapasite_basamağı", 0.0))
+        _ADRES["p_mahallî"] = _pq.get("mahallî_serbestlik", 0)
         from nefs.nqs import nqs_beyani
         _k = nqs_beyani(getattr(self.nefs, "kan", None))
         _ADRES["kan_katsayı"] = _k.get("katsayı", 0)
@@ -307,11 +309,14 @@ class Memuriyet:
         g_ur = egim_uretec(iz, lif, psi, H, n_par)
         kap = senet_kapsami(
             iz, n_par, defter=(self.nefs.p.defter()
-                               if hasattr(self.nefs.p, "defter") else None))
+                               if hasattr(self.nefs.p, "defter") else None),
+            tahsis=2 * sum(int(k) for _b, k in
+                           (self.nefs.p.defter() or {}).values()))
         _YETIM[:] = list(kap.get("yetim", ()))[:6]
         _MECZ["kapı"] = float(kap["kapı"])
         _MECZ["kapsanan_parametre"] = float(kap["kapsanan_parametre"])
         _MECZ["toplam_parametre"] = float(kap["toplam_parametre"])
+        _MECZ["tahsis_edilen"] = float(kap["tahsis_edilen"])
         _MECZ["üretecsiz"] = float(kap["üretecsiz"])
         _MECZ["durum_saklaması"] = float(kap["durum_saklaması"])
         _MECZ["eğim_normu"] = float(np.linalg.norm(g_ek))
@@ -406,8 +411,8 @@ def mecz_beyani() -> Dict[str, float]:
     b["tarama"] = b["tur"]
     b["kabul_nispeti"] = (b["kabul"] / b["tur"]) if b["tur"] else 0.0
     b["çağrı_başına_tur"] = (b["tur"] / b["çağrı"]) if b["çağrı"] else 0.0
-    b["kapsam"] = ((b["kapsanan_parametre"] / b["toplam_parametre"])
-                   if b["toplam_parametre"] else 0.0)
+    b["kapsam"] = ((b["kapsanan_parametre"] / b["tahsis_edilen"])
+                   if b.get("tahsis_edilen") else 0.0)
     b["duvar_nispeti"] = ((b["duvar_elenen"] / b["duvar_bakılan"])
                           if b["duvar_bakılan"] else 0.0)
     return b
@@ -471,7 +476,11 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          "  operatörlü kefe   : %d  (yönü kurar)" % int(b["operatörlü_kefe"]),
          "  operatörsüz kefe  : %d  (yönü kurmaz, HÜKMÜ verir)"
          % int(b["operatörsüz_kefe"]),
-         "  eğimin kapsadığı  : %d / %d parametre (%.2f%%)"
-         % (int(b["kapsanan_parametre"]), int(b["toplam_parametre"]),
-            100.0 * b["kapsam"])]
+         "  eğimin kapsadığı  : %d / %d TAHSİS EDİLEN serbestlik (%.2f%%)"
+         % (int(b["kapsanan_parametre"]), int(b.get("tahsis_edilen", 0)),
+            100.0 * b["kapsam"]),
+         "  (payda kapasite değildir: yazmacın mahallî serbestliği %d,"
+         % int(b["toplam_parametre"]),
+         "   fakat melekelerin fiilen adreslediği bu kadardır -- "
+         "adreslenmemiş qudit yetim değil, vazifesizdir.)"]
     return "\n".join(s)
