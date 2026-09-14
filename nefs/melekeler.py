@@ -1313,6 +1313,22 @@ class QNefs:
         self.s = qsicil()
         self.gaye = bool(gaye)
         self.sadakat = bool(sadakat)
+        self._defter_aciliyor = False
+        self.defteri_ac()
+
+    def defteri_ac(self) -> int:
+        if self._defter_aciliyor or self.pq.defter():
+            return len(self.pq.defter())
+        self._defter_aciliyor = True
+        try:
+            self.idrak_et(np.eye(2, int(self.ayar.veri_lifi)),
+                          bec=False, olcum=False)
+        finally:
+            self._defter_aciliyor = False
+        assert self.pq.defter(), (
+            "peşin tahsis defteri boş bıraktı: melekeler hiçbir açı "
+            "bağlamadı (ferman 1-C/b)")
+        return len(self.pq.defter())
 
     HARMAN_OLCEGI = 0.6
 
@@ -1344,7 +1360,7 @@ class QNefs:
                 int(self.ayar.veri_lifi), int(n_satir),
                 NqsAyari(tohum=int(self.ayar.tohum)))
         q.kan = self.kan
-        q.pq = self.pq
+        q.pq = None if self._defter_aciliyor else self.pq
         q.kodla(E)
         if q.iz.senet_acik:
             q.iz.kapi_yaz("başlangıç", (),

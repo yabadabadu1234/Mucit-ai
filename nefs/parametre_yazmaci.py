@@ -13,7 +13,9 @@ __all__ = ["ParametreAyari", "ParametreYazmaci", "qudit_haddi",
 
 _KENET: Dict[str, float] = {"çağrı": 0.0, "kapısız_çağrı": 0.0,
                             "kapı": 0.0, "seyirci": 0.0,
-                            "enerji": 0.0, "faz": 0.0, "açık": 1.0}
+                            "enerji": 0.0, "faz": 0.0,
+                            "gerilim": 0.0, "gerilim_tepesi": 0.0,
+                            "ayrı_rezonans": 0.0, "açık": 1.0}
 
 
 def kenet_beyani() -> Dict[str, float]:
@@ -37,6 +39,13 @@ def kenet_metni(b: Optional[Dict[str, float]] = None) -> str:
         % (d["enerji"], d["kapı_başına_enerji"]),
         "    eklenen sürekli faz: %.6e   rad   (Z_m DEĞİL, U(1))"
         % d["faz"],
+        "    REZONANS EŞLEMESİ (ferman 2-Z: bağlam basamağı lağvedildi)",
+        "      ölçülen gerilim ortalaması %.6e   tepesi %.6e"
+        % (d["gerilim"], d["gerilim_tepesi"]),
+        "      kapıların kilitlendiği ayrı rezonans noktası: %d"
+        % int(d["ayrı_rezonans"]),
+        "      hedef elle yazılmadı: veri manifoldunun kendi geriliminin",
+        "      tepesidir; her kodlamada yeniden tayin edilir.",
         "    Parametre veriyi matrisle ezmez: köşegen kontrollü faz",
         "    üsse skaler girer, yığın ekseni açılmaz (yığın boyu 1).",
     ])
@@ -133,6 +142,20 @@ class ParametreYazmaci:
              for (bas, kac) in self._yer.values()])
         return kontrol, self.genlik[kontrol]
 
+    @staticmethod
+    def gerilim(koordinat: np.ndarray) -> np.ndarray:
+        k = np.asarray(koordinat, float)
+        ileri = np.abs(np.diff(k, axis=-1, append=k[..., -1:]))
+        geri = np.abs(np.diff(k, axis=-1, prepend=k[..., :1]))
+        return ileri + geri
+
+    def rezonans(self, koordinat: np.ndarray, kac: int) -> np.ndarray:
+        k = np.asarray(koordinat, float)
+        n = int(k.shape[-1])
+        g = self.gerilim(k)
+        sira = np.argsort(-g, axis=-1)
+        return sira[..., np.arange(int(kac)) % n]
+
     def kenet(self, basamak: np.ndarray) -> Dict[str, np.ndarray]:
         b = np.asarray(basamak, np.int64)
         n = int(b.shape[-1])
@@ -143,17 +166,22 @@ class ParametreYazmaci:
             if kontrol.size == 0:
                 _KENET["kapısız_çağrı"] += 1.0
             return {"enerji": sifir, "faz": sifir}
-        hedef = kontrol % n
         w = 2.0 * (b.astype(float) / float(max(1, self.taban - 1))) - 1.0
-        w_t = w[..., hedef]
+        duz = w.reshape(-1, n)
+        gerilim = self.gerilim(duz)
+        hedef = self.rezonans(duz, int(kontrol.size))
+        w_t = np.take_along_axis(duz, hedef, axis=-1)
         teta = self.faz[kontrol]
-        enerji = -(w_t * (bag * teta)).sum(axis=-1)
-        faz = (w_t * teta).sum(axis=-1)
+        enerji = (-(w_t * (bag * teta)).sum(axis=-1)).reshape(b.shape[:-1])
+        faz = ((w_t * teta).sum(axis=-1)).reshape(b.shape[:-1])
         _KENET["çağrı"] += 1.0
         _KENET["kapı"] = float(kontrol.size)
         _KENET["seyirci"] = float(max(0, self.d - kontrol.size))
         _KENET["enerji"] = float(np.mean(np.abs(enerji)))
         _KENET["faz"] = float(np.mean(np.abs(faz)))
+        _KENET["gerilim"] = float(np.mean(gerilim))
+        _KENET["gerilim_tepesi"] = float(np.max(gerilim))
+        _KENET["ayrı_rezonans"] = float(np.unique(hedef).size)
         return {"enerji": np.asarray(enerji, float),
                 "faz": np.asarray(faz, float)}
 

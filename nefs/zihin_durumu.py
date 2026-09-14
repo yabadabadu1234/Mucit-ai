@@ -237,10 +237,25 @@ class QYazmac:
             "yok, norm sıfır çıkardı (ferman 5)")
         kan = getattr(self, "kan", None)
         if kan is not None:
+            pq = getattr(self, "pq", None)
+            yerel_faz = None
+            if pq is not None:
+                from .mahalli_yazmac import MahalliYazmac
+                self.yerel = MahalliYazmac(n_sat, sozluk, B)
+                self.yerel.yerlestir(bas, dolu)
+                kontrol, bag = pq.temas_kapilari()
+                self.yerel.kapilari_vur(
+                    kontrol,
+                    pq.rezonans(self.yerel.koordinat(), int(kontrol.size)),
+                    bag)
+                yer_j = np.arange(n_sat)
+                yerel_faz = self.yerel.faz[:, yer_j]
             yer_i = np.arange(n_sat)
             dizi = bas[:, (yer_i[:, None] + yer_i[None, :]) % n_sat]
             psi_f = kan.genlik(dizi.reshape(B * n_sat, n_sat),
-                               parametre=getattr(self, "pq", None))
+                               parametre=pq,
+                               yerel_faz=(None if yerel_faz is None
+                                          else yerel_faz.reshape(-1)))
             G = np.zeros((B, d), complex)
             G[yigin[sec], seviye.reshape(-1)[sec]] = psi_f[sec]
             genlik = G

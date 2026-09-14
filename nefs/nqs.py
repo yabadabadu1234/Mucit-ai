@@ -119,8 +119,8 @@ class ChebyshevKan:
         u = iz[..., None] + self.havuz_fazi[None, :]
         return np.clip(u, -1.0, 1.0)
 
-    def genlik(self, basamak: np.ndarray,
-               parametre=None) -> np.ndarray:
+    def genlik(self, basamak: np.ndarray, parametre=None,
+               yerel_faz=None) -> np.ndarray:
         u = self._vecih(basamak)
         D = int(self.ayar.derece)
         T = chebyshev_t(u, D)
@@ -131,6 +131,12 @@ class ChebyshevKan:
             k = parametre.kenet(basamak)
             reel = reel - np.asarray(k["enerji"], float).reshape(-1)
             sanal = sanal + np.asarray(k["faz"], float).reshape(-1)
+        if yerel_faz is not None:
+            y = np.asarray(yerel_faz, float).reshape(-1)
+            assert y.size == sanal.size, (
+                "mahallî yazmacın fazı konfigürasyon sayısınca olmalı: "
+                "%d ≠ %d (ferman 2-Ş)" % (y.size, sanal.size))
+            sanal = sanal + y
         reel = reel - float(reel.max())
         self._cagri += 1
         self._asikin += 2

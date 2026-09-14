@@ -1234,29 +1234,18 @@ edilmeyecektir. Bu bir mazeret değil, **mühürlenmiş bir hudut**tur:
 
 * Genlik **büyüklüğü** `float`tır; GF(2⁸) tableau yayılımına
   geçirilmeyecektir.
-* **HUDUT YAZMAÇTADIR, BÜTÜN GÖVDEDE DEĞİL.** "Aşkın işlem yok"
-  hükmü `nefs/qyazmac.py`nin faz defteri, kapı vurma ve belirteç
-  kodlaması içindir. Gövdede hâlâ aşkın koşan, canlı yolda bulunan
-  ve **sayılmış** yerler şunlardır:
-  - `kuantum/kapilar.py:dik_iki_kubit` -- `eigh` + `np.exp(-1j·λ)`
-    ile dizey üsteli. **En sıcak olanı budur**: her melekenin her
-    tuğlasında, her örnek için koşar.
-  - `nefs/ayna.py:kivilcim` -- `qft_dizeyi` (yoğun `np.exp` dizeyi),
-    `cosh`, `sinh`, `cos`, `sin`. Vakum kıvılcımı örneklemede koşar.
-  - `nefs/ayna.py:150-166` -- QFT ile kaydırma yolu, aynı sebeple.
-  - `nefs/zihin_durumu.py:harman` -- `cos`, `sin` ile küçük dönme.
-
-  **Bu liste bir kere eksik yazıldı**: evvelce yalnız `ayna` sayılmış,
-  en sıcak olan `dik_iki_kubit` atlanmıştı. Liste eksik yazılırsa
-  ferman 5 ihlâl edilmiş olur (yapılmayan yapıldı diye yazılmaz);
-  o hâlde yeni bir aşkın çağrı görülünce **derhal buraya eklenir**.
-  Bunlar iptal edilmedi ve gizlenmedi; menfezleri ayrı bir turun
-  işidir (ferman 2-C: çare imha değil tertip). **Bu satır silinmeden
-  "gövdede aşkın işlem yok" denemez.**
-* **O HÂLDE "TAMAMEN GALOİS'YA GEÇTİK" DENMEYECEKTİR.** Denirse yalan
-  olur (ferman 7-B'nin CNOT-Dihedral iddiasını iptal ettiği gibi).
-  Doğru cümle şudur: *"faz ve gayri-lineerlik Galois'dadır, genlik
-  büyüklüğü süreklidir."*
+* **AŞKIN YASAĞI GÖVDEDE KALKTI** (ferman 2-Ş). Formül hangi
+  fonksiyonu söylüyorsa o çağrılır; `kuantum/kapilar.py:dik_iki_kubit`
+  (`eigh` + dizey üsteli), `nefs/ayna.py:kivilcim`, `nefs/ayna.py`nin
+  QFT kaydırması ve `nefs/zihin_durumu.py:harman` bir **borç değildir**,
+  hakikî fonksiyonlarıyla koşar. Yasak `nefs/qyazmac.py`nin **faz
+  defteri** kanadında bâkîdir: `Z_m` üssü orada hâlâ tamsayıdır ve
+  Palmer çeyreği hâlâ işaret takasıdır.
+* **MUHASEBE KALKMADI** (ferman 5): aşkın çağrı sayılır ve beyanda
+  görünür. Kalkan yasaktır, sayı değildir.
+* **İDDİA ŞUDUR VE ARKASINDA DURULUR:** faz defteri ve
+  gayri-lineerlik Galois'dadır; genlik büyüklüğü ile gövdenin
+  ameliyeleri süreklidir ve öyle kalacaktır.
 
 ---
 
@@ -1283,8 +1272,10 @@ edilmeyecektir. Bu bir mazeret değil, **mühürlenmiş bir hudut**tur:
   o turda güncellenir. Güncellenmeyen formül, bir sonraki oturumda
   yalan söyler ve yalan söyleyen formül, koda bakmadan hüküm
   verilmesine sebep olur.
-* Dosyanın sonunda **"ne iddia edilmiyor"** babı bulunur ve orada
-  icra edilmemiş her hüküm sayısıyla yazılır (ferman 5, 1-E).
+* **"NE İDDİA EDİLMİYOR" BABI KALDIRILDI** (ferman 2-Y). Evvelce
+  dosyanın sonunda böyle bir bab bulunurdu; artık bulunmaz. İcra
+  edilmemiş hüküm bir **bab** değil, bir **sualdir** ve padişaha
+  sorulur.
 
 ---
 
@@ -1728,6 +1719,135 @@ Veri yazmacı tekil bir kelime yahut küçük bir tensör değildir:
 `N` quditlik metin kâinatının süperpozisyonudur (ferman 1-N-B'nin
 `sözlük^pencere` hükmünün ta kendisi). İki yazmaç **aynı mertebede**
 karşılaşır.
+
+---
+
+## ▓▓▓ 2-Y. FERMAN: "İDDİA ETMİYORUM" YASAK -- İDDİA EDENE KADAR SORULUR ▓▓▓
+
+> *"**Lütfen, iddia etmiyorum diye bir şey görmek istemiyorum!!!
+> İddia edene kadar bana sual sor!!**"*
+
+> *"Şerhten çıkarılacak cümle: 'iddia edilmiyor'. **İddia edilecek ve
+> ölçülecek.**"* (`KARARLAR.md`, evvelce söylenmiş ve mühürlenmediği
+> için tekrarlanmıştır -- ferman 1-B'nin ihlâlidir.)
+
+### YASAK
+
+*"Ne iddia edilmiyor: …"*, *"… olduğu iddia edilmiyor"*, *"henüz yok
+ve iddia edilmiyor"* -- hangi kılıkta olursa olsun **yazılmaz**. Bu
+cümle dürüstlük gibi görünüp mazeret olur (ferman 1-E'nin ikinci yasak
+sözü); üstelik borcu **kapatmaz**, yalnız **kaydeder** ve kayıt
+turdan tura taşınır.
+
+### YERİNE GELEN: SUAL
+
+Bir hüküm icra edilemiyorsa üç şıktan biri yapılır, dördüncüsü yoktur:
+
+    1. İCRA ET      icra edilebiliyorsa derhal edilir ve İDDİA EDİLİR.
+    2. SUAL SOR     icra ancak bir karara bağlıysa karar PADİŞAHA
+                    SORULUR -- şıklar sayısıyla sunulur (ferman 2-D).
+    3. İMKÂNSIZLIĞIN DELİLİNİ KOY   hükmün kendisi imkânsızsa delili
+                    yazılır (ferman 1-E). "Vaktim olmadı", "büyük iş",
+                    "riskli" delil değildir.
+
+**Ölçü kırmızı yanabilmesi (ferman 5) bununla nakzedilmez:** ölçülen
+bir kusur **sayısıyla** yazılmaya devam eder. Yasak olan sayı değil,
+sayının yerine geçen **mazeret cümlesidir**. Bir sayı kusuru
+gösteriyorsa gereği yapılır (ferman 1-Ü: müfettiş gereğini yapar).
+
+### GEÇMİŞE ŞÂMİLDİR
+
+`FORMUL.md`nin 8. babı ve `SERH.md`nin bütün *"ne iddia edilmiyor"*
+satırları kaldırılır; her biri ya bir **iddiaya** ya bir **suale**
+dönüştürülür. Kütük (`docs/KUTUK.md`) bir tarihçedir, o günkü hâli
+kaydeder ve geçmişi tahrif edilmez.
+
+---
+
+## ▓▓▓ 2-Z. FERMAN: BAĞLAM BASAMAĞI LAĞVEDİLDİ -- KENET REZONANSTADIR ▓▓▓
+
+> *"Ben bu **bağlam basamağının** ne olduğunu da anlamadım, eskiden
+> kalma bir **garabet** gibi."*
+> (`docs/zabit/KUME_13_KENET_ESLEMESI_REZONANS.md`)
+
+### LAĞVEDİLEN: ARDIŞIK BASAMAK
+
+*"Bağlam basamağı"* klasik dil modelinin dikkat penceresindeki `t`.
+sıra numarasıdır (positional index). Bizim yazmacımız bir pencere
+değil, `N` quditlik bir süperpozisyon okyanusudur; orada "birinci
+basamak, ikinci basamak" diye ipe boncuk dizmek diferansiyel
+geometriyi abaküse indirgemektir. Ortada ardışık basamak değil,
+**veri manifoldu üzerindeki rezonans noktaları** vardır.
+
+### KENET EŞLEMESİ: NE ELLE, NE ALL-TO-ALL
+
+    ALL-TO-ALL YASAK   her kontrolü bütün quditlere bağlamak dolanıklık
+                       monogamisini (CKW) çiğner: her şey her şeyle
+                       dolanınca dalga azamî entropili termal kuyuya,
+                       yâni beyaz gürültüye çöker. Odaklanma ölür.
+
+    STATİK ADRES YASAK "11. meleke daima 186. sektöre" demek elle
+                       yazılmış bir kukla tiyatrosudur: tenakuz başka
+                       yerde patlarsa meleke kör kalır (ferman 6).
+
+    ASIL: DİNAMİK LİF  Münasebet haritası verideki gerilimi -- topolojik
+                       yırtığı, Fubini-Study eğiminin tepesini -- gösterir;
+                       meleke lifi doğrudan o koordinata kilitlenir.
+
+        Rezonans* = argmax over j of  Gerilim(j | Münasebet, g_FS)
+        U_kapı    = üstel( −i · Bağ · Z_parametre(kontrol)
+                                    ⊗ Z_veri(Rezonans*) )
+
+* Eşleme **her kodlamada yeniden tayin edilir**; sabit bir tamsayı
+  olarak koda gömülmez (ferman 1-J, 6).
+* Maliyet `|kontrol| × N` değil, `|kontrol|`dir: kapı yalnız rezonans
+  tepesine dokunur, kalanı seyircidir (ferman 2-V).
+
+---
+
+## ▓▓▓ 2-Ş. FERMAN: HİBRİT YAZMAÇ -- MAHALLÎ TENSÖR + KAN FONKSİYONELİ ▓▓▓
+
+> *"Ortada yine bir yanlış anlama var."* · *"**Kesinlikle üçüncü yol:
+> ikisi beraber.**"*
+> (`docs/zabit/KUME_14_HIBRIT_YAZMAC_TERKIBI.md`)
+
+### TEŞHİS: İKİ SEVİYE BİRBİRİNE KARIŞTIRILDI
+
+    TEKİL KAVRAM LİFİ   d = veri_lifi × karo × karo
+                        TEK BİR QUDİTİN iç anatomisidir.
+    KÜLLÎ YAZMAÇ        N qudit × taban q; kapasite q^N.
+
+`_psi = (B, d)` dizisi **küllî yazmaç değildir** ve olamaz: o, tekil
+bir belirteç penceresinin yerel izdüşümüdür. `d`yi `q^N` yapmak da,
+`q^N` dalı yığına açmak da çöker -- bu yüzden ne ileri gidilebilmiş ne
+geri dönülebilmiş, eski dizi orada ceset gibi bırakılmıştır.
+
+### HÜKÜM: ÜÇÜNCÜ YOL -- İKİSİ BERABER
+
+    DONANIM KANADI   MahallîYazmaç ∈ ℝ^{N × 2}
+                       [:, 0] genlik çarpanı
+                       [:, 1] sürekli Lie faz açısı  θ ∈ [−π, π]
+                     Kapı yalnız temas ettiği indise faz rotasyonu
+                     vurur; kalan qudit seyircidir (ferman 2-V).
+
+    İDRAK KANADI     Genlik(w | MahallîYazmaç) = üstel( −Enerji(w; Θ)
+                         + i · toplam over j of (θ_j + w_j) ) / √Bölen
+                     q^N tensörle AÇILMAZ; yerel tohumları girdi alan
+                     Chebyshev-KAN çekirdeğiyle üretilir.
+
+* **SIRF MAHALLÎ YETMEZ:** çarpım durumunda dolanıklık sıfırdır
+  (`|Ψ⟩ = |ψ₁⟩ ⊗ … ⊗ |ψ_N⟩`), quditler birbirine yabancı adalar olur.
+* **SIRF FONKSİYONEL YETMEZ:** donanımda temas edilecek somut bir
+  yazmaç adresi ve faz defteri kalmaz.
+* **İKİSİ BERABER:** ayrık yazmaç zırhı + fonksiyonel küllî genlik.
+
+### AŞKIN YASAĞI TOPTAN KALKTI -- MUHASEBE KALDI
+
+Ferman 2-U'nun hükmü bütün gövdeye teşmil edilmiştir: formül hangi
+fonksiyonu söylüyorsa **o çağrılır** (`exp`, `cos`, `sin`, `eigh`).
+Ferman 2-J'nin *"gövdede sayılmış aşkın çağrılar"* listesi bir **borç
+olmaktan çıkmıştır**; fakat çağrılar **sayılmaya devam eder** ve
+beyanda görünür. Kalkan yasaktır, muhasebe değildir.
 
 ---
 

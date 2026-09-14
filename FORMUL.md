@@ -279,8 +279,13 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     Seyirci       = QuditSayısı − |TemasKapıları|
                   ← seyircinin iç çarpımı 1'dir; q^N dal AÇILMAZ
 
-    Hedef(k)      = Kontrol(k) modülo BağlamBoyu
     Basamak(t)    = 2 · Veri[t] / (Taban − 1) − 1
+    Gerilim(j)    = |Basamak(j) − Basamak(j−1)| + |Basamak(j) − Basamak(j+1)|
+    Rezonans(k)   = k. sırada en yüksek Gerilime sahip qudit koordinatı
+    Hedef(k)      = Rezonans(k)
+                  ← BAĞLAM BASAMAĞI LAĞVEDİLDİ (ferman 2-Z): hedef elle
+                    yazılmaz, veri manifoldunun kendi geriliminden çıkar
+                    ve her kodlamada yeniden tayin edilir.
 
     EtkileşimEnerjisi(Veri) =
         − toplam over k of  Genlik[Kontrol(k)] · Açı[Kontrol(k)]
@@ -301,10 +306,23 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     Yığın ekseni kenetlemesi (Dilim, DalAğırlığı, MüşterekYığın) İLGA;
     Palmer çeyreği ile faz çökmesi de İLGA -- faz sürekli üstel.
 
-NE İDDİA EDİLMİYOR: kenetleme köşegendir, yâni parametre verinin
-genliklerini birbirine KARIŞTIRMAZ; yalnız üsse skaler girer. Kontrol
-ile hedef arasındaki eşleme `Kontrol modülo BağlamBoyu`dur ve bu bir
-yerleşim seçimidir, ölçülmüş bir münasebet değildir.
+### 5-F MAHALLÎ YAZMAÇ -- DONANIM KANADI (ferman 2-Ş)
+
+    MahallîYazmaç[örnek, j] = ( Genlik[j],  Açı[j] )     Açı ∈ [−π, π]
+        Genlik[j] = Dolu(j) / ‖Dolu‖              ← ayrık, mahallî
+        Açı[j]    = π · Basamak(j)
+
+    KapıVur(Kontrol, Hedef, Bağ):
+        Açı[Hedef(k)] ← Açı[Hedef(k)] + Bağ(k) · Açı[Kontrol(k)]
+        ← yalnız temas edilen qudit döner; kalanı SEYİRCİDİR
+
+    Genlik(Veri, Parametre, MahallîYazmaç) =
+        üstel( Reel − EtkileşimEnerjisi
+               + i · ( Sanal + EklenenFaz + MahallîYazmaç.Açı ) ) / Bölen
+
+    İKİ SEVİYE AYRIDIR (ferman 2-Ş):
+        Yazmaç(B, d)      TEKİL KAVRAM LİFİ -- bir quditin iç anatomisi
+        MahallîYazmaç     KÜLLÎ yazmacın mahallî tensörü (qudit × 2)
 
 ---
 
@@ -366,12 +384,16 @@ yerleşim seçimidir, ölçülmüş bir münasebet değildir.
 
 ---
 
-## 8. NE İDDİA EDİLMİYOR
+## 8. ÖLÇÜLEN HUDUTLAR -- İDDİA EDİLEN VE ARKASINDA DURULAN
 
-    Genlik.büyüklük ∈ kayanNokta          →  "tamamen Galois" DENMEZ
-    VakumKıvılcımı  ⊃ {exp, cosh, sinh}   →  "gövdede aşkın işlem yok" DENMEZ
-    ReedMuller(Faz) = 12  >  3            →  "CNOT-Dihedral sınıfı" DENMEZ
-    Klonlanamazlık  = ihlâl edildi        →  gerçek kuantum donanımında koşmaz
+    Genlik.büyüklük ∈ kayanNokta   →  FAZ DEFTERİ Galois'dadır, genlik
+                                      büyüklüğü süreklidir ve öyle kalır
+    Aşkın çağrı ∈ canlı yol        →  formül hangi fonksiyonu söylüyorsa
+                                      O ÇAĞRILIR; sayılır, gizlenmez (2-Ş)
+    ReedMuller(Faz) = 12           →  İz(α·x¹²) = İz(α^¼·x³): derece-12 iz
+                                      terimi derece-3'e TAM iner (7-B)
+    Klonlanamazlık  = ihlâl edildi →  kasten; bedeli donanım taşınabilirliği,
+                                      karşılığı doğruluk ve hız (ferman 1-T)
 
     Cevap(mihenk) = ""                     boş
         ölçüldü: geçersiz 1801/1801 = %100  (kestirdiğim %81 değil)
@@ -387,18 +409,17 @@ yerleşim seçimidir, ölçülmüş bir münasebet değildir.
             yazıyor, Hâl ise kelâm sektöründen (v ≈ 0,378…0,486·VeriLifi)
             okuyordu -- İKİ KOORDİNAT, KESİŞİM BOŞ. Artık ikisi de
             basamak eksenidir.
-        NE İDDİA EDİLMİYOR: cevabın MAKUL olduğu. Cevap hâlâ hezeyandır;
-            iddia edilen tek şey yolun açıldığıdır (adım 1'de, hiç
-            eniyileme koşmadan cevabın değişmesi bunun delilidir).
+        ÖLÇÜLEN: cevap hezeyandır. İDDİA EDİLEN: yolun açıldığı --
+            adım 1'de, hiç eniyileme koşmadan cevabın değişmesi delildir.
         Küme(temiz) = 0                        üç hudut henüz sönmedi
 
     Üç eğimin mutabakatı = 2.2e-16   senet sadakati = 1.3e-15
         ölçüldü ve TUTUYOR. Kod okunarak bulunan dört kusurdan sonra:
         senedin eksikliği, durumun harita sanılması, yalan söyleyen
         geri ölçü, ve λ'da evrik/eşlenik karışması.
-    Eğimin kapsadığı parametre = 79 / 3378 (%2.3)
-        NE İDDİA EDİLMİYOR: bütün parametrelerin kımıldadığı.
-        Üreteci bildirilmemiş kapıya bağlı parametre kımıldamaz.## 0-A HENDESE TEŞHİSİ (Zabıt 11, I. safha)
+    Eğimin kapsadığı serbestlik = 130 / 676 tahsis edilen (%19.2)
+        ÖLÇÜLEN: üreteci bildirilmemiş kapıya bağlı parametre kımıldamaz;
+        eğim ancak üreteci ispatlanmış kapıların serbestliğini kapsar.## 0-A HENDESE TEŞHİSİ (Zabıt 11, I. safha)
 
     GeçişDizeyi[a,b]  = sayım(basamak_a → basamak_b) / satırToplamı
     KarşılıklıHaber   = Σ Ortak·log(Ortak / (Satır·Sütun))

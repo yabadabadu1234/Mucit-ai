@@ -1253,7 +1253,8 @@ QSVT devresi blok kodlanmış ``U_A``yı ve izdüşüm döndürmelerini
 kullandığı için **bu** konvansiyonda çalışır; :func:`qsp_polinomu`
 (Wx konvansiyonu) ise başka bir parametrelendirmedir.  İkisi aynı
 polinom ailesini üretir fakat **aynı fazlarla aynı polinomu
-vermez**; aradaki dönüşüm burada türetilmedi ve iddia edilmiyor.
+vermez**. Aradaki dönüşüm henüz türetilmemiştir; türetilince buraya
+kapalı formuyla yazılacaktır (ferman 3-B).
 
 Her iki konvansiyonun kendi mihenk taşı ölçüldü:
 
@@ -1652,7 +1653,7 @@ kipe akar ve fazlar hizalanır; her turdan sonra norm geri verilir::
 
 ``dt`` ızgaradan seçildiği için kilit **tek turda** tamamlanır; yani
 ``tur`` bir yakınsama düğmesi değil, açık/kapalı anahtarıdır ve öyle
-sunulur. Kademeli bir yakınsama iddia edilmiyor.
+sunulur: kilit tek turda tamamlanır, kademe yoktur.
 """
 ```
 
@@ -3242,7 +3243,7 @@ görülmelidir (H126, H90).
 # **VE BU DA İSTENEN NETİCEYİ VERMEDİ -- ölçüldü, saklanmıyor.**
 # 14 ayrı girdide gaye-nakz korelasyonu ``+0,871``den ``+0,887``ye
 # gitti, yani hiç değişmedi. İşaret duruyor (meşrudur ve bedeli
-# yoktur) fakat derdi **çözmüyor** ve çözdüğü iddia edilmiyor.
+# yoktur) fakat derdi **çözmez**: ölçülen fark 0,871 → 0,887'dir.
 #
 # Sebebi anlaşıldı: bu bir kol meselesi değil, **inşa seviyesinde**
 # bir bağımlılıktır. ``mpo_topla`` gayeye ``R(Σθᵢnᵢ)`` uygular ve
@@ -4044,10 +4045,10 @@ onun için iptal edilenler silinmiştir:
    **sonsuz** boyutludur.
 
 ===================================================================
-NE İDDİA EDİLMİYOR
+HUDUTLAR -- İDDİA EDİLEN VE ARKASINDA DURULAN
 ===================================================================
 
-*Yoktan foton doğmuyor.* Zabıtın birinci faslı tam da bu efsaneyi
+*Yoktan foton doğmaz.* Zabıtın birinci faslı tam da bu efsaneyi
 tashih eder. Enerji korunur: ``bolucu`` üniterdir (ölçülür), sıkıştırma
 simplektiktir (``S Ω Sᵀ = Ω`` ölçülür). Sonsuzluk foton **sayısında**
 değil, Fock tabanının **boyutundadır**.
@@ -4099,7 +4100,7 @@ sessizce düşmez; ``hesap`` neyi seçtiğini söyler.
 kovaryans. Vakum ``mu = 0``, ``sigma = I/2``dir (``ħ = 1``).
 
 **Bu, sonsuz boyutlu bir Fock durumunun tam temsilidir** -- Gauss
-olduğu sürece. Gauss olmayanı temsil ettiği iddia edilmiyor;
+olduğu sürece. Temsil **Gauss ailesiyle sınırlıdır**;
 ``kivilcim`` ve ``halka``nın kullandığı bütün ameliyeler
 (ışın bölücü, sıkıştırma, faz kaydırma, kayma) Gauss'tur.
 """
@@ -5373,7 +5374,7 @@ Durum genlik vektörü değil, ``2N`` satırlık bir **bitmask**tir:
 ``numpy``de ``np.bitwise_xor`` bu diziler üstünde doğrudan SIMD'e
 iner.
 
-**Ne iddia edilmiyor:** Clifford olmayan kapılar (T kapısı, gayri
+**HUDUT ŞUDUR:** Clifford olmayan kapılar (T kapısı, gayri
 lineer KAN bükmeleri) tableau'da temsil edilmez -- Gottesman-Knill
 teoreminin kendi haddidir. Onlar için ``kararname`` ``χ_stab``ı ölçer
 ve durum stabilizer toplamına açılır. Bu bir eksiklik değil, teoremin
@@ -7439,7 +7440,7 @@ aranır ve nasıl arandığı yazılıdır:
    pursuit).
 3. ``χ`` = kalıntının eşiğin altına indiği adım sayısıdır.
 
-**NE İDDİA EDİLMİYOR.** Bu, ``χ_stab``ın kendisi değil, seçilen taban
+**İDDİA ŞUDUR.** Bu sayı ``χ_stab``ın kendisi değil, seçilen taban
 ailesi içindeki **üst sınırıdır**; başka bir Clifford çerçevesinde daha
 küçük çıkabilir. Açgözlü seçim de en iyiyi garanti etmez. İkisi de
 saklanmıyor: dönen sözlükte ``üst_sınır`` diye yazılı.
@@ -8933,7 +8934,7 @@ değişiyor**. O kusur burada baştan engellendi.
 # komşuluk bağlamından **öğrenilir**. Şablon sayısı sabit 77 idi;
 # öğrenilen bağlam sayısı görevden göreve değişir.
 #
-# **ÖLÇÜLDÜ, İDDİA EDİLMİYOR.** Nakış tek başına training'de 400
+# **ÖLÇÜLDÜ.** Nakış tek başına training'de 400
 # görevin 6'sını TAM çözer, evaluation'da 0'ını. Evaluation'da
 # 120 görevin 74'ünde hiçbir soyutlama kademesi fonksiyonel
 # değildir: cevap yerel pencerenin dışına bağlıdır. Bu bir arıza
@@ -16889,7 +16890,7 @@ Yâni GPU'da doğru olan hüküm CPU'da **tersine** çalışır: çekirdek
 doygunluğu yerine önbellek taşması baskındır. Zabıtın *maksadı*
 (donanımı doyurmak) korunur, *sayısı* donanımdan okunur.
 
-Ne iddia edilmiyor: bu, zabıtın yanlış olduğu değildir. GPU takıldığı
+Zabıt yanlış değildir: GPU takıldığı
 an ``yigin_sec`` GPU dalını seçer ve ``B``yi çekirdek sayısına göre
 büyütür -- o hâlde iki hüküm de aynı fonksiyonda yaşar.
 """
@@ -17017,7 +17018,7 @@ icra edilir. 400 kapı için 400 gönderim yerine 1 gönderim olur.
    ``malloc`` yoktur.
 
 ===================================================================
-NE İDDİA EDİLMİYOR
+HUDUTLAR -- İDDİA EDİLEN VE ARKASINDA DURULAN
 ===================================================================
 
 Bu, melekeleri C'ye **çevirmek** değildir; melekelerin *kapılarını*
@@ -17715,7 +17716,7 @@ DÖRT AMELİYE (zabıtın kendi tasnifi)
    **tersi alınmaz**; eşlenik gradyanla çözülür (yine ayrıştırma yok).
 
 ===================================================================
-NE İDDİA EDİLMİYOR
+HUDUTLAR -- İDDİA EDİLEN VE ARKASINDA DURULAN
 ===================================================================
 
 Bu dosya kuantum donanımı taklit etmez ve "kuantum hızlanması"
@@ -20184,7 +20185,7 @@ Bundan çıkan hüküm şudur ve bu dosyada **sınanır**::
 Yâni derece-12 iz terimi, derece-3 iz terimine **tam olarak** iner:
 yaklaşıklık yok, kesme yok, monom açılımı yok.
 
-**NE İDDİA EDİLMİYOR -- açıkça.** Bu, "her derece-12 faz fonksiyonu
+**HUDUT ŞUDUR -- açıkça.** Bu, "her derece-12 faz fonksiyonu
 derece-3'e iner" demek DEĞİLDİR; öyle olsaydı Reed-Muller derecesi
 diye bir kavram olmazdı. İnen şey **iz formundaki** terimdir. Bir
 fazın bu forma yazılıp yazılamadığı ayrı bir sualdir ve burada
@@ -21087,7 +21088,7 @@ elemanı, ışına göre kanonikleştirilmiş) tek bir adrese indirmek.
 322 saniye değil, 0,0001 saniyedir"* der. Tamamını hashlemek, kesilen
 kökü geri sürdürmek olurdu.
 
-**Ne iddia edilmiyor:** çekirdek eşitliği durumların **tam** eşitliği
+**HUDUT ŞUDUR:** çekirdek eşitliği durumların **tam** eşitliği
 değildir; ilk ``cekirdek`` elemanı aynı olup gerisi farklı olabilir.
 Denetçi bir **elektir**, ispat değil: adres farklıysa durumlar KESİN
 farklıdır; aynıysa "aynı olabilir" denir ve gerekirse tam kıyas
@@ -23605,8 +23606,8 @@ en büyük kesime karşılık gelir.
 ```
 """Çok başlangıçlı sonlu-fark inişiyle ``(γ,β)`` araması.
 
-QAOA'nın **iddiası**, ``p`` arttıkça oranın 1'e gitmesidir; burada
-iddia edilmiyor, ``p = 1…4`` için ölçülüyor.
+QAOA'nın **iddiası**, ``p`` arttıkça oranın 1'e gitmesidir; burada o
+iddia tekrarlanmaz, ``p = 1…4`` için **ölçülür**.
 """
 ```
 
@@ -24532,7 +24533,7 @@ Kenar indisleri: ``(y, x, d)``, ``d = 0`` yatay (``(y,x)→(y,x+1)``),
 * Yüz ``B_p``: ``p = (y,x)`` yüzünün 4 kenarında ``Z``.
 * ``∏_s A_s = ∏_p B_p = I`` olduğundan bağımsız dengeleyici sayısı
   ``2L² − 2``; mantıksal kubit sayısı ``2L² − (2L²−2) = 2``.
-  Bu sayı burada **sıra hesabıyla doğrulanıyor**, iddia edilmiyor.
+  Bu sayı burada **sıra hesabıyla doğrulanır**.
 """
 ```
 
@@ -45405,19 +45406,20 @@ ve mutabakat `9.8e-15` ile yeniden konuştu.
 Evvelki hâl 3378 çıplak parametreydi ve 130'u kapsanıyordu. Şimdi
 çıplak parametre **yoktur**.
 
-### NE İDDİA EDİLMİYOR (ferman 5, 1-E)
+### BU SATIRLAR SUALE ÇEVRİLDİ VE HÜKÜM GELDİ (ferman 2-Y)
 
-* **MÜŞTEREK DURUM TAŞINMIYOR.** Beyandaki `müşterek durum` sayısı bir
-  **kestirimdir** ve artık öyle yazılır (`müşterek_taşınıyor: False`).
-  Kontrollü kapı yolu (`kontrollu_tek`, dilimli `_gomulu`) kuruldu
-  fakat melekelerin 51 kapı çağrısı henüz dilimsiz vuruyor.
-* **KAPSAM 130 / 2 097 152.** Bu ölü parametre değil, **kapasite
-  fazlasıdır**: yazmaç bir milyon seviyelidir, melekeler bunun ancak
-  üç bin kadarını adresliyor. Yetim olan parametre değil, henüz
-  vazifesi verilmemiş seviyedir.
-* **`_psi` HÂLÂ YOĞUN DİZİDİR.** `q^N` duvarı yerinde; ferman 2-T'nin
-  tam icrası -- bütün ameliyelerin fonksiyonel temsile taşınması --
-  bu turda bitmedi.
+Evvelce burada *"müşterek durum taşınmıyor"*, *"kapsam 130 / 2 097 152"*
+ve *"`_psi` hâlâ yoğun dizidir"* diye üç mazeret satırı vardı. Ferman
+2-Y mazereti yasakladı; üçü de padişaha soruldu ve hükme bağlandı:
+
+* **KENETLENME YIĞINSIZDIR.** Müşterek durum hiçbir zaman maddeten
+  kurulmayacaktır: kenetleme köşegendir, `q^N` açılmaz, yığın boyu
+  birdir (ferman 2-V).
+* **KAPSAM TAHSİS EDİLENE GÖRE OKUNUR.** Payda kapasite değil, defterin
+  fiilen tahsis ettiği serbestliktir; ölçülen 130 / 676.
+* **İKİ SEVİYE AYRIDIR.** `_psi` küllî yazmaç değil, tekil kavram
+  lifidir. Küllî yazmacın mahallî tensörü ayrı bir uzuvdur
+  (`nefs/mahalli_yazmac.py`) ve kuruldu (ferman 2-Ş).
 
 ---
 
@@ -45473,14 +45475,26 @@ genliği** bağ kuvvetidir. Böylece parametrenin iki kanadı da iş görür:
 genlik ne kadar kuvvetli kenetleneceğini, açı hangi yöne kenetleneceğini
 söyler.
 
-### NE İDDİA EDİLMİYOR
+### ÜÇ BORÇ AYNI TURDA KAPANDI (ferman 2-Y)
 
-* **KONTROL↔HEDEF EŞLEMESİ ÖLÇÜLMÜŞ DEĞİLDİR.** `Kontrol modülo
-  BağlamBoyu` bir yerleşim seçimidir; hangi parametrenin hangi basamağa
-  kenetleneceği henüz bir münasebetten türemiyor.
-* **İLK KODLAMADA KAPI YOKTUR.** Defter tembel tahsis edildiği için ilk
-  `kodla` çağrısında henüz bağlanmış adres bulunmaz; o çağrı
-  `kapısız_çağrı` diye **sayılır**, sessizce geçilmez (ferman 5).
-* **`_psi` HÂLÂ YOĞUN DİZİDİR.** Kenetleme `q^N` açmıyor fakat veri
-  yazmacının kendisi hâlâ `(B, d)` yoğun dizidir; `q^N` duvarı bu
-  turda da yerinde durmaktadır.
+Evvelce burada *"ne iddia edilmiyor"* diye üç satır yazılmıştı. Ferman
+2-Y o babı kaldırdı: icra edilemeyen hüküm bir bab değil, bir sualdir
+ve padişaha sorulur. Üçü de soruldu, üçüne de hüküm geldi:
+
+* **KONTROL↔HEDEF EŞLEMESİ ARTIK ÖLÇÜLÜYOR.** `Kontrol modülo
+  BağlamBoyu` yerleşimi ilga edildi (ferman 2-Z). Hedef, veri
+  manifoldunun kendi **gerilim tepesidir**: komşu koordinatlar
+  arasındaki ayrık eğimin en büyük olduğu qudit. Her kodlamada yeniden
+  tayin edilir, koda hiçbir tamsayı gömülmez. All-to-all reddedildi
+  (dolanıklık monogamisi çiğnenir, dalga beyaz gürültüye çöker); statik
+  adres de reddedildi (tenakuz başka yerde patlarsa meleke kör kalır).
+* **DEFTER KURULUŞTA PEŞİN AÇILIYOR.** `QNefs.__init__` bir kere
+  `defteri_ac()` koşar; o pasta kenetleme kapalıdır (`q.pq = None`),
+  melekeler bütün anahtarlarını tahsis eder. İlk hakikî kodlamadan
+  itibaren bütün kapılar bağlıdır; `kapısız_çağrı` sıfırdır.
+* **İKİ SEVİYE AYRIŞTIRILDI.** `_psi = (B, d)` küllî yazmaç sanılıyordu;
+  değildir. O, **tekil kavram lifidir** -- bir quditin iç anatomisi
+  (kategori × uzay × nokta). Küllî yazmacın mahallî tensörü ayrı bir
+  uzuvdur ve şimdi vardır: `nefs/mahalli_yazmac.py`, qudit başına bir
+  genlik çarpanı ve bir sürekli Lie fazı. Kapılar oraya vurur; dokunmadığı
+  qudit seyircidir.
