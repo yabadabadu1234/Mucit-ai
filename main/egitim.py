@@ -35,6 +35,7 @@ from nefs.siklotomik import (SiklotomikAyari,
 from nefs.qcekirdek import cekirdek_beyani
 from nefs.parametre_yazmaci import (ParametreAyari, ParametreYazmaci,
                                     parametre_beyani)
+from nefs.nqs import nqs_beyani
 from tanilama.hizolcer import (Hizolcer, hizolcer_bagla,
                                hizolcer_beyani)
 from nefs.gpu_akis import GpuAyari, gpu_akisi
@@ -749,6 +750,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "çekirdek": cekirdek_beyani(),
             "parametre_yazmacı": parametre_beyani(
                 getattr(nefs, "pq", None)),
+            "kan_nqs": nqs_beyani(getattr(nefs, "kan", None)),
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
             "veri": len(veri),

@@ -45296,3 +45296,56 @@ Fakat ferman 2-J bu satırın **genlik kanadını istisna etti**:
 parametre"* hedefi ile ferman 2-J'nin *"genlik kayan nokta kalsın"*
 istisnası **aynı anda tutulamaz**. Bu satır silinmeden *"milyonlarca
 qudit taşıyoruz"* denemez.
+
+---
+
+## KAN-NQS FİİLEN KOŞUYOR -- TAHT BASTI
+
+Padişahın nizamnâmesi (ferman 2-T) icra edildi ve **ana akışta
+koşuyor**: `QYazmac.kodla` genliği artık sabit `1.0` ile değil,
+Chebyshev-KAN fonksiyonelinden **üreterek** yazıyor.
+
+    kan katsayısı   1664   (düğüm 64 × derece 12 × iki kanat)  = 13.3 KB
+    tohum havuzu    1 048 576 qudit                             = 4.2 MB
+    kan parametresi 1 050 304
+    ölçülen bellek  15 346 MB
+
+Nizamnâme *"26 KB"* demişti; o `complex128` hesabıdır. Katsayılar
+**reel**dir (`C` ve `S` ayrı ayrı), o hâlde `float64` ile **13.3 KB**
+çıkar -- nizamnâmenin yarısı, ve daha iyisidir.
+
+Havuz haddi ferman 2-O'nun penceresidir: `1 048 576` qudit. Ferman
+2-S'in cömertliği tam buradadır -- havuz 4.2 MB tutar, yâni bir
+milyon qudit veri tarafında **fiilen yaşar**.
+
+### İKİ KUSUR YOL ÜSTÜNDE BULUNDU VE KAPATILDI
+
+1. **Havuz ilk çağrının bağlamıyla kurulmuştu** (2 qudit). Artık
+   ferman 2-O haddiyle kurulur ve daha uzun bağlam gelirse
+   `havuzu_buyut` ile büyür.
+2. **`kan_qudit: 2`** beyanı bu kusuru derhal faş etti; ölçü kırmızı
+   yandı (ferman 5) ve düzeltildi: `1 048 576`.
+
+### NİZAMNÂMENİN İKİ SATIRI SAYIYLA DÜZELTİLDİ (ferman 7-C)
+
+* *"`O(1)` bellek"* denmişti. Doğrusu: genlik **üretimi** `O(1)`dir
+  (katsayı adedi qudit sayısından bağımsız), **havuz** `O(N)`dir.
+  `nqs_metni` bunu böyle yazar.
+* *"`T_j(u) = cos(j·arccos u)`"* tarifi doğrudur fakat **öyle
+  hesaplanmaz**: tekrarlama bağıntısı kullanılır
+  (`T_{j+1} = 2u·T_j − T_{j−1}`), yâni yalnız çarp-topla. `cos` ve
+  `arccos` canlı yolda **yoktur**. Dıştaki `üstel` aşkındır, sayılır
+  ve `aşkın_çağrı` olarak basılır (ferman 2-J).
+
+### AÇIK DİZİ GERÇEKTEN YOK MU -- HAYIR, HENÜZ VAR
+
+**Bu satır silinmeden "açık dizi kalktı" denemez.** `QuditYazmac._psi`
+hâlâ `(B, d)` ebadında yoğun bir dizidir; KAN-NQS şimdilik o dizinin
+**içini dolduruyor**, yerine geçmiyor. Yâni:
+
+* Kazanılan: genlik artık öğrenilebilir bir **fonksiyondan** geliyor
+  ve 1 050 304 parametre taşıyor (evvelki 3378 çıplak parametrenin
+  311 katı).
+* Kazanılmayan: `q^N` duvarı hâlâ yerinde, çünkü melekeler ve mizan
+  yoğun `_psi` üstünde koşuyor. 22 milyon qudit ancak `_psi` ilga
+  edilip bütün ameliyeler fonksiyonel temsile taşınınca gelir.

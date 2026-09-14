@@ -1343,6 +1343,7 @@ class QNefs:
         self.p = QParametre(tohum, genislik=int(
             getattr(self.ayar, "parametre_genisligi", 1)))
         self.pq: Optional["ParametreYazmaci"] = None
+        self.kan: Optional["ChebyshevKan"] = None
         self.sira = tuple(sira)
         self.s = qsicil()
         self.gaye = bool(gaye)
@@ -1382,6 +1383,12 @@ class QNefs:
             ayar = replace(ayar, yigin=B)
         q = QYazmac(n_satir, ayar)
         self.parametre_yazmacini_kur(int(q.y.d), int(B))
+        if self.kan is None:
+            from .nqs import ChebyshevKan, NqsAyari
+            self.kan = ChebyshevKan(
+                int(self.ayar.veri_lifi), int(n_satir),
+                NqsAyari(tohum=int(self.ayar.tohum)))
+        q.kan = self.kan
         q.kodla(E)
         if q.iz.senet_acik:
             q.iz.kapi_yaz("başlangıç", (),

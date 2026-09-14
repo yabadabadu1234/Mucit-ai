@@ -1512,6 +1512,86 @@ raporda böyle yazılır.
 
 ---
 
+## ▓▓▓ 2-T. FERMAN: GENLİK AÇIK DİZİ DEĞİL **FONKSİYONDUR** -- KAN-NQS ▓▓▓
+
+> *"Genlikler, her bir konfigürasyon için **Reel Chebyshev-KAN Nöral
+> Kuantum Durumu (NQS)** ile kapalı cebirsel bir fonksiyonel olarak
+> üretilir... `|Ψ⟩` durumu bellekte `q^N` adet küsüratlı sayıdan
+> ibaret **AÇIK BİR DİZİ olarak TUTULMAZ**... Ferman 2-J'nin istisnası
+> **artık bir pranga değildir**... TTN/MPS **devreden çıkarılmıştır**...
+> 22 Milyon Qudit **Haktır**."*
+
+### İKİLEMİN ERİTİLDİĞİ YER
+
+Ferman 7 genliği Galois'ya çağırdı, ferman 2-J genliği kayan noktada
+bıraktı; ikisi beraber bizi **beş qudide** çiviledi (88 GB'da 32
+kübit). Çelişki şuradan eritilir: **kusur küsüratta değil, açık
+dizidedir.** Genlik küsüratlı kalır -- fakat bellekte **saklanmaz**,
+istenince **üretilir**.
+
+    Ψ(w₁ … w_N) = (1/√Z) · üstel( toplam over k of Φ_k(ω(w; θ)) )
+
+    Φ_k(u) = toplam over j of  C[k,j]·T_j(u)   ← küsüratlı REEL genlik
+           + i · toplam over j of S[k,j]·U_j(u) ← küsüratlı KOMPLEKS faz
+
+`T_j` birinci nevi, `U_j` ikinci nevi Chebyshev polinomudur.
+
+### BELLEK BİLÂNÇOSU -- SAYIYLA
+
+    KAN katsayıları   C, S ∈ ℝ^{K×(derece+1)},  K=64, derece=12
+                      64 × 13 × 2 = 1664 katsayı        ≈ 26 KB
+    Tohum/faz havuzu  Θ ∈ ℝ^{2N},  qudit başına 4 bayt
+                      22 000 000 × 4 bayt                = 88 MB
+    ─────────────────────────────────────────────────────────────
+    88 GB'ın kalanı   QROM blok kodlama, FCT tamponları, hat
+
+**MERTEBE DOĞRU YAZILIR** (ferman 5): genlik **üretimi** `O(1)`dir --
+katsayı adedi `N`den bağımsızdır. Havuz ise `O(N)`dir: 22 milyon
+qudit 88 MB tutar. *"Toptan `O(1)`"* denmez; doğru cümle
+**"genlik `O(1)`, havuz `O(N)`"**dir.
+
+### TTN, MPS, MERA HEPSİ DEVREDEN ÇIKTI
+
+> *"Çare tensör büzülmesi değildir."*
+
+Dolaşıklık Hacim Kanununa (`S ~ N/2`) çarpınca bağ boyutu
+`χ → 2^{N/2}` patlar; `χ ≤ 16` ile budayınca dalga beyaz gürültüye
+döner. Ferman 7'nin SVD/MPS yasağı bu fermanla **teyit ve teşmil**
+edilir: TTN ve MERA de yasaktır.
+
+### İŞLEM HATTI
+
+    Θ havuzu → Gauss-Chebyshev-Lobatto kökleri → FCT (O(K log K))
+             → QSVT Gibbs süzgeci P_β(Ĥ) → deterministik ağaç intacı
+
+* **MATRİS TERSİ YOKTUR.** GCL düğümlerinde `Xᵀ X = I`, şart sayısı
+  `κ = 1.0`. Katsayılar Hızlı Chebyshev Dönüşümüyle kapalı formda
+  çıkar.
+* **KÜSÜRAT KORUNUR.** Genlikler `0`/`1`e yuvarlanmaz; `e^{−βL}`
+  ağırlığıyla son ana kadar küsüratını taşır.
+
+### ÜÇ ÇELİŞKİ AÇIKÇA YAZILIDIR -- SİLİNMEDEN İDDİA EDİLEMEZ
+
+1. **FERMAN 2-P İLE GÖRÜNÜRDEKİ ÇELİŞKİ YOKTUR.** 2-P
+   Gauss-Chebyshev-Lobatto düğümlerini **hat araması** olarak ilga
+   etti. Burada GCL bir arama değil, Chebyshev dönüşümünün
+   **düğüm kümesidir**. İki ayrı vazifedir; 2-P bâkîdir.
+2. **FERMAN 2-J'NİN AŞKIN YASAĞI KISMEN DELİNİR.** `T_j` ve `U_j`
+   **tekrarlama bağıntısıyla** hesaplanır (yalnız çarp-topla; `cos`,
+   `arccos` **yoktur**). Fakat dıştaki `üstel` aşkındır ve canlı
+   yoldadır. Bu, ferman 2-J'nin sayılı aşkın çağrı listesine
+   **eklenir**; gizlenmez.
+3. **NİHÂÎ CEVAPTA BORN ÇÖKMESİ KALDIRILDI.** *"Born ölçümü ile
+   rastgele zar atılmaz; Fubini-Study metriği üzerinden
+   **deterministik** olarak okunur."* Bu, ferman 1-T'nin *"istisna:
+   nihaî cevap"* hükmünü **nakzeder** ve onun yerine geçer:
+
+        x_k* = argmax [ g_FS⁺ · ∇ log P(x_k | x_<k) ]
+
+   `nefs/soyle.py`deki Born çökmesi bu fermanla **ilga edilmiştir**.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...

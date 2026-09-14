@@ -285,6 +285,12 @@ class Memuriyet:
         _ADRES["p_adedi"] = _pq.get("parametre", 0)
         _ADRES["p_müşterek_MB"] = round(
             _pq.get("müşterek_bayt", 0) / 1e6, 1)
+        from nefs.nqs import nqs_beyani
+        _k = nqs_beyani(getattr(self.nefs, "kan", None))
+        _ADRES["kan_katsayı"] = _k.get("katsayı", 0)
+        _ADRES["kan_qudit"] = _k.get("qudit", 0)
+        _ADRES["kan_parametre"] = _k.get("parametre", 0)
+        _ADRES["kan_KB"] = round(_k.get("katsayı_bayt", 0) / 1e3, 1)
         _ADRES["bellek_MB"] = round(
             _pq.get("ölçülen_bellek", 0) / 1e6, 1)
         lif = tuple(int(x) for x in q.y.ayar.lif)

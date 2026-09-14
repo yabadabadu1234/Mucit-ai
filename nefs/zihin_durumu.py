@@ -235,6 +235,14 @@ class QYazmac:
         assert bool(dolu.any()), (
             "bağlamın hiçbir basamağı dolu değil -- yazmaca yazacak şey "
             "yok, norm sıfır çıkardı (ferman 5)")
+        kan = getattr(self, "kan", None)
+        if kan is not None:
+            yer_i = np.arange(n_sat)
+            dizi = bas[:, (yer_i[:, None] + yer_i[None, :]) % n_sat]
+            psi_f = kan.genlik(dizi.reshape(B * n_sat, n_sat))
+            G = np.zeros((B, d), complex)
+            G[yigin[sec], seviye.reshape(-1)[sec]] = psi_f[sec]
+            genlik = G
         self.y.psi = genlik.astype(self.y.ayar.tip)
         self.y.normalize()
         self.y.faz(faz)
