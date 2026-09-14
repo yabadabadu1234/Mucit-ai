@@ -2248,6 +2248,34 @@ kapasitesi `q^N`dir ve hiçbir yerde açılmaz (ferman 2-T, 2-V).
 
 ---
 
+## ▓▓▓ 2-Ò. FERMAN: MANA -- NE ZAMAN NE KONUŞACAĞINI ÖĞRENMİŞ MAKİNE ▓▓▓
+
+> *"Üçü de aynı şeyin üç vechidir lâkin bizim nihayette elde ettiğimiz
+> makine, **ne zaman ne konuşacağını öğrenmiş bir makinedir**."*
+
+### ÖĞRENİLEN ŞEY
+
+    Muhakeme        yazanın aklı nasıl işlemiş (ferman 1-Ç)
+    Hakikat ayrımı  veride doğru olan ne, yanlış olan ne (ferman 1-Ç)
+    Münasebet       müşterek münasebet haritası (ferman 1-I)
+                    ── üçü ayrı hedef değil, TEK öğrenmenin üç vechi
+
+**FAKAT NİHAÎ NETİCE ÜÇÜ DE DEĞİL, ÜÇÜNÜN MEYVESİDİR:**
+
+    NE ZAMAN NE KONUŞACAĞINI BİLEN MAKİNE.
+
+* Ölçü *"doğru belirteci bildi mi"* değildir. Ölçü **iki katlıdır**:
+  konuşulacak yerde **konuşmak**, susulacak yerde **susmak** -- ve
+  konuşurken **o anın gerektirdiğini** söylemek.
+* **SÜKÛT BİR KUSUR DEĞİL, BİR HÜKÜMDÜR.** Bilmediğini makul biçimde
+  söylemek (ferman 2-Î) bir cevaptır; hezeyanla konuşmak cevapsızlıktan
+  **beterdir**.
+* O hâlde mizanda tartılan şey yalnız hedefe sadakat değil, **zamanın
+  ve makamın** doğru okunmasıdır: `sükût`, `kelâm` ve `makam`
+  sektörleri süs değil, mananın ta kendisidir.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...
