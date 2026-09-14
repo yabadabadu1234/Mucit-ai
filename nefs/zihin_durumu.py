@@ -252,14 +252,15 @@ class QYazmac:
                     bag)
                 yer_j = np.arange(n_sat)
                 yerel_faz = self.mahalli.faz[:, yer_j]
-            yer_i = np.arange(n_sat)
-            dizi = bas[:, (yer_i[:, None] + yer_i[None, :]) % n_sat]
-            psi_f = kan.genlik(dizi.reshape(B * n_sat, n_sat),
-                               parametre=pq,
+            kulli = kan.genlik(bas, parametre=pq,
                                yerel_faz=(None if yerel_faz is None
-                                          else yerel_faz.reshape(-1)))
+                                          else yerel_faz.mean(axis=-1)))
+            mahalli_g = (self.mahalli.genlik[:B, :n_sat]
+                         if pq is not None else
+                         dolu.astype(float))
             G = np.zeros((B, d), complex)
-            G[yigin[sec], seviye.reshape(-1)[sec]] = psi_f[sec]
+            agirlik = (mahalli_g * kulli[:, None]).reshape(-1)
+            G[yigin[sec], seviye.reshape(-1)[sec]] = agirlik[sec]
             genlik = G
         self.y.psi = genlik.astype(self.y.ayar.tip)
         self.y.normalize()

@@ -9,9 +9,9 @@ __all__ = ["MIHENK", "MIHENK_CEVABI", "CEVAP_PAYI", "cevap_haddi",
            "mihenk_sor", "Nobet", "nobet_kur", "mihenk_metni"]
 
 
-MIHENK = "Question: What is the capital city of France? Answer:"
+MIHENK = "Question: What is 17 plus 25? Answer:"
 
-MIHENK_CEVABI = "Paris"
+MIHENK_CEVABI = "42"
 
 
 def _basamaklar(metin: str, kodlama: str, taban: int, basamak: int

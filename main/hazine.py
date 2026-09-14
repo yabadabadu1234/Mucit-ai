@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Mapping, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["ust_coz", "UZANTI", "BICIM", "koy", "al", "listele", "beyan", "rapor"]
+__all__ = ["ust_coz", "UZANTI", "BICIM", "muhurle", "koy", "al", "listele", "beyan", "rapor"]
 
 UZANTI = ".safetensors"
 
@@ -64,6 +64,18 @@ def _birlestir(duz: Mapping[str, np.ndarray], karmasik: List[str]
 
 def _yol(yol: str) -> str:
     return yol if yol.endswith(UZANTI) else yol + UZANTI
+
+
+def muhurle(kapanan: int, *arg, **kw):
+    if int(kapanan) <= 0:
+        return {"yazıldı": False, "kapanan_küme": 0,
+                "sebep": "hiçbir küme kapanmadı -- yarıda kesilen koşu "
+                         "hazineye yazmaz (ferman 1-Y)"}
+    o = koy(*arg, **kw)
+    o = dict(o) if isinstance(o, dict) else {"netice": o}
+    o["yazıldı"] = True
+    o["kapanan_küme"] = int(kapanan)
+    return o
 
 
 def koy(yol: str, agirliklar: Mapping[str, Any],

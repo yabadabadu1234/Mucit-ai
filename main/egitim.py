@@ -694,7 +694,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                         hendese=hendese, munasebet=mun["harita"],
                         onceki=devam.get("harita"))
 
-    kayit = hazine.koy(
+    _kapanan = int(mun.get("temizlenen", 0)) + int(mun.get("kirli_kalan", 0))
+    kayit = hazine.muhurle(
+        _kapanan,
         hazine_yolu(),
         dict({"p": p_yildiz}, **hafiza.hazineye(),
              **mun["harita"].hazineye()),
