@@ -283,9 +283,33 @@ class QYazmac:
         self.y.psi = G.astype(self.y.ayar.tip)
         self.y.normalize()
         if self.y.iz.senet_acik:
-            self.y.iz.kapi_yaz("durum", (),
-                               np.asarray(self.y.psi, complex).copy())
+            no = self.y.iz.kapi_yaz(
+                "durum", (), np.asarray(self.y.psi, complex).copy())
+            if pq is not None:
+                self._kan_bagla(no, pq, bas, taban, yer, cephe, seviye,
+                                sec, d)
         return float(kuresel)
+
+    def _kan_bagla(self, no, pq, bas, taban, yer, cephe, seviye,
+                   sec, d) -> int:
+        kontrol, bag = pq.temas_kapilari()
+        if kontrol.size == 0:
+            return 0
+        n = int(bas.shape[-1])
+        w = 2.0 * (bas.astype(float) / float(max(1, pq.taban - 1))) - 1.0
+        hedef = pq.rezonans(w.reshape(-1, n), int(kontrol.size))
+        w_t = np.take_along_axis(w.reshape(-1, n), hedef,
+                                 axis=-1).mean(axis=0)
+        dizin = np.unique(np.concatenate(
+            [seviye.reshape(-1)[sec],
+             np.arange(taban) * yer + cephe]))
+        for c in range(int(kontrol.size)):
+            katsayi = complex(float(w_t[c]) * (float(bag[c]) + 1j))
+            self.y.iz.bag_yaz(
+                no, int(pq.d + int(kontrol[c])), 1.0,
+                ("köşegen", dizin,
+                 np.full(dizin.size, katsayi, complex)))
+        return int(kontrol.size)
 
     def superpozisyon(self, yalniz_veri: bool = False) -> None:
         h = int(np.prod(self.y.ayar.lif[1:]))

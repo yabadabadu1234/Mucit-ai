@@ -2225,6 +2225,29 @@ kapasitesi `q^N`dir ve hiçbir yerde açılmaz (ferman 2-T, 2-V).
 
 ---
 
+## ▓▓▓ 2-Ñ. FERMAN: EVVELÂ MANA SORULUR, SONRA ÖLÇÜ ▓▓▓
+
+> *"Şimdi sana `N`'i ölç dersem **yanlış bir mantığı esas alıp** ölçüp
+> yanlış netice alıp dar yapacaksın, o yüzden diyemiyorum. Sen bir kere
+> bana daha **modelin öğreneceği şeyin ne olduğunu sormadın**,
+> konuşmadın. **Tüm veri veya pencere, qudite nasıl girer, bu usulü
+> sormadın.**"*
+
+* **ÖLÇÜ, YANLIŞ MANTIĞIN ÜSTÜNE KURULURSA YANLIŞ ÇIKAR.** *"Belleği
+  ölç, `N`i ondan türet"* demek doğru görünür fakat esas alınan mantık
+  yanlışsa ölçü o yanlışı **sayıyla** tahkim eder ve dar yapar.
+* **SIRA ŞUDUR:**
+
+      1. MANA      Model ne öğrenecek?
+      2. USUL      Veri -- pencere yahut külliyatın tamamı -- qudite
+                   NASIL girer?
+      3. ÖLÇÜ      Ancak o usul belli olunca N, pencere ve bütçe ölçülür.
+
+* **BEN ÜÇÜNCÜDEN BAŞLADIM.** *"`N` kaç olsun"* diye sormak, birinci ve
+  ikinciyi hiç konuşmadan üçüncüye atlamaktır; bu ferman onu yasaklar.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...
