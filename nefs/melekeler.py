@@ -586,7 +586,9 @@ class QTasavvur(QMeleke):
     SINIF, CHI = "kurucu", 16
 
     def uygula(self, q, p):
-        q.harman(kademe=1, teta=self.aci(p, 24, 0.6))
+        q.harman(kademe=1, teta=self.aci(p, 24, 0.6),
+                 par_bas=self.aci_yeri(p, 24),
+                 olcek=0.6 * self.aci_katsayisi(p))
 
 
 @qkaydet

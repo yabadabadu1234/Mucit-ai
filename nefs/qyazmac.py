@@ -444,6 +444,8 @@ class QuditYazmac:
         ej = self._eksen(kj, aj)
         if ei <= 0 or ej <= 0 or ei == ej:
             self._dusen_kapi += 1
+            if baglar:
+                self.iz.uretecsiz += len(baglar)
             return
         G = np.asarray(G, complex).reshape(4, 4)
         if int(ki) == int(kj):
@@ -850,6 +852,8 @@ class QuditYazmac:
                   baglar=None) -> None:
         if not (self.gecerli(i) and self.gecerli(j)):
             self._dusen_kapi += 1
+            if baglar:
+                self.iz.uretecsiz += len(baglar)
             return
         G = np.asarray(G, complex).reshape(4, 4)
         ki, ai = self._lif_no(int(i))
@@ -862,6 +866,8 @@ class QuditYazmac:
             n = lif[ki]
             bi, bj = 1 << ai, 1 << aj
             if bi >= n or bj >= n or bi == bj:
+                if baglar:
+                    self.iz.uretecsiz += len(baglar)
                 return
             M = np.eye(n, dtype=complex)
             for x in range(n):
@@ -876,6 +882,8 @@ class QuditYazmac:
         ni, nj = lif[ki], lif[kj]
         bi, bj = 1 << ai, 1 << aj
         if bi >= ni or bj >= nj:
+            if baglar:
+                self.iz.uretecsiz += len(baglar)
             return
         T = self.lifli
         T = np.moveaxis(T, (ki + 1, kj + 1), (-2, -1))
