@@ -1455,6 +1455,61 @@ fakat hadd bu kadardır ve daraltılmaz.
   bir tahsisat defteridir ve ferman 1-Ş'nin bölge yasağının parametre
   tarafıdır; yerine parametre yazmacının **adreslemesi** gelir.
 
+### İKİ YAZMAÇ DOLANIR -- OKUMA DEĞİL KONTROL
+
+> *"İlk şıkkı kabul ediyorum."* (kontrollü tetabuk)
+
+Meleke bir açıya ihtiyaç duyduğunda parametre yazmacından bir **sayı
+okumaz**. Parametre yazmacı **kontrol**, veri yazmacı **hedeftir**;
+aralarında kontrollü bir kapı vurulur ve parametrenin bütün
+seviyeleri **aynı anda** tesir eder. Okuma yolu (`oku(adres) → float`)
+bu fermanla **ilga edilmiştir**: okunan parametre çıplak parametredir.
+
+**BEDELİ MÜŞTEREK DURUMDUR VE ÖDENİR:** müşterek yazmaç
+`d_veri × d_parametre` genlik taşır. Bu bir mazeret değil, bir
+**ölçüdür**: parametre yazmacının ebadı, müşterek durumun **ölçülen
+belleğe** sığacağı en büyük değerdir (ferman 2-I, 5-B). Budama,
+kesme, rank düşürme **yoktur** (ferman 7).
+
+### TAŞIYICI: HER SEVİYE İKİ PARAMETRE TAŞIR
+
+> *"İkisi de -- genlik + faz."*
+
+Ferman 2-J'nin iş bölümü parametre yazmacında da aynen geçerlidir ve
+**yeni bir taşıyıcı icat edilmez**:
+
+    GENLİK BÜYÜKLÜĞÜ   kayan nokta      → seviye başına bir parametre
+    FAZ ÜSSÜ           Z_m tamsayısı    → seviye başına bir parametre
+
+O hâlde `d_p` seviyeli bir parametre yazmacı **2·d_p** parametre
+taşır. Genlik kanadı normalizasyonla birbirine bağlıdır
+(`Σ|p|² = 1`); bu bir kusur değil, **yazmaç olmanın şartıdır** ve
+raporda böyle yazılır.
+
+---
+
+## ▓▓▓ 2-S. FERMAN: KUANTUM BÜTÇESİ CÖMERT TAYİN EDİLİR ▓▓▓
+
+> *"Yuva bütçesi 16 olamaz, bu ahmaklık, **çözüm arttırmak!**
+> ... bilhassa kuantum bütçelerini **cömertçe tayin et artık**, hafif
+> bir cömertliğin **üstel fayda** getiriyor, **hududa kadar zorla!**"*
+
+* **DARLIK BİR ÇÖZÜM DEĞİLDİR.** Bir ölçü dar geldiğinde çare onu
+  idareli kullanmak değil, **büyütmektir**. "16 yuvaya sığdıralım"
+  demek meselenin kendisidir, cevabı değil.
+* **CÖMERTLİĞİN FAYDASI ÜSTELDİR.** Yazmacın seviyesi `d`,
+  yuva bütçesi `log₂ d`dir; `d`yi iki katına çıkarmak bütçeye bir
+  yuva daha ekler ve o yuva **bütün adresleme uzayını** ikiye
+  katlar. O hâlde cimrilik lineer kazanır, cömertlik üstel.
+* **HUDUT NEREDEYSE ORAYA KADAR ZORLANIR.** Hudut elle yazılmaz,
+  **ölçülür** (ferman 5-B, 2-I): `nefs/donanim.py`nin bellek haddi
+  ne diyorsa bütçe oraya kadar açılır. Kalan boşluk bırakmak da bir
+  israftır.
+* **KAPASİTE İDDİASI SAYIYLA YAZILIR** (ferman 5): `d`, lif,
+  `log₂ d`, müşterek durumun baytı ve ölçülen bellek haddi raporda
+  yan yana görünür. Sığmayan bir bütçe kurulmaz; sığan bir bütçe de
+  **daraltılmaz**.
+
 ---
 
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓

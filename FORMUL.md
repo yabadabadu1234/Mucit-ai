@@ -258,6 +258,26 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     Öğrenme oranı YOK. Momentum YOK. Geri yayılım YOK. Hat araması YOK.
     Sabit eta YOK, kelepçe YOK (ferman 1-J).
 
+
+### 5-D PARAMETRE YAZMACI -- İKİNCİ QUDİT SİSTEMİ (ferman 2-R)
+
+    ParametreSeviyesi = enbüyük ikinin kuvveti k öyle ki
+                        Yığın · VeriSeviyesi · k · 16 ≤ ÖlçülenBellek · Pay
+
+    Parametre[k] = ( Genlik[k],  FazÜssü[k] )
+    Σ_k Genlik[k]² = 1
+    Açı(k)  = 2π · FazÜssü[k] / FazMertebesi
+
+    MüşterekYığın = ÖrnekSayısı × ParametreSeviyesi
+    Dilim(örnek, k) = Genlik[k] · VeriHâli(örnek)
+
+    KontrollüKapı = toplam over k of  |k⟩⟨k| ⊗ Dönme(Açı(k))
+                  ← dilim başına ayrı kapı; budama yok, rank düşürme yok
+
+NE İDDİA EDİLMİYOR: melekelerin 44 açı ve 51 kapı çağrısı henüz bu
+yola geçmedi; müşterek durum taşınmıyor, yukarıdaki ParametreSeviyesi
+ölçülen bir KAPASİTEDİR, tahsis edilmiş durum değildir.
+
 ---
 
 ## 6. DIŞ DÖNGÜ -- BİR VERİ, HUDUDU TEMİZLENENE KADAR

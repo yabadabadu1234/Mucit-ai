@@ -279,6 +279,14 @@ class Memuriyet:
         _ADRES.update(q.y.adres_beyani())
         _ADRES["lif"] = tuple(int(x) for x in q.y.ayar.lif)
         _ADRES["bağlam"] = int(np.asarray(bag).size)
+        from nefs.parametre_yazmaci import parametre_beyani
+        _pq = parametre_beyani(getattr(self.nefs, "pq", None))
+        _ADRES["p_seviye"] = _pq.get("seviye", 0)
+        _ADRES["p_adedi"] = _pq.get("parametre", 0)
+        _ADRES["p_müşterek_MB"] = round(
+            _pq.get("müşterek_bayt", 0) / 1e6, 1)
+        _ADRES["bellek_MB"] = round(
+            _pq.get("ölçülen_bellek", 0) / 1e6, 1)
         lif = tuple(int(x) for x in q.y.ayar.lif)
         hedefler = [int(ornek_bol(o)[1]) for o in self.kume]
         H = hata_operatoru(q, hedefler, int(self.nefs.ayar.veri_lifi))

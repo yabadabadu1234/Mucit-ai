@@ -45164,3 +45164,78 @@ kaybolmaz, borç `faz_borcu()["ödenmemiş_kesir"]` ile ölçülür.
 vardı; sınıfın aşağısındaki aynı adlı altı `def` bu atamaların
 gölgesinde kalıp **hiç koşmuyordu** -- ve `uzak_cift`in gölgedeki
 nüshası `baglar`ı düşürüyordu. Altısı da kesildi (ferman 2-B).
+
+---
+
+## PARAMETRE YAZMACI -- İKİNCİ QUDİT SİSTEMİ (ferman 2-R, 2-S)
+
+### KAPASİTE ÖLÇÜLDÜ, YAZILMADI
+
+Taht bastı:
+
+    parametre seviyesi 4096   →  8192 parametre (4096 genlik + 4096 faz üssü)
+    müşterek durum     4295 MB  = yığın 1 × veri seviyesi 65 536
+                                   × parametre seviyesi 4096 × 16 bayt
+    ölçülen bellek    15 800 MB  pay 0.50
+
+Seviye elle yazılmadı: `parametre_seviyesi()` ölçülen bellekten
+türetir ve **ikinin kuvvetine** yuvarlar. Bir sonraki kuvvet (8192)
+8590 MB ister; pay 0.50 ile sığmaz. Cömertlik payla ayarlanır, seviye
+sayısıyla değil (ferman 2-S).
+
+Bugünkü çıplak parametre 3378'di ve **130'u** (%3.8) fiilen
+kapsanıyordu; yeni yazmaçta 8192 parametrenin tamamı **taşıyıcıdadır**
+çünkü taşıyıcı yazmacın kendisidir -- tahsisat defteri değil.
+
+### TAŞIYICI: GENLİK + FAZ, YENİ TAŞIYICI İCAT EDİLMEDİ
+
+Ferman 2-J'nin iş bölümü aynen kullanıldı. Seviye `k` için:
+
+    genlik[k]  kayan nokta, Σ|genlik|² = 1   → dalın AĞIRLIĞI
+    faz[k]     Z_m tamsayısı                 → dalın AÇISI, θ_k = 2π·faz_k/m
+
+Genlik kanadının normalize olması bir kusur değil, yazmaç olmanın
+şartıdır ve `parametre_metni` bunu **yazar**; gizlenmez.
+
+### TETABUK: PARAMETRE SEVİYELERİ YIĞIN EKSENİNDE DURUR
+
+Müşterek durum `ψ(k, x)`tir. Bunu ayrı bir eksen olarak açmak her
+kapıyı yeniden yazmak demekti; hâlbuki yazmacın **yığın ekseni**
+zaten her dilime aynı ameliyeyi vuruyordu. O hâlde:
+
+    müşterek yığın  =  örnek sayısı × parametre seviyesi
+    dilim (b, k)    =  genlik_k · |φ_b⟩
+
+Kontrollü kapı böylece **dilim başına ayrı kapı** demektir ve
+`Σ_k |k⟩⟨k| ⊗ R(θ_k)`nın ta kendisidir. Budama yok, rank düşürme yok,
+yaklaşım yok (ferman 7).
+
+İcra: `_gomulu` üç boyutlu kapı kabul eder, `_karo_vur` üç boyutlu
+kapıyı erteleme yoluna sokmadan derhal indirir, `_karo_indir`
+`einsum("bij,bojd->boid")` ile dilim başına vurur, `kontrollu_tek`
+bunların kapısıdır ve `donme_dilim` açı dizisinden dilimli dönme
+kurar.
+
+### NE İCRA EDİLDİ, NE EDİLMEDİ -- SAYIYLA (ferman 5)
+
+İCRA EDİLEN:
+
+* `nefs/parametre_yazmaci.py` -- yazmaç, adresleme, taşıyıcı,
+  hazineye/hazineden, beyan.
+* Tahta bağlandı: `QNefs.parametre_yazmacini_kur` her idrakte kurar,
+  `main/egitim.py` beyanını basar, canlı nöbet satırı seviyesini,
+  parametre adedini, müşterek baytı ve ölçülen belleği basar.
+* Kontrollü kapı yolu: `kontrollu_tek`, dilimli `_gomulu`,
+  `_karo_vur`, `_karo_indir`, `donme_dilim`, `donme_dilim_turevi`.
+
+İCRA EDİLMEYEN -- BU TURDA BİTMEDİ:
+
+* Melekelerin **44 açı çağrısı** ve **51 kapı çağrısı** hâlâ
+  `QParametre`den okuyor ve dilimsiz kapı vuruyor. O hâlde müşterek
+  durum **henüz taşınmıyor**: 4295 MB bir **kapasite beyanıdır**,
+  tahsis edilmiş bir durum değildir.
+* `QParametre` hâlâ ayakta (`melekeler` 10, `mecz` 3, `optimize` 2,
+  `kulli_kayip` 2 yerde). Ferman 2-R onu ilga etti; ilga henüz
+  **icra edilmedi**.
+* Bu satır silinmeden *"parametre yazmacına geçildi"* denemez
+  (ferman 1-E, 5).

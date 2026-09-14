@@ -120,6 +120,7 @@ class QuditYazmac:
         self._veri_yuvasi = max(1, int(a.lif[0]).bit_length() - 1)
         self._satir_yuva = self._veri_yuvasi + int(self.ayar.yerel_yuva)
         self._dusen_kapi = 0
+        self._kontrollu_kapi = 0
         self._matchgate_kapi = 0
         r = np.random.default_rng(int(a.tohum))
         self.B = int(a.yigin)
@@ -402,8 +403,14 @@ class QuditYazmac:
     def _karo_indir(self, k: int, M: np.ndarray) -> None:
         n = int(self.ayar.lif[int(k)])
         on, ard = self._bolum(int(k))
-        X = self._psi.reshape(self.B * on, n, ard)
         M = np.asarray(M, complex)
+        if M.ndim == 3:
+            X = self._psi.reshape(self.B, on, n, ard)
+            Y = np.einsum("bij,bojd->boid", M, X, optimize=True)
+            self._psi = np.ascontiguousarray(
+                Y.reshape(self.B, self.d), dtype=self._psi.dtype)
+            return
+        X = self._psi.reshape(self.B * on, n, ard)
         if ard == 1:
             Y = X.reshape(-1, n) @ M.T
         else:
@@ -415,10 +422,14 @@ class QuditYazmac:
         self._faz_indir()
         M = np.asarray(M, complex)
         self.iz.kapi_yaz("karo", (int(k),), M)
-        eski = self._bekleyen.get(int(k))
-        self._bekleyen[int(k)] = M if eski is None else M @ eski
         self._kapi += 1
         self.iz.kapi += 1
+        if M.ndim == 3:
+            self._bosalt()
+            self._karo_indir(int(k), M)
+            return
+        eski = self._bekleyen.get(int(k))
+        self._bekleyen[int(k)] = M if eski is None else M @ eski
 
     def _bit_kapisi_lifli(self, k: int, alt: int, G: np.ndarray) -> None:
         if self._eksen(k, alt) <= 0:
@@ -716,8 +727,18 @@ class QuditYazmac:
         self.iz.not_dus("kanonikle", "quditte kanoniklik yok -- işlem yok")
 
     def _gomulu(self, n: int, alt: int, G: np.ndarray) -> np.ndarray:
-        G = np.asarray(G, complex).reshape(2, 2)
-        M = np.eye(n, dtype=complex)
+        G = np.asarray(G, complex)
+        dilimli = G.ndim == 3
+        if dilimli:
+            assert G.shape == (self.B, 2, 2), (
+                "dilimli kapı yığın ebadında olmalı: %s ≠ (%d, 2, 2) -- "
+                "parametre seviyeleri yığın ekseninde durur (ferman 2-R)"
+                % (G.shape, self.B))
+            M = np.broadcast_to(np.eye(n, dtype=complex),
+                                (self.B, n, n)).copy()
+        else:
+            G = G.reshape(2, 2)
+            M = np.eye(n, dtype=complex)
         b = 1 << int(alt)
         if b >= n:
             return M
@@ -725,9 +746,25 @@ class QuditYazmac:
             if x & b:
                 continue
             y = x | b
-            M[x, x] = G[0, 0]; M[x, y] = G[0, 1]
-            M[y, x] = G[1, 0]; M[y, y] = G[1, 1]
+            if dilimli:
+                M[:, x, x] = G[:, 0, 0]; M[:, x, y] = G[:, 0, 1]
+                M[:, y, x] = G[:, 1, 0]; M[:, y, y] = G[:, 1, 1]
+            else:
+                M[x, x] = G[0, 0]; M[x, y] = G[0, 1]
+                M[y, x] = G[1, 0]; M[y, y] = G[1, 1]
         return M
+
+    def kontrollu_tek(self, yuva: int, G_dilim: np.ndarray) -> None:
+        if not self.gecerli(yuva):
+            self._dusen_kapi += 1
+            return
+        k, alt = self._lif_no(yuva)
+        if self._eksen(k, alt) <= 0:
+            self._dusen_kapi += 1
+            return
+        n = int(self.ayar.lif[int(k)])
+        self._karo_vur(int(k), self._gomulu(n, int(alt), G_dilim))
+        self._kontrollu_kapi += 1
 
     def tek(self, yuva: int, G: np.ndarray, bag=None) -> None:
         if not self.gecerli(yuva):

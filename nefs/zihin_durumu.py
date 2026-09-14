@@ -9,7 +9,8 @@ import numpy as np
 from .qyazmac import QuditAyar, QuditYazmac
 
 __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI", "donme",
-           "donme_turevi", "kontrollu_donme", "kontrollu_donme_turevi",
+           "donme_turevi", "donme_dilim", "donme_dilim_turevi",
+           "kontrollu_donme", "kontrollu_donme_turevi",
            "faz_z", "degil_x",
            "makam_derecesi", "makam_merdiveni",
            "makam_kubit_manasi", "makam_mertebeleri", "makam_mertebesi"]
@@ -168,6 +169,9 @@ class QYazmac:
 
     def tek_yigin(self, yuvalar, G, baglar=None) -> None:
         self.y.tek_yigin(yuvalar, G, baglar=baglar)
+
+    def kontrollu_tek(self, yuva: int, G_dilim) -> None:
+        self.y.kontrollu_tek(yuva, G_dilim)
 
     def veri_izgara(self, sutun=None, satir=None):
         return self.y.veri_izgara(sutun, satir)
@@ -348,6 +352,24 @@ def faz_z() -> np.ndarray:
 
 def degil_x() -> np.ndarray:
     return np.array([[0.0, 1.0], [1.0, 0.0]], dtype=np.float64)
+
+def donme_dilim(teta) -> np.ndarray:
+    t = np.asarray(teta, float).reshape(-1)
+    c, s = np.cos(t), np.sin(t)
+    G = np.empty((t.size, 2, 2), dtype=np.float64)
+    G[:, 0, 0] = c; G[:, 0, 1] = -s
+    G[:, 1, 0] = s; G[:, 1, 1] = c
+    return G
+
+
+def donme_dilim_turevi(teta) -> np.ndarray:
+    t = np.asarray(teta, float).reshape(-1)
+    c, s = np.cos(t), np.sin(t)
+    G = np.empty((t.size, 2, 2), dtype=np.float64)
+    G[:, 0, 0] = -s; G[:, 0, 1] = -c
+    G[:, 1, 0] = c; G[:, 1, 1] = -s
+    return G
+
 
 def donme_turevi(teta: float) -> np.ndarray:
     c, s = math.cos(float(teta)), math.sin(float(teta))

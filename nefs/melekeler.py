@@ -1342,6 +1342,7 @@ class QNefs:
         self.ayar = ayar or QAyar(tohum=tohum)
         self.p = QParametre(tohum, genislik=int(
             getattr(self.ayar, "parametre_genisligi", 1)))
+        self.pq: Optional["ParametreYazmaci"] = None
         self.sira = tuple(sira)
         self.s = qsicil()
         self.gaye = bool(gaye)
@@ -1355,6 +1356,19 @@ class QNefs:
                else self.p.v(anahtar, n))
         return self.HARMAN_OLCEGI * np.asarray(ham, float)
 
+    def parametre_yazmacini_kur(self, d_veri: int, B: int) -> int:
+        from .donanim import bellek_haddi
+        from .parametre_yazmaci import ParametreAyari, ParametreYazmaci
+        if (self.pq is not None and self.pq.d_veri == int(d_veri)
+                and self.pq.yigin == int(B)):
+            return int(self.pq.d)
+        self.pq = ParametreYazmaci(
+            int(d_veri), int(B), bellek_haddi(),
+            ParametreAyari(faz_mertebesi=int(
+                getattr(self.ayar, "faz_mertebesi", 16)),
+                tohum=int(self.ayar.tohum)))
+        return int(self.pq.d)
+
     def idrak_et(self, E: np.ndarray, bec: bool = True,
                  yigin: int = 0, tikaniklik: float = 0.0,
                  olcum: Optional[bool] = None) -> QYazmac:
@@ -1367,6 +1381,7 @@ class QNefs:
         if B != ayar.yigin:
             ayar = replace(ayar, yigin=B)
         q = QYazmac(n_satir, ayar)
+        self.parametre_yazmacini_kur(int(q.y.d), int(B))
         q.kodla(E)
         if q.iz.senet_acik:
             q.iz.kapi_yaz("başlangıç", (),
