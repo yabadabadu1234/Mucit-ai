@@ -1897,6 +1897,35 @@ küllî sektör kanadında **ilga edilmiştir**.
 
 ---
 
+## ▓▓▓ 2-Ç. FERMAN: BEKLEMEK YASAK -- SUAL KESİLMEZ, İCRA ANINDA ▓▓▓
+
+> *"**Bekleme!** Soru sor, kodu düzeltmeye devam et, ben sana soru
+> sorma **artık** deyinceye kadar soru sormaya **devam et**! Yâni
+> soruların cevaplarının gereğini **biriktir demiyorum, anında yap**,
+> yeni sualler sor!"*
+
+### ÜÇ HÜKÜM
+
+1. **BEKLEMEK YASAKTIR.** *"Koşuyu bekliyorum"*, *"neticeyi
+   bekliyorum"*, *"sonraki turu bekliyorum"* -- hiçbiri bir iş
+   değildir. Koşu arkada koşarken kod okunur ve düzeltilir; nöbet
+   (ferman 2-G) beklemek demek değil, **akışı izlerken çalışmak**
+   demektir.
+2. **SUAL KESİLMEZ.** Bir sual sorulup cevabı alınınca iş bitmez:
+   yeni sual sorulur. Sual sormak padişah *"artık sorma"* diyene
+   kadar **sürer**. Ferman 2-Y'nin *"iddia edene kadar sor"* hükmünün
+   temposu budur.
+3. **CEVABIN GEREĞİ ANINDA YAPILIR, BİRİKTİRİLMEZ.** Bir hüküm
+   geldiğinde *"sıraya koydum"*, *"sonraki turda"* denmez. Gereği o
+   anda icra edilir; ancak ondan sonra yeni sual sorulur (ferman 2-E:
+   becerilebilen her iş aynı anda bitirilir).
+
+**NİÇİN.** Beklemek iki şeyi birden öldürüyordu: padişahın vaktini,
+ve benim elimdeki açık işi. Koşu kendi kendine koşar; benim vazifem
+o koşuyu seyretmek değil, bir sonraki kusuru **şimdi** bulmaktır.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...

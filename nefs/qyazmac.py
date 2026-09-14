@@ -435,12 +435,21 @@ class QuditYazmac:
         eski = self._bekleyen.get(int(k))
         self._bekleyen[int(k)] = M if eski is None else M @ eski
 
-    def _bit_kapisi_lifli(self, k: int, alt: int, G: np.ndarray) -> None:
+    def _bit_kapisi_lifli(self, k: int, alt: int, G: np.ndarray,
+                          bag=None) -> None:
         if self._eksen(k, alt) <= 0:
             self._dusen_kapi += 1
+            if bag:
+                self.iz.uretecsiz += len(bag)
             return
         n = int(self.ayar.lif[int(k)])
         self._karo_vur(k, self._gomulu(n, int(alt), G))
+        if not bag or not self.iz.senet_acik:
+            return
+        for (par, olcek, dG) in bag:
+            self.iz.bag_yaz(self.iz.son_senet, int(par), float(olcek),
+                            ("bit", int(k), int(alt),
+                             np.asarray(dG, complex).reshape(2, 2)))
 
     def _cift_kapisi_lifli(self, ki: int, ai: int, kj: int, aj: int,
                            G: np.ndarray, baglar=None) -> None:
@@ -496,11 +505,12 @@ class QuditYazmac:
         self._kapi += 1
         self.iz.kapi += 1
 
-    def bit_kapisi(self, k: int, alt: int, G: np.ndarray) -> None:
-        self._bit_kapisi(k, alt, G)
+    def bit_kapisi(self, k: int, alt: int, G: np.ndarray, bag=None) -> None:
+        self._bit_kapisi(k, alt, G, bag)
 
-    def _bit_kapisi(self, k: int, alt: int, G: np.ndarray) -> None:
-        self._bit_kapisi_lifli(k, alt, G)
+    def _bit_kapisi(self, k: int, alt: int, G: np.ndarray,
+                    bag=None) -> None:
+        self._bit_kapisi_lifli(k, alt, G, bag)
 
     def faz(self, teta) -> None:
         t = np.asarray(teta, float)

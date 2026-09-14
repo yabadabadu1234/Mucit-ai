@@ -295,15 +295,14 @@ class QYazmac:
                         a = float(acilar[s % acilar.size])
                         s += 1
                     c, sn = np.cos(a), np.sin(a)
-                    self.y.bit_kapisi(f, alt,
-                                      np.array([[c, -sn], [sn, c]], complex))
+                    bag = None
                     if acilar is not None and int(par_bas) >= 0:
-                        self.y.iz.bag_yaz(
-                            self.y.iz.son_senet,
-                            int(par_bas) + ((s - 1) % acilar.size),
-                            float(olcek),
-                            ("bit", int(f), int(alt),
-                             np.array([[-sn, -c], [c, -sn]], complex)))
+                        bag = [(int(par_bas) + ((s - 1) % acilar.size),
+                                float(olcek),
+                                np.array([[-sn, -c], [c, -sn]], complex))]
+                    self.y.bit_kapisi(
+                        f, alt, np.array([[c, -sn], [sn, c]], complex),
+                        bag=bag)
 
     def alan_degeri(self, ad: str):
         return self.y.alan_degeri(ad)
