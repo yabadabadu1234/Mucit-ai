@@ -237,10 +237,8 @@ class QYazmac:
         assert bool(dolu.any()), (
             "bağlamın hiçbir basamağı dolu değil -- yazmaca yazacak şey "
             "yok, norm sıfır çıkardı (ferman 5)")
-        kan = getattr(self, "kan", None)
-        if kan is not None:
-            pq = getattr(self, "pq", None)
-            yerel_faz = None
+        pq = getattr(self, "pq", None)
+        if True:
             if pq is not None:
                 self.mahalli.hazirla(n_sat, B)
                 self.mahalli.yerlestir(bas, dolu)
@@ -250,23 +248,30 @@ class QYazmac:
                     pq.rezonans(self.mahalli.koordinat(),
                                 int(kontrol.size)),
                     bag)
-                yer_j = np.arange(n_sat)
-                yerel_faz = self.mahalli.faz[:, yer_j]
-            kulli = kan.genlik(bas, parametre=pq,
-                               yerel_faz=(None if yerel_faz is None
-                                          else yerel_faz.mean(axis=-1)))
-            mahalli_g = (self.mahalli.genlik[:B, :n_sat]
-                         if pq is not None else
-                         dolu.astype(float))
-            G = np.zeros((B, d), complex)
-            agirlik = (mahalli_g * kulli[:, None]).reshape(-1)
-            G[yigin[sec], seviye.reshape(-1)[sec]] = agirlik[sec]
-            genlik = G
+                self._tohum = (bas, sec, yigin, seviye, B, n_sat, d)
         self.y.psi = genlik.astype(self.y.ayar.tip)
         self.y.normalize()
         self.y.faz(faz)
         self.y.iz.not_dus("kodla", "dolu %d / %d seviye"
                           % (int(dolu.sum() // max(B, 1)), d))
+
+    def intac(self) -> float:
+        kan = getattr(self, "kan", None)
+        pq = getattr(self, "pq", None)
+        tohum = getattr(self, "_tohum", None)
+        if kan is None or tohum is None:
+            return 0.0
+        bas, sec, yigin, seviye, B, n_sat, d = tohum
+        m = self.mahalli
+        kuresel = m.kuresel_faz()
+        yerel = m.faz[:B, :n_sat].mean(axis=-1) + kuresel
+        kulli = kan.genlik(bas, parametre=pq, yerel_faz=yerel)
+        agirlik = (m.genlik[:B, :n_sat] * kulli[:, None]).reshape(-1)
+        G = np.zeros((B, d), complex)
+        G[yigin[sec], seviye.reshape(-1)[sec]] = agirlik[sec]
+        self.y.psi = G.astype(self.y.ayar.tip)
+        self.y.normalize()
+        return float(kuresel)
 
     def superpozisyon(self, yalniz_veri: bool = False) -> None:
         h = int(np.prod(self.y.ayar.lif[1:]))

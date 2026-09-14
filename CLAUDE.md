@@ -1996,6 +1996,94 @@ bir kıl kirlenirse adım reddediliyordu; netice otuz turda **tek** kabul.
 
 ---
 
+## ▓▓▓ 2-A. FERMAN: HAZIRLIK → EVRİM → ÖLÇÜM -- KAN EN SONDA, BİR KEZ ▓▓▓
+
+> *"Kuantum mekaniğinde operatörler uygulanmadan önce ölçüm yapılmaz!
+> **`kodla` içinde KAN ASLA ÇAĞRILMAYACAKTIR.**"*
+
+### BENİM YANLIŞ PEŞİN HÜKMÜM
+
+*"`kodla` mecburen KAN'ı çağırmak ve genliği baştan üretmek
+zorundadır"* diye bir ön kabulle çalışıyordum. Bu klasik dil
+modelinin `encode(tokens) → logits` kalıbıdır. Neticesi şuydu:
+melekeler ölçümden **sonra** vuruyor, tesirleri cevaba yetişmiyor, ben
+de *"iki kere mi çağırsam, bir tur mu geciktirsem"* diye **sahte bir
+çıkmaz** icat ediyordum.
+
+### SAHİH SİLSİLE -- TURDA TEK KAN ÇAĞRISI
+
+    1. HAZIRLIK   `kodla` yalnız mahallî yazmaca tohum eker:
+                  genlik sütunu ve faz sütunu. KAN ÇAĞRILMAZ.
+    2. EVRİM      Melekeler koşar; `θ_cartan` birikir, kapılar mahallî
+                  yazmacın faz sütununa vurur.
+    3. İNTAÇ      KAN fonksiyoneli İLK VE SON DEFA çağrılır:
+                  Genlik = KAN(konfigürasyon, mahallîYazmaç, θ_cartan)
+    4. ÖLÇÜM      Genlik okunur, kelâm çıkar.
+
+* **TURDA İKİ KAN ÇAĞRISI YOKTUR.** Bir evvelki turda 3176 çağrıyı
+  bire indirip hemen ardından ikiye çıkarmak israftır.
+* **GECİKME YOKTUR.** Melekelerin ve `θ_cartan`ın bütün fazı aynı
+  turun cevabına girer.
+* **MELEKELER BOŞLUĞA KOŞMAZ:** `kodla`nın ektiği dolu yazmaca temas
+  eder.
+
+---
+
+## ▓▓▓ 2-Â. FERMAN: CARTAN FAZI SERPİLMEZ -- KÜRESEL AYAR FAZIDIR ▓▓▓
+
+> *"Küresel Lie-Cartan fazı veri yazmacına **bir un çuvalı gibi
+> serpilmez**!"*
+
+### BENİM İCAT ETTİĞİM SAHTE MESELE
+
+*"On elemanlı `θ_cartan` bir milyon qudite hangi izdüşümle
+dağılacak?"* diye sordum. Bu suâl **yanlış kurulmuştur**: iki ayrı
+varlık katmanı birbirine karıştırılmıştır.
+
+    MAHALLÎ YAZMAÇ   verinin fiziksel taşıyıcı koordinatı
+    θ_cartan         bütün kâinatı yöneten küresel simetri cebrinin
+                     kolektif AYAR FAZI (gauge phase)
+
+Bir alan teorisinde küresel faz döndürmesi uygularken bir milyon
+koordinat taranıp *"bu fazı hangi noktaya kaç gram dağıtsam"* diye
+harita aranmaz.
+
+### SAHİH İNTAÇ -- İKİ KADEME, SIFIR TARAMA
+
+    1. KÜRESEL   θ_cartan doğrudan KAN üssüne rezonans fazı olarak girer:
+                 Genlik = üstel( −Enerji + i·( Σ_j w_j
+                                 + θ_cartan · KökAğırlığı ) )
+                 Maliyet: kök sayısı kadar skaler çarpım.
+
+    2. MAHALLÎ   Bir meleke mahallî yazmaca vuracaksa bir milyon qudit
+                 taranmaz: temas ettiği kapı indislerinin faz sütununa
+                 tek çevrimde eklenir (ferman 2-V, seyirci qudit).
+
+**HER TURDA GERİLİM TEPESİ ARAMA YAHUT CASIMIR ÖLÇÜMÜ KOŞTURMA
+HAMALLIĞI YAPILMAZ.**
+
+---
+
+## ▓▓▓ 2-Î. FERMAN: MODEL GENELLER -- EZBER MAKİNESİ DEĞİLDİR ▓▓▓
+
+> *"Ulan ahmak, github release ile **ultramath** verisetinin inmesini
+> tetiklemedin mi, **100 GB matematik verisi var**, nasıl olmasın?
+> Ayrıca adam cevabı bilmede dahi **en azından mantıklıca konuşup
+> bilmiyorum der**, dil modeli dediğin **genelleyebilir olmalı**,
+> burada **ezber makinesi** ürettiğimizi mi sanıyorsun cahil?"*
+
+* **VERİ VARDIR.** Külliyatta yüz gigabaytlık riyaziye durmaktadır;
+  *"model bunu görmemiş olabilir"* demeden evvel külliyat yoklanır
+  (ferman 1-K).
+* **MİHENK EZBER SORMAZ.** Bir dil modelinden beklenen, tam o suâli
+  görmüş olmak değil, **genellemektir**. Görmediği bir suâlde dahi
+  makul konuşması, hiç değilse *"bilmiyorum"* diyebilmesi beklenir.
+* **MİHENK VERİSİNİ TÂLİME KOYMAK YASAKTIR:** suâli ve cevabını
+  tâlim kümesine koymak ölçüyü ölçü olmaktan çıkarır, ezber makinesi
+  kurar. Mihenk **dışarıdan** sorulur ve öyle kalır.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...

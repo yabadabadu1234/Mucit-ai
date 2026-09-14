@@ -547,6 +547,10 @@ class QuditYazmac:
         self._kapi += 1
 
     def sektor_faz_vur(self, ad: str, aci, bag=None) -> int:
+        m = getattr(self, "mahalli", None)
+        if m is not None:
+            m.cartan_ekle(str(ad), float(np.mean(
+                np.asarray(aci, float).reshape(-1))))
         i, j = self.sektor(ad)
         a = np.asarray(aci, float).reshape(-1)
         gen = int(j - i)

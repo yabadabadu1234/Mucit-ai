@@ -14,7 +14,8 @@ ZIRH_QUDITI = 1 << 20
 _MAHALLI: Dict[str, float] = {
     "kuruldu": 0.0, "qudit": 0.0, "taban": 0.0, "yığın": 0.0,
     "bayt": 0.0, "vuruş": 0.0, "dokunulan": 0.0, "seyirci": 0.0,
-    "pencere": 0.0, "faz_kayması": 0.0, "tahsis": 0.0, "açık": 1.0}
+    "pencere": 0.0, "faz_kayması": 0.0, "tahsis": 0.0,
+    "kök": 0.0, "cartan_normu": 0.0, "açık": 1.0}
 
 
 def mahalli_beyani() -> Dict[str, float]:
@@ -43,6 +44,10 @@ def mahalli_metni(b: Optional[Dict[str, float]] = None) -> str:
            d["seyirci_nispeti"], int(d.get("tahsis", 0))),
         "    biriken faz kayması : %.6e rad   (sürekli U(1))"
         % d["faz_kayması"],
+        "    CARTAN KÖKÜ %d   küresel ayar fazı normu %.6e rad"
+        % (int(d.get("kök", 0)), d.get("cartan_normu", 0.0)),
+        "    Kök vektörü BİR MİLYON QUDİTE SERPİLMEZ (ferman 2-Â):",
+        "    KAN üssüne küresel rezonans fazı olarak girer.",
         "    Bu yazmaç `_psi`nin yerine geçmez: `_psi` TEKİL KAVRAM",
         "    LİFİDİR (bir quditin iç anatomisi), bu ise KÜLLÎ yazmacın",
         "    mahallî tensörüdür. İkisi ayrı seviyedir (ferman 2-Ş).",
@@ -51,8 +56,32 @@ def mahalli_metni(b: Optional[Dict[str, float]] = None) -> str:
 
 class MahalliYazmac:
 
+    def kok_indisi(self, ad: str) -> int:
+        if ad not in self._kok:
+            self._kok[ad] = len(self._kok)
+            self.cartan = np.concatenate([self.cartan, np.zeros(1)])
+        return int(self._kok[ad])
+
+    def cartan_ekle(self, ad: str, aci: float) -> int:
+        k = self.kok_indisi(str(ad))
+        self.cartan[k] += float(aci)
+        self.cartan[k] = (math.remainder(float(self.cartan[k]),
+                                         2.0 * math.pi))
+        _MAHALLI["kök"] = float(self.cartan.size)
+        _MAHALLI["cartan_normu"] = float(np.abs(self.cartan).sum())
+        return k
+
+    def kok_agirligi(self) -> np.ndarray:
+        n = max(1, int(self.cartan.size))
+        return np.arange(1, n + 1, dtype=float) / float(n)
+
+    def kuresel_faz(self) -> float:
+        return float(np.dot(self.cartan, self.kok_agirligi()))
+
     def __init__(self, taban: int) -> None:
         self.qudit = int(ZIRH_QUDITI)
+        self._kok: Dict[str, int] = {}
+        self.cartan = np.zeros(0, float)
         self.taban = max(2, int(taban))
         self.yigin = 0
         self.pencere = 0

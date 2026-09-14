@@ -1368,6 +1368,7 @@ class QNefs:
             from .mahalli_yazmac import MahalliYazmac
             self.mahalli = MahalliYazmac(int(self.ayar.veri_lifi))
         q.mahalli = self.mahalli
+        q.y.mahalli = self.mahalli
         q.kodla(E)
         if q.iz.senet_acik:
             q.iz.kapi_yaz("başlangıç", (),
@@ -1432,6 +1433,7 @@ class QNefs:
                 parite_lifi=min(int(getattr(self.ayar, "parite_lifi", 2)),
                                 len(lif) - 1),
                 lif_yapisi=lif))
+        q.intac()
         if bec:
             bec_faz_kilidi(q)
         q.iz.kesme_hakiki = float(max(0.0, 1.0 - q.y.sadakat()))
