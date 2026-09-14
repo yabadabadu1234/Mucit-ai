@@ -241,15 +241,16 @@ class QYazmac:
             yerel_faz = None
             if pq is not None:
                 from .mahalli_yazmac import MahalliYazmac
-                self.yerel = MahalliYazmac(n_sat, sozluk, B)
-                self.yerel.yerlestir(bas, dolu)
+                self.mahalli = MahalliYazmac(n_sat, sozluk, B)
+                self.mahalli.yerlestir(bas, dolu)
                 kontrol, bag = pq.temas_kapilari()
-                self.yerel.kapilari_vur(
+                self.mahalli.kapilari_vur(
                     kontrol,
-                    pq.rezonans(self.yerel.koordinat(), int(kontrol.size)),
+                    pq.rezonans(self.mahalli.koordinat(),
+                                int(kontrol.size)),
                     bag)
                 yer_j = np.arange(n_sat)
-                yerel_faz = self.yerel.faz[:, yer_j]
+                yerel_faz = self.mahalli.faz[:, yer_j]
             yer_i = np.arange(n_sat)
             dizi = bas[:, (yer_i[:, None] + yer_i[None, :]) % n_sat]
             psi_f = kan.genlik(dizi.reshape(B * n_sat, n_sat),
