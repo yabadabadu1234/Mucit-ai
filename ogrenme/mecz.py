@@ -309,7 +309,8 @@ class Memuriyet:
             iz, n_par, defter=(self.nefs.p.defter()
                                if hasattr(self.nefs.p, "defter") else None),
             tahsis=2 * sum(int(k) for _b, k in
-                           (self.nefs.p.defter() or {}).values()))
+                           (self.nefs.p.defter() or {}).values()),
+            kaydirma=int(getattr(self.nefs.p, "d", 0)))
         _YETIM[:] = list(kap.get("yetim", ()))[:6]
         _MECZ["kapı"] = float(kap["kapı"])
         _MECZ["kapsanan_parametre"] = float(kap["kapsanan_parametre"])

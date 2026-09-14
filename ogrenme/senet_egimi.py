@@ -158,7 +158,7 @@ def _turev_vur(psi: np.ndarray, lif: Tuple[int, ...], turev) -> np.ndarray:
 
 
 def senet_kapsami(iz, n_par: int, defter=None,
-                  tahsis: int = 0) -> Dict[str, Any]:
+                  tahsis: int = 0, kaydirma: int = 0) -> Dict[str, Any]:
     kapsanan = {int(b[1]) for b in iz.baglanti}
     fotograf = sum(1 for k in iz.senet if str(k[0]) == "durum")
     o: Dict[str, Any] = {
@@ -171,9 +171,10 @@ def senet_kapsami(iz, n_par: int, defter=None,
     if not defter:
         return o
     yetim = []
+    k = int(kaydirma)
     for ad, (bas, kac) in defter.items():
         acik = sum(1 for i in range(int(bas), int(bas) + int(kac))
-                   if i not in kapsanan)
+                   if i not in kapsanan and (k + i) not in kapsanan)
         if acik:
             yetim.append((int(acik), str(ad)))
     yetim.sort(reverse=True)

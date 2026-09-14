@@ -45498,3 +45498,31 @@ ve padişaha sorulur. Üçü de soruldu, üçüne de hüküm geldi:
   uzuvdur ve şimdi vardır: `nefs/mahalli_yazmac.py`, qudit başına bir
   genlik çarpanı ve bir sürekli Lie fazı. Kapılar oraya vurur; dokunmadığı
   qudit seyircidir.
+
+---
+
+## YETİM BLOK LİSTESİ BİR ÖLÇÜM KUSURUYDU
+
+`mecz_metni` her turda altı blok "yetim" diye sayıyordu --
+`q6.Tasavvur/24`, `q21.Tefekkür/20`, `harman 18`, `q7.Mana/8`,
+`q41.Münazara/8`, `q39.Belâgat/8` -- ve sayı hiç düşmüyordu. Kodu
+okuyunca sebep çıktı, ve sebep melekelerde değil **müfettişte**ydi.
+
+Parametre yazmacının iki kanadı vardır ve adresleri ayrı uzaydadır:
+
+    GENLİK KANADI   adres            0 … d
+    FAZ KANADI      adres        d + 0 … d + d
+
+Melekeler açılarını faz kanadından bağlar (`aci_adresi` = `d + adres`),
+o hâlde `iz.baglanti` içindeki parametre kimlikleri `d`den büyüktür.
+`senet_kapsami`nin yetim hesabı ise defterin **çıplak** adresini
+(`bas … bas+kac`) o kümede arıyordu. Çıplak adres orada hiçbir zaman
+bulunmaz; netice her blok yetim görünür.
+
+Yâni Belâgat de Münazara da açılarını fiilen bağlıyordu; müfettiş yanlış
+yerde arıyordu. `senet_kapsami` artık `kaydirma` alıyor ve her adresi
+iki kanatta da yokluyor.
+
+Ders ferman 1-Ü'nündür: bir müfettişin kendisi de teftiş edilir. Kırmızı
+yanan bir ölçü, ölçtüğü şeyin bozuk olduğunu değil, bazen **ölçünün**
+bozuk olduğunu gösterir.
