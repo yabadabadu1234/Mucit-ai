@@ -2264,17 +2264,27 @@ kapasitesi `q^N`dir ve hiçbir yerde açılmaz (ferman 2-T, 2-V).
 
     NE ZAMAN NE KONUŞACAĞINI BİLEN MAKİNE.
 
-* Ölçü *"doğru belirteci bildi mi"* değildir. Ölçü **iki katlıdır**:
-  konuşulacak yerde **konuşmak**, susulacak yerde **susmak** -- ve
-  konuşurken **o anın gerektirdiğini** söylemek.
-* **SÜKÛT BİR KUSUR DEĞİL, BİR HÜKÜMDÜR.** Bilmediğini makul biçimde
-  söylemek (ferman 2-Î) bir cevaptır; hezeyanla konuşmak cevapsızlıktan
-  **beterdir**.
-* O hâlde mizanda tartılan şey yalnız hedefe sadakat değil, **zamanın
-  ve makamın** doğru okunmasıdır: `sükût`, `kelâm` ve `makam`
-  sektörleri süs değil, mananın ta kendisidir.
+### BU NE DEMEK DEĞİLDİR -- BENİM YANLIŞ MÜHRÜM
 
----
+Bunu evvelâ *"susulacak yerde susmak, konuşulacak yerde konuşmak"*
+diye mühürledim ve **yanlıştı**. Tashih:
+
+> *"Kastım susma-konuşma farkı değil, kastım **hangi diziden sonra
+> hangi dizinin geleceğinin ihtimalini en doğru kestirmiş olması**."*
+
+### ASIL HÜKÜM
+
+    Öğrenilen şey:  Olabilirlik( sonraki DİZİ | evvelki DİZİ )
+
+* **DİZİDEN DİZİYE**, belirteçten belirtece değil (ferman 1-N-B: tek
+  belirteç tahmin edilmez). Yazmaç `sözlük^pencere` mertebesindeki
+  bütün dizileri aynı anda taşır; kestirilen şey o dizilerin
+  **ihtimalidir**.
+* *"Ne zaman ne konuşacağını bilmek"* bunun **neticesidir**: hangi
+  dizinin hangisini takip edeceğini doğru kestiren makine, zamanı ve
+  makamı da doğru okumuş olur.
+* Üç vecih (muhakeme, hakikat ayrımı, münasebet haritası) bu
+  kestirimin **vasıtalarıdır**, ayrı hedefler değil.
 
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 

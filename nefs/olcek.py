@@ -108,20 +108,23 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     V, _basamak, _cetvel = taban_sec(int(k.sozluk))
     from .musahede import gorev_boyu, sigan_nispet
     _gb = gorev_boyu()
-    gereken = int(_gb["azamî"]) * int(_basamak)
-    pencere = int(min(PENCERE_HADDI,
+    _belirtec_haddi = int(PENCERE_HADDI)
+    pencere_belirtec = int(min(_belirtec_haddi, max(1, int(_gb["azamî"]))))
+    gereken = int(pencere_belirtec) * int(_basamak)
+    pencere = int(min(_belirtec_haddi * int(_basamak),
                       max(V, _ikinin_kuvveti(float(gereken), int(V)))))
     sigan = float(sigan_nispet(pencere // max(1, int(_basamak))))
 
     yuva = sum(n for _, n in QAyar.kulli_alanlar)
-    K_hadd = _ikinin_kuvveti(math.sqrt(float(PENCERE_HADDI)), 4)
-    while K_hadd * K_hadd < PENCERE_HADDI:
+    _hadd_basamak = int(PENCERE_HADDI) * int(_basamak)
+    K_hadd = _ikinin_kuvveti(math.sqrt(float(_hadd_basamak)), 4)
+    while K_hadd * K_hadd < _hadd_basamak:
         K_hadd *= 2
     hukum = K_hadd * K_hadd
-    assert hukum >= PENCERE_HADDI, (
+    assert hukum >= _hadd_basamak, (
         "yazmaç azamî hududu taşımıyor: basamak başına %d yer < hadd=%d "
         "-- her basamak kendi seviyesini ister (ferman 2-O)"
-        % (hukum, PENCERE_HADDI))
+        % (hukum, _hadd_basamak))
     K = _ikinin_kuvveti(math.sqrt(float(pencere)), 4)
     while K * K < pencere or K * K < yuva:
         K *= 2
@@ -155,9 +158,10 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     cev = int(max(2, (V // 2) * max(1, int(round(2 * c)))))
     _obek_eski = int(max(1, min(B, ornek, max(cev, ornek // max(1, yon)))))
     obek = 1
-    pencere = int(min(PENCERE_HADDI,
+    pencere = int(min(_belirtec_haddi * int(_basamak),
                       _ikinin_kuvveti(float(pencere * _obek_eski),
                                       int(V))))
+    pencere_belirtec = int(pencere // max(1, int(_basamak)))
     K = _ikinin_kuvveti(math.sqrt(float(pencere)), 4)
     while K * K < pencere or K * K < yuva:
         K *= 2
@@ -177,6 +181,7 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
         "veri_lifi": V, "karo": K, "hukum_lifi": hukum,
         "yigin_dilimi": obek, "keyfiyet_turu": keyf, "obek": obek,
         "ornek_sayisi": ornek, "pencere": pencere,
+        "pencere_belirtec": pencere_belirtec,
         "görev_belirteç_azamî": int(_gb["azamî"]),
         "görev_belirteç_ortanca": int(_gb["ortanca"]),
         "görev_sayısı": int(_gb["görev"]),
