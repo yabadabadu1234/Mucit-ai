@@ -1851,6 +1851,52 @@ beyanda görünür. Kalkan yasaktır, muhasebe değildir.
 
 ---
 
+## ▓▓▓ 2-Ö. FERMAN: YUVA LAĞVEDİLDİ -- OPERATÖREL FİBRASYON ▓▓▓
+
+> *"**'Yuva' tabiri ve arkasındaki bütün bekçi kodları TAMAMEN
+> LAĞVEDİLECEKTİR.** Bir meleke bir tamsayı aramaz; DHR süperseçim
+> sektörünün zâtî Cartan jeneratörüne kilitlenir."*
+> (`docs/zabit/KUME_15_OPERATOREL_FIBRASYON.md`)
+
+### TEŞHİS: 65 526 / 65 536 GEÇERSİZ YUVA
+
+Kod on altı bitlik statik bir adres dizisi açmış, içine yalnız on
+sektörün başlangıcını koymuş, kalan 65 526 yuvayı bir maskeyle
+**geçersiz** ilân etmişti. Belâgat ve Münazara açılarını kusursuz
+hesaplıyor, kapıyı `q.kulli(yuva)` diye fırlatıyor, aradaki
+`gecerli(yuva)` bekçisi *"bu yuva geçersizdir"* deyip kapıyı sessizce
+çöpe atıyordu. Melekelerin yetimliği kendi kusurları değil, **bekçinin
+cinayetiydi**.
+
+**Kuantum durum uzayında "boş yuva", "geçersiz adres" yoktur.** Hilbert
+uzayı delikli kart makinesi değildir.
+
+### LAĞVEDİLEN
+
+    Meleke → q.kulli(yuva_no) → gecerli() bekçisi → DÜŞTÜ
+
+`yuva` tabiri, `q.kulli(ad, j)` adreslemesi ve `gecerli()` bekçisi
+küllî sektör kanadında **ilga edilmiştir**.
+
+### GELEN: SEKTÖRÜN CARTAN JENERATÖRÜNE KİLİTLENME
+
+    Sektör_Faz_Vur(sektör, açı):
+        faz[ sektörün lifi ] ← faz[ sektörün lifi ] + açı
+
+* **BELÂGAT BİR SAYI ARAMAZ**, zâtı gereği `kelam` sektörüdür.
+  **MÜNAZARA BİR ADRES ARAMAZ**, `tenakuz` ↔ `nakz` gerilim çiftidir.
+* **DÜŞEN KAPI SIFIRDIR** ve sıfır olduğu **sayılır** (ferman 5):
+  arada bekçi olmadığı için düşmesi riyazî olarak imkânsızdır.
+* **SEYİRCİ İLKESİ KORUNUR** (ferman 2-V): meleke hâlin tamamını
+  çorba etmez, yalnız kendi lifini evirir; kalan sektörler seyircidir.
+  *"Hâlin tamamına kaba bir yoğun operatör vur"* demek DHR yüklerini
+  birbirine sızdırır, termalleşme ve dolanıklık çorbası doğurur.
+* **ADRESİ YAMAMAK YASAKTIR:** on sektörün indisini elle düzeltmek
+  yamalı bohçadır; on birincisi gelince aynı tabloya çarpılır. Sabit
+  tamsayı adresleme putu yaşatılmaz.
+
+---
+
 ## ▓▓▓ 2-P. FERMAN: MECLİS DEĞİL **MECZ** -- KÖR YÖN ARAMASI İLGA ▓▓▓
 
 > *"Bu kesinlikle bir kusur, en ilkel olarak türevden bile berbat...

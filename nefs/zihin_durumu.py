@@ -107,6 +107,8 @@ class QYazmac:
         self.tek = self.y.tek
         self.cift = self.y.cift
         self.uzak_cift = self.y.uzak_cift
+        self.sektor_faz_vur = self.y.sektor_faz_vur
+        self.sektor_faz_bagi = self.y.sektor_faz_bagi
         self._alan: Dict[str, Tuple[int, int]] = {
             ad: (self.y.kulli(ad, 0), int(kac))
             for ad, kac in a.kulli_alanlar}

@@ -145,6 +145,7 @@ class QuditYazmac:
         self.bag = 0
         toplam = sum(p for _, p in a.kulli_alanlar)
         self._sektor: Dict[str, Tuple[int, int]] = {}
+        self._sektor_vurusu = 0
         bas = 0
         for ad, pay in a.kulli_alanlar:
             gen = max(1, int(round(self.d * pay / toplam)))
@@ -531,6 +532,40 @@ class QuditYazmac:
         self.iz.kapi_yaz("sektör", (int(i), int(j)), M)
         self.psi[:, i:j] = self.psi[:, i:j] @ M.T
         self._kapi += 1
+
+    def sektor_faz_vur(self, ad: str, aci, bag=None) -> int:
+        i, j = self.sektor(ad)
+        a = np.asarray(aci, float).reshape(-1)
+        gen = int(j - i)
+        if a.size != gen:
+            a = np.resize(a, gen) if a.size else np.zeros(gen, float)
+        t = np.zeros(self.d, float)
+        t[i:j] = a
+        no = self.iz.kapi_yaz("sektör_faz", (int(i), int(j)), a)
+        self.faz(t)
+        self._sektor_vurusu += 1
+        if bag and self.iz.senet_acik:
+            dizin = np.arange(i, j, dtype=np.int64)
+            for (par, olcek, pay) in bag:
+                deger = np.zeros(self.d, complex)
+                deger[dizin] = 1j * np.asarray(pay, float)
+                self.iz.bag_yaz(no, int(par), float(olcek),
+                                ("köşegen", dizin, deger[dizin]))
+        return gen
+
+    def sektor_faz_bagi(self, ad: str, par, olcek: float,
+                        pay=None) -> List[Tuple[int, float, np.ndarray]]:
+        i, j = self.sektor(ad)
+        gen = int(j - i)
+        pid = np.asarray(par, np.int64).reshape(-1)
+        p = (np.ones(gen) if pay is None
+             else np.resize(np.asarray(pay, float).reshape(-1), gen))
+        bag = []
+        for k in range(min(gen, pid.size)):
+            v = np.zeros(gen, float)
+            v[k] = float(p[k])
+            bag.append((int(pid[k]), float(olcek), v))
+        return bag
 
     def sektor(self, ad: str) -> Tuple[int, int]:
         if ad not in self._sektor:
