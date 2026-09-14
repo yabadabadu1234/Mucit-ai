@@ -17,7 +17,6 @@ class SupheAyari:
     sonum: float = 0.05
     kip_kenari: float = 0.25
     tevakkuf_esigi: float = 0.35
-    merak_esigi: float = 0.5
     parite_lifi: int = 2
     lif_yapisi: tuple = (16, 16, 16)
 
@@ -97,7 +96,7 @@ def suphe_manifoldu(haller: Sequence[np.ndarray],
     _SAYAC["buhar"] += float(np.count_nonzero(mu < float(a.tevakkuf_esigi)))
 
     suphe = 1.0 - mu
-    merak = [int(i) for i in np.nonzero(suphe > float(a.merak_esigi))[0]]
+    merak = [int(i) for i in np.nonzero(suphe > mu)[0]]
     _SAYAC["merak"] += float(len(merak))
 
     tevakkuf = int(np.count_nonzero(mu < float(a.tevakkuf_esigi)))

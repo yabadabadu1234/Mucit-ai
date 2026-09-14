@@ -386,6 +386,9 @@ class QYazmac:
     def beyan(self, sozluk: int = 0, satir: int = 0) -> np.ndarray:
         return self.y.beyan(sozluk)
 
+    def beyan_vecihle(self, sozluk: int, vecihler) -> np.ndarray:
+        return self.y.beyan_vecihle(sozluk, vecihler)
+
     def durma_hukmu(self, adim: int) -> bool:
         m = getattr(self, "mahalli", None)
         assert m is not None, (

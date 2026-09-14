@@ -56,7 +56,8 @@ from nefs.munasebet import (Harita, MunasebetAyari, munasebet_kos,
 from main.kulliyat import (kulliyat_verisi,
                            kulliyat_dokumu, kulliyat_beyani)
 from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
-                           mukayese_melekesi_beyani, vecih_beyani,
+                           mukayese_melekesi_beyani, omur_beyani,
+                           vecih_beyani,
                            vecihleri_istihrac, yirtiklari_tertiple)
 from nefs.hendese import (HendeseAyari, hendese_teshisi,
                           hendese_beyani)
@@ -754,6 +755,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "mukayese": mukayese,
             "mukayese_melekesi": mukayese_melekesi_beyani(),
             "vecih": vecih_beyani(),
+            "vecih_ömrü": omur_beyani(),
             "hafıza_tertibi": tertip_beyani(),
             "küme_kapanışı": kume_kapanisi,
             "mihenk": nobet.beyan(p_yildiz),

@@ -104,7 +104,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from nefs.veri_kapisi import kapi_metni
         from nefs.mukayese import mukayese_melekesi_metni
         from nefs.hafiza import tertip_metni
-        from nefs.mukayese import vecih_metni
+        from nefs.mukayese import omur_metni, vecih_metni
         kn = kulli["konuşma"]
         s += ["",
               "  TEK MOTOR -- TÂLİM DE KONUŞUR (ferman 1-H)",
@@ -133,6 +133,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
                   kulli.get("mukayese_melekesi") or {}), "",
               tertip_metni(kulli.get("hafıza_tertibi") or {}), "",
               vecih_metni(kulli.get("vecih") or {}), "",
+              omur_metni(kulli.get("vecih_ömrü") or {}), "",
               nqs_metni(kulli.get("kan_nqs") or {}), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"
               % (kulli["külliyat"]["arc"], kulli["külliyat"]["külliyat"]),

@@ -437,8 +437,16 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
                      ← modülo katlama YOK; her belirteç basamağa açılır
 
     tekrarla:
-      Dağılım    = Hâl(İleriGeçiş(Yerleştir(Bağlam)))    ← nedensel cephenin
-                                                           basamak marjinali
+      Hâl        = İleriGeçiş(Yerleştir(Bağlam))
+      Merak      = { k : Şüphe(k) > Yakîn(k) }       ← 𝒪15 ATEŞLEMESİ
+                   eşik sabit değil: şüphe ile yakîn birbiriyle tartılır (1-J)
+      Vecihler   = VecihAç(son hâller, Merak)        ← Merak sönükse BOŞ
+      Dağılım    = toplam over v ∈ Vecihler of
+                     Ağırlık(v) · Marjinal(İzdüşüm(v, Hâl)) / Σ Ağırlık
+                   Vecih yoksa düz Marjinal(Hâl)     ← nedensel cephede
+      VecihKapat(Vecihler)                           ← NETİCE ALINDI, KAPANDI
+                   ← ferman 2-Ú-D: model cevabı AÇTIĞI VECİHLERİN İÇİNDE
+                     arar; açık kalan vecih sayısı SIFIR olmalıdır
       eğer Durma(adım):  dur                             ← üst hudut YOK (2-Ó-B)
       Budanmış   = Buda(Dağılım, Hafıza.cerh)
       Basamak_yeni = enbüyükArgüman( ∇log Budanmış / g_FubiniStudy )

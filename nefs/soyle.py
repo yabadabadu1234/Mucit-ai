@@ -57,10 +57,13 @@ def _sec(P: np.ndarray) -> int:
 
 def _uret(nefs, baglam: List[int], pencere: int, sozluk: int,
           hafiza=None) -> tuple:
+    from .mukayese import merakla_coz
     from .qegitim import belirtecleri_kodla
+    from .suphe import SupheAyari, suphe_manifoldu
     dizi = list(baglam)
     cikti: List[int] = []
     sukutlar: List[float] = []
+    haller: List[np.ndarray] = []
     bedel = 0.0
     budanan = 0
     q = None
@@ -69,10 +72,19 @@ def _uret(nefs, baglam: List[int], pencere: int, sozluk: int,
         E = belirtecleri_kodla(pen, nefs.ayar.veri_lifi,
                                nefs.ayar.veri_lifi)
         q = nefs.idrak_et(E)
-        sukutlar.append(float(q.olcumler().get("sukut", 0.0)))
+        sukut = float(q.olcumler().get("sukut", 0.0))
+        sukutlar.append(sukut)
         if cikti and q.durma_hukmu(len(cikti) - 1):
             break
-        P = np.clip(np.asarray(q.beyan(int(sozluk)), float)[0], 1e-12, None)
+        hal = np.asarray(q.y.psi[0], complex).reshape(-1)
+        haller.append(hal)
+        sp = suphe_manifoldu([hal], [1.0 - 2.0 * sukut],
+                             yakin=np.array([1.0 - sukut]),
+                             ayar=SupheAyari(acik=1))
+        P = np.clip(np.asarray(merakla_coz(
+            haller[-int(pencere):], sp["merak"],
+            lambda vs: q.beyan_vecihle(int(sozluk), vs)),
+            float)[0], 1e-12, None)
         P = P / P.sum()
         P, kesik = _buda(P, hafiza)
         budanan += kesik

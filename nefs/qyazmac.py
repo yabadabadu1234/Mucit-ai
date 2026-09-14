@@ -627,6 +627,30 @@ class QuditYazmac:
         p = (np.abs(self.psi) ** 2).reshape(self.B, taban, yer)[:, :, c]
         return p / np.maximum(p.sum(axis=1, keepdims=True), 1e-300)
 
+    def beyan_vecihle(self, sozluk: int, vecihler) -> np.ndarray:
+        duz = self.beyan(int(sozluk))
+        vs = list(vecihler or ())
+        if not vs:
+            return duz
+        taban = int(sozluk) if int(sozluk) >= 2 else int(self.ayar.lif[0])
+        yer = self.d // taban
+        c = int(np.clip(int(self.cephe), 0, yer - 1))
+        top = np.zeros(taban, float)
+        agir = 0.0
+        for v in vs:
+            u = np.asarray(v.gor(self.psi[0]), complex).reshape(-1)
+            if u.size != self.d or not np.all(np.isfinite(u)):
+                continue
+            p = (np.abs(u) ** 2).reshape(taban, yer)[:, c]
+            s = float(p.sum())
+            if s <= 0.0:
+                continue
+            top += (p / s) * float(v.agirlik)
+            agir += float(v.agirlik)
+        if agir <= 0.0:
+            return duz
+        return (top / agir).reshape(1, taban)
+
     def povm(self, ad: str) -> Tuple[float, float]:
         i, j = self.sektor(ad)
         v = self.psi[:, i:j]

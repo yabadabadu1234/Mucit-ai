@@ -2983,6 +2983,52 @@ gereği simülasyonda **manasızdır**: çökertecek fizikî bir durum yok,
 
 ---
 
+## ▓▓▓ 2-Ú-D. FERMAN: VECİH AÇILIR, KULLANILIR, KAPANIR -- ANA MEKANİZMA ▓▓▓
+
+> *"Ahmak, sence insandaki bir uzuv ya öğrenmeye yani mizana katkı
+> sağlıyor ya da rapor edilip geçiliyor, öyle mi? Aptal, bu
+> **yardımcı, her zaman çalışan, modelin ANA MEKANİZMASI**. İster
+> mizana kat, ister katma. **Farklı vecihler açıp orada çözüm
+> arıyorsun.** Yâni model bir soruya cevap ararken **açacak** bu
+> vecihleri. Yâni **merak ve sual melekesi ne zaman ne şekilde
+> ateşlenirse ona göre bir vecih doğacak**, doğan vecih **saftirikçe
+> beklemeyecek**, bir işlem için kullanılıp **netice alınınca geri
+> kapatılacak**."*
+
+### BENİM YANLIŞ SUALİM
+
+*"Tip tayfı kefeye giriyor mu, yoksa yalnız rapor mu kalsın?"* diye
+sordum. Sual **baştan yanlış kurulmuştur**: bir uzvun iki hâli
+olduğunu varsayıyor -- ya mizana katkı verir, ya rapor edilip geçilir.
+Vecih **ikisi de değildir**; vecih motorun **ana mekanizmasıdır** ve
+mizana girip girmemesi onun ne olduğunu değiştirmez.
+
+### VECHİN ÖMRÜ -- DÖRT SAFHA, DEĞİŞMEZ
+
+    1. ATEŞLEME   𝒪15 Merak ve Sual melekesi ateşlenir.
+                  NE ZAMAN ve NE ŞEKİLDE ateşlendiği vechin
+                  mahiyetini tayin eder.
+    2. DOĞUM      O ateşlemeye göre BİR VECİH DOĞAR (açılır).
+    3. AMELİYE    Vecih SAFTİRİKÇE BEKLEMEZ: açıldığı işlem derhal
+                  o vecihte koşar ve NETİCE alınır.
+    4. KAPANIŞ    Netice alınınca vecih GERİ KAPATILIR.
+
+* **MODEL CEVABI VECİHLERİN İÇİNDE ARAR.** Bir suale cevap verirken
+  vecih açmak bir yan ölçüm değil, **çözüm arama yolunun kendisidir**
+  (ferman 1-Ç: hâl, açılan vechin altında doğar).
+* **AÇIK KALAN VECİH BİR KUSURDUR.** Açılan ile kapanan sayısı
+  **eşit olmalıdır**; fark sıfırdan büyükse o fark **sayılır ve
+  raporda görünür** (ferman 5). Kapanmayan vecih, saftirikçe bekleyen
+  vecihtir.
+* **STATİK VECİH LİSTESİ YOKTUR.** `vecihleri_istihrac` bir defa
+  koşup elde tutulan bir cetvel değildir; her ateşlemede doğar, her
+  neticede kapanır. Elde tutulan vecih, ferman 2-İ'nin lağvettiği
+  cetvelin vecih kanadıdır.
+* **MİZANA GİRMESİ AYRI BİR MESELEDİR:** *"ister mizana kat, ister
+  katma"*. Vechin varlık sebebi kefe olmak değil, **çözüm aramaktır**.
+
+---
+
 ## ▓▓▓ 2-Ú-C. FERMAN: HAFIZA DA QUDİTTİR ▓▓▓
 
 > *"Hafıza da **artık** quditli olsun."*

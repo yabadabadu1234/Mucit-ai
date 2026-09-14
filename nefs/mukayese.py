@@ -12,6 +12,8 @@ __all__ = ["mukayese_melekesi", "mukayese_melekesi_beyani",
            "Vecih", "vecihleri_istihrac", "vecih_beyani",
            "vecih_metni", "uyanik_vecihler", "alem_cinsleri",
            "ayniyet_ihtilaf", "tip_tayfi",
+           "vecih_ac", "vecih_kapat", "merakla_coz",
+           "omur_beyani", "omur_metni",
            "bargmann", "hipotez_halkasi", "swap_testi", "simplisiyal", "istisna_yeri",
            "choi", "nesnelestir", "spektrum", "hata_payi",
            "zorunlu", "mumkun", "kiplik", "paylar_olc",
@@ -382,6 +384,77 @@ def uyanik_vecihler(durumlar: Sequence[np.ndarray],
         if ayirt > had:
             canli.append(v)
     return canli
+
+
+_OMUR: Dict[str, float] = {
+    "ateşleme": 0.0, "doğan": 0.0, "kapanan": 0.0, "netice": 0.0,
+    "sönük_ateşleme": 0.0, "açık": 1.0}
+
+_ACIK_VECIH: List[Vecih] = []
+
+
+def omur_beyani() -> Dict[str, float]:
+    b = dict(_OMUR)
+    b["açık_kalan"] = float(b["doğan"] - b["kapanan"])
+    return b
+
+
+def omur_metni(b: Optional[Dict[str, float]] = None) -> str:
+    d = dict(b or omur_beyani())
+    if not d.get("ateşleme"):
+        return ("  VECİH ÖMRÜ: MERAK HİÇ ATEŞLENMEDİ -- kırmızı "
+                "(ferman 2-Ú-D)")
+    return "\n".join([
+        "  VECİH ÖMRÜ -- MOTORUN ANA MEKANİZMASI (ferman 2-Ú-D)",
+        "    Vecih bir rapor kalemi değildir: model suale cevabı",
+        "    AÇTIĞI VECİHLERİN İÇİNDE arar, netice alınınca kapatır.",
+        "    merak ateşlemesi %d   (sönük %d)   doğan vecih %d"
+        % (int(d["ateşleme"]), int(d.get("sönük_ateşleme", 0)),
+           int(d["doğan"])),
+        "    alınan netice %d   kapanan vecih %d   AÇIK KALAN %d"
+        % (int(d["netice"]), int(d["kapanan"]),
+           int(d.get("açık_kalan", 0))),
+        "    Açık kalan SIFIR olmalıdır: kapanmayan vecih, saftirikçe",
+        "    bekleyen vecihtir.   (ölçü %s)"
+        % ("açık" if d.get("açık") else "KAPALI"),
+    ])
+
+
+def vecih_ac(durumlar: Sequence[np.ndarray],
+             merak: Sequence[int]) -> Tuple[Vecih, ...]:
+    _OMUR["ateşleme"] += 1.0
+    D = [np.asarray(x, complex).reshape(-1) for x in durumlar]
+    if not list(merak) or len(D) < 2 or not _OMUR.get("açık"):
+        _OMUR["sönük_ateşleme"] += 1.0
+        return ()
+    vs = vecihleri_istihrac(D)
+    _ACIK_VECIH.extend(vs)
+    _OMUR["doğan"] += float(len(vs))
+    return vs
+
+
+def vecih_kapat(vecihler: Sequence[Vecih]) -> int:
+    say = 0
+    for v in list(vecihler):
+        if v in _ACIK_VECIH:
+            _ACIK_VECIH.remove(v)
+        say += 1
+    _OMUR["kapanan"] += float(say)
+    return int(say)
+
+
+def merakla_coz(durumlar: Sequence[np.ndarray], merak: Sequence[int],
+                amel: Callable[[Tuple[Vecih, ...]], Any]) -> Any:
+    vs = vecih_ac(durumlar, merak)
+    try:
+        netice = amel(vs)
+    finally:
+        vecih_kapat(vs)
+    _OMUR["netice"] += 1.0
+    assert not _ACIK_VECIH, (
+        "%d vecih açık kaldı -- doğan vecih netice alınınca KAPANIR "
+        "(ferman 2-Ú-D)" % len(_ACIK_VECIH))
+    return netice
 
 
 def ayniyet_ihtilaf(a: np.ndarray, b: np.ndarray,
