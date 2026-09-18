@@ -565,6 +565,10 @@ class QuditYazmac:
             self._faz_bagla(np.arange(i, j, dtype=np.int64), bag)
         return gen
 
+    def _genlik_agirligi(self) -> float:
+        v = np.asarray(self.psi, complex).reshape(-1)
+        return float(np.real(np.vdot(v, v)))
+
     def sektor_donmesi(self, ad: str, teta, bag=None) -> int:
         i, j = self.sektor(ad)
         gen = int(j - i)
@@ -601,17 +605,18 @@ class QuditYazmac:
 
     def sektor_cifti(self, kontrol: str, hedef: str,
                      bag: float = 1.0, degil: bool = False,
-                     aci=None, senet=None) -> float:
+                     aci=None, senet=None, defter=None) -> float:
         i0, j0 = self.sektor(kontrol)
         i1, j1 = self.sektor(hedef)
-        P = np.abs(np.asarray(self.psi, complex)) ** 2
-        top = float(P.sum())
+        top = self._genlik_agirligi()
         assert top > 0.0, (
             "yazmaç tamamen söndü -- kenetlenecek genlik yok (ferman 5)")
-        w_kontrol = float(P[:, i0:j0].sum() / top)
+        Pk = np.abs(self.psi[:, i0:j0]) ** 2
+        Ph = np.abs(self.psi[:, i1:j1]) ** 2
+        w_kontrol = float(Pk.sum() / top)
         if degil:
             w_kontrol = 1.0 - w_kontrol
-        w_hedef = P[:, i1:j1].mean(axis=0)
+        w_hedef = Ph.mean(axis=0)
         pay = float(w_hedef.sum())
         m = getattr(self, "mahalli", None)
         teta = (float(m.cartan_oku(str(kontrol)))
@@ -626,7 +631,10 @@ class QuditYazmac:
         t = np.zeros(self.d, float)
         if pay > 0.0:
             t[i1:j1] = -float(bag) * w_kontrol * a * (w_hedef / pay) * gen
-        self.faz(t)
+        if defter is None:
+            self.faz(t)
+        else:
+            defter += t
         self._sektor_vurusu += 1
         self._kenet_vurusu = getattr(self, "_kenet_vurusu", 0) + 1
         if senet:
@@ -636,19 +644,35 @@ class QuditYazmac:
                           % ("¬" if degil else "", kontrol, hedef), etki)
         return etki
 
+    def sektor_kenetleri(self, kenetler) -> float:
+        k = list(kenetler)
+        if not k:
+            return 0.0
+        defter = np.zeros(self.d, float)
+        etki = 0.0
+        for z in k:
+            etki += self.sektor_cifti(
+                str(z[0]), str(z[1]),
+                bag=float(z[2]) if len(z) > 2 and z[2] is not None else 1.0,
+                degil=bool(z[3]) if len(z) > 3 else False,
+                aci=z[4] if len(z) > 4 else None,
+                senet=z[5] if len(z) > 5 else None,
+                defter=defter)
+        self.faz(defter)
+        return float(etki)
+
     def sektor_oruntusu(self, oruntu, kok: str = "") -> float:
         d = dict(oruntu or {})
         if not d:
             return 0.0
-        P = np.abs(np.asarray(self.psi, complex)) ** 2
-        top = float(P.sum())
+        top = self._genlik_agirligi()
         assert top > 0.0, (
             "yazmaç tamamen söndü -- örüntü tartılamaz (ferman 5)")
         carpim = 1.0
         parca: List[str] = []
         for sek in sorted(d):
             i, j = self.sektor(str(sek))
-            w = float(P[:, i:j].sum() / top)
+            w = float((np.abs(self.psi[:, i:j]) ** 2).sum() / top)
             bit = int(d[sek]) & 1
             carpim *= (w if bit else (1.0 - w))
             parca.append(("" if bit else "¬") + str(sek))

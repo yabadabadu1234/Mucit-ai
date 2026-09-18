@@ -111,6 +111,7 @@ class QYazmac:
         self.sektor_donmesi = self.y.sektor_donmesi
         self.sektor_cifti = self.y.sektor_cifti
         self.sektor_oruntusu = self.y.sektor_oruntusu
+        self.sektor_kenetleri = self.y.sektor_kenetleri
         self.sektor_faz_bagi = self.y.sektor_faz_bagi
         self._alan: Dict[str, Tuple[int, int]] = {
             ad: (self.y.kulli(ad, 0), int(kac))

@@ -539,12 +539,13 @@ def vicdan(q=None, p=None, usuller=None, tur: int = 1,
     kesme = 0.0
 
     if ne in ("işaret", "hepsi"):
-        q.sektor_cifti("tasdik", "nakz")
-        q.sektor_cifti("mizan", "tasdik", degil=True)
-        q.sektor_cifti("tasdik", "kelam", degil=True)
-        q.sektor_cifti("sukut", "tasdik")
-        q.sektor_cifti("gaye", "tasdik", degil=True)
-        q.sektor_cifti("tasdik", "gaye", degil=True)
+        q.sektor_kenetleri((
+            ("tasdik", "nakz", 1.0, False),
+            ("mizan", "tasdik", 1.0, True),
+            ("tasdik", "kelam", 1.0, True),
+            ("sukut", "tasdik", 1.0, False),
+            ("gaye", "tasdik", 1.0, True),
+            ("tasdik", "gaye", 1.0, True)))
 
     if ne in ("usul", "hepsi"):
         us = USULLER if usuller is None else usuller
