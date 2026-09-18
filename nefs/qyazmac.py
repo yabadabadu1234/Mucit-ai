@@ -565,31 +565,34 @@ class QuditYazmac:
             self._faz_bagla(np.arange(i, j, dtype=np.int64), bag)
         return gen
 
-    def sektor_donmesi(self, ad: str, teta: float, bag=None) -> int:
+    def sektor_donmesi(self, ad: str, teta, bag=None) -> int:
         i, j = self.sektor(ad)
         gen = int(j - i)
         assert gen >= 2, (
             "%r sektörünün genişliği %d -- dönme için en az iki seviye "
             "lâzım (ferman 2-Ö)" % (ad, gen))
-        c, s = math.cos(float(teta)), math.sin(float(teta))
+        cift = gen // 2
+        a = np.asarray(teta, float).reshape(-1)
+        a = np.resize(a, cift) if a.size else np.zeros(cift, float)
         U = np.eye(gen, dtype=complex)
-        for k in range(0, gen - 1, 2):
-            U[k, k] = c
-            U[k, k + 1] = -s
-            U[k + 1, k] = s
-            U[k + 1, k + 1] = c
+        dU = np.zeros((gen, gen), complex)
+        for k in range(cift):
+            c, s = math.cos(float(a[k])), math.sin(float(a[k]))
+            u, v = 2 * k, 2 * k + 1
+            U[u, u] = c
+            U[u, v] = -s
+            U[v, u] = s
+            U[v, v] = c
+            dU[u, u] = -s
+            dU[u, v] = -c
+            dU[v, u] = c
+            dU[v, v] = -s
         self.sektor_kapisi(ad, U)
         self._sektor_vurusu += 1
         m = getattr(self, "mahalli", None)
         if m is not None:
-            m.cartan_ekle(str(ad), float(teta))
+            m.cartan_ekle(str(ad), float(np.mean(a)))
         if bag and self.iz.senet_acik:
-            dU = np.zeros((gen, gen), complex)
-            for k in range(0, gen - 1, 2):
-                dU[k, k] = -s
-                dU[k, k + 1] = -c
-                dU[k + 1, k] = c
-                dU[k + 1, k + 1] = -s
             for (par, olcek, _pay) in ([bag] if isinstance(bag, tuple)
                                        else list(bag)):
                 self.iz.bag_yaz(self.iz.son_senet, int(par),
@@ -597,7 +600,8 @@ class QuditYazmac:
         return gen
 
     def sektor_cifti(self, kontrol: str, hedef: str,
-                     bag: float = 1.0, degil: bool = False) -> float:
+                     bag: float = 1.0, degil: bool = False,
+                     aci=None, senet=None) -> float:
         i0, j0 = self.sektor(kontrol)
         i1, j1 = self.sektor(hedef)
         P = np.abs(np.asarray(self.psi, complex)) ** 2
@@ -612,17 +616,49 @@ class QuditYazmac:
         m = getattr(self, "mahalli", None)
         teta = (float(m.cartan_oku(str(kontrol)))
                 if m is not None else 0.0)
-        etki = float(bag) * teta * w_kontrol
+        gen = int(j1 - i1)
+        if aci is None:
+            a = np.full(gen, teta, float)
+        else:
+            a = np.asarray(aci, float).reshape(-1)
+            a = np.resize(a, gen) if a.size else np.zeros(gen, float)
+        etki = float(bag) * float(np.mean(a)) * w_kontrol
         t = np.zeros(self.d, float)
         if pay > 0.0:
-            t[i1:j1] = -etki * (w_hedef / pay)
+            t[i1:j1] = -float(bag) * w_kontrol * a * (w_hedef / pay) * gen
         self.faz(t)
         self._sektor_vurusu += 1
         self._kenet_vurusu = getattr(self, "_kenet_vurusu", 0) + 1
+        if senet:
+            self._faz_bagla(np.arange(i1, j1, dtype=np.int64), senet)
         if m is not None:
             m.cartan_ekle("kenet.%s%s×%s"
                           % ("¬" if degil else "", kontrol, hedef), etki)
         return etki
+
+    def sektor_oruntusu(self, oruntu, kok: str = "") -> float:
+        d = dict(oruntu or {})
+        if not d:
+            return 0.0
+        P = np.abs(np.asarray(self.psi, complex)) ** 2
+        top = float(P.sum())
+        assert top > 0.0, (
+            "yazmaç tamamen söndü -- örüntü tartılamaz (ferman 5)")
+        carpim = 1.0
+        parca: List[str] = []
+        for sek in sorted(d):
+            i, j = self.sektor(str(sek))
+            w = float(P[:, i:j].sum() / top)
+            bit = int(d[sek]) & 1
+            carpim *= (w if bit else (1.0 - w))
+            parca.append(("" if bit else "¬") + str(sek))
+        ad = kok or ("yasak." + "∧".join(parca))
+        m = getattr(self, "mahalli", None)
+        if m is not None:
+            m.cartan_ekle(ad, float(carpim) * math.pi)
+        self._oruntu_vurusu = getattr(self, "_oruntu_vurusu", 0) + 1
+        self._sektor_vurusu += 1
+        return float(carpim)
 
     def sektor_faz_bagi(self, ad: str, par, olcek: float,
                         pay=None) -> List[Tuple[int, float, np.ndarray]]:

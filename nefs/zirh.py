@@ -12,7 +12,7 @@ from idrak.kategori import Uzay
 from kuantum.stabilizer import StabilizerDurum
 from nefs.qyazmac import QuditYazmac as Yazmac
 from matematik.mizan import Onerme, Tablo, deg, degil, ise, ve
-from nefs.zihin_durumu import QYazmac, donme
+from nefs.zihin_durumu import QYazmac
 
 __all__ = [
     "yama", "delik", "iz",
@@ -549,24 +549,21 @@ def vicdan(q=None, p=None, usuller=None, tur: int = 1,
     if ne in ("usul", "hepsi"):
         us = USULLER if usuller is None else usuller
         _, kac = q._alan["tertip"]
-        yuv = [q.kulli("tertip", j) for j in range(kac)]
-        q.tek_yigin(yuv, np.stack([donme(0.25 * math.pi)] * len(yuv)))
+        q.sektor_donmesi("tertip", 0.25 * math.pi)
         cetvel = _yasak_cetveli()
-        yer = dict(ALANLAR)
         for i, u in enumerate(us[:kac]):
-            for yasak in cetvel.get(u.ad, []):
-                o = {q.kulli(ad, yer[ad]): b for ad, b in yasak.items()}
-                o[yuv[i]] = 1
-                kesme += isaret(o)
+            for k, yasak in enumerate(cetvel.get(u.ad, [])):
+                kesme += q.sektor_oruntusu(
+                    yasak, kok="yasak.%s.%d" % (u.ad, k))
 
     if ne in ("intaç", "hepsi"):
-        yuv = sorted({q.kulli(ad, j) for ad in HUKUM_ALANLARI
-                      for j in range(q._alan[ad][1])})
         for _ in range(max(1, int(tur))):
-            q.tek_yigin(yuv, np.stack([donme(-0.25 * math.pi)] * len(yuv)))
-            kesme += isaret({int(j): 0 for j in
-                             range(min(yuv), max(yuv) + 1)})
-            q.tek_yigin(yuv, np.stack([donme(0.25 * math.pi)] * len(yuv)))
+            for ad in HUKUM_ALANLARI:
+                q.sektor_donmesi(ad, -0.25 * math.pi)
+            kesme += q.sektor_oruntusu(
+                {ad: 0 for ad in HUKUM_ALANLARI}, kok="intaç.hüküm")
+            for ad in HUKUM_ALANLARI:
+                q.sektor_donmesi(ad, 0.25 * math.pi)
 
     return float(kesme)
 
