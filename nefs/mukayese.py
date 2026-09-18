@@ -253,6 +253,23 @@ def _kohomoloji(M: np.ndarray, a: int, b: int, sahit: Sequence[int]
 _SIGMA_X = np.array([[0.0, 1.0], [1.0, 0.0]], complex)
 _SIGMA_Y = np.array([[0.0, -1.0j], [1.0j, 0.0]], complex)
 
+_EVRIM_DEFTERI: Dict[int, np.ndarray] = {}
+
+
+def _tasiyici_evrim(aci: float) -> np.ndarray:
+    cozunurluk = math.sqrt(float(np.finfo(float).eps))
+    k = int(round(float(aci) / cozunurluk))
+    U = _EVRIM_DEFTERI.get(k)
+    if U is None:
+        from kuantum.devre import evrim
+        U = evrim(_SIGMA_Y, _SIGMA_X, k * cozunurluk)
+        _EVRIM_DEFTERI[k] = U
+    return U
+
+
+def evrim_defteri() -> Dict[str, float]:
+    return {"ayrı_açı": float(len(_EVRIM_DEFTERI))}
+
 
 def _lie_casimir(M: np.ndarray, a: int, b: int, cekirdek: Sequence[int]
                  ) -> Tuple[float, float]:
@@ -265,8 +282,7 @@ def _lie_casimir(M: np.ndarray, a: int, b: int, cekirdek: Sequence[int]
     e2 = t / n
     aci = float(math.acos(float(np.clip(
         abs(complex(np.vdot(M[a], M[b]))), 0.0, 1.0))))
-    from kuantum.devre import evrim
-    U = evrim(_SIGMA_Y, _SIGMA_X, aci)
+    U = _tasiyici_evrim(aci)
     tasinma: List[float] = []
     bloch = np.zeros(3, float)
     say = 0
