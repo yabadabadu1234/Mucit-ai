@@ -11,7 +11,7 @@ __all__ = ["mukayese_melekesi", "mukayese_melekesi_beyani",
            "yirtiklari_tertiple",
            "Vecih", "vecihleri_istihrac", "vecih_beyani",
            "vecih_metni", "uyanik_vecihler", "alem_cinsleri",
-           "ayniyet_ihtilaf", "tip_tayfi",
+           "ayniyet_ihtilaf", "tip_tayfi", "kanun_tayfi",
            "vecih_ac", "vecih_kapat", "merakla_coz",
            "omur_beyani", "omur_metni",
            "bargmann", "hipotez_halkasi", "swap_testi", "simplisiyal", "istisna_yeri",
@@ -81,7 +81,7 @@ def mukayese_melekesi_metni(b: Optional[Dict[str, float]] = None) -> str:
 _VECIH: Dict[str, float] = {
     "istihraç": 0.0, "mertebe": 0.0, "münasebet": 0.0, "vecih": 0.0,
     "taşıyan_ağırlık": 0.0, "âlem": 0.0, "halka": 0.0, "cins": 0.0,
-    "tip": 0.0, "açık": 1.0}
+    "tip": 0.0, "kanun": 0.0, "açık": 1.0}
 
 
 _TIP_TAYFI: Dict[str, float] = {}
@@ -187,17 +187,112 @@ def _tayf_adi(tayf: Tuple[Tuple[int, str, float], ...]) -> str:
     return str(max(tayf, key=lambda x: x[2])[1])
 
 
+_KAIDE_ADLARI = ("tip.hudut", "tip.temas",
+                 "kategori.korunum", "kategori.çekirdek",
+                 "uzay.dönüşüm", "uzay.casimir")
+
+_MERTEBE_KANUNLARI = (
+    ("tip", ("tip.hudut", "tip.temas")),
+    ("kategori", ("kategori.korunum", "kategori.çekirdek")),
+    ("uzay", ("uzay.dönüşüm", "uzay.casimir")))
+
+_KANUN_TAYFI: Dict[str, float] = {}
+
+
+def kanun_tayfi() -> Dict[str, float]:
+    return dict(_KANUN_TAYFI)
+
+
 def _alem_adi(kaide: Tuple[Tuple[str, float], ...], tur: str,
               olcek: Dict[str, float]) -> str:
     d = dict(kaide)
-    if d["sıra"] <= float(olcek.get("sıra", 0.0)):
-        return "%s.sırasız" % tur
-    if d["terkip"] <= float(olcek.get("terkip", 0.0)):
-        return "%s.birleşmeli" % tur
-    return "%s.girişik" % tur
+    tutan = [mert for mert, adlar in _MERTEBE_KANUNLARI
+             if any(float(d[ad]) > float(olcek.get(ad, 0.0))
+                    for ad in adlar)]
+    return "%s.%s" % (tur, "-".join(tutan) if tutan else "serbest")
 
 
-_KAIDE_ADLARI = ("metrik", "sıra", "terkip", "nispet")
+def _yoneda(M: np.ndarray, a: int, b: int) -> Tuple[float, float,
+                                                    List[int]]:
+    ya = M.conj() @ M[a]
+    yb = M.conj() @ M[b]
+    na = float(np.linalg.norm(ya))
+    nb = float(np.linalg.norm(yb))
+    if na <= 1e-300 or nb <= 1e-300:
+        return 0.0, 0.0, []
+    hudut = float(np.clip(
+        1.0 - abs(complex(np.vdot(ya, yb)) / (na * nb)) ** 2, 0.0, 1.0))
+    ag = np.abs(ya) * np.abs(yb)
+    temas = float(np.clip(float(ag.sum()) / (na * nb), 0.0, 1.0))
+    olcu = float(np.median(ag)) if ag.size else 0.0
+    dokunan = [int(k) for k in range(M.shape[0])
+               if k != a and k != b and float(ag[k]) > olcu]
+    return hudut, temas, dokunan
+
+
+def _kohomoloji(M: np.ndarray, a: int, b: int, sahit: Sequence[int]
+                ) -> Tuple[float, float, List[int]]:
+    s = [int(k) for k in sahit]
+    if not s:
+        return 0.0, 0.0, []
+    c = complex(np.vdot(M[a], M[b]))
+    hol = np.asarray([
+        c * complex(np.vdot(M[b], M[k])) * complex(np.vdot(M[k], M[a]))
+        for k in s], complex)
+    faz = np.asarray([float(np.angle(z)) if abs(z) > 0.0 else 0.0
+                      for z in hol], float)
+    korunum = float(abs(complex(np.mean(np.exp(1j * faz)))))
+    sap = np.abs(faz)
+    olcu = float(np.median(sap))
+    cekirdek = [int(s[i]) for i in range(len(s))
+                if float(sap[i]) <= olcu]
+    nispet = float(len(cekirdek)) / float(len(s))
+    return korunum, nispet, (cekirdek or s)
+
+
+def _lie_casimir(M: np.ndarray, a: int, b: int, cekirdek: Sequence[int]
+                 ) -> Tuple[float, float]:
+    c = [int(k) for k in cekirdek] or [a, b]
+    e1 = M[a]
+    t = M[b] - complex(np.vdot(e1, M[b])) * e1
+    n = float(np.linalg.norm(t))
+    if n <= 1e-300:
+        return 0.0, 0.0
+    e2 = t / n
+    hiz: List[float] = []
+    bloch = np.zeros(3, float)
+    say = 0
+    for k in c:
+        al = complex(np.vdot(e1, M[k]))
+        be = complex(np.vdot(e2, M[k]))
+        agir = float(abs(al) ** 2 + abs(be) ** 2)
+        if agir <= 1e-300:
+            continue
+        im = float(np.imag(np.conj(be) * al))
+        hiz.append(float(np.clip(
+            (agir - 4.0 * im * im) / agir, 0.0, 1.0)))
+        bloch += np.asarray([
+            2.0 * float(np.real(np.conj(al) * be)),
+            2.0 * float(np.imag(np.conj(al) * be)),
+            float(abs(al) ** 2 - abs(be) ** 2)], float) / agir
+        say += 1
+    if not say:
+        return 0.0, 0.0
+    donusum = float(np.mean(hiz))
+    casimir = float(np.clip(
+        float(np.linalg.norm(bloch)) / float(say), 0.0, 1.0))
+    return donusum, casimir
+
+
+def _kanunlar(M: np.ndarray, a: int, b: int
+              ) -> Tuple[Tuple[str, float], ...]:
+    hudut, temas, dokunan = _yoneda(M, a, b)
+    korunum, cekirdek_nispeti, cekirdek = _kohomoloji(M, a, b, dokunan)
+    donusum, casimir = _lie_casimir(M, a, b, cekirdek)
+    return (("tip.hudut", hudut), ("tip.temas", temas),
+            ("kategori.korunum", korunum),
+            ("kategori.çekirdek", cekirdek_nispeti),
+            ("uzay.dönüşüm", donusum), ("uzay.casimir", casimir))
 
 
 def _munasebetler(M: np.ndarray) -> List[Dict[str, Any]]:
@@ -205,28 +300,14 @@ def _munasebetler(M: np.ndarray) -> List[Dict[str, Any]]:
     out: List[Dict[str, Any]] = []
     for a in range(m):
         for b in range(a + 1, m):
-            c = complex(np.vdot(M[a], M[b]))
-            bag = float(abs(c))
-            faz = float(np.angle(c)) if bag > 0.0 else 0.0
-            sahit = -1
-            terkip = 0.0
-            if m >= 3:
-                sahit = next(s for s in range(m) if s != a and s != b)
-                ucgen = (c * complex(np.vdot(M[b], M[sahit]))
-                         * complex(np.vdot(M[sahit], M[a])))
-                terkip = (float(abs(np.angle(ucgen)))
-                          if abs(ucgen) > 0.0 else 0.0)
             t = M[a] - complex(np.vdot(M[b], M[a])) * M[b]
             n = float(np.linalg.norm(t))
             if n <= 1e-300:
                 continue
             out.append({
-                "çift": (int(a), int(b)), "şahit": int(sahit),
+                "çift": (int(a), int(b)),
                 "yön": t / n,
-                "kaide": (("metrik", float(1.0 - bag * bag)),
-                          ("sıra", float(abs(math.sin(faz)))),
-                          ("terkip", float(terkip)),
-                          ("nispet", float(bag * bag)))})
+                "kaide": _kanunlar(M, a, b)})
     return out
 
 
@@ -290,17 +371,24 @@ def vecihleri_istihrac(durumlar: Sequence[np.ndarray]
         "münasebetler tartıldı fakat tek vecih neşet etmedi -- her "
         "münasebetin ayırt edici yönü söndü (ferman 1-Ğ)")
     out.sort(key=lambda v: -v.agirlik)
-    if top_agir > 0.0:
-        out = [Vecih(v.ad, v.izdusum, float(v.agirlik / top_agir),
-                     alem=v.alem, mertebe=v.mertebe,
-                     tasiyici=v.tasiyici, kaide=v.kaide, tayf=v.tayf)
-               for v in out]
+    esit = bool(top_agir <= 0.0)
+    pay = (float(len(out)) if esit else top_agir)
+    out = [Vecih(v.ad, v.izdusum,
+                 float((1.0 if esit else v.agirlik) / pay),
+                 alem=v.alem, mertebe=v.mertebe,
+                 tasiyici=v.tasiyici, kaide=v.kaide, tayf=v.tayf)
+           for v in out]
     _TIP_TAYFI.clear()
+    _KANUN_TAYFI.clear()
     for v in out:
         for l, ad, nis in v.tayf:
             k = "ℓ%d.%s" % (int(l), str(ad))
             _TIP_TAYFI[k] = _TIP_TAYFI.get(k, 0.0) + float(
                 nis * v.agirlik)
+        for ad, nis in v.kaide:
+            _KANUN_TAYFI[str(ad)] = _KANUN_TAYFI.get(str(ad), 0.0) + (
+                float(nis) * float(v.agirlik))
+    _VECIH["kanun"] = float(len(_KANUN_TAYFI))
     _VECIH["tip"] = float(sum(
         1 for x in _TIP_TAYFI.values()
         if x > 0.0))
@@ -337,8 +425,20 @@ def vecih_metni(b: Optional[Dict[str, float]] = None) -> str:
         % (d["taşıyan_ağırlık"], int(d["mertebe"])),
         "    Her vecih BİR ÂLEM taşır; ayrı âlem %d, taşıyıcı yapı"
         " ölçülerek seçilir" % int(d.get("âlem", 0)),
-        "    (uzay · ∞-kategori · ∞-tip). Âlemin kaideleri -- metrik,",
-        "    sıra, terkip -- diziden istihraç edilir, elle yazılmaz.",
+        "    (uzay · ∞-kategori · ∞-tip).",
+        "    SORGU KANONİKTİR (ferman 2-Ú-E): öğrenilmez, dışarıdan da",
+        "    gelmez. Kaide bir KANUNLAR MANZUMESİDİR ve üç usul, sırayla,",
+        "    üçü birden koşar -- her biri bir evvelkinin neticesini alır:",
+        "      1 YONEDA      Hom(−,Y) dış münasebet → hudut kanunları",
+        "      2 KOHOMOLOJİ  δ∘δ=0 iç doku      → korunum kanunları",
+        "      3 LIE/CASIMIR dinamik            → dönüşüm kanunları",
+        "    doğan kanun %d -- ağırlıkla tartılmış nispetleri:"
+        % int(d.get("kanun", 0)),
+        "      " + ("  ".join(
+            "%s %.4f" % (k, v) for k, v in
+            sorted(kanun_tayfi().items(), key=lambda x: -x[1]))
+            or "yok"),
+        "    Tutmayan kanun gizlenmez: nispetiyle kırmızı yanar.",
         "    Bargmann halkası: BÜTÜN BOYLAR BERABER, tartılan halka %d"
         % int(d.get("halka", 0)),
         "    Mukayese halkası ÂLEME göre kapanır: ayrı cins %d"

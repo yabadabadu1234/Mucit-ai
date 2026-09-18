@@ -490,11 +490,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                       pencere=int(ayar.pencere), sozluk=int(ayar.sozluk),
                       taban=int(ayar.veri_lifi),
                       basamak=int(ayar.belirtec_basamak),
-                      kodlama=str(ayar.kodlama),
-                      ayna=AynaAyari(teta=float(ayar.ayna_teta),
-                                     r=float(ayar.ayna_r),
-                                     tur=int(ayar.ayna_tur),
-                                     tohum=int(ayar.tohum)))
+                      kodlama=str(ayar.kodlama))
 
     def _kume_kimlik(kume) -> str:
         import hashlib
@@ -583,11 +579,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         "tâlim %d parametre aldı, %d döndürdü" % (d, p_yildiz.size))
     assert np.all(np.isfinite(p_yildiz)), "tâlim NaN/Inf parametre döndürdü"
     nefs.yukle(p_yildiz)
-    ayna = AynaAyari(teta=float(ayar.ayna_teta), r=float(ayar.ayna_r),
-                     tur=int(ayar.ayna_tur), tohum=int(ayar.tohum))
     deg = degerlendir(nefs, dogrulama, azami=ayar.degerlendirme_gorevi,
                       pencere=ayar.pencere, sozluk=ayar.sozluk,
-                      azami_uret=ayar.azami_uret, ayna=ayna)
+                      azami_uret=ayar.azami_uret)
     assert not deg.get("ölçüt_boş"), (
         "ARC ÖLÇÜTÜ BOŞ -- hiçbir görev denenmedi.\n"
         "  atlanan (hedef üretim haddinden uzun): %d\n"

@@ -470,6 +470,19 @@ def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
             "kesme": float(kesme_kesri)}
 
 
+def _kefe_meraki(haller, omegalar, a) -> List[int]:
+    from .suphe import SupheAyari, suphe_manifoldu
+    H = [np.asarray(h, complex).reshape(-1) for h in haller]
+    om = [float(x) for x in list(omegalar)][:len(H)]
+    om = om + [0.0] * (len(H) - len(om))
+    sp = suphe_manifoldu(
+        H, om, ayar=SupheAyari(acik=int(a.suphe_acik),
+                               sonum=float(a.suphe_sonumu),
+                               kip_kenari=float(a.kenar) * 5.0,
+                               parite_lifi=int(a.parite_lifi)))
+    return [int(i) for i in sp["merak"]]
+
+
 def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                 ayar: Optional[MizanAyari] = None,
                 hafiza: Optional[Hafiza] = None, adim: int = 0,
@@ -602,14 +615,18 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     else:
         L_nizam = 0.0
     from .mukayese import (spektrum as _spektrum,
-                           vecihleri_istihrac as _vecih_kur,
+                           merakla_coz as _merakla_coz,
                            hipotez_halkasi as _hipotez_halkasi)
     _hal = list(ileri["hal"])[:max(3, int(a.cevrim_boyu) + 1)]
-    _vec = _vecih_kur(_hal) if len(_hal) >= 2 else None
-    spek = (_spektrum(_hal, _vec, tohum=int(a.tohum))
-            if len(_hal) >= 2 else None)
-    dk = _hipotez_halkasi(ileri["hal"], ileri.get("cins"),
-                          (_vec[0] if _vec else None))
+
+    def _halka_kefesi(_vec):
+        return ((_spektrum(_hal, _vec or None, tohum=int(a.tohum))
+                 if len(_hal) >= 2 else None),
+                _hipotez_halkasi(ileri["hal"], ileri.get("cins"),
+                                 (_vec[0] if _vec else None)))
+
+    spek, dk = _merakla_coz(_hal, _kefe_meraki(_hal, cv["ω"], a),
+                            _halka_kefesi)
     from .casimir import (blok_kosegen_artigi, dhr_ayrismasi,
                           gelfand_tsetlin_araya_girme)
     _lif = tuple(int(x) for x in nefs.ayar.lif_yapisi or ())
@@ -695,10 +712,21 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         for _j, _netice in usl.get("netice", ()):
             hafiza.yaz(_netice, omega=1.0, hukum=TASDIK)
 
-    from .mukayese import mukayese_melekesi
-    mky = mukayese_melekesi(ileri["hal"], cinsler=None,
-                            hafiza=hafiza,
-                            mahalli=getattr(nefs, "mahalli", None))
+    from .mukayese import (mukayese_melekesi,
+                           alem_cinsleri as _alem_cinsleri)
+
+    def _mukayese_kefesi(_vec):
+        return mukayese_melekesi(
+            ileri["hal"],
+            cinsler=(_alem_cinsleri(ileri["hal"], _vec) if _vec
+                     else ["sönük"] * len(ileri["hal"])),
+            hafiza=hafiza,
+            mahalli=getattr(nefs, "mahalli", None),
+            vecih=(_vec[0] if _vec else None))
+
+    mky = _merakla_coz(ileri["hal"],
+                       _kefe_meraki(ileri["hal"], cv["ω"], a),
+                       _mukayese_kefesi)
     L_mky = float(mky["kayıp"])
 
     ret = kapi_tetabuku(tenakuz=L_ten, kisirdongu=float(cv["ceza"]),

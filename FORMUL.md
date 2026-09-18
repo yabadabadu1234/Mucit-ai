@@ -388,14 +388,44 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
 
     VECİH İSTİHRACI (ferman 1-Ğ, 2-Ú) -- küllî matris ameliyesi YOK
 
-    Münasebet(a,b) = ⟨Hâl_a | Hâl_b⟩
-    Kaide(a,b)     = ( metrik  = 1 − |Münasebet(a,b)|²
-                     , sıra    = |sin arg Münasebet(a,b)|
-                     , terkip  = |arg Δ₃(a, b, şahit)|
-                     , nispet  = |Münasebet(a,b)|² )
+    SORGU KANONİKTİR (ferman 2-Ú-E): ne öğrenilir ne dışarıdan gelir.
+    KAİDE BİR KANUNLAR MANZUMESİDİR; üç usul SIRAYLA, üçü de koşar --
+    her biri bir evvelkinin neticesini girdi alır:
+
+    1 YONEDA -- DIŞ MÜNASEBET, hudut kanunları
+      Hom(−,a)     = ( ⟨Hâl_k | Hâl_a⟩ )  bütün k için   ← nesnenin ağı
+      tip.hudut    = 1 − |⟨birim Hom(−,a) | birim Hom(−,b)⟩|²
+      tip.temas    = toplam over k of |Hom_k(a)|·|Hom_k(b)| / (‖·‖·‖·‖)
+      Dokunan(a,b) = { k : |Hom_k(a)|·|Hom_k(b)| > ortanca(aynısı) }
+
+    2 KOHOMOLOJİ -- İÇ DOKU, korunum kanunları  (δ∘δ = 0)
+      Holonomi(k)        = ⟨a|b⟩⟨b|k⟩⟨k|a⟩            k ∈ Dokunan(a,b)
+      kategori.korunum   = | ortalama over k of e^(i·arg Holonomi(k)) |
+                           ← 1 ise kapalı 1-eşzincir TAM: sınıf âşikâr
+      kategori.çekirdek  = |{ k : |arg Holonomi(k)| ≤ ortanca }| / |Dokunan|
+      Çekirdek(a,b)      = o k'ler                     ← bozulamaz omurga
+
+    3 LIE / CASIMIR -- DİNAMİK, dönüşüm kanunları
+      e₁ = Hâl_a,  e₂ = birim( Hâl_b − ⟨e₁|Hâl_b⟩e₁ ),  X = e₂e₁† − e₁e₂†
+      α_k = ⟨e₁|Hâl_k⟩,  β_k = ⟨e₂|Hâl_k⟩,  w_k = |α_k|² + |β_k|²
+      uzay.dönüşüm = ortalama over Çekirdek of
+                       ( w_k − 4·Im(β̄_k α_k)² ) / w_k     ← FS sürati
+      uzay.casimir = ‖ ortalama over Çekirdek of BlochVektörü(α_k, β_k) ‖
+                     ← su(2) dönmesi altında DEĞİŞMEZ
+
+    Kaide(a,b)     = ( tip.hudut , tip.temas
+                     , kategori.korunum , kategori.çekirdek
+                     , uzay.dönüşüm , uzay.casimir )
+                     ← SIRA DEĞİŞMEZ: dış hudut çizilmeden iç omurga
+                       aranmaz, omurga sabitlenmeden dinamik hesaplanmaz
+    KanunTayfı     = toplam over âlem of Kaide(âlem) × Ağırlık(âlem)
+                     ← her kanunun ölçülen nispeti RAPORDA görünür;
+                       tutmayan kanun gizlenmez, nispetiyle kırmızı yanar
     Ölçek          = ortancaSapma(Kaide over bütün çiftler)   ← eşik ÖLÇÜLÜR (1-J)
     İmza(a,b)      = yuvarla(Kaide(a,b) / Ölçek)
     Âlem           = aynı İmzalı münasebetlerin öbeği
+    ÂlemAdı        = Tayf türü + hangi MERTEBENİN kanunları ölçeği aşıyorsa
+                     ( tip · kategori · uzay ), hiçbiri aşmıyorsa "serbest"
     Vecih(Âlem)    = izdüşüm( birim( toplam over öbek of AyırtEdiciYön(a,b) ) )
                      AyırtEdiciYön(a,b) = birim( Hâl_a − ⟨Hâl_b|Hâl_a⟩·Hâl_b )
     Tayf(Âlem)     = ( Nispet(ℓ | öbeğin kutupları) )  BÜTÜN ℓ için, normalize
@@ -407,6 +437,16 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
                      ← "hangi tipler varmış, kaideleri neymiş" bundan okunur
 
     Yaprak(A,B)    = Örtüşme'si EN DÜŞÜK vecih   ← şahitsiz, en çok ayıran
+
+    MİZANDA VECİH -- HER KEFE KENDİ ATEŞLEMESİYLE (ferman 2-Ú-D)
+
+    Mizan bir vecih cetveli tutmaz; vecihe ihtiyaç duyan her kefe
+    kendi merakını ateşler, vechini doğurur, neticesini alır, kapatır:
+
+      HalkaKefesi   = MeraklaÇöz( ilk hâller , Merak(ilk hâller, ω) ,
+                                  v ↦ ( Spektrum(v) , HipotezHalkası(v) ) )
+      MukayeseKefesi= MeraklaÇöz( bütün hâller , Merak(bütün hâller, ω) ,
+                                  v ↦ MukayeseMelekesi(cins = Âlem(v), v) )
 
     MUKAYESE MELEKESİ -- durumu EVİRMEZ, hüküm çıkarır
 
@@ -436,22 +476,29 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     Bağlam_basamak = TabanAçılımı(tiktoken(Suâl), VeriLifi, BasamakSayısı)
                      ← modülo katlama YOK; her belirteç basamağa açılır
 
-    tekrarla:
+    VECİH CÜMLE ÖMÜRLÜDÜR -- adım ömürlü DEĞİL (ferman 2-Ú-D)
+    Bir defa açılır, cümle boyunca açık kalır, DURMA HÜKMÜ gelince kapanır.
+
+    AçılışHâlleri = ( İleriGeçiş(Bağlam[i : i+Pencere]) )  i = 0, P, 2P …
+                    ← cümlenin suâli neyse vecih ONDAN doğar
+    Merak         = { k : Şüphe(k) > Yakîn(k) }       ← 𝒪15 ATEŞLEMESİ, BİR KEZ
+                    eşik sabit değil: şüphe ile yakîn birbiriyle tartılır (1-J)
+    Vecihler      = VecihAç(AçılışHâlleri, Merak)     ← Merak sönükse BOŞ
+
+    tekrarla:                                          ← AMELİYE: cümlenin tamamı
       Hâl        = İleriGeçiş(Yerleştir(Bağlam))
-      Merak      = { k : Şüphe(k) > Yakîn(k) }       ← 𝒪15 ATEŞLEMESİ
-                   eşik sabit değil: şüphe ile yakîn birbiriyle tartılır (1-J)
-      Vecihler   = VecihAç(son hâller, Merak)        ← Merak sönükse BOŞ
+      eğer Durma(adım):  dur                           ← üst hudut YOK (2-Ó-B)
       Dağılım    = toplam over v ∈ Vecihler of
                      Ağırlık(v) · Marjinal(İzdüşüm(v, Hâl)) / Σ Ağırlık
-                   Vecih yoksa düz Marjinal(Hâl)     ← nedensel cephede
-      VecihKapat(Vecihler)                           ← NETİCE ALINDI, KAPANDI
-                   ← ferman 2-Ú-D: model cevabı AÇTIĞI VECİHLERİN İÇİNDE
-                     arar; açık kalan vecih sayısı SIFIR olmalıdır
-      eğer Durma(adım):  dur                             ← üst hudut YOK (2-Ó-B)
+                   Vecih yoksa düz Marjinal(Hâl)       ← nedensel cephede
       Budanmış   = Buda(Dağılım, Hafıza.cerh)
       Basamak_yeni = enbüyükArgüman( ∇log Budanmış / g_FubiniStudy )
                      ← ZAR ATILMAZ (ferman 2-Ĵ): determinist okuma
       Bağlam     ← Bağlam + Basamak_yeni
+
+    VecihKapat(Vecihler)                               ← NETİCE ALINDI, KAPANDI
+                   ← açık kalan vecih sayısı SIFIR olmalıdır; kapanış
+                     ameliyenin kendisi hata verse de icra edilir
 
     Durma(adım) = UzunlukKatmanı[adım] > toplam over k>adım of UzunlukKatmanı[k]
                   ← uzunluk bir KARAR değil, süperpozisyonun hükmü (2-Õ)

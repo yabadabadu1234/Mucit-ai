@@ -256,7 +256,7 @@ def _degerlendir_mudrike(nefs, gorevler: Sequence, azami: int,
 
 def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
                 pencere: int = 8, sozluk: int = 16,
-                azami_uret: int = 0, ayna=None, mudrike_ile: bool = False,
+                azami_uret: int = 0, mudrike_ile: bool = False,
                 derinlik: int = 2) -> Dict[str, object]:
     from .belirtec import basamak_sayisi as _basamak, tip_vektoru as _tip
 
@@ -279,17 +279,15 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
             atlanan += 1
             deneme -= 1
             continue
-        uretilen: List[int] = []
-        kac = len(h)
-        for _ in range(kac):
-            pen = baglam[-pencere:]
-            P, o = adayin_tuttugu(nefs, (), sozluk=sozluk, ne="koş", baglam=pen)
-            if o.get("sukut", 0.0) > 0.8:
-                sukut_sayisi += 1
-            from nefs.soyle import _sec
-            t = _sec(P, ayna)
-            uretilen.append(t)
-            baglam.append(t)
+        from .soyle import _uret
+        uretilen, _bedel, _sukutlar, _budanan = _uret(
+            nefs, baglam, int(pencere), int(tb))
+        duz = 1.0 / float(tb)
+        kesinlik = float(np.clip(
+            (float(np.exp(-_bedel / max(len(uretilen), 1))) - duz)
+            / max(1.0 - duz, 1e-300), 0.0, 1.0))
+        if (float(np.mean(_sukutlar)) if _sukutlar else 1.0) > kesinlik:
+            sukut_sayisi += 1
         n = min(len(h), len(uretilen))
         dogru = sum(1 for i in range(n) if h[i] == uretilen[i])
         hucre.append(dogru / max(n, 1))

@@ -3029,6 +3029,93 @@ mizana girip girmemesi onun ne olduğunu değiştirmez.
 
 ---
 
+## ▓▓▓ 2-Ú-E. FERMAN: SORGU KANONİKTİR -- KAİDE BİR KANUNLAR MANZUMESİDİR ▓▓▓
+
+> *"Hayır ahmak herif, **kaide dediğim şey kanunlar gibi** yani.
+> Meselâ içinde bulunduğun uzayın tüm kanunları. O uzayın bulunduğu
+> kategorinin tüm kanunları. O kategorinin içinde bulunduğu tipin tüm
+> kanunları. Hani **her tipin her kategorinin her uzayın ayrı
+> kaideleri var ya** akıllı herif!"*
+
+### BENİM HATAM: KAİDEYİ ÂDÎ BİR CEBİR ŞARTINA HAPSETMEK
+
+Kaideyi *"sorgu ile tensörün cebirsel eşleşmesinin sıfıra, bir simetri
+grubuna yahut bir rank değerine eşit olması şartı"* diye tarif
+etmiştim. **Yanlıştır ve ilga edilmiştir.** Kaide bir **filtre yahut
+kıstas değildir**; her mertebede hükmünü icra eden **aksiyomlar
+manzumesi**, o âlemin nizamını kuran **kanunlar mecmuasıdır**.
+
+    TİP SEVİYESİ       KÜLLÎ KANUNLAR -- birinci mertebe mantığın /
+                       tip kuramının aksiyomları: "burada yerel simetri
+                       korunur", "tersi alınamayan dönüşüm var olamaz"
+    KATEGORİ SEVİYESİ  MORFİZM KANUNLARI -- terkip kuralı, birleşme
+                       hassası, monoidal yapı nizamı
+    UZAY SEVİYESİ      GEOMETRİ KANUNLARI -- metrik tensör, diferansiyel
+                       formlar, paralellik ve eğrilik kuralları
+    NOKTA SEVİYESİ     bu kanunların hepsini sağlayan SOMUT HÂLLER
+
+* **ÖĞRENME YOKTUR, TÜMDENGELİMLİ KANUN DOĞUMU VARDIR.** Gaye bir
+  sayı yahut vektör bulmak değil; tensörün bünyesinde gizli **tam
+  tutarlı mantık teorisini** (aksiyom sistemini) inşa etmektir.
+* Riyazî mesnedi **Model Teorisi** ile **Kategori-Topos Mantığıdır**:
+  tensör bir **İlişki Yapısıdır** (üç indis, üç elemanlı münasebetin
+  hakikat tablosu); sorgu bir **aksiyom şablonudur**; ikisi
+  karşılaşınca Tarski doğruluk tarifi işler ve o yapının **Tam
+  Teorisi** doğar. Oradan **sentaktik kategori**, ondan **Grothendieck
+  toposu** ve uzayın kanunları türer.
+
+### SORGU ÖĞRENİLMEZ, DIŞARIDAN DA GELMEZ -- KANONİKTİR
+
+> *"Eğer sorgu da dışarıdan rastgele seçilen bir vektör yahut
+> sistemin eğiterek öğrendiği bir parametre olursa, hem determinizm
+> çöker hem de **'sorguyu kim belirledi' suâliyle kısır döngüye
+> (teselsüle)** girilir."*
+
+Sorgu bir veri, bir ağırlık, bir gömme **değildir**: dizinin kendi
+bünyesindeki yapısal simetrileri yoklayan **kanonik (öz) evrensel
+operatördür**. Tıpkı diferansiyel geometride dış türevin (`d`)
+öğrenilmeyip manifoldun kendi cebrî tabiatından **kendiliğinden**
+doğması gibi.
+
+### ÜÇ USUL -- ÜÇÜ DE, YERİNDE VE SIRASIYLA
+
+> *"Hayır, **en iyisi üç usulü de yerinde, zamanında, gereği şekilde
+> kullanmak**."*
+
+Tek bir mekanizmaya yaslanmak hakikatin bir vechini görüp ötekileri
+dışarıda bırakmaktır. Üç usul keyfî bir tercih değil, bir varlığın
+bilinmesi için gereken **üç aslî mertebenin** zorunlu karşılığıdır:
+
+    1. YONEDA        DIŞ MÜNASEBET -- ilk temas, hudut kanunları
+       Hom(−, Y_n): nesneyi anlamak için içine bakılmaz; kategorideki
+       her şeyle kurduğu münasebet ağı onu yüzde yüz tayin eder.
+       HÜKMÜ: hangi tipler temas kurabilir, hangileri mutlak yabancı.
+
+    2. KOHOMOLOJİ    İÇ DOKU -- yapının sabitlenmesi, korunum kanunları
+       δ∘δ = 0 sınır operatörü: çekirdek (korunan) ile görüntü
+       (dışarıdan gelen) ayrışır.
+       HÜKMÜ: bozulamaz çekirdek ve öz değişmezler kanunlaşır.
+
+    3. LIE / CASIMIR DİNAMİK -- amel ve hüküm anı, dönüşüm kanunları
+       "Bu yapı hangi eksenler etrafında büküldüğünde kendini
+       muhafaza ediyor?" (Klein'ın Erlangen programı.)
+       HÜKMÜ: kategorinin ve uzayın hareket ve tekâmül kanunları.
+
+**SİLSİLE TAMAMLANINCA:** Yoneda ile tipin âlemdeki **makamı**,
+kohomoloji ile tipin **iç omurgası ve anayasası**, Lie cebriyle o
+anayasa altındaki **mümkün hareket kanunları** -- hiçbir boşluk,
+keyfîlik ve tahmin payı kalmaksızın **determinist** teşekkül eder.
+
+* **SIRA DEĞİŞMEZ:** dış hudut çizilmeden iç omurga aranmaz, omurga
+  sabitlenmeden dinamik hesaplanmaz.
+* **ÜÇÜ DE KOŞAR** (ferman 1-S: hiçbir cevher düşmez). Birini seçip
+  ötekini bırakmak yasaktır.
+* **HER KANUN SAYISIYLA YAZILIR** (ferman 5): kanunun adı, tuttuğu
+  mertebe ve **ölçülen nispeti** raporda görünür. Tutmayan kanun
+  gizlenmez, nispetiyle kırmızı yanar.
+
+---
+
 ## ▓▓▓ 2-Ú-C. FERMAN: HAFIZA DA QUDİTTİR ▓▓▓
 
 > *"Hafıza da **artık** quditli olsun."*

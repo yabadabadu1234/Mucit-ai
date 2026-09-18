@@ -66,7 +66,7 @@ def cevap_haddi(basamak: int, kodlama: str = "o200k_base") -> int:
 def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
                sozluk: int = 16, taban: int = 16, basamak: int = 5,
                kodlama: str = "o200k_base",
-               sual: str = MIHENK, ayna=None) -> Dict[str, Any]:
+               sual: str = MIHENK) -> Dict[str, Any]:
     from .soyle import _uret
     if p is not None:
         nefs.yukle(np.asarray(p, float))
@@ -75,7 +75,7 @@ def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
     kac = int(cevap_haddi(int(basamak), str(kodlama)))
     t0 = time.perf_counter()
     uretilen, bedel, sukutlar, budanan = _uret(
-        nefs, bag, int(pencere), int(taban), ayna=ayna)
+        nefs, bag, int(pencere), int(taban))
     sure = time.perf_counter() - t0
     coz = _metne(uretilen, str(kodlama), int(taban), int(basamak))
     cevap = str(coz["metin"])
@@ -89,7 +89,6 @@ def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
             "üretilen_basamak": int(len(uretilen)),
             "ayrı_basamak": int(len(set(int(x) for x in uretilen))),
             "sabit_nokta": bool(len(set(int(x) for x in uretilen)) <= 1),
-            "ayna": bool(ayna is not None),
             "bedel": float(bedel), "budanan": int(budanan),
             "tepe_payı": float(np.exp(-float(bedel) / max(kac, 1))),
             "düz_pay": float(1.0 / max(int(taban), 1)),
@@ -105,9 +104,8 @@ class Nobet:
     def __init__(self, nefs, ara_saniye: float = 300.0, pencere: int = 8,
                  sozluk: int = 16, taban: int = 16, basamak: int = 5,
                  kodlama: str = "o200k_base",
-                 sual: str = MIHENK, ayna=None) -> None:
+                 sual: str = MIHENK) -> None:
         self.nefs = nefs
-        self.ayna = ayna
         self.ara = float(ara_saniye)
         self.pencere = int(pencere)
         self.sozluk = int(sozluk)
@@ -127,7 +125,7 @@ class Nobet:
             c = mihenk_sor(self.nefs, p, pencere=self.pencere,
                            sozluk=self.sozluk, taban=self.taban,
                            basamak=self.basamak, kodlama=self.kodlama,
-                           sual=self.sual, ayna=self.ayna)
+                           sual=self.sual)
         finally:
             self.nefs.yukle(eski)
         c["saniye_ofset"] = float(time.perf_counter() - self._t0)
@@ -191,10 +189,10 @@ class Nobet:
 def nobet_kur(nefs, ara_saniye: float = 300.0, pencere: int = 8,
               sozluk: int = 16, taban: int = 16, basamak: int = 5,
               kodlama: str = "o200k_base",
-              sual: str = MIHENK, ayna=None) -> Nobet:
+              sual: str = MIHENK) -> Nobet:
     return Nobet(nefs, ara_saniye=ara_saniye, pencere=pencere,
                  sozluk=sozluk, taban=taban, basamak=basamak,
-                 kodlama=kodlama, sual=sual, ayna=ayna)
+                 kodlama=kodlama, sual=sual)
 
 
 def mihenk_metni(beyan: Dict[str, Any]) -> str:
@@ -215,9 +213,8 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
           "  üretim haddi ARC ızgara bütçesinden DEĞİL, beklenen cevabın",
           "  belirteç boyundan türer (%d kat pay) -- ferman 1-J"
           % CEVAP_PAYI,
-          "  vakum kıvılcımı: %s"
-          % ("AÇIK" if d[-1].get("ayna") else
-             "KAPALI -- açgözlü argmax (ferman 7 ihlâli)"),
+          "  okuma: DETERMİNİST Fubini-Study (ferman 2-Ĵ) -- zar atılmaz;",
+          "  çeşitlilik vecih spektrumundan gelir, vakum kıvılcımından değil",
           "  düz dağılımın tepe payı : %.6f  (1/taban)"
           % float(d[-1].get("düz_pay", 0.0)),
           "  V ağırlıklıdır ve ağırlık her turda YENİDEN ölçülür",

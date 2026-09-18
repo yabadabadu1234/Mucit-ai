@@ -238,17 +238,15 @@ class QYazmac:
             "bağlamın hiçbir basamağı dolu değil -- yazmaca yazacak şey "
             "yok, norm sıfır çıkardı (ferman 5)")
         pq = getattr(self, "pq", None)
-        if True:
-            if pq is not None:
-                self.mahalli.hazirla(n_sat, B)
-                self.mahalli.yerlestir(bas, dolu)
-                kontrol, bag = pq.temas_kapilari()
-                self.mahalli.kapilari_vur(
-                    kontrol,
-                    pq.rezonans(self.mahalli.koordinat(),
-                                int(kontrol.size)),
-                    bag)
-                self._tohum = (bas, sec, yigin, seviye, B, n_sat, d)
+        self.mahalli.hazirla(n_sat, B)
+        self.mahalli.yerlestir(bas, dolu)
+        if pq is not None:
+            kontrol, bag = pq.temas_kapilari()
+            self.mahalli.kapilari_vur(
+                kontrol,
+                pq.rezonans(self.mahalli.koordinat(), int(kontrol.size)),
+                bag)
+        self._tohum = (bas, sec, yigin, seviye, B, n_sat, d)
         self.y.psi = genlik.astype(self.y.ayar.tip)
         self.y.normalize()
         self.y.faz(faz)
