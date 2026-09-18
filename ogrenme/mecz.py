@@ -182,13 +182,16 @@ def vadi(metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
 
 
 
-def _zincir_haddi() -> int:
-    from nefs.donanim import bellek_haddi
-    olculen = bellek_haddi()
-    assert olculen, (
-        "bellek haddi yoklanamadı -- NAKİL zincirinin boyu tahminle "
-        "yazılamaz (ferman 5-B)")
-    return max(2, int(math.sqrt(max(float(olculen) / (16.0 * 6.0), 4.0))))
+def _zincir(s: np.ndarray, kac: int) -> np.ndarray:
+    a = np.asarray(s, float)
+    sira = np.argsort(a)[::-1][:max(int(kac), 2)]
+    d = a[sira]
+    orta = float(np.median(d))
+    sap = float(np.median(np.abs(d - orta)))
+    if not (sap > 0.0):
+        return sira[:min(2, sira.size)]
+    tut = sira[d > orta + sap]
+    return tut if tut.size >= 2 else sira[:min(2, sira.size)]
 
 
 def nakil(q, metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
@@ -208,9 +211,10 @@ def nakil(q, metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
     _MECZ["nakil_geçirgenliği"] = gecirgen
     _MECZ["nakil_dizi_boyu"] = float(dizi.size)
     kac = int(min(max(1, round(gecirgen * float(s.size))), s.size))
-    yer = np.argsort(s)[::-1][:min(kac, _zincir_haddi())]
+    yer = _zincir(s, kac)
     m = int(yer.size)
-    pot = np.asarray([kuyu[int(i) % kuyu.size] for i in yer], float)
+    dd = np.asarray(s, float)[yer]
+    pot = -dd / max(float(np.abs(dd).max()), 1e-300)
     H_kuyu = np.diag(pot.astype(complex))
     H_atlama = np.zeros((m, m), complex)
     if m > 1:
