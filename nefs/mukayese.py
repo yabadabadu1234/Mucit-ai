@@ -250,6 +250,10 @@ def _kohomoloji(M: np.ndarray, a: int, b: int, sahit: Sequence[int]
     return korunum, nispet, (cekirdek or s)
 
 
+_SIGMA_X = np.array([[0.0, 1.0], [1.0, 0.0]], complex)
+_SIGMA_Y = np.array([[0.0, -1.0j], [1.0j, 0.0]], complex)
+
+
 def _lie_casimir(M: np.ndarray, a: int, b: int, cekirdek: Sequence[int]
                  ) -> Tuple[float, float]:
     c = [int(k) for k in cekirdek] or [a, b]
@@ -259,7 +263,11 @@ def _lie_casimir(M: np.ndarray, a: int, b: int, cekirdek: Sequence[int]
     if n <= 1e-300:
         return 0.0, 0.0
     e2 = t / n
-    hiz: List[float] = []
+    aci = float(math.acos(float(np.clip(
+        abs(complex(np.vdot(M[a], M[b]))), 0.0, 1.0))))
+    from kuantum.devre import evrim
+    U = evrim(_SIGMA_Y, _SIGMA_X, aci)
+    tasinma: List[float] = []
     bloch = np.zeros(3, float)
     say = 0
     for k in c:
@@ -268,9 +276,10 @@ def _lie_casimir(M: np.ndarray, a: int, b: int, cekirdek: Sequence[int]
         agir = float(abs(al) ** 2 + abs(be) ** 2)
         if agir <= 1e-300:
             continue
-        im = float(np.imag(np.conj(be) * al))
-        hiz.append(float(np.clip(
-            (agir - 4.0 * im * im) / agir, 0.0, 1.0)))
+        z = np.asarray([al, be], complex) / math.sqrt(agir)
+        w = U @ z
+        tasinma.append(float(np.clip(
+            1.0 - abs(complex(np.vdot(z, w))) ** 2, 0.0, 1.0)))
         bloch += np.asarray([
             2.0 * float(np.real(np.conj(al) * be)),
             2.0 * float(np.imag(np.conj(al) * be)),
@@ -278,7 +287,7 @@ def _lie_casimir(M: np.ndarray, a: int, b: int, cekirdek: Sequence[int]
         say += 1
     if not say:
         return 0.0, 0.0
-    donusum = float(np.mean(hiz))
+    donusum = float(np.mean(tasinma))
     casimir = float(np.clip(
         float(np.linalg.norm(bloch)) / float(say), 0.0, 1.0))
     return donusum, casimir

@@ -6,7 +6,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from kuantum.devre import qft_dizeyi
+from kuantum.devre import qft_vur
 from kuantum.eniyileme import (baslangic_hamiltonyeni, maxcut_hamiltonyeni,
                                tayf_araligi)
 from kuantum.topolojik import orgu_ureticleri, yang_baxter_hatasi
@@ -153,13 +153,8 @@ def faz_kaydir(genlik: np.ndarray, k: int, ne: str = "her_ikisi"):
     dogrudan = np.roll(v, k)
     if ne == "kösegen":
         return dogrudan
-    n = int(round(math.log2(N)))
-    assert 2 ** n == N, (
-        "QFT yolu ikinin kuvvetini ister; N=%d. ``kösegen`` yolunu "
-        "kullanın yahut tabanı doldurun." % N)
-    F = qft_dizeyi(n)
     faz = np.exp(2j * math.pi * k * np.arange(N) / N)
-    qft_yolu = F.conj().T @ (faz * (F @ v))
+    qft_yolu = qft_vur(faz * qft_vur(v), ters=True)
     if ne == "qft":
         return qft_yolu
     fark = float(np.max(np.abs(qft_yolu - dogrudan)))
@@ -186,13 +181,8 @@ def kivilcim(dagilim, ayar: Optional[AynaAyari] = None,
 
     kok = np.sqrt(P)
     m = kok.size
-    us = int(round(math.log2(m)))
-    if 2 ** us == m and us <= 12:
-        esle = (qft_dizeyi(us) @ kok.astype(complex)) / math.sqrt(m)
-        yol = "qft"
-    else:
-        esle = np.fft.fft(kok) / math.sqrt(m)
-        yol = "fft"
+    esle = qft_vur(kok.astype(complex))
+    yol = "qft"
     fz = complex(math.cos(a.sikma_fazi), math.sin(a.sikma_fazi))
     b = (math.cosh(a.r) * esle
          + (fz * math.sinh(a.r)) * np.conj(esle))

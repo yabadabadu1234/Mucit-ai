@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 
@@ -36,6 +37,7 @@ def mecz_sifirla() -> None:
                   "κ": 0.0, "yarıçap_düzeltmesi": 0.0,
                   "asal_açı": 0.0, "eğrilik": 0.0,
                   "nakil_geçirgenliği": 0.0, "nakil_dizi_boyu": 0.0,
+                  "nakil_zinciri": 0.0, "nakil_dagilimi": 0.0,
                   "yönsüz_tur": 0.0, "kapı": 0.0, "üretecsiz": 0.0,
                   "bağ_reddi": 0.0,
                   "ek_durum_ikiz_farkı": 0.0, "üreteç_ikiz_farkı": 0.0,
@@ -180,6 +182,15 @@ def vadi(metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
 
 
 
+def _zincir_haddi() -> int:
+    from nefs.donanim import bellek_haddi
+    olculen = bellek_haddi()
+    assert olculen, (
+        "bellek haddi yoklanamadı -- NAKİL zincirinin boyu tahminle "
+        "yazılamaz (ferman 5-B)")
+    return max(2, int(math.sqrt(max(float(olculen) / (16.0 * 6.0), 4.0))))
+
+
 def nakil(q, metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
     from nefs.ara import ara
     s = np.asarray(metrik, float) * np.asarray(maske, float)
@@ -197,8 +208,25 @@ def nakil(q, metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
     _MECZ["nakil_geçirgenliği"] = gecirgen
     _MECZ["nakil_dizi_boyu"] = float(dizi.size)
     kac = int(min(max(1, round(gecirgen * float(s.size))), s.size))
-    for i in np.argsort(s)[::-1][:kac]:
-        v[int(i)] = 1.0
+    yer = np.argsort(s)[::-1][:min(kac, _zincir_haddi())]
+    m = int(yer.size)
+    pot = np.asarray([kuyu[int(i) % kuyu.size] for i in yer], float)
+    H_kuyu = np.diag(pot.astype(complex))
+    H_atlama = np.zeros((m, m), complex)
+    if m > 1:
+        j = np.arange(m - 1)
+        H_atlama[j, j + 1] = 1.0
+        H_atlama[j + 1, j] = 1.0
+    from kuantum.devre import evrim
+    U = evrim(H_kuyu, H_atlama, math.pi * gecirgen)
+    psi0 = np.zeros(m, complex)
+    psi0[0] = 1.0
+    agirlik = np.abs(U @ psi0) ** 2
+    _MECZ["nakil_zinciri"] = float(m)
+    _MECZ["nakil_dagilimi"] = float(
+        -np.sum(agirlik[agirlik > 0] * np.log(agirlik[agirlik > 0])))
+    for i, w in zip(yer, agirlik):
+        v[int(i)] = float(w)
     n = float(np.linalg.norm(v))
     return v / n if n > 0.0 else v
 
@@ -435,6 +463,13 @@ def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
          % b["nakil_geçirgenliği"],
          "         (tek belirteç DEĞİL, %d basamaklık dizinin tamamı --"
          " ferman 1-N-B)" % int(b["nakil_dizi_boyu"]),
+         "         SIÇRAMA ZARDAN DEĞİL EVRİMDEN (ferman 2-Ĵ): kuyu ile",
+         "         atlama üreteçleri birbiriyle değişmez; sıçrama, %d"
+         " halkalı" % int(b.get("nakil_zinciri", 0)),
+         "         zincirde Trotter-Suzuki tünelleme evriminin vardığı",
+         "         yerdir. Varış dağılımının entropisi %.4f -- sıfıra"
+         % b.get("nakil_dagilimi", 0.0),
+         "         yakınsa sıçrama tek koordinata çökmüş demektir.",
          "  YARIÇAP = 1 / √iz(g_FS) = %.4e   (iz g = %.4e)"
          % (b["yarıçap"], b["iz_g"]),
          "         keyfiyet yarıçabı NE ÇARPAR NE BÖLER: adımın BOYUNU",

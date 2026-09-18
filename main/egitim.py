@@ -59,6 +59,7 @@ from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            mukayese_melekesi_beyani, omur_beyani,
                            vecih_beyani,
                            vecihleri_istihrac, yirtiklari_tertiple)
+from kuantum.devre import devre_beyani
 from nefs.hendese import (HendeseAyari, hendese_teshisi,
                           hendese_beyani)
 from nefs.casimir import (CasimirAyari, blok_kosegen_artigi,
@@ -750,6 +751,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "mukayese_melekesi": mukayese_melekesi_beyani(),
             "vecih": vecih_beyani(),
             "vecih_ömrü": omur_beyani(),
+            "devre": devre_beyani(),
             "hafıza_tertibi": tertip_beyani(),
             "küme_kapanışı": kume_kapanisi,
             "mihenk": nobet.beyan(p_yildiz),

@@ -235,7 +235,19 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
             Eğrilik = BükülmeEnerjisi / (BükülmeEnerjisi + Artık²)
             Yarıçap ← Yarıçap / (1 + Eğrilik)
     VADİ    Yön = birim(enbüyükArgüman(Metrik ⊙ Maske))   → adımın YERİNE
-    NAKİL   aynı fakat sapma en büyük olan eksende        → adımın YERİNE
+    NAKİL   TÜNELLEME EVRİMİ -- zar YOK (ferman 2-Ĵ):     → adımın YERİNE
+            Kuyu     = −|Dizinin genliği| / tepe          ← durumun kendi kuyusu
+            T        = WKB geçirgenliği(Kuyu)             ← ölçülür
+            Zincir   = en kuvvetli m koordinat, m ölçülen bellekten
+            H_kuyu   = köşegen(Kuyu[Zincir])
+            H_atlama = komşu bağlantı (üç köşegenli)      ← H_kuyu ile DEĞİŞMEZ
+            U        = Evrim(H_kuyu, H_atlama, π·T)       ← Trotter-Suzuki
+            Yön      = birim( |U · (en kuvvetli koordinat)|² )
+
+    Evrim(A, B, t):  dilim n ELLE YAZILMAZ (ferman 1-J).
+            n ← 1; 1. mertebe Trotter ile 2. mertebe Suzuki'nin ayrışması
+            ölçülür; ayrışma sönmeyi bırakana kadar n ikiye katlanır.
+            Netice 2. mertebe Suzuki yayılımcısıdır.
 
     Aday = Parametre + Yarıçap · Yön
     V_aday = Skaler(Aday)                       ← TUR BAŞINA YEGÂNE ÇAĞRI
@@ -408,8 +420,10 @@ başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
     3 LIE / CASIMIR -- DİNAMİK, dönüşüm kanunları
       e₁ = Hâl_a,  e₂ = birim( Hâl_b − ⟨e₁|Hâl_b⟩e₁ ),  X = e₂e₁† − e₁e₂†
       α_k = ⟨e₁|Hâl_k⟩,  β_k = ⟨e₂|Hâl_k⟩,  w_k = |α_k|² + |β_k|²
-      uzay.dönüşüm = ortalama over Çekirdek of
-                       ( w_k − 4·Im(β̄_k α_k)² ) / w_k     ← FS sürati
+      Açı_ab       = arccos |⟨Hâl_a | Hâl_b⟩|      ← taşıma zamanı, ÖLÇÜLÜR
+      U            = Evrim(σ_y, σ_x, Açı_ab)       ← Trotter-Suzuki, çerçevede
+      uzay.dönüşüm = ortalama over Çekirdek of ( 1 − |⟨z_k | U z_k⟩|² )
+                     ← SONLU zamanlı taşınma: üreteç çekirdeği nereye götürdü
       uzay.casimir = ‖ ortalama over Çekirdek of BlochVektörü(α_k, β_k) ‖
                      ← su(2) dönmesi altında DEĞİŞMEZ
 
