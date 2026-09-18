@@ -45635,3 +45635,46 @@ değildir ve terkip edilmez. Doğru okuma tektir:
   yeni bir alet gerekmez, `ogrenme/senet_egimi.py` bunu zaten yapıyor.
 * Bu, ferman 2-T'nin *"matris tersi yoktur"* şartını da korur: metrik
   köşegen tutulur fakat **parametre** ekseninde, olasılık ekseninde değil.
+
+---
+
+## ZIRHIN BOOLE ZİNCİRİ -- SEKTÖR İÇİ KAPI FERMAN 2-Ö İLE ERİDİ
+
+`nefs/zirh.py`nin `işaret` kanadında yirmi beş satırlık bir kapı
+zinciri vardı. Zincirin niyeti okununca yedi ameliye çıktı; altısı
+**sektörler arası**, biri **sektör içi**:
+
+    CZ(tasdik, nakz)                      → sektor_cifti("tasdik","nakz")
+    CZ(tasdik.yuva0, ¬tasdik.yuva1)       → ERİDİ (aşağıya bakınız)
+    CZ(tasdik, ¬mizan)                    → sektor_cifti("mizan","tasdik", degil)
+    CZ(kelam, ¬tasdik)                    → sektor_cifti("tasdik","kelam", degil)
+    CZ(sukut, tasdik)                     → sektor_cifti("sukut","tasdik")
+    CZ(tasdik, ¬gaye)                     → sektor_cifti("gaye","tasdik", degil)
+    CZ(¬tasdik, gaye)                     → sektor_cifti("tasdik","gaye", degil)
+
+**DEĞİLLENMİŞ KONTROL NEDİR.** `tek(x, degil_x()) · uzak_cift(...) ·
+tek(x, degil_x())` kalıbı bir X-sandviçtir ve manası şudur: bağlaşım,
+o kutup **kurulu değilken** işler. Sektör kanadında bunun karşılığı
+kontrolün genlik ağırlığının **tümleyenidir** (`1 − w`), zira sektörün
+ağırlığı ferman 2-Ô gereği genlik ağırlığıdır. `sektor_cifti`nin
+`degil` bayrağı tam olarak bunu yapar ve biriken kök adı `¬` ile
+işaretlenir -- yâni tümleyen bağlaşım kendi ortogonal Cartan kökünde
+durur, doğrudan bağlaşımınkine karışmaz.
+
+**SEKTÖR İÇİ KAPI NİÇİN ERİDİ, KESİLMEDİ.** `CZ(tasdik.yuva0,
+¬tasdik.yuva1)` aynı sektörün **iki yuvası** arasında bir kapıydı ve
+bir kübit tensör yapısı varsayıyordu: "yuva0 kurulu VE yuva1 kurulu
+değil" diye bir hâl. Ferman 2-Ö tam olarak o yapıyı -- yuvanın
+`(lif, bit)` ayrışımını -- ilga etti. Sektör artık tek bir Cartan
+yüküdür; indisleri hâlin **tabanıdır**, aralarında tensör çarpımı
+yoktur. O hâlde "yuva0 ∧ ¬yuva1" diye bir hâl **mevcut değildir** ve
+ona vurulacak kapı da yoktur. Bu bir imha değil, fermanın kaldırdığı
+bir varsayımın kendiliğinden düşmesidir.
+
+**KALAN VE SEBEBİ.** `zirh.py`nin `usul` ve `hüküm` kanatları hâlâ
+yuva adresliyor: yasak cetvelinin her satırı `{yuva: bit}` eşlemesine
+çevrilip MPO ile taranıyor. O tarama, doğruluk tablosunun bir
+**bit örüntüsünü** yuva dizisine yazmaya dayanır; sektör ağırlığına
+nasıl döneceği mekanik bir çeviri değil, bir tertibat kararıdır
+(ferman 2-D) ve sorulacaktır. Tahmine dayalı çevirmek, zırhın
+hükmünü sessizce değiştirmek olurdu (ferman 5).

@@ -12,7 +12,7 @@ from idrak.kategori import Uzay
 from kuantum.stabilizer import StabilizerDurum
 from nefs.qyazmac import QuditYazmac as Yazmac
 from matematik.mizan import Onerme, Tablo, deg, degil, ise, ve
-from nefs.zihin_durumu import QYazmac, degil_x, donme
+from nefs.zihin_durumu import QYazmac, donme
 
 __all__ = [
     "yama", "delik", "iz",
@@ -539,31 +539,12 @@ def vicdan(q=None, p=None, usuller=None, tur: int = 1,
     kesme = 0.0
 
     if ne in ("işaret", "hepsi"):
-        CZ = np.eye(4, dtype=np.float64)
-        CZ[3, 3] = -1.0
-        tas0 = q.kulli("tasdik", 0)
-        tas1 = q.kulli("tasdik", 1)
-        nak0 = q.kulli("nakz", 0)
-        miz0 = q.kulli("mizan", 0)
-        kel0 = q.kulli("kelam", 0)
-        gay0 = q.kulli("gaye", 0)
-        q.uzak_cift(tas0, nak0, CZ)
-        q.tek(tas1, degil_x())
-        q.cift(tas0, CZ)
-        q.tek(tas1, degil_x())
-        q.tek(miz0, degil_x())
-        q.uzak_cift(tas0, miz0, CZ)
-        q.tek(miz0, degil_x())
-        q.tek(tas0, degil_x())
-        q.uzak_cift(kel0, tas0, CZ)
-        q.tek(tas0, degil_x())
-        q.uzak_cift(q.kulli("sukut", 0), tas0, CZ)
-        q.tek(gay0, degil_x())
-        q.uzak_cift(tas0, gay0, CZ)
-        q.tek(gay0, degil_x())
-        q.tek(tas0, degil_x())
-        q.uzak_cift(tas0, gay0, CZ)
-        q.tek(tas0, degil_x())
+        q.sektor_cifti("tasdik", "nakz")
+        q.sektor_cifti("mizan", "tasdik", degil=True)
+        q.sektor_cifti("tasdik", "kelam", degil=True)
+        q.sektor_cifti("sukut", "tasdik")
+        q.sektor_cifti("gaye", "tasdik", degil=True)
+        q.sektor_cifti("tasdik", "gaye", degil=True)
 
     if ne in ("usul", "hepsi"):
         us = USULLER if usuller is None else usuller

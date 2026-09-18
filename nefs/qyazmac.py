@@ -597,7 +597,7 @@ class QuditYazmac:
         return gen
 
     def sektor_cifti(self, kontrol: str, hedef: str,
-                     bag: float = 1.0) -> float:
+                     bag: float = 1.0, degil: bool = False) -> float:
         i0, j0 = self.sektor(kontrol)
         i1, j1 = self.sektor(hedef)
         P = np.abs(np.asarray(self.psi, complex)) ** 2
@@ -605,6 +605,8 @@ class QuditYazmac:
         assert top > 0.0, (
             "yazmaç tamamen söndü -- kenetlenecek genlik yok (ferman 5)")
         w_kontrol = float(P[:, i0:j0].sum() / top)
+        if degil:
+            w_kontrol = 1.0 - w_kontrol
         w_hedef = P[:, i1:j1].mean(axis=0)
         pay = float(w_hedef.sum())
         m = getattr(self, "mahalli", None)
@@ -618,7 +620,8 @@ class QuditYazmac:
         self._sektor_vurusu += 1
         self._kenet_vurusu = getattr(self, "_kenet_vurusu", 0) + 1
         if m is not None:
-            m.cartan_ekle("kenet.%s×%s" % (kontrol, hedef), etki)
+            m.cartan_ekle("kenet.%s%s×%s"
+                          % ("¬" if degil else "", kontrol, hedef), etki)
         return etki
 
     def sektor_faz_bagi(self, ad: str, par, olcek: float,
