@@ -1665,10 +1665,10 @@ def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
                       kapi: bool = True):
     if ne == "kapı":
         import math
-        from .zihin_durumu import donme
         if h1 <= 0:
             return
-        q.tek(q.kulli("sukut", 0), donme(float(olcek * math.atan(float(h1)))))
+        q.sektor_donmesi("sukut",
+                         float(olcek * math.atan(float(h1))))
         return
 
     if ne == "yama":

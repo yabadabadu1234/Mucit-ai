@@ -565,6 +565,62 @@ class QuditYazmac:
             self._faz_bagla(np.arange(i, j, dtype=np.int64), bag)
         return gen
 
+    def sektor_donmesi(self, ad: str, teta: float, bag=None) -> int:
+        i, j = self.sektor(ad)
+        gen = int(j - i)
+        assert gen >= 2, (
+            "%r sektörünün genişliği %d -- dönme için en az iki seviye "
+            "lâzım (ferman 2-Ö)" % (ad, gen))
+        c, s = math.cos(float(teta)), math.sin(float(teta))
+        U = np.eye(gen, dtype=complex)
+        for k in range(0, gen - 1, 2):
+            U[k, k] = c
+            U[k, k + 1] = -s
+            U[k + 1, k] = s
+            U[k + 1, k + 1] = c
+        self.sektor_kapisi(ad, U)
+        self._sektor_vurusu += 1
+        m = getattr(self, "mahalli", None)
+        if m is not None:
+            m.cartan_ekle(str(ad), float(teta))
+        if bag and self.iz.senet_acik:
+            dU = np.zeros((gen, gen), complex)
+            for k in range(0, gen - 1, 2):
+                dU[k, k] = -s
+                dU[k, k + 1] = -c
+                dU[k + 1, k] = c
+                dU[k + 1, k + 1] = -s
+            for (par, olcek, _pay) in ([bag] if isinstance(bag, tuple)
+                                       else list(bag)):
+                self.iz.bag_yaz(self.iz.son_senet, int(par),
+                                float(olcek), ("sektör", int(i), int(j), dU))
+        return gen
+
+    def sektor_cifti(self, kontrol: str, hedef: str,
+                     bag: float = 1.0) -> float:
+        i0, j0 = self.sektor(kontrol)
+        i1, j1 = self.sektor(hedef)
+        P = np.abs(np.asarray(self.psi, complex)) ** 2
+        top = float(P.sum())
+        assert top > 0.0, (
+            "yazmaç tamamen söndü -- kenetlenecek genlik yok (ferman 5)")
+        w_kontrol = float(P[:, i0:j0].sum() / top)
+        w_hedef = P[:, i1:j1].mean(axis=0)
+        pay = float(w_hedef.sum())
+        m = getattr(self, "mahalli", None)
+        teta = (float(m.cartan_oku(str(kontrol)))
+                if m is not None else 0.0)
+        etki = float(bag) * teta * w_kontrol
+        t = np.zeros(self.d, float)
+        if pay > 0.0:
+            t[i1:j1] = -etki * (w_hedef / pay)
+        self.faz(t)
+        self._sektor_vurusu += 1
+        self._kenet_vurusu = getattr(self, "_kenet_vurusu", 0) + 1
+        if m is not None:
+            m.cartan_ekle("kenet.%s×%s" % (kontrol, hedef), etki)
+        return etki
+
     def sektor_faz_bagi(self, ad: str, par, olcek: float,
                         pay=None) -> List[Tuple[int, float, np.ndarray]]:
         i, j = self.sektor(ad)

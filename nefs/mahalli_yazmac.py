@@ -109,6 +109,10 @@ class MahalliYazmac:
         _MAHALLI["cartan_normu"] = float(np.abs(self.cartan).sum())
         return k
 
+    def cartan_oku(self, ad: str) -> float:
+        k = self._kok.get(str(ad))
+        return 0.0 if k is None else float(self.cartan[int(k)])
+
     def kok_agirligi(self) -> np.ndarray:
         n = max(1, int(self.cartan.size))
         return np.arange(1, n + 1, dtype=float) / float(n)
