@@ -6,7 +6,15 @@ from typing import Any, Dict, Optional, Tuple
 import numpy as np
 
 __all__ = ["MahalliYazmac", "mahalli_beyani", "mahalli_metni",
-           "uzunluk_beyani", "uzunluk_metni"]
+           "uzunluk_beyani", "uzunluk_metni", "uzunluk_genligi"]
+
+
+def uzunluk_genligi(mahalli, pencere: int):
+    if mahalli is None:
+        _UZUNLUK["bağlanmadı"] = _UZUNLUK.get("bağlanmadı", 0.0) + 1.0
+        return None
+    cephe = int(getattr(mahalli, "pencere", 0) or 0)
+    return mahalli.uzunluk_katmani(cephe, hadd=int(pencere))
 
 
 ZIRH_QUDITI = 1 << 20

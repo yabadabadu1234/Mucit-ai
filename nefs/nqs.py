@@ -8,7 +8,8 @@ import numpy as np
 
 __all__ = ["NqsAyari", "ChebyshevKan", "chebyshev_t", "chebyshev_u",
            "gcl_dugumleri", "fct_katsayilari", "askin_beyani",
-           "nqs_beyani", "nqs_metni"]
+           "nqs_beyani", "nqs_metni",
+           "TurGenligi", "turun_genligi", "tur_beyani", "tur_metni"]
 
 
 @dataclass
@@ -204,6 +205,144 @@ class ChebyshevKan:
                 "son_Z": float(self._son_z),
                 "aşkın_döküm": askin_beyani(),
                 "taban": int(self.taban)}
+
+
+_TUR: Dict[str, float] = {
+    "tur": 0.0, "kan_çağrısı": 0.0, "öbek": 0.0, "konfigürasyon": 0.0,
+    "kenetsiz": 0.0, "mahallîsiz": 0.0, "saniye": 0.0, "açık": 1.0}
+
+
+@dataclass
+class TurGenligi:
+
+    hal: np.ndarray
+    lif: Tuple[int, ...]
+    yazmac: Any = None
+
+    @property
+    def yigin(self) -> np.ndarray:
+        return np.asarray(self.hal, complex).reshape(1, -1)
+
+    def sektor_araliklari(self):
+        y = self.yazmac
+        assert y is not None, (
+            "sektör aralıkları yazmaçtan okunur; ikinci bir cetvel "
+            "kurulmaz (ferman 1-M, 2-İ)")
+        return [y.sektor(ad) for ad, _ in y.ayar.kulli_alanlar]
+
+
+def _konfigurasyon_basamaklari(lif: Tuple[int, ...], bas: int,
+                               son: int) -> np.ndarray:
+    k = np.arange(int(bas), int(son), dtype=np.int64)
+    out = np.empty((k.size, len(lif)), np.int64)
+    kalan = k
+    for i in range(len(lif) - 1, -1, -1):
+        n = int(lif[i])
+        out[:, i] = kalan % n
+        kalan = kalan // n
+    return out
+
+
+def _mahalli_faz(mahalli, bas: int, son: int) -> Optional[np.ndarray]:
+    if mahalli is None:
+        _TUR["mahallîsiz"] += 1.0
+        return None
+    kuresel = float(mahalli.kuresel_faz())
+    f = np.asarray(mahalli.faz, float)
+    if f.ndim == 2:
+        f = f[0]
+    n = int(son) - int(bas)
+    out = np.full(n, kuresel, float)
+    ust = min(int(son), int(f.size))
+    if ust > int(bas):
+        out[:ust - int(bas)] += f[int(bas):ust]
+    return out
+
+
+def _obek_haddi(kan: ChebyshevKan, d: int) -> int:
+    from .donanim import bellek_haddi
+    bayt = bellek_haddi()
+    K = int(kan.ayar.dugum)
+    D = int(kan.ayar.derece) + 1
+    tek = 2 * K * D * 8 + 64
+    assert bayt is None or int(bayt) > 0, (
+        "öbek haddi ölçülen bellekten türer; yoklanamayan bellekten "
+        "sayı uydurulmaz (ferman 5-B, 1-J)")
+    if bayt is None:
+        return int(d)
+    return int(max(1, min(int(d), (int(bayt) // 8) // max(1, tek))))
+
+
+def turun_genligi(nefs, q=None) -> TurGenligi:
+    import time as _t
+    t0 = _t.perf_counter()
+    kan = getattr(nefs, "kan", None)
+    assert kan is not None, (
+        "TURUN GENLİĞİ KAN'DAN GELİR (ferman 2-T): ``nefs.kan`` yok. "
+        "Genlik açık dizi olarak saklanmaz, fonksiyondan üretilir.")
+    y = getattr(q, "y", None) if q is not None else getattr(nefs, "y", None)
+    assert y is not None, (
+        "turun genliği yazmacın lif yapısını ister -- yazmaç yok")
+    lif = tuple(int(x) for x in y.ayar.lif)
+    d = int(np.prod(lif))
+    assert int(kan.taban) >= max(lif), (
+        "KAN tabanı lifin en büyük basamağını taşımalı: taban %d, lif %r "
+        "(ferman 1-M: tek kaynak yazmaçtır)" % (int(kan.taban), lif))
+    pq = getattr(nefs, "pq", None)
+    if pq is not None and not hasattr(pq, "kenet"):
+        raise AssertionError(
+            "parametre yazmacında ``kenet`` yok -- kenetlenme sessizce "
+            "atlanamaz (ferman 5, 2-R)")
+    if pq is None:
+        _TUR["kenetsiz"] += 1.0
+    mahalli = getattr(nefs, "mahalli", None)
+    obek = _obek_haddi(kan, d)
+    parcalar = []
+    bas = 0
+    n_obek = 0
+    while bas < d:
+        son = min(d, bas + obek)
+        basamak = _konfigurasyon_basamaklari(lif, bas, son)
+        parcalar.append(kan.genlik(basamak, parametre=pq,
+                                   yerel_faz=_mahalli_faz(mahalli, bas, son)))
+        n_obek += 1
+        bas = son
+    psi = (parcalar[0] if n_obek == 1
+           else np.concatenate(parcalar).astype(complex))
+    nrm = float(np.linalg.norm(psi))
+    assert nrm > 0.0, (
+        "turun genliği tamamen söndü -- KAN bir durum üretemedi "
+        "(ferman 5)")
+    psi = psi / nrm
+    _TUR["tur"] += 1.0
+    _TUR["kan_çağrısı"] = 1.0
+    _TUR["öbek"] = float(n_obek)
+    _TUR["konfigürasyon"] = float(d)
+    _TUR["saniye"] += _t.perf_counter() - t0
+    return TurGenligi(hal=np.asarray(psi, complex), lif=lif, yazmac=y)
+
+
+def tur_beyani() -> Dict[str, Any]:
+    b = dict(_TUR)
+    b["tur_başına_kan"] = int(b["kan_çağrısı"])
+    return b
+
+
+def tur_metni(b: Optional[Dict[str, Any]] = None) -> str:
+    d = dict(b or tur_beyani())
+    if not int(d.get("tur", 0)):
+        return ("  TURUN GENLİĞİ: HİÇ ÜRETİLMEDİ -- kırmızı (ferman 2-A)")
+    return "\n".join([
+        "  TURUN GENLİĞİ -- KAN İLK VE SON DEFA (ferman 2-A, 2-T)",
+        "    tur %d   TUR BAŞINA KAN ÇAĞRISI %d  (bir olmalı)"
+        % (int(d["tur"]), int(d["tur_başına_kan"])),
+        "    konfigürasyon %d   boru hattı öbeği %d   %.4f sn"
+        % (int(d["konfigürasyon"]), int(d["öbek"]), float(d["saniye"])),
+        "    Öbek ölçülen bellekten türer (ferman 5-B); genlik açık dizi",
+        "    olarak SAKLANMAZ, turda bir kez üretilir ve bırakılır.",
+        "    kenetsiz tur %d   mahallî fazsız tur %d  (ikisi de 0 olmalı)"
+        % (int(d["kenetsiz"]), int(d["mahallîsiz"])),
+    ])
 
 
 def nqs_beyani(kan: Optional[ChebyshevKan]) -> Dict[str, Any]:

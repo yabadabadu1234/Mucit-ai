@@ -104,7 +104,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from tanilama.hizolcer import hiz_metni
         from main.kulliyat import kulliyat_beyani
         from nefs.parametre_yazmaci import parametre_metni, kenet_metni
-        from nefs.nqs import nqs_metni
+        from nefs.nqs import nqs_metni, tur_metni
         from nefs.mahalli_yazmac import mahalli_metni, uzunluk_metni
         from nefs.veri_kapisi import kapi_metni
         from nefs.mukayese import mukayese_melekesi_metni
@@ -150,6 +150,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               fock_metni(kulli.get("fock") or {}), "",
               sektor_metni(kulli.get("sektör") or {}), "",
               nqs_metni(kulli.get("kan_nqs") or {}), "",
+              tur_metni(kulli.get("tur_genliği")), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"
               % (kulli["külliyat"]["arc"], kulli["külliyat"]["külliyat"]),
               kulliyat_beyani(kulli["külliyat"]["döküm"])]

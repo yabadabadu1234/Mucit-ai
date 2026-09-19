@@ -38,8 +38,9 @@ from nefs.siklotomik import (SiklotomikAyari,
 from nefs.qcekirdek import cekirdek_beyani
 from nefs.parametre_yazmaci import (ParametreAyari, ParametreYazmaci,
                                     parametre_beyani, kenet_beyani)
-from nefs.nqs import nqs_beyani
-from nefs.mahalli_yazmac import mahalli_beyani, uzunluk_beyani
+from nefs.nqs import nqs_beyani, turun_genligi, tur_beyani
+from nefs.mahalli_yazmac import (mahalli_beyani, uzunluk_beyani,
+                                 uzunluk_genligi)
 from tanilama.hizolcer import (Hizolcer, hizolcer_bagla,
                                hizolcer_beyani)
 from nefs.gpu_akis import GpuAyari, gpu_akisi
@@ -479,6 +480,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     uzay = mukayese_filtresi(uzay, hafiza=hafiza,
                              mahalli=getattr(nefs, "mahalli", None))
     netice = cozum_uzayi_kapat(uzay, sual, hamiltonyen=hamiltonyen)
+    netice["uzunluk_genliği"] = uzunluk_genligi(
+        getattr(nefs, "mahalli", None), int(netice["pencere"]))
     _sadakat_ayari = SadakatAyari(acik=int(ayar.sadakat_acik),
                                   parite_lifi=int(ayar.parite_lifi),
                                   lif_yapisi=tuple(ayar.lif_yapisi),
@@ -631,12 +634,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
              "toplam_düşüş": float(r["V_ilk"] - r["V_son"])})
 
     q_son = nefs.idrak_et(np.zeros((ayar.yigin(), 2, ayar.veri_lifi)))
-    psi_son = np.asarray(q_son.y.psi[0], complex)
-    dhr = dhr_ayrismasi(np.asarray(q_son.y.psi, complex),
-                        q_son.y.ayar.lif, CasimirAyari(acik=1))
+    tur = turun_genligi(nefs, q_son)
+    psi_son = tur.hal
+    dhr = dhr_ayrismasi(tur.yigin, q_son.y.ayar.lif, CasimirAyari(acik=1))
     dhr["araya_girme"] = gelfand_tsetlin_araya_girme(dhr["pay"])
-    dhr["blok_artığı"] = blok_kosegen_artigi(
-        np.asarray(q_son.y.psi, complex), q_son.y.ayar.lif)
+    dhr["blok_artığı"] = blok_kosegen_artigi(tur.yigin, q_son.y.ayar.lif)
     dhr["kartan_boyu"] = int(kartan_fazi(
         q_son.y.ayar.lif, [float(ayar.ayna_teta)]).size)
 
@@ -646,7 +648,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     tdd = kanonik_adres(psi_son, cekirdek=int(ayar.tdd_cekirdek),
                         ayar=TddAyari(tolerans=float(ayar.tdd_tolerans)))
     stab = kararname(psi_son, mertebe=int(ayar.stab_mertebe))
-    goz = [q_son.y.sektor(ad) for ad, _ in q_son.ayar.kulli_alanlar]
+    goz = tur.sektor_araliklari()
     K = int(ayar.golge_ornegi)
     t_g = time.perf_counter()
     if K > 0:
@@ -697,6 +699,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     assert int(usl["yoklama"]) > 0, (
         "MANTIK YÜRÜTME KAPISI HİÇ YOKLANMADI -- ``nefs/usul.py`` "
         "bağlanmamış. Sefer açılmayabilir; yoklanmaması başka şeydir.")
+    _tur = tur_beyani()
+    assert int(_tur["tur_başına_kan"]) == 1, (
+        "TURDA %s KAN ÇAĞRISI -- ferman 2-A turda BİR çağrı ister; "
+        "genlik ne iki kere üretilir ne sözlük boyunda şişirilir."
+        % _tur["tur_başına_kan"])
     _devre = sadakat_devre_beyani()
     assert int(_devre["çağrı"]) > 0, (
         "SADAKAT DEVRESİ HİÇ KOŞMADI -- ferman 2-Đ istisnasız bütün "
@@ -727,8 +734,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     taban_durumu = hamiltonyen.kefelerden(kefeler).taban_durumu()
     cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
     if int(ayar.mukayese_acik):
-        _dun_ilk = [np.asarray(h, complex) for h in
-                    np.asarray(q_son.y.psi, complex)[:4]]
+        _dun_ilk = [np.asarray(h, complex) for h in tur.yigin[:4]]
         _vec = vecihleri_istihrac(_dun_ilk + [psi_son])
         mukayese = mukayese_beyani(
             kefeler.get("spektrum"),
@@ -820,6 +826,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "uzunluk_katmanı": uzunluk_beyani(),
             "veri_kapısı": kapi_beyani(),
             "kan_nqs": nqs_beyani(getattr(nefs, "kan", None)),
+            "tur_genliği": _tur,
             "mizan": kefeler, "veri_cetveli": cetvel,
             "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
             "veri": len(veri),

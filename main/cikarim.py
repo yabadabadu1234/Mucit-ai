@@ -16,6 +16,7 @@ from nefs.musahede import gorevleri_getir
 from nefs.hafiza import Hafiza
 from nefs.sadakat import (SadakatAyari, sadakat_beyani, sadakat_devresi,
                           sadakat_devre_beyani)
+from nefs.mahalli_yazmac import uzunluk_genligi
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import cikarim_beyani
 
@@ -143,6 +144,8 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
     uzay = mukayese_filtresi(uzay, hafiza=hafiza,
                              mahalli=getattr(nefs, "mahalli", None))
     netice = cozum_uzayi_kapat(uzay, sual)
+    netice["uzunluk_genliği"] = uzunluk_genligi(
+        getattr(nefs, "mahalli", None), int(netice["pencere"]))
     sadakat_devresi(nefs=nefs, hafiza=hafiza, netice=netice,
                     ayar=SadakatAyari(
                         acik=int(ayar.sadakat_acik),
