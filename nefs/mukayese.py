@@ -1,12 +1,18 @@
 from __future__ import annotations
 
+from enum import IntEnum
+
 import math
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-__all__ = ["mukayese_melekesi", "mukayese_melekesi_beyani",
+__all__ = ["Alem", "alem_kur", "Durum", "GECIS", "Makine",
+           "ana_superpozisyon", "cozum_uzayi_ac", "cozum_uzayi_kapat",
+           "mantik_filtresi", "mukayese_filtresi", "norm_maskesi",
+           "cozum_beyani", "cozum_metni",
+           "mukayese_melekesi", "mukayese_melekesi_beyani",
            "mukayese_melekesi_metni",
            "yirtiklari_tertiple",
            "Vecih", "vecihleri_istihrac", "vecih_beyani",
@@ -950,3 +956,445 @@ def mukayese_metni(o: Dict[str, Any]) -> str:
                                    % (k, 100.0 * v, h["açı"].get(k, 0.0))
                                    for k, v in ust)]
     return "\n".join(s)
+
+
+def _kategori_evreni() -> int:
+    _FOCK_SAYAC["kategori_denetimi"] += 1.0
+    return int(denetle_tip(kategori_tipi(), _BAGLAM))
+
+
+def _mertebe_tutuyor_mu(r: int, n: int) -> bool:
+    _FOCK_SAYAC["mertebe_denetimi"] += 1.0
+    try:
+        denetle_t(rn_sarti(Deg("A"), int(r), int(n)), Evren(0), _BAGLAM)
+        return True
+    except Exception:
+        return False
+
+
+def _esbiçim(V: np.ndarray) -> np.ndarray:
+    L = np.log(np.abs(V) + float(np.finfo(float).tiny))
+    return (L - L.mean(axis=1, keepdims=True)
+            - L.mean(axis=0, keepdims=True) + L.mean())
+
+
+def _bileske_artigi(V: np.ndarray) -> float:
+    L = np.log(np.abs(V) + float(np.finfo(float).tiny))
+    pay = float(np.linalg.norm(_esbiçim(V)))
+    payda = float(np.linalg.norm(L - L.mean()))
+    return float(pay / payda) if payda > 0.0 else 0.0
+
+
+def _morfizm_mertebesi(V: np.ndarray) -> Tuple[int, Tuple[float, ...]]:
+    kule: List[float] = []
+    W = np.asarray(V, float)
+    evvel = float("inf")
+    n = -1
+    for _ in range(int(max(2, min(W.shape[0], 16)))):
+        if W.shape[0] < 2 or not np.isfinite(W).all():
+            break
+        art = _bileske_artigi(W)
+        kule.append(art)
+        if not (art < evvel - float(np.finfo(float).eps)):
+            break
+        evvel = art
+        n += 1
+        R = _esbiçim(W)
+        W = np.abs(R @ R.T)
+        np.fill_diagonal(W, 0.0)
+    return int(max(-1, n)), tuple(kule)
+
+
+def _nesne_mertebesi(V: np.ndarray) -> Tuple[int, int]:
+    W = np.asarray(V, float)
+    if W.shape[0] < 2:
+        return 0, 0
+    nrm = np.linalg.norm(W, axis=1, keepdims=True)
+    nrm[nrm == 0.0] = 1.0
+    B = W / nrm
+    G = np.abs(B @ B.T)
+    np.fill_diagonal(G, 0.0)
+    ayni = int(np.count_nonzero(G >= 1.0 - float(np.sqrt(
+        np.finfo(float).eps)))) // 2
+    r = 0
+    kalan = ayni
+    while kalan > 0 and r < len(MERTEBE_ADI) - 1:
+        r += 1
+        kalan //= 2
+    return int(r), int(ayni)
+
+
+@dataclass(frozen=True)
+class Alem:
+
+    ad: str
+    r: int
+    n: int
+    evren: int
+    tutuyor: bool
+    bileske_artigi: float
+    ozdes_cift: int
+    kule: Tuple[float, ...]
+
+    def beyan(self) -> Dict[str, Any]:
+        return {"âlem": self.ad, "r": int(self.r), "n": int(self.n),
+                "evren": int(self.evren), "tutuyor": bool(self.tutuyor),
+                "bileşke_artığı": float(self.bileske_artigi),
+                "özdeş_çift": int(self.ozdes_cift),
+                "kule": [float(x) for x in self.kule],
+                "kule_boyu": len(self.kule)}
+
+
+def alem_kur(V: np.ndarray) -> Alem:
+    W = np.abs(np.asarray(V, float))
+    n, kule = _morfizm_mertebesi(W)
+    r, ayni = _nesne_mertebesi(W)
+    while n >= 0 and not _mertebe_tutuyor_mu(r, n):
+        n -= 1
+    a = Alem(ad=rn_adi(r, n), r=int(r), n=int(n),
+             evren=_kategori_evreni(),
+             tutuyor=bool(n >= 0 and _mertebe_tutuyor_mu(r, n)),
+             bileske_artigi=(float(kule[0]) if kule else 0.0),
+             ozdes_cift=int(ayni), kule=kule)
+    _SON_ALEM.clear()
+    _SON_ALEM.update(a.beyan())
+    return a
+
+
+class Durum(IntEnum):
+
+    VAKUM = 0
+    SINIR = 1
+    MESELE = 2
+    UZAY = 3
+    SUZULMUS = 4
+    HUKUM = 5
+    INTAC = 6
+
+
+GECIS: Dict[Durum, Tuple[Durum, ...]] = {
+    Durum.VAKUM: (Durum.SINIR,),
+    Durum.SINIR: (Durum.MESELE,),
+    Durum.MESELE: (Durum.UZAY, Durum.INTAC),
+    Durum.UZAY: (Durum.SUZULMUS,),
+    Durum.SUZULMUS: (Durum.HUKUM,),
+    Durum.HUKUM: (Durum.UZAY, Durum.INTAC),
+    Durum.INTAC: (),
+}
+
+_SAYAC: Dict[str, float] = {
+    "geçiş": 0.0, "açılan": 0.0, "kapanan": 0.0, "maske": 0.0,
+    "geri_yol": 0.0, "mesele_var": 0.0, "mesele_yok": 0.0,
+    "tersi_yok": 0.0, "faz_çevirme": 0.0, "mercek": 0.0,
+    "pergel": 0.0, "kök": 0.0}
+
+_SON: Dict[str, Any] = {}
+
+
+class Makine:
+
+    __slots__ = ("durum", "izlek", "maskeli", "acik")
+
+    def __init__(self) -> None:
+        self.durum = Durum.VAKUM
+        self.izlek: List[Durum] = [Durum.VAKUM]
+        self.maskeli: set = set()
+        self.acik = 0
+
+    def gec(self, hedef: Durum) -> "Makine":
+        assert hedef in GECIS[self.durum], (
+            "YASAK DURUM GEÇİŞİ: %s → %s. Müsaade edilen: %s. Durum "
+            "makinesinin geçiş tablosu delinemez (ferman 2-Æ)."
+            % (self.durum.name, hedef.name,
+               ", ".join(d.name for d in GECIS[self.durum]) or "yok"))
+        self.durum = hedef
+        self.izlek.append(hedef)
+        _SAYAC["geçiş"] += 1.0
+        return self
+
+    def beyan(self) -> Dict[str, Any]:
+        return {"durum": self.durum.name,
+                "izlek": [d.name for d in self.izlek],
+                "adım": len(self.izlek) - 1,
+                "maskeli_jeton": len(self.maskeli),
+                "açık_uzay": int(self.acik)}
+
+
+def _entropi_gradyani(hal: np.ndarray) -> Tuple[np.ndarray, float]:
+    P = np.abs(np.asarray(hal, complex).reshape(-1)) ** 2
+    top = float(P.sum())
+    assert top > 0.0, (
+        "hâlin normu sıfır -- sınır şartı boş bir dalgaya vidalanamaz")
+    P = P / top
+    H = -P * np.log(P + float(np.finfo(float).tiny))
+    return H, float(H.sum())
+
+
+def _kanunlar() -> Dict[str, float]:
+    from .mukayese import kanun_tayfi
+    k = kanun_tayfi()
+    assert k, (
+        "kanun tayfı BOŞ -- yeni uzayın kaideleri okunamaz. Kaide "
+        "elle yazılamaz (ferman 2-Ú-E, 6).")
+    return {str(a): float(v) for a, v in k.items()}
+
+
+def _hal_kur(baglam: Sequence[Sequence[int]], nefs, taban: int
+             ) -> np.ndarray:
+    from .qegitim import belirtecleri_kodla
+    diz = [int(x) for o in baglam for x in list(o)]
+    assert diz, "bağlam BOŞ -- sınır şartı yok demektir"
+    E = belirtecleri_kodla(diz, int(taban), int(taban))
+    q = nefs.idrak_et(E)
+    return np.asarray(q.y.psi[0], complex).reshape(-1)
+
+
+def ana_superpozisyon(baglam: Sequence[Sequence[int]], nefs=None,
+                      hafiza=None, sozluk: int = 0, pencere: int = 0,
+                      taban: int = 0, basamak: int = 0,
+                      makine: Optional[Makine] = None) -> Dict[str, Any]:
+    assert nefs is not None, (
+        "ana süperpozisyon motorsuz kurulamaz -- kâide cebriyle sual "
+        "üretmek yasaktır (ferman 6)")
+    m = makine or Makine()
+    m.gec(Durum.SINIR)
+    hal = _hal_kur(baglam, nefs, int(taban))
+    H, toplam = _entropi_gradyani(hal)
+    kanun = _kanunlar()
+    en_zayif = min(kanun.items(), key=lambda x: x[1])
+    mesele = float(1.0 - float(en_zayif[1]))
+    boy = int(sum(len(list(o)) for o in baglam))
+    aranan = int(np.argmax(H))
+    ters_var = bool(np.isfinite(hal).all()
+                    and float(np.linalg.norm(hal)) > 0.0)
+    if not ters_var:
+        _SAYAC["tersi_yok"] += 1.0
+    m.gec(Durum.MESELE)
+    if mesele > float(np.mean(list(kanun.values()))):
+        _SAYAC["mesele_var"] += 1.0
+        var = True
+    else:
+        _SAYAC["mesele_yok"] += 1.0
+        var = False
+    return {"makine": m, "hal": hal, "mesele": var,
+            "mesele_nispeti": float(mesele),
+            "en_zayıf_kanun": str(en_zayif[0]),
+            "kaideler": kanun,
+            "entropi": float(toplam),
+            "aranan_basamak": aranan,
+            "geri_yol_var": ters_var,
+            "pencere": int(min(int(pencere), max(1, boy))),
+            "boy": boy, "sözlük": int(sozluk), "taban": int(taban),
+            "basamak": int(basamak)}
+
+
+def cozum_uzayi_ac(sual: Dict[str, Any], nefs=None, hafiza=None,
+                   fock=None) -> Dict[str, Any]:
+    m: Makine = sual["makine"]
+    if not sual["mesele"]:
+        m.gec(Durum.INTAC)
+        return {"makine": m, "açık": False, "hal": sual["hal"],
+                "F": None, "sual": sual, "kayıt": []}
+    assert sual["geri_yol_var"], (
+        "FUNKTÖRÜN TERSİ YOK -- uzay AÇILMAZ. Açılırsa ana hâle "
+        "dönülemez ve orada biriken idrak kaybolur (ferman 1-Ç).")
+    m.gec(Durum.UZAY)
+    m.acik += 1
+    _SAYAC["açılan"] += 1.0
+    klon = np.array(sual["hal"], complex, copy=True)
+    kaide = sual["kaideler"]
+    aci = math.pi * float(sual["mesele_nispeti"])
+    kok = np.exp(1j * aci * np.linspace(0.0, 1.0, klon.size))
+    F = kok
+    klon = klon * F
+    if fock is not None:
+        for ad, v in kaide.items():
+            fock.yarat("kaide.%s" % ad, entropi=float(v),
+                       butce=float(sual["boy"]),
+                       celiski=float(sual["mesele_nispeti"]))
+    return {"makine": m, "açık": True, "hal": klon, "F": F,
+            "sual": sual, "kayıt": []}
+
+
+def mantik_filtresi(uzay: Dict[str, Any]) -> Dict[str, Any]:
+    from .mukayese import bargmann
+    m: Makine = uzay["makine"]
+    if not uzay["açık"]:
+        return uzay
+    psi = np.asarray(uzay["hal"], complex).reshape(-1)
+    n = psi.size
+    E = np.zeros(n, complex)
+    E[int(np.argmax(np.abs(psi)))] = 1.0
+    o = bargmann([psi, E, psi - complex(np.vdot(E, psi)) * E])
+    takla = float(o["takla_nispeti"])
+    kapanis = float(o["kapanış_nispeti"])
+    ihlal = ("tenakuz" if takla > kapanis else
+             "kısırdöngü" if kapanis >= 1.0 - float(np.finfo(float).eps)
+             else "")
+    if ihlal:
+        P = np.outer(E, E.conj())
+        psi = psi - 2.0 * (P @ psi)
+        _SAYAC["faz_çevirme"] += 1.0
+    uzay["hal"] = psi
+    uzay["kayıt"].append({"süzgeç": "mantık", "ihlâl": ihlal or "yok",
+                          "takla": takla, "kapanış": kapanis,
+                          "Φ": float(o["Φ"]), "r": float(o["r"])})
+    m.gec(Durum.SUZULMUS)
+    return uzay
+
+
+def mukayese_filtresi(uzay: Dict[str, Any], hafiza=None,
+                      mahalli=None) -> Dict[str, Any]:
+    from .mukayese import bargmann
+    if not uzay["açık"]:
+        return uzay
+    psi = np.asarray(uzay["hal"], complex).reshape(-1)
+    kutup: List[np.ndarray] = [psi]
+    if hafiza is not None:
+        for k in sorted(getattr(hafiza, "kayitlar", []) or [],
+                        key=lambda k: -float(getattr(k, "mu", 0.0)))[:2]:
+            v = np.zeros(psi.size, complex)
+            x = np.asarray(k.x, complex).reshape(-1)[:psi.size]
+            v[:x.size] = x
+            if float(np.linalg.norm(v)) > 0.0:
+                kutup.append(v)
+    if len(kutup) < 2:
+        uzay["kayıt"].append({"süzgeç": "mukayese", "kutup": len(kutup),
+                              "sebep": "kıyas kutbu yok", "r": 1.0,
+                              "Φ": 0.0})
+        return uzay
+    o = bargmann(kutup)
+    r = float(o["r"])
+    fi = float(o["Φ"])
+    beta = float(1.0 - r)
+    psi = psi * math.exp(-beta)
+    nrm = float(np.linalg.norm(psi))
+    assert nrm > 0.0, "mukayese merceği dalgayı tamamen söndürdü"
+    psi = psi / nrm
+    _SAYAC["mercek"] += 1.0
+    kok_adi = "mukayese.Φ%+.3f" % fi
+    if mahalli is not None:
+        mahalli.cartan_ekle(kok_adi, fi)
+        _SAYAC["kök"] += 1.0
+    d = psi.size
+    psi = psi * np.exp(1j * fi * np.arange(d) / max(1, d - 1))
+    _SAYAC["pergel"] += 1.0
+    uzay["hal"] = psi
+    uzay["kayıt"].append({"süzgeç": "mukayese", "kutup": len(kutup),
+                          "r": r, "Φ": fi, "mercek_β": beta,
+                          "kök": kok_adi})
+    return uzay
+
+
+def norm_maskesi(uzay: Dict[str, Any], jeton: int) -> Dict[str, Any]:
+    m: Makine = uzay["makine"]
+    psi = np.asarray(uzay["hal"], complex).reshape(-1)
+    norm = float(np.vdot(psi, psi).real)
+    kapali = bool(norm <= float(np.finfo(float).eps))
+    if kapali:
+        assert int(jeton) not in m.maskeli, (
+            "JETON %d İKİNCİ DEFA MASKELENİYOR -- geri yol kısırdöngüye "
+            "girdi (ferman 1-I: kısırdöngü kat'î huduttur)" % int(jeton))
+        m.maskeli.add(int(jeton))
+        _SAYAC["maske"] += 1.0
+        _SAYAC["geri_yol"] += 1.0
+    return {"norm": norm, "kapalı": kapali,
+            "ceza": (-math.inf if kapali else 0.0),
+            "maskeli": sorted(m.maskeli)}
+
+
+def cozum_uzayi_kapat(uzay: Dict[str, Any], sual: Dict[str, Any],
+                      hamiltonyen=None) -> Dict[str, Any]:
+    m: Makine = uzay["makine"]
+    psi = np.asarray(uzay["hal"], complex).reshape(-1)
+    if uzay["açık"]:
+        F = uzay["F"]
+        assert F is not None, (
+            "uzay açık fakat funktör kaydedilmemiş -- geri çevrim "
+            "imkânsız (ferman 1-Ç)")
+        psi = psi * np.conj(F)
+        m.acik -= 1
+        _SAYAC["kapanan"] += 1.0
+        m.gec(Durum.HUKUM)
+        m.gec(Durum.INTAC)
+    assert m.acik == 0, (
+        "AÇIK KALAN UZAY VAR (%d) -- saftirikçe bekleyen vecih "
+        "kusurdur (ferman 2-Ú-D)" % m.acik)
+    pencere = int(sual["pencere"])
+    hafiza_kapasitesi = int(max(1, round(float(sual["entropi"])
+                                         * float(len(sual["kaideler"])))))
+    if hamiltonyen is not None:
+        hamiltonyen.kefelerden({
+            "artık_adı": ("uzay", "tip", "kategori"),
+            "artık": np.array([float(sual["mesele_nispeti"]),
+                               float(sual["entropi"]),
+                               float(pencere)], float),
+            "ham_artık": np.array([1.0, 1.0, 1.0], float)})
+    o = {"pencere": pencere,
+         "hafıza_kapasitesi": hafiza_kapasitesi,
+         "hal": psi,
+         "mesele": bool(sual["mesele"]),
+         "mesele_nispeti": float(sual["mesele_nispeti"]),
+         "en_zayıf_kanun": sual["en_zayıf_kanun"],
+         "aranan_basamak": int(sual["aranan_basamak"]),
+         "süzgeç": list(uzay["kayıt"]),
+         "beyan": m.beyan()}
+    _SON.clear()
+    _SON.update({k: v for k, v in o.items() if k != "hal"})
+    _SON["sayaç"] = dict(_SAYAC)
+    return o
+
+
+def cozum_beyani() -> Dict[str, Any]:
+    if _SON:
+        return dict(_SON)
+    return {"pencere": 0, "hafıza_kapasitesi": 0, "mesele": False,
+            "mesele_nispeti": 0.0, "en_zayıf_kanun": "KOŞMADI",
+            "aranan_basamak": 0, "süzgeç": [],
+            "beyan": {"durum": "KOŞMADI", "izlek": [], "adım": 0,
+                      "maskeli_jeton": 0, "açık_uzay": 0},
+            "sayaç": dict(_SAYAC)}
+
+
+def cozum_metni(b: Optional[Dict[str, Any]] = None) -> str:
+    d = b if b is not None else cozum_beyani()
+    m = dict(d.get("beyan") or {})
+    s = dict(d.get("sayaç") or {})
+    sz = list(d.get("süzgeç") or [])
+    mn = next((x for x in sz if x.get("süzgeç") == "mantık"), {})
+    mk = next((x for x in sz if x.get("süzgeç") == "mukayese"), {})
+    return "\n".join([
+        "  ÇÖZÜM UZAYI -- DURUM MAKİNESİ (ferman 2-Æ, 2-Ý)",
+        "    izlek: %s" % (" → ".join(m.get("izlek") or []) or "koşmadı"),
+        "    mesele %s (nispet %.6f)   en zayıf kanun: %s"
+        % ("VAR" if d.get("mesele") else "yok",
+           float(d.get("mesele_nispeti", 0.0)), d.get("en_zayıf_kanun")),
+        "    aranan basamak (entropi tepesi) %d   pencere %d   "
+        "hafıza kapasitesi %d"
+        % (int(d.get("aranan_basamak", 0)), int(d.get("pencere", 0)),
+           int(d.get("hafıza_kapasitesi", 0))),
+        "",
+        "    MANTIK SÜZGECİ -- Z₂, faz çevirme (tek imkân)",
+        "      ihlâl: %s   takla %.6f   kapanış %.6f   Φ %+.6f"
+        % (mn.get("ihlâl", "koşmadı"), float(mn.get("takla", 0.0)),
+           float(mn.get("kapanış", 0.0)), float(mn.get("Φ", 0.0))),
+        "      faz çevirme %d kere koştu" % int(s.get("faz_çevirme", 0)),
+        "",
+        "    MUKAYESE SÜZGECİ -- MAHİYETİ FARKLI (ℝ⁺ × U(1))",
+        "      r %.6f → mercek β %.6f   ·   Φ %+.6f → pergel, kök %s"
+        % (float(mk.get("r", 0.0)), float(mk.get("mercek_β", 0.0)),
+           float(mk.get("Φ", 0.0)), mk.get("kök", "yok")),
+        "      mercek %d · pergel %d · açılan Cartan kökü %d"
+        % (int(s.get("mercek", 0)), int(s.get("pergel", 0)),
+           int(s.get("kök", 0))),
+        "",
+        "    GERİ YOL -- NORM MASKESİ (ferman 2-Æ/3)",
+        "      maskelenen jeton %d   geri dönüş %d   maskeli şu an %d"
+        % (int(s.get("maske", 0)), int(s.get("geri_yol", 0)),
+           int(m.get("maskeli_jeton", 0))),
+        "",
+        "    açılan %d / kapanan %d   AÇIK KALAN %d  (sıfır olmalı)"
+        % (int(s.get("açılan", 0)), int(s.get("kapanan", 0)),
+           int(m.get("açık_uzay", 0))),
+        "    geçiş %d   tersi olmadığı için açılmayan uzay %d"
+        % (int(s.get("geçiş", 0)), int(s.get("tersi_yok", 0)))])

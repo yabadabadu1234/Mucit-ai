@@ -8,7 +8,7 @@ import numpy as np
 from .hafiza import TASDIK
 from .musahede import gorev_dizisi, ortu
 
-__all__ = ["Cevap", "soyle"]
+__all__ = ["Cevap", "soyle", "jeton_normu", "jeton_cezasi"]
 
 
 @dataclass
@@ -24,6 +24,29 @@ class Cevap:
     guven: float = 0.0
     budanan: int = 0
     uzunluk: int = 0
+
+
+def jeton_normu(netice: Dict[str, Any], psi) -> float:
+    h = np.asarray(netice["hal"], complex).reshape(-1)
+    v = np.asarray(psi, complex).reshape(-1)
+    n = int(min(h.size, v.size))
+    if n == 0:
+        return 1.0
+    ust = float(abs(complex(np.vdot(h[:n], v[:n]))) ** 2)
+    alt = (float(np.vdot(v[:n], v[:n]).real)
+           * float(np.vdot(h[:n], h[:n]).real))
+    return float(ust / alt) if alt > 0.0 else 0.0
+
+
+def jeton_cezasi(netice: Dict[str, Any], jeton: int) -> float:
+    ms = netice.setdefault("maskeli", set())
+    assert int(jeton) not in ms, (
+        "JETON %d İKİNCİ DEFA MASKELENİYOR -- geri yol kısırdöngüye "
+        "girdi (ferman 1-I: kısırdöngü kat'î huduttur)" % int(jeton))
+    ms.add(int(jeton))
+    _SAYAC["maske"] += 1.0
+    _SAYAC["geri_yol"] += 1.0
+    return -math.inf
 
 
 def _buda(P: np.ndarray, hafiza) -> tuple:
@@ -71,7 +94,7 @@ def _acilis(nefs, baglam: List[int], pencere: int) -> tuple:
 
 
 def _cumle(nefs, baglam: List[int], pencere: int, sozluk: int,
-           vecihler, hafiza=None) -> tuple:
+           vecihler, hafiza=None, netice=None) -> tuple:
     from .qegitim import belirtecleri_kodla
     dizi = list(baglam)
     cikti: List[int] = []
@@ -95,6 +118,17 @@ def _cumle(nefs, baglam: List[int], pencere: int, sozluk: int,
         P, kesik = _buda(P, hafiza)
         budanan += kesik
         t = _sec(P)
+        if netice is not None:
+            while float(jeton_normu(netice, q.y.psi[0])) <= 0.0:
+                jeton_cezasi(netice, int(t))
+                P[int(t)] = 0.0
+                top = float(P.sum())
+                assert top > 0.0, (
+                    "GERİ YOL BÜTÜN DALLARI KAPATTI -- kısıt uzayı boş: "
+                    "model söyleyebileceği hiçbir jeton bulamıyor "
+                    "(ferman 2-Æ/3)")
+                P = P / top
+                t = _sec(P)
         bedel -= float(np.log(P[t]))
         cikti.append(int(t))
         dizi.append(int(t))
@@ -109,7 +143,7 @@ def _cumle(nefs, baglam: List[int], pencere: int, sozluk: int,
 
 
 def _uret(nefs, baglam: List[int], pencere: int, sozluk: int,
-          hafiza=None) -> tuple:
+          hafiza=None, netice=None) -> tuple:
     from .mukayese import merakla_coz
     from .suphe import SupheAyari, suphe_manifoldu
     haller, sukutlar = _acilis(nefs, baglam, pencere)
@@ -120,14 +154,14 @@ def _uret(nefs, baglam: List[int], pencere: int, sozluk: int,
     return merakla_coz(
         haller, sp["merak"],
         lambda vs: _cumle(nefs, baglam, pencere, sozluk, vs,
-                          hafiza=hafiza))
+                          hafiza=hafiza, netice=netice))
 
 
 def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           nefs=None, pencere: int = 8, sozluk: int = 16,
           azami_uret: int = 0,
           usul: str = "açgözlü",
-          hafiza=None, ne: str = "cevap",
+          hafiza=None, netice=None, ne: str = "cevap",
           hedef: int = 0, sinamadan: bool = False) -> Any:
     if gorev is None:
         raise ValueError("söylemek için bir görev lâzım")
@@ -181,7 +215,8 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         tip_vektoru(list(dizi), taban, basamak), int).reshape(-1)]
 
     def _cek():
-        return _uret(nefs, baglam, pencere, taban, hafiza=hafiza)
+        return _uret(nefs, baglam, pencere, taban, hafiza=hafiza,
+                     netice=netice)
 
     assert usul == "açgözlü", (
         "çözme usulü %r -- aday çoğaltan ``ara`` kolu KESİLDİ: okuma "

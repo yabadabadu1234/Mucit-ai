@@ -120,9 +120,9 @@ def _motor(ayar=None, ham: bool = False):
 
 def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
     from nefs.soyle import soyle
-    from nefs.cozum_uzayi import (ana_superpozisyon, cozum_uzayi_ac,
-                                  cozum_uzayi_kapat, mantik_filtresi,
-                                  mukayese_filtresi)
+    from nefs.mukayese import (ana_superpozisyon, cozum_uzayi_ac,
+                               cozum_uzayi_kapat, mantik_filtresi,
+                               mukayese_filtresi)
     hafiza = kw.pop("hafiza", None)
     if nefs is None:
         nefs, ayar, _, hafiza = _motor(ayar)
@@ -139,7 +139,8 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
                              basamak=int(ayar.belirtec_basamak))
     uzay = cozum_uzayi_ac(sual, nefs=nefs, hafiza=hafiza)
     uzay = mantik_filtresi(uzay)
-    uzay = mukayese_filtresi(uzay, hafiza=hafiza)
+    uzay = mukayese_filtresi(uzay, hafiza=hafiza,
+                             mahalli=getattr(nefs, "mahalli", None))
     netice = cozum_uzayi_kapat(uzay, sual)
     c = soyle(gorev, nefs=nefs, sozluk=int(ayar.sozluk),
               pencere=int(netice["pencere"]), hafiza=hafiza,

@@ -18,7 +18,9 @@ import numpy as np
 from nefs.musahede import gorevleri_getir
 from ogrenme.mecz import MeczAyari, mecz_egit, mecz_beyani
 from main import hazine
-from nefs.kulli_mizan import MizanAyari, kulli_mizan, mizan_cetveli
+from nefs.kulli_mizan import (FockUzayi, Hamiltonyen, MizanAyari,
+                              balyala, fock_beyani, hamiltonyen_beyani,
+                              kulli_mizan, mizan_cetveli)
 from nefs.hafiza import Hafiza, tertip_beyani
 from main.cikarim import (hazineden_yukle, hafizayi_yukle, padisah,
                           hazineden_devam, devam_agirligi)
@@ -60,8 +62,6 @@ from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            vecih_beyani,
                            vecihleri_istihrac, yirtiklari_tertiple)
 from kuantum.devre import devre_beyani
-from nefs.hamiltonyen import (FockUzayi, Hamiltonyen, balyala,
-                              fock_beyani, hamiltonyen_beyani)
 from nefs.qyazmac import sektor_beyani
 from nefs.hendese import (HendeseAyari, hendese_teshisi,
                           hendese_beyani)
@@ -448,9 +448,9 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     assert veri, (
         "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
         % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
-    from nefs.cozum_uzayi import (ana_superpozisyon, cozum_uzayi_ac,
-                                  cozum_uzayi_kapat, cozum_beyani,
-                                  mantik_filtresi, mukayese_filtresi)
+    from nefs.mukayese import (ana_superpozisyon, cozum_uzayi_ac,
+                               cozum_uzayi_kapat, cozum_beyani,
+                               mantik_filtresi, mukayese_filtresi)
     from nefs.qegitim import ornek_bol as _ornek_bol
     kademe_parametresi = kademe_parametreleri_ac(nefs.p)
     d = len(nefs)
@@ -475,7 +475,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                              basamak=int(ayar.belirtec_basamak))
     uzay = cozum_uzayi_ac(sual, nefs=nefs, hafiza=hafiza, fock=fock)
     uzay = mantik_filtresi(uzay)
-    uzay = mukayese_filtresi(uzay, hafiza=hafiza)
+    uzay = mukayese_filtresi(uzay, hafiza=hafiza,
+                             mahalli=getattr(nefs, "mahalli", None))
     netice = cozum_uzayi_kapat(uzay, sual, hamiltonyen=hamiltonyen)
     ayar.pencere = int(netice["pencere"])
     hafiza.kapasite = int(netice["hafıza_kapasitesi"])
