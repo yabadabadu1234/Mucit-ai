@@ -15,7 +15,8 @@ __all__ = ["QuditAyar", "QuditYazmac", "Iz",
 
 _SEKTOR_SAYAC: Dict[str, float] = {
     "dönme": 0.0, "faz_vuruşu": 0.0, "kenet": 0.0, "örüntü": 0.0,
-    "küllî_faz_yazması": 0.0, "kapı_dizeyi": 0.0, "açık": 1.0}
+    "küllî_faz_yazması": 0.0, "kapı_dizeyi": 0.0,
+    "küllî_iç_çarpım": 0.0, "açık": 1.0}
 
 
 def sektor_beyani() -> Dict[str, float]:
@@ -37,10 +38,14 @@ def sektor_metni(b=None) -> str:
         % (int(d["dönme"]), int(d["faz_vuruşu"]), int(d["kenet"]),
            int(d["örüntü"])),
         "    BEDEL SAYILIR (ferman 5): küllî faz yazması %d ·"
-        " sektör kapı dizeyi %d"
-        % (int(d["küllî_faz_yazması"]), int(d["kapı_dizeyi"])),
-        "    Küllî faz yazması yazmacın TAMAMINI tarar; sayısı büyükse",
-        "    yavaşlamanın yeri burasıdır.   (ölçü %s)"
+        " küllî iç çarpım %d · sektör kapı dizeyi %d"
+        % (int(d["küllî_faz_yazması"]), int(d.get("küllî_iç_çarpım", 0)),
+           int(d["kapı_dizeyi"])),
+        "    İkisi de yazmacın TAMAMINI tarar. Kenet defterinde altı",
+        "    kenet aynı hâli okur ve defter uygulanmadığı için norm",
+        "    değişmez: ağırlık BİR KEZ ölçülüp altısına verilir, yâni",
+        "    iç çarpım kenet başına değil DEFTER başınadır (ferman 3).",
+        "    Sayı büyükse yavaşlamanın yeri burasıdır.   (ölçü %s)"
         % ("açık" if d.get("açık") else "KAPALI"),
     ])
 
@@ -600,6 +605,8 @@ class QuditYazmac:
         return gen
 
     def _genlik_agirligi(self) -> float:
+        _SEKTOR_SAYAC["küllî_iç_çarpım"] = _SEKTOR_SAYAC.get(
+            "küllî_iç_çarpım", 0.0) + 1.0
         v = np.asarray(self.psi, complex).reshape(-1)
         return float(np.real(np.vdot(v, v)))
 
@@ -641,10 +648,12 @@ class QuditYazmac:
 
     def sektor_cifti(self, kontrol: str, hedef: str,
                      bag: float = 1.0, degil: bool = False,
-                     aci=None, senet=None, defter=None) -> float:
+                     aci=None, senet=None, defter=None,
+                     agirlik=None) -> float:
         i0, j0 = self.sektor(kontrol)
         i1, j1 = self.sektor(hedef)
-        top = self._genlik_agirligi()
+        top = (float(agirlik) if agirlik is not None
+               else self._genlik_agirligi())
         assert top > 0.0, (
             "yazmaç tamamen söndü -- kenetlenecek genlik yok (ferman 5)")
         Pk = np.abs(self.psi[:, i0:j0]) ** 2
@@ -693,6 +702,7 @@ class QuditYazmac:
             return 0.0
         defter = np.zeros(self.d, float)
         self._bekleyen_bag = []
+        agirlik = self._genlik_agirligi()
         etki = 0.0
         for z in k:
             etki += self.sektor_cifti(
@@ -701,7 +711,7 @@ class QuditYazmac:
                 degil=bool(z[3]) if len(z) > 3 else False,
                 aci=z[4] if len(z) > 4 else None,
                 senet=z[5] if len(z) > 5 else None,
-                defter=defter)
+                defter=defter, agirlik=agirlik)
         self.faz(defter)
         _SEKTOR_SAYAC["küllî_faz_yazması"] += 1.0
         for dizin, senet in self._bekleyen_bag:
