@@ -153,15 +153,15 @@ def _mertebe_nispetleri(M: np.ndarray) -> List[Tuple[int, str, float]]:
             for a in range(min(m, 6)) for b in range(a + 1, min(m, 6))
             for c in range(b + 1, min(m, 6))])) if m >= 3 else 0.0
     simetrisizlik = float(np.mean(np.abs(G - G.conj().T)))
-    out: List[Tuple[int, str, float]] = [
-        (0, "nokta", float(1.0 / (1.0 + fs_varyans))),
-        (1, "uzay", float(fark / (1.0 + fark))),
-        (2, "kategori", float(ucgen * (1.0 + simetrisizlik))),
-    ]
     P = G / max(float(np.abs(np.trace(G)).real), 1e-300)
     Q = P
     evvel = float(np.linalg.norm(Q @ Q - Q))
-    out.append((3, "tip", float(1.0 / (1.0 + evvel))))
+    out: List[Tuple[int, str, float]] = [
+        (0, "nokta", float(1.0 / (1.0 + fs_varyans))),
+        (1, "uzay", float(fark / (1.0 + fark))),
+        (2, "tip", float(1.0 / (1.0 + evvel))),
+        (3, "kategori", float(ucgen * (1.0 + simetrisizlik))),
+    ]
     k = 4
     while k < 3 + max(2, M.shape[0]):
         Q = Q @ P
@@ -388,8 +388,8 @@ def vecihleri_istihrac(durumlar: Sequence[np.ndarray]
             "ℓ%d.%s.%s" % (mertebe, alem,
                            ".".join(str(x) for x in imza)),
             _izdusum(yon), agir, alem=alem, mertebe=int(mertebe),
-            tasiyici=("∞-tip" if mertebe >= 3 else
-                      "∞-kategori" if mertebe == 2 else
+            tasiyici=("∞-kategori" if mertebe >= 3 else
+                      "∞-tip" if mertebe == 2 else
                       "uzay" if mertebe == 1 else "nokta"),
             kaide=kaide, tayf=tayf))
     assert out, (
@@ -450,7 +450,8 @@ def vecih_metni(b: Optional[Dict[str, float]] = None) -> str:
         % (d["taşıyan_ağırlık"], int(d["mertebe"])),
         "    Her vecih BİR ÂLEM taşır; ayrı âlem %d, taşıyıcı yapı"
         " ölçülerek seçilir" % int(d.get("âlem", 0)),
-        "    (uzay · ∞-kategori · ∞-tip).",
+        "    (nokta · uzay · ∞-tip · ∞-KATEGORİ -- en umumî sonuncusudur,",
+        "    ferman 2-Ā: kategori tipten daha umumîdir).",
         "    SORGU KANONİKTİR (ferman 2-Ú-E): öğrenilmez, dışarıdan da",
         "    gelmez. Kaide bir KANUNLAR MANZUMESİDİR ve üç usul, sırayla,",
         "    üçü birden koşar -- her biri bir evvelkinin neticesini alır:",

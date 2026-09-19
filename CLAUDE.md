@@ -848,8 +848,10 @@ olur.
 
     ℓ=0 NOKTA     Fubini-Study varyansı ≈ 0  ve  π₁(Dizi) ≡ 0
     ℓ=1 UZAY      ‖dDizi‖² > ε              ve  rank(metrik) ≥ 1
-    ℓ=2 KATEGORİ  iz(M_AB·M_BC·M_CA) ≠ 0    ve  Hom(A,B) ≠ Hom(B,A)
-    ℓ=3 TİP       ‖idtoeqv − Equiv‖_F ≈ 0   ve  h-mertebe ≥ 3
+    ℓ=2 TİP       ‖idtoeqv − Equiv‖_F ≈ 0   ve  h-mertebe ≥ 3
+    ℓ=3 KATEGORİ  iz(M_AB·M_BC·M_CA) ≠ 0    ve  Hom(A,B) ≠ Hom(B,A)
+                  ← SIRA TASHİH EDİLDİ (ferman 2-Ā): KATEGORİ TİPTEN
+                    DAHA UMUMÎDİR, o hâlde daha üst mertebededir.
 
 ### MERTEBE İÇİNDEKİ TÜR DE İZOLE EDİLİR
 
@@ -877,6 +879,68 @@ kâide yasaktır çünkü kâide **diziden damıtılacaktır**.
    ama ameli az"*. Bu hüküm tek vechin içinde **asla** verilemez.
 3. **ÜST MERTEBE TEFEKKÜR.** Nesnelerden bağımsız olarak kavramın
    bütün yapraklarını temâşâ (foliation).
+
+---
+
+## ▓▓▓ 2-Ā. FERMAN: ÂLEM SONSUZ KATEGORİDEN NEŞET EDER -- KAFAMA GÖRE DEĞİL ▓▓▓
+
+> *"Vecihte âlem kafana göre âlem olmayacak ahmak, **sonsuz mertebe
+> teorisinden türetilebilen gerçek bir âlem** olacaktı. Ayrıca aldığım
+> bilgiye göre esasen **kategori tipten daha umumî bir âlemmiş. Önce
+> nokta, sonra uzay, sonra tip, sonra kategori geliyormuş!** Ben
+> **bundan sonra** âlem dersen sen **sonsuz kategori teorisini
+> kullanmadan asla hiçbir şey yazamazsın!"*
+
+### BİR: ÂLEM UYDURULMAZ, TÜRETİLİR
+
+`nefs/mukayese.py`de âlem adı `"%s.%s" % (tayf türü, tutan mertebeler)`
+diye **benim uydurduğum** bir etiketti. Bu ilga edilmiştir. Âlem, bir
+adlandırma değil, **`matematik/sonsuz_mertebeler_teorisi.py`den fiilen
+türetilen bir yapıdır**. Türetilemeyen şeye âlem denmez.
+
+### İKİ: MERTEBE SIRASI TASHİH EDİLDİ
+
+    ℓ=0  NOKTA
+    ℓ=1  UZAY
+    ℓ=2  TİP
+    ℓ=3  KATEGORİ      ← EN UMUMÎ
+
+Evvelce ferman 1-Ğ ile 2-Ú'da `ℓ=2 KATEGORİ, ℓ=3 TİP` yazıyordu ve
+**yanlıştı**; ikisi de düzeltildi. **KATEGORİ TİPTEN DAHA UMUMÎDİR.**
+
+**NİÇİN MÜHİM.** Umumîden hususîye gitmek fermanların birincisidir
+(ferman 1). Mertebe sırası tersine yazılınca çöküş de tersine işler:
+hususî olan tip evvelâ sabitlenir, umumî olan kategori ona teferruat
+kalır. Doğrusu şudur: **evvelâ KATEGORİ sabitlenir** (hangi
+morfizmler var, ne neyle terkip olur), sonra TİP, sonra UZAY, en son
+NOKTA. Cevap -- yâni nokta -- **en son** varılan yerdir.
+
+### ÜÇ: ÂLEM DENDİĞİ HER YERDE ∞-KATEGORİ KOŞAR
+
+**Bundan sonra "âlem" lafzının geçtiği hiçbir satır, sonsuz kategori
+teorisi fiilen çağrılmadan yazılamaz.** Âlem adı bir dizgi değil, bir
+**nesnedir**: nesneleri, morfizmleri, terkibi ve birim morfizmi olan
+bir ∞-kategorinin kendisi. Bir vechin âlemi sorulduğunda cevap o
+kategorinin **kimliği** olmalıdır; "kategori.tip-uzay" gibi bir etiket
+değil.
+
+---
+
+## ▓▓▓ 2-Ē. FERMAN: İMKÂNSIZLIK KEFE DEĞİLDİR -- ZAYIFLIK KEFEDİR ▓▓▓
+
+> *"İkisi beraber."* (geri yolun menfezi suali)
+
+Üretimde seçilen jetonun kısıt uzayındaki normu ölçülür:
+
+    n(b) = ‖ P_kısıt · Ψ(b) ‖² / ‖ Ψ ‖²
+
+* **n = 0 İSE JETON KESİN ELENİR.** Bu bir hüküm değildir; kasanın
+  pimi hiç oturmuyordur. Riyazî imkânsızlık tartılmaz.
+* **0 < n < 1 İSE MİZANA KEFE OLUR.** Jetonun bedeli tartılır, başka
+  kefeler ağır basarsa jeton yine geçer.
+* **FERMAN 2-Ü NAKZEDİLMEDİ.** O ferman vetoyu **adım kabulünde**
+  kaldırıp kefeye çevirmişti; burada kaldırılan bir veto yoktur,
+  zira imkânsızlık zaten bir hüküm değildir.
 
 ---
 
@@ -2731,8 +2795,8 @@ gelen **rastgele bir izdüşüm değildir**:
 
     ℓ=0 NOKTA      Fubini-Study varyansı ≈ 0, π₁ ≡ 0
     ℓ=1 UZAY       ‖dDizi‖² > ε, rank(metrik) ≥ 1
-    ℓ=2 KATEGORİ   iz(M_AB·M_BC·M_CA) ≠ 0, Hom(A,B) ≠ Hom(B,A)
-    ℓ=3 TİP        ‖idtoeqv − Equiv‖_F ≈ 0, h-mertebe ≥ 3
+    ℓ=2 TİP        ‖idtoeqv − Equiv‖_F ≈ 0, h-mertebe ≥ 3
+    ℓ=3 KATEGORİ   iz(M_AB·M_BC·M_CA) ≠ 0, Hom(A,B) ≠ Hom(B,A)
     …              mertebe SONSUZA kadar açılır; tavan yoktur
 
 * **HER VECİH BİR h-MERTEBEDİR.** Vecih kümesi sonlu bir liste değil,
