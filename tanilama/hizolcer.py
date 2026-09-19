@@ -64,6 +64,8 @@ class Hizolcer:
         from ogrenme.mecz import (mecz_beyani, yetim_bloklar,
                                   adres_beyani)
         from nefs.kulli_mizan import kefe_kimiltisi
+        from nefs.qyazmac import sektor_beyani
+        s = sektor_beyani()
         m = munasebet_beyani()
         k = keyfiyet_beyani()
         z = mecz_beyani()
@@ -73,7 +75,8 @@ class Hizolcer:
               "mecz r %.3e · iz_g %.3e · ‖eğim‖ %.3e · κ %.3e · "
               "kabul %d/%d · hissedilmeyen %d · r* %.3e · "
               "ΔV %.3e vs lineer %.3e | kımıldayan kefe %s %+.3e, "
-              "%s %+.3e | yetim blok %s | adres %s"
+              "%s %+.3e | yetim blok %s | küllî tarama: iç çarpım %d · "
+              "faz yazması %d · kapı dizeyi %d (kenet %d) | adres %s"
               % (t - self.baslangic, len(self.sure), bel, bel / sn,
                  m["temizlenen"], m["kirli_kalan"], m.get("geri_dönen", 0),
                  k["en_iyi"], k["ortalama"],
@@ -85,6 +88,9 @@ class Hizolcer:
                  kefe_kimiltisi()["ikinci"], kefe_kimiltisi()["Δ2"],
                  " · ".join("%s %d" % (ad, n)
                             for n, ad in yetim_bloklar()) or "yok",
+                 int(s.get("küllî_iç_çarpım", 0)),
+                 int(s.get("küllî_faz_yazması", 0)),
+                 int(s.get("kapı_dizeyi", 0)), int(s.get("kenet", 0)),
                  adres_beyani() or "yoklanmadı"),
               flush=True)
 
