@@ -448,6 +448,10 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     assert veri, (
         "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
         % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
+    from nefs.cozum_uzayi import (ana_superpozisyon, cozum_uzayi_ac,
+                                  cozum_uzayi_kapat, cozum_beyani,
+                                  mantik_filtresi, mukayese_filtresi)
+    from nefs.qegitim import ornek_bol as _ornek_bol
     kademe_parametresi = kademe_parametreleri_ac(nefs.p)
     d = len(nefs)
     p0 = devam_agirligi(devam, nefs, d)
@@ -463,6 +467,20 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     _mzn = {"a": mzn}
     fock = FockUzayi()
     hamiltonyen = Hamiltonyen(fock=fock)
+    sual = ana_superpozisyon([_ornek_bol(o)[0] for o in veri],
+                             nefs=nefs, hafiza=hafiza,
+                             sozluk=int(ayar.sozluk),
+                             pencere=int(ayar.pencere),
+                             taban=int(ayar.veri_lifi),
+                             basamak=int(ayar.belirtec_basamak))
+    uzay = cozum_uzayi_ac(sual, nefs=nefs, hafiza=hafiza, fock=fock)
+    uzay = mantik_filtresi(uzay)
+    uzay = mukayese_filtresi(uzay, hafiza=hafiza)
+    netice = cozum_uzayi_kapat(uzay, sual, hamiltonyen=hamiltonyen)
+    ayar.pencere = int(netice["pencere"])
+    hafiza.kapasite = int(netice["hafıza_kapasitesi"])
+    mzn = mizan_ayari(ayar)
+    _mzn["a"] = mzn
 
     def _dengele(dokum) -> Dict[str, float]:
         lam = denge(dokum,
@@ -759,6 +777,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "vecih_ömrü": omur_beyani(),
             "devre": devre_beyani(),
             "hamiltonyen": hamiltonyen_beyani(),
+            "çözüm_uzayı": cozum_beyani(),
             "fock": fock_beyani(),
             "sektör": sektor_beyani(),
             "hafıza_tertibi": tertip_beyani(),

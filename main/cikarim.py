@@ -120,14 +120,30 @@ def _motor(ayar=None, ham: bool = False):
 
 def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
     from nefs.soyle import soyle
+    from nefs.cozum_uzayi import (ana_superpozisyon, cozum_uzayi_ac,
+                                  cozum_uzayi_kapat, mantik_filtresi,
+                                  mukayese_filtresi)
     hafiza = kw.pop("hafiza", None)
     if nefs is None:
         nefs, ayar, _, hafiza = _motor(ayar)
     if ayar is None:
         from main.egitim import KISA_CPU
         ayar = KISA_CPU
+    from nefs.musahede import gorev_dizisi
+    _dizi, _ = gorev_dizisi(gorev, hedef_indis=int(kw.get("hedef", 0)),
+                            sinamadan=bool(kw.get("sinamadan", False)))
+    sual = ana_superpozisyon([list(_dizi)], nefs=nefs, hafiza=hafiza,
+                             sozluk=int(ayar.sozluk),
+                             pencere=int(ayar.pencere),
+                             taban=int(ayar.veri_lifi),
+                             basamak=int(ayar.belirtec_basamak))
+    uzay = cozum_uzayi_ac(sual, nefs=nefs, hafiza=hafiza)
+    uzay = mantik_filtresi(uzay)
+    uzay = mukayese_filtresi(uzay, hafiza=hafiza)
+    netice = cozum_uzayi_kapat(uzay, sual)
     c = soyle(gorev, nefs=nefs, sozluk=int(ayar.sozluk),
-              pencere=int(ayar.pencere), hafiza=hafiza,
+              pencere=int(netice["pencere"]), hafiza=hafiza,
+              netice=netice,
               hedef=int(kw.pop("hedef", 0)),
               sinamadan=bool(kw.pop("sinamadan", False)))
     return {"görev": getattr(gorev, "ad", ""),
@@ -138,6 +154,8 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
             "uzunluk_hükmü": int(c.uzunluk),
             "güven": float(c.guven),
             "budanan": int(getattr(c, "budanan", 0)),
+            "mesele": bool(sual["mesele"]),
+            "çözüm_uzayı": netice["beyan"],
             "yutulan_ayar": sorted(kw) or None}
 
 

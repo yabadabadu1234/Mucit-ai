@@ -3602,6 +3602,130 @@ suâlin **dar olduğunun ilânıdır**. O hâlde:
 
 ---
 
+## ▓▓▓ 2-Æ. FERMAN: JETON BİR OPERATÖRDÜR -- LOGİT BİR FAZDIR ▓▓▓
+
+> *"Her bir jeton, senin kurduğun arama uzayında çalışan **üniter bir
+> dönüşüm operatörüdür**... Bu `p_j` değerini doğrudan bir **faz
+> kaydırıcıya** dönüştürürsün... Model konuşur, dalga kırılır; dalga
+> sönerse model susar. **Kısır döngü değil, matematiksel bir rezonatör**
+> kurulmuş olur."* (Mesaj 749)
+
+**BU FERMAN GEÇ MÜHÜRLENDİ VE GECİKMESİ BİR KUSURDUR:** izahat
+verildiğinde yalnız suâlime bakan yeri okumuştum (ferman 2-ẞ'nin
+yasakladığı dar okuma). Mühür, izahatın **tamamından** çıkarılmıştır.
+
+### BİR: JETON KELİME DEĞİL, OPERATÖRDÜR
+
+Lügatteki her sembolik kural **deterministik bir ameliyeye** eşlenir;
+jeton üretildiği an o ameliye arama uzayına **basılır**. `"Simetri:
+Yatay"` denince yansıma izdüşümü, `"Kırmızı_Korunur"` denince renk
+sayısını bozan dalları sıfırlayan izdüşüm koşar.
+
+    Ψ ← P_jeton_n ∘ … ∘ P_jeton_2 ∘ P_jeton_1 (Ψ₀)
+
+* **ÖĞRENME YOKTUR.** Araya bir MLP, bir izdüşüm matrisi, öğrenilen
+  bir ağırlık **konulamaz**: konursa eğitilmesi icap eder, eğitilince
+  genelleme ölür ve kısır döngü başlar. **SFT SAFSATASI YASAKTIR.**
+* Bağ **cebirsel izdüşümdür**, nöral haritalama değil.
+
+### İKİ: LOGİT DOĞRUDAN FAZ KAYDIRICIDIR
+
+    θ_j = π · p_j          p_j = modelin o kurala verdiği olabilirlik
+
+* `p_j → 1` ise o kuralın **dışladığı** ihtimallerin dalgası tam ters
+  faza döner (`e^{iπ} = −1`): yıkıcı girişim.
+* `p_j ≈ 0.5` ise dalga ne söner ne parlar; bulanık girişimde kalır.
+* Yâni modelin **şüphesi ile kesinliği**, girişimin derinliğini
+  ayarlayan doğrudan bir reostadır; logit, Schrödinger denklemindeki
+  potansiyel bariyerinin yüksekliğidir.
+
+### ÜÇ: REZONANS ÇİFT YÖNLÜDÜR -- GERİ YOL NORM MASKESİDİR
+
+    İLERİ   LLM bir kâide söyler → o kâideye uymayan dalların fazı çevrilir
+    GERİ    kalan canlı durumların normu ‖Ψ‖² ölçülür
+            norm sıfırlanırsa → LLM'e NEGATİF LOGİT CEZASI (maskeleme)
+            "bu yol tamamen kapandı, bu jetonu geri al"
+
+Model bir sonraki jetonda o imkânsız dala **sapamaz**; mecburen dalga
+genliği yaşayan yöne konuşur. Kısır döngüyü engelleyen mekanizma
+budur ve **tek yönlü kurulamaz**.
+
+### DÖRT: KISIT METİNDEN TÜRER -- ENTROPİ GRADYANI
+
+Metin bir **emir değil, bir durum çöküş talebidir**; semantik
+manifolda bir **sınır şartı** olarak vidalanır.
+
+* Metnin **şaşkınlık haritası** (entropi gradyanı) sabitler ile
+  değişkenleri kendiliğinden ayırır: **entropisi en yüksek bölge
+  aranan şeydir**.
+* Kısıtlar oradan bir **kısıt grafına** dökülür; `"kırmızı olmasın"`
+  geçiyorsa o alt uzaya **sıfır izdüşümü** iner.
+
+### BEŞ: ARAMA UZAYI LÜGATİN SERBEST ÇARPIM UZAYIDIR
+
+Piksel değil. Vakum durumu: lügatteki bütün diziler eşit genlikte
+(ferman 1-N-B'nin `sözlük^pencere`si). Kısıt plakaları o denize
+dikilir.
+
+### ALTI: KURAL UZAYINA KAPANILIR, ÇIKTI TARANMAZ
+
+Çıktı uzayını taramak kör dövüşüdür: `√(10^100) = 10^50`. Kural
+uzayı kuvvetli kısıtlarla (simetri, korunum, topoloji) budanır ve
+filtre **sembolik kural ağacının** üstüne kapatılır. Kural bir defa
+rezonansa girince çıktı tek saat darbesidir.
+
+### YEDİ: FİLTRENİN ÇÖKTÜĞÜ ÜÇ HÂL SAYILIR (ferman 5)
+
+    1. DOĞRULAMA DA ZORSA     adayın sıhhati çözmek kadar pahalıysa
+                              filtre kurulamaz
+    2. İĞNE SAMANLIKTA        doğrunun komşularıyla faz irtibatı yok;
+                              rezonans kurulamaz, dalga akamaz
+    3. ÖRNEK YETERSİZ         örnekleri sağlayan fakat kural olmayan
+                              binlerce dal beraber parlar: hipotez yığını
+
+Üçü de **ölçülür ve beyanda görünür**; çöktüğü yer gizlenmez.
+
+---
+
+## ▓▓▓ 2-Ø. FERMAN: DURAN EMİRLER -- GEÇ MÜHÜRLENDİ ▓▓▓
+
+Aşağıdakilerin hepsi evvelce söylenmiş, mühürlenmediği için
+tekrarlatılmıştır. Tekrarlatmak ferman 1-B'nin ihlâlidir.
+
+* **GREP YASAK -- TÜM DOSYALAR BAŞTAN SONA OKUNUR.** *"Grep kullanmak
+  yasak, tüm dosyaları her zaman baştan sona okuyacaksın!"* Ferman
+  1-D bunu yalnız taht için mühürlemişti; hüküm **bütün dosyalara**
+  şâmildir.
+* **HER ADIMDA SUAL SORULUR.** *"Soru sormadan hareket etmek yasak."*
+  Birden fazla düzeltme yolu belirdiğinde yahut tek yol iş görmüyorsa
+  **fikir sorulur**.
+* **PADİŞAHA BAĞLANMAMIŞ HİÇBİR ŞEY BIRAKILMAZ.** *"Sadece içe
+  aktarıp rapor verdirmek o kodları padişaha bağladığını göstermez,
+  beni kandırmaya çalışma."* (Ferman 1-C/b'nin aslı budur.)
+* **İSPAT TESTLE DEĞİL, GERÇEK PADİŞAHI KOŞTURMAKLA OLUR.**
+* **DAKKA BAŞI TEST YASAK:** o kadar derin dikkat gösterilecek ki
+  sınamaya mecbur kalınmasın; icap ederse planlama dosyası açılır.
+* **SIRA PADİŞAHINDIR:** evvelâ eğitim motoru **tam doğru** koşsun →
+  sonra 41 melekenin **tamamı**, eksik bırakılmadan → sonra
+  *"kuyunun dibine varmadan asla durma."*
+* **41 MELEKE AYNI MAKSAT ETRAFINDA TOPLANIR** ve hepsi bu ölçüte
+  göre **yeniden tarif edilir**.
+* **DOLAŞIKLIK NİZAMI:** melekelerin bir kısmı dolaşıklık **inşa
+  edici**, büyük kısmı **koruyucu/iktisatlı**, en mühim kısmı
+  **çözücü ve tasfiye edici (uncompute)** olmak mecburiyetindedir.
+  Gaye: `χ ≤ 64` tavanı, `S_vN` alan kanunu sınırında, ara hesap
+  çöpleri `3.3×10⁻¹⁵` hassasiyetle sıfırlanmış.
+* **KELÂM İKİ ŞARTA BAĞLIDIR:** ya burhan tamamlanmıştır, ya iç
+  muhakeme tıkanmıştır ve **sual tevcih edilir**. Üçüncüsü yoktur.
+* **STOKASTİKLİK TAMAMEN YASAKTIR** (ferman 2-Ĵ'nin aslı).
+* **MÜŞAHEDE ESASLARI:** müdahalesiz takip (ölçerken veri tahrif
+  edilmez) · kanalın temizliği · tekrarlanabilirlik ve istikrar ·
+  **müşahede gaye ile olur**.
+* **NİHAÎ GAYE:** *"işin sonunda senin gibi herhangi bir şey hakkında
+  konuşabilen bir model çıkması."* ARC bir mihenktir, gaye değildir.
+
+---
+
 ## ▓▓▓ 2-Ù. FERMAN: `d` UYDURMADIR -- KULE BİR UZAY İDDİASIDIR ▓▓▓
 
 > *"**`d` ne onu dahi bilmiyorum, sen gafil uydurmuşsun.** 1 milyon
