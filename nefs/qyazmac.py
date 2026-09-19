@@ -637,8 +637,12 @@ class QuditYazmac:
             defter += t
         self._sektor_vurusu += 1
         self._kenet_vurusu = getattr(self, "_kenet_vurusu", 0) + 1
-        if senet:
+        if senet and defter is None:
             self._faz_bagla(np.arange(i1, j1, dtype=np.int64), senet)
+        elif senet:
+            self._bekleyen_bag = getattr(self, "_bekleyen_bag", [])
+            self._bekleyen_bag.append(
+                (np.arange(i1, j1, dtype=np.int64), list(senet)))
         if m is not None:
             m.cartan_ekle("kenet.%s%s×%s"
                           % ("¬" if degil else "", kontrol, hedef), etki)
@@ -649,6 +653,7 @@ class QuditYazmac:
         if not k:
             return 0.0
         defter = np.zeros(self.d, float)
+        self._bekleyen_bag = []
         etki = 0.0
         for z in k:
             etki += self.sektor_cifti(
@@ -659,6 +664,9 @@ class QuditYazmac:
                 senet=z[5] if len(z) > 5 else None,
                 defter=defter)
         self.faz(defter)
+        for dizin, senet in self._bekleyen_bag:
+            self._faz_bagla(dizin, senet)
+        self._bekleyen_bag = []
         return float(etki)
 
     def sektor_oruntusu(self, oruntu, kok: str = "") -> float:

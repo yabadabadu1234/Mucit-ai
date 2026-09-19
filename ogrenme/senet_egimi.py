@@ -154,6 +154,12 @@ def _turev_vur(psi: np.ndarray, lif: Tuple[int, ...], turev) -> np.ndarray:
     if tur == "bant4":
         return bant_vur(psi, int(turev[1]), int(turev[2]), turev[3],
                         sifirla=True)
+    if tur == "sektör":
+        i, j = int(turev[1]), int(turev[2])
+        dU = np.asarray(turev[3], complex)
+        out = np.zeros_like(psi)
+        out[:, i:j] = psi[:, i:j] @ dU.T
+        return out
     raise ValueError("türev tarifi bilinmiyor: %r" % (tur,))
 
 
