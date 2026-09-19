@@ -15,6 +15,11 @@ def _bayt(n) -> str:
     return "%.1f TB" % n
 
 
+def _cikarim_devresi(d: Dict[str, object]) -> str:
+    from nefs.sadakat import sadakat_devre_metni
+    return sadakat_devre_metni(d.get("sadakat_devresi"))
+
+
 def devam_metni(devam: Dict[str, object],
                 imlec: Dict[str, object]) -> str:
     s = ["  TÂLİM HÂLİ -- TEK DOSYA, DEVAM ESAS (ferman 1-Y)"]
@@ -109,6 +114,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from nefs.mukayese import cozum_metni
         from nefs.kulli_mizan import fock_metni, hamiltonyen_metni
         from nefs.qyazmac import sektor_metni
+        from nefs.sadakat import sadakat_devre_metni
         kn = kulli["konuşma"]
         s += ["",
               "  TEK MOTOR -- TÂLİM DE KONUŞUR (ferman 1-H)",
@@ -292,6 +298,8 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % (ss["alarm_önce"], ss["alarm_sonra"],
                  "ALT-UZAYDA" if ss["alarm_sonra"] == 0
                  else "⚠ HÂLÂ DIŞARIDA"),
+              "",
+              sadakat_devre_metni(kulli.get("sadakat_devresi")),
               "",
               "    2. MANTIK YÜRÜTME SEFERİ (nefs/usul.py) -- 7/24 DEĞİL",
               "       Kalp gedik hissedince Tertip açar, iş biter, kapanır.",
@@ -551,6 +559,8 @@ def cikarim_beyani(d: Dict[str, object]) -> str:
            d["sadakat"]["sıfırlanan"]),
         "    alarm nispeti %%%.3f  (0 = hiçbir hesap mantık dışına taşmadı)"
         % (100.0 * d["sadakat"]["alarm_nispeti"]),
+        "",
+        _cikarim_devresi(d),
         "",
         "  ŞÜPHE MANİFOLDU (nefs/suphe.py):",
         "    teâruz %d   tevakkuf %d   merak kancası %d"

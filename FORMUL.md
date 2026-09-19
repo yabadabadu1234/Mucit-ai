@@ -1,615 +1,596 @@
-# MUCİT-AI -- MİMARİNİN TAM FORMÜLÜ
+# MUCİT-AI -- MİMARİNİN TAM FORMÜLÜ, DURUM MAKİNESİ OLARAK
 
-Semboller yerine isimler kelimedir; ameliyeler formüldür. Yazılan şey
-**koşan koddur**, niyet değil (ferman 2-K).
+Semboller yerine isimler kelimedir; ameliyeler formüldür (ferman 2-K).
+Yazılan şey **koşan koddur**, niyet değil.
 
----
+Her durum üç sütunla yazılır ve bir durumun **ÇIKTI**sı, kendisinden
+sonraki durumun **GİRDİ**sidir. Zincirde adı geçmeyen hiçbir şey
+kullanılamaz; kullanılan hiçbir şey adsız kalamaz.
 
-## 0. KIYAS -- TRANSFORMER VE BİZ
-
-    TRANSFORMER:
-      Baş(Gizli) = Gizli + yumuşakenbüyük(Gizli·Sorgu · (Gizli·Anahtar)ᵀ / √boyut) · Gizli·Değer
-      Kat(Girdi) = Baş(Girdi) + doğrultucu(Baş(Girdi)·Ağırlık₁) · Ağırlık₂
-      Çıktı      = Kat₃(Kat₂(Kat₁(Girdi)))
-
-    BİZ:
-      Meleke(Yazmaç) = Kapı(Yazmaç, Açı(Parametre))            ← katman değil, ameliye
-      Yazmaç         = Vicdan(Meleke₄₅(…Meleke₂(Meleke₁(Yazmaç₀))…))
-      Çıktı          = Normalize(Toplam(SatırlaraBöl(Yazmaç)))
-
----
-
-## 1. GİRDİ
-
-    Belirteç    = tiktoken(Metin)                         tiktoken.n_vocab = 200019
-    BasamakSayısı = enküçük k öyle ki VeriLifi^k ≥ tiktoken.n_vocab      = 5
-    Basamak     = TabanAçılımı(Belirteç, VeriLifi, BasamakSayısı)
-    Kodlanmış[satır, sütun] = 1 eğer sütun = Basamak[satır], değilse 0
-
-    Örnek       = (Bağlam, Hedef, Cins, Makam)             Cins ∈ {ARC, sözlü}
-                  Makam = Hedef basamağın grup içindeki yeri, 0..BasamakSayısı−1
-    Pencere     = ikininkuvveti(enuzunGörev × BasamakSayısı) = 65536
-                  Boyut ≥ Pencere olmak ZORUNDA (ferman 2-M)
+| Bab | Muhteva |
+| :-- | :-- |
+| § 0 | KIYAS -- transformer ve biz |
+| § 1 | KÜLLÎ ZİNCİR -- durumdan duruma girdi/çıktı |
+| § 2 | D0 … D11 -- her durumun tam formülü |
+| § 3 | ÇÖZÜM UZAYI ALT MAKİNESİ (S0 … S6) |
+| § 4 | SADAKAT DEVRESİ -- her durumda koşan doğrulayıcı |
+| § 5 | KONUŞMA ALT MAKİNESİ (J1 … J5) |
+| § 6 | ÖLÇÜLEN HUDUTLAR VE AÇIK ÇELİŞKİLER |
 
 ---
 
-## 2. YAZMAÇ
+## § 0. KIYAS -- TRANSFORMER VE BİZ
 
-    Karo    = ikininkuvveti(√Pencere)                     öyle ki Yer ≥ Pencere
-    Yer     = Karo × Karo                                 BASAMAK BAŞINA yer
-    Boyut   = VeriLifi × Yer
-    Yazmaç  = Genlik[yığın, Boyut]                        karmaşık, TAM tutulur
+```
+TRANSFORMER:
+  Baş(Gizli) = Gizli + yumuşakenbüyük(Gizli·Sorgu · (Gizli·Anahtar)ᵀ / √boyut)
+               · Gizli·Değer
+  Kat(Girdi) = Baş(Girdi) + doğrultucu(Baş(Girdi)·Ağırlık₁) · Ağırlık₂
+  Çıktı      = Kat₃(Kat₂(Kat₁(Girdi)))
 
-    Seviye(basamak, mevki) = basamak × Yer + mevki
-              ← 0. EKSEN BASAMAKTIR, adımı Yer'dir; mevki kalan eksenlerdedir.
-                Yazmaç bağlam kadardır (ferman 2-M) fakat hadd basamak
-                başına yerdedir, Boyut'ta değil (ferman 2-O).
-
-    Sektör(ad) = Genlik[başlangıç(ad) : bitiş(ad)]
-    AlanDeğeri(ad) = Toplam(|Sektör(ad)|²)
-
-    ad ∈ {makam, mizan, tenakuz, tasdik, sükût, nakz, kelâm, kaide,
-          orak, gaye, tertip}
-
-    SEKTÖR CEVABIN EVİ DEĞİLDİR. Sektör bitişik bir dilimdir, basamak
-    ekseni ise Yer adımıyla yazmacın tamamına yayılır; ikisi ayrı
-    koordinattır. Cevap YALNIZ basamak ekseninin marjinalinden okunur
-    (§ Hâl), sektörden değil. Sektör yalnız küllî ölçüleri taşır.
-
-### Belirtecin genliğe girişi -- Rijndael otomorfizmi
-
-    yuva ∈ Seviye(Belirteç, 0 … Yer−1)            ← belirtecin KENDİ basamak bloğu
-    Zarf(yuva)   = 1 / (1 + (yuva − orta)² / genişlik)              ← rasyonel
-    Çeyrek       = (1, i, −1, −i)
-    Genlik[yuva] = Zarf(yuva) × Çeyrek[ SBox((yuva + Belirteç) mod 256) mod 4 ]
-
-    SBox(x) = AfinKatman(x^254)  içinde  GF(2⁸),  P(x) = x⁸+x⁴+x³+x+1
-
-### Faz -- tamsayı defteri, aşkın işlem yok
-
-    Üs        = (Üs + yuvarla(−Açı × FazMertebesi / 2π) + Artık) mod FazMertebesi
-    Artık     = Üs mod (FazMertebesi / 4)
-    ÇeyrekNo  = (Üs − Artık) / (FazMertebesi / 4)
-    Genlik    = Palmer(Genlik, ÇeyrekNo)
-
-    Palmer(gerçek + sanal·i, 0) = gerçek + sanal·i
-    Palmer(gerçek + sanal·i, 1) = −sanal + gerçek·i
-    Palmer(gerçek + sanal·i, 2) = −gerçek − sanal·i
-    Palmer(gerçek + sanal·i, 3) = sanal − gerçek·i
-
-    Artık genliğe İNMEZ, deftere geri konur.
-    FazBorcu = ortalama(Artık) / (FazMertebesi / 4)          ← ölçülür, basılır
+BİZ:
+  Meleke(Yazmaç) = Kapı(Yazmaç, Açı(ParametreYazmacı))     ← katman değil, ameliye
+  Yazmaç         = Sadakat(Meleke₄₅(… Meleke₁(Yazmaç₀) …))
+  Çıktı          = DeterministOkuma(Hâl)                   ← zar yok (ferman 2-Ĵ)
+```
 
 ---
 
-## 3. İLERİ GEÇİŞ
+## § 1. KÜLLÎ ZİNCİR -- DURUMDAN DURUMA GİRDİ/ÇIKTI
 
-    Yazmaç₀ = Harman(Yerleştir(Kodlanmış))
+```
+ ┌─────┐  kodlama                 ┌─────┐  Sözlük · Ölçü            ┌─────┐
+ │ D0  │ ───────────────────────▶ │ D1  │ ───────────────────────▶ │ D2  │
+ │GEÇİT│  İlletÇizgesi · Hız      │ÖLÇÜ │  Gelen (ARC + Külliyat)  │HEND.│
+ └─────┘                          └─────┘                          └──┬──┘
+                                                       PariteLifi     │
+                                                                      ▼
+ ┌─────┐  Veri (kabul edilen)     ┌─────┐  Nefs · Hafıza · Fock     ┌─────┐
+ │ D5  │ ◀─────────────────────── │ D4  │ ◀─────────────────────── │ D3  │
+ │UZAY │                          │KAPI │                          │KURUL│
+ └──┬──┘                          └─────┘                          └─────┘
+    │ Netice (pencere · hâl · mesele · hafıza kapasitesi)
+    ▼
+ ┌─────┐  Ψ' (her süperpozisyon   ┌─────┐  Kefeler (vektör)         ┌─────┐
+ │ D5b │ ───── süzülmüş) ───────▶ │ D6  │ ───────────────────────▶ │ D7  │
+ │SADK.│                          │MİZAN│                          │  Ĥ  │
+ └─────┘                          └─────┘                          └──┬──┘
+                                                          λ nispetleri │
+                                                                      ▼
+ ┌─────┐  p* (öğrenilmiş)         ┌─────┐  Küme temiz mi?           ┌─────┐
+ │ D9  │ ◀─────────────────────── │ D8  │ ◀─────────────────────── │  ⟲  │
+ │KAPAN│                          │DÖNGÜ│   hayır ise tur tekrar    └─────┘
+ └──┬──┘                          └─────┘
+    │ Hafıza (tertiplenmiş) · Balya · İmleç
+    ▼
+ ┌─────┐  Kelâm · Sükût           ┌─────┐
+ │ D10 │ ───────────────────────▶ │ D11 │  Hazine (tek dosya)
+ │KELÂM│                          │MÜHÜR│
+ └─────┘                          └─────┘
+```
 
-    Yerleştir(Kodlanmış):
-        mevki ∈ 0 … n_satır−1,   basamak = Basamak[mevki]
-        Genlik[ Seviye(basamak, mevki) ] = 1                 ← GENLİĞE
-        Açı   [ Seviye(basamak, mevki) ] = −2π (basamak + 1) / VeriLifi
-        FazDefteri ← FazDefteri + Açı                        ← FAZA
-        Genlik = Normalize(Genlik)
-
-    Bağlam HEM GENLİĞE HEM FAZA girer. Yalnız faza girseydi cevaba hiç
-    ulaşmazdı: Hâl |Genlik|² okur, faz ise büyüklüğü değiştirmez.
-
-    Bağlam bir skalere EZİLMEZ: son basamak ilk basamak kadar ağırlık taşır.
-    DOLDURMA YOKTUR: n_satır neyse yazmaç o kadardır (ferman 2-O).
-
-    Yazmaç  = Faz(Yazmaç, CartanFazı)        ← II. safha, harmandan EVVEL
-    Harman(Yazmaç) = ⨀(kademe, lif, bitdüzlemi) Dönme(Açı(Parametre))
-              ← açılar TOHUMDAN değil PARAMETREDEN gelir; böylece tâlim
-                faz→genlik yolunu kendi açar ve genişletir.
-
-    Yazmaç_k = Vicdan(Meleke_k(Yazmaç_{k−1}, Parametre))        k = 1 … 45
-
-      Meleke_k(Yazmaç, Parametre) = Kapı_k(Yazmaç, Açı_k(Parametre))
-      Okuma_k[ad]                 = AlanDeğeri(Yazmaç_k, ad)      ad ∈ İlan_k
-      ΔEntropi_k                  = Entropi(Yazmaç_k) − Entropi(Yazmaç_{k−1})
-
-    Sıra = (1..24, 25..32, 33, 13, 34..36, 37..41, 42..44)       45 adım, 44 meleke
-
-### Sıranın sonundaki dört ameliye
-
-    Gaye(Yazmaç) = KontrollüİşaretKapısı(nakz, gaye)
-                 ∘ KontrollüİşaretKapısı(tenakuz, gaye)
-                 ∘ FazTopla(gaye, (+tasdik, +tasdik, −tenakuz, −nakz) × Açı(Parametre))
-                 ∘ ÇeyrekDönme(gaye)
-
-    Yazmaç_son = Normalize(FazKilidi(Sadakat(İntaç(Gaye(Yazmaç₄₅)))))
-
-### Hâl -- hem cevap hem kaide hipotezi
-
-    Satırlar = YenidenŞekillendir(Yazmaç_son, VeriLifi, Yer)
-    Hâl      = Normalize(Toplam(|Satırlar|², son eksen))
-
-    Hâl BASAMAK EKSENİNİN MARJİNALİDİR. Yerleştir hangi eksene yazdıysa
-    Hâl o ekseni okur; ikisi aynı eksendir ve kesişimleri TAMDIR.
+**ÇIKARIM KAPISI** aynı zincirin **D3 → D5 → D5b → D10** dilimidir.
+Tek fark: D6-D7-D8-D9-D11 koşmaz (ferman 1-H). Özerk gaye öz-geçişi
+(§ 3, S0 → S2) yalnız tâlimde açıktır (ferman 2-Ħ).
 
 ---
 
-## 4. HATA -- SKALER DEĞİL, VEKTÖR
+## § 2. DURUMLARIN TAM FORMÜLÜ
 
-    Hata = ( Hata_meleke[1..44],
-             Hata_alan[makam..tertip],
-             Hata_kademe[1..kademeGörevi],
-             Hata_zırh[demet, betti, kohomoloji, homotopi, nizam],
-             Hata_kaideHalkası, Hata_taşma,
-             Hata_nokta, Hata_uzay, Hata_kategori, Hata_tip,
-             Hata_çevrim, Hata_tenakuz, Hata_gedik,
-             Hata_monogami, Hata_engel, Hata_lif )
+### D0 GEÇİT -- `main/egitim.py:gecit`
 
-### Bileşenler
+| | |
+| :-- | :-- |
+| **GİRDİ** | `EgitimAyari` (profil: dar · orta · azamî) |
+| **AMELİYE** | `AlanÇizgesi → Çevrimler` · `ZamanÇizgesi → Çevrimler` · `KelâmAyrışması` · (şart ise) `HızTeftişi` |
+| **ÇIKTI** | `İlletÇizgesi = (düğüm, kenar, çevrim)` · `KelâmAyrıştı ∈ {doğru, yanlış}` · `BelirteçSn` |
 
-    Hata_meleke[k]  = ortalama over ad ∈ İlan_k of Eksik(Okuma_k[ad], Sözleşme_k[ad])
-    Hata_zırh[nizam] = enbüyük over k of Yüzleştir(Sınıf_k, ΔEntropi_k)
+```
+ZamanÇevrimi ≠ ∅          ⇒ DURUR: bir adım kendi geleceğine bağlı
+KelâmAyrıştı = yanlış     ⇒ DURUR: kelâm veriden doğrudan besleniyor,
+                                    hüküm atlanabiliyor (ezberin kapısı)
+BelirteçSn < Had          ⇒ DURUR: hız garantisi olmadan tâlim başlamaz
+```
 
-    Hata_uzay     = 1 − Uhlmann(Hâl, Hedef)                       ← ÇIPA, ağırlık 1
-    Hata_nokta    = −ln İz(HedefİzdüşümÜ · YoğunlukMatrisi(Hâl))
-    Hata_kategori = ‖ Morfizm(g∘f) − Morfizm(g) · Morfizm(f) ‖²
-    Hata_tip      = ⟨Artık, HodgeLaplasyeni · Artık⟩ / ‖Artık‖²
-                       Artık = Hâl − Harmonik(Hâl)
-    Hata_çevrim   = |Holonomi(Çevrim) − Fıtrat|
-    Hata_tenakuz  = −ln((İz(Birim + GerçekKısım(ÇevrimÜniteri)) + ε) / (2·Boyut + ε))
-                    × DışlamaEntropisi(Çevrim)
-    Hata_gedik    = Borç(Usul, KaranlıkÇevrimler)
-    Hata_monogami = enbüyük(0, Dolaşıklık(bütün) − Toplam(Dolaşıklık(ikili)))
-    Hata_engel    = Engellenme(Yazmaç, SürekliÖlçüm)
-    Hata_lif      = 1 − SıraBağıntısı( Mesafe(Bağlam_i, Bağlam_j),
-                                       −ln |⟨ Hâl_i | Hâl_j ⟩| )
-                    over bütün çiftler (i<j) of Çözünürlük örnek
-                       Çözünürlük = VeriLifi                  ← yazmaçtan gelir
-                       ayrışmayan mesafe ⇒ Hata_lif = 1 (kırmızı)
+### D1 ÖLÇÜ VE VERİ -- `EgitimAyari.__post_init__` · `qegitim.ornekler` · `main/kulliyat.py`
 
-    Eşik_taşma    = tavan(n_vocab / VeriLifi^(BasamakSayısı−1))       = 4
-    Hata_taşma    = ortalama over {örnek : Makam = BasamakSayısı−1}
-                    of Σ(basamak ≥ Eşik_taşma) Dağılım[basamak]
-                    ← üst makamda Eşik_taşma ve üstü basamak DAİMA taşar
+| | |
+| :-- | :-- |
+| **GİRDİ** | D0'ın çıktısı · `kodlama` · hazinedeki `İmleç` |
+| **AMELİYE** | Sözlük yoklanır, ölçü tablosu türetilir, iki cins veri çekilir |
+| **ÇIKTI** | `Sözlük` · `VeriLifi` · `Karo` · `Pencere` · `Gelen` · `İmleç′` |
 
-### Kaide halkası -- modelin kendi hipotezlerinin teftişi
+```
+Sözlük        = tiktoken(kodlama).n_vocab          ← ELLE YAZILMAZ (ferman 1-N)
+BasamakSayısı = en küçük k öyle ki VeriLifi^k ≥ Sözlük
+Ölçü          = olcek( Sözlük, Cömertlik, Tohum, ÖlçülenHız )
+                ← veri_lifi · karo · pencere · örnek_sayısı · tur … hepsi buradan
+                  (ferman 5-B: donanım ölçülür, elle yazılmaz)
 
-    Hipotez[j]  = Hâl[j]                            aynı Cins'ten örnekler
-    Bargmann    = ∏(j) ⟨Hipotez[j] | Hipotez[j+1 mod n]⟩
+Gelen = Örnekler(ARC görevleri, azamî = ÖrnekSayısı ÷ 2)
+      ∪ KülliyatVerisi(imleç = hazinedeki imleç, azamî = kalan)
+        ← İKİ CİNS BERABER (ferman 1-R); külliyat imleçten devam eder (1-Y)
+```
 
-    Hata_kaideHalkası = (1 − |Bargmann|)
-                      + [açı(Bargmann) ≈ π]          ← tenakuz
-                      + [açı(Bargmann) ≈ 0]          ← kısırdöngü
-                      + [enküçük |⟨·|·⟩| ≈ 0]        ← kopukluk
+### D2 HENDESE -- `nefs/hendese.py:hendese_teshisi`
 
-    Elle yazılmış kaide YOKTUR: kaide, modelin kendi hâlidir.
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Gelen`in bağlamları · `LifYapısı = (VeriLifi, Karo, Karo)` |
+| **AMELİYE** | Geçiş dizeyi → mertebe teşhisi → dikey asansör |
+| **ÇIKTI** | `PariteLifi` -- mantığa sadakatin kod uzayını tayin eden lif |
 
-### Ağırlık ve tek toplama
+```
+GeçişDizeyi[a,b] = sayım(basamak_a → basamak_b) / satırToplamı
+KarşılıklıHaber  = Σ Ortak·log(Ortak / (Satır·Sütun))
+Sapma            = ‖GeçişDizeyi − GeçişDizeyiᵀ‖
+Nilpotent        = en küçük k öyle ki GeçişDizeyi^k = 0
+Denklik          = ⟨GeçişDizeyi(ilkYarı), GeçişDizeyi(sonYarı)⟩ / normlar
 
-    Ağırlık = Rezonans(Hata) / Rezonans(Hata)[uzay]              ← ölçülür, yazılmaz
-    Skaler  = Σ(j) Ağırlık[j] × Hata[j]                          ← TOPLAMA YALNIZ BURADA
+Mertebe = enbüyükArgüman(
+    1/(1+Haber+ŞartSapması),                   ← ayrık NOKTA
+    (1−ÜçgenİhlâliNispeti)/(1+Sapma),          ← sürekli UZAY
+    enbüyük(0, Denklik) × (1+Haber),           ← univalent TİP
+    Sapma × (1 eğer Nilpotent>0 değilse 1/4))  ← yönlü KATEGORİ ← EN UMUMÎ
 
----
+PariteLifi = Mertebe.kat        ← elle verilmediyse; teşhis edilen katman
+                                  mantık muhafızının lifini SEÇER
+```
 
-## 5. ADIM -- MECZ: BEŞ MEMURİYET, TEK KAYIP ÇAĞRISI
+**SIRA FERMAN 2-Ā'YA GÖREDİR:** nokta < uzay < tip < **kategori**.
 
-Kör yön araması ilga edildi (ferman 2-P). Türev geri geldi fakat tek
-başına değil: yanına dört yardımcı memur verildi. Hat araması YOKTUR.
+### D3 KURULUŞ -- `QNefs` · `Hafiza` · `FockUzayi` · `Hamiltonyen`
 
-### 5-A SENET -- ileri geçişin kaydı
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Ölçü` · `PariteLifi` · `Tohum` · hazinedeki `p` |
+| **AMELİYE** | Yazmaçlar açılır, hazine varsa ağırlık **oradan yüklenir** |
+| **ÇIKTI** | `Nefs` · `Hafıza` · `Fock` · `Ĥ` · `p₀` |
 
-    Senet   = [ (tür, yer, dizey) ]                 her kapı vuruşu sırayla
-    tür ∈ {karo, bant, çift_lif, faz, ölçek, sektör, maske, durum}
-    Bağlantı = [ (senetNo, parametre, ölçek, türevTarifi) ]
+```
+p₀ = hazinedeki p        eğer hazine VARSA          ← DEVAM ASILDIR (1-Y)
+   | rastgele            eğer hazine YOKSA          ← raporda hangisi YAZILIR
 
-    SenetSadakati = ‖SenetiOynat(Yazmaç₀) − Yazmaç_son‖ / ‖Yazmaç_son‖
-                  ← senet TAM ise sıfır; ölçülür ve basılır
+Yazmaçlar (hepsi qudit):
+  VERİ YAZMACI       girdi dizisini tip · kategori · uzay mertebelerinde
+                     süperpozisyonda tutar                      (ferman 1-Ş)
+  PARAMETRE YAZMACI  ayrı qudit sistemi; ÇIPLAK PARAMETRE YOK   (ferman 2-R)
+                     Kapasite = Taban ^ QuditSayısı             ← uzay iddiası
+                     MahallîSerbestlik = 2 × QuditSayısı        ← bellek iddiası
+  MAHALLÎ YAZMAÇ     ZIRH = 1 048 576 qudit × (genlik, faz), SABİT (2-Ğ)
+                     aktif pencere içinde nefes alır; kalanı SEYİRCİ
+  HAFIZA             kayıt = normalize kavram vektörü + (ω, hüküm, μ, yaprak)
+```
 
-### 5-B EĞİM -- üç mekanizma, tek hakikat
+### D4 VERİ KAPISI -- `nefs/veri_kapisi.py:veri_kapisi`
 
-    Üreteç:    Eğim[p] = Σ 2·ölçek·Re⟨ Hata⊙Yazmaç_son | dKapı·Yazmaç_son ⟩
-                         ← nihaî durumdan, DERİNLİK KÖRÜ, en ucuz
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Gelen` · `Nefs` · `Hafıza` |
+| **AMELİYE** | Her örnek **kodlanır**, hâli doğar, üç hudut **hâl üstünde** ölçülür |
+| **ÇIKTI** | `Veri` (kabul edilen) · `KapıHükmü` (her örneğin tasnifi) |
 
-    EkDurum:   λ_son = Hata ⊙ Yazmaç_son
-               λ_{i−1} = Eşlenik(Kapı_i) · λ_i        ← λ EŞLENİK ister
-               ψ_{i−1} = Evrik(Kapı_i) · ψ_i          ← ψ EVRİK ister
-               Eğim[p] += 2·ölçek·Re⟨ λ_i | dKapı_i·ψ_{i−1} ⟩
-               Metrik[p] += ölçek²·( ‖dKapı_i·ψ_{i−1}‖² − |⟨ψ_{i−1}|dKapı_i·ψ_{i−1}⟩|² )
-                         ← metrik köşegeni BEDAVA: U_{>i} üniter
+```
+Hâl(Örnek)  = İdrak(Kodla(Bağlam + Hedef))   ← kapı KODLAMADAN SONRA koşar
+Eş(i)       = aynı Bağlamı paylaşan evvelki örnek, yoksa i−1
+              ← bu bir HÜKÜM değil, çiftin İKİNCİ KUTBUDUR
 
-    İkiz:      dψ_i = Kapı_i·dψ_{i−1} + ölçek·yön[p]·dKapı_i·ψ_{i−1}
-               Türev = 2·Re⟨ Hata⊙ψ_son | dψ_son ⟩
-                         ← ileri kip, YAPISAL OLARAK BAĞIMSIZ
+ŞAHİT YOKTUR (ferman 2-Ú). Hüküm çiftin BÜTÜN VECİHLERDEKİ okumasından:
 
-    Mutabakat = |EkDurum·yön − İkiz| / |İkiz|
-              ← ikisi de TAM olmalı; sıfır değilse biri yalan söylüyor
+  Örtüşme(v) = |⟨Hâl_i^(v) | Hâl_Eş^(v)⟩|²        her vecih v için
+  İhtilaf    = azamî Örtüşme − asgarî Örtüşme
+  İttifak    = 1 − İhtilaf                        ← ikisi toplamı BİR (1-J)
 
-    dKapı  Dönme için  [[−sin, −cos], [cos, −sin]]
-           DikİkiKübit için Daleckii-Krein:
-               [Vᵀ·dexp(A)·V]_pq = [Vᵀ·M_k·V]_pq · (e^{λp} − e^{λq})/(λp − λq)
+  Hüküm = MANTIKSIZLIK  eğer basamak ∉ [0, VeriLifi)        → RET (tek eleme)
+        | TENAKUZ       eğer İhtilaf > İttifak               → TERFİ
+        | KISIRDÖNGÜ    eğer İttifak > İhtilaf ve asgarî ≥ İttifak → TEVAKKUF
+        | TASDİK        değilse
 
-### 5-C BEŞ MEMURİYET -- toplanmaz, her biri ayrı cins (mecz, meclis değil)
+KAPI BİR ELEK DEĞİL, TASNİF MERCİİDİR: eleme YALNIZ mantıksızlıktadır.
+Tenakuzlu örnek çıkarılmaz, modalite lifiyle TERFİ eder (ferman 2-Ú).
+```
 
-    ÇUKUR   ΔE = √(⟨Hata²⟩ − ⟨Hata⟩²)                  → hüküm: durak mı
-    DUVAR   Maske = Metrik/enbüyük(Metrik) > ortanca·10⁻³
-                                                        → koordinat ELER
-    EĞİM    Yön = −Eğim ⊙ Maske, normalize                → yön verir
-    YARIÇAP Yarıçap = 1 / √Σ Metrik                       → boy verir
-            Eğrilik = BükülmeEnerjisi / (BükülmeEnerjisi + Artık²)
-            Yarıçap ← Yarıçap / (1 + Eğrilik)
-    VADİ    Yön = birim(enbüyükArgüman(Metrik ⊙ Maske))   → adımın YERİNE
-    NAKİL   TÜNELLEME EVRİMİ -- zar YOK (ferman 2-Ĵ):     → adımın YERİNE
-            Kuyu     = −|Dizinin genliği| / tepe          ← durumun kendi kuyusu
-            T        = WKB geçirgenliği(Kuyu)             ← ölçülür
-            Zincir   = en kuvvetli m koordinat, m ölçülen bellekten
-            H_kuyu   = köşegen(Kuyu[Zincir])
-            H_atlama = komşu bağlantı (üç köşegenli)      ← H_kuyu ile DEĞİŞMEZ
-            U        = Evrim(H_kuyu, H_atlama, π·T)       ← Trotter-Suzuki
-            Yön      = birim( |U · (en kuvvetli koordinat)|² )
+### D5 ÇÖZÜM UZAYI -- `nefs/mukayese.py` (alt makine § 3)
 
-    Evrim(A, B, t):  dilim n ELLE YAZILMAZ (ferman 1-J).
-            n ← 1; 1. mertebe Trotter ile 2. mertebe Suzuki'nin ayrışması
-            ölçülür; ayrışma sönmeyi bırakana kadar n ikiye katlanır.
-            Netice 2. mertebe Suzuki yayılımcısıdır.
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Veri` · `Nefs` · `Hafıza` · `Fock` |
+| **AMELİYE** | `AnaSüperpozisyon → UzayAç → Süzgeçler → UzayKapat` |
+| **ÇIKTI** | `Netice = (Pencere, Hâl, Mesele, MeseleNispeti, EnZayıfKanun, ArananBasamak, HafızaKapasitesi)` |
 
-    Aday = Parametre + Yarıçap · Yön
-    V_aday = Skaler(Aday)                       ← TUR BAŞINA YEGÂNE ÇAĞRI
+```
+ayar.Pencere        ← Netice.Pencere
+Hafıza.Kapasite     ← Netice.HafızaKapasitesi
+                      ← ikisi de MAKİNENİN HÜKMÜDÜR, elle yazılmaz
+```
 
-    KABUL KAPISI -- keyfiyet adımın BOYUNU değil KABULÜNÜ tayin eder:
-    Keyfiyet_aday = KeyfiyetSon()          ← V_aday çağrısında ölçülen
-    Kirletti = Keyfiyet_aday < Keyfiyet
+### D5b SADAKAT DEVRESİ -- `nefs/sadakat.py:sadakat_devresi` (§ 4)
 
-    eğer V_aday < V ve değil Kirletti:
-                      Parametre ← Aday,  YarıçapDüzeltmesi ← 0
-    değilse:          hat eğriliğinden ANALİTİK düzeltme, ek çağrı YOK
-        Çözünürlük = MakineEpsilonu · enbüyük(|V|, |V_aday|)
-        eğer |ΔV_gerçek| ≤ Çözünürlük:   kayıp adımı HİSSETMEDİ
-                                          Yarıçap* = 2·Yarıçap
-        ΔV_lineer = ⟨Eğim, Yarıçap·Yön⟩
-        κ         = 2(ΔV_gerçek − ΔV_lineer) / Yarıçap²
-        Yarıçap*  = −ΔV_lineer / (κ · Yarıçap)      ← hat üstünde TAM Newton
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Nefs` · `Hafıza` · `Fock` · `Netice` -- yâni **her süperpozisyon** |
+| **AMELİYE** | Üç kümeye ayır, **yalnız mantıksızı** imha et, yeniden normalize et |
+| **ÇIKTI** | Süzülmüş süperpozisyonlar · `(İmha, MeçhulBırakılan, Muaf, Bağlanmamış)` |
+
+Her turda, her durumdan çıkarken koşar (invaryant I8).
+
+### D6 MİZAN -- `nefs/kulli_mizan.py:kulli_mizan`
+
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Nefs` · `Veri` · `p` · `Sözlük` · `MizanAyarı` · `Hafıza` · `KapıHükmü` |
+| **AMELİYE** | İleri geçiş koşar, kefeler **ayrı ayrı** ölçülür |
+| **ÇIKTI** | `Kefeler` -- bir **vektör**, bir skaler değil (ferman 1-V) |
+
+```
+İLERİ GEÇİŞ (bir turda TEK KAN çağrısı -- ferman 2-A):
+
+  T1 HAZIRLIK   Kodla: mahallî yazmaca tohum ek (genlik + faz). KAN ÇAĞRILMAZ.
+                  Genlik[j] = Dolu(j) / ‖Dolu‖
+                  Açı[j]    = π · Basamak(j)
+  T2 EVRİM      Meleke_k(Yazmaç) = Kapı_k(Yazmaç, Açı_k(ParametreYazmacı))
+                  k = 1 … 45 (44 meleke, 𝒪₁₃ iki kere)
+                  Kapı BÜTÜN N qudide tek vektörel çevrimde vurur (2-Ú)
+                  θ_cartan birikir                                (2-Â)
+  T3 İNTAÇ      KAN fonksiyoneli İLK VE SON DEFA çağrılır:
+                  Genlik = üstel( −Enerji + i·(Σ_j w_j + θ_cartan·KökAğırlığı) )
+                           / √Bölen
+                  Reel  = Σ_{k,j} C[k,j] · kosinüs( j · arkkosinüs(u) )
+                  Sanal = Σ_{k,j} S[k,j] · sinüs((j+1)·arkkosinüs u)/sinüs(arkkosinüs u)
+                  ← HAKİKÎ FONKSİYON; tekrarlama ikamesi yasak (ferman 2-U)
+  T4 ÖLÇÜM      Hâl(kelâm) = |⟨kelâm | Genlik(hedef qudit; θ_cartan)⟩|²
+                  hedef qudit = NEDENSEL CEPHE (bağlamın bittiği yer, 2-Ï)
+                  basamak ekseni boyunca TOPLAMA YOK (ferman 2-Ê)
+
+KEFELER (hiçbiri ötekinin yerine geçmez -- ferman 1-S, 1-U):
+
+  Hata_uzay     = 1 − Uhlmann(Hâl, Hedef)                  ← ÇIPA
+  Hata_nokta    = −ln İz(HedefİzdüşümÜ · YoğunlukMatrisi(Hâl))
+  Hata_kategori = ‖ Morfizm(g∘f) − Morfizm(g)·Morfizm(f) ‖²
+  Hata_tip      = ⟨Artık, HodgeLaplasyeni·Artık⟩ / ‖Artık‖²
+  Hata_çevrim   = |Holonomi(Çevrim) − Fıtrat|
+  Hata_tenakuz  = −ln((İz(Birim+GerçekKısım(ÇevrimÜniteri))+ε)/(2·Boyut+ε))
+                  × DışlamaEntropisi(Çevrim)
+  Hata_gedik    = Borç(Usul, KaranlıkÇevrimler)
+  Hata_monogami = enbüyük(0, Dolaşıklık(bütün) − Σ Dolaşıklık(ikili))
+  Hata_engel    = Engellenme(Yazmaç, SürekliÖlçüm)
+  Hata_lif      = 1 − SıraBağıntısı( Mesafe(Bağlam_i,Bağlam_j),
+                                     −ln |⟨Hâl_i|Hâl_j⟩| )
+  Hata_taşma    = PariteTaşması ⊕ BelirteçTaşması           ← İKİ taşma (2-L)
+  Hata_kaideHalkası:
+      Bargmann = ∏_j ⟨Hipotez_j | Hipotez_{j+1 mod n}⟩
+      = (1−|Bargmann|) + [açı ≈ π: tenakuz] + [açı ≈ 0: kısırdöngü]
+                       + [enküçük |⟨·|·⟩| ≈ 0: kopukluk]
+      ← ELLE YAZILMIŞ KAİDE YOK: kaide, modelin kendi hâlidir (ferman 6)
+  Hata_meleke[k] = ortalama_{ad ∈ İlan_k} Eksik(Okuma_k[ad], Sözleşme_k[ad])
+                   ← 44 meleke 44 AYRI KEFE; tek skalere indirilmez (1-U)
+```
+
+### D7 BİRLEŞİK HAMİLTONYEN -- `nefs/kulli_mizan.py:Hamiltonyen`
+
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Kefeler` |
+| **AMELİYE** | Kefeler öbeklere düşer, kuplaj kurulur, yavaş mod **ölçülür** |
+| **ÇIKTI** | `λ nispetleri` · `TabanDurumu` |
+
+```
+Ĥ      = Ĥ_öbek₁ + Ĥ_öbek₂ + … + V̂_kuplaj              (ferman 2-Þ)
+Alan   = h + β · V[:, yavaşMod];   Alan[yavaşMod] = h[yavaşMod]
+λ      = Nispetler(Alan)                    ← SABİT PAYLAR TABLOSU YOK
+Skaler = Σ_j λ[j] × Kefe[j]                 ← TOPLAMA YALNIZ BURADA (1-V)
+
+YavaşMod = kuplaj kütlesi × entropi'yi AZAMÎ yapan öbek ← ÖLÇÜLÜR (ferman 2-Þ)
+```
+
+### D8 DÖNGÜ -- `nefs/munasebet.py:munasebet_kos` + `ogrenme/mecz.py`
+
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Veri` · `p₀` · `λ` · `MünasebetHaritası` (hazineden) |
+| **AMELİYE** | Küme seç → tur koş → adım at → hudut yokla → temizse imleci ilerlet |
+| **ÇIKTI** | `p*` · `MünasebetHaritası′` · `(temizlenen, kirliKalan)` |
+
+```
+Zayıflık(Örnek) = ortalama( 1 / (1 + MünasebetHaritası[Bağlam(Örnek)]) )
+Küme            = en zayıf öbek; boyu ÖLÇÜLEN BELLEKTEN (ferman 2-I)
+
+tekrarla:
+    SadakatDevresi(bütün süperpozisyonlar)          ← her turda (I8)
+    λ         ← Ĥ.Nispetler( Kefeler(p, Küme) )     ← her turda YENİDEN
+    p         ← Adım(p, Küme)
+    dur eğer HudutTemiz(Küme)
+
+HudutTemiz   = (Tenakuz = 0) ve (Kısırdöngü = 0) ve (Mantıksızlık = 0)
+Mantıksızlık = PariteTaşması + BelirteçTaşması              ← İKİ taşma
+NispetMantık = (1 − PariteTaşması) × (1 − BelirteçTaşması)  ← HUDUT ÇARPANI
+
+değil HudutTemiz ⇒ Küme kuyruğun BAŞINA döner
+    HudutTemiz ⇒ İmleç ← İmleç + bayt(Küme)                 ← ancak o zaman
+```
+
+#### D8-a ADIM -- MECZ: DÖRT MEMUR, TUR BAŞINA TEK KAYIP ÇAĞRISI
+
+```
+SENET    = [ (tür, yer, dizey) ]                 her kapı vuruşu sırayla
+SenetSadakati = ‖SenediOynat(Yazmaç₀) − Yazmaç_son‖ / ‖Yazmaç_son‖
+
+EĞİM -- üç mekanizma, tek hakikat:
+  Üreteç   Eğim[p] = Σ 2·ölçek·Re⟨ Hata⊙Yazmaç_son | dKapı·Yazmaç_son ⟩
+  EkDurum  λ_son = Hata ⊙ Yazmaç_son
+           λ_{i−1} = Eşlenik(Kapı_i)·λ_i      ← λ EŞLENİK ister
+           ψ_{i−1} = Evrik(Kapı_i)·ψ_i        ← ψ EVRİK ister
+           Eğim[p]   += 2·ölçek·Re⟨ λ_i | dKapı_i·ψ_{i−1} ⟩
+           Metrik[p] += ölçek²·( ‖dKapı_i·ψ_{i−1}‖² − |⟨ψ_{i−1}|dKapı_i·ψ_{i−1}⟩|² )
+  İkiz     dψ_i = Kapı_i·dψ_{i−1} + ölçek·yön[p]·dKapı_i·ψ_{i−1}
+           Türev = 2·Re⟨ Hata⊙ψ_son | dψ_son ⟩
+  Mutabakat = |EkDurum·yön − İkiz| / |İkiz|    ← sıfır değilse biri yalan söylüyor
+
+DÖRT MEMUR -- toplanmaz, her biri ayrı cins (MECZ, meclis değil):
+  ÇUKUR    ΔE = √(⟨Hata²⟩ − ⟨Hata⟩²)                → hüküm: durak mı
+  EĞİM     Yön = −Eğim, SIRALANIR                   → yön verir
+  VADİ     Yön = birim(enbüyükArgüman(Metrik·Sıra))  → adımın YERİNE
+  NAKİL    Kuyu = −|Dizinin genliği| / tepe
+           T    = WKB geçirgenliği(Kuyu)
+           U    = Evrim(H_kuyu, H_atlama, π·T)       ← Trotter-Suzuki, zar YOK
+           Yön  = birim( |U · (en kuvvetli koordinat)|² )
+  DUVAR İLGA EDİLDİ (ferman 1-Ğ, 2-Ú): koordinat ELENMEZ, yalnız SIRALANIR.
+
+YARIÇAP  = Keyfiyet(üç hudut) / √İz(FubiniStudy)     ← sabit eta YOK (1-J)
+           Eğrilik = BükülmeEnerjisi / (BükülmeEnerjisi + Artık²)
+           Yarıçap ← Yarıçap / (1 + Eğrilik)
+           ← tarama daveti DEĞİL, yalnız adımın boyu; hat araması YOK (2-P)
+
+Aday   = p + Yarıçap · Yön
+V_aday = Skaler(Aday)                        ← TUR BAŞINA YEGÂNE ÇAĞRI
+
+KABUL: hükmü TAM MİZAN VEKTÖRÜ verir; keyfiyet bir KEFEDİR, veto değil (2-Ü)
+RET   : hat eğriliğinden ANALİTİK düzeltme, EK ÇAĞRI YOK
+        κ = 2(ΔV_gerçek − ΔV_lineer) / Yarıçap²
+        Yarıçap* = −ΔV_lineer / (κ · Yarıçap)        ← hat üstünde tam Newton
         κ ≤ 0 ise hat bükey değildir: Yarıçap* = 2·Yarıçap
 
-    Öğrenme oranı YOK. Momentum YOK. Geri yayılım YOK. Hat araması YOK.
-    Sabit eta YOK, kelepçe YOK (ferman 1-J).
+Öğrenme oranı YOK. Momentum YOK. Geri yayılım YOK. Hat araması YOK.
+```
 
+### D9 KÜME KAPANIŞI -- bir defa, küme temizlenince
 
-### 5-D PARAMETRE YAZMACI -- İKİNCİ QUDİT SİSTEMİ (ferman 2-R)
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Hafıza` · `KapıHükmü` · `Fock` · biriken yırtık defteri |
+| **AMELİYE** | Yırtıklar tertiplenir, kapı tenakuzları terfi eder, balyalanır |
+| **ÇIKTI** | `Hafıza′` · `Balya` |
 
-    ParametreSeviyesi = enbüyük ikinin kuvveti k öyle ki
-                        Yığın · VeriSeviyesi · k · 16 ≤ ÖlçülenBellek · Pay
+```
+HAFIZA SİLİNMEZ, YENİDEN TERTİPLENİR (ferman 2-Ú):
+  1 ALÂKA     A(k) = İz( YoğunlukMatrisi(kayıt_k) · Π_R )
+  2 DÜĞÜM ÇÖZ eski yapıştırma bağları gevşetilir
+  3 TABAN DEĞ. Yaprak = Örtüşmesi EN DÜŞÜK vecih   ← şahitsiz, en çok ayıran
+               Kök    = MahallîYazmaç.CartanEkle("modalite."+Yaprak, Ayırt)
+               ← YENİ ORTOGONAL kök; evvelki köklerin adresi KAYMAZ (2-İ)
+  4 YENİDEN MÜHÜR  ρ_yeni = U_tertip·ρ_eski·U_tertip† + Δρ
 
-    Parametre[k] = ( Genlik[k],  Açı[k] )        Açı[k] ∈ [−π, π]
-                 ← FAZ SÜREKLİDİR; Z_m tamsayı kafesi İLGA (ferman 2-V)
-    Açı(anahtar, k) = Açı[ Adres(anahtar)[k] ]
-                    ← ÇIPLAK PARAMETRE YOKTUR; melekenin her açısı budur
-    Σ_k Genlik[k]² = 1
+BALYALAMA -- UNUTMA YOK, TECRİT VAR (ferman 2-Ƶ):
+  Hafıza artar → kategori doygunlaşır → mertebe yükselir
+  → eski kayıtlar üst kategorinin BİR NESNESİNDE balyalanır
+  → balya AÇILABİLİR (funktörün tersi şarttır)
+  Tekrarın az yer tutması bunun TABİÎ NETİCESİDİR: aynı şeyin n nüshası
+  n nesne değil, tek üst nesnenin n katlı hâlidir.
+  SİLİNEN SIFIR OLMALIDIR.
 
-    TaşımaKapasitesi = Taban ^ QuditSayısı        ← uzay iddiası
-    MahallîSerbestlik = 2 · QuditSayısı           ← bellek iddiası
+TERTİP KÜME KAPANINCA BİR DEFA KOŞAR; arada yırtıklar deftere birikir.
+```
 
-### 5-E ÇİFT YAZMAÇ KENETLENMESİ -- SEYİRCİ QUDİT (ferman 2-V)
+### D10 KELÂM -- `nefs/soyle.py` (alt makine § 5)
 
-    TemasKapıları = defterde tahsis edilmiş bütün adresler
-    Seyirci       = QuditSayısı − |TemasKapıları|
-                  ← seyircinin iç çarpımı 1'dir; q^N dal AÇILMAZ
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Nefs(p*)` · `Hafıza` · `Netice` · `Suâl` |
+| **AMELİYE** | Vecih açılır, cümle üretilir, vecih kapanır |
+| **ÇIKTI** | `Kelâm` yahut `Sükût` · `Güven` · `UzunlukHükmü` |
 
-    Basamak(t)    = 2 · Veri[t] / (Taban − 1) − 1
-    Gerilim(j)    = |Basamak(j) − Basamak(j−1)| + |Basamak(j) − Basamak(j+1)|
-    Rezonans(k)   = k. sırada en yüksek Gerilime sahip qudit koordinatı
-    Hedef(k)      = Rezonans(k)
-                  ← BAĞLAM BASAMAĞI LAĞVEDİLDİ (ferman 2-Z): hedef elle
-                    yazılmaz, veri manifoldunun kendi geriliminden çıkar
-                    ve her kodlamada yeniden tayin edilir.
+### D11 MÜHÜR -- `main/hazine.py:muhurle`
 
-    EtkileşimEnerjisi(Veri) =
-        − toplam over k of  Genlik[Kontrol(k)] · Açı[Kontrol(k)]
-                            · Basamak(Hedef(k))
+| | |
+| :-- | :-- |
+| **GİRDİ** | `p*` · `Hafıza′` · `MünasebetHaritası′` · `İmleç′` · `TabanDurumu` · `Fock` |
+| **AMELİYE** | **TEK DOSYAYA** yazılır |
+| **ÇIKTI** | `Hazine` -- sonraki koşunun D3 girdisi |
 
-    EklenenFaz(Veri) = toplam over k of  Açı[Kontrol(k)] · Basamak(Hedef(k))
-
-    Genlik(Veri, Parametre) = üstel( Reel(Veri) − EtkileşimEnerjisi(Veri)
-                              + i · ( Sanal(Veri) + EklenenFaz(Veri) ) )
-                              / Bölen
-        Reel(Veri)  = toplam over k,j of Katsayı_C[k,j] · ChebyshevBirinci
-        Sanal(Veri) = toplam over k,j of Katsayı_S[k,j] · ChebyshevİkinciU
-
-    ChebyshevBirinci(u, j) = kosinüs( j · arkkosinüs(u) )
-    ChebyshevİkinciU(u, j)  = sinüs((j+1)·arkkosinüs(u)) / sinüs(arkkosinüs(u))
-                            ← HAKİKÎ FONKSİYON; tekrarlama ikamesi yasak (2-U)
-
-    Yığın ekseni kenetlemesi (Dilim, DalAğırlığı, MüşterekYığın) İLGA;
-    Palmer çeyreği ile faz çökmesi de İLGA -- faz sürekli üstel.
-
-### 5-F MAHALLÎ YAZMAÇ -- DONANIM KANADI (ferman 2-Ş)
-
-    MahallîYazmaç[örnek, j] = ( Genlik[j],  Açı[j] )     Açı ∈ [−π, π]
-        Genlik[j] = Dolu(j) / ‖Dolu‖              ← ayrık, mahallî
-        Açı[j]    = π · Basamak(j)
-
-    KapıVur(Kontrol, Hedef, Bağ):
-        Açı[Hedef(k)] ← Açı[Hedef(k)] + Bağ(k) · Açı[Kontrol(k)]
-        ← yalnız temas edilen qudit döner; kalanı SEYİRCİDİR
-
-    Genlik(Veri, Parametre, MahallîYazmaç) =
-        üstel( Reel − EtkileşimEnerjisi
-               + i · ( Sanal + EklenenFaz + MahallîYazmaç.Açı ) ) / Bölen
-
-    İKİ SEVİYE AYRIDIR (ferman 2-Ş):
-        Yazmaç(B, d)      TEKİL KAVRAM LİFİ -- bir quditin iç anatomisi
-        MahallîYazmaç     KÜLLÎ yazmacın mahallî tensörü (qudit × 2)
+```
+Hazine = (p, Hafıza, MünasebetHaritası, SilsileDefteri, İmleç,
+          TabanDurumu, Fock, ÖlçülenHız, Tur)
+         ← DEVAM ASILDIR; sıfırlama açık bir FİİLDİR: main.egitim sıfırla
+```
 
 ---
 
-## 6. DIŞ DÖNGÜ -- BİR VERİ, HUDUDU TEMİZLENENE KADAR
+## § 3. ÇÖZÜM UZAYI ALT MAKİNESİ -- S0 … S6
 
-    Zayıflık(Örnek) = ortalama(1 / (1 + MünasebetHaritası[Bağlam(Örnek)]))
-    Küme            = enbüyük öbek tanesi Zayıflık(Kalan)
+```
+S0 VAKUM ──metin geldi──▶ S1 SINIR ──▶ S2 MESELE ──┬──F⁻¹ var──▶ S3 UZAY
+   │                                               └──mesele yok─▶ S6
+   └──girdi YOK ve kapı TÂLİM──────────────────────▶ S2      (ferman 2-Ħ)
 
-    tekrarla en çok AzamiTur kere:
-        Ağırlık   ← Rezonans(Hata(Parametre, Küme))         ← her turda YENİDEN
-        Parametre ← Adım(Parametre, Küme)
-        dur eğer HudutTemiz(Küme)
+S3 UZAY ──▶ S4 SÜZÜLMÜŞ ──▶ S5 HÜKÜM ──┬──yeni vecih──▶ S3
+                                        └──kapandı─────▶ S6 İNTAÇ
+```
 
-    HudutTemiz    = (Tenakuz = 0) ve (Kısırdöngü = 0) ve (Mantıksızlık = 0)
-    Mantıksızlık  = PariteTaşması + BelirteçTaşması          ← İKİ taşma
-    Nispet_mantık = (1 − PariteTaşması) × (1 − BelirteçTaşması)
+| Durum | GİRDİ | AMELİYE | ÇIKTI |
+| :-- | :-- | :-- | :-- |
+| S0 VAKUM | -- | Fock `\|0⟩`; hiçbir mod açık değil | boş hâl |
+| S0 → S2 (tâlim) | iç hâl havuzu | `G_t = argmax_G { E_tenakuz(G) − λ·Entropi(G) }` | özerk gaye |
+| S1 SINIR | metin | entropi gradyanı; **entropisi en yüksek bölge aranan şeydir** | kısıt grafı |
+| S2 MESELE | kısıt grafı | dört suâl: mesele var mı · kaide ne · geri yol nasıl · metin ne | `Sual` · `a†` ile mod |
+| S3 UZAY | `Sual` | uzay **kaidesinden doğar**: Yoneda → Kohomoloji → Lie | `Uzay` · funktör `F` |
+| S4 SÜZÜLMÜŞ | `Uzay` | **sadakat devresi** + mukayese süzgeci | süzülmüş hâl |
+| S5 HÜKÜM | süzülmüş hâl | hüküm çıkar; yeni vecih ateşlendiyse S3'e dön | hüküm · `a` ile sönüm |
+| S6 İNTAÇ | hüküm | `ψ ← ψ · conj(F)`  ← **funktörün tersi** | `Netice` |
 
-    MünasebetHaritası[a, b] += Nispet(Küme)     her a, b ∈ Bağlam(Küme)
-                     ← TEK harita, hazineden yüklenir, hazineye geri konur;
-                       turlar boyunca BİRİKİR (ferman 1-I, 1-Y)
+```
+KAİDE BİR KANUNLAR MANZUMESİDİR (ferman 2-Ú-E); üç usul SIRAYLA koşar,
+her biri bir evvelkinin ÇIKTISINI girdi alır:
 
-    SilsileDefteri[Tip][Kategori][Uzay] += Σ(a ∈ Bağlam) MünasebetHaritası[a, ·]
-        Tip       = "arc"  yahut  "sözlü"                    ← veri cinsi
-        Kategori  = MertebeSeç(Bağlam).ℓ*                    ← nefs/hendese.py
-        Uzay      = enyakın yuva of UzaylarıKur(Dinamik).mertebe ↔ boy(Bağlam)
-                       Dinamik = 10 ölçülen bağlam boyu       ← idrak/kategori.py
-        Kopukluk  = |{hücre : enbüyük örtüşme ≤ Eşik}| / |hücre|
-                       Eşik = ortalama(örtüşme) × oran(örtüşme > 0)   ← keyfiyet
+1 YONEDA -- DIŞ MÜNASEBET, hudut kanunları
+    Hom(−,a)     = ( ⟨Hâl_k | Hâl_a⟩ )  bütün k için
+    tip.hudut    = 1 − |⟨birim Hom(−,a) | birim Hom(−,b)⟩|²
+    tip.temas    = Σ_k |Hom_k(a)|·|Hom_k(b)| / (‖·‖·‖·‖)
+    Dokunan(a,b) = { k : |Hom_k(a)|·|Hom_k(b)| > ortanca }
+                   ↓ ÇIKTI: Dokunan
+2 KOHOMOLOJİ -- İÇ DOKU, korunum kanunları   (δ∘δ = 0)
+    Holonomi(k)       = ⟨a|b⟩⟨b|k⟩⟨k|a⟩         k ∈ Dokunan(a,b)
+    kategori.korunum  = | ortalama_k e^(i·arg Holonomi(k)) |
+    Çekirdek(a,b)     = { k : |arg Holonomi(k)| ≤ ortanca }
+                   ↓ ÇIKTI: Çekirdek
+3 LIE / CASIMIR -- DİNAMİK, dönüşüm kanunları
+    e₁ = Hâl_a,  e₂ = birim( Hâl_b − ⟨e₁|Hâl_b⟩e₁ ),  X = e₂e₁† − e₁e₂†
+    Açı_ab       = arccos |⟨Hâl_a|Hâl_b⟩|        ← taşıma zamanı, ÖLÇÜLÜR
+    U            = Evrim(σ_y, σ_x, Açı_ab)       ← Trotter-Suzuki
+    uzay.dönüşüm = ortalama_{Çekirdek} ( 1 − |⟨z_k | U z_k⟩|² )
+    uzay.casimir = ‖ ortalama_{Çekirdek} BlochVektörü ‖   ← su(2) DEĞİŞMEZİ
 
-    eğer değil HudutTemiz:  Küme → Kuyruğun BAŞINA,  Sabır = f(Nispet)
-    eğer HudutTemiz:        İmleç ← İmleç + bayt(Küme)   → Hazine
+SIRA DEĞİŞMEZ: dış hudut çizilmeden iç omurga aranmaz, omurga
+sabitlenmeden dinamik hesaplanmaz.
 
-    Hazine = (Parametre, Hafıza, MünasebetHaritası, SilsileDefteri,
-              İmleç, ÖlçülenHız, Tur)                        ← devam ASILDIR
+Kaide(a,b) = ( tip.hudut, tip.temas, kategori.korunum, kategori.çekirdek,
+               uzay.dönüşüm, uzay.casimir )
+Ölçek      = ortancaSapma(Kaide over bütün çiftler)   ← eşik ÖLÇÜLÜR (1-J)
+İmza(a,b)  = yuvarla( Kaide(a,b) / Ölçek )
+Âlem       = aynı İmzalı münasebetlerin öbeği
+             ← KAÇ AYRI KAİDE İMZASI VARSA O KADAR ÂLEM; özdeğerden GELMEZ
+Vecih(Âlem)= izdüşüm( birim( Σ_öbek AyırtEdiciYön(a,b) ) )
+Tayf(Âlem) = ( Nispet(r,n | öbeğin kutupları) )  BÜTÜN (r,n) için
+             ← ÇÖKERTİLMEZ (ferman 2-Ú-B): argmax ile tek mertebe SEÇİLMEZ
+```
 
----
+**MUKAYESE MELEKESİ -- durumu EVİRMEZ, hüküm çıkarır (ferman 2-Ú):**
 
-## 6-B. VECİH VE MUKAYESE -- NETİCE ÇIKARAN MELEKE
-
-    VERİ KAPISI (ferman 2-Ó) -- ret girene bakar, konuşmaya değil
-                 KAPI KODLAMADAN SONRA KOŞAR: hüküm HÂLDEN okunur
-
-    Parça        = ölçülen bellek haddine sığan örnek adedi  (ferman 5-B)
-                   ← kapı imleçten gelen HER PARÇADA koşar, yığında değil
-    Hâl(Örnek)   = İdrak(Kodla(Bağlam + Hedef))    ← örnek başına BİR idrak
-    Vecihler     = VecihleriİstihraçEt(parçanın hâlleri)
-    Eş(i)        = aynı Bağlamı paylaşan evvelki örnek, yoksa i−1
-                   ← bu bir HÜKÜM değil, çiftin İKİNCİ KUTBUDUR
-
-    ŞAHİT YOKTUR. Hüküm çiftin BÜTÜN VECİHLERDEKİ okumasından çıkar:
-
-    Örtüşme(v)   = |⟨Hâl_i^(v) | Hâl_Eş^(v)⟩|²         her vecih v için
-    İhtilaf      = azamî Örtüşme − asgarî Örtüşme
-    İttifak      = 1 − İhtilaf        ← iki nispet toplamı BİR (ferman 1-J)
-
-    Hüküm(Örnek) = mantıksızlık eğer basamak ∉ [0, VeriLifi)   → RET
-                 | tenakuz      eğer İhtilaf > İttifak          → TERFİ
-                 | kısırdöngü   eğer İttifak > İhtilaf ve asgarî ≥ İttifak
-                 | tasdik       değilse
-                 ← hükmü MUKAYESE MELEKESİ verir ve HAFIZAYA yazar
-    Kabul(Örnek) = yanlış YALNIZ mantıksızlıkta;  tenakuz TERFİ eder
-    HafızaKaydı  = tasdik | tevakkuf | cerh       ← kaydın CİNSİNİ kapı tayin eder
-
-    VECİH İSTİHRACI (ferman 1-Ğ, 2-Ú) -- küllî matris ameliyesi YOK
-
-    SORGU KANONİKTİR (ferman 2-Ú-E): ne öğrenilir ne dışarıdan gelir.
-    KAİDE BİR KANUNLAR MANZUMESİDİR; üç usul SIRAYLA, üçü de koşar --
-    her biri bir evvelkinin neticesini girdi alır:
-
-    1 YONEDA -- DIŞ MÜNASEBET, hudut kanunları
-      Hom(−,a)     = ( ⟨Hâl_k | Hâl_a⟩ )  bütün k için   ← nesnenin ağı
-      tip.hudut    = 1 − |⟨birim Hom(−,a) | birim Hom(−,b)⟩|²
-      tip.temas    = toplam over k of |Hom_k(a)|·|Hom_k(b)| / (‖·‖·‖·‖)
-      Dokunan(a,b) = { k : |Hom_k(a)|·|Hom_k(b)| > ortanca(aynısı) }
-
-    2 KOHOMOLOJİ -- İÇ DOKU, korunum kanunları  (δ∘δ = 0)
-      Holonomi(k)        = ⟨a|b⟩⟨b|k⟩⟨k|a⟩            k ∈ Dokunan(a,b)
-      kategori.korunum   = | ortalama over k of e^(i·arg Holonomi(k)) |
-                           ← 1 ise kapalı 1-eşzincir TAM: sınıf âşikâr
-      kategori.çekirdek  = |{ k : |arg Holonomi(k)| ≤ ortanca }| / |Dokunan|
-      Çekirdek(a,b)      = o k'ler                     ← bozulamaz omurga
-
-    3 LIE / CASIMIR -- DİNAMİK, dönüşüm kanunları
-      e₁ = Hâl_a,  e₂ = birim( Hâl_b − ⟨e₁|Hâl_b⟩e₁ ),  X = e₂e₁† − e₁e₂†
-      α_k = ⟨e₁|Hâl_k⟩,  β_k = ⟨e₂|Hâl_k⟩,  w_k = |α_k|² + |β_k|²
-      Açı_ab       = arccos |⟨Hâl_a | Hâl_b⟩|      ← taşıma zamanı, ÖLÇÜLÜR
-      U            = Evrim(σ_y, σ_x, Açı_ab)       ← Trotter-Suzuki, çerçevede
-      uzay.dönüşüm = ortalama over Çekirdek of ( 1 − |⟨z_k | U z_k⟩|² )
-                     ← SONLU zamanlı taşınma: üreteç çekirdeği nereye götürdü
-      uzay.casimir = ‖ ortalama over Çekirdek of BlochVektörü(α_k, β_k) ‖
-                     ← su(2) dönmesi altında DEĞİŞMEZ
-
-    Kaide(a,b)     = ( tip.hudut , tip.temas
-                     , kategori.korunum , kategori.çekirdek
-                     , uzay.dönüşüm , uzay.casimir )
-                     ← SIRA DEĞİŞMEZ: dış hudut çizilmeden iç omurga
-                       aranmaz, omurga sabitlenmeden dinamik hesaplanmaz
-    KanunTayfı     = toplam over âlem of Kaide(âlem) × Ağırlık(âlem)
-                     ← her kanunun ölçülen nispeti RAPORDA görünür;
-                       tutmayan kanun gizlenmez, nispetiyle kırmızı yanar
-    Ölçek          = ortancaSapma(Kaide over bütün çiftler)   ← eşik ÖLÇÜLÜR (1-J)
-    İmza(a,b)      = yuvarla(Kaide(a,b) / Ölçek)
-    Âlem           = aynı İmzalı münasebetlerin öbeği
-    ÂlemAdı        = Tayf türü + hangi MERTEBENİN kanunları ölçeği aşıyorsa
-                     ( tip · kategori · uzay ), hiçbiri aşmıyorsa "serbest"
-    Vecih(Âlem)    = izdüşüm( birim( toplam over öbek of AyırtEdiciYön(a,b) ) )
-                     AyırtEdiciYön(a,b) = birim( Hâl_a − ⟨Hâl_b|Hâl_a⟩·Hâl_b )
-    Tayf(Âlem)     = ( Nispet(ℓ | öbeğin kutupları) )  BÜTÜN ℓ için, normalize
-                     ℓ = 0 nokta · 1 uzay · 2 kategori · 3 tip · 4… Postnikov
-                     ← ÇÖKERTİLMEZ (ferman 2-Ú-B): argmax ile tek mertebe
-                       SEÇİLMEZ; bütün tipler süperpozisyonda taşınır,
-                       tip çorbası analitik çözümlenir ve tayf raporlanır
-    TipTayfı       = toplam over âlem of  Tayf(âlem) × Ağırlık(âlem)
-                     ← "hangi tipler varmış, kaideleri neymiş" bundan okunur
-
-    Yaprak(A,B)    = Örtüşme'si EN DÜŞÜK vecih   ← şahitsiz, en çok ayıran
-
-    MİZANDA VECİH -- HER KEFE KENDİ ATEŞLEMESİYLE (ferman 2-Ú-D)
-
-    Mizan bir vecih cetveli tutmaz; vecihe ihtiyaç duyan her kefe
-    kendi merakını ateşler, vechini doğurur, neticesini alır, kapatır:
-
-      HalkaKefesi   = MeraklaÇöz( ilk hâller , Merak(ilk hâller, ω) ,
-                                  v ↦ ( Spektrum(v) , HipotezHalkası(v) ) )
-      MukayeseKefesi= MeraklaÇöz( bütün hâller , Merak(bütün hâller, ω) ,
-                                  v ↦ MukayeseMelekesi(cins = Âlem(v), v) )
-
-    MUKAYESE MELEKESİ -- durumu EVİRMEZ, hüküm çıkarır
-
-    Δ_n(ψ₁…ψ_n) = ⟨ψ₁|ψ₂⟩⟨ψ₂|ψ₃⟩ … ⟨ψ_n|ψ₁⟩ = r_n · e^(i·Φ_n)
-    Φ_n         = toplam over k=2..n−1 of Φ₃(ψ₁, ψ_k, ψ_{k+1})   (mod 2π)
-    Halka boyu  : BÜTÜN BOYLAR BERABER, n = 2 … m                 (ferman 2-Ú)
-    Tenakuz     eğer Φ_n → π ·  Kısırdöngü eğer Φ_n → 0 ·  Kopuk eğer r_n = 0
-    Yırtık      eğer sapma(üçgen*) > 3 × ortanca(sapma)
-
-    Cins(hâl)   = ‖Vecih(hâl)‖'i AZAMÎ yapan vechin ÂLEMİ
-                  ← HER ÂLEM KENDİ HALKASINI KAPATIR (ferman 1-Ç, 2-Ú):
-                    veri cinsi (arc/sözlü) yahut kapı hükmü CİNS DEĞİLDİR
-
-    HAFIZA YENİDEN TERTİBİ -- silme YOK, terfi VAR
-
-    Yaprak   = Örtüşme'si EN DÜŞÜK Vecih          ← şahit yok, ayırt eden vecih
-    Ayırt    = 1 − Örtüşme(Yaprak)
-    Kök      = MahallîYazmaç.CartanEkle("modalite." + Yaprak, Ayırt)
-               ← yeni ORTOGONAL kök; evvelki köklerin adresi KAYMAZ (2-İ)
-    Hafıza   ← TabanDeğiştir(birim(A + B), Yaprak, ω = cos Φ₃)
-    Tertip KÜME KAPANINCA bir defa koşar; yırtıklar deftere birikir.
+```
+Δ_n(ψ₁…ψ_n) = ⟨ψ₁|ψ₂⟩⟨ψ₂|ψ₃⟩ … ⟨ψ_n|ψ₁⟩ = r_n · e^(i·Φ_n)
+Φ_n         = Σ_{k=2}^{n−1} Φ₃(ψ₁, ψ_k, ψ_{k+1})   (mod 2π)
+Halka boyu  : BÜTÜN BOYLAR BERABER, n = 2 … m      ← sabit boy YOK
+Tenakuz Φ_n → π  ·  Kısırdöngü Φ_n → 0  ·  Kopuk r_n = 0
+Sorites tuzağı O(1)'de: yerel ⟨ψ_k|ψ_{k+1}⟩ ≈ 1 iken kapalı halkada Möbius
+Cins(hâl)   = ‖Vecih(hâl)‖'i AZAMÎ yapan vechin ÂLEMİ
+              ← HER ÂLEM KENDİ HALKASINI KAPATIR; veri cinsi CİNS DEĞİLDİR
+```
 
 ---
 
-## 7. KONUŞMA -- HER İKİ KAPIDA DA
+## § 4. SADAKAT DEVRESİ -- HER DURUMDA KOŞAN DOĞRULAYICI
 
-    Bağlam_basamak = TabanAçılımı(tiktoken(Suâl), VeriLifi, BasamakSayısı)
-                     ← modülo katlama YOK; her belirteç basamağa açılır
+| | |
+| :-- | :-- |
+| **GİRDİ** | O anda mevcut **bütün** süperpozisyonlar |
+| **ÇIKTI** | Süzülmüş süperpozisyonlar + dört sayı |
 
-    VECİH CÜMLE ÖMÜRLÜDÜR -- adım ömürlü DEĞİL (ferman 2-Ú-D)
-    Bir defa açılır, cümle boyunca açık kalır, DURMA HÜKMÜ gelince kapanır.
+```
+her Ψ için:
+    Güç       = |Genlik|²
+    MANTIKSIZ = kod uzayının dışı (parite) ∪ sonlu olmayan ∪ imkânsız işaret
+    MÜMKÜN    = kod uzayının içi, Güç ≥ ortanca(içerideki Güç)
+    MEÇHUL    = kod uzayının içi, 0 < Güç < ortanca     ← DOKUNULMAZ
 
-    AçılışHâlleri = ( İleriGeçiş(Bağlam[i : i+Pencere]) )  i = 0, P, 2P …
-                    ← cümlenin suâli neyse vecih ONDAN doğar
-    Merak         = { k : Şüphe(k) > Yakîn(k) }       ← 𝒪15 ATEŞLEMESİ, BİR KEZ
-                    eşik sabit değil: şüphe ile yakîn birbiriyle tartılır (1-J)
-    Vecihler      = VecihAç(AçılışHâlleri, Merak)     ← Merak sönükse BOŞ
+    Ψ[MANTIKSIZ] ← 0 ;  Ψ ← Ψ / ‖Ψ‖
+    İmha   += |MANTIKSIZ ∩ dolu|
+    Meçhul += |MEÇHUL|
 
-    tekrarla:                                          ← AMELİYE: cümlenin tamamı
-      Hâl        = İleriGeçiş(Yerleştir(Bağlam))
-      eğer Durma(adım):  dur                           ← üst hudut YOK (2-Ó-B)
-      Dağılım    = toplam over v ∈ Vecihler of
-                     Ağırlık(v) · Marjinal(İzdüşüm(v, Hâl)) / Σ Ağırlık
-                   Vecih yoksa düz Marjinal(Hâl)       ← nedensel cephede
-      Budanmış   = Buda(Dağılım, Hafıza.cerh)
-      Basamak_yeni = enbüyükArgüman( ∇log Budanmış / g_FubiniStudy )
-                     ← ZAR ATILMAZ (ferman 2-Ĵ): determinist okuma
-      Bağlam     ← Bağlam + Basamak_yeni
+ÜÇ KÜME ŞARTTIR. İkiye indirmek meçhulü mantıksız saymaktır ve
+kendimizi kilitler (ferman 2-Đ).
 
-    VecihKapat(Vecihler)                               ← NETİCE ALINDI, KAPANDI
-                   ← açık kalan vecih sayısı SIFIR olmalıdır; kapanış
-                     ameliyenin kendisi hata verse de icra edilir
+Meçhul = 0 ise devre FAZLA ELİYOR demektir; sayı raporda görünür.
+Muaf   ≠ ∅ ise invaryant I8 ihlâl edilmiştir; taht DURUR.
 
-    Durma(adım) = UzunlukKatmanı[adım] > toplam over k>adım of UzunlukKatmanı[k]
-                  ← uzunluk bir KARAR değil, süperpozisyonun hükmü (2-Õ)
-
-    Hafıza ← Yaz(Yazmaç_son, ω = e^(−Bedel/uzunluk), hüküm = tasdik)
-             ← konuşma hafızaya BAĞLIDIR (ferman 2-Ó)
-
-    Belirteç = TabandanTopla(Basamak[BasamakSayısı'lı], VeriLifi)
-    Cevap    = tiktoken⁻¹(Belirteç eğer Belirteç < n_vocab)
-               taşan Belirteç SUSTURULMAZ, sayılır (ferman 2-L)
-
-    Kesinlik = (Güven − 1/VeriLifi) / (1 − 1/VeriLifi),   Güven = e^(−Bedel/boy)
-    Sükût eğer AlanDeğeri(sükût) > Kesinlik  ya da  Şüphe = teâruz
-           ← eşik SABİT DEĞİL: cevabın kendi kesinlik nispeti (ferman 1-J)
-
-    Tâlim ile Çıkarım arasındaki TEK fark:  çıkarımda Adım koşmaz.
-
-    ÜRETİM YOLU TEKTİR (ferman 1-H). İkinci bir üretim yolu (kendi
-    yazmacını kuran, parametresiz, bağlamı (t+1)/(k+1) diye tek skalere
-    ezen) vardı ve kesildi; onunla beraber motor seçimi de kalktı.
-
-    Mihenk: her ~300 saniyede  Cevap(Parametre_şimdiki, sabitSuâl)  →  kütük
+KAPSANAN SÜPERPOZİSYONLAR:
+    veri · parametre · mahallî · hafıza · mesele(Fock) · çözüm · uzunluk
+    ← liste KAPALI DEĞİLDİR; yeni süperpozisyon doğduğunda devre ona da
+      vurulur, aksi hâlde "bağlanmamış" diye sayılır (ferman 2-Ý, 2-Đ)
+```
 
 ---
 
-## 8. ÖLÇÜLEN HUDUTLAR -- İDDİA EDİLEN VE ARKASINDA DURULAN
+## § 5. KONUŞMA ALT MAKİNESİ -- J1 … J5
 
-    Genlik.büyüklük ∈ kayanNokta   →  FAZ DEFTERİ Galois'dadır, genlik
-                                      büyüklüğü süreklidir ve öyle kalır
-    Aşkın çağrı ∈ canlı yol        →  formül hangi fonksiyonu söylüyorsa
-                                      O ÇAĞRILIR; sayılır, gizlenmez (2-Ş)
-    ReedMuller(Faz) = 12           →  İz(α·x¹²) = İz(α^¼·x³): derece-12 iz
-                                      terimi derece-3'e TAM iner (7-B)
-    Klonlanamazlık  = ihlâl edildi →  kasten; bedeli donanım taşınabilirliği,
-                                      karşılığı doğruluk ve hız (ferman 1-T)
+```
+J1 LOGİT ──θ_j = π·p_j──▶ J2 FAZ KAYDIRICI ──P_jeton──▶ J3 NORM
+                                                           │
+                          ‖Ψ‖² = 0 ──▶ J4 CEZA (negatif logit maskesi)
+                                                           │
+                          ‖Ψ‖² > 0 ──▶ J5 KELÂM ──durma?──▶ dur / devam
+```
 
-    Cevap(mihenk) = ""                     boş
-        ölçüldü: geçersiz 1801/1801 = %100  (kestirdiğim %81 değil)
-        sebep 1: mihenk Ayna'yı geçirmiyordu → düz enbüyük → sabit nokta
-        sebep 2: külliyatta Makam daima (Pencere mod BasamakSayısı) idi,
-                 yâni ÜST BASAMAK hiç hedef olmuyordu
-        ikisi de düzeltildi; Hata_taşma artık kefe VE hudut çarpanıdır
+| | |
+| :-- | :-- |
+| **GİRDİ** | `Bağlam` · `Netice` · `Hafıza` · `Vecihler` |
+| **ÇIKTI** | `Belirteç dizisi` yahut `Sükût` |
 
-    Cevap(mihenk) = " cei ёсць ёсць ёsць …"   hezeyan, sekizde yedisi tekrar
-        ölçüldü: geçersiz 0/8, ayrı basamak 2, kabul 1/1, adım‖9,4e−1‖
-        evvelki koşuda aynı yerde: geçersiz 8/8, ayrı basamak 1 SABİT NOKTA
-        SABİT NOKTANIN SEBEBİ BULUNDU VE KESİLDİ: Yerleştir 0. basamağa
-            yazıyor, Hâl ise kelâm sektöründen (v ≈ 0,378…0,486·VeriLifi)
-            okuyordu -- İKİ KOORDİNAT, KESİŞİM BOŞ. Artık ikisi de
-            basamak eksenidir.
-        ÖLÇÜLEN: cevap hezeyandır. İDDİA EDİLEN: yolun açıldığı --
-            adım 1'de, hiç eniyileme koşmadan cevabın değişmesi delildir.
-        Küme(temiz) = 0                        üç hudut henüz sönmedi
+```
+Bağlam_basamak = TabanAçılımı(tiktoken(Suâl), VeriLifi, BasamakSayısı)
+                 ← modülo katlama YOK; her belirteç basamağa açılır
 
-    Üç eğimin mutabakatı = 2.2e-16   senet sadakati = 1.3e-15
-        ölçüldü ve TUTUYOR. Kod okunarak bulunan dört kusurdan sonra:
-        senedin eksikliği, durumun harita sanılması, yalan söyleyen
-        geri ölçü, ve λ'da evrik/eşlenik karışması.
-    Eğimin kapsadığı serbestlik = 130 / 676 tahsis edilen (%19.2)
-        ÖLÇÜLEN: üreteci bildirilmemiş kapıya bağlı parametre kımıldamaz;
-        eğim ancak üreteci ispatlanmış kapıların serbestliğini kapsar.## 0-A HENDESE TEŞHİSİ (Zabıt 11, I. safha)
+VECİH CÜMLE ÖMÜRLÜDÜR: bir defa açılır, cümle boyunca açık kalır,
+DURMA HÜKMÜ gelince kapanır (ferman 2-Ú-D).
+  Merak    = { k : Şüphe(k) > Yakîn(k) }      ← 𝒪15 ateşlemesi, BİR KEZ
+  Vecihler = VecihAç(AçılışHâlleri, Merak)    ← Merak sönükse BOŞ
 
-    GeçişDizeyi[a,b]  = sayım(basamak_a → basamak_b) / satırToplamı
-    KarşılıklıHaber   = Σ Ortak·log(Ortak / (Satır·Sütun))
-    Sapma             = ‖GeçişDizeyi − GeçişDizeyiᵀ‖
-    Nilpotent         = en küçük k öyle ki GeçişDizeyi^k = 0
-    Denklik           = ⟨GeçişDizeyi(ilkYarı), GeçişDizeyi(sonYarı)⟩ / normlar
-    Mesafe            = ensKısaYol(−log(GeçişDizeyi + GeçişDizeyiᵀ))
-    δ_Gromov          = enbüyük |(d_ab+d_cd) − enbüyük(d_ac+d_bd, d_ad+d_bc)|
+tekrarla:
+  Hâl        = İleriGeçiş(Yerleştir(Bağlam))
+  eğer Durma(adım): dur                        ← ÜST HUDUT YOK (2-Ó-B)
+  Dağılım    = Σ_{v ∈ Vecihler} Ağırlık(v)·Marjinal(İzdüşüm(v, Hâl)) / ΣAğırlık
+               Vecih yoksa düz Marjinal(Hâl)   ← nedensel cephede
+  Budanmış   = Buda(Dağılım, Hafıza.cerh)
+  jeton      = enbüyükArgüman( ∇log Budanmış / g_FubiniStudy )
+               ← ZAR ATILMAZ (ferman 2-Ĵ): determinist Fubini-Study okuması
+  GERİ YOL   : n(jeton) = ‖P_kısıt·Ψ(jeton)‖² / ‖Ψ‖²
+               n = 0 ⇒ negatif logit cezası, jeton GERİ ALINIR
+               ← aynı jeton İKİNCİ DEFA maskelenemez (kısırdöngü, I4)
+  Bağlam    ← Bağlam + jeton
 
-    Mertebe = enbüyükArgüman(
-        1/(1+Haber+ŞartSapması),                        ← ayrık nokta
-        (1−ÜçgenİhlâliNispeti)/(1+Sapma),               ← sürekli uzay
-        Sapma × (1 eğer Nilpotent>0 değilse 1/4),       ← yönlü kategori
-        enbüyük(0, Denklik) × (1+Haber))                ← univalent tip
+VecihKapat(Vecihler)        ← açık kalan vecih SIFIR olmalıdır
 
-    DikeyAsansör = Mertebe. kat
-    BAĞ: ParitéLifi = DikeyAsansör.kat   (elle verilmediyse)
-         yâni teşhis edilen katman, mantık muhafızı lifini seçer
+Durma(adım) = UzunlukKatmanı[adım] > Σ_{k>adım} UzunlukKatmanı[k]
+              ← uzunluk bir KARAR değil, süperpozisyonun hükmü (2-Õ)
 
----
+Hafıza ← Yaz(Yazmaç_son, ω = e^(−Bedel/uzunluk), hüküm = tasdik)
+         ← KONUŞMA HAFIZAYA BAĞLIDIR (ferman 2-Ó)
 
-## 0-B DHR SÜPERSEÇİM AYRIŞIMI (Zabıt 11, II. safha)
+Kesinlik = (Güven − 1/VeriLifi) / (1 − 1/VeriLifi),  Güven = e^(−Bedel/boy)
+Sükût eğer AlanDeğeri(sükût) > Kesinlik  yahut  Şüphe = teâruz
+       ← eşik SABİT DEĞİL, cevabın kendi kesinlik nispeti (ferman 1-J)
 
-    CasimirYükü[seviye] = Σ_eksen biteSayısı(seviyeninEksenBasamağı)
-    Sektör(q)           = {seviye | CasimirYükü[seviye] = q}
-    Pay[yığın, q]       = Σ_{seviye ∈ Sektör(q)} |Yazmaç[yığın, seviye]|²
+KELÂM İKİ ŞARTA BAĞLIDIR (ferman 2-Ø): ya burhan tamamlanmıştır, ya iç
+muhakeme tıkanmıştır ve SUAL TEVCİH EDİLİR. Üçüncüsü yoktur.
 
-    CartanFazı[seviye]  = −Açı[CasimirYükü[seviye]]
-    Yazmaç              = Faz(Yazmaç, CartanFazı)      ← FİİLEN VURULUR
-
-    Sızıntı             = |1 − Σ_q ortalama(Pay[·, q])|
-    AraYaGirmeİhlâli    = sayım(sıralıPay[i] < sıralıPay[i+1]) / denenen
-    BlokKöşegenArtığı   = 1 − Σ_q (Σ_{Sektör(q)}|Yazmaç|²)² / (Σ|Yazmaç|²)²
-
-    BAĞ: üçü de MİZANA KEFE olarak girer (bkz. § 4)
+Mihenk: her ~300 saniyede  Cevap(p_şimdiki, sabit İngilizce suâl) → kütük
+```
 
 ---
 
+## § 6. ÖLÇÜLEN HUDUTLAR VE AÇIK ÇELİŞKİLER
 
+### 6-A. İDDİA EDİLEN VE ARKASINDA DURULAN
+
+| İddia | Sayı / delil | F |
+| :-- | :-- | :-- |
+| Faz defteri Galois'dadır; genlik büyüklüğü süreklidir ve öyle kalır | `Z_m` tamsayı üssü + Palmer çeyreği | 2-J |
+| Aşkın çağrı gövdede serbesttir, **sayılır** | beyanda görünür | 2-Ş, 2-U |
+| Derece-12 iz terimi derece-3'e **tam** iner | `İz(α·x¹²) = İz(α^¼·x³)` | 7-B |
+| Klonlanamazlık **kasten** ihlâl edildi | bedel: donanım taşınabilirliği; karşılık: doğruluk ve hız | 1-T |
+| Üç eğimin mutabakatı | `2.2e-16` | 2-P |
+| Senet sadakati | `1.3e-15` | 2-P |
+| Eğimin kapsadığı serbestlik | `130 / 676` tahsis edilen (**%19.2**) | 5 |
+| DUVAR kodda **ilga edildi** | `mecz` dört memurla koşar, koordinat elenmez | 1-Ğ, 2-Ú |
+| Mihenk cevabı hezeyandır | ölçüldü; geçersiz 0/8, ayrı basamak 2 | 5 |
+| Küme(temiz) | `0` -- üç hudut henüz sönmedi | 1-I |
+
+### 6-B. AÇIK ÇELİŞKİLER -- GİZLENMEZ, SAYILIR
+
+| # | Çelişki | Hüküm |
+| :-- | :-- | :-- |
+| 1 | `_psi` hâlâ yaşıyor (`nefs.y.psi`), ferman 2-Ĝ ise **kazınmasını** emrediyor | Kazıma yarım; sadakat devresi şimdilik `psi` üstünden koşuyor. Tam kazıma ayrı bir tertibattır ve **sorulacaktır** (2-D) |
+| 2 | `QAyar.kulli_alanlar` on bir bölge sayıyor; ferman 1-Ş **yazmaçta bölge yoktur** diyor | Bu satır silinmeden *"yazmaçta bölge kalmadı"* denemez |
+| 3 | Pencere haddi ferman 2-O/2-Õ'de `1 048 576`; koşan pencere ise çözüm uzayı makinesinin hükmü | Hadd bâkîdir; koşan değer makinenin ölçtüğüdür ve raporda **ikisi yan yana** yazılır |
+| 4 | Mantık yürütme (`nefs/usul.py`) kodda tam fakat makineye **vidalanmadı** | **TEHİR EDİLDİ** (2-Đ): kesilmez, padişahın kararını bekler |
+| 5 | Müşahede (`nefs/musahede.py`) ARC ızgarasına mahsus | ARC vasfı **imha edilecek**; kalacak kanadın taşıyıcısı açık sualdir (2-Œ) |
+| 6 | Kalp uzvu yok | **TEHİR EDİLDİ** (2-Ł): ahlâk ve taklit vicdanının yeri olacak |
+| 7 | Uzunluk süperpozisyonu tahttan geçmiyor | Sadakat devresinde **"bağlanmamış"** diye sayılıyor; kırmızı yanıyor |

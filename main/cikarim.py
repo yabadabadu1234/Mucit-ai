@@ -14,7 +14,8 @@ import numpy as np
 
 from nefs.musahede import gorevleri_getir
 from nefs.hafiza import Hafiza
-from nefs.sadakat import sadakat_beyani
+from nefs.sadakat import (SadakatAyari, sadakat_beyani, sadakat_devresi,
+                          sadakat_devre_beyani)
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import cikarim_beyani
 
@@ -142,6 +143,12 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
     uzay = mukayese_filtresi(uzay, hafiza=hafiza,
                              mahalli=getattr(nefs, "mahalli", None))
     netice = cozum_uzayi_kapat(uzay, sual)
+    sadakat_devresi(nefs=nefs, hafiza=hafiza, netice=netice,
+                    ayar=SadakatAyari(
+                        acik=int(ayar.sadakat_acik),
+                        parite_lifi=int(ayar.parite_lifi),
+                        lif_yapisi=tuple(ayar.lif_yapisi),
+                        sozluk=int(ayar.sozluk)))
     c = soyle(gorev, nefs=nefs, sozluk=int(ayar.sozluk),
               pencere=int(netice["pencere"]), hafiza=hafiza,
               netice=netice,
@@ -187,11 +194,16 @@ def degerlendirme_kosusu(kume: str = "training", azami: int = 24,
             cozulen += 1
     sad = sadakat_beyani()
     sup = suphe_beyani()
+    devre = sadakat_devre_beyani()
     assert int(sad["çağrı"]) > 0, (
         "MANTIĞA SADAKAT ÇIKARIMDA KOŞMADI -- 7/24 iddiası düşer.")
+    assert int(devre["çağrı"]) > 0 and not devre["muaf"], (
+        "SADAKAT DEVRESİ ÇIKARIMDA EKSİK KOŞTU -- çağrı %d, muaf %r "
+        "(ferman 2-Đ, invaryant I8)"
+        % (int(devre["çağrı"]), devre["muaf"]))
     return {"küme": kume, "deneme": deneme, "konuşan": konusan,
             "hazine": yuk, "budanan": budanan,
-            "sadakat": sad, "şüphe": sup,
+            "sadakat": sad, "şüphe": sup, "sadakat_devresi": devre,
             "susan": deneme - konusan, "tam_çözülen": cozulen,
             "ortalama_hücre_isabeti":
                 float(np.mean(hucre)) if hucre else 0.0,

@@ -1,14 +1,17 @@
 from __future__ import annotations
 
 import math
+import time
 from dataclasses import dataclass
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
 __all__ = ["SadakatAyari", "parite_maskesi", "parite_dizini",
            "tenakuz_alarmi", "mantiki_degil", "sadakat_uygula",
-           "sadakat_beyani", "sadakat_sifirla"]
+           "sadakat_beyani", "sadakat_sifirla",
+           "BILINEN_SUPERPOZISYONLAR", "sadakat_devresi",
+           "sadakat_devre_beyani", "sadakat_devre_metni"]
 
 
 @dataclass
@@ -17,6 +20,7 @@ class SadakatAyari:
     acik: int = 1
     parite_lifi: int = 2
     lif_yapisi: Tuple[int, ...] = (16, 16, 16)
+    sozluk: int = 0
 
     def __post_init__(self) -> None:
         assert len(self.lif_yapisi) >= 1, "lif yapısı BOŞ olamaz"
@@ -185,6 +189,247 @@ def sadakat_beyani() -> Dict[str, Any]:
             "kapalı_çağrı": int(_SAYAC["kapalı_çağrı"])}
 
 
+BILINEN_SUPERPOZISYONLAR: Tuple[str, ...] = (
+    "veri", "parametre", "mahallî", "hafıza", "uzunluk", "çözüm", "mesele")
+
+
+_DEVRE: Dict[str, float] = {
+    "çağrı": 0.0, "süperpozisyon": 0.0, "imha": 0.0, "meçhul": 0.0,
+    "dal": 0.0, "tashih": 0.0, "saniye": 0.0, "açık": 1.0}
+
+_KAPSANAN: Dict[str, float] = {}
+_MUAF: List[str] = []
+_BAGLANMAMIS: List[str] = []
+
+
+def _uc_kume(guc: np.ndarray, mantiksiz: np.ndarray
+             ) -> Tuple[np.ndarray, np.ndarray, int]:
+    g = np.asarray(guc, float).reshape(-1)
+    m = np.asarray(mantiksiz, bool).reshape(-1)
+    assert g.size == m.size, (
+        "sadakat devresi: güç %d, mantıksızlık maskesi %d -- ölçü ile "
+        "hüküm aynı uzayda olmalı" % (g.size, m.size))
+    ic = (~m) & (g > 0.0)
+    if not bool(ic.any()):
+        return m, ic, 0
+    esik = float(np.median(g[ic]))
+    mechul = ic & (g < esik)
+    return m, mechul, int(np.count_nonzero(mechul))
+
+
+def _dali_ele(ad: str, genlik: np.ndarray, mantiksiz: np.ndarray
+              ) -> np.ndarray:
+    G = np.asarray(genlik)
+    duz = G.reshape(-1)
+    guc = np.abs(duz) ** 2
+    imha, _mechul, n_mechul = _uc_kume(guc, mantiksiz)
+    n_imha = int(np.count_nonzero(imha & (guc > 0.0)))
+    if n_imha:
+        duz = duz.copy()
+        duz[imha] = 0
+        nrm = float(np.linalg.norm(duz))
+        assert nrm > 0.0, (
+            "SADAKAT DEVRESİ %r SÜPERPOZİSYONUNU TAMAMEN SÖNDÜRDÜ -- "
+            "mantıksız sayılan küme durumun tamamıymış. Bu bir sayı "
+            "hatası değil, maskenin yanlış kurulduğunun delilidir "
+            "(ferman 2-Đ: yalnız mantıksız olan imha edilir)." % ad)
+        duz = duz / nrm
+        G = duz.reshape(G.shape)
+    _DEVRE["imha"] += float(n_imha)
+    _DEVRE["meçhul"] += float(n_mechul)
+    _DEVRE["dal"] += float(guc.size)
+    _DEVRE["süperpozisyon"] += 1.0
+    _KAPSANAN[ad] = _KAPSANAN.get(ad, 0.0) + 1.0
+    return G
+
+
+def _sonlu_degil(x: np.ndarray) -> np.ndarray:
+    return ~np.isfinite(np.asarray(x).reshape(-1))
+
+
+def _veri(nefs, a: SadakatAyari) -> bool:
+    y = getattr(nefs, "y", None)
+    psi = getattr(y, "psi", None) if y is not None else None
+    if not isinstance(psi, np.ndarray):
+        return False
+    P = psi if psi.ndim == 2 else psi.reshape(1, -1)
+    d = int(P.shape[-1])
+    parite = parite_dizini(d, a)
+    mantiksiz = np.tile(parite, P.shape[0]) | _sonlu_degil(P)
+    Q = _dali_ele("veri", P, mantiksiz)
+    y.psi = Q if psi.ndim == 2 else Q.reshape(-1)
+    return True
+
+
+def _iki_sutun(ad: str, hal: np.ndarray) -> np.ndarray:
+    H = np.asarray(hal, float)
+    g = H[..., 0]
+    mantiksiz = _sonlu_degil(g) | (g.reshape(-1) < 0.0)
+    G = _dali_ele(ad, g, mantiksiz)
+    H = H.copy()
+    H[..., 0] = np.asarray(G, float).reshape(g.shape)
+    f = H[..., 1]
+    tashih = int(np.count_nonzero(np.abs(f) > math.pi))
+    if tashih:
+        H[..., 1] = np.vectorize(math.remainder)(f, 2.0 * math.pi)
+        _DEVRE["tashih"] += float(tashih)
+    return H
+
+
+def _mahalli(nefs, mahalli) -> bool:
+    mh = mahalli if mahalli is not None else getattr(nefs, "mahalli", None)
+    hal = getattr(mh, "hal", None) if mh is not None else None
+    if not isinstance(hal, np.ndarray) or hal.size == 0:
+        return False
+    mh.hal = _iki_sutun("mahallî", hal)
+    return True
+
+
+def _parametre(nefs, parametre) -> bool:
+    pq = parametre if parametre is not None else getattr(nefs, "pq", None)
+    g = getattr(pq, "genlik", None) if pq is not None else None
+    if not isinstance(g, np.ndarray) or g.size == 0:
+        return False
+    mantiksiz = _sonlu_degil(g) | (np.asarray(g, float).reshape(-1) < 0.0)
+    pq.genlik = np.asarray(_dali_ele("parametre", g, mantiksiz), float)
+    f = np.asarray(getattr(pq, "faz", np.zeros(0)), float)
+    tashih = int(np.count_nonzero(np.abs(f) > math.pi))
+    if tashih:
+        pq.faz = np.vectorize(math.remainder)(f, 2.0 * math.pi)
+        _DEVRE["tashih"] += float(tashih)
+    return True
+
+
+def _hafiza(hafiza) -> bool:
+    kayitlar = getattr(hafiza, "kayitlar", None)
+    if not kayitlar:
+        return False
+    for k in list(kayitlar):
+        x = np.asarray(getattr(k, "x", np.zeros(0)))
+        if x.size == 0:
+            continue
+        k.x = np.asarray(_dali_ele("hafıza", x, _sonlu_degil(x)), float)
+    return True
+
+
+def _mesele(fock) -> bool:
+    modlar = getattr(fock, "modlar", None)
+    if not modlar:
+        return False
+    ad = sorted(modlar)
+    dol = np.array([float(modlar[k].doluluk) for k in ad], float)
+    mantiksiz = _sonlu_degil(dol) | (dol < 1.0)
+    for k, olmaz in zip(ad, mantiksiz):
+        if bool(olmaz):
+            fock.yok_et(k)
+    _dali_ele("mesele", np.sqrt(np.maximum(dol, 0.0)), mantiksiz)
+    return True
+
+
+def _cozum_ve_uzunluk(netice, a: SadakatAyari
+                      ) -> Tuple[Optional[bool], Optional[bool]]:
+    if not isinstance(netice, dict):
+        return None, None
+    psi = netice.get("hal")
+    c: Optional[bool] = None
+    if isinstance(psi, np.ndarray) and psi.size:
+        netice["hal"] = _dali_ele("çözüm", psi, _sonlu_degil(psi))
+        c = True
+    boy = netice.get("uzunluk_genliği")
+    u: Optional[bool] = None
+    if isinstance(boy, np.ndarray) and boy.size:
+        n = int(netice.get("pencere", 0) or 0)
+        sira = np.arange(boy.size, dtype=float)
+        mantiksiz = (_sonlu_degil(boy) | (sira < 1.0)
+                     | ((sira > float(n)) if n > 0 else False))
+        netice["uzunluk_genliği"] = _dali_ele("uzunluk", boy, mantiksiz)
+        u = True
+    return c, u
+
+
+def sadakat_devresi(nefs=None, hafiza=None, fock=None, netice=None,
+                    mahalli=None, parametre=None,
+                    ayar: Optional[SadakatAyari] = None) -> Dict[str, Any]:
+    a = ayar or SadakatAyari()
+    t0 = time.perf_counter()
+    _DEVRE["çağrı"] += 1.0
+    _MUAF.clear()
+    _BAGLANMAMIS.clear()
+    if not int(a.acik):
+        _DEVRE["açık"] = 0.0
+        _MUAF.extend(BILINEN_SUPERPOZISYONLAR)
+        _DEVRE["saniye"] += time.perf_counter() - t0
+        return sadakat_devre_beyani()
+    _DEVRE["açık"] = 1.0
+
+    def _var(deger: bool) -> Optional[bool]:
+        return True if deger else None
+
+    kosan: Dict[str, Optional[bool]] = {
+        "veri": _var(_veri(nefs, a)) if nefs is not None else None,
+        "mahallî": _var(_mahalli(nefs, mahalli)),
+        "parametre": _var(_parametre(nefs, parametre)),
+        "hafıza": _var(_hafiza(hafiza)) if hafiza is not None else None,
+        "mesele": _var(_mesele(fock)) if fock is not None else None,
+    }
+    c, u = _cozum_ve_uzunluk(netice, a)
+    kosan["çözüm"] = c
+    kosan["uzunluk"] = u
+
+    for ad in BILINEN_SUPERPOZISYONLAR:
+        h = kosan.get(ad)
+        if h is None:
+            _BAGLANMAMIS.append(ad)
+        elif not h:
+            _MUAF.append(ad)
+    _DEVRE["saniye"] += time.perf_counter() - t0
+    return sadakat_devre_beyani()
+
+
+def sadakat_devre_beyani() -> Dict[str, Any]:
+    b: Dict[str, Any] = dict(_DEVRE)
+    dal = max(1.0, _DEVRE["dal"])
+    b["imha_nispeti"] = float(_DEVRE["imha"] / dal)
+    b["meçhul_nispeti"] = float(_DEVRE["meçhul"] / dal)
+    b["muaf"] = list(_MUAF)
+    b["bağlanmamış"] = list(_BAGLANMAMIS)
+    b["kapsanan"] = dict(_KAPSANAN)
+    b["bilinen"] = len(BILINEN_SUPERPOZISYONLAR)
+    b["kapsama"] = float(len(_KAPSANAN)) / float(
+        len(BILINEN_SUPERPOZISYONLAR))
+    return b
+
+
+def sadakat_devre_metni(b: Optional[Dict[str, Any]] = None) -> str:
+    d = b if b is not None else sadakat_devre_beyani()
+    if not int(d.get("çağrı", 0)):
+        return ("  SADAKAT DEVRESİ: HİÇ KOŞMADI -- kırmızı (ferman 2-Đ)")
+    return "\n".join([
+        "  SADAKAT DEVRESİ -- İSTİSNASIZ HER SÜPERPOZİSYONDA (ferman 2-Đ)",
+        "    çağrı %d   dokunulan süperpozisyon %d   %.4f sn"
+        % (int(d["çağrı"]), int(d["süperpozisyon"]), float(d["saniye"])),
+        "    kapsama %d/%d  (%s)"
+        % (len(d.get("kapsanan") or {}), int(d["bilinen"]),
+           ", ".join(sorted(d.get("kapsanan") or {})) or "yok"),
+        "    MUAF KALAN      : %s   (boş olmalı -- invaryant I8)"
+        % (", ".join(d.get("muaf") or []) or "yok"),
+        "    BAĞLANMAMIŞ     : %s   (tahttan geçirilmeyen süperpozisyon)"
+        % (", ".join(d.get("bağlanmamış") or []) or "yok"),
+        "    dal %d   İMHA %d (%.6f)   MEÇHUL BIRAKILAN %d (%.6f)"
+        % (int(d["dal"]), int(d["imha"]), float(d["imha_nispeti"]),
+           int(d["meçhul"]), float(d["meçhul_nispeti"])),
+        "    Meçhul SIFIR ise devre fazla eliyor demektir: mantığı henüz",
+        "    görünmeyen ihtimal elenmez, yalnız MANTIKSIZ olan imha edilir.",
+        "    faz tashihi %d   (ölçü %s)"
+        % (int(d["tashih"]), "açık" if d.get("açık") else "KAPALI"),
+    ])
+
+
 def sadakat_sifirla() -> None:
     for k in _SAYAC:
         _SAYAC[k] = 0.0
+    for k in _DEVRE:
+        _DEVRE[k] = 0.0 if k != "açık" else 1.0
+    _KAPSANAN.clear()
+    _MUAF.clear()
+    _BAGLANMAMIS.clear()

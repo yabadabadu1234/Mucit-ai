@@ -47,7 +47,8 @@ from nefs.kararname import kararname
 from nefs.golge import (GolgeAyari, golge_al,
                         kestir)
 from nefs.sadakat import (SadakatAyari, sadakat_uygula,
-                          sadakat_beyani)
+                          sadakat_beyani, sadakat_devresi,
+                          sadakat_devre_beyani)
 from nefs.olcek import Kok, olcek, denge, olcek_beyani
 from nefs.belirtec import (belirtec_kapisi, belirtec_sozlugu,
                            belirtec_beyani)
@@ -478,6 +479,12 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     uzay = mukayese_filtresi(uzay, hafiza=hafiza,
                              mahalli=getattr(nefs, "mahalli", None))
     netice = cozum_uzayi_kapat(uzay, sual, hamiltonyen=hamiltonyen)
+    _sadakat_ayari = SadakatAyari(acik=int(ayar.sadakat_acik),
+                                  parite_lifi=int(ayar.parite_lifi),
+                                  lif_yapisi=tuple(ayar.lif_yapisi),
+                                  sozluk=int(ayar.sozluk))
+    sadakat_devresi(nefs=nefs, hafiza=hafiza, fock=fock, netice=netice,
+                    ayar=_sadakat_ayari)
     ayar.pencere = int(netice["pencere"])
     hafiza.kapasite = int(netice["hafıza_kapasitesi"])
     mzn = mizan_ayari(ayar)
@@ -528,6 +535,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         kume = list(_kume["v"])
         for i, p in enumerate(P):
             _sayac["çağrı"] += 1
+            sadakat_devresi(nefs=nefs, hafiza=hafiza, fock=fock,
+                            netice=netice, ayar=_sadakat_ayari)
             with olcer.saat(len(kume) * int(ayar.pencere)):
                 t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
                                 hafiza=hafiza.klon(),
@@ -688,6 +697,13 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     assert int(usl["yoklama"]) > 0, (
         "MANTIK YÜRÜTME KAPISI HİÇ YOKLANMADI -- ``nefs/usul.py`` "
         "bağlanmamış. Sefer açılmayabilir; yoklanmaması başka şeydir.")
+    _devre = sadakat_devre_beyani()
+    assert int(_devre["çağrı"]) > 0, (
+        "SADAKAT DEVRESİ HİÇ KOŞMADI -- ferman 2-Đ istisnasız bütün "
+        "süperpozisyonlarda doğrulayıcı devre ister.")
+    assert not _devre["muaf"], (
+        "SADAKAT DEVRESİNDEN MUAF KALAN SÜPERPOZİSYON VAR: %r -- "
+        "ferman 2-Đ 'istisnasız' der (invaryant I8)." % (_devre["muaf"],))
     son_sadakat = sadakat_uygula(psi_son.copy(), SadakatAyari(
         acik=int(ayar.sadakat_acik), parite_lifi=int(ayar.parite_lifi),
         lif_yapisi=tuple(ayar.lif_yapisi)))
@@ -772,6 +788,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "palmer": palmer,
             "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
             "sadakat": sad, "son_sadakat": son_sadakat,
+            "sadakat_devresi": sadakat_devre_beyani(),
             "mukayese": mukayese,
             "mukayese_melekesi": mukayese_melekesi_beyani(),
             "vecih": vecih_beyani(),

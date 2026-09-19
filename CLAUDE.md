@@ -156,6 +156,8 @@
 | 100 | Sırf ARC ızgarası için yazılmış, motora tabiî katkısı olmayan kod | Çöp (ölü dosya silinmez hükmünün tek istisnası) | 1-N-C |
 | 101 | "En uzun zamandır okumadığım dosya" ölçüsü (kendi kuyruğunu yer) | Her turda **en eskiden yazılmış** dosya | 2-H |
 | 102 | `nefs/hamiltonyen.py`, `nefs/cozum_uzayi.py` ayrı dosyaları | `mukayese.py` · `kulli_mizan.py` · `soyle.py` içine terkip | 3, 2-D |
+| 103 | Müşahedenin **ARC ızgarasına mahsus olma vasfı** | Mutlaka imha edilecek; kalacak olan kanadın taşıyıcısı **açık sualdir** | 2-Œ, 1-N-C |
+| 104 | Mantığa sadakatin bir **alarm** yahut **kefe** olması | **Doğrulayıcı devre**: mantıksız olanın fazını eler, imha eder | 2-Đ |
 
 ---
 
@@ -298,6 +300,11 @@
 | 111 | Faz **defteri** kanadında aşkın çağrı (orada `Z_m` tamsayı, Palmer çeyreği bâkî) | 2-J, 2-Ş |
 | 112 | `FORMUL.md`ye koşmayan ameliye yazmak; kod değişince aynı turda güncellememek | 2-K |
 | 113 | Kütüğü (`docs/KUTUK.md`) tahrif etmek | 2-Y |
+| 114 | **Mantığı henüz ayan beyan görünmeyen ihtimali elemek.** Maksat mantıksız olanı imha etmektir, kendimizi kilitlemek değil | 2-Đ |
+| 115 | Bir süperpozisyonu sadakat devresinden **muaf tutmak** -- hangisi olursa olsun | 2-Đ |
+| 116 | Çıkarımda özerk gaye koşturmak (özerklik **yalnız tâlimdedir**) | 2-Ħ |
+| 117 | Kalbi şimdi inşa etmek yahut kalbe bir vazife uydurmak | 2-Ł |
+| 118 | Mantık yürütmeyi (usul seferini) tek başıma makineye vidalamak -- **karar beklemektedir** | 2-Đ, 2-D |
 
 ---
 
@@ -513,6 +520,21 @@
 | 169 | Padişahın tayin ettiği sıra: **1** eğitim motoru tam doğru koşsun → **2** 41 melekenin **tamamı**, aynı maksat etrafında yeniden tarif edilsin → **3** kuyunun dibine varmadan durulmasın | 2-Ø |
 | 170 | İspat testle değil, **gerçek padişahı koşturmakla** olur | 2-Ø |
 
+## 3-I. MANTIĞA SADAKAT · ÖZERKLİK · TEHİR EDİLENLER
+
+| # | ZARURET | F |
+| :-- | :-- | :-- |
+| 171 | **MANTIĞA SADAKAT BİR DOĞRULAYICI DEVREDİR.** Bulmacanın kâidesi nasıl bir süzgeç olarak kullanılıyorsa, mantık da öyledir: **mantıken mümkün olmayanın fazını eler** | 2-Đ |
+| 172 | **İSTİSNASIZ BÜTÜN SÜPERPOZİSYONLARDA KOŞAR.** Hafıza · parametre · veri · uzunluk · adım miktarı · çözüm uzayı -- hangisi varsa (F 2-Ý'nin listesi ve ona eklenecek her yenisi) sadakat devresi oraya da vurulur. Eksik bırakılan süperpozisyon **sayılır ve kırmızı yanar** | 2-Đ, 2-Ý |
+| 173 | **YALNIZ MANTIKSIZ OLAN İMHA EDİLİR.** Mantığı henüz ayan beyan görünmeyen ihtimal **devre dışı bırakılmaz**; eleme imkânsızlığa mahsustur (F 2-Ē'nin `n = 0` hükmünün sadakat kanadı) | 2-Đ, 2-Ē |
+| 174 | Eleme nispeti **iki sayıyla** yazılır: kaç dal mantıksız diye imha edildi, kaç dal *"mantığı görünmüyor"* diye **kasten bırakıldı** | 2-Đ, 5 |
+| 175 | **ÖZERK GAYE YALNIZ TÂLİMDEDİR**: girdi yokken iç tenakuz enerjisi ve merak gediğinden `G_t` doğar, tâlim kendi suâlini üretir. Çıkarımda koşmaz | 2-Ħ |
+| 176 | **MANTIK YÜRÜTME (USUL SEFERİ) TEHİR EDİLDİ.** `nefs/usul.py`'nin on usul devresi, `gedik_bul`u, üç gayesi (istihrac · cerh · tahkik) ve hadd-i evsat tasfiyesi **yerinde durur ve kesilmez**; makineye nasıl vidalanacağı padişahın kararını bekler | 2-Đ, 2-D, 2-C |
+| 177 | **KALP TEHİR EDİLDİ.** İleride ahlâken uyulması gereken kâidelerin ve taklit vicdanının yeri olacaktır; şimdi inşa edilmez, vazife uydurulmaz | 2-Ł |
+| 178 | **MÜŞAHEDENİN ARC VASFI İMHA EDİLİR.** Kalacak kanadın taşıyıcısı açık sualdir ve teklif sunulmuştur: münasebet vasıfları (ihtilaf · teşabüh · hareket · sükûn · teferruk · ittisal · adet · tenasüb · bu'd) **Bargmann ve münasebet haritasında hâlihazırda ölçülenlerle terkip edilsin** (ferman 3-B: cebrî ispat), ışık vasıfları (levn · huşunet · meles · zıl · şeffafiyet · kesafet) kesilsin. Ölçü mevcuttur: 3 kanal AUC 0.8981, 22 kanal 0.8686 | 2-Œ, 1-N-C, 3 |
+| 179 | **İÇTİHAD İÇTİHADI NAKZETMEZ.** Yeni hüküm eskisini sessizce silmez; silecekse **nakz açıkça yazılır** ve nakzın kendisi de kaydedilir | 2-Y |
+| 180 | **HER MESAJDA HEM KENDİMİ HEM PADİŞAHI TENKİT EDERİM**; padişahın her sözü doğru değildir, yoklanır | 2-Ø |
+
 ---
 
 # § 4. BÜTÜN SİSTEMİN DURUM MAKİNESİ ŞEMASI
@@ -614,47 +636,57 @@ Koşturulabilen **tek** şey budur (F 1-L).
 ## 4-D. ÇÖZÜM UZAYI MAKİNESİ -- YEDİ DURUM
 
 ```
-                            ┌──────────────┐
-                            │ S0  VAKUM    │  Fock |0⟩; hiçbir mod açık değil
-                            └──────┬───────┘  F 2-Þ
-                                   │ metin geldi
-                                   ▼
-                            ┌──────────────┐
-                            │ S1  SINIR    │  entropi gradyanı ölçülür;
-                            │              │  kısıt grafı kurulur
-                            └──────┬───────┘  F 2-Æ
-                                   │
-                                   ▼
-                            ┌──────────────┐
-                            │ S2  MESELE   │  ANA SÜPERPOZİSYON dört suâli
-                            │              │  cevaplar; a† ile mod doğar
-                            └──┬────────┬──┘  F 2-Ý, 2-Þ
-                 mesele yok    │        │  mesele var  ve  F⁻¹ mevcut
-                               │        │
-          ┌────────────────────┘        ▼
-          │                      ┌──────────────┐
-          │                      │ S3  UZAY     │◀────────────┐
-          │                      │              │  kaidesinden│
-          │                      │              │  doğar      │
-          │                      └──────┬───────┘  F 2-Ý      │
-          │                             │                     │
-          │                             ▼                     │
-          │                      ┌──────────────┐             │
-          │                      │ S4 SÜZÜLMÜŞ  │  mantık filtresi
-          │                      │              │  + mukayese filtresi
-          │                      └──────┬───────┘  F 2-Ý      │
-          │                             │                     │
-          │                             ▼                     │
-          │                      ┌──────────────┐             │
-          │                      │ S5  HÜKÜM    │─────────────┘
-          │                      │              │  yeni vecih ateşlendi
-          │                      └──────┬───────┘  F 2-Ú-D
-          │                             │ hüküm kapandı; a ile mod söner
-          ▼                             ▼
+   ╔═══════════════════════════════════════════════════════════════════╗
+   ║  SADAKAT DEVRESİ -- her durumda, her süperpozisyonda, İSTİSNASIZ  ║
+   ║  mantıksız dal imha edilir · mantığı görünmeyen dal BIRAKILIR     ║
+   ╚═══════════════════════════════════════════════════════════════════╝   F 2-Đ
+          ┊            ┊            ┊            ┊            ┊
+          ▼            ▼            ▼            ▼            ▼
+                     ┌──────────────┐
+                     │ S0  VAKUM    │  Fock |0⟩; hiçbir mod açık değil
+                     └──┬────────┬──┘  F 2-Þ
+         metin geldi    │        │   girdi YOK  ve  kapı = TÂLİM
+                        │        │   iç tenakuz + merak gediği taranır
+                        ▼        │   → G_t doğar          F 2-Ħ
+                 ┌──────────────┐│
+                 │ S1  SINIR    ││  entropi gradyanı ölçülür
+                 │              ││  kısıt grafı kurulur   F 2-Æ
+                 └──────┬───────┘│
+                        │        │
+                        ▼        ▼
+                     ┌──────────────┐
+                     │ S2  MESELE   │  ANA SÜPERPOZİSYON dört suâli
+                     │              │  cevaplar; a† ile mod doğar
+                     └──┬────────┬──┘  F 2-Ý, 2-Þ
+          mesele yok    │        │  mesele var  ve  F⁻¹ mevcut
+                        │        │
+   ┌────────────────────┘        ▼
+   │                      ┌──────────────┐
+   │                      │ S3  UZAY     │◀────────────┐
+   │                      │              │  kaidesinden│
+   │                      └──────┬───────┘  doğar      │
+   │                             │          F 2-Ý      │
+   │                             ▼                     │
+   │                      ┌──────────────┐             │
+   │                      │ S4 SÜZÜLMÜŞ  │  sadakat + mukayese
+   │                      │              │  F 2-Đ, 2-Ý │
+   │                      └──────┬───────┘             │
+   │                             ▼                     │
+   │                      ┌──────────────┐             │
+   │                      │ S5  HÜKÜM    │─────────────┘
+   │                      │              │  yeni vecih ateşlendi
+   │                      └──────┬───────┘  F 2-Ú-D
+   │                             │ hüküm kapandı; a ile mod söner
+   ▼                             ▼
    ┌───────────────────────────────────────────┐
    │ S6  İNTAÇ   funktörün tersiyle ana hâle   │
    │             dönülür; netice kelâma girer  │
    └───────────────────────────────────────────┘   F 1-Ç, 2-Ý
+
+   [ USUL SEFERİ -- TEHİR EDİLDİ (F 2-Đ, 2-D) ]
+   nefs/usul.py: 10 devre · gedik_bul · istihrac/cerh/tahkik ·
+   hadd-i evsat U† tasfiyesi · Lan_K. Kodda durur, KESİLMEZ;
+   makineye hangi durumdan açılacağı padişahın kararını bekler.
 ```
 
 ### Geçiş tablosu (bunun dışında geçiş yoktur)
@@ -662,10 +694,11 @@ Koşturulabilen **tek** şey budur (F 1-L).
 | Durum | Meşru hedefler | Geçişin şartı | F |
 | :-- | :-- | :-- | :-- |
 | S0 VAKUM | S1 | Metin geldi | 2-Þ |
+| S0 VAKUM | **S2** | Girdi **yok** ve kapı **tâlim**: iç tenakuz + merak gediğinden `G_t` doğdu. Çıkarımda bu geçiş **yoktur** | 2-Ħ |
 | S1 SINIR | S2 | Entropi gradyanı ölçüldü, kısıt grafı kuruldu | 2-Æ |
 | S2 MESELE | S3, S6 | S3 için: mesele var **ve** `F⁻¹` mevcut. Aksi hâlde S6 | 2-Ý, 1-Ç |
 | S3 UZAY | S4 | Uzay kaidesinden doğdu (Yoneda → Kohomoloji → Lie) | 2-Ý, 2-Ú-E |
-| S4 SÜZÜLMÜŞ | S5 | Mantık **ve** mukayese filtresi koştu | 2-Ý |
+| S4 SÜZÜLMÜŞ | S5 | **Sadakat devresi** ve mukayese filtresi koştu | 2-Đ, 2-Ý |
 | S5 HÜKÜM | S3, S6 | S3 için: yeni vecih ateşlendi. Aksi hâlde S6 | 2-Ú-D |
 | S6 İNTAÇ | -- | Nihaî hâl | -- |
 
@@ -680,6 +713,9 @@ Koşturulabilen **tek** şey budur (F 1-L).
 | I5 | Hiçbir durumda zar atılmaz | Stokastiklik | 2-Ĵ, 2-Ø |
 | I6 | S3'te açılan her uzay S5'te bir **hüküm** doğurur; hükümsüz uzay kapanmaz | Boşa açılmış uzay | 2-Ú-D |
 | I7 | Her durumda üç hudut ölçülebilir olmalıdır; ölçü kapatılınca kırmızı yanmalıdır | İş görmeyen ölçü | 5, 1-I |
+| I8 | **Her durumdan çıkarken, o durumda mevcut BÜTÜN süperpozisyonlar sadakat devresinden geçer.** Geçmeyen süperpozisyon sayılır | Muaf tutulmuş süperpozisyon | 2-Đ |
+| I9 | Sadakat **yalnız mantıksız** dalı imha eder. *"Mantığı görünmüyor"* diye kapatılan dal sayısı **sıfır** olmalıdır | Kendini kilitleme | 2-Đ |
+| I10 | S0 → S2 öz-geçişi **yalnız tâlim kapısında** meşrudur | Çıkarımda özerklik | 2-Ħ |
 
 ## 4-E. JETON HALKASI (S6 içinde koşar)
 
@@ -773,4 +809,42 @@ Koşturulabilen **tek** şey budur (F 1-L).
    └──────────────────────┘        └──────────────────────┘
 ```
 
-**İki kapı arasındaki fark tek satırdır: çıkarımda eniyileme koşmaz.** Başka hiçbir fark meşru değildir (F 1-H).
+**İki kapı arasındaki fark tek satırdır: çıkarımda eniyileme koşmaz.** Başka hiçbir fark meşru değildir (F 1-H) -- özerk gaye öz-geçişi hariç, ki o da bir eniyileme kanadıdır (F 2-Ħ).
+
+## 4-H. SADAKAT DEVRESİ -- İSTİSNASIZ HER SÜPERPOZİSYONDA
+
+```
+   her süperpozisyon Ψ  (hafıza · parametre · veri · uzunluk ·
+                         adım miktarı · çözüm uzayı · … tavan yok)
+             │
+             ▼
+   ┌──────────────────────────────────────────────────────────┐
+   │ 1. KOD UZAYINI TAYİN ET                                  │
+   │    Ŝ_mantık : mantıken MÜMKÜN olan dalların gerdiği uzay  │
+   └───────────────────────────┬──────────────────────────────┘
+                               ▼
+   ┌──────────────────────────────────────────────────────────┐
+   │ 2. ÜÇ KÜMEYE AYIR -- ikiye değil ÜÇE                     │
+   │    MÜMKÜN      Ŝ|ψ⟩ = +|ψ⟩            → dokunulmaz       │
+   │    MEÇHUL      hüküm verilemiyor      → DOKUNULMAZ       │
+   │    MANTIKSIZ   riyazî olarak imkânsız → FAZI ELENİR      │
+   └───────────────────────────┬──────────────────────────────┘
+                               ▼
+   ┌──────────────────────────────────────────────────────────┐
+   │ 3. YALNIZ MANTIKSIZI İMHA ET, YENİDEN NORMALİZE ET       │
+   └───────────────────────────┬──────────────────────────────┘
+                               ▼
+   ┌──────────────────────────────────────────────────────────┐
+   │ 4. İKİ SAYIYI BAS (F 5)                                  │
+   │    imha edilen dal  ·  meçhul diye BIRAKILAN dal         │
+   └──────────────────────────────────────────────────────────┘
+```
+
+| Kaide | Hüküm | F |
+| :-- | :-- | :-- |
+| Kapsam | Bir süperpozisyon bile muaf değildir; yenisi doğduğunda devre ona da vurulur | 2-Đ, 2-Ý |
+| Üç küme | **MÜMKÜN · MEÇHUL · MANTIKSIZ.** İki kümeye indirmek meçhulü mantıksız saymaktır ve kendimizi kilitler | 2-Đ |
+| Eleme haddi | Riyazî imkânsızlık; `n = 0` hükmünün sadakat kanadı | 2-Đ, 2-Ē |
+| Muhasebe | İmha edilen ve **bırakılan** dal ayrı ayrı sayılır; bırakılan sıfırsa devre fazla eliyor demektir | 2-Đ, 5 |
+| Müfettişlik | Devre haber vermez, **gereğini yapar**: mantıksız dalı fiilen imha eder | 1-Ü |
+| Uzuv | `nefs/sadakat.py` -- yerinde dönüştürülür, yeni dosya açılmaz | 2-Ú, 2-D |
