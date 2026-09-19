@@ -3200,6 +3200,146 @@ keyfîlik ve tahmin payı kalmaksızın **determinist** teşekkül eder.
 
 ---
 
+## ▓▓▓ 2-Ý. FERMAN: SÜPERPOZİSYON TEK YERDE DEĞİL -- ÇÖZÜM UZAYI AÇILIR ▓▓▓
+
+> *"**Süperpozisyon tek bir yerde yok diyorum sana. Birçok yerde var**,
+> hafızada var, parametrelerde var, verinin işlenip cevabın
+> üretileceği yerde var... Bunlara **bir tane daha ilave olunuyor** ki
+> bu esasen **problem çözme uzayı, hissi müşterek** gibi bir şey...
+> **Yani bu süperpozisyon sabit bir uzayda değil.** ... o kaidelere
+> göre süperpozisyonun mahiyeti **otomatik farklılaşacak, biz önceden
+> ne bir şey sabitleyeceğiz ne de liste yapıp seçtireceğiz, hiçbiri
+> değil.** ... **Hepsinin temel taşı sonsuz mertebe teorisi, uzuv ama
+> ne uzuv, kalp kalp!**"*
+
+### BİR: SÜPERPOZİSYON ÇOKTUR, TEKİL DEĞİLDİR
+
+Benim *"yazmaç şudur"* diye tek bir taşıyıcı arayışım eksikti.
+Süperpozisyon **birçok yerdedir** ve her biri ayrı bir kategoridir:
+
+    HAFIZA          kayıt ℂ^q qudit durumu                  (ferman 2-Ú-C)
+    PARAMETRE       parametre yazmacı, kapasite q^N          (ferman 2-R)
+    VERİ            girdi dizisi Y_n, tip·kategori·uzay      (ferman 1-Ş)
+    UZUNLUK         1, 2, 3 … pencere kadar üretim hâli      (ferman 2-Õ)
+    ADIM MİKTARI    1'er, 2'şer, n n ilerleyen hâller        (ferman 2-Ó-C)
+    ÇÖZÜM UZAYI     ←── BU FERMANLA İLAVE OLUNAN, YENİ
+    …               daha niceleri; **tavan yoktur**
+
+*"Şu kadar süperpozisyon vardır"* denmez; her biri bir **kategoridir**
+ve yenisi doğdukça sayılır (ferman 5).
+
+### İKİ: ÇÖZÜM UZAYI SABİT DEĞİLDİR -- KAİDESİNDEN DOĞAR
+
+İlave olunan süperpozisyon **problem çözme uzayıdır** -- hissî
+müşterek. Model veriyi alır, o veriden tayin ettiği **vecihlere ve
+âlemlere göre** bir süperpozisyon uzayı **meydana getirir**.
+
+* **SABİT UZAY YOKTUR.** Çözüm uzayının mahiyeti verinin kendi
+  kaidelerinden (ferman 2-Ú-E: Yoneda → Kohomoloji → Lie) **otomatik**
+  farklılaşır.
+* **İKİ ŞIK DA YASAKTIR:** (a) uzayı önceden **sabitlemek**;
+  (b) uzayların bir **listesini yapıp model seçtirmek**. *"Hiçbiri
+  değil."* Uzay ne seçilir ne kurulur; kaidesinden **doğar**.
+* Bu, ferman 1-Ç'nin *"hâl evvelden tarif edilmez, açılır"* hükmünün
+  uzay kanadıdır ve ferman 2-Ú-D'nin dört safhası burada da koşar:
+  ateşleme → doğum → ameliye → **kapanış**.
+
+### ÜÇ: ÜSTÜNE DOĞRULAYICI FİLTRE KODLANIR
+
+Süperpozisyon oluştuktan sonra üstüne **doğrulayıcı filtre** vurulur.
+Filtrenin kendisi iki kapıdan gelir: **verinin kendisinden** ve
+**bugüne dek kurulmuş mantık ve mukayese melekelerinden** (hepsi).
+
+#### (a) MANTIK FİLTRESİ -- FORMÜL DAYATMAK DEĞİLDİR
+
+> *"Tutup da belli bir mantık formülünü oraya koy da ona uymayan her
+> şeyi ele, hayır, **bu çok saçma olur. Kuralda hiçbir veya operatörü
+> yokken sen veyaya zorlarsan olmaz.**"*
+
+Mantıktan kasıt bir kalkülü dayatmak değildir; **üç şeye düşmemektir**:
+
+    1. ÇELİŞKİYE DÜŞMEMEK      (tenakuz)
+    2. SAFSATA YAPMAMAK        (mugalata -- sorites, ferman 2-Ú)
+    3. KISIR DÖNGÜYE GİRMEMEK  (teselsül)
+
+Ferman 1-I'nin üç huddudu ile aynı üçtür; orada **kümenin** temizliği,
+burada **dalganın** süzülmesidir. Verinin kendi kaidesinde `veya`
+yokken dışarıdan `veya` zorlamak, ferman 6'nın yasakladığı elle
+yazılmış kâidedir.
+
+#### (b) MUKAYESE FİLTRESİ -- MAHİYETİ FARKLIDIR, TESİRİ DE
+
+> *"Mukayese edilen şey ise **yine mahiyeti farklı bir filtredir ve
+> dalgaya tesiri mantık filtresinden farklı olacaktır**, çünkü mantık
+> filtresinde **faz çevirmek doğru ve yeterli olabilse de**
+> mukayeseden çıkan neticenin **kategorisi her zaman aynı değildir**...
+> Dolayısıyla mukayesenin dalgaya nasıl tesir edeceğini **ben de
+> bilmiyorum, fikir yürütüp beraber karar vermeliyiz.**"*
+
+* **MANTIK FİLTRESİNİN TESİRİ FAZ ÇEVİRMEK OLABİLİR** -- kutup
+  sabittir, çevrilen şey işarettir.
+* **MUKAYESENİN TESİRİ AYNI OLAMAZ:** mukayesenin neticesi her zaman
+  aynı cinsten değildir (bir maaş ile bir zekâ aynı kefeye konmaz --
+  ferman 1-Ğ'nin vechi, ferman 1-Ç'nin *"her hâl ayrı cinstir"*
+  hükmü). O hâlde sabit bir kutupta işaret çevirmek mukayeseye
+  yetmez.
+* **BU MESELE AÇIKTIR VE MÜŞTEREKEN KARARA BAĞLANACAKTIR** (ferman
+  2-D): tek başıma bir tesir mekanizması vidalamam yasaktır. Şıklar
+  temsiliyle sunulur, padişah hükmeder, ancak ondan sonra kodlanır.
+
+### DÖRT: ÇÖZÜM UZAYI HER VAKİT KOŞMAZ -- GİRDİDEN ANLAŞILIR
+
+> *"Bu **ortada soru varken çalışması gereken** bir şeydir, her vakit
+> çalışamaz. **Çalışıp çalışmayacağı da girdiden anlaşılabilmelidir.**"*
+
+Çözüm uzayı daima açık duran bir kat değildir. Açılıp açılmayacağı
+**girdiden okunur** -- elle konan bir bayrakla, bir kip anahtarıyla,
+bir *"şimdi ARC kipi"* damgasıyla değil (ferman 1-Ç: hâl bir kip
+seçici değildir).
+
+### BEŞ: ANA SÜPERPOZİSYON KAPI MEMURUDUR -- DÖRT SUALİ O CEVAPLAR
+
+> *"Girdiden anlamak için evvela **en ortak süperpozisyon olan ana
+> süperpozisyon** kullanılır."*
+
+Dalga evvelâ ana süperpozisyona götürülür ve orada **dört suâl**
+sorulur:
+
+    1. Burada bir MESELE var mı?
+    2. Varsa yeni süperpozisyon uzayının KAİDELERİ nedir?
+    3. O yeni uzaydan gelen neticenin BURAYA GERİ GETİRİLMESİ nasıl
+       bir mahiyette olacaktır?
+    4. En nihayette üretilecek METİN nedir?
+
+* **ÜÇÜNCÜ SUÂLİN CEVABI ZATEN MÜHÜRLÜDÜR:** ferman 1-Ç'nin *"hâli
+  oluşturan funktör ne ise **tersi de mevcut olmalıdır**"* hükmü.
+  Geri getirilemeyen uzay **açılmaz**; açılırsa orada biriken idrak
+  kaybolur.
+* **DÖRDÜNCÜ SUÂLİN UZUNLUK KANADI DA MÜHÜRLÜDÜR:** üretilecek metnin
+  boyu ayrı bir süperpozisyonun işidir (ferman 2-Õ, 2-Ó-B) ve burada
+  yeniden kestirilmez.
+* Ana süperpozisyon bir **elek değildir** (ferman 2-Ú): meseleyi
+  tasnif eder, uzayın kaidesini okur, dönüş yolunu tayin eder.
+
+### ALTI: TEMEL TAŞ SONSUZ MERTEBE TEORİSİDİR -- KALPTİR
+
+> *"Hepsinin temel taşı sonsuz mertebe teorisi, **uzuv ama ne uzuv,
+> kalp kalp!**"*
+
+`matematik/sonsuz_mertebeler_teorisi.py` bir yardımcı, bir kütüphane,
+bir kenar uzvu **değildir**: ferman 2-C'nin **kalbidir**.
+
+* **KALBİN HER UZUVLA ARACISIZ BAĞI VARDIR.** Kan gitmeyen yer
+  kalmaz: hafıza, parametre, veri, uzunluk, adım, çözüm uzayı --
+  hepsinin mertebesi oradan gelir.
+* **ARACI ZİNCİR KUSURDUR** (ferman 2-C): *"şu dosya şunu ithal
+  ediyor, o da şunu"* diye bir vekil zinciriyle mertebe teorisine
+  ulaşılıyorsa, o uzva kan kalpten gitmiyor demektir.
+* Ferman 2-Ā'nın hükmü burada teyit edilir: **âlem dendiği hiçbir
+  satır, sonsuz kategori teorisi fiilen çağrılmadan yazılamaz.**
+
+---
+
 ## ▓▓▓ 2-Ù. FERMAN: `d` UYDURMADIR -- KULE BİR UZAY İDDİASIDIR ▓▓▓
 
 > *"**`d` ne onu dahi bilmiyorum, sen gafil uydurmuşsun.** 1 milyon
