@@ -3340,6 +3340,165 @@ bir kenar uzvu **değildir**: ferman 2-C'nin **kalbidir**.
 
 ---
 
+## ▓▓▓ 2-Þ. FERMAN: HER MESELEYE AYRI UZAY AÇILMAZ -- TEK UZAY, FOCK SERBESTLİĞİ ▓▓▓
+
+> *"Her meselede böyle süperpozisyon uzayı açamayız, ne yapacağız.
+> İlmî bir mevzuda evvelâ **mahiyet**, sonra **gaye**, sonra **usul**
+> vaz'edilir... **Meseleleri saymayacaksın; kısıtları sisteme birer
+> kütle olarak fırlatacaksın.** ... Not: **en umumî olan kategori
+> olacaktır, uzay değil!** Hatta mümkünse **(sonsuz, sonsuz)**
+> olacak."*
+
+**BU FERMAN 2-Ý'Yİ NAKZETMEZ, TAHDİD EDER.** 2-Ý *"bir süperpozisyon
+daha ilave olunuyor"* dedi; bu ferman o ilavenin **ayrı bir uzay
+olmadığını** hükme bağlar. İlave olunan şey bir **uzay** değil, tek
+uzayın üstüne binen yeni bir **serbestlik derecesidir**.
+
+### ▓ MAHİYET: PARAMETRE AYRI UZAY DEĞİL, DURUMUN KUANTUM SAYISIDIR
+
+> *"Atomdaki elektronun konumunu bulmak için ayrı evren, momentumunu
+> bulmak için ayrı evren, spini için ayrı evren açmazsın. **Evren ve
+> uzay tektir.**"*
+
+    |Ψ⟩ = |m⟩ ⊗ |l⟩ ⊗ |k⟩ ⊗ …      ← TEK durumun ÇOK İNDİSİ
+
+    |m⟩  HAFIZA MASKESİ   neyin kalıp neyin gideceği
+    |l⟩  ÇIKTI UZUNLUĞU   (ferman 2-Õ, 2-Ó-B)
+    |k⟩  VERİ PENCERESİ   veriden kaç jeton çekileceği (ferman 2-O)
+
+* **AYRI HAVUZ AÇMAK YASAKTIR.** Hafıza için ayrı Hilbert, uzunluk
+  için ayrı Hilbert, pencere için ayrı Hilbert açmak serbestlik
+  derecelerinin **kartezyen çarpımı** altında patlar.
+* **NİÇİN ASIL YASAK: KOVARYANS ÖLÜR.** Üç mesele göbekten bağlıdır --
+  `l` uzarsa `m`de yer açılmalıdır, `k` büyürse `l` değişir. Ayrı
+  süperpozisyon yapmak **müşterek münasebeti** (kovaryansı) imha
+  etmektir; bu ferman 1-M'nin çift başlılığıdır.
+* Bir arabanın direksiyonuna ayrı, tekerleğine ayrı, motoruna ayrı
+  fizik simülasyonu yapan arabayı yürütemez.
+
+### ▓ GAYE: DOLANIKLIK -- TEK VANA BÜTÜN MUSLUKLARI AYARLAR
+
+    Ĥ = Ĥ_hafıza + Ĥ_uzunluk + Ĥ_pencere + … + V̂_kuplaj
+
+* **BÜTÜN SIR `V̂_kuplaj`DADIR.** Birbiriyle çelişen konfigürasyonun
+  enerjisini göğe fırlatır; genlik **yıkıcı girişimle** sıfıra iner.
+  O konfigürasyon aranmaz, elenmez, maskelenmez -- **söner**.
+* **TEK KISIT BÜTÜN EKSENLERİ BÜKER.** *"Toplam bellek bütçesi `B`yi
+  geçemez"* denir; dolanıklık vasıtasıyla hafıza maskesi, çıktı boyu
+  ve veri penceresi **aynı darbede** hizaya girer.
+* Bütçe elle yazılmaz, **ölçülür** (ferman 5-B, 2-I).
+* **ELEME DEĞİL, ENERJİDİR** (ferman 2-Ú'nün DUVAR ilgası): kapatılan
+  koordinat yoktur; pahalı koordinat vardır.
+
+### ▓ USUL: HİYERARŞİK ÇÖKÜŞ -- ADYABATİK SÜRÜKLEME
+
+Tabiatta hadiseler **zaman ölçeklerinin ayrışmasıyla** çözülür:
+
+    1. YAVAŞ MOD SÜRÜKLENİR   en kaba ve belirleyici kısıt evvelâ
+                              çöker: "mesele ne kadar veri istiyor?"
+    2. TALİ ŞARTLANDIRILIR    `k` belli olunca `m` ve `l` sıfırdan
+                              aranmaz; şartlı ALT UZAYA inilir.
+                              Boyut `N³`ten `N`e düşer.
+    3. TEK ÖLÇÜM              taban durumuna akınca tek bir uyumlu
+                              konfigürasyon okunur: (m*, l*, k*)
+
+Üç ayrı suâlin üç ayrı cevabı **yoktur**; birbirini boğmayan **tek**
+konfigürasyon vardır.
+
+### ▓ MESELE SAYISI VE MAHİYETİ ÖNCEDEN BİLİNMEZ -- FOCK UZAYI
+
+> *"Meselelerin sayısını bile önceden tayin edemiyorum, mahiyetlerini
+> hiç tayin edemem."*
+
+Sabit boyutlu vektör **açılmaz**. Sistem **vakum durumundan** (`|0⟩`)
+başlar; her yeni mesele önceden tanımlı bir boyut değil, bir
+**uyarılmadır**:
+
+    a_i†   YARATMA     mesele peyda olunca vakumdan bir serbestlik
+                       derecesi DOĞAR
+    a_i    YOK ETME    mesele çözülünce o derece SÖNER
+
+    |Ψ⟩ ∈ ⊕_n  H^(n)      ← sabit kartezyen çarpım DEĞİL, doğrudan toplam
+
+* Mesele sayısı bir de olsa bin de olsa **aynı cebir** koşar.
+* **`N` TANE KUTU ÇİZMEK YASAKTIR** -- her yeni parça için baştan çip
+  dökmeye benzer. Bu, ferman 2-İ'nin lağvettiği cetvelin mesele
+  kanadıdır ve ferman 2-Ú-D'nin *"statik vecih listesi yoktur"*
+  hükmünün ta kendisidir.
+* Metnin içinden süzülen her kısıt Fock uzayında **yeni bir dalga
+  modu** açar; `a†` ile `a`nın sayısı **eşit olmalıdır** ve fark
+  raporda görünür (ferman 5, 2-Ú-D'nin kapanmayan vecih hükmü).
+
+### ▓ MAHİYETİ BİLMEK ŞART DEĞİL -- ORTAK PARA BİRİMİ ÜÇTÜR
+
+> *"Mahiyeti bilmek zorunda değilsin; her meselenin tükettiği **ortak
+> para birimini** bilmen yeter."*
+
+    1. ENTROPİ / BELİRSİZLİK   bu mesele çözülmeden evvel ne kadar
+                               kararsızlık var?
+    2. KAPASİTE / BÜTÇE        bu tercihin bedeli nedir (bellek,
+                               gecikme, jeton)?
+    3. ÇELİŞKİ KATSAYISI       bu tercih öteki kabullerle ne kadar
+                               sürtüşüyor?
+
+Mahiyeti ne olursa olsun yeni doğan her mesele bu üç eksende bir
+**Lagrange çarpanı** gibi davranır. Modele *"hafıza şudur, uzunluk
+budur"* denmez; tek küllî kaide konur:
+
+    Toplam serbest enerji asgarîye iner; kısıtların doğurduğu gerilim
+    (tensör izi) dengelenir.
+
+### ▓ AKIŞKAN DURUM GRAFI -- SABİT MATRİS AÇILMAZ
+
+* Metin okundukça tespit edilen her kâide dinamik bir **faktör
+  grafına** bir düğüm olarak eklenir; birbirini etkileyen iki kâide
+  arasında bir **kuplaj kenarı** peyda olur.
+* Düğümler birbirine **durum dalgası** fırlatır (dalga yayılımı);
+  birbirini nakzeden meseleler bağı koparır yahut birini söndürür.
+* Metin bitince graf **kaç düğümlü olursa olsun** dengeye çöker.
+* **ÇEPERLERİ ESNEK KAP:** içine iki taş da atılsa elli çakıl da,
+  suyun molekülleri taşların cinsine bakmaz; dalgalar birbirini kırar
+  ve yüzey tek bir taban seviyesine oturur. Dengeyi kuran şey benim
+  evvelden yazdığım kâide değil, **sistemin en düşük enerjiye akma
+  mecburiyetidir**.
+
+### ▓ HAFIZA DA BİR SERBESTLİK DERECESİDİR -- DÖRT KAT'Î HÜKÜM
+
+> *"Model kendi hafızasını **dinamik olarak tadil edebilmelidir**."*
+
+Hafızada neyin ne kadar duracağı ayrı bir uzay değil, `|m⟩`
+derecesidir. Dört hüküm kat'îdir:
+
+    1. TEKRAR AZ TUTULUR   "bir kere tekrarlar hafızada daha az
+                           tutulmalı, BU KESİN."
+    2. UNUTMA YASAK        "model ne zaman ne söylediğini unutmamalı."
+    3. SİLME MODELİNDİR    "hafızasını kendi silecek" -- elle konan bir
+                           budama cetveli yoktur.
+    4. KOPARMAYACAK        "sildiği hafıza onu mevzudan koparmamalı."
+
+* **"GEREKSİZ YER" DİYE KENDİ KAFASINDAN HÜKÜM VERMEK YASAKTIR.**
+  Silme bir kanaat değil, `V̂_kuplaj`ın hükmüdür: bedeli ağır basan
+  kayıt söner, hafif olan kalır.
+* **SİLMEK YİNE AMNEZİ DEĞİLDİR** (ferman 2-Ú): kayıt çizilmez,
+  **tertiplenir**; `|m⟩` maskesi bir yaprak taşımasıdır.
+
+### ▓ EN UMUMÎ OLAN KATEGORİDİR -- (∞, ∞)
+
+> *"Not: **en umumî olan kategori olacaktır, uzay değil!** Hatta
+> mümkünse **(sonsuz, sonsuz)** olacak."*
+
+* Ferman 2-Ā'nın tashihi **teyit edilmiştir**: `ℓ=1 UZAY` en umumî
+  değildir; **KATEGORİ** en umumîdir ve çöküş oradan başlar.
+* **TAVAN (∞, ∞)'DUR.** Yalnız morfizm mertebesi değil, **nesne
+  mertebesi de** sonsuza açıktır: `(n, r)`-kategorilerin haddi
+  `(∞, ∞)`dur. Bir yerde `(∞, 1)` yahut `(∞, 2)` diye bir tavan
+  yazılıyorsa o bir **kısıttır** ve sebebi yazılır.
+* Bu ferman 2-Ý'nin *"kalp sonsuz mertebe teorisidir"* hükmüyle
+  beraber okunur: Fock uzayının modları da, faktör grafının düğümleri
+  de o kalpten mertebe alır.
+
+---
+
 ## ▓▓▓ 2-Ù. FERMAN: `d` UYDURMADIR -- KULE BİR UZAY İDDİASIDIR ▓▓▓
 
 > *"**`d` ne onu dahi bilmiyorum, sen gafil uydurmuşsun.** 1 milyon
