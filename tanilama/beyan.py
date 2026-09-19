@@ -106,6 +106,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from nefs.hafiza import tertip_metni
         from nefs.mukayese import omur_metni, vecih_metni
         from kuantum.devre import devre_metni
+        from nefs.hamiltonyen import fock_metni, hamiltonyen_metni
         from nefs.qyazmac import sektor_metni
         kn = kulli["konuşma"]
         s += ["",
@@ -137,6 +138,8 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               vecih_metni(kulli.get("vecih") or {}), "",
               omur_metni(kulli.get("vecih_ömrü") or {}), "",
               devre_metni(kulli.get("devre") or {}), "",
+              hamiltonyen_metni(kulli.get("hamiltonyen") or {}), "",
+              fock_metni(kulli.get("fock") or {}), "",
               sektor_metni(kulli.get("sektör") or {}), "",
               nqs_metni(kulli.get("kan_nqs") or {}), "",
               "  VERİ: ARC %d örnek + külliyat %d örnek"

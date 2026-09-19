@@ -4030,7 +4030,7 @@ def n_mertebe(X: Terim, n: int) -> Terim:
     return Pi(x, X, Pi(y, X, n_mertebe(yol(X, _t(x), _t(y)), n - 1)))
 
 
-MERTEBE_ADI: Tuple[str, ...] = ("nokta", "uzay", "kategori", "tip")
+MERTEBE_ADI: Tuple[str, ...] = ("nokta", "uzay", "tip", "kategori")
 
 
 def mertebe_sarti(X: Terim, l: int) -> Terim:
@@ -4038,6 +4038,25 @@ def mertebe_sarti(X: Terim, l: int) -> Terim:
         "vecih mertebesi 0..%d aralığında olmalı, %d verildi (ferman 1-Ğ)"
         % (len(MERTEBE_ADI) - 1, int(l)))
     return n_mertebe(X, int(l) - 1)
+
+
+def rn_mertebe(X: Terim, r: int, n: int) -> Terim:
+    taban = X if int(r) <= 0 else carpim(globuler_tip(int(r)), X)
+    return n_mertebe(taban, int(n))
+
+
+def rn_sarti(X: Terim, r: int, n: int) -> Terim:
+    assert int(r) >= 0, (
+        "nesne mertebesi negatif olamaz, %d verildi (ferman 2-Þ)" % int(r))
+    assert int(n) >= -2, (
+        "morfizm mertebesi −2'nin altına inmez, %d verildi" % int(n))
+    return rn_mertebe(X, int(r), int(n))
+
+
+def rn_adi(r: int, n: int) -> str:
+    return "(%s, %s)-kategori" % (
+        "∞" if int(r) >= len(MERTEBE_ADI) else int(r),
+        "∞" if int(n) >= len(MERTEBE_ADI) else int(n))
 
 
 def buzukten_tamamla(X: Terim, buzuk: Terim, dallar) -> Terim:

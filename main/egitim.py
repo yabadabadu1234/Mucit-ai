@@ -60,6 +60,8 @@ from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            vecih_beyani,
                            vecihleri_istihrac, yirtiklari_tertiple)
 from kuantum.devre import devre_beyani
+from nefs.hamiltonyen import (FockUzayi, Hamiltonyen, balyala,
+                              fock_beyani, hamiltonyen_beyani)
 from nefs.qyazmac import sektor_beyani
 from nefs.hendese import (HendeseAyari, hendese_teshisi,
                           hendese_beyani)
@@ -477,6 +479,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                               kademe_gorevleri=kademe_gorevleri,
                               ne="döküm")
     olculen_lam = _dengele(ilk_kefeler)
+    fock = FockUzayi()
+    hamiltonyen = Hamiltonyen(fock=fock).kefelerden(ilk_kefeler)
     mzn = _mzn["a"]
     _sayac = {"çağrı": 0}
     from tanilama.hiz_teftisi import had as _hiz_haddi
@@ -562,7 +566,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         "yırtık": yirtiklari_tertiple(hafiza, getattr(nefs, "mahalli",
                                                      None)),
         "kapı": kapi_tertibi(kapi_hukmu, hafiza,
-                             getattr(nefs, "mahalli", None))}
+                             getattr(nefs, "mahalli", None)),
+        "balya": balyala(hafiza, fock)}
     p_son = np.asarray(mun["p"], float)
     _ilk = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=_mzn["a"],
                        hafiza=hafiza, adim=_sayac["çağrı"],
@@ -687,6 +692,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     kefeler = kulli_mizan(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn,
                           hafiza=hafiza, adim=_sayac["çağrı"],
                           kademe_gorevleri=kademe_gorevleri, ne="döküm")
+    taban_durumu = hamiltonyen.kefelerden(kefeler).taban_durumu()
     cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
     if int(ayar.mukayese_acik):
         _dun_ilk = [np.asarray(h, complex) for h in
@@ -713,6 +719,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
              **mun["harita"].hazineye()),
         {"tur": int(devam.get("tur", 0)) + 1,
          "imleç": imlec,
+         "taban_durumu": taban_durumu,
+         "fock": fock.beyan(),
          "harita": harita.hazineye(),
          "müşterek_işlenen": int(mun["harita"].islenen),
          "devam_etti": bool(devam.get("yüklendi")),
@@ -753,6 +761,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "vecih": vecih_beyani(),
             "vecih_ömrü": omur_beyani(),
             "devre": devre_beyani(),
+            "hamiltonyen": hamiltonyen_beyani(),
+            "fock": fock_beyani(),
             "sektör": sektor_beyani(),
             "hafıza_tertibi": tertip_beyani(),
             "küme_kapanışı": kume_kapanisi,
