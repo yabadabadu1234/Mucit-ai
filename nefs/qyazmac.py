@@ -10,7 +10,39 @@ import numpy as np
 from .galois import palmer_indir, sbox
 from .matchgate import matchgate_mi
 
-__all__ = ["QuditAyar", "QuditYazmac", "Iz"]
+__all__ = ["QuditAyar", "QuditYazmac", "Iz",
+           "sektor_beyani", "sektor_metni"]
+
+_SEKTOR_SAYAC: Dict[str, float] = {
+    "dönme": 0.0, "faz_vuruşu": 0.0, "kenet": 0.0, "örüntü": 0.0,
+    "küllî_faz_yazması": 0.0, "kapı_dizeyi": 0.0, "açık": 1.0}
+
+
+def sektor_beyani() -> Dict[str, float]:
+    return dict(_SEKTOR_SAYAC)
+
+
+def sektor_metni(b=None) -> str:
+    d = dict(b or sektor_beyani())
+    top = (d["dönme"] + d["faz_vuruşu"] + d["kenet"] + d["örüntü"])
+    if not top:
+        return ("  SEKTÖR AMELİYELERİ: HİÇ KOŞMADI -- kırmızı "
+                "(ferman 2-Ö)")
+    return "\n".join([
+        "  SEKTÖR AMELİYELERİ -- YUVA YOK, CARTAN KÖKÜ VAR (ferman 2-Ö)",
+        "    Meleke tamsayı yuva aramaz; sektörün zâtî Cartan",
+        "    jeneratörüne kilitlenir. Düşen kapı riyazî olarak",
+        "    imkânsızdır: arada bekçi yoktur.",
+        "    dönme %d   faz vuruşu %d   kenet %d   örüntü %d"
+        % (int(d["dönme"]), int(d["faz_vuruşu"]), int(d["kenet"]),
+           int(d["örüntü"])),
+        "    BEDEL SAYILIR (ferman 5): küllî faz yazması %d ·"
+        " sektör kapı dizeyi %d"
+        % (int(d["küllî_faz_yazması"]), int(d["kapı_dizeyi"])),
+        "    Küllî faz yazması yazmacın TAMAMINI tarar; sayısı büyükse",
+        "    yavaşlamanın yeri burasıdır.   (ölçü %s)"
+        % ("açık" if d.get("açık") else "KAPALI"),
+    ])
 
 _CEYREK = np.array([1.0 + 0.0j, 0.0 + 1.0j, -1.0 + 0.0j, 0.0 - 1.0j])
 
@@ -561,6 +593,8 @@ class QuditYazmac:
         t[i:j] = a
         self.faz(t)
         self._sektor_vurusu += 1
+        _SEKTOR_SAYAC["faz_vuruşu"] += 1.0
+        _SEKTOR_SAYAC["küllî_faz_yazması"] += 1.0
         if bag:
             self._faz_bagla(np.arange(i, j, dtype=np.int64), bag)
         return gen
@@ -593,6 +627,8 @@ class QuditYazmac:
             dU[v, v] = -s
         self.sektor_kapisi(ad, U)
         self._sektor_vurusu += 1
+        _SEKTOR_SAYAC["dönme"] += 1.0
+        _SEKTOR_SAYAC["kapı_dizeyi"] += 1.0
         m = getattr(self, "mahalli", None)
         if m is not None:
             m.cartan_ekle(str(ad), float(np.mean(a)))
@@ -635,7 +671,10 @@ class QuditYazmac:
             self.faz(t)
         else:
             defter += t
+        if defter is None:
+            _SEKTOR_SAYAC["küllî_faz_yazması"] += 1.0
         self._sektor_vurusu += 1
+        _SEKTOR_SAYAC["kenet"] += 1.0
         self._kenet_vurusu = getattr(self, "_kenet_vurusu", 0) + 1
         if senet and defter is None:
             self._faz_bagla(np.arange(i1, j1, dtype=np.int64), senet)
@@ -664,6 +703,7 @@ class QuditYazmac:
                 senet=z[5] if len(z) > 5 else None,
                 defter=defter)
         self.faz(defter)
+        _SEKTOR_SAYAC["küllî_faz_yazması"] += 1.0
         for dizin, senet in self._bekleyen_bag:
             self._faz_bagla(dizin, senet)
         self._bekleyen_bag = []
@@ -690,6 +730,7 @@ class QuditYazmac:
             m.cartan_ekle(ad, float(carpim) * math.pi)
         self._oruntu_vurusu = getattr(self, "_oruntu_vurusu", 0) + 1
         self._sektor_vurusu += 1
+        _SEKTOR_SAYAC["örüntü"] += 1.0
         return float(carpim)
 
     def sektor_faz_bagi(self, ad: str, par, olcek: float,
