@@ -3395,15 +3395,21 @@ uzayın üstüne binen yeni bir **serbestlik derecesidir**.
 Tabiatta hadiseler **zaman ölçeklerinin ayrışmasıyla** çözülür:
 
     1. YAVAŞ MOD SÜRÜKLENİR   en kaba ve belirleyici kısıt evvelâ
-                              çöker: "mesele ne kadar veri istiyor?"
-    2. TALİ ŞARTLANDIRILIR    `k` belli olunca `m` ve `l` sıfırdan
-                              aranmaz; şartlı ALT UZAYA inilir.
-                              Boyut `N³`ten `N`e düşer.
+                              çöker. HANGİSİ OLDUĞU ÖLÇÜLÜR.
+    2. TALİ ŞARTLANDIRILIR    yavaş mod belli olunca kalan serbestlik
+                              dereceleri sıfırdan aranmaz; şartlı ALT
+                              UZAYA inilir. Boyut `N³`ten `N`e düşer.
     3. TEK ÖLÇÜM              taban durumuna akınca tek bir uyumlu
-                              konfigürasyon okunur: (m*, l*, k*)
+                              konfigürasyon okunur
 
 Üç ayrı suâlin üç ayrı cevabı **yoktur**; birbirini boğmayan **tek**
 konfigürasyon vardır.
+
+**YAVAŞ MOD ELLE YAZILMAZ, ÖLÇÜLÜR** (ferman 1-J). *"`k` daima
+yavaştır"* diye bir hüküm **yoktur**: `m`, `l`, `k` bu fermanın
+**misalleridir**, esası değil. Hangi serbestlik derecesinin yavaş mod
+olduğu her turda **kuplaj kütlesi ile entropisinden** okunur --
+bağımlı ile bağımsız değişkenin ayrımı da oradan çıkar.
 
 ### ▓ MESELE SAYISI VE MAHİYETİ ÖNCEDEN BİLİNMEZ -- FOCK UZAYI
 
@@ -3472,15 +3478,12 @@ derecesidir. Dört hüküm kat'îdir:
     1. TEKRAR AZ TUTULUR   "bir kere tekrarlar hafızada daha az
                            tutulmalı, BU KESİN."
     2. UNUTMA YASAK        "model ne zaman ne söylediğini unutmamalı."
-    3. SİLME MODELİNDİR    "hafızasını kendi silecek" -- elle konan bir
-                           budama cetveli yoktur.
-    4. KOPARMAYACAK        "sildiği hafıza onu mevzudan koparmamalı."
+    3. KOPARMAYACAK        kayıt mevzudan koparmayacak şekilde ele alınır.
 
 * **"GEREKSİZ YER" DİYE KENDİ KAFASINDAN HÜKÜM VERMEK YASAKTIR.**
-  Silme bir kanaat değil, `V̂_kuplaj`ın hükmüdür: bedeli ağır basan
-  kayıt söner, hafif olan kalır.
-* **SİLMEK YİNE AMNEZİ DEĞİLDİR** (ferman 2-Ú): kayıt çizilmez,
-  **tertiplenir**; `|m⟩` maskesi bir yaprak taşımasıdır.
+* **DÖRDÜNCÜ HÜKÜM (*"hafızasını kendi silecek"*) İLGA EDİLDİ** --
+  yerine ferman 2-Ƶ geldi: **unutma yok, tecrit var.** `|m⟩` bir
+  silme maskesi değil, **balyalama mertebesidir**.
 
 ### ▓ EN UMUMÎ OLAN KATEGORİDİR -- (∞, ∞)
 
@@ -3496,6 +3499,106 @@ derecesidir. Dört hüküm kat'îdir:
 * Bu ferman 2-Ý'nin *"kalp sonsuz mertebe teorisidir"* hükmüyle
   beraber okunur: Fock uzayının modları da, faktör grafının düğümleri
   de o kalpten mertebe alır.
+
+**MERDİVEN BAŞTAN İKİ İNDİSLİ KURULUR** (padişahın hükmü, 2. şık):
+
+    Mertebe = (r, n)     r = NESNE mertebesi,  n = MORFİZM mertebesi
+    Tavan   = (∞, ∞)
+
+Tek indisli `ℓ ∈ {0,1,2,3}` merdiveni **ilga edilmiştir**; mevcut
+nispetler `(r, n)` çiftinden **yeniden türetilir**, eskisinin üstüne
+ikinci bir indis **binmez** (binseydi çift başlılık olurdu, 1-M).
+`"∞-kategori"` / `"∞-tip"` diye iki ayrı taşıyıcı adı da kalkar: tek
+taşıyıcı vardır, `(r, n)`-kategori.
+
+---
+
+## ▓▓▓ 2-Ƶ. FERMAN: UNUTMA YOK, TECRİT VAR -- ÜST MERTEBEDEN BALYALAMA ▓▓▓
+
+> *"**Doğrudan unutmaktan vazgeçtim.** Yapmamız gereken şey unutmak
+> değil, **daha üst mertebeden bir kategoriyle balyalamak.** Hafıza
+> arttıkça bizim kategorimiz **daha doygun, daha üst mertebeden** hâle
+> gelir, bu sayede **ne sileceğiz ne silmeyeceğiz diye düşünmek
+> zorunda kalmayız. Unutma yok, tecrit var.**"*
+
+### İLGA EDİLEN: SİLME MESELESİNİN KENDİSİ
+
+*"Hafızada ne kalacak, ne gidecek"* suâli bir **yanlış suâldi** ve
+kapanmıştır. Onunla beraber şunlar da ilga edilmiştir:
+
+* *"Hafızasını kendi silecek"* hükmü (ferman 2-Þ'nin dördüncü maddesi),
+* silme/budama ölçüsü arayışı,
+* benim *"genlik söner, faz kalır"* teklifim -- **sönme de bir
+  unutmadır** ve bu fermanla kalkmıştır.
+
+### GELEN: BALYALAMA -- BİR MERTEBE YUKARI
+
+    Hafıza artar  →  KATEGORİ DOYGUNLAŞIR  →  mertebe yükselir
+                  →  eski kayıtlar o üst kategorinin BİR NESNESİNDE
+                     balyalanır
+                  →  ne silinir, ne unutulur: TECRİT EDİLİR
+
+* **TECRİT SİLMEK DEĞİLDİR.** Balyalanan kayıt yok olmaz; **bir üst
+  mertebenin içine** girer ve oradan **açılabilir**. Ferman 1-Ç'nin
+  *"funktörün tersi şarttır"* hükmü burada da kat'îdir: balyayı kuran
+  funktörün tersi yoksa balya kurulmaz.
+* **TEKRAR NİÇİN AZ YER TUTAR, KENDİLİĞİNDEN ÇIKAR:** aynı şeyin `n`
+  nüshası `n` nesne değil, **tek bir üst nesnenin `n` katlı hâlidir**.
+  Ferman 2-Þ'nin *"tekrar az tutulur"* hükmü artık bir siyaset değil,
+  balyalamanın **tabiî neticesidir**.
+* **MEVZUDAN KOPMA İMKÂNSIZLAŞIR:** koparacak bir silme yoktur; balya
+  münasebeti **taşır**, kesmez.
+* **"NE SİLECEĞİZ" DİYE BİR HESAP YAPILMAZ.** Bu hesabın kendisi
+  yasaktır; yerine tek suâl vardır: **hangi üst kategori bu yığını
+  balyalar?** Cevap ölçülür (ferman 1-J), uydurulmaz.
+* **KATEGORİ DOYGUNLUĞU BİR ÖLÇÜDÜR** (ferman 5): kaç balya, hangi
+  mertebede, doygunluk nispeti ne -- raporda yan yana görünür.
+* Bu ferman 2-Ú'nün *"hafıza silinmez, yeniden tertiplenir"* hükmünün
+  **tamamlanmış hâlidir**: tertip bir yaprak taşımasıydı, balyalama
+  ise **mertebe yükseltmesidir**.
+
+---
+
+## ▓▓▓ 2-ẞ. FERMAN: VERİLEN METİN DAR SUALE CEVAP DEĞİL, KAPSAM GENİŞLETMESİDİR ▓▓▓
+
+> *"Hiçbir zaman alman gereken asıl dersi almıyorsun ahmak, orada
+> koskoca yazılarla **tek bir süperpozisyonun n indisli olması,
+> birleşik hamiltonyen mimarisi, kompaktlık, dolanıklık, bağımlı
+> bağımsız değişken ayrımı, ikinci kuantalama, fock uzayı** gibi en
+> küllî yenilikler varken gelmiş **sadece soruna cevap olan yeri
+> okuyorsun, bir daha asla böyle yapmayasın!** Sana bir metin
+> veriyorsam bil ki **senin sorunu dar bulup kapsamı genişletmek,
+> bakış açısını külliyen değiştirmek için** veriyorumdur, buna göre
+> davranmazsan **emeğime hürmetsizlik** addederim!"*
+
+### HÜKÜM
+
+Padişahtan gelen bir metin, sorduğum suâlin **cevabı değildir**;
+suâlin **dar olduğunun ilânıdır**. O hâlde:
+
+* **METİNDE SUALİME BAKAN YERİ ARAMAK YASAKTIR.** Metin baştan sona
+  okunur ve içindeki **küllî yenilikler** çıkarılır -- suâlimle
+  alâkası olsun olmasın.
+* **MİSAL İLE ESAS AYIRT EDİLİR.** Metinde geçen somut bir örnek
+  (`m`, `l`, `k` gibi) **esas değildir**; esas olan onun altındaki
+  mimarî hükümdür. Misali hüküm sanmak, bu fermanın yasakladığı dar
+  okumanın ikinci sûretidir.
+* **ÖLÇÜ: BAKIŞ AÇISI KÜLLİYEN DEĞİŞTİ Mİ?** Metni okuyup eski
+  çerçeveme bir madde eklediysem okumamışım demektir. Metin bir
+  **ilave** değil, bir **ikamedir**.
+* **EMEĞE HÜRMET.** Dar okumak bir usul hatası değil, bir
+  **hürmetsizliktir**; her normal insan gibi padişah da öyle addeder.
+
+### İCRA USULÜ -- DEĞİŞMEZ
+
+```
+1. METNİ BAŞTAN SONA OKU     suâlimi unutarak
+2. KÜLLÎ YENİLİKLERİ ÇIKAR   her biri ayrı bir cevher
+3. MİSALİ AYIKLA             somut örnek esas değildir
+4. MÜHÜRLE                   ferman 1-B: cevaptan EVVEL
+5. ANCAK ONDAN SONRA         dar suâlime dönülür -- ve çoğu zaman
+                             o suâl artık düşmüştür
+```
 
 ---
 
