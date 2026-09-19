@@ -461,13 +461,12 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}
+    fock = FockUzayi()
+    hamiltonyen = Hamiltonyen(fock=fock)
 
     def _dengele(dokum) -> Dict[str, float]:
-        _a = dokum.get("artık")
-        _n = dokum.get("artık_adı")
         lam = denge(dokum,
-                    artik=(list(_a) if _a is not None else None),
-                    adlar=(list(_n) if _n is not None else None))
+                    nispet=hamiltonyen.kefelerden(dokum).nispetler())
         for ad, deger in lam.items():
             if ad == "frenlenen" or ad in _elle_lam:
                 continue
@@ -479,8 +478,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                               kademe_gorevleri=kademe_gorevleri,
                               ne="döküm")
     olculen_lam = _dengele(ilk_kefeler)
-    fock = FockUzayi()
-    hamiltonyen = Hamiltonyen(fock=fock).kefelerden(ilk_kefeler)
     mzn = _mzn["a"]
     _sayac = {"çağrı": 0}
     from tanilama.hiz_teftisi import had as _hiz_haddi

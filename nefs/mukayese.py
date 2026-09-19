@@ -16,7 +16,7 @@ __all__ = ["mukayese_melekesi", "mukayese_melekesi_beyani",
            "omur_beyani", "omur_metni",
            "bargmann", "hipotez_halkasi", "swap_testi", "simplisiyal", "istisna_yeri",
            "choi", "nesnelestir", "spektrum", "hata_payi",
-           "zorunlu", "mumkun", "kiplik", "paylar_olc",
+           "zorunlu", "mumkun", "kiplik",
            "mukayese_beyani", "mukayese_metni", "sayac"]
 
 _MELEKE: Dict[str, float] = {
@@ -914,29 +914,6 @@ def kiplik(onerme: np.ndarray, sahitler: Sequence[np.ndarray],
                         "nispet": float(d.min())},
             "mümkün": {"doğru": bool(np.any(tutan)),
                        "nispet": float(d.max())}}
-
-
-def paylar_olc(adlar: Sequence[str], artik: Sequence[float]
-               ) -> Dict[str, float]:
-    _SAYAC["pay"] = _SAYAC.get("pay", 0) + 1
-    a = np.asarray(list(artik), float).reshape(-1)
-    n = a.size
-    assert n == len(adlar), "pay ölçüsü: ad ile artık sayısı tutmuyor"
-    if n < 3 or not np.any(np.abs(a) > 0.0):
-        return {str(ad): 1.0 / max(n, 1) for ad in adlar}
-    E = np.eye(n, dtype=complex)
-    v = a.astype(complex)
-    rez = np.zeros(n, float)
-    for i in range(n):
-        halka = [v, E[i], v - complex(np.vdot(E[i], v)) * E[i]]
-        if float(np.linalg.norm(halka[2])) <= 1e-300:
-            continue
-        o = bargmann(halka)
-        rez[i] = float(o["r"])
-    top = float(rez.sum())
-    if top <= 0.0:
-        return {str(ad): 1.0 / n for ad in adlar}
-    return {str(adlar[i]): float(rez[i] / top) for i in range(n)}
 
 
 def mukayese_beyani(spek: Optional[Dict[str, Any]] = None,

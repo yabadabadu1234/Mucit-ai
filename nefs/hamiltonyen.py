@@ -265,6 +265,46 @@ class Hamiltonyen:
                 butce=float(abs(h[i])), celiski=float(abs(ham[i])))
         return self
 
+    ÖBEK: Tuple[Tuple[str, Tuple[str, ...]], ...] = (
+        ("uzay", ("uzay",)), ("tip", ("tip",)),
+        ("kategori", ("kategori",)), ("nokta", ("nokta",)),
+        ("cevrim", ("çevrim", "gedik")), ("tenakuz", ("tenakuz",)),
+        ("monogami", ("monogami",)), ("engel", ("engel",)),
+        ("kaide", ("kaide_halkası",)), ("tasma", ("taşma",)),
+        ("lif", ("lif",)))
+
+    def _obek(self, ad: str) -> str:
+        for obek, adlar in self.ÖBEK:
+            if ad in adlar:
+                return obek
+        if ad.startswith("zırh."):
+            return "zirh"
+        if (ad.startswith("𝒪") or ad.startswith("alan.")
+                or ad.startswith("kademe.")):
+            return "meleke"
+        return ""
+
+    def alan(self) -> np.ndarray:
+        i, _ad, _a = self.yavas_mod()
+        V = self.kuplaj()
+        a = self.h + self.beta * V[:, i]
+        a[i] = self.h[i]
+        return np.abs(a)
+
+    def nispetler(self) -> Dict[str, float]:
+        assert self.h.size, "Ĥ boş -- nispet kuplajsız çıkarılamaz"
+        a = self.alan()
+        o: Dict[str, float] = {}
+        for j, ad in enumerate(self.adlar):
+            ob = self._obek(str(ad))
+            if ob:
+                o[ob] = o.get(ob, 0.0) + float(a[j])
+        top = float(sum(o.values()))
+        assert top > 0.0, (
+            "Ĥ'in şartlı alanı sıfır -- λ kuplajdan türetilemez "
+            "(ferman 5: sessiz ikame yasak)")
+        return {k: v / top for k, v in o.items()}
+
     def kuplaj(self) -> np.ndarray:
         h = self.h
         V = np.outer(np.abs(h), np.abs(h))

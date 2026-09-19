@@ -247,66 +247,36 @@ def taban_sec(sozluk: int) -> Tuple[int, int, Dict[int, Dict[str, float]]]:
 PENCERE_HADDI: int = 1_048_576
 
 
-PAYLAR: Dict[str, float] = {
-    "uzay": 0.15,
-    "tip": 0.12,
-    "meleke": 0.11,
-    "kaide": 0.05,
-    "tasma": 0.04,
-    "kategori": 0.10,
-    "nokta": 0.10,
-    "cevrim": 0.09,
-    "tenakuz": 0.09,
-    "zirh": 0.07,
-    "monogami": 0.05,
-    "engel": 0.03,
-    "lif": 0.05,
-    "hiz": 0.02,
-}
-
-PAYLAR = {k: v / sum(PAYLAR.values()) for k, v in PAYLAR.items()}
 
 
 def denge(kefeler: Dict[str, float], taban: float = 0.05,
           tavan: float = 8.0,
-          artik: Optional[Sequence[float]] = None,
-          adlar: Optional[Sequence[str]] = None) -> Dict[str, float]:
-    paylar = dict(PAYLAR)
-    olculen = False
-    if artik is not None and adlar is not None and len(adlar) >= 3:
-        from .mukayese import paylar_olc
-        ham = paylar_olc(list(adlar), list(artik))
-        esle_ad = {"uzay": "uzay", "tip": "tip", "kategori": "kategori",
-                   "nokta": "nokta", "cevrim": "çevrim",
-                   "tenakuz": "tenakuz", "monogami": "monogami",
-                   "engel": "engel", "kaide": "kaide_halkası",
-                   "tasma": "taşma", "lif": "lif", "hiz": "hız"}
-        toplu: Dict[str, float] = {}
-        for ad, anahtar in esle_ad.items():
-            toplu[ad] = float(ham.get(anahtar, 0.0))
-        toplu["meleke"] = float(sum(v for k, v in ham.items()
-                                    if k.startswith("𝒪")
-                                    or k.startswith("alan.")
-                                    or k.startswith("kademe.")))
-        toplu["zirh"] = float(sum(v for k, v in ham.items()
-                                  if k.startswith("zırh.")))
-        top = float(sum(toplu.values()))
-        if top > 0.0:
-            paylar = {k: v / top for k, v in toplu.items()}
-            olculen = True
+          nispet: Optional[Dict[str, float]] = None) -> Dict[str, float]:
+    assert nispet, (
+        "λ NİSPETİ BİRLEŞİK HAMİLTONYENDEN GELİR (ferman 2-Þ). Her kefe "
+        "Ĥ'in bir terimidir; ağırlığı V̂_kuplaj'ın şartlı alanından "
+        "çıkar. Elle yazılmış pay tablosu ve kefeden bağımsız pay "
+        "ölçümü kesildi (ferman 2-B); nispet=None ile çağrılamaz.")
+    paylar = {k: float(v) for k, v in nispet.items()}
     cipa = float(kefeler.get("rezonans", 0.0))
-    pay_u = float(paylar.get("uzay", PAYLAR["uzay"])) or PAYLAR["uzay"]
+    pay_u = float(paylar.get("uzay", 0.0))
+    assert pay_u > 0.0, (
+        "çıpa öbeği (uzay/rezonans) Ĥ'in alanında sıfır ağırlıkta -- "
+        "λ ölçeklenemez (ferman 5: sessiz ikame yasak)")
     o: Dict[str, float] = {}
     frenlenen = []
     esle = {"cevrim": "çevrim", "tenakuz": "tenakuz_bariyer",
             "monogami": "monogami", "engel": "engel", "tip": "hodge",
             "kategori": "kategori", "nokta": "nokta",
             "meleke": "meleke", "zirh": "zırh", "kaide": "kaide_halkası",
-            "tasma": "taşma", "lif": "lif", "hiz": "hız"}
+            "tasma": "taşma", "lif": "lif"}
     esik = max(float(taban) * cipa, 1e-9)
     for ad, anahtar in esle.items():
         v = abs(float(kefeler.get(anahtar, 0.0)))
-        nispet = float(paylar.get(ad, PAYLAR[ad])) / pay_u
+        assert ad in paylar, (
+            "%r öbeği Ĥ'in nispetinde yok -- kefe Ĥ'e girmemiş demektir "
+            "(ferman 1-C/b: isim eklemek bağlamak değildir)" % (ad,))
+        nispet = float(paylar[ad]) / pay_u
         if v < esik:
             lam = nispet
             frenlenen.append(ad + "(taban)")
@@ -375,9 +345,9 @@ def olcek_beyani(kok: Kok, o: Optional[Dict[str, Any]] = None) -> str:
         "    bütçeye sığdı mı                         : %s"
         % ("evet" if d["belirteç"] <= d["bütçe"] else "HAYIR ⚠"),
         "",
-        "  FORMÜL 3 -- DENGE (λ'lar mizanın ilk çağrısından ölçülür)",
-        "    söz hakları: %s"
-        % "  ".join("%s %.2f" % (a, p) for a, p in sorted(
-            PAYLAR.items(), key=lambda x: -x[1])),
-        "    toplam pay = %.2f  (1 olmalı)" % sum(PAYLAR.values()),
+        "  FORMÜL 3 -- DENGE (λ'lar BİRLEŞİK HAMİLTONYENDEN gelir)",
+        "    söz hakkı elle yazılmaz: her kefe Ĥ'in bir terimidir ve",
+        "    ağırlığı V̂_kuplaj'ın şartlı alanından çıkar (ferman 2-Þ).",
+        "    Nispetler ve hangi öbeğin kaç ağırlık taşıdığı",
+        "    BİRLEŞİK HAMİLTONYEN beyanında görünür.",
     ])
