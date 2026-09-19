@@ -1144,9 +1144,10 @@ def _hal_kur(baglam: Sequence[Sequence[int]], nefs, taban: int
     from .qegitim import belirtecleri_kodla
     diz = [int(x) for o in baglam for x in list(o)]
     assert diz, "bağlam BOŞ -- sınır şartı yok demektir"
+    from .nqs import turun_genligi
     E = belirtecleri_kodla(diz, int(taban), int(taban))
     q = nefs.idrak_et(E)
-    return np.asarray(q.y.psi[0], complex).reshape(-1)
+    return np.asarray(turun_genligi(nefs, q).hal, complex).reshape(-1)
 
 
 def ana_superpozisyon(baglam: Sequence[Sequence[int]], nefs=None,

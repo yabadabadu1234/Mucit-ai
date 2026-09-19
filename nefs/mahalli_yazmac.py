@@ -13,8 +13,11 @@ def uzunluk_genligi(mahalli, pencere: int):
     if mahalli is None:
         _UZUNLUK["bağlanmadı"] = _UZUNLUK.get("bağlanmadı", 0.0) + 1.0
         return None
-    cephe = int(getattr(mahalli, "pencere", 0) or 0)
-    return mahalli.uzunluk_katmani(cephe, hadd=int(pencere))
+    dal = getattr(mahalli, "_uzunluk", None)
+    assert dal is not None, (
+        "UZUNLUK KATMANI HİÇ AÇILMADI -- intâc onu kurar (ferman 2-Õ); "
+        "burada ikinci defa kurmak çift başlılıktır (ferman 1-M).")
+    return dal
 
 
 ZIRH_QUDITI = 1 << 20
@@ -22,6 +25,7 @@ ZIRH_QUDITI = 1 << 20
 
 _MAHALLI: Dict[str, float] = {
     "kuruldu": 0.0, "qudit": 0.0, "taban": 0.0, "yığın": 0.0,
+    "seviye": 0.0,
     "bayt": 0.0, "vuruş": 0.0, "dokunulan": 0.0, "seyirci": 0.0,
     "pencere": 0.0, "faz_kayması": 0.0, "tahsis": 0.0,
     "kök": 0.0, "cartan_normu": 0.0, "sönüm": 0.0, "açık": 1.0}
@@ -45,8 +49,10 @@ def mahalli_metni(b: Optional[Dict[str, float]] = None) -> str:
            int(d.get("pencere", 0))),
         "    Zırh SABİTTİR (ferman 2-Ğ): her suâlde yeniden açılmaz,",
         "    adres kaymaz; pencere dışı qudit seyircidir, hesaplanmaz.",
-        "    tutulan bellek  : %.3f MB   (qudit başına genlik + faz)"
-        % (d["bayt"] / 1e6),
+        "    TAŞIYICI ℂ^{N×q}: qudit başına q seviyeli mahallî durum"
+        " (ferman 2-V)",
+        "    tutulan bellek  : %.3f MB   (%d seviye × 16 bayt)"
+        % (d["bayt"] / 1e6, int(d.get("seviye", 0))),
         "    kapı vuruşu     : %d   dokunulan qudit %d   seyirci %d"
         " (%.4f)   tahsis %d kere"
         % (int(d["vuruş"]), int(d["dokunulan"]), int(d["seyirci"]),
@@ -135,7 +141,7 @@ class MahalliYazmac:
         self.taban = max(2, int(taban))
         self.yigin = 0
         self.pencere = 0
-        self.hal = np.zeros((0, self.qudit, 2), float)
+        self.hal = np.zeros((0, self.qudit, self.taban), complex)
         _MAHALLI["kuruldu"] = 1.0
         _MAHALLI["qudit"] = float(self.qudit)
         _MAHALLI["taban"] = float(self.taban)
@@ -144,11 +150,22 @@ class MahalliYazmac:
         p = max(1, min(int(pencere), self.qudit))
         y = max(1, int(yigin))
         if y > self.yigin:
-            self.hal = np.zeros((y, self.qudit, 2), float)
+            gereken = int(y) * int(self.qudit) * int(self.taban) * 16
+            from .donanim import bellek_haddi
+            had = bellek_haddi()
+            assert had is None or gereken <= int(had), (
+                "MAHALLÎ ZIRH ÖLÇÜLEN BELLEĞE SIĞMIYOR: %d qudit × %d "
+                "seviye × 16 bayt × %d yığın = %.2f GB, ölçülen hadd "
+                "%.2f GB (ferman 2-S, 2-I: bütçe ölçülür, sığmayan bütçe "
+                "kurulmaz)"
+                % (self.qudit, self.taban, y, gereken / 1e9,
+                   float(had or 0) / 1e9))
+            self.hal = np.zeros((y, self.qudit, self.taban), complex)
             self.hal[..., 0] = 1.0 / math.sqrt(float(self.qudit))
             self.yigin = y
             _MAHALLI["tahsis"] += 1.0
             _MAHALLI["bayt"] = float(self.hal.nbytes)
+            _MAHALLI["seviye"] = float(self.taban)
         self.pencere = p
         _MAHALLI["pencere"] = float(p)
         _MAHALLI["yığın"] = float(self.yigin)
@@ -156,11 +173,11 @@ class MahalliYazmac:
 
     @property
     def genlik(self) -> np.ndarray:
-        return self.hal[..., 0]
+        return np.linalg.norm(self.hal, axis=-1)
 
     @property
     def faz(self) -> np.ndarray:
-        return self.hal[..., 1]
+        return np.angle(self.hal.sum(axis=-1))
 
     def koordinat(self) -> np.ndarray:
         return self._koordinat
@@ -177,8 +194,13 @@ class MahalliYazmac:
         norm = np.maximum(np.linalg.norm(agirlik, axis=-1, keepdims=True),
                           1e-300)
         B = int(b.shape[0])
-        self.hal[:B, :n, 0] = agirlik / norm
-        self.hal[:B, :n, 1] = math.pi * w
+        seviye = np.mod(b, self.taban)
+        self.hal[:B, :n, :] = 0.0
+        satir = np.repeat(np.arange(B), n)
+        sutun = np.tile(np.arange(n), B)
+        self.hal[satir, sutun, seviye.reshape(-1)] = (
+            (agirlik / norm).reshape(-1)
+            * np.exp(1j * math.pi * w.reshape(-1)))
 
     def kapilari_vur(self, kontrol: np.ndarray, hedef: np.ndarray,
                      bag: np.ndarray) -> float:
@@ -195,14 +217,13 @@ class MahalliYazmac:
         h = np.mod(h, max(1, int(self.pencere)))
         kk = np.clip(k, 0, self.qudit - 1)
         B = int(h.shape[0])
-        kayma = j.reshape(1, -1) * self.hal[:B, kk, 1]
+        kontrol_fazi = np.angle(self.hal[:B, kk, :].sum(axis=-1))
+        kayma = j.reshape(1, -1) * kontrol_fazi
         satir = np.repeat(np.arange(B), h.shape[1])
         sutun = h.reshape(-1)
-        np.add.at(self.hal[..., 1], (satir, sutun), kayma.reshape(-1))
+        donme = np.exp(1j * kayma.reshape(-1))
+        np.multiply.at(self.hal, (satir, sutun), donme[:, None])
         dokunulan = np.unique(sutun)
-        self.hal[:B][:, dokunulan, 1] = np.remainder(
-            self.hal[:B][:, dokunulan, 1] + math.pi,
-            2.0 * math.pi) - math.pi
         _MAHALLI["vuruş"] += float(k.size)
         _MAHALLI["dokunulan"] = float(dokunulan.size)
         _MAHALLI["faz_kayması"] = float(np.mean(np.abs(kayma)))
@@ -215,7 +236,7 @@ class MahalliYazmac:
         if h.size == 0:
             return 0.0
         c = np.resize(c, h.size)
-        self.hal[:, h, 0] = self.hal[:, h, 0] * c[None, :]
+        self.hal[:, h, :] = self.hal[:, h, :] * c[None, :, None]
         _MAHALLI["sönüm"] += float(h.size)
         return float(np.abs(1.0 - c).mean())
 
@@ -223,8 +244,9 @@ class MahalliYazmac:
         c = int(cephe) % self.qudit
         L = max(1, min(int(hadd) if int(hadd) > 0 else self.qudit,
                        self.qudit - c))
-        g = np.abs(self.hal[:, c:c + L, 0]).mean(axis=0)
-        f = self.hal[:, c:c + L, 1].mean(axis=0)
+        dilim = self.hal[:, c:c + L, :]
+        g = np.linalg.norm(dilim, axis=-1).mean(axis=0)
+        f = np.angle(dilim.sum(axis=-1)).mean(axis=0)
         devam = np.clip(g / max(float(g.max()), 1e-300), 0.0, 1.0)
         dur = np.sqrt(np.maximum(1.0 - devam * devam, 0.0))
         us = np.concatenate([[0.0], np.cumsum(np.log(
@@ -280,7 +302,7 @@ class MahalliYazmac:
                    max(1, int(self.pencere)))
         if i.size == 0:
             return 0j
-        agir = float((np.abs(self.hal[:, i, 0]) ** 2).sum()
+        agir = float((np.abs(self.hal[:, i, :]) ** 2).sum()
                      / max(1, self.hal.shape[0]))
         return complex(agir * np.exp(1j * float(self.cartan[k])))
 

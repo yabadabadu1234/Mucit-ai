@@ -261,27 +261,14 @@ def _veri(nefs, a: SadakatAyari) -> bool:
     return True
 
 
-def _iki_sutun(ad: str, hal: np.ndarray) -> np.ndarray:
-    H = np.asarray(hal, float)
-    g = H[..., 0]
-    mantiksiz = _sonlu_degil(g) | (g.reshape(-1) < 0.0)
-    G = _dali_ele(ad, g, mantiksiz)
-    H = H.copy()
-    H[..., 0] = np.asarray(G, float).reshape(g.shape)
-    f = H[..., 1]
-    tashih = int(np.count_nonzero(np.abs(f) > math.pi))
-    if tashih:
-        H[..., 1] = np.vectorize(math.remainder)(f, 2.0 * math.pi)
-        _DEVRE["tashih"] += float(tashih)
-    return H
-
-
 def _mahalli(nefs, mahalli) -> bool:
     mh = mahalli if mahalli is not None else getattr(nefs, "mahalli", None)
     hal = getattr(mh, "hal", None) if mh is not None else None
     if not isinstance(hal, np.ndarray) or hal.size == 0:
         return False
-    mh.hal = _iki_sutun("mahallî", hal)
+    n = max(1, min(int(getattr(mh, "pencere", 0) or 0), hal.shape[1]))
+    aktif = hal[:, :n, :]
+    mh.hal[:, :n, :] = _dali_ele("mahallî", aktif, _sonlu_degil(aktif))
     return True
 
 

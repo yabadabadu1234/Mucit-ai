@@ -289,6 +289,7 @@ class QYazmac:
         self.y.cephe = int(cephe)
         self.y.psi = G.astype(self.y.ayar.tip)
         self.y.normalize()
+        self._tur_genligi = np.asarray(self.y.psi, complex).copy()
         m.uzunluk_katmani(int(n_sat))
         if self.y.iz.senet_acik:
             no = self.y.iz.kapi_yaz(
