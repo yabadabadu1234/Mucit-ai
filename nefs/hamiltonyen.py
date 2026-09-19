@@ -6,28 +6,127 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from matematik.sonsuz_mertebeler_teorisi import (MERTEBE_ADI, Deg,
-                                                 rn_adi, rn_sarti)
+from matematik.sonsuz_mertebeler_teorisi import (
+    Baglam, Deg, Evren, MERTEBE_ADI, denetle_t, denetle_tip,
+    kategori_tipi, rn_adi, rn_sarti)
 
-__all__ = ["Mod", "FockUzayi", "Hamiltonyen", "balyala",
-           "fock_beyani", "fock_metni",
+__all__ = ["Mod", "FockUzayi", "Hamiltonyen", "Alem", "alem_kur",
+           "balyala", "fock_beyani", "fock_metni",
            "hamiltonyen_beyani", "hamiltonyen_metni"]
 
 _FOCK_SAYAC: Dict[str, float] = {
     "yaratma": 0.0, "yok_etme": 0.0, "balyalama": 0.0,
-    "mertebe_çağrısı": 0.0}
+    "kategori_denetimi": 0.0, "mertebe_denetimi": 0.0}
 
 _SON_FOCK: Dict[str, Any] = {}
 _SON_TABAN: Dict[str, Any] = {}
+_SON_ALEM: Dict[str, Any] = {}
+
+_BAGLAM = Baglam.terimlerden({"A": Evren(0), "a": Deg("A"),
+                              "b": Deg("A")})
 
 
-def _mertebe_terimi(r: int, n: int) -> str:
-    raise AssertionError(
-        "MERTEBE UYDURULAMAZ. Bir modun (r, n) mertebesi bir etiket "
-        "değildir: taşıyıcısının tipi kurulur ve "
-        "matematik.sonsuz_mertebeler_teorisi.denetle_tip ile FİİLEN "
-        "denetlenir; tutan en büyük (r, n) mertebedir. İndis modulo "
-        "dörtten mertebe çıkmaz (ferman 2-Ā, 5).")
+def _kategori_evreni() -> int:
+    _FOCK_SAYAC["kategori_denetimi"] += 1.0
+    return int(denetle_tip(kategori_tipi(), _BAGLAM))
+
+
+def _mertebe_tutuyor_mu(r: int, n: int) -> bool:
+    _FOCK_SAYAC["mertebe_denetimi"] += 1.0
+    try:
+        denetle_t(rn_sarti(Deg("A"), int(r), int(n)), Evren(0), _BAGLAM)
+        return True
+    except Exception:
+        return False
+
+
+def _esbiçim(V: np.ndarray) -> np.ndarray:
+    L = np.log(np.abs(V) + float(np.finfo(float).tiny))
+    return (L - L.mean(axis=1, keepdims=True)
+            - L.mean(axis=0, keepdims=True) + L.mean())
+
+
+def _bileske_artigi(V: np.ndarray) -> float:
+    L = np.log(np.abs(V) + float(np.finfo(float).tiny))
+    pay = float(np.linalg.norm(_esbiçim(V)))
+    payda = float(np.linalg.norm(L - L.mean()))
+    return float(pay / payda) if payda > 0.0 else 0.0
+
+
+def _morfizm_mertebesi(V: np.ndarray) -> Tuple[int, Tuple[float, ...]]:
+    kule: List[float] = []
+    W = np.asarray(V, float)
+    evvel = float("inf")
+    n = -1
+    for _ in range(int(max(2, min(W.shape[0], 16)))):
+        if W.shape[0] < 2 or not np.isfinite(W).all():
+            break
+        art = _bileske_artigi(W)
+        kule.append(art)
+        if not (art < evvel - float(np.finfo(float).eps)):
+            break
+        evvel = art
+        n += 1
+        R = _esbiçim(W)
+        W = np.abs(R @ R.T)
+        np.fill_diagonal(W, 0.0)
+    return int(max(-1, n)), tuple(kule)
+
+
+def _nesne_mertebesi(V: np.ndarray) -> Tuple[int, int]:
+    W = np.asarray(V, float)
+    if W.shape[0] < 2:
+        return 0, 0
+    nrm = np.linalg.norm(W, axis=1, keepdims=True)
+    nrm[nrm == 0.0] = 1.0
+    B = W / nrm
+    G = np.abs(B @ B.T)
+    np.fill_diagonal(G, 0.0)
+    ayni = int(np.count_nonzero(G >= 1.0 - float(np.sqrt(
+        np.finfo(float).eps)))) // 2
+    r = 0
+    kalan = ayni
+    while kalan > 0 and r < len(MERTEBE_ADI) - 1:
+        r += 1
+        kalan //= 2
+    return int(r), int(ayni)
+
+
+@dataclass(frozen=True)
+class Alem:
+
+    ad: str
+    r: int
+    n: int
+    evren: int
+    tutuyor: bool
+    bileske_artigi: float
+    ozdes_cift: int
+    kule: Tuple[float, ...]
+
+    def beyan(self) -> Dict[str, Any]:
+        return {"âlem": self.ad, "r": int(self.r), "n": int(self.n),
+                "evren": int(self.evren), "tutuyor": bool(self.tutuyor),
+                "bileşke_artığı": float(self.bileske_artigi),
+                "özdeş_çift": int(self.ozdes_cift),
+                "kule": [float(x) for x in self.kule],
+                "kule_boyu": len(self.kule)}
+
+
+def alem_kur(V: np.ndarray) -> Alem:
+    W = np.abs(np.asarray(V, float))
+    n, kule = _morfizm_mertebesi(W)
+    r, ayni = _nesne_mertebesi(W)
+    while n >= 0 and not _mertebe_tutuyor_mu(r, n):
+        n -= 1
+    a = Alem(ad=rn_adi(r, n), r=int(r), n=int(n),
+             evren=_kategori_evreni(),
+             tutuyor=bool(n >= 0 and _mertebe_tutuyor_mu(r, n)),
+             bileske_artigi=(float(kule[0]) if kule else 0.0),
+             ozdes_cift=int(ayni), kule=kule)
+    _SON_ALEM.clear()
+    _SON_ALEM.update(a.beyan())
+    return a
 
 
 @dataclass
@@ -38,8 +137,6 @@ class Mod:
     butce: float = 0.0
     celiski: float = 0.0
     doluluk: int = 1
-    r: int = 0
-    n: int = 0
 
     def __post_init__(self) -> None:
         assert str(self.ad), "modun adı boş olamaz (ferman 4)"
@@ -49,7 +146,6 @@ class Mod:
         self.entropi = float(self.entropi)
         self.butce = float(self.butce)
         self.celiski = float(self.celiski)
-        self.mertebe_adi = _mertebe_terimi(int(self.r), int(self.n))
 
     @property
     def bedel(self) -> float:
@@ -73,13 +169,13 @@ class FockUzayi:
         return len(self.modlar)
 
     def yarat(self, ad: str, entropi: float = 0.0, butce: float = 0.0,
-              celiski: float = 0.0, r: int = 0, n: int = 0) -> Mod:
+              celiski: float = 0.0) -> Mod:
         self.yaratma += 1
         _FOCK_SAYAC["yaratma"] += 1.0
         m = self.modlar.get(str(ad))
         if m is None:
             m = Mod(ad=str(ad), entropi=float(entropi), butce=float(butce),
-                    celiski=float(celiski), r=int(r), n=int(n))
+                    celiski=float(celiski))
             self.modlar[m.ad] = m
             return m
         self.balyalama += 1
@@ -125,9 +221,7 @@ class FockUzayi:
              "tasarruf": float(self.cizgi_bedeli) - float(self.bedel),
              "en_ağır": (en.ad if en is not None else "yok"),
              "en_ağır_çarpan": (float(en.carpan) if en is not None
-                                else 0.0),
-             "mertebe": (en.mertebe_adi if en is not None
-                         else rn_adi(0, 0))}
+                                else 0.0)}
         _SON_FOCK.clear()
         _SON_FOCK.update(o)
         return o
@@ -168,10 +262,7 @@ class Hamiltonyen:
             p = float(abs(h[i])) / top
             self.fock.yarat(
                 ad, entropi=float(-p * math.log(p + 1e-300)),
-                butce=float(abs(h[i])), celiski=float(abs(ham[i])),
-                r=int(min(len(MERTEBE_ADI) - 1, i % len(MERTEBE_ADI))),
-                n=int(min(len(MERTEBE_ADI) - 1,
-                          (i // len(MERTEBE_ADI)) % len(MERTEBE_ADI))))
+                butce=float(abs(h[i])), celiski=float(abs(ham[i])))
         return self
 
     def kuplaj(self) -> np.ndarray:
@@ -199,6 +290,7 @@ class Hamiltonyen:
     def taban_durumu(self) -> Dict[str, Any]:
         i, ad, agir = self.yavas_mod()
         V = self.kuplaj()
+        alem = alem_kur(V)
         alan = self.h + self.beta * V[:, i]
         alan[i] = self.h[i]
         top = float(np.abs(alan).sum()) or 1.0
@@ -217,7 +309,8 @@ class Hamiltonyen:
              "tur": int(self.tur),
              "en_dolu": max(konfig, key=konfig.get) if konfig else "yok",
              "kovaryans": float(np.abs(V).sum()
-                                / max(1.0, float(V.size - V.shape[0])))}
+                                / max(1.0, float(V.size - V.shape[0]))),
+             "âlem": alem.beyan()}
         _SON_TABAN.clear()
         _SON_TABAN.update(o)
         return o
@@ -226,28 +319,36 @@ class Hamiltonyen:
 def balyala(hafiza, fock: FockUzayi) -> Dict[str, Any]:
     kayitlar = list(getattr(hafiza, "kayitlar", []) or [])
     if not kayitlar:
-        return {"kayıt": 0, "balya": 0, "doygunluk": 0.0,
-                "mertebe": rn_adi(0, 0), "taşınan": 0}
+        return {"kayıt": 0, "balya": 0, "doygunluk": 0.0, "taşınan": 0,
+                "âlem": "yok", "özdeş_çift": 0}
     tasinan = 0
     balyalar: Dict[str, int] = {}
     for k in kayitlar:
         yap = str(getattr(k, "yaprak", "") or "kök")
         hk = float(getattr(k, "hukum", 0.0))
-        r = int(min(len(MERTEBE_ADI) - 1, len(yap.split("|")) - 1))
-        n = int(min(len(MERTEBE_ADI) - 1, abs(int(round(hk))) ))
         ad = "balya.%s.%d" % (yap.split("|")[0], int(round(hk)))
         m = fock.yarat(ad, entropi=float(getattr(k, "mu", 0.0)),
                        butce=float(k.x.size), celiski=abs(float(
-                           getattr(k, "omega", 0.0))), r=r, n=n)
+                           getattr(k, "omega", 0.0))))
         balyalar[ad] = int(m.doluluk)
         if ad not in yap:
             k.yaprak = (yap + "|" + ad) if getattr(k, "yaprak", "") else ad
             tasinan += 1
     balya = len(balyalar)
+    m = max(int(k.x.size) for k in kayitlar)
+    X = np.zeros((len(kayitlar), m), complex)
+    for i, k in enumerate(kayitlar):
+        v = np.asarray(k.x, complex).reshape(-1)
+        X[i, :v.size] = v
+    O = np.abs(X @ X.conj().T)
+    np.fill_diagonal(O, 0.0)
+    alem = alem_kur(O)
     return {"kayıt": len(kayitlar), "balya": int(balya),
             "doygunluk": float(1.0 - balya / float(len(kayitlar))),
             "taşınan": int(tasinan),
-            "mertebe": rn_adi(len(MERTEBE_ADI) - 1, len(MERTEBE_ADI) - 1),
+            "âlem": alem.ad, "r": int(alem.r), "n": int(alem.n),
+            "bileşke_artığı": float(alem.bileske_artigi),
+            "özdeş_çift": int(alem.ozdes_cift),
             "en_kalabalık": max(balyalar, key=balyalar.get),
             "en_kalabalık_kat": int(max(balyalar.values()))}
 
@@ -256,8 +357,7 @@ def fock_beyani() -> Dict[str, Any]:
     return dict(_SON_FOCK) if _SON_FOCK else {
         "mod": 0, "yaratma": 0, "yok_etme": 0, "balyalama": 0,
         "açık": 0, "doluluk_toplamı": 0, "bedel_log": 0.0,
-        "tasarruf": 0.0, "en_ağır": "KOŞMADI", "en_ağır_çarpan": 0.0,
-        "mertebe": rn_adi(0, 0)}
+        "tasarruf": 0.0, "en_ağır": "KOŞMADI", "en_ağır_çarpan": 0.0}
 
 
 def hamiltonyen_beyani() -> Dict[str, Any]:
@@ -265,7 +365,10 @@ def hamiltonyen_beyani() -> Dict[str, Any]:
         "yavaş_mod": "KOŞMADI", "yavaş_ağırlık": 0.0, "β": 0.0,
         "enerji": 0.0, "şartlı_enerji": 0.0, "terim": 0, "sönen": 0,
         "konfigürasyon": {}, "tur": 0, "en_dolu": "yok",
-        "kovaryans": 0.0}
+        "kovaryans": 0.0,
+        "âlem": {"âlem": "KOŞMADI", "r": 0, "n": -1, "evren": 0,
+                 "tutuyor": False, "bileşke_artığı": 0.0,
+                 "özdeş_çift": 0, "kule": [], "kule_boyu": 0}}
 
 
 def fock_metni(b: Optional[Dict[str, Any]] = None) -> str:
@@ -280,13 +383,14 @@ def fock_metni(b: Optional[Dict[str, Any]] = None) -> str:
            float(d["bedel_log"])),
         "    TASARRUF %.3f mod  (tekrar n nüsha değil, tek modun n katı",
         "    -- ferman 2-Ƶ: unutma yok, tecrit var)",
-        "    en ağır mod: %s  çarpan %.6e   mertebe %s"
-        % (d["en_ağır"], float(d["en_ağır_çarpan"]), d["mertebe"]),
+        "    en ağır mod: %s  çarpan %.6e"
+        % (d["en_ağır"], float(d["en_ağır_çarpan"])),
         "    a† ile a farkı sıfır değilse açık mod kalmıştır (ferman 5)."])
 
 
 def hamiltonyen_metni(b: Optional[Dict[str, Any]] = None) -> str:
     d = b if b is not None else hamiltonyen_beyani()
+    a = dict(d.get("âlem") or {})
     k = dict(d.get("konfigürasyon") or {})
     ilk = sorted(k.items(), key=lambda x: -x[1])[:5]
     return "\n".join([
@@ -302,4 +406,22 @@ def hamiltonyen_metni(b: Optional[Dict[str, Any]] = None) -> str:
         "    taban durumu konfigürasyonu (en dolu beş serbestlik):",
         "      " + ("  ".join("%s=%d" % (a, n) for a, n in ilk) or "yok"),
         "    Kefeler HEM kendi sayısını verir HEM Ĥ'in terimidir (şık 3).",
-        "    Eleme yoktur: pahalı koordinat söner, kapatılmaz."])
+        "    Eleme yoktur: pahalı koordinat söner, kapatılmaz.",
+        "",
+        "  ÂLEM -- TÜRETİLDİ, ETİKET DEĞİL (ferman 2-Ā)",
+        "    nesneler: Ĥ'in modları   morfizmler: V̂_kuplaj girdileri",
+        "    bileşke: V[a,b]·V[b,c]   BİLEŞKE ARTIĞI %.6e"
+        % float(a.get("bileşke_artığı", 0.0)),
+        "      (log V'nin çift merkezlenmiş artığı; SIFIR ise bileşke",
+        "       katıdır, V[a,b] = w_a/w_b -- yâni âlem bir NOKTAdır)",
+        "    özdeş nesne çifti %d  →  nesne mertebesi r = %d"
+        % (int(a.get("özdeş_çift", 0)), int(a.get("r", 0))),
+        "    tutarlılık kulesi %s"
+        % (" → ".join("%.3e" % float(x)
+                      for x in (a.get("kule") or [])) or "boş"),
+        "      (artık her mertebede küçülmezse kule orada durur;",
+        "       durduğu yer morfizm mertebesi n = %d)" % int(a.get("n", -1)),
+        "    ÂLEM: %s   kategori_tipi() evren seviyesi %d   denetle_t %s"
+        % (a.get("âlem", "?"), int(a.get("evren", 0)),
+           "TUTTU" if a.get("tutuyor") else "TUTMADI"),
+        "    Mertebe indisten değil, V̂'nin kendi hendesesinden çıkar."])
