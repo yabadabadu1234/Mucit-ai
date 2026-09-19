@@ -1,6 +1,6 @@
 # MUCİT-AI -- PADİŞAHIN KAT'Î USUL FERMANLARI
 
-Bu dosya bir tarif değil, bir **emirnâmedir**. Her oturumun başında okunur ve
+Bu dosya bir **emirnâmedir**. Her oturumun başında okunur ve
 her satırı bağlayıcıdır. İhlâl edilirse yapılan iş geçersizdir.
 
 ---
