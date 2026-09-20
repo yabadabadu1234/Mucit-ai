@@ -4782,6 +4782,13 @@ def _whnf_hesapla(t: Terim, baglam=None) -> Terim:
                 return t
             t = yeni
             continue
+        if isinstance(t, YonluTerkip):
+            f_ind = whnf(t.f, baglam)
+            g_ind = whnf(t.g, baglam)
+            if f_ind is t.f and g_ind is t.g:
+                return t
+            t = YonluTerkip(f_ind, g_ind)
+            continue
         return t
 
 
@@ -4868,7 +4875,8 @@ def whnf_beyani() -> str:
 
 
 _BAS_KAPALI = (Evren, Pi, Sigma, YolP, Dogal, Tamsayi, Cember, Taban,
-               Lam, Cift, YolLam, Sfr, Ard, Poz, NegArd)
+               Lam, Cift, YolLam, Sfr, Ard, Poz, NegArd, Belirtec,
+               YonluHom, YonluOk, OperadHom, OperadAgac, OperadSilsile)
 
 
 def _bas_ayrisiyor(a: Terim, b: Terim, baglam=None) -> bool:
@@ -5419,6 +5427,91 @@ def ayrik_sol_kan_uzantisi(F_alt_fonksiyon: Dict[int, float],
         Lan_F[y] = float(max(aday_degerler)) if aday_degerler else 0.0
 
     return Lan_F
+
+
+def rezk_tamlastirmasi(kat: Turetilen1Kategori) -> Turetilen1Kategori:
+    nesneler = list(kat.nesneler)
+    ebeveyn = {x: x for x in nesneler}
+
+    def bul(i: int) -> int:
+        while ebeveyn[i] != i:
+            ebeveyn[i] = ebeveyn[ebeveyn[i]]
+            i = ebeveyn[i]
+        return i
+
+    def birlestir(i: int, j: int) -> None:
+        kok_i, kok_j = bul(i), bul(j)
+        if kok_i != kok_j:
+            ebeveyn[kok_i] = kok_j
+
+    for (x, y), ok_xy in kat.ok_siniflari.items():
+        if x != y and (y, x) in kat.ok_siniflari:
+            ok_yx = kat.ok_siniflari[(y, x)]
+            bileske_xy_yx = kat.bileske_tablosu.get((ok_xy, ok_yx))
+            bileske_yx_xy = kat.bileske_tablosu.get((ok_yx, ok_xy))
+
+            if (bileske_xy_yx == kat.birim_oklar.get(x) and
+                    bileske_yx_xy == kat.birim_oklar.get(y)):
+                birlestir(x, y)
+
+    yeni_nesneler_haritasi = {x: bul(x) for x in nesneler}
+    univalent_nesneler = sorted(set(yeni_nesneler_haritasi.values()))
+
+    yeni_ok_siniflari: Dict[Tuple[int, int], int] = {}
+    for (x, y), oid in kat.ok_siniflari.items():
+        rx, ry = yeni_nesneler_haritasi[x], yeni_nesneler_haritasi[y]
+        if (rx, ry) not in yeni_ok_siniflari:
+            yeni_ok_siniflari[(rx, ry)] = oid
+
+    yeni_birimler = {rx: kat.birim_oklar[rx] for rx in univalent_nesneler if rx in kat.birim_oklar}
+
+    return Turetilen1Kategori(univalent_nesneler, yeni_ok_siniflari,
+                              kat.bileske_tablosu, yeni_birimler)
+
+
+def cech_kohomoloji_engeli_olc(orijinal_baglam: Tuple[int, ...],
+                               P: np.ndarray,
+                               pencere_boyu: int = 2) -> Dict[str, Any]:
+    k = len(orijinal_baglam)
+    if k < 3:
+        return {"cech_engeli_H1": 0.0, "komutatiftir": True}
+
+    ortuler = [orijinal_baglam[i:i + pencere_boyu] for i in range(k - pencere_boyu + 1)]
+    m = len(ortuler)
+
+    bagdasim_kusurlari = []
+    for i in range(m - 2):
+        u, v, w = ortuler[i][-1], ortuler[i + 1][-1], ortuler[i + 2][-1]
+        g_uv = P[u, v]
+        g_vw = P[v, w]
+        g_uw = P[u, w]
+
+        kusur = abs((g_uv * g_vw) - g_uw)
+        bagdasim_kusurlari.append(kusur)
+
+    h1_engeli = float(np.mean(bagdasim_kusurlari)) if bagdasim_kusurlari else 0.0
+    return {"cech_engeli_H1": h1_engeli, "komutatiftir": bool(h1_engeli < 0.02)}
+
+
+def t4_nedensel_cephe_olcumu(psi_intac: np.ndarray, son_token: int,
+                             theta_cartan: float, veri_lifi: int = 8,
+                             basamak_sayisi: int = 6) -> Dict[str, Any]:
+    d = int(veri_lifi)
+    cephe_genlikleri = np.zeros(d, dtype=complex)
+
+    for c in range(d):
+        faz = theta_cartan * float(c + 1) / float(d)
+        psi_idx = c % len(psi_intac)
+        cephe_genlikleri[c] = psi_intac[psi_idx] * np.exp(1j * faz)
+
+    born_olasiliklari = np.abs(cephe_genlikleri) ** 2
+    born_olasiliklari /= (np.sum(born_olasiliklari) + 1e-12)
+
+    olculen_basamak = int(np.argmax(born_olasiliklari))
+    olcum_guveni = float(born_olasiliklari[olculen_basamak])
+
+    return {"nedensel_cephe_basamak": olculen_basamak, "olcum_guveni": olcum_guveni,
+            "born_dagilimi": born_olasiliklari}
 
 
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
@@ -6213,6 +6306,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         uhlmann_sadakati=kuantum_bilgisi["uhlmann_sadakati"],
         son_token=baglam[-1], hedef=nihai_hedef, baglam=orijinal_baglam, Asim=Asim)
 
+    turetilen_kategori_rezk = rezk_tamlastirmasi(turetilen_kategori)
+
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
 
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
@@ -6286,5 +6381,13 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "sol_kan_uzantisi_Lan": ayrik_sol_kan_uzantisi(
             {obj: float(P[obj, nihai_hedef]) for obj in turetilen_alem.alemdeki_nesneler},
             turetilen_alem, turetilen_kategori),
+        "turetilen_1_kategori_rezk": {
+            "univalent_nesneler": turetilen_kategori_rezk.nesneler,
+            "morfizm_sayisi": len(turetilen_kategori_rezk.ok_siniflari)
+        },
+        "cech_kohomolojisi_H1": cech_kohomoloji_engeli_olc(orijinal_baglam, P),
+        "t4_nedensel_cephe_olcumu": t4_nedensel_cephe_olcumu(
+            psi_intac=nihai_intac_psi, son_token=baglam[-1],
+            theta_cartan=theta_cartan, veri_lifi=max(2, min(n, 8))),
         "detay": tayf_bilgisi
     }
