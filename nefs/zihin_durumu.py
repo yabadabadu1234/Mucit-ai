@@ -17,6 +17,9 @@ __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI",
            "makam_kubit_manasi", "makam_mertebeleri", "makam_mertebesi"]
 
 
+ALTIN_ACI: float = math.pi * (3.0 - math.sqrt(5.0))
+
+
 def kulli_sektor_adlari() -> Tuple[str, ...]:
     return ("makam", "mizan", "tenakuz", "tasdik", "sukut",
             "nakz", "kelam", "kaide", "orak", "gaye", "tertip")
@@ -371,16 +374,16 @@ class QYazmac:
         k = int(kademe if kademe is not None else self.ayar.harman_kademesi)
         acilar = (None if teta is None
                   else np.asarray(teta, float).reshape(-1))
-        r = (np.random.default_rng(int(self.ayar.tohum) + 17)
-             if acilar is None else None)
         s = 0
+        _kok_sayaci = 0
         for _ in range(max(1, k)):
             for f, n in enumerate(self.y.ayar.lif):
                 if not kulli_dahil and f == len(self.y.ayar.lif) - 1:
                     continue
                 for alt in range(max(1, int(n).bit_length() - 1)):
                     if acilar is None:
-                        a = float(r.normal(scale=0.1))
+                        a = 0.1 * math.cos(float(_kok_sayaci) * ALTIN_ACI)
+                        _kok_sayaci += 1
                     else:
                         a = float(acilar[s % acilar.size])
                         s += 1
