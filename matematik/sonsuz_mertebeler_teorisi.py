@@ -6266,22 +6266,36 @@ def kuantum_yogunluk_ve_uhlmann(P: np.ndarray, hedef_durum: np.ndarray) -> Dict[
 def kuantum_monogami_ve_tenakuz_kefesi(rho_yogunluk: np.ndarray, Asim: np.ndarray,
                                        son_token: int, hedef: int) -> Tuple[float, float]:
     n = rho_yogunluk.shape[0]
-
-    p_a = float(np.clip(rho_yogunluk[son_token, son_token], 1e-12, 1.0))
-    p_b = float(np.clip(rho_yogunluk[hedef, hedef], 1e-12, 1.0))
     c_idx = (hedef + 1) % n
-    p_c = float(np.clip(rho_yogunluk[c_idx, c_idx], 1e-12, 1.0))
 
-    e_ab = float(np.abs(rho_yogunluk[son_token, hedef]))
-    e_ac = float(np.abs(rho_yogunluk[son_token, c_idx]))
-    e_abc = float(np.sqrt(p_a * (p_b + p_c)))
+    d_A, d_B = 2, 2
+    if n >= d_A * d_B:
+        rho_AB_blok = rho_yogunluk[:d_A * d_B, :d_A * d_B]
+        iz_AB = np.trace(rho_AB_blok)
+        if abs(iz_AB) > 1e-12:
+            rho_AB_blok = rho_AB_blok / iz_AB
 
-    hata_monogami = float(np.maximum(0.0, (e_ab + e_ac) - e_abc))
+        S_A, rho_A = kismi_iz_ve_dolaniklik_entropisi(rho_AB_blok, d_A, d_B)
+        S_B, rho_B = kismi_iz_ve_dolaniklik_entropisi(rho_AB_blok.T, d_B, d_A)
+
+        ozdegerler_AB = np.real(np.linalg.eigvalsh(rho_AB_blok))
+        ozdegerler_AB = ozdegerler_AB[ozdegerler_AB > 1e-12]
+        S_AB = float(-np.sum(ozdegerler_AB * np.log2(ozdegerler_AB))) if len(ozdegerler_AB) else 0.0
+
+        I_AB = float(np.maximum(0.0, S_A + S_B - S_AB))
+
+        I_AC = float(I_AB * abs(rho_yogunluk[son_token, c_idx]))
+        I_ABC_sinir = float(S_A + 1e-6)
+
+        hata_monogami = float(np.maximum(0.0, (I_AB + I_AC) - I_ABC_sinir))
+    else:
+        hata_monogami = 0.0
 
     faz = np.pi * (Asim[son_token, hedef] + Asim[hedef, c_idx] - Asim[c_idx, son_token])
     U_cevrim = np.array([[np.cos(faz), -np.sin(faz)],
                          [np.sin(faz),  np.cos(faz)]], dtype=float)
     iz_terimi = float(np.trace(np.eye(2) + U_cevrim))
+    p_a = float(np.clip(rho_yogunluk[son_token, son_token], 1e-12, 1.0))
     dislama_entropisi = float(-p_a * np.log(p_a))
 
     hata_tenakuz = float(-np.log((iz_terimi + 1e-6) / (4.0 + 1e-6)) * dislama_entropisi)
@@ -6828,12 +6842,6 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     grothendieck_elek.elek_kapanisi_dogrula(turetilen_kategori)
     elek_ortu_mu = grothendieck_elek.ortu_mu(P)
 
-    d_A, d_B = 2, 2
-    if kuantum_bilgisi["rho_yogunluk"].shape[0] >= d_A * d_B:
-        dolaniklik_S, _ = kismi_iz_ve_dolaniklik_entropisi(kuantum_bilgisi["rho_yogunluk"], d_A, d_B)
-    else:
-        dolaniklik_S = 0.0
-
     if (len(silsile_adimlari) >= 2 and isinstance(silsile_adimlari[0][0], OperadAgac)
             and isinstance(silsile_adimlari[1][0], OperadAgac)):
         asili_kulli_agac = opetopik_agac_asila(
@@ -6972,7 +6980,6 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "uc_boyutlu_koherans_Lambda3": uc_boyut_raporu,
         "temel_degisim_pullback_lifleri": pullback_lifleri,
         "grothendieck_elek_ortu_mu": elek_ortu_mu,
-        "von_neumann_dolaniklik_S": dolaniklik_S,
         "opetopik_asili_agac_etiketi": asili_agac_etiketi,
         "lawvere_dinamik_tipi": lawvere_ctt_tipi,
         "hata_gedik_borcu": gedik_borcu,
