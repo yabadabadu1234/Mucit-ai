@@ -5385,6 +5385,23 @@ def intac_funktor_tersi(psi: np.ndarray, funktor_agirliklari: np.ndarray) -> np.
     return (psi_intac / norm) if norm > 1e-12 else psi_intac
 
 
+def kuantum_yogunluk_ve_uhlmann(P: np.ndarray, hedef_durum: np.ndarray) -> Dict[str, Any]:
+    PPT = P @ P.T
+    iz = float(np.trace(PPT)) + 1e-12
+    rho_yogunluk = PPT / iz
+
+    h = hedef_durum / (np.linalg.norm(hedef_durum) + 1e-12)
+
+    uhlmann_sadakati = float(np.real(h.T @ (rho_yogunluk @ h)))
+    hata_uzay_capasi = float(1.0 - uhlmann_sadakati)
+
+    return {
+        "rho_yogunluk": rho_yogunluk,
+        "uhlmann_sadakati": uhlmann_sadakati,
+        "hata_uzay_capasi": hata_uzay_capasi
+    }
+
+
 def cok_boyutlu_kefeler_olc(P: np.ndarray, rho_yogunluk: np.ndarray,
                             uhlmann_sadakati: float, son_token: int,
                             hedef: int, baglam: Tuple[int, ...]) -> np.ndarray:
@@ -5564,8 +5581,13 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     funktor_vektoru[:len(rho)] = np.sqrt(rho) * np.exp(1j * np.pi * rho)
     nihai_intac_psi = intac_funktor_tersi(kuantum_durum_vektoru_temiz, funktor_vektoru)
 
+    hedef_durum = np.zeros(n, dtype=float)
+    hedef_durum[nihai_hedef] = 1.0
+    kuantum_bilgisi = kuantum_yogunluk_ve_uhlmann(P, hedef_durum)
+
     kefeler = cok_boyutlu_kefeler_olc(
-        P=P, rho_yogunluk=P, uhlmann_sadakati=float(P[baglam[-1], nihai_hedef]),
+        P=P, rho_yogunluk=kuantum_bilgisi["rho_yogunluk"],
+        uhlmann_sadakati=kuantum_bilgisi["uhlmann_sadakati"],
         son_token=baglam[-1], hedef=nihai_hedef, baglam=orijinal_baglam)
 
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
@@ -5603,6 +5625,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             "komutatif_ucgenler": len(turetilen_alem.alem_ici_morfizmler)
         },
         "sentetik_kategori_terimi": sentetik_kategori_sahidi,
+        "uhlmann_sadakati": kuantum_bilgisi["uhlmann_sadakati"],
         "kefeler_vektoru": kefeler,
         "lambda_nispetleri": lambda_nispetleri,
         "yavas_mod_indeksi": yavas_mod,
