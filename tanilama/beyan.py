@@ -13,7 +13,7 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
     from nefs.belirtec import belirtec_beyani
     from nefs.casimir import casimir_beyani
     from nefs.hafiza import tertip_beyani
-    from nefs.hendese import hendese_beyani
+    from matematik.sonsuz_mertebeler_teorisi import hendese_beyani
     from nefs.keyfiyet import keyfiyet_beyani
     from nefs.kulli_mizan import fock_beyani, hamiltonyen_beyani
     from nefs.lif import lif_beyani
@@ -179,7 +179,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
                  or "yok -- hepsi formülden"),
               ""]
     if kulli and kulli.get("hendese"):
-        from nefs.hendese import hendese_metni
+        from matematik.sonsuz_mertebeler_teorisi import hendese_metni
         s += [hendese_metni(kulli.get("hendese"),
                             kulli.get("hendese_beyanı")), ""]
     if kulli:

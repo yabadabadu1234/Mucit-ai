@@ -4605,6 +4605,16 @@ def n_mertebe(X: Terim, n: int) -> Terim:
     return Pi(x, X, Pi(y, X, n_mertebe(yol(X, _t(x), _t(y)), n - 1)))
 
 
+MERTEBE_ADI: Tuple[str, ...] = ("nokta", "uzay", "tip", "grupoid")
+
+
+def mertebe_sarti(X: Terim, l: int) -> Terim:
+    assert 0 <= int(l) < len(MERTEBE_ADI), (
+        "vecih mertebesi 0..%d aralığında olmalı, %d verildi (ferman 1-Ğ)"
+        % (len(MERTEBE_ADI) - 1, int(l)))
+    return n_mertebe(X, int(l) - 1)
+
+
 
 def hakiki_rn_mertebe(X: Terim, r: int, n: int) -> Terim:
     r_seviye = max(0, int(r))
@@ -8579,3 +8589,248 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "mertebeler_arasi_katilim_payi": katilim_raporu,
         "detay": tayf_bilgisi
     }
+
+
+# ============================================================================
+# MUCİT-AI D2 HENDESE KÖPRÜSÜ (egitim.py <-> tek gerçek motor)
+#
+# Bu blok eskiden nefs/hendese.py'de yaşayan, kendi başına ayrı bir
+# opetopik/Hodge alt-motoru işleten bir modülün yerine geçer. O modül
+# cins_turet/dikey_asansor/kaide_imzasi adlarıyla bu dosyadan fonksiyon
+# ithal etmeye çalışıyordu; o üç fonksiyon ve dayandıkları 7 yardımcı
+# (opetopik_kompleks, hodge_ayrisimi, kan_boynuzu, kan_kapamasi,
+# serbestlik_adlari, topos_turetimi, izdusum_demeti) geçmiş bir "zombi kod
+# sil" turunda -- nefs/hendese.py'nin bunlara dışarıdan bağımlı olduğu fark
+# edilmeden -- silinmişti. egitim.py bu yüzden import anında çöküyordu.
+#
+# Çözüm: ayrı bir hendese motoru DİRİLTİLMEDİ. Bunun yerine egitim.py'nin
+# D2/D3/D10 safhalarının gerçekten okuduğu alanlar (asansör, kafes, tayf,
+# katman, hodge, Π, şelale, Ω_cebiri) bu dosyanın tek gerçek motorundan
+# (hendese_teshisi_kos + topos_tayfi_hodge_ile_hesapla + yerel_baglamsal_hodge
+# + hakiki_qudit_yogunluk_matrisi) türetiliyor. gecis_dizeyi/karsilikli_haber/
+# mertebe_sec/kaide_imzasi taşınmadı: birincisi veriden_geometri_cikar'ın P
+# matrisiyle, ikincisi d2_enformasyon_ve_hendese_metrikleri'nin karşılıklı
+# haber hesabıyla zaten üstleniliyor -- aynı şeyi iki yerde tutmak bu
+# oturumun kendi kuralına (kullanılmayan ikinci hesaplamayı bırakma) aykırı
+# olurdu. Gromov δ-hiperboliklik ise bu motorda karşılığı olmayan gerçek bir
+# geometrik teşhis olduğu için (cevher kaybı olmasın diye) korunup taşındı.
+# ============================================================================
+
+@dataclass
+class HendeseAyari:
+    azami_alfabe: int = 256
+    dortlu_ornek: int = 64
+    tohum: int = 0
+
+
+_HENDESE_SAYI: Dict[str, int] = {}
+_HENDESE_NISPET: Dict[str, float] = {}
+
+
+def hendese_sifirla() -> None:
+    _HENDESE_SAYI.clear()
+    _HENDESE_SAYI.update({"çağrı": 0, "asansör_katı": 0, "tıkanma": 0,
+                          "dörtlü": 0, "üçgen_ihlâli": 0})
+    _HENDESE_NISPET.clear()
+    _HENDESE_NISPET.update({"büzülme": 0.0, "𝒮_simetrik": 0.0,
+                            "𝒜_yönlü": 0.0, "Ω_yırtık": 0.0,
+                            "δ_gromov": 0.0, "üçgen_nispeti": 0.0})
+
+
+hendese_sifirla()
+
+
+def hendese_yukle(d: Dict[str, Any]) -> None:
+    for k, v in dict(d).items():
+        a = str(k)
+        if a in _HENDESE_SAYI:
+            _HENDESE_SAYI[a] = int(v)
+        elif a in _HENDESE_NISPET:
+            _HENDESE_NISPET[a] = float(v)
+
+
+def gromov_delta_hesapla(duz: Sequence[int], n: int, dortlu_ornek: int = 64
+                         ) -> Dict[str, Any]:
+    y = np.asarray(list(duz), np.int64).reshape(-1) % max(2, int(n))
+    m = int(n)
+    if m < 4 or y.size < 2:
+        return {"δ": 0.0, "üçgen_ihlâli": 0.0, "dörtlü": 0}
+
+    T = np.zeros((m, m), dtype=float)
+    np.add.at(T, (y[:-1], y[1:]), 1.0)
+    S = T + T.T
+    var = S > 0.0
+    en_az = float(S[var].min()) if bool(var.any()) else 1.0
+    ic = -np.log(np.where(var, S, en_az)) + np.where(var, 0.0, 1.0)
+    np.fill_diagonal(ic, 0.0)
+    D = ic.copy()
+    for k in range(m):
+        D = np.minimum(D, D[:, k:k + 1] + D[k:k + 1, :])
+
+    cikan: List[Tuple[int, int, int, int]] = []
+    for i in range(m):
+        for a in (1, 2, 3):
+            j, k2, l = (i + a) % m, (i + 2 * a) % m, (i + 3 * a) % m
+            if len({i, j, k2, l}) == 4:
+                cikan.append((i, j, k2, l))
+            if len(cikan) >= int(dortlu_ornek):
+                break
+        if len(cikan) >= int(dortlu_ornek):
+            break
+    if not cikan:
+        return {"δ": 0.0, "üçgen_ihlâli": 0.0, "dörtlü": 0}
+
+    Q = np.asarray(cikan, np.int64)
+    i, j, k2, l = Q[:, 0], Q[:, 1], Q[:, 2], Q[:, 3]
+    s1 = D[i, j] + D[k2, l]
+    s2 = D[i, k2] + D[j, l]
+    s3 = D[i, l] + D[j, k2]
+    en_buyuk = float(np.max(np.abs(s1 - np.maximum(s2, s3))))
+    ihlal = int(np.count_nonzero(D[i, k2] > D[i, j] + D[j, k2]))
+    return {"δ": en_buyuk, "üçgen_ihlâli": float(ihlal) / float(Q.shape[0]),
+            "dörtlü": int(Q.shape[0])}
+
+
+def hendese_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
+                    ayar: Optional[HendeseAyari] = None) -> Dict[str, Any]:
+    assert baglamlar, "hendese teşhisi için bağlam BOŞ olamaz"
+    a = ayar or HendeseAyari()
+    lif = tuple(int(x) for x in lif)
+    assert lif, "hendese teşhisi için lif yapısı BOŞ olamaz"
+    veri_lifi = int(lif[0])
+    n = max(2, min(int(a.azami_alfabe), veri_lifi) if a.azami_alfabe else veri_lifi)
+    d_toplam = max(1, int(np.prod(lif)))
+
+    duz: List[int] = []
+    for b in baglamlar:
+        duz.extend(int(x) % n for x in
+                   np.asarray(list(b), np.int64).reshape(-1) if int(x) >= 0)
+    assert duz, "bağlamların hepsi boş -- teşhis edilecek dizi yok"
+    if len(duz) < 2:
+        duz = duz * 2
+
+    sonuc = hendese_teshisi_kos(duz, n)
+    if "hata" in sonuc:
+        yedek = duz[-4:] if len(duz) >= 4 else duz * 2
+        sonuc = hendese_teshisi_kos(yedek, n)
+        assert "hata" not in sonuc, (
+            "D2 HENDESE: küllî motor iki denemede de çöktü: %r"
+            % sonuc.get("hata"))
+
+    tayf_bilgisi = sonuc["detay"]
+    parite_lifi = sonuc["parite_lifi"]
+    rho = np.asarray(parite_lifi["spektral_agirliklar"], dtype=float)
+    enerjiler = tayf_bilgisi["enerjiler"]
+
+    top3 = float(enerjiler["uzay"] + enerjiler["kategori"]
+                + enerjiler["tıkanma"]) + 1e-12
+    hodge_sozluk = {
+        "𝒮_simetrik": float(enerjiler["uzay"] / top3),
+        "𝒜_yönlü": float(enerjiler["kategori"] / top3),
+        "Ω_yırtık": float(enerjiler["tıkanma"] / top3),
+    }
+
+    kat_sayisi = max(1, len(lif))
+    buzulme_ham = float(int(sonuc["asansor_canli_son_kat"]) - 1) / 3.0
+    buzulme = float(np.clip(buzulme_ham, 0.0, 1.0)) * float(kat_sayisi - 1)
+    alt = int(np.floor(buzulme))
+    ust = min(alt + 1, kat_sayisi - 1)
+    pay = buzulme - alt
+    demet = np.zeros(kat_sayisi, dtype=float)
+    demet[alt] += (1.0 - pay)
+    demet[ust] += pay
+    kat = int(min(max(int(round(buzulme)), 0), kat_sayisi - 1))
+    asansor_sozluk = {"kat": kat, "büzülme": buzulme, "demet": demet,
+                      "eksen": kat, "lif": lif, "taban_boyu": int(lif[kat])}
+
+    psi_kaynagi = np.asarray(parite_lifi["kuantum_durum_vektoru"], dtype=complex)
+    if psi_kaynagi.size >= d_toplam:
+        psi_d = psi_kaynagi[:d_toplam]
+    else:
+        tekrar = int(np.ceil(d_toplam / max(1, psi_kaynagi.size)))
+        psi_d = np.tile(psi_kaynagi, tekrar)[:d_toplam]
+    Pi_matrisi, pi_safligi = hakiki_qudit_yogunluk_matrisi(psi_d, d_toplam)
+
+    selale_sozluk = {
+        "tıkanma": int(sum(1 for m in sonuc["muhakeme_silsilesi"]
+                          if m.get("hüküm") == "tıkanma"))
+    }
+
+    gr = gromov_delta_hesapla(duz, n, int(a.dortlu_ornek))
+
+    omega_cebiri_sozluk = {"cebir": str(tayf_bilgisi["Ω_cebiri"]),
+                           "tümleyen": None, "unsur": None}
+
+    katman = ("uzay", "kategori", "operad", "yırtık")
+    kafes = [{"ad": ad} for ad in katman]
+
+    _HENDESE_SAYI["çağrı"] += 1
+    _HENDESE_SAYI["asansör_katı"] = kat
+    _HENDESE_SAYI["tıkanma"] = selale_sozluk["tıkanma"]
+    _HENDESE_SAYI["dörtlü"] = int(gr["dörtlü"])
+    _HENDESE_SAYI["üçgen_ihlâli"] = int(round(gr["üçgen_ihlâli"] * gr["dörtlü"]))
+    _HENDESE_NISPET["büzülme"] = buzulme
+    _HENDESE_NISPET["𝒮_simetrik"] = hodge_sozluk["𝒮_simetrik"]
+    _HENDESE_NISPET["𝒜_yönlü"] = hodge_sozluk["𝒜_yönlü"]
+    _HENDESE_NISPET["Ω_yırtık"] = hodge_sozluk["Ω_yırtık"]
+    _HENDESE_NISPET["δ_gromov"] = float(gr["δ"])
+    _HENDESE_NISPET["üçgen_nispeti"] = float(gr["üçgen_ihlâli"])
+
+    return {
+        "asansör": asansor_sozluk,
+        "kafes": kafes,
+        "tayf": rho,
+        "katman": katman,
+        "hodge": hodge_sozluk,
+        "Π": Pi_matrisi,
+        "Π_safligi": pi_safligi,
+        "şelale": selale_sozluk,
+        "Ω_cebiri": omega_cebiri_sozluk,
+        "δ_Gromov": float(gr["δ"]),
+        "üçgen_ihlâli": float(gr["üçgen_ihlâli"]),
+        "alfabe": n,
+        "basamak": len(duz),
+        "kaynak_motor_çıktısı": sonuc,
+        "türetim_beyanı": turetim_beyani(),
+    }
+
+
+def kaide_imzasi_uret(dizi: Sequence[int], n: int) -> str:
+    y = [int(x) % max(2, int(n)) for x in dizi]
+    if len(y) < 2:
+        y = y + y
+    P, Asim, _nk = veriden_geometri_cikar(y, n, K_max=2)
+    kaide_raporu = kaide_ve_imza_hesapla(int(y[0]), int(y[-1]), P, Asim)
+    imza = kaide_raporu["imza"]
+    return "K" + "-".join("%x" % (int(v) & 0xF) for v in imza)
+
+
+def hendese_beyani() -> Dict[str, Any]:
+    b: Dict[str, Any] = {k: int(v) for k, v in _HENDESE_SAYI.items()}
+    b.update({k: float(v) for k, v in _HENDESE_NISPET.items()})
+    b.update({"türetim_%s" % k: v for k, v in turetim_beyani().items()})
+    return b
+
+
+def hendese_metni(teshis: Optional[Dict[str, Any]] = None,
+                  beyan: Optional[Dict[str, Any]] = None) -> str:
+    b = dict(beyan or hendese_beyani())
+    if not int(b.get("çağrı", 0)):
+        return ("  D2 HENDESE: HİÇ KOŞMADI -- türetim yapılmadı "
+                "(tek motor: sonsuz_mertebeler_teorisi.py)")
+    s = ["  D2 HENDESE -- TEK MOTORDAN TÜRETİLİR (nefs/hendese.py kaldırıldı)",
+         "    çağrı %d   asansör katı %d   büzülme %.4f"
+         % (int(b["çağrı"]), int(b["asansör_katı"]), float(b["büzülme"])),
+         "    Hodge: 𝒮 %.4f ⊕ 𝒜 %.4f ⊕ Ω_yırtık %.4f"
+         % (b["𝒮_simetrik"], b["𝒜_yönlü"], b["Ω_yırtık"]),
+         "    ŞELALE tıkanma: %d" % int(b["tıkanma"]),
+         "    Gromov δ %.4f   üçgen ihlâli nispeti %.4f (%d dörtlü)"
+         % (b["δ_gromov"], b["üçgen_nispeti"], int(b["dörtlü"]))]
+    if teshis:
+        s.append("    KAFES DÜĞÜMLERİ (ad · ρ):")
+        for dug, ro in zip(teshis["kafes"], teshis["tayf"]):
+            s.append("      %-10s ρ %.4f" % (dug["ad"], float(ro)))
+        om = teshis["Ω_cebiri"]
+        s.append("    Ω CEBİRİ: %s   (tümleyen %s · unsur %s)"
+                 % (om["cebir"], om.get("tümleyen"), om.get("unsur")))
+    return "\n".join(s)

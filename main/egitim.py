@@ -66,8 +66,8 @@ from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            vecihleri_istihrac, yirtiklari_tertiple)
 from kuantum.devre import devre_beyani
 from nefs.qyazmac import sektor_beyani
-from nefs.hendese import (HendeseAyari, hendese_teshisi,
-                          hendese_beyani)
+from matematik.sonsuz_mertebeler_teorisi import (HendeseAyari, hendese_teshisi,
+                                                 hendese_beyani)
 from nefs.casimir import (CasimirAyari, blok_kosegen_artigi,
                           casimir_beyani, dhr_ayrismasi,
                           gelfand_tsetlin_araya_girme, kartan_fazi)

@@ -256,8 +256,8 @@ def _yuva_sec(mertebeler: Sequence[int], boy: int) -> int:
 def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
                munasebet, onceki: Optional[Dict[str, Any]] = None) -> Lif:
     from idrak.kategori import kategori_beyani, uzaylari_kur
-    from .hendese import (HendeseAyari, hendese_beyani, hendese_yukle,
-                          kaide_imzasi, mertebe_sec)
+    from matematik.sonsuz_mertebeler_teorisi import (
+        hendese_beyani, hendese_yukle, kaide_imzasi_uret)
     from .qegitim import ornek_bol
 
     veri = list(veri)
@@ -273,14 +273,13 @@ def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
     uzaylar = uzaylari_kur(
         _dinamik_mertebeler([len(b) for b, _h, _c, _m in bolunmus]))
     mertebeler = [u.mertebe for u in uzaylar]
-    ha = HendeseAyari(azami_alfabe=n_v, tohum=int(nefs.ayar.tohum))
 
     L = Lif.hazineden(onceki)
     klon = hendese_beyani()
     for bag, _hedef, cins, _makam in bolunmus:
         dizi = [int(x) % n_v for x in bag] + [n_v - 1]
         tip = "arc" if str(cins).startswith("arc") else "sözlü"
-        kategori = kaide_imzasi(mertebe_sec(dizi, ha), n_v)
+        kategori = kaide_imzasi_uret(dizi, n_v)
         uzay = "uzay%02d" % _yuva_sec(mertebeler, len(bag))
         t = np.unique(np.asarray(dizi, np.int64))
         L.birik(tip, kategori, uzay, M[t, :].sum(axis=0))
