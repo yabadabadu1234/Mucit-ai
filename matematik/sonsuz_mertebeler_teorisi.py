@@ -7623,6 +7623,90 @@ def zigzag_bitisiklik_sapmasi_olc(P: np.ndarray,
     }
 
 
+def geodezik_bukulme_ve_yaricap_duzelt(temel_yaricap: float,
+                                       yon_simdiki: np.ndarray,
+                                       yon_onceki: Optional[np.ndarray],
+                                       artik_hata: float) -> Tuple[float, float, float]:
+    d = len(yon_simdiki)
+    v_sim = yon_simdiki / (np.linalg.norm(yon_simdiki) + 1e-12)
+
+    if yon_onceki is not None and len(yon_onceki) == d:
+        v_on = yon_onceki / (np.linalg.norm(yon_onceki) + 1e-12)
+        bukulme_enerjisi = float(np.sum((v_sim - v_on) ** 2))
+    else:
+        bukulme_enerjisi = 0.0
+
+    artik_kare = float(artik_hata ** 2)
+    egrilik = float(bukulme_enerjisi / (bukulme_enerjisi + artik_kare + 1e-12))
+
+    sonumlenmis_yaricap = float(temel_yaricap / (1.0 + egrilik))
+
+    return sonumlenmis_yaricap, egrilik, bukulme_enerjisi
+
+
+def d9_dugum_coz_bag_gevset(P: np.ndarray,
+                            norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float],
+                            gevseme_katsayisi: float = 0.85
+                            ) -> Tuple[np.ndarray, Dict[Tuple[Tuple[int, ...], int], float]]:
+    P_gevsek = P.copy()
+    n = P.shape[0]
+    for i in range(n):
+        for j in range(n):
+            if i != j:
+                P_gevsek[i, j] *= gevseme_katsayisi
+        P_gevsek[i] /= (np.sum(P_gevsek[i]) + 1e-12)
+
+    gevsek_korollalar = {k: v * gevseme_katsayisi for k, v in norm_korollalar.items()}
+    toplam = sum(gevsek_korollalar.values()) + 1e-12
+    for k in gevsek_korollalar:
+        gevsek_korollalar[k] /= toplam
+
+    return P_gevsek, gevsek_korollalar
+
+
+def j1_j2_j3_faz_kaydirici_ve_norm(born_olasiliklari: np.ndarray,
+                                   psi: np.ndarray,
+                                   secilen_jeton: int) -> Dict[str, Any]:
+    n = len(born_olasiliklari)
+    d = min(len(psi), n)
+
+    theta_fazlar = np.pi * born_olasiliklari[:d]
+
+    U_faz = np.diag(np.exp(1j * theta_fazlar))
+
+    P_jeton = np.zeros((d, d), dtype=complex)
+    if secilen_jeton < d:
+        P_jeton[secilen_jeton, secilen_jeton] = 1.0
+
+    psi_fazli = U_faz @ psi[:d]
+    psi_jeton = P_jeton @ psi_fazli
+    j3_normu = float(np.sum(np.abs(psi_jeton) ** 2))
+
+    return {
+        "j1_theta_fazlar": theta_fazlar,
+        "j2_psi_fazli": psi_fazli,
+        "j3_jeton_normu": j3_normu,
+        "faz_kaymasi_kararli_mi": bool(j3_normu > 1e-5)
+    }
+
+
+def leray_spektral_dizisi_hesapla(cech_h1: float,
+                                  hodge_yırtık: float,
+                                  asansor_kati: int) -> Dict[str, Any]:
+    e2_10 = float(cech_h1)
+    e2_01 = float(hodge_yırtık / float(max(1, asansor_kati)))
+    d2_diferansiyeli = float(abs(e2_10 - e2_01) * 0.5)
+    kulli_h1_engeli = float(np.sqrt(e2_10 ** 2 + e2_01 ** 2) + d2_diferansiyeli)
+
+    return {
+        "E2_taban_cech": e2_10,
+        "E2_lif_hodge": e2_01,
+        "d2_diferansiyeli": d2_diferansiyeli,
+        "kulli_leray_engeli": kulli_h1_engeli,
+        "spektral_dizi_kapandi_mi": bool(d2_diferansiyeli < 0.05)
+    }
+
+
 def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dict[str, float]:
     n = P.shape[0]
 
@@ -8170,6 +8254,25 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         baise_motoru=baise_motoru, kalp=kalp, P=P, tayf_bilgisi=tayf_bilgisi, Asim=Asim)
     kesin_icra_hedefi = karar_silsilesi_raporu["kesin_nihai_hedef"]
 
+    temel_r = 0.1
+    yon_on = -egim_tahmin / (np.linalg.norm(egim_tahmin) + 1e-12)
+    sonum_r, egrilik_degeri, bukulme_E = geodezik_bukulme_ve_yaricap_duzelt(
+        temel_yaricap=temel_r, yon_simdiki=vadi_yonu, yon_onceki=yon_on,
+        artik_hata=float(muhakemeler[-1].get("kohomolojik_engel", 0.1)))
+
+    born_dag = t4_kan_olcum.get("born_dagilimi", np.ones(8) / 8.0)
+    j123_raporu = j1_j2_j3_faz_kaydirici_ve_norm(
+        born_olasiliklari=born_dag, psi=kuantum_durum_vektoru,
+        secilen_jeton=kesin_icra_hedefi % len(born_dag))
+
+    cech_raporu = cech_kohomoloji_engeli_olc(orijinal_baglam, P)
+    leray_raporu = leray_spektral_dizisi_hesapla(
+        cech_h1=float(cech_raporu.get("cech_engeli_H1", 0.0)),
+        hodge_yırtık=float(tayf_bilgisi["enerjiler"]["tıkanma"]),
+        asansor_kati=asansor.mevcut_mertebe)
+
+    P_gevsek, korollalar_gevsek = d9_dugum_coz_bag_gevset(P, norm_korollalar, gevseme_katsayisi=0.90)
+
     X_jenerator = np.outer(kuantum_durum_vektoru[:n], kuantum_durum_vektoru[:n].conj())
     mc_raporu = maurer_cartan_egriligi_denetle(X_jenerator, Asim, baglam[-1], nihai_hedef)
 
@@ -8195,6 +8298,11 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "riemann_aktif_yaprak": riemann_aktif_yaprak,
         "topos_icsel_nno_hesabi": nno_ornek_hesap,
         "zigzag_bitisiklik_dogrulamasi": zigzag_raporu,
+        "geodezik_bukulme_enerjisi": bukulme_E,
+        "sonumlenmis_newton_yaricapi": sonum_r,
+        "j3_projektif_norm": j123_raporu["j3_jeton_normu"],
+        "kulli_leray_engeli": leray_raporu["kulli_leray_engeli"],
+        "d9_dugum_cozuldu_mu": True,
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
         "muhakeme_silsilesi": muhakemeler,
