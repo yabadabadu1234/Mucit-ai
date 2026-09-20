@@ -6386,6 +6386,55 @@ def berry_ayar_potansiyeli_ve_fazi(psi: np.ndarray, parametre_acilari: np.ndarra
             "anomalik_faz_var_mi": bool(abs(berry_fazi) > 0.2)}
 
 
+def kan_genlik_hesapla_normalize(u: float, C_katsayilari: np.ndarray, S_katsayilari: np.ndarray,
+                                  enerji: float, cartan_fazi: float) -> Tuple[complex, float]:
+    T, U = kan_chebyshev_intac(u, derece=len(C_katsayilari))
+
+    reel_bileske = float(np.dot(C_katsayilari, T))
+    sanal_bileske = float(np.dot(S_katsayilari, U))
+
+    bolen = np.exp(-2.0 * float(enerji)) * (reel_bileske ** 2 + sanal_bileske ** 2) + 1e-12
+    kok_bolen = float(np.sqrt(bolen))
+
+    faz_terimi = sanal_bileske + float(cartan_fazi)
+    ham_genlik = np.exp(-float(enerji) + 1j * faz_terimi) * (reel_bileske + 1j * sanal_bileske)
+
+    normalize_genlik = complex(ham_genlik / kok_bolen)
+    return normalize_genlik, kok_bolen
+
+
+def t4_kan_nedensel_cephe_baglantisi(kan_genlik: complex, son_token: int,
+                                     theta_cartan: float, veri_lifi: int = 8) -> Dict[str, Any]:
+    d = int(veri_lifi)
+    born_dagilimi = np.zeros(d, dtype=float)
+
+    for c in range(d):
+        faz_c = theta_cartan * float(c + 1) / float(d)
+        qudit_c_genlik = kan_genlik * np.exp(1j * faz_c)
+        born_dagilimi[c] = float(np.abs(qudit_c_genlik) ** 2)
+
+    born_dagilimi /= (np.sum(born_dagilimi) + 1e-12)
+    secilen_basamak = int(np.argmax(born_dagilimi))
+
+    return {"secilen_basamak": secilen_basamak, "olcum_guveni": float(born_dagilimi[secilen_basamak]),
+            "born_dagilimi": born_dagilimi, "kan_nedensel_faz": float(np.angle(kan_genlik))}
+
+
+def maurer_cartan_egriligi_denetle(X_lie: np.ndarray, Asim: np.ndarray,
+                                   son_token: int, hedef: int) -> Dict[str, Any]:
+    komutator = X_lie @ X_lie.conj().T - X_lie.conj().T @ X_lie
+
+    dx_norm = float(abs(Asim[son_token, hedef] - Asim[hedef, son_token]))
+
+    mc_matrisi = dx_norm * np.eye(X_lie.shape[0]) + 0.5 * komutator
+    mc_egrilik_normu = float(np.linalg.norm(mc_matrisi))
+
+    baglanti_duz_mu = bool(mc_egrilik_normu < 0.15)
+
+    return {"mc_egrilik_normu": mc_egrilik_normu, "baglanti_duz_mu": baglanti_duz_mu,
+            "ayar_anomalisi_var_mi": not baglanti_duz_mu}
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7320,9 +7369,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     kok_agirligi = cartan_kok_ve_agirlik_hesapla(baglam[-1], nihai_hedef, n)
     net_cartan_fazi = float(theta_cartan * kok_agirligi)
 
-    kan_dalga_genligi = kan_genlik_hesapla(
+    kan_dalga_genligi, kan_partisyon_boleni = kan_genlik_hesapla_normalize(
         u=u_degeri, C_katsayilari=C_varsayilan, S_katsayilari=S_varsayilan,
-        enerji=skaler_mizan, cartan_acisi=net_cartan_fazi)
+        enerji=skaler_mizan, cartan_fazi=net_cartan_fazi)
 
     tam_qudit_tensor_durumu = cok_basamakli_qudit_tensor_durumu(
         token_id=nihai_hedef, veri_lifi=max(2, min(n, 8)), basamak_sayisi=2)
@@ -7400,6 +7449,13 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     d_psi_tahmin = 1j * psi_evrilmis
     berry_raporu = berry_ayar_potansiyeli_ve_fazi(
         psi=psi_evrilmis, parametre_acilari=parametre_acilari, d_psi=d_psi_tahmin)
+
+    t4_kan_olcum = t4_kan_nedensel_cephe_baglantisi(
+        kan_genlik=kan_dalga_genligi, son_token=baglam[-1],
+        theta_cartan=theta_cartan, veri_lifi=max(2, min(n, 8)))
+
+    X_jenerator = np.outer(kuantum_durum_vektoru[:n], kuantum_durum_vektoru[:n].conj())
+    mc_raporu = maurer_cartan_egriligi_denetle(X_jenerator, Asim, baglam[-1], nihai_hedef)
 
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
@@ -7515,5 +7571,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "diyagonal_ic_esitlik_chi": diyagonal_esitlik_derecesi,
         "tannaka_ayar_simetrisi": tannaka_raporu,
         "berry_geometrik_faz": berry_raporu,
+        "kan_partisyon_boleni": kan_partisyon_boleni,
+        "t4_kan_cephe_karari": {k: v for k, v in t4_kan_olcum.items() if k != "born_dagilimi"},
+        "maurer_cartan_raporu": mc_raporu,
         "detay": tayf_bilgisi
     }
