@@ -7167,20 +7167,32 @@ def vecih_hukmu_tayin_et(vecih_ortusmeleri: Sequence[float]) -> Dict[str, Any]:
             "asgari_ortusme": asg_ort}
 
 
-def sadakat_devresi_kos(psi: np.ndarray, kod_uzayi_maskesi: np.ndarray) -> Dict[str, Any]:
+def sadakat_devresi_kos(psi: np.ndarray, kod_uzayi_maskesi: np.ndarray,
+                        omega_cebiri: str = "heyting") -> Dict[str, Any]:
     psi_calisma = psi.copy()
     guc = np.abs(psi_calisma) ** 2
 
     mantiksiz_maske = (kod_uzayi_maskesi < 0.5) | (~np.isfinite(psi_calisma))
-    kod_ici_guc = guc[~mantiksiz_maske]
 
-    if len(kod_ici_guc) > 0:
-        ortanca_guc = float(np.median(kod_ici_guc))
-        mumkun_maske = (~mantiksiz_maske) & (guc >= ortanca_guc)
-        mecul_maske = (~mantiksiz_maske) & (guc > 0.0) & (guc < ortanca_guc)
-    else:
-        mumkun_maske = np.zeros_like(mantiksiz_maske)
-        mecul_maske = np.zeros_like(mantiksiz_maske)
+    modalite_tayini: List[str] = []
+    zorunlu_sayisi = 0
+    for i in range(len(psi_calisma)):
+        if mantiksiz_maske[i]:
+            modalite_tayini.append("MANTIKSIZ")
+            continue
+        hakikat_degeri = float(guc[i])
+        tenakuz_derecesi = float(np.clip(1.0 - kod_uzayi_maskesi[i], 0.0, 1.0))
+        modal_raporu = topos_modalite_lifi_isle(hakikat_degeri, tenakuz_derecesi, omega_cebiri)
+        if modal_raporu["box_zorunluluk"] > 0.9:
+            modalite_tayini.append("ZORUNLU")
+            zorunlu_sayisi += 1
+        elif modal_raporu["diamond_imkan"] > 0.5:
+            modalite_tayini.append("MÜMKÜN")
+        else:
+            modalite_tayini.append("MEÇHUL")
+
+    mumkun_maske = np.array([m in ("MÜMKÜN", "ZORUNLU") for m in modalite_tayini])
+    mecul_maske = np.array([m == "MEÇHUL" for m in modalite_tayini])
 
     imha_sayisi = int(np.sum(mantiksiz_maske & (guc > 0.0)))
     psi_calisma[mantiksiz_maske] = 0.0
@@ -7194,7 +7206,8 @@ def sadakat_devresi_kos(psi: np.ndarray, kod_uzayi_maskesi: np.ndarray) -> Dict[
     fazla_eleme_uyarisi = bool(mecul_sayisi == 0 and mumkun_sayisi > 0)
 
     return {"psi_suzulen": psi_suzulen, "imha": imha_sayisi, "meçhul": mecul_sayisi,
-            "mumkun": mumkun_sayisi, "fazla_eleme_uyarisi": fazla_eleme_uyarisi}
+            "mumkun": mumkun_sayisi, "fazla_eleme_uyarisi": fazla_eleme_uyarisi,
+            "zorunlu": zorunlu_sayisi, "modalite_tayini": modalite_tayini}
 
 
 def intac_funktor_tersi(psi: np.ndarray, funktor_agirliklari: np.ndarray) -> np.ndarray:
@@ -7879,7 +7892,8 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         if "türetim_gücü" in adim]
     terazi_hukmu = vecih_hukmu_tayin_et(vecih_ortusmeleri)
 
-    sadakat_raporu = sadakat_devresi_kos(kuantum_durum_vektoru, kod_uzayi_maskesi)
+    sadakat_raporu = sadakat_devresi_kos(kuantum_durum_vektoru, kod_uzayi_maskesi,
+                                         omega_cebiri=tayf_bilgisi["Ω_cebiri"])
     kuantum_durum_vektoru_temiz = sadakat_raporu["psi_suzulen"]
 
     funktor_vektoru = np.ones(lif_boyutu, dtype=complex)
