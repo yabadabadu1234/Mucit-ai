@@ -5189,27 +5189,6 @@ def s0_gercek_baglam_cagir(secilen_gaye: int, norm_korollalar: Dict[Tuple[Tuple[
     return [secilen_gaye]
 
 
-def grothendieck_dikey_asansor(a: int, b: int, P: np.ndarray,
-                               parite_lifi: Dict[str, Any]) -> Dict[str, Any]:
-    dilimler = parite_lifi["alt_uzay_dilimleri"]
-    rho = parite_lifi["spektral_agirliklar"]
-    lif_boyutu = parite_lifi["lif_boyutu"]
-    taban_gecisi = float(P[a, b])
-
-    mod_idx_haritasi = {"uzay": 0, "kategori": 1, "operad": 2, "yırtık": 3}
-    kartezyen_lift = np.zeros(lif_boyutu, dtype=float)
-    for mod_adi, (bas, son) in dilimler.items():
-        mod_idx = mod_idx_haritasi[mod_adi]
-        if son - bas > 0:
-            kartezyen_lift[bas:son] = taban_gecisi * float(rho[mod_idx])
-
-    norm = float(np.linalg.norm(kartezyen_lift))
-    if norm > 1e-12:
-        kartezyen_lift = kartezyen_lift / norm
-
-    return {"kartezyen_lift_vektoru": kartezyen_lift, "taban_gecisi": taban_gecisi}
-
-
 def analitik_lie_bargmann_adimi(x: int, y: int, z: int, P: np.ndarray, Asim: np.ndarray
                                 ) -> Dict[str, float]:
     p_dongu = P[x, y] * P[y, z] * max(1e-12, P[z, x])
@@ -8199,13 +8178,6 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             "yırtık_modu": bool(rho[3] > 0.05)
         }
     }
-
-    asansor_raporu = grothendieck_dikey_asansor(baglam[-1], nihai_hedef, P, parite_lifi)
-    kartezyen_lift = asansor_raporu["kartezyen_lift_vektoru"]
-    kuantum_durum_vektoru = kuantum_durum_vektoru * (kartezyen_lift + 1e-6)
-    kuantum_durum_vektoru /= (np.linalg.norm(kuantum_durum_vektoru) + 1e-12)
-    parite_lifi["kuantum_durum_vektoru"] = kuantum_durum_vektoru
-    parite_lifi["kartezyen_lift"] = kartezyen_lift
 
     kaide_raporu = kaide_ve_imza_hesapla(baglam[-1], nihai_hedef, P, Asim)
 
