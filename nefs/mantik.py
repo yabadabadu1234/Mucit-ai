@@ -26,8 +26,8 @@ def istikra_mertebesi(n_gorev: int = 200) -> Dict[str, object]:
                                         for v in k))}
 
 MAKAM_MERTEBE: Dict[str, float] = {
-    "Vehim": 0.0, "Şek": 0.25, "Zan": 0.5,
-    "Zann-ı gālib": 0.75, "Yakîn": 1.0,
+    "Vehim": 0.0, "Şek": 0.2, "Zan": 0.4,
+    "Zann-ı gālib": 0.6, "Yakîn-i nâkıs": 0.8, "Yakîn": 1.0,
 }
 
 ESKI_SIRA: Tuple[str, ...] = ("Şek", "Zan", "Yakîn", "Vehim")

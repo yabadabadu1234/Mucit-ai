@@ -446,8 +446,12 @@ def makam_merdiveni(kac: int) -> Tuple[int, ...]:
     return tuple(k ^ (k >> 1) for k in range(n))
 
 def makam_derecesi(kac: int) -> np.ndarray:
-    n = 1 << int(kac)
-    return np.arange(n, dtype=float) / max(n - 1, 1)
+    merd = makam_merdiveni(kac)
+    n = len(merd)
+    derece = np.zeros(n, dtype=float)
+    for i, idx in enumerate(merd):
+        derece[idx] = float(i) / max(n - 1, 1)
+    return derece
 
 def makam_mertebesi(derece: float) -> str:
     L = len(MAKAM_ADLARI)
