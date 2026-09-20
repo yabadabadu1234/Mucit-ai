@@ -128,6 +128,10 @@
 | 73-J | **`omega_cebiri`nin `if/elif` karar ağacı** -- ve `tam` değerinin, dal seçilmeden evvel `boş == 0`dan **zaten belli olması** | Ω, kafesin kendi cebrinden **hesaplanır**: unsurun kafeste tümleyeni VAR MI diye aranır. Yanlış çıkması imkânsız ölçü, ölçü değildir (F 5) | 2-Ā-C, 5 |
 | 73-K | **Şelalenin komşuluk matrisi geçişlilik taraması olması** (`E[c][a]` · `E[a][m] and E[m][c]`) | Bu klasik çizge aramasıdır, Kan doldurması değil; adı hakikatine çevrilir ve doldurmanın çekirdekte koşmadığı **sayıyla** yazılır | 2-Ā-C, 5 |
 | 73-L | **Tayfın `Π (x_a | 1−x_a)` Naive Bayes çarpımı** | Serbestlikler bağımsız Bernoulli değildir; Postnikov/Hodge tabakalaşması bağımlıdır. Çarpım kalacaksa **bağımsızlık varsayımı açıkça ilan edilir ve ihlâli ölçülür** | 2-Ā-C |
+| 73-M | **KAYBIN PARAMETREYE KÖR OLMASI.** Ölçüldü: 80 kefenin 78'i tam sıfır; `uzay` doymuş (`1.0` = sıfır Uhlmann sadakati); `dizi` tek başına `22.919913320790524` taşıyor ve **bit bit sabit**. Sebebi: `dizi_kaybi` yalnız `\|ψ\|²`ye bakar, canlı olan bütün parametre kanalları ise **yalnız faz** değiştirir. Genlik yarısı (`pq.genlik`) hiç eğim almaz; eğim alan faz yarısı `\|ψ\|²`de görünmez | **Kanal genliğe bağlanır:** parametre `kenet()`in `enerji` terimiyle KAN üssünün **reel** kanadına girer; faz kanadı tek başına öğrenme taşıyamaz | 2-Ā-D |
+| 73-N | **Temas kapısının açısı olarak `genlik` kullanılması** (`temas_kapilari → genlik[kontrol]`) | Açı **fazdır**: sürekli Lie-Cartan `θ ∈ [−π,π]` (F 1-A #36); genlik yalnız hangi temasın ateşleneceğini tartar | 2-Ā-D, 2-R |
+| 73-O | **`θ_cartan`ın KAN üssüne satır başına TEK SKALER girmesi** (`np.repeat(yerel, taban)`) | Küresel ayar fazı kaybın hiçbir teriminde görünmez (`ρ = M·M†`, `Re⟨ψ\|D\|ψ⟩` küresel faz altında değişmezdir). Faz **kök başına, seviye başına** girer: `np.tile(seviye_fazı, B)` (F 2-Â'nın "kök sayısı kadar skaler çarpım" aslı) | 2-Ā-D, 2-Â |
+| 73-P | **`cephe_hali`nin sırf mahallî zırhtan okunması** | Ferman 2-Ş hibrit ister: hâl = mahallî cephe quditi **×** KAN genliği (F 2-Ê: `Hâl = \|⟨kelâm \| Genlik(hedef qudit; θ_cartan)⟩\|²`). Sırf mahallî okuma, hâli parametreden tamamen koparır | 2-Ā-D, 2-Ş, 2-Ê |
 | 74 | Tek indisli `ℓ ∈ {0,1,2,3}` merdiveni | `(r, n)` çifti; r = nesne, n = morfizm mertebesi; tavan `(∞, ∞)` | 2-Þ |
 | 75 | `"∞-kategori"` ve `"∞-tip"` iki ayrı taşıyıcı adı | Tek taşıyıcı: `(r, n)`-kategori | 2-Þ |
 | 76 | Elle yazılmış `VECIHLER` listesi (`genlik`, `faz`, `fark`, `dilim`) | Vecih ∞-kategori ve ∞-tip teorisinden neşet eder | 2-Ú |
@@ -189,6 +193,7 @@
 | 9 | Mazereti delil saymak: "vaktim olmadı", "riskli", "büyük iş" | 1-E |
 | 10 | Yeni usul gelince eskisini aynı turda imha etmemek (yarım iş) | 1-E |
 | 11 | Tahtta rapor metni kurmak: `"%.4f" %`, `s += [...]`, `"\n".join(...)` | 1-G |
+| 11-B | Tahta şemada **adı geçmeyen** bir basamak, bir yardımcı fonksiyon yahut bir sıra koymak; şemadaki bir durumu tahtta **atlamak** yahut iki durumu tek gövdede kaynaştırmak | 1-G |
 | 12 | Tahtın dışında koşu: `python -c`, `/tmp` betiği, `cProfile`, A/B hattı, `depo/` koşturucuları, `pytest` | 1-L |
 | 13 | Tertibat planını tek başına yapmak; kenetlemek yerine ayrı kanat açmak | 2-D |
 | 14 | Sıra suali sormak ("evvelâ hangisini yapayım?", "bu turda kaç aksam?") | 2-E |
@@ -283,6 +288,8 @@
 | 87-B | Cinsi evvelden listeleyip veriyi o listeye sokmak; veriye **etiket seçtirmek** | 2-Ā-B |
 | 87-C | Mertebeyi tek skalere indirmek; `PariteLifi`ni tek kat sanmak | 2-Ā-B, 2-Ú-B |
 | 87-E | Simetrik bir homotopi motorunun üstüne **yönlü · toposik · opetopik · kategorik süs giydirmek**; grupoidin mertebesini artırıp adına "kategori" demek | 2-Ā-C |
+| 87-G | Doymuş (türevi sıfır) bir kefeyi mizanın hâkim terimi yapmak; kaybın parametreye duyarlılığını **ölçmeden** tâlimi koşturmak | 2-Ā-D, 5 |
+| 87-H | Öğrenme kanadını **yalnız faza** bağlayıp kaybı **yalnız genliğe** bakar hâlde bırakmak (kanat ile kefenin ayrı uzaylarda olması) | 2-Ā-D, 1-M |
 | 87-F | Yanlış çıkması **imkânsız** bir ölçü kurmak (neticesi, dal seçilmeden evvel belli olan bir denetim) | 2-Ā-C, 5 |
 | 87-D | Birimi ve haddi başka olan ölçüleri normalize etmeden yarıştırmak (bit · matris normu · kosinüs) | 2-Ā-B, 1-J |
 | 88 | Zar atmak; stokastiklik; rastgele izdüşüm, rastgele eksen, rastgele tohumlu vecih | 2-Ĵ, 2-Ø, 2-Ú |
@@ -335,7 +342,8 @@
 | 3 | Bütün dosyalar baştan sona okunur | 2-Ø |
 | 4 | Kaide beyan edilince, cevap verilmeden **evvel**, bu dosyaya satır olarak mühürlenir | 1-B |
 | 5 | Bağlamak = ana akışın koştuğu bir yerde fonksiyonun **fiilen çağrılması** ve neticesinin kullanılması; varsayılanda koşar, kapatılabilir, kapatılınca ölçü kırmızı yanar | 1-C/b, 5 |
-| 6 | Tahtta bulunabilecek tek şey: uzvun ithali · ayarının kurulması · fiilen çağrılması · kendi beyan fonksiyonunun çağrılması | 1-G |
+| 6 | **TAHT, ÇİZİLEN DURUM MAKİNESİYLE TAM OLARAK AYNIDIR.** `main/egitim.py` ve `main/cikarim.py` § 4'teki şemanın kendisidir: her durum bir fonksiyondur, adı şemadaki adıdır; geçişler yalnız geçiş tablosundaki geçişlerdir. Tahtta durum ve geçişten başka bir şey bulunamaz -- ne rapor metni, ne yardımcı kapanış, ne şemada olmayan bir sıra. Şema değişirse taht aynı turda değişir, taht değişirse şema aynı turda değişir | 1-G |
+| 6-B | Tahtta bulunabilecek tek şey: uzvun ithali · ayarının kurulması · **durumun fiilen çağrılması** · kendi beyan fonksiyonunun çağrılması | 1-G |
 | 7 | Hüküm harfiyyen ve **tamamen** icra edilir; iddia edilir ve sözün ardında durulur | 1-E |
 | 8 | Telafi: doğru usulle şimdi düzeltmek | 1-C/c |
 | 9 | Hata ayıklama **kod okuyarak** yapılır; lâzım olan sayıyı **taht** basar | 1-L |

@@ -195,17 +195,61 @@ def tumleyeni(x: YonluAralik, kafes: Sequence[YonluAralik]
     return None
 
 
+def yonlu_hom(A: Terim, x: Terim, y: Terim) -> Terim:
+    return YonluHom(A, x, y)
+
+
+def yonlu_mertebe(X: Terim, n: int) -> Terim:
+    if int(n) <= 0:
+        return X
+    a, b = terim_taze("a"), terim_taze("b")
+    return Pi(a, X, Pi(b, X,
+                       yonlu_mertebe(yonlu_hom(X, Deg(a), Deg(b)),
+                                     int(n) - 1)))
+
+
+def yonlu_sarti(X: Terim, r: int, n: int) -> Terim:
+    taban = X if int(r) <= 0 else carpim(globuler_tip(int(r)), X)
+    return yonlu_mertebe(taban, max(0, int(n)))
+
+
+def tersi_kurulabilir_mi(X: Terim, n: int) -> bool:
+    if int(n) < 1:
+        return False
+    a, b, q = terim_taze("a"), terim_taze("b"), terim_taze("q")
+    hom = yonlu_hom(X, Deg(a), Deg(b))
+    iddia = pi_hepsi([(a, X), (b, X), (q, hom)],
+                     yonlu_hom(X, Deg(b), Deg(a)))
+    govde = lam_hepsi([a, b, q], Deg(q))
+    try:
+        denetle_t(govde, iddia, ortam_baglami())
+        return True
+    except Exception:
+        return False
+
+
 def yonlu_mertebe_tutuyor(n: int, uretec_sayisi: int = 0
                           ) -> Dict[str, Any]:
-    k = max(1, int(n) + 1)
-    adlar = ["ŷ%d" % i for i in range(k)]
-    kafes = yonlu_kafes(adlar)
-    h = YON_BIR
-    for a in adlar:
-        h = h.ve(YonluAralik.uretec(a))
-    t = tumleyeni(h, kafes)
-    return {"tutuyor": bool(t is None), "kafes": len(kafes),
-            "unsur": repr(h), "tümleyen": (None if t is None else repr(t))}
+    X = Deg("A")
+    try:
+        denetle_t(yonlu_sarti(X, 0, int(n)), Evren(0), ortam_baglami())
+        tesekkul = True
+    except Exception as e:
+        tesekkul = False
+        _TURETIM_SAYI["yönlü_teşkil_düşen"] = _TURETIM_SAYI.get(
+            "yönlü_teşkil_düşen", 0) + 1
+        _ = e
+    ters_var = tersi_kurulabilir_mi(X, int(n)) if tesekkul else True
+    if ters_var:
+        _TURETIM_SAYI["ters_kuruldu"] = _TURETIM_SAYI.get(
+            "ters_kuruldu", 0) + 1
+    else:
+        _TURETIM_SAYI["ters_reddedildi"] = _TURETIM_SAYI.get(
+            "ters_reddedildi", 0) + 1
+    return {"tutuyor": bool(tesekkul and not ters_var),
+            "teşekkül": bool(tesekkul), "ters_kurulabildi": bool(ters_var),
+            "kafes": 0, "unsur": "hom^%d(A)" % int(n),
+            "tümleyen": None}
 
 
 Yuz = FrozenSet[Tuple[str, bool]]
@@ -403,6 +447,13 @@ class YolP(Terim):
 
     def __init__(self, ad: str, cizgi: Terim, sol: Terim, sag: Terim) -> None:
         self.ad, self.cizgi, self.sol, self.sag = ad, cizgi, sol, sag
+
+
+class YonluHom(Terim):
+    __slots__ = ("cizgi", "kaynak", "hedef")
+
+    def __init__(self, cizgi: Terim, kaynak: Terim, hedef: Terim) -> None:
+        self.cizgi, self.kaynak, self.hedef = cizgi, kaynak, hedef
 
 
 class YolLam(Terim):
@@ -639,6 +690,9 @@ def ara_serbest(t: Terim) -> Set[str]:
             yur(t.yol, bagli); g.update(t.r.degiskenler() - bagli); return
         if isinstance(t, YolLam):
             yur(t.govde, bagli | {t.ad}); return
+        if isinstance(t, YonluHom):
+            yur(t.cizgi, bagli); yur(t.kaynak, bagli); yur(t.hedef, bagli)
+            return
         if isinstance(t, YolP):
             yur(t.cizgi, bagli | {t.ad}); yur(t.sol, bagli); yur(t.sag, bagli)
             return
@@ -685,6 +739,8 @@ def ara_serbest(t: Terim) -> Set[str]:
 
 
 def _alt(t: Terim) -> List[Terim]:
+    if isinstance(t, YonluHom):
+        return [t.cizgi, t.kaynak, t.hedef]
     if isinstance(t, (Pi, Sigma)):
         return [t.alan, t.hedef]
     if isinstance(t, Lam):
@@ -754,6 +810,8 @@ def ara_ikame(t: Terim, sigma: Dict[str, Aralik]) -> Terim:
         return Taban() if (r.sifir_mi() or r.bir_mi()) else Dongu(r)
     if isinstance(t, YolUygula):
         return terim_yol_uygula(f(t.yol), t.r.yerine_koy(sigma))
+    if isinstance(t, YonluHom):
+        return YonluHom(f(t.cizgi), f(t.kaynak), f(t.hedef))
     if isinstance(t, Pi):
         return Pi(t.ad, f(t.alan), f(t.hedef))
     if isinstance(t, Sigma):
@@ -869,6 +927,8 @@ def ikame(t: Terim, sigma: Dict[str, Terim]) -> Terim:
         return Poz(f(t.alt))
     if isinstance(t, NegArd):
         return NegArd(f(t.alt))
+    if isinstance(t, YonluHom):
+        return YonluHom(f(t.cizgi), f(t.kaynak), f(t.hedef))
     if isinstance(t, YolP):
         return YolP(t.ad, f(t.cizgi), f(t.sol), f(t.sag))
     if isinstance(t, YolLam):
@@ -1089,6 +1149,17 @@ class DYolP(Deger):
 
     def act(self, s):
         return DYolP(self.cizgi.act(s), self.sol.act(s), self.sag.act(s))
+
+
+class DYonluHom(Deger):
+    __slots__ = ("cizgi", "kaynak", "hedef")
+
+    def __init__(self, cizgi: Deger, kaynak: Deger, hedef: Deger) -> None:
+        self.cizgi, self.kaynak, self.hedef = cizgi, kaynak, hedef
+
+    def act(self, s):
+        return DYonluHom(self.cizgi.act(s), self.kaynak.act(s),
+                         self.hedef.act(s))
 
 
 class DYolLam(Deger):
@@ -1787,6 +1858,10 @@ def _glue_dallari(dallar, ortam: Ortam):
 
 
 def degerlendir(t: Terim, ortam: Ortam) -> Deger:
+    if isinstance(t, YonluHom):
+        return DYonluHom(degerlendir(t.cizgi, ortam),
+                         degerlendir(t.kaynak, ortam),
+                         degerlendir(t.hedef, ortam))
     if isinstance(t, Deg):
         v = ortam.terimler.get(t.ad)
         if v is None:
@@ -1894,6 +1969,9 @@ def _ivar(k: int) -> Aralik:
 
 
 def geri_oku(d: Deger, k: int = 0) -> Terim:
+    if isinstance(d, DYonluHom):
+        return YonluHom(geri_oku(d.cizgi, k), geri_oku(d.kaynak, k),
+                        geri_oku(d.hedef, k))
     if isinstance(d, DEvren):
         return Evren(d.seviye)
     if isinstance(d, DDogal):
@@ -2622,6 +2700,14 @@ def denetle_sistem(ad: str, cizgi: Terim, dallar, u0: Terim,
 
 
 def sentezle(t: Terim, g: Baglam) -> Deger:
+    if isinstance(t, YonluHom):
+        sv = denetle_tip(t.cizgi, g)
+        A = g.d(t.cizgi)
+        denetle(t.kaynak, A, g)
+        denetle(t.hedef, A, g)
+        _TURETIM_SAYI["yönlü_teşkil"] = _TURETIM_SAYI.get(
+            "yönlü_teşkil", 0) + 1
+        return DEvren(sv)
     if isinstance(t, Deg):
         if t.ad not in g.tipler:
             raise DenetimHatasi("kapsamda olmayan değişken: %s" % t.ad)

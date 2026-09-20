@@ -13,7 +13,8 @@ __all__ = ["HendeseAyari", "gecis_dizeyi", "karsilikli_haber",
            "gromov_delta", "mertebe_sec", "dikey_asansor",
            "hendese_teshisi", "hendese_beyani", "hendese_yukle",
            "hendese_sifirla", "gecis_kompleksi", "hodge_ayrisimi",
-           "kan_boynuzu", "izdusum_demeti", "kaide_imzasi"]
+           "kan_boynuzu", "izdusum_demeti", "kaide_imzasi",
+           "hendese_metni"]
 
 
 _SAYI: Dict[str, int] = {}
@@ -424,3 +425,67 @@ def hendese_yukle(d: Dict[str, Any]) -> None:
             _SAYI[a] = int(v)
         elif a in _NISPET:
             _NISPET[a] = float(v)
+
+
+def hendese_metni(teshis: Optional[Dict[str, Any]] = None,
+                  beyan: Optional[Dict[str, Any]] = None) -> str:
+    b = dict(beyan or hendese_beyani())
+    if not int(b.get("çağrı", 0)):
+        return ("  D2 HENDESE: HİÇ KOŞMADI -- türetim yapılmadı "
+                "(ferman 2-Ā-B)")
+    s = ["  D2 HENDESE -- CİNS LİSTELENMEZ, TÜRETİLİR (ferman 2-Ā-B/C)",
+         "    çağrı %d   alfabe hücreleri: 0-h %d · 1-h %d · 2-h %d · 3-h %d"
+         % (int(b["çağrı"]), int(b["0-hücre"]), int(b["1-hücre"]),
+            int(b["2-hücre"]), int(b["3-hücre"])),
+         "    serbestlik (ölçülen, [0,1]): morfizm %.4f · yüksek %.4f ·"
+         " arite %.4f" % (b["morfizm"], b["yüksek"], b["arite"]),
+         "      yön₁ %.4f · yön₂ %.4f · koherans %.4f"
+         % (b["yön₁"], b["yön₂"], b["koherans"]),
+         "    Hodge: 𝒮 %.4f ⊕ 𝒜 %.4f ⊕ Ω_yırtık %.4f"
+         % (b["𝒮_simetrik"], b["𝒜_yönlü"], b["Ω_yırtık"]),
+         "    kenar: yönlü %d · simetrik %d   boynuz %d (dolu %d)"
+         % (int(b["yönlü_kenar"]), int(b["simetrik_kenar"]),
+            int(b["boynuz"]), int(b["dolu_boynuz"])),
+         "    ŞELALE (çizge geçişliliği, Kan doldurması DEĞİL):",
+         "      uzay %d · kategori %d · operad %d · TIKANMA %d"
+         " (kapanma %.4f)"
+         % (int(b["şelale_uzay"]), int(b["şelale_kategori"]),
+            int(b["şelale_operad"]), int(b["tıkanma"]),
+            b["kapanma_nispeti"]),
+         "      koherans şelaleden evvel %.4f, sonra %.4f"
+         % (b["koherans_evvel"], b["koherans"]),
+         "    KAFES ÇEKİRDEĞİN TİP DENETÇİSİNDEN ÜRETİLİR:",
+         "      denenen %d · tutan %d · düşen %d → kafes %d düğüm"
+         % (int(b.get("türetim_denenen", 0)),
+            int(b.get("türetim_tutan", 0)),
+            int(b.get("türetim_düşen", 0)), int(b["kafes"])),
+         "      YÖNLÜ KANAT (ferman 113-A/B): teşkil eden %d ·"
+         " düşen %d" % (int(b.get("türetim_yönlü_tutan", 0)),
+                        int(b.get("türetim_yönlü_düşen", 0))),
+         "      tersi KURULDU %d (⇒ grupoid) · REDDEDİLDİ %d"
+         " (⇒ kategori)"
+         % (int(b.get("türetim_ters_kuruldu", 0)),
+            int(b.get("türetim_ters_reddedildi", 0))),
+         "      yönlü hom teşkil kuralı çekirdekte koştu: %d kere"
+         % int(b.get("türetim_yönlü_teşkil", 0)),
+         "    tayf entropisi %.4f nat   bağımsızlık artığı %.4e"
+         % (b["tayf_entropisi"],
+            b.get("türetim_bağımsızlık_artığı", 0.0)),
+         "    Ω: boole yüzü %d · heyting yüzü %d"
+         % (int(b.get("türetim_boole_yüzü", 0)),
+            int(b.get("türetim_heyting_yüzü", 0))),
+         "    aşkın çağrı: log %d · exp %d · eigh %d (toplam %d)"
+         % (int(b.get("aşkın_log", 0)), int(b.get("aşkın_exp", 0)),
+            int(b.get("aşkın_eigh", 0)), int(b.get("aşkın_toplam", 0))),
+         "    dikey asansör: büzülme %.4f → parite lifi %d"
+         % (b["büzülme"], int(b["asansör_katı"]))]
+    if teshis:
+        s.append("    KAFES DÜĞÜMLERİ (ad · ρ · kısıtlama):")
+        for dug, ro in zip(teshis["kafes"], teshis["tayf"]):
+            s.append("      %-22s ρ %.4f   kısıtlama %d   yönlü %s"
+                     % (dug["ad"], float(ro), int(dug["kısıtlama"]),
+                        "evet" if dug.get("yönlü") else "hayır"))
+        om = teshis["Ω_cebiri"]
+        s.append("    Ω CEBİRİ: %s   (üçüncü şık %s · unsur %s)"
+                 % (om["cebir"], om.get("üçüncü_şık"), om.get("unsur")))
+    return "\n".join(s)

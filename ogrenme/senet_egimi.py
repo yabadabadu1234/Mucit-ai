@@ -7,7 +7,8 @@ import numpy as np
 __all__ = ["karo_vur", "bant_vur", "faz_vur", "cift_lif_vur",
            "senedi_uygula", "basa_don",
            "bit_turevi_vur", "egim_uretec", "egim_ek_durum", "egim_ikiz",
-           "mutabakat", "senet_kapsami", "senet_ileri_sadakati"]
+           "mutabakat", "senet_kapsami", "senet_ileri_sadakati",
+           "mahalli_egimi", "mahalli_beyani_egim"]
 
 
 def karo_vur(psi: np.ndarray, lif: Tuple[int, ...], k: int,
@@ -282,3 +283,56 @@ def mutabakat(g_uretec: np.ndarray, g_ek: np.ndarray, ikiz: float,
             "üreteç_ikiz_farkı": abs(a - ikiz) / payda,
             "üreteç_normu": float(np.linalg.norm(g_uretec)),
             "ek_durum_normu": float(np.linalg.norm(g_ek))}
+
+
+_MAHALLI_EGIM: Dict[str, float] = {
+    "çağrı": 0.0, "bağ": 0.0, "kapsanan": 0.0, "norm": 0.0,
+    "cephe": -1.0, "sıfır_hata": 0.0}
+
+
+def mahalli_beyani_egim() -> Dict[str, float]:
+    return dict(_MAHALLI_EGIM)
+
+
+def mahalli_egimi(iz, mahalli, H: np.ndarray, cephe: int,
+                  n_par: int) -> Tuple[np.ndarray, np.ndarray]:
+    g = np.zeros(int(n_par), float)
+    metrik = np.zeros(int(n_par), float)
+    baglar = list(getattr(iz, "mahalli_bag", ()) or ())
+    _MAHALLI_EGIM["çağrı"] += 1.0
+    _MAHALLI_EGIM["bağ"] = float(len(baglar))
+    if mahalli is None or not baglar:
+        return g, metrik
+    n = int(getattr(mahalli, "pencere", 0))
+    q = int(getattr(mahalli, "taban", 0))
+    if n <= 0 or q <= 0:
+        return g, metrik
+    psi = np.asarray(mahalli.hal[:, :n, :], complex)
+    c = int(np.clip(int(cephe), 0, n - 1))
+    _MAHALLI_EGIM["cephe"] = float(c)
+    h = np.resize(np.asarray(H, complex).reshape(-1), q)
+    hata = np.zeros_like(psi)
+    hata[:, c, :] = psi[:, c, :] * h[None, :]
+    if not np.any(hata):
+        _MAHALLI_EGIM["sıfır_hata"] += 1.0
+        return g, metrik
+    kapsanan = set()
+    for (par, olcek, seviye, aci) in baglar:
+        a = np.asarray(aci, float).reshape(-1)
+        cift = int(min(a.size, (q - int(seviye)) // 2))
+        if cift < 1:
+            continue
+        s0 = int(seviye)
+        u = psi[:, :, s0:s0 + 2 * cift:2]
+        v = psi[:, :, s0 + 1:s0 + 2 * cift:2]
+        hu = hata[:, :, s0:s0 + 2 * cift:2]
+        hv = hata[:, :, s0 + 1:s0 + 2 * cift:2]
+        pay = np.conj(u) * (-hv) + np.conj(v) * hu
+        deger = 2.0 * float(np.imag(np.sum(pay * a[None, None, :cift])))
+        g[int(par)] += float(olcek) * deger
+        ust = float(np.real(np.sum(np.conj(u) * u + np.conj(v) * v)))
+        metrik[int(par)] += (float(olcek) ** 2) * max(0.0, ust)
+        kapsanan.add(int(par))
+    _MAHALLI_EGIM["kapsanan"] = float(len(kapsanan))
+    _MAHALLI_EGIM["norm"] = float(np.linalg.norm(g))
+    return g, metrik

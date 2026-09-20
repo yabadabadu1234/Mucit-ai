@@ -77,6 +77,10 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % (", ".join(kulli.get("elle_verilen") or ())
                  or "yok -- hepsi formülden"),
               ""]
+    if kulli and kulli.get("hendese"):
+        from nefs.hendese import hendese_metni
+        s += [hendese_metni(kulli.get("hendese"),
+                            kulli.get("hendese_beyanı")), ""]
     if kulli:
         d = kulli["değerlendirme"]
         s += [devam_metni(kulli.get("devam") or {},

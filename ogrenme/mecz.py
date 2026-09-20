@@ -28,6 +28,10 @@ def yetim_bloklar() -> List[Tuple[int, str]]:
 def mecz_sifirla() -> None:
     _MECZ.clear()
     _MECZ.update({"çağrı": 0.0, "tur": 0.0, "kabul": 0.0,
+                  "ölü_adım": 0.0, "diri_adım": 0.0,
+                  "p_duyarlılığı": 0.0,
+                  "ölü_adım": 0.0, "diri_adım": 0.0,
+                  "p_duyarlılığı": 0.0,
                   "adım_normu": 0.0, "eğim_normu": 0.0,
                   "kapsanan_parametre": 0.0, "toplam_parametre": 0.0,
                   "sıralanan": 0.0, "en_dar_sıra": 0.0,
@@ -283,8 +287,9 @@ class Memuriyet:
 
     def divan(self, p: np.ndarray) -> Dict[str, Any]:
         from .senet_egimi import (egim_ek_durum, egim_ikiz, egim_uretec,
-                                  mutabakat, senet_kapsami,
-                                  senet_ileri_sadakati)
+                                  mahalli_beyani_egim as _mh_beyan,
+                                  mahalli_egimi, mutabakat,
+                                  senet_kapsami, senet_ileri_sadakati)
         n_par = int(np.asarray(p, float).size)
         from nefs.qyazmac import SENET_ACIK
         self.nefs.yukle(np.asarray(p, float))
@@ -328,6 +333,15 @@ class Memuriyet:
 
         g_ek, metrik = egim_ek_durum(iz, lif, psi, H, n_par)
         g_ur = egim_uretec(iz, lif, psi, H, n_par)
+        g_mh, m_mh = mahalli_egimi(
+            iz, getattr(self.nefs, "mahalli", None), H,
+            int(getattr(q.y, "cephe", 0)), n_par)
+        g_ek = g_ek + g_mh
+        g_ur = g_ur + g_mh
+        metrik = metrik + m_mh
+        _MECZ["mahallî_bağ"] = float(_mh_beyan()["bağ"])
+        _MECZ["mahallî_kapsanan"] = float(_mh_beyan()["kapsanan"])
+        _MECZ["mahallî_eğim_normu"] = float(_mh_beyan()["norm"])
         kap = senet_kapsami(
             iz, n_par, defter=(self.nefs.p.defter()
                                if hasattr(self.nefs.p, "defter") else None),
@@ -406,6 +420,11 @@ class Memuriyet:
             _MECZ["r_kullanılan"] = r
             _MECZ["ΔV_gerçek"] = float(va - v)
             _MECZ["ΔV_lineer"] = float(egim_yon * r)
+            if va == v:
+                _MECZ["ölü_adım"] += 1.0
+            else:
+                _MECZ["diri_adım"] += 1.0
+            _MECZ["p_duyarlılığı"] = float(abs(va - v))
             eg = hat_egriligi(va - v, egim_yon * r, r, max(abs(v), abs(va)))
             seyir.append({"V": va, "yarıçap": r, "ΔE": float(d["ΔE"]),
                           "κ": float(eg["κ"]), "keyfiyet": keyf_aday})
@@ -438,12 +457,34 @@ def mecz_beyani() -> Dict[str, float]:
     b["çağrı_başına_tur"] = (b["tur"] / b["çağrı"]) if b["çağrı"] else 0.0
     b["kapsam"] = ((b["kapsanan_parametre"] / b["tahsis_edilen"])
                    if b.get("tahsis_edilen") else 0.0)
-
+    _adim = b["ölü_adım"] + b["diri_adım"]
+    b["ölü_adım_nispeti"] = (b["ölü_adım"] / _adim) if _adim else 0.0
+    b["kayıp_p_den_bağımsız"] = bool(_adim > 0.0
+                                     and b["diri_adım"] <= 0.0)
     return b
 
 
 def mecz_metni(b: Optional[Dict[str, float]] = None) -> str:
     b = b or mecz_beyani()
+    _kirmizi = []
+    if b.get("kayıp_p_den_bağımsız"):
+        _kirmizi = [
+            "  ✗ KIRMIZI -- KAYIP PARAMETREDEN BAĞIMSIZ (ferman 5):",
+            "    %d adımın %d'i ölü; V(p+rδ) == V(p) BİT BİT AYNI."
+            % (int(b["ölü_adım"] + b["diri_adım"]), int(b["ölü_adım"])),
+            "    Son ölçülen duyarlılık |ΔV| = %.3e"
+            % float(b.get("p_duyarlılığı", 0.0)),
+            "    Sebebi ölçüldü: θ_cartan KAN üssüne satır başına TEK"
+            " SKALER olarak girer (küresel ayar fazı, ferman 2-Â);",
+            "    kaybın bütün terimleri (ρ = M·M†, Re⟨ψ|D|ψ⟩, örtüşme)"
+            " küresel faz altında DEĞİŞMEZDİR.",
+            "    Bu kanalın kaybı değiştirmesi riyazî olarak"
+            " imkânsızdır -- öğrenme o kanattan gelemez.",
+            ""]
+    return "\n".join(_kirmizi + [_mecz_govde(b)])
+
+
+def _mecz_govde(b: Dict[str, float]) -> str:
     s = ["=== MECZ -- BEŞ MEMURİYET (ferman 2-P) ===", "",
          "  tur / kayıp çağrısı : %d / %d   (tur başına %s çağrı)"
          % (int(b["tur"]), int(b["çağrı"]),

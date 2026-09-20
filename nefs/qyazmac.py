@@ -74,6 +74,7 @@ class Iz:
         self.senet: List[Tuple[str, Tuple[int, ...], np.ndarray]] = []
         self.baglanti: List[Tuple[int, int, float, Any]] = []
         self.mahalli_senet: List[np.ndarray] = []
+        self.mahalli_bag: List[Tuple[int, float, int, np.ndarray]] = []
         self.derinlik = 0
         self.uretecsiz = 0
         self.bag_reddi = 0
@@ -88,6 +89,17 @@ class Iz:
         self.baglanti = []
         self.uretecsiz = 0
         self.mahalli_senet: List[np.ndarray] = []
+        self.mahalli_bag = []
+
+    def mahalli_bag_yaz(self, par: int, olcek: float, seviye: int,
+                        aci: np.ndarray) -> int:
+        if not self.senet_acik:
+            return -1
+        self.mahalli_bag.append((int(par), float(olcek), int(seviye),
+                                 np.asarray(aci, float).copy()))
+        _SENET_SAYAC["mahallî_bağ"] = _SENET_SAYAC.get(
+            "mahallî_bağ", 0.0) + 1.0
+        return len(self.mahalli_bag) - 1
 
     def mahalli_yaz(self, mahalli) -> int:
         if not self.senet_acik or mahalli is None:
@@ -666,10 +678,14 @@ class QuditYazmac:
         _SEKTOR_SAYAC["dönme"] += 1.0
         m.cartan_ekle(str(ad), float(np.mean(a)))
         if bag and self.iz.senet_acik:
-            kac = 1 if isinstance(bag, tuple) else len(list(bag))
-            self.iz.uretecsiz += int(kac)
+            sev = int(m.kok_seviyesi(ad))
+            for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
+                                      else list(bag)):
+                p = np.asarray(pay, float).reshape(-1)
+                agir = (a * np.resize(p, a.size)) if p.size else a
+                self.iz.mahalli_bag_yaz(int(par), float(olcek), sev, agir)
             _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
-                "mahallî_bağ", 0.0) + float(kac)
+                "mahallî_bağ", 0.0) + 1.0
         return vuran
 
     def sektor_cifti(self, kontrol: str, hedef: str,
@@ -828,6 +844,18 @@ class QuditYazmac:
         H = np.zeros((self.B, n_v), complex)
         dilim = np.asarray(mh.hal[:, c, :q], complex)
         H[:dilim.shape[0], :q] = dilim[:self.B]
+        G = getattr(self, "_cephe_genligi", None)
+        assert G is not None, (
+            "CEPHE HÂLİ SIRF MAHALLÎ OKUNAMAZ -- hibrit yazmaç ikisi "
+            "beraberdir: donanım kanadı mahallî zırh, idrak kanadı KAN "
+            "genliği (ferman 2-Ş, 2-Ê). İntâc koşmadan hâl istenmiş.")
+        A = np.asarray(G, complex)
+        k = int(min(n_v, A.shape[-1]))
+        carpan = np.ones((self.B, n_v), complex)
+        carpan[:A.shape[0], :k] = A[:self.B, :k]
+        H = H * carpan
+        _SEKTOR_SAYAC["hibrit_hal"] = _SEKTOR_SAYAC.get(
+            "hibrit_hal", 0.0) + 1.0
         nrm = np.linalg.norm(H, axis=-1, keepdims=True)
         canli = nrm > 0.0
         assert bool(canli.any()), (

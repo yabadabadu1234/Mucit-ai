@@ -15,7 +15,8 @@ _KENET: Dict[str, float] = {"çağrı": 0.0, "kapısız_çağrı": 0.0,
                             "kapı": 0.0, "seyirci": 0.0,
                             "enerji": 0.0, "faz": 0.0,
                             "gerilim": 0.0, "gerilim_tepesi": 0.0,
-                            "ayrı_rezonans": 0.0, "açık": 1.0}
+                            "ayrı_rezonans": 0.0, "açık": 1.0,
+                            "açı_kanadı": 0.0}
 
 
 def kenet_beyani() -> Dict[str, float]:
@@ -140,7 +141,12 @@ class ParametreYazmaci:
         kontrol = np.concatenate(
             [bas + np.arange(int(kac), dtype=np.int64)
              for (bas, kac) in self._yer.values()])
-        return kontrol, self.genlik[kontrol]
+        _KENET["açı_kanadı"] = 1.0
+        return kontrol, self.faz[kontrol]
+
+    def temas_agirligi(self, kontrol: np.ndarray) -> np.ndarray:
+        k = np.asarray(kontrol, np.int64).reshape(-1)
+        return self.genlik[k] if k.size else np.zeros(0, float)
 
     @staticmethod
     def gerilim(koordinat: np.ndarray) -> np.ndarray:

@@ -131,6 +131,17 @@ class MahalliYazmac:
         n = max(1, int(self.cartan.size))
         return np.arange(1, n + 1, dtype=float) / float(n)
 
+    def seviye_fazi(self, taban: Optional[int] = None) -> np.ndarray:
+        q = int(self.taban if taban is None else taban)
+        v = np.zeros(q, float)
+        if not self._kok:
+            return v
+        for ad, k in self._kok.items():
+            v[int(k) % q] += float(self.cartan[int(k)])
+        _MAHALLI["seviye_fazı"] = float(np.abs(v).sum())
+        _MAHALLI["seviye_kökü"] = float(len(self._kok))
+        return v
+
     def kuresel_faz(self) -> float:
         return float(np.dot(self.cartan, self.kok_agirligi()))
 

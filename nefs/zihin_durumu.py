@@ -250,6 +250,17 @@ class QYazmac:
                 kontrol,
                 pq.rezonans(self.mahalli.koordinat(), int(kontrol.size)),
                 bag)
+            if int(np.asarray(kontrol).size):
+                teta = np.asarray(pq.faz, float)[
+                    np.asarray(kontrol, np.int64)]
+                agir = np.asarray(bag, float).reshape(-1)
+                pay = float(np.sum(np.abs(agir)))
+                assert pay > 0.0, (
+                    "TEMAS KAPILARININ AĞIRLIĞI TAMAMEN SÖNDÜ -- "
+                    "parametre sürekli kanala giremez (ferman 2-Â, 5)")
+                self.mahalli.cartan_ekle(
+                    "parametre.temas",
+                    float(np.sum(teta * np.abs(agir)) / pay))
         izd = getattr(self, "izdusum", None)
         if izd is not None:
             self.mahalli.modlari_vur(izd[0], izd[1])
@@ -273,8 +284,8 @@ class QYazmac:
         bas, sec, yigin, sut, B, n_sat, d = tohum
         m = self.mahalli
         kuresel = m.kuresel_faz()
-        yerel = m.faz[:B, :n_sat].mean(axis=-1) + kuresel
         taban = int(self.ayar.veri_lifi)
+        seviye_fazi = m.seviye_fazi(taban)
         cephe = max(0, int(n_sat) - 1)
         aday = np.concatenate(
             [np.repeat(bas, taban, axis=0),
@@ -282,13 +293,28 @@ class QYazmac:
             axis=1)
         kulli_aday = kan.genlik(
             aday, parametre=pq,
-            yerel_faz=np.repeat(yerel, taban)).reshape(B, taban)
+            yerel_faz=np.tile(seviye_fazi, B)).reshape(B, taban)
         kulli = kulli_aday.sum(axis=1)
-        agirlik = (m.genlik[:B, :n_sat] * kulli[:, None]).reshape(-1)
+        bas_sev = np.mod(np.asarray(bas, np.int64), taban)
+        kendi = kulli_aday[np.arange(B)[:, None], bas_sev]
+        assert kendi.shape == (B, n_sat), (
+            "KAN genliği basamak başına düşmedi: %r ≠ %r -- satır başına "
+            "tek skaler, sütun normalizasyonunda sadeleşir ve kaybı "
+            "parametreye kör bırakır (ferman 2-Ā-D)"
+            % (kendi.shape, (B, n_sat)))
+        agirlik = (m.genlik[:B, :n_sat] * kendi).reshape(-1)
         G = np.zeros((B, d), complex)
+        V = G.reshape(B, taban, -1)
+        n_yer = int(V.shape[-1])
+        m_sat = int(min(int(n_sat), n_yer))
+        assert m_sat >= 1, (
+            "yazmaçta tek mevki bile yok: taban %d, d %d (ferman 1-N-B)"
+            % (taban, d))
+        V[:, :, :m_sat] = (kulli_aday[:, :, None]
+                           * m.genlik[:B, :m_sat][:, None, :])
         np.add.at(G, (yigin[sec], sut[sec]), agirlik[sec])
-        G[:, :taban] += kulli_aday
         self.y.cephe = int(cephe)
+        self.y._cephe_genligi = np.asarray(kulli_aday, complex).copy()
         self.y.psi = G.astype(self.y.ayar.tip)
         self.y.normalize()
         self._tur_genligi = np.asarray(self.y.psi, complex).copy()
