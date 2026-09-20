@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence, Set, Tuple
 
 import numpy as np
 
@@ -137,6 +137,48 @@ def givens(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     return U
 
 
+def _determinist_secim(m: int, boy: int, adet: int) -> np.ndarray:
+    boy = max(1, min(int(boy), int(m)))
+    adet = max(1, int(adet))
+    adim = max(1, int(m) // boy)
+    secimler: List[List[int]] = []
+    bas = 0
+    while len(secimler) < adet:
+        gorulen: Set[int] = set()
+        secim: List[int] = []
+        k = 0
+        while len(secim) < boy and k < m:
+            aday = (bas + k * adim) % m
+            if aday not in gorulen:
+                gorulen.add(aday)
+                secim.append(aday)
+            k += 1
+        if len(secim) < boy:
+            for aday in range(m):
+                if aday not in gorulen:
+                    secim.append(aday)
+                    gorulen.add(aday)
+                    if len(secim) >= boy:
+                        break
+        secimler.append(secim[:boy])
+        bas = (bas + 1) % m
+    return np.array(secimler[:adet], dtype=np.int64)
+
+
+def _determinist_uclu(m: int, azami: int = 32) -> np.ndarray:
+    uc: List[Tuple[int, int, int]] = []
+    adim = max(1, int(m) // 8)
+    for i in range(0, m, adim):
+        for j in range(i + adim, m, adim):
+            for k in range(j + adim, m, adim):
+                uc.append((i, j, k))
+                if len(uc) >= azami:
+                    return np.array(uc, dtype=np.int64)
+    if not uc:
+        uc = [(0, 1, 2)] if m >= 3 else []
+    return np.array(uc, dtype=np.int64)
+
+
 def kategori_kaybi(haller: Sequence[np.ndarray], azami: int = 32,
                    tohum: int = 0) -> Dict[str, Any]:
     m = len(haller)
@@ -144,10 +186,8 @@ def kategori_kaybi(haller: Sequence[np.ndarray], azami: int = 32,
         return {"kayıp": 0.0, "ihlâl": 0, "deneme": 0, "azamî": 0.0}
     H = np.stack([np.asarray(h, complex).reshape(-1) for h in haller])
     H = H / np.maximum(np.linalg.norm(H, axis=-1, keepdims=True), 1e-300)
-    r = np.random.default_rng(int(tohum))
     k = int(min(int(azami), m))
-    ucluler = np.stack([r.choice(m, size=3, replace=False)
-                        for _ in range(k)])
+    ucluler = _determinist_uclu(m, azami=k)
     toplam = 0.0
     ihlal = 0
     azami_fark = 0.0
@@ -345,14 +385,11 @@ def _cevrimleri_tara(haller: Sequence[np.ndarray], ayar: MizanAyari,
                 "bariyer": {"ceza": 0.0, "azamî": 0.0, "ham_azamî": 0.0,
                             "tavan": 0.0, "dışlama_ortalama": 0.0,
                             "çevrim": 0}}
-    r = np.random.default_rng(int(a.tohum))
     ceza = 0.0
     say = {"meşru": 0, "kısır": 0, "tenakuz": 0, "engel": 0}
     kayit: List[Tuple[float, float, float]] = []
     omegalar: List[float] = []
-    idx_hepsi = np.stack([
-        r.choice(m, size=int(a.cevrim_boyu), replace=False)
-        for _ in range(int(a.cevrim_sayisi))])
+    idx_hepsi = _determinist_secim(m, int(a.cevrim_boyu), int(a.cevrim_sayisi))
     H = np.stack([np.asarray(h, complex).reshape(-1) for h in haller])
     U_hepsi, om_hepsi, yol_hepsi = holonomi_yigin(H, idx_hepsi)
     A0 = H[idx_hepsi[:, 0]]
