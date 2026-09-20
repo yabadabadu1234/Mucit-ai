@@ -462,6 +462,36 @@ class Ard(Terim):
     def __init__(self, alt: Terim) -> None:
         self.alt = alt
 
+    def __eq__(self, obur: object) -> bool:
+        a, b = self, obur
+        while isinstance(a, Ard) and isinstance(b, Ard):
+            a, b = a.alt, b.alt
+        if isinstance(a, Ard) or isinstance(b, Ard):
+            return False
+        return a == b
+
+    def __hash__(self) -> int:
+        derinlik = 0
+        t: Terim = self
+        while isinstance(t, Ard):
+            derinlik += 1
+            t = t.alt
+        return hash(("Ard", derinlik, t))
+
+
+class Belirtec(Terim):
+    __slots__ = ("id_no", "basamaklar")
+
+    def __init__(self, id_no: int, basamaklar: Optional[Tuple[int, ...]] = None) -> None:
+        self.id_no = int(id_no)
+        self.basamaklar = basamaklar or (self.id_no,)
+
+    def __eq__(self, obur: object) -> bool:
+        return isinstance(obur, Belirtec) and self.id_no == obur.id_no
+
+    def __hash__(self) -> int:
+        return hash(self.id_no)
+
 
 class DogalInd(Terim):
     __slots__ = ("ad", "hedef", "sfr_dali", "n_ad", "rec_ad", "ard_dali", "sayi")
@@ -560,7 +590,7 @@ def carpim(sol: Terim, sag: Terim) -> Terim:
     return Sigma("_", sol, sag)
 
 
-def dogal_sayi(n: int) -> Terim:
+def dogal_sayi_peano(n: int) -> Terim:
     t: Terim = Sfr()
     for _ in range(n):
         t = Ard(t)
@@ -569,8 +599,23 @@ def dogal_sayi(n: int) -> Terim:
 
 def tam_sayi(n: int) -> Terim:
     if n >= 0:
-        return Poz(dogal_sayi(n))
-    return NegArd(dogal_sayi(-n - 1))
+        return Poz(dogal_sayi_peano(n))
+    return NegArd(dogal_sayi_peano(-n - 1))
+
+
+def taban_acilimi(token_id: int, veri_lifi: int = 8,
+                  basamak_sayisi: int = 6) -> Tuple[int, ...]:
+    val = int(token_id)
+    d = int(veri_lifi)
+    basamaklar = []
+    for _ in range(basamak_sayisi):
+        basamaklar.append(val % d)
+        val //= d
+    return tuple(basamaklar)
+
+
+def dogal_sayi(n: int, veri_lifi: int = 8) -> Terim:
+    return Belirtec(int(n), taban_acilimi(n, veri_lifi=veri_lifi))
 
 
 def yol(tip: Terim, sol: Terim, sag: Terim) -> Terim:
@@ -604,7 +649,7 @@ def ara_serbest(t: Terim) -> Set[str]:
 
     def yur(t: Terim, bagli: Set[str]) -> None:
         if isinstance(t, (Deg, Evren, Dogal, Tamsayi, Cember,
-                          Taban, Sfr)):
+                          Taban, Sfr, Belirtec)):
             return
         if isinstance(t, Dongu):
             g.update(t.r.degiskenler() - bagli); return
@@ -738,7 +783,7 @@ def ara_ikame(t: Terim, sigma: Dict[str, Aralik]) -> Terim:
         return t
     f = lambda x: ara_ikame(x, sigma)
     if isinstance(t, (Deg, Evren, Dogal, Tamsayi, Cember,
-                      Taban, Sfr)):
+                      Taban, Sfr, Belirtec)):
         return t
     if isinstance(t, Dongu):
         r = t.r.yerine_koy(sigma)
@@ -844,7 +889,7 @@ def ikame(t: Terim, sigma: Dict[str, Terim]) -> Terim:
     if isinstance(t, Deg):
         return sigma.get(t.ad, t)
     if isinstance(t, (Evren, Dogal, Tamsayi, Cember, Taban,
-                      Sfr, Dongu)):
+                      Sfr, Dongu, Belirtec)):
         return t
 
     def bagla(ad, govde):
@@ -1207,6 +1252,17 @@ class DArd(Deger):
 
     def act(self, s):
         return DArd(self.alt.act(s))
+
+
+class DBelirtec(Deger):
+    __slots__ = ("id_no", "basamaklar")
+
+    def __init__(self, id_no: int, basamaklar: Tuple[int, ...]) -> None:
+        self.id_no = int(id_no)
+        self.basamaklar = basamaklar
+
+    def act(self, s):
+        return self
 
 
 class DPoz(Deger):
@@ -1949,6 +2005,8 @@ def degerlendir(t: Terim, ortam: Ortam) -> Deger:
         return DSfr()
     if isinstance(t, Ard):
         return DArd(degerlendir(t.alt, ortam))
+    if isinstance(t, Belirtec):
+        return DBelirtec(t.id_no, t.basamaklar)
     if isinstance(t, Tamsayi):
         return DTamsayi()
     if isinstance(t, Poz):
@@ -2056,6 +2114,8 @@ def geri_oku(d: Deger, k: int = 0) -> Terim:
         return Sfr()
     if isinstance(d, DArd):
         return Ard(geri_oku(d.alt, k))
+    if isinstance(d, DBelirtec):
+        return Belirtec(d.id_no, d.basamaklar)
     if isinstance(d, DPoz):
         return Poz(geri_oku(d.alt, k))
     if isinstance(d, DNegArd):
@@ -2959,6 +3019,8 @@ def sentezle(t: Terim, g: Baglam) -> Deger:
     if isinstance(t, Ard):
         denetle(t.alt, DDogal(), g)
         return DDogal()
+    if isinstance(t, Belirtec):
+        return DDogal()
     if isinstance(t, Tamsayi):
         return DEvren(0)
     if isinstance(t, (Poz, NegArd)):
@@ -3404,8 +3466,8 @@ def dogrula_hepsi_turetimler() -> List[Dict[str, str]]:
         ("dongu³ : Ω(S¹)", lambda: denetle_t(dongu_kuvveti(3),
                                            yol(S1, Taban(), Taban()), g)),
         ("ℕ ayrık: 2+3=5", lambda: _esit_dene(
-            DogalInd("_", Dogal(), dogal_sayi(3), "k", "r",
-                       Ard(D("r")), dogal_sayi(2)), dogal_sayi(5))),
+            DogalInd("_", Dogal(), dogal_sayi_peano(3), "k", "r",
+                       Ard(D("r")), dogal_sayi_peano(2)), dogal_sayi_peano(5))),
         ("ℤ: sucZ(-1)=0", lambda: _esit_dene(
             Uygula(ardil_z(), tam_sayi(-1)), tam_sayi(0))),
     ]
@@ -4169,6 +4231,8 @@ def terimi_yaz(t) -> str:
         return "glue [%s] %s" % (_sistem_yaz(t.dallar), y(t.taban_terim))
     if isinstance(t, Coz):
         return "unglue %s" % y(t.govde)
+    if isinstance(t, Belirtec):
+        return "#%d" % t.id_no
     if isinstance(t, Dogal):
         return "ℕ"
     if isinstance(t, Sfr):
