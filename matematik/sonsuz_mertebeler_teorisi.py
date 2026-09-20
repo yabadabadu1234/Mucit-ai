@@ -5514,6 +5514,120 @@ def t4_nedensel_cephe_olcumu(psi_intac: np.ndarray, son_token: int,
             "born_dagilimi": born_olasiliklari}
 
 
+ZIRH_BOYUTU = 1048576
+
+
+def qudit_zirhina_gom(kuantum_durum_vektoru: np.ndarray,
+                      aktif_dilimler: Dict[str, Tuple[int, int]]
+                      ) -> Tuple[np.ndarray, np.ndarray, Dict[str, Any]]:
+    aktif_boyut = len(kuantum_durum_vektoru)
+    if aktif_boyut > ZIRH_BOYUTU:
+        raise DenetimHatasi("Aktif pencere zırh boyutunu (1.048.576) aşamaz")
+
+    psi_zirh = np.zeros(ZIRH_BOYUTU, dtype=complex)
+    psi_zirh[:aktif_boyut] = kuantum_durum_vektoru
+
+    seyirci_maskesi = np.zeros(ZIRH_BOYUTU, dtype=float)
+    seyirci_maskesi[:aktif_boyut] = 1.0
+
+    zirh_metrigi = {
+        "zirh_kapasitesi": ZIRH_BOYUTU,
+        "aktif_pencere_boyu": aktif_boyut,
+        "seyirci_qudit_sayisi": ZIRH_BOYUTU - aktif_boyut,
+        "seyirci_oran": float((ZIRH_BOYUTU - aktif_boyut) / ZIRH_BOYUTU)
+    }
+
+    return psi_zirh, seyirci_maskesi, zirh_metrigi
+
+
+class FockKipKuantizasyonu:
+    __slots__ = ("kesme_boyutu", "a", "a_dag", "sayi_operatoru")
+
+    def __init__(self, kesme_boyutu: int = 8) -> None:
+        self.kesme_boyutu = int(kesme_boyutu)
+        N = self.kesme_boyutu
+
+        self.a = np.zeros((N, N), dtype=complex)
+        for n_idx in range(1, N):
+            self.a[n_idx - 1, n_idx] = np.sqrt(float(n_idx))
+
+        self.a_dag = self.a.conj().T
+        self.sayi_operatoru = self.a_dag @ self.a
+
+    def s0_vakum_durumu(self) -> np.ndarray:
+        psi_0 = np.zeros(self.kesme_boyutu, dtype=complex)
+        psi_0[0] = 1.0
+        return psi_0
+
+    def s2_mesele_uyar(self, psi_fock: np.ndarray, sual_enerjisi: float) -> np.ndarray:
+        psi_uyarilmis = (self.a_dag @ psi_fock) * np.sqrt(max(1e-6, sual_enerjisi))
+        norm = np.linalg.norm(psi_uyarilmis)
+        return psi_uyarilmis / (norm + 1e-12) if norm > 1e-12 else psi_fock
+
+    def s5_hukum_sonumle(self, psi_fock: np.ndarray) -> Tuple[np.ndarray, float]:
+        psi_sonum = self.a @ psi_fock
+        kalan_enerji = float(np.real(psi_fock.conj().T @ (self.sayi_operatoru @ psi_fock)))
+        norm = np.linalg.norm(psi_sonum)
+        psi_sonum = psi_sonum / (norm + 1e-12) if norm > 1e-12 else self.s0_vakum_durumu()
+        return psi_sonum, kalan_enerji
+
+
+def iki_cins_geometri_cikar(veri: Union[Sequence[int], np.ndarray], n: int,
+                            izgara_sekli: Optional[Tuple[int, int]] = None
+                            ) -> Tuple[np.ndarray, np.ndarray]:
+    m = int(n)
+    N_gecis = np.zeros((m, m), dtype=float)
+
+    if izgara_sekli is not None and isinstance(veri, np.ndarray) and veri.ndim == 2:
+        satir, sutun = veri.shape
+        for r in range(satir):
+            for c in range(sutun):
+                u = int(veri[r, c]) % m
+                if c + 1 < sutun:
+                    v_sag = int(veri[r, c + 1]) % m
+                    N_gecis[u, v_sag] += 1.0
+                    N_gecis[v_sag, u] += 0.5
+                if r + 1 < satir:
+                    v_alt = int(veri[r + 1, c]) % m
+                    N_gecis[u, v_alt] += 1.0
+                    N_gecis[v_alt, u] += 0.5
+    else:
+        w_arr = np.asarray(veri, dtype=np.int64).reshape(-1) % m
+        if len(w_arr) >= 2:
+            np.add.at(N_gecis, (w_arr[:-1], w_arr[1:]), 1.0)
+
+    cikis_toplami = N_gecis.sum(axis=1, keepdims=True) + 1e-12
+    P = N_gecis / cikis_toplami
+    pay = np.abs(P - P.T)
+    payda = P + P.T + 1e-12
+    Asim = pay / payda
+
+    return P, Asim
+
+
+class DahiliHomNesnesi:
+    __slots__ = ("kaynak_nesne", "hedef_nesne", "dahili_id", "degerlendirme_oku")
+
+    def __init__(self, kaynak: int, hedef: int, dahili_id: int) -> None:
+        self.kaynak_nesne = kaynak
+        self.hedef_nesne = hedef
+        self.dahili_id = dahili_id
+        self.degerlendirme_oku = (dahili_id, kaynak, hedef)
+
+
+def ccc_dahili_hom_uzayi_turet(kat: Turetilen1Kategori) -> Dict[Tuple[int, int], DahiliHomNesnesi]:
+    dahili_homlar: Dict[Tuple[int, int], DahiliHomNesnesi] = {}
+    yeni_id_tabani = max(kat.nesneler, default=0) + 1000
+
+    for a in kat.nesneler:
+        for b in kat.nesneler:
+            if (a, b) in kat.ok_siniflari or a == b:
+                dahili_id = yeni_id_tabani + len(dahili_homlar)
+                dahili_homlar[(a, b)] = DahiliHomNesnesi(kaynak=a, hedef=b, dahili_id=dahili_id)
+
+    return dahili_homlar
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -6308,6 +6422,16 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     turetilen_kategori_rezk = rezk_tamlastirmasi(turetilen_kategori)
 
+    fock_motoru = FockKipKuantizasyonu(kesme_boyutu=8)
+    fock_psi = fock_motoru.s0_vakum_durumu()
+    sual_enerji = float(muhakemeler[-1].get("kohomolojik_engel", 0.5))
+    fock_psi = fock_motoru.s2_mesele_uyar(fock_psi, sual_enerji)
+    fock_psi_sonum, fock_artik_enerji = fock_motoru.s5_hukum_sonumle(fock_psi)
+
+    _, _, zirh_raporu = qudit_zirhina_gom(kuantum_durum_vektoru, dilimler)
+
+    dahili_hom_uzayi = ccc_dahili_hom_uzayi_turet(turetilen_kategori)
+
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
 
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
@@ -6389,5 +6513,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "t4_nedensel_cephe_olcumu": t4_nedensel_cephe_olcumu(
             psi_intac=nihai_intac_psi, son_token=baglam[-1],
             theta_cartan=theta_cartan, veri_lifi=max(2, min(n, 8))),
+        "qudit_zirh_raporu": zirh_raporu,
+        "fock_artik_enerji": fock_artik_enerji,
+        "ccc_dahili_hom_sayisi": len(dahili_hom_uzayi),
         "detay": tayf_bilgisi
     }
