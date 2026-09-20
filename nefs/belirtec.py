@@ -41,7 +41,7 @@ KODLAMALAR: Tuple[Kodlama, ...] = (
             dosya="cl100k_base.tiktoken"),
 )
 
-_KAPI: Dict[str, Any] = {}
+_KAPI_SABIT: Dict[str, Any] = {}
 _SAYAC: Dict[str, float] = {"kodlama": 0.0, "coz": 0.0, "belirtec": 0.0,
                             "yerlestirme": 0.0}
 
@@ -113,13 +113,13 @@ def bpe_yerlestir(ad: str) -> Dict[str, Any]:
 
 
 def belirtec_kapisi(ad: str = "o200k_base"):
-    if ad in _KAPI:
-        return _KAPI[ad]
+    if ad in _KAPI_SABIT:
+        return _KAPI_SABIT[ad]
     bpe_yerlestir(ad)
     import tiktoken
 
     kod = tiktoken.get_encoding(ad)
-    _KAPI[ad] = kod
+    _KAPI_SABIT[ad] = kod
     return kod
 
 
@@ -199,9 +199,9 @@ def belirtec_metni(b: Dict[str, Any]) -> str:
 
 
 def belirtec_beyani(ad: str = "o200k_base") -> Dict[str, Any]:
-    acik = ad in _KAPI
+    acik = ad in _KAPI_SABIT
     return {"kodlama": ad, "açık": acik,
-            "sözlük": int(_KAPI[ad].n_vocab) if acik else 0,
+            "sözlük": int(_KAPI_SABIT[ad].n_vocab) if acik else 0,
             "kodlama_çağrısı": int(_SAYAC["kodlama"]),
             "çözme_çağrısı": int(_SAYAC["coz"]),
             "belirteç": int(_SAYAC["belirtec"]),
