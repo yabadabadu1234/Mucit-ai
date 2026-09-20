@@ -4661,7 +4661,8 @@ _TURETIM_SAYI: Dict[str, int] = {
     "boole_yüzü": 0, "heyting_yüzü": 0,
     "şelale_uzay": 0, "şelale_kategori": 0, "şelale_operad": 0,
     "tıkanma": 0, "aşkın": 0, "yönlü_tutan": 0, "yönlü_düşen": 0,
-    "tümleyen_bulundu": 0, "tümleyen_yok": 0, "kan_doldurma": 0,
+    "tümleyen_bulundu": 0, "tümleyen_yok": 0,
+    "kan_sahidi": 0, "cizge_kapama": 0,
     "kan_denetimi": 0, "kan_terkip_tuttu": 0, "kan_terkip_düştü": 0,
     "kan_ters_tuttu": 0, "kan_ters_düştü": 0, "operad_dolgu": 0}
 
@@ -4898,7 +4899,8 @@ def kan_kapamasi(bos_boynuz: Sequence[Tuple[int, int, int]],
             E[a][c] = True
         if kat in ("uzay", "kategori"):
             doldu += 1
-    _TURETIM_SAYI["kan_doldurma"] += int(doldu)
+    _TURETIM_SAYI["kan_sahidi"] += int(terkip_var) + int(ters_var)
+    _TURETIM_SAYI["cizge_kapama"] += int(doldu)
     _TURETIM_SAYI["operad_dolgu"] += int(len(dolgu["operad"]))
     kapanan = sum(len(dolgu[k]) for k in ("uzay", "kategori", "operad"))
     toplam = kapanan + len(dolgu["tıkanma"])
@@ -4909,10 +4911,12 @@ def kan_kapamasi(bos_boynuz: Sequence[Tuple[int, int, int]],
             "kapanma_nispeti": (float(kapanan) / float(toplam)
                                 if toplam else 1.0),
             "dolgu": dolgu, "tamamlanan_kenar": E,
-            "usul": "çekirdek_kan_terkibi",
+            "usul": "çizge_geçişliliği (kapama) + çekirdek şahidi (izin)",
+            "şahit_mertebesi": "sınıf",
             "terkip_tutuyor": bool(terkip_var),
             "ters_tutuyor": bool(ters_var),
-            "kan_doldurma": int(doldu),
+            "kan_şahidi": int(terkip_var) + int(ters_var),
+            "çizge_kapama": int(doldu),
             "operad_dolgu": int(len(dolgu["operad"]))}
 
 
@@ -4993,6 +4997,19 @@ def _yapistirma_agaci(y: np.ndarray, k: int) -> np.ndarray:
     return np.unique(np.stack(sut, axis=1), axis=0)
 
 
+def yapistirma_katmani(kenar: np.ndarray, k: int) -> Dict[str, Any]:
+    E = np.asarray(kenar, bool).astype(np.int64)
+    P = E.copy()
+    for _ in range(int(k) - 1):
+        P = P @ E
+    arite = P.sum(axis=0).astype(np.int64)
+    kok = np.nonzero(arite > 0)[0].astype(np.int64)
+    return {"yol_sayısı": P, "arite": arite, "kök": kok,
+            "hücre": int(kok.size),
+            "dallanan": int(np.count_nonzero(arite[kok] >= 2)),
+            "azamî_arite": int(arite.max()) if arite.size else 0}
+
+
 def _seviye_asimetrisi(A: np.ndarray) -> float:
     if A.shape[0] < 2:
         return 0.0
@@ -5018,39 +5035,59 @@ def opetopik_kompleks(w: Sequence[int], n: int) -> Dict[str, Any]:
     kenar = np.zeros((m, m), bool)
     if y.size >= 2:
         kenar[y[:-1], y[1:]] = True
-    hucre: Dict[int, np.ndarray] = {0: sifir.reshape(-1, 1)}
-    k = 1
-    while True:
-        A = _yapistirma_agaci(y, k)
-        if A.shape[0] == 0:
-            break
-        hucre[k] = A
-        evvel = int(hucre[k - 1].shape[0])
-        if A.shape[0] <= evvel or A.shape[0] >= int(y.size) - k:
-            break
-        k += 1
-    mertebe = int(max(hucre))
+    katman: Dict[int, Dict[str, Any]] = {}
     yogunluk: Dict[int, float] = {}
     arite: Dict[int, float] = {}
     yon: Dict[int, float] = {}
-    for j in range(1, mertebe + 1):
-        A = hucre[j]
-        evvel = max(1, int(hucre[j - 1].shape[0]))
-        yogunluk[j] = float(min(1.0, A.shape[0] / float(evvel * max(1, dolu))))
-        if A.shape[0]:
-            yeni = (~kenar[A[:, 0], A[:, -1]] if j >= 2
-                    else np.ones(A.shape[0], bool))
-            arite[j] = float(np.count_nonzero(yeni)) / float(A.shape[0])
-        else:
-            arite[j] = 0.0
-        yon[j] = _seviye_asimetrisi(A)
-    return {"0-hücre": dolu, "kenar": kenar, "hücre": hucre,
-            "agac": hucre.get(2, np.zeros((0, 3), np.int64)),
-            "mertebe": mertebe, "yoğunluk": yogunluk,
+    k = 1
+    gorulen: Set[bytes] = set()
+    while k <= dolu:
+        kat = yapistirma_katmani(kenar, k)
+        if int(kat["hücre"]) == 0:
+            break
+        dayanak = (np.asarray(kat["yol_sayısı"]) > 0).tobytes()
+        katman[k] = kat
+        yogunluk[k] = float(int(kat["hücre"])) / float(max(1, dolu))
+        arite[k] = (float(int(kat["dallanan"])) / float(int(kat["hücre"])))
+        yon[k] = float(hodge_ayrisimi(
+            np.asarray(kat["yol_sayısı"], float))["𝒜_yönlü"])
+        if dayanak in gorulen:
+            break
+        gorulen.add(dayanak)
+        k += 1
+    assert katman, (
+        "YAPIŞTIRMA KOMPLEKSİ BOŞ -- dizide tek bir kenar bile yok; "
+        "hücre örülemedi (ferman 114-B)")
+    mertebe = int(max(katman))
+    agac = _dallanan_agac(kenar, katman[min(2, mertebe)], min(2, mertebe))
+    return {"0-hücre": dolu, "kenar": kenar, "katman": katman,
+            "agac": agac, "mertebe": mertebe, "yoğunluk": yogunluk,
             "arite": arite, "yön": yon,
+            "azamî_arite": int(max(int(katman[j]["azamî_arite"])
+                                   for j in katman)),
+            "dallanan_hücre": int(sum(int(katman[j]["dallanan"])
+                                      for j in katman)),
             "1-hücre": int(np.count_nonzero(kenar)),
-            "2-hücre": int(hucre.get(2, np.zeros((0, 3))).shape[0]),
-            "3-hücre": int(hucre.get(3, np.zeros((0, 4))).shape[0])}
+            "2-hücre": int(katman[2]["hücre"]) if 2 in katman else 0,
+            "3-hücre": int(katman[3]["hücre"]) if 3 in katman else 0}
+
+
+def _dallanan_agac(kenar: np.ndarray, kat: Dict[str, Any],
+                   k: int) -> np.ndarray:
+    E = np.asarray(kenar, bool)
+    P = np.asarray(kat["yol_sayısı"], np.int64)
+    kok = np.asarray(kat["kök"], np.int64)
+    satir: List[Tuple[int, int, int]] = []
+    for c in kok.tolist():
+        if int(kat["arite"][c]) < 2:
+            continue
+        for b in np.nonzero(E[:, c])[0].tolist():
+            for a in np.nonzero(P[:, c] > 0)[0].tolist():
+                if a != b:
+                    satir.append((int(a), int(b), int(c)))
+    if not satir:
+        return np.zeros((0, 3), np.int64)
+    return np.unique(np.asarray(satir, np.int64), axis=0)
 
 
 def hodge_ayrisimi(M: np.ndarray) -> Dict[str, Any]:
@@ -5192,6 +5229,8 @@ def cins_turet(w: Sequence[int], n: int, T: np.ndarray) -> Dict[str, Any]:
             "Π": izdusum_demeti(h1, agac, int(n)),
             "Ω_cebiri": tur["Ω_cebiri"], "şelale": selale,
             "kenar": tamam, "hücre_mertebesi": mertebe,
+            "azamî_arite": int(K["azamî_arite"]),
+            "dallanan_hücre": int(K["dallanan_hücre"]),
             "hücre": {a: int(K[a]) for a in
                       ("0-hücre", "1-hücre", "2-hücre", "3-hücre")},
             "boynuz": int(kan["boynuz"]),

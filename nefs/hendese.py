@@ -33,6 +33,7 @@ def hendese_sifirla() -> None:
                   "simetrik_kenar": 0, "şelale_uzay": 0,
                   "şelale_kategori": 0, "şelale_operad": 0,
                   "opetop_mertebesi": 0, "serbestlik": 0,
+                  "azamî_arite": 0, "dallanan_hücre": 0,
                   "0-hücre": 0, "1-hücre": 0, "2-hücre": 0, "3-hücre": 0})
     _NISPET.clear()
     _NISPET.update({"δ": 0.0, "haber": 0.0, "sapma": 0.0, "denklik": 0.0,
@@ -178,6 +179,8 @@ def mertebe_sec(w: Sequence[int], ayar: Optional[HendeseAyari] = None
     _SAYI["kafes"] = int(len(m["kafes"]))
     _SAYI["serbestlik"] = int(len(m["serbestlik"]))
     _SAYI["opetop_mertebesi"] = int(m["hücre_mertebesi"])
+    _SAYI["azamî_arite"] = int(m["azamî_arite"])
+    _SAYI["dallanan_hücre"] = int(m["dallanan_hücre"])
     _SAYI["boynuz"] = int(m["boynuz"])
     _SAYI["dolu_boynuz"] = int(m["dolu_boynuz"])
     _SAYI["boynuz_sonra"] = int(m["boynuz_sonra"])
@@ -267,9 +270,11 @@ def hendese_metni(teshis: Optional[Dict[str, Any]] = None,
         return ("  D2 HENDESE: HİÇ KOŞMADI -- türetim yapılmadı "
                 "(ferman 2-Ā-B)")
     s = ["  D2 HENDESE -- CİNS LİSTELENMEZ, TÜRETİLİR (ferman 2-Ā-B/C)",
-         "    çağrı %d   opetop mertebesi %d   serbestlik %d (ÖLÇÜLDÜ)"
+         "    çağrı %d   yapıştırma mertebesi %d   serbestlik %d (ÖLÇÜLDÜ)"
          % (int(b["çağrı"]), int(b["opetop_mertebesi"]),
             int(b["serbestlik"])),
+         "    ARİTE (opetopun şartı): azamî %d · dallanan (n≥2) hücre %d"
+         % (int(b.get("azamî_arite", 0)), int(b.get("dallanan_hücre", 0))),
          "    hücre: 0-h %d · 1-h %d · 2-h %d · 3-h %d"
          % (int(b["0-hücre"]), int(b["1-hücre"]), int(b["2-hücre"]),
             int(b["3-hücre"])),
@@ -284,20 +289,24 @@ def hendese_metni(teshis: Optional[Dict[str, Any]] = None,
         "    boynuz şelaleden EVVEL %d (dolu %d) · SONRA %d (dolu %d)"
         % (int(b["boynuz"]), int(b["dolu_boynuz"]),
            int(b["boynuz_sonra"]), int(b["dolu_boynuz_sonra"])),
-        "    ŞELALE -- ÇEKİRDEĞİN KAN TERKİBİ (HKomp) İLE:",
+        "    ŞELALE -- KAPAMA ÇİZGE GEÇİŞLİLİĞİDİR; ÇEKİRDEK YALNIZ"
+        " İZİN VERİR (şahit SINIF mertebesinde, boynuz başına DEĞİL):",
         "      uzay %d · kategori %d · operad %d · TIKANMA %d"
         " (kapanma %.4f)"
         % (int(b["şelale_uzay"]), int(b["şelale_kategori"]),
            int(b["şelale_operad"]), int(b["tıkanma"]),
            b["kapanma_nispeti"]),
-        "      Kan doldurması çekirdekte koştu: %d boynuz"
-        " (denetim %d · terkip tuttu %d/düştü %d · ters tuttu %d/düştü %d)"
-        % (int(b.get("türetim_kan_doldurma", 0)),
+        "      çizge kapaması %d boynuz ← çekirdek şahidi %d sınıf"
+        " (denetim %d · terkip %d/%d · ters %d/%d)"
+        % (int(b.get("türetim_cizge_kapama", 0)),
+           int(b.get("türetim_kan_sahidi", 0)),
            int(b.get("türetim_kan_denetimi", 0)),
            int(b.get("türetim_kan_terkip_tuttu", 0)),
            int(b.get("türetim_kan_terkip_düştü", 0)),
            int(b.get("türetim_kan_ters_tuttu", 0)),
            int(b.get("türetim_kan_ters_düştü", 0))),
+        "      BORÇ: boynuz başına çekirdek dolgusu KOŞMUYOR"
+        " (ferman 73-K hâlâ açık)",
         "      operad dolgusu (ikili terkip DEĞİL): %d"
         % int(b.get("türetim_operad_dolgu", 0)),
         "      koherans şelaleden evvel %.4f, sonra %.4f"
