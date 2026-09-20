@@ -7892,6 +7892,17 @@ def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dic
 #     (ccc_dahili_hom_uzayi_turet'ten, kör arama değil) birlikte döner.
 #   - tip_tensoru_yukari_cik: Uzay -> Kategori -> Tip çıkışı; mevcut
 #     grothendieck_dikey_asansor'u iki tensör bloğu arasında çalıştırır.
+#   - tip_tensoru_perelomov_dondur: Perelomov ilkesi |Ω⟩=U(Ω)|ψ0⟩. |ψ0⟩
+#     zaten var olan (dış motorca üretilmiş) blok lifidir; U(Ω) ise o
+#     nesnenin KENDİ geçiş satırından (P[nesne]) türetilen Cartan
+#     ağırlığıyla (kuantum.qudit.agirlik -- yeniden yazılmadı, doğrudan
+#     çağrıldı) kurulan köşegen bir SU(d) faz rotasyonudur.
+#   - tip_tensoru_morfizm_kanali: Hom(a,b) kategori morfizmi, iki blok
+#     arasında E_{a→b}(ρ)=MρM† formundaki tek-terimli (M) bir Kraus/
+#     izometri kanalı olarak kodlanır. Eşit boyutlu bloklarda mevcut
+#     nefs/kulli_mizan.py:givens (yeniden yazılmadı, doğrudan çağrıldı)
+#     ile tam üniter izometri kurulur; farklı boyutlu bloklarda M=|b⟩⟨a|
+#     rank-1 kısmi izometrisi (M|a⟩=|b⟩) kullanılır.
 # ============================================================================
 
 def tip_tensoru_blok_boyutlari(kat: "Turetilen1Kategori",
@@ -7917,16 +7928,50 @@ def tip_tensoru_blok_boyutlari(kat: "Turetilen1Kategori",
     return bloklar
 
 
-def qudit_tip_tensoru_kur(kat: "Turetilen1Kategori", psi: np.ndarray) -> Dict[str, Any]:
+def tip_tensoru_perelomov_dondur(lif0: np.ndarray, teta: np.ndarray) -> np.ndarray:
+    from kuantum.qudit import agirlik
+    d = int(lif0.size)
+    if d < 2 or teta.size == 0:
+        return lif0
+    w = agirlik(d, teta)
+    U = np.exp(-1j * np.pi * w)
+    donmus = lif0 * U
+    nrm = float(np.linalg.norm(donmus))
+    return (donmus / nrm) if nrm > 1e-300 else donmus
+
+
+def qudit_tip_tensoru_kur(kat: "Turetilen1Kategori", psi: np.ndarray,
+                          P: Optional[np.ndarray] = None) -> Dict[str, Any]:
     d = int(len(psi))
     bloklar = tip_tensoru_blok_boyutlari(kat, d)
     lifler: Dict[int, np.ndarray] = {}
     for x, (i, j) in bloklar.items():
         alt = np.asarray(psi[i:j], complex)
         nrm = float(np.linalg.norm(alt))
-        lifler[x] = (alt / nrm) if nrm > 1e-300 else alt
+        alt = (alt / nrm) if nrm > 1e-300 else alt
+        if P is not None and alt.size >= 2:
+            teta = np.asarray(P[x], float)
+            teta = teta[teta > 0.0][:max(1, min(8, alt.size - 1))]
+            alt = tip_tensoru_perelomov_dondur(alt, teta)
+        lifler[x] = alt
     return {"bloklar": bloklar, "liflar": lifler,
            "nesneler": list(bloklar), "taban_boyut": d}
+
+
+def tip_tensoru_morfizm_kanali(tensor: Dict[str, Any], a: int, b: int
+                               ) -> Optional[np.ndarray]:
+    if a not in tensor["liflar"] or b not in tensor["liflar"]:
+        return None
+    la = np.asarray(tensor["liflar"][a], complex)
+    lb = np.asarray(tensor["liflar"][b], complex)
+    if (la.size == 0 or lb.size == 0
+            or float(np.linalg.norm(la)) <= 1e-300
+            or float(np.linalg.norm(lb)) <= 1e-300):
+        return None
+    if la.size == lb.size and la.size >= 2:
+        from nefs.kulli_mizan import givens
+        return givens(la, lb)
+    return np.outer(lb, la.conj())
 
 
 def tip_tensoru_asagi_in(tensor: Dict[str, Any], nesne: int,
@@ -8132,7 +8177,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     funktor_vektoru[:len(rho)] = np.sqrt(rho) * np.exp(1j * np.pi * rho)
     nihai_intac_psi = intac_funktor_tersi(kuantum_durum_vektoru_temiz, funktor_vektoru)
 
-    qudit_tip_tensoru = qudit_tip_tensoru_kur(turetilen_kategori, nihai_intac_psi)
+    qudit_tip_tensoru = qudit_tip_tensoru_kur(turetilen_kategori, nihai_intac_psi, P=P)
+    qudit_tip_tensoru["morfizm_kanallari"] = {
+        (x, y): tip_tensoru_morfizm_kanali(qudit_tip_tensoru, x, y)
+        for (x, y) in turetilen_kategori.ok_siniflari if x != y}
 
     hudut_raporu = d8_hudut_temizligi_denetle(
         psi=nihai_intac_psi, kod_uzayi_maskesi=kod_uzayi_maskesi,
