@@ -2920,12 +2920,14 @@ class DenetimHatasi(Exception):
 
 
 class Baglam:
-    __slots__ = ("tipler", "ortam", "aralik")
+    __slots__ = ("tipler", "ortam", "aralik", "kategori_kaniti")
 
-    def __init__(self, tipler=None, ortam=None, aralik=None) -> None:
+    def __init__(self, tipler=None, ortam=None, aralik=None,
+                 kategori_kaniti: Optional[bool] = None) -> None:
         self.tipler: Dict[str, Deger] = dict(tipler or {})
         self.ortam: Ortam = ortam or BOS
         self.aralik: Set[str] = set(aralik or ())
+        self.kategori_kaniti = kategori_kaniti
 
     @staticmethod
     def terimlerden(baglam: Dict[str, Terim]) -> "Baglam":
@@ -2935,7 +2937,7 @@ class Baglam:
         return g
 
     def genislet(self, ad: str, tipd: Deger) -> "Baglam":
-        y = Baglam(self.tipler, self.ortam, self.aralik)
+        y = Baglam(self.tipler, self.ortam, self.aralik, self.kategori_kaniti)
         y.tipler[ad] = tipd
         y.ortam = self.ortam.genislet(ad, notr(NDeg(ad, tipd), tipd))
         return y
@@ -2943,7 +2945,7 @@ class Baglam:
     def ara_ekle(self, ad: str) -> "Baglam":
         y = Baglam(self.tipler, self.ortam.ara_genislet(ad,
                                                         Aralik.degisken(ad)),
-                   self.aralik)
+                   self.aralik, self.kategori_kaniti)
         y.aralik.add(ad)
         return y
 
@@ -2953,7 +2955,8 @@ class Baglam:
         s = yuzu_atamaya_cevir(yuz)
         return Baglam({a: t.act(s) for a, t in self.tipler.items()},
                       self.ortam.act(s),
-                      self.aralik - {a for (a, _) in yuz})
+                      self.aralik - {a for (a, _) in yuz},
+                      self.kategori_kaniti)
 
     def d(self, t: Terim) -> Deger:
         return degerlendir(t, self.ortam)
@@ -3015,6 +3018,11 @@ def denetle_sistem(ad: str, cizgi: Terim, dallar, u0: Terim,
 
 def sentezle(t: Terim, g: Baglam) -> Deger:
     if isinstance(t, YonluHom):
+        if g.kategori_kaniti is False:
+            raise CekirdekHatasi(
+                "YonluHom tipi bu bağlamda geçmez -- kategori iddiası "
+                "GERÇEK P/Asim verisiyle mesru bulunmadı (ferman 2-Ā-C, "
+                "cins_uc_testle_dogur)")
         sv = denetle_tip(t.cizgi, g)
         A = g.d(t.cizgi)
         denetle(t.kaynak, A, g)
@@ -5454,8 +5462,14 @@ def kategori_sahidi_sentezle(kat: Turetilen1Kategori) -> Terim:
            Cift(sag_birim_ispat, birlesme_ispat)))))))
 
 
-def alem_baglami_ac(alem: TuretilenDilimAlemi, ana_baglam: Optional[Baglam] = None) -> Baglam:
+def alem_baglami_ac(alem: TuretilenDilimAlemi, ana_baglam: Optional[Baglam] = None,
+                    P: Optional[np.ndarray] = None,
+                    Asim: Optional[np.ndarray] = None) -> Baglam:
     g = ana_baglam or Baglam()
+    if P is not None and Asim is not None:
+        cins_uc_test = cins_uc_testle_dogur(tuple(alem.alemdeki_nesneler), P, Asim)
+        g = Baglam(g.tipler, g.ortam, g.aralik,
+                  bool(cins_uc_test["kategori_iddiasi_mesru"]))
     alem_hedef_ad = "Hedef_%d" % alem.baglam_hedefi
     g = g.genislet(alem_hedef_ad, g.d(Dogal()))
 
@@ -8071,7 +8085,7 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4) -> Dict[str, A
     turetilen_kume = turet_ayrik_kume_funktoriyel(turetilen_kategori)
     turetilen_alem = turet_dilim_alemi(nihai_hedef, turetilen_kategori.nesneler, P)
     sentetik_kategori_sahidi = kategori_sahidi_sentezle(turetilen_kategori)
-    alem_baglami = alem_baglami_ac(turetilen_alem)
+    alem_baglami = alem_baglami_ac(turetilen_alem, P=P, Asim=Asim)
 
     Asim = asimetri_guncelle(P)
     tayf_bilgisi = topos_tayfi_hodge_ile_hesapla(P, Asim, norm_korollalar, baglam)
