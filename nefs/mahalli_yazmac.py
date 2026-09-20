@@ -362,15 +362,92 @@ class MahalliYazmac:
             _UZUNLUK["hüküm"] = float(k + 1)
         return durdu
 
-    def sektor_agirligi(self, ad: str, indis: np.ndarray) -> complex:
+    def kok_seviyesi(self, ad: str) -> int:
+        return int(self.kok_indisi(str(ad)) % int(self.taban))
+
+    def sektor_yigini(self, ad: str) -> np.ndarray:
+        assert self.yigin > 0 and self.pencere > 0, (
+            "SEKTÖR AĞIRLIĞI BOŞ ZIRHTAN OKUNAMAZ -- evvelâ `hazirla` "
+            "koşar (ferman 2-A, 2-Ö)")
+        s = self.kok_seviyesi(ad)
+        n = int(self.pencere)
+        _MAHALLI["sektör_okuma"] = _MAHALLI.get("sektör_okuma", 0.0) + 1.0
+        return np.sum(np.abs(self.hal[:, :n, s]) ** 2, axis=1)
+
+    def sektor_agirligi(self, ad: str,
+                        indis: Optional[np.ndarray] = None) -> complex:
         k = self.kok_indisi(str(ad))
-        i = np.mod(np.asarray(indis, np.int64).reshape(-1),
-                   max(1, int(self.pencere)))
-        if i.size == 0:
-            return 0j
-        agir = float((np.abs(self.hal[:, i, :]) ** 2).sum()
-                     / max(1, self.hal.shape[0]))
+        w = self.sektor_yigini(ad)
+        agir = float(w.mean()) if w.size else 0.0
         return complex(agir * np.exp(1j * float(self.cartan[k])))
+
+    def kulli_agirlik(self) -> float:
+        assert self.yigin > 0 and self.pencere > 0, (
+            "KÜLLÎ AĞIRLIK BOŞ ZIRHTAN OKUNAMAZ (ferman 2-A)")
+        n = int(self.pencere)
+        _MAHALLI["küllî_okuma"] = _MAHALLI.get("küllî_okuma", 0.0) + 1.0
+        return float(np.sum(np.abs(self.hal[:, :n, :]) ** 2))
+
+    def kok_dagilimi(self, ad: str) -> np.ndarray:
+        s = self.kok_seviyesi(ad)
+        n = int(self.pencere)
+        p = np.abs(self.hal[:, :n, s]) ** 2
+        top = p.sum(axis=1, keepdims=True)
+        canli = top > 0.0
+        return np.where(canli, p / np.where(canli, top, 1.0),
+                        1.0 / float(max(1, n)))
+
+    def kok_kapisi(self, ad: str, M: np.ndarray) -> int:
+        assert self.yigin > 0 and self.pencere > 0, (
+            "KÖK KAPISI BOŞ ZIRHA VURULAMAZ (ferman 2-A)")
+        s = self.kok_seviyesi(ad)
+        A = np.asarray(M, complex)
+        assert A.ndim == 2 and A.shape[0] == A.shape[1], (
+            "kök kapısı kare olmalı, %r verildi" % (A.shape,))
+        n = int(self.pencere)
+        g = int(min(A.shape[0], self.taban))
+        bas = int(s)
+        son = int(min(self.taban, bas + g))
+        k = son - bas
+        if k < 2:
+            _MAHALLI["kök_düşen"] = _MAHALLI.get("kök_düşen", 0.0) + 1.0
+            return 0
+        self.hal[:, :n, bas:son] = (self.hal[:, :n, bas:son]
+                                    @ A[:k, :k].T)
+        _MAHALLI["kök_kapısı"] = _MAHALLI.get("kök_kapısı", 0.0) + 1.0
+        return k
+
+    def kok_donmesi(self, ad: str, aci: np.ndarray) -> int:
+        assert self.yigin > 0 and self.pencere > 0, (
+            "KÖK DÖNMESİ BOŞ ZIRHA VURULAMAZ (ferman 2-A)")
+        a = np.asarray(aci, float).reshape(-1)
+        if a.size == 0:
+            return 0
+        s = self.kok_seviyesi(ad)
+        n = int(self.pencere)
+        cift = int(min(a.size, (int(self.taban) - s) // 2))
+        if cift < 1:
+            _MAHALLI["kök_düşen"] = _MAHALLI.get("kök_düşen", 0.0) + 1.0
+            return 0
+        a = a[:cift]
+        c, sn = np.cos(a), np.sin(a)
+        u = self.hal[:, :n, s:s + 2 * cift:2]
+        v = self.hal[:, :n, s + 1:s + 2 * cift:2]
+        self.hal[:, :n, s:s + 2 * cift:2] = c * u - sn * v
+        self.hal[:, :n, s + 1:s + 2 * cift:2] = sn * u + c * v
+        _MAHALLI["kök_dönmesi"] = _MAHALLI.get("kök_dönmesi", 0.0) + 1.0
+        _MAHALLI["aşkın_cos"] = _MAHALLI.get("aşkın_cos", 0.0) + 1.0
+        _MAHALLI["aşkın_sin"] = _MAHALLI.get("aşkın_sin", 0.0) + 1.0
+        return 2 * cift
+
+    def senet_dilimi(self) -> np.ndarray:
+        if self.yigin <= 0 or self.pencere <= 0:
+            return np.zeros((0, 0), complex)
+        n = int(self.pencere)
+        _MAHALLI["senet_bandı"] = _MAHALLI.get("senet_bandı", 0.0) + 1.0
+        _MAHALLI["senet_baytı"] = (_MAHALLI.get("senet_baytı", 0.0)
+                                   + float(self.hal[:, :n, :].nbytes))
+        return np.asarray(self.hal[:, :n, :], complex).copy()
 
     def beyan(self) -> Dict[str, float]:
         return mahalli_beyani()

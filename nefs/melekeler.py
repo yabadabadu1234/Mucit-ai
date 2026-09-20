@@ -1372,6 +1372,7 @@ class QNefs:
         q.izdusum = getattr(self, "izdusum", None)
         q.kodla(E)
         if q.iz.senet_acik:
+            q.iz.mahalli_yaz(self.mahalli)
             q.iz.kapi_yaz("başlangıç", (),
                           np.asarray(q.y.psi, complex).copy())
         if tikaniklik:

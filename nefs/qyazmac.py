@@ -11,7 +11,7 @@ from .galois import palmer_indir, sbox
 from .matchgate import matchgate_mi
 
 __all__ = ["QuditAyar", "QuditYazmac", "Iz",
-           "sektor_beyani", "sektor_metni"]
+           "sektor_beyani", "sektor_metni", "senet_beyani"]
 
 _SEKTOR_SAYAC: Dict[str, float] = {
     "dönme": 0.0, "faz_vuruşu": 0.0, "kenet": 0.0, "örüntü": 0.0,
@@ -49,6 +49,16 @@ def sektor_metni(b=None) -> str:
         % ("açık" if d.get("açık") else "KAPALI"),
     ])
 
+_SENET_SAYAC: Dict[str, float] = {"yazma": 0.0, "bayt": 0.0,
+                                  "mahallî": 0.0, "mahallî_bayt": 0.0}
+
+
+def senet_beyani() -> Dict[str, float]:
+    b = dict(_SENET_SAYAC)
+    b["bayt_başına"] = (b["bayt"] / b["yazma"]) if b["yazma"] else 0.0
+    return b
+
+
 _CEYREK = np.array([1.0 + 0.0j, 0.0 + 1.0j, -1.0 + 0.0j, 0.0 - 1.0j])
 
 SENET_ACIK: List[bool] = [False]
@@ -63,6 +73,7 @@ class Iz:
         self.senet_acik = bool(SENET_ACIK[0])
         self.senet: List[Tuple[str, Tuple[int, ...], np.ndarray]] = []
         self.baglanti: List[Tuple[int, int, float, Any]] = []
+        self.mahalli_senet: List[np.ndarray] = []
         self.derinlik = 0
         self.uretecsiz = 0
         self.bag_reddi = 0
@@ -76,6 +87,18 @@ class Iz:
         self.senet = []
         self.baglanti = []
         self.uretecsiz = 0
+        self.mahalli_senet: List[np.ndarray] = []
+
+    def mahalli_yaz(self, mahalli) -> int:
+        if not self.senet_acik or mahalli is None:
+            return -1
+        dilim = mahalli.senet_dilimi()
+        if dilim.size == 0:
+            return -1
+        self.mahalli_senet.append(dilim)
+        _SENET_SAYAC["mahallî"] += 1.0
+        _SENET_SAYAC["mahallî_bayt"] += float(dilim.nbytes)
+        return len(self.mahalli_senet) - 1
 
     def senedi_kapat(self) -> None:
         self.senet_acik = False
@@ -83,9 +106,12 @@ class Iz:
     def kapi_yaz(self, tur: str, yuvalar, G) -> int:
         if not self.senet_acik:
             return -1
+        _SENET_SAYAC["yazma"] += 1.0
+        A = np.asarray(G)
+        _SENET_SAYAC["bayt"] += float(A.nbytes)
         self.senet.append((str(tur),
                            tuple(int(y) for y in np.atleast_1d(yuvalar)),
-                           np.asarray(G).copy()))
+                           A.copy()))
         self.son_senet = len(self.senet) - 1
         return self.son_senet
 
@@ -257,13 +283,11 @@ class QuditYazmac:
                 for k, v in o.items()}
 
     def makam_derece_vektoru(self) -> np.ndarray:
-        i, j = self.sektor("makam")
-        return np.linspace(0.0, 1.0, j - i)
+        n = int(self._mahalli_zorunlu().pencere)
+        return np.linspace(0.0, 1.0, max(2, n))
 
     def makam_dagilimi(self) -> np.ndarray:
-        i, j = self.sektor("makam")
-        p = np.abs(self.psi[:, i:j]) ** 2
-        return p / np.maximum(p.sum(axis=1, keepdims=True), 1e-300)
+        return self._mahalli_zorunlu().kok_dagilimi("makam")
 
     @property
     def lifli(self) -> np.ndarray:
@@ -352,9 +376,22 @@ class QuditYazmac:
         _on, ard = self._bolum(int(k))
         return int(math.log2(ard)) + int(alt)
 
+    def _mahalli_zorunlu(self):
+        m = getattr(self, "mahalli", None)
+        assert m is not None, (
+            "SEKTÖR MAHALLÎ YAZMAÇTAN OKUNUR -- bu yazmaca mahallî zırh "
+            "bağlanmamış. Sektör bir bellek dilimi değil, Lie cebrinin "
+            "zâtî süperseçim (DHR) yüküdür (ferman 2-Ö, 2-İ, 3-D #90).")
+        assert int(getattr(m, "pencere", 0)) > 0, (
+            "SEKTÖR OKUNDU FAKAT AKTİF PENCERE SIFIR -- `kodla` mahallî "
+            "zırha tohum ekmeden sektör tartılamaz (ferman 2-A)")
+        return m
+
     def sektor_agirligi(self, ad: str) -> np.ndarray:
-        i, j = self.sektor(ad)
-        return np.sum(np.abs(self.psi[:, i:j]) ** 2, axis=1)
+        w = self._mahalli_zorunlu().sektor_yigini(str(ad))
+        _SEKTOR_SAYAC["mahallî_okuma"] = _SEKTOR_SAYAC.get(
+            "mahallî_okuma", 0.0) + 1.0
+        return np.resize(np.asarray(w, float), self.B)
 
 
     def _eksen(self, k: int, alt: int) -> int:
@@ -575,13 +612,17 @@ class QuditYazmac:
         self._kapi += 1
 
     def sektor_kapisi(self, ad: str, M: np.ndarray) -> None:
-        i, j = self.sektor(ad)
+        m = self._mahalli_zorunlu()
         M = np.asarray(M)
-        if M.shape != (j - i, j - i):
-            raise ValueError("sektör kapısı %s olmalı, %s verildi"
-                             % ((j - i, j - i), M.shape))
-        self.iz.kapi_yaz("sektör", (int(i), int(j)), M)
-        self.psi[:, i:j] = self.psi[:, i:j] @ M.T
+        assert M.ndim == 2 and M.shape[0] == M.shape[1], (
+            "sektör kapısı kare olmalı, %s verildi" % (M.shape,))
+        self.iz.mahalli_yaz(m)
+        vuran = int(m.kok_kapisi(str(ad), M))
+        if vuran <= 0:
+            self._dusen_kapi += 1
+            _SEKTOR_SAYAC["düşen"] = _SEKTOR_SAYAC.get("düşen", 0.0) + 1.0
+            return
+        _SEKTOR_SAYAC["kapı_dizeyi"] += 1.0
         self._kapi += 1
 
     def sektor_faz_vur(self, ad: str, aci, bag=None) -> int:
@@ -607,41 +648,29 @@ class QuditYazmac:
     def _genlik_agirligi(self) -> float:
         _SEKTOR_SAYAC["küllî_iç_çarpım"] = _SEKTOR_SAYAC.get(
             "küllî_iç_çarpım", 0.0) + 1.0
-        v = np.asarray(self.psi, complex).reshape(-1)
-        return float(np.real(np.vdot(v, v)))
+        return float(self._mahalli_zorunlu().kulli_agirlik())
 
     def sektor_donmesi(self, ad: str, teta, bag=None) -> int:
-        i, j = self.sektor(ad)
-        gen = int(j - i)
-        assert gen >= 2, (
-            "%r sektörünün genişliği %d -- dönme için en az iki seviye "
-            "lâzım (ferman 2-Ö)" % (ad, gen))
-        cift = gen // 2
+        m = self._mahalli_zorunlu()
         a = np.asarray(teta, float).reshape(-1)
-        a = np.resize(a, cift) if a.size else np.zeros(cift, float)
-        c = np.cos(a)
-        s = np.sin(a)
-        P = self.psi
-        u = P[:, i:i + 2 * cift:2]
-        v = P[:, i + 1:i + 2 * cift:2]
-        yeni_u = c[None, :] * u - s[None, :] * v
-        yeni_v = s[None, :] * u + c[None, :] * v
-        P[:, i:i + 2 * cift:2] = yeni_u
-        P[:, i + 1:i + 2 * cift:2] = yeni_v
-        self.iz.kapi_yaz("sektör_givens", (int(i), int(j)), a)
+        if a.size == 0:
+            a = np.zeros(1, float)
+        vuran = int(m.kok_donmesi(str(ad), a))
+        if vuran <= 0:
+            self._dusen_kapi += 1
+            _SEKTOR_SAYAC["düşen"] = _SEKTOR_SAYAC.get("düşen", 0.0) + 1.0
+            return 0
+        self.iz.mahalli_yaz(m)
         self._kapi += 1
         self._sektor_vurusu += 1
         _SEKTOR_SAYAC["dönme"] += 1.0
-        m = getattr(self, "mahalli", None)
-        if m is not None:
-            m.cartan_ekle(str(ad), float(np.mean(a)))
+        m.cartan_ekle(str(ad), float(np.mean(a)))
         if bag and self.iz.senet_acik:
-            for (par, olcek, _pay) in ([bag] if isinstance(bag, tuple)
-                                       else list(bag)):
-                self.iz.bag_yaz(self.iz.son_senet, int(par),
-                                float(olcek),
-                                ("sektör_givens", int(i), int(j), a))
-        return gen
+            kac = 1 if isinstance(bag, tuple) else len(list(bag))
+            self.iz.uretecsiz += int(kac)
+            _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
+                "mahallî_bağ", 0.0) + float(kac)
+        return vuran
 
     def sektor_cifti(self, kontrol: str, hedef: str,
                      bag: float = 1.0, degil: bool = False,
@@ -653,17 +682,16 @@ class QuditYazmac:
                else self._genlik_agirligi())
         assert top > 0.0, (
             "yazmaç tamamen söndü -- kenetlenecek genlik yok (ferman 5)")
-        Pk = np.abs(self.psi[:, i0:j0]) ** 2
-        Ph = np.abs(self.psi[:, i1:j1]) ** 2
-        w_kontrol = float(Pk.sum() / top)
+        m = self._mahalli_zorunlu()
+        w_kontrol = float(m.sektor_yigini(str(kontrol)).sum() / top)
+        w_kontrol = min(1.0, max(0.0, w_kontrol))
         if degil:
             w_kontrol = 1.0 - w_kontrol
-        w_hedef = Ph.mean(axis=0)
+        w_hedef = np.asarray(m.kok_dagilimi(str(hedef)),
+                             float).mean(axis=0)
         pay = float(w_hedef.sum())
-        m = getattr(self, "mahalli", None)
-        teta = (float(m.cartan_oku(str(kontrol)))
-                if m is not None else 0.0)
-        gen = int(j1 - i1)
+        teta = float(m.cartan_oku(str(kontrol)))
+        gen = int(w_hedef.size)
         if aci is None:
             a = np.full(gen, teta, float)
         else:
@@ -672,7 +700,9 @@ class QuditYazmac:
         etki = float(bag) * float(np.mean(a)) * w_kontrol
         t = np.zeros(self.d, float)
         if pay > 0.0:
-            t[i1:j1] = -float(bag) * w_kontrol * a * (w_hedef / pay) * gen
+            dal = -float(bag) * w_kontrol * a * (w_hedef / pay) * gen
+            u = int(min(self.d, i1 + dal.size))
+            t[i1:u] = dal[:u - i1]
         if defter is None:
             self.faz(t)
         else:
@@ -725,16 +755,15 @@ class QuditYazmac:
             "yazmaç tamamen söndü -- örüntü tartılamaz (ferman 5)")
         carpim = 1.0
         parca: List[str] = []
+        mh = self._mahalli_zorunlu()
         for sek in sorted(d):
-            i, j = self.sektor(str(sek))
-            w = float((np.abs(self.psi[:, i:j]) ** 2).sum() / top)
+            w = float(mh.sektor_yigini(str(sek)).sum() / top)
+            w = min(1.0, max(0.0, w))
             bit = int(d[sek]) & 1
             carpim *= (w if bit else (1.0 - w))
             parca.append(("" if bit else "¬") + str(sek))
         ad = kok or ("yasak." + "∧".join(parca))
-        m = getattr(self, "mahalli", None)
-        if m is not None:
-            m.cartan_ekle(ad, float(carpim) * math.pi)
+        mh.cartan_ekle(ad, float(carpim) * math.pi)
         self._oruntu_vurusu = getattr(self, "_oruntu_vurusu", 0) + 1
         self._sektor_vurusu += 1
         _SEKTOR_SAYAC["örüntü"] += 1.0
@@ -764,11 +793,10 @@ class QuditYazmac:
         return float(v[0]) if self.B == 1 else v
 
     def olcumler(self) -> Dict[str, float]:
-        p = np.abs(self.psi) ** 2
+        mh = self._mahalli_zorunlu()
         out: Dict[str, float] = {}
         for ad in self._sektor:
-            i, j = self._sektor[ad]
-            v = np.sum(p[:, i:j], axis=1)
+            v = np.resize(np.asarray(mh.sektor_yigini(ad), float), self.B)
             out[ad] = float(v[0]) if self.B == 1 else v
         e = self.dolasiklik_entropisi()
         out["entropi"] = float(e["entropi"])
@@ -827,9 +855,11 @@ class QuditYazmac:
         return (top / agir).reshape(1, taban)
 
     def povm(self, ad: str) -> Tuple[float, float]:
-        i, j = self.sektor(ad)
-        v = self.psi[:, i:j]
-        yari = (j - i) // 2 or 1
+        mh = self._mahalli_zorunlu()
+        s0 = mh.kok_seviyesi(ad)
+        n = int(mh.pencere)
+        v = np.asarray(mh.hal[:, :n, s0], complex)
+        yari = int(n) // 2 or 1
         z = float(np.mean(np.sum(np.abs(v[:, :yari]) ** 2, axis=1)
                           - np.sum(np.abs(v[:, yari:]) ** 2, axis=1)))
         x = float(np.mean(2.0 * np.real(

@@ -106,6 +106,108 @@ SIFIR = Aralik([])
 BIR = Aralik([frozenset()])
 
 
+class YonluAralik:
+
+    __slots__ = ("cumleler",)
+
+    def __init__(self, cumleler: Iterable[FrozenSet[str]]) -> None:
+        kume = {frozenset(c) for c in cumleler}
+        if len(kume) <= 1:
+            self.cumleler: FrozenSet[FrozenSet[str]] = frozenset(kume)
+            return
+        kalan = sorted(kume, key=len)
+        sonuc: List[FrozenSet[str]] = []
+        for c in kalan:
+            for d in sonuc:
+                if d <= c:
+                    break
+            else:
+                sonuc.append(c)
+        self.cumleler = frozenset(sonuc)
+
+    @staticmethod
+    def uretec(ad: str) -> "YonluAralik":
+        return YonluAralik([frozenset({str(ad)})])
+
+    def ve(self, obur: "YonluAralik") -> "YonluAralik":
+        return YonluAralik(a | b for a in self.cumleler
+                           for b in obur.cumleler)
+
+    def veya(self, obur: "YonluAralik") -> "YonluAralik":
+        return YonluAralik(self.cumleler | obur.cumleler)
+
+    def sifir_mi(self) -> bool:
+        return len(self.cumleler) == 0
+
+    def bir_mi(self) -> bool:
+        return frozenset() in self.cumleler
+
+    def uretecler(self) -> FrozenSet[str]:
+        return frozenset(a for c in self.cumleler for a in c)
+
+    def __eq__(self, obur: object) -> bool:
+        return (isinstance(obur, YonluAralik)
+                and self.cumleler == obur.cumleler)
+
+    def __hash__(self) -> int:
+        return hash(self.cumleler)
+
+    def __repr__(self) -> str:
+        if self.sifir_mi():
+            return "0⃗"
+        if self.bir_mi():
+            return "1⃗"
+        return "∨".join(sorted("∧".join(sorted(c))
+                               for c in self.cumleler))
+
+
+YON_SIFIR = YonluAralik([])
+
+
+YON_BIR = YonluAralik([frozenset()])
+
+
+def yonlu_kafes(uretecler: Sequence[str],
+                hadd: int = 4096) -> List[YonluAralik]:
+    taban = [YON_SIFIR, YON_BIR] + [YonluAralik.uretec(a)
+                                    for a in uretecler]
+    gorulen = {x: None for x in taban}
+    sinir = list(taban)
+    while sinir and len(gorulen) < int(hadd):
+        yeni: List[YonluAralik] = []
+        for a in sinir:
+            for b in taban:
+                for c in (a.ve(b), a.veya(b)):
+                    if c not in gorulen:
+                        gorulen[c] = None
+                        yeni.append(c)
+                        if len(gorulen) >= int(hadd):
+                            return list(gorulen)
+        sinir = yeni
+    return list(gorulen)
+
+
+def tumleyeni(x: YonluAralik, kafes: Sequence[YonluAralik]
+              ) -> Optional[YonluAralik]:
+    for y in kafes:
+        if x.ve(y).sifir_mi() and x.veya(y).bir_mi():
+            return y
+    return None
+
+
+def yonlu_mertebe_tutuyor(n: int, uretec_sayisi: int = 0
+                          ) -> Dict[str, Any]:
+    k = max(1, int(n) + 1)
+    adlar = ["ŷ%d" % i for i in range(k)]
+    kafes = yonlu_kafes(adlar)
+    h = YON_BIR
+    for a in adlar:
+        h = h.ve(YonluAralik.uretec(a))
+    t = tumleyeni(h, kafes)
+    return {"tutuyor": bool(t is None), "kafes": len(kafes),
+            "unsur": repr(h), "tümleyen": (None if t is None else repr(t))}
+
+
 Yuz = FrozenSet[Tuple[str, bool]]
 
 
@@ -4450,7 +4552,8 @@ _TURETIM_SAYI: Dict[str, int] = {
     "tavan_r": 0, "tavan_n": 0, "kafes": 0,
     "boole_yüzü": 0, "heyting_yüzü": 0,
     "şelale_uzay": 0, "şelale_kategori": 0, "şelale_operad": 0,
-    "tıkanma": 0, "aşkın": 0}
+    "tıkanma": 0, "aşkın": 0, "yönlü_tutan": 0, "yönlü_düşen": 0,
+    "tümleyen_bulundu": 0, "tümleyen_yok": 0, "kan_doldurma": 0}
 
 
 _TURETIM_NISPET: Dict[str, float] = {
@@ -4519,16 +4622,30 @@ def _serbestlik_profili(r: int, n: int) -> Optional[Dict[str, int]]:
         return None
     _TURETIM_SAYI["tutan"] += 1
     imza = _tip_imzasi(rn_sarti(Deg("A"), int(r), int(n)))
+    yon = yonlu_mertebe_tutuyor(int(n))
+    if yon["tutuyor"]:
+        _TURETIM_SAYI["yönlü_tutan"] += 1
+    else:
+        _TURETIM_SAYI["yönlü_düşen"] += 1
     profil = {
         "morfizm": 1 if imza["pi"] > 0 else 0,
         "yüksek": 1 if imza["yol"] > 0 else 0,
         "arite": 1 if imza["sigma"] > 0 else 0,
-        "yön₁": 1 if int(n) >= 1 else 0,
-        "yön₂": 1 if int(n) >= 2 else 0,
+        "yön₁": 1 if (int(n) >= 1 and yon["tutuyor"]) else 0,
+        "yön₂": 1 if (int(n) >= 2 and yon["tutuyor"]) else 0,
         "koherans": 1 if int(n) >= 0 else 0,
     }
+    profil["_yönlü"] = 1 if yon["tutuyor"] else 0
+    profil["_kafes"] = int(yon["kafes"])
     _TURETIM_ONBELLEK[anahtar] = profil
     return profil
+
+
+def hakiki_ad(r: int, n: int, yonlu: bool) -> str:
+    cins = "kategori" if yonlu else "grupoid"
+    return "(%s, %s)-%s" % (
+        "∞" if int(r) >= 4 else int(r),
+        "∞" if int(n) >= 4 else int(n), cins)
 
 
 def turetim_kafesi(tavan_r: int, tavan_n: int) -> List[Dict[str, Any]]:
@@ -4540,7 +4657,10 @@ def turetim_kafesi(tavan_r: int, tavan_n: int) -> List[Dict[str, Any]]:
             profil = _serbestlik_profili(r, n)
             if profil is None:
                 continue
-            kafes.append({"r": int(r), "n": int(n), "ad": rn_adi(r, n),
+            yonlu = bool(profil.get("_yönlü"))
+            kafes.append({"r": int(r), "n": int(n),
+                          "ad": hakiki_ad(r, n, yonlu),
+                          "yönlü": yonlu,
                           "profil": profil,
                           "kısıtlama": int(sum(
                               1 for a in TURETIM_SERBESTLIKLERI
@@ -4559,35 +4679,39 @@ def omega_cebiri(dolu_boynuz: int, bos_boynuz: int,
     yon, sim = int(yonlu_kenar), int(simetrik_kenar)
     kenar = yon + sim
     if toplam <= 0 and kenar <= 0:
-        return {"cebir": "tayinsiz", "üçüncü_şık": None,
-                "dolu": 0, "boş": 0, "yönlü_kenar": 0,
-                "simetrik_kenar": 0, "yüz": repr(YANLIS)}
-    k = Aralik.degisken("κ")
-    if bos == 0:
-        kof, ifade = DOGRU, BIR
+        return {"cebir": "tayinsiz", "tümleyen": None, "dolu": 0, "boş": 0,
+                "yönlü_kenar": 0, "simetrik_kenar": 0, "kafes": 0,
+                "unsur": repr(YON_SIFIR)}
+    adlar = ["ω_dolu"] + (["ω_boş"] if bos else []) \
+            + (["ω_yön"] if yon else []) + (["ω_sim"] if sim else [])
+    kafes = yonlu_kafes(adlar)
+    x = YonluAralik.uretec("ω_dolu")
+    if bos:
+        x = x.ve(YonluAralik.uretec("ω_boş"))
+    if yon:
+        x = x.ve(YonluAralik.uretec("ω_yön"))
+    t = tumleyeni(x, kafes)
+    if t is None:
+        _TURETIM_SAYI["tümleyen_yok"] += 1
     else:
-        kof, ifade = aralik_esitligi(k, True), k
-    tam = bool(ifade.veya(ifade.degil()).bir_mi())
-    if yon > sim:
-        cebir = "yönlü_kafes"
-    elif tam:
+        _TURETIM_SAYI["tümleyen_bulundu"] += 1
+    if t is not None:
         cebir = "boole"
+    elif yon > sim:
+        cebir = "yönlü_kafes"
     else:
         cebir = "heyting"
-    if tam:
-        _TURETIM_SAYI["boole_yüzü"] += 1
-    else:
-        _TURETIM_SAYI["heyting_yüzü"] += 1
-    return {"cebir": cebir, "üçüncü_şık": bool(tam),
+    return {"cebir": cebir,
+            "tümleyen": (None if t is None else repr(t)),
+            "unsur": repr(x), "kafes": len(kafes),
             "dolu": dolu, "boş": bos, "boynuz": toplam,
             "yönlü_kenar": yon, "simetrik_kenar": sim,
             "dolu_nispeti": (float(dolu) / float(toplam)
                              if toplam else 1.0),
-            "yön_nispeti": (float(yon) / float(kenar) if kenar else 0.0),
-            "yüz": repr(kof)}
+            "yön_nispeti": (float(yon) / float(kenar) if kenar else 0.0)}
 
 
-def buzulme_selalesi(bos_boynuz: Sequence[Tuple[int, int, int]],
+def gecis_kapamasi(bos_boynuz: Sequence[Tuple[int, int, int]],
                      kenar, agac) -> Dict[str, Any]:
     E = [list(bool(x) for x in satir) for satir in kenar]
     n = len(E)
@@ -4608,6 +4732,7 @@ def buzulme_selalesi(bos_boynuz: Sequence[Tuple[int, int, int]],
         dolgu[kat].append((int(a), int(b), int(c)))
         if kat != "tıkanma":
             E[a][c] = True
+    _TURETIM_SAYI["kan_doldurma"] += 0
     kapanan = sum(len(dolgu[k]) for k in ("uzay", "kategori", "operad"))
     toplam = kapanan + len(dolgu["tıkanma"])
     return {"uzay": len(dolgu["uzay"]), "kategori": len(dolgu["kategori"]),
@@ -4616,7 +4741,9 @@ def buzulme_selalesi(bos_boynuz: Sequence[Tuple[int, int, int]],
             "kapanan": int(kapanan), "yırtık": int(toplam),
             "kapanma_nispeti": (float(kapanan) / float(toplam)
                                 if toplam else 1.0),
-            "dolgu": dolgu, "tamamlanan_kenar": E}
+            "dolgu": dolgu, "tamamlanan_kenar": E,
+            "usul": "çizge_geçişliliği",
+            "kan_doldurma": int(_TURETIM_SAYI["kan_doldurma"])}
 
 
 def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
@@ -4642,6 +4769,12 @@ def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
         "TÜRETİM BÜTÜN KAFESİ SÖNDÜRDÜ -- ölçülen serbestlik %r kafesteki "
         "hiçbir kısıtlama yüzüne oturmadı (ferman 2-Ā-B)" % (x,))
     ro = [w / top for w in agirlik]
+    bagimsiz = 1.0
+    for a in TURETIM_SERBESTLIKLERI:
+        bagimsiz *= max(x[a], 1.0 - x[a])
+    _TURETIM_NISPET["bağımsızlık_varsayımı"] = 1.0
+    _TURETIM_NISPET["bağımsızlık_artığı"] = float(
+        abs(max(ro) - bagimsiz)) if ro else 0.0
     entropi = 0.0
     for q in ro:
         if q > 0.0:
@@ -4669,7 +4802,10 @@ def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
             "Ω_cebiri": om, "şelale": selale,
             "tavan": (int(tavan_r), int(tavan_n)),
             "koordinat": x,
-            "serbestlik": TURETIM_SERBESTLIKLERI}
+            "serbestlik": TURETIM_SERBESTLIKLERI,
+            "ölçü_usulü": "bağımsız_çarpım",
+            "bağımsızlık_artığı": float(
+                _TURETIM_NISPET.get("bağımsızlık_artığı", 0.0))}
 
 
 def turetim_beyani() -> Dict[str, Any]:

@@ -68,12 +68,6 @@ def senedi_uygula(psi: np.ndarray, lif: Tuple[int, ...], kayit,
         return out
     if tur in ("durum", "başlangıç"):
         return np.asarray(G, complex).copy()
-    if tur == "sektör":
-        i, j = int(yer[0]), int(yer[1])
-        M = np.asarray(G, complex)
-        out = psi.copy()
-        out[:, i:j] = psi[:, i:j] @ (M.conj() if ters else M.T)
-        return out
     if tur == "çift_lif":
         ki, kj, bi, bj = (int(yer[0]), int(yer[1]), int(yer[2]),
                           int(yer[3]))
@@ -154,12 +148,6 @@ def _turev_vur(psi: np.ndarray, lif: Tuple[int, ...], turev) -> np.ndarray:
     if tur == "bant4":
         return bant_vur(psi, int(turev[1]), int(turev[2]), turev[3],
                         sifirla=True)
-    if tur == "sektör":
-        i, j = int(turev[1]), int(turev[2])
-        dU = np.asarray(turev[3], complex)
-        out = np.zeros_like(psi)
-        out[:, i:j] = psi[:, i:j] @ dU.T
-        return out
     raise ValueError("türev tarifi bilinmiyor: %r" % (tur,))
 
 

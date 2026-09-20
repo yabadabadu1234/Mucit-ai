@@ -6,13 +6,13 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 from matematik.sonsuz_mertebeler_teorisi import (
-    TURETIM_SERBESTLIKLERI, buzulme_selalesi, topos_turetimi,
+    TURETIM_SERBESTLIKLERI, gecis_kapamasi, topos_turetimi,
     turetim_beyani)
 
 __all__ = ["HendeseAyari", "gecis_dizeyi", "karsilikli_haber",
            "gromov_delta", "mertebe_sec", "dikey_asansor",
            "hendese_teshisi", "hendese_beyani", "hendese_yukle",
-           "hendese_sifirla", "opetopik_kompleks", "hodge_ayrisimi",
+           "hendese_sifirla", "gecis_kompleksi", "hodge_ayrisimi",
            "kan_boynuzu", "izdusum_demeti", "kaide_imzasi"]
 
 
@@ -149,9 +149,9 @@ def gromov_delta(w: Sequence[int], ayar: Optional[HendeseAyari] = None
             "dörtlü": int(Q.shape[0]), "alfabe": n}
 
 
-def opetopik_kompleks(w: Sequence[int], n: int) -> Dict[str, Any]:
+def gecis_kompleksi(w: Sequence[int], n: int) -> Dict[str, Any]:
     y = np.asarray(list(w), np.int64).reshape(-1) % int(n)
-    assert y.size >= 1, "opetopik kompleks için dizi BOŞ olamaz"
+    assert y.size >= 1, "geçiş kompleksi için dizi BOŞ olamaz"
     m = int(n)
     sifir = np.unique(y)
     bos = {"0-hücre": int(sifir.size), "1-hücre": 0, "2-hücre": 0,
@@ -269,7 +269,7 @@ def mertebe_sec(w: Sequence[int], ayar: Optional[HendeseAyari] = None
     n = int(min(int(a.azami_alfabe), max(2, int(y.max()) + 1)))
     hb = karsilikli_haber(y, n)
     T = gecis_dizeyi(y, n)
-    K = opetopik_kompleks(y, n)
+    K = gecis_kompleksi(y, n)
     h1 = hodge_ayrisimi(T)
     agac = np.asarray(K["agac"], np.int64)
     if int(K["2-hücre"]) >= 2:
@@ -285,7 +285,7 @@ def mertebe_sec(w: Sequence[int], ayar: Optional[HendeseAyari] = None
     simetrik = int(np.count_nonzero(cift))
     yonlu = int(np.count_nonzero(E0)) - simetrik
     kan = kan_boynuzu(K["kenar"])
-    selale = buzulme_selalesi(kan["boş"], K["kenar"].tolist(), agac.tolist())
+    selale = gecis_kapamasi(kan["boş"], K["kenar"].tolist(), agac.tolist())
     tamam = np.asarray(selale["tamamlanan_kenar"], bool)
     kan_sonra = kan_boynuzu(tamam)
     K["kenar"] = tamam

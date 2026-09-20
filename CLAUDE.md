@@ -122,6 +122,12 @@
 | 73-D | Dört puanın ölçeği normalize edilmeden `enbüyükArgüman`a sokulması (bit · matris normu · kosinüs yan yana) | Her ölçü kendi haddine bölünüp `[0,1]`e çekilir; yarış değil **ayrışım** | 2-Ā-B, 1-J |
 | 73-E | `gromov_delta`da `default_rng(...).choice` ile rastgele dörtlü çekmek | Determinist dörtlü taraması -- zar yoktur (I5) | 2-Ĵ |
 | 73-F | `Nilpotent = en küçük k, GeçişDizeyi^k = 0` float eşiğiyle (`1e-12`) ölçülmesi | Boole erişilebilirliğiyle **tam** DAG mertebesi; eşik yok, `k` kayması yok | 1-J |
+| 73-G | **`MERTEBE_ADI = ("nokta","uzay","tip","kategori")` ve `mertebe_sarti`nin `n_mertebe(X, l−1)` eşlemesi.** `l=0 → n=−1` önermedir, "nokta" değil; `l=1 → n=0` kümedir, "uzay" değil; `l=2 → n=1` **grupoiddir**, "tip" değil; `l=3 → n=2` **2-grupoiddir**, "kategori" DEĞİLDİR | Hakikî ad: `n`-kesme mertebesi. Grupoide kategori denmez; kategori ancak **yönlü** hom-tipi varsa doğar | 2-Ā-C |
+| 73-H | **`rn_adi`nin her `(r,n)` için "(r,n)-kategori" yazması** | Simetrik kanatta `(r,n)-grupoid`; "kategori" adı yalnız yönlü kanat tuttuğunda yazılır | 2-Ā-C |
+| 73-I | **Üçgram dizisine "opetopik kompleks" denmesi** | Ortada opetop yoktur: çekirdeğin hendesesi sabit De Morgan küpüdür (`Aralik`, `∧ ∨ ¬`). Ad hakikatine çevrilir: **geçiş kompleksi**. Opetop, arite-indeksli hücre şekli fiilen örülmeden o ad yazılamaz | 2-Ā-C, 1-E |
+| 73-J | **`omega_cebiri`nin `if/elif` karar ağacı** -- ve `tam` değerinin, dal seçilmeden evvel `boş == 0`dan **zaten belli olması** | Ω, kafesin kendi cebrinden **hesaplanır**: unsurun kafeste tümleyeni VAR MI diye aranır. Yanlış çıkması imkânsız ölçü, ölçü değildir (F 5) | 2-Ā-C, 5 |
+| 73-K | **Şelalenin komşuluk matrisi geçişlilik taraması olması** (`E[c][a]` · `E[a][m] and E[m][c]`) | Bu klasik çizge aramasıdır, Kan doldurması değil; adı hakikatine çevrilir ve doldurmanın çekirdekte koşmadığı **sayıyla** yazılır | 2-Ā-C, 5 |
+| 73-L | **Tayfın `Π (x_a | 1−x_a)` Naive Bayes çarpımı** | Serbestlikler bağımsız Bernoulli değildir; Postnikov/Hodge tabakalaşması bağımlıdır. Çarpım kalacaksa **bağımsızlık varsayımı açıkça ilan edilir ve ihlâli ölçülür** | 2-Ā-C |
 | 74 | Tek indisli `ℓ ∈ {0,1,2,3}` merdiveni | `(r, n)` çifti; r = nesne, n = morfizm mertebesi; tavan `(∞, ∞)` | 2-Þ |
 | 75 | `"∞-kategori"` ve `"∞-tip"` iki ayrı taşıyıcı adı | Tek taşıyıcı: `(r, n)`-kategori | 2-Þ |
 | 76 | Elle yazılmış `VECIHLER` listesi (`genlik`, `faz`, `fark`, `dilim`) | Vecih ∞-kategori ve ∞-tip teorisinden neşet eder | 2-Ú |
@@ -276,6 +282,8 @@
 | 87 | Tip tayfını `argmax` ile çökertmek | 2-Ú-B |
 | 87-B | Cinsi evvelden listeleyip veriyi o listeye sokmak; veriye **etiket seçtirmek** | 2-Ā-B |
 | 87-C | Mertebeyi tek skalere indirmek; `PariteLifi`ni tek kat sanmak | 2-Ā-B, 2-Ú-B |
+| 87-E | Simetrik bir homotopi motorunun üstüne **yönlü · toposik · opetopik · kategorik süs giydirmek**; grupoidin mertebesini artırıp adına "kategori" demek | 2-Ā-C |
+| 87-F | Yanlış çıkması **imkânsız** bir ölçü kurmak (neticesi, dal seçilmeden evvel belli olan bir denetim) | 2-Ā-C, 5 |
 | 87-D | Birimi ve haddi başka olan ölçüleri normalize etmeden yarıştırmak (bit · matris normu · kosinüs) | 2-Ā-B, 1-J |
 | 88 | Zar atmak; stokastiklik; rastgele izdüşüm, rastgele eksen, rastgele tohumlu vecih | 2-Ĵ, 2-Ø, 2-Ú |
 | 89 | Cevabı gerilim tepesine yazdırmak (nedensellik ölür) | 2-Ï |
@@ -457,6 +465,8 @@
 | 113 | Kâide dışarıdan ezberletilmez, **diziden istihraç edilir**: metrik (Fubini-Study/Fisher) · sıra (Lie yapı sabitleri `[X_a,X_b]=f_ab^c X_c`) · kompozisyon (sol Kan uzantısı, ko-end integrali) | 1-Ğ |
 | 114 | **KURUCU HİYERARŞİ (zirveden tabana, F 2-Ā-B):** `Yönlü Opetopik (∞,∞)-Properad Toposu` → `(∞,∞)-kategori` → `(∞,1)-kategori` → `(∞,0)-tip = homotopi uzayı` → `1-grupoid` → `küme (0-tip)` → `nokta`. Aşağı inmek **kısıtlama**dır: arite `n→m` iken `1→1`e; yön tersinir kılınır; `π_k` sıfırlanır. Çöküş zirveden başlar, cevap (nokta) en son varılan yerdir | 2-Ā-B, 2-Þ |
 | 114-A | **TÜRETİM MOTORU TEKTİR VE KALPTEDİR.** En üst cins -- Yönlü Opetopik `(∞,∞)`-Properad Toposu -- `matematik/sonsuz_mertebeler_teorisi.py`de yaşar; türetim **yalnız orada** koşar. Başka hiçbir dosyada türetim yapan ikinci bir motor bulunamaz; uzuvlar ölçer ve kalbe sorar, kendi cinsini kendi türetemez | 2-Ā-B, 2-Ý, 1-M |
+| 113-A | **ÇEKİRDEK SİMETRİKTİR; YÖN AYRI BİR ARALIKTAN GELİR.** `matematik/sonsuz_mertebeler_teorisi.py` bir CCHM kübik tip teorisi çekirdeğidir: `Aralik`'in `degil()`i (De Morgan `1−i`) yüzünden **her `YolP` tersinirdir**, üretilen her terim bir `∞`-grupoiddir. Bu çekirdek tek başına kategori üretemez. Yön, **tümleyeni olmayan** ikinci bir aralıktan doğar: sınırlı dağılımlı kafes (`∧ ∨ 0 1`), `¬` YOK. Yönlü hom-tipi o aralıkla kurulur; tersi inşa edilemediği için ok yönünü korur | 2-Ā-C |
+| 113-B | **KATEGORİ İDDİASININ ŞARTI:** bir `(r,n)` düğümüne "kategori" denebilmesi için **yönlü kanadın** tip denetiminden geçmesi lâzımdır. Yalnız simetrik kanat tutuyorsa adı **grupoid**dir ve öyle yazılır. İki kanadın hangisinin tuttuğu ayrı ayrı **sayılır** | 2-Ā-C, 5 |
 | 114-B | **CİNS LİSTELENMEZ, ÖRÜLÜR.** Girdi dizisinden serbest opetopik kompleks kurulur: 0-hücre belirteç · 1-hücre ardışık geçiş · 2-hücre `bağlam → netice` ağacı · n-hücre kuralın kurala dönüşümü. Şekil evvelden verilmez, dallanmanın kendisi olur | 2-Ā-B |
 | 114-C | **ÜÇ EVRENSEL TEST** cinsi kendiliğinden tayin eder: **1 ARİTE** (`1→1` kategori · `n→1` operad · `n→m` properad) → **2 TERSİNİRLİK** (`g∘f ≃ id` ise homotopi **uzayı**, değilse **yönlü kategori**) → **3 KAN BOYNUZU** (her boynuz doluyorsa `∞`-kategori, yırtık varsa **obstrüksiyon ve ayrık mantık**) | 2-Ā-B |
 | 114-D | **TÜRETİM KURALI Ω'DAN OKUNUR:** alt-nesne sınıflayıcısı `Ω` veriden çıkarılır -- karşıtı daima çelişki ise Boole (klasik mantık), ispata/zamana bağlı ise Heyting (sezgisel), yönlü süreçle bağlıysa yönlü kafes (lineer/kuantum mantığı). Yerel geçişler çelişmeden yapışıyorsa (gluing) **kanun** diye mühürlenir, yapışmıyorsa yerel istisnadır | 2-Ā-B |
