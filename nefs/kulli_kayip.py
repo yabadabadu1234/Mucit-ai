@@ -149,9 +149,6 @@ class Olcum:
 BETA: float = 8.0
 
 
-DINAMIK_BETA: bool = False
-
-
 HEDEF_USSU: float = 0.5
 
 
@@ -182,29 +179,6 @@ def zayif_halka(x=None, beta=None, ne: str = "asgarî",
         H = float(-np.sum(w[nz] * np.log(w[nz])))
         return float(np.exp(H))
 
-    if ne == "beta":
-        eksikler = x
-        e = np.asarray(eksikler, float).reshape(-1)
-        n = e.size
-        if n <= 1:
-            return float(BETA)
-        if float(np.ptp(e)) < 1e-12:
-            return float(alt)
-        hedef = float(n) ** float(np.clip(HEDEF_USSU, 0.0, 1.0))
-        hedef = float(np.clip(hedef, 1.0 + 1e-9, n - 1e-9))
-        lo, hi = float(alt), float(ust)
-        if zayif_halka(e, lo, ne="katılan") <= hedef:
-            return lo
-        if zayif_halka(e, hi, ne="katılan") >= hedef:
-            return hi
-        for _ in range(48):
-            orta = 0.5 * (lo + hi)
-            if zayif_halka(e, orta, ne="katılan") > hedef:
-                lo = orta
-            else:
-                hi = orta
-        return 0.5 * (lo + hi)
-
     if ne != "azamî":
         raise ValueError("toplama kipi bilinmiyor: %r" % (ne,))
     if not olcumler:
@@ -213,22 +187,14 @@ def zayif_halka(x=None, beta=None, ne: str = "asgarî",
     eksikler = [o.eksik() for o in olcumler]
     mert = [o.mertebe() for o in olcumler]
     en_zayif = min(olcumler, key=lambda o: o.mertebe())
-    n = len(eksikler)
-    if beta is None:
-        beta = zayif_halka(eksikler, ne="beta") if DINAMIK_BETA else BETA
-    b = float(max(beta, 1e-6))
-    from matematik.fitrat import logsumexp
-    yumusak = (float(logsumexp([b * e for e in eksikler]))
-               - float(np.log(n))) / b
-    assert np.isfinite(yumusak), "yumusak asgari sonlu degil"
-    return {"kayıp": float(np.clip(yumusak, 0.0, 1.0)),
-            "β": b,
-            "katılan_uzuv": zayif_halka(
-                np.asarray(eksikler, float), b, ne="katılan"),
+    kayip = float(np.max(eksikler))
+    return {"kayıp": kayip,
+            "β": 0.0,
+            "katılan_uzuv": float(len(eksikler)),
             "azamî_eksik": float(max(eksikler)),
             "ortalama_eksik": float(np.mean(eksikler)),
             "ortalama_mertebe": float(np.mean(mert)),
-            "uzuv": n,
+            "uzuv": len(eksikler),
             "en_zayıf": (en_zayif.kaynak, float(en_zayif.mertebe())),
             "tahminî_hadli": sum(1 for o in olcumler if o.uzay.tahmini_ust)}
 
