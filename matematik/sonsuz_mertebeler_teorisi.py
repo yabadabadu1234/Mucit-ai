@@ -6316,6 +6316,76 @@ def topolojik_yuk_chern_sayisi(P: np.ndarray, Asim: np.ndarray,
             "topolojik_monopol_var_mi": monopol_var}
 
 
+def kripke_joyal_forcing(baglam_U: Tuple[int, ...], onerme_phi: Dict[int, float],
+                         onerme_psi: Dict[int, float], P: np.ndarray,
+                         omega_cebiri: str) -> Dict[str, Any]:
+    durumlar = list(set(baglam_U))
+    if not durumlar:
+        return {"U_zorlar_mi": True, "kuvvet": 1.0}
+
+    yerel_uyumlar = []
+    for u in durumlar:
+        v_phi = onerme_phi.get(u, 0.0)
+        v_psi = onerme_psi.get(u, 0.0)
+
+        if omega_cebiri == "boole":
+            uyum = 1.0 if (v_phi <= v_psi) else 0.0
+        else:
+            uyum = 1.0 if v_phi <= v_psi else v_psi
+        yerel_uyumlar.append(uyum)
+
+    en_zayif_halka = float(min(yerel_uyumlar))
+    zorlar_mi = bool(en_zayif_halka >= 0.85)
+
+    return {"U_zorlar_mi": zorlar_mi, "asgari_uyum": en_zayif_halka, "asama_boyutu": len(durumlar)}
+
+
+def topos_diyagonal_esitlik_chi(x: int, y: int, P: np.ndarray,
+                                Asim: np.ndarray, omega_cebiri: str) -> float:
+    if x == y:
+        return 1.0
+
+    simetri = 1.0 - float(Asim[x, y])
+    ortusme = float(np.sqrt(P[x, y] * P[y, x]))
+    derece = float(np.clip(ortusme * simetri, 0.0, 1.0))
+
+    if omega_cebiri == "boole":
+        return 1.0 if derece > 0.8 else 0.0
+    return derece
+
+
+def tannaka_simetri_grubu_turet(kat: Turetilen1Kategori, P: np.ndarray) -> Dict[str, Any]:
+    nesneler = kat.nesneler
+    k = len(nesneler)
+    if k < 2:
+        return {"simetri_grubu": "U(1)", "boyut": 1, "invaryant_iz": 1.0}
+
+    alt_P = P[np.ix_(nesneler, nesneler)]
+    komutator = alt_P @ alt_P.T - alt_P.T @ alt_P
+    komutator_normu = float(np.linalg.norm(komutator))
+
+    if komutator_normu < 1e-4:
+        simetri = "Abelien_U(1)^%d" % k
+    else:
+        simetri = "GayriAbelien_SU(%d)" % min(k, 3)
+
+    return {"simetri_grubu": simetri, "komutator_sapmasi": komutator_normu, "tannaka_boyutu": k}
+
+
+def berry_ayar_potansiyeli_ve_fazi(psi: np.ndarray, parametre_acilari: np.ndarray,
+                                   d_psi: np.ndarray) -> Dict[str, Any]:
+    norm_psi = psi / (np.linalg.norm(psi) + 1e-12)
+
+    ic_carpim = np.vdot(norm_psi, d_psi)
+    ayar_potansiyeli = float(-np.imag(ic_carpim))
+
+    adim_farki = float(np.mean(np.diff(parametre_acilari))) if len(parametre_acilari) > 1 else 0.1
+    berry_fazi = float(ayar_potansiyeli * adim_farki)
+
+    return {"berry_ayar_potansiyeli": ayar_potansiyeli, "geometrik_berry_fazi": berry_fazi,
+            "anomalik_faz_var_mi": bool(abs(berry_fazi) > 0.2)}
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7316,6 +7386,21 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                        for i in range(len(orijinal_baglam) - 1)] if len(orijinal_baglam) >= 2 else [])
     chern_raporu = topolojik_yuk_chern_sayisi(P, Asim, ornek_ucgenler)
 
+    onerme_oncul = {obj: float(P[baglam[-1], obj]) for obj in turetilen_kategori.nesneler}
+    onerme_netice = {obj: float(P[obj, nihai_hedef]) for obj in turetilen_kategori.nesneler}
+    kripke_raporu = kripke_joyal_forcing(
+        baglam_U=orijinal_baglam, onerme_phi=onerme_oncul, onerme_psi=onerme_netice,
+        P=P, omega_cebiri=tayf_bilgisi["Ω_cebiri"])
+
+    diyagonal_esitlik_derecesi = topos_diyagonal_esitlik_chi(
+        x=baglam[-1], y=nihai_hedef, P=P, Asim=Asim, omega_cebiri=tayf_bilgisi["Ω_cebiri"])
+
+    tannaka_raporu = tannaka_simetri_grubu_turet(turetilen_kategori, P)
+
+    d_psi_tahmin = 1j * psi_evrilmis
+    berry_raporu = berry_ayar_potansiyeli_ve_fazi(
+        psi=psi_evrilmis, parametre_acilari=parametre_acilari, d_psi=d_psi_tahmin)
+
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
     balyalama_raporu = d9_kume_kapanisi_ve_balyalama(
@@ -7426,5 +7511,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "coequalizer_faktorizasyon": coeq_raporu["faktorizasyon_gecerli_mi"],
         "chern_sayisi_c1": chern_raporu["chern_sayisi_c1"],
         "izgara_sekli": izgara_sekli,
+        "kripke_joyal_zorlama": kripke_raporu,
+        "diyagonal_ic_esitlik_chi": diyagonal_esitlik_derecesi,
+        "tannaka_ayar_simetrisi": tannaka_raporu,
+        "berry_geometrik_faz": berry_raporu,
         "detay": tayf_bilgisi
     }
