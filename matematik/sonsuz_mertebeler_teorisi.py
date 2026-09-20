@@ -1121,8 +1121,8 @@ class DYonluTerkip(Deger):
             cizgi, kaynak, hedef, f, g)
 
     def act(self, s):
-        return DYonluTerkip(self.cizgi.act(s), self.kaynak.act(s),
-                           self.hedef.act(s), self.f.act(s), self.g.act(s))
+        return DYonluTerkip(_act(self.cizgi, s), _act(self.kaynak, s),
+                           _act(self.hedef, s), _act(self.f, s), _act(self.g, s))
 
 
 class DOperadAgac(Deger):
@@ -2136,6 +2136,24 @@ def _esit(a: Terim, b: Terim, derinlik: int = 0) -> bool:
         return (_esit(a.fonk, b.fonk, derinlik) and _esit(a.arg, b.arg, derinlik))
     if isinstance(a, (Birinci, Ikinci)):
         return _esit(a.cift, b.cift, derinlik)
+    if isinstance(a, OperadHom) and isinstance(b, OperadHom):
+        if len(a.oncutler) != len(b.oncutler):
+            return False
+        return (_esit(a.cizgi, b.cizgi, derinlik) and
+                all(_esit(x, y, derinlik) for x, y in zip(a.oncutler, b.oncutler)) and
+                _esit(a.hedef, b.hedef, derinlik))
+    if isinstance(a, OperadAgac) and isinstance(b, OperadAgac):
+        if len(a.oncutler) != len(b.oncutler) or a.etiket != b.etiket:
+            return False
+        return (_esit(a.cizgi, b.cizgi, derinlik) and
+                all(_esit(x, y, derinlik) for x, y in zip(a.oncutler, b.oncutler)) and
+                _esit(a.hedef, b.hedef, derinlik))
+    if isinstance(a, YonluOk) and isinstance(b, YonluOk):
+        return (_esit(a.cizgi, b.cizgi, derinlik) and
+                _esit(a.kaynak, b.kaynak, derinlik) and
+                _esit(a.hedef, b.hedef, derinlik) and a.etiket == b.etiket)
+    if isinstance(a, YonluTerkip) and isinstance(b, YonluTerkip):
+        return _esit(a.f, b.f, derinlik) and _esit(a.g, b.g, derinlik)
     return False
 
 
@@ -4736,9 +4754,8 @@ def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
 
     E_uzay = float(np.sum((P_sim ** 2) * (1.0 - Asim))) / n
     E_kategori = float(np.sum((P_asim ** 2) * Asim)) / n
-    azami_arite = max((len(girdi) for (girdi, _) in norm_korollalar), default=2)
-    max_arite_kare = float(max(1, (azami_arite - 1) ** 2))
-    E_operad = float(sum(((len(girdi) - 1) ** 2 / max_arite_kare) * prob
+    azami_arite = max((len(girdi) for (girdi, _) in norm_korollalar), default=1)
+    E_operad = float(sum((math.log2(len(girdi) + 1.0) / math.log2(azami_arite + 2.0)) * prob
                          for (girdi, _), prob in norm_korollalar.items()))
     E_tikanma = float(np.sum(Kan_rezidusu ** 2)) / n
 
@@ -4752,12 +4769,10 @@ def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
     beta = float(np.sum(P2[yirtiklar])) / float(np.sum(P2) + 1e-12)
     alfa = float(np.mean(Asim[P > 0])) if np.any(P > 0) else 0.0
 
-    if beta < 0.05 and alfa < 0.2:
-        cebir = "boole"
-    elif alfa >= 0.5:
-        cebir = "yönlü_kafes"
+    if beta < 0.05:
+        cebir = "boole" if alfa < 0.25 else "yönlü_kafes"
     else:
-        cebir = "heyting"
+        cebir = "heyting" if alfa < 0.5 else "yönlü_heyting"
 
     return {
         "tayf": rho, "entropi": entropi, "Ω_cebiri": cebir,
@@ -4867,7 +4882,6 @@ def ispat_sahidini_dogrula(ispat_sahidi: Optional[Terim], baglam: Tuple[int, ...
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
     P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
-    tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
 
     w_arr = list(w)
     k_baglam = min(K_max - 1, len(w_arr) - 1)
@@ -4876,6 +4890,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     muhakemeler: List[Dict[str, Any]] = []
 
     for _ in range(azami_adim):
+        tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
+
         adim_muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar)
 
         sahit_gecerli = ispat_sahidini_dogrula(adim_muhakeme["ispat_sahidi"], baglam,
@@ -4884,7 +4900,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         muhakemeler.append(adim_muhakeme)
 
         if (adim_muhakeme["hüküm"] == "doğrudan_tasdik"
-                or adim_muhakeme["kohomolojik_engel"] < 0.02):
+                or adim_muhakeme["kohomolojik_engel"] < 0.01):
             break
 
         if adim_muhakeme["ara_durak"] is not None:
@@ -4893,12 +4909,25 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
     rho = tayf_bilgisi["tayf"]
     kuantum_genlikleri = np.sqrt(rho)
-    lif_boyutu = int(np.sum(np.ceil(rho * float(n))))
+
+    d_uzay = max(1, int(np.round(rho[0] * float(n))))
+    d_kat = max(1, int(np.round(rho[1] * float(n))))
+    d_op = max(1, int(np.round(rho[2] * float(n))))
+    d_yir = max(1, int(np.round(rho[3] * float(n))))
+    lif_boyutu = d_uzay + d_kat + d_op + d_yir
+
+    dilimler = {
+        "uzay": (0, d_uzay),
+        "kategori": (d_uzay, d_uzay + d_kat),
+        "operad": (d_uzay + d_kat, d_uzay + d_kat + d_op),
+        "yırtık": (d_uzay + d_kat + d_op, lif_boyutu)
+    }
 
     parite_lifi = {
         "spektral_agirliklar": rho,
         "kuantum_genlikleri": kuantum_genlikleri,
         "lif_boyutu": lif_boyutu,
+        "alt_uzay_dilimleri": dilimler,
         "aktif_modlar": {
             "uzay_modu": bool(rho[0] > 0.15),
             "kategori_modu": bool(rho[1] > 0.15),
