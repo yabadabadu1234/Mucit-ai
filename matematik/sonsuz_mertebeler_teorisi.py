@@ -113,6 +113,42 @@ def yonlu_hom(A: Terim, x: Terim, y: Terim) -> Terim:
     return YonluHom(A, x, y)
 
 
+class YonluKafes:
+    __slots__ = ("unsurlar",)
+
+    def __init__(self, unsurlar: FrozenSet[FrozenSet[Tuple[str, bool]]]) -> None:
+        self.unsurlar = frozenset(unsurlar)
+
+    @staticmethod
+    def degisken(ad: str) -> "YonluKafes":
+        return YonluKafes(frozenset({frozenset({(ad, True)})}))
+
+    def ve(self, obur: "YonluKafes") -> "YonluKafes":
+        return YonluKafes(frozenset(
+            a | b for a in self.unsurlar for b in obur.unsurlar))
+
+    def veya(self, obur: "YonluKafes") -> "YonluKafes":
+        return YonluKafes(self.unsurlar | obur.unsurlar)
+
+    def degil(self) -> "YonluKafes":
+        raise CekirdekHatasi(
+            "YonluKafes'in tümleyeni YOKTUR -- yön bu aralıkta "
+            "tersinir değildir (ferman 2-Ā-C)")
+
+    def sifir_mi(self) -> bool:
+        return len(self.unsurlar) == 0
+
+    def bir_mi(self) -> bool:
+        return frozenset() in self.unsurlar
+
+
+def yonlu_hom_kur(A: Terim, x: Terim, y: Terim, kof: YonluKafes) -> Terim:
+    if kof.sifir_mi():
+        raise CekirdekHatasi(
+            "yönlü hom boş kafesle kurulmaz -- ok yönünü kaybeder")
+    return YonluHom(A, x, y)
+
+
 def yonlu_mertebe(X: Terim, n: int) -> Terim:
     if int(n) <= 0:
         return X
@@ -5431,7 +5467,8 @@ def alem_baglami_ac(alem: TuretilenDilimAlemi, ana_baglam: Optional[Baglam] = No
         obj_ad = "AlemNesne_%d" % obj_id
         g = g.genislet(obj_ad, g.d(Dogal()))
         ok_ad = "Morfizm_%d_%d" % (obj_id, alem.baglam_hedefi)
-        g = g.genislet(ok_ad, g.d(yonlu_hom(Dogal(), D(obj_ad), D(alem_hedef_ad))))
+        ok_kafesi = YonluKafes.degisken(ok_ad)
+        g = g.genislet(ok_ad, g.d(yonlu_hom_kur(Dogal(), D(obj_ad), D(alem_hedef_ad), ok_kafesi)))
 
     return g
 
