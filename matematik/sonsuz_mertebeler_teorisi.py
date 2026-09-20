@@ -8622,6 +8622,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "kulli_ispat_sahidi": kulli_ispat,
         "kulli_ispat_dogrulandi": kulli_sahit_gecerli,
         "qudit_tip_tensoru": qudit_tip_tensoru,
+        "turetilen_kategori_ham": turetilen_kategori,
         "turetilen_1_kategori": {
             "nesneler": turetilen_kategori.nesneler,
             "morfizm_sayisi": len(turetilen_kategori.ok_siniflari),
@@ -8866,8 +8867,16 @@ def hendese_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
     demet[alt] += (1.0 - pay)
     demet[ust] += pay
     kat = int(min(max(int(round(buzulme)), 0), kat_sayisi - 1))
+    _lif_tirmanis = sonuc.get("asansor_tirmanis_lif_vektoru")
+    _lif_inis = sonuc.get("asansor_inis_lif_vektoru")
+    _gercek_lif = _lif_tirmanis if _lif_tirmanis is not None else _lif_inis
     asansor_sozluk = {"kat": kat, "büzülme": buzulme, "demet": demet,
-                      "eksen": kat, "lif": lif, "taban_boyu": int(lif[kat])}
+                      "eksen": kat, "lif": lif, "taban_boyu": int(lif[kat]),
+                      "gerçek_lif_vektörü": _gercek_lif,
+                      "gerçek_lif_boyu": (int(_gercek_lif.size)
+                                         if _gercek_lif is not None else 0),
+                      "tırmanış_hükmü": sonuc.get("asansor_tirmanis_hukmu"),
+                      "iniş_hükmü": sonuc.get("asansor_inis_hukmu")}
 
     psi_kaynagi = np.asarray(parite_lifi["kuantum_durum_vektoru"], dtype=complex)
     if psi_kaynagi.size >= d_toplam:
@@ -8916,6 +8925,9 @@ def hendese_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
         "üçgen_ihlâli": float(gr["üçgen_ihlâli"]),
         "alfabe": n,
         "basamak": len(duz),
+        "qudit_tip_tensoru": sonuc.get("qudit_tip_tensoru"),
+        "turetilen_kategori_ham": sonuc.get("turetilen_kategori_ham"),
+        "mertebeler_arasi_katilim_payi": sonuc.get("mertebeler_arasi_katilim_payi"),
         "kaynak_motor_çıktısı": sonuc,
         "türetim_beyanı": turetim_beyani(),
     }
@@ -9227,6 +9239,8 @@ class Lif:
     tur: int = 0
     doyma: float = 0.0
     islenen: int = 0
+    gercek_kategori_eslesme: int = 0
+    gercek_hom_toplam: int = 0
 
     def tak(self, tip: str, kategori: str, uzay: str,
             nokta: np.ndarray) -> "Lif":
@@ -9329,7 +9343,9 @@ class Lif:
                 "sözlük": int(self.sozluk),
                 "asansör_katı": int(self.asansor_kati),
                 "uzay_mertebesi": [int(m) for m in self.uzay_mertebesi],
-                "tur": int(self.tur)}
+                "tur": int(self.tur),
+                "gerçek_kategori_eşleşme": int(self.gercek_kategori_eslesme),
+                "gerçek_hom_toplamı": int(self.gercek_hom_toplam)}
 
     @staticmethod
     def hazineden(d: Optional[Dict[str, Any]] = None) -> "Lif":
@@ -9338,7 +9354,9 @@ class Lif:
                 asansor_kati=int(d.get("asansör_katı", -1)),
                 uzay_mertebesi=tuple(int(m) for m in
                                      d.get("uzay_mertebesi", ())),
-                tur=int(d.get("tur", 0)))
+                tur=int(d.get("tur", 0)),
+                gercek_kategori_eslesme=int(d.get("gerçek_kategori_eşleşme", 0)),
+                gercek_hom_toplam=int(d.get("gerçek_hom_toplamı", 0)))
         for t, cs in dict(d.get("defter") or {}).items():
             for c, us in dict(cs).items():
                 for u, v in dict(us).items():
@@ -9403,6 +9421,8 @@ def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
         _dinamik_mertebeler([len(b) for b, _h, _c, _m in bolunmus]))
     mertebeler = [u.mertebe for u in uzaylar]
 
+    gercek_kat = hendese.get("turetilen_kategori_ham")
+    gercek_tensor = hendese.get("qudit_tip_tensoru")
     L = Lif.hazineden(onceki)
     klon = hendese_beyani()
     for bag, _hedef, cins, _makam in bolunmus:
@@ -9412,6 +9432,15 @@ def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
         uzay = "uzay%02d" % _yuva_sec(mertebeler, len(bag))
         t = np.unique(np.asarray(dizi, np.int64))
         L.birik(tip, kategori, uzay, M[t, :].sum(axis=0))
+        if gercek_kat is not None and gercek_tensor is not None:
+            for nesne in t:
+                if int(nesne) in gercek_tensor["liflar"]:
+                    inis = tip_tensoru_asagi_in(gercek_tensor, int(nesne),
+                                                gercek_kat)
+                    if inis["bulundu"] and inis["hom_kurallari"]:
+                        L.gercek_kategori_eslesme += 1
+                        L.gercek_hom_toplam += len(inis["hom_kurallari"])
+                    break
     hendese_yukle(klon)
     L.asansor_kati = int(hendese["asansör"]["kat"])
     L.sozluk = int(sozluk)

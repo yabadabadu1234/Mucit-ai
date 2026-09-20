@@ -445,11 +445,14 @@ def d2_hendese(Z: Dict[str, Any]) -> Dict[str, Any]:
                      tohum=int(ayar.tohum)))
 
     if "parite_lifi" not in ayar.elle:
-        ayar.parite_lifi = int(hendese["asansör"]["kat"])
+        _gercek_lif_boyu = int(hendese["asansör"]["gerçek_lif_boyu"])
+        ayar.parite_lifi = (_gercek_lif_boyu if _gercek_lif_boyu > 0
+                            else int(hendese["asansör"]["kat"]))
 
     safha("D2 HENDESE", kafes=len(hendese["kafes"]),
           tıkanma=int(hendese["şelale"]["tıkanma"]),
-          büzülme="%.3f" % float(hendese["asansör"]["büzülme"]))
+          büzülme="%.3f" % float(hendese["asansör"]["büzülme"]),
+          gerçek_lif=int(hendese["asansör"]["gerçek_lif_boyu"]))
     Z.update({"hendese": hendese})
     return Z
 
@@ -599,15 +602,26 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
     kapi_hukmu = Z["kapi_hukmu"]
     kademe_gorevleri = Z["kademe_gorevleri"]
     _sadakat_ayari = Z["_sadakat_ayari"]
+    hendese = Z["hendese"]
 
     def _dengele(dokum) -> Dict[str, float]:
-        lam = denge(dokum,
-                    nispet=hamiltonyen.kefelerden(dokum).nispetler())
+        _nispet = hamiltonyen.kefelerden(dokum).nispetler()
+        lam = denge(dokum, nispet=_nispet)
         for ad, deger in lam.items():
             if ad == "frenlenen" or ad in _elle_lam:
                 continue
             setattr(ayar, ad, float(deger))
         _mzn["a"] = mizan_ayari(ayar)
+        _katilim = hendese.get("mertebeler_arasi_katilim_payi") or {}
+        if _katilim:
+            _motor_kategori = float(_katilim.get("mertebe_1_payi", 0.0))
+            _hamilton_kategori = float(_nispet.get("kategori", 0.0))
+            _fark = abs(_motor_kategori - _hamilton_kategori)
+            if _fark > 0.3:
+                safha("D6 MİZAN · UYUMSUZLUK",
+                      motor_kategori="%.3f" % _motor_kategori,
+                      hamiltonyen_kategori="%.3f" % _hamilton_kategori,
+                      fark="%.3f" % _fark)
         return lam
 
     ilk_kefeler = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=mzn,
@@ -810,6 +824,15 @@ def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
     dhr["blok_artığı"] = blok_kosegen_artigi(tur.yigin, q_son.y.ayar.lif)
     dhr["kartan_boyu"] = int(kartan_fazi(
         q_son.y.ayar.lif, [float(ayar.ayna_teta)]).size)
+    _gercek_kat = hendese.get("turetilen_kategori_ham")
+    if _gercek_kat is not None:
+        _motor_sektor = len(_gercek_kat.nesneler)
+        dhr["motor_kategori_nesnesi"] = int(_motor_sektor)
+        dhr["sektör_farkı"] = int(abs(int(dhr["sektör"]) - _motor_sektor))
+        if dhr["sektör_farkı"] > 0:
+            safha("D10 KELÂM · DHR/KATEGORİ UYUMSUZLUĞU",
+                  dhr_sektör=int(dhr["sektör"]), motor_nesne=_motor_sektor,
+                  fark=int(dhr["sektör_farkı"]))
 
     tdd = kanonik_adres(psi_son, cekirdek=int(ayar.tdd_cekirdek),
                         ayar=TddAyari(tolerans=float(ayar.tdd_tolerans)))
