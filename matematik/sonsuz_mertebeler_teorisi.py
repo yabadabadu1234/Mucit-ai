@@ -6559,6 +6559,82 @@ class DogalDonusum2Hucresi:
         return True
 
 
+class J4GeriYolDenetleyicisi:
+    __slots__ = ("maskelenmis_tokenler", "negatif_ceza")
+
+    def __init__(self, negatif_ceza: float = 1e4) -> None:
+        self.maskelenmis_tokenler: Set[int] = set()
+        self.negatif_ceza = float(negatif_ceza)
+
+    def kisit_projeksiyonu_olc(self, hedef_token: int, psi: np.ndarray,
+                               kod_uzayi_maskesi: np.ndarray) -> float:
+        d = min(len(psi), len(kod_uzayi_maskesi))
+        psi_kisit = psi[:d] * kod_uzayi_maskesi[:d]
+        norm_toplam = float(np.sum(np.abs(psi[:d]) ** 2)) + 1e-12
+        norm_kisit = float(np.sum(np.abs(psi_kisit) ** 2))
+        return float(norm_kisit / norm_toplam)
+
+    def geri_yol_denetle(self, secilen_hedef: int, n_kisit_normu: float,
+                         born_logitleri: np.ndarray) -> Tuple[int, bool, np.ndarray]:
+        yeni_logitler = born_logitleri.copy()
+
+        if n_kisit_normu < 1e-3:
+            if secilen_hedef in self.maskelenmis_tokenler:
+                return secilen_hedef, False, yeni_logitler
+
+            self.maskelenmis_tokenler.add(secilen_hedef)
+            yeni_logitler[secilen_hedef] -= self.negatif_ceza
+            yeni_hedef = int(np.argmax(yeni_logitler))
+            return yeni_hedef, True, yeni_logitler
+
+        return secilen_hedef, False, yeni_logitler
+
+
+def hata_engel_zeno_olc(psi_onceki: np.ndarray, psi_simdiki: np.ndarray,
+                        U_kapi: np.ndarray) -> float:
+    d = min(len(psi_onceki), len(psi_simdiki), U_kapi.shape[0])
+    v_onceki = psi_onceki[:d] / (np.linalg.norm(psi_onceki[:d]) + 1e-12)
+    v_simdiki = psi_simdiki[:d] / (np.linalg.norm(psi_simdiki[:d]) + 1e-12)
+
+    v_evrilmis = U_kapi[:d, :d] @ v_onceki
+    v_evrilmis /= (np.linalg.norm(v_evrilmis) + 1e-12)
+
+    ortusme = float(np.abs(np.vdot(v_simdiki, v_evrilmis)) ** 2)
+    return float(np.clip(1.0 - ortusme, 0.0, 1.0))
+
+
+class MunasebetHaritasi:
+    __slots__ = ("harita",)
+
+    def __init__(self) -> None:
+        self.harita: Dict[Tuple[int, ...], float] = {}
+
+    def munasebet_guncelle(self, baglam: Tuple[int, ...], kuvvet: float = 1.0) -> None:
+        self.harita[baglam] = self.harita.get(baglam, 0.0) + float(kuvvet)
+
+    def zayiflik_olc(self, baglam: Tuple[int, ...]) -> float:
+        m = self.harita.get(baglam, 0.0)
+        return float(1.0 / (1.0 + m))
+
+
+def boynuz_turu_ayristir_ve_doldur(n_boyut: int, k_kose: int, P: np.ndarray,
+                                   Asim: np.ndarray, kenar_dizisi: Sequence[int]) -> Dict[str, Any]:
+    is_inner = bool(0 < k_kose < n_boyut)
+    u, v = kenar_dizisi[0], kenar_dizisi[-1]
+
+    if is_inner:
+        boynuz_turu = "IC_BOYNUZ_YONLU_KATEGORI"
+        dolgu_uyumu = float(P[u, v])
+        gecerli = bool(dolgu_uyumu > 0.01)
+    else:
+        boynuz_turu = "DIS_BOYNUZ_TERSIMLI_GRUPOID"
+        simetri = 1.0 - float(Asim[u, v])
+        gecerli = bool(simetri > 0.70 and P[u, v] > 0.05)
+
+    return {"boyut_n": n_boyut, "kose_k": k_kose, "boynuz_turu": boynuz_turu,
+            "ic_boynuz_mu": is_inner, "boynuz_doldu_mu": gecerli}
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7430,6 +7506,19 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     else:
         ornek_equalizer = []
 
+    munasebet_bellek = MunasebetHaritasi()
+    munasebet_bellek.munasebet_guncelle(orijinal_baglam, kuvvet=1.0)
+    baglam_zayifligi = munasebet_bellek.zayiflik_olc(orijinal_baglam)
+
+    j4_denetleyici = J4GeriYolDenetleyicisi()
+    n_kisit_normu = j4_denetleyici.kisit_projeksiyonu_olc(
+        hedef_token=nihai_hedef, psi=kuantum_durum_vektoru, kod_uzayi_maskesi=kod_uzayi_maskesi)
+    j4_onerilen_hedef, j4_geri_alindi_mi, _ = j4_denetleyici.geri_yol_denetle(
+        secilen_hedef=nihai_hedef, n_kisit_normu=n_kisit_normu, born_logitleri=P[baglam[-1]].copy())
+
+    boynuz_analizi = boynuz_turu_ayristir_ve_doldur(
+        n_boyut=2, k_kose=1, P=P, Asim=Asim, kenar_dizisi=[orijinal_baglam[0], nihai_hedef])
+
     halka_yolu = list(orijinal_baglam) + [nihai_hedef]
     sorites_bargmann_raporu = degisken_boylu_bargmann_halkasi(P, Asim, halka_yolu)
 
@@ -7503,6 +7592,12 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     kok_agirligi = cartan_kok_ve_agirlik_hesapla(baglam[-1], nihai_hedef, n)
     net_cartan_fazi = float(theta_cartan * kok_agirligi)
+
+    U_kapi_ornek = np.diag(np.exp(1j * parametre_acilari[:min(len(parametre_acilari),
+                                                               len(kuantum_durum_vektoru))]))
+    hata_engel_degeri = hata_engel_zeno_olc(
+        psi_onceki=psi_zirh[:len(kuantum_durum_vektoru)],
+        psi_simdiki=kuantum_durum_vektoru, U_kapi=U_kapi_ornek)
 
     kan_dalga_genligi, kan_partisyon_boleni = kan_genlik_hesapla_normalize(
         u=u_degeri, C_katsayilari=C_varsayilan, S_katsayilari=S_varsayilan,
@@ -7713,5 +7808,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "mecz_vadi_yonu": vadi_yonu,
         "sadakat_I8_raporu": I8_raporu,
         "dogal_donusum_2cell_gecerli": dogal_donusum_gecerli,
+        "j4_geri_alindi_mi": j4_geri_alindi_mi,
+        "j4_onerilen_hedef": j4_onerilen_hedef,
+        "hata_engel_zeno": hata_engel_degeri,
+        "baglam_zayifligi": baglam_zayifligi,
+        "boynuz_ayrisimi": boynuz_analizi,
         "detay": tayf_bilgisi
     }
