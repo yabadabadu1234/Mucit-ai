@@ -1093,13 +1093,20 @@ _SON: Dict[str, Any] = {}
 
 class Makine:
 
-    __slots__ = ("durum", "izlek", "maskeli", "acik")
+    __slots__ = ("durum", "izlek", "maskeli", "acik",
+                 "_aktif_superpozisyon", "_kod_uzayi_maskesi")
 
     def __init__(self) -> None:
         self.durum = Durum.VAKUM
         self.izlek: List[Durum] = [Durum.VAKUM]
         self.maskeli: set = set()
         self.acik = 0
+        self._aktif_superpozisyon: Optional[np.ndarray] = None
+        self._kod_uzayi_maskesi: Optional[np.ndarray] = None
+
+    def durum_guncelle(self, psi: np.ndarray, kod_uzayi_maskesi: np.ndarray) -> None:
+        self._aktif_superpozisyon = psi
+        self._kod_uzayi_maskesi = kod_uzayi_maskesi
 
     def gec(self, hedef: Durum) -> "Makine":
         assert hedef in GECIS[self.durum], (
@@ -1107,6 +1114,15 @@ class Makine:
             "makinesinin geçiş tablosu delinemez (ferman 2-Æ)."
             % (self.durum.name, hedef.name,
                ", ".join(d.name for d in GECIS[self.durum]) or "yok"))
+        if self._aktif_superpozisyon is not None:
+            from matematik.sonsuz_mertebeler_teorisi import sadakat_devresi_kos
+            rapor = sadakat_devresi_kos(
+                self._aktif_superpozisyon, self._kod_uzayi_maskesi)
+            _MAKINE_SAYACI["sadakat_imha"] = (
+                _MAKINE_SAYACI.get("sadakat_imha", 0.0) + rapor["imha"])
+            _MAKINE_SAYACI["sadakat_meçhul"] = (
+                _MAKINE_SAYACI.get("sadakat_meçhul", 0.0) + rapor["meçhul"])
+            self._aktif_superpozisyon = rapor["psi_suzulen"]
         self.durum = hedef
         self.izlek.append(hedef)
         _MAKINE_SAYACI["geçiş"] += 1.0
@@ -1199,6 +1215,8 @@ def cozum_uzayi_ac(sual: Dict[str, Any], nefs=None, hafiza=None,
     assert sual["geri_yol_var"], (
         "FUNKTÖRÜN TERSİ YOK -- uzay AÇILMAZ. Açılırsa ana hâle "
         "dönülemez ve orada biriken idrak kaybolur (ferman 1-Ç).")
+    m.durum_guncelle(np.asarray(sual["hal"], complex),
+                     np.ones(len(sual["hal"]), dtype=float))
     m.gec(Durum.UZAY)
     m.acik += 1
     _MAKINE_SAYACI["açılan"] += 1.0
