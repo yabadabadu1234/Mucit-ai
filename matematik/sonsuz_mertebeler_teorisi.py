@@ -7577,8 +7577,9 @@ def d8a_senet_sadakati_dogrula(senetler: List[SenetKaydi],
 def s2_dort_sual_teftisi(tikanma_engeli: float,
                          kaide_raporu: Dict[str, Any],
                          s1_odak_kesiti: Tuple[int, ...],
-                         geri_yol_var_mi: bool) -> Dict[str, Any]:
-    mesele_var_mi = bool(tikanma_engeli > 0.04)
+                         geri_yol_var_mi: bool,
+                         kulli_ispat_dogrulandi: bool = True) -> Dict[str, Any]:
+    mesele_var_mi = bool(tikanma_engeli > 0.04 or not kulli_ispat_dogrulandi)
     kaide_belirli = bool(len(kaide_raporu.get("imza", ())) == 6)
     geri_yol_mumkun = bool(geri_yol_var_mi)
     metin_odakli = bool(len(s1_odak_kesiti) >= 1)
@@ -8205,7 +8206,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     dort_sual_raporu = s2_dort_sual_teftisi(
         tikanma_engeli=float(tayf_bilgisi["enerjiler"]["tıkanma"]),
         kaide_raporu=kaide_raporu, s1_odak_kesiti=odak_kesiti,
-        geri_yol_var_mi=bool(len(pullback_chi_haritasi) > 0))
+        geri_yol_var_mi=bool(len(pullback_chi_haritasi) > 0),
+        kulli_ispat_dogrulandi=kulli_sahit_gecerli)
 
     senet_sadakat_raporu = d8a_senet_sadakati_dogrula(
         senetler=senetler, psi_0=kuantum_genlikleri.astype(complex),
@@ -8215,6 +8217,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     kok_agirligi = cartan_kok_ve_agirlik_hesapla(baglam[-1], nihai_hedef, n)
     net_cartan_fazi = float(theta_cartan * kok_agirligi)
+    if not senet_sadakat_raporu["sadakat_tam_mi"]:
+        net_cartan_fazi = 0.0
 
     U_kapi_ornek = np.diag(np.exp(1j * parametre_acilari[:min(len(parametre_acilari),
                                                                len(kuantum_durum_vektoru))]))
@@ -8222,9 +8226,11 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         psi_onceki=psi_zirh[:len(kuantum_durum_vektoru)],
         psi_simdiki=kuantum_durum_vektoru, U_kapi=U_kapi_ornek)
 
+    d2_uyarlanmis_enerji = float(skaler_mizan + 0.1 * d2_metrikleri["simetri_sapmasi"]
+                                 - 0.05 * d2_metrikleri["karsilikli_haber_bit"])
     kan_dalga_genligi, kan_partisyon_boleni = kan_genlik_hesapla_normalize(
         u=u_degeri, C_katsayilari=C_varsayilan, S_katsayilari=S_varsayilan,
-        enerji=skaler_mizan, cartan_fazi=net_cartan_fazi)
+        enerji=d2_uyarlanmis_enerji, cartan_fazi=net_cartan_fazi)
 
     tam_qudit_tensor_durumu = cok_basamakli_qudit_tensor_durumu(
         token_id=nihai_hedef, veri_lifi=max(2, min(n, 8)), basamak_sayisi=2)
@@ -8256,19 +8262,24 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     tohum_raporu = nebati_nefs.tevlid_tohumla({"omega_cebiri": tayf_bilgisi["Ω_cebiri"]})
 
-    mana_fibrasyonu = FibrasyonluManaLifi(turetilen_kategori)
-    for obj in turetilen_kategori.nesneler:
-        mana_fibrasyonu.mana_lifi_ekle(
-            obj, np.array([float(P[obj, nihai_hedef]) if obj < n else 0.5,
-                          float(tayf_bilgisi["Kan_rezidusu"][obj, nihai_hedef]) if obj < n else 0.1,
-                          0.5, 0.5]))
-    kartezyen_mana_tasimasi = mana_fibrasyonu.kartezyen_ok_tasi(baglam[-1], nihai_hedef, P)
+    if dort_sual_raporu["rota"] == "S3_UZAY_AC":
+        mana_fibrasyonu = FibrasyonluManaLifi(turetilen_kategori)
+        for obj in turetilen_kategori.nesneler:
+            mana_fibrasyonu.mana_lifi_ekle(
+                obj, np.array([float(P[obj, nihai_hedef]) if obj < n else 0.5,
+                              float(tayf_bilgisi["Kan_rezidusu"][obj, nihai_hedef]) if obj < n else 0.1,
+                              0.5, 0.5]))
+        kartezyen_mana_tasimasi = mana_fibrasyonu.kartezyen_ok_tasi(baglam[-1], nihai_hedef, P)
 
-    icsel_kategori = IcselKategoriNesnesi(turetilen_kategori)
-    icsel_kategori_terimi = icsel_kategori.topos_nesnesi_olarak_kodla()
+        icsel_kategori = IcselKategoriNesnesi(turetilen_kategori)
+        icsel_kategori_terimi = icsel_kategori.topos_nesnesi_olarak_kodla()
 
-    mutasarrifa_tezgah = PolinomyalMutasarrifaTezgahi(islemler=["bileske", "terkip"], ariteler=[2, 2])
-    yeni_kavram_id, yeni_kavram_adi = mutasarrifa_tezgah.hipotetik_terkip_dogur(list(orijinal_baglam))
+        mutasarrifa_tezgah = PolinomyalMutasarrifaTezgahi(islemler=["bileske", "terkip"], ariteler=[2, 2])
+        yeni_kavram_id, yeni_kavram_adi = mutasarrifa_tezgah.hipotetik_terkip_dogur(list(orijinal_baglam))
+    else:
+        kartezyen_mana_tasimasi = None
+        icsel_kategori_terimi = None
+        yeni_kavram_id, yeni_kavram_adi = None, "S6_INTAC_ATLA: S3_UZAY_ACILMADI"
 
     itminan_analizi = topos_terminal_buzulme_itminan(turetilen_kategori, P, kuantum_durum_vektoru)
 
@@ -8349,6 +8360,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     j123_raporu = j1_j2_j3_faz_kaydirici_ve_norm(
         born_olasiliklari=born_dag, psi=kuantum_durum_vektoru,
         secilen_jeton=kesin_icra_hedefi % len(born_dag))
+    if not j123_raporu["faz_kaymasi_kararli_mi"]:
+        kesin_icra_hedefi = baglam[-1]
+        karar_silsilesi_raporu["nihai_durum"] = "J3_FAZ_KARARSIZ_SUKUT"
 
     cech_raporu = cech_kohomoloji_engeli_olc(orijinal_baglam, P)
     leray_raporu = leray_spektral_dizisi_hesapla(
@@ -8356,18 +8370,41 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         hodge_yırtık=float(tayf_bilgisi["enerjiler"]["tıkanma"]),
         asansor_kati=asansor.mevcut_mertebe)
 
-    P_gevsek, korollalar_gevsek = d9_dugum_coz_bag_gevset(P, norm_korollalar, gevseme_katsayisi=0.90)
+    gevseme_katsayisi = float(np.clip(1.0 - 0.5 * egrilik_degeri, 0.5, 0.95))
+    P_gevsek, korollalar_gevsek = d9_dugum_coz_bag_gevset(
+        P, norm_korollalar, gevseme_katsayisi=gevseme_katsayisi)
+    if zigzag_raporu["bitisiklik_mesru_mu"]:
+        P = P_gevsek
+        norm_korollalar = korollalar_gevsek
+        d9_dugum_cozuldu_mu = True
+    else:
+        d9_dugum_cozuldu_mu = False
 
     X_jenerator = np.outer(kuantum_durum_vektoru[:n], kuantum_durum_vektoru[:n].conj())
     mc_raporu = maurer_cartan_egriligi_denetle(X_jenerator, Asim, baglam[-1], nihai_hedef)
 
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
-    balyalama_raporu = d9_kume_kapanisi_ve_balyalama(
-        hafiza_havuzu=_KALICI_HAFIZA_HAVUZU, vecih_ortusmeleri=vecih_ortusmeleri_balya,
-        aktif_kayitlar=silsile_adimlari)
-    _KALICI_HAFIZA_HAVUZU["kayit_arsivi"].append(
-        {"nihai_hedef": nihai_hedef, "balya_id": balyalama_raporu["yeni_balya_id"]})
+    riemann_yaprak_anahtari = riemann_aktif_yaprak.replace("_yaprak", "")
+    if riemann_yaprak_anahtari in vecih_ortusmeleri_balya:
+        vecih_ortusmeleri_balya[riemann_yaprak_anahtari] = float(
+            min(vecih_ortusmeleri_balya.values()))
+
+    balyalama_uygun_mu = bool(zigzag_raporu["bitisiklik_mesru_mu"]
+                              and leray_raporu["spektral_dizi_kapandi_mi"]
+                              and nno_ornek_hesap > 0.01)
+    if balyalama_uygun_mu:
+        balyalama_raporu = d9_kume_kapanisi_ve_balyalama(
+            hafiza_havuzu=_KALICI_HAFIZA_HAVUZU, vecih_ortusmeleri=vecih_ortusmeleri_balya,
+            aktif_kayitlar=silsile_adimlari)
+        _KALICI_HAFIZA_HAVUZU["kayit_arsivi"].append(
+            {"nihai_hedef": nihai_hedef, "balya_id": balyalama_raporu["yeni_balya_id"]})
+    else:
+        balyalama_raporu = {"acilan_cartan_koku": None, "yeni_balya_id": None,
+                            "balyalanan_nesne_sayisi": 0, "silinen_kayit_sayisi": 0,
+                            "sebep": "ZIGZAG_MESRU_DEGIL" if not zigzag_raporu["bitisiklik_mesru_mu"]
+                            else ("LERAY_KAPANMADI" if not leray_raporu["spektral_dizi_kapandi_mi"]
+                                  else "NNO_YAKINSAMADI")}
 
     return {
         "kesin_icra_hedefi": kesin_icra_hedefi,
@@ -8387,7 +8424,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "sonumlenmis_newton_yaricapi": sonum_r,
         "j3_projektif_norm": j123_raporu["j3_jeton_normu"],
         "kulli_leray_engeli": leray_raporu["kulli_leray_engeli"],
-        "d9_dugum_cozuldu_mu": True,
+        "d9_dugum_cozuldu_mu": d9_dugum_cozuldu_mu,
+        "balyalama_uygun_muydu": balyalama_uygun_mu,
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
         "muhakeme_silsilesi": muhakemeler,
