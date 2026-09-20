@@ -271,11 +271,21 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
             sebep="üretilen %d basamak tek belirteç tamamlamadı "
                   "(basamak haddi %d)" % (len(uretilen), basamak)))
 
+    guven_ham = float(np.mean(guvenler or [0.0]))
+    guven_nihai = guven_ham
+    retrospektif_tutarlilik = None
+    if hafiza is not None:
+        retrospektif = hafiza.oku(np.asarray(_q.y.psi[0], complex))
+        if retrospektif["toplam"] > 1e-12:
+            retrospektif_tutarlilik = float(
+                retrospektif["tasdik"] / retrospektif["toplam"])
+            guven_nihai = float(guven_ham * (0.5 + 0.5 * retrospektif_tutarlilik))
+
     return _bitir(Cevap(
         gorev=gorev.ad, sukut=False, sebep="",
         kural="motor (belirteç üretimi)",
         izgara=[np.asarray(kimlik, int)],
         belirtec=kimlik, uzunluk=len(uretilen),
-        guven=float(np.mean(guvenler or [0.0])),
+        guven=guven_nihai,
         budanan=int(budanan),
         tikaniklik=tik))
