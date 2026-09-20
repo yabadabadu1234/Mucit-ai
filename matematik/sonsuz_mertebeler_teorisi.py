@@ -7867,6 +7867,84 @@ def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dic
     }
 
 
+# ============================================================================
+# BAĞIMLI LİF QUDİT TİP TENSÖRÜ VE DİKEY İNTAÇ (↕)
+#
+# İzahat: "Her noktası uzay olan kategoridir, her noktası kategori olan
+# tiptir" (nokta -> uzay -> kategori -> tip) silsilesi bu dosyada zaten
+# kısmen vardı (Turetilen1Kategori, ccc_dahili_hom_uzayi_turet,
+# grothendieck_dikey_asansor) fakat hendese_teshisi_kos'taki qudit
+# durumu, gerçek türetilmiş kategorinin (turetilen_kategori) nesne
+# sayısından ve ok-derecesinden BAĞIMSIZ, sabit eşit-dörtte-bir bir
+# Kartezyen kutuya (dilimler = {"uzay":(0,n), "kategori":(n,2n), ...})
+# bölünüyordu. Bu tam da tenkit edilen "Kartezyen kutu yanılgısı"ydı.
+#
+# Aşağıdaki üç fonksiyon YENİ bir motor kurmaz; var olan üç organı
+# (Turetilen1Kategori, ccc_dahili_hom_uzayi_turet, grothendieck_dikey_
+# asansor) olduğu gibi çağırıp, blok boyutlarını gerçek kategoriden
+# BAĞIMLI (Σ-tipi / Grothendieck construction) kılar:
+#   - tip_tensoru_blok_boyutlari: her nesnenin bloğu kendi ok-derecesine
+#     (kaç morfizmin ucu/başı olduğuna) orantılı olur; sabit bölme yok.
+#   - qudit_tip_tensoru_kur: bu bloklara göre var olan psi vektöründen
+#     (dışarıdan üretilmeden) her nesnenin kendi alt-lifini keser.
+#   - tip_tensoru_asagi_in: Tip -> Kategori -> Uzay inişi; verilen
+#     nesnenin lifini VE o nesneye bağlı gerçek Hom kurallarını
+#     (ccc_dahili_hom_uzayi_turet'ten, kör arama değil) birlikte döner.
+#   - tip_tensoru_yukari_cik: Uzay -> Kategori -> Tip çıkışı; mevcut
+#     grothendieck_dikey_asansor'u iki tensör bloğu arasında çalıştırır.
+# ============================================================================
+
+def tip_tensoru_blok_boyutlari(kat: "Turetilen1Kategori",
+                               taban_boyut: int) -> Dict[int, Tuple[int, int]]:
+    nesneler = kat.nesneler
+    if not nesneler or taban_boyut <= 0:
+        return {}
+    agirlik = {x: max(1, sum(1 for (a, b) in kat.ok_siniflari if a == x or b == x))
+              for x in nesneler}
+    toplam = float(sum(agirlik.values()))
+    bloklar: Dict[int, Tuple[int, int]] = {}
+    bas = 0
+    for i, x in enumerate(nesneler):
+        if i == len(nesneler) - 1:
+            son = taban_boyut
+        else:
+            pay = agirlik[x] / toplam
+            son = min(taban_boyut, bas + max(1, int(round(pay * taban_boyut))))
+        bloklar[x] = (bas, son)
+        bas = son
+        if bas >= taban_boyut:
+            break
+    return bloklar
+
+
+def qudit_tip_tensoru_kur(kat: "Turetilen1Kategori", psi: np.ndarray) -> Dict[str, Any]:
+    d = int(len(psi))
+    bloklar = tip_tensoru_blok_boyutlari(kat, d)
+    lifler: Dict[int, np.ndarray] = {}
+    for x, (i, j) in bloklar.items():
+        alt = np.asarray(psi[i:j], complex)
+        nrm = float(np.linalg.norm(alt))
+        lifler[x] = (alt / nrm) if nrm > 1e-300 else alt
+    return {"bloklar": bloklar, "liflar": lifler,
+           "nesneler": list(bloklar), "taban_boyut": d}
+
+
+def tip_tensoru_asagi_in(tensor: Dict[str, Any], nesne: int,
+                         kat: "Turetilen1Kategori") -> Dict[str, Any]:
+    if nesne not in tensor["bloklar"]:
+        return {"bulundu": False}
+    hom = ccc_dahili_hom_uzayi_turet(kat)
+    komsu_hom = {cift: h for cift, h in hom.items()
+                if cift[0] == nesne or cift[1] == nesne}
+    return {"bulundu": True, "lif": tensor["liflar"][nesne],
+           "blok": tensor["bloklar"][nesne], "hom_kurallari": komsu_hom}
+
+
+def tip_tensoru_yukari_cik(a: int, b: int, P: np.ndarray,
+                           parite_lifi: Dict[str, Any]) -> Dict[str, Any]:
+    return grothendieck_dikey_asansor(a, b, P, parite_lifi)
+
+
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
     s0_vakum_tetiklendi = False
@@ -8053,6 +8131,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     funktor_vektoru = np.ones(lif_boyutu, dtype=complex)
     funktor_vektoru[:len(rho)] = np.sqrt(rho) * np.exp(1j * np.pi * rho)
     nihai_intac_psi = intac_funktor_tersi(kuantum_durum_vektoru_temiz, funktor_vektoru)
+
+    qudit_tip_tensoru = qudit_tip_tensoru_kur(turetilen_kategori, nihai_intac_psi)
 
     hudut_raporu = d8_hudut_temizligi_denetle(
         psi=nihai_intac_psi, kod_uzayi_maskesi=kod_uzayi_maskesi,
@@ -8474,6 +8554,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "intac_kuantum_hali": nihai_intac_psi,
         "kulli_ispat_sahidi": kulli_ispat,
         "kulli_ispat_dogrulandi": kulli_sahit_gecerli,
+        "qudit_tip_tensoru": qudit_tip_tensoru,
         "turetilen_1_kategori": {
             "nesneler": turetilen_kategori.nesneler,
             "morfizm_sayisi": len(turetilen_kategori.ok_siniflari),
