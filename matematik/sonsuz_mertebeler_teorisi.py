@@ -4875,6 +4875,117 @@ def asimetri_guncelle(P: np.ndarray) -> np.ndarray:
     return pay / payda
 
 
+def yerel_baglamsal_hodge(baglam: Tuple[int, ...], P: np.ndarray,
+                          norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float]
+                          ) -> Dict[str, float]:
+    aktif_dugumler = set(baglam)
+    for (girdi, cikti) in norm_korollalar:
+        if any(x in aktif_dugumler for x in girdi):
+            aktif_dugumler.update(girdi)
+            aktif_dugumler.add(cikti)
+
+    dugum_listesi = list(aktif_dugumler)
+    d_map = {d: i for i, d in enumerate(dugum_listesi)}
+    k = len(dugum_listesi)
+
+    if k < 2:
+        return {"uzay_gradyan": 0.5, "kategori_girdap": 0.5, "yırtık_harmonik": 0.0}
+
+    yerel_kenarlar = []
+    yerel_akis = []
+    for i_d in dugum_listesi:
+        for j_d in dugum_listesi:
+            if P[i_d, j_d] > 1e-4:
+                yerel_kenarlar.append((d_map[i_d], d_map[j_d]))
+                yerel_akis.append(P[i_d, j_d])
+
+    e_sayisi = len(yerel_kenarlar)
+    if e_sayisi == 0:
+        return {"uzay_gradyan": 0.5, "kategori_girdap": 0.5, "yırtık_harmonik": 0.0}
+
+    B1 = np.zeros((k, e_sayisi), dtype=float)
+    for idx, (i, j) in enumerate(yerel_kenarlar):
+        B1[i, idx] -= 1.0
+        B1[j, idx] += 1.0
+
+    akis = np.array(yerel_akis, dtype=float)
+    akis /= (np.linalg.norm(akis) + 1e-12)
+
+    L0 = B1 @ B1.T
+    div = B1 @ akis
+    phi, _, _, _ = np.linalg.lstsq(L0 + 1e-6 * np.eye(k), div, rcond=None)
+    akis_gradyan = B1.T @ phi
+
+    akis_kalan = akis - akis_gradyan
+    e_grad = float(np.sum(akis_gradyan ** 2))
+    e_kalan = float(np.sum(akis_kalan ** 2))
+    top = e_grad + e_kalan + 1e-12
+
+    return {
+        "uzay_gradyan": e_grad / top,
+        "kategori_girdap": e_kalan / top,
+        "yırtık_harmonik": float(np.clip(1.0 - (e_grad + e_kalan) / top, 0.0, 1.0))
+    }
+
+
+def analitik_lie_bargmann_adimi(x: int, y: int, z: int, P: np.ndarray, Asim: np.ndarray
+                                ) -> Dict[str, float]:
+    p_dongu = P[x, y] * P[y, z] * max(1e-12, P[z, x])
+    faz_toplam = np.pi * (Asim[x, y] + Asim[y, z] - Asim[z, x])
+
+    r_bargmann = float(np.sqrt(max(1e-12, p_dongu)))
+    phi_bargmann = float(np.angle(np.exp(1j * faz_toplam)))
+
+    ortusme = float(np.clip(np.sqrt(P[x, y] * P[y, z]), 0.0, 1.0))
+    tasima_zamani = float(np.arccos(ortusme))
+
+    casimir_degismezi = float(np.cos(tasima_zamani) ** 2)
+
+    return {
+        "bargmann_r": r_bargmann,
+        "bargmann_phi": phi_bargmann,
+        "tasima_zamani": tasima_zamani,
+        "casimir_degismezi": casimir_degismezi,
+        "tenakuz_mu": bool(abs(abs(phi_bargmann) - np.pi) < 0.5),
+        "kisirdongu_mu": bool(abs(phi_bargmann) < 0.5 and r_bargmann > 1e-4)
+    }
+
+
+class OpetopikSeviye:
+    __slots__ = ("boyut", "hucreler", "kaynak_hedef_baglari")
+
+    def __init__(self, boyut: int) -> None:
+        self.boyut = boyut
+        self.hucreler: List[Any] = []
+        self.kaynak_hedef_baglari: Dict[int, Tuple[Tuple[int, ...], int]] = {}
+
+    def hucre_ekle(self, oncutler: Tuple[int, ...], hedef: int, veri: Any) -> int:
+        idx = len(self.hucreler)
+        self.hucreler.append(veri)
+        self.kaynak_hedef_baglari[idx] = (oncutler, hedef)
+        return idx
+
+
+class DinamikSonsuzTopos:
+    def __init__(self) -> None:
+        self.seviyeler: Dict[int, OpetopikSeviye] = {
+            0: OpetopikSeviye(0),
+            1: OpetopikSeviye(1),
+            2: OpetopikSeviye(2),
+            3: OpetopikSeviye(3),
+        }
+
+    def ust_boyut_ac(self, yeni_boyut: int) -> None:
+        if yeni_boyut not in self.seviyeler:
+            self.seviyeler[yeni_boyut] = OpetopikSeviye(yeni_boyut)
+
+    def kanonik_kirp(self, n_kesme: int) -> Dict[str, Any]:
+        return {
+            "kalan_boyut": min(n_kesme, max(self.seviyeler.keys())),
+            "büzülen_seviyeler": [b for b in self.seviyeler if b > n_kesme]
+        }
+
+
 def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
                         norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float],
                         yasakli_hedefler: Optional[Set[int]] = None
@@ -4933,6 +5044,11 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         if bileske_guven > 1e-6:
             koherans_cezasi = float(Asim[son_token, y] * Asim[y, z] * tikanma)
             net_skor = bileske_guven * (1.0 - 0.5 * koherans_cezasi)
+            holonomi = analitik_lie_bargmann_adimi(son_token, y, z, P, Asim)
+            if holonomi["tenakuz_mu"]:
+                net_skor *= 0.1
+            elif not holonomi["kisirdongu_mu"]:
+                net_skor *= 1.2
             adaylar.append((net_skor, y))
 
     if not adaylar:
@@ -5010,6 +5126,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         sahit_gecerli = ispat_sahidini_dogrula(adim_muhakeme["ispat_sahidi"], baglam,
                                                adim_muhakeme["hedef"])
         adim_muhakeme["şahit_doğrulandı"] = sahit_gecerli
+        adim_muhakeme["yerel_hodge"] = yerel_baglamsal_hodge(baglam, P, norm_korollalar)
         muhakemeler.append(adim_muhakeme)
 
         if (adim_muhakeme["ispat_sahidi"] is not None
@@ -5031,6 +5148,16 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     kulli_ispat = OperadSilsile(Dogal(), oncutler_terim, silsile_adimlari,
                                 dogal_sayi(nihai_hedef))
     kulli_sahit_gecerli = ispat_sahidini_dogrula(kulli_ispat, orijinal_baglam, nihai_hedef)
+
+    topos = DinamikSonsuzTopos()
+    for x in orijinal_baglam:
+        topos.seviyeler[0].hucre_ekle((), x, x)
+    for agac, ok in silsile_adimlari:
+        topos.seviyeler[2].hucre_ekle(orijinal_baglam, nihai_hedef, agac)
+        topos.seviyeler[1].hucre_ekle(orijinal_baglam, nihai_hedef, ok)
+    if silsile_adimlari:
+        topos.ust_boyut_ac(3)
+        topos.seviyeler[3].hucre_ekle(orijinal_baglam, nihai_hedef, kulli_ispat)
 
     Asim = asimetri_guncelle(P)
     tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
@@ -5082,5 +5209,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "nihai_muhakeme": muhakemeler[-1],
         "kulli_ispat_sahidi": kulli_ispat,
         "kulli_ispat_dogrulandi": kulli_sahit_gecerli,
+        "opetopik_topos": {b: len(s.hucreler) for b, s in topos.seviyeler.items()},
+        "kirpma_1kategori": topos.kanonik_kirp(1),
+        "kirpma_kume": topos.kanonik_kirp(0),
         "detay": tayf_bilgisi
     }
