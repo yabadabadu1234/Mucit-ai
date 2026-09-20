@@ -703,6 +703,21 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
     return Z
 
 
+def d7_hamiltonyen_durumu(Z: Dict[str, Any]) -> Dict[str, Any]:
+    hamiltonyen = Z["hamiltonyen"]
+    lambda_nispetleri = hamiltonyen.nispetler()
+    yavas_mod_idx, yavas_mod_adi, yavas_agirlik = hamiltonyen.yavas_mod()
+    skaler_mizan = hamiltonyen.enerji()
+
+    safha("D7 HAMILTONYEN", yavas_mod=yavas_mod_adi,
+          skaler_mizan="%.4f" % float(skaler_mizan))
+    Z.update({"d7_lambda_nispetleri": lambda_nispetleri,
+              "d7_yavas_mod": yavas_mod_adi,
+              "d7_yavas_agirlik": yavas_agirlik,
+              "d7_skaler_mizan": skaler_mizan})
+    return Z
+
+
 def d8_dongu(Z: Dict[str, Any]) -> Dict[str, Any]:
     ayar = Z["ayar"]
     veri = Z["veri"]
@@ -989,6 +1004,7 @@ def d11_muhur(Z: Dict[str, Any]) -> Dict[str, Any]:
 
 ZINCIR: Tuple[Any, ...] = (d0_gecit, d1_olcu, d2_silsile, d3_kurulus,
                            d4_kapi, d5_uzay, d5b_sadakat, d6_mizan,
+                           d7_hamiltonyen_durumu,
                            d8_dongu, d9_kapanis, d10_kelam, d11_muhur)
 
 
