@@ -67,11 +67,11 @@ from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
 from kuantum.devre import devre_beyani
 from nefs.qyazmac import sektor_beyani
 from matematik.sonsuz_mertebeler_teorisi import (HendeseAyari, hendese_teshisi,
-                                                 hendese_beyani)
+                                                 hendese_beyani, harita_kur,
+                                                 lif_beyani)
 from nefs.casimir import (CasimirAyari, blok_kosegen_artigi,
                           casimir_beyani, dhr_ayrismasi,
                           gelfand_tsetlin_araya_girme, kartan_fazi)
-from nefs.lif import harita_kur, lif_beyani
 from nefs.usul import usul_beyani
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import (talim_beyani,

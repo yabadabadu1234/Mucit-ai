@@ -13,10 +13,9 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
     from nefs.belirtec import belirtec_beyani
     from nefs.casimir import casimir_beyani
     from nefs.hafiza import tertip_beyani
-    from matematik.sonsuz_mertebeler_teorisi import hendese_beyani
+    from matematik.sonsuz_mertebeler_teorisi import hendese_beyani, lif_beyani
     from nefs.keyfiyet import keyfiyet_beyani
     from nefs.kulli_mizan import fock_beyani, hamiltonyen_beyani
-    from nefs.lif import lif_beyani
     from nefs.mahalli_yazmac import mahalli_beyani, uzunluk_beyani
     from nefs.mihenk import safha_beyani
     from nefs.mukayese import (cozum_beyani, mukayese_melekesi_beyani,

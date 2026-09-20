@@ -570,7 +570,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     L_kat = float(kat["kayıp"])
     L_nok = float(nok["kayıp"])
 
-    from .lif import lif_kefesi
+    from matematik.sonsuz_mertebeler_teorisi import lif_kefesi
     mns = lif_kefesi(ileri["hal"], ileri["bağlam"], cozunurluk=n_v)
     L_lif = float(mns["kayıp"])
 

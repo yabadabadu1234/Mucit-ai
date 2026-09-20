@@ -29,7 +29,7 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
                        sozluk: int = 16, usul: str = "kategorik"
                        ) -> np.ndarray:
     if usul in ("sürekli", "lie"):
-        from .lif import kodla, KIP_TUTARLI, KIP_LIE
+        from matematik.sonsuz_mertebeler_teorisi import kodla, KIP_TUTARLI, KIP_LIE
         ne = KIP_TUTARLI if usul == "sürekli" else KIP_LIE
         X = np.atleast_2d(np.asarray(belirtecler, float))
         cikti = [np.asarray(kodla(x, ne=ne, boyut=int(sozluk))).reshape(-1)
