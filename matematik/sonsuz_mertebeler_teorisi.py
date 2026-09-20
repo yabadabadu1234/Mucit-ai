@@ -5628,6 +5628,88 @@ def ccc_dahili_hom_uzayi_turet(kat: Turetilen1Kategori) -> Dict[Tuple[int, int],
     return dahili_homlar
 
 
+class QuditParametreYazmaci:
+    __slots__ = ("qudit_sayisi", "taban", "quditler")
+
+    def __init__(self, qudit_sayisi: int = 4, taban: int = 8) -> None:
+        self.qudit_sayisi = int(qudit_sayisi)
+        self.taban = int(taban)
+        self.quditler = np.ones((self.qudit_sayisi, self.taban), dtype=complex)
+        for q in range(self.qudit_sayisi):
+            fazlar = np.linspace(0.0, np.pi, self.taban)
+            self.quditler[q] = np.exp(1j * fazlar) / np.sqrt(self.taban)
+
+    def parametre_acilari_oku(self) -> np.ndarray:
+        acilar = []
+        for q in range(self.qudit_sayisi):
+            ortalama_vektor = np.sum(self.quditler[q])
+            aci = float(np.angle(ortalama_vektor))
+            acilar.append(abs(aci) if abs(aci) > 1e-4 else 0.1)
+        return np.array(acilar, dtype=float)
+
+    def kapı_ile_guncelle(self, gradyan_yonu: np.ndarray, adim_boyu: float) -> None:
+        for q in range(min(self.qudit_sayisi, len(gradyan_yonu))):
+            faz_kaymasi = np.exp(1j * adim_boyu * gradyan_yonu[q])
+            self.quditler[q] *= faz_kaymasi
+            self.quditler[q] /= (np.linalg.norm(self.quditler[q]) + 1e-12)
+
+
+def cartan_kok_ve_agirlik_hesapla(a: int, b: int, n: int) -> float:
+    rank = max(1, n - 1)
+    kok_vektoru = np.zeros(rank, dtype=float)
+    if a < rank:
+        kok_vektoru[a] += 1.0
+    if b < rank:
+        kok_vektoru[b] -= 1.0
+
+    agirlik_vektoru = np.array([np.cos(2.0 * np.pi * (k + 1) * (b + 1) / (rank + 1))
+                                for k in range(rank)], dtype=float)
+
+    return float(np.dot(kok_vektoru, agirlik_vektoru))
+
+
+def cok_basamakli_qudit_tensor_durumu(token_id: int, veri_lifi: int = 8,
+                                      basamak_sayisi: int = 3) -> np.ndarray:
+    d = int(veri_lifi)
+    k = int(basamak_sayisi)
+    basamaklar = taban_acilimi(token_id, veri_lifi=d, basamak_sayisi=k)
+
+    durum = np.zeros(d, dtype=complex)
+    durum[basamaklar[0]] = 1.0
+
+    for b in basamaklar[1:]:
+        b_durum = np.zeros(d, dtype=complex)
+        b_durum[b] = 1.0
+        durum = np.kron(durum, b_durum)
+
+    return durum
+
+
+class MonoidalKategori:
+    __slots__ = ("kategori", "tensor_nesneleri", "tensor_oklari")
+
+    def __init__(self, kategori: Turetilen1Kategori) -> None:
+        self.kategori = kategori
+        self.tensor_nesneleri: Dict[Tuple[int, int], int] = {}
+        self.tensor_oklari: Dict[Tuple[int, int], Tuple[int, int]] = {}
+        self._monoidal_yapi_kur()
+
+    def _monoidal_yapi_kur(self) -> None:
+        nesneler = self.kategori.nesneler
+        n_id = max(nesneler, default=0) + 1
+
+        for a in nesneler:
+            for b in nesneler:
+                self.tensor_nesneleri[(a, b)] = a * n_id + b
+
+        oklar = self.kategori.ok_siniflari
+        for (x, y), ok1 in oklar.items():
+            for (u, v), ok2 in oklar.items():
+                xu = self.tensor_nesneleri.get((x, u), 0)
+                yv = self.tensor_nesneleri.get((y, v), 0)
+                self.tensor_oklari[(ok1, ok2)] = (xu, yv)
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -6437,18 +6519,28 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
     C_varsayilan = np.array([1.0, 0.5, 0.25, 0.125], dtype=float)
     S_varsayilan = np.array([0.5, 0.25, 0.125, 0.0625], dtype=float)
-    kan_dalga_genligi = kan_genlik_hesapla(
-        u=u_degeri, C_katsayilari=C_varsayilan, S_katsayilari=S_varsayilan,
-        enerji=skaler_mizan, cartan_acisi=float(np.pi * Asim[baglam[-1], nihai_hedef]))
 
-    parametre_acilari = np.linspace(0.1, np.pi, len(rho))
+    parametre_yazmaci = QuditParametreYazmaci(qudit_sayisi=len(rho), taban=8)
+    parametre_acilari = parametre_yazmaci.parametre_acilari_oku()
     psi_evrilmis, theta_cartan, senetler = d6_cartan_kapi_evrimi(
         psi=kuantum_genlikleri, parametre_acilari=parametre_acilari)
+
+    kok_agirligi = cartan_kok_ve_agirlik_hesapla(baglam[-1], nihai_hedef, n)
+    net_cartan_fazi = float(theta_cartan * kok_agirligi)
+
+    kan_dalga_genligi = kan_genlik_hesapla(
+        u=u_degeri, C_katsayilari=C_varsayilan, S_katsayilari=S_varsayilan,
+        enerji=skaler_mizan, cartan_acisi=net_cartan_fazi)
+
+    tam_qudit_tensor_durumu = cok_basamakli_qudit_tensor_durumu(
+        token_id=nihai_hedef, veri_lifi=max(2, min(n, 8)), basamak_sayisi=2)
 
     hata_vektoru = np.ones_like(psi_evrilmis) * float(muhakemeler[-1].get("kohomolojik_engel", 0.1))
     mutabakat_raporu = d8a_senet_ve_egim_mutabakati(
         senetler=senetler, psi_0=kuantum_genlikleri.astype(complex),
         hata_vektoru=hata_vektoru, yon_vektoru=np.ones(len(senetler)))
+
+    monoidal_kat = MonoidalKategori(turetilen_kategori)
 
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
@@ -6516,5 +6608,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "qudit_zirh_raporu": zirh_raporu,
         "fock_artik_enerji": fock_artik_enerji,
         "ccc_dahili_hom_sayisi": len(dahili_hom_uzayi),
+        "qudit_parametre_acilari": parametre_acilari,
+        "cartan_kok_agirligi": kok_agirligi,
+        "tam_qudit_tensor_boyutu": len(tam_qudit_tensor_durumu),
+        "monoidal_tensor_ok_sayisi": len(monoidal_kat.tensor_oklari),
         "detay": tayf_bilgisi
     }
