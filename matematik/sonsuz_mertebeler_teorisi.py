@@ -6648,6 +6648,53 @@ def t4_kan_nedensel_cephe_baglantisi(kan_genlik: complex, son_token: int,
             "born_dagilimi": born_dagilimi, "kan_nedensel_faz": float(np.angle(kan_genlik))}
 
 
+def kelam_fubini_study_okumasi(psi_durum: np.ndarray, P_satiri: np.ndarray,
+                               theta_cartan: float, veri_lifi: int = 8
+                               ) -> Dict[str, Any]:
+    d = int(veri_lifi)
+    psi = np.asarray(psi_durum, complex).reshape(-1)
+    if psi.size < d:
+        psi = np.pad(psi, (0, d - psi.size))
+    else:
+        psi = psi[:d]
+    norm = float(np.linalg.norm(psi))
+    psi = psi / norm if norm > 1e-12 else (
+        np.ones(d, dtype=complex) / np.sqrt(d))
+
+    dpsi = np.empty((d, d), dtype=complex)
+    for b in range(d):
+        e = np.zeros(d, dtype=complex)
+        e[b] = 1e-5
+        psi_b = psi + e
+        psi_b /= (np.linalg.norm(psi_b) + 1e-12)
+        dpsi[b] = (psi_b - psi) / 1e-5
+
+    g_fs = np.empty((d, d), dtype=float)
+    for a in range(d):
+        for b in range(d):
+            ic = np.vdot(dpsi[a], dpsi[b])
+            va = np.vdot(dpsi[a], psi)
+            vb = np.vdot(psi, dpsi[b])
+            g_fs[a, b] = float(np.real(ic - va * vb))
+    g_fs = 0.5 * (g_fs + g_fs.T)
+    g_fs += 1e-8 * np.eye(d)
+    g_fs_ters = np.linalg.inv(g_fs)
+
+    p = np.clip(np.asarray(P_satiri[:d], float), 1e-12, None)
+    grad_log_p = np.gradient(np.log(p))
+
+    okuma_vektoru = g_fs_ters @ grad_log_p
+    secilen_basamak = int(np.argmax(okuma_vektoru))
+
+    return {
+        "secilen_basamak": secilen_basamak,
+        "okuma_vektoru": okuma_vektoru,
+        "g_fs_metrigi_izi": float(np.trace(g_fs)),
+        "olcum_guveni": float(okuma_vektoru[secilen_basamak]),
+        "born_kullanildi": False
+    }
+
+
 def maurer_cartan_egriligi_denetle(X_lie: np.ndarray, Asim: np.ndarray,
                                    son_token: int, hedef: int) -> Dict[str, Any]:
     komutator = X_lie @ X_lie.conj().T - X_lie.conj().T @ X_lie
@@ -8404,8 +8451,8 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4) -> Dict[str, A
     berry_raporu = berry_ayar_potansiyeli_ve_fazi(
         psi=psi_evrilmis, parametre_acilari=parametre_acilari, d_psi=d_psi_tahmin)
 
-    t4_kan_olcum = t4_kan_nedensel_cephe_baglantisi(
-        kan_genlik=kan_dalga_genligi, son_token=baglam[-1],
+    t4_kan_olcum = kelam_fubini_study_okumasi(
+        psi_durum=psi_evrilmis, P_satiri=P[baglam[-1]],
         theta_cartan=theta_cartan, veri_lifi=max(2, min(n, 8)))
 
     karar_silsilesi_raporu = tekil_karar_hunisi(
