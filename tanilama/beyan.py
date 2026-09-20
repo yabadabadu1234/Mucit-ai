@@ -3,7 +3,108 @@ from __future__ import annotations
 from typing import Dict, Optional
 
 __all__ = ["talim_beyani", "cikarim_beyani", "kaggle_beyani",
-           "sifir_beyani", "devam_metni"]
+           "sifir_beyani", "devam_metni", "netice_derle"]
+
+
+def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
+    import time
+    from kuantum.devre import devre_beyani
+    from main.kulliyat import kulliyat_dokumu
+    from nefs.belirtec import belirtec_beyani
+    from nefs.casimir import casimir_beyani
+    from nefs.hafiza import tertip_beyani
+    from nefs.hendese import hendese_beyani
+    from nefs.keyfiyet import keyfiyet_beyani
+    from nefs.kulli_mizan import fock_beyani, hamiltonyen_beyani
+    from nefs.lif import lif_beyani
+    from nefs.mahalli_yazmac import mahalli_beyani, uzunluk_beyani
+    from nefs.mihenk import safha_beyani
+    from nefs.mukayese import (cozum_beyani, mukayese_melekesi_beyani,
+                               omur_beyani, vecih_beyani)
+    from nefs.munasebet import munasebet_beyani
+    from nefs.nqs import nqs_beyani
+    from nefs.parametre_yazmaci import kenet_beyani, parametre_beyani
+    from nefs.qcekirdek import cekirdek_beyani
+    from nefs.qyazmac import sektor_beyani, senet_beyani
+    from nefs.sadakat import sadakat_devre_beyani
+    from nefs.veri_kapisi import kapi_beyani
+    from ogrenme.mecz import mecz_beyani
+    from tanilama.hizolcer import hizolcer_beyani
+
+    ayar = Z["ayar"]
+    hendese = Z["hendese"]
+    nefs = Z["nefs"]
+    kefeler = Z["kefeler"]
+    r = Z["r"]
+    return {"ayar": ayar.ad, "parametre": Z["d"],
+            "devam": Z["devam"], "imleç": Z["imlec"],
+            "geçit": Z["kapi"], "ders": Z["ders"], "hazine": Z["kayit"],
+            "lif": lif_beyani(Z["harita"]),
+            "hendese": hendese, "hendese_beyanı": hendese_beyani(),
+            "safha": safha_beyani(),
+            "dhr": Z["dhr"], "casimir_beyanı": casimir_beyani(),
+            "parite_lifi": int(ayar.parite_lifi),
+            "mertebe_tayfı": {
+                ad: float(p) for ad, p in
+                zip(hendese["katman"], hendese["tayf"])},
+            "lif_demeti": [float(x) for x in hendese["asansör"]["demet"]],
+            "büzülme": float(hendese["asansör"]["büzülme"]),
+            "hodge": hendese["hodge"], "Ω_cebiri": hendese["Ω_cebiri"],
+            "tdd": Z["tdd"], "stabilizer": Z["stab"], "gölge": Z["golge"],
+            "galois": Z["tab"].beyan(),
+            "flo": Z["flo"], "sbox": Z["sb"], "sbox_ölçü": Z["sb_olcu"],
+            "palmer": Z["palmer"],
+            "faz_polinomu": Z["fazp"], "gpu_akışı": Z["akis"],
+            "siklotomik": Z["sik"],
+            "sadakat": Z["sad"], "son_sadakat": Z["son_sadakat"],
+            "sadakat_devresi": sadakat_devre_beyani(),
+            "mukayese": Z["mukayese"],
+            "mukayese_melekesi": mukayese_melekesi_beyani(),
+            "vecih": vecih_beyani(),
+            "vecih_ömrü": omur_beyani(),
+            "devre": devre_beyani(),
+            "hamiltonyen": hamiltonyen_beyani(),
+            "çözüm_uzayı": cozum_beyani(),
+            "fock": fock_beyani(),
+            "sektör": sektor_beyani(), "senet": senet_beyani(),
+            "hafıza_tertibi": tertip_beyani(),
+            "küme_kapanışı": Z["kume_kapanisi"],
+            "mihenk": Z["nobet"].beyan(Z["p_yildiz"]),
+            "eniyileme": mecz_beyani(),
+            "faz_borcu": Z["q_son"].y.faz_borcu(),
+            "konuşma": Z["konusma"], "münasebet": munasebet_beyani(),
+            "keyfiyet": keyfiyet_beyani(),
+            "külliyat": {"arc": len(Z["arc_veri"]),
+                         "külliyat": len(Z["kul_veri"]),
+                         "döküm": kulliyat_dokumu()},
+            "belirteç": belirtec_beyani(str(ayar.kodlama)),
+            "ölçek": ayar.olcek_dokumu, "elle_verilen": ayar.elle,
+            "denge": Z["olculen_lam"], "ilk_kefeler": Z["ilk_kefeler"],
+            "usul": Z["usl"], "şüphe": Z["sup"],
+            "hızölçer": hizolcer_beyani(),
+            "çekirdek": cekirdek_beyani(),
+            "parametre_yazmacı": parametre_beyani(
+                getattr(nefs, "pq", None)),
+            "kenetlenme": kenet_beyani(),
+            "mahallî_yazmaç": mahalli_beyani(),
+            "uzunluk_katmanı": uzunluk_beyani(),
+            "veri_kapısı": kapi_beyani(),
+            "kan_nqs": nqs_beyani(getattr(nefs, "kan", None)),
+            "tur_genliği": Z["_tur"],
+            "mizan": kefeler, "veri_cetveli": Z["cetvel"],
+            "hafıza": Z["hafiza"].beyan(),
+            "rüşt": float(kefeler["α_rüşt"]),
+            "veri": len(Z["veri"]),
+            "V_ilk": float(r["V_ilk"]), "V_son": float(r["V_son"]),
+            "süre_sn": time.perf_counter() - Z["t0"],
+            "kayıp_çağrısı": int(r.get("kayıp_çağrısı", 0)),
+            "seyir": r.get("seyir", []),
+            "değerlendirme": Z["deg"],
+            "tâlim_günlüğü": r.get("günlük", []),
+            "düşen_uzuv": r.get("düşen_uzuv", {}),
+            "kademe_görevi": len(Z["kademe_gorevleri"]),
+            "kademe_parametresi": Z["kademe_parametresi"],
+            "p": Z["p_yildiz"]}
 
 
 def _bayt(n) -> str:

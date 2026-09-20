@@ -214,6 +214,7 @@
 | 29 | Terkibi ölçerek ispat etmek (`assert abs(a(x)−b(x)) < 1e-12`) | 3-B |
 | 30 | İki şeyi aynı isim altına koyup terkip demek | 3 |
 | 31 | `except` ile sessiz ikame | 5 |
+| 31-B | **BİR ÖLÇÜNÜN GÖVDESİNDE `except Exception` YAZMAK.** Geniş yakalama, kendi kurduğum terimin kırıklığını (`AttributeError`, `TypeError`) çekirdeğin meşru reddiyle aynı kefeye koyar; ölçü o vakit **doğru sebeple** kırmızı yanamaz. Ölçü yalnız çekirdeğin kendi red hatasını yakalar (`RED_HATALARI = (DenetimHatasi, CekirdekHatasi, TipHatasi)`); başka her hata **gürültüyle düşer** | 5, 1-J, 2-Ā-C |
 | 32 | Yapılmayan şeyi yapıldı diye yazmak | 5 |
 | 33 | HF jetonunu yahut herhangi bir sırrı depodaki bir dosyaya yazmak (yalnız `${{ secrets.HF_TOKEN }}`) | Padişah emri |
 
@@ -370,6 +371,7 @@
 | :-- | :-- | :-- |
 | 26 | Her iddianın bir **sayısı** olur; ölçü kapatılabilir olur ve kapatılınca kırmızı yanar | 5 |
 | 27 | Sessiz ikame yerine **assert**: boş bir şey dönmesin | 5 |
+| 27-B | **ÖLÇÜNÜN AYIRT ETTİĞİ İSPATLANIR:** bir tip denetimi ölçü sayılacaksa, yanlış bir iddianın aynı denetimden **REDDEDİLEREK** döndüğü fiilen koşturulup sayıyla yazılır. Ayırt etmeyen denetim ölçü değildir (F 87-F'nin çekirdek kanadı) | 5, 1-J |
 | 28 | Eşik bir **keyfiyetin** hangi nispete eriştiğini ölçen fonksiyonun çıktısıdır | 1-J |
 | 29 | Donanım ölçüsü `nefs/donanim.py` ile fiilen yoklanır; yoklanamıyorsa `None` ve ona dayanan iddia kurulmaz | 5-B |
 | 30 | Sözlük ebadı tiktoken `n_vocab`ından yoklanır; kodlamanın adı, `n_vocab`ı ve basamak sayısı raporda görünür | 1-N |

@@ -1406,7 +1406,9 @@ def gaye_kos(q: QYazmac, p) -> float:
 
     kaynaklar = [q.kulli("tasdik", 0), q.kulli("tasdik", 1),
                  q.kulli("tenakuz", 0), q.kulli("nakz", 0)]
-    q.sektor_donmesi("gaye", 0.25 * math.pi)
+    _pg, _og = _aci_bagi(p, "gaye.dönme", 1, 0.25 * math.pi)
+    q.sektor_donmesi("gaye", _aci(p, "gaye.dönme", 1, 0.25 * math.pi),
+                     (int(np.asarray(_pg).reshape(-1)[0]), float(_og), 1.0))
     isaret = np.array([+1.0, +1.0, -1.0, -1.0])
     ham = np.asarray(_aci(p, "gaye.dogus", 4, 0.8), float)
     a = isaret * (math.pi / 16.0) * np.abs(np.tanh(ham))
@@ -1425,7 +1427,9 @@ def gaye_kos(q: QYazmac, p) -> float:
                          duraklar=[q.kulli("mizan", j) for j in range(4)],
                          j=0, par=par_m, olcek=olc_m)
 
-    q.sektor_donmesi("sukut", 0.25 * math.pi)
+    _ps, _os = _aci_bagi(p, "sukut.dönme", 1, 0.25 * math.pi)
+    q.sektor_donmesi("sukut", _aci(p, "sukut.dönme", 1, 0.25 * math.pi),
+                     (int(np.asarray(_ps).reshape(-1)[0]), float(_os), 1.0))
     kesme += q.mpo_dagit("gaye", [-abs(EPSILON_DURGUN)],
                          duraklar=[q.kulli("sukut", 0)], j=0)
     return float(kesme)

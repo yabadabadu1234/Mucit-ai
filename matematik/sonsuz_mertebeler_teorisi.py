@@ -6,6 +6,8 @@ from dataclasses import dataclass
 from typing import (Any, Callable, Dict, FrozenSet, Iterable, Iterator,
                     List, Optional, Sequence, Set, Tuple, Union)
 
+import numpy as np
+
 
 Literal = Tuple[str, bool]
 
@@ -224,7 +226,7 @@ def tersi_kurulabilir_mi(X: Terim, n: int) -> bool:
     try:
         denetle_t(govde, iddia, ortam_baglami())
         return True
-    except Exception:
+    except RED_HATALARI:
         return False
 
 
@@ -234,11 +236,10 @@ def yonlu_mertebe_tutuyor(n: int, uretec_sayisi: int = 0
     try:
         denetle_t(yonlu_sarti(X, 0, int(n)), Evren(0), ortam_baglami())
         tesekkul = True
-    except Exception as e:
+    except RED_HATALARI:
         tesekkul = False
         _TURETIM_SAYI["yönlü_teşkil_düşen"] = _TURETIM_SAYI.get(
             "yönlü_teşkil_düşen", 0) + 1
-        _ = e
     ters_var = tersi_kurulabilir_mi(X, int(n)) if tesekkul else True
     if ters_var:
         _TURETIM_SAYI["ters_kuruldu"] = _TURETIM_SAYI.get(
@@ -4190,6 +4191,9 @@ class TipHatasi(Exception):
     pass
 
 
+RED_HATALARI: Tuple[type, ...] = (DenetimHatasi, CekirdekHatasi, TipHatasi)
+
+
 def iz_butun(X: Terim) -> Terim:
     x, y = terim_taze("x"), terim_taze("y")
     return Sigma(x, X, Pi(y, X, yol(X, _t(x), _t(y))))
@@ -4629,17 +4633,37 @@ def _bas_ayrisiyor(a: Terim, b: Terim, baglam=None) -> bool:
     return False
 
 
-TURETIM_SERBESTLIKLERI: Tuple[str, ...] = (
-    "morfizm", "yüksek", "arite", "yön₁", "yön₂", "koherans")
+def serbestlik_adlari(hucre_mertebesi: int) -> Tuple[str, ...]:
+    m = int(hucre_mertebesi)
+    assert m >= 1, (
+        "SERBESTLİK ÖLÇÜLEN HÜCRE MERTEBESİNDEN DOĞAR; mertebe %d ile "
+        "kafes kurulamaz -- elle yazılmış serbestlik cetveli yoktur "
+        "(ferman 2-Ā-B, 114-B)" % m)
+    adlar: List[str] = []
+    for j in range(1, m + 1):
+        adlar.append("morfizm_%d" % j)
+        adlar.append("arite_%d" % j)
+        adlar.append("yön_%d" % j)
+    adlar.append("koherans")
+    return tuple(adlar)
+
+
+def _serbestlik_coz(ad: str) -> Tuple[str, int]:
+    if "_" not in ad:
+        return ad, 0
+    kok, _, son = ad.rpartition("_")
+    return kok, int(son)
 
 
 _TURETIM_SAYI: Dict[str, int] = {
     "çağrı": 0, "denenen": 0, "tutan": 0, "düşen": 0,
-    "tavan_r": 0, "tavan_n": 0, "kafes": 0,
+    "tavan_r": 0, "tavan_n": 0, "kafes": 0, "serbestlik": 0,
     "boole_yüzü": 0, "heyting_yüzü": 0,
     "şelale_uzay": 0, "şelale_kategori": 0, "şelale_operad": 0,
     "tıkanma": 0, "aşkın": 0, "yönlü_tutan": 0, "yönlü_düşen": 0,
-    "tümleyen_bulundu": 0, "tümleyen_yok": 0, "kan_doldurma": 0}
+    "tümleyen_bulundu": 0, "tümleyen_yok": 0, "kan_doldurma": 0,
+    "kan_denetimi": 0, "kan_terkip_tuttu": 0, "kan_terkip_düştü": 0,
+    "kan_ters_tuttu": 0, "kan_ters_düştü": 0, "operad_dolgu": 0}
 
 
 _TURETIM_NISPET: Dict[str, float] = {
@@ -4684,45 +4708,57 @@ def _tip_imzasi(T: Terim) -> Dict[str, int]:
     return sayim
 
 
-def _mertebe_tutuyor(r: int, n: int) -> bool:
+def _mertebe_tutuyor(r: int, n: int) -> Optional[int]:
     try:
-        denetle_t(rn_sarti(Deg("A"), int(r), int(n)), Evren(0),
-                  ortam_baglami())
-        return True
-    except Exception:
-        return False
+        return int(denetle_tip(rn_sarti(Deg("A"), int(r), int(n)),
+                               ortam_baglami()))
+    except RED_HATALARI:
+        return None
 
 
 def ortam_baglami() -> "Baglam":
     return _genislet_t(Baglam(), "A", Evren(0))
 
 
-def _serbestlik_profili(r: int, n: int) -> Optional[Dict[str, int]]:
-    anahtar = (int(r), int(n))
+def _serbestlik_profili(r: int, n: int, adlar: Sequence[str]
+                        ) -> Optional[Dict[str, int]]:
+    anahtar = (int(r), int(n), tuple(adlar))
     if anahtar in _TURETIM_ONBELLEK:
         return _TURETIM_ONBELLEK[anahtar]
     _TURETIM_SAYI["denenen"] += 1
-    if not _mertebe_tutuyor(r, n):
+    evren = _mertebe_tutuyor(r, n)
+    if evren is None:
         _TURETIM_SAYI["düşen"] += 1
         _TURETIM_ONBELLEK[anahtar] = None
         return None
     _TURETIM_SAYI["tutan"] += 1
+    _TURETIM_SAYI["evren_tavanı"] = max(
+        int(_TURETIM_SAYI.get("evren_tavanı", 0)), int(evren))
     imza = _tip_imzasi(rn_sarti(Deg("A"), int(r), int(n)))
     yon = yonlu_mertebe_tutuyor(int(n))
     if yon["tutuyor"]:
         _TURETIM_SAYI["yönlü_tutan"] += 1
     else:
         _TURETIM_SAYI["yönlü_düşen"] += 1
-    profil = {
-        "morfizm": 1 if imza["pi"] > 0 else 0,
-        "yüksek": 1 if imza["yol"] > 0 else 0,
-        "arite": 1 if imza["sigma"] > 0 else 0,
-        "yön₁": 1 if (int(n) >= 1 and yon["tutuyor"]) else 0,
-        "yön₂": 1 if (int(n) >= 2 and yon["tutuyor"]) else 0,
-        "koherans": 1 if int(n) >= 0 else 0,
-    }
-    profil["_yönlü"] = 1 if yon["tutuyor"] else 0
+    profil: Dict[str, int] = {}
+    for ad in adlar:
+        kok, kat = _serbestlik_coz(str(ad))
+        if kok == "morfizm":
+            profil[ad] = 1 if int(imza["pi"]) >= kat else 0
+        elif kok == "arite":
+            profil[ad] = 1 if int(imza["sigma"]) >= kat else 0
+        elif kok == "yön":
+            profil[ad] = 1 if (bool(yon["tutuyor"]) and int(n) >= kat) else 0
+        elif ad == "koherans":
+            profil[ad] = 1 if int(imza["yol"]) > 0 else 0
+        else:
+            raise CekirdekHatasi(
+                "TÜRETİM KAFESİ %r SERBESTLİĞİNİ TANIMIYOR -- serbestlik "
+                "ölçülen hücre mertebesinden doğar, elle uydurulmaz "
+                "(ferman 2-Ā-B)" % (ad,))
+    profil["_yönlü"] = 1 if (bool(yon["tutuyor"]) and int(n) >= 1) else 0
     profil["_kafes"] = int(yon["kafes"])
+    profil["_evren"] = int(evren)
     _TURETIM_ONBELLEK[anahtar] = profil
     return profil
 
@@ -4734,23 +4770,25 @@ def hakiki_ad(r: int, n: int, yonlu: bool) -> str:
         "∞" if int(n) >= 4 else int(n), cins)
 
 
-def turetim_kafesi(tavan_r: int, tavan_n: int) -> List[Dict[str, Any]]:
+def turetim_kafesi(tavan_r: int, tavan_n: int, adlar: Sequence[str]
+                   ) -> List[Dict[str, Any]]:
     assert int(tavan_r) >= 0, "türetim kafesinin nesne tavanı negatif olamaz"
     assert int(tavan_n) >= -1, "türetim kafesinin morfizm tavanı −1'in altına inmez"
+    assert adlar, "türetim kafesi serbestliksiz kurulamaz"
     kafes: List[Dict[str, Any]] = []
     for r in range(0, int(tavan_r) + 1):
         for n in range(-1, int(tavan_n) + 1):
-            profil = _serbestlik_profili(r, n)
+            profil = _serbestlik_profili(r, n, adlar)
             if profil is None:
                 continue
             yonlu = bool(profil.get("_yönlü"))
             kafes.append({"r": int(r), "n": int(n),
                           "ad": hakiki_ad(r, n, yonlu),
                           "yönlü": yonlu,
+                          "evren": int(profil.get("_evren", 0)),
                           "profil": profil,
                           "kısıtlama": int(sum(
-                              1 for a in TURETIM_SERBESTLIKLERI
-                              if profil[a] == 0))})
+                              1 for a in adlar if profil[a] == 0))})
     assert kafes, (
         "TÜRETİM KAFESİ BOŞ -- tavan (%d, %d) altında tek bir mertebe bile "
         "tutmadı; bu bir sayı hatası değil, çekirdeğin kırık olduğunun "
@@ -4797,19 +4835,59 @@ def omega_cebiri(dolu_boynuz: int, bos_boynuz: int,
             "yön_nispeti": (float(yon) / float(kenar) if kenar else 0.0)}
 
 
-def gecis_kapamasi(bos_boynuz: Sequence[Tuple[int, int, int]],
-                     kenar, agac) -> Dict[str, Any]:
+def kan_terkibi_tutuyor() -> bool:
+    X = Deg("A")
+    a, b, c = terim_taze("a"), terim_taze("b"), terim_taze("c")
+    p, q = terim_taze("p"), terim_taze("q")
+    iddia = pi_hepsi([(a, X), (b, X), (c, X),
+                      (p, yol(X, Deg(a), Deg(b))),
+                      (q, yol(X, Deg(b), Deg(c)))],
+                     yol(X, Deg(a), Deg(c)))
+    govde = lam_hepsi([a, b, c, p, q],
+                      terkip(X, Deg(a), Deg(b), Deg(c), Deg(p), Deg(q)))
+    _TURETIM_SAYI["kan_denetimi"] += 1
+    try:
+        denetle_t(govde, iddia, ortam_baglami())
+    except RED_HATALARI:
+        _TURETIM_SAYI["kan_terkip_düştü"] += 1
+        return False
+    _TURETIM_SAYI["kan_terkip_tuttu"] += 1
+    return True
+
+
+def kan_tersi_tutuyor() -> bool:
+    X = Deg("A")
+    a, b, p = terim_taze("a"), terim_taze("b"), terim_taze("p")
+    iddia = pi_hepsi([(a, X), (b, X), (p, yol(X, Deg(a), Deg(b)))],
+                     yol(X, Deg(b), Deg(a)))
+    govde = lam_hepsi([a, b, p], ters(X, Deg(a), Deg(b), Deg(p)))
+    _TURETIM_SAYI["kan_denetimi"] += 1
+    try:
+        denetle_t(govde, iddia, ortam_baglami())
+    except RED_HATALARI:
+        _TURETIM_SAYI["kan_ters_düştü"] += 1
+        return False
+    _TURETIM_SAYI["kan_ters_tuttu"] += 1
+    return True
+
+
+def kan_kapamasi(bos_boynuz: Sequence[Tuple[int, int, int]],
+                 kenar, agac) -> Dict[str, Any]:
     E = [list(bool(x) for x in satir) for satir in kenar]
     n = len(E)
     ucler = set()
     for satir in agac:
         ucler.add((int(satir[0]), int(satir[1]), int(satir[2])))
+    terkip_var = kan_terkibi_tutuyor()
+    ters_var = kan_tersi_tutuyor()
     dolgu: Dict[str, List[Tuple[int, int, int]]] = {
         "uzay": [], "kategori": [], "operad": [], "tıkanma": []}
+    doldu = 0
     for (a, b, c) in bos_boynuz:
-        if bool(E[c][a]):
+        if bool(E[c][a]) and ters_var and terkip_var:
             kat = "uzay"
-        elif any(E[a][m] and E[m][c] for m in range(n) if m != b):
+        elif terkip_var and any(E[a][m] and E[m][c]
+                                for m in range(n) if m != b):
             kat = "kategori"
         elif (a, b, c) in ucler:
             kat = "operad"
@@ -4818,7 +4896,10 @@ def gecis_kapamasi(bos_boynuz: Sequence[Tuple[int, int, int]],
         dolgu[kat].append((int(a), int(b), int(c)))
         if kat != "tıkanma":
             E[a][c] = True
-    _TURETIM_SAYI["kan_doldurma"] += 0
+        if kat in ("uzay", "kategori"):
+            doldu += 1
+    _TURETIM_SAYI["kan_doldurma"] += int(doldu)
+    _TURETIM_SAYI["operad_dolgu"] += int(len(dolgu["operad"]))
     kapanan = sum(len(dolgu[k]) for k in ("uzay", "kategori", "operad"))
     toplam = kapanan + len(dolgu["tıkanma"])
     return {"uzay": len(dolgu["uzay"]), "kategori": len(dolgu["kategori"]),
@@ -4828,26 +4909,29 @@ def gecis_kapamasi(bos_boynuz: Sequence[Tuple[int, int, int]],
             "kapanma_nispeti": (float(kapanan) / float(toplam)
                                 if toplam else 1.0),
             "dolgu": dolgu, "tamamlanan_kenar": E,
-            "usul": "çizge_geçişliliği",
-            "kan_doldurma": int(_TURETIM_SAYI["kan_doldurma"])}
+            "usul": "çekirdek_kan_terkibi",
+            "terkip_tutuyor": bool(terkip_var),
+            "ters_tutuyor": bool(ters_var),
+            "kan_doldurma": int(doldu),
+            "operad_dolgu": int(len(dolgu["operad"]))}
 
 
 def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
     _TURETIM_SAYI["çağrı"] += 1
-    for a in TURETIM_SERBESTLIKLERI:
+    tavan_r = int(olcum.get("hücre_mertebesi", 1))
+    tavan_n = int(olcum.get("koherans_mertebesi", tavan_r))
+    adlar = serbestlik_adlari(tavan_r)
+    for a in adlar:
         assert a in olcum, (
             "TÜRETİM İÇİN %r SERBESTLİĞİ ÖLÇÜLMEMİŞ -- uzuv ölçer, kalp "
             "türetir; ölçülmeyen serbestlik uydurulmaz (ferman 2-Ā-B)" % a)
-    tavan_r = int(olcum.get("hücre_mertebesi", 1))
-    tavan_n = int(olcum.get("koherans_mertebesi", tavan_r))
-    kafes = turetim_kafesi(tavan_r, tavan_n)
-    x = {a: float(min(1.0, max(0.0, float(olcum[a]))))
-         for a in TURETIM_SERBESTLIKLERI}
+    kafes = turetim_kafesi(tavan_r, tavan_n, adlar)
+    x = {a: float(min(1.0, max(0.0, float(olcum[a])))) for a in adlar}
     agirlik: List[float] = []
     for dug in kafes:
         p = dug["profil"]
         w = 1.0
-        for a in TURETIM_SERBESTLIKLERI:
+        for a in adlar:
             w *= x[a] if int(p[a]) else (1.0 - x[a])
         agirlik.append(max(0.0, w))
     top = float(sum(agirlik))
@@ -4856,7 +4940,7 @@ def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
         "hiçbir kısıtlama yüzüne oturmadı (ferman 2-Ā-B)" % (x,))
     ro = [w / top for w in agirlik]
     bagimsiz = 1.0
-    for a in TURETIM_SERBESTLIKLERI:
+    for a in adlar:
         bagimsiz *= max(x[a], 1.0 - x[a])
     _TURETIM_NISPET["bağımsızlık_varsayımı"] = 1.0
     _TURETIM_NISPET["bağımsızlık_artığı"] = float(
@@ -4873,6 +4957,7 @@ def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
     _TURETIM_SAYI["tavan_r"] = int(tavan_r)
     _TURETIM_SAYI["tavan_n"] = int(tavan_n)
     _TURETIM_SAYI["kafes"] = int(len(kafes))
+    _TURETIM_SAYI["serbestlik"] = int(len(adlar))
     _TURETIM_NISPET["entropi"] = float(entropi)
     _TURETIM_NISPET["yönlü_nispet"] = float(om.get("yön_nispeti", 0.0))
     _TURETIM_NISPET["dolu_nispet"] = float(om.get("dolu_nispeti", 0.0))
@@ -4888,7 +4973,7 @@ def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
             "Ω_cebiri": om, "şelale": selale,
             "tavan": (int(tavan_r), int(tavan_n)),
             "koordinat": x,
-            "serbestlik": TURETIM_SERBESTLIKLERI,
+            "serbestlik": adlar,
             "ölçü_usulü": "bağımsız_çarpım",
             "bağımsızlık_artığı": float(
                 _TURETIM_NISPET.get("bağımsızlık_artığı", 0.0))}
@@ -4898,3 +4983,223 @@ def turetim_beyani() -> Dict[str, Any]:
     b: Dict[str, Any] = {k: int(v) for k, v in _TURETIM_SAYI.items()}
     b.update({k: float(v) for k, v in _TURETIM_NISPET.items()})
     return b
+
+
+def _yapistirma_agaci(y: np.ndarray, k: int) -> np.ndarray:
+    if int(k) < 1 or y.size < int(k) + 1:
+        return np.zeros((0, int(k) + 1), np.int64)
+    boy = int(y.size) - int(k)
+    sut = [y[i:i + boy] for i in range(int(k) + 1)]
+    return np.unique(np.stack(sut, axis=1), axis=0)
+
+
+def _seviye_asimetrisi(A: np.ndarray) -> float:
+    if A.shape[0] < 2:
+        return 0.0
+    on = A[:, :-1]
+    ard = A[:, 1:]
+    _birim, ters = np.unique(np.concatenate([on, ard], axis=0), axis=0,
+                             return_inverse=True)
+    ters = np.asarray(ters).reshape(-1)
+    yarim = int(A.shape[0])
+    i, j = ters[:yarim], ters[yarim:]
+    boy = int(_birim.shape[0])
+    M = np.zeros((boy, boy), float)
+    np.add.at(M, (i, j), 1.0)
+    return float(hodge_ayrisimi(M)["𝒜_yönlü"])
+
+
+def opetopik_kompleks(w: Sequence[int], n: int) -> Dict[str, Any]:
+    y = np.asarray(list(w), np.int64).reshape(-1) % int(n)
+    assert y.size >= 1, "opetopik kompleks için dizi BOŞ olamaz"
+    m = int(n)
+    sifir = np.unique(y)
+    dolu = int(sifir.size)
+    kenar = np.zeros((m, m), bool)
+    if y.size >= 2:
+        kenar[y[:-1], y[1:]] = True
+    hucre: Dict[int, np.ndarray] = {0: sifir.reshape(-1, 1)}
+    k = 1
+    while True:
+        A = _yapistirma_agaci(y, k)
+        if A.shape[0] == 0:
+            break
+        hucre[k] = A
+        evvel = int(hucre[k - 1].shape[0])
+        if A.shape[0] <= evvel or A.shape[0] >= int(y.size) - k:
+            break
+        k += 1
+    mertebe = int(max(hucre))
+    yogunluk: Dict[int, float] = {}
+    arite: Dict[int, float] = {}
+    yon: Dict[int, float] = {}
+    for j in range(1, mertebe + 1):
+        A = hucre[j]
+        evvel = max(1, int(hucre[j - 1].shape[0]))
+        yogunluk[j] = float(min(1.0, A.shape[0] / float(evvel * max(1, dolu))))
+        if A.shape[0]:
+            yeni = (~kenar[A[:, 0], A[:, -1]] if j >= 2
+                    else np.ones(A.shape[0], bool))
+            arite[j] = float(np.count_nonzero(yeni)) / float(A.shape[0])
+        else:
+            arite[j] = 0.0
+        yon[j] = _seviye_asimetrisi(A)
+    return {"0-hücre": dolu, "kenar": kenar, "hücre": hucre,
+            "agac": hucre.get(2, np.zeros((0, 3), np.int64)),
+            "mertebe": mertebe, "yoğunluk": yogunluk,
+            "arite": arite, "yön": yon,
+            "1-hücre": int(np.count_nonzero(kenar)),
+            "2-hücre": int(hucre.get(2, np.zeros((0, 3))).shape[0]),
+            "3-hücre": int(hucre.get(3, np.zeros((0, 4))).shape[0])}
+
+
+def hodge_ayrisimi(M: np.ndarray) -> Dict[str, Any]:
+    A = np.asarray(M, float)
+    sim = 0.5 * (A + A.T)
+    ters_m = 0.5 * (A - A.T)
+    s = float(np.sum(sim * sim))
+    t = float(np.sum(ters_m * ters_m))
+    top = s + t
+    if top <= 0.0:
+        return {"𝒮_simetrik": 0.0, "𝒜_yönlü": 0.0, "kuvvet": 0.0,
+                "Π_uzay": sim, "Π_kategori": ters_m}
+    return {"𝒮_simetrik": s / top, "𝒜_yönlü": t / top, "kuvvet": top,
+            "Π_uzay": sim, "Π_kategori": ters_m}
+
+
+def kan_boynuzu(kenar: np.ndarray) -> Dict[str, Any]:
+    E = np.asarray(kenar, bool)
+    bos: List[Tuple[int, int, int]] = []
+    dolu = 0
+    toplam = 0
+    a_i, b_i = np.nonzero(E)
+    for a, b in zip(a_i.tolist(), b_i.tolist()):
+        for c in np.nonzero(E[b])[0].tolist():
+            if c == a:
+                continue
+            toplam += 1
+            if bool(E[a, c]):
+                dolu += 1
+            else:
+                bos.append((int(a), int(b), int(c)))
+    if toplam == 0:
+        return {"koherans": 0.0, "Ω_yırtık": 0.0, "boynuz": 0,
+                "dolu": 0, "boş": [], "mertebe": -1}
+    k = float(dolu) / float(toplam)
+    return {"koherans": k, "Ω_yırtık": 1.0 - k, "boynuz": int(toplam),
+            "dolu": int(dolu), "boş": bos,
+            "mertebe": (2 if k > 0.0 else 1)}
+
+
+def izdusum_demeti(hodge: Dict[str, Any], agac: np.ndarray,
+                   n: int) -> Dict[str, np.ndarray]:
+    O = np.zeros((int(n), int(n)), float)
+    A = np.asarray(agac, np.int64)
+    if int(A.shape[0]) and A.shape[1] >= 3:
+        np.add.at(O, (A[:, 0], A[:, 2]), 1.0)
+        np.add.at(O, (A[:, 1], A[:, 2]), 1.0)
+    return {"Π_uzay": np.asarray(hodge["Π_uzay"], float),
+            "Π_kategori": np.asarray(hodge["Π_kategori"], float),
+            "Π_operad": O}
+
+
+def kaide_imzasi(teshis: Dict[str, Any], taban: int) -> str:
+    n = int(taban)
+    assert n >= 2, "kaide imzası için taban en az iki olmalı"
+    k = teshis["koordinat"]
+    adlar = tuple(teshis["serbestlik"])
+    basamak = [int(round(float(k[a]) * float(n - 1))) for a in adlar]
+    om = teshis["Ω_cebiri"]
+    cebir = {"boole": "B", "heyting": "H", "yönlü_kafes": "Y",
+             "tayinsiz": "?"}[str(om["cebir"])]
+    return ("K" + "-".join("%x" % x for x in basamak) + "/" + cebir
+            + "%d" % int(bool(om.get("üçüncü_şık"))))
+
+
+def dikey_asansor(teshis: Dict[str, Any], lif: Sequence[int]
+                  ) -> Dict[str, Any]:
+    lif = tuple(int(x) for x in lif)
+    assert lif, "dikey asansör için lif yapısı BOŞ olamaz"
+    ro = np.asarray(teshis["tayf"], float).reshape(-1)
+    kis = np.asarray(teshis["kısıtlama"], float).reshape(-1)
+    assert ro.size == kis.size and ro.size > 0, (
+        "tayf %d, kısıtlama %d -- kafes ile ölçü aynı uzayda olmalı"
+        % (ro.size, kis.size))
+    kat_sayisi = len(lif)
+    en_cok = float(len(tuple(teshis["serbestlik"])))
+    yer = (en_cok - kis) / en_cok * float(kat_sayisi - 1)
+    demet = np.zeros(kat_sayisi, float)
+    alt = np.floor(yer).astype(np.int64)
+    ust = np.minimum(alt + 1, kat_sayisi - 1)
+    pay = yer - alt
+    np.add.at(demet, alt, ro * (1.0 - pay))
+    np.add.at(demet, ust, ro * pay)
+    top = float(demet.sum())
+    assert top > 0.0, "lif demeti tamamen söndü -- tayf lifle örtüşmüyor"
+    demet = demet / top
+    buzulme = float(np.sum(demet * np.arange(kat_sayisi, dtype=float)))
+    kat = int(min(max(int(round(buzulme)), 0), kat_sayisi - 1))
+    return {"kat": kat, "büzülme": buzulme, "demet": demet, "eksen": kat,
+            "lif": lif, "taban_boyu": int(lif[kat]),
+            "yukarı": tuple(lif[kat:]), "aşağı": tuple(lif[:kat + 1])}
+
+
+def cins_turet(w: Sequence[int], n: int, T: np.ndarray) -> Dict[str, Any]:
+    K = opetopik_kompleks(w, n)
+    mertebe = int(K["mertebe"])
+    h1 = hodge_ayrisimi(np.asarray(T, float))
+    agac = np.asarray(K["agac"], np.int64)
+    E0 = np.asarray(K["kenar"], bool)
+    cift = E0 & E0.T
+    simetrik = int(np.count_nonzero(cift))
+    yonlu = int(np.count_nonzero(E0)) - simetrik
+    kan = kan_boynuzu(E0)
+    selale = kan_kapamasi(kan["boş"], E0.tolist(), agac.tolist())
+    tamam = np.asarray(selale["tamamlanan_kenar"], bool)
+    kan_sonra = kan_boynuzu(tamam)
+    adlar = serbestlik_adlari(mertebe)
+    olcum: Dict[str, Any] = {
+        "hücre_mertebesi": mertebe,
+        "koherans_mertebesi": int(max(0, int(kan_sonra["mertebe"]))),
+        "dolu_boynuz": int(kan_sonra["dolu"]),
+        "boş_boynuz": int(selale["tıkanma"]),
+        "yönlü_kenar": int(yonlu), "simetrik_kenar": int(simetrik),
+        "şelale": selale}
+    for j in range(1, mertebe + 1):
+        olcum["morfizm_%d" % j] = float(K["yoğunluk"][j])
+        olcum["arite_%d" % j] = float(K["arite"][j])
+        olcum["yön_%d" % j] = float(K["yön"][j])
+    olcum["koherans"] = float(kan_sonra["koherans"])
+    assert all(a in olcum for a in adlar), (
+        "ÖLÇÜLEN SERBESTLİK KAFESİN SERBESTLİĞİNE OTURMADI: %r ≠ %r"
+        % (adlar, tuple(sorted(olcum))))
+    tur = topos_turetimi(olcum)
+    yirtik = (float(selale["tıkanma"]) / float(kan["boynuz"])
+              if int(kan["boynuz"]) else 0.0)
+    hodge = np.asarray([float(h1["𝒮_simetrik"]) * (1.0 - yirtik),
+                        float(h1["𝒜_yönlü"]) * (1.0 - yirtik), yirtik],
+                       float)
+    hodge = hodge / max(float(hodge.sum()), float(np.finfo(float).tiny))
+    return {"tayf": np.asarray(tur["tayf"], float),
+            "kafes": tur["kafes"],
+            "katman": tuple(d["ad"] for d in tur["kafes"]),
+            "kısıtlama": tuple(int(d["kısıtlama"]) for d in tur["kafes"]),
+            "koordinat": tur["koordinat"], "tavan": tur["tavan"],
+            "serbestlik": adlar,
+            "hodge": {"𝒮_simetrik": float(hodge[0]),
+                      "𝒜_yönlü": float(hodge[1]),
+                      "Ω_yırtık": float(hodge[2])},
+            "Π": izdusum_demeti(h1, agac, int(n)),
+            "Ω_cebiri": tur["Ω_cebiri"], "şelale": selale,
+            "kenar": tamam, "hücre_mertebesi": mertebe,
+            "hücre": {a: int(K[a]) for a in
+                      ("0-hücre", "1-hücre", "2-hücre", "3-hücre")},
+            "boynuz": int(kan["boynuz"]),
+            "dolu_boynuz": int(kan["dolu"]),
+            "boynuz_sonra": int(kan_sonra["boynuz"]),
+            "dolu_boynuz_sonra": int(kan_sonra["dolu"]),
+            "koherans_evvel": float(kan["koherans"]),
+            "koherans": float(kan_sonra["koherans"]),
+            "yönlü_kenar": int(yonlu), "simetrik_kenar": int(simetrik),
+            "tayf_entropisi": float(tur["entropi"]),
+            "tayf_haddi": float(tur["had"])}

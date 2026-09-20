@@ -392,12 +392,8 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         tohum=int(a.tohum))
 
 
-def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
-                       gorevler: Optional[Sequence] = None) -> Dict[str, object]:
-    from nefs.kulli_kayip import kademe_parametreleri_ac
-    from nefs.melekeler import QNefs
-    from nefs.qegitim import degerlendir, ornekler
-
+def d0_gecit(Z: Dict[str, Any]) -> Dict[str, Any]:
+    ayar = Z["ayar"]
     t0 = time.perf_counter()
     kapi_bel = belirtec_kapisi(str(ayar.kodlama))
     assert int(kapi_bel.n_vocab) == int(ayar.sozluk), (
@@ -409,6 +405,14 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     kapi = gecit(sert=bool(int(ayar.hiz_geciti)), hiz_ayari=ayar)
     safha("D0 GEÇİT", çevrim=int(kapi.get("alan_çevrimi", 0)),
           kelâm=bool(kapi.get("kelam_ayrıştı")))
+    Z.update({"t0": t0, "kapi_bel": kapi_bel, "kapi": kapi})
+    return Z
+
+
+def d1_olcu(Z: Dict[str, Any]) -> Dict[str, Any]:
+    from nefs.qegitim import ornekler
+    ayar = Z["ayar"]
+    gorevler = Z["gorevler"]
     hepsi = list(gorevler) if gorevler is not None else \
         gorevleri_getir("training")
     egitim_gorevleri, dogrulama = gorevleri_getir(ne="böl", gorevler=
@@ -430,7 +434,17 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     gelen = list(arc_veri) + list(kul_veri)
 
     safha("D1 ÖLÇÜ · külliyat", örnek=len(gelen))
+    Z.update({"egitim_gorevleri": egitim_gorevleri,
+              "dogrulama": dogrulama, "arc_veri": arc_veri,
+              "devam": devam, "kul_veri": kul_veri, "imlec": imlec,
+              "gelen": gelen})
+    return Z
+
+
+def d2_hendese(Z: Dict[str, Any]) -> Dict[str, Any]:
     from nefs.qegitim import ornek_bol as _bol
+    ayar = Z["ayar"]
+    gelen = Z["gelen"]
     hendese = hendese_teshisi(
         [_bol(o)[0] for o in gelen], ayar.lif_yapisi,
         HendeseAyari(azami_alfabe=int(ayar.veri_lifi),
@@ -442,6 +456,17 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     safha("D2 HENDESE", kafes=len(hendese["kafes"]),
           tıkanma=int(hendese["şelale"]["tıkanma"]),
           büzülme="%.3f" % float(hendese["asansör"]["büzülme"]))
+    Z.update({"hendese": hendese})
+    return Z
+
+
+def d3_kurulus(Z: Dict[str, Any]) -> Dict[str, Any]:
+    from nefs.kulli_kayip import kademe_parametreleri_ac
+    from nefs.melekeler import QNefs
+    ayar = Z["ayar"]
+    hendese = Z["hendese"]
+    devam = Z["devam"]
+    egitim_gorevleri = Z["egitim_gorevleri"]
     nefs = QNefs(ayar.tohum, ayar.qayar())
     _hodge = hendese["hodge"]
     nefs.izdusum = (hendese["Π"],
@@ -455,20 +480,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                     zeno_tepe=float(ayar.zeno_tepe),
                     ayniyet=float(ayar.hafiza_ayniyet),
                     buhar=float(ayar.hafiza_buhar), tohum=int(ayar.tohum))
-    safha("D3 KURULUŞ")
-    kapi_hukmu = veri_kapisi(
-        gelen, nefs=nefs, hafiza=hafiza,
-        ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
-                             taban=int(ayar.veri_lifi),
-                             basamak=int(ayar.belirtec_basamak)))
-    veri = list(kapi_hukmu["kabul"])
-    assert veri, (
-        "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
-        % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
-    from nefs.mukayese import (ana_superpozisyon, cozum_uzayi_ac,
-                               cozum_uzayi_kapat, cozum_beyani,
-                               mantik_filtresi, mukayese_filtresi)
-    from nefs.qegitim import ornek_bol as _ornek_bol
     kademe_parametresi = kademe_parametreleri_ac(nefs.p)
     d = len(nefs)
     p0 = devam_agirligi(devam, nefs, d)
@@ -482,7 +493,6 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}
-    safha("D4 KAPI", örnek=len(veri))
     fock = FockUzayi()
     _derece: List[str] = []
     for _dug, _ro in zip(hendese["kafes"], hendese["tayf"]):
@@ -498,6 +508,46 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         "doğurmadı; her katman kendi hendesesinde nefes almalı "
         "(ferman 2-Ā-B, 2-Þ)")
     hamiltonyen = Hamiltonyen(fock=fock)
+    safha("D3 KURULUŞ", derece=len(_derece), parametre=int(d))
+    Z.update({"nefs": nefs, "hafiza": hafiza, "d": d, "p0": p0,
+              "kademe_parametresi": kademe_parametresi,
+              "kademe_gorevleri": kademe_gorevleri, "mzn": mzn,
+              "_elle_lam": _elle_lam, "_mzn": _mzn, "fock": fock,
+              "_derece": _derece, "hamiltonyen": hamiltonyen})
+    return Z
+
+
+def d4_kapi(Z: Dict[str, Any]) -> Dict[str, Any]:
+    ayar = Z["ayar"]
+    gelen = Z["gelen"]
+    nefs = Z["nefs"]
+    hafiza = Z["hafiza"]
+    kapi_hukmu = veri_kapisi(
+        gelen, nefs=nefs, hafiza=hafiza,
+        ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
+                             taban=int(ayar.veri_lifi),
+                             basamak=int(ayar.belirtec_basamak)))
+    veri = list(kapi_hukmu["kabul"])
+    assert veri, (
+        "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
+        % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
+    safha("D4 KAPI", örnek=len(veri))
+    Z.update({"kapi_hukmu": kapi_hukmu, "veri": veri})
+    return Z
+
+
+def d5_uzay(Z: Dict[str, Any]) -> Dict[str, Any]:
+    from nefs.mukayese import (ana_superpozisyon, cozum_uzayi_ac,
+                               cozum_uzayi_kapat,
+                               mantik_filtresi, mukayese_filtresi)
+    from nefs.qegitim import ornek_bol as _ornek_bol
+    ayar = Z["ayar"]
+    veri = Z["veri"]
+    nefs = Z["nefs"]
+    hafiza = Z["hafiza"]
+    fock = Z["fock"]
+    hamiltonyen = Z["hamiltonyen"]
+    _derece = Z["_derece"]
     sual = ana_superpozisyon([_ornek_bol(o)[0] for o in veri],
                              nefs=nefs, hafiza=hafiza,
                              sozluk=int(ayar.sozluk),
@@ -513,6 +563,17 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     netice = cozum_uzayi_kapat(uzay, sual, hamiltonyen=hamiltonyen)
     netice["uzunluk_genliği"] = uzunluk_genligi(
         getattr(nefs, "mahalli", None), int(netice["pencere"]))
+    Z.update({"sual": sual, "uzay": uzay, "netice": netice})
+    return Z
+
+
+def d5b_sadakat(Z: Dict[str, Any]) -> Dict[str, Any]:
+    ayar = Z["ayar"]
+    nefs = Z["nefs"]
+    hafiza = Z["hafiza"]
+    fock = Z["fock"]
+    netice = Z["netice"]
+    _mzn = Z["_mzn"]
     _sadakat_ayari = SadakatAyari(acik=int(ayar.sadakat_acik),
                                   parite_lifi=int(ayar.parite_lifi),
                                   lif_yapisi=tuple(ayar.lif_yapisi),
@@ -523,6 +584,27 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     hafiza.kapasite = int(netice["hafıza_kapasitesi"])
     mzn = mizan_ayari(ayar)
     _mzn["a"] = mzn
+    safha("D5b SADAKAT", pencere=int(ayar.pencere))
+    Z.update({"_sadakat_ayari": _sadakat_ayari, "mzn": mzn, "_mzn": _mzn})
+    return Z
+
+
+def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
+    ayar = Z["ayar"]
+    nefs = Z["nefs"]
+    hafiza = Z["hafiza"]
+    fock = Z["fock"]
+    netice = Z["netice"]
+    veri = Z["veri"]
+    p0 = Z["p0"]
+    d = Z["d"]
+    mzn = Z["mzn"]
+    _mzn = Z["_mzn"]
+    _elle_lam = Z["_elle_lam"]
+    hamiltonyen = Z["hamiltonyen"]
+    kapi_hukmu = Z["kapi_hukmu"]
+    kademe_gorevleri = Z["kademe_gorevleri"]
+    _sadakat_ayari = Z["_sadakat_ayari"]
 
     def _dengele(dokum) -> Dict[str, float]:
         lam = denge(dokum,
@@ -605,6 +687,22 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                            adim=_sayac["çağrı"], kapi_hukmu=kapi_hukmu,
                            kademe_gorevleri=kademe_gorevleri, ne="döküm")
 
+    Z.update({"ilk_kefeler": ilk_kefeler, "olculen_lam": olculen_lam,
+              "_sayac": _sayac, "olcer": olcer, "_kume": _kume,
+              "_seyir": _seyir, "nobet": nobet, "kayip_p": kayip_p,
+              "_eniyile": _eniyile, "_olc": _olc, "_dengele": _dengele,
+              "mzn": _mzn["a"]})
+    return Z
+
+
+def d8_dongu(Z: Dict[str, Any]) -> Dict[str, Any]:
+    ayar = Z["ayar"]
+    veri = Z["veri"]
+    p0 = Z["p0"]
+    devam = Z["devam"]
+    _eniyile = Z["_eniyile"]
+    _olc = Z["_olc"]
+    _dengele = Z["_dengele"]
     mun = munasebet_kos(
         veri, p0, _eniyile, _olc,
         dengele=_dengele,
@@ -621,6 +719,27 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             azami_saniye=float(ayar.azami_talim_saati) * 3600.0),
         keyfiyet_ayari=KeyfiyetAyari(acik=1,
                                      azami_tur=int(ayar.keyfiyet_turu)))
+    safha("D8 DÖNGÜ", temizlenen=int(mun.get("temizlenen", 0)))
+    Z.update({"mun": mun})
+    return Z
+
+
+def d9_kapanis(Z: Dict[str, Any]) -> Dict[str, Any]:
+    ayar = Z["ayar"]
+    veri = Z["veri"]
+    p0 = Z["p0"]
+    d = Z["d"]
+    nefs = Z["nefs"]
+    hafiza = Z["hafiza"]
+    fock = Z["fock"]
+    mun = Z["mun"]
+    _derece = Z["_derece"]
+    _mzn = Z["_mzn"]
+    _kume = Z["_kume"]
+    _sayac = Z["_sayac"]
+    _seyir = Z["_seyir"]
+    kapi_hukmu = Z["kapi_hukmu"]
+    kademe_gorevleri = Z["kademe_gorevleri"]
     _kume["v"] = list(veri)
     kume_kapanisi = {
         "yırtık": yirtiklari_tertiple(hafiza, getattr(nefs, "mahalli",
@@ -641,7 +760,30 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
          "V_son": float(_son["kayıp"]),
          "kayıp_çağrısı": int(_sayac["çağrı"]), "seyir": _seyir,
          "günlük": [], "düşen_uzuv": {}}
+    safha("D9 KÜME KAPANIŞI", V_ilk="%.4f" % r["V_ilk"],
+          V_son="%.4f" % r["V_son"])
+    Z.update({"kume_kapanisi": kume_kapanisi, "p_son": p_son, "r": r,
+              "mzn": mzn})
+    return Z
 
+
+def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
+    from nefs.qegitim import degerlendir
+    ayar = Z["ayar"]
+    veri = Z["veri"]
+    d = Z["d"]
+    r = Z["r"]
+    mzn = Z["mzn"]
+    _mzn = Z["_mzn"]
+    _sayac = Z["_sayac"]
+    nefs = Z["nefs"]
+    hafiza = Z["hafiza"]
+    devam = Z["devam"]
+    dogrulama = Z["dogrulama"]
+    hendese = Z["hendese"]
+    hamiltonyen = Z["hamiltonyen"]
+    kademe_gorevleri = Z["kademe_gorevleri"]
+    mun = Z["mun"]
     p_yildiz = np.asarray(r["p"], float)
     assert p_yildiz.size == d, (
         "tâlim %d parametre aldı, %d döndürdü" % (d, p_yildiz.size))
@@ -782,6 +924,35 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                         hendese=hendese, munasebet=mun["harita"],
                         onceki=devam.get("harita"))
 
+    safha("D10 KELÂM", konuşan=int(konusma["konuşan"]),
+          susan=int(konusma["susan"]))
+    Z.update({"p_yildiz": p_yildiz, "deg": deg, "ders": ders,
+              "q_son": q_son, "tur": tur, "psi_son": psi_son, "dhr": dhr,
+              "tab": tab, "tdd": tdd, "stab": stab, "goz": goz,
+              "golge": golge, "flo": flo, "sb": sb, "sb_olcu": sb_olcu,
+              "palmer": palmer, "fazp": fazp, "sik": sik, "akis": akis,
+              "sad": sad, "usl": usl, "sup": sup, "_tur": _tur,
+              "son_sadakat": son_sadakat, "konusma": konusma,
+              "kefeler": kefeler, "taban_durumu": taban_durumu,
+              "cetvel": cetvel, "mukayese": mukayese, "harita": harita})
+    return Z
+
+
+def d11_muhur(Z: Dict[str, Any]) -> Dict[str, Any]:
+    ayar = Z["ayar"]
+    d = Z["d"]
+    r = Z["r"]
+    mun = Z["mun"]
+    devam = Z["devam"]
+    imlec = Z["imlec"]
+    fock = Z["fock"]
+    hafiza = Z["hafiza"]
+    ders = Z["ders"]
+    kefeler = Z["kefeler"]
+    cetvel = Z["cetvel"]
+    harita = Z["harita"]
+    p_yildiz = Z["p_yildiz"]
+    taban_durumu = Z["taban_durumu"]
     _kapanan = int(mun.get("temizlenen", 0)) + int(mun.get("kirli_kalan", 0))
     kayit = hazine.muhurle(
         _kapanan,
@@ -813,73 +984,25 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
          "hafıza_yazma": float(ayar.hafiza_yazma),
          "hafıza_sönümü": float(ayar.hafiza_sonumu),
          "zeno_eşiği": float(ayar.zeno_esigi)})
+    safha("D11 MÜHÜR", bayt=int(kayit.get("bayt", 0) or 0))
+    Z.update({"kayit": kayit})
+    return Z
 
-    return {"ayar": ayar.ad, "parametre": d,
-            "devam": devam, "imleç": imlec,
-            "geçit": kapi, "ders": ders, "hazine": kayit,
-            "lif": lif_beyani(harita),
-            "hendese": hendese, "hendese_beyanı": hendese_beyani(),
-            "safha": safha_beyani(),
-            "dhr": dhr, "casimir_beyanı": casimir_beyani(),
-            "parite_lifi": int(ayar.parite_lifi),
-            "mertebe_tayfı": {
-                ad: float(p) for ad, p in
-                zip(hendese["katman"], hendese["tayf"])},
-            "lif_demeti": [float(x) for x in hendese["asansör"]["demet"]],
-            "büzülme": float(hendese["asansör"]["büzülme"]),
-            "hodge": hendese["hodge"], "Ω_cebiri": hendese["Ω_cebiri"],
-            "tdd": tdd, "stabilizer": stab, "gölge": golge,
-            "galois": tab.beyan(),
-            "flo": flo, "sbox": sb, "sbox_ölçü": sb_olcu,
-            "palmer": palmer,
-            "faz_polinomu": fazp, "gpu_akışı": akis, "siklotomik": sik,
-            "sadakat": sad, "son_sadakat": son_sadakat,
-            "sadakat_devresi": sadakat_devre_beyani(),
-            "mukayese": mukayese,
-            "mukayese_melekesi": mukayese_melekesi_beyani(),
-            "vecih": vecih_beyani(),
-            "vecih_ömrü": omur_beyani(),
-            "devre": devre_beyani(),
-            "hamiltonyen": hamiltonyen_beyani(),
-            "çözüm_uzayı": cozum_beyani(),
-            "fock": fock_beyani(),
-            "sektör": sektor_beyani(),
-            "hafıza_tertibi": tertip_beyani(),
-            "küme_kapanışı": kume_kapanisi,
-            "mihenk": nobet.beyan(p_yildiz),
-            "eniyileme": mecz_beyani(),
-            "faz_borcu": q_son.y.faz_borcu(),
-            "konuşma": konusma, "münasebet": munasebet_beyani(),
-            "keyfiyet": keyfiyet_beyani(),
-            "külliyat": {"arc": len(arc_veri), "külliyat": len(kul_veri),
-                         "döküm": kulliyat_dokumu()},
-            "belirteç": belirtec_beyani(str(ayar.kodlama)),
-            "ölçek": ayar.olcek_dokumu, "elle_verilen": ayar.elle,
-            "denge": olculen_lam, "ilk_kefeler": ilk_kefeler,
-            "usul": usl, "şüphe": sup,
-            "hızölçer": hizolcer_beyani(),
-            "çekirdek": cekirdek_beyani(),
-            "parametre_yazmacı": parametre_beyani(
-                getattr(nefs, "pq", None)),
-            "kenetlenme": kenet_beyani(),
-            "mahallî_yazmaç": mahalli_beyani(),
-            "uzunluk_katmanı": uzunluk_beyani(),
-            "veri_kapısı": kapi_beyani(),
-            "kan_nqs": nqs_beyani(getattr(nefs, "kan", None)),
-            "tur_genliği": _tur,
-            "mizan": kefeler, "veri_cetveli": cetvel,
-            "hafıza": hafiza.beyan(), "rüşt": float(kefeler["α_rüşt"]),
-            "veri": len(veri),
-            "V_ilk": float(r["V_ilk"]), "V_son": float(r["V_son"]),
-            "süre_sn": time.perf_counter() - t0,
-            "kayıp_çağrısı": int(r.get("kayıp_çağrısı", 0)),
-            "seyir": r.get("seyir", []),
-            "değerlendirme": deg,
-            "tâlim_günlüğü": r.get("günlük", []),
-            "düşen_uzuv": r.get("düşen_uzuv", {}),
-            "kademe_görevi": len(kademe_gorevleri),
-            "kademe_parametresi": kademe_parametresi,
-            "p": p_yildiz}
+
+ZINCIR: Tuple[Any, ...] = (d0_gecit, d1_olcu, d2_hendese, d3_kurulus,
+                           d4_kapi, d5_uzay, d5b_sadakat, d6_mizan,
+                           d8_dongu, d9_kapanis, d10_kelam, d11_muhur)
+
+
+def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
+                       gorevler: Optional[Sequence] = None
+                       ) -> Dict[str, object]:
+    from tanilama.beyan import netice_derle
+    safha_sifirla()
+    Z: Dict[str, Any] = {"ayar": ayar, "gorevler": gorevler}
+    for durum in ZINCIR:
+        Z = durum(Z)
+    return netice_derle(Z)
 
 
 def muhurle(cikti_yolu: str, netice: Dict[str, object]) -> None:

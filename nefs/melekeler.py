@@ -1376,7 +1376,7 @@ class QNefs:
             q.iz.kapi_yaz("başlangıç", (),
                           np.asarray(q.y.psi, complex).copy())
         if tikaniklik:
-            ortu(ne="kapı", q=q, h1=float(tikaniklik))
+            ortu(ne="kapı", q=q, h1=float(tikaniklik), p=self.p)
         from .casimir import kartan_fazi
         q.y.faz(kartan_fazi(tuple(int(x) for x in q.y.ayar.lif),
                             [float(getattr(self.ayar, "kartan_acisi",
@@ -1422,12 +1422,12 @@ class QNefs:
                 okumalar[int(no)] = d if eski is None else {
                     k: min(v, eski.get(k, v)) for k, v in d.items()}
         if self.sadakat:
-            q.iz.kesme += vicdan(q, ne="usul")
+            q.iz.kesme += vicdan(q, self.p, ne="usul")
         if self.gaye:
             from ogrenme.optimize import gaye_kos
             q.iz.kesme += gaye_kos(q, self.p)
         if self.sadakat:
-            vicdan(q, ne="intaç")
+            vicdan(q, self.p, ne="intaç")
             from .sadakat import SadakatAyari, sadakat_uygula
             lif = tuple(int(x) for x in q.y.ayar.lif)
             sadakat_uygula(q.y, SadakatAyari(

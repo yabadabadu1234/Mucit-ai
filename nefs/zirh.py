@@ -512,6 +512,19 @@ def _yasak_cetveli() -> Dict[str, List[Dict[str, int]]]:
     return _YASAK_CETVELI
 
 
+def _zirh_acisi(p, anahtar: str, n: int = 1,
+                olcek: float = 0.25 * math.pi):
+    assert p is not None and hasattr(p, "aci"), (
+        "SEKTÖR DÖNMESİ PARAMETRESİZ ÇAĞRILDI (%r) -- açı sürekli "
+        "Lie-Cartan parametresinden gelir; sabit açı eğim taşımaz "
+        "(ferman 1-A #36, 2-R, 2-P)" % (anahtar,))
+    a = np.asarray(p.aci(str(anahtar), int(n), float(olcek)),
+                   float).reshape(-1)
+    par = int(np.asarray(p.aci_adresi(str(anahtar),
+                                      int(n))).reshape(-1)[0])
+    return a, (par, 1.0, 1.0)
+
+
 def vicdan(q=None, p=None, usuller=None, tur: int = 1,
                                    ne: str = "hepsi", orutu=None):
     if ne == "yasaklar":
@@ -550,7 +563,7 @@ def vicdan(q=None, p=None, usuller=None, tur: int = 1,
     if ne in ("usul", "hepsi"):
         us = USULLER if usuller is None else usuller
         _, kac = q._alan["tertip"]
-        q.sektor_donmesi("tertip", 0.25 * math.pi)
+        q.sektor_donmesi("tertip", *_zirh_acisi(p, "zırh.tertip"))
         cetvel = _yasak_cetveli()
         for i, u in enumerate(us[:kac]):
             for k, yasak in enumerate(cetvel.get(u.ad, [])):
@@ -559,12 +572,16 @@ def vicdan(q=None, p=None, usuller=None, tur: int = 1,
 
     if ne in ("intaç", "hepsi"):
         for _ in range(max(1, int(tur))):
+            _aci = {ad: _zirh_acisi(p, "zırh.intaç.%s" % ad)
+                    for ad in HUKUM_ALANLARI}
             for ad in HUKUM_ALANLARI:
-                q.sektor_donmesi(ad, -0.25 * math.pi)
+                _a, _b = _aci[ad]
+                q.sektor_donmesi(ad, -_a, _b)
             kesme += q.sektor_oruntusu(
                 {ad: 0 for ad in HUKUM_ALANLARI}, kok="intaç.hüküm")
             for ad in HUKUM_ALANLARI:
-                q.sektor_donmesi(ad, 0.25 * math.pi)
+                _a, _b = _aci[ad]
+                q.sektor_donmesi(ad, _a, _b)
 
     return float(kesme)
 

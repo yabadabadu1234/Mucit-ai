@@ -1662,13 +1662,20 @@ def terkip_saglam_mi() -> Dict[str, object]:
 def ortu(gorev=None, ne: str = "tıkanıklık", q=None,
                       h1: float = 0.0, olcek: float = 0.9,
                       n_gorev: int = 40, tohum: int = 0, chi: int = 8,
-                      kapi: bool = True):
+                      kapi: bool = True, p=None):
     if ne == "kapı":
         import math
         if h1 <= 0:
             return
-        q.sektor_donmesi("sukut",
-                         float(olcek * math.atan(float(h1))))
+        assert p is not None and hasattr(p, "aci"), (
+            "ÖRTÜ KAPISI PARAMETRESİZ ÇAĞRILDI -- sektör dönmesinin "
+            "ölçeği sürekli parametreden gelir (ferman 2-R, 2-P)")
+        _ad = "örtü.kapı.ölçek"
+        _o = float(np.asarray(p.aci(_ad, 1, float(olcek)),
+                              float).reshape(-1)[0])
+        _par = int(np.asarray(p.aci_adresi(_ad, 1)).reshape(-1)[0])
+        q.sektor_donmesi("sukut", float(_o * math.atan(float(h1))),
+                         (_par, float(math.atan(float(h1))), 1.0))
         return
 
     if ne == "yama":
