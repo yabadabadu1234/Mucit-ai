@@ -6008,6 +6008,88 @@ class KuvveiBaiseVeMotorlar:
                 "def_kuvveti": float(v_def[aday_hedef]), "eylem_vektoru": eylem_vektoru}
 
 
+def topos_modalite_lifi_isle(hakikat_degeri: float, tenakuz_derecesi: float,
+                             omega_cebiri: str) -> Dict[str, Any]:
+    val = float(np.clip(hakikat_degeri, 0.0, 1.0))
+    t_derece = float(np.clip(tenakuz_derecesi, 0.0, 1.0))
+
+    kutu_zorunluluk = 1.0 if (val >= 0.95 and t_derece < 0.05) else 0.0
+    elmas_imkan = 1.0 if (val > 0.05 or t_derece > 0.0) else 0.0
+
+    if t_derece > 0.2:
+        terfi_hukmu = "MODALİTE_LİFİNE_TERFİ_ETTİ"
+        modal_kuantum_degeri = complex(elmas_imkan * np.cos(np.pi * t_derece),
+                                       elmas_imkan * np.sin(np.pi * t_derece))
+    else:
+        terfi_hukmu = "ASLİ_LİFTE_KALDI"
+        modal_kuantum_degeri = complex(val, 0.0)
+
+    return {"box_zorunluluk": kutu_zorunluluk, "diamond_imkan": elmas_imkan,
+            "terfi_hukmu": terfi_hukmu, "modal_kuantum_degeri": modal_kuantum_degeri}
+
+
+def alt_nesne_pullback_chi(chi_hedef_haritasi: Dict[int, float],
+                           ok_gecisleri: Dict[Tuple[int, int], int],
+                           P: np.ndarray, Kan_rez: np.ndarray) -> Dict[int, float]:
+    geri_cekilen_chi: Dict[int, float] = {}
+
+    for (x, y) in ok_gecisleri.keys():
+        if y in chi_hedef_haritasi:
+            hedef_deger = chi_hedef_haritasi[y]
+            gecis_kuvveti = float(P[x, y])
+            tikanma = float(Kan_rez[x, y])
+
+            cekilen_deger = hedef_deger * gecis_kuvveti * (1.0 - 0.5 * tikanma)
+
+            if x not in geri_cekilen_chi or cekilen_deger > geri_cekilen_chi[x]:
+                geri_cekilen_chi[x] = float(np.clip(cekilen_deger, 0.0, 1.0))
+
+    return geri_cekilen_chi
+
+
+class ImajFaktorizasyonu:
+    __slots__ = ("kaynak", "hedef", "imaj_nesnesi", "epimorfizm_id", "monomorfizm_id")
+
+    def __init__(self, kaynak: int, hedef: int, imaj_id: int, epi_id: int, mono_id: int) -> None:
+        self.kaynak = kaynak
+        self.hedef = hedef
+        self.imaj_nesnesi = imaj_id
+        self.epimorfizm_id = epi_id
+        self.monomorfizm_id = mono_id
+
+
+def kategori_imaj_faktorizasyonu_yap(kat: Turetilen1Kategori,
+                                     P: np.ndarray) -> Dict[Tuple[int, int], ImajFaktorizasyonu]:
+    faktorizasyonlar: Dict[Tuple[int, int], ImajFaktorizasyonu] = {}
+    yeni_imaj_tabani = max(kat.nesneler, default=0) + 2000
+    sayac = 0
+
+    for (x, y), ok_id in kat.ok_siniflari.items():
+        if x == y:
+            continue
+        imaj_id = yeni_imaj_tabani + sayac
+        epi_id = len(kat.ok_siniflari) + sayac * 2
+        mono_id = len(kat.ok_siniflari) + sayac * 2 + 1
+
+        faktorizasyonlar[(x, y)] = ImajFaktorizasyonu(
+            kaynak=x, hedef=y, imaj_id=imaj_id, epi_id=epi_id, mono_id=mono_id)
+        sayac += 1
+
+    return faktorizasyonlar
+
+
+def frobenius_ko_carpim_klonla(nesne_id: int,
+                               monoidal_kat: MonoidalKategori) -> Tuple[int, Tuple[int, int]]:
+    klon_nesne = monoidal_kat.tensor_nesneleri.get((nesne_id, nesne_id))
+    if klon_nesne is None:
+        n_id = max(monoidal_kat.kategori.nesneler, default=0) + 1
+        klon_nesne = nesne_id * n_id + nesne_id
+        monoidal_kat.tensor_nesneleri[(nesne_id, nesne_id)] = klon_nesne
+
+    delta_morfizmi = (nesne_id, klon_nesne)
+    return klon_nesne, delta_morfizmi
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -6908,6 +6990,18 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         ameli_akil_raporu=ameli_rapor, P_satiri=P[baglam[-1]])
     hakiki_icra_hedefi = eylem_raporu["nihai_icra_tokeni"]
 
+    tenakuz_orani = float(terazi_hukmu.get("ihtilaf", 0.0))
+    modalite_raporu = topos_modalite_lifi_isle(
+        hakikat_degeri=float(muhakemeler[-1].get("doğrudan_güç", 0.5)),
+        tenakuz_derecesi=tenakuz_orani, omega_cebiri=tayf_bilgisi["Ω_cebiri"])
+
+    hedef_chi = {nihai_hedef: 1.0}
+    pullback_chi_haritasi = alt_nesne_pullback_chi(
+        chi_hedef_haritasi=hedef_chi, ok_gecisleri=turetilen_kategori.ok_siniflari,
+        P=P, Kan_rez=tayf_bilgisi["Kan_rezidusu"])
+
+    imaj_faktorleri = kategori_imaj_faktorizasyonu_yap(turetilen_kategori, P)
+
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
 
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
@@ -6935,6 +7029,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         hata_vektoru=hata_vektoru, yon_vektoru=np.ones(len(senetler)))
 
     monoidal_kat = MonoidalKategori(turetilen_kategori)
+    klon_id, delta_oku = frobenius_ko_carpim_klonla(nihai_hedef, monoidal_kat)
 
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
@@ -7029,5 +7124,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "kuvve_i_baise_eylem": {k: v for k, v in eylem_raporu.items() if k != "eylem_vektoru"},
         "hakiki_icra_hedefi": hakiki_icra_hedefi,
         "sevk_kaynagi": eylem_raporu["sevk_kaynagi"],
+        "modalite_lifi_raporu": modalite_raporu,
+        "pullback_chi_haritasi": pullback_chi_haritasi,
+        "imaj_faktorizasyon_sayisi": len(imaj_faktorleri),
+        "frobenius_klon_hedefi": klon_id,
         "detay": tayf_bilgisi
     }
