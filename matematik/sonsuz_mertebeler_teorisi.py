@@ -6302,6 +6302,15 @@ class NefsiNebatiKatmani:
         self.metabolik_enerji = float(np.clip(self.metabolik_enerji + besin_degeri - harcanan, 0.1, 5.0))
         return self.metabolik_enerji
 
+    def taziye_entropi_bagimli(self, veri_boyutu: int, sistem_entropisi: float,
+                               hedef_entropi: float = 0.5) -> float:
+        entropi_faktoru = float(np.exp(-((float(sistem_entropisi) - hedef_entropi) ** 2) / 0.1))
+        taban_enerji = float(veri_boyutu) * 0.01
+        duzeltilmis_enerji = taban_enerji * (0.5 + 0.5 * entropi_faktoru)
+        self.metabolik_enerji = float(np.clip(
+            0.5 * self.metabolik_enerji + 0.5 * duzeltilmis_enerji, 0.1, 5.0))
+        return self.metabolik_enerji
+
     def tenmiye_buyu(self, mevcut_lif_boyutu: int, veri_zenginligi: int) -> int:
         if veri_zenginligi > mevcut_lif_boyutu and self.metabolik_enerji > 1.5:
             self.canlilik_kapasitesi += 0.1

@@ -76,7 +76,7 @@ _SAYAC: Dict[str, float] = {
     "örnek": 0.0, "tur": 0.0, "temizlenen": 0.0, "kirli_kalan": 0.0,
     "bag": 0.0, "kayip_cagrisi": 0.0, "geri_donen": 0.0,
     "denge": 0.0, "saat_kesti": 0.0, "nebati_metabolik_enerji": 1.0,
-    "nebati_tenmiye_sayisi": 0.0}
+    "nebati_tenmiye_sayisi": 0.0, "nebati_sistem_entropisi": 0.0}
 
 
 def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
@@ -116,7 +116,15 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
         zayif = np.asarray([h.zayiflik(veri[i][0]) for i in kalan], float)
         entropi_kaybi = float(np.mean(zayif)) if zayif.size else 0.0
         metabolik_enerji = nebati.taziye_gidalan(len(kalan), entropi_kaybi)
+        p_olasilik = np.abs(p) / (np.sum(np.abs(p)) + 1e-12)
+        p_olasilik = p_olasilik[p_olasilik > 1e-12]
+        shannon_entropi = (float(-np.sum(p_olasilik * np.log(p_olasilik)))
+                           if p_olasilik.size else 0.0)
+        maks_entropi = float(np.log(len(p))) if len(p) > 1 else 1.0
+        sistem_entropisi = float(np.clip(shannon_entropi / (maks_entropi + 1e-12), 0.0, 1.0))
+        metabolik_enerji = nebati.taziye_entropi_bagimli(len(kalan), sistem_entropisi)
         _SAYAC["nebati_metabolik_enerji"] = metabolik_enerji
+        _SAYAC["nebati_sistem_entropisi"] = sistem_entropisi
         yeni_obek_boyu = nebati.tenmiye_buyu(obek, len(kalan))
         if yeni_obek_boyu != obek:
             _SAYAC["nebati_tenmiye_sayisi"] += 1.0
@@ -174,7 +182,8 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
             "kirli_kalan": kirli, "tur": int(_SAYAC["tur"]),
             "doyma": h.doyma(),
             "nebati_metabolik_enerji": nebati.metabolik_enerji,
-            "nebati_canlilik_kapasitesi": nebati.canlilik_kapasitesi}
+            "nebati_canlilik_kapasitesi": nebati.canlilik_kapasitesi,
+            "nebati_sistem_entropisi": float(_SAYAC["nebati_sistem_entropisi"])}
 
 
 def munasebet_beyani() -> Dict[str, Any]:
@@ -190,7 +199,8 @@ def munasebet_beyani() -> Dict[str, Any]:
             "saat_kesti": int(_SAYAC["saat_kesti"]),
             "küme_başına_tur": float(_SAYAC["tur"] / k),
             "nebati_metabolik_enerji": float(_SAYAC["nebati_metabolik_enerji"]),
-            "nebati_tenmiye_sayisi": int(_SAYAC["nebati_tenmiye_sayisi"])}
+            "nebati_tenmiye_sayisi": int(_SAYAC["nebati_tenmiye_sayisi"]),
+            "nebati_sistem_entropisi": float(_SAYAC["nebati_sistem_entropisi"])}
 
 
 def munasebet_sifirla() -> None:
