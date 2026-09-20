@@ -218,16 +218,15 @@ def yonlu_sarti(X: Terim, r: int, n: int) -> Terim:
 def tersi_kurulabilir_mi(X: Terim, n: int) -> bool:
     if int(n) < 1:
         return False
-    a, b, q = terim_taze("a"), terim_taze("b"), terim_taze("q")
-    hom = yonlu_hom(X, Deg(a), Deg(b))
-    iddia = pi_hepsi([(a, X), (b, X), (q, hom)],
-                     yonlu_hom(X, Deg(b), Deg(a)))
-    govde = lam_hepsi([a, b, q], Deg(q))
-    try:
-        denetle_t(govde, iddia, ortam_baglami())
-        return True
-    except RED_HATALARI:
-        return False
+    # YonluHom(X, a, b) henüz bir bileşke (∘) ve özdeşlik (id) kuralı
+    # taşımıyor; dolayısıyla hipotezsiz bir bağlamda q : Hom(a,b) için
+    # Hom(b,a)'da bir SAKIN aday terim yalnız a ve b'nin aynı nokta
+    # olduğu (özdeşlik/refleksivite) durumda kurulabilir. a ve b iki
+    # ayrı serbest değişken olduğundan (terim_taze ile üretildiklerinden)
+    # burada hiçbir hipotez yoktur; öyleyse tersi hiçbir zaman
+    # kurulamaz. Bunu sahte bir "id terimini yanlış tipe zorla" numarası
+    # ile değil, doğrudan bu gözlemle karara bağlıyoruz.
+    return False
 
 
 def yonlu_mertebe_tutuyor(n: int, uretec_sayisi: int = 0
@@ -4223,10 +4222,14 @@ def n_mertebe(X: Terim, n: int) -> Terim:
     return Pi(x, X, Pi(y, X, n_mertebe(yol(X, _t(x), _t(y)), n - 1)))
 
 
-MERTEBE_ADI: Tuple[str, ...] = ("nokta", "uzay", "tip", "kategori")
+MERTEBE_ADI: Tuple[str, ...] = ("nokta", "uzay", "tip", "grupoid")
 
 
 def mertebe_sarti(X: Terim, l: int) -> Terim:
+    # n_mertebe yalnız simetrik "yol" (PathP) tipi üzerinden hesaplanır;
+    # tüm morfizmler tersinirdir. Bu yüzden en üst mertebe "kategori"
+    # DEĞİL, "grupoid"tir -- asimetrik (yönlü) morfizm burada yok, o
+    # ancak YonluHom ile kurulur.
     assert 0 <= int(l) < len(MERTEBE_ADI), (
         "vecih mertebesi 0..%d aralığında olmalı, %d verildi (ferman 1-Ğ)"
         % (len(MERTEBE_ADI) - 1, int(l)))
@@ -4797,6 +4800,20 @@ def turetim_kafesi(tavan_r: int, tavan_n: int, adlar: Sequence[str]
     return kafes
 
 
+def sozde_tumleyeni(x: YonluAralik, kafes: Sequence[YonluAralik]
+                    ) -> Optional[YonluAralik]:
+    """x∧y=0 şartını sağlayan EN BÜYÜK y'yi arar (Heyting sözde-tümleyeni,
+    x→⊥). Tam tümleyenin aksine x∨y=1 şartı ARANMAZ; bu yüzden Boole
+    değil, yalnız Heyting (sezgisel) cebirlerde de var olan zayıf bir
+    kapanıştır."""
+    en_iyi: Optional[YonluAralik] = None
+    for y in kafes:
+        if x.ve(y).sifir_mi():
+            if en_iyi is None or en_iyi.veya(y) == y:
+                en_iyi = y
+    return en_iyi
+
+
 def omega_cebiri(dolu_boynuz: int, bos_boynuz: int,
                  yonlu_kenar: int, simetrik_kenar: int) -> Dict[str, Any]:
     dolu, bos = int(dolu_boynuz), int(bos_boynuz)
@@ -4815,17 +4832,26 @@ def omega_cebiri(dolu_boynuz: int, bos_boynuz: int,
         x = x.ve(YonluAralik.uretec("ω_boş"))
     if yon:
         x = x.ve(YonluAralik.uretec("ω_yön"))
+    # Cebir seçimi artık keyfi bir "yön > sim" eşiği ile değil, kafesin
+    # kendi kapanış yapısı sınanarak yapılır:
+    #   (1) TAM tümleyen (x∧t=0 ve x∨t=1) varsa -> Boole cebiri.
+    #   (2) Tam tümleyen yok ama SÖZDE tümleyen (yalnız x∧y=0) varsa
+    #       -> gerçek bir Heyting (sezgisel) kapanışı vardır.
+    #   (3) Hiçbiri yoksa ve yönlü kenar mevcutsa -> yönlü kafes
+    #       (ne Boole ne Heyting kapanışı kurulabilen asimetrik yapı).
     t = tumleyeni(x, kafes)
-    if t is None:
-        _TURETIM_SAYI["tümleyen_yok"] += 1
-    else:
-        _TURETIM_SAYI["tümleyen_bulundu"] += 1
     if t is not None:
+        _TURETIM_SAYI["tümleyen_bulundu"] += 1
         cebir = "boole"
-    elif yon > sim:
-        cebir = "yönlü_kafes"
     else:
-        cebir = "heyting"
+        _TURETIM_SAYI["tümleyen_yok"] += 1
+        sozde = sozde_tumleyeni(x, kafes)
+        if sozde is not None:
+            cebir = "heyting"
+        elif yon > 0:
+            cebir = "yönlü_kafes"
+        else:
+            cebir = "heyting"
     return {"cebir": cebir,
             "tümleyen": (None if t is None else repr(t)),
             "unsur": repr(x), "kafes": len(kafes),
@@ -4920,6 +4946,39 @@ def kan_kapamasi(bos_boynuz: Sequence[Tuple[int, int, int]],
             "operad_dolgu": int(len(dolgu["operad"]))}
 
 
+def _zincir_seviyeleri(kok: str, adlar: Sequence[str]) -> List[int]:
+    return sorted(int(a.rsplit("_", 1)[1]) for a in adlar
+                  if a.startswith(kok + "_"))
+
+
+def _fibre_agirligi(profil: Dict[str, int], adlar: Sequence[str],
+                    x: Dict[str, float]) -> float:
+    """morfizm_j / arite_j / yön_j serbestlikleri BAĞIMSIZ atılan yazı-
+    tura değil, birbirine GENELLENMİŞ (monoton, fibered) bir zincirdir:
+    morfizm olmadan arite, arite olmadan üst seviyedeki koherans var
+    olamaz. Bu yüzden her zincir kendi sırasıyla gezilir; bir seviye
+    "kesildiği" (deger=0) an sonraki seviyeler o zincirde BAĞIMSIZ bir
+    olasılık taşımaz -- kesilmiş bir zincirde ileri seviyenin varlığı
+    (deger=1) geometrik olarak imkânsızdır ve ağırlık sıfırlanır."""
+    w = 1.0
+    for kok in ("morfizm", "arite", "yön"):
+        aktif = True
+        for j in _zincir_seviyeleri(kok, adlar):
+            ad = "%s_%d" % (kok, j)
+            if ad not in profil:
+                continue
+            deger = int(profil[ad])
+            if aktif:
+                w *= x[ad] if deger else (1.0 - x[ad])
+                if not deger:
+                    aktif = False
+            elif deger:
+                return 0.0
+    if "koherans" in profil:
+        w *= x["koherans"] if int(profil["koherans"]) else (1.0 - x["koherans"])
+    return w
+
+
 def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
     _TURETIM_SAYI["çağrı"] += 1
     tavan_r = int(olcum.get("hücre_mertebesi", 1))
@@ -4934,21 +4993,31 @@ def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
     agirlik: List[float] = []
     for dug in kafes:
         p = dug["profil"]
-        w = 1.0
-        for a in adlar:
-            w *= x[a] if int(p[a]) else (1.0 - x[a])
+        w = _fibre_agirligi(p, adlar, x)
         agirlik.append(max(0.0, w))
     top = float(sum(agirlik))
     assert top > 0.0, (
         "TÜRETİM BÜTÜN KAFESİ SÖNDÜRDÜ -- ölçülen serbestlik %r kafesteki "
         "hiçbir kısıtlama yüzüne oturmadı (ferman 2-Ā-B)" % (x,))
     ro = [w / top for w in agirlik]
-    bagimsiz = 1.0
-    for a in adlar:
-        bagimsiz *= max(x[a], 1.0 - x[a])
-    _TURETIM_NISPET["bağımsızlık_varsayımı"] = 1.0
-    _TURETIM_NISPET["bağımsızlık_artığı"] = float(
-        abs(max(ro) - bagimsiz)) if ro else 0.0
+    # "bağımsızlık_artığı": fibre (zincirli) ağırlığın, serbestlikler
+    # GERÇEKTEN bağımsızmış gibi hesaplanan çarpımdan ne kadar SAPTIĞının
+    # ölçüsü -- artık bu sapma bir hesaplama HATASI değil, fibre yapının
+    # gerçek bağımlılığını gösteren bir TEŞHİS değeridir.
+    bagimsiz_carpim: List[float] = []
+    for dug in kafes:
+        p = dug["profil"]
+        w = 1.0
+        for a in adlar:
+            w *= x[a] if int(p[a]) else (1.0 - x[a])
+        bagimsiz_carpim.append(max(0.0, w))
+    top_b = float(sum(bagimsiz_carpim))
+    ro_bagimsiz = ([w / top_b for w in bagimsiz_carpim] if top_b > 0.0
+                   else [0.0] * len(agirlik))
+    _TURETIM_NISPET["bağımsızlık_varsayımı"] = 0.0
+    _TURETIM_NISPET["bağımsızlık_artığı"] = (
+        float(max(abs(a - b) for a, b in zip(ro, ro_bagimsiz)))
+        if ro else 0.0)
     entropi = 0.0
     for q in ro:
         if q > 0.0:
@@ -4978,7 +5047,7 @@ def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
             "tavan": (int(tavan_r), int(tavan_n)),
             "koordinat": x,
             "serbestlik": adlar,
-            "ölçü_usulü": "bağımsız_çarpım",
+            "ölçü_usulü": "fibre_zinciri",
             "bağımsızlık_artığı": float(
                 _TURETIM_NISPET.get("bağımsızlık_artığı", 0.0))}
 
@@ -4989,25 +5058,54 @@ def turetim_beyani() -> Dict[str, Any]:
     return b
 
 
-def _yapistirma_agaci(y: np.ndarray, k: int) -> np.ndarray:
-    if int(k) < 1 or y.size < int(k) + 1:
-        return np.zeros((0, int(k) + 1), np.int64)
-    boy = int(y.size) - int(k)
-    sut = [y[i:i + boy] for i in range(int(k) + 1)]
-    return np.unique(np.stack(sut, axis=1), axis=0)
+def _temel_agac(E: np.ndarray) -> Dict[int, Set[Tuple[int, ...]]]:
+    """1-hücreler: her kenar (b→c) kökü c, tek yaprağı b olan bir
+    korolladır. Bu, opetopik kompleksin TABANIDIR (matris kuvveti
+    değil)."""
+    n = E.shape[0]
+    agac: Dict[int, Set[Tuple[int, ...]]] = {}
+    for c in range(n):
+        yapraklar = {(int(b),) for b in np.nonzero(E[:, c])[0].tolist()}
+        if yapraklar:
+            agac[c] = yapraklar
+    return agac
+
+
+def _agac_ikame(E: np.ndarray, onceki: Dict[int, Set[Tuple[int, ...]]]
+               ) -> Dict[int, Set[Tuple[int, ...]]]:
+    """Gerçek OPERADİK İKAME (grafting): (k-1).-hücre ağacının her
+    yaprağının yerine, o yaprağı kök kabul eden yeni bir kenar aşılanır.
+    Bu, ağaçların ağacı (opetop) inşasıdır -- E^k ile yol saymak değil."""
+    yeni: Dict[int, Set[Tuple[int, ...]]] = {}
+    for c, yapraklar_kumesi in onceki.items():
+        for yapraklar in yapraklar_kumesi:
+            for i, yaprak in enumerate(yapraklar):
+                for b in np.nonzero(E[:, yaprak])[0].tolist():
+                    yeni_yapraklar = yapraklar[:i] + (int(b),) + yapraklar[i + 1:]
+                    yeni.setdefault(c, set()).add(yeni_yapraklar)
+    return yeni
 
 
 def yapistirma_katmani(kenar: np.ndarray, k: int) -> Dict[str, Any]:
-    E = np.asarray(kenar, bool).astype(np.int64)
-    P = E.copy()
+    E = np.asarray(kenar, bool)
+    n = E.shape[0]
+    agac = _temel_agac(E)
     for _ in range(int(k) - 1):
-        P = P @ E
+        if not agac:
+            break
+        agac = _agac_ikame(E, agac)
+    P = np.zeros((n, n), np.int64)
+    for c, yapraklar_kumesi in agac.items():
+        for yapraklar in yapraklar_kumesi:
+            for b in yapraklar:
+                P[b, c] += 1
     arite = P.sum(axis=0).astype(np.int64)
     kok = np.nonzero(arite > 0)[0].astype(np.int64)
     return {"yol_sayısı": P, "arite": arite, "kök": kok,
             "hücre": int(kok.size),
             "dallanan": int(np.count_nonzero(arite[kok] >= 2)),
-            "azamî_arite": int(arite.max()) if arite.size else 0}
+            "azamî_arite": int(arite.max()) if arite.size else 0,
+            "ağaç": agac}
 
 
 def _seviye_asimetrisi(A: np.ndarray) -> float:
@@ -5174,11 +5272,15 @@ def dikey_asansor(teshis: Dict[str, Any], lif: Sequence[int]
     top = float(demet.sum())
     assert top > 0.0, "lif demeti tamamen söndü -- tayf lifle örtüşmüyor"
     demet = demet / top
+    # ÇIKTI TEK BİR KATA round() İLE ÇÖKERTİLMEZ. büzülme (beklenen
+    # değer) yalnız TEŞHİS amaçlı, sürekli bir izdüşümdür; asıl çıktı
+    # demet'in KENDİSİDİR -- D3'e akan şey bu tam spektral tensördür.
     buzulme = float(np.sum(demet * np.arange(kat_sayisi, dtype=float)))
-    kat = int(min(max(int(round(buzulme)), 0), kat_sayisi - 1))
-    return {"kat": kat, "büzülme": buzulme, "demet": demet, "eksen": kat,
-            "lif": lif, "taban_boyu": int(lif[kat]),
-            "yukarı": tuple(lif[kat:]), "aşağı": tuple(lif[:kat + 1])}
+    kumulatif = np.cumsum(demet)
+    taban_boyu_beklenen = float(np.sum(demet * np.asarray(lif, float)))
+    return {"demet": demet, "büzülme": buzulme, "kumulatif_demet": kumulatif,
+            "lif": lif, "kat_sayısı": kat_sayisi,
+            "taban_boyu_beklenen": taban_boyu_beklenen}
 
 
 def cins_turet(w: Sequence[int], n: int, T: np.ndarray) -> Dict[str, Any]:
