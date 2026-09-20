@@ -75,7 +75,8 @@ class Harita:
 _SAYAC: Dict[str, float] = {
     "örnek": 0.0, "tur": 0.0, "temizlenen": 0.0, "kirli_kalan": 0.0,
     "bag": 0.0, "kayip_cagrisi": 0.0, "geri_donen": 0.0,
-    "denge": 0.0, "saat_kesti": 0.0}
+    "denge": 0.0, "saat_kesti": 0.0, "nebati_metabolik_enerji": 1.0,
+    "nebati_tenmiye_sayisi": 0.0}
 
 
 def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
@@ -89,6 +90,7 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
                   ) -> Dict[str, Any]:
     from .keyfiyet import esik, keyfiyet
     from .sadakat import sadakat_beyani
+    from matematik.sonsuz_mertebeler_teorisi import NefsiNebatiKatmani
 
     a = ayar or MunasebetAyari()
     h = harita or Harita(n_v=int(a.n_v))
@@ -105,13 +107,24 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
     obek = max(1, int(a.obek))
     temizlenen = kirli = 0
     ugrayis: Dict[int, int] = {}
+    nebati = NefsiNebatiKatmani(baslangic_enerjisi=_SAYAC["nebati_metabolik_enerji"])
     while kalan:
         if had > 0.0 and time.perf_counter() - t0 >= had:
             _SAYAC["saat_kesti"] += float(len(kalan))
             kirli += len(kalan)
             break
         zayif = np.asarray([h.zayiflik(veri[i][0]) for i in kalan], float)
-        sira = np.argsort(-zayif)[:obek]
+        entropi_kaybi = float(np.mean(zayif)) if zayif.size else 0.0
+        metabolik_enerji = nebati.taziye_gidalan(len(kalan), entropi_kaybi)
+        _SAYAC["nebati_metabolik_enerji"] = metabolik_enerji
+        yeni_obek_boyu = nebati.tenmiye_buyu(obek, len(kalan))
+        if yeni_obek_boyu != obek:
+            _SAYAC["nebati_tenmiye_sayisi"] += 1.0
+        enerji_katsayisi = float(np.clip(metabolik_enerji / 2.0, 0.5, 2.0))
+        obek_bu_tur = max(1, int(round(yeni_obek_boyu * enerji_katsayisi)))
+        tur_katsayisi = float(np.clip(metabolik_enerji / 1.5, 0.7, 1.5))
+        azami_tur_bu_tur = max(1, int(round(int(a.azami_tur) * tur_katsayisi)))
+        sira = np.argsort(-zayif)[:obek_bu_tur]
         kume_idx = [kalan[int(j)] for j in sira]
         kume = [veri[i] for i in kume_idx]
         for i in kume_idx:
@@ -119,7 +132,7 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
 
         k: Dict[str, Any] = {}
         dokum: Optional[Dict[str, Any]] = None
-        for tur in range(max(1, int(a.azami_tur))):
+        for tur in range(azami_tur_bu_tur):
             if dengele is not None:
                 if dokum is None:
                     dokum = olc(p, kume)
@@ -132,7 +145,7 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
             k = keyfiyet(dokum, sadakat_beyani(), keyfiyet_ayari)
             if k["hudut_temiz"]:
                 break
-            if k["nispet"] >= esik(tur + 1, int(a.azami_tur),
+            if k["nispet"] >= esik(tur + 1, azami_tur_bu_tur,
                                    keyfiyet_ayari):
                 break
         assert k, "keyfiyet ölçülmeden küme kapatılamaz"
@@ -146,7 +159,7 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
         anahtar = min(kume_idx)
         if anahtar not in ugrayis:
             ugrayis[anahtar] = 1 + int(round(float(k["nispet"])
-                                             * max(1, int(a.azami_tur))))
+                                             * azami_tur_bu_tur))
         ugrayis[anahtar] -= 1
         if ugrayis[anahtar] > 0:
             _SAYAC["geri_donen"] += 1.0
@@ -159,7 +172,9 @@ def munasebet_kos(veri: Sequence[Tuple[Sequence[int], int]],
     return {"p": p, "harita": h, "açık": True,
             "örnek": int(_SAYAC["örnek"]), "temizlenen": temizlenen,
             "kirli_kalan": kirli, "tur": int(_SAYAC["tur"]),
-            "doyma": h.doyma()}
+            "doyma": h.doyma(),
+            "nebati_metabolik_enerji": nebati.metabolik_enerji,
+            "nebati_canlilik_kapasitesi": nebati.canlilik_kapasitesi}
 
 
 def munasebet_beyani() -> Dict[str, Any]:
@@ -173,12 +188,15 @@ def munasebet_beyani() -> Dict[str, Any]:
             "geri_dönen": int(_SAYAC["geri_donen"]),
             "denge_çağrısı": int(_SAYAC["denge"]),
             "saat_kesti": int(_SAYAC["saat_kesti"]),
-            "küme_başına_tur": float(_SAYAC["tur"] / k)}
+            "küme_başına_tur": float(_SAYAC["tur"] / k),
+            "nebati_metabolik_enerji": float(_SAYAC["nebati_metabolik_enerji"]),
+            "nebati_tenmiye_sayisi": int(_SAYAC["nebati_tenmiye_sayisi"])}
 
 
 def munasebet_sifirla() -> None:
     for k in _SAYAC:
         _SAYAC[k] = 0.0
+    _SAYAC["nebati_metabolik_enerji"] = 1.0
 
 
 def munasebet_metni(b: Optional[Dict[str, Any]] = None) -> str:
