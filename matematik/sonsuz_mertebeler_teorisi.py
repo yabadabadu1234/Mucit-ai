@@ -6710,6 +6710,71 @@ def cok_mertebeli_girisim_karari(kule: DereceliMertebeKulesi, n_boyut: int,
     return secilen_hedef, girisim_olasiliklari, katilim_paylari
 
 
+def hakiki_qudit_yogunluk_matrisi(psi_durum: np.ndarray, n_boyut: int) -> Tuple[np.ndarray, float]:
+    psi_taban = psi_durum[:n_boyut].copy().astype(complex)
+    norm = float(np.linalg.norm(psi_taban))
+    if norm > 1e-12:
+        psi_taban /= norm
+    else:
+        psi_taban = np.ones(n_boyut, dtype=complex) / np.sqrt(float(n_boyut))
+
+    rho_saf = np.outer(psi_taban, psi_taban.conj())
+
+    rho_karisik = 0.95 * rho_saf + 0.05 * (np.eye(n_boyut, dtype=complex) / float(n_boyut))
+    iz = float(np.real(np.trace(rho_karisik)))
+    rho_karisik /= (iz + 1e-12)
+
+    saflik = float(np.real(np.trace(rho_karisik @ rho_karisik)))
+    return rho_karisik, saflik
+
+
+def tekil_karar_hunisi(baglam_son: int, aday_hedef: int, kule_hedefi: int,
+                       girisim_olasiliklari: np.ndarray, t4_kan_sonuc: Dict[str, Any],
+                       j4_denetleyici: J4GeriYolDenetleyicisi, psi_durum: np.ndarray,
+                       kod_uzayi_maskesi: np.ndarray, vahime: VahimeIslemcisi,
+                       akile: AkileKatmani, baise_motoru: KuvveiBaiseVeMotorlar,
+                       kalp: ManeviKalpKatmani, P: np.ndarray,
+                       tayf_bilgisi: Dict[str, Any], Asim: np.ndarray) -> Dict[str, Any]:
+    n = P.shape[0]
+
+    kan_basamak = t4_kan_sonuc["secilen_basamak"]
+    birlesik_tercih = girisim_olasiliklari.copy()
+    if kan_basamak < n:
+        birlesik_tercih[kan_basamak] += 0.5 * t4_kan_sonuc["olcum_guveni"]
+    birlesik_tercih[aday_hedef] += 0.3
+    birlesik_tercih[kule_hedefi] += 0.4
+    ilk_oneri = int(np.argmax(birlesik_tercih))
+
+    n_normu = j4_denetleyici.kisit_projeksiyonu_olc(ilk_oneri, psi_durum, kod_uzayi_maskesi)
+    j4_hedef, geri_alindi, _ = j4_denetleyici.geri_yol_denetle(ilk_oneri, n_normu, birlesik_tercih)
+
+    vahime_raporu = vahime.mana_suz(son_token=baglam_son, hedef_aday=j4_hedef,
+                                    P=P, Kan_rez=tayf_bilgisi["Kan_rezidusu"], Asim=Asim)
+
+    ameli_rapor = akile.ameli_akil_tart(hedef_id=j4_hedef, vahime_raporu=vahime_raporu,
+                                        hedef_beklentisi=float(birlesik_tercih[j4_hedef]))
+
+    eylem_raporu = baise_motoru.sevk_ve_icra(aday_hedef=j4_hedef, vahime_raporu=vahime_raporu,
+                                             ameli_akil_raporu=ameli_rapor, P_satiri=P[baglam_son])
+    icra_adayi = eylem_raporu["nihai_icra_tokeni"]
+
+    itminan_derecesi = kalp.itminan_olc(psi_durum)
+    vicdan_raporu = kalp.vicdani_murakabe(eylem_raporu["eylem_vektoru"], itminan_derecesi)
+
+    if vicdan_raporu["kalbi_fetva"]:
+        kesin_hedef = icra_adayi
+        nihai_durum = "AMELÎ_VE_KALBÎ_MUTABAKAT"
+    else:
+        kesin_hedef = baglam_son
+        nihai_durum = "VİCDANÎ_FREN_SÜKÛT"
+
+    return {"kesin_nihai_hedef": kesin_hedef, "nihai_durum": nihai_durum,
+            "j4_geri_alindi": geri_alindi, "vahime_tehdit": vahime_raporu["tehdit"],
+            "ameli_irade_payi": ameli_rapor["irade_katsayisi"],
+            "sevk_kaynagi": eylem_raporu["sevk_kaynagi"],
+            "kalp_fetvasi": vicdan_raporu["kalbi_fetva"], "itminan_derecesi": itminan_derecesi}
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7335,6 +7400,9 @@ def _s0_havuz_al(n: int) -> Dict[str, Dict[Any, Any]]:
         int(n), {"tenakuzlar": {}, "entropiler": {}, "son_norm_korollalar": {}})
 
 
+_KALICI_HAFIZA_HAVUZU: Dict[str, Any] = {"cartan_kokleri": set(), "balyalar": [], "kayit_arsivi": []}
+
+
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
     s0_vakum_tetiklendi = False
@@ -7386,13 +7454,21 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     tikanma_gecmisi: List[float] = []
     azami_guvenlik_tavani = max(int(azami_adim), 8)
 
+    mertebe_kulesi = DereceliMertebeKulesi(maks_mertebe=4)
+    asansor = IkiYonluMertebeAsansoru(tavan_mertebe=4)
+
     adim = 0
     while True:
         Asim = asimetri_guncelle(P)
         tayf_bilgisi = topos_tayfi_hodge_ile_hesapla(P, Asim, norm_korollalar, baglam)
 
+        anlik_hodge_engeli = float(tayf_bilgisi["enerjiler"]["tıkanma"])
+        kat_seviyesi, tirmanis_notu = asansor.yukari_tirman(alt_engel=anlik_hodge_engeli)
+
         adim_muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar,
                                             yasakli_hedefler=cozulen_hedefler)
+        adim_muhakeme["asansor_kati"] = kat_seviyesi
+        adim_muhakeme["asansor_notu"] = tirmanis_notu
 
         sahit_gecerli = ispat_sahidini_dogrula(adim_muhakeme["ispat_sahidi"], baglam,
                                                adim_muhakeme["hedef"])
@@ -7402,6 +7478,11 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         tikanma_gecmisi.append(float(adim_muhakeme["kohomolojik_engel"]))
 
         cozulen_hedefler.add(adim_muhakeme["hedef"])
+
+        if sahit_gecerli and anlik_hodge_engeli < 0.05:
+            kat_seviyesi, inis_notu = asansor.asagi_in_intac(ust_koherans_tam_mi=True)
+            adim_muhakeme["asansor_kati"] = kat_seviyesi
+            adim_muhakeme["asansor_notu"] = inis_notu
 
         kefeler_anlik = np.array([adim_muhakeme["kohomolojik_engel"],
                                   adim_muhakeme.get("doğrudan_güç", 0.0),
@@ -7510,6 +7591,14 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     hedef_durum = np.zeros(n, dtype=float)
     hedef_durum[nihai_hedef] = 1.0
     kuantum_bilgisi = kuantum_yogunluk_ve_uhlmann(P, hedef_durum)
+
+    rho_kuantum_matrisi, rho_kuantum_safligi = hakiki_qudit_yogunluk_matrisi(nihai_intac_psi, n)
+    rho_kuantum_gercek = np.real(rho_kuantum_matrisi)
+    h_hedef = hedef_durum / (np.linalg.norm(hedef_durum) + 1e-12)
+    uhlmann_sadakati_hakiki = float(np.real(h_hedef.T @ (rho_kuantum_gercek @ h_hedef)))
+    kuantum_bilgisi["rho_yogunluk"] = rho_kuantum_gercek
+    kuantum_bilgisi["uhlmann_sadakati"] = uhlmann_sadakati_hakiki
+    kuantum_bilgisi["hata_uzay_capasi"] = float(1.0 - uhlmann_sadakati_hakiki)
 
     kefeler = cok_boyutlu_kefeler_olc(
         P=P, rho_yogunluk=kuantum_bilgisi["rho_yogunluk"],
@@ -7724,9 +7813,6 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     itminan_analizi = topos_terminal_buzulme_itminan(turetilen_kategori, P, kuantum_durum_vektoru)
 
-    mertebe_kulesi = DereceliMertebeKulesi(maks_mertebe=4)
-    asansor = IkiYonluMertebeAsansoru(tavan_mertebe=4)
-
     v_n1 = P[baglam[-1], :]
     mertebe_kulesi.mertebe_durumu_guncelle(n_seviye=1, durum_vektoru=v_n1, eylemsel_agirlik=float(rho[1]))
 
@@ -7786,16 +7872,31 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         kan_genlik=kan_dalga_genligi, son_token=baglam[-1],
         theta_cartan=theta_cartan, veri_lifi=max(2, min(n, 8)))
 
+    karar_silsilesi_raporu = tekil_karar_hunisi(
+        baglam_son=baglam[-1], aday_hedef=nihai_hedef, kule_hedefi=cok_mertebeli_hedef,
+        girisim_olasiliklari=girisim_vektoru, t4_kan_sonuc=t4_kan_olcum,
+        j4_denetleyici=j4_denetleyici, psi_durum=nihai_intac_psi,
+        kod_uzayi_maskesi=kod_uzayi_maskesi, vahime=vahime, akile=akile,
+        baise_motoru=baise_motoru, kalp=kalp, P=P, tayf_bilgisi=tayf_bilgisi, Asim=Asim)
+    kesin_icra_hedefi = karar_silsilesi_raporu["kesin_nihai_hedef"]
+
     X_jenerator = np.outer(kuantum_durum_vektoru[:n], kuantum_durum_vektoru[:n].conj())
     mc_raporu = maurer_cartan_egriligi_denetle(X_jenerator, Asim, baglam[-1], nihai_hedef)
 
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
     balyalama_raporu = d9_kume_kapanisi_ve_balyalama(
-        hafiza_havuzu={}, vecih_ortusmeleri=vecih_ortusmeleri_balya,
+        hafiza_havuzu=_KALICI_HAFIZA_HAVUZU, vecih_ortusmeleri=vecih_ortusmeleri_balya,
         aktif_kayitlar=silsile_adimlari)
+    _KALICI_HAFIZA_HAVUZU["kayit_arsivi"].append(
+        {"nihai_hedef": nihai_hedef, "balya_id": balyalama_raporu["yeni_balya_id"]})
 
     return {
+        "kesin_icra_hedefi": kesin_icra_hedefi,
+        "karar_silsilesi_raporu": karar_silsilesi_raporu,
+        "asansor_canli_son_kat": inilmis_mertebe,
+        "rho_kuantum_safligi": rho_kuantum_safligi,
+        "kalici_balya_toplami": len(_KALICI_HAFIZA_HAVUZU["balyalar"]),
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
         "muhakeme_silsilesi": muhakemeler,
