@@ -137,6 +137,139 @@ def givens(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     return U
 
 
+def kategori_kaybi(haller: Sequence[np.ndarray], azami: int = 32,
+                   tohum: int = 0) -> Dict[str, Any]:
+    m = len(haller)
+    if m < 3:
+        return {"kayıp": 0.0, "ihlâl": 0, "deneme": 0, "azamî": 0.0}
+    H = np.stack([np.asarray(h, complex).reshape(-1) for h in haller])
+    H = H / np.maximum(np.linalg.norm(H, axis=-1, keepdims=True), 1e-300)
+    r = np.random.default_rng(int(tohum))
+    k = int(min(int(azami), m))
+    ucluler = np.stack([r.choice(m, size=3, replace=False)
+                        for _ in range(k)])
+    toplam = 0.0
+    ihlal = 0
+    azami_fark = 0.0
+    for idx in ucluler:
+        a, b, c = (H[int(idx[0])], H[int(idx[1])], H[int(idx[2])])
+        M_f = givens(a, b)
+        M_g = givens(b, c)
+        M_gf = givens(a, c)
+        fark = M_gf - (M_g @ M_f)
+        d2 = float(np.sum(np.abs(fark) ** 2))
+        toplam += d2
+        azami_fark = max(azami_fark, d2)
+        if d2 > 1e-9:
+            ihlal += 1
+    n = float(len(ucluler))
+    kayip = toplam / n
+    assert math.isfinite(kayip), "kategori kaybı sonlu değil"
+    assert kayip >= 0.0, "Frobenius normunun karesi negatif çıkamaz"
+    return {"kayıp": float(kayip), "ihlâl": int(ihlal),
+            "deneme": int(len(ucluler)), "azamî": float(azami_fark)}
+
+
+def tasma_kaybi(lifliler, makamlar, n_v: int, sozluk: int,
+                basamak: int) -> Dict[str, Any]:
+    ust = max(0, int(basamak) - 1)
+    if not lifliler or int(basamak) <= 1 or int(sozluk) <= 0:
+        return {"kayıp": 0.0, "üst_makam_örneği": 0, "eşik": 0,
+                "taşan_basamak": 0, "kod_uzayı": int(n_v) ** int(basamak),
+                "sözlük": int(sozluk)}
+    agirlik = int(n_v) ** ust
+    esik = -(-int(sozluk) // agirlik)
+    esik = int(min(max(esik, 0), int(n_v)))
+    m = np.asarray(list(makamlar), np.int64)
+    sec = np.flatnonzero(m == ust)
+    if sec.size == 0 or esik >= int(n_v):
+        return {"kayıp": 0.0, "üst_makam_örneği": int(sec.size),
+                "eşik": esik, "taşan_basamak": int(n_v) - esik,
+                "kod_uzayı": int(n_v) ** int(basamak), "sözlük": int(sozluk)}
+    guc = np.stack([
+        np.einsum('vh,vh->v', np.asarray(lifliler[int(i)], complex),
+                  np.asarray(lifliler[int(i)], complex).conj()).real
+        for i in sec])
+    iz = np.maximum(guc.sum(axis=1), 1e-300)
+    P = guc / iz[:, None]
+    tasan = float(P[:, esik:].sum(axis=1).mean())
+    return {"kayıp": tasan, "üst_makam_örneği": int(sec.size),
+            "eşik": esik, "taşan_basamak": int(n_v) - esik,
+            "kod_uzayı": int(n_v) ** int(basamak), "sözlük": int(sozluk)}
+
+
+def dizi_kaybi(lifliler: Sequence[np.ndarray],
+               baglamlar: Sequence[Sequence[int]],
+               hedefler: Sequence[int], n_v: int,
+               eps: float = 1e-12) -> Dict[str, Any]:
+    assert len(lifliler) == len(hedefler) == len(baglamlar), (
+        "lifli %d, bağlam %d, hedef %d -- örnek kayboldu"
+        % (len(lifliler), len(baglamlar), len(hedefler)))
+    if not lifliler:
+        return {"kayıp": 0.0, "isabet": 0.0, "örnek": 0, "boy": 0.0}
+    tekil: List[float] = []
+    isabet: List[float] = []
+    boylar: List[int] = []
+    for M, bag, hed in zip(lifliler, baglamlar, hedefler):
+        X = np.asarray(M, complex)
+        yer = int(X.shape[1])
+        dizi = ([int(x) % int(n_v) for x in bag][:yer - 1]
+                + [int(hed) % int(n_v)])
+        guc = (np.abs(X) ** 2)[:, :len(dizi)]
+        P = guc / np.maximum(guc.sum(axis=0, keepdims=True), 1e-300)
+        d = np.asarray(dizi, np.int64)
+        p = P[d, np.arange(d.size)]
+        tekil.append(float(-np.log(np.maximum(p, float(eps))).mean()))
+        isabet.append(float(np.mean(np.argmax(P, axis=0) == d)))
+        boylar.append(int(d.size))
+    kayip = float(np.mean(tekil))
+    assert math.isfinite(kayip), "dizi kaybı sonlu değil"
+    return {"kayıp": kayip, "isabet": float(np.mean(isabet)),
+            "örnek": len(tekil), "boy": float(np.mean(boylar)),
+            "en_uzun": int(max(boylar))}
+
+
+def nokta_kaybi(lifliler: Sequence[np.ndarray], hedefler: Sequence[int],
+                n_v: int, eps: float = 1e-12,
+                cinsler: Optional[Sequence[str]] = None) -> Dict[str, Any]:
+    assert len(lifliler) == len(hedefler), (
+        "lifli sayısı %d, hedef sayısı %d -- örnek kayboldu"
+        % (len(lifliler), len(hedefler)))
+    if not lifliler:
+        return {"kayıp": 0.0, "isabet": 0.0, "örnek": 0}
+    guc = np.stack([
+        np.einsum('vh,vh->v', np.asarray(x, complex),
+                  np.asarray(x, complex).conj()).real
+        for x in lifliler])
+    iz = np.maximum(guc.sum(axis=1), 1e-300)
+    rho_kosegen = guc / iz[:, None]
+    h = np.asarray(list(hedefler), np.int64) % int(n_v)
+    p = rho_kosegen[np.arange(h.size), h]
+    tekil = -np.log(np.maximum(p, float(eps)))
+    tepe = np.argmax(rho_kosegen, axis=1) == h
+    if cinsler is None:
+        agirlik = np.ones(h.size, float)
+        pay = {"arc": int(h.size), "sözlü": 0}
+    else:
+        c = np.asarray([str(x) for x in cinsler])
+        arc = np.char.startswith(c, "arc")
+        soz = ~arc
+        nebze = float(tepe[soz].mean()) if bool(soz.any()) else 0.0
+        agirlik = np.where(arc, 1.0, nebze)
+        pay = {"arc": int(arc.sum()), "sözlü": int(soz.sum()),
+               "sözlü_nebze": nebze,
+               "arc_isabet": (float(tepe[arc].mean())
+                              if bool(arc.any()) else 0.0),
+               "sözlü_isabet": (float(tepe[soz].mean())
+                                if bool(soz.any()) else 0.0)}
+    top = float(agirlik.sum())
+    kayip = float((tekil * agirlik).sum() / max(top, 1e-300))
+    assert math.isfinite(kayip), "nokta kaybı sonlu değil"
+    isabet = float(np.mean(tepe))
+    return {"kayıp": kayip, "isabet": isabet, "örnek": int(h.size),
+            "ortalama_born": float(np.mean(p)), "cins": pay}
+
+
 def holonomi(hal: Sequence[np.ndarray]) -> Tuple[np.ndarray, float, float]:
     H = [np.asarray(h, complex).reshape(-1) for h in hal]
     assert len(H) >= 3, (
@@ -556,8 +689,6 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
         "ceza ödüle dönmüş demektir" % L_hod)
     L_hod = max(0.0, L_hod)
 
-    from .tabakali_mizan import (dizi_kaybi, kategori_kaybi,
-                                 nokta_kaybi, tasma_kaybi)
     kat = kategori_kaybi(ileri["hal"], azami=int(a.cevrim_sayisi) * 4,
                          tohum=int(a.tohum))
     nok = nokta_kaybi(ileri["lifli"], ileri["hedef"], n_v,
@@ -902,7 +1033,6 @@ def rapor(profil: str = "kısa") -> str:
         _egri.append(float(holonomi([e[0], _b, _d])[1]))
     U_par, om_par, yol_par = holonomi([e[0], e[1], -e[0]])
     from .tenakuz import TenakuzAyari, log_bariyer
-    from .tabakali_mizan import kategori_kaybi
     from .rust import RustAyari, rust_kilidi
     _ta = TenakuzAyari(eps=float(a.tenakuz_eps), tau=float(a.dislama_tau))
     _bar_par = log_bariyer(U_par[None, :, :], np.ones(1), _ta)
