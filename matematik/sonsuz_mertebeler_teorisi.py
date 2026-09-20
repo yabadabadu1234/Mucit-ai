@@ -4469,18 +4469,6 @@ def n_mertebe(X: Terim, n: int) -> Terim:
     return Pi(x, X, Pi(y, X, n_mertebe(yol(X, _t(x), _t(y)), n - 1)))
 
 
-def rn_mertebe(X: Terim, r: int, n: int) -> Terim:
-    taban = X if int(r) <= 0 else carpim(globuler_tip(int(r)), X)
-    return n_mertebe(taban, int(n))
-
-
-def rn_sarti(X: Terim, r: int, n: int) -> Terim:
-    assert int(r) >= 0, (
-        "nesne mertebesi negatif olamaz, %d verildi (ferman 2-Þ)" % int(r))
-    assert int(n) >= -2, (
-        "morfizm mertebesi −2'nin altına inmez, %d verildi" % int(n))
-    return rn_mertebe(X, int(r), int(n))
-
 
 def hakiki_rn_mertebe(X: Terim, r: int, n: int) -> Terim:
     r_seviye = max(0, int(r))
@@ -4934,51 +4922,6 @@ def veriden_geometri_cikar(w: Sequence[int], n: int, K_max: int = 4
     return P, Asim, norm_korollalar
 
 
-def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
-                        norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float]
-                        ) -> Dict[str, Any]:
-    n = float(P.shape[0])
-    P_sim = 0.5 * (P + P.T)
-    P_asim = 0.5 * (P - P.T)
-    P2 = np.matmul(P, P)
-    Kan_rezidusu = np.abs(P - P2)
-
-    E_uzay = float(np.sum((P_sim ** 2) * (1.0 - Asim))) / n
-    E_kategori = float(np.sum((P_asim ** 2) * Asim)) / n
-    coklu_korollalar = {k: v for k, v in norm_korollalar.items() if len(k[0]) >= 2}
-    toplam_coklu_kutle = sum(coklu_korollalar.values()) + 1e-12
-    azami_arite = max((len(girdi) for (girdi, _) in coklu_korollalar), default=2)
-    norm_payda = float(max(1, azami_arite - 1))
-    E_operad = (float(sum(((len(girdi) - 1) / norm_payda) * (prob / toplam_coklu_kutle)
-                         for (girdi, _), prob in coklu_korollalar.items()))
-                if coklu_korollalar else 0.0)
-    E_operad *= (toplam_coklu_kutle / (sum(norm_korollalar.values()) + 1e-12))
-    E_tikanma = float(np.sum(Kan_rezidusu ** 2)) / n
-
-    E_toplam = E_uzay + E_kategori + E_operad + E_tikanma + 1e-12
-    rho = np.array([E_uzay / E_toplam, E_kategori / E_toplam,
-                    E_operad / E_toplam, E_tikanma / E_toplam], dtype=float)
-
-    entropi = float(-np.sum(rho * np.log(rho + 1e-12)))
-
-    yirtiklar = (P2 > 0.05) & (P < 0.01)
-    beta = float(np.sum(P2[yirtiklar])) / float(np.sum(P2) + 1e-12)
-    alfa = float(np.mean(Asim[P > 0])) if np.any(P > 0) else 0.0
-
-    if beta < 0.05:
-        cebir = "boole" if alfa < 0.25 else "yönlü_kafes"
-    else:
-        cebir = "heyting" if alfa < 0.5 else "yönlü_heyting"
-
-    return {
-        "tayf": rho, "entropi": entropi, "Ω_cebiri": cebir,
-        "enerjiler": {"uzay": E_uzay, "kategori": E_kategori,
-                     "operad": E_operad, "tıkanma": E_tikanma},
-        "P": P, "P2": P2, "Asim": Asim, "Kan_rezidusu": Kan_rezidusu,
-        "alfa": alfa, "beta": beta
-    }
-
-
 def asimetri_guncelle(P: np.ndarray) -> np.ndarray:
     pay = np.abs(P - P.T)
     payda = P + P.T + 1e-12
@@ -5149,45 +5092,6 @@ class Turetilen1Kategori:
         self.birim_oklar = birim_oklar
 
 
-def turet_1_kategori(w_baglam: Tuple[int, ...], P: np.ndarray,
-                     silsile_adimlari: List[Tuple[Terim, Terim]]
-                     ) -> Turetilen1Kategori:
-    nesneler_kumesi = set(w_baglam)
-    for agac, ok in silsile_adimlari:
-        if isinstance(ok, YonluOk):
-            for uc in (ok.kaynak, ok.hedef):
-                if isinstance(uc, Belirtec):
-                    nesneler_kumesi.add(uc.id_no)
-
-    nesneler = sorted(nesneler_kumesi)
-    ok_siniflari: Dict[Tuple[int, int], int] = {}
-    birim_oklar: Dict[int, int] = {}
-    ok_sayaci = 0
-
-    for x in nesneler:
-        ok_siniflari[(x, x)] = ok_sayaci
-        birim_oklar[x] = ok_sayaci
-        ok_sayaci += 1
-
-    for i in nesneler:
-        for j in nesneler:
-            if i != j and P[i, j] > 0.05:
-                if (i, j) not in ok_siniflari:
-                    ok_siniflari[(i, j)] = ok_sayaci
-                    ok_sayaci += 1
-
-    bileske_tablosu: Dict[Tuple[int, int], int] = {}
-    for (x, y), ok1 in list(ok_siniflari.items()):
-        for (y2, z), ok2 in list(ok_siniflari.items()):
-            if y == y2:
-                if (x, z) not in ok_siniflari:
-                    ok_siniflari[(x, z)] = ok_sayaci
-                    ok_sayaci += 1
-                bileske_tablosu[(ok1, ok2)] = ok_siniflari[(x, z)]
-
-    return Turetilen1Kategori(nesneler, ok_siniflari, bileske_tablosu, birim_oklar)
-
-
 class TuretilenAyrıkKume:
     __slots__ = ("bilesenler", "eleman_bilesen_haritasi")
 
@@ -5196,33 +5100,6 @@ class TuretilenAyrıkKume:
         self.eleman_bilesen_haritasi = {
             el: idx for idx, kume in enumerate(bilesenler) for el in kume
         }
-
-
-def turet_ayrik_kume(nesneler: List[int], P: np.ndarray) -> TuretilenAyrıkKume:
-    ebeveyn = {x: x for x in nesneler}
-
-    def bul(i: int) -> int:
-        while ebeveyn[i] != i:
-            ebeveyn[i] = ebeveyn[ebeveyn[i]]
-            i = ebeveyn[i]
-        return i
-
-    def birlestir(i: int, j: int) -> None:
-        kok_i, kok_j = bul(i), bul(j)
-        if kok_i != kok_j:
-            ebeveyn[kok_i] = kok_j
-
-    for i in nesneler:
-        for j in nesneler:
-            if i != j and (P[i, j] > 0.1 or P[j, i] > 0.1):
-                birlestir(i, j)
-
-    gruplar: Dict[int, Set[int]] = {}
-    for x in nesneler:
-        kok = bul(x)
-        gruplar.setdefault(kok, set()).add(x)
-
-    return TuretilenAyrıkKume(list(gruplar.values()))
 
 
 class TuretilenDilimAlemi:
@@ -5247,19 +5124,6 @@ def turet_dilim_alemi(baglam_hedefi: int, nesneler: List[int],
                 alem_morfizmleri.append((x, y))
 
     return TuretilenDilimAlemi(baglam_hedefi, hedefe_baglananlar, alem_morfizmleri)
-
-
-def kategori_sahidi_paketle(kat: Turetilen1Kategori) -> Terim:
-    return Cift(
-        Dogal(),
-        Cift(
-            Dogal(),
-            Cift(
-                dogal_sayi(len(kat.birim_oklar)),
-                dogal_sayi(len(kat.bileske_tablosu))
-            )
-        )
-    )
 
 
 def turet_1_kategori_bolumlemeli(w_baglam: Tuple[int, ...], P: np.ndarray,
@@ -6618,7 +6482,12 @@ def s0_s2_ozerk_gaye_turet(dahili_tenakuzlar: Dict[str, float],
     return max(gaye_skorlari.items(), key=lambda x: x[1])[0]
 
 
-_S0_IC_HAL_HAVUZU: Dict[str, Dict[Any, Any]] = {"tenakuzlar": {}, "entropiler": {}, "son_norm_korollalar": {}}
+_S0_IC_HAL_HAVUZU: Dict[int, Dict[str, Dict[Any, Any]]] = {}
+
+
+def _s0_havuz_al(n: int) -> Dict[str, Dict[Any, Any]]:
+    return _S0_IC_HAL_HAVUZU.setdefault(
+        int(n), {"tenakuzlar": {}, "entropiler": {}, "son_norm_korollalar": {}})
 
 
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
@@ -6627,15 +6496,15 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     s0_secilen_gaye: Optional[int] = None
 
     if len(w) == 0:
-        secilen_gaye = s0_s2_ozerk_gaye_turet(_S0_IC_HAL_HAVUZU["tenakuzlar"],
-                                              _S0_IC_HAL_HAVUZU["entropiler"])
+        havuz = _s0_havuz_al(n)
+        secilen_gaye = s0_s2_ozerk_gaye_turet(havuz["tenakuzlar"], havuz["entropiler"])
         if secilen_gaye == "VAKUM_DURUMU":
             return {"hata": "S0 VAKUM: İç hâl havuzu boş, özerk gaye üretilemedi",
                     "detay": {"tenakuzlar": {}, "entropiler": {}}}
         s0_vakum_tetiklendi = True
         s0_secilen_gaye = int(secilen_gaye)
-        w = s0_gercek_baglam_cagir(s0_secilen_gaye, _S0_IC_HAL_HAVUZU["son_norm_korollalar"], n)
-        if len(w) < 2:
+        w = s0_gercek_baglam_cagir(s0_secilen_gaye, havuz["son_norm_korollalar"], n)
+        if len(w) < 2 or any(t >= n or t < 0 for t in w):
             w = [s0_secilen_gaye, (s0_secilen_gaye + 1) % max(2, n)]
 
     gecit_raporu = d0_gecit_nedensellik_teftisi(
@@ -6718,9 +6587,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     p_hedef_satiri = P[nihai_hedef]
     entropi_hedef = float(-np.sum(p_hedef_satiri * np.log(p_hedef_satiri + 1e-12)))
-    _S0_IC_HAL_HAVUZU["tenakuzlar"][nihai_hedef] = float(muhakemeler[-1].get("kohomolojik_engel", 0.0))
-    _S0_IC_HAL_HAVUZU["entropiler"][nihai_hedef] = entropi_hedef
-    _S0_IC_HAL_HAVUZU["son_norm_korollalar"] = dict(norm_korollalar)
+    _havuz_yaz = _s0_havuz_al(n)
+    _havuz_yaz["tenakuzlar"][nihai_hedef] = float(muhakemeler[-1].get("kohomolojik_engel", 0.0))
+    _havuz_yaz["entropiler"][nihai_hedef] = entropi_hedef
+    _havuz_yaz["son_norm_korollalar"] = dict(norm_korollalar)
 
     turetilen_kategori = turet_1_kategori_bolumlemeli(orijinal_baglam, P, silsile_adimlari)
     turetilen_kume = turet_ayrik_kume_funktoriyel(turetilen_kategori)
