@@ -29,7 +29,8 @@ from nefs.galois import (GaloisAyari, tableau_kur,
 from nefs.tdd import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
 from nefs.ayna import AynaAyari
-from nefs.mihenk import MIHENK, nobet_kur
+from nefs.mihenk import (MIHENK, nobet_kur, safha,
+                         safha_beyani, safha_sifirla)
 from nefs.veri_kapisi import (VeriKapisiAyari, veri_kapisi,
                               kapi_beyani, kapi_tertibi)
 from nefs.faz_polinomu import FazAyari, faz_oturt
@@ -403,7 +404,11 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         "sözlük ile kodlama tutmuyor: ayar %d, %s %d -- sözlük elle "
         "yazılmış olabilir (ferman 1-N)"
         % (ayar.sozluk, ayar.kodlama, kapi_bel.n_vocab))
+    safha_sifirla()
+    safha("D0 GEÇİT · başlıyor", profil=str(ayar.ad))
     kapi = gecit(sert=bool(int(ayar.hiz_geciti)), hiz_ayari=ayar)
+    safha("D0 GEÇİT", çevrim=int(kapi.get("alan_çevrimi", 0)),
+          kelâm=bool(kapi.get("kelam_ayrıştı")))
     hepsi = list(gorevler) if gorevler is not None else \
         gorevleri_getir("training")
     egitim_gorevleri, dogrulama = gorevleri_getir(ne="böl", gorevler=
@@ -413,6 +418,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                         pencere=ayar.pencere, sozluk=ayar.sozluk,
                         tohum=ayar.tohum, taban=int(ayar.veri_lifi),
                         basamak=int(ayar.belirtec_basamak))
+    safha("D1 ÖLÇÜ · ARC", örnek=len(arc_veri))
     devam = hazineden_devam(hazine_yolu())
     kul_veri, imlec = kulliyat_verisi(
         sozluk=int(ayar.sozluk), pencere=int(ayar.pencere),
@@ -423,6 +429,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
         imlec=devam.get("imleç"), ne="imleçli")
     gelen = list(arc_veri) + list(kul_veri)
 
+    safha("D1 ÖLÇÜ · külliyat", örnek=len(gelen))
     from nefs.qegitim import ornek_bol as _bol
     hendese = hendese_teshisi(
         [_bol(o)[0] for o in gelen], ayar.lif_yapisi,
@@ -432,7 +439,14 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     if "parite_lifi" not in ayar.elle:
         ayar.parite_lifi = int(hendese["asansör"]["kat"])
 
+    safha("D2 HENDESE", kafes=len(hendese["kafes"]),
+          tıkanma=int(hendese["şelale"]["tıkanma"]),
+          büzülme="%.3f" % float(hendese["asansör"]["büzülme"]))
     nefs = QNefs(ayar.tohum, ayar.qayar())
+    _hodge = hendese["hodge"]
+    nefs.izdusum = (hendese["Π"],
+                    (float(_hodge["𝒮_simetrik"]), float(_hodge["𝒜_yönlü"]),
+                     float(_hodge["Ω_yırtık"])))
     nefs.idrak_et(np.eye(2, ayar.veri_lifi))
     hafiza = Hafiza(kapasite=int(ayar.hafiza_kapasitesi),
                     yazma=float(ayar.hafiza_yazma),
@@ -441,6 +455,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                     zeno_tepe=float(ayar.zeno_tepe),
                     ayniyet=float(ayar.hafiza_ayniyet),
                     buhar=float(ayar.hafiza_buhar), tohum=int(ayar.tohum))
+    safha("D3 KURULUŞ")
     kapi_hukmu = veri_kapisi(
         gelen, nefs=nefs, hafiza=hafiza,
         ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
@@ -467,7 +482,21 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}
+    safha("D4 KAPI", örnek=len(veri))
     fock = FockUzayi()
+    _derece: List[str] = []
+    for _dug, _ro in zip(hendese["kafes"], hendese["tayf"]):
+        if float(_ro) <= 0.0:
+            continue
+        _ad = "mertebe·%s" % _dug["ad"]
+        fock.yarat(_ad, entropi=float(-_ro * np.log(max(float(_ro), 1e-300))),
+                   butce=float(_ro),
+                   celiski=float(hendese["hodge"]["Ω_yırtık"]))
+        _derece.append(_ad)
+    assert _derece, (
+        "DERECELİ FOCK DEVRİ BOŞ -- türetim kafesinin hiçbir katmanı mod "
+        "doğurmadı; her katman kendi hendesesinde nefes almalı "
+        "(ferman 2-Ā-B, 2-Þ)")
     hamiltonyen = Hamiltonyen(fock=fock)
     sual = ana_superpozisyon([_ornek_bol(o)[0] for o in veri],
                              nefs=nefs, hafiza=hafiza,
@@ -475,10 +504,12 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                              pencere=int(ayar.pencere),
                              taban=int(ayar.veri_lifi),
                              basamak=int(ayar.belirtec_basamak))
+    safha("D5 SUAL", derece=len(_derece))
     uzay = cozum_uzayi_ac(sual, nefs=nefs, hafiza=hafiza, fock=fock)
     uzay = mantik_filtresi(uzay)
     uzay = mukayese_filtresi(uzay, hafiza=hafiza,
                              mahalli=getattr(nefs, "mahalli", None))
+    safha("D5 SÜZGEÇ")
     netice = cozum_uzayi_kapat(uzay, sual, hamiltonyen=hamiltonyen)
     netice["uzunluk_genliği"] = uzunluk_genligi(
         getattr(nefs, "mahalli", None), int(netice["pencere"]))
@@ -518,6 +549,7 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
 
     _kume: Dict[str, Any] = {"v": list(veri), "adım": 0}
     _seyir: List[Dict[str, float]] = []
+    safha("D6 MİZAN · nöbet")
     nobet = nobet_kur(nefs, ara_saniye=float(ayar.mihenk_arasi),
                       pencere=int(ayar.pencere), sozluk=int(ayar.sozluk),
                       taban=int(ayar.veri_lifi),
@@ -595,7 +627,8 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
                                                      None)),
         "kapı": kapi_tertibi(kapi_hukmu, hafiza,
                              getattr(nefs, "mahalli", None)),
-        "balya": balyala(hafiza, fock)}
+        "balya": balyala(hafiza, fock),
+        "derece_kapandı": int(sum(1 for _a in _derece if fock.yok_et(_a)))}
     p_son = np.asarray(mun["p"], float)
     _ilk = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=_mzn["a"],
                        hafiza=hafiza, adim=_sayac["çağrı"],
@@ -786,8 +819,15 @@ def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
             "geçit": kapi, "ders": ders, "hazine": kayit,
             "lif": lif_beyani(harita),
             "hendese": hendese, "hendese_beyanı": hendese_beyani(),
+            "safha": safha_beyani(),
             "dhr": dhr, "casimir_beyanı": casimir_beyani(),
             "parite_lifi": int(ayar.parite_lifi),
+            "mertebe_tayfı": {
+                ad: float(p) for ad, p in
+                zip(hendese["katman"], hendese["tayf"])},
+            "lif_demeti": [float(x) for x in hendese["asansör"]["demet"]],
+            "büzülme": float(hendese["asansör"]["büzülme"]),
+            "hodge": hendese["hodge"], "Ω_cebiri": hendese["Ω_cebiri"],
             "tdd": tdd, "stabilizer": stab, "gölge": golge,
             "galois": tab.beyan(),
             "flo": flo, "sbox": sb, "sbox_ölçü": sb_olcu,

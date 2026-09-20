@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import math
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, Optional, Sequence, Tuple
 
 import numpy as np
 
@@ -228,6 +228,72 @@ class MahalliYazmac:
         _MAHALLI["dokunulan"] = float(dokunulan.size)
         _MAHALLI["faz_kayması"] = float(np.mean(np.abs(kayma)))
         return float(np.mean(np.abs(kayma)))
+
+    def _seviye_operatoru(self, M: np.ndarray, cins: str) -> np.ndarray:
+        A = np.zeros((self.taban, self.taban), float)
+        S = np.asarray(M, float)
+        k = int(min(self.taban, S.shape[0]))
+        A[:k, :k] = S[:k, :k]
+        nrm = float(np.linalg.norm(A))
+        if nrm <= 0.0:
+            return np.eye(self.taban, dtype=complex)
+        A = A / nrm
+        if cins == "uzay":
+            w, V = np.linalg.eigh(0.5 * (A + A.T))
+            _MAHALLI["aşkın_eigh"] = _MAHALLI.get("aşkın_eigh", 0.0) + 1.0
+            _MAHALLI["aşkın_exp"] = _MAHALLI.get("aşkın_exp", 0.0) + 1.0
+            return (V * np.exp(1j * w)) @ V.conj().T
+        if cins == "kategori":
+            w, V = np.linalg.eigh(1j * (0.5 * (A - A.T)))
+            _MAHALLI["aşkın_eigh"] = _MAHALLI.get("aşkın_eigh", 0.0) + 1.0
+            _MAHALLI["aşkın_exp"] = _MAHALLI.get("aşkın_exp", 0.0) + 1.0
+            return (V * np.exp(-1j * w)) @ V.conj().T
+        return A.astype(complex)
+
+    def modlari_vur(self, izdusum: Dict[str, np.ndarray],
+                    pay: Sequence[float]) -> Dict[str, float]:
+        p = np.asarray(list(pay), float).reshape(-1)
+        assert p.size == 3, (
+            "dereceli devir üç bileşenlidir (𝒮_simetrik, 𝒜_yönlü, "
+            "Ω_yırtık); %d verildi (ferman 2-Ā-B)" % p.size)
+        assert self.yigin > 0 and self.pencere > 0, (
+            "MODLAR BOŞ ZIRHA VURULAMAZ -- evvelâ hazırlanır (ferman 2-A)")
+        p = np.maximum(p, 0.0)
+        top = float(p.sum())
+        assert top > 0.0, (
+            "HODGE PAYLARI TAMAMEN SÖNDÜ -- üç bileşenin toplamı sıfır; "
+            "bu, hendesenin ölçülmediğinin delilidir (ferman 5)")
+        p = p / top
+        n = int(self.pencere)
+        sinir = np.cumsum(np.rint(p * float(n)).astype(np.int64))
+        sinir[-1] = n
+        evvel = float(np.linalg.norm(self.hal[:, :n, :]))
+        adlar = ("uzay", "kategori", "operad")
+        anahtar = ("Π_uzay", "Π_kategori", "Π_operad")
+        sayim: Dict[str, float] = {}
+        bas = 0
+        for ad, ah, son in zip(adlar, anahtar, sinir.tolist()):
+            son = int(min(max(son, bas), n))
+            sayim["mod_%s" % ad] = float(son - bas)
+            if son > bas:
+                U = self._seviye_operatoru(izdusum[ah], ad)
+                dilim = self.hal[:, bas:son, :]
+                self.hal[:, bas:son, :] = dilim @ U.T
+            bas = son
+        sonra = self.hal[:, :n, :]
+        nrm = np.linalg.norm(sonra, axis=-1, keepdims=True)
+        canli = nrm > 0.0
+        assert bool(canli.any()), (
+            "DERECELİ DEVİR AKTİF PENCEREYİ TAMAMEN SÖNDÜRDÜ -- "
+            "izdüşüm demeti yanlış kurulmuş (ferman 5)")
+        self.hal[:, :n, :] = np.where(canli, sonra / np.where(canli, nrm,
+                                                              1.0), sonra)
+        sayim["mod_vuruş"] = float(n)
+        sayim["mod_norm_evvel"] = evvel
+        sayim["mod_norm_sonra"] = float(np.linalg.norm(self.hal[:, :n, :]))
+        _MAHALLI.update(sayim)
+        _MAHALLI["mod_çağrı"] = _MAHALLI.get("mod_çağrı", 0.0) + 1.0
+        return sayim
 
     def genlik_sondur(self, hedef: np.ndarray, sonum) -> float:
         h = np.mod(np.asarray(hedef, np.int64).reshape(-1),

@@ -295,7 +295,9 @@ def _hafiza(hafiza) -> bool:
         x = np.asarray(getattr(k, "x", np.zeros(0)))
         if x.size == 0:
             continue
-        k.x = np.asarray(_dali_ele("hafıza", x, _sonlu_degil(x)), float)
+        suzulmus = _dali_ele("hafıza", x, _sonlu_degil(x))
+        k.x = (np.asarray(suzulmus, complex) if np.iscomplexobj(x)
+               else np.asarray(np.real(suzulmus), float))
     return True
 
 

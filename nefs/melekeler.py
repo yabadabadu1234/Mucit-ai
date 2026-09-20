@@ -1369,6 +1369,7 @@ class QNefs:
             self.mahalli = MahalliYazmac(int(self.ayar.veri_lifi))
         q.mahalli = self.mahalli
         q.y.mahalli = self.mahalli
+        q.izdusum = getattr(self, "izdusum", None)
         q.kodla(E)
         if q.iz.senet_acik:
             q.iz.kapi_yaz("başlangıç", (),

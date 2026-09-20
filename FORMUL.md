@@ -34,16 +34,33 @@ BİZ:
   Çıktı          = DeterministOkuma(Hâl)                   ← zar yok (ferman 2-Ĵ)
 ```
 
+**DETERMİNİZM BORN'U İNKÂR DEĞİLDİR.** Born çökmesi *örnekleme*dir; biz
+örneklemeyi kaldırdık, **girişimi** değil. Genlik toplanır, faz çevrilir,
+yıkıcı girişim dalı söndürür -- klasik ihtimal bunu yapamaz, çünkü klasik
+ihtimalde negatif/karmaşık ağırlık yoktur. Kaybedilen şey donanım
+taşınabilirliğidir ve ferman 1-T'de **açıkça ilan edilmiştir**: bu kod
+gerçek kuantum donanımında bu hâliyle koşmaz. Kazanılan: tekrarlanabilirlik
+(I5) ve `O(1)` okuma.
+
+**GALOİS İZİ MATRİS İZİ DEĞİLDİR.** `İz(α·x¹²) = İz(α^(1/4)·x³)` iddiası
+`GF(2⁸)` üzerindeki **mutlak Frobenius izidir**:
+`İz_GF(y) = y + y² + y⁴ + … + y^128`. Bu izin zâtî hassası `İz_GF(y²) =
+İz_GF(y)`dir; iki defa tatbik edilince `İz_GF(y⁴) = İz_GF(y)` olur.
+`y = α^(1/4)·x³` konulursa `y⁴ = α·x¹²` çıkar, eşitlik **tam** sağlanır.
+Lineer cebirdeki `Tr(A¹²) ≠ Tr(A³)` burada bağlayıcı değildir: ortada
+matris yok, sonlu cismin kendi izi vardır (ferman 7-B).
+
 ---
 
 ## § 1. KÜLLÎ ZİNCİR -- DURUMDAN DURUMA GİRDİ/ÇIKTI
 
 ```
- ┌─────┐  kodlama                 ┌─────┐  Sözlük · Ölçü            ┌─────┐
+ ┌─────┐  kodlama · Cömertlik     ┌─────┐  Sözlük · Ölçü · LifYapısı┌─────┐
  │ D0  │ ───────────────────────▶ │ D1  │ ───────────────────────▶ │ D2  │
  │GEÇİT│  İlletÇizgesi · Hız      │ÖLÇÜ │  Gelen (ARC + Külliyat)  │HEND.│
  └─────┘                          └─────┘                          └──┬──┘
-                                                       PariteLifi     │
+                          Gelen (değişmeden geçer) · MertebeTayfı     │
+                          LifDemeti · Büzülme · PariteLifi · Ω        │
                                                                       ▼
  ┌─────┐  Veri (kabul edilen)     ┌─────┐  Nefs · Hafıza · Fock     ┌─────┐
  │ D5  │ ◀─────────────────────── │ D4  │ ◀─────────────────────── │ D3  │
@@ -69,9 +86,16 @@ BİZ:
  └─────┘                          └─────┘
 ```
 
-**ÇIKARIM KAPISI** aynı zincirin **D3 → D5 → D5b → D10** dilimidir.
-Tek fark: D6-D7-D8-D9-D11 koşmaz (ferman 1-H). Özerk gaye öz-geçişi
-(§ 3, S0 → S2) yalnız tâlimde açıktır (ferman 2-Ħ).
+**ÇIKARIM KAPISI** aynı zincirin **D1 → D2 → D3 → D5 → D5b → D10**
+dilimidir. Tek fark: D6-D7-D8-D9-D11 koşmaz (ferman 1-H). Özerk gaye
+öz-geçişi (§ 3, S0 → S2) yalnız tâlimde açıktır (ferman 2-Ħ).
+
+**D1 VE D2 ÇIKARIMDA DA KOŞAR** -- ferman 1-H'nin gereği budur: iki kapı
+arasındaki **tek** fark eniyilemedir. Çıkarımda D1'in `Gelen`i külliyat
+değil **gelen suâlin kendisidir**; D2 o suâlin dizisinden mertebe tayfını
+ve `PariteLifi`ni yeniden örer. `PariteLifi`nin hazineden sabit gelmesi
+**iptal edilmiştir**: sabit lif, suâlin hendesesini görmezden gelmek olurdu.
+Hazineden gelen şey ağırlıktır (`p₀`), lif değil.
 
 ---
 
@@ -81,9 +105,9 @@ Tek fark: D6-D7-D8-D9-D11 koşmaz (ferman 1-H). Özerk gaye öz-geçişi
 
 | | |
 | :-- | :-- |
-| **GİRDİ** | `EgitimAyari` (profil: dar · orta · azamî) |
-| **AMELİYE** | `AlanÇizgesi → Çevrimler` · `ZamanÇizgesi → Çevrimler` · `KelâmAyrışması` · (şart ise) `HızTeftişi` |
-| **ÇIKTI** | `İlletÇizgesi = (düğüm, kenar, çevrim)` · `KelâmAyrıştı ∈ {doğru, yanlış}` · `BelirteçSn` |
+| **GİRDİ** | `EgitimAyari` (profil: dar · orta · azamî) -- profil **yalnız** `Cömertlik`i taşır: dar 0.15 · orta 0.5 · azamî 1.0 |
+| **AMELİYE** | `AlanÇizgesi → Çevrimler` · `ZamanÇizgesi → Çevrimler` · `KelâmAyrışması` · (yalnız `HızGeçiti ≠ 0` ise) `HızTeftişi` |
+| **ÇIKTI** | `İlletÇizgesi = (düğüm, kenar, çevrim)` · `KelâmAyrıştı ∈ {doğru, yanlış}` · `Cömertlik` · (şart ise) `BelirteçSn` |
 
 ```
 ZamanÇevrimi ≠ ∅          ⇒ DURUR: bir adım kendi geleceğine bağlı
@@ -92,52 +116,187 @@ KelâmAyrıştı = yanlış     ⇒ DURUR: kelâm veriden doğrudan besleniyor,
 BelirteçSn < Had          ⇒ DURUR: hız garantisi olmadan tâlim başlamaz
 ```
 
+**D0'DA NE VERİ VARDIR NE MODEL -- VE OLMASI DA GEREKMEZ.**
+
+`KelâmAyrışması` bir **tensör ölçüsü değil, statik illet çizgesi
+ölçüsüdür** (`nefs/illet.py`): kodun kendisi düğüm, çağrı bağı kenardır.
+Sorduğu suâl şudur: *kelâm düğümüne veri düğümünden, hüküm düğümüne
+uğramadan bir yol var mı?* Bu yol varsa ezberin kapısı açıktır. Veriye de
+modele de ihtiyacı yoktur, çünkü ölçtüğü şey **akışın şeklidir**, akan
+değerler değil.
+
+`HızTeftişi` ise **iç içe (nested) bir minyatür koşudur**: `tanilama/
+hiz_teftisi.olc` D1→D3→D6 zincirinin en küçük ölçeğini kendi içinde kurar
+ve **bir kayıp çağrısını** fiilen koşturur. Zincirde gizlenmiş özyineleme
+yoktur; burada **adıyla ilan edilmiştir**:
+
+```
+HızTeftişi = Minyatür(D1 → D3 → D6)    ← kendi nefsini kendi kurar
+BelirteçSn = minyatürün ölçülen belirteç/saniyesi
+Had        = tanilama/hiz_teftisi.had()      ← ÖLÇÜLÜR, elle yazılmaz
+```
+
+Kısırdöngü yoktur çünkü minyatür **tâlimin nefsini beklemez**, kendi
+nefsini kurar ve yıkar. `DAR` profilinde `HızGeçiti = 0`dır: teftiş hiç
+koşmaz, `BelirteçSn` çıktı listesinde **yer almaz** ve ona dayanan hiçbir
+hüküm kurulmaz (ferman 5-B: yoklanamayan `None`dır).
+
 ### D1 ÖLÇÜ VE VERİ -- `EgitimAyari.__post_init__` · `qegitim.ornekler` · `main/kulliyat.py`
 
 | | |
 | :-- | :-- |
-| **GİRDİ** | D0'ın çıktısı · `kodlama` · hazinedeki `İmleç` |
+| **GİRDİ** | D0'ın çıktısı (`Cömertlik` dâhil) · `kodlama` · hazinedeki `İmleç` · hazinedeki `ÖlçülenHız` |
 | **AMELİYE** | Sözlük yoklanır, ölçü tablosu türetilir, iki cins veri çekilir |
-| **ÇIKTI** | `Sözlük` · `VeriLifi` · `Karo` · `Pencere` · `Gelen` · `İmleç′` |
+| **ÇIKTI** | `Sözlük` · `VeriLifi` · `Karo` · `Pencere` · `LifYapısı` · `BasamakSayısı` · `Gelen` · `İmleç′` |
 
 ```
 Sözlük        = tiktoken(kodlama).n_vocab          ← ELLE YAZILMAZ (ferman 1-N)
 BasamakSayısı = en küçük k öyle ki VeriLifi^k ≥ Sözlük
+Cömertlik     ← D0'DAN GELİR (profilin taşıdığı tek sayı)
+ÖlçülenHız    ← HAZİNEDEN GELİR (main/egitim.hazineden_hiz); hazine yoksa
+                0.0'dır ve ona dayanan hiçbir iddia kurulmaz (ferman 5-B)
 Ölçü          = olcek( Sözlük, Cömertlik, Tohum, ÖlçülenHız )
                 ← veri_lifi · karo · pencere · örnek_sayısı · tur … hepsi buradan
-                  (ferman 5-B: donanım ölçülür, elle yazılmaz)
+LifYapısı     = (VeriLifi, Karo, Karo)     ← DEMET BURADA KURULUR, D2 kurmaz
 
 Gelen = Örnekler(ARC görevleri, azamî = ÖrnekSayısı ÷ 2)
       ∪ KülliyatVerisi(imleç = hazinedeki imleç, azamî = kalan)
         ← İKİ CİNS BERABER (ferman 1-R); külliyat imleçten devam eder (1-Y)
 ```
 
+**BOYUT PATLAMASI YOKTUR ÇÜNKÜ `q^N` HİÇ AÇILMAZ.** `BasamakSayısı`
+belirteci qudit **seviyelerine** kodlar; `Sözlük ≈ 2·10⁵` ve `VeriLifi =
+16` iken `k = 5` basamaktır. Taşınan bellek `q^N` değil, **mahallî zırhtır**:
+`ℂ^{N×q}`, `N = 1 048 576`, `q = 64` → `1 GiB`, sabit. `q^N` bir **uzay
+iddiasıdır**, bellek iddiası değildir (ferman 2-T, 3-B #49); genlik
+bellekte açık dizi olarak durmaz, KAN-NQS fonksiyonelinden **üretilir**
+(ferman 2-T). Açılmayan şey patlamaz.
+
 ### D2 HENDESE -- `nefs/hendese.py:hendese_teshisi`
 
 | | |
 | :-- | :-- |
-| **GİRDİ** | `Gelen`in bağlamları · `LifYapısı = (VeriLifi, Karo, Karo)` |
-| **AMELİYE** | Geçiş dizeyi → mertebe teşhisi → dikey asansör |
-| **ÇIKTI** | `PariteLifi` -- mantığa sadakatin kod uzayını tayin eden lif |
+| **GİRDİ** | `Gelen`in bağlamları · D1'den gelen `LifYapısı` · `VeriLifi` (alfabe) |
+| **AMELİYE** | Opetopik kompleks örülür → üç evrensel test → Hodge ayrışımı → Ω sınıflayıcı → spektral tabakalaşma → dikey asansör |
+| **ÇIKTI** | `Gelen` (değişmeden geçer) · `MertebeTayfı` (7 katman) · `Hodge` · `Ω_cebiri` · `LifDemeti` · `Büzülme` · `PariteLifi` |
+
+**NAKZ (ferman 2-Ā-B, padişahın hükmü):** eski `argmax(dört puan)` ve
+`PariteLifi = Mertebe.kat` iptal edildi. Onun yerine koyduğum **yedi isimli
+KATMANLAR cetveli ve elle yazılmış KISITLAMA tablosu da iptal edildi** --
+o, kesilen listeyi geri getirmekti. Cins **listelenmez**; veri kendi cinsini
+kendi örer.
+
+**TÜRETİM MOTORU TEKTİR VE KALPTEDİR.** En üst cins -- Yönlü Opetopik
+`(∞,∞)`-Properad Toposu -- `matematik/sonsuz_mertebeler_teorisi.py`de
+yaşar. O dosya tam bir kübik tip teorisi çekirdeğidir: `Aralik`/`Kofibrasyon`
+yüz kafesi (= Ω alt-nesne sınıflayıcısının cebiri), `komp`/`dolgu` (= Kan
+doldurucusu), `Yapistir` (= Glue, demetleşme), `rn_sarti` (= `(r,n)`
+merdiveni), `denetle`/`sentezle` (= tip denetçisi). **Hendese ölçer, kalp
+türetir.** Başka hiçbir dosyada türetim yoktur (ferman 114-A).
 
 ```
-GeçişDizeyi[a,b] = sayım(basamak_a → basamak_b) / satırToplamı
-KarşılıklıHaber  = Σ Ortak·log(Ortak / (Satır·Sütun))
-Sapma            = ‖GeçişDizeyi − GeçişDizeyiᵀ‖
-Nilpotent        = en küçük k öyle ki GeçişDizeyi^k = 0
-Denklik          = ⟨GeçişDizeyi(ilkYarı), GeçişDizeyi(sonYarı)⟩ / normlar
+UZUV (nefs/hendese.py) -- YALNIZ ÖLÇER, HÜKÜM VERMEZ
+─────────────────────────────────────────────────────
+1. SERBEST OPETOPİK KOMPLEKS  (kural dayatılmaz, dizi kendi hücresini örer)
+   0-hücre = ayrı basamaklar          1-hücre = ardışık geçiş (a → b)
+   2-hücre = bağlam AĞACI ({a,b} → c) 3-hücre = kuralın kurala dönüşümü
+   HücreMertebesi = dolu en yüksek hücre boyutu   ← TAVAN BURADAN, elle değil
 
-Mertebe = enbüyükArgüman(
-    1/(1+Haber+ŞartSapması),                   ← ayrık NOKTA
-    (1−ÜçgenİhlâliNispeti)/(1+Sapma),          ← sürekli UZAY
-    enbüyük(0, Denklik) × (1+Haber),           ← univalent TİP
-    Sapma × (1 eğer Nilpotent>0 değilse 1/4))  ← yönlü KATEGORİ ← EN UMUMÎ
+2. ALTI SERBESTLİK NİSPETİ -- hepsi [0,1], hepsi ÖLÇÜLÜR
+   morfizm  = 1-hücre ÷ (0-hücre)²          yüksek = 2-hücre ÷ (1-h · 0-h)
+   arite    = 1 − 1/(ortGirdi · ortÇıktı)   yön₁   = Hodge asimetri payı
+   yön₂     = aynı ayrışım, 2-hücre üstünde koherans = dolu boynuz ÷ boynuz
 
-PariteLifi = Mertebe.kat        ← elle verilmediyse; teşhis edilen katman
-                                  mantık muhafızının lifini SEÇER
+3. TAMSAYI SAYIMLARI -- bunlar nispet DEĞİL, SAYIDIR ve int tutulur
+   0/1/2/3-hücre · boynuz · dolu_boynuz · tıkanma · yönlü_kenar ·
+   simetrik_kenar · şelale_uzay · şelale_kategori · şelale_operad ·
+   dörtlü · üçgen_ihlâli · dag_mertebesi · kafes
+   `nefs/hendese.py`de _SAYI (int) ile _NISPET (float) AYRI defterlerdir;
+   bir sayımı float yazmaca koymak fermanın ihlâlidir.
+
+4. ŞELALE HÂLİNDE BÜZÜLME -- sayaç değil, FİİLEN DOLDURUR
+   her boş boynuz (a→b→c, a→c yok) sırayla şu üç hendeseye sorulur:
+     UZAY      c→a var mı?              → simetriyle kapanır
+     KATEGORİ  a→m→c başka m var mı?    → yönlü okla kapanır
+     OPERAD    {a,b}→c ağacı var mı?    → çoklu birleşimle kapanır
+     TIKANMA   hiçbiri değilse          → HAKİKÎ OBSTRÜKSİYON, kapanmaz
+   kapanan her boynuz `a→c` kenarını AÇAR; koherans yeniden ölçülür.
+   Ω_yırtık = tıkanma ÷ boynuz  ← modelin DÜŞÜNMESİ gereken yer
+
+KALP (matematik/sonsuz_mertebeler_teorisi.py) -- TÜRETİR
+─────────────────────────────────────────────────────────
+5. KAFES ÜRETİLİR, LİSTELENMEZ  (turetim_kafesi)
+   her (r, n) için `rn_sarti(A, r, n)` KURULUR ve `denetle_t` ile
+   TİP DENETİMİNDEN GEÇİRİLİR. Tutan (r,n) kafese girer, düşen girmez.
+   r ∈ [0, HücreMertebesi],  n ∈ [−1, KoheransMertebesi]  ← tavan veriden
+
+6. SERBESTLİK PROFİLİ BİTTİR -- float değil  (_serbestlik_profili)
+   kurulan tipin kendi imzasından okunur (Π · Σ · Yol derinliği sayılır):
+     morfizm = 1 ⟺ imza.pi  > 0      yön₁ = 1 ⟺ n ≥ 1
+     yüksek  = 1 ⟺ imza.yol > 0      yön₂ = 1 ⟺ n ≥ 2
+     arite   = 1 ⟺ imza.sigma > 0    koherans = 1 ⟺ n ≥ 0
+   Kısıtlama derecesi = sıfır olan serbestlik sayısı. Zirve hepsi 1 olandır;
+   aşağı inmek bir serbestliği KAPATMAKTIR (dejenerasyon).
+
+7. TAYF -- Boole kafesi üstünde çarpım ölçüsü, argmax YOK
+   ağırlık(r,n) = Π_a ( x_a  eğer profil_a = 1 ; 1 − x_a  eğer 0 )
+   ρ = ağırlık ÷ Σ ağırlık        Σρ = 1, hiçbir düğüm elenmez
+   Bu float bir mesafe değil, bit profili üstünde tanımlı ÖLÇÜDÜR.
+
+8. Ω ALT-NESNE SINIFLAYICISI -- kafesin kendi cebri karar verir
+   boş boynuz yoksa  kofibrasyon = ⊤, ifade = 1
+   boş boynuz varsa  kofibrasyon = (κ=1), ifade = κ
+   ÜÇÜNCÜ ŞIK testi: `ifade ∨ ¬ifade` BİR mi?   ← Aralik kafesinde koşar
+     yönlü kenar > simetrik kenar  → YÖNLÜ KAFES (lineer/kuantum mantığı)
+     üçüncü şık tutuyor            → BOOLE      (klasik mantık)
+     tutmuyor                      → HEYTİNG    (sezgisel mantık)
+   Hüküm AYRIKTIR; üç isme sürekli ağırlık dağıtılmaz. Yanında tamsayı
+   sayımlar (dolu · boş · yönlü_kenar · simetrik_kenar) raporda görünür.
+
+ÇIKTI -- TEKİL LİF DEĞİL, DEMET
+─────────────────────────────────
+9. İZDÜŞÜM DEMETİ  Π = ⟨Π_uzay, Π_kategori, Π_operad⟩   (n × n dizey)
+   Π_uzay     = (P + Pᵀ)/2    simetrik   → üniter kapı
+   Π_kategori = (P − Pᵀ)/2    ters simetrik → yönlü ortogonal kapı
+   Π_operad   = 2-hücre ağaç tensörü → üniter OLMAYAN izdüşüm
+
+10. DERECELİ FOCK/QUDİT DEVRİ -- her katman kendi hendesesinde nefes alır
+    D3'te kafesin her düğümü için bir Fock modu doğar (`a†`):
+      mod "mertebe·(r,n)-kategori"  doluluk ∝ ρ, çelişki = Ω_yırtık
+    Küme kapanışında hepsi söndürülür (`a`); I1 korunur.
+    Mahallî zırhın aktif penceresi Hodge üçlüsüne göre ÜÇE BÖLÜNÜR:
+      ‖𝒮‖ payı kadar qudit  → Π_uzay'ın ürettiği ÜNİTER kapıyı yer
+      ‖𝒜‖ payı kadar qudit  → Π_kategori'nin YÖNLÜ ORTOGONAL kapısını
+      Ω payı kadar qudit    → Π_operad'ın ÜNİTER OLMAYAN izdüşümünü
+    `nefs/mahalli_yazmac.py:modlari_vur`, her `kodla`da fiilen koşar.
+    Aşkın çağrılar (eigh · exp) SAYILIR ve beyanda görünür (ferman 2-Ş).
+
+11. KANONİK BÜZÜLME (ε: F(G(x)) → x) -- argmax değil
+    tayf, kısıtlama derecesine göre LifYapısı'nın katlarına dağıtılır
+    LifDemeti[j] = Σ ρ,  Büzülme = Σ j·LifDemeti[j],  PariteLifi = ⌊Büzülme⌉
+    Tayf ÇÖKMEZ: LifDemeti, Hodge, Ω ve şelale D3'e beraber geçer.
 ```
 
-**SIRA FERMAN 2-Ā'YA GÖREDİR:** nokta < uzay < tip < **kategori**.
+**ÖLÇÜLEN (kısa profil, 7 ARC + 7 külliyat örneği):** kafes **4** düğüm ·
+tıkanma **50** boynuz · büzülme **1.001** → PariteLifi **1** · dereceli Fock
+modu **4**. Bütün bu sayılar `safha` damgalarıyla kütüğe **anında** akar.
+
+**TAMSAYIYLA ÖLÇÜLEN TASHİHLER (padişahın tenkidi, hepsi haklıydı):**
+
+```
+a) KarşılıklıHaber'de log(0) yoktur: toplam YALNIZ Ortak > 0 üstünde koşar;
+   payda np.finfo(float).tiny ile korunur -- elle yazılmış 1e-300 kesildi.
+b) Nilpotentlik: GeçişDizeyi SATIR-STOKASTİK DEĞİL, ALT-STOKASTİKTİR
+   (çıkış derecesi sıfır olan satır sıfır kalır), o yüzden Perron-Frobenius'un
+   λ=1 hükmü bağlayıcı değildir. Yine de float kuvvetle "= 0" ölçmek ve
+   `1e-12` eşiği fermana aykırıydı: artık BOOLE ERİŞİLEBİLİRLİĞİ ile TAM
+   ölçülür (`kenar^k` mantıksal çarpım), `k` kayması giderildi, adı
+   `dag_mertebesi` oldu ve mertebe teşhisinde ARTIK KULLANILMAZ.
+c) Gromov dörtlüsü ZARLA SEÇİLMEZ: `default_rng(...).choice` kesildi,
+   yerine determinist adım taraması geldi (I5: hiçbir durumda zar atılmaz).
+d) Ölçek uyuşmazlığı: bit · matris normu · kosinüs artık yarıştırılmıyor;
+   profil BİT, ölçü NİSPET, sayım TAMSAYI -- üç defter ayrı.
+```
 
 ### D3 KURULUŞ -- `QNefs` · `Hafiza` · `FockUzayi` · `Hamiltonyen`
 

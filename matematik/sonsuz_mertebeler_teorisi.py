@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import itertools
+import math
 from dataclasses import dataclass
 from typing import (Any, Callable, Dict, FrozenSet, Iterable, Iterator,
                     List, Optional, Sequence, Set, Tuple, Union)
@@ -4438,3 +4439,240 @@ def _bas_ayrisiyor(a: Terim, b: Terim, baglam=None) -> bool:
     if isinstance(ha, Evren):
         return ha.seviye != hb.seviye
     return False
+
+
+TURETIM_SERBESTLIKLERI: Tuple[str, ...] = (
+    "morfizm", "yüksek", "arite", "yön₁", "yön₂", "koherans")
+
+
+_TURETIM_SAYI: Dict[str, int] = {
+    "çağrı": 0, "denenen": 0, "tutan": 0, "düşen": 0,
+    "tavan_r": 0, "tavan_n": 0, "kafes": 0,
+    "boole_yüzü": 0, "heyting_yüzü": 0,
+    "şelale_uzay": 0, "şelale_kategori": 0, "şelale_operad": 0,
+    "tıkanma": 0, "aşkın": 0}
+
+
+_TURETIM_NISPET: Dict[str, float] = {
+    "entropi": 0.0, "boole": 0.0, "heyting": 0.0, "yönlü_kafes": 0.0,
+    "kapanma": 0.0}
+
+
+_TURETIM_ONBELLEK: Dict[Tuple[int, int], Optional[Dict[str, int]]] = {}
+
+
+def _tip_imzasi(T: Terim) -> Dict[str, int]:
+    sayim = {"pi": 0, "sigma": 0, "yol": 0, "evren": 0}
+
+    def yur(t: Terim, derinlik: Dict[str, int]) -> None:
+        if isinstance(t, Pi):
+            derinlik = dict(derinlik)
+            derinlik["pi"] += 1
+            sayim["pi"] = max(sayim["pi"], derinlik["pi"])
+            yur(t.alan, derinlik)
+            yur(t.hedef, derinlik)
+            return
+        if isinstance(t, Sigma):
+            derinlik = dict(derinlik)
+            derinlik["sigma"] += 1
+            sayim["sigma"] = max(sayim["sigma"], derinlik["sigma"])
+            yur(t.alan, derinlik)
+            yur(t.hedef, derinlik)
+            return
+        if isinstance(t, YolP):
+            derinlik = dict(derinlik)
+            derinlik["yol"] += 1
+            sayim["yol"] = max(sayim["yol"], derinlik["yol"])
+            yur(t.cizgi, derinlik)
+            return
+        if isinstance(t, Evren):
+            sayim["evren"] = max(sayim["evren"], int(t.seviye) + 1)
+            return
+        for alt in _alt(t):
+            yur(alt, derinlik)
+
+    yur(T, {"pi": 0, "sigma": 0, "yol": 0})
+    return sayim
+
+
+def _mertebe_tutuyor(r: int, n: int) -> bool:
+    try:
+        denetle_t(rn_sarti(Deg("A"), int(r), int(n)), Evren(0),
+                  ortam_baglami())
+        return True
+    except Exception:
+        return False
+
+
+def ortam_baglami() -> "Baglam":
+    return _genislet_t(Baglam(), "A", Evren(0))
+
+
+def _serbestlik_profili(r: int, n: int) -> Optional[Dict[str, int]]:
+    anahtar = (int(r), int(n))
+    if anahtar in _TURETIM_ONBELLEK:
+        return _TURETIM_ONBELLEK[anahtar]
+    _TURETIM_SAYI["denenen"] += 1
+    if not _mertebe_tutuyor(r, n):
+        _TURETIM_SAYI["düşen"] += 1
+        _TURETIM_ONBELLEK[anahtar] = None
+        return None
+    _TURETIM_SAYI["tutan"] += 1
+    imza = _tip_imzasi(rn_sarti(Deg("A"), int(r), int(n)))
+    profil = {
+        "morfizm": 1 if imza["pi"] > 0 else 0,
+        "yüksek": 1 if imza["yol"] > 0 else 0,
+        "arite": 1 if imza["sigma"] > 0 else 0,
+        "yön₁": 1 if int(n) >= 1 else 0,
+        "yön₂": 1 if int(n) >= 2 else 0,
+        "koherans": 1 if int(n) >= 0 else 0,
+    }
+    _TURETIM_ONBELLEK[anahtar] = profil
+    return profil
+
+
+def turetim_kafesi(tavan_r: int, tavan_n: int) -> List[Dict[str, Any]]:
+    assert int(tavan_r) >= 0, "türetim kafesinin nesne tavanı negatif olamaz"
+    assert int(tavan_n) >= -1, "türetim kafesinin morfizm tavanı −1'in altına inmez"
+    kafes: List[Dict[str, Any]] = []
+    for r in range(0, int(tavan_r) + 1):
+        for n in range(-1, int(tavan_n) + 1):
+            profil = _serbestlik_profili(r, n)
+            if profil is None:
+                continue
+            kafes.append({"r": int(r), "n": int(n), "ad": rn_adi(r, n),
+                          "profil": profil,
+                          "kısıtlama": int(sum(
+                              1 for a in TURETIM_SERBESTLIKLERI
+                              if profil[a] == 0))})
+    assert kafes, (
+        "TÜRETİM KAFESİ BOŞ -- tavan (%d, %d) altında tek bir mertebe bile "
+        "tutmadı; bu bir sayı hatası değil, çekirdeğin kırık olduğunun "
+        "delilidir (ferman 2-Ā-B)" % (int(tavan_r), int(tavan_n)))
+    return kafes
+
+
+def omega_cebiri(dolu_boynuz: int, bos_boynuz: int,
+                 yonlu_kenar: int, simetrik_kenar: int) -> Dict[str, Any]:
+    dolu, bos = int(dolu_boynuz), int(bos_boynuz)
+    toplam = dolu + bos
+    yon, sim = int(yonlu_kenar), int(simetrik_kenar)
+    kenar = yon + sim
+    if toplam <= 0 and kenar <= 0:
+        return {"cebir": "tayinsiz", "üçüncü_şık": None,
+                "dolu": 0, "boş": 0, "yönlü_kenar": 0,
+                "simetrik_kenar": 0, "yüz": repr(YANLIS)}
+    k = Aralik.degisken("κ")
+    if bos == 0:
+        kof, ifade = DOGRU, BIR
+    else:
+        kof, ifade = aralik_esitligi(k, True), k
+    tam = bool(ifade.veya(ifade.degil()).bir_mi())
+    if yon > sim:
+        cebir = "yönlü_kafes"
+    elif tam:
+        cebir = "boole"
+    else:
+        cebir = "heyting"
+    if tam:
+        _TURETIM_SAYI["boole_yüzü"] += 1
+    else:
+        _TURETIM_SAYI["heyting_yüzü"] += 1
+    return {"cebir": cebir, "üçüncü_şık": bool(tam),
+            "dolu": dolu, "boş": bos, "boynuz": toplam,
+            "yönlü_kenar": yon, "simetrik_kenar": sim,
+            "dolu_nispeti": (float(dolu) / float(toplam)
+                             if toplam else 1.0),
+            "yön_nispeti": (float(yon) / float(kenar) if kenar else 0.0),
+            "yüz": repr(kof)}
+
+
+def buzulme_selalesi(bos_boynuz: Sequence[Tuple[int, int, int]],
+                     kenar, agac) -> Dict[str, Any]:
+    E = [list(bool(x) for x in satir) for satir in kenar]
+    n = len(E)
+    ucler = set()
+    for satir in agac:
+        ucler.add((int(satir[0]), int(satir[1]), int(satir[2])))
+    dolgu: Dict[str, List[Tuple[int, int, int]]] = {
+        "uzay": [], "kategori": [], "operad": [], "tıkanma": []}
+    for (a, b, c) in bos_boynuz:
+        if bool(E[c][a]):
+            kat = "uzay"
+        elif any(E[a][m] and E[m][c] for m in range(n) if m != b):
+            kat = "kategori"
+        elif (a, b, c) in ucler:
+            kat = "operad"
+        else:
+            kat = "tıkanma"
+        dolgu[kat].append((int(a), int(b), int(c)))
+        if kat != "tıkanma":
+            E[a][c] = True
+    kapanan = sum(len(dolgu[k]) for k in ("uzay", "kategori", "operad"))
+    toplam = kapanan + len(dolgu["tıkanma"])
+    return {"uzay": len(dolgu["uzay"]), "kategori": len(dolgu["kategori"]),
+            "operad": len(dolgu["operad"]),
+            "tıkanma": len(dolgu["tıkanma"]),
+            "kapanan": int(kapanan), "yırtık": int(toplam),
+            "kapanma_nispeti": (float(kapanan) / float(toplam)
+                                if toplam else 1.0),
+            "dolgu": dolgu, "tamamlanan_kenar": E}
+
+
+def topos_turetimi(olcum: Dict[str, Any]) -> Dict[str, Any]:
+    _TURETIM_SAYI["çağrı"] += 1
+    for a in TURETIM_SERBESTLIKLERI:
+        assert a in olcum, (
+            "TÜRETİM İÇİN %r SERBESTLİĞİ ÖLÇÜLMEMİŞ -- uzuv ölçer, kalp "
+            "türetir; ölçülmeyen serbestlik uydurulmaz (ferman 2-Ā-B)" % a)
+    tavan_r = int(olcum.get("hücre_mertebesi", 1))
+    tavan_n = int(olcum.get("koherans_mertebesi", tavan_r))
+    kafes = turetim_kafesi(tavan_r, tavan_n)
+    x = {a: float(min(1.0, max(0.0, float(olcum[a]))))
+         for a in TURETIM_SERBESTLIKLERI}
+    agirlik: List[float] = []
+    for dug in kafes:
+        p = dug["profil"]
+        w = 1.0
+        for a in TURETIM_SERBESTLIKLERI:
+            w *= x[a] if int(p[a]) else (1.0 - x[a])
+        agirlik.append(max(0.0, w))
+    top = float(sum(agirlik))
+    assert top > 0.0, (
+        "TÜRETİM BÜTÜN KAFESİ SÖNDÜRDÜ -- ölçülen serbestlik %r kafesteki "
+        "hiçbir kısıtlama yüzüne oturmadı (ferman 2-Ā-B)" % (x,))
+    ro = [w / top for w in agirlik]
+    entropi = 0.0
+    for q in ro:
+        if q > 0.0:
+            entropi -= q * math.log(q)
+    om = omega_cebiri(int(olcum.get("dolu_boynuz", 0)),
+                      int(olcum.get("boş_boynuz", 0)),
+                      int(olcum.get("yönlü_kenar", 0)),
+                      int(olcum.get("simetrik_kenar", 0)))
+    selale = olcum.get("şelale")
+    _TURETIM_SAYI["tavan_r"] = int(tavan_r)
+    _TURETIM_SAYI["tavan_n"] = int(tavan_n)
+    _TURETIM_SAYI["kafes"] = int(len(kafes))
+    _TURETIM_NISPET["entropi"] = float(entropi)
+    _TURETIM_NISPET["yönlü_nispet"] = float(om.get("yön_nispeti", 0.0))
+    _TURETIM_NISPET["dolu_nispet"] = float(om.get("dolu_nispeti", 0.0))
+    if isinstance(selale, dict):
+        _TURETIM_SAYI["şelale_uzay"] = int(selale.get("uzay", 0))
+        _TURETIM_SAYI["şelale_kategori"] = int(selale.get("kategori", 0))
+        _TURETIM_SAYI["şelale_operad"] = int(selale.get("operad", 0))
+        _TURETIM_SAYI["tıkanma"] = int(selale.get("tıkanma", 0))
+        _TURETIM_NISPET["kapanma"] = float(selale.get("kapanma_nispeti",
+                                                      0.0))
+    return {"kafes": kafes, "tayf": ro, "entropi": float(entropi),
+            "had": (math.log(float(len(kafes))) if len(kafes) > 1 else 0.0),
+            "Ω_cebiri": om, "şelale": selale,
+            "tavan": (int(tavan_r), int(tavan_n)),
+            "koordinat": x,
+            "serbestlik": TURETIM_SERBESTLIKLERI}
+
+
+def turetim_beyani() -> Dict[str, Any]:
+    b: Dict[str, Any] = {k: int(v) for k, v in _TURETIM_SAYI.items()}
+    b.update({k: float(v) for k, v in _TURETIM_NISPET.items()})
+    return b

@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Optional, Sequence
 import numpy as np
 
 __all__ = ["MIHENK", "MIHENK_CEVABI", "CEVAP_PAYI", "cevap_haddi",
+           "safha", "safha_beyani", "safha_sifirla",
            "mihenk_sor", "Nobet", "nobet_kur", "mihenk_metni"]
 
 
@@ -257,4 +258,61 @@ def mihenk_metni(beyan: Dict[str, Any]) -> str:
           "  ayrı cevap  : %d  %s"
           % (ayri, "(cevap HİÇ DEĞİŞMEDİ -- ağırlık cevaba geçmiyor)"
              if ayri <= 1 and len(d) > 1 else "")]
+    return "\n".join(s)
+
+
+_SAFHA: List[Dict[str, Any]] = []
+
+
+_SAFHA_T0: List[float] = []
+
+
+def safha_sifirla() -> None:
+    _SAFHA.clear()
+    _SAFHA_T0.clear()
+    _SAFHA_T0.append(time.perf_counter())
+
+
+def safha(ad: str, **sayi: Any) -> Dict[str, Any]:
+    if not _SAFHA_T0:
+        safha_sifirla()
+    simdi = time.perf_counter()
+    gecen = float(simdi - _SAFHA_T0[0])
+    evvel = float(_SAFHA[-1]["saniye"]) if _SAFHA else 0.0
+    kayit = {"ad": str(ad), "saniye": gecen, "süre": gecen - evvel,
+             "sayı": dict(sayi)}
+    _SAFHA.append(kayit)
+    print("  [safha %8.1f sn  +%7.1f sn] %-22s %s"
+          % (gecen, gecen - evvel, str(ad),
+             "  ".join("%s=%s" % (k, v) for k, v in sayi.items())),
+          flush=True)
+    return kayit
+
+
+def safha_beyani() -> Dict[str, Any]:
+    if not _SAFHA:
+        return {"safha": 0, "toplam_saniye": 0.0, "defter": [],
+                "en_pahalı": "", "en_pahalı_saniye": 0.0}
+    en = max(_SAFHA, key=lambda k: float(k["süre"]))
+    return {"safha": len(_SAFHA),
+            "toplam_saniye": float(_SAFHA[-1]["saniye"]),
+            "defter": list(_SAFHA),
+            "en_pahalı": str(en["ad"]),
+            "en_pahalı_saniye": float(en["süre"])}
+
+
+def safha_metni(beyan: Optional[Dict[str, Any]] = None) -> str:
+    b = dict(beyan or safha_beyani())
+    d = list(b.get("defter") or [])
+    if not d:
+        return "  SAFHA DAMGASI: HİÇ VURULMADI -- kırmızı (ferman 2-N)"
+    s = ["  SAFHA DAMGALARI (ferman 2-N: kütük ANINDA akar)",
+         "    toplam %.1f sn · %d safha · en pahalı safha %s (%.1f sn)"
+         % (float(b["toplam_saniye"]), int(b["safha"]),
+            str(b["en_pahalı"]), float(b["en_pahalı_saniye"]))]
+    for k in d:
+        s.append("    %-22s %8.1f sn   +%7.1f sn   %s"
+                 % (k["ad"], k["saniye"], k["süre"],
+                    "  ".join("%s=%s" % (a, v)
+                              for a, v in dict(k["sayı"]).items())))
     return "\n".join(s)

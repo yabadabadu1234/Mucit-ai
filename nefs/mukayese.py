@@ -1082,7 +1082,7 @@ GECIS: Dict[Durum, Tuple[Durum, ...]] = {
     Durum.INTAC: (),
 }
 
-_SAYAC: Dict[str, float] = {
+_MAKINE_SAYACI: Dict[str, float] = {
     "geçiş": 0.0, "açılan": 0.0, "kapanan": 0.0, "maske": 0.0,
     "geri_yol": 0.0, "mesele_var": 0.0, "mesele_yok": 0.0,
     "tersi_yok": 0.0, "faz_çevirme": 0.0, "mercek": 0.0,
@@ -1109,7 +1109,7 @@ class Makine:
                ", ".join(d.name for d in GECIS[self.durum]) or "yok"))
         self.durum = hedef
         self.izlek.append(hedef)
-        _SAYAC["geçiş"] += 1.0
+        _MAKINE_SAYACI["geçiş"] += 1.0
         return self
 
     def beyan(self) -> Dict[str, Any]:
@@ -1130,7 +1130,7 @@ def _entropi_gradyani(hal: np.ndarray) -> Tuple[np.ndarray, float]:
     return H, float(H.sum())
 
 
-def _kanunlar() -> Dict[str, float]:
+def _kanun_nispetleri() -> Dict[str, float]:
     from .mukayese import kanun_tayfi
     k = kanun_tayfi()
     assert k, (
@@ -1161,7 +1161,7 @@ def ana_superpozisyon(baglam: Sequence[Sequence[int]], nefs=None,
     m.gec(Durum.SINIR)
     hal = _hal_kur(baglam, nefs, int(taban))
     H, toplam = _entropi_gradyani(hal)
-    kanun = _kanunlar()
+    kanun = _kanun_nispetleri()
     en_zayif = min(kanun.items(), key=lambda x: x[1])
     mesele = float(1.0 - float(en_zayif[1]))
     boy = int(sum(len(list(o)) for o in baglam))
@@ -1169,13 +1169,13 @@ def ana_superpozisyon(baglam: Sequence[Sequence[int]], nefs=None,
     ters_var = bool(np.isfinite(hal).all()
                     and float(np.linalg.norm(hal)) > 0.0)
     if not ters_var:
-        _SAYAC["tersi_yok"] += 1.0
+        _MAKINE_SAYACI["tersi_yok"] += 1.0
     m.gec(Durum.MESELE)
     if mesele > float(np.mean(list(kanun.values()))):
-        _SAYAC["mesele_var"] += 1.0
+        _MAKINE_SAYACI["mesele_var"] += 1.0
         var = True
     else:
-        _SAYAC["mesele_yok"] += 1.0
+        _MAKINE_SAYACI["mesele_yok"] += 1.0
         var = False
     return {"makine": m, "hal": hal, "mesele": var,
             "mesele_nispeti": float(mesele),
@@ -1201,7 +1201,7 @@ def cozum_uzayi_ac(sual: Dict[str, Any], nefs=None, hafiza=None,
         "dönülemez ve orada biriken idrak kaybolur (ferman 1-Ç).")
     m.gec(Durum.UZAY)
     m.acik += 1
-    _SAYAC["açılan"] += 1.0
+    _MAKINE_SAYACI["açılan"] += 1.0
     klon = np.array(sual["hal"], complex, copy=True)
     kaide = sual["kaideler"]
     aci = math.pi * float(sual["mesele_nispeti"])
@@ -1233,9 +1233,8 @@ def mantik_filtresi(uzay: Dict[str, Any]) -> Dict[str, Any]:
              "kısırdöngü" if kapanis >= 1.0 - float(np.finfo(float).eps)
              else "")
     if ihlal:
-        P = np.outer(E, E.conj())
-        psi = psi - 2.0 * (P @ psi)
-        _SAYAC["faz_çevirme"] += 1.0
+        psi = psi - 2.0 * complex(np.vdot(E, psi)) * E
+        _MAKINE_SAYACI["faz_çevirme"] += 1.0
     uzay["hal"] = psi
     uzay["kayıt"].append({"süzgeç": "mantık", "ihlâl": ihlal or "yok",
                           "takla": takla, "kapanış": kapanis,
@@ -1272,14 +1271,14 @@ def mukayese_filtresi(uzay: Dict[str, Any], hafiza=None,
     nrm = float(np.linalg.norm(psi))
     assert nrm > 0.0, "mukayese merceği dalgayı tamamen söndürdü"
     psi = psi / nrm
-    _SAYAC["mercek"] += 1.0
+    _MAKINE_SAYACI["mercek"] += 1.0
     kok_adi = "mukayese.Φ%+.3f" % fi
     if mahalli is not None:
         mahalli.cartan_ekle(kok_adi, fi)
-        _SAYAC["kök"] += 1.0
+        _MAKINE_SAYACI["kök"] += 1.0
     d = psi.size
     psi = psi * np.exp(1j * fi * np.arange(d) / max(1, d - 1))
-    _SAYAC["pergel"] += 1.0
+    _MAKINE_SAYACI["pergel"] += 1.0
     uzay["hal"] = psi
     uzay["kayıt"].append({"süzgeç": "mukayese", "kutup": len(kutup),
                           "r": r, "Φ": fi, "mercek_β": beta,
@@ -1297,8 +1296,8 @@ def norm_maskesi(uzay: Dict[str, Any], jeton: int) -> Dict[str, Any]:
             "JETON %d İKİNCİ DEFA MASKELENİYOR -- geri yol kısırdöngüye "
             "girdi (ferman 1-I: kısırdöngü kat'î huduttur)" % int(jeton))
         m.maskeli.add(int(jeton))
-        _SAYAC["maske"] += 1.0
-        _SAYAC["geri_yol"] += 1.0
+        _MAKINE_SAYACI["maske"] += 1.0
+        _MAKINE_SAYACI["geri_yol"] += 1.0
     return {"norm": norm, "kapalı": kapali,
             "ceza": (-math.inf if kapali else 0.0),
             "maskeli": sorted(m.maskeli)}
@@ -1315,7 +1314,7 @@ def cozum_uzayi_kapat(uzay: Dict[str, Any], sual: Dict[str, Any],
             "imkânsız (ferman 1-Ç)")
         psi = psi * np.conj(F)
         m.acik -= 1
-        _SAYAC["kapanan"] += 1.0
+        _MAKINE_SAYACI["kapanan"] += 1.0
         m.gec(Durum.HUKUM)
         m.gec(Durum.INTAC)
     assert m.acik == 0, (
@@ -1342,7 +1341,7 @@ def cozum_uzayi_kapat(uzay: Dict[str, Any], sual: Dict[str, Any],
          "beyan": m.beyan()}
     _SON.clear()
     _SON.update({k: v for k, v in o.items() if k != "hal"})
-    _SON["sayaç"] = dict(_SAYAC)
+    _SON["sayaç"] = dict(_MAKINE_SAYACI)
     return o
 
 
@@ -1354,7 +1353,7 @@ def cozum_beyani() -> Dict[str, Any]:
             "aranan_basamak": 0, "süzgeç": [],
             "beyan": {"durum": "KOŞMADI", "izlek": [], "adım": 0,
                       "maskeli_jeton": 0, "açık_uzay": 0},
-            "sayaç": dict(_SAYAC)}
+            "sayaç": dict(_MAKINE_SAYACI)}
 
 
 def cozum_metni(b: Optional[Dict[str, Any]] = None) -> str:

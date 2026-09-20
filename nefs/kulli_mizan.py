@@ -1026,6 +1026,10 @@ def rapor(profil: str = "kısa") -> str:
     return "\n".join(s)
 
 
+_FOCK_SAYAC: Dict[str, float] = {
+    "yaratma": 0.0, "yok_etme": 0.0, "balyalama": 0.0}
+
+
 @dataclass
 class Mod:
 

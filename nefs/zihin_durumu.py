@@ -250,6 +250,9 @@ class QYazmac:
                 kontrol,
                 pq.rezonans(self.mahalli.koordinat(), int(kontrol.size)),
                 bag)
+        izd = getattr(self, "izdusum", None)
+        if izd is not None:
+            self.mahalli.modlari_vur(izd[0], izd[1])
         self._tohum = (bas, sec, yigin, seviye, B, n_sat, d)
         self.y.psi = genlik.astype(self.y.ayar.tip)
         self.y.normalize()

@@ -116,7 +116,12 @@
 | # | İPTAL OLAN | YERİNE GELEN | F |
 | :-- | :-- | :-- | :-- |
 | 72 | Âlem adının `"%s.%s" % (tayf, mertebe)` diye uydurulması | `matematik/sonsuz_mertebeler_teorisi.py`den fiilen türetilen ∞-kategori | 2-Ā |
-| 73 | `ℓ=2 KATEGORİ, ℓ=3 TİP` sırası | nokta < uzay < tip < **kategori** (en umumî) | 2-Ā |
+| 73 | `ℓ=2 KATEGORİ, ℓ=3 TİP` sırası **ve onu nakzeden** `nokta < uzay < tip < kategori (en umumî)` sırası | **NAKZ (F 2-Ā-B):** zirve **Yönlü Opetopik (∞,∞)-Properad Toposu**dur; aşağısı kısıtlamayla (dejenerasyon) türer | 2-Ā-B |
+| 73-B | Cinslerin evvelden listelenmesi: `{nokta, uzay, tip, kategori}` gibi kapalı bir cins cetveli | Cins listelenmez; girdi dizisinin ördüğü **opetopik hücre kompleksinden** üç testle doğar | 2-Ā-B |
+| 73-C | `mertebe_sec`in `argmax(puan)` ile tek mertebeye çökmesi ve `PariteLifi = Mertebe.kat` tekil indisi | **Spektral tabakalaşma:** `𝒟 = 𝒮_simetrik ⊕ 𝒜_yönlü ⊕ Ω_yırtık`; çıktı dereceli demet `(ρ_k)`, `Σρ_k = 1` | 2-Ā-B, 2-Ú-B |
+| 73-D | Dört puanın ölçeği normalize edilmeden `enbüyükArgüman`a sokulması (bit · matris normu · kosinüs yan yana) | Her ölçü kendi haddine bölünüp `[0,1]`e çekilir; yarış değil **ayrışım** | 2-Ā-B, 1-J |
+| 73-E | `gromov_delta`da `default_rng(...).choice` ile rastgele dörtlü çekmek | Determinist dörtlü taraması -- zar yoktur (I5) | 2-Ĵ |
+| 73-F | `Nilpotent = en küçük k, GeçişDizeyi^k = 0` float eşiğiyle (`1e-12`) ölçülmesi | Boole erişilebilirliğiyle **tam** DAG mertebesi; eşik yok, `k` kayması yok | 1-J |
 | 74 | Tek indisli `ℓ ∈ {0,1,2,3}` merdiveni | `(r, n)` çifti; r = nesne, n = morfizm mertebesi; tavan `(∞, ∞)` | 2-Þ |
 | 75 | `"∞-kategori"` ve `"∞-tip"` iki ayrı taşıyıcı adı | Tek taşıyıcı: `(r, n)`-kategori | 2-Þ |
 | 76 | Elle yazılmış `VECIHLER` listesi (`genlik`, `faz`, `fark`, `dilim`) | Vecih ∞-kategori ve ∞-tip teorisinden neşet eder | 2-Ú |
@@ -269,6 +274,9 @@
 | 85 | Sıralamanın bir vechi kapatması (çarpım sıralar, elemez) | 1-Ğ |
 | 86 | Eleme -- yalnız mantıksızlıkta vardır; tenakuz ve kısırdöngü **tasnif** edilir | 2-Ú |
 | 87 | Tip tayfını `argmax` ile çökertmek | 2-Ú-B |
+| 87-B | Cinsi evvelden listeleyip veriyi o listeye sokmak; veriye **etiket seçtirmek** | 2-Ā-B |
+| 87-C | Mertebeyi tek skalere indirmek; `PariteLifi`ni tek kat sanmak | 2-Ā-B, 2-Ú-B |
+| 87-D | Birimi ve haddi başka olan ölçüleri normalize etmeden yarıştırmak (bit · matris normu · kosinüs) | 2-Ā-B, 1-J |
 | 88 | Zar atmak; stokastiklik; rastgele izdüşüm, rastgele eksen, rastgele tohumlu vecih | 2-Ĵ, 2-Ø, 2-Ú |
 | 89 | Cevabı gerilim tepesine yazdırmak (nedensellik ölür) | 2-Ï |
 | 90 | Taşan belirteç kimliğini sözlük mertebesine göre katlayarak susturmak | 2-L |
@@ -447,7 +455,12 @@
 | 111 | Vecih tayini: `Vecih* = argmax [Gaye × Tenasüp × İnşikak]`; `Gaye = iz(ρ(Dizi)·Üreteç(Vecih))`, `Tenasüp = ort_k \|⟨belirteç_k\|Vecih⟩\|²`, `İnşikak = 1 − \|⟨A^(V)\|B^(V)⟩\|²`. Çarpım bir **sıralamadır**, eleme değil | 1-Ğ |
 | 112 | Yetersizlik olmadan vecih değiştirmenin üç yolu: **J-aynası** (`J·M_v·J = M_v'`) · **tensörel terkip** (`\|A^(maaş)⟩⊗\|A^(takva)⟩`) · **üst mertebe tefekkür** (foliation) | 1-Ğ |
 | 113 | Kâide dışarıdan ezberletilmez, **diziden istihraç edilir**: metrik (Fubini-Study/Fisher) · sıra (Lie yapı sabitleri `[X_a,X_b]=f_ab^c X_c`) · kompozisyon (sol Kan uzantısı, ko-end integrali) | 1-Ğ |
-| 114 | Mertebe merdiveni `(r, n)` çiftidir; tavan `(∞, ∞)`. En umumî olan **KATEGORİ**dir; çöküş oradan başlar, cevap (nokta) en son varılan yerdir | 2-Þ, 2-Ā |
+| 114 | **KURUCU HİYERARŞİ (zirveden tabana, F 2-Ā-B):** `Yönlü Opetopik (∞,∞)-Properad Toposu` → `(∞,∞)-kategori` → `(∞,1)-kategori` → `(∞,0)-tip = homotopi uzayı` → `1-grupoid` → `küme (0-tip)` → `nokta`. Aşağı inmek **kısıtlama**dır: arite `n→m` iken `1→1`e; yön tersinir kılınır; `π_k` sıfırlanır. Çöküş zirveden başlar, cevap (nokta) en son varılan yerdir | 2-Ā-B, 2-Þ |
+| 114-A | **TÜRETİM MOTORU TEKTİR VE KALPTEDİR.** En üst cins -- Yönlü Opetopik `(∞,∞)`-Properad Toposu -- `matematik/sonsuz_mertebeler_teorisi.py`de yaşar; türetim **yalnız orada** koşar. Başka hiçbir dosyada türetim yapan ikinci bir motor bulunamaz; uzuvlar ölçer ve kalbe sorar, kendi cinsini kendi türetemez | 2-Ā-B, 2-Ý, 1-M |
+| 114-B | **CİNS LİSTELENMEZ, ÖRÜLÜR.** Girdi dizisinden serbest opetopik kompleks kurulur: 0-hücre belirteç · 1-hücre ardışık geçiş · 2-hücre `bağlam → netice` ağacı · n-hücre kuralın kurala dönüşümü. Şekil evvelden verilmez, dallanmanın kendisi olur | 2-Ā-B |
+| 114-C | **ÜÇ EVRENSEL TEST** cinsi kendiliğinden tayin eder: **1 ARİTE** (`1→1` kategori · `n→1` operad · `n→m` properad) → **2 TERSİNİRLİK** (`g∘f ≃ id` ise homotopi **uzayı**, değilse **yönlü kategori**) → **3 KAN BOYNUZU** (her boynuz doluyorsa `∞`-kategori, yırtık varsa **obstrüksiyon ve ayrık mantık**) | 2-Ā-B |
+| 114-D | **TÜRETİM KURALI Ω'DAN OKUNUR:** alt-nesne sınıflayıcısı `Ω` veriden çıkarılır -- karşıtı daima çelişki ise Boole (klasik mantık), ispata/zamana bağlı ise Heyting (sezgisel), yönlü süreçle bağlıysa yönlü kafes (lineer/kuantum mantığı). Yerel geçişler çelişmeden yapışıyorsa (gluing) **kanun** diye mühürlenir, yapışmıyorsa yerel istisnadır | 2-Ā-B |
+| 114-E | **ARGMAX YERİNE BÜZÜLME:** bütün geometriler paralel koşar; yırtık uzay katmanında çözülmezse yönlü ok, orada da çözülmezse operadın çoklu birleşimi devreye girer. Çıktı en yüksek puanın keyfî kararı değil, **kanonik büzülmenin** (`ε: F(G(x)) → x`) tabiî neticesidir | 2-Ā-B, 2-Ú-B |
 | 115 | Mertebe içindeki tür de izole edilir: UZAY → hiperbolik/Öklid/Lie torusu · KATEGORİ → poset/Heyting/DAG · TİP → Σ-bağımlı/HIT/Univalent | 1-Ğ |
 | 116 | Âlem `matematik/sonsuz_mertebeler_teorisi.py`den fiilen türetilir; cevap o kategorinin **kimliğidir**, bir etiket değil | 2-Ā |
 | 117 | Vecih bir âlem taşır: ⟨**Âlem** (sıhhat · tenakuz · teşbih · kinaye · gizli niyet · sualin parametreleri …), **Kaideler** (o âlemin kendine has metriği, sırası, kompozisyonu), **Taşıyıcı Mertebe** (ölçülerek seçilir, yetmezse bir üst açılır)⟩ | 2-Ú |
@@ -651,6 +664,9 @@ Koşturulabilen **tek** şey budur (F 1-L).
                  ┌──────────────┐│
                  │ S1  SINIR    ││  entropi gradyanı ölçülür
                  │              ││  kısıt grafı kurulur   F 2-Æ
+                 │              ││  opetopik kompleks örülür · üç test
+                 │              ││  (arite · tersinirlik · Kan boynuzu)
+                 │              ││  → mertebe TAYFI + Ω cebiri  F 2-Ā-B
                  └──────┬───────┘│
                         │        │
                         ▼        ▼
@@ -695,7 +711,7 @@ Koşturulabilen **tek** şey budur (F 1-L).
 | :-- | :-- | :-- | :-- |
 | S0 VAKUM | S1 | Metin geldi | 2-Þ |
 | S0 VAKUM | **S2** | Girdi **yok** ve kapı **tâlim**: iç tenakuz + merak gediğinden `G_t` doğdu. Çıkarımda bu geçiş **yoktur** | 2-Ħ |
-| S1 SINIR | S2 | Entropi gradyanı ölçüldü, kısıt grafı kuruldu | 2-Æ |
+| S1 SINIR | S2 | Entropi gradyanı ölçüldü, kısıt grafı kuruldu, opetopik kompleks örüldü ve mertebe **tayfı** (7 katman) çıktı -- tek katman seçilmedi | 2-Æ, 2-Ā-B |
 | S2 MESELE | S3, S6 | S3 için: mesele var **ve** `F⁻¹` mevcut. Aksi hâlde S6 | 2-Ý, 1-Ç |
 | S3 UZAY | S4 | Uzay kaidesinden doğdu (Yoneda → Kohomoloji → Lie) | 2-Ý, 2-Ú-E |
 | S4 SÜZÜLMÜŞ | S5 | **Sadakat devresi** ve mukayese filtresi koştu | 2-Đ, 2-Ý |
@@ -716,6 +732,8 @@ Koşturulabilen **tek** şey budur (F 1-L).
 | I8 | **Her durumdan çıkarken, o durumda mevcut BÜTÜN süperpozisyonlar sadakat devresinden geçer.** Geçmeyen süperpozisyon sayılır | Muaf tutulmuş süperpozisyon | 2-Đ |
 | I9 | Sadakat **yalnız mantıksız** dalı imha eder. *"Mantığı görünmüyor"* diye kapatılan dal sayısı **sıfır** olmalıdır | Kendini kilitleme | 2-Đ |
 | I10 | S0 → S2 öz-geçişi **yalnız tâlim kapısında** meşrudur | Çıkarımda özerklik | 2-Ħ |
+| I11 | Mertebe tayfı `Σρ_k = 1` ve **hiçbir `ρ_k` kasten sıfırlanmaz**; cins evvelden listelenmez, girdinin ördüğü komplekse sorulur | Etiket seçmek | 2-Ā-B, 2-Ú-B |
+| I12 | Ölçüler `enbüyükArgüman`a girmeden evvel **hepsi `[0,1]`e** çekilmiş olmalıdır; birimi başka olan iki sayı yarıştırılmaz | Ölçek keyfîliği | 2-Ā-B, 1-J |
 
 ## 4-E. JETON HALKASI (S6 içinde koşar)
 

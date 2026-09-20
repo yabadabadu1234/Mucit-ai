@@ -619,23 +619,19 @@ class QuditYazmac:
         cift = gen // 2
         a = np.asarray(teta, float).reshape(-1)
         a = np.resize(a, cift) if a.size else np.zeros(cift, float)
-        U = np.eye(gen, dtype=complex)
-        dU = np.zeros((gen, gen), complex)
-        for k in range(cift):
-            c, s = math.cos(float(a[k])), math.sin(float(a[k]))
-            u, v = 2 * k, 2 * k + 1
-            U[u, u] = c
-            U[u, v] = -s
-            U[v, u] = s
-            U[v, v] = c
-            dU[u, u] = -s
-            dU[u, v] = -c
-            dU[v, u] = c
-            dU[v, v] = -s
-        self.sektor_kapisi(ad, U)
+        c = np.cos(a)
+        s = np.sin(a)
+        P = self.psi
+        u = P[:, i:i + 2 * cift:2]
+        v = P[:, i + 1:i + 2 * cift:2]
+        yeni_u = c[None, :] * u - s[None, :] * v
+        yeni_v = s[None, :] * u + c[None, :] * v
+        P[:, i:i + 2 * cift:2] = yeni_u
+        P[:, i + 1:i + 2 * cift:2] = yeni_v
+        self.iz.kapi_yaz("sektör_givens", (int(i), int(j)), a)
+        self._kapi += 1
         self._sektor_vurusu += 1
         _SEKTOR_SAYAC["dönme"] += 1.0
-        _SEKTOR_SAYAC["kapı_dizeyi"] += 1.0
         m = getattr(self, "mahalli", None)
         if m is not None:
             m.cartan_ekle(str(ad), float(np.mean(a)))
@@ -643,7 +639,8 @@ class QuditYazmac:
             for (par, olcek, _pay) in ([bag] if isinstance(bag, tuple)
                                        else list(bag)):
                 self.iz.bag_yaz(self.iz.son_senet, int(par),
-                                float(olcek), ("sektör", int(i), int(j), dU))
+                                float(olcek),
+                                ("sektör_givens", int(i), int(j), a))
         return gen
 
     def sektor_cifti(self, kontrol: str, hedef: str,
