@@ -915,6 +915,20 @@ def ara_ikame(t: Terim, sigma: Dict[str, Aralik]) -> Terim:
                            f(ara_ikame(t.dongu_dali,
                                        {t.i_ad: Aralik.degisken(yeni)})),
                            f(t.nokta))
+    if isinstance(t, Suspansiyon):
+        return Suspansiyon(f(t.taban_uzay))
+    if isinstance(t, KuzeyKutup):
+        return KuzeyKutup(f(t.uzay))
+    if isinstance(t, GuneyKutup):
+        return GuneyKutup(f(t.uzay))
+    if isinstance(t, Meridyen):
+        r = t.i_aralik.yerine_koy(sigma)
+        uzay_f, nokta_f = f(t.uzay), f(t.nokta)
+        if r.sifir_mi():
+            return KuzeyKutup(uzay_f)
+        if r.bir_mi():
+            return GuneyKutup(uzay_f)
+        return Meridyen(uzay_f, nokta_f, r)
     raise TypeError("ara_ikame: bilinmeyen terim %r" % (t,))
 
 
@@ -1000,6 +1014,14 @@ def ikame(t: Terim, sigma: Dict[str, Terim]) -> Terim:
         ad2, hd = bagla(t.ad, t.hedef)
         return CemberInd(ad2, f(hd), f(t.taban_dali), t.i_ad,
                            f(t.dongu_dali), f(t.nokta))
+    if isinstance(t, Suspansiyon):
+        return Suspansiyon(f(t.taban_uzay))
+    if isinstance(t, KuzeyKutup):
+        return KuzeyKutup(f(t.uzay))
+    if isinstance(t, GuneyKutup):
+        return GuneyKutup(f(t.uzay))
+    if isinstance(t, Meridyen):
+        return Meridyen(f(t.uzay), f(t.nokta), t.i_aralik)
     raise TypeError("ikame: bilinmeyen terim %r" % (t,))
 
 
@@ -1129,6 +1151,37 @@ class DSuspansiyon(Deger):
 
     def act(self, s):
         return DSuspansiyon(self.taban_uzay.act(s))
+
+
+class DKuzeyKutup(Deger):
+    __slots__ = ("uzay",)
+
+    def __init__(self, uzay: Deger) -> None:
+        self.uzay = uzay
+
+    def act(self, s):
+        return DKuzeyKutup(self.uzay.act(s))
+
+
+class DGuneyKutup(Deger):
+    __slots__ = ("uzay",)
+
+    def __init__(self, uzay: Deger) -> None:
+        self.uzay = uzay
+
+    def act(self, s):
+        return DGuneyKutup(self.uzay.act(s))
+
+
+class DMeridyen(Deger):
+    __slots__ = ("uzay", "nokta", "r")
+
+    def __init__(self, uzay: Deger, nokta: Deger, r: Aralik) -> None:
+        self.uzay, self.nokta, self.r = uzay, nokta, r
+
+    def act(self, s):
+        return deger_meridyen(self.uzay.act(s), self.nokta.act(s),
+                              self.r.yerine_koy(s))
 
 
 class DSfr(_Basit):
@@ -1719,6 +1772,14 @@ def deger_dongu(r: Aralik) -> Deger:
     return DDongu(r)
 
 
+def deger_meridyen(uzay: Deger, nokta: Deger, r: Aralik) -> Deger:
+    if r.sifir_mi():
+        return DKuzeyKutup(uzay)
+    if r.bir_mi():
+        return DGuneyKutup(uzay)
+    return DMeridyen(uzay, nokta, r)
+
+
 def dogal_ind(motif: Kapanis, sfr: Deger, ard: Kapanis2, sayi: Deger) -> Deger:
     if isinstance(sayi, DSfr):
         return sfr
@@ -2109,6 +2170,16 @@ def degerlendir(t: Terim, ortam: Ortam) -> Deger:
         return coz(degerlendir(t.taban, ortam),
                    _glue_dallari(t.dallar, ortam),
                    degerlendir(t.govde, ortam))
+    if isinstance(t, Suspansiyon):
+        return DSuspansiyon(degerlendir(t.taban_uzay, ortam))
+    if isinstance(t, KuzeyKutup):
+        return DKuzeyKutup(degerlendir(t.uzay, ortam))
+    if isinstance(t, GuneyKutup):
+        return DGuneyKutup(degerlendir(t.uzay, ortam))
+    if isinstance(t, Meridyen):
+        return deger_meridyen(degerlendir(t.uzay, ortam),
+                              degerlendir(t.nokta, ortam),
+                              t.i_aralik.yerine_koy(ortam.araliklar))
     raise CekirdekHatasi("değerlendirilemeyen terim: %r" % (t,))
 
 
@@ -2199,6 +2270,14 @@ def geri_oku(d: Deger, k: int = 0) -> Terim:
                                geri_oku(d.taban, k))
     if isinstance(d, DNotr):
         return _geri_oku_notr(d.n, k)
+    if isinstance(d, DSuspansiyon):
+        return Suspansiyon(geri_oku(d.taban_uzay, k))
+    if isinstance(d, DKuzeyKutup):
+        return KuzeyKutup(geri_oku(d.uzay, k))
+    if isinstance(d, DGuneyKutup):
+        return GuneyKutup(geri_oku(d.uzay, k))
+    if isinstance(d, DMeridyen):
+        return Meridyen(geri_oku(d.uzay, k), geri_oku(d.nokta, k), d.r)
     raise CekirdekHatasi("geri okunamayan değer: %r" % (d,))
 
 
@@ -4766,6 +4845,12 @@ def _whnf_hesapla(t: Terim, baglam=None) -> Terim:
         if isinstance(t, Dongu):
             if t.r.sifir_mi() or t.r.bir_mi():
                 return Taban()
+            return t
+        if isinstance(t, Meridyen):
+            if t.i_aralik.sifir_mi():
+                return KuzeyKutup(t.uzay)
+            if t.i_aralik.bir_mi():
+                return GuneyKutup(t.uzay)
             return t
         if isinstance(t, DogalInd):
             s = whnf(t.sayi, baglam)
