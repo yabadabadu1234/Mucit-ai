@@ -5015,39 +5015,129 @@ def analitik_lie_bargmann_adimi(x: int, y: int, z: int, P: np.ndarray, Asim: np.
     }
 
 
-class OpetopikSeviye:
-    __slots__ = ("boyut", "hucreler", "kaynak_hedef_baglari")
+class Turetilen1Kategori:
+    __slots__ = ("nesneler", "ok_siniflari", "bileske_tablosu", "birim_oklar")
 
-    def __init__(self, boyut: int) -> None:
-        self.boyut = boyut
-        self.hucreler: List[Any] = []
-        self.kaynak_hedef_baglari: Dict[int, Tuple[Tuple[int, ...], int]] = {}
-
-    def hucre_ekle(self, oncutler: Tuple[int, ...], hedef: int, veri: Any) -> int:
-        idx = len(self.hucreler)
-        self.hucreler.append(veri)
-        self.kaynak_hedef_baglari[idx] = (oncutler, hedef)
-        return idx
+    def __init__(self, nesneler: List[int], ok_siniflari: Dict[Tuple[int, int], int],
+                 bileske_tablosu: Dict[Tuple[int, int], int],
+                 birim_oklar: Dict[int, int]) -> None:
+        self.nesneler = nesneler
+        self.ok_siniflari = ok_siniflari
+        self.bileske_tablosu = bileske_tablosu
+        self.birim_oklar = birim_oklar
 
 
-class DinamikSonsuzTopos:
-    def __init__(self) -> None:
-        self.seviyeler: Dict[int, OpetopikSeviye] = {
-            0: OpetopikSeviye(0),
-            1: OpetopikSeviye(1),
-            2: OpetopikSeviye(2),
-            3: OpetopikSeviye(3),
+def turet_1_kategori(w_baglam: Tuple[int, ...], P: np.ndarray,
+                     silsile_adimlari: List[Tuple[Terim, Terim]]
+                     ) -> Turetilen1Kategori:
+    nesneler_kumesi = set(w_baglam)
+    for agac, ok in silsile_adimlari:
+        if isinstance(ok, YonluOk):
+            for uc in (ok.kaynak, ok.hedef):
+                if isinstance(uc, Belirtec):
+                    nesneler_kumesi.add(uc.id_no)
+
+    nesneler = sorted(nesneler_kumesi)
+    ok_siniflari: Dict[Tuple[int, int], int] = {}
+    birim_oklar: Dict[int, int] = {}
+    ok_sayaci = 0
+
+    for x in nesneler:
+        ok_siniflari[(x, x)] = ok_sayaci
+        birim_oklar[x] = ok_sayaci
+        ok_sayaci += 1
+
+    for i in nesneler:
+        for j in nesneler:
+            if i != j and P[i, j] > 0.05:
+                if (i, j) not in ok_siniflari:
+                    ok_siniflari[(i, j)] = ok_sayaci
+                    ok_sayaci += 1
+
+    bileske_tablosu: Dict[Tuple[int, int], int] = {}
+    for (x, y), ok1 in list(ok_siniflari.items()):
+        for (y2, z), ok2 in list(ok_siniflari.items()):
+            if y == y2:
+                if (x, z) not in ok_siniflari:
+                    ok_siniflari[(x, z)] = ok_sayaci
+                    ok_sayaci += 1
+                bileske_tablosu[(ok1, ok2)] = ok_siniflari[(x, z)]
+
+    return Turetilen1Kategori(nesneler, ok_siniflari, bileske_tablosu, birim_oklar)
+
+
+class TuretilenAyrıkKume:
+    __slots__ = ("bilesenler", "eleman_bilesen_haritasi")
+
+    def __init__(self, bilesenler: List[Set[int]]) -> None:
+        self.bilesenler = bilesenler
+        self.eleman_bilesen_haritasi = {
+            el: idx for idx, kume in enumerate(bilesenler) for el in kume
         }
 
-    def ust_boyut_ac(self, yeni_boyut: int) -> None:
-        if yeni_boyut not in self.seviyeler:
-            self.seviyeler[yeni_boyut] = OpetopikSeviye(yeni_boyut)
 
-    def kanonik_kirp(self, n_kesme: int) -> Dict[str, Any]:
-        return {
-            "kalan_boyut": min(n_kesme, max(self.seviyeler.keys())),
-            "büzülen_seviyeler": [b for b in self.seviyeler if b > n_kesme]
-        }
+def turet_ayrik_kume(nesneler: List[int], P: np.ndarray) -> TuretilenAyrıkKume:
+    ebeveyn = {x: x for x in nesneler}
+
+    def bul(i: int) -> int:
+        while ebeveyn[i] != i:
+            ebeveyn[i] = ebeveyn[ebeveyn[i]]
+            i = ebeveyn[i]
+        return i
+
+    def birlestir(i: int, j: int) -> None:
+        kok_i, kok_j = bul(i), bul(j)
+        if kok_i != kok_j:
+            ebeveyn[kok_i] = kok_j
+
+    for i in nesneler:
+        for j in nesneler:
+            if i != j and (P[i, j] > 0.1 or P[j, i] > 0.1):
+                birlestir(i, j)
+
+    gruplar: Dict[int, Set[int]] = {}
+    for x in nesneler:
+        kok = bul(x)
+        gruplar.setdefault(kok, set()).add(x)
+
+    return TuretilenAyrıkKume(list(gruplar.values()))
+
+
+class TuretilenDilimAlemi:
+    __slots__ = ("baglam_hedefi", "alemdeki_nesneler", "alem_ici_morfizmler")
+
+    def __init__(self, baglam_hedefi: int, alemdeki_nesneler: List[int],
+                 alem_ici_morfizmler: List[Tuple[int, int]]) -> None:
+        self.baglam_hedefi = baglam_hedefi
+        self.alemdeki_nesneler = alemdeki_nesneler
+        self.alem_ici_morfizmler = alem_ici_morfizmler
+
+
+def turet_dilim_alemi(baglam_hedefi: int, nesneler: List[int],
+                      P: np.ndarray) -> TuretilenDilimAlemi:
+    hedefe_baglananlar = [x for x in nesneler
+                          if P[x, baglam_hedefi] > 0.01 or x == baglam_hedefi]
+
+    alem_morfizmleri = []
+    for x in hedefe_baglananlar:
+        for y in hedefe_baglananlar:
+            if x != y and P[x, y] > 0.05:
+                alem_morfizmleri.append((x, y))
+
+    return TuretilenDilimAlemi(baglam_hedefi, hedefe_baglananlar, alem_morfizmleri)
+
+
+def kategori_sahidi_paketle(kat: Turetilen1Kategori) -> Terim:
+    return Cift(
+        Dogal(),
+        Cift(
+            Dogal(),
+            Cift(
+                dogal_sayi(len(kat.birim_oklar)),
+                dogal_sayi(len(kat.bileske_tablosu))
+            )
+        )
+    )
 
 
 def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
@@ -5213,15 +5303,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                                 dogal_sayi(nihai_hedef))
     kulli_sahit_gecerli = ispat_sahidini_dogrula(kulli_ispat, orijinal_baglam, nihai_hedef)
 
-    topos = DinamikSonsuzTopos()
-    for x in orijinal_baglam:
-        topos.seviyeler[0].hucre_ekle((), x, x)
-    for agac, ok in silsile_adimlari:
-        topos.seviyeler[2].hucre_ekle(orijinal_baglam, nihai_hedef, agac)
-        topos.seviyeler[1].hucre_ekle(orijinal_baglam, nihai_hedef, ok)
-    if silsile_adimlari:
-        topos.ust_boyut_ac(3)
-        topos.seviyeler[3].hucre_ekle(orijinal_baglam, nihai_hedef, kulli_ispat)
+    turetilen_kategori = turet_1_kategori(orijinal_baglam, P, silsile_adimlari)
+    turetilen_kume = turet_ayrik_kume(turetilen_kategori.nesneler, P)
+    turetilen_alem = turet_dilim_alemi(nihai_hedef, turetilen_kategori.nesneler, P)
+    sentetik_kategori_sahidi = kategori_sahidi_paketle(turetilen_kategori)
 
     Asim = asimetri_guncelle(P)
     tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
@@ -5273,8 +5358,20 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "nihai_muhakeme": muhakemeler[-1],
         "kulli_ispat_sahidi": kulli_ispat,
         "kulli_ispat_dogrulandi": kulli_sahit_gecerli,
-        "opetopik_topos": {b: len(s.hucreler) for b, s in topos.seviyeler.items()},
-        "kirpma_1kategori": topos.kanonik_kirp(1),
-        "kirpma_kume": topos.kanonik_kirp(0),
+        "turetilen_1_kategori": {
+            "nesneler": turetilen_kategori.nesneler,
+            "morfizm_sayisi": len(turetilen_kategori.ok_siniflari),
+            "bileske_sayisi": len(turetilen_kategori.bileske_tablosu)
+        },
+        "turetilen_ayrik_kume_pi0": {
+            "bilesen_sayisi": len(turetilen_kume.bilesenler),
+            "denklik_siniflari": [sorted(b) for b in turetilen_kume.bilesenler]
+        },
+        "turetilen_dilim_alemi": {
+            "hedef": turetilen_alem.baglam_hedefi,
+            "alem_nesneleri": turetilen_alem.alemdeki_nesneler,
+            "komutatif_ucgenler": len(turetilen_alem.alem_ici_morfizmler)
+        },
+        "sentetik_kategori_terimi": sentetik_kategori_sahidi,
         "detay": tayf_bilgisi
     }
