@@ -438,6 +438,14 @@ class QuditYazmac:
             self.iz.kapi_yaz("durum", (),
                              np.asarray(self._psi, complex).copy())
 
+    @property
+    def psi_tensor(self) -> np.ndarray:
+        return self.psi.reshape((self.B,) + tuple(self.ayar.lif))
+
+    @psi_tensor.setter
+    def psi_tensor(self, v) -> None:
+        self.psi = np.asarray(v).reshape(self.B, self.d)
+
     def _karolari_banda(self) -> None:
         if not self._bekleyen:
             return
