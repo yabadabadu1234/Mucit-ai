@@ -6456,6 +6456,109 @@ def yazmacta_bolge_yoktur_superpozisyon(rho: np.ndarray,
     return psi_superpozisyon, kod_uzayi_operatoru
 
 
+def degisken_boylu_bargmann_halkasi(P: np.ndarray, Asim: np.ndarray,
+                                    dongu_yolu: Sequence[int]) -> Dict[str, Any]:
+    m = len(dongu_yolu)
+    if m < 2:
+        return {"halka_boyu": m, "r_n": 1.0, "phi_n": 0.0, "mobius_tenakuz_mu": False}
+
+    delta_n = complex(1.0, 0.0)
+    en_kucuk_yerel_ortusme = 1.0
+
+    for k in range(m):
+        u = dongu_yolu[k]
+        v = dongu_yolu[(k + 1) % m]
+
+        p_uv = float(P[u, v]) if u < P.shape[0] and v < P.shape[1] else 1e-12
+        en_kucuk_yerel_ortusme = min(en_kucuk_yerel_ortusme, p_uv)
+
+        faz_uv = np.pi * float(Asim[u, v]) if u < Asim.shape[0] and v < Asim.shape[1] else 0.0
+        u_uv = np.sqrt(max(1e-12, p_uv)) * np.exp(1j * faz_uv)
+        delta_n *= u_uv
+
+    r_n = float(np.abs(delta_n))
+    phi_n = float(np.angle(delta_n))
+
+    mobius_tenakuz = bool(en_kucuk_yerel_ortusme > 0.1 and abs(abs(phi_n) - np.pi) < 0.5)
+    kisirdongu = bool(abs(phi_n) < 0.3 and r_n > 1e-4)
+
+    return {"halka_boyu": m, "r_n": r_n, "phi_n": phi_n,
+            "en_kucuk_yerel_ortusme": en_kucuk_yerel_ortusme,
+            "mobius_tenakuz_mu": mobius_tenakuz, "kisirdongu_mu": kisirdongu}
+
+
+def d8a_vadi_memuru_yonu(egim_vektoru: np.ndarray, g_fs_metrigi: np.ndarray,
+                         sira_vektoru: np.ndarray) -> np.ndarray:
+    d = len(egim_vektoru)
+    g_fs = g_fs_metrigi[:d] if len(g_fs_metrigi) >= d else np.ones(d)
+
+    vadi_itkisi = -egim_vektoru * g_fs * (sira_vektoru[:d] if len(sira_vektoru) >= d else 1.0)
+    norm = float(np.linalg.norm(vadi_itkisi))
+
+    if norm > 1e-12:
+        yon_vadi = vadi_itkisi / norm
+    else:
+        yon_vadi = -egim_vektoru / (np.linalg.norm(egim_vektoru) + 1e-12)
+
+    return yon_vadi
+
+
+def sadakat_invaryant_I8_denetle(mevcut_superpozisyonlar: Dict[str, np.ndarray],
+                                  kod_uzayi_maskesi: np.ndarray,
+                                  muaf_listesi: Optional[List[str]] = None) -> Dict[str, Any]:
+    zorunlu_liste = {"veri", "parametre", "mahalli", "hafiza", "fock", "cozum"}
+    muaf = list(muaf_listesi or [])
+
+    if len(muaf) > 0:
+        raise DenetimHatasi("İNVARYANT I8 İHLALİ: Sadakat devresinden muaf süperpozisyon olamaz: %s" % muaf)
+
+    kayitli_isimler = set(mevcut_superpozisyonlar.keys())
+    baglanmamis_superpozisyonlar = list(zorunlu_liste - kayitli_isimler)
+
+    toplam_imha = 0
+    toplam_meçhul = 0
+    toplam_mumkun = 0
+
+    for isim, psi in mevcut_superpozisyonlar.items():
+        d = len(psi)
+        maske = kod_uzayi_maskesi[:d] if len(kod_uzayi_maskesi) >= d else np.ones(d)
+        rapor = sadakat_devresi_kos(psi, maske)
+        toplam_imha += rapor["imha"]
+        toplam_meçhul += rapor["meçhul"]
+        toplam_mumkun += rapor["mumkun"]
+
+    return {"invaryant_I8_saglandi_mi": bool(len(baglanmamis_superpozisyonlar) == 0),
+            "baglanmamis_sayisi": len(baglanmamis_superpozisyonlar),
+            "baglanmamis_isimler": baglanmamis_superpozisyonlar,
+            "toplam_imha": toplam_imha, "toplam_meçhul": toplam_meçhul,
+            "toplam_mumkun": toplam_mumkun}
+
+
+class DogalDonusum2Hucresi:
+    __slots__ = ("funktor_F_adi", "funktor_G_adi", "bilesenler_alpha")
+
+    def __init__(self, F_adi: str, G_adi: str, bilesenler: Dict[int, int]) -> None:
+        self.funktor_F_adi = F_adi
+        self.funktor_G_adi = G_adi
+        self.bilesenler_alpha = bilesenler
+
+    def komutatif_kare_dogrula(self, kat: Turetilen1Kategori,
+                               F_haritasi: Dict[int, int], G_haritasi: Dict[int, int]) -> bool:
+        for (x, y), f_ok_id in kat.ok_siniflari.items():
+            alpha_x = self.bilesenler_alpha.get(x)
+            alpha_y = self.bilesenler_alpha.get(y)
+            F_f = F_haritasi.get(f_ok_id, f_ok_id)
+            G_f = G_haritasi.get(f_ok_id, f_ok_id)
+
+            if alpha_x is not None and alpha_y is not None:
+                sol_yol = kat.bileske_tablosu.get((alpha_x, G_f))
+                sag_yol = kat.bileske_tablosu.get((F_f, alpha_y))
+
+                if sol_yol is not None and sag_yol is not None and sol_yol != sag_yol:
+                    return False
+        return True
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7270,7 +7373,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     fock_psi = fock_motoru.s2_mesele_uyar(fock_psi, sual_enerji)
     fock_psi_sonum, fock_artik_enerji = fock_motoru.s5_hukum_sonumle(fock_psi)
 
-    _, _, zirh_raporu = qudit_zirhina_gom(kuantum_durum_vektoru, dilimler)
+    psi_zirh, _, zirh_raporu = qudit_zirhina_gom(kuantum_durum_vektoru, dilimler)
 
     dahili_hom_uzayi = ccc_dahili_hom_uzayi_turet(turetilen_kategori)
 
@@ -7326,6 +7429,30 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         ornek_equalizer = topos_esitleyici_equalizer(ok_listesi[0], ok_listesi[1], turetilen_kategori)
     else:
         ornek_equalizer = []
+
+    halka_yolu = list(orijinal_baglam) + [nihai_hedef]
+    sorites_bargmann_raporu = degisken_boylu_bargmann_halkasi(P, Asim, halka_yolu)
+
+    egim_tahmin = -np.gradient(kefeler_tam) if len(kefeler_tam) > 1 else np.array([-0.1])
+    g_fs_vektoru = 1.0 - (np.abs(kuantum_durum_vektoru[:len(egim_tahmin)]) ** 2)
+    vadi_yonu = d8a_vadi_memuru_yonu(egim_tahmin, g_fs_vektoru, np.ones_like(egim_tahmin))
+
+    superpozisyon_havuzu = {
+        "veri": np.abs(kuantum_durum_vektoru),
+        "parametre": np.ones(8, dtype=float) / np.sqrt(8),
+        "mahalli": np.abs(psi_zirh[:len(kod_uzayi_maskesi)]),
+        "hafiza": np.abs(kuantum_durum_vektoru_temiz),
+        "fock": np.abs(fock_psi_sonum.astype(complex))[:len(kod_uzayi_maskesi)],
+        "cozum": np.abs(nihai_intac_psi.real)[:len(kod_uzayi_maskesi)]
+    }
+    I8_raporu = sadakat_invaryant_I8_denetle(superpozisyon_havuzu, kod_uzayi_maskesi, muaf_listesi=[])
+
+    bilesenler_alpha = {x: turetilen_kategori.birim_oklar.get(x, 0) for x in turetilen_kategori.nesneler}
+    dogal_donusum_2cell = DogalDonusum2Hucresi("Funktor_F", "Funktor_G", bilesenler_alpha)
+    dogal_donusum_gecerli = dogal_donusum_2cell.komutatif_kare_dogrula(
+        turetilen_kategori,
+        F_haritasi={oid: oid for oid in turetilen_kategori.ok_siniflari.values()},
+        G_haritasi={oid: oid for oid in turetilen_kategori.ok_siniflari.values()})
 
     hafiza_iki_cezve = IkiCezveliHafiza()
     hafiza_iki_cezve.kaydet(
@@ -7582,5 +7709,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "kan_partisyon_boleni": kan_partisyon_boleni,
         "t4_kan_cephe_karari": {k: v for k, v in t4_kan_olcum.items() if k != "born_dagilimi"},
         "maurer_cartan_raporu": mc_raporu,
+        "sorites_mobius_raporu": sorites_bargmann_raporu,
+        "mecz_vadi_yonu": vadi_yonu,
+        "sadakat_I8_raporu": I8_raporu,
+        "dogal_donusum_2cell_gecerli": dogal_donusum_gecerli,
         "detay": tayf_bilgisi
     }
