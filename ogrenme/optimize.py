@@ -1361,13 +1361,15 @@ class TabiiGradyan:
 
     def _yonler(self, no: int) -> np.ndarray:
         a = self.ayar
-        rng = np.random.default_rng(a.tohum + 977 * no)
         d = len(self.p)
-        M = rng.normal(size=(d, a.r))
+        M = np.zeros((d, a.r))
+        for i in range(a.r):
+            faz = 2.0 * np.pi * i / a.r
+            M[:, i] = np.cos(faz + np.arange(d) * 0.1)
         if self.seyir and getattr(self, "_son_adim", None) is not None:
             s = self._son_adim
             if np.linalg.norm(s) > 1e-12:
-                M[:, 0] = s
+                M[:, 0] = s / np.linalg.norm(s)
         Q, _ = np.linalg.qr(M)
         return Q[:, :a.r]
 
