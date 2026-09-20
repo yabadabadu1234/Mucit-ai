@@ -8329,6 +8329,28 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             aktif_kayitlar=silsile_adimlari)
         _KALICI_HAFIZA_HAVUZU["kayit_arsivi"].append(
             {"nihai_hedef": nihai_hedef, "balya_id": balyalama_raporu["yeni_balya_id"]})
+
+        hammadde_suretler_d9: List[int] = []
+        for agac, ok_terimi in silsile_adimlari:
+            if isinstance(ok_terimi, YonluOk):
+                for uc in (ok_terimi.kaynak, ok_terimi.hedef):
+                    if isinstance(uc, Belirtec) and uc.id_no not in hammadde_suretler_d9:
+                        hammadde_suretler_d9.append(uc.id_no)
+            if len(hammadde_suretler_d9) >= 5:
+                break
+        if len(hammadde_suretler_d9) >= 2:
+            mutasarrifa_d9 = PolinomyalMutasarrifaTezgahi(
+                islemler=["bileske", "terkip"], ariteler=[2, 2])
+            yeni_kavram_id_d9, yeni_kavram_adi_d9 = mutasarrifa_d9.hipotetik_terkip_dogur(
+                hammadde_suretler_d9)
+            _KALICI_HAFIZA_HAVUZU.setdefault("mutasarrifa_kavramlari", []).append({
+                "kavram_id": yeni_kavram_id_d9, "kavram_adi": yeni_kavram_adi_d9,
+                "hammadde": hammadde_suretler_d9, "balya_id": balyalama_raporu["yeni_balya_id"]})
+            balyalama_raporu["yeni_kavram_id"] = yeni_kavram_id_d9
+            balyalama_raporu["yeni_kavram_adi"] = yeni_kavram_adi_d9
+        else:
+            balyalama_raporu["yeni_kavram_id"] = None
+            balyalama_raporu["yeni_kavram_adi"] = None
     else:
         balyalama_raporu = {"acilan_cartan_koku": None, "yeni_balya_id": None,
                             "balyalanan_nesne_sayisi": 0, "silinen_kayit_sayisi": 0,
