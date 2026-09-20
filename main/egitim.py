@@ -60,8 +60,8 @@ from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            vecihleri_istihrac, yirtiklari_tertiple)
 from kuantum.devre import devre_beyani
 from kuantum.qyazmac import sektor_beyani
-from matematik.sonsuz_mertebeler_teorisi import (HendeseAyari, hendese_teshisi,
-                                                 hendese_beyani, harita_kur,
+from matematik.sonsuz_mertebeler_teorisi import (SilsileAyari, silsile_teshisi,
+                                                 silsile_beyani, harita_kur,
                                                  lif_beyani)
 from nefs.casimir import (CasimirAyari, blok_kosegen_artigi,
                           casimir_beyani, dhr_ayrismasi,
@@ -435,25 +435,25 @@ def d1_olcu(Z: Dict[str, Any]) -> Dict[str, Any]:
     return Z
 
 
-def d2_hendese(Z: Dict[str, Any]) -> Dict[str, Any]:
+def d2_silsile(Z: Dict[str, Any]) -> Dict[str, Any]:
     from kuantum.qegitim import ornek_bol as _bol
     ayar = Z["ayar"]
     gelen = Z["gelen"]
-    hendese = hendese_teshisi(
+    silsile = silsile_teshisi(
         [_bol(o)[0] for o in gelen], ayar.lif_yapisi,
-        HendeseAyari(azami_alfabe=int(ayar.veri_lifi),
+        SilsileAyari(azami_alfabe=int(ayar.veri_lifi),
                      tohum=int(ayar.tohum)))
 
     if "parite_lifi" not in ayar.elle:
-        _gercek_lif_boyu = int(hendese["asansör"]["gerçek_lif_boyu"])
+        _gercek_lif_boyu = int(silsile["asansör"]["gerçek_lif_boyu"])
         ayar.parite_lifi = (_gercek_lif_boyu if _gercek_lif_boyu > 0
-                            else int(hendese["asansör"]["kat"]))
+                            else int(silsile["asansör"]["kat"]))
 
-    safha("D2 HENDESE", kafes=len(hendese["kafes"]),
-          tıkanma=int(hendese["şelale"]["tıkanma"]),
-          büzülme="%.3f" % float(hendese["asansör"]["büzülme"]),
-          gerçek_lif=int(hendese["asansör"]["gerçek_lif_boyu"]))
-    Z.update({"hendese": hendese})
+    safha("D2 SİLSİLE", kafes=len(silsile["kafes"]),
+          tıkanma=int(silsile["şelale"]["tıkanma"]),
+          büzülme="%.3f" % float(silsile["asansör"]["büzülme"]),
+          gerçek_lif=int(silsile["asansör"]["gerçek_lif_boyu"]))
+    Z.update({"silsile": silsile})
     return Z
 
 
@@ -461,12 +461,12 @@ def d3_kurulus(Z: Dict[str, Any]) -> Dict[str, Any]:
     from nefs.kulli_kayip import kademe_parametreleri_ac
     from nefs.melekeler import QNefs
     ayar = Z["ayar"]
-    hendese = Z["hendese"]
+    silsile = Z["silsile"]
     devam = Z["devam"]
     egitim_gorevleri = Z["egitim_gorevleri"]
     nefs = QNefs(ayar.tohum, ayar.qayar())
-    _hodge = hendese["hodge"]
-    nefs.izdusum = (hendese["Π"],
+    _hodge = silsile["hodge"]
+    nefs.izdusum = (silsile["Π"],
                     (float(_hodge["𝒮_simetrik"]), float(_hodge["𝒜_yönlü"]),
                      float(_hodge["Ω_yırtık"])))
     nefs.idrak_et(np.eye(2, ayar.veri_lifi))
@@ -492,13 +492,13 @@ def d3_kurulus(Z: Dict[str, Any]) -> Dict[str, Any]:
     _mzn = {"a": mzn}
     fock = FockUzayi()
     _derece: List[str] = []
-    for _dug, _ro in zip(hendese["kafes"], hendese["tayf"]):
+    for _dug, _ro in zip(silsile["kafes"], silsile["tayf"]):
         if float(_ro) <= 0.0:
             continue
         _ad = "mertebe·%s" % _dug["ad"]
         fock.yarat(_ad, entropi=float(-_ro * np.log(max(float(_ro), 1e-300))),
                    butce=float(_ro),
-                   celiski=float(hendese["hodge"]["Ω_yırtık"]))
+                   celiski=float(silsile["hodge"]["Ω_yırtık"]))
         _derece.append(_ad)
     assert _derece, (
         "DERECELİ FOCK DEVRİ BOŞ -- türetim kafesinin hiçbir katmanı mod "
@@ -602,7 +602,7 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
     kapi_hukmu = Z["kapi_hukmu"]
     kademe_gorevleri = Z["kademe_gorevleri"]
     _sadakat_ayari = Z["_sadakat_ayari"]
-    hendese = Z["hendese"]
+    silsile = Z["silsile"]
 
     def _dengele(dokum) -> Dict[str, float]:
         _nispet = hamiltonyen.kefelerden(dokum).nispetler()
@@ -612,7 +612,7 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
                 continue
             setattr(ayar, ad, float(deger))
         _mzn["a"] = mizan_ayari(ayar)
-        _katilim = hendese.get("mertebeler_arasi_katilim_payi") or {}
+        _katilim = silsile.get("mertebeler_arasi_katilim_payi") or {}
         if _katilim:
             _motor_kategori = float(_katilim.get("mertebe_1_payi", 0.0))
             _hamilton_kategori = float(_nispet.get("kategori", 0.0))
@@ -788,7 +788,7 @@ def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
     hafiza = Z["hafiza"]
     devam = Z["devam"]
     dogrulama = Z["dogrulama"]
-    hendese = Z["hendese"]
+    silsile = Z["silsile"]
     hamiltonyen = Z["hamiltonyen"]
     kademe_gorevleri = Z["kademe_gorevleri"]
     mun = Z["mun"]
@@ -824,7 +824,7 @@ def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
     dhr["blok_artığı"] = blok_kosegen_artigi(tur.yigin, q_son.y.ayar.lif)
     dhr["kartan_boyu"] = int(kartan_fazi(
         q_son.y.ayar.lif, [float(ayar.ayna_teta)]).size)
-    _gercek_kat = hendese.get("turetilen_kategori_ham")
+    _gercek_kat = silsile.get("turetilen_kategori_ham")
     if _gercek_kat is not None:
         _motor_sektor = len(_gercek_kat.nesneler)
         dhr["motor_kategori_nesnesi"] = int(_motor_sektor)
@@ -920,7 +920,7 @@ def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
         mukayese = mukayese_beyani(None, None)
 
     harita = harita_kur(nefs, veri, sozluk=int(ayar.sozluk),
-                        hendese=hendese, munasebet=mun["harita"],
+                        silsile=silsile, munasebet=mun["harita"],
                         onceki=devam.get("harita"))
 
     safha("D10 KELÂM", konuşan=int(konusma["konuşan"]),
@@ -987,7 +987,7 @@ def d11_muhur(Z: Dict[str, Any]) -> Dict[str, Any]:
     return Z
 
 
-ZINCIR: Tuple[Any, ...] = (d0_gecit, d1_olcu, d2_hendese, d3_kurulus,
+ZINCIR: Tuple[Any, ...] = (d0_gecit, d1_olcu, d2_silsile, d3_kurulus,
                            d4_kapi, d5_uzay, d5b_sadakat, d6_mizan,
                            d8_dongu, d9_kapanis, d10_kelam, d11_muhur)
 

@@ -8012,7 +8012,7 @@ def tip_tensoru_yukari_cik(tensor: Dict[str, Any], kat: "Turetilen1Kategori",
            "morfizm_sinifi": (int(sinif) if sinif is not None else None)}
 
 
-def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
+def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
     s0_vakum_tetiklendi = False
     s0_secilen_gaye: Optional[int] = None
@@ -8744,36 +8744,36 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
 
 @dataclass
-class HendeseAyari:
+class SilsileAyari:
     azami_alfabe: int = 256
     dortlu_ornek: int = 64
     tohum: int = 0
 
 
-_HENDESE_SAYI: Dict[str, int] = {}
-_HENDESE_NISPET: Dict[str, float] = {}
+_SILSILE_SAYI: Dict[str, int] = {}
+_SILSILE_NISPET: Dict[str, float] = {}
 
 
-def hendese_sifirla() -> None:
-    _HENDESE_SAYI.clear()
-    _HENDESE_SAYI.update({"çağrı": 0, "asansör_katı": 0, "tıkanma": 0,
+def silsile_sifirla() -> None:
+    _SILSILE_SAYI.clear()
+    _SILSILE_SAYI.update({"çağrı": 0, "asansör_katı": 0, "tıkanma": 0,
                           "dörtlü": 0, "üçgen_ihlâli": 0})
-    _HENDESE_NISPET.clear()
-    _HENDESE_NISPET.update({"büzülme": 0.0, "𝒮_simetrik": 0.0,
+    _SILSILE_NISPET.clear()
+    _SILSILE_NISPET.update({"büzülme": 0.0, "𝒮_simetrik": 0.0,
                             "𝒜_yönlü": 0.0, "Ω_yırtık": 0.0,
                             "δ_gromov": 0.0, "üçgen_nispeti": 0.0})
 
 
-hendese_sifirla()
+silsile_sifirla()
 
 
-def hendese_yukle(d: Dict[str, Any]) -> None:
+def silsile_yukle(d: Dict[str, Any]) -> None:
     for k, v in dict(d).items():
         a = str(k)
-        if a in _HENDESE_SAYI:
-            _HENDESE_SAYI[a] = int(v)
-        elif a in _HENDESE_NISPET:
-            _HENDESE_NISPET[a] = float(v)
+        if a in _SILSILE_SAYI:
+            _SILSILE_SAYI[a] = int(v)
+        elif a in _SILSILE_NISPET:
+            _SILSILE_NISPET[a] = float(v)
 
 
 def gromov_delta_hesapla(duz: Sequence[int], n: int, dortlu_ornek: int = 64
@@ -8818,12 +8818,12 @@ def gromov_delta_hesapla(duz: Sequence[int], n: int, dortlu_ornek: int = 64
             "dörtlü": int(Q.shape[0])}
 
 
-def hendese_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
-                    ayar: Optional[HendeseAyari] = None) -> Dict[str, Any]:
-    assert baglamlar, "hendese teşhisi için bağlam BOŞ olamaz"
-    a = ayar or HendeseAyari()
+def silsile_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
+                    ayar: Optional[SilsileAyari] = None) -> Dict[str, Any]:
+    assert baglamlar, "silsile teşhisi için bağlam BOŞ olamaz"
+    a = ayar or SilsileAyari()
     lif = tuple(int(x) for x in lif)
-    assert lif, "hendese teşhisi için lif yapısı BOŞ olamaz"
+    assert lif, "silsile teşhisi için lif yapısı BOŞ olamaz"
     veri_lifi = int(lif[0])
     n = max(2, min(int(a.azami_alfabe), veri_lifi) if a.azami_alfabe else veri_lifi)
     d_toplam = max(1, int(np.prod(lif)))
@@ -8836,12 +8836,12 @@ def hendese_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
     if len(duz) < 2:
         duz = duz * 2
 
-    sonuc = hendese_teshisi_kos(duz, n)
+    sonuc = silsile_teshisi_kos(duz, n)
     if "hata" in sonuc:
         yedek = duz[-4:] if len(duz) >= 4 else duz * 2
-        sonuc = hendese_teshisi_kos(yedek, n)
+        sonuc = silsile_teshisi_kos(yedek, n)
         assert "hata" not in sonuc, (
-            "D2 HENDESE: küllî motor iki denemede de çöktü: %r"
+            "D2 SİLSİLE: küllî motor iki denemede de çöktü: %r"
             % sonuc.get("hata"))
 
     tayf_bilgisi = sonuc["detay"]
@@ -8899,17 +8899,17 @@ def hendese_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
     katman = ("uzay", "kategori", "operad", "yırtık")
     kafes = [{"ad": ad} for ad in katman]
 
-    _HENDESE_SAYI["çağrı"] += 1
-    _HENDESE_SAYI["asansör_katı"] = kat
-    _HENDESE_SAYI["tıkanma"] = selale_sozluk["tıkanma"]
-    _HENDESE_SAYI["dörtlü"] = int(gr["dörtlü"])
-    _HENDESE_SAYI["üçgen_ihlâli"] = int(round(gr["üçgen_ihlâli"] * gr["dörtlü"]))
-    _HENDESE_NISPET["büzülme"] = buzulme
-    _HENDESE_NISPET["𝒮_simetrik"] = hodge_sozluk["𝒮_simetrik"]
-    _HENDESE_NISPET["𝒜_yönlü"] = hodge_sozluk["𝒜_yönlü"]
-    _HENDESE_NISPET["Ω_yırtık"] = hodge_sozluk["Ω_yırtık"]
-    _HENDESE_NISPET["δ_gromov"] = float(gr["δ"])
-    _HENDESE_NISPET["üçgen_nispeti"] = float(gr["üçgen_ihlâli"])
+    _SILSILE_SAYI["çağrı"] += 1
+    _SILSILE_SAYI["asansör_katı"] = kat
+    _SILSILE_SAYI["tıkanma"] = selale_sozluk["tıkanma"]
+    _SILSILE_SAYI["dörtlü"] = int(gr["dörtlü"])
+    _SILSILE_SAYI["üçgen_ihlâli"] = int(round(gr["üçgen_ihlâli"] * gr["dörtlü"]))
+    _SILSILE_NISPET["büzülme"] = buzulme
+    _SILSILE_NISPET["𝒮_simetrik"] = hodge_sozluk["𝒮_simetrik"]
+    _SILSILE_NISPET["𝒜_yönlü"] = hodge_sozluk["𝒜_yönlü"]
+    _SILSILE_NISPET["Ω_yırtık"] = hodge_sozluk["Ω_yırtık"]
+    _SILSILE_NISPET["δ_gromov"] = float(gr["δ"])
+    _SILSILE_NISPET["üçgen_nispeti"] = float(gr["üçgen_ihlâli"])
 
     return {
         "asansör": asansor_sozluk,
@@ -8943,20 +8943,20 @@ def kaide_imzasi_uret(dizi: Sequence[int], n: int) -> str:
     return "K" + "-".join("%x" % (int(v) & 0xF) for v in imza)
 
 
-def hendese_beyani() -> Dict[str, Any]:
-    b: Dict[str, Any] = {k: int(v) for k, v in _HENDESE_SAYI.items()}
-    b.update({k: float(v) for k, v in _HENDESE_NISPET.items()})
+def silsile_beyani() -> Dict[str, Any]:
+    b: Dict[str, Any] = {k: int(v) for k, v in _SILSILE_SAYI.items()}
+    b.update({k: float(v) for k, v in _SILSILE_NISPET.items()})
     b.update({"türetim_%s" % k: v for k, v in turetim_beyani().items()})
     return b
 
 
-def hendese_metni(teshis: Optional[Dict[str, Any]] = None,
+def silsile_metni(teshis: Optional[Dict[str, Any]] = None,
                   beyan: Optional[Dict[str, Any]] = None) -> str:
-    b = dict(beyan or hendese_beyani())
+    b = dict(beyan or silsile_beyani())
     if not int(b.get("çağrı", 0)):
-        return ("  D2 HENDESE: HİÇ KOŞMADI -- türetim yapılmadı "
+        return ("  D2 SİLSİLE: HİÇ KOŞMADI -- türetim yapılmadı "
                 "(tek motor: sonsuz_mertebeler_teorisi.py)")
-    s = ["  D2 HENDESE -- TEK MOTORDAN TÜRETİLİR (nefs/hendese.py kaldırıldı)",
+    s = ["  D2 SİLSİLE -- TEK MOTORDAN TÜRETİLİR (nefs/hendese.py kaldırıldı)",
          "    çağrı %d   asansör katı %d   büzülme %.4f"
          % (int(b["çağrı"]), int(b["asansör_katı"]), float(b["büzülme"])),
          "    Hodge: 𝒮 %.4f ⊕ 𝒜 %.4f ⊕ Ω_yırtık %.4f"
@@ -9403,7 +9403,7 @@ def _yuva_sec(mertebeler: Sequence[int], boy: int) -> int:
     return int(np.argmin(np.abs(m - int(boy))))
 
 
-def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
+def harita_kur(nefs, veri, sozluk: int, silsile: Dict[str, Any],
               munasebet, onceki: Optional[Dict[str, Any]] = None) -> Lif:
     from kuantum.qegitim import ornek_bol
 
@@ -9421,10 +9421,10 @@ def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
         _dinamik_mertebeler([len(b) for b, _h, _c, _m in bolunmus]))
     mertebeler = [u.mertebe for u in uzaylar]
 
-    gercek_kat = hendese.get("turetilen_kategori_ham")
-    gercek_tensor = hendese.get("qudit_tip_tensoru")
+    gercek_kat = silsile.get("turetilen_kategori_ham")
+    gercek_tensor = silsile.get("qudit_tip_tensoru")
     L = Lif.hazineden(onceki)
-    klon = hendese_beyani()
+    klon = silsile_beyani()
     for bag, _hedef, cins, _makam in bolunmus:
         dizi = [int(x) % n_v for x in bag] + [n_v - 1]
         tip = "arc" if str(cins).startswith("arc") else "sözlü"
@@ -9441,8 +9441,8 @@ def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
                         L.gercek_kategori_eslesme += 1
                         L.gercek_hom_toplam += len(inis["hom_kurallari"])
                     break
-    hendese_yukle(klon)
-    L.asansor_kati = int(hendese["asansör"]["kat"])
+    silsile_yukle(klon)
+    L.asansor_kati = int(silsile["asansör"]["kat"])
     L.sozluk = int(sozluk)
     L.uzay_mertebesi = tuple(int(m) for m in mertebeler)
     L.kategori_beyani = kategori_beyani(uzaylar)

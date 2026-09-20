@@ -29,7 +29,7 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
     from nefs.belirtec import belirtec_beyani
     from nefs.casimir import casimir_beyani
     from nefs.hafiza import tertip_beyani
-    from matematik.sonsuz_mertebeler_teorisi import hendese_beyani, lif_beyani
+    from matematik.sonsuz_mertebeler_teorisi import silsile_beyani, lif_beyani
     from nefs.keyfiyet import keyfiyet_beyani
     from nefs.kulli_mizan import fock_beyani, hamiltonyen_beyani
     from kuantum.mahalli_yazmac import mahalli_beyani, uzunluk_beyani
@@ -47,7 +47,7 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
     from tanilama.hizolcer import hizolcer_beyani
 
     ayar = Z["ayar"]
-    hendese = Z["hendese"]
+    silsile = Z["silsile"]
     nefs = Z["nefs"]
     kefeler = Z["kefeler"]
     r = Z["r"]
@@ -55,16 +55,16 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
             "devam": Z["devam"], "imleç": Z["imlec"],
             "geçit": Z["kapi"], "ders": Z["ders"], "hazine": Z["kayit"],
             "lif": lif_beyani(Z["harita"]),
-            "hendese": hendese, "hendese_beyanı": hendese_beyani(),
+            "silsile": silsile, "silsile_beyanı": silsile_beyani(),
             "safha": safha_beyani(),
             "dhr": Z["dhr"], "casimir_beyanı": casimir_beyani(),
             "parite_lifi": int(ayar.parite_lifi),
             "mertebe_tayfı": {
                 ad: float(p) for ad, p in
-                zip(hendese["katman"], hendese["tayf"])},
-            "lif_demeti": [float(x) for x in hendese["asansör"]["demet"]],
-            "büzülme": float(hendese["asansör"]["büzülme"]),
-            "hodge": hendese["hodge"], "Ω_cebiri": hendese["Ω_cebiri"],
+                zip(silsile["katman"], silsile["tayf"])},
+            "lif_demeti": [float(x) for x in silsile["asansör"]["demet"]],
+            "büzülme": float(silsile["asansör"]["büzülme"]),
+            "hodge": silsile["hodge"], "Ω_cebiri": silsile["Ω_cebiri"],
             "tdd": Z["tdd"], "stabilizer": Z["stab"], "gölge": Z["golge"],
             "flo": Z["flo"],
             "sadakat": Z["sad"], "son_sadakat": Z["son_sadakat"],
@@ -189,10 +189,10 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % (", ".join(kulli.get("elle_verilen") or ())
                  or "yok -- hepsi formülden"),
               ""]
-    if kulli and kulli.get("hendese"):
-        from matematik.sonsuz_mertebeler_teorisi import hendese_metni
-        s += [hendese_metni(kulli.get("hendese"),
-                            kulli.get("hendese_beyanı")), ""]
+    if kulli and kulli.get("silsile"):
+        from matematik.sonsuz_mertebeler_teorisi import silsile_metni
+        s += [silsile_metni(kulli.get("silsile"),
+                            kulli.get("silsile_beyanı")), ""]
     if kulli:
         d = kulli["değerlendirme"]
         s += [devam_metni(kulli.get("devam") or {},
