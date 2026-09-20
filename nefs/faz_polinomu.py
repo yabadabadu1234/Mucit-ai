@@ -84,10 +84,10 @@ def faz_oturt(k, ayar: Optional[FazAyari] = None) -> Dict[str, Any]:
 
 
 def faz_uygula(psi, k, mertebe: int = 8) -> np.ndarray:
-    from .galois import palmer_indir
     m = int(mertebe)
     e = np.asarray(k, np.int64).reshape(-1) % m
-    return palmer_indir(psi, e, m)[0]
+    v = np.asarray(psi, complex).reshape(-1)
+    return v * np.exp(-2j * math.pi * e.astype(float) / m)
 
 
 def rapor(n: int = 12, tohum: int = 0) -> str:

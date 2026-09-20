@@ -24,8 +24,6 @@ from nefs.kulli_mizan import (FockUzayi, Hamiltonyen, MizanAyari,
 from nefs.hafiza import Hafiza, tertip_beyani
 from main.cikarim import (hazineden_yukle, hafizayi_yukle, padisah,
                           hazineden_devam, devam_agirligi)
-from nefs.galois import (GaloisAyari, tableau_kur,
-                         sbox_bukme, sbox_olcu, palmer_olcu)
 from nefs.tdd import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
 from nefs.ayna import AynaAyari
@@ -33,9 +31,6 @@ from nefs.mihenk import (MIHENK, nobet_kur, safha,
                          safha_beyani, safha_sifirla)
 from nefs.veri_kapisi import (VeriKapisiAyari, veri_kapisi,
                               kapi_beyani, kapi_tertibi)
-from nefs.faz_polinomu import FazAyari, faz_oturt
-from nefs.siklotomik import (SiklotomikAyari,
-                             koset_indirge, iz_esitligi)
 from nefs.qcekirdek import cekirdek_beyani
 from nefs.parametre_yazmaci import (ParametreAyari, ParametreYazmaci,
                                     parametre_beyani, kenet_beyani)
@@ -44,7 +39,6 @@ from nefs.mahalli_yazmac import (mahalli_beyani, uzunluk_beyani,
                                  uzunluk_genligi)
 from tanilama.hizolcer import (Hizolcer, hizolcer_bagla,
                                hizolcer_beyani)
-from nefs.gpu_akis import GpuAyari, gpu_akisi
 from nefs.kararname import kararname
 from nefs.golge import (GolgeAyari, golge_al,
                         kestir)
@@ -197,7 +191,7 @@ class EgitimAyari:
     mukayese_acik: int = 1
     hat: str = "c"
     hat_bandi: int = 0
-    motor: str = "galois"
+    motor: str = "sürekli"
     genlik_tipi: str = ""
     rust_t0: float = 0.5
     rust_tau: float = 0.15
@@ -817,9 +811,6 @@ def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
     dhr["kartan_boyu"] = int(kartan_fazi(
         q_son.y.ayar.lif, [float(ayar.ayna_teta)]).size)
 
-    ga = GaloisAyari(us=int(ayar.galois_us), n=int(ayar.tableau_n),
-                     tohum=int(ayar.tohum))
-    tab = tableau_kur(psi_son, ga)
     tdd = kanonik_adres(psi_son, cekirdek=int(ayar.tdd_cekirdek),
                         ayar=TddAyari(tolerans=float(ayar.tdd_tolerans)))
     stab = kararname(psi_son, mertebe=int(ayar.stab_mertebe))
@@ -847,21 +838,6 @@ def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
     flo = flo_evrimi(p_yildiz, MatchgateAyari(
         mod=int(ayar.flo_modu), kapi=int(ayar.flo_kapisi),
         tohum=int(ayar.tohum)))
-    sb = sbox_bukme(tab, acik=bool(int(ayar.sbox_acik)))
-    sb_olcu = sbox_olcu(us=int(ayar.galois_us))
-    palmer = palmer_olcu(n=int(psi_son.size), tohum=int(ayar.tohum))
-    fazp = faz_oturt(q_son.y.faz_birikimi(),
-                     FazAyari(mertebe=int(ayar.faz_mertebesi),
-                              derece=int(ayar.faz_derecesi)))
-    sik = koset_indirge(int(fazp["derece"]), SiklotomikAyari(
-        us=int(ayar.siklotomik_us), taban=int(ayar.siklotomik_taban),
-        derece=int(ayar.siklotomik_derece)))
-    sik["iz_eşitliği"] = iz_esitligi(SiklotomikAyari(
-        us=int(ayar.siklotomik_us), taban=int(ayar.siklotomik_taban),
-        derece=int(ayar.siklotomik_derece)))
-    akis = gpu_akisi(psi_son, tab, GpuAyari(
-        had=float(ayar.gpu_akis_haddi),
-        genlesme=int(ayar.gpu_genlesmesi), tohum=int(ayar.tohum)))
     sad = sadakat_beyani()
     usl = usul_beyani()
     sup = suphe_beyani()
@@ -928,9 +904,8 @@ def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
           susan=int(konusma["susan"]))
     Z.update({"p_yildiz": p_yildiz, "deg": deg, "ders": ders,
               "q_son": q_son, "tur": tur, "psi_son": psi_son, "dhr": dhr,
-              "tab": tab, "tdd": tdd, "stab": stab, "goz": goz,
-              "golge": golge, "flo": flo, "sb": sb, "sb_olcu": sb_olcu,
-              "palmer": palmer, "fazp": fazp, "sik": sik, "akis": akis,
+              "tdd": tdd, "stab": stab, "goz": goz,
+              "golge": golge, "flo": flo,
               "sad": sad, "usl": usl, "sup": sup, "_tur": _tur,
               "son_sadakat": son_sadakat, "konusma": konusma,
               "kefeler": kefeler, "taban_durumu": taban_durumu,

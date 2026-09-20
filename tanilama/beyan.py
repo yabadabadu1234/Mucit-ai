@@ -3,7 +3,23 @@ from __future__ import annotations
 from typing import Dict, Optional
 
 __all__ = ["talim_beyani", "cikarim_beyani", "kaggle_beyani",
-           "sifir_beyani", "devam_metni", "netice_derle"]
+           "sifir_beyani", "devam_metni", "netice_derle", "faz_borcu_metni"]
+
+
+def faz_borcu_metni(b: Dict[str, object]) -> str:
+    if not b:
+        return ("  FAZ DEFTERİ: ölçü YOK -- yazmaç yoklanmadı, "
+                "kırmızı yanıyor (ferman 5)")
+    return "\n".join([
+        "  FAZ SÜREKLİ TEMSİLDE (exp/sin/cos, ayrıklaştırma YOK)",
+        "    yazmaca indirilen faz çağrısı  : %d"
+        % int(b.get("indirme", 0)),
+        "    biriken faz büyüklüğü ortalama : %.6f rad"
+        % float(b.get("toplam_faz_ortalama", 0.0)),
+        "    biriken faz büyüklüğü azamî    : %.6f rad"
+        % float(b.get("toplam_faz_azamî", 0.0)),
+        "    borç/kalıntı kavramı YOK: her faz çağrısı doğrudan "
+        "exp(-iθ) ile tam uygulanır."])
 
 
 def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
@@ -50,11 +66,7 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
             "büzülme": float(hendese["asansör"]["büzülme"]),
             "hodge": hendese["hodge"], "Ω_cebiri": hendese["Ω_cebiri"],
             "tdd": Z["tdd"], "stabilizer": Z["stab"], "gölge": Z["golge"],
-            "galois": Z["tab"].beyan(),
-            "flo": Z["flo"], "sbox": Z["sb"], "sbox_ölçü": Z["sb_olcu"],
-            "palmer": Z["palmer"],
-            "faz_polinomu": Z["fazp"], "gpu_akışı": Z["akis"],
-            "siklotomik": Z["sik"],
+            "flo": Z["flo"],
             "sadakat": Z["sad"], "son_sadakat": Z["son_sadakat"],
             "sadakat_devresi": sadakat_devre_beyani(),
             "mukayese": Z["mukayese"],
@@ -200,7 +212,6 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % d["ortalama_hücre_isabeti"],
               "      sükût                 : %d" % d["sükût"]]
         from nefs.mukayese import mukayese_metni
-        from nefs.galois import faz_borcu_metni
         from ogrenme.mecz import mecz_metni
         from nefs.belirtec import belirtec_metni
         from nefs.munasebet import munasebet_metni
@@ -464,32 +475,16 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
                  kulli["geçit"]["kelam_ayrıştı"])]
         s += ["",
               "    ZABIT 2 -- SAF CPU 2026 USULLERİ (durumun temsili):",
-              "      0. GALOIS-STABILIZER (nefs/galois.py) -- ASIL MOTOR",
-              "         GF(2^%d)  tableau %d kübit  %d bayt  "
-              "(sürekli ℂ^d İPTAL)"
-              % (kulli["galois"]["us"], kulli["galois"]["n"],
-                 kulli["galois"]["bayt"]),
-              "         Palmer i(a,b)=(−b,a) -- İDDİA SINANDI (%d genlik):"
-              % kulli["palmer"]["boy"],
-              "           i² = −1 hatası %.1e   i⁴ = +1 hatası %.1e   "
-              "norm hatası %.1e   tuttu: %s"
-              % (kulli["palmer"]["i_kare_hatası"],
-                 kulli["palmer"]["i_dört_hatası"],
-                 kulli["palmer"]["norm_hatası"], kulli["palmer"]["tam"]),
-              "           sin/cos/exp çağrısı: %d  (transandantal faz YOK)"
-              % kulli["palmer"]["transandantal_çağrı"],
-              "         yoğun ℂ^d'ye nispeten bellek: %.1f× küçük"
-              % kulli["galois"]["kazanç"],
-              "      1. TDD -- yalnız KANONİK DENETÇİ (hesap motoru DEĞİL)",
+              "      0. TDD -- yalnız KANONİK DENETÇİ (hesap motoru DEĞİL)",
               "         çekirdek %d eleman → adres %s   %d bayt"
               % (kulli["tdd"]["çekirdek"], kulli["tdd"]["adres"],
                  kulli["tdd"]["bayt"]),
-              "      2. Stabilizer rank (nefs/kararname.py)",
+              "      1. Stabilizer rank (nefs/kararname.py)",
               "         χ_stab = %d   örtüşme %.4f   Clifford'a yakın: %s"
               % (kulli["stabilizer"]["chi"],
                  kulli["stabilizer"]["örtüşme"],
                  kulli["stabilizer"]["clifforda_yakın"]),
-              "      3. Klasik gölgeler (nefs/golge.py)",
+              "      2. Klasik gölgeler (nefs/golge.py)",
               ("         KAPALI (golge_ornegi=0): bütün sektörler TAM "
                "ölçüldü -- anahtar hakikaten kesiyor"
                if not kulli["gölge"].get("açık") else
@@ -498,14 +493,13 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
                   kulli["gölge"]["azamî_hata"])),
               "         tam ölçüme nispeten hız: %.1f×"
               % kulli["gölge"]["hız"]]
-        f, sb, so, fp = (kulli["flo"], kulli["sbox"],
-                         kulli["sbox_ölçü"], kulli["faz_polinomu"])
+        f = kulli["flo"]
         s += ["",
-              "    NON-CLIFFORD ÇIKMAZI -- ÜÇ ÇARE (zabıt):",
+              "    NON-CLIFFORD ÇIKMAZI -- MATCHGATE/FLO (zabıt):",
               "      İTİRAZ TESCİLLİ: Bravyi-Gosset, χ_stab ~ 2^(0,468·t);",
               "      %d kapıda saf kübit tablosu %.3e kola ayrılırdı."
               % (f["kapı"], f["kübit_dallanması"]),
-              "      1. MATCHGATE/FLO (nefs/matchgate.py)",
+              "      MATCHGATE/FLO (nefs/matchgate.py)",
               "         %d Majorana modu, %d sürekli açılı kapı → "
               "χ_stab = %d" % (f["mod"], f["kapı"], f["chi"]),
               "         kovaryans Γ²=−I hatası %.3e   parite korundu: %s"
@@ -516,23 +510,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               % (f["matchgate_tutan"], f["matchgate_denenen"],
                  f["matchgate_hepsi"]),
               "         kapı başına %.9f sn  (yoğun 2^N yola nispeten "
-              "%.1f× hızlı)" % (f["kapı_sn"], f["hız"]),
-              "      2. GALOIS S-BOX (nefs/galois.py)",
-              "         x↦M·x²⁵⁴+b   açık: %s   değişen bayt: %d/%d"
-              % (sb["açık"], sb["değişen"], sb["toplam"]),
-              "         diferansiyel tekdüzelik %d (asgarî mümkün 2)   "
-              "Walsh tepesi %d" % (so["tekdüzelik"], so["walsh"]),
-              "         gayri-lineerlik %d   (afin fonksiyonda 0 olurdu)"
-              % so["gayri_lineerlik"],
-              "      3. CNOT-DIHEDRAL FAZ POLİNOMU (nefs/faz_polinomu.py)",
-              "         Z_%d   derece %d   terim %d   (yoğun faz vektörü "
-              "%d eleman)" % (fp["mertebe"], fp["derece"], fp["terim"],
-                              fp["boy"]),
-              "         tam mı: %s   artık %d/%d bileşen"
-              % (fp["tam"], fp["artık"], fp["boy"]),
-              "         dallanma: %d  (Bravyi-Gosset yolunda %.3e olurdu)"
-              % (fp["dallanma"], fp["dallanma_kubit"])]
-        sk = kulli["siklotomik"]
+              "%.1f× hızlı)" % (f["kapı_sn"], f["hız"])]
         ho, ck = kulli["hızölçer"], kulli["çekirdek"]
         s += ["",
               "    HIZÖLÇER -- ANA HATTA KALICI BAĞLI (koşarken ölçtü):",
@@ -556,86 +534,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
                  ck["numpy_boşaltma"]),
               "      %s" % ck["kıyas"],
               "      karo → BLAS zgemm | çift → C (ölçü: karo BLAS'ta "
-              "2-25× hızlı, çift C'de 6,9×)",
-              "",
-              "    DERECE-%d FAZ -- CNOT-DİHEDRAL İDDİASI İPTAL (zabıt):"
-              % fp["derece"],
-              "      Amy-Maslov-Mosca ≤3 ister; ölçülen %d. İddia DÜŞTÜ."
-              % fp["derece"],
-              "      Yerine SİKLOTOMİK KOSET (nefs/siklotomik.py):",
-              "        %d = %s   →  x^%d = %s"
-              % (sk["derece"], sk["ikili"], sk["derece"], sk["yazılış"]),
-              "        koset(%d) mod 2^%d−1 : %s"
-              % (sk["taban"], sk["us"], sk["koset"]),
-              "        derece %d bu kosette mi: %s   (öyleyse iz terimi "
-              "derece %d'e TAM iner)"
-              % (sk["derece"], sk["kosette"], sk["taban"]),
-              "      İZ EŞİTLİĞİ FİİLEN SINANDI (%d eleman):"
-              % sk["iz_eşitliği"]["eleman"],
-              "        Tr(α·x^%d) = Tr(β·x^%d) ,  β = α^(2^-%d)"
-              % (sk["derece"], sk["taban"], sk["kare"]),
-              "        uyuşmayan: %d / %d   →  eşitlik: %s"
-              % (sk["iz_eşitliği"]["uyuşmayan"],
-                 sk["iz_eşitliği"]["eleman"],
-                 sk["iz_eşitliği"]["tuttu"]),
-              "        monom açılımı olsaydı terim: %.3e  (açılmadı)"
-              % sk["monom_sayisi"]]
-        g = kulli["gpu_akışı"]
-        s += ["",
-              "    1 TB/S GPU AKIŞI (nefs/gpu_akis.py) -- zabıt:",
-              "      koşan kütüphane: %s   GPU var mı: %s"
-              % (g["kütüphane"], g["gpu"])]
-        if not g["gpu"]:
-            s.append("      ⚠ GPU YOK: 1 TB/s HADDİ BU MAKİNEDE ÖLÇÜLMEDİ. "
-                     "Aşağısı aynı cebrin CPU ölçümüdür.")
-        def _gb(v):
-            return "ölçülemedi" if v is None else "%.1f GB/s" % v
-
-        def _hukum(v):
-            return "ÖLÇÜLEMEDİ" if v is None else ("yeter" if v
-                                                   else "YETMEZ")
-
-        s += ["      İKİ DÜNYA (zabıt, ikinci fasıl) -- karıştırılmaz:",
-              "        haricî (PCIe) tavanı : %s  (kart: %s)"
-              % (_gb(g["pcie_tavan"]), g["kart"] or "—"),
-              "        dâhilî (VRAM) tavanı : %s  (kart: %s)"
-              % (_gb(g["vram_tavan"]), g["kart"] or "—"),
-              "        had %.0f GB/s → haricî yol %s, dâhilî yol %s"
-              % (g["had"], _hukum(g["haricî_yeter"]),
-                 _hukum(g["dâhilî_yeter"])),
-              "        zabıtın iddiası (ÖLÇÜ DEĞİL): %d × %s, "
-              "VRAM %.0f, PCIe %.1f GB/s"
-              % (g["iddia"]["kart"], g["iddia"]["kart_adı"],
-                 g["iddia"]["vram_kart_gb"], g["iddia"]["pcie_kart_gb"]),
-              "      ÇATI ÇİZGİSİ (Roofline): bayt başına bütçe %.0f işlem"
-              % g["bayt_basina_islem"],
-              "        ölçülen aritmetik yoğunluk: %.2f işlem/bayt  → %s"
-              % (g["yogunluk"], "bant sınırlı (doğru taraf)"
-                 if g["bant_sinirli"] else "hesap sınırlı (İFLAS)"),
-              "      1. MOTOR -- warp symplectic bitmask (XOR/POPCOUNT)",
-              "         %d bitlik kelime, %d satır → %.3f GB/s symplectic "
-              "(bu makinede)" % (g["kelime"], g["satır"], g["symplectic_gb"]),
-              "         kayan nokta çarpımı: %d  (sıfır olmalı)"
-              % g["kayan_nokta"],
-              "      2. MOTOR -- tek geçişli kaynaşık çekirdek",
-              "         kaynaşık %.4f sn / ayrık %.4f sn → %.1f× ; "
-              "bellek trafiği %.1f× azaldı"
-              % (g["kaynasik_sn"], g["ayrik_sn"], g["kaynasma"],
-                 g["trafik_kazanci"]),
-              "      3. MOTOR -- GPU-yerel bitstream genleşmesi",
-              "         tohum %d bayt → dalga %d bayt (%.1f×)   "
-              "PCIe'den girmesi gereken: %.1f GB/s"
-              % (g["tohum_bayt"], g["dalga_bayt"], g["genlesme"],
-                 g["pcie_gereken"]),
-              "         çığ: tohumun tek biti çevrilince dalganın "
-              "%%%.1f'i değişiyor" % (100.0 * g["tohuma_bağlı"]),
-              "         PCIe'ye sığıyor mu: %s" % _hukum(g["pcie_sigdi"]),
-              "      4. MOTOR -- 4 kart P2P sınır kilidi",
-              "         dilim %d × %d bayt, sınır %d bayt → temas %.4f%%"
-              % (g["dilim"], g["dilim_bayt"], g["sınır_bayt"],
-                 g["temas_yuzdesi"]),
-              "         yeniden kurma hatası %.3e  (sınır kaybı YOK)"
-              % g["dilim_hatası"]]
+              "2-25× hızlı, çift C'de 6,9×)"]
         if kulli.get("düşen_uzuv"):
             s.append("    DÜŞEN UZUV: %s"
                      % ", ".join(sorted(kulli["düşen_uzuv"])))

@@ -7,7 +7,6 @@ import math
 
 import numpy as np
 
-from .galois import palmer_indir, sbox
 from .matchgate import matchgate_mi
 
 __all__ = ["QuditAyar", "QuditYazmac", "Iz",
@@ -154,7 +153,7 @@ class QuditAyar:
     yerel_yuva: int = 1
     tip: object = np.complex128
     tohum: int = 0
-    motor: str = "galois"
+    motor: str = "sürekli"
     faz_mertebesi: int = 16
     hat: str = "c"
     hat_bandi: int = 0
@@ -211,9 +210,7 @@ class QuditYazmac:
         self._bant = Bant(int(a.yigin), int(a.d), tuple(a.lif),
                           hat=str(a.hat), bant=int(a.hat_bandi))
         self._faz_bekleyen: Optional[np.ndarray] = None
-        self._faz_toplam = np.zeros((int(a.yigin), int(a.d)), np.int64)
-        self._faz_artik = np.zeros((int(a.yigin), int(a.d)), np.int64)
-        self._faz_kesir = np.zeros((int(a.yigin), int(a.d)), float)
+        self._faz_toplam = np.zeros((int(a.yigin), int(a.d)), float)
         self._faz_indirilen = 0
         self.cephe = 0
         self._psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
@@ -456,39 +453,26 @@ class QuditYazmac:
         self._faz_indir()
 
     def _faz_indir(self) -> None:
-        k = self._faz_bekleyen
-        if k is None:
+        t = self._faz_bekleyen
+        if t is None:
             return
         self._faz_bekleyen = None
-        m = int(self.ayar.faz_mertebesi)
-        if not np.any(k):
+        if not np.any(t):
             return
-        V, artik = palmer_indir(self._psi, k, m)
         if self.iz.senet_acik:
-            _c = max(1, m // 4)
-            _q = (((np.asarray(k, np.int64)
-                    - np.asarray(artik, np.int64)) // _c) % 4)
             self.iz.kapi_yaz("faz", (),
-                             np.broadcast_to(_q, (self.B, self.d)).copy())
-        self._psi = np.asarray(V, self._psi.dtype)
-        self._faz_artik = np.broadcast_to(
-            np.asarray(artik, np.int64), (self.B, self.d)).copy()
+                             np.broadcast_to(t, (self.B, self.d)).copy())
+        self._psi = (self._psi * np.exp(-1j * t)).astype(self._psi.dtype)
+        self._faz_toplam = self._faz_toplam + t
         self._faz_indirilen += 1
 
     def faz_birikimi(self) -> np.ndarray:
         return self._faz_toplam.copy()
 
     def faz_borcu(self) -> Dict[str, float]:
-        m = int(self.ayar.faz_mertebesi)
-        ceyrek = max(1, m // 4)
-        a = np.asarray(self._faz_artik, np.int64).reshape(-1)
-        kes = np.abs(np.asarray(self._faz_kesir, float).reshape(-1))
-        return {"mertebe": float(m), "çeyrek": float(ceyrek),
-                "ödenmemiş_üs": float(np.mean(a)),
-                "nispet": float(np.mean(a) / ceyrek),
-                "azamî_üs": float(a.max()) if a.size else 0.0,
-                "ödenmemiş_kesir": float(np.mean(kes)),
-                "azamî_kesir": float(kes.max()) if kes.size else 0.0,
+        a = np.abs(np.asarray(self._faz_toplam, float).reshape(-1))
+        return {"toplam_faz_ortalama": float(np.mean(a)) if a.size else 0.0,
+                "toplam_faz_azamî": float(a.max()) if a.size else 0.0,
                 "indirme": float(self._faz_indirilen)}
 
     def _karo_indir(self, k: int, M: np.ndarray) -> None:
@@ -608,19 +592,11 @@ class QuditYazmac:
         assert t.shape[-1] == self.d, (
             "faz açısı yazmaç ebadında olmalı: %s ≠ %d"
             % (t.shape, self.d))
-        m = int(self.ayar.faz_mertebesi)
-        us = -t * m / (2.0 * math.pi) + self._faz_kesir
-        tam = np.rint(us)
-        self._faz_kesir = np.broadcast_to(us - tam,
-                                          (self.B, self.d)).copy()
-        k = (tam.astype(np.int64) % m)
-        k = (k + self._faz_artik) % m
-        self._faz_artik = np.zeros((self.B, self.d), np.int64)
-        self._faz_toplam = (self._faz_toplam + k) % m
+        t = np.broadcast_to(t, (self.B, self.d)).copy()
         if self._bekleyen:
             self._bosalt()
-        self._faz_bekleyen = (k if self._faz_bekleyen is None
-                              else (self._faz_bekleyen + k) % m)
+        self._faz_bekleyen = (t if self._faz_bekleyen is None
+                              else self._faz_bekleyen + t)
         self._kapi += 1
 
     def sektor_kapisi(self, ad: str, M: np.ndarray) -> None:

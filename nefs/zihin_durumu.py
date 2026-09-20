@@ -38,7 +38,7 @@ class QAyar:
     bolge_asgari: int = 1
     hukum_lifi: int = 256
     lif_yapisi: Optional[Tuple[int, ...]] = (16, 16, 16)
-    motor: str = "galois"
+    motor: str = "sürekli"
     faz_mertebesi: int = 16
     hat: str = "c"
     hat_bandi: int = 0
