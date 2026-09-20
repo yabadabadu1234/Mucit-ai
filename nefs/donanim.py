@@ -10,7 +10,7 @@ import numpy as np
 
 __all__ = ["cekirdek_sayisi", "onbellekler", "saat_ghz", "simd_bilgisi",
            "bellek_bandi", "bellek_baytlari", "tamsayi_hizi",
-           "bellek_haddi", "gpu_var_mi", "gpu_olcu",
+           "bellek_haddi", "gpu_var_mi", "gpu_olcu", "hesap",
            "donanim", "rapor"]
 
 _ONBELLEK: Dict[str, Any] = {}
@@ -175,6 +175,30 @@ def tamsayi_hizi(satir: int = 4096, kelime: int = 64,
     return {"usul": usul, "donanım": donanim_var, "bayt": bayt,
             "sn": float(sure), "bant_gb": float(bayt / sure / 1e9),
             "satır": int(satir), "kelime": int(kelime)}
+
+
+def hesap(ne: str = "oto"):
+    ne = str(ne)
+    if ne in ("oto", "cupy"):
+        try:
+            import cupy as cp
+            return cp, "cupy", True
+        except Exception:
+            if ne == "cupy":
+                raise RuntimeError("cupy istendi fakat kurulu değil")
+    if ne in ("oto", "torch"):
+        try:
+            import torch
+            if torch.cuda.is_available():
+                return torch, "torch-cuda", True
+            if ne == "torch":
+                return torch, "torch-cpu", False
+        except Exception:
+            if ne == "torch":
+                raise RuntimeError("torch istendi fakat kurulu değil")
+    if ne in ("oto", "numpy"):
+        return np, "numpy", False
+    raise ValueError("çekirdek bilinmiyor: %r" % (ne,))
 
 
 def gpu_var_mi() -> Dict[str, Any]:

@@ -24,7 +24,7 @@ from nefs.kulli_mizan import (FockUzayi, Hamiltonyen, MizanAyari,
 from nefs.hafiza import Hafiza, tertip_beyani
 from main.cikarim import (hazineden_yukle, hafizayi_yukle, padisah,
                           hazineden_devam, devam_agirligi)
-from nefs.tdd import TddAyari, kanonik_adres
+from kuantum.qudit import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
 from nefs.ayna import AynaAyari
 from nefs.mihenk import (MIHENK, nobet_kur, safha,

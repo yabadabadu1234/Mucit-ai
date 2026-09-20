@@ -13,7 +13,7 @@ from kuantum.topolojik import orgu_ureticleri, yang_baxter_hatasi
 from ogrenme.morse import (euler_karakteristigi,
                            morse_euler_denklik_tahkiki, morse_indisleri)
 
-from .hizli import hesap
+from .donanim import hesap
 
 __all__ = ["AynaAyari", "Isik", "bolucu", "vakum", "sikistir", "bogoliubov",
            "faz_kaydir", "kivilcim", "halka", "olc", "rapor"]

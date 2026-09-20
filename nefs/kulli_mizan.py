@@ -10,7 +10,7 @@ from .ayna import AynaAyari, halka
 from .hafiza import CERH, TASDIK, TEVAKKUF, Hafiza
 from .veri_kapisi import (hafiza_hukmu, kapi_beyani,
                           kapi_tertibi, kapi_tetabuku)
-from .tdd import esit_mi, kanonik_adres
+from kuantum.qudit import esit_mi, kanonik_adres
 
 __all__ = ["Mod", "FockUzayi", "Hamiltonyen", "balyala",
            "fock_beyani", "fock_metni", "hamiltonyen_beyani",
