@@ -6253,6 +6253,69 @@ def topos_terminal_buzulme_itminan(kat: Turetilen1Kategori, P: np.ndarray,
             "terminal_morfizm_akisi": ortalama_akıs}
 
 
+def ko_yoneda_yogunluk_sentezle(veri_dagilimi: np.ndarray, P: np.ndarray,
+                                kat: Turetilen1Kategori) -> Dict[str, Any]:
+    n = P.shape[0]
+    F_c = veri_dagilimi / (np.linalg.norm(veri_dagilimi) + 1e-12)
+
+    kolimit_temsili = np.zeros(n, dtype=float)
+    agirliklar = {}
+
+    for c in kat.nesneler:
+        if c < n:
+            h_c = P[:, c]
+            katsayi = float(F_c[c])
+            kolimit_temsili += katsayi * h_c
+            agirliklar[c] = katsayi
+
+    kolimit_normu = float(np.linalg.norm(kolimit_temsili))
+    kolimit_temsili /= (kolimit_normu + 1e-12)
+
+    return {"kolimit_vektoru": kolimit_temsili,
+            "yogunluk_sadakati": float(np.dot(F_c, kolimit_temsili)),
+            "temsil_agirliklari": agirliklar}
+
+
+def coequalizer_evrensel_faktorizasyon(ok1_id: int, ok2_id: int,
+                                       h_haritasi: Dict[int, int],
+                                       kat: Turetilen1Kategori) -> Dict[str, Any]:
+    bolum_q = topos_es_esitleyici_coequalizer(ok1_id, ok2_id, kat)
+
+    f_cifti = next((cift for cift, oid in kat.ok_siniflari.items() if oid == ok1_id), None)
+    g_cifti = next((cift for cift, oid in kat.ok_siniflari.items() if oid == ok2_id), None)
+
+    uyumlu = True
+    if f_cifti and g_cifti and f_cifti[0] == g_cifti[0]:
+        hedef_f = f_cifti[1]
+        hedef_g = g_cifti[1]
+        if h_haritasi.get(hedef_f) != h_haritasi.get(hedef_g):
+            uyumlu = False
+
+    h_bar: Dict[int, int] = {}
+    for b_nesne, q_denklik in bolum_q.items():
+        if b_nesne in h_haritasi:
+            h_bar[q_denklik] = h_haritasi[b_nesne]
+
+    return {"bolum_q": bolum_q, "evrensel_h_bar": h_bar, "faktorizasyon_gecerli_mi": uyumlu}
+
+
+def topolojik_yuk_chern_sayisi(P: np.ndarray, Asim: np.ndarray,
+                               ucgen_listesi: Sequence[Tuple[int, int, int]]) -> Dict[str, Any]:
+    if not ucgen_listesi:
+        return {"chern_sayisi_c1": 0, "toplam_faz": 0.0, "topolojik_monopol_var_mi": False}
+
+    toplam_faz = 0.0
+    for (i, j, k) in ucgen_listesi:
+        holonomi = analitik_lie_bargmann_adimi(i, j, k, P, Asim)
+        toplam_faz += holonomi["bargmann_phi"]
+
+    chern_sayisi = int(np.round(toplam_faz / (2.0 * np.pi)))
+    monopol_var = bool(chern_sayisi != 0)
+
+    return {"chern_sayisi_c1": chern_sayisi, "toplam_faz_radyan": float(toplam_faz),
+            "topolojik_monopol_var_mi": monopol_var}
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -6904,7 +6967,15 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     bas_idx, son_idx = s1_entropi_gradyani_sinir_bul(w, pencere_boyu=min(4, len(w)))
     odak_kesiti = tuple(w[bas_idx:son_idx])
 
-    P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
+    w_dizi = np.asarray(w)
+    if w_dizi.ndim == 2:
+        izgara_sekli = w_dizi.shape
+        P, Asim = iki_cins_geometri_cikar(w_dizi, n, izgara_sekli=izgara_sekli)
+        w = list(w_dizi.reshape(-1))
+        _, _, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
+    else:
+        izgara_sekli = None
+        P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
 
     w_arr = list(w)
     k_baglam = min(K_max - 1, len(w_arr) - 1)
@@ -7229,6 +7300,22 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     itminan_analizi = topos_terminal_buzulme_itminan(turetilen_kategori, P, kuantum_durum_vektoru)
 
+    koyoneda_raporu = ko_yoneda_yogunluk_sentezle(
+        veri_dagilimi=(kuantum_durum_vektoru[:n] if len(kuantum_durum_vektoru) >= n
+                      else np.ones(n, dtype=float)),
+        P=P, kat=turetilen_kategori)
+
+    if len(turetilen_kategori.ok_siniflari) >= 2:
+        oklar = list(turetilen_kategori.ok_siniflari.values())
+        h_ornek = {x: x % 3 for x in turetilen_kategori.nesneler}
+        coeq_raporu = coequalizer_evrensel_faktorizasyon(oklar[0], oklar[1], h_ornek, turetilen_kategori)
+    else:
+        coeq_raporu = {"faktorizasyon_gecerli_mi": True}
+
+    ornek_ucgenler = ([(orijinal_baglam[i], orijinal_baglam[i + 1], nihai_hedef)
+                       for i in range(len(orijinal_baglam) - 1)] if len(orijinal_baglam) >= 2 else [])
+    chern_raporu = topolojik_yuk_chern_sayisi(P, Asim, ornek_ucgenler)
+
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
     balyalama_raporu = d9_kume_kapanisi_ve_balyalama(
@@ -7335,5 +7422,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "icsel_kategori_nesnesi": icsel_kategori_terimi,
         "mutasarrifa_hipotetik_kavram": (yeni_kavram_id, yeni_kavram_adi),
         "topos_terminal_itminan": itminan_analizi,
+        "koyoneda_kolimit_sadakati": koyoneda_raporu["yogunluk_sadakati"],
+        "coequalizer_faktorizasyon": coeq_raporu["faktorizasyon_gecerli_mi"],
+        "chern_sayisi_c1": chern_raporu["chern_sayisi_c1"],
+        "izgara_sekli": izgara_sekli,
         "detay": tayf_bilgisi
     }
