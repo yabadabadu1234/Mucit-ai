@@ -255,9 +255,9 @@ def _yuva_sec(mertebeler: Sequence[int], boy: int) -> int:
 
 def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
                munasebet, onceki: Optional[Dict[str, Any]] = None) -> Lif:
-    from idrak.kategori import kategori_beyani, uzaylari_kur
     from matematik.sonsuz_mertebeler_teorisi import (
-        hendese_beyani, hendese_yukle, kaide_imzasi_uret)
+        hendese_beyani, hendese_yukle, kaide_imzasi_uret,
+        kategori_beyani, uzaylari_kur)
     from .qegitim import ornek_bol
 
     veri = list(veri)

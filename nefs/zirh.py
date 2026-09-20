@@ -8,7 +8,7 @@ from typing import (Callable, Dict, Iterable, List, Mapping, Optional,
 
 import numpy as np
 
-from idrak.kategori import Uzay
+from matematik.sonsuz_mertebeler_teorisi import Uzay
 from kuantum.stabilizer import StabilizerDurum
 from nefs.qyazmac import QuditYazmac as Yazmac
 from matematik.mizan import Onerme, Tablo, deg, degil, ise, ve
@@ -799,7 +799,6 @@ def rapor() -> str:
     s.append("=" * 70)
     s.append("  DALGAYA ZIRH GİYDİRME")
     s.append("=" * 70)
-    from idrak.kategori import Uzay
 
     s += ["ENİNE TOPOLOJİK ZIRH -- dört süzgeç, dördü de ısırıyor mu?", ""]
     n = 24
