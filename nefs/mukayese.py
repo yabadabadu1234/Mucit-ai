@@ -1208,13 +1208,86 @@ def cozum_uzayi_ac(sual: Dict[str, Any], nefs=None, hafiza=None,
     kok = np.exp(1j * aci * np.linspace(0.0, 1.0, klon.size))
     F = kok
     klon = klon * F
+
+    fibrasyon_raporu = _kaide_fibrasyonuyla_mana_tasi(klon, kaide)
+    if fibrasyon_raporu is not None:
+        klon = fibrasyon_raporu["hal_tasinmis"]
+
     if fock is not None:
         for ad, v in kaide.items():
             fock.yarat("kaide.%s" % ad, entropi=float(v),
                        butce=float(sual["boy"]),
                        celiski=float(sual["mesele_nispeti"]))
     return {"makine": m, "açık": True, "hal": klon, "F": F,
-            "sual": sual, "kayıt": []}
+            "sual": sual, "kayıt": [], "fibrasyon": fibrasyon_raporu}
+
+
+def _kaide_fibrasyonuyla_mana_tasi(klon: np.ndarray, kaide: Dict[str, float]
+                                   ) -> Optional[Dict[str, Any]]:
+    from matematik.sonsuz_mertebeler_teorisi import (
+        FibrasyonluManaLifi, Turetilen1Kategori)
+
+    kaide_adlari = list(kaide.keys())
+    n_kaide = len(kaide_adlari)
+    if n_kaide < 2 or klon.size < n_kaide:
+        return None
+
+    kaide_degerleri = np.array([float(kaide[a]) for a in kaide_adlari])
+    P_kaide = np.outer(kaide_degerleri, kaide_degerleri)
+    np.fill_diagonal(P_kaide, 0.0)
+    esik = float(np.mean(P_kaide[P_kaide > 0.0])) if np.any(P_kaide > 0.0) else 0.0
+
+    nesneler = list(range(n_kaide))
+    ok_siniflari: Dict[Tuple[int, int], int] = {}
+    birim_oklar: Dict[int, int] = {}
+    ok_sayaci = 0
+    for x in nesneler:
+        birim_oklar[x] = ok_sayaci
+        ok_siniflari[(x, x)] = ok_sayaci
+        ok_sayaci += 1
+    for i in nesneler:
+        for j in nesneler:
+            if i != j and P_kaide[i, j] > esik:
+                ok_siniflari[(i, j)] = ok_sayaci
+                ok_sayaci += 1
+
+    bileske_tablosu: Dict[Tuple[int, int], int] = {}
+    for (x, y), ok_xy in ok_siniflari.items():
+        for (y2, z), ok_yz in ok_siniflari.items():
+            if y2 == y and (x, z) in ok_siniflari:
+                bileske_tablosu[(ok_xy, ok_yz)] = ok_siniflari[(x, z)]
+
+    kat = Turetilen1Kategori(nesneler, ok_siniflari, bileske_tablosu, birim_oklar)
+    fibrasyon = FibrasyonluManaLifi(kat)
+
+    dilim_boyu = klon.size // n_kaide
+    parcalar = np.array_split(klon, n_kaide)
+    for i in nesneler:
+        fibrasyon.mana_lifi_ekle(i, np.abs(parcalar[i]).astype(float))
+
+    tasima_sayisi = 0
+    yeni_parcalar = [p.copy() for p in parcalar]
+    for (x, y) in ok_siniflari:
+        if x == y:
+            continue
+        tasinan = fibrasyon.kartezyen_ok_tasi(x, y, P_kaide)
+        d = min(len(tasinan), yeni_parcalar[y].size)
+        if d > 0:
+            buyukluk = np.abs(yeni_parcalar[y][:d])
+            faz = np.exp(1j * np.angle(yeni_parcalar[y][:d]))
+            yeni_parcalar[y][:d] = (buyukluk + 0.1 * tasinan[:d]) * faz
+            tasima_sayisi += 1
+
+    hal_tasinmis = np.concatenate(yeni_parcalar)
+    if hal_tasinmis.size < klon.size:
+        hal_tasinmis = np.concatenate(
+            [hal_tasinmis, klon[hal_tasinmis.size:]])
+    norm = float(np.linalg.norm(hal_tasinmis))
+    if norm > 1e-12:
+        hal_tasinmis = hal_tasinmis / norm * float(np.linalg.norm(klon))
+
+    return {"hal_tasinmis": hal_tasinmis, "tasima_sayisi": tasima_sayisi,
+            "kaide_kategorisi_ok_sayisi": len(ok_siniflari)}
 
 
 def mantik_filtresi(uzay: Dict[str, Any]) -> Dict[str, Any]:
