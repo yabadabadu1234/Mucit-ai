@@ -6503,6 +6503,25 @@ def tannaka_simetri_grubu_turet(kat: Turetilen1Kategori, P: np.ndarray) -> Dict[
     return {"simetri_grubu": simetri, "komutator_sapmasi": komutator_normu, "tannaka_boyutu": k}
 
 
+def d7_topolojik_faz_duzeltmesi(P_izleri: List[np.ndarray]) -> float:
+    if len(P_izleri) < 2:
+        return 0.0
+
+    toplam_faz_maliyeti = 0.0
+    onceki_ozvektor: Optional[np.ndarray] = None
+    for P_adim in P_izleri:
+        _, ozvektorler = np.linalg.eigh(P_adim @ P_adim.T)
+        v = ozvektorler[:, -1]
+        if onceki_ozvektor is not None:
+            d = min(len(v), len(onceki_ozvektor))
+            ortusme = complex(np.vdot(onceki_ozvektor[:d], v[:d]))
+            faz_farki = float(np.angle(ortusme))
+            toplam_faz_maliyeti += 0.5 * faz_farki ** 2
+        onceki_ozvektor = v
+
+    return float(toplam_faz_maliyeti)
+
+
 def berry_ayar_potansiyeli_ve_fazi(psi: np.ndarray, parametre_acilari: np.ndarray,
                                    d_psi: np.ndarray) -> Dict[str, Any]:
     norm_psi = psi / (np.linalg.norm(psi) + 1e-12)
@@ -7768,9 +7787,11 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     mertebe_kulesi = DereceliMertebeKulesi(maks_mertebe=4)
     asansor = IkiYonluMertebeAsansoru(tavan_mertebe=4)
+    berry_yol_P_izleri: List[np.ndarray] = []
 
     adim = 0
     while True:
+        berry_yol_P_izleri.append(P.copy())
         Asim = asimetri_guncelle(P)
         tayf_bilgisi = topos_tayfi_hodge_ile_hesapla(P, Asim, norm_korollalar, baglam)
 
@@ -8122,6 +8143,8 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(
         kefeler, V_kuplaj=V_kuplaj_tannaka)
     skaler_mizan = float(skaler_mizan * np.cos(berry_fazi))
+    topolojik_faz_maliyeti = d7_topolojik_faz_duzeltmesi(berry_yol_P_izleri)
+    skaler_mizan = float(skaler_mizan - topolojik_faz_maliyeti)
 
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
     C_varsayilan = np.array([1.0, 0.5, 0.25, 0.125], dtype=float)
@@ -8411,6 +8434,7 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "lambda_nispetleri": lambda_nispetleri,
         "yavas_mod_indeksi": yavas_mod,
         "skaler_mizan": skaler_mizan,
+        "d7_topolojik_faz_maliyeti": topolojik_faz_maliyeti,
         "kan_intac_genligi": kan_dalga_genligi,
         "d0_gecit_raporu": gecit_raporu,
         "d8_hudut_raporu": hudut_raporu,

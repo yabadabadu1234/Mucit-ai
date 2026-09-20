@@ -23,6 +23,7 @@ class VeriKapisiAyari:
 _KAPI: Dict[str, float] = {
     "gelen": 0.0, "kabul": 0.0, "ret": 0.0,
     "tenakuz": 0.0, "kısırdöngü": 0.0, "mantıksızlık": 0.0,
+    "kararsizlik": 0.0,
     "tasdik": 0.0, "tevakkuf": 0.0, "cerh": 0.0,
     "kirlilik": 0.0, "uyumsuzluk": 0.0, "terfi": 0.0, "idrak": 0.0,
     "parça": 0.0, "parça_haddi": 0.0, "açık": 1.0}
@@ -85,9 +86,21 @@ def _idrak(nefs, bag: Sequence[int], hedef: int,
     return np.asarray(q.y.psi[0], complex).reshape(-1)
 
 
-def _bos_hukum() -> Dict[str, Any]:
+def _bos_hukum(stabilite: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     return {"kabul": True, "hudut": "", "terfi": False,
-            "kayıt": TASDIK, "sayı": 0.0, "kutup": (), "sebep": ""}
+            "kayıt": TASDIK, "sayı": 0.0, "kutup": (), "sebep": "",
+            "stabilite": stabilite}
+
+
+def d4_stabilite_alani_olc(H_curr: np.ndarray, H_prev: np.ndarray) -> Dict[str, Any]:
+    delta_norm = float(np.linalg.norm(H_curr - H_prev))
+    norm_carpimi = float(np.linalg.norm(H_prev) * np.linalg.norm(H_curr)) + 1e-12
+    gecis_olasiligi = float(np.clip(
+        (np.abs(np.vdot(H_prev, H_curr)) ** 2) / (norm_carpimi ** 2), 1e-6, 1.0))
+    kararsizlik_skoru = float(-np.log(gecis_olasiligi) * delta_norm)
+    kararli_mi = bool(kararsizlik_skoru < 0.8)
+    return {"kararsizlik_skoru": kararsizlik_skoru, "kararli_mi": kararli_mi,
+            "eylem": "KABUL" if kararli_mi else "REDDET_VEYA_YUMUSAT"}
 
 
 def _hukum(i: int, bag: Sequence[int], hedef: int, H: List[np.ndarray],
@@ -98,19 +111,29 @@ def _hukum(i: int, bag: Sequence[int], hedef: int, H: List[np.ndarray],
         return {"kabul": False, "hudut": "mantıksızlık", "terfi": False,
                 "kayıt": CERH, "sayı": float(tasan), "kutup": (),
                 "sebep": "%d basamak taşıyıcının kod uzayı [0,%d) dışında"
-                         % (tasan, max(2, int(ayar.taban)))}
+                         % (tasan, max(2, int(ayar.taban))),
+                "stabilite": None}
     es = gorulen.get(tuple(int(x) for x in bag))
     if es is None or int(es) == i:
         es = i - 1
     if int(es) < 0:
         return _bos_hukum()
+    stabilite = d4_stabilite_alani_olc(H[i], H[int(es)])
+    if not stabilite["kararli_mi"]:
+        return {"kabul": False, "hudut": "kararsizlik", "terfi": False,
+                "kayıt": CERH, "sayı": stabilite["kararsizlik_skoru"],
+                "kutup": (),
+                "sebep": "kararsızlık skoru %.4f -- durum vektörü çekici "
+                         "bölgeden fırlıyor (kaotik rejim)"
+                         % stabilite["kararsizlik_skoru"],
+                "stabilite": stabilite}
     from .mukayese import ayniyet_ihtilaf
     a = ayniyet_ihtilaf(H[i], H[int(es)], vecihler, hafiza=hafiza)
     kutup = (H[i], H[int(es)])
     if bool(a["tenakuz"]):
         return {"kabul": True, "hudut": "tenakuz", "terfi": True,
                 "kayıt": float(a["kayıt"]), "sayı": float(a["ihtilaf"]),
-                "kutup": kutup,
+                "kutup": kutup, "stabilite": stabilite,
                 "sebep": "çift %r vechinde örtüşme %.4f, %r vechinde "
                          "%.4f -- ihtilaf nispeti %.4f > ittifak %.4f: "
                          "bir âlemde aynı, başkasında zıt"
@@ -122,12 +145,12 @@ def _hukum(i: int, bag: Sequence[int], hedef: int, H: List[np.ndarray],
     if bool(a["kısır"]):
         return {"kabul": True, "hudut": "kısırdöngü", "terfi": False,
                 "kayıt": float(a["kayıt"]), "sayı": float(a["ittifak"]),
-                "kutup": (),
+                "kutup": (), "stabilite": stabilite,
                 "sebep": "çift bütün vecihlerde örtüşüyor (asgarî %.4f, "
                          "ittifak %.4f) -- yeni bir şey söylemiyor"
                          % (float(a["asgarî_örtüşme"]),
                             float(a["ittifak"]))}
-    return _bos_hukum()
+    return _bos_hukum(stabilite)
 
 
 def parca_haddi(taban: int) -> int:
