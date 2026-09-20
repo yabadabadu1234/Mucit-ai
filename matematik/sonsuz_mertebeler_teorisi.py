@@ -5257,6 +5257,107 @@ def ispat_sahidini_dogrula(ispat_sahidi: Optional[Terim], baglam: Tuple[int, ...
         return False
 
 
+def kaide_ve_imza_hesapla(a: int, b: int, P: np.ndarray, Asim: np.ndarray) -> Dict[str, Any]:
+    n = P.shape[0]
+
+    hom_a = P[:, a] / (np.linalg.norm(P[:, a]) + 1e-12)
+    hom_b = P[:, b] / (np.linalg.norm(P[:, b]) + 1e-12)
+    temas_noktalari = hom_a * hom_b
+    tip_temas = float(np.sum(temas_noktalari))
+    tip_hudut = float(1.0 - (np.dot(hom_a, hom_b) ** 2))
+
+    ortanca_temas = (float(np.median(temas_noktalari[temas_noktalari > 0]))
+                     if np.any(temas_noktalari > 0) else 0.0)
+    dokunan = [k for k in range(n) if temas_noktalari[k] > ortanca_temas]
+
+    if dokunan:
+        holonomiler = [np.exp(1j * np.pi * (Asim[a, b] + Asim[b, k] - Asim[k, a]))
+                       for k in dokunan]
+        kat_korunum = float(np.abs(np.mean(holonomiler)))
+        arg_holonomiler = [abs(np.angle(h)) for h in holonomiler]
+        med_arg = float(np.median(arg_holonomiler))
+        cekirdek_orani = float(sum(1 for ag in arg_holonomiler if ag <= med_arg)
+                               / len(dokunan))
+    else:
+        kat_korunum = 1.0
+        cekirdek_orani = 1.0
+
+    ortusme = float(np.clip(np.sqrt(P[a, b] * P[b, a]), 0.0, 1.0))
+    aci_ab = float(np.arccos(ortusme))
+    uzay_casimir = float(np.cos(aci_ab) ** 2)
+    uzay_donusum = float(1.0 - uzay_casimir)
+
+    kaide_vektoru = np.array([tip_hudut, tip_temas, kat_korunum, cekirdek_orani,
+                              uzay_donusum, uzay_casimir], dtype=float)
+
+    olcek = float(np.median(np.abs(kaide_vektoru - np.median(kaide_vektoru)))) + 1e-6
+    imza = tuple(np.round(kaide_vektoru / olcek).astype(int).tolist())
+
+    return {"kaide_vektoru": kaide_vektoru, "imza": imza, "olcek": olcek}
+
+
+def vecih_hukmu_tayin_et(vecih_ortusmeleri: Sequence[float]) -> Dict[str, Any]:
+    if not vecih_ortusmeleri:
+        return {"hüküm": "TASDİK", "ihtilaf": 0.0, "ittifak": 1.0}
+
+    dizi = np.array(vecih_ortusmeleri, dtype=float)
+    azam_ort = float(np.max(dizi))
+    asg_ort = float(np.min(dizi))
+
+    ihtilaf = float(azam_ort - asg_ort)
+    ittifak = float(1.0 - ihtilaf)
+
+    if ihtilaf > ittifak:
+        hukum = "TENAKUZ"
+    elif ittifak > ihtilaf and asg_ort >= ittifak:
+        hukum = "KISIRDÖNGÜ"
+    else:
+        hukum = "TASDİK"
+
+    return {"hüküm": hukum, "ihtilaf": ihtilaf, "ittifak": ittifak,
+            "asgari_ortusme": asg_ort}
+
+
+def sadakat_devresi_kos(psi: np.ndarray, kod_uzayi_maskesi: np.ndarray) -> Dict[str, Any]:
+    psi_calisma = psi.copy()
+    guc = np.abs(psi_calisma) ** 2
+
+    mantiksiz_maske = (kod_uzayi_maskesi < 0.5) | (~np.isfinite(psi_calisma))
+    kod_ici_guc = guc[~mantiksiz_maske]
+
+    if len(kod_ici_guc) > 0:
+        ortanca_guc = float(np.median(kod_ici_guc))
+        mumkun_maske = (~mantiksiz_maske) & (guc >= ortanca_guc)
+        mecul_maske = (~mantiksiz_maske) & (guc > 0.0) & (guc < ortanca_guc)
+    else:
+        mumkun_maske = np.zeros_like(mantiksiz_maske)
+        mecul_maske = np.zeros_like(mantiksiz_maske)
+
+    imha_sayisi = int(np.sum(mantiksiz_maske & (guc > 0.0)))
+    psi_calisma[mantiksiz_maske] = 0.0
+
+    yeni_norm = float(np.linalg.norm(psi_calisma))
+    psi_suzulen = psi_calisma / yeni_norm if yeni_norm > 1e-12 else psi_calisma
+
+    mecul_sayisi = int(np.sum(mecul_maske))
+    mumkun_sayisi = int(np.sum(mumkun_maske))
+
+    fazla_eleme_uyarisi = bool(mecul_sayisi == 0 and mumkun_sayisi > 0)
+
+    return {"psi_suzulen": psi_suzulen, "imha": imha_sayisi, "meçhul": mecul_sayisi,
+            "mumkun": mumkun_sayisi, "fazla_eleme_uyarisi": fazla_eleme_uyarisi}
+
+
+def intac_funktor_tersi(psi: np.ndarray, funktor_agirliklari: np.ndarray) -> np.ndarray:
+    F_eslenik = np.conj(funktor_agirliklari)
+    d = min(len(psi), len(F_eslenik))
+    psi_intac = psi.astype(complex).copy()
+    psi_intac[:d] *= F_eslenik[:d]
+
+    norm = float(np.linalg.norm(psi_intac))
+    return (psi_intac / norm) if norm > 1e-12 else psi_intac
+
+
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
     P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
@@ -5351,11 +5452,28 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         }
     }
 
+    kaide_raporu = kaide_ve_imza_hesapla(baglam[-1], nihai_hedef, P, Asim)
+
+    vecih_ortusmeleri = [adim["türetim_gücü"] for adim in muhakemeler
+                        if "türetim_gücü" in adim]
+    terazi_hukmu = vecih_hukmu_tayin_et(vecih_ortusmeleri)
+
+    sadakat_raporu = sadakat_devresi_kos(kuantum_durum_vektoru, kod_uzayi_maskesi)
+    kuantum_durum_vektoru_temiz = sadakat_raporu["psi_suzulen"]
+
+    funktor_vektoru = np.ones(lif_boyutu, dtype=complex)
+    funktor_vektoru[:len(rho)] = np.sqrt(rho) * np.exp(1j * np.pi * rho)
+    nihai_intac_psi = intac_funktor_tersi(kuantum_durum_vektoru_temiz, funktor_vektoru)
+
     return {
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
         "muhakeme_silsilesi": muhakemeler,
         "nihai_muhakeme": muhakemeler[-1],
+        "kaide_imzasi": kaide_raporu["imza"],
+        "terazi_hukmu": terazi_hukmu,
+        "sadakat_devresi": sadakat_raporu,
+        "intac_kuantum_hali": nihai_intac_psi,
         "kulli_ispat_sahidi": kulli_ispat,
         "kulli_ispat_dogrulandi": kulli_sahit_gecerli,
         "turetilen_1_kategori": {
