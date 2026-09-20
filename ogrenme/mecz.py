@@ -239,6 +239,15 @@ def nakil(q, metrik: np.ndarray, maske: np.ndarray) -> np.ndarray:
     return v / n if n > 0.0 else v
 
 
+def _kabul_mizan_kefesi(v_yeni: float, v_eski: float,
+                        keyf_yeni: float, keyf_eski: float) -> bool:
+    if v_yeni < v_eski:
+        return True
+    if v_yeni == v_eski and keyf_yeni > keyf_eski:
+        return True
+    return False
+
+
 class Memuriyet:
 
     def __init__(self, nefs, kayip, kume, sozluk: int,
@@ -432,7 +441,8 @@ class Memuriyet:
             _MECZ["keyfiyet_önceki"] = float(keyf)
             if keyf_aday < keyf:
                 _MECZ["keyfiyet_düşüşü"] += 1.0
-            if va < v:
+            kabul_edildi = _kabul_mizan_kefesi(va, v, keyf_aday, keyf)
+            if kabul_edildi:
                 _MECZ["kabul"] += 1.0
                 _MECZ["adım_normu"] += float(np.linalg.norm(aday - p))
                 p, v, keyf = aday, va, keyf_aday
