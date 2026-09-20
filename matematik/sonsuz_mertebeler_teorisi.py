@@ -7820,8 +7820,7 @@ def tip_tensoru_yukari_cik(tensor: Dict[str, Any], kat: "Turetilen1Kategori",
            "morfizm_sinifi": (int(sinif) if sinif is not None else None)}
 
 
-def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
-                        azami_adim: int = 3) -> Dict[str, Any]:
+def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4) -> Dict[str, Any]:
     from main.egitim import (
         d9_hafiza_yeniden_tertip_ve_alaka, d7_hamiltonyen_nispetleri,
         d8a_mecz_ve_wkb_tunelleme, d10_durma_ve_sukut_yokla, SenetKaydi,
@@ -7877,7 +7876,6 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     muhakemeler: List[Dict[str, Any]] = []
     cozulen_hedefler: Set[int] = set()
     tikanma_gecmisi: List[float] = []
-    azami_guvenlik_tavani = max(int(azami_adim), 8)
 
     mertebe_kulesi = DereceliMertebeKulesi(maks_mertebe=4)
     asansor = IkiYonluMertebeAsansoru(tavan_mertebe=4)
@@ -7953,10 +7951,17 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             adim, tikanma_gecmisi, veri_lifi=n,
             psi_durum=np.sqrt(np.clip(P[baglam[-1]], 0.0, None)),
             eylem_vektoru=mecz_raporu["nakil_sicramasi"], kalp=kalp)
+
+        burhan_tam = bool(sahit_gecerli and anlik_hodge_engeli < 0.05)
+        ic_muhakeme_tikandi = bool(adim_muhakeme["hüküm"] == "tıkanma"
+                                   and mecz_raporu["kuyuya_saplandi"])
+        kelam_hukmu = ("BURHAN_TAMAM" if burhan_tam
+                       else ("İÇ_MUHAKEME_TIKANDI_SUAL_TEVCİH"
+                             if ic_muhakeme_tikandi else kelam_hukmu))
         adim_muhakeme["kelam_hukmu"] = kelam_hukmu
         adim_muhakeme["kesinlik"] = kesinlik
 
-        if dur or adim + 1 >= azami_guvenlik_tavani:
+        if dur or burhan_tam or ic_muhakeme_tikandi:
             break
 
         if adim_muhakeme["ara_durak"] is not None:
