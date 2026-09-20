@@ -10,6 +10,7 @@ import numpy as np
 
 from matematik.mizan import ardisiklik_kaidesi
 from matematik.mizan import mertebe_adi
+from matematik.sonsuz_mertebeler_teorisi import RED_HATALARI
 from .melekeler import qmelekeler, qsicil
 from .zihin_durumu import QAyar, QYazmac, donme
 
@@ -444,14 +445,14 @@ class Kademeler:
     def _dene(self, ad: str, f):
         try:
             return f()
+        except RED_HATALARI as e:
+            self.eksik[ad] = "%s: %s" % (type(e).__name__, str(e)[:60])
+            return None
         except (NameError, AttributeError, ImportError) as e:
             raise AssertionError(
                 "%s: eksik AD yahut ithal (%s: %s). Bu bir veri hâli "
                 "değil, KOD kusurudur; sessizce yutulamaz (ferman 5)."
                 % (ad, type(e).__name__, e))
-        except Exception as e:
-            self.eksik[ad] = "%s: %s" % (type(e).__name__, str(e)[:60])
-            return None
 
     def idrak(self, gorev) -> Idrak:
         ciftler = [(np.asarray(a, np.int64), np.asarray(b, np.int64))
