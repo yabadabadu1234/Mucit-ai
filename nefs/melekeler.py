@@ -21,7 +21,6 @@ from matematik.sonsuz_mertebeler_teorisi import (Baglam, Cember, Deg, Evren, Tab
                                    denetle_t, dongu_uzayi_n, morfizm_tipi)
 
 
-from .kule import ince, kaba
 from .musahede import ortu
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme,
                       donme_turevi, faz_z, kontrollu_donme,

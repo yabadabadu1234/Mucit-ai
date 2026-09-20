@@ -531,12 +531,13 @@ class Kademeler:
             return H
         A = I.ciftler[0][0]
 
-        def _kule():
-            from .kule import kaba, kule_kur
-            k = kule_kur(np.asarray(A, float))
-            _y, _n, kayip = kaba(np.asarray(A, float))
+        def _piramit():
+            from matematik.sonsuz_mertebeler_teorisi import (
+                coklu_cozunurluk_piramidi_kur, piramit_kabalastir)
+            k = coklu_cozunurluk_piramidi_kur(np.asarray(A, float))
+            _y, _n, kayip = piramit_kabalastir(np.asarray(A, float))
             return len(k), float(kayip)
-        r = self._dene("nefs.kule", _kule)
+        r = self._dene("matematik.sonsuz_mertebeler_teorisi", _piramit)
         if r is not None:
             H.kademe_sayisi, H.kabalastirma_kaybi = r
 
@@ -557,7 +558,7 @@ class Kademeler:
         self._olc("tasavvur", 1.0 - float(np.clip(H.kabalastirma_kaybi,
                                                   0.0, 1.0)))
         self.gunluk.append(
-            "2. TASAVVUR: özellik %d boyut, kule %d kademe, spektral "
+            "2. TASAVVUR: özellik %d boyut, piramit %d kademe, spektral "
             "rütbe %d, kabalaştırma kaybı %.3f"
             % (H.ozellik.size, H.kademe_sayisi, H.spektral_rutbe,
                H.kabalastirma_kaybi))

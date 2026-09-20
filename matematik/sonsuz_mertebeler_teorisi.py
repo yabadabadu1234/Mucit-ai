@@ -9407,3 +9407,72 @@ def lif_beyani(lif: Lif) -> str:
           "",
           whnf_beyani()]
     return "\n".join(s)
+
+
+# ============================================================================
+# ÇOK ÇÖZÜNÜRLÜKLÜ PİRAMİT KÖPRÜSÜ (nefs/kule.py'nin yerini alır; ferman: tek motor)
+#
+# nefs/kule.py "kule" adıyla anılıyordu ve bu isim bu dosyadaki GERÇEK
+# mana-mertebe kulesiyle (DereceliMertebeKulesi, IkiYonluMertebeAsansoru,
+# grothendieck_dikey_asansor) çakışıyor, ikisiymiş gibi kafa karıştırıyordu.
+# Hakikatte nefs/kule.py'nin yaptığı iş nokta→uzay→kategori→tip gibi nitelik
+# olarak farklı mertebeler arası bir intaç DEĞİL; art arda ikişer ikişer
+# ortalama alıp (Haar tarzı) satır sayısını yarıya indiren, tek bir düz
+# çok-çözünürlüklü PİRAMİTTİR. Her kademede aynı işlem (ortalama) tekrar
+# eder; mana mertebelerinin her birinde farklı bir cebirsel yapı (Lie grubu,
+# Hom-uzayı, Grothendieck lifi) olması gerekirken burada hepsi aynı
+# ortalama-havuzlama işlemidir -- gerçek mana mertebesi değil, genel
+# amaçlı bir boyut indirgeme aracıdır.
+#
+# Gerçek cevheri budur: nefs/kulli_kayip.py:Hal.tasavvur() bu piramidi
+# fiilen kullanıyordu (H.kademe_sayisi, H.kabalastirma_kaybi). Bu iş
+# tamamen atılacak bir "feragat" değil; gerçek, kullanılan bir boyut
+# indirgeme aracı -- yalnız adı ve yeri yanlıştı ("kule" adıyla mana
+# mertebesi gibi görünüyordu). Aşağıda aynı dört isim, mahiyetine uygun
+# adlarla ve tek motorda taşınıyor: kule_kur → coklu_cozunurluk_piramidi_kur,
+# kaba_kademe → piramit_kaba_kademe, kaba → piramit_kabalastir,
+# ince → piramit_incelt, TAVAN → PIRAMIT_TAVANI.
+# ============================================================================
+
+PIRAMIT_TAVANI = 256
+
+
+def coklu_cozunurluk_piramidi_kur(X: np.ndarray) -> List[np.ndarray]:
+    x = np.asarray(X, float)
+    kademeler = [x]
+    while len(x) > 1:
+        if len(x) % 2:
+            x = np.vstack([x, x[-1:]])
+        a, b = x[0::2], x[1::2]
+        x = (a + b) / np.sqrt(2.0)
+        kademeler.append(x)
+    return kademeler
+
+
+def piramit_kaba_kademe(kademeler: Sequence[np.ndarray],
+                        tavan: int = PIRAMIT_TAVANI) -> int:
+    for i, k in enumerate(kademeler):
+        if len(k) <= tavan:
+            return i
+    return len(kademeler) - 1
+
+
+def piramit_incelt(Y: np.ndarray, n: int, kademe: int) -> np.ndarray:
+    kat = 2 ** kademe
+    G = np.repeat(Y, kat, axis=0)[:n]
+    if len(G) < n:
+        G = np.vstack([G, np.repeat(Y[-1:], n - len(G), axis=0)])
+    return G / (np.sqrt(2.0) ** kademe)
+
+
+def piramit_kabalastir(X: np.ndarray, tavan: int = PIRAMIT_TAVANI
+                       ) -> Tuple[np.ndarray, int, float]:
+    n = len(X)
+    if n <= tavan:
+        return np.asarray(X, float), 0, 0.0
+    kademeler = coklu_cozunurluk_piramidi_kur(X)
+    i = piramit_kaba_kademe(kademeler, tavan)
+    Y = kademeler[i]
+    geri = piramit_incelt(Y, n, i)
+    kayip = float(np.linalg.norm(geri - X) / (np.linalg.norm(X) + 1e-12))
+    return Y, i, kayip
