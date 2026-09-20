@@ -183,6 +183,39 @@ class NQS:
                    "zincir": float(zincir), "adım": float(adim),
                    "örnek": float(len(S))}
 
+    def ornekle_deterministik_gibbs(self, m: int, beta_maks: float = 4.0,
+                                    baslangic: Optional[np.ndarray] = None
+                                    ) -> Tuple[np.ndarray, Dict[str, float]]:
+        n = self.ayar.n
+        if baslangic is not None and len(baslangic):
+            cekirdek = np.asarray(baslangic, int).reshape(-1, n)
+        else:
+            cekirdek = np.zeros((1, n), dtype=int)
+
+        adaylar = [cekirdek]
+        for satir in cekirdek:
+            for bit in range(n):
+                komsu = satir.copy()
+                komsu[bit] ^= 1
+                adaylar.append(komsu[None, :])
+        X0 = np.unique(np.concatenate(adaylar, axis=0), axis=0)
+        if len(X0) < m:
+            X0 = np.tile(X0, (int(np.ceil(m / len(X0))), 1))
+
+        lp = 2.0 * self.log_genlik(X0).real
+        enerji = -lp
+        enerji = enerji - float(np.min(enerji))
+
+        G = np.exp(-float(beta_maks) * (enerji / (np.max(enerji) + 1e-12)))
+        sirali = np.argsort(-G)
+        S = X0[sirali[:m]]
+
+        return S, {"kabul_oranı": 1.0,
+                   "örnek": float(len(S)),
+                   "aday_havuzu": float(len(X0)),
+                   "kip": "deterministik_gibbs",
+                   "beta_maks": float(beta_maks)}
+
     def durum(self) -> Dict[str, float]:
         a = self.ayar
         return {"kübit": float(a.n),
@@ -979,9 +1012,8 @@ class DalgaEniyileyici:
     def cevrim(self, no: int, ornek: int = 512, zincir: int = 64,
                oran: float = 0.15, lam: float = 1e-3,
                kademe: float = 0.5) -> DalgaCevrimi:
-        X, tani = self.nqs.ornekle(ornek, zincir=zincir,
-                                   tohum=self.tohum + 1000 * no,
-                                   baslangic=self.elit, kenar=self.kenar)
+        X, tani = self.nqs.ornekle_deterministik_gibbs(
+            ornek, beta_maks=self.beta_tavlama or 1.0, baslangic=self.elit)
         Ld = np.asarray(self.L(X), float)
 
         aday = float(np.quantile(Ld, oran))
@@ -1054,7 +1086,8 @@ class DalgaEniyileyici:
 
     def surekli_faz_olcumu(self, gama: float, k: int, ornek: int = 512
                            ) -> Dict[str, float]:
-        X, _ = self.nqs.ornekle(ornek, tohum=self.tohum + 7)
+        X, _ = self.nqs.ornekle_deterministik_gibbs(
+            ornek, beta_maks=self.beta_tavlama or 1.0, baslangic=self.elit)
         Ld = np.asarray(self.L(X), float)
         z = np.exp(-1j * gama * (Ld - Ld.min()))
         m = oragin_donusu("momentler", z=z, k=k)
