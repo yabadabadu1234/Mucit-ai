@@ -6090,6 +6090,102 @@ def frobenius_ko_carpim_klonla(nesne_id: int,
     return klon_nesne, delta_morfizmi
 
 
+class ManeviKalpKatmani:
+    __slots__ = ("niyet_vektoru", "itminan_esigi", "gecmis_huzur")
+
+    def __init__(self, niyet_boyutu: int = 8, itminan_esigi: float = 0.70) -> None:
+        self.niyet_vektoru = np.ones(niyet_boyutu, dtype=float) / np.sqrt(niyet_boyutu)
+        self.itminan_esigi = float(itminan_esigi)
+        self.gecmis_huzur: List[float] = []
+
+    def itminan_olc(self, kuantum_durum: np.ndarray) -> float:
+        guc = np.abs(kuantum_durum) ** 2
+        guc = guc[guc > 1e-12]
+        entropi = float(-np.sum(guc * np.log2(guc))) if len(guc) else 0.0
+        maks_entropi = np.log2(len(kuantum_durum)) if len(kuantum_durum) > 1 else 1.0
+        return float(np.clip(1.0 - (entropi / (maks_entropi + 1e-12)), 0.0, 1.0))
+
+    def vicdani_murakabe(self, eylem_vektoru: np.ndarray, itminan: float) -> Dict[str, Any]:
+        d = min(len(self.niyet_vektoru), len(eylem_vektoru))
+        uyum = float(np.dot(self.niyet_vektoru[:d], eylem_vektoru[:d]))
+        huzur_skoru = float(0.6 * uyum + 0.4 * itminan)
+        self.gecmis_huzur.append(huzur_skoru)
+
+        if itminan >= self.itminan_esigi and uyum > 0.3:
+            durum, fetva = "KALBÎ_İTMİNÂN_VE_HUZUR", True
+        else:
+            durum, fetva = "VİCDANÎ_ŞÜPHE_VE_IKRAH", False
+
+        return {"kalp_durumu": durum, "itminan_derecesi": itminan,
+                "vicdani_huzur_skoru": huzur_skoru, "kalbi_fetva": fetva}
+
+
+class AklinDortMertebesi:
+    __slots__ = ("meleke_aksiyomlari", "bilfiil_kanunlar", "faal_akil_rezonansi")
+
+    def __init__(self) -> None:
+        self.meleke_aksiyomlari = ["çelişmezlik_aksiyomu", "özdeşlik_aksiyomu", "üçüncü_halin_imkânsızlığı"]
+        self.bilfiil_kanunlar: Dict[str, Terim] = {}
+        self.faal_akil_rezonansi: float = 0.0
+
+    def mertebe_tayin_et(self, ispat_sayisi: int, tikaniklik: float,
+                          kulli_ispat_var_mi: bool) -> str:
+        if ispat_sayisi == 0 and tikaniklik > 0.5:
+            return "AKL_I_HEYÛLÂNÎ"
+        elif ispat_sayisi > 0 and not kulli_ispat_var_mi:
+            return "AKL_I_BIL_MELEKE"
+        elif kulli_ispat_var_mi and tikaniklik < 0.1:
+            self.faal_akil_rezonansi = 0.95
+            return "AKL_I_MÜSTEFÂD"
+        else:
+            return "AKL_I_BIL_FIIL"
+
+
+def hads_ile_orta_terim_yakala(P: np.ndarray, son_token: int, hedef: int,
+                               hads_esigi: float = 0.25) -> Tuple[Optional[int], str, float]:
+    n = P.shape[0]
+    bas_vektor = P[son_token, :]
+    hedef_vektor = P[:, hedef]
+
+    rezonans = bas_vektor * hedef_vektor
+    en_kuvvetli_orta_terim = int(np.argmax(rezonans))
+    kuvvet = float(rezonans[en_kuvvetli_orta_terim])
+
+    if kuvvet >= hads_esigi and en_kuvvetli_orta_terim != son_token and en_kuvvetli_orta_terim != hedef:
+        return en_kuvvetli_orta_terim, "HADS_I_KUDSI_SEZGI", kuvvet
+    else:
+        return None, "FIKRI_TEEMMUL_GEREKLI", kuvvet
+
+
+class NefsiNebatiKatmani:
+    __slots__ = ("metabolik_enerji", "canlilik_kapasitesi", "tohum_arsivi")
+
+    def __init__(self, baslangic_enerjisi: float = 1.0) -> None:
+        self.metabolik_enerji = float(baslangic_enerjisi)
+        self.canlilik_kapasitesi = 1.0
+        self.tohum_arsivi: List[Dict[str, Any]] = []
+
+    def taziye_gidalan(self, veri_akisi_uzunlugu: int, entropi_kaybi: float) -> float:
+        besin_degeri = np.log1p(float(veri_akisi_uzunlugu)) * 0.1
+        harcanan = float(entropi_kaybi) * 0.05
+        self.metabolik_enerji = float(np.clip(self.metabolik_enerji + besin_degeri - harcanan, 0.1, 5.0))
+        return self.metabolik_enerji
+
+    def tenmiye_buyu(self, mevcut_lif_boyutu: int, veri_zenginligi: int) -> int:
+        if veri_zenginligi > mevcut_lif_boyutu and self.metabolik_enerji > 1.5:
+            self.canlilik_kapasitesi += 0.1
+            return mevcut_lif_boyutu + 2
+        return mevcut_lif_boyutu
+
+    def tevlid_tohumla(self, topos_durumu: Dict[str, Any]) -> Dict[str, Any]:
+        tohum = {"tohum_id": len(self.tohum_arsivi) + 1,
+                "enerji_mirasi": self.metabolik_enerji * 0.5,
+                "omega": topos_durumu.get("omega_cebiri", "heyting"),
+                "parite": topos_durumu.get("parite_lifi", [])}
+        self.tohum_arsivi.append(tohum)
+        return tohum
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7031,6 +7127,25 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     monoidal_kat = MonoidalKategori(turetilen_kategori)
     klon_id, delta_oku = frobenius_ko_carpim_klonla(nihai_hedef, monoidal_kat)
 
+    nebati_nefs = NefsiNebatiKatmani(baslangic_enerjisi=1.0)
+    metabolik_enerji = nebati_nefs.taziye_gidalan(len(w), tayf_bilgisi["enerjiler"]["tıkanma"])
+
+    hads_orta_terim, hads_durumu, hads_kuvveti = hads_ile_orta_terim_yakala(P, baglam[-1], nihai_hedef)
+
+    akil_mertebeleri = AklinDortMertebesi()
+    anlik_akil_mertebesi = akil_mertebeleri.mertebe_tayin_et(
+        ispat_sayisi=len(silsile_adimlari),
+        tikaniklik=float(muhakemeler[-1].get("kohomolojik_engel", 0.1)),
+        kulli_ispat_var_mi=kulli_sahit_gecerli)
+
+    kalp = ManeviKalpKatmani(niyet_boyutu=len(rho))
+    itminan_derecesi = kalp.itminan_olc(kuantum_durum_vektoru)
+    vicdan_raporu = kalp.vicdani_murakabe(eylem_raporu["eylem_vektoru"], itminan_derecesi)
+    if not vicdan_raporu["kalbi_fetva"]:
+        hakiki_icra_hedefi = baglam[-1]
+
+    tohum_raporu = nebati_nefs.tevlid_tohumla({"omega_cebiri": tayf_bilgisi["Ω_cebiri"]})
+
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
     balyalama_raporu = d9_kume_kapanisi_ve_balyalama(
@@ -7128,5 +7243,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "pullback_chi_haritasi": pullback_chi_haritasi,
         "imaj_faktorizasyon_sayisi": len(imaj_faktorleri),
         "frobenius_klon_hedefi": klon_id,
+        "manevi_kalp_vicdan": vicdan_raporu,
+        "aklin_epistemik_mertebesi": anlik_akil_mertebesi,
+        "hads_sezgi_durumu": hads_durumu,
+        "nebati_metabolik_enerji": metabolik_enerji,
+        "nebati_tohum_mirasi": tohum_raporu,
         "detay": tayf_bilgisi
     }
