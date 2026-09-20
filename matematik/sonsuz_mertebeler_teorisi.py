@@ -6888,20 +6888,21 @@ class IkiYonluMertebeAsansoru:
             lif_vektoru = None
         return self.mevcut_mertebe, hukum, lif_vektoru
 
-    def yukari_tirman_lifli(self, alt_nesne: int, ust_nesne: int, P: np.ndarray,
-                            parite_lifi: Dict[str, Any], alt_engel: float
+    def yukari_tirman_lifli(self, tensor: Dict[str, Any], kat: "Turetilen1Kategori",
+                            alt_nesne: int, ust_nesne: int, alt_engel: float
                             ) -> Tuple[int, str, Optional[np.ndarray]]:
-        cikis = tip_tensoru_yukari_cik(alt_nesne, ust_nesne, P, parite_lifi)
-        lift = np.asarray(cikis["kartezyen_lift_vektoru"])
-        lift_var_mi = bool(float(np.linalg.norm(lift)) > 1e-12)
-        if alt_engel > 0.15 and lift_var_mi and self.mevcut_mertebe < self.tavan_mertebe:
+        cikis = tip_tensoru_yukari_cik(tensor, kat, alt_nesne, ust_nesne)
+        tasindi = bool(cikis["tasindi"])
+        if alt_engel > 0.15 and tasindi and self.mevcut_mertebe < self.tavan_mertebe:
             self.mevcut_mertebe += 1
-            hukum = ("MERTEBE_YÜKSELDİ_TIRMANIŞ_LİFLİ_n%d (taban_geçişi=%.4f, lif_boyu=%d)"
-                     % (self.mevcut_mertebe, float(cikis["taban_gecisi"]), int(lift.size)))
+            lift = cikis["kartezyen_lift_vektoru"]
+            hukum = ("MERTEBE_YÜKSELDİ_TIRMANIŞ_LİFLİ_n%d (morfizm_sınıfı=%s, lif_boyu=%d)"
+                     % (self.mevcut_mertebe, str(cikis["morfizm_sinifi"]),
+                        int(lift.size)))
             lif_vektoru = lift
         else:
-            sebep = "ENGEL_DÜŞÜK" if alt_engel <= 0.15 else (
-                "LİFT_SIFIR" if not lift_var_mi else "TAVANDA")
+            sebep = ("ENGEL_DÜŞÜK" if alt_engel <= 0.15
+                    else (cikis["sebep"] if not tasindi else "TAVANDA"))
             hukum = "MERTEBE_SABİT_LİFSİZ_n%d (%s)" % (self.mevcut_mertebe, sebep)
             lif_vektoru = None
         return self.mevcut_mertebe, hukum, lif_vektoru
@@ -7905,57 +7906,6 @@ def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dic
     }
 
 
-# ============================================================================
-# BAĞIMLI LİF QUDİT TİP TENSÖRÜ VE DİKEY İNTAÇ (↕)
-#
-# İzahat: "Her noktası uzay olan kategoridir, her noktası kategori olan
-# tiptir" (nokta -> uzay -> kategori -> tip) silsilesi bu dosyada zaten
-# kısmen vardı (Turetilen1Kategori, ccc_dahili_hom_uzayi_turet,
-# grothendieck_dikey_asansor) fakat hendese_teshisi_kos'taki qudit
-# durumu, gerçek türetilmiş kategorinin (turetilen_kategori) nesne
-# sayısından ve ok-derecesinden BAĞIMSIZ, sabit eşit-dörtte-bir bir
-# Kartezyen kutuya (dilimler = {"uzay":(0,n), "kategori":(n,2n), ...})
-# bölünüyordu. Bu tam da tenkit edilen "Kartezyen kutu yanılgısı"ydı.
-#
-# Aşağıdaki üç fonksiyon YENİ bir motor kurmaz; var olan üç organı
-# (Turetilen1Kategori, ccc_dahili_hom_uzayi_turet, grothendieck_dikey_
-# asansor) olduğu gibi çağırıp, blok boyutlarını gerçek kategoriden
-# BAĞIMLI (Σ-tipi / Grothendieck construction) kılar:
-#   - tip_tensoru_blok_boyutlari: her nesnenin bloğu kendi ok-derecesine
-#     (kaç morfizmin ucu/başı olduğuna) orantılı olur; sabit bölme yok.
-#   - qudit_tip_tensoru_kur: bu bloklara göre var olan psi vektöründen
-#     (dışarıdan üretilmeden) her nesnenin kendi alt-lifini keser.
-#   - tip_tensoru_asagi_in: Tip -> Kategori -> Uzay inişi; verilen
-#     nesnenin lifini VE o nesneye bağlı gerçek Hom kurallarını
-#     (ccc_dahili_hom_uzayi_turet'ten, kör arama değil) birlikte döner.
-#   - tip_tensoru_yukari_cik: Uzay -> Kategori -> Tip çıkışı; mevcut
-#     grothendieck_dikey_asansor'u iki tensör bloğu arasında çalıştırır.
-#   - tip_tensoru_perelomov_dondur: Perelomov ilkesi |Ω⟩=U(Ω)|ψ0⟩. |ψ0⟩
-#     zaten var olan (dış motorca üretilmiş) blok lifidir; U(Ω) ise o
-#     nesnenin KENDİ geçiş satırından (P[nesne]) türetilen Cartan
-#     ağırlığıyla (kuantum.qudit.agirlik -- yeniden yazılmadı, doğrudan
-#     çağrıldı) kurulan köşegen bir SU(d) faz rotasyonudur.
-#   - tip_tensoru_morfizm_kanali: Hom(a,b) kategori morfizmi, iki blok
-#     arasında E_{a→b}(ρ)=MρM† formundaki tek-terimli (M) bir Kraus/
-#     izometri kanalı olarak kodlanır. Eşit boyutlu bloklarda mevcut
-#     nefs/kulli_mizan.py:givens (yeniden yazılmadı, doğrudan çağrıldı)
-#     ile tam üniter izometri kurulur; farklı boyutlu bloklarda M=|b⟩⟨a|
-#     rank-1 kısmi izometrisi (M|a⟩=|b⟩) kullanılır.
-#   - tip_tensoru_3eksen_insa / _en_yakin_carpanlar: liflar sözlüğü tek
-#     bir vektör (acemi mertebesi) değil, gerçek bir T[c,u,x] tensörüne
-#     (ustalık mertebesi) yeniden şekillendirilir -- veri fabrika
-#     edilmez, zaten hesaplanmış liflardan kesilip reshape edilir.
-#     Boyutlar mümkün olduğunda en az 20 olacak şekilde seçilir; veri
-#     20×20'yi doldurmaya yetmiyorsa (küçük ölçek testlerinde olduğu
-#     gibi) dürüstçe küçük kalır, sahte doldurma yapılmaz.
-#   - IkiYonluMertebeAsansoru.yukari_tirman_lifli: çıkışın da (aşağı
-#     inişte olduğu gibi) bir sayaç değil gerçek veri taşıması için;
-#     var olan tip_tensoru_yukari_cik (kendisi zaten var olan
-#     grothendieck_dikey_asansor'u çağırıyordu -- yeniden yazılmadı)
-#     üzerinden gerçek bir Kartezyen lift vektörü üretir ve mertebe
-#     yükselişi bu vektörün sıfırdan farklı olup olmamasına bağlıdır.
-# ============================================================================
-
 def tip_tensoru_blok_boyutlari(kat: "Turetilen1Kategori",
                                taban_boyut: int) -> Dict[int, Tuple[int, int]]:
     nesneler = kat.nesneler
@@ -8062,9 +8012,25 @@ def tip_tensoru_asagi_in(tensor: Dict[str, Any], nesne: int,
            "blok": tensor["bloklar"][nesne], "hom_kurallari": komsu_hom}
 
 
-def tip_tensoru_yukari_cik(a: int, b: int, P: np.ndarray,
-                           parite_lifi: Dict[str, Any]) -> Dict[str, Any]:
-    return grothendieck_dikey_asansor(a, b, P, parite_lifi)
+def tip_tensoru_yukari_cik(tensor: Dict[str, Any], kat: "Turetilen1Kategori",
+                           a: int, b: int) -> Dict[str, Any]:
+    if a not in tensor["liflar"] or b not in tensor["liflar"]:
+        return {"tasindi": False, "sebep": "NESNE_YOK",
+               "kartezyen_lift_vektoru": None, "morfizm_sinifi": None}
+    if a != b and (a, b) not in kat.ok_siniflari:
+        return {"tasindi": False, "sebep": "MORFIZM_YOK",
+               "kartezyen_lift_vektoru": None, "morfizm_sinifi": None}
+    M = tip_tensoru_morfizm_kanali(tensor, a, b)
+    if M is None:
+        return {"tasindi": False, "sebep": "KANAL_YOK",
+               "kartezyen_lift_vektoru": None, "morfizm_sinifi": None}
+    la = np.asarray(tensor["liflar"][a], complex)
+    tasinan = M @ la
+    nrm = float(np.linalg.norm(tasinan))
+    tasinan = (tasinan / nrm) if nrm > 1e-300 else tasinan
+    sinif = kat.ok_siniflari.get((a, b), kat.ok_siniflari.get((a, a)))
+    return {"tasindi": True, "sebep": "OK", "kartezyen_lift_vektoru": tasinan,
+           "morfizm_sinifi": (int(sinif) if sinif is not None else None)}
 
 
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
@@ -8543,7 +8509,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     anlik_engel = float(muhakemeler[-1].get("kohomolojik_engel", 0.1))
     suanki_mertebe, tirmanis_hukmu, tirmanis_lif_vektoru = asansor.yukari_tirman_lifli(
-        baglam[-1], nihai_hedef, P, parite_lifi, alt_engel=anlik_engel)
+        qudit_tip_tensoru, turetilen_kategori, baglam[-1], nihai_hedef,
+        alt_engel=anlik_engel)
 
     burhan_tam_mi = bool(kulli_sahit_gecerli and anlik_engel < 0.05)
     inilmis_mertebe, inis_hukmu, inis_lif_vektoru = asansor.asagi_in_intac_lifli(
@@ -8803,31 +8770,6 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     }
 
 
-# ============================================================================
-# MUCİT-AI D2 HENDESE KÖPRÜSÜ (egitim.py <-> tek gerçek motor)
-#
-# Bu blok eskiden nefs/hendese.py'de yaşayan, kendi başına ayrı bir
-# opetopik/Hodge alt-motoru işleten bir modülün yerine geçer. O modül
-# cins_turet/dikey_asansor/kaide_imzasi adlarıyla bu dosyadan fonksiyon
-# ithal etmeye çalışıyordu; o üç fonksiyon ve dayandıkları 7 yardımcı
-# (opetopik_kompleks, hodge_ayrisimi, kan_boynuzu, kan_kapamasi,
-# serbestlik_adlari, topos_turetimi, izdusum_demeti) geçmiş bir "zombi kod
-# sil" turunda -- nefs/hendese.py'nin bunlara dışarıdan bağımlı olduğu fark
-# edilmeden -- silinmişti. egitim.py bu yüzden import anında çöküyordu.
-#
-# Çözüm: ayrı bir hendese motoru DİRİLTİLMEDİ. Bunun yerine egitim.py'nin
-# D2/D3/D10 safhalarının gerçekten okuduğu alanlar (asansör, kafes, tayf,
-# katman, hodge, Π, şelale, Ω_cebiri) bu dosyanın tek gerçek motorundan
-# (hendese_teshisi_kos + topos_tayfi_hodge_ile_hesapla + yerel_baglamsal_hodge
-# + hakiki_qudit_yogunluk_matrisi) türetiliyor. gecis_dizeyi/karsilikli_haber/
-# mertebe_sec/kaide_imzasi taşınmadı: birincisi veriden_geometri_cikar'ın P
-# matrisiyle, ikincisi d2_enformasyon_ve_hendese_metrikleri'nin karşılıklı
-# haber hesabıyla zaten üstleniliyor -- aynı şeyi iki yerde tutmak bu
-# oturumun kendi kuralına (kullanılmayan ikinci hesaplamayı bırakma) aykırı
-# olurdu. Gromov δ-hiperboliklik ise bu motorda karşılığı olmayan gerçek bir
-# geometrik teşhis olduğu için (cevher kaybı olmasın diye) korunup taşındı.
-# ============================================================================
-
 @dataclass
 class HendeseAyari:
     azami_alfabe: int = 256
@@ -9048,21 +8990,6 @@ def hendese_metni(teshis: Optional[Dict[str, Any]] = None,
     return "\n".join(s)
 
 
-# ============================================================================
-# İDRAK KATEGORİ KÖPRÜSÜ (idrak/kategori.py'nin yerini alır; ferman: tek motor)
-#
-# idrak/kategori.py, sonsuz_mertebeler_teorisi.py'den (Baglam, Cember, Deg,
-# Dugum, Evren, Lam, Pi, Sigma, Taban, Terim, YolLam, denetle_t, denetle_tip,
-# dongu_uzayi_n, evrensel_demet, iz_butun, iz_grupoid, iz_kume, iz_onerme,
-# kesit_tipi, mertebe_sarti, morfizm_tipi, n_mertebe, ok, tikanma_postulati,
-# MERTEBE_ADI) ithal ediyordu -- yani içeriği zaten bütünüyle bu dosyanın
-# CTT çekirdeği üzerine kurulu, ayrı bir "kategori teorisi motoru" değil.
-# Bu blok o dosyanın kendi tanımladığı (bu dosyada karşılığı olmayan) 13
-# ismi -- Uzay, SABIT, AZAMI_TAM_MERTEBE, _baglayici_say, h_mertebe_sec,
-# h_sarti_denetle, _tam_kur, _temsilci_kur, uzaylari_kur, tikanma_tipi,
-# kesit_tipi_ile_agirlik, akit_denetle, kategori_beyani -- birebir taşır;
-# hiçbiri sonsuz_mertebeler_teorisi.py'de zaten mevcut değildi (denetlendi).
-# ============================================================================
 
 SABIT: Tuple[int, ...] = tuple(range(10))
 
@@ -9246,20 +9173,6 @@ def kategori_beyani(uzaylar: Sequence[Uzay]) -> str:
     return "\n".join(s)
 
 
-# ============================================================================
-# LİF KÖPRÜSÜ (nefs/lif.py'nin yerini alır; ferman: tek motor)
-#
-# nefs/lif.py, Lif.terim/unfold/dogrula içinde zaten Sigma/Evren/Cift/
-# Birinci/Ikinci/Dogal/degerlendir/geri_oku/BOS'u bu dosyadan ithal
-# ediyordu -- yani mevzuu zaten sonsuz mertebeler teorisine ait, ayrı bir
-# "lif motoru" değildi. Bu blok dosyanın kendi tanımladığı (bu dosyada
-# karşılığı olmayan) 11 ismi -- KIP_QUDIT/KIP_TUTARLI/KIP_LIE, kodla,
-# mesafe, ortusme, sadakat, Lif, _esitle, _dinamik_mertebeler, _yuva_sec,
-# harita_kur, lif_kefesi, lif_beyani -- birebir taşır. Sınıf içindeki
-# kendine-döngüsel yerel importlar (aynı dosyadan kendini ithal etmek
-# anlamsız hâle geldiği için) kaldırıldı; .qudit göreli ithali
-# nefs.qudit'e mutlaklaştırıldı.
-# ============================================================================
 
 KIP_QUDIT = "qudit"
 KIP_TUTARLI = "tutarlı"
@@ -9620,30 +9533,6 @@ def lif_beyani(lif: Lif) -> str:
     return "\n".join(s)
 
 
-# ============================================================================
-# ÇOK ÇÖZÜNÜRLÜKLÜ PİRAMİT KÖPRÜSÜ (nefs/kule.py'nin yerini alır; ferman: tek motor)
-#
-# nefs/kule.py "kule" adıyla anılıyordu ve bu isim bu dosyadaki GERÇEK
-# mana-mertebe kulesiyle (DereceliMertebeKulesi, IkiYonluMertebeAsansoru,
-# grothendieck_dikey_asansor) çakışıyor, ikisiymiş gibi kafa karıştırıyordu.
-# Hakikatte nefs/kule.py'nin yaptığı iş nokta→uzay→kategori→tip gibi nitelik
-# olarak farklı mertebeler arası bir intaç DEĞİL; art arda ikişer ikişer
-# ortalama alıp (Haar tarzı) satır sayısını yarıya indiren, tek bir düz
-# çok-çözünürlüklü PİRAMİTTİR. Her kademede aynı işlem (ortalama) tekrar
-# eder; mana mertebelerinin her birinde farklı bir cebirsel yapı (Lie grubu,
-# Hom-uzayı, Grothendieck lifi) olması gerekirken burada hepsi aynı
-# ortalama-havuzlama işlemidir -- gerçek mana mertebesi değil, genel
-# amaçlı bir boyut indirgeme aracıdır.
-#
-# Gerçek cevheri budur: nefs/kulli_kayip.py:Hal.tasavvur() bu piramidi
-# fiilen kullanıyordu (H.kademe_sayisi, H.kabalastirma_kaybi). Bu iş
-# tamamen atılacak bir "feragat" değil; gerçek, kullanılan bir boyut
-# indirgeme aracı -- yalnız adı ve yeri yanlıştı ("kule" adıyla mana
-# mertebesi gibi görünüyordu). Aşağıda aynı dört isim, mahiyetine uygun
-# adlarla ve tek motorda taşınıyor: kule_kur → coklu_cozunurluk_piramidi_kur,
-# kaba_kademe → piramit_kaba_kademe, kaba → piramit_kabalastir,
-# ince → piramit_incelt, TAVAN → PIRAMIT_TAVANI.
-# ============================================================================
 
 PIRAMIT_TAVANI = 256
 
