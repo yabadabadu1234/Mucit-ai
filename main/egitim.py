@@ -1093,23 +1093,25 @@ def d7_hamiltonyen_nispetleri(kefeler_vektoru: np.ndarray,
     k = len(kefeler_vektoru)
     if V_kuplaj is None:
         V_kuplaj = np.outer(kefeler_vektoru, kefeler_vektoru)
+    V_kuplaj = np.array(V_kuplaj, dtype=float, copy=True)
+    np.fill_diagonal(V_kuplaj, 0.0)
 
     kuplaj_kutlesi = np.linalg.norm(V_kuplaj, axis=0)
     p_kefe = kefeler_vektoru / (np.sum(kefeler_vektoru) + 1e-12)
     entropiler = -p_kefe * np.log(p_kefe + 1e-12)
-
     yavas_mod_skorlari = kuplaj_kutlesi * entropiler
     yavas_mod = int(np.argmax(yavas_mod_skorlari))
 
-    beta = 0.5
-    h = kefeler_vektoru
-    alan = h + beta * V_kuplaj[:, yavas_mod]
-    alan[yavas_mod] = h[yavas_mod]
+    H_cekirdek = np.diag(np.asarray(kefeler_vektoru, float))
+    H_birlesik = H_cekirdek + V_kuplaj
+    H_birlesik = 0.5 * (H_birlesik + H_birlesik.T)
 
-    exp_alan = np.exp(alan - np.max(alan))
-    lambda_nispetleri = exp_alan / np.sum(exp_alan)
+    ozdegerler, ozvektorler = np.linalg.eigh(H_birlesik)
+    taban_vektoru = ozvektorler[:, 0]
+    lambda_nispetleri = np.abs(taban_vektoru) ** 2
+    lambda_nispetleri /= (np.sum(lambda_nispetleri) + 1e-12)
 
-    skaler_mizan = float(np.sum(lambda_nispetleri * kefeler_vektoru))
+    skaler_mizan = float(ozdegerler[0])
 
     return lambda_nispetleri, yavas_mod, skaler_mizan
 
