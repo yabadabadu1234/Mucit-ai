@@ -367,6 +367,17 @@ class OperadHom(Terim):
         self.hedef = hedef
 
 
+class OperadSilsile(Terim):
+    __slots__ = ("cizgi", "baslangic_oncutler", "adimlar", "nihai_hedef")
+
+    def __init__(self, cizgi: Terim, baslangic_oncutler: Sequence[Terim],
+                 adimlar: Sequence[Tuple[Terim, Terim]], nihai_hedef: Terim) -> None:
+        self.cizgi = cizgi
+        self.baslangic_oncutler = tuple(baslangic_oncutler)
+        self.adimlar = tuple(adimlar)
+        self.nihai_hedef = nihai_hedef
+
+
 class YolLam(Terim):
     __slots__ = ("ad", "govde")
 
@@ -660,6 +671,11 @@ def _alt(t: Terim) -> List[Terim]:
         return [t.cizgi] + list(t.oncutler) + [t.hedef]
     if isinstance(t, OperadHom):
         return [t.cizgi] + list(t.oncutler) + [t.hedef]
+    if isinstance(t, OperadSilsile):
+        altlar = [t.cizgi] + list(t.baslangic_oncutler) + [t.nihai_hedef]
+        for a, b in t.adimlar:
+            altlar.extend([a, b])
+        return altlar
     if isinstance(t, (Pi, Sigma)):
         return [t.alan, t.hedef]
     if isinstance(t, Lam):
@@ -1154,6 +1170,23 @@ class DOperadHom(Deger):
         return DOperadHom(self.cizgi.act(s),
                           tuple(x.act(s) for x in self.oncutler),
                           self.hedef.act(s))
+
+
+class DOperadSilsile(Deger):
+    __slots__ = ("cizgi", "baslangic_oncutler", "adimlar", "nihai_hedef")
+
+    def __init__(self, cizgi: Deger, baslangic_oncutler: Sequence[Deger],
+                 adimlar: tuple, nihai_hedef: Deger) -> None:
+        self.cizgi = cizgi
+        self.baslangic_oncutler = tuple(baslangic_oncutler)
+        self.adimlar = adimlar
+        self.nihai_hedef = nihai_hedef
+
+    def act(self, s):
+        return DOperadSilsile(_act(self.cizgi, s),
+                              tuple(_act(x, s) for x in self.baslangic_oncutler),
+                              tuple((_act(a, s), _act(b, s)) for a, b in self.adimlar),
+                              _act(self.nihai_hedef, s))
 
 
 class DYolLam(Deger):
@@ -1874,6 +1907,13 @@ def degerlendir(t: Terim, ortam: Ortam) -> Deger:
         return DOperadHom(degerlendir(t.cizgi, ortam),
                           tuple(degerlendir(x, ortam) for x in t.oncutler),
                           degerlendir(t.hedef, ortam))
+    if isinstance(t, OperadSilsile):
+        return DOperadSilsile(
+            degerlendir(t.cizgi, ortam),
+            tuple(degerlendir(x, ortam) for x in t.baslangic_oncutler),
+            tuple((degerlendir(a, ortam), degerlendir(b, ortam))
+                  for a, b in t.adimlar),
+            degerlendir(t.nihai_hedef, ortam))
     if isinstance(t, Deg):
         v = ortam.terimler.get(t.ad)
         if v is None:
@@ -1997,6 +2037,11 @@ def geri_oku(d: Deger, k: int = 0) -> Terim:
         return OperadHom(geri_oku(d.cizgi, k),
                          [geri_oku(x, k) for x in d.oncutler],
                          geri_oku(d.hedef, k))
+    if isinstance(d, DOperadSilsile):
+        return OperadSilsile(geri_oku(d.cizgi, k),
+                             [geri_oku(x, k) for x in d.baslangic_oncutler],
+                             [(geri_oku(a, k), geri_oku(b, k)) for a, b in d.adimlar],
+                             geri_oku(d.nihai_hedef, k))
     if isinstance(d, DEvren):
         return Evren(d.seviye)
     if isinstance(d, DDogal):
@@ -2773,6 +2818,20 @@ def sentezle(t: Terim, g: Baglam) -> Deger:
             denetle(on, A, g)
         denetle(t.hedef, A, g)
         return DOperadHom(A, tuple(g.d(x) for x in t.oncutler), g.d(t.hedef))
+    if isinstance(t, OperadSilsile):
+        A = g.d(t.cizgi)
+        for on in t.baslangic_oncutler:
+            denetle(on, A, g)
+        denetle(t.nihai_hedef, A, g)
+        for agac, ok in t.adimlar:
+            tip_agac = sentezle(agac, g)
+            tip_ok = sentezle(ok, g)
+            if not (isinstance(tip_agac, DOperadHom) and isinstance(tip_ok, DYonluHom)):
+                raise DenetimHatasi("OperadSilsile adımları (OperadAgac, YonluOk) olmalıdır")
+            if not g.esit_mi(tip_agac.hedef, tip_ok.kaynak):
+                raise DenetimHatasi("OperadSilsile iç adım kopukluğu")
+        return DOperadHom(A, tuple(g.d(x) for x in t.baslangic_oncutler),
+                          g.d(t.nihai_hedef))
     if isinstance(t, YonluTerkip):
         tip_f = sentezle(t.f, g)
         tip_g = sentezle(t.g, g)
@@ -4178,6 +4237,11 @@ def _alt_terimler(t: Terim) -> List[Terim]:
         return [t.f, t.g]
     if isinstance(t, (OperadAgac, OperadHom)):
         return [t.cizgi] + list(t.oncutler) + [t.hedef]
+    if isinstance(t, OperadSilsile):
+        altlar = [t.cizgi] + list(t.baslangic_oncutler) + [t.nihai_hedef]
+        for a, b in t.adimlar:
+            altlar.extend([a, b])
+        return altlar
     if isinstance(t, Pi) or isinstance(t, Sigma):
         return [t.alan, t.hedef]
     if isinstance(t, Lam):
@@ -4771,9 +4835,14 @@ def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
 
     E_uzay = float(np.sum((P_sim ** 2) * (1.0 - Asim))) / n
     E_kategori = float(np.sum((P_asim ** 2) * Asim)) / n
-    azami_arite = max((len(girdi) for (girdi, _) in norm_korollalar), default=1)
-    E_operad = float(sum((math.log2(len(girdi) + 1.0) / math.log2(azami_arite + 2.0)) * prob
-                         for (girdi, _), prob in norm_korollalar.items()))
+    coklu_korollalar = {k: v for k, v in norm_korollalar.items() if len(k[0]) >= 2}
+    toplam_coklu_kutle = sum(coklu_korollalar.values()) + 1e-12
+    azami_arite = max((len(girdi) for (girdi, _) in coklu_korollalar), default=2)
+    norm_payda = float(max(1, azami_arite - 1))
+    E_operad = (float(sum(((len(girdi) - 1) / norm_payda) * (prob / toplam_coklu_kutle)
+                         for (girdi, _), prob in coklu_korollalar.items()))
+                if coklu_korollalar else 0.0)
+    E_operad *= (toplam_coklu_kutle / (sum(norm_korollalar.values()) + 1e-12))
     E_tikanma = float(np.sum(Kan_rezidusu ** 2)) / n
 
     E_toplam = E_uzay + E_kategori + E_operad + E_tikanma + 1e-12
@@ -4821,12 +4890,18 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
     son_token = int(baglam[-1]) if baglam else 0
     yasak.add(son_token)
 
-    baglam_cikis_gucu = np.zeros(n, dtype=float)
+    baglam_sayimlari = np.zeros(n, dtype=float)
     for (girdi, cikti), prob in norm_korollalar.items():
         if girdi == baglam:
-            baglam_cikis_gucu[cikti] += prob
+            baglam_sayimlari[cikti] += prob
 
-    tikaniklik = np.maximum(0.0, P2[son_token] - baglam_cikis_gucu)
+    toplam_baglam_cikis = float(np.sum(baglam_sayimlari))
+    if toplam_baglam_cikis > 1e-12:
+        P_baglam = baglam_sayimlari / toplam_baglam_cikis
+    else:
+        P_baglam = np.zeros(n, dtype=float)
+
+    tikaniklik = np.maximum(0.0, P2[son_token] - P_baglam)
     for y_idx in yasak:
         if y_idx < n:
             tikaniklik[y_idx] = 0.0
@@ -4836,7 +4911,7 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         z = int(np.flatnonzero(tikaniklik == np.max(tikaniklik))[0])
         hedef_turu = "açık_boynuz_çıkarımı"
     else:
-        birlesik_akis = 0.5 * P[son_token] + 0.5 * baglam_cikis_gucu
+        birlesik_akis = 0.5 * P[son_token] + 0.5 * P_baglam
         for y_idx in yasak:
             if y_idx < n:
                 birlesik_akis[y_idx] = -1.0
@@ -4844,7 +4919,7 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         z = int(sirali[-1])
         hedef_turu = "doğrudan_akış"
 
-    dogrudan_guc = max(float(P[son_token, z]), float(baglam_cikis_gucu[z]))
+    dogrudan_guc = max(float(P[son_token, z]), float(P_baglam[z]))
     tikanma = float(Kan_rez[son_token, z])
 
     adaylar = []
@@ -4923,7 +4998,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     muhakemeler: List[Dict[str, Any]] = []
     cozulen_hedefler: Set[int] = set()
-    kulli_ispat: Optional[Terim] = None
+    silsile_adimlari: List[Tuple[Terim, Terim]] = []
 
     for _ in range(azami_adim):
         Asim = asimetri_guncelle(P)
@@ -4937,11 +5012,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         adim_muhakeme["şahit_doğrulandı"] = sahit_gecerli
         muhakemeler.append(adim_muhakeme)
 
-        if adim_muhakeme["ispat_sahidi"] is not None:
-            if kulli_ispat is None:
-                kulli_ispat = adim_muhakeme["ispat_sahidi"]
-            else:
-                kulli_ispat = YonluTerkip(kulli_ispat, adim_muhakeme["ispat_sahidi"])
+        if (adim_muhakeme["ispat_sahidi"] is not None
+                and isinstance(adim_muhakeme["ispat_sahidi"], YonluTerkip)):
+            silsile_adimlari.append((adim_muhakeme["ispat_sahidi"].f,
+                                     adim_muhakeme["ispat_sahidi"].g))
 
         cozulen_hedefler.add(adim_muhakeme["hedef"])
 
@@ -4953,6 +5027,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             baglam = tuple(list(baglam[1:]) + [adim_muhakeme["ara_durak"]])
 
     nihai_hedef = muhakemeler[-1]["hedef"]
+    oncutler_terim = [dogal_sayi(t) for t in orijinal_baglam]
+    kulli_ispat = OperadSilsile(Dogal(), oncutler_terim, silsile_adimlari,
+                                dogal_sayi(nihai_hedef))
     kulli_sahit_gecerli = ispat_sahidini_dogrula(kulli_ispat, orijinal_baglam, nihai_hedef)
 
     Asim = asimetri_guncelle(P)
@@ -4976,9 +5053,17 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     kod_uzayi_maskesi = np.ones(lif_boyutu, dtype=float)
     kod_uzayi_maskesi[dilimler["yırtık"][0]:dilimler["yırtık"][1]] = 0.0
 
+    kuantum_durum_vektoru = np.zeros(lif_boyutu, dtype=float)
+    for mod_adi, (bas, son) in dilimler.items():
+        mod_idx = {"uzay": 0, "kategori": 1, "operad": 2, "yırtık": 3}[mod_adi]
+        alt_boyut = son - bas
+        if alt_boyut > 0:
+            kuantum_durum_vektoru[bas:son] = np.sqrt(rho[mod_idx] / float(alt_boyut))
+
     parite_lifi = {
         "spektral_agirliklar": rho,
         "kuantum_genlikleri": kuantum_genlikleri,
+        "kuantum_durum_vektoru": kuantum_durum_vektoru,
         "lif_boyutu": lif_boyutu,
         "alt_uzay_dilimleri": dilimler,
         "kod_uzayi_maskesi": kod_uzayi_maskesi,
