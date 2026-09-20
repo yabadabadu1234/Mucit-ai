@@ -556,6 +556,42 @@ class CemberInd(Terim):
         self.i_ad, self.dongu_dali, self.nokta = i_ad, dongu_dali, nokta
 
 
+class Suspansiyon(Terim):
+    __slots__ = ("taban_uzay",)
+
+    def __init__(self, taban_uzay: Terim) -> None:
+        self.taban_uzay = taban_uzay
+
+
+class KuzeyKutup(Terim):
+    __slots__ = ("uzay",)
+
+    def __init__(self, uzay: Terim) -> None:
+        self.uzay = uzay
+
+
+class GuneyKutup(Terim):
+    __slots__ = ("uzay",)
+
+    def __init__(self, uzay: Terim) -> None:
+        self.uzay = uzay
+
+
+class Meridyen(Terim):
+    __slots__ = ("uzay", "nokta", "i_aralik")
+
+    def __init__(self, uzay: Terim, nokta: Terim, i_aralik: Aralik) -> None:
+        self.uzay, self.nokta, self.i_aralik = uzay, nokta, i_aralik
+
+
+def kure_n(boyut: int) -> Terim:
+    if boyut <= 0:
+        return Dogal()
+    if boyut == 1:
+        return Cember()
+    return Suspansiyon(kure_n(boyut - 1))
+
+
 def yuz(**kisitlar: int) -> Yuz:
     return frozenset((ad, bool(deger)) for ad, deger in kisitlar.items())
 
@@ -1083,6 +1119,16 @@ class DCember(_Basit):
 
 class DTaban(_Basit):
     __slots__ = ()
+
+
+class DSuspansiyon(Deger):
+    __slots__ = ("taban_uzay",)
+
+    def __init__(self, taban_uzay: Deger) -> None:
+        self.taban_uzay = taban_uzay
+
+    def act(self, s):
+        return DSuspansiyon(self.taban_uzay.act(s))
 
 
 class DSfr(_Basit):
@@ -3086,6 +3132,17 @@ def sentezle(t: Terim, g: Baglam) -> Deger:
         denetle(YolLam(t.i_ad, t.dongu_dali),
                 DYolP(ASoz(t.i_ad, cizgi, g.ortam), tbd, tbd), g)
         return motif.uygula(g.d(t.nokta))
+
+    if isinstance(t, Suspansiyon):
+        denetle_tip(t.taban_uzay, g)
+        return DEvren(0)
+    if isinstance(t, (KuzeyKutup, GuneyKutup)):
+        denetle_tip(t.uzay, g)
+        return DSuspansiyon(g.d(t.uzay))
+    if isinstance(t, Meridyen):
+        _ara_denetle(t.i_aralik, g)
+        denetle(t.nokta, g.d(t.uzay), g)
+        return DSuspansiyon(g.d(t.uzay))
 
     raise DenetimHatasi("sentezlenemeyen terim: %r" % (t,))
 
@@ -7403,6 +7460,97 @@ def _s0_havuz_al(n: int) -> Dict[str, Dict[Any, Any]]:
 _KALICI_HAFIZA_HAVUZU: Dict[str, Any] = {"cartan_kokleri": set(), "balyalar": [], "kayit_arsivi": []}
 
 
+def d8a_senet_sadakati_dogrula(senetler: List[SenetKaydi],
+                               psi_0: np.ndarray,
+                               psi_son: np.ndarray) -> Dict[str, Any]:
+    if not senetler:
+        return {"senet_sadakati": 0.0, "sadakat_tam_mi": True, "islenen_kapi_adedi": 0}
+
+    psi_oynat = psi_0.copy().astype(complex)
+    for s in senetler:
+        psi_oynat = s.kapi_matrisi @ psi_oynat
+
+    psi_oynat_norm = float(np.linalg.norm(psi_oynat))
+    if psi_oynat_norm > 1e-12:
+        psi_oynat /= psi_oynat_norm
+
+    psi_son_norm = float(np.linalg.norm(psi_son))
+    psi_son_ref = psi_son / (psi_son_norm + 1e-12) if psi_son_norm > 1e-12 else psi_son
+
+    fark_normu = float(np.linalg.norm(psi_oynat - psi_son_ref))
+    senet_sadakati = float(fark_normu / (float(np.linalg.norm(psi_son_ref)) + 1e-12))
+
+    sadakat_tam_mi = bool(senet_sadakati < 1e-12)
+
+    return {
+        "senet_sadakati": senet_sadakati,
+        "sadakat_tam_mi": sadakat_tam_mi,
+        "islenen_kapi_adedi": len(senetler)
+    }
+
+
+def s2_dort_sual_teftisi(tikanma_engeli: float,
+                         kaide_raporu: Dict[str, Any],
+                         s1_odak_kesiti: Tuple[int, ...],
+                         geri_yol_var_mi: bool) -> Dict[str, Any]:
+    mesele_var_mi = bool(tikanma_engeli > 0.04)
+    kaide_belirli = bool(len(kaide_raporu.get("imza", ())) == 6)
+    geri_yol_mumkun = bool(geri_yol_var_mi)
+    metin_odakli = bool(len(s1_odak_kesiti) >= 1)
+
+    dort_sual_tam = bool(mesele_var_mi and kaide_belirli and geri_yol_mumkun and metin_odakli)
+    rota = "S3_UZAY_AC" if mesele_var_mi else "S6_INTAC_ATLA"
+
+    return {
+        "dort_sual_tam_mi": dort_sual_tam,
+        "mesele_var_mi": mesele_var_mi,
+        "rota": rota,
+        "sual_raporu": {
+            "mesele_var": mesele_var_mi,
+            "kaide_belirli": kaide_belirli,
+            "geri_yol_mumkun": geri_yol_mumkun,
+            "metin_odakli": metin_odakli
+        }
+    }
+
+
+def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dict[str, float]:
+    n = P.shape[0]
+
+    P_ortak = P / (np.sum(P) + 1e-12)
+    p_satir = np.sum(P_ortak, axis=1, keepdims=True)
+    p_sutun = np.sum(P_ortak, axis=0, keepdims=True)
+    payda = p_satir @ p_sutun + 1e-12
+
+    oran = np.where(P_ortak > 1e-12, P_ortak / payda, 1.0)
+    karsilikli_haber = float(np.sum(np.where(P_ortak > 1e-12, P_ortak * np.log2(oran), 0.0)))
+    karsilikli_haber = max(0.0, karsilikli_haber)
+
+    sapma = float(np.linalg.norm(P - P.T))
+
+    ortusme = np.sqrt(np.clip(P * P.T, 0.0, None))
+    mesafe = 1.0 - ortusme
+
+    ihlal_sayisi = 0
+    toplam_uclu = 0
+    ornek_boyut = min(n, 15)
+    for x in range(ornek_boyut):
+        for y in range(ornek_boyut):
+            for z in range(ornek_boyut):
+                if x != y and y != z and x != z:
+                    toplam_uclu += 1
+                    if mesafe[x, z] > (mesafe[x, y] + mesafe[y, z] + 1e-4):
+                        ihlal_sayisi += 1
+
+    ucgen_ihlali_nispeti = float(ihlal_sayisi / max(1, toplam_uclu))
+
+    return {
+        "karsilikli_haber_bit": karsilikli_haber,
+        "simetri_sapmasi": sapma,
+        "ucgen_ihlali_nispeti": ucgen_ihlali_nispeti
+    }
+
+
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
     s0_vakum_tetiklendi = False
@@ -7754,6 +7902,19 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     psi_evrilmis, theta_cartan, senetler = d6_cartan_kapi_evrimi(
         psi=kuantum_genlikleri, parametre_acilari=parametre_acilari)
 
+    d2_metrikleri = d2_enformasyon_ve_hendese_metrikleri(P, Asim)
+
+    dort_sual_raporu = s2_dort_sual_teftisi(
+        tikanma_engeli=float(tayf_bilgisi["enerjiler"]["tıkanma"]),
+        kaide_raporu=kaide_raporu, s1_odak_kesiti=odak_kesiti,
+        geri_yol_var_mi=bool(len(pullback_chi_haritasi) > 0))
+
+    senet_sadakat_raporu = d8a_senet_sadakati_dogrula(
+        senetler=senetler, psi_0=kuantum_genlikleri.astype(complex),
+        psi_son=psi_evrilmis)
+
+    kure_2_tipi = kure_n(2)
+
     kok_agirligi = cartan_kok_ve_agirlik_hesapla(baglam[-1], nihai_hedef, n)
     net_cartan_fazi = float(theta_cartan * kok_agirligi)
 
@@ -7897,6 +8058,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "asansor_canli_son_kat": inilmis_mertebe,
         "rho_kuantum_safligi": rho_kuantum_safligi,
         "kalici_balya_toplami": len(_KALICI_HAFIZA_HAVUZU["balyalar"]),
+        "senet_sadakati_raporu": senet_sadakat_raporu,
+        "s2_dort_sual_raporu": dort_sual_raporu,
+        "d2_enformasyon_metrikleri": d2_metrikleri,
+        "yuksek_kure_S2_tipi": str(kure_2_tipi),
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
         "muhakeme_silsilesi": muhakemeler,
