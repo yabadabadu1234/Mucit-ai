@@ -108,95 +108,6 @@ SIFIR = Aralik([])
 BIR = Aralik([frozenset()])
 
 
-class YonluAralik:
-
-    __slots__ = ("cumleler",)
-
-    def __init__(self, cumleler: Iterable[FrozenSet[str]]) -> None:
-        kume = {frozenset(c) for c in cumleler}
-        if len(kume) <= 1:
-            self.cumleler: FrozenSet[FrozenSet[str]] = frozenset(kume)
-            return
-        kalan = sorted(kume, key=len)
-        sonuc: List[FrozenSet[str]] = []
-        for c in kalan:
-            for d in sonuc:
-                if d <= c:
-                    break
-            else:
-                sonuc.append(c)
-        self.cumleler = frozenset(sonuc)
-
-    @staticmethod
-    def uretec(ad: str) -> "YonluAralik":
-        return YonluAralik([frozenset({str(ad)})])
-
-    def ve(self, obur: "YonluAralik") -> "YonluAralik":
-        return YonluAralik(a | b for a in self.cumleler
-                           for b in obur.cumleler)
-
-    def veya(self, obur: "YonluAralik") -> "YonluAralik":
-        return YonluAralik(self.cumleler | obur.cumleler)
-
-    def sifir_mi(self) -> bool:
-        return len(self.cumleler) == 0
-
-    def bir_mi(self) -> bool:
-        return frozenset() in self.cumleler
-
-    def uretecler(self) -> FrozenSet[str]:
-        return frozenset(a for c in self.cumleler for a in c)
-
-    def __eq__(self, obur: object) -> bool:
-        return (isinstance(obur, YonluAralik)
-                and self.cumleler == obur.cumleler)
-
-    def __hash__(self) -> int:
-        return hash(self.cumleler)
-
-    def __repr__(self) -> str:
-        if self.sifir_mi():
-            return "0⃗"
-        if self.bir_mi():
-            return "1⃗"
-        return "∨".join(sorted("∧".join(sorted(c))
-                               for c in self.cumleler))
-
-
-YON_SIFIR = YonluAralik([])
-
-
-YON_BIR = YonluAralik([frozenset()])
-
-
-def yonlu_kafes(uretecler: Sequence[str],
-                hadd: int = 4096) -> List[YonluAralik]:
-    taban = [YON_SIFIR, YON_BIR] + [YonluAralik.uretec(a)
-                                    for a in uretecler]
-    gorulen = {x: None for x in taban}
-    sinir = list(taban)
-    while sinir and len(gorulen) < int(hadd):
-        yeni: List[YonluAralik] = []
-        for a in sinir:
-            for b in taban:
-                for c in (a.ve(b), a.veya(b)):
-                    if c not in gorulen:
-                        gorulen[c] = None
-                        yeni.append(c)
-                        if len(gorulen) >= int(hadd):
-                            return list(gorulen)
-        sinir = yeni
-    return list(gorulen)
-
-
-def tumleyeni(x: YonluAralik, kafes: Sequence[YonluAralik]
-              ) -> Optional[YonluAralik]:
-    for y in kafes:
-        if x.ve(y).sifir_mi() and x.veya(y).bir_mi():
-            return y
-    return None
-
-
 def yonlu_hom(A: Terim, x: Terim, y: Terim) -> Terim:
     return YonluHom(A, x, y)
 
@@ -213,35 +124,6 @@ def yonlu_mertebe(X: Terim, n: int) -> Terim:
 def yonlu_sarti(X: Terim, r: int, n: int) -> Terim:
     taban = X if int(r) <= 0 else carpim(globuler_tip(int(r)), X)
     return yonlu_mertebe(taban, max(0, int(n)))
-
-
-def tersi_kurulabilir_mi(X: Terim, n: int) -> bool:
-    if int(n) < 1:
-        return False
-    return False
-
-
-def yonlu_mertebe_tutuyor(n: int, uretec_sayisi: int = 0
-                          ) -> Dict[str, Any]:
-    X = Deg("A")
-    try:
-        denetle_t(yonlu_sarti(X, 0, int(n)), Evren(0), ortam_baglami())
-        tesekkul = True
-    except RED_HATALARI:
-        tesekkul = False
-        _TURETIM_SAYI["yönlü_teşkil_düşen"] = _TURETIM_SAYI.get(
-            "yönlü_teşkil_düşen", 0) + 1
-    ters_var = tersi_kurulabilir_mi(X, int(n)) if tesekkul else True
-    if ters_var:
-        _TURETIM_SAYI["ters_kuruldu"] = _TURETIM_SAYI.get(
-            "ters_kuruldu", 0) + 1
-    else:
-        _TURETIM_SAYI["ters_reddedildi"] = _TURETIM_SAYI.get(
-            "ters_reddedildi", 0) + 1
-    return {"tutuyor": bool(tesekkul and not ters_var),
-            "teşekkül": bool(tesekkul), "ters_kurulabildi": bool(ters_var),
-            "kafes": 0, "unsur": "hom^%d(A)" % int(n),
-            "tümleyen": None}
 
 
 Yuz = FrozenSet[Tuple[str, bool]]
@@ -4214,16 +4096,6 @@ def n_mertebe(X: Terim, n: int) -> Terim:
     return Pi(x, X, Pi(y, X, n_mertebe(yol(X, _t(x), _t(y)), n - 1)))
 
 
-MERTEBE_ADI: Tuple[str, ...] = ("nokta", "uzay", "tip", "grupoid")
-
-
-def mertebe_sarti(X: Terim, l: int) -> Terim:
-    assert 0 <= int(l) < len(MERTEBE_ADI), (
-        "vecih mertebesi 0..%d aralığında olmalı, %d verildi (ferman 1-Ğ)"
-        % (len(MERTEBE_ADI) - 1, int(l)))
-    return n_mertebe(X, int(l) - 1)
-
-
 def rn_mertebe(X: Terim, r: int, n: int) -> Terim:
     taban = X if int(r) <= 0 else carpim(globuler_tip(int(r)), X)
     return n_mertebe(taban, int(n))
@@ -4235,12 +4107,6 @@ def rn_sarti(X: Terim, r: int, n: int) -> Terim:
     assert int(n) >= -2, (
         "morfizm mertebesi −2'nin altına inmez, %d verildi" % int(n))
     return rn_mertebe(X, int(r), int(n))
-
-
-def rn_adi(r: int, n: int) -> str:
-    return "(%s, %s)-kategori" % (
-        "∞" if int(r) >= len(MERTEBE_ADI) else int(r),
-        "∞" if int(n) >= len(MERTEBE_ADI) else int(n))
 
 
 def buzukten_tamamla(X: Terim, buzuk: Terim, dallar) -> Terim:
@@ -4636,99 +4502,138 @@ def turetim_beyani() -> Dict[str, Any]:
     return b
 
 
-def gecis_asimetrisi(N_gecis: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
-    N = np.asarray(N_gecis, float)
-    toplam_cikis = N.sum(axis=1, keepdims=True) + 1e-12
-    P = N / toplam_cikis
+def veriden_geometri_cikar(w: Sequence[int], n: int, K_max: int = 4
+                           ) -> Tuple[np.ndarray, np.ndarray,
+                                      Dict[Tuple[Tuple[int, ...], int], float]]:
+    w_arr = np.asarray(list(w), dtype=np.int64)
+    m = int(n)
+    assert len(w_arr) >= 2, "Dizi en az 2 belirteç içermelidir"
+
+    N_gecis = np.zeros((m, m), dtype=float)
+    np.add.at(N_gecis, (w_arr[:-1], w_arr[1:]), 1.0)
+
+    cikis_toplami = N_gecis.sum(axis=1, keepdims=True) + 1e-12
+    P = N_gecis / cikis_toplami
+
     pay = np.abs(P - P.T)
     payda = P + P.T + 1e-12
     Asim = pay / payda
-    return P, Asim
 
-
-def n_gram_korollari(w: Sequence[int], K_max: int = 4
-                     ) -> Dict[Tuple[Tuple[int, ...], int], int]:
-    w = list(w)
-    assert len(w) >= 2, "n-gram korollaları için dizi en az iki belirteç içermeli"
-    korollalar: Dict[Tuple[Tuple[int, ...], int], int] = {}
-    ust = min(int(K_max), len(w))
+    ham_korollalar: Dict[Tuple[Tuple[int, ...], int], int] = {}
+    ust = min(int(K_max), len(w_arr))
     for k in range(2, ust + 1):
-        for t in range(k - 1, len(w)):
-            girdi = tuple(w[t - k + 1:t])
-            cikti = w[t]
+        for t in range(k - 1, len(w_arr)):
+            girdi = tuple(w_arr[t - k + 1:t].tolist())
+            cikti = int(w_arr[t])
             anahtar = (girdi, cikti)
-            korollalar[anahtar] = korollalar.get(anahtar, 0) + 1
-    return korollalar
+            ham_korollalar[anahtar] = ham_korollalar.get(anahtar, 0) + 1
+
+    toplam_korolla = float(sum(ham_korollalar.values())) + 1e-12
+    norm_korollalar = {k: v / toplam_korolla for k, v in ham_korollalar.items()}
+
+    return P, Asim, norm_korollalar
 
 
-def korolla_ariteleri(korollalar: Dict[Tuple[Tuple[int, ...], int], int]
-                      ) -> Dict[int, int]:
-    arite_sayilari: Dict[int, int] = {}
-    for (girdi, cikti) in korollalar:
-        arite_sayilari[cikti] = arite_sayilari.get(cikti, 0) + 1
-    return arite_sayilari
-
-
-def kan_rezidusu(P: np.ndarray) -> Tuple[np.ndarray, np.ndarray, float]:
-    P2 = np.matmul(P, P)
-    Kan_rezidusu = np.abs(P - P2)
-    yirtiklar = (P2 > 0.05) & (P < 0.01)
-    omega_yirtik_skoru = (float(np.sum(P2[yirtiklar]))
-                          / float(np.sum(P2) + 1e-12))
-    return P2, Kan_rezidusu, omega_yirtik_skoru
-
-
-def omega_cebiri(alfa: float, beta: float) -> Dict[str, Any]:
-    alfa, beta = float(alfa), float(beta)
-    if beta < 0.05 and alfa < 0.2:
-        cebir_tipi = "boole"
-    elif alfa >= 0.5:
-        cebir_tipi = "yönlü_kafes"
-    else:
-        cebir_tipi = "heyting"
-    return {"cebir": cebir_tipi, "asimetri_yoğunluğu": alfa,
-            "yırtık_oranı": beta}
-
-
-def topos_turetimi(P: np.ndarray, Asim: np.ndarray,
-                   korollalar: Dict[Tuple[Tuple[int, ...], int], int],
-                   Kan_rezidusu: np.ndarray) -> Dict[str, Any]:
+def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
+                        norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float]
+                        ) -> Dict[str, Any]:
+    n = float(P.shape[0])
     P_sim = 0.5 * (P + P.T)
     P_asim = 0.5 * (P - P.T)
-    E_uzay = float(np.sum((P_sim ** 2) * (1.0 - Asim)))
-    E_kategori = float(np.sum((P_asim ** 2) * Asim))
-    E_operad = float(sum((len(girdi) - 1) ** 2 * f
-                         for (girdi, _), f in korollalar.items()))
-    E_tikanma = float(np.sum(Kan_rezidusu ** 2))
+    P2 = np.matmul(P, P)
+    Kan_rezidusu = np.abs(P - P2)
+
+    E_uzay = float(np.sum((P_sim ** 2) * (1.0 - Asim))) / n
+    E_kategori = float(np.sum((P_asim ** 2) * Asim)) / n
+    E_operad = float(sum((len(girdi) - 1) ** 2 * prob
+                         for (girdi, _), prob in norm_korollalar.items()))
+    E_tikanma = float(np.sum(Kan_rezidusu ** 2)) / n
+
     E_toplam = E_uzay + E_kategori + E_operad + E_tikanma + 1e-12
     rho = np.array([E_uzay / E_toplam, E_kategori / E_toplam,
                     E_operad / E_toplam, E_tikanma / E_toplam], dtype=float)
-    entropi = 0.0
-    for q in rho.tolist():
-        if q > 0.0:
-            entropi -= q * math.log(q)
-    return {"E_uzay": E_uzay, "E_kategori": E_kategori,
-            "E_operad": E_operad, "E_tıkanma": E_tikanma,
-            "E_toplam": E_toplam, "tayf": rho, "entropi": float(entropi)}
 
+    entropi = float(-np.sum(rho * np.log(rho + 1e-12)))
 
-def cins_turet(w: Sequence[int], n: int, T: np.ndarray) -> Dict[str, Any]:
-    N_gecis = np.asarray(T, float)
-    assert N_gecis.shape == (int(n), int(n)), (
-        "geçiş matrisi n×n olmalı: %r ≠ (%d, %d)"
-        % (N_gecis.shape, int(n), int(n)))
-    P, Asim = gecis_asimetrisi(N_gecis)
-    P2, Kan_rez, beta = kan_rezidusu(P)
-    korollalar = n_gram_korollari(list(w))
-    arite_sayilari = korolla_ariteleri(korollalar)
+    yirtiklar = (P2 > 0.05) & (P < 0.01)
+    beta = float(np.sum(P2[yirtiklar])) / float(np.sum(P2) + 1e-12)
     alfa = float(np.mean(Asim[P > 0])) if np.any(P > 0) else 0.0
-    om = omega_cebiri(alfa, beta)
-    tur = topos_turetimi(P, Asim, korollalar, Kan_rez)
-    return {"tayf": tur["tayf"], "tayf_entropisi": float(tur["entropi"]),
-            "enerji": {k: tur[k] for k in
-                       ("E_uzay", "E_kategori", "E_operad",
-                        "E_tıkanma", "E_toplam")},
-            "P": P, "P2": P2, "Asim": Asim, "Kan_rezidüsü": Kan_rez,
-            "korollalar": korollalar, "arite_sayıları": arite_sayilari,
-            "asimetri_yoğunluğu": alfa, "yırtık_oranı": beta,
-            "Ω_cebiri": om}
+
+    if beta < 0.05 and alfa < 0.2:
+        cebir = "boole"
+    elif alfa >= 0.5:
+        cebir = "yönlü_kafes"
+    else:
+        cebir = "heyting"
+
+    return {
+        "tayf": rho, "entropi": entropi, "Ω_cebiri": cebir,
+        "enerjiler": {"uzay": E_uzay, "kategori": E_kategori,
+                     "operad": E_operad, "tıkanma": E_tikanma},
+        "P": P, "P2": P2, "Asim": Asim, "Kan_rezidusu": Kan_rezidusu,
+        "alfa": alfa, "beta": beta
+    }
+
+
+def aklet_boynuz_doldur(x: int, z: int, tayf_bilgisi: Dict[str, Any]
+                        ) -> Dict[str, Any]:
+    P = tayf_bilgisi["P"]
+    Asim = tayf_bilgisi["Asim"]
+    Kan_rez = tayf_bilgisi["Kan_rezidusu"]
+    n = P.shape[0]
+
+    dogrudan_guc = float(P[x, z])
+    tikanma = float(Kan_rez[x, z])
+
+    aday_yollar = []
+    for y in range(n):
+        if y == x or y == z:
+            continue
+        gecis_guven = float(P[x, y] * P[y, z])
+        if gecis_guven > 1e-6:
+            ceza = float(Asim[x, y] * Asim[y, z] * tikanma)
+            net_skor = gecis_guven * (1.0 - 0.5 * ceza)
+            aday_yollar.append((net_skor, y))
+
+    if not aday_yollar:
+        return {
+            "hüküm": "tıkanma",
+            "en_iyi_ara_durak": None,
+            "güven": dogrudan_guc,
+            "kohomolojik_engel": tikanma
+        }
+
+    aday_yollar.sort(key=lambda item: item[0], reverse=True)
+    en_iyi_skor, en_iyi_y = aday_yollar[0]
+
+    if dogrudan_guc >= en_iyi_skor and tikanma < 0.05:
+        hukum = "doğrudan_tasdik"
+    elif en_iyi_skor > dogrudan_guc and en_iyi_skor > 0.01:
+        hukum = "türetim_başarılı"
+    else:
+        hukum = "şüphe_teâruz"
+
+    return {
+        "hüküm": hukum,
+        "en_iyi_ara_durak": en_iyi_y,
+        "türetim_gücü": en_iyi_skor,
+        "doğrudan_güç": dogrudan_guc,
+        "kohomolojik_engel": tikanma
+    }
+
+
+def hendese_teshisi_kos(w: Sequence[int], n: int) -> Dict[str, Any]:
+    P, Asim, norm_korollalar = veriden_geometri_cikar(w, n)
+
+    tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
+
+    son_token = int(w[-1])
+    hedef_aday = int(np.argmax(P[son_token]))
+    muhakeme = aklet_boynuz_doldur(son_token, hedef_aday, tayf_bilgisi)
+
+    return {
+        "spektral_demet": tayf_bilgisi["tayf"],
+        "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
+        "muhakeme": muhakeme,
+        "detay": tayf_bilgisi
+    }
