@@ -5571,6 +5571,144 @@ def d8_hudut_temizligi_denetle(psi: np.ndarray, kod_uzayi_maskesi: np.ndarray,
             "hudut_temiz": hudut_temiz}
 
 
+class SenetKaydi:
+    __slots__ = ("tur", "yer", "kapi_matrisi", "aci")
+
+    def __init__(self, tur: str, yer: int, kapi_matrisi: np.ndarray, aci: float) -> None:
+        self.tur, self.yer, self.kapi_matrisi, self.aci = tur, yer, kapi_matrisi, aci
+
+
+def d8a_senet_ve_egim_mutabakati(senetler: List[SenetKaydi], psi_0: np.ndarray,
+                                 hata_vektoru: np.ndarray, yon_vektoru: np.ndarray
+                                 ) -> Dict[str, Any]:
+    psi_ileri = [psi_0]
+    for s in senetler:
+        psi_ileri.append(s.kapi_matrisi @ psi_ileri[-1])
+    psi_son = psi_ileri[-1]
+
+    lambda_i = hata_vektoru * psi_son
+    ek_durum_egim = []
+    for i in reversed(range(len(senetler))):
+        s = senetler[i]
+        d_kapi = 1j * s.kapi_matrisi
+        psi_onceki = psi_ileri[i]
+        egim_p = 2.0 * np.real(np.vdot(lambda_i, d_kapi @ psi_onceki))
+        ek_durum_egim.append(egim_p)
+        lambda_i = s.kapi_matrisi.conj().T @ lambda_i
+
+    ek_durum_egim = np.array(list(reversed(ek_durum_egim)), dtype=float)
+
+    d_psi = np.zeros_like(psi_0)
+    for i, s in enumerate(senetler):
+        d_kapi = 1j * s.kapi_matrisi
+        y_val = yon_vektoru[i] if i < len(yon_vektoru) else 1.0
+        d_psi = s.kapi_matrisi @ d_psi + y_val * (d_kapi @ psi_ileri[i])
+
+    ikiz_turev = 2.0 * np.real(np.vdot(hata_vektoru * psi_son, d_psi))
+
+    ek_durum_projeksiyon = float(np.dot(ek_durum_egim[:len(yon_vektoru)],
+                                        yon_vektoru[:len(ek_durum_egim)]))
+    fark = abs(ek_durum_projeksiyon - ikiz_turev)
+    mutabakat = float(fark / (abs(ikiz_turev) + 1e-12))
+
+    return {"senet_sayisi": len(senetler), "ek_durum_egim": ek_durum_egim,
+            "ikiz_turev": ikiz_turev, "mutabakat_hatasi": mutabakat,
+            "mutabakat_tam_mi": bool(mutabakat < 1e-10)}
+
+
+def d6_cartan_kapi_evrimi(psi: np.ndarray, parametre_acilari: np.ndarray
+                          ) -> Tuple[np.ndarray, float, List[SenetKaydi]]:
+    n = len(psi)
+    psi_guncel = psi.copy().astype(complex)
+    theta_cartan = 0.0
+    senetler: List[SenetKaydi] = []
+
+    H_c = np.diag([np.cos(2.0 * np.pi * k / n) for k in range(n)])
+
+    for j, aci in enumerate(parametre_acilari[:n]):
+        U_j = np.diag(np.exp(1j * aci * np.diag(H_c)))
+        psi_guncel = U_j @ psi_guncel
+
+        katki = float(np.real(np.trace(H_c @ U_j)) / n)
+        theta_cartan += katki
+
+        senetler.append(SenetKaydi(tur="Meleke_Kapisi", yer=j, kapi_matrisi=U_j, aci=float(aci)))
+
+    psi_guncel /= (np.linalg.norm(psi_guncel) + 1e-12)
+
+    return psi_guncel, theta_cartan, senetler
+
+
+class KategorikBalya:
+    __slots__ = ("balya_id", "kayitlar", "funktor_tersi", "kok_adresi")
+
+    def __init__(self, balya_id: str, kayitlar: List[Any], funktor_tersi: np.ndarray, kok_adresi: str) -> None:
+        self.balya_id, self.kayitlar, self.funktor_tersi, self.kok_adresi = (
+            balya_id, kayitlar, funktor_tersi, kok_adresi)
+
+    def balya_ac(self) -> List[Any]:
+        return list(self.kayitlar)
+
+
+def d9_kume_kapanisi_ve_balyalama(hafiza_havuzu: Dict[str, Any],
+                                  vecih_ortusmeleri: Dict[str, float],
+                                  aktif_kayitlar: List[Any]) -> Dict[str, Any]:
+    if vecih_ortusmeleri:
+        yaprak = min(vecih_ortusmeleri.items(), key=lambda x: x[1])[0]
+    else:
+        yaprak = "asli_vecih"
+
+    yeni_kok_adresi = "modalite." + str(yaprak)
+    hafiza_havuzu.setdefault("cartan_kokleri", set()).add(yeni_kok_adresi)
+
+    balya_id = "Balya_" + str(len(hafiza_havuzu.get("balyalar", [])))
+    funktor_tersi = np.eye(max(2, len(aktif_kayitlar)))
+
+    yeni_balya = KategorikBalya(
+        balya_id=balya_id,
+        kayitlar=list(aktif_kayitlar),
+        funktor_tersi=funktor_tersi,
+        kok_adresi=yeni_kok_adresi
+    )
+    hafiza_havuzu.setdefault("balyalar", []).append(yeni_balya)
+
+    return {"acilan_cartan_koku": yeni_kok_adresi, "yeni_balya_id": balya_id,
+            "balyalanan_nesne_sayisi": len(aktif_kayitlar), "silinen_kayit_sayisi": 0}
+
+
+def s1_entropi_gradyani_sinir_bul(w: Sequence[int], pencere_boyu: int = 3) -> Tuple[int, int]:
+    w_arr = np.asarray(w)
+    if len(w_arr) <= pencere_boyu:
+        return 0, len(w_arr)
+
+    yerel_entropiler = []
+    for i in range(len(w_arr) - pencere_boyu + 1):
+        kesit = w_arr[i:i + pencere_boyu]
+        _, sayimlar = np.unique(kesit, return_counts=True)
+        p = sayimlar / float(len(kesit))
+        yerel_entropiler.append(-float(np.sum(p * np.log(p + 1e-12))))
+
+    entropi_dizisi = np.array(yerel_entropiler)
+    gradyan = np.abs(np.gradient(entropi_dizisi))
+
+    zirve_idx = int(np.argmax(gradyan))
+    return zirve_idx, min(len(w_arr), zirve_idx + pencere_boyu)
+
+
+def s0_s2_ozerk_gaye_turet(dahili_tenakuzlar: Dict[str, float],
+                            dahili_entropiler: Dict[str, float],
+                            lambda_reg: float = 0.3) -> str:
+    if not dahili_tenakuzlar:
+        return "VAKUM_DURUMU"
+
+    gaye_skorlari = {}
+    for gaye, e_tenakuz in dahili_tenakuzlar.items():
+        entropi = dahili_entropiler.get(gaye, 1.0)
+        gaye_skorlari[gaye] = e_tenakuz - lambda_reg * entropi
+
+    return max(gaye_skorlari.items(), key=lambda x: x[1])[0]
+
+
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
     gecit_raporu = d0_gecit_nedensellik_teftisi(
@@ -5578,6 +5716,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     if not gecit_raporu["gecit_onayi"]:
         return {"hata": "D0 GEÇİT İHLALİ: Zaman çevrimi veya ezber sızıntısı saptandı",
                 "detay": gecit_raporu}
+
+    bas_idx, son_idx = s1_entropi_gradyani_sinir_bul(w, pencere_boyu=min(4, len(w)))
+    odak_kesiti = tuple(w[bas_idx:son_idx])
 
     P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
 
@@ -5729,6 +5870,21 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         u=u_degeri, C_katsayilari=C_varsayilan, S_katsayilari=S_varsayilan,
         enerji=skaler_mizan, cartan_acisi=float(np.pi * Asim[baglam[-1], nihai_hedef]))
 
+    parametre_acilari = np.linspace(0.1, np.pi, len(rho))
+    psi_evrilmis, theta_cartan, senetler = d6_cartan_kapi_evrimi(
+        psi=kuantum_genlikleri, parametre_acilari=parametre_acilari)
+
+    hata_vektoru = np.ones_like(psi_evrilmis) * float(muhakemeler[-1].get("kohomolojik_engel", 0.1))
+    mutabakat_raporu = d8a_senet_ve_egim_mutabakati(
+        senetler=senetler, psi_0=kuantum_genlikleri.astype(complex),
+        hata_vektoru=hata_vektoru, yon_vektoru=np.ones(len(senetler)))
+
+    vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
+                               "operad": float(rho[2]), "yırtık": float(rho[3])}
+    balyalama_raporu = d9_kume_kapanisi_ve_balyalama(
+        hafiza_havuzu={}, vecih_ortusmeleri=vecih_ortusmeleri_balya,
+        aktif_kayitlar=silsile_adimlari)
+
     return {
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
@@ -5763,5 +5919,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "kan_intac_genligi": kan_dalga_genligi,
         "d0_gecit_raporu": gecit_raporu,
         "d8_hudut_raporu": hudut_raporu,
+        "s1_odak_siniri": (bas_idx, son_idx),
+        "s1_odak_kesiti": odak_kesiti,
+        "theta_cartan_birikimi": theta_cartan,
+        "d8a_mutabakat_raporu": mutabakat_raporu,
+        "d9_balyalama_raporu": balyalama_raporu,
         "detay": tayf_bilgisi
     }
