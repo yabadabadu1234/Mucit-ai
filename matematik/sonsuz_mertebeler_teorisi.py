@@ -4482,6 +4482,25 @@ def rn_sarti(X: Terim, r: int, n: int) -> Terim:
     return rn_mertebe(X, int(r), int(n))
 
 
+def hakiki_rn_mertebe(X: Terim, r: int, n: int) -> Terim:
+    r_seviye = max(0, int(r))
+    n_seviye = int(n)
+
+    def _adim(T: Terim, k: int) -> Terim:
+        if k > n_seviye:
+            return T
+        a, b = terim_taze("a"), terim_taze("b")
+        morfizm = yonlu_hom(T, Deg(a), Deg(b)) if k <= r_seviye else yol(T, Deg(a), Deg(b))
+        return Pi(a, T, Pi(b, T, _adim(morfizm, k + 1)))
+
+    return _adim(X, 1)
+
+
+def hakiki_rn_sarti(X: Terim, r: int, n: int) -> Terim:
+    assert int(r) >= 0 and int(n) >= 0, "Mertebeler negatif olamaz"
+    return hakiki_rn_mertebe(X, int(r), int(n))
+
+
 def buzukten_tamamla(X: Terim, buzuk: Terim, dallar) -> Terim:
     c = birinci(buzuk)
     h = ikinci(buzuk)
@@ -5356,6 +5375,52 @@ def alem_baglami_ac(alem: TuretilenDilimAlemi, ana_baglam: Optional[Baglam] = No
     return g
 
 
+def topos_karakteristik_haritasi_chi(alt_kume_kenarlar: Set[Tuple[int, int]],
+                                     P: np.ndarray, Asim: np.ndarray,
+                                     Kan_rezidusu: np.ndarray,
+                                     omega_cebiri: str) -> Dict[Tuple[int, int], float]:
+    n = P.shape[0]
+    chi_haritasi: Dict[Tuple[int, int], float] = {}
+
+    for i in range(n):
+        for j in range(n):
+            if (i, j) not in alt_kume_kenarlar:
+                chi_haritasi[(i, j)] = 0.0
+                continue
+
+            tikanma = float(Kan_rezidusu[i, j])
+            asimetri = float(Asim[i, j])
+
+            if omega_cebiri == "boole":
+                chi_haritasi[(i, j)] = 1.0 if tikanma < 0.05 else 0.0
+            elif "heyting" in omega_cebiri:
+                chi_haritasi[(i, j)] = float(np.clip(1.0 - tikanma, 0.0, 1.0))
+            else:
+                chi_haritasi[(i, j)] = float(np.clip((1.0 - tikanma) * asimetri, 0.0, 1.0))
+
+    return chi_haritasi
+
+
+def ayrik_sol_kan_uzantisi(F_alt_fonksiyon: Dict[int, float],
+                           alem: TuretilenDilimAlemi,
+                           kat: Turetilen1Kategori) -> Dict[int, float]:
+    Lan_F: Dict[int, float] = {}
+
+    for y in kat.nesneler:
+        aday_degerler = []
+        for x in alem.alemdeki_nesneler:
+            f_x = F_alt_fonksiyon.get(x, 0.0)
+            ok_var = (x, y) in kat.ok_siniflari
+            if ok_var:
+                aday_degerler.append(f_x * 1.0)
+            elif x == y:
+                aday_degerler.append(f_x)
+
+        Lan_F[y] = float(max(aday_degerler)) if aday_degerler else 0.0
+
+    return Lan_F
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -5618,9 +5683,37 @@ def kuantum_yogunluk_ve_uhlmann(P: np.ndarray, hedef_durum: np.ndarray) -> Dict[
     }
 
 
+def kuantum_monogami_ve_tenakuz_kefesi(rho_yogunluk: np.ndarray, Asim: np.ndarray,
+                                       son_token: int, hedef: int) -> Tuple[float, float]:
+    n = rho_yogunluk.shape[0]
+
+    p_a = float(np.clip(rho_yogunluk[son_token, son_token], 1e-12, 1.0))
+    p_b = float(np.clip(rho_yogunluk[hedef, hedef], 1e-12, 1.0))
+    c_idx = (hedef + 1) % n
+    p_c = float(np.clip(rho_yogunluk[c_idx, c_idx], 1e-12, 1.0))
+
+    e_ab = float(np.abs(rho_yogunluk[son_token, hedef]))
+    e_ac = float(np.abs(rho_yogunluk[son_token, c_idx]))
+    e_abc = float(np.sqrt(p_a * (p_b + p_c)))
+
+    hata_monogami = float(np.maximum(0.0, (e_ab + e_ac) - e_abc))
+
+    faz = np.pi * (Asim[son_token, hedef] + Asim[hedef, c_idx] - Asim[c_idx, son_token])
+    U_cevrim = np.array([[np.cos(faz), -np.sin(faz)],
+                         [np.sin(faz),  np.cos(faz)]], dtype=float)
+    iz_terimi = float(np.trace(np.eye(2) + U_cevrim))
+    dislama_entropisi = float(-p_a * np.log(p_a))
+
+    hata_tenakuz = float(-np.log((iz_terimi + 1e-6) / (4.0 + 1e-6)) * dislama_entropisi)
+    hata_tenakuz = float(np.maximum(0.0, hata_tenakuz))
+
+    return hata_monogami, hata_tenakuz
+
+
 def cok_boyutlu_kefeler_olc(P: np.ndarray, rho_yogunluk: np.ndarray,
                             uhlmann_sadakati: float, son_token: int,
-                            hedef: int, baglam: Tuple[int, ...]) -> np.ndarray:
+                            hedef: int, baglam: Tuple[int, ...],
+                            Asim: Optional[np.ndarray] = None) -> np.ndarray:
     n = P.shape[0]
 
     hata_uzay = float(np.clip(1.0 - uhlmann_sadakati, 0.0, 1.0))
@@ -5637,7 +5730,13 @@ def cok_boyutlu_kefeler_olc(P: np.ndarray, rho_yogunluk: np.ndarray,
     hedef_olasilik = float(rho_yogunluk[hedef, hedef])
     hata_nokta = float(-np.log(np.clip(hedef_olasilik, 1e-6, 1.0)))
 
-    return np.array([hata_uzay, hata_kategori, hata_lif, hata_nokta], dtype=float)
+    if Asim is None:
+        Asim = asimetri_guncelle(P)
+    hata_monogami, hata_tenakuz = kuantum_monogami_ve_tenakuz_kefesi(
+        rho_yogunluk, Asim, son_token, hedef)
+
+    return np.array([hata_uzay, hata_kategori, hata_lif, hata_nokta,
+                     hata_monogami, hata_tenakuz], dtype=float)
 
 
 def d7_hamiltonyen_nispetleri(kefeler_vektoru: np.ndarray,
@@ -6112,7 +6211,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     kefeler = cok_boyutlu_kefeler_olc(
         P=P, rho_yogunluk=kuantum_bilgisi["rho_yogunluk"],
         uhlmann_sadakati=kuantum_bilgisi["uhlmann_sadakati"],
-        son_token=baglam[-1], hedef=nihai_hedef, baglam=orijinal_baglam)
+        son_token=baglam[-1], hedef=nihai_hedef, baglam=orijinal_baglam, Asim=Asim)
 
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
 
@@ -6180,5 +6279,12 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "d9_balyalama_raporu": balyalama_raporu,
         "s0_vakum_tetiklendi": s0_vakum_tetiklendi,
         "s0_secilen_gaye": s0_secilen_gaye,
+        "rn_sarti_terimi": hakiki_rn_sarti(Dogal(), r=1, n=2),
+        "karakteristik_harita_chi": topos_karakteristik_haritasi_chi(
+            set(turetilen_kategori.ok_siniflari.keys()), P, Asim,
+            tayf_bilgisi["Kan_rezidusu"], tayf_bilgisi["Ω_cebiri"]),
+        "sol_kan_uzantisi_Lan": ayrik_sol_kan_uzantisi(
+            {obj: float(P[obj, nihai_hedef]) for obj in turetilen_alem.alemdeki_nesneler},
+            turetilen_alem, turetilen_kategori),
         "detay": tayf_bilgisi
     }
