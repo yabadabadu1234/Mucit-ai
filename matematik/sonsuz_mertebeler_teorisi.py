@@ -5081,6 +5081,63 @@ def asimetri_guncelle(P: np.ndarray) -> np.ndarray:
     return pay / payda
 
 
+def cins_uc_testle_dogur(baglam: Tuple[int, ...], P: np.ndarray,
+                         Asim: np.ndarray) -> Dict[str, Any]:
+    n = P.shape[0]
+
+    tek_cikti = 0
+    cok_cikti = 0
+    for i in range(n):
+        hedefler = np.flatnonzero(P[i] > 0.05)
+        if len(hedefler) == 1:
+            tek_cikti += 1
+        elif len(hedefler) > 1:
+            cok_cikti += 1
+    if cok_cikti == 0 and tek_cikti > 0:
+        arite_hukmu = "1→1_KATEGORI_ADAYI"
+    elif cok_cikti > tek_cikti:
+        arite_hukmu = "n→m_PROPERAD"
+    else:
+        arite_hukmu = "n→1_OPERAD"
+
+    tersinir_kenarlar = 0
+    yonlu_kenarlar = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            if P[i, j] > 0.05 and P[j, i] > 0.05:
+                if abs(float(Asim[i, j])) < 0.15:
+                    tersinir_kenarlar += 1
+                else:
+                    yonlu_kenarlar += 1
+    tersinirlik_hukmu = "GRUPOID" if yonlu_kenarlar == 0 else "YONLU_KATEGORI"
+
+    boynuz_doluluk = 0
+    boynuz_toplam = 0
+    for x in range(min(n, 8)):
+        for y in range(min(n, 8)):
+            for z in range(min(n, 8)):
+                if x == y or y == z or x == z:
+                    continue
+                boynuz_toplam += 1
+                if P[x, y] > 0.05 and P[y, z] > 0.05 and P[x, z] > 0.01:
+                    boynuz_doluluk += 1
+    kan_orani = float(boynuz_doluluk) / float(max(1, boynuz_toplam))
+    if kan_orani > 0.85:
+        kan_hukmu = "∞-KATEGORI_KAN_DOLU"
+    elif kan_orani > 0.3:
+        kan_hukmu = "OBSTRUKSIYON_KAN_YIRTIK"
+    else:
+        kan_hukmu = "AYRIK_MANTIK_BOYNUZ_BOS"
+
+    return {
+        "arite": arite_hukmu, "tersinirlik": tersinirlik_hukmu,
+        "kan_boynuzu": kan_hukmu, "kan_orani": kan_orani,
+        "tersinir_kenar": tersinir_kenarlar, "yonlu_kenar": yonlu_kenarlar,
+        "kategori_iddiasi_mesru": bool(
+            tersinirlik_hukmu == "YONLU_KATEGORI" and kan_orani > 0.3)
+    }
+
+
 def yerel_baglamsal_hodge(baglam: Tuple[int, ...], P: np.ndarray,
                           norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float]
                           ) -> Dict[str, float]:
@@ -7989,6 +8046,8 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         if "türetim_gücü" in adim]
     terazi_hukmu = vecih_hukmu_tayin_et(vecih_ortusmeleri)
 
+    cins_uc_test = cins_uc_testle_dogur(orijinal_baglam, P, Asim)
+
     sadakat_raporu = sadakat_devresi_kos(kuantum_durum_vektoru, kod_uzayi_maskesi,
                                          omega_cebiri=tayf_bilgisi["Ω_cebiri"])
     kuantum_durum_vektoru_temiz = sadakat_raporu["psi_suzulen"]
@@ -8452,6 +8511,7 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "balyalama_uygun_muydu": balyalama_uygun_mu,
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
+        "cins_uc_test": cins_uc_test,
         "muhakeme_silsilesi": muhakemeler,
         "nihai_muhakeme": muhakemeler[-1],
         "kaide_imzasi": kaide_raporu["imza"],
