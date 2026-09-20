@@ -5516,21 +5516,32 @@ ZIRH_BOYUTU = 1048576
 def qudit_zirhina_gom(kuantum_durum_vektoru: np.ndarray,
                       aktif_dilimler: Dict[str, Tuple[int, int]]
                       ) -> Tuple[np.ndarray, np.ndarray, Dict[str, Any]]:
+    from kuantum.mahalli_yazmac import MahalliYazmac
     aktif_boyut = len(kuantum_durum_vektoru)
     if aktif_boyut > ZIRH_BOYUTU:
         raise DenetimHatasi("Aktif pencere zırh boyutunu (1.048.576) aşamaz")
 
-    psi_zirh = np.zeros(ZIRH_BOYUTU, dtype=complex)
-    psi_zirh[:aktif_boyut] = kuantum_durum_vektoru
+    seviye_sayisi = max(2, len(aktif_dilimler) or 1)
+    mahalli = MahalliYazmac(taban=seviye_sayisi)
+    for dilim_adi in aktif_dilimler:
+        mahalli.cartan_ekle(dilim_adi, float(np.pi / max(1, len(aktif_dilimler))))
+    seviye_fazlari = mahalli.seviye_fazi(taban=seviye_sayisi)
+
+    psi_zirh = np.zeros((ZIRH_BOYUTU, seviye_sayisi), dtype=complex)
+    psi_zirh[:aktif_boyut, :] = (
+        kuantum_durum_vektoru[:, None] * np.exp(1j * seviye_fazlari)[None, :])
 
     seyirci_maskesi = np.zeros(ZIRH_BOYUTU, dtype=float)
     seyirci_maskesi[:aktif_boyut] = 1.0
 
     zirh_metrigi = {
-        "zirh_kapasitesi": ZIRH_BOYUTU,
+        "zirh_sekli": (ZIRH_BOYUTU, seviye_sayisi),
+        "zirh_bayt": ZIRH_BOYUTU * seviye_sayisi * 16,
         "aktif_pencere_boyu": aktif_boyut,
         "seyirci_qudit_sayisi": ZIRH_BOYUTU - aktif_boyut,
-        "seyirci_oran": float((ZIRH_BOYUTU - aktif_boyut) / ZIRH_BOYUTU)
+        "seyirci_oran": float((ZIRH_BOYUTU - aktif_boyut) / ZIRH_BOYUTU),
+        "seviye_sayisi": seviye_sayisi,
+        "cartan_koku_sayisi": len(mahalli._kok)
     }
 
     return psi_zirh, seyirci_maskesi, zirh_metrigi
@@ -8022,6 +8033,7 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     fock_psi_sonum, fock_artik_enerji = fock_motoru.s5_hukum_sonumle(fock_psi)
 
     psi_zirh, _, zirh_raporu = qudit_zirhina_gom(kuantum_durum_vektoru, dilimler)
+    psi_zirh_toplu = psi_zirh.sum(axis=1)
 
     dahili_hom_uzayi = ccc_dahili_hom_uzayi_turet(turetilen_kategori)
 
@@ -8114,7 +8126,7 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     superpozisyon_havuzu = {
         "veri": np.abs(kuantum_durum_vektoru),
         "parametre": np.ones(8, dtype=float) / np.sqrt(8),
-        "mahalli": np.abs(psi_zirh[:len(kod_uzayi_maskesi)]),
+        "mahalli": np.abs(psi_zirh_toplu[:len(kod_uzayi_maskesi)]),
         "hafiza": np.abs(kuantum_durum_vektoru_temiz),
         "fock": np.abs(fock_psi_sonum.astype(complex))[:len(kod_uzayi_maskesi)],
         "cozum": np.abs(nihai_intac_psi.real)[:len(kod_uzayi_maskesi)]
@@ -8210,7 +8222,7 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     U_kapi_ornek = np.diag(np.exp(1j * parametre_acilari[:min(len(parametre_acilari),
                                                                len(kuantum_durum_vektoru))]))
     hata_engel_degeri = hata_engel_zeno_olc(
-        psi_onceki=psi_zirh[:len(kuantum_durum_vektoru)],
+        psi_onceki=psi_zirh_toplu[:len(kuantum_durum_vektoru)],
         psi_simdiki=kuantum_durum_vektoru, U_kapi=U_kapi_ornek)
 
     d2_uyarlanmis_enerji = float(skaler_mizan + 0.1 * d2_metrikleri["simetri_sapmasi"]
