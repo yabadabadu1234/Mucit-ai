@@ -7,7 +7,13 @@ import numpy as np
 
 __all__ = ["QuditAyari", "agirlik", "durum", "durum_yigin", "suz", "dallanma",
            "metrik", "dogal_adim", "blok", "ortusme", "kronecker",
-           "TddAyari", "kanonik_adres", "esit_mi", "rapor"]
+           "TddAyari", "kanonik_adres", "esit_mi", "rapor",
+           "cartan_seviye_fazlari"]
+
+
+def cartan_seviye_fazlari(theta_cartan: float, d: int, B: int = 1) -> np.ndarray:
+    seviye_fazi = theta_cartan * np.arange(d, dtype=float) / float(max(1, d))
+    return np.tile(seviye_fazi[None, :], (max(1, int(B)), 1))
 
 
 @dataclass
@@ -203,7 +209,8 @@ def _gpu_lie_chebyshev(W: np.ndarray, cs: np.ndarray, ss: np.ndarray,
 
 def durum_yigin(c: np.ndarray, s: np.ndarray, TETA: np.ndarray,
                 d: int = 0, ayar: Optional[QuditAyari] = None,
-                tip=None, cekirdek: str = "numpy") -> np.ndarray:
+                tip=None, cekirdek: str = "numpy",
+                cartan_acisi: Optional[float] = None) -> np.ndarray:
     a = ayar or QuditAyari()
     d = int(d or a.d)
     if cekirdek != "numpy":
@@ -245,6 +252,8 @@ def durum_yigin(c: np.ndarray, s: np.ndarray, TETA: np.ndarray,
     for j in range(n - 1, 0, -1):
         b1, b2 = ss[j] + iki * b1 - b2, b1
     sanal = ss[0] + iki * b1 - b2
+    if cartan_acisi is not None:
+        sanal = sanal + cartan_seviye_fazlari(float(cartan_acisi), d, B)
     reel = reel - reel.max(axis=1, keepdims=True)
     e = np.exp(reel)
     psi = (e * np.cos(sanal)).astype(ctip)

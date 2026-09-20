@@ -5492,13 +5492,14 @@ def cech_kohomoloji_engeli_olc(orijinal_baglam: Tuple[int, ...],
 def t4_nedensel_cephe_olcumu(psi_intac: np.ndarray, son_token: int,
                              theta_cartan: float, veri_lifi: int = 8,
                              basamak_sayisi: int = 6) -> Dict[str, Any]:
+    from kuantum.qudit import cartan_seviye_fazlari
     d = int(veri_lifi)
     cephe_genlikleri = np.zeros(d, dtype=complex)
 
+    seviye_fazlari = cartan_seviye_fazlari(float(theta_cartan), d)[0]
     for c in range(d):
-        faz = theta_cartan * float(c + 1) / float(d)
         psi_idx = c % len(psi_intac)
-        cephe_genlikleri[c] = psi_intac[psi_idx] * np.exp(1j * faz)
+        cephe_genlikleri[c] = psi_intac[psi_idx] * np.exp(1j * seviye_fazlari[c])
 
     born_olasiliklari = np.abs(cephe_genlikleri) ** 2
     born_olasiliklari /= (np.sum(born_olasiliklari) + 1e-12)
