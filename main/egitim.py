@@ -747,6 +747,46 @@ def d8_dongu(Z: Dict[str, Any]) -> Dict[str, Any]:
     return Z
 
 
+def k4_hudut_yoklamasi(Z: Dict[str, Any]) -> Dict[str, Any]:
+    from matematik.sonsuz_mertebeler_teorisi import DenetimHatasi
+    ayar = Z["ayar"]
+    veri = Z["veri"]
+    devam = Z["devam"]
+    _eniyile = Z["_eniyile"]
+    _olc = Z["_olc"]
+    _dengele = Z["_dengele"]
+    mun = Z["mun"]
+
+    azami_deneme = 3
+    deneme = 0
+    while int(mun.get("kirli_kalan", 0)) > 0 and deneme < azami_deneme:
+        deneme += 1
+        safha("K4 HUDUT · KİRLİ → K3'E DÖNÜŞ", deneme=deneme,
+              kirli_kalan=int(mun["kirli_kalan"]))
+        mun = munasebet_kos(
+            veri, np.asarray(mun["p"], float), _eniyile, _olc,
+            dengele=_dengele, harita=mun["harita"],
+            ayar=MunasebetAyari(
+                acik=1, obek=int(ayar.yigin()),
+                azami_tur=int(ayar.keyfiyet_turu),
+                n_v=int(ayar.veri_lifi),
+                azami_saniye=float(ayar.azami_talim_saati) * 3600.0),
+            keyfiyet_ayari=KeyfiyetAyari(acik=1,
+                                         azami_tur=int(ayar.keyfiyet_turu)))
+
+    hudut_gecildi = bool(int(mun.get("kirli_kalan", 0)) == 0)
+    if not hudut_gecildi:
+        raise DenetimHatasi(
+            "K4 HUDUT: %d deneme sonunda hâlâ %d kirli küme kaldı, "
+            "imleç ilerletilemez (ferman 1-I, 2-I)"
+            % (azami_deneme, int(mun["kirli_kalan"])))
+
+    safha("K4 HUDUT · TEMİZ", deneme=deneme)
+    Z.update({"mun": mun, "k4_hudut_gecildi": hudut_gecildi,
+              "k4_deneme": deneme})
+    return Z
+
+
 def d9_kapanis(Z: Dict[str, Any]) -> Dict[str, Any]:
     ayar = Z["ayar"]
     veri = Z["veri"]
@@ -1005,7 +1045,8 @@ def d11_muhur(Z: Dict[str, Any]) -> Dict[str, Any]:
 ZINCIR: Tuple[Any, ...] = (d0_gecit, d1_olcu, d2_silsile, d3_kurulus,
                            d4_kapi, d5_uzay, d5b_sadakat, d6_mizan,
                            d7_hamiltonyen_durumu,
-                           d8_dongu, d9_kapanis, d10_kelam, d11_muhur)
+                           d8_dongu, k4_hudut_yoklamasi,
+                           d9_kapanis, d10_kelam, d11_muhur)
 
 
 def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
