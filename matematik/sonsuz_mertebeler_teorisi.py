@@ -652,6 +652,14 @@ def ara_serbest(t: Terim) -> Set[str]:
 def _alt(t: Terim) -> List[Terim]:
     if isinstance(t, YonluHom):
         return [t.cizgi, t.kaynak, t.hedef]
+    if isinstance(t, YonluOk):
+        return [t.cizgi, t.kaynak, t.hedef]
+    if isinstance(t, YonluTerkip):
+        return [t.f, t.g]
+    if isinstance(t, OperadAgac):
+        return [t.cizgi] + list(t.oncutler) + [t.hedef]
+    if isinstance(t, OperadHom):
+        return [t.cizgi] + list(t.oncutler) + [t.hedef]
     if isinstance(t, (Pi, Sigma)):
         return [t.alan, t.hedef]
     if isinstance(t, Lam):
@@ -4129,6 +4137,12 @@ def serbest_sayisi(t: Terim) -> int:
 
 
 def _alt_terimler(t: Terim) -> List[Terim]:
+    if isinstance(t, (YonluHom, YonluOk)):
+        return [t.cizgi, t.kaynak, t.hedef]
+    if isinstance(t, YonluTerkip):
+        return [t.f, t.g]
+    if isinstance(t, (OperadAgac, OperadHom)):
+        return [t.cizgi] + list(t.oncutler) + [t.hedef]
     if isinstance(t, Pi) or isinstance(t, Sigma):
         return [t.alan, t.hedef]
     if isinstance(t, Lam):
@@ -4722,7 +4736,9 @@ def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
 
     E_uzay = float(np.sum((P_sim ** 2) * (1.0 - Asim))) / n
     E_kategori = float(np.sum((P_asim ** 2) * Asim)) / n
-    E_operad = float(sum((len(girdi) - 1) ** 2 * prob
+    azami_arite = max((len(girdi) for (girdi, _) in norm_korollalar), default=2)
+    max_arite_kare = float(max(1, (azami_arite - 1) ** 2))
+    E_operad = float(sum(((len(girdi) - 1) ** 2 / max_arite_kare) * prob
                          for (girdi, _), prob in norm_korollalar.items()))
     E_tikanma = float(np.sum(Kan_rezidusu ** 2)) / n
 
@@ -4763,19 +4779,24 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
 
     son_token = int(baglam[-1]) if baglam else 0
 
-    tikaniklik = np.maximum(0.0, P2[son_token] - P[son_token])
+    baglam_cikis_gucu = np.zeros(n, dtype=float)
+    for (girdi, cikti), prob in norm_korollalar.items():
+        if girdi == baglam:
+            baglam_cikis_gucu[cikti] += prob
+
+    tikaniklik = np.maximum(0.0, P2[son_token] - baglam_cikis_gucu)
     toplam_tikaniklik = float(np.sum(tikaniklik))
 
-    if toplam_tikaniklik > 1e-6:
+    if toplam_tikaniklik > 1e-5:
         z = int(np.flatnonzero(tikaniklik == np.max(tikaniklik))[0])
         hedef_turu = "açık_boynuz_çıkarımı"
     else:
-        sirali = np.argsort(P[son_token])
-        z = (int(sirali[-2]) if len(sirali) > 1 and P[son_token, sirali[-1]] > 0.99
-             else int(sirali[-1]))
+        birlesik_akis = 0.5 * P[son_token] + 0.5 * baglam_cikis_gucu
+        sirali = np.argsort(birlesik_akis)
+        z = int(sirali[-1])
         hedef_turu = "doğrudan_akış"
 
-    dogrudan_guc = float(P[son_token, z])
+    dogrudan_guc = max(float(P[son_token, z]), float(baglam_cikis_gucu[z]))
     tikanma = float(Kan_rez[son_token, z])
 
     adaylar = []
@@ -4809,6 +4830,14 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
 
     if en_iyi_skor > dogrudan_guc:
         norm_korollalar[(baglam, z)] = norm_korollalar.get((baglam, z), 0.0) + en_iyi_skor
+        toplam_kutle = sum(norm_korollalar.values())
+        for k_korolla in norm_korollalar:
+            norm_korollalar[k_korolla] /= toplam_kutle
+
+        alfa_ogrenme = 0.2
+        P[son_token, z] = (1.0 - alfa_ogrenme) * P[son_token, z] + alfa_ogrenme * en_iyi_skor
+        P[son_token] /= (P[son_token].sum() + 1e-12)
+
         hukum = "türetim_başarılı"
     else:
         hukum = "doğrudan_tasdik"
@@ -4835,8 +4864,8 @@ def ispat_sahidini_dogrula(ispat_sahidi: Optional[Terim], baglam: Tuple[int, ...
         return False
 
 
-def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4
-                        ) -> Dict[str, Any]:
+def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
+                        azami_adim: int = 3) -> Dict[str, Any]:
     P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
     tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
 
@@ -4844,15 +4873,26 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4
     k_baglam = min(K_max - 1, len(w_arr) - 1)
     baglam = tuple(w_arr[-k_baglam:]) if k_baglam > 0 else (w_arr[-1],)
 
-    muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar)
+    muhakemeler: List[Dict[str, Any]] = []
 
-    sahit_gecerli = ispat_sahidini_dogrula(muhakeme["ispat_sahidi"], baglam,
-                                           muhakeme["hedef"])
-    muhakeme["şahit_doğrulandı"] = sahit_gecerli
+    for _ in range(azami_adim):
+        adim_muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar)
 
+        sahit_gecerli = ispat_sahidini_dogrula(adim_muhakeme["ispat_sahidi"], baglam,
+                                               adim_muhakeme["hedef"])
+        adim_muhakeme["şahit_doğrulandı"] = sahit_gecerli
+        muhakemeler.append(adim_muhakeme)
+
+        if (adim_muhakeme["hüküm"] == "doğrudan_tasdik"
+                or adim_muhakeme["kohomolojik_engel"] < 0.02):
+            break
+
+        if adim_muhakeme["ara_durak"] is not None:
+            baglam = tuple(list(baglam[1:]) + [adim_muhakeme["ara_durak"]])
+
+    tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
     rho = tayf_bilgisi["tayf"]
     kuantum_genlikleri = np.sqrt(rho)
-
     lif_boyutu = int(np.sum(np.ceil(rho * float(n))))
 
     parite_lifi = {
@@ -4870,6 +4910,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4
     return {
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
-        "muhakeme": muhakeme,
+        "muhakeme_silsilesi": muhakemeler,
+        "nihai_muhakeme": muhakemeler[-1],
         "detay": tayf_bilgisi
     }
