@@ -4642,13 +4642,9 @@ def n_mertebe(X: Terim, n: int) -> Terim:
     return Pi(x, X, Pi(y, X, n_mertebe(yol(X, _t(x), _t(y)), n - 1)))
 
 
-MERTEBE_ADI: Tuple[str, ...] = ("nokta", "uzay", "tip", "grupoid")
-
-
 def mertebe_sarti(X: Terim, l: int) -> Terim:
-    assert 0 <= int(l) < len(MERTEBE_ADI), (
-        "vecih mertebesi 0..%d aralığında olmalı, %d verildi (ferman 1-Ğ)"
-        % (len(MERTEBE_ADI) - 1, int(l)))
+    assert int(l) >= 0, (
+        "vecih mertebesi negatif olamaz, %d verildi (ferman 1-Ğ)" % int(l))
     return n_mertebe(X, int(l) - 1)
 
 
@@ -9016,17 +9012,29 @@ def _baglayici_say(t: Terim) -> int:
 
 
 def h_mertebe_sec(mertebe: int) -> int:
-    return int(min(max(int(mertebe), 0), len(MERTEBE_ADI) - 1))
+    return int(max(int(mertebe), 0))
+
+
+def h_mertebe_adi_hesapla(l: int) -> str:
+    n = int(l) - 1
+    if n <= -2:
+        return "kontraktabl"
+    if n == -1:
+        return "önerme"
+    if n == 0:
+        return "küme"
+    return "%d-grupoid" % n
 
 
 def h_sarti_denetle(mertebe: int, baglam: Baglam) -> Tuple[int, str, bool, str]:
     l = h_mertebe_sec(mertebe)
+    ad = h_mertebe_adi_hesapla(l)
     try:
         denetle_t(mertebe_sarti(Deg("A"), l), Evren(0), baglam)
-        return l, MERTEBE_ADI[l], True, ""
+        return l, ad, True, ""
     except Exception as e:
-        return l, MERTEBE_ADI[l], False, "%s: %s" % (type(e).__name__,
-                                                     str(e)[:120])
+        return l, ad, False, "%s: %s" % (type(e).__name__,
+                                         str(e)[:120])
 
 
 def _tam_kur(mertebe: int) -> Tuple[Terim, str]:
