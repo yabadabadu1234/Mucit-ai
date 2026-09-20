@@ -8092,14 +8092,25 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     imaj_faktorleri = kategori_imaj_faktorizasyonu_yap(turetilen_kategori, P)
 
-    lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
+    parametre_yazmaci = QuditParametreYazmaci(qudit_sayisi=len(rho), taban=8)
+    parametre_acilari = parametre_yazmaci.parametre_acilari_oku()
+
+    tannaka_raporu = tannaka_simetri_grubu_turet(turetilen_kategori, P)
+    d_kuantum_genlikleri = 1j * kuantum_genlikleri
+    berry_raporu = berry_ayar_potansiyeli_ve_fazi(
+        kuantum_genlikleri, parametre_acilari, d_kuantum_genlikleri)
+    berry_fazi = berry_raporu["geometrik_berry_fazi"]
+
+    kuplaj_katsayisi = 0.3 if "Abelien" in tannaka_raporu["simetri_grubu"] else 0.7
+    V_kuplaj_tannaka = kuplaj_katsayisi * np.outer(kefeler, kefeler)
+
+    lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(
+        kefeler, V_kuplaj=V_kuplaj_tannaka)
+    skaler_mizan = float(skaler_mizan * np.cos(berry_fazi))
 
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
     C_varsayilan = np.array([1.0, 0.5, 0.25, 0.125], dtype=float)
     S_varsayilan = np.array([0.5, 0.25, 0.125, 0.0625], dtype=float)
-
-    parametre_yazmaci = QuditParametreYazmaci(qudit_sayisi=len(rho), taban=8)
-    parametre_acilari = parametre_yazmaci.parametre_acilari_oku()
     psi_evrilmis, theta_cartan, senetler = d6_cartan_kapi_evrimi(
         psi=kuantum_genlikleri, parametre_acilari=parametre_acilari)
 
@@ -8237,8 +8248,6 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     diyagonal_esitlik_derecesi = topos_diyagonal_esitlik_chi(
         x=baglam[-1], y=nihai_hedef, P=P, Asim=Asim, omega_cebiri=tayf_bilgisi["Ω_cebiri"])
-
-    tannaka_raporu = tannaka_simetri_grubu_turet(turetilen_kategori, P)
 
     d_psi_tahmin = 1j * psi_evrilmis
     berry_raporu = berry_ayar_potansiyeli_ve_fazi(
