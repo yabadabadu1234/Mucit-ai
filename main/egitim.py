@@ -1143,7 +1143,10 @@ def d8a_mecz_ve_wkb_tunelleme(kefeler: np.ndarray, P: np.ndarray,
 
 
 def d10_durma_ve_sukut_yokla(adim: int, tikanma_gecmisi: List[float],
-                             veri_lifi: int, alan_degeri_sukut: float = 0.45
+                             veri_lifi: int, alan_degeri_sukut: float = 0.45,
+                             psi_durum: Optional[np.ndarray] = None,
+                             eylem_vektoru: Optional[np.ndarray] = None,
+                             kalp: Optional[Any] = None
                              ) -> Tuple[bool, str, float]:
     n = max(2, int(veri_lifi))
     k = len(tikanma_gecmisi)
@@ -1158,6 +1161,16 @@ def d10_durma_ve_sukut_yokla(adim: int, tikanma_gecmisi: List[float],
     son_engel = tikanma_gecmisi[-1]
     guven = float(np.exp(-son_engel / float(adim + 1)))
     kesinlik = float(np.clip((guven - 1.0 / n) / (1.0 - 1.0 / n + 1e-12), 0.0, 1.0))
+
+    if kalp is not None and psi_durum is not None and eylem_vektoru is not None:
+        itminan_derecesi = kalp.itminan_olc(psi_durum)
+        vicdan_raporu = kalp.vicdani_murakabe(eylem_vektoru, itminan_derecesi)
+
+        if vicdan_raporu["kalbi_fetva"] and itminan_derecesi > 0.7:
+            return True, "KALBÎ_İTMİNÂN_BURHAN_TAMAM", kesinlik
+        if (vicdan_raporu["kalp_durumu"] == "VİCDANÎ_ŞÜPHE_VE_IKRAH"
+                and alan_degeri_sukut > kesinlik and adim > 0):
+            return True, "KALBÎ_SUKUT_SUAL_TEVCİH", kesinlik
 
     if alan_degeri_sukut > kesinlik and adim > 0:
         return True, "SÜKÛT", kesinlik

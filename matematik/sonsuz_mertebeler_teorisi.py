@@ -7703,6 +7703,7 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         d9_kume_kapanisi_ve_balyalama, d8a_senet_sadakati_dogrula,
         d4_kapi_tam_tasnif_mercii, d9_dugum_coz_bag_gevset,
         d2_enformasyon_ve_hendese_metrikleri)
+    kalp = ManeviKalpKatmani(niyet_boyutu=n)
     s0_vakum_tetiklendi = False
     s0_secilen_gaye: Optional[int] = None
 
@@ -7797,7 +7798,9 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             P[baglam[-1]] /= (np.sum(P[baglam[-1]]) + 1e-12)
 
         dur, kelam_hukmu, kesinlik = d10_durma_ve_sukut_yokla(
-            adim, tikanma_gecmisi, veri_lifi=n)
+            adim, tikanma_gecmisi, veri_lifi=n,
+            psi_durum=np.sqrt(np.clip(P[baglam[-1]], 0.0, None)),
+            eylem_vektoru=mecz_raporu["nakil_sicramasi"], kalp=kalp)
         adim_muhakeme["kelam_hukmu"] = kelam_hukmu
         adim_muhakeme["kesinlik"] = kesinlik
 
