@@ -5709,8 +5709,24 @@ def s0_s2_ozerk_gaye_turet(dahili_tenakuzlar: Dict[str, float],
     return max(gaye_skorlari.items(), key=lambda x: x[1])[0]
 
 
+_S0_IC_HAL_HAVUZU: Dict[str, Dict[int, float]] = {"tenakuzlar": {}, "entropiler": {}}
+
+
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
+    s0_vakum_tetiklendi = False
+    s0_secilen_gaye: Optional[int] = None
+
+    if len(w) == 0:
+        secilen_gaye = s0_s2_ozerk_gaye_turet(_S0_IC_HAL_HAVUZU["tenakuzlar"],
+                                              _S0_IC_HAL_HAVUZU["entropiler"])
+        if secilen_gaye == "VAKUM_DURUMU":
+            return {"hata": "S0 VAKUM: İç hâl havuzu boş, özerk gaye üretilemedi",
+                    "detay": {"tenakuzlar": {}, "entropiler": {}}}
+        s0_vakum_tetiklendi = True
+        s0_secilen_gaye = int(secilen_gaye)
+        w = [s0_secilen_gaye, (s0_secilen_gaye + 1) % max(2, n)]
+
     gecit_raporu = d0_gecit_nedensellik_teftisi(
         w, [((w[i],), w[i + 1]) for i in range(len(w) - 1)])
     if not gecit_raporu["gecit_onayi"]:
@@ -5784,6 +5800,11 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     kulli_ispat = OperadSilsile(Dogal(), oncutler_terim, silsile_adimlari,
                                 dogal_sayi(nihai_hedef))
     kulli_sahit_gecerli = ispat_sahidini_dogrula(kulli_ispat, orijinal_baglam, nihai_hedef)
+
+    p_hedef_satiri = P[nihai_hedef]
+    entropi_hedef = float(-np.sum(p_hedef_satiri * np.log(p_hedef_satiri + 1e-12)))
+    _S0_IC_HAL_HAVUZU["tenakuzlar"][nihai_hedef] = float(muhakemeler[-1].get("kohomolojik_engel", 0.0))
+    _S0_IC_HAL_HAVUZU["entropiler"][nihai_hedef] = entropi_hedef
 
     turetilen_kategori = turet_1_kategori(orijinal_baglam, P, silsile_adimlari)
     turetilen_kume = turet_ayrik_kume(turetilen_kategori.nesneler, P)
@@ -5924,5 +5945,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "theta_cartan_birikimi": theta_cartan,
         "d8a_mutabakat_raporu": mutabakat_raporu,
         "d9_balyalama_raporu": balyalama_raporu,
+        "s0_vakum_tetiklendi": s0_vakum_tetiklendi,
+        "s0_secilen_gaye": s0_secilen_gaye,
         "detay": tayf_bilgisi
     }
