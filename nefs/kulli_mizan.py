@@ -1348,31 +1348,38 @@ class Hamiltonyen:
             return "meleke"
         return ""
 
-    def alan(self) -> np.ndarray:
-        i, _ad, _a = self.yavas_mod()
-        V = self.kuplaj()
-        a = self.h + self.beta * V[:, i]
-        a[i] = self.h[i]
-        return np.abs(a)
-
     def nispetler(self) -> Dict[str, float]:
         assert self.h.size, "Ĥ boş -- nispet kuplajsız çıkarılamaz"
-        a = self.alan()
+        V = self.kuplaj()
+        H_birlesik = np.diag(self.h) + V
+        H_birlesik = 0.5 * (H_birlesik + H_birlesik.T)
+        _ozdegerler, ozvektorler = np.linalg.eigh(H_birlesik)
+        taban_vektoru = ozvektorler[:, 0]
+        pay = np.abs(taban_vektoru) ** 2
+        pay /= (np.sum(pay) + 1e-12)
         o: Dict[str, float] = {}
         for j, ad in enumerate(self.adlar):
             ob = self._obek(str(ad))
             if ob:
-                o[ob] = o.get(ob, 0.0) + float(a[j])
+                o[ob] = o.get(ob, 0.0) + float(pay[j])
         top = float(sum(o.values()))
         assert top > 0.0, (
-            "Ĥ'in şartlı alanı sıfır -- λ kuplajdan türetilemez "
+            "Ĥ'in taban durumu sıfır -- λ kuplajdan türetilemez "
             "(ferman 5: sessiz ikame yasak)")
         return {k: v / top for k, v in o.items()}
 
     def kuplaj(self) -> np.ndarray:
         h = self.h
-        V = np.outer(np.abs(h), np.abs(h))
-        np.fill_diagonal(V, 0.0)
+        n = h.size
+        V = np.zeros((n, n), float)
+        for i in range(n):
+            for j in range(i + 1, n):
+                ob_i = self._obek(str(self.adlar[i]))
+                ob_j = self._obek(str(self.adlar[j]))
+                if ob_i == ob_j:
+                    V[i, j] = V[j, i] = float(abs(h[i] * h[j]))
+                else:
+                    V[i, j] = V[j, i] = -float(abs(h[i] * h[j]))
         return V
 
     def enerji(self) -> float:
@@ -1392,6 +1399,7 @@ class Hamiltonyen:
         return i, self.adlar[i], float(agir[i])
 
     def taban_durumu(self) -> Dict[str, Any]:
+        from .mukayese import alem_kur
         i, ad, agir = self.yavas_mod()
         V = self.kuplaj()
         alem = alem_kur(V)
@@ -1421,6 +1429,7 @@ class Hamiltonyen:
 
 
 def balyala(hafiza, fock: FockUzayi) -> Dict[str, Any]:
+    from .mukayese import alem_kur
     kayitlar = list(getattr(hafiza, "kayitlar", []) or [])
     if not kayitlar:
         return {"kayıt": 0, "balya": 0, "doygunluk": 0.0, "taşınan": 0,
