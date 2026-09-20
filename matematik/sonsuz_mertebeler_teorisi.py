@@ -5716,32 +5716,57 @@ class MonoidalKategori:
                 self.tensor_oklari[(ok1, ok2)] = (xu, yv)
 
 
+_ZINCIR_GECIS_ESIGI = 0.01
+
+
 def silsile_adimlarini_bagla(muhakemeler: List[Dict[str, Any]],
                              orijinal_baglam: Tuple[int, ...],
                              nihai_hedef: int,
                              P: np.ndarray,
                              X_tip: Terim,
-                             gecis_esigi: float = 0.01) -> List[Tuple[Terim, Terim]]:
+                             norm_korollalar: Optional[Dict[Tuple[Tuple[int, ...], int], float]] = None,
+                             gecis_esigi: float = _ZINCIR_GECIS_ESIGI) -> List[Tuple[Terim, Terim]]:
     if not muhakemeler:
         return []
 
+    norm_korollalar = norm_korollalar or {}
     adimlar: List[Tuple[Terim, Terim]] = []
     mevcut_oncutler = [dogal_sayi(t) for t in orijinal_baglam]
     k = len(muhakemeler)
+    baglam_yol = orijinal_baglam
 
     for idx, adim in enumerate(muhakemeler):
         y_ara = adim.get("ara_durak")
+
         if y_ara is None:
+            dogrudan_hedef = adim.get("hedef")
+            if dogrudan_hedef is None:
+                continue
+            kaynak_id = int(baglam_yol[-1])
+            hedef_id = int(dogrudan_hedef)
+            destek = max(float(P[kaynak_id, hedef_id]),
+                        float(norm_korollalar.get((baglam_yol, hedef_id), 0.0)))
+            if destek < gecis_esigi and kaynak_id != hedef_id:
+                return []
+            agac = OperadAgac(X_tip, mevcut_oncutler, dogal_sayi(kaynak_id),
+                              "agac_dogrudan_%d" % idx)
+            ok = YonluOk(X_tip, dogal_sayi(kaynak_id), dogal_sayi(hedef_id),
+                        "dogrudan_oku_%d" % idx)
+            adimlar.append((agac, ok))
+            mevcut_oncutler = tuple(list(mevcut_oncutler[1:]) + [dogal_sayi(hedef_id)])
             continue
 
         y_ara_id = int(y_ara)
+        baglam_yol_sonraki = tuple(list(baglam_yol[1:]) + [y_ara_id])
         if idx == k - 1:
             hedef_id = int(nihai_hedef)
         else:
             sonraki_ara = muhakemeler[idx + 1].get("ara_durak")
             hedef_id = int(sonraki_ara) if sonraki_ara is not None else int(nihai_hedef)
 
-        if P[y_ara_id, hedef_id] < gecis_esigi and y_ara_id != hedef_id:
+        destek = max(float(P[y_ara_id, hedef_id]),
+                    float(norm_korollalar.get((baglam_yol_sonraki, hedef_id), 0.0)))
+        if destek < gecis_esigi and y_ara_id != hedef_id:
             return []
 
         agac = OperadAgac(X_tip, mevcut_oncutler, dogal_sayi(y_ara_id), "agac_hop_%d" % idx)
@@ -5749,6 +5774,7 @@ def silsile_adimlarini_bagla(muhakemeler: List[Dict[str, Any]],
         adimlar.append((agac, ok))
 
         mevcut_oncutler = tuple(list(mevcut_oncutler[1:]) + [dogal_sayi(hedef_id)])
+        baglam_yol = baglam_yol_sonraki
 
     return adimlar
 
@@ -6991,7 +7017,7 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         y_z_gucu = float(P[y, z])
         bileske_guven = girdi_y_gucu * y_z_gucu
 
-        if bileske_guven > 1e-6:
+        if girdi_y_gucu >= _ZINCIR_GECIS_ESIGI and bileske_guven > 1e-6:
             koherans_cezasi = float(Asim[son_token, y] * Asim[y, z] * tikanma)
             net_skor = bileske_guven * (1.0 - 0.5 * koherans_cezasi)
             holonomi = analitik_lie_bargmann_adimi(son_token, y, z, P, Asim)
@@ -7936,7 +7962,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         adim += 1
 
     nihai_hedef = muhakemeler[-1]["hedef"]
-    silsile_adimlari = silsile_adimlarini_bagla(muhakemeler, orijinal_baglam, nihai_hedef, P, Dogal())
+    silsile_adimlari = silsile_adimlarini_bagla(muhakemeler, orijinal_baglam, nihai_hedef, P, Dogal(),
+                                                norm_korollalar=norm_korollalar)
     oncutler_terim = [dogal_sayi(t) for t in orijinal_baglam]
     if silsile_adimlari:
         kulli_ispat = OperadSilsile(Dogal(), oncutler_terim, silsile_adimlari,
