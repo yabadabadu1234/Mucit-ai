@@ -6868,6 +6868,26 @@ class IkiYonluMertebeAsansoru:
             hukum = "MERTEBE_KORUNDU_n%d" % self.mevcut_mertebe
         return self.mevcut_mertebe, hukum
 
+    def asagi_in_intac_lifli(self, tensor: Dict[str, Any], kat: "Turetilen1Kategori",
+                             hedef_nesne: int, ust_koherans_tam_mi: bool
+                             ) -> Tuple[int, str, Optional[np.ndarray]]:
+        inis = tip_tensoru_asagi_in(tensor, hedef_nesne, kat)
+        gercek_koheran = bool(ust_koherans_tam_mi and inis["bulundu"]
+                              and len(inis["hom_kurallari"]) > 0)
+        if gercek_koheran and self.mevcut_mertebe > 1:
+            self.mevcut_mertebe -= 1
+            hukum = ("MERTEBE_İNDİ_SOMUTLAŞMA_LİFLİ_n%d (hom=%d, lif_boyu=%d)"
+                     % (self.mevcut_mertebe, len(inis["hom_kurallari"]),
+                        int(inis["lif"].size)))
+            lif_vektoru = inis["lif"]
+        else:
+            sebep = ("KOHERANS_YOK" if not ust_koherans_tam_mi
+                    else ("NESNE_BULUNAMADI" if not inis["bulundu"]
+                          else "HOM_BOŞ"))
+            hukum = "MERTEBE_KORUNDU_LİFSİZ_n%d (%s)" % (self.mevcut_mertebe, sebep)
+            lif_vektoru = None
+        return self.mevcut_mertebe, hukum, lif_vektoru
+
 
 def cok_mertebeli_girisim_karari(kule: DereceliMertebeKulesi, n_boyut: int,
                                   yasak: Set[int]) -> Tuple[int, np.ndarray, Dict[str, float]]:
@@ -8468,7 +8488,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     suanki_mertebe, tirmanis_hukmu = asansor.yukari_tirman(alt_engel=anlik_engel)
 
     burhan_tam_mi = bool(kulli_sahit_gecerli and anlik_engel < 0.05)
-    inilmis_mertebe, inis_hukmu = asansor.asagi_in_intac(ust_koherans_tam_mi=burhan_tam_mi)
+    inilmis_mertebe, inis_hukmu, inis_lif_vektoru = asansor.asagi_in_intac_lifli(
+        qudit_tip_tensoru, turetilen_kategori, nihai_hedef,
+        ust_koherans_tam_mi=burhan_tam_mi)
 
     cok_mertebeli_hedef, girisim_vektoru, katilim_raporu = cok_mertebeli_girisim_karari(
         kule=mertebe_kulesi, n_boyut=n, yasak=set(orijinal_baglam))
@@ -8715,6 +8737,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "asansor_tirmanis_hukmu": tirmanis_hukmu,
         "asansor_inis_hukmu": inis_hukmu,
         "aktif_asansor_mertebesi": inilmis_mertebe,
+        "asansor_inis_lif_vektoru": inis_lif_vektoru,
         "cok_mertebeli_nihai_hedef": cok_mertebeli_hedef,
         "mertebeler_arasi_katilim_payi": katilim_raporu,
         "detay": tayf_bilgisi
