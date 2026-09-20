@@ -7,7 +7,7 @@ import math
 
 import numpy as np
 
-from .matchgate import matchgate_mi
+from nefs.matchgate import matchgate_mi
 
 __all__ = ["QuditAyar", "QuditYazmac", "Iz",
            "sektor_beyani", "sektor_metni", "senet_beyani"]

@@ -5,12 +5,12 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .musahede import gorev_dizisi, gorevleri_getir
+from nefs.musahede import gorev_dizisi, gorevleri_getir
 from ogrenme.optimize import as_gek_adimi, ayrik_mertebede_sicra
 
-from . import melekeler as mertebe
-from .melekeler import QNefs
-from .zihin_durumu import QAyar, QYazmac
+from nefs import melekeler as mertebe
+from nefs.melekeler import QNefs
+from nefs.zihin_durumu import QAyar, QYazmac
 
 __all__ = ["ornekler", "ornek_bol", "belirtecleri_kodla",
            "adayin_tuttugu",
@@ -50,9 +50,9 @@ def belirtecleri_kodla(belirtecler: Sequence[int], kubit: int = 4,
 def ornekler(gorevler: Sequence, azami: int = 24, pencere: int = 8,
              sozluk: int = 0, tohum: int = 0, taban: int = 16,
              basamak: int = 0) -> List[Tuple[List[int], int, str, int]]:
-    from .belirtec import basamak_sayisi, tip_vektoru
-    from .musahede import soyutlama_oku
-    from .belirtec import belirtecle
+    from nefs.belirtec import basamak_sayisi, tip_vektoru
+    from nefs.musahede import soyutlama_oku
+    from nefs.belirtec import belirtecle
 
     rng = np.random.default_rng(tohum)
     tb = max(2, int(taban))
@@ -212,7 +212,7 @@ def egit(nefs: QNefs, veri: Sequence[Tuple[List[int], int]],
 
 def _degerlendir_mudrike(nefs, gorevler: Sequence, azami: int,
                          derinlik: int) -> Dict[str, object]:
-    from .kulli_kayip import suz as _mudrike
+    from nefs.kulli_kayip import suz as _mudrike
 
     deneme = cozulen = konusan = yanlis = sukut = 0
     hucre: List[float] = []
@@ -258,7 +258,7 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
                 pencere: int = 8, sozluk: int = 16,
                 azami_uret: int = 0, mudrike_ile: bool = False,
                 derinlik: int = 2) -> Dict[str, object]:
-    from .belirtec import basamak_sayisi as _basamak, tip_vektoru as _tip
+    from nefs.belirtec import basamak_sayisi as _basamak, tip_vektoru as _tip
 
     if mudrike_ile:
         return _degerlendir_mudrike(nefs, gorevler, azami, derinlik)
@@ -279,7 +279,7 @@ def degerlendir(nefs: QNefs, gorevler: Sequence, azami: int = 8,
             atlanan += 1
             deneme -= 1
             continue
-        from .soyle import _uret
+        from nefs.soyle import _uret
         uretilen, _bedel, _sukutlar, _budanan = _uret(
             nefs, baglam, int(pencere), int(tb))
         duz = 1.0 / float(tb)

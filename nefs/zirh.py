@@ -10,7 +10,7 @@ import numpy as np
 
 from matematik.sonsuz_mertebeler_teorisi import Uzay
 from kuantum.stabilizer import StabilizerDurum
-from nefs.qyazmac import QuditYazmac as Yazmac
+from kuantum.qyazmac import QuditYazmac as Yazmac
 from matematik.mizan import Onerme, Tablo, deg, degil, ise, ve
 from nefs.zihin_durumu import QYazmac
 
@@ -604,7 +604,7 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
 
         from main.egitim import KISA_CPU
         from .melekeler import QNefs
-        from .qegitim import belirtecleri_kodla, ornekler
+        from kuantum.qegitim import belirtecleri_kodla, ornekler
         a = ayar or KISA_CPU
         nefs = QNefs(a.tohum, a.qayar())
         nefs.idrak_et(np.eye(2, a.veri_lifi))
@@ -612,7 +612,7 @@ def taahhude_yuzlestir(sinif=None, dS=None, nefs=None,
                         pencere=a.pencere, sozluk=a.sozluk,
                         taban=int(a.veri_lifi),
                         basamak=int(a.belirtec_basamak))
-        from .qegitim import ornek_bol
+        from kuantum.qegitim import ornek_bol
         E = np.stack([belirtecleri_kodla(b, a.veri_lifi, a.veri_lifi)
                       for b, _h, _c, _m in (ornek_bol(o) for o in veri)])
     _q = nefs.idrak_et(E, olcum=True)

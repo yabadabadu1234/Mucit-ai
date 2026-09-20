@@ -1305,7 +1305,7 @@ class QNefs:
                  gaye: bool = True) -> None:
         self.ayar = ayar or QAyar(tohum=tohum)
         from .donanim import bellek_haddi
-        from .parametre_yazmaci import ParametreAyari, ParametreYazmaci
+        from kuantum.parametre_yazmaci import ParametreAyari, ParametreYazmaci
         self.pq = ParametreYazmaci(
             int(getattr(self.ayar, "veri_lifi", 64)), 1, bellek_haddi(),
             ParametreAyari(tohum=int(tohum)))
@@ -1358,14 +1358,14 @@ class QNefs:
         q = QYazmac(n_satir, ayar)
         self.parametre_yazmacini_kur(int(q.y.d), int(B))
         if self.kan is None:
-            from .nqs import ChebyshevKan, NqsAyari
+            from kuantum.nqs import ChebyshevKan, NqsAyari
             self.kan = ChebyshevKan(
                 int(self.ayar.veri_lifi), int(n_satir),
                 NqsAyari(tohum=int(self.ayar.tohum)))
         q.kan = self.kan
         q.pq = None if self._defter_aciliyor else self.pq
         if self.mahalli is None:
-            from .mahalli_yazmac import MahalliYazmac
+            from kuantum.mahalli_yazmac import MahalliYazmac
             self.mahalli = MahalliYazmac(int(self.ayar.veri_lifi))
         q.mahalli = self.mahalli
         q.y.mahalli = self.mahalli

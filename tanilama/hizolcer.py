@@ -64,7 +64,7 @@ class Hizolcer:
         from ogrenme.mecz import (mecz_beyani, yetim_bloklar,
                                   adres_beyani)
         from nefs.kulli_mizan import kefe_kimiltisi
-        from nefs.qyazmac import sektor_beyani
+        from kuantum.qyazmac import sektor_beyani
         s = sektor_beyani()
         m = munasebet_beyani()
         k = keyfiyet_beyani()

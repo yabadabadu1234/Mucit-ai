@@ -32,15 +32,15 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
     from matematik.sonsuz_mertebeler_teorisi import hendese_beyani, lif_beyani
     from nefs.keyfiyet import keyfiyet_beyani
     from nefs.kulli_mizan import fock_beyani, hamiltonyen_beyani
-    from nefs.mahalli_yazmac import mahalli_beyani, uzunluk_beyani
+    from kuantum.mahalli_yazmac import mahalli_beyani, uzunluk_beyani
     from nefs.mihenk import safha_beyani
     from nefs.mukayese import (cozum_beyani, mukayese_melekesi_beyani,
                                omur_beyani, vecih_beyani)
     from nefs.munasebet import munasebet_beyani
-    from nefs.nqs import nqs_beyani
-    from nefs.parametre_yazmaci import kenet_beyani, parametre_beyani
-    from nefs.qcekirdek import cekirdek_beyani
-    from nefs.qyazmac import sektor_beyani, senet_beyani
+    from kuantum.nqs import nqs_beyani
+    from kuantum.parametre_yazmaci import kenet_beyani, parametre_beyani
+    from kuantum.qcekirdek import cekirdek_beyani
+    from kuantum.qyazmac import sektor_beyani, senet_beyani
     from nefs.sadakat import sadakat_devre_beyani
     from nefs.veri_kapisi import kapi_beyani
     from ogrenme.mecz import mecz_beyani
@@ -218,9 +218,9 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from nefs.keyfiyet import keyfiyet_metni
         from tanilama.hizolcer import hiz_metni
         from main.kulliyat import kulliyat_beyani
-        from nefs.parametre_yazmaci import parametre_metni, kenet_metni
-        from nefs.nqs import nqs_metni, tur_metni
-        from nefs.mahalli_yazmac import mahalli_metni, uzunluk_metni
+        from kuantum.parametre_yazmaci import parametre_metni, kenet_metni
+        from kuantum.nqs import nqs_metni, tur_metni
+        from kuantum.mahalli_yazmac import mahalli_metni, uzunluk_metni
         from nefs.veri_kapisi import kapi_metni
         from nefs.mukayese import mukayese_melekesi_metni
         from nefs.hafiza import tertip_metni
@@ -228,7 +228,7 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from kuantum.devre import devre_metni
         from nefs.mukayese import cozum_metni
         from nefs.kulli_mizan import fock_metni, hamiltonyen_metni
-        from nefs.qyazmac import sektor_metni
+        from kuantum.qyazmac import sektor_metni
         from nefs.sadakat import sadakat_devre_metni
         kn = kulli["konuşma"]
         s += ["",

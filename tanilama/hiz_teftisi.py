@@ -58,7 +58,7 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
     from nefs.kulli_mizan import kulli_mizan
     from nefs.melekeler import QNefs
     from nefs.musahede import gorevleri_getir
-    from nefs.qegitim import belirtecleri_kodla, ornekler
+    from kuantum.qegitim import belirtecleri_kodla, ornekler
 
     a = ayar or KISA_CPU
     ornek = int(ornek) if int(ornek) > 0 else int(a.ornek_sayisi)
@@ -68,7 +68,7 @@ def olc(ayar=None, ornek: int = 0, tekrar: int = 1) -> Dict[str, Any]:
                     taban=int(a.veri_lifi),
                     basamak=int(getattr(a, "belirtec_basamak", 0)))
     assert veri, "hız teftişi için veri BOŞ"
-    from nefs.qegitim import ornek_bol
+    from kuantum.qegitim import ornek_bol
     nefs = QNefs(a.tohum, a.qayar())
     nefs.idrak_et(belirtecleri_kodla(list(ornek_bol(veri[0])[0]),
                                      a.veri_lifi, a.veri_lifi))

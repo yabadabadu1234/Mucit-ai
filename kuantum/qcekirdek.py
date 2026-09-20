@@ -278,7 +278,7 @@ void mucit_birlestir(double *psi, const double *re, const double *im,
 }
 '''
 
-from .derleyici import DERLEME_DIZINI, ORTAK_BAYRAK
+from nefs.derleyici import DERLEME_DIZINI, ORTAK_BAYRAK
 
 BAYRAK = ORTAK_BAYRAK + ["-mavx512f", "-mavx512bw", "-mavx512vl",
                          "-mfma", "-funroll-loops"]
@@ -298,12 +298,12 @@ class CekirdekAyari:
 
 
 def _ozet() -> str:
-    from .derleyici import ozet
+    from nefs.derleyici import ozet
     return ozet(CEKIRDEK_C, BAYRAK)
 
 
 def derle() -> Dict[str, Any]:
-    from .derleyici import derle as _derle
+    from nefs.derleyici import derle as _derle
     return _derle("qcekirdek", CEKIRDEK_C, BAYRAK)
 
 
@@ -411,7 +411,7 @@ class Bant:
         _SAYAC["karo"] += 1
 
     def cift(self, bi: int, bj: int, G) -> None:
-        from .matchgate import matchgate_mi
+        from nefs.matchgate import matchgate_mi
         A = np.ascontiguousarray(np.asarray(G, complex).reshape(4, 4))
         mg = bool(matchgate_mi(A)[0])
         self._kapi.append((MATCHGATE if mg else CIFT,

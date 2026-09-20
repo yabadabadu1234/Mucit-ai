@@ -1226,7 +1226,7 @@ def kopru(sozluk: int = 16, kubit: int = 16,
         return Morfizm(1, kubit, phi, ad="belirteç→açı")
     if ne != "ölç":
         raise ValueError("köprü kipi bilinmiyor: %r" % (ne,))
-    from nefs.qegitim import belirtecleri_kodla
+    from kuantum.qegitim import belirtecleri_kodla
 
     T = np.arange(sozluk)
     E = belirtecleri_kodla(T, kubit, kubit)

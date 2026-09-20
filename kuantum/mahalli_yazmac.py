@@ -162,7 +162,7 @@ class MahalliYazmac:
         y = max(1, int(yigin))
         if y > self.yigin:
             gereken = int(y) * int(self.qudit) * int(self.taban) * 16
-            from .donanim import bellek_haddi
+            from nefs.donanim import bellek_haddi
             had = bellek_haddi()
             assert had is None or gereken <= int(had), (
                 "MAHALLÎ ZIRH ÖLÇÜLEN BELLEĞE SIĞMIYOR: %d qudit × %d "

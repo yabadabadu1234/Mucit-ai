@@ -87,8 +87,8 @@ def durum_yigin(c: np.ndarray, s: np.ndarray, TETA: np.ndarray,
     a = ayar or QuditAyari()
     d = int(d or a.d)
     if cekirdek != "numpy":
-        from .hizli import cekirdek as _fused
-        from .hizli import _bicimle
+        from nefs.hizli import cekirdek as _fused
+        from nefs.hizli import _bicimle
         W = np.atleast_2d(np.asarray(TETA, np.float32))
         Wg = np.stack([agirlik(d, W[i]) for i in range(W.shape[0])])
         cs = np.asarray(c, float).sum(axis=0)

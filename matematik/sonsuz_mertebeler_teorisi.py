@@ -9070,7 +9070,7 @@ def kodla(x, ne: str = KIP_TUTARLI, boyut: int = 16,
         return (u / n) if n > 1e-300 else u
 
     if ne == KIP_LIE:
-        from nefs.qudit import QuditAyari, durum
+        from kuantum.qudit import QuditAyari, durum
         a = QuditAyari(d=int(boyut), yon=max(1, min(v.size, int(boyut) - 1)))
         n_k, n_d = 4, 8
         g = np.resize(v, n_k * (n_d + 1)).reshape(n_k, n_d + 1)
@@ -9291,7 +9291,7 @@ def _yuva_sec(mertebeler: Sequence[int], boy: int) -> int:
 
 def harita_kur(nefs, veri, sozluk: int, hendese: Dict[str, Any],
               munasebet, onceki: Optional[Dict[str, Any]] = None) -> Lif:
-    from nefs.qegitim import ornek_bol
+    from kuantum.qegitim import ornek_bol
 
     veri = list(veri)
     assert veri, "silsile defteri BOŞ veriyle kurulamaz"

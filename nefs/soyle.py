@@ -79,7 +79,7 @@ def _sec(P: np.ndarray) -> int:
 
 
 def _acilis(nefs, baglam: List[int], pencere: int) -> tuple:
-    from .qegitim import belirtecleri_kodla
+    from kuantum.qegitim import belirtecleri_kodla
     taban = nefs.ayar.veri_lifi
     pen = max(1, int(pencere))
     kesitler = [baglam[i:i + pen] for i in range(0, len(baglam), pen)]
@@ -95,7 +95,7 @@ def _acilis(nefs, baglam: List[int], pencere: int) -> tuple:
 
 def _cumle(nefs, baglam: List[int], pencere: int, sozluk: int,
            vecihler, hafiza=None, netice=None) -> tuple:
-    from .qegitim import belirtecleri_kodla
+    from kuantum.qegitim import belirtecleri_kodla
     dizi = list(baglam)
     cikti: List[int] = []
     sukutlar: List[float] = []
@@ -229,7 +229,7 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
 
     ort_sukut = float(np.mean(sukutlar)) if sukutlar else 1.0
 
-    from .qegitim import belirtecleri_kodla
+    from kuantum.qegitim import belirtecleri_kodla
     from .suphe import SupheAyari, suphe_manifoldu
     _E = belirtecleri_kodla(list(uretilen)[-int(pencere):] or [0],
                             nefs.ayar.veri_lifi, nefs.ayar.veri_lifi)

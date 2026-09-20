@@ -91,7 +91,7 @@ def faz_cevir(psi, teta, xp=None):
     d = P.shape[-1]
     t = np.asarray(teta, float).reshape(-1)
     if t.size != d:
-        from .qudit import agirlik
+        from kuantum.qudit import agirlik
         t = agirlik(d, t)
     faz = _bicimle(xp, np.exp(-1j * t))
     return P * faz

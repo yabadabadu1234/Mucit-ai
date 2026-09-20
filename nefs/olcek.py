@@ -96,7 +96,7 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     from .zihin_durumu import QAyar
 
     c = float(k.comert)
-    from .qcekirdek import HAT_TIPI
+    from kuantum.qcekirdek import HAT_TIPI
     bayt = int(np.dtype(HAT_TIPI).itemsize)
     ob = onbellekler()
     L1 = int(ob.get("L1d") or 32768)

@@ -505,7 +505,7 @@ def _laplasyen(baglamlar: Sequence[Sequence[int]], n: int) -> np.ndarray:
 
 
 def _ileri(nefs, veri, sozluk: int, ayar=None) -> Dict[str, Any]:
-    from .qegitim import belirtecleri_kodla, ornek_bol
+    from kuantum.qegitim import belirtecleri_kodla, ornek_bol
     haller: List[np.ndarray] = []
     lifliler: List[np.ndarray] = []
     hedefler: List[int] = []
@@ -674,7 +674,7 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
     psi /= nrm
     L_ham = float(np.real(np.vdot(psi, D @ psi)))
     if int(a.qsvt) > 0 and psi.size >= 4:
-        from .qudit import QuditAyari, suz
+        from kuantum.qudit import QuditAyari, suz
         qa = QuditAyari(d=int(psi.size), qsvt=int(a.qsvt),
                         derece=int(a.qudit_derece), yon=int(a.qudit_yon))
         harmonik = np.asarray(suz(D, psi, qa), complex).reshape(-1)
@@ -1000,7 +1000,7 @@ def rapor(profil: str = "kısa") -> str:
     from main.egitim import PROFILLER
     from nefs.melekeler import QNefs
     from nefs.musahede import gorevleri_getir
-    from nefs.qegitim import ornekler
+    from kuantum.qegitim import ornekler
 
     ayar = PROFILLER.get(profil, PROFILLER["kısa"])
     a = MizanAyari(tohum=ayar.tohum, cevrim_sayisi=12)

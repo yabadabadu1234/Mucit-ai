@@ -77,7 +77,7 @@ def _tasma(bag: Sequence[int], hedef: int, taban: int) -> int:
 
 def _idrak(nefs, bag: Sequence[int], hedef: int,
            taban: int) -> np.ndarray:
-    from .qegitim import belirtecleri_kodla
+    from kuantum.qegitim import belirtecleri_kodla
     dizi = [int(x) for x in bag] + [int(hedef)]
     E = belirtecleri_kodla(dizi, int(taban), int(taban))
     q = nefs.idrak_et(E)
@@ -142,7 +142,7 @@ def parca_haddi(taban: int) -> int:
 def veri_kapisi(veri: Sequence[Any],
                 ayar: Optional[VeriKapisiAyari] = None,
                 nefs=None, hafiza=None) -> Dict[str, Any]:
-    from .qegitim import ornek_bol
+    from kuantum.qegitim import ornek_bol
     from .mukayese import vecihleri_istihrac
     a = ayar or VeriKapisiAyari()
     gelen = list(veri)

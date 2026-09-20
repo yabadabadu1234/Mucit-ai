@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from .qyazmac import QuditAyar, QuditYazmac
+from kuantum.qyazmac import QuditAyar, QuditYazmac
 
 __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI", "donme",
            "donme_turevi", "donme_dilim", "donme_dilim_turevi",

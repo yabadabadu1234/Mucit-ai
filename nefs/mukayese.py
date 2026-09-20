@@ -1141,10 +1141,10 @@ def _kanun_nispetleri() -> Dict[str, float]:
 
 def _hal_kur(baglam: Sequence[Sequence[int]], nefs, taban: int
              ) -> np.ndarray:
-    from .qegitim import belirtecleri_kodla
+    from kuantum.qegitim import belirtecleri_kodla
     diz = [int(x) for o in baglam for x in list(o)]
     assert diz, "bağlam BOŞ -- sınır şartı yok demektir"
-    from .nqs import turun_genligi
+    from kuantum.nqs import turun_genligi
     E = belirtecleri_kodla(diz, int(taban), int(taban))
     q = nefs.idrak_et(E)
     return np.asarray(turun_genligi(nefs, q).hal, complex).reshape(-1)

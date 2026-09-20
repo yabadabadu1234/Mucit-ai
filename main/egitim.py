@@ -31,11 +31,11 @@ from nefs.mihenk import (MIHENK, nobet_kur, safha,
                          safha_beyani, safha_sifirla)
 from nefs.veri_kapisi import (VeriKapisiAyari, veri_kapisi,
                               kapi_beyani, kapi_tertibi)
-from nefs.qcekirdek import cekirdek_beyani
-from nefs.parametre_yazmaci import (ParametreAyari, ParametreYazmaci,
+from kuantum.qcekirdek import cekirdek_beyani
+from kuantum.parametre_yazmaci import (ParametreAyari, ParametreYazmaci,
                                     parametre_beyani, kenet_beyani)
-from nefs.nqs import nqs_beyani, turun_genligi, tur_beyani
-from nefs.mahalli_yazmac import (mahalli_beyani, uzunluk_beyani,
+from kuantum.nqs import nqs_beyani, turun_genligi, tur_beyani
+from kuantum.mahalli_yazmac import (mahalli_beyani, uzunluk_beyani,
                                  uzunluk_genligi)
 from tanilama.hizolcer import (Hizolcer, hizolcer_bagla,
                                hizolcer_beyani)
@@ -59,7 +59,7 @@ from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            vecih_beyani,
                            vecihleri_istihrac, yirtiklari_tertiple)
 from kuantum.devre import devre_beyani
-from nefs.qyazmac import sektor_beyani
+from kuantum.qyazmac import sektor_beyani
 from matematik.sonsuz_mertebeler_teorisi import (HendeseAyari, hendese_teshisi,
                                                  hendese_beyani, harita_kur,
                                                  lif_beyani)
@@ -404,7 +404,7 @@ def d0_gecit(Z: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def d1_olcu(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from nefs.qegitim import ornekler
+    from kuantum.qegitim import ornekler
     ayar = Z["ayar"]
     gorevler = Z["gorevler"]
     hepsi = list(gorevler) if gorevler is not None else \
@@ -436,7 +436,7 @@ def d1_olcu(Z: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def d2_hendese(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from nefs.qegitim import ornek_bol as _bol
+    from kuantum.qegitim import ornek_bol as _bol
     ayar = Z["ayar"]
     gelen = Z["gelen"]
     hendese = hendese_teshisi(
@@ -534,7 +534,7 @@ def d5_uzay(Z: Dict[str, Any]) -> Dict[str, Any]:
     from nefs.mukayese import (ana_superpozisyon, cozum_uzayi_ac,
                                cozum_uzayi_kapat,
                                mantik_filtresi, mukayese_filtresi)
-    from nefs.qegitim import ornek_bol as _ornek_bol
+    from kuantum.qegitim import ornek_bol as _ornek_bol
     ayar = Z["ayar"]
     veri = Z["veri"]
     nefs = Z["nefs"]
@@ -762,7 +762,7 @@ def d9_kapanis(Z: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from nefs.qegitim import degerlendir
+    from kuantum.qegitim import degerlendir
     ayar = Z["ayar"]
     veri = Z["veri"]
     d = Z["d"]

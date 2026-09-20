@@ -277,7 +277,7 @@ class Memuriyet:
         return int(bas), int(kullanilan)
 
     def _durum(self, p: np.ndarray):
-        from nefs.qegitim import belirtecleri_kodla, ornek_bol
+        from kuantum.qegitim import belirtecleri_kodla, ornek_bol
         self.nefs.yukle(np.asarray(p, float))
         bag = ornek_bol(self.kume[0])[0]
         E = belirtecleri_kodla(list(bag), self.nefs.ayar.veri_lifi,
@@ -291,9 +291,9 @@ class Memuriyet:
                                   mahalli_egimi, mutabakat,
                                   senet_kapsami, senet_ileri_sadakati)
         n_par = int(np.asarray(p, float).size)
-        from nefs.qyazmac import SENET_ACIK
+        from kuantum.qyazmac import SENET_ACIK
         self.nefs.yukle(np.asarray(p, float))
-        from nefs.qegitim import belirtecleri_kodla, ornek_bol
+        from kuantum.qegitim import belirtecleri_kodla, ornek_bol
         bag = ornek_bol(self.kume[0])[0]
         E = belirtecleri_kodla(list(bag), self.nefs.ayar.veri_lifi,
                                self.nefs.ayar.veri_lifi)
@@ -308,12 +308,12 @@ class Memuriyet:
         _ADRES.update(q.y.adres_beyani())
         _ADRES["lif"] = tuple(int(x) for x in q.y.ayar.lif)
         _ADRES["bağlam"] = int(np.asarray(bag).size)
-        from nefs.parametre_yazmaci import parametre_beyani
+        from kuantum.parametre_yazmaci import parametre_beyani
         _pq = parametre_beyani(getattr(self.nefs, "pq", None))
         _ADRES["p_qudit"] = _pq.get("qudit", 0)
         _ADRES["p_taban"] = _pq.get("taban", 0)
         _ADRES["p_mahallî"] = _pq.get("mahallî_serbestlik", 0)
-        from nefs.nqs import nqs_beyani
+        from kuantum.nqs import nqs_beyani
         _k = nqs_beyani(getattr(self.nefs, "kan", None))
         _ADRES["kan_katsayı"] = _k.get("katsayı", 0)
         _ADRES["kan_qudit"] = _k.get("qudit", 0)
