@@ -2136,6 +2136,10 @@ def _esit(a: Terim, b: Terim, derinlik: int = 0) -> bool:
         return (_esit(a.fonk, b.fonk, derinlik) and _esit(a.arg, b.arg, derinlik))
     if isinstance(a, (Birinci, Ikinci)):
         return _esit(a.cift, b.cift, derinlik)
+    if isinstance(a, YonluHom) and isinstance(b, YonluHom):
+        return (_esit(a.cizgi, b.cizgi, derinlik) and
+                _esit(a.kaynak, b.kaynak, derinlik) and
+                _esit(a.hedef, b.hedef, derinlik))
     if isinstance(a, OperadHom) and isinstance(b, OperadHom):
         if len(a.oncutler) != len(b.oncutler):
             return False
@@ -2773,18 +2777,31 @@ def sentezle(t: Terim, g: Baglam) -> Deger:
         tip_f = sentezle(t.f, g)
         tip_g = sentezle(t.g, g)
 
-        f_hedef = tip_f.hedef if isinstance(tip_f, (DYonluHom, DOperadHom)) else None
-        g_kaynak = tip_g.kaynak if isinstance(tip_g, DYonluHom) else None
+        f_hedef = getattr(tip_f, "hedef", None)
+        if isinstance(tip_g, DYonluHom):
+            g_kaynak = tip_g.kaynak
+            g_kalan_oncutler = ()
+        elif isinstance(tip_g, DOperadHom) and tip_g.oncutler:
+            g_kaynak = tip_g.oncutler[0]
+            g_kalan_oncutler = tip_g.oncutler[1:]
+        else:
+            g_kaynak = None
+            g_kalan_oncutler = ()
 
         if f_hedef is None or g_kaynak is None:
-            raise DenetimHatasi("YonluTerkip: f ve g yönlü çıkarım tipleri olmalıdır")
+            raise DenetimHatasi("YonluTerkip: f ve g geçerli yönlü çıkarım tipleri olmalıdır")
         if not g.esit_mi(f_hedef, g_kaynak):
             raise DenetimHatasi(
-                "YonluTerkip uç uyuşmazlığı: f'in hedefi g'nin kaynağı olmalı")
+                "YonluTerkip uç uyuşmazlığı: f'in hedefi g'nin öncülü olmalıdır")
 
-        if isinstance(tip_f, DOperadHom):
-            return DOperadHom(tip_f.cizgi, tip_f.oncutler, tip_g.hedef)
-        return DYonluHom(tip_f.cizgi, tip_f.kaynak, tip_g.hedef)
+        f_oncutler = tip_f.oncutler if isinstance(tip_f, DOperadHom) else (tip_f.kaynak,)
+        yeni_oncutler = tuple(f_oncutler) + tuple(g_kalan_oncutler)
+
+        cizgi = tip_f.cizgi
+        if (len(yeni_oncutler) == 1 and isinstance(tip_f, DYonluHom)
+                and isinstance(tip_g, DYonluHom)):
+            return DYonluHom(cizgi, yeni_oncutler[0], tip_g.hedef)
+        return DOperadHom(cizgi, yeni_oncutler, tip_g.hedef)
     if isinstance(t, Deg):
         if t.ad not in g.tipler:
             raise DenetimHatasi("kapsamda olmayan değişken: %s" % t.ad)
@@ -4783,8 +4800,15 @@ def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
     }
 
 
+def asimetri_guncelle(P: np.ndarray) -> np.ndarray:
+    pay = np.abs(P - P.T)
+    payda = P + P.T + 1e-12
+    return pay / payda
+
+
 def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
-                        norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float]
+                        norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float],
+                        yasakli_hedefler: Optional[Set[int]] = None
                         ) -> Dict[str, Any]:
     P = tayf_bilgisi["P"]
     P2 = tayf_bilgisi["P2"]
@@ -4792,7 +4816,10 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
     Kan_rez = tayf_bilgisi["Kan_rezidusu"]
     n = P.shape[0]
 
+    yasak = set(yasakli_hedefler or ())
+
     son_token = int(baglam[-1]) if baglam else 0
+    yasak.add(son_token)
 
     baglam_cikis_gucu = np.zeros(n, dtype=float)
     for (girdi, cikti), prob in norm_korollalar.items():
@@ -4800,6 +4827,9 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
             baglam_cikis_gucu[cikti] += prob
 
     tikaniklik = np.maximum(0.0, P2[son_token] - baglam_cikis_gucu)
+    for y_idx in yasak:
+        if y_idx < n:
+            tikaniklik[y_idx] = 0.0
     toplam_tikaniklik = float(np.sum(tikaniklik))
 
     if toplam_tikaniklik > 1e-5:
@@ -4807,6 +4837,9 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         hedef_turu = "açık_boynuz_çıkarımı"
     else:
         birlesik_akis = 0.5 * P[son_token] + 0.5 * baglam_cikis_gucu
+        for y_idx in yasak:
+            if y_idx < n:
+                birlesik_akis[y_idx] = -1.0
         sirali = np.argsort(birlesik_akis)
         z = int(sirali[-1])
         hedef_turu = "doğrudan_akış"
@@ -4885,19 +4918,32 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     w_arr = list(w)
     k_baglam = min(K_max - 1, len(w_arr) - 1)
-    baglam = tuple(w_arr[-k_baglam:]) if k_baglam > 0 else (w_arr[-1],)
+    orijinal_baglam = tuple(w_arr[-k_baglam:]) if k_baglam > 0 else (w_arr[-1],)
+    baglam = orijinal_baglam
 
     muhakemeler: List[Dict[str, Any]] = []
+    cozulen_hedefler: Set[int] = set()
+    kulli_ispat: Optional[Terim] = None
 
     for _ in range(azami_adim):
+        Asim = asimetri_guncelle(P)
         tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
 
-        adim_muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar)
+        adim_muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar,
+                                            yasakli_hedefler=cozulen_hedefler)
 
         sahit_gecerli = ispat_sahidini_dogrula(adim_muhakeme["ispat_sahidi"], baglam,
                                                adim_muhakeme["hedef"])
         adim_muhakeme["şahit_doğrulandı"] = sahit_gecerli
         muhakemeler.append(adim_muhakeme)
+
+        if adim_muhakeme["ispat_sahidi"] is not None:
+            if kulli_ispat is None:
+                kulli_ispat = adim_muhakeme["ispat_sahidi"]
+            else:
+                kulli_ispat = YonluTerkip(kulli_ispat, adim_muhakeme["ispat_sahidi"])
+
+        cozulen_hedefler.add(adim_muhakeme["hedef"])
 
         if (adim_muhakeme["hüküm"] == "doğrudan_tasdik"
                 or adim_muhakeme["kohomolojik_engel"] < 0.01):
@@ -4906,6 +4952,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         if adim_muhakeme["ara_durak"] is not None:
             baglam = tuple(list(baglam[1:]) + [adim_muhakeme["ara_durak"]])
 
+    nihai_hedef = muhakemeler[-1]["hedef"]
+    kulli_sahit_gecerli = ispat_sahidini_dogrula(kulli_ispat, orijinal_baglam, nihai_hedef)
+
+    Asim = asimetri_guncelle(P)
     tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
     rho = tayf_bilgisi["tayf"]
     kuantum_genlikleri = np.sqrt(rho)
@@ -4923,11 +4973,15 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "yırtık": (d_uzay + d_kat + d_op, lif_boyutu)
     }
 
+    kod_uzayi_maskesi = np.ones(lif_boyutu, dtype=float)
+    kod_uzayi_maskesi[dilimler["yırtık"][0]:dilimler["yırtık"][1]] = 0.0
+
     parite_lifi = {
         "spektral_agirliklar": rho,
         "kuantum_genlikleri": kuantum_genlikleri,
         "lif_boyutu": lif_boyutu,
         "alt_uzay_dilimleri": dilimler,
+        "kod_uzayi_maskesi": kod_uzayi_maskesi,
         "aktif_modlar": {
             "uzay_modu": bool(rho[0] > 0.15),
             "kategori_modu": bool(rho[1] > 0.15),
@@ -4941,5 +4995,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
         "muhakeme_silsilesi": muhakemeler,
         "nihai_muhakeme": muhakemeler[-1],
+        "kulli_ispat_sahidi": kulli_ispat,
+        "kulli_ispat_dogrulandi": kulli_sahit_gecerli,
         "detay": tayf_bilgisi
     }
