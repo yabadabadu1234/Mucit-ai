@@ -5710,6 +5710,108 @@ class MonoidalKategori:
                 self.tensor_oklari[(ok1, ok2)] = (xu, yv)
 
 
+def silsile_adimlarini_bagla(muhakemeler: List[Dict[str, Any]],
+                             orijinal_baglam: Tuple[int, ...],
+                             nihai_hedef: int,
+                             P: np.ndarray,
+                             X_tip: Terim,
+                             gecis_esigi: float = 0.01) -> List[Tuple[Terim, Terim]]:
+    if not muhakemeler:
+        return []
+
+    adimlar: List[Tuple[Terim, Terim]] = []
+    mevcut_oncutler = [dogal_sayi(t) for t in orijinal_baglam]
+    k = len(muhakemeler)
+
+    for idx, adim in enumerate(muhakemeler):
+        y_ara = adim.get("ara_durak")
+        if y_ara is None:
+            continue
+
+        y_ara_id = int(y_ara)
+        if idx == k - 1:
+            hedef_id = int(nihai_hedef)
+        else:
+            sonraki_ara = muhakemeler[idx + 1].get("ara_durak")
+            hedef_id = int(sonraki_ara) if sonraki_ara is not None else int(nihai_hedef)
+
+        if P[y_ara_id, hedef_id] < gecis_esigi and y_ara_id != hedef_id:
+            return []
+
+        agac = OperadAgac(X_tip, mevcut_oncutler, dogal_sayi(y_ara_id), "agac_hop_%d" % idx)
+        ok = YonluOk(X_tip, dogal_sayi(y_ara_id), dogal_sayi(hedef_id), "gecis_oku_%d" % idx)
+        adimlar.append((agac, ok))
+
+        mevcut_oncutler = tuple(list(mevcut_oncutler[1:]) + [dogal_sayi(hedef_id)])
+
+    return adimlar
+
+
+def heyting_operatorleri(a: float, b: float, omega_cebiri: str) -> Dict[str, float]:
+    val_a = float(np.clip(a, 0.0, 1.0))
+    val_b = float(np.clip(b, 0.0, 1.0))
+
+    kesisim = min(val_a, val_b)
+    birlesim = max(val_a, val_b)
+
+    if omega_cebiri == "boole":
+        impilasyon = 1.0 if (val_a <= val_b) else 0.0
+        olumsuzlama = 1.0 - val_a
+    else:
+        impilasyon = 1.0 if val_a <= val_b else val_b
+        olumsuzlama = 1.0 if val_a == 0.0 else 0.0
+
+    return {"kesisim_ve": kesisim, "birlesim_veya": birlesim,
+            "impilasyon_gerektirme": impilasyon, "olumsuzlama_degil": olumsuzlama}
+
+
+def elemanlar_kategorisi_turet(kat: Turetilen1Kategori,
+                               tip_fonksiyonu: Dict[int, float]) -> Turetilen1Kategori:
+    yeni_nesneler = [x for x in kat.nesneler if tip_fonksiyonu.get(x, 0.0) > 0.05]
+    if not yeni_nesneler:
+        yeni_nesneler = list(kat.nesneler)
+
+    yeni_ok_siniflari: Dict[Tuple[int, int], int] = {}
+    yeni_birimler: Dict[int, int] = {}
+    ok_sayaci = 0
+
+    for x in yeni_nesneler:
+        yeni_ok_siniflari[(x, x)] = ok_sayaci
+        yeni_birimler[x] = ok_sayaci
+        ok_sayaci += 1
+
+    for (x, y), oid in kat.ok_siniflari.items():
+        if x in yeni_nesneler and y in yeni_nesneler and x != y:
+            yeni_ok_siniflari[(x, y)] = ok_sayaci
+            ok_sayaci += 1
+
+    yeni_bileske: Dict[Tuple[int, int], int] = {}
+    for (x, y), ok1 in yeni_ok_siniflari.items():
+        for (y2, z), ok2 in yeni_ok_siniflari.items():
+            if y == y2 and (x, z) in yeni_ok_siniflari:
+                yeni_bileske[(ok1, ok2)] = yeni_ok_siniflari[(x, z)]
+
+    return Turetilen1Kategori(yeni_nesneler, yeni_ok_siniflari, yeni_bileske, yeni_birimler)
+
+
+def uc_boyutlu_boynuz_doldur(x: int, y: int, z: int, w: int, P: np.ndarray) -> Dict[str, float]:
+    p_xy = float(P[x, y])
+    p_yz = float(P[y, z])
+    p_zw = float(P[z, w])
+    p_xw = float(P[x, w])
+
+    yol_1 = (p_xy * p_yz) * p_zw
+    yol_2 = p_xy * (p_yz * p_zw)
+
+    asosiyatiflik_kusuru = float(abs(yol_1 - yol_2))
+    kapanis_hatasi = float(abs(p_xw - (p_xy * p_yz * p_zw)))
+    toplam_3d_engel = asosiyatiflik_kusuru + kapanis_hatasi
+
+    return {"asosiyatiflik_kusuru": asosiyatiflik_kusuru,
+            "dortyuzlu_3d_engel": toplam_3d_engel,
+            "uc_hucre_doldu_mu": bool(toplam_3d_engel < 0.05)}
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -6356,7 +6458,6 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     muhakemeler: List[Dict[str, Any]] = []
     cozulen_hedefler: Set[int] = set()
-    silsile_adimlari: List[Tuple[Terim, Terim]] = []
     tikanma_gecmisi: List[float] = []
     azami_guvenlik_tavani = max(int(azami_adim), 8)
 
@@ -6374,11 +6475,6 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         adim_muhakeme["yerel_hodge"] = yerel_baglamsal_hodge(baglam, P, norm_korollalar)
         muhakemeler.append(adim_muhakeme)
         tikanma_gecmisi.append(float(adim_muhakeme["kohomolojik_engel"]))
-
-        if (adim_muhakeme["ispat_sahidi"] is not None
-                and isinstance(adim_muhakeme["ispat_sahidi"], YonluTerkip)):
-            silsile_adimlari.append((adim_muhakeme["ispat_sahidi"].f,
-                                     adim_muhakeme["ispat_sahidi"].g))
 
         cozulen_hedefler.add(adim_muhakeme["hedef"])
 
@@ -6407,10 +6503,15 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         adim += 1
 
     nihai_hedef = muhakemeler[-1]["hedef"]
+    silsile_adimlari = silsile_adimlarini_bagla(muhakemeler, orijinal_baglam, nihai_hedef, P, Dogal())
     oncutler_terim = [dogal_sayi(t) for t in orijinal_baglam]
-    kulli_ispat = OperadSilsile(Dogal(), oncutler_terim, silsile_adimlari,
-                                dogal_sayi(nihai_hedef))
-    kulli_sahit_gecerli = ispat_sahidini_dogrula(kulli_ispat, orijinal_baglam, nihai_hedef)
+    if silsile_adimlari:
+        kulli_ispat = OperadSilsile(Dogal(), oncutler_terim, silsile_adimlari,
+                                    dogal_sayi(nihai_hedef))
+        kulli_sahit_gecerli = ispat_sahidini_dogrula(kulli_ispat, orijinal_baglam, nihai_hedef)
+    else:
+        kulli_ispat = None
+        kulli_sahit_gecerli = False
 
     p_hedef_satiri = P[nihai_hedef]
     entropi_hedef = float(-np.sum(p_hedef_satiri * np.log(p_hedef_satiri + 1e-12)))
@@ -6514,6 +6615,16 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     dahili_hom_uzayi = ccc_dahili_hom_uzayi_turet(turetilen_kategori)
 
+    hedef_yuklemi = {obj: float(P[obj, nihai_hedef]) for obj in turetilen_kategori.nesneler}
+    elemanlar_kat = elemanlar_kategorisi_turet(turetilen_kategori, hedef_yuklemi)
+
+    x_tok = orijinal_baglam[0] if len(orijinal_baglam) > 0 else 0
+    y_tok = orijinal_baglam[-1] if len(orijinal_baglam) > 1 else (x_tok + 1) % n
+    z_tok = (muhakemeler[0].get("ara_durak") if muhakemeler else None)
+    if z_tok is None:
+        z_tok = (y_tok + 1) % n
+    uc_boyut_raporu = uc_boyutlu_boynuz_doldur(x_tok, y_tok, int(z_tok), nihai_hedef, P)
+
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
 
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
@@ -6612,5 +6723,14 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "cartan_kok_agirligi": kok_agirligi,
         "tam_qudit_tensor_boyutu": len(tam_qudit_tensor_durumu),
         "monoidal_tensor_ok_sayisi": len(monoidal_kat.tensor_oklari),
+        "heyting_mantik_analizi": heyting_operatorleri(
+            a=float(muhakemeler[-1].get("türetim_gücü", 0.5)),
+            b=float(muhakemeler[-1].get("doğrudan_güç", 0.5)),
+            omega_cebiri=tayf_bilgisi["Ω_cebiri"]),
+        "elemanlar_kategorisi_int_P": {
+            "nesneler": elemanlar_kat.nesneler,
+            "morfizm_sayisi": len(elemanlar_kat.ok_siniflari)
+        },
+        "uc_boyutlu_koherans_Lambda3": uc_boyut_raporu,
         "detay": tayf_bilgisi
     }
