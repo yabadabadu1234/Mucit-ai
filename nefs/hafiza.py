@@ -106,13 +106,14 @@ class Hafiza:
         y.kayitlar = [copy.copy(k) for k in self.kayitlar]
         return y
 
-    def yaz(self, x, omega: float, hukum: float) -> Kayit:
+    def yaz(self, x, omega: float, hukum: float,
+            cartan_koku: Optional[str] = None) -> Kayit:
         self.adim += 1
         e = self.yazma
         for k in self.kayitlar:
             k.mu *= (1.0 - e)
         y = Kayit(x=x, omega=float(omega), hukum=float(hukum), mu=e,
-                  dogum=self.adim)
+                  dogum=self.adim, yaprak=cartan_koku or "")
         for k in self.kayitlar:
             if (k.hukum == y.hukum
                     and abs(complex(np.vdot(k.x, y.x))) > self.ayniyet):
@@ -126,11 +127,38 @@ class Hafiza:
         if self.sonum > 0.0:
             for k in self.kayitlar:
                 k.mu *= (1.0 - self.sonum * _SONUM_PAYI[k.hukum])
-        self.kayitlar = [k for k in self.kayitlar if k.mu > self.buhar]
+        buharlasan = [k for k in self.kayitlar if k.mu <= self.buhar]
+        kalan = [k for k in self.kayitlar if k.mu > self.buhar]
+        self.kayitlar = kalan
+        if buharlasan:
+            self._balyala(buharlasan)
         if len(self.kayitlar) > self.kapasite:
-            self.kayitlar.sort(key=lambda k: k.mu, reverse=True)
-            self.kayitlar = self.kayitlar[:self.kapasite]
+            self.kayitlar.sort(key=lambda k: -k.mu)
+            tas = len(self.kayitlar) - self.kapasite
+            tasinanlar = self.kayitlar[-tas:]
+            self.kayitlar = self.kayitlar[:-tas]
+            self._balyala(tasinanlar)
+            if len(self.kayitlar) > self.kapasite:
+                self.kayitlar.sort(key=lambda k: -k.mu)
+                self.kayitlar = self.kayitlar[:self.kapasite]
         assert len(self.kayitlar) <= self.kapasite
+
+    def _balyala(self, kayitlar: List["Kayit"]) -> None:
+        if not kayitlar:
+            return
+        x_ort = np.mean([k.x for k in kayitlar], axis=0)
+        nrm = float(np.linalg.norm(x_ort))
+        if nrm > 1e-12:
+            x_ort = x_ort / nrm
+        else:
+            x_ort = kayitlar[0].x
+        balya = Kayit(x=x_ort,
+                      omega=float(np.clip(
+                          np.mean([k.omega for k in kayitlar]), -1.0, 1.0)),
+                      hukum=TEVAKKUF,
+                      mu=float(sum(k.mu for k in kayitlar) * 0.5),
+                      dogum=self.adim, yaprak="balya_%d" % self.adim)
+        self.kayitlar.append(balya)
 
     def oku(self, x) -> Dict[str, float]:
         v = np.asarray(x).reshape(-1)
