@@ -6116,17 +6116,17 @@ class IkiCezveliHafiza:
     __slots__ = ("suretler_cezvesi", "manalar_cezvesi", "indeks_baglari")
 
     def __init__(self) -> None:
-        self.suretler_cezvesi: Dict[int, np.ndarray] = {}
-        self.manalar_cezvesi: Dict[int, np.ndarray] = {}
-        self.indeks_baglari: Dict[int, Set[int]] = {}
+        self.suretler_cezvesi: Dict[str, np.ndarray] = {}
+        self.manalar_cezvesi: Dict[str, np.ndarray] = {}
+        self.indeks_baglari: Dict[str, Set[str]] = {}
 
-    def kaydet(self, nesne_id: int, suret: np.ndarray, mana: np.ndarray) -> None:
-        self.suretler_cezvesi[nesne_id] = suret / (np.linalg.norm(suret) + 1e-12)
-        self.manalar_cezvesi[nesne_id] = np.asarray(mana, dtype=float)
+    def kaydet(self, cartan_koku: str, suret: np.ndarray, mana: np.ndarray) -> None:
+        self.suretler_cezvesi[cartan_koku] = suret / (np.linalg.norm(suret) + 1e-12)
+        self.manalar_cezvesi[cartan_koku] = np.asarray(mana, dtype=float)
 
-    def cift_yonlu_bagla(self, id1: int, id2: int) -> None:
-        self.indeks_baglari.setdefault(id1, set()).add(id2)
-        self.indeks_baglari.setdefault(id2, set()).add(id1)
+    def cift_yonlu_bagla(self, kok1: str, kok2: str) -> None:
+        self.indeks_baglari.setdefault(kok1, set()).add(kok2)
+        self.indeks_baglari.setdefault(kok2, set()).add(kok1)
 
 
 class MutezekkireKuvveti:
@@ -6137,13 +6137,13 @@ class MutezekkireKuvveti:
 
     def cagir_ve_hatirla(self, aranan_suret: np.ndarray,
                          hedef_mana: Optional[np.ndarray] = None,
-                         rezonans_esigi: float = 0.3) -> Optional[int]:
+                         rezonans_esigi: float = 0.3) -> Optional[str]:
         if not self.hafiza.suretler_cezvesi:
             return None
 
         q_s = aranan_suret / (np.linalg.norm(aranan_suret) + 1e-12)
         en_iyi_skor = -1e9
-        bulunan_id: Optional[int] = None
+        bulunan_id: Optional[str] = None
 
         for n_id, s_vektor in self.hafiza.suretler_cezvesi.items():
             suret_skoru = float(np.dot(q_s, s_vektor))
@@ -8301,7 +8301,7 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4) -> Dict[str, A
 
     hafiza_iki_cezve = IkiCezveliHafiza()
     hafiza_iki_cezve.kaydet(
-        nesne_id=baglam[-1],
+        cartan_koku="tok_%d" % int(baglam[-1]),
         suret=(kuantum_durum_vektoru[:n] if len(kuantum_durum_vektoru) >= n
                else np.ones(n, dtype=float) / np.sqrt(n)),
         mana=np.array([float(P[baglam[-1], nihai_hedef]),
