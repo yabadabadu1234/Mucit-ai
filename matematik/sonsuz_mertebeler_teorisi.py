@@ -5865,6 +5865,149 @@ def hata_gedik_karanlik_cevrim_borcu(P: np.ndarray, Asim: np.ndarray, Kan_rez: n
     return float(borc_toplami / float(k))
 
 
+class IkiCezveliHafiza:
+    __slots__ = ("suretler_cezvesi", "manalar_cezvesi", "indeks_baglari")
+
+    def __init__(self) -> None:
+        self.suretler_cezvesi: Dict[int, np.ndarray] = {}
+        self.manalar_cezvesi: Dict[int, np.ndarray] = {}
+        self.indeks_baglari: Dict[int, Set[int]] = {}
+
+    def kaydet(self, nesne_id: int, suret: np.ndarray, mana: np.ndarray) -> None:
+        self.suretler_cezvesi[nesne_id] = suret / (np.linalg.norm(suret) + 1e-12)
+        self.manalar_cezvesi[nesne_id] = np.asarray(mana, dtype=float)
+
+    def cift_yonlu_bagla(self, id1: int, id2: int) -> None:
+        self.indeks_baglari.setdefault(id1, set()).add(id2)
+        self.indeks_baglari.setdefault(id2, set()).add(id1)
+
+
+class MutezekkireKuvveti:
+    __slots__ = ("hafiza",)
+
+    def __init__(self, hafiza: IkiCezveliHafiza) -> None:
+        self.hafiza = hafiza
+
+    def cagir_ve_hatirla(self, aranan_suret: np.ndarray,
+                         hedef_mana: Optional[np.ndarray] = None,
+                         rezonans_esigi: float = 0.3) -> Optional[int]:
+        if not self.hafiza.suretler_cezvesi:
+            return None
+
+        q_s = aranan_suret / (np.linalg.norm(aranan_suret) + 1e-12)
+        en_iyi_skor = -1e9
+        bulunan_id: Optional[int] = None
+
+        for n_id, s_vektor in self.hafiza.suretler_cezvesi.items():
+            suret_skoru = float(np.dot(q_s, s_vektor))
+
+            mana_skoru = 0.0
+            if hedef_mana is not None and n_id in self.hafiza.manalar_cezvesi:
+                m_vektor = self.hafiza.manalar_cezvesi[n_id]
+                mana_mesafesi = float(np.linalg.norm(hedef_mana - m_vektor))
+                mana_skoru = float(np.exp(-mana_mesafesi))
+
+            toplam_rezonans = suret_skoru + 0.5 * mana_skoru
+            if toplam_rezonans > en_iyi_skor:
+                en_iyi_skor = toplam_rezonans
+                bulunan_id = n_id
+
+        return bulunan_id if en_iyi_skor >= rezonans_esigi else None
+
+
+class VahimeIslemcisi:
+    __slots__ = ("tehdit_esigi",)
+
+    def __init__(self, tehdit_esigi: float = 0.35) -> None:
+        self.tehdit_esigi = float(tehdit_esigi)
+
+    def mana_suz(self, son_token: int, hedef_aday: int,
+                 P: np.ndarray, Kan_rez: np.ndarray, Asim: np.ndarray) -> Dict[str, Any]:
+        gecis_gucu = float(P[son_token, hedef_aday])
+        tikanma_tehdidi = float(Kan_rez[son_token, hedef_aday])
+        tek_yonlu_baski = float(Asim[son_token, hedef_aday])
+
+        fayda = gecis_gucu * (1.0 - tikanma_tehdidi)
+        tehdit = tikanma_tehdidi * tek_yonlu_baski
+        aciliyet = float(np.clip(tehdit - fayda, -1.0, 1.0))
+
+        acil_refleks_gerekli = bool(tehdit >= self.tehdit_esigi)
+
+        mana_vektoru = np.array([fayda, tehdit, aciliyet, gecis_gucu], dtype=float)
+
+        return {"mana_vektoru": mana_vektoru, "fayda": fayda, "tehdit": tehdit,
+                "acil_refleks": acil_refleks_gerekli,
+                "hukum": "TEHDİT_ALARMI" if acil_refleks_gerekli else "MUTEDİL"}
+
+
+class AkileKatmani:
+    __slots__ = ("baglam_hafizasi",)
+
+    def __init__(self) -> None:
+        self.baglam_hafizasi: List[Any] = []
+
+    def nazari_akil_denetle(self, ispat_sahidi: Optional[Terim], baglam: Tuple[int, ...],
+                            hedef: int) -> bool:
+        return ispat_sahidini_dogrula(ispat_sahidi, baglam, hedef)
+
+    def ameli_akil_tart(self, hedef_id: int, vahime_raporu: Dict[str, Any],
+                        hedef_beklentisi: float) -> Dict[str, Any]:
+        tehdit = vahime_raporu["tehdit"]
+        fayda = vahime_raporu["fayda"]
+
+        maslahat_skoru = float(hedef_beklentisi * fayda - 0.5 * tehdit)
+
+        logit = maslahat_skoru * 3.0 - tehdit * 2.0
+        irade_katsayisi = float(1.0 / (1.0 + np.exp(-logit)))
+
+        ahlaki_onay = bool(maslahat_skoru > 0.0)
+
+        return {"maslahat_skoru": maslahat_skoru, "irade_katsayisi": irade_katsayisi,
+                "ahlaki_onay": ahlaki_onay,
+                "ameli_hukum": "İHTİYÂRÎ_SEVK" if ahlaki_onay else "DEF_İSTİKÂMETİ"}
+
+
+class KuvveiBaiseVeMotorlar:
+    __slots__ = ("n_boyut",)
+
+    def __init__(self, n_boyut: int) -> None:
+        self.n_boyut = int(n_boyut)
+
+    def sevk_ve_icra(self, aday_hedef: int, vahime_raporu: Dict[str, Any],
+                     ameli_akil_raporu: Dict[str, Any], P_satiri: np.ndarray) -> Dict[str, Any]:
+        n = self.n_boyut
+        alpha = ameli_akil_raporu["irade_katsayisi"]
+
+        v_cezb = np.zeros(n, dtype=float)
+        v_cezb[aday_hedef] = vahime_raporu["fayda"]
+        v_cezb += P_satiri * 0.3
+        v_cezb /= (np.linalg.norm(v_cezb) + 1e-12)
+
+        v_def = np.zeros(n, dtype=float)
+        if vahime_raporu["tehdit"] > 0.1:
+            v_def[aday_hedef] = vahime_raporu["tehdit"]
+        v_def /= (np.linalg.norm(v_def) + 1e-12)
+
+        v_akil = np.zeros(n, dtype=float)
+        if ameli_akil_raporu["ahlaki_onay"]:
+            v_akil[aday_hedef] = 1.0
+        else:
+            ikinci_aday = int(np.argsort(P_satiri)[-2]) if len(P_satiri) > 1 else aday_hedef
+            v_akil[ikinci_aday] = 1.0
+
+        eylem_vektoru = alpha * v_akil + (1.0 - alpha) * (v_cezb - 0.7 * v_def)
+        eylem_vektoru = np.maximum(0.0, eylem_vektoru)
+
+        nihai_icra_tokeni = int(np.argmax(eylem_vektoru))
+
+        sevk_kaynagi = ("AKLÎ_İHTİYÂR" if alpha >= 0.5
+                        else ("HAYVANÎ_CEZB" if v_cezb[aday_hedef] > v_def[aday_hedef] else "HAYVANÎ_DEF"))
+
+        return {"nihai_icra_tokeni": nihai_icra_tokeni, "sevk_kaynagi": sevk_kaynagi,
+                "irade_payi": alpha, "cezb_kuvveti": float(v_cezb[aday_hedef]),
+                "def_kuvveti": float(v_def[aday_hedef]), "eylem_vektoru": eylem_vektoru}
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -6741,6 +6884,30 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     else:
         ornek_equalizer = []
 
+    hafiza_iki_cezve = IkiCezveliHafiza()
+    hafiza_iki_cezve.kaydet(
+        nesne_id=baglam[-1],
+        suret=(kuantum_durum_vektoru[:n] if len(kuantum_durum_vektoru) >= n
+               else np.ones(n, dtype=float) / np.sqrt(n)),
+        mana=np.array([float(P[baglam[-1], nihai_hedef]),
+                      float(tayf_bilgisi["Kan_rezidusu"][baglam[-1], nihai_hedef]), 0.5, 0.5]))
+    mutezekkire = MutezekkireKuvveti(hafiza_iki_cezve)
+
+    vahime = VahimeIslemcisi(tehdit_esigi=0.30)
+    vahime_raporu = vahime.mana_suz(son_token=baglam[-1], hedef_aday=nihai_hedef,
+                                    P=P, Kan_rez=tayf_bilgisi["Kan_rezidusu"], Asim=Asim)
+
+    akile = AkileKatmani()
+    ameli_rapor = akile.ameli_akil_tart(
+        hedef_id=nihai_hedef, vahime_raporu=vahime_raporu,
+        hedef_beklentisi=float(muhakemeler[-1].get("türetim_gücü", 0.5)))
+
+    baise_motoru = KuvveiBaiseVeMotorlar(n_boyut=n)
+    eylem_raporu = baise_motoru.sevk_ve_icra(
+        aday_hedef=nihai_hedef, vahime_raporu=vahime_raporu,
+        ameli_akil_raporu=ameli_rapor, P_satiri=P[baglam[-1]])
+    hakiki_icra_hedefi = eylem_raporu["nihai_icra_tokeni"]
+
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
 
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
@@ -6857,5 +7024,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                              "en_alakali_vecih": d9_tertip_raporu["en_alakali_vecih"]},
         "topos_equalizer_nesneleri": ornek_equalizer,
         "kefeler_vektoru_7li": kefeler_tam,
+        "vahime_sezgisi": vahime_raporu,
+        "ameli_akil_maslahat": ameli_rapor,
+        "kuvve_i_baise_eylem": {k: v for k, v in eylem_raporu.items() if k != "eylem_vektoru"},
+        "hakiki_icra_hedefi": hakiki_icra_hedefi,
+        "sevk_kaynagi": eylem_raporu["sevk_kaynagi"],
         "detay": tayf_bilgisi
     }
