@@ -8,12 +8,25 @@ import numpy as np
 
 from kuantum.qyazmac import QuditAyar, QuditYazmac
 
-__all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI", "donme",
+__all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI",
+           "kulli_sektor_adlari", "sektor_adresi", "donme",
            "donme_turevi", "donme_dilim", "donme_dilim_turevi",
            "kontrollu_donme", "kontrollu_donme_turevi",
            "faz_z", "degil_x",
            "makam_derecesi", "makam_merdiveni",
            "makam_kubit_manasi", "makam_mertebeleri", "makam_mertebesi"]
+
+
+def kulli_sektor_adlari() -> Tuple[str, ...]:
+    return ("makam", "mizan", "tenakuz", "tasdik", "sukut",
+            "nakz", "kelam", "kaide", "orak", "gaye", "tertip")
+
+
+def sektor_adresi(ad: str, j: int, taban: int = 64) -> int:
+    adlar = kulli_sektor_adlari()
+    if ad not in adlar:
+        raise ValueError("bilinmeyen sektör: %r" % (ad,))
+    return int(adlar.index(ad)) * int(taban) + int(j)
 
 
 @dataclass
