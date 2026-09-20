@@ -5011,6 +5011,82 @@ def yerel_baglamsal_hodge(baglam: Tuple[int, ...], P: np.ndarray,
     }
 
 
+def topos_tayfi_hodge_ile_hesapla(P: np.ndarray, Asim: np.ndarray,
+                                  norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float],
+                                  baglam: Tuple[int, ...]
+                                  ) -> Dict[str, Any]:
+    hodge = yerel_baglamsal_hodge(baglam, P, norm_korollalar)
+    E_uzay = float(hodge["uzay_gradyan"])
+    E_kategori = float(hodge["kategori_girdap"])
+    E_tikanma = float(hodge["yırtık_harmonik"])
+
+    coklu_korollalar = {k: v for k, v in norm_korollalar.items() if len(k[0]) >= 2}
+    if coklu_korollalar:
+        toplam_coklu = sum(coklu_korollalar.values()) + 1e-12
+        azami_arite = max((len(girdi) for (girdi, _) in coklu_korollalar), default=2)
+        norm_payda = float(max(1, azami_arite - 1))
+        E_operad = float(sum(((len(girdi) - 1) / norm_payda) * (prob / toplam_coklu)
+                             for (girdi, _), prob in coklu_korollalar.items()))
+        E_operad *= (toplam_coklu / (sum(norm_korollalar.values()) + 1e-12))
+    else:
+        E_operad = 0.0
+
+    E_toplam = E_uzay + E_kategori + E_operad + E_tikanma + 1e-12
+    rho = np.array([E_uzay / E_toplam, E_kategori / E_toplam,
+                    E_operad / E_toplam, E_tikanma / E_toplam], dtype=float)
+
+    entropi = float(-np.sum(rho * np.log(rho + 1e-12)))
+
+    P2 = P @ P
+    Kan_rezidusu = np.abs(P - P2)
+    yirtiklar = (P2 > 0.05) & (P < 0.01)
+    beta = float(np.sum(P2[yirtiklar])) / float(np.sum(P2) + 1e-12)
+    alfa = float(np.mean(Asim[P > 0])) if np.any(P > 0) else 0.0
+
+    if beta < 0.05:
+        cebir = "boole" if alfa < 0.25 else "yönlü_kafes"
+    else:
+        cebir = "heyting" if alfa < 0.5 else "yönlü_heyting"
+
+    return {
+        "tayf": rho, "entropi": entropi, "Ω_cebiri": cebir,
+        "enerjiler": {"uzay": E_uzay, "kategori": E_kategori,
+                     "operad": E_operad, "tıkanma": E_tikanma},
+        "P": P, "P2": P2, "Asim": Asim, "Kan_rezidusu": Kan_rezidusu,
+        "alfa": alfa, "beta": beta
+    }
+
+
+def s0_gercek_baglam_cagir(secilen_gaye: int, norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float],
+                           varsayilan_n: int) -> List[int]:
+    aday_baglamlar = [girdi for (girdi, cikti) in norm_korollalar if cikti == secilen_gaye]
+    if aday_baglamlar:
+        en_iyi_baglam = max(aday_baglamlar, key=len)
+        return list(en_iyi_baglam) + [secilen_gaye]
+    return [secilen_gaye]
+
+
+def grothendieck_dikey_asansor(a: int, b: int, P: np.ndarray,
+                               parite_lifi: Dict[str, Any]) -> Dict[str, Any]:
+    dilimler = parite_lifi["alt_uzay_dilimleri"]
+    rho = parite_lifi["spektral_agirliklar"]
+    lif_boyutu = parite_lifi["lif_boyutu"]
+    taban_gecisi = float(P[a, b])
+
+    mod_idx_haritasi = {"uzay": 0, "kategori": 1, "operad": 2, "yırtık": 3}
+    kartezyen_lift = np.zeros(lif_boyutu, dtype=float)
+    for mod_adi, (bas, son) in dilimler.items():
+        mod_idx = mod_idx_haritasi[mod_adi]
+        if son - bas > 0:
+            kartezyen_lift[bas:son] = taban_gecisi * float(rho[mod_idx])
+
+    norm = float(np.linalg.norm(kartezyen_lift))
+    if norm > 1e-12:
+        kartezyen_lift = kartezyen_lift / norm
+
+    return {"kartezyen_lift_vektoru": kartezyen_lift, "taban_gecisi": taban_gecisi}
+
+
 def analitik_lie_bargmann_adimi(x: int, y: int, z: int, P: np.ndarray, Asim: np.ndarray
                                 ) -> Dict[str, float]:
     p_dongu = P[x, y] * P[y, z] * max(1e-12, P[z, x])
@@ -5849,7 +5925,7 @@ def s0_s2_ozerk_gaye_turet(dahili_tenakuzlar: Dict[str, float],
     return max(gaye_skorlari.items(), key=lambda x: x[1])[0]
 
 
-_S0_IC_HAL_HAVUZU: Dict[str, Dict[int, float]] = {"tenakuzlar": {}, "entropiler": {}}
+_S0_IC_HAL_HAVUZU: Dict[str, Dict[Any, Any]] = {"tenakuzlar": {}, "entropiler": {}, "son_norm_korollalar": {}}
 
 
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
@@ -5865,7 +5941,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                     "detay": {"tenakuzlar": {}, "entropiler": {}}}
         s0_vakum_tetiklendi = True
         s0_secilen_gaye = int(secilen_gaye)
-        w = [s0_secilen_gaye, (s0_secilen_gaye + 1) % max(2, n)]
+        w = s0_gercek_baglam_cagir(s0_secilen_gaye, _S0_IC_HAL_HAVUZU["son_norm_korollalar"], n)
+        if len(w) < 2:
+            w = [s0_secilen_gaye, (s0_secilen_gaye + 1) % max(2, n)]
 
     gecit_raporu = d0_gecit_nedensellik_teftisi(
         w, [((w[i],), w[i + 1]) for i in range(len(w) - 1)])
@@ -5897,7 +5975,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     adim = 0
     while True:
         Asim = asimetri_guncelle(P)
-        tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
+        tayf_bilgisi = topos_tayfi_hodge_ile_hesapla(P, Asim, norm_korollalar, baglam)
 
         adim_muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar,
                                             yasakli_hedefler=cozulen_hedefler)
@@ -5950,6 +6028,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     entropi_hedef = float(-np.sum(p_hedef_satiri * np.log(p_hedef_satiri + 1e-12)))
     _S0_IC_HAL_HAVUZU["tenakuzlar"][nihai_hedef] = float(muhakemeler[-1].get("kohomolojik_engel", 0.0))
     _S0_IC_HAL_HAVUZU["entropiler"][nihai_hedef] = entropi_hedef
+    _S0_IC_HAL_HAVUZU["son_norm_korollalar"] = dict(norm_korollalar)
 
     turetilen_kategori = turet_1_kategori_bolumlemeli(orijinal_baglam, P, silsile_adimlari)
     turetilen_kume = turet_ayrik_kume_funktoriyel(turetilen_kategori)
@@ -5958,7 +6037,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     alem_baglami = alem_baglami_ac(turetilen_alem)
 
     Asim = asimetri_guncelle(P)
-    tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
+    tayf_bilgisi = topos_tayfi_hodge_ile_hesapla(P, Asim, norm_korollalar, baglam)
     rho = tayf_bilgisi["tayf"]
     kuantum_genlikleri = np.sqrt(rho)
 
@@ -5999,6 +6078,13 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             "yırtık_modu": bool(rho[3] > 0.05)
         }
     }
+
+    asansor_raporu = grothendieck_dikey_asansor(baglam[-1], nihai_hedef, P, parite_lifi)
+    kartezyen_lift = asansor_raporu["kartezyen_lift_vektoru"]
+    kuantum_durum_vektoru = kuantum_durum_vektoru * (kartezyen_lift + 1e-6)
+    kuantum_durum_vektoru /= (np.linalg.norm(kuantum_durum_vektoru) + 1e-12)
+    parite_lifi["kuantum_durum_vektoru"] = kuantum_durum_vektoru
+    parite_lifi["kartezyen_lift"] = kartezyen_lift
 
     kaide_raporu = kaide_ve_imza_hesapla(baglam[-1], nihai_hedef, P, Asim)
 
