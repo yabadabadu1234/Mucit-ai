@@ -5140,6 +5140,25 @@ def kategori_sahidi_paketle(kat: Turetilen1Kategori) -> Terim:
     )
 
 
+def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
+                          mevcut_yaricap: float, g_fs_izi: float,
+                          hudut_keyfiyeti: float) -> float:
+    temel_yaricap = hudut_keyfiyeti / (np.sqrt(max(1e-12, g_fs_izi)) + 1e-6)
+    r = mevcut_yaricap if mevcut_yaricap > 1e-6 else temel_yaricap
+
+    delta_v_gercek = V_yeni - V_eski
+    delta_v_lineer = V_lineer_tahmin - V_eski
+
+    kappa = 2.0 * (delta_v_gercek - delta_v_lineer) / (r ** 2 + 1e-12)
+
+    if kappa > 1e-6:
+        yaricap_yildiz = -delta_v_lineer / (kappa * r + 1e-12)
+    else:
+        yaricap_yildiz = 2.0 * r
+
+    return float(np.clip(yaricap_yildiz, 1e-4, 1.0))
+
+
 def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
                         norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float],
                         yasakli_hedefler: Optional[Set[int]] = None
@@ -5227,8 +5246,16 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         for k_korolla in norm_korollalar:
             norm_korollalar[k_korolla] /= toplam_kutle
 
-        alfa_ogrenme = 0.2
-        P[son_token, z] = (1.0 - alfa_ogrenme) * P[son_token, z] + alfa_ogrenme * en_iyi_skor
+        g_fs_tahmin = float(1.0 - dogrudan_guc ** 2)
+        dinamik_adim = analitik_newton_adimi(
+            V_eski=dogrudan_guc,
+            V_lineer_tahmin=dogrudan_guc + 0.1,
+            V_yeni=en_iyi_skor,
+            mevcut_yaricap=0.1,
+            g_fs_izi=g_fs_tahmin,
+            hudut_keyfiyeti=float(1.0 - tikanma)
+        )
+        P[son_token, z] = (1.0 - dinamik_adim) * P[son_token, z] + dinamik_adim * en_iyi_skor
         P[son_token] /= (P[son_token].sum() + 1e-12)
 
         hukum = "türetim_başarılı"
@@ -5358,6 +5385,78 @@ def intac_funktor_tersi(psi: np.ndarray, funktor_agirliklari: np.ndarray) -> np.
     return (psi_intac / norm) if norm > 1e-12 else psi_intac
 
 
+def cok_boyutlu_kefeler_olc(P: np.ndarray, rho_yogunluk: np.ndarray,
+                            uhlmann_sadakati: float, son_token: int,
+                            hedef: int, baglam: Tuple[int, ...]) -> np.ndarray:
+    n = P.shape[0]
+
+    hata_uzay = float(np.clip(1.0 - uhlmann_sadakati, 0.0, 1.0))
+
+    P2 = P @ P
+    hata_kategori = float(np.mean((P[son_token] - P2[son_token]) ** 2))
+
+    mesafeler = np.abs(np.arange(n) - hedef)
+    kuantum_ortusmeleri = rho_yogunluk[son_token, :]
+    sira_mesafe = np.argsort(mesafeler)
+    sira_ortusme = np.argsort(-kuantum_ortusmeleri)
+    hata_lif = float(np.mean((sira_mesafe - sira_ortusme) ** 2) / (n ** 2 + 1e-12))
+
+    hedef_olasilik = float(rho_yogunluk[hedef, hedef])
+    hata_nokta = float(-np.log(np.clip(hedef_olasilik, 1e-6, 1.0)))
+
+    return np.array([hata_uzay, hata_kategori, hata_lif, hata_nokta], dtype=float)
+
+
+def d7_hamiltonyen_nispetleri(kefeler_vektoru: np.ndarray,
+                              V_kuplaj: Optional[np.ndarray] = None
+                              ) -> Tuple[np.ndarray, int, float]:
+    k = len(kefeler_vektoru)
+    if V_kuplaj is None:
+        V_kuplaj = np.outer(kefeler_vektoru, kefeler_vektoru)
+
+    kuplaj_kutlesi = np.linalg.norm(V_kuplaj, axis=0)
+    p_kefe = kefeler_vektoru / (np.sum(kefeler_vektoru) + 1e-12)
+    entropiler = -p_kefe * np.log(p_kefe + 1e-12)
+
+    yavas_mod_skorlari = kuplaj_kutlesi * entropiler
+    yavas_mod = int(np.argmax(yavas_mod_skorlari))
+
+    beta = 0.5
+    h = kefeler_vektoru
+    alan = h + beta * V_kuplaj[:, yavas_mod]
+    alan[yavas_mod] = h[yavas_mod]
+
+    exp_alan = np.exp(alan - np.max(alan))
+    lambda_nispetleri = exp_alan / np.sum(exp_alan)
+
+    skaler_mizan = float(np.sum(lambda_nispetleri * kefeler_vektoru))
+
+    return lambda_nispetleri, yavas_mod, skaler_mizan
+
+
+def kan_chebyshev_intac(u: float, derece: int = 4) -> Tuple[np.ndarray, np.ndarray]:
+    u_kirpik = float(np.clip(u, -0.9999, 0.9999))
+    theta = np.arccos(u_kirpik)
+    sin_theta = np.sin(theta)
+
+    T = np.array([np.cos(j * theta) for j in range(derece)], dtype=float)
+    U = np.array([np.sin((j + 1) * theta) / sin_theta for j in range(derece)], dtype=float)
+
+    return T, U
+
+
+def kan_genlik_hesapla(u: float, C_katsayilari: np.ndarray, S_katsayilari: np.ndarray,
+                       enerji: float, cartan_acisi: float) -> complex:
+    T, U = kan_chebyshev_intac(u, derece=len(C_katsayilari))
+
+    reel_kisim = float(np.dot(C_katsayilari, T))
+    sanal_kisim = float(np.dot(S_katsayilari, U))
+
+    faz = sanal_kisim + cartan_acisi
+    genlik = np.exp(-enerji + 1j * faz) * (reel_kisim + 1j * sanal_kisim)
+    return complex(genlik)
+
+
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
     P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
@@ -5465,6 +5564,19 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     funktor_vektoru[:len(rho)] = np.sqrt(rho) * np.exp(1j * np.pi * rho)
     nihai_intac_psi = intac_funktor_tersi(kuantum_durum_vektoru_temiz, funktor_vektoru)
 
+    kefeler = cok_boyutlu_kefeler_olc(
+        P=P, rho_yogunluk=P, uhlmann_sadakati=float(P[baglam[-1], nihai_hedef]),
+        son_token=baglam[-1], hedef=nihai_hedef, baglam=orijinal_baglam)
+
+    lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
+
+    u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
+    C_varsayilan = np.array([1.0, 0.5, 0.25, 0.125], dtype=float)
+    S_varsayilan = np.array([0.5, 0.25, 0.125, 0.0625], dtype=float)
+    kan_dalga_genligi = kan_genlik_hesapla(
+        u=u_degeri, C_katsayilari=C_varsayilan, S_katsayilari=S_varsayilan,
+        enerji=skaler_mizan, cartan_acisi=float(np.pi * Asim[baglam[-1], nihai_hedef]))
+
     return {
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
@@ -5491,5 +5603,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             "komutatif_ucgenler": len(turetilen_alem.alem_ici_morfizmler)
         },
         "sentetik_kategori_terimi": sentetik_kategori_sahidi,
+        "kefeler_vektoru": kefeler,
+        "lambda_nispetleri": lambda_nispetleri,
+        "yavas_mod_indeksi": yavas_mod,
+        "skaler_mizan": skaler_mizan,
+        "kan_intac_genligi": kan_dalga_genligi,
         "detay": tayf_bilgisi
     }
