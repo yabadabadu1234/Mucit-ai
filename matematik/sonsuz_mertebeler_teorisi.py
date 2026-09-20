@@ -7774,13 +7774,26 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         Asim = asimetri_guncelle(P)
         tayf_bilgisi = topos_tayfi_hodge_ile_hesapla(P, Asim, norm_korollalar, baglam)
 
-        anlik_hodge_engeli = float(tayf_bilgisi["enerjiler"]["tıkanma"])
+        ham_hodge_engeli = float(tayf_bilgisi["enerjiler"]["tıkanma"])
+        cech_raporu_adim = cech_kohomoloji_engeli_olc(baglam, P)
+        leray_raporu_adim = leray_spektral_dizisi_hesapla(
+            cech_h1=float(cech_raporu_adim["cech_engeli_H1"]),
+            hodge_yırtık=ham_hodge_engeli, asansor_kati=asansor.mevcut_mertebe)
+        if leray_raporu_adim["spektral_dizi_kapandi_mi"]:
+            anlik_hodge_engeli = float(0.3 * ham_hodge_engeli
+                                       + 0.7 * cech_raporu_adim["cech_engeli_H1"])
+        else:
+            anlik_hodge_engeli = float(0.5 * ham_hodge_engeli
+                                       + 0.5 * leray_raporu_adim["kulli_leray_engeli"])
         kat_seviyesi, tirmanis_notu = asansor.yukari_tirman(alt_engel=anlik_hodge_engeli)
 
         adim_muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar,
                                             yasakli_hedefler=cozulen_hedefler)
         adim_muhakeme["asansor_kati"] = kat_seviyesi
         adim_muhakeme["asansor_notu"] = tirmanis_notu
+        adim_muhakeme["cech_engeli_H1"] = cech_raporu_adim["cech_engeli_H1"]
+        adim_muhakeme["leray_kapandi_mi"] = leray_raporu_adim["spektral_dizi_kapandi_mi"]
+        adim_muhakeme["tikama_guncellendi"] = anlik_hodge_engeli
 
         sahit_gecerli = ispat_sahidini_dogrula(adim_muhakeme["ispat_sahidi"], baglam,
                                                adim_muhakeme["hedef"])
