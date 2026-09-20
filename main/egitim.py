@@ -1099,23 +1099,47 @@ def d7_hamiltonyen_nispetleri(kefeler_vektoru: np.ndarray,
 
 
 def d8a_mecz_ve_wkb_tunelleme(kefeler: np.ndarray, P: np.ndarray,
-                              son_token: int, hedef: int) -> Dict[str, Any]:
+                              son_token: int, hedef: int,
+                              Kan_rez: Optional[np.ndarray] = None,
+                              Asim: Optional[np.ndarray] = None,
+                              hedef_beklentisi: float = 0.5) -> Dict[str, Any]:
+    from matematik.sonsuz_mertebeler_teorisi import VahimeIslemcisi, AkileKatmani
     ortalama_hata = float(np.mean(kefeler))
     cukur_varyansi = float(np.sqrt(np.mean((kefeler - ortalama_hata) ** 2)))
     kuyu_derinligi = float(np.clip(kefeler[1], 0.0, 1.0))
 
-    t_wkb = float(np.exp(-2.0 * np.sqrt(2.0 * kuyu_derinligi + 1e-12)))
+    t_wkb_ham = float(np.exp(-2.0 * np.sqrt(2.0 * kuyu_derinligi + 1e-12)))
 
-    kuyuya_saplandi = bool(cukur_varyansi < 1e-3 and ortalama_hata > 0.1)
+    if Kan_rez is not None and Asim is not None:
+        vahime_raporu = VahimeIslemcisi().mana_suz(son_token, hedef, P, Kan_rez, Asim)
+        ameli_akil_raporu = AkileKatmani().ameli_akil_tart(
+            hedef, vahime_raporu, hedef_beklentisi)
+        irade_katsayisi = ameli_akil_raporu["irade_katsayisi"]
+        t_wkb = float(irade_katsayisi * t_wkb_ham
+                      + (1.0 - irade_katsayisi) * (1.0 - vahime_raporu["tehdit"]))
+        nefsi_sevk_zorlamasi = bool(vahime_raporu["acil_refleks"]
+                                    and not ameli_akil_raporu["ahlaki_onay"])
+    else:
+        vahime_raporu = None
+        ameli_akil_raporu = None
+        t_wkb = t_wkb_ham
+        nefsi_sevk_zorlamasi = False
+
+    kuyuya_saplandi = bool(cukur_varyansi < 1e-3 and ortalama_hata > 0.1) or nefsi_sevk_zorlamasi
 
     sicrama_vektoru = np.zeros_like(P[son_token])
     if kuyuya_saplandi:
-        en_zayif_koordinat = int(np.argmin(P[son_token]))
+        if not nefsi_sevk_zorlamasi and ameli_akil_raporu is not None and ameli_akil_raporu["ahlaki_onay"]:
+            en_zayif_koordinat = int(hedef)
+        else:
+            en_zayif_koordinat = int(np.argmin(P[son_token]))
         sicrama_vektoru[en_zayif_koordinat] = t_wkb
         sicrama_vektoru /= (np.linalg.norm(sicrama_vektoru) + 1e-12)
 
     return {"cukur_varyansi": cukur_varyansi, "wkb_gecirgenligi": t_wkb,
-            "kuyuya_saplandi": kuyuya_saplandi, "nakil_sicramasi": sicrama_vektoru}
+            "kuyuya_saplandi": kuyuya_saplandi, "nakil_sicramasi": sicrama_vektoru,
+            "vahime_raporu": vahime_raporu, "ameli_akil_raporu": ameli_akil_raporu,
+            "nefsi_sevk_zorlamasi": nefsi_sevk_zorlamasi}
 
 
 def d10_durma_ve_sukut_yokla(adim: int, tikanma_gecmisi: List[float],

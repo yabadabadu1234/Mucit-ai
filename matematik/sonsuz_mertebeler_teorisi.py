@@ -7769,8 +7769,10 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                                   adim_muhakeme.get("doğrudan_güç", 0.0),
                                   adim_muhakeme.get("türetim_gücü", 0.0),
                                   float(adim_muhakeme.get("hedef_türü") == "doğrudan_akış")])
-        mecz_raporu = d8a_mecz_ve_wkb_tunelleme(kefeler_anlik, P, baglam[-1],
-                                                adim_muhakeme["hedef"])
+        mecz_raporu = d8a_mecz_ve_wkb_tunelleme(
+            kefeler_anlik, P, baglam[-1], adim_muhakeme["hedef"],
+            Kan_rez=tayf_bilgisi["Kan_rezidusu"], Asim=Asim,
+            hedef_beklentisi=float(adim_muhakeme.get("doğrudan_güç", 0.0)))
         adim_muhakeme["mecz_raporu"] = mecz_raporu
         if mecz_raporu["kuyuya_saplandi"]:
             P[baglam[-1]] = (0.8 * P[baglam[-1]]
