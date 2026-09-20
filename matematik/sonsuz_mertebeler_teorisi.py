@@ -7011,6 +7011,21 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
     dogrudan_guc = max(float(P[son_token, z]), float(P_baglam[z]))
     tikanma = float(Kan_rez[son_token, z])
 
+    hads_orta_terim, hads_durumu, hads_kuvveti = hads_ile_orta_terim_yakala(P, son_token, z)
+    if hads_durumu == "HADS_I_KUDSI_SEZGI" and hads_orta_terim not in yasak:
+        X_tip = Dogal()
+        oncutler_terim = [dogal_sayi(t) for t in baglam]
+        agac1 = OperadAgac(X_tip, oncutler_terim, dogal_sayi(hads_orta_terim), "hads_rezonans")
+        ok2 = YonluOk(X_tip, dogal_sayi(hads_orta_terim), dogal_sayi(z), "hads_sıçraması")
+        ispat_sahidi = YonluTerkip(agac1, ok2)
+        return {
+            "hüküm": "hads_başarılı", "hedef_türü": hedef_turu, "hedef": z,
+            "ara_durak": hads_orta_terim, "türetim_gücü": hads_kuvveti,
+            "doğrudan_güç": dogrudan_guc, "ispat_sahidi": ispat_sahidi,
+            "kohomolojik_engel": tikanma, "hads_durumu": hads_durumu,
+            "hads_kuvveti": hads_kuvveti
+        }
+
     adaylar = []
     for y in range(n):
         if y == son_token or y == z:
@@ -7032,7 +7047,8 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
     if not adaylar:
         return {
             "hüküm": "tıkanma", "hedef": z, "ara_durak": None,
-            "ispat_sahidi": None, "kohomolojik_engel": tikanma
+            "ispat_sahidi": None, "kohomolojik_engel": tikanma,
+            "hads_durumu": hads_durumu, "hads_kuvveti": hads_kuvveti
         }
 
     adaylar.sort(key=lambda item: item[0], reverse=True)
@@ -7071,7 +7087,8 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         "hüküm": hukum, "hedef_türü": hedef_turu, "hedef": z,
         "ara_durak": y_yildiz, "türetim_gücü": en_iyi_skor,
         "doğrudan_güç": dogrudan_guc, "ispat_sahidi": ispat_sahidi,
-        "kohomolojik_engel": tikanma
+        "kohomolojik_engel": tikanma, "hads_durumu": hads_durumu,
+        "hads_kuvveti": hads_kuvveti
     }
 
 
