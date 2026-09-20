@@ -6186,6 +6186,73 @@ class NefsiNebatiKatmani:
         return tohum
 
 
+class FibrasyonluManaLifi:
+    __slots__ = ("suret_kategorisi", "mana_lifleri", "kartezyen_tasimalar")
+
+    def __init__(self, suret_kategorisi: Turetilen1Kategori) -> None:
+        self.suret_kategorisi = suret_kategorisi
+        self.mana_lifleri: Dict[int, np.ndarray] = {}
+        self.kartezyen_tasimalar: Dict[Tuple[int, int], np.ndarray] = {}
+
+    def mana_lifi_ekle(self, suret_id: int, mana_vektoru: np.ndarray) -> None:
+        self.mana_lifleri[suret_id] = np.asarray(mana_vektoru, dtype=float)
+
+    def kartezyen_ok_tasi(self, x: int, y: int, P: np.ndarray) -> np.ndarray:
+        mana_x = self.mana_lifleri.get(x, np.zeros(4))
+        gecis = float(P[x, y])
+        mana_y_tahmin = mana_x * gecis
+        self.kartezyen_tasimalar[(x, y)] = mana_y_tahmin
+        return mana_y_tahmin
+
+
+class IcselKategoriNesnesi:
+    __slots__ = ("C0_nesneler", "C1_oklar", "kaynak_s", "hedef_t", "bileske_m")
+
+    def __init__(self, kat: Turetilen1Kategori) -> None:
+        self.C0_nesneler = list(kat.nesneler)
+        self.C1_oklar = list(kat.ok_siniflari.values())
+        self.kaynak_s = {oid: cift[0] for cift, oid in kat.ok_siniflari.items()}
+        self.hedef_t = {oid: cift[1] for cift, oid in kat.ok_siniflari.items()}
+        self.bileske_m = dict(kat.bileske_tablosu)
+
+    def topos_nesnesi_olarak_kodla(self) -> Terim:
+        return Cift(Dogal(), Cift(Dogal(), dogal_sayi(len(self.C1_oklar))))
+
+
+class PolinomyalMutasarrifaTezgahi:
+    __slots__ = ("islemler_B", "ariteler_E")
+
+    def __init__(self, islemler: List[str], ariteler: List[int]) -> None:
+        self.islemler_B = islemler
+        self.ariteler_E = ariteler
+
+    def hipotetik_terkip_dogur(self, hammadde_suretler: List[int]) -> Tuple[int, str]:
+        yeni_id = sum(hammadde_suretler) + 777
+        terkip_adi = "Terkip_" + "_".join(str(x) for x in hammadde_suretler[:3])
+        return yeni_id, terkip_adi
+
+
+def topos_terminal_buzulme_itminan(kat: Turetilen1Kategori, P: np.ndarray,
+                                   kuantum_durum: np.ndarray) -> Dict[str, Any]:
+    n = len(kat.nesneler)
+    if n == 0:
+        return {"itminan_derecesi": 1.0, "kalp_huzuru": True}
+
+    baglanti_dereceleri = []
+    for x in kat.nesneler:
+        out_gucu = float(np.sum(P[x, :])) if x < P.shape[0] else 0.0
+        baglanti_dereceleri.append(out_gucu)
+
+    ortalama_akıs = float(np.mean(baglanti_dereceleri)) if baglanti_dereceleri else 0.0
+    kuantum_safligi = float(np.sum(np.abs(kuantum_durum) ** 4))
+
+    itminan_derecesi = float(np.clip(kuantum_safligi * (ortalama_akıs / (float(n) + 1e-12)), 0.0, 1.0))
+    kalp_huzuru = bool(itminan_derecesi > 0.4)
+
+    return {"itminan_derecesi": itminan_derecesi, "kalp_huzuru": kalp_huzuru,
+            "terminal_morfizm_akisi": ortalama_akıs}
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7146,6 +7213,22 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     tohum_raporu = nebati_nefs.tevlid_tohumla({"omega_cebiri": tayf_bilgisi["Ω_cebiri"]})
 
+    mana_fibrasyonu = FibrasyonluManaLifi(turetilen_kategori)
+    for obj in turetilen_kategori.nesneler:
+        mana_fibrasyonu.mana_lifi_ekle(
+            obj, np.array([float(P[obj, nihai_hedef]) if obj < n else 0.5,
+                          float(tayf_bilgisi["Kan_rezidusu"][obj, nihai_hedef]) if obj < n else 0.1,
+                          0.5, 0.5]))
+    kartezyen_mana_tasimasi = mana_fibrasyonu.kartezyen_ok_tasi(baglam[-1], nihai_hedef, P)
+
+    icsel_kategori = IcselKategoriNesnesi(turetilen_kategori)
+    icsel_kategori_terimi = icsel_kategori.topos_nesnesi_olarak_kodla()
+
+    mutasarrifa_tezgah = PolinomyalMutasarrifaTezgahi(islemler=["bileske", "terkip"], ariteler=[2, 2])
+    yeni_kavram_id, yeni_kavram_adi = mutasarrifa_tezgah.hipotetik_terkip_dogur(list(orijinal_baglam))
+
+    itminan_analizi = topos_terminal_buzulme_itminan(turetilen_kategori, P, kuantum_durum_vektoru)
+
     vecih_ortusmeleri_balya = {"uzay": float(rho[0]), "kategori": float(rho[1]),
                                "operad": float(rho[2]), "yırtık": float(rho[3])}
     balyalama_raporu = d9_kume_kapanisi_ve_balyalama(
@@ -7248,5 +7331,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "hads_sezgi_durumu": hads_durumu,
         "nebati_metabolik_enerji": metabolik_enerji,
         "nebati_tohum_mirasi": tohum_raporu,
+        "mana_fibrasyonu_tasimasi": kartezyen_mana_tasimasi,
+        "icsel_kategori_nesnesi": icsel_kategori_terimi,
+        "mutasarrifa_hipotetik_kavram": (yeni_kavram_id, yeni_kavram_adi),
+        "topos_terminal_itminan": itminan_analizi,
         "detay": tayf_bilgisi
     }
