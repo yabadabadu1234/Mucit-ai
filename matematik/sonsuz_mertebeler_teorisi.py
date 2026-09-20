@@ -330,6 +330,22 @@ class YonluHom(Terim):
         self.cizgi, self.kaynak, self.hedef = cizgi, kaynak, hedef
 
 
+class YonluOk(Terim):
+    __slots__ = ("cizgi", "kaynak", "hedef", "etiket")
+
+    def __init__(self, cizgi: Terim, kaynak: Terim, hedef: Terim,
+                 etiket: str = "ok") -> None:
+        self.cizgi, self.kaynak, self.hedef, self.etiket = (
+            cizgi, kaynak, hedef, etiket)
+
+
+class YonluTerkip(Terim):
+    __slots__ = ("f", "g")
+
+    def __init__(self, f: Terim, g: Terim) -> None:
+        self.f, self.g = f, g
+
+
 class YolLam(Terim):
     __slots__ = ("ad", "govde")
 
@@ -2582,6 +2598,20 @@ def sentezle(t: Terim, g: Baglam) -> Deger:
         _TURETIM_SAYI["yönlü_teşkil"] = _TURETIM_SAYI.get(
             "yönlü_teşkil", 0) + 1
         return DEvren(sv)
+    if isinstance(t, YonluOk):
+        A = g.d(t.cizgi)
+        denetle(t.kaynak, A, g)
+        denetle(t.hedef, A, g)
+        return DYonluHom(A, g.d(t.kaynak), g.d(t.hedef))
+    if isinstance(t, YonluTerkip):
+        tip_f = sentezle(t.f, g)
+        tip_g = sentezle(t.g, g)
+        if not (isinstance(tip_f, DYonluHom) and isinstance(tip_g, DYonluHom)):
+            raise DenetimHatasi("YonluTerkip: bileşke terimleri yönlü ok olmalıdır")
+        if not g.esit_mi(tip_f.hedef, tip_g.kaynak):
+            raise DenetimHatasi(
+                "YonluTerkip uç uyuşmazlığı: f'in hedefi g'nin kaynağı olmalı")
+        return DYonluHom(tip_f.cizgi, tip_f.kaynak, tip_g.hedef)
     if isinstance(t, Deg):
         if t.ad not in g.tipler:
             raise DenetimHatasi("kapsamda olmayan değişken: %s" % t.ad)
@@ -4575,64 +4605,118 @@ def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
     }
 
 
-def aklet_boynuz_doldur(x: int, z: int, tayf_bilgisi: Dict[str, Any]
+def aklet_operad_doldur(baglam: Tuple[int, ...], hedef: int,
+                        tayf_bilgisi: Dict[str, Any],
+                        norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float]
                         ) -> Dict[str, Any]:
     P = tayf_bilgisi["P"]
     Asim = tayf_bilgisi["Asim"]
     Kan_rez = tayf_bilgisi["Kan_rezidusu"]
     n = P.shape[0]
 
-    dogrudan_guc = float(P[x, z])
-    tikanma = float(Kan_rez[x, z])
+    son_token = int(baglam[-1]) if baglam else 0
+    z = int(hedef)
 
-    aday_yollar = []
+    dogrudan_korolla_gucu = norm_korollalar.get((baglam, z), 0.0)
+    dogrudan_gecis_gucu = float(P[son_token, z])
+    dogrudan_guc = max(dogrudan_korolla_gucu, dogrudan_gecis_gucu)
+    tikanma = float(Kan_rez[son_token, z])
+
+    adaylar = []
     for y in range(n):
-        if y == x or y == z:
+        if y == son_token or y == z:
             continue
-        gecis_guven = float(P[x, y] * P[y, z])
-        if gecis_guven > 1e-6:
-            ceza = float(Asim[x, y] * Asim[y, z] * tikanma)
-            net_skor = gecis_guven * (1.0 - 0.5 * ceza)
-            aday_yollar.append((net_skor, y))
+        girdi_y_gucu = norm_korollalar.get((baglam, y), float(P[son_token, y]))
+        y_z_gucu = float(P[y, z])
+        bileske_guven = girdi_y_gucu * y_z_gucu
 
-    if not aday_yollar:
+        if bileske_guven > 1e-6:
+            koherans_cezasi = float(Asim[son_token, y] * Asim[y, z] * tikanma)
+            net_skor = bileske_guven * (1.0 - 0.5 * koherans_cezasi)
+            adaylar.append((net_skor, y))
+
+    if not adaylar:
         return {
             "hüküm": "tıkanma",
-            "en_iyi_ara_durak": None,
+            "ara_durak": None,
             "güven": dogrudan_guc,
+            "ispat_sahidi": None,
             "kohomolojik_engel": tikanma
         }
 
-    aday_yollar.sort(key=lambda item: item[0], reverse=True)
-    en_iyi_skor, en_iyi_y = aday_yollar[0]
+    adaylar.sort(key=lambda item: item[0], reverse=True)
+    en_iyi_skor, y_yildiz = adaylar[0]
+
+    X_tip = Deg("BelirtecEvreni")
+    ok1 = YonluOk(X_tip, dogal_sayi(son_token), dogal_sayi(y_yildiz), "öncül_çıkarım")
+    ok2 = YonluOk(X_tip, dogal_sayi(y_yildiz), dogal_sayi(z), "netice_çıkarım")
+    ispat_sahidi = YonluTerkip(ok1, ok2)
 
     if dogrudan_guc >= en_iyi_skor and tikanma < 0.05:
         hukum = "doğrudan_tasdik"
-    elif en_iyi_skor > dogrudan_guc and en_iyi_skor > 0.01:
+    elif en_iyi_skor > dogrudan_guc and en_iyi_skor > 1e-4:
         hukum = "türetim_başarılı"
     else:
         hukum = "şüphe_teâruz"
 
     return {
         "hüküm": hukum,
-        "en_iyi_ara_durak": en_iyi_y,
+        "ara_durak": y_yildiz,
         "türetim_gücü": en_iyi_skor,
         "doğrudan_güç": dogrudan_guc,
+        "ispat_sahidi": ispat_sahidi,
         "kohomolojik_engel": tikanma
     }
 
 
-def hendese_teshisi_kos(w: Sequence[int], n: int) -> Dict[str, Any]:
-    P, Asim, norm_korollalar = veriden_geometri_cikar(w, n)
+def ispat_sahidini_dogrula(ispat_sahidi: Optional[Terim], son_token: int,
+                           hedef: int) -> bool:
+    if ispat_sahidi is None:
+        return False
+    g = Baglam()
+    g = g.genislet_t("BelirtecEvreni", U)
+    beklenen_tip = yonlu_hom(Deg("BelirtecEvreni"), dogal_sayi(son_token),
+                             dogal_sayi(hedef))
+    try:
+        denetle_t(ispat_sahidi, beklenen_tip, g)
+        return True
+    except RED_HATALARI:
+        return False
+
+
+def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4
+                        ) -> Dict[str, Any]:
+    P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
 
     tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
 
-    son_token = int(w[-1])
+    w_arr = list(w)
+    k_baglam = min(K_max - 1, len(w_arr) - 1)
+    baglam = tuple(w_arr[-k_baglam:]) if k_baglam > 0 else (w_arr[-1],)
+    son_token = int(w_arr[-1])
     hedef_aday = int(np.argmax(P[son_token]))
-    muhakeme = aklet_boynuz_doldur(son_token, hedef_aday, tayf_bilgisi)
+
+    muhakeme = aklet_operad_doldur(baglam, hedef_aday, tayf_bilgisi,
+                                   norm_korollalar)
+
+    sahit_gecerli = ispat_sahidini_dogrula(muhakeme["ispat_sahidi"],
+                                           son_token, hedef_aday)
+    muhakeme["şahit_doğrulandı"] = sahit_gecerli
+
+    rho = tayf_bilgisi["tayf"]
+    parite_lifi = {
+        "spektral_agirliklar": rho,
+        "aktif_modlar": {
+            "uzay_modu": bool(rho[0] > 0.15),
+            "kategori_modu": bool(rho[1] > 0.15),
+            "operad_modu": bool(rho[2] > 0.15),
+            "yırtık_modu": bool(rho[3] > 0.05)
+        },
+        "parite_seviyesi": int(np.argmax(rho))
+    }
 
     return {
-        "spektral_demet": tayf_bilgisi["tayf"],
+        "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
         "muhakeme": muhakeme,
         "detay": tayf_bilgisi
