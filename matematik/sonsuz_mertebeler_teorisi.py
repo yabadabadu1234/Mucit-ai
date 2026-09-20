@@ -6992,6 +6992,18 @@ def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
     return float(np.clip(yaricap_yildiz, 1e-4, 1.0))
 
 
+def kategori_kolimit_odakla(adaylar: List[Tuple[float, int]]) -> Dict[int, float]:
+    if not adaylar:
+        return {}
+    skorlar = np.array([s for s, _ in adaylar], dtype=float)
+    skorlar = np.clip(skorlar, 0.0, None)
+    toplam = float(np.sum(skorlar))
+    if toplam <= 1e-12:
+        agirlik = 1.0 / len(adaylar)
+        return {y: agirlik for _, y in adaylar}
+    return {y: float(s / toplam) for s, y in adaylar}
+
+
 def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
                         norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float],
                         yasakli_hedefler: Optional[Set[int]] = None
@@ -7076,8 +7088,11 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         return {
             "hüküm": "tıkanma", "hedef": z, "ara_durak": None,
             "ispat_sahidi": None, "kohomolojik_engel": tikanma,
-            "hads_durumu": hads_durumu, "hads_kuvveti": hads_kuvveti
+            "hads_durumu": hads_durumu, "hads_kuvveti": hads_kuvveti,
+            "aday_kolimit_dagilimi": {}
         }
+
+    aday_kolimit_dagilimi = kategori_kolimit_odakla(adaylar)
 
     adaylar.sort(key=lambda item: item[0], reverse=True)
     en_iyi_skor, y_yildiz = adaylar[0]
@@ -7116,7 +7131,8 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
         "ara_durak": y_yildiz, "türetim_gücü": en_iyi_skor,
         "doğrudan_güç": dogrudan_guc, "ispat_sahidi": ispat_sahidi,
         "kohomolojik_engel": tikanma, "hads_durumu": hads_durumu,
-        "hads_kuvveti": hads_kuvveti
+        "hads_kuvveti": hads_kuvveti,
+        "aday_kolimit_dagilimi": aday_kolimit_dagilimi
     }
 
 
@@ -7815,15 +7831,26 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         else:
             anlik_hodge_engeli = float(0.5 * ham_hodge_engeli
                                        + 0.5 * leray_raporu_adim["kulli_leray_engeli"])
-        kat_seviyesi, tirmanis_notu = asansor.yukari_tirman(alt_engel=anlik_hodge_engeli)
-
+        mertebe_once = asansor.mevcut_mertebe
         adim_muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar,
                                             yasakli_hedefler=cozulen_hedefler)
+        kat_seviyesi, tirmanis_notu = asansor.yukari_tirman(alt_engel=anlik_hodge_engeli)
+        kolimit_dagilimi = adim_muhakeme.get("aday_kolimit_dagilimi") or {}
+        if kat_seviyesi > mertebe_once and kolimit_dagilimi:
+            odak_vektoru = np.zeros(n, dtype=float)
+            for y, agirlik in kolimit_dagilimi.items():
+                if 0 <= y < n:
+                    odak_vektoru[y] = agirlik
+            if float(np.sum(odak_vektoru)) > 1e-12:
+                P[baglam[-1]] = 0.7 * P[baglam[-1]] + 0.3 * odak_vektoru
+                P[baglam[-1]] /= (np.sum(P[baglam[-1]]) + 1e-12)
         adim_muhakeme["asansor_kati"] = kat_seviyesi
         adim_muhakeme["asansor_notu"] = tirmanis_notu
         adim_muhakeme["cech_engeli_H1"] = cech_raporu_adim["cech_engeli_H1"]
         adim_muhakeme["leray_kapandi_mi"] = leray_raporu_adim["spektral_dizi_kapandi_mi"]
         adim_muhakeme["tikama_guncellendi"] = anlik_hodge_engeli
+        adim_muhakeme["kolimit_odaklamasi_uygulandi"] = bool(
+            kat_seviyesi > mertebe_once and kolimit_dagilimi)
 
         sahit_gecerli = ispat_sahidini_dogrula(adim_muhakeme["ispat_sahidi"], baglam,
                                                adim_muhakeme["hedef"])
