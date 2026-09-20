@@ -5812,6 +5812,94 @@ def uc_boyutlu_boynuz_doldur(x: int, y: int, z: int, w: int, P: np.ndarray) -> D
             "uc_hucre_doldu_mu": bool(toplam_3d_engel < 0.05)}
 
 
+class TemelDegisimFunktoru:
+    __slots__ = ("kaynak_hedef_oku", "f_gecis_gucu")
+
+    def __init__(self, kaynak_hedef_oku: Tuple[int, int], f_gecis_gucu: float) -> None:
+        self.kaynak_hedef_oku = kaynak_hedef_oku
+        self.f_gecis_gucu = float(f_gecis_gucu)
+
+    def sigma_ileri_it(self, alem_A: TuretilenDilimAlemi, alem_B: TuretilenDilimAlemi) -> List[int]:
+        itilen_nesneler = []
+        for x in alem_A.alemdeki_nesneler:
+            if x not in alem_B.alemdeki_nesneler:
+                itilen_nesneler.append(x)
+        return itilen_nesneler
+
+    def pullback_geri_cek(self, alem_B: TuretilenDilimAlemi, P: np.ndarray) -> List[Tuple[int, float]]:
+        A, B = self.kaynak_hedef_oku
+        lif_degisimi = []
+        for y in alem_B.alemdeki_nesneler:
+            lif_agirligi = float(P[y, B] * self.f_gecis_gucu)
+            if lif_agirligi > 1e-4:
+                lif_degisimi.append((y, lif_agirligi))
+        return lif_degisimi
+
+
+class GrothendieckElek:
+    __slots__ = ("hedef_nesne", "elek_oklari", "kapsama_esigi")
+
+    def __init__(self, hedef_nesne: int, elek_oklari: Set[Tuple[int, int]], kapsama_esigi: float = 0.6) -> None:
+        self.hedef_nesne = int(hedef_nesne)
+        self.elek_oklari = set(elek_oklari)
+        self.kapsama_esigi = float(kapsama_esigi)
+
+    def elek_kapanisi_dogrula(self, kat: Turetilen1Kategori) -> bool:
+        C = self.hedef_nesne
+        for (x, c_hedef) in list(self.elek_oklari):
+            if c_hedef != C:
+                continue
+            for (w, x_giris) in kat.ok_siniflari:
+                if x_giris == x and (w, C) not in self.elek_oklari:
+                    self.elek_oklari.add((w, C))
+        return True
+
+    def ortu_mu(self, P: np.ndarray) -> bool:
+        C = self.hedef_nesne
+        toplam_ortu_kutlesi = sum(P[x, c] for (x, c) in self.elek_oklari if c == C)
+        return bool(toplam_ortu_kutlesi >= self.kapsama_esigi)
+
+
+def kismi_iz_ve_dolaniklik_entropisi(rho_AB: np.ndarray, d_A: int, d_B: int) -> Tuple[float, np.ndarray]:
+    toplam_boyut = d_A * d_B
+    if rho_AB.shape[0] < toplam_boyut:
+        raise DenetimHatasi("Yoğunluk matrisi alt-sistem boyutlarını karşılamıyor")
+
+    rho_A = np.zeros((d_A, d_A), dtype=complex)
+    for j in range(d_B):
+        for i1 in range(d_A):
+            for i2 in range(d_A):
+                idx1 = i1 * d_B + j
+                idx2 = i2 * d_B + j
+                rho_A[i1, i2] += rho_AB[idx1, idx2]
+
+    iz_A = np.trace(rho_A)
+    if abs(iz_A) > 1e-12:
+        rho_A /= iz_A
+
+    ozdegerler = np.real(np.linalg.eigvalsh(rho_A))
+    ozdegerler = ozdegerler[ozdegerler > 1e-12]
+    dolaniklik_entropisi = float(-np.sum(ozdegerler * np.log2(ozdegerler))) if len(ozdegerler) else 0.0
+
+    return dolaniklik_entropisi, rho_A
+
+
+def opetopik_agac_asila(ana_agac: OperadAgac, asilanan_agac: OperadAgac,
+                        yaprak_indeksi: int, X_tip: Terim) -> OperadAgac:
+    oncutler_1 = list(ana_agac.oncutler)
+    if not (0 <= yaprak_indeksi < len(oncutler_1)):
+        raise DenetimHatasi("Geçersiz yaprak indeksi")
+
+    yeni_oncutler = (
+        oncutler_1[:yaprak_indeksi] +
+        list(asilanan_agac.oncutler) +
+        oncutler_1[yaprak_indeksi + 1:]
+    )
+
+    yeni_etiket = "%s_asili_%s" % (ana_agac.etiket, asilanan_agac.etiket)
+    return OperadAgac(cizgi=X_tip, oncutler=yeni_oncutler, hedef=ana_agac.hedef, etiket=yeni_etiket)
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -6625,6 +6713,35 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         z_tok = (y_tok + 1) % n
     uc_boyut_raporu = uc_boyutlu_boynuz_doldur(x_tok, y_tok, int(z_tok), nihai_hedef, P)
 
+    if len(turetilen_alem.alemdeki_nesneler) >= 2:
+        hedef_nesne = turetilen_alem.baglam_hedefi
+        ikinci_nesne = turetilen_alem.alemdeki_nesneler[0]
+        gecis_oku = (ikinci_nesne, hedef_nesne)
+        temel_degisim = TemelDegisimFunktoru(gecis_oku, float(P[ikinci_nesne, hedef_nesne]))
+        pullback_lifleri = temel_degisim.pullback_geri_cek(turetilen_alem, P)
+    else:
+        pullback_lifleri = []
+
+    elek_oklari = set(turetilen_alem.alem_ici_morfizmler)
+    grothendieck_elek = GrothendieckElek(hedef_nesne=nihai_hedef, elek_oklari=elek_oklari)
+    grothendieck_elek.elek_kapanisi_dogrula(turetilen_kategori)
+    elek_ortu_mu = grothendieck_elek.ortu_mu(P)
+
+    d_A, d_B = 2, 2
+    if kuantum_bilgisi["rho_yogunluk"].shape[0] >= d_A * d_B:
+        dolaniklik_S, _ = kismi_iz_ve_dolaniklik_entropisi(kuantum_bilgisi["rho_yogunluk"], d_A, d_B)
+    else:
+        dolaniklik_S = 0.0
+
+    if (len(silsile_adimlari) >= 2 and isinstance(silsile_adimlari[0][0], OperadAgac)
+            and isinstance(silsile_adimlari[1][0], OperadAgac)):
+        asili_kulli_agac = opetopik_agac_asila(
+            ana_agac=silsile_adimlari[1][0], asilanan_agac=silsile_adimlari[0][0],
+            yaprak_indeksi=0, X_tip=Dogal())
+        asili_agac_etiketi = asili_kulli_agac.etiket
+    else:
+        asili_agac_etiketi = "temel_korolla"
+
     lambda_nispetleri, yavas_mod, skaler_mizan = d7_hamiltonyen_nispetleri(kefeler)
 
     u_degeri = float(P[baglam[-1], nihai_hedef] * 2.0 - 1.0)
@@ -6732,5 +6849,9 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
             "morfizm_sayisi": len(elemanlar_kat.ok_siniflari)
         },
         "uc_boyutlu_koherans_Lambda3": uc_boyut_raporu,
+        "temel_degisim_pullback_lifleri": pullback_lifleri,
+        "grothendieck_elek_ortu_mu": elek_ortu_mu,
+        "von_neumann_dolaniklik_S": dolaniklik_S,
+        "opetopik_asili_agac_etiketi": asili_agac_etiketi,
         "detay": tayf_bilgisi
     }
