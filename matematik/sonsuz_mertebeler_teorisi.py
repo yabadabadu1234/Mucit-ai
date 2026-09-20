@@ -7514,6 +7514,115 @@ def s2_dort_sual_teftisi(tikanma_engeli: float,
     }
 
 
+def d4_kapi_tam_tasnif_mercii(hedef_token: int,
+                              veri_lifi: int,
+                              psi_durum: np.ndarray,
+                              vecih_ortusmeleri: Sequence[float]) -> Dict[str, Any]:
+    d = int(veri_lifi)
+
+    basamak_gecersiz = bool(hedef_token < 0 or hedef_token >= d)
+    genlik_gecersiz = bool(not np.all(np.isfinite(psi_durum)))
+
+    if basamak_gecersiz or genlik_gecersiz:
+        return {
+            "hüküm": "MANTIKSIZLIK",
+            "eylem": "RET",
+            "sebep": "Qudit taban taşması veya sonlu olmayan genlik",
+            "ihtilaf": 1.0,
+            "ittifak": 0.0
+        }
+
+    dizi = np.array(vecih_ortusmeleri, dtype=float) if len(vecih_ortusmeleri) else np.array([0.5])
+    azam_ort = float(np.max(dizi))
+    asg_ort = float(np.min(dizi))
+
+    ihtilaf = float(azam_ort - asg_ort)
+    ittifak = float(1.0 - ihtilaf)
+
+    if ihtilaf > ittifak:
+        hukum = "TENAKUZ"
+        eylem = "TERFİ"
+    elif ittifak > ihtilaf and asg_ort >= ittifak:
+        hukum = "KISIRDÖNGÜ"
+        eylem = "TEVAKKUF"
+    else:
+        hukum = "TASDİK"
+        eylem = "KABUL"
+
+    return {
+        "hüküm": hukum,
+        "eylem": eylem,
+        "ihtilaf": ihtilaf,
+        "ittifak": ittifak,
+        "asgari_ortusme": asg_ort
+    }
+
+
+class CokYaprakliRiemannOrtusu:
+    __slots__ = ("yapraklar", "monodromi_matrisi")
+
+    def __init__(self, yaprak_isimleri: Sequence[str]) -> None:
+        self.yapraklar = list(yaprak_isimleri)
+        self.monodromi_matrisi = np.eye(len(self.yapraklar), dtype=int)
+
+    def monodromi_dondur(self, holonomi_fazi: float) -> Tuple[str, np.ndarray]:
+        M = len(self.yapraklar)
+        if M <= 1:
+            return self.yapraklar[0], self.monodromi_matrisi
+
+        kayma = int(np.round(abs(holonomi_fazi) / (np.pi / 2.0))) % M
+
+        sigma = np.zeros((M, M), dtype=int)
+        for i in range(M):
+            sigma[(i + kayma) % M, i] = 1
+
+        self.monodromi_matrisi = sigma @ self.monodromi_matrisi
+        yeni_yaprak_idx = int(np.argmax(self.monodromi_matrisi[:, 0]))
+        yeni_yaprak = self.yapraklar[yeni_yaprak_idx]
+
+        return yeni_yaprak, self.monodromi_matrisi
+
+
+class ToposIcselNNO:
+    __slots__ = ("kategori", "sifir_nesne_id", "ardil_ok_id")
+
+    def __init__(self, kat: Turetilen1Kategori) -> None:
+        self.kategori = kat
+        self.sifir_nesne_id = kat.nesneler[0] if kat.nesneler else 0
+        self.ardil_ok_id = kat.ok_siniflari.get((self.sifir_nesne_id, self.sifir_nesne_id), 0)
+
+    def ozyineleme_adimi_hesapla(self, baslangic_degeri: float,
+                                 adim_fonksiyonu: Callable[[float], float],
+                                 n_adim: int) -> float:
+        val = float(baslangic_degeri)
+        for _ in range(max(0, int(n_adim))):
+            val = float(adim_fonksiyonu(val))
+        return val
+
+
+def zigzag_bitisiklik_sapmasi_olc(P: np.ndarray,
+                                  f_gecis_gucu: float) -> Dict[str, Any]:
+    F_mat = f_gecis_gucu * P
+    G_mat = f_gecis_gucu * P.T
+
+    eta = G_mat @ F_mat
+    epsilon = F_mat @ G_mat
+
+    sol_ucgen = (epsilon @ F_mat) @ (F_mat @ eta)
+    hata_1 = float(np.linalg.norm(sol_ucgen - F_mat))
+
+    sag_ucgen = (G_mat @ epsilon) @ (eta @ G_mat)
+    hata_2 = float(np.linalg.norm(sag_ucgen - G_mat))
+
+    toplam_zigzag_sapmasi = float(hata_1 + hata_2)
+    bitisiklik_mesru_mu = bool(toplam_zigzag_sapmasi < 0.25)
+
+    return {
+        "zigzag_sapmasi": toplam_zigzag_sapmasi,
+        "bitisiklik_mesru_mu": bitisiklik_mesru_mu
+    }
+
+
 def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dict[str, float]:
     n = P.shape[0]
 
@@ -7688,6 +7797,13 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     kuantum_durum_vektoru, kod_uzayi_maskesi = yazmacta_bolge_yoktur_superpozisyon(rho, n)
     lif_boyutu = len(kuantum_durum_vektoru)
 
+    d4_tasnif_raporu = d4_kapi_tam_tasnif_mercii(
+        hedef_token=nihai_hedef, veri_lifi=n, psi_durum=kuantum_durum_vektoru,
+        vecih_ortusmeleri=[adim["türetim_gücü"] for adim in muhakemeler if "türetim_gücü" in adim])
+    if d4_tasnif_raporu["eylem"] == "RET":
+        return {"hata": "D4 KAPI İHLALİ: MANTIKSIZLIK saptandı (Örnek elendi)",
+                "detay": d4_tasnif_raporu}
+
     dilimler = {
         "uzay": (0, n),
         "kategori": (n, 2 * n),
@@ -7833,6 +7949,19 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     halka_yolu = list(orijinal_baglam) + [nihai_hedef]
     sorites_bargmann_raporu = degisken_boylu_bargmann_halkasi(P, Asim, halka_yolu)
+
+    riemann_ortusu = CokYaprakliRiemannOrtusu(
+        ["uzay_yaprak", "kategori_yaprak", "operad_yaprak", "yırtık_yaprak"])
+    riemann_aktif_yaprak, riemann_monodromi_sigma = riemann_ortusu.monodromi_dondur(
+        holonomi_fazi=float(sorites_bargmann_raporu.get("phi_n", 0.0)))
+
+    ic_nno = ToposIcselNNO(turetilen_kategori)
+    nno_ornek_hesap = ic_nno.ozyineleme_adimi_hesapla(
+        baslangic_degeri=float(muhakemeler[-1].get("türetim_gücü", 0.5)),
+        adim_fonksiyonu=lambda x: x * 0.9, n_adim=len(muhakemeler))
+
+    zigzag_raporu = zigzag_bitisiklik_sapmasi_olc(
+        P=P, f_gecis_gucu=float(np.mean(P[P > 0])) if np.any(P > 0) else 0.5)
 
     egim_tahmin = -np.gradient(kefeler_tam) if len(kefeler_tam) > 1 else np.array([-0.1])
     g_fs_vektoru = 1.0 - (np.abs(kuantum_durum_vektoru[:len(egim_tahmin)]) ** 2)
@@ -8062,6 +8191,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "s2_dort_sual_raporu": dort_sual_raporu,
         "d2_enformasyon_metrikleri": d2_metrikleri,
         "yuksek_kure_S2_tipi": str(kure_2_tipi),
+        "d4_kapi_tasnifi": d4_tasnif_raporu,
+        "riemann_aktif_yaprak": riemann_aktif_yaprak,
+        "topos_icsel_nno_hesabi": nno_ornek_hesap,
+        "zigzag_bitisiklik_dogrulamasi": zigzag_raporu,
         "parite_lifi": parite_lifi,
         "omega_cebiri": tayf_bilgisi["Ω_cebiri"],
         "muhakeme_silsilesi": muhakemeler,
