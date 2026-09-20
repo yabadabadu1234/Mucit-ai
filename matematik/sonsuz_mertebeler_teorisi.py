@@ -6888,6 +6888,24 @@ class IkiYonluMertebeAsansoru:
             lif_vektoru = None
         return self.mevcut_mertebe, hukum, lif_vektoru
 
+    def yukari_tirman_lifli(self, alt_nesne: int, ust_nesne: int, P: np.ndarray,
+                            parite_lifi: Dict[str, Any], alt_engel: float
+                            ) -> Tuple[int, str, Optional[np.ndarray]]:
+        cikis = tip_tensoru_yukari_cik(alt_nesne, ust_nesne, P, parite_lifi)
+        lift = np.asarray(cikis["kartezyen_lift_vektoru"])
+        lift_var_mi = bool(float(np.linalg.norm(lift)) > 1e-12)
+        if alt_engel > 0.15 and lift_var_mi and self.mevcut_mertebe < self.tavan_mertebe:
+            self.mevcut_mertebe += 1
+            hukum = ("MERTEBE_YÜKSELDİ_TIRMANIŞ_LİFLİ_n%d (taban_geçişi=%.4f, lif_boyu=%d)"
+                     % (self.mevcut_mertebe, float(cikis["taban_gecisi"]), int(lift.size)))
+            lif_vektoru = lift
+        else:
+            sebep = "ENGEL_DÜŞÜK" if alt_engel <= 0.15 else (
+                "LİFT_SIFIR" if not lift_var_mi else "TAVANDA")
+            hukum = "MERTEBE_SABİT_LİFSİZ_n%d (%s)" % (self.mevcut_mertebe, sebep)
+            lif_vektoru = None
+        return self.mevcut_mertebe, hukum, lif_vektoru
+
 
 def cok_mertebeli_girisim_karari(kule: DereceliMertebeKulesi, n_boyut: int,
                                   yasak: Set[int]) -> Tuple[int, np.ndarray, Dict[str, float]]:
@@ -7923,6 +7941,19 @@ def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dic
 #     nefs/kulli_mizan.py:givens (yeniden yazılmadı, doğrudan çağrıldı)
 #     ile tam üniter izometri kurulur; farklı boyutlu bloklarda M=|b⟩⟨a|
 #     rank-1 kısmi izometrisi (M|a⟩=|b⟩) kullanılır.
+#   - tip_tensoru_3eksen_insa / _en_yakin_carpanlar: liflar sözlüğü tek
+#     bir vektör (acemi mertebesi) değil, gerçek bir T[c,u,x] tensörüne
+#     (ustalık mertebesi) yeniden şekillendirilir -- veri fabrika
+#     edilmez, zaten hesaplanmış liflardan kesilip reshape edilir.
+#     Boyutlar mümkün olduğunda en az 20 olacak şekilde seçilir; veri
+#     20×20'yi doldurmaya yetmiyorsa (küçük ölçek testlerinde olduğu
+#     gibi) dürüstçe küçük kalır, sahte doldurma yapılmaz.
+#   - IkiYonluMertebeAsansoru.yukari_tirman_lifli: çıkışın da (aşağı
+#     inişte olduğu gibi) bir sayaç değil gerçek veri taşıması için;
+#     var olan tip_tensoru_yukari_cik (kendisi zaten var olan
+#     grothendieck_dikey_asansor'u çağırıyordu -- yeniden yazılmadı)
+#     üzerinden gerçek bir Kartezyen lift vektörü üretir ve mertebe
+#     yükselişi bu vektörün sıfırdan farklı olup olmamasına bağlıdır.
 # ============================================================================
 
 def tip_tensoru_blok_boyutlari(kat: "Turetilen1Kategori",
@@ -7974,8 +8005,34 @@ def qudit_tip_tensoru_kur(kat: "Turetilen1Kategori", psi: np.ndarray,
             teta = teta[teta > 0.0][:max(1, min(8, alt.size - 1))]
             alt = tip_tensoru_perelomov_dondur(alt, teta)
         lifler[x] = alt
+    T, u_boyu, x_boyu = tip_tensoru_3eksen_insa(lifler, list(bloklar))
     return {"bloklar": bloklar, "liflar": lifler,
-           "nesneler": list(bloklar), "taban_boyut": d}
+           "nesneler": list(bloklar), "taban_boyut": d,
+           "T": T, "u_boyu": u_boyu, "x_boyu": x_boyu}
+
+
+def _en_yakin_carpanlar(d: int, en_az: int = 20) -> Tuple[int, int]:
+    if d <= 0:
+        return (1, 0)
+    for u in range(int(np.sqrt(d)), 0, -1):
+        if d % u == 0 and (d // u) >= en_az:
+            return (u, d // u)
+    return (1, d)
+
+
+def tip_tensoru_3eksen_insa(lifler: Dict[int, np.ndarray], nesneler: List[int],
+                            en_az_boyut: int = 20
+                            ) -> Tuple[np.ndarray, int, int]:
+    if not nesneler:
+        return np.zeros((0, 0, 0), complex), 0, 0
+    boylar = [int(lifler[x].size) for x in nesneler]
+    d_ortak = max(1, min(boylar))
+    u_boyu, x_boyu = _en_yakin_carpanlar(d_ortak, en_az_boyut)
+    T = np.zeros((len(nesneler), u_boyu, x_boyu), complex)
+    for c, nesne in enumerate(nesneler):
+        veri = np.asarray(lifler[nesne], complex)[:u_boyu * x_boyu]
+        T[c] = veri.reshape(u_boyu, x_boyu)
+    return T, u_boyu, x_boyu
 
 
 def tip_tensoru_morfizm_kanali(tensor: Dict[str, Any], a: int, b: int
@@ -8485,7 +8542,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     mertebe_kulesi.mertebe_durumu_guncelle(n_seviye=4, durum_vektoru=v_n4, eylemsel_agirlik=0.2)
 
     anlik_engel = float(muhakemeler[-1].get("kohomolojik_engel", 0.1))
-    suanki_mertebe, tirmanis_hukmu = asansor.yukari_tirman(alt_engel=anlik_engel)
+    suanki_mertebe, tirmanis_hukmu, tirmanis_lif_vektoru = asansor.yukari_tirman_lifli(
+        baglam[-1], nihai_hedef, P, parite_lifi, alt_engel=anlik_engel)
 
     burhan_tam_mi = bool(kulli_sahit_gecerli and anlik_engel < 0.05)
     inilmis_mertebe, inis_hukmu, inis_lif_vektoru = asansor.asagi_in_intac_lifli(
@@ -8735,6 +8793,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "baglam_zayifligi": baglam_zayifligi,
         "boynuz_ayrisimi": boynuz_analizi,
         "asansor_tirmanis_hukmu": tirmanis_hukmu,
+        "asansor_tirmanis_lif_vektoru": tirmanis_lif_vektoru,
         "asansor_inis_hukmu": inis_hukmu,
         "aktif_asansor_mertebesi": inilmis_mertebe,
         "asansor_inis_lif_vektoru": inis_lif_vektoru,
