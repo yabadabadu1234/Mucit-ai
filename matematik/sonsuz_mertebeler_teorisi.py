@@ -6635,6 +6635,81 @@ def boynuz_turu_ayristir_ve_doldur(n_boyut: int, k_kose: int, P: np.ndarray,
             "ic_boynuz_mu": is_inner, "boynuz_doldu_mu": gecerli}
 
 
+class DereceliMertebeKulesi:
+    __slots__ = ("maks_mertebe", "mertebe_agirliklari", "mertebe_durumlari")
+
+    def __init__(self, maks_mertebe: int = 4) -> None:
+        self.maks_mertebe = int(maks_mertebe)
+        self.mertebe_agirliklari = np.ones(self.maks_mertebe, dtype=float) / float(self.maks_mertebe)
+        self.mertebe_durumlari: Dict[int, np.ndarray] = {}
+
+    def mertebe_durumu_guncelle(self, n_seviye: int, durum_vektoru: np.ndarray,
+                                eylemsel_agirlik: float) -> None:
+        if 1 <= n_seviye <= self.maks_mertebe:
+            norm = np.linalg.norm(durum_vektoru) + 1e-12
+            self.mertebe_durumlari[n_seviye] = durum_vektoru / norm
+            self.mertebe_agirliklari[n_seviye - 1] = float(eylemsel_agirlik)
+            toplam = np.sum(self.mertebe_agirliklari) + 1e-12
+            self.mertebe_agirliklari /= toplam
+
+    def eszamanli_kullî_vektor(self, taban_boyut: int) -> np.ndarray:
+        kulli_dalga = np.zeros(taban_boyut, dtype=complex)
+        for n in range(1, self.maks_mertebe + 1):
+            if n in self.mertebe_durumlari:
+                psi_n = self.mertebe_durumlari[n]
+                pay = np.sqrt(self.mertebe_agirliklari[n - 1])
+                faz = np.exp(1j * np.pi * float(n) / float(self.maks_mertebe))
+                d = min(taban_boyut, len(psi_n))
+                kulli_dalga[:d] += pay * faz * psi_n[:d]
+
+        norm = float(np.linalg.norm(kulli_dalga))
+        return (kulli_dalga / norm) if norm > 1e-12 else kulli_dalga
+
+
+class IkiYonluMertebeAsansoru:
+    __slots__ = ("mevcut_mertebe", "tavan_mertebe")
+
+    def __init__(self, tavan_mertebe: int = 4) -> None:
+        self.mevcut_mertebe = 1
+        self.tavan_mertebe = int(tavan_mertebe)
+
+    def yukari_tirman(self, alt_engel: float) -> Tuple[int, str]:
+        if alt_engel > 0.15 and self.mevcut_mertebe < self.tavan_mertebe:
+            self.mevcut_mertebe += 1
+            hukum = "MERTEBE_YÜKSELDİ_TIRMANIŞ_n%d" % self.mevcut_mertebe
+        else:
+            hukum = "MERTEBE_SABİT_n%d" % self.mevcut_mertebe
+        return self.mevcut_mertebe, hukum
+
+    def asagi_in_intac(self, ust_koherans_tam_mi: bool) -> Tuple[int, str]:
+        if ust_koherans_tam_mi and self.mevcut_mertebe > 1:
+            self.mevcut_mertebe -= 1
+            hukum = "MERTEBE_İNDİ_SOMUTLAŞMA_n%d" % self.mevcut_mertebe
+        else:
+            hukum = "MERTEBE_KORUNDU_n%d" % self.mevcut_mertebe
+        return self.mevcut_mertebe, hukum
+
+
+def cok_mertebeli_girisim_karari(kule: DereceliMertebeKulesi, n_boyut: int,
+                                  yasak: Set[int]) -> Tuple[int, np.ndarray, Dict[str, float]]:
+    kulli_psi = kule.eszamanli_kullî_vektor(taban_boyut=n_boyut)
+
+    girisim_olasiliklari = np.abs(kulli_psi) ** 2
+    girisim_olasiliklari /= (np.sum(girisim_olasiliklari) + 1e-12)
+
+    for y_idx in yasak:
+        if y_idx < n_boyut:
+            girisim_olasiliklari[y_idx] = -1e9
+
+    secilen_hedef = int(np.argmax(girisim_olasiliklari))
+
+    katilim_paylari = {}
+    for n in range(1, kule.maks_mertebe + 1):
+        katilim_paylari["mertebe_%d_payi" % n] = float(kule.mertebe_agirliklari[n - 1])
+
+    return secilen_hedef, girisim_olasiliklari, katilim_paylari
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7649,6 +7724,33 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     itminan_analizi = topos_terminal_buzulme_itminan(turetilen_kategori, P, kuantum_durum_vektoru)
 
+    mertebe_kulesi = DereceliMertebeKulesi(maks_mertebe=4)
+    asansor = IkiYonluMertebeAsansoru(tavan_mertebe=4)
+
+    v_n1 = P[baglam[-1], :]
+    mertebe_kulesi.mertebe_durumu_guncelle(n_seviye=1, durum_vektoru=v_n1, eylemsel_agirlik=float(rho[1]))
+
+    v_n2 = np.zeros(n, dtype=float)
+    for (girdi, cikti), prob in norm_korollalar.items():
+        if cikti < n:
+            v_n2[cikti] += prob
+    mertebe_kulesi.mertebe_durumu_guncelle(n_seviye=2, durum_vektoru=v_n2, eylemsel_agirlik=float(rho[2]))
+
+    v_n3 = np.ones(n, dtype=float) * (1.0 - float(uc_boyut_raporu.get("dortyuzlu_3d_engel", 0.1)))
+    mertebe_kulesi.mertebe_durumu_guncelle(n_seviye=3, durum_vektoru=v_n3, eylemsel_agirlik=float(rho[0]))
+
+    v_n4 = np.ones(n, dtype=float) * float(itminan_analizi.get("itminan_derecesi", 0.5))
+    mertebe_kulesi.mertebe_durumu_guncelle(n_seviye=4, durum_vektoru=v_n4, eylemsel_agirlik=0.2)
+
+    anlik_engel = float(muhakemeler[-1].get("kohomolojik_engel", 0.1))
+    suanki_mertebe, tirmanis_hukmu = asansor.yukari_tirman(alt_engel=anlik_engel)
+
+    burhan_tam_mi = bool(kulli_sahit_gecerli and anlik_engel < 0.05)
+    inilmis_mertebe, inis_hukmu = asansor.asagi_in_intac(ust_koherans_tam_mi=burhan_tam_mi)
+
+    cok_mertebeli_hedef, girisim_vektoru, katilim_raporu = cok_mertebeli_girisim_karari(
+        kule=mertebe_kulesi, n_boyut=n, yasak=set(orijinal_baglam))
+
     koyoneda_raporu = ko_yoneda_yogunluk_sentezle(
         veri_dagilimi=(np.abs(kuantum_durum_vektoru[:n]) if len(kuantum_durum_vektoru) >= n
                       else np.ones(n, dtype=float)),
@@ -7813,5 +7915,10 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "hata_engel_zeno": hata_engel_degeri,
         "baglam_zayifligi": baglam_zayifligi,
         "boynuz_ayrisimi": boynuz_analizi,
+        "asansor_tirmanis_hukmu": tirmanis_hukmu,
+        "asansor_inis_hukmu": inis_hukmu,
+        "aktif_asansor_mertebesi": inilmis_mertebe,
+        "cok_mertebeli_nihai_hedef": cok_mertebeli_hedef,
+        "mertebeler_arasi_katilim_payi": katilim_raporu,
         "detay": tayf_bilgisi
     }
