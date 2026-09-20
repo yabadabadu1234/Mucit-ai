@@ -886,3 +886,151 @@ Koşturulabilen **tek** şey budur (F 1-L).
 | Muhasebe | İmha edilen ve **bırakılan** dal ayrı ayrı sayılır; bırakılan sıfırsa devre fazla eliyor demektir | 2-Đ, 5 |
 | Müfettişlik | Devre haber vermez, **gereğini yapar**: mantıksız dalı fiilen imha eder | 1-Ü |
 | Uzuv | `nefs/sadakat.py` -- yerinde dönüştürülür, yeni dosya açılmaz | 2-Ú, 2-D |
+
+## 4-I. İBN SÎNÂ NEFS ŞEMASI -- TASNİFAT VE TASHİH EDİLMİŞ DURUM MAKİNESİ
+
+Kullanıcının verdiği tasnifat:
+
+```
+nefis çeşitleri      = {nebati, hayvani, insani}
+nefsin kuvvetleri    = {müdrike, muharrike}
+hayvani müdrike      = {hafıza, vahime, mütehayyile, hissi müşterek}
+insani müdrike       = hayvani müdrike + {aklı nazari, aklı ameli, mutasarrıfa}
+hayvani muharrike    = {gazap, şehvet}
+insani muharrike     = {irade}
+```
+
+Bu tasnifattan, ilk taslakta tespit edilen 5 nedensellik/kategori hatası (hafızanın
+doğrudan eylem başlatması, cezb/def' motorlarının yanlış eşleştirilmesi, vâhime-hiss-i
+müşterek arasında mânâ kaydı kategori hatası, âkıle-bâise arasında kayıp irade hattı,
+mütezekkirenin tek cezveye hapsedilmesi) giderildikten sonra tashih edilen nihai
+durum makinesi:
+
+```
+                                  ==============================
+                                  [        MANEVÎ KALP         ]
+                                  [   (Niyet, Rıza, İtminân)   ]
+                                  ==============================
+                                                │▲
+                                                ││ Vicdanî Huzur /
+                                                ││ Şüphe Geribildirimi
+                                                ▼│
+                                  ==============================
+                                  [        ÂKILE KATMANI       ]
+                                  [  (Nazarî İlim & Amelî Akıl) ]
+                                  ==============================
+                                     /          │          \
+           Aklî Kurgu               /           │           \   Aklî Teftiş &
+           ve Mantık Denetimi      /            │            \  Vehmi Hükümsüz Kılma
+                                  ▼             │             ▼
+     ┌────────────────────────┐  İşlemci        │       ┌────────────────────────┐
+     │  MUTASARRIFA İŞLEMCİSİ │◄─İttifakı───────┼──────►│    VÂHİME İŞLEMCİSİ    │
+     │  (Kurgu, Terkip, Montaj│                 │       │ (Cüz'î Mana, Kıymet,   │
+     │   Akıl Emrinde Müfekkire│                 │       │  Hayatî Tehdit & Sezgi)│
+     └───────────┬────────────┘                 │       └───────────┬────────────┘
+                 │▲         ▲                   │                   │▲
+                 ││         │                   │                   ││
+      Terkip     ││         │ Kinematik         │                   ││ Anlık Mana
+      Girdisi    ││         ▼ Simülasyon        │                   ││ Çıkarma
+                 ││   ┌────────────────────┐    │                   ││ (Sûret Okuma)
+                 ││   │MÜTEHAYYİLE İŞLEMCİS│    │                   ││
+                 ││   │(Uzamsal Simülatör &│    │                   ││
+                 ││   │ Dinamik Çark)      │    │                   ││
+                 ││   └──────────┬─────────┘    │                   ││
+                 ││              │▲             │                   ││
+    İç Kurgu     ││ İç Projeksiyon│  Canlı      │                   ││
+    Sûreti       ││              ││  Sahne      │                   ││
+                 │└──►[     HİSS-İ MÜŞTEREK        ]◄───────────────┘│
+                 │    [  (Ortak Duyu & İç Ekran)   ]─────────────────┘
+                 │    ==============================
+                 │                  ▲
+                 │                  │ Dış Duyu Girdisi
+                 │            [ DIŞ DÜNYA ]
+                 │
+                 ▼ (Sentetik Sûret Kaydı)
+     ========================================================================
+     [                           İKİ CEZVELİ HAFIZA                         ]
+     [                                                                      ]
+     [   (SÛRETLER BÖLMESİ)        ◄──────►        (MANALAR BÖLMESİ)        ]
+     [    [Kuvve-i Hayâl]                           [Kuvve-i Hâfıza]        ]
+     [   Biçim, Suret, Ses, Renk                   Kıymet, Tehdit, Muhabbet ]
+     [           ▲                                         ▲                ]
+     [           │                                         │                ]
+     [           └─── Sûret Arama          Mana Arama ─────┘                ]
+     [                         \            /                               ]
+     [                     [ MÜTEZEKKİRE KUVVETİ ]                          ]
+     [                     (Geri Çağırma Motoru)                            ]
+     ========================================================================
+                 ▲                                         ▲
+                 │ (Hammadde Çekme)                        │ (Kıymet & Hüküm Kaydı)
+                 └───────────────┐         ┌───────────────┘
+                                 │         │
+                                 │         │ Doğrudan
+                                 │         │ Refleks / Alarm
+                                 │         │ (Hayvanî Güdü)
+                                 │         │
+                 ┌───────────────┼─────────┴────────────────┐
+                 │               │                          │
+                 │               ▼                          ▼
+                 │        ==============================    │
+  AKLÎ İRADİ SEVK│        [      EYLEME SEVK EDİCİ     ]    │ HAYVANÎ SEVK
+  (İhtiyar Hattı)│        [    (Kuvve-i Bâise & Kasd)  ]    │ (Kör Güdü Hattı)
+                 └───────►==============================◄───┘
+                                     /      \
+                                    /        \
+              Talebe Göre Sevk     /          \    Def'e Göre Sevk
+             (İster Aklî / İster  /            \  (İster Aklî / İster
+              Hayvanî Cezb)      /              \  Hayvanî Def')
+                                ▼                ▼
+                    ┌─────────────────┐    ┌─────────────────┐
+                    │ CEZB / İTTİSAL  │    │   DEF' / İNFİSAL│
+                    │ (Şehvet Motoru) │    │  (Gazap Motoru) │
+                    │ Çekme, Toplama, │    │ İtme, Savunma,  │
+                    │ Kavuşma İştihası│    │ Kaçınma, Yıkım  │
+                    └────────┬────────┘    └────────┬────────┘
+                             │                      │
+                             └──────────┬───────────┘
+                                        │
+                                        ▼
+                          ==============================
+                          [     BEDENSEL VE DIŞ İCRA   ]
+                          [  (Kaslar, Dil, Nabız, Uzuv) ]
+                          ==============================
+```
+
+**Nedensellik kaideleri (tashih edilenler):**
+
+| Kaide | Hüküm |
+| :-- | :-- |
+| Eyleme sevk edicinin amiri | Yalnız **Vâhime** (hayvanî alarm) veya **Âkıle'nin Amelî Aklı** (iradî karar); Hafıza pasif kütüphanedir, doğrudan eylem başlatamaz |
+| Cezb/Def' motorları | Her ikisi de hem aklî hem hayvanî sevk edilebilir (helal talep/cihad = aklî; oburluk/panik = hayvanî) -- tek bir hatta hapsedilmez |
+| Cüz'î mânâ kaydı | Hiss-i Müşterek yalnız *sûret* taşır; Vâhime'nin süzdüğü mânâ **İki Cezveli Hafıza'nın Manalar Bölmesi'ne** yazılır |
+| Âkıle → Bâise hattı | Âkıle'den Eyleme Sevk Edici'ye doğrudan bir **İhtiyar (irade) hattı** vardır |
+| Mütezekkire | Hem Sûretler hem Manalar cezvesini tarayan çift kollu bir geri-çağırma motorudur |
+
+**İbn Sînâ Nefis Tasnifi ⟺ (∞,∞)-Topos İzomorfizmi** (bu tasnifin motora topos-teorik
+karşılığı olmadan salt bir psikolojik etiket listesi kalacağı tespit edilmiştir):
+
+| Nefis/Akıl Melekesi | Topos Karşılığı |
+| :-- | :-- |
+| Nefs-i Nebâtî (Taziye/Tenmiye/Tevlid) | Serbest Monad & kategori içi doğurganlık |
+| Hiss-i Müşterek | Baz bölge ($\mathcal{C}_0$) & evrensel kolimit |
+| İki Cezveli Hafıza | Grothendieck fibrasyonu ($p:\mathcal{E}_{\text{mânâ}}\to\mathcal{C}_{\text{sûret}}$) |
+| Mütezekkire | Yoneda temsil edilebilirliği ($\mathrm{Nat}(h^A,\mathcal{F})\cong\mathcal{F}(A)$) |
+| Mütehayyile | İçsel ko-cebir / zaman akışı ($S\to\mathbb{I}\times S$) |
+| Vâhime | Alt-nesne sınıflayıcısı ($\Omega$) & karakteristik harita ($\chi$) |
+| Mutasarrıfa | Polinomyal funktor ($P(X)=\sum X^E$) & operadik ağaç |
+| Akl-ı Nazarî | Toposun iç mantığı (CTT: çelişmezlik, $\Pi/\Sigma$, univalence) |
+| Akl-ı Amelî | Global kesit funktoru ($\Gamma=\mathrm{Hom}(1,-)$) & maslahat izdüşümü |
+| Muharrike (şehvet/gazap/irade) | Yönlü eğim vektör alanı (gradient/adjoint action) |
+| Manevî Kalp (niyet/itminân) | Terminal nesne ($1$) & homotopik büzülebilirlik |
+
+**Uygulanma durumu:** Bu şemanın tamamı `matematik/sonsuz_mertebeler_teorisi.py`
+içinde koda dökülmüştür -- `IkiCezveliHafiza`, `MutezekkireKuvveti`, `VahimeIslemcisi`,
+`AkileKatmani`, `KuvveiBaiseVeMotorlar`, `ManeviKalpKatmani`, `AklinDortMertebesi`,
+`NefsiNebatiKatmani`, `FibrasyonluManaLifi`, `IcselKategoriNesnesi`,
+`PolinomyalMutasarrifaTezgahi`, `hads_ile_orta_terim_yakala`,
+`topos_terminal_buzulme_itminan`, `topos_modalite_lifi_isle`, `ImajFaktorizasyonu`,
+`frobenius_ko_carpim_klonla` sınıf ve fonksiyonları, `silsile_teshisi_kos` akışına
+bağlıdır. Ayrıntılı formüller ve İbn Sînâ akıl mertebeleri (Heyûlânî/Meleke/Bi'l-Fiil/
+Müstefâd), Hads/Fikr ayrımı ve topos-eksiklik gerekçeleri için bkz. FORMUL.md § 7.

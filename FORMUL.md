@@ -753,3 +753,124 @@ Mihenk: her ~300 saniyede  Cevap(p_şimdiki, sabit İngilizce suâl) → kütük
 | 5 | Müşahede (`nefs/musahede.py`) ARC ızgarasına mahsus | ARC vasfı **imha edilecek**; kalacak kanadın taşıyıcısı açık sualdir (2-Œ) |
 | 6 | Kalp uzvu yok | **TEHİR EDİLDİ** (2-Ł): ahlâk ve taklit vicdanının yeri olacak |
 | 7 | Uzunluk süperpozisyonu tahttan geçmiyor | Sadakat devresinde **"bağlanmamış"** diye sayılıyor; kırmızı yanıyor |
+
+## § 7. İBN SÎNÂ NEFS TASNİFATI VE DURUM MAKİNESİ
+
+Şu tasnifattan hareketle inşa edilen ve `matematik/sonsuz_mertebeler_teorisi.py`ye
+(bkz. § 4-I `CLAUDE.md`) koda dökülen nefs mimarisinin tam gerekçesi:
+
+```
+nefis çeşitleri      = {nebati, hayvani, insani}
+nefsin kuvvetleri    = {müdrike, muharrike}
+hayvani müdrike      = {hafıza, vahime, mütehayyile, hissi müşterek}
+insani müdrike       = hayvani müdrike + {aklı nazari, aklı ameli, mutasarrıfa}
+hayvani muharrike    = {gazap, şehvet}
+insani muharrike     = {irade}
+```
+
+### 7-A. TASHİH SÜRECİNDE GİDERİLEN 5 NEDENSELLİK HATASI
+
+Şemanın ilk taslağında tespit edilip düzeltilen kategori/nedensellik hataları:
+
+1. **Ambarın eylemi başlatması** -- Hafıza pasif bir arşivdir, kendi kendine eylem
+   emri veremez. Eyleme Sevk Edici'yi ancak Vâhime (hayvanî) veya Âkıle'nin Amelî
+   Aklı (iradî) tetikleyebilir.
+2. **Cezb/Def' motorlarının hatalı eşleştirilmesi** -- "bütün çekme aklîdir, bütün
+   itme reflekstir" yanlıştır; her iki motor da hem aklî hem hayvanî sevk edilebilir.
+3. **Vâhime-Hiss-i Müşterek arası mânâ kaydı kategori hatası** -- Hiss-i Müşterek
+   yalnız sûret taşır, mânâ taşımaz; cüz'î mânâ kaydı İki Cezveli Hafıza'nın
+   Manalar Bölmesi'ne aittir.
+4. **Âkıle-Bâise arası kayıp irade hattı** -- Âkıle'den Eyleme Sevk Edici'ye
+   doğrudan bir İhtiyar (irade) hattı eksikti, eklendi.
+5. **Mütezekkirenin tek cezveye hapsedilmesi** -- Mütezekkire hem Sûretler hem
+   Manalar cezvesini tarayan çift kollu bir motor olmalıdır.
+
+Tashih edilmiş nihai durum makinesi diyagramı için bkz. `CLAUDE.md` § 4-I.
+
+### 7-B. AKLIN DÖRT MERTEBESİ (İBN SÎNÂ EPİSTEMOLOJİSİ)
+
+Akıl tek bir fonksiyona hapsedilemez; dört tekâmül mertebesinden geçer:
+
+| Mertebe | Tarif | Motordaki Şart |
+| :-- | :-- | :-- |
+| Akl-ı Heyûlânî | Salt potansiyel, hiçbir suretin yazılmadığı boş durum | `ispat_sayisi == 0` ve tıkanıklık yüksek |
+| Akl-ı bi'l-Meleke | İlk bedihî aksiyomların (çelişmezlik, özdeşlik) yerleştiği zemin | ispat var ama küllî ispat yok |
+| Akl-ı bi'l-Fiil | Türetilmiş küllî kanunları tutan, kendi kendine teemmül edebilen akıl | ne heyûlânî ne müstefâd şartı |
+| Akl-ı Müstefâd | Küllî hakikatle (Akl-ı Fa'âl) doğrudan ittisal, zirve | küllî ispat var ve tıkanıklık düşük |
+
+Uygulama: `AklinDortMertebesi.mertebe_tayin_et` (`matematik/sonsuz_mertebeler_teorisi.py`).
+
+### 7-C. HADS (SEZGİ) vs. FİKR (DİSKÜRSİF ARAMA)
+
+İbn Sînâ'nın *el-İşârât*'taki ayrımı: bilinmeyeni çözmenin iki yolu vardır.
+
+* **Fikr:** Bilinenlerden bilinmeyene adım adım orta terim ($M$) aramak -- yavaş,
+  diskürsif tarama.
+* **Hads:** Orta terimin hiçbir arama yapılmadan bir şimşek gibi zihne doğması --
+  $O(1)$ spektral rezonans sıçraması.
+
+$$M_{\text{Hads}} = \arg\max_k \left| \langle \psi_{\text{başlangıç}} \mid \mathbf{v}_k \rangle \cdot \langle \mathbf{v}_k \mid \psi_{\text{hedef}} \rangle \right|$$
+
+Uygulama: `hads_ile_orta_terim_yakala(P, son_token, hedef)` -- rezonans eşiği
+aşılırsa `"HADS_I_KUDSI_SEZGI"`, aşılmazsa `"FIKRI_TEEMMUL_GEREKLI"` döner.
+
+### 7-D. NEFS-İ NEBÂTÎ (BİTKİSEL CANLILIK KATMANI)
+
+$$\text{nebati nefs} = \{\text{Gıdalanma (Taziye)},\ \text{Büyüme (Tenmiye)},\ \text{Üreme (Tevlid)}\}$$
+
+Model veriden beslenir (Taziye), lif kapasitesini organik büyütür (Tenmiye) ve
+durumunu tohum olarak sonraki nesle aktarır (Tevlid). Uygulama:
+`NefsiNebatiKatmani.taziye_gidalan / tenmiye_buyu / tevlid_tohumla`.
+
+### 7-E. İBN SÎNÂ NEFİS TASNİFİ ⟺ (∞,∞)-TOPOS İZOMORFİZMİ
+
+Tasnif, modern yapay zekâdaki gibi dışarıdan eklenen bir psikoloji sözlüğü değildir;
+her meleke, toposun kurucu bir aygıtına karşılık gelir -- aksi hâlde topos kuru bir
+tensör çarpımı, tasnif ise kodun kenarına iliştirilmiş süs bir liste olarak kalır.
+
+| Nefis/Akıl Melekesi | Topos Karşılığı | Matematiksel Mahiyeti |
+| :-- | :-- | :-- |
+| Nefs-i Nebâtî | Serbest Monad & kategori içi doğurganlık | Toposun kendi içinde yeni kategoriler doğurması |
+| Hiss-i Müşterek | Baz Bölge ($\mathcal{C}_0$) & evrensel kolimit | Farklı duyulardan gelen ham hücrelerin birleştiği zemin |
+| İki Cezveli Hafıza | Grothendieck Fibrasyonu ($p:\mathcal{E}_{\text{mânâ}}\to\mathcal{C}_{\text{sûret}}$) | Sûretler baz kategori, mânâlar üzerlerindeki lif demeti |
+| Mütezekkire | Yoneda temsil edilebilirliği ($\mathrm{Nat}(h^A,\mathcal{F})\cong\mathcal{F}(A)$) | Sönümlenen mânâyı temsil eden nesneyi tersine çözmek |
+| Mütehayyile | İçsel ko-cebir / zaman akışı ($S\to\mathbb{I}\times S$) | Uzam-zamanda hareket simülasyonu |
+| Vâhime | Alt-Nesne Sınıflayıcısı ($\Omega$) & karakteristik harita ($\chi$) | Cüz'î mânâyı hakikat kafesine haritalamak |
+| Mutasarrıfa | Polinomyal Funktor ($P(X)=\sum X^E$) & operadik ağaç | Yeni terkip/âlemleri sentezleyen operad motoru |
+| Akl-ı Nazarî | Toposun iç mantığı (CTT) | Çelişmezlik, $\Pi/\Sigma$ tipleri, univalence |
+| Akl-ı Amelî | Global Kesit Funktoru ($\Gamma=\mathrm{Hom}(1,-)$) & maslahat izdüşümü | Teorik ispatı amelî hedefe bağlayan terminal morfizm |
+| Muharrike (şehvet/gazap/irade) | Yönlü eğim vektör alanı (gradient field) | Cezb, Def' ve İrade kontrollü seçim |
+| Manevî Kalp | Terminal Nesne ($1$) & homotopik büzülebilirlik | Niyet: $X\to 1$ oku. İtminân: $\mathcal{E}\simeq 1$ |
+
+### 7-F. BU İZOMORFİZMİN GEREKTİRDİĞİ 4 TOPOS MOTORU
+
+1. **Fibrasyon (Displayed Category):** Sûret ile mânâ iki ayrı dünya olamaz;
+   sûret dönüştüğünde ($x\xrightarrow{f}y$) mânâ da Kartezyen bir okla ($\bar f$)
+   taşınmalıdır. Uygulama: `FibrasyonluManaLifi`.
+2. **Kategori İçi Doğurganlık (Tevlid):** `Turetilen1Kategori` bir Python
+   nesnesi olarak kalırsa topos kendi doğurduğu kategorinin içinde akıl
+   yürütemez; İçsel Kategori Nesnesi ($C_0,C_1\in\mathcal{E}$) olarak
+   mühürlenmelidir. Uygulama: `IcselKategoriNesnesi`.
+3. **Polinomyal Funktor (Mutasarrıfa Tezgâhı):** Yeni sentaks/kavram türetmenin
+   yegâne yolu $P(X)=\sum_{b\in B}X^{E_b}$ ve $W$-tipleridir; rastgele `dict`
+   aramasıyla olmaz. Uygulama: `PolinomyalMutasarrifaTezgahi`.
+4. **Terminal Nesneye Büzülme (Kalp/İtminân):** Niyet $X\to 1$ oku, itminân ise
+   uzayın homotopik büzülebilirliği ($\mathrm{isContr}(\mathcal{E})$) --
+   şüphenin sıfırlanıp tek bir huzur noktasına inmesidir. Uygulama:
+   `topos_terminal_buzulme_itminan`.
+
+Ayrıca (daha önceki turlarda tespit edilen, aynı bütünün parçası dört külli hata):
+modalite lifine terfi ($\Box$/$\Diamond$, ferman 2-Ú, `topos_modalite_lifi_isle`),
+alt-nesne pullback'i ($\chi_{f^*(S)}=\chi_S\circ f$, `alt_nesne_pullback_chi`),
+imaj faktorizasyonu ($X\twoheadrightarrow\mathrm{Im}(f)\hookrightarrow Y$,
+`ImajFaktorizasyonu` / `kategori_imaj_faktorizasyonu_yap`) ve Frobenius
+ko-çarpımı (klonlama, ferman 1-T, `frobenius_ko_carpim_klonla`).
+
+**Uygulanma durumu:** Bu bölümdeki tüm sınıf ve fonksiyonlar
+`matematik/sonsuz_mertebeler_teorisi.py` içinde koda dökülmüş ve
+`silsile_teshisi_kos` akışına bağlanmıştır (bkz. `IkiCezveliHafiza`,
+`MutezekkireKuvveti`, `VahimeIslemcisi`, `AkileKatmani`, `KuvveiBaiseVeMotorlar`,
+`ManeviKalpKatmani`, `AklinDortMertebesi`, `NefsiNebatiKatmani`,
+`FibrasyonluManaLifi`, `IcselKategoriNesnesi`, `PolinomyalMutasarrifaTezgahi`,
+`hads_ile_orta_terim_yakala`, `topos_terminal_buzulme_itminan`,
+`topos_modalite_lifi_isle`, `ImajFaktorizasyonu`, `frobenius_ko_carpim_klonla`).
