@@ -346,6 +346,17 @@ class YonluTerkip(Terim):
         self.f, self.g = f, g
 
 
+class OperadAgac(Terim):
+    __slots__ = ("cizgi", "oncutler", "hedef", "etiket")
+
+    def __init__(self, cizgi: Terim, oncutler: Sequence[Terim], hedef: Terim,
+                 etiket: str = "korolla") -> None:
+        self.cizgi = cizgi
+        self.oncutler = tuple(oncutler)
+        self.hedef = hedef
+        self.etiket = etiket
+
+
 class YolLam(Terim):
     __slots__ = ("ad", "govde")
 
@@ -702,6 +713,13 @@ def ara_ikame(t: Terim, sigma: Dict[str, Aralik]) -> Terim:
         return terim_yol_uygula(f(t.yol), t.r.yerine_koy(sigma))
     if isinstance(t, YonluHom):
         return YonluHom(f(t.cizgi), f(t.kaynak), f(t.hedef))
+    if isinstance(t, YonluOk):
+        return YonluOk(f(t.cizgi), f(t.kaynak), f(t.hedef), t.etiket)
+    if isinstance(t, YonluTerkip):
+        return YonluTerkip(f(t.f), f(t.g))
+    if isinstance(t, OperadAgac):
+        return OperadAgac(f(t.cizgi), [f(x) for x in t.oncutler],
+                          f(t.hedef), t.etiket)
     if isinstance(t, Pi):
         return Pi(t.ad, f(t.alan), f(t.hedef))
     if isinstance(t, Sigma):
@@ -819,6 +837,13 @@ def ikame(t: Terim, sigma: Dict[str, Terim]) -> Terim:
         return NegArd(f(t.alt))
     if isinstance(t, YonluHom):
         return YonluHom(f(t.cizgi), f(t.kaynak), f(t.hedef))
+    if isinstance(t, YonluOk):
+        return YonluOk(f(t.cizgi), f(t.kaynak), f(t.hedef), t.etiket)
+    if isinstance(t, YonluTerkip):
+        return YonluTerkip(f(t.f), f(t.g))
+    if isinstance(t, OperadAgac):
+        return OperadAgac(f(t.cizgi), [f(x) for x in t.oncutler],
+                          f(t.hedef), t.etiket)
     if isinstance(t, YolP):
         return YolP(t.ad, f(t.cizgi), f(t.sol), f(t.sag))
     if isinstance(t, YolLam):
@@ -1050,6 +1075,48 @@ class DYonluHom(Deger):
     def act(self, s):
         return DYonluHom(self.cizgi.act(s), self.kaynak.act(s),
                          self.hedef.act(s))
+
+
+class DYonluOk(Deger):
+    __slots__ = ("cizgi", "kaynak", "hedef", "etiket")
+
+    def __init__(self, cizgi: Deger, kaynak: Deger, hedef: Deger,
+                 etiket: str = "ok") -> None:
+        self.cizgi, self.kaynak, self.hedef, self.etiket = (
+            cizgi, kaynak, hedef, etiket)
+
+    def act(self, s):
+        return DYonluOk(self.cizgi.act(s), self.kaynak.act(s),
+                       self.hedef.act(s), self.etiket)
+
+
+class DYonluTerkip(Deger):
+    __slots__ = ("cizgi", "kaynak", "hedef", "f", "g")
+
+    def __init__(self, cizgi: Deger, kaynak: Deger, hedef: Deger,
+                 f: Deger, g: Deger) -> None:
+        self.cizgi, self.kaynak, self.hedef, self.f, self.g = (
+            cizgi, kaynak, hedef, f, g)
+
+    def act(self, s):
+        return DYonluTerkip(self.cizgi.act(s), self.kaynak.act(s),
+                           self.hedef.act(s), self.f.act(s), self.g.act(s))
+
+
+class DOperadAgac(Deger):
+    __slots__ = ("cizgi", "oncutler", "hedef", "etiket")
+
+    def __init__(self, cizgi: Deger, oncutler: Sequence[Deger], hedef: Deger,
+                 etiket: str = "korolla") -> None:
+        self.cizgi = cizgi
+        self.oncutler = tuple(oncutler)
+        self.hedef = hedef
+        self.etiket = etiket
+
+    def act(self, s):
+        return DOperadAgac(self.cizgi.act(s),
+                           tuple(x.act(s) for x in self.oncutler),
+                           self.hedef.act(s), self.etiket)
 
 
 class DYolLam(Deger):
@@ -1752,6 +1819,20 @@ def degerlendir(t: Terim, ortam: Ortam) -> Deger:
         return DYonluHom(degerlendir(t.cizgi, ortam),
                          degerlendir(t.kaynak, ortam),
                          degerlendir(t.hedef, ortam))
+    if isinstance(t, YonluOk):
+        return DYonluOk(degerlendir(t.cizgi, ortam), degerlendir(t.kaynak, ortam),
+                        degerlendir(t.hedef, ortam), t.etiket)
+    if isinstance(t, YonluTerkip):
+        fv = degerlendir(t.f, ortam)
+        gv = degerlendir(t.g, ortam)
+        return DYonluTerkip(fv.cizgi if isinstance(fv, (DYonluHom, DYonluOk)) else DEvren(0),
+                           fv.kaynak if isinstance(fv, (DYonluHom, DYonluOk)) else DEvren(0),
+                           gv.hedef if isinstance(gv, (DYonluHom, DYonluOk)) else DEvren(0),
+                           fv, gv)
+    if isinstance(t, OperadAgac):
+        return DOperadAgac(degerlendir(t.cizgi, ortam),
+                           tuple(degerlendir(x, ortam) for x in t.oncutler),
+                           degerlendir(t.hedef, ortam), t.etiket)
     if isinstance(t, Deg):
         v = ortam.terimler.get(t.ad)
         if v is None:
@@ -1862,6 +1943,15 @@ def geri_oku(d: Deger, k: int = 0) -> Terim:
     if isinstance(d, DYonluHom):
         return YonluHom(geri_oku(d.cizgi, k), geri_oku(d.kaynak, k),
                         geri_oku(d.hedef, k))
+    if isinstance(d, DYonluOk):
+        return YonluOk(geri_oku(d.cizgi, k), geri_oku(d.kaynak, k),
+                      geri_oku(d.hedef, k), d.etiket)
+    if isinstance(d, DYonluTerkip):
+        return YonluTerkip(geri_oku(d.f, k), geri_oku(d.g, k))
+    if isinstance(d, DOperadAgac):
+        return OperadAgac(geri_oku(d.cizgi, k),
+                          [geri_oku(x, k) for x in d.oncutler],
+                          geri_oku(d.hedef, k), d.etiket)
     if isinstance(d, DEvren):
         return Evren(d.seviye)
     if isinstance(d, DDogal):
@@ -2612,6 +2702,13 @@ def sentezle(t: Terim, g: Baglam) -> Deger:
             raise DenetimHatasi(
                 "YonluTerkip uç uyuşmazlığı: f'in hedefi g'nin kaynağı olmalı")
         return DYonluHom(tip_f.cizgi, tip_f.kaynak, tip_g.hedef)
+    if isinstance(t, OperadAgac):
+        A = g.d(t.cizgi)
+        for on in t.oncutler:
+            denetle(on, A, g)
+        denetle(t.hedef, A, g)
+        son_oncul = t.oncutler[-1] if t.oncutler else t.hedef
+        return DYonluHom(A, g.d(son_oncul), g.d(t.hedef))
     if isinstance(t, Deg):
         if t.ad not in g.tipler:
             raise DenetimHatasi("kapsamda olmayan değişken: %s" % t.ad)
@@ -4605,21 +4702,28 @@ def topos_tayfi_hesapla(P: np.ndarray, Asim: np.ndarray,
     }
 
 
-def aklet_operad_doldur(baglam: Tuple[int, ...], hedef: int,
-                        tayf_bilgisi: Dict[str, Any],
+def aklet_operad_doldur(baglam: Tuple[int, ...], tayf_bilgisi: Dict[str, Any],
                         norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float]
                         ) -> Dict[str, Any]:
     P = tayf_bilgisi["P"]
+    P2 = tayf_bilgisi["P2"]
     Asim = tayf_bilgisi["Asim"]
     Kan_rez = tayf_bilgisi["Kan_rezidusu"]
     n = P.shape[0]
 
     son_token = int(baglam[-1]) if baglam else 0
-    z = int(hedef)
 
-    dogrudan_korolla_gucu = norm_korollalar.get((baglam, z), 0.0)
-    dogrudan_gecis_gucu = float(P[son_token, z])
-    dogrudan_guc = max(dogrudan_korolla_gucu, dogrudan_gecis_gucu)
+    tikaniklik_potansiyeli = P2[son_token] - P[son_token]
+    aday_hedefler = np.where(tikaniklik_potansiyeli > 0.01)[0]
+
+    if len(aday_hedefler) > 0:
+        z = int(aday_hedefler[np.argmax(tikaniklik_potansiyeli[aday_hedefler])])
+        hedef_turu = "açık_boynuz_çıkarımı"
+    else:
+        z = int(np.argsort(P[son_token])[-1])
+        hedef_turu = "doğrudan_akış"
+
+    dogrudan_guc = float(P[son_token, z])
     tikanma = float(Kan_rez[son_token, z])
 
     adaylar = []
@@ -4638,8 +4742,8 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], hedef: int,
     if not adaylar:
         return {
             "hüküm": "tıkanma",
+            "hedef": z,
             "ara_durak": None,
-            "güven": dogrudan_guc,
             "ispat_sahidi": None,
             "kohomolojik_engel": tikanma
         }
@@ -4647,20 +4751,19 @@ def aklet_operad_doldur(baglam: Tuple[int, ...], hedef: int,
     adaylar.sort(key=lambda item: item[0], reverse=True)
     en_iyi_skor, y_yildiz = adaylar[0]
 
-    X_tip = Deg("BelirtecEvreni")
-    ok1 = YonluOk(X_tip, dogal_sayi(son_token), dogal_sayi(y_yildiz), "öncül_çıkarım")
-    ok2 = YonluOk(X_tip, dogal_sayi(y_yildiz), dogal_sayi(z), "netice_çıkarım")
-    ispat_sahidi = YonluTerkip(ok1, ok2)
+    X_tip = Dogal()
+    oncutler_terim = [dogal_sayi(t) for t in baglam]
 
-    if dogrudan_guc >= en_iyi_skor and tikanma < 0.05:
-        hukum = "doğrudan_tasdik"
-    elif en_iyi_skor > dogrudan_guc and en_iyi_skor > 1e-4:
-        hukum = "türetim_başarılı"
-    else:
-        hukum = "şüphe_teâruz"
+    agac1 = OperadAgac(X_tip, oncutler_terim, dogal_sayi(y_yildiz), "operadik_öncül")
+    ok2 = YonluOk(X_tip, dogal_sayi(y_yildiz), dogal_sayi(z), "netice_çıkarım")
+    ispat_sahidi = YonluTerkip(agac1, ok2)
+
+    hukum = "türetim_başarılı" if (en_iyi_skor > dogrudan_guc) else "doğrudan_tasdik"
 
     return {
         "hüküm": hukum,
+        "hedef_türü": hedef_turu,
+        "hedef": z,
         "ara_durak": y_yildiz,
         "türetim_gücü": en_iyi_skor,
         "doğrudan_güç": dogrudan_guc,
@@ -4674,9 +4777,7 @@ def ispat_sahidini_dogrula(ispat_sahidi: Optional[Terim], son_token: int,
     if ispat_sahidi is None:
         return False
     g = Baglam()
-    g = g.genislet_t("BelirtecEvreni", U)
-    beklenen_tip = yonlu_hom(Deg("BelirtecEvreni"), dogal_sayi(son_token),
-                             dogal_sayi(hedef))
+    beklenen_tip = yonlu_hom(Dogal(), dogal_sayi(son_token), dogal_sayi(hedef))
     try:
         denetle_t(ispat_sahidi, beklenen_tip, g)
         return True
@@ -4687,32 +4788,32 @@ def ispat_sahidini_dogrula(ispat_sahidi: Optional[Terim], son_token: int,
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4
                         ) -> Dict[str, Any]:
     P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
-
     tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
 
     w_arr = list(w)
     k_baglam = min(K_max - 1, len(w_arr) - 1)
     baglam = tuple(w_arr[-k_baglam:]) if k_baglam > 0 else (w_arr[-1],)
     son_token = int(w_arr[-1])
-    hedef_aday = int(np.argmax(P[son_token]))
 
-    muhakeme = aklet_operad_doldur(baglam, hedef_aday, tayf_bilgisi,
-                                   norm_korollalar)
+    muhakeme = aklet_operad_doldur(baglam, tayf_bilgisi, norm_korollalar)
 
-    sahit_gecerli = ispat_sahidini_dogrula(muhakeme["ispat_sahidi"],
-                                           son_token, hedef_aday)
+    sahit_gecerli = ispat_sahidini_dogrula(muhakeme["ispat_sahidi"], son_token,
+                                           muhakeme["hedef"])
     muhakeme["şahit_doğrulandı"] = sahit_gecerli
 
     rho = tayf_bilgisi["tayf"]
+    kuantum_genlikleri = np.sqrt(rho)
+
     parite_lifi = {
         "spektral_agirliklar": rho,
+        "kuantum_genlikleri": kuantum_genlikleri,
+        "lif_boyutu": int(np.sum(np.ceil(rho * 8))),
         "aktif_modlar": {
             "uzay_modu": bool(rho[0] > 0.15),
             "kategori_modu": bool(rho[1] > 0.15),
             "operad_modu": bool(rho[2] > 0.15),
             "yırtık_modu": bool(rho[3] > 0.05)
-        },
-        "parite_seviyesi": int(np.argmax(rho))
+        }
     }
 
     return {
