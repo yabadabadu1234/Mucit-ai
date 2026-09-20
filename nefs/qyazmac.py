@@ -820,15 +820,43 @@ class QuditYazmac:
                 "schmidt": float(min(sol, sag)),
                 "kesit": kesit}
 
+    def cephe_hali(self) -> np.ndarray:
+        mh = self._mahalli_zorunlu()
+        c = int(np.clip(int(self.cephe), 0, int(mh.pencere) - 1))
+        n_v = int(self.ayar.lif[0])
+        q = int(min(n_v, int(mh.taban)))
+        H = np.zeros((self.B, n_v), complex)
+        dilim = np.asarray(mh.hal[:, c, :q], complex)
+        H[:dilim.shape[0], :q] = dilim[:self.B]
+        nrm = np.linalg.norm(H, axis=-1, keepdims=True)
+        canli = nrm > 0.0
+        assert bool(canli.any()), (
+            "NEDENSEL CEPHE TAMAMEN SÖNDÜ -- hedef qudit %d, pencere %d; "
+            "hâl okunamaz (ferman 2-Ê, 2-Ï, 5)" % (c, int(mh.pencere)))
+        _SEKTOR_SAYAC["cephe_hali"] = _SEKTOR_SAYAC.get(
+            "cephe_hali", 0.0) + 1.0
+        return np.where(canli, H / np.where(canli, nrm, 1.0), H)
+
     def beyan(self, sozluk: int = 0) -> np.ndarray:
         taban = int(sozluk) if int(sozluk) >= 2 else int(self.ayar.lif[0])
         assert taban == int(self.ayar.lif[0]), (
             "beyan basamak eksenini okur: taban %d, lif[0] %d -- ikisi "
             "aynı eksen olmalı (ferman 1-M)" % (taban, int(self.ayar.lif[0])))
-        yer = self.d // taban
-        c = int(np.clip(int(self.cephe), 0, yer - 1))
-        p = (np.abs(self.psi) ** 2).reshape(self.B, taban, yer)[:, :, c]
-        return p / np.maximum(p.sum(axis=1, keepdims=True), 1e-300)
+        mh = self._mahalli_zorunlu()
+        c = int(np.clip(int(self.cephe), 0, int(mh.pencere) - 1))
+        q = int(min(taban, int(mh.taban)))
+        p = np.abs(np.asarray(mh.hal[:, c, :q], complex)) ** 2
+        top = p.sum(axis=1, keepdims=True)
+        canli = top > 0.0
+        p = np.where(canli, p / np.where(canli, top, 1.0),
+                     1.0 / float(max(1, q)))
+        _SEKTOR_SAYAC["cephe_okuma"] = _SEKTOR_SAYAC.get(
+            "cephe_okuma", 0.0) + 1.0
+        if q == taban:
+            return np.resize(p, (self.B, taban))
+        cik = np.zeros((p.shape[0], taban), float)
+        cik[:, :q] = p
+        return np.resize(cik, (self.B, taban))
 
     def beyan_vecihle(self, sozluk: int, vecihler) -> np.ndarray:
         duz = self.beyan(int(sozluk))
@@ -836,15 +864,13 @@ class QuditYazmac:
         if not vs:
             return duz
         taban = int(sozluk) if int(sozluk) >= 2 else int(self.ayar.lif[0])
-        yer = self.d // taban
-        c = int(np.clip(int(self.cephe), 0, yer - 1))
         top = np.zeros(taban, float)
         agir = 0.0
         for v in vs:
             u = np.asarray(v.gor(self.psi[0]), complex).reshape(-1)
             if u.size != self.d or not np.all(np.isfinite(u)):
                 continue
-            p = (np.abs(u) ** 2).reshape(taban, yer)[:, c]
+            p = (np.abs(u[:taban]) ** 2)
             s = float(p.sum())
             if s <= 0.0:
                 continue

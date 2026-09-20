@@ -225,17 +225,17 @@ class QYazmac:
         Ez = E.reshape(B, n_sat, -1)
         bas = np.argmax(Ez, axis=-1) % sozluk
         dolu = Ez.max(axis=-1) > 0.0
-        yer = d // sozluk
-        assert n_sat <= yer, (
-            "bağlam yazmaca sığmıyor: %d basamak, basamak başına %d yer -- "
-            "yazmaç bağlam kadar olmalı (ferman 2-M)" % (n_sat, yer))
-        seviye = bas * yer + np.arange(n_sat)[None, :]
+        assert n_sat <= int(self.mahalli.qudit), (
+            "bağlam mahallî zırha sığmıyor: %d basamak, zırh %d qudit "
+            "(ferman 2-Ĝ: bağlam mahallî yazmacın qudit indisindedir)"
+            % (n_sat, int(self.mahalli.qudit)))
         genlik = np.zeros((B, d), float)
         faz = np.zeros((B, d), float)
         yigin = np.repeat(np.arange(B), n_sat)
         sec = dolu.reshape(-1)
-        genlik[yigin[sec], seviye.reshape(-1)[sec]] = 1.0
-        faz[yigin[sec], seviye.reshape(-1)[sec]] = (
+        sut = np.mod(bas.reshape(-1), d)
+        np.add.at(genlik, (yigin[sec], sut[sec]), 1.0)
+        faz[yigin[sec], sut[sec]] = (
             (-2.0 * math.pi / float(sozluk))
             * (bas.reshape(-1)[sec].astype(float) + 1.0))
         assert bool(dolu.any()), (
@@ -253,7 +253,7 @@ class QYazmac:
         izd = getattr(self, "izdusum", None)
         if izd is not None:
             self.mahalli.modlari_vur(izd[0], izd[1])
-        self._tohum = (bas, sec, yigin, seviye, B, n_sat, d)
+        self._tohum = (bas, sec, yigin, sut, B, n_sat, d)
         self.y.psi = genlik.astype(self.y.ayar.tip)
         self.y.normalize()
         self.y.faz(faz)
@@ -270,13 +270,12 @@ class QYazmac:
         assert tohum is not None, (
             "intâc tohumsuz çağrıldı -- `kodla` mahallî yazmaca tohum "
             "ekmeden intâca geçilemez (ferman 2-A)")
-        bas, sec, yigin, seviye, B, n_sat, d = tohum
+        bas, sec, yigin, sut, B, n_sat, d = tohum
         m = self.mahalli
         kuresel = m.kuresel_faz()
         yerel = m.faz[:B, :n_sat].mean(axis=-1) + kuresel
         taban = int(self.ayar.veri_lifi)
-        yer = d // taban
-        cephe = min(int(n_sat), yer - 1)
+        cephe = max(0, int(n_sat) - 1)
         aday = np.concatenate(
             [np.repeat(bas, taban, axis=0),
              np.tile(np.arange(taban, dtype=bas.dtype), B)[:, None]],
@@ -287,8 +286,8 @@ class QYazmac:
         kulli = kulli_aday.sum(axis=1)
         agirlik = (m.genlik[:B, :n_sat] * kulli[:, None]).reshape(-1)
         G = np.zeros((B, d), complex)
-        G[yigin[sec], seviye.reshape(-1)[sec]] = agirlik[sec]
-        G[:, np.arange(taban) * yer + cephe] = kulli_aday
+        np.add.at(G, (yigin[sec], sut[sec]), agirlik[sec])
+        G[:, :taban] += kulli_aday
         self.y.cephe = int(cephe)
         self.y.psi = G.astype(self.y.ayar.tip)
         self.y.normalize()
@@ -298,12 +297,10 @@ class QYazmac:
             no = self.y.iz.kapi_yaz(
                 "durum", (), np.asarray(self.y.psi, complex).copy())
             if pq is not None:
-                self._kan_bagla(no, pq, bas, taban, yer, cephe, seviye,
-                                sec, d)
+                self._kan_bagla(no, pq, bas, taban, cephe, sut, sec, d)
         return float(kuresel)
 
-    def _kan_bagla(self, no, pq, bas, taban, yer, cephe, seviye,
-                   sec, d) -> int:
+    def _kan_bagla(self, no, pq, bas, taban, cephe, sut, sec, d) -> int:
         kontrol, bag = pq.temas_kapilari()
         if kontrol.size == 0:
             return 0
@@ -313,8 +310,7 @@ class QYazmac:
         w_t = np.take_along_axis(w.reshape(-1, n), hedef,
                                  axis=-1).mean(axis=0)
         dizin = np.unique(np.concatenate(
-            [seviye.reshape(-1)[sec],
-             np.arange(taban) * yer + cephe]))
+            [sut[sec], np.arange(taban, dtype=np.int64)]))
         for c in range(int(kontrol.size)):
             katsayi = complex(float(w_t[c]) * (float(bag[c]) + 1j))
             self.y.iz.bag_yaz(
