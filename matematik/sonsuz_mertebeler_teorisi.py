@@ -6435,6 +6435,27 @@ def maurer_cartan_egriligi_denetle(X_lie: np.ndarray, Asim: np.ndarray,
             "ayar_anomalisi_var_mi": not baglanti_duz_mu}
 
 
+def yazmacta_bolge_yoktur_superpozisyon(rho: np.ndarray,
+                                        n_boyut: int) -> Tuple[np.ndarray, np.ndarray]:
+    toplam_boyut = 4 * n_boyut
+    psi_superpozisyon = np.zeros(toplam_boyut, dtype=complex)
+
+    for mod_k in range(4):
+        genlik_k = np.sqrt(rho[mod_k])
+        faz_k = np.exp(1j * np.pi * mod_k / 2.0)
+        bas = mod_k * n_boyut
+        son = (mod_k + 1) * n_boyut
+        psi_superpozisyon[bas:son] = (genlik_k * faz_k) / np.sqrt(float(n_boyut))
+
+    norm = float(np.linalg.norm(psi_superpozisyon))
+    psi_superpozisyon /= (norm + 1e-12)
+
+    kod_uzayi_operatoru = np.ones(toplam_boyut, dtype=float)
+    kod_uzayi_operatoru[3 * n_boyut:4 * n_boyut] = 0.0
+
+    return psi_superpozisyon, kod_uzayi_operatoru
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -7181,28 +7202,15 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     rho = tayf_bilgisi["tayf"]
     kuantum_genlikleri = np.sqrt(rho)
 
-    d_uzay = max(1, int(np.round(rho[0] * float(n))))
-    d_kat = max(1, int(np.round(rho[1] * float(n))))
-    d_op = max(1, int(np.round(rho[2] * float(n))))
-    d_yir = max(1, int(np.round(rho[3] * float(n))))
-    lif_boyutu = d_uzay + d_kat + d_op + d_yir
+    kuantum_durum_vektoru, kod_uzayi_maskesi = yazmacta_bolge_yoktur_superpozisyon(rho, n)
+    lif_boyutu = len(kuantum_durum_vektoru)
 
     dilimler = {
-        "uzay": (0, d_uzay),
-        "kategori": (d_uzay, d_uzay + d_kat),
-        "operad": (d_uzay + d_kat, d_uzay + d_kat + d_op),
-        "yırtık": (d_uzay + d_kat + d_op, lif_boyutu)
+        "uzay": (0, n),
+        "kategori": (n, 2 * n),
+        "operad": (2 * n, 3 * n),
+        "yırtık": (3 * n, 4 * n)
     }
-
-    kod_uzayi_maskesi = np.ones(lif_boyutu, dtype=float)
-    kod_uzayi_maskesi[dilimler["yırtık"][0]:dilimler["yırtık"][1]] = 0.0
-
-    kuantum_durum_vektoru = np.zeros(lif_boyutu, dtype=float)
-    for mod_adi, (bas, son) in dilimler.items():
-        mod_idx = {"uzay": 0, "kategori": 1, "operad": 2, "yırtık": 3}[mod_adi]
-        alt_boyut = son - bas
-        if alt_boyut > 0:
-            kuantum_durum_vektoru[bas:son] = np.sqrt(rho[mod_idx] / float(alt_boyut))
 
     parite_lifi = {
         "spektral_agirliklar": rho,
@@ -7420,7 +7428,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     itminan_analizi = topos_terminal_buzulme_itminan(turetilen_kategori, P, kuantum_durum_vektoru)
 
     koyoneda_raporu = ko_yoneda_yogunluk_sentezle(
-        veri_dagilimi=(kuantum_durum_vektoru[:n] if len(kuantum_durum_vektoru) >= n
+        veri_dagilimi=(np.abs(kuantum_durum_vektoru[:n]) if len(kuantum_durum_vektoru) >= n
                       else np.ones(n, dtype=float)),
         P=P, kat=turetilen_kategori)
 
