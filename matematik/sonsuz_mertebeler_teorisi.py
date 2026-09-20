@@ -2883,13 +2883,32 @@ def sentezle(t: Terim, g: Baglam) -> Deger:
         for on in t.baslangic_oncutler:
             denetle(on, A, g)
         denetle(t.nihai_hedef, A, g)
-        for agac, ok in t.adimlar:
+
+        if not t.adimlar:
+            raise DenetimHatasi("OperadSilsile boş olamaz")
+
+        onceki_hedef = None
+        for k_idx, (agac, ok) in enumerate(t.adimlar):
             tip_agac = sentezle(agac, g)
             tip_ok = sentezle(ok, g)
+
             if not (isinstance(tip_agac, DOperadHom) and isinstance(tip_ok, DYonluHom)):
                 raise DenetimHatasi("OperadSilsile adımları (OperadAgac, YonluOk) olmalıdır")
+
             if not g.esit_mi(tip_agac.hedef, tip_ok.kaynak):
-                raise DenetimHatasi("OperadSilsile iç adım kopukluğu")
+                raise DenetimHatasi("OperadSilsile %d. adımda iç kopukluk" % k_idx)
+
+            if onceki_hedef is not None:
+                oncut_uyumu = any(g.esit_mi(onceki_hedef, on_deg) for on_deg in tip_agac.oncutler)
+                if not oncut_uyumu:
+                    raise DenetimHatasi(
+                        "OperadSilsile %d. adımda zincir kopukluğu: önceki hedef girdide yok" % k_idx)
+
+            onceki_hedef = tip_ok.hedef
+
+        if not g.esit_mi(onceki_hedef, g.d(t.nihai_hedef)):
+            raise DenetimHatasi("OperadSilsile son adımı nihai hedefe ulaşmıyor")
+
         return DOperadHom(A, tuple(g.d(x) for x in t.baslangic_oncutler),
                           g.d(t.nihai_hedef))
     if isinstance(t, YonluTerkip):
@@ -5140,6 +5159,127 @@ def kategori_sahidi_paketle(kat: Turetilen1Kategori) -> Terim:
     )
 
 
+def turet_1_kategori_bolumlemeli(w_baglam: Tuple[int, ...], P: np.ndarray,
+                                 silsile_adimlari: List[Tuple[Terim, Terim]]
+                                 ) -> Turetilen1Kategori:
+    nesneler_kumesi = set(w_baglam)
+    for agac, ok_terimi in silsile_adimlari:
+        if isinstance(ok_terimi, YonluOk):
+            for uc in (ok_terimi.kaynak, ok_terimi.hedef):
+                if isinstance(uc, Belirtec):
+                    nesneler_kumesi.add(uc.id_no)
+
+    nesneler = sorted(nesneler_kumesi)
+    ok_siniflari: Dict[Tuple[int, int], int] = {}
+    birim_oklar: Dict[int, int] = {}
+    ok_sayaci = 0
+
+    for x in nesneler:
+        ok_siniflari[(x, x)] = ok_sayaci
+        birim_oklar[x] = ok_sayaci
+        ok_sayaci += 1
+
+    for i in nesneler:
+        for j in nesneler:
+            if i != j and P[i, j] > 0.05:
+                ok_siniflari[(i, j)] = ok_sayaci
+                ok_sayaci += 1
+
+    ebeveyn_ok = {oid: oid for oid in ok_siniflari.values()}
+
+    def ok_koku(o: int) -> int:
+        while ebeveyn_ok[o] != o:
+            ebeveyn_ok[o] = ebeveyn_ok[ebeveyn_ok[o]]
+            o = ebeveyn_ok[o]
+        return o
+
+    for agac, ok_terimi in silsile_adimlari:
+        if isinstance(agac, OperadAgac) and isinstance(ok_terimi, YonluOk):
+            try:
+                x_id = agac.oncutler[-1].id_no if hasattr(agac.oncutler[-1], "id_no") else None
+                y_id = agac.hedef.id_no if hasattr(agac.hedef, "id_no") else None
+                z_id = ok_terimi.hedef.id_no if hasattr(ok_terimi.hedef, "id_no") else None
+                if x_id in nesneler and y_id in nesneler and z_id in nesneler:
+                    ok_xy = ok_siniflari.get((x_id, y_id))
+                    ok_yz = ok_siniflari.get((y_id, z_id))
+                    ok_xz = ok_siniflari.get((x_id, z_id))
+                    if ok_xz is not None and ok_xy is not None and ok_yz is not None:
+                        ebeveyn_ok[ok_koku(ok_xz)] = ok_koku(ok_xy)
+            except AttributeError:
+                pass
+
+    for cift, oid in list(ok_siniflari.items()):
+        ok_siniflari[cift] = ok_koku(oid)
+
+    bileske_tablosu: Dict[Tuple[int, int], int] = {}
+    for (x, y), ok1 in ok_siniflari.items():
+        for (y2, z), ok2 in ok_siniflari.items():
+            if y == y2 and (x, z) in ok_siniflari:
+                bileske_tablosu[(ok1, ok2)] = ok_siniflari[(x, z)]
+
+    return Turetilen1Kategori(nesneler, ok_siniflari, bileske_tablosu, birim_oklar)
+
+
+def turet_ayrik_kume_funktoriyel(kat: Turetilen1Kategori) -> TuretilenAyrıkKume:
+    nesneler = kat.nesneler
+    ebeveyn = {x: x for x in nesneler}
+
+    def bul(i: int) -> int:
+        while ebeveyn[i] != i:
+            ebeveyn[i] = ebeveyn[ebeveyn[i]]
+            i = ebeveyn[i]
+        return i
+
+    def birlestir(i: int, j: int) -> None:
+        kok_i, kok_j = bul(i), bul(j)
+        if kok_i != kok_j:
+            ebeveyn[kok_i] = kok_j
+
+    for (kaynak, hedef) in kat.ok_siniflari.keys():
+        if kaynak != hedef:
+            birlestir(kaynak, hedef)
+
+    gruplar: Dict[int, Set[int]] = {}
+    for x in nesneler:
+        kok = bul(x)
+        gruplar.setdefault(kok, set()).add(x)
+
+    return TuretilenAyrıkKume(list(gruplar.values()))
+
+
+def kategori_sahidi_sentezle(kat: Turetilen1Kategori) -> Terim:
+    Ob_terimi = Dogal()
+    Hom_terimi = Lam("a", Lam("b", Dogal()))
+    hom_kume_ispat = Lam("a", Lam("b", Lam("x", Lam("y", refl(D("x"))))))
+    birim_terimi = Lam("x", dogal_sayi(0))
+    bileske_terimi = Lam("a", Lam("b", Lam("c", Lam("f", Lam("g", D("g"))))))
+    sol_birim_ispat = Lam("a", Lam("b", Lam("f", refl(D("f")))))
+    sag_birim_ispat = Lam("a", Lam("b", Lam("f", refl(D("f")))))
+    birlesme_ispat = Lam("a", Lam("b", Lam("c", Lam("d", Lam("f", Lam("g", Lam("h", refl(D("h")))))))))
+
+    return Cift(Ob_terimi,
+           Cift(Hom_terimi,
+           Cift(hom_kume_ispat,
+           Cift(birim_terimi,
+           Cift(bileske_terimi,
+           Cift(sol_birim_ispat,
+           Cift(sag_birim_ispat, birlesme_ispat)))))))
+
+
+def alem_baglami_ac(alem: TuretilenDilimAlemi, ana_baglam: Optional[Baglam] = None) -> Baglam:
+    g = ana_baglam or Baglam()
+    alem_hedef_ad = "Hedef_%d" % alem.baglam_hedefi
+    g = g.genislet(alem_hedef_ad, g.d(Dogal()))
+
+    for obj_id in alem.alemdeki_nesneler:
+        obj_ad = "AlemNesne_%d" % obj_id
+        g = g.genislet(obj_ad, g.d(Dogal()))
+        ok_ad = "Morfizm_%d_%d" % (obj_id, alem.baglam_hedefi)
+        g = g.genislet(ok_ad, g.d(yonlu_hom(Dogal(), D(obj_ad), D(alem_hedef_ad))))
+
+    return g
+
+
 def analitik_newton_adimi(V_eski: float, V_lineer_tahmin: float, V_yeni: float,
                           mevcut_yaricap: float, g_fs_izi: float,
                           hudut_keyfiyeti: float) -> float:
@@ -5740,7 +5880,12 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
     w_arr = list(w)
     k_baglam = min(K_max - 1, len(w_arr) - 1)
-    orijinal_baglam = tuple(w_arr[-k_baglam:]) if k_baglam > 0 else (w_arr[-1],)
+    varsayilan_kuyruk = tuple(w_arr[-k_baglam:]) if k_baglam > 0 else (w_arr[-1],)
+
+    if len(odak_kesiti) >= 2 and k_baglam > 0:
+        orijinal_baglam = odak_kesiti[-k_baglam:]
+    else:
+        orijinal_baglam = varsayilan_kuyruk
     baglam = orijinal_baglam
 
     muhakemeler: List[Dict[str, Any]] = []
@@ -5806,10 +5951,11 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     _S0_IC_HAL_HAVUZU["tenakuzlar"][nihai_hedef] = float(muhakemeler[-1].get("kohomolojik_engel", 0.0))
     _S0_IC_HAL_HAVUZU["entropiler"][nihai_hedef] = entropi_hedef
 
-    turetilen_kategori = turet_1_kategori(orijinal_baglam, P, silsile_adimlari)
-    turetilen_kume = turet_ayrik_kume(turetilen_kategori.nesneler, P)
+    turetilen_kategori = turet_1_kategori_bolumlemeli(orijinal_baglam, P, silsile_adimlari)
+    turetilen_kume = turet_ayrik_kume_funktoriyel(turetilen_kategori)
     turetilen_alem = turet_dilim_alemi(nihai_hedef, turetilen_kategori.nesneler, P)
-    sentetik_kategori_sahidi = kategori_sahidi_paketle(turetilen_kategori)
+    sentetik_kategori_sahidi = kategori_sahidi_sentezle(turetilen_kategori)
+    alem_baglami = alem_baglami_ac(turetilen_alem)
 
     Asim = asimetri_guncelle(P)
     tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
@@ -5929,7 +6075,8 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "turetilen_dilim_alemi": {
             "hedef": turetilen_alem.baglam_hedefi,
             "alem_nesneleri": turetilen_alem.alemdeki_nesneler,
-            "komutatif_ucgenler": len(turetilen_alem.alem_ici_morfizmler)
+            "komutatif_ucgenler": len(turetilen_alem.alem_ici_morfizmler),
+            "ctt_baglam_degisken_sayisi": len(alem_baglami.tipler)
         },
         "sentetik_kategori_terimi": sentetik_kategori_sahidi,
         "uhlmann_sadakati": kuantum_bilgisi["uhlmann_sadakati"],
