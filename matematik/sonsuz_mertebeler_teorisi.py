@@ -5474,8 +5474,111 @@ def kan_genlik_hesapla(u: float, C_katsayilari: np.ndarray, S_katsayilari: np.nd
     return complex(genlik)
 
 
+def d0_gecit_nedensellik_teftisi(baglam_dizisi: Sequence[int],
+                                 baglam_hedef_ciftleri: List[Tuple[Tuple[int, ...], int]],
+                                 orijinal_pozisyonlar: Optional[List[int]] = None
+                                 ) -> Dict[str, Any]:
+    if orijinal_pozisyonlar is None:
+        orijinal_pozisyonlar = list(range(len(baglam_hedef_ciftleri)))
+
+    zaman_cevrimi_var = False
+    for i in range(1, len(orijinal_pozisyonlar)):
+        if orijinal_pozisyonlar[i] <= orijinal_pozisyonlar[i - 1]:
+            zaman_cevrimi_var = True
+            break
+
+    trivial_kopya_sayisi = sum(
+        1 for b_tuple, h in baglam_hedef_ciftleri
+        if len(set(b_tuple)) == 1 and b_tuple[0] == h)
+    trivial_kopya_orani = trivial_kopya_sayisi / max(1, len(baglam_hedef_ciftleri))
+    kelam_ayrismasi_tam = bool(trivial_kopya_orani < 0.9)
+
+    gecit_onayi = bool((not zaman_cevrimi_var) and kelam_ayrismasi_tam)
+
+    return {"gecit_onayi": gecit_onayi, "zaman_cevrimi_var": zaman_cevrimi_var,
+            "kelam_ayrismasi_tam": kelam_ayrismasi_tam,
+            "trivial_kopya_orani": trivial_kopya_orani}
+
+
+def d8a_mecz_ve_wkb_tunelleme(kefeler: np.ndarray, P: np.ndarray,
+                              son_token: int, hedef: int) -> Dict[str, Any]:
+    ortalama_hata = float(np.mean(kefeler))
+    cukur_varyansi = float(np.sqrt(np.mean((kefeler - ortalama_hata) ** 2)))
+    kuyu_derinligi = float(np.clip(kefeler[1], 0.0, 1.0))
+
+    t_wkb = float(np.exp(-2.0 * np.sqrt(2.0 * kuyu_derinligi + 1e-12)))
+
+    kuyuya_saplandi = bool(cukur_varyansi < 1e-3 and ortalama_hata > 0.1)
+
+    sicrama_vektoru = np.zeros_like(P[son_token])
+    if kuyuya_saplandi:
+        en_zayif_koordinat = int(np.argmin(P[son_token]))
+        sicrama_vektoru[en_zayif_koordinat] = t_wkb
+        sicrama_vektoru /= (np.linalg.norm(sicrama_vektoru) + 1e-12)
+
+    return {"cukur_varyansi": cukur_varyansi, "wkb_gecirgenligi": t_wkb,
+            "kuyuya_saplandi": kuyuya_saplandi, "nakil_sicramasi": sicrama_vektoru}
+
+
+def d10_durma_ve_sukut_yokla(adim: int, tikanma_gecmisi: List[float],
+                             veri_lifi: int, alan_degeri_sukut: float = 0.45
+                             ) -> Tuple[bool, str, float]:
+    n = max(2, int(veri_lifi))
+    k = len(tikanma_gecmisi)
+
+    uzunluk_enerjileri = np.array([np.exp(-float(t)) for t in tikanma_gecmisi], dtype=float)
+    uzunluk_enerjileri /= (np.sum(uzunluk_enerjileri) + 1e-12)
+
+    mevcut_enerji = uzunluk_enerjileri[adim]
+    kalan_kuyruk_enerjisi = (float(np.sum(uzunluk_enerjileri[adim + 1:]))
+                            if adim + 1 < k else 0.0)
+
+    son_engel = tikanma_gecmisi[-1]
+    guven = float(np.exp(-son_engel / float(adim + 1)))
+    kesinlik = float(np.clip((guven - 1.0 / n) / (1.0 - 1.0 / n + 1e-12), 0.0, 1.0))
+
+    if alan_degeri_sukut > kesinlik and adim > 0:
+        return True, "SÜKÛT", kesinlik
+
+    if mevcut_enerji > kalan_kuyruk_enerjisi and son_engel < 0.05:
+        return True, "BURHAN_TAMAM", kesinlik
+
+    return False, "DEVAM", kesinlik
+
+
+def d8_hudut_temizligi_denetle(psi: np.ndarray, kod_uzayi_maskesi: np.ndarray,
+                               uretilmis_tokenler: Sequence[int], sozluk_boyutu: int,
+                               tenakuz_var_mi: bool, kisirdongu_var_mi: bool
+                               ) -> Dict[str, Any]:
+    n = int(sozluk_boyutu)
+    guc = np.abs(psi) ** 2
+    toplam_guc = float(np.sum(guc)) + 1e-12
+
+    dis_guc = float(np.sum(guc[kod_uzayi_maskesi < 0.5]))
+    parite_tasmasi = float(np.clip(dis_guc / toplam_guc, 0.0, 1.0))
+
+    gecersiz_tokenler = sum(1 for t in uretilmis_tokenler if t < 0 or t >= n)
+    belirtec_tasmasi = float(gecersiz_tokenler / max(1, len(uretilmis_tokenler)))
+
+    mantiksizlik = parite_tasmasi + belirtec_tasmasi
+    nispet_mantik = float((1.0 - parite_tasmasi) * (1.0 - belirtec_tasmasi))
+
+    hudut_temiz = bool((not tenakuz_var_mi) and (not kisirdongu_var_mi)
+                       and (mantiksizlik < 1e-4))
+
+    return {"parite_tasmasi": parite_tasmasi, "belirtec_tasmasi": belirtec_tasmasi,
+            "mantiksizlik": mantiksizlik, "nispet_mantik": nispet_mantik,
+            "hudut_temiz": hudut_temiz}
+
+
 def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
                         azami_adim: int = 3) -> Dict[str, Any]:
+    gecit_raporu = d0_gecit_nedensellik_teftisi(
+        w, [((w[i],), w[i + 1]) for i in range(len(w) - 1)])
+    if not gecit_raporu["gecit_onayi"]:
+        return {"hata": "D0 GEÇİT İHLALİ: Zaman çevrimi veya ezber sızıntısı saptandı",
+                "detay": gecit_raporu}
+
     P, Asim, norm_korollalar = veriden_geometri_cikar(w, n, K_max)
 
     w_arr = list(w)
@@ -5486,8 +5589,11 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     muhakemeler: List[Dict[str, Any]] = []
     cozulen_hedefler: Set[int] = set()
     silsile_adimlari: List[Tuple[Terim, Terim]] = []
+    tikanma_gecmisi: List[float] = []
+    azami_guvenlik_tavani = max(int(azami_adim), 8)
 
-    for _ in range(azami_adim):
+    adim = 0
+    while True:
         Asim = asimetri_guncelle(P)
         tayf_bilgisi = topos_tayfi_hesapla(P, Asim, norm_korollalar)
 
@@ -5499,6 +5605,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         adim_muhakeme["şahit_doğrulandı"] = sahit_gecerli
         adim_muhakeme["yerel_hodge"] = yerel_baglamsal_hodge(baglam, P, norm_korollalar)
         muhakemeler.append(adim_muhakeme)
+        tikanma_gecmisi.append(float(adim_muhakeme["kohomolojik_engel"]))
 
         if (adim_muhakeme["ispat_sahidi"] is not None
                 and isinstance(adim_muhakeme["ispat_sahidi"], YonluTerkip)):
@@ -5507,12 +5614,29 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
 
         cozulen_hedefler.add(adim_muhakeme["hedef"])
 
-        if (adim_muhakeme["hüküm"] == "doğrudan_tasdik"
-                or adim_muhakeme["kohomolojik_engel"] < 0.01):
+        kefeler_anlik = np.array([adim_muhakeme["kohomolojik_engel"],
+                                  adim_muhakeme.get("doğrudan_güç", 0.0),
+                                  adim_muhakeme.get("türetim_gücü", 0.0),
+                                  float(adim_muhakeme.get("hedef_türü") == "doğrudan_akış")])
+        mecz_raporu = d8a_mecz_ve_wkb_tunelleme(kefeler_anlik, P, baglam[-1],
+                                                adim_muhakeme["hedef"])
+        adim_muhakeme["mecz_raporu"] = mecz_raporu
+        if mecz_raporu["kuyuya_saplandi"]:
+            P[baglam[-1]] = (0.8 * P[baglam[-1]]
+                             + 0.2 * mecz_raporu["nakil_sicramasi"])
+            P[baglam[-1]] /= (np.sum(P[baglam[-1]]) + 1e-12)
+
+        dur, kelam_hukmu, kesinlik = d10_durma_ve_sukut_yokla(
+            adim, tikanma_gecmisi, veri_lifi=n)
+        adim_muhakeme["kelam_hukmu"] = kelam_hukmu
+        adim_muhakeme["kesinlik"] = kesinlik
+
+        if dur or adim + 1 >= azami_guvenlik_tavani:
             break
 
         if adim_muhakeme["ara_durak"] is not None:
             baglam = tuple(list(baglam[1:]) + [adim_muhakeme["ara_durak"]])
+        adim += 1
 
     nihai_hedef = muhakemeler[-1]["hedef"]
     oncutler_terim = [dogal_sayi(t) for t in orijinal_baglam]
@@ -5581,6 +5705,12 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
     funktor_vektoru[:len(rho)] = np.sqrt(rho) * np.exp(1j * np.pi * rho)
     nihai_intac_psi = intac_funktor_tersi(kuantum_durum_vektoru_temiz, funktor_vektoru)
 
+    hudut_raporu = d8_hudut_temizligi_denetle(
+        psi=nihai_intac_psi, kod_uzayi_maskesi=kod_uzayi_maskesi,
+        uretilmis_tokenler=list(cozulen_hedefler), sozluk_boyutu=n,
+        tenakuz_var_mi=bool(terazi_hukmu["hüküm"] == "TENAKUZ"),
+        kisirdongu_var_mi=bool(terazi_hukmu["hüküm"] == "KISIRDÖNGÜ"))
+
     hedef_durum = np.zeros(n, dtype=float)
     hedef_durum[nihai_hedef] = 1.0
     kuantum_bilgisi = kuantum_yogunluk_ve_uhlmann(P, hedef_durum)
@@ -5631,5 +5761,7 @@ def hendese_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         "yavas_mod_indeksi": yavas_mod,
         "skaler_mizan": skaler_mizan,
         "kan_intac_genligi": kan_dalga_genligi,
+        "d0_gecit_raporu": gecit_raporu,
+        "d8_hudut_raporu": hudut_raporu,
         "detay": tayf_bilgisi
     }
