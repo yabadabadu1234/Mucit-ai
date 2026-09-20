@@ -7877,6 +7877,21 @@ def silsile_teshisi_kos(w: Sequence[int], n: int, K_max: int = 4,
         return {"hata": "D4 KAPI İHLALİ: MANTIKSIZLIK saptandı (Örnek elendi)",
                 "detay": d4_tasnif_raporu}
 
+    if d4_tasnif_raporu["hüküm"] == "TENAKUZ":
+        imaj_faktorleri_d4 = kategori_imaj_faktorizasyonu_yap(turetilen_kategori, P)
+        imaj_id_d4 = None
+        for (x, y), faktor in imaj_faktorleri_d4.items():
+            if x == nihai_hedef or y == nihai_hedef:
+                imaj_id_d4 = faktor.imaj_nesnesi
+                break
+        if imaj_id_d4 is not None:
+            klon_id_d4, delta_oku_d4 = frobenius_ko_carpim_klonla(
+                imaj_id_d4, MonoidalKategori(turetilen_kategori))
+            d4_tasnif_raporu["eylem"] = "TERFİ_MODALİTE_LİFİ"
+            d4_tasnif_raporu["imaj_nesnesi"] = imaj_id_d4
+            d4_tasnif_raporu["klon_id"] = klon_id_d4
+            d4_tasnif_raporu["delta_morfizmi"] = delta_oku_d4
+
     dilimler = {
         "uzay": (0, n),
         "kategori": (n, 2 * n),
