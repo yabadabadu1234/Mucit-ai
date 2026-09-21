@@ -138,7 +138,7 @@ class EgitimAyari:
     cevrim_boyu: int = 3
     degerlendirme_gorevi: int = 0
     dogrulama_sayisi: int = 0
-    kademe_gorevi: int = 0
+    kademe_gorevi: int = 2
     azami_uret: int = 0
     yaricap: float = 0.0
     blok: int = 0
