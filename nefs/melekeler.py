@@ -463,17 +463,14 @@ class QMeleke:
 
     def tugla(self, q: QYazmac, p, ofset: int = 0,
               olcek: float = 0.5) -> None:
-        from kuantum.kapilar import dik_iki_kubit_turevi
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, olcek)
-        G = dik_iki_kubit(a)
-        k = q.veri_yuvasi
-        sol = q.veri_izgara(range(ofset, k - 1, 2))
-        bas = self.aci_yeri(p, 6)
-        baglar = None
-        if q.iz.senet_acik and bas >= 0:
-            dG = dik_iki_kubit_turevi(a)
-            baglar = [(bas + j, float(olcek), dG[j]) for j in range(6)]
-        q.cift_yigin(sol, G, baglar=baglar)
+        par, olc = self.aci_bagi(p, 6, olcek)
+        for k, i in enumerate(range(int(ofset) % 2, max(0, n - 1), 2)):
+            t = float(a[k % a.size])
+            bag = None if par is None else (
+                int(par[k % a.size]), float(olc), 1.0)
+            q.satir_cifti_m(i, i + 1, t, bag=bag)
 
     def aci_yeri(self, p, n: int) -> int:
         anahtar = "q%d.%s/%d" % (self.no, self.ad, int(n))
@@ -485,32 +482,25 @@ class QMeleke:
     def aci_katsayisi(self, p) -> float:
         return float(p.aci_katsayisi())
 
-    def yuva_donmesi(self, q: QYazmac, p, yuvalar,
+    def yuva_donmesi(self, q: QYazmac, p, satirlar,
                      olcek: float = 0.6, kayma: float = 0.0,
                      n: int = 0) -> None:
-        yv = [int(y) for y in yuvalar]
-        if not yv:
+        sv = [int(s) for s in satirlar]
+        if not sv:
             return
-        kac = int(n) if int(n) > 0 else len(yv)
+        kac = int(n) if int(n) > 0 else len(sv)
         a = self.aci(p, kac, olcek)
-        bas = self.aci_yeri(p, kac)
-        for i, y in enumerate(yv):
+        par, olc = self.aci_bagi(p, kac, olcek)
+        for i, s in enumerate(sv):
             j = i % a.size
-            if not q.y.gecerli(int(y)) or bas < 0:
-                q.y._dusen_kapi += 1
-                continue
             t = float(kayma) + float(a[j])
-            kk, aa = q.y._lif_no(int(y))
-            q.tek(int(y), donme(t))
-            c, sn = math.cos(t), math.sin(t)
-            q.iz.bag_yaz(q.iz.son_senet, bas + j, float(olcek),
-                         ("bit", int(kk), int(aa),
-                          np.array([[-sn, -c], [c, -sn]], complex)))
+            bag = None if par is None else (int(par[j]), float(olc), 1.0)
+            q.satir_donmesi_m(s, t, bag=bag)
 
     def satir_donmesi(self, q: QYazmac, p,
                       olcek: float = 0.6) -> None:
-        k = q.veri_yuvasi
-        self.yuva_donmesi(q, p, list(q.veri_izgara()), olcek=olcek, n=k)
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        self.yuva_donmesi(q, p, range(n), olcek=olcek, n=q.veri_yuvasi)
 
 
 @qkaydet
