@@ -22,7 +22,8 @@ from nefs.kulli_mizan import (FockUzayi, Hamiltonyen, MizanAyari,
                               balyala, fock_beyani, hamiltonyen_beyani,
                               kulli_mizan, mizan_cetveli)
 from nefs.hafiza import Hafiza, tertip_beyani
-from main.cikarim import padisah, hazineden_devam, devam_agirligi
+from main.cikarim import (padisah, hazineden_devam, devam_agirligi,
+                          hazineden_yukle, hafizayi_yukle)
 from kuantum.qudit import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
 from nefs.ayna import AynaAyari
@@ -43,13 +44,13 @@ from nefs.golge import (GolgeAyari, golge_al,
 from nefs.sadakat import (SadakatAyari, sadakat_uygula,
                           sadakat_beyani, sadakat_devresi,
                           sadakat_devre_beyani)
-from nefs.olcek import Kok, olcek, denge
+from nefs.olcek import Kok, olcek, denge, olcek_beyani
 from nefs.belirtec import (belirtec_kapisi, belirtec_sozlugu,
                            belirtec_beyani)
-from nefs.keyfiyet import KeyfiyetAyari
+from nefs.keyfiyet import KeyfiyetAyari, keyfiyet, keyfiyet_beyani
 from nefs.munasebet import (Harita, MunasebetAyari, munasebet_kos,
                             munasebet_beyani)
-from main.kulliyat import kulliyat_verisi
+from main.kulliyat import kulliyat_verisi, kulliyat_dokumu, kulliyat_beyani
 from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            mukayese_melekesi_beyani, omur_beyani,
                            vecih_beyani,
@@ -293,12 +294,12 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         "kelam_dökümü": ayrisma,
     }
     if hiz_ayari is not None:
-        from tanilama.hiz_teftisi import BUTCE_SANIYESI, HEDEF, had, olc
-        h = olc(hiz_ayari)
+        from tanilama.hiz_teftisi import BUTCE_SANIYESI, teftis
+        h = teftis(hiz_ayari, sert=False)
         o["belirteç_sn"] = float(h["belirteç_sn"])
-        o["hız_haddi"] = float(had())
-        o["hız_hedefi"] = float(HEDEF)
-        o["hız_geçti"] = bool(h["belirteç_sn"] >= had())
+        o["hız_haddi"] = float(h["had"])
+        o["hız_hedefi"] = float(h["hedef"])
+        o["hız_geçti"] = bool(h["geçti"])
         o["kayıp_süresi"] = float(h["kayıp_süresi"])
         o["en_pahalı_uzuv"] = (h["tek_meleke"][0][0]
                                if h["tek_meleke"] else "?")
@@ -316,15 +317,15 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
             "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
             "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
         if "belirteç_sn" in o:
-            from tanilama.hiz_teftisi import had
             assert o["hız_geçti"], (
                 "HIZ HADDİ TUTMUYOR -- TÂLİM BAŞLAMAZ.\n"
                 "  ölçülen : %.1f belirteç/sn\n"
                 "  had     : %.0f belirteç/sn  (%.0f kat eksik)\n"
                 "  bir kayıp çağrısı: %.4f sn   en pahalı uzuv: %s\n"
                 "  Ferman: hız garantisi elde etmeden umumi tâlim "
-                "başlatılmaz." % (o["belirteç_sn"], had(),
-                                  had() / max(1e-9, o["belirteç_sn"]),
+                "başlatılmaz." % (o["belirteç_sn"], o["hız_haddi"],
+                                  o["hız_haddi"]
+                                  / max(1e-9, o["belirteç_sn"]),
                                   o["kayıp_süresi"], o["en_pahalı_uzuv"]))
     return o
 
@@ -1482,8 +1483,63 @@ def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dic
 
 
 
+def divan(dizin: Optional[str] = None) -> str:
+    from nefs.melekeler import QNefs
+    from nefs.kulli_kayip import kademe_parametreleri_ac
+    from kuantum.qegitim import ornekler, ornek_bol, belirtecleri_kodla
+
+    ayar = KISA_CPU
+    nefs = QNefs(ayar.tohum, ayar.qayar())
+    nefs.idrak_et(np.eye(2, ayar.veri_lifi))
+    kademe_parametreleri_ac(nefs.p)
+
+    yuk = hazineden_yukle(nefs, ayar, dizin)
+    hafiza = hafizayi_yukle(ayar, dizin)
+    p_yildiz = np.asarray(yuk["p"], float)
+
+    nobet = nobet_kur(nefs, ara_saniye=0.0, pencere=int(ayar.pencere),
+                      sozluk=int(ayar.sozluk), taban=int(ayar.veri_lifi),
+                      basamak=int(ayar.belirtec_basamak),
+                      kodlama=str(ayar.kodlama))
+    mihenk_r = nobet.beyan(p_yildiz)
+
+    kok = Kok(sozluk=int(ayar.sozluk), comert=float(ayar.comert),
+             tohum=int(ayar.tohum), hiz=float(ayar.olculen_hiz))
+    olcek_str = olcek_beyani(kok, ayar.olcek_dokumu)
+    dokum = kulliyat_dokumu()
+    kulliyat_str = kulliyat_beyani(dokum)
+
+    gorevler = list(gorevleri_getir("training"))
+    veri = ornekler(gorevler, azami=8, pencere=int(ayar.pencere),
+                    sozluk=int(ayar.sozluk), tohum=int(ayar.tohum),
+                    taban=int(ayar.veri_lifi),
+                    basamak=int(ayar.belirtec_basamak))
+    assert veri, "TEFTİŞ İÇİN VERİ BOŞ -- külliyat/ARC kaynağı hazır değil"
+    mz = mizan_ayari(ayar)
+    kefeler = kulli_mizan(nefs, veri, p_yildiz, ayar.sozluk, ayar=mz,
+                          hafiza=hafiza, adim=0, ne="döküm")
+    q_son = nefs.idrak_et(belirtecleri_kodla(
+        list(ornek_bol(veri[0])[0]), ayar.veri_lifi, ayar.veri_lifi))
+    sadakat_uygula(np.asarray(q_son.y.psi, complex).copy(),
+                   SadakatAyari(acik=int(ayar.sadakat_acik),
+                                parite_lifi=int(ayar.parite_lifi),
+                                lif_yapisi=tuple(ayar.lif_yapisi)))
+    keyf = keyfiyet(kefeler, sadakat_beyani(), KeyfiyetAyari())
+    keyf_str = keyfiyet_beyani()
+
+    s = ["", "=== TEFTİŞ / DİVAN (main/egitim.py teftiş) ===", "",
+        "  hazine  : %s   (yüklendi: %s)"
+        % (yuk.get("yol"), bool(yuk.get("yüklendi", True))),
+        "  hafıza  : %s" % hafiza.beyan(),
+        "", mihenk_r["metin"],
+        "", olcek_str, "", kulliyat_str, "",
+        "  KEYFİYET (bu hazinenin mevcut mizan/sadakat durumundan): %r"
+        % (keyf,), "", keyf_str]
+    return "\n".join(str(x) for x in s)
+
+
 KIPLER: Tuple[str, ...] = ("tâlim", "sıfırla", "mizan", "sabit",
-                           "kaggle", "veri")
+                           "kaggle", "veri", "teftiş")
 
 
 def profil_sec() -> EgitimAyari:
@@ -1524,6 +1580,8 @@ def taht(ne: str = "tâlim", *arg: str) -> str:
     if ne == "veri":
         from main.veri import rapor as veri_raporu
         return veri_raporu(*(arg[:1] or ("training",)))
+    if ne == "teftiş":
+        return divan(arg[0] if arg else None)
     if ne == "tâlim":
         ad = arg[0] if arg else "kısa"
         yol = arg[1] if len(arg) > 1 else "depo/kulli_dimag_talim"
