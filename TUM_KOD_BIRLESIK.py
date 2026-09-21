@@ -28301,9 +28301,9 @@ from typing import Any, Dict, Optional
 
 import numpy as np
 
-__all__ = ["FazAyari", "mobius", "zeta", "faz_oturt", "faz_uygula", "rapor"]
+from .matchgate import BRAVYI_GOSSET_ALFA
 
-BRAVYI_GOSSET_ALFA = 0.468
+__all__ = ["FazAyari", "mobius", "zeta", "faz_oturt", "rapor"]
 
 
 @dataclass
@@ -28376,13 +28376,6 @@ def faz_oturt(k, ayar: Optional[FazAyari] = None) -> Dict[str, Any]:
                                            1023.0)),
         "katsayı": c,
     }
-
-
-def faz_uygula(psi, k, mertebe: int = 8) -> np.ndarray:
-    m = int(mertebe)
-    e = np.asarray(k, np.int64).reshape(-1) % m
-    v = np.asarray(psi, complex).reshape(-1)
-    return v * np.exp(-2j * math.pi * e.astype(float) / m)
 
 
 def rapor(n: int = 12, tohum: int = 0) -> str:
