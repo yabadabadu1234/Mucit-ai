@@ -9,8 +9,10 @@ import numpy as np
 
 from nefs.matchgate import matchgate_mi
 
-__all__ = ["QuditAyar", "QuditYazmac", "Iz",
+__all__ = ["QuditAyar", "QuditYazmac", "Iz", "KULLI_SEKTOR_TABANI",
            "sektor_beyani", "sektor_metni", "senet_beyani"]
+
+KULLI_SEKTOR_TABANI: int = 64
 
 _SEKTOR_SAYAC: Dict[str, float] = {
     "dönme": 0.0, "faz_vuruşu": 0.0, "kenet": 0.0, "örüntü": 0.0,
@@ -219,18 +221,20 @@ class QuditYazmac:
         self._kapi = 0
         self.iz = Iz()
         self.bag = 0
-        toplam = sum(p for _, p in a.kulli_alanlar)
         self._sektor: Dict[str, Tuple[int, int]] = {}
         self._sektor_vurusu = 0
         bas = 0
-        for ad, pay in a.kulli_alanlar:
-            gen = max(1, int(round(self.d * pay / toplam)))
-            self._sektor[ad] = (bas, min(self.d, bas + gen))
+        for ad, _pay in a.kulli_alanlar:
+            gen = int(KULLI_SEKTOR_TABANI)
+            assert int(_pay) <= gen, (
+                "'%s' sektörü %d yuva ister, sabit taban %d'ten büyük "
+                "olamaz (ferman 90)" % (ad, int(_pay), gen))
+            assert bas + gen <= self.d, (
+                "yazmaç küllî sektörlere yetmiyor: '%s' sektörü [%d,%d) "
+                "ister, d=%d -- ölçülen bir sayıdır, sessizce küçültülemez "
+                "(ferman 5)" % (ad, bas, bas + gen, self.d))
+            self._sektor[ad] = (bas, bas + gen)
             bas += gen
-        if bas < self.d:
-            ad = a.kulli_alanlar[-1][0]
-            i, _ = self._sektor[ad]
-            self._sektor[ad] = (i, self.d)
 
     @property
     def n(self) -> int:

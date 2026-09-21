@@ -206,7 +206,6 @@ ESIK: float = 1e-6
 BOLGELER: Tuple[str, ...] = (
     "veri", "yerel", "makam", "mizan", "tenakuz", "tasdik", "sukut",
     "nakz", "kelam", "kaide", "orak", "gaye", "tertip",
-    "meleke_b", "parametre", "ancilla",
 )
 
 
@@ -280,12 +279,6 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
              "yerel": q.yereller()}
         for a, kac in q.ayar.kulli_alanlar:
             d[a] = [q.kulli(a, j) for j in range(kac)]
-        for a, anahtar in (("meleke", "meleke_b"),
-                           ("parametre", "parametre"),
-                           ("ancilla", "ancilla")):
-            if q.bolge_var(a):
-                bas, kac = q.taksimat.bolge[a]
-                d[anahtar] = list(range(bas, bas + kac))
         return d
 
     def yogunluklar(q):

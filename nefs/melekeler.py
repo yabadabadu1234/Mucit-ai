@@ -1237,26 +1237,12 @@ class QTahsil(QMeleke):
     GAMA: float = 0.05
 
     def uygula(self, q, p):
-        if not q.bolge_var("parametre"):
-            return
-        npar = q.taksimat.bolge["parametre"][1]
-        kac = min(int(npar), 8)
-        a = self.aci(p, 2, 0.5)
-        par, olc = self.aci_bagi(p, 2, 0.5)
-        t0 = -abs(float(a[0])) * float(self.ETA)
-        t1 = float(self.GAMA) * float(a[1])
-        b0 = self.donme_baglari(
-            None if par is None else [par[0]], olc * float(self.ETA),
-            [t0], egim=[-np.sign(a[0])], kontrollu=True)
-        b1 = self.donme_baglari(
-            None if par is None else [par[1]], olc * float(self.GAMA), [t1])
-        for j in range(kac):
-            q.uzak_cift(q.kulli("mizan", j % 4), q.parametre(j),
-                        kontrollu_donme(t0),
-                        baglar=None if b0 is None else [b0[0]])
-        q.tek_yigin([q.parametre(j) for j in range(kac)],
-                    np.stack([donme(t1) for _ in range(kac)]),
-                    baglar=None if b1 is None else [b1[0]] * kac)
+        q.not_dus(self.ad,
+                  "parametre sektörü kazındı (F 1-A #11, #25, #34/35): "
+                  "yazmaçta ``parametre`` adında bir sektör yok, "
+                  "q.parametre(j) adres döndürmüyor -- ikamesi "
+                  "(gerçek parametre yazmacına doğrudan yazan bir "
+                  "kontrollü kapı) henüz kurulmadı")
 
 
 QAKIS: Tuple[int, ...] = (

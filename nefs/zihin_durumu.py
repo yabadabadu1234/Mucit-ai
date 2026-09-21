@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from kuantum.qyazmac import QuditAyar, QuditYazmac
+from kuantum.qyazmac import KULLI_SEKTOR_TABANI, QuditAyar, QuditYazmac
 
 __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI",
            "kulli_sektor_adlari", "sektor_adresi", "donme",
@@ -25,7 +25,8 @@ def kulli_sektor_adlari() -> Tuple[str, ...]:
             "nakz", "kelam", "kaide", "orak", "gaye", "tertip")
 
 
-def sektor_adresi(ad: str, j: int, taban: int = 64) -> int:
+def sektor_adresi(ad: str, j: int,
+                  taban: int = KULLI_SEKTOR_TABANI) -> int:
     adlar = kulli_sektor_adlari()
     if ad not in adlar:
         raise ValueError("bilinmeyen sektör: %r" % (ad,))
@@ -64,7 +65,7 @@ class QAyar:
 
     @property
     def kulli_yuva(self) -> int:
-        return sum(n for _, n in self.kulli_alanlar)
+        return len(self.kulli_alanlar) * int(KULLI_SEKTOR_TABANI)
 
 
 class QIz:
@@ -155,17 +156,11 @@ class QYazmac:
     def kubit_sayisi(self) -> int:
         return self.y.n
 
-    def taksimat(self) -> Dict[str, Tuple[int, int]]:
-        t = {"veri": (0, self.veri_kubiti),
-             "yerel": (self.veri_kubiti, self.n_satir)}
-        t.update(self._alan)
-        return t
-
     def kulli_bas(self) -> int:
         return self.y.kulli(self.ayar.kulli_alanlar[0][0], 0)
 
     def bolge_var(self, ad: str) -> bool:
-        return ad in self._alan or ad in ("meleke", "veri", "yerel")
+        return ad in ("veri", "yerel") or self.y.bolge_var(ad)
 
     @property
     def veri_kubiti(self) -> int:
