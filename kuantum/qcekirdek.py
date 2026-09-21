@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-__all__ = ["CekirdekAyari", "CEKIRDEK_C", "HAT_TIPI", "derle", "yoklama",
+__all__ = ["CEKIRDEK_C", "HAT_TIPI", "derle", "yoklama",
            "kutuphane",
            "Bant", "cekirdek_beyani", "rapor"]
 
@@ -288,20 +288,6 @@ _SAYAC: Dict[str, int] = {"kapı": 0, "boşaltma": 0, "karo": 0, "çift": 0,
                           "numpy_boşaltma": 0}
 
 
-class CekirdekAyari:
-
-    __slots__ = ("hat", "bant")
-
-    def __init__(self, hat: str = "c", bant: int = 0) -> None:
-        self.hat = str(hat)
-        self.bant = int(bant)
-
-
-def _ozet() -> str:
-    from nefs.derleyici import ozet
-    return ozet(CEKIRDEK_C, BAYRAK)
-
-
 def derle() -> Dict[str, Any]:
     from nefs.derleyici import derle as _derle
     return _derle("qcekirdek", CEKIRDEK_C, BAYRAK)
@@ -321,18 +307,10 @@ def kutuphane():
     if d["derlendi"] and os.path.exists(d["so"]):
         lib = ctypes.CDLL(d["so"])
         dp = ctypes.POINTER(ctypes.c_double)
-        lib.mucit_bant.argtypes = [dp, dp, ctypes.c_size_t, ctypes.c_size_t,
-                                   ctypes.POINTER(_Kapi), ctypes.c_size_t,
-                                   dp, dp, dp, dp]
-        lib.mucit_bant.restype = None
         lib.mucit_cift_bant.argtypes = [dp, ctypes.c_size_t, ctypes.c_size_t,
                                         ctypes.POINTER(_Kapi),
                                         ctypes.c_size_t, dp, dp]
         lib.mucit_cift_bant.restype = None
-        lib.mucit_ayristir.argtypes = [dp, dp, dp, ctypes.c_size_t]
-        lib.mucit_ayristir.restype = None
-        lib.mucit_birlestir.argtypes = [dp, dp, dp, ctypes.c_size_t]
-        lib.mucit_birlestir.restype = None
     _ONBELLEK["lib"] = lib
     return lib
 
@@ -372,8 +350,7 @@ def yoklama() -> Dict[str, Any]:
 
 class Bant:
 
-    __slots__ = ("B", "d", "lif", "bant", "hat", "_kapi", "_dizey",
-                 "_re", "_im", "_tre", "_tim", "_tampon")
+    __slots__ = ("B", "d", "lif", "bant", "hat", "_kapi", "_dizey")
 
     def __init__(self, B: int, d: int, lif: Tuple[int, ...],
                  hat: str = "c", bant: int = 0) -> None:
@@ -384,14 +361,6 @@ class Bant:
         self.bant = int(bant) if int(bant) > 0 else 256
         self._kapi: List[Tuple[int, int, int, int, int]] = []
         self._dizey: List[np.ndarray] = []
-        n = self.B * self.d
-        self._re = np.zeros(n, np.float64)
-        self._im = np.zeros(n, np.float64)
-        enb = max(self.lif) if self.lif else 1
-        enb_ard = self.d // enb if enb else 1
-        self._tre = np.zeros(enb * max(1, enb_ard), np.float64)
-        self._tim = np.zeros(enb * max(1, enb_ard), np.float64)
-        self._tampon = None
 
     def _bolum(self, k: int) -> Tuple[int, int]:
         on, ard = 1, 1
