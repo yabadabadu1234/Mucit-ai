@@ -5911,13 +5911,11 @@ from nefs.kulli_mizan import (FockUzayi, Hamiltonyen, MizanAyari,
                               balyala, fock_beyani, hamiltonyen_beyani,
                               kulli_mizan, mizan_cetveli)
 from nefs.hafiza import Hafiza, tertip_beyani
-from main.cikarim import (hazineden_yukle, hafizayi_yukle, padisah,
-                          hazineden_devam, devam_agirligi)
+from main.cikarim import padisah, hazineden_devam, devam_agirligi
 from kuantum.qudit import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
 from nefs.ayna import AynaAyari
-from nefs.mihenk import (MIHENK, nobet_kur, safha,
-                         safha_beyani, safha_sifirla)
+from nefs.mihenk import nobet_kur, safha, safha_beyani, safha_sifirla
 from nefs.veri_kapisi import (VeriKapisiAyari, veri_kapisi,
                               kapi_beyani, kapi_tertibi)
 from kuantum.qcekirdek import cekirdek_beyani
@@ -5934,15 +5932,13 @@ from nefs.golge import (GolgeAyari, golge_al,
 from nefs.sadakat import (SadakatAyari, sadakat_uygula,
                           sadakat_beyani, sadakat_devresi,
                           sadakat_devre_beyani)
-from nefs.olcek import Kok, olcek, denge, olcek_beyani
+from nefs.olcek import Kok, olcek, denge
 from nefs.belirtec import (belirtec_kapisi, belirtec_sozlugu,
                            belirtec_beyani)
-from nefs.keyfiyet import (KeyfiyetAyari, keyfiyet,
-                           keyfiyet_beyani)
+from nefs.keyfiyet import KeyfiyetAyari
 from nefs.munasebet import (Harita, MunasebetAyari, munasebet_kos,
                             munasebet_beyani)
-from main.kulliyat import (kulliyat_verisi,
-                           kulliyat_dokumu, kulliyat_beyani)
+from main.kulliyat import kulliyat_verisi
 from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
                            mukayese_melekesi_beyani, omur_beyani,
                            vecih_beyani,
@@ -32495,6 +32491,8 @@ def rapor(profil: str = "kısa") -> str:
                         [[0, 1, 2], [1, 2, 3]], [-0.9, +0.9], _ua)
     _kapali = usul_kos([_dik[:, i] for i in range(4)],
                        [[0, 1, 2]], [-0.9], UsulAyari(acik=0))
+    if _u_once == 0.0:
+        usul_sifirla()
     from .sadakat import SadakatAyari, sadakat_uygula
     _yirtik_hal = np.ones(64, complex) / 8.0
     _sa = SadakatAyari(parite_lifi=1, lif_yapisi=(8, 8))
@@ -33382,12 +33380,8 @@ from typing import (TYPE_CHECKING, Any, Callable, Dict, List, Optional,
 
 import numpy as np
 
-from matematik.fitrat import fazla_sayma, tevafuk_olcusu
 from kuantum.kapilar import dik_iki_kubit
-from matematik.mizan import ardisiklik_kaidesi, tam_istikra_mi
-from matematik.mizan import (MERTEBELER, ZANN_I_GALIB_ESIGI, hukum_agirligi,
-                            ikili_entropi, makam_tayin, mertebe_adi,
-                            yakin_gazali, yakin_zinciri)
+from matematik.mizan import MERTEBELER
 from matematik.sonsuz_mertebeler_teorisi import (Baglam, Cember, Deg, Evren, Taban,
                                    denetle_t, dongu_uzayi_n, morfizm_tipi)
 
@@ -39361,7 +39355,6 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     L3 = int(ob.get("L3") or (32 << 20))
 
     doluluk = 0.25 + 0.65 * c
-    from .belirtec import basamak_sayisi as _bs
     V, _basamak, _cetvel = taban_sec(int(k.sozluk))
     from .musahede import gorev_boyu, sigan_nispet
     _gb = gorev_boyu()

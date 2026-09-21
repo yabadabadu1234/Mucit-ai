@@ -104,7 +104,6 @@ def olcek(kok: Optional[Kok] = None) -> Dict[str, Any]:
     L3 = int(ob.get("L3") or (32 << 20))
 
     doluluk = 0.25 + 0.65 * c
-    from .belirtec import basamak_sayisi as _bs
     V, _basamak, _cetvel = taban_sec(int(k.sozluk))
     from .musahede import gorev_boyu, sigan_nispet
     _gb = gorev_boyu()

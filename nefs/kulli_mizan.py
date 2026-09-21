@@ -1094,6 +1094,8 @@ def rapor(profil: str = "kısa") -> str:
                         [[0, 1, 2], [1, 2, 3]], [-0.9, +0.9], _ua)
     _kapali = usul_kos([_dik[:, i] for i in range(4)],
                        [[0, 1, 2]], [-0.9], UsulAyari(acik=0))
+    if _u_once == 0.0:
+        usul_sifirla()
     from .sadakat import SadakatAyari, sadakat_uygula
     _yirtik_hal = np.ones(64, complex) / 8.0
     _sa = SadakatAyari(parite_lifi=1, lif_yapisi=(8, 8))

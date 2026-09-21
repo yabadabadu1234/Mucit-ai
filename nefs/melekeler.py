@@ -11,12 +11,8 @@ from typing import (TYPE_CHECKING, Any, Callable, Dict, List, Optional,
 
 import numpy as np
 
-from matematik.fitrat import fazla_sayma, tevafuk_olcusu
 from kuantum.kapilar import dik_iki_kubit
-from matematik.mizan import ardisiklik_kaidesi, tam_istikra_mi
-from matematik.mizan import (MERTEBELER, ZANN_I_GALIB_ESIGI, hukum_agirligi,
-                            ikili_entropi, makam_tayin, mertebe_adi,
-                            yakin_gazali, yakin_zinciri)
+from matematik.mizan import MERTEBELER
 from matematik.sonsuz_mertebeler_teorisi import (Baglam, Cember, Deg, Evren, Taban,
                                    denetle_t, dongu_uzayi_n, morfizm_tipi)
 
