@@ -81,7 +81,7 @@ def pfaffyen(A) -> float:
 
 class Ortam:
 
-    __slots__ = ("N", "G", "kapi", "donme_deti")
+    __slots__ = ("N", "G", "kapi")
 
     def __init__(self, N: int = 24) -> None:
         assert int(N) >= 2, "en az iki mod"
@@ -91,7 +91,6 @@ class Ortam:
             self.G[2 * j, 2 * j + 1] = 1.0
             self.G[2 * j + 1, 2 * j] = -1.0
         self.kapi = 0
-        self.donme_deti = 1.0
 
     def dondur(self, i: int, j: int, teta: float) -> None:
         i, j = int(i) % (2 * self.N), int(j) % (2 * self.N)
@@ -105,7 +104,6 @@ class Ortam:
         G[:, i] = c * ci - s * cj
         G[:, j] = s * ci + c * cj
         self.kapi += 1
-        self.donme_deti *= 1.0
 
     def antisimetri_hatasi(self) -> float:
         return float(np.max(np.abs(self.G + self.G.T)))
