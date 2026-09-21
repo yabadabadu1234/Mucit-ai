@@ -33896,13 +33896,13 @@ class QMuhayyile(QMeleke):
     SINIF, CHI = "kurucu", 16
 
     def uygula(self, q, p):
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, 0.8)
-        G = dik_iki_kubit(a)
-        bag = self.dik_bagi(p, a, 0.8)
-        k = q.veri_yuvasi
-        for i in range(q.n_satir):
-            for j in range(0, k - 2):
-                q.uzak_cift(q.veri(i, j), q.veri(i, j + 2), G, baglar=bag)
+        par, olc = self.aci_bagi(p, 6, 0.8)
+        for i in range(n):
+            for k, t in enumerate(a):
+                bag = None if par is None else (int(par[k]), float(olc), 1.0)
+                q.satir_donmesi_m(i, float(t), bag=bag)
 
 
 @qkaydet
@@ -33911,13 +33911,14 @@ class QTertip(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
-        a = self.yay(p, 4, q.n_satir, 0.7)
-        par, olc = self.yay_bagi(p, 4, q.n_satir, 0.7)
-        j = q.veri_yuvasi - 1
-        q.cift_yigin([q.veri(i, j) for i in range(q.n_satir)],
-                     np.stack([kontrollu_donme(float(t)) for t in a]),
-                     baglar=self.donme_baglari(par, olc, a,
-                                               kontrollu=True))
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        a = self.yay(p, 4, n, 0.7)
+        par, olc = self.yay_bagi(p, 4, n, 0.7)
+        for i in range(n):
+            t = float(a[i % a.size]) if a.size else 0.0
+            bag = None if par is None else (
+                int(par[i % len(par)]), float(olc), 1.0)
+            q.satir_donmesi_m(i, t, bag=bag)
 
 
 @qkaydet
@@ -33926,11 +33927,14 @@ class QTecrit(QMeleke):
     SINIF, CHI = "çözücü", None
 
     def uygula(self, q, p):
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, 0.5)
-        G = dik_iki_kubit(a)
-        k = q.veri_yuvasi
-        q.cift_yigin(q.veri_izgara(range(1, k - 1, 2)), G.T,
-                     baglar=self.dik_bagi(p, a, 0.5, devrik=True))
+        par, olc = self.aci_bagi(p, 6, 0.5)
+        for i in range(n):
+            for k, t in enumerate(a):
+                bag = (None if par is None
+                       else (int(par[k]), float(olc), -1.0))
+                q.satir_donmesi_m(i, -float(t), bag=bag)
 
 
 @qkaydet
@@ -33979,9 +33983,9 @@ class QTezat(QMeleke):
     SINIF, CHI = "koruyucu", 4
 
     def uygula(self, q, p):
-        Z = faz_z()
-        k = q.veri_yuvasi
-        q.tek_yigin([q.veri(i, k - 1) for i in range(1, q.n_satir, 2)], Z)
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        for i in range(1, n, 2):
+            q.satir_donmesi_m(i, math.pi / 2)
 
 
 @qkaydet
@@ -34003,12 +34007,16 @@ class QTenkit(QMeleke):
     SINIF, CHI = "çözücü", 2
 
     def uygula(self, q, p):
-        a = self.yay(p, 4, q.n_satir, 0.4)
-        par, olc = self.yay_bagi(p, 4, q.n_satir, 0.4)
-        yer = q.yereller()
-        b = self.donme_baglari(par, olc, -np.abs(a), egim=-np.sign(a))
-        q.tek_yigin(yer, np.stack([donme(-abs(float(t))) for t in a]),
-                    baglar=None if b is None else b[:len(yer)])
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        a = self.yay(p, 4, n, 0.4)
+        par, olc = self.yay_bagi(p, 4, n, 0.4)
+        for i in range(n):
+            av = float(a[i % a.size]) if a.size else 0.0
+            t = -abs(av)
+            bag = None if par is None else (
+                int(par[i % len(par)]), float(olc),
+                -1.0 if av >= 0.0 else 1.0)
+            q.satir_donmesi_m(i, t, bag=bag)
 
 
 @qkaydet
@@ -34059,16 +34067,15 @@ class QDenemeYanilma(QMeleke):
     SINIF, CHI = "kurucu", 8
 
     def uygula(self, q, p):
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         k = q.veri_yuvasi
         a = self.aci(p, k, 0.3)
         par, olc = self.aci_bagi(p, k, 0.3)
-        Gk = np.tile(np.stack([donme(float(t)) for t in a]),
-                     (q.n_satir, 1, 1))
-        yv = list(q.veri_izgara())
-        b = self.donme_baglari(par, olc, a)
-        q.tek_yigin(yv, Gk,
-                    baglar=None if b is None
-                    else [b[i % len(b)] for i in range(len(yv))])
+        for i in range(n):
+            for j, t in enumerate(a):
+                bag = None if par is None else (
+                    int(par[j]), float(olc), 1.0)
+                q.satir_donmesi_m(i, float(t), bag=bag)
 
 
 @qkaydet
@@ -34090,11 +34097,13 @@ class QKiyas(QMeleke):
     SINIF, CHI = "kurucu", 8
 
     def uygula(self, q, p):
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, 0.5)
-        G = dik_iki_kubit(a)
-        bag = self.dik_bagi(p, a, 0.5)
-        for i in range(q.n_satir - 1):
-            q.uzak_cift(q.veri(i, 0), q.veri(i + 1, 0), G, baglar=bag)
+        par, olc = self.aci_bagi(p, 6, 0.5)
+        for i in range(n - 1):
+            for k, t in enumerate(a):
+                bag = None if par is None else (int(par[k]), float(olc), 1.0)
+                q.satir_cifti_m(i, i + 1, float(t), bag=bag)
 
 
 @qkaydet
@@ -34103,13 +34112,17 @@ class QTemsil(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
-        a = self.aci(p, 6, 0.6)
-        G = dik_iki_kubit(a)
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         k = q.veri_yuvasi
-        sol = [q.veri(i, 0) for i in range(q.n_satir)]
-        if k >= 4:
-            sol += [q.veri(i, 2) for i in range(q.n_satir)]
-        q.cift_yigin(sol, G, baglar=self.dik_bagi(p, a, 0.6))
+        a = self.aci(p, 6, 0.6)
+        par, olc = self.aci_bagi(p, 6, 0.6)
+        gecis = 2 if k >= 4 else 1
+        for i in range(n):
+            for _ in range(gecis):
+                for j, t in enumerate(a):
+                    bag = (None if par is None
+                           else (int(par[j]), float(olc), 1.0))
+                    q.satir_donmesi_m(i, float(t), bag=bag)
 
 
 @qkaydet
@@ -34118,12 +34131,12 @@ class QTesbih(QMeleke):
     SINIF, CHI = "kurucu", 8
 
     def uygula(self, q, p):
-        if q.n_satir < 2:
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        if n < 2:
             return
-        G = dik_iki_kubit(self.aci(p, 6, 0.5))
-        k = q.veri_yuvasi
-        for j in range(k):
-            q.uzak_cift(q.veri(0, j), q.veri(1, j), G)
+        a = self.aci(p, 6, 0.5)
+        for t in a:
+            q.satir_cifti_m(0, 1, float(t))
 
 
 @qkaydet
@@ -34140,13 +34153,10 @@ class QTefekkur(QMeleke):
         for lif in lifler:
             teta = lif.olcek * (1.0 + 0.3 * float(a[lif.yuva]))
             eksen_acisi[lif.yuva % k] = eksen_acisi.get(lif.yuva % k, 0.0) + teta
-        yuv, Gl = [], []
-        for j, top in eksen_acisi.items():
-            R = donme(top)
-            for i in range(q.n_satir):
-                yuv.append(q.veri(i, j))
-                Gl.append(R)
-        q.tek_yigin(yuv, np.stack(Gl))
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        for top in eksen_acisi.values():
+            for i in range(n):
+                q.satir_donmesi_m(i, float(top))
         son = q.kulli("makam", 0)
         par, olc = self.aci_bagi(p, len(lifler), 1.0)
         katki: Dict[int, float] = {}
@@ -34184,14 +34194,13 @@ class QIllet(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
-        n = max(q.n_satir - 1, 1)
+        m = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        n = max(m - 1, 1)
         a = self.yay(p, 4, n, 0.5)
         par, olc = self.yay_bagi(p, 4, n, 0.5)
-        b = self.donme_baglari(par, olc, a, kontrollu=True)
-        for i in range(q.n_satir - 1):
-            q.uzak_cift(q.veri(i, 0), q.veri(i + 1, 0),
-                        kontrollu_donme(float(a[i])),
-                        baglar=None if b is None else [b[i]])
+        for i in range(m - 1):
+            bag = None if par is None else (int(par[i]), float(olc), 1.0)
+            q.satir_cifti_m(i, i + 1, float(a[i]), bag=bag)
 
 
 @qkaydet
@@ -34212,17 +34221,16 @@ class QIspat(QMeleke):
     SINIF, CHI = "çözücü", None
 
     def uygula(self, q, p):
-        n = max(q.n_satir - 1, 1)
+        m = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        n = max(m - 1, 1)
         a = self.yay(p, 4, n, 0.5)
         par, olc = self.yay_bagi(p, 4, n, 0.5)
-        for i in range(q.n_satir - 1):
+        for i in range(m - 1):
             sonum = 1.0 / (1.0 + 0.1 * i)
             teta = float(a[i]) * sonum
-            b = self.donme_baglari(
-                None if par is None else [par[i]], olc * sonum, [teta],
-                kontrollu=True)
-            q.uzak_cift(q.yerel(i), q.yerel(i + 1),
-                        kontrollu_donme(teta), baglar=b)
+            bag = (None if par is None
+                   else (int(par[i]), float(olc * sonum), 1.0))
+            q.satir_cifti_m(i, i + 1, teta, bag=bag)
 
 
 @qkaydet
@@ -34242,12 +34250,14 @@ class QTemkin(QMeleke):
     SINIF, CHI = "koruyucu", 4
 
     def uygula(self, q, p):
-        a = self.yay(p, 4, q.n_satir, 0.12)
-        par, olc = self.yay_bagi(p, 4, q.n_satir, 0.12)
-        yer = q.yereller()
-        b = self.donme_baglari(par, olc, a)
-        q.tek_yigin(yer, np.stack([donme(float(t)) for t in a]),
-                    baglar=None if b is None else b[:len(yer)])
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        a = self.yay(p, 4, n, 0.12)
+        par, olc = self.yay_bagi(p, 4, n, 0.12)
+        for i in range(n):
+            t = float(a[i % a.size]) if a.size else 0.0
+            bag = None if par is None else (
+                int(par[i % len(par)]), float(olc), 1.0)
+            q.satir_donmesi_m(i, t, bag=bag)
 
 
 @qkaydet
@@ -34265,18 +34275,16 @@ class QTashih(QMeleke):
     SINIF, CHI = "çözücü", 2
 
     def uygula(self, q, p):
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         k = q.veri_yuvasi
         tetkik = QTetkik().aci(p, k, 0.2)
         par, olc = QTetkik().aci_bagi(p, k, 0.2)
         lam = float(np.tanh(self.aci(p, 1, 1.0)[0]))
-        Gk = np.tile(np.stack([donme(-lam * float(t)) for t in tetkik]),
-                     (q.n_satir, 1, 1))
-        yv = list(q.veri_izgara())
-        b = self.donme_baglari(par, olc, -lam * tetkik,
-                               egim=np.full(k, -lam))
-        q.tek_yigin(yv, Gk,
-                    baglar=None if b is None
-                    else [b[i % len(b)] for i in range(len(yv))])
+        for i in range(n):
+            for j, t in enumerate(tetkik):
+                bag = (None if par is None
+                       else (int(par[j]), float(olc), -lam))
+                q.satir_donmesi_m(i, -lam * float(t), bag=bag)
 
 
 @qkaydet
@@ -34285,14 +34293,17 @@ class QTeyit(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         k = q.veri_yuvasi
         if k < 2:
             return
         a = self.aci(p, 6, 0.5)
-        G = dik_iki_kubit(a)
-        bag = self.dik_bagi(p, a, 0.5)
-        for i in range(q.n_satir):
-            q.uzak_cift(q.veri(i, 0), q.yerel(i), G, baglar=bag)
+        par, olc = self.aci_bagi(p, 6, 0.5)
+        for i in range(n):
+            for j, t in enumerate(a):
+                bag = (None if par is None
+                       else (int(par[j]), float(olc), 1.0))
+                q.satir_donmesi_m(i, float(t), bag=bag)
 
 
 @qkaydet
@@ -34313,9 +34324,11 @@ class QTedebbur(QMeleke):
     UFUK = 4
 
     def uygula(self, q, p):
-        G = dik_iki_kubit(self.aci(p, 6, 0.25))
-        GU = np.linalg.matrix_power(np.asarray(G, float), self.UFUK)
-        q.cift_yigin([q.veri(i, 0) for i in range(q.n_satir)], GU)
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        a0 = self.aci(p, 6, 0.25)
+        for i in range(n):
+            for t in a0:
+                q.satir_donmesi_m(i, float(t) * float(self.UFUK))
         a = self.aci(p, 2, 0.3)
         par2, olc2 = self.aci_bagi(p, 2, 0.3)
         q.sektor_faz_vur("mizan", a[:2],
@@ -34410,12 +34423,14 @@ class QTefsir(QMeleke):
     SINIF, CHI = "koruyucu", 8
 
     def uygula(self, q, p):
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, 0.4)
-        G = dik_iki_kubit(a)
-        bag = self.dik_bagi(p, a, 0.4)
-        k = q.veri_yuvasi
-        for i in range(1, q.n_satir):
-            q.uzak_cift(q.veri(i - 1, k - 1), q.veri(i, 0), G, baglar=bag)
+        par, olc = self.aci_bagi(p, 6, 0.4)
+        for i in range(1, n):
+            for j, t in enumerate(a):
+                bag = (None if par is None
+                       else (int(par[j]), float(olc), 1.0))
+                q.satir_cifti_m(i - 1, i, float(t), bag=bag)
 
 
 @qkaydet
