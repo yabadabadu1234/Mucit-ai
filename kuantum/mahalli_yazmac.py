@@ -451,6 +451,43 @@ class MahalliYazmac:
         _MAHALLI["aşkın_sin"] = _MAHALLI.get("aşkın_sin", 0.0) + 1.0
         return 2 * cift
 
+    def satir_cifti(self, i: int, j: int, teta: float) -> int:
+        assert self.yigin > 0 and self.pencere > 0, (
+            "SATIR ÇİFTİ BOŞ ZIRHA VURULAMAZ (ferman 2-A)")
+        n = int(self.pencere)
+        if n < 2:
+            _MAHALLI["kök_düşen"] = _MAHALLI.get("kök_düşen", 0.0) + 1.0
+            return 0
+        ii, jj = int(i) % n, int(j) % n
+        if ii == jj:
+            _MAHALLI["kök_düşen"] = _MAHALLI.get("kök_düşen", 0.0) + 1.0
+            return 0
+        c, sn = math.cos(float(teta)), math.sin(float(teta))
+        u = self.hal[:, ii, :].copy()
+        v = self.hal[:, jj, :].copy()
+        self.hal[:, ii, :] = c * u - sn * v
+        self.hal[:, jj, :] = sn * u + c * v
+        _MAHALLI["satır_çifti"] = _MAHALLI.get("satır_çifti", 0.0) + 1.0
+        return 1
+
+    def satir_donmesi(self, i: int, teta: float) -> int:
+        assert self.yigin > 0 and self.pencere > 0, (
+            "SATIR DÖNMESİ BOŞ ZIRHA VURULAMAZ (ferman 2-A)")
+        n = int(self.pencere)
+        if n < 1:
+            _MAHALLI["kök_düşen"] = _MAHALLI.get("kök_düşen", 0.0) + 1.0
+            return 0
+        ii = int(i) % n
+        c, sn = math.cos(float(teta)), math.sin(float(teta))
+        u = self.hal[:, ii, 0::2].copy()
+        v = self.hal[:, ii, 1::2].copy()
+        k = min(u.shape[-1], v.shape[-1])
+        u, v = u[..., :k], v[..., :k]
+        self.hal[:, ii, 0:2 * k:2] = c * u - sn * v
+        self.hal[:, ii, 1:2 * k:2] = sn * u + c * v
+        _MAHALLI["satır_dönmesi"] = _MAHALLI.get("satır_dönmesi", 0.0) + 1.0
+        return 1
+
     def senet_dilimi(self) -> np.ndarray:
         if self.yigin <= 0 or self.pencere <= 0:
             return np.zeros((0, 0), complex)
