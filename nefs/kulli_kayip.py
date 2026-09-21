@@ -286,12 +286,15 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
 
     rng = np.random.default_rng(tohum)
     q = QYazmac(n_satir, QAyar(tohum=tohum))
+    from kuantum.mahalli_yazmac import MahalliYazmac
+    mahalli = MahalliYazmac(int(q.ayar.veri_lifi))
+    q.mahalli = mahalli
+    q.y.mahalli = mahalli
     q.kodla(rng.normal(size=(n_satir, 12)))
     q.superpozisyon()
     q.harman()
-    for a, kac in q.ayar.kulli_alanlar:
-        for j in range(kac):
-            q.tek(q.kulli(a, j), donme(0.4))
+    for a, _kac in q.ayar.kulli_alanlar:
+        q.sektor_donmesi(a, 0.4)
     from .donanim import bellek_haddi
     from kuantum.parametre_yazmaci import ParametreAyari, ParametreYazmaci
     p = ParametreYazmaci(64, 1, bellek_haddi(),
