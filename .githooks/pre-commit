@@ -3,3 +3,5 @@ set -e
 KOK="$(git rev-parse --show-toplevel)"
 python3 "$KOK/araclar/kod_birlestir.py"
 git add "$KOK/TUM_KOD_BIRLESIK.py"
+python3 "$KOK/araclar/md_birlestir.py"
+git add "$KOK/TUM_MD_BIRLESIK.md"
