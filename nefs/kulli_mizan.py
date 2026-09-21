@@ -822,12 +822,15 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                        betti=float(_z["betti_ceza"]),
                        koho=float(_z["koho_ceza"]),
                        homotopi=float(_z["homotopi_ceza"]),
-                       nizam=L_nizam, ayar=ZirhAyari())
+                       nizam=L_nizam,
+                       bottleneck=float(_z["bottleneck_ceza"]),
+                       ayar=ZirhAyari())
     _z_bes = (("zırh.sheaf", float(_z["sheaf_ceza"])),
               ("zırh.betti", float(_z["betti_ceza"])),
               ("zırh.koho", float(_z["koho_ceza"])),
               ("zırh.homotopi", float(_z["homotopi_ceza"])),
-              ("zırh.nizam", float(L_nizam)))
+              ("zırh.nizam", float(L_nizam)),
+              ("zırh.bottleneck", float(_z["bottleneck_ceza"])))
     _zpay = float(a.lam_zirh) / len(_z_bes)
     for _ad, _v in _z_bes:
         _bilesen.append((_ad, _v, _zpay))

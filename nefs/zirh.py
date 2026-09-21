@@ -147,6 +147,14 @@ def zirhla(hedef, ayar: Optional[ZirhAyari] = None,
         b0 = delik(K, k=0)
         azami_b1 = max(1, n * (n - 1) // 2 - n + 1)
 
+        D_mesafe = olcek - A if olcek > 0.0 else np.zeros_like(A)
+        np.fill_diagonal(D_mesafe, 0.0)
+        esikler = list(np.linspace(0.0, max(olcek, 1e-12), min(2 * n, 16)))
+        cub0 = dogum_olum_cetveli(D_mesafe, esikler, k=0)["çubuklar"]
+        fitri = [(0.0, olcek)] if olcek > 0.0 else [(0.0, 0.0)]
+        w_inf = cetveller_arasi_mesafe(cub0, fitri, kip="bottleneck")
+        w_inf_ceza = float(w_inf / max(olcek, 1e-12))
+
         adim = max(2, min(8, n))
         m = max(1, n // adim)
         baglanti = []
@@ -161,7 +169,8 @@ def zirhla(hedef, ayar: Optional[ZirhAyari] = None,
         toplam = zirh_kaybi(sheaf=s_hata,
                             betti=float(b1["delik_cezası"]) / azami_b1,
                             koho=float(b0["ada_cezası"]) / max(n, 1),
-                            homotopi=float(h["sapma"]), ayar=a)
+                            homotopi=float(h["sapma"]),
+                            bottleneck=w_inf_ceza, ayar=a)
 
         H_zirhli = (S @ H @ S.T
                     if getattr(S, "shape", None) == H.shape else H)
@@ -174,6 +183,9 @@ def zirhla(hedef, ayar: Optional[ZirhAyari] = None,
             "betti_ceza": float(b1["delik_cezası"]) / azami_b1,
             "koho_ceza": float(b0["ada_cezası"]) / max(n, 1),
             "homotopi_ceza": float(h["sapma"]),
+            "bottleneck_barkod": cub0,
+            "bottleneck_mesafe": float(w_inf),
+            "bottleneck_ceza": float(w_inf_ceza),
             "toplam_kayip": float(toplam["kayıp"]),
             "mizan_dengesi": float(np.abs(np.mean(H_zirhli))),
         }
@@ -237,19 +249,21 @@ class ZirhAyari:
     w_koho: float = 1.0
     w_homotopi: float = 1.0
     w_nizam: float = 1.0
+    w_bottleneck: float = 1.0
     tau: float = 4.0
     betti_kat: float = 0.3
 
 
 def zirh_kaybi(sheaf: float = 0.0, betti: float = 0.0, koho: float = 0.0,
                homotopi: float = 0.0, nizam: float = 0.0,
+               bottleneck: float = 0.0,
                ayar: Optional[ZirhAyari] = None,
                q=None) -> Dict[str, object]:
     a = ayar or ZirhAyari()
     l = np.array([float(sheaf), float(betti), float(koho),
-                  float(homotopi), float(nizam)])
+                  float(homotopi), float(nizam), float(bottleneck)])
     w = np.array([a.w_sheaf, a.w_betti, a.w_koho, a.w_homotopi,
-                  a.w_nizam])
+                  a.w_nizam, a.w_bottleneck])
     t = float(a.tau)
     m = float(np.max(t * l))
     ls = m + math.log(float(np.sum(w * np.exp(t * l - m))))
@@ -257,6 +271,7 @@ def zirh_kaybi(sheaf: float = 0.0, betti: float = 0.0, koho: float = 0.0,
     out: Dict[str, object] = {
         "sheaf": float(l[0]), "betti": float(l[1]), "koho": float(l[2]),
         "homotopi": float(l[3]), "nizam": float(l[4]),
+        "bottleneck": float(l[5]),
         "kayıp": float(L), "çelişkisiz": bool(L <= 1e-12)}
     if q is not None:
         try:
