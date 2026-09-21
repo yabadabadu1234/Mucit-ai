@@ -127,6 +127,8 @@ class QYazmac:
         self.sektor_faz_vur = self.y.sektor_faz_vur
         self.sektor_donmesi = self.y.sektor_donmesi
         self.sektor_cifti = self.y.sektor_cifti
+        self.satir_donmesi_m = self.y.satir_donmesi
+        self.satir_cifti_m = self.y.satir_cifti
         self.sektor_oruntusu = self.y.sektor_oruntusu
         self.sektor_kenetleri = self.y.sektor_kenetleri
         self.sektor_faz_bagi = self.y.sektor_faz_bagi

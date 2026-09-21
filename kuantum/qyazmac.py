@@ -676,6 +676,53 @@ class QuditYazmac:
                 "mahallî_bağ", 0.0) + 1.0
         return vuran
 
+    def satir_donmesi(self, i: int, teta, bag=None) -> int:
+        m = self._mahalli_zorunlu()
+        a = np.asarray(teta, float).reshape(-1)
+        if a.size == 0:
+            a = np.zeros(1, float)
+        vuran = int(m.satir_donmesi(int(i), float(np.mean(a))))
+        if vuran <= 0:
+            self._dusen_kapi += 1
+            _SEKTOR_SAYAC["düşen"] = _SEKTOR_SAYAC.get("düşen", 0.0) + 1.0
+            return 0
+        self.iz.mahalli_yaz(m)
+        self._kapi += 1
+        self._sektor_vurusu += 1
+        _SEKTOR_SAYAC["dönme"] += 1.0
+        if bag and self.iz.senet_acik:
+            for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
+                                      else list(bag)):
+                p = np.asarray(pay, float).reshape(-1)
+                agir = (a * np.resize(p, a.size)) if p.size else a
+                self.iz.mahalli_bag_yaz(int(par), float(olcek), int(i), agir)
+            _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
+                "mahallî_bağ", 0.0) + 1.0
+        return vuran
+
+    def satir_cifti(self, i: int, j: int, teta: float, bag=None) -> int:
+        m = self._mahalli_zorunlu()
+        t = float(teta)
+        vuran = int(m.satir_cifti(int(i), int(j), t))
+        if vuran <= 0:
+            self._dusen_kapi += 1
+            _SEKTOR_SAYAC["düşen"] = _SEKTOR_SAYAC.get("düşen", 0.0) + 1.0
+            return 0
+        self.iz.mahalli_yaz(m)
+        self._kapi += 1
+        self._sektor_vurusu += 1
+        _SEKTOR_SAYAC["kenet"] += 1.0
+        if bag and self.iz.senet_acik:
+            for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
+                                      else list(bag)):
+                agir = float(np.mean(np.asarray(pay, float))) if np.size(
+                    pay) else 1.0
+                self.iz.mahalli_bag_yaz(int(par), float(olcek), int(i),
+                                        np.array([t * agir]))
+            _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
+                "mahallî_bağ", 0.0) + 1.0
+        return vuran
+
     def sektor_cifti(self, kontrol: str, hedef: str,
                      bag: float = 1.0, degil: bool = False,
                      aci=None, senet=None, defter=None,
