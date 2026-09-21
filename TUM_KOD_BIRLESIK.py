@@ -33884,8 +33884,8 @@ class QHayal(QMeleke):
     SINIF, CHI = "kurucu", 8
 
     def uygula(self, q, p):
-        j = q.veri_yuvasi - 1
-        self.yuva_donmesi(q, p, [q.veri(i, j) for i in range(q.n_satir)],
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 0
+        self.yuva_donmesi(q, p, range(n),
                           olcek=0.9, kayma=0.25 * math.pi,
                           n=4 * max(1, int(getattr(p, "genislik", 1))))
 
