@@ -12,7 +12,7 @@ from matematik.mizan import ardisiklik_kaidesi
 from matematik.mizan import mertebe_adi
 from matematik.sonsuz_mertebeler_teorisi import RED_HATALARI
 from .melekeler import qmelekeler, qsicil
-from .zihin_durumu import QAyar, QYazmac, donme
+from .zihin_durumu import QAyar, QYazmac, donme, kulli_sektor_adlari
 
 
 @dataclass(frozen=True)
@@ -274,12 +274,8 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
     if ne != "dokundu":
         raise ValueError("sözleşme ölçüsünün kipi bilinmiyor: %r" % (ne,))
 
-    def bolge_yuvalari(q):
-        d = {"veri": list(q.veri_izgara()),
-             "yerel": q.yereller()}
-        for a, kac in q.ayar.kulli_alanlar:
-            d[a] = [q.kulli(a, j) for j in range(kac)]
-        return d
+    def yuva_bolgeleri(q):
+        return {"veri": list(q.veri_izgara()), "yerel": q.yereller()}
 
     def yogunluklar(q):
         return np.asarray(q.y.tekil_yogunluklar(list(range(q.n))), float)[0]
@@ -293,38 +289,47 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
     q.kodla(rng.normal(size=(n_satir, 12)))
     q.superpozisyon()
     q.harman()
-    for a, _kac in q.ayar.kulli_alanlar:
+    kok_adlari = kulli_sektor_adlari()
+    for a in kok_adlari:
         q.sektor_donmesi(a, 0.4)
     from .donanim import bellek_haddi
     from kuantum.parametre_yazmaci import ParametreAyari, ParametreYazmaci
     p = ParametreYazmaci(64, 1, bellek_haddi(),
                          ParametreAyari(tohum=int(tohum)))
 
-    once = yogunluklar(q)
+    once_yuva = yogunluklar(q)
+    once_kok = {a: float(mahalli.cartan_oku(a)) for a in kok_adlari}
     qsicil()[int(no)].kosu(q, p)
-    sonra = yogunluklar(q)
-    sapma = np.max(np.abs(sonra - once), axis=(1, 2))
+    sonra_yuva = yogunluklar(q)
+    sonra_kok = {a: float(mahalli.cartan_oku(a)) for a in kok_adlari}
+    sapma_yuva = np.max(np.abs(sonra_yuva - once_yuva), axis=(1, 2))
+    sapma_kok = {a: abs(sonra_kok[a] - once_kok[a]) for a in kok_adlari}
 
-    yuv = bolge_yuvalari(q)
+    yuv = yuva_bolgeleri(q)
     olculen, en_buyuk = [], {}
-    for a in BOLGELER:
+    for a in ("veri", "yerel"):
         if not yuv.get(a):
             continue
-        sv = float(np.max(sapma[np.asarray(yuv[a], np.intp)]))
+        sv = float(np.max(sapma_yuva[np.asarray(yuv[a], np.intp)]))
         en_buyuk[a] = sv
         if sv > esik:
+            olculen.append(a)
+    for a in kok_adlari:
+        en_buyuk[a] = sapma_kok[a]
+        if sapma_kok[a] > esik:
             olculen.append(a)
 
     ilan = set(SOZLESME[int(no)][0])
     hepsi_yuva = []
-    for a in ilan:
+    for a in ilan & {"veri", "yerel"}:
         hepsi_yuva += yuv.get(a, [])
     if not hepsi_yuva:
-        guz = set(ilan)
+        guz = ilan & {"veri", "yerel"}
     else:
         bas, son = min(hepsi_yuva), max(hepsi_yuva)
         guz = {a for a, y in yuv.items()
                if y and any(bas <= i <= son for i in y)}
+    guz |= ilan & set(kok_adlari)
 
     return {
         "no": int(no),
