@@ -22,7 +22,7 @@ from matematik.sonsuz_mertebeler_teorisi import (Baglam, Cember, Deg, Evren, Tab
 
 
 from .musahede import ortu
-from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, degil_x, donme,
+from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, donme,
                       donme_turevi, faz_z, kontrollu_donme,
                       kontrollu_donme_turevi)
 from .zirh import vicdan
@@ -793,13 +793,15 @@ class QTefekkur(QMeleke):
         for top in eksen_acisi.values():
             for i in range(n):
                 q.satir_donmesi_m(i, float(top))
-        son = q.kulli("makam", 0)
+        i_makam, j_makam = q.y.sektor("makam")
+        bas_makam = q.kulli("makam", 0)
+        son = bas_makam + (j_makam - i_makam)
         par, olc = self.aci_bagi(p, len(lifler), 1.0)
         katki: Dict[int, float] = {}
         egim: Dict[int, Dict[int, float]] = {}
         for lif in lifler:
             teta = lif.olcek * (1.0 + 0.3 * float(a[lif.yuva]))
-            bas = q.veri(0, lif.yuva % k)
+            bas = bas_makam + (lif.yuva % k)
             duraklar = list(range(bas, son, lif.adim))
             if len(duraklar) < 2:
                 continue
@@ -1090,26 +1092,25 @@ class QFesahat(QMeleke):
     SINIF, CHI = "koruyucu", 4
 
     def uygula(self, q, p):
+        n = int(q.mahalli.pencere) if q.mahalli is not None else 1
         _, kk = q._alan["kelam"]
-        a = self.birikim(p, q.n_satir * kk, 1.2) * kk
-        par, olc = self.birikim_bagi(p, q.n_satir * kk, 1.2 * kk)
-        duraklar = q.yereller()
+        a = self.birikim(p, n * kk, 1.2) * kk
+        par, olc = self.birikim_bagi(p, n * kk, 1.2 * kk)
         for j in range(kk):
-            dilim = slice(j * q.n_satir, (j + 1) * q.n_satir)
-            q.mpo_topla("kelam", a[dilim], duraklar=duraklar, j=j,
+            dilim = slice(j * n, (j + 1) * n)
+            q.mpo_topla("kelam", a[dilim], j=j,
                         par=None if par is None else par[dilim],
                         olcek=olc)
         b = self.aci(p, 2, 0.6)
         par_b, olc_b = self.aci_bagi(p, 2, 0.6)
         bb = self.donme_baglari(par_b, olc_b, -np.abs(b),
                                 egim=-np.sign(b), kontrollu=True)
-        tas = q.kulli("tasdik", 0)
-        q.tek(tas, degil_x())
+        q.sektor_donmesi("tasdik", math.pi)
         for j in range(min(kk, 2)):
-            q.uzak_cift(tas, q.kulli("kelam", j),
-                        kontrollu_donme(-abs(float(b[j]))),
-                        baglar=None if bb is None else [bb[j]])
-        q.tek(tas, degil_x())
+            q.sektor_cifti("tasdik", "kelam", bag=1.0,
+                           aci=-abs(float(b[j])),
+                           senet=None if bb is None else [bb[j]])
+        q.sektor_donmesi("tasdik", math.pi)
 
 
 @qkaydet

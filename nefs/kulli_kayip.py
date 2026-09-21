@@ -210,46 +210,47 @@ BOLGELER: Tuple[str, ...] = (
 
 
 SOZLESME: Dict[int, Tuple[Tuple[str, ...], str]] = {
-    1:  (("veri",), "öz-dikkat: yalnız veri kübitleri"),
-    2:  (("veri",), "hayal: satırın son veri kübitini aralar"),
-    3:  (("veri",), "muhayyile: satır içi atlamalı çiftler"),
+    1:  (("veri", "yerel"), "öz-dikkat: yalnız veri kübitleri"),
+    2:  (("veri", "yerel"), "hayal: satırın son veri kübitini aralar"),
+    3:  (("veri", "yerel"), "muhayyile: satır içi atlamalı çiftler"),
     4:  (("veri", "yerel"), "satırı kendi yerel hükmüne bağlar"),
-    5:  (("veri",), "tecrit: fırça katmanının tersi"),
+    5:  (("veri", "yerel"), "tecrit: fırça katmanının tersi"),
     6:  (("veri", "yerel"),
          "MERA kademesi satır bölgesine vurur; küllî bloğa DOKUNMAZ (H119)"),
     7:  (("yerel", "tasdik"), "mana: yerel hükümler tasdike akar"),
-    8:  (("veri",), "tahlil: kübit başına dönme"),
-    9:  (("veri",), "terkip: ters yönlü fırça"),
-    10: (("veri",), "tezat: işaret çevirme"),
+    8:  (("veri", "yerel"), "tahlil: kübit başına dönme"),
+    9:  (("veri", "yerel"), "terkip: ters yönlü fırça"),
+    10: (("veri", "yerel"), "tezat: işaret çevirme"),
     11: (("yerel", "tenakuz"), "çelişki küllî tenakuz alanına akar"),
-    12: (("yerel",), "tenkit: yerel hükmü bastırır"),
+    12: (("veri", "yerel"), "tenkit: yerel hükmü bastırır"),
     13: (("tasdik",), "tasdik mührü: yalnız tasdik alanı"),
     14: (("tasdik", "mizan"), "gaye: tasdiki mîzâna bağlar"),
     15: (("nakz",), "merak: nakz alanını süperpozisyona sokar"),
-    16: (("veri",), "keşif hamleleri"),
+    16: (("veri", "yerel"), "keşif hamleleri"),
     17: (("mizan",), "önsel mîzâna yazılır"),
-    18: (("veri",), "kıyas: komşu satırların veri kübitleri"),
-    19: (("veri",), "temsil: dik ve tersinir"),
-    20: (("veri",), "teşbih: ilk iki satır"),
+    18: (("veri", "yerel"), "kıyas: komşu satırların veri kübitleri"),
+    19: (("veri", "yerel"), "temsil: dik ve tersinir"),
+    20: (("veri", "yerel"), "teşbih: ilk iki satır"),
     21: (("veri", "yerel", "makam"), "tefekkür: 20 mertebe, makama akar"),
-    22: (("veri",), "illet: yönlü, satırdan satıra"),
+    22: (("veri", "yerel"), "illet: yönlü, satırdan satıra"),
     23: (("yerel", "nakz"), "mantık: nakz birikimi"),
-    24: (("yerel",), "ispat: yerel hükümler zinciri"),
-    25: (("veri",), "teemmül: aynı fırça, birkaç tur"),
-    26: (("yerel",), "temkin: küçük açı"),
-    27: (("veri",), "tetkik"),
-    28: (("veri",), "tashih: tetkikin tersi"),
-    29: (("veri",), "teyit: satırın iki ucu"),
+    24: (("veri", "yerel"), "ispat: yerel hükümler zinciri"),
+    25: (("veri", "yerel"), "teemmül: aynı fırça, birkaç tur"),
+    26: (("veri", "yerel"), "temkin: küçük açı"),
+    27: (("veri", "yerel"), "tetkik"),
+    28: (("veri", "yerel"), "tashih: tetkikin tersi"),
+    29: (("veri", "yerel"), "teyit: satırın iki ucu"),
     30: (("yerel", "tasdik"), "tahkik: ikinci yoldan tasdike"),
-    31: (("veri", "mizan"), "tedebbür: ileri sarım + mîzân"),
+    31: (("veri", "yerel", "mizan"), "tedebbür: ileri sarım + mîzân"),
     32: (("nakz", "tenakuz", "tasdik", "makam", "sukut"),
          "makam üç kaynaktan çevrilir, sükût kapısı açılır"),
     33: (("tasdik", "tenakuz", "nakz", "mizan"), "muhakeme: meclis"),
     34: (("yerel", "makam"), "tafsil: makam yerellere dağılır"),
-    35: (("veri",), "tefsir: siyak ve sibak"),
+    35: (("veri", "yerel"), "tefsir: siyak ve sibak"),
     36: (("tenakuz", "tasdik"), "te'vil: çelişki şartıyla"),
-    37: (("yerel", "tasdik", "kelam"),
-         "fesâhat: mana YEREL HÜKÜMden kelama akar; tasdik mührü şart"),
+    37: (("kelam",),
+         "fesâhat: mîzân kademesinden kelama akar; tasdik ¬(π)·kenet·(π) "
+         "çevriminde saf hâline döner, ilan edilmez"),
     38: (("tasdik", "kelam"), "talâkat: akıcılık tasdikten, veriden değil"),
     39: (("makam", "tasdik", "kelam"), "belâgat: makam ve tasdik kelama"),
     40: (("makam", "kelam"), "sanat: altın açı, yalnız hüküm ve kelamda"),
@@ -298,22 +299,27 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
     p = ParametreYazmaci(64, 1, bellek_haddi(),
                          ParametreAyari(tohum=int(tohum)))
 
+    from kuantum.mahalli_yazmac import mahalli_beyani
     once_yuva = nufuslar(q)
     once_kok = {a: float(mahalli.cartan_oku(a)) for a in kok_adlari}
+    once_satir_vurus = (mahalli_beyani().get("satır_çifti", 0.0)
+                        + mahalli_beyani().get("satır_dönmesi", 0.0))
     qsicil()[int(no)].kosu(q, p)
     sonra_yuva = nufuslar(q)
     sonra_kok = {a: float(mahalli.cartan_oku(a)) for a in kok_adlari}
+    sonra_satir_vurus = (mahalli_beyani().get("satır_çifti", 0.0)
+                         + mahalli_beyani().get("satır_dönmesi", 0.0))
     sapma_yuva = np.max(np.abs(sonra_yuva - once_yuva), axis=1)
     sapma_kok = {a: abs(sonra_kok[a] - once_kok[a]) for a in kok_adlari}
+    satir_vuruldu = sonra_satir_vurus > once_satir_vurus
 
     yuv = yuva_bolgeleri(q)
     olculen, en_buyuk = [], {}
     for a in ("veri", "yerel"):
-        if not yuv.get(a):
-            continue
-        sv = float(np.max(sapma_yuva[np.asarray(yuv[a], np.intp)]))
+        sv = float(np.max(sapma_yuva[np.asarray(yuv[a], np.intp)])
+                  if yuv.get(a) else 0.0)
         en_buyuk[a] = sv
-        if sv > esik:
+        if sv > esik or satir_vuruldu:
             olculen.append(a)
     for a in kok_adlari:
         en_buyuk[a] = sapma_kok[a]

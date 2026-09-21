@@ -772,6 +772,7 @@ class QuditYazmac:
         if m is not None:
             m.cartan_ekle("kenet.%s%s×%s"
                           % ("¬" if degil else "", kontrol, hedef), etki)
+            m.cartan_ekle(str(hedef), etki)
         return etki
 
     def sektor_kenetleri(self, kenetler) -> float:
