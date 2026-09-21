@@ -678,6 +678,15 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
                         adim=_sayac["çağrı"])
         return out
 
+    def kayip_p_vektor(P: np.ndarray) -> np.ndarray:
+        p = np.asarray(P, float).reshape(-1)
+        kume = list(_kume["v"])
+        t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
+                        hafiza=hafiza.klon(), kapi_hukmu=kapi_hukmu,
+                        adim=int(_kume["adım"]),
+                        kademe_gorevleri=kademe_gorevleri, ne="döküm")
+        return np.asarray(t["artık"], float)[None, :]
+
     def _eniyile(p_, kume):
         n0 = _sayac["çağrı"]
         _kume["v"] = list(kume)
@@ -686,7 +695,8 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
                        kume=list(kume), sozluk=int(ayar.sozluk),
                        ayar=MeczAyari(ad=ayar.ad,
                                       tur=max(1, int(ayar.altuzay_ornek)),
-                                      tohum=int(ayar.tohum)))
+                                      tohum=int(ayar.tohum)),
+                       kayip_vektoru=kayip_p_vektor)
         return np.asarray(rr["p"], float), _sayac["çağrı"] - n0
 
     def _olc(p_, kume):

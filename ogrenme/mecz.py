@@ -65,10 +65,6 @@ class MeczAyari:
     kademe: int = 0
 
 
-SEKTOR_AGIRLIGI: Tuple[Tuple[str, float], ...] = (
-    ("tenakuz", 1.0), ("nakz", 1.0), ("tasdik", -1.0),
-    ("sukut", 0.5), ("makam", 0.5))
-
 OPERATORSUZ_KEFE: Tuple[str, ...] = (
     "kategori", "tip", "çevrim", "monogami", "engel", "gedik",
     "kaide_halkası", "uzay", "zırh.sheaf", "zırh.betti", "zırh.koho",
@@ -77,12 +73,12 @@ OPERATORSUZ_KEFE: Tuple[str, ...] = (
 
 def hata_operatoru(q, hedefler: Optional[Sequence[int]] = None,
                    taban: int = 0) -> np.ndarray:
+    # F 1-A #25, F 1-Ş: yazmaçta bölge yoktur; sektör ağırlığı ile
+    # ``i:j`` dilimine yazan bir operatör kurulamaz. Hata operatörü
+    # yalnız KAN genliğinin verdiği hedef izdüşümünden kurulur.
     d = int(q.y.d)
     h = np.zeros(d, float)
-    for ad, w in SEKTOR_AGIRLIGI:
-        i, j = q.y.sektor(ad)
-        h[i:j] += float(w)
-    _MECZ["operatörlü_kefe"] = float(len(SEKTOR_AGIRLIGI))
+    _MECZ["operatörlü_kefe"] = float(1 if hedefler is not None else 0)
     _MECZ["operatörsüz_kefe"] = float(len(OPERATORSUZ_KEFE))
     if hedefler is None or int(taban) < 2:
         return h
@@ -248,12 +244,29 @@ def _kabul_mizan_kefesi(v_yeni: float, v_eski: float,
     return False
 
 
+def _kabul_mizan_vektoru(vektor_yeni: np.ndarray, vektor_eski: np.ndarray,
+                         keyfiyet_yeni: float, keyfiyet_esik: float) -> bool:
+    # F 2-Ü: keyfiyet mutlak veto değildir, kefedir; kabul tam mizan
+    # vektöründen okunur (F 1-S: her cins ayrı kefe, toplanmaz).
+    fark = np.asarray(vektor_yeni, float) - np.asarray(vektor_eski, float)
+    iyilesen = int(np.sum(fark < 0.0))
+    kotulesen = int(np.sum(fark > 0.0))
+    if kotulesen > iyilesen:
+        return False
+    if float(keyfiyet_yeni) < float(keyfiyet_esik):
+        return False
+    return True
+
+
 class Memuriyet:
 
     def __init__(self, nefs, kayip, kume, sozluk: int,
-                 ayar: Optional[MeczAyari] = None) -> None:
+                 ayar: Optional[MeczAyari] = None,
+                 kayip_vektoru: Optional[Callable[[np.ndarray], np.ndarray]]
+                 = None) -> None:
         self.nefs = nefs
         self.kayip = kayip
+        self.kayip_vektoru = kayip_vektoru
         self.kume = list(kume)
         self._onceki_psi = None
         self._seyir: List[float] = []
@@ -441,7 +454,13 @@ class Memuriyet:
             _MECZ["keyfiyet_önceki"] = float(keyf)
             if keyf_aday < keyf:
                 _MECZ["keyfiyet_düşüşü"] += 1.0
-            kabul_edildi = _kabul_mizan_kefesi(va, v, keyf_aday, keyf)
+            if self.kayip_vektoru is not None:
+                v_vek = np.atleast_2d(self.kayip_vektoru(p[None, :]))[0]
+                va_vek = np.atleast_2d(self.kayip_vektoru(aday[None, :]))[0]
+                kabul_edildi = _kabul_mizan_vektoru(va_vek, v_vek,
+                                                    keyf_aday, keyf)
+            else:
+                kabul_edildi = _kabul_mizan_kefesi(va, v, keyf_aday, keyf)
             if kabul_edildi:
                 _MECZ["kabul"] += 1.0
                 _MECZ["adım_normu"] += float(np.linalg.norm(aday - p))
@@ -456,8 +475,11 @@ class Memuriyet:
 
 def mecz_egit(nefs, kayip, p0: np.ndarray, kume: Sequence,
               sozluk: int = 0,
-              ayar: Optional[MeczAyari] = None) -> Dict[str, Any]:
-    return Memuriyet(nefs, kayip, kume, int(sozluk), ayar).kos(p0)
+              ayar: Optional[MeczAyari] = None,
+              kayip_vektoru: Optional[Callable[[np.ndarray], np.ndarray]]
+              = None) -> Dict[str, Any]:
+    return Memuriyet(nefs, kayip, kume, int(sozluk), ayar,
+                     kayip_vektoru=kayip_vektoru).kos(p0)
 
 
 def mecz_beyani() -> Dict[str, float]:
