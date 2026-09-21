@@ -550,23 +550,7 @@ class Kademeler:
 
         def _ara():
             return []
-
-        def _kullanilmayan():
-            d = None
-            if d is None:
-                return []
-
-            class _DalgaKaidesi:
-                ad = "dalga/%s/%s" % (d.hendese, d.d4)
-                boy = 1
-                hipotez = int(d.W.size)
-
-                def __call__(self, g):
-                    r = d.oku(g)
-                    return None if r is None else r[0]
-
-            return [_DalgaKaidesi()]
-        N.kaideler = self._dene("main.main", _ara) or []
+        N.kaideler = self._dene("kademe.muhakeme.dalga", _ara) or []
         N.aranan = len(N.kaideler)
         self.gunluk.append("3. MUHAKEME: %d kaide bütün gösterimleri "
                            "tutuyor (derinlik %d)" % (N.aranan, derinlik))
@@ -575,7 +559,12 @@ class Kademeler:
     def ispat(self, I: Idrak, N: Namzet) -> Ispat:
         S = Ispat(list(N.kaideler))
         if not N.kaideler:
+            S.gerekce = ("aday kaide kaynağı yok: elle kurulmuş dalga "
+                         "fermanla kaldırıldı (motor kaybın içinden "
+                         "çağrılmaz, kısır döngü); elle yazılmış ARC "
+                         "kaidesi de yasak (ferman 99)")
             self._olc("ispat", 0.0)
+            self.gunluk.append("4. İSPAT: aday kaide yok -- %s" % S.gerekce)
             return S
         onceki = len(S.kaideler)
         if I.girdiler:
