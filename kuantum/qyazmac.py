@@ -217,7 +217,6 @@ class QuditYazmac:
         self.cephe = 0
         self._psi = np.full((self.B, self.d), 1.0 / np.sqrt(self.d),
                             dtype=a.tip)
-        self._sadakat_log = 0.0
         self._kapi = 0
         self.iz = Iz()
         self.bag = 0
@@ -319,10 +318,14 @@ class QuditYazmac:
         return float(np.max(np.abs(self.norm() - 1.0)))
 
     def sadakat(self) -> float:
-        return 1.0
+        toplam = self._kapi + self._dusen_kapi
+        if toplam <= 0:
+            return 1.0
+        return float(self._kapi) / float(toplam)
 
     def sadakat_kapi_basina(self, kapi: int = 1) -> float:
-        return 1.0
+        kapi = max(1, int(kapi), int(self._kapi))
+        return max(0.0, 1.0 - float(self._dusen_kapi) / float(kapi))
 
     def ic_carpim(self, other=None) -> np.ndarray:
         o = self.psi if other is None else np.asarray(other)
@@ -377,7 +380,7 @@ class QuditYazmac:
             self.cift(int(y), g)
 
     def sadakat_log(self) -> float:
-        return float(self._sadakat_log)
+        return float(math.log(max(self.sadakat(), 1e-300)))
 
     def lif_kapisi(self, k: int, G: np.ndarray) -> None:
         raise NotImplementedError(
