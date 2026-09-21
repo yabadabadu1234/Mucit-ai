@@ -6499,7 +6499,7 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
     _seyir: List[Dict[str, float]] = []
     safha("D6 MİZAN · nöbet")
     nobet = nobet_kur(nefs, ara_saniye=float(ayar.mihenk_arasi),
-                      pencere=int(ayar.pencere), sozluk=int(ayar.sozluk),
+                      pencere=int(ayar.pencere),
                       taban=int(ayar.veri_lifi),
                       basamak=int(ayar.belirtec_basamak),
                       kodlama=str(ayar.kodlama))
@@ -7359,7 +7359,7 @@ def divan(dizin: Optional[str] = None) -> str:
     p_yildiz = np.asarray(yuk["p"], float)
 
     nobet = nobet_kur(nefs, ara_saniye=0.0, pencere=int(ayar.pencere),
-                      sozluk=int(ayar.sozluk), taban=int(ayar.veri_lifi),
+                      taban=int(ayar.veri_lifi),
                       basamak=int(ayar.belirtec_basamak),
                       kodlama=str(ayar.kodlama))
     mihenk_r = nobet.beyan(p_yildiz)
@@ -35061,7 +35061,7 @@ def cevap_haddi(basamak: int, kodlama: str = "o200k_base") -> int:
 
 
 def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
-               sozluk: int = 16, taban: int = 16, basamak: int = 5,
+               taban: int = 16, basamak: int = 5,
                kodlama: str = "o200k_base",
                sual: str = MIHENK) -> Dict[str, Any]:
     from .soyle import _uret
@@ -35099,13 +35099,12 @@ def mihenk_sor(nefs, p: Optional[np.ndarray] = None, pencere: int = 8,
 class Nobet:
 
     def __init__(self, nefs, ara_saniye: float = 300.0, pencere: int = 8,
-                 sozluk: int = 16, taban: int = 16, basamak: int = 5,
+                 taban: int = 16, basamak: int = 5,
                  kodlama: str = "o200k_base",
                  sual: str = MIHENK) -> None:
         self.nefs = nefs
         self.ara = float(ara_saniye)
         self.pencere = int(pencere)
-        self.sozluk = int(sozluk)
         self.taban = int(taban)
         self.basamak = int(basamak)
         self.kodlama = str(kodlama)
@@ -35120,7 +35119,7 @@ class Nobet:
         eski = np.asarray(self.nefs.vektor(), float).copy()
         try:
             c = mihenk_sor(self.nefs, p, pencere=self.pencere,
-                           sozluk=self.sozluk, taban=self.taban,
+                           taban=self.taban,
                            basamak=self.basamak, kodlama=self.kodlama,
                            sual=self.sual)
         finally:
@@ -35184,11 +35183,11 @@ class Nobet:
 
 
 def nobet_kur(nefs, ara_saniye: float = 300.0, pencere: int = 8,
-              sozluk: int = 16, taban: int = 16, basamak: int = 5,
+              taban: int = 16, basamak: int = 5,
               kodlama: str = "o200k_base",
               sual: str = MIHENK) -> Nobet:
     return Nobet(nefs, ara_saniye=ara_saniye, pencere=pencere,
-                 sozluk=sozluk, taban=taban, basamak=basamak,
+                 taban=taban, basamak=basamak,
                  kodlama=kodlama, sual=sual)
 
 

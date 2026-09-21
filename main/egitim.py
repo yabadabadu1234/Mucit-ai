@@ -638,7 +638,7 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
     _seyir: List[Dict[str, float]] = []
     safha("D6 MİZAN · nöbet")
     nobet = nobet_kur(nefs, ara_saniye=float(ayar.mihenk_arasi),
-                      pencere=int(ayar.pencere), sozluk=int(ayar.sozluk),
+                      pencere=int(ayar.pencere),
                       taban=int(ayar.veri_lifi),
                       basamak=int(ayar.belirtec_basamak),
                       kodlama=str(ayar.kodlama))
@@ -1498,7 +1498,7 @@ def divan(dizin: Optional[str] = None) -> str:
     p_yildiz = np.asarray(yuk["p"], float)
 
     nobet = nobet_kur(nefs, ara_saniye=0.0, pencere=int(ayar.pencere),
-                      sozluk=int(ayar.sozluk), taban=int(ayar.veri_lifi),
+                      taban=int(ayar.veri_lifi),
                       basamak=int(ayar.belirtec_basamak),
                       kodlama=str(ayar.kodlama))
     mihenk_r = nobet.beyan(p_yildiz)
