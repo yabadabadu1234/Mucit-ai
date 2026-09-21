@@ -30211,7 +30211,7 @@ SOZLESME: Dict[int, Tuple[Tuple[str, ...], str]] = {
     38: (("tasdik", "kelam"), "talâkat: akıcılık tasdikten, veriden değil"),
     39: (("makam", "tasdik", "kelam"), "belâgat: makam ve tasdik kelama"),
     40: (("makam", "kelam"), "sanat: altın açı, yalnız hüküm ve kelamda"),
-    41: (("mizan", "makam", "sukut", "kelam"), "münazara + sükût kapısı"),
+    41: (("mizan", "nakz", "tenakuz", "sukut"), "münazara + sükût kapısı"),
     42: (("yerel", "mizan", "tenakuz"),
          "umumileştirme: bütün duraklardan AYNI açıyla mîzâna (kesişim), "
          "araz tenakuza"),
@@ -30235,8 +30235,9 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
     def yuva_bolgeleri(q):
         return {"veri": list(q.veri_izgara()), "yerel": q.yereller()}
 
-    def yogunluklar(q):
-        return np.asarray(q.y.tekil_yogunluklar(list(range(q.n))), float)[0]
+    def nufuslar(q):
+        d = np.asarray(q.y.tekil_yogunluklar(list(range(q.n))), complex)[0]
+        return np.abs(np.stack([d[:, 0, 0], d[:, 1, 1]], axis=-1))
 
     rng = np.random.default_rng(tohum)
     q = QYazmac(n_satir, QAyar(tohum=tohum))
@@ -30255,12 +30256,12 @@ def sozunde_mi(no: int = 0, n_satir: int = 4, chi: int = 32,
     p = ParametreYazmaci(64, 1, bellek_haddi(),
                          ParametreAyari(tohum=int(tohum)))
 
-    once_yuva = yogunluklar(q)
+    once_yuva = nufuslar(q)
     once_kok = {a: float(mahalli.cartan_oku(a)) for a in kok_adlari}
     qsicil()[int(no)].kosu(q, p)
-    sonra_yuva = yogunluklar(q)
+    sonra_yuva = nufuslar(q)
     sonra_kok = {a: float(mahalli.cartan_oku(a)) for a in kok_adlari}
-    sapma_yuva = np.max(np.abs(sonra_yuva - once_yuva), axis=(1, 2))
+    sapma_yuva = np.max(np.abs(sonra_yuva - once_yuva), axis=1)
     sapma_kok = {a: abs(sonra_kok[a] - once_kok[a]) for a in kok_adlari}
 
     yuv = yuva_bolgeleri(q)
