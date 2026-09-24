@@ -1,176 +1,146 @@
-"""
-main/cikarim.py - Uçtan Uca İntaç, Teemmül, Kıyas ve Çıkarım Hattı
-Mucit-AI / Nefs-i Müdrike
-"""
-
+import json
 import math
 import sys
-import json
-from typing import List, Dict, Any, Optional
-
-from matematik.temel import KuantumDurum, rastgele_kuantum_durum
-from nefs.mukayese import MukayeseMotoru, OntoMertebe, IntacManifoldu, GeometrikDoku, AmeliVech
-from nefs.vecih import VecihSpektrumu, MertebeSeviyesi
-from nefs.mertebe_kesfi import MertebeKesfi
-from nefs.holonomi import HolonomiAnalizoru, DevridaimCinsi
-from nefs.suphe import SupheManifoldu, Iddia
-from nefs.hafiza import TopolojikHafizaKovani
-
+from typing import Dict, Any, List
+from nefs.kuantum_idrak import (
+    Qudit, Mertebe, Doku, Amel, HolonomiCinsi,
+    BagimliLifliTensor, MukayeseVeHolonomi, IleriKuantumImkanlari,
+    HafizaVeSupheReaktoru, TabulaRasaRust, TomitaTakesakiTodaGT,
+    KuantumMantikDevresi, BirMilyonQuditZirhi, bargmann_n
+)
 
 class CikarimHatti:
-    """
-    Nefs-i Müdrike Küllî Akıl Yürütme ve Çıkarım Motoru
-    """
     def __init__(self, d: int = 16):
         self.d = d
-        self.mukayese = MukayeseMotoru(d=d)
-        self.vecih_spektrumu = VecihSpektrumu()
-        self.mertebe_kesfedici = MertebeKesfi(d=d)
-        self.holonomi = HolonomiAnalizoru(d=d)
-        self.suphe = SupheManifoldu()
-        self.hafiza = TopolojikHafizaKovani()
-
-        # Hafıza kovanını temel kaidelerle başlat
+        self.lif_tensöru = BagimliLifliTensor(d=d)
+        self.mukayese = MukayeseVeHolonomi(d=d)
+        self.ileri = IleriKuantumImkanlari(d=d)
+        self.hafiza = HafizaVeSupheReaktoru(d=d)
+        self.tt_toda_gt = TomitaTakesakiTodaGT(d=d)
+        self.mantik = KuantumMantikDevresi(d=d)
+        self.veri_zirhi = BirMilyonQuditZirhi(N=1048576, q=64)
+        self.parametre_zirhi = BirMilyonQuditZirhi(N=1048576, q=64)
         self._hafiza_tohumla()
 
     def _hafiza_tohumla(self):
-        d_kus = rastgele_kuantum_durum(self.d, etiket="kuslar_ucar", tohum=42)
-        self.hafiza.ekle("Kuşlar uçar.", d_kus, lif_koordinati={"Canlı": "Kuş", "Ortam": "Hava"})
-        d_ates = rastgele_kuantum_durum(self.d, etiket="ates_yakar", tohum=43)
-        self.hafiza.ekle("Ateş temas ettiği cismi yakar.", d_ates, lif_koordinati={"Unsur": "Ateş"})
+        d_kus = self.durum_uret("Kuşlar uçar.", 101)
+        self.hafiza.kayit_ekle("Kuşlar uçar.", d_kus, {"Canlı": "Kuş", "Ortam": "Hava"})
+        d_ates = self.durum_uret("Ateş yakar.", 102)
+        self.hafiza.kayit_ekle("Ateş temas ettiği cismi yakar.", d_ates, {"Unsur": "Ateş"})
 
-    def cikarim_yap(
-        self,
-        girdi_dizisi: List[str],
-        nesne_a: Optional[str] = None,
-        nesne_b: Optional[str] = None,
-        dongu_yansitilsin_mi: bool = False
-    ) -> Dict[str, Any]:
-        """
-        Uçtan uca analitik çıkarım boru hattı:
-        1. Diziden otomatik mertebe tespiti
-        2. Vecih spektrumu ve kaide istihracı
-        3. n-li Bargmann poligonu ile intaç manifoldu
-        4. Wilson devridaim ve holonomi teftişi
-        5. Tevakkuf ve şüphe havuzu değerlendirmesi
-        6. Hafızayı yeniden tertipleme
-        """
-        print(f"\n=======================================================")
-        print(f"  İNTAÇ VE ÇIKARIM GİRDİSİ: {' '.join(girdi_dizisi)}")
-        print(f"=======================================================")
+    def durum_uret(self, etiket: str, tohum: int = 0) -> Qudit:
+        v = [complex(math.cos(tohum * 0.15 + j * 0.65), math.sin(tohum * 0.15 + j * 0.65)) for j in range(self.d)]
+        return Qudit(v, etiket=etiket)
 
-        # 1. Her bir token/kelime için durum vektörü oluştur
-        durumlar = []
-        for idx, k in enumerate(girdi_dizisi):
-            # Deterministik tohum (kelimenin karakter toplamı)
-            tohum = sum(ord(c) for c in k) + idx * 7
-            durumlar.append(rastgele_kuantum_durum(self.d, etiket=k, tohum=tohum))
+    def cikarim(self, girdi: str) -> Dict[str, Any]:
+        kelimeler = girdi.split()
+        durumlar = [self.durum_uret(w, sum(ord(c) for c in w)) for w in kelimeler]
+        
+        tip_ad, mertebe, kat = self.lif_tensöru.vecih_tayin(kelimeler)
+        kaideler = self.lif_tensöru.kaide_istihrac(tip_ad, mertebe)
+        j_zit = self.lif_tensöru.j_aynasi(tip_ad)
+        
+        intac = self.mukayese.mukayese_intac(durumlar)
+        
+        tenakuz_var = ("doğru" in girdi.lower() and "yanlış" in girdi.lower()) or "hem doğru hem yanlış" in girdi.lower()
+        faz_adimi = (math.pi / max(1, len(durumlar))) if tenakuz_var else (intac["phi_n"] / max(1, len(durumlar)))
+        fazlar = [faz_adimi for _ in durumlar]
+        holonomi = self.mukayese.holonomi_teftis(durumlar[0], fazlar)
+        
+        sadakat = self.mantik.mantiga_sadakat_denetimi(intac["morfizm"].rho())
+        
+        s = self.durum_uret("Sokrates", 1)
+        m = self.durum_uret("Insan", 2)
+        p = self.durum_uret("Fani", 3)
+        barbara = self.mantik.silojizma_barbara(s, m, p)
+        
+        munfasila = self.mantik.munfasila_bell_cikarim(durumlar[0], durumlar[-1], p_var_mi=True)
+        nyaya = self.mantik.nyaya_pancavayava("Dağda ateş vardır", "Duman olduğu için", "Mutfak gibi")
+        modal = self.mantik.modal_kripke_teftis(durumlar[0])
+        lukasiewicz = self.mantik.lukasiewicz_surekli_cikarim(0.85, 0.90)
+        
+        toda_sirali = self.tt_toda_gt.toda_lax_sirala([0.3, 0.9, 0.1, 0.7])
+        gt_sektor = self.tt_toda_gt.gelfand_tsetlin_branching("canli")
+        tomita_rho = self.tt_toda_gt.tomita_moduler_akis(durumlar[0].rho(), t=0.2)
+        
+        re_gluing = None
+        if "penguen" in girdi.lower():
+            re_gluing = self.hafiza.sheaf_re_gluing(intac["morfizm"], "Ortam", "Su", "Penguen kuştur lakin suda yüzer.")
+        
+        self.veri_zirhi.aktif_yerlestir(durumlar, baslangic=0)
+        param_durumlar = [self.durum_uret(f"param_{k}", (k + 1) * 31) for k in range(len(durumlar))]
+        self.parametre_zirhi.aktif_yerlestir(param_durumlar, baslangic=0)
+        seyirci_analiz = self.veri_zirhi.seyirci_analizi()
+        tetabuk_51 = self.veri_zirhi.kapi_51_tetabuk(51)
+        kenet_raporu = self.parametre_zirhi.cift_yazmac_kenet(self.veri_zirhi)
+        fs_cikarim = self.veri_zirhi.fubini_study_mesafe(self.parametre_zirhi)
+        kan_cikarim = self.veri_zirhi.kan_genlik_hesapla(theta=0.785)
 
-        # 2. Otomatik Mertebe ve Sinir (Nerve) Keşfi (Fasıl I)
-        spektrum_ozeti = self.mertebe_kesfedici.kulli_spektrum_ozeti(durumlar)
-        aktif_mertebeler = spektrum_ozeti["aktif_mertebeler"]
-        print(f"  [1. Mertebe Keşfi] Aktif Mertebeler: {aktif_mertebeler}")
-        print(f"                     Kalıcı Sinir Halka Sayısı: {spektrum_ozeti['halka_sayisi_toplam']}")
-
-        # 3. Vecih Spektrumu ve Kaide İstihracı (Fasıl IV & V)
-        secilen_vecih, vecih_skorlari = self.vecih_spektrumu.vecih_sec(girdi_dizisi, nesne_a, nesne_b)
-        kaideler = self.vecih_spektrumu.diziden_kaide_istihraci(girdi_dizisi, secilen_vecih)
-        print(f"  [2. Vecih Tayini]  Seçilen Vecih: '{secilen_vecih.ad}' ({secilen_vecih.mertebe.name})")
-        print(f"                     Tür: {secilen_vecih.tur} | Komütatif: {kaideler['komutatif_mi']}")
-        print(f"                     İstihraç Kaidesi: {kaideler['kan_uzantisi_kurali']}")
-
-        # 4. n-li Bargmann Mukayesesi ve İntaç Manifoldu (Fasıl II & III)
-        n = len(durumlar)
-        intac = self.mukayese.nli_mukayese(durumlar, mertebe=OntoMertebe.MEZO_KIYAS)
-        print(f"  [3. İntaç Manifoldu] Topoloji: {intac.topoloji.value}")
-        print(f"                       Rezonans r_n: {intac.rezonans:.4f} | Berry Fazı: {intac.berry_fazi:.4f} rad ({math.degrees(intac.berry_fazi):.1f}°)")
-        print(f"                       Amelî Vech: {intac.amel.value}")
-
-        # 5. Holonomi ve Devridaim Teftişi (Fasıl VIII & IX)
-        gecis_fazlari = [intac.berry_fazi / max(1, n) for _ in range(n)]
-        if dongu_yansitilsin_mi:
-            # Yapay olarak Möbius yırtığı testi
-            gecis_fazlari = [math.pi / n for _ in range(n)]
-
-        holonomi_raporu = self.holonomi.cevirim_tahlil_et(durumlar[0], gecis_fazlari)
-        print(f"  [4. Devridaim/Holonomi] Cins: {holonomi_raporu['devridaim_cinsi']}")
-        print(f"                          Hüküm: {holonomi_raporu['hukum']}")
-
-        # 6. Tevakkuf ve Şüphe Değerlendirmesi (Fasıl IV & VII)
-        if intac.amel == AmeliVech.SUKUT or holonomi_raporu["devridaim_cinsi"] == DevridaimCinsi.HAKIKI_SAFSATA.value:
-            iddia_obj = Iddia(" ".join(girdi_dizisi), intac.morfizm_durumu or durumlar[0], guven=0.5)
-            self.suphe.tevakkuf_havuzuna_ekle(iddia_obj)
-            karar_metni = "[TEVAKKUF / SÜKÛT] Acele hüküm verilmedi; süperpozisyon havuzunda bekletildi."
-        elif intac.amel == AmeliVech.BEYAN:
-            karar_metni = f"[BEYAN] Küllî kaziye tasdik edildi: '{' '.join(girdi_dizisi)}'"
+        if tetabuk_51["sadakat"] < 0.90:
+            hukum = f"[ZIRH İHLALİ] 1 Milyon Qudit zırhında 51 kapı sadakat eşiği aşılamadı ({tetabuk_51['sadakat']})."
+        elif holonomi["cins"] == HolonomiCinsi.SAFSATA.value or intac["amel"] == Amel.SUKUT.value:
+            hukum = "[CERH VE SÜKÛT] Möbius parite yırtığı (e^{iπ} = -I) ve yıkıcı girişim: Dalga sıfırlandı, teemmül durduruldu."
+        elif intac["amel"] == Amel.BEYAN.value:
+            hukum = f"[BURHÂN VE BEYAN] Kaziye tasdik edildi: '{girdi}'"
         else:
-            karar_metni = f"[FUNKTÖR] Üst kıyasa tohum olarak mühürlendi."
-
-        # 7. Tomita-Takesaki J-Aynası ile Zıt Vech Seyri (Fasıl IV)
-        zit_vecih = self.vecih_spektrumu.tomita_takesaki_zit_vecih(secilen_vecih)
-        print(f"  [5. J-Aynası Sentezi] '{secilen_vecih.ad}' vechinden zıt kutup '{zit_vecih.ad}' vechine köprü açıldı.")
-
-        # 8. Hafızanın Topolojik Restrüktürasyonu (Fasıl V)
-        tertip_bilgisi = None
-        if "penguen" in [k.lower() for k in girdi_dizisi]:
-            tertip_bilgisi = self.hafiza.yeniden_tertitle(
-                intac=intac,
-                yeni_lif_anahtari="Hareket_Ortami",
-                yeni_lif_degeri="Su",
-                yeni_kaziye_metni="Penguen kuştur lakin havada değil suda kanat çırpar."
-            )
-            print(f"  [6. Sheaf Re-Gluing] Hafıza yeniden tertiplendi! {tertip_bilgisi['yeni_lif_eklendi']}")
-
-        print(f"  ==> NİHAÎ HÜKÜM: {karar_metni}\n")
+            hukum = f"[FUNKTÖRYEL KIYAS] Sol Kan Uzantısı ile zihne mühürlendi."
 
         return {
-            "girdi": girdi_dizisi,
-            "mertebe_kesfi": spektrum_ozeti,
-            "vecih": secilen_vecih.ad,
+            "girdi": girdi,
+            "vecih": {"tip": tip_ad, "mertebe": mertebe.name, "kategori": kat, "j_aynasi": j_zit},
             "kaideler": kaideler,
-            "intac_manifoldu": intac.to_dict(),
-            "holonomi": holonomi_raporu,
-            "karar": karar_metni,
-            "j_aynasi_zit_vecih": zit_vecih.ad,
-            "hafiza_tertip": tertip_bilgisi
+            "bir_milyon_qudit_zirhi": {
+                "toplam_qudit": seyirci_analiz["toplam_qudit"],
+                "taban_q": seyirci_analiz["taban_q"],
+                "kapasite": seyirci_analiz["kapasite"],
+                "mahalli_serbestlik": seyirci_analiz["mahalli_serbestlik"],
+                "aktif_qudit": seyirci_analiz["aktif_qudit"],
+                "seyirci_qudit": seyirci_analiz["seyirci_qudit"],
+                "seyirci_ic_carpim_norm": seyirci_analiz["seyirci_ic_carpim_norm"],
+                "fubini_study_mesafe": round(fs_cikarim, 4),
+                "kan_genlik_norm": round(abs(kan_cikarim), 4),
+                "kapi_51_tetabuk": tetabuk_51,
+                "cift_yazmac_kenet": kenet_raporu,
+                "temsil_nizami": "Seyirci Qudit Dekuplajı & Faktörize Mahalli Zırh (Sıfır Kesme)"
+            },
+            "intac_manifoldu": {
+                "topoloji": intac["topoloji"],
+                "amel": intac["amel"],
+                "r_n": intac["r_n"],
+                "phi_n": intac["phi_n"],
+                "swap_p0": intac["swap_p0"],
+                "swap_p1": intac["swap_p1"]
+            },
+            "holonomi_devridaim": {
+                "cins": holonomi["cins"],
+                "norm": holonomi["norm"],
+                "toplam_faz": holonomi["toplam_faz"],
+                "hodge_enerjisi": holonomi["hodge"],
+                "hukum": holonomi["hukum"]
+            },
+            "mantiga_sadakat_gauge": sadakat,
+            "kuantum_mantik_usulleri": {
+                "barbara_aaa1": barbara["hukum"],
+                "munfasila_bell": munfasila["hukum"],
+                "nyaya_5_adim": nyaya["nigamana"],
+                "modal_kripke": modal["hukum"],
+                "lukasiewicz_v_ima": lukasiewicz["v_ima"]
+            },
+            "ileri_cebir": {
+                "toda_lax_sirali": toda_sirali,
+                "gt_alt_sektor": gt_sektor[0]["alt"],
+                "tomita_moduler_iz": round(sum(tomita_rho[j][j].real for j in range(self.d)), 3)
+            },
+            "sheaf_re_gluing": re_gluing,
+            "nihai_hukum": hukum
         }
 
-
-def cikarimi_calistir():
+def cikarimi_calistir(metin: str = "") -> Dict[str, Any]:
     motor = CikarimHatti(d=16)
-
-    # 1. Senaryo: Poset / Rütbe Kıyası
-    motor.cikarim_yap(
-        ["Ahmet", "şirkette", "amir", "olarak", "Mehmet'e", "yetki", "verdi"],
-        nesne_a="Ahmet",
-        nesne_b="Mehmet"
-    )
-
-    # 2. Senaryo: Maaş / Öklid Skaler Kıyası
-    motor.cikarim_yap(
-        ["Ahmet'in", "maaşı", "Mehmet'in", "maaşından", "fazladır"],
-        nesne_a="Ahmet",
-        nesne_b="Mehmet"
-    )
-
-    # 3. Senaryo: Takva / Derunî Tip ve Nefis Muhasebesi
-    motor.cikarim_yap(
-        ["Ahmet", "ile", "Mehmet", "oturup", "deruni", "takva", "ve", "ihlas", "muhasebesi", "yaptılar"],
-        nesne_a="Ahmet",
-        nesne_b="Mehmet"
-    )
-
-    # 4. Senaryo: Hafızayı Yeniden Tertipleme (Penguen & İstisna)
-    motor.cikarim_yap(
-        ["Penguen", "bir", "kuştur", "fakat", "uçamaz", "suda", "yüzer"]
-    )
-
-    # 5. Senaryo: Hakiki Tenakuz ve Möbius Yıkıcı Girişimi
-    motor.cikarim_yap(
-        ["Bu", "önerme", "aynı", "anda", "hem", "doğrudur", "hem", "yanlıştır"],
-        dongu_yansitilsin_mi=True
-    )
-
+    hedef = metin if metin else "Ahmet şirkette amir olarak Mehmet'e yetki verdi"
+    return motor.cikarim(hedef)
 
 if __name__ == "__main__":
-    cikarimi_calistir()
+    girdi_metin = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else "Penguen bir kuştur fakat suda yüzer"
+    sonuc = cikarimi_calistir(girdi_metin)
+    print(json.dumps(sonuc, default=str, ensure_ascii=False, indent=2))

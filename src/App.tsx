@@ -5,11 +5,11 @@ import { ArcLab } from './components/ArcLab';
 import { QuantumSimulator } from './components/QuantumSimulator';
 import { MizanTelemetry } from './components/MizanTelemetry';
 import { TreatisesReader } from './components/TreatisesReader';
-import { KulliyatTestLab } from './components/KulliyatTestLab';
-import { Compass, Grid, Atom, Activity, BookOpen, Terminal, Sparkles, CheckSquare } from 'lucide-react';
+import { CommandCenter } from './components/CommandCenter';
+import { Compass, Grid, Atom, Activity, BookOpen, Terminal, Sparkles } from 'lucide-react';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'map' | 'arc' | 'quantum' | 'mizan' | 'docs' | 'test'>('test');
+  const [activeTab, setActiveTab] = useState<'map' | 'arc' | 'quantum' | 'console' | 'mizan' | 'docs'>('console');
   const [melekeler, setMelekeler] = useState<Meleke[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -93,6 +93,18 @@ export default function App() {
             </button>
 
             <button
+              onClick={() => setActiveTab('console')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                activeTab === 'console'
+                  ? 'bg-[#3a2418] text-[#e08856] border border-[#e08856]/40 shadow-sm'
+                  : 'text-[#a89a78] hover:text-[#ece3cf]'
+              }`}
+            >
+              <Terminal className="w-3.5 h-3.5 text-[#e08856]" />
+              <span>Kumanda &amp; Canlı Konsol</span>
+            </button>
+
+            <button
               onClick={() => setActiveTab('mizan')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 activeTab === 'mizan'
@@ -115,18 +127,6 @@ export default function App() {
               <BookOpen className="w-3.5 h-3.5" />
               <span>Külliyat</span>
             </button>
-
-            <button
-              onClick={() => setActiveTab('test')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                activeTab === 'test'
-                  ? 'bg-[#e08856] text-[#16130e] font-semibold shadow-sm'
-                  : 'text-[#e08856] bg-[#3a2418]/60 border border-[#e08856]/30 hover:bg-[#3a2418]'
-              }`}
-            >
-              <CheckSquare className="w-3.5 h-3.5" />
-              <span>Tahkik &amp; Test Lab</span>
-            </button>
           </nav>
         </div>
       </header>
@@ -140,10 +140,10 @@ export default function App() {
           </div>
         ) : (
           <>
-            {activeTab === 'test' && <KulliyatTestLab />}
             {activeTab === 'map' && <FacultyMap melekeler={melekeler} />}
             {activeTab === 'arc' && <ArcLab />}
             {activeTab === 'quantum' && <QuantumSimulator />}
+            {activeTab === 'console' && <CommandCenter />}
             {activeTab === 'mizan' && <MizanTelemetry />}
             {activeTab === 'docs' && <TreatisesReader />}
           </>

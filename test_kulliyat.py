@@ -1,138 +1,149 @@
-"""
-test_kulliyat.py - Bütünleşik Doğrulama ve Teftiş Testleri
-10 Faslın Riyazî ve Fikrî Kanunlarının Otomatik Doğrulanması
-"""
-
 import math
 import sys
-from matematik.temel import (
-    KuantumDurum,
-    bargmann_3_nokta,
-    bargmann_n_nokta,
-    hilbert_schmidt_ic_carpim,
-    lie_komutator,
-    rastgele_kuantum_durum
+from nefs.kuantum_idrak import (
+    Qudit, Mertebe, Doku, Amel, HolonomiCinsi,
+    BagimliLifliTensor, MukayeseVeHolonomi, IleriKuantumImkanlari,
+    HafizaVeSupheReaktoru, TabulaRasaRust, TomitaTakesakiTodaGT,
+    KuantumMantikDevresi, BirMilyonQuditZirhi, bargmann_n
 )
-from nefs.mukayese import MukayeseMotoru, OntoMertebe, GeometrikDoku, AmeliVech
-from nefs.vecih import VecihSpektrumu, MertebeSeviyesi
-from nefs.mertebe_kesfi import MertebeKesfi
-from nefs.holonomi import HolonomiAnalizoru, DevridaimCinsi
-from nefs.suphe import SupheManifoldu, Iddia
-from nefs.hafiza import TopolojikHafizaKovani
-from nefs.rust import RustFazi
+from main.kulliyat import tum_kulliyat_getir, release_varligi_indir, Kaynak
 
 
-def test_1_intac_ve_bargmann():
-    print("[TEST 1] n-li Bargmann ve İntaç Manifoldu...")
-    motor = MukayeseMotoru(d=16)
-
-    d1 = KuantumDurum([complex(1, 0), complex(0, 0)], etiket="p1")
-    d2 = KuantumDurum([complex(0, 1), complex(0, 0)], etiket="p2")
-    d3 = KuantumDurum([complex(1, 0), complex(0, 0)], etiket="p3")
-
-    r3, phi3, delta3, ucgenler = bargmann_n_nokta([d1, d2, d3])
-    assert r3 >= 0.0, "Rezonans negatif olamaz"
-
-    intac = motor.nli_mukayese([d1, d2, d3], mertebe=OntoMertebe.MEZO_KIYAS)
-    assert intac.topoloji in [GeometrikDoku.POSET, GeometrikDoku.DONGUSEL, GeometrikDoku.DIPOL, GeometrikDoku.KAFES]
-    assert intac.amel in [AmeliVech.BEYAN, AmeliVech.FUNKTOR, AmeliVech.TERTIP, AmeliVech.SUKUT]
-    print("  -> Başarılı: İntaç Manifoldu 4 bileşeniyle üretildi.")
+def test_1_bargmann_intac():
+    muk = MukayeseVeHolonomi(16)
+    d1 = Qudit([complex(1, 0), complex(0, 0)], "d1")
+    d2 = Qudit([complex(0, 1), complex(0, 0)], "d2")
+    d3 = Qudit([complex(1, 0), complex(0, 0)], "d3")
+    r, phi, delta, ucgenler = bargmann_n([d1, d2, d3])
+    assert r >= 0.0
+    intac = muk.mukayese_intac([d1, d2, d3])
+    assert intac["topoloji"] in [Doku.POSET.value, Doku.DONGUSEL.value, Doku.DIPOL.value, Doku.KAFES.value, "univalence_halkasi"]
 
 
-def test_2_vecih_tayini_ve_j_aynasi():
-    print("[TEST 2] Vecih Spektrumu, Mertebe ve J-Aynası...")
-    spektrum = VecihSpektrumu()
-
-    # Rütbe cümlesi
-    vecih_rutbe, _ = spektrum.vecih_sec(["şirkette", "amir", "ve", "memur", "terfisi"])
-    assert vecih_rutbe.ad == "rutbe"
-    assert vecih_rutbe.mertebe == MertebeSeviyesi.KATEGORI
-
-    # Takva cümlesi
-    vecih_takva, _ = spektrum.vecih_sec(["deruni", "ihlas", "ve", "takva", "muhasebesi"])
-    assert vecih_takva.ad == "takva"
-    assert vecih_takva.mertebe == MertebeSeviyesi.TIP
-
-    # J-Aynası: Madde kutbundan mana kutbuna köprü
-    zit_vecih = spektrum.tomita_takesaki_zit_vecih(vecih_rutbe)
-    assert zit_vecih.ad == "hakikat"
-    print("  -> Başarılı: Vecih doğru izole edildi ve J-aynası köprüsü kuruldu.")
+def test_2_vecih_silsile_j():
+    lif = BagimliLifliTensor(16)
+    tip, m, kat = lif.vecih_tayin(["amir", "memur", "terfi"])
+    assert m == Mertebe.KATEGORI
+    assert lif.j_aynasi("maas") == "takva"
 
 
-def test_3_otomatik_mertebe_kesfi():
-    print("[TEST 3] Otomatik Mertebe ve Kalıcı Sinir (Persistent Nerve)...")
-    kesfedici = MertebeKesfi(d=16)
-
-    durumlar = [rastgele_kuantum_durum(16, etiket=f"d_{i}", tohum=i+10) for i in range(4)]
-    aktif_mertebeler = kesfedici.aktif_mertebeleri_kesfet(durumlar)
-    assert len(aktif_mertebeler) > 0
-
-    poligonlar = kesfedici.kalici_sinir_poligonlari(durumlar, azami_n=3)
-    assert isinstance(poligonlar, dict)
-    print("  -> Başarılı: Aktif mertebeler ve kalıcı sinir halkaları keşfedildi.")
+def test_3_wilson_holonomi_girisim():
+    muk = MukayeseVeHolonomi(16)
+    d0 = Qudit([complex(1, 0), complex(0, 0)], "d0")
+    h_mesru = muk.holonomi_teftis(d0, [0.1, 0.1])
+    assert h_mesru["cins"] == HolonomiCinsi.TEEMMUL.value
+    h_safsata = muk.holonomi_teftis(d0, [math.pi / 2, math.pi / 2])
+    assert h_safsata["cins"] == HolonomiCinsi.SAFSATA.value
+    assert h_safsata["norm"] < 1e-4
 
 
-def test_4_holonomi_ve_yikici_girisim():
-    print("[TEST 4] Wilson Döngüleri, Devridaim ve Yıkıcı Girişim...")
-    analizor = HolonomiAnalizoru(d=16)
-    d0 = rastgele_kuantum_durum(16, tohum=99)
-
-    # 1. Meşru teemmül (Wilczek-Zee): Phi = 0.5 rad
-    sonuc_mesru = analizor.cevirim_tahlil_et(d0, [0.25, 0.25])
-    assert sonuc_mesru["devridaim_cinsi"] == DevridaimCinsi.MESRU_TEEMMUL.value
-    assert not sonuc_mesru["dalga_sondu_mu"]
-
-    # 2. Hakiki Safsata (Möbius yırtığı): Phi = pi
-    sonuc_safsata = analizor.cevirim_tahlil_et(d0, [math.pi / 2.0, math.pi / 2.0])
-    assert sonuc_safsata["devridaim_cinsi"] == DevridaimCinsi.HAKIKI_SAFSATA.value
-    assert sonuc_safsata["dalga_sondu_mu"]
-    print("  -> Başarılı: Meşru teemmül korundu; hakiki tenakuz yıkıcı girişimle söndürüldü.")
+def test_4_ileri_qudit_ve_hodge():
+    ileri = IleriKuantumImkanlari(16)
+    d0 = Qudit([complex(1, 0), complex(0, 0)], "d0")
+    hodge = ileri.hodge_de_rham_ayrisim(d0, False)
+    assert hodge["hodge_laplasyen_enerjisi"] == 0.0
+    zeno = ileri.kuantum_zeno_hapsi(d0, 4)
+    nhse = ileri.non_hermitian_skin_effect(d0, 1)
+    kato = ileri.kato_permutasyonu(d0, 1)
+    ba = ileri.baker_akhiezer_teta_dalgasi(0.5)
+    vac = ileri.sikistirilmis_vakum_ayna(0.5)
+    assert vac.d == 16
 
 
-def test_5_hafiza_re_gluing():
-    print("[TEST 5] Epistemik Refactoring ve Sheaf Re-Gluing...")
-    hafiza = TopolojikHafizaKovani()
-    d_kus = rastgele_kuantum_durum(16, tohum=1)
-    hafiza.ekle("Kuşlar uçar.", d_kus, lif_koordinati={"Canlı": "Kuş", "Ortam": "Hava"})
-
-    motor = MukayeseMotoru(d=16)
-    d_penguen = rastgele_kuantum_durum(16, tohum=2)
-    intac = motor.nli_mukayese([d_kus, d_penguen])
-
-    tertip = hafiza.yeniden_tertitle(
-        intac=intac,
-        yeni_lif_anahtari="Hareket_Ortami",
-        yeni_lif_degeri="Su",
-        yeni_kaziye_metni="Penguen suda yüzer."
-    )
-    assert tertip["islem"] == "topolojik_re_gluing"
-    assert len(hafiza.kayitlar) == 2
-    print("  -> Başarılı: Hafıza silinmedi; taban değişimi (f*) ile lifli saraya aktarıldı.")
+def test_5_hafiza_sheaf_suphe():
+    haf = HafizaVeSupheReaktoru(16)
+    d1 = Qudit([complex(1, 0), complex(0, 0)], "d1")
+    d2 = Qudit([complex(0, 1), complex(0, 0)], "d2")
+    haf.kayit_ekle("Kuş uçar", d1, {"Ortam": "Hava"})
+    rg = haf.sheaf_re_gluing(d1, "Ortam", "Su", "Penguen suda yüzer")
+    assert rg["yeni_id"] > 0
+    celiski = haf.celiski_tahkik("A", d1, "B", d2, "ev", "ev")
+    assert celiski["cozum"] == "suphe_reaktoru"
 
 
-def test_6_tabula_rasa_ve_rust():
-    print("[TEST 6] Tabula Rasa ve Adyabatik Rüşt Geçişi...")
-    rust = RustFazi(t0=10.0, tau=3.0)
+def test_6_tabula_rasa_rust():
+    r = TabulaRasaRust(t0=2.0, tau=1.0)
+    fb, hb, _ = r.hata_bolustur(1.0)
+    assert fb > hb
+    r.adim = 10
+    fr, hr, _ = r.hata_bolustur(1.0)
+    assert hr > fr
 
-    # Başlangıçta (Bebeklik): Hata fıtrata akar
-    fitrat_1, hafiza_1, _ = rust.hata_dagitimi(1.0)
-    assert fitrat_1 > hafiza_1
 
-    # 25 adım sonra (Rüşt): Fıtrat kilitlenir, hata hafızaya akar
-    for _ in range(25):
-        rust.adim_ilerlet()
-    fitrat_2, hafiza_2, _ = rust.hata_dagitimi(1.0)
-    assert hafiza_2 > fitrat_2
-    print("  -> Başarılı: Adyabatik faz geçişi ile fıtrat kilitlendi, terazi dokunulmaz kılındı.")
+def test_7_tomita_toda_gt():
+    tt = TomitaTakesakiTodaGT(16)
+    d0 = Qudit([complex(1, 0), complex(0, 0)], "d0")
+    rho_mod = tt.tomita_moduler_akis(d0.rho(), t=0.5)
+    assert abs(sum(rho_mod[i][i].real for i in range(len(rho_mod))) - 1.0) < 1e-4
+    sirali = tt.toda_lax_sirala([0.2, 0.9, 0.4])
+    assert sirali[0] >= sirali[1] >= sirali[2]
+    gt = tt.gelfand_tsetlin_branching("varlik")
+    assert len(gt) > 0
+
+
+def test_8_kuantum_mantik_ve_sadakat():
+    man = KuantumMantikDevresi(16)
+    s = Qudit([complex(1, 0)], "s")
+    m = Qudit([complex(1, 0)], "m")
+    p = Qudit([complex(1, 0)], "p")
+    barbara = man.silojizma_barbara(s, m, p)
+    assert barbara["sadakat_korundu"]
+    assert barbara["hadd_i_evsat_tasfiye"] is not None
+    munf = man.munfasila_bell_cikarim(s, p, p_var_mi=True)
+    assert munf["usul"] == "Munfasila_Kiyas"
+    nyaya = man.nyaya_pancavayava("Ateş", "Duman", "Mutfak")
+    assert "mühürlendi" in nyaya["nigamana"]
+    modal = man.modal_kripke_teftis(s)
+    assert modal["imkan_elmas"]
+
+
+def test_9_bir_milyon_qudit_zirhi():
+    zirh_veri = BirMilyonQuditZirhi(N=1048576, q=64)
+    zirh_param = BirMilyonQuditZirhi(N=1048576, q=64)
+    assert zirh_veri.N == 1048576
+    assert zirh_veri.mahalli_serbestlik == 2097152
+    d1 = Qudit([complex(1, 0), complex(0, 0)], "d1")
+    d2 = Qudit([complex(0, 1), complex(0, 0)], "d2")
+    zirh_veri.aktif_yerlestir([d1, d2], baslangic=0)
+    zirh_param.aktif_yerlestir([d1, d2], baslangic=0)
+    analiz = zirh_veri.seyirci_analizi()
+    assert analiz["aktif_qudit"] == 2
+    assert analiz["seyirci_qudit"] == 1048574
+    assert analiz["seyirci_ic_carpim_norm"] == 1.0
+    tetabuk = zirh_veri.kapi_51_tetabuk(51)
+    assert tetabuk["kapi_adedi"] == 51
+    assert tetabuk["seyirci_dokunulmayan"] == 1048576 - 102
+    kenet = zirh_param.cift_yazmac_kenet(zirh_veri)
+    assert kenet["ortak_aktif_boyut"] == 2
+    assert kenet["seyirci_eslesme"] == 1.0
+    fs = zirh_veri.fubini_study_mesafe(zirh_param)
+    assert fs < 1e-5
+    kan_psi = zirh_veri.kan_genlik_hesapla()
+    assert abs(abs(kan_psi) - 1.0) < 1e-4
+    v_seyirci = zirh_veri.durum_oku(999999)
+    assert v_seyirci.etiket == "seyirci_vakum_999999"
+
+
+def test_10_kulliyat_ve_release_hatti():
+    katalog = tum_kulliyat_getir()
+    assert len(katalog) >= 40
+    releases = [k for k in katalog if k.kategori == "release_koprusu"]
+    assert len(releases) >= 8
+    # Test release downloading / streaming pipeline
+    test_rel = releases[0]
+    yol = release_varligi_indir(test_rel)
+    assert yol is not None
 
 
 if __name__ == "__main__":
-    test_1_intac_ve_bargmann()
-    test_2_vecih_tayini_ve_j_aynasi()
-    test_3_otomatik_mertebe_kesfi()
-    test_4_holonomi_ve_yikici_girisim()
-    test_5_hafiza_re_gluing()
-    test_6_tabula_rasa_ve_rust()
-    print("\n==========================================")
-    print("  KÜLLİYAT TESTLERİNİN HEPSİ BAŞARIYLA GEÇTİ!")
-    print("==========================================")
+    test_1_bargmann_intac()
+    test_2_vecih_silsile_j()
+    test_3_wilson_holonomi_girisim()
+    test_4_ileri_qudit_ve_hodge()
+    test_5_hafiza_sheaf_suphe()
+    test_6_tabula_rasa_rust()
+    test_7_tomita_toda_gt()
+    test_8_kuantum_mantik_ve_sadakat()
+    test_9_bir_milyon_qudit_zirhi()
+    test_10_kulliyat_ve_release_hatti()
+    print("ALL_TESTS_PASSED")

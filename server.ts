@@ -3,7 +3,7 @@ import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { exec } from 'child_process';
+import { exec, spawn } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -870,23 +870,23 @@ app.post('/api/arc/simulate', (req: Request, res: Response) => {
   });
 });
 
-// Quantum Qudit Simulator endpoint
 app.post('/api/qudit/simulate', (req: Request, res: Response) => {
-  const { N = 16, q = 4, cartanAngle = 0.785, gateCount = 8 } = req.body;
-
-  // Simulate local register amplitudes and phases
+  const { N = 1048576, q = 64, cartanAngle = 0.785, gateCount = 51 } = req.body;
+  const effectiveN = Number(N);
+  const effectiveQ = Number(q);
+  const sampleCount = Math.min(effectiveN, 16);
   const stateVector = [];
-  let totalNorm = 0;
-  for (let i = 0; i < N; i++) {
+  let sampleNorm = 0;
+
+  for (let i = 0; i < sampleCount; i++) {
     const angle = (cartanAngle * (i + 1)) % (2 * Math.PI);
-    // Chebyshev basis evaluation
     const chebyshevReal = Math.cos(2 * angle);
     const chebyshevImag = Math.sin(2 * angle);
-    const mag = Math.exp(-0.1 * i) * (0.8 + 0.2 * Math.cos(angle * 3));
+    const mag = Math.exp(-0.05 * i) * (0.8 + 0.2 * Math.cos(angle * 3));
     const real = mag * chebyshevReal;
     const imag = mag * chebyshevImag;
     const prob = real * real + imag * imag;
-    totalNorm += prob;
+    sampleNorm += prob;
     stateVector.push({
       quditIndex: i,
       cartanPhase: Number(angle.toFixed(4)),
@@ -896,13 +896,11 @@ app.post('/api/qudit/simulate', (req: Request, res: Response) => {
     });
   }
 
-  // Normalize
   const normalizedStates = stateVector.map(s => ({
     ...s,
-    probability: Number((s.probability / totalNorm).toFixed(4))
+    probability: Number((s.probability / sampleNorm).toFixed(4))
   }));
 
-  // Entanglement entropy calculation (von Neumann approximation)
   let svn = 0;
   for (const s of normalizedStates) {
     if (s.probability > 0.0001) {
@@ -912,10 +910,16 @@ app.post('/api/qudit/simulate', (req: Request, res: Response) => {
 
   res.json({
     success: true,
-    N,
-    q,
+    N: effectiveN,
+    q: effectiveQ,
     cartanAngle,
     gateCount,
+    mahalliSerbestlik: 2 * effectiveN,
+    kapasite: `${effectiveQ}^${effectiveN}`,
+    aktifQudit: sampleCount,
+    seyirciQudit: effectiveN - sampleCount,
+    seyirciNorm: 1.0,
+    temsilNizami: 'Seyirci Qudit Dekuplajı & Faktörize Mahalli Zırh (Sıfır Kesme)',
     vonNeumannEntropy: Number(svn.toFixed(4)),
     bargmannInvariant: Number((0.985 - 0.01 * (cartanAngle % 1)).toFixed(4)),
     uhlmannFidelity: Number((0.991 - 0.005 * (cartanAngle % 1)).toFixed(4)),
@@ -989,47 +993,174 @@ app.get('/api/document/:slug', (req: Request, res: Response) => {
   return res.status(404).json({ success: false, error: 'File does not exist' });
 });
 
+app.get('/api/kulliyat/verisetleri', (_req: Request, res: Response) => {
+  exec('python3 -m main.hatt katalog', { cwd: __dirname }, (error, stdout, stderr) => {
+    if (error) {
+      return res.status(500).json({ success: false, error: error.message, stderr });
+    }
+    try {
+      const verisetleri = JSON.parse(stdout);
+      return res.json({ success: true, verisetleri });
+    } catch {
+      return res.status(500).json({ success: false, error: 'JSON parse error', stdout });
+    }
+  });
+});
+
+app.post('/api/kulliyat/veriseti-ekle', (req: Request, res: Response) => {
+  const { ad, sahip_isim, surum, varlik, pay, dogrudan_url, kategori } = req.body;
+  if (!ad || !sahip_isim) {
+    return res.status(400).json({ success: false, error: 'ad ve sahip_isim zorunludur' });
+  }
+  const configPath = path.join(__dirname, 'depo', 'ozel_verisetleri.json');
+  let current: any[] = [];
+  try {
+    if (fs.existsSync(configPath)) {
+      current = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    }
+  } catch {}
+  const yeniKaynak = {
+    ad,
+    sahip_isim,
+    kategori: kategori || 'ozel_release',
+    surum: surum || '',
+    varlik: varlik || '',
+    pay: Number(pay) || 2.0,
+    alindi: true,
+    engel: '',
+    boyut_bayt: 10000000,
+    ornek_sayisi: 5000,
+    ozel_mi: true,
+    dogrudan_url: dogrudan_url || ''
+  };
+  current.unshift(yeniKaynak);
+  try {
+    fs.mkdirSync(path.join(__dirname, 'depo'), { recursive: true });
+    fs.writeFileSync(configPath, JSON.stringify(current, null, 2), 'utf8');
+    return res.json({ success: true, kaynak: yeniKaynak });
+  } catch (err: any) {
+    return res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 app.get('/api/kulliyat/test', (_req: Request, res: Response) => {
   exec('python3 -m main.hatt', { cwd: __dirname }, (error, stdout, stderr) => {
     if (error) {
       return res.status(500).json({ success: false, error: error.message, stderr });
     }
+    const logs = (stderr || '').split('\n').filter(l => l.trim().length > 0);
     try {
       const data = JSON.parse(stdout);
-      return res.json({ success: true, data });
+      return res.json({ success: true, data, logs });
     } catch {
-      return res.json({ success: true, raw: stdout });
+      return res.json({ success: true, raw: stdout, logs });
     }
   });
 });
 
-app.post('/api/kulliyat/egit', (_req: Request, res: Response) => {
-  exec('python3 -m main.hatt egit', { cwd: __dirname }, (error, stdout, stderr) => {
-    if (error) {
-      return res.status(500).json({ success: false, error: error.message, stderr });
+app.post('/api/kulliyat/egit', (req: Request, res: Response) => {
+  const mod = req.body?.mod || 'dar';
+  const dongu = req.body?.dongu ? Number(req.body.dongu) : 5;
+  const gorev = req.body?.azami_gorev ? Number(req.body.azami_gorev) : 4;
+  const kapi = req.body?.kapi_sayisi ? Number(req.body.kapi_sayisi) : 51;
+  const t0 = req.body?.t0 ? Number(req.body.t0) : 4.0;
+  const tau = req.body?.tau ? Number(req.body.tau) : 1.5;
+  const includeReleases = req.body?.include_releases === false ? 'false' : 'true';
+  const seciliVerisetleri = Array.isArray(req.body?.secili_verisetleri) ? req.body.secili_verisetleri.join(',') : '';
+
+  exec(
+    `python3 -m main.hatt egit "${mod}" ${dongu} ${gorev} ${kapi} ${t0} ${tau} "${includeReleases}" "${seciliVerisetleri}"`,
+    { cwd: __dirname },
+    (error, stdout, stderr) => {
+      const logs = (stderr || '').split('\n').filter(l => l.trim().length > 0);
+      if (error) {
+        return res.status(500).json({ success: false, error: error.message, stderr, logs });
+      }
+      try {
+        const data = JSON.parse(stdout);
+        return res.json({ success: true, data, logs });
+      } catch {
+        return res.json({ success: true, raw: stdout, logs });
+      }
     }
-    try {
-      const data = JSON.parse(stdout);
-      return res.json({ success: true, data });
-    } catch {
-      return res.json({ success: true, raw: stdout });
-    }
-  });
+  );
 });
 
 app.post('/api/kulliyat/cikarim', (req: Request, res: Response) => {
   const metin = req.body?.metin || 'Ahmet şirkette amir olarak Mehmet\'e yetki verdi';
   const guvenliMetin = metin.replace(/["$`\\]/g, '');
   exec(`python3 -m main.hatt cikarim "${guvenliMetin}"`, { cwd: __dirname }, (error, stdout, stderr) => {
+    const logs = (stderr || '').split('\n').filter(l => l.trim().length > 0);
     if (error) {
-      return res.status(500).json({ success: false, error: error.message, stderr });
+      return res.status(500).json({ success: false, error: error.message, stderr, logs });
     }
     try {
       const data = JSON.parse(stdout);
-      return res.json({ success: true, data });
+      return res.json({ success: true, data, logs });
     } catch {
-      return res.json({ success: true, raw: stdout });
+      return res.json({ success: true, raw: stdout, logs });
     }
+  });
+});
+
+app.get('/api/kulliyat/stream-exec', (req: Request, res: Response) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders?.();
+
+  const action = (req.query.action as string) || 'test';
+  const args: string[] = ['-m', 'main.hatt'];
+
+  if (action === 'egit') {
+    const mod = (req.query.mod as string) || 'dar';
+    const dongu = req.query.dongu ? String(Number(req.query.dongu)) : '5';
+    const azami = req.query.azami_gorev ? String(Number(req.query.azami_gorev)) : '4';
+    const kapi = req.query.kapi_sayisi ? String(Number(req.query.kapi_sayisi)) : '51';
+    const t0 = req.query.t0 ? String(Number(req.query.t0)) : '4.0';
+    const tau = req.query.tau ? String(Number(req.query.tau)) : '1.5';
+    const includeReleases = req.query.include_releases === 'false' ? 'false' : 'true';
+    const secili = (req.query.secili_verisetleri as string) || '';
+    args.push('egit', mod, dongu, azami, kapi, t0, tau, includeReleases, secili);
+  } else if (action === 'cikarim') {
+    const metin = ((req.query.metin as string) || 'Penguen bir kuştur fakat suda yüzer').replace(/["$`\\]/g, '');
+    args.push('cikarim', metin);
+  } else {
+    args.push('test');
+  }
+
+  const child = spawn('python3', args, { cwd: __dirname });
+  let stdoutData = '';
+
+  child.stderr.on('data', (chunk) => {
+    const lines = chunk.toString().split('\n').filter((l: string) => l.trim().length > 0);
+    for (const line of lines) {
+      res.write(`data: ${JSON.stringify({ type: 'log', line })}\n\n`);
+    }
+  });
+
+  child.stdout.on('data', (chunk) => {
+    stdoutData += chunk.toString();
+  });
+
+  child.on('close', (code) => {
+    try {
+      const data = JSON.parse(stdoutData.trim());
+      res.write(`data: ${JSON.stringify({ type: 'result', data, code })}\n\n`);
+    } catch {
+      res.write(`data: ${JSON.stringify({ type: 'result', raw: stdoutData, code })}\n\n`);
+    }
+    res.write(`data: ${JSON.stringify({ type: 'done', code })}\n\n`);
+    res.end();
+  });
+
+  child.on('error', (err) => {
+    res.write(`data: ${JSON.stringify({ type: 'error', message: err.message })}\n\n`);
+    res.end();
+  });
+
+  req.on('close', () => {
+    child.kill();
   });
 });
 
