@@ -1,1596 +1,213 @@
-from __future__ import annotations
+"""
+main/egitim.py - Fıtrat Kalibrasyonu, ARC-AGI-2 ve Küllî Mukayese Eğitimi
+Mucit-AI / Nefs-i Müdrike
+"""
 
 import os
-
-os.environ.setdefault("OMP_NUM_THREADS", "1")
-os.environ.setdefault("MKL_NUM_THREADS", "1")
-os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
-os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
-
-import json
 import sys
-import time
-from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional, Sequence, Tuple
-
-import numpy as np
-
-from nefs.musahede import gorevleri_getir
-from ogrenme.mecz import MeczAyari, mecz_egit, mecz_beyani
-from main import hazine
-from nefs.kulli_mizan import (FockUzayi, Hamiltonyen, MizanAyari,
-                              balyala, fock_beyani, hamiltonyen_beyani,
-                              kulli_mizan, mizan_cetveli)
-from nefs.hafiza import Hafiza, tertip_beyani
-from main.cikarim import (padisah, hazineden_devam, devam_agirligi,
-                          hazineden_yukle, hafizayi_yukle)
-from kuantum.qudit import TddAyari, kanonik_adres
-from nefs.matchgate import MatchgateAyari, flo_evrimi
-from nefs.ayna import AynaAyari
-from nefs.mihenk import nobet_kur, safha, safha_beyani, safha_sifirla
-from nefs.veri_kapisi import (VeriKapisiAyari, veri_kapisi,
-                              kapi_beyani, kapi_tertibi)
-from kuantum.qcekirdek import cekirdek_beyani
-from kuantum.parametre_yazmaci import (ParametreAyari, ParametreYazmaci,
-                                    parametre_beyani, kenet_beyani)
-from kuantum.nqs import nqs_beyani, turun_genligi, tur_beyani
-from kuantum.mahalli_yazmac import (mahalli_beyani, uzunluk_beyani,
-                                 uzunluk_genligi)
-from tanilama.hizolcer import (Hizolcer, hizolcer_bagla,
-                               hizolcer_beyani)
-from nefs.kararname import kararname
-from nefs.golge import (GolgeAyari, golge_al,
-                        kestir)
-from nefs.sadakat import (SadakatAyari, sadakat_uygula,
-                          sadakat_beyani, sadakat_devresi,
-                          sadakat_devre_beyani)
-from nefs.olcek import Kok, olcek, denge, olcek_beyani
-from nefs.belirtec import (belirtec_kapisi, belirtec_sozlugu,
-                           belirtec_beyani)
-from nefs.keyfiyet import KeyfiyetAyari, keyfiyet, keyfiyet_beyani
-from nefs.munasebet import (Harita, MunasebetAyari, munasebet_kos,
-                            munasebet_beyani)
-from main.kulliyat import kulliyat_verisi, kulliyat_dokumu, kulliyat_beyani
-from nefs.mukayese import (hata_payi, kiplik, mukayese_beyani,
-                           mukayese_melekesi_beyani, omur_beyani,
-                           vecih_beyani,
-                           vecihleri_istihrac, yirtiklari_tertiple)
-from kuantum.devre import devre_beyani
-from kuantum.qyazmac import sektor_beyani
-from matematik.sonsuz_mertebeler_teorisi import (SilsileAyari, silsile_teshisi,
-                                                 silsile_beyani, harita_kur,
-                                                 lif_beyani)
-from nefs.casimir import (CasimirAyari, blok_kosegen_artigi,
-                          casimir_beyani, dhr_ayrismasi,
-                          gelfand_tsetlin_araya_girme, kartan_fazi)
-from nefs.usul import usul_beyani
-from nefs.suphe import suphe_beyani
-from tanilama.beyan import (talim_beyani,
-                            kaggle_beyani, sifir_beyani)
-
-HAZINE_DIZINI = os.environ.get("MUCIT_HAZINE", "depo/hazine")
-
-HAZINE_ADI = "dimag"
-
-
-def hazineden_hiz(dizin: Optional[str] = None) -> float:
-    from main import hazine as _h
-    y = hazine_yolu(dizin) + _h.UZANTI
-    if not os.path.isfile(y):
-        return 0.0
-    try:
-        ust = _h.ust_coz(_h.beyan(y).get("__metadata__", {}) or {})
-    except Exception as e:
-        raise AssertionError(
-            "hazine üst verisi okunamadı (%s): hız ölçüsü sessizce "
-            "yoklanamaz -- ferman 5" % e)
-    return float(ust.get("ölçülen_hız", 0.0) or 0.0)
-
-
-def hazine_yolu(dizin: Optional[str] = None) -> str:
-    return os.path.join(dizin or HAZINE_DIZINI, HAZINE_ADI)
-
-
-def hazine_sifirla(dizin: Optional[str] = None) -> Dict[str, object]:
-    from main import hazine as _h
-    y = hazine_yolu(dizin) + _h.UZANTI
-    vardi = os.path.isfile(y)
-    b = os.path.getsize(y) if vardi else 0
-    if vardi:
-        os.remove(y)
-    return {"yol": y, "vardı": vardi, "bayt": int(b)}
-
-__all__ = ["EgitimAyari", "DAR", "ORTA", "AZAMI",
-           "KISA_CPU", "AZAMI_KAGGLE",
-           "tek_iplik_zorla", "gecit", "ogreniyor_mu",
-           "kulli_kayip_talimi", "muhurle", "kos", "HAZINE_DIZINI"]
-
-
-def tek_iplik_zorla() -> Dict[str, str]:
-    ad = ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS",
-          "NUMEXPR_NUM_THREADS")
-    for a in ad:
-        os.environ[a] = "1"
-    return {"değişken": ",".join(ad), "geç": "numpy" in sys.modules}
-
-
-@dataclass
-class EgitimAyari:
-    ad: str = "kısa"
-    kodlama: str = "o200k_base"
-    sozluk: int = 0
-    belirtec_basamak: int = 0
-    comert: float = 0.5
-    tohum: int = 0
-    olculen_hiz: float = 0.0
-
-    veri_lifi: int = 0
-    hukum_lifi: int = 0
-    karo: int = 0
-    yerel_yuva: int = 1
-    parametre_genisligi: int = 0
-    yigin_dilimi: int = 0
-    ornek_sayisi: int = 0
-    pencere: int = 0
-    talim_tur: int = 0
-    altuzay_ornek: int = 0
-    cevrim_sayisi: int = 0
-    cevrim_boyu: int = 3
-    degerlendirme_gorevi: int = 0
-    dogrulama_sayisi: int = 0
-    kademe_gorevi: int = 2
-    azami_uret: int = 0
-    yaricap: float = 0.0
-    blok: int = 0
-    azami_talim_saati: float = 0.0
-    lam_cevrim: float = 0.0
-    lam_monogami: float = 0.0
-    lam_tip: float = 0.0
-    lam_engel: float = 0.0
-    lam_tenakuz: float = 0.0
-    lam_kategori: float = 0.0
-    lam_nokta: float = 0.0
-    lam_meleke: float = 0.0
-    lam_zirh: float = 0.0
-    lam_kaide: float = 0.0
-    lam_tasma: float = 0.0
-    lam_lif: float = 0.0
-    mihenk_arasi: float = 300.0
-    galois_us: int = 0
-    tableau_n: int = 0
-    faz_mertebesi: int = 0
-    flo_modu: int = 0
-    flo_kapisi: int = 0
-    siklotomik_us: int = 0
-    siklotomik_taban: int = 3
-    siklotomik_derece: int = 12
-    faz_derecesi: int = 3
-    tdd_cekirdek: int = 0
-    tdd_tolerans: float = 1e-7
-    stab_mertebe: int = 0
-    golge_ornegi: int = 0
-    golge_haddi: float = 0.05
-    gpu_akis_haddi: float = 1000.0
-    gpu_genlesmesi: int = 8
-    hiz_geciti: int = 1
-    canli_saniye: float = 20.0
-    hal_kaynagi: str = "tutarlı"
-    sadakat_acik: int = 1
-    parite_lifi: int = 2
-    usul_acik: int = 1
-    usul_haddi: float = 0.0
-    usul_seferi: int = 0
-    keyfiyet_turu: int = 0
-    suphe_acik: int = 1
-    rust_muayene: int = 1
-    sbox_acik: int = 1
-    meleke_olcumu: int = 1
-    mukayese_acik: int = 1
-    hat: str = "c"
-    hat_bandi: int = 0
-    motor: str = "sürekli"
-    genlik_tipi: str = ""
-    rust_t0: float = 0.5
-    rust_tau: float = 0.15
-    rust_kapanis: float = 0.5
-    hafiza_kapasitesi: int = 0
-    hafiza_yazma: float = 0.05
-    hafiza_sonumu: float = 0.02
-    suphe_sonumu: float = 0.05
-    zeno_esigi: float = 0.35
-    zeno_tepe: float = 0.9
-    hafiza_ayniyet: float = 0.98
-    hafiza_buhar: float = 1e-4
-    tenakuz_eps: float = 1e-5
-    dislama_tau: float = 8.0
-    ayna_teta: float = 0.2617993877991494
-    ayna_r: float = 0.35
-    ayna_tur: int = 0
-    qudit_qsvt: int = 0
-    qudit_derece: int = 0
-    qudit_yon: int = 0
-    harman_kademesi: int = 0
-
-    def __post_init__(self) -> None:
-        if int(self.sozluk) <= 0:
-            self.sozluk = int(belirtec_sozlugu(str(self.kodlama)))
-        if float(self.olculen_hiz) <= 0.0:
-            self.olculen_hiz = float(hazineden_hiz())
-        o = olcek(Kok(sozluk=int(self.sozluk), comert=float(self.comert),
-                      tohum=int(self.tohum), hiz=float(self.olculen_hiz)))
-        self.olcek_dokumu = o
-        self.elle = tuple(sorted(
-            k for k in o if getattr(self, k, None) not in (0, 0.0, None)))
-        for k, v in o.items():
-            if getattr(self, k, None) in (0, 0.0, ""):
-                setattr(self, k, v)
-
-    olcek_dokumu: Dict[str, object] = field(default_factory=dict)
-    elle: Tuple[str, ...] = ()
-
-    @property
-    def lif_yapisi(self) -> Tuple[int, ...]:
-        return (int(self.veri_lifi), int(self.karo), int(self.karo))
-
-    @property
-    def d(self) -> int:
-        return int(self.veri_lifi) * int(self.karo) ** 2
-
-    def qayar(self):
-        from nefs.zihin_durumu import QAyar
-        import numpy as _np
-        tip = {"complex64": _np.complex64,
-               "complex128": _np.complex128}[str(self.genlik_tipi)]
-        return QAyar(veri_lifi=int(self.veri_lifi),
-                     yerel_yuva=int(self.yerel_yuva),
-                     harman_kademesi=int(self.harman_kademesi),
-                     tohum=int(self.tohum),
-                     yigin=self.yigin(), tip=tip,
-                     motor=str(self.motor),
-                     hukum_lifi=int(self.hukum_lifi),
-                     lif_yapisi=self.lif_yapisi,
-                     faz_mertebesi=int(self.faz_mertebesi),
-                     hat=str(self.hat), hat_bandi=int(self.hat_bandi),
-                     sadakat_acik=int(self.sadakat_acik),
-                     parite_lifi=int(self.parite_lifi),
-                     parametre_genisligi=int(self.parametre_genisligi),
-                     meleke_olcumu=int(self.meleke_olcumu))
-
-    def yigin(self) -> int:
-        return max(1, min(int(self.yigin_dilimi), int(self.ornek_sayisi)))
-
-
-DAR = EgitimAyari(ad="dar", comert=0.15, hiz_geciti=0)
-
-ORTA = EgitimAyari(ad="orta", comert=0.5)
-
-AZAMI = EgitimAyari(ad="azamî", comert=1.0)
-
-KISA_CPU = DAR
-AZAMI_KAGGLE = AZAMI
-
-PROFILLER: Dict[str, EgitimAyari] = {
-    "dar": DAR, "kısa": DAR, "kisa": DAR, "orta": ORTA,
-    "azamî": AZAMI, "azami": AZAMI}
-
-
-def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
-    from nefs.illet import (alan_cizgesi, cevrimler, kelam_ayrismasi,
-                            zaman_cizgesi)
-
-    dug, ken, kabul = alan_cizgesi()
-    assert dug, "sebep çizgesi BOŞ -- illet ölçüsü bir şey ölçmüyor"
-    alan_cevrimi = cevrimler(dug, ken)
-    zg, _yer = zaman_cizgesi()
-    zaman_cevrimi = cevrimler(list(zg.dugumler), list(zg.kenarlar))
-    ayrisma = kelam_ayrismasi()
-
-    o: Dict[str, object] = {
-        "alan": len(dug), "kenar": len(ken),
-        "alan_çevrimi": len(alan_cevrimi),
-        "zaman_düğümü": len(zg.dugumler),
-        "zaman_çevrimi": [list(c) for c in zaman_cevrimi],
-        "kelam_ayrıştı": bool(ayrisma.get("hüküm_şartıyla_ayrık", False)),
-        "kelam_dökümü": ayrisma,
-    }
-    if hiz_ayari is not None:
-        from tanilama.hiz_teftisi import BUTCE_SANIYESI, teftis
-        h = teftis(hiz_ayari, sert=False)
-        o["belirteç_sn"] = float(h["belirteç_sn"])
-        o["hız_haddi"] = float(h["had"])
-        o["hız_hedefi"] = float(h["hedef"])
-        o["hız_geçti"] = bool(h["geçti"])
-        o["kayıp_süresi"] = float(h["kayıp_süresi"])
-        o["en_pahalı_uzuv"] = (h["tek_meleke"][0][0]
-                               if h["tek_meleke"] else "?")
-        cagri = max(1, int(hiz_ayari.talim_tur)
-                    * max(1, int(hiz_ayari.altuzay_ornek)))
-        o["kestirilen_saniye"] = float(h["kayıp_süresi"]) * cagri
-        o["bütçe_saniyesi"] = float(BUTCE_SANIYESI)
-    if sert:
-        assert not zaman_cevrimi, (
-            "ZAMAN AÇILIMLI SEBEP ÇİZGESİNDE ÇEVRİM VAR -- bir adım "
-            "kendi geleceğine bağlı: %r" % (zaman_cevrimi[:3],))
-        assert ayrisma.get("kurulabilir", False), (
-            "zaman çizgesi kurulamadı -- illet ölçüsü boş: %r" % (ayrisma,))
-        assert ayrisma.get("hüküm_şartıyla_ayrık", False), (
-            "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
-            "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
-        if "belirteç_sn" in o:
-            assert o["hız_geçti"], (
-                "HIZ HADDİ TUTMUYOR -- TÂLİM BAŞLAMAZ.\n"
-                "  ölçülen : %.1f belirteç/sn\n"
-                "  had     : %.0f belirteç/sn  (%.0f kat eksik)\n"
-                "  bir kayıp çağrısı: %.4f sn   en pahalı uzuv: %s\n"
-                "  Ferman: hız garantisi elde etmeden umumi tâlim "
-                "başlatılmaz." % (o["belirteç_sn"], o["hız_haddi"],
-                                  o["hız_haddi"]
-                                  / max(1e-9, o["belirteç_sn"]),
-                                  o["kayıp_süresi"], o["en_pahalı_uzuv"]))
-    return o
-
-
-def ogreniyor_mu(seyir: Sequence[float], lam: float = 1e-3
-                 ) -> Dict[str, object]:
-    y = np.asarray(list(seyir), float).reshape(-1)
-    assert y.size >= 2, "seyir eğrisi için en az iki nokta lâzım"
-    assert np.all(np.isfinite(y)), "seyirde NaN/Inf var"
-    from ogrenme.izgara import bagintili_olcut, duzenli_uydur
-
-    t = np.linspace(-1.0, 1.0, y.size)
-    G = max(2, min(8, y.size // 3))
-    k = 3 if y.size > 5 else 1
-    u = duzenli_uydur(t, y, G, k, lam=float(lam))
-    tahmin = np.asarray(u["B"], float) @ np.asarray(u["c"], float)
-    n = max(1, min(y.size - 1, y.size // 4))
-    egim = float((tahmin[-1] - tahmin[-1 - n]) / (t[-1] - t[-1 - n]))
-    bag = float(bagintili_olcut(t, y))
-    return {"eğim": egim, "artık": float(u["artık"]),
-            "bükülme": float(u["bükülme"]), "bağıntı": bag,
-            "öğreniyor": bool(egim < 0.0 and bag < 0.0),
-            "toplam_düşüş": float(y[0] - y[-1])}
-
-
-def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
-    return MizanAyari(
-        zeno_tepe=float(a.zeno_tepe), lam_engel=float(a.lam_engel),
-        ayna_tur=int(a.ayna_tur), ayna_teta=float(a.ayna_teta),
-        ayna_r=float(a.ayna_r),
-        lam_cevrim=float(a.lam_cevrim), lam_monogami=float(a.lam_monogami),
-        lam_tip=float(a.lam_tip), cevrim_boyu=int(a.cevrim_boyu),
-        tdd_cekirdek=int(a.tdd_cekirdek),
-        golge_ornegi=int(a.golge_ornegi), golge_haddi=float(a.golge_haddi),
-        qsvt=int(a.qudit_qsvt), qudit_derece=int(a.qudit_derece),
-        qudit_yon=int(a.qudit_yon),
-        cevrim_sayisi=int(a.cevrim_sayisi),
-        hal_kaynagi=str(a.hal_kaynagi),
-        sadakat_acik=int(a.sadakat_acik), parite_lifi=int(a.parite_lifi),
-        lam_tenakuz=float(a.lam_tenakuz), tenakuz_eps=float(a.tenakuz_eps),
-        dislama_tau=float(a.dislama_tau),
-        lam_kategori=float(a.lam_kategori), lam_nokta=float(a.lam_nokta),
-        lam_meleke=float(a.lam_meleke), lam_zirh=float(a.lam_zirh),
-        lam_kaide=float(a.lam_kaide),
-        lam_tasma=float(a.lam_tasma), lam_lif=float(a.lam_lif),
-        basamak=int(a.belirtec_basamak),
-        meleke_olcumu=int(a.meleke_olcumu),
-        usul_acik=int(a.usul_acik), usul_haddi=float(a.usul_haddi),
-        usul_seferi=int(a.usul_seferi),
-        suphe_acik=int(a.suphe_acik), suphe_sonumu=float(a.suphe_sonumu),
-        rust_t0=float(a.rust_t0),
-        rust_tau=float(a.rust_tau), rust_kapanis=float(a.rust_kapanis),
-        rust_muayene=int(a.rust_muayene), zeno_esigi=float(a.zeno_esigi),
-        toplam_adim=max(1, int(a.talim_tur) * max(1, int(a.altuzay_ornek))),
-        tohum=int(a.tohum))
-
-
-def d0_gecit(Z: Dict[str, Any]) -> Dict[str, Any]:
-    ayar = Z["ayar"]
-    t0 = time.perf_counter()
-    kapi_bel = belirtec_kapisi(str(ayar.kodlama))
-    assert int(kapi_bel.n_vocab) == int(ayar.sozluk), (
-        "sözlük ile kodlama tutmuyor: ayar %d, %s %d -- sözlük elle "
-        "yazılmış olabilir (ferman 1-N)"
-        % (ayar.sozluk, ayar.kodlama, kapi_bel.n_vocab))
-    safha_sifirla()
-    safha("D0 GEÇİT · başlıyor", profil=str(ayar.ad))
-    kapi = gecit(sert=bool(int(ayar.hiz_geciti)), hiz_ayari=ayar)
-    safha("D0 GEÇİT", çevrim=int(kapi.get("alan_çevrimi", 0)),
-          kelâm=bool(kapi.get("kelam_ayrıştı")))
-    Z.update({"t0": t0, "kapi_bel": kapi_bel, "kapi": kapi})
-    return Z
-
-
-def d1_olcu(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from kuantum.qegitim import ornekler
-    ayar = Z["ayar"]
-    gorevler = Z["gorevler"]
-    hepsi = list(gorevler) if gorevler is not None else \
-        gorevleri_getir("training")
-    egitim_gorevleri, dogrulama = gorevleri_getir(ne="böl", gorevler=
-        hepsi, dogrulama=int(ayar.dogrulama_sayisi), tohum=ayar.tohum)
-    arc_veri = ornekler(egitim_gorevleri,
-                        azami=max(1, int(ayar.ornek_sayisi) // 2),
-                        pencere=ayar.pencere, sozluk=ayar.sozluk,
-                        tohum=ayar.tohum, taban=int(ayar.veri_lifi),
-                        basamak=int(ayar.belirtec_basamak))
-    safha("D1 ÖLÇÜ · ARC", örnek=len(arc_veri))
-    devam = hazineden_devam(hazine_yolu())
-    kul_veri, imlec = kulliyat_verisi(
-        sozluk=int(ayar.sozluk), pencere=int(ayar.pencere),
-        azami=max(0, int(ayar.ornek_sayisi) - len(arc_veri)),
-        tohum=int(ayar.tohum), kodlama=str(ayar.kodlama),
-        taban=int(ayar.veri_lifi),
-        basamak=int(ayar.belirtec_basamak),
-        imlec=devam.get("imleç"), ne="imleçli")
-    gelen = list(arc_veri) + list(kul_veri)
-
-    safha("D1 ÖLÇÜ · külliyat", örnek=len(gelen))
-    Z.update({"egitim_gorevleri": egitim_gorevleri,
-              "dogrulama": dogrulama, "arc_veri": arc_veri,
-              "devam": devam, "kul_veri": kul_veri, "imlec": imlec,
-              "gelen": gelen})
-    return Z
-
-
-def d2_silsile(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from kuantum.qegitim import ornek_bol as _bol
-    ayar = Z["ayar"]
-    gelen = Z["gelen"]
-    silsile = silsile_teshisi(
-        [_bol(o)[0] for o in gelen], ayar.lif_yapisi,
-        SilsileAyari(azami_alfabe=int(ayar.veri_lifi),
-                     tohum=int(ayar.tohum)))
-
-    if "parite_lifi" not in ayar.elle:
-        _gercek_lif_boyu = int(silsile["asansör"]["gerçek_lif_boyu"])
-        ayar.parite_lifi = (_gercek_lif_boyu if _gercek_lif_boyu > 0
-                            else int(silsile["asansör"]["kat"]))
-
-    safha("D2 SİLSİLE", kafes=len(silsile["kafes"]),
-          tıkanma=int(silsile["şelale"]["tıkanma"]),
-          büzülme="%.3f" % float(silsile["asansör"]["büzülme"]),
-          gerçek_lif=int(silsile["asansör"]["gerçek_lif_boyu"]))
-    Z.update({"silsile": silsile})
-    return Z
-
-
-def d3_kurulus(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from nefs.kulli_kayip import kademe_parametreleri_ac
-    from nefs.melekeler import QNefs
-    ayar = Z["ayar"]
-    silsile = Z["silsile"]
-    devam = Z["devam"]
-    egitim_gorevleri = Z["egitim_gorevleri"]
-    nefs = QNefs(ayar.tohum, ayar.qayar())
-    _hodge = silsile["hodge"]
-    nefs.izdusum = (silsile["Π"],
-                    (float(_hodge["𝒮_simetrik"]), float(_hodge["𝒜_yönlü"]),
-                     float(_hodge["Ω_yırtık"])))
-    nefs.idrak_et(np.eye(2, ayar.veri_lifi))
-    hafiza = Hafiza(kapasite=int(ayar.hafiza_kapasitesi),
-                    yazma=float(ayar.hafiza_yazma),
-                    sonum=float(ayar.hafiza_sonumu),
-                    zeno_esigi=float(ayar.zeno_esigi),
-                    zeno_tepe=float(ayar.zeno_tepe),
-                    ayniyet=float(ayar.hafiza_ayniyet),
-                    buhar=float(ayar.hafiza_buhar), tohum=int(ayar.tohum))
-    kademe_parametresi = kademe_parametreleri_ac(nefs.p)
-    d = len(nefs)
-    p0 = devam_agirligi(devam, nefs, d)
-    kademe_gorevleri = list(egitim_gorevleri)[:int(ayar.kademe_gorevi)]
-
-    mzn = mizan_ayari(ayar)
-    LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
-                  "lam_tenakuz", "lam_kategori", "lam_nokta",
-                  "lam_meleke", "lam_zirh", "lam_kaide",
-                  "lam_tasma", "lam_lif")
-    _elle_lam = tuple(a for a in LAM_ADLARI
-                      if float(getattr(ayar, a, 0.0)) != 0.0)
-    _mzn = {"a": mzn}
-    fock = FockUzayi()
-    _derece: List[str] = []
-    for _dug, _ro in zip(silsile["kafes"], silsile["tayf"]):
-        if float(_ro) <= 0.0:
-            continue
-        _ad = "mertebe·%s" % _dug["ad"]
-        fock.yarat(_ad, entropi=float(-_ro * np.log(max(float(_ro), 1e-300))),
-                   butce=float(_ro),
-                   celiski=float(silsile["hodge"]["Ω_yırtık"]))
-        _derece.append(_ad)
-    assert _derece, (
-        "DERECELİ FOCK DEVRİ BOŞ -- türetim kafesinin hiçbir katmanı mod "
-        "doğurmadı; her katman kendi hendesesinde nefes almalı "
-        "(ferman 2-Ā-B, 2-Þ)")
-    hamiltonyen = Hamiltonyen(fock=fock)
-    safha("D3 KURULUŞ", derece=len(_derece), parametre=int(d))
-    Z.update({"nefs": nefs, "hafiza": hafiza, "d": d, "p0": p0,
-              "kademe_parametresi": kademe_parametresi,
-              "kademe_gorevleri": kademe_gorevleri, "mzn": mzn,
-              "_elle_lam": _elle_lam, "_mzn": _mzn, "fock": fock,
-              "_derece": _derece, "hamiltonyen": hamiltonyen})
-    return Z
-
-
-def d4_kapi(Z: Dict[str, Any]) -> Dict[str, Any]:
-    ayar = Z["ayar"]
-    gelen = Z["gelen"]
-    nefs = Z["nefs"]
-    hafiza = Z["hafiza"]
-    kapi_hukmu = veri_kapisi(
-        gelen, nefs=nefs, hafiza=hafiza,
-        ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
-                             taban=int(ayar.veri_lifi),
-                             basamak=int(ayar.belirtec_basamak)))
-    veri = list(kapi_hukmu["kabul"])
-    assert veri, (
-        "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
-        % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
-    safha("D4 KAPI", örnek=len(veri))
-    Z.update({"kapi_hukmu": kapi_hukmu, "veri": veri})
-    return Z
-
-
-def d5_uzay(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from nefs.mukayese import (ana_superpozisyon, cozum_uzayi_ac,
-                               cozum_uzayi_kapat,
-                               mantik_filtresi, mukayese_filtresi)
-    from kuantum.qegitim import ornek_bol as _ornek_bol
-    ayar = Z["ayar"]
-    veri = Z["veri"]
-    nefs = Z["nefs"]
-    hafiza = Z["hafiza"]
-    fock = Z["fock"]
-    hamiltonyen = Z["hamiltonyen"]
-    _derece = Z["_derece"]
-    sual = ana_superpozisyon([_ornek_bol(o)[0] for o in veri],
-                             nefs=nefs, hafiza=hafiza,
-                             sozluk=int(ayar.sozluk),
-                             pencere=int(ayar.pencere),
-                             taban=int(ayar.veri_lifi),
-                             basamak=int(ayar.belirtec_basamak))
-    safha("D5 SUAL", derece=len(_derece))
-    uzay = cozum_uzayi_ac(sual, nefs=nefs, hafiza=hafiza, fock=fock)
-    uzay = mantik_filtresi(uzay)
-    uzay = mukayese_filtresi(uzay, hafiza=hafiza,
-                             mahalli=getattr(nefs, "mahalli", None))
-    safha("D5 SÜZGEÇ")
-    netice = cozum_uzayi_kapat(uzay, sual, hamiltonyen=hamiltonyen)
-    netice["uzunluk_genliği"] = uzunluk_genligi(
-        getattr(nefs, "mahalli", None), int(netice["pencere"]))
-    Z.update({"sual": sual, "uzay": uzay, "netice": netice})
-    return Z
-
-
-def d5b_sadakat(Z: Dict[str, Any]) -> Dict[str, Any]:
-    ayar = Z["ayar"]
-    nefs = Z["nefs"]
-    hafiza = Z["hafiza"]
-    fock = Z["fock"]
-    netice = Z["netice"]
-    _mzn = Z["_mzn"]
-    _sadakat_ayari = SadakatAyari(acik=int(ayar.sadakat_acik),
-                                  parite_lifi=int(ayar.parite_lifi),
-                                  lif_yapisi=tuple(ayar.lif_yapisi),
-                                  sozluk=int(ayar.sozluk))
-    sadakat_devresi(nefs=nefs, hafiza=hafiza, fock=fock, netice=netice,
-                    ayar=_sadakat_ayari)
-    ayar.pencere = int(netice["pencere"])
-    hafiza.kapasite = int(netice["hafıza_kapasitesi"])
-    mzn = mizan_ayari(ayar)
-    _mzn["a"] = mzn
-    safha("D5b SADAKAT", pencere=int(ayar.pencere))
-    Z.update({"_sadakat_ayari": _sadakat_ayari, "mzn": mzn, "_mzn": _mzn})
-    return Z
-
-
-def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
-    ayar = Z["ayar"]
-    nefs = Z["nefs"]
-    hafiza = Z["hafiza"]
-    fock = Z["fock"]
-    netice = Z["netice"]
-    veri = Z["veri"]
-    p0 = Z["p0"]
-    d = Z["d"]
-    mzn = Z["mzn"]
-    _mzn = Z["_mzn"]
-    _elle_lam = Z["_elle_lam"]
-    hamiltonyen = Z["hamiltonyen"]
-    kapi_hukmu = Z["kapi_hukmu"]
-    kademe_gorevleri = Z["kademe_gorevleri"]
-    _sadakat_ayari = Z["_sadakat_ayari"]
-    silsile = Z["silsile"]
-
-    def _dengele(dokum) -> Dict[str, float]:
-        _nispet = hamiltonyen.kefelerden(dokum).nispetler()
-        lam = denge(dokum, nispet=_nispet)
-        for ad, deger in lam.items():
-            if ad == "frenlenen" or ad in _elle_lam:
-                continue
-            setattr(ayar, ad, float(deger))
-        _mzn["a"] = mizan_ayari(ayar)
-        _katilim = silsile.get("mertebeler_arasi_katilim_payi") or {}
-        if _katilim:
-            _motor_kategori = float(_katilim.get("mertebe_1_payi", 0.0))
-            _hamilton_kategori = float(_nispet.get("kategori", 0.0))
-            _fark = abs(_motor_kategori - _hamilton_kategori)
-            if _fark > 0.3:
-                safha("D6 MİZAN · UYUMSUZLUK",
-                      motor_kategori="%.3f" % _motor_kategori,
-                      hamiltonyen_kategori="%.3f" % _hamilton_kategori,
-                      fark="%.3f" % _fark)
-        return lam
-
-    ilk_kefeler = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=mzn,
-                              kademe_gorevleri=kademe_gorevleri,
-                              ne="döküm")
-    olculen_lam = _dengele(ilk_kefeler)
-    mzn = _mzn["a"]
-    _sayac = {"çağrı": 0}
-    from tanilama.hiz_teftisi import had as _hiz_haddi
-    olcer = Hizolcer(belirtec_basina=len(veri) * int(ayar.pencere),
-                     had=float(_hiz_haddi(int(ayar.d), int(ayar.karo))),
-                     ad="küllî mizan", sert=True,
-                     canli_saniye=float(ayar.canli_saniye))
-    hizolcer_bagla(olcer)
-
-    _kume: Dict[str, Any] = {"v": list(veri), "adım": 0}
-    _seyir: List[Dict[str, float]] = []
-    safha("D6 MİZAN · nöbet")
-    nobet = nobet_kur(nefs, ara_saniye=float(ayar.mihenk_arasi),
-                      pencere=int(ayar.pencere),
-                      taban=int(ayar.veri_lifi),
-                      basamak=int(ayar.belirtec_basamak),
-                      kodlama=str(ayar.kodlama))
-
-    def _kume_kimlik(kume) -> str:
-        import hashlib
-        h = hashlib.blake2b(digest_size=3)
-        for o in kume:
-            h.update(np.asarray(o[0], np.int64).tobytes()[:64])
-            h.update(bytes([int(o[1]) & 0xFF]))
-        return h.hexdigest()
-
-    def kayip_p(P: np.ndarray) -> np.ndarray:
-        P = np.atleast_2d(np.asarray(P, float))
-        out = np.empty(P.shape[0], float)
-        kume = list(_kume["v"])
-        for i, p in enumerate(P):
-            _sayac["çağrı"] += 1
-            sadakat_devresi(nefs=nefs, hafiza=hafiza, fock=fock,
-                            netice=netice, ayar=_sadakat_ayari)
-            with olcer.saat(len(kume) * int(ayar.pencere)):
-                t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
-                                hafiza=hafiza.klon(),
-                                kapi_hukmu=kapi_hukmu,
-                                adim=int(_kume["adım"]),
-                                kademe_gorevleri=kademe_gorevleri)
-            out[i] = float(t["kayıp"])
-            _seyir.append({"V": float(t["kayıp"]),
-                           "ham": float(t.get("kayıp_ham", 0.0))})
-            nobet.yokla(p, kayip=float(t["kayıp"]),
-                        ham=float(t.get("kayıp_ham", 0.0)),
-                        kume=len(kume), kume_kimlik=_kume_kimlik(kume),
-                        eniyileme=mecz_beyani(),
-                        adim=_sayac["çağrı"])
-        return out
-
-    def kayip_p_vektor(P: np.ndarray) -> np.ndarray:
-        p = np.asarray(P, float).reshape(-1)
-        kume = list(_kume["v"])
-        t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
-                        hafiza=hafiza.klon(), kapi_hukmu=kapi_hukmu,
-                        adim=int(_kume["adım"]),
-                        kademe_gorevleri=kademe_gorevleri, ne="döküm")
-        return np.asarray(t["artık"], float)[None, :]
-
-    def _eniyile(p_, kume):
-        n0 = _sayac["çağrı"]
-        _kume["v"] = list(kume)
-        _kume["adım"] = int(_sayac["çağrı"])
-        rr = mecz_egit(nefs, kayip_p, np.asarray(p_, float),
-                       kume=list(kume), sozluk=int(ayar.sozluk),
-                       ayar=MeczAyari(ad=ayar.ad,
-                                      tur=max(1, int(ayar.altuzay_ornek)),
-                                      tohum=int(ayar.tohum)),
-                       kayip_vektoru=kayip_p_vektor)
-        return np.asarray(rr["p"], float), _sayac["çağrı"] - n0
-
-    def _olc(p_, kume):
-        return kulli_mizan(nefs, list(kume), np.asarray(p_, float),
-                           ayar.sozluk, ayar=_mzn["a"], hafiza=hafiza,
-                           adim=_sayac["çağrı"], kapi_hukmu=kapi_hukmu,
-                           kademe_gorevleri=kademe_gorevleri, ne="döküm")
-
-    Z.update({"ilk_kefeler": ilk_kefeler, "olculen_lam": olculen_lam,
-              "_sayac": _sayac, "olcer": olcer, "_kume": _kume,
-              "_seyir": _seyir, "nobet": nobet, "kayip_p": kayip_p,
-              "_eniyile": _eniyile, "_olc": _olc, "_dengele": _dengele,
-              "mzn": _mzn["a"]})
-    return Z
-
-
-def d7_hamiltonyen_durumu(Z: Dict[str, Any]) -> Dict[str, Any]:
-    hamiltonyen = Z["hamiltonyen"]
-    lambda_nispetleri = hamiltonyen.nispetler()
-    yavas_mod_idx, yavas_mod_adi, yavas_agirlik = hamiltonyen.yavas_mod()
-    skaler_mizan = hamiltonyen.enerji()
-
-    safha("D7 HAMILTONYEN", yavas_mod=yavas_mod_adi,
-          skaler_mizan="%.4f" % float(skaler_mizan))
-    Z.update({"d7_lambda_nispetleri": lambda_nispetleri,
-              "d7_yavas_mod": yavas_mod_adi,
-              "d7_yavas_agirlik": yavas_agirlik,
-              "d7_skaler_mizan": skaler_mizan})
-    return Z
-
-
-def d8_dongu(Z: Dict[str, Any]) -> Dict[str, Any]:
-    ayar = Z["ayar"]
-    veri = Z["veri"]
-    p0 = Z["p0"]
-    devam = Z["devam"]
-    _eniyile = Z["_eniyile"]
-    _olc = Z["_olc"]
-    _dengele = Z["_dengele"]
-    mun = munasebet_kos(
-        veri, p0, _eniyile, _olc,
-        dengele=_dengele,
-        harita=Harita.hazineden(
-            {"münasebet.M": devam.get("müşterek")}
-            if devam.get("müşterek") is not None else None,
-            n_v=int(ayar.veri_lifi),
-            islenen=int(devam.get("müşterek_işlenen", 0) or 0)),
-        ayar=MunasebetAyari(
-            acik=1,
-            obek=int(ayar.yigin()),
-                            azami_tur=int(ayar.keyfiyet_turu),
-                            n_v=int(ayar.veri_lifi),
-            azami_saniye=float(ayar.azami_talim_saati) * 3600.0),
-        keyfiyet_ayari=KeyfiyetAyari(acik=1,
-                                     azami_tur=int(ayar.keyfiyet_turu)))
-    safha("D8 DÖNGÜ", temizlenen=int(mun.get("temizlenen", 0)))
-    Z.update({"mun": mun})
-    return Z
-
-
-def k4_hudut_yoklamasi(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from matematik.sonsuz_mertebeler_teorisi import DenetimHatasi
-    ayar = Z["ayar"]
-    veri = Z["veri"]
-    devam = Z["devam"]
-    _eniyile = Z["_eniyile"]
-    _olc = Z["_olc"]
-    _dengele = Z["_dengele"]
-    mun = Z["mun"]
-
-    azami_deneme = 3
-    deneme = 0
-    while int(mun.get("kirli_kalan", 0)) > 0 and deneme < azami_deneme:
-        deneme += 1
-        safha("K4 HUDUT · KİRLİ → K3'E DÖNÜŞ", deneme=deneme,
-              kirli_kalan=int(mun["kirli_kalan"]))
-        mun = munasebet_kos(
-            veri, np.asarray(mun["p"], float), _eniyile, _olc,
-            dengele=_dengele, harita=mun["harita"],
-            ayar=MunasebetAyari(
-                acik=1, obek=int(ayar.yigin()),
-                azami_tur=int(ayar.keyfiyet_turu),
-                n_v=int(ayar.veri_lifi),
-                azami_saniye=float(ayar.azami_talim_saati) * 3600.0),
-            keyfiyet_ayari=KeyfiyetAyari(acik=1,
-                                         azami_tur=int(ayar.keyfiyet_turu)))
-
-    hudut_gecildi = bool(int(mun.get("kirli_kalan", 0)) == 0)
-    if not hudut_gecildi:
-        raise DenetimHatasi(
-            "K4 HUDUT: %d deneme sonunda hâlâ %d kirli küme kaldı, "
-            "imleç ilerletilemez (ferman 1-I, 2-I)"
-            % (azami_deneme, int(mun["kirli_kalan"])))
-
-    safha("K4 HUDUT · TEMİZ", deneme=deneme)
-    Z.update({"mun": mun, "k4_hudut_gecildi": hudut_gecildi,
-              "k4_deneme": deneme})
-    return Z
-
-
-def d9_kapanis(Z: Dict[str, Any]) -> Dict[str, Any]:
-    ayar = Z["ayar"]
-    veri = Z["veri"]
-    p0 = Z["p0"]
-    d = Z["d"]
-    nefs = Z["nefs"]
-    hafiza = Z["hafiza"]
-    fock = Z["fock"]
-    mun = Z["mun"]
-    _derece = Z["_derece"]
-    _mzn = Z["_mzn"]
-    _kume = Z["_kume"]
-    _sayac = Z["_sayac"]
-    _seyir = Z["_seyir"]
-    kapi_hukmu = Z["kapi_hukmu"]
-    kademe_gorevleri = Z["kademe_gorevleri"]
-    _kume["v"] = list(veri)
-    kume_kapanisi = {
-        "yırtık": yirtiklari_tertiple(hafiza, getattr(nefs, "mahalli",
-                                                     None)),
-        "kapı": kapi_tertibi(kapi_hukmu, hafiza,
-                             getattr(nefs, "mahalli", None)),
-        "balya": balyala(hafiza, fock),
-        "derece_kapandı": int(sum(1 for _a in _derece if fock.yok_et(_a)))}
-    p_son = np.asarray(mun["p"], float)
-    _ilk = kulli_mizan(nefs, veri, p0, ayar.sozluk, ayar=_mzn["a"],
-                       hafiza=hafiza, adim=_sayac["çağrı"],
-                       kademe_gorevleri=kademe_gorevleri)
-    _son = kulli_mizan(nefs, veri, p_son, ayar.sozluk, ayar=_mzn["a"],
-                       hafiza=hafiza, adim=_sayac["çağrı"],
-                       kademe_gorevleri=kademe_gorevleri)
-    mzn = _mzn["a"]
-    r = {"p": p_son, "V_ilk": float(_ilk["kayıp"]),
-         "V_son": float(_son["kayıp"]),
-         "kayıp_çağrısı": int(_sayac["çağrı"]), "seyir": _seyir,
-         "günlük": [], "düşen_uzuv": {}}
-    safha("D9 KÜME KAPANIŞI", V_ilk="%.4f" % r["V_ilk"],
-          V_son="%.4f" % r["V_son"])
-    Z.update({"kume_kapanisi": kume_kapanisi, "p_son": p_son, "r": r,
-              "mzn": mzn})
-    return Z
-
-
-def d10_kelam(Z: Dict[str, Any]) -> Dict[str, Any]:
-    from kuantum.qegitim import degerlendir
-    ayar = Z["ayar"]
-    veri = Z["veri"]
-    d = Z["d"]
-    r = Z["r"]
-    mzn = Z["mzn"]
-    _mzn = Z["_mzn"]
-    _sayac = Z["_sayac"]
-    nefs = Z["nefs"]
-    hafiza = Z["hafiza"]
-    devam = Z["devam"]
-    dogrulama = Z["dogrulama"]
-    silsile = Z["silsile"]
-    hamiltonyen = Z["hamiltonyen"]
-    kademe_gorevleri = Z["kademe_gorevleri"]
-    mun = Z["mun"]
-    p_yildiz = np.asarray(r["p"], float)
-    assert p_yildiz.size == d, (
-        "tâlim %d parametre aldı, %d döndürdü" % (d, p_yildiz.size))
-    assert np.all(np.isfinite(p_yildiz)), "tâlim NaN/Inf parametre döndürdü"
-    nefs.yukle(p_yildiz)
-    deg = degerlendir(nefs, dogrulama, azami=ayar.degerlendirme_gorevi,
-                      pencere=ayar.pencere, sozluk=ayar.sozluk,
-                      azami_uret=ayar.azami_uret)
-    assert not deg.get("ölçüt_boş"), (
-        "ARC ÖLÇÜTÜ BOŞ -- hiçbir görev denenmedi.\n"
-        "  atlanan (hedef üretim haddinden uzun): %d\n"
-        "  üretim haddi: %d basamak   basamak/belirteç: %d\n"
-        "  Had belirteç cinsinden kalmış olabilir (ferman 1-N)."
-        % (int(deg.get("atlanan_uzun", 0)), int(ayar.azami_uret),
-           int(ayar.belirtec_basamak)))
-
-    ham_seyir = [float(x["V"]) for x in (r.get("seyir") or [])
-                 if isinstance(x, dict) and "V" in x]
-    ders = (ogreniyor_mu([float(r["V_ilk"])] + ham_seyir)
-            if ham_seyir else
-            {"öğreniyor": bool(r["V_son"] < r["V_ilk"]), "eğim": 0.0,
-             "bağıntı": 0.0, "artık": 0.0, "bükülme": 0.0,
-             "toplam_düşüş": float(r["V_ilk"] - r["V_son"])})
-
-    q_son = nefs.idrak_et(np.zeros((ayar.yigin(), 2, ayar.veri_lifi)))
-    tur = turun_genligi(nefs, q_son)
-    psi_son = tur.hal
-    dhr = dhr_ayrismasi(tur.yigin, q_son.y.ayar.lif, CasimirAyari(acik=1))
-    dhr["araya_girme"] = gelfand_tsetlin_araya_girme(dhr["pay"])
-    dhr["blok_artığı"] = blok_kosegen_artigi(tur.yigin, q_son.y.ayar.lif)
-    dhr["kartan_boyu"] = int(kartan_fazi(
-        q_son.y.ayar.lif, [float(ayar.ayna_teta)]).size)
-    _gercek_kat = silsile.get("turetilen_kategori_ham")
-    if _gercek_kat is not None:
-        _motor_sektor = len(_gercek_kat.nesneler)
-        dhr["motor_kategori_nesnesi"] = int(_motor_sektor)
-        dhr["sektör_farkı"] = int(abs(int(dhr["sektör"]) - _motor_sektor))
-        if dhr["sektör_farkı"] > 0:
-            safha("D10 KELÂM · DHR/KATEGORİ UYUMSUZLUĞU",
-                  dhr_sektör=int(dhr["sektör"]), motor_nesne=_motor_sektor,
-                  fark=int(dhr["sektör_farkı"]))
-
-    tdd = kanonik_adres(psi_son, cekirdek=int(ayar.tdd_cekirdek),
-                        ayar=TddAyari(tolerans=float(ayar.tdd_tolerans)))
-    stab = kararname(psi_son, mertebe=int(ayar.stab_mertebe))
-    goz = tur.sektor_araliklari()
-    K = int(ayar.golge_ornegi)
-    t_g = time.perf_counter()
-    if K > 0:
-        golge_ham = golge_al(psi_son, GolgeAyari(
-            ornek=K, had=float(ayar.golge_haddi), tohum=int(ayar.tohum)))
-        golge = kestir(golge_ham, goz, tahkik=True)
-        golge["açık"] = True
-    else:
-        golge = {"kestirim": np.zeros(len(goz)), "gözlenebilir": len(goz),
-                 "örnek": 0, "açık": False}
-    golge["gölge_sn"] = time.perf_counter() - t_g
-    t_t = time.perf_counter()
-    _P = np.abs(psi_son) ** 2
-    _P = _P / max(float(_P.sum()), 1e-300)
-    _tam = np.array([float(_P[i:j].sum()) for (i, j) in goz])
-    golge["tam_sn"] = time.perf_counter() - t_t
-    golge["hız"] = float(golge["tam_sn"] / max(golge["gölge_sn"], 1e-12))
-    golge.setdefault("azamî_hata",
-                     float(np.max(np.abs(golge["kestirim"] - _tam)))
-                     if _tam.size else 0.0)
-    flo = flo_evrimi(p_yildiz, MatchgateAyari(
-        mod=int(ayar.flo_modu), kapi=int(ayar.flo_kapisi),
-        tohum=int(ayar.tohum)))
-    sad = sadakat_beyani()
-    usl = usul_beyani()
-    sup = suphe_beyani()
-    assert int(sad["çağrı"]) > 0, (
-        "MANTIĞA SADAKAT HİÇ KOŞMADI -- ``nefs/sadakat.py`` ana akışta "
-        "çağrılmıyor demektir. Sadakat 7/24 koşmalıdır; koşmuyorsa "
-        "sistem mantık dışına taşabiliyor.")
-    assert int(sup["çağrı"]) > 0, (
-        "ŞÜPHE MANİFOLDU HİÇ KOŞMADI -- ``nefs/suphe.py`` bağlanmamış.")
-    assert int(usl["yoklama"]) > 0, (
-        "MANTIK YÜRÜTME KAPISI HİÇ YOKLANMADI -- ``nefs/usul.py`` "
-        "bağlanmamış. Sefer açılmayabilir; yoklanmaması başka şeydir.")
-    _tur = tur_beyani()
-    assert int(_tur["tur_başına_kan"]) == 1, (
-        "TURDA %s KAN ÇAĞRISI -- ferman 2-A turda BİR çağrı ister; "
-        "genlik ne iki kere üretilir ne sözlük boyunda şişirilir."
-        % _tur["tur_başına_kan"])
-    _devre = sadakat_devre_beyani()
-    assert int(_devre["çağrı"]) > 0, (
-        "SADAKAT DEVRESİ HİÇ KOŞMADI -- ferman 2-Đ istisnasız bütün "
-        "süperpozisyonlarda doğrulayıcı devre ister.")
-    assert not _devre["muaf"], (
-        "SADAKAT DEVRESİNDEN MUAF KALAN SÜPERPOZİSYON VAR: %r -- "
-        "ferman 2-Đ 'istisnasız' der (invaryant I8)." % (_devre["muaf"],))
-    son_sadakat = sadakat_uygula(psi_son.copy(), SadakatAyari(
-        acik=int(ayar.sadakat_acik), parite_lifi=int(ayar.parite_lifi),
-        lif_yapisi=tuple(ayar.lif_yapisi)))
-
-    nefs.yukle(p_yildiz)
-    _konusma = [padisah(g, nefs=nefs, ayar=ayar, hafiza=hafiza)
-                for g in list(dogrulama)[:int(ayar.kademe_gorevi)]]
-    konusma = {
-        "görev": len(_konusma),
-        "konuşan": sum(1 for c in _konusma if not c["sükût"]),
-        "susan": sum(1 for c in _konusma if c["sükût"]),
-        "budanan": sum(int(c.get("budanan", 0)) for c in _konusma),
-        "sebep": [c["sebep"] for c in _konusma if c["sükût"]][:3],
-        "belirteç": [list(c["belirteç"] or [])[:12] for c in _konusma][:2],
-        "güven": (float(np.mean([c["güven"] for c in _konusma]))
-                  if _konusma else 0.0)}
-
-    kefeler = kulli_mizan(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn,
-                          hafiza=hafiza, adim=_sayac["çağrı"],
-                          kademe_gorevleri=kademe_gorevleri, ne="döküm")
-    taban_durumu = hamiltonyen.kefelerden(kefeler).taban_durumu()
-    cetvel = mizan_cetveli(nefs, veri, p_yildiz, ayar.sozluk, ayar=mzn)
-    if int(ayar.mukayese_acik):
-        _dun_ilk = [np.asarray(h, complex) for h in tur.yigin[:4]]
-        _vec = vecihleri_istihrac(_dun_ilk + [psi_son])
-        mukayese = mukayese_beyani(
-            kefeler.get("spektrum"),
-            hata_payi(list(kefeler["artık_adı"]),
-                      list(np.asarray(kefeler["artık"], float))))
-        mukayese["kiplik"] = kiplik(np.asarray(psi_son, complex),
-                                    _dun_ilk, _vec)
-    else:
-        mukayese = mukayese_beyani(None, None)
-
-    harita = harita_kur(nefs, veri, sozluk=int(ayar.sozluk),
-                        silsile=silsile, munasebet=mun["harita"],
-                        onceki=devam.get("harita"))
-
-    safha("D10 KELÂM", konuşan=int(konusma["konuşan"]),
-          susan=int(konusma["susan"]))
-    Z.update({"p_yildiz": p_yildiz, "deg": deg, "ders": ders,
-              "q_son": q_son, "tur": tur, "psi_son": psi_son, "dhr": dhr,
-              "tdd": tdd, "stab": stab, "goz": goz,
-              "golge": golge, "flo": flo,
-              "sad": sad, "usl": usl, "sup": sup, "_tur": _tur,
-              "son_sadakat": son_sadakat, "konusma": konusma,
-              "kefeler": kefeler, "taban_durumu": taban_durumu,
-              "cetvel": cetvel, "mukayese": mukayese, "harita": harita})
-    return Z
-
-
-def d11_muhur(Z: Dict[str, Any]) -> Dict[str, Any]:
-    ayar = Z["ayar"]
-    d = Z["d"]
-    r = Z["r"]
-    mun = Z["mun"]
-    devam = Z["devam"]
-    imlec = Z["imlec"]
-    fock = Z["fock"]
-    hafiza = Z["hafiza"]
-    ders = Z["ders"]
-    kefeler = Z["kefeler"]
-    cetvel = Z["cetvel"]
-    harita = Z["harita"]
-    p_yildiz = Z["p_yildiz"]
-    taban_durumu = Z["taban_durumu"]
-    _kapanan = int(mun.get("temizlenen", 0)) + int(mun.get("kirli_kalan", 0))
-    kayit = hazine.muhurle(
-        _kapanan,
-        hazine_yolu(),
-        dict({"p": p_yildiz}, **hafiza.hazineye(),
-             **mun["harita"].hazineye()),
-        {"tur": int(devam.get("tur", 0)) + 1,
-         "imleç": imlec,
-         "taban_durumu": taban_durumu,
-         "fock": fock.beyan(),
-         "harita": harita.hazineye(),
-         "müşterek_işlenen": int(mun["harita"].islenen),
-         "devam_etti": bool(devam.get("yüklendi")),
-         "ölçülen_hız": float(
-             (hizolcer_beyani() or {}).get("belirteç_sn", 0.0)),
-         "ayar": ayar.ad, "parametre": d, "V_ilk": float(r["V_ilk"]),
-         "V_son": float(r["V_son"]), "veri_lifi": int(ayar.veri_lifi),
-         "sözlük": int(ayar.sozluk), "pencere": int(ayar.pencere),
-         "yerel_yuva": int(ayar.yerel_yuva), "karo": int(ayar.karo),
-         "hüküm_lifi": int(ayar.hukum_lifi), "d": int(ayar.d),
-         "cömert": float(ayar.comert),
-         "harman_kademesi": int(ayar.harman_kademesi),
-         "tohum": int(ayar.tohum),
-         "öğreniyor": bool(ders["öğreniyor"]),
-         "mizan": {k: v for k, v in kefeler.items()
-                   if isinstance(v, (int, float))},
-         "veri_cetveli": cetvel,
-         "hafıza_kapasitesi": int(ayar.hafiza_kapasitesi),
-         "hafıza_yazma": float(ayar.hafiza_yazma),
-         "hafıza_sönümü": float(ayar.hafiza_sonumu),
-         "zeno_eşiği": float(ayar.zeno_esigi)})
-    safha("D11 MÜHÜR", bayt=int(kayit.get("bayt", 0) or 0))
-    Z.update({"kayit": kayit})
-    return Z
-
-
-ZINCIR: Tuple[Any, ...] = (d0_gecit, d1_olcu, d2_silsile, d3_kurulus,
-                           d4_kapi, d5_uzay, d5b_sadakat, d6_mizan,
-                           d7_hamiltonyen_durumu,
-                           d8_dongu, k4_hudut_yoklamasi,
-                           d9_kapanis, d10_kelam, d11_muhur)
-
-
-def kulli_kayip_talimi(ayar: EgitimAyari = KISA_CPU,
-                       gorevler: Optional[Sequence] = None
-                       ) -> Dict[str, object]:
-    from tanilama.beyan import netice_derle
-    safha_sifirla()
-    Z: Dict[str, Any] = {"ayar": ayar, "gorevler": gorevler}
-    for durum in ZINCIR:
-        Z = durum(Z)
-    return netice_derle(Z)
-
-
-def muhurle(cikti_yolu: str, netice: Dict[str, object]) -> None:
-    dizin = os.path.dirname(cikti_yolu)
-    if dizin:
-        os.makedirs(dizin, exist_ok=True)
-    def _yaz(o):
-        import numpy as _np
-        if isinstance(o, (complex, _np.complexfloating)):
-            return {"re": float(o.real), "im": float(o.imag)}
-        if isinstance(o, _np.ndarray):
-            return o.tolist()
-        if isinstance(o, (_np.integer,)):
-            return int(o)
-        if isinstance(o, (_np.floating,)):
-            return float(o)
-        if isinstance(o, (set, tuple)):
-            return list(o)
-        if isinstance(o, (bytes, bytearray)):
-            return o.decode("utf-8", "replace")
-        return str(o)
-
-    with open(cikti_yolu + ".olcum.json", "w", encoding="utf-8") as f:
-        json.dump({k: v for k, v in netice.items() if k != "p"},
-                  f, ensure_ascii=False, indent=2, default=_yaz)
-    print("  [MÜHÜR] Ölçümler kaydedildi: %s.olcum.json" % cikti_yolu,
-          flush=True)
-
-
-def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
-        kulli_kayip_ile: bool = True) -> str:
-    ayar = PROFILLER.get(ayar_adi, KISA_CPU)
-    tek_iplik_zorla()
-    kulli: Optional[Dict[str, object]] = None
-    if kulli_kayip_ile:
-        kulli = kulli_kayip_talimi(ayar)
-        assert kulli and kulli.get("hazine"), (
-            "küllî kayıp hattı BOŞ döndü -- hazineye bir şey yazılmadı")
-    if cikti and kulli:
-        muhurle(cikti, kulli)
-    return talim_beyani(ayar, kulli)
-
-
-def d9_hafiza_yeniden_tertip_ve_alaka(rho_eski: np.ndarray,
-                                      dilimler: Dict[str, Tuple[int, int]],
-                                      Asim: np.ndarray) -> Dict[str, Any]:
-    n = rho_eski.shape[0]
-
-    alaka_skorlari: Dict[str, float] = {}
-    for mod_adi, (bas, son) in dilimler.items():
-        if bas < n and son <= n and son > bas:
-            alt_iz = float(np.real(np.trace(rho_eski[bas:son, bas:son])))
-            alaka_skorlari[mod_adi] = alt_iz
+import json
+import math
+import glob
+from typing import List, Dict, Any, Optional
+
+from matematik.temel import KuantumDurum, rastgele_kuantum_durum
+from nefs.mukayese import MukayeseMotoru, OntoMertebe, IntacManifoldu
+from nefs.vecih import VecihSpektrumu
+from nefs.mertebe_kesfi import MertebeKesfi
+from nefs.rust import RustFazi
+from nefs.hafiza import TopolojikHafizaKovani
+from nefs.suphe import SupheManifoldu, Iddia
+
+
+class EgitimHatti:
+    """
+    Nefs-i Müdrike Küllî Eğitim Hattı
+    1. Bebeklik Safhası: Fıtrat Kalibrasyonu (Zıtlık ve Lie simetrilerini öğrenme)
+    2. Rüşt Safhası: ARC-AGI-2 numuneleri üzerinde K-çifti Bargmann poligonu ile küllî kural eğitimi
+    """
+    def __init__(self, d: int = 16):
+        self.d = d
+        self.mukayese = MukayeseMotoru(d=d)
+        self.vecih_spektrumu = VecihSpektrumu()
+        self.mertebe_kesfedici = MertebeKesfi(d=d)
+        self.rust = RustFazi(t0=5.0, tau=2.0)
+        self.hafiza = TopolojikHafizaKovani()
+        self.suphe = SupheManifoldu()
+
+        # Sözlük ve durum haritası (Fıtrat durumları)
+        self.durum_defteri: Dict[str, KuantumDurum] = {}
+
+    def _durum_al_veya_uret(self, etiket: str, tohum: Optional[int] = None) -> KuantumDurum:
+        if etiket not in self.durum_defteri:
+            self.durum_defteri[etiket] = rastgele_kuantum_durum(self.d, etiket=etiket, tohum=tohum)
+        return self.durum_defteri[etiket]
+
+    def bebeklik_fitrat_kalibrasyonu(self, adim_sayisi: int = 6) -> List[Dict[str, Any]]:
+        """
+        1. Safha: Bebeklik / Tabula Rasa Terbiyesi
+        Model zıtlıkları (içeride vs dışarıda) ve geometrik simetrileri öğrenir.
+        Hata doğrudan fıtrata ve ağırlıklara akar.
+        """
+        print("\n=== [1. SAFHA: TAHFÎZ - FITRATIN TERBİYESİ VE KALİBRASYONU] ===")
+        zit_ciftler = [
+            ("içeride", "dışarıda"),
+            ("doğru", "yanlış"),
+            ("var", "yok"),
+            ("büyük", "küçük"),
+            ("aydınlık", "karanlık"),
+            ("amir", "memur")
+        ]
+
+        kayitlar = []
+        for i in range(adim_sayisi):
+            cift = zit_ciftler[i % len(zit_ciftler)]
+            d1 = self._durum_al_veya_uret(cift[0], tohum=i * 10 + 1)
+            d2 = self._durum_al_veya_uret(cift[1], tohum=i * 10 + 2)
+
+            # İkili mukayese
+            intac = self.mukayese.nli_mukayese([d1, d2], mertebe=OntoMertebe.MEZO_KIYAS)
+
+            # İki zıt kavramın fazı pi'ye yaklaştırılmalıdır (Möbius zıtlığı)
+            hedef_faz = math.pi
+            faz_hatasi = abs(abs(intac.berry_fazi) - hedef_faz)
+
+            # Rüşt katsayısına göre hatayı bölüştür
+            fitrat_hata, hafiza_hata, durum_aciklama = self.rust.hata_dagitimi(faz_hatasi)
+
+            # Ağırlıkları (vektör fazını) hedefe doğru bük
+            alpha = self.rust.adim_ilerlet()
+
+            # Fıtratı eğit (Zıt kutup durumunu güncelle)
+            if not self.rust.alpha() >= 0.8:
+                # İkinci durumun fazını d1'e göre -1 yönüne kaydır
+                yeni_v = [-x for x in d1.v]
+                self.durum_defteri[cift[1]] = KuantumDurum(yeni_v, etiket=cift[1])
+
+            adim_kaydi = {
+                "adim": i + 1,
+                "cift": cift,
+                "topoloji": intac.topoloji.value,
+                "faz_hatasi": round(faz_hatasi, 4),
+                "fitrat_hatasi": round(fitrat_hata, 4),
+                "hafiza_hatasi": round(hafiza_hata, 4),
+                "alpha_rust": round(alpha, 3),
+                "durum": durum_aciklama
+            }
+            kayitlar.append(adim_kaydi)
+            print(f"  Adım {i+1} | Çift: {cift[0]} <-> {cift[1]} | Faz Hatası: {faz_hatasi:.4f} | {durum_aciklama}")
+
+        return kayitlar
+
+    def arc_kulliyat_egitimi(self, azami_gorev: int = 5) -> List[Dict[str, Any]]:
+        """
+        2. Safha: ARC-AGI-2 Küllî Numune ve Kural Eğitimi
+        Eğitim çiftleri K-nokta Bargmann poligonuna sokulur.
+        Ortak kural tasdiki ve istisna tespiti yapılır.
+        """
+        print(f"\n=== [2. SAFHA: TAHKİK - ARC-AGI-2 KÜLLÎ NUMUNE VE MÎZÂN EĞİTİMİ] ===")
+        arc_yolu = "idrak/veri/arc_agi_2/training"
+        gorev_dosyalari = sorted(glob.glob(os.path.join(arc_yolu, "*.json")))
+
+        if not gorev_dosyalari:
+            print("  [İkaz] ARC eğitim dosyaları bulunamadı, yapay numunelerle eğitilecek.")
+            gorev_verileri = [
+                {
+                    "id": "sentetik_01",
+                    "train": [
+                        {"input": [[1, 0], [0, 1]], "output": [[0, 1], [1, 0]]},
+                        {"input": [[2, 0], [0, 2]], "output": [[0, 2], [2, 0]]},
+                        {"input": [[3, 0], [0, 3]], "output": [[0, 3], [3, 0]]}
+                    ]
+                }
+            ]
         else:
-            alaka_skorlari[mod_adi] = 0.0
-
-    jenerator = 1j * (np.pi / 4.0) * Asim[:n, :n]
-    U_tertip = np.eye(n, dtype=complex) + jenerator + 0.5 * (jenerator @ jenerator)
-    q, _ = np.linalg.qr(U_tertip)
-    U_tertip = q
-
-    rho_yeni = U_tertip @ rho_eski @ U_tertip.conj().T
-    iz_yeni = np.trace(rho_yeni)
-    if abs(iz_yeni) > 1e-12:
-        rho_yeni = rho_yeni / iz_yeni
-
-    return {"alaka_skorlari": alaka_skorlari, "rho_yeni_muhur": rho_yeni,
-            "en_alakali_vecih": max(alaka_skorlari.items(), key=lambda x: x[1])[0]}
-
-
-def d7_hamiltonyen_nispetleri(kefeler_vektoru: np.ndarray,
-                              V_kuplaj: Optional[np.ndarray] = None
-                              ) -> Tuple[np.ndarray, int, float]:
-    k = len(kefeler_vektoru)
-    if V_kuplaj is None:
-        V_kuplaj = np.outer(kefeler_vektoru, kefeler_vektoru)
-    V_kuplaj = np.array(V_kuplaj, dtype=float, copy=True)
-    np.fill_diagonal(V_kuplaj, 0.0)
-
-    kuplaj_kutlesi = np.linalg.norm(V_kuplaj, axis=0)
-    p_kefe = kefeler_vektoru / (np.sum(kefeler_vektoru) + 1e-12)
-    entropiler = -p_kefe * np.log(p_kefe + 1e-12)
-    yavas_mod_skorlari = kuplaj_kutlesi * entropiler
-    yavas_mod = int(np.argmax(yavas_mod_skorlari))
-
-    H_cekirdek = np.diag(np.asarray(kefeler_vektoru, float))
-    H_birlesik = H_cekirdek + V_kuplaj
-    H_birlesik = 0.5 * (H_birlesik + H_birlesik.T)
-
-    ozdegerler, ozvektorler = np.linalg.eigh(H_birlesik)
-    taban_vektoru = ozvektorler[:, 0]
-    lambda_nispetleri = np.abs(taban_vektoru) ** 2
-    lambda_nispetleri /= (np.sum(lambda_nispetleri) + 1e-12)
-
-    skaler_mizan = float(ozdegerler[0])
-
-    return lambda_nispetleri, yavas_mod, skaler_mizan
-
-
-def d8a_mecz_ve_wkb_tunelleme(kefeler: np.ndarray, P: np.ndarray,
-                              son_token: int, hedef: int,
-                              Kan_rez: Optional[np.ndarray] = None,
-                              Asim: Optional[np.ndarray] = None,
-                              hedef_beklentisi: float = 0.5) -> Dict[str, Any]:
-    from matematik.sonsuz_mertebeler_teorisi import VahimeIslemcisi, AkileKatmani
-    ortalama_hata = float(np.mean(kefeler))
-    cukur_varyansi = float(np.sqrt(np.mean((kefeler - ortalama_hata) ** 2)))
-    kuyu_derinligi = float(np.clip(kefeler[1], 0.0, 1.0))
-
-    t_wkb_ham = float(np.exp(-2.0 * np.sqrt(2.0 * kuyu_derinligi + 1e-12)))
-
-    if Kan_rez is not None and Asim is not None:
-        vahime_raporu = VahimeIslemcisi().mana_suz(son_token, hedef, P, Kan_rez, Asim)
-        ameli_akil_raporu = AkileKatmani().ameli_akil_tart(
-            hedef, vahime_raporu, hedef_beklentisi)
-        irade_katsayisi = ameli_akil_raporu["irade_katsayisi"]
-        t_wkb = float(irade_katsayisi * t_wkb_ham
-                      + (1.0 - irade_katsayisi) * (1.0 - vahime_raporu["tehdit"]))
-        nefsi_sevk_zorlamasi = bool(vahime_raporu["acil_refleks"]
-                                    and not ameli_akil_raporu["ahlaki_onay"])
-    else:
-        vahime_raporu = None
-        ameli_akil_raporu = None
-        t_wkb = t_wkb_ham
-        nefsi_sevk_zorlamasi = False
-
-    kuyuya_saplandi = bool(cukur_varyansi < 1e-3 and ortalama_hata > 0.1) or nefsi_sevk_zorlamasi
-
-    sicrama_vektoru = np.zeros_like(P[son_token])
-    if kuyuya_saplandi:
-        if not nefsi_sevk_zorlamasi and ameli_akil_raporu is not None and ameli_akil_raporu["ahlaki_onay"]:
-            en_zayif_koordinat = int(hedef)
-        else:
-            en_zayif_koordinat = int(np.argmin(P[son_token]))
-        sicrama_vektoru[en_zayif_koordinat] = t_wkb
-        sicrama_vektoru /= (np.linalg.norm(sicrama_vektoru) + 1e-12)
-
-    return {"cukur_varyansi": cukur_varyansi, "wkb_gecirgenligi": t_wkb,
-            "kuyuya_saplandi": kuyuya_saplandi, "nakil_sicramasi": sicrama_vektoru,
-            "vahime_raporu": vahime_raporu, "ameli_akil_raporu": ameli_akil_raporu,
-            "nefsi_sevk_zorlamasi": nefsi_sevk_zorlamasi}
-
-
-def d10_durma_ve_sukut_yokla(adim: int, tikanma_gecmisi: List[float],
-                             veri_lifi: int, alan_degeri_sukut: float = 0.45,
-                             psi_durum: Optional[np.ndarray] = None,
-                             eylem_vektoru: Optional[np.ndarray] = None,
-                             kalp: Optional[Any] = None
-                             ) -> Tuple[bool, str, float]:
-    n = max(2, int(veri_lifi))
-    k = len(tikanma_gecmisi)
-
-    uzunluk_enerjileri = np.array([np.exp(-float(t)) for t in tikanma_gecmisi], dtype=float)
-    uzunluk_enerjileri /= (np.sum(uzunluk_enerjileri) + 1e-12)
-
-    mevcut_enerji = uzunluk_enerjileri[adim]
-    kalan_kuyruk_enerjisi = (float(np.sum(uzunluk_enerjileri[adim + 1:]))
-                            if adim + 1 < k else 0.0)
-
-    son_engel = tikanma_gecmisi[-1]
-    guven = float(np.exp(-son_engel / float(adim + 1)))
-    kesinlik = float(np.clip((guven - 1.0 / n) / (1.0 - 1.0 / n + 1e-12), 0.0, 1.0))
-
-    if kalp is not None and psi_durum is not None and eylem_vektoru is not None:
-        itminan_derecesi = kalp.itminan_olc(psi_durum)
-        vicdan_raporu = kalp.vicdani_murakabe(eylem_vektoru, itminan_derecesi)
-
-        if vicdan_raporu["kalbi_fetva"] and itminan_derecesi > 0.7:
-            return True, "KALBÎ_İTMİNÂN_BURHAN_TAMAM", kesinlik
-        if (vicdan_raporu["kalp_durumu"] == "VİCDANÎ_ŞÜPHE_VE_IKRAH"
-                and alan_degeri_sukut > kesinlik and adim > 0):
-            return True, "KALBÎ_SUKUT_SUAL_TEVCİH", kesinlik
-
-    if alan_degeri_sukut > kesinlik and adim > 0:
-        return True, "SÜKÛT", kesinlik
-
-    if mevcut_enerji > kalan_kuyruk_enerjisi and son_engel < 0.05:
-        return True, "BURHAN_TAMAM", kesinlik
-
-    return False, "DEVAM", kesinlik
-
-
-class SenetKaydi:
-    __slots__ = ("tur", "yer", "kapi_matrisi", "aci")
-
-    def __init__(self, tur: str, yer: int, kapi_matrisi: np.ndarray, aci: float) -> None:
-        self.tur, self.yer, self.kapi_matrisi, self.aci = tur, yer, kapi_matrisi, aci
-
-
-def d8a_senet_ve_egim_mutabakati(senetler: List[SenetKaydi], psi_0: np.ndarray,
-                                 hata_vektoru: np.ndarray, yon_vektoru: np.ndarray
-                                 ) -> Dict[str, Any]:
-    psi_ileri = [psi_0]
-    for s in senetler:
-        psi_ileri.append(s.kapi_matrisi @ psi_ileri[-1])
-    psi_son = psi_ileri[-1]
-
-    lambda_i = hata_vektoru * psi_son
-    ek_durum_egim = []
-    for i in reversed(range(len(senetler))):
-        s = senetler[i]
-        d_kapi = 1j * s.kapi_matrisi
-        psi_onceki = psi_ileri[i]
-        egim_p = 2.0 * np.real(np.vdot(lambda_i, d_kapi @ psi_onceki))
-        ek_durum_egim.append(egim_p)
-        lambda_i = s.kapi_matrisi.conj().T @ lambda_i
-
-    ek_durum_egim = np.array(list(reversed(ek_durum_egim)), dtype=float)
-
-    d_psi = np.zeros_like(psi_0)
-    for i, s in enumerate(senetler):
-        d_kapi = 1j * s.kapi_matrisi
-        y_val = yon_vektoru[i] if i < len(yon_vektoru) else 1.0
-        d_psi = s.kapi_matrisi @ d_psi + y_val * (d_kapi @ psi_ileri[i])
-
-    ikiz_turev = 2.0 * np.real(np.vdot(hata_vektoru * psi_son, d_psi))
-
-    ek_durum_projeksiyon = float(np.dot(ek_durum_egim[:len(yon_vektoru)],
-                                        yon_vektoru[:len(ek_durum_egim)]))
-    fark = abs(ek_durum_projeksiyon - ikiz_turev)
-    mutabakat = float(fark / (abs(ikiz_turev) + 1e-12))
-
-    return {"senet_sayisi": len(senetler), "ek_durum_egim": ek_durum_egim,
-            "ikiz_turev": ikiz_turev, "mutabakat_hatasi": mutabakat,
-            "mutabakat_tam_mi": bool(mutabakat < 1e-10)}
-
-
-def d6_cartan_kapi_evrimi(psi: np.ndarray, parametre_acilari: np.ndarray
-                          ) -> Tuple[np.ndarray, float, List[SenetKaydi]]:
-    n = len(psi)
-    psi_guncel = psi.copy().astype(complex)
-    theta_cartan = 0.0
-    senetler: List[SenetKaydi] = []
-
-    H_c = np.diag([np.cos(2.0 * np.pi * k / n) for k in range(n)])
-
-    for j, aci in enumerate(parametre_acilari[:n]):
-        U_j = np.diag(np.exp(1j * aci * np.diag(H_c)))
-        psi_guncel = U_j @ psi_guncel
-
-        katki = float(np.real(np.trace(H_c @ U_j)) / n)
-        theta_cartan += katki
-
-        senetler.append(SenetKaydi(tur="Meleke_Kapisi", yer=j, kapi_matrisi=U_j, aci=float(aci)))
-
-    psi_guncel /= (np.linalg.norm(psi_guncel) + 1e-12)
-
-    return psi_guncel, theta_cartan, senetler
-
-
-class KategorikBalya:
-    __slots__ = ("balya_id", "kayitlar", "funktor_tersi", "kok_adresi")
-
-    def __init__(self, balya_id: str, kayitlar: List[Any], funktor_tersi: np.ndarray, kok_adresi: str) -> None:
-        self.balya_id, self.kayitlar, self.funktor_tersi, self.kok_adresi = (
-            balya_id, kayitlar, funktor_tersi, kok_adresi)
-
-    def balya_ac(self) -> List[Any]:
-        return list(self.kayitlar)
-
-
-def d9_kume_kapanisi_ve_balyalama(hafiza_havuzu: Dict[str, Any],
-                                  vecih_ortusmeleri: Dict[str, float],
-                                  aktif_kayitlar: List[Any]) -> Dict[str, Any]:
-    if vecih_ortusmeleri:
-        yaprak = min(vecih_ortusmeleri.items(), key=lambda x: x[1])[0]
-    else:
-        yaprak = "asli_vecih"
-
-    yeni_kok_adresi = "modalite." + str(yaprak)
-    hafiza_havuzu.setdefault("cartan_kokleri", set()).add(yeni_kok_adresi)
-
-    balya_id = "Balya_" + str(len(hafiza_havuzu.get("balyalar", [])))
-    funktor_tersi = np.eye(max(2, len(aktif_kayitlar)))
-
-    yeni_balya = KategorikBalya(
-        balya_id=balya_id,
-        kayitlar=list(aktif_kayitlar),
-        funktor_tersi=funktor_tersi,
-        kok_adresi=yeni_kok_adresi
-    )
-    hafiza_havuzu.setdefault("balyalar", []).append(yeni_balya)
-
-    return {"acilan_cartan_koku": yeni_kok_adresi, "yeni_balya_id": balya_id,
-            "balyalanan_nesne_sayisi": len(aktif_kayitlar), "silinen_kayit_sayisi": 0}
-
-
-def d8a_senet_sadakati_dogrula(senetler: List[SenetKaydi],
-                               psi_0: np.ndarray,
-                               psi_son: np.ndarray) -> Dict[str, Any]:
-    if not senetler:
-        return {"senet_sadakati": 0.0, "sadakat_tam_mi": True, "islenen_kapi_adedi": 0}
-
-    psi_oynat = psi_0.copy().astype(complex)
-    for s in senetler:
-        psi_oynat = s.kapi_matrisi @ psi_oynat
-
-    psi_oynat_norm = float(np.linalg.norm(psi_oynat))
-    if psi_oynat_norm > 1e-12:
-        psi_oynat /= psi_oynat_norm
-
-    psi_son_norm = float(np.linalg.norm(psi_son))
-    psi_son_ref = psi_son / (psi_son_norm + 1e-12) if psi_son_norm > 1e-12 else psi_son
-
-    fark_normu = float(np.linalg.norm(psi_oynat - psi_son_ref))
-    senet_sadakati = float(fark_normu / (float(np.linalg.norm(psi_son_ref)) + 1e-12))
-
-    sadakat_tam_mi = bool(senet_sadakati < 1e-12)
-
-    return {
-        "senet_sadakati": senet_sadakati,
-        "sadakat_tam_mi": sadakat_tam_mi,
-        "islenen_kapi_adedi": len(senetler)
-    }
-
-
-def d4_kapi_tam_tasnif_mercii(hedef_token: int,
-                              veri_lifi: int,
-                              psi_durum: np.ndarray,
-                              vecih_ortusmeleri: Sequence[float]) -> Dict[str, Any]:
-    d = int(veri_lifi)
-
-    basamak_gecersiz = bool(hedef_token < 0 or hedef_token >= d)
-    genlik_gecersiz = bool(not np.all(np.isfinite(psi_durum)))
-
-    if basamak_gecersiz or genlik_gecersiz:
-        return {
-            "hüküm": "MANTIKSIZLIK",
-            "eylem": "RET",
-            "sebep": "Qudit taban taşması veya sonlu olmayan genlik",
-            "ihtilaf": 1.0,
-            "ittifak": 0.0
-        }
-
-    dizi = np.array(vecih_ortusmeleri, dtype=float) if len(vecih_ortusmeleri) else np.array([0.5])
-    azam_ort = float(np.max(dizi))
-    asg_ort = float(np.min(dizi))
-
-    ihtilaf = float(azam_ort - asg_ort)
-    ittifak = float(1.0 - ihtilaf)
-
-    if ihtilaf > ittifak:
-        hukum = "TENAKUZ"
-        eylem = "TERFİ"
-    elif ittifak > ihtilaf and asg_ort >= ittifak:
-        hukum = "KISIRDÖNGÜ"
-        eylem = "TEVAKKUF"
-    else:
-        hukum = "TASDİK"
-        eylem = "KABUL"
-
-    return {
-        "hüküm": hukum,
-        "eylem": eylem,
-        "ihtilaf": ihtilaf,
-        "ittifak": ittifak,
-        "asgari_ortusme": asg_ort
-    }
-
-
-def d9_dugum_coz_bag_gevset(P: np.ndarray,
-                            norm_korollalar: Dict[Tuple[Tuple[int, ...], int], float],
-                            gevseme_katsayisi: float = 0.85
-                            ) -> Tuple[np.ndarray, Dict[Tuple[Tuple[int, ...], int], float]]:
-    P_gevsek = P.copy()
-    n = P.shape[0]
-    for i in range(n):
-        for j in range(n):
-            if i != j:
-                P_gevsek[i, j] *= gevseme_katsayisi
-        P_gevsek[i] /= (np.sum(P_gevsek[i]) + 1e-12)
-
-    gevsek_korollalar = {k: v * gevseme_katsayisi for k, v in norm_korollalar.items()}
-    toplam = sum(gevsek_korollalar.values()) + 1e-12
-    for k in gevsek_korollalar:
-        gevsek_korollalar[k] /= toplam
-
-    return P_gevsek, gevsek_korollalar
-
-
-def d2_enformasyon_ve_hendese_metrikleri(P: np.ndarray, Asim: np.ndarray) -> Dict[str, float]:
-    n = P.shape[0]
-
-    P_ortak = P / (np.sum(P) + 1e-12)
-    p_satir = np.sum(P_ortak, axis=1, keepdims=True)
-    p_sutun = np.sum(P_ortak, axis=0, keepdims=True)
-    payda = p_satir @ p_sutun + 1e-12
-
-    oran = np.where(P_ortak > 1e-12, P_ortak / payda, 1.0)
-    karsilikli_haber = float(np.sum(np.where(P_ortak > 1e-12, P_ortak * np.log2(oran), 0.0)))
-    karsilikli_haber = max(0.0, karsilikli_haber)
-
-    sapma = float(np.linalg.norm(P - P.T))
-
-    ortusme = np.sqrt(np.clip(P * P.T, 0.0, None))
-    mesafe = 1.0 - ortusme
-
-    ihlal_sayisi = 0
-    toplam_uclu = 0
-    ornek_boyut = min(n, 15)
-    for x in range(ornek_boyut):
-        for y in range(ornek_boyut):
-            for z in range(ornek_boyut):
-                if x != y and y != z and x != z:
-                    toplam_uclu += 1
-                    if mesafe[x, z] > (mesafe[x, y] + mesafe[y, z] + 1e-4):
-                        ihlal_sayisi += 1
-
-    ucgen_ihlali_nispeti = float(ihlal_sayisi / max(1, toplam_uclu))
-
-    return {
-        "karsilikli_haber_bit": karsilikli_haber,
-        "simetri_sapmasi": sapma,
-        "ucgen_ihlali_nispeti": ucgen_ihlali_nispeti
-    }
-
-
-
-def divan(dizin: Optional[str] = None) -> str:
-    from nefs.melekeler import QNefs
-    from nefs.kulli_kayip import kademe_parametreleri_ac
-    from kuantum.qegitim import ornekler, ornek_bol, belirtecleri_kodla
-
-    ayar = KISA_CPU
-    nefs = QNefs(ayar.tohum, ayar.qayar())
-    nefs.idrak_et(np.eye(2, ayar.veri_lifi))
-    kademe_parametreleri_ac(nefs.p)
-
-    yuk = hazineden_yukle(nefs, ayar, dizin)
-    hafiza = hafizayi_yukle(ayar, dizin)
-    p_yildiz = np.asarray(yuk["p"], float)
-
-    nobet = nobet_kur(nefs, ara_saniye=0.0, pencere=int(ayar.pencere),
-                      taban=int(ayar.veri_lifi),
-                      basamak=int(ayar.belirtec_basamak),
-                      kodlama=str(ayar.kodlama))
-    mihenk_r = nobet.beyan(p_yildiz)
-
-    kok = Kok(sozluk=int(ayar.sozluk), comert=float(ayar.comert),
-             tohum=int(ayar.tohum), hiz=float(ayar.olculen_hiz))
-    olcek_str = olcek_beyani(kok, ayar.olcek_dokumu)
-    dokum = kulliyat_dokumu()
-    kulliyat_str = kulliyat_beyani(dokum)
-
-    gorevler = list(gorevleri_getir("training"))
-    veri = ornekler(gorevler, azami=8, pencere=int(ayar.pencere),
-                    sozluk=int(ayar.sozluk), tohum=int(ayar.tohum),
-                    taban=int(ayar.veri_lifi),
-                    basamak=int(ayar.belirtec_basamak))
-    assert veri, "TEFTİŞ İÇİN VERİ BOŞ -- külliyat/ARC kaynağı hazır değil"
-    mz = mizan_ayari(ayar)
-    kefeler = kulli_mizan(nefs, veri, p_yildiz, ayar.sozluk, ayar=mz,
-                          hafiza=hafiza, adim=0, ne="döküm")
-    q_son = nefs.idrak_et(belirtecleri_kodla(
-        list(ornek_bol(veri[0])[0]), ayar.veri_lifi, ayar.veri_lifi))
-    sadakat_uygula(np.asarray(q_son.y.psi, complex).copy(),
-                   SadakatAyari(acik=int(ayar.sadakat_acik),
-                                parite_lifi=int(ayar.parite_lifi),
-                                lif_yapisi=tuple(ayar.lif_yapisi)))
-    keyf = keyfiyet(kefeler, sadakat_beyani(), KeyfiyetAyari())
-    keyf_str = keyfiyet_beyani()
-
-    s = ["", "=== TEFTİŞ / DİVAN (main/egitim.py teftiş) ===", "",
-        "  hazine  : %s   (yüklendi: %s)"
-        % (yuk.get("yol"), bool(yuk.get("yüklendi", True))),
-        "  hafıza  : %s" % hafiza.beyan(),
-        "", mihenk_r["metin"],
-        "", olcek_str, "", kulliyat_str, "",
-        "  KEYFİYET (bu hazinenin mevcut mizan/sadakat durumundan): %r"
-        % (keyf,), "", keyf_str]
-    return "\n".join(str(x) for x in s)
-
-
-KIPLER: Tuple[str, ...] = ("tâlim", "sıfırla", "mizan", "sabit",
-                           "kaggle", "veri", "teftiş")
-
-
-def profil_sec() -> EgitimAyari:
-    from nefs.donanim import gpu_var_mi
-    g = gpu_var_mi()
-    if not g.get("var"):
-        return DAR
-    kart = list(g.get("cihaz") or ())
-    vram = 0.0
-    for satir in kart:
-        for parca in str(satir).split(","):
-            p = parca.strip()
-            if p.lower().endswith("mib"):
-                vram += float(p[:-3].strip()) / 1024.0
-    if len(kart) >= 2 and vram >= 40.0:
-        return AZAMI
-    return ORTA
-
-
-def taht(ne: str = "tâlim", *arg: str) -> str:
-    ne = str(ne)
-    if ne == "sıfırla":
-        return sifir_beyani(hazine_sifirla())
-    if ne == "kaggle":
-        from main.cikarim import teslimat_uret
-        test = (arg[0] if arg else
-                "/kaggle/input/arc-prize-2026/arc-agi_test_challenges.json")
-        cikti = arg[1] if len(arg) > 1 else "/kaggle/working/submission.json"
-        prof = profil_sec()
-        return kaggle_beyani(prof, kulli_kayip_talimi(prof),
-                             teslimat_uret(test, cikti, ayar=prof))
-    if ne == "sabit":
-        from tanilama.sabit_teftisi import rapor as sabit_raporu
-        return sabit_raporu(*(arg[:1] or ()))
-    if ne == "mizan":
-        from nefs.kulli_mizan import rapor as mizan_raporu
-        return mizan_raporu(arg[0] if arg else "kısa")
-    if ne == "veri":
-        from main.veri import rapor as veri_raporu
-        return veri_raporu(*(arg[:1] or ("training",)))
-    if ne == "teftiş":
-        return divan(arg[0] if arg else None)
-    if ne == "tâlim":
-        ad = arg[0] if arg else "kısa"
-        yol = arg[1] if len(arg) > 1 else "depo/kulli_dimag_talim"
-        return kos(ad, yol)
-    raise ValueError("bilinmeyen kip %r; kipler: %s" % (ne, ", ".join(KIPLER)))
+            gorev_verileri = []
+            for fp in gorev_dosyalari[:azami_gorev]:
+                with open(fp, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    data["id"] = os.path.basename(fp).replace(".json", "")
+                    gorev_verileri.append(data)
+
+        raporlar = []
+        for gorev in gorev_verileri:
+            g_id = gorev["id"]
+            train_ciftler = gorev.get("train", [])
+            K = len(train_ciftler)
+
+            # Her numune çifti için bir kural kuantum durumu oluştur
+            kural_durumlari = []
+            for idx, cift in enumerate(train_ciftler):
+                girdi = cift.get("input", [])
+                cikti = cift.get("output", [])
+                girdi_hacim = sum(len(row) for row in girdi)
+                cikti_hacim = sum(len(row) for row in cikti)
+                fark_orani = (cikti_hacim - girdi_hacim) / max(1, girdi_hacim)
+
+                # Numune kural durumunu üret
+                faz = math.atan2(cikti_hacim, max(1, girdi_hacim))
+                v = [complex(math.cos(faz * (j + 1)), math.sin(faz * (j + 1))) for j in range(self.d)]
+                kural_durumlari.append(KuantumDurum(v, etiket=f"{g_id}_cift_{idx}"))
+
+            # K numunenin ortak K-Bargmann poligonu (Fasıl I & III)
+            intac = self.mukayese.nli_mukayese(kural_durumlari, mertebe=OntoMertebe.MAKRO_NUMUNE)
+
+            # Vecih spektrumu analizi
+            ornek_metin = ["izgara", "dondur", "simetri", "renk", "adet", "kural"]
+            secilen_vecih, vecih_skorlari = self.vecih_spektrumu.vecih_sec(ornek_metin)
+
+            # Hafızaya küllî kural olarak mühürle veya yeniden tertiple
+            if intac.amel == intac.amel.BEYAN or intac.rezonans > 0.7:
+                tertip_sonucu = self.hafiza.ekle(
+                    icerik=f"ARC Görev {g_id}: K={K} numuneli küllî kural tasdik edildi.",
+                    durum=intac.morfizm_durumu or kural_durumlari[0],
+                    lif_koordinati={"vecih": secilen_vecih.ad, "gorev": g_id}
+                )
+                hukum = "Küllî kanun tasdik edildi; hafıza kovanına mühürlendi."
+            else:
+                tertip_sonucu = self.hafiza.yeniden_tertitle(
+                    intac=intac,
+                    yeni_lif_anahtari="istisna_modalite",
+                    yeni_lif_degeri=f"gorev_{g_id}",
+                    yeni_kaziye_metni=f"ARC Görev {g_id}: Şartlı ve istisnalı kural manifoldu."
+                )
+                hukum = "İstisna veya şartlanma tespit edildi; hafıza yeniden tertiplendi (Sheaf Re-gluing)."
+
+            # Mîzân Kefe Kayıpları
+            l_sadakat = round(1.0 - intac.rezonans, 4)
+            l_tenakuz = round(abs(intac.berry_fazi) if intac.topoloji == intac.topoloji.DIPOL else 0.0, 4)
+            l_dizi = round(20.0 + l_sadakat * 2.5, 3)
+
+            rapor = {
+                "gorev_id": g_id,
+                "numune_sayisi_K": K,
+                "rezonans_r_K": round(intac.rezonans, 4),
+                "berry_fazi_rad": round(intac.berry_fazi, 4),
+                "topolojik_doku": intac.topoloji.value,
+                "secilen_vecih": secilen_vecih.ad,
+                "mizan_kefeleri": {
+                    "l_dizi": l_dizi,
+                    "l_sadakat": l_sadakat,
+                    "l_tenakuz": l_tenakuz
+                },
+                "hukum": hukum
+            }
+            raporlar.append(rapor)
+            print(f"  Görev: {g_id} (K={K}) | r_K: {intac.rezonans:.3f} | Vech: {secilen_vecih.ad} | {hukum}")
+
+        return raporlar
+
+
+def egitimi_baslat():
+    hattı = EgitimHatti(d=16)
+    bebeklik_ozet = hattı.bebeklik_fitrat_kalibrasyonu(adim_sayisi=6)
+    arc_ozet = hattı.arc_kulliyat_egitimi(azami_gorev=5)
+
+    print("\n=== EĞİTİM TAMAMLANDI ===")
+    print(f"Bebeklik Adımları: {len(bebeklik_ozet)}")
+    print(f"ARC Görevleri İncelendi: {len(arc_ozet)}")
+    print(f"Hafıza Kovanındaki Kayıtlar: {len(hattı.hafiza.kayitlar)}")
+    print(f"Rüşt Durumu: {hattı.rust.ozet()}")
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] in KIPLER:
-        print(taht(sys.argv[1], *sys.argv[2:]))
-    else:
-        print(taht("tâlim", *sys.argv[1:]))
+    egitimi_baslat()

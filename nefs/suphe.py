@@ -1,127 +1,116 @@
-from __future__ import annotations
+"""
+nefs/suphe.py - Epistemik Tahkik, Tevakkuf ve Şüphe Manifoldu
+Nefs-i Müdrike Mimarîsi
+"""
 
 import math
-from dataclasses import dataclass
-from typing import Any, Dict, Optional, Sequence
-
-import numpy as np
-
-__all__ = ["SupheAyari", "tearuz", "modal_kip", "suphe_manifoldu",
-           "suphe_beyani", "suphe_sifirla"]
+import time
+from typing import List, Dict, Optional, Any, Tuple
+from matematik.temel import KuantumDurum
 
 
-@dataclass
-class SupheAyari:
+class Iddia:
+    """Bir bilgi, kaziye veya ampirik iddia"""
+    def __init__(
+        self,
+        metin: str,
+        durum: KuantumDurum,
+        guven: float = 1.0,
+        baglam: str = "genel",
+        zaman_damgasi: Optional[float] = None
+    ):
+        self.metin = metin
+        self.durum = durum
+        self.guven = guven  # mu in [0, 1]
+        self.baglam = baglam
+        self.zaman = zaman_damgasi or time.time()
 
-    acik: int = 1
-    sonum: float = 0.05
-    kip_kenari: float = 0.25
-    tevakkuf_esigi: float = 0.35
-    parite_lifi: int = 2
-    lif_yapisi: tuple = (16, 16, 16)
-
-
-_SAYAC: Dict[str, float] = {
-    "çağrı": 0.0, "tearuz": 0.0, "dallanma": 0.0, "merak": 0.0,
-    "buhar": 0.0, "tevakkuf": 0.0, "örnek": 0.0,
-    "μ_önce": 0.0, "μ_sonra": 0.0}
-
-
-def tearuz(psi_p: np.ndarray, psi_np: np.ndarray) -> float:
-    a = np.asarray(psi_p, complex).reshape(-1)
-    b = np.asarray(psi_np, complex).reshape(-1)
-    na = max(float(np.linalg.norm(a)), 1e-300)
-    nb = max(float(np.linalg.norm(b)), 1e-300)
-    return float(abs(complex(np.vdot(a / na, b / nb))))
+    def __repr__(self) -> str:
+        return f"<Iddia '{self.metin}' guven={self.guven:.2f} baglam='{self.baglam}'>"
 
 
-def modal_kip(omega: float, kenar: float = 0.25) -> str:
-    if omega > 1.0 - kenar:
-        return "zorunlu"
-    if omega < -1.0 + kenar:
-        return "muhâl"
-    return "mümkün"
+class SupheManifoldu:
+    """
+    M_şüphe: Termodinamik reaktör ve çatışan iddialar havuzu
+    1. Öncelik dogmatizmi yoktur; iki zıt iddiada da güven eşit düşürülür.
+    2. Modalite çatallanması ile tenakuz çözülürse hakikat uzayına aktarılır.
+    3. Merak motoru (O_sual) çözümsüz iddialar için soru fırlatır.
+    4. Liouville sönümlemesi: Zamanla delilsiz kalan şüphe buharlaşır.
+    """
+    def __init__(self, liouville_gama: float = 0.05):
+        self.catismalar: List[Dict[str, Any]] = []
+        self.superpozisyon_havuzu: List[Iddia] = []
+        self.merak_kancalari: List[str] = []
+        self.gama = liouville_gama
 
+    def celiski_tahkiki(
+        self,
+        iddia_1: Iddia,
+        iddia_2: Iddia,
+        fitrat_kilitli_mi: bool = True
+    ) -> Dict[str, Any]:
+        """
+        İki iddia arasındaki çatışma tahlili:
+        Fıtrat (ağırlıklar) güncellenmez; hata doğrudan hafızadaki iddialara yazılır.
+        """
+        # İç çarpım ve Fubini-Study mesafesi
+        ic = iddia_1.durum.ic_carpim(iddia_2.durum)
+        sadakat = abs(ic)**2
+        fs = iddia_1.durum.fubini_study_mesafesi(iddia_2.durum)
 
-def suphe_manifoldu(haller: Sequence[np.ndarray],
-                    omegalar: Sequence[float],
-                    yakin: Optional[np.ndarray] = None,
-                    ayar: Optional[SupheAyari] = None) -> Dict[str, Any]:
-    from .sadakat import SadakatAyari
-    a = ayar or SupheAyari()
-    _SAYAC["çağrı"] += 1.0
-    m = len(haller)
-    if m == 0 or not int(a.acik):
-        return {"μ": np.zeros(0), "tevakkuf": 0, "tearuz": 0,
-                "dallanma": 0, "merak": [], "açık": bool(int(a.acik))}
+        # Eğer iki iddia aynı bağlamda birbirini dışlıyorsa (örneğin "içeride" vs "dışarıda")
+        # Öncelik dogmatizminin ilgası: Her ikisinin de güveni sönümlenir!
+        iddia_1.guven *= (1.0 - 0.5 * sadakat)
+        iddia_2.guven *= (1.0 - 0.5 * sadakat)
 
-    H = np.stack([np.asarray(h, complex).reshape(-1) for h in haller])
-    H = H / np.maximum(np.linalg.norm(H, axis=-1, keepdims=True), 1e-300)
-    mu = (np.ones(m, float) if yakin is None
-          else np.asarray(yakin, float).reshape(-1).copy())
-    assert mu.size == m, "yakîn vektörü %d, hâl %d" % (mu.size, m)
-    _SAYAC["μ_önce"] += float(np.mean(mu))
+        # Modalite kontrolü (Bağlam ayrıştırma)
+        if iddia_1.baglam != iddia_2.baglam:
+            cozum = "Modalite ayrışması: Şartlar farklı olduğu için tenakuz sahtedir; iki iddia da kendi bağlamında meşrudur."
+            self.superpozisyon_havuzu.append(iddia_1)
+            self.superpozisyon_havuzu.append(iddia_2)
+            durum_kodu = "modal_cozuldu"
+        else:
+            # Hakiki teâruz: Şüphe manifolduna al ve merak kancası at
+            kayit = {
+                "iddia_1": iddia_1,
+                "iddia_2": iddia_2,
+                "eklenme_zamani": time.time(),
+                "hacim": 1.0
+            }
+            self.catismalar.append(kayit)
+            kanca = f"Teâruz Sualı: '{iddia_1.metin}' ile '{iddia_2.metin}' arasındaki ayrımı doğuracak illet nedir?"
+            self.merak_kancalari.append(kanca)
+            cozum = "Teâruz tespit edildi. İki iddia şüphe manifolduna alındı; aktif merak kancası fırlatıldı."
+            durum_kodu = "suphe_reaktoru"
 
-    from .sadakat import mantiki_degil
-    sa = SadakatAyari(acik=1, parite_lifi=int(a.parite_lifi),
-                      lif_yapisi=tuple(a.lif_yapisi))
-    d = H.shape[1]
-    lif_carpim = 1
-    for x in a.lif_yapisi:
-        lif_carpim *= int(x)
-    if d == lif_carpim:
-        S = mantiki_degil(H, sa)
-    else:
-        maske = 3 if d >= 4 else 1
-        S = H[:, np.arange(d) ^ maske]
-    ortusme = np.abs(np.einsum('ij,ij->i', H.conj(), S))
-    mu = mu * (1.0 - ortusme)
-    t_say = int(np.count_nonzero(ortusme > 1.0 - float(a.kip_kenari)))
-    _SAYAC["tearuz"] += float(t_say)
+        return {
+            "durum_kodu": durum_kodu,
+            "sadakat": round(sadakat, 4),
+            "fubini_study": round(fs, 4),
+            "iddia_1_yeni_guven": round(iddia_1.guven, 3),
+            "iddia_2_yeni_guven": round(iddia_2.guven, 3),
+            "cozum": cozum
+        }
 
-    om = np.asarray(list(omegalar), float)
-    dal = 0
-    if om.size:
-        mumkun = np.array([modal_kip(float(o), float(a.kip_kenari))
-                           == "mümkün" for o in om])
-        dal = int(np.count_nonzero(mumkun))
-        if dal:
-            kir = 1.0 - float(dal) / float(om.size)
-            mu = mu * max(kir, 0.0)
-    _SAYAC["dallanma"] += float(dal)
+    def liouville_tasfiyesi(self, gecen_sure: float = 1.0):
+        """
+        Liouville hacim sönümlemesi: dVol/dt = -gama * Vol
+        Zaman aşımına uğrayan mesnetsiz şüpheler buharlaşır.
+        """
+        kalanlar = []
+        for c in self.catismalar:
+            c["hacim"] *= math.exp(-self.gama * gecen_sure)
+            if c["hacim"] > 0.05:
+                kalanlar.append(c)
+        self.catismalar = kalanlar
 
-    g = float(a.sonum)
-    assert 0.0 <= g < 1.0, "sönüm γ [0,1) olmalı"
-    mu = mu * (1.0 - g)
-    _SAYAC["buhar"] += float(np.count_nonzero(mu < float(a.tevakkuf_esigi)))
+    def tevakkuf_havuzuna_ekle(self, hipotez: Iddia):
+        """Acele hüküm vermeden süperpozisyonda bekletme"""
+        self.superpozisyon_havuzu.append(hipotez)
 
-    suphe = 1.0 - mu
-    merak = [int(i) for i in np.nonzero(suphe > mu)[0]]
-    _SAYAC["merak"] += float(len(merak))
-
-    tevakkuf = int(np.count_nonzero(mu < float(a.tevakkuf_esigi)))
-    _SAYAC["tevakkuf"] += float(tevakkuf)
-    _SAYAC["örnek"] += float(m)
-    _SAYAC["μ_sonra"] += float(np.mean(mu))
-    assert np.all(np.isfinite(mu)), "yakîn sonlu değil"
-    return {"μ": mu, "şüphe": suphe, "tevakkuf": tevakkuf,
-            "tearuz": t_say, "dallanma": dal, "merak": merak,
-            "açık": True}
-
-
-def suphe_beyani() -> Dict[str, Any]:
-    c = max(1.0, _SAYAC["çağrı"])
-    return {"çağrı": int(_SAYAC["çağrı"]),
-            "tearuz": int(_SAYAC["tearuz"]),
-            "dallanma": int(_SAYAC["dallanma"]),
-            "merak": int(_SAYAC["merak"]),
-            "buhar": int(_SAYAC["buhar"]),
-            "tevakkuf": int(_SAYAC["tevakkuf"]),
-            "örnek": int(_SAYAC["örnek"]),
-            "μ_önce": float(_SAYAC["μ_önce"] / c),
-            "μ_sonra": float(_SAYAC["μ_sonra"] / c)}
-
-
-def suphe_sifirla() -> None:
-    for k in _SAYAC:
-        _SAYAC[k] = 0.0
+    def ozet(self) -> Dict[str, Any]:
+        return {
+            "aktif_catisma_sayisi": len(self.catismalar),
+            "tevakkuf_havuzu_sayisi": len(self.superpozisyon_havuzu),
+            "merak_kancalari": self.merak_kancalari[-5:]
+        }
