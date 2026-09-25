@@ -8878,12 +8878,19 @@ def silsile_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
                       "iniş_hükmü": sonuc.get("asansor_inis_hukmu")}
 
     psi_kaynagi = np.asarray(parite_lifi["kuantum_durum_vektoru"], dtype=complex)
-    if psi_kaynagi.size >= d_toplam:
-        psi_d = psi_kaynagi[:d_toplam]
+    if psi_kaynagi.size >= n:
+        psi_d = psi_kaynagi[:n]
     else:
-        tekrar = int(np.ceil(d_toplam / max(1, psi_kaynagi.size)))
-        psi_d = np.tile(psi_kaynagi, tekrar)[:d_toplam]
-    Pi_matrisi, pi_safligi = hakiki_qudit_yogunluk_matrisi(psi_d, d_toplam)
+        tekrar = int(np.ceil(n / max(1, psi_kaynagi.size)))
+        psi_d = np.tile(psi_kaynagi, tekrar)[:n]
+    Pi_taban, pi_safligi = hakiki_qudit_yogunluk_matrisi(psi_d, n)
+    top_enerji = float(hodge_sozluk["𝒮_simetrik"] + hodge_sozluk["𝒜_yönlü"]
+                       + hodge_sozluk["Ω_yırtık"]) or 1.0
+    Pi_matrisi = {
+        "Π_uzay": Pi_taban * (hodge_sozluk["𝒮_simetrik"] / top_enerji),
+        "Π_kategori": Pi_taban * (hodge_sozluk["𝒜_yönlü"] / top_enerji),
+        "Π_operad": Pi_taban * (hodge_sozluk["Ω_yırtık"] / top_enerji),
+    }
 
     selale_sozluk = {
         "tıkanma": int(sum(1 for m in sonuc["muhakeme_silsilesi"]
@@ -8918,6 +8925,7 @@ def silsile_teshisi(baglamlar: Sequence[Sequence[int]], lif: Sequence[int],
         "hodge": hodge_sozluk,
         "Π": Pi_matrisi,
         "Π_safligi": pi_safligi,
+        "kapasite": d_toplam,
         "şelale": selale_sozluk,
         "Ω_cebiri": omega_cebiri_sozluk,
         "δ_Gromov": float(gr["δ"]),
