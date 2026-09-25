@@ -6,10 +6,11 @@ import { QuantumSimulator } from './components/QuantumSimulator';
 import { MizanTelemetry } from './components/MizanTelemetry';
 import { TreatisesReader } from './components/TreatisesReader';
 import { CommandCenter } from './components/CommandCenter';
-import { Compass, Grid, Atom, Activity, BookOpen, Terminal, Sparkles } from 'lucide-react';
+import { InferenceChat } from './components/InferenceChat';
+import { Compass, Grid, Atom, Activity, BookOpen, Terminal, Sparkles, MessageSquare } from 'lucide-react';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'map' | 'arc' | 'quantum' | 'console' | 'mizan' | 'docs'>('console');
+  const [activeTab, setActiveTab] = useState<'chat' | 'console' | 'map' | 'arc' | 'quantum' | 'mizan' | 'docs'>('chat');
   const [melekeler, setMelekeler] = useState<Meleke[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -57,6 +58,30 @@ export default function App() {
           {/* Navigation Tabs */}
           <nav className="flex items-center gap-1.5 bg-[#16130e] p-1 rounded-xl border border-[#362f22]">
             <button
+              onClick={() => setActiveTab('chat')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                activeTab === 'chat'
+                  ? 'bg-[#3a2418] text-[#e08856] border border-[#e08856]/40 shadow-sm'
+                  : 'text-[#a89a78] hover:text-[#ece3cf]'
+              }`}
+            >
+              <MessageSquare className="w-3.5 h-3.5 text-[#e08856]" />
+              <span>Sual &amp; Çıkarım (Dil Modeli)</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('console')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                activeTab === 'console'
+                  ? 'bg-[#3a2418] text-[#e08856] border border-[#e08856]/40 shadow-sm'
+                  : 'text-[#a89a78] hover:text-[#ece3cf]'
+              }`}
+            >
+              <Terminal className="w-3.5 h-3.5 text-[#e08856]" />
+              <span>Kumanda &amp; Canlı Konsol</span>
+            </button>
+
+            <button
               onClick={() => setActiveTab('map')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 activeTab === 'map'
@@ -90,18 +115,6 @@ export default function App() {
             >
               <Atom className="w-3.5 h-3.5" />
               <span>Qudit &amp; KAN-NQS</span>
-            </button>
-
-            <button
-              onClick={() => setActiveTab('console')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                activeTab === 'console'
-                  ? 'bg-[#3a2418] text-[#e08856] border border-[#e08856]/40 shadow-sm'
-                  : 'text-[#a89a78] hover:text-[#ece3cf]'
-              }`}
-            >
-              <Terminal className="w-3.5 h-3.5 text-[#e08856]" />
-              <span>Kumanda &amp; Canlı Konsol</span>
             </button>
 
             <button
@@ -140,10 +153,11 @@ export default function App() {
           </div>
         ) : (
           <>
+            {activeTab === 'chat' && <InferenceChat />}
+            {activeTab === 'console' && <CommandCenter />}
             {activeTab === 'map' && <FacultyMap melekeler={melekeler} />}
             {activeTab === 'arc' && <ArcLab />}
             {activeTab === 'quantum' && <QuantumSimulator />}
-            {activeTab === 'console' && <CommandCenter />}
             {activeTab === 'mizan' && <MizanTelemetry />}
             {activeTab === 'docs' && <TreatisesReader />}
           </>

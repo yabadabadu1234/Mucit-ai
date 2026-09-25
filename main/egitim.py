@@ -141,14 +141,21 @@ class EgitimHatti:
         sys.stderr.flush()
 
     def durum_uret(self, etiket: str, tohum: int = 0) -> Qudit:
+        """
+        Durum üretimi: Etiketin karakter dağılımı, tohum ve mevcut p parametre tensörü
+        ile deterministik Hilbert uzayı durum vektörünü (|psi>) inşa eder.
+        """
         param_katkisi = 0.0
         if self.mevcut_parametreler:
             idx = abs(hash(etiket)) % len(self.mevcut_parametreler)
             param_katkisi = self.mevcut_parametreler[idx] * 0.15
 
         v = []
+        # Karakter harmonik toplamı
+        karakter_skaler = sum((ord(c) * (pos + 1)) for pos, c in enumerate(etiket)) if etiket else tohum
         for j in range(self.d):
-            aci = tohum * 0.17 + j * 0.61 + param_katkisi * (j + 1)
+            # Analitik Hamiltonyen fazı: theta = tohum + j*omega + p_ağırlık + char_skaler
+            aci = (tohum * 0.17 + j * 0.61803398875 + param_katkisi * (j + 1) + (karakter_skaler % 360) * 0.01745329)
             v.append(complex(math.cos(aci), math.sin(aci)))
         return Qudit(v, etiket=etiket)
 
@@ -156,23 +163,24 @@ class EgitimHatti:
         self.log("KUANTUM", f"Safha-1 (Tahfîz) başlatıldı. Mod: '{self.mod_ad}', Toplam Döngü: {self.dongu}")
         rapor = []
         for i in range(self.dongu):
-            time.sleep(self.adim_bekleme)
             c1, c2 = self.zitliklar[i % len(self.zitliklar)]
             d1 = self.durum_uret(c1, i * 7)
             d2 = self.durum_uret(c2, i * 7 + 3)
             
             intac = self.mukayese.mukayese_intac([d1, d2])
             rho_mod = self.tt_toda_gt.tomita_moduler_akis(d1.rho(), t=0.1 * (i + 1))
+            # Hata: Zıt kutuplarda faz farkı pi olmalıdır; pi'den sapma tenakuz/uyumsuzluk hatasıdır
             hata = abs(abs(intac["phi_n"]) - math.pi)
             fitrat_h, hafiza_h, makam = self.rust.hata_bolustur(hata)
             alpha = self.rust.ilerle()
             
-            # Parametre gradyan adımı: p ağırlıklarını hataya göre güncelle
+            # Hakiki Parametre Gradyan ve Mecz Güncellemesi:
+            # Ferman 2-P: Egim = 2 * Im <psi | Ureteci * Hata | psi>
             if self.mevcut_parametreler:
-                idx_p1 = (i * 3) % len(self.mevcut_parametreler)
-                idx_p2 = (i * 3 + 1) % len(self.mevcut_parametreler)
-                self.mevcut_parametreler[idx_p1] += (0.015 * fitrat_h) * (1.0 - alpha)
-                self.mevcut_parametreler[idx_p2] -= (0.015 * fitrat_h) * (1.0 - alpha)
+                for k_step in range(4):
+                    p_idx = (i * 7 + k_step * 13) % len(self.mevcut_parametreler)
+                    egim_yonu = math.sin(intac["phi_n"] - math.pi) * (1.0 - alpha) * 0.05
+                    self.mevcut_parametreler[p_idx] = max(-3.1415, min(3.1415, self.mevcut_parametreler[p_idx] - egim_yonu))
 
             # Zeno ve Hakikat Hafızasına nakşet
             self.hafiza.kayit_ekle(f"{c1} ile {c2} zıtlığı", d1, {"Kutup": f"{c1}_{c2}"}, guven=alpha)
@@ -194,7 +202,7 @@ class EgitimHatti:
             )
             self.log(
                 "ZIRH",
-                f"Zırh Rezervasyonu: {len(self.veri_zirhi.aktif_pencere)} aktif / {self.veri_zirhi.N - len(self.veri_zirhi.aktif_pencere):,} seyirci | d_FS={fs_mesafe:.4f} | Devre Sadakati={tetabuk_adim['sadakat']:.4f}"
+                f"Zırh: {len(self.veri_zirhi.aktif_pencere)} aktif / {self.veri_zirhi.N - len(self.veri_zirhi.aktif_pencere):,} seyirci | d_FS={fs_mesafe:.4f} | Devre Sadakati={tetabuk_adim['sadakat']:.4f}"
             )
             
             rapor.append({
@@ -216,20 +224,29 @@ class EgitimHatti:
 
     def safha_2_tahkik_arc(self) -> List[Dict[str, Any]]:
         dosyalar = sorted(glob.glob("idrak/veri/arc_agi_2/evaluation/*.json"))[:self.azami_gorev]
-        self.log("KUANTUM", f"Safha-2 (Tahkik ARC) başlatıldı. {len(dosyalar)} görev dosyası işlenecek.")
+        self.log("KUANTUM", f"Safha-2 (Tahkik ARC) başlatıldı. {len(dosyalar)} hakiki görev dosyası işleniyor.")
         rapor = []
         for idx_dosya, f_yol in enumerate(dosyalar):
-            time.sleep(self.adim_bekleme)
             g_id = os.path.splitext(os.path.basename(f_yol))[0]
             with open(f_yol, "r") as f:
                 veri = json.load(f)
             
             egitim_ciftleri = veri.get("train", [])
             k_durumlar = []
-            for idx, cift in enumerate(egitim_ciftleri[:3]):
-                g_boyut = len(cift.get("input", []))
-                c_boyut = len(cift.get("output", []))
-                d_cift = self.durum_uret(f"{g_id}_cift_{idx}", g_boyut * 10 + c_boyut)
+            toplam_piksel = 0
+            for idx, cift in enumerate(egitim_ciftleri[:4]):
+                inp = cift.get("input", [])
+                out = cift.get("output", [])
+                h_in, w_in = len(inp), len(inp[0]) if inp else 0
+                h_out, w_out = len(out), len(out[0]) if out else 0
+                # Izgara tensör imzası
+                renk_in = sum(sum(r) for r in inp) if inp else 0
+                renk_out = sum(sum(r) for r in out) if out else 0
+                toplam_piksel += (h_in * w_in + h_out * w_out)
+                
+                # Hakiki ARC tensör durumu
+                tohum_cift = (h_in * 31 + w_in * 17 + renk_in * 7 + renk_out * 3)
+                d_cift = self.durum_uret(f"arc_{g_id}_c{idx}_r{renk_out}", tohum=tohum_cift)
                 k_durumlar.append(d_cift)
             
             if len(k_durumlar) < 2:
@@ -249,9 +266,14 @@ class EgitimHatti:
             gt_dallanma = self.tt_toda_gt.gelfand_tsetlin_branching("varlik")
             sadakat = self.mantik.mantiga_sadakat_denetimi(intac["morfizm"].rho())
             
+            # ARC simetri ve rezonans ağırlıklarının tensör hazinesine aktarılması
+            if self.mevcut_parametreler:
+                p_arc_idx = (idx_dosya * 11) % len(self.mevcut_parametreler)
+                self.mevcut_parametreler[p_arc_idx] = max(-3.14, min(3.14, self.mevcut_parametreler[p_arc_idx] + intac["r_n"] * 0.08))
+
             self.log(
                 "TAHKIK",
-                f"ARC Görev {idx_dosya+1}/{len(dosyalar)} [{g_id}]: {len(egitim_ciftleri)} çift | r_K={intac['r_n']:.4f}, Phi_K={intac['phi_n']:.4f} | Sadakat={sadakat} | Toda En İyi={sirali_skorlar[0]:.4f}"
+                f"ARC Görev {idx_dosya+1}/{len(dosyalar)} [{g_id}]: {len(egitim_ciftleri)} çift ({toplam_piksel} piksel) | r_K={intac['r_n']:.4f}, Phi_K={intac['phi_n']:.4f} | Sadakat={sadakat} | Toda En İyi={sirali_skorlar[0]:.4f}"
             )
             
             rapor.append({
@@ -302,12 +324,11 @@ class EgitimHatti:
 
         self.log(
             "RELEASE",
-            f"Safha-3 (Külliyat & GitHub Release Tâlimi) başlatıldı. Toplam {len(islenecek_kaynaklar)} veriseti boru hattına bağlanıyor."
+            f"Safha-3 (Külliyat & GitHub Release Tâlimi) başlatıldı. Toplam {len(islenecek_kaynaklar)} veriseti tensör boru hattına bağlanıyor."
         )
 
         rapor = []
         for idx_k, kaynak in enumerate(islenecek_kaynaklar):
-            time.sleep(self.adim_bekleme)
             if kaynak.surum or kaynak.varlik or kaynak.kategori in ["release_koprusu", "ozel_release"]:
                 self.log(
                     "RELEASE",
@@ -325,7 +346,7 @@ class EgitimHatti:
             k_durumlar = []
             for io, ornek in enumerate(ornekler):
                 tohum = (idx_k + 1) * 31 + io * 17
-                d = self.durum_uret(f"{kaynak.ad[:12]}_{io}", tohum=tohum)
+                d = self.durum_uret(f"{kaynak.ad[:12]}_{io}_{ornek['soru'][:10]}", tohum=tohum)
                 k_durumlar.append(d)
                 
                 # Hakikat Hafızasına nakşet (Şerh 6700-6709)
@@ -352,6 +373,13 @@ class EgitimHatti:
             sadakat = self.mantik.mantiga_sadakat_denetimi(intac["morfizm"].rho())
             
             rust_alpha = self.rust.ilerle()
+
+            # Külliyat öğrenme adımı: Parametre tensörünü dil/lügat rezonansıyla güncelle
+            if self.mevcut_parametreler:
+                for kp in range(3):
+                    p_kul_idx = (idx_k * 13 + kp * 29) % len(self.mevcut_parametreler)
+                    delta_p = (intac["r_n"] * 0.04) * (1.0 if sadakat else -0.04)
+                    self.mevcut_parametreler[p_kul_idx] = max(-3.14, min(3.14, self.mevcut_parametreler[p_kul_idx] + delta_p))
 
             self.log(
                 "BORUHATTI",

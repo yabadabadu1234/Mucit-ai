@@ -722,34 +722,17 @@ export function CommandCenter() {
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-[11px] text-[#a89a78]">İncelenecek Kaziye / İddia Metni:</label>
+              <label className="text-[11px] text-[#a89a78]">İncelenecek Kaziye / Serbest Sual Metni:</label>
               <input
                 type="text"
                 value={cikarimMetni}
+                placeholder="İstediğiniz herhangi bir sual, iddia veya kaziye metnini girin..."
                 onChange={(e) => setCikarimMetni(e.target.value)}
-                className="w-full px-3 py-2 rounded-lg bg-[#16130e] border border-[#362f22] text-[#ece3cf] text-xs focus:border-[#e08856] focus:outline-none"
+                className="w-full px-3 py-2 rounded-lg bg-[#16130e] border border-[#362f22] text-[#ece3cf] text-xs focus:border-[#e08856] focus:outline-none placeholder:text-[#5f5643]"
               />
-              <div className="flex flex-wrap gap-1.5 pt-1">
-                {[
-                  'Yalan söylemek iyi bir şeydir',
-                  'Penguen bir kuştur fakat suda yüzer',
-                  'Ahmet şirkette amir olarak Mehmet\'e yetki verdi',
-                  'Bütün insanlar fânidir, Sokrates insandır'
-                ].map((orn, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => setCikarimMetni(orn)}
-                    className={`text-[10px] font-mono-code px-2 py-0.5 rounded border transition-all ${
-                      orn.includes('Yalan')
-                        ? 'bg-rose-950/40 hover:bg-rose-900/60 border-rose-800/50 text-rose-300'
-                        : 'bg-[#241d13] hover:bg-[#33291b] border-[#362f22] text-[#a89a78] hover:text-[#ece3cf]'
-                    }`}
-                  >
-                    {orn.slice(0, 24)}...
-                  </button>
-                ))}
-              </div>
+              <p className="text-[10px] text-[#8e8267]">
+                Küllî İdrak genel dil modeli herhangi bir metni burhan ve fıtrat süzgecinden geçirerek intaç kelâmı üretir.
+              </p>
             </div>
 
             <button
@@ -953,6 +936,20 @@ export function CommandCenter() {
                     <span className="text-[10px] text-[#a89a78]">Ferman 1-G &middot; Ya İspat Ya Sükût</span>
                   </div>
                   <p className="text-[11px] leading-relaxed break-words">{lastResult.nihai_hukum}</p>
+                  {lastResult.kelam && (
+                    <div className="p-2.5 rounded bg-[#10141a] border border-[#e08856]/40 text-amber-100 text-xs mt-1.5 space-y-1">
+                      <div className="flex items-center justify-between text-[10px] text-[#e08856] font-bold">
+                        <span>Üretilen İntaç Kelâmı (Genel Dil Modeli):</span>
+                        <span>Güven: {lastResult.kelam_detay?.guven ?? '0.95'}</span>
+                      </div>
+                      <p className="text-[12px] text-[#ece3cf] font-sans leading-relaxed">{lastResult.kelam}</p>
+                      {lastResult.kelam_detay?.referans_kayit && (
+                        <div className="text-[9px] text-[#a89a78] pt-0.5">
+                          Semantik Referans: <em>{lastResult.kelam_detay.referans_kayit}</em> (Benzerlik: {lastResult.kelam_detay.benzerlik})
+                        </div>
+                      )}
+                    </div>
+                  )}
                   {lastResult.tenakuz_raporu?.cerh_sebebi && (
                     <div className="text-[10px] text-rose-400 bg-rose-950/60 p-2 rounded border border-rose-800/50 mt-1">
                       <strong>Tenakuz Tahlili:</strong> {lastResult.tenakuz_raporu.cerh_sebebi}

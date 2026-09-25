@@ -1279,6 +1279,51 @@ app.post('/api/kulliyat/durdur', (_req: Request, res: Response) => {
   res.json({ success: true });
 });
 
+// 2.5 Doğrudan Sual-Cevap & İntaç Çıkarımı (Genel Dil Modeli)
+app.post('/api/cikarim', (req: Request, res: Response) => {
+  const metin = (req.body?.metin || req.body?.soru || '').trim();
+  if (!metin) {
+    return res.status(400).json({ success: false, error: 'Sual veya kaziye metni boş olamaz.' });
+  }
+
+  const child = spawn('python3', ['-m', 'main.hatt', 'cikarim', metin], { cwd: __dirname });
+  let stdoutData = '';
+  let stderrData = '';
+
+  child.stdout.on('data', (chunk) => {
+    stdoutData += chunk.toString();
+  });
+
+  child.stderr.on('data', (chunk) => {
+    stderrData += chunk.toString();
+  });
+
+  child.on('close', (code) => {
+    if (code !== 0) {
+      return res.status(500).json({
+        success: false,
+        error: stderrData || 'Çıkarım sırasında bir hata meydana geldi.',
+        code
+      });
+    }
+
+    try {
+      const data = JSON.parse(stdoutData.trim());
+      return res.json({ success: true, sonuc: data });
+    } catch (err: any) {
+      return res.status(500).json({
+        success: false,
+        error: 'JSON parse hatası: ' + err.message,
+        raw: stdoutData
+      });
+    }
+  });
+
+  child.on('error', (err) => {
+    return res.status(500).json({ success: false, error: err.message });
+  });
+});
+
 // 3. Logları Temizle
 app.post('/api/kulliyat/log-temizle', (_req: Request, res: Response) => {
   try {
