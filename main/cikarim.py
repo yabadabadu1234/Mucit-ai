@@ -20,7 +20,7 @@ from kuantum.mahalli_yazmac import uzunluk_genligi
 from nefs.suphe import suphe_beyani
 from tanilama.beyan import cikarim_beyani
 
-__all__ = ["padisah", "degerlendirme_kosusu", "hazineden_yukle",
+__all__ = ["padisah", "sohbet", "degerlendirme_kosusu", "hazineden_yukle",
            "hafizayi_yukle", "hazineden_devam", "devam_agirligi", "kos",
            "test_gorevleri", "teslimat_uret"]
 
@@ -168,6 +168,57 @@ def padisah(gorev, nefs=None, ayar=None, **kw) -> Dict[str, object]:
             "mesele": bool(sual["mesele"]),
             "çözüm_uzayı": netice["beyan"],
             "yutulan_ayar": sorted(kw) or None}
+
+
+def sohbet(cumle: str, nefs=None, ayar=None, **kw) -> Dict[str, object]:
+    from nefs.soyle import serbest_soyle
+    from nefs.belirtec import belirtecle, coz
+    from nefs.mukayese import (ana_superpozisyon, cozum_uzayi_ac,
+                               cozum_uzayi_kapat, mantik_filtresi,
+                               mukayese_filtresi)
+    hafiza = kw.pop("hafiza", None)
+    if nefs is None:
+        nefs, ayar, _, hafiza = _motor(ayar)
+    if ayar is None:
+        from main.egitim import KISA_CPU
+        ayar = KISA_CPU
+    _dizi = belirtecle(str(cumle), str(ayar.kodlama))
+    assert _dizi, "girdi metni belirteçlenemedi -- boş dizi"
+    sual = ana_superpozisyon([list(_dizi)], nefs=nefs, hafiza=hafiza,
+                             sozluk=int(ayar.sozluk),
+                             pencere=int(ayar.pencere),
+                             taban=int(ayar.veri_lifi),
+                             basamak=int(ayar.belirtec_basamak))
+    uzay = cozum_uzayi_ac(sual, nefs=nefs, hafiza=hafiza)
+    uzay = mantik_filtresi(uzay)
+    uzay = mukayese_filtresi(uzay, hafiza=hafiza,
+                             mahalli=getattr(nefs, "mahalli", None))
+    netice = cozum_uzayi_kapat(uzay, sual)
+    netice["uzunluk_genliği"] = uzunluk_genligi(
+        getattr(nefs, "mahalli", None), int(netice["pencere"]))
+    sadakat_devresi(nefs=nefs, hafiza=hafiza, netice=netice,
+                    ayar=SadakatAyari(
+                        acik=int(ayar.sadakat_acik),
+                        parite_lifi=int(ayar.parite_lifi),
+                        lif_yapisi=tuple(ayar.lif_yapisi),
+                        sozluk=int(ayar.sozluk)))
+    c = serbest_soyle(cumle, nefs=nefs, sozluk=int(ayar.sozluk),
+                      pencere=int(netice["pencere"]), hafiza=hafiza,
+                      netice=netice, kodlama=str(ayar.kodlama))
+    kelam = None
+    if not c.sukut and c.belirtec:
+        kelam = coz([int(x) for x in c.belirtec], str(ayar.kodlama))
+    nihai_hukum = ("KELÂM İNTAÇ EDİLDİ" if not c.sukut else
+                  "SÜKÛT: %s" % c.sebep)
+    return {"kelam": kelam,
+            "nihai_hukum": nihai_hukum,
+            "sükût": bool(c.sukut),
+            "sebep": c.sebep,
+            "belirteç": c.belirtec,
+            "güven": float(c.guven),
+            "budanan": int(getattr(c, "budanan", 0)),
+            "mesele": bool(sual["mesele"]),
+            "çözüm_uzayı": netice["beyan"]}
 
 
 def degerlendirme_kosusu(kume: str = "training", azami: int = 24,

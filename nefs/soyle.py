@@ -8,7 +8,7 @@ import numpy as np
 from .hafiza import TASDIK
 from .musahede import gorev_dizisi, ortu
 
-__all__ = ["Cevap", "soyle", "jeton_normu", "jeton_cezasi"]
+__all__ = ["Cevap", "soyle", "serbest_soyle", "jeton_normu", "jeton_cezasi"]
 
 
 @dataclass
@@ -157,6 +157,98 @@ def _uret(nefs, baglam: List[int], pencere: int, sozluk: int,
                           hafiza=hafiza, netice=netice))
 
 
+def _soyle_govde(gorev_adi: str, dizi: List[int], nefs, pencere: int,
+                 sozluk: int, hafiza=None, netice=None,
+                 tikaniklik: Optional[float] = None,
+                 azami_uret: int = 0, hedef_uzunluk: Optional[int] = None
+                 ) -> "Cevap":
+    from .belirtec import basamak_sayisi, tip_vektoru, tipten
+    taban = int(nefs.ayar.veri_lifi)
+    assert int(sozluk) >= 2, (
+        "sözlük %d -- belirteç uzayı yok (ferman 1-N: sözlük tiktoken "
+        "n_vocab'ından yoklanır)" % int(sozluk))
+    basamak = int(basamak_sayisi(int(sozluk), taban))
+    if hedef_uzunluk is not None and 0 < int(azami_uret) < int(hedef_uzunluk):
+        return Cevap(gorev=gorev_adi, sukut=True, tikaniklik=tikaniklik,
+                     sebep="hedef hadde sığmıyor (%d basamak)"
+                           % int(hedef_uzunluk))
+
+    baglam = [int(x) for x in np.asarray(
+        tip_vektoru(list(dizi), taban, basamak), int).reshape(-1)]
+
+    def _cek():
+        return _uret(nefs, baglam, pencere, taban, hafiza=hafiza,
+                     netice=netice)
+
+    uretilen, bedel, sukutlar, budanan = _cek()
+
+    h_boy = int(hedef_uzunluk) if hedef_uzunluk is not None else len(uretilen)
+    guvenler = [float(np.exp(-bedel / max(h_boy, 1)))]
+
+    ort_sukut = float(np.mean(sukutlar)) if sukutlar else 1.0
+
+    from kuantum.qegitim import belirtecleri_kodla
+    from .suphe import SupheAyari, suphe_manifoldu
+    _E = belirtecleri_kodla(list(uretilen)[-int(pencere):] or [0],
+                            nefs.ayar.veri_lifi, nefs.ayar.veri_lifi)
+    _q = nefs.idrak_et(_E)
+    _sp = suphe_manifoldu([np.asarray(_q.y.psi[0], complex)],
+                          [1.0 - 2.0 * ort_sukut],
+                          yakin=np.array([1.0 - ort_sukut]),
+                          ayar=SupheAyari(acik=1))
+    if int(_sp["tevakkuf"]) > 0:
+        return Cevap(
+            gorev=gorev_adi, sukut=True, tikaniklik=tikaniklik,
+            belirtec=uretilen, guven=float(np.mean(guvenler or [0.0])),
+            budanan=int(budanan), uzunluk=len(uretilen),
+            sebep="TEÂRUZ: yakîn %.3f -- tez ile antitez denk kuvvette"
+                  % float(_sp["μ"][0]))
+
+    duz = 1.0 / float(taban)
+    kesinlik = float(np.clip(
+        (float(np.mean(guvenler)) - duz) / max(1.0 - duz, 1e-300),
+        0.0, 1.0))
+    if ort_sukut > kesinlik:
+        return Cevap(
+            gorev=gorev_adi, sukut=True, tikaniklik=tikaniklik,
+            belirtec=uretilen, guven=float(np.mean(guvenler or [0.0])),
+            budanan=int(budanan), uzunluk=len(uretilen),
+            sebep="motorun sükût alanı %.3f, cevabın kesinlik nispeti "
+                  "%.3f -- söylenecek şey susmak kadar bile kat'î değil"
+                  % (ort_sukut, kesinlik))
+
+    kirp = (len(uretilen) // basamak) * basamak
+    kimlik = ([int(t) for t in np.asarray(
+        tipten(uretilen[:kirp], taban, basamak), int).reshape(-1)]
+        if kirp else [])
+    if not kimlik:
+        return Cevap(
+            gorev=gorev_adi, sukut=True, tikaniklik=tikaniklik,
+            belirtec=[], guven=float(np.mean(guvenler or [0.0])),
+            budanan=int(budanan), uzunluk=len(uretilen),
+            sebep="üretilen %d basamak tek belirteç tamamlamadı "
+                  "(basamak haddi %d)" % (len(uretilen), basamak))
+
+    guven_ham = float(np.mean(guvenler or [0.0]))
+    guven_nihai = guven_ham
+    retrospektif_tutarlilik = None
+    if hafiza is not None:
+        retrospektif = hafiza.oku(np.asarray(_q.y.psi[0], complex))
+        if retrospektif["toplam"] > 1e-12:
+            retrospektif_tutarlilik = float(
+                retrospektif["tasdik"] / retrospektif["toplam"])
+            guven_nihai = float(guven_ham * (0.5 + 0.5 * retrospektif_tutarlilik))
+
+    return Cevap(
+        gorev=gorev_adi, sukut=False, sebep="",
+        kural="motor (belirteç üretimi)",
+        izgara=[np.asarray(kimlik, int)],
+        belirtec=kimlik, uzunluk=len(uretilen),
+        guven=guven_nihai,
+        budanan=int(budanan),
+        tikaniklik=tikaniklik)
+
+
 def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           nefs=None, pencere: int = 8, sozluk: int = 16,
           azami_uret: int = 0,
@@ -183,6 +275,12 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
             gorev=gorev.ad, sukut=True,
             sebep="motor verilmedi -- kâide cebriyle cevap vermek yasak"))
 
+    assert usul == "açgözlü", (
+        "çözme usulü %r -- aday çoğaltan ``ara`` kolu KESİLDİ: okuma "
+        "determinist olduğu için (ferman 2-Ĵ) ayna ile çoğaltılan "
+        "adaylar birbirinin aynısı çıkıyordu; çeşitlilik zardan değil "
+        "vecih spektrumundan gelir" % (usul,))
+
     tik = None
     if tikaniklik_bak:
         tik = float(ortu(gorev, ne="tıkanıklık")["H1"])
@@ -193,99 +291,32 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
         "%s: istenen hedef %d, fakat %s kaynağında %d örnek var"
         % (gorev.ad, int(hedef), "sınama" if sinamadan else "eğitim",
            len(kaynak)))
-    dizi, hedef = gorev_dizisi(gorev, hedef_indis=int(hedef),
-                               sinamadan=bool(sinamadan))
-    assert len(dizi) > 0 and len(hedef) > 0, (
+    dizi, hedef_dizi = gorev_dizisi(gorev, hedef_indis=int(hedef),
+                                    sinamadan=bool(sinamadan))
+    assert len(dizi) > 0 and len(hedef_dizi) > 0, (
         "bağlam yahut hedef BOŞ döndü -- boş bir şeyle üretime girilmez")
 
-    from .belirtec import basamak_sayisi, tip_vektoru, tipten
+    from .belirtec import basamak_sayisi, tip_vektoru
     taban = int(nefs.ayar.veri_lifi)
-    assert int(sozluk) >= 2, (
-        "sözlük %d -- belirteç uzayı yok (ferman 1-N: sözlük tiktoken "
-        "n_vocab'ından yoklanır)" % int(sozluk))
     basamak = int(basamak_sayisi(int(sozluk), taban))
     h = [int(x) for x in np.asarray(
-        tip_vektoru(list(hedef), taban, basamak), int).reshape(-1)]
-    if 0 < int(azami_uret) < len(h):
-        return _bitir(Cevap(gorev=gorev.ad, sukut=True, tikaniklik=tik,
-                            sebep="hedef hadde sığmıyor (%d basamak)"
-                                  % len(h)))
+        tip_vektoru(list(hedef_dizi), taban, basamak), int).reshape(-1)]
 
-    baglam = [int(x) for x in np.asarray(
-        tip_vektoru(list(dizi), taban, basamak), int).reshape(-1)]
+    return _bitir(_soyle_govde(
+        gorev.ad, dizi, nefs, pencere, sozluk, hafiza=hafiza,
+        netice=netice, tikaniklik=tik, azami_uret=azami_uret,
+        hedef_uzunluk=len(h)))
 
-    def _cek():
-        return _uret(nefs, baglam, pencere, taban, hafiza=hafiza,
-                     netice=netice)
 
-    assert usul == "açgözlü", (
-        "çözme usulü %r -- aday çoğaltan ``ara`` kolu KESİLDİ: okuma "
-        "determinist olduğu için (ferman 2-Ĵ) ayna ile çoğaltılan "
-        "adaylar birbirinin aynısı çıkıyordu; çeşitlilik zardan değil "
-        "vecih spektrumundan gelir" % (usul,))
-    uretilen, bedel, sukutlar, budanan = _cek()
-
-    guvenler = [float(np.exp(-bedel / max(len(h), 1)))]
-
-    ort_sukut = float(np.mean(sukutlar)) if sukutlar else 1.0
-
-    from kuantum.qegitim import belirtecleri_kodla
-    from .suphe import SupheAyari, suphe_manifoldu
-    _E = belirtecleri_kodla(list(uretilen)[-int(pencere):] or [0],
-                            nefs.ayar.veri_lifi, nefs.ayar.veri_lifi)
-    _q = nefs.idrak_et(_E)
-    _sp = suphe_manifoldu([np.asarray(_q.y.psi[0], complex)],
-                          [1.0 - 2.0 * ort_sukut],
-                          yakin=np.array([1.0 - ort_sukut]),
-                          ayar=SupheAyari(acik=1))
-    if int(_sp["tevakkuf"]) > 0:
-        return _bitir(Cevap(
-            gorev=gorev.ad, sukut=True, tikaniklik=tik,
-            belirtec=uretilen, guven=float(np.mean(guvenler or [0.0])),
-            budanan=int(budanan), uzunluk=len(uretilen),
-            sebep="TEÂRUZ: yakîn %.3f -- tez ile antitez denk kuvvette"
-                  % float(_sp["μ"][0])))
-
-    duz = 1.0 / float(taban)
-    kesinlik = float(np.clip(
-        (float(np.mean(guvenler)) - duz) / max(1.0 - duz, 1e-300),
-        0.0, 1.0))
-    if ort_sukut > kesinlik:
-        return _bitir(Cevap(
-            gorev=gorev.ad, sukut=True, tikaniklik=tik,
-            belirtec=uretilen, guven=float(np.mean(guvenler or [0.0])),
-            budanan=int(budanan), uzunluk=len(uretilen),
-            sebep="motorun sükût alanı %.3f, cevabın kesinlik nispeti "
-                  "%.3f -- söylenecek şey susmak kadar bile kat'î değil"
-                  % (ort_sukut, kesinlik)))
-
-    kirp = (len(uretilen) // basamak) * basamak
-    kimlik = ([int(t) for t in np.asarray(
-        tipten(uretilen[:kirp], taban, basamak), int).reshape(-1)]
-        if kirp else [])
-    if not kimlik:
-        return _bitir(Cevap(
-            gorev=gorev.ad, sukut=True, tikaniklik=tik,
-            belirtec=[], guven=float(np.mean(guvenler or [0.0])),
-            budanan=int(budanan), uzunluk=len(uretilen),
-            sebep="üretilen %d basamak tek belirteç tamamlamadı "
-                  "(basamak haddi %d)" % (len(uretilen), basamak)))
-
-    guven_ham = float(np.mean(guvenler or [0.0]))
-    guven_nihai = guven_ham
-    retrospektif_tutarlilik = None
-    if hafiza is not None:
-        retrospektif = hafiza.oku(np.asarray(_q.y.psi[0], complex))
-        if retrospektif["toplam"] > 1e-12:
-            retrospektif_tutarlilik = float(
-                retrospektif["tasdik"] / retrospektif["toplam"])
-            guven_nihai = float(guven_ham * (0.5 + 0.5 * retrospektif_tutarlilik))
-
-    return _bitir(Cevap(
-        gorev=gorev.ad, sukut=False, sebep="",
-        kural="motor (belirteç üretimi)",
-        izgara=[np.asarray(kimlik, int)],
-        belirtec=kimlik, uzunluk=len(uretilen),
-        guven=guven_nihai,
-        budanan=int(budanan),
-        tikaniklik=tik))
+def serbest_soyle(cumle: str, nefs=None, pencere: int = 8, sozluk: int = 16,
+                  hafiza=None, netice=None, kodlama: str = "o200k_base",
+                  ad: str = "sohbet") -> "Cevap":
+    if nefs is None:
+        return Cevap(
+            gorev=ad, sukut=True,
+            sebep="motor verilmedi -- kâide cebriyle cevap vermek yasak")
+    from .belirtec import belirtecle
+    dizi = belirtecle(str(cumle), kodlama)
+    assert dizi, "girdi metni belirteçlenemedi -- boş dizi"
+    return _soyle_govde(ad, dizi, nefs, pencere, sozluk, hafiza=hafiza,
+                        netice=netice)
