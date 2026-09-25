@@ -393,7 +393,8 @@ def d0_gecit(Z: Dict[str, Any]) -> Dict[str, Any]:
         % (ayar.sozluk, ayar.kodlama, kapi_bel.n_vocab))
     safha_sifirla()
     safha("D0 GEÇİT · başlıyor", profil=str(ayar.ad))
-    kapi = gecit(sert=bool(int(ayar.hiz_geciti)), hiz_ayari=ayar)
+    kapi = gecit(sert=bool(int(ayar.hiz_geciti)),
+                hiz_ayari=(ayar if int(ayar.hiz_geciti) else None))
     safha("D0 GEÇİT", çevrim=int(kapi.get("alan_çevrimi", 0)),
           kelâm=bool(kapi.get("kelam_ayrıştı")))
     Z.update({"t0": t0, "kapi_bel": kapi_bel, "kapi": kapi})
