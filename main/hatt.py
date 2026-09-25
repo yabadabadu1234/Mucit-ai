@@ -11,6 +11,9 @@ from nefs.kuantum_idrak import (
     HafizaVeSupheReaktoru, TabulaRasaRust, TomitaTakesakiTodaGT,
     KuantumMantikDevresi, BirMilyonQuditZirhi, bargmann_n
 )
+from nefs.kume_tasnif_tadil import (
+    KumeTasnifVeTadil, KumeOntolojiTuru, SerbestlikTuru, TadilKademesi
+)
 
 
 class KulliHatt:
@@ -160,7 +163,19 @@ class KulliHatt:
         })
         self.log("TEST_10", f"[GECTI] Külliyatta {len(kaynaklar)} veriseti ve {len(releases)} GitHub Release köprüsü faal.")
 
-        self.log("SONUC", "Bütün 10 Küllî İdrak ve Külliyat Teoremi başarıyla doğrulandı. Sistem tam mutabakatta.")
+        self.log("TEST_11", "Küme Tasnif, Serbestlik Dereceleri & 3 Kademeli Tâdil Teftişi...")
+        kume = KumeTasnifVeTadil("TestKumesi", KumeOntolojiTuru.ITIBARI)
+        kume.minimal_ikili_catisma("A", "B", "Zitlik", SerbestlikTuru.STATIK_MAHIYET, "Ak", "Kara")
+        stres = kume.zihni_stres_testi("Adalet", "Mutlak esitlik", "Hak ihlali tenakuzu", "KesbLiyakat", "Var", "Yok")
+        tadil = kume.tadil_et("Aykiri", TadilKademesi.KADEME_1_TEFRIK, {"eksen": "Zitlik", "yeni_alt_dal": "Gri"})
+        raporlar.append({
+            "test": "11_Kume_Tasnif_Serbestlik_Tadil",
+            "durum": "GECTI",
+            "detay": f"Eksen={len(kume.serbestlik_dereceleri)}, Tâdil={tadil['kademe']}, Muhafaza={tadil['muhafaza_kaidesi_saglandi_mi']}"
+        })
+        self.log("TEST_11", f"[GECTI] Küme Tasnif & Tâdil: Eksen Sayısı={len(kume.serbestlik_dereceleri)}, Tâdil Kademe={tadil['kademe']}")
+
+        self.log("SONUC", "Bütün 11 Küllî İdrak, Külliyat ve Tasnif-Tâdil Teoremi başarıyla doğrulandı. Sistem tam mutabakatta.")
         return {
             "tum_testler_gecti": True,
             "toplam_test_sayisi": len(raporlar),

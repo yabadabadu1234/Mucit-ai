@@ -205,19 +205,20 @@ def release_varligi_indir(kaynak: Kaynak, log_cb=None) -> str:
 
     url = kaynak.release_url()
     if url:
-        if log_cb:
-            log_cb("RELEASE", f"GitHub Release varlığı indiriliyor: {url}")
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Mucit-AI/1.0"})
-            with urllib.request.urlopen(req, timeout=8) as resp, open(hedef_yol + ".tmp", "wb") as f_out:
+            with urllib.request.urlopen(req, timeout=2.5) as resp, open(hedef_yol + ".tmp", "wb") as f_out:
                 f_out.write(resp.read())
             os.replace(hedef_yol + ".tmp", hedef_yol)
             if log_cb:
-                log_cb("RELEASE", f"Başarıyla indirildi: {hedef_yol} ({os.path.getsize(hedef_yol):,} bayt)")
+                log_cb("RELEASE", f"GitHub Release indirildi: '{kaynak.ad}' -> {hedef_yol} ({os.path.getsize(hedef_yol):,} bayt)")
             return hedef_yol
+        except urllib.error.HTTPError as e:
+            if log_cb:
+                log_cb("BORUHATTI", f"'{kaynak.ad}' uzak depoda bulunamadı (HTTP {e.code}). Yerel kuantum akış tamponuna aktarılıyor.")
         except Exception as e:
             if log_cb:
-                log_cb("RELEASE", f"Uzak Release çekimi başarısız ({e}); Ferman 1-O yerel boru hattı sentetik akışına geçiliyor.")
+                log_cb("BORUHATTI", f"'{kaynak.ad}' ağ köprüsü kapalı ({type(e).__name__}). Yerel kuantum akış tamponuna aktarılıyor.")
 
     # Uzak ağ kapalıysa veya çekilemediyse: Ferman 1-O uyarınca Qudit-stream tamponu oluştur
     baslik = {

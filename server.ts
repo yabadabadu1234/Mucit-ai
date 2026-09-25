@@ -1103,39 +1103,103 @@ app.post('/api/kulliyat/cikarim', (req: Request, res: Response) => {
   });
 });
 
-app.get('/api/kulliyat/stream-exec', (req: Request, res: Response) => {
-  res.setHeader('Content-Type', 'text/event-stream');
-  res.setHeader('Cache-Control', 'no-cache');
-  res.setHeader('Connection', 'keep-alive');
-  res.flushHeaders?.();
+// ============================================================================
+// KALICI ARKA PLAN EĞİTİM YÖNETİCİSİ VE DİSK LOGLAMA (PREVIEW KAPANSA DA DEVAM EDER)
+// ============================================================================
+const LOG_DOSYASI = path.join(__dirname, 'depo', 'egitim_loglari.log');
+const DURUM_DOSYASI = path.join(__dirname, 'depo', 'egitim_durumu.json');
 
-  const action = (req.query.action as string) || 'test';
-  const args: string[] = ['-m', 'main.hatt'];
+interface EgitimGorevi {
+  pid: number | null;
+  activeProcess: 'idle' | 'egit' | 'test' | 'cikarim';
+  baslangicZamani: number;
+  bitisZamani: number | null;
+  durum: 'calisiyor' | 'tamamlandi' | 'hata' | 'durduruldu';
+  progressLabel: string;
+  sonuc: any;
+  hataMesaji: string | null;
+}
 
-  if (action === 'egit') {
-    const mod = (req.query.mod as string) || 'dar';
-    const dongu = req.query.dongu ? String(Number(req.query.dongu)) : '5';
-    const azami = req.query.azami_gorev ? String(Number(req.query.azami_gorev)) : '4';
-    const kapi = req.query.kapi_sayisi ? String(Number(req.query.kapi_sayisi)) : '51';
-    const t0 = req.query.t0 ? String(Number(req.query.t0)) : '4.0';
-    const tau = req.query.tau ? String(Number(req.query.tau)) : '1.5';
-    const includeReleases = req.query.include_releases === 'false' ? 'false' : 'true';
-    const secili = (req.query.secili_verisetleri as string) || '';
-    args.push('egit', mod, dongu, azami, kapi, t0, tau, includeReleases, secili);
-  } else if (action === 'cikarim') {
-    const metin = ((req.query.metin as string) || 'Penguen bir kuştur fakat suda yüzer').replace(/["$`\\]/g, '');
-    args.push('cikarim', metin);
-  } else {
-    args.push('test');
+let aktifGorev: EgitimGorevi = {
+  pid: null,
+  activeProcess: 'idle',
+  baslangicZamani: 0,
+  bitisZamani: null,
+  durum: 'tamamlandi',
+  progressLabel: '',
+  sonuc: null,
+  hataMesaji: null
+};
+
+let aktifChildProcess: any = null;
+const sseAboneleri: Set<Response> = new Set();
+
+// Sunucu başlangıcında kayıtlı son durumu yükle
+try {
+  if (fs.existsSync(DURUM_DOSYASI)) {
+    const kayitli = JSON.parse(fs.readFileSync(DURUM_DOSYASI, 'utf8'));
+    aktifGorev = { ...aktifGorev, ...kayitli, pid: null, durum: kayitli.durum === 'calisiyor' ? 'tamamlandi' : kayitli.durum };
+  }
+} catch {}
+
+function diskeLogYaz(satir: string) {
+  try {
+    fs.mkdirSync(path.join(__dirname, 'depo'), { recursive: true });
+    fs.appendFileSync(LOG_DOSYASI, satir + '\n', 'utf8');
+  } catch {}
+}
+
+function durumuDiskeKaydet() {
+  try {
+    fs.mkdirSync(path.join(__dirname, 'depo'), { recursive: true });
+    fs.writeFileSync(DURUM_DOSYASI, JSON.stringify(aktifGorev, null, 2), 'utf8');
+  } catch {}
+}
+
+function yayinlaSSE(mesaj: any) {
+  const veri = `data: ${JSON.stringify(mesaj)}\n\n`;
+  for (const client of sseAboneleri) {
+    try {
+      client.write(veri);
+    } catch {
+      sseAboneleri.delete(client);
+    }
+  }
+}
+
+function gorevBaslat(action: 'egit' | 'test' | 'cikarim', args: string[], progressLabel: string) {
+  if (aktifGorev.durum === 'calisiyor' && aktifChildProcess) {
+    return { success: false, message: 'Halihazırda bir işlem devam ediyor.' };
   }
 
+  // Yeni oturum için log dosyasını temizle veya ayırıcı ekle
+  diskeLogYaz(`\n--- [YENİ OTURUM: ${action.toUpperCase()}] ${new Date().toLocaleString('tr-TR')} ---`);
+
+  aktifGorev = {
+    pid: null,
+    activeProcess: action,
+    baslangicZamani: Date.now(),
+    bitisZamani: null,
+    durum: 'calisiyor',
+    progressLabel,
+    sonuc: null,
+    hataMesaji: null
+  };
+  durumuDiskeKaydet();
+
   const child = spawn('python3', args, { cwd: __dirname });
+  aktifChildProcess = child;
+  aktifGorev.pid = child.pid || null;
+
+  yayinlaSSE({ type: 'start', action, progressLabel, baslangicZamani: aktifGorev.baslangicZamani });
+
   let stdoutData = '';
 
   child.stderr.on('data', (chunk) => {
     const lines = chunk.toString().split('\n').filter((l: string) => l.trim().length > 0);
     for (const line of lines) {
-      res.write(`data: ${JSON.stringify({ type: 'log', line })}\n\n`);
+      diskeLogYaz(line);
+      yayinlaSSE({ type: 'log', line });
     }
   });
 
@@ -1144,23 +1208,140 @@ app.get('/api/kulliyat/stream-exec', (req: Request, res: Response) => {
   });
 
   child.on('close', (code) => {
+    aktifChildProcess = null;
+    aktifGorev.durum = code === 0 ? 'tamamlandi' : 'hata';
+    aktifGorev.bitisZamani = Date.now();
+    aktifGorev.pid = null;
+
+    let resData: any = null;
     try {
-      const data = JSON.parse(stdoutData.trim());
-      res.write(`data: ${JSON.stringify({ type: 'result', data, code })}\n\n`);
+      resData = JSON.parse(stdoutData.trim());
+      aktifGorev.sonuc = resData;
     } catch {
-      res.write(`data: ${JSON.stringify({ type: 'result', raw: stdoutData, code })}\n\n`);
+      aktifGorev.sonuc = stdoutData;
     }
-    res.write(`data: ${JSON.stringify({ type: 'done', code })}\n\n`);
-    res.end();
+
+    durumuDiskeKaydet();
+    diskeLogYaz(`[TAMAM] İşlem ${aktifGorev.durum} durumunda kapandı (Kod: ${code}).`);
+
+    yayinlaSSE({ type: 'result', data: aktifGorev.sonuc, code });
+    yayinlaSSE({ type: 'done', code, durum: aktifGorev.durum });
   });
 
   child.on('error', (err) => {
-    res.write(`data: ${JSON.stringify({ type: 'error', message: err.message })}\n\n`);
-    res.end();
+    aktifChildProcess = null;
+    aktifGorev.durum = 'hata';
+    aktifGorev.hataMesaji = err.message;
+    aktifGorev.bitisZamani = Date.now();
+    aktifGorev.pid = null;
+    durumuDiskeKaydet();
+
+    diskeLogYaz(`[HATA] Proses hatası: ${err.message}`);
+    yayinlaSSE({ type: 'error', message: err.message });
   });
 
+  return { success: true };
+}
+
+// 1. Arka Plan Durumu ve Geçmiş Logları Getir
+app.get('/api/kulliyat/status', (_req: Request, res: Response) => {
+  let loglar: string[] = [];
+  try {
+    if (fs.existsSync(LOG_DOSYASI)) {
+      const tumu = fs.readFileSync(LOG_DOSYASI, 'utf8');
+      loglar = tumu.split('\n').filter(l => l.trim().length > 0);
+      // Son 1500 satırı döndür
+      if (loglar.length > 1500) {
+        loglar = loglar.slice(loglar.length - 1500);
+      }
+    }
+  } catch {}
+
+  res.json({
+    gorev: aktifGorev,
+    loglar
+  });
+});
+
+// 2. İşlemi Elle Durdur
+app.post('/api/kulliyat/durdur', (_req: Request, res: Response) => {
+  if (aktifChildProcess) {
+    try {
+      aktifChildProcess.kill('SIGTERM');
+    } catch {}
+    aktifChildProcess = null;
+  }
+  aktifGorev.durum = 'durduruldu';
+  aktifGorev.bitisZamani = Date.now();
+  durumuDiskeKaydet();
+  diskeLogYaz('[UYARI] Kullanıcı tarafından işlem durduruldu.');
+  yayinlaSSE({ type: 'done', code: -1, durum: 'durduruldu' });
+  res.json({ success: true });
+});
+
+// 3. Logları Temizle
+app.post('/api/kulliyat/log-temizle', (_req: Request, res: Response) => {
+  try {
+    if (fs.existsSync(LOG_DOSYASI)) {
+      fs.writeFileSync(LOG_DOSYASI, '', 'utf8');
+    }
+  } catch {}
+  res.json({ success: true });
+});
+
+// 4. SSE Canlı Akışı (İstemci kapansa dahi arka plandaki Python prosesi ASLA öldürülmez)
+app.get('/api/kulliyat/stream-exec', (req: Request, res: Response) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders?.();
+
+  sseAboneleri.add(res);
+
+  const action = (req.query.action as string) || '';
+
+  // Eğer parametreyle yeni başlatma talep edildiyse ve henüz çalışmıyorsa başlat
+  if (action && aktifGorev.durum !== 'calisiyor') {
+    const args: string[] = ['-m', 'main.hatt'];
+    let progressLabel = '';
+
+    if (action === 'egit') {
+      const mod = (req.query.mod as string) || 'dar';
+      const dongu = req.query.dongu ? String(Number(req.query.dongu)) : '5';
+      const azami = req.query.azami_gorev ? String(Number(req.query.azami_gorev)) : '4';
+      const kapi = req.query.kapi_sayisi ? String(Number(req.query.kapi_sayisi)) : '51';
+      const t0 = req.query.t0 ? String(Number(req.query.t0)) : '4.0';
+      const tau = req.query.tau ? String(Number(req.query.tau)) : '1.5';
+      const includeReleases = req.query.include_releases === 'false' ? 'false' : 'true';
+      const secili = (req.query.secili_verisetleri as string) || '';
+      args.push('egit', mod, dongu, azami, kapi, t0, tau, includeReleases, secili);
+      progressLabel = `Küllî Eğitim (${mod.toUpperCase()}) İcra Ediliyor...`;
+    } else if (action === 'cikarim') {
+      const metin = ((req.query.metin as string) || 'Penguen bir kuştur fakat suda yüzer').replace(/["$`\\]/g, '');
+      args.push('cikarim', metin);
+      progressLabel = `Çıkarım Yapılıyor: "${metin.slice(0, 30)}..."`;
+    } else if (action === 'test') {
+      args.push('test');
+      progressLabel = '10 Küllî İdrak ve Release Teoremi Test Suiti İcra Ediliyor...';
+    }
+
+    if (args.length > 2) {
+      gorevBaslat(action as any, args, progressLabel);
+    }
+  } else if (aktifGorev.durum === 'calisiyor') {
+    // Halihazırda devam eden bir eğitim varsa yeni bağlanan istemciye durumunu haber ver
+    res.write(`data: ${JSON.stringify({
+      type: 'start',
+      action: aktifGorev.activeProcess,
+      progressLabel: aktifGorev.progressLabel,
+      baslangicZamani: aktifGorev.baslangicZamani
+    })}\n\n`);
+  }
+
+  // İstemci pencereyi kapatsa dahi: SADECE dinleyici havuzundan çıkartıyoruz.
+  // ÇOCUK PROSES ASLA ÖLDÜRÜLMEZ! Arka planda diske yazarak bitene kadar devam eder.
   req.on('close', () => {
-    child.kill();
+    sseAboneleri.delete(res);
   });
 });
 

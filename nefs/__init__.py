@@ -42,5 +42,18 @@ __all__ = [
     "SupheManifoldu",
     "HafizaKaydi",
     "TopolojikHafizaKovani",
-    "RustFazi"
+    "RustFazi",
+    "KumeTasnifVeTadil",
+    "KumeOntolojiTuru",
+    "SerbestlikDerecesi",
+    "SerbestlikTuru",
+    "TadilKademesi"
 ]
+
+from nefs.kume_tasnif_tadil import (
+    KumeTasnifVeTadil,
+    KumeOntolojiTuru,
+    SerbestlikDerecesi,
+    SerbestlikTuru,
+    TadilKademesi
+)

@@ -89,6 +89,7 @@ export function CommandCenter() {
   const [eklemeHatasi, setEklemeHatasi] = useState('');
 
   const terminalEndRef = useRef<HTMLDivElement>(null);
+  const terminalContainerRef = useRef<HTMLDivElement>(null);
   const eventSourceRef = useRef<EventSource | null>(null);
 
   // Verisetlerini sunucudan yükle
@@ -107,8 +108,90 @@ export function CommandCenter() {
     }
   };
 
+  // Sayfa açıldığında sunucudaki kalıcı logları ve aktif eğitimi geri yükle
+  const sunucuDurumunuVeLoglariYukle = async () => {
+    try {
+      const res = await fetch('/api/kulliyat/status');
+      const data = await res.json();
+      if (data.loglar && Array.isArray(data.loglar) && data.loglar.length > 0) {
+        const parsed = data.loglar.map((l: string) => parseLogLine(l));
+        setLogs(parsed);
+      }
+      if (data.gorev) {
+        if (data.gorev.durum === 'calisiyor') {
+          setActiveProcess(data.gorev.activeProcess || 'egit');
+          setProgressLabel(data.gorev.progressLabel || 'Arka Planda Eğitim Devam Ediyor...');
+          baglanSSE();
+        } else {
+          setActiveProcess('idle');
+          if (data.gorev.sonuc) {
+            setLastResult(data.gorev.sonuc);
+          }
+        }
+      }
+    } catch (err) {
+      console.error('Kalıcı durum yüklenemedi:', err);
+    }
+  };
+
+  const baglanSSE = (paramUrl?: string) => {
+    if (eventSourceRef.current) {
+      eventSourceRef.current.close();
+    }
+    const url = paramUrl || '/api/kulliyat/stream-exec';
+    const es = new EventSource(url);
+    eventSourceRef.current = es;
+
+    es.onmessage = (event) => {
+      try {
+        const payload = JSON.parse(event.data);
+        if (payload.type === 'log') {
+          appendLog(payload.line);
+        } else if (payload.type === 'start') {
+          setActiveProcess(payload.action);
+          setProgressLabel(payload.progressLabel);
+        } else if (payload.type === 'result') {
+          setLastResult(payload.data);
+        } else if (payload.type === 'done') {
+          setActiveProcess('idle');
+          appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [TAMAM] İşlem ${payload.durum || 'tamamlandı'}.`);
+          es.close();
+        } else if (payload.type === 'error') {
+          setActiveProcess('idle');
+          appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [HATA] ${payload.message}`);
+          es.close();
+        }
+      } catch {
+        appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [BILGI] ${event.data}`);
+      }
+    };
+
+    es.onerror = () => {
+      // Bağlantı koptuğunda arka plan prosesi çalışmaya devam eder
+      setTimeout(() => {
+        fetch('/api/kulliyat/status')
+          .then(r => r.json())
+          .then(d => {
+            if (d.gorev?.durum === 'calisiyor') {
+              baglanSSE();
+            } else {
+              setActiveProcess('idle');
+              if (d.gorev?.sonuc) setLastResult(d.gorev.sonuc);
+            }
+          })
+          .catch(() => {});
+      }, 3000);
+    };
+  };
+
   useEffect(() => {
     verisetleriniYukle();
+    sunucuDurumunuVeLoglariYukle();
+    return () => {
+      if (eventSourceRef.current) {
+        eventSourceRef.current.close();
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -124,8 +207,10 @@ export function CommandCenter() {
   }, [activeProcess]);
 
   useEffect(() => {
-    if (autoScroll) {
-      terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (autoScroll && terminalContainerRef.current) {
+      // scrollIntoView tüm sayfayı (window) aşağı çekiyordu.
+      // Sadece konsol kutusunun kendi içini aşağı kaydırıyoruz:
+      terminalContainerRef.current.scrollTop = terminalContainerRef.current.scrollHeight;
     }
   }, [logs, autoScroll]);
 
@@ -159,31 +244,27 @@ export function CommandCenter() {
     setLogs(prev => [...prev, entry]);
   };
 
-  const durdur = () => {
+  const durdur = async () => {
+    try {
+      await fetch('/api/kulliyat/durdur', { method: 'POST' });
+    } catch {}
     if (eventSourceRef.current) {
       eventSourceRef.current.close();
       eventSourceRef.current = null;
     }
     setActiveProcess('idle');
-    appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [UYARI] Kullanıcı tarafından işlem durduruldu.`);
+    appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [UYARI] Kullanıcı tarafından durdurma emri gönderildi.`);
   };
 
   const calistir = (action: 'egit' | 'test' | 'cikarim', ozelSecili?: string[]) => {
     if (activeProcess !== 'idle') return;
 
-    if (eventSourceRef.current) {
-      eventSourceRef.current.close();
-      eventSourceRef.current = null;
-    }
-
-    setActiveProcess(action);
-    setLastResult(null);
-
+    let targetLabel = '';
     let url = `/api/kulliyat/stream-exec?action=${action}`;
     if (action === 'egit') {
       const seciliList = ozelSecili || selectedDatasets;
       const seciliStr = seciliList.join(',');
-      setProgressLabel(`Küllî Eğitim (${selectedMode.toUpperCase()}) İcra Ediliyor...`);
+      targetLabel = `Küllî Eğitim (${selectedMode.toUpperCase()}) İcra Ediliyor...`;
       url += `&mod=${selectedMode}&include_releases=${includeReleases}`;
       if (seciliStr) {
         url += `&secili_verisetleri=${encodeURIComponent(seciliStr)}`;
@@ -192,43 +273,18 @@ export function CommandCenter() {
         url += `&dongu=${customDongu}&azami_gorev=${customGorev}&kapi_sayisi=${customKapi}&t0=${customT0}&tau=${customTau}`;
       }
     } else if (action === 'test') {
-      setProgressLabel('10 Küllî İdrak ve Release Teoremi Test Suiti İcra Ediliyor...');
+      targetLabel = '10 Küllî İdrak ve Release Teoremi Test Suiti İcra Ediliyor...';
     } else if (action === 'cikarim') {
-      setProgressLabel(`Çıkarım Yapılıyor: "${cikarimMetni.slice(0, 30)}..."`);
+      targetLabel = `Çıkarım Yapılıyor: "${cikarimMetni.slice(0, 30)}..."`;
       url += `&metin=${encodeURIComponent(cikarimMetni)}`;
     }
 
-    appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [BASLAT] >>> ${progressLabel || action.toUpperCase()} tetiklendi.`);
+    setActiveProcess(action);
+    setProgressLabel(targetLabel);
+    setLastResult(null);
 
-    const es = new EventSource(url);
-    eventSourceRef.current = es;
-
-    es.onmessage = (event) => {
-      try {
-        const payload = JSON.parse(event.data);
-        if (payload.type === 'log') {
-          appendLog(payload.line);
-        } else if (payload.type === 'result') {
-          setLastResult(payload.data);
-        } else if (payload.type === 'done') {
-          setActiveProcess('idle');
-          appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [TAMAM] İşlem başarıyla sonlandı.`);
-          es.close();
-        } else if (payload.type === 'error') {
-          setActiveProcess('idle');
-          appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [HATA] ${payload.message}`);
-          es.close();
-        }
-      } catch (err) {
-        appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [BILGI] ${event.data}`);
-      }
-    };
-
-    es.onerror = () => {
-      setActiveProcess('idle');
-      appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [TAMAM] Yayın akışı tamamlandı.`);
-      es.close();
-    };
+    appendLog(`[${new Date().toLocaleTimeString('tr-TR')}] [BASLAT] >>> ${targetLabel || action.toUpperCase()} tetiklendi.`);
+    baglanSSE(url);
   };
 
   const yeniReleaseEkle = async (e: React.FormEvent) => {
@@ -287,8 +343,11 @@ export function CommandCenter() {
     URL.revokeObjectURL(url);
   };
 
-  const clearLogs = () => {
+  const clearLogs = async () => {
     setLogs([]);
+    try {
+      await fetch('/api/kulliyat/log-temizle', { method: 'POST' });
+    } catch {}
   };
 
   const filteredLogs = logs.filter(l => {
@@ -672,16 +731,20 @@ export function CommandCenter() {
               />
               <div className="flex flex-wrap gap-1.5 pt-1">
                 {[
+                  'Yalan söylemek iyi bir şeydir',
                   'Penguen bir kuştur fakat suda yüzer',
                   'Ahmet şirkette amir olarak Mehmet\'e yetki verdi',
-                  'Bütün insanlar fânidir, Sokrates insandır',
-                  'Kuşlar uçar'
+                  'Bütün insanlar fânidir, Sokrates insandır'
                 ].map((orn, i) => (
                   <button
                     key={i}
                     type="button"
                     onClick={() => setCikarimMetni(orn)}
-                    className="text-[10px] font-mono-code px-2 py-0.5 rounded bg-[#241d13] hover:bg-[#33291b] border border-[#362f22] text-[#a89a78] hover:text-[#ece3cf] transition-all"
+                    className={`text-[10px] font-mono-code px-2 py-0.5 rounded border transition-all ${
+                      orn.includes('Yalan')
+                        ? 'bg-rose-950/40 hover:bg-rose-900/60 border-rose-800/50 text-rose-300'
+                        : 'bg-[#241d13] hover:bg-[#33291b] border-[#362f22] text-[#a89a78] hover:text-[#ece3cf]'
+                    }`}
                   >
                     {orn.slice(0, 24)}...
                   </button>
@@ -797,7 +860,20 @@ export function CommandCenter() {
             </div>
 
             {/* Terminal Log Screen */}
-            <div className="flex-1 p-4 overflow-y-auto font-mono-code text-[11px] leading-relaxed space-y-1.5 text-[#d4c8b0] bg-[#0c0a07]">
+            <div
+              ref={terminalContainerRef}
+              onScroll={(e) => {
+                const target = e.currentTarget;
+                const isNearBottom = target.scrollHeight - target.scrollTop - target.clientHeight < 60;
+                // Kullanıcı elle yukarı kaydırdıysa oto-kaydırmayı devre dışı bırak, en alta indiyse tekrar aç
+                if (!isNearBottom && autoScroll) {
+                  setAutoScroll(false);
+                } else if (isNearBottom && !autoScroll) {
+                  setAutoScroll(true);
+                }
+              }}
+              className="flex-1 p-4 overflow-y-auto font-mono-code text-[11px] leading-relaxed space-y-1.5 text-[#d4c8b0] bg-[#0c0a07]"
+            >
               {logs.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-center py-16 text-[#6f6449] space-y-2 select-none">
                   <TerminalIcon className="w-8 h-8 opacity-40" />
@@ -855,11 +931,81 @@ export function CommandCenter() {
                   </span>
                 )}
                 {lastResult.nihai_hukum && (
-                  <span className="text-xs font-mono-code px-2 py-0.5 rounded bg-[#3a2418] border border-[#e08856]/40 text-[#e08856]">
-                    Hüküm Tasdiki
+                  <span className={`text-xs font-mono-code px-2.5 py-0.5 rounded border font-bold ${
+                    lastResult.nihai_hukum.includes('CERH') || lastResult.nihai_hukum.includes('İHLAL')
+                      ? 'bg-rose-950/80 border-rose-700/60 text-rose-300'
+                      : 'bg-emerald-950/80 border-emerald-700/60 text-emerald-300'
+                  }`}>
+                    {lastResult.nihai_hukum.includes('CERH') ? 'Möbius Cerhi (Red)' : 'Burhan Tasdiki'}
                   </span>
                 )}
               </div>
+
+              {/* Inference Verdict Details */}
+              {lastResult.nihai_hukum && (
+                <div className={`p-3 rounded-lg border text-xs font-mono-code space-y-1.5 ${
+                  lastResult.nihai_hukum.includes('CERH')
+                    ? 'bg-rose-950/30 border-rose-800/40 text-rose-200'
+                    : 'bg-emerald-950/30 border-emerald-800/40 text-emerald-200'
+                }`}>
+                  <div className="font-bold flex items-center justify-between">
+                    <span>Nihai Hüküm ve İdrak Neticesi:</span>
+                    <span className="text-[10px] text-[#a89a78]">Ferman 1-G &middot; Ya İspat Ya Sükût</span>
+                  </div>
+                  <p className="text-[11px] leading-relaxed break-words">{lastResult.nihai_hukum}</p>
+                  {lastResult.tenakuz_raporu?.cerh_sebebi && (
+                    <div className="text-[10px] text-rose-400 bg-rose-950/60 p-2 rounded border border-rose-800/50 mt-1">
+                      <strong>Tenakuz Tahlili:</strong> {lastResult.tenakuz_raporu.cerh_sebebi}
+                    </div>
+                  )}
+                  {lastResult.vecih && (
+                    <div className="flex flex-wrap gap-2 text-[10px] pt-1 text-[#a89a78]">
+                      <span>Vecih: <strong className="text-[#ece3cf]">{lastResult.vecih.tip} ({lastResult.vecih.mertebe})</strong></span>
+                      <span>İntaç: <strong className="text-[#ece3cf]">{lastResult.intac_manifoldu?.topoloji}</strong></span>
+                      <span>Holonomi: <strong className="text-[#ece3cf]">{lastResult.holonomi_devridaim?.cins}</strong></span>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Küme Tasnif ve Tâdil Teftişi (Python Doğrudan İcra) */}
+              {(lastResult.kume_tasnifi || lastResult.kume_tasnif_ve_tadil) && (
+                <div className="p-3 rounded-lg bg-[#14181f] border border-amber-800/40 text-xs font-mono-code space-y-2">
+                  <div className="flex items-center justify-between text-amber-300 font-bold">
+                    <span>Küme Tasnif &amp; Serbestlik Derecesi Teftişi:</span>
+                    <span className="text-[10px] text-[#a89a78]">3 Kat'î Şart &middot; 3 Kademeli Tâdil</span>
+                  </div>
+                  {lastResult.kume_tasnifi && (
+                    <div className="space-y-1 text-[11px] text-amber-100/90">
+                      <div className="flex items-center justify-between text-[10px]">
+                        <span>Küme: <strong>{lastResult.kume_tasnifi.kume_adi}</strong> ({lastResult.kume_tasnifi.ontoloji_turu})</span>
+                        <span className={lastResult.kume_tasnifi.uc_kati_sart?.tam_ve_ortucu_mu ? 'text-emerald-400 font-bold' : 'text-amber-400 font-bold'}>
+                          {lastResult.kume_tasnifi.uc_kati_sart?.tam_ve_ortucu_mu ? 'Tam Tasnifat (Örtücü)' : 'Muvakkat İkmal / Tâdil Gerekli'}
+                        </span>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5 pt-1">
+                        {lastResult.kume_tasnifi.serbestlik_dereceleri?.map((sd: any, idx: number) => (
+                          <span key={idx} className="px-2 py-0.5 rounded bg-[#1e2530] border border-amber-900/50 text-amber-200 text-[10px]">
+                            {sd.ad} ({sd.tur}) &middot; [{sd.degerler?.slice(0, 3).join(', ')}]
+                          </span>
+                        ))}
+                      </div>
+                      {lastResult.kume_tasnifi.tadil && (
+                        <div className="p-2 rounded bg-amber-950/40 border border-amber-800/60 text-[10px] text-amber-200 mt-1">
+                          <strong>Tâdil İcrası ({lastResult.kume_tasnifi.tadil.kademe}):</strong> {lastResult.kume_tasnifi.tadil.amel}
+                          <span className="block text-emerald-400">Muhafaza Kaidesi (İctisâb-ı Sabık): {lastResult.kume_tasnifi.tadil.muhafaza_kaidesi_saglandi_mi ? 'Muhafaza Edildi' : 'İhlal'}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  {lastResult.kume_tasnif_ve_tadil && (
+                    <div className="text-[11px] text-amber-200/90 space-y-1 pt-1">
+                      <div className="text-[10px] text-[#a89a78]">Tâlim Safhası Tâdil Durumu:</div>
+                      <p className="text-[10px]">{lastResult.kume_tasnif_ve_tadil.tadil_icrasi?.amel}</p>
+                    </div>
+                  )}
+                </div>
+              )}
 
               {/* Training Summary */}
               {lastResult.bir_milyon_qudit_zirhi && (

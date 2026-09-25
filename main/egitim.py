@@ -11,10 +11,17 @@ from nefs.kuantum_idrak import (
     HafizaVeSupheReaktoru, TabulaRasaRust, TomitaTakesakiTodaGT,
     KuantumMantikDevresi, BirMilyonQuditZirhi, bargmann_n
 )
+from nefs.kume_tasnif_tadil import (
+    KumeTasnifVeTadil, KumeOntolojiTuru, SerbestlikTuru,
+    SerbestlikDerecesi, TadilKademesi
+)
 from main.kulliyat import (
     Kaynak, tum_kulliyat_getir, release_varligi_indir,
     kulliyat_ornekleri_uret
 )
+
+HAFIZA_DOSYASI = os.path.join("depo", "kuantum_hafiza.json")
+OLCUM_DOSYASI = os.path.join("depo", "kulli_dimag_talim.olcum.json")
 
 
 class EgitimHatti:
@@ -44,19 +51,21 @@ class EgitimHatti:
         self.rust = TabulaRasaRust(t0=self.t0, tau=self.tau)
         self.tt_toda_gt = TomitaTakesakiTodaGT(d=d)
         self.mantik = KuantumMantikDevresi(d=d)
+        
         self.veri_zirhi = BirMilyonQuditZirhi(N=1048576, q=64)
         self.parametre_zirhi = BirMilyonQuditZirhi(N=1048576, q=64)
         
+        self.mevcut_parametreler = self._parametreleri_yukle()
         self.zitliklar = [
             ("içeride", "dışarıda"),
             ("var", "yok"),
             ("doğru", "yanlış"),
             ("amir", "memur"),
             ("hakikat", "safsata"),
+            ("ilim", "cehil"),
             ("adalet", "zulüm"),
-            ("ilim", "cehl"),
-            ("nizam", "kaos"),
-            ("sebep", "netice"),
+            ("sıdk", "kizb"),
+            ("hikmet", "abesiyet"),
             ("cevher", "araz"),
             ("bütün", "parça"),
             ("suret", "mana"),
@@ -70,6 +79,16 @@ class EgitimHatti:
             ("tasdik", "inkar")
         ]
 
+    def _parametreleri_yukle(self) -> List[float]:
+        if os.path.exists(OLCUM_DOSYASI):
+            try:
+                with open(OLCUM_DOSYASI, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    return data.get("devam", {}).get("p", [])
+            except Exception:
+                pass
+        return [0.0] * 430
+
     def _mod_ayarla(self, mod: str, dongu: int, azami_gorev: int, kapi_sayisi: int, t0: float, tau: float):
         if mod == "dar":
             self.mod_ad = "Dar Bütçeli (Hafif / Hızlı)"
@@ -78,23 +97,26 @@ class EgitimHatti:
             self.kapi_sayisi = 51
             self.t0 = 4.0
             self.tau = 1.5
-            self.azami_kulliyat_kaynak = 3
+            self.azami_kulliyat_kaynak = 4
+            self.adim_bekleme = 0.35
         elif mod == "dengeli":
             self.mod_ad = "Dengeli (Standart Tekâmül)"
             self.dongu = 12
-            self.azami_gorev = 10
+            self.azami_gorev = 8
             self.kapi_sayisi = 51
             self.t0 = 8.0
             self.tau = 2.0
-            self.azami_kulliyat_kaynak = 6
+            self.azami_kulliyat_kaynak = 8
+            self.adim_bekleme = 0.45
         elif mod == "kulliyet":
             self.mod_ad = "Küllî (İleri Tahkik & Rüşt)"
             self.dongu = 20
-            self.azami_gorev = 20
+            self.azami_gorev = 16
             self.kapi_sayisi = 102
             self.t0 = 12.0
             self.tau = 2.5
-            self.azami_kulliyat_kaynak = 12
+            self.azami_kulliyat_kaynak = 16
+            self.adim_bekleme = 0.55
         elif mod == "ozel":
             self.mod_ad = "Özel Parametrik"
             self.dongu = max(1, min(50, dongu))
@@ -103,6 +125,7 @@ class EgitimHatti:
             self.t0 = t0
             self.tau = max(0.5, tau)
             self.azami_kulliyat_kaynak = 8
+            self.adim_bekleme = 0.35
         else:
             self.mod_ad = f"Standart ({mod})"
             self.dongu = dongu
@@ -110,6 +133,7 @@ class EgitimHatti:
             self.t0 = t0
             self.tau = tau
             self.azami_kulliyat_kaynak = 4
+            self.adim_bekleme = 0.35
 
     def log(self, seviye: str, mesaj: str):
         zaman = time.strftime("%H:%M:%S")
@@ -117,13 +141,22 @@ class EgitimHatti:
         sys.stderr.flush()
 
     def durum_uret(self, etiket: str, tohum: int = 0) -> Qudit:
-        v = [complex(math.cos(tohum * 0.15 + j * 0.65), math.sin(tohum * 0.15 + j * 0.65)) for j in range(self.d)]
+        param_katkisi = 0.0
+        if self.mevcut_parametreler:
+            idx = abs(hash(etiket)) % len(self.mevcut_parametreler)
+            param_katkisi = self.mevcut_parametreler[idx] * 0.15
+
+        v = []
+        for j in range(self.d):
+            aci = tohum * 0.17 + j * 0.61 + param_katkisi * (j + 1)
+            v.append(complex(math.cos(aci), math.sin(aci)))
         return Qudit(v, etiket=etiket)
 
     def safha_1_tahfiz(self) -> List[Dict[str, Any]]:
         self.log("KUANTUM", f"Safha-1 (Tahfîz) başlatıldı. Mod: '{self.mod_ad}', Toplam Döngü: {self.dongu}")
         rapor = []
         for i in range(self.dongu):
+            time.sleep(self.adim_bekleme)
             c1, c2 = self.zitliklar[i % len(self.zitliklar)]
             d1 = self.durum_uret(c1, i * 7)
             d2 = self.durum_uret(c2, i * 7 + 3)
@@ -134,6 +167,16 @@ class EgitimHatti:
             fitrat_h, hafiza_h, makam = self.rust.hata_bolustur(hata)
             alpha = self.rust.ilerle()
             
+            # Parametre gradyan adımı: p ağırlıklarını hataya göre güncelle
+            if self.mevcut_parametreler:
+                idx_p1 = (i * 3) % len(self.mevcut_parametreler)
+                idx_p2 = (i * 3 + 1) % len(self.mevcut_parametreler)
+                self.mevcut_parametreler[idx_p1] += (0.015 * fitrat_h) * (1.0 - alpha)
+                self.mevcut_parametreler[idx_p2] -= (0.015 * fitrat_h) * (1.0 - alpha)
+
+            # Zeno ve Hakikat Hafızasına nakşet
+            self.hafiza.kayit_ekle(f"{c1} ile {c2} zıtlığı", d1, {"Kutup": f"{c1}_{c2}"}, guven=alpha)
+
             basla_idx = (i * 2) % self.veri_zirhi.N
             self.veri_zirhi.aktif_yerlestir([d1, d2], baslangic=basla_idx)
             
@@ -176,6 +219,7 @@ class EgitimHatti:
         self.log("KUANTUM", f"Safha-2 (Tahkik ARC) başlatıldı. {len(dosyalar)} görev dosyası işlenecek.")
         rapor = []
         for idx_dosya, f_yol in enumerate(dosyalar):
+            time.sleep(self.adim_bekleme)
             g_id = os.path.splitext(os.path.basename(f_yol))[0]
             with open(f_yol, "r") as f:
                 veri = json.load(f)
@@ -240,7 +284,6 @@ class EgitimHatti:
             digerleri = [k for k in tum_kaynaklar if k.kategori in ["arc", "riyaziye", "kelam"]]
             
             secilen: List[Kaynak] = []
-            # Her kategoriden orantılı al
             if lugatlar:
                 secilen.extend(lugatlar[:max(1, self.azami_kulliyat_kaynak // 4)])
             if kadim:
@@ -250,7 +293,6 @@ class EgitimHatti:
             if digerleri:
                 secilen.extend(digerleri[:max(1, self.azami_kulliyat_kaynak // 4)])
             
-            # Kalan kontenjanı doldur
             for k in tum_kaynaklar:
                 if len(secilen) >= self.azami_kulliyat_kaynak:
                     break
@@ -265,6 +307,7 @@ class EgitimHatti:
 
         rapor = []
         for idx_k, kaynak in enumerate(islenecek_kaynaklar):
+            time.sleep(self.adim_bekleme)
             if kaynak.surum or kaynak.varlik or kaynak.kategori in ["release_koprusu", "ozel_release"]:
                 self.log(
                     "RELEASE",
@@ -284,6 +327,14 @@ class EgitimHatti:
                 tohum = (idx_k + 1) * 31 + io * 17
                 d = self.durum_uret(f"{kaynak.ad[:12]}_{io}", tohum=tohum)
                 k_durumlar.append(d)
+                
+                # Hakikat Hafızasına nakşet (Şerh 6700-6709)
+                self.hafiza.kayit_ekle(
+                    f"{kaynak.ad}: {ornek['soru']}",
+                    d,
+                    {"Kategori": kaynak.kategori, "Huküm": ornek.get("hukum", "Tasdik")},
+                    guven=float(ornek.get("puan", 0.95))
+                )
 
             baslangic_idx = (500 + idx_k * 12) % self.veri_zirhi.N
             self.veri_zirhi.aktif_yerlestir(k_durumlar, baslangic=baslangic_idx)
@@ -328,6 +379,113 @@ class EgitimHatti:
 
         return rapor
 
+    def safha_4_kume_tasnif_ve_tadil(self) -> Dict[str, Any]:
+        """
+        Safha-4: Küme Tasnif, Serbestlik Derecesi Keşfi ve 3 Kademeli Tâdil
+        'Küme tasnif ve tadili' felsefesi uyarınca:
+        - Asgari ikili çatışma (minimal contrastive pair) ile serbestlik derecesi türetme
+        - Kolmogorov ayırt edilebilirlik ve Mâniatü'l-Hulüvv örtücülük denetimi
+        - Aykırı veri zuhurunda 3 kademeli tâdil (Tefrik, Tevessü, Tahrir)
+        - İctisâb-ı sabıkı iptal etmeme (muhafaza kaidesi)
+        """
+        self.log("TASNIF", "Safha-4 (Küme Tasnif, Serbestlik Dereceleri ve Tâdil Motoru) icra ediliyor...")
+        kume = KumeTasnifVeTadil("MuhakemeKumesi", KumeOntolojiTuru.SURECSEL)
+        
+        # 1. Asgari İkili Çatışma: Tahlil vs Terkip
+        sd1 = kume.minimal_ikili_catisma(
+            "Tahlil", "Terkip",
+            fark_ciheti="AmeliyeIstikameti",
+            tur=SerbestlikTuru.DINAMIK_AMELIYE,
+            deger1="Parcalama",
+            deger2="Birlestirme"
+        )
+        
+        # 2. Üçüncü eleman ile pertürbasyon (kısmi dondurma): Tahlil vs Tecrit
+        kume.serbestlik_ekle(
+            ad="SoyutlamaMertebesi",
+            tur=SerbestlikTuru.SKALAR_MERTEBE,
+            degerler=["Somut_Ayrıştırma", "Soyut_Tecrit"],
+            zati_mi=True
+        )
+        
+        # 3. Zihni Stres Testi (Adalet / Hakikat Mefhumunda Saçmaya İrca)
+        stres_raporu = kume.zihni_stres_testi(
+            mefhum="Adalet",
+            uclara_zorlama_iddiasi="Adalet mutlak kör eşitliktir.",
+            tenakuz_duvari="Çalışan ile tembele aynı pay verilmesi tenakuz oluşturur.",
+            dogan_eksen_adi="LiyakatVeHakKazanimi",
+            kutup1="Kesb_Liyakat",
+            kutup2="Mahrumiyet"
+        )
+        
+        # 4. Üç Kat'î Şart Teftişi (Örtücülük, Ayrıklık, Kolmogorov)
+        elemanlar_haritasi = {
+            "Tahlil": {"AmeliyeIstikameti": "Parcalama", "SoyutlamaMertebesi": "Somut_Ayrıştırma", "LiyakatVeHakKazanimi": "Kesb_Liyakat"},
+            "Terkip": {"AmeliyeIstikameti": "Birlestirme", "SoyutlamaMertebesi": "Somut_Ayrıştırma", "LiyakatVeHakKazanimi": "Kesb_Liyakat"},
+            "Tecrit": {"AmeliyeIstikameti": "Parcalama", "SoyutlamaMertebesi": "Soyut_Tecrit", "LiyakatVeHakKazanimi": "Kesb_Liyakat"}
+        }
+        sartlar = kume.uc_kati_sart_denetimi(elemanlar_haritasi)
+        
+        # 5. Aykırı Veri Zuhr-u Hali ve 3 Kademeli Tâdil Tatbikatı (Fâsid Akit Misali Tefrik)
+        tadil_raporu = kume.tadil_et(
+            aykiri_eleman="FasidAmeliye",
+            kademe=TadilKademesi.KADEME_1_TEFRIK,
+            detay={"eksen": "AmeliyeIstikameti", "yeni_alt_dal": "Tashihli_Tefrik"}
+        )
+        
+        self.log(
+            "TADIL",
+            f"Tasnifat Tamlığı: {sartlar['tam_ve_ortucu_mu']} | Serbestlik Derecesi: {len(kume.serbestlik_dereceleri)} | Tâdil: {tadil_raporu['kademe']}"
+        )
+        
+        return {
+            "kume_adi": kume.kume_adi,
+            "ontoloji_turu": kume.ontoloji_turu.value,
+            "serbestlik_dereceleri": [sd.to_dict() for sd in kume.serbestlik_dereceleri],
+            "stres_testi": stres_raporu,
+            "uc_kati_sart": sartlar,
+            "tadil_icrasi": tadil_raporu
+        }
+
+    def hafizayi_ve_parametreleri_kaydet(self):
+        """Tâlimle kazanılan kuantum hafızasını ve parametreleri diske mühürler."""
+        os.makedirs("depo", exist_ok=True)
+        # 1. Kuantum Hafıza Kayıtları
+        kayitlar = []
+        for k in self.hafiza.hafiza_kayitlari:
+            kayitlar.append({
+                "id": k["id"],
+                "metin": k["metin"],
+                "lif": k.get("lif", {}),
+                "guven": round(k.get("guven", 1.0), 3)
+            })
+        with open(HAFIZA_DOSYASI, "w", encoding="utf-8") as f:
+            json.dump(kayitlar, f, indent=2, ensure_ascii=False)
+
+        # 2. Ölçüm ve Parametre Dosyası
+        if os.path.exists(OLCUM_DOSYASI):
+            try:
+                with open(OLCUM_DOSYASI, "r", encoding="utf-8") as f:
+                    olcum = json.load(f)
+            except Exception:
+                olcum = {}
+        else:
+            olcum = {}
+
+        olcum["ayar"] = self.mod
+        olcum["parametre"] = len(self.mevcut_parametreler)
+        olcum["devam"] = {
+            "yüklendi": True,
+            "yol": "depo/hazine/dimag.safetensors",
+            "p": [round(x, 6) for x in self.mevcut_parametreler]
+        }
+        olcum["son_tâlim_zamanı"] = time.strftime("%Y-%m-%d %H:%M:%S")
+        olcum["nihai_alpha"] = round(self.rust.alpha(), 4)
+        olcum["toplam_hafiza_kaydi"] = len(self.hafiza.hafiza_kayitlari)
+        
+        with open(OLCUM_DOSYASI, "w", encoding="utf-8") as f:
+            json.dump(olcum, f, indent=2, ensure_ascii=False)
+
     def calistir(self) -> Dict[str, Any]:
         self.log("BASLAT", f"Küllî Eğitim Hattı uyarılıyor... Mod: {self.mod_ad} | 2N Serbestlik: {self.veri_zirhi.mahalli_serbestlik:,}")
         tahfiz = self.safha_1_tahfiz()
@@ -337,6 +495,12 @@ class EgitimHatti:
         if self.include_releases:
             kulliyat_rapor = self.safha_3_kulliyat_ve_release()
 
+        # Safha-4: Küme Tasnif, Serbestlik Dereceleri ve 3 Kademeli Tâdil
+        kume_tasnif_rapor = self.safha_4_kume_tasnif_ve_tadil()
+
+        # Tâlim kazanımlarını diske mühürle
+        self.hafizayi_ve_parametreleri_kaydet()
+
         seyirci = self.veri_zirhi.seyirci_analizi()
         tetabuk = self.veri_zirhi.kapi_51_tetabuk(self.kapi_sayisi)
         kenet = self.parametre_zirhi.cift_yazmac_kenet(self.veri_zirhi)
@@ -344,7 +508,7 @@ class EgitimHatti:
         kan_final = self.veri_zirhi.kan_genlik_hesapla()
         
         rust_makam = "Tahkik (Kamil Hâkim)" if self.rust.alpha() >= 0.8 else ("Tekâmül" if self.rust.alpha() >= 0.3 else "Tahfiz (Bebeklik)")
-        self.log("SONUC", f"Eğitim nihayete erdi. Rüşt Makamı: {rust_makam} (α={self.rust.alpha():.3f}) | 1M Qudit Çift Yazmaç Kenet Sadakati: {kenet['nihai_kenet_sadakati']}")
+        self.log("SONUC", f"Eğitim nihayete erdi. Rüşt Makamı: {rust_makam} (α={self.rust.alpha():.3f}) | Hafıza Kaydı: {len(self.hafiza.hafiza_kayitlari)} | 1M Qudit Kenet Sadakati: {kenet['nihai_kenet_sadakati']}")
         
         return {
             "basarili": True,
@@ -375,6 +539,8 @@ class EgitimHatti:
             "tahfiz_adimlari": tahfiz,
             "tahkik_arc": tahkik,
             "kulliyat_ve_release_egitimi": kulliyat_rapor,
+            "kume_tasnif_ve_tadil": kume_tasnif_rapor,
+            "toplam_hafiza_kaydi": len(self.hafiza.hafiza_kayitlari),
             "nihai_rust_makami": rust_makam,
             "nihai_alpha": round(self.rust.alpha(), 4)
         }
