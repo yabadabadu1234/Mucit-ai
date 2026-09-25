@@ -442,9 +442,7 @@ def d2_silsile(Z: Dict[str, Any]) -> Dict[str, Any]:
                      tohum=int(ayar.tohum)))
 
     if "parite_lifi" not in ayar.elle:
-        _gercek_lif_boyu = int(silsile["asansör"]["gerçek_lif_boyu"])
-        ayar.parite_lifi = (_gercek_lif_boyu if _gercek_lif_boyu > 0
-                            else int(silsile["asansör"]["kat"]))
+        ayar.parite_lifi = int(silsile["asansör"]["kat"])
 
     safha("D2 SİLSİLE", kafes=len(silsile["kafes"]),
           tıkanma=int(silsile["şelale"]["tıkanma"]),
