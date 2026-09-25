@@ -1,362 +1,676 @@
-"""
-MUCİT-AI KÜLLİYAT VE GITHUB RELEASE BORU HATTI
-================================================
-Bu modül; Külliyat, GitHub Release ve Açık Kaynak Sözlük/Lügat ile Klasik Metinlerin
-(Ferman 1-O, 1-N, 1-K ve 3 uyarınca) tâlime dâhil edilmesini sağlar.
+from __future__ import annotations
 
-Kapsanan Küllî Kaynaklar:
-- ARC Ailesi (ARC-AGI-1/2/3, ConceptARC, BARC, vb.)
-- Riyaziye & Akıl Yürütme (MATH, GSM8K, PRM800K, BIG-bench, vb.)
-- İslâmî & Kelâmî Külliyat (Risale-i Nur, Kütüb-i Sitte, Hadis/Tefsir Külliyatı, vb.)
-- GitHub Release Köprüleri (UltraData-Math, FineMath, BARC 200k, Open-Web-Math, vb.)
-- Şümullü Sözlükler & Lügatler:
-    * Webster's Unabridged Dictionary (1913 Project Gutenberg / İngilizce)
-    * Kubbealtı Lugati / Misalli Büyük Türkçe Sözlük
-    * Ferit Devellioğlu Osmanlıca-Türkçe Ansiklopedik Lûgat
-    * Arapça En Şümullü Lügatler: Lisânü'l-Arab (İbn Manzûr), Tâcü'l-Arûs (Zebîdî),
-      el-Kâmûsü'l-Muhît (Fîrûzâbâdî), el-Müfredât (Râgıb el-İsfahânî), Lane's Arabic-English Lexicon
-    * Şemseddin Sâmî - Kâmûs-ı Türkî
-- 1900 Öncesi Klasik & Kadîm Türkçe Edebiyat / Tarih Metinleri:
-    * Dîvânü Lugâti't-Türk (Kâşgarlı Mahmud, 1074)
-    * Kutadgu Bilig (Yusuf Has Hâcip, 1069)
-    * Kitâb-ı Dede Korkut (Dresden & Vatikan nüshaları)
-    * Yunus Emre Dîvânı & Risâletü'n-Nushiyye (13. yy)
-    * Âşıkpaşazâde Tarihi (Tevârîh-i Âl-i Osmân, 15. yy)
-    * Fuzûlî Dîvânı, Leylâ vü Mecnûn, Şikâyetnâme (16. yy)
-    * Bâkî & Nef'î Dîvânı (Klasik Osmanlı Şiiri & Kasideleri)
-    * Evliya Çelebi Seyahatnâmesi (10 Cilt, 17. yy)
-    * Naimâ Tarihi (Târîh-i Na'îmâ, 18. yy)
-    * Şinasi & Namık Kemal (Cezmi, İntibah, Vatan yahut Silistre - 19. yy)
-    * Ahmed Cevdet Paşa - Târîh-i Cevdet & Mecelle-i Ahkâm-ı Adliye (1876)
-- Yeni Basılmış Yek Kitap ve Özgün İlmî Eserler:
-    * Yek Kitap: Küllî İdrak ve Vahdet Risalesi (2025/2026 Neşri)
-    * Yek Kitap: Tensörel Mantık ve Sentaks Şerhi (İstiklâl Neşriyat)
-"""
-
-import os
-import sys
 import json
-import glob
-import math
-import time
-import urllib.request
-import urllib.error
-from dataclasses import dataclass, asdict
-from typing import List, Dict, Any, Optional, Iterator
+import os
+import shutil
+import subprocess
+from dataclasses import dataclass
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-KULLIYAT_DIZINI = os.path.join("depo", "kulliyat")
-RELEASES_DIZINI = os.path.join("depo", "releases")
-OS_KULLIYAT_CONF = os.path.join("depo", "ozel_verisetleri.json")
+__all__ = ["Kaynak", "KAYNAKLAR", "kulliyat_cek", "kulliyat_verisi",
+           "kulliyat_beyani", "kulliyat_dokumu", "mucit_cevir",
+           "mucit_ac", "hf_boru", "yer_ac", "bos_alan",
+           "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
+
+KULLIYAT_DIZINI = os.environ.get("MUCIT_KULLIYAT", "depo/kulliyat")
 
 
-@dataclass
+@dataclass(frozen=True)
 class Kaynak:
+
     ad: str
-    sahip_isim: str
-    kategori: str  # 'arc', 'riyaziye', 'kelam', 'release_koprusu', 'lugat', 'kadim_turkce', 'yek_kitap', 'ozel_release'
+    depo: str
+    yol: str
+    uzanti: Any = ".txt"
     dal: str = ""
-    uzanti: str = ""
-    surum: str = ""  # GitHub Release tag örn. 'kulliyat-1' veya 'v1.0'
-    varlik: str = ""  # Release dosya adı örn. 'UltraData-Math.mucit'
-    pay: float = 1.0
-    alindi: bool = True
+    surum: str = ""
+    varlik: str = ""
+    yerel: str = ""
     engel: str = ""
-    boyut_bayt: int = 0
-    ornek_sayisi: int = 0
-    ozel_mi: bool = False
-    dogrudan_url: str = ""
+    pay: float = 1.0
 
-    def release_url(self) -> str:
-        if self.dogrudan_url:
-            return self.dogrudan_url
-        if self.surum and self.varlik and self.sahip_isim:
-            return f"https://github.com/{self.sahip_isim}/releases/download/{self.surum}/{self.varlik}"
-        return ""
+    def uzantilar(self) -> Tuple[str, ...]:
+        u = self.uzanti
+        return (u,) if isinstance(u, str) else tuple(u)
 
 
-# =====================================================================
-#  TEMEL KÜLLİYAT, SÖZLÜK, KADÎM TÜRKÇE VE GITHUB RELEASE CETVELİ (65+ VERİSETİ)
-# =====================================================================
+KAYNAKLAR: Tuple[Kaynak, ...] = (
+    Kaynak("ARC soyutlamaları -- sözlü çözüm (ferman 1-R'nin sözlü kanadı)",
+           "", "", (".md", ".py"), pay=3.0,
+           yerel="idrak/veri/soyutlamalar"),
+    Kaynak("ARC-AGI-2 (resmî, arcprize)", "arcprize/ARC-AGI-2", "data",
+           ".json", pay=3.0),
+    Kaynak("ARC-AGI-1 (fchollet)", "fchollet/ARC-AGI", "data",
+           ".json", pay=2.0),
+    Kaynak("ARC-AGI-3 (resmî ajan takımı, arcprize)",
+           "arcprize/ARC-AGI-3-Agents", "", (".py", ".md", ".json"),
+           pay=3.0),
+    Kaynak("Enigmata (36 bulmaca ailesi, doğrulayıcılı)",
+           "yabadabadu1234/Mucit-ai", "", surum="kulliyat-9",
+           varlik="BytedTsinghua-SIA__Enigmata-Data.mucit", pay=3.0),
+    Kaynak("SynLogic (sentetik mantık, doğrulayıcılı)",
+           "yabadabadu1234/Mucit-ai", "", surum="kulliyat-10",
+           varlik="MiniMaxAI__SynLogic.mucit", pay=2.0),
+    Kaynak("ZebraLogic (ızgara mantık bulmacası, açık uçlu)",
+           "yabadabadu1234/Mucit-ai", "", surum="kulliyat-12",
+           varlik="allenai__ZebraLogicBench__grid_mode.mucit", pay=2.0),
+    Kaynak("ARC veri kümeleri derlemesi (neoneye)",
+           "neoneye/arc-dataset-collection", "", (".json", ".jsonl"),
+           pay=2.0),
+    Kaynak("AutumnBench (43 etkileşimli ızgara dünyası, 129 vazife)",
+           "BasisResearch/MARAProtocol", "",
+           (".json", ".jsonl", ".py", ".sexp", ".au", ".md"), pay=3.0),
+    Kaynak("Autumn dili (dünyanın kaideleri, sembolik)",
+           "BasisResearch/Autumn.cpp", "",
+           (".au", ".sexp", ".jl", ".py", ".cpp", ".hpp", ".md"),
+           pay=2.0),
+    Kaynak("LARC (ARC'ın lisanla anlatılmış çözümleri)",
+           "samacqua/LARC", "", (".json", ".csv", ".py"), pay=3.0),
+    Kaynak("Minigrid + BabyAI (üretici ızgara dünyaları)",
+           "Farama-Foundation/Minigrid", "",
+           (".py", ".md", ".json"), pay=2.0),
+    Kaynak("h-ARC (insan çözüm izleri)", "Le-Gris/h-arc", "",
+           (".csv", ".json", ".ipynb", ".py"), pay=2.0),
+    Kaynak("BARC (kaide ile üretilmiş ARC)", "xu3kev/BARC", "",
+           (".json", ".jsonl", ".py"), pay=1.5),
+    Kaynak("MINI-ARC", "KSB21ST/MINI-ARC", "data", ".json", pay=1.0),
+    Kaynak("ConceptARC", "victorvikram/ConceptARC", "corpus", ".json",
+           pay=1.0),
+    Kaynak("re-ARC (üretici + DSL)", "michaelhodel/re-arc", "",
+           ".py", pay=1.5),
+    Kaynak("BIG-bench (204 vazife)", "google/BIG-bench", "bigbench/benchmark_tasks",
+           (".json", ".jsonl", ".py"), pay=3.0),
+    Kaynak("BIG-Bench Hard (23 zor vazife)",
+           "suzgunmirac/BIG-Bench-Hard", "",
+           (".json", ".jsonl", ".txt"), pay=1.5),
+    Kaynak("Natural Instructions (1600+ vazife)",
+           "allenai/natural-instructions", "tasks", ".json", pay=3.0),
+    Kaynak("OpenAI Evals", "openai/evals", "evals/registry/data",
+           (".jsonl", ".json"), pay=1.5),
+    Kaynak("MATH (Hendrycks, 12500 mesele + çözüm)",
+           "hendrycks/math", "", (".tar", ".txt"), pay=3.0),
+    Kaynak("PRM800K (adım adım muhakeme etiketi)", "openai/prm800k",
+           "prm800k", (".jsonl", ".json", ".py"), pay=3.0),
+    Kaynak("GSM8K (mekteb riyaziyesi, çözümlü)",
+           "openai/grade-school-math", "grade_school_math/data",
+           ".jsonl", pay=2.0),
+    Kaynak("AQuA (cebir, mantık izahlı)", "deepmind/AQuA", "",
+           ".json", pay=1.5),
+    Kaynak("DeepMind Mathematics (üretici)",
+           "google-deepmind/mathematics_dataset", "", ".py", pay=0.5),
+    Kaynak("NaturalProofs (ayrıştırıcı)", "wellecks/naturalproofs", "",
+           (".json", ".jsonl", ".py", ".ipynb"), pay=0.5),
+    Kaynak("miniF2F (resmî ispat mihengi)", "openai/miniF2F", "",
+           (".lean", ".thy", ".mm", ".ml"), pay=1.5),
+    Kaynak("Metamath set.mm (40 bin resmî ispat)", "metamath/set.mm", "",
+           ".mm", pay=2.0),
+    Kaynak("Lean mathlib4 (makine denetimli riyaziye)",
+           "leanprover-community/mathlib4", "Mathlib", ".lean", pay=2.0),
+    Kaynak("Risale-i Nur (Diyanet tashihli, txt + markdown)",
+           "alitekdemir/Risale-i-Nur-Diyanet", "", (".txt", ".md"),
+           dal="master", pay=3.0),
+    Kaynak("Gayr-i Münteşir Risale Mektupları (2062 vesika)",
+           "alitekdemir/ArsivNur", "", ".md", pay=1.5),
+    Kaynak("Risale-i Nur kelime frekansı (lügat)",
+           "alitekdemir/Risale-i-Nur-Kelime-Frekans", "data",
+           (".txt", ".csv"), pay=0.5),
+    Kaynak("Kütüb-i Sitte (hadis, tam metin JSON)",
+           "AhmedBaset/hadith-json", "db", ".json", pay=3.0),
+    Kaynak("Hadis neşirleri (çok dilli)", "fawazahmed0/hadith-api",
+           "editions", ".json", pay=1.5),
+    Kaynak("Tefsir külliyatı (çok müfessir)", "spa5k/tafsir_api",
+           "tafsir", ".json", pay=2.0),
+    Kaynak("Kur'ân-ı Kerîm (metin + meâl + tecvid)",
+           "semarketir/quranjson", "source", ".json", pay=1.0),
+    Kaynak("NVARC Artifacts Puzzles", "", "", pay=0.0,
+           engel="Kaggle veri seti (sorokin/nvarc-artifacts-puzzles). "
+                 "Bu oturumun ağ siyaseti www.kaggle.com'a tüneli "
+                 "reddediyor (ölçüldü: 000). GitHub aynası yok: "
+                 "1ytic/NVARC klonlandı ve README'si üçünü de "
+                 "``kaggle datasets download`` ile tarif ediyor."),
+    Kaynak("NVARC Synthetic Puzzles (103 bin)", "", "", pay=0.0,
+           engel="Kaggle veri seti (sorokin/nvarc-synthetic-puzzles). "
+                 "Aynı engel; ölçüldü."),
+    Kaynak("NVARC Augmented Puzzles (3,2 milyon)", "", "", pay=0.0,
+           engel="Kaggle veri seti (sorokin/nvarc-augmented-puzzles). "
+                 "Aynı engel; ölçüldü."),
+    Kaynak("UltraData-Math (openbmb)", "", "", pay=0.0,
+           engel="Padişahın verdiği iki kumanda da yoklandı ve ikisi de "
+                 "düştü: (1) ``git clone https://huggingface.co/"
+                 "datasets/openbmb/UltraData-Math`` → 'CONNECT tunnel "
+                 "failed, response 403'; (2) ``git clone "
+                 "git@hf.co:datasets/...`` → 'cannot run ssh: No such "
+                 "file or directory' (bu kapta ssh ikilisi yok). "
+                 "Vekil kaydı da teyit ediyor: huggingface.co:443 için "
+                 "'gateway answered 403 to CONNECT (policy denial)'. "
+                 "Yâni HuggingFace'e şümul **siyasetle** kapalıdır, "
+                 "kod eksikliğiyle değil."),
+    Kaynak("OpenITI (Arapça İslâmî külliyat, ~10 bin metin)", "", "",
+           pay=0.0,
+           engel="``OpenITI/RELEASE`` klonlanmaya teşebbüs edildi ve "
+                 "``git clone`` düştü (depo git-lfs ile taşınıyor, "
+                 "işaretçi çekimi tamamlanmadı). Yerine Kütüb-i Sitte "
+                 "(AhmedBaset/hadith-json) ve tefsir külliyatı "
+                 "(spa5k/tafsir_api) kondu ve ikisi de ÇEKİLDİ."),
+    Kaynak("arXiv tam metin arşivi", "", "", pay=0.0,
+           engel="``arxiv.org`` ve ``export.arxiv.org`` ölçüldü: ikisi "
+                 "de 000 (tünel kurulamıyor). Toplu arşiv zaten "
+                 "requester-pays S3'tedir ve o da kapalıdır. GitHub'da "
+                 "**metin gövdesi** taşıyan bir arXiv aynası yok; "
+                 "bulunanlar (mattbierbaum/arxiv-public-datasets) "
+                 "yalnız indirme takımıdır, metin taşımaz."),
+    Kaynak("Project Gutenberg (kitap arşivi)", "", "", pay=0.0,
+           engel="``gutenberg.org`` ölçüldü: 000. GITenberg'de her kitap "
+                 "AYRI bir depodur (binlerce depo); toplu çekimi "
+                 "GitHub API'siyle sıralamak gerekir ve ``api.github.com`` "
+                 "bu oturumda 403 veriyor. Edebî külliyat yerine "
+                 "Risale-i Nur ailesi (468 MB) ve Türkçe metin olarak "
+                 "o kondu."),
+)
 
-VARSAYILAN_CETVEL: List[Kaynak] = [
-    # --- 1. ARC AİLESİ ---
-    Kaynak("ARC-AGI-2 (resmî, arcprize)", "arcprize/ARC-AGI-2", "arc", dal="main", uzanti=".json", alindi=True, boyut_bayt=22100708, ornek_sayisi=1120, pay=3.0),
-    Kaynak("ARC-AGI-1 (fchollet)", "fchollet/ARC-AGI", "arc", dal="master", uzanti=".json", alindi=True, boyut_bayt=14211428, ornek_sayisi=800, pay=2.0),
-    Kaynak("ARC-AGI-3 (resmî ajan takımı)", "arcprize/ARC-AGI-3-Agents", "arc", dal="main", uzanti=".json", alindi=True, boyut_bayt=205672, ornek_sayisi=150, pay=2.0),
-    Kaynak("ConceptARC", "victorvikram/ConceptARC", "arc", dal="main", uzanti=".json", alindi=True, boyut_bayt=1515896, ornek_sayisi=480, pay=2.0),
-    Kaynak("BARC (kaide ile üretilmiş ARC)", "xu3kev/BARC", "arc", dal="main", uzanti=".json,.py", alindi=True, boyut_bayt=36489776, ornek_sayisi=5000, pay=2.5),
-    Kaynak("h-ARC (insan çözüm izleri)", "Le-Gris/h-arc", "arc", dal="main", uzanti=".json", alindi=True, boyut_bayt=6228432, ornek_sayisi=320, pay=1.5),
-    Kaynak("re-ARC (üretici + DSL)", "michaelhodel/re-arc", "arc", dal="main", uzanti=".py", alindi=True, boyut_bayt=1281748, ornek_sayisi=400, pay=2.0),
-    Kaynak("MINI-ARC", "KSB21ST/MINI-ARC", "arc", dal="main", uzanti=".json", alindi=True, boyut_bayt=552112, ornek_sayisi=150, pay=1.0),
-    Kaynak("ARC Veri Kümeleri Derlemesi (neoneye)", "neoneye/arc-dataset-collection", "arc", dal="main", uzanti=".json", alindi=True, boyut_bayt=280051520, ornek_sayisi=8500, pay=2.0),
-    Kaynak("LARC (lisanla anlatılmış ARC çözümleri)", "samacqua/LARC", "arc", dal="main", uzanti=".json", alindi=True, boyut_bayt=468301028, ornek_sayisi=1200, pay=2.5),
-    Kaynak("AutumnBench & Autumn dili", "BasisResearch/MARAProtocol", "arc", dal="main", uzanti=".cpp,.json", alindi=True, boyut_bayt=1866300, ornek_sayisi=129, pay=1.5),
-    Kaynak("Minigrid & BabyAI", "Farama-Foundation/Minigrid", "arc", dal="master", uzanti=".py", alindi=True, boyut_bayt=594772, ornek_sayisi=200, pay=1.0),
 
-    # --- 2. RİYAZİYE VE AKIL YÜRÜTME İZLERİ ---
-    Kaynak("MATH (Hendrycks 12500 problem)", "hendrycks/math", "riyaziye", dal="main", uzanti=".json", alindi=True, boyut_bayt=237005232, ornek_sayisi=12500, pay=3.0),
-    Kaynak("GSM8K (mekteb riyaziyesi çözümlü)", "openai/grade-school-math", "riyaziye", dal="master", uzanti=".jsonl", alindi=True, boyut_bayt=16732968, ornek_sayisi=8500, pay=2.5),
-    Kaynak("PRM800K (adım adım muhakeme etiketi)", "openai/prm800k", "riyaziye", dal="main", uzanti=".jsonl", alindi=True, boyut_bayt=18044000, ornek_sayisi=800000, pay=3.0),
-    Kaynak("BIG-bench (204 vazife)", "google/BIG-bench", "riyaziye", dal="main", uzanti=".json", alindi=True, boyut_bayt=2232644564, ornek_sayisi=204000, pay=3.5),
-    Kaynak("BIG-Bench Hard (23 zor vazife)", "suzgunmirac/BIG-Bench-Hard", "riyaziye", dal="main", uzanti=".json", alindi=True, boyut_bayt=43065284, ornek_sayisi=6500, pay=2.5),
-    Kaynak("Natural Instructions (1600+ vazife)", "allenai/natural-instructions", "riyaziye", dal="master", uzanti=".json", alindi=True, boyut_bayt=3198748968, ornek_sayisi=160000, pay=3.5),
-    Kaynak("Metamath set.mm (40 bin resmî ispat)", "metamath/set.mm", "riyaziye", dal="master", uzanti=".mm", alindi=True, boyut_bayt=121748796, ornek_sayisi=40000, pay=3.0),
-    Kaynak("Lean mathlib4 (makine denetimli riyaziye)", "leanprover-community/mathlib4", "riyaziye", dal="master", uzanti=".lean", alindi=True, boyut_bayt=136621896, ornek_sayisi=75000, pay=3.0),
-    Kaynak("AQuA (cebir mantık izahlı)", "deepmind/AQuA", "riyaziye", dal="master", uzanti=".json", alindi=True, boyut_bayt=141870648, ornek_sayisi=100000, pay=2.0),
-    Kaynak("miniF2F (resmî ispat mihengi)", "openai/miniF2F", "riyaziye", dal="main", uzanti=".lean", alindi=True, boyut_bayt=1051424, ornek_sayisi=488, pay=2.0),
-
-    # --- 3. İSLÂMÎ VE KELÂMÎ METİN KÜLLİYATI ---
-    Kaynak("Risale-i Nur (Diyanet tashihli)", "alitekdemir/Risale-i-Nur-Diyanet", "kelam", dal="main", uzanti=".txt,.md", alindi=True, boyut_bayt=34484064, ornek_sayisi=14000, pay=3.0),
-    Kaynak("Gayr-i Münteşir Arşiv (2062 vesika)", "alitekdemir/ArsivNur", "kelam", dal="main", uzanti=".txt", alindi=True, boyut_bayt=9841124, ornek_sayisi=2062, pay=2.5),
-    Kaynak("Risale-i Nur Kelime Frekans & Lügat", "alitekdemir/Risale-i-Nur-Kelime-Frekans", "kelam", dal="main", uzanti=".json", alindi=True, boyut_bayt=48810636, ornek_sayisi=85000, pay=2.0),
-    Kaynak("Kütüb-i Sitte (Hadis Tam Metin JSON)", "AhmedBaset/hadith-json", "kelam", dal="master", uzanti=".json", alindi=True, boyut_bayt=178701584, ornek_sayisi=38000, pay=3.0),
-    Kaynak("Hadis Neşirleri (Çok Dilli Hadith API)", "fawazahmed0/hadith-api", "kelam", dal="1", uzanti=".json", alindi=True, boyut_bayt=742236312, ornek_sayisi=45000, pay=2.5),
-    Kaynak("Tefsir Külliyatı (Çok Müfessir)", "spa5k/tafsir_api", "kelam", dal="main", uzanti=".json", alindi=True, boyut_bayt=56267624, ornek_sayisi=6236, pay=3.0),
-    Kaynak("Kur'ân-ı Kerîm (Metin, Meâl, Tecvid)", "semarketir/quranjson", "kelam", dal="master", uzanti=".json", alindi=True, boyut_bayt=14704512, ornek_sayisi=6236, pay=3.0),
-
-    # --- 4. TÜRKÇE, İNGİLİZCE VE ARAPÇA EN GENİŞ LÜGATLER & SÖZLÜKLER ---
-    Kaynak("Webster's Revised Unabridged Dictionary (1913 Gutenberg)", "matthewreagan/WebstersEnglishDictionary", "lugat", surum="kulliyat-release-v1", varlik="websters_1913_dictionary.mucit", alindi=True, pay=3.5, boyut_bayt=184000000, ornek_sayisi=182000),
-    Kaynak("Kubbealtı Lugati (Misalli Büyük Türkçe Sözlük)", "kulliyat/kubbealti-lugati", "lugat", surum="kulliyat-release-v1", varlik="kubbealti_misalli_turkce.mucit", alindi=True, pay=3.5, boyut_bayt=245000000, ornek_sayisi=110000),
-    Kaynak("Ferit Devellioğlu Osmanlıca-Türkçe Ansiklopedik Lûgat", "kulliyat/devellioglu-lugati", "lugat", surum="kulliyat-release-v1", varlik="devellioglu_osmanlica_turkce.mucit", alindi=True, pay=3.5, boyut_bayt=310000000, ornek_sayisi=85000),
-    Kaynak("Lisânü'l-Arab (İbn Manzûr - En Şümullü Arapça Lügat)", "OpenITI/Lisan-al-Arab", "lugat", surum="kulliyat-release-v1", varlik="lisanul_arab_ibn_manzur.mucit", alindi=True, pay=4.0, boyut_bayt=480000000, ornek_sayisi=120000),
-    Kaynak("Tâcü'l-Arûs min Cevâhiri'l-Kâmûs (Zebîdî - 40 Cilt)", "OpenITI/Taj-al-Arus", "lugat", surum="kulliyat-release-v1", varlik="tacul_arus_zebidi.mucit", alindi=True, pay=4.0, boyut_bayt=620000000, ornek_sayisi=140000),
-    Kaynak("el-Kâmûsü'l-Muhît (Fîrûzâbâdî)", "OpenITI/al-Qamus-al-Muhit", "lugat", surum="kulliyat-release-v1", varlik="el_kamusul_muhit.mucit", alindi=True, pay=3.5, boyut_bayt=210000000, ornek_sayisi=65000),
-    Kaynak("el-Müfredât fî Garîbi'l-Kur'ân (Râgıb el-İsfahânî)", "OpenITI/al-Mufradat", "lugat", surum="kulliyat-release-v1", varlik="el_mufredat_isfahani.mucit", alindi=True, pay=3.5, boyut_bayt=120000000, ornek_sayisi=42000),
-    Kaynak("Lane's Arabic-English Lexicon (8 Cilt Açık Kaynak)", "kulliyat/lane-arabic-english", "lugat", surum="kulliyat-release-v1", varlik="lane_arabic_english_lexicon.mucit", alindi=True, pay=3.5, boyut_bayt=380000000, ornek_sayisi=105000),
-    Kaynak("Kâmûs-ı Türkî (Şemseddin Sâmî - 1901 İlk Kapsamlı Türkçe Sözlük)", "kulliyat/kamus-i-turki", "lugat", surum="kulliyat-release-v1", varlik="kamus_i_turki_sami.mucit", alindi=True, pay=3.0, boyut_bayt=165000000, ornek_sayisi=60000),
-
-    # --- 5. 1900 ÖNCESİ KLASİK VE KADÎM TÜRKÇE EDEBİYAT & TARİH KÜLLİYATI ---
-    Kaynak("Dîvânü Lugâti't-Türk (Kâşgarlı Mahmud, 1074)", "kulliyat/divanu-lugatit-turk", "kadim_turkce", surum="kulliyat-release-v1", varlik="divanu_lugatit_turk_1074.mucit", alindi=True, pay=3.5, boyut_bayt=95000000, ornek_sayisi=35000),
-    Kaynak("Kutadgu Bilig (Yusuf Has Hâcip, 1069)", "kulliyat/kutadgu-bilig", "kadim_turkce", surum="kulliyat-release-v1", varlik="kutadgu_bilig_1069.mucit", alindi=True, pay=3.0, boyut_bayt=62000000, ornek_sayisi=26000),
-    Kaynak("Kitâb-ı Dede Korkut (Dresden & Vatikan Nüshaları)", "kulliyat/dede-korkut", "kadim_turkce", surum="kulliyat-release-v1", varlik="dede_korkut_destanlari.mucit", alindi=True, pay=3.0, boyut_bayt=48000000, ornek_sayisi=18000),
-    Kaynak("Yunus Emre Dîvânı & Risâletü'n-Nushiyye (13. Yüzyıl)", "kulliyat/yunus-emre-divani", "kadim_turkce", surum="kulliyat-release-v1", varlik="yunus_emre_kulliyati.mucit", alindi=True, pay=3.0, boyut_bayt=55000000, ornek_sayisi=22000),
-    Kaynak("Âşıkpaşazâde Tarihi (Tevârîh-i Âl-i Osmân, 15. Yy)", "kulliyat/asikpasazade-tarihi", "kadim_turkce", surum="kulliyat-release-v1", varlik="asikpasazade_tarihi.mucit", alindi=True, pay=3.0, boyut_bayt=82000000, ornek_sayisi=28000),
-    Kaynak("Fuzûlî Külliyatı (Dîvân, Leylâ vü Mecnûn, Şikâyetnâme)", "kulliyat/fuzuli-kulliyati", "kadim_turkce", surum="kulliyat-release-v1", varlik="fuzuli_kulliyati_tam.mucit", alindi=True, pay=3.0, boyut_bayt=78000000, ornek_sayisi=31000),
-    Kaynak("Bâkî & Nef'î Dîvânı (Sihâm-ı Kazâ & Şiir Külliyatı)", "kulliyat/baki-nefi-divani", "kadim_turkce", surum="kulliyat-release-v1", varlik="baki_nefi_divanlari.mucit", alindi=True, pay=3.0, boyut_bayt=64000000, ornek_sayisi=24000),
-    Kaynak("Evliya Çelebi Seyahatnâmesi (10 Cilt Tam Metin, 17. Yy)", "kulliyat/evliya-celebi", "kadim_turkce", surum="kulliyat-release-v1", varlik="evliya_celebi_seyahatnamesi_10cilt.mucit", alindi=True, pay=4.0, boyut_bayt=420000000, ornek_sayisi=125000),
-    Kaynak("Naimâ Tarihi (Târîh-i Na'îmâ 6 Cilt, 18. Yy)", "kulliyat/naima-tarihi", "kadim_turkce", surum="kulliyat-release-v1", varlik="tarih_i_naima_6cilt.mucit", alindi=True, pay=3.5, boyut_bayt=290000000, ornek_sayisi=72000),
-    Kaynak("Namık Kemal Klasik Eserleri (Cezmi, İntibah, Vatan)", "kulliyat/namik-kemal", "kadim_turkce", surum="kulliyat-release-v1", varlik="namik_kemal_kulliyati.mucit", alindi=True, pay=3.0, boyut_bayt=72000000, ornek_sayisi=32000),
-    Kaynak("Ahmed Cevdet Paşa - Târîh-i Cevdet & Mecelle (1876)", "kulliyat/cevdet-pasa-mecelle", "kadim_turkce", surum="kulliyat-release-v1", varlik="cevdet_pasa_tarih_mecelle.mucit", alindi=True, pay=3.5, boyut_bayt=340000000, ornek_sayisi=88000),
-
-    # --- 6. YENİ BASILMIŞ YEK KİTAP VERİLERİ (BÜTÜN VE DERLİ TOPLU İLMÎ ESERLER) ---
-    Kaynak("Yek Kitap: Küllî İdrak ve Vahdet Risalesi (2025/2026)", "kulliyat/yek-kitap-vahdet-risalesi", "yek_kitap", surum="kulliyat-release-v1", varlik="yek_kitap_vahdet_risalesi.mucit", alindi=True, pay=4.0, boyut_bayt=185000000, ornek_sayisi=45000),
-    Kaynak("Yek Kitap: Tensörel Mantık ve Sentaks Şerhi (İstiklâl)", "kulliyat/yek-kitap-tensorel-mantik", "yek_kitap", surum="kulliyat-release-v1", varlik="yek_kitap_tensorel_mantik.mucit", alindi=True, pay=3.5, boyut_bayt=145000000, ornek_sayisi=38000),
-    Kaynak("Yek Kitap: Riyaziyede Burhan ve Hikmet Metodolojisi", "kulliyat/yek-kitap-burhan-ve-hikmet", "yek_kitap", surum="kulliyat-release-v1", varlik="yek_kitap_burhan_hikmet.mucit", alindi=True, pay=3.5, boyut_bayt=130000000, ornek_sayisi=34000),
-
-    # --- 7. DİĞER GITHUB RELEASE KÖPRÜLERİ ---
-    Kaynak("UltraData-Math (openbmb)", "openbmb/UltraData-Math", "release_koprusu", surum="kulliyat-release-v1", varlik="UltraData-Math.mucit", alindi=True, pay=3.5, boyut_bayt=425000000, ornek_sayisi=200000),
-    Kaynak("FineMath-4plus (HuggingFaceTB)", "HuggingFaceTB/finemath", "release_koprusu", surum="kulliyat-release-v1", varlik="finemath-4plus.mucit", alindi=True, pay=3.0, boyut_bayt=310000000, ornek_sayisi=150000),
-    Kaynak("BARC 200k Heavy (barc0)", "barc0/200k_HEAVY", "release_koprusu", surum="kulliyat-release-v1", varlik="barc0_200k_heavy.mucit", alindi=True, pay=3.0, boyut_bayt=210000000, ornek_sayisi=200000),
-    Kaynak("BARC 100k GPT4 (barc0)", "barc0/100k_gpt4", "release_koprusu", surum="kulliyat-release-v1", varlik="barc0_100k_gpt4.mucit", alindi=True, pay=2.5, boyut_bayt=115000000, ornek_sayisi=100000),
-    Kaynak("Open-Web-Math", "open-web-math/open-web-math", "release_koprusu", surum="kulliyat-release-v1", varlik="open_web_math.mucit", alindi=True, pay=3.0, boyut_bayt=550000000, ornek_sayisi=250000),
-    Kaynak("NVARC Sentetik Bulmacalar (103k)", "sorokin/nvarc-synthetic-puzzles", "release_koprusu", surum="kulliyat-release-v1", varlik="nvarc_synthetic_103k.mucit", alindi=True, pay=3.0, boyut_bayt=180000000, ornek_sayisi=103000),
-    Kaynak("NVARC Çoğaltılmış Bulmacalar (3.2M)", "sorokin/nvarc-augmented-puzzles", "release_koprusu", surum="kulliyat-release-v1", varlik="nvarc_augmented.mucit", alindi=True, pay=2.5, boyut_bayt=320000000, ornek_sayisi=320000),
-    Kaynak("CommonsenseQA & RiddleSense", "tau/commonsense_qa", "release_koprusu", surum="kulliyat-release-v1", varlik="commonsense_riddle.mucit", alindi=True, pay=2.0, boyut_bayt=65000000, ornek_sayisi=20000),
-    Kaynak("LogiQA & ReClor (Mantıksal Muhakeme)", "lucasmccabe/logiqa", "release_koprusu", surum="kulliyat-release-v1", varlik="logiqa_reclor.mucit", alindi=True, pay=2.5, boyut_bayt=82000000, ornek_sayisi=18000),
-    Kaynak("Winogrande-XL (allenai)", "allenai/winogrande", "release_koprusu", surum="kulliyat-release-v1", varlik="winogrande_xl.mucit", alindi=True, pay=2.0, boyut_bayt=45000000, ornek_sayisi=40000),
-    Kaynak("OpenITI Arapça İslâmî Külliyat", "OpenITI/RELEASE", "release_koprusu", surum="kulliyat-release-v1", varlik="openiti_islamic.mucit", alindi=True, pay=3.0, boyut_bayt=680000000, ornek_sayisi=10000),
-    Kaynak("Thaqalayn & Rasaif Klasik Metinler", "ImruQays/Thaqalayn", "release_koprusu", surum="kulliyat-release-v1", varlik="thaqalayn_rasaif.mucit", alindi=True, pay=2.0, boyut_bayt=95000000, ornek_sayisi=25000),
-]
+def _dizin(k: Kaynak) -> str:
+    return os.path.join(KULLIYAT_DIZINI, k.depo.replace("/", "__"))
 
 
-def ozel_verisetlerini_yukle() -> List[Kaynak]:
-    if not os.path.exists(OS_KULLIYAT_CONF):
-        return []
-    try:
-        with open(OS_KULLIYAT_CONF, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            return [Kaynak(**item) for item in data]
-    except Exception:
-        return []
+def bos_alan(yol: str = "") -> int:
+    import shutil as _sh
+    d = yol or KULLIYAT_DIZINI
+    os.makedirs(d, exist_ok=True)
+    return int(_sh.disk_usage(d).free)
 
 
-def ozel_veriseti_kaydet(kaynaklar: List[Kaynak]) -> None:
-    os.makedirs(os.path.dirname(OS_KULLIYAT_CONF), exist_ok=True)
-    with open(OS_KULLIYAT_CONF, "w", encoding="utf-8") as f:
-        json.dump([asdict(k) for k in kaynaklar], f, indent=2, ensure_ascii=False)
-
-
-def tum_kulliyat_getir() -> List[Kaynak]:
-    ozeller = ozel_verisetlerini_yukle()
-    ozel_adlar = {o.ad for o in ozeller}
-    sonuc = [o for o in ozeller]
-    for v in VARSAYILAN_CETVEL:
-        if v.ad not in ozel_adlar:
-            sonuc.append(v)
-    return sonuc
-
-
-def release_varligi_indir(kaynak: Kaynak, log_cb=None) -> str:
-    """
-    Ferman 1-O uyarınca: Varlık uzak GitHub Release'den veya yerel tampondan
-    belleğe taşma olmadan çekilir.
-    """
-    os.makedirs(KULLIYAT_DIZINI, exist_ok=True)
-    os.makedirs(RELEASES_DIZINI, exist_ok=True)
-
-    hedef_ad = kaynak.varlik if kaynak.varlik else f"{kaynak.sahip_isim.replace('/', '__')}.mucit"
-    hedef_yol = os.path.join(KULLIYAT_DIZINI, hedef_ad)
-
-    # Önbellekte varsa doğrudan döndür
-    if os.path.exists(hedef_yol) and os.path.getsize(hedef_yol) > 0:
-        if log_cb:
-            log_cb("BORUHATTI", f"Önbellekte hazır: '{kaynak.ad}' -> {hedef_yol} ({os.path.getsize(hedef_yol):,} bayt)")
-        return hedef_yol
-
-    url = kaynak.release_url()
-    if url:
+def yer_ac(gerek: int, koru: Sequence[str] = ()) -> Dict[str, Any]:
+    korunan = {os.path.abspath(y) for y in koru}
+    atilan: List[str] = []
+    kazanc = 0
+    if bos_alan() >= int(gerek):
+        return {"gerek": int(gerek), "atılan": atilan, "kazanç": 0,
+                "boş": bos_alan()}
+    adaylar = []
+    for f in os.listdir(KULLIYAT_DIZINI):
+        if not f.endswith(MUCIT_UZANTI):
+            continue
+        y = os.path.join(KULLIYAT_DIZINI, f)
+        if os.path.abspath(y) in korunan:
+            continue
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mucit-AI/1.0"})
-            with urllib.request.urlopen(req, timeout=2.5) as resp, open(hedef_yol + ".tmp", "wb") as f_out:
-                f_out.write(resp.read())
-            os.replace(hedef_yol + ".tmp", hedef_yol)
-            if log_cb:
-                log_cb("RELEASE", f"GitHub Release indirildi: '{kaynak.ad}' -> {hedef_yol} ({os.path.getsize(hedef_yol):,} bayt)")
-            return hedef_yol
-        except urllib.error.HTTPError as e:
-            if log_cb:
-                log_cb("BORUHATTI", f"'{kaynak.ad}' uzak depoda bulunamadı (HTTP {e.code}). Yerel kuantum akış tamponuna aktarılıyor.")
-        except Exception as e:
-            if log_cb:
-                log_cb("BORUHATTI", f"'{kaynak.ad}' ağ köprüsü kapalı ({type(e).__name__}). Yerel kuantum akış tamponuna aktarılıyor.")
-
-    # Uzak ağ kapalıysa veya çekilemediyse: Ferman 1-O uyarınca Qudit-stream tamponu oluştur
-    baslik = {
-        "ad": kaynak.ad,
-        "sahip_isim": kaynak.sahip_isim,
-        "kodlama": "o200k_base",
-        "surum": kaynak.surum or "kulliyat-1",
-        "varlik": kaynak.varlik,
-        "kategori": kaynak.kategori,
-        "pay": kaynak.pay,
-        "olusturma": time.strftime("%Y-%m-%d %H:%M:%S")
-    }
-    baslik_json = json.dumps(baslik).encode("utf-8")
-    baslik_blok = baslik_json[:320].ljust(320, b" ")
-
-    with open(hedef_yol, "wb") as f:
-        f.write(b"MUCIT2\n")
-        f.write(baslik_blok)
-        # 256 sembolik basamak
-        for i in range(256):
-            val = ((i * 1337 + 42) % 200000)
-            f.write(val.to_bytes(4, byteorder="little"))
-
-    if log_cb:
-        log_cb("BORUHATTI", f"Boru hattı akış tamponu tesis edildi: {hedef_yol}")
-    return hedef_yol
+            adaylar.append((os.path.getmtime(y), os.path.getsize(y), y))
+        except OSError:
+            pass
+    for _t, b, y in sorted(adaylar):
+        if bos_alan() >= int(gerek):
+            break
+        try:
+            os.remove(y)
+            atilan.append(y)
+            kazanc += b
+        except OSError:
+            pass
+    return {"gerek": int(gerek), "atılan": atilan, "kazanç": kazanc,
+            "boş": bos_alan()}
 
 
-def kulliyat_ornekleri_uret(kaynak: Kaynak, adet: int = 10) -> List[Dict[str, Any]]:
-    """
-    Her veriseti türüne has semantik ve kuantum mantık örnekleri üretir.
-    Lügatler, Kadîm Türkçe metinler ve Yek Kitap'lar için özel etiketli
-    anlamsal lifler ve kaziyeler oluşturur.
-    """
-    ornekler = []
-    kat = kaynak.kategori
-    ad = kaynak.ad
+def _boy(kok: str, uzantilar: Sequence[str]) -> Tuple[int, int]:
+    uz, b, n = tuple(uzantilar), 0, 0
+    for kk, _dd, ff in os.walk(kok):
+        for f in ff:
+            if f.endswith(uz):
+                try:
+                    b += os.path.getsize(os.path.join(kk, f))
+                    n += 1
+                except OSError:
+                    pass
+    return b, n
 
-    if kat == "arc":
-        for i in range(adet):
-            ornekler.append({
-                "kaynak": ad,
-                "cins": "arc_izgara_kaidesi",
-                "soru": f"ARC Simetri ve Dönüşüm Kaidesi #{i+1} [{ad}]",
-                "akil_yurutme": "Izgara boyutu 3x3'ten 6x6'ya genişletilir; 0 rengi vakum tutulur; Möbius paritesi korunur.",
-                "hukum": "Kafes Doku İntacı",
-                "vecih": ["sebep", "netice", "nizam"],
-                "puan": 0.95
-            })
-    elif kat == "riyaziye" or "Math" in ad or "GSM" in ad:
-        for i in range(adet):
-            ornekler.append({
-                "kaynak": ad,
-                "cins": "riyaziye_ispat_muhakeme",
-                "soru": f"Riyazi Muhakeme ve Teorem İntacı #{i+1} [{ad}]",
-                "akil_yurutme": "Adım 1: Hipotezler Fubini-Study metriğinde hizalanır. Adım 2: Toda Kafesi Lax çifti özdeğerleri sıralanır. Adım 3: Çelişki bulunamaz.",
-                "hukum": "Bargmann İntacı Tasdik Edildi (Q.E.D.)",
-                "vecih": ["hakikat", "ilim", "bütün"],
-                "puan": 0.98
-            })
-    elif kat == "kelam":
-        for i in range(adet):
-            ornekler.append({
-                "kaynak": ad,
-                "cins": "kelami_ve_hikemi_tefsir",
-                "soru": f"Hikmet ve Tevhid Bürhanı #{i+1} [{ad}]",
-                "akil_yurutme": "Kâinatta hiçbir şey tesadüfî ve intizamsız değildir; her bir zerre küllî nizamın aynasıdır.",
-                "hukum": "Vahdet ve Nizam Delili Mühürlendi",
-                "vecih": ["tevhid", "nizam", "külli"],
-                "puan": 0.99
-            })
-    elif kat == "lugat":
-        # Webster, Kubbealtı, Devellioğlu, Lisânü'l-Arab, Tâcü'l-Arûs, Lane vb.
-        lugat_ornek_kaliplari = [
-            ("Madde Başı: 'Hakîkat'", "Etimoloji: Arapça h-k-k kökü. Bir şeyin aslı, sabitesi, zeval bulmaz mahiyeti. Kubbealtı ve Lisânü'l-Arab teyitli.", "Semantik Lif: Vücud-ı Hakiki"),
-            ("Madde Başı: 'Reason / Muhakeme'", "Webster 1913: 'The power of comprehending, inferring, or thinking in orderly, rational ways.' Karşılığı: Kuvve-i Akliye.", "Semantik Lif: İntaç ve Burhan"),
-            ("Madde Başı: 'İntaç (Entailment)'", "Devellioğlu: Netice verme, neticelendirme; mantıkta mukaddemlerden tâliyi çıkarma. Tâcü'l-Arûs: netâce.", "Semantik Lif: Küllî İntaç"),
-            ("Madde Başı: 'Hikmet (Wisdom)'", "Lisânü'l-Arab: İlmin ve amelin tam yerli yerinde olması, sefihliğin zıddı. el-Müfredât: Hakkı bilip hayrı işlemek.", "Semantik Lif: Mizan ve Adalet"),
-            ("Madde Başı: 'Kıyas (Syllogism)'", "Kâmûs-ı Türkî: Bir şeyi başka bir şeyle ölçme, mukayese; mantıkta iki kaziyeden netice çıkarma.", "Semantik Lif: Kıyas-ı Mantıki")
-        ]
-        for i in range(adet):
-            kalip = lugat_ornek_kaliplari[i % len(lugat_ornek_kaliplari)]
-            ornekler.append({
-                "kaynak": ad,
-                "cins": "lugat_ve_muzem_lif",
-                "soru": f"Lügat Tahlili #{i+1} [{ad}]: {kalip[0]}",
-                "akil_yurutme": f"{kalip[1]} Sözlük maddesi Qudit tabanına (d=16) ve üç dilli (TR-EN-AR) semantik lif uzayına projekte edildi.",
-                "hukum": kalip[2],
-                "vecih": ["mana", "lügat", "fasih"],
-                "puan": 0.99
-            })
-    elif kat == "kadim_turkce":
-        # 1900 öncesi metinler: Dîvânü Lugâti't-Türk, Kutadgu Bilig, Dede Korkut, Evliya Çelebi, vb.
-        kadim_ornek_kaliplari = [
-            ("Kutadgu Bilig (1069) Beyit", "Bayat atı birle sözüg başladım, Törütgen egidgen keçürgen idim. (Tanrı adıyla söze başladım; yaratan, besleyen, bağışlayan Rabbim).", "Tevhid ve Nizam İntacı"),
-            ("Dîvânü Lugâti't-Türk (1074) Hikmet", "Alp Er Tunga öldi mü, Issız ajun kaldı mu, Ödlek öçin aldı mu, Emdi yürek yırtılur. (Zamanın ve dünyanın faniliği).", "Vecih: Fena ve Beka"),
-            ("Kitâb-ı Dede Korkut Beyanı", "Ecel va'desi irişmeyince kimse ölmez, ölen adam dirilmez, çıkan can geri gelmez. Hak Teâlâ kadirdir.", "Fıtrat ve Hikmet"),
-            ("Evliya Çelebi Seyahatnâmesi (17. Yy)", "Şehre nazar olundukta azîm bir kale-i müşeyyede ve ma'mure-i cihân olup cümle esnâf nizam üzeredir.", "Nizam ve Suret"),
-            ("Ahmed Cevdet Paşa - Mecelle Madde 1", "İlm-i fıkh, mesâil-i şer'iyye-i ameliyyeyi bilmektir. Mesâil-i fıkhiyye ya emr-i âhirete taalluk eder ki ibâdâttır; ya emr-i dünyâya taalluk eder ki muâmelâttır.", "Hukuk ve Küllî Kaideler")
-        ]
-        for i in range(adet):
-            kalip = kadim_ornek_kaliplari[i % len(kadim_ornek_kaliplari)]
-            ornekler.append({
-                "kaynak": ad,
-                "cins": "kadim_turkce_edebiyat",
-                "soru": f"Kadîm Türkçe Metin Analizi #{i+1} [{ad}]: {kalip[0]}",
-                "akil_yurutme": f"1900 öncesi özgün metin ve sentaks tahlili: {kalip[1]} Cümle yapısı ve klasik kelime hazinesi kuantum tensör lifine bağlandı.",
-                "hukum": kalip[2],
-                "vecih": ["kadim", "turkce", "belagat"],
-                "puan": 0.98
-            })
-    elif kat == "yek_kitap":
-        # Yek Kitap: bütünlüklü tek kitap külliyatları
-        yek_ornek_kaliplari = [
-            ("Bölüm 1: Vahdet-i Vücûd ve Küllî Nizam", "Kâinat bir tek küllî kitaptır; her bir faslı bir âlem, her bir satırı bir nev'i, her bir kelimesi bir ferddir. Parça bütünden tecrit edilemez.", "Vahdet Bürhanı"),
-            ("Bölüm 2: Tensörel Mantıkta İntaç Mertebeleri", "Kaziye-i Hamliyye ve Kaziye-i Şartiyye lifli tensör demetleri üzerinde paralel taşınır. Çelişki Möbius yırtığı doğurur.", "Mürettep Burhan"),
-            ("Bölüm 3: Fıtrî Akıl ve Tabula Rasa Tekâmülü", "Akıl evvela saf fıtrattır; tecrübe ve kelam ile rüşt makamına (alpha=1.0) erişir. Seyirci quditler daima intizamı korur.", "Kemâl ve Rüşt")
-        ]
-        for i in range(adet):
-            kalip = yek_ornek_kaliplari[i % len(yek_ornek_kaliplari)]
-            ornekler.append({
-                "kaynak": ad,
-                "cins": "yek_kitap_ilmi_eser",
-                "soru": f"Yek Kitap İlmî Fasıl #{i+1} [{ad}]: {kalip[0]}",
-                "akil_yurutme": f"Bütün ve yekpare ilmî eser metni: {kalip[1]} Sentetik dağılma önlenip yekpare nizam Qudit Zırhına işlendi.",
-                "hukum": kalip[2],
-                "vecih": ["yekpare", "ilim", "hikmet"],
-                "puan": 0.99
-            })
-    else:
-        for i in range(adet):
-            ornekler.append({
-                "kaynak": ad,
-                "cins": "github_release_akisi",
-                "soru": f"GitHub Release Varlığı [{ad}] -> Örnek #{i+1}",
-                "akil_yurutme": f"Release varlığı '{kaynak.varlik or kaynak.sahip_isim}' boru hattıyla belleğe taşındı. Belirteç akışı Qudit tabanına açıldı.",
-                "hukum": f"Zırh Mühürleme ({kaynak.surum or 'release'})",
-                "vecih": ["külli", "suret", "mana"],
-                "puan": 0.96
-            })
-    return ornekler
+
+MUCIT_DAMGA = b"MUCIT2\n"
+
+MUCIT_UZANTI = ".mucit"
+
+
+BELIRTEC_PENCERESI: int = 1 << 16
+
+
+def _belirtecle(kod, metin: str, pencere: int = BELIRTEC_PENCERESI):
+    if not metin:
+        return []
+    out = []
+    i, boy = 0, len(metin)
+    while i < boy:
+        j = min(i + int(pencere), boy)
+        if j < boy:
+            k = max(metin.rfind("\n", i, j), metin.rfind(" ", i, j))
+            if k > i:
+                j = k + 1
+        out.extend(kod.encode(metin[i:j], disallowed_special=()))
+        i = j
+    return out
+
+
+def _parquet_akit(yol: str, kod, ch) -> Tuple[int, int]:
+    import numpy as np
+    try:
+        import pyarrow.parquet as pq
+    except ImportError as e:
+        raise AssertionError(
+            "``%s`` bir parquet dosyası fakat ``pyarrow`` kurulu değil. "
+            "Sessizce atlamak, verinin bir kısmını gizlice düşürmek "
+            "olurdu (ferman 5). Kurun: ``pip install pyarrow``" % yol) from e
+    dosya = pq.ParquetFile(yol)
+    import pyarrow as pa
+    n = 0
+    for obek in dosya.iter_batches(batch_size=4096):
+        for ad, sut in zip(obek.schema.names, obek.columns):
+            if not (pa.types.is_string(sut.type)
+                    or pa.types.is_large_string(sut.type)):
+                continue
+            metin = "\n".join(str(v) for v in sut.to_pylist()
+                               if v is not None)
+            if not metin:
+                continue
+            t = _belirtecle(kod, metin)
+            if t:
+                ch.write(np.asarray(t, np.uint32).tobytes())
+                n += len(t)
+    return n, 1
+
+
+def _metin_akit(yol: str, kod, ch, obek_bayt: int = 8 << 20
+                ) -> Tuple[int, int]:
+    import numpy as np
+    if yol.endswith(".parquet"):
+        return _parquet_akit(yol, kod, ch)
+    try:
+        fh = open(yol, "rb")
+    except OSError:
+        return 0, 0
+    n = 0
+    with fh:
+        artik = b""
+        while True:
+            parca = fh.read(int(obek_bayt))
+            if not parca:
+                break
+            parca = artik + parca
+            artik, parca = parca[-4:], parca[:-4]
+            if not parca:
+                continue
+            t = _belirtecle(kod, parca.decode("utf-8", "replace"))
+            if t:
+                ch.write(np.asarray(t, np.uint32).tobytes())
+                n += len(t)
+        if artik:
+            t = _belirtecle(kod, artik.decode("utf-8", "replace"))
+            if t:
+                ch.write(np.asarray(t, np.uint32).tobytes())
+                n += len(t)
+    return n, 1
+
+
+def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
+                uzantilar: Sequence[str] = (), ad: str = "",
+                obek_bayt: int = 8 << 20,
+                getirici=None) -> Dict[str, Any]:
+    import numpy as np
+    from nefs.belirtec import belirtec_kapisi, belirtec_sozlugu
+
+    kod = belirtec_kapisi(kodlama)
+    V = int(belirtec_sozlugu(kodlama))
+    uz = tuple(uzantilar)
+    os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
+    n = dosya = 0
+    gecici = cikti + ".yaziliyor"
+    with open(gecici, "wb") as ch:
+        ch.write(MUCIT_DAMGA)
+        yer = ch.tell()
+        ch.write(b" " * 320 + b"\n")
+        if getirici is not None:
+            for y, birak in getirici:
+                if uz and not str(y).endswith(uz):
+                    if birak is not None:
+                        birak()
+                    continue
+                try:
+                    n_m, d_m = _metin_akit(y, kod, ch, int(obek_bayt))
+                finally:
+                    if birak is not None:
+                        birak()
+                n += n_m
+                dosya += d_m
+        for kk, _dd, ff in (() if getirici is not None else os.walk(kok)):
+            for f in sorted(ff):
+                if uz and not f.endswith(uz):
+                    continue
+                y = os.path.join(kk, f)
+                if f.endswith(".parquet"):
+                    n_p, d_p = _parquet_akit(y, kod, ch)
+                    n += n_p
+                    dosya += d_p
+                    continue
+                n_m, d_m = _metin_akit(y, kod, ch, int(obek_bayt))
+                n += n_m
+                dosya += d_m
+        bas = json.dumps({"kodlama": kodlama, "sözlük": V,
+                          "belirteç": int(n), "kaynak": ad or kok,
+                          "dosya": int(dosya)},
+                         ensure_ascii=False).encode("utf-8")
+        assert len(bas) <= 320, "başlık 320 baytı aşamaz: %d" % len(bas)
+        ch.seek(yer)
+        ch.write(bas + b" " * (320 - len(bas)))
+    os.replace(gecici, cikti)
+    return {"yol": cikti, "belirteç": n, "dosya": dosya,
+            "kodlama": kodlama, "sözlük": V}
+
+
+def hf_boru(kimlik: str, cikti: str, kodlama: str = "o200k_base",
+            alt_yol: str = "", uzantilar: Sequence[str] = (),
+            jeton: Optional[str] = None,
+            gecici_dizin: str = "hf_parca") -> Dict[str, Any]:
+    from huggingface_hub import HfApi, hf_hub_download
+
+    api = HfApi(token=jeton or None)
+    hepsi = [f for f in api.list_repo_files(kimlik, repo_type="dataset")
+             if not f.endswith("/")]
+    onler = tuple(y.strip().strip("/") + "/" for y in
+                  str(alt_yol).replace(",", " ").split() if y.strip())
+    if onler:
+        hepsi = [f for f in hepsi if f.startswith(onler)]
+    uz = tuple(uzantilar)
+    if uz:
+        hepsi = [f for f in hepsi if f.endswith(uz)]
+    assert hepsi, (
+        "``%s`` deposunda çevrilecek dosya yok: alt_yol=%r uzantı=%r. "
+        "Depoda bulunan uzantılar: %s"
+        % (kimlik, alt_yol, uz,
+           sorted({os.path.splitext(f)[1] or "(uzantısız)"
+                   for f in api.list_repo_files(kimlik,
+                                                repo_type="dataset")})))
+    os.makedirs(gecici_dizin, exist_ok=True)
+    sayac = {"indi": 0, "bayt": 0}
+
+    def _akis():
+        for f in sorted(hepsi):
+            y = hf_hub_download(kimlik, f, repo_type="dataset",
+                                local_dir=gecici_dizin, token=jeton or None)
+            sayac["indi"] += 1
+            try:
+                sayac["bayt"] += int(os.path.getsize(y))
+            except OSError:
+                pass
+
+            def _birak(_y=y):
+                for hedef in {_y, os.path.realpath(_y)}:
+                    try:
+                        os.remove(hedef)
+                    except OSError:
+                        pass
+            yield y, _birak
+
+    o = mucit_cevir("", cikti, kodlama, uzantilar=uz, ad=kimlik,
+                    getirici=_akis())
+    shutil.rmtree(gecici_dizin, ignore_errors=True)
+    o["inen_dosya"] = int(sayac["indi"])
+    o["inen_bayt"] = int(sayac["bayt"])
+    return o
+
+
+def mucit_ac(yol: str, kodlama: str = "o200k_base"):
+    import numpy as np
+    with open(yol, "rb") as fh:
+        if fh.read(len(MUCIT_DAMGA)) != MUCIT_DAMGA:
+            return None
+        ham = fh.read(321).decode("utf-8", "replace").strip()
+        ofset = fh.tell()
+    if not ham or not ham.startswith("{"):
+        return None
+    try:
+        bas = json.loads(ham)
+    except ValueError:
+        return None
+    assert str(bas["kodlama"]) == str(kodlama), (
+        "çevrilmiş külliyatın kodlaması tutmuyor: %s dosyada %r, "
+        "tâlimde %r -- yeniden çevrilmeli"
+        % (yol, bas["kodlama"], kodlama))
+    return np.memmap(yol, dtype=np.uint32, mode="r", offset=ofset,
+                     shape=(int(bas["belirteç"]),))
+
+
+def envanter(kok: str) -> Dict[str, int]:
+    e: Dict[str, int] = {}
+    for kk, _dd, ff in os.walk(kok):
+        for f in ff:
+            u = os.path.splitext(f)[1] or "(uzantısız)"
+            e[u] = e.get(u, 0) + 1
+    return e
+
+
+def kulliyat_cek(kaynaklar: Optional[Sequence[Kaynak]] = None
+                 ) -> List[Dict[str, Any]]:
+    ks = list(kaynaklar or KAYNAKLAR)
+    out: List[Dict[str, Any]] = []
+    for k in ks:
+        if k.engel or not k.depo:
+            out.append({"ad": k.ad, "alındı": False, "engel": k.engel,
+                        "bayt": 0, "dosya": 0})
+            continue
+        d = _dizin(k)
+        if k.varlik:
+            hedef = os.path.join(d, k.varlik)
+            if not os.path.isfile(hedef):
+                os.makedirs(d, exist_ok=True)
+                kok_adres = ("https://github.com/%s/releases/download/%s/"
+                             % (k.depo, k.surum))
+                parcalar: List[str] = []
+                i = 0
+                while True:
+                    ad_p = k.varlik if i == 0 else "%s.parca%02d" % (k.varlik, i - 1)
+                    yer = os.path.join(d, ad_p)
+                    r = subprocess.run(
+                        ["curl", "-fsSL", "-o", yer, kok_adres + ad_p],
+                        capture_output=True, text=True, timeout=7200)
+                    if r.returncode != 0:
+                        if i == 0:
+                            out.append({
+                                "ad": k.ad, "alındı": False, "bayt": 0,
+                                "dosya": 0,
+                                "engel": "sürüm varlığı inmedi (%s): %s"
+                                         % (kok_adres + ad_p,
+                                            (r.stderr or "").strip()[-160:])})
+                        break
+                    parcalar.append(yer)
+                    i += 1
+                    if i == 1 and os.path.isfile(hedef):
+                        break
+                if not parcalar:
+                    continue
+                if len(parcalar) > 1:
+                    with open(hedef + ".birlesik", "wb") as ch:
+                        for y in parcalar:
+                            with open(y, "rb") as f:
+                                shutil.copyfileobj(f, ch, 8 << 20)
+                            os.remove(y)
+                    os.replace(hedef + ".birlesik", hedef)
+            b = os.path.getsize(hedef) if os.path.isfile(hedef) else 0
+            out.append({"ad": k.ad, "alındı": b > 0, "engel": "",
+                        "yol": d, "bayt": b, "dosya": 1,
+                        "çevrilmiş": True})
+            continue
+        if not os.path.isdir(d):
+            os.makedirs(os.path.dirname(d) or ".", exist_ok=True)
+            komut = ["git", "clone", "--depth", "1"]
+            if k.dal:
+                komut += ["--branch", k.dal]
+            komut += ["https://github.com/" + k.depo, d]
+            ortam = dict(os.environ, GIT_LFS_SKIP_SMUDGE="1")
+            r = subprocess.run(komut, capture_output=True, text=True,
+                               env=ortam, timeout=7200)
+            if r.returncode != 0:
+                out.append({"ad": k.ad, "alındı": False, "bayt": 0,
+                            "dosya": 0,
+                            "engel": "git clone düştü: %s"
+                                     % (r.stderr or "").strip()[-200:]})
+                continue
+        kok = os.path.join(d, k.yol) if k.yol else d
+        if not os.path.isdir(kok):
+            out.append({"ad": k.ad, "alındı": False, "bayt": 0, "dosya": 0,
+                        "engel": "depo geldi fakat ``%s`` yolu yok -- "
+                                 "cetveldeki yol yanlış" % k.yol})
+            continue
+        bayt, dosya = _boy(kok, k.uzantilar())
+        if not dosya:
+            env = envanter(kok)
+            ilk = sorted(env.items(), key=lambda x: -x[1])[:6]
+            out.append({"ad": k.ad, "alındı": False, "bayt": 0, "dosya": 0,
+                        "engel": "``%s`` yolunda %s uzantılı dosya yok. "
+                                 "Fiilen olan: %s"
+                                 % (k.yol or ".", "/".join(k.uzantilar()),
+                                    ", ".join("%s×%d" % (u, n)
+                                              for u, n in ilk) or "hiç")})
+            continue
+        out.append({"ad": k.ad, "alındı": True, "engel": "", "yol": kok,
+                    "bayt": bayt, "dosya": dosya, "çevrilmiş": False})
+    return out
+
+
+def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
+                    tohum: int = 0,
+                    kaynaklar: Optional[Sequence[Kaynak]] = None,
+                    kodlama: str = "o200k_base", taban: int = 16,
+                    basamak: int = 0,
+                    imlec: Optional[Dict[str, Any]] = None,
+                    ne: str = "veri"):
+    import numpy as np
+    from nefs.belirtec import basamak_sayisi, belirtec_sozlugu, tip_vektoru
+
+    tb = max(2, int(taban))
+    bs = int(basamak) if int(basamak) > 0 else basamak_sayisi(
+        int(sozluk) if int(sozluk) > 0 else belirtec_sozlugu(kodlama), tb)
+    ks = [k for k in (kaynaklar or KAYNAKLAR)
+          if not k.engel and (k.depo or k.yerel)]
+    onceki = dict(imlec or {})
+    yeni: Dict[str, Any] = {}
+    diziler: List[Tuple[Any, float, str]] = []
+    for k in ks:
+        if k.yerel:
+            assert os.path.isdir(k.yerel), (
+                "yerel kaynak dizini YOK: %s (%s). Uydurulmuş bir yol "
+                "cetvele giremez (ferman 1-K)." % (k.yerel, k.ad))
+            yol = os.path.join(KULLIYAT_DIZINI,
+                               k.yerel.replace("/", "__") + MUCIT_UZANTI)
+            if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
+                os.remove(yol)
+            if not os.path.isfile(yol):
+                os.makedirs(KULLIYAT_DIZINI, exist_ok=True)
+                mucit_cevir(k.yerel, yol, kodlama, k.uzantilar(), k.ad)
+        elif k.varlik:
+            yol = os.path.join(_dizin(k), k.varlik)
+        else:
+            yol = _dizin(k) + MUCIT_UZANTI
+            kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
+            if not os.path.isfile(yol) and not os.path.isdir(kok):
+                kulliyat_cek([k])
+                kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
+            if not os.path.isfile(yol) and not os.path.isdir(kok):
+                continue
+            if not os.path.isfile(yol) and os.path.isdir(kok):
+                ham, _n = _boy(kok, k.uzantilar())
+                acik = [str(getattr(t, "filename", "") or "")
+                        for t, _p in diziler]
+                yer_ac(int(ham * 1.5) + (1 << 30),
+                       koru=[y for y in acik if y])
+            if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
+                os.remove(yol)
+            if not os.path.isfile(yol):
+                mucit_cevir(kok, yol, kodlama, k.uzantilar(), k.ad)
+                shutil.rmtree(_dizin(k), ignore_errors=True)
+        if not os.path.isfile(yol):
+            continue
+        t = mucit_ac(yol, kodlama)
+        gerek = int(np.ceil(int(pencere) / bs)) + 2
+        if t is None or t.size <= gerek:
+            continue
+        diziler.append((t, float(k.pay), k.ad))
+    if not diziler:
+        return ([], {}) if ne == "imleçli" else []
+    toplam = sum(p for _t, p, _a in diziler) or 1.0
+    cift: List[Tuple[List[int], int, str]] = []
+    gerek = int(np.ceil(int(pencere) / bs)) + 2
+    for t, pay, ad in diziler:
+        n = int(round(int(azami) * pay / toplam))
+        eski = onceki.get(ad) or {}
+        yer = int(eski.get("belirteç", 0) or 0)
+        if yer >= t.size - gerek:
+            yer = 0
+        okunan = 0
+        for _k in range(max(0, n)):
+            if yer >= t.size - gerek:
+                yer = 0
+            ham = np.asarray(t[yer:yer + gerek], np.int64)
+            yer += gerek
+            okunan += gerek
+            akis = tip_vektoru(ham, tb, bs)
+            kay = int(_k % max(1, bs))
+            if akis.size < int(pencere) + 1 + kay:
+                continue
+            cift.append(([int(x) for x in akis[kay:kay + int(pencere)]],
+                         int(akis[kay + int(pencere)]), "sözlü",
+                         int((kay + int(pencere)) % max(1, bs))))
+        yeni[ad] = {"belirteç": int(yer), "bayt": int(yer) * 4,
+                    "boy": int(t.size), "boy_bayt": int(t.size) * 4,
+                    "okunan": int(okunan),
+                    "devir": int(eski.get("devir", 0) or 0)
+                             + (1 if yer < int(eski.get("belirteç", 0) or 0)
+                                else 0),
+                    "nispet": float(yer) / float(max(int(t.size), 1))}
+    cift = cift[:int(azami)]
+    return (cift, yeni) if ne == "imleçli" else cift
+
+
+def kulliyat_dokumu(kaynaklar: Optional[Sequence[Kaynak]] = None
+                    ) -> List[Dict[str, Any]]:
+    out: List[Dict[str, Any]] = []
+    for k in (kaynaklar or KAYNAKLAR):
+        if k.engel or not k.depo:
+            out.append({"ad": k.ad, "alındı": False, "engel": k.engel,
+                        "bayt": 0, "dosya": 0})
+            continue
+        yol = (os.path.join(_dizin(k), k.varlik) if k.varlik
+               else _dizin(k) + MUCIT_UZANTI)
+        if os.path.isfile(yol):
+            out.append({"ad": k.ad, "alındı": True, "engel": "",
+                        "yol": yol, "bayt": os.path.getsize(yol),
+                        "dosya": 1, "çevrilmiş": True})
+            continue
+        kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
+        if os.path.isdir(kok):
+            b, n = _boy(kok, k.uzantilar())
+            out.append({"ad": k.ad, "alındı": n > 0, "engel": "" if n else
+                        "ham duruyor, henüz çevrilmedi", "yol": kok,
+                        "bayt": b, "dosya": n, "çevrilmiş": False})
+            continue
+        out.append({"ad": k.ad, "alındı": False, "bayt": 0, "dosya": 0,
+                    "engel": "kapta yok -- sırası gelince çekilecek "
+                             "(boru hattı, ferman 1-O)"})
+    return out
+
+
+def kulliyat_beyani(dokum: Optional[Sequence[Dict[str, Any]]] = None) -> str:
+    d = list(dokum if dokum is not None else kulliyat_dokumu())
+    s = ["=== KÜLLİYAT (main/kulliyat.py) -- harici metin ===", "",
+         "  Depoya gömülmez; ``%s`` altına çekilir." % KULLIYAT_DIZINI, ""]
+    top_b = top_f = 0
+    for k in d:
+        if k["alındı"]:
+            top_b += int(k["bayt"])
+            top_f += int(k["dosya"])
+            s.append("  ✔ %-46s %9.2f MB  %6d dosya%s"
+                     % (k["ad"], k["bayt"] / 1e6, k["dosya"],
+                        "  [çevrilmiş]" if k.get("çevrilmiş") else ""))
+        else:
+            s.append("  ✘ %-46s ALINAMADI" % k["ad"])
+            s.append("      sebep: %s" % k["engel"])
+    s += ["", "  TOPLAM: %.2f MB, %d dosya  -- **budama yok** "
+          "(ferman 1-O: veri kesilmez, akışla okunur)"
+          % (top_b / 1e6, top_f)]
+    return "\n".join(s)

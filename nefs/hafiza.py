@@ -1,113 +1,369 @@
-"""
-nefs/hafiza.py - Topolojik Hafıza Restrüktürasyonu ve Sheaf Re-gluing
-Nefs-i Müdrike Mimarîsi
-"""
+from __future__ import annotations
 
 import math
-from typing import List, Dict, Any, Optional, Tuple
-from matematik.temel import KuantumDurum, hilbert_schmidt_ic_carpim
-from nefs.mukayese import IntacManifoldu
+from dataclasses import dataclass, field
+from typing import Any, Dict, List, Mapping, Optional, Tuple
+
+import numpy as np
+
+__all__ = ["Kayit", "Hafiza", "TASDIK", "TEVAKKUF", "CERH", "rapor",
+           "tertip_beyani", "tertip_metni"]
+
+_TERTIP: Dict[str, float] = {
+    "çağrı": 0.0, "yırtıktan": 0.0, "kapıdan": 0.0, "alâkalı": 0.0,
+    "taşınan": 0.0, "silinen": 0.0, "kök": 0.0, "ayırt": 0.0,
+    "vecih": 0.0, "açık": 1.0}
+
+_VECIH_ADI: List[str] = []
 
 
-class HafizaKaydi:
-    """Bir hafıza kovanı kaydı / lifi"""
-    def __init__(
-        self,
-        kimlik: int,
-        icerik: str,
-        durum: KuantumDurum,
-        lif_koordinati: Dict[str, str],
-        guven: float = 1.0
-    ):
-        self.kimlik = kimlik
-        self.icerik = icerik
-        self.durum = durum
-        self.lif_koordinati = lif_koordinati  # Örn: {"Canlı": "Kuş", "Ortam": "Hava"}
-        self.guven = guven
-
-    def __repr__(self) -> str:
-        return f"<HafizaKaydi #{self.kimlik} '{self.icerik}' koord={self.lif_koordinati}>"
+def tertip_beyani() -> Dict[str, Any]:
+    b: Dict[str, Any] = dict(_TERTIP)
+    b["vecih_adı"] = list(_VECIH_ADI)
+    return b
 
 
-class TopolojikHafizaKovani:
-    """
-    Küllî Hafıza Kovanı ve Epistemik Refactoring Motoru
-    "Mantıksızlık olsa çiz üstünü der geçerdin, burada yeniden tertipleme var!"
-    """
-    def __init__(self, esik_alaka: float = 0.3):
-        self.kayitlar: List[HafizaKaydi] = []
-        self.esik_alaka = esik_alaka
-        self.sayac = 0
+def tertip_metni(b: Optional[Dict[str, Any]] = None) -> str:
+    d = dict(b or tertip_beyani())
+    if not d.get("çağrı"):
+        return ("  HAFIZA YENİDEN TERTİBİ: HİÇ KOŞMADI -- kırmızı "
+                "(ferman 2-Ú)")
+    return "\n".join([
+        "  HAFIZA YENİDEN TERTİBİ -- SİLİNMEZ, TERFİ EDER (ferman 2-Ú)",
+        "    çağrı %d   (Sorites yırtığından %d · veri kapısından %d)"
+        % (int(d["çağrı"]), int(d["yırtıktan"]), int(d["kapıdan"])),
+        "    alâka taramasında parlayan kayıt %d   taşınan %d"
+        "   SİLİNEN %d"
+        % (int(d["alâkalı"]), int(d["taşınan"]), int(d["silinen"])),
+        "    Silinen SIFIR olmalıdır: çizip geçmek amnezidir.",
+        "    modalite vechi AYIRT ETME nispetiyle ölçüldü: %.6f   açılan"
+        " Cartan kökü %d" % (d.get("ayırt", 0.0), int(d["kök"])),
+        "    açılan yapraklar: %s"
+        % (", ".join(d.get("vecih_adı") or []) or "yok"),
+        "    Yaprak adı ELLE YAZILMAZ (ferman 6): çelişen iki kaydı",
+        "    ayıran vecih, ŞAHİTSİZ olarak ikisini en çok ayıran,",
+        "    yâni örtüşmesi en düşük olan vecihtir (ferman 2-Ú).",
+        "    (ölçü %s)" % ("açık" if d.get("açık") else "KAPALI"),
+    ])
 
-    def ekle(
-        self,
-        icerik: str,
-        durum: KuantumDurum,
-        lif_koordinati: Optional[Dict[str, str]] = None,
-        guven: float = 1.0
-    ) -> HafizaKaydi:
-        self.sayac += 1
-        koord = lif_koordinati or {"katman": "varsayilan"}
-        kayit = HafizaKaydi(self.sayac, icerik, durum, koord, guven)
-        self.kayitlar.append(kayit)
-        return kayit
+TASDIK = 1.0
+TEVAKKUF = 0.5
+CERH = 0.0
 
-    def alaka_taramasi(self, intac: IntacManifoldu) -> List[Tuple[HafizaKaydi, float]]:
-        """
-        1. Adım: Alâka Tespiti (Resonance Harvesting)
-        A_alaka(k) = Tr(rho_hafiza^(k) * Pi_R) >= tau
-        """
-        if not intac.morfizm_durumu:
-            return []
+_SONUM_PAYI: Dict[float, float] = {TASDIK: 0.25, TEVAKKUF: 1.0, CERH: 0.10}
 
-        rho_r = intac.morfizm_durumu.yogunluk_matrisi()
-        alakali: List[Tuple[HafizaKaydi, float]] = []
 
+@dataclass
+class Kayit:
+
+    x: np.ndarray
+    omega: float
+    hukum: float
+    mu: float
+    dogum: int = 0
+    yaprak: str = ""
+
+    def __post_init__(self) -> None:
+        self.x = np.asarray(self.x).reshape(-1)
+        nrm = float(np.linalg.norm(self.x))
+        assert nrm > 0.0, "BOŞ kavram hafızaya nakşedilemez"
+        self.x = self.x / nrm
+        assert self.hukum in (TASDIK, TEVAKKUF, CERH), (
+            "hüküm damgası üçünden biri olmalı: %r" % (self.hukum,))
+        assert -1.0000001 <= self.omega <= 1.0000001, (
+            "holonomi izi [−1,1] dışında: %r" % (self.omega,))
+
+
+class Hafiza:
+
+    def __init__(self, kapasite: int = 256, yazma: float = 0.05,
+                 sonum: float = 0.02, zeno_esigi: float = 0.35,
+                 zeno_tepe: float = 0.9, ayniyet: float = 0.98,
+                 buhar: float = 1e-4, mu_asgari: float = 1e-3,
+                 tohum: int = 0) -> None:
+        assert int(kapasite) >= 1, "hafıza kapasitesi en az 1 olmalı"
+        assert 0.0 < float(yazma) <= 1.0, "yazma oranı (0,1] olmalı"
+        assert 0.0 <= float(sonum) < 1.0, "sönüm [0,1) olmalı"
+        self.kapasite = int(kapasite)
+        self.yazma = float(yazma)
+        self.sonum = float(sonum)
+        self.zeno_esigi = float(zeno_esigi)
+        self.zeno_tepe = float(zeno_tepe)
+        self.ayniyet = float(ayniyet)
+        self.buhar = float(buhar)
+        self.mu_asgari = float(mu_asgari)
+        assert 0.0 < self.zeno_tepe <= 1.0, "zeno tepe nispeti (0,1]"
+        assert 0.0 < self.ayniyet <= 1.0, "ayniyet eşiği (0,1]"
+        self.tohum = int(tohum)
+        self.kayitlar: List[Kayit] = []
+        self.budama = 0
+        self.tertip = 0
+        self.adim = 0
+
+    def klon(self) -> "Hafiza":
+        import copy
+        y = copy.copy(self)
+        y.kayitlar = [copy.copy(k) for k in self.kayitlar]
+        return y
+
+    def yaz(self, x, omega: float, hukum: float,
+            cartan_koku: Optional[str] = None) -> Kayit:
+        self.adim += 1
+        e = self.yazma
         for k in self.kayitlar:
-            rho_k = k.durum.yogunluk_matrisi()
-            skor = hilbert_schmidt_ic_carpim(rho_k, rho_r)
-            if skor >= self.esik_alaka:
-                alakali.append((k, skor))
+            k.mu *= (1.0 - e)
+        y = Kayit(x=x, omega=float(omega), hukum=float(hukum), mu=e,
+                  dogum=self.adim, yaprak=cartan_koku or "")
+        for k in self.kayitlar:
+            if (k.hukum == y.hukum
+                    and abs(complex(np.vdot(k.x, y.x))) > self.ayniyet):
+                k.mu += y.mu
+                return k
+        self.kayitlar.append(y)
+        self._tasfiye()
+        return y
 
-        return alakali
+    def _tasfiye(self) -> None:
+        if self.sonum > 0.0:
+            for k in self.kayitlar:
+                k.mu *= (1.0 - self.sonum * _SONUM_PAYI[k.hukum])
+        buharlasan = [k for k in self.kayitlar if k.mu <= self.buhar]
+        kalan = [k for k in self.kayitlar if k.mu > self.buhar]
+        self.kayitlar = kalan
+        if buharlasan:
+            self._balyala(buharlasan)
+        if len(self.kayitlar) > self.kapasite:
+            self.kayitlar.sort(key=lambda k: -k.mu)
+            tas = len(self.kayitlar) - self.kapasite
+            tasinanlar = self.kayitlar[-tas:]
+            self.kayitlar = self.kayitlar[:-tas]
+            self._balyala(tasinanlar)
+            if len(self.kayitlar) > self.kapasite:
+                self.kayitlar.sort(key=lambda k: -k.mu)
+                self.kayitlar = self.kayitlar[:self.kapasite]
+        assert len(self.kayitlar) <= self.kapasite
 
-    def yeniden_tertitle(
-        self,
-        intac: IntacManifoldu,
-        yeni_lif_anahtari: str,
-        yeni_lif_degeri: str,
-        yeni_kaziye_metni: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """
-        2, 3 ve 4. Adımlar:
-        - Ungluing (Sheaf Decoupling)
-        - Base Change / Lif Değişimi (f*)
-        - Re-gluing (Yeni faz ahengine bağlama)
-        """
-        alakali_kayitlar = self.alaka_taramasi(intac)
-        etkilenen_sayisi = len(alakali_kayitlar)
+    def _balyala(self, kayitlar: List["Kayit"]) -> None:
+        if not kayitlar:
+            return
+        x_ort = np.mean([k.x for k in kayitlar], axis=0)
+        nrm = float(np.linalg.norm(x_ort))
+        if nrm > 1e-12:
+            x_ort = x_ort / nrm
+        else:
+            x_ort = kayitlar[0].x
+        balya = Kayit(x=x_ort,
+                      omega=float(np.clip(
+                          np.mean([k.omega for k in kayitlar]), -1.0, 1.0)),
+                      hukum=TEVAKKUF,
+                      mu=float(sum(k.mu for k in kayitlar) * 0.5),
+                      dogum=self.adim, yaprak="balya_%d" % self.adim)
+        self.kayitlar.append(balya)
 
-        # 3. Adım: Taban Değişimi (Base Change)
-        # İlgili kayıtların lif koordinatına yeni boyut ekle
-        for kayit, skor in alakali_kayitlar:
-            kayit.lif_koordinati[yeni_lif_anahtari] = yeni_lif_degeri
-            # Faz ayarı (U_tertip rotasyonu)
-            kayit.guven = min(1.0, kayit.guven * (1.0 + 0.1 * skor))
+    def oku(self, x) -> Dict[str, float]:
+        v = np.asarray(x).reshape(-1)
+        nrm = float(np.linalg.norm(v))
+        assert nrm > 0.0, "boş durumla hafıza okunamaz"
+        v = v / nrm
+        out = {"tasdik": 0.0, "tevakkuf": 0.0, "cerh": 0.0, "toplam": 0.0}
+        ad = {TASDIK: "tasdik", TEVAKKUF: "tevakkuf", CERH: "cerh"}
+        for k in self.kayitlar:
+            if k.x.size != v.size:
+                continue
+            ort = float(abs(np.vdot(k.x, v)) ** 2) * k.mu
+            out[ad[k.hukum]] += ort
+            out["toplam"] += ort
+        return out
 
-        # Yeni istisna / rafine kayıt varsa ekle
-        yeni_kayit_obj = None
-        if yeni_kaziye_metni and intac.morfizm_durumu:
-            yeni_kayit_obj = self.ekle(
-                icerik=yeni_kaziye_metni,
-                durum=intac.morfizm_durumu,
-                lif_koordinati={yeni_lif_anahtari: f"istisna_{yeni_lif_degeri}"},
-                guven=1.0
-            )
+    def taban_degistir(self, x, yaprak: str, omega: float = 0.0
+                       ) -> Dict[str, Any]:
+        from .mukayese import swap_testi
+        v = np.asarray(x).reshape(-1)
+        nrm = float(np.linalg.norm(v))
+        assert nrm > 0.0, "boş durumla taban değiştirilemez"
+        v = v / nrm
+        tasinan = 0
+        for k in self.kayitlar:
+            if k.x.size != v.size:
+                continue
+            s = swap_testi(k.x.astype(complex), v.astype(complex))
+            if float(s["örtüşme"]) < self.zeno_esigi:
+                continue
+            eski = k.yaprak
+            k.yaprak = (eski + "|" + str(yaprak)) if eski else str(yaprak)
+            k.omega = float(omega) if omega else k.omega
+            tasinan += 1
+        self.tertip += 1
+        return {"yaprak": str(yaprak), "taşınan": int(tasinan),
+                "tertip": int(self.tertip), "silinen": 0}
 
+    def yeniden_tertiple(self, capraz, sahit=None, mahalli=None,
+                         kapi: str = "yırtık") -> Dict[str, Any]:
+        from .mukayese import swap_testi, vecihleri_istihrac
+        _TERTIP["çağrı"] += 1.0
+        _TERTIP["yırtıktan" if kapi == "yırtık" else "kapıdan"] += 1.0
+        if not _TERTIP.get("açık"):
+            return {"vecih": "", "taşınan": 0, "silinen": 0, "Φ₃": 0.0}
+        A = np.asarray(capraz[0], complex).reshape(-1)
+        B = np.asarray(capraz[1], complex).reshape(-1)
+        assert A.size == B.size, (
+            "yeniden tertip iki eşit boyda kutup ister: %d, %d"
+            % (A.size, B.size))
+        en_iyi = None
+        for v in vecihleri_istihrac([A, B]):
+            s = swap_testi(A, B, v)
+            ayirt = float(1.0 - float(s["örtüşme"]))
+            if en_iyi is None or ayirt > en_iyi[1]:
+                en_iyi = (str(v.ad), ayirt)
+        assert en_iyi is not None, (
+            "hiçbir vecih ayırt etmedi -- modalite lifi ölçülemedi")
+        yaprak, fi = en_iyi
+        _TERTIP["ayırt"] = float(fi)
+        if yaprak not in _VECIH_ADI:
+            _VECIH_ADI.append(yaprak)
+        _TERTIP["vecih"] = float(len(_VECIH_ADI))
+        if mahalli is not None:
+            _TERTIP["kök"] = float(
+                mahalli.cartan_ekle("modalite." + yaprak, float(fi)) + 1)
+        P = (A + B)
+        nrm = float(np.linalg.norm(P))
+        assert nrm > 0.0, (
+            "çelişen iki kutup birbirini tamamen söndürdü -- alâka "
+            "izdüşümü kurulamıyor")
+        d = self.taban_degistir(P / nrm, yaprak=yaprak,
+                                omega=float(1.0 - float(fi)))
+        _TERTIP["alâkalı"] += float(d["taşınan"])
+        _TERTIP["taşınan"] += float(d["taşınan"])
+        _TERTIP["silinen"] += float(d["silinen"])
+        return {"vecih": yaprak, "ayırt": float(fi),
+                "taşınan": int(d["taşınan"]), "silinen": int(d["silinen"]),
+                "kapı": kapi}
+
+    def zeno(self, x) -> Optional[np.ndarray]:
+        v = np.asarray(x, float).reshape(-1)
+        nrm = float(np.linalg.norm(v))
+        if nrm <= 0.0:
+            return None
+        v = v / nrm
+        maske = np.ones(v.size, bool)
+        vuran = False
+        for k in self.kayitlar:
+            if k.hukum != CERH or k.x.size != v.size:
+                continue
+            ort = float(abs(np.vdot(k.x, v)) ** 2)
+            if ort < self.zeno_esigi or k.mu < self.mu_asgari:
+                continue
+            g = np.abs(np.asarray(k.x)).astype(float)
+            maske &= ~(g >= g.max() * self.zeno_tepe)
+            vuran = True
+        if not vuran or maske.all():
+            return None
+        self.budama += int(np.count_nonzero(~maske))
+        return maske
+
+    def beyan(self) -> Dict[str, Any]:
+        say = {TASDIK: 0, TEVAKKUF: 0, CERH: 0}
+        for k in self.kayitlar:
+            say[k.hukum] += 1
+        return {"kayıt": len(self.kayitlar), "tasdik": say[TASDIK],
+                "tevakkuf": say[TEVAKKUF], "cerh": say[CERH],
+                "budama": int(self.budama), "adım": int(self.adim),
+                "tertip": int(self.tertip),
+                "yapraklı": sum(1 for k in self.kayitlar if k.yaprak),
+                "kütle": float(sum(k.mu for k in self.kayitlar))}
+
+    def hazineye(self) -> Dict[str, np.ndarray]:
+        if not self.kayitlar:
+            return {}
+        m = max(k.x.size for k in self.kayitlar)
+        X = np.zeros((len(self.kayitlar), m), complex)
+        for i, k in enumerate(self.kayitlar):
+            X[i, :k.x.size] = k.x
         return {
-            "islem": "topolojik_re_gluing",
-            "etkilenen_kayit_sayisi": etkilenen_sayisi,
-            "yeni_lif_eklendi": f"{yeni_lif_anahtari} = {yeni_lif_degeri}",
-            "yeni_kayit_kimlik": yeni_kayit_obj.kimlik if yeni_kayit_obj else None,
-            "toplam_hafiza_boyutu": len(self.kayitlar)
-        }
+            "hafıza.x": X,
+            "hafıza.omega": np.array([k.omega for k in self.kayitlar], float),
+            "hafıza.hüküm": np.array([k.hukum for k in self.kayitlar], float),
+            "hafıza.mu": np.array([k.mu for k in self.kayitlar], float),
+            "hafıza.doğum": np.array([k.dogum for k in self.kayitlar],
+                                     np.int64)}
+
+    @classmethod
+    def hazineden(cls, agirlik: Mapping[str, Any],
+                  ust_veri: Optional[Mapping[str, Any]] = None) -> "Hafiza":
+        u = dict(ust_veri or {})
+        h = cls(kapasite=int(float(u.get("hafıza_kapasitesi", 256))),
+                yazma=float(u.get("hafıza_yazma", 0.05)),
+                sonum=float(u.get("hafıza_sönümü", 0.02)),
+                zeno_esigi=float(u.get("zeno_eşiği", 0.35)),
+                zeno_tepe=float(u.get("zeno_tepe", 0.9)))
+        if "hafıza.x" not in agirlik:
+            return h
+        X = np.asarray(agirlik["hafıza.x"])
+        om = np.asarray(agirlik["hafıza.omega"], float).reshape(-1)
+        hk = np.asarray(agirlik["hafıza.hüküm"], float).reshape(-1)
+        mu = np.asarray(agirlik["hafıza.mu"], float).reshape(-1)
+        dg = np.asarray(agirlik.get(
+            "hafıza.doğum", np.zeros(om.size)), np.int64).reshape(-1)
+        assert X.shape[0] == om.size == hk.size == mu.size, (
+            "hafıza tensörlerinin boyları tutmuyor")
+        for i in range(X.shape[0]):
+            h.kayitlar.append(Kayit(x=X[i], omega=float(om[i]),
+                                    hukum=float(hk[i]), mu=float(mu[i]),
+                                    dogum=int(dg[i])))
+        h.adim = int(dg.max()) if dg.size else 0
+        return h
+
+
+def rapor(tohum: int = 0) -> str:
+    r = np.random.default_rng(int(tohum))
+    m = 16
+    h = Hafiza(kapasite=64, yazma=0.2, sonum=0.02)
+
+    safsata = np.zeros(m)
+    safsata[3] = 1.0
+    safsata[7] = 0.95
+    h.yaz(safsata, omega=-1.0, hukum=CERH)
+    mesru = np.zeros(m)
+    mesru[1] = 1.0
+    h.yaz(mesru, omega=0.2, hukum=TASDIK)
+
+    P = np.full(m, 1.0 / m)
+    P[3] = 0.5
+    P[7] = 0.4
+    P = P / P.sum()
+    mask = h.zeno(np.sqrt(P))
+    kesik = 0 if mask is None else int(np.count_nonzero(~mask))
+
+    Q = np.full(m, 1.0 / m)
+    Q[11] = 0.6
+    Q = Q / Q.sum()
+    mask2 = h.zeno(np.sqrt(Q))
+    kesik2 = 0 if mask2 is None else int(np.count_nonzero(~mask2))
+
+    k = h.oku(np.sqrt(P))
+    zan = np.zeros(m)
+    zan[5] = 1.0
+    h.yaz(zan, omega=1.0, hukum=TEVAKKUF)
+    mu0 = [x.mu for x in h.kayitlar if x.hukum == TEVAKKUF][0]
+    for _ in range(50):
+        h._tasfiye()
+    kalan = [x.mu for x in h.kayitlar if x.hukum == TEVAKKUF]
+    mu1 = kalan[0] if kalan else 0.0
+
+    return "\n".join([
+        "=== KUANTUM ASOSİYATİF HAFIZA (ρ) ===", "",
+        "  kayıt : %r" % (h.beyan(),), "",
+        "  ZENO BUDAMASI",
+        "    cerhedilmiş yola girildi : %d belirteç kesildi  %s"
+        % (kesik, "ÇALIŞTI" if kesik > 0 else "⚠ HİÇ KESMEDİ"),
+        "    alâkasız yola girildi    : %d belirteç kesildi  %s"
+        % (kesik2, "doğru (kesmemeli)" if kesik2 == 0
+           else "⚠ KÖR KESİYOR"),
+        "",
+        "  ASOSİYATİF ÇAĞRIŞIM (𝒦 = Tr ρ|ψ⟩⟨ψ|)",
+        "    cerh=%.4f  tasdik=%.4f  tevakkuf=%.4f"
+        % (k["cerh"], k["tasdik"], k["tevakkuf"]),
+        "",
+        "  LIOUVILLE SÖNÜMÜ (delilsiz zan buharlaşır)",
+        "    tevakkuf μ: %.6f → %.6f  (50 tasfiye sonra)" % (mu0, mu1),
+    ])
