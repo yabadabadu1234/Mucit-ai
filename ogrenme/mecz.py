@@ -463,13 +463,13 @@ class Memuriyet:
                 kabul_edildi = _kabul_mizan_kefesi(va, v, keyf_aday, keyf)
             if kabul_edildi:
                 _MECZ["kabul"] += 1.0
-                _MECZ["adım_normu"] += float(np.linalg.norm(aday - p))
-                p, v, keyf = aday, va, keyf_aday
                 self._r_duzeltme = 0.0
             else:
                 self._r_duzeltme = (0.0 if eg.get("hissedilmedi")
                                     else float(eg["yarıçap*"]))
                 _MECZ["yarıçap_düzeltmesi"] += 1.0
+            _MECZ["adım_normu"] += float(np.linalg.norm(aday - p))
+            p, v, keyf = aday, va, keyf_aday
         return {"p": p, "V_son": v, "seyir": seyir}
 
 
