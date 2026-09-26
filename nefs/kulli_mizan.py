@@ -470,26 +470,24 @@ def _monogami(M3: np.ndarray, sektorler: Sequence[Tuple[int, int]]
 
     F = M.reshape(S, d)
     Fc = Mc.reshape(S, d)
-    g2 = np.abs(F) ** 2
-    A = np.zeros((S, d), complex)
-    Ac = np.zeros((S, d), complex)
-    Av = A.reshape(S, n_v, n_h)
-    Avc = Ac.reshape(S, n_v, n_h)
     toplam = np.zeros(S, float)
     for (i, j) in sektorler:
         assert 0 <= i < j <= d, (
             "sektör düz indisin dışında: (%d,%d) ∉ [0,%d]" % (i, j, d))
-        w = np.sum(g2[:, i:j], axis=1)
+        w = np.sum(np.abs(F[:, i:j]) ** 2, axis=1)
         var = w > 1e-15
         if not np.any(var):
             continue
-        A[:, i:j] = F[:, i:j]
-        Ac[:, i:j] = Fc[:, i:j]
         v0, v1 = i // n_h, (j - 1) // n_h
-        saf = (_saflik(Av[:, v0:v1 + 1], Avc[:, v0:v1 + 1])
+        genislik = (v1 - v0 + 1) * n_h
+        off = i - v0 * n_h
+        A_lok = np.zeros((S, genislik), complex)
+        Ac_lok = np.zeros((S, genislik), complex)
+        A_lok[:, off:off + (j - i)] = F[:, i:j]
+        Ac_lok[:, off:off + (j - i)] = Fc[:, i:j]
+        saf = (_saflik(A_lok.reshape(S, v1 - v0 + 1, n_h),
+                       Ac_lok.reshape(S, v1 - v0 + 1, n_h))
                / np.maximum(w, 1e-300) ** 2)
-        A[:, i:j] = 0.0
-        Ac[:, i:j] = 0.0
         toplam += np.where(var, w * np.maximum(0.0, 2.0 * (1.0 - saf)), 0.0)
     return (float(np.sum(np.maximum(0.0, toplam - C2_hepsi))),
             float(np.sum(toplam)), float(np.sum(C2_hepsi)))
