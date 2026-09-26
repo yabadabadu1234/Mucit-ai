@@ -576,7 +576,7 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             if not os.path.isfile(yol) and os.path.isdir(kok):
                 ham, _n = _boy(kok, k.uzantilar())
                 acik = [str(getattr(t, "filename", "") or "")
-                        for t, _p in diziler]
+                        for t, _p, _a in diziler]
                 yer_ac(int(ham * 1.5) + (1 << 30),
                        koru=[y for y in acik if y])
             if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
