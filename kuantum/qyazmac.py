@@ -115,6 +115,10 @@ class Iz:
 
     def senedi_kapat(self) -> None:
         self.senet_acik = False
+        self.senet = []
+        self.baglanti = []
+        self.mahalli_senet = []
+        self.mahalli_bag = []
 
     def kapi_yaz(self, tur: str, yuvalar, G) -> int:
         if not self.senet_acik:
