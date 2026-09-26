@@ -243,18 +243,20 @@ class QYazmac:
             "(ferman 2-Ĝ: bağlam mahallî yazmacın qudit indisindedir)"
             % (n_sat, int(self.mahalli.qudit)))
         genlik = np.zeros((B, d), float)
-        faz = np.zeros((B, d), float)
         yigin = np.repeat(np.arange(B), n_sat)
         sec = dolu.reshape(-1)
         sut = np.mod(bas.reshape(-1), d)
         np.add.at(genlik, (yigin[sec], sut[sec]), 1.0)
-        faz[yigin[sec], sut[sec]] = (
-            (-2.0 * math.pi / float(sozluk))
-            * (bas.reshape(-1)[sec].astype(float) + 1.0))
         assert bool(dolu.any()), (
             "bağlamın hiçbir basamağı dolu değil -- yazmaca yazacak şey "
             "yok, norm sıfır çıkardı (ferman 5)")
         pq = getattr(self, "pq", None)
+        bas_duz = bas.reshape(-1)
+        faz = np.zeros((B, d), float)
+        if pq is None:
+            faz[yigin[sec], sut[sec]] = (
+                (-2.0 * math.pi / float(sozluk))
+                * (bas_duz[sec].astype(float) + 1.0))
         self.mahalli.hazirla(n_sat, B)
         self.mahalli.yerlestir(bas, dolu)
         if pq is not None:
@@ -280,9 +282,30 @@ class QYazmac:
         self._tohum = (bas, sec, yigin, sut, B, n_sat, d)
         self.y.psi = genlik.astype(self.y.ayar.tip)
         self.y.normalize()
-        self.y.faz(faz)
-        self.y.iz.not_dus("kodla", "dolu %d / %d seviye"
-                          % (int(dolu.sum() // max(B, 1)), d))
+        n_gomme = 0
+        if pq is None:
+            self.y.faz(faz)
+        else:
+            degerler = np.unique(bas_duz[sec])
+            no = (self.y.iz.kapi_yaz(
+                    "gömme", (), np.asarray(self.y.psi, complex).copy())
+                  if self.y.iz.senet_acik else -1)
+            for v in degerler:
+                v = int(v)
+                anahtar = "gömme/%d" % v
+                teta = float(pq.aci(anahtar, 1, 1.0)[0])
+                adr = int(pq.aci_adresi(anahtar, 1)[0])
+                carpan = complex(math.cos(teta), -math.sin(teta))
+                self.y.psi[:, v] *= carpan
+                if no >= 0:
+                    self.y.iz.bag_yaz(
+                        no, adr, 1.0,
+                        ("köşegen", np.array([v], np.int64),
+                         np.array([-1j * carpan], complex)))
+            n_gomme = int(degerler.size)
+        self.y.iz.not_dus("kodla", "dolu %d / %d seviye  gömme %d/%d hane"
+                          % (int(dolu.sum() // max(B, 1)), d,
+                             n_gomme, sozluk))
 
     def intac(self) -> float:
         kan = getattr(self, "kan", None)
