@@ -319,7 +319,8 @@ class MahalliYazmac:
 
     def uzunluk_katmani(self, cephe: int, hadd: int = 0) -> np.ndarray:
         c = int(cephe) % self.qudit
-        L = max(1, min(int(hadd) if int(hadd) > 0 else self.qudit,
+        varsayilan_hadd = max(1, c)
+        L = max(1, min(int(hadd) if int(hadd) > 0 else varsayilan_hadd,
                        self.qudit - c))
         dilim = self.hal[:, c:c + L, :]
         g = np.linalg.norm(dilim, axis=-1).mean(axis=0)
