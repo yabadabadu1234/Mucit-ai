@@ -9,8 +9,8 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 __all__ = ["Kaynak", "KAYNAKLAR", "kulliyat_cek", "kulliyat_verisi",
            "kulliyat_beyani", "kulliyat_dokumu", "mucit_cevir",
-           "mucit_ac", "hf_boru", "yer_ac", "bos_alan",
-           "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
+           "mucit_cevir_kademeli", "mucit_ac", "hf_boru", "yer_ac",
+           "bos_alan", "MUCIT_UZANTI", "KULLIYAT_DIZINI"]
 
 KULLIYAT_DIZINI = os.environ.get("MUCIT_KULLIYAT", "depo/kulliyat")
 
@@ -229,6 +229,55 @@ MUCIT_DAMGA = b"MUCIT2\n"
 MUCIT_UZANTI = ".mucit"
 
 
+def _dosya_listesi(kok: str, uzantilar: Sequence[str]) -> List[str]:
+    uz = tuple(uzantilar)
+    out: List[str] = []
+    for kk, _dd, ff in os.walk(kok):
+        for f in sorted(ff):
+            if uz and not f.endswith(uz):
+                continue
+            out.append(os.path.join(kk, f))
+    return out
+
+
+def _mucit_baslik_oku(fh) -> Tuple[int, Dict[str, Any]]:
+    fh.seek(0)
+    damga = fh.read(len(MUCIT_DAMGA))
+    assert damga == MUCIT_DAMGA, "mucit damgası bozuk: %r" % damga
+    yer = fh.tell()
+    ham = fh.read(321).decode("utf-8", "replace").strip()
+    return yer, json.loads(ham)
+
+
+def _mucit_baslik_yaz(fh, yer: int, bas: Dict[str, Any]) -> None:
+    b = json.dumps(bas, ensure_ascii=False).encode("utf-8")
+    assert len(b) <= 320, "başlık 320 baytı aşamaz: %d" % len(b)
+    fh.seek(yer)
+    fh.write(b + b" " * (320 - len(b)))
+
+
+def _kademeli_imlec_yolu(yol: str) -> str:
+    return yol + ".kademe.json"
+
+
+def _kademeli_imlec_oku(yol: str) -> Dict[str, Any]:
+    y = _kademeli_imlec_yolu(yol)
+    if not os.path.isfile(y):
+        return {"indeks": 0, "tamam": False}
+    try:
+        with open(y, "r", encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {"indeks": 0, "tamam": False}
+
+
+def _kademeli_imlec_yaz(yol: str, imlec: Dict[str, Any]) -> None:
+    g = _kademeli_imlec_yolu(yol) + ".yaziliyor"
+    with open(g, "w", encoding="utf-8") as fh:
+        json.dump(imlec, fh)
+    os.replace(g, _kademeli_imlec_yolu(yol))
+
+
 BELIRTEC_PENCERESI: int = 1 << 16
 
 
@@ -361,6 +410,62 @@ def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
     os.replace(gecici, cikti)
     return {"yol": cikti, "belirteç": n, "dosya": dosya,
             "kodlama": kodlama, "sözlük": V}
+
+
+def mucit_cevir_kademeli(kok: str, cikti: str, kodlama: str = "o200k_base",
+                         uzantilar: Sequence[str] = (), ad: str = "",
+                         hedef_belirtec: int = 0,
+                         obek_bayt: int = 8 << 20) -> Dict[str, Any]:
+    from nefs.belirtec import belirtec_kapisi, belirtec_sozlugu
+
+    kod = belirtec_kapisi(kodlama)
+    V = int(belirtec_sozlugu(kodlama))
+    dosyalar = _dosya_listesi(kok, uzantilar)
+    imlec = _kademeli_imlec_oku(cikti)
+    indeks = int(imlec.get("indeks", 0))
+    tamam = bool(imlec.get("tamam", False)) or not dosyalar
+    if not os.path.isfile(cikti):
+        os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
+        with open(cikti, "wb") as ch:
+            ch.write(MUCIT_DAMGA)
+            ch.write(b" " * 320 + b"\n")
+            bas0 = json.dumps({"kodlama": kodlama, "sözlük": V,
+                              "belirteç": 0, "kaynak": ad or kok,
+                              "dosya": 0}, ensure_ascii=False).encode("utf-8")
+            assert len(bas0) <= 320, "başlık 320 baytı aşamaz: %d" % len(bas0)
+            ch.seek(len(MUCIT_DAMGA))
+            ch.write(bas0 + b" " * (320 - len(bas0)))
+    eklenen = 0
+    with open(cikti, "r+b") as ch:
+        yer, bas = _mucit_baslik_oku(ch)
+        assert str(bas["kodlama"]) == str(kodlama), (
+            "kademeli külliyatın kodlaması tutmuyor: %s dosyada %r, "
+            "istenen %r -- yeniden çevrilmeli" % (cikti, bas["kodlama"],
+                                                  kodlama))
+        n_belirtec = int(bas["belirteç"])
+        n_dosya = int(bas.get("dosya", 0))
+        ch.seek(0, os.SEEK_END)
+        while indeks < len(dosyalar) and not tamam:
+            if hedef_belirtec > 0 and eklenen >= hedef_belirtec:
+                break
+            y = dosyalar[indeks]
+            if y.endswith(".parquet"):
+                n_m, d_m = _parquet_akit(y, kod, ch)
+            else:
+                n_m, d_m = _metin_akit(y, kod, ch, int(obek_bayt))
+            n_belirtec += n_m
+            eklenen += n_m
+            n_dosya += d_m
+            indeks += 1
+            if indeks >= len(dosyalar):
+                tamam = True
+        bas["belirteç"] = int(n_belirtec)
+        bas["dosya"] = int(n_dosya)
+        _mucit_baslik_yaz(ch, yer, bas)
+    _kademeli_imlec_yaz(cikti, {"indeks": int(indeks), "tamam": bool(tamam)})
+    return {"yol": cikti, "belirteç": eklenen, "toplam_belirteç": n_belirtec,
+            "dosya": n_dosya, "tamam": tamam, "kodlama": kodlama,
+            "sözlük": V}
 
 
 def hf_boru(kimlik: str, cikti: str, kodlama: str = "o200k_base",
@@ -568,46 +673,51 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
     def _ekle(k: Kaynak, _kno: int) -> bool:
         safha("D1 ÖLÇÜ · külliyat kaynağı",
               sıra="%d/%d" % (_kno + 1, len(ks)), kaynak=k.ad)
+        yol = _yerel_yolu(k)
+        buyut = None
         if k.yerel:
             assert os.path.isdir(k.yerel), (
                 "yerel kaynak dizini YOK: %s (%s). Uydurulmuş bir yol "
                 "cetvele giremez (ferman 1-K)." % (k.yerel, k.ad))
-            yol = _yerel_yolu(k)
-            if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
-                os.remove(yol)
-            if not os.path.isfile(yol):
-                safha("D1 ÖLÇÜ · külliyat belirteçleniyor", kaynak=k.ad)
-                os.makedirs(KULLIYAT_DIZINI, exist_ok=True)
-                mucit_cevir(k.yerel, yol, kodlama, k.uzantilar(), k.ad)
-        elif k.varlik:
-            yol = _yerel_yolu(k)
-        else:
-            yol = _yerel_yolu(k)
+            os.makedirs(KULLIYAT_DIZINI, exist_ok=True)
+            buyut = lambda hedef, _k=k: mucit_cevir_kademeli(
+                _k.yerel, yol, kodlama, _k.uzantilar(), _k.ad,
+                hedef_belirtec=hedef)
+        elif not k.varlik:
             kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
                 safha("D1 ÖLÇÜ · külliyat çekiliyor", kaynak=k.ad, depo=k.depo)
                 kulliyat_cek([k])
-                kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
                 return False
-            if not os.path.isfile(yol) and os.path.isdir(kok):
+            if os.path.isdir(kok):
                 ham, _n = _boy(kok, k.uzantilar())
                 acik = [str(getattr(t, "filename", "") or "")
-                        for t, _p, _a in diziler]
+                        for t, _p, _a, _b, _y in diziler]
                 yer_ac(int(ham * 1.5) + (1 << 30),
                        koru=[y for y in acik if y])
-            if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
-                os.remove(yol)
-            if not os.path.isfile(yol):
-                safha("D1 ÖLÇÜ · külliyat belirteçleniyor", kaynak=k.ad)
-                mucit_cevir(kok, yol, kodlama, k.uzantilar(), k.ad)
+                buyut = lambda hedef, _k=k, _kok=kok: mucit_cevir_kademeli(
+                    _kok, yol, kodlama, _k.uzantilar(), _k.ad,
+                    hedef_belirtec=hedef)
+        if os.path.isfile(yol) and buyut is not None and mucit_ac(
+                yol, kodlama) is None:
+            os.remove(yol)
+            try:
+                os.remove(_kademeli_imlec_yolu(yol))
+            except OSError:
+                pass
+        onceki_t = mucit_ac(yol, kodlama) if os.path.isfile(yol) else None
+        if buyut is not None and (onceki_t is None or onceki_t.size <= gerek):
+            safha("D1 ÖLÇÜ · külliyat belirteçleniyor", kaynak=k.ad)
+            sonuc = buyut(max(gerek + 1, 1))
+            if sonuc.get("tamam") and not k.yerel:
                 shutil.rmtree(_dizin(k), ignore_errors=True)
         if not os.path.isfile(yol):
             return False
         t = mucit_ac(yol, kodlama)
         if t is None or t.size <= gerek:
             return False
-        diziler.append((t, float(k.pay), k.ad))
+        diziler.append((t, float(k.pay), k.ad, buyut, yol))
         return True
 
     hazir = [k for k in ks if _hazir_mi(k)]
@@ -624,9 +734,9 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             toplam_belirtec += int(diziler[-1][0].size)
     if not diziler:
         return ([], {}) if ne == "imleçli" else []
-    toplam = sum(p for _t, p, _a in diziler) or 1.0
+    toplam = sum(p for _t, p, _a, _b, _y in diziler) or 1.0
     cift: List[Tuple[List[int], int, str]] = []
-    for t, pay, ad in diziler:
+    for t, pay, ad, buyut, yol in diziler:
         n = int(round(int(azami) * pay / toplam))
         eski = onceki.get(ad) or {}
         yer = int(eski.get("belirteç", 0) or 0)
@@ -635,7 +745,12 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
         okunan = 0
         for _k in range(max(0, n)):
             if yer >= t.size - gerek:
-                yer = 0
+                if buyut is not None:
+                    kalan = max(1, n - _k) * gerek
+                    sonuc = buyut(kalan)
+                    t = mucit_ac(yol, kodlama)
+                if yer >= t.size - gerek:
+                    yer = 0
             ham = np.asarray(t[yer:yer + gerek], np.int64)
             yer += gerek
             okunan += gerek
