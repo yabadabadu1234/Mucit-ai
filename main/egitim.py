@@ -155,6 +155,7 @@ class EgitimAyari:
     lam_kaide: float = 0.0
     lam_tasma: float = 0.0
     lam_lif: float = 0.0
+    lam_peps: float = 0.0
     mihenk_arasi: float = 300.0
     galois_us: int = 0
     tableau_n: int = 0
@@ -370,6 +371,7 @@ def mizan_ayari(a: EgitimAyari) -> "MizanAyari":
         lam_meleke=float(a.lam_meleke), lam_zirh=float(a.lam_zirh),
         lam_kaide=float(a.lam_kaide),
         lam_tasma=float(a.lam_tasma), lam_lif=float(a.lam_lif),
+        lam_peps=float(a.lam_peps),
         basamak=int(a.belirtec_basamak),
         meleke_olcumu=int(a.meleke_olcumu),
         usul_acik=int(a.usul_acik), usul_haddi=float(a.usul_haddi),
@@ -481,7 +483,7 @@ def d3_kurulus(Z: Dict[str, Any]) -> Dict[str, Any]:
     LAM_ADLARI = ("lam_cevrim", "lam_monogami", "lam_tip", "lam_engel",
                   "lam_tenakuz", "lam_kategori", "lam_nokta",
                   "lam_meleke", "lam_zirh", "lam_kaide",
-                  "lam_tasma", "lam_lif")
+                  "lam_tasma", "lam_lif", "lam_peps")
     _elle_lam = tuple(a for a in LAM_ADLARI
                       if float(getattr(ayar, a, 0.0)) != 0.0)
     _mzn = {"a": mzn}
