@@ -294,19 +294,19 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         "kelam_dökümü": ayrisma,
     }
     if hiz_ayari is not None:
-        from tanilama.hiz_teftisi import BUTCE_SANIYESI, teftis
-        h = teftis(hiz_ayari, sert=False)
-        o["belirteç_sn"] = float(h["belirteç_sn"])
-        o["hız_haddi"] = float(h["had"])
-        o["hız_hedefi"] = float(h["hedef"])
-        o["hız_geçti"] = bool(h["geçti"])
-        o["kayıp_süresi"] = float(h["kayıp_süresi"])
-        o["en_pahalı_uzuv"] = (h["tek_meleke"][0][0]
-                               if h["tek_meleke"] else "?")
-        cagri = max(1, int(hiz_ayari.talim_tur)
-                    * max(1, int(hiz_ayari.altuzay_ornek)))
-        o["kestirilen_saniye"] = float(h["kayıp_süresi"]) * cagri
+        from tanilama.hiz_teftisi import BUTCE_SANIYESI, HEDEF, had
+        olculen = float(getattr(hiz_ayari, "olculen_hiz", 0.0) or 0.0)
         o["bütçe_saniyesi"] = float(BUTCE_SANIYESI)
+        if olculen > 0.0:
+            o["belirteç_sn"] = olculen
+            o["hız_haddi"] = float(had())
+            o["hız_hedefi"] = float(HEDEF)
+            o["hız_geçti"] = bool(olculen >= o["hız_haddi"])
+            o["hız_kaynağı"] = "önceki gerçek turun canlı ölçümü (Hizolcer)"
+        else:
+            o["hız_kaynağı"] = ("yok -- ilk tur, ayrı bir motor kurup "
+                                "tahmin uydurulmaz; bu tur ölçülmeden "
+                                "geçilir, gerçek ölçüm bu turdan çıkar")
     if sert:
         assert not zaman_cevrimi, (
             "ZAMAN AÇILIMLI SEBEP ÇİZGESİNDE ÇEVRİM VAR -- bir adım "
@@ -316,17 +316,16 @@ def gecit(sert: bool = True, hiz_ayari=None) -> Dict[str, object]:
         assert ayrisma.get("hüküm_şartıyla_ayrık", False), (
             "KELAM VERİDEN DOĞRUDAN BESLENİYOR -- hüküm atlanabiliyor. "
             "Bu, ezberin açık kapısıdır. Döküm: %r" % (ayrisma,))
-        if "belirteç_sn" in o:
+        if "hız_geçti" in o:
             assert o["hız_geçti"], (
                 "HIZ HADDİ TUTMUYOR -- TÂLİM BAŞLAMAZ.\n"
-                "  ölçülen : %.1f belirteç/sn\n"
+                "  ölçülen : %.1f belirteç/sn  (%s)\n"
                 "  had     : %.0f belirteç/sn  (%.0f kat eksik)\n"
-                "  bir kayıp çağrısı: %.4f sn   en pahalı uzuv: %s\n"
                 "  Ferman: hız garantisi elde etmeden umumi tâlim "
-                "başlatılmaz." % (o["belirteç_sn"], o["hız_haddi"],
+                "başlatılmaz." % (o["belirteç_sn"], o["hız_kaynağı"],
+                                  o["hız_haddi"],
                                   o["hız_haddi"]
-                                  / max(1e-9, o["belirteç_sn"]),
-                                  o["kayıp_süresi"], o["en_pahalı_uzuv"]))
+                                  / max(1e-9, o["belirteç_sn"])))
     return o
 
 
