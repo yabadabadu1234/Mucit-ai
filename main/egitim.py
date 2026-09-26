@@ -1506,6 +1506,8 @@ def divan(dizin: Optional[str] = None) -> str:
     olcek_str = olcek_beyani(kok, ayar.olcek_dokumu)
     dokum = kulliyat_dokumu()
     kulliyat_str = kulliyat_beyani(dokum)
+    from tanilama.devre_dag import rapor as devre_dag_raporu
+    devre_dag_str = devre_dag_raporu()
 
     gorevler = list(gorevleri_getir("training"))
     veri = ornekler(gorevler, azami=8, pencere=int(ayar.pencere),
@@ -1530,7 +1532,7 @@ def divan(dizin: Optional[str] = None) -> str:
         % (yuk.get("yol"), bool(yuk.get("yüklendi", True))),
         "  hafıza  : %s" % hafiza.beyan(),
         "", mihenk_r["metin"],
-        "", olcek_str, "", kulliyat_str, "",
+        "", olcek_str, "", kulliyat_str, "", devre_dag_str, "",
         "  KEYFİYET (bu hazinenin mevcut mizan/sadakat durumundan): %r"
         % (keyf,), "", keyf_str]
     return "\n".join(str(x) for x in s)
