@@ -551,16 +551,28 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
     onceki = dict(imlec or {})
     yeni: Dict[str, Any] = {}
     diziler: List[Tuple[Any, float, str]] = []
+    gerek = int(np.ceil(int(pencere) / bs)) + 2
     from nefs.mihenk import safha
-    for _kno, k in enumerate(ks):
+
+    def _yerel_yolu(k: Kaynak) -> str:
+        if k.yerel:
+            return os.path.join(KULLIYAT_DIZINI,
+                                 k.yerel.replace("/", "__") + MUCIT_UZANTI)
+        if k.varlik:
+            return os.path.join(_dizin(k), k.varlik)
+        return _dizin(k) + MUCIT_UZANTI
+
+    def _hazir_mi(k: Kaynak) -> bool:
+        return os.path.isfile(_yerel_yolu(k))
+
+    def _ekle(k: Kaynak, _kno: int) -> bool:
         safha("D1 ÖLÇÜ · külliyat kaynağı",
               sıra="%d/%d" % (_kno + 1, len(ks)), kaynak=k.ad)
         if k.yerel:
             assert os.path.isdir(k.yerel), (
                 "yerel kaynak dizini YOK: %s (%s). Uydurulmuş bir yol "
                 "cetvele giremez (ferman 1-K)." % (k.yerel, k.ad))
-            yol = os.path.join(KULLIYAT_DIZINI,
-                               k.yerel.replace("/", "__") + MUCIT_UZANTI)
+            yol = _yerel_yolu(k)
             if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
                 os.remove(yol)
             if not os.path.isfile(yol):
@@ -568,16 +580,16 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                 os.makedirs(KULLIYAT_DIZINI, exist_ok=True)
                 mucit_cevir(k.yerel, yol, kodlama, k.uzantilar(), k.ad)
         elif k.varlik:
-            yol = os.path.join(_dizin(k), k.varlik)
+            yol = _yerel_yolu(k)
         else:
-            yol = _dizin(k) + MUCIT_UZANTI
+            yol = _yerel_yolu(k)
             kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
                 safha("D1 ÖLÇÜ · külliyat çekiliyor", kaynak=k.ad, depo=k.depo)
                 kulliyat_cek([k])
                 kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
-                continue
+                return False
             if not os.path.isfile(yol) and os.path.isdir(kok):
                 ham, _n = _boy(kok, k.uzantilar())
                 acik = [str(getattr(t, "filename", "") or "")
@@ -591,17 +603,29 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                 mucit_cevir(kok, yol, kodlama, k.uzantilar(), k.ad)
                 shutil.rmtree(_dizin(k), ignore_errors=True)
         if not os.path.isfile(yol):
-            continue
+            return False
         t = mucit_ac(yol, kodlama)
-        gerek = int(np.ceil(int(pencere) / bs)) + 2
         if t is None or t.size <= gerek:
-            continue
+            return False
         diziler.append((t, float(k.pay), k.ad))
+        return True
+
+    hazir = [k for k in ks if _hazir_mi(k)]
+    beklemede = [k for k in ks if k not in hazir]
+    hedef_belirtec = int(azami) * gerek
+    toplam_belirtec = 0
+    for _kno, k in enumerate(hazir):
+        if _ekle(k, _kno):
+            toplam_belirtec += int(diziler[-1][0].size)
+    for _kno, k in enumerate(beklemede, start=len(hazir)):
+        if hedef_belirtec > 0 and toplam_belirtec >= hedef_belirtec:
+            break
+        if _ekle(k, _kno):
+            toplam_belirtec += int(diziler[-1][0].size)
     if not diziler:
         return ([], {}) if ne == "imleçli" else []
     toplam = sum(p for _t, p, _a in diziler) or 1.0
     cift: List[Tuple[List[int], int, str]] = []
-    gerek = int(np.ceil(int(pencere) / bs)) + 2
     for t, pay, ad in diziler:
         n = int(round(int(azami) * pay / toplam))
         eski = onceki.get(ad) or {}
