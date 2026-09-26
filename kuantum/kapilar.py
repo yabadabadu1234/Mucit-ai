@@ -1,10 +1,11 @@
 
 from __future__ import annotations
 
+import math
+
 import numpy as np
 
-__all__ = ["uniter_mi", "chebyshev", "dik_iki_kubit", "dik_iki_kubit_yigin",
-           "dik_iki_kubit_turevi"]
+__all__ = ["uniter_mi", "chebyshev", "dik_iki_kubit", "dik_iki_kubit_turevi"]
 
 TOL = 1e-10
 
@@ -28,52 +29,26 @@ def chebyshev(x, derece: int):
     return T
 
 
-def _so4_ureteci(teta: np.ndarray) -> np.ndarray:
-    t = np.asarray(teta, float)
-    A = np.zeros(t.shape[:-1] + (4, 4))
-    iu = np.triu_indices(4, 1)
-    A[..., iu[0], iu[1]] = t[..., :6]
-    return A - np.swapaxes(A, -1, -2)
-
-
-def dik_iki_kubit_yigin(teta: np.ndarray) -> np.ndarray:
-    A = -2.0 * _so4_ureteci(teta)
-    oz, V = np.linalg.eigh(1j * A)
-    E = np.matmul(V * np.exp(-1j * oz)[..., None, :],
-                  np.conjugate(np.swapaxes(V, -1, -2)))
-    return np.real(E).astype(np.float64)
-
-
 def dik_iki_kubit(teta: np.ndarray) -> np.ndarray:
-    return dik_iki_kubit_yigin(np.asarray(teta, float).reshape(-1)[:6])
-
-
-def _so4_temeli() -> np.ndarray:
-    iu = np.triu_indices(4, 1)
-    T = np.zeros((6, 4, 4))
-    for k in range(6):
-        T[k, iu[0][k], iu[1][k]] = 1.0
-        T[k, iu[1][k], iu[0][k]] = -1.0
-    return -2.0 * T
+    t = np.asarray(teta, float).reshape(-1)[:2]
+    ca, sa = math.cos(float(t[0])), math.sin(float(t[0]))
+    cb, sb = math.cos(float(t[1])), math.sin(float(t[1]))
+    G = np.zeros((4, 4), np.float64)
+    G[0, 0], G[0, 3] = ca, -sa
+    G[3, 0], G[3, 3] = sa, ca
+    G[1, 1], G[1, 2] = cb, -sb
+    G[2, 1], G[2, 2] = sb, cb
+    return G
 
 
 def dik_iki_kubit_turevi(teta: np.ndarray) -> np.ndarray:
-    t = np.asarray(teta, float).reshape(-1)[:6]
-    A = -2.0 * _so4_ureteci(t)
-    oz, V = np.linalg.eigh(1j * A)
-    lam = -1j * oz
-    e = np.exp(lam)
-    fark = lam[:, None] - lam[None, :]
-    bol = np.where(np.abs(fark) < 1e-12,
-                   e[:, None],
-                   (e[:, None] - e[None, :]) / np.where(
-                       np.abs(fark) < 1e-12, 1.0, fark))
-    Vd = np.conjugate(V.T)
-    out = np.zeros((6, 4, 4), complex)
-    for k in range(6):
-        Mk = Vd @ _SO4_TEMELI[k] @ V
-        out[k] = V @ (Mk * bol) @ Vd
-    return out
-
-
-_SO4_TEMELI = _so4_temeli()
+    t = np.asarray(teta, float).reshape(-1)[:2]
+    ca, sa = math.cos(float(t[0])), math.sin(float(t[0]))
+    cb, sb = math.cos(float(t[1])), math.sin(float(t[1]))
+    dA = np.zeros((4, 4), np.float64)
+    dA[0, 0], dA[0, 3] = -sa, -ca
+    dA[3, 0], dA[3, 3] = ca, -sa
+    dB = np.zeros((4, 4), np.float64)
+    dB[1, 1], dB[1, 2] = -sb, -cb
+    dB[2, 1], dB[2, 2] = cb, -sb
+    return np.stack([dA, dB])

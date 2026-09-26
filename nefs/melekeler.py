@@ -19,8 +19,8 @@ from matematik.sonsuz_mertebeler_teorisi import (Baglam, Cember, Deg, Evren, Tab
 
 from .musahede import ortu
 from .zihin_durumu import (MAKAM_ADLARI, QAyar, QYazmac, donme,
-                      donme_turevi, faz_z, kontrollu_donme,
-                      kontrollu_donme_turevi)
+                      donme_turevi, faz_z, tek_parite_donmesi,
+                      tek_parite_donmesi_turevi)
 from .zirh import vicdan
 from .musahede import (artiklar, delil_dizileri, nakz_bul, ayir)
 
@@ -417,7 +417,7 @@ class QMeleke:
         assert pid.size == t.size and e.size == t.size, (
             "her açının kendi parametresi ve eğimi olmalı: %d/%d/%d"
             % (t.size, pid.size, e.size))
-        tur = kontrollu_donme_turevi if kontrollu else donme_turevi
+        tur = tek_parite_donmesi_turevi if kontrollu else donme_turevi
         return [(int(pid[i]), float(olcek),
                  float(e[i]) * tur(float(t[i]))) for i in range(t.size)]
 
@@ -1078,7 +1078,7 @@ class QTevil(QMeleke):
         b = self.donme_baglari(par, olc, a, kontrollu=True)
         for j in range(2):
             q.uzak_cift(q.kulli("tenakuz", j), q.kulli("tasdik", j),
-                        kontrollu_donme(float(a[j])),
+                        tek_parite_donmesi(float(a[j])),
                         baglar=None if b is None else [b[j]])
 
 
@@ -1116,13 +1116,13 @@ class QTalakat(QMeleke):
 
     def uygula(self, q, p):
         _, kk = q._alan["kelam"]
-        G = dik_iki_kubit(self.aci(p, 6, 0.4))
+        G = dik_iki_kubit(self.aci(p, 2, 0.4))
         for j in range(kk - 1):
             q.cift(q.kulli("kelam", j), G)
         a = self.aci(p, 2, 0.35)
         for j in range(2):
             q.uzak_cift(q.kulli("tasdik", j), q.kulli("kelam", j),
-                        kontrollu_donme(float(a[j])))
+                        tek_parite_donmesi(float(a[j])))
 
 
 @qkaydet

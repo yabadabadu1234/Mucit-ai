@@ -11,7 +11,7 @@ from kuantum.qyazmac import KULLI_SEKTOR_TABANI, QuditAyar, QuditYazmac
 __all__ = ["QAyar", "QIz", "QYazmac", "MAKAM_ADLARI",
            "kulli_sektor_adlari", "sektor_adresi", "donme",
            "donme_turevi", "donme_dilim", "donme_dilim_turevi",
-           "kontrollu_donme", "kontrollu_donme_turevi",
+           "tek_parite_donmesi", "tek_parite_donmesi_turevi",
            "faz_z", "degil_x",
            "makam_derecesi", "makam_merdiveni",
            "makam_kubit_manasi", "makam_mertebeleri", "makam_mertebesi"]
@@ -503,14 +503,17 @@ def donme_turevi(teta: float) -> np.ndarray:
     return np.array([[-s, -c], [c, -s]], dtype=np.float64)
 
 
-def kontrollu_donme(teta: float) -> np.ndarray:
+def tek_parite_donmesi(teta: float) -> np.ndarray:
     R = donme(teta)
     G = np.eye(4, dtype=np.float64)
-    G[2:, 2:] = R
+    G[1, 1], G[1, 2] = R[0, 0], R[0, 1]
+    G[2, 1], G[2, 2] = R[1, 0], R[1, 1]
     return G
 
 
-def kontrollu_donme_turevi(teta: float) -> np.ndarray:
+def tek_parite_donmesi_turevi(teta: float) -> np.ndarray:
+    dR = donme_turevi(teta)
     G = np.zeros((4, 4), dtype=np.float64)
-    G[2:, 2:] = donme_turevi(teta)
+    G[1, 1], G[1, 2] = dR[0, 0], dR[0, 1]
+    G[2, 1], G[2, 2] = dR[1, 0], dR[1, 1]
     return G
