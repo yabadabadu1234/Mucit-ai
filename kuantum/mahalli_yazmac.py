@@ -184,11 +184,11 @@ class MahalliYazmac:
 
     @property
     def genlik(self) -> np.ndarray:
-        return np.linalg.norm(self.hal, axis=-1)
+        return np.linalg.norm(self.hal[:, :self.pencere, :], axis=-1)
 
     @property
     def faz(self) -> np.ndarray:
-        return np.angle(self.hal.sum(axis=-1))
+        return np.angle(self.hal[:, :self.pencere, :].sum(axis=-1))
 
     def koordinat(self) -> np.ndarray:
         return self._koordinat
