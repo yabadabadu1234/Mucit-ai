@@ -64,7 +64,7 @@ def _buda(P: np.ndarray, hafiza) -> tuple:
     return Q / top, kesik
 
 
-def _sec(P: np.ndarray) -> int:
+def _skor(P: np.ndarray) -> np.ndarray:
     Q = np.clip(np.asarray(P, float).reshape(-1), 1e-300, None)
     Q = Q / Q.sum()
     egim = np.log(Q)
@@ -73,9 +73,20 @@ def _sec(P: np.ndarray) -> int:
     assert bool(artik.any()), (
         "Fubini-Study metriği tamamen söndü -- determinist okuma "
         "yapılamaz (ferman 2-Ĵ)")
-    skor = np.where(artik, egim / np.where(artik, g_fs, 1.0),
-                    -np.inf)
-    return int(np.argmax(skor))
+    return np.where(artik, egim / np.where(artik, g_fs, 1.0), -np.inf)
+
+
+def _sec(P: np.ndarray) -> int:
+    return int(np.argmax(_skor(P)))
+
+
+def _sec_n(P: np.ndarray, k: int) -> np.ndarray:
+    skor = _skor(P)
+    k = max(1, min(int(k), skor.size))
+    en_iyi = int(np.argmax(skor))
+    if k == 1:
+        return np.array([en_iyi], dtype=np.int64)
+    return np.argsort(skor)[::-1][:k]
 
 
 def _acilis(nefs, baglam: List[int], pencere: int) -> tuple:
@@ -93,58 +104,89 @@ def _acilis(nefs, baglam: List[int], pencere: int) -> tuple:
     return haller, sukutlar
 
 
-def _cumle(nefs, baglam: List[int], pencere: int, sozluk: int,
-           vecihler, hafiza=None, netice=None) -> tuple:
+class _Kiris:
+
+    __slots__ = ("dizi", "cikti", "bedel", "sukutlar", "budanan", "bitti", "q")
+
+    def __init__(self, dizi, cikti, bedel, sukutlar, budanan, bitti, q):
+        self.dizi = dizi
+        self.cikti = cikti
+        self.bedel = bedel
+        self.sukutlar = sukutlar
+        self.budanan = budanan
+        self.bitti = bitti
+        self.q = q
+
+
+def _cumle_kirisleme(nefs, baglam: List[int], pencere: int, sozluk: int,
+                     vecihler, hafiza=None, netice=None, genislik: int = 1
+                     ) -> tuple:
     from kuantum.qegitim import belirtecleri_kodla
-    dizi = list(baglam)
-    cikti: List[int] = []
-    sukutlar: List[float] = []
-    bedel = 0.0
-    budanan = 0
-    q = None
-    while True:
-        pen = dizi[-int(pencere):]
-        E = belirtecleri_kodla(pen, nefs.ayar.veri_lifi,
-                               nefs.ayar.veri_lifi)
-        q = nefs.idrak_et(E)
-        sukut = float(q.olcumler().get("sukut", 0.0))
-        sukutlar.append(sukut)
-        if cikti and q.durma_hukmu(len(cikti) - 1):
-            break
-        P = np.clip(np.asarray(
-            q.beyan_vecihle(int(sozluk), vecihler), float)[0],
-            1e-12, None)
-        P = P / P.sum()
-        P, kesik = _buda(P, hafiza)
-        budanan += kesik
-        t = _sec(P)
-        if netice is not None:
-            while float(jeton_normu(netice, q.y.psi[0])) <= 0.0:
-                jeton_cezasi(netice, int(t))
-                P[int(t)] = 0.0
-                top = float(P.sum())
-                assert top > 0.0, (
-                    "GERİ YOL BÜTÜN DALLARI KAPATTI -- kısıt uzayı boş: "
-                    "model söyleyebileceği hiçbir jeton bulamıyor "
-                    "(ferman 2-Æ/3)")
-                P = P / top
+    genislik = max(1, int(genislik))
+    kirisler = [_Kiris(list(baglam), [], 0.0, [], 0, False, None)]
+    while any(not k.bitti for k in kirisler):
+        adaylar: List[_Kiris] = []
+        for k in kirisler:
+            if k.bitti:
+                adaylar.append(k)
+                continue
+            pen = k.dizi[-int(pencere):]
+            E = belirtecleri_kodla(pen, nefs.ayar.veri_lifi,
+                                   nefs.ayar.veri_lifi)
+            q = nefs.idrak_et(E)
+            sukut = float(q.olcumler().get("sukut", 0.0))
+            yeni_sukutlar = k.sukutlar + [sukut]
+            if k.cikti and q.durma_hukmu(len(k.cikti) - 1):
+                adaylar.append(_Kiris(k.dizi, k.cikti, k.bedel,
+                                      yeni_sukutlar, k.budanan, True, q))
+                continue
+            P = np.clip(np.asarray(
+                q.beyan_vecihle(int(sozluk), vecihler), float)[0],
+                1e-12, None)
+            P = P / P.sum()
+            P, kesik = _buda(P, hafiza)
+            budanan = k.budanan + kesik
+            if netice is not None:
                 t = _sec(P)
-        bedel -= float(np.log(P[t]))
-        cikti.append(int(t))
-        dizi.append(int(t))
-    assert cikti, (
+                while float(jeton_normu(netice, q.y.psi[0])) <= 0.0:
+                    jeton_cezasi(netice, int(t))
+                    P[int(t)] = 0.0
+                    top = float(P.sum())
+                    assert top > 0.0, (
+                        "GERİ YOL BÜTÜN DALLARI KAPATTI -- kısıt uzayı "
+                        "boş: model söyleyebileceği hiçbir jeton "
+                        "bulamıyor (ferman 2-Æ/3)")
+                    P = P / top
+                    t = _sec(P)
+            sirali = _sec_n(P, genislik)
+            for t in sirali:
+                yeni_bedel = k.bedel - float(np.log(P[int(t)]))
+                adaylar.append(_Kiris(k.dizi + [int(t)], k.cikti + [int(t)],
+                                      yeni_bedel, yeni_sukutlar, budanan,
+                                      False, q))
+        adaylar.sort(key=lambda x: x.bedel)
+        kirisler = adaylar[:genislik]
+    en_iyi = min(kirisler, key=lambda k: k.bedel)
+    assert en_iyi.cikti, (
         "üretim tek belirteç dahi vermeden durdu -- alt hudut yoktur "
         "fakat sıfır da bir cevap değildir (ferman 2-Ó-B)")
     if hafiza is not None:
         from .hafiza import q_izdusumu
-        hafiza.yaz(q_izdusumu(q.y.psi[0], nefs.ayar.veri_lifi),
-                   omega=float(np.exp(-bedel / max(len(cikti), 1))),
+        hafiza.yaz(q_izdusumu(en_iyi.q.y.psi[0], nefs.ayar.veri_lifi),
+                   omega=float(np.exp(
+                       -en_iyi.bedel / max(len(en_iyi.cikti), 1))),
                    hukum=TASDIK)
-    return cikti, bedel, sukutlar, budanan
+    return en_iyi.cikti, en_iyi.bedel, en_iyi.sukutlar, en_iyi.budanan
+
+
+def _cumle(nefs, baglam: List[int], pencere: int, sozluk: int,
+           vecihler, hafiza=None, netice=None) -> tuple:
+    return _cumle_kirisleme(nefs, baglam, pencere, sozluk, vecihler,
+                            hafiza=hafiza, netice=netice, genislik=1)
 
 
 def _uret(nefs, baglam: List[int], pencere: int, sozluk: int,
-          hafiza=None, netice=None) -> tuple:
+          hafiza=None, netice=None, genislik: int = 1) -> tuple:
     from .mukayese import merakla_coz
     from .suphe import SupheAyari, suphe_manifoldu
     haller, sukutlar = _acilis(nefs, baglam, pencere)
@@ -154,15 +196,16 @@ def _uret(nefs, baglam: List[int], pencere: int, sozluk: int,
         ayar=SupheAyari(acik=1))
     return merakla_coz(
         haller, sp["merak"],
-        lambda vs: _cumle(nefs, baglam, pencere, sozluk, vs,
-                          hafiza=hafiza, netice=netice))
+        lambda vs: _cumle_kirisleme(nefs, baglam, pencere, sozluk, vs,
+                                    hafiza=hafiza, netice=netice,
+                                    genislik=genislik))
 
 
 def _soyle_govde(gorev_adi: str, dizi: List[int], nefs, pencere: int,
                  sozluk: int, hafiza=None, netice=None,
                  tikaniklik: Optional[float] = None,
-                 azami_uret: int = 0, hedef_uzunluk: Optional[int] = None
-                 ) -> "Cevap":
+                 azami_uret: int = 0, hedef_uzunluk: Optional[int] = None,
+                 genislik: int = 1) -> "Cevap":
     from .belirtec import basamak_sayisi, tip_vektoru, tipten
     taban = int(nefs.ayar.veri_lifi)
     assert int(sozluk) >= 2, (
@@ -179,7 +222,7 @@ def _soyle_govde(gorev_adi: str, dizi: List[int], nefs, pencere: int,
 
     def _cek():
         return _uret(nefs, baglam, pencere, taban, hafiza=hafiza,
-                     netice=netice)
+                     netice=netice, genislik=genislik)
 
     uretilen, bedel, sukutlar, budanan = _cek()
 
@@ -256,7 +299,8 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
           azami_uret: int = 0,
           usul: str = "açgözlü",
           hafiza=None, netice=None, ne: str = "cevap",
-          hedef: int = 0, sinamadan: bool = False) -> Any:
+          hedef: int = 0, sinamadan: bool = False,
+          genislik: int = 1) -> Any:
     if gorev is None:
         raise ValueError("söylemek için bir görev lâzım")
     assert manzara is None, (
@@ -307,12 +351,12 @@ def soyle(gorev=None, manzara=None, tikaniklik_bak: bool = False,
     return _bitir(_soyle_govde(
         gorev.ad, dizi, nefs, pencere, sozluk, hafiza=hafiza,
         netice=netice, tikaniklik=tik, azami_uret=azami_uret,
-        hedef_uzunluk=len(h)))
+        hedef_uzunluk=len(h), genislik=genislik))
 
 
 def serbest_soyle(cumle: str, nefs=None, pencere: int = 8, sozluk: int = 16,
                   hafiza=None, netice=None, kodlama: str = "o200k_base",
-                  ad: str = "sohbet") -> "Cevap":
+                  ad: str = "sohbet", genislik: int = 1) -> "Cevap":
     if nefs is None:
         return Cevap(
             gorev=ad, sukut=True,
@@ -321,4 +365,4 @@ def serbest_soyle(cumle: str, nefs=None, pencere: int = 8, sozluk: int = 16,
     dizi = belirtecle(str(cumle), kodlama)
     assert dizi, "girdi metni belirteçlenemedi -- boş dizi"
     return _soyle_govde(ad, dizi, nefs, pencere, sozluk, hafiza=hafiza,
-                        netice=netice)
+                        netice=netice, genislik=genislik)
