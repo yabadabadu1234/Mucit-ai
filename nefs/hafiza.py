@@ -7,7 +7,17 @@ from typing import Any, Dict, List, Mapping, Optional, Tuple
 import numpy as np
 
 __all__ = ["Kayit", "Hafiza", "TASDIK", "TEVAKKUF", "CERH", "rapor",
-           "tertip_beyani", "tertip_metni"]
+           "tertip_beyani", "tertip_metni", "q_izdusumu"]
+
+
+def q_izdusumu(hal: np.ndarray, taban: int) -> np.ndarray:
+    v = np.asarray(hal, complex).reshape(-1)
+    t = max(1, int(taban))
+    assert v.size % t == 0, (
+        "hâl boyu (%d) tabana (%d) bölünmüyor -- hafıza kaydı ℂ^q'ya "
+        "indirgenemez (ferman 2-Ú-C)" % (v.size, t))
+    yerel = v.size // t
+    return v.reshape(t, yerel).sum(axis=-1) / math.sqrt(float(yerel))
 
 _TERTIP: Dict[str, float] = {
     "çağrı": 0.0, "yırtıktan": 0.0, "kapıdan": 0.0, "alâkalı": 0.0,

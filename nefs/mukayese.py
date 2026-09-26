@@ -591,8 +591,8 @@ def merakla_coz(durumlar: Sequence[np.ndarray], merak: Sequence[int],
 
 def ayniyet_ihtilaf(a: np.ndarray, b: np.ndarray,
                     vecihler: Sequence[Vecih],
-                    hafiza=None) -> Dict[str, Any]:
-    from .hafiza import CERH, TASDIK, TEVAKKUF
+                    hafiza=None, taban: int = 0) -> Dict[str, Any]:
+    from .hafiza import CERH, TASDIK, TEVAKKUF, q_izdusumu
     vs = list(vecihler)
     assert vs, (
         "ayniyet/ihtilaf tayini için vecih lâzım -- şahit yoktur, "
@@ -613,7 +613,9 @@ def ayniyet_ihtilaf(a: np.ndarray, b: np.ndarray,
             [x for x in d if x < d.max() - 0.5 * ihtilaf]))
     hukum = (TEVAKKUF if (tenakuz or kisir) else TASDIK)
     if hafiza is not None:
-        hafiza.yaz(np.asarray(a, complex).reshape(-1),
+        _kayit_x = (q_izdusumu(a, taban) if int(taban) > 0
+                   else np.asarray(a, complex).reshape(-1))
+        hafiza.yaz(_kayit_x,
                    omega=float(1.0 - ihtilaf),
                    hukum=(CERH if tenakuz else hukum))
         _MELEKE["hafızaya"] += 1.0
@@ -707,8 +709,9 @@ def hipotez_halkasi(haller: Sequence[np.ndarray],
 def mukayese_melekesi(haller: Sequence[np.ndarray],
                       cinsler: Optional[Sequence[str]] = None,
                       hafiza=None, mahalli=None,
-                      vecih: Optional[Vecih] = None) -> Dict[str, Any]:
-    from .hafiza import CERH, TEVAKKUF
+                      vecih: Optional[Vecih] = None,
+                      taban: int = 0) -> Dict[str, Any]:
+    from .hafiza import CERH, TEVAKKUF, q_izdusumu
     H = [np.asarray(h, complex).reshape(-1) for h in haller]
     assert H, "mukayese melekesine BOŞ hâl yığını geldi"
     _MELEKE["çağrı"] += 1.0
@@ -733,7 +736,8 @@ def mukayese_melekesi(haller: Sequence[np.ndarray],
     _MELEKE["sapma"] = float(ist["sapma"])
     if hafiza is not None and ist["istisna"] is not None:
         j = int(ist["istisna"]) % len(H)
-        hafiza.yaz(H[j], omega=float(np.cos(float(ist["sapma"]))),
+        _kayit_x = q_izdusumu(H[j], taban) if int(taban) > 0 else H[j]
+        hafiza.yaz(_kayit_x, omega=float(np.cos(float(ist["sapma"]))),
                    hukum=(CERH if ist["yırtık"] else TEVAKKUF))
         _MELEKE["hafızaya"] += 1.0
     if ist["yırtık"] and ist["istisna"] is not None:

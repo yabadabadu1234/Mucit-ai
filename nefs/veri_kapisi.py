@@ -128,7 +128,8 @@ def _hukum(i: int, bag: Sequence[int], hedef: int, H: List[np.ndarray],
                          % stabilite["kararsizlik_skoru"],
                 "stabilite": stabilite}
     from .mukayese import ayniyet_ihtilaf
-    a = ayniyet_ihtilaf(H[i], H[int(es)], vecihler, hafiza=hafiza)
+    a = ayniyet_ihtilaf(H[i], H[int(es)], vecihler, hafiza=hafiza,
+                        taban=int(ayar.taban))
     kutup = (H[i], H[int(es)])
     if bool(a["tenakuz"]):
         return {"kabul": True, "hudut": "tenakuz", "terfi": True,

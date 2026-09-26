@@ -136,7 +136,8 @@ def _cumle(nefs, baglam: List[int], pencere: int, sozluk: int,
         "üretim tek belirteç dahi vermeden durdu -- alt hudut yoktur "
         "fakat sıfır da bir cevap değildir (ferman 2-Ó-B)")
     if hafiza is not None:
-        hafiza.yaz(np.asarray(q.y.psi[0], complex),
+        from .hafiza import q_izdusumu
+        hafiza.yaz(q_izdusumu(q.y.psi[0], nefs.ayar.veri_lifi),
                    omega=float(np.exp(-bedel / max(len(cikti), 1))),
                    hukum=TASDIK)
     return cikti, bedel, sukutlar, budanan
@@ -233,7 +234,8 @@ def _soyle_govde(gorev_adi: str, dizi: List[int], nefs, pencere: int,
     guven_nihai = guven_ham
     retrospektif_tutarlilik = None
     if hafiza is not None:
-        retrospektif = hafiza.oku(np.asarray(_q.y.psi[0], complex))
+        from .hafiza import q_izdusumu
+        retrospektif = hafiza.oku(q_izdusumu(_q.y.psi[0], taban))
         if retrospektif["toplam"] > 1e-12:
             retrospektif_tutarlilik = float(
                 retrospektif["tasdik"] / retrospektif["toplam"])

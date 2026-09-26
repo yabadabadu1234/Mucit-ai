@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional, Sequence, Set, Tuple
 import numpy as np
 
 from .ayna import AynaAyari, halka
-from .hafiza import CERH, TASDIK, TEVAKKUF, Hafiza
+from .hafiza import CERH, TASDIK, TEVAKKUF, Hafiza, q_izdusumu
 from .veri_kapisi import (hafiza_hukmu, kapi_beyani,
                           kapi_tertibi, kapi_tetabuku)
 from kuantum.qudit import esit_mi, kanonik_adres
@@ -870,14 +870,16 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             if (hukum == TASDIK and mu is not None and len(mu) > j
                     and float(mu[j]) < 0.35):
                 hukum = TEVAKKUF
+            _hal_q = q_izdusumu(ileri["hal"][j], nefs.ayar.veri_lifi)
             if hukum == TEVAKKUF:
-                hafiza.taban_degistir(ileri["hal"][j],
+                hafiza.taban_degistir(_hal_q,
                                       yaprak="ω%+.2f" % float(om),
                                       omega=float(om))
-            hafiza.yaz(ileri["hal"][j], omega=om, hukum=hukum)
+            hafiza.yaz(_hal_q, omega=om, hukum=hukum)
     if hafiza is not None:
         for _j, _netice in usl.get("netice", ()):
-            hafiza.yaz(_netice, omega=1.0, hukum=TASDIK)
+            hafiza.yaz(q_izdusumu(_netice, nefs.ayar.veri_lifi),
+                       omega=1.0, hukum=TASDIK)
 
     from .mukayese import (mukayese_melekesi,
                            alem_cinsleri as _alem_cinsleri)
@@ -889,7 +891,8 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                      else ["sönük"] * len(ileri["hal"])),
             hafiza=hafiza,
             mahalli=getattr(nefs, "mahalli", None),
-            vecih=(_vec[0] if _vec else None))
+            vecih=(_vec[0] if _vec else None),
+            taban=int(nefs.ayar.veri_lifi))
 
     mky = _merakla_coz(ileri["hal"],
                        _kefe_meraki(ileri["hal"], cv["ω"], a),
