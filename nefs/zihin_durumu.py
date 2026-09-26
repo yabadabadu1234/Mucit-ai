@@ -287,22 +287,33 @@ class QYazmac:
             self.y.faz(faz)
         else:
             degerler = np.unique(bas_duz[sec])
-            no = (self.y.iz.kapi_yaz(
-                    "gömme", (), np.asarray(self.y.psi, complex).copy())
-                  if self.y.iz.senet_acik else -1)
-            for v in degerler:
-                v = int(v)
-                anahtar = "gömme/%d" % v
+            tam_carpan = np.empty(degerler.size, complex)
+            faz_carpan = np.empty(degerler.size, complex)
+            adr_faz = np.empty(degerler.size, np.int64)
+            adr_agirlik = np.empty(degerler.size, np.int64)
+            for k, v in enumerate(degerler):
+                anahtar = "gömme/%d" % int(v)
                 teta = float(pq.aci(anahtar, 1, 1.0)[0])
-                adr = int(pq.aci_adresi(anahtar, 1)[0])
-                carpan = complex(math.cos(teta), -math.sin(teta))
-                self.y.psi[:, v] *= carpan
-                if no >= 0:
+                agirlik = float(pq.buyukluk(anahtar, 1)[0])
+                adr_faz[k] = int(pq.aci_adresi(anahtar, 1)[0])
+                adr_agirlik[k] = int(pq.adres(anahtar, 1)[0])
+                faz_carpan[k] = complex(math.cos(teta), -math.sin(teta))
+                tam_carpan[k] = agirlik * faz_carpan[k]
+            no = (self.y.iz.kapi_yaz("gömme", degerler, tam_carpan)
+                  if self.y.iz.senet_acik else -1)
+            self.y.psi[:, degerler] *= tam_carpan[None, :]
+            if no >= 0:
+                for k, v in enumerate(degerler):
                     self.y.iz.bag_yaz(
-                        no, adr, 1.0,
-                        ("köşegen", np.array([v], np.int64),
-                         np.array([-1j * carpan], complex)))
+                        no, int(adr_faz[k]), 1.0,
+                        ("köşegen", np.array([int(v)], np.int64),
+                         np.array([-1j * tam_carpan[k]], complex)))
+                    self.y.iz.bag_yaz(
+                        no, int(adr_agirlik[k]), 1.0,
+                        ("köşegen", np.array([int(v)], np.int64),
+                         np.array([faz_carpan[k]], complex)))
             n_gomme = int(degerler.size)
+            self.y.normalize()
         self.y.iz.not_dus("kodla", "dolu %d / %d seviye  gömme %d/%d hane"
                           % (int(dolu.sum() // max(B, 1)), d,
                              n_gomme, sozluk))

@@ -59,6 +59,14 @@ def senedi_uygula(psi: np.ndarray, lif: Tuple[int, ...], kayit,
         n = np.maximum(np.asarray(G, float), 1e-300)
         n = n.reshape(-1, 1) if n.size == psi.shape[0] else n.reshape(1, -1)
         return psi * n if (ters and not es) else psi / n
+    if tur == "gömme":
+        C = np.ones(psi.shape[-1], complex)
+        C[np.asarray(yer, np.int64)] = np.asarray(G, complex)
+        if not ters:
+            return psi * C
+        if es:
+            return psi * np.conj(C)
+        return psi / C
     if tur == "maske":
         m = np.asarray(G, bool)
         out = psi.copy()
