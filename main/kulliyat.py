@@ -263,12 +263,14 @@ def _kademeli_imlec_yolu(yol: str) -> str:
 def _kademeli_imlec_oku(yol: str) -> Dict[str, Any]:
     y = _kademeli_imlec_yolu(yol)
     if not os.path.isfile(y):
-        return {"indeks": 0, "tamam": False}
+        return {"indeks": 0, "bayt_ofset": 0, "tamam": False}
     try:
         with open(y, "r", encoding="utf-8") as fh:
-            return json.load(fh)
+            d = json.load(fh)
+            d.setdefault("bayt_ofset", 0)
+            return d
     except (OSError, ValueError):
-        return {"indeks": 0, "tamam": False}
+        return {"indeks": 0, "bayt_ofset": 0, "tamam": False}
 
 
 def _kademeli_imlec_yaz(yol: str, imlec: Dict[str, Any]) -> None:
@@ -357,6 +359,50 @@ def _metin_akit(yol: str, kod, ch, obek_bayt: int = 8 << 20
     return n, 1
 
 
+def _dosya_ilerlet(yol: str, kod, ch, bayt_ofset: int, obek_bayt: int,
+                   hedef_belirtec: int) -> Tuple[int, int, bool]:
+    import numpy as np
+    if yol.endswith(".parquet"):
+        if int(bayt_ofset) > 0:
+            return 0, int(bayt_ofset), True
+        n, _d = _parquet_akit(yol, kod, ch)
+        try:
+            boy = os.path.getsize(yol)
+        except OSError:
+            boy = 1
+        return n, int(boy), True
+    try:
+        boy = os.path.getsize(yol)
+    except OSError:
+        return 0, int(bayt_ofset), True
+    if int(bayt_ofset) >= boy:
+        return 0, int(bayt_ofset), True
+    eklenen = 0
+    with open(yol, "rb") as fh:
+        fh.seek(int(bayt_ofset))
+        artik = b""
+        while True:
+            if hedef_belirtec > 0 and eklenen >= hedef_belirtec:
+                return eklenen, int(fh.tell() - len(artik)), False
+            parca = fh.read(int(obek_bayt))
+            if not parca:
+                break
+            parca = artik + parca
+            artik, parca = parca[-4:], parca[:-4]
+            if not parca:
+                continue
+            t = _belirtecle(kod, parca.decode("utf-8", "replace"))
+            if t:
+                ch.write(np.asarray(t, np.uint32).tobytes())
+                eklenen += len(t)
+        if artik:
+            t = _belirtecle(kod, artik.decode("utf-8", "replace"))
+            if t:
+                ch.write(np.asarray(t, np.uint32).tobytes())
+                eklenen += len(t)
+        return eklenen, int(boy), True
+
+
 def mucit_cevir(kok: str, cikti: str, kodlama: str = "o200k_base",
                 uzantilar: Sequence[str] = (), ad: str = "",
                 obek_bayt: int = 8 << 20,
@@ -423,6 +469,7 @@ def mucit_cevir_kademeli(kok: str, cikti: str, kodlama: str = "o200k_base",
     dosyalar = _dosya_listesi(kok, uzantilar)
     imlec = _kademeli_imlec_oku(cikti)
     indeks = int(imlec.get("indeks", 0))
+    bayt_ofset = int(imlec.get("bayt_ofset", 0))
     tamam = bool(imlec.get("tamam", False)) or not dosyalar
     if not os.path.isfile(cikti):
         os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
@@ -449,20 +496,28 @@ def mucit_cevir_kademeli(kok: str, cikti: str, kodlama: str = "o200k_base",
             if hedef_belirtec > 0 and eklenen >= hedef_belirtec:
                 break
             y = dosyalar[indeks]
-            if y.endswith(".parquet"):
-                n_m, d_m = _parquet_akit(y, kod, ch)
-            else:
-                n_m, d_m = _metin_akit(y, kod, ch, int(obek_bayt))
+            kalan = (hedef_belirtec - eklenen) if hedef_belirtec > 0 else 0
+            etkin_obek = (int(obek_bayt) if kalan <= 0 else
+                         int(min(int(obek_bayt), max(1 << 16, kalan * 16))))
+            n_m, yeni_ofset, dosya_bitti = _dosya_ilerlet(
+                y, kod, ch, bayt_ofset, etkin_obek, kalan)
             n_belirtec += n_m
             eklenen += n_m
-            n_dosya += d_m
-            indeks += 1
-            if indeks >= len(dosyalar):
-                tamam = True
+            if dosya_bitti:
+                n_dosya += 1
+                indeks += 1
+                bayt_ofset = 0
+                if indeks >= len(dosyalar):
+                    tamam = True
+            else:
+                bayt_ofset = yeni_ofset
+                break
         bas["belirteç"] = int(n_belirtec)
         bas["dosya"] = int(n_dosya)
         _mucit_baslik_yaz(ch, yer, bas)
-    _kademeli_imlec_yaz(cikti, {"indeks": int(indeks), "tamam": bool(tamam)})
+    _kademeli_imlec_yaz(cikti, {"indeks": int(indeks),
+                                "bayt_ofset": int(bayt_ofset),
+                                "tamam": bool(tamam)})
     return {"yol": cikti, "belirteç": eklenen, "toplam_belirteç": n_belirtec,
             "dosya": n_dosya, "tamam": tamam, "kodlama": kodlama,
             "sözlük": V}
