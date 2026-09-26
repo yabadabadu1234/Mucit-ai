@@ -180,6 +180,7 @@ def veri_kapisi(veri: Sequence[Any],
     assert nefs is not None, (
         "veri kapısı MOTORSUZ çağrıldı -- üç hudut hâl üstünde ölçülür, "
         "ham metnin zâhirinden değil (ferman 2-Ú)")
+    from .mihenk import safha
     parca = parca_haddi(int(a.taban))
     kabul: List[Any] = []
     hukumler: List[Dict[str, Any]] = []
@@ -190,7 +191,9 @@ def veri_kapisi(veri: Sequence[Any],
         H: List[np.ndarray] = []
         baglar: List[Sequence[int]] = []
         hedefler: List[int] = []
-        for o in dilim:
+        for _oi, o in enumerate(dilim):
+            safha("D4 KAPI · idrak",
+                  örnek="%d/%d" % (bas + _oi + 1, len(gelen)))
             bag, hedef, _cins, _makam = ornek_bol(o)
             baglar.append(bag)
             hedefler.append(int(hedef))
