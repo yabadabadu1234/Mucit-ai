@@ -20,7 +20,8 @@ __all__ = ["Alem", "alem_kur", "Durum", "GECIS", "Makine",
            "ayniyet_ihtilaf", "tip_tayfi", "kanun_tayfi",
            "vecih_ac", "vecih_kapat", "merakla_coz",
            "omur_beyani", "omur_metni",
-           "bargmann", "hipotez_halkasi", "swap_testi", "simplisiyal", "istisna_yeri",
+           "bargmann", "peps_sadakati", "hipotez_halkasi", "swap_testi",
+           "simplisiyal", "istisna_yeri",
            "choi", "nesnelestir", "spektrum", "hata_payi",
            "zorunlu", "mumkun", "kiplik",
            "mukayese_beyani", "mukayese_metni", "sayac"]
@@ -669,6 +670,42 @@ def bargmann(durumlar: Sequence[np.ndarray],
             "tenakuz": bool(not kopuk and takla > kapanis),
             "kısır": bool(not kopuk and kapanis > takla
                           and r >= float(np.mean(baglar)))}
+
+
+_PEPS_TENSOR: Dict[Tuple[int, int, int], np.ndarray] = {}
+
+
+def _peps_tensoru(d: int, D: int, tohum: int) -> np.ndarray:
+    anahtar = (int(d), int(D), int(tohum))
+    T = _PEPS_TENSOR.get(anahtar)
+    if T is None:
+        r = np.random.default_rng(anahtar)
+        T = r.normal(scale=1.0 / math.sqrt(float(d)),
+                     size=(int(d), int(D) ** 4))
+        _PEPS_TENSOR[anahtar] = T
+    return T
+
+
+def peps_sadakati(durumlar: Sequence[np.ndarray], D: int = 0,
+                  tohum: int = 0) -> Dict[str, Any]:
+    H = [np.asarray(h, complex).reshape(-1) for h in durumlar]
+    n = len(H)
+    assert n >= 1, "PEPS sadakati en az bir hâl ister"
+    d = int(H[0].size)
+    assert all(h.size == d for h in H), (
+        "PEPS büzülmesi eşit boyda hâller ister")
+    Dd = int(D) if int(D) > 0 else max(2, min(8, d))
+    T = _peps_tensoru(d, Dd, tohum)
+    log_normlar = np.empty(n, float)
+    for t, h in enumerate(H):
+        c = np.abs(h) @ T
+        nrm = float(np.linalg.norm(c))
+        assert nrm > 0.0, "PEPS büzülmesi bir adımda sıfıra çöktü"
+        log_normlar[t] = math.log(nrm)
+    tutarsizlik = float(np.var(log_normlar)) if n > 1 else 0.0
+    return {"D": int(Dd), "n": int(n), "log_norm": log_normlar,
+            "log_sadakat": float(np.sum(log_normlar)),
+            "tutarsızlık": tutarsizlik}
 
 
 def hipotez_halkasi(haller: Sequence[np.ndarray],
