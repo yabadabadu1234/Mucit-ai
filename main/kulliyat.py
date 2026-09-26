@@ -551,7 +551,10 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
     onceki = dict(imlec or {})
     yeni: Dict[str, Any] = {}
     diziler: List[Tuple[Any, float, str]] = []
-    for k in ks:
+    from nefs.mihenk import safha
+    for _kno, k in enumerate(ks):
+        safha("D1 ÖLÇÜ · külliyat kaynağı",
+              sıra="%d/%d" % (_kno + 1, len(ks)), kaynak=k.ad)
         if k.yerel:
             assert os.path.isdir(k.yerel), (
                 "yerel kaynak dizini YOK: %s (%s). Uydurulmuş bir yol "
@@ -561,6 +564,7 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
                 os.remove(yol)
             if not os.path.isfile(yol):
+                safha("D1 ÖLÇÜ · külliyat belirteçleniyor", kaynak=k.ad)
                 os.makedirs(KULLIYAT_DIZINI, exist_ok=True)
                 mucit_cevir(k.yerel, yol, kodlama, k.uzantilar(), k.ad)
         elif k.varlik:
@@ -569,6 +573,7 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             yol = _dizin(k) + MUCIT_UZANTI
             kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
+                safha("D1 ÖLÇÜ · külliyat çekiliyor", kaynak=k.ad, depo=k.depo)
                 kulliyat_cek([k])
                 kok = os.path.join(_dizin(k), k.yol) if k.yol else _dizin(k)
             if not os.path.isfile(yol) and not os.path.isdir(kok):
@@ -582,6 +587,7 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             if os.path.isfile(yol) and mucit_ac(yol, kodlama) is None:
                 os.remove(yol)
             if not os.path.isfile(yol):
+                safha("D1 ÖLÇÜ · külliyat belirteçleniyor", kaynak=k.ad)
                 mucit_cevir(kok, yol, kodlama, k.uzantilar(), k.ad)
                 shutil.rmtree(_dizin(k), ignore_errors=True)
         if not os.path.isfile(yol):
