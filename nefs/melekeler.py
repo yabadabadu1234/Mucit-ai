@@ -1437,13 +1437,22 @@ class QNefs:
         return q
 
     def __len__(self) -> int:
-        return len(self.p)
+        n = len(self.p)
+        if self.kan is not None:
+            n += int(self.kan.parametre_adedi)
+        return n
 
     def vektor(self) -> np.ndarray:
-        return self.p.vektor()
+        if self.kan is None:
+            return self.p.vektor()
+        return np.concatenate([self.p.vektor(), self.kan.vektor()])
 
     def yukle(self, v: np.ndarray) -> None:
-        self.p.yukle(v)
+        v = np.asarray(v, float).reshape(-1)
+        n_p = len(self.p)
+        self.p.yukle(v[:n_p])
+        if self.kan is not None:
+            self.kan.yukle(v[n_p:])
 
 
 def rapor_qakis(tohum: int = 0, n: int = 20, d_in: int = 12,

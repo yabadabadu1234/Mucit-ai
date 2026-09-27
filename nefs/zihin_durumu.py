@@ -338,9 +338,9 @@ class QYazmac:
             [np.repeat(bas, taban, axis=0),
              np.tile(np.arange(taban, dtype=bas.dtype), B)[:, None]],
             axis=1)
-        kulli_aday = kan.genlik(
-            aday, parametre=pq,
-            yerel_faz=np.tile(seviye_fazi, B)).reshape(B, taban)
+        kulli_aday, T_kan, U_kan = kan.genlik_ve_katkilar(
+            aday, parametre=pq, yerel_faz=np.tile(seviye_fazi, B))
+        kulli_aday = kulli_aday.reshape(B, taban)
         kulli = kulli_aday.sum(axis=1)
         bas_sev = np.mod(np.asarray(bas, np.int64), taban)
         kendi = kulli_aday[np.arange(B)[:, None], bas_sev]
@@ -363,6 +363,11 @@ class QYazmac:
         self.y.cephe = int(cephe)
         self.y._cephe_genligi = np.asarray(kulli_aday, complex).copy()
         self.y.psi = G.astype(self.y.ayar.tip)
+        no_ham = self.y.iz.son_senet if self.y.iz.senet_acik else -1
+        if no_ham >= 0 and pq is not None:
+            self._kan_blokla_bagla(no_ham, kan, pq, kulli_aday, T_kan,
+                                   U_kan, m, bas, yigin, sut, sec, taban,
+                                   n_yer, m_sat, B, d)
         self.y.normalize()
         self._tur_genligi = np.asarray(self.y.psi, complex).copy()
         m.uzunluk_katmani(int(n_sat))
@@ -372,6 +377,39 @@ class QYazmac:
             if pq is not None:
                 self._kan_bagla(no, pq, bas, taban, cephe, sut, sec, d)
         return float(kuresel)
+
+    def _kan_blokla_bagla(self, no_ham, kan, pq, kulli_aday, T_kan, U_kan,
+                          m, bas, yigin, sut, sec, taban, n_yer, m_sat,
+                          B, d) -> None:
+        pay = np.zeros((B, taban), float)
+        agirlik_katsayi = m.genlik[:B, :int(bas.shape[-1])].reshape(-1)
+        np.add.at(pay, (yigin[sec], sut[sec]), agirlik_katsayi[sec])
+        genlik_msat = m.genlik[:B, :m_sat].copy()
+        C_boy = int(kan.C.size)
+        S_boy = int(kan.S.size)
+        kan_bas = 2 * int(pq.d)
+
+        def _L_T(Lam: np.ndarray) -> np.ndarray:
+            Lam = np.asarray(Lam, complex).reshape(B, d)
+            Vr = Lam.reshape(B, taban, n_yer)
+            lamA_v = np.einsum("btp,bp->bt", Vr[:, :, :m_sat], genlik_msat)
+            lamA_a = Lam[:, :taban] * pay
+            return lamA_v + lamA_a
+
+        def hesapla(lam, onceki):
+            lam_A = _L_T(lam).reshape(-1)
+            Aflat = kulli_aday.reshape(-1)
+            W = np.conj(lam_A) * Aflat
+            Ebar = np.einsum("jnk,n->kj", T_kan, np.abs(Aflat) ** 2)
+            terim1_C = np.einsum("jnk,n->kj", T_kan, W)
+            w0 = float(np.real(np.sum(W)))
+            g_C = 2.0 * np.real(terim1_C) - 2.0 * w0 * Ebar
+            terim1_S = np.einsum("jnk,n->kj", U_kan, W)
+            g_S = -2.0 * np.imag(terim1_S)
+            idx = kan_bas + np.arange(C_boy + S_boy, dtype=np.int64)
+            return idx, np.concatenate([g_C.reshape(-1), g_S.reshape(-1)])
+
+        self.y.iz.kan_blok_yaz(int(no_ham), hesapla)
 
     def _kan_bagla(self, no, pq, bas, taban, cephe, sut, sec, d) -> int:
         kontrol, bag = pq.temas_kapilari()

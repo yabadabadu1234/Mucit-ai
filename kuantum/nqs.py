@@ -120,8 +120,9 @@ class ChebyshevKan:
         u = iz[..., None] + self.havuz_fazi[None, :]
         return np.clip(u, -1.0, 1.0)
 
-    def genlik(self, basamak: np.ndarray, parametre=None,
-               yerel_faz=None) -> np.ndarray:
+    def genlik_ve_katkilar(self, basamak: np.ndarray, parametre=None,
+                           yerel_faz=None
+                           ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
         u = self._vecih(basamak)
         D = int(self.ayar.derece)
         T = chebyshev_t(u, D)
@@ -148,7 +149,12 @@ class ChebyshevKan:
         assert z > 0.0 and np.isfinite(z), (
             "NQS genliği tamamen söndü (Z=%r): kapalı form bir durum "
             "üretemedi, sessizce geçilemez (ferman 5)" % (z,))
-        return psi / z
+        return psi / z, T, U
+
+    def genlik(self, basamak: np.ndarray, parametre=None,
+               yerel_faz=None) -> np.ndarray:
+        A, _T, _U = self.genlik_ve_katkilar(basamak, parametre, yerel_faz)
+        return A
 
     def vektor(self) -> np.ndarray:
         return np.concatenate([self.C.reshape(-1), self.S.reshape(-1),

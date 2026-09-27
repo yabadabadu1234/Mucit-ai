@@ -215,12 +215,28 @@ def egim_ek_durum(iz, lif: Tuple[int, ...], psi_son: np.ndarray,
     bag: Dict[int, List[Tuple[int, float, Any]]] = {}
     for (no, par, olcek, turev) in iz.baglanti:
         bag.setdefault(int(no), []).append((int(par), float(olcek), turev))
+    kan_blok: Dict[int, List[Any]] = {}
+    for (no, hesapla) in getattr(iz, "kan_bloklari", ()):
+        kan_blok.setdefault(int(no), []).append(hesapla)
     psi = psi_son.copy()
     lam = psi_son * H[None, :]
     for i in range(len(iz.senet) - 1, -1, -1):
         kayit = iz.senet[i]
         if str(kayit[0]) in ("durum", "başlangıç"):
-            psi = np.asarray(kayit[2], complex).copy()
+            onceki = np.asarray(kayit[2], complex)
+            for (par, olcek, turev) in bag.get(i, ()):
+                dpsi = _turev_vur(onceki, lif, turev)
+                g[int(par)] += 2.0 * float(olcek) * float(
+                    np.real(np.sum(np.conj(lam) * dpsi)))
+                ust = float(np.real(np.sum(np.conj(dpsi) * dpsi)))
+                ic = complex(np.sum(np.conj(onceki) * dpsi))
+                metrik[int(par)] += (float(olcek) ** 2) * max(
+                    0.0, ust - abs(ic) ** 2)
+            for hesapla in kan_blok.get(i, ()):
+                idx, val = hesapla(lam, onceki)
+                np.add.at(g, np.asarray(idx, np.int64),
+                         np.asarray(val, float))
+            psi = onceki
             continue
         onceki = senedi_uygula(psi, lif, kayit, ters=True)
         for (par, olcek, turev) in bag.get(i, ()):
@@ -280,6 +296,15 @@ def egim_ikiz(iz, lif: Tuple[int, ...], psi_son: np.ndarray,
     v = np.asarray(yon, float).reshape(-1)
     for i, kayit in enumerate(iz.senet):
         if str(kayit[0]) in ("durum", "başlangıç"):
+            onceki = np.asarray(kayit[2], complex)
+            katki = None
+            for (par, olcek, turev) in bag.get(i, ()):
+                if int(par) < v.size and v[int(par)] != 0.0:
+                    ek = (float(olcek) * float(v[int(par)])
+                         * _turev_vur(onceki, lif, turev))
+                    katki = ek if katki is None else katki + ek
+            psi = onceki
+            dpsi = katki if katki is not None else np.zeros_like(psi)
             continue
         katki = None
         for (par, olcek, turev) in bag.get(i, ()):

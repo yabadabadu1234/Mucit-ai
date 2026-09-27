@@ -76,6 +76,7 @@ class Iz:
         self.baglanti: List[Tuple[int, int, float, Any]] = []
         self.mahalli_senet: List[np.ndarray] = []
         self.mahalli_bag: List[Tuple[int, float, int, np.ndarray]] = []
+        self.kan_bloklari: List[Tuple[int, Any]] = []
         self.derinlik = 0
         self.uretecsiz = 0
         self.bag_reddi = 0
@@ -91,6 +92,7 @@ class Iz:
         self.uretecsiz = 0
         self.mahalli_senet: List[np.ndarray] = []
         self.mahalli_bag = []
+        self.kan_bloklari = []
 
     def mahalli_bag_yaz(self, par: int, olcek: float, seviye: int,
                         aci: np.ndarray) -> int:
@@ -119,6 +121,7 @@ class Iz:
         self.baglanti = []
         self.mahalli_senet = []
         self.mahalli_bag = []
+        self.kan_bloklari = []
 
     def kapi_yaz(self, tur: str, yuvalar, G) -> int:
         if not self.senet_acik:
@@ -143,6 +146,12 @@ class Iz:
             return
         self.baglanti.append((int(senet_no), int(parametre), float(olcek),
                               turev))
+
+    def kan_blok_yaz(self, senet_no: int, hesapla) -> int:
+        if not self.senet_acik or int(senet_no) < 0:
+            return -1
+        self.kan_bloklari.append((int(senet_no), hesapla))
+        return len(self.kan_bloklari) - 1
 
 
 @dataclass
