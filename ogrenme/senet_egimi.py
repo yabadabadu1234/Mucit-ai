@@ -145,6 +145,16 @@ def kosegen_vur(psi: np.ndarray, dizin: np.ndarray,
     return out
 
 
+def _olcek_ileri(dx: np.ndarray, x: np.ndarray, n: np.ndarray) -> np.ndarray:
+    S = np.real(np.sum(np.conj(x) * dx, axis=-1, keepdims=True))
+    return dx / n - x * (S / n ** 3)
+
+
+def _olcek_geri(lam: np.ndarray, x: np.ndarray, n: np.ndarray) -> np.ndarray:
+    S = np.real(np.sum(np.conj(lam) * x, axis=-1, keepdims=True))
+    return lam / n - x * (S / n ** 3)
+
+
 def _turev_vur(psi: np.ndarray, lif: Tuple[int, ...], turev) -> np.ndarray:
     tur = str(turev[0])
     if tur == "köşegen":
@@ -222,7 +232,11 @@ def egim_ek_durum(iz, lif: Tuple[int, ...], psi_son: np.ndarray,
             metrik[int(par)] += (float(olcek) ** 2) * max(
                 0.0, ust - abs(ic) ** 2)
         psi = onceki
-        lam = senedi_uygula(lam, lif, kayit, ters=True, es=True)
+        if str(kayit[0]) == "ölçek":
+            n = np.maximum(np.asarray(kayit[2], float), 1e-300)
+            lam = _olcek_geri(lam, onceki, n)
+        else:
+            lam = senedi_uygula(lam, lif, kayit, ters=True, es=True)
     return g, metrik
 
 
@@ -273,8 +287,13 @@ def egim_ikiz(iz, lif: Tuple[int, ...], psi_son: np.ndarray,
                 ek = (float(olcek) * float(v[int(par)])
                       * _turev_vur(psi, lif, turev))
                 katki = ek if katki is None else katki + ek
-        psi = senedi_uygula(psi, lif, kayit)
-        dpsi = senedi_uygula(dpsi, lif, kayit)
+        if str(kayit[0]) == "ölçek":
+            n = np.maximum(np.asarray(kayit[2], float), 1e-300)
+            dpsi = _olcek_ileri(dpsi, psi, n)
+            psi = senedi_uygula(psi, lif, kayit)
+        else:
+            psi = senedi_uygula(psi, lif, kayit)
+            dpsi = senedi_uygula(dpsi, lif, kayit)
         if katki is not None:
             dpsi = dpsi + katki
     return 2.0 * float(np.real(np.sum(np.conj(psi * H[None, :]) * dpsi)))
