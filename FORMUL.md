@@ -327,7 +327,7 @@ D4 VERİ KAPISI, her örneği **ayrı bir `idrak_et()` çağrısıyla** (316 ör
 316 fazladan ileri geçiş, hiçbir gradyan üretmeden) kodlayıp tenakuz ·
 kısırdöngü · mantıksızlık tasnifi yapan, sonucuna göre veriyi FİLTRELEYEN
 ayrı bir kapıydı. Bu, D6 MİZAN'ın AYNI ileri geçişten (tek `idrak_et()`,
-tur başına) zaten üreттiği `Hata_tenakuz` (log bariyer), `Hata_çevrim`
+tur başına) zaten ürettiği `Hata_tenakuz` (log bariyer), `Hata_çevrim`
 (holonomi/kısırdöngü cezası) ve `Hata_taşma` (basamak taşması) kefelerinin
 **tekrarıydı**: aynı hükmü iki ayrı motorla, ikinci fazladan bir
 ileri geçiş pahasına, ikincisi hiçbir gradyan üretmeden tekrar veriyordu.
@@ -349,6 +349,16 @@ eğitim kümesinden veri düzeyinde çıkarılmaz.
 | **GİRDİ** | `Veri` (= D1'in `Gelen`i, filtresiz) · `Nefs` · `Hafıza` · `Fock` |
 | **AMELİYE** | `AnaSüperpozisyon → UzayAç → Süzgeçler → UzayKapat` |
 | **ÇIKTI** | `Netice = (Pencere, Hâl, Mesele, MeseleNispeti, EnZayıfKanun, ArananBasamak, HafızaKapasitesi)` |
+
+```
+AnaSüperpozisyon'un ADI hükmüdür: Hâl = Σ_örnek İdrak(Kodla(Bağlam_örnek))
+                                    normalize edilir
+Her örneğin bağlamı KENDİ boyunda, kulli_mizan._ileri ile AYNI yığın/B
+eksenli desenle kodlanır (nefs/mukayese.py:_hal_kur). EVVELCE bütün
+örneklerin bağlamı TEK dizide birleştirilip yazmacın basamak haddini
+(ferman 2-O) örnek sayısıyla şişiriyordu -- bu, D4 imhasından bağımsız,
+önceden var olan bir hataydı; 2026 turunda düzeltildi.
+```
 
 ```
 ayar.Pencere        ← Netice.Pencere

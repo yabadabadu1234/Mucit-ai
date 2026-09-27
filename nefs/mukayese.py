@@ -1198,13 +1198,39 @@ def _kanun_nispetleri() -> Dict[str, float]:
 
 def _hal_kur(baglam: Sequence[Sequence[int]], nefs, taban: int
              ) -> np.ndarray:
+    # NOT: bütün örneklerin bağlamını TEK bir dizide birleştirmek
+    # (evvelki usul) yazmacın basamak haddini (ferman 2-O) örnek sayısıyla
+    # doğru orantılı şişirirdi -- 316 örnek 316 kere üst üste eklenince
+    # tek bir "konuşma" gibi kodlanmaya çalışılır ve taşardı. "Ana
+    # SÜPERPOZİSYON" adı zaten hükmü söylüyor: her örnek kendi hâlini
+    # (kulli_mizan._ileri ile AYNI yığın/B eksenli toplu kodlamayla) ayrı
+    # üretir, aggregat hâl bunların SÜPERPOZİSYONUdur (toplam + normalize)
+    # -- kulli_mizan.py'nin Hodge kefesi için zaten kullandığı aynı desen.
     from kuantum.qegitim import belirtecleri_kodla
-    diz = [int(x) for o in baglam for x in list(o)]
-    assert diz, "bağlam BOŞ -- sınır şartı yok demektir"
     from kuantum.nqs import turun_genligi
-    E = belirtecleri_kodla(diz, int(taban), int(taban))
-    q = nefs.idrak_et(E)
-    return np.asarray(turun_genligi(nefs, q).hal, complex).reshape(-1)
+    baglamlar = [list(o) for o in baglam]
+    assert baglamlar and any(len(o) for o in baglamlar), (
+        "bağlam BOŞ -- sınır şartı yok demektir")
+    B = max(1, int(getattr(nefs.ayar, "yigin", 1)))
+    grup: Dict[int, List[List[int]]] = {}
+    for o in baglamlar:
+        if len(o):
+            grup.setdefault(len(o), []).append(o)
+    toplam: Optional[np.ndarray] = None
+    for _boy, g in sorted(grup.items()):
+        for bas in range(0, len(g), B):
+            dilim = g[bas:bas + B]
+            E = np.stack([belirtecleri_kodla(o, int(taban), int(taban))
+                         for o in dilim])
+            q = nefs.idrak_et(E)
+            H = np.asarray(turun_genligi(nefs, q).yigin, complex)
+            for satir in H[:len(dilim)]:
+                toplam = (satir.copy() if toplam is None
+                          else toplam + satir)
+    assert toplam is not None, "bağlam BOŞ -- sınır şartı yok demektir"
+    nrm = float(np.linalg.norm(toplam))
+    assert nrm > 0.0, "ana süperpozisyon sıfıra çöktü (ferman 5)"
+    return (toplam / nrm).astype(complex)
 
 
 def ana_superpozisyon(baglam: Sequence[Sequence[int]], nefs=None,
