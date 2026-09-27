@@ -779,6 +779,47 @@ class QuditYazmac:
                 "mahallî_bağ", 0.0) + 1.0
         return vuran
 
+    def satir_cifti_coklu(self, i_indeksler, j_indeksler, tetalar,
+                          baglar=None) -> int:
+        # satir_cifti'nin AYRIK (örtüşmeyen) çiftler için N kere Python
+        # çağrısı yerine TEK vektörel çağrıda uygulanmış hâli (bkz.
+        # MahalliYazmac.satir_cifti_coklu -- yalnız tugla() gibi ŞERİTLİ,
+        # örtüşmeyen çift desenleri için güvenlidir).
+        m = self._mahalli_zorunlu()
+        ii = np.asarray(i_indeksler, np.int64).reshape(-1)
+        jj = np.asarray(j_indeksler, np.int64).reshape(-1)
+        t = np.asarray(tetalar, float).reshape(-1)
+        assert ii.size == jj.size == t.size, (
+            "çift/açı sayıları tutmuyor: %d, %d, %d"
+            % (ii.size, jj.size, t.size))
+        if ii.size == 0:
+            return 0
+        vuran = int(m.satir_cifti_coklu(ii, jj, t))
+        if vuran <= 0:
+            self._dusen_kapi += int(ii.size)
+            _SEKTOR_SAYAC["düşen"] = _SEKTOR_SAYAC.get(
+                "düşen", 0.0) + float(ii.size)
+            return 0
+        self.iz.mahalli_yaz(m)
+        self._kapi += int(ii.size)
+        self._sektor_vurusu += int(ii.size)
+        _SEKTOR_SAYAC["kenet"] += float(ii.size)
+        if baglar is not None and self.iz.senet_acik:
+            for k in range(ii.size):
+                bag = baglar[k]
+                if not bag:
+                    continue
+                for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
+                                          else list(bag)):
+                    agir = float(np.mean(np.asarray(pay, float))) if np.size(
+                        pay) else 1.0
+                    self.iz.mahalli_bag_yaz(
+                        int(par), float(olcek), int(ii[k]),
+                        np.array([float(t[k]) * agir]))
+                _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
+                    "mahallî_bağ", 0.0) + 1.0
+        return vuran
+
     def sektor_cifti(self, kontrol: str, hedef: str,
                      bag: float = 1.0, degil: bool = False,
                      aci=None, senet=None, defter=None,

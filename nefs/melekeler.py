@@ -459,14 +459,22 @@ class QMeleke:
 
     def tugla(self, q: QYazmac, p, ofset: int = 0,
               olcek: float = 0.5) -> None:
+        # NOT: şeritli (ofset, ofset+2, ofset+4, ...) çiftler birbirinin
+        # satırını PAYLAŞMAZ -- tek tek satir_cifti_m() yerine TEK
+        # vektörel satir_cifti_coklu_m() çağrısı, sıra değişmeden AYNI
+        # sonucu verir (ölçülen darboğazlardan biri, tugla birçok
+        # melekede kullanılıyor).
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, olcek)
         par, olc = self.aci_bagi(p, 6, olcek)
-        for k, i in enumerate(range(int(ofset) % 2, max(0, n - 1), 2)):
-            t = float(a[k % a.size])
-            bag = None if par is None else (
-                int(par[k % a.size]), float(olc), 1.0)
-            q.satir_cifti_m(i, i + 1, t, bag=bag)
+        idx = np.arange(int(ofset) % 2, max(0, n - 1), 2, dtype=np.int64)
+        if idx.size == 0:
+            return
+        k = np.arange(idx.size, dtype=np.int64) % a.size
+        tetalar = a[k]
+        baglar = (None if par is None else
+                 [(int(par[kk]), float(olc), 1.0) for kk in k])
+        q.satir_cifti_coklu_m(idx, idx + 1, tetalar, baglar=baglar)
 
     def aci_yeri(self, p, n: int) -> int:
         anahtar = "q%d.%s/%d" % (self.no, self.ad, int(n))
@@ -497,6 +505,23 @@ class QMeleke:
                  [(int(par[j]), float(olc), 1.0) for j in idx])
         q.satir_donmesi_coklu_m(np.asarray(sv, np.int64), tetalar,
                                 baglar=baglar)
+
+    def satir_bilesik_donme(self, q: QYazmac, n: int, aci_dizisi,
+                            isaret: float = 1.0, bag_listesi=None) -> None:
+        # NOT: n satırın HER BİRİNE AYNI açı dizisi ART ARDA (kompoze)
+        # uygulanıyordu (n × len(aci_dizisi) ayrı çağrı). İki boyutlu
+        # dönme matrisleri açı TOPLAMIYLA birleşir (R(a)·R(b) = R(a+b)) --
+        # bu KESİN bir özdeşliktir, yaklaşıklık değil. Tek açı (toplam),
+        # tek vektörel çağrı; gradyan-defteri kaydı (bag_listesi) HER
+        # satır için AYNI, ESKİ kodun kaydettiği sayıda ve içerikte
+        # kaydedilir -- yalnız STATE hesaplaması toplulaştı.
+        if int(n) <= 0:
+            return
+        toplam = float(isaret) * float(np.sum(np.asarray(aci_dizisi, float)))
+        idx = np.arange(int(n), dtype=np.int64)
+        tetalar = np.full(int(n), toplam, float)
+        baglar = ([list(bag_listesi)] * int(n)) if bag_listesi else None
+        q.satir_donmesi_coklu_m(idx, tetalar, baglar=baglar)
 
     def satir_donmesi(self, q: QYazmac, p,
                       olcek: float = 0.6) -> None:
@@ -536,10 +561,10 @@ class QMuhayyile(QMeleke):
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, 0.8)
         par, olc = self.aci_bagi(p, 6, 0.8)
-        for i in range(n):
-            for k, t in enumerate(a):
-                bag = None if par is None else (int(par[k]), float(olc), 1.0)
-                q.satir_donmesi_m(i, float(t), bag=bag)
+        bag_listesi = (None if par is None else
+                      [(int(par[k]), float(olc), 1.0)
+                       for k in range(a.size)])
+        self.satir_bilesik_donme(q, n, a, bag_listesi=bag_listesi)
 
 
 @qkaydet
@@ -551,11 +576,15 @@ class QTertip(QMeleke):
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.yay(p, 4, n, 0.7)
         par, olc = self.yay_bagi(p, 4, n, 0.7)
-        for i in range(n):
-            t = float(a[i % a.size]) if a.size else 0.0
-            bag = None if par is None else (
-                int(par[i % len(par)]), float(olc), 1.0)
-            q.satir_donmesi_m(i, t, bag=bag)
+        if n <= 0 or a.size == 0:
+            return
+        idx = np.arange(n, dtype=np.int64) % a.size
+        tetalar = a[idx]
+        baglar = (None if par is None else
+                 [(int(par[i % len(par)]), float(olc), 1.0)
+                  for i in range(n)])
+        q.satir_donmesi_coklu_m(np.arange(n, dtype=np.int64), tetalar,
+                                baglar=baglar)
 
 
 @qkaydet
@@ -567,11 +596,11 @@ class QTecrit(QMeleke):
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, 0.5)
         par, olc = self.aci_bagi(p, 6, 0.5)
-        for i in range(n):
-            for k, t in enumerate(a):
-                bag = (None if par is None
-                       else (int(par[k]), float(olc), -1.0))
-                q.satir_donmesi_m(i, -float(t), bag=bag)
+        bag_listesi = (None if par is None else
+                      [(int(par[k]), float(olc), -1.0)
+                       for k in range(a.size)])
+        self.satir_bilesik_donme(q, n, a, isaret=-1.0,
+                                 bag_listesi=bag_listesi)
 
 
 @qkaydet
@@ -621,8 +650,10 @@ class QTezat(QMeleke):
 
     def uygula(self, q, p):
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
-        for i in range(1, n, 2):
-            q.satir_donmesi_m(i, math.pi / 2)
+        idx = np.arange(1, n, 2, dtype=np.int64)
+        if idx.size:
+            q.satir_donmesi_coklu_m(
+                idx, np.full(idx.size, math.pi / 2, float))
 
 
 @qkaydet
@@ -647,13 +678,16 @@ class QTenkit(QMeleke):
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.yay(p, 4, n, 0.4)
         par, olc = self.yay_bagi(p, 4, n, 0.4)
-        for i in range(n):
-            av = float(a[i % a.size]) if a.size else 0.0
-            t = -abs(av)
-            bag = None if par is None else (
-                int(par[i % len(par)]), float(olc),
-                -1.0 if av >= 0.0 else 1.0)
-            q.satir_donmesi_m(i, t, bag=bag)
+        if n <= 0 or a.size == 0:
+            return
+        idx = np.arange(n, dtype=np.int64) % a.size
+        av = a[idx]
+        tetalar = -np.abs(av)
+        baglar = (None if par is None else
+                 [(int(par[i % len(par)]), float(olc),
+                   -1.0 if av[i] >= 0.0 else 1.0) for i in range(n)])
+        q.satir_donmesi_coklu_m(np.arange(n, dtype=np.int64), tetalar,
+                                baglar=baglar)
 
 
 @qkaydet
@@ -708,11 +742,10 @@ class QDenemeYanilma(QMeleke):
         k = q.veri_yuvasi
         a = self.aci(p, k, 0.3)
         par, olc = self.aci_bagi(p, k, 0.3)
-        for i in range(n):
-            for j, t in enumerate(a):
-                bag = None if par is None else (
-                    int(par[j]), float(olc), 1.0)
-                q.satir_donmesi_m(i, float(t), bag=bag)
+        bag_listesi = (None if par is None else
+                      [(int(par[j]), float(olc), 1.0)
+                       for j in range(a.size)])
+        self.satir_bilesik_donme(q, n, a, bag_listesi=bag_listesi)
 
 
 @qkaydet
@@ -734,13 +767,21 @@ class QKiyas(QMeleke):
     SINIF, CHI = "kurucu", 8
 
     def uygula(self, q, p):
+        # NOT: ardışık çiftler (i,i+1) ZİNCİRLİ paylaşılan satırlara
+        # sahip (çift i, satır i+1'i çift i+1 ile paylaşır) -- çiftler
+        # arasında vektörelleştirme YAPILAMAZ (sıralı bağımlılık var).
+        # Yalnız AYNI çifte ard arda uygulanan len(a) dönme, açı
+        # TOPLAMIYLA (kesin özdeşlik) TEK çağrıya indirildi; bag_listesi
+        # zaten çoklu-kayıt kabul ediyor (satir_cifti_m değişmedi).
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, 0.5)
         par, olc = self.aci_bagi(p, 6, 0.5)
+        toplam = float(np.sum(a))
+        bag_listesi = (None if par is None else
+                      [(int(par[k]), float(olc), 1.0)
+                       for k in range(a.size)])
         for i in range(n - 1):
-            for k, t in enumerate(a):
-                bag = None if par is None else (int(par[k]), float(olc), 1.0)
-                q.satir_cifti_m(i, i + 1, float(t), bag=bag)
+            q.satir_cifti_m(i, i + 1, toplam, bag=bag_listesi)
 
 
 @qkaydet
@@ -754,12 +795,11 @@ class QTemsil(QMeleke):
         a = self.aci(p, 6, 0.6)
         par, olc = self.aci_bagi(p, 6, 0.6)
         gecis = 2 if k >= 4 else 1
-        for i in range(n):
-            for _ in range(gecis):
-                for j, t in enumerate(a):
-                    bag = (None if par is None
-                           else (int(par[j]), float(olc), 1.0))
-                    q.satir_donmesi_m(i, float(t), bag=bag)
+        bag_tek = (None if par is None else
+                  [(int(par[j]), float(olc), 1.0) for j in range(a.size)])
+        bag_listesi = None if bag_tek is None else bag_tek * gecis
+        self.satir_bilesik_donme(q, n, np.tile(a, gecis),
+                                 bag_listesi=bag_listesi)
 
 
 @qkaydet
@@ -791,9 +831,7 @@ class QTefekkur(QMeleke):
             teta = lif.olcek * (1.0 + 0.3 * float(a[lif.yuva]))
             eksen_acisi[lif.yuva % k] = eksen_acisi.get(lif.yuva % k, 0.0) + teta
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
-        for top in eksen_acisi.values():
-            for i in range(n):
-                q.satir_donmesi_m(i, float(top))
+        self.satir_bilesik_donme(q, n, list(eksen_acisi.values()))
         i_makam, j_makam = q.y.sektor("makam")
         bas_makam = q.kulli("makam", 0)
         son = bas_makam + (j_makam - i_makam)
@@ -892,11 +930,15 @@ class QTemkin(QMeleke):
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.yay(p, 4, n, 0.12)
         par, olc = self.yay_bagi(p, 4, n, 0.12)
-        for i in range(n):
-            t = float(a[i % a.size]) if a.size else 0.0
-            bag = None if par is None else (
-                int(par[i % len(par)]), float(olc), 1.0)
-            q.satir_donmesi_m(i, t, bag=bag)
+        if n <= 0 or a.size == 0:
+            return
+        idx = np.arange(n, dtype=np.int64) % a.size
+        tetalar = a[idx]
+        baglar = (None if par is None else
+                 [(int(par[i % len(par)]), float(olc), 1.0)
+                  for i in range(n)])
+        q.satir_donmesi_coklu_m(np.arange(n, dtype=np.int64), tetalar,
+                                baglar=baglar)
 
 
 @qkaydet
@@ -919,11 +961,11 @@ class QTashih(QMeleke):
         tetkik = QTetkik().aci(p, k, 0.2)
         par, olc = QTetkik().aci_bagi(p, k, 0.2)
         lam = float(np.tanh(self.aci(p, 1, 1.0)[0]))
-        for i in range(n):
-            for j, t in enumerate(tetkik):
-                bag = (None if par is None
-                       else (int(par[j]), float(olc), -lam))
-                q.satir_donmesi_m(i, -lam * float(t), bag=bag)
+        bag_listesi = (None if par is None else
+                      [(int(par[j]), float(olc), -lam)
+                       for j in range(tetkik.size)])
+        self.satir_bilesik_donme(q, n, tetkik, isaret=-lam,
+                                 bag_listesi=bag_listesi)
 
 
 @qkaydet
@@ -938,11 +980,10 @@ class QTeyit(QMeleke):
             return
         a = self.aci(p, 6, 0.5)
         par, olc = self.aci_bagi(p, 6, 0.5)
-        for i in range(n):
-            for j, t in enumerate(a):
-                bag = (None if par is None
-                       else (int(par[j]), float(olc), 1.0))
-                q.satir_donmesi_m(i, float(t), bag=bag)
+        bag_listesi = (None if par is None else
+                      [(int(par[j]), float(olc), 1.0)
+                       for j in range(a.size)])
+        self.satir_bilesik_donme(q, n, a, bag_listesi=bag_listesi)
 
 
 @qkaydet
@@ -965,9 +1006,7 @@ class QTedebbur(QMeleke):
     def uygula(self, q, p):
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a0 = self.aci(p, 6, 0.25)
-        for i in range(n):
-            for t in a0:
-                q.satir_donmesi_m(i, float(t) * float(self.UFUK))
+        self.satir_bilesik_donme(q, n, a0, isaret=float(self.UFUK))
         a = self.aci(p, 2, 0.3)
         par2, olc2 = self.aci_bagi(p, 2, 0.3)
         q.sektor_faz_vur("mizan", a[:2],
@@ -1065,11 +1104,12 @@ class QTefsir(QMeleke):
         n = int(q.mahalli.pencere) if q.mahalli is not None else 0
         a = self.aci(p, 6, 0.4)
         par, olc = self.aci_bagi(p, 6, 0.4)
+        toplam = float(np.sum(a))
+        bag_listesi = (None if par is None else
+                      [(int(par[j]), float(olc), 1.0)
+                       for j in range(a.size)])
         for i in range(1, n):
-            for j, t in enumerate(a):
-                bag = (None if par is None
-                       else (int(par[j]), float(olc), 1.0))
-                q.satir_cifti_m(i - 1, i, float(t), bag=bag)
+            q.satir_cifti_m(i - 1, i, toplam, bag=bag_listesi)
 
 
 @qkaydet

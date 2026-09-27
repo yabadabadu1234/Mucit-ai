@@ -471,6 +471,46 @@ class MahalliYazmac:
         _MAHALLI["satır_çifti"] = _MAHALLI.get("satır_çifti", 0.0) + 1.0
         return 1
 
+    def satir_cifti_coklu(self, i_indeksler: np.ndarray,
+                          j_indeksler: np.ndarray,
+                          tetalar: np.ndarray) -> int:
+        # satir_cifti'nin AYRIK (örtüşmeyen) çiftler için TEK vektörel
+        # çağrıda uygulanmış hâli -- örn. tugla()'nın şeritli (0,1),(2,3),
+        # (4,5)... çiftleri, hiçbir satırı PAYLAŞMADIĞI için sıra
+        # ÖNEMSİZDİR (QKiyas/QTefsir'in ZİNCİRLİ çiftlerinden farklı:
+        # orada satır paylaşımı var, o yüzden onlar burada YOKTUR --
+        # onlar için yalnız aynı çiftin ard arda dönmeleri toplandı,
+        # çiftler arası sıra bozulmadı).
+        assert self.yigin > 0 and self.pencere > 0, (
+            "SATIR ÇİFTİ BOŞ ZIRHA VURULAMAZ (ferman 2-A)")
+        n = int(self.pencere)
+        if n < 2:
+            _MAHALLI["kök_düşen"] = _MAHALLI.get(
+                "kök_düşen", 0.0) + float(max(1, len(i_indeksler)))
+            return 0
+        ii = np.asarray(i_indeksler, np.int64) % n
+        jj = np.asarray(j_indeksler, np.int64) % n
+        assert not np.any(ii == jj), (
+            "satir_cifti_coklu: bir çiftin iki ucu aynı satıra düşüyor")
+        tumu = np.concatenate([ii, jj])
+        assert tumu.size == np.unique(tumu).size, (
+            "satir_cifti_coklu ÖRTÜŞEN çiftlerle çağrıldı -- vektörel "
+            "toplu uygulama yalnız satırları AYRIK çiftlerde sıralamadan "
+            "bağımsızdır")
+        t = np.asarray(tetalar, float).reshape(-1)
+        assert t.size == ii.size, (
+            "çift sayısı %d, açı sayısı %d -- boy tutmuyor"
+            % (ii.size, t.size))
+        c, sn = np.cos(t), np.sin(t)
+        u = self.hal[:, ii, :].copy()
+        v = self.hal[:, jj, :].copy()
+        c2, sn2 = c[None, :, None], sn[None, :, None]
+        self.hal[:, ii, :] = c2 * u - sn2 * v
+        self.hal[:, jj, :] = sn2 * u + c2 * v
+        _MAHALLI["satır_çifti"] = (_MAHALLI.get("satır_çifti", 0.0)
+                                   + float(ii.size))
+        return 1
+
     def satir_donmesi(self, i: int, teta: float) -> int:
         assert self.yigin > 0 and self.pencere > 0, (
             "SATIR DÖNMESİ BOŞ ZIRHA VURULAMAZ (ferman 2-A)")

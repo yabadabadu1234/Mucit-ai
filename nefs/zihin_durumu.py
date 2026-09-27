@@ -130,6 +130,7 @@ class QYazmac:
         self.satir_donmesi_m = self.y.satir_donmesi
         self.satir_donmesi_coklu_m = self.y.satir_donmesi_coklu
         self.satir_cifti_m = self.y.satir_cifti
+        self.satir_cifti_coklu_m = self.y.satir_cifti_coklu
         self.sektor_oruntusu = self.y.sektor_oruntusu
         self.sektor_kenetleri = self.y.sektor_kenetleri
         self.sektor_faz_bagi = self.y.sektor_faz_bagi
