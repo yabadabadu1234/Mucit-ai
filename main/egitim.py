@@ -28,8 +28,6 @@ from kuantum.qudit import TddAyari, kanonik_adres
 from nefs.matchgate import MatchgateAyari, flo_evrimi
 from nefs.ayna import AynaAyari
 from nefs.mihenk import nobet_kur, safha, safha_beyani, safha_sifirla
-from nefs.veri_kapisi import (VeriKapisiAyari, veri_kapisi,
-                              kapi_beyani, kapi_tertibi)
 from kuantum.qcekirdek import cekirdek_beyani
 from kuantum.parametre_yazmaci import (ParametreAyari, ParametreYazmaci,
                                     parametre_beyani, kenet_beyani)
@@ -511,32 +509,13 @@ def d3_kurulus(Z: Dict[str, Any]) -> Dict[str, Any]:
     return Z
 
 
-def d4_kapi(Z: Dict[str, Any]) -> Dict[str, Any]:
-    ayar = Z["ayar"]
-    gelen = Z["gelen"]
-    nefs = Z["nefs"]
-    hafiza = Z["hafiza"]
-    kapi_hukmu = veri_kapisi(
-        gelen, nefs=nefs, hafiza=hafiza,
-        ayar=VeriKapisiAyari(acik=1, sozluk=int(ayar.sozluk),
-                             taban=int(ayar.veri_lifi),
-                             basamak=int(ayar.belirtec_basamak)))
-    veri = list(kapi_hukmu["kabul"])
-    assert veri, (
-        "tâlim verisi BOŞ -- kapı %d örneğin hepsini reddetti: %r"
-        % (int(kapi_hukmu["gelen"]), kapi_hukmu["sebep"]))
-    safha("D4 KAPI", örnek=len(veri))
-    Z.update({"kapi_hukmu": kapi_hukmu, "veri": veri})
-    return Z
-
-
 def d5_uzay(Z: Dict[str, Any]) -> Dict[str, Any]:
     from nefs.mukayese import (ana_superpozisyon, cozum_uzayi_ac,
                                cozum_uzayi_kapat,
                                mantik_filtresi, mukayese_filtresi)
     from kuantum.qegitim import ornek_bol as _ornek_bol
     ayar = Z["ayar"]
-    veri = Z["veri"]
+    veri = Z["gelen"]
     nefs = Z["nefs"]
     hafiza = Z["hafiza"]
     fock = Z["fock"]
@@ -557,7 +536,7 @@ def d5_uzay(Z: Dict[str, Any]) -> Dict[str, Any]:
     netice = cozum_uzayi_kapat(uzay, sual, hamiltonyen=hamiltonyen)
     netice["uzunluk_genliği"] = uzunluk_genligi(
         getattr(nefs, "mahalli", None), int(netice["pencere"]))
-    Z.update({"sual": sual, "uzay": uzay, "netice": netice})
+    Z.update({"veri": veri, "sual": sual, "uzay": uzay, "netice": netice})
     return Z
 
 
@@ -596,7 +575,6 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
     _mzn = Z["_mzn"]
     _elle_lam = Z["_elle_lam"]
     hamiltonyen = Z["hamiltonyen"]
-    kapi_hukmu = Z["kapi_hukmu"]
     kademe_gorevleri = Z["kademe_gorevleri"]
     _sadakat_ayari = Z["_sadakat_ayari"]
     silsile = Z["silsile"]
@@ -662,7 +640,6 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
             with olcer.saat(len(kume) * int(ayar.pencere)):
                 t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
                                 hafiza=hafiza.klon(),
-                                kapi_hukmu=kapi_hukmu,
                                 adim=int(_kume["adım"]),
                                 kademe_gorevleri=kademe_gorevleri)
             out[i] = float(t["kayıp"])
@@ -679,7 +656,7 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
         p = np.asarray(P, float).reshape(-1)
         kume = list(_kume["v"])
         t = kulli_mizan(nefs, kume, p, ayar.sozluk, ayar=_mzn["a"],
-                        hafiza=hafiza.klon(), kapi_hukmu=kapi_hukmu,
+                        hafiza=hafiza.klon(),
                         adim=int(_kume["adım"]),
                         kademe_gorevleri=kademe_gorevleri, ne="döküm")
         return np.asarray(t["artık"], float)[None, :]
@@ -699,7 +676,7 @@ def d6_mizan(Z: Dict[str, Any]) -> Dict[str, Any]:
     def _olc(p_, kume):
         return kulli_mizan(nefs, list(kume), np.asarray(p_, float),
                            ayar.sozluk, ayar=_mzn["a"], hafiza=hafiza,
-                           adim=_sayac["çağrı"], kapi_hukmu=kapi_hukmu,
+                           adim=_sayac["çağrı"],
                            kademe_gorevleri=kademe_gorevleri, ne="döküm")
 
     Z.update({"ilk_kefeler": ilk_kefeler, "olculen_lam": olculen_lam,
@@ -808,14 +785,11 @@ def d9_kapanis(Z: Dict[str, Any]) -> Dict[str, Any]:
     _kume = Z["_kume"]
     _sayac = Z["_sayac"]
     _seyir = Z["_seyir"]
-    kapi_hukmu = Z["kapi_hukmu"]
     kademe_gorevleri = Z["kademe_gorevleri"]
     _kume["v"] = list(veri)
     kume_kapanisi = {
         "yırtık": yirtiklari_tertiple(hafiza, getattr(nefs, "mahalli",
                                                      None)),
-        "kapı": kapi_tertibi(kapi_hukmu, hafiza,
-                             getattr(nefs, "mahalli", None)),
         "balya": balyala(hafiza, fock),
         "derece_kapandı": int(sum(1 for _a in _derece if fock.yok_et(_a)))}
     p_son = np.asarray(mun["p"], float)
@@ -1050,7 +1024,7 @@ def d11_muhur(Z: Dict[str, Any]) -> Dict[str, Any]:
 
 
 ZINCIR: Tuple[Any, ...] = (d0_gecit, d1_olcu, d2_silsile, d3_kurulus,
-                           d4_kapi, d5_uzay, d5b_sadakat, d6_mizan,
+                           d5_uzay, d5b_sadakat, d6_mizan,
                            d7_hamiltonyen_durumu,
                            d8_dongu, k4_hudut_yoklamasi,
                            d9_kapanis, d10_kelam, d11_muhur)

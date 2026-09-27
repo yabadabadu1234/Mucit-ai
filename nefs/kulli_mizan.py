@@ -8,8 +8,6 @@ import numpy as np
 
 from .ayna import AynaAyari, halka
 from .hafiza import CERH, TASDIK, TEVAKKUF, Hafiza, q_izdusumu
-from .veri_kapisi import (hafiza_hukmu, kapi_beyani,
-                          kapi_tertibi, kapi_tetabuku)
 from kuantum.qudit import esit_mi, kanonik_adres
 
 __all__ = ["Mod", "FockUzayi", "Hamiltonyen", "balyala",
@@ -655,7 +653,7 @@ def _kefe_meraki(haller, omegalar, a) -> List[int]:
 def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                 ayar: Optional[MizanAyari] = None,
                 hafiza: Optional[Hafiza] = None, adim: int = 0,
-                kademe_gorevleri=None, kapi_hukmu=None,
+                kademe_gorevleri=None,
                 ne: str = "toplam") -> Dict[str, Any]:
     a = ayar or MizanAyari()
     if p is not None:
@@ -868,9 +866,6 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             hukum = (CERH if om < -1.0 + a.kenar else
                      TEVAKKUF if om > 1.0 - a.kenar else TASDIK)
             j = hidx % len(ileri["hal"])
-            kapi = hafiza_hukmu(kapi_hukmu, j)
-            if kapi != TASDIK:
-                hukum = min(hukum, kapi)
             mu = sup.get("μ")
             if (hukum == TASDIK and mu is not None and len(mu) > j
                     and float(mu[j]) < 0.35):
@@ -904,14 +899,9 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
                        _mukayese_kefesi)
     L_mky = float(mky["kayıp"])
 
-    ret = kapi_tetabuku(tenakuz=L_ten, kisirdongu=float(cv["ceza"]),
-                        mantiksizlik=L_tas + float(_z["betti_ceza"]))
-    L_ret = float(ret["kayıp"])
-
     L_gedik = float(a.lam_cevrim) * float(usl["borç"])
     _bilesen = [("nokta", L_nok, float(a.lam_nokta)),
                 ("dizi", L_diz, 1.0),
-                ("kapı", L_ret, 1.0),
                 ("mukayese", L_mky, 1.0),
                 ("uzay", L_rez, 1.0),
                 ("kategori", L_kat, float(a.lam_kategori)),
@@ -946,7 +936,6 @@ def kulli_mizan(nefs, veri, p=None, sozluk: int = 16,
             "taşma": L_tas, "taşma_dökümü": tas,
             "nokta": L_nok, "nokta_isabet": float(nok["isabet"]),
             "dizi": L_diz, "dizi_dökümü": diz,
-            "kapı": L_ret, "kapı_dökümü": ret,
             "mukayese_melekesi": L_mky, "mukayese_dökümü": mky,
             "nokta_cins": nok.get("cins", {}),
             "lif": L_lif, "lif_dökümü": mns,

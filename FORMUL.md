@@ -321,39 +321,32 @@ Yazmaçlar (hepsi qudit):
   HAFIZA             kayıt = normalize kavram vektörü + (ω, hüküm, μ, yaprak)
 ```
 
-### D4 VERİ KAPISI -- `nefs/veri_kapisi.py:veri_kapisi`
+### D4 İMHA EDİLDİ -- `nefs/veri_kapisi.py` KALDIRILDI
 
-| | |
-| :-- | :-- |
-| **GİRDİ** | `Gelen` · `Nefs` · `Hafıza` |
-| **AMELİYE** | Her örnek **kodlanır**, hâli doğar, üç hudut **hâl üstünde** ölçülür |
-| **ÇIKTI** | `Veri` (kabul edilen) · `KapıHükmü` (her örneğin tasnifi) |
+D4 VERİ KAPISI, her örneği **ayrı bir `idrak_et()` çağrısıyla** (316 örnek =
+316 fazladan ileri geçiş, hiçbir gradyan üretmeden) kodlayıp tenakuz ·
+kısırdöngü · mantıksızlık tasnifi yapan, sonucuna göre veriyi FİLTRELEYEN
+ayrı bir kapıydı. Bu, D6 MİZAN'ın AYNI ileri geçişten (tek `idrak_et()`,
+tur başına) zaten üreттiği `Hata_tenakuz` (log bariyer), `Hata_çevrim`
+(holonomi/kısırdöngü cezası) ve `Hata_taşma` (basamak taşması) kefelerinin
+**tekrarıydı**: aynı hükmü iki ayrı motorla, ikinci fazladan bir
+ileri geçiş pahasına, ikincisi hiçbir gradyan üretmeden tekrar veriyordu.
+D6'nın kendi "kapı" kefesi (`kapi_tetabuku`) de bu D4'ün küresel sayaçlarına
+(`_KAPI`) bakıp bir tutarlılık ölçüyordu -- D4 kalkınca bu kefe SIFIRA
+donmuş bir ölü kefe olurdu, o da kaldırıldı.
 
-```
-Hâl(Örnek)  = İdrak(Kodla(Bağlam + Hedef))   ← kapı KODLAMADAN SONRA koşar
-Eş(i)       = aynı Bağlamı paylaşan evvelki örnek, yoksa i−1
-              ← bu bir HÜKÜM değil, çiftin İKİNCİ KUTBUDUR
-
-ŞAHİT YOKTUR (ferman 2-Ú). Hüküm çiftin BÜTÜN VECİHLERDEKİ okumasından:
-
-  Örtüşme(v) = |⟨Hâl_i^(v) | Hâl_Eş^(v)⟩|²        her vecih v için
-  İhtilaf    = azamî Örtüşme − asgarî Örtüşme
-  İttifak    = 1 − İhtilaf                        ← ikisi toplamı BİR (1-J)
-
-  Hüküm = MANTIKSIZLIK  eğer basamak ∉ [0, VeriLifi)        → RET (tek eleme)
-        | TENAKUZ       eğer İhtilaf > İttifak               → TERFİ
-        | KISIRDÖNGÜ    eğer İttifak > İhtilaf ve asgarî ≥ İttifak → TEVAKKUF
-        | TASDİK        değilse
-
-KAPI BİR ELEK DEĞİL, TASNİF MERCİİDİR: eleme YALNIZ mantıksızlıktadır.
-Tenakuzlu örnek çıkarılmaz, modalite lifiyle TERFİ eder (ferman 2-Ú).
-```
+Padişah emri (2026): **tenakuz/kısırdöngü/mantıksızlık ayrı bir kapıda
+veriyi elemeyecek; doğrudan hata fonksiyonuna (D6 MİZAN) girip ağırlığı
+değiştirecek.** Bu zaten D6'nın `Hata_tenakuz`/`Hata_çevrim`/`Hata_taşma`
+kefeleri ile GERÇEKLEŞMİŞTİR (bkz. D6 MİZAN, aşağıda) -- fazladan D4 kapısı
+imha edildi, `Veri` artık D1'in `Gelen`iyle birebir aynıdır, hiçbir örnek
+eğitim kümesinden veri düzeyinde çıkarılmaz.
 
 ### D5 ÇÖZÜM UZAYI -- `nefs/mukayese.py` (alt makine § 3)
 
 | | |
 | :-- | :-- |
-| **GİRDİ** | `Veri` · `Nefs` · `Hafıza` · `Fock` |
+| **GİRDİ** | `Veri` (= D1'in `Gelen`i, filtresiz) · `Nefs` · `Hafıza` · `Fock` |
 | **AMELİYE** | `AnaSüperpozisyon → UzayAç → Süzgeçler → UzayKapat` |
 | **ÇIKTI** | `Netice = (Pencere, Hâl, Mesele, MeseleNispeti, EnZayıfKanun, ArananBasamak, HafızaKapasitesi)` |
 
@@ -377,7 +370,7 @@ Her turda, her durumdan çıkarken koşar (invaryant I8).
 
 | | |
 | :-- | :-- |
-| **GİRDİ** | `Nefs` · `Veri` · `p` · `Sözlük` · `MizanAyarı` · `Hafıza` · `KapıHükmü` |
+| **GİRDİ** | `Nefs` · `Veri` · `p` · `Sözlük` · `MizanAyarı` · `Hafıza` |
 | **AMELİYE** | İleri geçiş koşar, kefeler **ayrı ayrı** ölçülür |
 | **ÇIKTI** | `Kefeler` -- bir **vektör**, bir skaler değil (ferman 1-V) |
 
@@ -516,8 +509,8 @@ RET   : hat eğriliğinden ANALİTİK düzeltme, EK ÇAĞRI YOK
 
 | | |
 | :-- | :-- |
-| **GİRDİ** | `Hafıza` · `KapıHükmü` · `Fock` · biriken yırtık defteri |
-| **AMELİYE** | Yırtıklar tertiplenir, kapı tenakuzları terfi eder, balyalanır |
+| **GİRDİ** | `Hafıza` · `Fock` · biriken yırtık defteri |
+| **AMELİYE** | Yırtıklar tertiplenir, balyalanır (D4 kapısı imha edildi -- ferman 2026) |
 | **ÇIKTI** | `Hafıza′` · `Balya` |
 
 ```

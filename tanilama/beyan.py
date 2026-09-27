@@ -42,7 +42,6 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
     from kuantum.qcekirdek import cekirdek_beyani
     from kuantum.qyazmac import sektor_beyani, senet_beyani
     from nefs.sadakat import sadakat_devre_beyani
-    from nefs.veri_kapisi import kapi_beyani
     from ogrenme.mecz import mecz_beyani
     from tanilama.hizolcer import hizolcer_beyani
 
@@ -99,7 +98,6 @@ def netice_derle(Z: Dict[str, object]) -> Dict[str, object]:
             "kenetlenme": kenet_beyani(),
             "mahallî_yazmaç": mahalli_beyani(),
             "uzunluk_katmanı": uzunluk_beyani(),
-            "veri_kapısı": kapi_beyani(),
             "kan_nqs": nqs_beyani(getattr(nefs, "kan", None)),
             "tur_genliği": Z["_tur"],
             "mizan": kefeler, "veri_cetveli": Z["cetvel"],
@@ -221,7 +219,6 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
         from kuantum.parametre_yazmaci import parametre_metni, kenet_metni
         from kuantum.nqs import nqs_metni, tur_metni
         from kuantum.mahalli_yazmac import mahalli_metni, uzunluk_metni
-        from nefs.veri_kapisi import kapi_metni
         from nefs.mukayese import mukayese_melekesi_metni
         from nefs.hafiza import tertip_metni
         from nefs.mukayese import omur_metni, vecih_metni
@@ -253,7 +250,6 @@ def talim_beyani(ayar, kulli: Optional[Dict[str, object]]) -> str:
               kenet_metni(kulli.get("kenetlenme") or {}), "",
               mahalli_metni(kulli.get("mahallî_yazmaç") or {}), "",
               uzunluk_metni(kulli.get("uzunluk_katmanı") or {}), "",
-              kapi_metni(kulli.get("veri_kapısı") or {}), "",
               mukayese_melekesi_metni(
                   kulli.get("mukayese_melekesi") or {}), "",
               tertip_metni(kulli.get("hafıza_tertibi") or {}), "",
