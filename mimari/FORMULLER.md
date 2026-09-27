@@ -158,6 +158,38 @@ Muhakeme(Lüzum) = { burhanî / kat'î olma, zannî / ictihadî olma }
 
 ---
 
+## Teşrih
+
+X(Teşrih) = Vürûd(X) × Sudûr(X)   -- her X için genel şema; Teşrih başlık kalır, hiçbir yerde özne olmaz
+
+Muhakeme(Teşrih) = Vürûd(Muhakeme) × Sudûr(Muhakeme)
+
+---
+
+## Vürûd
+
+Vürûd(Muhakeme) = { Tasavvur, Tenakuz Bulma, Tenkit, Tasdik, Gaye Belirleme,
+                     Mantık Yürütme, İspat, Temkin, Tahkik, Tedebbür,
+                     Şek-Zan-Yakîn İdraki, İhtimal Hesabı(Vâcib) }
+                     -- diğer 11 unsurun vücûb derecesi henüz tayin edilmedi
+
+---
+
+## Sudûr
+
+Sudûr(Muhakeme) = { Gaye Belirleme, Teemmül, Tetkik, Tedebbür, Tafsil,
+                     Tefsir, Tevil, Belâgat, Teyit }
+
+---
+
+## Vücûb
+
+Teşrih(Vücûb) = { Vâcib, Mümkün }
+
+Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün varsayılandır ve etiketlenmez**; yalnız **Vâcib** olan unsur `(Vâcib)` ile işaretlenir. Bu, hem az başlıkla idare eder hem de yazımı sadeleştirir.
+
+---
+
 ## İzahat haritası
 
 - ameliye → `izahat/tasnif/`
@@ -168,3 +200,11 @@ Muhakeme(Lüzum) = { burhanî / kat'î olma, zannî / ictihadî olma }
 - Rükün (Mizan, Tedbir kanatları — taslak), Sıhhat (Sual kanadı — taslak) → henüz izahat dosyası açılmadı, formül de tasdik bekliyor
 - kuvvet, hayvani, insani (Nefis hiyerarşisi) → prose izahatı `CLAUDE.md` § 4-I'de (İbn Sînâ Nefs Şeması) mevcut; mimari küme-dosyası olarak henüz ayrılmadı
 - Mahiyet, Madde, Kanun → `izahat/mahiyet/`
+- Teşrih, Vürûd, Sudûr, Vücûb → henüz izahat dosyası açılmadı
+
+## Açık notlar (41-meleke şebekesi)
+
+- Bu şebeke (41 meleke + Talim/Tahsil kapanışı), Muhakeme dışındaki hiçbir düğüm için henüz kendi Teşrih formülüne dökülmedi. Şebekede düzeltilen ama henüz sealed olmayan kenarlar: Tecrit↛Hayal (silindi), Terkip↛Hayal Kurma (silindi), Hayal Kurma→Terkip (eklendi), Tasavvur→Terkip (eklendi), Tecrit↛Tenkit (silindi), Mana→Gaye Belirleme (eklendi), Tenakuz Bulma→Merak(Vâcib), Teemmül→Merak (eklendi), Merak→Teemmül (eklendi), Gaye Belirleme→Deneme-Yanılma (eklendi), Hayal→Teşbih (eklendi), Tefekkür→Teşbih (eklendi), Tashih↛Muhakeme (reddedildi), Münazara→Tahkik (eklendi), Tertip↛Tafsil (silindi, kavramen şüpheli), Tertip→Talâkat (kaldı).
+- **Mukayese** = 42. meleke olarak kabul edildi; kendi Girdi/Çıktı listesi henüz verilmedi, açık.
+- **Cerh**, Tenakuz Bulma'nın tek taraflı çıktısı olarak yerinde bırakıldı, genişletilmedi.
+- Vücûb (Vâcib/Mümkün) etiketlemesi yalnız Muhakeme(Teşrih)'e uygulandı; şebekenin tamamına yayılıp yayılmayacağı deneme sonucuna bağlı (bkz. sohbet).
