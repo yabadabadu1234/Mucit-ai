@@ -6,12 +6,17 @@ import shutil
 import subprocess
 from typing import Any, Dict, List, Optional, Tuple
 
-__all__ = ["KAGGLE_VERISETI", "KAGGLE_CALISMA_HADDI", "kaggle_hazir_mi",
+__all__ = ["KAGGLE_VERISETI", "KAGGLE_VERISETI_BASLIGI",
+           "KAGGLE_CALISMA_HADDI", "kaggle_hazir_mi",
            "depo_boyutu", "veriseti_indir", "veriseti_gonder",
            "uzak_dosya_listesi", "dogrula_ve_bosalt", "nobetci",
            "koprusu_beyani"]
 
-KAGGLE_VERISETI = os.environ.get("MUCIT_KAGGLE_VERISETI", "")
+KAGGLE_VERISETI = os.environ.get("MUCIT_KAGGLE_VERISETI",
+                                 "ulankaggle/zekayi-mucidani-osmani")
+
+KAGGLE_VERISETI_BASLIGI = os.environ.get("MUCIT_KAGGLE_BASLIK",
+                                         "Zekayı Mucidanı Osmani")
 
 KAGGLE_CALISMA_HADDI = int(
     os.environ.get("MUCIT_KAGGLE_HADDI", str(15 << 30)))
@@ -68,7 +73,8 @@ def veriseti_indir(slug: str, hedef: str = "depo") -> Dict[str, Any]:
 
 
 def veriseti_gonder(slug: str, kaynak: str = "depo",
-                    mesaj: str = "mucit hazine + külliyat güncellemesi"
+                    mesaj: str = "mucit hazine + külliyat güncellemesi",
+                    baslik: str = ""
                     ) -> Dict[str, Any]:
     assert slug, "Kaggle veriseti adı boş -- gönderilecek yer yok"
     assert os.path.isdir(kaynak) and os.listdir(kaynak), (
@@ -76,8 +82,8 @@ def veriseti_gonder(slug: str, kaynak: str = "depo",
     meta_yolu = os.path.join(kaynak, "dataset-metadata.json")
     if not os.path.isfile(meta_yolu):
         with open(meta_yolu, "w", encoding="utf-8") as f:
-            json.dump({"title": slug.split("/")[-1], "id": slug,
-                      "licenses": [{"name": "CC0-1.0"}]}, f)
+            json.dump({"title": baslik or slug.split("/")[-1], "id": slug,
+                      "licenses": [{"name": "CC0-1.0"}]}, f, ensure_ascii=False)
     r = subprocess.run(
         ["kaggle", "datasets", "version", "-p", kaynak, "-m", mesaj,
          "-r", "zip", "--dir-mode", "zip"],
@@ -151,7 +157,8 @@ def dogrula_ve_bosalt(slug: str, dizin: str = "depo",
 
 
 def nobetci(dizin: str = "depo", slug: Optional[str] = None,
-           hadd_bayt: Optional[int] = None) -> Dict[str, Any]:
+           hadd_bayt: Optional[int] = None,
+           baslik: str = "") -> Dict[str, Any]:
     slug = slug if slug is not None else KAGGLE_VERISETI
     hadd = int(hadd_bayt if hadd_bayt is not None else KAGGLE_CALISMA_HADDI)
     boy = depo_boyutu(dizin)
@@ -161,7 +168,8 @@ def nobetci(dizin: str = "depo", slug: Optional[str] = None,
         "ÇALIŞMA ALANI HADDİ AŞILDI (%d ≥ %d bayt) FAKAT "
         "MUCIT_KAGGLE_VERISETI TANIMLI DEĞİL -- boşaltacak yer yok, "
         "veri sessizce silinmez (ferman 5)" % (boy, hadd))
-    gonderim = veriseti_gonder(slug, dizin)
+    gonderim = veriseti_gonder(slug, dizin,
+                              baslik=baslik or KAGGLE_VERISETI_BASLIGI)
     bosaltma = dogrula_ve_bosalt(slug, dizin)
     return {"koştu": True, "boy_önce": boy,
            "boy_sonra": depo_boyutu(dizin), "hadd": hadd,

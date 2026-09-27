@@ -8,13 +8,14 @@ Notebook hücresine yapıştır. Kernel ayarlarında İNTERNET AÇIK olmalı
 (GitHub'dan çekmek ve Kaggle API çağrıları için).
 
 Tek seferlik hazırlık (elle, Kaggle tarafında):
-  1. Bir Kaggle hesabı ve API jetonu (kaggle.json) -- kernelin "Add-ons
-     > Secrets" bölümünden KAGGLE_USERNAME / KAGGLE_KEY olarak eklenir.
-  2. MUCIT_KAGGLE_VERISETI ortam değişkenine "<kullanıcı>/<slug>" yaz
-     (aşağıda). İlk koşuda böyle bir veriseti henüz yoksa kod bunu
-     algılar ve boş depo ile başlar; ilk ``nöbetçi`` tetiklendiğinde
-     veriseti PUBLIC olarak oluşturulur (ferman: private verisetleri
-     Kaggle'da çok daha dar bir hadde çarpar).
+  1. Bir Kaggle hesabı (ulankaggle) ve API jetonu -- kernelin "Add-ons >
+     Secrets" bölümünden KAGGLE_USERNAME / KAGGLE_KEY olarak eklenir
+     (kullanıcı adı + şifre DEĞİL, kaggle.json'daki gerçek jeton).
+  2. Veriseti: ulankaggle/zekayi-mucidani-osmani (başlığı "Zekayı
+     Mucidanı Osmani"). İlk koşuda böyle bir veriseti henüz yoksa kod
+     bunu algılar ve boş depo ile başlar; ilk ``nöbetçi`` tetiklendiğinde
+     veriseti PUBLIC olarak oluşturulur (private verisetleri Kaggle'da
+     çok daha dar bir hadde çarpar).
 """
 from __future__ import annotations
 
@@ -28,7 +29,9 @@ REPO_DAL = os.environ.get("MUCIT_REPO_DAL", "main")
 CALISMA = "/kaggle/working/Mucit-ai"
 
 # --- Padişahın belirlediği tek kabza: veriseti adı ve profil -----------
-os.environ.setdefault("MUCIT_KAGGLE_VERISETI", "")   # "<kullanıcı>/<slug>"
+os.environ.setdefault("MUCIT_KAGGLE_VERISETI",
+                      "ulankaggle/zekayi-mucidani-osmani")
+os.environ.setdefault("MUCIT_KAGGLE_BASLIK", "Zekayı Mucidanı Osmani")
 os.environ.setdefault("MUCIT_KAGGLE_HADDI", str(15 << 30))  # 15 GiB
 PROFIL = os.environ.get("MUCIT_PROFIL", "orta")
 TUR_SAYISI = int(os.environ.get("MUCIT_TUR", "1000000"))
