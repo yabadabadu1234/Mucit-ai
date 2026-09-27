@@ -25,7 +25,8 @@ import sys
 
 REPO_URL = os.environ.get("MUCIT_REPO_URL",
                           "https://github.com/yabadabadu1234/Mucit-ai")
-REPO_DAL = os.environ.get("MUCIT_REPO_DAL", "main")
+REPO_DAL = os.environ.get("MUCIT_REPO_DAL",
+                          "claude/restore-lost-code-wlcust")
 CALISMA = "/kaggle/working/Mucit-ai"
 
 # --- Padişahın belirlediği tek kabza: veriseti adı ve profil -----------
@@ -45,11 +46,22 @@ def _kos(komut, **kw):
 
 
 def _depoyu_hazirla() -> None:
+    print("=== DEPO HAZIRLANIYOR: %s (dal %s) ===" % (REPO_URL, REPO_DAL),
+         flush=True)
     if os.path.isdir(os.path.join(CALISMA, ".git")):
         _kos(["git", "-C", CALISMA, "pull", "--ff-only"])
-        return
-    _kos(["git", "clone", "--depth", "1", "--branch", REPO_DAL,
-         REPO_URL, CALISMA])
+    else:
+        _kos(["git", "clone", "--depth", "1", "--branch", REPO_DAL,
+             REPO_URL, CALISMA])
+    beklenen = os.path.join(CALISMA, "main", "egitim.py")
+    if not os.path.isfile(beklenen):
+        icerik = os.listdir(CALISMA) if os.path.isdir(CALISMA) else []
+        raise AssertionError(
+            "KLON TAMAMLANDI GİBİ GÖRÜNÜYOR FAKAT %r YOK -- yanlış dal "
+            "veya yanlış depo olabilir (ferman 5: sessiz varsayım "
+            "yapılmaz).\n  REPO_URL=%r REPO_DAL=%r\n  %s içindekiler: %r"
+            % (beklenen, REPO_URL, REPO_DAL, CALISMA, icerik))
+    print("=== DEPO HAZIR: main/egitim.py bulundu ===", flush=True)
 
 
 def _ortami_kur() -> None:
@@ -57,8 +69,11 @@ def _ortami_kur() -> None:
                                                         "hazine"))
     os.environ.setdefault("MUCIT_KULLIYAT", os.path.join(CALISMA, "depo",
                                                           "kulliyat"))
-    sys.path.insert(0, CALISMA)
+    if CALISMA not in sys.path:
+        sys.path.insert(0, CALISMA)
     os.chdir(CALISMA)
+    import importlib
+    importlib.invalidate_caches()
 
 
 def basla() -> None:
