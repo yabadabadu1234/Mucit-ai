@@ -200,11 +200,11 @@ Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün var
 - Rükün (Mizan, Tedbir kanatları — taslak), Sıhhat (Sual kanadı — taslak) → henüz izahat dosyası açılmadı, formül de tasdik bekliyor
 - kuvvet, hayvani, insani (Nefis hiyerarşisi) → prose izahatı `CLAUDE.md` § 4-I'de (İbn Sînâ Nefs Şeması) mevcut; mimari küme-dosyası olarak henüz ayrılmadı
 - Mahiyet, Madde, Kanun → `izahat/mahiyet/`
-- Teşrih, Vürûd, Sudûr, Vücûb → henüz izahat dosyası açılmadı
+- Teşrih, Vürûd, Sudûr, Vücûb → `izahat/tesrih/sebeke.md` (41-meleke şebekesinin tam Vücûb taraması)
 
 ## Açık notlar (41-meleke şebekesi)
 
-- Bu şebeke (41 meleke + Talim/Tahsil kapanışı), Muhakeme dışındaki hiçbir düğüm için henüz kendi Teşrih formülüne dökülmedi. Şebekede düzeltilen ama henüz sealed olmayan kenarlar: Tecrit↛Hayal (silindi), Terkip↛Hayal Kurma (silindi), Hayal Kurma→Terkip (eklendi), Tasavvur→Terkip (eklendi), Tecrit↛Tenkit (silindi), Mana→Gaye Belirleme (eklendi), Tenakuz Bulma→Merak(Vâcib), Teemmül→Merak (eklendi), Merak→Teemmül (eklendi), Gaye Belirleme→Deneme-Yanılma (eklendi), Hayal→Teşbih (eklendi), Tefekkür→Teşbih (eklendi), Tashih↛Muhakeme (reddedildi), Münazara→Tahkik (eklendi), Tertip↛Tafsil (silindi, kavramen şüpheli), Tertip→Talâkat (kaldı).
+- Tam düzeltilmiş Sudûr/Vürûd tablosu ve Vücûb (Vâcib/Mümkün) taraması `izahat/tesrih/sebeke.md`'de: 43 düğüm, ~200 kenar tarandı, yalnız 6 kenar Vâcib çıktı, bunlardan yalnız **Tasavvur → Terkip** güçlü bir "rükün şüphesi" taşıyor (henüz taşınmadı, padişah kararını bekliyor).
+- Bu şebeke, Muhakeme dışındaki hiçbir düğüm için henüz kendi `X(Teşrih)` formülüne dökülmedi (yalnız Muhakeme(Teşrih) FORMULLER.md'de sealed).
 - **Mukayese** = 42. meleke olarak kabul edildi; kendi Girdi/Çıktı listesi henüz verilmedi, açık.
 - **Cerh**, Tenakuz Bulma'nın tek taraflı çıktısı olarak yerinde bırakıldı, genişletilmedi.
-- Vücûb (Vâcib/Mümkün) etiketlemesi yalnız Muhakeme(Teşrih)'e uygulandı; şebekenin tamamına yayılıp yayılmayacağı deneme sonucuna bağlı (bkz. sohbet).
