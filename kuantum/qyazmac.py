@@ -95,11 +95,24 @@ class Iz:
         self.kan_bloklari = []
 
     def mahalli_bag_yaz(self, par: int, olcek: float, seviye: int,
-                        aci: np.ndarray) -> int:
+                        aci: np.ndarray, tur: str = "kök",
+                        ekstra: Optional[int] = None) -> int:
+        # `tur` hangi geometriyi kaydettiğimizi söyler -- mahalli_egimi
+        # (ogrenme/senet_egimi.py) bu üçünü FARKLI formüllerle işler:
+        #   "kök"         -- kok_donmesi/sektor_donmesi: TABAN ekseni
+        #                     sabit sütun, TÜM satırlar (ferman 2-Â)
+        #   "satır"       -- satir_donmesi: TEK satır (seviye), TÜM
+        #                     taban -- yalnız seviye==cephe ise sıfırdan
+        #                     farklı katkı verir (F 73-N/2-Ā-D bulgusu)
+        #   "satır_çifti" -- satir_cifti: iki satır (seviye, ekstra)
+        # Karıştırılırlarsa (hepsi TEK formülle okunursa) seviye bir
+        # SATIR indeksiyken TABAN indeksi sanılır ve kayıt ya sessizce
+        # düşer ya da yanlış eksende hesaplanır (ölçüldü).
         if not self.senet_acik:
             return -1
         self.mahalli_bag.append((int(par), float(olcek), int(seviye),
-                                 np.asarray(aci, float).copy()))
+                                 np.asarray(aci, float).copy(), str(tur),
+                                 (None if ekstra is None else int(ekstra))))
         _SENET_SAYAC["mahallî_bağ"] = _SENET_SAYAC.get(
             "mahallî_bağ", 0.0) + 1.0
         return len(self.mahalli_bag) - 1
@@ -707,11 +720,16 @@ class QuditYazmac:
         self._sektor_vurusu += 1
         _SEKTOR_SAYAC["dönme"] += 1.0
         if bag and self.iz.senet_acik:
+            # "satır" türü: d(teta)/d(param) = olcek·pay; asıl gradyan
+            # (satır == cephe eşleşirse) mahalli_egimi'de PSİ'den TAZE
+            # hesaplanır -- burada yalnız zincir kuralının pay çarpanı
+            # saklanır (ferman 2-Ā-D bulgusunun düzeltmesi).
             for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
                                       else list(bag)):
-                p = np.asarray(pay, float).reshape(-1)
-                agir = (a * np.resize(p, a.size)) if p.size else a
-                self.iz.mahalli_bag_yaz(int(par), float(olcek), int(i), agir)
+                p = float(np.mean(np.asarray(pay, float))) if np.size(
+                    pay) else 1.0
+                self.iz.mahalli_bag_yaz(int(par), float(olcek), int(i),
+                                        np.array([p]), tur="satır")
             _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
                 "mahallî_bağ", 0.0) + 1.0
         return vuran
@@ -745,13 +763,13 @@ class QuditYazmac:
                 bag = baglar[k]
                 if not bag:
                     continue
-                a_k = t[k:k + 1]
                 for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
                                           else list(bag)):
-                    p = np.asarray(pay, float).reshape(-1)
-                    agir = (a_k * np.resize(p, a_k.size)) if p.size else a_k
+                    p = float(np.mean(np.asarray(pay, float))) if np.size(
+                        pay) else 1.0
                     self.iz.mahalli_bag_yaz(int(par), float(olcek),
-                                            int(idx[k]), agir)
+                                            int(idx[k]), np.array([p]),
+                                            tur="satır")
                 _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
                     "mahallî_bağ", 0.0) + 1.0
         return vuran
@@ -771,10 +789,11 @@ class QuditYazmac:
         if bag and self.iz.senet_acik:
             for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
                                       else list(bag)):
-                agir = float(np.mean(np.asarray(pay, float))) if np.size(
+                p = float(np.mean(np.asarray(pay, float))) if np.size(
                     pay) else 1.0
                 self.iz.mahalli_bag_yaz(int(par), float(olcek), int(i),
-                                        np.array([t * agir]))
+                                        np.array([p]), tur="satır_çifti",
+                                        ekstra=int(j))
             _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
                 "mahallî_bağ", 0.0) + 1.0
         return vuran
@@ -811,11 +830,12 @@ class QuditYazmac:
                     continue
                 for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
                                           else list(bag)):
-                    agir = float(np.mean(np.asarray(pay, float))) if np.size(
+                    p = float(np.mean(np.asarray(pay, float))) if np.size(
                         pay) else 1.0
                     self.iz.mahalli_bag_yaz(
                         int(par), float(olcek), int(ii[k]),
-                        np.array([float(t[k]) * agir]))
+                        np.array([p]), tur="satır_çifti",
+                        ekstra=int(jj[k]))
                 _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
                     "mahallî_bağ", 0.0) + 1.0
         return vuran

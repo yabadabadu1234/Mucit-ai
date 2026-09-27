@@ -369,22 +369,72 @@ def mahalli_egimi(iz, mahalli, H: np.ndarray, cephe: int,
         _MAHALLI_EGIM["sıfır_hata"] += 1.0
         return g, metrik
     kapsanan = set()
-    for (par, olcek, seviye, aci) in baglar:
-        a = np.asarray(aci, float).reshape(-1)
-        cift = int(min(a.size, (q - int(seviye)) // 2))
-        if cift < 1:
+    for kayit in baglar:
+        par, olcek, seviye, aci = kayit[0], kayit[1], kayit[2], kayit[3]
+        tur = str(kayit[4]) if len(kayit) > 4 else "kök"
+        ekstra = kayit[5] if len(kayit) > 5 else None
+        if tur == "kök":
+            a = np.asarray(aci, float).reshape(-1)
+            cift = int(min(a.size, (q - int(seviye)) // 2))
+            if cift < 1:
+                continue
+            s0 = int(seviye)
+            u = psi[:, :, s0:s0 + 2 * cift:2]
+            v = psi[:, :, s0 + 1:s0 + 2 * cift:2]
+            hu = hata[:, :, s0:s0 + 2 * cift:2]
+            hv = hata[:, :, s0 + 1:s0 + 2 * cift:2]
+            pay = np.conj(u) * (-hv) + np.conj(v) * hu
+            deger = 2.0 * float(np.imag(np.sum(pay * a[None, None, :cift])))
+            g[int(par)] += float(olcek) * deger
+            ust = float(np.real(np.sum(np.conj(u) * u + np.conj(v) * v)))
+            metrik[int(par)] += (float(olcek) ** 2) * max(0.0, ust)
+            kapsanan.add(int(par))
             continue
-        s0 = int(seviye)
-        u = psi[:, :, s0:s0 + 2 * cift:2]
-        v = psi[:, :, s0 + 1:s0 + 2 * cift:2]
-        hu = hata[:, :, s0:s0 + 2 * cift:2]
-        hv = hata[:, :, s0 + 1:s0 + 2 * cift:2]
-        pay = np.conj(u) * (-hv) + np.conj(v) * hu
-        deger = 2.0 * float(np.imag(np.sum(pay * a[None, None, :cift])))
-        g[int(par)] += float(olcek) * deger
-        ust = float(np.real(np.sum(np.conj(u) * u + np.conj(v) * v)))
-        metrik[int(par)] += (float(olcek) ** 2) * max(0.0, ust)
-        kapsanan.add(int(par))
+        if tur == "satır":
+            # satir_donmesi TEK satırı (seviye) döndürür; yalnız o satır
+            # NEDENSEL CEPHE'yse hata sıfırdan farklıdır. d(u_yeni)/dθ =
+            # -v_yeni, d(v_yeni)/dθ = u_yeni (dönme üretecinin kapalı
+            # formu) -- sonlu farkla doğrulandı (bkz. commit). "aci"
+            # burada AÇI değil, zincir kuralının pay çarpanıdır.
+            if int(seviye) != c:
+                continue
+            k = q // 2
+            u = psi[:, c, 0:2 * k:2]
+            v = psi[:, c, 1:2 * k:2]
+            hu = hata[:, c, 0:2 * k:2]
+            hv = hata[:, c, 1:2 * k:2]
+            deger = 2.0 * float(np.real(
+                np.sum(np.conj(hv) * u - np.conj(hu) * v)))
+            pay0 = float(np.asarray(aci, float).reshape(-1)[0])
+            g[int(par)] += float(olcek) * pay0 * deger
+            ust = float(np.real(np.sum(np.conj(u) * u + np.conj(v) * v)))
+            metrik[int(par)] += (float(olcek) * pay0) ** 2 * max(0.0, ust)
+            kapsanan.add(int(par))
+            continue
+        if tur == "satır_çifti":
+            # satir_cifti iki satırı (seviye=i, ekstra=j) karıştırır;
+            # yalnız BİRİ cephe ise katkı verir (aynı üreteç-kapalı-form
+            # özdeşliği, sonlu farkla doğrulandı).
+            i_, j_ = int(seviye), (int(ekstra) if ekstra is not None else -1)
+            pay0 = float(np.asarray(aci, float).reshape(-1)[0])
+            if i_ == c:
+                u = psi[:, i_, :]
+                v = psi[:, j_, :] if 0 <= j_ < n else np.zeros_like(u)
+                hu = hata[:, i_, :]
+                deger = -2.0 * float(np.real(np.sum(np.conj(hu) * v)))
+            elif j_ == c:
+                u = psi[:, i_, :]
+                v = psi[:, j_, :]
+                hv = hata[:, j_, :]
+                deger = 2.0 * float(np.real(np.sum(np.conj(hv) * u)))
+            else:
+                continue
+            g[int(par)] += float(olcek) * pay0 * deger
+            ust = float(np.real(np.sum(np.conj(u) * u + np.conj(v) * v)))
+            metrik[int(par)] += (float(olcek) * pay0) ** 2 * max(0.0, ust)
+            kapsanan.add(int(par))
+            continue
+        raise ValueError("mahalli_bag türü bilinmiyor: %r" % (tur,))
     _MAHALLI_EGIM["kapsanan"] = float(len(kapsanan))
     _MAHALLI_EGIM["norm"] = float(np.linalg.norm(g))
     return g, metrik
