@@ -338,7 +338,7 @@ class QYazmac:
             [np.repeat(bas, taban, axis=0),
              np.tile(np.arange(taban, dtype=bas.dtype), B)[:, None]],
             axis=1)
-        kulli_aday, T_kan, U_kan = kan.genlik_ve_katkilar(
+        kulli_aday, T_kan, U_kan, kenet_bilgisi = kan.genlik_ve_katkilar(
             aday, parametre=pq, yerel_faz=np.tile(seviye_fazi, B))
         kulli_aday = kulli_aday.reshape(B, taban)
         kulli = kulli_aday.sum(axis=1)
@@ -366,38 +366,43 @@ class QYazmac:
         no_ham = self.y.iz.son_senet if self.y.iz.senet_acik else -1
         if no_ham >= 0 and pq is not None:
             self._kan_blokla_bagla(no_ham, kan, pq, kulli_aday, T_kan,
-                                   U_kan, m, bas, yigin, sut, sec, taban,
-                                   n_yer, m_sat, B, d)
+                                   U_kan, kenet_bilgisi, m, bas, yigin,
+                                   sut, sec, taban, n_yer, m_sat, B, d)
         self.y.normalize()
         self._tur_genligi = np.asarray(self.y.psi, complex).copy()
         m.uzunluk_katmani(int(n_sat))
         if self.y.iz.senet_acik:
-            no = self.y.iz.kapi_yaz(
+            self.y.iz.kapi_yaz(
                 "durum", (), np.asarray(self.y.psi, complex).copy())
-            if pq is not None:
-                self._kan_bagla(no, pq, bas, taban, cephe, sut, sec, d)
         return float(kuresel)
 
     def _kan_blokla_bagla(self, no_ham, kan, pq, kulli_aday, T_kan, U_kan,
-                          m, bas, yigin, sut, sec, taban, n_yer, m_sat,
-                          B, d) -> None:
-        pay = np.zeros((B, taban), float)
-        agirlik_katsayi = m.genlik[:B, :int(bas.shape[-1])].reshape(-1)
-        np.add.at(pay, (yigin[sec], sut[sec]), agirlik_katsayi[sec])
-        genlik_msat = m.genlik[:B, :m_sat].copy()
+                          kenet_bilgisi, m, bas, yigin, sut, sec, taban,
+                          n_yer, m_sat, B, d) -> None:
+        # NOT: kenet_bilgisi (pq'nun temas-kapıları -- eski _kan_bagla'nın
+        # yerine geçecek θ/genlik kanalı) burada KASTEN kullanılmıyor.
+        # kodla()'nın temas bloğu cartan_ekle("parametre.temas", ...) ile
+        # m.cartan'a θ/genlik-bağımlı bir değer yazıyor; bu da
+        # m.seviye_fazi() üzerinden yerel_faz'a (KAN'ın sanal kanalına)
+        # ÜÇÜNCÜ bir yoldan karışıyor. Bu yol modellenmeden θ/genlik
+        # gradyanı sonlu-farktan sapıyor (ölçüldü). Yanlış bir gradyanı
+        # sessizce bırakmak sıfırdan beterdir (ferman 5) -- o yüzden bu
+        # kanal, cartan_ekle→seviye_fazi yolu da hesaba katılana kadar
+        # KASTEN devre dışı. Yalnız KAN C/S bloğu (tam doğrulanmış,
+        # bu yola hiç girmiyor) burada hesaplanıyor.
         C_boy = int(kan.C.size)
         S_boy = int(kan.S.size)
         kan_bas = 2 * int(pq.d)
 
-        def _L_T(Lam: np.ndarray) -> np.ndarray:
-            Lam = np.asarray(Lam, complex).reshape(B, d)
-            Vr = Lam.reshape(B, taban, n_yer)
-            lamA_v = np.einsum("btp,bp->bt", Vr[:, :, :m_sat], genlik_msat)
-            lamA_a = Lam[:, :taban] * pay
-            return lamA_v + lamA_a
-
         def hesapla(lam, onceki):
-            lam_A = _L_T(lam).reshape(-1)
+            Lam = np.asarray(lam, complex).reshape(B, d)
+            Vr = Lam.reshape(B, taban, n_yer)
+            genlik_msat = m.genlik[:B, :m_sat]
+            pay = np.zeros((B, taban), float)
+            agirlik_katsayi = m.genlik[:B, :int(bas.shape[-1])].reshape(-1)
+            np.add.at(pay, (yigin[sec], sut[sec]), agirlik_katsayi[sec])
+            lam_A = (np.einsum("btp,bp->bt", Vr[:, :, :m_sat], genlik_msat)
+                    + Lam[:, :taban] * pay).reshape(-1)
             Aflat = kulli_aday.reshape(-1)
             W = np.conj(lam_A) * Aflat
             Ebar = np.einsum("jnk,n->kj", T_kan, np.abs(Aflat) ** 2)
@@ -410,25 +415,6 @@ class QYazmac:
             return idx, np.concatenate([g_C.reshape(-1), g_S.reshape(-1)])
 
         self.y.iz.kan_blok_yaz(int(no_ham), hesapla)
-
-    def _kan_bagla(self, no, pq, bas, taban, cephe, sut, sec, d) -> int:
-        kontrol, bag = pq.temas_kapilari()
-        if kontrol.size == 0:
-            return 0
-        n = int(bas.shape[-1])
-        w = 2.0 * (bas.astype(float) / float(max(1, pq.taban - 1))) - 1.0
-        hedef = pq.rezonans(w.reshape(-1, n), int(kontrol.size))
-        w_t = np.take_along_axis(w.reshape(-1, n), hedef,
-                                 axis=-1).mean(axis=0)
-        dizin = np.unique(np.concatenate(
-            [sut[sec], np.arange(taban, dtype=np.int64)]))
-        for c in range(int(kontrol.size)):
-            katsayi = complex(float(w_t[c]) * (float(bag[c]) + 1j))
-            self.y.iz.bag_yaz(
-                no, int(pq.d + int(kontrol[c])), 1.0,
-                ("köşegen", dizin,
-                 np.full(dizin.size, katsayi, complex)))
-        return int(kontrol.size)
 
     def superpozisyon(self, yalniz_veri: bool = False) -> None:
         h = int(np.prod(self.y.ayar.lif[1:]))

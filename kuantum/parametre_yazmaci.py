@@ -142,7 +142,7 @@ class ParametreYazmaci:
             [bas + np.arange(int(kac), dtype=np.int64)
              for (bas, kac) in self._yer.values()])
         _KENET["açı_kanadı"] = 1.0
-        return kontrol, self.faz[kontrol]
+        return kontrol, self.genlik[kontrol]
 
     def temas_agirligi(self, kontrol: np.ndarray) -> np.ndarray:
         k = np.asarray(kontrol, np.int64).reshape(-1)
@@ -162,7 +162,7 @@ class ParametreYazmaci:
         sira = np.argsort(-g, axis=-1)
         return sira[..., np.arange(int(kac)) % n]
 
-    def kenet(self, basamak: np.ndarray) -> Dict[str, np.ndarray]:
+    def kenet_ve_katkilar(self, basamak: np.ndarray) -> Dict[str, np.ndarray]:
         b = np.asarray(basamak, np.int64)
         n = int(b.shape[-1])
         kontrol, bag = self.temas_kapilari()
@@ -171,7 +171,10 @@ class ParametreYazmaci:
             _KENET["çağrı"] += 1.0
             if kontrol.size == 0:
                 _KENET["kapısız_çağrı"] += 1.0
-            return {"enerji": sifir, "faz": sifir}
+            return {"enerji": sifir, "faz": sifir, "kontrol": kontrol,
+                    "bag": bag, "teta": np.zeros(0, float),
+                    "w_t": np.zeros((int(np.prod(b.shape[:-1]) or 0), 0),
+                                   float)}
         w = 2.0 * (b.astype(float) / float(max(1, self.taban - 1))) - 1.0
         duz = w.reshape(-1, n)
         gerilim = self.gerilim(duz)
@@ -189,7 +192,12 @@ class ParametreYazmaci:
         _KENET["gerilim_tepesi"] = float(np.max(gerilim))
         _KENET["ayrı_rezonans"] = float(np.unique(hedef).size)
         return {"enerji": np.asarray(enerji, float),
-                "faz": np.asarray(faz, float)}
+                "faz": np.asarray(faz, float), "kontrol": kontrol,
+                "bag": bag, "teta": teta, "w_t": w_t}
+
+    def kenet(self, basamak: np.ndarray) -> Dict[str, np.ndarray]:
+        k = self.kenet_ve_katkilar(basamak)
+        return {"enerji": k["enerji"], "faz": k["faz"]}
 
     def defter(self) -> Dict[str, Tuple[int, int]]:
         return dict(self._yer)

@@ -122,17 +122,21 @@ class ChebyshevKan:
 
     def genlik_ve_katkilar(self, basamak: np.ndarray, parametre=None,
                            yerel_faz=None
-                           ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+                           ) -> Tuple[np.ndarray, np.ndarray, np.ndarray,
+                                     Optional[Dict[str, np.ndarray]]]:
         u = self._vecih(basamak)
         D = int(self.ayar.derece)
         T = chebyshev_t(u, D)
         U = chebyshev_u(u, D)
         reel = np.einsum("kj,jnk->n", self.C, T, optimize=True)
         sanal = np.einsum("kj,jnk->n", self.S, U, optimize=True)
+        kenet_bilgisi = None
         if parametre is not None:
-            k = parametre.kenet(basamak)
-            reel = reel - np.asarray(k["enerji"], float).reshape(-1)
-            sanal = sanal + np.asarray(k["faz"], float).reshape(-1)
+            kenet_bilgisi = parametre.kenet_ve_katkilar(basamak)
+            reel = reel - np.asarray(
+                kenet_bilgisi["enerji"], float).reshape(-1)
+            sanal = sanal + np.asarray(
+                kenet_bilgisi["faz"], float).reshape(-1)
         if yerel_faz is not None:
             y = np.asarray(yerel_faz, float).reshape(-1)
             assert y.size == sanal.size, (
@@ -149,11 +153,12 @@ class ChebyshevKan:
         assert z > 0.0 and np.isfinite(z), (
             "NQS genliği tamamen söndü (Z=%r): kapalı form bir durum "
             "üretemedi, sessizce geçilemez (ferman 5)" % (z,))
-        return psi / z, T, U
+        return psi / z, T, U, kenet_bilgisi
 
     def genlik(self, basamak: np.ndarray, parametre=None,
                yerel_faz=None) -> np.ndarray:
-        A, _T, _U = self.genlik_ve_katkilar(basamak, parametre, yerel_faz)
+        A, _T, _U, _k = self.genlik_ve_katkilar(basamak, parametre,
+                                                yerel_faz)
         return A
 
     def vektor(self) -> np.ndarray:
