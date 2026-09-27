@@ -1096,8 +1096,12 @@ def muhurle(cikti_yolu: str, netice: Dict[str, object]) -> None:
 
 def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
         kulli_kayip_ile: bool = True) -> str:
+    from main.kaggle_koprusu import kaggle_hazir_mi, veriseti_indir, nobetci
     ayar = PROFILLER.get(ayar_adi, KISA_CPU)
     tek_iplik_zorla()
+    kk = kaggle_hazir_mi()
+    if kk["hazır"]:
+        veriseti_indir(str(kk["veriseti"]))
     kulli: Optional[Dict[str, object]] = None
     if kulli_kayip_ile:
         kulli = kulli_kayip_talimi(ayar)
@@ -1105,6 +1109,8 @@ def kos(ayar_adi: str = "kısa", cikti: Optional[str] = None,
             "küllî kayıp hattı BOŞ döndü -- hazineye bir şey yazılmadı")
     if cikti and kulli:
         muhurle(cikti, kulli)
+    if kk["hazır"]:
+        nobetci(dizin="depo", slug=str(kk["veriseti"]))
     return talim_beyani(ayar, kulli)
 
 
