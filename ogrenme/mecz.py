@@ -42,6 +42,7 @@ def mecz_sifirla() -> None:
                   "asal_açı": 0.0, "eğrilik": 0.0,
                   "nakil_geçirgenliği": 0.0, "nakil_dizi_boyu": 0.0,
                   "nakil_zinciri": 0.0, "nakil_dagilimi": 0.0,
+                  "momentum_normu": 0.0,
                   "yönsüz_tur": 0.0, "kapı": 0.0, "üretecsiz": 0.0,
                   "bağ_reddi": 0.0,
                   "ek_durum_ikiz_farkı": 0.0, "üreteç_ikiz_farkı": 0.0,
@@ -63,6 +64,7 @@ class MeczAyari:
     tur: int = 8
     tohum: int = 0
     kademe: int = 0
+    momentum: float = 0.9
 
 
 OPERATORSUZ_KEFE: Tuple[str, ...] = (
@@ -273,6 +275,7 @@ class Memuriyet:
         self.sozluk = int(sozluk)
         self.ayar = ayar or MeczAyari()
         self._r_duzeltme = 0.0
+        self._hiz: Optional[np.ndarray] = None
 
     def _harman_yeri(self, q) -> Tuple[int, int]:
         from nefs.melekeler import harman_anahtari
@@ -432,6 +435,15 @@ class Memuriyet:
             if float(np.linalg.norm(yon)) <= 0.0:
                 _MECZ["yönsüz_tur"] += 1.0
                 continue
+            beta = float(self.ayar.momentum)
+            if beta > 0.0:
+                if self._hiz is None or self._hiz.shape != yon.shape:
+                    self._hiz = np.zeros_like(yon)
+                self._hiz = beta * self._hiz + yon
+                nrm_hiz = float(np.linalg.norm(self._hiz))
+                if nrm_hiz > 0.0:
+                    yon = self._hiz / nrm_hiz
+                _MECZ["momentum_normu"] = nrm_hiz
             r = float(self._r_duzeltme if self._r_duzeltme > 0.0
                       else d["yarıçap"])
             egim_yon = float(np.dot(np.asarray(d["eğim"], float), yon))

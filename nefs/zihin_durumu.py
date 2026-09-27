@@ -276,6 +276,8 @@ class QYazmac:
                 self.mahalli.cartan_ekle(
                     "parametre.temas",
                     float(np.sum(teta * np.abs(agir)) / pay))
+            self._temas_kontrol_asli = np.asarray(
+                kontrol, np.int64).copy()
         izd = getattr(self, "izdusum", None)
         if izd is not None:
             self.mahalli.modlari_vur(izd[0], izd[1])
@@ -379,20 +381,45 @@ class QYazmac:
     def _kan_blokla_bagla(self, no_ham, kan, pq, kulli_aday, T_kan, U_kan,
                           kenet_bilgisi, m, bas, yigin, sut, sec, taban,
                           n_yer, m_sat, B, d) -> None:
-        # NOT: kenet_bilgisi (pq'nun temas-kapıları -- eski _kan_bagla'nın
-        # yerine geçecek θ/genlik kanalı) burada KASTEN kullanılmıyor.
-        # kodla()'nın temas bloğu cartan_ekle("parametre.temas", ...) ile
-        # m.cartan'a θ/genlik-bağımlı bir değer yazıyor; bu da
-        # m.seviye_fazi() üzerinden yerel_faz'a (KAN'ın sanal kanalına)
-        # ÜÇÜNCÜ bir yoldan karışıyor. Bu yol modellenmeden θ/genlik
-        # gradyanı sonlu-farktan sapıyor (ölçüldü). Yanlış bir gradyanı
-        # sessizce bırakmak sıfırdan beterdir (ferman 5) -- o yüzden bu
-        # kanal, cartan_ekle→seviye_fazi yolu da hesaba katılana kadar
-        # KASTEN devre dışı. Yalnız KAN C/S bloğu (tam doğrulanmış,
-        # bu yola hiç girmiyor) burada hesaplanıyor.
+        # pq'nun temas-kapıları (θ=faz, ağırlık=genlik) İKİ yoldan A'ya
+        # karışır: (1) kenet()'in enerji/faz terimleri (kan.genlik_ve_
+        # katkilar içinde doğrudan reel/sanal'a eklenir; kenet_ve_katkilar
+        # içindeki kontrol kümesi İNTÂC ânında, gömme kayıtlarından SONRA
+        # okunur ve pq._yer o âna dek büyümüş olabilir); (2) kodla()'nın
+        # cartan_ekle("parametre.temas", Δ) çağrısı -- Δ = Σθ·bag/Σbag,
+        # kontrolü kodla ânında, gömme kaydından ÖNCE, DAHA DAR bir
+        # kümeden hesaplanmıştır -- m.seviye_fazi() üzerinden yerel_faz'a,
+        # yâni AYNI sanal kanalına, yalnız belirli bir "col" sütununda
+        # (n mod taban == col) girer. İki yol İKİ AYRI kontrol kümesi
+        # görür; karıştırılırsa (2)'nin payda ve Δ'sı yanlış hesaplanır.
         C_boy = int(kan.C.size)
         S_boy = int(kan.S.size)
         kan_bas = 2 * int(pq.d)
+        kontrol = kenet_bilgisi["kontrol"] if kenet_bilgisi else np.zeros(
+            0, np.int64)
+        bag = kenet_bilgisi["bag"] if kenet_bilgisi else np.zeros(0, float)
+        teta = kenet_bilgisi["teta"] if kenet_bilgisi else np.zeros(0, float)
+        w_t = (kenet_bilgisi["w_t"] if kenet_bilgisi
+              else np.zeros((0, 0), float))
+        col = m._kok.get("parametre.temas")
+        N = int(kulli_aday.size)
+        col_mod = (int(col) % int(taban)) if col is not None else -1
+        mask = ((np.arange(N) % int(taban)) == col_mod
+                if col_mod >= 0 else np.zeros(N, bool))
+        kontrol_asli = np.asarray(
+            getattr(self, "_temas_kontrol_asli", np.zeros(0, np.int64)),
+            np.int64)
+        if kontrol_asli.size:
+            teta_asli = np.asarray(pq.faz, float)[kontrol_asli]
+            bag_asli = np.abs(np.asarray(pq.genlik, float)[kontrol_asli])
+            pay_asli = float(np.sum(bag_asli))
+            delta_asli = (float(np.sum(teta_asli * bag_asli) / pay_asli)
+                         if pay_asli > 0.0 else 0.0)
+        else:
+            teta_asli = np.zeros(0, float)
+            bag_asli = np.zeros(0, float)
+            pay_asli = 0.0
+            delta_asli = 0.0
 
         def hesapla(lam, onceki):
             Lam = np.asarray(lam, complex).reshape(B, d)
@@ -405,14 +432,35 @@ class QYazmac:
                     + Lam[:, :taban] * pay).reshape(-1)
             Aflat = kulli_aday.reshape(-1)
             W = np.conj(lam_A) * Aflat
-            Ebar = np.einsum("jnk,n->kj", T_kan, np.abs(Aflat) ** 2)
+            Aabs2 = np.abs(Aflat) ** 2
+            Ebar = np.einsum("jnk,n->kj", T_kan, Aabs2)
             terim1_C = np.einsum("jnk,n->kj", T_kan, W)
             w0 = float(np.real(np.sum(W)))
             g_C = 2.0 * np.real(terim1_C) - 2.0 * w0 * Ebar
             terim1_S = np.einsum("jnk,n->kj", U_kan, W)
             g_S = -2.0 * np.imag(terim1_S)
-            idx = kan_bas + np.arange(C_boy + S_boy, dtype=np.int64)
-            return idx, np.concatenate([g_C.reshape(-1), g_S.reshape(-1)])
+            idx = [kan_bas + np.arange(C_boy + S_boy, dtype=np.int64)]
+            val = [np.concatenate([g_C.reshape(-1), g_S.reshape(-1)])]
+            if kontrol.size:
+                Kc = W @ w_t
+                Sc = Aabs2 @ w_t
+                temel = np.real(Kc) - Sc * w0
+                g_teta = 2.0 * bag * temel - 2.0 * np.imag(Kc)
+                g_bag = 2.0 * teta * temel
+                idx.append((pq.d + kontrol).astype(np.int64))
+                idx.append(kontrol.astype(np.int64))
+                val.append(g_teta)
+                val.append(g_bag)
+            if kontrol_asli.size and col_mod >= 0 and pay_asli > 0.0:
+                M = complex(np.sum(W[mask]))
+                g_teta_c = -2.0 * (bag_asli / pay_asli) * np.imag(M)
+                g_bag_c = -2.0 * ((teta_asli - delta_asli) / pay_asli
+                                 ) * np.imag(M)
+                idx.append((pq.d + kontrol_asli).astype(np.int64))
+                idx.append(kontrol_asli.astype(np.int64))
+                val.append(g_teta_c)
+                val.append(g_bag_c)
+            return np.concatenate(idx), np.concatenate(val)
 
         self.y.iz.kan_blok_yaz(int(no_ham), hesapla)
 
