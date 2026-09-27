@@ -777,22 +777,13 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
 
     hazir = [k for k in ks if _hazir_mi(k)]
     beklemede = [k for k in ks if k not in hazir]
-    hedef_belirtec = int(azami) * gerek
-    toplam_belirtec = 0
-    for _kno, k in enumerate(hazir):
-        if _ekle(k, _kno):
-            toplam_belirtec += int(diziler[-1][0].size)
-    for _kno, k in enumerate(beklemede, start=len(hazir)):
-        if hedef_belirtec > 0 and toplam_belirtec >= hedef_belirtec:
-            break
-        if _ekle(k, _kno):
-            toplam_belirtec += int(diziler[-1][0].size)
-    if not diziler:
-        return ([], {}) if ne == "imleçli" else []
-    toplam = sum(p for _t, p, _a, _b, _y in diziler) or 1.0
     cift: List[Tuple[List[int], int, str]] = []
-    for t, pay, ad, buyut, yol in diziler:
-        n = int(round(int(azami) * pay / toplam))
+
+    def _kaynaktan_cek(t, pay: float, ad: str, buyut, yol: str,
+                       hedef_simdi: int) -> None:
+        toplam = sum(p for _t, p, _a, _b, _y in diziler) or 1.0
+        n = min(int(hedef_simdi),
+               max(1, int(round(int(azami) * pay / toplam))))
         eski = onceki.get(ad) or {}
         yer = int(eski.get("belirteç", 0) or 0)
         if yer >= t.size - gerek:
@@ -802,7 +793,7 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
             if yer >= t.size - gerek:
                 if buyut is not None:
                     kalan = max(1, n - _k) * gerek
-                    sonuc = buyut(kalan)
+                    buyut(kalan)
                     t = mucit_ac(yol, kodlama)
                 if yer >= t.size - gerek:
                     yer = 0
@@ -823,6 +814,16 @@ def kulliyat_verisi(sozluk: int, pencere: int, azami: int,
                              + (1 if yer < int(eski.get("belirteç", 0) or 0)
                                 else 0),
                     "nispet": float(yer) / float(max(int(t.size), 1))}
+
+    for _kno, k in enumerate(hazir + beklemede):
+        if len(cift) >= int(azami):
+            break
+        if not _ekle(k, _kno):
+            continue
+        t, pay, ad, buyut, yol = diziler[-1]
+        _kaynaktan_cek(t, pay, ad, buyut, yol, int(azami) - len(cift))
+    if not diziler:
+        return ([], {}) if ne == "imleçli" else []
     cift = cift[:int(azami)]
     return (cift, yeni) if ne == "imleçli" else cift
 
