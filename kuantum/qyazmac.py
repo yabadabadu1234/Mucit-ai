@@ -716,6 +716,46 @@ class QuditYazmac:
                 "mahallî_bağ", 0.0) + 1.0
         return vuran
 
+    def satir_donmesi_coklu(self, indeksler, tetalar, baglar=None) -> int:
+        # satir_donmesi'nin N satır için TEK çağrıda uygulanmış hâli.
+        # `teta` her satırda zaten SKALER geldiğinden (yuva_donmesi'nin
+        # ürettiği açı), np.asarray(teta).reshape(-1).mean() == teta
+        # BİREBİR aynıdır -- ortalama alma adımı hiçbir bilgi taşımıyordu,
+        # yalnız N kere tekrarlanan gereksiz bir numpy çağrısıydı (ölçüldü).
+        m = self._mahalli_zorunlu()
+        idx = np.asarray(indeksler, np.int64).reshape(-1)
+        t = np.asarray(tetalar, float).reshape(-1)
+        assert idx.size == t.size, (
+            "satir sayısı %d, açı sayısı %d -- boy tutmuyor"
+            % (idx.size, t.size))
+        if idx.size == 0:
+            return 0
+        vuran = int(m.satir_donmesi_coklu(idx, t))
+        if vuran <= 0:
+            self._dusen_kapi += int(idx.size)
+            _SEKTOR_SAYAC["düşen"] = _SEKTOR_SAYAC.get(
+                "düşen", 0.0) + float(idx.size)
+            return 0
+        self.iz.mahalli_yaz(m)
+        self._kapi += int(idx.size)
+        self._sektor_vurusu += int(idx.size)
+        _SEKTOR_SAYAC["dönme"] += float(idx.size)
+        if baglar is not None and self.iz.senet_acik:
+            for k in range(idx.size):
+                bag = baglar[k]
+                if not bag:
+                    continue
+                a_k = t[k:k + 1]
+                for (par, olcek, pay) in ([bag] if isinstance(bag, tuple)
+                                          else list(bag)):
+                    p = np.asarray(pay, float).reshape(-1)
+                    agir = (a_k * np.resize(p, a_k.size)) if p.size else a_k
+                    self.iz.mahalli_bag_yaz(int(par), float(olcek),
+                                            int(idx[k]), agir)
+                _SEKTOR_SAYAC["mahallî_bağ"] = _SEKTOR_SAYAC.get(
+                    "mahallî_bağ", 0.0) + 1.0
+        return vuran
+
     def satir_cifti(self, i: int, j: int, teta: float, bag=None) -> int:
         m = self._mahalli_zorunlu()
         t = float(teta)

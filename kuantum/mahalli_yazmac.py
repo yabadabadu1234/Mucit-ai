@@ -489,6 +489,45 @@ class MahalliYazmac:
         _MAHALLI["satır_dönmesi"] = _MAHALLI.get("satır_dönmesi", 0.0) + 1.0
         return 1
 
+    def satir_donmesi_coklu(self, indeksler: np.ndarray,
+                            tetalar: np.ndarray) -> int:
+        # satir_donmesi'nin AYNI matematiği, N satır için TEK vektörel
+        # çağrıda: melekelerin `for i in range(n): satir_donmesi(i, ...)`
+        # deseni, n basamak boyunca Python seviyesinde n ayrı numpy
+        # çağrısı demekti -- uzun bağlamda (131072 basamak) asıl maliyet
+        # buradaydı (ölçüldü: cProfile, 3748 basamaklık tek örnekte 45
+        # melekede 230502 çağrı, 7.4 sn). Çağıranların HER İKİSİ de
+        # (nefs/melekeler.py:yuva_donmesi'nin iki kullanımı) `range(n)`
+        # ile ayrık satır veriyor; tekrarlı indis varsayılmaz.
+        assert self.yigin > 0 and self.pencere > 0, (
+            "SATIR DÖNMESİ BOŞ ZIRHA VURULAMAZ (ferman 2-A)")
+        n = int(self.pencere)
+        if n < 1:
+            _MAHALLI["kök_düşen"] = _MAHALLI.get(
+                "kök_düşen", 0.0) + float(max(1, len(indeksler)))
+            return 0
+        ii = np.asarray(indeksler, np.int64) % n
+        assert ii.size == np.unique(ii).size, (
+            "satir_donmesi_coklu tekrarlı satır indisiyle çağrıldı -- "
+            "vektörel toplu uygulama sıralı uygulamayla AYNI SONUCU "
+            "yalnız satırlar AYRIK olduğunda verir")
+        t = np.asarray(tetalar, float).reshape(-1)
+        assert t.size == ii.size, (
+            "satir sayısı %d, açı sayısı %d -- boy tutmuyor"
+            % (ii.size, t.size))
+        c, sn = np.cos(t), np.sin(t)
+        u = self.hal[:, ii, 0::2]
+        v = self.hal[:, ii, 1::2]
+        k = min(u.shape[-1], v.shape[-1])
+        u, v = u[..., :k].copy(), v[..., :k].copy()
+        c3 = c[None, :, None]
+        sn3 = sn[None, :, None]
+        self.hal[:, ii, 0:2 * k:2] = c3 * u - sn3 * v
+        self.hal[:, ii, 1:2 * k:2] = sn3 * u + c3 * v
+        _MAHALLI["satır_dönmesi"] = (_MAHALLI.get("satır_dönmesi", 0.0)
+                                     + float(ii.size))
+        return 1
+
     def senet_dilimi(self) -> np.ndarray:
         if self.yigin <= 0 or self.pencere <= 0:
             return np.zeros((0, 0), complex)

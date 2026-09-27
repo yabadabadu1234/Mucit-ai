@@ -481,17 +481,22 @@ class QMeleke:
     def yuva_donmesi(self, q: QYazmac, p, satirlar,
                      olcek: float = 0.6, kayma: float = 0.0,
                      n: int = 0) -> None:
+        # NOT: evvelce her satır için AYRI bir q.satir_donmesi_m() çağrısı
+        # (Python seviyesinde n kere) yapılırdı; uzun bağlamda (131072
+        # basamak) bunun maliyeti ölçüldü (cProfile) ve baskındı. Aynı
+        # matematik artık TEK vektörel çağrıda (satir_donmesi_coklu_m).
         sv = [int(s) for s in satirlar]
         if not sv:
             return
         kac = int(n) if int(n) > 0 else len(sv)
         a = self.aci(p, kac, olcek)
         par, olc = self.aci_bagi(p, kac, olcek)
-        for i, s in enumerate(sv):
-            j = i % a.size
-            t = float(kayma) + float(a[j])
-            bag = None if par is None else (int(par[j]), float(olc), 1.0)
-            q.satir_donmesi_m(s, t, bag=bag)
+        idx = np.arange(len(sv), dtype=np.int64) % a.size
+        tetalar = float(kayma) + a[idx]
+        baglar = (None if par is None else
+                 [(int(par[j]), float(olc), 1.0) for j in idx])
+        q.satir_donmesi_coklu_m(np.asarray(sv, np.int64), tetalar,
+                                baglar=baglar)
 
     def satir_donmesi(self, q: QYazmac, p,
                       olcek: float = 0.6) -> None:
