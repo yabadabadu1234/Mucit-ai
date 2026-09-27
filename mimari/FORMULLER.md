@@ -14,6 +14,8 @@ Tasnifat ilerledikçe her başlık kendi altında birikir; hiçbir başlık iki 
 
 İzahatlar bu dosyada değil, `izahat/` altındaki ayrı dosyalardadır (küme bazlı, F 1'deki kural gereği). Bu dosya yalnız formülleri taşır.
 
+**Taslak işareti:** `-- taslak, tasdik bekliyor` etiketi taşıyan satırlar henüz mühürlenmemiştir; müzakerede teyit edilince etiket kalkar.
+
 ---
 
 ## ameliye
@@ -25,6 +27,14 @@ Tasnif(ameliye) = { tecrit, tecezzi, tefrik ve temyiz, tensip, teşrih }
 ## çeşit
 
 Terkip(çeşit) = NihaiHal × Biçim × Şart × Rükün × Mahiyet
+
+Sual(çeşit) = { hakiki, gayrı hakiki }
+
+Nefis(çeşit) = { nebati, hayvani, insani }
+
+Akıl(çeşit) = { nazari, ameli }
+
+İşlemci(çeşit) = { vahime, mutasarrıfa, mütehayyile }
 
 ---
 
@@ -43,6 +53,30 @@ Merhale eksikliğinin hükmü:
   Sıhhat eksik → fasid (doğmuş, sakat)
   Nifaz eksik → mevkuf (askıda, amel doğurmaz)
   Lüzum: burhanî → lâzım (bağlayıcı) · zannî → gayr-ı lâzım (nakzolunabilir)
+
+---
+
+## kuvvet
+
+Nefis(kuvvet) = { muharrike, müdrike }
+
+Aklı Ameli(kuvvet) = { tedbir, … }  -- açık, dökümü tamamlanmadı
+
+---
+
+## hayvani
+
+Muharrike(hayvani) = { şehvet, gazap }
+
+Müdrike(hayvani) = { hissi müşterek, hafıza, işlemci }
+
+---
+
+## insani
+
+Muharrike(insani) = { irade } ∪ Muharrike(hayvani)
+
+Müdrike(insani) = Akıl ∪ Müdrike(hayvani)
 
 ---
 
@@ -70,12 +104,31 @@ Terkip(Rükün) = { ??? }  -- açık, tarif bekliyor
 
 Muhakeme(Rükün) = { mevzu (mahkûmun fîh), tavassut (hadd-i evsat), mizan, hüküm (mahkûmun bih) }
 
+Mizan(Rükün) = { kıstas, teaddüdü ihtimal, sükun kabiliyeti }  -- taslak, tasdik bekliyor
+
+Tedbir(Rükün) = { mebde, intikal usulü, gaye }  -- taslak, tasdik bekliyor
+
 ---
 
 ## Mahiyet
 
-Terkip(Mahiyet) = { maddî, gayr-i maddî, fizikî, gayr-i fizikî }
-  (ayrık değil: maddî ⊂ fizikî -- maddî olan her şey fizikîdir, fizikî olan her şey maddî değildir)
+Terkip(Mahiyet) = Madde × Kanun
+
+İzahat: `izahat/mahiyet/`
+
+---
+
+## Madde
+
+Mahiyet(Madde) = { maddî, manevî }
+
+Hafıza(Madde) = { maddî, manevî }  -- taslak, tasdik bekliyor (bkz. not: Kuvve-i Hayâl/sûret ↔ maddî bölme, Kuvve-i Hâfıza/mana ↔ manevî bölme)
+
+---
+
+## Kanun
+
+Mahiyet(Kanun) = { fizikî, gayr-i fizikî }
 
 ---
 
@@ -88,6 +141,8 @@ Muhakeme(İnikad) = { ehliyet-i müdrikeyi hâiz olmak, epistemik yarığın var
 ## Sıhhat
 
 Muhakeme(Sıhhat) = { tenakuzsuzluk, kıstasın sıhhati ve liyakati, illiyet rabıtasının sübutu, tahrif ve hileden tecerrüd }
+
+Sual(Sıhhat) = { mevcut-hedef boşluk tespiti, teaddüdü ihtimal, gaye }  -- taslak, tasdik bekliyor
 
 ---
 
@@ -106,7 +161,10 @@ Muhakeme(Lüzum) = { burhanî / kat'î olma, zannî / ictihadî olma }
 ## İzahat haritası
 
 - ameliye → `izahat/tasnif/`
-- çeşit → `izahat/terkip/` (henüz açılmadı)
+- çeşit (Terkip kanadı) → `izahat/terkip/` (henüz açılmadı)
+- çeşit (Sual, Nefis, Akıl, İşlemci kanatları) → henüz izahat dosyası açılmadı
 - levazım → `izahat/icat/`
-- merhale, İnikad, Rükün (Muhakeme kanadı), Sıhhat, Nifaz, Lüzum → `izahat/muhakeme/`
-- NihaiHal, Biçim, Şart, Rükün (Terkip kanadı), Mahiyet → henüz ayrı izahat dosyası açılmadı; Terkip için müzakere sürüyor (bkz. sohbet geçmişi)
+- merhale, İnikad, Rükün (Muhakeme kanadı), Sıhhat (Muhakeme kanadı), Nifaz, Lüzum → `izahat/muhakeme/`
+- Rükün (Mizan, Tedbir kanatları — taslak), Sıhhat (Sual kanadı — taslak) → henüz izahat dosyası açılmadı, formül de tasdik bekliyor
+- kuvvet, hayvani, insani (Nefis hiyerarşisi) → prose izahatı `CLAUDE.md` § 4-I'de (İbn Sînâ Nefs Şeması) mevcut; mimari küme-dosyası olarak henüz ayrılmadı
+- Mahiyet, Madde, Kanun → `izahat/mahiyet/`
