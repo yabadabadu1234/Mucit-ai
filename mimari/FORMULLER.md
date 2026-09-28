@@ -51,6 +51,15 @@ Ca'lî-İrâdî(çeşit) = { ta'lîkî, takyîdî, fâsih }
 Aklî-Âdî(çeşit) = { hayat, kudret }
   (misal kümesidir, tahdit değil: ilim için hayat, teklif/fiil için kudret şarttır — şeriatın değil aklın zaruri kıldığı taban şartlarıdır.)
 
+Tasavvur(çeşit) = { bedihî, nazarî }
+  (kıstas: hâsıl olmak için bir tarife muhtaç mı, değil mi.)
+
+Tasdik(çeşit) = { bedihî, nazarî }
+  (kıstas: hükme varmak için bir delile/kıyasa muhtaç mı, değil mi.)
+
+Tavassut(çeşit) = { burhânî, cedelî, hitâbî, şiirî, safsatavî }
+  (dört ardışık ikili Nakzeyn'in ürünü: yakînî mi → burhânî; değilse müsellem mi → cedelî; değilse zannedilen mi → hitâbî; değilse hayalî mi → şiirî, değilse → safsatavî. Muhakeme(Rükün)'ün "tavassut" unsurunun kendi iç tasnifidir; Muhakeme(Lüzum)'daki burhanî/zannî ayrımı ve Şek-Zan-Yakîn İdraki ile aynı köke bağlanır.)
+
 ---
 
 ## levazım
@@ -339,6 +348,31 @@ Tükenme isbatı: herhangi bir sual, bir mevzu hakkında ya sırf kendisi (hel-i
 
 ---
 
+## Mâlum
+
+Mâlum = Tasavvur ∪ Tasdik
+
+Kıstas: herhangi bir idrake tek vasıf sorulur — "bu idrak bir hüküm taşıyor mu?" Nakzeyn Kanunu gereği cevap evet ya da hayır, üçüncüsü yoktur; evet ise Tasdik, hayır ise Tasavvur. Mâ (Metâlib) → Tasavvur talebidir; Hel-i basit, Hel-i mürekkebe, Lime → Tasdik talebidir. Makûlât (henüz açılmamış On Makûle), yalnız Tasavvur tarafının kendi iç sınıflamasıdır.
+
+**Kayıt (kapsam ve dayanak açıkça yazılır):** Bu ikiliğin tükenmişliği, Nakzeyn Kanunu'nun kendisine dayanır; Nakzeyn'in kendisi ispat edilemez, yalnız inkârının kendini nakzettiği gösterilebilir (Aristo, Metafizik Γ) — devir/teselsülün mecburen bittiği yerdir. Ayrıca: "hüküm taşıma" kıstasının seçilmesi **mutlak** değil, **maksada nispetle** zarurîdir — bizim maksadımız (insanın idrak/müdrike kanadını çıkarıp mekanikleştirmek) bu kıstası gerektirir; farklı bir maksatla (mesela hissî/vehmî/aklî hâsıl oluş tarzına göre) başka, ona dik bir kesit alınabilirdi, bu kesit onu çürütmez.
+
+**Yeri:** Mâlum, Nefis(kuvvet)'in yalnız **Müdrike** kanadını doldurur. Muharrike kanadının (irade, şehvet, gazap) kendi zaruret isbatı henüz yapılmadı, açık.
+
+İzahat: `izahat/malum/`
+
+---
+
+## Tarif
+
+Tarif = Kemal × Unsur
+
+Kemal = { tam, nakıs }
+Unsur = { zâtî (→ Hadd), arazî (→ Resm) }
+
+Nazarî Tasavvur'un (bir tarifle hâsıl olan tasavvurun) kendi iç tasnifidir; Unsur ekseni doğrudan Bünye = Mevki × Zaruret'in bir tatbikidir (zâtî unsurla tarif = Hadd, arazî unsurla tarif = Resm).
+
+---
+
 ## Vücûb
 
 Teşrih(Vücûb) = { Vâcib, Mümkün }
@@ -362,6 +396,8 @@ Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün var
 - Sual(Rükün) → henüz izahat dosyası açılmadı
 - Bünye, Mevki, Zaruret (Rükün/Şart/Araz/Karîne dörtlüsü) → `izahat/rukun_sart/genel.md`
 - Metâlib → henüz izahat dosyası açılmadı
+- Mâlum → `izahat/malum/genel.md`
+- Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit) → henüz ayrı izahat dosyası açılmadı; temel usul (kıstas+Nakzeyn+isimlendirme+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'ye işlendi
 
 ## Açık notlar (41-meleke şebekesi)
 
