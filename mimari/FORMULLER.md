@@ -344,7 +344,7 @@ Tükenme isbatı: herhangi bir sual, bir mevzu hakkında ya sırf kendisi (hel-i
 
 **Reddedilen teklif (kayıt için):** Rükün'ün "madde+suret" ikiliğine indirgenmesi (İllet-i Mâddiye+Sûriyye üzerinden) tekrar gündeme getirilmiş, tekrar reddedilmiştir. Sebep: manevî varlıklarda (mesela bir matematik formülünde) madde yoktur, ve "suret" sanılan şey (formülün yazılışı/notasyonu) aynı formül farklı notasyonlarla ifade edilebildiği için bizzat arazdır, rükün değildir. Madde-suret ikiliği yalnız maddî varlıklara mahsustur, âlemşümul bir Rükün tarifi olamaz.
 
-**Açık bırakılan:** Nispet(çeşit) = {zâtî, vücûdî, fâilî, zamanî, râbıtalı, gaî} taslağı, Metâlib'in altına bir tatbik listesi olarak önerilmişti; bu indirgeme ikna edici bulunmadığı için mühürlenmedi. Nispet, kendi başına ayrı bir müzakere konusu olarak açık kalıyor.
+**Nakz:** Nispet(çeşit) = {zâtî, vücûdî, fâilî, zamanî, râbıtalı, gaî} taslağı, Metâlib'in altına bir tatbik listesi olarak önerilmişti; o zaman ikna edici bulunmayıp mühürlenmemişti. Şimdi (bkz. aşağıda **Mâlum**) teşrih edilip nakzedildi: altısı eş seviyeli kardeş değilmiş, Mâlum→Metâlib→Makûlât ağacının farklı dallarına dağılmış konum etiketleriymiş; ayrıca bu teşrih İllet-i Mâddiye/Sûriyye'nin hiç sorulmadığı bir eksiği de gösterdi.
 
 ---
 
@@ -372,11 +372,37 @@ Makûlât(çeşit) = Cevher ∪ Zâtî ∪ İzafî = { cevher, kemiyet, keyfiyet
 
 Mâlum = Tasavvur ∪ Tasdik
 
-Kıstas: herhangi bir idrake tek vasıf sorulur — "bu idrak bir hüküm taşıyor mu?" Nakzeyn Kanunu gereği cevap evet ya da hayır, üçüncüsü yoktur; evet ise Tasdik, hayır ise Tasavvur. Mâ (Metâlib) → Tasavvur talebidir; Hel-i basit, Hel-i mürekkebe, Lime → Tasdik talebidir. Makûlât (henüz açılmamış On Makûle), yalnız Tasavvur tarafının kendi iç sınıflamasıdır.
+Kıstas: herhangi bir idrake tek vasıf sorulur — "bu idrak bir hüküm taşıyor mu?" Nakzeyn Kanunu gereği cevap evet ya da hayır, üçüncüsü yoktur; evet ise Tasdik, hayır ise Tasavvur.
+
+**Mâlum ile Metâlib'in bağlantısı (mühürlü):**
+
+```
+Tasavvur(Metâlib) = { mâ }
+Tasdik(Metâlib)   = { hel-i basit, hel-i mürekkebe, lime }
+
+Mâ(çeşit) = Makûlât(çeşit)   -- Mâ'nın kendi içi, aynen Makûlât'tır
+```
+
+Yani Tasavvur, Metâlib'in yalnız "Mâ" dalını doldurur ve o dal Makûlât'a (Cevher/Zâtî/İzafî onlusuna) açılır; Tasdik ise Metâlib'in geri kalan üç dalının (Hel-i basit, Hel-i mürekkebe, Lime) tamamını doldurur.
 
 **Kayıt (kapsam ve dayanak açıkça yazılır):** Bu ikiliğin tükenmişliği, Nakzeyn Kanunu'nun kendisine dayanır; Nakzeyn'in kendisi ispat edilemez, yalnız inkârının kendini nakzettiği gösterilebilir (Aristo, Metafizik Γ) — devir/teselsülün mecburen bittiği yerdir. Ayrıca: "hüküm taşıma" kıstasının seçilmesi **mutlak** değil, **maksada nispetle** zarurîdir — bizim maksadımız (insanın idrak/müdrike kanadını çıkarıp mekanikleştirmek) bu kıstası gerektirir; farklı bir maksatla (mesela hissî/vehmî/aklî hâsıl oluş tarzına göre) başka, ona dik bir kesit alınabilirdi, bu kesit onu çürütmez.
 
 **Yeri:** Mâlum, Nefis(kuvvet)'in yalnız **Müdrike** kanadını doldurur. Muharrike kanadının (irade, şehvet, gazap) kendi zaruret isbatı henüz yapılmadı, açık.
+
+**Nispet'in teşrihi ve nakzı (F 2-Y gereği açık yazılır):** Nispet(çeşit) = {zâtî, vücûdî, fâilî, zamanî, râbıtalı, gaî} taslağı, Mâlum/Metâlib ağacına yerleştirilince altısının **eş seviyeli kardeş olmadığı** görülüyor — biri Tasavvur dalında, beşi Tasdik'in üç dalına dağınık:
+
+| Nispet unsuru | Metâlib'te yeri |
+|---|---|
+| zâtî | **Mâ** (Tasavvur) — Makûlât'a açılır |
+| vücûdî | **Hel-i basit**'in alt-türü (Tasdik(Vücûb)) |
+| zamanî | **Hel-i mürekkebe**'nin alt-türü (Veche/Merhale: İnikad/Sıhhat/Nifaz/Lüzum) |
+| fâilî | **Lime**'nin İllet-i Fâiliye kanadı |
+| râbıtalı | **Lime**'nin İllet-i Fâiliye'sinin şebekeye (Vürûd/Sudûr) yayılmışı |
+| gaî | **Lime**'nin İllet-i Gâiye kanadı |
+
+Bu teşrih ayrıca bir **eksik** ortaya çıkarıyor: Lime'nin klasik dört kanadından (İllet-i Mâddiye, Sûriyye, Fâiliye, Gâiye) yalnız ikisi (Fâiliye, Gâiye) Nispet'te vardı; Mâddiye ve Sûriyye hiç yoktu. (Bunların "Rükün = madde+suret" diye âlemşümul bir tarife zorlanması ayrıca reddedilmişti — burada reddedilen, o zorlamaydı; İllet-i Mâddiye/Sûriyye'yi maddî şeylere has bir Lime alt-sualı olarak sormak ayrı, reddedilmiş değil, henüz sorulmamış.)
+
+**Nakz:** Nispet(çeşit), müstakil bir küme olarak mühürlenmiyor — Mâlum→Metâlib→Makûlât ağacı onun yerine geçiyor, çünkü daha derin usulle (kıstas+Nakzeyn) kurulmuş ve daha tam (İllet-i Mâddiye/Sûriyye eksiğini de görünür kılmış) durumda. Nispet'in altı unsuru birer **konum etiketi** olarak yukarıki tabloda saklı kalıyor, ayrı bir küme olarak değil.
 
 İzahat: `izahat/malum/`
 

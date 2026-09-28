@@ -17,3 +17,28 @@ Ayrıca: "hüküm taşıma" kıstasının seçilmesi mutlak değil, **maksada ni
 ## Mâlum'un yeri
 
 Mâlum, Nefis(kuvvet) = {muharrike, müdrike}'nin yalnız **Müdrike** kanadını doldurur. Muharrike kanadının (irade, şehvet, gazap) kendi zaruret isbatı henüz yapılmadı — açık.
+
+## Mâlum'un Metâlib'e bağlanması
+
+```
+Tasavvur(Metâlib) = { mâ }
+Tasdik(Metâlib)   = { hel-i basit, hel-i mürekkebe, lime }
+Mâ(çeşit)         = Makûlât(çeşit)
+```
+
+Tasavvur, Metâlib'in yalnız "Mâ" dalını doldurur (Makûlât'a açılır); Tasdik, geri kalan üç dalın (Hel-i basit, Hel-i mürekkebe, Lime) tamamını doldurur.
+
+## Nispet'in teşrihi ve nakzı
+
+Daha önce önerilen Nispet(çeşit) = {zâtî, vücûdî, fâilî, zamanî, râbıtalı, gaî}, bu ağaca yerleştirilince eş seviyeli altı kardeş olmadığı görüldü:
+
+| Nispet unsuru | Metâlib'te yeri |
+|---|---|
+| zâtî | Mâ (Tasavvur) → Makûlât |
+| vücûdî | Hel-i basit'in alt-türü |
+| zamanî | Hel-i mürekkebe'nin alt-türü (Veche/Merhale) |
+| fâilî | Lime'nin İllet-i Fâiliye kanadı |
+| râbıtalı | Lime'nin İllet-i Fâiliye'sinin şebekeye yayılmışı |
+| gaî | Lime'nin İllet-i Gâiye kanadı |
+
+Bu ayrıca İllet-i Mâddiye ve Sûriyye'nin (Lime'nin diğer iki klasik kanadı) Nispet'te hiç sorulmadığını gösterdi. Nispet(çeşit) müstakil bir küme olarak nakzedildi; yerine bu ağaç (Mâlum→Metâlib→Makûlât) geçti.
