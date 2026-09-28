@@ -17,26 +17,42 @@ Tasdik(Vücûb) = { vâcib, mümkün, mümteni }
   ¬κ₁ ∧ ¬κ₂                     → mümkün
 ```
 
-```
-                    ┌───────────────┐
-                    │   x mevcûd    │
-                    └───────┬───────┘
-                            │
-                κ₁: yokluk(x) muhal mi?
-                    ┌───────┴───────┐
-                  evet             hayır
-                    │                │
-                    ▼                ▼
-              ┌──────────┐   κ₂: varlık(x) muhal mi?
-              │  VÂCİB   │      ┌───────┴───────┐
-              └──────────┘    evet             hayır
-                                 │                │
-                                 ▼                ▼
-                           ┌──────────┐    ┌──────────┐
-                           │ MÜMTENİ  │    │  MÜMKİN  │
-                           │ (∉Mevcûd)│    └──────────┘
-                           └──────────┘
-```
+<figure>
+<svg viewBox="0 0 640 260" role="img" aria-label="Vücûb taksimi: x mevcûd, κ₁ yokluk-muhal sualiyle vâcibe, hayırsa κ₂ varlık-muhal sualiyle mümteniye veya mümkine ayrılır">
+  <defs>
+    <marker id="ar1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="260" y="10" width="120" height="32" rx="4"/>
+    <line x1="320" y1="42" x2="320" y2="66" marker-end="url(#ar1)"/>
+    <line x1="320" y1="66" x2="150" y2="98" marker-end="url(#ar1)"/>
+    <line x1="320" y1="66" x2="490" y2="98" marker-end="url(#ar1)"/>
+    <rect x="90" y="122" width="120" height="32" rx="4"/>
+    <rect x="400" y="98" width="180" height="32" rx="4"/>
+    <line x1="150" y1="110" x2="150" y2="122" marker-end="url(#ar1)"/>
+    <line x1="440" y1="130" x2="360" y2="166" marker-end="url(#ar1)"/>
+    <line x1="540" y1="130" x2="580" y2="166" marker-end="url(#ar1)"/>
+    <rect x="280" y="166" width="160" height="36" rx="4"/>
+    <rect x="510" y="166" width="120" height="36" rx="4"/>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="currentColor" font-family="inherit">
+    <text x="320" y="30">x mevcûd</text>
+    <text x="320" y="60">κ₁: yokluk(x) muhal mi?</text>
+    <text x="225" y="86">evet</text>
+    <text x="415" y="86">hayır</text>
+    <text x="150" y="142">VÂCİB</text>
+    <text x="490" y="118">κ₂: varlık(x) muhal mi?</text>
+    <text x="378" y="152">evet</text>
+    <text x="572" y="152">hayır</text>
+    <text x="360" y="188">MÜMTENİ</text>
+    <text x="360" y="200">(∉ Mevcûd)</text>
+    <text x="570" y="188">MÜMKİN</text>
+  </g>
+</svg>
+<figcaption>Vücûb taksimi: κ₁ ve κ₂'nin ardışık Nakzeyn tatbikiyle Vâcib/Mümteni/Mümkin ayrımı.</figcaption>
+</figure>
 
 | Netice | (T) |
 | :-- | :-- |
@@ -55,16 +71,40 @@ Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
 ∴  ∃! Vâcibü'l-Vücûd
 ```
 
-```
-┌─────────┐  müreccih?  ┌─────────┐  devir/teselsül?  ┌───────────────┐
-│ Mümkin  │────yok─────▶│  muhal  │        →          │ zincir kapanmaz│
-│ (var)   │             └─────────┘                   └───────┬───────┘
-└─────────┘                                                    │ zarurî nihayet
-                                                                 ▼
-                                                        ┌──────────────────┐
-                                                        │ Vâcibü'l-Vücûd   │
-                                                        └──────────────────┘
-```
+<figure>
+<svg viewBox="0 0 760 120" role="img" aria-label="Mümkinin var oluşundan müreccih yokluğu, devir ve teselsülün ikisinin de muhal olması yoluyla Vâcibü'l-Vücûd'a zarurî nihayet">
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="10" y="40" width="100" height="40" rx="4"/>
+    <line x1="110" y1="60" x2="163" y2="60" marker-end="url(#ar2)"/>
+    <rect x="165" y="40" width="110" height="40" rx="4"/>
+    <line x1="275" y1="60" x2="328" y2="60" marker-end="url(#ar2)"/>
+    <rect x="330" y="18" width="220" height="84" rx="4"/>
+    <line x1="550" y1="60" x2="603" y2="60" marker-end="url(#ar2)"/>
+    <rect x="605" y="40" width="145" height="40" rx="4" stroke-width="2.5"/>
+  </g>
+  <g font-size="11" text-anchor="middle" fill="currentColor" font-family="inherit">
+    <text x="60" y="57">Mümkin</text>
+    <text x="60" y="70">(bilfiil var)</text>
+    <text x="134" y="57">müreccih</text>
+    <text x="134" y="70">yok</text>
+    <text x="220" y="57">muhal</text>
+    <text x="220" y="70">(tereccüh bilâ</text>
+    <text x="220" y="82">müreccih)</text>
+    <text x="440" y="37">devir/teselsül denenir</text>
+    <text x="440" y="56">devir: A≺B≺A ⟹ A≺A (muhal)</text>
+    <text x="440" y="73">teselsül: küll de mümkin kalır</text>
+    <text x="440" y="90">→ erteler, gidermez</text>
+    <text x="677" y="57">Vâcibü'l-</text>
+    <text x="677" y="70">Vücûd</text>
+  </g>
+</svg>
+<figcaption>Silsile-i esbâbın devir ve teselsülle kapanamaması, zincirin zarurî olarak Vâcibü'l-Vücûd'da nihayet bulmasını gerektirir.</figcaption>
+</figure>
 
 | Netice | (T) |
 | :-- | :-- |
