@@ -72,6 +72,20 @@ Kaide: her bahis üç şeyle etiketlenir — **(F)** hangi mühürlü formül ku
 - (Y) **İ'caz(Şart) = {ümmîlik, muâraza-daveti, adem-i-muâraza}**.
 - **(T→burhânî, yükseltildi, iddia daraltılarak):** zaaf "ebediyen kimse yapamaz" iddiasıydı — ispatsız bir gelecek-iddiasıydı. Düzeltme: iddiayı şuna daralt — "tahaddî (meydan okuma), 7. asrın azamî sebep ve azamî muhatarayla mücehhez, ana dili Arapça, belagat üstadı muhataplarına yapıldı ve karşılıksız kaldı." Bu, gelecek hakkında değil **geçmiş hakkında** bir iddiadır, tevatürle (madde 17) sabittir → burhânî. Risale "kimse asla yapamaz" demeyecek, "o gün yapılamadı" diyecek — daha dar, ama tam istenen neticeyi (Kur'an beşer kelâmı değildir) taşımaya yeter.
 
+**12-B. İlmî-Gaybî İ'caz** (yeni bahis: hem müstakil, hem madde 8/9/11/12'yi besleyici)
+
+- (Y) **Aklî(alt-tür, Mucize'nin) = { belâgî, ilmî-gaybî }** — madde 11'deki Mucize(çeşit)'in aklî kanadının kendi içi.
+- (Y) **İlmî-Gaybî İ'caz(Rükün) = ⟨ haber(x), sıhhat(x), adem-i-vüsul(x) ⟩**
+  - haber(x): metinde (âyet/hadis) geçen, o güne göre bilinemez bir muhteva.
+  - sıhhat(x): x'in doğruluğu, sonradan, bağımsız (dinî olmayan) bir yolla sabit olmuş olmalı.
+  - adem-i-vüsul(x): x'e, ümmîlik + çağın imkânlarıyla, beşerî hiçbir yoldan (hissî/hayalî/vehmî/aklî — Mâlum(Menşe)'nin dördü) ulaşılamadığı gösterilmeli.
+- **Usul (Menşe kümesinin ters tatbiki):** Mâlum(Menşe) = {hissî,hayalî,vehmî,aklî} zaten ⟺ₜ (tükenici) mühürlüydü. Eğer bir haberin bu dördünün HİÇBİRİNE irca edilemediği (adem-i-vüsul) gösterilirse, dörtlü tükenici olduğu için, beşerî-olmayan bir menşe (vahiy) zarurî hâle gelir — bu, madde 8'deki (vahyin vukuu) zincire yeni, bağımsız bir ayak ekler.
+- **Beslediği yerler:** madde 8 (vahyin vukuu), madde 9 (nübüvvetin zarureti — burada "makul" değil "müşahede edilen bir fiil" hâline gelir), madde 11-12 (mucize/i'caz).
+- **(T) her tek madde için değişken, TOPLAMDA güçlenir (İhtimal Hesabı tatbiki):** tek bir gaybî-ilmî isabetin kendisi cedelî kalabilir (tesadüf ihtimali teorik olarak sıfırlanmaz); ama birbirinden bağımsız çok sayıda düşük-ihtimalli isabetin BİRLİKTE tesadüfle açıklanma ihtimali, tıpkı tevatürdeki pⁿ→0 gibi çarpımsal küçülür. Tek tek cedelî, toplu cedelî-yakınlığında-güçlü; hiçbiri tek başına burhânî ilan edilmeyecek, bu açıkça yazılacak.
+- **Örnekler (yazılırken taranacak, şimdilik iki tanesi not edildi):**
+  - Fir'avn'ın cesedinin muhafazası (Yûnus 10:92) — sıhhat(x): mumyaların modern arkeolojide teşhisi (Loret 1898 vb.); adem-i-vüsul(x): 7. asır Arabistan'ının Mısır mumyalama pratiğine ve belirli bir Firavun'un akıbetine dair ayrıntılı bilgiye erişimi olmaması. Nispeten sağlam, ama kaynak zinciri risale yazılırken tek tek kurulacak.
+  - "Gök ve yer ağlamadı" (Duhân 44:29) ile bir hiyeroglif metnindeki (iddiaya göre kral için "gök ve yer ağladı" diyen) ağıt formülü arasındaki tezat — **⊬ (kaynak yoklaması bekliyor, F 1-K):** hangi hiyeroglif metni, hangi neşir/Mısırbilimci kaynağı, hangi tarihli hangi kral için olduğu şu an doğrulanmadı. Doğrulanmadan risaleye bir delil olarak yazılmayacak — ya kaynağı bulunup tam atıfla girer, ya da bulunamazsa bu madde risaleye hiç girmez (F 1-K: yoklanmayan kaynak cetvele yazılmaz).
+
 ---
 
 ## FASIL III — El-Meâd
@@ -130,4 +144,6 @@ Her fasılın sonunda bir **"delil-kuvveti tablosu"** olacak: o fasıldaki her n
 
 ## Açık (henüz mühürlenmemiş) kümeler
 
-Sıfat(çeşit), Gaye(çeşit), Şer(çeşit), Vahiy(Rükün), Mucize(çeşit)+Mucize(Rükün), İ'caz(Şart), Kesb(Rükün) — bunların hepsi yukarıda κ teklifleriyle işaretlendi, mühürleme sırası fasıllar yazılırken, aynı müzakere usulüyle (kıstas + Nakzeyn + dehliz) yapılacak.
+Sıfat(çeşit), Gaye(çeşit), Şer(çeşit), Vahiy(Rükün), Mucize(çeşit)+Mucize(Rükün), İ'caz(Şart), Kesb(Rükün), İlmî-Gaybî İ'caz(Rükün) — bunların hepsi yukarıda κ teklifleriyle işaretlendi, mühürleme sırası fasıllar yazılırken, aynı müzakere usulüyle (kıstas + Nakzeyn + dehliz) yapılacak.
+
+**Kaynak yoklaması bekleyen (F 1-K, henüz risaleye girmedi):** "gök ve yer ağlamadı" / hiyeroglif ağıt-formülü misali — hangi metin, hangi neşir olduğu doğrulanmadan yazılmayacak.
