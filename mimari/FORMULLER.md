@@ -431,6 +431,64 @@ Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün var
 
 ---
 
+## Vâcibü'l-Vücûd
+
+**1 — Mevcûdun taksimi** (Tasdik(Vücûb)'un Mevcûd'a tatbiki, mümteni hâriç):
+```
+Mevcûd(Vücûb) = { Vâcibü'l-Vücûd, Mümkinü'l-Vücûd }
+```
+Kıstas: bizatihi (zâtından dolayı) var olması zarurî mi, değil mi. Var olan bir şey için "mümteni" ihtimali zaten düşer.
+
+**2 — Mümkinin müreccihe muhtaçlığı** (Lime/İllet-i Fâiliye'nin tatbiki):
+```
+Mümkinü'l-Vücûd(Şart) = { müreccih-i hâricî }
+```
+Kıstas: bizatihi ne varlığı ne yokluğu zorunlu olan bir şeyin fiilen bir tarafa (varlığa) tahakkuku, sebepsiz olamaz — "tereccüh bilâ müreccih" (sebepsiz tercih) kendisi bir nakzdır: sebepsiz bir farkın doğması, fark yokken fark olduğunu iddia eder.
+
+**3 — Devir ve teselsülün reddi** (F 1-J/1-C, zaten mühürlü kaide, burada tatbik):
+```
+Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
+```
+Devir muhal: A→B→A, A'nın kendinden önce var olmasını gerektirir. Teselsül muhal: sonsuz zincirin her cüzü mümkinse, küllü de mümkindir (cüz'iyattan hâlî bir küll yoktur), ve mümkinin küllü yine 2'deki müreccihe muhtaçtır — zincirin uzunluğu ihtiyacı gidermez, yalnız erteler.
+
+**Netice:**
+```
+∃! Vâcibü'l-Vücûd
+```
+1-3'ün zarurî neticesi: mümkinler bilfiil var (müşahede), silsile devir/teselsülle nihayetsiz kalamaz (3), öyleyse silsile bizatihi vâcib bir noktada nihayet bulur.
+
+**4 — Basitlik** (Basitlik(çeşit) tatbiki):
+```
+Vâcibü'l-Vücûd(Basitlik) = { basit }
+```
+Kıstas: mürekkeb olsaydı, cüzlerinin birleşmesi (2)'deki gibi hâricî bir müreccihe muhtaç olurdu — Vâcib'in tarifiyle (hiçbir şeye muhtaç olmama) çelişir.
+
+**5 — Vahdâniyet:**
+```
+| { x : x Vâcibü'l-Vücûd } | = 1
+```
+Kıstas: iki Vâcib olsaydı aralarında bir temayüz (fark) şart olurdu (yoksa iki değil bir olur); bu fark mahiyette bir terkip (cins+fasıl) gerektirir — (4) Basitlik'le çelişir. Öyleyse tektir.
+
+**6 — Zâtî sıfatlar:**
+```
+Vâcibü'l-Vücûd(Zaman) = { ezelî, ebedî }
+```
+Kıstas: bir başlangıcı/sonu olsaydı, o an bir DEĞİŞİM (yoktan var / vardan yok) olurdu; her değişim (2) gereği müreccihe muhtaçtır; Vâcib hiçbir şeye muhtaç değildir.
+
+```
+Vâcibü'l-Vücûd(Kıyam) = { bi-nefsihî }
+```
+Kıstas: Makûlât'taki Cevher tarifinin ("kendi başına, mevzuya muhtaç olmaksızın durur") en tam mertebesi — yalnız mevzuya değil, hiçbir şarta muhtaç olmadan kaimdir.
+
+```
+Vâcibü'l-Vücûd(Muhalefet) = { li'l-havâdis }
+```
+Kıstas: Mevcûd(Vücûb) (1)'de Vâcib ile Mümkin ayrık, kesişmeyen iki kısımdır (Nakzeyn); havâdis (sonradan olanlar) Mümkin kısmındadır; Vâcib zâtında onlara benzemez.
+
+İzahat: `izahat/vacibul_vucud/genel.md`
+
+---
+
 ## Kemiyet
 
 Tasdik(Kemiyet) = { küllî, cüz'î }
@@ -474,6 +532,7 @@ Tasavvur(Menşe) = { hissî, hayalî, vehmî, aklî }
 - Sual(Rükün) → henüz izahat dosyası açılmadı
 - Bünye, Mevki, Zaruret (Rükün/Şart/Araz/Karîne dörtlüsü) → `izahat/rukun_sart/genel.md`
 - Metâlib, Makûlât, Cevher/Araz/Zâtî/İzafî → henüz izahat dosyası açılmadı
+- Vâcibü'l-Vücûd → `izahat/vacibul_vucud/genel.md`
 - Mâlum → `izahat/malum/genel.md`
 - Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit), Tasavvur(Menşe), Tasdik(Vücûb/Kemiyet/Keyfiyet), Basitlik(çeşit) → henüz ayrı izahat dosyası açılmadı; temel usul (kıstas+Nakzeyn+isimlendirme+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'ye işlendi
 
