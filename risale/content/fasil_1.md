@@ -2,12 +2,13 @@
 
 ## Bu Fasıl Nasıl Okunur
 
-- Yeni geçen **her işaret**, kullanılmadan önce burada tarif edilir; hiçbir sembol, tanıtılmadan bir formülün içinde çıkmaz.
-- Her yabancı kelimenin kökü ve lugat mânâsı, lise seviyesinde, ayrı bir kutuda verilir.
-- Açıklamalar **"Çoban için"** satırlarında, en sade misalle, tek-iki cümleyle verilir; birden çok ihtimal varsa cümleyle değil **şema**yla gösterilir.
+- Yeni geçen **her işaret**, kullanılmadan önce tarif edilir; hiçbir sembol, tanıtılmadan bir formülün içinde çıkmaz.
+- Her yabancı kelimenin kökü, lise seviyesinde, ayrı bir kutuda verilir.
+- Açıklamalar **"Çoban için"** satırlarında en sade misalle verilir; birden çok ihtimal varsa cümleyle değil **şema**yla gösterilir.
+- Bu fasılda **iki müstakil yol** birlikte yürür: (A) felsefî-kelâmî **Burhân-ı İmkân** (mefhumların tahkikinden hükme giden silsile-i mantık), (B) doğrudan Kur'ân'ın kendi kullandığı **Burhân-ı Tahsis** ve kardeşleri. İkisi de burhânîdir; biri diğerinin yerine geçmez, biri diğerini **tamamlar**.
 - Sıra hep aynıdır: **kelime → çoban misali → şema → formül → netice.**
 
-## 0. Alfabe — Kullanılacak İşaretler
+## 0. Mebâdî-i Mantıkiyye — Kullanılacak İşaretler
 
 | İşaret | Menşe | Bu risalede ne demek |
 | :-- | :-- | :-- |
@@ -23,56 +24,59 @@
 | :-- | :-- | :-- |
 | Nakzeyn | ن ق ض (nakz = bozmak, düğüm çözmek) | "iki bozma / iki çelişki" |
 
-**Çoban için:** Elindeki bir koyun ya senindir ya değildir. Aynı koyun için, aynı anda, aynı bakımdan "hem benim hem değil" diyemezsin. Bu risalenin **tamamı**, bu tek ve çok basit kaideyi tekrar tekrar, farklı yerlerde kullanıyor. Buna **Nakzeyn Kanunu** denir.
+**Çoban için:** Elindeki bir koyun ya senindir ya değildir; aynı koyun için, aynı anda, aynı bakımdan "hem benim hem değil" diyemezsin. Bu risalenin **tamamı**, bu tek kaideyi tekrar tekrar kullanıyor. Buna **Nakzeyn Kanunu** (kanun-u adem-i tenakuz) denir. Bunun kendisi başka bir şeyden ispat edilmez — inkârı bile kendini nakzeder: "Nakzeyn yanlıştır" diyen kişi bile, kendi sözünün "doğru" ile "yanlış"ın aynı anda aynı şey olmadığını zaten kabul etmiş olur.
 
-## 1. Var Olan Bir Şey Üç Hâlden Hangisindedir?
+## 1. Taksim-i Aklî — Zihindeki Bir Mâhiyet Üç Hâlden Hangisindedir?
 
 | Kelime | Kök | Lugat mânâsı | Neden bu isim |
 | :-- | :-- | :-- | :-- |
-| Vâcib | و ج ب (vücûb) | "gerekli, zorunlu düşmüş" | yokluğu imkânsız, varlığı üzerine düşmüş olan |
-| Mümkin | م ك ن (imkân) | "güç yetme, olabilme" | var da olabilir, yok da |
-| Mümteni | م ن ع (men) | "engellenmiş, alıkonmuş" | varlığı bizatihi imkânsız |
-| Mevcûd | و ج د (vücûd) | "bulunan" | var olan, bulunan şey |
+| Mâhiyet | م ا ه (mâ huve = "o nedir?") | "bir şeyin ne'liği, tarifi" | zihne gelen, henüz vücûd şartı taşımayan mefhum |
+| Vâcib | و ج ب (vücûb) | "gerekli, zorunlu düşmüş" | hâriçte bulunmaması imkânsız olan |
+| Mümkin | م ك ن (imkân) | "güç yetme, olabilme" | hâriçte bulunması da bulunmaması da mümkün |
+| Mümteni | م ن ع (men) | "engellenmiş, alıkonmuş" | hâriçte bulunması bizatihi imkânsız |
 
-**Çoban için:** Elindeki bir şeye şunu sor: "Bu hiç yok olabilir miydi?" Cevap "hayır, asla" ise o şey **Vâcib**dir. Cevap "evet, yok da olabilirdi var da" ise **Mümkin**dir. Bir şeyin baştan var olması zaten imkânsızsa (mesela "kare daire"), o hiç **Mevcûd** olamaz — ona **Mümteni** denir.
+**Bir tashih (usul hatasının giderilmesi):** Taksime "x mevcûd mudur?" diye başlamak hatalıdır — çünkü mümteni (mesela "dört köşeli daire") zaten hiçbir zaman hâricî vücûd taşımaz; onu "mevcûdlar" arasında sayıp sonra taksim etmeye kalkarsan, daha ilk adımda onu dışarıda bırakmış olursun. Doğru başlangıç, **zihinde tasavvur edilen bir mâhiyettir**: sual, o mâhiyetin hârice çıkıp çıkmayacağına dair sorulur; taksim hâlihazırda var olana değil, akla (zihindeki mefhuma) tatbik edilir.
+
+**Çoban için:** Aklına bir şey getir — mesela "güneş" mefhumunu, ya da "kare-daire" mefhumunu. Şimdi kendine sor: "Bu mefhumun dışarıda (hâriçte) bulunmaması hiç mümkün mü?" Cevap "hayır, bulunmaması imkânsız" ise, o **Vâcib**dir. Cevap "evet, hem bulunabilir hem bulunmayabilir" ise **Mümkin**dir. Eğer mefhumun kendisi çelişkili ise ("kare-daire" gibi), o mefhumun hâriçte bulunması zaten baştan imkânsızdır — buna **Mümteni** denir; böyle bir mefhum hiçbir zaman **Mevcûd** olamaz.
 
 ```
-                 x mevcûd mu?
-                      │
-      soru 1: yokluğu muhal mi (imkânsız mı)?
-            ┌─────────┴─────────┐
-          evet                hayır
-            │                    │
-            ▼                    │
-       ┌─────────┐       soru 2: varlığı muhal mi?
-       │ VÂCİB   │          ┌─────────┴─────────┐
-       └─────────┘        evet                hayır
-                             │                    │
-                             ▼                    ▼
-                       ┌──────────┐        ┌──────────┐
-                       │ MÜMTENİ  │        │  MÜMKİN  │
-                       │(zaten yok)│       └──────────┘
-                       └──────────┘
+              zihinde bir mâhiyet tasavvur edilir
+                          │
+        κ₁: bu mâhiyetin hâriçte bulunmaması muhal mi?
+                ┌─────────┴─────────┐
+              evet                hayır
+                │                    │
+                ▼                    │
+           ┌─────────┐      κ₂: hâriçte bulunması muhal mi?
+           │ VÂCİB   │          ┌─────────┴─────────┐
+           └─────────┘        evet                hayır
+                                 │                    │
+                                 ▼                    ▼
+                           ┌──────────┐        ┌──────────┐
+                           │ MÜMTENİ  │        │  MÜMKİN  │
+                           │(asla mevcûd│      └──────────┘
+                           │  olmaz)   │
+                           └──────────┘
 ```
 
-(Her iki soru da Nakzeyn Kanunu'nun tatbikidir: cevap ya evet ya hayırdır, üçüncüsü yoktur — bu yüzden bu üçlü bölüş hiçbir dördüncü ihtimal bırakmaz, ⟺ₜ.)
+(Her iki soru da Nakzeyn Kanunu'nun tatbikidir — bu yüzden bu üçlü bölüş hiçbir dördüncü ihtimal bırakmaz, ⟺ₜ. Bu taksimin yalnız zihinde kalan soyut bir oyun olmadığı, bizzat hâricî âlemdeki **tahsis** olgusuyla da doğrulandığı §4'te ayrıca gösterilecektir.)
 
 ```
 Tasdik(Vücûb) = { vâcib, mümkün, mümteni }
-  κ₁ = muhal(yokluk)?           → evet: vâcib
-  ¬κ₁ ∧ κ₂ = muhal(varlık)?     → evet: mümteni  [∉ Mevcûd]
-  ¬κ₁ ∧ ¬κ₂                     → mümkün
+  κ₁ = muhal(hâriçte-bulunmaması)?      → evet: vâcib
+  ¬κ₁ ∧ κ₂ = muhal(hâriçte-bulunması)?  → evet: mümteni  [∉ Mevcûd]
+  ¬κ₁ ∧ ¬κ₂                             → mümkün
 ```
 
 <figure>
-<svg viewBox="0 0 640 260" role="img" aria-label="Vücûb taksimi: x mevcûd, κ₁ yokluk-muhal sualiyle vâcibe, hayırsa κ₂ varlık-muhal sualiyle mümteniye veya mümkine ayrılır">
+<svg viewBox="0 0 640 260" role="img" aria-label="Taksim-i aklî: zihinde tasavvur edilen bir mâhiyet, κ₁ hâriçte bulunmamasının muhal olup olmadığı sualiyle vâcibe, hayırsa κ₂ hâriçte bulunmasının muhal olup olmadığı sualiyle mümteniye veya mümkine ayrılır">
   <defs>
     <marker id="ar1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
     </marker>
   </defs>
   <g fill="none" stroke="currentColor" stroke-width="1.5">
-    <rect x="260" y="10" width="120" height="32" rx="4"/>
+    <rect x="240" y="10" width="160" height="32" rx="4"/>
     <line x1="320" y1="42" x2="320" y2="66" marker-end="url(#ar1)"/>
     <line x1="320" y1="66" x2="150" y2="98" marker-end="url(#ar1)"/>
     <line x1="320" y1="66" x2="490" y2="98" marker-end="url(#ar1)"/>
@@ -84,28 +88,52 @@ Tasdik(Vücûb) = { vâcib, mümkün, mümteni }
     <rect x="280" y="166" width="160" height="36" rx="4"/>
     <rect x="510" y="166" width="120" height="36" rx="4"/>
   </g>
-  <g font-size="12" text-anchor="middle" fill="currentColor" font-family="inherit">
-    <text x="320" y="30">x mevcûd</text>
-    <text x="320" y="60">κ₁: yokluk(x) muhal mi?</text>
+  <g font-size="11" text-anchor="middle" fill="currentColor" font-family="inherit">
+    <text x="320" y="30">zihinde mâhiyet</text>
+    <text x="320" y="60">κ₁: hâriçte bulunmaması muhal mi?</text>
     <text x="225" y="86">evet</text>
     <text x="415" y="86">hayır</text>
     <text x="150" y="142">VÂCİB</text>
-    <text x="490" y="118">κ₂: varlık(x) muhal mi?</text>
+    <text x="490" y="118">κ₂: hâriçte bulunması muhal mi?</text>
     <text x="378" y="152">evet</text>
     <text x="572" y="152">hayır</text>
     <text x="360" y="188">MÜMTENİ</text>
-    <text x="360" y="200">(∉ Mevcûd)</text>
+    <text x="360" y="200">(asla mevcûd olmaz)</text>
     <text x="570" y="188">MÜMKİN</text>
   </g>
 </svg>
-<figcaption>Vücûb taksimi: κ₁ ve κ₂'nin ardışık Nakzeyn tatbikiyle Vâcib/Mümteni/Mümkin ayrımı.</figcaption>
+<figcaption>Taksim-i aklî: κ₁ ve κ₂'nin ardışık Nakzeyn tatbikiyle, zihindeki bir mâhiyetin Vâcib/Mümteni/Mümkin ayrımı.</figcaption>
 </figure>
 
 | Netice | (T) |
 | :-- | :-- |
-| Mevcûd(Vücûb) = {Vâcib, Mümkin} ⟺ₜ | burhânî |
+| Taksim(Mâhiyet) = {Vâcib, Mümkin, Mümteni} ⟺ₜ | burhânî |
 
-## 2. Var Olan Bir "Mümkin", Neden Kendi Kendine Var Olamaz?
+## 2. Hakk-ı Vücûd — Mâhiyet, Vücûda Neden Muhtaçtır?
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Zâid | ز ي د | "fazladan eklenen, ilave" |
+| Ayn | ع ي ن | "bizzat kendisi, özdeş" |
+
+**Çoban için:** "İnsan" mefhumunu düşün: "canlı, konuşan, düşünen varlık." Bu tarifi anlamak için dünyada hiç insan olmasına gerek yoktur — tarifin kendisinde "var olma" şartı yazmaz. Demek "var olmak", mâhiyete **sonradan, dışarıdan** eklenen bir şeydir; mâhiyetin kendisi bu ilaveyi içinde taşımaz. Ama "Vâcibü'l-Vücûd" dediğimizde durum tamamen başkadır: O'nun "ne"liği (mâhiyeti), zaten "var olmak"tan başka bir şey değildir — var olmak O'na sonradan giydirilen bir elbise değil, bizzat Kendisidir.
+
+```
+Mümkinde:  Mâhiyet(x) ≠ Vücûd(x)
+   [Vücûd, mâhiyete zâiddir; mâhiyet vücûdsuz da tasavvur edilebilir]
+   ⟹ hârice çıkmak (vücûd bulmak) bir "ilave"dir
+   ⟹ bu ilaveyi getirecek dıştan bir sebep (müreccih) lâzımdır   [§3'ün temeli budur]
+
+Vâcib'de:  Mâhiyet(Vâcib) = Vücûd(Vâcib)
+   [ayniyet — Vâcib'in "ne"liği bizzat "var olmak"tır]
+   ⟹ Vâcib'in vücûdu hiçbir "ilave"ye, dolayısıyla hiçbir müreccihe muhtaç değildir
+```
+
+| Netice | (T) |
+| :-- | :-- |
+| Mümkinde vücûd zâid, Vâcib'de ayn-ı zâttır | burhânî |
+
+## 3. İsbât-ı Vâcib — Burhân-ı İmkân
 
 | Kelime | Kök | Lugat mânâsı | Neden bu isim |
 | :-- | :-- | :-- | :-- |
@@ -113,8 +141,9 @@ Tasdik(Vücûb) = { vâcib, mümkün, mümteni }
 | Silsile | س ل س ل | "zincir" | birbirine bağlı sebep-netice halkaları |
 | Devir | د و ر | "dönme" | bir şeyin kendi sebebi olarak kendine dönmesi |
 | Teselsül | (silsile kökünden) | "zincirleme" | sebeplerin sonsuza uzaması |
+| Tatbik | ط ب ق (tabaka, üst üste koyma) | "bir şeyi bir şeye denk düşürme" | burada: kümenin dahili/haricî ayrımını denk düşürme |
 
-**Çoban için:** Elindeki taş kendi kendine hareket etmez — bir şey (elin, rüzgâr, bir tekme) onu itmiş olmalı. "Var da olabilir yok da olabilir" (**mümkin**) olan her şey böyledir: kendi başına, sebepsiz, "var" tarafına geçemez. Ona var dedirten dıştan bir sebep (**müreccih**) lâzımdır.
+**Çoban için:** Elindeki taş kendi kendine hareket etmez; onu iten bir şey olmalı. §2'de gördük: "mümkin" olan her şeyin vücûdu, mâhiyetine sonradan eklenen bir ilavedir. O hâlde bu ilaveyi getiren dıştan bir sebep (**müreccih**) lâzımdır.
 
 **Sonsuz zincir de işe yaramaz — iki yol da denenir, ikisi de kapanır:**
 
@@ -127,22 +156,39 @@ YOL 1 — DEVİR (dönerek kapatmayı dene):
 
 YOL 2 — TESELSÜL (sonsuza uzatmayı dene):
     … ← C ← B ← A ← (aranan şey)
-    Zincir ne kadar uzasa da her halka hâlâ "mümkin"dir
-    (kendi başına var olamayan).
+    Zincir ne kadar uzasa da her halka hâlâ "mümkin"dir.
     Sonsuz sayıda "kendi başına var olamayan" halkanın TOPLAMI da
     hâlâ "kendi başına var olamayan"dır — SAYI değişti, CİNS değişmedi.
     ↯  sorun çözülmedi, yalnızca ertelendi
 ```
 
-**Netice:** İki yol da kapandığına göre zincir, dıştan sebebe muhtaç olmayan, **kendi kendine var olan** bir noktada durmak zorundadır.
+**Bir itiraza karşı zırh (Burhân-ı Tatbik):** Muasır bir muannid şöyle diyebilir: "Cüzlerin (her bir halkanın) mümkin olması, KÜLLÜN (bütün zincirin) de mümkin olmasını gerektirmez; bu bir 'terkib mugalatası'dır — kümenin elemanlarının vasfı, kümenin kendisine şâmil olmayabilir." Bu itiraza, YOL 2'deki gibi "parçanın vasfı bütüne de geçer" demeye hiç ihtiyaç bırakmayan, daha muhkem bir tatbik ile cevap verilir:
+
+```
+Bütün mümkinler kümesini (K) ele al. K'nin (bir bütün olarak) sebebi ya
+K'nin İÇİNDEDİR, ya DIŞINDADIR — üçüncü ihtimal yok (Nakzeyn):
+
+  İÇİNDE ise  →  K'nin sebebi K'nin bir elemanı  →  o eleman kendi
+                 kendinin (ve içinde bulunduğu kümenin) sebebi olur
+                 ↯  devir (YOL 1'in aynısı)
+
+  DIŞINDA ise →  K, "bütün mümkinler"i içerdiğine göre, K'nin dışında
+                 kalan biricik şey Mümkin OLMAYANdır, yani Vâcib
+                 ∴ K'nin sebebi Vâcibü'l-Vücûd'dur
+```
+
+Bu tatbik, hiçbir yerde "parçanın vasfı bütüne geçer" öncülünü kullanmaz; doğrudan "sebep ya kümenin içinde ya dışındadır" ikiliğine (yine Nakzeyn'e) dayanır — bu yüzden "terkib mugalatası" ithamı burada tutmaz.
+
+**Netice:** Üç yol da (devir, teselsül, tatbik-içi) kapandığına göre, zincir dıştan sebebe muhtaç olmayan bir noktada durmak zorundadır.
 
 ```
 Mümkinü'l-Vücûd(Şart) = { müreccih-i hâricî }
   ⟸ ¬(tereccüh bilâ müreccih)      [Nakzeyn ihlâli]
 
 Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
-  devir:    A≺B≺A  ⟹  A≺A                      (muhal)
-  teselsül: ∀cüz mümkin ⟹ küll mümkin ⟹ küll ⋉ (Şart)   [erteler, gidermez]
+  devir:    A≺B≺A  ⟹  A≺A                                (muhal)
+  teselsül: ∀cüz mümkin ⟹ küll mümkin ⟹ küll ⋉ (Şart)     (erteler, gidermez)
+  tatbik:   sebeb(K) ∈ K ⟹ devir  ∨  sebeb(K) ∉ Mümkin ⟹ Vâcib
 
 ∴  ∃! Vâcibü'l-Vücûd
 ```
@@ -171,22 +217,89 @@ Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
     <text x="220" y="57">muhal</text>
     <text x="220" y="70">(tereccüh bilâ</text>
     <text x="220" y="82">müreccih)</text>
-    <text x="440" y="37">devir/teselsül denenir</text>
+    <text x="440" y="37">devir/teselsül/tatbik denenir</text>
     <text x="440" y="56">devir: A≺B≺A ⟹ A≺A (muhal)</text>
     <text x="440" y="73">teselsül: küll de mümkin kalır</text>
-    <text x="440" y="90">→ erteler, gidermez</text>
+    <text x="440" y="90">tatbik: sebep içerde→devir, dışarda→Vâcib</text>
     <text x="677" y="57">Vâcibü'l-</text>
     <text x="677" y="70">Vücûd</text>
   </g>
 </svg>
-<figcaption>Silsile-i esbâbın devir ve teselsülle kapanamaması, zincirin zarurî olarak Vâcibü'l-Vücûd'da nihayet bulmasını gerektirir.</figcaption>
+<figcaption>Silsile-i esbâbın devir, teselsül ve tatbik yollarının üçünde de kapanamaması, zincirin zarurî olarak Vâcibü'l-Vücûd'da nihayet bulmasını gerektirir.</figcaption>
 </figure>
 
 | Netice | (T) |
 | :-- | :-- |
 | ∃! Vâcibü'l-Vücûd | burhânî |
 
-## 3. Zâta Ait Sıfatlar — Nefsiyye ve Selbiyye
+## 4. Kur'ânî Usul — Burhân-ı Tahsis (Müstakil, Aynı Neticeye Giden İkinci Yol)
+
+**Bir tenbih:** §1-3'teki yol, zihinden başlayan soyut bir istidlâldir (Burhân-ı İmkân). Kur'ân-ı Kerîm'in bizzat kullandığı yol ise, zihinde değil **doğrudan hâricî âlemde müşahede edilen bir olguyla** başlar: sonsuz ihtimal içinden tek bir sûretin seçilmiş (tahsis edilmiş) olması. Bu, felsefî yolun yerine geçmez — ona **muhtaç olmayan, kendi başına yeterli, müstakil** bir ikinci burhandır.
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Tahsis | خ ص ص (has kılma) | "sonsuz ihtimalden birini seçip ona ayırma" |
+| Muhassis | (tahsis kökünden) | "tahsis eden, tercih eden" |
+| Kader (bu bağlamda) | ق د ر | "ölçü, miktar, belirlenmiş tarz" |
+
+**Çoban için:** Bir su damlasını, bir tohumu, bir hücreyi düşün. Bu madde, teorik olarak milyarlarca farklı şekle, boyuta, göreve girebilirdi — hepsi aklen eşit derecede mümkündü. Ama bu tohum, o milyarlarca ihtimalden **tam belirli, hendesî bir tek şekle** (mesela bir gözün optik ölçülerine) sokulmuş. Kör ve şuursuz madde, bilmediği, gaye gütmediği bir şeyi **seçemez**. Öyleyse bu seçimi (tahsisi) yapan, bilen ve dileyen bir Fâil olmalı.
+
+### 4.1 Dört İhtimalin Taraması (Tûr, 35-36)
+
+> "Yoksa onlar hiçbir şey olmaksızın (kendiliğinden) mi yaratıldılar? Yoksa bizzat yaratanlar kendileri midir? Yoksa gökleri ve yeri onlar mı yarattı? Hayır, onlar kesin bir bilgiye (yakîne) sahip değillerdir." (Tûr, 35-36)
+
+Bu ayet, aklın önüne dört ve yalnız dört ihtimal koyar:
+
+```
+İHTİMAL 1 — Sebepsiz varlık: Adem ──(fail yok)──► Vücûd
+   Hüküm: muhal (Nakzeyn ve müreccih-zarureti, §3 ⋉)
+
+İHTİMAL 2 — Kendi kendinin illeti: A, kendi var olmadan evvel A'yı var etti
+   Hüküm: muhal (devir, §3 ⋉)
+
+İHTİMAL 3 — Mümkinâtın birbirini doğurması / kör tabiat kanunları
+   Hüküm: muhal — kanun bir OLUŞ TARZIdır, fail değildir; madde ise
+   tahsis kabiliyetinden (seçme, bilme, gaye gütme) mahrumdur
+   (teselsül ve tatbik, §3 ⋉)
+
+İHTİMAL 4 — Âlemin cinsinden olmayan, ilim ve iradesiyle dilediği
+   kalıba sokan bir Fâil-i Muhtar ve Kadîr
+   Hüküm: yalnız bu ihtimal ayakta kalır
+```
+
+(İlk üç ihtimalin reddi, §3'te tafsilen kurulan aynı üç burhandır — burada yalnız hatırlatılır; dördüncü ihtimal, aynı §3'ün vardığı neticenin Kur'ânî bir tekrarı değil, ona hâricî bir müşahededen bağımsızca ulaşan **ikinci bir yoldur**.)
+
+### 4.2 Tahsisin Kendisi: "Kader" Olgusu (Kamer, 49)
+
+> "İnnâ külle şey'in halaknâhu bi-kader" (Biz her şeyi bir ölçüyle/belirli bir takdir ile yarattık — Kamer, 49)
+
+```
+İmkân-ı Zâtî(x) ≔ x, sonsuz alternatif sûretten herhangi birini alabilirdi  [aklen eşit ihtimaller]
+Tahsis(x)       ≔ x, bilfiil bu sonsuz ihtimalden yalnız BİR sûrete tatbik edilmiş  ["kader"]
+
+κ: Tahsisi yapan kim/ne olabilir?
+   kör-madde/tabiat  ⟹  şuursuz, ihtimalleri bilemez, gaye gözetemez  ⟹  ↯ tahsis edemez
+   kanun (fizik kanunu)  ⟹  kanun bir oluş tarzıdır, fail değildir;
+                             kendisi tahsisin NETİCESİdir, SEBEBİ olamaz  ⟹  ↯
+
+∴ Tahsis ancak İLİM (ihtimalleri bilme) + İRADE (birini seçme)
+  + KUDRET (hârice çıkarma) sahibi bir Fâil-i Muhtar ile mümkündür
+```
+
+### 4.3 İki Yolun Mukayesesi
+
+| Cihet | Burhân-ı İmkân (§1-3) | Burhân-ı Tahsis (§4) |
+| :-- | :-- | :-- |
+| Çıkış noktası | zihindeki mâhiyet/vücûd mefhumu | hâriçte müşahede edilen tahsis, ölçü, sûret |
+| İlk vardığı sıfat | soyut bir "Vâcibü'l-Vücûd" | doğrudan Âlim, Mürîd, Kadîr bir Fâil |
+| Zayıf noktası (dikkat edilmezse) | İrade sıfatına geçiş ayrı bir adım ister (§7.3'te kapatılır) | — |
+| Hitap sahası | mantık tahsili görmüş zihinler | çobandan riyaziyeciye, herkes |
+
+| Netice | (T) |
+| :-- | :-- |
+| Burhân-ı Tahsis: Âlim+Mürîd+Kadîr bir Fâil zarurîdir | burhânî |
+
+## 5. Sıfât-ı Selbiyye — Zâta Ait Tenzihât
 
 ### Geleneksel Yerleşim
 
@@ -198,87 +311,110 @@ Ehl-i Sünnet kelâmında Allah'ın sıfatları üç grupta sayılır:
 | Selbiyye (zâttan gayrısını nefyeden) | 5 | Kıdem, Beka, Vahdâniyet, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis |
 | Sübûtiyye (zâtta sabit mânâlar) | 7-8 | Hayat, İlim, Sem', Basar, Kelâm, İrade, Kudret, (Tekvin) |
 
-**Not:** "Basitlik" (terkipsizlik) bu on üç isimden **biri değildir**. Aşağıda yalnız **Vahdâniyet**i ispatlamak için kullanılan bir **ara-basamak**tır (lemma) — kendi başına bir sıfat adı olarak zikredilmez. Ara-basamağı sıfatla karıştırmamak için ayrıca işaretlenmiştir.
+**Not:** "Basitlik" (terkipsizlik) bu on üç isimden **biri değildir**. Aşağıda yalnız **Vahdâniyet**i ispatlamak için kullanılan bir **ara-basamak**tır (lemma) — kendi başına bir sıfat adı olarak zikredilmez.
 
-### 3.1 Vücud
+### 5.0 Vücud
 
-Zaten §1-2'de ispat edildi: ∃! Vâcibü'l-Vücûd.
+Zaten §1-4'te ispat edildi: ∃! Vâcibü'l-Vücûd (iki müstakil yoldan).
 
-### 3.2 Kıdem ve Beka
+### 5.1 Basitlik (Lemma)
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Basitlik | ب س ط (basît = yayılmış, terkipsiz) | "parçalardan oluşmamışlık" |
+
+**Çoban için:** Vâcib'in bir "parçası" olsaydı, o parçaya (§3'teki müreccih-zarureti gereği) muhtaç olurdu — hâlbuki Vâcib hiçbir şeye muhtaç değildi.
+
+```
+mürekkeb(x) ⟹ ictimâ-i-ecza (parçaların bir araya gelmesi)
+           ⟹ ⋉(§3, müreccih zarureti) ⟹ muhtaç(x)
+           ⟹ ↯ Vâcib tarifiyle çelişki
+∴ Vâcib parçasızdır   [bu netice müstakil bir sıfat adı DEĞİLDİR — bkz. yukarıki not]
+```
+
+### 5.2 Vahdâniyet
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Vahdâniyet | و ح د (vahd = bir olma) | "teklik, birden başka olmama" |
+| Temânu' | م ن ع (karşılıklı men/engelleme) | "iki iradenin çatışması" |
+
+**Çoban için (birinci yol — mantıkî):** İki "Vâcib" var farz edelim. "İki" dedin mi aralarında bir fark olmalı — yoksa "bir" olurlardı. O fark, birinde bulunup diğerinde bulunmayan bir parça demektir; parçası olan bir şey ise (§5.1) muhtaçtır.
+
+```
+∃x≠y (ikisi de Vâcib) ⟹ temayüz (fark) lâzım
+                      ⟹ fark = terkib(ortak-cins + ayırıcı-fasıl)
+                      ⟹ ↯ Basitlik (§5.1) ile çelişki
+∴ Vâcibü'l-Vücûd tektir
+```
+
+**Burhân-ı Temânu' (ikinci yol — Kur'ânî, hâricî nizam üzerinden):**
+
+> "Eğer yerde ve gökte Allah'tan başka ilâhlar bulunsaydı, ikisi de fesada uğrar, düzeni bozulurdu." (Enbiyâ, 22)
+
+```
+Faraziye: iki müstakil ilâh (A, B) var olsun. Bir hâdisede
+          A hareketi murad etsin, B sükûneti murad etsin.
+
+  İHTİMAL 1 — ikisi de olsun    ⟹ hareket ∧ sükûn aynı anda  ↯ Nakzeyn ihlâli
+  İHTİMAL 2 — ikisi de olmasın  ⟹ ikisi de acizdir            ↯ aciz olan ilâh olamaz
+  İHTİMAL 3 — biri olsun        ⟹ galip Vâhid; mağlup aciz    ↯ aciz olan mahlûktur
+
+Netice: âlemde nizam bilfiil devam ettiğine, fesad çıkmadığına göre
+        ∴ ∃! Fâil-i Mutlak (Vâhid)
+```
+
+Bu, §5.2'nin birinci (mantıkî) yoluna **muhtaç olmadan**, doğrudan âlemin bilfiil işleyişinden Vahdâniyeti doğrular — iki yol birbirini teyit eder.
+
+| Netice | (T) |
+| :-- | :-- |
+| Vahdâniyet (mantıkî yol) | burhânî |
+| Vahdâniyet (Burhân-ı Temânu', Kur'ânî yol) | burhânî |
+
+### 5.3 Kıdem ve Beka
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
 | Kıdem | ق د م | "en önde olma, hiçbir şeyden sonra gelmeme" |
 | Beka | ب ق ي | "kalıcı olma, tükenmeme" |
 
-**Çoban için:** Bir mumun alevinin başı ve sonu vardır — sonradan yanar, sonra söner. Vâcib'in böyle bir başlaması veya bitmesi olsaydı, o an bir değişim geçirmiş olurdu; her değişim ise (§2) dıştan bir sebep ister — ama Vâcib hiçbir şeye muhtaç değildi. Çelişki.
+**Çoban için:** Bir mumun alevinin başı ve sonu vardır. Vâcib'in böyle bir başlaması/bitmesi olsaydı, bir değişim geçirmiş olurdu; her değişim ise (§3) dıştan bir sebep ister — Vâcib hiçbir şeye muhtaç değildi.
 
 ```
 Kıdem(x) ≔ ¬∃ bidâyet(x)      [x'in bir başlangıcı yok]
 Beka(x)  ≔ ¬∃ nihâyet(x)      [x'in bir sonu yok]
 
-bidâyet∨nihâyet ⟹ tagayyür(değişim) ⟹ ⋉(§2, müreccih zarureti) ⟹ muhtaçlık
-                                                            ⟹ ↯ Vâcib tarifiyle çelişki
+bidâyet∨nihâyet ⟹ tagayyür(değişim) ⟹ ⋉(§3, müreccih zarureti) ⟹ muhtaçlık ⟹ ↯
 ```
 
 | Netice | (T) |
 | :-- | :-- |
 | Kıdem, Beka | burhânî |
 
-### 3.3 Vahdâniyet
-
-| Kelime | Kök | Lugat mânâsı |
-| :-- | :-- | :-- |
-| Vahdâniyet | و ح د (vahd = bir olma) | "teklik, birden başka olmama" |
-| (lemma) Basitlik | ب س ط (basît = yayılmış, terkipsiz) | "parçalardan oluşmamışlık" |
-
-**Çoban için:** İki tane "Vâcib" var farz edelim, ikisi de kendiliğinden var, hiçbir şeye muhtaç değil. Ama "iki" dedin mi, aralarında bir **fark** olmalı — yoksa zaten "iki" değil "bir" olurlardı. O fark, birinde bulunup diğerinde bulunmayan bir parça demektir. Parçası olan bir şey ise, o parçaya muhtaçtır — hâlbuki Vâcib hiçbir şeye muhtaç değildi.
-
-```
-Basitlik (lemma):
-  mürekkeb(x) ⟹ ictimâ-i-ecza (parçaların bir araya gelmesi)
-             ⟹ ⋉(§2, müreccih zarureti) ⟹ muhtaç(x)
-             ⟹ ↯ Vâcib tarifiyle çelişki
-  ∴ Vâcib parçasızdır  [bu netice, isim olarak müstakil bir sıfat DEĞİLDİR]
-
-Vahdâniyet:
-  ∃x≠y (ikisi de Vâcib) ⟹ temayüz (fark) lâzım
-                        ⟹ fark = terkib(ortak-cins + ayırıcı-fasıl)
-                        ⟹ ↯ Basitlik-lemma ile çelişki
-  ∴ Vâcibü'l-Vücûd tektir
-```
-
-| Netice | (T) |
-| :-- | :-- |
-| Vahdâniyet | burhânî |
-
-### 3.4 Kıyâm bi-Nefsihî
+### 5.4 Kıyâm bi-Nefsihî
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
 | Kıyâm | ق و م | "ayakta durma, kendi başına duruş" |
 | Nefs | ن ف س | "zât, bizzat kendisi" |
 
-**Çoban için:** Bir resim, asılı olduğu duvara muhtaçtır; duvar olmadan havada asılı kalamaz. Vâcib'in böyle bir "duvara" ihtiyacı yoktur — ne bir mevzuya, ne bir şarta.
+**Çoban için:** Bir resim, asılı olduğu duvara muhtaçtır. Vâcib'in böyle bir "duvara" ihtiyacı yoktur.
 
 ```
 Kıyam-bi-Nefsihî(x) ≔ ¬∃ mevzû(x) ∧ ¬∃ şart(x)
    ⋉ Makûlât.Cevher   [Cevher tarifi: kendi başına, bir mevzuya muhtaç olmaksızın durur]
-   — Vâcib bu tarifin en tam mertebesidir: yalnız mevzûsuz değil, şartsız da kaimdir.
 ```
 
 | Netice | (T) |
 | :-- | :-- |
 | Kıyâm bi-Nefsihî | burhânî |
 
-### 3.5 Muhâlefetün li'l-Havâdis
+### 5.5 Muhâlefetün li'l-Havâdis
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
 | Muhâlefet | خ ل ف | "aykırı olma, benzememe" |
 | Havâdis | ح د ث (hudûs = sonradan olma) | "sonradan var olanlar" |
-
-**Çoban için:** §1'de gördük: bir şey ya Vâcib'dir ya Mümkin, ikisi aynı anda olamaz. Sonradan var olan (**hâdis**) her şey Mümkin sınıfındandır. Öyleyse Vâcib, hiçbir sonradan-olana, zâtında, benzemez.
 
 ```
 Vâcib ∩ Mümkin = ∅   [§1'in doğrudan neticesi]
@@ -292,22 +428,17 @@ havâdis ⊂ Mümkin
 
 ### Netice (Sıfat Değil, Sonuç): Cisim ve Mekân Reddi
 
-**Çoban için:** Cisim olmak, parçalardan (uzunluk-genişlik-derinlik) oluşmuş olmaktır — ama Vâcib parçasızdır (§3.3). "Bir yerde olmak" da bir kategoriye mahkûm olmaktır — bu da bir tür muhtaçlıktır.
-
 ```
-Cisim(x) ⟹ terkib(madde,suret,eb'ad) ⟹ ↯ Basitlik-lemma
-Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ Kıyâm-bi-Nefsihî
+Cisim(x) ⟹ terkib(madde,suret,eb'ad) ⟹ ↯ Basitlik (§5.1)
+Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ Kıyâm-bi-Nefsihî (§5.4)
 ∴  ¬Cisim(Vâcib) ∧ ¬Mekân(Vâcib)
 ```
 
-### Fasıl I §3 — Delil-Kuvveti
-
 | Netice | (T) |
 | :-- | :-- |
-| Vücud, Kıdem, Beka, Vahdâniyet, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis | burhânî |
-| Cisim/mekân reddi (sonuç) | burhânî |
+| Vücud, Vahdâniyet(×2 yol), Kıdem, Beka, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis, cisim/mekân reddi | burhânî |
 
-## 4. İsim / Sıfat Farkı, Zâtî / Sübûtî Ayrımı
+## 6. İsim / Sıfat Farkı, Zâtî / Sübûtî Ayrımı
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -316,81 +447,92 @@ Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ 
 | Zâtî | ذ ا ت | "öze ait, bizzat kendinden" |
 | Sübûtî | ث ب ت | "sabit olan, delille sonradan sabitlenen" |
 
-**Çoban için:** "İsim" bir kişiyi çağırdığın etikettir ("Ahmed"). "Sıfat" o kişinin bir özelliğidir ("cömert"). Bazı sıfatlar sırf zâttan (kimlikten) çıkar, dışarıya hiç bakmadan bilinir ("Ahmed insandır"). Bazı sıfatlar ise ancak dışarıdaki bir esere bakılarak bilinir ("Ahmed cömerttir" — bunu bilmek için onun bir vermesini görmen lâzım).
+**Çoban için:** "İsim" bir kişiyi çağırdığın etikettir ("Ahmed"). "Sıfat" o kişinin bir özelliğidir ("cömert"). Bazı sıfatlar sırf zâttan çıkar, dışarıya bakmadan bilinir. Bazı sıfatlar ancak dışarıdaki bir esere bakılarak bilinir.
 
 ```
 İsim(Zât,Sıfat) ≔ Makûlât.İzafî tatbiki
 
 Sıfat(çeşit) = { zâtî, sübûtî }     κ = lâzım-ı-zât-mı(sıfat)?
-  zâtî   : sıfat ⊳ (§1-3), esere muhtaç değil
+  zâtî   : sıfat ⊳ (§1-5), esere muhtaç değil
   sübûtî : sıfat ⊳ Lime.İllet-i-Fâiliye(âlem), esere muhtaç
 ```
 
 | Netice | (T) |
 | :-- | :-- |
 | Sıfat(çeşit) ⟺ₜ ikiliği | burhânî |
-| — her sübûtî sıfatın isbatı | ayrı, bkz. §5 |
+| — her sübûtî sıfatın isbatı | ayrı, bkz. §7 |
 
-## 5. Sıfât-ı Sübûtiyye
+## 7. Sıfât-ı Sübûtiyye
 
-**Çoban için (genel):** Şimdiye kadarki sıfatların hepsi, sırf "Vâcib" tarifinden, dışarıya hiç bakmadan çıktı. Şimdiki altı sıfat öyle çıkmaz — bunlar âlemde gördüğümüz esere (nizama, harekete, hayata) bakılarak anlaşılır. Bu bir zaaf değildir; §4'teki Sıfat(çeşit) ayrımının kendi tarifi gereği böyle olması gerekiyordu.
+**Çoban için (genel):** Şimdiye kadarki sıfatların hepsi, sırf "Vâcib" tarifinden çıktı. Şimdiki sıfatlar âlemde gördüğümüz esere bakılarak anlaşılır — bu, §6'nın kendi tarifi gereğidir, bir zaaf değildir.
 
-### 5.1 Hayat
+### 7.0 Fâil-i Muhtar mı, Mûcib bi'z-Zât mı? (Sübûtiyyeye Girmeden Evvel Kapatılması Gereken Bir Kapı)
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| İllet-i Tâmme | ع ل ل + ت م م | "eksiksiz, tam sebep" |
+| Mûcib bi'z-Zât | و ج ب | "zâtı gereği mecburen fiil işleyen" |
+| Fâil-i Muhtar | خ ي ر (ihtiyar = seçme) | "dilediğinde yapan, dilediğinde terk eden" |
+
+**Felsefecilerin itirazı:** "Vâcibü'l-Vücûd bir 'illet-i tâmme' ise, eseri (âlem) O'ndan mecburen ve gecikmeksizin sudûr eder (çıkar); öyleyse âlem de Vâcib gibi ezelî olmalıdır" (felâsifenin sudûr nazariyesi).
+
+**Çoban için:** Ateş, şartları tamam olur olmaz mecburen yakar — iradesi yoktur, "yakmayayım" diyemez. Ama bir usta, bütün malzemesi hazır olsa dahi, işini dilediği ana erteleyebilir ve dilediği şekle sokabilir — çünkü onun **iradesi** vardır.
+
+```
+Mûcib bi'z-Zât(x)  ≔  şart-tamam(x) ⟹ eser(ânî, hep-aynı, kayıtsız-şartsız)   [ateş: yanma]
+Fâil-i Muhtar(x)   ≔  şart-tamam(x) olsa dahi, x dilediği ana/sûrete
+                       TAHSİS ve TEHİR edebilir
+
+Vâcib(İrade, §7.3) ⟹ Fâil-i Muhtar(Vâcib)
+∴ ¬(Vâcib = illet-i tâmme-i mûcibe)
+∴ âlemin O'ndan sudûru İHTİYARÎdir, MECBURÎ değildir
+∴ âlemin ezelî olması ZARURÎ DEĞİLDİR — felâsifenin sudûr itirazı düşer
+```
+
+(Bu netice, §7.3'teki İrade isbatına dayanır; burada yalnız yeri işaretlenmiştir, tafsili aşağıdadır.)
+
+### 7.1 Hayat
 
 Kök: ح ي ي (hayy = diri olma).
-
-**Çoban için:** Bilen ve gücü yeten bir şey ölü olamaz — bilmek ve yapabilmek, diri olmayı gerektirir.
 
 ```
 {İlim,Kudret}(Vâcib) ⟹ Aklî-Âdî("ilim ve kudret için hayat şarttır") ⋉ ⟹ Hayat(Vâcib)
 ```
 
-### 5.2 İlim (+ Sem' ve Basar)
+### 7.2 İlim
 
-Kökler: ع ل م (ilim = bilme), س م ع (sem' = işitme), ب ص ر (basar = görme).
+Kök: ع ل م (ilim = bilme).
 
-**Çoban için:** Bir marangoz, elindeki tahtayı sandalyeye dönüştürürken, sandalyenin şeklini önceden **bilir** — bilmeden yapamaz. Âlemdeki nizam ve hikmeti gören, onu Yapan'ın da bunu bilerek yaptığını anlar.
+**Çoban için:** Bir marangoz, tahtayı sandalyeye dönüştürürken şeklini önceden **bilir** — bilmeden yapamaz.
 
 ```
 nizam/hikmet(âlem) ⟹ Lime.İllet-i-Gâiye ⟹ gaye-güden-fail ⟹ İlim(Vâcib)
-
-Sem', Basar ≔ İlim'in işitilen/görülen her şeye taalluku
-   [Ehl-i Sünnet çoğunluğu: müstakil değil, İlim'in bir yönü — bu risale bunu böyle beyan eder]
 ```
 
-### 5.3 Kudret
+**Burhân-ı Tesviye ve İtkan (Kur'ânî te'kid):**
 
-Kök: ق د ر (kadr/kudret = güç yetirme).
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Tesviye | س و ي | "düzgün, eşit kılma, düzenleme" |
+| İtkan | ت ق ن | "sağlam ve mükemmel yapma" |
 
-**Çoban için:** Yoktan bir şey var etmek, gücü olmayanın yapabileceği bir şey değildir.
-
-```
-Hudûs(âlem) [âlemin zaman içinde bir başlangıcı olması] ⟹ îcad-kudreti ⟹ Kudret(Vâcib)
-```
-
-### 5.4 Tekvin
-
-Kök: ك و ن (kevn = oluş, varlık bulma). Tekvin = "bizzat var etme fiilinin kendisi".
-
-**Çoban için — Kudret'ten farkı ne?** Bir ustanın elinde çekiç olması ("gücü var") başka şeydir, o çekici fiilen vurması ("bizzat yapıyor") başka şeydir.
+> "O Rabbin ki, yarattı ve düzene koydu (tesviye etti). O ki, ölçüyü takdir etti ve yol gösterdi." (A'lâ, 2-3)
 
 ```
-KARŞILAŞTIRMA
-  Kudret : bilkuvve iktidar (yapabilme) — ezelî, değişmez, tek
-  Tekvin : bizzat yaratma fiilinin sıfatı — Vâcib'in Hâlıkıyeti
-           bizatihi ezelîdir (§3.2, Kıdem ⋉); mahlûkun an-be-an hudûsu,
-           yalnız Kudret'in "hep hazır olması" ile açıklanamaz — çünkü
-           o zaman "ne zaman yaratılıyor" sorusu cevapsız kalır.
-∴ Tekvin(sıfat), Kudret'ten ayrı, müstakil bir sübûtî sıfattır.
+Mukaddeme 1: başlangıçtaki asıl (tohum, nutfe) kör ve şuursuz unsurların
+             basit bir terkibidir — içinde göz, kulak, hendese, gaye yoktur.
+Mukaddeme 2: bu basit asıldan çıkan netice, birbiriyle ahenkli, optik/akustik
+             kanunlarına muvafık bir göz-kulaktır.
+Kaide:       "fâkıdü'ş-şey' lâ yu'tîh" — bir şeye sahip olmayan onu veremez.
+∴ Şuursuz atomlar kendi olmayan akıllarını bir araya getirip plan kuramaz;
+  basit maddenin arkasında bir Musavvir-Hakîm mevcuttur.
 ```
 
-(Not: bu ayrım Mâturîdî kelâmına aittir; Eş'arî ekolü Tekvin'i müstakil saymaz, Kudret'in bir cüzü sayar. Bu risale Mâturîdî tercihini benimser ve bunu açıkça böyle beyan eder, gizlemez — F 2-Y.)
-
-### 5.5 İrade
+### 7.3 İrade
 
 Kök: ر و د (arzu etme, isteme).
 
-**Çoban için:** Masada iki tıpatıp aynı elma var, ikisi de eşit derecede alınabilir. Birini almak için elinin kör bir kanunla değil, **seçimle** oraya gitmesi lâzım — eşitlik kendi kendine bir tarafı seçemez.
+**Çoban için:** Masada iki tıpatıp aynı elma var. Birini almak için elinin kör bir kanunla değil, **seçimle** oraya gitmesi lâzım — eşitlik kendi kendine bir tarafı seçemez.
 
 ```
 Mümkinü'l-Vücûd(Şart) ⋉ fizik-sâbiteleri
@@ -398,18 +540,83 @@ Mümkinü'l-Vücûd(Şart) ⋉ fizik-sâbiteleri
 eşit-ihtimal ⟹ TEK tahakkuk ⟹ kanun≠fail ⟹ İrade(Vâcib)
 ```
 
-### 5.6 Kelâm
+(Bu netice §7.0'daki Fâil-i Muhtar / Mûcib bi'z-Zât ayrımının temelidir.)
+
+### 7.4 Kudret
+
+Kök: ق د ر (kadr/kudret = güç yetirme).
+
+**Çoban için:** Yoktan bir şey var etmek, gücü olmayanın yapabileceği bir şey değildir. Fakat bu delilin işlemesi için önce âlemin gerçekten **sonradan** var olduğunu (ezelî olmadığını) göstermek gerekir — aksi hâlde "yaratan bir kudret" aranamaz.
+
+**Hudûs Delili (muhtasar):**
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Hudûs | ح د ث | "sonradan var olma" |
+| A'râz | ع ر ض (çoğulu: hâller) | "geçici, arız olan nitelikler" |
+| Cevher | ج و ه ر | "sabit taşıyıcı, özdeğer" |
+
+```
+1. Cisimler (madde) daima bir hâl üzeredir (hareket/sükûn, sıcak/soğuk…);
+   hiçbir cisim a'râzdan hâlî (boş) olamaz.
+2. Her hâl (araz) hâdistir — bir öncekinin yerini alır, kendinden önce
+   yoktu, sonradan başladı.
+3. Kaide: "hâdislerden hâlî olmayan şey, kendisi de hâdistir"
+   (mâ lâ yahlû ani'l-havâdis fe-huve hâdis) — çünkü geçmişe doğru
+   sonsuz sayıda hâdisin şimdiye ulaşmış olması, sonsuzun bitirilmiş
+   olmasını gerektirir; bu ise teselsülün reddiyle (§3) aynı muhaldir.
+∴ Cisimler (âlem) hâdistir, ezelî değildir.
+```
+
+```
+Hudûs(âlem) ⟹ îcad-kudreti ⟹ Kudret(Vâcib)
+```
+
+### 7.5 Tekvin
+
+Kök: ك و ن (kevn = oluş, varlık bulma).
+
+**Çoban için — Kudret'ten farkı ne?** Bir ustanın elinde çekiç olması ("gücü var") başka şeydir, o çekici fiilen vurması ("bizzat yapıyor") başka şeydir.
+
+```
+KARŞILAŞTIRMA
+  Kudret : bilkuvve iktidar (yapabilme) — ezelî, değişmez, tek
+  Tekvin : bizzat yaratma fiilinin sıfatı — Vâcib'in Hâlıkıyeti bizatihi
+           ezelîdir (§5.3, Kıdem ⋉); mahlûkun an-be-an hudûsu, yalnız
+           Kudret'in "hep hazır olması" ile açıklanamaz.
+∴ Tekvin(sıfat), Kudret'ten ayrı, müstakil bir sübûtî sıfattır.
+```
+
+(Not: bu ayrım Mâturîdî kelâmına aittir; Eş'arî ekolü Tekvin'i müstakil saymaz, Kudret'in bir cüzü sayar. Bu risale Mâturîdî tercihini benimser ve bunu açıkça böyle beyan eder — F 2-Y.)
+
+### 7.6 Sem' ve Basar
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Sem' | س م ع | "işitme" |
+| Basar | ب ص ر | "görme" |
+
+**Tashih:** Eş'ariyye ve Mâturîdiyye **cumhuru**, Sem' ve Basar'ı zâtta kâim, **müstakil** iki sübûtî sıfat sayar — İlim'in bir yönü/uzantısı değildir. Bunları İlim'e irca etmek (indirgemek) Mu'tezile ve felâsifenin görüşüdür; bu risale Ehl-i Sünnet cumhurunun çizgisinde durur ve Sem'-Basar'ı müstakil kabul eder.
+
+```
+İlim(Vâcib, §7.2) ⟹ her mâlûma taalluk
+Sem'(Vâcib), Basar(Vâcib) ≔ İlim'den ayrı, zâtta kâim, müstakil iki sıfat
+   [Ehl-i Sünnet cumhuru; İlim'e irca Mu'tezile/felâsifeye aittir — bu risale benimsemez]
+```
+
+### 7.7 Kelâm
 
 ⊳ Fasıl II.
 
-### Fasıl I §5 — Delil-Kuvveti
+### Fasıl I §7 — Delil-Kuvveti
 
 | Netice | (T) |
 | :-- | :-- |
-| Hayat, İlim (+Sem',Basar), Kudret, Tekvin, İrade | burhânî |
+| Fâil-i Muhtar (mûcib bi'z-zât reddi) | burhânî |
+| Hayat, İlim (+Tesviye burhanı), Kudret (+Hudûs delili), Tekvin, İrade, Sem', Basar | burhânî |
 | Kelâm | ⊳ Fasıl II |
 
-## 6. Hakîm — Gaye — Şer(çeşit)
+## 8. Hakîm — Gaye — Şer(çeşit)
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -417,11 +624,11 @@ eşit-ihtimal ⟹ TEK tahakkuk ⟹ kanun≠fail ⟹ İrade(Vâcib)
 | Gaye | غ ا ي | "varılacak son nokta" |
 | Şer | ش ر ر | "kötülük" |
 
-**Çoban için:** Akıllı bir çoban sürüsünü boşuna bir yere sürmez — her hareketinin bir sebebi/gayesi vardır. Vâcib de İrade sıfatıyla (§5.5) hareket ettiğine göre, fiillerinin gayesiz (abes) olması Hikmetiyle çelişir.
+**Çoban için:** Akıllı bir çoban sürüsünü boşuna bir yere sürmez. Vâcib de İrade sıfatıyla (§7.3) hareket ettiğine göre, fiillerinin gayesiz (abes) olması Hikmetiyle çelişir.
 
 ```
 Gaye(çeşit) = { zarurî, ihtiyarî }
-  Vâcib(fiil) = ihtiyarî  ⋉ (İrade, §5.5)  ⟹  ¬abesiyet(Hakîm)
+  Vâcib(fiil) = ihtiyarî  ⋉ (İrade, §7.3)  ⟹  ¬abesiyet(Hakîm)
 
 Şer(çeşit) = { ademî, izafî }     κ = ayn-ı-vücûd-mu(şer)?
   ademî : şer = adem(hayr)                [bir hayrın yokluğu]
@@ -441,28 +648,33 @@ Hakîm ∧ Şer(mevcûd)?
 
 | Netice | (T) |
 | :-- | :-- |
-| 6-a: Hakîm ∧ Şer(mevcûd) çelişmez | burhânî |
-| 6-b: şu belirli şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
+| 8-a: Hakîm ∧ Şer(mevcûd) çelişmez | burhânî |
+| 8-b: şu belirli şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
 
 ## Fasıl I — Delil-Kuvveti Tablosu
 
 | # | Netice | (T) |
 | :-- | :-- | :-- |
-| 1 | Vücûb taksimi ⟺ₜ | burhânî |
-| 2 | Müreccih, devir-teselsül reddi, ∃!Vâcib | burhânî |
-| 3 | Vücud, Kıdem, Beka, Vahdâniyet, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis, cisim/mekân reddi | burhânî |
-| 4 | Sıfat(çeşit) ikiliği | burhânî |
-| 5 | Hayat, İlim(+Sem',Basar), Kudret, Tekvin, İrade | burhânî |
-| 6-a | Hakîm ∧ Şer çelişmez | burhânî |
-| 6-b | Ferdî şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
+| 1 | Taksim-i aklî ⟺ₜ | burhânî |
+| 2 | Mahiyette vücûdun zâidliği / Vâcib'de ayniyeti | burhânî |
+| 3 | Müreccih, devir/teselsül/tatbik reddi, ∃!Vâcib | burhânî |
+| 4 | Burhân-ı Tahsis (müstakil ikinci yol) | burhânî |
+| 5 | Vücud, Vahdâniyet(×2 yol), Kıdem, Beka, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis, cisim/mekân reddi | burhânî |
+| 6 | Sıfat(çeşit) ikiliği | burhânî |
+| 7 | Fâil-i Muhtar, Hayat, İlim(+Tesviye), Kudret(+Hudûs), Tekvin, İrade, Sem', Basar | burhânî |
+| 8-a | Hakîm ∧ Şer çelişmez | burhânî |
+| 8-b | Ferdî şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
 
-## Ek — Risale-i Nur Delilleri (Tamamlayıcı, Burhânî Çekirdeğin Yerine Değil)
+## Ek — Tamamlayıcı Deliller (Burhânî Çekirdeğin Yerine Değil)
 
 | Delil | Bağlandığı madde | Mahiyet | (T) |
 | :-- | :-- | :-- | :-- |
-| Nizam ve Mizan | §5 İrade/İlim | Şart(Mümkinü'l-Vücûd) ⋉ (küllî ölçek) | hitâbî/cedelî |
-| Teâvün | §5 İlim | Lime.İllet-i-Gâiye ⋉ (âlem, müşahede) | hitâbî/cedelî |
-| Esbâbın Acziyeti | §5 İlim/Kudret | "kanun≠fail" ⋉ (tek tek misal) | hitâbî/cedelî |
-| Cüz'iyattaki İntizam | §5 İlim | nizam ⋉ (en küçük ölçek) | hitâbî/cedelî |
-| İsimlerin Tecellisi | §4 İsim(Zât,Sıfat) | ⋉ (müşahede dili) | hitâbî/cedelî |
-| Vahdet-i Rububiyet / Kanun-u Vahdet | §3.3 Vahdâniyet | ⋉ (kozmolojik ikiz) | hitâbî/cedelî |
+| Nizam ve Mizan | §7 İrade/İlim | Şart(Mümkinü'l-Vücûd) ⋉ (küllî ölçek) | hitâbî/cedelî |
+| Teâvün | §7 İlim | Lime.İllet-i-Gâiye ⋉ (âlem, müşahede) | hitâbî/cedelî |
+| Esbâbın Acziyeti | §7 İlim/Kudret | "kanun≠fail" ⋉ (tek tek misal) | hitâbî/cedelî |
+| Cüz'iyattaki İntizam | §7 İlim | nizam ⋉ (en küçük ölçek) | hitâbî/cedelî |
+| İsimlerin Tecellisi | §6 İsim(Zât,Sıfat) | ⋉ (müşahede dili) | hitâbî/cedelî |
+| Fıtrat Hadisi ve Husayn Muhâveresi | §5.2, §4 | vicdanî ilzam — muhatabın kendi itirafından istidlâl (Buhârî, Cenâiz 92) | cedelî |
+| Burhân-ı İâde (İlk yaratılıştan ikinciye istidlâl, Yâsîn 78-79) | — | Meâd'e (öldükten sonra dirilmeye) mahsustur, Vücûd bahsine değil | ⊳ Fasıl III, madde 14'te tafsil edilecek |
+
+**Not (eksik bırakılmadığının kaydı):** Burhân-ı İâde bilerek bu fasla tam işlenmedi — çünkü o, Allah'ın varlığını değil öldükten sonra dirilmeyi (Meâd) ispat eden bir delildir ve risalenin kendi taksiminde Fasıl III'ün konusudur. Buraya yanlış yere konursa fasıllar arası taksim bozulur; bu yüzden yeri burada yalnız işaretlenmiş, tam işlenmesi Fasıl III'e bırakılmıştır — atlanmamış, ertelenmiştir.
