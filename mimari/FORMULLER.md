@@ -375,9 +375,41 @@ Nazarî Tasavvur'un (bir tarifle hâsıl olan tasavvurun) kendi iç tasnifidir; 
 
 ## Vücûb
 
+Tasdik(Vücûb) = { vâcib, mümkün, mümteni }
+  (tam kıstas, ardışık Nakzeyn: yokluğu muhal mi → vâcib; değilse varlığı muhal mi → mümteni, değilse mümkün.)
+
 Teşrih(Vücûb) = { Vâcib, Mümkün }
+  (Tasdik(Vücûb)'un Teşrih'e daralmış tatbikidir — bir kenar zaten listede ya vardır ya yoktur, "mümteni" bir kenar için anlamsızdır, o yüzden yalnız iki derece kullanılır.)
 
 Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün varsayılandır ve etiketlenmez**; yalnız **Vâcib** olan unsur `(Vâcib)` ile işaretlenir. Bu, hem az başlıkla idare eder hem de yazımı sadeleştirir.
+
+---
+
+## Kemiyet
+
+Tasdik(Kemiyet) = { küllî, cüz'î }
+  (kıstas: hüküm mevzuun bütün fertlerine mi, bir kısmına/birine mi şamil.)
+
+---
+
+## Keyfiyet
+
+Tasdik(Keyfiyet) = { mûcibe, sâlibe }
+  (kıstas: hüküm isbat mı ediyor, nefy mi. Kemiyet × Keyfiyet çarpımı meşhur dörtlüyü verir: küllî-mûcibe, küllî-sâlibe, cüz'î-mûcibe, cüz'î-sâlibe — Aristo kıyas nizamının üzerine kurulduğu taban.)
+
+---
+
+## Basitlik
+
+Basitlik(çeşit) = { basit, mürekkep }
+  (kıstas: tek cüzden mi, birden fazla cüzün birleşiminden mi ibaret — hem Tasavvur'a hem Tasdik'e tatbik edilir.)
+
+---
+
+## Menşe
+
+Tasavvur(Menşe) = { hissî, hayalî, vehmî, aklî }
+  (ardışık Nakzeyn: madde ile birlikte, o an hazır mı → hissî; değilse sırf suret mi (mana yok) → hayalî; değilse taşıdığı mana cüz'î mi küllî mi → vehmî / aklî. Nefis hiyerarşimizin (Hissi müşterek, Hafıza/Mütehayyile, Vahime, Akıl) mantık tarafındaki karşılığıdır.)
 
 ---
 
@@ -397,7 +429,7 @@ Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün var
 - Bünye, Mevki, Zaruret (Rükün/Şart/Araz/Karîne dörtlüsü) → `izahat/rukun_sart/genel.md`
 - Metâlib → henüz izahat dosyası açılmadı
 - Mâlum → `izahat/malum/genel.md`
-- Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit) → henüz ayrı izahat dosyası açılmadı; temel usul (kıstas+Nakzeyn+isimlendirme+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'ye işlendi
+- Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit), Tasavvur(Menşe), Tasdik(Vücûb/Kemiyet/Keyfiyet), Basitlik(çeşit) → henüz ayrı izahat dosyası açılmadı; temel usul (kıstas+Nakzeyn+isimlendirme+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'ye işlendi
 
 ## Açık notlar (41-meleke şebekesi)
 
