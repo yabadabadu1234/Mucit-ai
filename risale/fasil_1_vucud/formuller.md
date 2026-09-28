@@ -1,6 +1,6 @@
 # Fasıl I — Vücûd Formülleri
 
-(Çekirdek `mimari/FORMULLER.md`den aktarıldı; risale bahsinde geliştirilen yeni formüller —Hakk-ı Vücûd, Burhân-ı Tatbik, Burhân-ı Tahsis, Burhân-ı Temânu', Burhân-ı Tesviye, Fâil-i Muhtar/Mûcib bi'z-Zât, Hudûs Delili, Sıfât-ı Sübûtiyye'nin tamamı— yalnız burada, risale/fasil_1_vucud/ altında mühürlüdür.)
+(Çekirdek `mimari/FORMULLER.md`den aktarıldı; risale bahsinde geliştirilen yeni formüller —Hakk-ı Vücûd, Burhân-ı Tatbik, Devam-ı Hudûs (deizm ve İbn Sînâ'nın cüz'iyyat iddiasının reddi), Burhân-ı Tahsis, Burhân-ı Temânu', Burhân-ı Tesviye, Fâil-i Muhtar/Mûcib bi'z-Zât, Hudûs Delili, Sıfât-ı Sübûtiyye'nin tamamı— yalnız burada, risale/fasil_1_vucud/ altında mühürlüdür.)
 
 ## Notasyon
 
@@ -108,6 +108,41 @@ Mâhiyet(x)≠Vücûd(x) ⟹ hârice-çıkış(x) = ilave ⟹ müreccih-i-hâric
     Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯(Kıyam)
 ```
 
+## Devam-ı Hudûs — İstimrar-ı Halk (Deizmin ve İbn Sînâ'nın Cüz'iyyat İddiasının Reddi)
+
+```
+A) İstimrar-ı Halk (deizmin reddi):
+   Faraziye (ibtal edilecek): ∃t, ∃mümkin(x): bağımsız(x,t)              ["deizm"]
+     bağımsız(x,t) ⟹ ¬muhtaç(x,müreccih,t) ⟹ Mâhiyet(x)=Vücûd(x)  [o an]
+     ⟹ ↯ Hakk-ı Vücûd: Mâhiyet(x)≠Vücûd(x), mümkin-mâhiyetin SABİT vasfıdır
+   ∴ ¬∃t: bağımsız(mümkin,t)
+   ∴ ∀t: muhtaç(mümkin, Vâcibü'l-Vücûd, t)
+   ∴ Halk : T → Vücûd   [ân değil, kesintisiz bir fonksiyon]
+
+B) Cüz'iyyatın Bilinmesi (İbn Sînâ'nın "yalnız küllî bilgi" iddiasının reddi):
+   İbn Sînâ (iddia):  Bilgi(Vâcib, cüz'î) = ∅
+     gerekçe: cüz'iyyat-bilgisi ⟹ zamanla-değişen-bilgi ⟹ tagayyür(Zât) ⟹ ↯(Kıdem)
+
+   Reddiye (A ⋉): ∀t: Halk(mümkin, t)
+     Halk(x,t) ⟹ İlim(fâil,x,t) zarurîdir   [bir fail, yarattığını yaratırken bilmeden yaratamaz]
+     ∀t: Halk(mümkin,t) ⟹ ∀t: İlim(Vâcib, mümkin, t)
+   ∴ İlim(Vâcib) cüz'iyyatı ihtiva eder — İbn Sînâ'nın iddiası düşer
+
+   İtiraza cevap (tagayyür şüphesi):
+     değişen = TAALLUK (izafî nispet, ⋉ Makûlât.İzafî), değişen ≠ Zât'taki sıfat
+   ∴ Kıdem ile mutlak-cüz'î-ilim arasında tenakuz yoktur
+```
+
+## İsim / Sıfat(çeşit)
+
+```
+İsim(Zât,Sıfat) ≔ Makûlât.İzafî tatbiki
+
+Sıfat(çeşit) = { zâtî, sübûtî }     κ = lâzım-ı-zât-mı(sıfat)?
+  zâtî   : sıfat ⊳ Taksim-i Aklî, Hakk-ı Vücûd, Burhân-ı İmkân, Sıfât-ı Selbiyye — esere muhtaç değil
+  sübûtî : sıfat ⊳ Lime.İllet-i-Fâiliye(âlem) — esere muhtaç
+```
+
 ## Sıfât-ı İlâhiyye — Geleneksel Yerleşim (13 İsim)
 
 ```
@@ -175,6 +210,7 @@ Hayat  ≔ {İlim,Kudret} ⋉ Aklî-Âdî("ilim∧kudret→hayat şarttır")
 İlim   ≔ nizam(âlem) ⋉ Lime.İllet-i-Gâiye ⟹ gaye-güden-fail
        + Burhân-ı Tesviye (A'lâ 2-3): asıl(basit,şuursuz) ↝ netice(müntazam,ahenkli)
          kaide: fâkıdü'ş-şey' lâ yu'tîh ⟹ Musavvir-Hakîm zarurî
+       + cüz'iyyatı da ihtiva eder — bkz. Devam-ı Hudûs.B (İbn Sînâ reddi)
 
 İrade  ≔ Mümkinü'l-Vücûd(Şart) ⋉ fizik-sâbiteleri
        κ=zarurî-bizatihî(değer)? ¬tenakuz(değer)⟹mümkün(değer)

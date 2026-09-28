@@ -59,7 +59,7 @@
                            └──────────┘
 ```
 
-(Her iki soru da Nakzeyn Kanunu'nun tatbikidir — bu yüzden bu üçlü bölüş hiçbir dördüncü ihtimal bırakmaz, ⟺ₜ. Bu taksimin yalnız zihinde kalan soyut bir oyun olmadığı, bizzat hâricî âlemdeki **tahsis** olgusuyla da doğrulandığı §4'te ayrıca gösterilecektir.)
+(Her iki soru da Nakzeyn Kanunu'nun tatbikidir — bu yüzden bu üçlü bölüş hiçbir dördüncü ihtimal bırakmaz, ⟺ₜ. Bu taksimin yalnız zihinde kalan soyut bir oyun olmadığı, bizzat hâricî âlemdeki **tahsis** olgusuyla da doğrulandığı §5'te ayrıca gösterilecektir.)
 
 ```
 Tasdik(Vücûb) = { vâcib, mümkün, mümteni }
@@ -232,9 +232,95 @@ Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
 | :-- | :-- |
 | ∃! Vâcibü'l-Vücûd | burhânî |
 
-## 4. Kur'ânî Usul — Burhân-ı Tahsis (Müstakil, Aynı Neticeye Giden İkinci Yol)
+## 4. Devam-ı Hudûs — İstimrar-ı Halk (Deizmin ve İbn Sînâ'nın "Yalnız Küllî Bilgi" İddiasının Reddi)
 
-**Bir tenbih:** §1-3'teki yol, zihinden başlayan soyut bir istidlâldir (Burhân-ı İmkân). Kur'ân-ı Kerîm'in bizzat kullandığı yol ise, zihinde değil **doğrudan hâricî âlemde müşahede edilen bir olguyla** başlar: sonsuz ihtimal içinden tek bir sûretin seçilmiş (tahsis edilmiş) olması. Bu, felsefî yolun yerine geçmez — ona **muhtaç olmayan, kendi başına yeterli, müstakil** bir ikinci burhandır.
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Devam | د و م | "sürme, kesintisiz sürdürme" |
+| İstimrar | م ر ر | "aralıksız devam etme" |
+| Halk | خ ل ق | "yaratma, yoktan var etme" |
+| Deizm | (Batı menşeli) | "Allah'ı yalnız ilk yaratıcı sayıp âlemi sonra kendi hâline bıraktığını iddia eden görüş" |
+| Cüz'î | ج ز ء | "tikel, tek bir fert" |
+| Küllî | ك ل ل | "tümel, genel kavram" |
+
+**Çoban için (giriş):** Bir bebek doğduktan sonra da anne sütüne muhtaçtır; "bir kere doğdum, artık kendi başımayım" diyemez. Mümkin bir varlık da (§1-3) var olmak için mâhiyetine sonradan giydirilen bir "vücud" elbisesine muhtaçtı (§2). Bu elbise ona **bir kere mi** giydiriliyor, yoksa **her an yeniden mi** giydiriliyor?
+
+### 4.1 İstimrar-ı Halk — Deizmin Reddi
+
+**Çoban için:** Deizm der ki: "Allah âlemi bir kere yarattı, sonra kendi hâline bıraktı; âlem artık kendi kendine dönüyor." Bu doğru olabilir mi?
+
+```
+Faraziye (deizmin iddiası): mümkin x, bir t anında Vâcib'den BAĞIMSIZ var olsun
+                     │
+                     ▼
+       x, o t anında dıştan hiçbir sebebe muhtaç değil
+                     │
+                     ▼
+       x, o an kendi kendine yeterli ⟹ Mâhiyet(x) = Vücûd(x)   [o an için]
+                     │
+                     ▼
+       ama Mâhiyet=Vücûd ayniyeti YALNIZ Vâcib'in tarifidir (§2)
+                     │
+                     ▼
+   ↯  x hem mümkin (Mâhiyet≠Vücûd, sabit vasıf) hem Vâcib (Mâhiyet=Vücûd)
+      olamaz — Nakzeyn ihlâli
+```
+
+**Netice:** Hiçbir t anında bir mümkin, Vâcib'den bağımsız olamaz. Demek yaratma (halk), bir kerelik bir hâdise değil, **her anda kesintisiz süren bir fiildir**.
+
+```
+Faraziye (ibtal edilecek): ∃t, ∃mümkin(x): bağımsız(x,t)                  ["deizm"]
+  bağımsız(x,t) ⟹ ¬muhtaç(x,müreccih,t) ⟹ Mâhiyet(x)=Vücûd(x)  [o an]
+  ⟹ ↯ (§2): Mâhiyet(x)≠Vücûd(x), mümkin-mâhiyetin SABİT vasfıdır
+∴ ¬∃t: bağımsız(mümkin,t)
+∴ ∀t: muhtaç(mümkin, Vâcib, t)
+∴ Halk : T → Vücûd   [ân değil, kesintisiz bir fonksiyon — "deizm" muhaldir]
+```
+
+| Netice | (T) |
+| :-- | :-- |
+| Deizm muhaldir; halk kesintisiz bir fonksiyondur | burhânî |
+
+### 4.2 Cüz'iyyatın Bilinmesi — İbn Sînâ'nın "Yalnız Küllî Bilgi" İddiasının Reddi
+
+**İbn Sînâ'nın iddiası:** Allah cüz'iyyatı (tikel, zamana bağlı fertleri) bizzat/doğrudan bilmez, yalnız küllî (genel, değişmez) bir tarzda bilir — çünkü cüz'iyyatın bilinmesi, zamanla değişen bir bilgiyi, dolayısıyla Zât'ta bir değişimi (tagayyürü) gerektirir.
+
+**Çoban için:** Bir ressam, her fırça darbesini bizzat kendisi atıyorsa, "resmin genel taslağını biliyorum ama şu an attığım şu darbenin nereye değdiğini bilmiyorum" diyemez — çünkü darbeyi bizzat O atıyor.
+
+```
+İbn Sînâ (iddia):  Bilgi(Vâcib, cüz'î) = ∅   [yalnız Bilgi(Vâcib,küllî) var]
+   gerekçesi: cüz'iyyatın bilinmesi ⟹ zamanla-değişen-bilgi ⟹ tagayyür(Zât) ⟹ ↯(Kıdem, §6.3)
+
+Reddiye (§4.1 ⋉): ∀t: Halk(mümkin, t)                      [devam-ı hudûs, §4.1'de ispatlandı]
+   Halk(x,t) [bizzat yaratma fiili] ⟹ İlim(fâil,x,t) zarurîdir
+      [bir fail, bizzat yarattığı şeyi, yarattığı ânda bilmeden yaratamaz — §8.2 İlim'in temel formülü]
+   ∀t: Halk(mümkin,t) ⟹ ∀t: İlim(Vâcib, mümkin, t)
+∴ İlim(Vâcib) cüz'iyyatı da ihtiva eder — İbn Sînâ'nın "yalnız küllî" iddiası düşer
+```
+
+**Bir itiraza cevap (tagayyür şüphesi):** "Cüz'î bilgi zamanla değişen nesnelere taalluk eder, öyleyse Zât'ta değişim olmaz mı?"
+
+```
+Cevap: değişen, bilginin kendisi (Zât'taki sıfat) değil, bilginin nesnesiyle
+       kurduğu TAALLUK'tur (izafî bir nispet) — [⋉ Makûlât.İzafî, §7]
+       izafî nispetin değişmesi, Zât'ın kendisinde bir tagayyür gerektirmez
+∴ Kıdem (§6.3) ile mutlak-cüz'î-ilim arasında tenakuz yoktur
+```
+
+| Netice | (T) |
+| :-- | :-- |
+| İlim(Vâcib) cüz'iyyatı ihtiva eder; İbn Sînâ'nın iddiası düşer | burhânî |
+
+### Fasıl I §4 — Delil-Kuvveti
+
+| Netice | (T) |
+| :-- | :-- |
+| Deizmin reddi (İstimrar-ı Halk) | burhânî |
+| İbn Sînâ'nın "yalnız küllî bilgi" iddiasının reddi | burhânî |
+
+## 5. Kur'ânî Usul — Burhân-ı Tahsis (Müstakil, Aynı Neticeye Giden İkinci Yol)
+
+**Bir tenbih:** §1-3'teki yol, zihinden başlayan soyut bir istidlâldir (Burhân-ı İmkân). Kur'ân-ı Kerîm'in bizzat kullandığı yol ise, zihinde değil **doğrudan hâricî âlemde müşahede edilen bir olguyla** başlar: sonsuz ihtimal içinden tek bir sûretin seçilmiş (tahsis edilmiş) olması. Bu, felsefî yolun yerine geçmez; ona **muhtaç olmayan, kendi başına yeterli, müstakil** bir ikinci burhandır.
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -244,7 +330,7 @@ Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
 
 **Çoban için:** Bir su damlasını, bir tohumu, bir hücreyi düşün. Bu madde, teorik olarak milyarlarca farklı şekle, boyuta, göreve girebilirdi — hepsi aklen eşit derecede mümkündü. Ama bu tohum, o milyarlarca ihtimalden **tam belirli, hendesî bir tek şekle** (mesela bir gözün optik ölçülerine) sokulmuş. Kör ve şuursuz madde, bilmediği, gaye gütmediği bir şeyi **seçemez**. Öyleyse bu seçimi (tahsisi) yapan, bilen ve dileyen bir Fâil olmalı.
 
-### 4.1 Dört İhtimalin Taraması (Tûr, 35-36)
+### 5.1 Dört İhtimalin Taraması (Tûr, 35-36)
 
 > "Yoksa onlar hiçbir şey olmaksızın (kendiliğinden) mi yaratıldılar? Yoksa bizzat yaratanlar kendileri midir? Yoksa gökleri ve yeri onlar mı yarattı? Hayır, onlar kesin bir bilgiye (yakîne) sahip değillerdir." (Tûr, 35-36)
 
@@ -269,7 +355,7 @@ Bu ayet, aklın önüne dört ve yalnız dört ihtimal koyar:
 
 (İlk üç ihtimalin reddi, §3'te tafsilen kurulan aynı üç burhandır — burada yalnız hatırlatılır; dördüncü ihtimal, aynı §3'ün vardığı neticenin Kur'ânî bir tekrarı değil, ona hâricî bir müşahededen bağımsızca ulaşan **ikinci bir yoldur**.)
 
-### 4.2 Tahsisin Kendisi: "Kader" Olgusu (Kamer, 49)
+### 5.2 Tahsisin Kendisi: "Kader" Olgusu (Kamer, 49)
 
 > "İnnâ külle şey'in halaknâhu bi-kader" (Biz her şeyi bir ölçüyle/belirli bir takdir ile yarattık — Kamer, 49)
 
@@ -286,20 +372,20 @@ Tahsis(x)       ≔ x, bilfiil bu sonsuz ihtimalden yalnız BİR sûrete tatbik 
   + KUDRET (hârice çıkarma) sahibi bir Fâil-i Muhtar ile mümkündür
 ```
 
-### 4.3 İki Yolun Mukayesesi
+### 5.3 İki Yolun Mukayesesi
 
-| Cihet | Burhân-ı İmkân (§1-3) | Burhân-ı Tahsis (§4) |
+| Cihet | Burhân-ı İmkân (§1-3) | Burhân-ı Tahsis (§5) |
 | :-- | :-- | :-- |
 | Çıkış noktası | zihindeki mâhiyet/vücûd mefhumu | hâriçte müşahede edilen tahsis, ölçü, sûret |
 | İlk vardığı sıfat | soyut bir "Vâcibü'l-Vücûd" | doğrudan Âlim, Mürîd, Kadîr bir Fâil |
-| Zayıf noktası (dikkat edilmezse) | İrade sıfatına geçiş ayrı bir adım ister (§7.3'te kapatılır) | — |
+| Zayıf noktası (dikkat edilmezse) | İrade sıfatına geçiş ayrı bir adım ister (§8.3'te kapatılır) | — |
 | Hitap sahası | mantık tahsili görmüş zihinler | çobandan riyaziyeciye, herkes |
 
 | Netice | (T) |
 | :-- | :-- |
 | Burhân-ı Tahsis: Âlim+Mürîd+Kadîr bir Fâil zarurîdir | burhânî |
 
-## 5. Sıfât-ı Selbiyye — Zâta Ait Tenzihât
+## 6. Sıfât-ı Selbiyye — Zâta Ait Tenzihât
 
 ### Geleneksel Yerleşim
 
@@ -313,11 +399,11 @@ Ehl-i Sünnet kelâmında Allah'ın sıfatları üç grupta sayılır:
 
 **Not:** "Basitlik" (terkipsizlik) bu on üç isimden **biri değildir**. Aşağıda yalnız **Vahdâniyet**i ispatlamak için kullanılan bir **ara-basamak**tır (lemma) — kendi başına bir sıfat adı olarak zikredilmez.
 
-### 5.0 Vücud
+### 6.0 Vücud
 
-Zaten §1-4'te ispat edildi: ∃! Vâcibü'l-Vücûd (iki müstakil yoldan).
+Zaten §1-3'te (Burhân-ı İmkân) ve §5'te (Burhân-ı Tahsis) ispat edildi: ∃! Vâcibü'l-Vücûd (iki müstakil yoldan). §4, bu vücûdun bir ânlık hâdise değil kesintisiz bir fiil olduğunu ayrıca gösterdi.
 
-### 5.1 Basitlik (Lemma)
+### 6.1 Basitlik (Lemma)
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -332,19 +418,19 @@ mürekkeb(x) ⟹ ictimâ-i-ecza (parçaların bir araya gelmesi)
 ∴ Vâcib parçasızdır   [bu netice müstakil bir sıfat adı DEĞİLDİR — bkz. yukarıki not]
 ```
 
-### 5.2 Vahdâniyet
+### 6.2 Vahdâniyet
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
 | Vahdâniyet | و ح د (vahd = bir olma) | "teklik, birden başka olmama" |
 | Temânu' | م ن ع (karşılıklı men/engelleme) | "iki iradenin çatışması" |
 
-**Çoban için (birinci yol — mantıkî):** İki "Vâcib" var farz edelim. "İki" dedin mi aralarında bir fark olmalı — yoksa "bir" olurlardı. O fark, birinde bulunup diğerinde bulunmayan bir parça demektir; parçası olan bir şey ise (§5.1) muhtaçtır.
+**Çoban için (birinci yol — mantıkî):** İki "Vâcib" var farz edelim. "İki" dedin mi aralarında bir fark olmalı — yoksa "bir" olurlardı. O fark, birinde bulunup diğerinde bulunmayan bir parça demektir; parçası olan bir şey ise (§6.1) muhtaçtır.
 
 ```
 ∃x≠y (ikisi de Vâcib) ⟹ temayüz (fark) lâzım
                       ⟹ fark = terkib(ortak-cins + ayırıcı-fasıl)
-                      ⟹ ↯ Basitlik (§5.1) ile çelişki
+                      ⟹ ↯ Basitlik (§6.1) ile çelişki
 ∴ Vâcibü'l-Vücûd tektir
 ```
 
@@ -364,14 +450,14 @@ Netice: âlemde nizam bilfiil devam ettiğine, fesad çıkmadığına göre
         ∴ ∃! Fâil-i Mutlak (Vâhid)
 ```
 
-Bu, §5.2'nin birinci (mantıkî) yoluna **muhtaç olmadan**, doğrudan âlemin bilfiil işleyişinden Vahdâniyeti doğrular — iki yol birbirini teyit eder.
+Bu, §6.2'nin birinci (mantıkî) yoluna **muhtaç olmadan**, doğrudan âlemin bilfiil işleyişinden Vahdâniyeti doğrular — iki yol birbirini teyit eder.
 
 | Netice | (T) |
 | :-- | :-- |
 | Vahdâniyet (mantıkî yol) | burhânî |
 | Vahdâniyet (Burhân-ı Temânu', Kur'ânî yol) | burhânî |
 
-### 5.3 Kıdem ve Beka
+### 6.3 Kıdem ve Beka
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -391,7 +477,7 @@ bidâyet∨nihâyet ⟹ tagayyür(değişim) ⟹ ⋉(§3, müreccih zarureti) �
 | :-- | :-- |
 | Kıdem, Beka | burhânî |
 
-### 5.4 Kıyâm bi-Nefsihî
+### 6.4 Kıyâm bi-Nefsihî
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -409,7 +495,7 @@ Kıyam-bi-Nefsihî(x) ≔ ¬∃ mevzû(x) ∧ ¬∃ şart(x)
 | :-- | :-- |
 | Kıyâm bi-Nefsihî | burhânî |
 
-### 5.5 Muhâlefetün li'l-Havâdis
+### 6.5 Muhâlefetün li'l-Havâdis
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -429,8 +515,8 @@ havâdis ⊂ Mümkin
 ### Netice (Sıfat Değil, Sonuç): Cisim ve Mekân Reddi
 
 ```
-Cisim(x) ⟹ terkib(madde,suret,eb'ad) ⟹ ↯ Basitlik (§5.1)
-Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ Kıyâm-bi-Nefsihî (§5.4)
+Cisim(x) ⟹ terkib(madde,suret,eb'ad) ⟹ ↯ Basitlik (§6.1)
+Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ Kıyâm-bi-Nefsihî (§6.4)
 ∴  ¬Cisim(Vâcib) ∧ ¬Mekân(Vâcib)
 ```
 
@@ -438,7 +524,7 @@ Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ 
 | :-- | :-- |
 | Vücud, Vahdâniyet(×2 yol), Kıdem, Beka, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis, cisim/mekân reddi | burhânî |
 
-## 6. İsim / Sıfat Farkı, Zâtî / Sübûtî Ayrımı
+## 7. İsim / Sıfat Farkı, Zâtî / Sübûtî Ayrımı
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -453,20 +539,20 @@ Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ 
 İsim(Zât,Sıfat) ≔ Makûlât.İzafî tatbiki
 
 Sıfat(çeşit) = { zâtî, sübûtî }     κ = lâzım-ı-zât-mı(sıfat)?
-  zâtî   : sıfat ⊳ (§1-5), esere muhtaç değil
+  zâtî   : sıfat ⊳ (§1-6), esere muhtaç değil
   sübûtî : sıfat ⊳ Lime.İllet-i-Fâiliye(âlem), esere muhtaç
 ```
 
 | Netice | (T) |
 | :-- | :-- |
 | Sıfat(çeşit) ⟺ₜ ikiliği | burhânî |
-| — her sübûtî sıfatın isbatı | ayrı, bkz. §7 |
+| — her sübûtî sıfatın isbatı | ayrı, bkz. §8 |
 
-## 7. Sıfât-ı Sübûtiyye
+## 8. Sıfât-ı Sübûtiyye
 
-**Çoban için (genel):** Şimdiye kadarki sıfatların hepsi, sırf "Vâcib" tarifinden çıktı. Şimdiki sıfatlar âlemde gördüğümüz esere bakılarak anlaşılır — bu, §6'nın kendi tarifi gereğidir, bir zaaf değildir.
+**Çoban için (genel):** Şimdiye kadarki sıfatların hepsi, sırf "Vâcib" tarifinden çıktı. Şimdiki sıfatlar âlemde gördüğümüz esere bakılarak anlaşılır — bu, §7'nin kendi tarifi gereğidir, bir zaaf değildir.
 
-### 7.0 Fâil-i Muhtar mı, Mûcib bi'z-Zât mı? (Sübûtiyyeye Girmeden Evvel Kapatılması Gereken Bir Kapı)
+### 8.0 Fâil-i Muhtar mı, Mûcib bi'z-Zât mı? (Sübûtiyyeye Girmeden Evvel Kapatılması Gereken Bir Kapı)
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -483,15 +569,15 @@ Mûcib bi'z-Zât(x)  ≔  şart-tamam(x) ⟹ eser(ânî, hep-aynı, kayıtsız-�
 Fâil-i Muhtar(x)   ≔  şart-tamam(x) olsa dahi, x dilediği ana/sûrete
                        TAHSİS ve TEHİR edebilir
 
-Vâcib(İrade, §7.3) ⟹ Fâil-i Muhtar(Vâcib)
+Vâcib(İrade, §8.3) ⟹ Fâil-i Muhtar(Vâcib)
 ∴ ¬(Vâcib = illet-i tâmme-i mûcibe)
 ∴ âlemin O'ndan sudûru İHTİYARÎdir, MECBURÎ değildir
 ∴ âlemin ezelî olması ZARURÎ DEĞİLDİR — felâsifenin sudûr itirazı düşer
 ```
 
-(Bu netice, §7.3'teki İrade isbatına dayanır; burada yalnız yeri işaretlenmiştir, tafsili aşağıdadır.)
+(Bu netice, §8.3'teki İrade isbatına dayanır; burada yalnız yeri işaretlenmiştir, tafsili aşağıdadır.)
 
-### 7.1 Hayat
+### 8.1 Hayat
 
 Kök: ح ي ي (hayy = diri olma).
 
@@ -499,7 +585,7 @@ Kök: ح ي ي (hayy = diri olma).
 {İlim,Kudret}(Vâcib) ⟹ Aklî-Âdî("ilim ve kudret için hayat şarttır") ⋉ ⟹ Hayat(Vâcib)
 ```
 
-### 7.2 İlim
+### 8.2 İlim
 
 Kök: ع ل م (ilim = bilme).
 
@@ -528,7 +614,9 @@ Kaide:       "fâkıdü'ş-şey' lâ yu'tîh" — bir şeye sahip olmayan onu ve
   basit maddenin arkasında bir Musavvir-Hakîm mevcuttur.
 ```
 
-### 7.3 İrade
+**Cüz'iyyatın bilinmesi:** İlim(Vâcib) yalnız küllîyâta değil cüz'iyyata da taalluk eder — bu, İbn Sînâ'nın "Vâcib yalnız küllî bilir" iddiasına karşı §4.2'de ayrıca ve tafsilen ispat edildi (devam-ı hudûsun zarurî neticesi olarak).
+
+### 8.3 İrade
 
 Kök: ر و د (arzu etme, isteme).
 
@@ -540,9 +628,9 @@ Mümkinü'l-Vücûd(Şart) ⋉ fizik-sâbiteleri
 eşit-ihtimal ⟹ TEK tahakkuk ⟹ kanun≠fail ⟹ İrade(Vâcib)
 ```
 
-(Bu netice §7.0'daki Fâil-i Muhtar / Mûcib bi'z-Zât ayrımının temelidir.)
+(Bu netice §8.0'daki Fâil-i Muhtar / Mûcib bi'z-Zât ayrımının temelidir.)
 
-### 7.4 Kudret
+### 8.4 Kudret
 
 Kök: ق د ر (kadr/kudret = güç yetirme).
 
@@ -572,7 +660,7 @@ Kök: ق د ر (kadr/kudret = güç yetirme).
 Hudûs(âlem) ⟹ îcad-kudreti ⟹ Kudret(Vâcib)
 ```
 
-### 7.5 Tekvin
+### 8.5 Tekvin
 
 Kök: ك و ن (kevn = oluş, varlık bulma).
 
@@ -582,14 +670,14 @@ Kök: ك و ن (kevn = oluş, varlık bulma).
 KARŞILAŞTIRMA
   Kudret : bilkuvve iktidar (yapabilme) — ezelî, değişmez, tek
   Tekvin : bizzat yaratma fiilinin sıfatı — Vâcib'in Hâlıkıyeti bizatihi
-           ezelîdir (§5.3, Kıdem ⋉); mahlûkun an-be-an hudûsu, yalnız
+           ezelîdir (§6.3, Kıdem ⋉); mahlûkun an-be-an hudûsu, yalnız
            Kudret'in "hep hazır olması" ile açıklanamaz.
 ∴ Tekvin(sıfat), Kudret'ten ayrı, müstakil bir sübûtî sıfattır.
 ```
 
 (Not: bu ayrım Mâturîdî kelâmına aittir; Eş'arî ekolü Tekvin'i müstakil saymaz, Kudret'in bir cüzü sayar. Bu risale Mâturîdî tercihini benimser ve bunu açıkça böyle beyan eder — F 2-Y.)
 
-### 7.6 Sem' ve Basar
+### 8.6 Sem' ve Basar
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -599,24 +687,24 @@ KARŞILAŞTIRMA
 **Tashih:** Eş'ariyye ve Mâturîdiyye **cumhuru**, Sem' ve Basar'ı zâtta kâim, **müstakil** iki sübûtî sıfat sayar — İlim'in bir yönü/uzantısı değildir. Bunları İlim'e irca etmek (indirgemek) Mu'tezile ve felâsifenin görüşüdür; bu risale Ehl-i Sünnet cumhurunun çizgisinde durur ve Sem'-Basar'ı müstakil kabul eder.
 
 ```
-İlim(Vâcib, §7.2) ⟹ her mâlûma taalluk
+İlim(Vâcib, §8.2) ⟹ her mâlûma taalluk
 Sem'(Vâcib), Basar(Vâcib) ≔ İlim'den ayrı, zâtta kâim, müstakil iki sıfat
    [Ehl-i Sünnet cumhuru; İlim'e irca Mu'tezile/felâsifeye aittir — bu risale benimsemez]
 ```
 
-### 7.7 Kelâm
+### 8.7 Kelâm
 
 ⊳ Fasıl II.
 
-### Fasıl I §7 — Delil-Kuvveti
+### Fasıl I §8 — Delil-Kuvveti
 
 | Netice | (T) |
 | :-- | :-- |
 | Fâil-i Muhtar (mûcib bi'z-zât reddi) | burhânî |
-| Hayat, İlim (+Tesviye burhanı), Kudret (+Hudûs delili), Tekvin, İrade, Sem', Basar | burhânî |
+| Hayat, İlim (+Tesviye burhanı, +cüz'iyyat ⊳§4.2), Kudret (+Hudûs delili), Tekvin, İrade, Sem', Basar | burhânî |
 | Kelâm | ⊳ Fasıl II |
 
-## 8. Hakîm — Gaye — Şer(çeşit)
+## 9. Hakîm — Gaye — Şer(çeşit)
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -624,11 +712,11 @@ Sem'(Vâcib), Basar(Vâcib) ≔ İlim'den ayrı, zâtta kâim, müstakil iki sı
 | Gaye | غ ا ي | "varılacak son nokta" |
 | Şer | ش ر ر | "kötülük" |
 
-**Çoban için:** Akıllı bir çoban sürüsünü boşuna bir yere sürmez. Vâcib de İrade sıfatıyla (§7.3) hareket ettiğine göre, fiillerinin gayesiz (abes) olması Hikmetiyle çelişir.
+**Çoban için:** Akıllı bir çoban sürüsünü boşuna bir yere sürmez. Vâcib de İrade sıfatıyla (§8.3) hareket ettiğine göre, fiillerinin gayesiz (abes) olması Hikmetiyle çelişir.
 
 ```
 Gaye(çeşit) = { zarurî, ihtiyarî }
-  Vâcib(fiil) = ihtiyarî  ⋉ (İrade, §7.3)  ⟹  ¬abesiyet(Hakîm)
+  Vâcib(fiil) = ihtiyarî  ⋉ (İrade, §8.3)  ⟹  ¬abesiyet(Hakîm)
 
 Şer(çeşit) = { ademî, izafî }     κ = ayn-ı-vücûd-mu(şer)?
   ademî : şer = adem(hayr)                [bir hayrın yokluğu]
@@ -648,8 +736,8 @@ Hakîm ∧ Şer(mevcûd)?
 
 | Netice | (T) |
 | :-- | :-- |
-| 8-a: Hakîm ∧ Şer(mevcûd) çelişmez | burhânî |
-| 8-b: şu belirli şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
+| 9-a: Hakîm ∧ Şer(mevcûd) çelişmez | burhânî |
+| 9-b: şu belirli şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
 
 ## Fasıl I — Delil-Kuvveti Tablosu
 
@@ -658,23 +746,24 @@ Hakîm ∧ Şer(mevcûd)?
 | 1 | Taksim-i aklî ⟺ₜ | burhânî |
 | 2 | Mahiyette vücûdun zâidliği / Vâcib'de ayniyeti | burhânî |
 | 3 | Müreccih, devir/teselsül/tatbik reddi, ∃!Vâcib | burhânî |
-| 4 | Burhân-ı Tahsis (müstakil ikinci yol) | burhânî |
-| 5 | Vücud, Vahdâniyet(×2 yol), Kıdem, Beka, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis, cisim/mekân reddi | burhânî |
-| 6 | Sıfat(çeşit) ikiliği | burhânî |
-| 7 | Fâil-i Muhtar, Hayat, İlim(+Tesviye), Kudret(+Hudûs), Tekvin, İrade, Sem', Basar | burhânî |
-| 8-a | Hakîm ∧ Şer çelişmez | burhânî |
-| 8-b | Ferdî şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
+| 4 | Devam-ı hudûs: deizmin ve İbn Sînâ'nın cüz'iyyat iddiasının reddi | burhânî |
+| 5 | Burhân-ı Tahsis (müstakil ikinci yol) | burhânî |
+| 6 | Vücud, Vahdâniyet(×2 yol), Kıdem, Beka, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis, cisim/mekân reddi | burhânî |
+| 7 | Sıfat(çeşit) ikiliği | burhânî |
+| 8 | Fâil-i Muhtar, Hayat, İlim(+Tesviye,+cüz'iyyat), Kudret(+Hudûs), Tekvin, İrade, Sem', Basar | burhânî |
+| 9-a | Hakîm ∧ Şer çelişmez | burhânî |
+| 9-b | Ferdî şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
 
 ## Ek — Tamamlayıcı Deliller (Burhânî Çekirdeğin Yerine Değil)
 
 | Delil | Bağlandığı madde | Mahiyet | (T) |
 | :-- | :-- | :-- | :-- |
-| Nizam ve Mizan | §7 İrade/İlim | Şart(Mümkinü'l-Vücûd) ⋉ (küllî ölçek) | hitâbî/cedelî |
-| Teâvün | §7 İlim | Lime.İllet-i-Gâiye ⋉ (âlem, müşahede) | hitâbî/cedelî |
-| Esbâbın Acziyeti | §7 İlim/Kudret | "kanun≠fail" ⋉ (tek tek misal) | hitâbî/cedelî |
-| Cüz'iyattaki İntizam | §7 İlim | nizam ⋉ (en küçük ölçek) | hitâbî/cedelî |
-| İsimlerin Tecellisi | §6 İsim(Zât,Sıfat) | ⋉ (müşahede dili) | hitâbî/cedelî |
-| Fıtrat Hadisi ve Husayn Muhâveresi | §5.2, §4 | vicdanî ilzam — muhatabın kendi itirafından istidlâl (Buhârî, Cenâiz 92) | cedelî |
+| Nizam ve Mizan | §8 İrade/İlim | Şart(Mümkinü'l-Vücûd) ⋉ (küllî ölçek) | hitâbî/cedelî |
+| Teâvün | §8 İlim | Lime.İllet-i-Gâiye ⋉ (âlem, müşahede) | hitâbî/cedelî |
+| Esbâbın Acziyeti | §8 İlim/Kudret | "kanun≠fail" ⋉ (tek tek misal) | hitâbî/cedelî |
+| Cüz'iyattaki İntizam | §8 İlim | nizam ⋉ (en küçük ölçek) | hitâbî/cedelî |
+| İsimlerin Tecellisi | §7 İsim(Zât,Sıfat) | ⋉ (müşahede dili) | hitâbî/cedelî |
+| Fıtrat Hadisi ve Husayn Muhâveresi | §6.2, §5 | vicdanî ilzam — muhatabın kendi itirafından istidlâl (Buhârî, Cenâiz 92) | cedelî |
 | Burhân-ı İâde (İlk yaratılıştan ikinciye istidlâl, Yâsîn 78-79) | — | Meâd'e (öldükten sonra dirilmeye) mahsustur, Vücûd bahsine değil | ⊳ Fasıl III, madde 14'te tafsil edilecek |
 
 **Not (eksik bırakılmadığının kaydı):** Burhân-ı İâde bilerek bu fasla tam işlenmedi — çünkü o, Allah'ın varlığını değil öldükten sonra dirilmeyi (Meâd) ispat eden bir delildir ve risalenin kendi taksiminde Fasıl III'ün konusudur. Buraya yanlış yere konursa fasıllar arası taksim bozulur; bu yüzden yeri burada yalnız işaretlenmiş, tam işlenmesi Fasıl III'e bırakılmıştır — atlanmamış, ertelenmiştir.
