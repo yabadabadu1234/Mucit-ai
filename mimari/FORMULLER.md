@@ -325,6 +325,20 @@ Tahsil(Sudûr) = { Gaye Belirleme, Talâkat, Zâtî Melekeleşme }
 
 ---
 
+## Metâlib
+
+Metâlib(çeşit) = { hel-i basit, mâ, hel-i mürekkebe, lime }
+
+Tükenme isbatı: herhangi bir sual, bir mevzu hakkında ya sırf kendisi (hel-i basit: var mıdır; mâ: nedir) ya da bir mahmul ile birleşimi (hel-i mürekkebe: böyle midir; lime: niçindir) hakkındadır — bir önerme yalnız mevzu ve mahmulden kurulur, üçüncü bir cüzü yoktur, o yüzden bu ikilik tüketicidir.
+
+**Kayıt (F 2-Y gereği, kapsam dar tutulur):** Bu dörtlü yalnız **sualin şeklini** (var mı / nedir / böyle mi / niçin) tüketir; sualin **muhtevasını** (Hel-i mürekkebe veya Lime sorulurken, sorulan vasfın kemiyet mi keyfiyet mi mekân mı zaman mı olduğu — "nasıl", "ne kadar", "nerede", "ne zaman" gibi) tüketmez. O, ayrı bir teoridir (klasik On Makûle: cevher, kemiyet, keyfiyet, izafet, eyne, metâ, vaz', mülk, fiil, infial) ve henüz açılmadı. Bu yüzden "her sual zaruri olarak Metâlib'in dördünden biridir" iddiası yalnız **şekil** seviyesinde doğrudur; muhteva seviyesinde tükenmişlik ayrıca ispatlanmalıdır, şimdilik meçhuldür.
+
+**Reddedilen teklif (kayıt için):** Rükün'ün "madde+suret" ikiliğine indirgenmesi (İllet-i Mâddiye+Sûriyye üzerinden) tekrar gündeme getirilmiş, tekrar reddedilmiştir. Sebep: manevî varlıklarda (mesela bir matematik formülünde) madde yoktur, ve "suret" sanılan şey (formülün yazılışı/notasyonu) aynı formül farklı notasyonlarla ifade edilebildiği için bizzat arazdır, rükün değildir. Madde-suret ikiliği yalnız maddî varlıklara mahsustur, âlemşümul bir Rükün tarifi olamaz.
+
+**Açık bırakılan:** Nispet(çeşit) = {zâtî, vücûdî, fâilî, zamanî, râbıtalı, gaî} taslağı, Metâlib'in altına bir tatbik listesi olarak önerilmişti; bu indirgeme ikna edici bulunmadığı için mühürlenmedi. Nispet, kendi başına ayrı bir müzakere konusu olarak açık kalıyor.
+
+---
+
 ## Vücûb
 
 Teşrih(Vücûb) = { Vâcib, Mümkün }
@@ -347,6 +361,7 @@ Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün var
 - Şart (çeşit, Vaz'î-Şer'î, Ca'lî-İrâdî, Aklî-Âdî) → henüz izahat dosyası açılmadı
 - Sual(Rükün) → henüz izahat dosyası açılmadı
 - Bünye, Mevki, Zaruret (Rükün/Şart/Araz/Karîne dörtlüsü) → `izahat/rukun_sart/genel.md`
+- Metâlib → henüz izahat dosyası açılmadı
 
 ## Açık notlar (41-meleke şebekesi)
 
