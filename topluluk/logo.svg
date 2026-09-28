@@ -1,65 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" role="img" aria-label="Çift yarık deneyini ve |Φ⟩⟨Ψ| bra-ket gösterimini birleştiren topluluk mührü">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" role="img" aria-label="Çift yarık deneyini ve bra-ket gösterimini TOBB ETÜ renkleriyle birleştiren, elektron ve foton işaretli topluluk mührü">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
-      <stop offset="0%" stop-color="#241f16"/>
-      <stop offset="100%" stop-color="#14110b"/>
-    </radialGradient>
-    <clipPath id="badgeClip">
-      <circle cx="220" cy="220" r="206"/>
+    <clipPath id="frame">
+      <rect x="148" y="108" width="254" height="234" rx="2"/>
     </clipPath>
+    <marker id="photonHead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16305e"/>
+    </marker>
   </defs>
 
-  <circle cx="220" cy="220" r="208" fill="url(#bg)"/>
+  <rect x="0" y="0" width="440" height="440" fill="#ffffff"/>
 
-  <g clip-path="url(#badgeClip)">
-    <!-- gelen düzlem dalga (Φ tarafı) -->
-    <g fill="none" stroke="#7fa3d1" stroke-width="2.6" stroke-linecap="round" opacity="0.6">
-      <path d="M 66,55  C 50,110 82,150 66,205  C 50,260 82,300 66,385"/>
-      <path d="M 102,50 C 86,108 118,148 102,205 C 86,262 118,302 102,390"/>
-      <path d="M 138,55 C 122,110 154,150 138,205 C 122,260 154,300 138,385"/>
-      <path d="M 174,50 C 158,108 190,148 174,205 C 158,262 190,302 174,390"/>
-    </g>
+  <g clip-path="url(#frame)">
+    <!-- gelen elektron: de Broglie dalga paketi -->
+    <path d="M 160,225 C 172,205 184,245 196,225 C 208,205 220,245 232,225 C 240,213 248,213 256,225"
+          fill="none" stroke="#1c3f7c" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="150" cy="225" r="7" fill="#1c3f7c"/>
+    <ellipse cx="150" cy="225" rx="17" ry="6.5" fill="none" stroke="#1c3f7c" stroke-width="1.8" transform="rotate(-24 150 225)"/>
 
-    <!-- girişim: her yarıktan yayılan dairesel dalgacıklar (Huygens) -->
-    <g fill="none" stroke-width="1.6">
-      <g stroke="#7fa3d1" opacity="0.55">
-        <path d="M 232,148 A 22,22 0 0 1 232,192"/>
-        <path d="M 232,126 A 44,44 0 0 1 232,214"/>
-        <path d="M 232,104 A 66,66 0 0 1 232,236"/>
-        <path d="M 232,82  A 88,88 0 0 1 232,258"/>
-        <path d="M 232,60  A 110,110 0 0 1 232,280"/>
-        <path d="M 232,38  A 132,132 0 0 1 232,302"/>
-        <path d="M 232,16  A 154,154 0 0 1 232,324"/>
-        <path d="M 232,-6  A 176,176 0 0 1 232,346"/>
+    <!-- yarıklardan yayılan girişim dalgacıkları (Huygens) -->
+    <g fill="none" stroke-width="1.7">
+      <g stroke="#c8342b" opacity="0.62">
+        <path d="M 282,179 A 14,14 0 0 1 282,207"/>
+        <path d="M 282,163 A 30,30 0 0 1 282,223"/>
+        <path d="M 282,147 A 46,46 0 0 1 282,239"/>
+        <path d="M 282,131 A 62,62 0 0 1 282,255"/>
+        <path d="M 282,115 A 78,78 0 0 1 282,271"/>
+        <path d="M 282,99  A 94,94 0 0 1 282,287"/>
+        <path d="M 282,83  A 110,110 0 0 1 282,303"/>
+        <path d="M 282,67  A 126,126 0 0 1 282,319"/>
       </g>
-      <g stroke="#b3564a" opacity="0.55">
-        <path d="M 232,248 A 22,22 0 0 1 232,292"/>
-        <path d="M 232,226 A 44,44 0 0 1 232,314"/>
-        <path d="M 232,204 A 66,66 0 0 1 232,336"/>
-        <path d="M 232,182 A 88,88 0 0 1 232,358"/>
-        <path d="M 232,160 A 110,110 0 0 1 232,380"/>
-        <path d="M 232,138 A 132,132 0 0 1 232,402"/>
-        <path d="M 232,116 A 154,154 0 0 1 232,424"/>
-        <path d="M 232,94  A 176,176 0 0 1 232,446"/>
+      <g stroke="#f2a33d" opacity="0.62">
+        <path d="M 282,243 A 14,14 0 0 1 282,271"/>
+        <path d="M 282,227 A 30,30 0 0 1 282,287"/>
+        <path d="M 282,211 A 46,46 0 0 1 282,303"/>
+        <path d="M 282,195 A 62,62 0 0 1 282,319"/>
+        <path d="M 282,179 A 78,78 0 0 1 282,335"/>
+        <path d="M 282,163 A 94,94 0 0 1 282,351"/>
+        <path d="M 282,147 A 110,110 0 0 1 282,367"/>
+        <path d="M 282,131 A 126,126 0 0 1 282,383"/>
       </g>
     </g>
 
     <!-- duvar: iki yarıklı bariyer -->
-    <g fill="#ece3d2">
-      <rect x="208" y="34"  width="24" height="123"/>
-      <rect x="208" y="183" width="24" height="74"/>
-      <rect x="208" y="283" width="24" height="123"/>
+    <g fill="#1c3f7c">
+      <rect x="258" y="140" width="24" height="41"/>
+      <rect x="258" y="205" width="24" height="40"/>
+      <rect x="258" y="269" width="24" height="41"/>
     </g>
 
-    <!-- bra-ket çerçeve çubukları -->
-    <g stroke="#caa456" stroke-width="4" stroke-linecap="round" opacity="0.85">
-      <line x1="46" y1="108" x2="46" y2="332"/>
-      <line x1="394" y1="108" x2="394" y2="332"/>
-    </g>
+    <!-- foton: girişim sonrası ışık kuantumu işareti -->
+    <path d="M 336,150 q 8,-14 16,0 q 8,14 16,0 q 8,-14 16,0"
+          fill="none" stroke="#16305e" stroke-width="2.6" stroke-linecap="round"
+          marker-end="url(#photonHead)"/>
   </g>
 
-  <circle cx="220" cy="220" r="206" fill="none" stroke="#caa456" stroke-width="3"/>
-
-  <text x="66" y="34" font-family="Georgia, 'Iowan Old Style', serif" font-style="italic" font-size="30" fill="#7fa3d1" text-anchor="middle">Φ</text>
-  <text x="374" y="416" font-family="Georgia, 'Iowan Old Style', serif" font-style="italic" font-size="30" fill="#c96a5d" text-anchor="middle">Ψ</text>
+  <!-- bra-ket çerçevesi -->
+  <g fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 152,118 L 92,225 L 152,332"/>
+    <line x1="390" y1="118" x2="390" y2="332"/>
+  </g>
 </svg>
