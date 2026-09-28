@@ -1,62 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" role="img" aria-label="Çift yarık deneyini ve bra-ket gösterimini TOBB ETÜ renkleriyle birleştiren, elektron ve foton işaretli topluluk mührü">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" role="img" aria-label="Çift bra-ket ⟨||⟩ şeklinde bir duvar; iki köşeli parantez arasındaki iki çubuk yarığı ayıran duvar parçası, kenarlardaki iki yarıktan girişim deseni görünüyor">
   <defs>
-    <clipPath id="frame">
-      <rect x="148" y="108" width="254" height="234" rx="2"/>
+    <clipPath id="slit-left">
+      <rect x="150" y="90" width="40" height="260"/>
     </clipPath>
-    <marker id="photonHead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#16305e"/>
-    </marker>
+    <clipPath id="slit-right">
+      <rect x="262" y="90" width="40" height="260"/>
+    </clipPath>
   </defs>
 
   <rect x="0" y="0" width="440" height="440" fill="#ffffff"/>
 
-  <g clip-path="url(#frame)">
-    <!-- gelen elektron: de Broglie dalga paketi -->
-    <path d="M 160,225 C 172,205 184,245 196,225 C 208,205 220,245 232,225 C 240,213 248,213 256,225"
-          fill="none" stroke="#1c3f7c" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="150" cy="225" r="7" fill="#1c3f7c"/>
-    <ellipse cx="150" cy="225" rx="17" ry="6.5" fill="none" stroke="#1c3f7c" stroke-width="1.8" transform="rotate(-24 150 225)"/>
-
-    <!-- yarıklardan yayılan girişim dalgacıkları (Huygens) -->
-    <g fill="none" stroke-width="1.7">
-      <g stroke="#c8342b" opacity="0.62">
-        <path d="M 282,179 A 14,14 0 0 1 282,207"/>
-        <path d="M 282,163 A 30,30 0 0 1 282,223"/>
-        <path d="M 282,147 A 46,46 0 0 1 282,239"/>
-        <path d="M 282,131 A 62,62 0 0 1 282,255"/>
-        <path d="M 282,115 A 78,78 0 0 1 282,271"/>
-        <path d="M 282,99  A 94,94 0 0 1 282,287"/>
-        <path d="M 282,83  A 110,110 0 0 1 282,303"/>
-        <path d="M 282,67  A 126,126 0 0 1 282,319"/>
-      </g>
-      <g stroke="#f2a33d" opacity="0.62">
-        <path d="M 282,243 A 14,14 0 0 1 282,271"/>
-        <path d="M 282,227 A 30,30 0 0 1 282,287"/>
-        <path d="M 282,211 A 46,46 0 0 1 282,303"/>
-        <path d="M 282,195 A 62,62 0 0 1 282,319"/>
-        <path d="M 282,179 A 78,78 0 0 1 282,335"/>
-        <path d="M 282,163 A 94,94 0 0 1 282,351"/>
-        <path d="M 282,147 A 110,110 0 0 1 282,367"/>
-        <path d="M 282,131 A 126,126 0 0 1 282,383"/>
-      </g>
+  <!-- yarıkların arkasında görünen girişim deseni (Newton halkaları) -->
+  <g clip-path="url(#slit-left)">
+    <g fill="none" stroke-width="7">
+      <circle cx="220" cy="220" r="16"  stroke="#c8342b"/>
+      <circle cx="220" cy="220" r="32"  stroke="#f2a33d"/>
+      <circle cx="220" cy="220" r="48"  stroke="#1c3f7c"/>
+      <circle cx="220" cy="220" r="64"  stroke="#c8342b"/>
+      <circle cx="220" cy="220" r="80"  stroke="#f2a33d"/>
+      <circle cx="220" cy="220" r="96"  stroke="#1c3f7c"/>
+      <circle cx="220" cy="220" r="112" stroke="#c8342b"/>
+      <circle cx="220" cy="220" r="128" stroke="#f2a33d"/>
+      <circle cx="220" cy="220" r="144" stroke="#1c3f7c"/>
+      <circle cx="220" cy="220" r="160" stroke="#c8342b"/>
+      <circle cx="220" cy="220" r="176" stroke="#f2a33d"/>
     </g>
-
-    <!-- duvar: iki yarıklı bariyer -->
-    <g fill="#1c3f7c">
-      <rect x="258" y="140" width="24" height="41"/>
-      <rect x="258" y="205" width="24" height="40"/>
-      <rect x="258" y="269" width="24" height="41"/>
+  </g>
+  <g clip-path="url(#slit-right)">
+    <g fill="none" stroke-width="7">
+      <circle cx="220" cy="220" r="16"  stroke="#c8342b"/>
+      <circle cx="220" cy="220" r="32"  stroke="#f2a33d"/>
+      <circle cx="220" cy="220" r="48"  stroke="#1c3f7c"/>
+      <circle cx="220" cy="220" r="64"  stroke="#c8342b"/>
+      <circle cx="220" cy="220" r="80"  stroke="#f2a33d"/>
+      <circle cx="220" cy="220" r="96"  stroke="#1c3f7c"/>
+      <circle cx="220" cy="220" r="112" stroke="#c8342b"/>
+      <circle cx="220" cy="220" r="128" stroke="#f2a33d"/>
+      <circle cx="220" cy="220" r="144" stroke="#1c3f7c"/>
+      <circle cx="220" cy="220" r="160" stroke="#c8342b"/>
+      <circle cx="220" cy="220" r="176" stroke="#f2a33d"/>
     </g>
-
-    <!-- foton: girişim sonrası ışık kuantumu işareti -->
-    <path d="M 336,150 q 8,-14 16,0 q 8,14 16,0 q 8,-14 16,0"
-          fill="none" stroke="#16305e" stroke-width="2.6" stroke-linecap="round"
-          marker-end="url(#photonHead)"/>
   </g>
 
-  <!-- bra-ket çerçevesi -->
-  <g fill="none" stroke="#000000" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M 152,118 L 92,225 L 152,332"/>
-    <line x1="390" y1="118" x2="390" y2="332"/>
+  <!-- çift bra-ket duvarı: ⟨ | | ⟩ — < ve > yarığın dış kenarları, || yarığı ayıran orta duvar -->
+  <g fill="none" stroke="#14213d" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 150,90 L 40,220 L 150,350"/>
+    <path d="M 302,90 L 400,220 L 302,350"/>
   </g>
+  <g fill="#14213d">
+    <rect x="190" y="90" width="72" height="260"/>
+  </g>
+  <line x1="226" y1="90" x2="226" y2="350" stroke="#ffffff" stroke-width="4"/>
 </svg>
