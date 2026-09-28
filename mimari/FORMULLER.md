@@ -117,7 +117,7 @@ Terkip(Şart) = { ??? }  -- açık, tarif bekliyor
 
 Terkip(Rükün) = { ??? }  -- açık, tarif bekliyor
 
-Muhakeme(Rükün) = { mevzu (mahkûmun fîh), tavassut (hadd-i evsat), mizan, hüküm (mahkûmun bih) }
+Muhakeme(Rükün) = { sual (saik), mevzu (mahkûmun fîh), tavassut (hadd-i evsat), mizan, hüküm (mahkûmun bih) }
 
 Sual(Rükün) = ⟨ sâil (talep eden şuur), mes'ûlün anh (hakkında sual edilen malum zemin), matlûb (aranan meçhul/epistemik yarık) ⟩
 
@@ -125,7 +125,7 @@ Mizan(Rükün) = { kıstas, teaddüdü ihtimal, sükun kabiliyeti }  -- taslak, 
 
 Tedbir(Rükün) = { mebde, intikal usulü, gaye }  -- taslak, tasdik bekliyor
 
-**Reddedilen teklif (kayıt için):** Muhakeme(Rükün)'e beşinci unsur olarak "Sual (Saik)" eklenmesi teklif edildi, kabul edilmedi. Sebep: (1) Muhakeme(İnikad)'da zaten "epistemik yarığın varlığı" var — aynı şeyi hem İnikad'da hem Rükün'de saymak mükerrerlik olurdu; (2) bağımsız kurulmuş 41-meleke şebekesinde (bkz. `izahat/tesrih/sebeke.md`) Merak ve Sual Tevcihi, Muhakeme'nin Vürûd'unda bile yok — doğrudan Rükün'e terfi ettirmek bu delile aykırı düşer.
+**Nakz:** Muhakeme(Rükün)'e "sual" beşinci unsur olarak eklendi, padişah fermanıyla kat'î (F 3-C/13, itiraz yok). Bunun mükerrerlik doğurmaması için "epistemik yarığın varlığı" Muhakeme(İnikad)'dan çıkarıldı — aynı unsur artık yalnız Rükün'de, tek yerde duruyor. 41-meleke şebekesiyle (Vürûd(Muhakeme)'de Merak ve Sual Tevcihi'nin bulunmaması) arasındaki fark kayıt altındadır: şebeke ayrı bir kaynaktan bağımsız türetildiği için bire bir örtüşmesi şart değildir; bu tutarsızlık şebekenin kendi ileri incelemesinde ayrıca ele alınabilir, Rükün kararını bağlamaz.
 
 **Reddedilen teklif (kayıt için):** Düz, seviyesiz bir "Şart(Muhakeme)" ve "Şart(Sual)" kümesi (İnikad/Sıhhat/Nifaz/Lüzum merhalelerinin yanına, onlardan ayrı) teklif edildi, kabul edilmedi. Sebep: teklif edilen beş Şart(Muhakeme) unsurundan dördü ("ehliyet-i müdrike" → İnikad'da zaten var; "liyakat-i mizan" → Sıhhat'teki "kıstasın sıhhati ve liyakati"nin aynısı; "münasebet-i hadd-i evsat" → Sıhhat'teki "illiyet rabıtasının sübutu"nun aynısı; "selâmet ani'l-muarız" → Lüzum'daki "muarız-ı râcihin ademi"nin aynısı) zaten merhalelere dağıtılmış unsurların tekrarıdır; aynı hata Şart(Sual)'de de var ("teaddüd-i ihtimal" ve "adem-i müsâdere", Sual(Sıhhat)'te zaten var). Merhaleli tasnifi terk edip düz listeye dönmek, tam da bu tashihatın kendisinin mahkûm ettiği mükerrerliği yeniden üretiyor.
 
@@ -155,7 +155,9 @@ Mahiyet(Kanun) = { fizikî, gayr-i fizikî }
 
 ## İnikad
 
-Muhakeme(İnikad) = { ehliyet-i müdrikeyi hâiz olmak, epistemik yarığın varlığı, mahallin kabil olması }
+Muhakeme(İnikad) = { ehliyet-i müdrikeyi hâiz olmak, mahallin kabil olması }
+
+**Nakz:** "Epistemik yarığın varlığı" buradan çıkarıldı — sebebi Rükün'e taşınmasıdır, aşağıya bakınız.
 
 ---
 
