@@ -36,6 +36,21 @@ Akıl(çeşit) = { nazari, ameli }
 
 İşlemci(çeşit) = { vahime, mutasarrıfa, mütehayyile }
 
+Şart(çeşit) = { vaz'î-şer'î, ca'lî-irâdî, aklî-âdî }
+  (kaynağa göre üç asıl çeşit: şeriatın koyduğu, kulun kendi iradesiyle koyduğu, aklın/tabiatın zaruri kıldığı.
+   Dördüncü bir "lisanî ve mantıkî şart edatları" şıkkı bilerek dışarıda bırakıldı: o, şartın kaynağı değil,
+   şartın dilde/mantıkta hangi surette ifade edildiği sualine cevaptır — ayrı bir sual, aynı başlığa girmez.)
+
+Vaz'î-Şer'î(çeşit) = { vücûb şartı, merâtib-i akd }
+  (merâtib-i akd = İnikad → Sıhhat → Nifaz → Lüzum, zaten mühürlü; vücûb şartı bundan ayrıdır,
+   akdin kendi tekamülüyle değil, mükellefiyetin failin sırtına yüklenmesiyle alakalıdır — meselâ zekâtta nisap ve havelân-ı havl, hacda istitaat.)
+
+Ca'lî-İrâdî(çeşit) = { ta'lîkî, takyîdî, fâsih }
+  (ta'lîkî: hükmü şüpheli bir hadiseye bağlamak — "gemi gelirse sattım"; takyîdî: tasarrufu bir vazifeye bağlamak; fâsih: tahakkukunda bağı hükümsüz kılan şart.)
+
+Aklî-Âdî(çeşit) = { hayat, kudret }
+  (misal kümesidir, tahdit değil: ilim için hayat, teklif/fiil için kudret şarttır — şeriatın değil aklın zaruri kıldığı taban şartlarıdır.)
+
 ---
 
 ## levazım
@@ -104,9 +119,15 @@ Terkip(Rükün) = { ??? }  -- açık, tarif bekliyor
 
 Muhakeme(Rükün) = { mevzu (mahkûmun fîh), tavassut (hadd-i evsat), mizan, hüküm (mahkûmun bih) }
 
+Sual(Rükün) = ⟨ sâil (talep eden şuur), mes'ûlün anh (hakkında sual edilen malum zemin), matlûb (aranan meçhul/epistemik yarık) ⟩
+
 Mizan(Rükün) = { kıstas, teaddüdü ihtimal, sükun kabiliyeti }  -- taslak, tasdik bekliyor
 
 Tedbir(Rükün) = { mebde, intikal usulü, gaye }  -- taslak, tasdik bekliyor
+
+**Reddedilen teklif (kayıt için):** Muhakeme(Rükün)'e beşinci unsur olarak "Sual (Saik)" eklenmesi teklif edildi, kabul edilmedi. Sebep: (1) Muhakeme(İnikad)'da zaten "epistemik yarığın varlığı" var — aynı şeyi hem İnikad'da hem Rükün'de saymak mükerrerlik olurdu; (2) bağımsız kurulmuş 41-meleke şebekesinde (bkz. `izahat/tesrih/sebeke.md`) Merak ve Sual Tevcihi, Muhakeme'nin Vürûd'unda bile yok — doğrudan Rükün'e terfi ettirmek bu delile aykırı düşer.
+
+**Reddedilen teklif (kayıt için):** Düz, seviyesiz bir "Şart(Muhakeme)" ve "Şart(Sual)" kümesi (İnikad/Sıhhat/Nifaz/Lüzum merhalelerinin yanına, onlardan ayrı) teklif edildi, kabul edilmedi. Sebep: teklif edilen beş Şart(Muhakeme) unsurundan dördü ("ehliyet-i müdrike" → İnikad'da zaten var; "liyakat-i mizan" → Sıhhat'teki "kıstasın sıhhati ve liyakati"nin aynısı; "münasebet-i hadd-i evsat" → Sıhhat'teki "illiyet rabıtasının sübutu"nun aynısı; "selâmet ani'l-muarız" → Lüzum'daki "muarız-ı râcihin ademi"nin aynısı) zaten merhalelere dağıtılmış unsurların tekrarıdır; aynı hata Şart(Sual)'de de var ("teaddüd-i ihtimal" ve "adem-i müsâdere", Sual(Sıhhat)'te zaten var). Merhaleli tasnifi terk edip düz listeye dönmek, tam da bu tashihatın kendisinin mahkûm ettiği mükerrerliği yeniden üretiyor.
 
 ---
 
@@ -142,19 +163,25 @@ Muhakeme(İnikad) = { ehliyet-i müdrikeyi hâiz olmak, epistemik yarığın var
 
 Muhakeme(Sıhhat) = { tenakuzsuzluk, kıstasın sıhhati ve liyakati, illiyet rabıtasının sübutu, tahrif ve hileden tecerrüd }
 
-Sual(Sıhhat) = { mevcut-hedef boşluk tespiti, teaddüdü ihtimal, gaye }  -- taslak, tasdik bekliyor
+Sual(Sıhhat) = { teaddüd-i ihtimal (muhayyer olmaması), musadere ale'l-matlub olmaması (cevabı içinde gizlememesi), tahayyüz-i hadd (aranan meçhulün hudutlarının muayyen olması) }
+
+**Nakz (F 2-Y gereği açık yazılır):** Önceki taslak (`mevcut-hedef boşluk tespiti, teaddüdü ihtimal, gaye`) nakzedildi. Sebep: "boşluk tespiti" ve "gaye", Sıhhat değil İnikad seviyesindedir — Muhakeme(İnikad)'daki "epistemik yarığın varlığı" ile aynı şeydir, iki başlıkta tekrarlanamaz. Sıhhat'te kalan asıl sual: sual doğmuş (mün'akid) olsa dahi, kendi içinde mugalata barındırmadan, hakiki sual sayılması için ne gerekir.
 
 ---
 
 ## Nifaz
 
-Muhakeme(Nifaz) = { şüphenin galebe çalmaması (itminan hali), vakıaya intibak kabiliyeti }
+Muhakeme(Nifaz) = { vakıaya mutabakat (harici gerçeklikle örtüşme), mâni-i aklî ve amelînin ademi (tatbikini engelleyen bir mânîin bulunmaması) }
+
+**Nakz:** Önceki taslaktaki "şüphenin galebe çalmaması (itminan hali)" buradan çıkarıldı, Lüzum'a taşındı — itminan, hükmün yürürlüğe girip girmediğiyle değil, ne derece bağlayıcı olduğuyla alakalıdır.
 
 ---
 
 ## Lüzum
 
-Muhakeme(Lüzum) = { burhanî / kat'î olma, zannî / ictihadî olma }
+Muhakeme(Lüzum) = { muarız-ı râcihin ademi (daha kuvvetli zıt bir delilin bulunmaması), tahakkuk-i itminan (şüpheden tecerrüd ederek hükme bağlanmış olması) }
+
+Netice taksimi (şart değil, Lüzum hâsıl olunca hükmün kendi kuvvet derecesidir): burhanî/kat'î ise → lâzım (bağlayıcı, zihin cayamaz) · zannî/ictihadî ise → gayr-ı lâzım (yeni delille nakzolunabilir).
 
 ---
 
@@ -285,6 +312,8 @@ Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün var
 - kuvvet, hayvani, insani (Nefis hiyerarşisi) → prose izahatı `CLAUDE.md` § 4-I'de (İbn Sînâ Nefs Şeması) mevcut; mimari küme-dosyası olarak henüz ayrılmadı
 - Mahiyet, Madde, Kanun → `izahat/mahiyet/`
 - Teşrih, Vürûd, Sudûr, Vücûb → `izahat/tesrih/sebeke.md` (41-meleke şebekesinin tam Vücûb taraması)
+- Şart (çeşit, Vaz'î-Şer'î, Ca'lî-İrâdî, Aklî-Âdî) → henüz izahat dosyası açılmadı
+- Sual(Rükün) → henüz izahat dosyası açılmadı
 
 ## Açık notlar (41-meleke şebekesi)
 
