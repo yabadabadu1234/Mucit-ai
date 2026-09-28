@@ -95,6 +95,36 @@ Müdrike(insani) = Akıl ∪ Müdrike(hayvani)
 
 ---
 
+## Bünye
+
+Bünye = Mevki × Zaruret
+
+Bünye(dâhil, zarurî) = Rükün
+Bünye(dâhil, gayr-i zarurî) = Araz
+Bünye(hâriç, zarurî) = Şart
+Bünye(hâriç, gayr-i zarurî) = Karîne
+
+Rükün: bir varlığın bizzat kendi bünyesine, dokusuna dâhil olan kurucu iç cüzdür (dâhilî zaruret).
+Şart: varlığın bünyesine dâhil olmayan, lakin varlığın vücut bulması, işlemesi ve netice vermesi için haricen bulunması icap eden kayıttır (hâricî zaruret).
+Araz: varlığın bünyesine dâhil olan, lakin bulunması zarurî olmayan (yokluğu varlığı yok etmeyen) niteliktir (dâhilî gayr-i zaruret).
+Karîne: varlığın bünyesine dâhil olmayan, hâriçte bulunması da zarurî olmayan, lakin yine de onunla beraber bulunabilen (mukarin olan) haldir (hâricî gayr-i zaruret).
+
+İzahat: `izahat/rukun_sart/genel.md`
+
+---
+
+## Mevki
+
+Bünye(Mevki) = { dâhil, hâriç }
+
+---
+
+## Zaruret
+
+Bünye(Zaruret) = { zarurî, gayr-i zarurî }
+
+---
+
 ## NihaiHal
 
 Terkip(NihaiHal) = { cem'î, imtizâcî }
@@ -316,6 +346,7 @@ Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün var
 - Teşrih, Vürûd, Sudûr, Vücûb → `izahat/tesrih/sebeke.md` (41-meleke şebekesinin tam Vücûb taraması)
 - Şart (çeşit, Vaz'î-Şer'î, Ca'lî-İrâdî, Aklî-Âdî) → henüz izahat dosyası açılmadı
 - Sual(Rükün) → henüz izahat dosyası açılmadı
+- Bünye, Mevki, Zaruret (Rükün/Şart/Araz/Karîne dörtlüsü) → `izahat/rukun_sart/genel.md`
 
 ## Açık notlar (41-meleke şebekesi)
 
