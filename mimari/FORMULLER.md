@@ -340,11 +340,31 @@ Metâlib(çeşit) = { hel-i basit, mâ, hel-i mürekkebe, lime }
 
 Tükenme isbatı: herhangi bir sual, bir mevzu hakkında ya sırf kendisi (hel-i basit: var mıdır; mâ: nedir) ya da bir mahmul ile birleşimi (hel-i mürekkebe: böyle midir; lime: niçindir) hakkındadır — bir önerme yalnız mevzu ve mahmulden kurulur, üçüncü bir cüzü yoktur, o yüzden bu ikilik tüketicidir.
 
-**Kayıt (F 2-Y gereği, kapsam dar tutulur):** Bu dörtlü yalnız **sualin şeklini** (var mı / nedir / böyle mi / niçin) tüketir; sualin **muhtevasını** (Hel-i mürekkebe veya Lime sorulurken, sorulan vasfın kemiyet mi keyfiyet mi mekân mı zaman mı olduğu — "nasıl", "ne kadar", "nerede", "ne zaman" gibi) tüketmez. O, ayrı bir teoridir (klasik On Makûle: cevher, kemiyet, keyfiyet, izafet, eyne, metâ, vaz', mülk, fiil, infial) ve henüz açılmadı. Bu yüzden "her sual zaruri olarak Metâlib'in dördünden biridir" iddiası yalnız **şekil** seviyesinde doğrudur; muhteva seviyesinde tükenmişlik ayrıca ispatlanmalıdır, şimdilik meçhuldür.
+**Kayıt (F 2-Y gereği, kapsam dar tutulur):** Bu dörtlü yalnız **sualin şeklini** (var mı / nedir / böyle mi / niçin) tüketir; sualin **muhtevasını** (Hel-i mürekkebe veya Lime sorulurken, sorulan vasfın kemiyet mi keyfiyet mi mekân mı zaman mı olduğu — "nasıl", "ne kadar", "nerede", "ne zaman" gibi) tüketmez. O, ayrı bir teoridir — bkz. aşağıda **Makûlât** — ve orada da tükenmişlik yalnız kısmen ispatlanabildi.
 
 **Reddedilen teklif (kayıt için):** Rükün'ün "madde+suret" ikiliğine indirgenmesi (İllet-i Mâddiye+Sûriyye üzerinden) tekrar gündeme getirilmiş, tekrar reddedilmiştir. Sebep: manevî varlıklarda (mesela bir matematik formülünde) madde yoktur, ve "suret" sanılan şey (formülün yazılışı/notasyonu) aynı formül farklı notasyonlarla ifade edilebildiği için bizzat arazdır, rükün değildir. Madde-suret ikiliği yalnız maddî varlıklara mahsustur, âlemşümul bir Rükün tarifi olamaz.
 
 **Açık bırakılan:** Nispet(çeşit) = {zâtî, vücûdî, fâilî, zamanî, râbıtalı, gaî} taslağı, Metâlib'in altına bir tatbik listesi olarak önerilmişti; bu indirgeme ikna edici bulunmadığı için mühürlenmedi. Nispet, kendi başına ayrı bir müzakere konusu olarak açık kalıyor.
+
+---
+
+## Makûlât
+
+Mevcûd = Cevher ∪ Araz
+  Kıstas: kendi başına, bir mevzuya muhtaç olmaksızın durur mu, yoksa bir mevzuda (başka bir şeyin üzerinde) mi kaim? → evetse Cevher, hayırsa Araz.
+
+Araz(çeşit) = { zâtî, izafî }
+  Kıstas: arazın hakikati sırf mevzuun kendisine mi bakıyor, yoksa mevzu ile hâricî bir şey arasındaki nispete mi? → evetse zâtî, hayırsa izafî.
+
+Zâtî(çeşit) = { kemiyet, keyfiyet }
+  Kıstas: mevzuun bölünebilir miktarı mı (evetse Kemiyet), yoksa mevzuun hâlinin nasıllığı mı (hayırsa Keyfiyet)?
+  (Not: bu "kemiyet/keyfiyet" — kaziyyenin kendi kapsamına/isbatına bakan Tasdik(Kemiyet)/Tasdik(Keyfiyet)'ten ayrıdır; kök aynı, mevzu farklı, karıştırılmasın.)
+
+İzafî(çeşit) = { izafet, eyne, metâ, vaz', mülk, fiil, infial }
+
+Makûlât(çeşit) = Cevher ∪ Zâtî ∪ İzafî = { cevher, kemiyet, keyfiyet, izafet, eyne, metâ, vaz', mülk, fiil, infial }
+
+**Dürüstçe durulan yer:** İlk iki kesim (Cevher/Araz, Zâtî/İzafî) ve Zâtî'nin kendi kesimi (Kemiyet/Keyfiyet), her biri tek bir kıstas + Nakzeyn ile sağlam kuruldu. **İzafî'nin kendi yedisi (izafet, eyne, metâ, vaz', mülk, fiil, infial) böyle kurulamadı** — klasik metinlerden enümere edildi (sayıldı), ama aralarındaki kesimin tek bir kıstas zincirinden çıktığı bizim usulümüzce ispatlanmadı. Zorlayıp uydurmak yerine açık bırakılıyor: bu yedinin tükenmişliği meçhuldür.
 
 ---
 
@@ -427,7 +447,7 @@ Tasavvur(Menşe) = { hissî, hayalî, vehmî, aklî }
 - Şart (çeşit, Vaz'î-Şer'î, Ca'lî-İrâdî, Aklî-Âdî) → henüz izahat dosyası açılmadı
 - Sual(Rükün) → henüz izahat dosyası açılmadı
 - Bünye, Mevki, Zaruret (Rükün/Şart/Araz/Karîne dörtlüsü) → `izahat/rukun_sart/genel.md`
-- Metâlib → henüz izahat dosyası açılmadı
+- Metâlib, Makûlât, Cevher/Araz/Zâtî/İzafî → henüz izahat dosyası açılmadı
 - Mâlum → `izahat/malum/genel.md`
 - Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit), Tasavvur(Menşe), Tasdik(Vücûb/Kemiyet/Keyfiyet), Basitlik(çeşit) → henüz ayrı izahat dosyası açılmadı; temel usul (kıstas+Nakzeyn+isimlendirme+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'ye işlendi
 
