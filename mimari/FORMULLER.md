@@ -1,20 +1,24 @@
 # FORMÜLLER
 
-Bu dosya mimarî müzakerede mühürlenen bütün formülleri tutar.
+Bu dosya mimarî müzakerede mühürlenen bütün formülleri tutar. İzahat (şerh) burada değildir — `izahat/*`tedir; bu dosya yalnız formüldür.
 
-**Kaide (yeni):** Başlık, küme adı değil, **parametredir** (sual). Bir küme `a × b × c` şeklinde bir çarpım olarak ifade edildiyse, `a`, `b`, `c`'nin her biri kendi başlığını alır; o başlığın altında, o parametreyi taşıyan **bütün kümeler** yan yana durur:
+## Notasyon
 
 ```
-başlık1:
-  küme1(başlık1) = {...}
-  küme2(başlık1) = {...}
+κ            kıstas (tasnif ölçütü, bir vasıf/sual)
+⟺ₜ           Nakzeyn'le tükenmişlik: ∀x (κ(x) ∨ ¬κ(x))
+⊢            mühürlü (sabit)
+⊬            mühürsüz / nakzedildi / reddedildi
+⊳            X, Y'nin kısmı/dalıdır (X ⊂ Y, alt-dal)
+⋉            tatbik (bir usulün/kümenin başka mevzua uygulanışı)
+≔            tarif (tanım)
+∵ ∴          çünkü / dolayısıyla
+≺            öncelik (zaman/illiyet sırası, "A, B'den önce")
 ```
 
-Tasnifat ilerledikçe her başlık kendi altında birikir; hiçbir başlık iki yerde tekrar tarif edilmez, hiçbir kümenin bir parametresi başka bir başlığın altına sızmaz. Bir kümenin toplam formülü (çarpımın kendisi) da kendi parametresinin başlığı altında, sağ tarafında açık haliyle durur; çarpanların kendi içi ise kendi başlıklarına gider.
-
-İzahatlar bu dosyada değil, `izahat/` altındaki ayrı dosyalardadır (küme bazlı, F 1'deki kural gereği). Bu dosya yalnız formülleri taşır.
-
-**Taslak işareti:** `-- taslak, tasdik bekliyor` etiketi taşıyan satırlar henüz mühürlenmemiştir; müzakerede teyit edilince etiket kalkar.
+**Kural-1:** `Küme(Başlık)` — Başlık = sual (parametre), Küme = özne. Başlık hiçbir yerde özne olmaz.
+**Kural-2:** `X = a×b×c` ⟹ ∀i∈{a,b,c}: `i(başlığı)` kendi başlığı altında ayrı blokta birikir.
+**Kural-3:** `⊬ (taslak)` = tasdik bekliyor.
 
 ---
 
@@ -36,29 +40,35 @@ Akıl(çeşit) = { nazari, ameli }
 
 İşlemci(çeşit) = { vahime, mutasarrıfa, mütehayyile }
 
-Şart(çeşit) = { vaz'î-şer'î, ca'lî-irâdî, aklî-âdî }
-  (kaynağa göre üç asıl çeşit: şeriatın koyduğu, kulun kendi iradesiyle koyduğu, aklın/tabiatın zaruri kıldığı.
-   Dördüncü bir "lisanî ve mantıkî şart edatları" şıkkı bilerek dışarıda bırakıldı: o, şartın kaynağı değil,
-   şartın dilde/mantıkta hangi surette ifade edildiği sualine cevaptır — ayrı bir sual, aynı başlığa girmez.)
+```
+Şart(çeşit) = { vazʻî-şerʻî, caʻlî-irâdî, aklî-âdî }
+  κ = vâzıʻ(x)                      [şeriat / kul-iradesi / akıl-tabiat]
+  Lisânî ∉ küme  ∵ κ(Lisânî) = ifade-sûreti ≠ vâzıʻ
 
-Vaz'î-Şer'î(çeşit) = { vücûb şartı, merâtib-i akd }
-  (merâtib-i akd = İnikad → Sıhhat → Nifaz → Lüzum, zaten mühürlü; vücûb şartı bundan ayrıdır,
-   akdin kendi tekamülüyle değil, mükellefiyetin failin sırtına yüklenmesiyle alakalıdır — meselâ zekâtta nisap ve havelân-ı havl, hacda istitaat.)
+Vazʻî-Şerʻî(çeşit) = { vücûb-şartı, merâtib-i-akd }
+  merâtib-i-akd ≔ İnikad→Sıhhat→Nifaz→Lüzum   [⊢ ayrıca, bkz. § merhale]
+  vücûb-şartı ⊥ merâtib-i-akd   ∵ κ(vücûb)=teklif-tevcihi ≠ κ(merâtib)=akdin-tekâmülü
+  misal: (nisap ∧ havelân-ı-havl) → vücûb(zekât) ; istitâʻa → vücûb(hac)
 
-Ca'lî-İrâdî(çeşit) = { ta'lîkî, takyîdî, fâsih }
-  (ta'lîkî: hükmü şüpheli bir hadiseye bağlamak — "gemi gelirse sattım"; takyîdî: tasarrufu bir vazifeye bağlamak; fâsih: tahakkukunda bağı hükümsüz kılan şart.)
+Caʻlî-İrâdî(çeşit) = { taʻlîkî, takyîdî, fâsih }
+  taʻlîkî(H)  ≔ doğuş(H) ⟸ vukûʻ(hâdise-i-müşekkek)
+  takyîdî(H)  ≔ H ⊃ vazife(k)
+  fâsih(H)    ≔ vukûʻ(şart) → ¬nâfiz(H)
 
-Aklî-Âdî(çeşit) = { hayat, kudret }
-  (misal kümesidir, tahdit değil: ilim için hayat, teklif/fiil için kudret şarttır — şeriatın değil aklın zaruri kıldığı taban şartlarıdır.)
+Aklî-Âdî(çeşit) ⊇ { hayat, kudret }        [misal kümesi, tahdit değil]
+  hayat → şart(ilim) ;  kudret → şart(teklif ∧ fiil)
 
-Tasavvur(çeşit) = { bedihî, nazarî }
-  (kıstas: hâsıl olmak için bir tarife muhtaç mı, değil mi.)
-
-Tasdik(çeşit) = { bedihî, nazarî }
-  (kıstas: hükme varmak için bir delile/kıyasa muhtaç mı, değil mi.)
+Tasavvur(çeşit) = { bedihî, nazarî }        κ = muhtâc(tarif)
+Tasdik(çeşit)   = { bedihî, nazarî }        κ = muhtâc(delil ∨ kıyas)
 
 Tavassut(çeşit) = { burhânî, cedelî, hitâbî, şiirî, safsatavî }
-  (dört ardışık ikili Nakzeyn'in ürünü: yakînî mi → burhânî; değilse müsellem mi → cedelî; değilse zannedilen mi → hitâbî; değilse hayalî mi → şiirî, değilse → safsatavî. Muhakeme(Rükün)'ün "tavassut" unsurunun kendi iç tasnifidir; Muhakeme(Lüzum)'daki burhanî/zannî ayrımı ve Şek-Zan-Yakîn İdraki ile aynı köke bağlanır.)
+  κ₁=yakînî(öncül)            → burhânî
+  ¬κ₁ ∧ κ₂=müsellem            → cedelî
+  ¬κ₁∧¬κ₂ ∧ κ₃=maznûn          → hitâbî
+  ¬κ₁∧¬κ₂∧¬κ₃ ∧ κ₄=muhayyel    → şiirî
+  ¬κ₁∧¬κ₂∧¬κ₃∧¬κ₄             → safsatavî
+  ⋉ Muhakeme(Rükün).tavassut, Muhakeme(Lüzum), Şek-Zan-Yakîn İdraki
+```
 
 ---
 
@@ -72,11 +82,12 @@ Tavassut(çeşit) = { burhânî, cedelî, hitâbî, şiirî, safsatavî }
 
 Muhakeme(merhale) = İnikad × Rükün × Sıhhat × Nifaz × Lüzum
 
-Merhale eksikliğinin hükmü:
-  İnikad eksik → bâtıl (hiç doğmamış)
-  Sıhhat eksik → fasid (doğmuş, sakat)
-  Nifaz eksik → mevkuf (askıda, amel doğurmaz)
-  Lüzum: burhanî → lâzım (bağlayıcı) · zannî → gayr-ı lâzım (nakzolunabilir)
+```
+¬İnikad → bâtıl
+¬Sıhhat → fasid
+¬Nifaz  → mevkuf
+Lüzum: burhânî → lâzım  ;  zannî → gayr-ı lâzım
+```
 
 ---
 
@@ -84,7 +95,7 @@ Merhale eksikliğinin hükmü:
 
 Nefis(kuvvet) = { muharrike, müdrike }
 
-Aklı Ameli(kuvvet) = { tedbir, … }  -- açık, dökümü tamamlanmadı
+Aklı Ameli(kuvvet) = { tedbir, … }  ⊬ (dökümü tamamlanmadı)
 
 ---
 
@@ -106,17 +117,19 @@ Müdrike(insani) = Akıl ∪ Müdrike(hayvani)
 
 ## Bünye
 
+```
 Bünye = Mevki × Zaruret
 
-Bünye(dâhil, zarurî) = Rükün
-Bünye(dâhil, gayr-i zarurî) = Araz
-Bünye(hâriç, zarurî) = Şart
-Bünye(hâriç, gayr-i zarurî) = Karîne
+Bünye(dâhil,zarurî)        = Rükün
+Bünye(dâhil,gayr-i-zarurî) = Araz
+Bünye(hâriç,zarurî)        = Şart
+Bünye(hâriç,gayr-i-zarurî) = Karîne
 
-Rükün: bir varlığın bizzat kendi bünyesine, dokusuna dâhil olan kurucu iç cüzdür (dâhilî zaruret).
-Şart: varlığın bünyesine dâhil olmayan, lakin varlığın vücut bulması, işlemesi ve netice vermesi için haricen bulunması icap eden kayıttır (hâricî zaruret).
-Araz: varlığın bünyesine dâhil olan, lakin bulunması zarurî olmayan (yokluğu varlığı yok etmeyen) niteliktir (dâhilî gayr-i zaruret).
-Karîne: varlığın bünyesine dâhil olmayan, hâriçte bulunması da zarurî olmayan, lakin yine de onunla beraber bulunabilen (mukarin olan) haldir (hâricî gayr-i zaruret).
+Rükün(x,W)  ≔ x∈dâhil(W) ∧ zarurî(x,W)     [¬x → ¬W, mutlak adem]
+Şart(x,W)   ≔ x∈hâriç(W) ∧ zarurî(x,W)     [¬x → ¬W, ama W ara-hâlde kalabilir: bâtıl/fasid/mevkuf/gayr-i-lâzım]
+Araz(x,W)   ≔ x∈dâhil(W) ∧ ¬zarurî(x,W)    [¬x ↛ ¬W]
+Karîne(x,W) ≔ x∈hâriç(W) ∧ ¬zarurî(x,W)    [x, W'ya ne vücûden ne fiilen tesir eder]
+```
 
 İzahat: `izahat/rukun_sart/genel.md`
 
@@ -148,25 +161,33 @@ Terkip(Biçim) = { tahsisli, hattî, denklikli, devirli, ağlı }
 
 ## Şart
 
-Terkip(Şart) = { ??? }  -- açık, tarif bekliyor
+Terkip(Şart) = { ??? }  ⊬ (açık)
 
 ---
 
 ## Rükün
 
-Terkip(Rükün) = { ??? }  -- açık, tarif bekliyor
+Terkip(Rükün) = { ??? }  ⊬ (açık)
 
 Muhakeme(Rükün) = { sual (saik), mevzu (mahkûmun fîh), tavassut (hadd-i evsat), mizan, hüküm (mahkûmun bih) }
 
-Sual(Rükün) = ⟨ sâil (talep eden şuur), mes'ûlün anh (hakkında sual edilen malum zemin), matlûb (aranan meçhul/epistemik yarık) ⟩
+Sual(Rükün) = ⟨ sâil, mes'ûlün anh, matlûb ⟩
 
-Mizan(Rükün) = { kıstas, teaddüdü ihtimal, sükun kabiliyeti }  -- taslak, tasdik bekliyor
+Mizan(Rükün) = { kıstas, teaddüdü ihtimal, sükun kabiliyeti }  ⊬ (taslak)
 
-Tedbir(Rükün) = { mebde, intikal usulü, gaye }  -- taslak, tasdik bekliyor
+Tedbir(Rükün) = { mebde, intikal usulü, gaye }  ⊬ (taslak)
 
-**Nakz:** Muhakeme(Rükün)'e "sual" beşinci unsur olarak eklendi, padişah fermanıyla kat'î (F 3-C/13, itiraz yok). Bunun mükerrerlik doğurmaması için "epistemik yarığın varlığı" Muhakeme(İnikad)'dan çıkarıldı — aynı unsur artık yalnız Rükün'de, tek yerde duruyor. Şebeke bu karara göre bağlandı (bkz. Vürûd/Sudûr başlıkları): Merak ve Sual Tevcihi → Muhakeme artık Vâcib.
+```
+Nakz [F 3-C/13, kat'î, itiraz yok]:
+  Muhakeme(Rükün) += sual
+  ⟹ epistemik-yarık ∉ Muhakeme(İnikad)         [mükerrerlik-ademi]
+  ⟹ Merak ve Sual Tevcihi(Vâcib) → Muhakeme     [şebekede bağlandı]
 
-**Reddedilen teklif (kayıt için):** Düz, seviyesiz bir "Şart(Muhakeme)" ve "Şart(Sual)" kümesi (İnikad/Sıhhat/Nifaz/Lüzum merhalelerinin yanına, onlardan ayrı) teklif edildi, kabul edilmedi. Sebep: teklif edilen beş Şart(Muhakeme) unsurundan dördü ("ehliyet-i müdrike" → İnikad'da zaten var; "liyakat-i mizan" → Sıhhat'teki "kıstasın sıhhati ve liyakati"nin aynısı; "münasebet-i hadd-i evsat" → Sıhhat'teki "illiyet rabıtasının sübutu"nun aynısı; "selâmet ani'l-muarız" → Lüzum'daki "muarız-ı râcihin ademi"nin aynısı) zaten merhalelere dağıtılmış unsurların tekrarıdır; aynı hata Şart(Sual)'de de var ("teaddüd-i ihtimal" ve "adem-i müsâdere", Sual(Sıhhat)'te zaten var). Merhaleli tasnifi terk edip düz listeye dönmek, tam da bu tashihatın kendisinin mahkûm ettiği mükerrerliği yeniden üretiyor.
+⊬ (reddedildi): Şart(Muhakeme)ᵈüz , Şart(Sual)ᵈüz
+  ∵ {ehliyet-i-müdrike, liyakat-i-mizan, münasebet-i-hadd-i-evsat, selâmet-ani'l-muarız}
+      ⊂ İnikad ∪ Sıhhat ∪ Lüzum                 [mükerrer]
+  ∵ {teaddüd-i-ihtimal, adem-i-müsâdere} ⊂ Sual(Sıhhat)   [mükerrer]
+```
 
 ---
 
@@ -182,7 +203,11 @@ Terkip(Mahiyet) = Madde × Kanun
 
 Mahiyet(Madde) = { maddî, manevî }
 
-Hafıza(Madde) = { maddî, manevî }  -- taslak, tasdik bekliyor (bkz. not: Kuvve-i Hayâl/sûret ↔ maddî bölme, Kuvve-i Hâfıza/mana ↔ manevî bölme)
+```
+Hafıza(Madde) = { maddî, manevî }  ⊬ (taslak)
+  maddî ≈ Kuvve-i-Hayâl(sûret)
+  manevî ≈ Kuvve-i-Hâfıza(mana)
+```
 
 ---
 
@@ -194,45 +219,53 @@ Mahiyet(Kanun) = { fizikî, gayr-i fizikî }
 
 ## İnikad
 
-Muhakeme(İnikad) = { ehliyet-i müdrikeyi hâiz olmak, mahallin kabil olması }
+Muhakeme(İnikad) = { ehliyet-i müdrike, mahallin kabîliyeti }
 
-**Nakz:** "Epistemik yarığın varlığı" buradan çıkarıldı — sebebi Rükün'e taşınmasıdır, aşağıya bakınız.
+Nakz: epistemik-yarık ∉ (→ Rükün'e nakl, bkz. § Rükün)
 
 ---
 
 ## Sıhhat
 
-Muhakeme(Sıhhat) = { tenakuzsuzluk, kıstasın sıhhati ve liyakati, illiyet rabıtasının sübutu, tahrif ve hileden tecerrüd }
+Muhakeme(Sıhhat) = { tenakuzsuzluk, kıstasın sıhhati ∧ liyakati, illiyet rabıtasının sübutu, tahrif ∧ hileden tecerrüd }
 
-Sual(Sıhhat) = { teaddüd-i ihtimal (muhayyer olmaması), musadere ale'l-matlub olmaması (cevabı içinde gizlememesi), tahayyüz-i hadd (aranan meçhulün hudutlarının muayyen olması) }
+Sual(Sıhhat) = { teaddüd-i ihtimal, ¬musâdere-ale'l-matlub, tahayyüz-i hadd }
 
-**Nakz (F 2-Y gereği açık yazılır):** Önceki taslak (`mevcut-hedef boşluk tespiti, teaddüdü ihtimal, gaye`) nakzedildi. Sebep: "boşluk tespiti" ve "gaye", Sıhhat değil İnikad seviyesindedir — Muhakeme(İnikad)'daki "epistemik yarığın varlığı" ile aynı şeydir, iki başlıkta tekrarlanamaz. Sıhhat'te kalan asıl sual: sual doğmuş (mün'akid) olsa dahi, kendi içinde mugalata barındırmadan, hakiki sual sayılması için ne gerekir.
+```
+Nakz [F 2-Y]: { boşluk-tespiti, gaye } ⊬
+  ∵ ≡ Muhakeme(İnikad).epistemik-yarık   [mükerrer, İnikad seviyesi]
+```
 
 ---
 
 ## Nifaz
 
-Muhakeme(Nifaz) = { vakıaya mutabakat (harici gerçeklikle örtüşme), mâni-i aklî ve amelînin ademi (tatbikini engelleyen bir mânîin bulunmaması) }
+Muhakeme(Nifaz) = { vâkıaya mutâbakat, ¬mâni(aklî ∨ amelî) }
 
-**Nakz:** Önceki taslaktaki "şüphenin galebe çalmaması (itminan hali)" buradan çıkarıldı, Lüzum'a taşındı — itminan, hükmün yürürlüğe girip girmediğiyle değil, ne derece bağlayıcı olduğuyla alakalıdır.
+Nakz: itminan ⊬ (buradan) → Lüzum'a nakl
 
 ---
 
 ## Lüzum
 
-Muhakeme(Lüzum) = { muarız-ı râcihin ademi (daha kuvvetli zıt bir delilin bulunmaması), tahakkuk-i itminan (şüpheden tecerrüd ederek hükme bağlanmış olması) }
+Muhakeme(Lüzum) = { ¬muârız-ı râcih, tahakkuk-i itminan }
 
-Netice taksimi (şart değil, Lüzum hâsıl olunca hükmün kendi kuvvet derecesidir): burhanî/kat'î ise → lâzım (bağlayıcı, zihin cayamaz) · zannî/ictihadî ise → gayr-ı lâzım (yeni delille nakzolunabilir).
+```
+netice-taksimi (şart değil, sonucun kuvvet derecesi):
+  burhânî → lâzım        (zihin cayamaz)
+  zannî   → gayr-ı lâzım (nakzolunabilir)
+```
 
 ---
 
 ## Teşrih
 
-X(Teşrih) = X(Vürûd) × X(Sudûr)   -- her X için genel şema; Teşrih, Vürûd, Sudûr hep başlık kalır, hiçbir yerde özne olmaz
-
+```
+∀X: X(Teşrih) = X(Vürûd) × X(Sudûr)
 Muhakeme(Teşrih) = Muhakeme(Vürûd) × Muhakeme(Sudûr)
+```
 
-(41-meleke şebekesinin tamamı için aynı şema aşağıdaki Vürûd/Sudûr başlıklarında kurulu; her düğümün kendi Teşrih'i, kendi Vürûd × Sudûr çarpımıdır — ayrı ayrı yazılmadı, tekrar olurdu.)
+41-meleke şebekesinin tamamı aynı şemaya tâbidir (§ Vürûd, § Sudûr); her düğüm için ayrı ayrı yazılmaz, tekrar olur.
 
 ---
 
@@ -330,79 +363,76 @@ Münazara(Sudûr) = { Tezat, Tenkit, Tashih, Teyit, Tahkik }
 Talim(Sudûr) = { Fesâhat, Tahsil }
 Tahsil(Sudûr) = { Gaye Belirleme, Talâkat, Zâtî Melekeleşme }
 
-(Cerh, Mukayese, Zâtî Melekeleşme kendi Vürûd/Sudûr'u tanımlanmamış uç düğümlerdir — bkz. açık notlar.)
+Vürûd(Cerh) = Sudûr(Cerh) = ∅ (tanımsız) — aynen Mukayese, Zâtî Melekeleşme
 
 ---
 
 ## Metâlib
 
+```
 Metâlib(çeşit) = { hel-i basit, mâ, hel-i mürekkebe, lime }
 
-Tükenme isbatı: herhangi bir sual, bir mevzu hakkında ya sırf kendisi (hel-i basit: var mıdır; mâ: nedir) ya da bir mahmul ile birleşimi (hel-i mürekkebe: böyle midir; lime: niçindir) hakkındadır — bir önerme yalnız mevzu ve mahmulden kurulur, üçüncü bir cüzü yoktur, o yüzden bu ikilik tüketicidir.
+kaziyye ≔ (mevzu, mahmul)
+⟺ₜ: κ=sırf-mevzu(sual)? → {hel-i-basit,mâ} ; ¬κ=mevzu+mahmul → {hel-i-mürekkebe,lime}
+  hel-i-basit ≔ var(mevzu)?
+  mâ          ≔ mahiyet(mevzu)?
+  hel-i-mürekkebe ≔ sâbit(mevzu,mahmul)?
+  lime        ≔ illet(sübut)?
 
-**Kayıt (F 2-Y gereği, kapsam dar tutulur):** Bu dörtlü yalnız **sualin şeklini** (var mı / nedir / böyle mi / niçin) tüketir; sualin **muhtevasını** (Hel-i mürekkebe veya Lime sorulurken, sorulan vasfın kemiyet mi keyfiyet mi mekân mı zaman mı olduğu — "nasıl", "ne kadar", "nerede", "ne zaman" gibi) tüketmez. O, ayrı bir teoridir — bkz. aşağıda **Makûlât** — ve orada da tükenmişlik yalnız kısmen ispatlanabildi.
+⊢ yalnız Şekil'de ; Muhteva ⊳ Makûlât (kısmî ⊢, bkz. § Makûlât)
 
-**Reddedilen teklif (kayıt için):** Rükün'ün "madde+suret" ikiliğine indirgenmesi (İllet-i Mâddiye+Sûriyye üzerinden) tekrar gündeme getirilmiş, tekrar reddedilmiştir. Sebep: manevî varlıklarda (mesela bir matematik formülünde) madde yoktur, ve "suret" sanılan şey (formülün yazılışı/notasyonu) aynı formül farklı notasyonlarla ifade edilebildiği için bizzat arazdır, rükün değildir. Madde-suret ikiliği yalnız maddî varlıklara mahsustur, âlemşümul bir Rükün tarifi olamaz.
+⊬ (reddedildi): Rükün ≟ Madde×Suret
+  ∵ manevî-varlıkta madde=∅, "suret"(=notasyon) değişken → araz, rükün değil
 
-**Nakz:** Nispet(çeşit) = {zâtî, vücûdî, fâilî, zamanî, râbıtalı, gaî} taslağı, Metâlib'in altına bir tatbik listesi olarak önerilmişti; o zaman ikna edici bulunmayıp mühürlenmemişti. Şimdi (bkz. aşağıda **Mâlum**) teşrih edilip nakzedildi: altısı eş seviyeli kardeş değilmiş, Mâlum→Metâlib→Makûlât ağacının farklı dallarına dağılmış konum etiketleriymiş; ayrıca bu teşrih İllet-i Mâddiye/Sûriyye'nin hiç sorulmadığı bir eksiği de gösterdi.
+⊬ (nakz): Nispet(çeşit) müstakil-küme  → bkz. § Mâlum
+```
 
 ---
 
 ## Makûlât
 
-Mevcûd = Cevher ∪ Araz
-  Kıstas: kendi başına, bir mevzuya muhtaç olmaksızın durur mu, yoksa bir mevzuda (başka bir şeyin üzerinde) mi kaim? → evetse Cevher, hayırsa Araz.
+```
+Mevcûd = Cevher ⊔ Araz                    κ = kâim-bi-nefsihî(x)?
+Araz(çeşit) = { zâtî, izafî }             κ = nazar-ilâ-zâtihî(x)?
+Zâtî(çeşit) = { kemiyet, keyfiyet }       κ = münkasım-bi'l-mıkdâr(x)?
+  [not: bu kemiyet/keyfiyet ≠ Tasdik(Kemiyet)/Tasdik(Keyfiyet); kök bir, mevzu ayrı]
 
-Araz(çeşit) = { zâtî, izafî }
-  Kıstas: arazın hakikati sırf mevzuun kendisine mi bakıyor, yoksa mevzu ile hâricî bir şey arasındaki nispete mi? → evetse zâtî, hayırsa izafî.
+İzafî(çeşit) = { izafet, eyne, metâ, vazʻ, mülk, fiʻl, infiʻal }   ⊬ (yalnız enümere, tükenmişlik ispatsız)
 
-Zâtî(çeşit) = { kemiyet, keyfiyet }
-  Kıstas: mevzuun bölünebilir miktarı mı (evetse Kemiyet), yoksa mevzuun hâlinin nasıllığı mı (hayırsa Keyfiyet)?
-  (Not: bu "kemiyet/keyfiyet" — kaziyyenin kendi kapsamına/isbatına bakan Tasdik(Kemiyet)/Tasdik(Keyfiyet)'ten ayrıdır; kök aynı, mevzu farklı, karıştırılmasın.)
+Makûlât(çeşit) = Cevher ⊔ Zâtî ⊔ İzafî
+  = { cevher, kemiyet, keyfiyet, izafet, eyne, metâ, vazʻ, mülk, fiʻl, infiʻal }
 
-İzafî(çeşit) = { izafet, eyne, metâ, vaz', mülk, fiil, infial }
-
-Makûlât(çeşit) = Cevher ∪ Zâtî ∪ İzafî = { cevher, kemiyet, keyfiyet, izafet, eyne, metâ, vaz', mülk, fiil, infial }
-
-**Dürüstçe durulan yer:** İlk iki kesim (Cevher/Araz, Zâtî/İzafî) ve Zâtî'nin kendi kesimi (Kemiyet/Keyfiyet), her biri tek bir kıstas + Nakzeyn ile sağlam kuruldu. **İzafî'nin kendi yedisi (izafet, eyne, metâ, vaz', mülk, fiil, infial) böyle kurulamadı** — klasik metinlerden enümere edildi (sayıldı), ama aralarındaki kesimin tek bir kıstas zincirinden çıktığı bizim usulümüzce ispatlanmadı. Zorlayıp uydurmak yerine açık bırakılıyor: bu yedinin tükenmişliği meçhuldür.
+⊢: {Cevher/Araz, Zâtî/İzafî, Kemiyet/Keyfiyet}   [her biri κ+Nakzeyn]
+⊬: İzafî'nin 7'si arası kesim   [enümere, zincir yok]
+```
 
 ---
 
 ## Mâlum
 
-Mâlum = Tasavvur ∪ Tasdik
-
-Kıstas: herhangi bir idrake tek vasıf sorulur — "bu idrak bir hüküm taşıyor mu?" Nakzeyn Kanunu gereği cevap evet ya da hayır, üçüncüsü yoktur; evet ise Tasdik, hayır ise Tasavvur.
-
-**Mâlum ile Metâlib'in bağlantısı (mühürlü):**
-
 ```
+Mâlum = Tasavvur ⊔ Tasdik          κ = hüküm-taşır(idrak)?
+  κ(x) → Tasdik(x) ; ¬κ(x) → Tasavvur(x)
+
 Tasavvur(Metâlib) = { mâ }
 Tasdik(Metâlib)   = { hel-i basit, hel-i mürekkebe, lime }
+Mâ(çeşit) = Makûlât(çeşit)
 
-Mâ(çeşit) = Makûlât(çeşit)   -- Mâ'nın kendi içi, aynen Makûlât'tır
+Dayanak: ⟺ₜ(Mâlum) ⟸ Nakzeyn
+  Nakzeyn ⊬ (doğrudan ispat) ; ⊢ yalnız (inkâr → kendini-nakz)   [Aristo, Metafizik Γ]
+  κ-seçimi ≠ mutlak ; κ ⋉ maksad(insan.müdrike → mekanikleştirme)
+
+Yer: Mâlum ⊂ Nefis(kuvvet).Müdrike ; Nefis(kuvvet).Muharrike ⊬ (zaruret-isbatsız)
+
+⊬ (nakz) Nispet(çeşit):
+  zâtî      ⊳ Mâ
+  vücûdî    ⊳ Hel-i-basit
+  zamanî    ⊳ Hel-i-mürekkebe   [= Veche/Merhale: İnikad→Sıhhat→Nifaz→Lüzum]
+  fâilî     ⊳ Lime.İllet-i-Fâiliye
+  râbıtalı  ⊳ Lime.İllet-i-Fâiliye ⋉ şebeke (Vürûd/Sudûr)
+  gaî       ⊳ Lime.İllet-i-Gâiye
+  eksik: Lime.İllet-i-Mâddiye, Lime.İllet-i-Sûriyye ∉ Nispet   [sorulmamış, reddedilmemiş]
 ```
-
-Yani Tasavvur, Metâlib'in yalnız "Mâ" dalını doldurur ve o dal Makûlât'a (Cevher/Zâtî/İzafî onlusuna) açılır; Tasdik ise Metâlib'in geri kalan üç dalının (Hel-i basit, Hel-i mürekkebe, Lime) tamamını doldurur.
-
-**Kayıt (kapsam ve dayanak açıkça yazılır):** Bu ikiliğin tükenmişliği, Nakzeyn Kanunu'nun kendisine dayanır; Nakzeyn'in kendisi ispat edilemez, yalnız inkârının kendini nakzettiği gösterilebilir (Aristo, Metafizik Γ) — devir/teselsülün mecburen bittiği yerdir. Ayrıca: "hüküm taşıma" kıstasının seçilmesi **mutlak** değil, **maksada nispetle** zarurîdir — bizim maksadımız (insanın idrak/müdrike kanadını çıkarıp mekanikleştirmek) bu kıstası gerektirir; farklı bir maksatla (mesela hissî/vehmî/aklî hâsıl oluş tarzına göre) başka, ona dik bir kesit alınabilirdi, bu kesit onu çürütmez.
-
-**Yeri:** Mâlum, Nefis(kuvvet)'in yalnız **Müdrike** kanadını doldurur. Muharrike kanadının (irade, şehvet, gazap) kendi zaruret isbatı henüz yapılmadı, açık.
-
-**Nispet'in teşrihi ve nakzı (F 2-Y gereği açık yazılır):** Nispet(çeşit) = {zâtî, vücûdî, fâilî, zamanî, râbıtalı, gaî} taslağı, Mâlum/Metâlib ağacına yerleştirilince altısının **eş seviyeli kardeş olmadığı** görülüyor — biri Tasavvur dalında, beşi Tasdik'in üç dalına dağınık:
-
-| Nispet unsuru | Metâlib'te yeri |
-|---|---|
-| zâtî | **Mâ** (Tasavvur) — Makûlât'a açılır |
-| vücûdî | **Hel-i basit**'in alt-türü (Tasdik(Vücûb)) |
-| zamanî | **Hel-i mürekkebe**'nin alt-türü (Veche/Merhale: İnikad/Sıhhat/Nifaz/Lüzum) |
-| fâilî | **Lime**'nin İllet-i Fâiliye kanadı |
-| râbıtalı | **Lime**'nin İllet-i Fâiliye'sinin şebekeye (Vürûd/Sudûr) yayılmışı |
-| gaî | **Lime**'nin İllet-i Gâiye kanadı |
-
-Bu teşrih ayrıca bir **eksik** ortaya çıkarıyor: Lime'nin klasik dört kanadından (İllet-i Mâddiye, Sûriyye, Fâiliye, Gâiye) yalnız ikisi (Fâiliye, Gâiye) Nispet'te vardı; Mâddiye ve Sûriyye hiç yoktu. (Bunların "Rükün = madde+suret" diye âlemşümul bir tarife zorlanması ayrıca reddedilmişti — burada reddedilen, o zorlamaydı; İllet-i Mâddiye/Sûriyye'yi maddî şeylere has bir Lime alt-sualı olarak sormak ayrı, reddedilmiş değil, henüz sorulmamış.)
-
-**Nakz:** Nispet(çeşit), müstakil bir küme olarak mühürlenmiyor — Mâlum→Metâlib→Makûlât ağacı onun yerine geçiyor, çünkü daha derin usulle (kıstas+Nakzeyn) kurulmuş ve daha tam (İllet-i Mâddiye/Sûriyye eksiğini de görünür kılmış) durumda. Nispet'in altı unsuru birer **konum etiketi** olarak yukarıki tabloda saklı kalıyor, ayrı bir küme olarak değil.
 
 İzahat: `izahat/malum/`
 
@@ -410,80 +440,60 @@ Bu teşrih ayrıca bir **eksik** ortaya çıkarıyor: Lime'nin klasik dört kana
 
 ## Tarif
 
+```
 Tarif = Kemal × Unsur
-
 Kemal = { tam, nakıs }
-Unsur = { zâtî (→ Hadd), arazî (→ Resm) }
-
-Nazarî Tasavvur'un (bir tarifle hâsıl olan tasavvurun) kendi iç tasnifidir; Unsur ekseni doğrudan Bünye = Mevki × Zaruret'in bir tatbikidir (zâtî unsurla tarif = Hadd, arazî unsurla tarif = Resm).
+Unsur = { zâtî → Hadd, arazî → Resm }      ⋉ Bünye
+```
 
 ---
 
 ## Vücûb
 
+```
 Tasdik(Vücûb) = { vâcib, mümkün, mümteni }
-  (tam kıstas, ardışık Nakzeyn: yokluğu muhal mi → vâcib; değilse varlığı muhal mi → mümteni, değilse mümkün.)
+  κ₁=muhal(yokluk)? → vâcib
+  ¬κ₁ ∧ κ₂=muhal(varlık)? → mümteni
+  ¬κ₁ ∧ ¬κ₂ → mümkün
 
-Teşrih(Vücûb) = { Vâcib, Mümkün }
-  (Tasdik(Vücûb)'un Teşrih'e daralmış tatbikidir — bir kenar zaten listede ya vardır ya yoktur, "mümteni" bir kenar için anlamsızdır, o yüzden yalnız iki derece kullanılır.)
+Teşrih(Vücûb) = { Vâcib, Mümkün } = Tasdik(Vücûb) ⋉ kenar
+  [mümteni ∉ kenar: listede-yok zaten yok demektir]
 
-Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün varsayılandır ve etiketlenmez**; yalnız **Vâcib** olan unsur `(Vâcib)` ile işaretlenir. Bu, hem az başlıkla idare eder hem de yazımı sadeleştirir.
+kural: varsayılan=Mümkün (etiketsiz) ; Vâcib=(Vâcib)
+```
 
 ---
 
 ## Vâcibü'l-Vücûd
 
-**1 — Mevcûdun taksimi** (Tasdik(Vücûb)'un Mevcûd'a tatbiki, mümteni hâriç):
 ```
-Mevcûd(Vücûb) = { Vâcibü'l-Vücûd, Mümkinü'l-Vücûd }
-```
-Kıstas: bizatihi (zâtından dolayı) var olması zarurî mi, değil mi. Var olan bir şey için "mümteni" ihtimali zaten düşer.
+1)  Mevcûd(Vücûb) = { Vâcibü'l-Vücûd, Mümkinü'l-Vücûd }        [mümteni ∉ Mevcûd]
+    κ = zarurî-bizatihî(vücûd)?
 
-**2 — Mümkinin müreccihe muhtaçlığı** (Lime/İllet-i Fâiliye'nin tatbiki):
-```
-Mümkinü'l-Vücûd(Şart) = { müreccih-i hâricî }
-```
-Kıstas: bizatihi ne varlığı ne yokluğu zorunlu olan bir şeyin fiilen bir tarafa (varlığa) tahakkuku, sebepsiz olamaz — "tereccüh bilâ müreccih" (sebepsiz tercih) kendisi bir nakzdır: sebepsiz bir farkın doğması, fark yokken fark olduğunu iddia eder.
+2)  Mümkinü'l-Vücûd(Şart) = { müreccih-i hâricî }
+    ⟸ ¬(tereccüh bilâ müreccih)     [sebepsiz tercih = nakz]
 
-**3 — Devir ve teselsülün reddi** (F 1-J/1-C, zaten mühürlü kaide, burada tatbik):
-```
-Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
-```
-Devir muhal: A→B→A, A'nın kendinden önce var olmasını gerektirir. Teselsül muhal: sonsuz zincirin her cüzü mümkinse, küllü de mümkindir (cüz'iyattan hâlî bir küll yoktur), ve mümkinin küllü yine 2'deki müreccihe muhtaçtır — zincirin uzunluğu ihtiyacı gidermez, yalnız erteler.
+3)  Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
+    devir:    A≺B≺A  ⟹  A≺A            (muhal)
+    teselsül: ∀cüz mümkin ⟹ küll mümkin ⟹ küll ⋉ (2)   [erteler, gidermez]
 
-**Netice:**
-```
-∃! Vâcibü'l-Vücûd
-```
-1-3'ün zarurî neticesi: mümkinler bilfiil var (müşahede), silsile devir/teselsülle nihayetsiz kalamaz (3), öyleyse silsile bizatihi vâcib bir noktada nihayet bulur.
+∴  ∃! Vâcibü'l-Vücûd                    [1,2,3'ten]
 
-**4 — Basitlik** (Basitlik(çeşit) tatbiki):
-```
-Vâcibü'l-Vücûd(Basitlik) = { basit }
-```
-Kıstas: mürekkeb olsaydı, cüzlerinin birleşmesi (2)'deki gibi hâricî bir müreccihe muhtaç olurdu — Vâcib'in tarifiyle (hiçbir şeye muhtaç olmama) çelişir.
+4)  Vâcibü'l-Vücûd(Basitlik) = { basit }
+    mürekkeb ⟹ ictimâʻ-i-ecza ⋉ (2) ⟹ muhtâc   [Vâcib-tarifiyle çelişki]
 
-**5 — Vahdâniyet:**
-```
-| { x : x Vâcibü'l-Vücûd } | = 1
-```
-Kıstas: iki Vâcib olsaydı aralarında bir temayüz (fark) şart olurdu (yoksa iki değil bir olur); bu fark mahiyette bir terkip (cins+fasıl) gerektirir — (4) Basitlik'le çelişir. Öyleyse tektir.
+5)  |{x : x Vâcibü'l-Vücûd}| = 1
+    ∃x≠y (ikisi Vâcib) ⟹ temayüz ⟹ terkib(cins,fasıl) ⟹ ¬(4)   [çelişki]
 
-**6 — Zâtî sıfatlar:**
-```
-Vâcibü'l-Vücûd(Zaman) = { ezelî, ebedî }
-```
-Kıstas: bir başlangıcı/sonu olsaydı, o an bir DEĞİŞİM (yoktan var / vardan yok) olurdu; her değişim (2) gereği müreccihe muhtaçtır; Vâcib hiçbir şeye muhtaç değildir.
+6)  Vâcibü'l-Vücûd(Zaman) = { ezelî, ebedî }
+    bidâyet ∨ nihâyet ⟹ tagayyür ⟹ ⋉(2)-muhtaçlık   [Vâcib'e münâfî]
 
-```
-Vâcibü'l-Vücûd(Kıyam) = { bi-nefsihî }
-```
-Kıstas: Makûlât'taki Cevher tarifinin ("kendi başına, mevzuya muhtaç olmaksızın durur") en tam mertebesi — yalnız mevzuya değil, hiçbir şarta muhtaç olmadan kaimdir.
+    Vâcibü'l-Vücûd(Kıyam) = { bi-nefsihî }
+    ⋉ Makûlât.Cevher   [en tam mertebe: mevzûsuz ∧ şartsız kıyam]
 
+    Vâcibü'l-Vücûd(Muhalefet) = { li'l-havâdis }
+    ⟸ (1): Vâcib ∩ Mümkin = ∅ ; havâdis ⊂ Mümkin
 ```
-Vâcibü'l-Vücûd(Muhalefet) = { li'l-havâdis }
-```
-Kıstas: Mevcûd(Vücûb) (1)'de Vâcib ile Mümkin ayrık, kesişmeyen iki kısımdır (Nakzeyn); havâdis (sonradan olanlar) Mümkin kısmındadır; Vâcib zâtında onlara benzemez.
 
 İzahat: `izahat/vacibul_vucud/genel.md`
 
@@ -491,57 +501,70 @@ Kıstas: Mevcûd(Vücûb) (1)'de Vâcib ile Mümkin ayrık, kesişmeyen iki kıs
 
 ## Kemiyet
 
-Tasdik(Kemiyet) = { küllî, cüz'î }
-  (kıstas: hüküm mevzuun bütün fertlerine mi, bir kısmına/birine mi şamil.)
+Tasdik(Kemiyet) = { küllî, cüz'î }        κ = şümul(bütün-fert)?
 
 ---
 
 ## Keyfiyet
 
-Tasdik(Keyfiyet) = { mûcibe, sâlibe }
-  (kıstas: hüküm isbat mı ediyor, nefy mi. Kemiyet × Keyfiyet çarpımı meşhur dörtlüyü verir: küllî-mûcibe, küllî-sâlibe, cüz'î-mûcibe, cüz'î-sâlibe — Aristo kıyas nizamının üzerine kurulduğu taban.)
+```
+Tasdik(Keyfiyet) = { mûcibe, sâlibe }     κ = isbat(x)?
+Kemiyet × Keyfiyet = { küllî-mûcibe, küllî-sâlibe, cüz'î-mûcibe, cüz'î-sâlibe }   [Aristo kıyas tabanı]
+```
 
 ---
 
 ## Basitlik
 
-Basitlik(çeşit) = { basit, mürekkep }
-  (kıstas: tek cüzden mi, birden fazla cüzün birleşiminden mi ibaret — hem Tasavvur'a hem Tasdik'e tatbik edilir.)
+Basitlik(çeşit) = { basit, mürekkep }     κ = tek-cüz(x)?  ⋉ { Tasavvur, Tasdik }
 
 ---
 
 ## Menşe
 
+```
 Tasavvur(Menşe) = { hissî, hayalî, vehmî, aklî }
-  (ardışık Nakzeyn: madde ile birlikte, o an hazır mı → hissî; değilse sırf suret mi (mana yok) → hayalî; değilse taşıdığı mana cüz'î mi küllî mi → vehmî / aklî. Nefis hiyerarşimizin (Hissi müşterek, Hafıza/Mütehayyile, Vahime, Akıl) mantık tarafındaki karşılığıdır.)
+  κ₁=maʻa'l-madde(ân)? → hissî
+  ¬κ₁ ∧ κ₂=sırf-suret?  → hayalî
+  ¬κ₁∧¬κ₂: küllî(mana)? → aklî : vehmî
+  ⋉ Nefis(Hissi-müşterek, Hafıza/Mütehayyile, Vahime, Akıl)
+```
 
 ---
 
 ## İzahat haritası
 
 - ameliye → `izahat/tasnif/`
-- çeşit (Terkip kanadı) → `izahat/terkip/` (henüz açılmadı)
-- çeşit (Sual, Nefis, Akıl, İşlemci kanatları) → henüz izahat dosyası açılmadı
+- çeşit (Terkip kanadı) → `izahat/terkip/` ⊬ (henüz açılmadı)
+- çeşit (Sual, Nefis, Akıl, İşlemci kanatları) ⊬
 - levazım → `izahat/icat/`
 - merhale, İnikad, Rükün (Muhakeme kanadı), Sıhhat (Muhakeme kanadı), Nifaz, Lüzum → `izahat/muhakeme/`
-- Rükün (Mizan, Tedbir kanatları — taslak), Sıhhat (Sual kanadı — taslak) → henüz izahat dosyası açılmadı, formül de tasdik bekliyor
-- kuvvet, hayvani, insani (Nefis hiyerarşisi) → prose izahatı `CLAUDE.md` § 4-I'de (İbn Sînâ Nefs Şeması) mevcut; mimari küme-dosyası olarak henüz ayrılmadı
+- Rükün (Mizan, Tedbir — ⊬ taslak), Sıhhat (Sual kanadı — ⊬ taslak)
+- kuvvet, hayvani, insani → `CLAUDE.md` § 4-I (İbn Sînâ Nefs Şeması), mimarî küme-dosyası ⊬
 - Mahiyet, Madde, Kanun → `izahat/mahiyet/`
-- Teşrih, Vürûd, Sudûr, Vücûb → `izahat/tesrih/sebeke.md` (41-meleke şebekesinin tam Vücûb taraması)
-- Şart (çeşit, Vaz'î-Şer'î, Ca'lî-İrâdî, Aklî-Âdî) → henüz izahat dosyası açılmadı
-- Sual(Rükün) → henüz izahat dosyası açılmadı
-- Bünye, Mevki, Zaruret (Rükün/Şart/Araz/Karîne dörtlüsü) → `izahat/rukun_sart/genel.md`
-- Metâlib, Makûlât, Cevher/Araz/Zâtî/İzafî → henüz izahat dosyası açılmadı
+- Teşrih, Vürûd, Sudûr, Vücûb → `izahat/tesrih/sebeke.md`
+- Şart (çeşit + 3 kol) ⊬
+- Sual(Rükün) ⊬
+- Bünye, Mevki, Zaruret → `izahat/rukun_sart/genel.md`
+- Metâlib, Makûlât, Cevher/Araz/Zâtî/İzafî ⊬
 - Vâcibü'l-Vücûd → `izahat/vacibul_vucud/genel.md`
 - Mâlum → `izahat/malum/genel.md`
-- Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit), Tasavvur(Menşe), Tasdik(Vücûb/Kemiyet/Keyfiyet), Basitlik(çeşit) → henüz ayrı izahat dosyası açılmadı; temel usul (kıstas+Nakzeyn+isimlendirme+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'ye işlendi
+- Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit), Tasavvur(Menşe), Tasdik(Vücûb/Kemiyet/Keyfiyet), Basitlik(çeşit) ⊬ — temel usul (κ+Nakzeyn+isim+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'de
 
 ## Açık notlar (41-meleke şebekesi)
 
-- Bütün şebeke artık `## Vürûd` ve `## Sudûr` başlıkları altında, her düğüm kendi `X(Vürûd)`/`X(Sudûr)` kümesiyle mühürlendi (43 düğüm, ~200 kenar). Vürûd, Sudûr'un matematiksel tersi olarak (her düğüm için "beni kim çıktısında taşıyor" taraması ile) türetildiği için ikisi **inşa gereği** simetriktir — bir daha asimetri çıkamaz.
-- Bu türetme sırasında iki ek hata yakalandı ve düzeltildi: **(1)** Tenkit→Tecrit kenarı, tartışmalı olan ters yönle (Tecrit→Tenkit, o silinmişti) karıştırılıp yanlışlıkla silinmişti — geri eklendi, çünkü kendi başına hiç tartışmasız, tutarlı bir kenardı. **(2)** Sanat→Belâgat kenarı asıl veride Sanat'ın çıktısında vardı ama Belâgat'ın girdisinde hiç yoktu — bu, ilk sweep'te (18 kenarlık listede) gözden kaçmış 19. bir asimetriydi; şimdi eklendi.
-- İlk taramada 6 kenar Vâcib çıktı (bkz. `izahat/tesrih/sebeke.md`); yedincisi (Merak ve Sual Tevcihi → Muhakeme) sonradan, Muhakeme(Rükün)'e sual eklenmesi kararıyla Vâcib olarak eklendi. Tasavvur → Terkip hâlâ güçlü bir "rükün şüphesi" taşıyor (henüz taşınmadı, padişah kararını bekliyor).
-- Bu şebeke, Muhakeme dışındaki hiçbir düğüm için henüz kendi `X(Teşrih)` formülüne (Vürûd × Sudûr çarpımına) ayrı ayrı dökülmedi — istenirse tek satırlık genel şema (`X(Teşrih) = X(Vürûd) × X(Sudûr)`) zaten her düğüme otomatik uygulanıyor.
-- **Mukayese** = 42. meleke olarak kabul edildi; kendi Vürûd/Sudûr'u henüz verilmedi, açık.
-- **Cerh**, Tenakuz Bulma'nın tek taraflı çıktısı olarak yerinde bırakıldı, genişletilmedi.
-- `izahat/tesrih/sebeke.md` artık ikincil/anlatı dosyasıdır (Vâcib gerekçeleri, rükün-şüphesi tartışması); kanonik formüller burada, FORMULLER.md'dedir.
+```
+Vürûd(X) ≔ { Y : X ∈ Sudûr(Y) }     [inşa gereği simetrik, asimetri çıkamaz]
+
+Düzeltilen 2: Tenkit(Sudûr)∋Tecrit (yanlış silinmişti, geri) ; Sanat(Sudûr)∋Belâgat (19. gözden kaçan asimetri)
+
+Vâcib-kenar: ilk taramada 6, +1 (Merak ve Sual Tevcihi→Muhakeme, Rükün kararıyla) = 7
+  ⊬ (açık): Tasavvur→Terkip "rükün şüphesi" (henüz taşınmadı)
+
+∀X≠Muhakeme: X(Teşrih) yazılmadı ; şema otomatik ⋉ edilir
+
+Mukayese = 42. meleke, Vürûd/Sudûr ⊬
+Cerh: tek taraflı, genişletilmedi
+```
+
+`izahat/tesrih/sebeke.md` ikincil/anlatı dosyasıdır; kanonik formüller burada.
