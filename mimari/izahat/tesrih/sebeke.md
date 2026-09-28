@@ -29,7 +29,7 @@ Mukayese = 42. meleke kabul edildi, kendi Vürûd/Sudûr'u henüz verilmedi (aç
 | Tenkit | Tashih, Tahkik, Şek-Zan-Yakîn İdraki, Muhakeme |
 | Tasdik | Şek-Zan-Yakîn İdraki, Temkin, Muhakeme, Tafsil, Talim |
 | Gaye Belirleme | Müşahede, Merak ve Sual Tevcihi, Tefekkür, Temkin, Muhakeme, Belâgat, Deneme-Yanılma |
-| Merak ve Sual Tevcihi | Müşahede, Hayal Kurma, Tahlil, Deneme-Yanılma, Tefekkür, Münazara, Teemmül |
+| Merak ve Sual Tevcihi | Müşahede, Hayal Kurma, Tahlil, Deneme-Yanılma, Tefekkür, Münazara, Teemmül, Muhakeme(Vâcib) |
 | Deneme-Yanılma | Müşahede, İhtimal Hesabı, Tashih, Teyit, İllet Keşfi |
 | İhtimal Hesabı | Deneme-Yanılma, Şek-Zan-Yakîn İdraki, Temkin, Tedebbür, Muhakeme(Vâcib) |
 | Kıyas | Terkip, İhtimal Hesabı, Mantık Yürütme, İspat, Tefsir, Münazara |
@@ -59,7 +59,7 @@ Mukayese = 42. meleke kabul edildi, kendi Vürûd/Sudûr'u henüz verilmedi (aç
 | Talim | Fesâhat, Tahsil |
 | Tahsil | Gaye Belirleme, Talâkat, Zâtî Melekeleşme |
 
-## Bulunan altı Vâcib kenar ve rükün şüphesi
+## Vâcib kenarlar ve rükün şüphesi
 
 | Kenar | Vâcib sebebi | Rükün şüphesi? |
 |---|---|---|
@@ -69,5 +69,6 @@ Mukayese = 42. meleke kabul edildi, kendi Vürûd/Sudûr'u henüz verilmedi (aç
 | Tenakuz Bulma → Merak ve Sual Tevcihi | Sen bizzat teyit ettin: "tenakuz mutlaka bir sual tetikler" | Zayıf: Merak'ın başka vâcib-olmayan üç girdisi daha var (Gaye Belirleme, Şek-Zan-Yakîn İdraki, Teemmül), tek kaynak değil |
 | İhtimal Hesabı → Muhakeme | Muhakeme'nin Lüzum ekseni (burhanî/zannî) doğrudan bu hesaba dayanır | Yok: Muhakeme'nin rüknü zaten ayrı usulle (fıkhî tahlille) kuruldu, bu şebekeden değil |
 | İspat → Tasdik | Bir şey gerçekten ispatlanmışsa, sağlam bir zihinde tasdiki zorunlu doğurur | Yok: Tasdik'in başka (ispatsız) yolları da var (mütevâtir haber, hiss, taklit), yani ispat Tasdik'in TEK yolu değil, o yüzden rükün olamaz — vâcib olması yalnız "bu yoldan geçilirse sonuç kesindir" demek, "bu yol zorunludur" demek değil |
+| **Merak ve Sual Tevcihi → Muhakeme** | Padişah fermanıyla Muhakeme(Rükün)'e "sual" eklendiği için bu kenar artık şebekede de Vâcib | **Zaten taşındı** — bu, ayrı bir tarama sonucu değil, doğrudan Rükün kararının şebekeye yansımasıdır |
 
-Sonuç: 200 civarı kenarın yalnız 6'sı vâcib çıktı, bunlardan da yalnız **Tasavvur → Terkip** gerçek bir rükün şüphesi taşıyor. Diğer beşi vâcib ama harici kalmaya devam ediyor (rükün değiller).
+Sonuç: ilk taramada 200 civarı kenarın yalnız 6'sı vâcib çıktı; yedincisi (Merak ve Sual Tevcihi → Muhakeme) sonradan Rükün kararıyla eklendi. Bunlardan yalnız **Tasavvur → Terkip** hâlâ açık bir rükün şüphesi taşıyor. Diğerleri vâcib ama harici kalmaya devam ediyor (rükün değiller), Merak ve Sual Tevcihi ise zaten rükne taşındığı için bu listede istisnadır.

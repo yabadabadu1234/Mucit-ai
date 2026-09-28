@@ -125,7 +125,7 @@ Mizan(Rükün) = { kıstas, teaddüdü ihtimal, sükun kabiliyeti }  -- taslak, 
 
 Tedbir(Rükün) = { mebde, intikal usulü, gaye }  -- taslak, tasdik bekliyor
 
-**Nakz:** Muhakeme(Rükün)'e "sual" beşinci unsur olarak eklendi, padişah fermanıyla kat'î (F 3-C/13, itiraz yok). Bunun mükerrerlik doğurmaması için "epistemik yarığın varlığı" Muhakeme(İnikad)'dan çıkarıldı — aynı unsur artık yalnız Rükün'de, tek yerde duruyor. 41-meleke şebekesiyle (Vürûd(Muhakeme)'de Merak ve Sual Tevcihi'nin bulunmaması) arasındaki fark kayıt altındadır: şebeke ayrı bir kaynaktan bağımsız türetildiği için bire bir örtüşmesi şart değildir; bu tutarsızlık şebekenin kendi ileri incelemesinde ayrıca ele alınabilir, Rükün kararını bağlamaz.
+**Nakz:** Muhakeme(Rükün)'e "sual" beşinci unsur olarak eklendi, padişah fermanıyla kat'î (F 3-C/13, itiraz yok). Bunun mükerrerlik doğurmaması için "epistemik yarığın varlığı" Muhakeme(İnikad)'dan çıkarıldı — aynı unsur artık yalnız Rükün'de, tek yerde duruyor. Şebeke bu karara göre bağlandı (bkz. Vürûd/Sudûr başlıkları): Merak ve Sual Tevcihi → Muhakeme artık Vâcib.
 
 **Reddedilen teklif (kayıt için):** Düz, seviyesiz bir "Şart(Muhakeme)" ve "Şart(Sual)" kümesi (İnikad/Sıhhat/Nifaz/Lüzum merhalelerinin yanına, onlardan ayrı) teklif edildi, kabul edilmedi. Sebep: teklif edilen beş Şart(Muhakeme) unsurundan dördü ("ehliyet-i müdrike" → İnikad'da zaten var; "liyakat-i mizan" → Sıhhat'teki "kıstasın sıhhati ve liyakati"nin aynısı; "münasebet-i hadd-i evsat" → Sıhhat'teki "illiyet rabıtasının sübutu"nun aynısı; "selâmet ani'l-muarız" → Lüzum'daki "muarız-ı râcihin ademi"nin aynısı) zaten merhalelere dağıtılmış unsurların tekrarıdır; aynı hata Şart(Sual)'de de var ("teaddüd-i ihtimal" ve "adem-i müsâdere", Sual(Sıhhat)'te zaten var). Merhaleli tasnifi terk edip düz listeye dönmek, tam da bu tashihatın kendisinin mahkûm ettiği mükerrerliği yeniden üretiyor.
 
@@ -231,7 +231,7 @@ Teyit(Vürûd) = { Deneme-Yanılma, İspat, Tetkik, Tashih, Münazara }
 Tahkik(Vürûd) = { Müşahede, Tenkit, İllet Keşfi, İspat, Tashih, Teyit, Münazara }
 Tedebbür(Vürûd) = { İhtimal Hesabı, Tefekkür, İllet Keşfi, Temkin, Muhakeme }
 Şek-Zan-Yakîn İdraki(Vürûd) = { Tenakuz Bulma, Tenkit, Tasdik, İhtimal Hesabı, İspat, Teyit, Tahkik }
-Muhakeme(Vürûd) = { Tasavvur, Tenakuz Bulma, Tenkit, Tasdik, Gaye Belirleme, Mantık Yürütme, İspat, Temkin, Tahkik, Tedebbür, Şek-Zan-Yakîn İdraki, İhtimal Hesabı(Vâcib) }
+Muhakeme(Vürûd) = { Tasavvur, Tenakuz Bulma, Tenkit, Tasdik, Gaye Belirleme, Mantık Yürütme, İspat, Temkin, Tahkik, Tedebbür, Şek-Zan-Yakîn İdraki, İhtimal Hesabı(Vâcib), Merak ve Sual Tevcihi(Vâcib) }
 Tafsil(Vürûd) = { Terkip, Tasdik, Muhakeme, Tefsir }
 Tefsir(Vürûd) = { Mana, Kıyas, Tahkik, Muhakeme, Tevil }
 Tevil(Vürûd) = { Mana, Tezat, Tenakuz Bulma, İllet Keşfi, Şek-Zan-Yakîn İdraki, Tefsir, Muhakeme }
@@ -261,7 +261,7 @@ Tenakuz Bulma(Sudûr) = { Tenkit, Tashih, Şek-Zan-Yakîn İdraki, Cerh, Tevil, 
 Tenkit(Sudûr) = { Tecrit, Tashih, Tahkik, Şek-Zan-Yakîn İdraki, Muhakeme }
 Tasdik(Sudûr) = { Şek-Zan-Yakîn İdraki, Temkin, Muhakeme, Tafsil, Talim }
 Gaye Belirleme(Sudûr) = { Müşahede, Merak ve Sual Tevcihi, Tefekkür, Temkin, Muhakeme, Belâgat, Deneme-Yanılma }
-Merak ve Sual Tevcihi(Sudûr) = { Müşahede, Hayal Kurma, Tahlil, Deneme-Yanılma, Tefekkür, Münazara, Teemmül }
+Merak ve Sual Tevcihi(Sudûr) = { Müşahede, Hayal Kurma, Tahlil, Deneme-Yanılma, Tefekkür, Münazara, Teemmül, Muhakeme(Vâcib) }
 Deneme-Yanılma(Sudûr) = { Müşahede, İhtimal Hesabı, Tashih, Teyit, İllet Keşfi }
 İhtimal Hesabı(Sudûr) = { Deneme-Yanılma, Şek-Zan-Yakîn İdraki, Temkin, Tedebbür, Muhakeme(Vâcib) }
 Kıyas(Sudûr) = { Terkip, İhtimal Hesabı, Mantık Yürütme, İspat, Tefsir, Münazara }
@@ -321,7 +321,7 @@ Kaide: her Vürûd/Sudûr unsuru bu iki dereceden birini taşır. **Mümkün var
 
 - Bütün şebeke artık `## Vürûd` ve `## Sudûr` başlıkları altında, her düğüm kendi `X(Vürûd)`/`X(Sudûr)` kümesiyle mühürlendi (43 düğüm, ~200 kenar). Vürûd, Sudûr'un matematiksel tersi olarak (her düğüm için "beni kim çıktısında taşıyor" taraması ile) türetildiği için ikisi **inşa gereği** simetriktir — bir daha asimetri çıkamaz.
 - Bu türetme sırasında iki ek hata yakalandı ve düzeltildi: **(1)** Tenkit→Tecrit kenarı, tartışmalı olan ters yönle (Tecrit→Tenkit, o silinmişti) karıştırılıp yanlışlıkla silinmişti — geri eklendi, çünkü kendi başına hiç tartışmasız, tutarlı bir kenardı. **(2)** Sanat→Belâgat kenarı asıl veride Sanat'ın çıktısında vardı ama Belâgat'ın girdisinde hiç yoktu — bu, ilk sweep'te (18 kenarlık listede) gözden kaçmış 19. bir asimetriydi; şimdi eklendi.
-- Yalnız 6 kenar Vâcib çıktı (bkz. `izahat/tesrih/sebeke.md`), bunlardan yalnız **Tasavvur → Terkip** güçlü bir "rükün şüphesi" taşıyor (henüz taşınmadı, padişah kararını bekliyor).
+- İlk taramada 6 kenar Vâcib çıktı (bkz. `izahat/tesrih/sebeke.md`); yedincisi (Merak ve Sual Tevcihi → Muhakeme) sonradan, Muhakeme(Rükün)'e sual eklenmesi kararıyla Vâcib olarak eklendi. Tasavvur → Terkip hâlâ güçlü bir "rükün şüphesi" taşıyor (henüz taşınmadı, padişah kararını bekliyor).
 - Bu şebeke, Muhakeme dışındaki hiçbir düğüm için henüz kendi `X(Teşrih)` formülüne (Vürûd × Sudûr çarpımına) ayrı ayrı dökülmedi — istenirse tek satırlık genel şema (`X(Teşrih) = X(Vürûd) × X(Sudûr)`) zaten her düğüme otomatik uygulanıyor.
 - **Mukayese** = 42. meleke olarak kabul edildi; kendi Vürûd/Sudûr'u henüz verilmedi, açık.
 - **Cerh**, Tenakuz Bulma'nın tek taraflı çıktısı olarak yerinde bırakıldı, genişletilmedi.
