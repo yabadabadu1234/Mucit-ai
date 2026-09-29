@@ -433,3 +433,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **reductio + dil analizi; itiraz-cevap**; (T) ikna'î-burhânî biçim.
 - Mevzuya bağı: **Fasıl I §3, §6.3**: 'Allah filan fiili felekler dururken yapar' misali **hareketsiz zamana** dair (c5 p29 kıyamet deneyi ile paralel); **Risale bu misali kullanmaz**.
 - Doğan sual: —
+
+## c5 p49
+- OCR: orta (kısmî harf hasarı; hüküm cümleleri okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** 1. itirazın (iktirân/meiyyet) cevabının sonu: 'mukârenet ve meiyyetin mânâsı ancak **ikisinin tek vakitte ve tek zamanda hâsıl olması**dır; o hâlde söylediğimiz her şey buna döner.' **2. suâle (örf ehline bina, benzerine iltifat edilmez) cevap**: 'münâzaralar ancak **zarûrî ilimlerin tertibidir**, meçhulü **nazarîlerden** elde etmek için; bu, **bedîhî önermelerin sıhhatini kabul etmekle** tamamlanır. Bu meseleyi teemmül edince: **bu tevkîtin sıhhatini bütün selîm akıllar hükmeder**; sonra teemmül edince: **bu bedîhî mukaddime zamanın vücûdunu, ispat ettiğimiz yolla gerektirir**. Bu söz bu matlubu ispatta **en zâhir delillerden ve en kuvvetli burhanlardandır.**'
+- Netice/hüküm: 4. hüccet (tevkît) **Râzî'nin kendi ağzıyla 'en zâhir delil, en kuvvetli burhan' derecesinde**; dayanağı 'tevkîtin sıhhati bütün selîm akıllarca hükmedilir' önermesi.
+- Delil çeşidi: **bedîhe iddiası (selîm akıllar ittifakı) + dil analizi**; (T) Râzî derecesi 'en kuvvetli', **ama dayanak dil-örf bedîhesi**. **⊬: 'bütün selîm akıllar' iddiası sayıyla doğrulanmadı; c4 p274 vs p305'te 'bedîhe' iki yönde kullanıldı (aynı silahın iki yönü).**
+- Mevzuya bağı: **Fasıl I §3**: Risale zamanın **kendi başına mevcut olduğu** hükmünü almayacak (bkz. c5 p32, p52); ama **'tevkît ⇒ seyyâl bir vakit var' dil delili** Risale'de 'zaman mahlûk/ölçüdür' cümlesinin **karşı delili** olarak açıkça yazılmalı.
+- Doğan sual: Râzî tevkît delilini 'en kuvvetli' saydı; oysa 'iktirân ile tefsir' alternatifi (p48) cevabı **'mukârenet de tek vakit ister'** ile verildi — bu cevap **vakti önceden kabul ediyor mu (petitio)?** Ayırt eder mi (F 27-B): 'iktirân' tefsiri altında vakit **zihnî izâfet** olarak da okunabilir.
+
+## c5 p50
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p51
+- OCR: orta (dipnotlarda nüsha farkı işaretleri okunuyor; gövde tam)
+- Okuma: tam
+- İçerik: **Fasıl 4: Zamanın mâhiyeti.** **Kimin sesi: Râzî, mezhepleri aktarıyor.** Görüşler: (1) **Aristo ve mu'teber mütâbi'leri: zaman = 'vücûdun imtidâdı'** (hareketin ölçüsü). (2) Bir grup: **zaman = en büyük feleğin hareketinin kendisi**. (3) Bir başka grup: **zaman = yalnız tevkîtin mücerret hâli** (bizim tefsir ettiğimiz). (4) Bir başka grup: **nokta hareketiyle çizgi yapar gibi, 'ân' hareketiyle zaman yapar**; nokta çizgiyi yaparken **vâsıl**, durunca **fâsıl/kâtı'**; ân da zamanı yapınca **vâsıl ân**, muttasıl zamanda hudûsu farz edilince **fâsıl ân**. (5) **Eskilerden büyük bir grup, hükemâ: zaman ezelî, zâtı gereği vâcibü'l-vücûd bir cevher**; zâtında da vücûdunda da felekle ya da başkasıyla **ilgisi yok**; felek hareketiyle onun **parçalarını ölçer** (fincan/sâat suyu gibi gece ve gündüz parçalarını ölçtüğü gibi) (p52'ye geçer).
+- Netice/hüküm: Mâhiyet için **beş görüş** dizildi; henüz Râzî'nin kendi hükmü yok.
+- Delil çeşidi: **mezhep dökümü (nakil)**; (T) tasnif.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3/§6.3**: (5) **zaman = vâcibü'l-vücûd cevher** görüşü **tevhid ile çatışır** (ikinci bir vâcib; c2 K2 F1 burhanı) — Risale bu görüşü **'kabul edilmez: vâcib teaddüd etmez'** diye işaretler; **(4) 'ân' görüşü cevher-i ferd/tefre ile aynı aile**, c5'in sonraki bâbları ile bağlanacak.
+- Doğan sual: (5)'in taraftarı 'eskilerden hükemâ' — **kimler? (⊬ isim verilmedi)**; c4 p200 'dehr' bahsi ile aynı okuma mı?
+
+## c5 p52
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: (5) hasım aktarımı sonu, sonra Râzî.** (5) devam: 'bu **kendi kendine kâim cevherde** hareketlerden bir şey hâsıl olursa ve dâvâmının imtidâdı o hareketlerle takdir edilirse **zaman** denir; hareketlerin **mukârenetinden ve her tagayyürden hâli** olursa **dehr, ezel, sermed** denir.' Râzî: 'bu mezheplerin tafsili.' **Râzî kendi tartışmasına giriyor**: 'zaman **feleğin hareketinin mikdârı** olabilir mi (Aristo)?' → '**bu mezhep bizce bâtıldır.** Delilleri:' **Hüccet 1**: **ilk felekî hareket zamana muhtaçsa bu ihtiyaç ya 'hareket olduğu için' ya 'hareket olduğu için değil'; ikisi de bâtıl** ⇒ zaman hareketin mikdârı olamaz. 'Hareket olmak cihetinden **bâtıl değil**: hareket, hâlden hâle intikaldir; bu **kabliyât-ba'diyât teâkübi olmadan mâhiyeti tasavvur edilmez, hakîkati hâsıl olmaz**; bu mânâ **ancak zamanla hâsıl olur** ⇒ hareket **hareket olması bakımından** zamana muhtaç. Bu sabit olunca **zamanın bazı hareketlere ibtidâen hâsıl olup diğerlerine tebeiyyetle hâsıl olması, tersinden evlâ değildir**; iktizâ cihetinin **hepsi için eşit**.' (p53).
+- Netice/hüküm: **Râzî: 'Aristo'nun zaman = hareketin mikdârı tanımı bizce bâtıl'** (hüccet 1 kuruldu: iktizâ cihetinin tüm hareketlerde eşitliği).
+- Delil çeşidi: **taksîm + reductio; öncül: hareket ⇒ kabl/ba'd teâkübi ⇒ zaman**; (T) **burhânî biçim; ama 'hareketin mâhiyeti zamana bağlı' öncülü zamanın ayrı varlığını zaten varsayar (delil ≠ dava)**.
+- Mevzuya bağı: **Fasıl I §3**: **c5 p40 kabliyet-ba'diyet delili ile aynı öncül**; 'hareket ⇒ zaman' ifadesi Risale'de **ölçü sıralaması** olarak (ontoloji değil) yazılabilir.
+- Doğan sual: Öncül '**kabl/ba'd teâkübi ancak zamanla hâsıl olur**' — **mâhiyet-tanım mı, ispat mı?** Aristo'nun tarafı bunu 'zaman zaten hareketin kabl-ba'd'ıdır' diye okur ⇒ **dönüş** tehlikesi (F 27-B: bu öncül Aristo'yu **ayırt ediyor mu**?).
+
+## c5 p53
+- OCR: orta-iyi (dipnot farkları var; hüküm cümleleri net)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** Bu hâlde ya **her harekete ayrı zaman**, ya **hepsine tek bir zaman**, ya **hiçbirine zaman yok**. **1. şık (her harekete ayrı zaman) 2 yönden bâtıl**: (a) o zaman bu **tek saat tek saat olmaz, üst âlem ve alt âlemdeki hareketler kadar sâat olur**; oysa **bu sâatin tek sâat olduğu zarûrî ma'lûm**. (b) Bu zamanlar **beraber bulunuyorsa 'beraberlikleri'** onları **kuşatan başka bir zamanla** olmalı ⇒ **teselsül**; teselsül câiz farz edilse bile **muhâl lâzım**: beraberliği sağlayan şey **hepsini kuşatmalı**, kuşatan zaman **olmamalı** (bütün zamanları o mecmûya hasrettik); ama kabl-ba'd-meiyyeti gerektiren şey zamandır ⇒ **hâriç zaman olmalı ve olmamalı** ⇒ **çelişki**. **2. şık (bütün hareketlere kâim tek zaman) 3 yönden muhâl**: (a) **tek arazın çok mahâlde hulûlü muhâl**; (b) bir hareket **yok olunca mikdârı yok olur**, bâkî ikinci hareketin mikdârı da **mevcut** kalır; mikdâr hepsine **tek** olsa **tek şey hem mevcut hem ma'dûm** ⇒ muhâl; (c) **farklı hareketlerin mikdârları farklıdır**; hepsinin mikdârı **tek şey** olsa **tek şeyin aynı şahısta farklı hakîkatleri** olurdu ⇒ muhâl. **3. şık**: zaman **hiçbir harekete arız değil; hepsinden mübâyin** (p54).
+- Netice/hüküm: **Hareketin mikdârı olan zaman 'arız olarak hareketlere kâim' olamaz; 1. ve 2. şık 5 delille çürütüldü; kalan: zaman mübâyin bir mevcut.**
+- Delil çeşidi: **taksîm + çok yönlü reductio; teselsül kullanılıyor**; (T) burhânî biçim; **⊬ 'bu sâatin tek sâat olduğu zarûrî' önermesi bedîhe iddiasıdır**.
+- Mevzuya bağı: **Fasıl I §3 (teselsül), §6.3**: 1(b) **'kuşatan zaman' delili c5 p33–40 'zamana zaman' itirazı ile aynı desen**; **Risale burada 'teselsül' kullanan delili derecelendirmeli** (c2 p77–78: Râzî teselsül okuması).
+- Doğan sual: 2(b) — **'arazın bir kısmı yok olunca aynı araz yok olur'** öncülü Aristo'nun **'zaman = hareketlerin toplam ölçüsü'** okumasını **çürütür mü, yoksa yalnız 'tek araz' okumasını mı**? Aristo mikdârı **hareketlerin cinsi** olarak alırsa (kalıcı ölçü kategorisi) 2(b)-(c) **ayırt etmez** (F 27-B kontrolü gerekir).
+
+## c5 p54
+- OCR: orta (bir iki satırda kayma; İbn Sînâ nakli okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; sonra İbn Sînâ'dan nakil.** 3. şık: 'zamanın bütün hareketlere **arız olmayıp mübâyin** olması, hareketlerin onda vâki olup **onunla ölçülmesi** ⇒ **matlûb bu**; bununla **'zaman büyük feleğin hareketine kâim araz'** diyenin sözünün **fesâdı** görünür; zaman **bütün hareketlerden müstağnî** ⇒ matlûb.' **'Bu söz bu matlubu ispatta güçlüdür.'** **Şeyh er-Reîs Şifâ'da bu hüccetin ilk hâlini 'tam takrîr ve tahrîrden yoksun, eksik ve karışık' zikretmiş; sonra başka fasılda cevap vermiş; biz cevabını lafzıyla naklediyoruz, sonra insâf yoluyla bakacağız: bu cevap bu sözü defe yeter mi?** **Şifâ nakli**: 'Zaman vücûdu varsa **her harekete bir zaman tebe' olmalı** denirse: **cevap: 'zaman her hareketin mikdârıdır' demekle 'zamanın zâtı her harekete muallaktır' demek arasında fark var**; ayrıca **'zamanın zâtı harekete arız olarak muallak' ile 'hareketin zâtı zamana, zamanın ona arız olması şeklinde muallak' arasında** fark; birincisi için: **bir şeyi ölçenin ona arız/kâim olması şart değil**, bazen **mübâyin, muvâfât ve muvâzât ile ölçer** … (p55).
+- Netice/hüküm: **Râzî: 3. şık 'güçlü'; İbn Sînâ'nın Şifâ cevabı lafzıyla aktarıldı ve 'insâfla' incelenecek.**
+- Delil çeşidi: **nakil (İbn Sînâ, Şifâ) + hüküm**; (T) —
+- Mevzuya bağı: **Fasıl I §3**: Râzî'nin usûlü **hasmın cevabını lafzıyla nakledip sınamak** (c2 p10 'kuvvetli değil' usûlünün aynısı); Risale ders katmanı bunu **örnek usûl** alır.
+- Doğan sual: **İbn Sînâ'nın 'muvâfât-muvâzât ile ölçmek' cevabı p55–56'da nasıl çürütülüyor?** (bir sonraki sayfa okunup ayırt edilecek).
+
+## c5 p55
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: İbn Sînâ (Şifâ nakli), sonra Râzî ('وأقول').** Şifâ devam: **'ikinci fark için: bir şeyin zâtı başka şeyin tabiatına muallak olunca o şeyin tabiatının ondan hâli olmaması gerekmez. Biz zaman hakkında burhanla ancak şunu gösterdik: zaman harekete muallak ve ona bir hey'et; hareket hakkında: her hareket zamanla mukaddardır. Bundan çıkmaz: her harekete ona has zaman muallak; ne de 'bir şeyi mukaddar eden ona arızdır' ki her harekete zâtına arız aynı zaman olsun. Bilakis ibtidâ-intihâsı olmayan hareketlere zaman muallak olmaz. Evet zamanın vücûdu, ona vücûd bağlanmaya elverişli bir harekete muallak bulunursa, diğer bütün hareketler onunla mukaddar olur; bu hareket, devamı sahih (istimrâr), fiilen uçları hâsıl olmayan hareket olmalı.' Şeyh ısrar edip uzatıyor: '**zamanın vücûdu tek harekete muallak, onu ölçer, diğer bütün hareketleri de ölçer; bir cisimdeki mevcut mikdâr gibi: onu ve muhâzî/muvâzîsini ölçer**.' — bu Şeyh'in nassı.** **Râzî ('وأقول')**: 'bu uzatmanın **hâsılı tek noktaya döner**: **zaman 'belirli bir hareketin mikdârı' denilemez mi? sonra o hareket ibtidâen o mikdârla mukaddar olur, o hareketin o mikdârla mukaddar olması vâsıtasıyla diğer hareketler de o zamanla mukaddar olur**' — bu uzun sözlerin hâsılı bu.' **Râzî**: '**biz o delili bu suâl yöneltilmeyecek şekilde tahrîr ettik**: hareketin zamana iftikârı **belirli bir hareket olmasından değil, sırf hareket olmasından**; bu mânâ **bütün hareketlerde ortak** ⇒ iktizâ cihetinin **hepsinde eşit** olması lâzım, hiç tefâvüt yok; öyle iken 'o zaman bazı hareketlere hâsıl olup diğerlerine olmadı' denemez.' (p56).
+- Netice/hüküm: **İbn Sînâ'nın Şifâ cevabı = 'zaman tek bir belirleyici harekete muallak, o hareket diğerlerini ölçer'; Râzî bunu tek noktaya indirdi ve delilini 'sırf hareket olmak' ile ona **vârid olmayacak** biçimde kurduğunu söyledi.**
+- Delil çeşidi: **hasım cevabının nakli + indirgeme (Râzî'nin tahriri)**; (T) burhânî biçim; **kendi delilinin ayırt ediciliğini açıkça sınıyor (F 27-B klasik örneği).**
+- Mevzuya bağı: **KRİTİK — F 27-B**: Râzî burada **'delilimi hasmın cevabına karşı ayırt edici hâle getirdim'** diyor — Risale'nin 'ayırt eder mi' ölçüsünün **klasik emsali** (c4 p376 ile aynı aile). **⊬ Ayırt ettiği sayıyla gösterilmedi**, yalnız kurgu tashihi.
+- Doğan sual: İbn Sînâ'nın **'kendi başına mikdâr farkı: tek hareket ölçer, diğerleri onunla ölçülür'** sözü ile Râzî'nin 'iktizâ eşit' sözü **aynı düzlemde mi?** İbn Sînâ **iktizâyı değil, sonra vâsıtalı ölçmeyi** söylüyor; Râzî'nin cevabı **'iktizâ eşitse tahsis muhâl'** — ama İbn Sînâ **tahsisi harekette değil, hareketin sahih istimrâr vasfında** arıyor (Şifâ metni: 'devamı sahih, uçları fiilen olmayan hareket'). **Râzî bu vasfı tartıyor mu?** (p56 devamı).
+
+## c5 p56
+- OCR: orta (dipnot işaretleri fazla; gövde okunuyor; sayfa 'مغالطة محضة' ile bitiyor, gövde devamı p57'de olabilir)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** 'Şeyh'in sözünü nakletmekten gayemiz: **delili onun sözü tesir etmeyecek ve ona zarar vermeyecek biçimde tahrîr ettiğimizi göstermek.** Sonra **bu sözün başka bir yönden de illetli olduğunu** gösteririz: **'hareketin mikdârı' ma'kûlen 'hareketin imtidâdının mikdârı'dır**; aksi hâlde 'hareketin mikdârı' **belirli bir mefhûm** vermez. **Bir şeyin vücûdunun imtidâdından anlaşılan ancak bekâsı, istimrârı, devamıdır.** **Bir şeyin vücûdunun devamı, ondan mübâyin bir mevcut olup başka bir şeyde hâsıl olması zarûrî olarak imkânsız**: insanlar bir şeyin bekâsının **vücûduna zâid bir sıfat olup olmadığında** ihtilâf ettiler (bazısı zâid sıfat olmadığını, bazısı zâid olduğunu söyledi), fakat **her iki taraf da 'bu sıfat o şeyde hâsıldır, başka şeyde hâsıl olması imtinâ'** dedi; **akıllılar arasında 'bir şeyin vücûdunun devamı onda değil başkasında olur' diyebilecek biri yok.** Bu sabitse **bu devamın mikdârı ancak bu devamın keyfiyetlerinden bir keyfiyettir** ⇒ mübâyin olamaz. **Özet**: zamanı hareketin mikdârı diye tefsir edersek **akıl bedîhesi her hareketin mikdârının o harekete kâim olması gerektiğine hükmeder**; tek bir mikdârın onlardan birine kâim olup **diğerlerinin kendi mikdârlarından hâli** olması imtinâ'. **Şeyh'in 'cisimdeki mikdâr muhâzî cisimleri de ölçer' sözü: bu 'muğâlata-i mahza' (saf mugalata).**
+- Netice/hüküm: **Râzî: İbn Sînâ'nın 'tek bir harekete kâim zaman diğerlerini ölçer' örneği 'saf mugalata'; hareketin mikdârı = hareketin imtidâd mikdârı ⇒ o harekete kâim olmak zorunda.**
+- Delil çeşidi: **mefhûm tahlili + bedîhe iddiası**; (T) **burhânî biçim; öncül 'bir şeyin devamı ondan mübâyin olamaz' bedîhe iddiasıdır ⊬**. **Delil ≠ dava**: 'mikdâr = imtidâd mikdârı' tanımı Aristo tarafında **kabul edilmiş olmalı**; edilmezse (zaman = 'ölçü **birimi**') **öncül dava olur**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, Risale'nin 'zaman mahlûk' cümlesi**: **Râzî Aristo/İbn Sînâ tanımını çürütürken zamanı mübâyin bir mevcuda (c5 p32 bedîhî okulu, c4 p200 dehr) yaklaştırıyor**; yalnız **1. şık ve 2. şık** çürüdü, **'zaman = müstakil mevcut cevher' (p51 görüş 5) bu çürütmeden tek başına çıkmaz** — Risale bu **aradaki boşluğu** yazmalı: **'Aristo tanımı çürüdü' ⇏ 'zaman vâcib/kadîm cevherdir'**. **İbn Sînâ nakli lafzıyla verildi; Râzî 'muğâlata' hükmünü **kendi ağzıyla** yazdı.
+- Doğan sual: **Râzî'nin kendi sonuçlandırması ne?** (3. şık: zaman mübâyin mevcut; **mahlûk mu, kadîm mi, dehr mi?** — sonraki hüccetler ve fasıllarda aranacak, **hüküm bağlanmadı**).
