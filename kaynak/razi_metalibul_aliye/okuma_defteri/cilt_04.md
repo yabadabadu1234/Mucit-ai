@@ -2737,3 +2737,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **nakz (simetri) + taksîm**; (T) cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde-tahsis)**: **İtiraz 3 ('vakit tahsisi mürecciḥsiz rüçhân') hudûs tarafının irâde-tahsisinin en açık ilzâmıdır**: aynı ilzâm c2 p137 (Râzî 'niçin şimdi' silahını iki yönde kullanıyor) ve c4 p268 (irâde-i ilâhînin muayyen vakte taalluku) ile birleşir — **üçüncü gelişi**; Râzî'nin kendi kapanışı **hâlâ ⊬** (Kısım 2 sonu bekleniyor). **Risale ana metin bu bâbı 'açık borç' olarak taşır.**
 - Doğan sual: **İtiraz 3'ün cevabı (tercîh: mürecciḥsiz rüçhân mı, irâdenin zâtî tercîhi mi?) Râzî'de nerede kapanıyor?** (p305–431.)
+
+## c4 p305
+- OCR: orta (Râzî cevabının bazı satırları bozuk)
+- Okuma: kısmî (cevabın orta zinciri OCR hasarlı; başı ve sonu net)
+- İçerik: **İtiraz 5 (hasım)**: 'müessirin **mûcib** olduğunu kabul; **devamından ma'lûlün devamı niçin çıksın?** Mevcut müessirin te'sîri **ademî bir şarta mevkûf** olabilir: sıklet, düşmeye mâni zincirin yokluğu şartıyla düşmeyi gerektirir; siz ezelî ademin zevâlini caiz kıldınız ⇒ **Vâcib bi'z-zât kadîm ma'lûlün illeti, te'sîri ezelî ademî şarta bağlı, şart zâil ⇒ ma'lûl zâil.**' **'Bu, bu delile yönelen bahislerin toplamı.'** **Râzî'nin cevabı (Râzî-sesli)**: '**bedîhe hükmeder: vücûd ya vâcib bi'z-zât ya mümkin bi'z-zât; vâcib adem kabul etmez; vâcibin ma'lûlü illetin devamıyla devam eder (mûcib olsa); mümkin bi'z-zât vâcibe intihâ eder; … müessir mûcib olmadığına göre (⊬ zincir bozuk) müessir fâil-i muhtârdır; bedîhe: her fâil-i muhtâr fiili hâdistir ⇒ hâdis adem kabul eder; kadîm adem kabul etmez; **sorduğunuz sorular zarûriyâtı kadh cinsindendir**.**'
+- Netice/hüküm: **Râzî: yedi soru + beş itirazın toplu cevabı: 'bedîhe ile kadîm zâil olmaz; hasmın soruları zarûriyâta kadh'.**
+- Delil çeşidi: **bedîhe iddiası + taksîm**; (T) hitâbî-burhânî karışık; **KENDİ TENKİDİM (tutarlılık borcu)**: **Râzî p274 cevap 4'te 'bedîhî olsa akıllar ihtilâf etmezdi' diye filozofların 'zaman ibtidâsı bedîhe ile reddedilir' iddiasını çürütmüştü; burada aynı Râzî 'hasmın soruları zarûriyâta kadh' diyor** — aynı ölçüt uygulanırsa hasmın 7+5 sorusunun 'ihtilâf' taşıdığı da söylenmeli. **Ayrıca p299'da Râzî Soru 1'e 'kahredici, kuvvetli' demişti; p305'te onu 'zarûriyâta kadh' sınıfına atıyor** — delilin derecesi bu ikisi arasında **açık gerilimli**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8; ders katmanı (Râzî'nin delil derecelendirmesi kutusu)**: Bu tutarsızlık **Risale'de 'Eş'arî: zevâli câiz ezelî olamaz' delilini kullanmamak** için gerekçedir (F 27-B: ayırt etmiyor). Ders katmanına **'Râzî bedîhe iddiasını iki yönde kullanıyor'** örneği.
+- Doğan sual: Râzî bu tutarsızlığı başka yerde ('bedîhe/vehim') çözüyor mu? (Kalan sayfalar ⊬.)
+
+## c4 p306
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p307
+- OCR: iyi
+- Okuma: tam
+- İçerik: **2. Makâle başlığı**: '**âlemin hudûsunu isbat eden başka delillerin takrîri**.'
+- Netice/hüküm: **1. Makâle (hareket-sükûn delili; p243–305) bitti; 2. Makâle başladı.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §3 (hudûs delili aileleri)**: Kısım 2, Makâle 1 = **hareket-sükûn ekseni** (Fasıl 1 giriş; Fasıl 2 ezelî hareket; Fasıl 3 ezelî sükûn); Makâle 2 = **başka deliller**.
+- Doğan sual: —
+
+## c4 p308
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p309
+- OCR: iyi
+- Okuma: tam
+- İçerik: **2. Makâle, Hüccet 1 ('mütekellimînin kadîm hücceti')**: '**cisim havâdisten hâlî olmaz; havâdisten hâlî olmayan hâdistir ⇒ cisim hâdis.**' **1. mukaddimenin beyânı**: 'cisim **ekvândan** hâlî olmaz; ekvân hâdis ⇒ cisim havâdisten hâlî olmaz.' **'Cisim ekvândan hâlî olmaz' iki makama dayanır**: **(1) ekvân isbâtı**: kevn = **cismin hayizde hâsıl olması**; bunun zâtın üzerine **zâid** olduğunu delillendirdik (c4 p290–291); **(2) cismin ekvândan ayrılmazlığı**: cisim cisim olduğu sürece muayyen hayizde hâsıl olmalı; hayizde hâsıl olmanın zâid olduğunu gösterdiğimize göre zât ekvândan ayrılmaz. **'Her kevn muhdes' takrîri**: her cisim hayizinden çıkabilir; çıkınca o hayizdeki hâsıl olma batıl olur (p310).
+- Netice/hüküm: **Kelâm hudûs delilinin klasik çekirdeği (delîl-i a'râz ve havâdis): cisim ekvândan ayrılmaz, ekvân hâdis, hâdisten hâlî olmayan hâdis.**
+- Delil çeşidi: **kıyas (üç mukaddime)**; (T) burhânî biçim; öncüller c4 p281–305'te ispatlanmış.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 (hudûs delilinin çekirdeği)**: Risale'nin hudûs delili bu çekirdek; **dayandığı öncüller (ekvân zâid, cisim hayizden çıkabilir, hâdis-lâ-evvel imtinâ')**; **Râzî'nin kendi eleştirisi p310–311'de**.
+- Doğan sual: —
+
+## c4 p310
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Hüccet 1 devam**: 'her kevn zevâli câiz ⇒ kadîm olamaz ⇒ **her kevn muhdes**; cisim ekvândan hâlî olmaz ⇒ cisim havâdisten hâlî olmaz.' **'Havâdisten hâlî olmayan hâdis'**: 'bu havâdisin ya evveli var ya yok; ikinci şık **'evveli olmayan havâdis' bâtıl delilleriyle** (1. Makâle 2. Fasıl) reddedildi ⇒ evveli var ⇒ cisim hâdis.' **Râzî: 'bu delil birinci delilin aynıdır; yalnız terkîb ve nazm farklı.'** **Râzî'nin eleştirisi (Râzî-sesli, 'وأقول')**: '**bu nazma bir suâl vârid olur, birinci nazma vârid olmaz**: nazm iki vecih taşır: **(1)** 'cisim **evveli olan havâdisten** hâlî olmaz; böyle olan her şey hâdis' — bu durumda **kıyasın sugrâsı netîceyle aynıdır** (çünkü 'cisim o evvelden önce mevcut değildi' demek cismin hudûsunu iddia etmektir); **(2)** 'cisim havâdisten hâlî olmaz; havâdisten hâlî olmayan hâdis' (p311).'
+- Netice/hüküm: **Râzî'nin hükmü: klasik delil-i a'râz-havâdis iki okumada da eksik: birincide sugrâ = netice; ikincide kübrâ kâzib.**
+- Delil çeşidi: **kıyas + mantıkî eleştiri**; (T) burhânî biçim (Râzî'nin eleştirisi burhânî).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **Risale'nin hudûs delili 'cisim havâdisten hâlî olmaz ⇒ hâdis' biçiminde tek başına kurulamaz** (Râzî'nin kendi tespiti); **'hâdislerin evveli var' öncülü (Makâle 1, 2. Fasıl) delilin ayrılmaz parçasıdır** ve o öncül **'öncüle bağlı' derecesindedir** (c4 p252–264 itirazları). Risale **delilin derecesini buna göre yazar.**
+- Doğan sual: —
+
+## c4 p311
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin eleştirisi devam (2. okuma)**: '**kübrâ ('havâdisten hâlî olmayan her şey hâdistir') kâzib**: havâdisin **evveli olmaması** takdirinde cismin havâdisten hâlî olmasının imtinâ'ı cismin hâdis olmasını **gerektirmez**; kübrâ ancak **havâdise evvel/bidâyet varsa** sadıktır; kübrâyı bu kayıtla kayıtlarsak **sugrâ yine netîceye döner** — bu bahis bu nazma vârid.' **Hüccet 2**: '**cisimler havâdise kâbil; havâdise kâbil olan havâdisten hâlî olmaz; havâdisten hâlî olmayan hâdis ⇒ cisimler hâdis.**' **Farkı**: 'önceki yol **ekvâna** (hareket-sükûn) has; bu yol **bütün a'râza** genel: **ışık-karanlık, sıcak-soğuk, farklı şekiller, hareket-sükûn**.' **Takrîr**: 'cismin bu sıfatlara **kâbiliyeti ya zâtın aynı ya zâid**: aynıysa kâbiliyetin hudûsu ⇒ zâtın hudûsu; zâidse **kâbiliyetin hâdis olduğunu ve zâtın ondan ayrılmadığını** göstermek gerek.' **Kâbiliyetin hâdis olduğunun beyânı başlıyor**: 'sıfatla ittisâf **imkânı**, o sıfatın **kendi vücûd imkânına** fer'…'.
+- Netice/hüküm: **Râzî'nin hükmü: 'delil-i a'râz'ın kübrâsı hâdislerin evveli varsa sadık; bu delilin sonucu 'evveli olan hâdisler' öncülüne bağlı. Hüccet 2 (kâbiliyet) genel araz yolu.**
+- Delil çeşidi: **kıyas + mantıkî eleştiri**; (T) burhânî biçim (Râzî eleştirisi), öncül bağımlı.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: Râzî'nin **'sugrâ = netice / kübrâ kâzib'** tespiti Risale'nin **'delilin dayanağı' tablosunda** açık işaretlenmeli: **delil-i a'râz = delil-i tatbîk'in (Makâle 1) ayrılmaz ikizi**; ikisi tek delildir, iki bağımsız delil değil.
+- Doğan sual: **Râzî bu 'sugrâ = netice' sorusunu bu delil için kapatıyor mu (tatbîk öncülüne dayanarak), yoksa 'açık kalıyor' mu?** (Kalan Makâle 2 sayfaları ⊬.)
+
+## c4 p312
+- OCR: orta (imkân/imtinâ' kelimeleri kısmen belirsiz)
+- Okuma: tam (bir cümlenin mânâ yönü OCR'den kesin değil, aşağıya yazıldı)
+- İçerik: **Hüccet 2 — kâbiliyetin hâdis olduğunun beyânı**: '**sıfatla ittisâf imkânı o sıfatın kendi vücûd imkânına fer'; şeyin nefsindeki hâli, gayriyle hâlinden öncedir**. **Hâdis ezelde vücûdu (mümteni'/mümkin — OCR belirsiz)**: 'hâdisin vücûd imkânı ezelde sâbit ise ittisâf imkânı da ezelde sâbit **olurdu**' … **sonuç**: '**sıfatların ittisâf imkânı hâdis, ezelde hâsıl olması imtinâ'**'. **Kâbiliyetin zâtın lâzımı olduğunun beyânı**: 'kâbiliyet ya **lâzım-ı mâhiyet** ya **âriz-i müfârik**; birincisi matlûb; ikincisi: kâbiliyet zâtın için mümkin olduğuna göre **zât o kâbiliyete kâbil**; **kâbiliyetin kâbiliyeti** lâzımsa matlûb, âriz ise aynı soru ⇒ **teselsül, muhâl** ⇒ cismin hâdis sıfatlara kâbiliyeti **zâtın lâzımı**.' **Netice**: 'kâbiliyet zâtın aynıysa hudûsu zâtın hudûsu; gayrıysa zâtın lâzımı ⇒ **cisim havâdisten ayrılmaz** ⇒ hâdis.' 'Bu delilden **iki şerefli matlûb**…' (p313).
+- Netice/hüküm: **Hüccet 2: cismin hâdis sıfatlara kâbiliyeti ⇒ zâtın lâzımı (teselsül ile) ⇒ havâdisten ayrılmaz ⇒ hâdis.**
+- Delil çeşidi: **kıyas + teselsül**; (T) burhânî biçim, öncül bağımlı; **KENDİ TENKİDİM**: **OCR kesin değil ('hâdis ezelde mümteni' mi mümkin mi)**; **eğer 'ezelde hâdisin vücûdu mümteni'' ise, bu Râzî'nin kendi p269 cevabıyla ('hâdislerin sıhhatinin bidâyeti yok') çelişir**; 'mümkin' okunursa mantık kırık. **Bu hüküm kâğıt/edisyon (Sekkâ) karşılaştırması gerektirir (⊬); delilin bu adımı 'tereddütlü okuma' olarak işaretlendi, hüküm bağlanmadı.**
+- Mevzuya bağı: **Fasıl I §3**: kâbiliyet delili Risale'de **kullanılırsa** 'ittisâf imkânı hâdis' adımı **imkânın ezelîliği (c4 p235, p269)** ile birlikte açıkça yazılmalı; şimdilik **'öncüle bağlı, okuma belirsiz'**.
+- Doğan sual: **p312'nin 'hâdis ezelde vücûdu mümteni'/mümkin' ifadesi hangi okumadır?** (Dijital nüsha/başka neşirle çapraz kontrol borcu.)
