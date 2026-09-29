@@ -431,10 +431,61 @@ Yer: Mâlum ⊂ Nefis(kuvvet).Müdrike ; Nefis(kuvvet).Muharrike ⊬ (zaruret-is
   fâilî     ⊳ Lime.İllet-i-Fâiliye
   râbıtalı  ⊳ Lime.İllet-i-Fâiliye ⋉ şebeke (Vürûd/Sudûr)
   gaî       ⊳ Lime.İllet-i-Gâiye
-  eksik: Lime.İllet-i-Mâddiye, Lime.İllet-i-Sûriyye ∉ Nispet   [sorulmamış, reddedilmemiş]
+  eksik: Lime.İllet-i-Mâddiye, Lime.İllet-i-Sûriyye ∉ Nispet [F 179: nakzedilmedi,
+    kapatıldı — bkz. § Burhan, İllet(çeşit) dördü de orada tüketici olarak yer alır]
 ```
 
 İzahat: `izahat/malum/`
+
+---
+
+## Burhan
+
+```
+Burhan(çeşit) ⊳ Tavassut(burhânî)   [Tavassut'un κ₁=yakînî(öncül) dalının kendi içi]
+
+Burhan(Sûret) = { istikametli, hulf }     κ=doğrudan-isbat(netice)?
+  istikametli ≔ netice ⟸ öncüller                       [doğrudan]
+  hulf        ≔ netice ⟸ ¬(zıd-farz ⟹ muhal)             [kıyas-ı hulf, reductio]
+
+Burhan(Nisbet-i-Evsat) = { limmî, innî }     κ=evsat(had-i-evsat)=illet(fi'l-vücûd)?
+  [yalnız istikametli dala tatbik edilir; hulf ayrı bir kanaldan işler]
+  limmî ≔ evsat, hem vücutta hem zihinde illettir         [hem "vardır" hem "niçin"]
+  innî  ≔ evsat, vücutta illet değil, yalnız zihinde (bilgi bakımından) öncül
+
+İnnî(alt-tür) = { eserden-müessire, müşterek-lazımdan-lazıma }     κ=istidlal-yönü
+  eserden-müessire         ≔ eser(malûm) ⟹ müessir(meçhul)         [duman→ateş]
+  müşterek-lazımdan-lazıma ≔ lazım₁(malûm) ⟹ ⋉illet-müşterek ⟹ lazım₂(meçhul)
+
+İllet(çeşit) = { mâddiye, sûriyye, fâiliye, gâiye }     [Aristo, dört-sebep — miras, kapalı]
+  ⋉ her limmî/innî burhan bu dörtten BİRİNE (veya birkaçına) dayanır
+  ⋉ Nispet(fâilî,gaî) ⊳ {fâiliye,gâiye} ; Nispet'te sorulmayan {mâddiye,sûriyye} burada tüketilir
+
+∴ Burhan(çeşit) = Sûret × [istikametli: Nisbet-i-Evsat × [innî: alt-tür] × İllet]
+  ⟺ₜ  [Sûret ⊢ ikili-Nakzeyn; Nisbet-i-Evsat ⊢ ikili-Nakzeyn; İnnî-alt-tür ⊢ ikili-Nakzeyn;
+        İllet ⊢ dörtlü — Aristo'nun kendi ispatına miras, bu risalenin buluşu değil]
+
+Dehliz sınaması (risale/fasil_1_vucud burhanları bu tasnife düşüyor mu?):
+  Burhan-ı-İmkân     ⊳ istikametli.innî.eserden-müessire.fâiliye
+    [⊬ açık: bazı İslam filozofları (Molla Sadra) Sıddîkîn'i ne limmî ne innî,
+     üçüncü müstakil tür sayar — bu risale klasik innî tasnifini benimser, saklamaz]
+  Hudûs-Delili       ⊳ istikametli.innî.eserden-müessire.fâiliye
+  Burhân-ı-Tahsis    ⊳ istikametli.innî.eserden-müessire.fâiliye
+  Burhân-ı-Tesviye   ⊳ istikametli.innî.eserden-müessire.{fâiliye,sûriyye}
+    [ilk defa Sûriyye dolu: eserin SÛRETİ/tesviyesi, illet-i-sûriyyeye işaret eder]
+  Burhân-ı-Temânu'   ⊳ hulf
+  Devir/Teselsül-reddi ⊳ hulf
+  Devam-ı-Hudûs      ⊳ hulf   [faraziye → Nakzeyn ihlâli → red]
+  ∅ (açık): İllet-i-Mâddiye — risalenin hiçbir burhanı şu ana dek maddî sebebe
+    dayanmıyor; tasnifin eksiği değil, risalenin henüz doldurmadığı bir köşedir
+
+Not (Tasavvur(Menşe) ile karıştırılmasın): Tasavvur(Menşe)={hissî,hayalî,vehmî,aklî}
+  bir KAVRAMIN kaynağını sorar, bir HÜKMÜN/BURHANIN yapısını değil — kategori ayrı.
+  Burhanın öncüllerinin epistemik menşei (Burhan(Öncül-Menşei)) ayrı, isteğe bağlı
+  bir ikinci eksendir; Burhan(çeşit) ile ⊥ (ortogonal), yerine geçmez
+```
+
+İzahat: `izahat/burhan/genel.md`
 
 ---
 
@@ -549,6 +600,7 @@ Tasavvur(Menşe) = { hissî, hayalî, vehmî, aklî }
 - Metâlib, Makûlât, Cevher/Araz/Zâtî/İzafî ⊬
 - Vâcibü'l-Vücûd → `izahat/vacibul_vucud/genel.md`
 - Mâlum → `izahat/malum/genel.md`
+- Burhan (Sûret, Nisbet-i-Evsat, İnnî alt-tür, İllet) → `izahat/burhan/genel.md`
 - Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit), Tasavvur(Menşe), Tasdik(Vücûb/Kemiyet/Keyfiyet), Basitlik(çeşit) ⊬ — temel usul (κ+Nakzeyn+isim+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'de
 
 ## Açık notlar (41-meleke şebekesi)

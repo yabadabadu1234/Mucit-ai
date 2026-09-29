@@ -108,6 +108,10 @@ Mâhiyet(x)≠Vücûd(x) ⟹ hârice-çıkış(x) = ilave ⟹ müreccih-i-hâric
 
 ## Vâcibü'l-Vücûd — Burhân-ı İmkân (Burhan-ı Sıddîkîn)
 
+⊳ Burhan(çeşit) [mimari/FORMULLER.md § Burhan]: istikametli.innî.eserden-müessire.fâiliye
+  [⊬ açık: bazı İslam filozofları Sıddîkîn'i üçüncü, müstakil bir tür sayar — bkz. izahat/burhan/genel.md]
+  — maddede içteki devir/teselsül/tatbik kapatmaları (3, 3-B) kendi başlarına birer HULF'tur
+
 ```
 1)  Taksim(Mâhiyet) = { Vâcib, Mümkin, Mümteni }        [mümteni ∉ Mevcûd]
 
@@ -160,6 +164,8 @@ Mâhiyet(x)≠Vücûd(x) ⟹ hârice-çıkış(x) = ilave ⟹ müreccih-i-hâric
 
 ## Devam-ı Hudûs — İstimrar-ı Halk (Deizmin ve İbn Sînâ'nın Cüz'iyyat İddiasının Reddi)
 
+⊳ Burhan(çeşit): hulf   [deizm faraziyesi kurulur, Nakzeyn ihlâline götürülür, red edilir]
+
 ```
 A) İstimrar-ı Halk (deizmin reddi):
    Faraziye (ibtal edilecek): ∃t, ∃mümkin(x): bağımsız(x,t)              ["deizm"]
@@ -205,6 +211,8 @@ Sıfat(İlâhiyye) = Nefsiyye(1) ⊔ Selbiyye(5) ⊔ Sübûtiyye(7-8)
 
 ## Burhân-ı Tahsis (Kur'ânî Usul — Burhân-ı İmkân'a Muhtaç Olmayan Müstakil İkinci Yol)
 
+⊳ Burhan(çeşit): istikametli.innî.eserden-müessire.fâiliye   [tahsis=eser, muhassis=müessir]
+
 ```
 A) Dört İhtimal Taraması (Tûr 35-36):
    İ1) Adem→Vücûd, fail yok         ↯ müreccih-zarureti [2]
@@ -222,6 +230,8 @@ B) Tahsis (Kamer 49):
 ```
 
 ## Vahdâniyet — Burhân-ı Temânu' (Enbiyâ 22, Hâricî Te'kid)
+
+⊳ Burhan(çeşit): hulf   [iki-ilah faraziyesi kurulur, üç ihtimalin hepsi muhale götürülür]
 
 ```
 Faraziye: ∃ A≠B, ikisi de ilâh.  hâdise(h): A murad(hareket,h), B murad(sükûn,h)
@@ -260,6 +270,8 @@ Hayat  ≔ {İlim,Kudret} ⋉ Aklî-Âdî("ilim∧kudret→hayat şarttır")
 İlim   ≔ nizam(âlem) ⋉ Lime.İllet-i-Gâiye ⟹ gaye-güden-fail
        + Burhân-ı Tesviye (A'lâ 2-3): asıl(basit,şuursuz) ↝ netice(müntazam,ahenkli)
          kaide: fâkıdü'ş-şey' lâ yu'tîh ⟹ Musavvir-Hakîm zarurî
+         ⊳ Burhan(çeşit): istikametli.innî.eserden-müessire.{fâiliye,sûriyye}
+           [tesviye/ölçü bizzat SÛRETe işaret eder — İllet-i-Sûriyye köşesini dolduran ilk burhan]
        + cüz'iyyatı da ihtiva eder — bkz. Devam-ı Hudûs.B (İbn Sînâ reddi)
 
 İrade  ≔ Mümkinü'l-Vücûd(Şart) ⋉ fizik-sâbiteleri
@@ -302,4 +314,8 @@ Hakîm∧Şer(mevcûd)?
 
 Her tasnif dört adım: (1) κ seç, (2) Nakzeyn'le ikiye böl, (3) isimlendir, (4) dehliz sına (üçüncü bir misal ara). Nakzeyn'in kendisi ispat edilemez, yalnız inkârının kendini nakzettiği gösterilir (Aristo, Metafizik Γ) — bu, devir/teselsülün mecburen bittiği yerdir.
 
-İzahat: `mimari/izahat/vacibul_vucud/genel.md`, `mimari/izahat/rukun_sart/genel.md`, `mimari/izahat/tasnif/tefrik_ve_temyiz.md`, `risale/content/fasil_1.md` (çoban seviyesinden kademeli izahı, kelime kökenleriyle).
+İzahat: `mimari/izahat/vacibul_vucud/genel.md`, `mimari/izahat/rukun_sart/genel.md`, `mimari/izahat/tasnif/tefrik_ve_temyiz.md`, `mimari/izahat/burhan/genel.md` (bu fasıldaki bütün burhanların Burhan(çeşit) tasnifindeki yerini gösteren dehliz tablosu), `risale/content/fasil_1.md` (çoban seviyesinden kademeli izahı, kelime kökenleriyle).
+
+## Not: Burhanların Kapalı Üst Kümesi (Burhan(çeşit))
+
+Bu fasıldaki beş burhan (İmkân, Hudûs, Tahsis, Temânu', Tesviye — +Devam-ı Hudûs, +devir/teselsül reddi) birer **isim listesi** değil, `mimari/FORMULLER.md § Burhan`de κ+Nakzeyn ile kapalı olarak inşa edilen **Burhan(çeşit)** tasnifinin örnekleridir: `Sûret={istikametli,hulf} × Nisbet-i-Evsat={limmî,innî} × İnnî-alt-tür × İllet={mâddiye,sûriyye,fâiliye,gâiye}`. Her biri yukarıda kendi maddesinde `⊳ Burhan(çeşit): …` satırıyla etiketlendi. Açık kalan tek köşe: **İllet-i-Mâddiye** — bu fasılda hiçbir burhan maddî sebebe dayanmıyor; bu tasnifin eksiği değil, henüz doldurulmamış bir hânedir (tafsili: `mimari/izahat/burhan/genel.md`).
