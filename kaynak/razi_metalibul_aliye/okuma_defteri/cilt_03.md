@@ -2809,3 +2809,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **reductio + darûrî + misal**; (T) burhânî biçim/cedelî; **(6) delili 'muhâl teklif sefeh, sefeh caiz olsa nübüvvet bâtıl' Sünnî ana çizgi için de ilgili**.
 - Mevzuya bağı: **Fasıl II (Nübüvvet)**: **'Allah sefeh ile tenzih edilir ⇒ muhâl ile teklif olmaz' hattı Risale'nin nübüvvet güvencesine bağlanabilir (delil: nass 2:286)**; **Râzî bu delillere cevap verecek (Makam 2, p313+)**.
 - Doğan sual: Râzî'nin cevabı: 'teklif mâ lâ yutâk câiz, vâki' mi? Hangi ölçüde?
+
+## c3 p313
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mu'tezile'nin 9. aklî delili**: ilmin bir şeyin vücûdunu vâcib kılması, **kudret ve irâdeyi gereksiz kılar** ⇒ Allah kâdir, mürîd, muhtâr olmaz; hikmet-sefeh bahsi kâdir-muhtâr ispatına fer'. **Makam 2: tafsîlî cevap**: 'İnsanların söylediği **üç cevap**' (Râzî'nin 1. delili 'ilim adem-i imânı bildi; iman sudûr ederse ilim cehle döner' karşısında): **(1) Susma yolu**: 'ilmi cehle döner diyen de, dönmez diyen de hatalı; iki sözden de sakınmak gerek'. **(2) Ka'bî'nin yolu ve Ebü'l-Hüseyn el-Basrî'nin tercihi**: **ilim ma'lûma tâbidir**; kuldan vâki olan iman ise ezelde hâsıl olan ilim 'imanın vücûdu' ilmi; küfür ise 'küfrün vücûdu' ilmi; bu bir ilmin yerine başka ilmin farzıdır, **Allah'ın ilminin değişmesi değildir** (Mu'tezile cumhurunun dayandığı iki cevap: 1 ve 2). **(3) Hişâm b. el-Hakem'in yolu**: Allah ezelde eşyanın **hakîkat ve mâhiyetlerini** ve onları **defalarca ihdâs edeceğini** bilirdi; **cüz'î tafsilleri ve hâlleri** ezelde bilmezdi; ilim ancak hudûsla hâsıl olur (zâtı ilmi mûcib, fakat ma'lûmun o vecihle hâsıl olması şartıyla).
+- Netice/hüküm: Râzî **Mu'tezile'nin 3 cevabını** aktarıyor (1 susma, 2 Ka'bî/Ebü'l-Hüseyn, 3 Hişâm b. el-Hakem).
+- Delil çeşidi: taksîm; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — ilim-i ezelî** (c3 Bâb 3; c3 p104, 156, 234'te Râzî'nin 'ilim özel nisbet, ma'lûmla değişme meyli'): **Hişâm b. el-Hakem'e nisbet edilen 'Allah cüz'îleri ezelde bilmez' görüşü** İslâm'a aykırıdır; Risale'de **yalnız reddiyle** anılabilir (Râzî p315'te de reddediyor). Hişâm nakli **⊬** (kaynağı doğrulanmadı).
+- Doğan sual: —
+
+## c3 p314
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hişâm yolunun devamı): 'cüz'î ilim hudûsta hâsıl; bu Allah'ın cüz'îleri ezelde bilmemesi ile bu iş kalkar' — **bu bahsin sonu**. **Râzî'nin değerlendirmesi**: **1. cevap son derece zayıf**: nefy ve isbâtın nefsü'l-emirde ikisinin de bâtıl olması **aralarında bir vasıta iddiasıdır**, aklın bedîhesi bunu reddeder; sadece lafızla söylememek ise ilzâm **lafza değil, bahsin kendisine** vârid. **2. cevap da son derece zayıf**: 'iman vâki ise ilim imanın vücûdunu bilir' **şartlı önerme**; **'Allah'ın iki taraftan birine ilmi hâsıl mı oldu, olmadı mı?'** — olmadıysa bu Hişâm'ın sözü; olduysa ilim özel vecihle vâki ve ma'lûmun o olmasına bağlıdır, **ma'lûm değişirse ilmin değişmesi lâzım**, bu iki cihetten muhâl: (a) ilmin cehle inkılâbı muhâl, (b) **geçmişte 'ilim' olan şeyin, ma'lûm değişince ilim olmaktan çıkması, hâdis bir tagayyür**; zamanda vâki tagayyür akıl kabul etmez.
+- Netice/hüküm: **Râzî Mu'tezile'nin 1. ve 2. cevabını 'son derece zayıf' bulur**; 3.'yü de kabul etmez (p315).
+- Delil çeşidi: **cedelî (Mu'tezile'nin cevaplarına karşı)**; (T) cedelî-analitik. **[Delil ≠ dava: Râzî'nin 'ma'lûm değişince ilim değişmesi lâzım' öncülü, ilmin ma'lûmun **keşfi** olduğu Sünnî anlayışıyla çatışır; ilim keşiftir, ma'lûmu 'tabi' kılmaz — Râzî'nin kendi p104, 156, 234 tavrı ('ilim özel nisbet') ile de gerilim taşır.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I ilim / kul fiili**: **Risale ana metnine 'ilim keşfeder, cebir yapmaz' yazılırken Râzî'nin burada 'ilim ⇒ imtinâ'' çıkmazını 'kurtuluşsuz' bırakması ALINMAZ**; Sünnî çözüm (ilmin ma'lûma tâbi olup keşfetmesi, kesb-i kul) **ayrı kaynaklardan** çalışılacak. Râzî'nin kendi ilim-nisbet görüşü ile bu bâbın çelişkisi **açık borç**.
+- Doğan sual: Râzî'nin 'ilim ma'lûma tâbi' cevabını neden 'şartlı önerme' diye geçersiz sayması ilim bâbındaki 'nisbet' görüşüyle nasıl bağdaşır (kendi tenkidim)?
+
+## c3 p315
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. cevabın devamı): 'vukû'a dair ilim vukû'a şartlı; küfrün vukûu ilmi hâsıl olduysa küfür vâki oldu; buna rağmen küfrün ademi farz edilirse küfrün ademi ile vukûu cem'edilir (iki nakîz)'. **3. cevap (Hişâm b. el-Hakem)**: 'Allah cüz'îleri vukûlarından önce bilmez' — **'Müslümanların çoğu bu kavle iltifat etmemekte, Allah'ı ondan tenzîh etmenin vâcib olduğunda ittifak etmişlerdir; her ne kadar bu akîdeden kurtuluş ancak onu iltizamla olsa da'**. **Râzî**: 'Bu bâbın hâsılı budur; vallâhü a'lem.'
+- Netice/hüküm: **Râzî: Mu'tezile 'ilim engel değil' cevabını üç yoldan da yetersiz görür; 3. yol (Hişâm) İslâm'a aykırı olduğu için tümüyle reddedilir; Râzî'nin kendi kanaati: 'ilim-i ezelî ⇒ teklif-i mâ lâ yutâk vâki' (çıkmaz, iltizam gerektirir)'.**
+- Delil çeşidi: **cedelî + 'iltizam'**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK**: Râzî **'bu akîdeden kurtuluş ancak Hişâm'ı iltizamla; müslümanlar onu reddetti'** diyerek **bir aporiyi kabul ediyor** (ilim ⇒ imtinâ' ⇒ teklif-i mâ lâ yutâk); **Sünnî ana çizgi bu aporiyi ilmi 'keşif' sayarak ve kesb ile çözer**; **Risale'de bu bâb 'Râzî'nin aporisi olarak kaydedilir; çözüm iddiası yazılmaz, 'Ehl-i Sünnet'in çözümü ayrı kaynaklardan'**. 
+- Doğan sual: —
+
+## c3 p316
+- OCR: **çöp** (harfler bozuk, satırlar anlamsız; sayfa 'şekil/garip' gibi)
+- Okuma: **okunmadı (OCR çöp)**
+- İçerik: Yok. Netice çıkarılmadı.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: Bu sayfa gerçek metin içeriyor mu (nüshanın bozuk/boş sayfası mı)? (⊬ yeniden tarama gerek).
+
+## c3 p317
+- OCR: kötü (bâb başlığı bozuk: 'Fasıl 22'; içerikten: **Allah'ın imansızlığını bildiği kimseye teklifi ve aklî hüsn-kubuh ölçüsü**)
+- Okuma: tam
+- İçerik: **Bâb (dipnot 'Fasıl 22')**. **Râzî'nin 1. hücceti (kendi sesi: 'diyoruz ki')**: **aklî hüsn-kubuh hükmü Allah'ın fiillerinde cârî olsaydı**, imansızlığını bildiği kimseye teklif **kabîh** olurdu. **Lüzum**: 'burada imanın sudûrunun imkânsız olduğunu iddia etmiyoruz; ancak bu teklif **şâhitte kabîh**' — **misallerle**: **1. misal**: tehlikeli çölde **ribât (konaklama yeri/kale)** yaptıran, 'ribât yapılınca **eşkıyânın kendine sağlam kale edineceğini kesin bilen**' kimse 'ben yalnız hırsızların orada toplanıp hırsızlığı bırakmalarını, kervanlara yardım etmelerini istedim' derse, herkes onun **âfetlere kapı açtığına hüküm verir** ve yalanlar. **2. misal (p318'e taşıyor)**: bir efendi köle ve cariyelerini bir araya toplayıp birbirlerini süsleyerek…
+- Netice/hüküm: Râzî'nin 1. hücceti: **aklî kubuh Allah'a uygulanırsa 'imansızlığını bildiği kula teklif' kabîh olurdu** (misalle).
+- Delil çeşidi: **reductio + şâhide kıyas (misal)**; (T) cedelî. **Şartlı iddia: 'aklî hüsn-kubuh Allah fiiline cârî olsaydı'; Râzî bunu kabul etmiyor, Mu'tezile'yi kendi ölçüsüyle mahkûm ediyor.**
+- Mevzuya bağı: p299–301'deki **uyarı geçerli: Risale'ye 'Allah kâfire teklifle kabîh yapar' cümlesi ALINMAZ**; bu, **karşı tarafın ölçüsünü çürütme aracıdır**. 
+- Doğan sual: Bâb başlığı bozuk OCR: yeniden taranmalı (⊬).
+
+## c3 p318
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. misal (devam)**: efendi köle ve cariyelerini toplar, birbirine süsler, **şehveti kuvvetlendirip engelleri kaldırır**, 'ben bunu yalnız her biri nefsini bu şehvetlerden alıkoymaya çalışsın, daha çok sevap ve ikrama nâil olsun diye yaptım' der; **bu iffet ve temizliğin hâsıl olmayacağını, ancak fücûr ve fısk çıkacağını kesin bilir**; herkes onu yalanlar: 'sen ancak fücûr ve şerre kapı açmak istedin'. **3. misal**: **birine bıçak veren, bıçakla onun oğlunu öldüreceğini kesin bilen kimse 'düşmanını öldürsün diye verdim' der**, herkes yalanlar: 'sen oğlunu öldürmeye çalışıyormuşsun'. **4. misal**: kuyuya düşen insana ip atan, onun ipi boynuna dolayıp kendini boğacağını kesin bilen; herkes 'ip atan ancak kendini öldürsün diye attı' der. **5. misal**: **Muhammed b. Zekeriyyâ er-Râzî'nin (filozof-hekim) Ka'bî ile uzun münâzarası'nda** (aktarım ⊬): 'bir adam oğluna yüzmeyi öğretir, ustalaşır; sonra hastalığına şifa olan ilacın bulunduğu yere ulaşmak için nehri geçmeyi emreder; **oğlunun yüzmeyi kendi ihtiyarıyla bırakıp boğulacağını bilir**, yine de emreder, engellemez ⇒ o baba **âk, oğlunu gözetmeyen, en salâhına iradesi olmayan**.'
+- Netice/hüküm: 5 misal (ribât, süslenen köle-cariye, bıçak, ip, yüzme): **'fiilin sonucunu kesin bilen kişinin, maksadını başka gösterme iddiası şâhitte yalanlanır'**.
+- Delil çeşidi: **misal (şâhide kıyas) — 5 misal**; (T) ikna'î. **[Misal delil değil, tasvirdir; Râzî'nin kendi ölçüsüyle 'şâhide kıyas' Allah hakkında reddedilir (c3 p290–291); burada karşıt tarafın kıyasını çürütmek için kullanılıyor.]**
+- Mevzuya bağı: **Risale'ye alınmaz** (misaller Allah'ın fiilini insan fiiline benzeten kıyaslardır; Râzî'nin kendi tenzîh ilkesi ile uyumsuz). **Ebû Bekr er-Râzî ve Ka'bî münâzarası ⊬ (kaynak belirtilmemiş; Ebû Bekr er-Râzî nübüvvete karşı görüşleriyle bilinen filozofdur — ⊬ ayrıca doğrulanacak)**.
+- Doğan sual: Münâzaranın kaynağı ve hakîkatliği (⊬).
+
+## c3 p319
+- OCR: orta
+- Okuma: tam
+- İçerik: **Yüzme misalinin cevabı**: 'Bu Allah fiili için misal değil; misal: oğulları olan, yüzme öğreten, sonra **ihtiyaçları olan bir şehre** nehri geçmelerini emreden adam; içlerinden **nefsini boğmayı seçenlerin** olduğunu bildiği hâlde; **şefkatli babanın ulaşanları helâk olanlar yüzünden mahrum bırakması gerekmez**.' **Muhammed b. Zekeriyyâ'nın cevabı**: bu misal ancak **5 şartla sahih**: **(1)** baba o çocukları **nehre ihtiyaç doğuran şeye kendisi çıkarmamış olmalı**; oysa **Allah ihtiyacı ve şehveti halkın kalbinde yarattı, sonra dünyaya soktu**; ⇒ boğulmaya arz eden O. **(2)** baba, oğlunun boğulacağını **kesin bilmemeli**; Allah kâfirin küfrünü kesin biliyor. **(3)** baba, **o işe ancak ulaşacaklarını bildiği kimselerle sınırlı tutmaya güç yetiremiyor** olmalı; **Allah, itaat edeceklerini bildiklerini yaratıp küfredeceklerini bildiklerini yaratmamaya kâdir**.
+- Netice/hüküm: **Mu'tezile'nin 'yüzme misali'nin sahih olması için 5 şart (ilk üçü)**: Allah'ta yok.
+- Delil çeşidi: **misalin şartlandırılması (tenzîl)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl II/IV**: **Risale'ye alınmaz** (şartlar Allah'ın kudretini ve ilmini insan babası üzerinden tartar); **not: (3). şart 'Allah'ın yalnız iman edecekleri yaratması mümkün' iddiası** Risale'nin **hikmet-i ilâhî (herkesi imtihan)** çizgisiyle çelişir, **ana metne ALINMAZ**.
+- Doğan sual: —
+
+## c3 p320
+- OCR: orta
+- Okuma: tam
+- İçerik: **Şartlar (devam)**: **(4)** baba **mü'minlere ulaşan menfaatin, bozgunculara ulaşan zarardan çok olduğunu bilmeli** (akıl çoğunluğu tercih eder); oysa yaratmadaki ve teklifteki fayda **lezzetin bulunması**, onun fevti zarar değil (adem hâlinde de lezzet fevt idi, zarar yok); halk ve teklifin doğurduğu zarar **daimî azap**, bu **o menfaatten büyük** ⇒ aklî hüsn-kubuh hükmüne göre **halk ve teklif terk edilmeliydi**. **(5)** **salihler bozgunculardan çok olmalı**; oysa **kâfirler müslümanlardan, müslümanlardan fâsıklar salihlerden çok**. **Sonuç**: Mu'tezile'nin misali ancak bu 5 şartla sahih, **hepsi meselemizde sabit** (yani şartlar tutmuyor) ⇒ aklî hüsn-kubuh Allah fiiline cârî olsa **imansızlığını bildiği kimseye teklifin kubhu** kat'î. **Cevap iki yoldan**: **1. yol (Mu'tezile cumhurunun dayanağı)**: 'halk ve teklif kâfir hakkında hâsıl olduğu gibi **itaat eden hakkında da hâsıl oldu**; bu ikisi küfür ve isyanın sebebi değil; **Allah'tan sâdır olan halk ve teklif mahz ihsandır**: kâfire imana **kudret verdi, mazeret ve illetlerini giderdi**; teklif **onun için menfaatlere arz etmektir**; **küfre düşmesi Allah'tan değil kendi nefsindendir**.
+- Netice/hüküm: **Râzî'nin 1. hücceti tamamlandı (5 şart)**; Mu'tezile'nin cevabı 1: 'halk ve teklif ihsan; küfür kulun kendinden'.
+- Delil çeşidi: **misal şartları + hasım cevabı**; (T) cedelî-ikna'î. **[Delil ≠ dava: (4) 'daimî azap menfaatten büyük' önermesi ve (5) 'kâfirler çok' iddiası tâlim/genelleme; ilki cennetin ebediliği-nimeti ile birlikte tartılmadı, ikincisi ampirik.]**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: 'daimî azap menfaatten büyük' cümlesi **Risale'de 'cennet nimeti' ile birlikte tartılmadan yazılamaz**; **Risale ana metnine ALINMAZ** (Râzî'nin reductio öncülü). **'Kâfirler çoktur' hükmü ampirik, ⊬**.
+- Doğan sual: Râzî Mu'tezile'nin 1. yoluna nasıl cevap veriyor (p321+)?
