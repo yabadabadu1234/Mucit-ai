@@ -2166,3 +2166,363 @@ Sayfa 1–32: kapak, tahkikçi mukaddimesi (Ahmed Hicâzî es-Sekkâ), biyografi
 - Delil çeşidi: vicdânî ilzâm/tecrübî; (T) cedelî-hitâbî.
 - Mevzuya bağı: **Fasıl I Ek: 'Fıtrat Hadisi ve Husayn Muhâveresi (Buhârî, Cenâiz 92)'**: **kaynak atıf tashihi gerekli**: bu sayfada Husayn/İmrân rivayeti Râzî'de **senetsiz** verilmiş; **Buhârî Cenâiz 92 fıtrat hadisidir, Husayn muhâveresi değildir** (Husayn rivayeti Tirmizî'de ve tenkidli kaynaklardadır — **doğrulanmadı ⊬**); Ca'fer es-Sâdık–zındık gemi hikâyesi Râzî'de **senetsiz kıssa** olarak duruyor. Fasıl I Ek tablosundaki atıf 'Buhârî' yalnızca fıtrat hadisi için; muhâvere satırının kaynağı **yoklanmalıdır** (F 1-K).
 - Doğan sual: Husayn/İmrân rivayetinin kaynağı; Ca'fer–zındık hikâyesinin en eski kaynağı.
+
+## c1 p241
+- OCR: iyi
+- Okuma: tam
+- İçerik: (2) sonu: 'bu delil Kur'ân'dan alınmıştır: "Gemiye bindikleri zaman dini yalnız O'na has kılarak Allah'a dua ederler" (Ankebût 65)'. **(3) Ebû Hanîfe ve Dehriyye**: kılıçlarla saldıran Dehriyye'ye 'önce bir soruya cevap verin': 'Yükle dolu, dalgalar ve rüzgârlar arasında, ne yöneticisi ne koruyucusu olan bir gemi düzgün seyrediyor diyen birine ne dersiniz?' 'Akıl kabul etmez.' 'Yöneticisiz-koruyucusuz gemi aklen câiz değilse bu dünyanın çeşitli hâlleriyle, geniş uçlarıyla, yoğunluk farklarıyla bir sâni ve hâfız olmaksızın kaim olması nasıl câiz olur?' Hepsi ağladı: 'doğru söyledin.' (Dayandığı âyetler: Rûm 25, Ra'd 2.) **(4) Şâfiî**: dut yaprağı: tadı, rengi, kokusu aynı; ipekböceği yer ipek, arı yer bal, ceylan yer misk olur, diğer hayvanlar pisliğe dönüştürür: 'bu cisimleri bu acîb yollarla tedbir eden Allah'tır.'
+- Netice/hüküm: **Fıtrî/kıssa delilleri kataloğu** (Kısım 2, Fasıl 1: 20 kadar örnek).
+- Delil çeşidi: temsîl/ilzâm; (T) hitâbî. **Kaynak**: kıssalar **senetsiz** (Ebû Hanîfe–Dehriyye ve Şâfiî dut yaprağı kıssaları klasik kelâm kitaplarında geçer; **birincil kaynağı doğrulanmadı ⊬**).
+- Mevzuya bağı: Fasıl I Ek (tamamlayıcı deliller: hitâbî/cedelî); **her kıssa 'nakledilen (senetsiz)' diye işaretlenmeli**; F 1-K.
+- Doğan sual: —
+
+## c1 p242
+- OCR: iyi
+- Okuma: tam
+- İçerik: (5) **Ca'fer es-Sâdık**: 'gümüş gibi görünen, içi eriyik altın-gümüşle dolu bir kale; duvar çatlayıp içinden işiten-gören bir hayvan çıkar: mutlaka bir müdebbir ve yaratıcı' (kale = yumurta, hayvan = civciv). (6) **Hârûnürreşîd–Mâlik**: seslerin farklılığı, nağmelerin çeşitliliği, dillerin ayrılığı (Rûm 22: "dillerinizin ve renklerinizin ayrılığı"). (7) **Ebû Nüvâs** beyti: 'yeryüzünün bitkisine bak … zümrüt dallar Allah'ın ortağı olmadığına şâhitlik eder'. (8) **Bedevî**: 'Deve pisliği deveye, tezek merkebe, ayak izi yürüyüşe delalet eder; burçlu gök, yollu yer bilen kâdiri göstermez mi?' (9) **Tabib**: 'hafif ilaç yürüttü, yumuşak balgam tuttu'; başka biri: 'zehri bir ucunda, şifâyı öbür ucunda olan küçük hayvan (arı)'. (10) **Ebû Hanîfe** başka: 'Dicle'nin karşı yakasında eşyam var; gemi kendi kendine gidiyor, eşya kendi kendine gemiye yükleniyor, geri geliyor, kendiliğinden boşalıyor…' (p243).
+- Netice/hüküm: Hitâbî/fıtrî delil kıssaları devam.
+- Delil çeşidi: (T) hitâbî; senetsiz.
+- Mevzuya bağı: Fasıl I Ek.
+- Doğan sual: —
+
+## c1 p243
+- OCR: iyi
+- Okuma: tam
+- İçerik: (10) devam: 'bu sözü ancak akılsız söyler' dediler; 'çünkü bu hâllerin hudûsu ve fiillerin zuhuru ancak hâfız ve fâille makûl' → Ebû Hanîfe: 'şimdi ilâhın varlığını ikrar ettiniz; bu âlemin hâlleri bu geminin hâllerinden aşağı değil; sarîh akıl bu hâllerin ancak müdebbir ve mukaddir ile tamam olacağına şâhitse bu âlemin hâlleri için evlâdır.' **Râzî'nin yorumu**: 'Ebû Hanîfe'nin bu sözden maksadı: **hâdisin muhdise iftikârı ilminin bedîhî, delilden ganî** olduğuna işarettir.' (11) **Ca'fer b. Muhammed**: 'en kuvvetli delil: vücûdum; ben yoktum sonra var oldum; fâilim var; fâilim ben olamam: kendimi mevcutken mi ma'dûmken mi var ettim? mevcutken var etmeye ihtiyaç yok; ma'dûmken ma'dûm mûcid olmaz → sâni benden başka bir mevcut.'
+- Netice/hüküm: **Râzî bu kıssaları 'hâdis-muhdis iftikârı bedîhî' için şahit olarak yorumluyor** (Ka'bî çizgisi: p207–209'daki Fasıl 18'de tartıştığı 'hudûs yeter mi' meselesinde **Râzî'nin kendi eğilimi burada belirginleşiyor: bedîhîye yakın**). (11) Ca'fer'in delili: **'kendi vücûduna kendim müessir olamam'** — imkân/hudûs delilinin ferdî formu (ma'dûm mûcid olmaz; mevcut mûcide muhtaç değil).
+- Delil çeşidi: (11) burhânî biçim (dilemma; bizim Fasıl I §3 kurgusu ile aynı: kendi kendine sebep muhâl); (T) burhânî biçim; kaynak senetsiz.
+- Mevzuya bağı: **Fasıl I §3 (Adım 0: 'ben mümkinim')**: bizim Adım 0'ın 'kişi kendisi mümkin' hattının **Râzî'de Ca'fer'in delili** olarak (senetsiz) bulunması; kaynak **kıssa**, atıf yazılırsa 'Râzî'nin aktardığı kıssa' diye.
+- Doğan sual: —
+
+## c1 p244
+- OCR: iyi
+- Okuma: tam
+- İçerik: (12) **Ali b. Ebî Tâlib** (r.a.): 'Delil: **azimetlerin bozulması, kararların çözülmesi**.' Râzî'nin izahı: insan bir maksadı elde etmeye çabalar ve olmaz; bazen hiç uğraşmaz ve olur; olanlar onun çabasıyla olsaydı çabaladığı olurdu, kaçındığı olmazdı; oysa tersi → âlemin hâllerinin tedbiri ve hâdislerinin takdiri **kudretiyle kulların kudretini yenen** bir mevcudun hikmetine bağlı. (13) **Ömer b. Hattâb**: 'satranç tahtası' örneği: küçük bir tahtada sonsuz oyun; insan yüzü tahtasından küçük; uzuvlar yerinden oynamaz; buna rağmen doğuda ve batıda iki insan yüz suretinde asla aynı değil: 'kâdir musavvirin kemâline delil; sonsuz farklılık nev'ini bu küçük tahtada gösterdi.' Râzî: 'iki insanın suretleri asla aynı olmaz; huy, yürüyüş, sarık bağı, yazı, saadet–şekâvet payında farklı; bu geniş bâb, sâhilsiz deniz.'
+- Netice/hüküm: Kıssa 12–13: **irâde/çaba–netice ilişkisi** ve **farklılık çokluğu (tahsis)** delilleri.
+- Delil çeşidi: (T) hitâbî; (12) 'azimetin fesih' Ali'ye nisbeti **nakil, senet yok** (Nehcü'l-Belâğa'da 'a'reftu rabbî bi-fesh-il-azâim' geçtiği bilinir, **doğrulanmadı ⊬**); (13) Ömer'in satranç sözü **tarihen şüpheli** (satranç Fars'tan; **kaynağı doğrulanmadı ⊬**).
+- Mevzuya bağı: Fasıl I §5 (Burhân-ı Tahsis): 'iki insanın yüzü aynı değil' = tahsis örneği, **modern olasılık/kombinatorik ile de açıklanır** (yüz kombinasyon uzayı büyük, çakışma olasılığı düşük): bu örnek tahsis delili olarak **zayıf** (kendi tenkîdim).
+- Doğan sual: —
+
+## c1 p245
+- OCR: iyi
+- Okuma: tam
+- İçerik: (14) Ali'ye: 'Rabbini gördün mü?' 'Görmediğim Rabbe ibadet etmem.' 'Nasıl gördün?' 'Gözler müşâhede-i ıyânla görmedi, kalpler irfân hakîkatleriyle gördü.' 'Rabbini tarif et.' 'Rabbim rahmeti lâtif, kibriyâsı büyük, celâli yüce; her şeyden önce, kendisinin önü yok; her şeyden sonra, kendisinin sonu yok; zâhir, te'vîl-i mübâşeretle değil; bâtın, mübâade ile değil; işiten kulaksız, gören göz bebeksiz; uykular O'nu tutmaz, ...; kıdem vücûdu, ebed ezeliyeti; eyne eyn veren, 'nerede' denmez; keyfe keyf veren, 'nasıl' denmez.' (15) **Zünnûn el-Mısrî**: 'Rabbini nasıl bildin?' 'Rabbimi Rabbimle bildim; Rabbim olmasaydı Rabbimi bilmezdim.' Râzî'nin şerhi: marifet ağacı ruhlar topraklarına dikildi: toprağı tâat, suyu ubûdiyet, dalları zikir, meyvesi fikir; devam eden bu eserleri bulur. Hadîs-i şerif beyti: 'Vallâhi Allah olmasaydı hidâyet bulmazdık, tasadduk etmezdik, namaz kılmazdık' (Bera' b. Âzib: Hendek ıralı — [Buhârî'de Hendek rivayetinde Nebî'nin rezez'i]).
+- Netice/hüküm: **Tenzîh + irfân kıssaları**; Zünnûn sözü hitâbî.
+- Delil çeşidi: hitâbî; (T) hitâbî.
+- Mevzuya bağı: **Fasıl I §6 sıfât-ı selbiyye**: Ali'ye nisbet edilen tenzih ibareleri ('kıdem vücûdu, ebed ezeliyeti', 'eyne eyn verende eyn yoktur') bizim Kıdem/Beka/Kıyâm/Muhâlefet listesinin **nakl-ı meşhur karşılığı**; **senedi doğrulanmadı ⊬**; Hendek beyti (Buhârî 2837, 4104; doğrulama borcu: sayfa numarası yoklanmadı).
+- Doğan sual: —
+
+## c1 p246
+- OCR: iyi
+- Okuma: tam
+- İçerik: (16) Ağaç gölgesinde yatan adam: yaprak yüzüne düştü, kuru sert odundan yeşil yumuşak yaprağın nasıl doğduğuna şaştı: 'yaprağı ağaçta bitiren kim?' Uyudu, rüyada bir ses: 'yaprağı ağaçta bitiren, **yüzde gözü yarandır**.' Buna yakın: Nebî'nin tilâvet secdesinde okuduğu: '**Secede vechiye lillezî halakahu ve savverahu ve şakka sem'ahu ve basarahu bi havlihî ve kuvvetih**' (dipnot: ilaveler). (17) **Sultan ve vezir**: Allah'ın varlığında şüphe eden sultan; vezir her yıl ziyafet verir; bir yıl çöle tarla, bahçe, akan su, saraylar yaptırıp sultanı getirir; sultan şaşar: 'kim imar etti?' Vezir: 'ben yapmadım; yakın zamana kadar harâbeydi; döndük, bunlar **kendiliğinden hâdis olmuş, bânîsiz-müslihsiz**.' Sultan öfkelendi; vezir: 'bu kadar imar mimarsız imkânsızsa yüksek ve alçak âlemin bunca acâyibi mûcidsiz olması daha imkânsız.' Sultan uyandı, dine döndü.
+- Netice/hüküm: Kıssalar: yaprak/rüya; sultan–vezir (bâni-bina delili hikâye olarak).
+- Delil çeşidi: (T) hitâbî; kıssa senetsiz.
+- Mevzuya bağı: Fasıl I Ek ve §3: 'bâni-bina' temsili (p78–79'da geçen aynı temsil); **tilâvet secdesi duası** (Müslim 771/Tirmizî 580 'bi-havlihî ve kuvvetih' ile 'savverahu' varyantlı) → Fasıl I'de kullanılırsa **kaynak yoklaması** gerek.
+- Doğan sual: —
+
+## c1 p247
+- OCR: iyi
+- Okuma: tam
+- İçerik: (18) **Ca'fer es-Sâdık**: 'Bu âlemin hâlini haber ver: müdebbiri, mübâşiri, hâfızı olsa hâli bundan farklı mı olurdu? Bu hâller âlemin hakîm müdebbirine delildir.' (19) '**Kim nefsini bilirse Rabbini bilir**' — Nebî'den rivayet olarak sunulur; 'Tevrat'ta: **Ey insan, nefsini bil ki Rabbini bilesin**' (dipnot: İrmiyâ 9:23–24 anlamı). Ehl-i tahkik: 'kişi nefsini bilen Rabbini bilir; **müsâvât yoluyla değil muhâlefet yoluyla**: nefsini hudûsla bilen Rabbini **kıdemle**, nefsini imkânla bilen **vücûbla**, nefsini terkib ve te'lifle bilen **vahdâniyet ve ferdâniyetle**, nefsini cehil-acz-ihtiyâçla bilen **ilim-kudret-istiğnâ ile** bilir.' (20) (başlangıç) **Ebû Ma'şer el-Belhî** ve müneccimler…
+- Netice/hüküm: **'Nefsini bilen Rabbini bilir' hadisinin Râzî'deki yorumu (muhâlefet yolu)** = bizim §1–§6'nın (mümkin↔vâcib, mürekkeb↔vâhid) mantığının kısa özeti.
+- Delil çeşidi: (T) hitâbî; **nakil**: 'Kim nefsini bilirse…' **hadis olarak sahih değildir** (Nevevî, İbn Teymiyye gibi âlimler 'sabit değildir/mevzu' der; **doğrulama borcu ⊬**), Tevrat atfı da **doğrulanmadı** (dipnottaki İrmiyâ 9 karşılığı yalnız yaklaşık).
+- Mevzuya bağı: **Fasıl I metnine dokunan bir nokta**: bizde bu hadis geçiyorsa **zayıf/mevzû diye işaretlenmeli**; Fasıl I'de yok (okundu); ama bizim **§6** mantığı ile Râzî'nin muhâlefet yorumu **örtüşür**: 'nefsini imkânla bilen Rabbini vücûbla bilir' cümlesi bizim §1 taksîminin özeti.
+- Doğan sual: —
+
+## c1 p248
+- OCR: iyi
+- Okuma: tam
+- İçerik: (20) devam: müneccimler (Ebû Ma'şer el-Belhî ve başkaları) 'insanın kalbinde zamir sakladığını, siz onu çıkardığınızı iddia ediyorsunuz; şimdi bir zamir sakladım; çıkarın': müneccimler vaktin tâli'ini çıkarıp her biri bir şey söyledi, hiçbiri uymadı; Ebû Ma'şer: 'Allah'ı zikretmeyi saklamıştım.' 'Nasıl bildin?' 'Sen saklarken vaktin irtifâını aldım; baş noktası (nokta-i re's) semânın ortasındaydı; baş noktası zâtı görülmeyen, eserleri görülen bir şey; semânın ortası feleğin en yüksek noktası; anladım ki zâtı görülmeyen, hayır ve rahmetinin eseri görülen bir mevcudu anmışsın; o, mevcudâtın en yükseğidir; mevcudâtın en yükseği ancak Allah'tır.' Halk beğendi. Râzî: 'bu tür vecihler çok, zikrettiğimiz yeter.' (Fasıl 1 sonu.)
+- Netice/hüküm: Kıssa 20 (astrolog), Fasıl 1 (fıtrî deliller) biter.
+- Delil çeşidi: (T) hitâbî; kıssa senetsiz.
+- Mevzuya bağı: bkz p241.
+- Doğan sual: —
+
+## c1 p249
+- OCR: orta (başlık bozuk)
+- Okuma: tam
+- İçerik: **Kısım 2, Fasıl 2**: 'âlemin ilâhının isbâtında ilim sınıflarının yolları'. Her ilim sınıfının Allah'ı bilmekte kendine özgü yolu var. **1. sınıf: tarihçiler** (dünya ehlinin tarihlerini ve mâzî hâllerini araştıranlar): iki vecih. **Vecih 1**: 'tarih araştırması gökkubbe altında Allah'ın varlığını inkâr eden **mu'teber, kalabalık bir topluluk** bulunmadığını gösterir; ihtilâf sıfatlardadır; bu âlemi tedbir eden bir şeyin varlığı herkesçe müttefeğun aleyhtir.' Delil: âlem ehli iki fırka: nübüvveti kabul edenler ve etmeyenler; kabul edenler için Allah'ın varlığında nizâ yok.
+- Netice/hüküm: **İcmâ-i ümem (consensus gentium) delili** başlıyor.
+- Delil çeşidi: (T) hitâbî-tarihî (icmâ delili).
+- Mevzuya bağı: Fasıl I Ek (Fıtrat) ve §10 (ateizm: 'kesin ateizm bir iddiadır'): **bizde icmâ delili yok**; Râzî'de var, ama **kendi içinde tutarsızlık taşır** (bkz p252 notu).
+- Doğan sual: —
+
+## c1 p250
+- OCR: iyi
+- Okuma: tam
+- İçerik: Yahudiler ('Elohim, Adonay, Ehyeh Aşer Ehyeh' — dipnot Çıkış 3'ten) ve Hristiyanlar ('Ebûn, İlâhâ, Rabbâ, Kaddîşâ'; Süryânîce-Arapça) Allah'ı ikrar eder; **Mecûsîler** Allah'a 'Ehrimen veya Yezdân' derler; ateşi kıble yapmaları ateşin 'şerefli, yüce, kâhir' bir cisim olup celâl sıfatlarına yakın olmasından; **Zerdüşt** 'Zend-Avesta'da... (dipnotta Şehristânî'den: Mecûsî ikilik: nur/zulmet, Yezdân/Ehrimen); Acemler 'Hudây' der ('kendiliğinden gelen', vâcibü'l-vücûd anlamı).
+- Netice/hüküm: 4 mu'teber tâife (Yahudi, Hristiyan, Mecûsî, Müslüman) Allah'ın varlığında müttefik (**Mecûsî ikiliği Râzî'nin 'ittifak'ı ile bağdaşmıyor: iki ilâh (Yezdân/Ehrimen) tevhide aykırı**; Râzî yalnızca 'ilâhın varlığı' ittifakını iddia ediyor, birliğini değil).
+- Delil çeşidi: (T) hitâbî-tarihî.
+- Mevzuya bağı: bkz p249.
+- Doğan sual: —
+
+## c1 p251
+- OCR: iyi
+- Okuma: tam
+- İçerik: 'Bu dört mu'teber tâife (nebîlerin hepsinin nübüvvetini ikrar edenler) Allah'ın varlığında icmâ halindedir.' **Diğer tâifeler**: (1) **Cahiliye Arapları**: hepsi ilâhın varlığını ikrar (Zümer 38; İbrâhîm 10); 'ilâh' lafzını putlara, 'Allah' lafzını yalnız Allah'a kullanırlardı. (2) **Hindliler**: hakîm ilâhın varlığında müttefik; ibadette mübalağa. (3) **Zenciler** (aklen en uzak tâife): 'melekûy celûy' (ulu rab) derler. (4) **Türkler**: 'bir tengri' (bir rab) derler. (5) **Çinliler**: büyük ilim... (devam p252).
+- Netice/hüküm: Râzî'nin 'evrensel ikrar' listesi (**etnografik iddia; kaynağı yok**; sayfada Çinlilerle ilgili cümle yarım).
+- Delil çeşidi: (T) hitâbî-tarihî (etnografya, **doğrulanmadı**).
+- Mevzuya bağı: **Fasıl I §10**: 'icmâ delili' ekleniyorsa 'Râzî'nin (12. yy) etnografik bilgisi bugün doğrulanamaz veya yanlıştır' notu gerekir; ⊬.
+- Doğan sual: —
+
+## c1 p252
+- OCR: iyi
+- Okuma: tam
+- İçerik: (6) **Rumlar, Berberîler, Kıptîler, Habeşler**: 'Allah'ı ikrar (gâlib)'; (7) **Yunanlılar**: 'bu güzel âlemi ancak ilâhın varlığına ve celâl sıfatlarının marifetine vesîle olsun diye tefekkür ederlerdi' (Râzî'nin yorumu; yarım cümle). 'Dünya tâifelerinin zabtı tamam: **hepsi ilâhın varlığında müttefik**; eski tarihler de dünya ehlinin **en eski zamandan beri böyle olduğunu, aralarında Allah'ı inkâr eden hiç kimse bulunmadığını** gösterir.' **Akıl-icmâ argümanı**: 'zarûrî bilinir ki doğu ve batıdaki **7000 yıllık** bütün halkın aklı, tek bir kişinin aklından fazladır; tek bir kimseye şüphe veya şek arız olursa **onun aklının kısalığı ve az anlamasındandır**, matlûbun yokluğundan değil.' Şart: 'insan aklının küllîden az olduğunu kabul etsin.' **Vecih 2** başlıyor.
+- Netice/hüküm: **İcmâ delili (Râzî'nin formu)**: (a) inkâr eden mu'teber topluluk yok (tarihî); (b) çoğunluk aklı > tek akıl ⇒ şüphe eden hatalıdır.
+- Delil çeşidi: (T) hitâbî (**argumentum ad populum/consensus gentium**); mantıken **zayıf** (çoğunluk ittifakı doğruluk değil; tarih boyunca ittifaklar yanıldı); **kendi içinde tutarsız**: Râzî p196–197'de **Demokritos'u**, p241'de **Dehriyye'yi** anar (Ebû Hanîfe kıssası); yani 'hiçbir inkâr eden yok' iddiasını **kendi metni çürütüyor**.
+- Mevzuya bağı: **Fasıl I §10 (ateizm)**: bizde icmâ delili **yok**; **eklememek doğru** (Râzî'nin kendi metnindeki çelişki ve Cârvâka/Epikür/Budist-Jain/modern ateizm karşısında zayıflık); Râzî'nin ifadesi tarihî not olarak yazılabilir.
+- Doğan sual: —
+
+## c1 p253
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Vecih 2 (tarihçilerin)**: 'tarihçiler dünya hâllerini araştırınca gördüler ki **Allah'a ibadetle sıkı bağlı olan, çok ibadet eden, Allah'ı zikre ve delillerini tefekküre devam eden her tâife dünyada daha güzel anılmış, ömürleri uzun, hayır ve nimeti çok, şerlerden ve âfetlerden uzak, hayır ve saadetin devamına yakın**; Allah'a itaatten uzak, dünya talebine dalmış olanlar helâke ve şerlere, âfetlere ve korkulara daha yakın.' 5 destek: (1) zulmedenlerin ve dünya isteyenlerin katl ve yağmaya uğraması ilim ve amel ehlinden fazla; (2) ilim ehlinin küçük medresesi ve tâat ehlinin küçük ribâtı **200–300 yıl kalır**, kralların yüksek sarayları kısa süre; (3) medrese ve ribât bânîsi dine ve tâate yakınsa binası daha kalıcı; (4) ilim ve din ehlinin anılışı zalimlerinkinden kalıcı; (5) kalplerin dindarlara meyli dünya ehline meylinden fazla (p254).
+- Netice/hüküm: **Tarihî-tecrübî 'dindarlık ⇒ hayır' delili**.
+- Delil çeşidi: (T) hitâbî-tecrübî; **metodolojik zayıflık**: hayatta kalma yanlılığı (survivorship), seçici okuma, kuram-yüklü gözlem; Râzî 'uzun tecrübe' diyerek okuyucuya doğrulama yükü bırakıyor.
+- Mevzuya bağı: Fasıl I §13 (aklın üç hükmü, kesin/zannî): bu delil **zannî-hitâbî** sınıfındadır; Fasıl I'de kullanılırsa derece 'hitâbî' yazılmalı; kullanılmaması daha doğru (kendi tenkîdim).
+- Doğan sual: —
+
+## c1 p254
+- OCR: iyi
+- Okuma: tam
+- İçerik: (5) devam: 'kalplerin dindarlara meyli dünya ehline meylinden fazla'; 'kim Allah'ın kulluğuna daha çok dalmışsa hayırlara daha yakın; bu tecrübeyle ilâhı ikrar ve itaat vücûbunu itiraf **dünyada saadetin kemâli** olduğunu gördük: bu, Rahîm-Hakîm ilâhın varlığının en güçlü delillerindendir.' Bu tür delil Kur'ân'da çok: "Onların kıssalarında akıl sahipleri için ibret vardır" (Yûsuf 111); "**Ne çok bahçe ve pınar bıraktılar** ... **gök de yer de onlara ağlamadı** ve onlara mühlet de verilmedi" (Duhân 25–29). **2. sınıf: riyâziyyât ve mükâşefât ehli**: 'yolları Allah'ın varlığına birkaç nevi ile delâlet eder'. **Nev' 1**: 'sarîh akıl şâhid: mevcudâtın illetleri var; illetlerin **cisim, cismânî ve ne cisim ne cismânî** olmak üzere kısımları vardır' (başlangıç). Mevcudât ya cismânî ya **rûhânî**; 'kâmil akıllıların fıtratı şehâdet eder ki **rûhânî mevcudât vardır ve cismânî mevcudâttan daha yüce, daha kâmil, daha şerefli**.'
+- Netice/hüküm: **[Duhân 25–29 atfı Fasıl II'deki Tirmizî 3255 (zayıf) meselesiyle ilgili]**: burada Râzî âyeti *hadis olmadan*, ibret-delili olarak kullanıyor.
+- Delil çeşidi: (T) hitâbî; ruhânîlerin varlığı ve şerefi **fıtrat iddiası**.
+- Mevzuya bağı: **Fasıl II §(kaynak Duhân 29)**: Râzî'de Duhân âyeti yalnız âyet olarak; 'gök ve yer ağlamadı' tefsirinin (Tirmizî) hadis desteği burada **yok** (nihai kayıt: Râzî'nin bu sayfası, bizim Fasıl II'deki zayıf hadis notunu **desteklemez ama çelişmez**).
+- Doğan sual: —
+
+## c1 p255
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Ruhânîlerin cismânîlerden şerefli olduğuna i'tibârî vecihler (Nev' 1)**: **Vecih 1**: cismânîlerin sevgisine dalan, onları elde etmeye daha düşkün olan kimse akıllıların gözünde daha hakir; onlardan yüz çeviren, marifet talebinde tefekkürü tam olan daha yüce; 'günlerini yeme-içme-nikâh elde etmeye vakfeden ve rûhânî hâllerden büsbütün yüz çeviren kimse hakkında her akıllı **hayvandan** hükmeder, insanlık vasfından çıkmış sayar, hakârete bakar'; cismânî talepten yüz çeviren, az meyleden kimseyi ise **tazîm ederler**. Bu hüküm akıllılara değil **bütün âlem tâifelerine** ortak; 'Türklerin, Hindlilerin, Zencilerin cahilleri bile bu hâlleri ikrar eder; yaşlılarına saygı gösterirler çünkü onların uzun ömürle bilmediklerini bildiğini sanırlar; yaşlılardan yaşlıya yakışmaz fiiller görünce ...' 
+- Netice/hüküm: **Ruhânî > cismânî** için 'evrensel değer hükmü' argümanı (Fasıl 1, Vecih 1: p39'un aynı argümanı).
+- Delil çeşidi: (T) hitâbî-değer hükmü; öncül 'herkes böyle değer verir' (istikrâ/icmâ); ontolojik sonuç ('ruhânî mevcut') **değer hükmünden varlık çıkarır** (is–ought/is–value geçişi: kendi tenkîdim).
+- Mevzuya bağı: Fasıl I §0 (ilmin şerefi delili p39–40 ile aynı yapı): **değer ⇒ varlık geçişi**: bizim metinde kullanılmıyor; **kullanılmaması doğru**.
+- Doğan sual: —
+
+## c1 p256
+- OCR: iyi
+- Okuma: tam
+- İçerik: Vecih 1 devam (yaşlıya yakışmayan fiil görenin hakaret etmesi); 'cismânîlere düşkünlüğün alçaltıcılığı ve rûhânîyi tazîm **akıllarda merkûz, nefislerde mağrûz**'; 'çocuklar büyükleri görünce çekinir, kaçar: büyüklerin rûhâniyeti küçüklerinkinden güçlü'; 'yırtıcı hayvanlar insanı görünce ondan korkar, saygı gösterir, oysa insan onlara nispetle çok zayıf: rûhânî sıfatlar tabiatta heybetli ve büyüktür.' **Vecih 2**: çocuk konuşmayı anlayacak yaşa gelince yaşlı kadın masal anlatınca çocuk **kendinden geçip dinler**; ona en güzel yemek ve içecek sunulsa yüz çevirir: 'masal dinlemekten doğan lezzet, yemek ve içecek lezzetinden **güçlü**' → rûhânî lezzet cismânîden güçlü; tavla ve satranç oynayan uzun süre yeme-içmeyi bırakır, açlık-susuzluk acısını bile hissetmez: 'galebe lezzeti…' (devam p257).
+- Netice/hüküm: Ruhânî lezzet > cismânî lezzet (tecrübî-psikolojik örnekler).
+- Delil çeşidi: (T) hitâbî-tecrübî; **örnekler ruhânî varlığın varlığını göstermez, psikolojik hazzın türünü gösterir** (kategori kayması: 'rûhânî lezzet' ≠ 'rûhânî varlık'; kendi tenkîdim).
+- Mevzuya bağı: Fasıl I §0 (p39–40 'saadet-i rûhâniyye'); Fasıl I §13.
+- Doğan sual: —
+
+## c1 p257
+- OCR: iyi
+- Okuma: tam
+- İçerik: Vecih 2 sonu (ruhânî lezzet > cismânî). **Vecih 3**: 'her saadet ve kemâlin izhârı herkesçe talep edilir; izhârı herkesçe çirkin görülen şey kemâl cinsinden değildir; **en güçlü cismânî lezzet cinsî birleşmedir**; kemâl olsa izhârı akıllarca güzel görülürdü; oysa akıllı kişi anmaktan bile utanır; insanlar birbirine ancak bu hâlleri gösteren lafızlarla sövüşür' → cismânî lezzetler saadet değil. Ruhânî hâller: hakâyıkın ilmi, cismânîden yüz çevirme, ruhânîlere yönelme; herkes bunlarla sevinir; bunu bilmeyen bile 'sahipmiş gibi görünmek için' davranış sergiler. **Vecih 4** başı: kalpler ve nefisler ittifak eder: insan dünyayı anmaya ve elde etme hilesine yöneldikçe (p258 devam).
+- Netice/hüküm: Değer-hükmü delilleri (izhâr-istikbâh argümanı).
+- Delil çeşidi: (T) hitâbî-değer hükmü; **kültüre bağlı** ('utanç' evrensel iddiası); bedensel hazlar hakkında **ahlâkî-kültürel yargı**, ontolojik bilgi vermez.
+- Mevzuya bağı: Fasıl I §13 (aklın hükmü sınırı): kullanılmaz.
+- Doğan sual: —
+
+## c1 p258
+- OCR: iyi
+- Okuma: tam
+- İçerik: Vecih 4: dünyaya daldıkça ruh kararır, kalp daralır, sıkıntı ve iztırap artar, hayret ve dehşet; tersine cismânî lezzetten yüz çevirip marifet ve ruhânîlere yönelince kalpte **behcet, râhat, sürûr** ("**Elâ bi zikrillâhi tatmainnü'l-kulûb**" Ra'd 28). **Vecih 5**: 'insanın kalbine ruhânî âlemin nûrlarından bir nûr girince gücü ve şevketi artar, dünya krallarına aldırmaz; Ali b. Ebî Tâlib: "**Vallâhi Hayber kapısını cismânî kuvvetle değil ilâhî kuvvetle söktüm**" (nakil); enbiyâ ve evliyâ düşman çokluğuna aldırmaz.' **Riyâzet ve mükâşefe ehli**: '**cismânî âlem ruhânî âlemin misâli; asıl ruhânî âlem; cismânî âlem gölge, resim ve hayâl**'. Şimdi cismânî âlemin hâllerini i'tibar edip ruhânî âleme intikâl edilecek: cismânî mevcudâtın kemâl-nokson derecelendirmesi.
+- Netice/hüküm: **Yol: 'kemâl derecelerinin sıralanması' (Burhân-ı Derecât) başlıyor.**
+- Delil çeşidi: (T) hitâbî-tecrübî (Vecih 4–5: psikolojik); ontolojik iddia ('cismânî âlem ruhânînin gölgesi') **riyâzet ehlinin keşf iddiası** (T: keşf; burhan değil).
+- Mevzuya bağı: Fasıl I: 'keşf' iddiası bizim yapımızda burhan sayılmıyor; Ali'ye nisbet edilen Hayber sözü **hadis/asar olarak doğrulanmadı ⊬**.
+- Doğan sual: —
+
+## c1 p259
+- OCR: iyi
+- Okuma: tam
+- İçerik: Derece i'tibârı: kuvvet-i nefsânîden hâli halis cisim en nâkıs (dört unsur tabakaları); dört unsur da kemâlde farklı: cismâniyeti çok ruhâniyeti az olan daha aşağı, ruhâniyeti çok olan daha şerefli: **arz en aşağı (yalnız kabul ve tesir; fâil kuvvet çok zayıf)**, su (letâfet ve hareket sebebiyle te'sîr kuvveti: 'su toprağa nispetle ruh bedene nispet gibi'), hava daha lâtif, **nâr en şerefli** (nurlu, yüce, fiil-te'sîre güçlü). Mürekkeb sıralama: maden (nefsânî-ruhânî kuvvet en az) < nebat (orta) < hayvan (yüksek); hayvan içinde en ruhânî **insan** ('hayvanların sultanı'); insan sınıfları: ruhânîliği galip olan şerefli.
+- Netice/hüküm: **Derecât delili: kemâl derecelerinin ölçütü 'ruhânîlik'**; unsur sıralaması **Aristocu/İbn Sînâcı fizik**.
+- Delil çeşidi: (T) hitâbî-cedelî; öncül 'ruhânîlik = kemâl' **tanım gereği**, dairesel (kemâli ruhâniyetle tanımlayıp ruhâniyetin şerefini kemâlle gösteriyor).
+- Mevzuya bağı: **Burhan(çeşit) dehlizi**: Râzî'nin 'derece' delili bizde yok; bkz p262 sonu notu.
+- Doğan sual: —
+
+## c1 p260
+- OCR: iyi
+- Okuma: tam
+- İçerik: Kemâl sıfatları **üçe** indirgenir: **istiğnâ, ilim, kudret**; bunlar insanda kemâl derecesinde değil beşerî kuvvet ölçüsünde hâsıl; her sınıfta bir en kâmil; en kâmil şahıs sûfîlerce **kutb-ı âlem**, Şîa dilinde **imâm-ı ma'sûm**; bin yılda bir (az/çok) bunların **reisi ve en büyük imâmı: sâhib-i vahy ve tenzîl kâmil nebi**. Cismânîde bu mertebeler; ruhânî âlemde de: cisim alâikinden mücerret ruhânîler çok, derece derece farklı. **DİPNOT (Sekkā'nın kendi notu, Râzî'nin metni değil)**: 'tasavvuf İslâm'dan değildir' diye başlayan **tasavvufa karşı polemik**; bazı meşhur sûfîleri (Cüneyd, Bâyezîd-i Bestâmî, Hallâc, Serî es-Sakatî) ağır ifadelerle anar; Abdülkādir-i Geylânî menkıbesini eleştiri örneği olarak verir (menâkıb kitabına atıf: 'Savaş kitabı' adlı çağdaş kaynak).
+- Netice/hüküm: **Editör notu delil değildir**: tasavvuf karşıtı görüş neşredenin kendi görüşüdür; **Râzî'nin kendisi kutb ve imâm-ı ma'sûm kavramlarını 'kemâl tepesi' modelinin örnekleri olarak kayıtsızca kullanıyor**.
+- Delil çeşidi: (T) yorum notu; Râzî: hitâbî.
+- Mevzuya bağı: **Kaynak kullanım kuralı**: Sekkā dipnotları (p260, p263–264 vd.) **Râzî değildir**; alıntı yapılırsa 'neşredenin dipnotu' diye ayrılmalı; polemik içerikli bu dipnotlar **bizim risalede delil olarak kullanılmaz** (F 2-Y: iddia edilmeyen şey yazılmaz; okuyucuya yanlış otorite yüklenmez).
+- Doğan sual: —
+
+## c1 p261
+- OCR: iyi
+- Okuma: tam
+- İçerik: Ruhânî mevcudâtın derece farkı: hepsi üç sıfatta (istiğnâ, ilim, kudret) insan cinsinden **daha kâmil**; beşer ruhları bunlara nispetle **deniz karşısında damla, güneş karşısında kıvılcım**; beşer ruhlarında nasıl 'mutlak reis' (kâmillerin kemâlde muhtaç olduğu, kendisi onlara ganî) bir şahıs bulunmak zorundaysa, **ruhânî mevcudâtta da hepsinden istiğnâ-ilim-kudrette en kâmil bir mevcut bulunmak zorundadır**; hepsi ona muhtaç, o hepsinden ganî. **Sonuç**: cismânîler ruhânîlere muhtaç; ruhânîler o bir'e muhtaç; o **bütün ruhânîlere ve cismânîlere müstevlî**; ondan başka her şey vücûdunda ve bütün vücûd kemâllerinde ona muhtaç, o hepsinden ganî: **o Allah'tır.** 'Nefîs bir inceliği: bütün beşer ruhları kutub'un ruhuna nispetle damla/kıvılcım; bütün kutupların, velîlerin ve enbiyânın ruhları melek-i mukaddes ruhlarına nispetle zerre ve kıvılcım; melek ruhları sürekli kemâl ve yükseklikte artar, yüce mukaddes ruhlara varır.'
+- Netice/hüküm: **Burhân-ı Derecât (kemâl-derece burhanı)**: ruhânîlerin derecelenmesi ⇒ en kâmil bir ruhânî ⇒ Allah.
+- Delil çeşidi: (T) cedelî-hitâbî; **mantıksal boşluk**: 'derecelenmiş bir kümede **en büyük eleman vardır**' çıkarımı geçersizdir (sonsuz artan zincir, ya da tepesiz kısmi sıra); Râzî bunu 'beşerde reis bulunmak zorundadır' diye kabul edilmiş öncül saymıştır; aynı yapıda **Aquinas 4. yol/Anselmus**'a benzer; (T) **cedelî**, burhânî değil.
+- Mevzuya bağı: **Fasıl I: Burhan(çeşit) tablosu**: 'Burhân-ı Derecât' Râzî'de 2. sınıf (ehl-i riyâzet) delili olarak var; bizde **yok ve eklenmemeli** (ya da 'cedelî, tepe-varlık-boşluğu' etiketiyle kayıt).
+- Doğan sual: —
+
+## c1 p262
+- OCR: iyi
+- Okuma: tam
+- İçerik: 'Bütün ruhânîler Allah'ın celâline nispetle **yok gibi**' ("**Yevme yekûmü'r-rûhu ve'l-melâiketü saffen lâ yetekellemûne illâ men ezine lehü'r-rahmânu ve kâle savâbâ**" Nebe 38; ve Lokmân 27 âyeti: 'yeryüzündeki ağaçlar kalem, deniz mürekkep olsa Allah'ın kelimeleri tükenmezdi'). Sonuç: beşer ruhları Allah'ın gınâsına nispetle **yokluktan da aşağı, zerreden de hakir**; Allah'ın sameditinin künhüne yakışır marifet, nimetlerine yakışır şükür, celâline yakışır itaat **muhâl**; beşerde ancak zillet, kusur, acz, miskinlik. **Bu yol ehl-i riyâzet ve mükâşefenin ruhânî ve cismânî mevcudâtı bilme yoludur**. **Özet**: 'bütün akıl sahiplerinin fıtratları ruhânîlerin varlığına, ruhânîlerin cismânîlerden yüce, cismânîlere müstevlî olduğuna, cismânî mertebeler gibi ruhânî mertebelerin de kemâlde farklı olduğuna şâhidtir; öyleyse **bütün ruhânîlerden daha yüce ve şerefli bir ruhânî mevcut vardır**; bu mevcut mevcudâtın en yücesi ve en kâmilidir.'
+- Netice/hüküm: **Yol 2 (riyâzet/mükâşefe ehli) — Nev' 1 (derece burhanı) sonucu**.
+- Delil çeşidi: (T) hitâbî-cedelî (fıtrat iddiaları).
+- Mevzuya bağı: bkz p261.
+- Doğan sual: —
+
+## c1 p263
+- OCR: iyi
+- Okuma: tam
+- İçerik: p262'nin sonu: 'en yüce ruhânî varlık en yücedir'. **Dipnot (Sekkā'nın uzun notu)**: Müslümanların ve Ehl-i Kitab'ın âlemin hakîm-kadîr bir ilâhı olduğu üzerinde ittifakı; Tevrat'tan **On Emir** (Çıkış 20:2–3) ve Tesniye 6:4–5 ('Dinle ey İsrâil, Rab Allahımız tek Rab'); İncil: Matta 5:17–18, Markos 12:28–34 (İsâ (a.s.) Tevrat'ı nesh etmediğini söyler; Markos'ta en büyük emir Şema); Kur'ân İhlâs. Ayrıca Tevrat'ta 'Allah'ın parmağı' (Çıkış 8:19) ile teşbih-sıfat ilişkisi.
+- Netice/hüküm: **Editör notu (Sekkā)**: Tevrat/İncil/Kur'ân'da tevhid ve sıfat ifadelerinin karşılaştırması; **Râzî'nin metni değil**.
+- Delil çeşidi: (T) yorum notu (yayıncı); dipnottaki kitab-ı mukaddes atıfları **bizim Fasıl II/IV kaynak yoklamalarında ayrıca doğrulanır**.
+- Mevzuya bağı: kaynak kullanım kuralı: bkz p260.
+- Doğan sual: —
+
+## c1 p264
+- OCR: iyi
+- Okuma: tam
+- İçerik: Sekkā'nın devam eden dipnotu: Tevrat'ta sıfat-ı ma'nâ ve sıfat-ı a'zâ ayetleri, Tesniye 33:26 'Yeşurun'un Tanrısı gibisi yoktur'; İncil'de Matta 5:34–35 (Allah'ın arşı/ayak taburesi) ve Yuhanna 17:2–3; Kur'ân'da Feth 10 ('Allah'ın eli'), Neml 51–52, Şûrâ 11 ('leyse kemislihî şey'). Muhkem-müteşâbih: 'tenzih âyetleri muhkem, a'zâ âyetleri müteşâbih (iki mânâlı); yed=kudret; istivâ=kahır ve galebe (te'vil)'. 'Neden Allah a'zâ sıfatlarıyla kendini anlatır?' sorusunun cevabı başlar (devam p265).
+- Netice/hüküm: Editör notu (kelâm yorumu); **te'vil yolu (Eş'arî-Mâtürîdî)**: Fasıl I §13.1 'nass muhâle delalet ederse zâhir kastedilmemiştir' kaidesiyle **uyumlu**.
+- Delil çeşidi: (T) yorum notu.
+- Mevzuya bağı: Fasıl I §13.1 (te'vil kaidesi): neşredenin notu aynı çizgide; **kaynak olarak Râzî sayılmaz**.
+- Doğan sual: —
+
+## c1 p265
+- OCR: iyi (dipnot metni; sayfa gövdesi yok)
+- Okuma: tam
+- İçerik: **Yalnızca Sekkā'nın dipnotu** (Râzî'nin metni bu sayfada yok): 'Allah kendi zâtını beşer akıllarına yaklaştırmak ister; bu yüzden muhkem-müteşâbih âyetler'; Tevrat/İncil'e atıf 'muhâlifi kendi inandığıyla ilzam' yöntemiyle; ardından **Hristiyanlıkla tevhid akîdesi arasında buluşma imkânsızlığını** ilân eden karşılaştırma: İslâm'da tevhid + tenzîh (İhlâs); Hristiyanlıkta 'tevhid var ama tenzih yok' iddiası; Ortodoks akîdesinin (Meryem'in Ruhülkudüs ile gebeliği, Mesîh'in Allah'ın tecessüdü, üç ukn'um…) **neşredenin kendi anlatımı**.
+- Netice/hüküm: **Editör notu; Râzî değildir**. Hristiyan mezheplerinin akîdelerinin bu anlatımı **kendi inanç metinleriyle karşılaştırılmadı** (⊬); polemik ve sadeleştirici olabilir.
+- Delil çeşidi: (T) yayıncı yorumu.
+- Mevzuya bağı: Fasıl I/II'de **kullanılmaz**; Râzî'nin metnine dâhil edilmez; kaynak kullanım kuralı (p260).
+- Doğan sual: —
+
+## c1 p266
+- OCR: iyi (dipnot)
+- Okuma: tam
+- İçerik: Sekkā'nın dipnotu devam: Ortodoks, Katolik anlatımı ('ukn'um' = mertebe/şahıs; 'Mesîh Allah'ın oğlu' anlamı; Ortodoks 'mecâzî evlat' yorumu iddiası; Tesniye 14:1, Luka 3, Mezmur 2 atıfları); 'bu akîdeler Kur'ân'ın "ve lâ tekûlû selâse, intehû…" (Nisâ 171) ve "lekad kefera'llezîne kâlû innallâhe hüve'l-Mesîhu'bn Meryem" (Mâide 17) âyetlerinde reddedilmiştir' hükmü.
+- Netice/hüküm: Editör notu.
+- Delil çeşidi: (T) yayıncı yorumu.
+- Mevzuya bağı: bkz p265.
+- Doğan sual: —
+
+## c1 p267
+- OCR: iyi (dipnot)
+- Okuma: tam
+- İçerik: Sekkā'nın dipnotu devam: Katolik-Protestan 'babalık/oğulluk' anlatımı ve eski Mısır-Hint teslîs etkisi iddiası; 'ikinci: müslümanların tevhid ve tenzîh delilleri Kur'ân, Tevrat ve Dört İncil'den'; **İhlâs suresi**; Tevrat: Tesniye 6:4–5 ('Şema'), Tesniye 32:12? ('Yeşurun'un Tanrısı gibisi yok'), Çıkış 33:20 ('yüzümü göremezsin'), Tesniye 4:12,35.
+- Netice/hüküm: Editör notu; **kitab-ı mukaddes atıfları** (bölüm-âyet numaraları OCR'da bozuk) **bağımsız yoklama gerektirir** (⊬).
+- Delil çeşidi: (T) yayıncı yorumu.
+- Mevzuya bağı: Fasıl II/IV'te Tevrat/İncil atıfları kullanılırsa **kendi yoklamamızla**.
+- Doğan sual: —
+
+## c1 p268
+- OCR: iyi (dipnot)
+- Okuma: tam
+- İçerik: Sekkā'nın dipnotu devam: **Markos 12:28–34** (en büyük emir: 'Dinle ey İsrâil, Rabbimiz tek Rab' — metin alıntısı); **Yuhanna 17:3–4, 9:1–4** ('seni ve gönderdiğin İsâ Mesîh'i tanımaları ebedî hayattır'); Yuhanna 1:18/5:37 (Allah'ı kimse görmedi); **1. Timoteos 1:17 ve 6:15–16** ('kral, ölümsüz, görünmez, tek bilge Tanrı'; 'kimsenin görmediği, göremeyeceği').
+- Netice/hüküm: Editör notu (kitab-ı mukaddes derlemesi: ayet metinleri **Türkçe/Arapça çeviri farkları var**; OCR'da numaralar bozuk).
+- Delil çeşidi: (T) yayıncı yorumu.
+- Mevzuya bağı: bkz p267.
+- Doğan sual: —
+
+## c1 p269
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Râzî'nin metni (ehl-i riyâzet, Nev' 2)**: 'mevcudât ya rûhânî ya cismânî; cismânî âlem ya nûrânî ya zulmânî; **nûrânîler dört: güneş, ay, yıldızlar ve ateş**; bu dördün en yücesi ve şereflisi (Güneş)…' (p270'te devam). **Alt not (Sekkā)**: Nikea (325) ve Kalkedon (451) konsilleri: 'Konstantin Nikea'da Hristiyanları toplayıp Roma ve Hristiyan akîdelerini birleştiren bir din istedi… Kalkedon'da Ortodoks-Katolik ayrıldı' — **neşredenin tarih anlatımı**: konsil tarihleri (325, 451) genel tarihle uyumlu; **yorum ve nedensellik iddiaları tartışmalı**; doğrulanmadı.
+- Netice/hüküm: Metin (Râzî): Nev' 2 başlıyor; dipnot: editör.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c1 p270
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Nev' 2 (Râzî)**: Güneş (bütün nurların ışığını yok eder), Ay (vezir gibi, gecenin sultanı), yıldızlar **yedi mertebe** (ilk büyüklükte en güçlü … yedinciye kadar azalır), nâr (aşağı âlemin nuru, zayıf: kolayca söner; aydınlatırken yakar; dumanla karışır). 'Nûrların dereceleri: ruhlar âlemi cisimler âleminden daha berrak, kâmil, şerefli; cisimler âleminde nurlar varsa **ruhlar âleminde de nurlar olmalı**; cisimlerde en büyük nur bir olduğu (Güneş) gibi **ruhlar âleminde de en büyük nûr bir olmalı**: Güneş doğunca diğer nurlar hükümsüz olur; bu yüce nûr doğunca her nûr batıl olur, her mevcut yok gibi olur; **kemâl-i fazl ve rahmetiyle her ma'dûm mevcud gibi, kahr-ı celâliyle her mevcut ma'dûm gibi olur.**'
+- Netice/hüküm: **Nev' 2: nur analojisi (Işıklar Sûresi/İşrâkî gelenek)**: cisim âlemindeki tek büyük nur ⇒ ruhlar âleminde tek büyük nur (Allah).
+- Delil çeşidi: (T) temsîl/analoji (işrâkî), **burhan değil**; 'cisim âlemi ruh âleminin misâli' öncülü keşf iddiası.
+- Mevzuya bağı: Burhan(çeşit): temsîl kutusu; Fasıl I'e alınmaz.
+- Doğan sual: —
+
+## c1 p271
+- OCR: iyi
+- Okuma: tam
+- İçerik: Nev' 2 sonu: 'yakın olan zihinlere, sâf akıllara; riyâzet makamında bulunan ve nefsi fıtratta nurlu-ulvî-ilâhî olan kimse bunların hepsini basîret gözüyle şüphesiz görür.' **Nev' 3**: 'şüphe ve şüphe sahipleri, batıl hayâlleri ve fâsid şüpheleri ilâhı nefyedecek şekilde takrîre çalışsalar da **başlarına acı bir hâdise ve heybetli bir vâkıa gelince sarîh akıl ve kalplerinde ilâh-ı âleme yalvarma ve tazarru buluyor** ve o beladan kurtarmasını istiyorlar; bu hâl istikrâ ve i'tibâr ile zarûrî bilinir; kurtulduktan sonra çoğu yeniden şüphe takrîrine döner' (Ankebût 65 ile: 'gemiye bindiklerinde dini yalnız O'na has kılıp Allah'a dua ederler, karaya çıkarınca müşrik olurlar'). **Nev' 4**: muztarların **duasının icâbeti**, çaresizin imdâdı, mazlumun zalime karşı yardımı — 'her kim nefsi daha sâf, ruhu daha kuvvetli, ruhânîlere çekimi daha güçlü ise bu babda daha kâmil'; bu, 'âlemin ilâhının duayı işittiğini ve nidâya icâbet ettiğini' gösterir.
+- Netice/hüküm: **Nev' 3 (sıkışınca dua) ve Nev' 4 (icâbet tecrübesi)**: fıtrî/tecrübî deliller.
+- Delil çeşidi: (T) hitâbî-tecrübî; **Nev' 3'ün dayandığı 'istikrâ' ateist/agnostik için doğrulanamaz** (kimin sıkışınca dua ettiği psikolojik bir iddia; 'zarûrî bilinir' diyor); **Nev' 4 doğrulanabilirlik sorunu (teyit yanlılığı)**.
+- Mevzuya bağı: **Fasıl I Ek: 'Fıtrat Hadisi ve Husayn Muhâveresi' satırı**: Nev' 3'ün klasik yeri; aynı derece **cedelî/hitâbî**.
+- Doğan sual: —
+
+## c1 p272
+- OCR: iyi
+- Okuma: tam
+- İçerik: Nev' 4 sonu: 'eller O'na kaldırılır, gözler O'na eğilir, boyunlar kudretine boyun eğer, dillerde celâli zikri; o hâceti olanların ihtiyâçları kesilmez; sual çokluğu ilmini bulandırmaz' ("O ondan başka ilâh olmayan diridir; öyleyse dini yalnız O'na has kılarak O'na dua edin. Hamd âlemlerin Rabbi Allah'a" Gâfir 65). 'Ehl-i riyâzetin kelimelerinden elde ettiğimiz vecihler bunlardır.' **3. sınıf: kâmil akıl ve sağlam anlayış sahibi, ince ilimlerle uğraşmayanlar**: 'bu cinsten sahih ibareler işittim'. **Yol 1 (ihtiyat delili)**: 'her şeyde ihtiyata riâyet, terkinden evlâ; **ilâhın (muhtâr, teklifle mükellef eden) isbâtı nefyinden ihtiyata daha yakın**': âlemin ilâhı ya var ya yok; yoksa 'var' demek zararsız (hata) → olsaydı 'yok' demek zararlı; muhtâr fâil? ya evet ya hayır; değilse muhtâr saymak zararsız, muhtârsa nefyi zarar; ilâh mükellef edip emreder mi? ya evet ya hayır; edenden inkâr en büyük zarar.
+- Netice/hüküm: **İhtiyat delili (Pascal bahsine benzer, ~5 asır önce)**: 'inanmanın maliyeti düşük, inkârın zararı yüksek'.
+- Delil çeşidi: (T) hitâbî-pragmatik (karar-teorik; **hakikat değil maliyet argümanı**); çok tanrılı/çelişik teklif çokluğu itirazı Râzî'de yok (Pascal'a yöneltilen 'çoklu tanrı itirazı' burada işlenmiyor).
+- Mevzuya bağı: Fasıl I §13.3 (akîde kesin bilgi ister): **ihtiyat delili kesin bilgi vermez**; Râzî onu ikna'î kısmına koyuyor: doğru sınıf; Fasıl I'e delil olarak alınmaz, tarihî/hitâbî not olarak yazılabilir.
+- Doğan sual: —
+
+## c1 p273
+- OCR: iyi
+- Okuma: tam
+- İçerik: İhtiyat delili sonu: 'korku şiddetlenince en ihtiyatlı tarafı seçmek belirlidir.' **Yol 2 (3. sınıf, bir aklı başında kişinin sözü): 'yüzüne vurulan bir tokat'**: bir çocuğun yüzüne bir tokat indiği anda **dört ilkeyi** gösterir: (1) âlemin ilâhı, (2) ilâhın kullarına emir-nehiy, (3) itaat edene sevap/âsiye ıkâb, (4) resûl gönderme. **(1)**: çocuk tokadı hissedince 'beni kim vurdu?' der; dünya halkı 'tokat kendiliğinden oldu' dese kabul etmez → sarîh akıl 'fiil fâilsiz, hâdis muhdissiz olmaz' der; öyleyse felek ve unsur âlemlerindeki hâdislerin hâdissiz-fâilsiz olması nasıl makûl? **(2)**: çocuk vurucunun filan olduğunu öğrenince 'niçin vurdun, hangi sebeple beni incittin?' der → sarîh akıl 'insanlar başıboş bırakılmadı, teklifler lâzım, mükellefiyetler yönelmiş' hükmeder. (p274'te devam).
+- Netice/hüküm: **Tokat delili (Yol 2, 3. sınıf)**: tek bir olaydan **dört asıl** (ilâh, teklif, mükâfat-ceza, nübüvvet) çıkarılıyor.
+- Delil çeşidi: (T) hitâbî-temsîl (çocuğun tepkisi = fıtrat); bedâhet iddiası.
+- Mevzuya bağı: **Fasıl I Ek** ve **Fasıl II (nübüvvet), Fasıl III (meâd)**: aynı çocuk-tokat örneğiyle *aynı kaynaktan* dört asıl: Râzî'nin 4 asıl listesi bizim Fasıl I–IV silsilesine karşılık gelir (ilâh · teklif · sevap-ceza · nübüvvet); **kaynak sayfası c1 p273–274** (Fasıl III için 'meâd' Metâlib'de yalnız bu kısa delil ve p64'te planlanıp yazılmayan 10. kısım).
+- Doğan sual: —
+
+## c1 p274
+- OCR: iyi
+- Okuma: tam
+- İçerik: Tokat delili devam: (2) çocuğun sarîh aklı 'bu tek tokadın teklif ve emir-nehiyden hâli olamayacağına' hükmeder; öyleyse bütün halkın fiilleri (bunca maslahat ve mefsedeyle) **evlâ** hâli olamaz. **(3) sevap ve ıkâb**: çocuk sebepsiz vurulduğunu öğrenince **kısas ister**; kısası alamazsa yardım ister → sarîh akıl 'her iyiliğin sevabı, her kötülüğün ıkâbı olmak zorunda' hükmeder; tek tokat cezasız-kısassız bırakılamıyorsa bütün halkın fiilleri nasıl bırakılır? **(4) nübüvvet**: kısas gerektiğine karar verince kısasın **eksiksiz-fazlasız miktarını bildirecek bir insan** arar → halkta 'teşvik ve zecr miktarlarını bildiren bir insan' şart; o insan resûldür. 'Bu tek tokat bu dört şerefli matlûbu isbâta yeter.' **Yol 3: müddet ve zamanı araştıranlar**: 'akıl bedâheten hükmeder: her hâdis vücûdca **başkasından sonradır**; bu bedîhî bir ilimdir; sonrası olan için 'öncesi' vardır; bu öncelik mefhumu ya adem ya vücûd; adem olamaz (ademler 'adem olmakta' ortak, öncelik-sonralıkta farklı; mâ-bihi'l-iştirâk ≠ mâ-bihi'l-imtiyâz)…'
+- Netice/hüküm: Tokat delili sonu; **Yol 3 = zaman/müddet delili (Fasıl 1/p89–90 Hüccet 4'ün fıtrî versiyonu)**.
+- Delil çeşidi: (T) hitâbî-temsîl; **tokat örneği kıyas-ı temsîl**: tek tokattan âlem ve ahlâk hükmü çıkarmak geçerli çıkarım değil (bireysel adalet sezgisi ⇒ kozmik hesaplaşma: kategori sıçraması; (T) hitâbî).
+- Mevzuya bağı: Fasıl III (meâd): Râzî'nin meâd **delili** Metâlib'de **bir cümlelik sezgi** kalıyor (dört asıl); **Fasıl III'ün Metâlib'den 'burhân' alması yanlış olur**; sadece 'Râzî böyle bir fıtrî sezgi delili gösterir' notu.
+- Doğan sual: —
+
+## c1 p275
+- OCR: iyi
+- Okuma: tam
+- İçerik: Yol 3 devam: kabliyet-ba'diyet **mevcut bir sıfat**; önce-sonra olan her hâdis başka bir mevcuda mesbûk ve ona mülhâk; o mevcut vücûd ve ademi kabul ederse başka mevcuda muhtaç → sonsuz (muhâl); ademi hiç kabul etmezse **vâcib li-zâtihi**. (Bu, p89–90 Hüccet 4'ün aynı yapısı.) **Yol 4: felek ahvalini araştıranlar**: 'felek dairevî hareket eder; her böyle hareket **nefsânî-irâdî**; her böyle hareket için cisimden mücerret bir cevher onu irâdeyle hareket ettirir; bu felek-i aksâda da var; ya kadîm vâcib ya hâdis → başka fâil → teselsül muhâl → kadîm vâcib'e intihâ.' 'Bu bâbda bu vecihlerle yetinelim; irşat ve rahmet Allah'tandır.' (Kısım 2, Fasıl 2 biter.) **Dipnot (Sekkā, uzun)**: (1) Allah'ın varlığına aklî ve nakli deliller sınıflaması; fıtrat delilinin (**gıdâ/cinsel dürtü örneği**), sebebiyet, **Kur'ân'ın ilmî işaretleri** (Peygamber ümmî idi…), hidâyet delili, Akkâd'ın 'Allah' kitabından 4 delil (halk, gâye, istikmâl, ahlâk).
+- Netice/hüküm: **Kısım 2, Fasıl 2 tamam**; dipnot **neşredenin sınıflaması**, Râzî'nin metni değil (dipnot kendi taksîminde 'gıdâ' örneği ve **'ilmî mucize'** iddiasını içerir; bunlar Râzî'den çıkarılamaz).
+- Delil çeşidi: (T) Yol 4 = Aristocu 'felek nefis/akıl hareket ettirir' + teselsül reddi; klasik kozmoloji.
+- Mevzuya bağı: Fasıl I §12.
+- Doğan sual: —
+
+## c1 p276
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Sekkā'nın dipnotu devam** (Râzî değil): fıtrat delilinin dinî-içgüdü izahı (dürtülerin yaşa göre uyanması; 'Rûm 30 fıtratullah'); **sebebiyet delili** (Râzî'nin 'işaret' kalıplarından: 'deve pisliği deveye delâlet eder…'); **Ayât-ı kevniyye delili** ('Peygamber ümmî iken **ilmî bilgiler** söyledi; ya öğretmeni var ya Allah; öğretmen olamaz çünkü bu bilgiler asırlar sonra bilindi'); **hidâye delili** (Tâhâ 50). Dipnot ayrıca 'Râzî'nin âyetleri kevnî deliller diye yorumlamasını' eleştirir ('bu tefsir sebebiyet delilinden bağımsız delil olamaz').
+- Netice/hüküm: **Editör notu; Râzî değildir**; içindeki 'ilmî mucize' iddiası **doğrulanmadı ⊬** ve Fasıl II'de 'ilmî mucize' iddiasına ayrı dürüstlük kaydı gerekir; **bu dipnotlar delil olarak alınmaz**.
+- Delil çeşidi: (T) yayıncı yorumu.
+- Mevzuya bağı: kaynak kullanım kuralı (p260).
+- Doğan sual: —
+
+## c1 p277
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Sekkā'nın dipnotu devam**: Abbas Mahmud el-Akkâd'ın *Allah* kitabından özetler: aklî delillerin en kabule yakını **halk (kozmolojik), gâye, istikmâl (en yüce kemâl; ontolojik), ahlâk** burhanları; halk burhanı: 'mevcudâtın mûcidi olmalı; her mevcut başkasına bağlı…'; 'gâye burhanı halk burhanının teknik uzantısı'; **istikmâl (ontolojik) burhanı**: 'akıl her büyük şeyin üstünü tasavvur eder … en kâmil varlık tasavvurda olduğundan gerçekte de mevcut'; ahlâk burhanı: vicdan/vâzi'.
+- Netice/hüküm: **Editör derlemesi (20. yy. yazar)**; Râzî'nin delilleri değil.
+- Delil çeşidi: (T) yayıncı yorumu (çağdaş kaynak: Akkâd).
+- Mevzuya bağı: **Fasıl I**: bizim tabloya 'ontolojik burhan' **eklenmiyor** (Fasıl I §2.2 Anselmus tuzağı reddi); editör notunu delil yapmayız.
+- Doğan sual: —
+
+## c1 p278
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Sekkā'nın dipnotu sonu**: ahlâk burhanı devam; **Enbiyâ 22** ile vahdâniyet; 'temânu' burhanı' (iki ilâhın kudretinin kâfî/kâfî olmama üçlemesi: her ikisi kâfî ⇒ bir eserde iki müstakil müessir; biri kâfî ⇒ öbürü aciz; ikisi de yetersiz ⇒ aciz); 'iki ezelî ilâh imkânsız; mutlak kemâl bir sıfatta iki olamaz; ikisi aynı şeyi murad ederse tek varlıktır'.
+- Netice/hüküm: Editör notu; **temânu' burhanının kısa hâli** (bizim Fasıl I §6.2'nin kaynağı değil; aynı klasik burhan).
+- Delil çeşidi: (T) yayıncı yorumu; klasik temânu' burhanı burhânî biçimde (bizim §6.2'de).
+- Mevzuya bağı: Fasıl I §6.2: özdeş içerik; **atıf 'Râzî cilt 2' olacak, bu dipnota değil**.
+- Doğan sual: —
+
+## c1 p279
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kısım 3 başlık sayfası**: 'Kısım 3: vücûb, vücûd, irâdât, teayyün, mâhiyet ve benzeri mâ-yeşbühühâ (benzer) matlûb ve mebâhis hakkında'. (Dipnot: nüsha farkı: bu kısım 2. kısmın 3. faslından sonra zikredilir.)
+- Netice/hüküm: Kısım 3 (vücûb-vücûd-mâhiyet vb.) burada başlar.
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §2 (mâhiyet–vücûd)** ve §15.4 bulgu 5 ('cilt 1, kısım 3, mesele 5': bu ledger'de p280+ okununca doğrulanacak).
+- Doğan sual: —
+
+## c1 p280
+- OCR: iyi
+- Okuma: tam
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —

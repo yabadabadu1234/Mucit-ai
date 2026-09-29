@@ -1404,7 +1404,7 @@ Köşeli **[K#]** işaretleri metindeki yerleri gösterir. Râzî'nin *el-Metâl
 | Esbâbın Acziyeti | §8 İlim/Kudret | "kanun≠fail" ⋉ [tek tek misal] | hitâbî/cedelî |
 | Cüz'iyattaki İntizam | §8 İlim | nizam ⋉ [en küçük ölçek] | hitâbî/cedelî |
 | İsimlerin Tecellisi | §7 İsim(Zât,Sıfat) | ⋉ [müşahede dili] | hitâbî/cedelî |
-| Fıtrat Hadisi ve Husayn Muhâveresi | §6.2, §5 | vicdanî ilzam — muhatabın kendi itirafından istidlâl (Buhârî, Cenâiz 92) | cedelî |
+| Fıtrat Hadisi ve Husayn Muhâveresi | §6.2, §5 | vicdanî ilzam — muhatabın kendi itirafından istidlâl. **Kaynak tashihi:** fıtrat hadisi için Buhârî atfı korunur; **Husayn (İmrân b. Husayn) muhâveresinin kaynağı yoklanmadı** — Râzî onu senetsiz aktarır (*Metâlib* c1 p240, okuma defteri kaydı) | cedelî |
 | Burhân-ı İâde (İlk yaratılıştan ikinciye istidlâl, Yâsîn 78-79) | — | Meâd'e (öldükten sonra dirilmeye) mahsustur, Vücûd bahsine değil | ⊳ Fasıl III, madde 14'te tafsil edilecek |
 
 **Not (eksik bırakılmadığının kaydı):** Burhân-ı İâde bilerek bu fasla tam işlenmedi — çünkü o, Allah'ın varlığını değil öldükten sonra dirilmeyi (Meâd) ispat eden bir delildir ve risalenin kendi taksiminde Fasıl III'ün konusudur. Buraya yanlış yere konursa fasıllar arası taksim bozulur; bu yüzden yeri burada yalnız işaretlenmiş, tam işlenmesi Fasıl III'e bırakılmıştır — atlanmamış, ertelenmiştir.
