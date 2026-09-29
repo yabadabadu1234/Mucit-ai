@@ -2017,3 +2017,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **reductio (imkân sübûtî sıfat ⇒ mahal ⇒ heyûlâ)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: aynı 'imkân mevcut sıfat' öncülü (c4 p170) — Râzî c4 p172'de bu öncülü **kendisi çürütmüştü**.]**
 - Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: kıdem tarafının fenâ inkârı **c4 p170–172'de Râzî'nin çürüttüğü 'imkân sübûtî sıfat' öncülüne dayanıyor**; Risale bu bağlantıyı **kaydedecek**.
 - Doğan sual: —
+
+## c4 p225
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet devam): '**heyûlâ cisimlikten hâli olamaz** (bedîhî); bu heyûlâ **adem kabul ediyorsa başka heyûlâya muhtaç ⇒ teselsül**; **adem kabul etmiyorsa ve cismî sûretten hâli olamıyorsa cisim adem kabul etmez.**' **3. hüccet**: '**üç boyutun ademini farz edersek** yukarı tarafı aşağıdan, ön tarafı arkadan, sağı soldan **mütemeyyiz olur mu**? **Olmazsa** bedîhen bâtıl; **olursa boyutlar mevcut ⇒ cisimler mevcut** (önceki makâledeki gibi).' **4. hüccet**: '**âlem güzel nizamlı, sağlam sanatlı**; **onu ancak şerîr bozar**; **âlemin ilâhı şerîr değil ⇒ bozmaz**; **başkası bozmaya kâdir değil** ⇒ **âlem hiçbir zaman bâtıl olmaz.**' **İtiraz**: 'bir vakit maslahat olan şey mefsedete dönebilir (**şahıs fenâsı ile nakız**).' **Cevap 1**: '**maslahat mefsedete dönüşebilir, ancak fiilleri, hudûsu kendisinden olmayan şartlara mevkuf olan için**; **Bârî'de her hâdisin hudûsu kendisinden ve îcâdıyla** ⇒ bu tefâvüt onun için muhâl.' **Cevap 2**: '**âlemdeki şahısların hudûsu, feleklerin harekâtındaki ihtilaftan**; feleklerin hareketlerinin hudûsunda aynı denirse **başka feleklere iftikâr, sonsuz** (p226).
+- Netice/hüküm: **Kıdem tarafı: 'âlemin fenâsı şerrdir (Allah şerîr değil)'; şahıs fenâsı nakzı cevaplandı.**
+- Delil çeşidi: **reductio (hüsn-i nizâm ⇒ ebediyet)**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'fenâ şerrdir, Allah şerr yapmaz' öncülü vâcib-i aslah/hikmet zorunluluğu; c3 p334–335 (Allah'a hiçbir şey vâcib değil) ile çelişir; kıyamet nassları (⊬).]**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: 'Allah âlemi bozmaz' iddiası **kıyametin inkârı**; **Risale ana metnine alınmaz**; c3 p337–344'teki hikmet bâbının 'aynı silah' örüntüsüne 9. örnek.
+- Doğan sual: —
+
+## c4 p226
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. hüccet**: '**âlemin yaratılması sevap, hikmet ve hayır mıydı değil miydi**? **İkincisi bâtıl** (hayırlı-rahîm-hakîmin yapmaması lâzım gelirdi); **birincisi kalır**: hayır, sevap ve hikmet olma vechi **baki mi**? **Bakiyse** âlemin nakzı ve iptali **şer, fâili şerîr**; **baki değilse** tagayyür **zâtıyla mı fâilin eliyle mi**? **Zâtıyla ise** hayrın zâtı gereği şerre **fâilsiz inkılâbını** caiz gördünüz; bir kısım hâdisde caizse diğerlerinde de caiz ⇒ **hâdislerin müessirsiz hudûsu kapısı**; **fâilin onu hayırdan şerre çevirmesi ise** ilk taksîm geri.' **6. hüccet**: '**âlemin yaratılması muhtaçlara ihsan; ihsanın kesilmesi ancak acz, cehil, bahil**; hepsi Allah'ta muhâl.' **7. hüccet**: '**zaman kesilse ademi vücûdundan sonra olurdu; bu ba'diyet zamanladır ⇒ zaman vücûdunda ma'dûm mevcut (muhâl).**' **8. hüccet (Câlînûs/Galen)**: '**felekler ve yıldızlar bâtıl olup yok olsaydı, yavaş yavaş harâb ve inhidâm eserleri belirmeliydi; buna hiç ihsas etmedik, geçmiş tarihlerden felek ve kevkeblerin hâllerinin kemâlden noksana değiştiğine dair haber ulaşmadı** ⇒ bâtıl.'
+- Netice/hüküm: **Kıdem tarafı 5.–8. hüccet: hayır/ihsan/zaman/Galen gözlemi ile fenânın imkânsızlığı.**
+- Delil çeşidi: **reductio + gözlem (Galen)**; (T) burhânî biçim/ikna'î. **Galen argümanı ⊬ (kaynak belirtilmedi).**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: 'ihsanın kesilmesi acz/cehil/bahl' (c4 p139, 151) ile aynı örüntü; **Risale kıyamet konusunda bu argümana 'Allah'ın kesiciliği ihsanın kesilmesi değil, nihâî hükmün icrası' diye nassla cevap yazar**.
+- Doğan sual: —
+
+## c4 p227
+- OCR: orta
+- Okuma: tam
+- İçerik: **Muhammed b. Zekeriyyâ er-Râzî'nin (filozof-hekim) bu hücceti (Galen) 2 vecihle itirazı** (⊬ nisbet): **(1)** '**bu ancak felek ve kevkeblerin ademi kuruma yoluyla sürekli olsaydı lâzım; ademi ani olsaydı lâzım değil.**' **(2)** '**adem kuruma yoluyla olsa bile bu cirimler sert olabilir**: bize ulaşan tarihlerdeki kuruma miktarı az, hissedilmez; **yâkût sert cisim, ondan bir şey dağılmak zorunda ama sertliği yüzünden bu miktar ömrümüzde hissedilmez**; **felekler ve yıldızlar yâkûttan sert, aramızdaki mesafe çok uzak** ⇒ onlardaki kurumanın hissedilmemesi bu sebeple uzak değil.' **'Galen'in sözüne bu iki itiraz güzel isabetlidir.'** **9. hüccet (felekler tabiatı gereği dairevî)**: '**tabiatı gereği dairevî olanın müstakîm meyli yoktur; müstakîm meyli olmayan harq, iltiyâm, tefrik ve temzîk kabul etmez.** **Tabiatı gereği dairevî olduklarının beyânı**: dairevî hareket tabiî olmasaydı **dâim ve ekserî olmazdı**; tabiî olunca **müstakîm meyil yok**: müstakîm meyil çıkış-iniş gerektirir, dairevî meyil çıkış ve inişten sapmayı; **bir şeyde hem müstakîm hem dairevî tabiî meyil** ⇒ **iki zıtta cem'**; ⇒ **felek cirimlerinde müstakîm meyil yok; tefrik, temzîk, bâtıl kabul etmez.**' (p228)
+- Netice/hüküm: Galen delili + er-Râzî itirazı (ani adem; sert cirim); **9. hüccet: dairevî tabiat ⇒ fesâd kabul etmez.**
+- Delil çeşidi: **gözlem + eski fizik (felek doktrini)**; (T) ikna'î-burhânî biçim. **Eski fizik/astronomi; Risale'ye alınmaz.**
+- Mevzuya bağı: **Fasıl III (Meâd)**: 'felekler bozulmaz (bâtıl kabul etmez)' iddiası **kıyamet nasslarına ('gök yarılır, 82:1; ⊬') zıt**; Risale **modern kozmoloji tartışmasına girmez**, nass yazılır; Râzî'nin **Kısım 2'de** cevabı aranacak. Er-Râzî atfı ⊬.
+- Doğan sual: —
+
+## c4 p228
+- OCR: orta
+- Okuma: tam
+- İçerik: **10. hüccet**: '**semâların sıfatlarında sabit: müstakîm harekete kabil değiller; bu tür şey tefrik, temzîk, kevn ve fesâd kabul etmez.**' **Filozoflar**: '**bu on vecihle âlem ebedî-vücûddur.** **Ebedî olduğu sabit olunca ezelî de olmalı**: ezelî olmasaydı **ezelde ma'dûm**; öyle olsa **hakîkati adem kabul ederdi**; öyle olsa bu **kabiliyet ebediyen baki olurdu** ve **vücûddan sonra ademin sıhhati lâzım** gelirdi; **bu muhâl olduğuna göre âlemin hakîkati adem kabul etmez; öyleyse ezelî.**' **'Bu bahsin tamamı; Allah en iyi bilendir.'**
+- Netice/hüküm: **11. Makâle bitti: kıdem tarafı 10 hüccetle 'âlem ebedî, dolayısıyla ezelî'.**
+- Delil çeşidi: **reductio + kabiliyet ilkesi**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ebedî ⇒ ezelî' geçişi 'adem kabiliyeti baki olur' öncülüne dayanır (mâhiyetin muktezâsı değişmez, c4 p35–36).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, III (Meâd)**: 'ebedî ⇒ ezelî' geçişi ile **fenâ-i âlem inkârı** kıdem tarafının tam yapısı; Risale bu iki iddiaya nassla **'mâsivâ ne ezelî ne ebedî (Allah'ın dilemesine bağlı)'** cevabını yazar; **cennet ve cehennemin ebediliği Allah'ın ebedî kılmasıyla (mahlûkun zâtı gereği değil)**; Râzî'nin Kısım 2 cevabı aranacak.
+- Doğan sual: —
+
+## c4 p229
+- OCR: orta
+- Okuma: tam
+- İçerik: **12. Makâle: 'Âlemin ezelî olmasının müessirden istiğnâyı gerektirmediği'** (başlık; kıdem tarafı).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: c2 p77–78, c3 p250.
+- Doğan sual: —
+
+## c4 p230
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p231
+- OCR: orta
+- Okuma: tam
+- İçerik: **12. Makâle (kıdem tarafı): 'âlemin ezelî olmasının müessirden istiğnâyı gerektirdiği' itirazı ve cevabı.** **Hudûs taraftarları**: '**âlem kadîm olsa müessirden müstağnî olurdu; bu sâni'in nefyini gerektirir**'. **Delilleri**: 'kadîm = ezelde mevcut olan; vücûdu bir sebeple hâsıl ise **mevcûdun îcâdı ve tahsîl-i hâsıl (muhâl)**.' **Misal**: '**bina bânîye hudûsunda muhtaç, bekâsında değil**.' **Kıdem tarafı (filozoflar) cevabı**: '**Hınâ ile elini boyayan, başlangıçta hınâyı yapıştırmaya muhtaç, sebep gittikten sonra renk baki**; ayrıca **taşı yukarı atan: doğru mezhep, atanın taşta 'kasrî kuvvet' hâdis kıldığı; bu kuvvet hudûsunda müessire muhtaç, bekâsında müstağnî.**' '**Bu, kavmin kelâmının toplamı.**' **Filozoflar**: '**kadîm eserin kadîm müessirle ta'lîli aklen imtinâ'sız**' (p232).
+- Netice/hüküm: **Hudûs tarafı: 'kadîm eser müessirden müstağnî' iddiası (hâdisin bekâda müessirden istiğnâsı analojisi); kıdem tarafı: hınâ/taş misalleri.**
+- Delil çeşidi: **analitik + misal**; (T) cedelî-ikna'î.
+- Mevzuya bağı: **Fasıl I §3**: 'kadîm eser müessirden müstağnî mi?' konusu **c3 p250'nin 'imkân burhanı' ile bağlı**: Risale **'ezelî olsa da mümkin ise müessire muhtaç'** ilkesini yazmalı; c4 p232'de **kıdem tarafının 'mümkin kadîm eser vâcib kadîm müessire muhtaç' cevabı**.
+- Doğan sual: —
+
+## c4 p232
+- OCR: orta
+- Okuma: tam
+- İçerik: **Filozoflar**: '**aklen imtinâ' yok: kadîm eserin kadîm müessirle ta'lîli**: **ikisi devamda müşterek; biri (eser) mümkin, diğeri (müessir) vâcib**; mümkin müreccihe muhtaç, vâcib müessirden müstağnî ⇒ **birini ötekiyle ta'lîl etmek, ötekini ilkiyle ta'lîlden evlâ**; **bu mânâ bâtıl değil ⇒ 'imkânsız' diyenin sözü bâtıl.**' **Müessir iki kısım: fâil-i muhtâr; illet-i mûcibe**; '**filozoflar ve mütekellimîn ittifak: kadîm eserin fâil-i muhtâra isnâdı muhâl; kadîm eserin kadîm illete isnâdı imtinâ' değil**'; **filozoflar ilâhı mûcib bi'z-zât bildikleri için 'kadîm âlemin ilâha isnâdı imtinâ' değil' dediler**; **mütekellimîn ilâhı muhtâr bildikleri için 'kadîm eserin ona isnâdı imtinâ'' dediler**; '**bu bu bâbta ma'kûl söz.**' **Delil (1)**: '**mümkin bekâ hâlinde mümkin kalır; her mümkin sebebe muhtaç ⇒ bekâ hâlinde de sebebe iftikâr**; bu bekânın iftikârı men etmediğini gösterir. **Mümkinin bekâ hâlinde mümkin kaldığının beyânı**: imkân ya… (p233).
+- Netice/hüküm: **Kıdem tarafı: 'kadîm eserin kadîm müessire isnadı mümkin'; filozof-mütekellim ittifakı: kadîm eser muhtâr fâile isnad edilemez.**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'kadîm eserin muhtâr fâile isnadı muhâl' ittifakı **Sünnî akide için kritik**: Allah'ın ezelî sıfatları (kudret, ilim) kadîm olup **zâtın lâzımı** değil midir? Sıfat eser değil; eser = mâsivâ (hâdis).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: '**kadîm eser muhtâr fâile isnad edilemez**' ittifakı Risale'de **'mâsivâ hâdis, kadîm eser yoktur' diye yazılır**; kıdem tarafı 'kadîm mümkin eser var' diyor; **bu, 'mümkin ⇒ hâdis' değil 'mümkin ⇒ müessire muhtaç' (c3 p250) ayrımıyla** Risale'de yazılmalı.
+- Doğan sual: —
