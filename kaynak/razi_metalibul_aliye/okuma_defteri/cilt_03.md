@@ -937,3 +937,147 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **kavramsal seçim + istikrâ (iç gözlem)**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I ilim sıfatı ve c2 p105–109 (izâfî sıfat hudûsu)**: **Râzî 'ilim = nisbet' dediği için 'ilm-i ilâhî nisbet ⇒ malûm değişirse nisbet de değişir' (izâfî sıfat hudûsu, c2 p106) meselesini kolay kabul eder**; **Sünnî akide 'ilm-i ilâhî ezelî, değişmez, sıfat-ı zâtiyye'**: **Râzî'nin 'ilim salt nisbet' formülü (bu sayfa) Sünnî ana çizgiyle (ilim gerçek sıfat) gerilimli olabilir** ⇒ **ders ana metnine alınmaz; 'Râzî'nin tercihi' notu; Râzî'nin ilm-i ilâhî için kendi hükmü sonraki sayfalarda (ilim Bâb'ında) tekrar kontrol edilecek**.
 - Doğan sual: **Râzî ilm-i ilâhîyi de 'nisbet' mi sayıyor?** (cilt 3 Bâb 3 devam; c2 p106'daki ayrım.)
+
+## c3 p105
+- OCR: orta
+- Okuma: tam
+- İçerik: (İlmin selbî tefsiri.) İlk fırka: 'ilim = cehlin yokluğu'; 'cehil' bazen **maʿlûma muhâlif i'tikâd** anlamına gelir; bu mânânın yokluğu **cansızlarda da var**, ama âlim değiller ⇒ tanım olmaz. **İkinci fırka (filozoflar)**: '**şeyin akıl olması = maddeden mücerred olması**.' **Râzî: bu söz mânâca karışık**: mücerred = kâim bi'n-nefs, hiçbir mahalde hâl olmayan; bu ile 'eşyayı bilir' arasındaki fark **zarûrî**; birçok şeyi **kendi başına kâim, mahalde hâl olmayan** sanırız ama hiçbir âkilin aklına 'bu yüzden bilir' gelmez; **madde de mücerred/kâim bi'n-nefs ama hiçbir şey bilmez** (madde başka maddeye hâl değil) ⇒ tanım **faydasız**. **Râzî'nin çıkarabildiği**: 'ilim = malûmun sûretinin âlimde hâsıl olması; şey **başkasında hâl** ise hâsıl olan **kendisi için değil hâl olduğu mahal için**; **mahalden ganî, hakîkati kâim bi'n-nefs** ise mâhiyeti **kendisine hâsıl** ⇒ **kendi nefsini idrâk eden**; **bu 'tecerrüd ⇒ idrak'ın anlamıdır**.'
+- Netice/hüküm: **Filozof 'tecerrüd = ilim' tanımının Râzî tarafından yeniden kurulması (sûret-hâsıl-oluş, kendine hâsıl)** ve mûcerredin 'kendini bilme'sine indirgenmesi.
+- Delil çeşidi: **kavramsal analiz**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl III (nefs: mücerred nefs kendini bilir)**: 'tecerrüd ⇒ kendini idrâk' **nefs-i mücerred için dayanak**; ders katmanına **'Râzî'nin filozof tanımını nasıl anladığı' notuyla**.
+- Doğan sual: —
+
+## c3 p106
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Bu, bu sözden çıkarabildiğim mânâ; **Allah onların muradını daha iyi bilir**.' 'İlim, idrâk, şuûrun hakîkatinde zikredilebilecek **kısımlar bunlar**; kitabın başında **her biri için istikssâ yapıldı; tekrarda fayda yok. Tevfik Allah'tandır.** **Fasıl 1 biter.**
+- Netice/hüküm: **İlmin hakîkati bahsi c1'deki (mantık başı) istikssâya havale**.
+- Delil çeşidi: —
+- Mevzuya bağı: **'Kitabın başı (mantık)'** = **cilt 5 veya 6?**: c1 p1–70 mukaddimede mantık yok; **mantık bölümü hangi ciltte (bilinmiyor)**: Râzî'nin atıflarının **çözülmesi için haritalama borcu** (aşağıdaki özetlerde 'atıf defteri').
+- Doğan sual: 'Bu kitabın başında mantık ilmi' hangi cilt/sayfa? (kaynak haritası).
+
+## c3 p107
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb 3, Fasıl 2: 'Allah'ın âlim olduğuna delîller — ihkâm ve itkân delili'** (başlık bozuk). 'Âlemin hâdis, âlemin ilâhının **kâdir-muhtâr** olduğunu söyleyenler, **ihkâm-itkân delili** ile ilme istidlâl ettiler: **Allah'ın fiilleri muhkem, sağlam; her muhkem-mütkın fiil sahibi âlim olmalı** ⇒ Allah âlim.' **İki mukaddime**: (1) 'Allah'ın fiilleri muhkem-mütkın' (**maslahat ve menfaat vecihlerine uygunluk**; göklerin, yıldızların, dört unsurun, ulvî eserlerin, madenlerin, bitkilerin, hayvanın, insanın yaratılışındaki hikmet; en şaşırtıcısı **insan bedenlerinin şerhi (teşrîh)**); (2) 'muhkem-mütkın fiil sahibi âlimdir': misaller: **dîbâc dokumasını bilmeyen** onu itkânla yapamaz; **hattı bilmeyen** itkânla yazamaz; sebep **ilmin yokluğu** ⇒ ilmin yokluğu muhkem fiile aykırı. Bazı mütekellimîn: 'bu **zarûrî ilim**; misaller yalnız tenbih için'.
+- Netice/hüküm: **İhkâm-itkân (nizâm/hikmet) delili (kelâmî)**.
+- Delil çeşidi: **analitik-burhânî görünümlü; öncül 2 misalle**; (T) burhânî biçim/ikna'î-analitik.
+- Mevzuya bağı: **Fasıl I 'ilim sıfatı' ve 'nizâm delili'**: Risale'de **'Allah âlimdir' için nizâm/ihkâm delili** varsa (kontrol), Râzî'nin bu 3 soruluk tenkidi (p108–112) **derece notuna** dönüşür; **'insan bedenlerinin teşrîhi' (Galenos tipi)** referansı: **Fasıl I/IV'te kullanılabilir**.
+- Doğan sual: —
+
+## c3 p108
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Muhkem fiil sahibi cahil olamaz' örnekleri devam. **Sual 1**: 'Mütekellimînin **kâdir ve âlim olduğunu** ispat delilleri, sıhhatleri farz edilse de **matlûbu göstermez**: bedîhe **vâcibü'l-vücûd li-zâtihi'nin bir mevcûda illet olmasını, o mevcûdun zâtı gereği âlim-kâdir ve âlemin hâlıkı olmasını** engellemez; âlem hâdis ⇒ muhdise muhtaç ⇒ fâil kâdir-âlim; **bu kâdir-âlim, vâcibin ma'lûlü olabilir (vasıtasız, tek ya da çok vasıtalı)**. **Bu ihtimal delilleri sâkıt kılar**; **mütekellimînin hiç birini bunun çevresinde dönerken görmedim; bu gibi mutâlib-i âliyede gaflet acâibdendir.**' **Râzî'nin savunması (2 vecih)**: **(1)** 'Kitabın mukaddimesinde dedik: ilâhî mutâlib yüce, beşer akılları zayıf; **evlâ ve ahlâk ile yetinilmeli**: âlemin hudûsu ve fâile ihtiyacı ispatlanınca **bu fâil ve muhdisle iktifâ**; vasıtaların ispatına delil yok ⇒ **yakînî olanı alıp şüpheliyi atmak vâcib**.'
+- Netice/hüküm: **Râzî kendi tenkidini yazıyor: 'vâcib → kâdir-âlim ma'lûl → âlem' ihtimali ihkâm delilini kırar; cevabı 'evlâ ve ahlâk' (ispat borcunun yükü)**.
+- Delil çeşidi: **cedelî (ispat yükü)**; (T) **evlâ-ahlâk derecesi**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §5 (Vâcib=Fâil özdeşliği ayrı halka; c1 p319–321 ile aynı)**: Râzî **iki cevap yolu veriyor**: (1) evlâ-ahlâk, (2) (p109) 'tek müessir' delili: **Fasıl I §5 için önerilen (T) derece: 'Vâcib=Fâil halkası: evlâ ve ahlâk (Râzî'nin kendi ifadesi) veya tek müessir burhanı'**.
+- Doğan sual: —
+
+## c3 p109
+- OCR: orta
+- Okuma: tam
+- İçerik: **(2)** 'Allah'ın îcâd ve tekvîne kâdir olduğunu gösterdik; şimdi **varlıkta tek müessirden fazlasının imkânsızlığına** delil kurarız (Kısım 2 tevhid burhanları); bununla vasıta kavli düşer.' **Sual 2**: '**İhkâm-itkân** ne demek? **Maslahat ve menfaat vecihlerine uygun vukû'** ise ma'kûl; başka mânâ ise açıklanmalı. **Bir vecihle mi, her vecihten mi maslahata uygun?** (a) bir vecihle ise **câhilin fiili de** bazı vecihlerden maslahata uygun olabilir (fâilin âlim olduğunu göstermez); (b) her vecihten ise **niçin böyle olduğunu kabul edelim**: güneş şimdikinden büyük ya da küçük olsa menfaatler artar mıydı, azalır mıydı **bilmiyoruz**; felekler, insan bedenleri **başka biçimde** olsaydı hâlleri nasıl olurdu bilmiyoruz; **şimdikinden daha kâmil bir vaz'ın imkânsızlığına kim delil getirebilir? Bu vaz'dan başka vaz'lar sonsuz.**'
+- Netice/hüküm: **Sual 2: 'ihkâm' mânâsı: bir yönden (yetmez) / her yönden (ispatsız; sonsuz alternatif düzen)**.
+- Delil çeşidi: **cedelî-analitik**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I nizâm/gaye delili**: **'her yönden en kâmil düzen' iddiası Râzî'ye göre ispatsız (sonsuz alternatif)**; ders katmanı bu iddiayı **yapmamalı**: 'hikmetli düzen' ifadesi **gözlenebilir uygunluk** düzeyinde kalmalı (T: ikna'î).
+- Doğan sual: —
+
+## c3 p110
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sual 3**: 'Muhkem fiil sahibi âlim olmalı' ilkesi **doğru değil**: (1) **câhil** bile **bir kere** muhkem fiil yapabilir (şiirde âciz kişi tesadüfen bir mısra'ı vezinle söyler; hattı bilmeyen bir harfi ihkâmla yazar; 'misilin hükmü misli gibi' ⇒ misalleri de câiz); (2) **arı, örümcek, karınca**: arı **cetvelsiz-pergelsiz altıgen evler** yapar; **âkil-kâmil insanlar mumdan öyle altıgen evi yapmaktan âciz**; örümcek ağını onarır; **karınca buğday tanesini ikiye böler ki ıslanınca filizlenmesin**: bu fiiller muhkem ve mütkın; **fiil âlimliğe delil ise hayvanlar insandan çok bilgili olmalı** (uzak); (3) **usta**: yazı/tambur öğrenen başta her harfi/nakırı **zihinde hazırlar**; **melekat** kazanınca harfleri düşünmeden en iyi vecihle yazar, **kalbi başka meşgul iken** bile.
+- Netice/hüküm: **Ihkâm ⇒ ilim öncülüne 3 cedelî karşı örnek: tesadüf, hayvan fiilleri, melekat.**
+- Delil çeşidi: **karşı örnek**; (T) cedelî-analitik (**hayvan fiilleri örneği güçlü**).
+- Mevzuya bağı: **Fasıl I nizâm delili**: **karşı örnekler (arı/örümcek/karınca) 'nizâm ⇒ fâil bilir' öncülünü zayıflatır**; Sünnî cevap: **hayvanlara bu ilhâmı veren de Allah; nizâm hayvanı değil Yaratıcıyı gösterir (Kur'ân: arıya vahyetti)**: ders katmanı **'nizâm, fiilin doğrudan fâilinin değil, kâinatın hâlıkının ilmini gösterir' ayrımını** yazmalı (⊬ âyet numarası: Nahl 68 civarı doğrulanacak).
+- Doğan sual: —
+
+## c3 p111
+- OCR: orta
+- Okuma: tam
+- İçerik: Sual 3 (3) devam: 'melekat hem elde hem hayâlde; **her harfi/nakırı ayrı ayrı bilmek** işi bozar; **muhkem fiil ilmin tam malûmâtı olmadan** hâsıl'. **(4)** 'Mûcib diyen filozoflar **hayvan bedenlerinin yapımını tabiata ve musavvire kuvvetine** isnâd ediyor (tabiatın şuûru yok); "şuûrsuz kuvvete nasıl isnâd?" denince: **usta zanaatkâr için "bu sanat ona tabiî hâle geldi" deriz**: **âkillerin ikrârı: sanatın kemâli tabiata kıyas ile**; **tabiat fiilleri sanat fiillerinden kâmil**'. **(5)** 'Vakitler eşit, hayizler eşit; **mütekellimîn âlemin belirli vakit ve hayizde hudûsunu** kabul; sorulunca **iki cevap**: (i) âlem başka vakitte/hayizde olsaydı **soru yine kalırdı; her takdirde kalan soru sâkıttır**; (ii) …'
+- Netice/hüküm: **(4) tabiat-sanat kıyası; (5) kelâmın 'vakit/hayiz' cevabı: 'soru her takdirde kalır ⇒ sâkıt'**.
+- Delil çeşidi: **karşı örnek + cedelî**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **kelâm cevabı (i) 'soru her takdirde kalır ⇒ sâkıt' Fasıl I §8.3'te var mı?** (Fasıl I tekrar okunacak); **Râzî burada bu cevabı hasım-kelâm sesi olarak aktarıyor; kendi yorumu p112'de**.
+- Doğan sual: —
+
+## c3 p112
+- OCR: orta
+- Okuma: tam
+- İçerik: Kelâm cevabı (ii): '**Kâdir-muhtâr iki misilden birini müreccihsiz seçebilir**; âlem cisimleri **çok/sonsuz vecihle** terkîb edilebilir, biri bu vecih; **fâil bu vecihe ve diğer vecihlere kâdirdi**; **kâdirin hâssası iki misilden birini müreccihsiz seçmektir** ⇒ bu vecih diğerlerinden ayrıldı, **yalnız kâdir olduğu için**'. **Hasım (Râzî'nin sual sesi)**: 'öyleyse **niçin bu vecih vâki, diğerleri değil?** cevap yok; **kâdirin salt kâdirliği fiile yetiyor** dersiniz: **her insan belirli bir miktara ihtisâslı** (daha büyük ya da küçük olabilirdi), belirli yaratılış, tabiat; **hepsi salt kâdir olmakla açıklanıyor ⇒ 'kâdir müreccihsiz tercih eder'**; **öyleyse kâdirin âlemi belirli vecihle düzenlemesi ilmine delâlet etmez**: salt kâdirliğin hâssası bu.' (…)
+- Netice/hüküm: **Kelâmcının 'müreccihsiz tercih' cevabı, kendi ihkâm delilini kırıyor: düzen 'kâdirliğin hâssası' ise ilme delâlet etmez.**
+- Delil çeşidi: **ilzâm (kelâmın iki cevabı birbirine karşı)**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3 ve §? nizâm/ilim delili**: **Fasıl I 'tahsis ⇒ irâde' ile 'nizâm ⇒ ilim' iddiaları aynı Risale'de birlikteyse: Râzî'nin bu ilzâmı ('tahsis müreccihsiz kâdirliğin hâssası ise nizâm ilme delâlet etmez') iki iddia arasında gerilim yaratır**; **Fasıl I'de bu iki burhan çelişmeden yazılmalı: 'tahsis = ilim+irâdeye göre' (müreccih = ilm-i ilâhî)**.
+- Doğan sual: Fasıl I'de 'tahsis' ile 'ilim' burhanı ilişkisi nasıl kurulmuş? (Fasıl I yeniden okunacak.)
+
+## c3 p113
+- OCR: orta
+- Okuma: tam
+- İçerik: (Sual 3 sonu: kâdirin salt kâdir olarak âlemi bu maslahata uygun vecihlere koyması, fâilin **âlim** olduğu itibar edilmeden mümkün.) **Sual 4**: 'Muhkem fiil sahibinin şuûr-idrâki şart olsun; **fiil için fâilin zan sahibi olması yetmez mi, ilim şart mı?** Sanat erbâbı fiillerini **zan ve hisap**a dayanarak yapar: yazıyı yeni öğrenen **kalemin ucunun, kâğıt yüzünün, mürekkebin miktarının ve keyfiyetinin, parmak hareketlerinin kemiyet-keyfiyetinin** yakînî ilmini nasıl elde edebilir? Bunların hepsi yazıcıya **meçhul**; ancak **galip zan** ile aletler sanat için uygun sanır; ⇒ **âlemdeki her muhkem sanat zan ve hisapla hâsıl olabilir; kesin ilim şart değil; muhkem fiilden fâilin ilmine istidlâl son derece zor.**' İtiraz: 'zan sahibi yanılır, âciz kalır.' **Cevap**: 'Doğru; ama **yaratılışta, bu âlemin terkiplerinde çok sayıda nakîsa, âfet, bozukluk** görüyoruz: belki fâil **zan ve tahminle** terkîp ediyor; bazen isabetli bazen bozuk olur; **ihtimalin gayr-i muhtemel olduğunu göstermelisiniz**.'
+- Netice/hüküm: **Sual 4: ihkâm ⇒ ilim yerine ihkâm ⇒ zan ihtimali; âlemdeki bozukluklar zan ihtimalini güçlendirir.**
+- Delil çeşidi: **cedelî**; (T) cedelî.
+- Mevzuya bağı: **DİKKAT (Sünnî akide/edeb)**: bu, hasmın **'fâil zan sahibi olabilir'** ihtimali (**Allah için 'zan' muhâl**; Allah'ın ilmi kâmildir); Râzî bunu **delilin zayıf noktası** olarak yazıyor; **Risale bu ihtimali Allah'ın hakkında ciddi bir alternatif olarak sunmaz**, yalnızca **burhanın derecesini** ölçerken 'kelâmî ihkâm delili ilme delâlette Râzî'nin 5 sualine açık' der; nass ve diğer burhanlarla ilim sabit.
+- Doğan sual: —
+
+## c3 p114
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sual 5 (şer/âfet)**: 'Bu âlemde muhkem, düzenli fiiller **âlemin müdebbirinin âlim-hakîm** olduğunu düşündürüyor; aynı âlem **âfet, nefret ettirici bozukluk (körlük, kötürümlük, aşırı fakirlik)** ile dolu; **ilim ve amelde kâmil kişi dünya hayrından mahrum, hor, câhil ve alçakların elinde**; **çocukların ve kadınların en aşağıları dünya ehline hâkim**: bu hâller **rahîm-alîm-hakîm'e lâyık değil**. **Taksîm**: Allah âlemi **hikmet ve maslahat gözeterek** mi yarattı, **salt kudretle hikmet gözetmeden** mi? İkincisiyse maslahat vecihleri onun **gayesi değil**, tesadüfen bu kısmı tahsis etti ⇒ salt kudret yeter; **birincisiyse** âfetler olmazdı; oldukları için **ya ilimsizlikten ya kudretsizlikten**.' **Cevap (kelâmcıdan)**: 'Ihkâm fâilin **ilmine** delâlet eder (cahilden muhkem fiil çıkmaz); **fâsid-hasîs fiiller fâilin cehline delâlet etmez (âlim de fâsid fiil yapabilir)**.' Hasım: 'sual bunu kastetmedi…' (p115).
+- Netice/hüküm: **Şer problemi (teodise) hasmın 5. sualinde; kelâmcı cevabı: ihkâm ilme delil, fesat cehle delil değil.**
+- Delil çeşidi: **cedelî (teodise ilzâmı)**; (T) cedelî.
+- Mevzuya bağı: **DİKKAT (İslâm akidesi)**: 'âlemdeki şer-âfet **Allah'ın ilim, kudret, rahmet, hikmetini sarsmaz**: Sünnî akidede **imtihân, hikmet, ahiret adaleti**; Râzî burada **hasmın itirazını aktarıyor**; **cevabı bu sayfada eksik**. **Fasıl I/IV'te teodise için nass ve ahiret adaleti (Fasıl III)**; **Râzî'nin kendi teodise cevabı 'halk-ı ef'âl/hikmet' bâblarında aranacak**.
+- Doğan sual: **Râzî şer problemine kendi cevabı?** (cilt 3 'hakîm' bâbı; cilt 4 kaza-kader.)
+
+## c3 p115
+- OCR: orta
+- Okuma: tam
+- İçerik: Hasım: 'Sualin kastı şu: **zâhir akıl muhkem fiilin ancak âlimden çıkacağına hükmettiği gibi, kudret-ilim-rahmet sahibinin zayıflara türlü acı-ağrılar musallat etmeyeceğine, güçlü zâlimi zayıf mazlum üzerine salmayacağına** de hükmeder; âlemde bu hâller görülünce **bu üç sıfattan birine taan lâzım**. **Siz kudret ve rahmet kemâlini ispat etmeye izin veriyorsanız, akıl bu üçünün ârızalarını engellediğine hükmettiği hâlde**, başkasının **'âlemin cüzlerinde bu miktar ihkâm, fâilin âlim olmaksızın, yalnız zan sahibi olmasıyla hâsıl'** demesini yasaklayamazsınız.' **Sual 5 (ikincisi)**: '**Ebü'l-Hasen el-Eş'arî** mezhebine göre **ihkâm ve itkân ma'kûl değildir**: ona göre **bünye (organ yapısı)** hayat ve hayata bağlı sıfatların (ilim, kudret, semi', basar) **şartı değildir**; cevher-i ferd bile hayat-ilim-kudretle vasıflanabilir, hatta **Allah'ın ilimde ve kudrette ve diğer kemâllerde en üstün mahlûku olabilir**; delili: bünye eczâdan mürekkeb; her cüz hayata kâbil ya birbirine şartlı (devir), ya bir yönden şartlı (misillerden birinin diğerinden imtiyâzı), ya birbirinden ganî ⇒ **üçüncüsü**.'
+- Netice/hüküm: **Râzî'nin Eş'arî'ye ilzâmı: bünye şart değilse organların maslahatı (ihkâm) anlamını yitirir**; hasmın ilk itirazı (şer) **ihkâm ⇒ ilim** öncülüne **denge ilzâmı**.
+- Delil çeşidi: **ilzâm (bir mezhebin öncülü ile başka öncül)**; (T) cedelî.
+- Mevzuya bağı: **DİKKAT (Sünnî mezhepler arası ihtilaf)**: Eş'arî'nin 'bünye şart değil' görüşü Râzî tarafından **aktarılan ve kısmen eleştirilen görüş**; **Eş'arî'nin metinden doğrulaması ⊬**; ders katmanı **mezhep atfı yapmadan** yalnızca **'kelâmî ihkâm delilinin öncülü: organ maslahatı hikmet gösterir'** ifadesini kullanır.
+- Doğan sual: Eş'arî atfı (kaynak doğrulaması).
+
+## c3 p116
+- OCR: orta
+- Okuma: tam
+- İçerik: (Eş'arî ilzâmı devam.) 'Bünye bozulunca hayat, ilim, kudret bozulur' denince Eş'arî: '**Bu, Allah'ın icrâ ettiği âdet**; hayatın bu bünyeye, görmenin göz yapısına, işitmenin kulağa **muhtaç** olduğu doğru değil.' **Râzî**: 'Bu görüşe göre **hiçbir terkîb ve tasavvurun** fayda ve maslahat hâsıl etmede etkisi yoktur; **'Allah gözü bu yapıda yarattı ki görme kemâle ersin; mideyi bu şekilde ki sindirim kemâle ersin' demek mümkün olmaz**; **teşrîh ehlinin organ menfaatleri boşa çıkar**; biz 'ihkâm-itkân' lafzından **yalnız bu vecihleri anlıyoruz**; öyleyse Eş'arî mezhebine göre **ihkâm-itkân bâtıl**; **ihkâm ve itkânla fâilin ilmine nasıl istidlâl edebilir?**'
+- Netice/hüküm: **Râzî'nin ilzâmı: Eş'arî'nin 'âdetullah/bünye şart değil' öncülü ihkâm-itkân delilini işlevsiz kılar.**
+- Delil çeşidi: **ilzâm**; (T) cedelî-analitik.
+- Mevzuya bağı: **Sünnî akide notu (edeb)**: 'Allah'ın âdetinin (sünnetullah) **hikmetli sebep-sonuç düzeni** kabulü Ehl-i Sünnet'te **'sebepler, Allah'ın yarattığı âdet-i ilâhiyye'** olarak; **nizâm delili bu çerçevede geçerli**; Râzî'nin ilzâmı **Eş'arî'ye 'sebeplerde tesir yok' öncülü nedeniyle**: **Risale ana metni 'sünnetullah' formülünü kullanarak nizâmı sunar**; kelâm içi ihtilaf metne taşınmaz.
+- Doğan sual: —
+
+## c3 p117
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb 3, Fasıl 3 (başlık bozuk): 'Allah'ın âlim olduğuna ihkâm-itkândan daha güçlü bir yol'** ('ilme-ilhâm' konusu). **Takrîr**: 'ilim tasavvur ya da tasdîk. **Tasavvur (hakîkat ve mâhiyetlerin tasavvuru) Allah'ta hâsıl**: Allah **kâdir-muhtâr**; kâdir-muhtâr **tekvîn ve tahlîka kastederek** fiil eder; **tekvîne kast, o mâhiyetlerin tasavvuruna şartlı**; mâhiyeti tasavvur etmemişse kast edemez (bu zarûrî) ⇒ **Allah bu mâhiyetleri tasavvur eder**. **Tasdîkât**: 'Bu hakîkatler **mütelâzım, mütenâfî, ne lâzım ne mütenâfî** olur; lâzımlar **vasıtasız** ve **vasıtalı**; vasıtalı lâzımlar birbirine bitişik şeylerdir ve **bitişikle lüzûm vasıtasızdır**; bitişik lâzımı **zâtı gereği** lâzım gelir…'
+- Netice/hüküm: **Kâdir-muhtâr ⇒ kast ⇒ tasavvur ⇒ ilim (Râzî'nin 'daha güçlü' delili)**.
+- Delil çeşidi: **analitik (kast tasavvura şart)**; (T) burhânî biçim (**öncül: Allah kâdir-muhtâr**: Bâb 2 aporiası ile bağlı: Râzî 'kâdir' derken **dâîye tâbi** anlatıyor).
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: 'irâde/kast ⇒ ilim' zinciri **Fasıl I §8.3 ile aynı sırayı** (irâde bilgi ister); **Fasıl I 'ilim irâdeden önce' düzeniyle uyumlu** (kontrol).
+- Doğan sual: —
+
+## c3 p118
+- OCR: orta
+- Okuma: tam
+- İçerik: (Fasıl 3 devam.) 'Mâhiyetin tasavvuru hâsıl olunca o mâhiyet **zâtı gereği** bitişik lâzımı îcâb eder; ⇒ bu tasavvurun hâsıl olmasından o **lâzımı müstelzim olduğunun ilmi**, ondan **ikinci lâzımın ilmi**, … **son mertebeye kadar**. **Tasavvurlar hâzırsa lâzımları malûm; birbirine lüzûm malûm; mütenâfîlik malûm**; lüzûm-tenâfî olmayanların da bu hâlleri malûm ⇒ **her şey malûm olur; bu yol daha zabtlı ve işkâlden uzak**.' **İkinci yol**: 'Allah fâil-i muhtârdır ve **îcâda kast** eder; **mevcudun ne olduğunu tasavvur etmiş olmalı**; mevcut **vâcib ve mümkine kısımlara ayrılır**; bu **kısmeti** bilir; ⇒ **vâcibin ne olduğunu, mümkinin ne olduğunu bilir**; kulli bilince **cüz'îlerine kısmeti** bilir; **her mâhiyetin tasavvuru, zihni lâzımlarına götürür**; bu, **mantıktaki 'mâhiyetin ilmi yakın lâzımın ilmini gerektirir'** üzerine kuruludur (Allah bilir).'
+- Netice/hüküm: **Râzî'nin ilim delili: tasavvur ⇒ lâzımlar zinciri ⇒ her şey malûm (kulli ilim)**.
+- Delil çeşidi: **analitik (lüzûm zinciri)**; (T) analitik-burhânî biçim (**öncül: mâhiyet bilgisi yakın lâzımın bilgisini gerektirir** — **mantık kitabı (nerede?) öncülü**).
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: Risale 'Allah her şeyi bilir' için **kast-tasavvur-lüzûm zinciri** delili olarak **kaynak: Râzî c3 p117–118**; **derece: öncül bağımlı (mantık kitabı)**. **Cüz'îleri bilme**: kullî ilim ile **cüz'î** arası köprü **bu sayfada 'kısmet'** ile; **tam mı?** (aşağıdaki cüz'î ilim bâbı).
+- Doğan sual: —
+
+## c3 p119
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 3, Fasıl 4: 'İbn Sînâ'nın Allah'ın âlim olduğuna delilleri'** (başlık bozuk). 'Bu bâbda **üç yol**: **(1)** Allah **zâtıyla âlim**; sonra zâtını bilmesi **başkasını bilmesini gerektirir**; **(2)** Allah **başkasını bilir**; başkasını bilen **zâtını bilir**; **(3)** **mücerred cevher mücerred sûretle birleşince ta'akkul hâsıl olur; zâtı mücerred olan akıl-ma'kûl-âkil olmaya evlâ**.' **Yol 1**: 'Allah zâtını bilir; **zâtını bilen yakın lâzımını bilir**; birinci lâzımın ilminden ikinci lâzımın ilmi; bu tertipte **tüm lâzımlar malûm**. **İki asıla dayanır**. **Asıl 1: Allah zâtıyla âlim**: 'Allah mevcut, kâim bi'n-nefs, cismiyetten mücerred; ...'
+- Netice/hüküm: **İbn Sînâ'nın üç yolu tanıtıldı (Râzî'nin nakli); Yol 1: zâtını bilme ⇒ lâzımları bilme.**
+- Delil çeşidi: **analitik (filozof)**; (T) burhânî biçim (**öncül: 'mücerred ⇒ zâtını bilir'**).
+- Mevzuya bağı: **DİKKAT (Sünnî çizgi)**: İbn Sînâ'nın **'Allah cüz'îleri cüz'î olarak bilmez, kulli bilir'** görüşü **Sünnî akidede reddedilir (Allah her şeyi, cüz'îyi de bilir)**; Râzî bu delillerin ilmi **tamamen eleştirir mi** (p120+): **kaynak notu: İbn Sînâ atfı Şifâ/İşârât ⊬**.
+- Doğan sual: —
+
+## c3 p120
+- OCR: orta
+- Okuma: tam
+- İçerik: (Yol 1'in Asıl 1 delili.) 'Allah mevcut, kâim bi'n-nefs, cisimden mücerred; **böyle her şey zâtını bilmeli**. **Önerme 2 (kâim bi'n-nefs ve maddeden ganî ⇒ nefsini bilir), iki vecih**: **(1)** 'İlim = **malûmun mâhiyetinin âlimde hâzır olması**; mücerred mâhiyet mücerred mâhiyete hâzır olunca kâim bi'n-nefs **o şeyi bilen**; kâim bi'n-nefs şeyin vücûd hakîkati **başkasına değil kendisine hâsıl**; ⇒ kendini bilir'. **(2)** 'Kişi nefsini bilir; **ilim = mâhiyetin âlimde hâzır olması**; nefsimizi bilirken ya **nefse müsâvi bir sûret** hâzır olur ya **nefsin kendisi**; birincisi **iki misil cem'i**, biri diğerinden evlâ değil ⇒ **nefsin kendisi nefsine hâzır ⇒ nefsine hâzır olan her şey nefsini bilir**; vâcib böyledir ⇒ **nefsini bilir**.' **Râzî'nin itirazı**: '**Bu delil ilmin 'mâhiyetin hâzır olması' olduğu asılına dayanır; biz bunun fesâdını kat'î burhanla gösterdik**' (…p121).
+- Netice/hüküm: **Yol 1 Asıl 1 delilleri (İbn Sînâ) ve Râzî'nin ilk itirazı: 'ilim = mâhiyetin hâzır olması' asılını reddediyor (c3 p104 ile tutarlı: ilim = nisbet).**
+- Delil çeşidi: **analitik (filozof) + reddiye**; (T) analitik.
+- Mevzuya bağı: **KRİTİK**: Râzî **kendi ilim tanımıyla ('ilim = nisbet-izâfe', c3 p104) İbn Sînâ'nın mücerred-nefs delilini reddediyor; ama 'nefs-i mücerred kendini bilir' sonucu (p105) için yolu farklı kuruyor**; **Fasıl III (nefs)**: **iki yol da 'nefs kendini bilir'e varır; derece: burhânî biçim, öncül bağımlı**.
+- Doğan sual: —
