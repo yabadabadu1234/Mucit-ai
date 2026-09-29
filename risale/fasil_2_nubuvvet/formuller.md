@@ -108,8 +108,9 @@ Toplam (A ∧ B ∧ C): ⊬ burhânî ; = cedelî-yüksek
   Duhân 44:29 (hiyeroglif iddiası): metin BULUNDU — Piramit Metinleri, Pepi I Spell 526 = PT 553 = Faulkner Utt. 553
                                     (Allen 2005): "gök ağlayacak, yer sarsılacak" [ritüel vaat, ağıt DEĞİL]
                                     klasik-tefsir (Tirmizî 3255, İbn Abbâs, İbn Kesîr, Celâleyn) ayeti mü'minin amelleriyle açıklar ;
-                                    Mısır yazıtına bağlamaz ; adem-i-vüsul GÖSTERİLEMEDİ (Cahiliye şiirinde motif ⊬ doğrulanamadı)
-                                    ⟹ cedelî-zayıf ; dayanak DEĞİL, kayıt
+                                    Mısır yazıtına bağlamaz ; Tabarî [okundu]: İbn Abbâs kapılar, Mücâhid kırk sabah
+                                    Zemahşerî Keşşâf [okundu]: "Araplar önemli adam ölünce 'gök ve yer ağladı, rüzgâr ağladı, güneş karardı' der"
+                                    ⟹ adem-i-vüsul DÜŞER (Arap deyimi karşı açıklama) ⟹ dayanak DEĞİL
 Toplam: bağımsızlık şartı ihlâle açık (sonradan eşleştirme) ⟹ destek ; dayanak DEĞİL
 ```
 
