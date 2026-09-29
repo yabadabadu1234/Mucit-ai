@@ -145,3 +145,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **ilzâm + taksîm (kem)**; (T) burhânî biçim (aktarılan).
 - Mevzuya bağı: **Fasıl I §3**: 'zamanın mâhiyeti kem' iddiası (Aristo: zaman hareketin mikdarı) **c4 p14, 200 ile bağlantılı**; **Makâle 1 sonunda Râzî'nin zaman hükmü** aranacak.
 - Doğan sual: —
+
+## c5 p17
+- OCR: orta
+- Okuma: tam
+- İçerik: **9. hüccet devam ('zaman kem' ⇒ ne muttasıl ne munfasıl)**: '**muttasıl olamaz**: iki cüz **tek bir ortak haddi** paylaşır; zamanın ortak haddi **'ân-ı hâzır'**; ân-ı hâzır mâzîye mübâyin, müstakbele mübâyin; **mâzî ve müstakbel her biri ma'dûm, ân-ı hâzır mevcut**; ⇒ 'ma'dûm ile mevcûdun ittisâli' akılca kabul edilmez, 'ma'dûmun mevcut bir hadle sahip olması' da makûl değil. **Munfasıl olamaz**: munfasıl kem, **bölünmez ardışık vahdetlerden mürekkeb**; bu **cisimlerin cüz-i lâ yetecezzâdan mürekkeb olmasını** gerektirir, bunun bâtıl olduğu sabit.' **10. hüccet**: 'zaman mevcut ise **ya hareketin lâhikalarından ya değil**; iki kısım da bâtıl. **Lâhika olamaz, iki vecihle**: **(1)** '**Allah ezelde mevcuttu, bu bugün hâdis olan şeyin ademi ezelde hâsıldı; 'kâne' zamana işaret**; burada zaman var, **hareket ve tagayyür yok** (Allah'ın vücûdu hareket ve tagayyürden münezzeh; bu hâdisin ademi tagayyürden ârî).' **(2)** 'hareket tahakkukunda zamana muhtaç (hareket = ardından hâsıl olan hâdis; ba'diyet zamana işaret); zaman harekete muhtaç olsa **devir**.' (p18)
+- Netice/hüküm: 9. hüccet sonu; 10. hüccet: **zaman harekete lâhika olamaz** (zamansız 'kâne' + devir).
+- Delil çeşidi: **taksîm + reductio + devir**; (T) burhânî biçim (aktarılan).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'Allah ezelde, zaman var, hareket yok' iddiası **c4 p199–200 ('dehr' bâkî cevher)** ile **aynı yönde**; Aristo 'zaman hareketin lâzımı' öncülünün eleştirisi (c4 p14).
+- Doğan sual: —
+
+## c5 p18
+- OCR: orta
+- Okuma: tam
+- İçerik: **10. hüccet sonu**: '**zaman hareketin lâhikalarından olmasa da olamaz**: zaman ve müddet ancak **peş peşe kabliyât ve ba'diyât** bulunduğunda; **kabliyetin ba'diyetten, ba'diyetin kabliyetten sonra gelmesi ancak tagayyür ve tebeddül**; bu, zamanın mâhiyetinin **ancak tagayyür ve hareketle** karar bulmasını gerektirir ⇒ **iki kısım da bâtıl ⇒ zamanın vücûdu bâtıl.**' **11. hüccet**: 'zaman mevcut ise **hareketin mikdârı mı değil mi**? İkisi de bâtıl. **Hareketin mikdârı olamaz**: zaman hareketin mikdârı ise **hareketin imtidâdının mikdârı**; **hareketin imtidâdı ayânda mevcut değil** (ayânda hâsıl olan **muayyen cevherin muayyen hayizde hâsılı**; **hâsılların ardışıklığı ayânda hâsıl değil**) ⇒ hareket imtidâdının mikdârı da mevcut değil (ma'dûmun sıfatı mevcut olmaz).' **Zamanın mikdâr-ı hareket dışında başka bir şey olması da bâtıl**: 'burada **Aristo ve ashâbıyla** konuşuyoruz; onlar **zamanın hareket mikdârından başka olmadığı** konusunda ittifak etti' (p19).
+- Netice/hüküm: 10.–11. hüccet: **zaman ne harekete lâhika ne mikdârı; ayânda mevcut değil.**
+- Delil çeşidi: **taksîm + ontolojik analiz**; (T) burhânî biçim (aktarılan). **[Delil ≠ dava: 'hareketin imtidâdı ayânda yok' öncülü ardışık hasûl anlayışına (c4 p289–290) dayanır — **Râzî'nin kendi hareket tanımıyla uyumlu**.]**
+- Mevzuya bağı: **Fasıl I §3**: Aristo'nun 'zaman = hareketin mikdârı' tanımı **c4 p14, 200'deki kıdem tarafı tartışmasının kaynağı**; Râzî'nin kendi tercihi **Makâle 1'de aranacak**.
+- Doğan sual: —
+
+## c5 p19
+- OCR: orta
+- Okuma: tam
+- İçerik: **12. hüccet**: '**aklın bedîhesi: her muhdesin ademi vücûdundan sâbık**; bunu inkâr eden **en açık bedîhî ilme** nizâ etmiş olur. **Sebk ademin sıfatı; ma'dûmun sıfatı mevcut olmaz, ma'dûmdur**; ⇒ sebk-takaddüm-teahhur **ayânda yok**; mahz adem **mevcut bir mahalle ihtiyaç duymaz**; ⇒ bu sebk-takaddüm-teahhur bir mevcuda muhtaç değil; **zamanın hakîkati ancak bu sebk ve takaddümün arız olduğu şey** ⇒ zaman ve müddet **mevcut olmak zorunda değil.**' **Kapanış (Râzî'nin kendi ifadesi)**: '**zamanın vücûdunun mânâsı 'bazı mevcûdâtın aynıyla dâim vücûdu ve bazılarının hâdis, ardışık olması'ndan ibarettir diyenler için istinbât ettiğimiz bu on iki delilin toplamı; hepsi güzel, kuvvetli, ma'lûm** (hasene, kaviyye). Tevfik Allah'tandır.'
+- Netice/hüküm: **Zamanın nefyi ekolü için Râzî'nin 'istinbât ettiği' 12 delil bitti; Râzî bunları 'güzel ve kuvvetli' diye niteliyor (derece dili).** **Bu, Râzî'nin kendi hükmü değil; iki taraf için delil derleme aşaması (p9: 'zamanı nefyedenler; isbât edenler').**
+- Delil çeşidi: **derleme**; (T) burhânî biçim/cedelî karışık. **F 27-B:** 1. hüccet (müstemir/munkazî) ve 12. hüccet (sebk ademin sıfatı) ayırt gücü yüksek; 9. (kem) ve 2. (cevher-i ferd) hüccetleri kelâmî öncüllere bağlı.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: **zamanın nefyi ekolü c4'ün 'kıdem tarafının zaman hüccetlerine' (c4 p195–210) cevap veren simetrik cephe**: Risale 'zaman mahlûktur' derken **hangi zaman kavramına (mevcut cevher / itibârî mikdâr) atıf yaptığını açık yazmalı**; Râzî'nin nihai hükmü bekleniyor.
+- Doğan sual: Râzî zaman hakkında kendi kavlini hangi fasılda yazıyor?
+
+## c5 p20
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p21
+- OCR: iyi
+- Okuma: tam
+- İçerik: **2. Fasıl: 'zamanın vücûdunu bilmenin bedîhî-evvelî olduğunu söyleyenlerin kavlinin takrîri'.** **Râzî**: 'müddeti isbât edenler **iki fırka**: **(1)** '**vücûdunu bilmek bedîhî-zarûrî, beyân ve burhandan müstağnî**' diyenler — **Muhammed b. Zekeriyyâ er-Râzî ve başka bir kavim**; '**onlardan bedâhet ve zarûret iddiasından başka bir şey bulamadım; ancak ben, onların söylediğinden daha güzel ve daha kâmil bir takrîr yapacağım; şöyle derim: onlar sözlerinin sıhhatine şu vecihlerle istidlâl edebilirler**' ; **(2)** 'beyyine ve burhanla isbâta çalışanlar.' **1. hüccet (gâfil şahıs deneyi)**: 'göklerin, yıldızların, doğuş ve batışlarından **gâfil bir şahıs** (kör, karanlık bir evde oturan, tüm hareketleri, göz kırpmayı ve nefesi bile durdurmayı kasteden) farz edelim: bu insan **müddeti akıp giden, sürekli hâdis olan, durmayan ve inkızâsız bir şey** olarak bulur; **zarûrî ilim**: sabahtan duhâya geçen (sabahtan öğleye) geçenin yarısıdır; bu hükmü **feleğin ya da yıldızın hareketini bilmekten** bağımsız verir.' (p22)
+- Netice/hüküm: **Zamanın isbâtı: 1. fırka (bedîhî; Muhammed b. Zekeriyyâ er-Râzî ve bir kavim); Râzî onların delilini kendisi daha güzel kurma vaadi veriyor.**
+- Delil çeşidi: **düşünce deneyi (gâfil şahıs) + bedîhî iddiası**; (T) ikna'î-burhânî. **Bu, c4 p15'teki 'zamansız kabliyet' düşünce deneyinin tam tersi bir deneydir (zaman bilincinin hareketten bağımsızlığı).**
+- Mevzuya bağı: **Fasıl I §3, §6.3**: zamanın bedîhîliği **c4 p280'de filozofların ikinci makamı** (bedîhe ↔ vehim); Râzî bu makamı Makâle 1'de kuruyor; **Risale bu deney için 'ikna'î, burhan değil' işareti**.
+- Doğan sual: —
+
+## c5 p22
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. hüccet sonu**: 'bu hükmü **feleğin veya kevkebin hareket ettiğini bilmeye mevkuf değil**; bu i'tibârlar zamanın vücûdunu bilmenin **bedîhî-evvelî, beyân ve burhandan müstağnî** olduğuna delâlet eder.' **2. hüccet**: '**akla işaret edilen her şey, mevcut ya ma'dûm, ya hudûs hâlinde ya devam hâlinde i'tibar edilir**: **hudûs hâlinde** akıl **hayyiz ve zaman** isbât eder (onu hudûsuna zarf kılar; 'filan zamanda hâdis oldu'); **devam hâlinde** dâimlikten ancak **'eski zamanlarda mevcuttu, şimdiki zamanda da mevcut'** anlaşılır; **zaman ve müddet i'tibârını akıldan kaldırırsak akıl hudûs ve devam mânâsını tasavvurdan âciz kalır**; bu iki mânâ bedîhî tasavvur olduğundan, **tasavvurları ancak zamanın vücûdunu ikrarla karar buluyorsa** zamanın vücûdu **bedîhî-evvelî ilimdendir**.' **Ek**: '**mütekellimîn 'araz iki zaman kalmaz; bâkî iki zaman ve fazlası vücûdu devam eden'** dedi; hudûs ve bekâ mânâsını ancak **müddet ve zaman** sebebiyle akıl ettiler.'
+- Netice/hüküm: 2. hüccet: **hudûs ve devam mânâları zaman i'tibârını içerir.** **Kendi-tenkidi: mütekellimin kendi 'araz iki an kalmaz' sözü bile zaman i'tibârı taşıyor (Râzî'nin ikilemi).**
+- Delil çeşidi: **tasavvur analizi + ilzâm (mütekellim)**; (T) cedelî-burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: c4 p207–208 (kıdem tarafı 8.–9. hüccet: 'kâne/summe') ile **aynı** tasavvur argümanı; **c4 p280'de hudûs tarafı 'vehim ve hayâl' cevabı verecekti — Râzî'nin kendisi burada zaman lehine güçlü argüman kuruyor; nihai hükmü bekleniyor.**
+- Doğan sual: —
+
+## c5 p23
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccet**: '**'Âdem (a.s.) Muhammed'den (a.s.) önce' dediğimizde bu kabliyetten aralarında belirli bir müddet ve zaman anlarız**; 'ikiz kardeşler beraber doğdu' dediğimizde bu meiyyetten **aynı zamanda hâsıl olduklarını anlarız**; **aslî fıtratlarında ve selîm akıllarında kalan bütün akıllılara** dönülse, bu kabliyetten ve meiyyetten **bundan başkasını anlamazlar**; ⇒ zamanın vücûdunun bilgisi **akılların bedâhetinde ve zihinlerin gariziyle yerleşik.**' **İtiraz**: 'kabliyet-meiyyet zâtların kendileri olamaz mı?' **Cevap**: 'biz zâtları ve vücûdlarını **taksîm mahalli** kıldık: 'ya bu meiyyet ya bu kabliyet'; taksîm mahalli, taksîmin sebebi olandan **ayrı** (bu zarûrî bilinir).' **4. hüccet**: '**akıllı herkes bedîhesiyle bilir: cisim ya müteharrik ya sâkin**; **müteharrik olması**: bir mekânda hâsıl olduktan **sonra** başka mekânda; bu **ba'diyet zamana işaret**; **sükûn**: cismin aynı hayizde **uzun zaman** kalması, bu da müddet ve zamana işaret; ⇒ hareket ve sükûn hakîkatinin ilmi bedîhî-evvelî ve ancak zamanın vücûdunu kabulle karar buluyorsa **zamanın vücûdunun ilmi bedîhî'** (p24).
+- Netice/hüküm: 3.–4. hüccet: **kabliyet/meiyyet ve hareket/sükûn tasavvurları zamanı içerir.**
+- Delil çeşidi: **tasavvur analizi (misal: Âdem–Muhammed)**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'hareket ve sükûn tasavvuru zamanı içerir' Râzî'nin c4 p289–290'daki 'hareket ardışık hasûldür' tanımıyla uyumlu (ardışıklık = zaman).]**
+- Mevzuya bağı: **Fasıl I §3**: 'Âdem, Muhammed'den önce' misali **peygamber tarihi**; Risale bu misali kullanırsa **kronoloji cümlesinde 'önce' zamansal** demek zorunda kalır — **Allah'ın 'önce'liğinden ayrı** yazılmalı.
+- Doğan sual: —
+
+## c5 p24
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. hüccet**: '**akıllı herkes bedîhesiyle bilir: mevcut ya kadîm ya hâdis**; kadîm = **evveli olmayan**; hâdis = **evveli olan**; 'evveli yok' = 'geçmiş zamanlarda hangi hâli i'tibar edersek akıllarımız ondan **önce de mevcut olduğu** bir zamana ulaşmaz'; 'evveli var' = akılların 'o vakitte hâdis oldu' dediği bir vakte ulaşması; ⇒ **kadîm ve hâdis mânâsını ancak zamanın vücûduyla tasavvur ederiz ⇒ zaman bilgisi bedîhî.**' **6. hüccet**: '**sarîh akıl: zaman senelere, seneler aylara, aylar günlere, günler saatlere bölünebilir; saat günün, gün ayın, ay senenin, sene müddetin cüzü; bu takdir ve taksîmlerin bilgisi zarûrî; bir kısmının ötekinden az veya çok olduğunun bilgisi zarûrî; bu taksîmleri kabul eden hükme mevrid şey siyah-beyaz-taş-üçgenden mugâyir; bu şey ayânda tahakkuk etmemişse taksîme mevrid olamaz** ⇒ zamanın vücûdunun ilmi bedîhî.' **7. hüccet**: 'herkes bu müddetin kısa, şu müddetin uzun olduğunu bilir…' (p25).
+- Netice/hüküm: 5.–6. hüccet: **kadîm-hâdis tasavvuru ve zamanın bölünmesi (sene-ay-gün-saat) zamanı içerir.**
+- Delil çeşidi: **tasavvur analizi + mikdâr taksîmi**; (T) ikna'î-burhânî biçim. **['Bölünme = ayânda mevcut' öncülü, itibârî bölünmeyi (zihnî/sosyal takvim) dışlar; hudûs tarafının 'zaman ânâtlardan mürekkeb / itibârî mikdâr' cevabı (c5 p9–19) açık.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 5. hüccet **'kadîm = evveli olmayan; hâdis = evveli olan' tanımlarını zamana bağlıyor**; Risale'nin 'hudûs = vücûdun ademle mesbûkiyeti (zamansız)' tanımıyla **doğrudan çakışma alanı**: Risale zaman-siz hudûs tanımını **öncüle bağlı yazmalı** ve bu itirazı kaydetmeli.
+- Doğan sual: —
