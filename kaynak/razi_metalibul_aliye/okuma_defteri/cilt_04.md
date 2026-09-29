@@ -1729,3 +1729,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **ilke (istishâb) + analitik**; (T) cedelî-ikna'î. **[Delil ≠ dava: 'asıl bekâ' istishâb ilkesi hudûs delili karşısında 'delil hangi taraftan gelecek' usûl meselesi; kelâmcı hudûs tarafı 'delil var' der (fıtri hudûs gözlemi).]**
 - Mevzuya bağı: **Fasıl I §3**: 'istishâb: asıl bekâ' ilkesi **kıdem tarafının epistemik stratejisi**; Risale **'hudûs delil ile sabit; istishâbî bekâ hükmü delil yerine geçmez'** yazmalı.
 - Doğan sual: —
+
+## c4 p193
+- OCR: orta
+- Okuma: tam
+- İçerik: (1. makam, 'asıl bekâ', devam; kıdem tarafı): 'üç şeye muhtaç olan, iki şeyle yetinene nisbetle **mercûh**.' **İtiraz**: 'hudûs bu üç şeye muhtaç olsa **her biri başka üçe muhtaç** olurdu.' **3. delil**: '**tagayyür zannı bekâ zannının ma'lûlü olsaydı**, **hiç kimse hiç kimsenin sözünden bir şey anlamazdı**: lafızların önceki mevzû'lara delâletinin **bekâ ihtimali ile zevâl ihtimali eşit** olsaydı anlama bekâ tarafına **çabuk gitmez**, tereddüt kalırdı ve anlama hâsıl olmazdı; anlama hâsıl olduğuna göre **bekâ i'tikadı zevâl i'tikadından râcih**.' **4. delil**: '**bir beldeden çıkan, beldenin bir tarafını mamur, öteki tarafını harap görmüşse**, uzun süre uzak kaldıktan sonra **mamur tarafın mamur kaldığına, harap tarafın harap kaldığına dair zannı devam eder**; **ancak munfasıl delille** döner ⇒ **bedîhe 'her şeyde asıl bekâdır'**.' **5. delil**: 'beldeden çıkan kişi **akrabasına ve dostlarına yazar**; bu ancak **bekâ zannının zevâl zannından râcih** olmasından' ⇒ **'her şeyde asıl bekâ; tagayyür ancak munfasıl delille'.**
+- Netice/hüküm: **Kıdem tarafı 1. makam: 'asıl bekâ' ilkesi 5 delille (tekrar/anlama/belde/mektup).**
+- Delil çeşidi: **istishâb + günlük misaller**; (T) ikna'î. **[Delil ≠ dava: istishâb, hâdis/bâkî ayrımında delil değil 'delil yokken varsayım' — hudûs tarafı ise **hudûs delillerinin varlığını** ileri sürüyor.]**
+- Mevzuya bağı: **Fasıl I §3**: 'asıl bekâ' ilkesi **c4 p192'de kaydedildi**; Risale 'istishâb hudûs delilini geçersiz kılmaz' cevabını yazacak.
+- Doğan sual: —
+
+## c4 p194
+- OCR: orta
+- Okuma: tam
+- İçerik: '**Bu cisimlerin bu belirli terkîb ve sıfatlarla 'ma'dûm idiler sonra mevcut oldular' şeklinde hâsıl olduğuna dair kahredici bir delil harice çıkarsa hükmederiz; yoksa bu hâl ve sıfat üzere değişmeden ebediyen olduklarına hükmetmek lâzımdır**; **'devam' kavli aslın hükmüyle müeyyeddir, munfasıl delile ihtiyaç yok; munfasıl delile ihtiyaç tagayyür ve hudûs iddiasındadır.**' **2. makam (kat'iyet)**: 'aklın bedîhesi **insanın ana-babasız hudûsunu ve gece-gündüz öncesi olmayan gübarın hudûsunu uzak görür**; **bütün akılların bu istib'âd üzerinde ittifakı**, bu hâllerin bu belirli vecihlerle vukûunun **vâcibâttan** olması gerektiğini gösterir (vâcib olmasa bir tarafın vukûu ve diğerinin ademi hakkında cezmetmek mümkün olmazdı) — önceden takrîr edildi, tekrarında fayda yok.'
+- Netice/hüküm: **Kıdem tarafı 8. Makâle sonu: 'devam' istishâb ile müeyyed; 2. makam: bedîhî istib'âd ⇒ vâcib.**
+- Delil çeşidi: **istishâb + bedîhî istib'âd**; (T) ikna'î-cedelî. **[Delil ≠ dava: 'akılların istib'âdı ⇒ vâcib' geçişi gözlemsel deneyimden zorunluluk çıkarıyor.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: 'hâdisin hâdis sebebi' (bedîhî) ve 'asıl bekâ' iki delil türü **kıdem tarafının epistemik silahı**; Risale bu ikisine **'hudûs gözlemle değil delil ve nassla; ilk yaratılış gözlem dışı'** cevabını yazacak.
+- Doğan sual: —
+
+## c4 p195
+- OCR: orta
+- Okuma: tam
+- İçerik: **9. Makâle: 'Bu bâbtaki (zaman/müddet) vecihler'** (başlık; kıdem tarafı; başlığın tam ifadesi OCR'de kısmî).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: c1 Mesele 7 (ezel ve ebed), c4 p13–18 (altıncı kısım sebk).
+- Doğan sual: —
+
+## c4 p196
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p197
+- OCR: orta
+- Okuma: tam
+- İçerik: **9. Makâle 1. hüccet (kıdem tarafı)**: '**Bârî ve âlem: ya birlikte mevcut, ya âlem Bârî'den sonsuz müddet sonra, ya mütenâhî müddet sonra**; **1. ve 2. kısım bâtıl ⇒ 3. kalır**.' **1. bâtıl**: birlikte olsalar **ikisi birlikte kadîm veya ikisi birlikte hâdis olur**; **2. bâtıl**: '**muhdesten mütenâhî müddet önce olan da muhdes**' ⇒ **Bârî'nin hudûsu**; **3. kalır: Bârî âlemden sonsuz müddet mukaddem** ⇒ Bârî'nin âleme takaddümüne sebep olan **müddet evvelsiz, yani kadîm** ⇒ **müddetin kıdemi**. **Aynı sözü âlemin kıdemine ihtiyaç bırakmadan da kurmak mümkün**: 'Bârî bugünkü hâdislerden mukaddem; bu takaddüm **mütenâhî müddetle** ise **Bârî hâdis**; **sonsuz müddetle** ise **müddet kadîm**.' **İtiraz (hudûs tarafı)**: 'bu, **Bârî'nin âleme takaddümünün müddetle** olduğuna bina.' (p198)
+- Netice/hüküm: **Kıdem tarafı 9. Makâle 1. hüccet: 'Bârî'nin âleme takaddümü mütenâhî müddetle ⇒ Bârî hâdis; sonsuzla ⇒ müddet kadîm'.**
+- Delil çeşidi: **dilemma (üç kısım)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: c4 p13–18'deki 'zamansız sebk (6. kısım)' hudûs cevabının **kıdem tarafı karşılığı**: bu hüccet 'Bârî'nin takaddümü müddetle' varsayımına dayanıyor; **p198'de itiraz (6 vecih) ve p200'de cevap**.
+- Doğan sual: —
+
+## c4 p198
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hudûs tarafının itirazı (6 vecih)**: '**Bârî'nin âleme müddetle mukaddem olduğu söylenemez**; **deliller**: **(1)** '**dünün bugüne takaddümü zaman ve müddetle değil** (yoksa müddet başka müddette mevcut, sonsuza); **dünün bugüne takaddümü müddetsiz akıl ediliyorsa** Bârî'nin âleme takaddümü niçin müddetsiz akıl edilmesin?' **(2)** '**müddet munkazî, seyyâl ânâtlardır**; **her ân ma'dûm iken mevcut oldu, mümkin, muhdes**; ⇒ **zamanın mecmûunun muhdisi fâil-i muhtâr**; **muhtâr mef'ûlünden önce** ⇒ **Bârî müddet ve zamandan önce**; bu takaddüm **müddetle olamaz** (müddet mevcut iken ma'dûm olurdu).' **(3)** '**müddetin mâhiyeti hâlden hâle tagayyüre bağlı; tagayyürün mâhiyeti önceki hâle mesbûkiyet**; ⇒ **müddetin mâhiyeti gayrle mesbûkiyeti gerektirir; ezelin mâhiyeti mesbûkiyeti nefyeder; cem' muhâl.**' **(4)** '**hâzır ân hâzır olmadan önce mevcut değildi, girdikten sonra ma'dûm olacak** ⇒ **zâtı gereği mümkin**; **mümkinin misli onun peşinden vâki olması imtinâ' değil** (p199).
+- Netice/hüküm: **Hudûs tarafı 9. Makâle 1. hücceti: 'Bârî'nin takaddümü müddetle değil' (6 vecihten ilk 4'ü).**
+- Delil çeşidi: **reductio + analitik**; (T) burhânî biçim (hudûs tarafı).
+- Mevzuya bağı: **Fasıl I §3, §6.3**: 6 vechin **Risale için hazır kaynak** (zamanın hâdis olduğuna dair delil listesi): **kaynaklı: c4 p198–199 (derece: burhânî biçim; öncüller: zaman ânâtlardan oluşur, ân hâdis ve mümkin)**.
+- Doğan sual: —
+
+## c4 p199
+- OCR: orta
+- Okuma: tam
+- İçerik: (4. vecih devam): 'bu hâzır ân fânî olsa ve ondan sonra başka ân olmasa **müddet munkatı' ve fânî** olur; bu takdirde **zamanın ademi vücûdundan sonra, zamanla değil** (yoksa ademi vücûdunda mevcut, muhâl) ⇒ **takaddüm ve teahhur zaman ve müddet olmaksızın akıl edilmiş.**' **(5)**: '**müddet ve zaman nefsinde dâim-baki mi hâdis-mütebeddil mi**? **Dâim ise** dâimliği başka müddetle değil (teselsül) ⇒ **dâim ve istimrar müddet ve zaman fikri olmadan akıl edilir**; **hâdis ise** her parça öncekinden mukaddem veya müteahhir, bu takaddüm **müddetle değil** ⇒ **takaddüm ve teahhur müddetsiz akıl.**' **(6)**: '**müddet, mâzî-hâl-müstakbel bulunan yerde ma'kûl; bu tagayyür ve tebeddül ister; Bârî tagayyür ve tebeddülden münezzeh ⇒ zamana girmez ⇒ âleme takaddümü zaman-müddetle olması imtinâ'**'. ⇒ '**Bu 6 vecihle: Bârî'nin âleme takaddümü müddet ve zamanla olmak zorunda değil.**'
+- Netice/hüküm: **Hudûs tarafı 9. Makâle 1. hüccet itirazı: 6 vecih tamam (Bârî zaman dışı).**
+- Delil çeşidi: **reductio + tenzîh**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3, §6.3**: c1 Mesele 7 şübhe 3 ('kâne/yekûnu') ile **aynı**; Risale **'Allah zamanın yaratıcısı, zamanla sınırlı değil' cümlesini** bu 6 vecihle destekleyebilir.
+- Doğan sual: —
+
+## c4 p200
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kıdem tarafının cevabı**: '**bu işkâllerin hepsi 'zaman hareketin mikdarıdır; hâl, munkazî, seyyâl; ardışık ânâtlar' diyene yöneliyor**; **biz bunların hiçbirini söylemiyoruz**; **hakk: müddet zâtında bâkî bir cevherdir**; **hâdislerden hiçbiri ona mukârin olmazsa, orada tek bir dâimî devam ve tek bir istimrar hâsıl olur, hâl tebeddülü veya sıfat tagayyürü olmadan; bu 'dehr', 'ezel' ve 'sermed' denilen şeydir.** **Ona ardışık hâdisler mukârin olursa** o zaman bu hâdislerin ardışıklığı ve şeyin **mâhiyetinin dışındaki nisbet ve izâfelerinin değişmesi** sebebiyle müddetin zâtı 'seyyâl, munkazî' zannedilir; oysa seyalân ve inkızâ' **o şeyin nisbetlerinde ve arız izâfelerinde**. **Bu mezhebe göre soruların hepsi düşer.** **Aristo ashâbı zamanın kıdemine delil getirir; 'zaman hareketin mikdarı' dedikleri için zamanın kıdemiyle hareketin, hareketin kıdemiyle cismin kıdemine istidlâl edebilirler; oysa 'müddet ve zaman kendi kendine kâim cevher, hareket lâvâhıkından değil' dersek müddetin kıdemiyle hareketin ve cismin kıdemine istidlâl edilemez; bu dakîka bilinsin.**'
+- Netice/hüküm: **Kıdem tarafı (Aristo'dan ayrılan görüş): 'müddet zâtında bâkî cevher = dehr/ezel/sermed; zaman hareketin mikdarı değil; bu yüzden hudûs tarafının itirazları düşer; ama Aristo'nun 'zaman kıdemi ⇒ hareket ⇒ cisim' delili de düşer.'** [Bu görüş 'mutlak zaman (dehr)' doktrinidir; sahibi bu sayfada belirtilmiyor; ⊬ nisbet.]
+- Delil çeşidi: **kavramsal tanım (zaman = bâkî cevher)**; (T) cedelî. **[Delil ≠ dava: 'müddet kendiliğinden cevher' iddiası ispatsız; Sünnî akide zamanı da mahlûk sayar; 'dehr' terimi hadis/nass bağlamında ayrıca (⊬).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3 ve F 27-B**: **kıdem tarafının 'mutlak zaman kadîm cevher' görüşü Risale'nin 'zaman mahlûk' cümlesine doğrudan karşıt**; Risale **'zaman mahlûktur' (Eş'arî/Mâtürîdî ortak) cümlesini** bu satırla yüzleştirip cevap yazacak; Aristo-zamanı eleştirisi Râzî'nin kendi c4 p14 ('zaman hareketin lâzımı' Tabîiyyât öncülü) ile birlikte incelenecek.
+- Doğan sual: 'Dehr' cevheri iddiası kimin? (⊬ atıf); Râzî cevabı Kısım 2'de mi?
