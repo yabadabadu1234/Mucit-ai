@@ -2089,3 +2089,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'kadîm eserin muhtâr fâile isnadı muhâl' ittifakı **Sünnî akide için kritik**: Allah'ın ezelî sıfatları (kudret, ilim) kadîm olup **zâtın lâzımı** değil midir? Sıfat eser değil; eser = mâsivâ (hâdis).]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: '**kadîm eser muhtâr fâile isnad edilemez**' ittifakı Risale'de **'mâsivâ hâdis, kadîm eser yoktur' diye yazılır**; kıdem tarafı 'kadîm mümkin eser var' diyor; **bu, 'mümkin ⇒ hâdis' değil 'mümkin ⇒ müessire muhtaç' (c3 p250) ayrımıyla** Risale'de yazılmalı.
 - Doğan sual: —
+
+## c4 p233
+- OCR: orta
+- Okuma: tam
+- İçerik: **12. Makâle (kıdem tarafı) delilleri sürüyor.** **Delil 1 devamı**: imkân ya mâhiyetin lâzımı ya arızdır; arızsa 'imkânın imkânı' ⇒ teselsül ya da lâzım-ı mâhiyet olan imkâna intihâ. '**Her mümkin sebebe muhtaç**' bedîhî; **bekâ hâlinde de muhtaç.** İtiraz: '**bekâda vücûd evlâdır, sebebe ihtiyaç kalmaz**'; cevap: evlâlık mâhiyetin lâzımı ise hudûsta da müstağnî olurdu, değilse evlâlığa sebep denir (**lafız nizâı**). **Delil 2 başlıyor**: ihtiyacın illeti hudûs olamaz.
+- Netice/hüküm: **Kıdem tarafının hükmü (Râzî'nin kendi hükmü değil): ihtiyaç illeti imkândır; bekâ da sebebe muhtaçtır.**
+- Delil çeşidi: **taksîm + teselsül**; (T) burhânî biçim (kıdem tarafı), öncül: 'her mümkin sebebe muhtaç'.
+- Mevzuya bağı: **Fasıl I §3**: 'imkân ihtiyacın illeti' ilkesi Sünnî çizgide de kabul edilir (c3 p237–238 düğümü); **hudûs illeti diyen Eş'arî/mütekellim çizgisine ilzâmdır.**
+- Doğan sual: Risale ihtiyaç illetini imkân mı, hudûs mu yazacak? (Padişah kararı: imkân yazmak ilzâmdan kaçınır.)
+
+## c4 p234
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 2 devamı**: hudûs = vücûdun ademle mesbûk olması; bu vücûdun sıfatı, vücûddan **müteahhir**; ihtiyaçtan da müteahhir ⇒ hudûs illet/cüz/şart olamaz. **Delil 3**: hâdisin üç unsuru (sâbık adem, lâhik vücûd, mesbûkiyet); müessire muhtaç olan vücûd; vücûd **mümkin** olduğu için muhtaç ⇒ illet imkândır. **Delil 4 başlıyor**: sâbık adem, müessiriyetle çelişir.
+- Netice/hüküm: **Kıdem tarafı: hudûs sonradan gelen sıfattır, illet olamaz.**
+- Delil çeşidi: **taksîm + tertîb (sıfat mevsûftan müteahhir)**; (T) burhânî biçim, öncül bağımlı.
+- Mevzuya bağı: Fasıl I §3 (hudûs burhanının tesisi); **Risale'nin hudûs delilinin bu itirazı karşılaması gerekir** (cevap Kısım 2'de aranacak ⊬).
+- Doğan sual: —
+
+## c4 p235
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 4 devamı**: sâbık adem eserin vücûduyla ve müessir oluşuyla çelişir (müessir ancak eser hâsılken müessirdir); çelişen şey şart olamaz. İtiraz: iki zamana tevzî; cevap: muhtâcün-ileyh, muhtaç hâsıl olurken hâsıl olmalı. **Delil 5**: âlemin ve Allah'ın te'sîrinin imkânının evveli var mı? **Yoksa** ezelî te'sîr imtinâ'sız, kadîm eserin kadîm müessire isnadı mümkin. **Varsa** evvelden önce zâtî imtinâ' vardı, sonra imkâna intikâl olurdu (muhâl).
+- Netice/hüküm: **Kıdem tarafı: te'sîr imkânının başlangıcı yok ⇒ ezelî te'sîr mümkin.**
+- Delil çeşidi: **taksîm (dilemma)**; (T) burhânî biçim; öncül: imkân ezelîdir.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde)**: 'ezelî imkân ⇒ ezelî te'sîr' sıçraması **kudret-irâde ayrımı ve ihtiyar** ile cevaplanmalı; Risale bu dilemmayı kapatmak zorunda (⊬ cevap).
+- Doğan sual: 'Te'sîrin imkânı ezelî' ile 'te'sîrin vukûu ezelî' ayrımı Râzî'de nerede yapılıyor? (Kısım 2'de aranacak.)
+
+## c4 p236
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 5 sonu.** **Delil 6**: hılt'ın çürümesi hummayı gerektirir; hudûs gibi **bekâ da sebebe muhtaç**. **İlzâm**: mütekellimîn ezelî âlimiyeti ezelî ilme, ezelî kâdiriyeti ezelî kudrete ta'lîl eder; ilim ezelî hayata şartlıdır ⇒ '**ezelî ezelî ile ta'lîl olur**' (hasmın kendi kabulü). **Delil 7 başlıyor**: müessiriyetin bütün şartları ezelde hâsıl.
+- Netice/hüküm: **Kıdem tarafı: mütekellimîn kendi sıfat öğretisinde 'ezelî ezelîden' ta'lîlini kabul ediyor.**
+- Delil çeşidi: **ilzâm (cedelî)**; (T) cedelî.
+- Mevzuya bağı: **Delil ≠ dava**: sıfat-zât ta'lîli ile âlem-Allah ta'lîli aynı cins değildir; **ilzâm zâtî sıfatları (Sünnî akide) yaratılmışla karıştırıyor** — Risale ayrımı açık yazmalı.
+- Doğan sual: —
+
+## c4 p237
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 7**: müessiriyetin mecmû şartları ezelde hâsıl; eser tehalluf edemez; ezelî te'sîr muhâl değil. **Delil 8**: 'hâdis, hudûsu vâcib' farz edilirse müstağnî olur; mâhiyet imkân-vücûd eşitse müreccihe muhtaç ⇒ ihtiyaç illeti imkân. **Delil 9 başlıyor**: ihtiyaç kaynağı vücûdlu/ma'dûm mâhiyet ya da kayıtsız mâhiyet.
+- Netice/hüküm: **Kıdem tarafı: şartlar tamsa eser tehalluf etmez.**
+- Delil çeşidi: **taksîm**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: 'şartların tamamı ezelde ⇒ eser ezelde' **mûcib tarafın ana öncülüdür**; muhtâr fâilde 'şart'ın içine irâde girer ve irâde şartı ezelî olmak zorunda değildir — Risale burada 'tahsis' ile cevap yazmalı (⊬ Râzî'nin kapanışı).
+- Doğan sual: Râzî bu 'tam şart ⇒ eser' ilzâmına kendi cevabını nerede veriyor?
+
+## c4 p238
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 9 sonu**: vücûdlu mâhiyet vâcib, ma'dûm mümteni' (ikisi müstağnî); kayıtsız mâhiyetin kabiliyeti ⇒ imkân illettir. **Delil 10**: 'muhtaç hâdis olmalı' ise hâdislerin ilk hâdise intihâsı ve ilk hâdis sebepsiz ⇒ müessire muhtaç değil ⇒ hudûs illet değil; 'muhtaç hâdis olmalı' ise 'hâdis muhtaç olmalı' da (ikincisi bâtıl). **Delil 11 başlıyor**: ma'lûlün ademi illetin ademiyle; ma'lûlün ademinin evveli yok ⇒ ma'lûliyet hudûsa şartlı değil.
+- Netice/hüküm: **Kıdem tarafı: ilk hâdisin sebebi yoksa 'hâdis olan muhtaçtır' kaidesi çöker.**
+- Delil çeşidi: **taksîm + teselsül**; (T) burhânî biçim, öncül bağımlı.
+- Mevzuya bağı: Fasıl I §3 (teselsül, ilk hâdis); **'ilk hâdisin sebebi' sorusu hudûs tarafının en ağır borcu.**
+- Doğan sual: —
+
+## c4 p239
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 11 devamı**: her müessiriyetin hâdis olması teselsül; müessiriyetler dâim müessiriyete intihâ eder ⇒ eser dâim. **Delil 13**: hudûs illet olsaydı mütehareklik dâim hâlde harekete, âlimiyet ilme muhtaç olmazdı; mütekellimîn bunu demez (ilim dâim hâlde hayata muhtaç). **Delil 14**: dış lâzımlar mâhiyetlerin ma'lûlüdür (üçün fert, dörtün çift olması); lâhik ancak mâhiyeti olan şeyde; muhtaç mümkin, mümkin müessire muhtaç ⇒ ma'lûlün illete iftikârı hudûsa şartlı değil (**kat'î burhan iddiası**). **Kapanış**: '**Kıdem diyenlerin mebâhisinin sonu.**'
+- Netice/hüküm: **Kıdem tarafı aktarımı BİTTİ.** 12. Makâle'nin 14 delili hudûs tarafına ilzâm; **hiçbiri Râzî'nin kendi hükmü olarak işaretlenmedi.**
+- Delil çeşidi: **taksîm + ilzâm + teselsül**; (T) burhânî biçim (kıdem tarafı), öncüllerin çoğu tartışmalı.
+- Mevzuya bağı: **Delil ailesi**: ihtiyaç illeti imkân (1, 3, 8, 9, 14) · hudûs sonradan sıfat (2) · sâbık adem çelişkisi (4) · te'sîr imkânı ezelî (5) · bekâ da muhtaç (6) · şartlar tam (7) · ilk hâdis sebepsiz (10) · dâim müessiriyet (11) · sıfat ilzâmı (13). **Risale için ödev**: hudûs delilini bu 14 itiraza **cevabıyla** yazmak; cevaplar Kısım 2'de aranacak (⊬).
+- Doğan sual: Delil 12 metinde görünmüyor (OCR atlaması mı, numaralama mı?) — p239'da 11'den 13'e geçiliyor; **atlandığı işaretlendi, içerik uydurulmadı.**
+
+## c4 p240
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
