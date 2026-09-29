@@ -282,7 +282,7 @@ Bu itiraz üç yerden kırılır:
 | :-- | :-- |
 | 1. Kanun bir **âdet**tir | Fasıl I §0.4'te gördük: tabiat kanunları **âdetullah**tır; zıddı aklen muhal değildir. Mucize aklen **mümkin**dir. Hume da imkânı değil, **kanıtlanabilirliği** tartışır |
 | 2. Kısır döngü | "Kanunlar hiç bozulmamıştır" hükmüne, **bozulma iddialarını baştan reddederek** ulaşılıyorsa, tecrübe olarak sayılmayan şeyi tecrübe saymamak, çıkarımı kendi neticesine dayandırmaktır |
-| 3. İhtimal hesabı tek tanıkla kalmaz | Bağımsız çok sayıda tanığın **aynı** harikaya tanıklığı, tevatürdeki gibi çarpımsal küçülme getirir (Fasıl IV §1). Hume'un ölçüsü, **tek tanık** için haklıdır, çok tanık için değil |
+| 3. İhtimal hesabı tek tanıkla kalmaz | Bağımsız çok sayıda tanığın **aynı** harikaya tanıklığı, tevatürdeki gibi çarpımsal küçülme getirir (Fasıl IV §2). Hume'un ölçüsü, **tek tanık** için haklıdır, çok tanık için değil |
 
 Yani **mucizenin imkânı burhânîdir** (âdet ≠ zaruret). **Vukuu** ise, "şu mucize gerçekten oldu mu" sorusudur ve **tarihî habere** bağlıdır.
 
@@ -348,7 +348,7 @@ Meydan okumanın **azalan** bir ölçekte (tüm insanlık→10 sûre→1 sûre�
 **Okunuşu:** Birinci iddia: yedinci yüzyıl Arabistanı'nda, dili Arapça ve belâgat ehli, muhalefet eden ve elinde her imkân olan topluluğa tahaddî yapıldı. İkinci iddia: bu topluluk söz yerine çatışmayı tercih etti ve benzerini getirmedi. Üçüncü iddia: sonraki denemeler muâraza sayılmadı.
 **Bağlamıyla:** Bu üç cümle "geçmişte olan" şeylerdir; her biri tarih ve haber yoluyla sabittir.
 
-Bu iddialar **haber** kapısındandır (§2) ve **tevatürle** sabittir (Fasıl IV §1): meydan okuma **Kur'ân metninin kendisinde** durur (ki Kur'ân'ın kendisi mütevatirdir); karşılıksız kalış ise **muhalif kaynakların bile** kabul ettiği bir vakıadır (Kur'ân'ı reddedenler onu "sihir" veya "şiir" diye adlandırdı, yani onun **söz** olarak bir kudret taşıdığını kabul ettiler; bkz. Müddessir 74:24 "sihir", Tûr 52:30 "şair"). Bu, **haber olarak burhânîdir**.
+Bu iddialar **haber** kapısındandır (§2) ve **tevatürle** sabittir (Fasıl IV §2): meydan okuma **Kur'ân metninin kendisinde** durur (ki Kur'ân'ın kendisi mütevatirdir); karşılıksız kalış ise **muhalif kaynakların bile** kabul ettiği bir vakıadır (Kur'ân'ı reddedenler onu "sihir" veya "şiir" diye adlandırdı, yani onun **söz** olarak bir kudret taşıdığını kabul ettiler; bkz. Müddessir 74:24 "sihir", Tûr 52:30 "şair"). Bu, **haber olarak burhânîdir**.
 
 **Fakat çıkarım basamağı burhânî değildir** ve bunu saklamamak gerekir:
 
@@ -385,7 +385,7 @@ Bu üç kelime, Arapça'da **üç ayrı vasfı** söyler:
 
 **Dürüstlük kaydı:** Bu vasıfların Kur'ân'da **en yüksek mertebede** olduğu, Arapça bilen ve belâgat ilmini tahsil etmiş kişilerin (Bâkıllânî, Cürcânî, Zemahşerî…) tespitidir; **ölçüsü kişinin dil ehliyetidir**. Bu yüzden bu kol, **Arapça bilmeyen** için bir **delil değil, bir haberdir** (§9'da açıldı). Kur'ân'ın dilinin "en üst düzey" olduğu **sübjektif bir beğeni hükmü** değildir, ehl-i fen'nin **tenkit ve mukayese ile** vardığı sonuçtur; fakat **derecesi**: bir edebî değer yargısını "matematiksel kesinlik" olarak sunmak yanlış olurdu — bu yüzden bu kol **cedelî-yüksek**tir, burhânî değil.
 
-**Bir ek vasıf — çelişkisizlik (Nisâ 4:82):** "Onlar Kur'ân'ı düşünmüyorlar mı? Eğer o Allah'tan başkasının katından olsaydı, içinde birçok çelişki bulurlardı." Bu bir **tenakuz iddiasıdır**: metin uzun bir zaman (yirmi üç yıl) dilimine yayılmış, çeşitli koşullarda inmiş ve içinde hiç tenakuz bulunmadığı iddia edilmiştir. Bu iddia **sınanabilir**dir (bir tenakuz gösterilirse iddia düşer); "tenakuz sanılan yerler" ise Fasıl IV'te ayrıca tartışılacaktır. **Şimdilik derece: cedelî — çünkü olumsuz bir iddiayı (hiç tenakuz yok) ancak tek tek incelemeyle yıkabilir ya da ayakta tutabiliriz.**
+**Bir ek vasıf — çelişkisizlik (Nisâ 4:82):** "Onlar Kur'ân'ı düşünmüyorlar mı? Eğer o Allah'tan başkasının katından olsaydı, içinde birçok çelişki bulurlardı." Bu bir **tenakuz iddiasıdır**: metin uzun bir zaman (yirmi üç yıl) dilimine yayılmış, çeşitli koşullarda inmiş ve içinde hiç tenakuz bulunmadığı iddia edilmiştir. Bu iddia **sınanabilir**dir (bir tenakuz gösterilirse iddia düşer); "tenakuz sanılan yerler" ise Fasıl IV §10-C'de Nakzeyn'in kendi şartlarıyla sınanmıştır. **Şimdilik derece: cedelî — çünkü olumsuz bir iddiayı (hiç tenakuz yok) ancak tek tek incelemeyle yıkabilir ya da ayakta tutabiliriz.**
 
 ### 7.5 Şık 2'nin Kalan Payı ve Dürüstlük Kaydı
 
@@ -476,7 +476,7 @@ Bu bahiste **iki ayrı iddia** vardır ve **karıştırılmaz**:
 
 ### 10.2 (b) "En Güzel" Hükmü: Neden Cedelî?
 
-"En güzel ahlâk" bir **mukayese** hükmüdür (Fasıl IV §5: Hüsün-kubuh). Mukayese iki şey ister: (1) bir **ölçü** (güzelin ölçüsü nedir?), (2) mukayese edilen **örneklerin** hepsi. Ölçüyü kabul eden kişi için hüküm ilerler; ölçüyü kabul etmeyen kişi için ilerlemez. Bu yüzden bu hüküm, **ölçü ortak olduğu ölçüde** ikna edicidir — cedelî.
+"En güzel ahlâk" bir **mukayese** hükmüdür (Fasıl IV §9: Hüsn-kubuh). Mukayese iki şey ister: (1) bir **ölçü** (güzelin ölçüsü nedir?), (2) mukayese edilen **örneklerin** hepsi. Ölçüyü kabul eden kişi için hüküm ilerler; ölçüyü kabul etmeyen kişi için ilerlemez. Bu yüzden bu hüküm, **ölçü ortak olduğu ölçüde** ikna edicidir — cedelî.
 
 **Bir iddia tarzı — "yalancı peygamber" hipotezi:**
 

@@ -278,7 +278,7 @@ Hayat  ≔ {İlim,Kudret} ⋉ Aklî-Âdî("ilim∧kudret→hayat şarttır")
        κ=zarurî-bizatihî(değer)? ¬tenakuz(değer)⟹mümkün(değer)
        eşit-ihtimal ⟹ TEK-tahakkuk ⟹ kanun≠fail ⟹ İrade
 
-Kudret ≔ Hudûs(âlem) ⟹ îcad-kudreti
+Kudret ≔ Burhân-ı Tahsis ∧ Devam-ı Hudûs ⟹ îcad-kudreti   [NAKZ: önceki "Hudûs(âlem) ⟹ Kudret" bağı kesildi — Hudûs Delili ayrı ek delil, cedelî-yüksek]
   Hudûs Delili (muhtasar):
     cisim(x) ⟹ ¬hâlî(a'râz,x)          [her cisim dâimâ bir hâl üzere]
     hâl(araz) ⟹ hâdis(araz)             [her hâl öncekinin yerini alır]
@@ -308,6 +308,38 @@ Gaye(çeşit) = { zarurî, ihtiyarî }
 Hakîm∧Şer(mevcûd)?
   (a) mantıkî tenakuz? TEK tutarlı senaryo (ademî∨izafî) ⟹ ¬tenakuz     [burhânî]
   (b) şu-şerrin müspet hikmeti? adem-i-vücdan≠adem-i-vücud ⊳ Fasıl III  [cedelî — kasten]
+```
+
+## Ateizm, Mümteni, Hudûs/Zaman/Entropi, Aklın Usulü, Çürütülebilirlik  (şerh: content/fasil_1.md §10-14)
+
+```
+NAKZ (F 2-Y): "Kudret'in ispatı için âlemin zamanî başlangıcı şart" ⊬
+  Kudret ⟸ Burhân-ı Tahsis ∧ Devam-ı Hudûs  — âlem ezelî de olsa geçerli
+  Hudûs Delili ≔ AYRI ek delil ; (T) = cedelî-yüksek
+    ∵ "sonsuz geçmiş = tamamlanmış sonsuz" adımı zamanın akışına (A-teorisi) bağlı ; B-teorisi kabul edenler reddeder
+
+Ateizm(çeşit) = { kesin, şüphe }   κ = "Allah yoktur" hükmü veriyor mu?
+  kesin ≔ ¬∃x Vâcib(x) ⟹ ∀x Mümkin(x) ⟹ Mümkin(K) ⟹ sebeb(K) ∈ K ↯ devir ∨ sebeb(K) ∉ K ⟹ Vâcib  ⟹ ↯   [burhânî]
+  şüphe ≔ iddia yok ; halka gösterilir
+  çıkışlar: kanun-kendini-seçti | multiverse | brute-fact  ⟹ tahsis-suâli üst kata taşınır (silinmez)      [burhânî]
+
+Mümteni:  "kaldıramayacağı taş" ≔ taş ∧ kaldırılabilir ∧ ¬kaldırılabilir ↯ ⟹ mümteni bi'z-zât
+  Kudret ⋉ Mümkin(şey) ; mümteni ∉ şey ⟹ Kudret noksanlaşmaz
+  mümteni(çeşit) = { bi'z-zât, bi'l-gayr }
+
+Zaman = { mutlak-kap (Newton), değişimin-ölçüsü (Aristo, Eş'arî, Gazâlî), donmuş-blok (B-teorisi) }
+  risale: değişimin-ölçüsü ; ∵ mutlak-kap ⟹ ezelî ikinci şey ⟹ ↯ Vâcib'in tekliği  [tercih, beyan edildi]
+Entropi ⊳ Kavânîn-i Tabîiyye ⟹ Mebâdi ≻ Kavânîn : mantıkî zaruret ÇIKMAZ                                  [kendi kaidemiz]
+  entropi → hudûs : hitâbî/cedelî destek ; düşük-başlangıç → tahsis-suâli ⟹ Burhân-ı Tahsis'i güçlendirir
+
+Bilgi-Aklı: akıl hükmü = { vâcib, mümkin, mümteni } ; mümkin ⟹ vukuu ∈ { müşahede, haber }
+  mümteni ∧ nass-zâhir ⟹ te'vil (nass yanlış okunmuş)
+Hüküm(kuvvet) = Sübût{kat'î,zannî} × Delâlet{kat'î,zannî}   ⟺ₜ (iki ikili Nakzeyn)
+  akîde ⟸ kat'î×kat'î  (cumhur ; âhâd-akîde ihtilafı: Ahmed/İbn Hazm ≠ cumhur)
+  fürû' ⟸ zann-ı gâlib yeter
+
+Çürütülebilirlik: her netice ⟹ ilk öncül ⟹ reddin bedeli (çelişki) — content/fasil_1.md §14 tablosu
+  yeni teori ⟹ (1) evveliyyât-çürütme ↯ ; (2) öncül-reddi ⟹ bedeli öde ; (3) cedelî-halka ⟹ çekirdek etkilenmez
 ```
 
 ## Temel Usul (Nakzeyn Tabanlı Tasnif)

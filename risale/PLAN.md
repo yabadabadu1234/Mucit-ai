@@ -1,5 +1,7 @@
 # Risale Planı — Küme Usulüyle
 
+**DURUM (güncel):** Fasıl I–IV şerhleri `risale/content/fasil_{1..4}.md`, formülleri `risale/fasil_*/formuller.md` olarak YAZILDI. Aşağıdaki maddelerin (T) etiketleri, yazım sırasında DÜRÜSTLÜKLE düzeltilmiştir; düzeltmeler ilgili maddenin altında **NAKZ** başlığıyla durur. Kaynak: yüklenen ikinci taslak `risale/00_taslak_v2.md`.
+
 Kaide: her bahis üç şeyle etiketlenir — **(F)** hangi mühürlü formül kullanılıyor, **(Y)** hangi yeni küme açılmalı (κ teklifiyle), **(T)** Tavassut(çeşit)'e göre delilin kuvvet derecesi (burhânî/cedelî/hitâbî/şiirî/safsatavî — safsatavî yalnız reddedilecek karşı-delilleri etiketlemek için kullanılır). Bir bahis (T)'si burhânî değilse bu, zayıflık değil dürüstlüktür — risale bunu gizlemez (F 2-Y).
 
 ---
@@ -58,6 +60,7 @@ Kaide: her bahis üç şeyle etiketlenir — **(F)** hangi mühürlü formül ku
 **9. Peygamberlik müessesesinin ontolojik zarureti**
 - (F) Hakîm+Gaye (madde 7) ⋉ Nefis(kuvvet)=Müdrike×Muharrike: insan nefsi tek başına (aklıyla) hem marifeti hem ameli tam dengeleyemez (Mâlum'un Muharrike kanadı henüz açılmamıştı — burada kısmen açılır: irade tek başına doğru gayeye kilitlenmede aklın rehberliğine muhtaçtır, akıl da vahyin rehberliğine).
 - (T) **cedelî/hitâbî — kasten, zorlanmadı.** Gerekçe empirik/umumî bir insan-tabiatı genellemesidir, tek istisna teorik olarak kâfi olurdu; burhânîye zorlamak yerine iddia daraltıldı: "akıl+irade'den ibaret bir sistemin, kendi içinden, hatasını tashih edecek zarurî bir mekanizması yoktur" (Tasavvur(nazarî) zaten muhtâc-i-tarif ve tarifte hata mümkün — mühürlü formül) — bu **yapısal/mantıkî** iddia burhânîye daha yakın, ispatı ayrıca yapılacak.
+- **NAKZ (yazım sırasında):** "ontolojik zaruret" başlığı düzeltildi: nübüvvet Allah'a vâcip değildir (Fâil-i Muhtar); burhânî olan yalnız "teşrî iradesi ihbardan başka yolla bilinemez"; gerekliliğin kendisi cedelî. (fasil_2.md §5)
 
 **10. Ahlak delili (Hz. Muhammed'in ahlakı)**
 - (F) Tavassut(çeşit). **(T) tevatüre bağlı kısmı burhânî** (madde 17 ⋉): ahlakın SÎRETİ tevatürle nakledildiği ölçüde İhtimal Hesabı ile burhânî; ahlakın "en güzeli" olduğu HÜKMÜ (bir kıymet hükmü, mukayese ister) cedelî kalır — ikisi ayrılır, karıştırılmaz.
@@ -71,6 +74,7 @@ Kaide: her bahis üç şeyle etiketlenir — **(F)** hangi mühürlü formül ku
 - (F) 41-meleke şebekemizdeki **Belâgat, Fesâhat, Talâkat** kümeleri (Vürûd/Sudûr formülleriyle zaten mühürlü).
 - (Y) **İ'caz(Şart) = {ümmîlik, muâraza-daveti, adem-i-muâraza}**.
 - **(T→burhânî, yükseltildi, iddia daraltılarak):** zaaf "ebediyen kimse yapamaz" iddiasıydı — ispatsız bir gelecek-iddiasıydı. Düzeltme: iddiayı şuna daralt — "tahaddî (meydan okuma), 7. asrın azamî sebep ve azamî muhatarayla mücehhez, ana dili Arapça, belagat üstadı muhataplarına yapıldı ve karşılıksız kaldı." Bu, gelecek hakkında değil **geçmiş hakkında** bir iddiadır, tevatürle (madde 17) sabittir → burhânî. Risale "kimse asla yapamaz" demeyecek, "o gün yapılamadı" diyecek — daha dar, ama tam istenen neticeyi (Kur'an beşer kelâmı değildir) taşımaya yeter.
+- **NAKZ (yazım sırasında):** "(T→burhânî, yükseltildi)" iddiası **aşırıdır**. Haber (tahaddî yapıldı, karşılık verilmedi) tevatürle burhânî-haberdir; fakat "insan sözü değil" çıkarımının kilit öncülü (insan sözü olsaydı muhalifler muâraza ederdi) yakînî değildir. Toplam: **cedelî-yüksek**. Ayrıca ilmî-gaybî kol: Firavun örneği adem-i vüsul şartında zayıf (mumyalama çağın bilgisi); **hiyeroglif iddiası kaynak yoklamasında delil çıkmadı ve risaleye alınmadı** (fasil_2.md §7.6). (fasil_2.md §7)
 
 **12-B. İlmî-Gaybî İ'caz** (yeni bahis: hem müstakil, hem madde 8/9/11/12'yi besleyici)
 
@@ -98,6 +102,7 @@ Kaide: her bahis üç şeyle etiketlenir — **(F)** hangi mühürlü formül ku
 **14. Haşrin aklî zarureti**
 - **(T→burhânî, yükseltildi):** zaaf, "dünyada adalet yok, o yüzden ahiret makuldür" demenin bağlayıcı olmamasıydı. Düzeltme: Adalet gerçekten sabit bir sıfatsa (madde 6) ve hiçbir zaman/mahalde tahakkuk etmiyorsa, sıfat **hiç tezahür etmeyen bir isim** olarak kalır — bu, sıfatın bizatihi sübutuyla çelişir (Vâcibü'l-Vücûd madde 4'teki "muhtaçsızlık" ile aynı kalıp: tezahürsüz kalan bir sıfat, ya yoktur ya da tezahür yeri zarurîdir). Öyleyse bir tahakkuk mahalli (âhiret) zarurîdir.
 - (F) Hakîm+Adalet (madde 6) ⋉ Vâcibü'l-Vücûd(Basitlik)'in aynı çelişki-mantığı.
+- **NAKZ (yazım sırasında, F 2-Y):** Bu maddedeki "burhânîleştirme" (tezahürsüz sıfat çelişir) **geçersizdir**: (1) "Adl" 13 sıfat içinde yoktur, fiil sıfatıdır; (2) Kudret ezelde eser yokken de sabittir — tezahürsüz sıfat mümkindir; (3) Ehl-i Sünnet'te Allah'a hiçbir şey vâcip değildir. Doğru sınıflama: imkân burhânî; vukuu sem'iyyât (Fasıl II derecesinde); hikmet-adalet uyumu cedelî-yüksek. Strateji 3 bu maddede işlemedi. (fasil_3.md §6)
 
 **15. Melek/Cin/Şeytan'ın aklî imkânı**
 - (Y) **Adem-i-vücdan ≠ Adem-i-vücud** — klasik kaide, bizim κ diliyle: "hissetmemek" (κ_hiss=∅) ile "yok olmak" (κ_vücûd=∅) ayrı kıstaslardır, biri diğerini gerektirmez (Mâlum(Menşe)'nin hissî/aklî ayrımına dayanır — bir varlık hissî idrakin dışında olup aklen/nakil yoluyla sabit olabilir).
@@ -148,3 +153,10 @@ Her fasılın sonunda bir **"delil-kuvveti tablosu"** olacak: o fasıldaki her n
 Sıfat(çeşit), Gaye(çeşit), Şer(çeşit), Vahiy(Rükün), Mucize(çeşit)+Mucize(Rükün), İ'caz(Şart), Kesb(Rükün), İlmî-Gaybî İ'caz(Rükün) — bunların hepsi yukarıda κ teklifleriyle işaretlendi, mühürleme sırası fasıllar yazılırken, aynı müzakere usulüyle (kıstas + Nakzeyn + dehliz) yapılacak.
 
 **Kaynak yoklaması bekleyen (F 1-K, henüz risaleye girmedi):** "gök ve yer ağlamadı" / hiyeroglif ağıt-formülü misali — hangi metin, hangi neşir olduğu doğrulanmadan yazılmayacak.
+
+## Yazım sonrası kayıt: Fasıl I'e eklenen bahisler ve kalan açık işler
+
+- Fasıl I §10 (ateizm), §11 (mümteni ve taş paradoksu), §12 (hudûs, zaman, entropi — **entropiden mantıkî zaruret çıkmaz**), §13 (dinde aklın usulü, akîde/fürû), §14 (çürütülebilirlik haritası) eklendi. §8.4'teki "Kudret için hudûs şart" bağı **nakzedildi**.
+- Yeni **Y-teklifleri (⊬ padişah tasdiki bekliyor):** `Bilgi(Kaynak)={hiss,akıl,haber}`, `Mucize(Rükün)` beşli okunuş, `Mucize(çeşit)={hissî,aklî}`, `Kesb(Rükün)`, `Hüküm(kuvvet)=Sübût×Delâlet`, `Ateizm(çeşit)={kesin,şüphe}`.
+- Kaynak yoklaması (F 1-K): OSC 2015 rakamları **yoklandı**; Motzki atfı arama dizininden yoklandı (tam bibliyografya ⊬); hiyeroglif iddiası **yoklandı, delil çıkmadı**; Buhârî hadis numaraları, Zemahşerî/Tefsir atıfları, Ahmed b. Hanbel nakli, Hişâm b. Urve tenkidi, Esmâ hesabı **yoklanmadı** — metinlerde ⊬ ile işaretli.
+- Hâlâ açık: Fasıl I §1-9'un şerh üslûbuna (üç okunuşlu) tam çevrilmesi; Muharrike kanadı; İzafî 7'lisinin tükenmişliği.
