@@ -1153,3 +1153,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **reductio (irâde/kasd ayrımı) + misal**; (T) burhânî biçim (kıdem tarafı).
 - Mevzuya bağı: **KRİTİK — Fasıl I §8**: '**irâde ile kasd ayrımı**' (c4 p65 'azm ↔ kasd' ile bağlı): kıdem tarafı **ezelî irâdeyi 'azm' düzeyinde bırakıp 'kasd'ı hâdis sayıyor**; Risale **irâde/kasd/azm terimlerini açık tanımlayıp**, ezelî irâdenin **taallukla kasda dönüşmesini** Eş'arî tarzında yazmalıdır.
 - Doğan sual: —
+
+## c4 p129
+- OCR: orta (ilk satırlar bozuk)
+- Okuma: tam
+- İçerik: (1. hüccet devam; kıdem tarafı, misal): karanlık evde oturan, yarınki fiili yapmaya **azmetmiş** kişi, **yalnız o ilk irâdeyle o vakitte fiili îkâ'a kasdetmiş olmaz**; **gelecekte belirli vakitte fiili yapmaya azim, o vakit hâzır olunca fiili îkâ'a kasdın kendisi olsaydı** vakit hâzır olduğunu bilsin bilmesin **kasdetmiş** olurdu; öyleyse '**gelecek bir vakitte fiile azim**' o vakitte fiili îkâ'a **kasd değildir**; azim devam edip vakit hâzır olunca ve azmeden **vaktin hâzır olduğunu bilince**, '**ilk azmin bekâsı + vaktin hâzır olduğu ilmi**' **fiili îkâ'a taalluk eden yeni bir kasdı hâdis kılar** ⇒ **önceki azim fiilin gelecek vakitte îkâ'ı için yeterli değil, taalluk eden hâdis kasd lâzım.** **2. vecih**: '**gelecekte îcâda azim ayrı mâhiyet, hâlde îcâda kasd ayrı mâhiyet**; biri diğerinin yerini tutmaz; **azim hâlde terki, gelecekte fiili gerektirir**; lâzımların farklılığı mülzûmların farkını gösterir' ⇒ '**azmin aynıyla kasda dönüşmesi muhâl**'.
+- Netice/hüküm: **Kıdem tarafı 1. hüccet devam: azim ≠ kasd (iki mâhiyet); kasd hâdis lâzım.**
+- Delil çeşidi: **misal + mâhiyet-lâzım ilkesi**; (T) burhânî biçim/ikna'î. **[Delil ≠ dava: insanî azim-kasd ayrımı Allah'a genelleniyor; Eş'arî cevabı 'Allah'ın ezelî irâdesi tek sıfat, taalluku vakit-ihtisaslı, kasd-azm ayrımı Allah'ta yok' olacaktır (kaynak: c3 Bâb 4).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: p65'teki 'azm ↔ kasd' iddiası burada **misalle** kuruldu; Risale **'Allah'ın irâdesinde azm/kasd ayrımı yoktur; bu insanî bir ayrım (tenzîh)'** cümlesini yazmalı.
+- Doğan sual: —
+
+## c4 p130
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hâdis kasd de bâtıl): '**hâdis olsaydı hudûsu belirli vakitle ihtisaslı, öncesi ve sonrası câizken; bu ihtisas ancak başka irâdeyle** ⇒ **teselsül**.' **Günlük hâdislerle mu'ârazaya**: 'her bu vecihlere vârid; **mümkin cevap ilk tarîkte zikredildiği (her hâdis öncesiyle mesbûk)**.' **2. hüccet**: 'kadîm irâdenin **belirli vakte taalluku** ya **bu irâde mâhiyetinin lâzımı** ya değil; **değilse** irâde bu belirli taalluk için başka sebebe muhtaç ⇒ **teselsül**; **lâzımsa**: âlem o vakitte vücûda girip vakit bitince, **irâde hâlâ o vakitte ihdâsa taalluk etmiş kalamaz**, iki vecihle: **(1)** vücûda girmiş şeyin idhâli **muhâl** (mevcûdun îcâdı); **(2)** vakit geçti; hâlâ o vakitte ihdâsa taalluk etseydi **geçmiş zamanda îkâ'a kasd** (muhâl) (p131).
+- Netice/hüküm: **Kıdem tarafı 2. hüccet: 'kadîm irâdenin belirli vakte taalluku lâzım-ı mâhiyet ise, vakit geçince taalluk zâil olmalı ⇒ kadîm irâde zeval'.**
+- Delil çeşidi: **reductio (taalluk-vakit)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'taalluk irâde mâhiyetinin lâzımı' öncülü ispatsız; kelâm taallukun izâfe (zâid) olduğunu söyler ve zevâlinin sıfatı değiştirmediğini savunur (c4 p117'deki aynı düğüm).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: **'irâdenin taalluku izâfî, sıfat değişmez'** cümlesi Risale'de yazılmalı (p117); Râzî'nin cilt 4 devamındaki cevabı aranacak.
+- Doğan sual: —
+
+## c4 p131
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet devam): '**vakit geçtikten sonra irâde o vakitte ihdâsa taalluk etmiş kalsaydı geçmiş zamanda îkâ'a kasd olurdu (muhâl)** ⇒ âlem vücûda girdikten sonra **ezelî irâdenin aynı âlemin aynı vakitte vücûda idhâline taalluku bâkî kalamaz**; **zevâl vâcib**; bu belirli taalluk irâde mâhiyetinin lâzımı olduğuna göre **lâzımın zevâli melzûmun zevâlini gösterir**: **irâde, mürâd vücûda girdikten sonra vâcibü'l-adem**; **ademi sahih olanın kıdemi imtinâ'** ⇒ 'Allah'ın irâdesi **kadîm**' iddiası bâtıl' (**bu kadîm irâdenin bâtıl olduğunu gösteren kuvvetli delil**). **Hâdis olması da bâtıl**: irâde Allah'ın zâtında, başka zâtta, ya mahalsiz hâdis olur; **hepsi bilinen vecihlerle bâtıl.** **3. hüccet**: '**bir şeyi ihdâsa kasdeden**: ihdâs zann ve i'tikadında terkten **evlâ mı**? **Evlâysa** zâtı **nâkıs, gayrla müstekmil** (Vâcib için muhâl); **değilse** ihdâs kasdı terk kasdına **râcih olamaz** (rüçhân, adem-i rüçhân hâlinde muhâl).' **İtiraz**: 'nâkıslık **kendisine nef'** için ihdâsta lâzım; **gayre fayda** için ihdâs edince muhâl gelmez.' **Cevap**: 'gayre hayır ve nef' îsâli ve îsâl etmemek ona eşitse muhâl geri; **biri ona evlâ ise nâkıs ve gayrla müstekmil**' (p132).
+- Netice/hüküm: **Kıdem tarafı: 'kadîm irâde bâtıl' (taalluk zevâli); 3. hüccet: 'ihdâs kasdı ⇒ evlâlık ⇒ nakıs'.**
+- Delil çeşidi: **reductio + dilemma**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §8, c3 p279–282**: 3. hüccet **c3 hikmet bâbı (filozof yolu)** ile **aynı 'gayre nef' cevabı ve aynı itiraz**; Risale 'Allah'ın gâyesi' konusunda **nassla ('kudretini bilesiniz diye', 65:12; ⊬)** yazar.
+- Doğan sual: —
+
+## c4 p132
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. hüccet sonu): 'nef' îsâli ve adem-i îsâli ona nisbetle eşit ⇒ muhâl geri; biri evlâ ⇒ nâkıs.' **4. hüccet**: 'âlemi ihdâsa kasdetse, **bu kasd belirli vakte ihtisaslı ya değil**: **belirli**: 'âlemi filan vakitte ihdâs'; **değil**: 'âlemi ihdâsa kasd, ihdâsı belirli vakte tahsis etmeden'. **Belirli vakit ise bâtıl**: o vakit **ezelde hâzır mı**? Hâzırsa **âlemin hudûsu ezelde ⇒ âlem sermedî**; **değilse vakit hâdis, muhdisi Allah**; ilk taksîm geri: 'Allah o vaktin ihdâsını **belirli vakte** mi kasdetti?': evetse o vakit **başka vakte muhtaç ⇒ teselsül**: **sonsuz vakitler bir arada (bedîhen muhâl)** ya da **peş peşe** ⇒ **evvelsiz hâdisler (matlûb)**. **Mutlak (vakitsiz) kasd** ise **dâimî mevcut olacak biçimde** kasd: bu **kıdemi gerektirir; hudûs sübûtuna aykırı** (p133).
+- Netice/hüküm: **Kıdem tarafı 4. hüccet: kasd ya belirli vakte (teselsül) ya vakitsiz (kıdem).**
+- Delil çeşidi: **dilemma**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: c4 p63–64'teki 'vaktin ihdâsı' argümanının **irâde formu**; Risale **'zaman hâdis' cümlesini ve 'irâde vakitten önce'** cevabını (c4 p48 4./7. cevap) birlikte yazmalı.
+- Doğan sual: —
+
+## c4 p133
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. hüccet**: 'âlem hâdis olsaydı **Yaratıcı ihdâsını o belirli vakte tahsis ettiği için** hâdis olurdu (şartiyye önceden beyân edildi); bu **muhâl**: o vakit diğer vakitlere **mâhiyetin tamamında müsâvî mi**? **Müsâvîyse** hepsi **lâzımlarda eşit** (tam mâhiyette müsâvî şeyler mâhiyetin lâzımlarında eşit) ⇒ **irâdenin bütün vakit parçalarına nisbeti eşit**; bu 'irâde âlemi bazı vakitlerin ihdâsına taalluk vâcib, bazısına imtinâ'' sözüne aykırı. **Müsâvî değil**: 'o vakitte farz edilen **cüzler mâhiyetçe muhtelif, hakîkatçe mütebâyin**' ⇒ bu şeylerin hâsılı **kendi kendilerine mi Allah'ın ihdâsıyla mı**? **Birincisi bâtıl** (hâdisin muhdisiz olması); ayrıca mâhiyetleri ayrıysa **her birinin belirli esere mûcib olması imtinâ' değil** ⇒ **bu âlemin hâdislerinin müessiri, bu peş peşe ânât ve ardışık cüzler olabilir ⇒ sâni' nefyi** (bâtıl).
+- Netice/hüküm: **Kıdem tarafı 5. hüccet: vakitler mâhiyette müsâvîse tahsis müreccihsiz; ayrıysa 'zaman parçaları' hâdislerin müessiri olur.**
+- Delil çeşidi: **dilemma**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §8, §3**: c4 p64 (5. hüccet) ile aynı; **'vakitler mâhiyette müsâvî mi' sorusu Risale'de cevaplanmalı**: 'vakitler müsâvî; tahsis irâde iledir (müreccihsiz değil)'.
+- Doğan sual: —
+
+## c4 p134
+- OCR: orta
+- Okuma: tam
+- İçerik: (5. hüccet devam): '**bu peş peşe ânâtın hudûsu Allah'ın ihdâsı ve îcâdıyla ise**: 'her birinin diğerinden önce veya sonra olmasını **niçin tahsis etti**?' **başka vakitle ise** aynı talep geri ⇒ **teselsül (muhâl)**. ⇒ **irâdenin âlemin ihdâsını belirli vakte tahsis ettiği** kavli **bu bâtıl kısımlara götürür, bâtıl.** '**Bu delille ayrıca 'Allah âlemin ihdâsını, o vakit gizli bir maslahat içerdiği için o vakte tahsis etti' sözünün bâtıl olduğu ortaya çıkar; çünkü vakitler tam mâhiyette müsâvî olduğunu beyân ettik.**'
+- Netice/hüküm: **Kıdem tarafı 5. hüccet sonu: 'gizli maslahat' cevabı da bâtıl (vakitler müsâvî).**
+- Delil çeşidi: **reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §8**: 'gizli maslahat' cevabı Risale'ye **zaten alınmaz** (c4 p48 2. cevap, c3 p328).
+- Doğan sual: —
+
+## c4 p135
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. Makâle: 'Hüsn-kubuh, hikmet ve abesten çıkarılan deliller'** (başlık; kıdem tarafı).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: c3 p279–357 (hikmet, aklî hüsn-kubuh) ile bağ.
+- Doğan sual: —
+
+## c4 p136
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
