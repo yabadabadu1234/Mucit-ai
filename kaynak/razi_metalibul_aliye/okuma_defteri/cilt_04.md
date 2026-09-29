@@ -1873,3 +1873,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **dil analizi + 'tenbih'**; (T) ikna'î. **[Delil ≠ dava: 'akıl lafızsız tasavvur edemez' iddiası 'zamansız kabliyet' düşünce deneyini (c4 p15) lafız-zihin ayrımıyla çürütmeye çalışıyor; hudûs tarafı tasavvurun lafızdan bağımsız olduğunu söyler.]**
 - Mevzuya bağı: **Fasıl I §3**: kıdem tarafı 'sonsuz zaman itirazını' **kabul eder ('biz de öyle deriz')** — 'zamanın her parçası önceki parçaya mesbûk' evvelsiz silsile; bu, **Fasıl I'in 'teselsül' delilinin karşı görüşü**; Risale c2 p77–78 anlam kaydı ile birlikte yazmalı.
 - Doğan sual: —
+
+## c4 p209
+- OCR: orta
+- Okuma: tam
+- İçerik: **9. Makâle 10. hüccet (kıdem tarafı, devam)**: '**âlem hâdis olsa önceki âlem ya mümkin ya değil; değil ise ya âlemin zâtî imtinâ'dan zâtî imkâna intikâli ya Hâlık'ın acizden kudrete intikâli (ikisi muhâl)**; **mümkinse** imkân hâsıl; sonra **başka bir âlem yaratmak mümkin, bu âlemin evveline 20 devirle biten**; iki farz edilen emir **birlikte başlayıp birlikte mi biter, yoksa bir tanesinin vücûdunun başı diğerinden önce mi**? **Birincisi bâtıl** (fazla eksiğe eşit olurdu); **ikincisi müddet ve zamanın vücûdunu gerektirir**: 'âlemin vücûdundan önce **on devire yeten ama yirmi devire yetmeyen** bir imkân; **yirmi devire yeten ama on devirle dolmayan** başka bir imkân; **bu ikinci imkân birinciden önce mütekarrir**; **müddet ve zaman ancak budur** ⇒ **müddetin evveli yok — matlûb**.' **11. hüccet**: '**ezelden âlemin ilk yaratılışına kadar olan mesafe, ezelden Tufan zamanına kadar olandan az; ezelden Tufan zamanına kadar olan, ezelden bugüne kadar olandan az; her yeni gün ve zaman eklendikçe ezelden o vakte kadar olan önceki vakitten çoğalır**' (p210).
+- Netice/hüküm: **Kıdem tarafı 10.–11. hüccet: 'iki imkân, 10/20 devir'; 'ezelden şimdiye' ziyade-noksan kabul eder.**
+- Delil çeşidi: **düşünce deneyi + reductio**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ezelden ilk yaratılışa' mesafe iddiası ezelî müddeti ölçülebilir kabul eder; hudûs tarafı ezeli 'mesafesiz' sayar (evvelsizlik).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: 'ezelin zamanı' (c4 p201 'bin/iki bin yıl') ile birlikte; Risale bu iddiaya **'ezel = evvelsizlik, ölçülen mikdar değil; sonsuz mikdarlar arasında karşılaştırma zihnî farz'** cevabını yazacak.
+- Doğan sual: —
+
+## c4 p210
+- OCR: orta
+- Okuma: tam
+- İçerik: (11. hüccet devam): '**ezelden şimdiye kadar olan şey ziyade ve noksan kabul eder ⇒ mevcuttur** (mahz adem ve sırf selb ziyade-noksanla vasıflanmaz); **bu ziyade-noksanı kabul eden ya Allah'ın zâtı, ya adem, ya üçüncü şey**: **birincisi bâtıl** (zât ziyade ve noksan kabulünden münezzeh); **adem-i mahz** ziyade-noksanla vasıflanmaz; **öyleyse Allah'ın zâtından ve mahz ademden başka mugâyir bir emir: müddet veya müddette vâki bir şey** ⇒ matlûb hâsıl.' **12. hüccet**: '**hudûs ve devam ancak vakit ve zaman farzıyla akledilir**: hâdisin ma'kûl mânâsı **'önceki vakitte ma'dûm iken bir vakitte mevcut olan'**; kadîm-dâimin ma'kûl mânâsı **'bir vakitte mevcut farz edildiğinde daha önce de mevcut olan'**; **hudûs ve devam mânâsını ancak vakitler farzıyla aklederiz**; ⇒ **müddet ve vaktin hudûsu muhâl**; **zaman hâdis dersek ve hudûsun ancak vakit farzıyla akledildiğini bilirsek, zamanın ademini farz edince vücûdunu farz etmek lâzım gelir ⇒ zamanın ademi farzı muhâl.**' **'Bu 12 vecih bu bâbta matlûbu isbat için zikredildi; fazlasını isteyen bizim 'müddet ve zaman hakkında kelâmın tahkîki'nde yazdığımıza baksın'** (Râzî'nin başka eseri; ⊬ hangi cilt/eser).
+- Netice/hüküm: **Kıdem tarafı 11.–12. hüccet: 'ziyade-noksan kabul eden = müddet'; 'hudûs ve devam vakit farzıyla akledilir' ⇒ zamanın hudûsu muhâl. 9. Makâle bitti.**
+- Delil çeşidi: **analitik + reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: 'zamanın hudûsu muhâl' iddiası **Risale'nin 'zaman mahlûk' cümlesine karşıt**; atıf: Râzî'nin **'müddet ve zamanda kelâmın tahkîki' eseri ⊬**.
+- Doğan sual: 'Müddet ve zaman tahkiki' bâbı hangi cilt/eser (atıf haritası)?
+
+## c4 p211
+- OCR: orta
+- Okuma: tam
+- İçerik: **10. Makâle: 'Bu bâbta imkânla ilgili vecihler'** (başlık; kıdem tarafı; makâlenin konusu: boyutların/uzayın imkânı).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: c2 hayyiz-cihet bâbı (p35–54, 72–78).
+- Doğan sual: —
+
+## c4 p212
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p213
+- OCR: orta
+- Okuma: tam
+- İçerik: **10. Makâle (kıdem tarafı)**: '**bedîhî evvelî ilimlerin varlığı gerekli (hüccet ve beyyine gerektirmeyen; hüccet ve beyyine sahih olma bakımından bedîhîlere mevkuf; devir muhâl)**; ⇒ **bedîhî ilimler kendiliklerinden müsellem**; **zarûrî ilim = akıl fıtratı ve nefsin bedîhesi şahitlik ettiği şey**. Bu sabit olunca: '**uzunluk, genişlik, derinlikte uzanan boyutların vücûdu zâtı gereği vâcibü'l-vücûddur**; bu sabit olunca **cisim mevcut, vâcibü'l-vücûd li-zâtihî**.' **1. mukaddime**: '**mümkin olan şeyin vukûu farzı muhâl doğurmaz**; boyutların irtifâı zâtı gereği mümkin olsaydı bu farzda muhâl lâzım gelmemeli; oysa muhâl lâzım' (p214).
+- Netice/hüküm: **Kıdem tarafı 10. Makâle: 'boyutlar zâtı gereği vâcibü'l-vücûd ⇒ cisim vâcibü'l-vücûd li-zâtihî' (uç iddia).**
+- Delil çeşidi: **bedîhî iddiası + reductio**; (T) burhânî biçim (kıdem tarafı). **[İslâmî muhafaza: 'cisim vâcibü'l-vücûddur' iddiası **tevhîd ve hudûs ilkelerine aykırıdır**; kıdem tarafı iddiası olarak kaydedildi, ana metne alınmaz, çürütmesi Kısım 2'de aranacak.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §2, §3**: Vâcib'in tek olması (Fasıl I §6.2) ve 'mâsivâ mümkin' (c3 p250) ilkeleriyle **doğrudan çatışan iddia**; Risale reddiyeyi **ana argümanlarla** (ihtiyaç/mümkin) yazar.
+- Doğan sual: —
+
+## c4 p214
+- OCR: orta
+- Okuma: tam
+- İçerik: (1. mukaddime devam): 'boyutların irtifâını farz edince muhâl **lâzım: bu farz altında bir hayvan âlemin kenarında dursun**; **yüzünün karşısı ile ensesinin karşısı mütemeyyiz mi değil mi**? **İkincisi bedîhen bâtıl**: nefsin fıtratı bütün takdirlerde **sağ taraf sol taraftan, yüzünü karşılayan taraf ensesini karşılayan taraftan mutlaka mütemeyyiz** olduğuna şahit; ⇒ **boyutlar mevcut, adem kabul etmez, vâcibü'l-vücûd li-zâtihâ.**' **İtirazlar (hudûs tarafı)**: **1. (hükemâ)**: '**boyutlar mütenâhî; âlemin dışında ne halâ ne melâ**; 'sınırda duran yüzü-ensesi ayrımı' hükmü **vehim ve hayal hükmü**; vehim hükmü **kâzib olabilir, iltifat edilmez**.' **2. (mütekellimîn)**: 'bu hayyizlerde ve cihetlerde temeyyüz **inkâr edilemez hâsıl**; fakat bu ahyâz **aklın farz ettiği, vehmin takdir ettiği şeyler**, nefslerinde **vücûd ve sübût yok**: 'hâlî halâ ve cisimlerden hiçbirinin girmediği fezâ' **adem-i mahz ve nefy-i sırf**.'
+- Netice/hüküm: **Kıdem tarafı 10. Makâle 1. mukaddime: 'hayvan âlemin kenarında' düşünce deneyi; hudûs tarafı 2 itirazı (hükemâ: vehim; mütekellim: ahyâz farzî).**
+- Delil çeşidi: **düşünce deneyi + fıtrat delili**; (T) ikna'î-burhânî biçim.
+- Mevzuya bağı: **KRİTİK — c2 hayyiz-cihet bâbı**: c2 p72–78 ('Allah = fezâ' reddi; mütenâhî/gayr-i mütenâhî), c2 p59, 70 (fıtrat) ile **doğrudan bağ**: bu delil Râzî'nin kendi c2 bulgusuna (fıtrat cihet ispat etmez) **karşı**; Kısım 2'de Râzî'nin cevabı aranacak.
+- Doğan sual: —
+
+## c4 p215
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kıdem tarafının cevabı (1. itiraza — fıtrat/vehim)**: '**fıtratta iki hâkim: (1) akıl (hükmü sahih); (2) vehim (hükmü bâtıl)**; 'bu iki hâkimden birinin sâdık, öbürünün kâzib olduğu ilmi **bedîhî ise** cezmî hüküm kâzibe hâsıl olamaz; **fıtrî ise** bedîhîlerin sıhhati bu **nazarî mukaddimeye** mevkuf, nazarî mukaddime bedîhîlere mevkuf ⇒ **devir ⇒ sofestâîlik**; ⇒ **'fıtratın hükmü akılsa sahih, vehimse bâtıl' sözü sofestâîliği gerektirir, bedîhî ilimlerin tamamını zedeler**; ⇒ **sağlam fıtratın itiraf ettiği her şeyin sıhhatine kat'î hükmetmek lâzım** (ayrıntı: 'mantıkta bedîhî-evvelî mukaddime farkı').' **2. itiraza (ahyâz farzî) cevap**: '**cisim hayyizde iken, farz edenlerin farzından ve i'tibar edenlerin i'tibarından önce**, hayyiz **nefsinde mevcut**, farz olsun olmasın **nefsü'l-emirde hâsıl**' (p216).
+- Netice/hüküm: **Kıdem tarafı: 'fıtratta vehim ↔ akıl ayrımı sofestâîliğe götürür'; hayyiz nefsinde mevcut.**
+- Delil çeşidi: **devir (bedîhî-nazarî) + ontolojik iddia**; (T) burhânî biçim. **[Delil ≠ dava: 'vehmin hükmü ile aklın hükmünü ayırmak sofestâîliktir' iddiası kelâm-felsefe geleneğinin ortak epistemik ayrımına (vehmî/aklî) karşı çıkıyor; ayrıca c4 p52–53 (hudûs tarafının kıdem tarafına aynı itirazı 'aslî fıtrat' ile ilzâmı) ile tutarlı.]**
+- Mevzuya bağı: **KRİTİK — c2 p59, 70 ve Fasıl I (fıtrat)**: c2'de Râzî 'fıtrat cihet ispat etmez' derken burada aynı 'sofestâîlik' argümanı **fıtrat lehine** kullanılıyor; **Risale fıtrat argümanında Râzî'nin c2 ayrımını (yönelim kaynaktan, cihetten değil) korumalı**; kıdem tarafı argümanı 'tarihî belge'.
+- Doğan sual: —
+
+## c4 p216
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap 2 devam): '**hayyizin nefsinde mevcut olduğu, farz edilse de edilmese de nefsü'l-emirde hâsıl** olduğu; **tam söz 'halâ' mes'elesinde gelecek**.' **Sonuç**: '**bu uzunluk, genişlik ve derinlikteki boyutlar adem kabul etmez, vücûdlarının ademe tebeddülü sahih olmaz**.' **⇒ 'cisimlerin vâcibü'l-vücûd li-zâtihâ olması lâzım'**: '**bu boyutlar zâtlarında mevcut, kendilerinde mütehakkık; ya harekete kabil ya değil; ikincisi bâtıl**: boyutun tabiatı harekete kabil (kabil olmasaydı cisim harekete kabil olmazdı); **kabil ise zâtı hareket kabulünde baki mi, başka bir şey mi gerekir**? **Bakiyse** her boyut harekete mutlak kabil; **değilse** o şey ya **boyutta hâl**, ya **boyutun mahalli**, ya **ne hâl ne mahal**; **hâl ise** boyutun bu hâlle ittisâfı mümkin, mümkine mevkuf mümkin ⇒ boyut harekete kabil; **mahal ise** boyut bir mahalde hâl (muhâl): bu mahal **hayyize ihtisaslı ya değil**; **ihtisaslıysa o da boyut, boyutun mahalli boyut (muhâl)**; **değilse iki vecihle bâtıl**: (1) hayyize ihtisaslı olanın hayyize ihtisası olmayan şeyde **hulûlü muhâl** (p217).
+- Netice/hüküm: **Kıdem tarafı: 'boyutlar adem kabul etmez ⇒ cisim vâcib li-zâtihî' zinciri (mantıksal adımlar).**
+- Delil çeşidi: **taksîm/reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §2, §3, c2 hayyiz bâbı**: 'halâ' bahsi sonraki ciltlerde; zincirin her halkı **bir öncül ispatsız (boyut mevcut ⇒ vâcib)**; **Risale bu iddiayı 'boyut mümkin, mâsivâ mahlûk' ilkesiyle reddeder**; F 27-B: iddia **tevhide karşı olduğu için** Râzî'nin Kısım 2'de nasıl çürüttüğü aranacak.
+- Doğan sual: —
