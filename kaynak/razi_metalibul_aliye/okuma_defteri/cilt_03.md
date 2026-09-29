@@ -2665,3 +2665,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **misal (inci-kemik)** + reductio; (T) ikna'î. **[Misal mantıksal delil değil, tasvirdir; 'fazlalık nimet olmaz' önermesinin ispatı yoktur.]**
 - Mevzuya bağı: **F 2-Ā / F 27-B**: bu hüccetlerin öncülleri lezzet teorisine bağlı, **Risale'nin nimet/âhiret bahsinde doğrudan kullanılmaz**; 3. hüccet **hudûs ihtisası** kolu **c3 Bâb 4 irâde-tahsis** ile aynı öncüle dayanıyor (cilt 4 hudûs borcu).
 - Doğan sual: 3. hüccetin devamı p297'de (okunacak).
+
+## c3 p297
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccet devam (hudûs vaktinin ihtisası)**: 'ya bu vaktin belirli maslahata ihtisası **zâtı gereği**, ya **zâtının lâzımı** gereği, ya ikisi de değil'. **(1) Zâtı gereği bâtıl, 3 vecihle**: (a) hudûs diyenlere göre bu vakitler âlemden önce **mahz adem**; ademde vakitler zâtî hâssalarla birbirinden ayrılmaz; (b) vakitler ya **vâcibü'l-vücûd li-zâtihî** (ademleri muhâl, öncekiyle sonraki aynı olur, bedîhî bâtıl) ya hâdis-müteâkib (aynı soru geri gelir: niçin o vakit, öncesi-sonrası değil?); (c) belirli vakit belirli maslahatın kaynağı olabiliyorsa **hudûsün de kaynağı olamaz mı?** — 'belirli vakit hudûsün müessiri değil' delili de 'vakit zâtıyla o hâssayı gerektirdi' sözüne dönüp nakzedilir.
+- Netice/hüküm: 'Vakit zâtıyla maslahata ihtisas eder' bâtıl.
+- Delil çeşidi: **taksîm + reductio**; (T) analitik-cedelî. Bu **kelâmcı hudûs-ihtisas silahının aynısıdır**.
+- Mevzuya bağı: **Fasıl I §8.0/8.3 (irâde-tahsis: 'niçin şimdi?')**: **aynı silah burada Mu'tezile'nin hikmet-maslahat tezine karşı kullanılıyor**; dâî-tevakkuf çerçevesindeki aporisi (c3 p20, 26, 41–53, 100, 112, 137, 180–182) **aynen geçerli**; derece 'öncüle bağlı'.
+- Doğan sual: —
+
+## c3 p298
+- OCR: orta
+- Okuma: tam
+- İçerik: **(2) 'Vaktin lâzımı' da bâtıl** (aynı üç delil). **(3) Ne zâtı ne lâzımı**: **fâil-i muhtâr vakti o hâssaya ihtisas etti**; başka hâssaya isnad edilirse **teselsül**. Hâsıl: **âlem hâdisse muhtâr fâil hudûsü belirli vakte hikmet ve maslahat gözetmeden ihtisas etti ⇒ 'abes', akılda kabîh**; aklî hüsn-kubuh muteber olsa ya **âlemin kıdemi ve ilâhın mûcib bi'z-zât olması** lâzım gelirdi, oysa **hüsn-kubuh fâil-i muhtârın ispatına fer'dir**; fer' fâsid ⇒ asıl fâsid ⇒ **Allah'ın hükümlerinde aklî hüsn-kubuh bâtıl**. **Bu delil her hâdisin vaktine, her zâtın sıfat, mikdar, hayyizine tatbik olur**: 'tek değil, ebedîyete kadar sayısız deliller'. **4. hüccet**: aklî hüsn-kubuh muteber olsa **Allah'ın kullarını marifetine, senâsına, şükrüne mükellef kılması sahih olmazdı**; oysa sahih ⇒ akıl hükmü bâtıl.
+- Netice/hüküm: **Aklî hüsn-kubuh ya kıdem-i âlem ya abes-i hudûs sonucuna götürür**; Râzî'nin 3. hüccetinin sonucu.
+- Delil çeşidi: **reductio (hudûs-ihtisas)**; (T) cedelî-analitik. **[Delil ≠ dava: 'muhtâr fâil hikmetsiz ihtisas etti' hükmü, 'hikmet' kavramının Allah'ta gaye-illet olarak anlaşıldığı öncülüne bağlı; Râzî'nin kendi c3 dâî-sârife çerçevesiyle ('tam dâî ⇒ fiil') aynı gerilim.]**
+- Mevzuya bağı: **KRİTİK Fasıl I §8**: 'Allah'ın fiilinde hikmet/gaye' meselesi burada **'muhtâr fâil ihtisası hikmetsizdir (abes değil, hikmet zorunlu değil)' biçiminde Râzî'nin kabulüdür**; **Sünnî ana çizgi 'Allah'ın fiilleri hikmetlidir ama hikmet Ona vâcib değildir' der**; Risale bu ayrımı **açıkça yazacak: Allah'ın hikmeti nasslarla (Hakîm ismi) sabittir, ama 'hikmet vâcibi' aklî zorunluluk değildir**. 'Abes' kelimesi Risale'de kullanılmaz (Râzî'nin reductio dilidir).
+- Doğan sual: —
+
+## c3 p299
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. hüccetin şartı (2 vecihten 1.)**: marifetullah kula **meşakkatli**, ne şâkire ne meşkûra fayda; böyle bir şeye emir kabîh; öyleyse Allah'ın marifet ve tâatle emri kabîh olurdu. **3 mukaddime**: (1) **marifet meşakkatli**: istidlâlle olur, istidlâl zor, âlemin çoğu sapmış; ilâhî ilimde girenler bilir; **sapan büyük ve devamlı azaba müstahak**; tehlike şiddetli. (2) **Meşkûr (Allah) şükürden faydalanmaz**: şâhitte mün'im şükre sevinir, terkte üzülür; Allah zarar ve menfaatten müteâlî. (3) **Şâkir de faydalanmaz** (başlıyor): menfaat = lezzet, sürûr, elemin ve gamın defi, bunlara vesile.
+- Netice/hüküm: Mu'tezile'nin aklî hüsn-kubuh ölçüsü teklife uygulanırsa teklif kabîh olur (reductio öncülleri).
+- Delil çeşidi: **reductio**; (T) cedelî. **Mukaddimeler Râzî'nin kendi hükmü değil, Mu'tezile'nin ölçüsünü kendi aleyhine çevirme aracıdır.**
+- Mevzuya bağı: **KRİTİK — Fasıl I/IV**: **Risale 'marifet ve tâat faydasızdır, meşakkatlidir, abestir' cümlesini ASLA yazmaz**: bu, Râzî'nin **karşı taraf ölçüsüne uyguladığı şartlı iddiadır** ('aklî kubuh muteber olsa'). Sünnî ana çizgide teklif Allah'ın emrinden ve hikmetinden, ibâdet hakkından; fayda kula döner (Kur'ân'da 'kim şükrederse kendi nefsi için…', ⊬ numara). **Bu ayrım ders katmanında kutu.** 
+- Doğan sual: —
+
+## c3 p300
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. mukaddime devam): 'kâdir-i muhtâr bu menfaatleri **teklifsiz de** verebilir; 'teklifle daha kolay' denemez, çünkü Allah'ın kudretine nisbetle **kolay-zor tefâvütü muhâl**' ⇒ **marifet ve tâat teklifi meşakkatli, her fayda cihetinden hâlî; böylesi akılda kabîh**; aklî hüküm Allah'a muteber olsa hepsi kabîh olurdu; hiçbiri kabîh olmadığına göre **akıl hükmü Allah hakkında muteber değil**. **Şartın 2. vechi**: şâhitte bir zayıfa nimet edip **karşılığında meşakkatli hizmet isteyen** kişi **lâ'im, alçak himmetli** sayılır; nimet edip şükür-senâ beklemeyen, kendisinin nimetini küfredene kızmayan **şerefli**; sevinip kızan insana nisbetle; **sürûr, gam, menfaat ve zarardan müteâlî ilâhın, nimet edip sonra kulundan şükür ve hizmet talep etmesi celâline nasıl yakışır?**
+- Netice/hüküm: Aklî ölçüyle teklif kabîh sonucu (reductio devam).
+- Delil çeşidi: **reductio + şâhide kıyas**; (T) cedelî. **(Bu kıyas Allah'ı insanî ölçülerle tartar; Râzî onu tenzîh ilkesiyle kendisi de reddediyor.)**
+- Mevzuya bağı: p299 uyarısı geçerli: **'Allah lâ'imdir' türü sonuçlar Râzî'nin şartlı-aleyhî delilidir; Risale'ye alınmaz**; İslâm'a aykırı bir ifade doğmaması için **bu sayfa doğrudan alıntılanmaz, özetlenirken 'Mu'tezile'nin ölçüsü Allah'a uygulanırsa çelişki doğar' biçiminde yazılır**.
+- Doğan sual: —
+
+## c3 p301
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sonuç**: aklî hüsn-kubuh Allah'ın fiil ve hükümlerinde muteber olsa **bu teklifler kabîh olurdu; hiçbiri kabîh olmadığına göre bâtıl**. **Mu'tezile'nin itirazı (3 vecih)**: teklif **şâkire ve mutî'e menfaat sağlar**: (1) **hak etmeyeni ta'zîm kabîh**; Allah onları tâatle **ta'zîme müstehak** kıldı, sonra ta'zîm etti; (2) hak edilen menfaat **lezzetli ve kâmil**, salt tefaddulden daha; (3) **hükemâ mezhebi**: uhrevî saadet ancak bu ibâdetlere şartlıdır: insan cismânî lezzetlere düşerse rağbeti güçlenir, **ölümde rağbet kalır ama bulamaz ⇒ rûhânî elemler**; ibâdetle Allah'ı, melekleri, âhireti zikretmiş olan insan **ölümde 'hapisten bostana' çıkmış gibi**; bu, teklifin sebebi.
+- Netice/hüküm: Mu'tezile ve hükemânın teklif faydası açıklamaları (hasım sesi) aktarıldı.
+- Delil çeşidi: **cedelî itiraz**; (T) cedelî-ikna'î. (Hükemâ görüşü tarihî: **rûhânî lezzet-elem nazariyesi**.)
+- Mevzuya bağı: **Fasıl III (Meâd)**: 'ölümde cismânî rağbetin acıya dönüşmesi, ibâdetle 'hapisten bostana' rahat' **filozof rûhânî meâd anlayışıdır; Risale'nin bedenî haşir anlatımına ALINMAZ** (Râzî bunu **aktarıyor, kendi kabulü olarak sunmuyor**; kabulü/reddi p302–304'te). Kaynak kaydı 'tarihî belge'.
+- Doğan sual: Fasıl III'te bedenî haşir ↔ Râzî'nin rûhânî meâd tartışması (⊬; meâd bâbı okunacak).
+
+## c3 p302
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin cevabı (3 vecihe)**: **1. vecih (Mu'tezile'nin dayanağı) zayıf, 4 vecihle**: (a) fiilin ta'zîm istihkâkı için **meşakkatli olması şart değil**: peygamberlerin sevabı ümmetin sevabından büyük, ama masum resul meşakkati ümmetten fazla çekti mi; **maksat ta'zîm istihkâkı ise Allah kolay teklif verip bedenleri güçlendirebilirdi**; (b) ta'zîm gayesi kalpte **sürûr**; her türlü sürûru Allah **teklifsiz** yaratabilir; (c) **teklif iki ihtimal arasında döner**: itaat = istihkâk, isyan = büyük azap; **ta'zîm zarûrî değil, fazladan bir menfaat**; büyük azabı defetmek fazladan menfaat kazanmaktan evlâ ⇒ **akıl 'teklifi terk'** gerektirirdi; (d) p303'te.
+- Netice/hüküm: Mu'tezile'nin 1. vechine **4 cevap**; Râzî aklî ölçünün teklifle çeliştiğini gösteriyor.
+- Delil çeşidi: **reductio**; (T) cedelî-burhânî biçim.
+- Mevzuya bağı: p299–301 uyarısı geçerli: **teklifin terkini gerektiren akıl hükmü Râzî'ye göre 'Allah hakkında akıl hükmü olmaz' sonucunun aracıdır**, kendi tezi değildir. **'Ta'zîm zarûrî değil, azap tehlikesi ⇒ terk evlâ' sözü Risale'ye alınmaz.**
+- Doğan sual: —
+
+## c3 p303
+- OCR: orta
+- Okuma: tam
+- İçerik: (d) **Sizin söylediğiniz ancak kul fiil ve terkte müstakil ise doğru; kudret ve dâî hâsıl olunca fiil vâcib olduğunu ispat ettiğimizde bu sözün faydası kalmaz** (Râzî'nin **cebir/mûcib dâî** çizgisi). **2. vecih ('hak edilmiş menfaat efdal') cevapları**: (a) **kulun mevlâsının nimetinden müstağni kalması pek faydalı**: kul 100 dinarı kendi çalışmasıyla kazansa, sultan da 100 dinarlık atiyye verse **herkes atiyyeyi tercih eder**; (b) **halkın başlangıcı zâten tefaddul**; tefaddul zarar sayılırsa **halk-tekvîn kabîh olurdu**; (c) teklifte itaat ederse önemli bir şeyin fevtine sebep olmayan menfaat, etmezse büyük azap ⇒ akıl terk. **3. vecih**: uhrevî lezzet mümkin, Allah her mümkine kâdir ⇒ **teklifsiz de verebilir**. **Hükemâ mezhebi bu bahse gelmez**: onlarda sevap-ikab **fâil-i muhtârın kasdıyla değil, beşer fiillerinin lâzımıdır** (bu **mûcib bi'z-zât** tefri'inde doğru); **âlemin ilâhı fâil-i muhtâr olup bazılarını ihtiyarıyla sevaba, bazılarını ikaba tahsis ediyorsa** bu söz bu bâba yakışmaz.
+- Netice/hüküm: Râzî Mu'tezile'nin teklif-fayda açıklamalarını iptal ediyor; hükemânın sevap-ikab lâzımı görüşünü **yalnız mûcib bi'z-zât tefri'inde** doğru sayıyor.
+- Delil çeşidi: **cedelî (kelâm içi)**; (T) cedelî. **Cebir dâîsi satırı (kudret+dâî ⇒ fiil vâcib) Râzî'nin kul fiili çizgisidir (p60, 73).**
+- Mevzuya bağı: **KRİTİK — kul fiili**: 'kudret ve dâî hâsıl olunca fiil vâcib' cümlesi **Sünnî ana çizgide kesb/irâde-i cüz'iyye ile açıklanan yerde Râzî'nin kendi tercihidir**; **Risale ana metnine alınmaz**, 'Râzî'ye göre'. **Fasıl III**: 'sevap ve ikab fiillerin lâzımıdır' hükemâ görüşünü Risale **Ehl-i Sünnet'in 'sevap Allah'ın fazlı, azap adli' çizgisiyle** karıştırmaz.
+- Doğan sual: —
+
+## c3 p304
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hükemâ cevabının sonu): 'tadîl (adl) ve tecvîr (zulüm) bahsi **fâil-i muhtârın ispatına fer'dir**; bu asıl yalnız mûcib bi'z-zât kavliyle kurulursa **iki nakîzi cem'** (bâtıl). Bâb burada biter.' 
+- Netice/hüküm: **Aklî hüsn-kubuh bâbı: Râzî'nin hükmü = kullara nisbetle muteber, Allah'a nisbetle bâtıl (4 hüccet); iki karşı yol (Mu'tezile ve hükemâ) çürütüldü.**
+- Delil çeşidi: —; (T) sonuç.
+- Mevzuya bağı: **Fasıl I 'adl' ve 'hikmet'**: Risale'de **Allah'ın adli ve hikmeti nasslarla (Adl, Hakîm isimleri; 'zulmetmez') sabit; aklî vâcib-i aslah nefyedilir**; Râzî'nin delilleri (nimet=telâfi, teklif faydasız) **ana metne ALINMAZ**, **bâb özetinde tarihî belge olarak yazılır**.
+- Doğan sual: Bâbın Sünnî ana çizgi karşılığı (Eş'arî–Mâtürîdî) ayrı kaynaktan çalışılacak (⊬).
