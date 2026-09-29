@@ -2593,3 +2593,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **kıyas + ilke (mâhiyet-arıza ayrımı)**; (T) burhânî biçim, öncül: hareket ve sükûn hayizde hâsıl olma ile tam mâhiyet paylaşır (öncül bağımlı).
 - Mevzuya bağı: **Fasıl I §3**: sükûnun vücûdiyeti **kıdem-sükûn (3. Fasıl) delilinin 1. direği**; Risale **bu bahse girmez**, 'ezelî sükûn imtinâ'' iddiasını yalnız 'her vücûdî sıfat zevâli câiz' ilkesiyle kurar.
 - Doğan sual: Râzî'nin 'sükûn = ikinci hâsıl birinci hayizde' tefsiri ile hasmın 'ardışık hasûller/temaslar' itirazı p289'da nasıl çözülüyor?
+
+## c4 p289
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Hasım itirazı (hareket = ardışık hasûller ise mesafe bitişik bölünmez cüzlerdir ⇒ cevher-i ferd)** — **Râzî'nin yan notu: 'bu bizce bâtıldır, o mesele(deki) çok delil sebebiyle'.** **Hasmın ek delili (bu mevzûya lâyık)**: iki cevher bitişik, üçüncü cevher birine temas ediyor ve ikinciye geçmek istiyor: müteharrik sayılması **ya birinciye tam temas ederken (henüz hareket etmedi), ya ikinciye tam temasa vardığında (hareket tamam ve bitti), ya da iki hâl arasındaki orta hâlde** ⇒ hareket 'ilk hâsılın ikinci hayizde hâsılı' olamaz, '**birinci hayizden ikinciye intikal**' olmalı; sükûn 'intikal ademi' olur ⇒ **sükûnun vücûdî sıfat olduğu delili tamam olmaz.** **Râzî'nin cevabı başlıyor**: 'hareketin **ardışık hasûller** olduğuna vecihler: **(1)** ilk hayizdeki hâsıl ma'dûm olduğu **ilk anda** cisim **başka hayizde hâsıl olmalı** (hiçbir hayizde hâsıl olmayan cisim muhâl) ⇒ ikinci hayizdeki hâsıl, birincinin **hemen ardından** ⇒ hareket = bitişik hayizlerde ardışık hasûller.'
+- Netice/hüküm: **Hasım (hareket intikaldir) ve Râzî cevabı (ardışık hasûller, cisim hayizsiz kalamaz).**
+- Delil çeşidi: **taksîm + ilke ('hayizsiz cisim yok')**; (T) burhânî biçim, öncül bağımlı (hayizin varlığı, tevâli).
+- Mevzuya bağı: **Fasıl I §3** (hudûs tarafı ezelî sükûn ile mücadele): hareket-sükûn tefsiri bu delilin taşıyıcısı; **Risale hareket tanımına girmez.** Cevher-i ferd bahsi **c(?) 'cüz-i lâ yetecezzâ bahsi'** (⊬ hangi cilt); bu bahis bulununca çapraz kontrol.
+- Doğan sual: —
+
+## c4 p290
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Râzî cevabı devam (hareket = ardışık hasûller)**: **(2)** 'hareket birinci hayizden ikinciye intikaldir' derseniz: **birinciden çıktı fakat ikinciye ulaşmadığı hâlde cisim bir hayizde mi, değil mi?** İkincisi bâtıl (cisim hiçbir hayizde olmadan mevcut muhâl). Birincisi: bir hayizdeydi, o hâlde 'birinciden çıktı' dendiği anda başka hayizde hâsıl olduğu doğrulanır; oysa 'bu hâlde başka hayizde değil' farz edilmişti ⇒ hulf. **(3)** 'Sizin kelâmınız **adem ile vücûd arasında vâsıta** gerektirir': adem→vücûd 'çıkış' hâlinde ne ma'dûm ne mevcut olmalı (ma'dûmsa hâlâ ademde, çıkış değil; mevcutsa çıkış bitti); **bu yalancı hayâl ve fâsit vehimdir, akıl adem-vücûd arasında vâsıta olmadığına kat'î şâhit**; burada da mütehayyiz ya birinci ya ikinci hayizde; 'birinciden ikinciye intikal' **hayâlî vehim, yalan ve fâsit, iltifat edilmez.** **Hüccet 2 (sükûn mevcut sıfat)**: 'sükûn cismin **bir zamandan fazla** aynı hayizde hâsıl olmasıdır; cismiyet ≠ o hayizde hâsıl olma ⇒ aradaki **gayr sâbit**'; iki makam gerekir (p291).
+- Netice/hüküm: **Râzî'nin hükmü: hareket intikal değil ardışık hasûldür; 'adem-vücûd arası vâsıta' ve 'hayizler arası ara hâl' aynı örüntüyle reddedilir.** **Hüccet 2: sükûn = aynı hayizde ≥2 zamanda hasûl.**
+- Delil çeşidi: **taksîm (dilemma) + kıyas (adem-vücûd)**; (T) burhânî biçim, öncül: 'adem-vücûd arasında vâsıta yok'; **kendi tenkidim**: hareketin sürekliliği (Zenon örüntüsü) ile ardışık-hasûl arasındaki gerilim **cevher-i ferd yokluğu** (p289'da Râzî'nin yan notu) ile birlikte tam kapanmış görünmüyor (⊬).
+- Mevzuya bağı: **Fasıl I §3**: 'adem-vücûd arası vâsıta yok' ilkesi c4 p264'teki müessiriyet vâsıtası argümanıyla **aynı ilke**: Râzî tutarlı; Risale iki yerde de aynı ilkeyi kullanırsa dilde birlik gerekir.
+- Doğan sual: **Sürekli hareket (cüzsüz) ↔ ardışık hasûl** çelişkisini Râzî nerede çözüyor? (⊬ 'cüz-i lâ yetecezzâ bahsi'.)
+
+## c4 p291
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 2'nin iki makamı**: **(1) Gayriyet (cismiyet ile o hayizde hâsıl olma ayrı)** — **beş vecih**: **(a)** cismin zâtını, hayizde hâsıl olmasını unutarak tasavvur edebiliriz (ma'lûm ≠ ma'lûm olmayan); **(b)** zât kendi başına kâim, 'o hayizde olmak' mahsûs **nisbet/izâfet**; **(c)** 'cisim cisimdir' tekrar, 'cisim şu hayizde' fâideli ⇒ gayr; **(d)** cisim hayizden çıkınca zât bâkî, hayizdeki hâsıl bâkî değil ⇒ gayr; **(e)** hareket sükûna mütekabil ve cismin zâtına münâfî değil ⇒ gayr. **Râzî'nin atfı**: '**bu delillerde derin bahisler Ahkâmü'l-Vücûd kitabında, 'vücûd mâhiyete zâid mi' bâbında zikredildi**' (⊬ Râzî'nin başka eseri; **bu külliyatta yok**). **(2) Bu gayr mefhûmun sâbit (mevcut) olması**: 'sarîh akıl: hayizde hâsıl olmak, hayizde hâsıl olmamaya nakîz; hayizde hâsıl olmamak **adem-i mahz** ⇒ hayizde hâsıl olma mefhûmu **mevcut**'.
+- Netice/hüküm: **Râzî: sükûn (hayizde hâsıl olma) mevcut sıfattır; delil: hayizde hâsıl olma ≠ hayizde hâsıl olmama (adem).**
+- Delil çeşidi: **kıyas + nakîz (nakîzin ademi)**; (T) burhânî biçim, öncül: hâsıl olma mefhûmu zâid bir şey (öncül bağımlı, c1 M3 'vücûd zâid' çizgisi).
+- Mevzuya bağı: **KRİTİK — Fasıl I §2.2, c1 Mesele 3**: **'zât ≠ o hayizde olma' gayriyeti (a, b, d)** c1 Mesele 3'teki 'vücûd zâid' 12 hücca ile **aynı gayriyet argüman ailesi**: Râzî tutarlı; **⊬ 'Ahkâmü'l-Vücûd' Râzî'nin başka eseri**, kaynakta yoksa atıf işaretli kalır.
+- Doğan sual: —
+
+## c4 p292
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mesele 2: 'her cismin muayyen hayizinden çıkması sahihtir'** — çok delil. **Hüccet 1**: 'hayiz-mahsûs her cisim **tam mâhiyette diğer cisimlerle müsâvi** ⇒ her cismin hayizden çıkması mümkin.' **Beyân**: cisimler 'hacim ve mütehayyiz' olmakta müsâvi; bunun ötesinde farklılık farz edilirse ya **hacmiyetin sıfatlarından**, ya **mevsûflarından**, ya **ikisinden de değil**: **(a)** ilk şık: zerreler tam mâhiyette müsâvi ⇒ bir şeye mümkin olan sıfat ötekilere de mümkin (mütemâsiller lâzımlarda müsâvi); **(b)** ikinci şık: 'mütehayyiz cisim **mahalde hâl olan sıfat**' olurdu ⇒ 'hayûlâ nefyi' mesele­sinde bâtıl (⊬ hangi cilt); **(c)** üçüncü şık: cismin sıfatı da mevsûfu da olmayan şey zâttan **mübâyin**, mâhiyet ihtilâfına sebep olamaz. ⇒ cisimler tam mâhiyette müsâvi.
+- Netice/hüküm: **Râzî'nin hükmü: bütün cisimler tam mâhiyette müsâvi (hacimli/mütehayyiz).** **Bu, kelâmî 'temâsül-i ecsâm' ilkesidir (c1–c2 çizgisi).**
+- Delil çeşidi: **taksîm + ilke ('mütemâsiller lâzımda müsâvi')**; (T) burhânî biçim, öncül: 'cisimler mâhiyette müsâvi' — **öncüle bağlı; İbn Sînâ/filozof çizgisi (hayûlâ-sûret) bunu kabul etmez**; **kendi tenkidim**: 'cismin sıfatı da mevsûfu da olmayan başka bir şey' şıkkının kesilmesi hayûlâ-sûret reddine (başka cilt) bağlı.
+- Mevzuya bağı: **Fasıl I §3**: 'temâsül-i ecsâm' ilkesi ezelî sükûn imtinâ'sının **kilit öncülü**; **Risale'nin ana metni 'cisim' bahsine girmez, öncüle bağlı işaret eder**; padişah kararı (kelâm fiziği ana metne alınmıyor).
+- Doğan sual: 'Hayûlâ nefyi' bahsi hangi ciltte? (Cilt 5–9'da aranacak, okuyarak.)
+
+## c4 p293
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 1 sonu**: 'birine sahih olan ötekine sahih; her cismin hayizinden çıkıp başka cismin hayizinde hâsıl olması sahih.' **Hüccet 2 (hayizler müsâvi ⇒ bütün cisimler harekete kâbil)**: 'fezâ/cihet/hayiz **ancak bu uzayan halâdır**; bu mefhûm bütün hayizlerde müşterek; ihtilâf farz edilirse ihtilâfı sağlayan şey bu ortak mefhûmdan başkadır; **ya bu fezâda hâl ya mahalli ya ikisi de değil**: hâl olursa parçaları müsâvi olduğundan bir tarafa sahih olan öbür tarafa sahih; mahalli olursa fezâ **maddede hâsıl** ⇒ madde kabul edenlere göre cisim; kabul etmeyenlere göre bu bu'dun maddede hâl olması muhâl; üçüncü şık de bâtıl ⇒ fezânın farz edilen parçaları müsâvi.' **İtiraz (hasım)**: 'hayizler farklı: bazısı üstümüzde bazısı altımızda; bazı cisimlerin üst hayizlerde bazılarının alt hayizlerde bulunması vâcib olamaz mı?'
+- Netice/hüküm: **Râzî: hayizler (fezâ) tam mâhiyette müsâvi ⇒ hareket bütün cisimlere sahih.**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim; öncül: 'fezâ müşterek mefhûm' (öncüle bağlı).
+- Mevzuya bağı: **Fasıl I §3**: hasmın **fevk-taht** itirazı p294'te cevaplanıyor.
+- Doğan sual: —
+
+## c4 p294
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 2'ye cevap (fevk-taht itirazı)**: '**bu gâyet uzak: biz fezânın âlemin dışında ve sonsuz olduğuna delil getirdik; âlem hâsıl olunca yeryüzünde duranlara göre bazı hayizler fevk bazısı taht oldu; âlemin dışında fevk-taht yok, tam mâhiyette müteşâbih fezâ vardır.**' **Hüccet 3 (bütün cisimlere hareket sahih)**: 'cisim **basit ya mürekkeb**; mürekkebse bileşimi basitlere ulaşır; her basit şeyin **iki yanı** (sağ/sol) olmalı; **sağ ve sol tabiat tam mâhiyette müsâvi** (yoksa iki yan tam mâhiyette farklı, cisim mürekkeb olurdu — hulf); bir yana sahih olan ötekine sahih; sağı temasa nâil cisim sol tarafı temasa nâil olabilir ve bunun tersi ancak cüzlerin hareketiyle olur ⇒ hareket mümkin.'
+- Netice/hüküm: **Râzî'nin hükmü (kendi kabulü): 'fezâ âlemin dışında ve sonsuzdur' (c(?) 'fezâ bahsinde delil getirildi').** **Bu, Sünnî ana çizgisinin ittifakı değildir** (bazı kelâmcılar 'âlem dışında halâ' demez); **Risale ana metne alınmaz, 'Râzî'ye göre' notu** (c2 p72 'Allah=fezâ reddi' ile birlikte).
+- Delil çeşidi: **taksîm + ilke (basit-mürekkeb)**; (T) burhânî biçim, öncül bağımlı; **kendi tenkidim**: 'basit cismin iki yanı olmalı' öncülü cevher-i ferd reddine bağlı; hasmın 'temas cüzleri' cevabına kapalı değil (⊬).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §5 (tenzih)**: Râzî'nin 'âlem dışında sonsuz fezâ' hükmü Risale'nin **'Allah mekândan münezzeh'** ilkesiyle çelişmez (fezâ mahlûk halâdır) ama **'Allah âlemin dışında'** ifadesini yazdırmaz; c2 K1 F8 ('Allah=fezâ reddi') ile birlikte ders katmanı notu.
+- Doğan sual: **'Fezâ âlemin dışında ve sonsuz' Râzî'nin delili nerede (c(?) 'fezâ/halâ bahsi')?** ⊬ (Cilt 5–9'da aranacak).
+
+## c4 p295
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 3 sonu, Hüccet 4 (ilzâmî)**: 'cisimler ya feleki ya unsurî; **felekiyât filozofların mezhebine göre mutlaka müteharrik**, unsuriyâtın her cüzü müteharrik olabilir ⇒ bütün cisimler harekete kâbil.' **Hüccet 5**: 'bu cisimler hayizlerinden çıkarılınca **tabiatıyla eski hayizlerine dönmez** ⇒ hayizleri **vâcib değil**, çıkarılmaları mümkin ⇒ bu cisimlerin hudûsuna yeter; **temâsül-i ecsâm** ile diğer cisimlere de.' **Râzî'nin notu**: '**mücessime ve Kerrâmiyye ve Allah'ın muayyen hayizde/cihette olduğunu diyen herkes bu dört delili kuramaz; hepsi kendi zât-ı ilâhî kavillerine nakz olur.**' **Mesele 3 (sükûn muhdes) başlıyor**: 'her sükûn zevâli câiz; zevâli câiz olan ezelî olamaz'; her cisim hayizinden çıkabilir ⇒ her sükûn zevâli câiz. **İtiraz (hasım)**: 'sükûn ma'dûm olmaz; **kümûn-zuhûr** (gizli-görünür), veya **bir cisimden başka cisme intikal**, veya **mahalsiz intikal** olabilir.'
+- Netice/hüküm: **Râzî'nin hükmü: (a) cisimlerin hayizleri vâcib değil ⇒ hâdis; (b) hayizde/cihette muayyen Allah diyenler (mücessime, Kerrâmiyye) bu delilleri kuramaz.**
+- Delil çeşidi: **ilzâm + ilke**; (T) burhânî biçim (temâsül öncülüne bağımlı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §5 (tenzih)**: **'Cisimler hayizleri vâcib olmadan hâdis' delili Allah'ın cisim/hayiz-cihet nefyine ayrıca dayanak olur**: aynı delil hem hudûs hem tenzih için çalışır (c2 K1 çizgisi ile **çift yönlü destek**); Risale'de **çapraz atıf** yazılabilir.
+- Doğan sual: —
+
+## c4 p296
+- OCR: orta
+- Okuma: tam (son satırlar p297'ye taşıyor)
+- İçerik: **İtirazın cevabı (2 vecih)**: **(1)** '**sükûnun kastı cismin o hayizde hâsıl olması, bu ancak mahsûs nisbet/izâfettir; cisim hayizden çıkınca bu hâsıl olma bâtıl; izâfetler kalmadığında yok olur, zâil olur — bu zarûrîdir**'; mahalden bağımsız kâim bir mânâ iddia edilse bile cismi o hayizde hâsıl kılan şey… (metin p297'de bitiyor). **(2)** 'kümûn-zuhûr ve arazların intikâli sahih kabul edilse bile **ezelî cisim ezelde ya tek hâl (değişmez) ya tebeddülle nitelenir**; cismin bir hâlde kalmasına **sükûn**, hâlden hâle geçişine **hareket** denir ⇒ delil bunda da yürür.' **Râzî'nin eleştirisi (Râzî-sesli)**: '**Acaip: mütekellimîn bu bâbda uzun uzun konuştu, dört mesele işledi: (1) kümûn-zuhûr batlânı; (2) arazların bir mahalden mahalle intikali (batlânı); (3) [bozuk]; (4) arazın araza kâim olmaması; bu dört mesele yalnız bu suâli defetmek için; oysa bizim takrîrimizle bu suâli def' için hiçbir şeye ihtiyaç yok.**'
+- Netice/hüküm: **Râzî'nin hükmü: kümûn-zuhûr/intikal-ı a'râz itirazı için mütekellimînin dört uzun mesele açmasına ihtiyaç yok; delil ezelî cisim 'tek hâl' ya da 'tebeddül' taksîmiyle zaten yürür.**
+- Delil çeşidi: **taksîm (dilemma)**; (T) burhânî biçim; **kendi tenkidim**: Râzî mütekellimînin uzun kelâm literatürünü 'gereksiz' sayıyor — Sünnî kelâm içi bir yöntem eleştirisi; Risale ana metne **'delil yol seçimini sadeleştirmenin' örneği** olarak alınır (ders katmanı).
+- Mevzuya bağı: **Fasıl I §3**: 'sükûn/hareket' taksîmi **c4 p245'in 'ya müteharrik ya sâkin' delilini kapatan hamle**; ezelî cisim iddiası **iki şıkta da** çürütülür ⇒ Râzî'nin 1. Makâle iki Fasıl + 3. Fasıl'ı bu delilin tam çekirdeğini oluşturuyor.
+- Doğan sual: Râzî'nin 'dört meselenin gereksizliği' iddiasının **kel**âm tarihindeki karşılığı (⊬); 'ezelî cisim tek hâl veya tebeddül' taksîmi kâinat devri/mevcut maddeyi kapsıyor mu? (p297'de devam.)
