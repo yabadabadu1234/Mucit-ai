@@ -2809,3 +2809,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **kıyas + teselsül**; (T) burhânî biçim, öncül bağımlı; **KENDİ TENKİDİM**: **OCR kesin değil ('hâdis ezelde mümteni' mi mümkin mi)**; **eğer 'ezelde hâdisin vücûdu mümteni'' ise, bu Râzî'nin kendi p269 cevabıyla ('hâdislerin sıhhatinin bidâyeti yok') çelişir**; 'mümkin' okunursa mantık kırık. **Bu hüküm kâğıt/edisyon (Sekkâ) karşılaştırması gerektirir (⊬); delilin bu adımı 'tereddütlü okuma' olarak işaretlendi, hüküm bağlanmadı.**
 - Mevzuya bağı: **Fasıl I §3**: kâbiliyet delili Risale'de **kullanılırsa** 'ittisâf imkânı hâdis' adımı **imkânın ezelîliği (c4 p235, p269)** ile birlikte açıkça yazılmalı; şimdilik **'öncüle bağlı, okuma belirsiz'**.
 - Doğan sual: **p312'nin 'hâdis ezelde vücûdu mümteni'/mümkin' ifadesi hangi okumadır?** (Dijital nüsha/başka neşirle çapraz kontrol borcu.)
+
+## c4 p313
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 2'nin iki şerefli matlûbu**: **(1)** '**ecsâm hâdis sıfatlara kâbil olduğu için kadîm olamaz**'; **(2)** '**İlâh (celle ve akdese) kadîm olduğuna göre hâdis sıfatlara kâbil olamaz**' (tenzih sonucu). **Hüccet 3**: 'âlem ecsâmı ezelî olsaydı ezelde **ya sırf içtimâ** (birleşik), **ya sırf iftirak**, **ya bazen içtimâ bazen iftirak**, **ya bazısı içtimâ bazısı iftirak** olurdu. İlk ikisi bâtıl: 'ezelî zâil olmaz' (Mesele 3) ⇒ müctemi' müfterik olamaz, müfterik müctemi' olamaz. Üçüncü: **evveli olmayan hâdisler** (bâtıl). Dördüncü: içtimâ' halinde olan iftirak etmemeli, iftirak halinde olan içtimâ' etmemeli.' **Râzî: 'bu delil de öncekilere döner.'** **Hüccet 4**: 'cisim ezelî olsaydı ezelde muayyen hayizde hâsıl; ⇒ o hayizden çıkışı imtinâ' (ezelî zâil olmaz) ⇒ hareket imtinâ'; oysa hareket câiz ⇒ cisim ezelî değil.' **Beyân**: cisim = 'mikdâr ve hacim'; her hacimli şey belirsiz hayizde değil **muayyen** hayizde (her mevcût kendinde muayyen); muayyen cismin nefsü'l-emirde belirsiz hayizde olması aklen muhâl. **Râzî: 'bu delil de aslında hareket-sükûn delilinin bazı mukaddimelerine dönmeden tam olmaz'** (p314).
+- Netice/hüküm: **Râzî'nin hükmü: Hüccet 3–4 bağımsız delil değil; hareket-sükûn delili (Makâle 1) ile 'ezelî zâil olmaz' ilkesine indirgenir. Hüccet 2'nin ikinci matlûbu Allah'ın hâdis sıfata kâbil olmayışını (tenzîh) verir.**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim, öncül bağımlı (hepsi 'ezelî zâil olmaz' ilkesine mevkûf).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §5**: Hüccet 2'nin ikinci matlûbu **'Allah hâdis sıfata kâbil değil'** Risale'nin tenzih bâbı için **doğrudan atıf yeri** (c2 K1 çizgisiyle birleşir); Râzî **kendisi** hüccet 3–4'ün öncekilerden bağımsız olmadığını yazıyor ⇒ **Risale hudûs delillerini 'kaç delil' diye saymaz, 'tek çekirdek + aile' diye yazar.**
+- Doğan sual: —
+
+## c4 p314
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 4 sonu**: 'delil hakîkatte hareket-sükûn delilinin **bazı mukaddimelerine dönüşle** tamamlanır.' **Hüccet 5**: '**ecsâm mikdârca mütenâhî; mikdârca mütenâhî her şey muhdes.**' **Sugrâ** 'tenâhî-i ebâd' mesele­sinde (⊬ hangi cilt). **Kübrâ**: '**mikdârca mütenâhî olan şeyden daha fazla ve daha az mikdârın vücûdu akılca mümkin ⇒ onun bu muayyen mikdâra tahsisi (fazlasından-azından ayrı) mümkin; her mümkin mürecciḥ ister; mürecciḥ mûcib olamaz (bu mikdârı gerektirmesi başka mikdârı gerektirmesinden evlâ değil) ⇒ müessir fâil-i muhtâr; fâil-i muhtârın fiili hâdis.**' **Hüccet 6**: '**âlem ecsâmı tam mâhiyette mütemâsil; bu ise hâdis olmalarını gerektirir**': mütemâsilden biri farklı bir mukavvim özelliğe sahip olsa 'fark eden şey' ile 'müsâvat eden şey (cismiyet)' ayrı; farklı olan ya cismin sıfatı ya mevsûfu ya ikisi de değil; hepsi bâtıl (Mesele 2'de).
+- Netice/hüküm: **Hüccet 5: 'mütenâhî mikdâr ⇒ tahsis ⇒ muhtâr ⇒ hâdis'. Hüccet 6: 'tam mâhiyette mütemâsil'.**
+- Delil çeşidi: **taksîm + ilke (tahsis ⇒ muhtâr)**; (T) burhânî biçim; öncül bağımlı (mütenâhî ebâd + mürecciḥ mûcib olamaz).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (tahsis/irâde) ve §3**: Hüccet 5'in kübrâsı **'tahsis ⇒ fâil-i muhtâr'** ilkesi **hasmın 'mürecciḥsiz rüçhân' itirazına** (c4 p304 İtiraz 3) doğrudan cevap alanıdır: Risale bu **'mikdâr tahsisi'** argümanını **irâde-tahsis** bâbında kullanmalı; **ama kübrâdaki 'mûcib bu mikdârı gerektirse başka mikdârı da gerektirmez mi' öncülü de 'öncüle bağlı'** (mûcibin nisbeti sabit denilebilir, filozof cevabı).
+- Doğan sual: **'Tenâhî-i ebâd' bahsi (sugrâ) hangi ciltte?** (Cilt 5–9'da okuyarak aranacak.)
+
+## c4 p315
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 6 devam**: 'tam mâhiyette mütemâsil olanların **her biri muayyen hayizde**; **bu hayizde bulunması zâtı gereği olamaz** (yoksa hepsi aynı hayizde hâsıl olurdu; mütemâsiller tam mâhiyette müsâvi, **illette müsâvat ma'lûlde müsâvat gerektirir**) ⇒ **her birinin muayyen hayize tahsisi münfasıl bir sebeple**; **sebep mûcib olamaz** (hayizlere nisbeti eşit; bu cismin bu hayizde olması ötekinden evlâ değil) ⇒ **fâil-i muhtâr** ⇒ fiili hâdis ⇒ cismin hayizde hâsıl olması hâdis ⇒ cisim ondan ayrılmaz ⇒ hâdis.' **Râzî: 'bu delil de derinlemesine bakılınca hareket-sükûn delilinin bazı mukaddimelerine dönmeden tam olmaz.'** **Hüccet 7 başlıyor**: 'ecsâm mâhiyette mütemâsil ⇒ muhdes; ilki geçti; ikincisi: mütemâsil ise **her birinin ta'ayyünü mâhiyete zâid** ⇒ hâdis.'
+- Netice/hüküm: **Hüccet 6: hayize tahsis ⇒ muhtâr ⇒ hâdis; Râzî: delil hareket-sükûn mukaddimelerine dönmeden tam değil.**
+- Delil çeşidi: **taksîm + ilke ('müsâvat ⇒ münfasıl sebep', 'tahsis ⇒ muhtâr')**; (T) burhânî biçim, öncül bağımlı.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: Hüccet 6 da Hüccet 5 gibi **tahsis ⇒ muhtâr**; **'mûcibin nisbeti eşit ⇒ tahsis edemez'** öncülü **bütün irâde-tahsis kapanışının merkezi**; **Râzî'nin nihai hükmü hâlâ ⊬**.
+- Doğan sual: —
+
+## c4 p316
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Hüccet 7 — 'mütemâsil ⇒ ta'ayyün mâhiyete zâid'** dört vecihle: **(1)** mütemâsiller tam mâhiyette müsâvi olduğu hâlde **ta'ayyünlerinde ayrışır**; **'iştirak ettiren' ≠ 'ayrıştıran'** ⇒ ta'ayyünler mâhiyete **zâid**; **(2)** 'bu insan' mefhûmu 'insan' mefhûmunu **içerir** (zarûrî); 'bu insan' 'insan'a zâid bir şey içermeseydi ikisi aynı mefhûm olurdu; oysa 'insan' mefhûmu **iştirâka** mâni değil, 'bu insan' iştirâka **mânidir** ⇒ zâid unsur ta'ayyündür; **(3)** akıl bedîhesi: 'bu insan' = 'bu' + 'insan' **mürekkeb mefhûm**; **(4)** 'insan' mefhûmu başka insanda da hâsıl; 'bu insan' mefhûmu 'insan'ın aynı olsaydı başka insanda da hâsıl ⇒ bu insan o insanın aynı (muhâl) ⇒ ta'ayyün mâhiyete zâid.
+- Netice/hüküm: **Hüccet 7'nin 1. makamı: 'mütemâsil şeylerde ta'ayyün mâhiyete zâid'.**
+- Delil çeşidi: **kavramsal analiz (mefhûm)**; (T) burhânî biçim (mefhûm analizi), öncül: mefhûm-vücûd ayrımı.
+- Mevzuya bağı: **Fasıl I §2.2, c1 M3**: 'mâhiyet-ta'ayyün' ayrımı c1 Mesele 3'teki 'vücûd mâhiyete zâid' ve c2 filozof burhanındaki (K2 F1) 'ortak vücûb + ayrı ta'ayyün ⇒ terkîb' ile **aynı aile**; Râzî tutarlı. **Fakat c2'de aynı ilzâm vâhid vâcibe döndü (p121–132)**; burada cisimler için kullanılıyor — **hasım cevabı: 'ta'ayyün i'tibârî'** (c4 p264 çizgisi).
+- Doğan sual: —
+
+## c4 p317
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 7 — 2. makam ('ta'ayyün zâid ⇒ hâdis')**: 'her cisim **cismiyet + ta'ayyün mürekkebi**; cismiyet ta'ayyünü mu iktizâ eder, ta'ayyün mutlak cismiyeti mi iktizâ eder, ikisi de birbirini iktizâ etmez mi? **(1)** cismiyet ta'ayyünü iktizâ etseydi her cisim o muayyen olur (bâtıl: cisim mâhiyeti çok şahısta ortak); **(2)** ta'ayyün cismiyeti iktizâ etmez: iki vecih: (a) **ta'ayyün nisbî/izâfî hâl, ancak bir mâhiyete âriz olarak vücûda girer; mâhiyetsiz vücûd muhâl; mâhiyet o ta'ayyünün ma'lûlü olsaydı devir**; (b) **bu ta'ayyün öteki ta'ayyünlerle 'ta'ayyün' oluşta müsâvi; cismiyeti iktizâ etse her ta'ayyün cismiyeti iktizâ ederdi ⇒ 'cisimden başka ta'ayyün yok' (bâtıl)** ⇒ **cismiyet-ta'ayyün birleşmesi münfasıl sebeple.**
+- Netice/hüküm: **Hüccet 7: cismiyet ile ta'ayyünün birleşmesi münfasıl sebeple.**
+- Delil çeşidi: **taksîm (üç kısım)**; (T) burhânî biçim, öncül: 'ta'ayyün i'tibârî değil mâhiyete zâid'.
+- Mevzuya bağı: **Fasıl I §6.2 (vahdâniyet) ↔ §3**: **'iki vâcib ⇒ vücûb ortak + ta'ayyün ayrı ⇒ terkîb' burhanı ile bu delil aynı örüntü**; c2 p121–132'de Râzî bu örüntünün **'öncüle bağlı, meşkûk'** olduğunu yazmıştı; **buradaki delil aynı öncüle bağlı** ⇒ **Risale iki yerde de aynı dereceyi yazar**.
+- Doğan sual: —
+
+## c4 p318
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 7 sonu**: 'birleşme münfasıl sebeple; **sebep mûcib olamaz** (mûcibin nisbeti hepsine eşit; eşit nisbette rüçhân/tahsis imkânsız) ⇒ **fâil-i muhtâr** ⇒ fiili hâdis ⇒ ecsâm hâdis.' **Hüccet 8** ('bazıları'): '**ecsâm mikdârca mütenâhî ⇒ kuvvetçe mütenâhî ⇒ bekâ kuvveti mütenâhî ⇒ ezelî olamaz.**' **Beyân**: mikdâr tenâhîsi 'tenâhî-i ebâd' bâbında; 'mikdârca mütenâhî ⇒ kuvvetçe mütenâhî' **hükemânın 'cismânî kuvvet mütenâhî olmalı' sözüne dayanır.** **Râzî'nin hükmü (Râzî-sesli)**: '**hükemânın cismânî kuvvetin mütenâhî olması delili zayıf delildir; zayıflığını çok vecihle gösterdik**; ayrıca hükemâ **âlem ezelî-ebedîdir** diyor — **zâtî kuvvetle değil, illetinin kuvvetiyle**; **illeti cisim ya da cismânî olmaktan münezzeh.**' **Hüccet 9 başlıyor**: '**mâ sivâ'l-vâhid mümkin; her mümkin muhdes ⇒ mâ sivâ'l-vâhid muhdes.**'
+- Netice/hüküm: **Râzî'nin hükmü: Hüccet 8 (mütenâhî kuvvet) zayıf; hükemâ'nın kendi cevabı (ezelîlik illetin kuvvetiyle) delili çürütüyor.** (Râzî yine kendi safındaki bir delili 'zayıf' ilan ediyor, c2 yöntemi.)
+- Delil çeşidi: **kıyas (zayıf)**; (T) cedelî-zayıf (Râzî'nin kendi hükmü: 'zayıf').
+- Mevzuya bağı: **Ders katmanı 'Râzî'nin delil derecelendirmesi' kutusu**: c4 p283 (mütekellimîn delilleri 'zayıf'), c4 p318 (hükemâ delili 'zayıf') **yeni örnekler**; Risale **Hüccet 8'i kullanmaz**.
+- Doğan sual: —
+
+## c4 p319
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 9'un 1. mukaddimesi ('mâ sivâ'l-vâhid mümkin') dört vecihle**: **(1)** iki vâcib farz: vücûbda müşterek, ta'ayyünde ayrı ⇒ her biri **vücûb + ta'ayyün** mürekkebi; vücûb ta'ayyünün illeti ise her vâcib o ta'ayyün, ta'ayyün vücûbun illeti ise vücûb-i bi'z-zât gayr ile ta'lîl (muhâl); biri ötekinin illeti değilse birleşmeleri münfasıl illetin ma'lûlü ⇒ vâcib bi'z-zât vâcib li-gayrihî (muhâl) ⇒ **vâcib bi'z-zât yalnız birdir**; **(2)** '**Ahkâmü'l-Vücûd bâbında gösterdik: ecsâmın vücûdu mâhiyetlerinden gayr ⇒ zâtı gereği mümkin**'; **(3)** ecsâm hayûlâ-sûret mürekkebi, mürekkeb mümkin; hayûlâ ve sûret birbirinden hâlî olamaz ⇒ mümkin; **(4)** cisim muayyen hayizden ayrılamaz, mâhiyeti hayize illet değil ⇒ hayize muhtaç ⇒ mümkin. ⇒ **âlem mümkin bi'z-zât** ⇒ müessir.
+- Netice/hüküm: **Râzî'nin hükmü: âlem mümkin bi'z-zât (dört vecih); mâ sivâ'l-vâhid mümkin.** **1. vecih c2 K2 F1 'filozof burhanı' ile aynı örüntü.**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim, öncül bağımlı; **KENDİ TENKİDİM (tutarlılık)**: **Vecih 1** c2 p117–132'de Râzî'nin kendisinin '**meşkûk**' ilan ettiği burhanın **aynıdır** ('terkîb ⇒ imkân'); vecih 2 c1 M3'ün 'vücûd zâid' kolu; vecih 3 hayûlâ-sûret; vecih 4 hayiz — **dördü de öncüle bağlı; 'mâ sivâ mümkin' çok destekli ama her destek kendi öncülüne bağlı**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §2.2, §3, §6.2**: 'mâ sivâ'l-vâhid mümkin' Risale'nin **hudûs delili için ikinci ayak (imkân yolu)**; **Risale bu yolu 'imkân illet' çizgisiyle (c4 p225–239 kıdem tarafının delilleriyle çakışan) yazar** — **hasmın 'imkân ⇒ müessire muhtaç, hudûs değil' cevabı (c4 p234–239) bu yolu vurur**: Râzî aşağıda **bu vurguya** (mümkin ⇒ hâdis) cevap verecek (Mesele: 'ihtiyacın illeti hudûs mu imkân mı').
+- Doğan sual: **'Ahkâmü'l-Vücûd' kitabı** (Râzî'nin başka eseri) kaynak yoklamasında yok mu? (⊬ envanter.)
+
+## c4 p320
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 9 sonu**: 'ihtiyaç ya **vücûd hâlinde** ya **ademde**; vücûd hâlinde ya **bekâ** ya **hudûs**; bekâ hâli tekvîn-i kâin (muhâl) ⇒ **geriye hudûs veya adem** ⇒ **her muhtâc-ı müessir hâdis** ⇒ mâ sivâ'l-vâhid mümkin, her mümkin hâdis ⇒ mâ sivâ hâdis.' **Râzî: 'bu delilin mukaddimelerindeki kelâm bu kitapta istikṣâ ile geçti; tekrara ihtiyaç yok.'** **Hüccet 10**: '**cisim ezelî olsa kevni de ezelî olur; kevni ya cismiyetin nefsi ya gayri**; ikisi bâtıl: (1) nefsi ise **cismiyetini bilmek zarûrî iken ezelî olduğunu bilmek de zarûrî olurdu (bâtıl)**; (2) hudûsu zâid ise **zâid kadîm ise hâdisin sıfatı kadîm olur; hâdis ise teselsül**.' **Hüccet 11 başlıyor**: 'cisim kadîm olsa **Allah'la kıdemde ortak**; kıdem **sübûtî sıfat** (adem-i sâbıkın nefyi; nefyin nefyi sübût) …' (p321).
+- Netice/hüküm: **Hüccet 9 ve 10 kapandı. Hüccet 9'un son adımı 'ihtiyaç ⇒ hudûs (bekâda tekvîn-i kâin muhâl)' klasik Eş'arî çizgisidir (c4 p274, p297 ile aynı öncül).**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim; öncül: 'bekâda tekvîn-i kâin muhâl' (c4 p274 ile aynı; **Mâtürîdî tekvîn ezelî çizgisi ile ayrışır**).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 (tekvîn ihtilâfı)**: bu öncül üç yerde (p274, p297, p320) tekrarlandı; **Risale'nin ana metni bu öncülü 'Eş'arî çizgisi' diye işaretler**, Mâtürîdî cevabını dipnotta bırakır (⊬ karar padişahın).
+- Doğan sual: —
