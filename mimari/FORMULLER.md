@@ -449,19 +449,27 @@ Mevcûd(Maddiyet) = { maddî, mücerred }     κ = mürekkeb-min-madde-ve-suret(
 Boş bir tasnif olmaması için: ∃x mücerred(x) ispatı şart — aksi hâlde "mücerred"
 kutusu adı var cismi yok bir kelime kalır.
 
-Burhan-ı Tâirü'l-Havâ (İbn Sînâ, "Uçan Adam"):
-  Faraziye: bir insan, hiçbir duyu girdisi almadan (havada, azasına dokunmadan,
-    hiçbir uzvunu hissetmeden) yaratılsın — bedenine dair HER bilgi tahayyülen çıkarılsın.
-  Müşahede: bu hâlde dahi kendi vücûdunu ("ben varım") şüphesiz bilir/hisseder.
-  ⟹ beden(bilgisi) çıkarılırken "ben" şuuru KALIR
-  ⟹ çıkarılan kalırken kalan, çıkarılana ayn olamaz   [Nakzeyn: aynı şey hem
-     mevcûd hem madum olamaz aynı anda, aynı cihetten]
-  ∴ nefs (zât, "ben" şuuru) bedenden/maddeden ayrı bir hakikattir ⟹ mücerreddir
+**Nakz (klasik formülün kendisi de düzeltildi):** "Hiçbir duyu girdisi almadan" ifadesi, ilk yazılışında dış-iç ayrımı yapmadan HER siniri (kalbe giden dahil) kesilmiş bir beden farz ediyordu — bu fiilen imkânsız bir hâldir: iç sinirler (kalbin, teneffüsün otonom idaresi) de kesilirse beden dakikalar içinde ölür, ve ölü bedende hiçbir idrak (dolayısıyla "ben" şuuru da) kalmaz. Böyle kurulunca burhan kendi öncülünü (canlı bir idrak edenin varlığını) baştan imkânsız kılıyordu. Düzeltme: faraziye fiilî bir sinir kesme değil, zihnî/itibarî bir sırayla-bir-kenara-koyma (tek tek şüpheye alma) işlemidir; hiçbir fizyolojik işlev durdurulmaz.
+
+Burhan-ı Tâirü'l-Havâ (İbn Sînâ, "Uçan Adam" — düzeltilmiş, ardışık-tecrit formuyla):
+  Faraziye (tahayyülen, fiilen değil): dış hisler (göz,kulak,dokunma) VE iç hisler
+    (kalp atışı, sıcaklık, açlık) TEK TEK, sırayla, zihnen bir kenara konsun —
+    "bu duyu beni BEN yapan şey değildir" diye şüpheye alınsın. Beden fiilen
+    yaşamaya devam eder; yalnız her duyunun kimliğimle-özdeşliği zihnen sınanır.
+  ∀ his(h): h zihnen bir kenara konurken "ben varım" şuuru KALIR
+    [Nakzeyn: her h için, h çıkarılırken kalan şey, h'nin kendisine ayn olamaz]
+  ⟹ "ben", hiçbir TEK duyuya ayn değildir — çünkü her biri tek tek
+     bir kenara konabilirken "ben" hep sabit kalır
+  İtiraza cevap ("belki 'ben', hislerin TOPLAMıdır"): hisleri "benimki" diye
+    BİRLEŞTİREN öznenin kendisi, birleştirdiği topluluğun bir parçası olamaz
+    [birleştiren ≺ birleştirilen; aksi hâlde kendi kendini birleştirmiş olurdu — devir]
+  ∴ nefs (zât, "ben" şuuru), tek bir duyuya da duyuların toplamına da ayn değildir
+    ⟹ bedenî duyulardan ayrı bir hakikattir ⟹ mücerreddir
 
 ∴ ∃x mücerred(x)  [en az nefs/"ben" şuuru]  — Mevcûd(Maddiyet) dolu bir tasnif
 ```
 
-[Not: bu burhan saf istidlâlîdir, sinirbilime/ampirik zemine muhtaç değildir — PLAN.md'nin "burhânîleştirme stratejisi 5"i, tam işlenişi Fasıl III madde 13'e (Ruhun bekası) aittir; burada yalnız Burhan(çeşit)'in İllet eksenini kurmaya yetecek asgarî hâliyle, erken getirilmiştir]
+[Not: bu burhan saf istidlâlîdir, sinirbilime/ampirik zemine muhtaç değildir — hiçbir fizyolojik iddia (sinir kesilmesi, ölüm) taşımaz, yalnız zihnî bir tecrit sırasıdır. PLAN.md'nin "burhânîleştirme stratejisi 5"i, tam işlenişi Fasıl III madde 13'e (Ruhun bekası) aittir; burada yalnız Burhan(çeşit)'in İllet eksenini kurmaya yetecek asgarî hâliyle, erken getirilmiştir. Açık bırakılan bir tartışma: bu burhan, "ben" şuurunun bedenden AYRI bir zât olduğunu, aksi olamayacağını ispatlar; bu "zât"ın ayrıca EBEDÎ olup olmadığı (bekası) ayrı bir burhandır, Fasıl III'te işlenecektir — burhânî çekirdek yalnız mücerrediyet iddiasınadır, beka iddiasına değil]
 
 ### Mücerred(çeşit) — İkinci Kademe
 
