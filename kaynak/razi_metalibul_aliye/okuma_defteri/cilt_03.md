@@ -3097,3 +3097,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **reductio (müreccihsiz tercih; vaad güvenliği)**; (T) cedelî-burhânî biçim. **Not: 2. hüccet ('Allah'tan kubuh olmazsa vaade güven kalmaz') Sünnî çizgi için de önemli; Râzî'nin cevabı 'Allah kelâmının sıdkı ve nass' ile beklenir (p345+).**
 - Mevzuya bağı: **Fasıl I/II/IV (vaad-vaîd ve nübüvvet güvenliği)**: **Risale 'Allah vaadinden dönmez' cümlesini nassla (3:9, 30:6; ⊬ numaralar) yazar**; Mu'tezile'nin 2. hücceti Risale'nin bu cümlesine **destek olarak alınmaz** (aklî hüsn-kubuh öncülü).
 - Doğan sual: Râzî bu 2. hücceti nasıl cevaplıyor?
+
+## c3 p345
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mu'tezile'nin 2. hücceti (devam)**: 'hüsn-kubuh yalnız şeriatla olsa 'belki bazılarına **azap tehdidi edip yapmaz**; **peygamberleri ve melekleri ebedî ateşe, Firavunları ve İblisleri cennetin en yüksek derecelerine** koyar; **mûcizeyi yalancıların eline verir**; peygamber gönderip **Allah'ı ve melekleri sövmeye, zinâ ve hırsızlığa çağırmayı, Allah'a tâzîm ve tâatten alıkoymayı** emreder; **peygamberleri cemâdâta gönderir**, onlara bazı amelleri emretme-nehyetme buyurur; **insanların elini ayağını bağlatıp dağın tepesinden attırır ve 'o saatte Arşın üstüne sıçramayanı Allah ebedî azap eder' der**' — **bunların hepsini caiz görürseniz aklı terk ettiniz, kubhunu kabul ederseniz aklî hüsn-kubhu kabul etmiş olursunuz.'** **3. hüccet**: hüsn-kubhun mânâsı akıllarda yerleşik olmasa şeriatın 'hasen/kabîh' hitabı **anlaşılmaz bir hitap** olurdu; bâtıl. **4. hüccet**: hüsn-kubhun sübûtu şeriata mevkuf ise **devir**: şeriatın sübûtu mûcizenin sıdka delâletine, o da **Allah'ın yalancıya mûcize vermesinin caiz olmadığına** mevkuf; bunun cevazsızlığı şeriata mevkuf olamaz (devir) ⇒ hüsn-kubuh şeriattan önce. 'Bu, Mu'tezile'nin görüşlerinin nakli.'
+- Netice/hüküm: Mu'tezile'nin 2. tür delillerinin 2.–4. hücceti (hasım sesi) tamam; **hasım aktarımı bitti**.
+- Delil çeşidi: **reductio + devir**; (T) cedelî-burhânî biçim. **4. hüccet (mûcize-sıdk-aklî kubuh devri) Sünnî ana çizgi için de önem taşır.**
+- Mevzuya bağı: **KRİTİK — Fasıl II (Nübüvvet)**: **'Allah mûcizeyi yalancıya vermez' güvencesi Risale'nin nübüvvet delilinin öncülü**; Mu'tezile'ye göre aklî kubuhtan gelir; Sünnî çizgide **Allah'ın adeti, va'di ve nassla** temellendirilir (⊬); **Risale bu öncülü nassla ve 'Allah kizbden münezzeh' ile yazar, aklî kubuh şartına dayandırmaz**; Râzî'nin cevabı p351+'da.
+- Doğan sual: Râzî 4. hücceti (devir) nasıl cevaplıyor?
+
+## c3 p346
+- OCR: boş sayfa
+- Okuma: **okunmadı (sayfa boş)**
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p347
+- OCR: kötü (başlık bozuk; dipnot 'Fasıl 24'; içerikten: **Râzî'nin Mu'tezile delillerine cevabı**)
+- Okuma: tam
+- İçerik: **Cevap (Râzî)**: **'darûret iddiası' için iki vecih**. **(1)** 'Her tasdik konu ve yüklem tasavvurundan önce gelir. **'İhsan hasendir'** sözünden kasıt **tabiatın sevdiği, nefsin rağbet ettiği, menfaat sebebi olan** ise doğrudur, biz de bu tefsîrle bilgisinin darûrî olduğunu tartışmayız; **'zulüm kabîhtir'** sözünden kasıt **tabiatın kerih gördüğü, kalbin buğzettiği, elem, gam ve hüzün sebebi** ise yine darûrî; **fakat bu tefsîrle Allah hakkında hüsn-kubuh ispat edilemez**, çünkü **hüsn-kubuh menfaat-mazarrat, maslahat-mefsedet diye tefsîr edilince bunlar Allah'ta muhâl**. **Menfaat-mazarrat dışında bir şeyi kastediyorsanız bu tasavvur bile edilmez, tasdiki hele bedîhî olamaz.**' **Râzî: 'Bu, âkil muhakkikin düşünmesi gereken hak makamdır.'**
+- Netice/hüküm: **Râzî'nin 1. cevabı: hüsn-kubuh = menfaat/mazarrat, bu mânâda darûrî ama Allah'ta muhâl; başka mânâ tasavvur edilemez.**
+- Delil çeşidi: **tanım indirgemesi + 'tasavvursuz tasdik olmaz'**; (T) analitik-cedelî. **[Delil ≠ dava: 'hüsn-kubuh menfaat-mazarrattır' bir tanım tercihi; Mâtürîdî çizgi 'eşyanın kendinde hüsn-kubuh mânâsı' der; Râzî bu mânâyı 'tasavvur edilemez' sayıyor, ispat etmiyor.]**
+- Mevzuya bağı: **KRİTİK — Ehl-i Sünnet içi**: Eş'arî çizgi **tanım indirgemesini kabul eder**, Mâtürîdî çizgi etmez; **Risale iki çizgiyi açıkça yazar, tek çizgiye bağlamaz**; Râzî'nin 'tasavvur edilemez' hükmü **ana metne alınmaz**.
+- Doğan sual: —
+
+## c3 p348
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap 1 devam): 'iyilik ve zulmün **menfaat ve mazarrat gözetmenin ötesinde** bir hüküm taşıdığını iddia ederseniz bu **tasavvur edilmiyor, tasdiki nasıl bedîhî olur**.' **Kapsamlı açıklama**: 'bizim **bizzât matlûb** ve **bizzât mekrûh** şeylerimiz var; her şey başka bir şey için matlûb/mekrûh olamaz (devir/teselsül) ⇒ **bizzât matlûb ve bizzât mekrûh** var; **düşünüp arayınca bizzât matlûb yalnız lezzet ve sürûr yahut elem ve gamın defi; bizzât mekrûh yalnız elem ve gam yahut lezzet ve sürûrun defi**; bu önermeler darûrî. Bilinen veya zannedilen her vasıta **kendi zâtıyla değil, bizzât matlûba götürdüğü için** matlûbtur; buna **bir ikinci önerme**: bizzât mekrûh bir şey bizzât matlûba vesile olabilir, **akıl burada hayrın derecelerini ve mukabeleyi i'tibar eder**: mekrûh o matlûba göre hakir ise **az mekrûha katlanır**.
+- Netice/hüküm: **Râzî'nin 'hüsn-kubuh = vasıta değeri' teorisi** (bizzât matlûb: lezzet/sürûr/elem-def'i; vasıta bunlara götürdüğü için matlûb).
+- Delil çeşidi: **devir/teselsül taksîmi + tanım**; (T) analitik-burhânî biçim. **[Delil ≠ dava: 'bizzât matlûb yalnız lezzet ve elem-def'i' tespiti ampirik-felsefî bir hedonizmdir; başka bir bizzât matlûb (marifet, hak, Allah'ın rızası) ayrıca ispat ister; Râzî bunu 'düşünüp arayınca' gözlemine bırakıyor.]**
+- Mevzuya bağı: **KRİTİK**: **Risale ana metnine hedonist bir 'bizzât matlûb' teorisi (lezzet-sürûr-elem def'i) ALINMAZ**; İslâm'da 'Allah'ın rızası, marifet, kul olma' **nassla** matlûbun kendisidir (⊬); Râzî'nin bu satırı ders katmanında 'Eş'arî tanım indirgemesi' örneği. c3 p290'daki (3) delil ile aynı öncül.
+- Doğan sual: —
+
+## c3 p349
+- OCR: orta
+- Okuma: tam
+- İçerik: **Zulmün elem ve gama iftidâsı yakın ve kâmil olduğundan zulme nefret, kizbe ve abesten nefretten büyüktür**. **Kizbe nefret**: yalan haber duyan bir şey i'tikad eder, çokça şey buna bina eder; yalan çıkınca **bütün çabaları boşa gider, taşıdığı meşakkatler caiz menfaatlerden hâlî kalır, kalbe gam hâsıl olur**; kizb bu yüzden kabîh; zulmün elem-gama iftidâsı kizbden yakın ⇒ **zulmün kubhu kizbden kuvvetli**. **Abesin kubhu**: insan muhtaç yaratıldı, ömrü ihtiyaçları def eden şeylere harcamak zorunda; abesle uğraşırsa **ömrün nâfi şeylere harcanmasını kaçırır**; abesin elem ve gama iftidâsı zulümden uzak ⇒ **abesin kubhu zulüm ve kizbden az**. **İtiraz**: 'zâlim zulmünden, yalancı kizbinden fayda görür; aklı yine kubhuna hükmeder.' **Cevap**: 'zâlim **zulmü hasen desek başkasının da ona zulmedebileceğini** bilir; artık **can, mal, evlâdı** için emin olmaz; zulmü hasen saymanın **elem ve gam kapısını açacağını** bildiği için zulmü kabîh der; kizbde de aynı.' **İhsanın hüsnü**: menfaat ve hayır kapısını açtığı içindir; matlûba götüren matlûbtur.
+- Netice/hüküm: Zulüm, kizb, abes: kubuh dereceleri elem-gama iftidâ yakınlığına göre.
+- Delil çeşidi: **psikolojik-ikna'î analiz**; (T) ikna'î-cedelî.
+- Mevzuya bağı: **Fasıl I/IV (adl, kizb)**: 'zulüm, kizb, abes' sıralaması **Râzî'nin tanım teorisinden çıkıyor; Risale'ye alınmaz**; ders katmanı için 'kubuhun dereceleri' örneği. 
+- Doğan sual: —
+
+## c3 p350
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kral öldürme örneği**: **büyük melikin öldürülmesi dostları için kabîh, düşmanları için hasen**; çünkü nimetin zevâline sebep / âfetlerin zevâline sebep. **Dehrî çöl misalinin cevabı, iki sebep**: (1) ihsan hükmü **hayır ve lezzet kapısını açar**, ihsan bu i'tibarla matlûb; (2) **insan tabiatı mühâkât üzerine yaratılmıştır**: başkasında gördüğünü kendi hakkında farz eder; ağır belâya düşmüş hastayı görünce 'bu bana gelse hâlim ne olurdu' der, kalbi yumuşar: **'cinsî rahmet'**; sonra o belâya düşse başkasının onu kurtarmasını **güzel bulacağını** hayali hükmeder. **Bu, insan rakîk-tabiatlı yaratıldıysa**; **kimi insan katı kalpli, nefsi sert**, tabiatı hiç rahmete meyletmez: **'Büyük melikler arasında öyle birini gördüm ki son derece katıydı, keyfi ancak katl ve işkence seyretmekle geliyordu; işkence seyri arttıkça sevinci ve yüzü açılırdı'** (kişi adı yok, ⊬). [Editör dipnotu: 'ta'zîr fıkıhta kişilerin makamına göre değişir'.]
+- Netice/hüküm: Dehrî çöl misalinin cevabı: ihsanın kaynağı (a) menfaat ümidi, (b) mühâkât ve cinsî rahmet; **darûrî akıl hükmü değil**.
+- Delil çeşidi: **psikolojik açıklama + kişisel gözlem**; (T) ikna'î. **Melik gözlemi Râzî'nin tanıklığıdır, ⊬.**
+- Mevzuya bağı: **Fasıl IV (ahlâk)**: 'merhamet nefsin yaratılışı' cümlesi ders katmanı için değerli ama **Risale nassla ('Allah rahmeti kalplere koydu' türü, ⊬) yazar**; kral gözlemi alınmaz. Editör dipnotu Râzî'ye sayılmadı.
+- Doğan sual: —
+
+## c3 p351
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sonuç**: Mu'tezile'nin hasen-kubuh dediği menfaat-mazarrata döner; **Allah hakkında tahakkuku muhâl ⇒ hasen-kubuh Allah'ta bâtıl**. **2. vecih**: 'bedâhet iddiasının **kizb ve bâtıl** olduğuna kesin deliller': **1. hüccet**: **bedîhî ilimlerde akıllılar ihtilaf edemez**; **bütün filozoflar ve bütün Eş'arîler bu fiillerde hüsn-kubhu inkâr eder** ⇒ bedîhî değil. **Ebü'l-Hüseyn el-Basrî cevabı**: 'büyük cemaatin darûriyâtı inkârı caiz değil; küçük cemaat bazı garazlarla kizb ve darûriyâtı inkâr üzerine ittifak edebilir'. **Râzî'nin karşılığı**: 'Eş'arîlerin avamı ve ehl-i sünnet bu şeylerin hüsn-kubhuna hükmeder, inkâr etmezler; **onlara insanların bu fiiller hakkındaki mezhepleri hatırlatılmadan sorulsa 'ihsan hasen, zulüm kabîh' derler**; Eş'arîlerin reisleri ve mezhebe yardım edenler **az kalabalık**, onların kizb üzerinde ittifakı uzak değil.' **Râzî**: 'Bu söz garip: biz cumhurun **menfaat-mazarrat mânâsında** hüsn-kubhu kabul ettiğini inkâr etmiyoruz; ihtilâfımız **başka mânâda**...'
+- Netice/hüküm: **Râzî: bedîhîlik iddiasını Eş'arîlerin ve filozofların ihtilafıyla çürütüyor; Ebü'l-Hüseyn'in 'küçük topluluk kizbde birleşebilir' cevabının cumhur-avam ayrımı ile boşluğunu gösteriyor.**
+- Delil çeşidi: **ihtilaf delili (bedîhîde ihtilaf olmaz)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK**: bu pasajda 'ehl-i sünnet ve Eş'arî avamı hasen-kubhu kabul eder' cümlesi **Risale'de 'Ehl-i Sünnet aklî hüsn-kubuhu kabul eder' diye ALINMAZ**: Râzî'nin kastı **menfaat-mazarrat mânâsı**; ihtilaf **ayrı mânâda**. Risale bu ayrımı aynen yazar.
+- Doğan sual: —
+
+## c3 p352
+- OCR: orta
+- Okuma: tam
+- İçerik: (Devam): 'bu söz tuhaf, çünkü cumhur-ı halkın bu şeylerin hüsn-kubhuna **faydalı/zararlı olma mânâsında** hükmettiğini biz de kabul ediyoruz; ihtilâfımız **başka bir tefsirde**; **avam halk hasen-kubuhtan menfaat çekme ve mazarratı def'den başkasını anlamaz; hatta Mu'tezile'nin avamı da menfaat-mazarratdan başkasını anlamaz**; **başka bir mânâya hasen-kubuh iddiası ancak Mu'tezile'nin reisleri ve mezhebe yardım edenlerce anlaşılır**; **ehl-i sünnet başka mânâyı inkârda ittifak etti**; **sünnet ehlinin avamının o mânâdan haberi yok**; Mu'tezile'nin avamı da menfaat-mazarratdan başka bir şey tasavvur etmez.' **Ebü'l-Hüseyn de bu kadar kalabalığın yalan iddiada ittifakını mümkün gördüğüne göre sorusu son derece zayıftır.** **2. hüccet (bedâhet iddiasının bâtıllığı)**: 'menfaat çekme/mazarrat def'i mânâsındaki hüsn-kubuh var; **diğer mânâdaki hüsn-kubuhun bunlardan ayrılması bedîhe ile bilinmez**, ancak özel kişilerce ince ve kapalı vecihlerle ortaya çıkar; bu hâlde bedâhet iddiası **mahz kizb ve tezvirdir**. **3. hüccet (başlıyor)**: 'zulüm kabîh' dediğimizde aklımızda zulmün ve kubhun tefsiri hazır olmalı; tasavvursuz tasdik muhâl (devam p353).
+- Netice/hüküm: Râzî: **'başka mânâdaki hüsn-kubuh bedîhî değil; ehl-i sünnet o mânâyı inkârda ittifak etti'** (iddia).
+- Delil çeşidi: **ihtilaf + ayırt edilememe (bedâhet iddiasının çürütülmesi)**; (T) cedelî. **[Delil ≠ dava: 'ehl-i sünnet başka mânâyı inkârda ittifak etti' iddiası Mâtürîdî çizgiyi kapsamıyor; ⊬; Râzî burada 'ehl-i sünnet'i Eş'arî çizgiyle özdeş kullanıyor (kendi tenkidim).]**
+- Mevzuya bağı: **KRİTİK**: Risale **'Ehl-i Sünnet' terimini Râzî'nin burada kullandığı dar (Eş'arî) anlamda kullanmaz**; iki çizgi (Eş'arî/Mâtürîdî) ayrı yazılır. Bu satır **kaynak notu: 'Râzî'ye göre ehl-i sünnet = Eş'arî çizgi'**.
+- Doğan sual: Bu 'ittifak' iddiasının Mâtürîdî kaynaklarla doğrulanması (⊬ borç).
