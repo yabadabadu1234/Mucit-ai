@@ -16,6 +16,8 @@ Bu tasnif icat edilmedi; Aristo'nun İkinci Analitikler'inden (Posterior Analyti
 
 **Dördüncü eksen — hangi illet (İllet çeşidi):** Aristo'nun dört sebebi — mâddiye (maddî), sûriyye (formî/sûret), fâiliye (etken), gâiye (gaye) — bizzat Aristo tarafından kapalı, tüketici olarak ispat edilmiş, İslam felsefesinin de olduğu gibi miras aldığı bir dörtlüdür. Her limmî veya innî burhan, mutlaka bu dörtten birine (veya birkaçına) dayanır.
 
+**Bir nakz ve düzeltme:** İlk yazılışında bu dördü eşit, paralel köşeler olarak sunulmuştu — bu yanlıştı. Mâddiye ve sûriyye yalnız madde+suretten mürekkeb (cismânî) bir mevcûda tatbik edilebilir; mücerred (gayr-i maddî) bir mevcûdun maddesi veya sûreti olamaz (Vâcibü'l-Vücûd(Basitlik) zaten Vâcib'in hiçbir terkip, dolayısıyla madde-suret de taşımadığını ispat etmişti). Dördünü paralel yazmak, örtük bir maddeci önvarsayımdı. Düzeltme (bkz. `izahat/mucerred/genel.md`): önce Mevcûd(Maddiyet)={maddî,mücerred} ayrımı bizzat ispat edildi (Tâirü'l-Havâ burhanıyla, en az bir mücerred — nefs/"ben" şuuru — bulunduğu gösterildi), sonra İllet(çeşit) şöyle şartlandırıldı: `Fâiliye ⊔ Gâiye ⊔ [Maddî(eser) ⋉ (Mâddiye ⊔ Sûriyye)]`. Mâddiye/sûriyye köşeleri artık yalnız, burhanın ele aldığı ESER bizzat maddî olduğunda açılır.
+
 Bu dört eksenin çarpımı, "burhan" diye adlandırılabilecek her şeyi kapsar — çünkü her eksen ayrı ayrı κ+Nakzeyn ile (İllet dörtlüsü hariç, o da kendi klasik ispatıyla) tüketilmiştir. Yeni bir "Burhan-ı X" önerildiğinde, bu dört eksenin bir noktasına düşmek zorundadır; düşmüyorsa, zaten burhan değildir (cedelî, hitâbî veya safsatavî bir başka Tavassut dalına düşer).
 
 ## Nispet(çeşit)'in Nakzının Kapanışı
@@ -26,17 +28,17 @@ Daha önce nakzedilen Nispet(çeşit)'in fâilî ve gaî unsurları Lime.İllet-
 
 Beş (ve devam-ı hudûs, temânu' ile yediye çıkan) burhan tek tek bu tasnife tatbik edilince hiçbiri dışarıda kalmadı:
 
-| Burhan | Sûret | Nisbet-i-Evsat | Alt-tür | İllet |
-|---|---|---|---|---|
-| Burhan-ı İmkân | istikametli | innî | eserden-müessire | fâiliye |
-| Hudûs Delili | istikametli | innî | eserden-müessire | fâiliye |
-| Burhan-ı Tahsis | istikametli | innî | eserden-müessire | fâiliye |
-| Burhan-ı Tesviye | istikametli | innî | eserden-müessire | fâiliye + **sûriyye** |
-| Burhan-ı Temânu' | **hulf** | — | — | (fâiliye'ye varır) |
-| Devir/Teselsül Reddi | **hulf** | — | — | — |
-| Devam-ı Hudûs | **hulf** | — | — | — |
+| Burhan | Sûret | Nisbet-i-Evsat | Alt-tür | İllet | Eserin maddiyeti |
+|---|---|---|---|---|---|
+| Burhan-ı İmkân | istikametli | innî | eserden-müessire | fâiliye | eser (Vâcib) mücerred — mâddiye/sûriyye zaten kapalı |
+| Hudûs Delili | istikametli | innî | eserden-müessire | fâiliye | eser (hudûs) mücerred vasıf |
+| Burhan-ı Tahsis | istikametli | innî | eserden-müessire | fâiliye | eser (tahsis) mücerred vasıf |
+| Burhan-ı Tesviye | istikametli | innî | eserden-müessire | fâiliye + **sûriyye** | eser (göz, kulak) bizzat **maddî** |
+| Burhan-ı Temânu' | **hulf** | — | — | (fâiliye'ye varır) | — |
+| Devir/Teselsül Reddi | **hulf** | — | — | — | — |
+| Devam-ı Hudûs | **hulf** | — | — | — | — |
 
-İki şey dikkat çeker: (1) Burhan-ı Tesviye, İllet-i-Sûriyye köşesini ilk defa doldurur — eserin SÛRETİNİN (tesviyesinin, ölçüsünün) kendisi bir illet-i sûriyyeye işaret ettiği için. (2) İllet-i-Mâddiye hâlâ boştur — risalenin şu ana kadar hiçbir burhanı maddî sebebe dayanmıyor. Bu, tasnifin bir kusuru değildir; tasnif kapalıdır ve bu köşeyi barındırır, yalnız risale henüz o köşeyi doldurmamıştır. İleride maddî-sebep temelli bir burhan bulunursa, tasnife yeni bir eksen açmadan, doğrudan bu köşeye oturur.
+İki şey dikkat çeker: (1) Burhan-ı Tesviye, İllet-i-Sûriyye köşesini ilk defa doldurur — çünkü ele aldığı eser (göz, kulak gibi canlı bir bünye) bizzat maddîdir; diğer üç burhanın eseri (Vâcib'in kendisi, hudûs, tahsis) mücerred bir vasıf olduğu için mâddiye/sûriyye onlara zaten kapalıdır — eksik değil, imkânsızdır. (2) İllet-i-Mâddiye hâlâ boştur: risalenin hiçbir burhanı, eserin taşıyıcı cevherine (maddesine) değil, yalnız sûretine/fâiline/gayesine dayanıyor. Bu, tasnifin bir kusuru değildir; tasnif kapalıdır ve bu köşeyi barındırır, yalnız risale (eseri bizzat maddî olan, üstelik maddesine odaklanan) bir burhanla henüz o köşeyi doldurmamıştır.
 
 **Açık bırakılan bir tartışma (gizlenmez):** İbn Sînâ'nın Burhan-ı Sıddîkîn'i (burhan-ı imkân) bazı sonraki İslam filozofları (özellikle Molla Sadra ve takipçileri) tarafından ne saf limmî ne saf innî sayılmış, üçüncü, müstakil bir "burhan-ı sıddîkîn" türü olarak ayrıca önerilmiştir — çünkü mümkinin kendi hâline değil, doğrudan vücûdun mâhiyetine (Hakk-ı Vücûd, mâhiyet-vücûd ayrımına) bakarak ilerler. Bu risale klasik innî tasnifini benimsemiştir; tartışmayı bilerek saklamaz, yalnız tercihini beyan eder (F 2-Y).
 

@@ -439,6 +439,49 @@ Yer: Mâlum ⊂ Nefis(kuvvet).Müdrike ; Nefis(kuvvet).Muharrike ⊬ (zaruret-is
 
 ---
 
+## Mücerred (Maddî/Manevî Ayrımı — Burhan'ın Ön-Şartı)
+
+**Nakz (F 179):** Önceki `İllet(çeşit) = {mâddiye, sûriyye, fâiliye, gâiye}` formülü (bkz. eski § Burhan) yanlıştı — dört illeti EVRENSEL ve PARALEL saydı; hâlbuki mâddiye ve sûriyye yalnız madde+suretten MÜREKKEB (cismânî) mevcûda tatbik edilebilir, mücerred (gayr-i maddî) bir mevcûda hiç tatbik edilemez (zaten Vâcibü'l-Vücûd(Basitlik) bunu ispat etmişti: Vâcib'de terkip yok, dolayısıyla madde de suret de yok). Fâiliye ve Gâiye ise mücerrede de, maddîye de tatbik edilir. Bu asimetri görülmeden dördü paralel yazmak, örtük bir maddeci (materyalist) önvarsayımdır — her mevcûdun madde+suretten mürekkep olduğunu baştan kabul eder. Düzeltme, önce maddî/mücerred ayrımını bizzat ispat eder, sonra İllet(çeşit)'i buna göre şartlandırır.
+
+```
+Mevcûd(Maddiyet) = { maddî, mücerred }     κ = mürekkeb-min-madde-ve-suret(x)?
+
+Boş bir tasnif olmaması için: ∃x mücerred(x) ispatı şart — aksi hâlde "mücerred"
+kutusu adı var cismi yok bir kelime kalır.
+
+Burhan-ı Tâirü'l-Havâ (İbn Sînâ, "Uçan Adam"):
+  Faraziye: bir insan, hiçbir duyu girdisi almadan (havada, azasına dokunmadan,
+    hiçbir uzvunu hissetmeden) yaratılsın — bedenine dair HER bilgi tahayyülen çıkarılsın.
+  Müşahede: bu hâlde dahi kendi vücûdunu ("ben varım") şüphesiz bilir/hisseder.
+  ⟹ beden(bilgisi) çıkarılırken "ben" şuuru KALIR
+  ⟹ çıkarılan kalırken kalan, çıkarılana ayn olamaz   [Nakzeyn: aynı şey hem
+     mevcûd hem madum olamaz aynı anda, aynı cihetten]
+  ∴ nefs (zât, "ben" şuuru) bedenden/maddeden ayrı bir hakikattir ⟹ mücerreddir
+
+∴ ∃x mücerred(x)  [en az nefs/"ben" şuuru]  — Mevcûd(Maddiyet) dolu bir tasnif
+```
+
+[Not: bu burhan saf istidlâlîdir, sinirbilime/ampirik zemine muhtaç değildir — PLAN.md'nin "burhânîleştirme stratejisi 5"i, tam işlenişi Fasıl III madde 13'e (Ruhun bekası) aittir; burada yalnız Burhan(çeşit)'in İllet eksenini kurmaya yetecek asgarî hâliyle, erken getirilmiştir]
+
+### Mücerred(çeşit) — İkinci Kademe
+
+```
+Mücerred(çeşit) = { nefs, akl-melek, ma'kul-i-sırf }
+  κ₁ = müteallik-bi'l-beden(x)?        evet → nefs           [bir bedeni tedbir/idare eden mücerred]
+  ¬κ₁ ∧ κ₂ = müstakil-vücûd-hâricî(x)? evet → akl-melek       [bedenden müstağni, hâricî müstakil cevher]
+  ¬κ₁ ∧ ¬κ₂                            → ma'kul-i-sırf        [yalnız zihinde, vücûd-i-zihnî: adet, küllî mefhum]
+
+Not (nominalizm beyanı, F 2-Y): "matematik gibi" mevcûdlar (sayı, küllî mefhum) burada
+  ma'kul-i-sırf dalına düşer — müstakil bir CEVHER değil, aklın bir MA'LÛMUdur (Eflatuncu
+  realizm reddedilir, Meşşâî/İbn Sînâcı çizgi benimsenir). "Ruh, melek, cin" ise nefs veya
+  akl-melek dalına düşer; cinin hangi dala düştüğü ihtilaflıdır (bazı ekoller cismânî-latif,
+  bazıları mücerred sayar) — bu ihtilaf saklanmaz, tam tahkiki Fasıl III'e bırakılır (F 2-Y)
+```
+
+İzahat: `izahat/mucerred/genel.md`
+
+---
+
 ## Burhan
 
 ```
@@ -457,27 +500,34 @@ Burhan(Nisbet-i-Evsat) = { limmî, innî }     κ=evsat(had-i-evsat)=illet(fi'l-
   eserden-müessire         ≔ eser(malûm) ⟹ müessir(meçhul)         [duman→ateş]
   müşterek-lazımdan-lazıma ≔ lazım₁(malûm) ⟹ ⋉illet-müşterek ⟹ lazım₂(meçhul)
 
-İllet(çeşit) = { mâddiye, sûriyye, fâiliye, gâiye }     [Aristo, dört-sebep — miras, kapalı]
-  ⋉ her limmî/innî burhan bu dörtten BİRİNE (veya birkaçına) dayanır
-  ⋉ Nispet(fâilî,gaî) ⊳ {fâiliye,gâiye} ; Nispet'te sorulmayan {mâddiye,sûriyye} burada tüketilir
+İllet(çeşit) = Fâiliye ⊔ Gâiye ⊔ [Maddî(eser) ⋉ (Mâddiye ⊔ Sûriyye)]
+  [⊳ Mücerred(Maddiyet) — Fâiliye/Gâiye evrensel (mücerrede de maddîye de tatbik olunur);
+   Mâddiye/Sûriyye yalnız eseri bizzat MADDÎ (madde+suretten mürekkeb) olan burhanlara açıktır,
+   çünkü mücerred bir eserde (mesela bir sıfatta) "maddesi/sûreti" diye bir şey yoktur]
+  ⋉ her limmî/innî burhan, bu şartlı dörtlüden en az BİRİNE dayanır
+  ⋉ Nispet(fâilî,gaî) ⊳ {fâiliye,gâiye} ; Nispet'te sorulmayan {mâddiye,sûriyye}
+    burada, şartıyla birlikte, tüketici olarak yer alır
 
 ∴ Burhan(çeşit) = Sûret × [istikametli: Nisbet-i-Evsat × [innî: alt-tür] × İllet]
   ⟺ₜ  [Sûret ⊢ ikili-Nakzeyn; Nisbet-i-Evsat ⊢ ikili-Nakzeyn; İnnî-alt-tür ⊢ ikili-Nakzeyn;
-        İllet ⊢ dörtlü — Aristo'nun kendi ispatına miras, bu risalenin buluşu değil]
+        İllet ⊢ Maddiyet-şartlı dörtlü — madde/suret'i evrensel değil, cismâniyete
+        mahsus kılarak Mücerred(çeşit)'le tutarlı hâle getirildi]
 
 Dehliz sınaması (risale/fasil_1_vucud burhanları bu tasnife düşüyor mu?):
   Burhan-ı-İmkân     ⊳ istikametli.innî.eserden-müessire.fâiliye
-    [⊬ açık: bazı İslam filozofları (Molla Sadra) Sıddîkîn'i ne limmî ne innî,
+    [eser=Vâcib'in kendisi, mücerred — mâddiye/sûriyye zaten tatbik edilemezdi;
+     ⊬ açık: bazı İslam filozofları (Molla Sadra) Sıddîkîn'i ne limmî ne innî,
      üçüncü müstakil tür sayar — bu risale klasik innî tasnifini benimser, saklamaz]
   Hudûs-Delili       ⊳ istikametli.innî.eserden-müessire.fâiliye
   Burhân-ı-Tahsis    ⊳ istikametli.innî.eserden-müessire.fâiliye
   Burhân-ı-Tesviye   ⊳ istikametli.innî.eserden-müessire.{fâiliye,sûriyye}
-    [ilk defa Sûriyye dolu: eserin SÛRETİ/tesviyesi, illet-i-sûriyyeye işaret eder]
+    [eser=canlı bir bünye (göz,kulak) — bizzat maddîdir, bu yüzden Sûriyye tatbik
+     edilebilir; ilk defa Sûriyye köşesi dolu]
   Burhân-ı-Temânu'   ⊳ hulf
   Devir/Teselsül-reddi ⊳ hulf
   Devam-ı-Hudûs      ⊳ hulf   [faraziye → Nakzeyn ihlâli → red]
-  ∅ (açık): İllet-i-Mâddiye — risalenin hiçbir burhanı şu ana dek maddî sebebe
-    dayanmıyor; tasnifin eksiği değil, risalenin henüz doldurmadığı bir köşedir
+  ∅ (açık): İllet-i-Mâddiye — risalenin hiçbir burhanı şu ana dek maddeye (taşıyıcı
+    cevhere) dayanmıyor, yalnız sûrete; tasnifin eksiği değil, henüz doldurulmamış köşe
 
 Not (Tasavvur(Menşe) ile karıştırılmasın): Tasavvur(Menşe)={hissî,hayalî,vehmî,aklî}
   bir KAVRAMIN kaynağını sorar, bir HÜKMÜN/BURHANIN yapısını değil — kategori ayrı.
@@ -600,6 +650,7 @@ Tasavvur(Menşe) = { hissî, hayalî, vehmî, aklî }
 - Metâlib, Makûlât, Cevher/Araz/Zâtî/İzafî ⊬
 - Vâcibü'l-Vücûd → `izahat/vacibul_vucud/genel.md`
 - Mâlum → `izahat/malum/genel.md`
+- Mücerred (Mevcûd(Maddiyet), Tâirü'l-Havâ, Mücerred(çeşit)) → `izahat/mucerred/genel.md`
 - Burhan (Sûret, Nisbet-i-Evsat, İnnî alt-tür, İllet) → `izahat/burhan/genel.md`
 - Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit), Tasavvur(Menşe), Tasdik(Vücûb/Kemiyet/Keyfiyet), Basitlik(çeşit) ⊬ — temel usul (κ+Nakzeyn+isim+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'de
 
