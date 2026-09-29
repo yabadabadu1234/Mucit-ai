@@ -3169,3 +3169,102 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **ihtilaf + ayırt edilememe (bedâhet iddiasının çürütülmesi)**; (T) cedelî. **[Delil ≠ dava: 'ehl-i sünnet başka mânâyı inkârda ittifak etti' iddiası Mâtürîdî çizgiyi kapsamıyor; ⊬; Râzî burada 'ehl-i sünnet'i Eş'arî çizgiyle özdeş kullanıyor (kendi tenkidim).]**
 - Mevzuya bağı: **KRİTİK**: Risale **'Ehl-i Sünnet' terimini Râzî'nin burada kullandığı dar (Eş'arî) anlamda kullanmaz**; iki çizgi (Eş'arî/Mâtürîdî) ayrı yazılır. Bu satır **kaynak notu: 'Râzî'ye göre ehl-i sünnet = Eş'arî çizgi'**.
 - Doğan sual: Bu 'ittifak' iddiasının Mâtürîdî kaynaklarla doğrulanması (⊬ borç).
+
+## c3 p353
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. hüccet devam): **Ebü'l-Hüseyn el-Basrî 'el-Kader'in 'ivazlar' bâbında zulmün tarifi**: 'şeyhlerimiz: elemler şu şartlarla hasen olur: (1) **müstehak**, (2) **elemden büyük nef' içeren**, (3) **daha büyük zararı defeden**, (4) **nef'/def' zannı olan**, (5) **def' vechinde vâki**, (6) **âdet cereyânı üzerine veya gayrin fiili yerine geçen**; bir elem bu şartlardan birini taşırsa hasen, zulüm olmaz; hepsinden ârî ise zulüm; bu yüzden zulmü **müstehak olmayan, üstün nef'i olmayan, daha büyük zararı defetmeyen, buna zan olmayan, def' vechinde vâki olmayan, gayr yerine geçmeyen zarar** diye tarif ettik.' **Râzî**: bu tarif **altı kayıt** içerir: (1) müstehak olmayan (kısas, ...); (2) üstün nef' içermeyen (Allah'ın hayvanların zebhine izin vermesi, ivazları sebebiyle); (3) daha büyük zararı defeden; (4) zan; **(5) def' vechinde: Zeyd Amr'ı öldürmek isteyince Amr onu savar, Zeyd ölür — Ebû Hâşim: akıllar bunu istihsan eder**; (6) p354'te.
+- Netice/hüküm: **Râzî, Ebü'l-Hüseyn'in zulüm tarifinin 6 kaydını sayıyor** (hasım tarifi).
+- Delil çeşidi: **tarif analizi**; (T) analitik.
+- Mevzuya bağı: p347–352 hattı: **Mu'tezile'nin zulüm mâhiyeti nazarî**, ⇒ **kubhu bedîhî olamaz** (p354'te kural). **Fasıl I (adl)**: zulüm tarifi Risale'de **'hakkı olmayana zarar, Allah'ta muhâl' biçiminde nasslarla**; 6 kayıt alınmaz.
+- Doğan sual: —
+
+## c3 p354
+- OCR: orta
+- Okuma: tam
+- İçerik: **6. kayıt**: 'gayr yerine geçmeyen' — **bir çocuğu karlı yere atan**; çocuğun elemi Allah'ın fiili (ya ibtidâî ya karın soğukluğundan mütevellid); **hasen**, çünkü **atanın fiili yerine geçer**; Allah'ın böyle yapması şeyhlerimize göre kabîh (ivaz gerekli: ivaz atana lâzım, ivaz vâfî değil). **Râzî'nin kuralı**: 'mütekellimler ittifak etti: **aslın ilmi nazarî ise fer'in ilmi darûrî olamaz**; zulmün mâhiyetinin ilmi kubhu için asıl; mâhiyet ilmi **ancak bu mânâ ile hâsıl olur, bunu ince nazarla tahkik ehli tasavvur eder**; asıl nazarî ⇒ 'zulüm kabîh' ilmi bedîhî olamaz ⇒ bedîhî iddiası bâtıl.' **Bedâhet iddiacısı**: 'kastım: **bu mâhiyeti bilen darûrî olarak kubhunu bilir**; cumhurun bilmesi kastı değil.' **Râzî**: 'cumhura hâsıl olmadığını kabul edince kalan: 'mâhiyeti tasavvur eden kubhuna hükmeder' — biz buna **memnû'** diyoruz, ihtilâf da bu.'
+- Netice/hüküm: **Râzî: aslın (zulüm mâhiyeti) nazarî oluşu kubhun bedîhî olmasını engeller; 'tek kişinin iddiası fayda vermez'.**
+- Delil çeşidi: **usûl kuralı (asıl nazarî ⇒ fer' darûrî olamaz)**; (T) analitik-cedelî. **[Delil ≠ dava: 'mâhiyet ilmi nazarî' öncülü Ebü'l-Hüseyn'in tarifini kabul etmeye bağlı; Mu'tezile bunu 'sezgisel' sayar.]**
+- Mevzuya bağı: p347–355; **Risale'de bu usûl kuralı ders katmanında 'usûl' kutusu**; Ebü'l-Hüseyn nakli ⊬.
+- Doğan sual: —
+
+## c3 p355
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. cevap**: 'kullarda hasen-kubuh sabit olsun; **Allah'ta olması nasıl?** 'Zulmü bildik kabîh bildik, diğer i'tibarları bilmesek de ⇒ kubhun illeti zulümdür' ⇒ **'kubhun ilmi zulüm ilmine tekaddüm ediyor, illet zulüm' çıkarımı yanlış**: 'bu **baba** ise **oğul olduğunu bildik**, bunun ilmi ötekinin ilmine devrân eder, oysa iki izâfeden biri ötekinin illeti olamaz (**izâfeler beraberdir, illet ma'lûlden önce**)'; **mâni' de katlin kendisi değildir**. **Hüccetlere cevaplar**: **1. hüccet düşer**: kâdir iki zıda; bir tarafın müreccihsiz sudûru mümkinse **iki sûretten birini hüsne diğerini kubha müreccihsiz tahsis de mümkin**; müreccih gerekiyorsa **kul fiili dâîye mevkuf, dâî Allah'ın fiili, kudret + dâî mecmûu ⇒ kul fiili Allah'ın fiili**; **hayır ve şer Allah'ın fiili** ⇒ 'Allah'tan bazı şeyler kabîh' bâtıl.
+- Netice/hüküm: **Râzî: illet iddiası (zulüm ⇒ kubuh) devrân delilinden çıkmaz; 1. hüccet düşer.**
+- Delil çeşidi: **misal (baba-oğul izâfe) + taksîm**; (T) cedelî. **[Delil ≠ dava: 'hayır ve şer Allah'ın fiili' cümlesi Râzî'nin cebri çizgisidir; Sünnî ana çizgi 'halk Allah'a, kesb kula, şer Allah'a değil fiil/kesb açısından' ayrımı yapar.]**
+- Mevzuya bağı: **KRİTİK — kul fiili**: 'kul fiili = Allah'ın fiili (kudret+dâî mecmûu)' **Risale ana metnine ALINMAZ**; **'hayır ve şer Allah'ın fiili'** dilinde **şer nisbeti** sorunu (Sünnî: 'şer Allah'a nisbet edilmez, halk ve irade edilir') **korunacak**.
+- Doğan sual: —
+
+## c3 p356
+- OCR: orta
+- Okuma: tam
+- İçerik: (1. hüccete cevap devam): 'Allah âlemin hudûsunu belirli vakte müreccihsiz tahsis etti (ispat ettik); her hâdisin vaktini ve her zâtın sıfatını böyle; **bu akla yatarsa bazı hükümleri hüsne bazılarını kubha müreccihsiz tahsis etmek de**.' **2. hücceti cevap**: 'nübüvvetin ve vaad-vaîdin sıhhati **ya aklî hüsn-kubuhun sıhhatine bina** (o zaman hüsn-kubhun sıhhatini vaad-vaîd ve nübüvvetle ispat **aslı fer'le ispat = devir**), **ya bina değil** (o zaman aklî hüsn-kubhun kadhı vaad-vaîdi ve nübüvveti kadh etmez); ilk takdir: devir; ikinci: sahih değil.' **Mu'tezile**: 'delil olarak sahih değilse de **ilzâm** olarak sahih: nübüvvet aklî hüsn-kubuha fer', asılda kadh fer'de kadh.' **Râzî**: 'ilzâma razı olup burhan olmadığını kabul ediyorsanız, bu ilzâm **size de vârid**, iki vecihle':
+- Netice/hüküm: Râzî **2. hüccete cevap**: devir; ilzâm olarak kullanıma karşı **karşı-ilzâm** başlıyor.
+- Delil çeşidi: **devir + karşı ilzâm**; (T) cedelî.
+- Mevzuya bağı: **Fasıl II (nübüvvet)**: **'nübüvvet ancak aklî hüsn-kubuh üzerine bina edilirse devir doğar'**: Risale bu **devirden kaçınır**: nübüvvet delili (mûcize) **kendi mantığıyla** (F 27-B) kurulur.
+- Doğan sual: —
+
+## c3 p357
+- OCR: orta
+- Okuma: tam
+- İçerik: **Karşı-ilzâm (Râzî'den Mu'tezile'ye)**: **(1)** fiil dâîye mevkuf mu? **Mevkufsa** kul fiilinin sudûru dâîye bağlı ⇒ **cebir**, kul fiili Allah'ın fiili, hayır ve şer Allah'tan; **sizin bize ilzâm ettiğiniz size döner**. **Mevkuf değilse** Allah mûcizeyi **hiçbir dâî olmaksızın** yaratabilir ⇒ mûcize sıdka delâlet etmez ⇒ **bütün peygamberlerin nübüvveti kadh edilir; bu ilzâm kuvvetlidir**. **(2)** kul fiillerinin hâlikı Allah ise hayır-şer Allah'tan ⇒ size lâzım; **kul ise kudreti icâda salih ⇒ tüm mûcizelerin hâlikı Allah'tan başkası olabilir ⇒ mûcize Allah'ın tasdik ettiğine delâlet etmez.** 'Bu sözün tamamı, Mu'tezile'nin **'Allah'tan başkası cisim ve hayat yaratmaya kâdir olmaz'** delillerinin zayıflığının beyânıyla tamam olur; cebir-kader bâbında gelecek.' **3. hücceti cevap**: 'şeriat geldiğinde hüsn-kubhu tasdik, **hüsn-kubhun mânâsını tasavvura mevkuf**; bu tasavvur **şeriattan önce akılla bilinir** ⇒ bu hüccet zayıf.' **4. hüccet = 3.'nün aynı, cevap aynı.**
+- Netice/hüküm: Râzî'nin **karşı-ilzâmı**: Mu'tezile'nin nübüvvet ilzâmı **kendi görüşlerine döner** (kul yaratıcıysa mûcize delil olamaz); **3.–4. hüccet zayıf (mânâ tasavvuru akılla)**.
+- Delil çeşidi: **karşı ilzâm (taksîm)**; (T) cedelî-analitik. **[Delil ≠ dava: 'kul fiili yaratıcı ise mûcizenin hâlikı başkası olabilir' Mu'tezile'nin 'Allah dışı yaratıcı' iddiası olmadığı için (Mu'tezile mûcizenin Allah'tan olduğunu söyler) ilzâmın kuvveti tartışmalı; Râzî 'kudretin icâda salih olması' öncülünden götürüyor.]**
+- Mevzuya bağı: **Fasıl II (mûcize-nübüvvet)**: **Risale mûcizenin delil olma şartını (Allah'ın yaratması ve tasdik edici kılması) nassla ve 'Allah halkın tek yaratıcısı' ilkesiyle yazar**; 'kul fiilini yaratmaz' ilkesi Sünnî akidenin (Allah her şeyin yaratıcısı) zâten parçasıdır; **Râzî'nin bu satırı Ehl-i Sünnet ilkesine yakın**, fakat çıkarımı ('kul fiili Allah'ın fiili, hayır-şer Allah'tan') **cebre yakın**.
+- Doğan sual: —
+
+## c3 p358
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Bu, aklî hüsn-kubuh bâbının tamamıdır. **Müsannif (Râzî) (rıdvanullahi aleyh): 'bu bâbın bu kitaptan sonu'**. **'Kitâbü'l-Metâlibi'l-Âliye min'el-ilmi'l-İlâhî'nin 3. cüz'ü tamam; 4. cüz: hudûs ve kıdem, dehr ve ezelin sırları mebâhisi'** (editör/kâtip kolofonu).
+- Netice/hüküm: **Cilt 3'ün metni burada biter; cilt 4 = 'hudûs ve kıdem, dehr ve ezel'**.
+- Delil çeşidi: —
+- Mevzuya bağı: **c3 p20–182 (irâde-tahsis, tekvîn-mükevven p237–238) borçlarının kapanışı cilt 4'te aranacak** (hudûs kitabı).
+- Doğan sual: Cilt 4'ün başında 'hudûs kitabı' irâde-tahsis borcunu kapatıyor mu?
+
+## c3 p359
+- OCR: kötü (fihrist; sayfa numaraları bozuk)
+- Okuma: **kısmî (yalnız fasıl/bâb haritası okundu; sayfa numaraları okunamadı)**
+- İçerik: **Cüz-i Sâlis fihristi**: **sıfat sayısı (sübûtî sıfatlar)**; **1. Bâb: dâî ve sârifler** (F3: hakikat; F4: menfaat, mazarrat, hayr-şer, maslahat-mefsedet; F5: bu bâbın devamı; F6: fiilin dâîye mevkuf olup olmadığı).
+- Netice/hüküm: Yalnız fasıl haritası; **içerik çıkarılmadı**.
+- Delil çeşidi: —
+- Mevzuya bağı: Kitap yapısı; fihristin sayfa numaraları OCR'de okunamadığı için sayfa haritası defterdeki kayıtlardan kurulur.
+- Doğan sual: —
+
+## c3 p360
+- OCR: kötü (fihrist)
+- Okuma: **kısmî (yalnız başlıklar)**
+- İçerik: **Bâb 1 devam**: F7 'fiilin kâdirden ancak dâî hâsıl olunca sudûruna dair deliller'; F8 'dâî hâsıl olunca fiil vâcib, cevaz kalmaz'; F9 'dâîlerin taksîmi'; F10 'dâî: ihtiyaç dâîsi ↔ ihsan dâîsi'; F11 'kulun nasıl fâil olduğu'. **Bâb 2**: kâdir ile mûcib farkı, filozof, mütekellim ve din ehli arasında. **Bâb 3 (ilim)**: F1 'ilim ve idrâkin hakîkati'; F2 'kelâmcıların Allah'ın âlim olduğuna dair delilleri'; F3 'itkân-ihkâm dışında bir yol, kâdir-muhtâr temelinde'.
+- Netice/hüküm: Yalnız fasıl haritası; içerik çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: Kitap yapısı.
+- Doğan sual: —
+
+## c3 p361
+- OCR: kötü (fihrist)
+- Okuma: **kısmî (yalnız başlıklar)**
+- İçerik: **Bâb 3 devam**: F4; F5 'âlim olduğu ispatına fer' meseleler'; F6; F7. **Bâb 4: Allah'ın mürîd olması**: F1 'irâdenin hakîkati'; F2 'lezzet ve elem'. **Bâb 5, 6**: **Bâb 6, Mesele 1 'kelâmın hakîkati'**.
+- Netice/hüküm: Yalnız fasıl haritası.
+- Delil çeşidi: —
+- Mevzuya bağı: Kitap yapısı; **Bâb 5'in konusu (fihristte bozuk) defterdeki kayıtlardan (lezzet/semi'-basar) kurulur.**
+- Doğan sual: —
+
+## c3 p362
+- OCR: kötü (fihrist)
+- Okuma: **kısmî (yalnız başlıklar)**
+- İçerik: **Bâb 8, 9**: 'Sıfatlarla ilgili kelimeler': **F1: hayat, ilim, kudret, irâde, sem', basar, kelâm, bekâ**; **F2: Allah zâtı ile mi bir mânâ ile mi âlim**; **F3: Allah'ın sıfatlarının ihsâsı**; **F4 (tekvîn mükevvenin aynı mı gayrı mı)**; **F5 isimlerin taksîmi**; **F6 Allah'ın hakîm olduğunun ispatı**; **F7 aklî hüsn-kubuh muteber mi**; **F8 'teklîf mâ lâ yutâk vâkidir; öyleyse Allah'ın kulların maslahatlarını gözettiği söylenemez'**; **F9 aklî hüsn-kubhu fesada götüren başka deliller**.
+- Netice/hüküm: Yalnız fasıl haritası; **F8 başlığı Râzî'nin 'takat üstü teklif vâki' hükmünü açıkça teyit eder** (p305 OCR bozuktu; **fihristle doğrulandı**).
+- Delil çeşidi: —
+- Mevzuya bağı: **p305'in başlığı fihristle teyit edildi: 'Teklîf bi-mâ lâ yutâk vâkidir; öyleyse Allah'ın kulların maslahatını gözettiği söylenemez'**. **Bu başlık Fasıl I/IV için ana kaynak: 'Râzî'ye göre teklif-i mâ lâ yutâk vâki' (Ehl-i Sünnet içi ihtilâf notu)**.
+- Doğan sual: —
+
+## c3 p363
+- OCR: kötü (fihrist)
+- Okuma: **kısmî (yalnız başlıklar)**
+- İçerik: **F10 'Mu'tezile'nin aklî hüsn-kubuh sözlerinin hikâyesi'**; **F11 'aklî hüsn-kubuh için dayandıkları vecihlere cevap'**. Fihrist sonu: 'Cüz-i Sâlis fihristi tamam.'
+- Netice/hüküm: Cilt 3 fasıl haritası tamam; içerik çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: Kitap yapısı.
+- Doğan sual: —
