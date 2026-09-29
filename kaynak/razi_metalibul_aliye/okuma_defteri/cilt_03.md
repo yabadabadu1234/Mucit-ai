@@ -2593,3 +2593,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c3 p289
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Yeni bâb (dipnot 'Fasıl 20'): 'Akıl hüsn ve kubhu takdir eder mi (hüsn-kubuh aklîdir)?'** **Râzî'nin hâsılası**: Mu'tezile ve Kerrâmiyye **aklî hüsn-kubhu ispatta** icmâ etmiş; filozoflar ve Cebriyye **inkârda** icmâ etmiş; **'bizce tercih: aklî hüsn-kubuh kullara nisbetle muteberdir, Allah'a nisbetle bâtıldır'.** **Kullar için 3 delil**: (1) şeriat ve nübüvveti bilmeden önce akıllar **ihtiyaç sahibine yardım edeni övmenin hasen, ona kötülük edeni kötülemenin kabîh** olduğunda müttefik (mü'min/kâfir fark etmez); (2) şer'î kubhun mânâsı 'yaparsan cezalanırsın' demek; akıl cezadan sakınmayı gerektirmiyorsa şeriatın onu **vâcib kılması gerekir**, o da aynı soruya döner ⇒ **teselsül (muhâl)** [delil sayfa sonundan p290'a taşıyor].
+- Netice/hüküm: **Râzî: aklî hüsn-kubuh kul fiillerinde muteber (ilk hüküm), Allah fiillerinde bâtıl.**
+- Delil çeşidi: (1) **fıtrî/icmâ-i ukalâ** + (2) **teselsül**; (T) (1) ikna'î-fıtrî, (2) cedelî-analitik.
+- Mevzuya bağı: **KRİTİK — Ehl-i Sünnet içi ihtilâf**: **Eş'arî çizgi 'hüsn-kubuh şer'îdir'**, **Mâtürîdî çizgi 'akıl bazı hüsn-kubhu (Allah hakkında değil, kul fiillerinde) idrâk eder'**; Râzî'nin burada **kul için aklî hüsn-kubhu** kabul etmesi **klasik Eş'arî çizgiden ayrılır**, Mâtürîdî çizgiye yaklaşır (⊬ ayrıca çalışılacak: Râzî'nin 'Muhassal' ve 'Erba'în'deki hâli). **Risale ana metnine 'Ehl-i Sünnet içinde iki çizgi var' notuyla yazılır; tek bir hükümle kapatılmaz.**
+- Doğan sual: Râzî'nin burada Eş'arî çizgiden ayrıldığı iddiası Râzî'nin başka eserlerindeki tavrıyla doğrulanacak (⊬).
+
+## c3 p290
+- OCR: orta-kötü
+- Okuma: tam
+- İçerik: (2. delil sonu): kul aklıyla cezadan sakınmayı gerektiğini bilir mi bilmez mi; biliyorsa **aklî hüsn-kubuh sabit**; bilmiyorsa şeriatın vâcib kılması lâzım, orada da aynı soru ⇒ **teselsül**. **(3) delil**: 'bizce matlûb ve mekrûh var; her matlûb/mekrûh başka şey için matlûb/mekrûh olamaz (teselsül veya devir) ⇒ **bizzât matlûb** ve **bizzât mekrûh** bir şey var; **lezzet ve sürûr bizzât matlûb, elem ve gam bizzât mekrûh**; bu hüküm **salt akılda sabittir, şeriat olsun olmasın**.' **Allah hakkında ispatı muhâl (deliller)**. **1. hüccet**: hasen = nâfi' veya nâfiye götüren; kubuh = zararlı veya zarara götüren; **menfaate rağbet, mazarrattan çekinme ancak ihtiyaç sahibi için akla gelir**; nâfi' bazen kabîhtir (zulüm zâlime nâfi'; zinâ hâlde nâfi'), zararlı bazen hasendir (ibâdet ve tâatte nefsi yormak maldaki zarar).
+- Netice/hüküm: Kul için: lezzet/sürûr bizzât matlûb, elem/gam bizzât mekrûh (akılca); Allah için: hüsn=menfaat tanımı Allah'ta işlemez.
+- Delil çeşidi: **teselsül/devir taksîmi (bizzât matlûb)** + tanım; (T) analitik/burhânî biçim (öncül: 'matlûb–mekrûh var' + 'lezzet=elem tersi' tanımına bağlı).
+- Mevzuya bağı: **Fasıl I 'adl/zulüm'**: 'lezzet bizzât matlûb' öncülü Râzî'nin **lezzet-elem teorisi** (c3 Bâb 5) ile bağlı; ⊬ atıf haritası. **F 27-B**: 'matlûb bizzât' hükmü aklî hüsn tezini ayırt ediyor mu ayrıca test edilmedi.
+- Doğan sual: 'Lezzet bâbı' (Râzî'nin lezzet teorisi) c3'ün neresinde?
+
+## c3 p291
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mu'tezile'nin 'nâfi' kabîh olur' örneklerine (kâdir bâbında geçen) cevap**: zulüm zâlime nâfi' olsa da **âlem düzeninde çok zararlıdır** (zulmü hasen saysak harc ü merc olur, kimse nikâhına güvenemez); **ibâdetler** âhirette büyük fayda getirdiği için hasen; **küçük menfaati büyük menfaat için harcamak** âlem maslahatının aslı (çiftçi tohumu bozar, çok hâsılat için). Hâsıl: **hüsn-kubuh menfaat-mazarrattır**; Râzî: **'bu makam en zor makam'**: hüsn-kubhu menfaat-mazarratla tefsîr ederlerse **Allah hakkında ispat edemezler**, başka şey ararlarsa **eser bulamazlar**. **2. hüccet**: aklî kubuh Allah hakkında muteber olsa **Allah hiçbir kuluna nimet vermiş olmaz**: nimetin nimet olması muhtaç ve iştiyaklı olana; ihtiyaç ve şehvet zarar; **nimet önceki bir zarara eşit bir zararın telâfisidir** ('yarayı açıp sonra tedavi eden', 'bir dinar gasp edip bir dinar veren') ⇒ nimet değil **abes**.
+- Netice/hüküm: Allah hakkında aklî hüsn-kubuh muteber olursa nimet nimet olmaz (Râzî'nin 2. hüccetinin 'lüzum' kısmı).
+- Delil çeşidi: **reductio (lüzum: aklî kubuh ⇒ nimet yok)**; (T) cedelî-analitik. **Öncül: 'nimet ancak önceki ihtiyaç zararına eşit'** — bu, lezzet=elem izâlesi teorisine bağlı [delil ≠ dava riski: Râzî bunu bir sonraki sayfalarda 'ilzam-itiraz' ile savunuyor].
+- Mevzuya bağı: **Fasıl I 'adl/hikmet'**: Sünnî ortak nokta: **Allah'a hiçbir şey vâcib değildir**; Râzî'nin gerekçesi (nimet teorisi) **Risale'ye alınmaz**; Fasıl I'de 'zulmetmez' cümlesi **nassla** (⊬ 4:40 numarası doğrulanacak) kurulmalı, aklî kubuh zorunluluğuyla değil. Bu **kontrol borcu (Fasıl I'i okuyup bakılacak)**.
+- Doğan sual: —
+
+## c3 p292
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. hüccetin sonucu**: aklî kubuh Allah'a muteber olsa **Allah kullarına nimet vermemiş olur, yaptığı her şeyde abes olurdu**; **milletler Allah'ın fiilinde hakîm, kullarına mün'im olduğunda icmâ etti** ⇒ akıl hükmü Allah'a bâtıl. [Dipnot (editör): 3:18 âyeti nakledilmiş.] **Mu'tezile'nin itirazı**: (a) **'şart memnû'**: ihtiyaç ve şehvet neden zarar? (b) zarar ise **Allah'ın yaratmasıyla mı**? İhtiyaç **zâtî lâzım** (dört çift, üç fert gibi); (c) **Allah yarattıysa da fazlasıyla verirse abes değil** ('bir dinarı alıp bin dinar veren abes değil, mün'imdir').
+- Netice/hüküm: Râzî'nin hüccetine 3 itiraz aktarıldı (hasım sesi).
+- Delil çeşidi: **cedelî itiraz (Mu'tezile)**; (T) cedelî.
+- Mevzuya bağı: Fasıl I: **'icmâ-i milel: Allah hakîm ve mün'im' iddiası ⊬** (kaynak ve kapsamı belirsiz; dinî nassla ve akılla ayrı ayrı ele alınmalı).
+- Doğan sual: —
+
+## c3 p293
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevaplar**: (a) **'ihtiyaç ve şehvet zarardır' önermesi darûrîdir**: herkes muhtaç olmayı sevmez, müstağni olmayı sever; **inkâr eden bedîhîyi tartışıyordur**. [Şiir: 'kimseye ihtiyaç duymadan zengin oldum; en yüce ganî şeyden müstağni olandır, şeyle ganî olan değil' ve atasözü 'şeyden müstağnî olman şeyle müstağnî olmandan büyüktür' — şairin adı yok, ⊬.] **Akıllar Allah'ın şehvet ve ihtiyaçtan tenzîhinde ittifak etti; sebep: noksan ve âfet olmaları.** Muhtaç olan bulamazsa elem; bulursa **kemâli o şeyi bulmaya bağlı**; **gayre tevakkuf imkân ve hudûsu gerektirir**. (b) 'İhtiyaç Allah'ın yaratmasıyla mı?': **birinci cevap**: iki insan, biri lehv/şehvetlere **aşırı rağbetli**, diğeri **tabiî nefret** eden; bu ihtisas ya tabîattan ya **fâil-i muhtârdandır**; tabîat ise bahis düşer (bahsin kendisi fâil-i muhtâr varsayımına dayanır); ⇒ Allah birine rağbeti diğerine nefreti ihtisas etti.
+- Netice/hüküm: İhtiyaç/şehvet zarardır (darûrî); ihtiyaç ve şehvet tefâvütü Allah'ın ihtisasıyladır (Râzî'nin 1. cevabı).
+- Delil çeşidi: **darûrî iddia + ihtisas delili (fâil-i muhtâr)**; (T) ikna'î-cedelî; **[dava ≠ delil: 'ihtiyaç zarardır' bedîhî sayılıyor, oysa ihtiyaç lezzetin ön şartı sayılırsa hüküm değişir; Râzî bu itirazı bir sonraki sayfada kendi lezzet teorisiyle kapatıyor]**.
+- Mevzuya bağı: **Fasıl I §8 (ihtisas ⇒ muhtâr)**: burada 'ihtisas ⇒ muhtâr' öncülü aynen; **c3 aporisi geçerli**. Şiir ve atasözü Risale'ye alınmaz.
+- Doğan sual: —
+
+## c3 p294
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap 1'in devamı): yemeklere iştiha aynı: kimi bir yemeğe rağbetli, kimi ondan nefret eder; **bu farklı şehvetler ve rağbetler Allah'ın icâdıyla**. **Bir şeye meyil, rağbet, hırs arttıkça bulmaktan alınan lezzet tam olur**; ⇒ **nimet miktarı = lezzet miktarı = önceki ihtiyaç ve şehvet miktarı**; ihtiyaç zarar; **mîsâvînin mîsâvîsi mîsâvî** ⇒ **hâzır nimet = önceki zarar** ⇒ tamam. **Cevap 2**: hayvan varlığa girmeden önce **mahz adem**, ihtiyaç ve şehvetle vasıflı değildi; Allah îcâd edince **bu ihtiyaç ve şehvetlerle vasıflandı**; Allah'ın hayvan zâtlarını îcâdı bu ihtiyaçları gerektiriyorsa **îcâd bir yönden zarar vermek**.
+- Netice/hüküm: **Lezzet = önceki ihtiyacın miktarı** (Râzî'nin nimet-zarar denkliği teorisi); îcâd ihtiyacı doğurduğu için bir yönüyle zarar.
+- Delil çeşidi: **tanım/eşitlik cebri (lezzet = ihtiyaç) + ihtisas**; (T) analitik-ikna'î. **[Delil ≠ dava: 'lezzet ihtiyaçla orantılı' bir genelleme, ispat değil; aynı öncül 'yaratılmamak nötrdür' (asl-ı adem) ile birleşiyor.]**
+- Mevzuya bağı: **Fasıl I/III (nimet, âhiret lezzeti)**: **KRİTİK**: bu teori **cennet nimetlerinin de 'önceki ihtiyaç kadar' olması** sonucuna götürür; Râzî'nin bu satırdan sonraki tavrı (p295–296) ve Bâb 5 (lezzet) okunmadan **Fasıl III'e uygulanmaz**. Ana metne alınmaz.
+- Doğan sual: Bu teori Fasıl III (Meâd) için ne demek? (c3 lezzet bâbı ile birlikte ele alınacak.)
+
+## c3 p295
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap 2'nin devamı**: 'Allah'ın hayvanları îcâdı ihtiyaçları gerektiriyorsa **îcâd ve tekvîn bir yönüyle zarar**; nimet bu zarar miktarınca ⇒ ilzâm geri döner.' **Cevap 3**: ihtiyaç ve şehvet **vücûdun lâzımı mı değil mi**? Lâzımsa îcâd zararı lâzım kılan şeyi îcâd; değilse zâtta ihtiyaç ve şehvetin varlığı ancak yaratıcının onu yaratmasıyladır ⇒ ilzâm geri döner. **'Allah ihtiyaç kadarından fazlasını verdi' itirazına cevap**: 'o artan miktara **şehvet var mı**? Varsa muhtaçlık aynı; yoksa **menfaat ve lezzet sebebi olamaz**, nimet değil.'
+- Netice/hüküm: **Fazlalık nimet sayılmaz** (şehvetsiz verilen).
+- Delil çeşidi: **taksîm (lâzım/lâzım değil)** + reductio; (T) analitik-cedelî.
+- Mevzuya bağı: p294 ile aynı hat; **F 27-B**: 'fazlası nimet olamaz' hükmü **misalle destekleniyor (p296)**; öncül **'lezzet ancak şehvetten doğar'** — Sünnî düşünce ile çelişebilir; **Risale ana metnine alınmaz**.
+- Doğan sual: —
+
+## c3 p296
+- OCR: orta
+- Okuma: tam
+- İçerik: **Misal**: 'bir köpeğe incili gerdanlık, bir insana kemik atsan **ikisi de nimet olmaz**; tersi (insana inci, köpeğe kemik) **nimet olur** çünkü insan inciyi, köpek kemiği ister': hayvan **iştah duymadığı ve muhtaç olmadığı şeyin** verilmesi nimet olmaz. Öyleyse **fazlalık da şehvet ve ihtiyaç varsa nimet**; bu da nimet miktarını **önceki zarar miktarına eşitler** ⇒ menfaat mazarratla, elem lezzetle, hayır şerle **mukabele** olur; böyle fâil **aklî hüsn-kubuh açısından abes ve mün'im değil**; **icmâ-i ukalâ bâtıl** ⇒ 'akıl Allah fiiline hüsn-kubuh hükmü veremez'. **3. hüccet**: 'yaratma ve teklif **kulların fiillerinin maslahat gözetmesi gerekmediğine** delâlet eder': âlem hâdisse, hudûsun **muayyen vakte ihtisası** ya o vaktin maslahata ihtisasından ya da... (cümle p297'ye taşıyor).
+- Netice/hüküm: **2. hüccet bitti**; 3. hüccet başladı (hudûs vaktinin ihtisası ⇒ maslahat gözetimi gerekmiyor).
+- Delil çeşidi: **misal (inci-kemik)** + reductio; (T) ikna'î. **[Misal mantıksal delil değil, tasvirdir; 'fazlalık nimet olmaz' önermesinin ispatı yoktur.]**
+- Mevzuya bağı: **F 2-Ā / F 27-B**: bu hüccetlerin öncülleri lezzet teorisine bağlı, **Risale'nin nimet/âhiret bahsinde doğrudan kullanılmaz**; 3. hüccet **hudûs ihtisası** kolu **c3 Bâb 4 irâde-tahsis** ile aynı öncüle dayanıyor (cilt 4 hudûs borcu).
+- Doğan sual: 3. hüccetin devamı p297'de (okunacak).
