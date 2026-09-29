@@ -2233,3 +2233,147 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: taksîm + nakl (57:3, 117:2); (T) analitik-hitâbî.
 - Mevzuya bağı: **Fasıl I §6.3 kıdem/beka**: 'kıdem selbî' okuması **c2 p76 ve c1 Mesele 6 ile aynı hatta**; 57:3 (Evvel/Âhir) nass olarak yazılır.
 - Doğan sual: Cilt 3'ün sonraki bâblarında 'kıdem' konusu yeniden açılıyor mu?
+
+## c3 p249
+- OCR: orta-kötü (harekesiz, bazı kelimeler bozuk; anlam okunuyor)
+- Okuma: tam
+- İçerik: p248'den devam: 'Hak bekâsıyla bâkîdir, halk O'nun ibkâsıyla bâkîdir.' **5. isim el-Vâris** (19:40 'yeryüzüne ve üstündekilere biz vâris oluruz'; 57:10 'göklerin ve yerin mirası Allah'ındır'): hakîkî mâlik Allah'tır; bazı şeyleri fazlıyla kullarına mülk kıldı; kul ölünce mülk **hakîkî mâlike döner**; 'vâris olmak' = **halkın fenâsından sonra bâkî olmak** (40:16 'bugün mülk kimin? Bir ve kahhâr Allah'ın'). **6. isim: el-Evvel, el-Âhir, ez-Zâhir, el-Bâtın**: müessir zâtî ve illiyet olarak esere mukaddemdir; müessirden esere inince **Evvel**, esereden müessire çıkınca **Âhir**; eser müessirin vücûduna delâlet ettiği için **Zâhir**; ma'lûlü bilmek illetin **mâhiyetini** bildirmez, ancak vücûduna delâlet eder, mahlûkât zât-ı mahsûsaya delâletten kâsır olduğu için **Bâtın**. Evvel'in delili başlıyor: mevcûdât ya hepsi mümkin, ya hepsi vâcib, ya kısmı mümkin kısmı vâcib.
+- Netice/hüküm: Vâris = kulların fenâsından sonra bâkî kalan hakîkî mâlik; Evvel/Âhir/Zâhir/Bâtın müessir-eser münâsebetinden okunur.
+- Delil çeşidi: lafzî-analitik + nakl; (T) analitik/hitâbî.
+- Mevzuya bağı: Fasıl I isim kataloğu ve §3 illiyet: **'Zâhir: eser delâlet eder / Bâtın: mâhiyet bilinmez'** cümlesi c2 p80–96 (zât-ı mahsûsa cehli) ile aynı hat; Risale'ye 'Râzî'ye göre isim şerhi' diye alınabilir. Dipnotta ayet numaraları OCR'de bozuk; **numaralar ⊬ doğrulanacak**.
+- Doğan sual: —
+
+## c3 p250
+- OCR: orta-kötü
+- Okuma: tam
+- İçerik: **Evvel'in delili (imkân-vücûb taksîmi)**. (1) **Hepsi mümkin olamaz**: mecmû her bir ferdine muhtaç, her ferd mümkin; mümkine muhtaç olan mümkin; mecmû mümkin; her mümkin kendinden **mugâyir bir illete** muhtaç; mecmûdan ve her ferdden mugâyir olan mümkinâttan olamaz. (2) **Hepsi vâcib olamaz**: iki vâcib imkânsızlığı önceden (c2 Kısım 2) ispatlandı. (3) **Kalan: tek vâcib, gerisi mümkin**; vâcib bütün mümkinlerin mebdei, mebde eserden mukaddem ⇒ **Evvel**. **Kelâmcılar (hudûs)**: iftikâr **hâl-i bekâda** muhâl (kâinin tekvîni muhâl); ya hâl-i hudûs ya hâl-i ademde; her ma'sivâ muhdes, muhdesin öncesinde adem var; fâil ademi hâlinde de mevcuttu ⇒ Evvel. **Kısım 3: tenzîh isimleri** başlıyor.
+- Netice/hüküm: Evvel = kendinden başka her şeyden önce mevcut olan (iki yoldan: burhan-ı imkân; hudûs).
+- Delil çeşidi: **burhan-ı imkân (mecmû)**; (T) burhânî biçim, öncüllere bağlı: (a) mecmûun ferdlerden ayrı bir varlık gibi illet istemesi **[dava ≠ delil: 'mecmû mugâyir illete muhtaç' öncülü sonsuz zincir ihtimalini ayrıca çürütmeden kurulmuş]**, (b) iki vâcibin imkânsızlığı c2'ye havale.
+- Mevzuya bağı: **Fasıl I §3** (vâcibin ispatı, teselsül): bu, Fasıl I'in kullandığı burhanın Râzî'deki kısa biçimidir; **F 27-B**: 'mecmû' öncülünün ayırt edip etmediği ayrıca ölçülmeli; hudûs kolu aynı deftere 'hudûs delili (kelâm)' diye yazıldı, cilt 4'te derecesi belli olacak.
+- Doğan sual: 'Mecmû mugâyir illet ister' öncülünün Râzî'de kendi ispatı var mı (cilt 1 imkân bâbı, ⊬ atıf)?
+
+## c3 p251
+- OCR: orta-kötü
+- Okuma: tam
+- İçerik: **Tenzîh isimleri**. **el-Kuddûs** (59:23, 62:1; 'kuds' = tahâret; Beytü'l-Makdis, Hazîretü'l-Kuds, Rûhu'l-Kuds = Cebrîl (a.s.) tebliğde hıyânetten temiz; 2:30 melekler 'seni takdis ederiz'). **es-Selâm** = 'zü's-selâm'; **fark: Kuddûs zâtında, Selâm fiillerinde noksandan münezzeh**. **el-Azîz**: üç mâna: **vücûdu az, ihtiyaç şiddetli, ulaşması zor**; üçü birleşmezse 'azîz' denmez (güneş: eşi yok, menfaati çok, ama ulaşması zor değil ⇒ azîz denmez).
+- Netice/hüküm: Azîz üç mânanın birleşmesidir; Kuddûs ile Selâm zât/fiil ayrımıyla tenzîhtir.
+- Delil çeşidi: lafzî-iştikak + misal; (T) hitâbî/ikna'î (isim şerhi).
+- Mevzuya bağı: Fasıl I/IV isim kataloğunda 'Kuddûs' (zât tenzîhi) ↔ 'Selâm' (fiil tenzîhi) ayrımı alınabilir (kaynak: c3 p251). Cebrîl'in 'Rûhu'l-kuds' yorumu Râzî'nin şerhi.
+- Doğan sual: —
+
+## c3 p252
+- OCR: orta
+- Okuma: tam
+- İçerik: **Azîz'in kemâli**: vücûdu azlıkta **vâhid ve misli muhâl**, menfaatte **her menfaat ondan**, vusûl güçlüğünde **kunhüne ihâta imkânsız, ancak hidâyetiyle bilinir, nimetine şükür kimseye nasip değil**. **el-Cebbâr üç vecih**: (1) **yüce, erişilmez** (cebbâr hurma ağacı; mütekebbir); Hak hakkında **fikirler O'na erişmez, gözler ihâta etmez, akılların izzetinin kunhüne ulaşmaz** ⇒ tenzîh sıfatı; (2) **ıslah edici** ('cebertü'l-kesr'): halkın işlerini bedenlerine ve rûhlarına göre ıslah eder; (3) **cebreden** (cebera's-sultân): **halkı irâdesine icbâr eder, isteseler de istemeseler de; O'nun mülkünde irâde etmediğinden başkası cereyan etmez**. **el-Mütekebbir**: herkesi zâtına nisbetle hakîr görür; bu görüş doğruysa tekebbür haktır.
+- Netice/hüküm: Cebbâr üç mânâlı; üçüncü mânâ Râzî'nin fiil görüşüyle uyumlu (mülkünde irâdesinden başkası olmaz).
+- Delil çeşidi: lafzî-iştikak; (T) hitâbî/ikna'î.
+- Mevzuya bağı: **Kul fiili (c3 p60, 73 hattı)**: 3. vecih 'icbâr' Râzî'nin 'mudtarr/dâî yaratılır' çizgisine yakın okunur; **Sünnî ana çizgide (kesb/irâde-i cüz'iyye) ayrı ele alınır; Risale ana metnine alınmaz, 'Râzî'ye göre' notu**. Kâmûs 1–2. vecih tenzîh olarak alınabilir.
+- Doğan sual: Cebbâr'ın 3. vechinin klasik şerhlerdeki yeri (⊬ borç).
+
+## c3 p253
+- OCR: orta
+- Okuma: tam
+- İçerik: Mütekebbir devam: görüş doğruysa (Allah) tekebbür **hak ve kemâl**, yalansa **mezmûm**; hadîs-i kudsî (Peygamber (s.a.v.) Allah'tan nakleder): **'Kibriyâ ridâmdır, azamet izârımdır; kim biriyle bana çekişirse onu ateşe atarım'** ⇒ tekebbür Allah hakkında **medih ve kemâl**, halk hakkında **noksan**. (Hadisin isnadı defterde ⊬; dipnotta 'isnâd' yazılmış, kaynak kitap belirtilmemiş.) **7. isim: el-Alî, el-Kebîr** (40:12; 13:9; 2:255 'el-Alî el-Azîm'; 17:111; 45:37). **Uluvv iki türlü**: **hissî** (Arş Kürsî'nin, semâ arzın üstünde) yalnız cisimde; Allah cisimlikten münezzeh ⇒ **bu mânâda değil**; **aklî** (58:11 'Allah îman edenlerin ve ilim verilenlerin derecelerini yükseltir'): sıfât-ı kemâlde yükseklik, noksandan uzaklık.
+- Netice/hüküm: 'Alî' = hissî değil **aklî uluvv**; 'kibriyâ' hadîsi tekebbürün Allah hakkında kemâl olduğunu bildirir.
+- Delil çeşidi: nakl (hadis, âyet) + analitik; (T) hitâbî-analitik; hadis **isnadı doğrulanmadı ⊬**.
+- Mevzuya bağı: **Fasıl I §4/§6 (cihet-uluvv)**: 'Alî' isminin **cihet mânâsından arındırılıp kemâl mânâsına çekilmesi** c2 F5 (hayiz-cihet) ile aynı hat; **KRİTİK**: Sünnî akide 'istivâ/uluvv' nasslarında **'uluvv-i mekân' meselesi ayrı ihtilâf konusudur**; Râzî'nin bu okuması **'Râzî'ye göre'** yazılır, **Risale ana metnine alınmadan** nassın kendi lafzıyla ve ana kaynaklarla ayrıca çalışılacak.
+- Doğan sual: Hadîs-i kudsînin tahrîci (Müslim/Ebû Dâvûd/İbn Mâce — **⊬ doğrulanacak**).
+
+## c3 p254
+- OCR: orta-kötü
+- Okuma: tam
+- İçerik: **Aklî uluvvun delili**: 'kemâlde hiçbir mertebe farz edilemez ki Allah en yüksek derecede olmasın': müessir eserden yüksek; vâcib mümkinden yüksek; mutlak kâmil olmayandan yüksek; **ilim, kudret, hayat, devâm, vücûd, rahmet kemâli** aynı sûrette. **'Fevkıyye'** (6:18 'O kullarının üstünde kâhirdir'; 16:50 'Rablerinden, üstlerinden korkarlar') de bu mânâda; mekân ve cihetle değil. **Alî'nin hâsılı iki vecihten**: ya **şerefte eşi yok** (selb/tenzîh) ya **her şeye kâdir ve her şeyde mutasarrıf** (izâfî sıfat). **el-Kebîr** ailesi: el-Kebîr, el-Mütekebbir, **el-Ekber** (9:72 'Allah'ın rızası en büyüktür'; 29:45 'Allah'ı zikretmek en büyüktür'; 'Allahu ekber').
+- Netice/hüküm: 'Fevkıyye' âyetleri Râzî'de aklî uluvv/kemâl olarak okunur.
+- Delil çeşidi: **kemâl-i mutlak istidlâli (mukayese)**; (T) hitâbî-cedelî (kemâl öncülü ispatsız 'farz edilemez' sözüne dayanır **[dava ≠ delil riski]**).
+- Mevzuya bağı: **KRİTİK — Sünnî akide (fevkıyye/uluvv)**: Râzî'nin te'vîli, nassta **zâhir mânâ üzerinde yürüyen selef çizgisiyle** ayrışır; **Risale ana metnine te'vîl olarak alınmaz**, 'Râzî'ye göre' notu; F 2-Ā: kemâl mukayesesi **F 1-Ğ vecih** ile uyuşuyor (mukayese daima bir vecihle).
+- Doğan sual: Selef-halef ayrımının bu âyetlerdeki temsilcileri (⊬ borç).
+
+## c3 p255
+- OCR: orta-kötü
+- Okuma: tam
+- İçerik: **Kibriyâ** (45:37). **Kebîr iki vecih**: (1) **sağîrin mukabili, mikdarda**; Hak mikdar ve hacimden münezzeh ⇒ bu mânâda değil; (2) **kemâlât derecesinde** ('kavmin kebîri', 'dinde kebîr'). Bu mânâda iki tefsîr: (a) **kâinâtın en kâmili/şereflisi/celîli**; (b) **halk müşâbehetinden kebîr**. Ekber: (a) her mevcûttan büyük; (b) **namazdaki 'Allahu ekber' sözünün hikmeti**: musallî bu mânâyı bilirse namaza girerken hâtırı Allah'tan başkasına takılmaz. **Kibriyâ**: hadiste **kibriyâ ridâ, azamet izâr**; ridânın izârdan üstün olması ⇒ kibriyâ azametten **yüce ve halk vehminden uzak**. **9–10. isimler: el-Vâhid, el-Ehad** (2:163; 112:1).
+- Netice/hüküm: Kebîr/Ekber tenzîhî-kemâl mânâlıdır; kibriyâ azamette üstündür (Râzî'nin hadisten çıkarımı).
+- Delil çeşidi: lafzî-iştikak + hadis çıkarımı; (T) hitâbî/ikna'î (**ridâ-izâr farkından çıkarım Râzî'nin yorumu, delil değil**).
+- Mevzuya bağı: Fasıl I isim kataloğu; 'Allahu ekber' hikmeti **ders katmanı için** güzel bir örnek (namaz-tevhîd bağı), kaynak c3 p255; hadis atfı **⊬**.
+- Doğan sual: —
+
+## c3 p256
+- OCR: orta-kötü (sayfa sonu 'فلما كان وصف' ile kesiliyor; devamı p257)
+- Okuma: tam
+- İçerik: **Vâhid**: ya **zâtında kesretin nefyi** ya **zıd/nidd nefyi**. Birinci tefsîrde üç tarif: (1) **'inkısâm kabul etmeyen şey'** ('mevcud' kaydıyla ma'dûm dışlanır; 'bir adam/bir elbise' kısmet kabul eder; **hakîkî vâhid hiçbir vecihle kabul etmez**); (2) **vaz' ve raf' sahih olmayan** ('elsiz insan' denebilir, parça ref' edilir; Hak **ehadî'z-zât**); (3) **adet olmayan** (adet = iki hâşiyesinin toplamının yarısı olan; ikinin hâşiyeleri 1 ve 3, toplam 4, yarısı 2; birin tek hâşiyesi var ⇒ adet değil). **Cevher-i ferd** kabul edenlere göre hakîkî vâhiddir. **İtiraz**: bu tarif 'en az mikdar' der, bu Allah'ta noksan, muhâl; **cevap**: cevher-i ferdin 'küçük-az' sayılması **başkasının ona temas edip bitişebilmesindendir**; Allah'ta bu yok.
+- Netice/hüküm: Vâhid = kesret/inkısâmı nefyeden; Allah için **ehadiyet-i zât**.
+- Delil çeşidi: taksîm-tarif (analitik); (T) analitik.
+- Mevzuya bağı: **Fasıl I §6.2 vahdâniyet**: 'vâhid' teriminin **kesret nefyi (zâtî vahdet)** ile **zıd/nidd nefyi (tevhîd)** ayrımı c2 Kısım 1↔2 ile aynı hat; Risale 'ehadiyet-i zât' cümlesi için kaynak: c3 p256. Cevher-i ferd atfı Râzî'nin kelâm çerçevesidir; ana metne alınmaz.
+- Doğan sual: —
+
+## c3 p257
+- OCR: orta-kötü
+- Okuma: tam
+- İçerik: p256'nın devamı: cevher-i ferdin 'küçük/hakîr' sayılması temasla büyüyebilmesindendir; bu mânâ Allah'ta muhâl, dolayısıyla Allah küçüklükle vasfedilmez. **Sıfat nefyedenlerin (nufât) iddiası**: 'sıfat ispat eden tevhîd diyemez: zât+çok sıfat = çok şey, tek şey değil; ayrıca vaz'/raf' (kâdir olup âlim olmama) ihtimali doğar, delil bunu iptal edene kadar'. **Bazılarının sözü** (kim olduğu yazılmıyor): 'Allah'a sekiz sıfat ispat eden dokuz ilâh demiş olur; 5:73 'Allah üçün üçüncüsüdür diyenler kâfir oldu'; üçü üç kez söyleyen küfürde daha ileri.' **Vâhid'in 2. tefsîri**: vücûb-i bizzâtte, sonsuz ma'lûmâtı bilmede ve sonsuz mümkinâta kudrette **kimse ona denk değil**. **Nufât**: 'vâhid = kıdem ve ezelîlikte denk yok'; sıfat ispatlayanlar kadîm mevcûtlar ispat ettiler. **Fürû 1**: Allah **zâtında, sıfâtında, fiillerinde vâhid**; zâtı **hissî-mikdârî terkîpten** ve **aklî terkîpten** (cins-fasıl) münezzeh. [Sayfa dipnotu 5:73'ü Katolik teslîsine tatbik eder: **editör dipnotudur, Râzî'ye ait değil.**]
+- Netice/hüküm: **Vahdet 2 tefsir: (1) kesret nefyi, (2) denk/nidd nefyi; üç boyut: zât, sıfat, fiil.** Nufâtın 'sıfat ⇒ kesret ⇒ tevhîd bozulur' itirazı **hasım sesi olarak** aktarıldı; bu sayfada **cevabı görünmüyor** (vâhid'in ikinci tefsîri sıfat-ispatı ile tevhîdi uzlaştıran tanımdır).
+- Delil çeşidi: taksîm + nakl (5:73); (T) cedelî (nufâta karşı), hitâbî (dokuz ilâh argümanı **[delil ≠ dava: 'sıfat sayısı kadar ilâh' iddiası kesret ile ilâhlığın özdeşliğini varsayıyor; sıfat ilâh değildir]**).
+- Mevzuya bağı: **Fasıl I §6.2 ve §10 (sıfat-zât)**: c3 p225–232'deki 'zâta kâim iki sıfat' hattı ile aynı; Risale'de **zât/sıfat/fiil tevhîdi** üçlüsü için kaynak: c3 p257–258. 'Dokuz ilâh' sözü **Risale'ye alınmaz** (kimin sözü belirsiz). Editör dipnotu Râzî'ye sayılmadı.
+- Doğan sual: 'Nufât' ile kastedilen fırka kim (Mu'tezile/Cehmiyye)? Bu sayfa belirtmiyor (⊬).
+
+## c3 p258
+- OCR: orta-kötü
+- Okuma: tam
+- İçerik: **Fiillerinde vâhid** = mümkinâtın **mebdei** yalnız O; başkası hiçbir mümkinin mebdei olamaz. **Tevhîd lafızları**: **el-Ehad, el-Vâhid, el-Vahîd, et-Tevhîd, 'lâ şerîke leh'**. **Ehad ile Vâhid'in 3 farkı**: (1) vâhid **sayının başı** ('vâhid, iki, üç' denir, 'ehad, iki, üç' denmez); (2) **nefiyde ehad umumîdir** ('evde bir kişi yok, iki var' denebilir; 'evde ehad yok' denirse tam nefiy); (3) vâhid her şeye sıfat olur (bir adam, bir elbise); **ispatta 'ehad' yalnız Allah'a** ('ehad adam' denmez); nefiyde başkası için de kullanılır ('kimseyi görmedim'). **Ehad–vâhid ilişkisi Rahmân–Rahîm gibidir**: Rahmân Allah'a has, Rahîm'de ortaklık olur. Bu yüzden 112:1'de 'ehad'da **elif-lâm yok**: hususî nâ't olduğu için ma'rife olup tarife muhtaç değil.
+- Netice/hüküm: 'Ehad' ispatta Allah'a mahsus, 'Vâhid' ortak; lâm-ı ta'rîfin düşmesi bununla izah edilir.
+- Delil çeşidi: lafzî-dil incelemesi; (T) hitâbî/ikna'î (Arap dili kaidesine dayalı **tefsîr yorumu**; delil kuvveti dil vakıasına bağlı, ⊬ nahiv kaynağı gösterilmedi).
+- Mevzuya bağı: Fasıl I/IV isimler: 'Ehad' ve 'Vâhid' ayrımı için kaynak c3 p258 ('Râzî'ye göre', dil incelemesi). Ders katmanı için 'ehad/vâhid farkı' kutusu.
+- Doğan sual: Bu farkın dilcilerdeki (Zeccâc vb.) karşılığı (⊬ borç).
+
+## c3 p259
+- OCR: orta
+- Okuma: tam
+- İçerik: **112:1'de üç isim ve seyr-i sâlikîn (yolcuların) üç makamı**: (1) **mukarrebîn (en yüksek)**: eşyanın mâhiyet ve hakîkatlerine bakar; 'Hak vâcib bizzât, mâsivâ mümkin; mümkin sebebi kesilince **adem-i mahz**' ⇒ 'Allah'tan başka mevcut görmezler'; 'hüve' **mutlak işaret**, işaret edilen tek olduğu için **sıfata muhtaç değil**; (2) **ashâb-ı yemîn**: Hak ile birlikte mevcût gördükleri için kesret hâsıl olur, 'hüve' yetmez, **'Allah'** ile temyiz edilir ('hüve Allah'); (3) **ashâb-ı şimâl (en zayıf)**: Allah'ın birden çok olmasına cevaz verenler; **'ehad'** şirki ibtal ve tevhîdi tasrîh için. **Yeni bahis**: Allah'ın sıfatları **izâfî** (âlim, kâdir, hâlik) veya **selbî** (cisim değil, cevher değil).
+- Netice/hüküm: Üç makam tasnifi Râzî'nin **112:1 yorumudur** (kelime–makam eşlemesi); **delil verilmemiş, işârî tefsir**.
+- Delil çeşidi: **işârî tefsir / tasavvufî yorum**; (T) ikna'î (⊬).
+- Mevzuya bağı: **KRİTİK**: 'mukarrebîn Allah'tan başkasını mevcut görmez' cümlesi **vahdet-i şuhûd/vücûd okumasına açık**; Râzî'nin gerekçesi 'mümkin sebebi kesilince adem' — yani **mümkinin varlığı kendinden değil** anlamı; **bu cümle Risale ana metnine ALINMAZ** ('mertebe iddiası ⊬, delil yok'); mümkinin vücûdunun kendinden olmadığı hükmü zaten Fasıl I §3'te ispat ediliyor.
+- Doğan sual: Makam tasnifinin kaynağı (tefsîr, tasavvuf) — Râzî'nin kendi mi? (⊬).
+
+## c3 p260
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Allah' bütün izâfî sıfatlara, 'ehad' bütün selbî sıfatlara delâlet eder**: 'Allah' = ibâdete müstehak; ibâdete müstehaklık ancak **îcâd ve ibdâda müstakil** olana, o da **tam kudret ve tam hikmet**e sahip olana. 'Ehadiyet' = **hissî ve aklî terkîpten münezzeh** ⇒ cisim ve mütehayyiz değil (her mütehayyiz inkısâm kabul eder) ⇒ **hiçbir şeyde hâl olmaz, hiçbir şeye mahal olmaz**; ehad ise **misli, zıddı, niddi yoktur** (iki vâcib olsa vücûdda ortak, teayyünde ayrı ⇒ her biri iki kayıtla mürekkeb). **İtiraz**: 'ehadiyet' ile 'hakîkat' iki şey, mecmû 'üçüncüsü', 'ehad' değil. **Cevap**: ehadiyet, **yalnız 'hüve' ile ifade edilebilen hakîkatin lâzımıdır**; bu yüzden muhakkikler nezdinde en celîl isim 'hüve Allah'. **'Allah' = bütün mâsivânın Ona iftikârı; 'ehad' = Onun her şeyden istiğnâsı**; ikisi birleşince seyyid.
+- Netice/hüküm: Allah=izâfî, Ehad=selbî sıfat kümesi; ehadiyet hakîkatin lâzımıdır (ayrı üçüncü şey değil).
+- Delil çeşidi: taksîm + **terkîb ⇒ imkân** (filozof tevhîd burhanı biçimi); (T) analitik/cedelî — **iki vâcib delilinin aynı kısmı c2 p117–132'de Râzî'nin kendi itirazlarına konu idi (vücûb ortak/teayyün ayrı ⇒ terkîb; ayırt-etmeme nakzı); burada itirazsız kullanılıyor ⇒ derece 'öncüle bağlı'.**
+- Mevzuya bağı: **Fasıl I §6.2**: aynı öncül; c2 p121–132 uyarısı **burada da geçerli**; 'ehadiyet hakîkatin lâzımı' cevabı, Râzî'nin 'teayyün zâid değil' çizgisiyle uyumlu.
+- Doğan sual: İtiraz kısmında 'teselsül'ün ('sıfat+zât+ehadiyet sonsuz') önü alınmış mı (cevap tek adımlık)?
+
+## c3 p261
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Allah, ehad' 'Allahü's-Samed' ⇒ **seyyid**. **Samed = içi boşluksuz cisim** (lügat); Allah'ta muhâl ⇒ Allah'a **'bütün terkîb vecihlerinden beri'** mânâsı yüklenir; 'ehad' delilini soran: 'çünkü samed'. **Üç fürû**: (1) **'lem yelid'**: velid, şeyin bir cüzünün ayrılıp kendine benzer olmasıdır, cüz kabul eden şey için akla gelir, Allah'ta muhâl; **başka tefsîr**: mûcib bi'z-zât olsa eser doğan gibi olurdu; 'lem yelid' = **te'sîri icâb ve tevlîd tarzında olmaması**. (2) **'lem yûled'**: seyyidlik istiğnâyı gerektirir. (3) **'lem yekün lehû kufüven ehad'**: eşi yok (iki vâcib olsa ortak/ayrı ⇒ terkîb ⇒ seyyid değil). **Fürû 4: 'Vahîd'** (74:11 'beni ve yalnız yarattığımı bırak').
+- Netice/hüküm: 112. sûre tevhîd + tenzîh özetidir (Râzî'nin çözümlemesi): Ehad → Samed → lem yelid → lem yûled → küfüv.
+- Delil çeşidi: tefsîr + terkîb ⇒ imkân; (T) hitâbî-analitik.
+- Mevzuya bağı: **Fasıl I §6/§8 (mûcib-muhtâr)**: 'lem yelid' için **ikinci tefsîr, Allah'ın icâb yoluyla te'sîrini nefyeder**; bu **muhtâr iddiasına Kur'ân'dan destek** olarak okunabilir, ancak **Râzî'nin 'kâdir/mûcib' aporisi (c3 Bâb 2, p20–53) kapanmadığı için** Risale'de **'Râzî'nin 112. sûre yorumu' olarak** yazılır, mûcib nefyi delili sayılmaz. 74:11 'vahîd' tefsîri p262'de.
+- Doğan sual: 'lem yelid'in 2. tefsîri klasik tefsîrlerde var mı (⊬)?
+
+## c3 p262
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vahîd** (74:11): 'vahîden' halin sahibi **Hâlik** ise Vahîd ismi olur; üç tefsîr: (1) **ezelde tek mevcut**; (2) **mülk ve melekûtu tedbîrde müstakil; yaratmada madde, müddet, âlet, udde'ye muhtaç değil**; (3) **kemâl sıfat ve nu'ûtta mütevahhid**. [Hal 'mahlûktan' ise âyet Velîd/mahlûk kişiyi anlatır; bu ihtimal cümlede geçiyor.] **Fürû 5: 'Tevhîd'**: şeyin bir olduğunu **hükmetmek ve bilmek**; 'vahhedtuhu' = vahdâniyetle vasfetmek. **Makâm-ı tevhîd nutku dar eder**: Hak'tan bir haber verince haber veren, haber verilen ve mecmû üç olur; **akıl bilir, nutuk erişmez**. **11. isim es-Samed**: 'samede' kökünden; ihtiyaçlarda kasdedilen. **12. isim el-Bedî'** (2:117): (1) **misli ve benzeri olmayan**; (2) **mübdi' (fâil→müf'il)**: fiilleri **bir defada, önceden madde ve müddet, âlet ve udde olmadan** vâki. **13. isim el-Ganî**.
+- Netice/hüküm: 'Vahîd' üç tefsîrli; tevhîd hem hüküm hem ilim; bedî' = misilsiz + maddeden-müddetten müstağnî îcâd.
+- Delil çeşidi: lafzî-tefsîr; (T) hitâbî.
+- Mevzuya bağı: **Fasıl I 'yaratma'**: 'madde ve müddetsiz îcâd' (bedî' 2. tefsîr) **hudûs kitabının** konusu (c3 p237–238 havalesi); Risale'ye 'Bedî' = mislsiz; yaratmada madde-müddet-âletsiz' cümlesi kaynak c3 p262, **derece: tefsîr, hüküm cilt 4'te**. 'Tevhîd nutku daraltır' cümlesi **işârî, alınmaz**.
+- Doğan sual: 74:11'in hal cümlesinin iki ihtimali için tefsîr geleneği (⊬).
+
+## c3 p263
+- OCR: orta
+- Okuma: tam
+- İçerik: **el-Ganî** (47:38 'Allah ganîdir, siz fakirsiniz'): **vâcib bizzât 'vâcib bi-gayrihî' olamaz**: o gayr farz edilip **kalırsa vâcib bi-gayrihî olmaz**, kalmazsa **vâcib bi-zâtihî olmaz**; ikisi muhâl ⇒ vâcibin gayre ta'alluku yok; her mâsivâ **mâhiyetinde, vücûdunda, sıfatlarında Ona muhtaç**; her ganî O'nun ihsânıyla ganî. **14. isim el-Kayyûm** (3:2 'Allah'tan başka ilâh yok, Hayy ve Kayyûm'; 20:111; Ömer b. Hattâb 'el-Kayyâm' okudu). **Kayyûm = kıyamda mübâlağa**, iki şeyin birleşmesiyle: (a) **kendi zâtıyla kâim** (3:18 'kâimen bi'l-kıst'; her şeyden müstağnî); (b) **gayrini ayakta tutan** (mukavvim). Vâcib vâhid, mâsivâ mümkin ⇒ müessire muhtaç ⇒ Allah **bizzât kâim, her şeyi mukavvim**. **Kâim bizzât** olmanın lâzımları: (1) vâcib vâhid (iki olsa vücûb ortak/ayrı teayyün ⇒ terkîb); (2) mütehayyiz değil.
+- Netice/hüküm: **Ganî (vâcibin gayre ta'allukunun imkânsızlığı) ve Kayyûm (bizzât kâim + mukavvim)**.
+- Delil çeşidi: **taksîm/reductio (ganî delili)**; (T) burhânî-biçim (öncüller: 'kalırsa vâcib bi-gayrihî olmaz; kalmazsa bi-zâtihî olmaz' — zâtî vücûbun zâtî tanımına dayanır, **dairesel değil ama tanımî**).
+- Mevzuya bağı: **Fasıl I §2 (vâcibin gayre ihtiyâcsızlığı)**: bu istidlâl **Fasıl I'de kullanılabilecek kısa biçimdir** (c3 p263 kaynak); 'Ömer okuyuşu' nakli **⊬** (kıraat kaynağı yok).
+- Doğan sual: 'Vâcib bi-gayrihî' kavramının Râzî'nin 'mümkin li-zâtihi vâcib li-gayrihî' (c1) ile bağı.
+
+## c3 p264
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kayyûmiyet lâzımları (devam)**: (2) mütehayyiz her şey inkısâm kabul eder (mikdârî ve aklî: cins-teayyün); (3) **bir mahalde olmaz** (araz/sûret); mahalle muhtaç kayyûm olmaz; (4) **'Bazıları'**: 'ilim = ma'lûmun hakîkatinin âlimde hâzır olması'; kâim bizzât ⇒ hakîkati kendinde hâzır ⇒ **kendini bilir**; zâtı gayrının illeti ⇒ **gayrini bilir**, mertebeler böyle ⇒ **kayyûmiyetten her ma'lûmu bilmesi lâzım gelir** (**filozofların ilim delili biçimi, c3 Bâb 3 ile aynı hat**; Râzî burada 'bazıları' diye aktarıyor, kendi tercihi değil); (5) **hudûs kolu**: mukavvim olan için, ma'sivânın vücûdunu ihdâs hâl-i bekâda muhâl ⇒ ya hudûs ya adem hâlinde ⇒ her mâsivâ muhdes; **kâdir-muhtâr/mûcib** delillerine bağlanır. Sonuç: 'el-Hayyü'l-Kayyûm' **ilâhiyattaki bütün yüce mebâhisi kuşatır**. Kayyûm selbî (istiğnâ, kıyâm) ve izâfî (mukavvim). **İbn Abbâs (nakil): 'Allah'ın en büyük ismi el-Hayyü'l-Kayyûm'**. Kalbi halktan keser; **Ebû Yezîd el-Bistâmî** sözü: 'hasbük…' (sayfa burada kesilir).
+- Netice/hüküm: 'Hayy-Kayyûm' Râzî'de tenzîh + izâfe sıfatı toplamıdır; ilim/hudûs delillerinin kısa biçimi bu ismin lâzımlarıdır.
+- Delil çeşidi: filozof ilim delili ('bazıları') + hudûs delili; (T) analitik-öncüle bağlı; İbn Abbâs nakli **⊬ isnadsız**; Bistâmî sözü tasavvufî nakil ⊬.
+- Mevzuya bağı: **Fasıl I §8 (ilim, irâde)**: 'kâim bizzât ⇒ kendini bilir ⇒ illet ⇒ gayrını bilir' hattı Fasıl I'de zaten vardır; Râzî onu **'bazıları'** diye kendi adına almaması, **derece = aktarılan delil**; ilim bâbındaki 5 suale açıklık (c3 p144) burada da geçerli. 'En büyük isim' rivayeti Risale'ye alınmaz (isnad ⊬).
+- Doğan sual: Bistâmî sözünün devamı p265'te mi?
