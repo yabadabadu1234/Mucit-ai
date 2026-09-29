@@ -3745,3 +3745,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **misal + anlatı**; (T) hitâbî-zayıf.
 - Mevzuya bağı: **KRİTİK — Fasıl III (Mead), Fasıl I §8.3**: **'zâhidler âhirette yemek-nikâh için zühd eder' iddiası Kur'ân'ın 'Allah'ın rızâsı en büyüğüdür' (Tevbe 9/72) öğretisiyle örtüşmez; Risale ana metne almaz ve mead bâbında 'rıdvân en büyük' cümlesini yazar.** **'Nefs âlemine döner, bedenden ayrılınca dâimî saâdet' sistemin ahiret tasavvuru; bedenli haşri nefyeder** — Risale'nin cismânî haşr ilkesiyle (Fasıl III) çelişir; **reddiye bağlamında not**.
 - Doğan sual: **Râzî'nin bu sistemi reddi hangi sayfada (kavil 7 reddi)?** (p417+.)
+
+## c4 p417
+- OCR: orta
+- Okuma: tam
+- İçerik: **Nefs-hayûlâ mitinin son kısmı (aktarım)**: '**nefis cismânî tayyibâtı bulunca büyük kadeh içki içmiş sarhoş gibi olur; bir saat sonra akıl nûru dönünce şarabın kabahat ve rezaletini görür; başka bir cismânî lezzete dalınca sarhoşun gözünü bir an açıp bazı şeyleri görüp duyması, sonra hemen bir kadeh daha alıp eski gafletine dönmesi gibi.**' **Soru 6**: '**bu fâsit-bâtıl terkib ne zamana kadar sürer?**' **Cevap (Zekeriyyâ)**: '**bu hayûlâya âşık nefisler bu aşkla ölürse başka bedene bağlanır, bedenden bedene tekrar eder; bir bedende akıl nûru kuvvetlenip cismânî ilişkilerin 'lezzet sûretinde elemler, rahat süsünde yaralar' olduğunu görünce tabiatı nefret eder; o nefs bu cismâniyetlerden nefretle, o rûhâniyetlere rağbetle ayrılır, bir daha bedene bağlanmaz; bu devir devir sürer, sonunda bütün nefisler bedenlerden ayrılır, terkib çözülür, kıyâmet-i kübrâ kopar; iş ilk hâline döner: nefisler kendi âleminde bedenlere bağlanmadan, hayûlâ nefislerle karışmadan.**'
+- Netice/hüküm: **Aktarım tamam: tenâsüh-benzeri döngü + kıyâmet-i kübrâ ('bedensiz rûhânî son').** **Bu sistem cismânî haşrı, ahiret hesabını, cennet-cehennemi ve tek hayat-imtihan ilkesini nefyeder; Sünnî akideyle bağdaşmaz.**
+- Delil çeşidi: **anlatı/misal**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **KRİTİK — Fasıl III (El-Meâd)**: **'bedenden bedene devir, nihaî rûhânî hâl' cismânî haşrın nefyidir; Risale Fasıl III'te bu öğretiyi 'reddedilen görüş' olarak anar (cismânî haşr delilleri ayrı).** **Ek not: Fasıl II 'peygamberlik' için de bu görüşün iddiası (p418) reddedilmelidir.**
+- Doğan sual: —
+
+## c4 p418
+- OCR: orta
+- Okuma: tam
+- İçerik: **Zekeriyyâ er-Râzî'nin iddiaları (Râzî'nin nakli)**: '**Aristo'dan önceki bütün ilâhî filozoflar bu mezhepteydi; bütün peygamberlerin dinleri ancak bu mezhebe göre doğru olur: çünkü bütün peygamberler ve resûller dünyayı yermek, hallerini çirkin göstermek, ondan sakındırmak için geldi; Allah dünyayı ibtidâen yaratıp ihdâs etseydi yermezdi; yaratıklarını orada yaratıp ona muhtaç kılıp, rağbet ettirip meyil ve aşk sebeplerini koyduktan sonra nasıl nefret ettirir, uzaklaşmayı emreder? Ama nefs cismâniyete aşkla bağlandıysa ve hakîm ilâh bunun elem ve bela sebebi olduğunu bilirse, onlardan sakındırması güzel olur.**' **Misal**: '**'İnsanlara şehvetlerin sevgisi süslendi' (Âl-i İmrân 3/14)**: bazıları süsleyen İblistir dedi; öyleyse İblis başka İblis'e muhtaç ⇒ teselsül; süsleyen Allah ise rahîm-kerîm-hakîm nasıl süslemeye çalışıp sonra sakınmayı emreder? Nefsin hayûlâya aşkı ittifâken olup lâzım hâle gelmişse Allah'ın insanı sakındırması güzel.' **Râzî: 'bu kavlin takrîrinin tamamıdır.'**
+- Netice/hüküm: **Zekeriyyâ er-Râzî'nin iddiaları: (a) Aristo-öncesi ilâhî filozoflar bu mezhepteydi; (b) peygamberlerin dinleri ancak bu mezhebe göre doğru (dünyayı yermeleri delil).** **Bu iddialar Sünnî peygamberlik anlayışına aykırı; Risale ana metne almaz.**
+- Delil çeşidi: **kıyas + tefsir içtihadı (Âl-i İmrân 3/14)**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **KRİTİK — Fasıl II (En-Nübüvve)**: **'peygamberler dünyayı yerdi ⇒ mit doğru' çıkarımı yanlış öncüle dayanır; Kur'ân'ın dünyayı yermesi 'imtihan yurdu ve aldanma uyarısı' bağlamındadır (Risale Fasıl II'de bu ayrım).** **Âl-i İmrân 3/14 'süsleme' tefsiri tartışması Risale'de anılmaz.**
+- Doğan sual: —
+
+## c4 p419
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin hükmü (kavil 7'nin reddi — kendi sesi)**: '**mûcib bi'z-zât diyen filozoflar bu mezhebi inkâr eder: bu, fâil-i muhtâr kâillerinin fer'idir; filozoflar fâil-i muhtârı inkâr ettiğinden bunu inkârları daha şiddetli.**' '**Fâil-i muhtârı isbat edenlerden 'ilâhın fiillerinin insanın maslahatına uygun olması vâcib değil' diyenler bu mezhebe iltifat etmez: bu mezhepte hüccet 'ilâh rahîm-kerîm, öyleyse elem ve zarara yol açan fiil yapmamalı' üzerine; aklın güzel-çirkin dediğinin bâtıl olduğunu, Allah'ın dilediğini yaptığını, dilediğine hükmettiğini söylersek bu kelâm tamamen sâkıt olur.**' '**Mu'tezile ki aklî hüsn-kubuhun Allah'ın fiillerinde ve hükümlerinde cârî olduğunu kabul ettiler: Muhammed b. Zekeriyyâ'nın sözü onlara yöneliktir; ilzâmları onlara lâzımdır; Ebü'l-Kâsım el-Ka'bî ile uzun bir münâzarası var; Ka'bî onun elinden ve teadîl-tecvîz meselelerindeki suâllerinden kurtulamadı.**' '**Bu kadarla yetinelim; bu bahislerin usûlü geçtiği için tekrara gerek yok.**'
+- Netice/hüküm: **Râzî'nin hükmü: 'nefs-hayûlâ kadîm' mitinin kökü aklî hüsn-kubuh; hüsn-kubuh aklî değilse (Râzî ve Eş'arî çizgisi) mit sâkıt; yalnız Mu'tezile'ye ilzâm lâzım.** **Bu, c3 hüsn-kubuh sonucunun ('aklî hüsn-kubuh kullar için muteber, Allah için bâtıl'; 'Allah'a hiçbir şey vâcib değil') teodise kapanışıdır.**
+- Delil çeşidi: **ilke (aklî hüsn-kubuh reddi) + ilzâm**; (T) burhânî biçim (c3'te gösterilmiş öncüle bağlı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3, c3 sonuçları**: **kavil 7'nin (Zekeriyyâ) reddi Râzî'ce 'hüsn-kubuh aklî değil'e bağlı; Risale teodise bâbında bu ilkeyi 'Ehl-i Sünnet çizgisi' diye yazar ve 'Mu'tezile'ye ilzâm' kısmını dipnota bırakır.** **F 27-B: ayırt eder mi** — reddiye Mu'tezile'ye ilzâmda **ayırt ediyor**, ama 'Allah'ın fiili hikmetlidir' Sünnî çizgide de kabul edildiği için **hikmetsiz tahsis şüphesini (p407–408) kapatmıyor**; o şüphenin cevabı hâlâ aranacak.
+- Doğan sual: **Şüphe 1 ('niçin şimdi' abes) için Râzî'nin kendi cevabı nerede?** (p409'da 'nefs-hayûlâ' mit anlatımı içindeydi; cevap p421+ 'hâdis şart' düşünülebilir.)
+
+## c4 p420
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p421
+- OCR: iyi
+- Okuma: tam
+- İçerik: **8. Fasıl: 'tenâsüh üzerine kelâm'**: 'kavim: **bu âlemdeki elemler Allah'ın yaratmasıyla; Allah rahîm ve kullarına nâzır ⇒ bu elemler önceki günahlara karşılık ceza**; 'bu bedenlerde iken günah işlemediklerini görünce anladık ki bu ruhlar başka bedenlerdeydi, orada günaha girdi, azaba müstehak oldu; bu bedenlere nakledildi ve bu elemler ulaştırıldı.' **İlzâm (Râzî)**: '**onların bu geçmiş bedenlerde masiyete girmeleri sabık teklîfe bağlı; teklîf zarardır (ızrâr); bu, hakîm ilâhın zararı ibtidâen ulaştırdığını gerektirir; bu caizse bu hayatta zararı bu 'sebeplere' bağlamadan ulaştırması da neden caiz olmasın? Caiz değilse söyledikleriniz fâsit.**' **Tenâsüh ehli iki kısma ayrıldı** (p422).
+- Netice/hüküm: **Râzî'nin nakli + ilzâmı: tenâsüh 'teklîf zarardır' öncülüyle kendi kendini çürütür (sonsuz erteleme).**
+- Delil çeşidi: **ilzâm (teselsül)**; (T) cedelî-burhânî.
+- Mevzuya bağı: **Fasıl III (Mead), Fasıl I §8.3**: tenâsüh **reddedilen görüş**; **'teklîf zarardır' öncülü Râzî'de kendi c3 çizgisinde tartışmalı (teklîf-i mâ lâ yutâk 'vâki')**: bu ilzâm **tenâsüh sahibine karşı** yapılmıştır, Risale'de 'teklîf zarar mı?' sorusu ayrıca ele alınır (⊬).
+- Doğan sual: —
+
+## c4 p422
+- OCR: orta
+- Okuma: tam
+- İçerik: **Tenâsüh ehlinin iki kısmı**: **(1)** '**kulun ulaşan her zararı bir günaha mesbûk; her günah ızrâr olan teklîfe mesbûk; her biri öteki(ler)den önce, ilk yok**' ⇒ **âlemin kıdemi ve evvelsiz hevâdis** kabulü; **(2)** '**âlemin kıdemini iltizama gerek yok: iki zarardan birine katlanmak gereken bir hâl ittifâk edince akıllıya vâcip olan hafifini seçip büyüğünü defetmek; Allah kulu ilk yarattığında onun her istediği ve arzuladığı şeyi ona mübâh kıldı; bu, başkasını öldürmesine ve malını yağmalamasına izin demek; öteki de aynısını yapar; büyük zararlar doğar ⇒ hikmet-i ilâhiyye ilk andan kulları zulüm ve bağy ve düşmanlıktan menetmeyi gerektirir; bu teklîf zarar olsa da daha büyük zararı defetmek için iltizam gerekir; bu ibtidâ teklîfin cevazı sâbit olunca Allah'a isyan eden azabı hak etti; başka bedene nakledilip günahı kadar azap verilir.**' **Râzî**: '**bu tenâsüh ehlinin kavlinin hikâyesidir; bu da aklî hüsn-kubuh üzerine bina edilmiştir ve insanın bedenden başka bir şey olduğu, bu beden hâdis olmadan önce var olduğu esasına bina edilmiştir.**'
+- Netice/hüküm: **Râzî'nin hükmü: tenâsüh (a) evvelsiz hâdise, (b) 'ibtidâ teklif zararı küçük' cevabı; ikisi de aklî hüsn-kubuh ve 'ruh beden öncesi var' öncüllerine bağlı.**
+- Delil çeşidi: **aktarım + öncül tespiti**; (T) burhânî biçim (öncül tespiti).
+- Mevzuya bağı: **KRİTİK — Fasıl III ve teodise**: **'ruh beden öncesi var' öncülü Sünnî akideyle çelişir (rûh hâdis, bedenle yaratılır — âlem-i ervâh/ezel misâkı ayrı bahis)**: Risale **'ezel misâkı' rivayetiyle (A'râf 7/172) karıştırmaz**; bu bahis **açık borç (⊬ ruh bâbı)**.
+- Doğan sual: —
+
+## c4 p423
+- OCR: iyi
+- Okuma: tam
+- İçerik: **9. Fasıl: 'ivaz kâillerinin mezhebi'**: '**Mu'tezile aklî hüsn-kubuhun Allah'ın fiil ve hükümlerinde cârî olduğuna inandığı için dedi: bu elemleri kullarda görüyoruz; akıl hükmeder ki hayvana sebepsiz ıztırap vermek kabîh; bu, rahîm-hakîm ilâhtan sudûrun imtinâ'ını gerektirir; o hâlde ıztırabın hüsnü ya önceki cinâyet (tenâsüh ehli sözü, bâtıl) ya da Allah'ın zararları telâfi eden ivazlar vermesi.**' **Muhakkikleri**: '**ivaz gerek ki bu zararlar zulüm olmaktan çıksın; i'tibâr (ibret/hikmet) gerek ki abes olmaktan çıksın: bir adam başka birini deniz suyunu boşaltıp öbür yana dökmesi için ücretle tutsa ve bu işte hiçbir fayda-maslahat olmasa, iş zulüm olmaktan çıkar ama abes olur, fâili sefîh olur**; bu yüzden **elemler ivaz ve i'tibârın toplamı için olur.**' **Soru**: '**çok küçük hayvanlar denizlerin dibinde, yerin içinde doğar, kimse bilmez; onlara ıztırap vermekte i'tibâr nasıl hâsıl olur?**' (p424)
+- Netice/hüküm: **Aktarım: Mu'tezile'nin ivaz-i'tibâr teorisi (teodise).**
+- Delil çeşidi: **aktarım (hüsn-kubuh temelli)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3, c3 hüsn-kubuh**: **Risale'nin teodise bâbı Mu'tezile'nin 'ivaz vâcib' teorisini ALMAZ (Allah'a hiçbir şey vâcib değil); ancak 'elemlerin hikmeti/imtihan' çizgisi (Sünnî) ayrıca yazılır.**
+- Doğan sual: —
+
+## c4 p424
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Mu'tezile'nin cevabı**: '**melekler, cinler ve şeytanlar bunları görür; dinde onlara çeşitli i'tibârlar hâsıl olur.**' **Sonra bu görüşün sahipleri**: '**Allah'a bütün sivrisinek, pire, bit, kurt (solucan) haşrını ve onlara ivaz ulaştırmasını vâcib kıldılar; hiçbirinin iadesini ihmal ederse sefîh olur ve ilâhlıktan azledilirmiş gibi olur dediler.**' **Râzî'nin hükmü**: '**bu, aklî hüsn-kubuhun tefrîlerindendir; zaafını ve sükûtunu bildin.**' **Bazı muhakkikler**: 'zarar bir hayvana ulaşır, o hayvan on bin yıl sonra iâde edilir; hayvan o hâli unutmuş, şuuru kalmamışsa bu in'âm ibtidâî in'âm gibidir; zarara bağlılığı kesilir.' **Râzî**: '**Mu'tezile'nin bu bâbdaki tafsîlâtı zayıflık ve gevşeklikle uzadığından ihtisarı tercih ettik.**'
+- Netice/hüküm: **Râzî'nin hükmü: Mu'tezile'nin ivaz teorisi (hayvanlara haşr ve ivaz vâcib) aklî hüsn-kubuh tefrîi ⇒ zayıf ve sâkıt; 'zarar unutulmuş, in'âm ibtidâî' cevabı bazı muhakkiklerin kavli olarak aktarıldı.**
+- Delil çeşidi: **aktarım + hüküm**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl III (Mead), Fasıl I §8.3**: **hayvanların haşri** Sünnî kaynaklarda **haşr-i vuhûş** (Tekvîr 81/5) ayrı bahis; Risale Fasıl III'te **Mu'tezile'nin 'vâcib' iddiasını değil 'vâki' haberini** (hadis/âyet) yazar. **Ek dikkat:** Râzî'nin **'hayvanlara ivaz'** sözü kendi hükmü değil aktarımdır.
+- Doğan sual: **Râzî'nin kendi teodise cevabı ('Ehl-i Sünnet: Allah dilediğini yapar, hikmeti bilinmeyebilir') hangi sayfada açık yazılıyor?** (p425+ kavil 10–12 ve kapanış; yoksa 'kazâ-kader' bâbı.)
